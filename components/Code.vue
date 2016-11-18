@@ -3,22 +3,23 @@
     <div v-if="title" class="Code__Title">
       {{ title }}
     </div>
-    <pre class="Code__Content">
-      <code>
-        <slot></slot>
-      </code>
-    </pre>
+    <pre class="Code__Content"><code ref="code" :class="lang"><slot></slot></code></pre>
   </div>
 </template>
+
 <script>
-// import NuxtAlert from '~components/Alert.vue'
+import hljs from 'highlight.js'
 
 export default {
   props: {
-    title: String
+    title: String,
+    lang: {
+      type: String,
+      default: 'js'
+    }
   },
   mounted () {
-
+    hljs.highlightBlock(this.$refs.code)
   }
 }
 </script>
@@ -37,14 +38,16 @@ export default {
   &__Content
   {
     margin: 0;
-    padding: 10px 15px;
+    padding: 0;
     background-color: #222;
     color: #ddd;
     font-size: 1em;
     code
     {
       display: block;
-      overflow-x: auto;
+      line-height: 1.5em;
+      padding: 15px 20px;
+      margin: 0;
     }
   }
 }

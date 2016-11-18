@@ -1,0 +1,33 @@
+{
+  "name": "nuxtjs.org",
+  "version": "1.0.0",
+  "description": "Nuxt.js official website",
+  "main": "index.js",
+  "dependencies": {
+    "normalize.css": "^5.0.0",
+    "nuxt": "^0.4.6"
+  },
+  "devDependencies": {
+    "node-sass": "^3.13.0",
+    "sass-loader": "^4.0.2"
+  },
+  "scripts": {
+    "start": "nuxt"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nuxt/nuxtjs.org.git"
+  },
+  "keywords": [
+    "nuxt.js",
+    "vuejs",
+    "nextjs",
+    "js"
+  ],
+  "author": "alexchopin",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/nuxt/nuxtjs.org/issues"
+  },
+  "homepage": "https://github.com/nuxt/nuxtjs.org#readme"
+}

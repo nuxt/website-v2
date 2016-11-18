@@ -4,6 +4,7 @@
   "description": "Nuxt.js official website",
   "main": "index.js",
   "dependencies": {
+    "highlight.js": "^9.8.0",
     "normalize.css": "^5.0.0",
     "nuxt": "^0.4.6"
   },

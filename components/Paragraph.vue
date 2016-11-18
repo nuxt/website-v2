@@ -1,11 +1,11 @@
 <template>
-  <p class="Paragraphe">
+  <p class="Paragraph">
     <slot></slot>
   </p>
 </template>
 
 <style lang="scss" scoped>
-.Paragraphe
+.Paragraph
 {
   color: #505153;
   text-align: justify;

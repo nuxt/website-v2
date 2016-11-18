@@ -2,10 +2,10 @@
   <header class="Header">
     <div class="container">
       <router-link class="Header__Title" to="/">
-        <h1 class="Header__Title__Site">
+        <img src="~static/logo_nav.png" alt="Logo nuxt" class="Header__Title__Logo"/>
+        <h1 class="Header__Title__Text">
           NUXT
         </h1>
-        <img src="~static/logo_nav.png" alt="Logo nuxt" class="Header__Title__Logo"/>
       </router-link>
       <nav class="Header__Nav">
         <ul class="Header__Nav__List">
@@ -40,15 +40,18 @@
   {
     margin: 0;
     font-weight: 300;
-    color: #fff;
+    color: #505153;
     letter-spacing: 1px;
     float: left;
-    &__Site
+    &__Text
     {
-      width: 0;
-      height: 0;
-      overflow: hidden;
+      // width: 0;
+      // height: 0;
+      // overflow: hidden;
       margin: 0;
+      font-weight: 300;
+      float: right;
+      margin-left: 15px;
     }
     &__Logo
     {
@@ -87,7 +90,7 @@
         }
         .router-link-active
         {
-          border-bottom: 2px solid #505153;
+          border-bottom: 2px solid #00BCD4;
         }
       }
     }

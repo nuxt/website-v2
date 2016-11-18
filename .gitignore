@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 node_modules
 *.iml
 .idea
@@ -12,3 +13,14 @@ sw.*
 .husky
 package-lock.json
 yarn-error.log
+=======
+# dependencies
+yarn.lock
+node_modules
+
+# logs
+npm-debug.log
+
+# other
+.nuxt
+>>>>>>> 4cc9d7b5 (Home page and routes)

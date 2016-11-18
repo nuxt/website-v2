@@ -1,4 +1,5 @@
 {
+<<<<<<< HEAD
   "private": true,
   "scripts": {
     "generate": "nuxt generate",
@@ -41,4 +42,37 @@
     "vue-lazy-hydration": "^2.0.0-beta.4",
     "vue-plausible": "^1.2.1"
   }
+=======
+  "name": "nuxtjs.org",
+  "version": "1.0.0",
+  "description": "Nuxt.js official website",
+  "main": "index.js",
+  "dependencies": {
+    "normalize.css": "^5.0.0",
+    "nuxt": "^0.4.6"
+  },
+  "devDependencies": {
+    "node-sass": "^3.13.0",
+    "sass-loader": "^4.0.2"
+  },
+  "scripts": {
+    "start": "nuxt"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nuxt/nuxtjs.org.git"
+  },
+  "keywords": [
+    "nuxt.js",
+    "vuejs",
+    "nextjs",
+    "js"
+  ],
+  "author": "alexchopin",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/nuxt/nuxtjs.org/issues"
+  },
+  "homepage": "https://github.com/nuxt/nuxtjs.org#readme"
+>>>>>>> 4cc9d7b5 (Home page and routes)
 }

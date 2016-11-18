@@ -1,0 +1,19 @@
+html
+{
+  font-family: "Source Sans Pro", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+}
+.container
+{
+  width: 85%;
+  max-width: 1080px;
+  margin: 0 auto;
+  @media (min-width: 576px)
+  {
+    width: 80%;
+  }
+  // padding: 0 15px;
+}
+*, *::before, *::after
+{
+  box-sizing: border-box;
+}

@@ -11,9 +11,24 @@ html
   {
     width: 80%;
   }
-  // padding: 0 15px;
+  &:before, &:after
+  {
+    content: " ";
+    display: table;
+  }
+  &:after {
+    clear: both;
+  }
 }
 *, *::before, *::after
 {
   box-sizing: border-box;
+}
+
+hr
+{
+  height: 1px;
+  background-color: #dbdfe1;
+  border: none;
+  margin: 50px 0;
 }

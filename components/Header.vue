@@ -51,7 +51,7 @@
       margin: 0;
       font-weight: 300;
       float: right;
-      margin-left: 15px;
+      margin-left: 10px;
     }
     &__Logo
     {

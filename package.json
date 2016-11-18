@@ -12,7 +12,10 @@
     "sass-loader": "^4.0.2"
   },
   "scripts": {
-    "start": "nuxt"
+    "dev": "nuxt",
+    "build": "nuxt build",
+    "start": "nuxt start",
+    "generate": "nuxt generate"
   },
   "repository": {
     "type": "git",

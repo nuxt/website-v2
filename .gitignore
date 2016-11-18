@@ -7,3 +7,4 @@ npm-debug.log
 
 # other
 .nuxt
+dist

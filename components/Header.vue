@@ -49,6 +49,12 @@
       height: 0;
       overflow: hidden;
       margin: 0;
+<<<<<<< HEAD
+=======
+      font-weight: 300;
+      float: right;
+      margin-left: 10px;
+>>>>>>> b7025782 (Fix logo)
     }
     &__Logo
     {

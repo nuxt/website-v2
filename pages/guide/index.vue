@@ -12,9 +12,9 @@
         </nuxt-paragraph>
         <hr>
         <nuxt-subtitle>Quick demo</nuxt-subtitle>
-        <nuxt-code title="Example">
-          Test de code
-        </nuxt-code>
+        <nuxt-code title="nuxt.config.js">module.exports = {
+  css: ['bulma']
+}</nuxt-code>
       </nuxt-content>
     </div>
   </div>

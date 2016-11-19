@@ -83,14 +83,13 @@ export default {
           letter-spacing: 1px;
           &:hover
           {
-            background-color: #505153;
-            color: #FFF;
+            border-color: #00BCD4;
+            background-color: #00BCD4;
+            color: #fff;
           }
         }
       }
     }
   }
-  /*background-color: #171F26;*/
-  /*background: url("../static/sunrise2.png") no-repeat fixed top;*/
 }
 </style>

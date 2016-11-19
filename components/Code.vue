@@ -3,23 +3,27 @@
     <div v-if="title" class="Code__Title">
       {{ title }}
     </div>
-    <pre class="Code__Content"><code ref="code" :class="lang"><slot></slot></code></pre>
+    <pre class="Code__Content">
+      <!-- <code ref="code" :class="lang"> -->
+        <slot></slot>
+      <!-- </code> -->
+    </pre>
   </div>
 </template>
 
 <script>
-import hljs from 'highlight.js'
+// import hljs from 'highlight.js'
 
 export default {
   props: {
-    title: String,
-    lang: {
-      type: String,
-      default: 'js'
-    }
-  },
-  mounted () {
-    hljs.highlightBlock(this.$refs.code)
+    title: String
+    // lang: {
+    //   type: String,
+    //   default: 'js'
+    // }
+  // },
+  // mounted () {
+  //   hljs.highlightBlock(this.$refs.code)
   }
 }
 </script>
@@ -39,11 +43,12 @@ export default {
   {
     margin: 0;
     padding: 0;
-    background-color: #222;
+    background-color: #1D1F21;
     color: #ddd;
     font-size: 1em;
     code
     {
+      height: 100%;
       display: block;
       line-height: 1.5em;
       padding: 15px 20px;

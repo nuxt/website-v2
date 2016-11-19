@@ -13,13 +13,9 @@
         <hr>
         <nuxt-subtitle>Quick demo</nuxt-subtitle>
         <nuxt-code title="nuxt.config.js">
-          <span v-pre>
-            {{
-              module.exports = {
-                css: ['bulma']
-              }
-            }}
-          </span>
+          module.exports = {
+            css: ['bulma']
+          }
         </nuxt-code>
       </nuxt-content>
     </div>

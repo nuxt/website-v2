@@ -12,9 +12,15 @@
         </nuxt-paragraph>
         <hr>
         <nuxt-subtitle>Quick demo</nuxt-subtitle>
-        <nuxt-code title="nuxt.config.js">module.exports = {
-  css: ['bulma']
-}</nuxt-code>
+        <nuxt-code title="nuxt.config.js">
+          <span v-pre>
+            {{
+              module.exports = {
+                css: ['bulma']
+              }
+            }}
+          </span>
+        </nuxt-code>
       </nuxt-content>
     </div>
   </div>

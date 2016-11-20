@@ -12,5 +12,17 @@ module.exports = {
   css: [
     'normalize.css',
     { src: '~assets/scss/main.scss', lang: 'scss' }
+<<<<<<< HEAD
   ]
+=======
+  ],
+  router: {
+    routes: [
+      { path: '/guide/:slug', component: 'pages/guide' }
+    ]
+  },
+  build: {
+    vendor: ['highlight.js']
+  }
+>>>>>>> f4d82e28 (guide content from component)
 }

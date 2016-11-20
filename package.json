@@ -6,7 +6,7 @@
   "dependencies": {
     "highlight.js": "^9.8.0",
     "normalize.css": "^5.0.0",
-    "nuxt": "^0.4.6"
+    "nuxt": "^0.5.2"
   },
   "devDependencies": {
     "node-sass": "^3.13.0",

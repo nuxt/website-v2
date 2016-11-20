@@ -15,6 +15,11 @@ module.exports = {
     'highlight.js/styles/hybrid.css',
     { src: '~assets/scss/main.scss', lang: 'scss' }
   ],
+  router: {
+    routes: [
+      { path: '/guide/:slug', component: 'pages/guide' }
+    ]
+  },
   build: {
     vendor: ['highlight.js']
   }

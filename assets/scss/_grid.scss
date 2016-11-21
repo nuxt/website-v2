@@ -1,5 +1,6 @@
 .container
 {
+  position: relative;
   width: 85%;
   max-width: 1080px;
   margin: 0 auto;
@@ -19,9 +20,17 @@
 
 .content
 {
-  padding-top: 64px;
+  padding-top: 60px;
   @media (min-width: 576px)
   {
-    padding-top: 0;
+    padding-top: 90px;
+  }
+  &--hasBar
+  {
+    padding-top: 100px;
+    @media (min-width: 576px)
+    {
+      padding-top: 140px;
+    }
   }
 }

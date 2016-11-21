@@ -1,0 +1,27 @@
+.container
+{
+  width: 85%;
+  max-width: 1080px;
+  margin: 0 auto;
+  @media (min-width: 576px)
+  {
+    width: 80%;
+  }
+  &:before, &:after
+  {
+    content: " ";
+    display: table;
+  }
+  &:after {
+    clear: both;
+  }
+}
+
+.content
+{
+  padding-top: 64px;
+  @media (min-width: 576px)
+  {
+    padding-top: 0;
+  }
+}

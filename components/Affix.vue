@@ -3,7 +3,7 @@
     <h3 class="Affix__Title">Prologue</h3>
     <ul class="Affix__List">
       <li class="Affix__List__Item">
-        <router-link class="Affix__List__Item__Link" to="/guide">
+        <router-link class="Affix__List__Item__Link" to="/guide" exact>
           What's Nuxt.js ?
         </router-link>
       </li>

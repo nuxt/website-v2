@@ -1,6 +1,5 @@
 <template>
-  <div ref="affix" :class="customClass" :style="offset">
-    <nuxt-search></nuxt-search>
+  <nav class="Affix">
     <h3 class="Affix__Title">Prologue</h3>
     <ul class="Affix__List">
       <li class="Affix__List__Item">
@@ -37,105 +36,28 @@
         </router-link>
       </li>
     </ul>
-  </div>
+  </nav>
 </template>
-
-<script>
-import NuxtSearch from '~components/Search.vue'
-
-export default {
-  mounted () {
-    let self = this
-    this.$nextTick(function () {
-      window.addEventListener('scroll', self.scrolled)
-    })
-    this.limit = this.$refs.affix.offsetTop
-    this.left = this.$refs.affix.offsetLeft
-  },
-  data () {
-    return {
-      fixed: false,
-      start: 0
-    }
-  },
-  computed: {
-    offset () {
-      if (this.fixed) {
-        return {
-          top: this.start + 'px',
-          left: this.left + 'px'
-        }
-      }
-      return {}
-    },
-    customClass () {
-      return (this.fixed) ? 'Affix Affix--Fixed' : 'Affix'
-    }
-  },
-  methods: {
-    scrolled () {
-      var doc = document.documentElement
-      var top = (window.pageYOffset || doc.scrollTop) - (doc.clientTop || 0)
-      this.fixed = (top > this.limit)
-    }
-  },
-  components: {
-    NuxtSearch
-  }
-}
-</script>
 
 <style lang="scss" scoped>
 .Affix
 {
-  border-right: 1px solid #dbdfe1;
-  min-height: 100vh;
-  margin: 0;
-  padding: 0 15px;
-  padding-top: 45px;
-  padding-left: 0;
-  width: 240px;
+  width: 100%;
+  padding-bottom: 30px;
+  height: 100%;
+  overflow-y: auto;
   float: left;
-  position: absolute;
-  &--Fixed
+  font-size: 1.05em;
+  background-color: #fff;
+  @media (min-width: 992px)
   {
-    z-index: 980;
-    left: 0;
-    bottom: 0;
-    position: fixed;
-    overflow-y: auto;
-    &--sm
-    {
-      @media (min-width: 576px)
-      {
-        position: fixed;
-      }
-    }
-    &--md
-    {
-      @media (min-width: 768px)
-      {
-        position: fixed;
-      }
-    }
-    &--lg
-    {
-      @media (min-width: 992px)
-      {
-        position: fixed;
-      }
-    }
-    &--xl
-    {
-      @media (min-width: 1200px)
-      {
-        position: fixed;
-      }
-    }
+    width: 240px;
+    border-right: 1px solid #dbdfe1;
   }
   &__Title
   {
     margin: 0;
+    margin-top: 30px;
     text-transform: uppercase;
     color: #9aabb1;
     font-weight: 400;
@@ -144,11 +66,10 @@ export default {
   }
   &__List
   {
-    margin: 40px 0;
-    margin-top: 10px;
+    margin-top: 15px;
     &__Item
     {
-      padding: 5px;
+      padding: 7px;
       &__Link
       {
         text-decoration: none;

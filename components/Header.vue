@@ -47,17 +47,17 @@ export default {
 .Header
 {
   width: 100%;
-  z-index: 990;
+  z-index: 995;
   position: fixed;
-  height: 64px;
-  line-height: 64px;
+  height: 60px;
+  line-height: 60px;
   background-color: #fff;
   border-bottom: 1px solid #dbdfe1;
   @media (min-width: 576px)
   {
-    position: relative;
-    height: 100px;
-    line-height: 100px;
+    // position: relative;
+    height: 90px;
+    line-height: 90px;
     text-align: left;
   }
   &__Title
@@ -87,17 +87,17 @@ export default {
     {
       height: 24px;
       display: inline-block;
-      margin-top: 18px;
+      margin-top: 16px;
       @media (min-width: 576px)
       {
         height: 30px;
-        margin-top: 32px;
+        margin-top: 27px;
       }
     }
   }
   &__Toggler
   {
-    margin-top: 22px;
+    margin-top: 20px;
     display: block;
     cursor: pointer;
     float: right;
@@ -122,7 +122,7 @@ export default {
     @media (min-width: 576px)
     {
       top: 0;
-      height: 99px;
+      height: 89px;
       position: relative;
       display: inline-block;
       float: right;

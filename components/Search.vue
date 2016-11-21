@@ -47,7 +47,7 @@ export default {
     float: right;
     top: 0;
     right: 0;
-    @media (min-width: 576px)
+    @media (min-width: 768px)
     {
       padding-top: 15px;
     }

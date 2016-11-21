@@ -46,7 +46,7 @@ export default {
   line-height: 40px;
   background-color: #fff;
   border-bottom: 1px solid #dbdfe1;
-  @media (min-width: 576px)
+  @media (min-width: 768px)
   {
     top: 90px;
     height: 50px;
@@ -78,7 +78,7 @@ export default {
       height: 40px;
       cursor: pointer;
       padding-top: 9px;
-      @media (min-width: 576px)
+      @media (min-width: 768px)
       {
         padding-top: 15px;
         width: 50px;
@@ -95,7 +95,7 @@ export default {
     padding-left: 15px;
     height: 39px;
     overflow: hidden;
-    @media (min-width: 576px)
+    @media (min-width: 768px)
     {
       height: 49px;
     }

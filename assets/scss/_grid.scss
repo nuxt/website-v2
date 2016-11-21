@@ -4,7 +4,7 @@
   width: 85%;
   max-width: 1080px;
   margin: 0 auto;
-  @media (min-width: 576px)
+  @media (min-width: 768px)
   {
     width: 80%;
   }
@@ -21,16 +21,8 @@
 .content
 {
   padding-top: 60px;
-  @media (min-width: 576px)
+  @media (min-width: 768px)
   {
     padding-top: 90px;
-  }
-  &--hasBar
-  {
-    padding-top: 100px;
-    @media (min-width: 576px)
-    {
-      padding-top: 140px;
-    }
   }
 }

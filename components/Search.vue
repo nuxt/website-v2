@@ -20,17 +20,19 @@ export default {
 <style lang="scss" scoped>
 .Search
 {
+  height: 100%;
   position: relative;
   &__Input
   {
     width: 100%;
     display: block;
-    border: 1px solid #dbdfe1;
+    border: none;
     font-weight: 300;
-    height: 40px;
+    height: 100%;
     color: #9aabb1;
     font-size: 1em;
     padding: 0 10px;
+    letter-spacing: 0.5px;
     padding-right: 35px;
     background-color: #fff;
   }
@@ -38,12 +40,17 @@ export default {
   {
     cursor: pointer;
     width: 30px;
-    height: 40px;
+    height: 100%;
     padding-top: 10px;
+    padding-left: 10px;
     position: absolute;
     float: right;
     top: 0;
     right: 0;
+    @media (min-width: 576px)
+    {
+      padding-top: 15px;
+    }
   }
 }
 </style>

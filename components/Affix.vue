@@ -1,5 +1,6 @@
 <template>
   <div ref="affix" :class="customClass" :style="offset">
+    <nuxt-search></nuxt-search>
     <h3 class="Affix__Title">Prologue</h3>
     <ul class="Affix__List">
       <li class="Affix__List__Item">
@@ -40,6 +41,8 @@
 </template>
 
 <script>
+import NuxtSearch from '~components/Search.vue'
+
 export default {
   mounted () {
     let self = this
@@ -75,6 +78,9 @@ export default {
       var top = (window.pageYOffset || doc.scrollTop) - (doc.clientTop || 0)
       this.fixed = (top > this.limit)
     }
+  },
+  components: {
+    NuxtSearch
   }
 }
 </script>
@@ -138,8 +144,6 @@ export default {
   }
   &__List
   {
-    list-style: none;
-    padding: 0;
     margin: 40px 0;
     margin-top: 10px;
     &__Item

@@ -123,7 +123,6 @@ export default {
     bottom: 0;
     overflow-y: auto;
     background-color: #fff;
-    transition: all 1s ease;
     @media (min-width: 768px)
     {
       top: 0;
@@ -136,7 +135,6 @@ export default {
     &--hidden
     {
       display: none;
-      transition: all 1s ease;
       @media (min-width: 768px)
       {
         display: inline-block;

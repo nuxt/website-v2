@@ -7,7 +7,10 @@
           NUXT
         </h1>
       </router-link>
-      <nav class="Header__Nav">
+      <div class="Header__Toggler" @click="visible = !visible">
+        <div :class="{'icon menu': !visible, 'icon close': visible}"></div>
+      </div>
+      <nav class="Header__Nav" :class="{'Header__Nav--hidden': !visible}">
         <ul class="Header__Nav__List">
           <li class="Header__Nav__List__Item">
             <router-link class="Header__Nav__List__Item__Link" to="/guide">
@@ -30,39 +33,109 @@
   </header>
 </template>
 
+<script>
+export default {
+  data () {
+    return {
+      visible: false
+    }
+  }
+}
+</script>
+
 <style lang="scss" scoped>
 .Header
 {
-  height: 100px;
-  line-height: 100px;
+  width: 100%;
+  z-index: 990;
+  position: fixed;
+  height: 64px;
+  line-height: 64px;
+  background-color: #fff;
   border-bottom: 1px solid #dbdfe1;
+  @media (min-width: 576px)
+  {
+    position: relative;
+    height: 100px;
+    line-height: 100px;
+    text-align: left;
+  }
   &__Title
   {
     margin: 0;
     font-weight: 300;
     color: #505153;
     letter-spacing: 1px;
-    float: left;
+    display: inline-block;
+    @media (min-width: 576px)
+    {
+      float: left;
+    }
     &__Text
     {
-      // width: 0;
-      // height: 0;
-      // overflow: hidden;
       margin: 0;
       font-weight: 300;
       float: right;
       margin-left: 10px;
+      font-size: 1.6em;
+      @media (min-width: 576px)
+      {
+        font-size: 2em;
+      }
     }
     &__Logo
     {
-      height: 30px;
+      height: 24px;
       display: inline-block;
-      margin-top: 32px;
+      margin-top: 18px;
+      @media (min-width: 576px)
+      {
+        height: 30px;
+        margin-top: 32px;
+      }
+    }
+  }
+  &__Toggler
+  {
+    margin-top: 22px;
+    display: block;
+    cursor: pointer;
+    float: right;
+    width: 24px;
+    height: 24px;
+    @media (min-width: 576px)
+    {
+      display: none;
     }
   }
   &__Nav
   {
-    float: right;
+    position: fixed;
+    z-index: 990;
+    top: 64px;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    overflow-y: auto;
+    background-color: #fff;
+    transition: all 1s ease;
+    @media (min-width: 576px)
+    {
+      top: 0;
+      height: 99px;
+      position: relative;
+      display: inline-block;
+      float: right;
+    }
+    &--hidden
+    {
+      display: none;
+      transition: all 1s ease;
+      @media (min-width: 576px)
+      {
+        display: inline-block;
+      }
+    }
     &__List
     {
       list-style: none;
@@ -70,8 +143,17 @@
       padding: 0;
       &__Item
       {
-        display: inline-block;
-        padding-left: 30px;
+        text-align: center;
+        display: block;
+        height: 64px;
+        border-bottom: 1px solid #eee;
+        @media (min-width: 576px)
+        {
+          height: auto;
+          display: inline-block;
+          padding-left: 30px;
+          border-bottom: none;
+        }
         &:first-child
         {
           padding-left: 0;

@@ -9,6 +9,15 @@
 import Navbar from '~components/Header.vue'
 
 export default {
+  watch:{
+    $route: 'setStore'
+  },
+  methods: {
+    setStore () {
+      this.$store.commit('toggle', 'visibleHeader')
+      this.$store.commit('toggle', 'visibleAffix')      
+    }
+  },
   components: {
     Navbar
   }

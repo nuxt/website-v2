@@ -27,6 +27,11 @@
               GITHUB
             </a>
           </li>
+          <li class="Header__Nav__List__Item">
+            <a class="Header__Nav__List__Item__Link" href="https://twitter.com/nuxt_js" target="_blank">
+              TWITTER
+            </a>
+          </li>
         </ul>
       </nav>
     </div>
@@ -53,9 +58,8 @@ export default {
   line-height: 60px;
   background-color: #fff;
   border-bottom: 1px solid #dbdfe1;
-  @media (min-width: 576px)
+  @media (min-width: 768px)
   {
-    // position: relative;
     height: 90px;
     line-height: 90px;
     text-align: left;
@@ -67,7 +71,7 @@ export default {
     color: #505153;
     letter-spacing: 1px;
     display: inline-block;
-    @media (min-width: 576px)
+    @media (min-width: 768px)
     {
       float: left;
     }
@@ -78,7 +82,7 @@ export default {
       float: right;
       margin-left: 10px;
       font-size: 1.6em;
-      @media (min-width: 576px)
+      @media (min-width: 768px)
       {
         font-size: 2em;
       }
@@ -88,7 +92,7 @@ export default {
       height: 24px;
       display: inline-block;
       margin-top: 16px;
-      @media (min-width: 576px)
+      @media (min-width: 768px)
       {
         height: 30px;
         margin-top: 27px;
@@ -103,7 +107,7 @@ export default {
     float: right;
     width: 24px;
     height: 24px;
-    @media (min-width: 576px)
+    @media (min-width: 768px)
     {
       display: none;
     }
@@ -119,7 +123,7 @@ export default {
     overflow-y: auto;
     background-color: #fff;
     transition: all 1s ease;
-    @media (min-width: 576px)
+    @media (min-width: 768px)
     {
       top: 0;
       height: 89px;
@@ -131,7 +135,7 @@ export default {
     {
       display: none;
       transition: all 1s ease;
-      @media (min-width: 576px)
+      @media (min-width: 768px)
       {
         display: inline-block;
       }
@@ -144,7 +148,7 @@ export default {
         display: block;
         height: 64px;
         border-bottom: 1px solid #eee;
-        @media (min-width: 576px)
+        @media (min-width: 768px)
         {
           height: auto;
           display: inline-block;

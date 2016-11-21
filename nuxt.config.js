@@ -17,7 +17,7 @@ module.exports = {
   ],
   router: {
     routes: [
-      { path: '/guide/:slug', component: 'pages/guide' }
+      { path: '/guide/:slug?', component: 'pages/_guide' }
     ]
   },
   build: {

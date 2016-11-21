@@ -7,7 +7,7 @@
           NUXT
         </h1>
       </router-link>
-      <div class="Header__Toggler" @click="visible = !visible">
+      <div class="Header__Toggler" @click="toggle">
         <div :class="{'icon menu': !visible, 'icon close': visible}"></div>
       </div>
       <nav class="Header__Nav" :class="{'Header__Nav--hidden': !visible}">
@@ -40,10 +40,11 @@
 
 <script>
 export default {
-  data () {
-    return {
-      visible: false
-    }
+  computed: {
+    visible () { return this.$store.state.visibleHeader }
+  },
+  methods: {
+    toggle () { this.$store.commit('toggle', 'visibleHeader') }
   }
 }
 </script>
@@ -127,6 +128,7 @@ export default {
     {
       top: 0;
       height: 89px;
+      overflow: hidden;
       position: relative;
       display: inline-block;
       float: right;

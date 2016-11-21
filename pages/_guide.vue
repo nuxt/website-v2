@@ -36,21 +36,15 @@ export default {
     NuxtCode,
     Footbar
   },
-  data () {
-    return {
-      visible: false
-    }
-  },
   computed: {
+    visible () { return this.$store.state.visibleAffix },
     content () {
       let content = this.$route.params.slug || 'index'
       return content.replace('-', '')
     }
   },
   methods: {
-    toggle () {
-      this.visible = !this.visible
-    }
+    toggle () { this.$store.commit('toggle', 'visibleAffix') }
   }
 }
 </script>

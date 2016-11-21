@@ -1,11 +1,12 @@
 .icon, .icon i
 {
+  box-sizing: content-box;
   position: absolute;
   &:before, &:after
   {
+    box-sizing: content-box;
     content: '';
     position: absolute;
-    left: 0;
   }
 }
 .icon, .icon:before, .icon:after, .icon i, .icon i:before, .icon i:after
@@ -17,3 +18,5 @@
 @import "icons/close";
 @import "icons/search";
 @import "icons/remove";
+@import "icons/indent";
+@import "icons/outdent";

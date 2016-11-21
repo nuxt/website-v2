@@ -4,7 +4,7 @@
       <div class="Bar__Left">
         <span class="Bar__Left__Text">Version 1.0</span>
         <div class="Bar__Left__Toggler" @click="toggle">
-          <div :class="{'outdent icon': visible, 'indent icon': !visible}"></div>
+          <div :class="{'close icon': visible, 'indent icon': !visible}"></div>
         </div>
       </div>
       <div class="Bar__Right">

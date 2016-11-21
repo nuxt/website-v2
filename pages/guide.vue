@@ -1,7 +1,7 @@
 <template>
   <div class="Guide">
     <nuxt-header></nuxt-header>
-    <div class="container">
+    <div class="container content">
       <nuxt-affix></nuxt-affix>
       <nuxt-content>
         <div :is="content"></div>
@@ -15,8 +15,8 @@ import NuxtHeader from '~components/Header.vue'
 import NuxtAffix from '~components/Affix.vue'
 import NuxtContent from '~components/Content.vue'
 
-import index from '~pages/guide/_index.vue'
-import releasenotes from '~pages/guide/_release-notes.vue'
+import index from '~pages/docs/_index.vue'
+import releasenotes from '~pages/docs/_release-notes.vue'
 
 export default {
   components: {

@@ -2,7 +2,7 @@
   <div class="Landscape">
     <nuxt-header></nuxt-header>
     <div class="Landscape__Content">
-      <div class="container">
+      <div class="container content">
         <img src="~static/logo_noir.png" alt="Logo nuxt" class="Landscape__Content__Image"/>
         <h2 class="Landscape__Content__Title">
           A minimalistic framework <br>for server-rendered Vue.js applications
@@ -44,8 +44,12 @@ export default {
 {
   &__Content
   {
-    padding: 100px 0;
+    padding: 50px 0;
     text-align: center;
+    @media (min-width: 576px)
+    {
+      padding: 100px 0;
+    }
     &__Image
     {
       max-width: 100%;

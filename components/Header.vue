@@ -138,9 +138,6 @@ export default {
     }
     &__List
     {
-      list-style: none;
-      margin: 0;
-      padding: 0;
       &__Item
       {
         text-align: center;

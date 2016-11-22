@@ -38,7 +38,6 @@ export default {
     Footbar
   },
   data ({ route }, callback) {
-    console.log('Enter data', callback);
     let path = route.params.slug || 'index'
     path = '/docs/' + path + '.md'
     if (process.BROWSER) {

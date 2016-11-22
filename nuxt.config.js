@@ -21,6 +21,6 @@ module.exports = {
     ]
   },
   build: {
-    vendor: ['highlight.js']
+    vendor: ['whatwg-fetch']
   }
 }

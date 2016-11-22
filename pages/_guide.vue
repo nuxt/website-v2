@@ -9,6 +9,7 @@
     <div class="container">
       <div class="Guide__Right" :class="{'Guide__Right--hidden': visible}">
         <!-- <div :is="content"></div> -->
+        {{ content }}
       </div>
     </div>
     <div class="Guide__Footer">
@@ -35,6 +36,19 @@ export default {
     NuxtParagraph,
     NuxtCode,
     Footbar
+  },
+  data ({ route, isServer }) {
+    let path = route.params.slug || 'index'
+    path = 'static/docs/' + path + '.md'
+    if (isServer) {
+    //   fs.readFile()
+    } else {
+      return fetch('/static/docs/index.md')
+      .then((response) => response.text())
+      .then((content) => {
+        return { content }
+      })
+    }
   },
   computed: {
     visible () { return this.$store.state.visibleAffix },

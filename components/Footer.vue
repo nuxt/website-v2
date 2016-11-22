@@ -22,13 +22,14 @@
 .Footer
 {
   width: 100%;
-  background-color: #000;
+  background-color: #fff;
+  border-top: 1px solid #dbdfe1;
   &__Text
   {
     margin: 0;
     text-align: center;
     padding: 30px 0;
-    color: #9aabb1;
+    color: #505153;
     letter-spacing: 0.5px;
     font-weight: 300;
     &__Icon
@@ -40,20 +41,20 @@
     }
     a
     {
-      color: #9aabb1;
+      color: #505153;
       &:hover
       {
-        color: #fff;
+        color: #00BCD4;
       }
     }
   }
 }
 .smile.icon
 {
-  color: #9aabb1;
+  color: #000;
   i
   {
-    color: #000;
+    color: #fff;
   }
 }
 </style>

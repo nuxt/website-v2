@@ -34,6 +34,10 @@ export default {
     Footbar
   },
   data ({ route }, callback) {
+    // Default data
+    let data = {
+      content: ''
+    }
     let path = route.params.slug || 'index'
     path = '/docs/guide/' + path + '.md'
     if (process.BROWSER) {
@@ -47,10 +51,11 @@ export default {
         return response.text()
       })
       .then((content) => {
-        callback(null, { content })
+        data.content = content
+        callback(null, data)
       })
       .catch((e) => {
-        callback({ statusCode: 404, message: 'Documentation page not found' })
+        callback({ statusCode: 404, message: 'Documentation page not found' }, data)
       })
     } else {
       require('fs').readFile('static' + path, 'utf8', function (err, content) {
@@ -59,18 +64,12 @@ export default {
       })
     }
   },
-  watch: {
-    '$route': 'refreshContent'
-  },
   computed: {
     visible () { return this.$store.state.visibleAffix },
     page () { return fm(this.content) },
     body () { return marked(this.page.body) }
   },
   methods: {
-    refreshContent () {
-      this.content = this.$options.data().content || ''
-    },
     toggle () { this.$store.commit('toggle', 'visibleAffix') }
   },
   head () {

@@ -16,10 +16,10 @@ module.exports = {
   ],
   router: {
     routes: [
-      { path: '/guide/:slug?', component: 'pages/_guide' }
+      { path: '/guide/:slug', component: 'pages/guide' }
     ]
   },
   build: {
-    vendor: ['whatwg-fetch']
+    vendor: ['whatwg-fetch', 'marked']
   }
 }

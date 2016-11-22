@@ -37,25 +37,39 @@ export default {
     NuxtCode,
     Footbar
   },
-  data ({ route, isServer }) {
+  data ({ route }, callback) {
+    console.log('Enter data', callback);
     let path = route.params.slug || 'index'
-    path = 'static/docs/' + path + '.md'
-    if (isServer) {
-    //   fs.readFile()
-    } else {
-      return fetch('/static/docs/index.md')
-      .then((response) => response.text())
+    path = '/docs/' + path + '.md'
+    if (process.BROWSER) {
+      fetch(path)
+      .then((response) => {
+        const contenType = response.headers.get('content-type') || ''
+        const requestOK = (response.status >= 200 && response.status < 300)
+        if (!requestOK || contenType.indexOf('text/x-markdown') === -1) {
+          throw new Error('Documentation page not found')
+        }
+        return response.text()
+      })
       .then((content) => {
-        return { content }
+        callback(null, { content })
+      })
+      .catch((e) => {
+        callback({ statusCode: 404, message: 'Documentation page not found' })
+      })
+    } else {
+      require('fs').readFile('static' + path, 'utf8', function (err, content) {
+        if (err) return callback({ statusCode: 404, message: 'Documentation page not found' })
+        callback(null, { content })
       })
     }
   },
   computed: {
     visible () { return this.$store.state.visibleAffix },
-    content () {
-      let content = this.$route.params.slug || 'index'
-      return content.replace('-', '')
-    }
+    // content () {
+    //   let content = this.$route.params.slug || 'index'
+    //   return content.replace('-', '')
+    // }
   },
   methods: {
     toggle () { this.$store.commit('toggle', 'visibleAffix') }

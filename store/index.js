@@ -12,6 +12,14 @@ const store = new Vuex.Store({
     toggle (state, key) {
       state[key] = !state[key]
     }
+  },
+  actions: {
+    nuxtServerInit ({ state }, { req }) {
+      if (!process.BROWSER) {
+        state.guideMenu = require('json-loader!static/docs/guide/menu.json')
+        state.examplesMenu = require('json-loader!static/docs/examples/menu.json')
+      }
+    }
   }
 })
 

@@ -8,8 +8,7 @@
     </div>
     <div class="container">
       <div class="Guide__Right" :class="{'Guide__Right--hidden': visible}">
-        <!-- <div :is="content"></div> -->
-        {{ content }}
+        <nuxt-content v-html="content"></nuxt-content>
       </div>
     </div>
     <div class="Guide__Footer">
@@ -19,22 +18,18 @@
 </template>
 
 <script>
+import marked from 'marked'
+
 import NuxtBar from '~components/Bar.vue'
 import NuxtAffix from '~components/Affix.vue'
-import NuxtTitle from '~components/Title.vue'
-import NuxtSubtitle from '~components/Subtitle.vue'
-import NuxtParagraph from '~components/Paragraph.vue'
-import NuxtCode from '~components/Code.vue'
+import NuxtContent from '~components/Content.vue'
 import Footbar from '~components/Footer.vue'
 
 export default {
   components: {
     NuxtBar,
     NuxtAffix,
-    NuxtTitle,
-    NuxtSubtitle,
-    NuxtParagraph,
-    NuxtCode,
+    NuxtContent,
     Footbar
   },
   data ({ route }, callback) {
@@ -51,7 +46,7 @@ export default {
         return response.text()
       })
       .then((content) => {
-        callback(null, { content })
+        callback(null, { content: marked(content) })
       })
       .catch((e) => {
         callback({ statusCode: 404, message: 'Documentation page not found' })
@@ -59,9 +54,12 @@ export default {
     } else {
       require('fs').readFile('static' + path, 'utf8', function (err, content) {
         if (err) return callback({ statusCode: 404, message: 'Documentation page not found' })
-        callback(null, { content })
+        callback(null, { content: marked(content) })
       })
     }
+  },
+  created () {
+    console.log('created')
   },
   computed: {
     visible () { return this.$store.state.visibleAffix },

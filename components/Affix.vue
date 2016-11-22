@@ -1,43 +1,32 @@
 <template>
   <nav class="Affix">
-    <h3 class="Affix__Title">Prologue</h3>
-    <ul class="Affix__List">
-      <li class="Affix__List__Item">
-        <router-link class="Affix__List__Item__Link" to="/guide" exact>
-          What is Nuxt.js ?
-        </router-link>
-      </li>
-      <li class="Affix__List__Item">
-        <router-link class="Affix__List__Item__Link" to="/guide/contribution-guide">
-          Contribution Guide
-        </router-link>
-      </li>
-      <li class="Affix__List__Item">
-        <router-link class="Affix__List__Item__Link" to="/guide/release-notes">
-          Release Notes
-        </router-link>
-      </li>
-    </ul>
-    <h3 class="Affix__Title">Getting started</h3>
-    <ul class="Affix__List">
-      <li class="Affix__List__Item">
-        <router-link class="Affix__List__Item__Link" to="/guide/installation">
-          Installation
-        </router-link>
-      </li>
-      <li class="Affix__List__Item">
-        <router-link class="Affix__List__Item__Link" to="/guide/directory-structure">
-          Directory Structure
-        </router-link>
-      </li>
-      <li class="Affix__List__Item">
-        <router-link class="Affix__List__Item__Link" to="/guide/configuration">
-          Configuration
-        </router-link>
-      </li>
-    </ul>
+    <template v-for="(links, title) in list">
+      <h3 class="Affix__Title">{{ title }}</h3>
+      <ul class="Affix__List">
+        <li class="Affix__List__Item" v-for="link in links">
+          <router-link class="Affix__List__Item__Link" :to="menu + link.to" exact>
+            {{ link.name }}
+          </router-link>
+        </li>
+      </ul>
+    </template>
   </nav>
 </template>
+
+<script>
+export default {
+  props: {
+    menu: {
+      type: String,
+      required: true
+    },
+    list: {
+      type: Object,
+      required: true
+    }
+  }
+}
+</script>
 
 <style lang="scss" scoped>
 .Affix

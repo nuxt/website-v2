@@ -31,7 +31,7 @@
     padding: 30px 0;
     color: #505153;
     letter-spacing: 0.5px;
-    font-weight: 300;
+    font-weight: 400;
     &__Icon
     {
       width: 30px;

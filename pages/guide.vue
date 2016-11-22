@@ -58,15 +58,8 @@ export default {
       })
     }
   },
-  created () {
-    console.log('created')
-  },
   computed: {
     visible () { return this.$store.state.visibleAffix },
-    // content () {
-    //   let content = this.$route.params.slug || 'index'
-    //   return content.replace('-', '')
-    // }
   },
   methods: {
     toggle () { this.$store.commit('toggle', 'visibleAffix') }

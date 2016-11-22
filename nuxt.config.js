@@ -12,7 +12,6 @@ module.exports = {
   },
   css: [
     'normalize.css',
-    'highlight.js/styles/hybrid.css',
     { src: '~assets/scss/main.scss', lang: 'scss' }
   ],
   router: {

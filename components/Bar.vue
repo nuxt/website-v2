@@ -2,7 +2,7 @@
   <div class="Bar">
     <div class="container">
       <div class="Bar__Left">
-        <span class="Bar__Left__Text">Version 1.0</span>
+        <span class="Bar__Left__Text">{{ title }}</span>
         <div class="Bar__Left__Toggler" @click="toggle">
           <div :class="{'close icon': visible, 'indent icon': !visible}"></div>
         </div>
@@ -19,6 +19,10 @@ import NuxtSearch from '~components/Search.vue'
 
 export default {
   props: {
+    title: {
+      type: String,
+      required: true
+    },
     visible: {
       type: Boolean,
       required: true

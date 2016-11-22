@@ -1,17 +1,17 @@
 <template>
-  <div class="Guide">
-    <nuxt-bar :visible="visible" v-on:toggle="toggle" title="Guide : v1"></nuxt-bar>
-    <div class="Guide__Left" :class="{'Guide__Left--hidden': !visible}">
+  <div class="Examples">
+    <nuxt-bar :visible="visible" v-on:toggle="toggle" title="Examples : v1"></nuxt-bar>
+    <div class="Examples__Left" :class="{'Examples__Left--hidden': !visible}">
       <div class="container">
-        <nuxt-affix :list="$store.state.guideMenu" menu="/guide"></nuxt-affix>
+        <nuxt-affix :list="$store.state.examplesMenu" menu="/examples"></nuxt-affix>
       </div>
     </div>
     <div class="container">
-      <div class="Guide__Right" :class="{'Guide__Right--hidden': visible}">
+      <div class="Examples__Right" :class="{'Examples__Right--hidden': visible}">
         <nuxt-content v-html="body"></nuxt-content>
       </div>
     </div>
-    <div class="Guide__Footer">
+    <div class="Examples__Footer">
       <footbar></footbar>
     </div>
   </div>
@@ -34,8 +34,8 @@ export default {
     Footbar
   },
   data ({ route }, callback) {
-    let path = route.params.slug || 'index'
-    path = '/docs/guide/' + path + '.md'
+    let path = route.params.slug || 'hello-world'
+    path = '/docs/examples/' + path + '.md'
     if (process.BROWSER) {
       fetch(path)
       .then((response) => {
@@ -82,7 +82,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.Guide
+.Examples
 {
   &__Left
   {

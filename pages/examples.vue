@@ -1,6 +1,6 @@
 <template>
   <div class="Examples">
-    <nuxt-bar :visible="visible" v-on:toggle="toggle" title="Examples : v1"></nuxt-bar>
+    <nuxt-bar :visible="visible" v-on:toggle="toggle" title="Version 1.0"></nuxt-bar>
     <div class="Examples__Left" :class="{'Examples__Left--hidden': !visible}">
       <div class="container">
         <nuxt-affix :list="$store.state.examplesMenu" menu="/examples"></nuxt-affix>
@@ -65,6 +65,7 @@ export default {
   computed: {
     visible () { return this.$store.state.visibleAffix },
     page () { return fm(this.content) },
+    attributes () { return this.content.attributes },
     body () { return marked(this.page.body) }
   },
   methods: {

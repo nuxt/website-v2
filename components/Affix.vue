@@ -4,7 +4,7 @@
     <ul class="Affix__List">
       <li class="Affix__List__Item">
         <router-link class="Affix__List__Item__Link" to="/guide" exact>
-          What's Nuxt.js ?
+          What is Nuxt.js ?
         </router-link>
       </li>
       <li class="Affix__List__Item">

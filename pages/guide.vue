@@ -8,7 +8,7 @@
     </div>
     <div class="container">
       <div class="Guide__Right" :class="{'Guide__Right--hidden': visible}">
-        <nuxt-content v-html="content"></nuxt-content>
+        <nuxt-content v-html="body"></nuxt-content>
       </div>
     </div>
     <div class="Guide__Footer">
@@ -19,6 +19,7 @@
 
 <script>
 import marked from 'marked'
+import fm from 'front-matter'
 
 import NuxtBar from '~components/Bar.vue'
 import NuxtAffix from '~components/Affix.vue'
@@ -34,7 +35,7 @@ export default {
   },
   data ({ route }, callback) {
     let path = route.params.slug || 'index'
-    path = '/docs/' + path + '.md'
+    path = '/docs/guide/' + path + '.md'
     if (process.BROWSER) {
       fetch(path)
       .then((response) => {
@@ -46,7 +47,7 @@ export default {
         return response.text()
       })
       .then((content) => {
-        callback(null, { content: marked(content) })
+        callback(null, { content })
       })
       .catch((e) => {
         callback({ statusCode: 404, message: 'Documentation page not found' })
@@ -54,15 +55,28 @@ export default {
     } else {
       require('fs').readFile('static' + path, 'utf8', function (err, content) {
         if (err) return callback({ statusCode: 404, message: 'Documentation page not found' })
-        callback(null, { content: marked(content) })
+        callback(null, { content })
       })
     }
   },
+  watch: {
+    '$route': 'refreshContent'
+  },
   computed: {
     visible () { return this.$store.state.visibleAffix },
+    page () { return fm(this.content) },
+    body () { return marked(this.page.body) }
   },
   methods: {
+    refreshContent () {
+      this.content = this.$options.data().content || ''
+    },
     toggle () { this.$store.commit('toggle', 'visibleAffix') }
+  },
+  head () {
+    return {
+      title: this.page.attributes.title || 'No title'
+    }
   }
 }
 </script>

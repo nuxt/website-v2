@@ -12,6 +12,7 @@ module.exports = {
   },
   css: [
     'normalize.css',
+    'highlight.js/styles/hybrid.css',
     { src: '~assets/scss/main.scss', lang: 'scss' }
   ],
   router: {
@@ -21,6 +22,6 @@ module.exports = {
     ]
   },
   build: {
-    vendor: ['whatwg-fetch', 'marked']
+    vendor: ['whatwg-fetch', 'marked', 'highlight.js']
   }
 }

@@ -18,12 +18,21 @@
 </template>
 
 <script>
-import marked from 'marked'
+import marked, { Renderer } from 'marked'
+import highlightjs from 'highlight.js'
 import fm from 'front-matter'
 
 import NuxtBar from '~components/Bar.vue'
 import NuxtAffix from '~components/Affix.vue'
 import NuxtFooter from '~components/Footer.vue'
+
+const renderer = new Renderer();
+renderer.code = (code, language) => {
+  const validLang = !!(language && highlightjs.getLanguage(language));
+  const highlighted = validLang ? highlightjs.highlight(language, code).value : code;
+  return `<pre><code class="hljs ${language}">${highlighted}</code></pre>`;
+};
+marked.setOptions({ renderer });
 
 export default {
   components: {

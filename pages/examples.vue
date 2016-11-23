@@ -8,11 +8,11 @@
     </div>
     <div class="container">
       <div class="Examples__Right" :class="{'Examples__Right--hidden': visible}">
-        <nuxt-content v-html="body"></nuxt-content>
+        <div class="Content" v-html="body"></div>
       </div>
     </div>
     <div class="Examples__Footer">
-      <footbar></footbar>
+      <nuxt-footer></nuxt-footer>
     </div>
   </div>
 </template>
@@ -23,15 +23,13 @@ import fm from 'front-matter'
 
 import NuxtBar from '~components/Bar.vue'
 import NuxtAffix from '~components/Affix.vue'
-import NuxtContent from '~components/Content.vue'
-import Footbar from '~components/Footer.vue'
+import NuxtFooter from '~components/Footer.vue'
 
 export default {
   components: {
     NuxtBar,
     NuxtAffix,
-    NuxtContent,
-    Footbar
+    NuxtFooter
   },
   data ({ route }, callback) {
     let path = route.params.slug || 'hello-world'

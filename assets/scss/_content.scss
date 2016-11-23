@@ -92,4 +92,21 @@
       margin: 0;
     }
   }
+  .video
+  {
+    width: 100%;
+    height: 0;
+    padding-bottom: 56.25%;
+    overflow: hidden;
+    position: relative;
+    margin: 30px 0;
+    iframe, embed, object
+    {
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
+  }
 }

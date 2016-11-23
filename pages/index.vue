@@ -27,16 +27,16 @@
         </div>
       </div>
     </section>
-    <footbar></footbar>
+    <nuxt-footer></nuxt-footer>
   </div>
 </template>
 
 <script>
-import Footbar from '~components/Footer.vue'
+import NuxtFooter from '~components/Footer.vue'
 
 export default {
   components: {
-    Footbar
+    NuxtFooter
   }
 }
 </script>

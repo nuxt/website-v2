@@ -11,7 +11,7 @@
         <div class="Content">
           <h1>Release Notes</h1>
           <div v-for="release in releases">
-            <h2>{{ release.name }}</h2>
+            <h2 :id="release.name">{{ release.name }}</h2>
             <html-parser class="Release__Content" v-html="release.body"></html-parser>
           </div>
         </div>

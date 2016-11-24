@@ -17,6 +17,7 @@
             <iframe class="youtube" :src="attributes.youtube" frameborder="0" allowfullscreen></iframe>
           </div>
           <h2>Source Code</h2>
+          <nuxt-files-tree :example="attributes.github"></nuxt-files-tree>
           <div>
             <a v-if="attributes.livedemo" :href="attributes.livedemo" class="button" target="_blank">
               <span><div class="icon eye"></div></span>
@@ -26,7 +27,7 @@
               <span><div class="icon edit"></div></span>
               Live edit
             </a>
-            <a href="#" class="button" target="_blank">
+            <a :href="downloadLink" class="button" target="_blank">
               <span><div class="icon download"></div></span>
               Download
             </a>
@@ -49,6 +50,7 @@ import fm from 'front-matter'
 import NuxtBar from '~components/Bar.vue'
 import NuxtAffix from '~components/Affix.vue'
 import NuxtFooter from '~components/Footer.vue'
+import NuxtFilesTree from '~components/FilesTree.vue'
 
 const renderer = new Renderer();
 renderer.code = (code, language) => {
@@ -62,7 +64,8 @@ export default {
   components: {
     NuxtBar,
     NuxtAffix,
-    NuxtFooter
+    NuxtFooter,
+    NuxtFilesTree
   },
   data ({ route }, callback) {
     let path = route.params.slug || 'hello-world'
@@ -97,7 +100,8 @@ export default {
     visible () { return this.$store.state.visibleAffix },
     page () { return fm(this.content) },
     attributes () { return this.page.attributes },
-    body () { return marked(this.page.body) }
+    body () { return marked(this.page.body) },
+    downloadLink () { return 'https://minhaskamal.github.io/DownGit/#/home?url=https://github.com/nuxt/nuxt.js/tree/master/examples/' + this.attributes.github}
   },
   methods: {
     refreshContent () {

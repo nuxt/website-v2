@@ -8,7 +8,11 @@
     </div>
     <div class="container">
       <div class="Examples__Right" :class="{'Examples__Right--hidden': visible}">
-        <div class="Content" v-html="body"></div>
+        <div class="Content">
+          <h1>{{ attributes.title }}</h1>
+          <blockquote>{{ attributes.description }}</blockquote>
+          <div v-html="body"></div>
+        </div>
       </div>
     </div>
     <div class="Examples__Footer">
@@ -72,7 +76,7 @@ export default {
   computed: {
     visible () { return this.$store.state.visibleAffix },
     page () { return fm(this.content) },
-    attributes () { return this.content.attributes },
+    attributes () { return this.page.attributes },
     body () { return marked(this.page.body) }
   },
   methods: {
@@ -83,7 +87,8 @@ export default {
   },
   head () {
     return {
-      title: this.page.attributes.title || 'No title'
+      title: this.page.attributes.title || 'Examples',
+      description: this.page.attributes.description || 'Nuxt.js examples'
     }
   }
 }

@@ -8,7 +8,7 @@
     </div>
     <div class="container">
       <div class="Guide__Right" :class="{'Guide__Right--hidden': visible}">
-        <div class="Content" v-html="body"></div>
+        <html-parser class="Content" v-html="body"></html-parser>
       </div>
     </div>
     <div class="Guide__Footer">
@@ -25,6 +25,7 @@ import fm from 'front-matter'
 import NuxtBar from '~components/Bar.vue'
 import NuxtAffix from '~components/Affix.vue'
 import NuxtFooter from '~components/Footer.vue'
+import HtmlParser from '~components/HtmlParser.vue'
 
 const renderer = new Renderer();
 renderer.code = (code, language) => {
@@ -38,7 +39,8 @@ export default {
   components: {
     NuxtBar,
     NuxtAffix,
-    NuxtFooter
+    NuxtFooter,
+    HtmlParser
   },
   data ({ route }, callback) {
     // Default data
@@ -81,7 +83,8 @@ export default {
   },
   head () {
     return {
-      title: this.page.attributes.title || 'No title'
+      title: this.page.attributes.title || 'No title',
+      titleTemplate: '%s - Nuxt.js'
     }
   }
 }

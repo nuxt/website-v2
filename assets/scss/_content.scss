@@ -75,7 +75,7 @@
     {
       color: #505153;
       font-size: 1.05em;
-      line-height: 1.3em;
+      line-height: 1.5em;
       padding: 5px 0;
     }
   }
@@ -112,8 +112,13 @@
   }
   .Release__Content
   {
-    h1
+    background-color: #fcfcfc;
+    border-left: 3px solid #dbdfe1;
+    padding: 30px;
+    h1, h2
     {
+      color: #000;
+      margin-top: 0;
       font-size: 2.2em;
     }
   }

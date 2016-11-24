@@ -88,6 +88,7 @@ export default {
   head () {
     return {
       title: this.page.attributes.title || 'Examples',
+      titleTemplate: 'Example: %s - Nuxt.js',
       description: this.page.attributes.description || 'Nuxt.js examples'
     }
   }

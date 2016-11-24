@@ -9,6 +9,7 @@
     <div class="container">
       <div class="Guide__Right" :class="{'Guide__Right--hidden': visible}">
         <html-parser class="Content" v-html="body"></html-parser>
+        <p class="Guide__Contribute">Caught a mistake or want to contribute to the documentation? <a :href="'https://github.com/nuxt/docs/blob/master/guide/'+path+'.md'" target="_blank">Edit this page on Github!</a></p>
       </div>
     </div>
     <div class="Guide__Footer">
@@ -45,10 +46,10 @@ export default {
   data ({ route }, callback) {
     // Default data
     let data = {
-      content: ''
+      content: '',
+      path: route.params.slug || 'index'
     }
-    let path = route.params.slug || 'index'
-    path = '/docs/guide/' + path + '.md'
+    const path = '/docs/guide/' + data.path + '.md'
     if (process.BROWSER_BUILD) {
       fetch(path)
       .then((response) => {
@@ -69,7 +70,8 @@ export default {
     } else {
       require('fs').readFile('static' + path, 'utf8', function (err, content) {
         if (err) return callback({ statusCode: 404, message: 'Documentation page not found' })
-        callback(null, { content })
+        data.content = content
+        callback(null, data)
       })
     }
   },
@@ -145,6 +147,11 @@ export default {
         display: block;
       }
     }
+  }
+  &__Contribute {
+    border-top: 1px #dbdfe1 solid;
+    padding-top: 20px;
+    color: #7f8c8d;
   }
   &__Footer
   {

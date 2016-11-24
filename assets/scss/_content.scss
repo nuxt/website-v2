@@ -9,7 +9,7 @@
   {
     font-weight: 300;
     font-size: 3.6em;
-    margin-bottom: 40px;
+    margin-bottom: 30px;
   }
   h2
   {
@@ -87,9 +87,10 @@
     border-left: 3px solid #dbdfe1;
     p
     {
-      // font-weight: 300;
-      color: #888;
+      color: #9aabb1;
       margin: 0;
+      font-size: 1.1em;
+      line-height: 1.5em;
     }
   }
   .video
@@ -99,7 +100,7 @@
     padding-bottom: 56.25%;
     overflow: hidden;
     position: relative;
-    margin: 30px 0;
+    margin: 50px 0;
     iframe, embed, object
     {
       width: 100%;

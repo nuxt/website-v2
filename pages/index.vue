@@ -9,17 +9,17 @@
           </h2>
           <ul class="Landscape__Content__List">
             <li class="Landscape__Content__List__Item">
-              <router-link class="Landscape__Content__List__Item__Link" to="/guide">
+              <router-link class="button" to="/guide">
                 GUIDE
               </router-link>
             </li>
             <li class="Landscape__Content__List__Item">
-              <router-link class="Landscape__Content__List__Item__Link" to="/examples">
+              <router-link class="button" to="/examples">
                 EXAMPLES
               </router-link>
             </li>
             <li class="Landscape__Content__List__Item">
-              <a class="Landscape__Content__List__Item__Link" href="https://github.com/nuxt/nuxt.js" target="_blank">
+              <a class="button" href="https://github.com/nuxt/nuxt.js" target="_blank">
                 GITHUB
               </a>
             </li>
@@ -74,24 +74,11 @@ export default {
       {
         display: inline-block;
         padding: 15px;
-        &__Link
+        .button
         {
-          display: block;
-          color: #2e2f30;
-          border: 2px solid #505153;
           height: 46px;
           line-height: 42px;
           width: 180px;
-          text-align: center;
-          text-transform: uppercase;
-          text-decoration: none;
-          letter-spacing: 1px;
-          &:hover
-          {
-            border-color: #00BCD4;
-            background-color: #00BCD4;
-            color: #fff;
-          }
         }
       }
     }

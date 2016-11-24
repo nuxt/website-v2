@@ -4,6 +4,7 @@
   "description": "Nuxt.js official website",
   "main": "index.js",
   "dependencies": {
+    "axios": "^0.15.2",
     "front-matter": "^2.1.1",
     "highlight.js": "^9.8.0",
     "json-loader": "^0.5.4",

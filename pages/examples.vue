@@ -10,7 +10,27 @@
       <div class="Examples__Right" :class="{'Examples__Right--hidden': visible}">
         <div class="Content">
           <h1>{{ attributes.title }}</h1>
-          <blockquote>{{ attributes.description }}</blockquote>
+          <blockquote>
+            <p>{{ attributes.description }}</p>
+          </blockquote>
+          <div class="video" v-if="attributes.youtube">
+            <iframe class="youtube" :src="attributes.youtube" frameborder="0" allowfullscreen></iframe>
+          </div>
+          <h2>Source Code</h2>
+          <div>
+            <a v-if="attributes.livedemo" :href="attributes.livedemo" class="button" target="_blank">
+              <span><div class="icon eye"></div></span>
+              Live demo
+            </a>
+            <a v-if="attributes.liveedit" :href="attributes.liveedit" class="button" target="_blank">
+              <span><div class="icon edit"></div></span>
+              Live edit
+            </a>
+            <a href="#" class="button" target="_blank">
+              <span><div class="icon download"></div></span>
+              Download
+            </a>
+          </div>
           <div v-html="body"></div>
         </div>
       </div>
@@ -157,6 +177,15 @@ export default {
     @media (min-width: 992px)
     {
       display: none;
+    }
+  }
+  .button
+  {
+    margin-bottom: 15px;
+    margin-right: 15px;
+    &:last-child
+    {
+      margin-right: 0;
     }
   }
 }

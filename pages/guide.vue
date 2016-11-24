@@ -47,7 +47,7 @@ export default {
     }
     let path = route.params.slug || 'index'
     path = '/docs/guide/' + path + '.md'
-    if (process.BROWSER) {
+    if (process.BROWSER_BUILD) {
       fetch(path)
       .then((response) => {
         const contenType = response.headers.get('content-type') || ''

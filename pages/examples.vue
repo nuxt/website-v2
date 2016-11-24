@@ -43,7 +43,7 @@ export default {
   data ({ route }, callback) {
     let path = route.params.slug || 'hello-world'
     path = '/docs/examples/' + path + '.md'
-    if (process.BROWSER) {
+    if (process.BROWSER_BUILD) {
       fetch(path)
       .then((response) => {
         const contenType = response.headers.get('content-type') || ''

@@ -7,7 +7,8 @@
         </div>
         {{ file.name }}
       </div>
-      <recursive-list v-if="file.type === 'dir'" :path="file.path"></recursive-list>
+      <recursive-list v-on:changeFile="changeFile" v-if="file.type === 'dir'" :path="file.path">
+      </recursive-list>
     </li>
   </ul>
 </template>
@@ -35,7 +36,7 @@ export default {
       }
     })
     .then((res) => {
-      if (!this.$store.state.currentFile) {
+      if (!this.currentFile) {
         let f = res.data.find((file) => {
           return file.name === "package.json"
         })
@@ -49,15 +50,20 @@ export default {
       files: []
     }
   },
+  computed: {
+    currentFile () {
+      return this.$parent.currentFile
+    }
+  },
   methods: {
-    linkClass (file) {
+    linkClass (f) {
       let c = 'RecursiveList__Item__Link '
-      c += (this.$store.state.currentFile && this.$store.state.currentFile.path === file.path) ? 'RecursiveList__Item__Link--active' : 'RecursiveList__Item__Link--' + file.type
+      c += (this.currentFile && this.currentFile.path === f.path) ? 'RecursiveList__Item__Link--active' : 'RecursiveList__Item__Link--' + f.type
       return c
     },
-    changeFile (file) {
-      if (file.type === 'file' && (!this.$store.state.currentFile || this.$store.state.currentFile.path !== file.path)) {
-        this.$store.dispatch('updateFileDatas', Object.assign({}, file))
+    changeFile (f) {
+      if (f.type === 'file' && (!this.currentFile || this.currentFile.path !== f.path)) {
+        this.$emit('changeFile', f)
       }
     }
   }

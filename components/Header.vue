@@ -18,6 +18,11 @@
             </router-link>
           </li>
           <li class="Header__Nav__List__Item">
+            <router-link class="Header__Nav__List__Item__Link" to="/api">
+              API
+            </router-link>
+          </li>
+          <li class="Header__Nav__List__Item">
             <router-link class="Header__Nav__List__Item__Link" to="/examples">
               EXAMPLES
             </router-link>

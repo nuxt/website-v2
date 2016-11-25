@@ -18,10 +18,15 @@ module.exports = {
   router: {
     routes: [
       { path: '/guide/:slug', component: 'pages/guide' },
+      { path: '/api/:slug', component: 'pages/api' },
       { path: '/examples/:slug', component: 'pages/examples' }
     ]
   },
+  plugins: ['~plugins/marked'],
   build: {
     vendor: ['whatwg-fetch', 'marked', 'highlight.js']
+  },
+  env: {
+    githubToken: '4aa6bcf919d238504e7db59a66d32e78281c0ad3'
   }
 }

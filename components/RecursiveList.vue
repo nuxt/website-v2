@@ -1,0 +1,131 @@
+<template>
+  <ul class="RecursiveList">
+    <li class="RecursiveList__Item" v-for="file in files">
+      <div :class="linkClass(file)" @click="changeFile(file)">
+        <div class="Icon">
+          <div class="icon" :class="{'folder': file.type === 'dir', 'file': file.type === 'file'}"></div>
+        </div>
+        {{ file.name }}
+      </div>
+      <recursive-list v-if="file.type === 'dir'" :path="file.path"></recursive-list>
+    </li>
+  </ul>
+</template>
+
+<script>
+import axios from 'axios'
+
+export default {
+  name: 'recursive-list',
+  props: {
+    path: {
+      type: String,
+      required: true
+    }
+  },
+  mounted () {
+    return axios({
+      url: 'https://api.github.com/repos/nuxt/nuxt.js/contents/' + this.path,
+      headers: {
+        'Authorization': 'token 4aa6bcf919d238504e7db59a66d32e78281c0ad3'
+      }
+    })
+    .then((res) => {
+      if (!this.$store.state.currentFile) {
+        let f = res.data.find((file) => {
+          return file.name === "package.json"
+        })
+        if (f) this.changeFile(f)
+      }
+      this.files = res.data
+    })
+  },
+  data () {
+    return {
+      files: []
+    }
+  },
+  methods: {
+    linkClass (file) {
+      let c = 'RecursiveList__Item__Link '
+      c += (this.$store.state.currentFile && this.$store.state.currentFile.path === file.path) ? 'RecursiveList__Item__Link--active' : 'RecursiveList__Item__Link--' + file.type
+      return c
+    },
+    changeFile (file) {
+      if (file.type === 'file' && (!this.$store.state.currentFile || this.$store.state.currentFile.path !== file.path)) {
+        this.$store.dispatch('updateFileDatas', Object.assign({}, file))
+      }
+    }
+  }
+}
+</script>
+
+<style lang="scss" scoped>
+.RecursiveList
+{
+  padding: 0;
+  padding-left: 10px;
+  list-style: none;
+  margin: 0;
+  &__Item
+  {
+    padding: 1px 0;
+    &:last-child
+    {
+      padding-bottom: 0;
+    }
+    &:first-child
+    {
+      padding-top: 2px;
+    }
+    &__Link
+    {
+      color: #ddd;
+      font-size: 0.9em;
+      font-weight: 300;
+      line-height: 1em;
+      letter-spacing: 0.5px;
+      border-radius: 5px;
+      padding: 10px 5px;
+      &--dir
+      {
+        text-transform: uppercase;
+      }
+      &--file
+      {
+        cursor: pointer;
+        &:hover
+        {
+          background-color: #222;
+          color: #fff;
+        }
+      }
+      &--active
+      {
+        background-color: #00BCD4;
+        color: #fff;
+      }
+      .Icon
+      {
+        float: left;
+        padding: 0 5px;
+        margin-right: 10px;
+        .file
+        {
+          margin-left: 0;
+          margin-top: 0;
+        }
+        .folder
+        {
+          margin-left: 0;
+          margin-top: 3px;
+        }
+        .icon, .icon:before, .icon:after
+        {
+          border-color: #fff;
+        }
+      }
+    }
+  }
+}
+</style>

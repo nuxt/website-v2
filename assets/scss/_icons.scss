@@ -14,6 +14,14 @@
   transition: all 0.4s ease;
 }
 
+.Icon
+{
+  height: 21px;
+  width: 21px;
+  position: relative;
+  display: inline-block;
+}
+
 @import "icons/menu";
 @import "icons/close";
 @import "icons/search";
@@ -23,3 +31,5 @@
 @import "icons/edit";
 @import "icons/download";
 @import "icons/eye";
+@import "icons/folder";
+@import "icons/file";

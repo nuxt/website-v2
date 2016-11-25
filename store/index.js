@@ -39,6 +39,7 @@ const store = new Vuex.Store({
     nuxtServerInit ({ state }, { req }) {
       if (!process.BROWSER) {
         state.guideMenu = require('json-loader!static/docs/guide/menu.json')
+        state.apiMenu = require('json-loader!static/docs/api/menu.json')
         state.examplesMenu = require('json-loader!static/docs/examples/menu.json')
       }
     }

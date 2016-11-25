@@ -84,11 +84,11 @@ export default {
         callback(null, { content })
       })
       .catch((e) => {
-        callback({ statusCode: 404, message: 'Documentation page not found' })
+        callback({ statusCode: 404, message: 'Example page not found' })
       })
     } else {
       require('fs').readFile('static' + path, 'utf8', function (err, content) {
-        if (err) return callback({ statusCode: 404, message: 'Documentation page not found' })
+        if (err) return callback({ statusCode: 404, message: 'Example page not found' })
         callback(null, { content })
       })
     }
@@ -113,7 +113,9 @@ export default {
     return {
       title: this.page.attributes.title || 'Examples',
       titleTemplate: 'Example: %s - Nuxt.js',
-      description: this.page.attributes.description || 'Nuxt.js examples'
+      meta: [
+        { hid: 'description', name: 'description', content: (this.page.attributes.description || 'Nuxt.js example') }
+      ]
     }
   }
 }

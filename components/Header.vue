@@ -95,6 +95,7 @@ export default {
     }
     &__Logo
     {
+      float: left;
       height: 24px;
       display: inline-block;
       margin-top: 16px;

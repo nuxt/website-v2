@@ -16,7 +16,6 @@ export default {
     setStore () {
       if (this.$store.state.visibleHeader) this.$store.commit('toggle', 'visibleHeader')
       if (this.$store.state.visibleAffix) this.$store.commit('toggle', 'visibleAffix')
-      if (this.$store.state.currentFile) this.$store.commit('updateFile', null)
     }
   },
   components: {

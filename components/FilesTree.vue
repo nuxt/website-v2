@@ -21,9 +21,7 @@
       <div class="FilesTree__Right__Body">
         <template v-if="parseContent">
           <img v-if="isImage" :src="parseContent" alt="Image" class="FilesTree__Right__Body__Image"/>
-          <pre v-else class="FilesTree__Right__Body__File">
-            <code v-html="parseContent"></code>
-          </pre>
+          <pre v-else class="FilesTree__Right__Body__File"><code v-html="parseContent"></code></pre>
         </template>
         <div v-else class="FilesTree__Right__Body__Wait">Please wait..</div>
       </div>
@@ -55,12 +53,11 @@ export default {
   },
   computed: {
     parseContent () {
+      if (!this.content) {
+        return ''
+      }
       if (this.isImage) {
         return 'https://github.com/nuxt/nuxt.js/blob/master/' + this.currentFile.path + '?raw=true'
-      }
-      if (process.BROWSER_BUILD && this.content) {
-        let html = window.atob(this.content)
-        return hljs.highlightAuto(html).value
       }
       return this.content
     },
@@ -68,16 +65,22 @@ export default {
       return this.currentFile.path.replace('examples/'+this.example, '')
     },
     isImage () {
-      if (this.currentFile && this.currentFile.path.indexOf('.png') > -1) {
+      if (this.currentFile && /[^\s]+\.(jpe?g|png|gif|bmp)$/i.test(this.currentFile.path)){
         return true
       }
       return false
+    },
+    isMobile () {
+      return window.innerWidth < 576
     }
   },
   methods: {
     changeFile (file) {
       this.currentFile = file
       this.content = cacheFiles[file.path]
+      if (this.isMobile) {
+        this.hidden = true
+      }
       if (!this.content) {
         axios({
           url: 'https://api.github.com/repos/nuxt/nuxt.js/contents/' + file.path,
@@ -86,7 +89,9 @@ export default {
           }
         })
         .then((res) => {
-          cacheFiles[file.path] = res.data.content
+          let content = window.atob(res.data.content)
+          content = hljs.highlightAuto(content).value
+          cacheFiles[file.path] = content
           this.content = cacheFiles[file.path]
         })
       }
@@ -114,7 +119,7 @@ export default {
     width: 100%;
     position: absolute;
     background-color: #1a1a1a;
-    transition: all 0.5s linear;
+    transition: all 0.3s;
     @media (min-width: 576px)
     {
       width: 200px;
@@ -169,7 +174,7 @@ export default {
   {
     background-color: #222;
     padding-left: 100%;
-    transition: all 0.5s linear;
+    transition: all 0.3s;
     @media (min-width: 576px)
     {
       padding-left: 200px;
@@ -219,7 +224,7 @@ export default {
         background-color: transparent;
         margin: 0;
         padding: 30px 15px;
-        padding-top: 0;
+        padding-top: 10px;
         overflow: auto;
         code
         {

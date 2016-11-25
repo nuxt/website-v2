@@ -36,6 +36,18 @@ export default {
       }
     })
     .then((res) => {
+      res.data.sort((f1, f2) => {
+        // Same type, order by name
+        if (f1.type === f2.type) {
+          let n1 = f1.name.toUpperCase()
+          var n2 = f2.name.toUpperCase()
+          if (n1 < n2) return -1
+          if (n1 > n2) return 1
+          return 0
+        }
+        if (f1.type === 'dir') return -1
+        return 1
+      })
       if (!this.currentFile) {
         let f = res.data.find((file) => {
           return file.name === "package.json"
@@ -103,7 +115,7 @@ export default {
       }
       &--file
       {
-        cursor: pointer;
+        cursor: default;
         &:hover
         {
           background-color: #222;

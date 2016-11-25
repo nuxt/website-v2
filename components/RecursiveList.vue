@@ -23,6 +23,10 @@ export default {
       required: true
     }
   },
+  beforeCreate () {
+    // https://vuejs.org/v2/guide/components.html#Circular-References-Between-Components
+    this.$options.components.RecursiveList = require('./RecursiveList.vue')
+  },
   mounted () {
     return axios({
       url: 'https://api.github.com/repos/nuxt/nuxt.js/contents/' + this.path,

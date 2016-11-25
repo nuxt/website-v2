@@ -82,6 +82,40 @@
       margin-bottom: 0;
     }
   }
+  #table-of-contents
+  {
+    font-weight: 400;
+    font-size: 1em;
+    margin: 0;
+    letter-spacing: 1px;
+    color: #9aabb1;
+    text-transform: uppercase;
+    border: 1px solid #dbdfe1;
+    padding: 15px;
+    border-bottom: 0;
+  }
+  ol
+  {
+    margin: 0;
+    margin-bottom: 30px;
+    border: 1px solid #dbdfe1;
+    padding: 15px;
+    padding-left: 30px;
+    li
+    {
+      color: #505153;
+      padding: 5px 0;
+      a
+      {
+        color: #505153;
+        &:hover
+        {
+          text-decoration: none;
+          color: #00BCD4;
+        }
+      }
+    }
+  }
   blockquote
   {
     color: #9aabb1;

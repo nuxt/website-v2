@@ -16,7 +16,7 @@
         <div class="Icon" @click="hidden = false" v-if="hidden">
           <div class="icon menu"></div>
         </div>
-        /{{ currentFile.path }}
+        {{ breadcrumb }}
       </div>
       <div class="FilesTree__Right__Body">
         <template v-if="parseContent">
@@ -63,6 +63,9 @@ export default {
         return hljs.highlightAuto(html).value
       }
       return this.content
+    },
+    breadcrumb () {
+      return this.currentFile.path.replace('examples/'+this.example, '')
     },
     isImage () {
       if (this.currentFile && this.currentFile.path.indexOf('.png') > -1) {

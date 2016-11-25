@@ -1,22 +1,22 @@
 <template>
-  <div class="Guide">
+  <div class="API">
     <nuxt-bar :visible="visible" v-on:toggle="toggle" title="Version 1.0"></nuxt-bar>
-    <div class="Guide__Left" :class="{'Guide__Left--hidden': !visible}">
+    <div class="API__Left" :class="{'API__Left--hidden': !visible}">
       <div class="container">
-        <nuxt-affix :list="$store.state.guideMenu" menu="/guide"></nuxt-affix>
+        <nuxt-affix :list="$store.state.apiMenu" menu="/api"></nuxt-affix>
       </div>
     </div>
     <div class="container">
-      <div class="Guide__Right" :class="{'Guide__Right--hidden': visible}">
+      <div class="API__Right" :class="{'API__Right--hidden': visible}">
         <html-parser class="Content" v-html="body"></html-parser>
-        <p class="Guide__Contribute">Caught a mistake or want to contribute to the documentation?
-          <a :href="'https://github.com/nuxt/docs/blob/master/guide/'+path+'.md'" class="link" target="_blank">
+        <p class="API__Contribute">Caught a mistake or want to contribute to the documentation?
+          <a :href="'https://github.com/nuxt/docs/blob/master/api/'+path+'.md'" class="link" target="_blank">
             Edit this page on Github!
           </a>
         </p>
       </div>
     </div>
-    <div class="Guide__Footer">
+    <div class="API__Footer">
       <nuxt-footer></nuxt-footer>
     </div>
   </div>
@@ -45,14 +45,14 @@ export default {
       content: '',
       path: route.params.slug || 'index'
     }
-    const path = '/docs/guide/' + data.path + '.md'
+    const path = '/docs/api/' + data.path + '.md'
     if (process.BROWSER_BUILD) {
       fetch(path)
       .then((response) => {
         const contenType = response.headers.get('content-type') || ''
         const requestOK = (response.status >= 200 && response.status < 300)
         if (!requestOK || contenType.indexOf('text/x-markdown') === -1) {
-          throw new Error('Documentation page not found')
+          throw new Error('API page not found')
         }
         return response.text()
       })
@@ -61,7 +61,7 @@ export default {
         callback(null, data)
       })
       .catch((e) => {
-        callback({ statusCode: 404, message: 'Documentation page not found' }, data)
+        callback({ statusCode: 404, message: 'API page not found' }, data)
       })
     } else {
       require('fs').readFile('static' + path, 'utf8', function (err, content) {
@@ -82,14 +82,14 @@ export default {
   head () {
     return {
       title: this.page.attributes.title || 'No title',
-      titleTemplate: '%s - Nuxt.js'
+      titleTemplate: 'API: %s - Nuxt.js'
     }
   }
 }
 </script>
 
 <style lang="scss" scoped>
-.Guide
+.API
 {
   &__Left
   {

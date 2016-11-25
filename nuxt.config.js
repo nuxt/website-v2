@@ -23,5 +23,8 @@ module.exports = {
   },
   build: {
     vendor: ['whatwg-fetch', 'marked', 'highlight.js']
-  }
+  },
+  plugins: [
+    '~plugins/components.js'
+  ]
 }

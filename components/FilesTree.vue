@@ -23,6 +23,7 @@
 </template>
 
 <script>
+import RecursiveList from './RecursiveList.vue'
 // Pour download_url
 export default {
   props: {
@@ -40,6 +41,9 @@ export default {
     file () {
       return this.$store.state.currentFile
     }
+  },
+  components: {
+    RecursiveList
   }
 }
 </script>

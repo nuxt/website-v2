@@ -58,7 +58,7 @@ export default {
     margin-top: 15px;
     &__Item
     {
-      padding: 7px;
+      padding: 5px 0;
       &__Link
       {
         text-decoration: none;

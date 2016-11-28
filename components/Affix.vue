@@ -36,7 +36,7 @@ export default {
   height: 100%;
   overflow-y: auto;
   float: left;
-  font-size: 1.05em;
+  font-size: 1em;
   background-color: #fff;
   @media (min-width: 992px)
   {
@@ -50,7 +50,6 @@ export default {
     text-transform: uppercase;
     color: #9aabb1;
     font-weight: 400;
-    font-size: 1em;
     letter-spacing: 1px;
   }
   &__List

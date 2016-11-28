@@ -3,27 +3,35 @@
   h1, h2, h3, h4, h5, h6
   {
     color: #000;
-    margin-bottom: 30px;
+    margin: 30px 0;
+    font-weight: 300;
   }
   h1
   {
-    font-weight: 300;
-    font-size: 3.6em;
-    margin-bottom: 30px;
+    font-size: 3em;
+    margin-top: 0;
   }
   h2
   {
-    font-size: 2.8em;
-    font-weight: 300;
+    font-size: 2.4em;
     padding-bottom: 10px;
     border-bottom: 1px solid #dbdfe1;
-    margin: 40px 0;
   }
   h3
   {
     font-size: 2em;
-    font-weight: 300;
-    margin: 30px 0;
+  }
+  h4
+  {
+    font-size: 1.8em;
+  }
+  h5
+  {
+    font-size: 1.6em;
+  }
+  h6
+  {
+    font-size: 1.4em;
   }
   a
   {
@@ -38,7 +46,7 @@
     text-align: justify;
     font-weight: 400;
     color: #2e2f30;
-    font-size: 1.1em;
+    font-size: 1em;
     line-height: 1.5em;
     letter-spacing: 0.2px;
     margin: 15px 0;
@@ -57,7 +65,7 @@
   }
   pre
   {
-    margin: 30px 0;
+    margin: 20px 0;
     code
     {
       color: #eee;
@@ -69,13 +77,13 @@
   ul
   {
     list-style: circle;
-    margin-bottom: 30px;
+    margin-bottom: 20px;
     padding-left: 30px;
     li
     {
       color: #505153;
-      font-size: 1.05em;
-      line-height: 1.5em;
+      font-size: 1em;
+      line-height: 1.25em;
       padding: 5px 0;
     }
     ul {
@@ -118,17 +126,25 @@
   }
   blockquote
   {
-    color: #9aabb1;
-    margin: 30px 0;
+    color: #888;
+    margin: 20px 0;
     padding: 5px 10px;
     border-left: 3px solid #dbdfe1;
     p
     {
-      color: #9aabb1;
+      color: #888;
       margin: 0;
-      font-size: 1.1em;
+      font-size: 1em;
       line-height: 1.5em;
     }
+  }
+  b, strong
+  {
+    font-weight: 600;
+  }
+  em
+  {
+    color: #555;
   }
   .video
   {
@@ -137,7 +153,7 @@
     padding-bottom: 56.25%;
     overflow: hidden;
     position: relative;
-    margin: 50px 0;
+    margin: 30px 0;
     iframe, embed, object
     {
       width: 100%;
@@ -151,13 +167,13 @@
   {
     background-color: #fcfcfc;
     border-left: 3px solid #dbdfe1;
-    padding: 30px;
+    padding: 20px;
     h1, h2
     {
       color: #000;
       margin-top: 0;
-      font-size: 2.2em;
-      margin-bottom: 30px;
+      font-size: 2em;
+      margin-bottom: 20px;
       padding: 0;
       border: none;
     }
@@ -169,7 +185,7 @@
     background-color: #9aabb1;
     padding: 12px 15px;
     line-height: 1.5em;
-    margin-bottom: 30px;
+    margin-bottom: 20px;
     letter-spacing: 0.6px;
     text-align: justify;
     -webkit-border-radius: 4px;

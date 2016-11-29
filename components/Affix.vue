@@ -50,11 +50,12 @@ export default {
     text-transform: uppercase;
     color: #9aabb1;
     font-weight: 400;
+    font-size: 1.05em;
     letter-spacing: 1px;
   }
   &__List
   {
-    margin-top: 15px;
+    margin-top: 12px;
     &__Item
     {
       padding: 5px 0;

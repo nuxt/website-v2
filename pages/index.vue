@@ -3,19 +3,14 @@
     <section class="Landscape">
       <div class="Landscape__Content">
         <div class="container content">
-          <img src="~static/logo_noir.png" alt="Logo nuxt" class="Landscape__Content__Image"/>
+          <img src="~static/logo.png" alt="Logo nuxt" class="Landscape__Content__Image"/>
           <h2 class="Landscape__Content__Title">
             A minimalistic framework <br>for server-rendered Vue.js applications
           </h2>
           <ul class="Landscape__Content__List">
             <li class="Landscape__Content__List__Item">
-              <router-link class="button" to="/guide">
+              <router-link class="button button--green" to="/guide">
                 GUIDE
-              </router-link>
-            </li>
-            <li class="Landscape__Content__List__Item">
-              <router-link class="button" to="/examples">
-                EXAMPLES
               </router-link>
             </li>
             <li class="Landscape__Content__List__Item">
@@ -44,6 +39,7 @@ export default {
 <style lang="scss" scoped>
 .Landscape
 {
+  background-color: #fcfcfc;
   &__Content
   {
     padding: 50px 0;
@@ -60,10 +56,11 @@ export default {
     &__Title
     {
       font-weight: 300;
-      font-size: 2em;
+      font-size: 2.5em;
       letter-spacing: 1px;
       margin: 40px 0;
-      color: #2e2f30;
+      margin-bottom: 20px;
+      color: #35495e;
     }
     &__List
     {
@@ -76,9 +73,11 @@ export default {
         padding: 15px;
         .button
         {
-          height: 46px;
-          line-height: 42px;
-          width: 180px;
+          // display: block;
+          // font-size: 1.1em;
+          // height: 52px;
+          // line-height: 50px;
+          // width: 180px;
         }
       }
     }

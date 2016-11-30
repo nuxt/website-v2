@@ -2,7 +2,7 @@
 {
   h1, h2, h3, h4, h5, h6
   {
-    color: #000;
+    color: #35495e;
     margin: 30px 0;
     font-weight: 300;
   }
@@ -35,7 +35,7 @@
   }
   a
   {
-    color: #00BCD4;
+    color: #41b883;
     &:hover
     {
       text-decoration: underline;
@@ -45,7 +45,7 @@
   {
     text-align: justify;
     font-weight: 400;
-    color: #2e2f30;
+    color: #35495e;
     font-size: 1em;
     line-height: 1.5em;
     letter-spacing: 0.2px;
@@ -53,7 +53,7 @@
   }
   code
   {
-    color: #2e2f30;
+    color: #35495e;
     padding: 2px 7px;
     font-weight: 400;
     font-size: 1em;
@@ -81,7 +81,7 @@
     padding-left: 30px;
     li
     {
-      color: #505153;
+      color: #35495e;
       font-size: 1em;
       line-height: 1.25em;
       padding: 5px 0;
@@ -111,15 +111,15 @@
     padding-left: 30px;
     li
     {
-      color: #505153;
+      color: #35495e;
       padding: 5px 0;
       a
       {
-        color: #505153;
+        color: #35495e;
         &:hover
         {
           text-decoration: none;
-          color: #00BCD4;
+          color: #41b883;
         }
       }
     }
@@ -170,7 +170,7 @@
     padding: 20px;
     h1, h2
     {
-      color: #000;
+      color: #35495e;
       margin-top: 0;
       font-size: 2em;
       margin-bottom: 20px;

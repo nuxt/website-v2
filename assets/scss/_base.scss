@@ -56,45 +56,9 @@ h1, h2, h3, h4, h5, h6
   padding: 0;
   font-weight: 400;
 }
-.button
-{
-  display: inline-block;
-  color: #2e2f30 !important;
-  border: 2px solid #505153;
-  height: 46px;
-  min-width: 200px;
-  line-height: 42px;
-  padding: 0 40px;
-  text-align: center;
-  text-transform: uppercase;
-  text-decoration: none;
-  letter-spacing: 1px;
-  span
-  {
-    width: 30px;
-    height: 16px;
-    display: inline-block;
-    .icon, .icon:before, .icon:after
-    {
-      color: #2e2f30;
-    }
-  }
-  &:hover
-  {
-    transition: all 0.25s linear;
-    border-color: #00BCD4;
-    background-color: #00BCD4;
-    color: #fff !important;
-    text-decoration: none !important;
-    span .icon, span .icon:before, span .icon:after
-    {
-      color: #fff;
-    }
-  }
-}
 .link
 {
-  color: #00BCD4;
+  color: #3b8070;
   &:hover
   {
     text-decoration: underline;

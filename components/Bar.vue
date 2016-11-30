@@ -58,7 +58,7 @@ export default {
   }
   &__Left
   {
-    color: #505153;
+    color: #35495e;
     letter-spacing: 0.5px;
     float: left;
     font-size: 1.05em;

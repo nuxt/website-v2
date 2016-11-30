@@ -2,7 +2,8 @@
   <header class="Header">
     <div class="container">
       <router-link class="Header__Title" to="/">
-        <img src="~static/logo_nav.png" alt="Logo nuxt" class="Header__Title__Logo"/>
+        <img src="~static/logo_nav.png" alt="Logo nuxt" class="Header__Title__Logo Header__Title__Logo--desktop"/>
+        <img src="~static/logo_nav_mobile.png" alt="Logo nuxt" class="Header__Title__Logo Header__Title__Logo--mobile"/>
         <h1 class="Header__Title__Text">
           NUXT
         </h1>
@@ -27,14 +28,12 @@
               EXAMPLES
             </router-link>
           </li>
-          <li class="Header__Nav__List__Item">
+          <li class="Header__Nav__List__Item Header__Nav__List__Item--social">
             <a class="Header__Nav__List__Item__Link" href="https://github.com/nuxt/nuxt.js" target="_blank">
-              GITHUB
+              <i class="icon-github"></i>
             </a>
-          </li>
-          <li class="Header__Nav__List__Item">
             <a class="Header__Nav__List__Item__Link" href="https://twitter.com/nuxt_js" target="_blank">
-              TWITTER
+              <i class="icon-twitter"></i>
             </a>
           </li>
         </ul>
@@ -84,25 +83,29 @@ export default {
     &__Text
     {
       margin: 0;
-      font-weight: 300;
-      float: right;
-      margin-left: 10px;
-      font-size: 1.6em;
-      @media (min-width: 768px)
-      {
-        font-size: 2em;
-      }
+      width: 0;
+      overflow: hidden;
     }
     &__Logo
     {
       float: left;
-      height: 24px;
-      display: inline-block;
-      margin-top: 16px;
-      @media (min-width: 768px)
+      &--mobile
       {
-        height: 30px;
-        margin-top: 27px;
+        margin-top: 16px;
+        display: inline-block;
+        @media (min-width: 768px)
+        {
+          display: none;
+        }
+      }
+      &--desktop
+      {
+        display: none;
+        @media (min-width: 768px)
+        {
+          margin-top: 27px;
+          display: inline-block;
+        }
       }
     }
   }
@@ -123,7 +126,7 @@ export default {
   {
     position: fixed;
     z-index: 990;
-    top: 64px;
+    top: 60px;
     left: 0;
     right: 0;
     bottom: 0;
@@ -148,15 +151,19 @@ export default {
     }
     &__List
     {
+      height: inherit;
       &__Item
       {
+        float: none;
         text-align: center;
         display: block;
         height: 64px;
         border-bottom: 1px solid #eee;
         @media (min-width: 768px)
         {
-          height: auto;
+          float: left;
+          height: 89px;
+          line-height: 89px;
           display: inline-block;
           padding-left: 30px;
           border-bottom: none;
@@ -167,19 +174,41 @@ export default {
         }
         &__Link
         {
-          color: #505153;
+          height: auto;
+          line-height: normal;
+          display: inline-block;
+          color: #35495e;
           padding: 5px 0;
           text-transform: uppercase;
           text-decoration: none;
           letter-spacing: 1px;
           &:hover
           {
-            color: #2e2f30;
+            color: #41b883;
           }
         }
-        .router-link-active
+        &--social
         {
-          border-bottom: 2px solid #00BCD4;
+          padding-top: 2px;
+          a
+          {
+            margin-left: 15px;
+            i
+            {
+              font-size: 1.5em;
+              line-height: 1em;
+              vertical-align: middle;
+            }
+            &:first-child
+            {
+              margin-left: 0;
+            }
+          }
+        }
+        .router-link-active, .router-link-active:hover
+        {
+          color: #111;
+          border-bottom: 2px solid #41b883;
         }
       }
     }

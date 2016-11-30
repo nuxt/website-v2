@@ -62,15 +62,15 @@ export default {
       &__Link
       {
         text-decoration: none;
-        color: #505153;
+        color: #35495e;
         &:hover
         {
-          color: #2e2f30;
+          color: #111;
         }
       }
       .router-link-active
       {
-        color: #00BCD4;
+        color: #41b883;
       }
     }
   }

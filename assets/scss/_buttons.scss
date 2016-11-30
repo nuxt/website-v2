@@ -1,0 +1,93 @@
+.button
+{
+  font-weight: 300;
+  position: relative;
+  display: inline-block;
+  color: #fff !important;
+  height: 50px;
+  margin: 0 25px;
+  line-height: 48px;
+  padding: 0 25px;
+  min-width: 150px;
+  text-align: center;
+  text-transform: uppercase;
+  text-decoration: none;
+  letter-spacing: 1px;
+  background-color: #35495e;
+  &:before, &:after
+  {
+    content: " ";
+    width: 0;
+    height: 0;
+    top: 0;
+    position: absolute;
+  }
+  &:before
+  {
+    border-right: 25px solid;
+    border-top: 25px solid transparent;
+    border-bottom: 25px solid transparent;
+    left: -25px;
+    border-right-color: #35495e;
+  }
+  &:after
+  {
+    border-left: 25px solid;
+    border-top: 25px solid transparent;
+    border-bottom: 25px solid transparent;
+    right: -25px;
+    border-left-color: #35495e;
+  }
+  span
+  {
+    width: 30px;
+    height: 16px;
+    display: inline-block;
+    .icon, .icon:before, .icon:after
+    {
+      color: #2e2f30;
+    }
+  }
+  &:hover
+  {
+    color: #fff !important;
+    background-color: darken(#35495e, 5%);
+    text-decoration: none !important;
+    span .icon, span .icon:before, span .icon:after
+    {
+      color: #fff;
+    }
+    &:before
+    {
+      border-right-color: darken(#35495e, 5%);
+    }
+    &:after
+    {
+      border-left-color: darken(#35495e, 5%);
+    }
+  }
+  &--green
+  {
+    background-color: #3b8070;
+    &:before
+    {
+      border-right-color: #3b8070;
+    }
+    &:after
+    {
+      border-left-color: #3b8070;
+    }
+    &:hover
+    {
+      background-color: darken(#3b8070, 5%);
+      &:before
+      {
+        border-right-color: darken(#3b8070, 5%);
+      }
+      &:after
+      {
+        border-left-color: darken(#3b8070, 5%);
+      }
+    }
+  }
+}

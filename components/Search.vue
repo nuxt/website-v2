@@ -29,7 +29,7 @@ export default {
     border: none;
     font-weight: 300;
     height: 100%;
-    color: #9aabb1;
+    color: #35495e;
     font-size: 1em;
     padding: 0 10px;
     letter-spacing: 0.5px;

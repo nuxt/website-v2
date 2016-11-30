@@ -2,17 +2,10 @@
   <footer class="Footer">
     <div class="container">
       <div class="Footer__Text">
-        Made with
-        <div class="Footer__Text__Icon">
-          <div class="smile icon">
-            <i></i>
-          </div>
-        </div>
-        by Chopin Brothers (
+        Made by Chopin Brothers :
         <a href="https://github.com/Atinux" target="_blank">@Atinux</a>
         and
         <a href="https://github.com/alexchopin" target="_blank">@alexchopin</a>
-        )
       </div>
     </div>
   </footer>
@@ -29,7 +22,7 @@
     margin: 0;
     text-align: center;
     padding: 30px 0;
-    color: #505153;
+    color: #35495e;
     letter-spacing: 0.5px;
     font-weight: 400;
     &__Icon
@@ -41,10 +34,10 @@
     }
     a
     {
-      color: #505153;
+      color: #35495e;
       &:hover
       {
-        color: #00BCD4;
+        color: #41b883;
       }
     }
   }

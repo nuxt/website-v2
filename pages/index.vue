@@ -9,8 +9,8 @@
           </h2>
           <ul class="Landscape__Content__List">
             <li class="Landscape__Content__List__Item">
-              <router-link class="button button--green" to="/guide">
-                GUIDE
+              <router-link class="button button--green" to="/guide/installation">
+                GET STARTED
               </router-link>
             </li>
             <li class="Landscape__Content__List__Item">

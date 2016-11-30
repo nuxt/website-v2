@@ -71,14 +71,6 @@ export default {
       {
         display: inline-block;
         padding: 15px;
-        .button
-        {
-          // display: block;
-          // font-size: 1.1em;
-          // height: 52px;
-          // line-height: 50px;
-          // width: 180px;
-        }
       }
     }
   }

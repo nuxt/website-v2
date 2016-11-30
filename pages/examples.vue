@@ -188,10 +188,14 @@ export default {
   .button
   {
     margin-bottom: 15px;
-    margin-right: 15px;
+    margin-right: 35px;
     &:last-child
     {
       margin-right: 0;
+    }
+    .icon, .icon:before, .icon:after
+    {
+      color: #fff;
     }
   }
 }

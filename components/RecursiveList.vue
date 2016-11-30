@@ -124,7 +124,7 @@ export default {
       }
       &--active
       {
-        background-color: #00BCD4;
+        background-color: #3b8070;
         color: #fff;
       }
       .Icon

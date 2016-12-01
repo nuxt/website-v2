@@ -23,6 +23,13 @@ export default {
         event.preventDefault()
         this.$router.push(href)
       }
+      if (href && href[0] === '#') {
+        event.preventDefault()
+        const el = document.getElementById(href.slice(1))
+        const pos = el.getBoundingClientRect()
+        window.scrollTo(0, pos.top - 160)
+        // this.$router.push(this.$route.path + href)
+      }
     }
   }
 }

@@ -90,6 +90,34 @@
       margin-bottom: 0;
     }
   }
+  table
+  {
+    border-collapse: collapse;
+    tr
+    {
+      background-color: #fff;
+      &:nth-child(2n)
+      {
+        background-color: #fafafa;
+      }
+    }
+    th
+    {
+      border: 1px solid #ddd;
+      background-color: #f6f6f6;
+      padding: 10px 15px;
+      line-height: 1.5em;
+      font-weight: 400;
+      text-transform: uppercase;
+    }
+    td
+    {
+      padding: 10px;
+      line-height: 1.5em;
+      text-align: center;
+      border: 1px solid #ddd;
+    }
+  }
   #table-of-contents
   {
     font-weight: 400;

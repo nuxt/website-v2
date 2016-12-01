@@ -26,9 +26,8 @@ export default {
       if (href && href[0] === '#') {
         event.preventDefault()
         const el = document.getElementById(href.slice(1))
-        const pos = el.getBoundingClientRect()
-        window.scrollTo(0, pos.top - 160)
-        // this.$router.push(this.$route.path + href)
+        let y = (window.outerWidth > 768) ? el.offsetTop - 160 : el.offsetTop - 120
+        window.scrollTo(0, y)
       }
     }
   }

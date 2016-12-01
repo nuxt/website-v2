@@ -8,7 +8,7 @@
     </div>
     <div class="container">
       <div class="Guide__Right" :class="{'Guide__Right--hidden': visible}">
-        <html-parser class="Content" v-html="body"></html-parser>
+        <html-parser :content="body"></html-parser>
         <p class="Guide__Contribute">Caught a mistake or want to contribute to the documentation?
           <a :href="'https://github.com/nuxt/docs/blob/master/guide/'+path+'.md'" class="link" target="_blank">
             Edit this page on Github!

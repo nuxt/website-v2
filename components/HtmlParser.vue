@@ -1,20 +1,18 @@
 <template>
-  <div></div>
+  <div class="Content" v-html="content"></div>
 </template>
 
 <script>
 export default {
+  props: ['content'],
   mounted () {
-    const links = this.$el.getElementsByTagName('a')
-    for (let i = 0; i < links.length; i++) {
-      links[i].addEventListener('click', this.navigate, false)
-    }
+    this.addListeners()
   },
   beforeDestroy () {
-    const links = this.$el.getElementsByTagName('a')
-    for (let i = 0; i < links.length; i++) {
-      links[i].removeEventListener('click', this.navigate, false)
-    }
+    this.removeListeners()
+  },
+  watch: {
+    'content': 'contentUpdated'
   },
   methods: {
     navigate (event) {
@@ -29,6 +27,24 @@ export default {
         let y = (window.outerWidth > 768) ? el.offsetTop - 160 : el.offsetTop - 120
         window.scrollTo(0, y)
       }
+    },
+    contentUpdated () {
+      this.removeListeners()
+      this.$nextTick(() => {
+        this.addListeners()
+      })
+    },
+    addListeners () {
+      this._links = this.$el.getElementsByTagName('a')
+      for (let i = 0; i < this._links.length; i++) {
+        this._links[i].addEventListener('click', this.navigate, false)
+      }
+    },
+    removeListeners () {
+      for (let i = 0; i < this._links.length; i++) {
+        this._links[i].removeEventListener('click', this.navigate, false)
+      }
+      this._links = []
     }
   }
 }

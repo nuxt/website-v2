@@ -30,10 +30,10 @@
           </li>
           <li class="Header__Nav__List__Item Header__Nav__List__Item--social">
             <a class="Header__Nav__List__Item__Link" href="https://github.com/nuxt/nuxt.js" target="_blank">
-              <i class="icon-github"></i>
+              <i class="icon-git"></i>
             </a>
             <a class="Header__Nav__List__Item__Link" href="https://twitter.com/nuxt_js" target="_blank">
-              <i class="icon-twitter"></i>
+              <i class="icon-twit"></i>
             </a>
           </li>
         </ul>

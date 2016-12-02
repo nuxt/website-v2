@@ -32,7 +32,7 @@ export default {
     return axios({
       url: 'https://api.github.com/repos/nuxt/nuxt.js/contents/' + this.path,
       headers: {
-        'Authorization': 'token 4aa6bcf919d238504e7db59a66d32e78281c0ad3'
+        'Authorization': `token ${process.env.githubToken}`
       }
     })
     .then((res) => {
@@ -54,7 +54,7 @@ export default {
         })
         if (f) this.changeFile(f)
       }
-      this.files = res.data
+      this.files = res.data.filter((f) => f.name.toLowerCase() !== 'readme.md')
     })
   },
   data () {

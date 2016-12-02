@@ -32,6 +32,7 @@ module.exports = {
     githubToken: '4aa6bcf919d238504e7db59a66d32e78281c0ad3'
   },
   generate: {
+    base: '/nuxtjs.org',
     routeParams: {
       '/guide/:slug': _(require('./static/docs/guide/menu.json')).values().flatten().map('to').compact().map((slug) => { return { slug: slug.replace(/^\//, '') } }).value(),
       '/api/:slug': _(require('./static/docs/api/menu.json')).values().flatten().map('to').compact().map((slug) => { return { slug: slug.replace(/^\//, '') } }).value(),

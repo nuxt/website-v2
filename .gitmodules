@@ -1,0 +1,3 @@
+[submodule "static/docs"]
+	path = static/docs
+	url = git@github.com:nuxt/docs.git

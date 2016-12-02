@@ -18,7 +18,7 @@ module.exports = {
     { src: '~assets/scss/main.scss', lang: 'scss' }
   ],
   router: {
-    base: 'nuxtjs.org',
+    base: 'https://nuxt.github.io/nuxtjs.org/',
     routes: [
       { path: '/guide/:slug', component: 'pages/guide' },
       { path: '/api/:slug', component: 'pages/api' },

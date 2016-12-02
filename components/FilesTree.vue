@@ -85,7 +85,7 @@ export default {
         axios({
           url: 'https://api.github.com/repos/nuxt/nuxt.js/contents/' + file.path,
           headers: {
-            'Authorization': 'token 4aa6bcf919d238504e7db59a66d32e78281c0ad3'
+            'Authorization': `token ${process.env.githubToken}`
           }
         })
         .then((res) => {

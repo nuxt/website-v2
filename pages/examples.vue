@@ -69,7 +69,7 @@ export default {
   },
   data ({ route }, callback) {
     let path = route.params.slug || 'hello-world'
-    path = '/nuxtjs.org/docs/examples/' + path + '.md'
+    path = '/docs/examples/' + path + '.md'
     if (process.BROWSER_BUILD) {
       fetch(path)
       .then((response) => {

@@ -18,7 +18,6 @@ module.exports = {
     { src: '~assets/scss/main.scss', lang: 'scss' }
   ],
   router: {
-    base: '/nuxtjs.org',
     routes: [
       { path: '/guide/:slug', component: 'pages/guide' },
       { path: '/api/:slug', component: 'pages/api' },
@@ -32,6 +31,7 @@ module.exports = {
   env: {
     githubToken: '4aa6bcf919d238504e7db59a66d32e78281c0ad3'
   },
+  loading: { color: '#41B883' },
   generate: {
     routeParams: {
       '/guide/:slug': _(require('./static/docs/guide/menu.json')).values().flatten().map('to').compact().map((slug) => { return { slug: slug.replace(/^\//, '') } }).value(),

@@ -15,6 +15,7 @@
   },
   "devDependencies": {
     "node-sass": "^3.13.0",
+    "push-dir": "^0.4.1",
     "sass-loader": "^4.0.2"
   },
   "scripts": {
@@ -22,7 +23,8 @@
     "build": "nuxt build",
     "start": "nuxt start",
     "generate": "nuxt generate",
-    "deploy": "nuxt generate && surge -d nuxtjs.surge.sh dist/"
+    "deploy": "nuxt generate && surge -d nuxtjs.surge.sh dist/",
+    "gh-pages": "nuxt generate && push-dir --dir=dist --branch=gh-pages --cleanup"
   },
   "repository": {
     "type": "git",

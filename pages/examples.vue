@@ -17,7 +17,7 @@
             <iframe class="youtube" :src="attributes.youtube" frameborder="0" allowfullscreen></iframe>
           </div>
           <h2>Source Code</h2>
-          <nuxt-files-tree :example="attributes.github"></nuxt-files-tree>
+          <nuxt-files-tree :example="attributes.github" :key="attributes.github"></nuxt-files-tree>
           <div>
             <a v-if="attributes.livedemo" :href="attributes.livedemo" class="button" target="_blank">
               <span><div class="icon eye"></div></span>

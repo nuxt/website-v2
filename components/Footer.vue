@@ -2,7 +2,7 @@
   <footer class="Footer">
     <div class="container">
       <div class="Footer__Text">
-        Made by Chopin Brothers :
+        Made by Chopin Brothers:
         <a href="https://github.com/Atinux" target="_blank">@Atinux</a>
         and
         <a href="https://github.com/alexchopin" target="_blank">@alexchopin</a>

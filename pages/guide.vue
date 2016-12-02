@@ -45,7 +45,7 @@ export default {
       content: '',
       path: route.params.slug || 'index'
     }
-    const path = '/nuxtjs.org/docs/guide/' + data.path + '.md'
+    const path = '/docs/guide/' + data.path + '.md'
     if (process.BROWSER_BUILD) {
       fetch(path)
       .then((response) => {

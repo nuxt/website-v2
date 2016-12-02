@@ -1,6 +1,6 @@
 <template>
   <div class="API">
-    <nuxt-bar :visible="visible" v-on:toggle="toggle" title="Version 1.0"></nuxt-bar>
+    <nuxt-bar :visible="visible" v-on:toggle="toggle" title="Version 0.7.8"></nuxt-bar>
     <div class="API__Left" :class="{'API__Left--hidden': !visible}">
       <div class="container">
         <nuxt-affix :list="$store.state.apiMenu" menu="/api"></nuxt-affix>

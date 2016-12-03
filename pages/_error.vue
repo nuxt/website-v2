@@ -1,29 +1,37 @@
 <template>
-  <section class="Landscape">
-    <div class="Landscape__Content">
-      <div class="container content">
-        <img src="~static/triangles.png" alt="Logo nuxt" class="Landscape__Content__Image"/>
-        <h1 class="Landscape__Content__Title">
-          {{ error.statusCode }}
-        </h1>
-        <h2 class="Landscape__Content__SubTitle">
-          {{ error.message }}
-        </h2>
-        <ul class="Landscape__Content__List">
-          <li class="Landscape__Content__List__Item">
-            <router-link v-if="error.statusCode === 404" class="button button--green" to="/">
-              Homepage
-            </router-link>
-          </li>
-        </ul>
+  <div>
+    <section class="Landscape">
+      <div class="Landscape__Content">
+        <div class="container content">
+          <img src="~static/triangles.png" alt="Logo nuxt" class="Landscape__Content__Image"/>
+          <h1 class="Landscape__Content__Title">
+            {{ error.statusCode }}
+          </h1>
+          <h2 class="Landscape__Content__SubTitle">
+            {{ error.message }}
+          </h2>
+          <ul class="Landscape__Content__List">
+            <li class="Landscape__Content__List__Item">
+              <router-link v-if="error.statusCode === 404" class="button button--green" to="/">
+                Homepage
+              </router-link>
+            </li>
+          </ul>
+        </div>
       </div>
-    </div>
-  </section>
+    </section>
+    <nuxt-footer></nuxt-footer>
+  </div>
 </template>
 
 <script>
+import NuxtFooter from '~components/Footer.vue'
+
 export default {
-  props: ['error']
+  props: ['error'],
+  components: {
+    NuxtFooter
+  }
 }
 </script>
 

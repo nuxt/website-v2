@@ -6,7 +6,7 @@ Vue.use(Vuex)
 
 const store = new Vuex.Store({
   state: {
-    version: '0.7.8',
+    version: '0.8.0',
     visibleHeader: false,
     visibleAffix: false
   },

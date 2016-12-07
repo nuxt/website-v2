@@ -24,7 +24,10 @@ module.exports = {
       { path: '/examples/:slug', component: 'pages/examples' }
     ]
   },
-  plugins: ['~plugins/marked'],
+  plugins: [
+    '~plugins/ga.js',
+    '~plugins/marked'
+  ],
   build: {
     vendor: ['whatwg-fetch', 'marked', 'highlight.js']
   },

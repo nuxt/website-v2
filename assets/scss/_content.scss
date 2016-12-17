@@ -43,12 +43,10 @@
   }
   p
   {
-    text-align: justify;
     font-weight: 400;
     color: #35495e;
     font-size: 1em;
     line-height: 1.5em;
-    letter-spacing: 0.2px;
     margin: 15px 0;
   }
   code
@@ -57,10 +55,8 @@
     padding: 2px 7px;
     font-weight: 400;
     font-size: 0.9em;
-    line-height: 1.6em;
+    line-height: 1.5em;
     font-family: "Andale Mono", monospace;
-    // word-spacing: 5px;
-    letter-spacing: 0.5px;
     background-color: #eee;
   }
   pre
@@ -211,9 +207,9 @@
   }
   .Alert
   {
-    font-weight: 300;
+    font-weight: 400;
     color: #fff;
-    background-color: #9aabb1;
+    background-color: #35495E;
     padding: 12px 15px;
     line-height: 1.5em;
     margin-bottom: 20px;
@@ -222,6 +218,14 @@
     -webkit-border-radius: 4px;
     -moz-border-radius: 4px;
     border-radius: 4px;
+    &--vue-green
+    {
+      background-color: #41B883;
+    }
+    &--nuxt-green
+    {
+      background-color: #3B8070;
+    }
     &--green
     {
       background-color: #2ecc71;

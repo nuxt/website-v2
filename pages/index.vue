@@ -1,4 +1,5 @@
 <template>
+<<<<<<< HEAD
   <div class="Landscape">
     <nuxt-header></nuxt-header>
     <div class="Landscape__Content">
@@ -24,6 +25,29 @@
             </a>
           </li>
         </ul>
+=======
+  <div>
+    <section class="Landscape">
+      <div class="Landscape__Content">
+        <div class="container content">
+          <img src="~static/logo.png" alt="Logo nuxt" class="Landscape__Content__Image"/>
+          <h2 class="Landscape__Content__Title">
+            Universal Vue.js Applications
+          </h2>
+          <ul class="Landscape__Content__List">
+            <li class="Landscape__Content__List__Item">
+              <router-link class="button button--green" to="/guide/installation">
+                GET STARTED
+              </router-link>
+            </li>
+            <li class="Landscape__Content__List__Item">
+              <a class="button" href="https://github.com/nuxt/nuxt.js" target="_blank">
+                GITHUB
+              </a>
+            </li>
+          </ul>
+        </div>
+>>>>>>> 925b7850 (navbar)
       </div>
     </div>
   </div>

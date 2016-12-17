@@ -2,6 +2,9 @@ html
 {
   font-family: "Source Sans Pro", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
   letter-spacing: 0.25px;
+  word-spacing: 0.05em;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
 }
 *, *::before, *::after
 {

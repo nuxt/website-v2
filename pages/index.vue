@@ -5,7 +5,7 @@
         <div class="container content">
           <img src="~static/logo.png" alt="Logo nuxt" class="Landscape__Content__Image"/>
           <h2 class="Landscape__Content__Title">
-            A minimalistic framework <br>for server-rendered Vue.js applications
+            Universal Vue.js Applications
           </h2>
           <ul class="Landscape__Content__List">
             <li class="Landscape__Content__List__Item">

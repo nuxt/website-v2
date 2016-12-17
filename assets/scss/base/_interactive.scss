@@ -1,0 +1,21 @@
+/* Interactive
+   ========================================================================== */
+
+/*
+ * Add the correct display in IE 9-.
+ * 1. Add the correct display in Edge, IE, and Firefox.
+ */
+
+details, menu 
+{
+  display: block;
+}
+
+/*
+ * Add the correct display in all browsers.
+ */
+
+summary
+{
+  display: list-item;
+}

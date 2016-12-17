@@ -1,7 +1,7 @@
 <template>
   <div class="Search">
-    <input class="Search__Input" type="text" name="search" id="search" placeholder="Search" v-model="q"/>
-    <label for="search" class="Search__Label" @click="q = ''">
+    <input class="Search__Input" type="text" name="search" :id="label" placeholder="Search" v-model="q"/>
+    <label :for="label" class="Search__Label" @click="q = ''">
       <div :class="{'icon search': !q.length, 'icon remove': q.length}"></div>
     </label>
   </div>
@@ -9,6 +9,9 @@
 
 <script>
 export default {
+  props: {
+    label: String
+  },
   data () {
     return {
       q: ''
@@ -27,29 +30,29 @@ export default {
     width: 100%;
     display: block;
     border: none;
-    font-weight: 300;
+    font-weight: 400;
     height: 100%;
     color: #35495e;
-    font-size: 1em;
-    padding: 0 10px;
+    font-size: 16px;
+    padding: 0 15px;
     letter-spacing: 0.5px;
-    padding-right: 35px;
+    padding-right: 50px;
     background-color: #fff;
   }
   &__Label
   {
     cursor: pointer;
-    width: 30px;
+    width: 35px;
     height: 100%;
-    padding-top: 10px;
-    padding-left: 10px;
+    padding: 0 5px;
+    padding-top: 20px;
     position: absolute;
     float: right;
     top: 0;
-    right: 0;
-    @media (min-width: 768px)
+    right: 10px;
+    @media (min-width: 991px)
     {
-      padding-top: 15px;
+      padding-top: 30px;
     }
   }
 }

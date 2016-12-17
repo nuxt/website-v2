@@ -142,7 +142,7 @@ export default {
       letter-spacing: 1px;
       background-color: #000;
       color: #fff;
-      font-weight: 300;
+      font-weight: 400;
       white-space: nowrap;
       text-overflow: ellipsis;
       overflow: hidden;
@@ -193,7 +193,7 @@ export default {
       color: #aaa;
       text-align: right;
       font-size: 0.9em;
-      font-weight: 300;
+      font-weight: 400;
       white-space: nowrap;
       text-overflow: ellipsis;
       overflow: hidden;
@@ -239,7 +239,7 @@ export default {
       {
         padding: 20px;
         color: #fff;
-        font-weight: 300;
+        font-weight: 400;
         letter-spacing: 1px;
       }
     }

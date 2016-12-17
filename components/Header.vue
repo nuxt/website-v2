@@ -8,14 +8,17 @@
           NUXT
         </h1>
       </router-link>
-      <div class="Header__Toggler" @click="toggle">
-        <div :class="{'icon menu': !visible, 'icon close': visible}"></div>
-      </div>
       <nav class="Header__Nav" :class="{'Header__Nav--hidden': !visible}">
+        <div class="Header__Nav__Search Header__Nav__Search--mobile">
+          <nuxt-search label="mobile"></nuxt-search>
+        </div>
+        <div class="Header__Nav__Lang">
+          EN
+        </div>
         <ul class="Header__Nav__List">
           <li class="Header__Nav__List__Item">
             <router-link class="Header__Nav__List__Item__Link" to="/guide">
-              GUIDE
+              Guide
             </router-link>
           </li>
           <li class="Header__Nav__List__Item">
@@ -25,30 +28,68 @@
           </li>
           <li class="Header__Nav__List__Item">
             <router-link class="Header__Nav__List__Item__Link" to="/examples">
-              EXAMPLES
+              Examples
             </router-link>
           </li>
-          <li class="Header__Nav__List__Item Header__Nav__List__Item--social">
-            <a class="Header__Nav__List__Item__Link" href="https://github.com/nuxt/nuxt.js" target="_blank">
-              <i class="icon-git"></i>
-            </a>
-            <a class="Header__Nav__List__Item__Link" href="https://twitter.com/nuxt_js" target="_blank">
-              <i class="icon-twit"></i>
-            </a>
+          <li class="Header__Nav__List__Item">
+            <nuxt-dropdown :list="ecosystemLinks" title="Ecosystem" class="Header__Nav__List__Item__Link">
+            </nuxt-dropdown>
           </li>
         </ul>
+        <div class="Header__Nav__Search Header__Nav__Search--desktop">
+          <nuxt-search label="desktop"></nuxt-search>
+        </div>
       </nav>
+      <div class="Header__Toggler" @click="toggle">
+        <div :class="{'icon menu': !visible, 'icon close': visible}"></div>
+      </div>
     </div>
   </header>
 </template>
 
 <script>
+import NuxtSearch from '~components/Search.vue'
+import NuxtDropdown from '~components/Dropdown.vue'
+
 export default {
   computed: {
-    visible () { return this.$store.state.visibleHeader }
+    visible () { return this.$store.state.visibleHeader },
+    ecosystemLinks() {
+      return [
+        {
+          name: 'Github',
+          path: 'https://github.com/nuxt/nuxt.js',
+          target: '_blank'
+        },
+        {
+          name: 'Twitter',
+          path: 'https://twitter.com/nuxt_js',
+          target: '_blank'
+        },
+        {
+          name: 'Blog',
+          path: 'https://medium.com/@nuxt_js',
+          target: '_blank'
+        },
+        {
+          name: 'Vue.js',
+          path: 'https://vuejs.org',
+          target: '_blank'
+        },
+        {
+          name: 'Vue Jobs',
+          path: 'https://vuejobs.com/?ref=nuxtjs',
+          target: '_blank'
+        }
+      ]
+    }
   },
   methods: {
     toggle () { this.$store.commit('toggle', 'visibleHeader') }
+  },
+  components: {
+    NuxtSearch,
+    NuxtDropdown
   }
 }
 </script>
@@ -60,13 +101,12 @@ export default {
   z-index: 995;
   position: fixed;
   height: 60px;
-  line-height: 60px;
   background-color: #fff;
   border-bottom: 1px solid #dbdfe1;
-  @media (min-width: 768px)
+  @media (min-width: 991px)
   {
-    height: 90px;
-    line-height: 90px;
+    height: 80px;
+    line-height: 80px;
     text-align: left;
   }
   &__Title
@@ -74,11 +114,11 @@ export default {
     margin: 0;
     font-weight: 300;
     color: #505153;
-    letter-spacing: 1px;
-    display: inline-block;
-    @media (min-width: 768px)
+    float: left;
+    @media (min-width: 991px)
     {
-      float: left;
+      width: 190px;
+      border-right: 1px solid #dbdfe1;
     }
     &__Text
     {
@@ -93,7 +133,7 @@ export default {
       {
         margin-top: 16px;
         display: inline-block;
-        @media (min-width: 768px)
+        @media (min-width: 991px)
         {
           display: none;
         }
@@ -101,25 +141,12 @@ export default {
       &--desktop
       {
         display: none;
-        @media (min-width: 768px)
+        @media (min-width: 991px)
         {
-          margin-top: 27px;
+          margin-top: 22px;
           display: inline-block;
         }
       }
-    }
-  }
-  &__Toggler
-  {
-    margin-top: 20px;
-    display: block;
-    cursor: pointer;
-    float: right;
-    width: 24px;
-    height: 24px;
-    @media (min-width: 768px)
-    {
-      display: none;
     }
   }
   &__Nav
@@ -132,85 +159,152 @@ export default {
     bottom: 0;
     overflow-y: auto;
     background-color: #fff;
-    @media (min-width: 768px)
+    @media (min-width: 991px)
     {
       top: 0;
-      height: 89px;
-      overflow: hidden;
       position: relative;
-      display: inline-block;
-      float: right;
+      height: 79px;
+      overflow-y: visible;
+      margin-left: 190px;
     }
     &--hidden
     {
       display: none;
-      @media (min-width: 768px)
+      @media (min-width: 991px)
       {
-        display: inline-block;
+        display: block;
+      }
+    }
+    &__Lang
+    {
+      margin: 0;
+      float: none;
+      text-align: center;
+      height: 60px;
+      line-height: 60px;
+      border-bottom: 1px solid #dbdfe1;
+      @media (min-width: 991px)
+      {
+        float: left;
+        height: 79px;
+        line-height: 79px;
+        width: 80px;
+        border-bottom: none;
+        border-right: 1px solid #dbdfe1;
+      }
+    }
+    &__Search
+    {
+      margin: 0;
+      float: none;
+      text-align: center;
+      height: 60px;
+      line-height: 60px;
+      border-bottom: 1px solid #dbdfe1;
+      @media (min-width: 991px)
+      {
+        height: 79px;
+        line-height: 79px;
+        border-bottom: none;
+        overflow: hidden;
+        height: inherit;
+      }
+      &--mobile
+      {
+        display: block;
+        @media (min-width: 991px)
+        {
+          display: none;
+        }
+      }
+      &--desktop
+      {
+        display: none;
+        @media (min-width: 991px)
+        {
+          display: block;
+        }
       }
     }
     &__List
     {
       height: inherit;
+      margin: 0;
+      padding: 0;
+      position: relative;
+      display: block;
+      @media (min-width: 991px)
+      {
+        float: right;
+        border-left: 1px solid #dbdfe1;
+      }
       &__Item
       {
+        position: relative;
         float: none;
         text-align: center;
         display: block;
-        height: 64px;
-        border-bottom: 1px solid #eee;
-        @media (min-width: 768px)
+        height: 60px;
+        line-height: 60px;
+        border-bottom: 1px solid #dbdfe1;
+        @media (min-width: 991px)
         {
           float: left;
-          height: 89px;
-          line-height: 89px;
-          display: inline-block;
+          height: 79px;
+          line-height: 79px;
+          display: block;
           padding-left: 30px;
           border-bottom: none;
         }
-        &:first-child
-        {
-          padding-left: 0;
-        }
         &__Link
         {
-          height: auto;
-          line-height: normal;
-          display: inline-block;
+          cursor: pointer;
+          height: inherit;
+          line-height: inherit;
+          display: block;
           color: #35495e;
-          padding: 5px 0;
-          text-transform: uppercase;
+          font-size: 16px;
           text-decoration: none;
           letter-spacing: 1px;
+          padding: 0 10px;
           &:hover
           {
             color: #41b883;
           }
         }
-        &--social
+        .router-link-active, .router-link-active:hover
         {
-          padding-top: 2px;
-          a
+          color: #41b883;
+          @media (min-width: 991px)
           {
-            margin-left: 15px;
-            i
+            &:after
             {
-              font-size: 1.5em;
-              line-height: 1em;
-              vertical-align: middle;
-            }
-            &:first-child
-            {
-              margin-left: 0;
+              content: " ";
+              width: 0;
+              height: 0;
+              bottom: 0;
+              position: absolute;
+              border-right: 11px solid transparent;
+              border-bottom: 11px solid #dbdfe1;
+              border-left: 11px solid transparent;
+              left: 54%;
             }
           }
         }
-        .router-link-active, .router-link-active:hover
-        {
-          color: #111;
-          border-bottom: 2px solid #41b883;
-        }
       }
+    }
+  }
+  &__Toggler
+  {
+    float: right;
+    display: block;
+    margin-top: 20px;
+    cursor: pointer;
+    width: 25px;
+    height: 25px;
+    @media (min-width: 991px)
+    {
+      display: none;
     }
   }
 }

@@ -1,5 +1,6 @@
 <template>
 <<<<<<< HEAD
+<<<<<<< HEAD
   <div class="Landscape">
     <nuxt-header></nuxt-header>
     <div class="Landscape__Content">
@@ -50,6 +51,29 @@
 >>>>>>> 925b7850 (navbar)
       </div>
     </div>
+=======
+  <div class="Homepage">
+    <section class="Landscape">
+      <img src="/logo_home_mobile.png" alt="Logo nuxt" class="Landscape__Image Landscape__Image--mobile"/>
+      <img src="/logo_home.png" alt="Logo nuxt" class="Landscape__Image Landscape__Image--desktop"/>
+      <h2 class="Landscape__Title">
+        Universal Vue.js Applications
+      </h2>
+      <ul class="Landscape__List">
+        <li class="Landscape__List__Item">
+          <router-link class="button button--green" to="/guide/installation">
+            GET STARTED
+          </router-link>
+        </li>
+        <li class="Landscape__List__Item">
+          <a class="button" href="https://github.com/nuxt/nuxt.js" target="_blank">
+            GITHUB
+          </a>
+        </li>
+      </ul>
+    </section>
+    <nuxt-footer></nuxt-footer>
+>>>>>>> 2eed1dad (affix)
   </div>
 </template>
 
@@ -64,27 +88,80 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+.Homepage
+{
+  padding-top: 60px;
+  @media (min-width: 991px)
+  {
+    padding-top: 80px;
+  }
+}
 .Landscape
 {
+<<<<<<< HEAD
   &__Content
   {
     padding: 100px 0;
     text-align: center;
     &__Image
+=======
+  background-color: #fff;
+  padding: 70px 15px;
+  text-align: center;
+  @media (min-width: 991px)
+  {
+    padding: 140px 30px;
+  }
+  &__Image
+  {
+    &--mobile
     {
-      max-width: 100%;
       display: inline-block;
+      @media (min-width: 991px)
+      {
+        display: none;
+      }
     }
-    &__Title
+    &--desktop
+>>>>>>> 2eed1dad (affix)
     {
+      display: none;
+      @media (min-width: 991px)
+      {
+        display: inline-block;
+      }
+    }
+  }
+  &__Title
+  {
+    font-weight: 300;
+    font-size: 40px;
+    line-height: 45px;
+    letter-spacing: 1px;
+    margin: 20px 0;
+    color: #35495e;
+    @media (min-width: 991px)
+    {
+<<<<<<< HEAD
       font-weight: 300;
       font-size: 2em;
       letter-spacing: 1px;
       margin: 40px 0;
       color: #2e2f30;
+=======
+      font-size: 56px;
+      margin: 40px 0;
+>>>>>>> 2eed1dad (affix)
     }
-    &__List
+  }
+  &__List
+  {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    &__Item
     {
+<<<<<<< HEAD
       // float: right;
       list-style: none;
       margin: 0;
@@ -111,6 +188,14 @@ export default {
             color: #FFF;
           }
         }
+=======
+      display: inline-block;
+      padding: 20px 15px;
+      padding-bottom: 0;
+      .button
+      {
+        font-size: 16px;
+>>>>>>> 2eed1dad (affix)
       }
     }
   }

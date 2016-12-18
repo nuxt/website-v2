@@ -11,6 +11,11 @@ a
   text-decoration: none;
   background-color: transparent; /* 1 */
   -webkit-text-decoration-skip: objects; /* 2 */
+  color: #41b883;
+  &:hover
+  {
+    text-decoration: underline;
+  }
 }
 
 /**

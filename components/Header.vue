@@ -15,7 +15,7 @@
           <nuxt-search label="mobile"></nuxt-search>
         </div>
         <div class="Header__Nav__Lang">
-          EN
+          <img src="/flags/gb.png" alt="EN" class="Header__Nav__Lang__Img">
         </div>
 >>>>>>> 925b7850 (navbar)
         <ul class="Header__Nav__List">
@@ -109,6 +109,9 @@ export default {
 <style lang="scss" scoped>
 .Header
 {
+  top: 0;
+  left: 0;
+  right: 0;
   width: 100%;
   z-index: 995;
   position: fixed;
@@ -208,7 +211,7 @@ export default {
           text-transform: uppercase;
 =======
     position: fixed;
-    z-index: 990;
+    z-index: 995;
     top: 60px;
     left: 0;
     right: 0;
@@ -237,16 +240,20 @@ export default {
       float: none;
       text-align: center;
       height: 60px;
-      line-height: 60px;
+      line-height: 70px;
       border-bottom: 1px solid #dbdfe1;
       @media (min-width: 991px)
       {
         float: left;
         height: 79px;
-        line-height: 79px;
+        line-height: 90px;
         width: 80px;
         border-bottom: none;
         border-right: 1px solid #dbdfe1;
+      }
+      &__Img
+      {
+        display: inline-block;
       }
     }
     &__Search

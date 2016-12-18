@@ -1,12 +1,13 @@
 .button
 {
-  font-weight: 400;
+  font-weight: 600;
   position: relative;
   display: inline-block;
   color: #fff !important;
-  height: 50px;
+  font-size: 15px;
+  height: 52px;
   margin: 0 25px;
-  line-height: 48px;
+  line-height: 50px;
   padding: 0 25px;
   min-width: 150px;
   text-align: center;
@@ -24,18 +25,18 @@
   }
   &:before
   {
-    border-right: 25px solid;
-    border-top: 25px solid transparent;
-    border-bottom: 25px solid transparent;
-    left: -25px;
+    border-right: 26px solid;
+    border-top: 26px solid transparent;
+    border-bottom: 26px solid transparent;
+    left: -26px;
     border-right-color: #35495e;
   }
   &:after
   {
-    border-left: 25px solid;
-    border-top: 25px solid transparent;
-    border-bottom: 25px solid transparent;
-    right: -25px;
+    border-left: 26px solid;
+    border-top: 26px solid transparent;
+    border-bottom: 26px solid transparent;
+    right: -26px;
     border-left-color: #35495e;
   }
   span

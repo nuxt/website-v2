@@ -3,35 +3,17 @@
   h1, h2, h3, h4, h5, h6
   {
     color: #35495e;
-    margin: 30px 0;
-    font-weight: 300;
+    line-height: normal;
   }
   h1
   {
-    font-size: 3em;
-    margin-top: 0;
+    margin-top: 0px;
+    margin-bottom: 20px;
   }
   h2
   {
-    font-size: 2.4em;
-    padding-bottom: 10px;
+    padding-bottom: 15px;
     border-bottom: 1px solid #dbdfe1;
-  }
-  h3
-  {
-    font-size: 2em;
-  }
-  h4
-  {
-    font-size: 1.8em;
-  }
-  h5
-  {
-    font-size: 1.6em;
-  }
-  h6
-  {
-    font-size: 1.4em;
   }
   a
   {
@@ -45,17 +27,17 @@
   {
     font-weight: 400;
     color: #35495e;
-    font-size: 1em;
-    line-height: 1.5em;
-    margin: 15px 0;
+    font-size: 15px;
+    line-height: 20px;
+    margin: 10px 0;
   }
   code
   {
     color: #35495e;
     padding: 2px 7px;
     font-weight: 400;
-    font-size: 0.9em;
-    line-height: 1.5em;
+    font-size: inherit;
+    line-height: inherit;
     font-family: "Andale Mono", monospace;
     background-color: #eee;
   }
@@ -64,8 +46,10 @@
     margin: 20px 0;
     code
     {
+      font-weight: 600;
       color: #fff;
-      padding: 12px 20px;
+      letter-spacing: 0.25px;
+      padding: 15px;
       background-color: #2e2f30;
       border-left: 3px solid #3b8070;
     }
@@ -78,8 +62,8 @@
     li
     {
       color: #35495e;
-      font-size: 1em;
-      line-height: 1.25em;
+      font-size: 15px;
+      line-height: 20px;
       padding: 5px 0;
     }
     ul {
@@ -103,14 +87,14 @@
       border: 1px solid #ddd;
       background-color: #f6f6f6;
       padding: 10px 15px;
-      line-height: 1.5em;
+      line-height: 20px;
       font-weight: 400;
       text-transform: uppercase;
     }
     td
     {
       padding: 10px;
-      line-height: 1.5em;
+      line-height: 20px;
       text-align: center;
       border: 1px solid #ddd;
     }
@@ -118,9 +102,9 @@
   #table-of-contents
   {
     font-weight: 400;
-    font-size: 1em;
+    font-size: 15px;
     margin: 0;
-    letter-spacing: 1px;
+    letter-spacing: 0.5px;
     color: #9aabb1;
     text-transform: uppercase;
     border: 1px solid #dbdfe1;
@@ -161,8 +145,8 @@
     {
       color: #888;
       margin: 0;
-      font-size: 1em;
-      line-height: 1.5em;
+      font-size: 15px;
+      line-height: 20px;
     }
   }
   b, strong
@@ -199,7 +183,7 @@
     {
       color: #35495e;
       margin-top: 0;
-      font-size: 2em;
+      font-size: 42px;
       margin-bottom: 20px;
       padding: 0;
       border: none;
@@ -209,10 +193,11 @@
   {
     font-weight: 400;
     color: #fff;
+    font-size: 14px;
     background-color: #35495E;
     padding: 12px 15px;
-    line-height: 1.5em;
-    margin-bottom: 20px;
+    line-height: 20px;
+    margin: 20px 0;
     letter-spacing: 0.6px;
     text-align: justify;
     -webkit-border-radius: 4px;

@@ -38,6 +38,10 @@ export default {
     letter-spacing: 0.5px;
     padding-right: 50px;
     background-color: #fff;
+    @media (min-width: 991px)
+    {
+      padding-left: 30px;
+    }
   }
   &__Label
   {

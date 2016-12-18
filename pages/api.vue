@@ -1,20 +1,14 @@
 <template>
   <div class="API">
-    <nuxt-bar :visible="visible" v-on:toggle="toggle" :title="'Version ' + $store.state.version"></nuxt-bar>
-    <div class="API__Left" :class="{'API__Left--hidden': !visible}">
-      <div class="container">
-        <nuxt-affix :list="$store.state.apiMenu" menu="/api"></nuxt-affix>
-      </div>
-    </div>
-    <div class="container">
-      <div class="API__Right" :class="{'API__Right--hidden': visible}">
-        <html-parser class="Content" v-html="body"></html-parser>
-        <p class="API__Contribute">Caught a mistake or want to contribute to the documentation?
-          <a :href="'https://github.com/nuxt/docs/blob/master/api/'+path+'.md'" class="link" target="_blank">
-            Edit this page on Github!
-          </a>
-        </p>
-      </div>
+    <nuxt-affix :list="$store.state.apiMenu" menu="/api"></nuxt-affix>
+    <!-- Children -->
+    <div class="API__Content" :class="{'API__Content--hidden': visible}">
+      <html-parser class="Content" :content="body"></html-parser>
+      <p class="API__Contribute">Caught a mistake or want to contribute to the documentation?
+        <a :href="'https://github.com/nuxt/docs/blob/master/api/'+path+'.md'" target="_blank">
+          Edit this page on Github!
+        </a>
+      </p>
     </div>
     <div class="API__Footer">
       <nuxt-footer></nuxt-footer>
@@ -27,14 +21,12 @@ import marked, { Renderer } from 'marked'
 import highlightjs from 'highlight.js'
 import fm from 'front-matter'
 
-import NuxtBar from '~components/Bar.vue'
 import NuxtAffix from '~components/Affix.vue'
 import NuxtFooter from '~components/Footer.vue'
 import HtmlParser from '~components/HtmlParser.vue'
 
 export default {
   components: {
-    NuxtBar,
     NuxtAffix,
     NuxtFooter,
     HtmlParser
@@ -76,9 +68,6 @@ export default {
     page () { return fm(this.content) },
     body () { return marked(this.page.body) }
   },
-  methods: {
-    toggle () { this.$store.commit('toggle', 'visibleAffix') }
-  },
   head () {
     return {
       title: this.page.attributes.title || 'No title',
@@ -91,49 +80,18 @@ export default {
 <style lang="scss" scoped>
 .API
 {
-  &__Left
-  {
-    z-index: 900;
-    position: fixed;
-    top: 100px;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    @media (min-width: 768px)
-    {
-      top: 140px;
-    }
-    @media (min-width: 992px)
-    {
-      z-index: 1;
-    }
-    &--hidden
-    {
-      display: none;
-      @media (min-width: 992px)
-      {
-        display: block;
-      }
-    }
-    .container
-    {
-      height: 100%;
-    }
-  }
-  &__Right
+  &__Content
   {
     position: relative;
     z-index: 10;
-    padding: 30px 0;
-    padding-top: 130px;
+    padding: 15px;
+    margin-top: 60px;
     height: 100%;
-    @media (min-width: 768px)
+    @media (min-width: 991px)
     {
-      padding-top: 170px;
-    }
-    @media (min-width: 992px)
-    {
-      margin-left: 270px;
+      padding: 30px;
+      margin-top: 80px;
+      margin-left: 300px;
     }
     &--hidden
     {

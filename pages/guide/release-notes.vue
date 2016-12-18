@@ -1,6 +1,6 @@
 <template>
   <div class="Guide">
-    <nuxt-bar :visible="visible" v-on:toggle="toggle" :title="'Version ' + $store.state.version"></nuxt-bar>
+    <!-- <nuxt-bar :visible="visible" v-on:toggle="toggle" :title="'Version ' + $store.state.version"></nuxt-bar> -->
     <div class="Guide__Left" :class="{'Guide__Left--hidden': !visible}">
       <div class="container">
         <nuxt-affix :list="$store.state.guideMenu" menu="/guide"></nuxt-affix>
@@ -27,14 +27,12 @@
 import marked from 'marked'
 import axios from 'axios'
 
-import NuxtBar from '~components/Bar.vue'
 import NuxtAffix from '~components/Affix.vue'
 import NuxtFooter from '~components/Footer.vue'
 import HtmlParser from '~components/HtmlParser.vue'
 
 export default {
   components: {
-    NuxtBar,
     NuxtAffix,
     NuxtFooter,
     HtmlParser

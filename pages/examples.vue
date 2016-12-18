@@ -1,6 +1,6 @@
 <template>
   <div class="Examples">
-    <nuxt-affix :list="$store.state.apiMenu" menu="/api"></nuxt-affix>
+    <nuxt-affix :list="$store.state.examplesMenu" menu="/examples"></nuxt-affix>
     <!-- Children -->
     <div class="Examples__Content" :class="{'Examples__Content--hidden': visible}">
       <div class="Content">

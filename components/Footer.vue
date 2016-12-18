@@ -1,8 +1,8 @@
 <template>
   <footer class="Footer">
-    <div class="Footer__Links container">
+    <!-- <div class="Footer__Links container">
       Links
-    </div>
+    </div> -->
     <div class="Footer__Author container">
       Made by Chopin Brothers:
       <a href="https://github.com/Atinux" target="_blank">@Atinux</a>

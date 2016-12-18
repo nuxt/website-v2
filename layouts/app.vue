@@ -1,7 +1,9 @@
 <template>
   <nuxt-container>
     <navbar></navbar>
-    <nuxt/>
+    <div :class="{'App--hidden': visible}">
+      <nuxt/>
+    </div>
   </nuxt-container>
 </template>
 
@@ -11,6 +13,9 @@ import Navbar from '~components/Header.vue'
 export default {
   watch:{
     $route: 'setStore'
+  },
+  computed: {
+    visible () { return this.$store.state.visibleHeader }
   },
   methods: {
     setStore () {
@@ -23,3 +28,17 @@ export default {
   }
 }
 </script>
+
+<style lang="scss" scoped>
+.App
+{
+  &--hidden
+  {
+    display: none;
+    @media (min-width: 992px)
+    {
+      display: block;
+    }
+  }
+}
+</style>

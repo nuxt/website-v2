@@ -1,12 +1,13 @@
 <template>
   <footer class="Footer">
-    <div class="container">
-      <div class="Footer__Text">
-        Made by Chopin Brothers:
-        <a href="https://github.com/Atinux" target="_blank">@Atinux</a>
-        and
-        <a href="https://github.com/alexchopin" target="_blank">@alexchopin</a>
-      </div>
+    <div class="Footer__Links container">
+      Links
+    </div>
+    <div class="Footer__Author container">
+      Made by Chopin Brothers:
+      <a href="https://github.com/Atinux" target="_blank">@Atinux</a>
+      and
+      <a href="https://github.com/alexchopin" target="_blank">@alexchopin</a>
     </div>
   </footer>
 </template>
@@ -14,40 +15,33 @@
 <style lang="scss" scoped>
 .Footer
 {
-  width: 100%;
-  background-color: #fff;
-  border-top: 1px solid #dbdfe1;
-  &__Text
+  &__Links
   {
-    margin: 0;
     text-align: center;
-    padding: 30px 0;
-    color: #35495e;
+    background-color: #35495E;
+    color: #eee;
+    padding: 15px;
+    letter-spacing: 0.5px;
+  }
+  &__Author
+  {
+    width: 100%;
+    background-color: darken(#35495E, 10%);
+    margin: 0;
+    font-size: 14px;
+    text-align: center;
+    padding: 15px;
+    color: #9aabb1;
     letter-spacing: 0.5px;
     font-weight: 400;
-    &__Icon
-    {
-      width: 30px;
-      height: 15px;
-      padding-left: 5px;
-      display: inline-block;
-    }
     a
     {
-      color: #35495e;
+      color: #9aabb1;
       &:hover
       {
         color: #41b883;
       }
     }
-  }
-}
-.smile.icon
-{
-  color: #000;
-  i
-  {
-    color: #fff;
   }
 }
 </style>

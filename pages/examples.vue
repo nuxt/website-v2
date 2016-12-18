@@ -1,39 +1,33 @@
 <template>
   <div class="Examples">
-    <nuxt-bar :visible="visible" v-on:toggle="toggle" :title="'Version ' + $store.state.version"></nuxt-bar>
-    <div class="Examples__Left" :class="{'Examples__Left--hidden': !visible}">
-      <div class="container">
-        <nuxt-affix :list="$store.state.examplesMenu" menu="/examples"></nuxt-affix>
-      </div>
-    </div>
-    <div class="container">
-      <div class="Examples__Right" :class="{'Examples__Right--hidden': visible}">
-        <div class="Content">
-          <h1>{{ attributes.title }}</h1>
-          <blockquote>
-            <p>{{ attributes.description }}</p>
-          </blockquote>
-          <div class="video" v-if="attributes.youtube">
-            <iframe class="youtube" :src="attributes.youtube" frameborder="0" allowfullscreen></iframe>
-          </div>
-          <h2>Source Code</h2>
-          <nuxt-files-tree :example="attributes.github" :key="attributes.github"></nuxt-files-tree>
-          <div>
-            <a v-if="attributes.livedemo" :href="attributes.livedemo" class="button" target="_blank">
-              <span><div class="icon eye"></div></span>
-              Live demo
-            </a>
-            <a v-if="attributes.liveedit" :href="attributes.liveedit" class="button" target="_blank">
-              <span><div class="icon edit"></div></span>
-              Live edit
-            </a>
-            <a :href="downloadLink" class="button" target="_blank">
-              <span><div class="icon download"></div></span>
-              Download
-            </a>
-          </div>
-          <div v-html="body"></div>
+    <nuxt-affix :list="$store.state.apiMenu" menu="/api"></nuxt-affix>
+    <!-- Children -->
+    <div class="Examples__Content" :class="{'Examples__Content--hidden': visible}">
+      <div class="Content">
+        <h1>{{ attributes.title }}</h1>
+        <blockquote>
+          <p>{{ attributes.description }}</p>
+        </blockquote>
+        <div class="video" v-if="attributes.youtube">
+          <iframe class="youtube" :src="attributes.youtube" frameborder="0" allowfullscreen></iframe>
         </div>
+        <h2>Source Code</h2>
+        <nuxt-files-tree :example="attributes.github" :key="attributes.github"></nuxt-files-tree>
+        <div>
+          <a v-if="attributes.livedemo" :href="attributes.livedemo" class="button" target="_blank">
+            <span><div class="icon eye"></div></span>
+            Live demo
+          </a>
+          <a v-if="attributes.liveedit" :href="attributes.liveedit" class="button" target="_blank">
+            <span><div class="icon edit"></div></span>
+            Live edit
+          </a>
+          <a :href="downloadLink" class="button" target="_blank">
+            <span><div class="icon download"></div></span>
+            Download
+          </a>
+        </div>
+        <div v-html="body"></div>
       </div>
     </div>
     <div class="Examples__Footer">
@@ -47,7 +41,6 @@ import marked, { Renderer } from 'marked'
 import highlightjs from 'highlight.js'
 import fm from 'front-matter'
 
-import NuxtBar from '~components/Bar.vue'
 import NuxtAffix from '~components/Affix.vue'
 import NuxtFooter from '~components/Footer.vue'
 import NuxtFilesTree from '~components/FilesTree.vue'
@@ -62,7 +55,6 @@ marked.setOptions({ renderer });
 
 export default {
   components: {
-    NuxtBar,
     NuxtAffix,
     NuxtFooter,
     NuxtFilesTree
@@ -106,8 +98,7 @@ export default {
   methods: {
     refreshContent () {
       this.content = this.$options.data().content || ''
-    },
-    toggle () { this.$store.commit('toggle', 'visibleAffix') }
+    }
   },
   head () {
     return {
@@ -124,49 +115,18 @@ export default {
 <style lang="scss" scoped>
 .Examples
 {
-  &__Left
-  {
-    z-index: 900;
-    position: fixed;
-    top: 100px;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    @media (min-width: 768px)
-    {
-      top: 140px;
-    }
-    @media (min-width: 992px)
-    {
-      z-index: 1;
-    }
-    &--hidden
-    {
-      display: none;
-      @media (min-width: 992px)
-      {
-        display: block;
-      }
-    }
-    .container
-    {
-      height: 100%;
-    }
-  }
-  &__Right
+  &__Content
   {
     position: relative;
     z-index: 10;
-    padding: 30px 0;
-    padding-top: 130px;
+    padding: 15px;
+    margin-top: 60px;
     height: 100%;
-    @media (min-width: 768px)
+    @media (min-width: 991px)
     {
-      padding-top: 170px;
-    }
-    @media (min-width: 992px)
-    {
-      margin-left: 270px;
+      padding: 30px;
+      margin-top: 80px;
+      margin-left: 300px;
     }
     &--hidden
     {
@@ -176,6 +136,11 @@ export default {
         display: block;
       }
     }
+  }
+  &__Contribute {
+    border-top: 1px #dbdfe1 solid;
+    padding-top: 20px;
+    color: #7f8c8d;
   }
   &__Footer
   {
@@ -187,8 +152,38 @@ export default {
   }
   .button
   {
+    height: 48px;
+    line-height: 46px;
+    font-size: 14px;
     margin-bottom: 15px;
     margin-right: 35px;
+    &:before
+    {
+      border-right: 24px solid;
+      border-top: 24px solid transparent;
+      border-bottom: 24px solid transparent;
+      left: -24px;
+      border-right-color: #35495e;
+    }
+    &:after
+    {
+      border-left: 24px solid;
+      border-top: 24px solid transparent;
+      border-bottom: 24px solid transparent;
+      right: -24px;
+      border-left-color: #35495e;
+    }
+    &:hover
+    {
+      &:before
+      {
+        border-right-color: darken(#35495e, 5%);
+      }
+      &:after
+      {
+        border-left-color: darken(#35495e, 5%);
+      }
+    }
     &:last-child
     {
       margin-right: 0;

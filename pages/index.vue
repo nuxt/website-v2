@@ -149,6 +149,7 @@ export default {
     @media (min-width: 991px)
     {
 <<<<<<< HEAD
+<<<<<<< HEAD
       font-weight: 300;
       font-size: 2em;
       letter-spacing: 1px;
@@ -158,6 +159,11 @@ export default {
       font-size: 56px;
       margin: 40px 0;
 >>>>>>> 2eed1dad (affix)
+=======
+      font-size: 52px;
+      margin: 30px 0;
+      margin-bottom: 50px;
+>>>>>>> 2134651a (examples category)
     }
   }
   &__List

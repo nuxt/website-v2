@@ -49,7 +49,12 @@
   "main": "index.js",
   "dependencies": {
     "normalize.css": "^5.0.0",
+<<<<<<< HEAD
     "nuxt": "^0.5.2"
+=======
+    "nuxt": "^0.9.1",
+    "whatwg-fetch": "^2.0.1"
+>>>>>>> 2134651a (examples category)
   },
   "devDependencies": {
     "node-sass": "^3.13.0",

@@ -10,9 +10,6 @@ import fm from 'front-matter'
 import HtmlParser from '~components/HtmlParser.vue'
 
 export default {
-  validate () {
-    return true
-  },
   data ({ route, store }, callback) {
     // Default data
     let data = {

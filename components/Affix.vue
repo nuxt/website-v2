@@ -32,7 +32,7 @@ export default {
   },
   computed: {
     visible () { return this.$store.state.visibleAffix },
-    menu () { return '/' + this.$route.params.category }
+    menu () { return '/' + (this.$route.params.category || 'examples') }
   },
   methods: {
     toggle () { this.$store.commit('toggle', 'visibleAffix') }

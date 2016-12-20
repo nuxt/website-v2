@@ -1,9 +1,4 @@
 <template>
-<<<<<<< HEAD
-  <div class="Examples">
-    <nuxt-header></nuxt-header>
-    Examples
-=======
   <div class="Content">
     <h1>{{ attributes.title }}</h1>
     <blockquote>
@@ -29,21 +24,10 @@
       </a>
     </div>
     <div v-html="body"></div>
->>>>>>> 2134651a (examples category)
   </div>
 </template>
 
 <script>
-<<<<<<< HEAD
-import NuxtHeader from '~components/Header.vue'
-
-export default {
-  components: {
-    NuxtHeader
-  }
-}
-</script>
-=======
 import marked, { Renderer } from 'marked'
 import highlightjs from 'highlight.js'
 import fm from 'front-matter'
@@ -62,10 +46,10 @@ export default {
   components: {
     NuxtFilesTree
   },
-  data ({ store }, callback) {
+  data ({ route, store }, callback) {
     // let path = route.params.slug || 'hello-world'
     // path = '/docs/examples/' + path + '.md'
-    const path = '/docs/' + store.state.lang.iso + '/examples/hello-world.md'
+    const path = '/docs/' + store.state.lang.iso + '/examples/' + route.params.slug + '.md'
     if (process.BROWSER_BUILD) {
       fetch(path)
       .then((response) => {
@@ -160,4 +144,3 @@ export default {
   }
 }
 </style>
->>>>>>> 2134651a (examples category)

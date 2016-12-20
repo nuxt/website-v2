@@ -1,10 +1,10 @@
 <template>
-  <div class="Category">
+  <div class="Examples">
     <nuxt-affix :list="list"></nuxt-affix>
-    <div class="Category__Content" :class="{'Category__Content--hidden': visible}">
+    <div class="Examples__Content" :class="{'Examples__Content--hidden': visible}">
       <nuxt-child></nuxt-child>
     </div>
-    <div class="Category__Footer">
+    <div class="Examples__Footer">
       <nuxt-footer></nuxt-footer>
     </div>
   </div>
@@ -15,13 +15,9 @@ import NuxtAffix from '~components/Affix.vue'
 import NuxtFooter from '~components/Footer.vue'
 
 export default {
-  validate ({ params }) {
-    let categories = ['guide', 'api']
-    return categories.indexOf(params.category) !== -1
-  },
   computed: {
     visible () { return this.$store.state.visibleAffix },
-    list () { return this.$store.state.menu[this.$route.params.category] }
+    list () { return this.$store.state.menu.examples }
   },
   components: {
     NuxtAffix,
@@ -31,7 +27,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.Category
+.Examples
 {
   &__Content
   {

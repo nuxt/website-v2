@@ -15,7 +15,7 @@
           <nuxt-search label="mobile"></nuxt-search>
         </div>
         <div class="Header__Nav__Lang">
-          <img src="/flags/gb.png" alt="EN" class="Header__Nav__Lang__Img">
+          <img :src="'/flags/' + $store.state.lang.iso + '.png'" :alt="$store.state.lang.iso" class="Header__Nav__Lang__Img">
         </div>
 >>>>>>> 925b7850 (navbar)
         <ul class="Header__Nav__List">

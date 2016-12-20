@@ -49,7 +49,8 @@ export default {
   data ({ route, store }, callback) {
     // let path = route.params.slug || 'hello-world'
     // path = '/docs/examples/' + path + '.md'
-    const path = '/docs/' + store.state.lang.iso + '/examples/' + route.params.slug + '.md'
+    let path = route.params.slug || 'hello-world'
+    path = '/docs/' + store.state.lang.iso + '/examples/' + path + '.md'
     if (process.BROWSER_BUILD) {
       fetch(path)
       .then((response) => {

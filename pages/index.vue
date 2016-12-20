@@ -114,7 +114,7 @@ export default {
   background-color: #fff;
   padding: 70px 15px;
   text-align: center;
-  @media (min-width: 991px)
+  @media (min-width: 992px)
   {
     padding: 140px 30px;
   }
@@ -123,7 +123,7 @@ export default {
     &--mobile
     {
       display: inline-block;
-      @media (min-width: 991px)
+      @media (min-width: 992px)
       {
         display: none;
       }
@@ -132,7 +132,7 @@ export default {
 >>>>>>> 2eed1dad (affix)
     {
       display: none;
-      @media (min-width: 991px)
+      @media (min-width: 992px)
       {
         display: inline-block;
       }
@@ -146,7 +146,7 @@ export default {
     letter-spacing: 1px;
     margin: 20px 0;
     color: #35495e;
-    @media (min-width: 991px)
+    @media (min-width: 992px)
     {
 <<<<<<< HEAD
 <<<<<<< HEAD

@@ -1,6 +1,5 @@
 import Vue from 'vue'
 import Vuex from 'vuex'
-import axios from 'axios'
 
 Vue.use(Vuex)
 
@@ -18,11 +17,11 @@ const store = new Vuex.Store({
   actions: {
     nuxtServerInit ({ state }, { req }) {
       if (!process.BROWSER) {
-        state.lang = require('json-loader!static/docs/en/lang.json')
+        state.lang = require('static/docs/en/lang.json')
         state.menu = {
-          guide: require('json-loader!static/docs/en/guide/menu.json'),
-          api: require('json-loader!static/docs/en/api/menu.json'),
-          examples: require('json-loader!static/docs/en/examples/menu.json')
+          guide: require('static/docs/en/guide/menu.json'),
+          api: require('static/docs/en/api/menu.json'),
+          examples: require('static/docs/en/examples/menu.json')
         }
       }
     }

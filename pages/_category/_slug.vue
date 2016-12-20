@@ -1,5 +1,8 @@
 <template>
-  <html-parser class="Content" :content="body"></html-parser>
+  <div>
+    <!-- <div class="carbonads"></div> -->
+    <html-parser :content="body"></html-parser>
+  </div>
 </template>
 
 <script>
@@ -57,3 +60,20 @@ export default {
   }
 }
 </script>
+
+<style lang="scss" scoped>
+// .carbonads
+// {
+//   float: right;
+//   margin-left: 25px;
+//   width: 125px;
+//   height: 200px;
+//   background-color: #ddd;
+//   @media (min-width: 992px)
+//   {
+//     position: fixed;
+//     bottom: 30px;
+//     right: 30px;
+//   }
+// }
+</style>

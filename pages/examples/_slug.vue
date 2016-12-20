@@ -7,20 +7,20 @@
     <div class="video" v-if="attributes.youtube">
       <iframe class="youtube" :src="attributes.youtube" frameborder="0" allowfullscreen></iframe>
     </div>
-    <h2>Source Code</h2>
+    <h2>{{ $store.state.lang.examples.source_code }}</h2>
     <nuxt-files-tree :example="attributes.github" :key="attributes.github"></nuxt-files-tree>
     <div>
       <a v-if="attributes.livedemo" :href="attributes.livedemo" class="button" target="_blank">
         <span><div class="icon eye"></div></span>
-        Live demo
+        {{ $store.state.lang.links.live_demo }}
       </a>
       <a v-if="attributes.liveedit" :href="attributes.liveedit" class="button" target="_blank">
         <span><div class="icon edit"></div></span>
-        Live edit
+        {{ $store.state.lang.links.live_edit }}
       </a>
       <a :href="downloadLink" class="button" target="_blank">
         <span><div class="icon download"></div></span>
-        Download
+        {{ $store.state.lang.links.download }}
       </a>
     </div>
     <div v-html="body"></div>

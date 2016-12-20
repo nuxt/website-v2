@@ -13,9 +13,9 @@
       <h3 class="Affix__Title">{{ title }}</h3>
       <ul class="Affix__List">
         <li class="Affix__List__Item" v-for="link in links">
-          <router-link class="Affix__List__Item__Link" :to="menu + link.to" exact>
+          <nuxt-link class="Affix__List__Item__Link" :to="menu + link.to" exact>
             {{ link.name }}
-          </router-link>
+          </nuxt-link>
         </li>
       </ul>
     </template>
@@ -176,7 +176,7 @@ export default {
           background-color: #eee;
         }
       }
-      .router-link-active
+      .nuxt-link-active
       {
         color: #fff;
         background-color: #41b883;

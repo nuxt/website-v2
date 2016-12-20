@@ -1,13 +1,13 @@
 <template>
   <header class="Header">
     <div class="container">
-      <router-link class="Header__Title" to="/">
+      <nuxt-link class="Header__Title" to="/">
         <img src="~static/logo_nav.png" alt="Logo nuxt" class="Header__Title__Logo Header__Title__Logo--desktop"/>
         <img src="~static/logo_nav_mobile.png" alt="Logo nuxt" class="Header__Title__Logo Header__Title__Logo--mobile"/>
         <h1 class="Header__Title__Text">
           NUXT
         </h1>
-      </router-link>
+      </nuxt-link>
       <nav class="Header__Nav" :class="{'Header__Nav--hidden': !visible}">
         <div class="Header__Nav__Search Header__Nav__Search--mobile">
           <nuxt-search label="mobile"></nuxt-search>
@@ -17,19 +17,19 @@
         </div>
         <ul class="Header__Nav__List">
           <li class="Header__Nav__List__Item">
-            <router-link class="Header__Nav__List__Item__Link" to="/guide">
+            <nuxt-link class="Header__Nav__List__Item__Link" to="/guide">
               Guide
-            </router-link>
+            </nuxt-link>
           </li>
           <li class="Header__Nav__List__Item">
-            <router-link class="Header__Nav__List__Item__Link" to="/api">
+            <nuxt-link class="Header__Nav__List__Item__Link" to="/api">
               API
-            </router-link>
+            </nuxt-link>
           </li>
           <li class="Header__Nav__List__Item">
-            <router-link class="Header__Nav__List__Item__Link" to="/examples">
+            <nuxt-link class="Header__Nav__List__Item__Link" to="/examples">
               Examples
-            </router-link>
+            </nuxt-link>
           </li>
           <li class="Header__Nav__List__Item">
             <nuxt-dropdown :list="ecosystemLinks" title="Ecosystem" class="Header__Nav__List__Item__Link">
@@ -279,7 +279,7 @@ export default {
             color: #41b883;
           }
         }
-        .router-link-active, .router-link-active:hover
+        .nuxt-link-active, .nuxt-link-active:hover
         {
           color: #41b883;
           @media (min-width: 991px)

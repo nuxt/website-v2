@@ -41,7 +41,7 @@ export default {
   padding: 70px 15px;
   padding-top: 130px;
   text-align: center;
-  @media (min-width: 991px)
+  @media (min-width: 992px)
   {
     padding: 140px 30px;
     padding-top: 220px;
@@ -51,7 +51,7 @@ export default {
     &--mobile
     {
       display: inline-block;
-      @media (min-width: 991px)
+      @media (min-width: 992px)
       {
         display: none;
       }
@@ -59,7 +59,7 @@ export default {
     &--desktop
     {
       display: none;
-      @media (min-width: 991px)
+      @media (min-width: 992px)
       {
         display: inline-block;
       }
@@ -73,7 +73,7 @@ export default {
     letter-spacing: 1px;
     margin: 20px 0;
     color: #35495e;
-    @media (min-width: 991px)
+    @media (min-width: 992px)
     {
       font-size: 52px;
       margin: 30px 0;

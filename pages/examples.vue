@@ -36,7 +36,7 @@ export default {
     padding: 15px;
     margin-top: 60px;
     height: 100%;
-    @media (min-width: 990px)
+    @media (min-width: 992px)
     {
       padding: 30px;
       margin-top: 80px;
@@ -45,7 +45,7 @@ export default {
     &--hidden
     {
       display: none;
-      @media (min-width: 990px)
+      @media (min-width: 992px)
       {
         display: block;
       }
@@ -54,7 +54,7 @@ export default {
   &__Footer
   {
     display: block;
-    @media (min-width: 990px)
+    @media (min-width: 992px)
     {
       display: none;
     }

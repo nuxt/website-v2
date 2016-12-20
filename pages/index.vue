@@ -1,5 +1,5 @@
 <template>
-  <div class="Homepage">
+  <div>
     <section class="Landscape">
       <img src="/logo_home_mobile.png" alt="Logo nuxt" class="Landscape__Image Landscape__Image--mobile"/>
       <img src="/logo_home.png" alt="Logo nuxt" class="Landscape__Image Landscape__Image--desktop"/>
@@ -34,22 +34,17 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.Homepage
-{
-  padding-top: 60px;
-  @media (min-width: 991px)
-  {
-    padding-top: 80px;
-  }
-}
 .Landscape
 {
+  min-height: 100vh;
   background-color: #fff;
   padding: 70px 15px;
+  padding-top: 130px;
   text-align: center;
   @media (min-width: 991px)
   {
     padding: 140px 30px;
+    padding-top: 220px;
   }
   &__Image
   {

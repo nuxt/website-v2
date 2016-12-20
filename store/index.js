@@ -22,9 +22,12 @@ const store = new Vuex.Store({
   actions: {
     nuxtServerInit ({ state }, { req }) {
       if (!process.BROWSER) {
-        state.guideMenu = require('json-loader!static/docs/guide/menu.json')
-        state.apiMenu = require('json-loader!static/docs/api/menu.json')
-        state.examplesMenu = require('json-loader!static/docs/examples/menu.json')
+        state.lang = require('json-loader!static/docs/en/lang.json')
+        state.menu = {
+          guide: require('json-loader!static/docs/en/guide/menu.json'),
+          api: require('json-loader!static/docs/en/api/menu.json'),
+          examples: require('json-loader!static/docs/en/examples/menu.json')
+        }
       }
     }
   }

@@ -21,6 +21,7 @@ module.exports = {
   ]
 =======
   ],
+<<<<<<< HEAD
   router: {
     routes: [
       { path: '/guide/:slug', component: 'pages/guide' }
@@ -28,6 +29,32 @@ module.exports = {
   },
   build: {
     vendor: ['highlight.js']
+=======
+  // router: {
+  //   routes: [
+  //     { path: '/guide/:slug', component: 'pages/guide' },
+  //     { path: '/api/:slug', component: 'pages/api' },
+  //     { path: '/examples/:slug', component: 'pages/examples' }
+  //   ]
+  // },
+  plugins: [
+    '~plugins/ga.js',
+    '~plugins/marked'
+  ],
+  build: {
+    vendor: ['whatwg-fetch', 'marked', 'highlight.js']
+  },
+  env: {
+    githubToken: '4aa6bcf919d238504e7db59a66d32e78281c0ad3'
+  },
+  loading: { color: '#41B883' },
+  generate: {
+    routeParams: {
+      '/guide/:slug': _(require('./static/docs/en/guide/menu.json')).values().flatten().map('to').compact().map((slug) => { return { slug: slug.replace(/^\//, '') } }).value(),
+      '/api/:slug': _(require('./static/docs/en/api/menu.json')).values().flatten().map('to').compact().map((slug) => { return { slug: slug.replace(/^\//, '') } }).value(),
+      '/examples/:slug': _(require('./static/docs/en/examples/menu.json')).values().flatten().map('to').compact().map((slug) => { return { slug: slug.replace(/^\//, '') } }).value()
+    }
+>>>>>>> 3d1d3d02 (new architecture)
   }
 >>>>>>> f4d82e28 (guide content from component)
 }

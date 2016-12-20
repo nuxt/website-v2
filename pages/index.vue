@@ -57,17 +57,23 @@
       <img src="/logo_home_mobile.png" alt="Logo nuxt" class="Landscape__Image Landscape__Image--mobile"/>
       <img src="/logo_home.png" alt="Logo nuxt" class="Landscape__Image Landscape__Image--desktop"/>
       <h2 class="Landscape__Title">
-        Universal Vue.js Applications
+        {{ $store.state.lang.homepage.title }}
       </h2>
       <ul class="Landscape__List">
         <li class="Landscape__List__Item">
+<<<<<<< HEAD
           <router-link class="button button--green" to="/guide/installation">
             GET STARTED
           </router-link>
+=======
+          <nuxt-link class="button button--green" to="/guide/installation">
+            {{ $store.state.lang.links.get_started }}
+          </nuxt-link>
+>>>>>>> 3d1d3d02 (new architecture)
         </li>
         <li class="Landscape__List__Item">
           <a class="button" href="https://github.com/nuxt/nuxt.js" target="_blank">
-            GITHUB
+            {{ $store.state.lang.links.github }}
           </a>
         </li>
       </ul>

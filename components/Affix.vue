@@ -13,9 +13,18 @@
       <h3 class="Affix__Title">{{ title }}</h3>
       <ul class="Affix__List">
         <li class="Affix__List__Item" v-for="link in links">
-          <nuxt-link class="Affix__List__Item__Link" :to="menu + link.to" exact>
+          <nuxt-link class="Affix__List__Item__Link"
+                     :class="{'nuxt-link-active': $route.path === menu + link.to}"
+                     :to="menu + link.to" exact>
             {{ link.name }}
           </nuxt-link>
+          <ul v-if="link.contents && $route.path === menu + link.to" class="Affix__List__Item__Contents">
+            <li v-for="content in link.contents" class="Affix__List__Item__Contents__Item">
+              <a :href="menu + link.to + content.to" class="Affix__List__Item__Contents__Item__Link">
+                {{ content.name }}
+              </a>
+            </li>
+          </ul>
         </li>
       </ul>
     </template>
@@ -157,7 +166,7 @@ export default {
     padding: 0;
     &__Item
     {
-      padding: 1px 0;
+      padding: 2px 0;
       &__Link
       {
         display: block;
@@ -177,6 +186,43 @@ export default {
       {
         color: #fff;
         background-color: #41b883;
+      }
+      &__Contents
+      {
+        margin: 0;
+        padding: 0;
+        padding-top: 3px;
+        padding-left: 20px;
+        list-style: none;
+        &__Item
+        {
+          position: relative;
+          padding: 2px 0;
+          &:before
+          {
+            content: " ";
+            width: 0;
+            height: 0;
+            top: 8px;
+            left: -13px;
+            position: absolute;
+            border-left: 5px solid lighten(#35495e, 5%);
+            border-top: 5px solid transparent;
+            border-bottom: 5px solid transparent;
+          }
+          &__Link
+          {
+            display: block;
+            font-size: 14px;
+            color: lighten(#35495e, 5%);
+            text-decoration: none;
+            letter-spacing: 0.25px;
+            &:hover
+            {
+              color: #41b883;
+            }
+          }
+        }
       }
     }
   }

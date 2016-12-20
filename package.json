@@ -10,7 +10,7 @@
     "json-loader": "^0.5.4",
     "marked": "^0.3.6",
     "normalize.css": "^5.0.0",
-    "nuxt": "^0.9.1",
+    "nuxt": "latest",
     "whatwg-fetch": "^2.0.1"
   },
   "devDependencies": {

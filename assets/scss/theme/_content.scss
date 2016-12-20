@@ -1,5 +1,9 @@
 .Content
 {
+  // @media (min-width: 992px)
+  // {
+  //   padding-right: 155px;
+  // }
   h1, h2, h3, h4, h5, h6
   {
     color: #35495e;
@@ -9,6 +13,7 @@
   {
     margin-top: 0px;
     margin-bottom: 20px;
+    overflow: hidden;
   }
   h2
   {
@@ -30,6 +35,7 @@
     font-size: 15px;
     line-height: 25px;
     margin: 10px 0;
+    overflow: hidden;
   }
   code
   {
@@ -141,6 +147,7 @@
     padding: 10px;
     border-left: 3px solid #dbdfe1;
     background-color: #fafafa;
+    overflow: hidden;
     p
     {
       color: #888;

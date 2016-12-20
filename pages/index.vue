@@ -75,8 +75,9 @@ export default {
     color: #35495e;
     @media (min-width: 991px)
     {
-      font-size: 56px;
-      margin: 40px 0;
+      font-size: 52px;
+      margin: 30px 0;
+      margin-bottom: 50px;
     }
   }
   &__List

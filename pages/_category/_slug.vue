@@ -13,9 +13,10 @@ export default {
   data ({ route, store }, callback) {
     // Default data
     let data = {
-      content: ''
+      content: '',
+      path: route.params.slug || 'index'
     }
-    const path = '/docs/' + store.state.lang.iso + '/' + route.params.category + '/' + route.params.slug + '.md'
+    const path = '/docs/' + store.state.lang.iso + '/' + route.params.category + '/' + data.path + '.md'
     if (process.BROWSER_BUILD) {
       fetch(path)
       .then((response) => {

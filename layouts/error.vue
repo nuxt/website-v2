@@ -11,7 +11,7 @@
       <ul class="Landscape__List">
         <li class="Landscape__List__Item">
           <nuxt-link v-if="error.statusCode === 404" class="button button--green" to="/">
-            Homepage
+            {{ $store.state.lang.links.homepage }}
           </nuxt-link>
         </li>
       </ul>

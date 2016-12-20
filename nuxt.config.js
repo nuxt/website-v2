@@ -17,13 +17,13 @@ module.exports = {
     'highlight.js/styles/hybrid.css',
     { src: '~assets/scss/main.scss', lang: 'scss' }
   ],
-  router: {
-    routes: [
-      { path: '/guide/:slug', component: 'pages/guide' },
-      { path: '/api/:slug', component: 'pages/api' },
-      { path: '/examples/:slug', component: 'pages/examples' }
-    ]
-  },
+  // router: {
+  //   routes: [
+  //     { path: '/guide/:slug', component: 'pages/guide' },
+  //     { path: '/api/:slug', component: 'pages/api' },
+  //     { path: '/examples/:slug', component: 'pages/examples' }
+  //   ]
+  // },
   plugins: [
     '~plugins/ga.js',
     '~plugins/marked'
@@ -37,9 +37,9 @@ module.exports = {
   loading: { color: '#41B883' },
   generate: {
     routeParams: {
-      '/guide/:slug': _(require('./static/docs/guide/menu.json')).values().flatten().map('to').compact().map((slug) => { return { slug: slug.replace(/^\//, '') } }).value(),
-      '/api/:slug': _(require('./static/docs/api/menu.json')).values().flatten().map('to').compact().map((slug) => { return { slug: slug.replace(/^\//, '') } }).value(),
-      '/examples/:slug': _(require('./static/docs/examples/menu.json')).values().flatten().map('to').compact().map((slug) => { return { slug: slug.replace(/^\//, '') } }).value()
+      '/guide/:slug': _(require('./static/docs/en/guide/menu.json')).values().flatten().map('to').compact().map((slug) => { return { slug: slug.replace(/^\//, '') } }).value(),
+      '/api/:slug': _(require('./static/docs/en/api/menu.json')).values().flatten().map('to').compact().map((slug) => { return { slug: slug.replace(/^\//, '') } }).value(),
+      '/examples/:slug': _(require('./static/docs/en/examples/menu.json')).values().flatten().map('to').compact().map((slug) => { return { slug: slug.replace(/^\//, '') } }).value()
     }
   }
 }

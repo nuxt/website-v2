@@ -12,9 +12,9 @@
           </h2>
           <ul class="Landscape__Content__List">
             <li class="Landscape__Content__List__Item">
-              <router-link v-if="error.statusCode === 404" class="button button--green" to="/">
+              <nuxt-link v-if="error.statusCode === 404" class="button button--green" to="/">
                 Homepage
-              </router-link>
+              </nuxt-link>
             </li>
           </ul>
         </div>

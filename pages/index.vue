@@ -8,9 +8,9 @@
       </h2>
       <ul class="Landscape__List">
         <li class="Landscape__List__Item">
-          <router-link class="button button--green" to="/guide/installation">
+          <nuxt-link class="button button--green" to="/guide/installation">
             GET STARTED
-          </router-link>
+          </nuxt-link>
         </li>
         <li class="Landscape__List__Item">
           <a class="button" href="https://github.com/nuxt/nuxt.js" target="_blank">

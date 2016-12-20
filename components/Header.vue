@@ -18,21 +18,21 @@
         <ul class="Header__Nav__List">
           <li class="Header__Nav__List__Item">
             <nuxt-link class="Header__Nav__List__Item__Link" to="/guide">
-              Guide
+              {{ $store.state.lang.links.guide }}
             </nuxt-link>
           </li>
           <li class="Header__Nav__List__Item">
             <nuxt-link class="Header__Nav__List__Item__Link" to="/api">
-              API
+              {{ $store.state.lang.links.api }}
             </nuxt-link>
           </li>
           <li class="Header__Nav__List__Item">
             <nuxt-link class="Header__Nav__List__Item__Link" to="/examples">
-              Examples
+              {{ $store.state.lang.links.examples }}
             </nuxt-link>
           </li>
           <li class="Header__Nav__List__Item">
-            <nuxt-dropdown :list="ecosystemLinks" title="Ecosystem" class="Header__Nav__List__Item__Link">
+            <nuxt-dropdown :list="ecosystemLinks" :title="$store.state.lang.links.ecosystem" class="Header__Nav__List__Item__Link">
             </nuxt-dropdown>
           </li>
         </ul>
@@ -57,27 +57,27 @@ export default {
     ecosystemLinks() {
       return [
         {
-          name: 'Github',
+          name: this.$store.state.lang.links.github,
           path: 'https://github.com/nuxt/nuxt.js',
           target: '_blank'
         },
         {
-          name: 'Twitter',
+          name: this.$store.state.lang.links.twitter,
           path: 'https://twitter.com/nuxt_js',
           target: '_blank'
         },
         {
-          name: 'Blog',
+          name: this.$store.state.lang.links.blog,
           path: 'https://medium.com/@nuxt_js',
           target: '_blank'
         },
         {
-          name: 'Vue.js',
+          name: this.$store.state.lang.links.vuejs,
           path: 'https://vuejs.org',
           target: '_blank'
         },
         {
-          name: 'Vue Jobs',
+          name: this.$store.state.lang.links.vue_jobs,
           path: 'https://vuejobs.com/?ref=nuxtjs',
           target: '_blank'
         }

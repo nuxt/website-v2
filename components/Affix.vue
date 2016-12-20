@@ -25,17 +25,14 @@
 <script>
 export default {
   props: {
-    menu: {
-      type: String,
-      required: true
-    },
     list: {
       type: Object,
       required: true
     }
   },
   computed: {
-    visible () { return this.$store.state.visibleAffix }
+    visible () { return this.$store.state.visibleAffix },
+    menu () { return '/' + this.$route.params.category }
   },
   methods: {
     toggle () { this.$store.commit('toggle', 'visibleAffix') }

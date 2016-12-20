@@ -10,13 +10,15 @@ import fm from 'front-matter'
 import HtmlParser from '~components/HtmlParser.vue'
 
 export default {
-  data ({ route }, callback) {
+  validate () {
+    return true
+  },
+  data ({ route, store }, callback) {
     // Default data
     let data = {
-      content: '',
-      path: route.params.slug || 'index'
+      content: ''
     }
-    const path = '/docs/api/' + data.path + '.md'
+    const path = '/docs/' + store.state.lang.iso + '/' + route.params.category + '/' + route.params.slug + '.md'
     if (process.BROWSER_BUILD) {
       fetch(path)
       .then((response) => {

@@ -263,7 +263,7 @@ export default {
             top: 8px;
             left: -13px;
             position: absolute;
-            border-left: 5px solid lighten(#35495e, 5%);
+            border-left: 5px solid #DBDFE1;
             border-top: 5px solid transparent;
             border-bottom: 5px solid transparent;
           }

@@ -9,13 +9,32 @@
         <div class="icon close"></div>
       </div>
     </h2>
-    <template v-for="(links, title) in list">
-      <h3 class="Affix__Title">{{ title }}</h3>
+    <template v-for="group in list">
+      <h3 class="Affix__Title">{{ group.title }}</h3>
       <ul class="Affix__List">
+<<<<<<< HEAD
         <li class="Affix__List__Item" v-for="link in links">
           <nuxt-link class="Affix__List__Item__Link" :to="menu + link.to" exact>
             {{ link.name }}
           </nuxt-link>
+=======
+        <li class="Affix__List__Item" v-for="link in group.links">
+          <nuxt-link class="Affix__List__Item__Link"
+                     :class="{'nuxt-link-active': $route.path === menu + link.to}"
+                     :to="menu + link.to" exact>
+            {{ link.name }}
+          </nuxt-link>
+          <ul v-if="$route.path === menu + link.to" class="Affix__List__Item__Contents">
+            <li v-for="(content, index) in link.contents" class="Affix__List__Item__Contents__Item">
+              <a :href="menu + link.to + content.to"
+                  @click.prevent="scrollTo(content.to)"
+                  class="Affix__List__Item__Contents__Item__Link"
+                  :class="{'Affix__List__Item__Contents__Item__Link--active': current === index}">
+                {{ content.name }}
+              </a>
+            </li>
+          </ul>
+>>>>>>> 0bbc4fd8 (scrollTo update)
         </li>
       </ul>
     </template>
@@ -26,16 +45,70 @@
 export default {
   props: {
     list: {
-      type: Object,
+      type: Array,
       required: true
     }
   },
+  mounted () {
+    let self = this
+    this.$nextTick(function () {
+      window.addEventListener('scroll', self.scrolled)
+    })
+  },
+  data () {
+    return { current: 0, setInter: null }
+  },
   computed: {
     visible () { return this.$store.state.visibleAffix },
-    menu () { return '/' + (this.$route.params.category || 'examples') }
+    menu () { return '/' + (this.$route.params.category || 'examples') },
+    contents () {
+      var c = []
+      this.list.forEach((group) => {
+        if (group.links && !c.length) {
+          var l = group.links.find((link) => {
+            return this.$route.path === this.menu + link.to
+          })
+          if (l) {
+            l.contents.forEach((content) => {
+              var el = document.getElementById(content.to.slice(1))
+              c.push(el.offsetTop)
+            })
+          }
+        }
+      })
+      return c
+    }
   },
   methods: {
-    toggle () { this.$store.commit('toggle', 'visibleAffix') }
+    toggle () { this.$store.commit('toggle', 'visibleAffix') },
+    scrolled () {
+      var h = window.innerHeight || document.documentElement.clientHeight || document.body.clientHeight
+      var doc = document.documentElement;
+      var top = (window.pageYOffset || doc.scrollTop)  - (doc.clientTop || 0);
+      var el = this.contents.find((pos) => {
+        return pos > top + (h / 2)
+      })
+      this.current = (el ? this.contents.indexOf(el) : this.contents.length) - 1
+    },
+    scrollTo (id) {
+      this.toggle()
+      this.$nextTick(() => {
+        var to = document.getElementById(id.slice(1)).offsetTop - 25
+        var doc = document.documentElement;
+        var top = (window.pageYOffset || doc.scrollTop)  - (doc.clientTop || 0);
+        var diff = (to > top ? to - top : top - to) / 25
+        var i = 0
+        window.clearInterval(this.setInter)
+        this.setInter = window.setInterval(() => {
+          top = (to > top) ? top + diff : top - diff
+          window.scrollTo(0, top)
+          i++
+          if (i === 25) {
+            window.clearInterval(this.setInter)
+          }
+        }, 10)
+      })
+    }
   }
 }
 </script>
@@ -178,6 +251,46 @@ export default {
         color: #fff;
         background-color: #41b883;
       }
+<<<<<<< HEAD
+=======
+      &__Contents
+      {
+        margin: 0;
+        padding: 0;
+        padding-top: 3px;
+        padding-left: 20px;
+        list-style: none;
+        &__Item
+        {
+          position: relative;
+          padding: 2px 0;
+          &:before
+          {
+            content: " ";
+            width: 0;
+            height: 0;
+            top: 8px;
+            left: -13px;
+            position: absolute;
+            border-left: 5px solid lighten(#35495e, 5%);
+            border-top: 5px solid transparent;
+            border-bottom: 5px solid transparent;
+          }
+          &__Link
+          {
+            display: block;
+            font-size: 14px;
+            color: lighten(#35495e, 5%);
+            text-decoration: none;
+            letter-spacing: 0.25px;
+            &:hover, &--active
+            {
+              color: #41b883;
+            }
+          }
+        }
+      }
+>>>>>>> 0bbc4fd8 (scrollTo update)
     }
   }
 }

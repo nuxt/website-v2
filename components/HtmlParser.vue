@@ -21,12 +21,6 @@ export default {
         event.preventDefault()
         this.$router.push(href)
       }
-      if (href && href[0] === '#') {
-        event.preventDefault()
-        const el = document.getElementById(href.slice(1))
-        let y = (window.outerWidth > 768) ? el.offsetTop - 160 : el.offsetTop - 120
-        window.scrollTo(0, y)
-      }
     },
     contentUpdated () {
       this.removeListeners()

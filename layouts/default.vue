@@ -1,10 +1,10 @@
 <template>
-  <nuxt-container>
+  <div>
     <navbar></navbar>
     <div :class="{'App--hidden': visible}">
       <nuxt/>
     </div>
-  </nuxt-container>
+  </div>
 </template>
 
 <script>

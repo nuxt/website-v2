@@ -61,7 +61,7 @@ export default {
           var l = group.links.find((link) => {
             return this.$route.path === this.menu + link.to
           })
-          if (l) {
+          if (l && l.contents) {
             l.contents.forEach((content) => {
               var el = document.getElementById(content.to.slice(1))
               c.push(el.offsetTop)

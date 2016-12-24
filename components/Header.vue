@@ -72,6 +72,11 @@ export default {
           target: '_blank'
         },
         {
+          name: this.$store.state.lang.links.chat,
+          path: 'https://gitter.im/nuxt/nuxt.js',
+          target: '_blank'
+        },
+        {
           name: this.$store.state.lang.links.vuejs,
           path: 'https://vuejs.org',
           target: '_blank'

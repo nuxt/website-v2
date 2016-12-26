@@ -13,6 +13,7 @@ import fm from 'front-matter'
 import HtmlParser from '~components/HtmlParser.vue'
 
 export default {
+  scrollToTop: true,
   data ({ route, store }, callback) {
     // Default data
     let data = {

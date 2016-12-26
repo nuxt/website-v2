@@ -64,7 +64,9 @@ export default {
           if (l && l.contents) {
             l.contents.forEach((content) => {
               var el = document.getElementById(content.to.slice(1))
-              c.push(el.offsetTop)
+              if (el) {
+                c.push(el.offsetTop)
+              }
             })
           }
         }
@@ -86,7 +88,9 @@ export default {
     scrollTo (id) {
       this.toggle()
       this.$nextTick(() => {
-        var to = document.getElementById(id.slice(1)).offsetTop - 25
+        var el = document.getElementById(id.slice(1))
+        if (!el) return
+        var to = el.offsetTop - 25
         var doc = document.documentElement;
         var top = (window.pageYOffset || doc.scrollTop)  - (doc.clientTop || 0);
         var diff = (to > top ? to - top : top - to) / 25

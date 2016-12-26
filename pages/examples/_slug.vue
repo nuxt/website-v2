@@ -43,6 +43,7 @@ renderer.code = (code, language) => {
 marked.setOptions({ renderer });
 
 export default {
+  scrollToTop: true,
   components: {
     NuxtFilesTree
   },

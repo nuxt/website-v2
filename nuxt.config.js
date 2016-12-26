@@ -37,9 +37,31 @@ module.exports = {
   loading: { color: '#41B883' },
   generate: {
     routeParams: {
-      '/guide/:slug': _(require('./static/docs/en/guide/menu.json')).values().flatten().map('to').compact().map((slug) => { return { slug: slug.replace(/^\//, '') } }).value(),
-      '/api/:slug': _(require('./static/docs/en/api/menu.json')).values().flatten().map('to').compact().map((slug) => { return { slug: slug.replace(/^\//, '') } }).value(),
-      '/examples/:slug': _(require('./static/docs/en/examples/menu.json')).values().flatten().map('to').compact().map((slug) => { return { slug: slug.replace(/^\//, '') } }).value()
+      '/:category': [
+        { category: 'guide' },
+        { category: 'api' }
+      ],
+      '/:category/:slug': _.flatten([
+        menuToRouteParams('./static/docs/en/guide/menu.json', { category: 'guide' }),
+        menuToRouteParams('./static/docs/en/api/menu.json', { category: 'api' })
+      ]),
+      '/:category/release-notes': [
+        { category: 'guide '}
+      ],
+      '/examples/:slug': menuToRouteParams('./static/docs/en/examples/menu.json')
     }
   }
+}
+
+function menuToRouteParams (menuPath, params = {}) {
+  let menu = require(menuPath)
+  return _(menu)
+  .map('links')
+  .flatten()
+  .map((m) => m.to.slice(1))
+  .compact()
+  .map((slug) => {
+    return Object.assign({}, params, { slug })
+  })
+  .value()
 }

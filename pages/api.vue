@@ -1,6 +1,6 @@
 <template>
   <div class="Category">
-    <nuxt-affix :list="list"></nuxt-affix>
+    <nuxt-affix :list="list" category="api"></nuxt-affix>
     <div class="Category__Content" :class="{'Category__Content--hidden': visible}">
       <nuxt-child></nuxt-child>
     </div>
@@ -15,13 +15,9 @@ import NuxtAffix from '~components/Affix.vue'
 import NuxtFooter from '~components/Footer.vue'
 
 export default {
-  validate ({ params }) {
-    let categories = ['guide', 'api']
-    return categories.indexOf(params.category) !== -1
-  },
   computed: {
     visible () { return this.$store.state.visibleAffix },
-    list () { return this.$store.state.menu[this.$route.params.category] }
+    list () { return this.$store.state.menu.api }
   },
   components: {
     NuxtAffix,

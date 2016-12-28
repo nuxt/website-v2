@@ -15,10 +15,6 @@ import axios from 'axios'
 import HtmlParser from '~components/HtmlParser.vue'
 
 export default {
-  validate ({ params }) {
-    console.log(params.category)
-    return params.category === 'guide'
-  },
   data () {
     // Default data
     let data = {

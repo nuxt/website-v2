@@ -1,20 +1,20 @@
 <template>
   <div class="Content">
-    <h1>{{ attributes.title }}</h1>
+    <h1>{{ attrs.title }}</h1>
     <blockquote>
-      <p>{{ attributes.description }}</p>
+      <p>{{ attrs.description }}</p>
     </blockquote>
-    <div class="video" v-if="attributes.youtube">
-      <iframe class="youtube" :src="attributes.youtube" frameborder="0" allowfullscreen></iframe>
+    <div class="video" v-if="attrs.youtube">
+      <iframe class="youtube" :src="attrs.youtube" frameborder="0" allowfullscreen></iframe>
     </div>
     <h2>{{ $store.state.lang.examples.source_code }}</h2>
-    <nuxt-files-tree :example="attributes.github" :key="attributes.github"></nuxt-files-tree>
+    <nuxt-files-tree :example="attrs.github" :key="attrs.github"></nuxt-files-tree>
     <div>
-      <a v-if="attributes.livedemo" :href="attributes.livedemo" class="button" target="_blank">
+      <a v-if="attrs.livedemo" :href="attrs.livedemo" class="button" target="_blank">
         <span><div class="icon eye"></div></span>
         {{ $store.state.lang.links.live_demo }}
       </a>
-      <a v-if="attributes.liveedit" :href="attributes.liveedit" class="button" target="_blank">
+      <a v-if="attrs.liveedit" :href="attrs.liveedit" class="button" target="_blank">
         <span><div class="icon edit"></div></span>
         {{ $store.state.lang.links.live_edit }}
       </a>
@@ -28,73 +28,46 @@
 </template>
 
 <script>
-import marked, { Renderer } from 'marked'
-import highlightjs from 'highlight.js'
-import fm from 'front-matter'
-
+import axios from 'axios'
 import NuxtFilesTree from '~components/FilesTree.vue'
-
-const renderer = new Renderer();
-renderer.code = (code, language) => {
-  const validLang = !!(language && highlightjs.getLanguage(language));
-  const highlighted = validLang ? highlightjs.highlight(language, code).value : code;
-  return `<pre><code class="hljs ${language}">${highlighted}</code></pre>`;
-};
-marked.setOptions({ renderer });
 
 export default {
   scrollToTop: true,
   components: {
     NuxtFilesTree
   },
-  data ({ route, store }, callback) {
-    // let path = route.params.slug || 'hello-world'
-    // path = '/docs/examples/' + path + '.md'
-    let path = route.params.slug || 'hello-world'
-    path = '/docs/' + store.state.lang.iso + '/examples/' + path + '.md'
-    if (process.BROWSER_BUILD) {
-      fetch(path)
-      .then((response) => {
-        const contenType = response.headers.get('content-type') || ''
-        const requestOK = (response.status >= 200 && response.status < 300)
-        if (!requestOK || contenType.indexOf('text/x-markdown') === -1) {
-          throw new Error('Documentation page not found')
-        }
-        return response.text()
-      })
-      .then((content) => {
-        callback(null, { content })
-      })
-      .catch((e) => {
-        callback({ statusCode: 404, message: 'Example page not found' })
-      })
-    } else {
-      require('fs').readFile('static' + path, 'utf8', function (err, content) {
-        if (err) return callback({ statusCode: 404, message: 'Example page not found' })
-        callback(null, { content })
-      })
+  async data ({ route, store, error }) {
+    // Default data
+    let data = {
+      attrs: {},
+      body: ''
     }
-  },
-  watch: {
-    '$route': 'refreshContent'
+    let slug = route.params.slug || 'async-datas'
+    const path = `/${store.state.lang.iso}/examples/${slug}`
+    let res
+    try {
+      res = await axios.get(store.state.apiURI + path)
+    } catch (err) {
+      if (err.response.status !== 404) {
+        return error({ statusCode: 500, message: 'An error occured' })
+      }
+      return error({ statusCode: 404, message: 'Example page not found' })
+    }
+    data.attrs = res.data.attrs
+    data.body = res.data.body
+    return data
   },
   computed: {
-    page () { return fm(this.content) },
-    attributes () { return this.page.attributes },
-    body () { return marked(this.page.body) },
-    downloadLink () { return 'https://minhaskamal.github.io/DownGit/#/home?url=https://github.com/nuxt/nuxt.js/tree/master/examples/' + this.attributes.github}
-  },
-  methods: {
-    refreshContent () {
-      this.content = this.$options.data().content || ''
+    downloadLink () {
+      return 'https://minhaskamal.github.io/DownGit/#/home?url=https://github.com/nuxt/nuxt.js/tree/master/examples/' + this.attrs.github
     }
   },
   head () {
     return {
-      title: this.page.attributes.title || 'Examples',
+      title: this.attrs.title || 'Examples',
       titleTemplate: 'Example: %s - Nuxt.js',
       meta: [
-        { hid: 'description', name: 'description', content: (this.page.attributes.description || 'Nuxt.js example') }
+        { hid: 'description', name: 'description', content: (this.attrs.description || 'Nuxt.js example') }
       ]
     }
   }

@@ -40,7 +40,10 @@ export default {
   head () {
     return {
       title: 'Release Notes',
-      titleTemplate: '%s - Nuxt.js'
+      titleTemplate: '%s - Nuxt.js',
+      meta: [
+        { hid: 'description', name: 'description', content: 'Nuxt.js release notes from Github.' }
+      ]
     }
   },
   components: {

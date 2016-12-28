@@ -34,8 +34,11 @@ export default {
   },
   head () {
     return {
-      title: this.attrs.title || 'No title',
-      titleTemplate: 'API : %s - Nuxt.js'
+      title: this.attrs.title,
+      titleTemplate: '%s - Nuxt.js API',
+      meta: [
+        { hid: 'description', name: 'description', content: this.attrs.description }
+      ]
     }
   },
   components: {

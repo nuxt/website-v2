@@ -6,54 +6,37 @@
 </template>
 
 <script>
-import marked, { Renderer } from 'marked'
-import highlightjs from 'highlight.js'
-import fm from 'front-matter'
-
+import axios from 'axios'
 import HtmlParser from '~components/HtmlParser.vue'
 
 export default {
   scrollToTop: true,
-  data ({ route, store }, callback) {
+  async data ({ route, store, error }) {
     // Default data
     let data = {
-      content: '',
-      path: route.params.slug || 'index'
+      attrs: {},
+      body: '',
+      category: (route.params.category === 'api' ? 'API' : 'Guide')
     }
-    const path = '/docs/' + store.state.lang.iso + '/' + route.params.category + '/' + data.path + '.md'
-    if (process.BROWSER_BUILD) {
-      fetch(path)
-      .then((response) => {
-        const contenType = response.headers.get('content-type') || ''
-        const requestOK = (response.status >= 200 && response.status < 300)
-        if (!requestOK || contenType.indexOf('text/x-markdown') === -1) {
-          throw new Error('API page not found')
-        }
-        return response.text()
-      })
-      .then((content) => {
-        data.content = content
-        callback(null, data)
-      })
-      .catch((e) => {
-        callback({ statusCode: 404, message: 'API page not found' }, data)
-      })
-    } else {
-      require('fs').readFile('static' + path, 'utf8', function (err, content) {
-        if (err) return callback({ statusCode: 404, message: 'Documentation page not found' })
-        data.content = content
-        callback(null, data)
-      })
+    const slug = route.params.slug || 'index'
+    const path = `/${store.state.lang.iso}/${route.params.category}/${slug}`
+    let res
+    try {
+      res = await axios.get(store.state.apiURI + path)
+    } catch (err) {
+      if (err.response.status !== 404) {
+        return error({ statusCode: 500, message: 'An error occured' })
+      }
+      return error({ statusCode: 404, message: data.category + ' page not found' })
     }
-  },
-  computed: {
-    page () { return fm(this.content) },
-    body () { return marked(this.page.body) }
+    data.attrs = res.data.attrs
+    data.body = res.data.body
+    return data
   },
   head () {
     return {
-      title: this.page.attributes.title || 'No title',
-      titleTemplate: 'API: %s - Nuxt.js'
+      title: this.attrs.title || 'No title',
+      titleTemplate: this.category + ': %s - Nuxt.js'
     }
   },
   components: {

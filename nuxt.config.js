@@ -29,7 +29,7 @@ module.exports = {
     '~plugins/marked'
   ],
   build: {
-    vendor: ['whatwg-fetch', 'marked', 'highlight.js']
+    vendor: ['axios', 'marked', 'highlight.js']
   },
   env: {
     githubToken: '4aa6bcf919d238504e7db59a66d32e78281c0ad3'
@@ -54,14 +54,14 @@ module.exports = {
 }
 
 function menuToRouteParams (menuPath, params = {}) {
-  let menu = require(menuPath)
-  return _(menu)
-  .map('links')
-  .flatten()
-  .map((m) => m.to.slice(1))
-  .compact()
-  .map((slug) => {
-    return Object.assign({}, params, { slug })
-  })
-  .value()
+  // let menu = require(menuPath)
+  // return _(menu)
+  // .map('links')
+  // .flatten()
+  // .map((m) => m.to.slice(1))
+  // .compact()
+  // .map((slug) => {
+  //   return Object.assign({}, params, { slug })
+  // })
+  // .value()
 }

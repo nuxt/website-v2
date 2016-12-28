@@ -4,7 +4,9 @@ Static Generated Vuejs web application built with [nuxtjs](https://github.com/nu
 
 # Developing
 
-Start a dev server on `localhost:3000`
+First, you need to setup the docs api server, see [https://github.com/nuxt/docs](https://github.com/nuxt/docs).
+
+Then, in another tab, start a dev server on `localhost:3000`
 
 ```bash
 npm install

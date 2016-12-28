@@ -1,10 +1,10 @@
 <template>
-  <div class="Examples">
-    <nuxt-affix :list="list" category="examples"></nuxt-affix>
-    <div class="Examples__Content" :class="{'Examples__Content--hidden': visible}">
+  <div class="Category">
+    <nuxt-affix :list="list" category="guide"></nuxt-affix>
+    <div class="Category__Content" :class="{'Category__Content--hidden': visible}">
       <nuxt-child></nuxt-child>
     </div>
-    <div class="Examples__Footer">
+    <div class="Category__Footer">
       <nuxt-footer></nuxt-footer>
     </div>
   </div>
@@ -17,7 +17,7 @@ import NuxtFooter from '~components/Footer.vue'
 export default {
   computed: {
     visible () { return this.$store.state.visibleAffix },
-    list () { return this.$store.state.menu.examples }
+    list () { return this.$store.state.menu.guide }
   },
   components: {
     NuxtAffix,
@@ -27,7 +27,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.Examples
+.Category
 {
   &__Content
   {

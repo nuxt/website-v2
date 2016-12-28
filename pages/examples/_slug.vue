@@ -64,10 +64,10 @@ export default {
   },
   head () {
     return {
-      title: this.attrs.title || 'Examples',
-      titleTemplate: 'Example: %s - Nuxt.js',
+      title: this.attrs.title,
+      titleTemplate: '%s - Nuxt.js Examples',
       meta: [
-        { hid: 'description', name: 'description', content: (this.attrs.description || 'Nuxt.js example') }
+        { hid: 'description', name: 'description', content: this.attrs.description }
       ]
     }
   }

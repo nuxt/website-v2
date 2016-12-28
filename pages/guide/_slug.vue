@@ -34,6 +34,8 @@ export default {
     }
     data.attrs = res.data.attrs
     data.body = res.data.body
+    if (!data.attrs.title) console.error(`[${path}] Please define a title in the front matter.`)
+    if (!data.attrs.description) console.error(`[${path}] Please define a description in the front matter.`)
     return data
   },
   head () {

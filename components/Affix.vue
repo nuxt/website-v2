@@ -40,6 +40,10 @@ export default {
     list: {
       type: Array,
       required: true
+    },
+    category: {
+      type: String,
+      required: true
     }
   },
   mounted () {
@@ -53,7 +57,7 @@ export default {
   },
   computed: {
     visible () { return this.$store.state.visibleAffix },
-    menu () { return '/' + (this.$route.params.category || 'examples') },
+    menu () { return '/' + this.category },
     contents () {
       var c = []
       this.list.forEach((group) => {

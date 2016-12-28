@@ -1,6 +1,10 @@
 <template>
-  <div>
+  <div class="Content">
     <!-- <div class="carbonads"></div> -->
+    <h1>{{ attrs.title }}</h1>
+    <div class="video" v-if="attrs.youtube">
+      <iframe class="youtube" :src="attrs.youtube" frameborder="0" allowfullscreen></iframe>
+    </div>
     <html-parser :content="body"></html-parser>
   </div>
 </template>
@@ -15,11 +19,10 @@ export default {
     // Default data
     let data = {
       attrs: {},
-      body: '',
-      category: (route.params.category === 'api' ? 'API' : 'Guide')
+      body: ''
     }
     const slug = route.params.slug || 'index'
-    const path = `/${store.state.lang.iso}/${route.params.category}/${slug}`
+    const path = `/${store.state.lang.iso}/guide/${slug}`
     let res
     try {
       res = await axios.get(store.state.apiURI + path)
@@ -27,7 +30,7 @@ export default {
       if (err.response.status !== 404) {
         return error({ statusCode: 500, message: 'An error occured' })
       }
-      return error({ statusCode: 404, message: data.category + ' page not found' })
+      return error({ statusCode: 404, message: 'Guide page not found' })
     }
     data.attrs = res.data.attrs
     data.body = res.data.body
@@ -36,7 +39,7 @@ export default {
   head () {
     return {
       title: this.attrs.title || 'No title',
-      titleTemplate: this.category + ': %s - Nuxt.js'
+      titleTemplate: 'Guide : %s - Nuxt.js'
     }
   },
   components: {

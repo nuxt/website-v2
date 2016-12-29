@@ -235,7 +235,7 @@ export default {
       &__Link
       {
         display: block;
-        font-size: 15px;
+        font-size: 16px;
         text-decoration: none;
         color: #35495e;
         padding: 2px 6px;

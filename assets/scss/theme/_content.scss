@@ -38,16 +38,20 @@
     margin: 10px 0;
     word-spacing: 2px;
     overflow: hidden;
+    code
+    {
+      font-size: 14px;
+    }
   }
   code
   {
     color: #35495e;
     padding: 2px 7px;
     font-weight: 400;
-    font-size: inherit;
+    font-size: 14px;
     line-height: inherit;
     font-family: "Andale Mono", monospace;
-    background-color: #fafafa;
+    background-color: rgba(200, 200, 200, 0.2);
   }
   pre
   {
@@ -183,11 +187,15 @@
     a
     {
       color: #eee;
-      text-decoration: underline;
       &:hover
       {
         color: #fff;
       }
+    }
+    code
+    {
+      font-size: 14px;
+      color: #fff;
     }
     &--vue-green
     {

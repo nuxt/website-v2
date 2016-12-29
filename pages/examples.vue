@@ -1,10 +1,10 @@
 <template>
-  <div class="Examples">
+  <div class="category">
     <nuxt-affix :list="list" category="examples"></nuxt-affix>
-    <div class="Examples__Content" :class="{'Examples__Content--hidden': visible}">
+    <div class="category__content" :class="{'category__content--hidden': visible}">
       <nuxt-child></nuxt-child>
     </div>
-    <div class="Examples__Footer">
+    <div class="category__footer">
       <nuxt-footer></nuxt-footer>
     </div>
   </div>
@@ -25,39 +25,3 @@ export default {
   }
 }
 </script>
-
-<style lang="scss" scoped>
-.Examples
-{
-  &__Content
-  {
-    position: relative;
-    z-index: 10;
-    padding: 15px;
-    margin-top: 60px;
-    height: 100%;
-    @media (min-width: 992px)
-    {
-      padding: 30px;
-      margin-top: 80px;
-      margin-left: 300px;
-    }
-    &--hidden
-    {
-      display: none;
-      @media (min-width: 992px)
-      {
-        display: block;
-      }
-    }
-  }
-  &__Footer
-  {
-    display: block;
-    @media (min-width: 992px)
-    {
-      display: none;
-    }
-  }
-}
-</style>

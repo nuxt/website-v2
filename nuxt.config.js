@@ -1,3 +1,4 @@
+const axios = require('axios')
 const _ = require('lodash')
 
 module.exports = {
@@ -37,31 +38,29 @@ module.exports = {
   loading: { color: '#41B883' },
   generate: {
     routeParams: {
-      '/:category': [
-        { category: 'guide' },
-        { category: 'api' }
-      ],
-      '/:category/:slug': _.flatten([
-        menuToRouteParams('./static/docs/en/guide/menu.json', { category: 'guide' }),
-        menuToRouteParams('./static/docs/en/api/menu.json', { category: 'api' })
-      ]),
-      '/:category/release-notes': [
-        { category: 'guide '}
-      ],
-      '/examples/:slug': menuToRouteParams('./static/docs/en/examples/menu.json')
+      '/guide/:slug': menuToRouteParams('guide'),
+      '/api/:slug': menuToRouteParams('api'),
+      '/examples/:slug': menuToRouteParams('examples')
     }
   }
 }
 
-function menuToRouteParams (menuPath, params = {}) {
-  // let menu = require(menuPath)
-  // return _(menu)
-  // .map('links')
-  // .flatten()
-  // .map((m) => m.to.slice(1))
-  // .compact()
-  // .map((slug) => {
-  //   return Object.assign({}, params, { slug })
-  // })
-  // .value()
+function menuToRouteParams (category) {
+  return function () {
+    return axios.get(`https://docs.api.nuxtjs.org/menu/en/${category}`)
+    .then((res) => {
+      return res.data || []
+    })
+    .then((menu) => {
+      return _(menu)
+      .map('links')
+      .flatten()
+      .map((m) => m.to.slice(1))
+      .compact()
+      .map((slug) => {
+        return { slug }
+      })
+      .value()
+    })
+  }
 }

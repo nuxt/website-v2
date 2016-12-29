@@ -13,7 +13,7 @@
   h1
   {
     margin-top: 0px;
-    margin-bottom: 20px;
+    margin-bottom: 30px;
     overflow: hidden;
   }
   h2
@@ -33,7 +33,7 @@
   {
     font-weight: 400;
     color: #35495e;
-    font-size: 15px;
+    font-size: 16px;
     line-height: 25px;
     margin: 10px 0;
     word-spacing: 2px;
@@ -47,7 +47,7 @@
     font-size: inherit;
     line-height: inherit;
     font-family: "Andale Mono", monospace;
-    background-color: #eee;
+    background-color: #fafafa;
   }
   pre
   {
@@ -59,12 +59,12 @@
       letter-spacing: 0.25px;
       padding: 15px;
       background-color: #2e2f30;
-      border-left: 3px solid #3b8070;
+      border-left: 3px solid #41b883;
     }
   }
-  ul
+  ul, ol
   {
-    list-style: circle;
+    list-style-type: circle;
     margin-bottom: 20px;
     padding-left: 30px;
     li
@@ -74,9 +74,12 @@
       line-height: 20px;
       padding: 5px 0;
     }
-    ul {
+    ul, ol {
       margin-bottom: 0;
     }
+  }
+  ol {
+    list-style-type: decimal;
   }
   table
   {
@@ -108,55 +111,19 @@
       border: 1px solid #ddd;
     }
   }
-  #table-of-contents
-  {
-    font-weight: 400;
-    font-size: 15px;
-    margin: 0;
-    letter-spacing: 0.5px;
-    color: #9aabb1;
-    text-transform: uppercase;
-    border: 1px solid #dbdfe1;
-    padding: 15px;
-    border-bottom: 0;
-  }
-  #table-of-contents + ol
-  {
-    margin: 0;
-    margin-bottom: 30px;
-    border: 1px solid #dbdfe1;
-    padding: 15px;
-    padding-left: 30px;
-    li
-    {
-      color: #35495e;
-      padding: 5px 0;
-      a
-      {
-        color: #35495e;
-        &:hover
-        {
-          text-decoration: none;
-          color: #41b883;
-        }
-      }
-    }
-  }
   blockquote
   {
-    color: #888;
     margin: 20px 0;
     font-style: italic;
-    padding: 10px;
+    padding: 12px;
     border-left: 3px solid #dbdfe1;
-    background-color: #fafafa;
+    background-color: #fcfcfc;
     overflow: hidden;
     p
     {
-      color: #888;
+      color: #555;
       margin: 0;
-      font-size: 15px;
-      line-height: 20px;
+      font-size: 16px;
     }
   }
   b, strong
@@ -193,8 +160,8 @@
     {
       color: #35495e;
       margin-top: 0;
-      font-size: 42px;
-      margin-bottom: 20px;
+      font-size: 32px;
+      margin-bottom: 30px;
       padding: 0;
       border: none;
     }
@@ -203,7 +170,7 @@
   {
     font-weight: 400;
     color: #fff;
-    font-size: 14px;
+    font-size: 15px;
     background-color: #35495E;
     padding: 12px 15px;
     line-height: 20px;
@@ -213,6 +180,15 @@
     -webkit-border-radius: 4px;
     -moz-border-radius: 4px;
     border-radius: 4px;
+    a
+    {
+      color: #eee;
+      text-decoration: underline;
+      &:hover
+      {
+        color: #fff;
+      }
+    }
     &--vue-green
     {
       background-color: #41B883;

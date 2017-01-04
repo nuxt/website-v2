@@ -136,6 +136,7 @@ export default {
   &--hidden
   {
     left: -100%;
+    overflow-y: visible;
     @media (min-width: 992px)
     {
       left: 0;

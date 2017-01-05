@@ -14,11 +14,11 @@
       <ul class="Affix__List">
         <li class="Affix__List__Item" v-for="link in group.links">
           <nuxt-link class="Affix__List__Item__Link"
-                     :class="{'nuxt-link-active': $route.path === menu + link.to}"
+                     :class="{'nuxt-link-active': path === menu + link.to}"
                      :to="menu + link.to" exact>
             {{ link.name }}
           </nuxt-link>
-          <ul v-if="$route.path === menu + link.to" class="Affix__List__Item__Contents">
+          <ul v-if="path === menu + link.to" class="Affix__List__Item__Contents">
             <li v-for="(content, index) in link.contents" class="Affix__List__Item__Contents__Item">
               <a :href="menu + link.to + content.to"
                   @click.prevent="scrollTo(content.to)"
@@ -50,6 +50,9 @@ export default {
     let self = this
     this.$nextTick(function () {
       window.addEventListener('scroll', self.scrolled)
+      if (self.$route.hash.length) {
+        self.scrollTo(self.$route.hash)
+      }
     })
   },
   data () {
@@ -57,13 +60,14 @@ export default {
   },
   computed: {
     visible () { return this.$store.state.visibleAffix },
+    path() { return this.$route.path.slice(-1) === '/' ? this.$route.path.slice(0, -1) : this.$route.path },
     menu () { return '/' + this.category },
     contents () {
       var c = []
       this.list.forEach((group) => {
         if (group.links && !c.length) {
           var l = group.links.find((link) => {
-            return this.$route.path === this.menu + link.to
+            return this.path === this.menu + link.to
           })
           if (l && l.contents) {
             l.contents.forEach((content) => {

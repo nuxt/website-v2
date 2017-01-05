@@ -139,6 +139,7 @@ export default {
     overflow-y: visible;
     @media (min-width: 992px)
     {
+      overflow-y: auto;
       left: 0;
     }
   }

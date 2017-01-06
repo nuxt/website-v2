@@ -215,6 +215,8 @@ export default {
       &__Image
       {
         margin: 20px;
+        width: auto;
+        max-width: 80%;
       }
       &__File
       {

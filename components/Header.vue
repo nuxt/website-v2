@@ -58,7 +58,7 @@ export default {
       return [
         {
           name: this.$store.state.lang.links.github,
-          path: 'https://github.com/nuxt/nuxt.js',
+          path: 'https://github.com/nuxt',
           target: '_blank'
         },
         {

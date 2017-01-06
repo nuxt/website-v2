@@ -23,18 +23,20 @@
         {{ $store.state.lang.links.download }}
       </a>
     </div>
-    <div v-html="body"></div>
+    <html-parser :content="body"></html-parser>
   </div>
 </template>
 
 <script>
 import axios from 'axios'
 import NuxtFilesTree from '~components/FilesTree.vue'
+import HtmlParser from '~components/HtmlParser.vue'
 
 export default {
   scrollToTop: true,
   components: {
-    NuxtFilesTree
+    NuxtFilesTree,
+    HtmlParser
   },
   async data ({ route, store, error }) {
     // Default data

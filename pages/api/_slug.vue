@@ -2,6 +2,7 @@
   <div>
     <!-- <div class="carbonads"></div> -->
     <html-parser :content="body"></html-parser>
+    <p class="contribute">{{ $store.state.lang.guide.contribute }} <a :href="docLink" target="_blank">{{ $store.state.lang.guide.edit_on_github }}</a></p>
   </div>
 </template>
 
@@ -30,6 +31,7 @@ export default {
     }
     data.attrs = res.data.attrs
     data.body = res.data.body
+    data.docLink = `https://github.com/nuxt/docs/blob/master${path}.md`
     if (!data.attrs.title) console.error(`[${path}] Please define a title in the front matter.`)
     if (!data.attrs.description) console.error(`[${path}] Please define a description in the front matter.`)
     return data

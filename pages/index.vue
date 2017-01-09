@@ -29,6 +29,23 @@ import NuxtFooter from '~components/Footer.vue'
 export default {
   components: {
     NuxtFooter
+  },
+  head: {
+    meta: [
+      // Open Grapg
+      { name: 'og:title', content: 'Nuxt.js - Universal Vue.js Applications' },
+      { name: 'og:description', content: 'Nuxt.js is a minimal framework for creating Vue.js applications with server side rendering, code-splitting, hot-reloading, static generation and more!' },
+      { name: 'og:type', content: 'website' },
+      { name: 'og:url', content: 'https://nuxtjs.org' },
+      { name: 'og:image', content: 'http://i.imgur.com/PzEm5j2.png' },
+      // Twitter Card
+      { name: 'twitter:card', content: 'summary' },
+      { name: 'twitter:site', content: '@nuxt_js' },
+      { name: 'twitter:title', content: 'Nuxt.js - Universal Vue.js Applications' },
+      { name: 'twitter:description', content: 'Nuxt.js is a minimal framework for creating Vue.js applications with server side rendering, code-splitting, hot-reloading, static generation and more!' },
+      { name: 'twitter:image', content: 'http://i.imgur.com/PzEm5j2.png' },
+      { name: 'twitter:image:alt', content: 'Nuxt.js Logo' }
+    ]
   }
 }
 </script>

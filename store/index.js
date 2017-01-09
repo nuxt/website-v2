@@ -10,6 +10,7 @@ const store = new Vuex.Store({
     visibleHeader: false,
     visibleAffix: false,
     apiURI: 'https://docs.api.nuxtjs.org',
+    _lang: 'en',
     lang: {},
     menu: {}
   },
@@ -23,9 +24,9 @@ const store = new Vuex.Store({
       if (isDev) {
         state.apiURI = 'http://localhost:4000'
       }
-      const resLang = await axios(state.apiURI + '/lang/en')
+      const resLang = await axios(state.apiURI + '/lang/' + state._lang)
       state.lang = resLang.data
-      const resMenu = await axios(state.apiURI + '/menu/en')
+      const resMenu = await axios(state.apiURI + '/menu/' + state._lang)
       state.menu = resMenu.data
     }
   }

@@ -32,6 +32,11 @@
             </nuxt-link>
           </li>
           <li class="Header__Nav__List__Item">
+            <nuxt-link class="Header__Nav__List__Item__Link" to="/faq">
+              {{ $store.state.lang.links.faq }}
+            </nuxt-link>
+          </li>
+          <li class="Header__Nav__List__Item">
             <nuxt-dropdown :list="ecosystemLinks" :title="$store.state.lang.links.ecosystem" class="Header__Nav__List__Item__Link">
             </nuxt-dropdown>
           </li>

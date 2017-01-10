@@ -1,6 +1,6 @@
 <template>
-  <div class="Content">
-    <!-- <div class="carbonads"></div> -->
+  <div>
+    <carbon-ads v-if="!isDev" :key="$route.params.slug"></carbon-ads>
     <h1>{{ attrs.title }}</h1>
     <div class="video" v-if="attrs.youtube">
       <iframe class="youtube" :src="attrs.youtube" frameborder="0" allowfullscreen></iframe>
@@ -12,15 +12,17 @@
 
 <script>
 import axios from 'axios'
+import CarbonAds from '~components/CarbonAds.vue'
 import HtmlParser from '~components/HtmlParser.vue'
 
 export default {
-  scrollToTop: true,
-  async data ({ route, store, error }) {
+  async data ({ route, store, error, isDev }) {
     // Default data
     let data = {
       attrs: {},
-      body: ''
+      body: '',
+      docLink: '',
+      isDev: isDev
     }
     const slug = route.params.slug || 'index'
     const path = `/${store.state.lang.iso}/guide/${slug}`
@@ -40,6 +42,7 @@ export default {
     if (!data.attrs.description) console.error(`[${path}] Please define a description in the front matter.`)
     return data
   },
+  scrollToTop: true,
   head () {
     return {
       title: this.attrs.title,
@@ -50,24 +53,8 @@ export default {
     }
   },
   components: {
+    CarbonAds,
     HtmlParser
   }
 }
 </script>
-
-<style lang="scss" scoped>
-// .carbonads
-// {
-//   float: right;
-//   margin-left: 25px;
-//   width: 125px;
-//   height: 200px;
-//   background-color: #ddd;
-//   @media (min-width: 992px)
-//   {
-//     position: fixed;
-//     bottom: 30px;
-//     right: 30px;
-//   }
-// }
-</style>

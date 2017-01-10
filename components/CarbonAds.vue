@@ -1,18 +1,77 @@
-<script async type="text/javascript" src="//cdn.carbonads.com/carbon.js?zoneid=1673&serve=C6AILKT&placement=nuxtjsorg" id="_carbonads_js"></script>
+<template>
+  <div class="ad" ref="carbonads"></div>
+</template>
 
-<style lang="scss" scoped>
-.carbonads
+<script>
+export default {
+  mounted () {
+    const script = document.createElement('script')
+    script.setAttribute('type', 'text/javascript')
+    script.setAttribute('src', '//cdn.carbonads.com/carbon.js?zoneid=1673&serve=C6AILKT&placement=nuxtjsorg')
+    script.setAttribute('id', '_carbonads_js')
+    this.$refs.carbonads.appendChild(script)
+  }
+}
+</script>
+
+<style lang="scss">
+.ad
 {
-  float: right;
-  margin-left: 25px;
-  width: 125px;
-  height: 200px;
-  background-color: #ddd;
+  background-color: #fff;
+  font-size: 13px;
+  overflow: hidden;
+  margin-bottom: 15px;
+  @media (min-width: 625px)
+  {
+    float: right;
+    width: 125px;
+    margin-left: 25px;
+  }
   @media (min-width: 992px)
   {
     position: fixed;
     bottom: 30px;
     right: 30px;
+    margin-bottom: 0;
+  }
+  .carbon-img
+  {
+    display: inline-block;
+    float: left;
+    margin-right: 10px;
+    @media (min-width: 625px)
+    {
+      float: none;
+      margin-right: 0;
+    }
+  }
+  .carbon-text
+  {
+    color: #34495e;
+    text-decoration: none;
+    &:hover
+    {
+      text-decoration: none;
+    }
+    @media (min-width: 625px)
+    {
+      display: inline-block;
+      margin-top: 5px;
+    }
+  }
+  .carbon-wrap
+  {
+    @media (min-width: 625px)
+    {
+      display: inline-block;
+      margin-bottom: 5px;
+      line-height: normal;
+    }
+  }
+  .carbon-poweredby
+  {
+    color: #7f8c8d;
+    display: block;
   }
 }
 </style>

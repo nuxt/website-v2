@@ -20,7 +20,7 @@ const store = new Vuex.Store({
     }
   },
   actions: {
-    async nuxtServerInit ({ state }, { req, isDev }) {
+    async nuxtServerInit ({ state }, { isDev }) {
       if (isDev) {
         state.apiURI = 'http://localhost:4000'
       }

@@ -21,7 +21,7 @@ export default {
       isDev: isDev
     }
     const slug = route.params.slug || 'index'
-    const path = `/${store.state.lang.iso}/api/${slug}`
+    const path = `/${store.state.lang.iso}/faq/${slug}`
     let res
     try {
       res = await axios.get(store.state.apiURI + path)

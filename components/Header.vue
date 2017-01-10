@@ -270,8 +270,12 @@ export default {
           height: 79px;
           line-height: 79px;
           display: block;
-          padding-left: 30px;
+          padding-left: 15px;
           border-bottom: none;
+        }
+        @media (min-width: 1280px)
+        {
+          padding-left: 30px;
         }
         &__Link
         {

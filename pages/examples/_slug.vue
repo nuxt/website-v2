@@ -1,5 +1,6 @@
 <template>
   <div class="Content">
+    <carbon-ads v-if="!isDev" :key="$route.params.slug"></carbon-ads>
     <h1>{{ attrs.title }}</h1>
     <blockquote>
       <p>{{ attrs.description }}</p>
@@ -29,20 +30,17 @@
 
 <script>
 import axios from 'axios'
+import CarbonAds from '~components/CarbonAds.vue'
 import NuxtFilesTree from '~components/FilesTree.vue'
 import HtmlParser from '~components/HtmlParser.vue'
 
 export default {
-  scrollToTop: true,
-  components: {
-    NuxtFilesTree,
-    HtmlParser
-  },
-  async data ({ route, store, error }) {
+  async data ({ route, store, error, isDev }) {
     // Default data
     let data = {
       attrs: {},
-      body: ''
+      body: '',
+      isDev: isDev
     }
     let slug = route.params.slug || 'async-datas'
     const path = `/${store.state.lang.iso}/examples/${slug}`
@@ -66,6 +64,7 @@ export default {
       return 'https://minhaskamal.github.io/DownGit/#/home?url=https://github.com/nuxt/nuxt.js/tree/master/examples/' + this.attrs.github
     }
   },
+  scrollToTop: true,
   head () {
     return {
       title: this.attrs.title,
@@ -74,6 +73,11 @@ export default {
         { hid: 'description', name: 'description', content: this.attrs.description }
       ]
     }
+  },
+  components: {
+    CarbonAds,
+    NuxtFilesTree,
+    HtmlParser
   }
 }
 </script>

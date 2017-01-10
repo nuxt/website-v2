@@ -27,7 +27,7 @@ export default {
     width: 125px;
     margin-left: 25px;
   }
-  @media (min-width: 992px)
+  @media (min-width: 1280px)
   {
     position: fixed;
     bottom: 30px;

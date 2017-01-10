@@ -24,10 +24,14 @@ const store = new Vuex.Store({
       if (isDev) {
         state.apiURI = 'http://localhost:4000'
       }
-      const resLang = await axios(state.apiURI + '/lang/' + state._lang)
-      state.lang = resLang.data
-      const resMenu = await axios(state.apiURI + '/menu/' + state._lang)
-      state.menu = resMenu.data
+      try {
+        const resLang = await axios(state.apiURI + '/lang/' + state._lang)
+        state.lang = resLang.data
+        const resMenu = await axios(state.apiURI + '/menu/' + state._lang)
+        state.menu = resMenu.data
+      } catch (e) {
+        console.error('Error on [nuxtServerInit] action, please run the docs server.')
+      }
     }
   }
 })

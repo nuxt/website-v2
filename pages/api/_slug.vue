@@ -1,6 +1,6 @@
 <template>
   <div>
-    <carbon-ads></carbon-ads>
+    <carbon-ads v-if="!isDev" :key="$route.params.slug"></carbon-ads>
     <html-parser :content="body"></html-parser>
     <p class="contribute">{{ $store.state.lang.guide.contribute }} <a :href="docLink" target="_blank">{{ $store.state.lang.guide.edit_on_github }}</a></p>
   </div>
@@ -12,12 +12,13 @@ import CarbonAds from '~components/CarbonAds.vue'
 import HtmlParser from '~components/HtmlParser.vue'
 
 export default {
-  scrollToTop: true,
-  async data ({ route, store, error }) {
+  async data ({ route, store, error, isDev }) {
     // Default data
     let data = {
       attrs: {},
-      body: ''
+      body: '',
+      docLink: '',
+      isDev: isDev
     }
     const slug = route.params.slug || 'index'
     const path = `/${store.state.lang.iso}/api/${slug}`
@@ -37,6 +38,7 @@ export default {
     if (!data.attrs.description) console.error(`[${path}] Please define a description in the front matter.`)
     return data
   },
+  scrollToTop: true,
   head () {
     return {
       title: this.attrs.title,

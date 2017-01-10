@@ -1,5 +1,5 @@
 <template>
-  <div class="Content">
+  <div>
     <carbon-ads v-if="!isDev" :key="$route.params.slug"></carbon-ads>
     <h1>{{ attrs.title }}</h1>
     <blockquote>

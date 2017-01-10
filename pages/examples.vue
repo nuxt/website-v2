@@ -1,7 +1,7 @@
 <template>
   <div class="category">
     <nuxt-affix :list="list" category="examples"></nuxt-affix>
-    <div class="category__content" :class="{'category__content--hidden': visible}">
+    <div class="category__content Content" :class="{'category__content--hidden': visible}">
       <nuxt-child></nuxt-child>
     </div>
     <div class="category__footer">

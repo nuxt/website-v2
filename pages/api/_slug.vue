@@ -1,6 +1,6 @@
 <template>
   <div>
-    <!-- <div class="carbonads"></div> -->
+    <carbon-ads></carbon-ads>
     <html-parser :content="body"></html-parser>
     <p class="contribute">{{ $store.state.lang.guide.contribute }} <a :href="docLink" target="_blank">{{ $store.state.lang.guide.edit_on_github }}</a></p>
   </div>
@@ -8,6 +8,7 @@
 
 <script>
 import axios from 'axios'
+import CarbonAds from '~components/CarbonAds.vue'
 import HtmlParser from '~components/HtmlParser.vue'
 
 export default {
@@ -46,7 +47,8 @@ export default {
     }
   },
   components: {
-    HtmlParser
+    HtmlParser,
+    CarbonAds
   }
 }
 </script>

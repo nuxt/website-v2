@@ -13,7 +13,14 @@
           <nuxt-search label="mobile"></nuxt-search>
         </div>
         <div class="Header__Nav__Lang">
-          <img :src="'/flags/' + $store.state.lang.iso + '.png'" :alt="$store.state.lang.iso" class="Header__Nav__Lang__Img">
+          <div class="Header__Nav__Lang__Icon">
+            <div class="flag " :class="flag" @click="show = !show"></div>
+          </div>
+          <ul class="Header__Nav__Lang__List" :class="{ 'Header__Nav__Lang__List--visible': show }">
+            <li class="Header__Nav__Lang__List__Item" v-for="lang in langs" v-if="lang.iso !== $store.state.lang.iso">
+              <a class="flag " :class="lang.class" :href="lang.url"></a>
+            </li>
+          </ul>
         </div>
         <ul class="Header__Nav__List">
           <li class="Header__Nav__List__Item">
@@ -57,8 +64,18 @@ import NuxtSearch from '~components/Search.vue'
 import NuxtDropdown from '~components/Dropdown.vue'
 
 export default {
+  data () {
+    return { show: false }
+  },
   computed: {
     visible () { return this.$store.state.visibleHeader },
+    flag () { return 'flag-' + this.$store.state.lang.iso },
+    langs () {
+      return [
+        { iso: 'en', class: 'flag-en', url: 'https://nuxtjs.org' },
+        { iso: 'ru', class: 'flag-ru', url: 'https://ru.nuxtjs.org' }
+      ]
+    },
     ecosystemLinks() {
       return [
         {
@@ -192,22 +209,68 @@ export default {
     {
       margin: 0;
       float: none;
-      text-align: center;
-      height: 60px;
-      line-height: 70px;
-      border-bottom: 1px solid #dbdfe1;
+      position: relative;
       @media (min-width: 991px)
       {
         float: left;
-        height: 79px;
-        line-height: 90px;
         width: 80px;
-        border-bottom: none;
         border-right: 1px solid #dbdfe1;
+        &:hover
+        {
+          .Header__Nav__Lang__List
+          {
+            display: block;
+          }
+        }
       }
-      &__Img
+      &__Icon
       {
-        display: inline-block;
+        cursor: pointer;
+        text-align: center;
+        height: 60px;
+        line-height: 80px;
+        border-bottom: 1px solid #dbdfe1;
+        @media (min-width: 991px)
+        {
+          height: 79px;
+          line-height: 100px;
+          border-bottom: none;
+        }
+      }
+      &__List
+      {
+        display: none;
+        width: 100%;
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        position: relative;
+        @media (min-width: 991px)
+        {
+          width: 81px;
+          position: absolute;
+          background-color: #fff;
+          border: 1px solid #dbdfe1;
+          border-bottom: none;
+          left: -1px;
+        }
+        &--visible
+        {
+          display: block;
+          @media (min-width: 991px)
+          {
+            display: none;
+          }
+        }
+        &__Item
+        {
+          display: block;
+          text-align: center;
+          height: auto;
+          line-height: normal;
+          border-bottom: 1px solid #dbdfe1;
+          padding: 10px 0;
+        }
       }
     }
     &__Search

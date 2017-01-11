@@ -38,7 +38,8 @@ module.exports = {
     routeParams: {
       '/guide/:slug': menuToRouteParams('guide'),
       '/api/:slug': menuToRouteParams('api'),
-      '/examples/:slug': menuToRouteParams('examples')
+      '/examples/:slug': menuToRouteParams('examples'),
+      '/faq/:slug': menuToRouteParams('faq')
     }
   }
 }

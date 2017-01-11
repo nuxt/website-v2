@@ -23,6 +23,11 @@ export default {
       if (this.$store.state.visibleAffix) this.$store.commit('toggle', 'visibleAffix')
     }
   },
+  head () {
+    return {
+      htmlAttrs: { lang: this.$store.state._lang }
+    }
+  },
   components: {
     Navbar
   }

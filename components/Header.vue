@@ -18,7 +18,7 @@
           </div>
           <ul class="Header__Nav__Lang__List" :class="{ 'Header__Nav__Lang__List--visible': show }">
             <li class="Header__Nav__Lang__List__Item" v-for="lang in langs" v-if="lang.iso !== $store.state.lang.iso">
-              <a class="flag " :class="lang.class" :href="lang.url"></a>
+              <a class="flag " :class="lang.class" :href="lang.url + $route.path"></a>
             </li>
           </ul>
         </div>

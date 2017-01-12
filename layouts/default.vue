@@ -25,7 +25,11 @@ export default {
   },
   head () {
     return {
-      htmlAttrs: { lang: this.$store.state._lang }
+      htmlAttrs: { lang: this.$store.state._lang },
+      link: [
+        { rel: 'alternate', hreflang: 'en', href: `https://nuxtjs.org${this.$route.path}` },
+        { rel: 'alternate', hreflang: 'ru', href: `https://ru.nuxtjs.org${this.$route.path}` }
+      ]
     }
   },
   components: {

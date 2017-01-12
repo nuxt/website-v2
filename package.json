@@ -22,7 +22,8 @@
     "build": "nuxt build",
     "start": "nuxt start",
     "generate": "nuxt generate",
-    "deploy": "push-dir --dir=dist --branch=gh-pages --cleanup"
+    "deploy": "push-dir --dir=dist --branch=gh-pages --cleanup",
+    "deploy-ru": "surge dist/ ru.nuxtjs.org"
   },
   "repository": {
     "type": "git",

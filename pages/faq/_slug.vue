@@ -34,6 +34,9 @@ export default {
     data.attrs = res.data.attrs
     data.body = res.data.body
     data.docLink = `https://github.com/nuxt/docs/blob/master${path}.md`
+    if (store.state.lang.iso === 'ru') {
+      data.docLink = `https://github.com/translation-gang/ru.docs.nuxtjs/blob/translation-ru${path}.md`
+    }
     if (!data.attrs.title) console.error(`[${path}] Please define a title in the front matter.`)
     if (!data.attrs.description) console.error(`[${path}] Please define a description in the front matter.`)
     return data

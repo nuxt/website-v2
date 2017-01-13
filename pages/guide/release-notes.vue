@@ -17,10 +17,11 @@ import CarbonAds from '~components/CarbonAds.vue'
 import HtmlParser from '~components/HtmlParser.vue'
 
 export default {
-  data () {
+  data ({ isDev }) {
     // Default data
     let data = {
-      releases: []
+      releases: [],
+      isDev: isDev
     }
     return axios({
       url: 'https://api.github.com/repos/nuxt/nuxt.js/releases',

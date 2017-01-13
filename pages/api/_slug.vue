@@ -1,6 +1,6 @@
 <template>
   <div>
-    <carbon-ads v-if="!isDev" :key="$route.params.slug"></carbon-ads>
+    <carbon-ads v-if="!isDev && $store.state._lang === 'en'" :key="$route.params.slug"></carbon-ads>
     <html-parser :content="body"></html-parser>
     <p class="contribute">{{ $store.state.lang.guide.contribute }} <a :href="docLink" target="_blank">{{ $store.state.lang.guide.edit_on_github }}</a></p>
   </div>

@@ -1,6 +1,6 @@
 <template>
   <div>
-    <carbon-ads v-if="!isDev" :key="$route.params.slug"></carbon-ads>
+    <carbon-ads v-if="!isDev && $store.state._lang === 'en'" :key="$route.params.slug"></carbon-ads>
     <h1>{{ attrs.title }}</h1>
     <div class="video" v-if="attrs.youtube">
       <iframe class="youtube" :src="attrs.youtube" frameborder="0" allowfullscreen></iframe>

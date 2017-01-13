@@ -1,8 +1,11 @@
 .Content
 {
-  @media (min-width: 1280px)
+  &--hasCarbon
   {
-    padding-right: 185px;
+    @media (min-width: 1280px)
+    {
+      padding-right: 185px;
+    }    
   }
   h1, h2, h3, h4, h5, h6
   {

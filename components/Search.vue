@@ -1,6 +1,6 @@
 <template>
   <div class="Search">
-    <input class="Search__Input" type="text" name="search" :id="label" placeholder="Search" v-model="q"/>
+    <input class="Search__Input" type="text" name="search" :id="label" :placeholder="$store.state.lang.links.search" v-model="q"/>
     <label :for="label" class="Search__Label" @click="q = ''">
       <div :class="{'icon search': !q.length, 'icon remove': q.length}"></div>
     </label>

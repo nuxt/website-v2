@@ -1,5 +1,6 @@
 <template>
-  <div class="Content">
+  <div>
+    <carbon-ads v-if="!isDev && $store.state._lang === 'en'" :key="$route.params.slug"></carbon-ads>
     <h1>{{ $store.state.lang.guide.release_notes }}</h1>
     <div v-for="release in releases">
       <h2 :id="release.name">{{ release.name }}</h2>

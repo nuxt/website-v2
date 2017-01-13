@@ -4,7 +4,7 @@
       <div class="icon more-vertical"></div>
     </div>
     <h2 class="Affix__Version">
-      Version {{ $store.state.version }}
+      {{ $store.state.lang.links.version }} {{ $store.state.version }}
       <div class="Affix__Version__Toggler" @click="toggle">
         <div class="icon close"></div>
       </div>

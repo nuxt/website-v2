@@ -13,6 +13,7 @@
 import marked from 'marked'
 import axios from 'axios'
 
+import CarbonAds from '~components/CarbonAds.vue'
 import HtmlParser from '~components/HtmlParser.vue'
 
 export default {
@@ -48,6 +49,7 @@ export default {
     }
   },
   components: {
+    CarbonAds,
     HtmlParser
   }
 }

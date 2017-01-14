@@ -62,10 +62,10 @@ export default {
       return this.content
     },
     breadcrumb () {
-      return this.currentFile.path.replace('examples/'+this.example, '')
+      return this.currentFile.path.replace('examples/' + this.example, '')
     },
     isImage () {
-      if (this.currentFile && /[^\s]+\.(jpe?g|png|gif|bmp)$/i.test(this.currentFile.path)){
+      if (this.currentFile && /[^\s]+\.(jpe?g|png|gif|bmp)$/i.test(this.currentFile.path)) {
         return true
       }
       return false

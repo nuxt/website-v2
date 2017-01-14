@@ -11,7 +11,7 @@
 import Navbar from '~components/Header.vue'
 
 export default {
-  watch:{
+  watch: {
     $route: 'setStore'
   },
   computed: {

@@ -13,6 +13,12 @@
     "nuxt": "latest"
   },
   "devDependencies": {
+    "babel-eslint": "^7.1.1",
+    "eslint": "^3.13.1",
+    "eslint-config-standard": "^6.2.1",
+    "eslint-plugin-html": "^1.7.0",
+    "eslint-plugin-promise": "^3.4.0",
+    "eslint-plugin-standard": "^2.0.1",
     "node-sass": "^3.13.0",
     "push-dir": "^0.4.1",
     "sass-loader": "^4.0.2"
@@ -23,7 +29,9 @@
     "start": "nuxt start",
     "generate": "nuxt generate",
     "deploy": "push-dir --dir=dist --branch=gh-pages --cleanup",
-    "deploy-ru": "surge dist/ ru.nuxtjs.org"
+    "deploy-ru": "surge dist/ ru.nuxtjs.org",
+    "lint": "eslint --ext .js,.vue --ignore-path .gitignore --ignore-pattern plugins/ga.js .",
+    "precommit": "npm run lint"
   },
   "repository": {
     "type": "git",

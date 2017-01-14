@@ -30,7 +30,7 @@ const store = new Vuex.Store({
         const resMenu = await axios(state.apiURI + '/menu/' + state._lang)
         state.menu = resMenu.data
       } catch (e) {
-        console.error('Error on [nuxtServerInit] action, please run the docs server.')
+        console.error('Error on [nuxtServerInit] action, please run the docs server.') // eslint-disable-line no-console
       }
     }
   }

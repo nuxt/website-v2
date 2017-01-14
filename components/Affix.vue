@@ -60,7 +60,7 @@ export default {
   },
   computed: {
     visible () { return this.$store.state.visibleAffix },
-    path() { return this.$route.path.slice(-1) === '/' ? this.$route.path.slice(0, -1) : this.$route.path },
+    path () { return this.$route.path.slice(-1) === '/' ? this.$route.path.slice(0, -1) : this.$route.path },
     menu () { return '/' + this.category },
     contents () {
       var c = []
@@ -86,8 +86,8 @@ export default {
     toggle () { this.$store.commit('toggle', 'visibleAffix') },
     scrolled () {
       var h = window.innerHeight || document.documentElement.clientHeight || document.body.clientHeight
-      var doc = document.documentElement;
-      var top = (window.pageYOffset || doc.scrollTop)  - (doc.clientTop || 0);
+      var doc = document.documentElement
+      var top = (window.pageYOffset || doc.scrollTop) - (doc.clientTop || 0)
       var el = this.contents.find((pos) => {
         return pos > top + (h / 2)
       })
@@ -99,8 +99,8 @@ export default {
         var el = document.getElementById(id.slice(1))
         if (!el) return
         var to = el.offsetTop - 25
-        var doc = document.documentElement;
-        var top = (window.pageYOffset || doc.scrollTop)  - (doc.clientTop || 0);
+        var doc = document.documentElement
+        var top = (window.pageYOffset || doc.scrollTop) - (doc.clientTop || 0)
         var diff = (to > top ? to - top : top - to) / 25
         var i = 0
         window.clearInterval(this.setInter)

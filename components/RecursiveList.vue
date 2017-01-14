@@ -50,7 +50,7 @@ export default {
       })
       if (!this.currentFile) {
         let f = res.data.find((file) => {
-          return file.name === "package.json"
+          return file.name === 'package.json'
         })
         if (f) this.changeFile(f)
       }

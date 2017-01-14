@@ -18,10 +18,6 @@ import HtmlParser from '~components/HtmlParser.vue'
 
 export default {
   data () {
-    // Default data
-    let data = {
-      releases: []
-    }
     return axios({
       url: 'https://api.github.com/repos/nuxt/nuxt.js/releases',
       headers: {

@@ -17,7 +17,12 @@ import CarbonAds from '~components/CarbonAds.vue'
 import HtmlParser from '~components/HtmlParser.vue'
 
 export default {
-  data () {
+  data ({ isDev }) {
+    // Default data
+    let data = {
+      releases: [],
+      isDev: isDev
+    }
     return axios({
       url: 'https://api.github.com/repos/nuxt/nuxt.js/releases',
       headers: {
@@ -25,14 +30,14 @@ export default {
       }
     })
     .then((res) => {
-      let releases = res.data.filter((r) => !r.draft).map((release) => {
+      data.releases = res.data.filter((r) => !r.draft).map((release) => {
         return {
           name: release.name,
           date: release.published_at,
           body: marked(release.body)
         }
       })
-      return { releases }
+      return data
     })
   },
   head () {

@@ -20,7 +20,7 @@ export default {
       docLink: '',
       isDev: isDev
     }
-    const slug = route.params.slug || 'index'
+    const slug = route.params.slug || 'external-resources'
     const path = `/${store.state.lang.iso}/faq/${slug}`
     let res
     try {

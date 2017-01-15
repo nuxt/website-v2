@@ -23,6 +23,9 @@
         <span><div class="icon download"></div></span>
         {{ $store.state.lang.links.download }}
       </a>
+      <nuxt-link v-if="attrs.documentation" :to="attrs.documentation" class="button">
+        {{ $store.state.lang.links.documentation }}
+      </nuxt-link>
     </div>
     <html-parser :content="body"></html-parser>
   </div>
@@ -42,7 +45,7 @@ export default {
       body: '',
       isDev: isDev
     }
-    let slug = route.params.slug || 'async-datas'
+    let slug = route.params.slug || 'hello-world'
     const path = `/${store.state.lang.iso}/examples/${slug}`
     let res
     try {

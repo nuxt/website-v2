@@ -28,6 +28,7 @@ export default {
       htmlAttrs: { lang: this.$store.state._lang },
       link: [
         { rel: 'alternate', hreflang: 'en', href: `https://nuxtjs.org${this.$route.path}` },
+        { rel: 'alternate', hreflang: 'cn', href: `https://cn.nuxtjs.org${this.$route.path}` },
         { rel: 'alternate', hreflang: 'ru', href: `https://ru.nuxtjs.org${this.$route.path}` }
       ]
     }

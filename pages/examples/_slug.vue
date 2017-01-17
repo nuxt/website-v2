@@ -52,14 +52,14 @@ export default {
       res = await axios.get(store.state.apiURI + path)
     } catch (err) {
       if (err.response.status !== 404) {
-        return error({ statusCode: 500, message: 'An error occured' })
+        return error({ statusCode: 500, message: store.state.lang.text.an_error_occured })
       }
-      return error({ statusCode: 404, message: 'Example page not found' })
+      return error({ statusCode: 404, message: store.state.lang.text.api_page_not_found })
     }
     data.attrs = res.data.attrs
     data.body = res.data.body
-    if (!data.attrs.title) console.error(`[${path}] Please define a title in the front matter.`) // eslint-disable-line no-console
-    if (!data.attrs.description) console.error(`[${path}] Please define a description in the front matter.`) // eslint-disable-line no-console
+    if (!data.attrs.title) console.error(`[${path}] ${store.state.lang.text.please_define_title}.`) // eslint-disable-line no-console
+    if (!data.attrs.description) console.error(`[${path}] ${store.state.lang.text.please_define_description}.`) // eslint-disable-line no-console
     return data
   },
   computed: {

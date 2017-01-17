@@ -98,6 +98,7 @@ export default {
     flag () { return 'flag-' + this.$store.state.lang.iso },
     langs () {
       return [
+        { iso: 'cn', class: 'flag-cn', url: 'https://cn.nuxtjs.org' },
         { iso: 'en', class: 'flag-en', url: 'https://nuxtjs.org' },
         { iso: 'ru', class: 'flag-ru', url: 'https://ru.nuxtjs.org' }
       ]

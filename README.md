@@ -2,7 +2,19 @@
 
 > Website and documentation of [Nuxt](https://nuxtjs.org/)
 
+<<<<<<< HEAD
 ## Local Development
+=======
+# cn.nuxtjs.org
+
+Nuxt.js官网[nuxtjs.org](https://nuxtjs.org)的简体中文版，由[凹凸实验室](https://aotu.io)负责翻译整理。
+
+欢迎关注我们的微信公众号（微信里面搜`凹凸实验室`），关于Nuxt.js的最新信息会通过公众号发布。
+
+Chinese translation of primary Nuxt.js documentation site. Supported by [AOTU Labs](https://aotu.io).
+
+# Developing
+>>>>>>> 7075b478 (add cn translate)
 
 ```bash
 git clone https://github.com/nuxt/nuxtjs.org.git

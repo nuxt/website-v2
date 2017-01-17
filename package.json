@@ -29,6 +29,7 @@
     "start": "nuxt start",
     "generate": "nuxt generate",
     "deploy": "push-dir --dir=dist --branch=gh-pages --cleanup",
+    "deploy-cn": "surge dist/ cn.nuxtjs.org",
     "deploy-ru": "surge dist/ ru.nuxtjs.org",
     "lint": "eslint --ext .js,.vue --ignore-path .gitignore --ignore-pattern plugins/ga.js .",
     "precommit": "npm run lint"

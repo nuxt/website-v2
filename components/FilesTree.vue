@@ -5,7 +5,7 @@
         <div class="Icon" @click="hidden = true">
           <div class="icon remove"></div>
         </div>
-        Example Files
+        {{ $store.state.lang.text.example_file }}
       </div>
       <div class="FilesTree__Left__Body">
         <recursive-list v-on:changeFile="changeFile" :path="'examples/'+example"></recursive-list>
@@ -23,7 +23,7 @@
           <img v-if="isImage" :src="parseContent" alt="Image" class="FilesTree__Right__Body__Image"/>
           <pre v-else class="FilesTree__Right__Body__File"><code v-html="parseContent"></code></pre>
         </template>
-        <div v-else class="FilesTree__Right__Body__Wait">Please wait..</div>
+        <div v-else class="FilesTree__Right__Body__Wait">{{ $store.state.lang.text.please_wait }}</div>
       </div>
     </div>
   </div>

@@ -8,7 +8,8 @@ module.exports = {
       { name: 'viewport', content: 'width=device-width, initial-scale=1' }
     ],
     link: [
-      { rel: 'icon', type: 'image/x-icon', href: 'favicon.ico' }
+      { rel: 'icon', type: 'image/x-icon', href: 'favicon.ico' },
+      { rel: 'stylesheet', href: 'https://cdn.jsdelivr.net/docsearch.js/2/docsearch.min.css' }
     ]
   },
   css: [
@@ -31,7 +32,8 @@ module.exports = {
     vendor: ['axios', 'marked', 'highlight.js']
   },
   env: {
-    githubToken: '4aa6bcf919d238504e7db59a66d32e78281c0ad3'
+    githubToken: '4aa6bcf919d238504e7db59a66d32e78281c0ad3',
+    docSearchApiKey: 'ff80fbf046ce827f64f06e16f82f1401'
   },
   loading: { color: '#41B883' },
   generate: {

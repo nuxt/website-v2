@@ -3,13 +3,17 @@
 </template>
 
 <script>
+let scriptInjected = false
+
 export default {
   mounted () {
+    if (scriptInjected) return
     const script = document.createElement('script')
     script.setAttribute('type', 'text/javascript')
     script.setAttribute('src', '//cdn.carbonads.com/carbon.js?zoneid=1673&serve=C6AILKT&placement=nuxtjsorg')
     script.setAttribute('id', '_carbonads_js')
     this.$refs.carbonads.appendChild(script)
+    scriptInjected = true
   }
 }
 </script>

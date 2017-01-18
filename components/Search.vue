@@ -8,6 +8,11 @@
 </template>
 
 <script>
+let scriptInjected = false
+let callbacks = []
+let onScriptLoaded = (cb) => callbacks.push(cb)
+let scriptLoaded = () => callbacks.forEach((cb) => cb())
+
 export default {
   props: {
     label: String
@@ -15,6 +20,27 @@ export default {
   data () {
     return {
       q: ''
+    }
+  },
+  mounted () {
+    onScriptLoaded(() => this.addInstantSearch())
+    if (scriptInjected) return
+    const script = document.createElement('script')
+    script.setAttribute('type', 'text/javascript')
+    script.setAttribute('src', '//cdn.jsdelivr.net/docsearch.js/2/docsearch.min.js')
+    document.getElementsByTagName('body')[0].appendChild(script)
+    script.onload = scriptLoaded
+    scriptInjected = true
+  },
+  methods: {
+    addInstantSearch () {
+      window.docsearch({
+        apiKey: process.env.docSearchApiKey,
+        indexName: 'nuxtjs',
+        inputSelector: `#${this.label}`,
+        algoliaOptions: { 'facetFilters': [`tags:${this.$store.state._lang}`] },
+        debug: true // Set debug to true if you want to inspect the dropdown
+      })
     }
   }
 }

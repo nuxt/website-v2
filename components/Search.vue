@@ -1,9 +1,9 @@
 <template>
   <div class="Search">
-    <input class="Search__Input" type="text" name="search" :id="label" :placeholder="$store.state.lang.text.search" v-model="q"/>
-    <label :for="label" class="Search__Label" @click="q = ''">
+    <input class="Search__Input" type="text" name="search" :id="label" :placeholder="$store.state.lang.text.search"/>
+    <!-- <label :for="label" class="Search__Label" @click="resetSearch">
       <div :class="{'icon search': !q.length, 'icon remove': q.length}"></div>
-    </label>
+    </label> -->
   </div>
 </template>
 
@@ -17,11 +17,11 @@ export default {
   props: {
     label: String
   },
-  data () {
-    return {
-      q: ''
-    }
-  },
+  // data () {
+  //   return {
+  //     q: ''
+  //   }
+  // },
   mounted () {
     onScriptLoaded(() => this.addInstantSearch())
     if (scriptInjected) return

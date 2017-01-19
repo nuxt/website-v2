@@ -284,11 +284,16 @@ export default {
       border-bottom: 1px solid #dbdfe1;
       @media (min-width: 991px)
       {
+        float: left;
         height: 79px;
         line-height: 79px;
         border-bottom: none;
-        overflow: hidden;
+        width: calc(100% - 525px);
         height: inherit;
+      }
+      @media (min-width: 1280px)
+      {
+        width: calc(100% - 600px);
       }
       &--mobile
       {

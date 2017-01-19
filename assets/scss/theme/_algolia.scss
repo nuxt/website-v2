@@ -4,7 +4,44 @@
   height: inherit;
   .ds-dropdown-menu
   {
+    min-width: 100%;
     width: 100%;
+    max-width: 100%;
     line-height: normal;
+    @media (min-width: 991px)
+    {
+      min-width: 500px;
+    }
+  }
+  .algolia-docsearch-suggestion--category-header
+  {
+    span
+    {
+      color: #35495e;
+    }
+  }
+  .algolia-docsearch-suggestion--wrapper
+  {
+    padding-top: 0;
+    .algolia-docsearch-suggestion--subcategory-column
+    {
+      height: 100%;
+      color: #35495e;
+      padding: 10px 15px;
+    }
+    .algolia-docsearch-suggestion--content
+    {
+      padding: 10px 15px;
+      .algolia-docsearch-suggestion--title
+      {
+        // font-weight: 400;
+        color: #35495e;
+        .algolia-docsearch-suggestion--highlight
+        {
+          color: #41B883;
+          background-color: transparent;
+        }
+      }
+    }
   }
 }

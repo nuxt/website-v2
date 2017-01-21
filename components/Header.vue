@@ -288,12 +288,12 @@ export default {
         height: 79px;
         line-height: 79px;
         border-bottom: none;
-        width: calc(100% - 525px);
+        width: calc(100% - 560px);
         height: inherit;
       }
       @media (min-width: 1280px)
       {
-        width: calc(100% - 600px);
+        width: calc(100% - 640px);
       }
       &--mobile
       {

@@ -62,7 +62,7 @@ export default {
     font-size: 16px;
     padding: 0 15px;
     letter-spacing: 0.5px;
-    padding-right: 50px;
+    padding-right: 0;
     background-color: #fff;
     @media (min-width: 991px)
     {

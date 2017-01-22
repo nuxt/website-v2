@@ -1,5 +1,6 @@
 const axios = require('axios')
 const _ = require('lodash')
+const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin
 
 module.exports = {
   head: {
@@ -29,7 +30,14 @@ module.exports = {
     '~plugins/marked'
   ],
   build: {
-    vendor: ['axios', 'marked', 'highlight.js']
+    vendor: ['axios', 'marked', 'highlight.js'],
+    extend (config, { dev, isClient }) {
+      if (process.env.BUNDLE_CHECK && !dev && isClient) {
+        config.plugins.push(
+          new BundleAnalyzerPlugin()
+        )
+      }
+    }
   },
   env: {
     githubToken: '4aa6bcf919d238504e7db59a66d32e78281c0ad3',

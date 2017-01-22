@@ -21,11 +21,13 @@
     "eslint-plugin-standard": "^2.0.1",
     "node-sass": "^3.13.0",
     "push-dir": "^0.4.1",
-    "sass-loader": "^4.0.2"
+    "sass-loader": "^4.0.2",
+    "webpack-bundle-analyzer": "^2.2.1"
   },
   "scripts": {
     "dev": "nuxt",
     "build": "nuxt build",
+    "build-check": "BUNDLE_CHECK=1 nuxt build",
     "start": "nuxt start",
     "generate": "nuxt generate",
     "deploy": "push-dir --dir=dist --branch=gh-pages --cleanup",

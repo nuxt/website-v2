@@ -1,5 +1,6 @@
 <template>
   <header class="Header">
+<<<<<<< HEAD
     <div class="container">
       <router-link class="Header__Title" to="/">
         <h1 class="Header__Title__Site">
@@ -71,9 +72,18 @@
         </div>
       </nav>
       <div class="Header__Toggler" @click="toggle">
+=======
+    <nuxt-link class="Header__Logo" to="/">
+      <img src="~static/logo_nav.png" alt="Nuxt"/>
+      <h1 class="Header__Logo__Text">NUXT</h1>
+    </nuxt-link>
+    <div class="Header__Toggler">
+      <div class="Header__Toggler__Button" @click="toggle">
+>>>>>>> f49a3a4e (new header with flex box)
         <div :class="{'icon menu': !visible, 'icon close': visible}"></div>
       </div>
     </div>
+    <nuxt-header-nav/>
   </header>
 </template>
 
@@ -86,14 +96,11 @@
   border-bottom: 1px solid #dbdfe1;
 =======
 <script>
-import NuxtSearch from '~components/Search.vue'
-import NuxtDropdown from '~components/Dropdown.vue'
+import NuxtHeaderNav from '~components/HeaderNav.vue'
 
 export default {
-  data () {
-    return { show: false }
-  },
   computed: {
+<<<<<<< HEAD
     visible () { return this.$store.state.visibleHeader },
     flag () { return 'flag-' + this.$store.state.lang.iso },
     langs () {
@@ -132,13 +139,15 @@ export default {
         }
       ]
     }
+=======
+    visible () { return this.$store.state.visibleHeader }
+>>>>>>> f49a3a4e (new header with flex box)
   },
   methods: {
     toggle () { this.$store.commit('toggle', 'visibleHeader') }
   },
   components: {
-    NuxtSearch,
-    NuxtDropdown
+    NuxtHeaderNav
   }
 }
 </script>
@@ -147,20 +156,21 @@ export default {
 .Header
 {
   top: 0;
-  left: 0;
-  right: 0;
   width: 100%;
-  z-index: 995;
-  position: fixed;
   height: 60px;
+  z-index: 995;
+  padding: 0 15px;
+  display: flex;
+  position: fixed;
+  flex-direction: row;
   background-color: #fff;
   border-bottom: 1px solid #dbdfe1;
   @media (min-width: 991px)
   {
     height: 80px;
-    line-height: 80px;
-    text-align: left;
+    padding: 0 30px;
   }
+<<<<<<< HEAD
 >>>>>>> 925b7850 (navbar)
   &__Title
   {
@@ -175,9 +185,15 @@ export default {
 =======
     color: #505153;
     float: left;
+=======
+  &__Logo
+  {
+    display: flex;
+    align-items: center;
+>>>>>>> f49a3a4e (new header with flex box)
     @media (min-width: 991px)
     {
-      width: 190px;
+      width: 189px;
       border-right: 1px solid #dbdfe1;
     }
     &__Text
@@ -195,6 +211,7 @@ export default {
       margin-left: 10px;
 >>>>>>> b7025782 (Fix logo)
     }
+<<<<<<< HEAD
     &__Logo
     {
 <<<<<<< HEAD
@@ -223,9 +240,12 @@ export default {
       }
 >>>>>>> 925b7850 (navbar)
     }
+=======
+>>>>>>> f49a3a4e (new header with flex box)
   }
-  &__Nav
+  &__Toggler
   {
+<<<<<<< HEAD
 <<<<<<< HEAD
     float: right;
     &__List
@@ -255,92 +275,19 @@ export default {
     bottom: 0;
     overflow-y: auto;
     background-color: #fff;
+=======
+    display: flex;
+    flex: 1;
+    align-items: center;
+    justify-content: flex-end;
+>>>>>>> f49a3a4e (new header with flex box)
     @media (min-width: 991px)
     {
-      top: 0;
-      position: relative;
-      height: 79px;
-      overflow-y: visible;
-      margin-left: 190px;
-    }
-    &--hidden
-    {
       display: none;
-      @media (min-width: 991px)
-      {
-        display: block;
-      }
     }
-    &__Lang
+    &__Button
     {
-      margin: 0;
-      float: none;
-      position: relative;
-      @media (min-width: 991px)
-      {
-        float: left;
-        width: 80px;
-        border-right: 1px solid #dbdfe1;
-        &:hover
-        {
-          .Header__Nav__Lang__List
-          {
-            display: block;
-          }
-        }
-      }
-      &__Icon
-      {
-        cursor: pointer;
-        text-align: center;
-        height: 60px;
-        line-height: 80px;
-        border-bottom: 1px solid #dbdfe1;
-        @media (min-width: 991px)
-        {
-          height: 79px;
-          line-height: 100px;
-          border-bottom: none;
-        }
-      }
-      &__List
-      {
-        display: none;
-        width: 100%;
-        list-style: none;
-        margin: 0;
-        padding: 0;
-        position: relative;
-        @media (min-width: 991px)
-        {
-          width: 81px;
-          position: absolute;
-          background-color: #fff;
-          border: 1px solid #dbdfe1;
-          border-bottom: none;
-          left: -1px;
-        }
-        &--visible
-        {
-          display: block;
-          @media (min-width: 991px)
-          {
-            display: none;
-          }
-        }
-        &__Item
-        {
-          display: block;
-          text-align: center;
-          height: auto;
-          line-height: normal;
-          border-bottom: 1px solid #dbdfe1;
-          padding: 10px 0;
-        }
-      }
-    }
-    &__Search
-    {
+<<<<<<< HEAD
       margin: 0;
       float: none;
       text-align: center;
@@ -462,6 +409,12 @@ export default {
     @media (min-width: 991px)
     {
       display: none;
+=======
+      display: flex;
+      width: 25px;
+      height: 20px;
+      cursor: pointer;
+>>>>>>> f49a3a4e (new header with flex box)
     }
   }
 }

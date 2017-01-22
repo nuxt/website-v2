@@ -1,9 +1,6 @@
 <template>
   <div class="Search">
-    <input class="Search__Input" type="text" name="search" :id="label" :placeholder="$store.state.lang.text.search"/>
-    <!-- <label :for="label" class="Search__Label" @click="resetSearch">
-      <div :class="{'icon search': !q.length, 'icon remove': q.length}"></div>
-    </label> -->
+    <input class="Search__Input" type="text" name="search" id="algolia" :placeholder="$store.state.lang.text.search"/>
   </div>
 </template>
 
@@ -14,14 +11,6 @@ let onScriptLoaded = (cb) => callbacks.push(cb)
 let scriptLoaded = () => callbacks.forEach((cb) => cb())
 
 export default {
-  props: {
-    label: String
-  },
-  // data () {
-  //   return {
-  //     q: ''
-  //   }
-  // },
   mounted () {
     onScriptLoaded(() => this.addInstantSearch())
     if (scriptInjected) return
@@ -37,7 +26,7 @@ export default {
       window.docsearch({
         apiKey: process.env.docSearchApiKey,
         indexName: 'nuxtjs',
-        inputSelector: `#${this.label}`,
+        inputSelector: '#algolia',
         algoliaOptions: { 'facetFilters': [`tags:${this.$store.state._lang}`] },
         debug: true // Set debug to true if you want to inspect the dropdown
       })
@@ -49,6 +38,7 @@ export default {
 <style lang="scss" scoped>
 .Search
 {
+  width: 100%;
   height: 100%;
   position: relative;
   &__Input
@@ -62,27 +52,17 @@ export default {
     font-size: 16px;
     padding: 0 15px;
     letter-spacing: 0.5px;
-    padding-right: 0;
     background-color: #fff;
     @media (min-width: 991px)
     {
-      padding-left: 30px;
-    }
-  }
-  &__Label
-  {
-    cursor: pointer;
-    width: 35px;
-    height: 100%;
-    padding: 0 5px;
-    padding-top: 20px;
-    position: absolute;
-    float: right;
-    top: 0;
-    right: 10px;
-    @media (min-width: 991px)
-    {
-      padding-top: 30px;
+      padding: 0 30px;
+      border-left: 1px solid #dbdfe1;
+      border-right: 1px solid #dbdfe1;
+      &:focus, &:visited, &:active
+      {
+        border-left: 1px solid #dbdfe1;
+        border-right: 1px solid #dbdfe1;
+      }
     }
   }
 }

@@ -184,7 +184,7 @@ export default {
     {
       width: 100%;
       display: flex;
-      height: 60px;
+      height: 50px;
       border-top: 1px solid #dbdfe1;
       &__Link
       {

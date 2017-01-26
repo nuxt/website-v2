@@ -19,7 +19,7 @@
         </li>
       </ul>
     </section>
-    <nuxt-footer></nuxt-footer>
+    <nuxt-footer/>
   </div>
 </template>
 

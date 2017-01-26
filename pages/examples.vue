@@ -1,11 +1,11 @@
 <template>
   <div class="category">
-    <nuxt-affix :list="list" category="examples"></nuxt-affix>
+    <nuxt-affix :list="list" category="examples"/>
     <div class="category__content Content" :class="{'category__content--hidden': visible, 'Content--hasCarbon': $store.state._lang === 'en'}">
-      <nuxt-child></nuxt-child>
+      <nuxt-child/>
     </div>
     <div class="category__footer">
-      <nuxt-footer></nuxt-footer>
+      <nuxt-footer/>
     </div>
   </div>
 </template>

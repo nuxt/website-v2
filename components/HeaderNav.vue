@@ -19,7 +19,7 @@ import NuxtHeaderNavLang from '~components/HeaderNavLang.vue'
 
 export default {
   computed: {
-    visible () { return this.$store.state.visibleHeader },
+    visible () { return this.$store.state.visibleHeader }
   },
   components: {
     NuxtHeaderNavSearch,

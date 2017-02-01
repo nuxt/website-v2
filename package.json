@@ -5,29 +5,25 @@
   "main": "index.js",
   "dependencies": {
     "axios": "^0.15.2",
-    "front-matter": "^2.1.1",
     "highlight.js": "^9.8.0",
-    "json-loader": "^0.5.4",
-    "marked": "^0.3.6",
     "normalize.css": "^5.0.0",
     "nuxt": "latest"
   },
   "devDependencies": {
     "babel-eslint": "^7.1.1",
-    "eslint": "^3.13.1",
+    "eslint": "^3.14.1",
     "eslint-config-standard": "^6.2.1",
-    "eslint-plugin-html": "^1.7.0",
+    "eslint-plugin-html": "^2.0.0",
     "eslint-plugin-promise": "^3.4.0",
     "eslint-plugin-standard": "^2.0.1",
-    "node-sass": "^3.13.0",
+    "node-sass": "^4.5.0",
     "push-dir": "^0.4.1",
-    "sass-loader": "^4.0.2",
-    "webpack-bundle-analyzer": "^2.2.1"
+    "sass-loader": "^4.0.2"
   },
   "scripts": {
     "dev": "nuxt",
     "build": "nuxt build",
-    "build-check": "BUNDLE_CHECK=1 nuxt build",
+    "build-check": "nuxt build --analyze",
     "start": "nuxt start",
     "generate": "nuxt generate",
     "deploy": "push-dir --dir=dist --branch=gh-pages --cleanup",

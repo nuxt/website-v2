@@ -10,35 +10,20 @@
 </template>
 
 <script>
-import marked from 'marked'
 import axios from 'axios'
-
 import CarbonAds from '~components/CarbonAds.vue'
 import HtmlParser from '~components/HtmlParser.vue'
 
 export default {
-  data ({ isDev }) {
+  async data ({ isDev, store }) {
     // Default data
     let data = {
       releases: [],
       isDev: isDev
     }
-    return axios({
-      url: 'https://api.github.com/repos/nuxt/nuxt.js/releases',
-      headers: {
-        'Authorization': `token ${process.env.githubToken}`
-      }
-    })
-    .then((res) => {
-      data.releases = res.data.filter((r) => !r.draft).map((release) => {
-        return {
-          name: release.name,
-          date: release.published_at,
-          body: marked(release.body)
-        }
-      })
-      return data
-    })
+    const res = await axios.get(store.state.apiURI + '/releases')
+    data.releases = res.data
+    return data
   },
   head () {
     return {

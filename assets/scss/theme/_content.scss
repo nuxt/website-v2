@@ -5,7 +5,7 @@
     @media (min-width: 1280px)
     {
       padding-right: 185px;
-    }    
+    }
   }
   h1, h2, h3, h4, h5, h6
   {
@@ -16,13 +16,26 @@
   h1
   {
     margin-top: 0px;
-    margin-bottom: 30px;
+    margin-bottom: 20px;
     overflow: hidden;
+    font-size: 36px;
+    @media (min-width: 625px)
+    {
+      font-size: 40px;
+      margin-bottom: 30px;
+    }
   }
   h2
   {
     padding-bottom: 15px;
     border-bottom: 1px solid #dbdfe1;
+    margin-bottom: 20px;
+    font-size: 33px;
+    @media (min-width: 625px)
+    {
+      font-size: 34px;
+      margin-bottom: 30px;
+    }
   }
   a
   {
@@ -36,14 +49,19 @@
   {
     font-weight: 400;
     color: #35495e;
-    font-size: 16px;
-    line-height: 25px;
+    font-size: 15px;
+    line-height: 23px;
     margin: 10px 0;
     word-spacing: 2px;
     overflow: hidden;
     code
     {
       font-size: 14px;
+    }
+    @media (min-width: 625px)
+    {
+      line-height: 25px;
+      font-size: 16px;
     }
   }
   img
@@ -67,17 +85,26 @@
     {
       font-weight: 600;
       color: #fff;
-      letter-spacing: 0.25px;
-      padding: 15px;
+      letter-spacing: 0px;
+      padding: 10px;
       background-color: #2e2f30;
       border-left: 3px solid #41b883;
+      @media (min-width: 625px)
+      {
+        letter-spacing: 0.25px;
+        padding: 15px;
+      }
     }
   }
   ul, ol
   {
     list-style-type: circle;
-    margin-bottom: 20px;
+    margin-bottom: 15px;
     padding-left: 30px;
+    @media (min-width: 625px)
+    {
+      margin-bottom: 20px;
+    }
     li
     {
       color: #35495e;

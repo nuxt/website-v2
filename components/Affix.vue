@@ -35,6 +35,8 @@
 </template>
 
 <script>
+import throttle from 'lodash/throttle'
+
 export default {
   props: {
     list: {
@@ -47,12 +49,12 @@ export default {
     }
   },
   mounted () {
-    let self = this
-    this.$nextTick(function () {
-      window.addEventListener('scroll', self.scrolled)
-      if (self.$route.hash.length) {
-        self.scrollTo(self.$route.hash)
+    this.$nextTick(() => {
+      window.addEventListener('scroll', throttle(() => this.scrolled(), 100))
+      if (this.$route.hash.length) {
+        this.scrollTo(this.$route.hash)
       }
+      this.scrolled()
     })
   },
   data () {
@@ -82,7 +84,17 @@ export default {
       return c
     }
   },
+  watch: {
+    '$route.fullPath': 'hashChanged'
+  },
   methods: {
+    hashChanged (toPath, fromPath) {
+      toPath = toPath.split('#')
+      fromPath = fromPath.split('#')
+      if (toPath[0] !== fromPath[0] && this.$route.hash.length) {
+        this.$nextTick(() => this.scrollTo(this.$route.hash))
+      }
+    },
     toggle () { this.$store.commit('toggle', 'visibleAffix') },
     scrolled () {
       var h = window.innerHeight || document.documentElement.clientHeight || document.body.clientHeight
@@ -94,7 +106,12 @@ export default {
       this.current = (el ? this.contents.indexOf(el) : this.contents.length) - 1
     },
     scrollTo (id) {
-      this.toggle()
+      if (this.$store.state.visibleAffix) {
+        this.toggle()
+      }
+      if (id !== this.$route.hash) {
+        this.$router.push(this.$route.fullPath.split('#')[0] + id)
+      }
       this.$nextTick(() => {
         var el = document.getElementById(id.slice(1))
         if (!el) return

@@ -21,11 +21,13 @@ export default {
   font-size: 13px;
   overflow: hidden;
   margin-bottom: 15px;
+  height: 106px;
   @media (min-width: 625px)
   {
     float: right;
     width: 125px;
     margin-left: 25px;
+    height: auto;
   }
   @media (min-width: 1280px)
   {

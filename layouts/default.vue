@@ -28,17 +28,20 @@ export default {
     if (this.$store.state._lang !== 'en') {
       canonical = `https://${this.$store.state._lang}.nuxtjs.org${this.$route.path}`
     }
-    if (canonical.slice(-1) !== '/') {
-      canonical = canonical + '/'
-    }
+    let link = [
+      { rel: 'canonical', href: canonical },
+      { rel: 'alternate', hreflang: 'en', href: `https://nuxtjs.org${this.$route.path}` },
+      { rel: 'alternate', hreflang: 'zh', href: `https://cn.nuxtjs.org${this.$route.path}` },
+      { rel: 'alternate', hreflang: 'ru', href: `https://ru.nuxtjs.org${this.$route.path}` }
+    ]
+    link.forEach((l) => {
+      if (l.href.slice(-1) !== '/') {
+        l.href = l.href + '/'
+      }
+    })
     return {
       htmlAttrs: { lang: this.$store.state._lang },
-      link: [
-        { rel: 'canonical', href: canonical },
-        { rel: 'alternate', hreflang: 'en', href: `https://nuxtjs.org${this.$route.path}` },
-        { rel: 'alternate', hreflang: 'cn', href: `https://cn.nuxtjs.org${this.$route.path}` },
-        { rel: 'alternate', hreflang: 'ru', href: `https://ru.nuxtjs.org${this.$route.path}` }
-      ]
+      link
     }
   },
   components: {

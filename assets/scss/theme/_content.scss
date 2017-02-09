@@ -36,6 +36,22 @@
     line-height: 20px;
     margin: 10px 0;
     overflow: hidden;
+<<<<<<< HEAD
+=======
+    code
+    {
+      font-size: 14px;
+    }
+    @media (min-width: 625px)
+    {
+      line-height: 25px;
+      font-size: 16px;
+    }
+  }
+  img
+  {
+    max-width: 100%;
+>>>>>>> 3c5bc786 (Add schema)
   }
   code
   {

@@ -29,6 +29,7 @@
 =======
   <div>
     <section class="Landscape">
+<<<<<<< HEAD
       <div class="Landscape__Content">
         <div class="container content">
           <img src="~static/logo.png" alt="Logo nuxt" class="Landscape__Content__Image"/>
@@ -56,6 +57,12 @@
     <section class="Landscape">
       <img src="/logo_home_mobile.png" alt="Logo nuxt" class="Landscape__Image Landscape__Image--mobile"/>
       <img src="/logo_home.png" alt="Logo nuxt" class="Landscape__Image Landscape__Image--desktop"/>
+=======
+      <div class="Landscape__Logo">
+        <nuxt-logo/>
+        <h1 class="Landscape__Logo__Title">NUXT</h1>
+      </div>
+>>>>>>> 04981a67 (update homepage)
       <h2 class="Landscape__Title">
         {{ $store.state.lang.homepage.title }}
       </h2>
@@ -72,8 +79,8 @@
 >>>>>>> 3d1d3d02 (new architecture)
         </li>
         <li class="Landscape__List__Item">
-          <a class="button" href="https://github.com/nuxt/nuxt.js" target="_blank">
-            {{ $store.state.lang.links.github }}
+          <a class="button button--grey" href="https://github.com/nuxt/nuxt.js" target="_blank">
+            {{ $store.state.lang.links.github }} ({{ $store.state.version }})
           </a>
         </li>
       </ul>
@@ -84,11 +91,42 @@
 </template>
 
 <script>
+<<<<<<< HEAD
 import NuxtHeader from '~components/Header.vue'
 
 export default {
   components: {
     NuxtHeader
+=======
+import NuxtLogo from '~components/VueToNuxtLogo.vue'
+import NuxtFooter from '~components/Footer.vue'
+
+export default {
+  components: {
+    NuxtLogo,
+    NuxtFooter
+  },
+  head () {
+    return {
+      title: this.$store.state.lang.homepage.meta.title,
+      meta: [
+        { name: 'description', hid: 'description', content: this.$store.state.lang.homepage.meta.description },
+        // Open Grapg
+        { name: 'og:title', content: this.$store.state.lang.homepage.meta.title },
+        { name: 'og:description', content: this.$store.state.lang.homepage.meta.description },
+        { name: 'og:type', content: 'website' },
+        { name: 'og:url', content: 'https://nuxtjs.org' },
+        { name: 'og:image', content: 'https://i.imgur.com/PzEm5j2.png' },
+        // Twitter Card
+        { name: 'twitter:card', content: 'summary' },
+        { name: 'twitter:site', content: '@nuxt_js' },
+        { name: 'twitter:title', content: this.$store.state.lang.homepage.meta.title },
+        { name: 'twitter:description', content: this.$store.state.lang.homepage.meta.description },
+        { name: 'twitter:image', content: 'https://i.imgur.com/PzEm5j2.png' },
+        { name: 'twitter:image:alt', content: 'Nuxt.js Logo' }
+      ]
+    }
+>>>>>>> 04981a67 (update homepage)
   }
 }
 </script>
@@ -113,15 +151,24 @@ export default {
 =======
   background-color: #fff;
   padding: 70px 15px;
+<<<<<<< HEAD
+=======
+  padding-top: 100px;
+>>>>>>> 04981a67 (update homepage)
   text-align: center;
   @media (min-width: 992px)
   {
     padding: 140px 30px;
+<<<<<<< HEAD
+=======
+    padding-top: 200px;
+>>>>>>> 04981a67 (update homepage)
   }
-  &__Image
+  &__Logo
   {
-    &--mobile
+    &__Title
     {
+<<<<<<< HEAD
       display: inline-block;
       @media (min-width: 992px)
       {
@@ -132,22 +179,35 @@ export default {
 >>>>>>> 2eed1dad (affix)
     {
       display: none;
+=======
+      font-family: "Quicksand", "Source Sans Pro", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif; /* 1 */
+      display: block;
+      font-weight: 300;
+      font-size: 100px;
+      color: #35495e;
+      letter-spacing: 1px;
+      padding: 25px 15px;
+>>>>>>> 04981a67 (update homepage)
       @media (min-width: 992px)
       {
+        font-size: 120px;
         display: inline-block;
+        padding: 0;
+        padding-left: 30px;
       }
     }
   }
   &__Title
   {
     font-weight: 300;
-    font-size: 40px;
-    line-height: 45px;
-    letter-spacing: 1px;
-    margin: 20px 0;
-    color: #35495e;
+    font-size: 45px;
+    line-height: normal;
+    margin: 30px 0;
+    color: #526488;
+    word-spacing: 5px;
     @media (min-width: 992px)
     {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
       font-weight: 300;
@@ -164,6 +224,9 @@ export default {
       margin: 30px 0;
       margin-bottom: 50px;
 >>>>>>> 2134651a (examples category)
+=======
+      font-size: 60px;
+>>>>>>> 04981a67 (update homepage)
     }
   }
   &__List
@@ -202,13 +265,16 @@ export default {
         }
 =======
       display: inline-block;
-      padding: 20px 15px;
+      padding: 15px;
       padding-bottom: 0;
+<<<<<<< HEAD
       .button
       {
         font-size: 16px;
 >>>>>>> 2eed1dad (affix)
       }
+=======
+>>>>>>> 04981a67 (update homepage)
     }
   }
   /*background-color: #171F26;*/

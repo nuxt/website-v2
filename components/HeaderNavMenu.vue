@@ -76,7 +76,7 @@ export default {
       color: #35495e;
       font-size: 16px;
       text-decoration: none;
-      letter-spacing: 0.25px;
+      letter-spacing: 0.5px;
       &:hover
       {
         color: #41b883;

@@ -1,8 +1,10 @@
 <template>
   <div>
     <section class="Landscape">
-      <img src="/logo_home_mobile.png" alt="Logo nuxt" class="Landscape__Image Landscape__Image--mobile"/>
-      <img src="/logo_home.png" alt="Logo nuxt" class="Landscape__Image Landscape__Image--desktop"/>
+      <div class="Landscape__Logo">
+        <nuxt-logo/>
+        <h1 class="Landscape__Logo__Title">NUXT</h1>
+      </div>
       <h2 class="Landscape__Title">
         {{ $store.state.lang.homepage.title }}
       </h2>
@@ -13,8 +15,8 @@
           </nuxt-link>
         </li>
         <li class="Landscape__List__Item">
-          <a class="button" href="https://github.com/nuxt/nuxt.js" target="_blank">
-            {{ $store.state.lang.links.github }}
+          <a class="button button--grey" href="https://github.com/nuxt/nuxt.js" target="_blank">
+            {{ $store.state.lang.links.github }} ({{ $store.state.version }})
           </a>
         </li>
       </ul>
@@ -24,10 +26,12 @@
 </template>
 
 <script>
+import NuxtLogo from '~components/VueToNuxtLogo.vue'
 import NuxtFooter from '~components/Footer.vue'
 
 export default {
   components: {
+    NuxtLogo,
     NuxtFooter
   },
   head () {
@@ -60,45 +64,44 @@ export default {
   min-height: 100vh;
   background-color: #fff;
   padding: 70px 15px;
-  padding-top: 130px;
+  padding-top: 100px;
   text-align: center;
   @media (min-width: 992px)
   {
     padding: 140px 30px;
-    padding-top: 220px;
+    padding-top: 200px;
   }
-  &__Image
+  &__Logo
   {
-    &--mobile
+    &__Title
     {
-      display: inline-block;
+      font-family: "Quicksand", "Source Sans Pro", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif; /* 1 */
+      display: block;
+      font-weight: 300;
+      font-size: 100px;
+      color: #35495e;
+      letter-spacing: 1px;
+      padding: 25px 15px;
       @media (min-width: 992px)
       {
-        display: none;
-      }
-    }
-    &--desktop
-    {
-      display: none;
-      @media (min-width: 992px)
-      {
+        font-size: 120px;
         display: inline-block;
+        padding: 0;
+        padding-left: 30px;
       }
     }
   }
   &__Title
   {
     font-weight: 300;
-    font-size: 40px;
-    line-height: 45px;
-    letter-spacing: 1px;
-    margin: 20px 0;
-    color: #35495e;
+    font-size: 45px;
+    line-height: normal;
+    margin: 30px 0;
+    color: #526488;
+    word-spacing: 5px;
     @media (min-width: 992px)
     {
-      font-size: 52px;
-      margin: 30px 0;
-      margin-bottom: 50px;
+      font-size: 60px;
     }
   }
   &__List
@@ -109,12 +112,8 @@ export default {
     &__Item
     {
       display: inline-block;
-      padding: 20px 15px;
+      padding: 15px;
       padding-bottom: 0;
-      .button
-      {
-        font-size: 16px;
-      }
     }
   }
 }

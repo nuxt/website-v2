@@ -12,16 +12,24 @@
   {
     background-position: 0 0;
   }
-  &-ru
-  {
-    background-position: -32px -32px;
-  }
   &-en
   {
     background-position: 0 -32px;
   }
-  &-fr
+  &-es
   {
     background-position: -32px 0;
+  }
+  &-ja
+  {
+    background-position: -32px -32px;
+  }
+  &-ru
+  {
+    background-position: -64px -32px;
+  }
+  &-fr
+  {
+    background-position: -64px 0;
   }
 }

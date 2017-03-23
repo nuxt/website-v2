@@ -1,6 +1,12 @@
 <template>
+<<<<<<< HEAD
   <div class="Content">
     <h1>{{ attributes.title }}</h1>
+=======
+  <div>
+    <carbon-ads :key="$route.params.slug"></carbon-ads>
+    <h1>{{ attrs.title }}</h1>
+>>>>>>> f624de65 (update ads)
     <blockquote>
       <p>{{ attributes.description }}</p>
     </blockquote>
@@ -43,6 +49,7 @@ renderer.code = (code, language) => {
 marked.setOptions({ renderer });
 
 export default {
+<<<<<<< HEAD
   components: {
     NuxtFilesTree
   },
@@ -71,6 +78,24 @@ export default {
         if (err) return callback({ statusCode: 404, message: 'Example page not found' })
         callback(null, { content })
       })
+=======
+  async data ({ route, store, error }) {
+    // Default data
+    let data = {
+      attrs: {},
+      body: ''
+    }
+    let slug = route.params.slug || 'hello-world'
+    const path = `/${store.state.lang.iso}/examples/${slug}`
+    let res
+    try {
+      res = await axios.get(store.state.apiURI + path)
+    } catch (err) {
+      if (err.response.status !== 404) {
+        return error({ statusCode: 500, message: store.state.lang.text.an_error_occured })
+      }
+      return error({ statusCode: 404, message: store.state.lang.text.api_page_not_found })
+>>>>>>> f624de65 (update ads)
     }
   },
   watch: {

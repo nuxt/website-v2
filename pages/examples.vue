@@ -1,8 +1,15 @@
 <template>
+<<<<<<< HEAD
   <div class="Examples">
     <nuxt-affix :list="list"></nuxt-affix>
     <div class="Examples__Content" :class="{'Examples__Content--hidden': visible}">
       <nuxt-child></nuxt-child>
+=======
+  <div class="category">
+    <nuxt-affix :list="list" category="examples"/>
+    <div class="category__content Content Content--hasCarbon" :class="{'category__content--hidden': visible}">
+      <nuxt-child/>
+>>>>>>> f624de65 (update ads)
     </div>
     <div class="Examples__Footer">
       <nuxt-footer></nuxt-footer>

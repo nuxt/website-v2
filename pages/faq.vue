@@ -1,7 +1,7 @@
 <template>
   <div class="category">
     <nuxt-affix :list="list" category="faq"/>
-    <div class="category__content Content" :class="{'category__content--hidden': visible, 'Content--hasCarbon': $store.state._lang === 'en'}">
+    <div class="category__content Content Content--hasCarbon" :class="{'category__content--hidden': visible}">
       <nuxt-child/>
     </div>
     <div class="category__footer">

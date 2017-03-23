@@ -21,7 +21,7 @@
     font-size: 36px;
     @media (min-width: 625px)
     {
-      font-size: 40px;
+      font-size: 42px;
       margin-bottom: 30px;
     }
   }
@@ -73,7 +73,7 @@
     color: #35495e;
     padding: 2px 7px;
     font-weight: 400;
-    font-size: 14px;
+    font-size: 13px;
     line-height: inherit;
     font-family: "Andale Mono", monospace;
     background-color: rgba(200, 200, 200, 0.2);
@@ -83,16 +83,16 @@
     margin: 20px 0;
     code
     {
-      font-weight: 600;
-      color: #fff;
+      font-weight: 400;
+      color: #35495e;
       letter-spacing: 0px;
       padding: 10px;
-      background-color: #2e2f30;
-      border-left: 3px solid #41b883;
+      border: 1px solid #dbdfe1;
+      border-radius: 4px;
+      background-color: #fcfcfc;
       @media (min-width: 625px)
       {
-        letter-spacing: 0.25px;
-        padding: 15px;
+        padding: 12px 15px;
       }
     }
   }
@@ -153,13 +153,10 @@
   {
     margin: 20px 0;
     font-style: italic;
-    padding: 12px;
-    border-left: 3px solid #dbdfe1;
-    background-color: #fcfcfc;
     overflow: hidden;
     p
     {
-      color: #555;
+      color: #75818b;
       margin: 0;
       font-size: 16px;
     }

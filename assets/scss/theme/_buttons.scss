@@ -2,7 +2,7 @@
 {
   position: relative;
   display: inline-block;
-  color: #4e5156;
+  color: #4e5156 !important;
   font-size: 16px;
   font-weight: 600;
   padding: 14px 42px;
@@ -18,12 +18,22 @@
   &:hover
   {
     color: #000;
-    text-decoration: none;
+    text-decoration: none !important;
     border: 1px solid #35495e;
+  }
+  span
+  {
+    width: 30px;
+    height: 16px;
+    display: inline-block;
+    .icon, .icon:before, .icon:after
+    {
+      color: #4e5156;
+    }
   }
   &--green
   {
-    color: #fff;
+    color: #fff !important;
     border-color: #3b8070;
     background-color: #3b8070;
     &:hover
@@ -35,7 +45,7 @@
   }
   &--grey
   {
-    color: #fff;
+    color: #fff !important;
     border-color: #35495e;
     background-color: #35495e;
     &:hover
@@ -46,99 +56,3 @@
     }
   }
 }
-//
-//
-// .button
-// {
-//   font-weight: 600;
-//   position: relative;
-//   display: inline-block;
-//   color: #fff !important;
-//   font-size: 15px;
-//   height: 52px;
-//   margin: 0 25px;
-//   line-height: 50px;
-//   padding: 0 25px;
-//   min-width: 150px;
-//   text-align: center;
-//   text-transform: uppercase;
-//   text-decoration: none;
-//   letter-spacing: 1px;
-//   background-color: #35495e;
-//   &:before, &:after
-//   {
-//     content: " ";
-//     width: 0;
-//     height: 0;
-//     top: 0;
-//     position: absolute;
-//   }
-//   &:before
-//   {
-//     border-right: 26px solid;
-//     border-top: 26px solid transparent;
-//     border-bottom: 26px solid transparent;
-//     left: -26px;
-//     border-right-color: #35495e;
-//   }
-//   &:after
-//   {
-//     border-left: 26px solid;
-//     border-top: 26px solid transparent;
-//     border-bottom: 26px solid transparent;
-//     right: -26px;
-//     border-left-color: #35495e;
-//   }
-//   span
-//   {
-//     width: 30px;
-//     height: 16px;
-//     display: inline-block;
-//     .icon, .icon:before, .icon:after
-//     {
-//       color: #2e2f30;
-//     }
-//   }
-//   &:hover
-//   {
-//     color: #fff !important;
-//     background-color: darken(#35495e, 5%);
-//     text-decoration: none !important;
-//     span .icon, span .icon:before, span .icon:after
-//     {
-//       color: #fff;
-//     }
-//     &:before
-//     {
-//       border-right-color: darken(#35495e, 5%);
-//     }
-//     &:after
-//     {
-//       border-left-color: darken(#35495e, 5%);
-//     }
-//   }
-//   &--green
-//   {
-//     background-color: #3b8070;
-//     &:before
-//     {
-//       border-right-color: #3b8070;
-//     }
-//     &:after
-//     {
-//       border-left-color: #3b8070;
-//     }
-//     &:hover
-//     {
-//       background-color: darken(#3b8070, 5%);
-//       &:before
-//       {
-//         border-right-color: darken(#3b8070, 5%);
-//       }
-//       &:after
-//       {
-//         border-left-color: darken(#3b8070, 5%);
-//       }
-//     }
-//   }
-// }

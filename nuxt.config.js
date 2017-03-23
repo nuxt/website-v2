@@ -14,7 +14,7 @@ module.exports = {
   },
   css: [
     'normalize.css',
-    'highlight.js/styles/hybrid.css',
+    'highlight.js/styles/github.css',
     { src: '~assets/scss/main.scss', lang: 'scss' }
   ],
   plugins: [

@@ -1,6 +1,6 @@
 <template>
   <div>
-    <carbon-ads v-if="!isDev && $store.state._lang === 'en'" :key="$route.params.slug"></carbon-ads>
+    <carbon-ads :key="$route.params.slug"></carbon-ads>
     <h1>{{ attrs.title }}</h1>
     <blockquote>
       <p>{{ attrs.description }}</p>
@@ -38,12 +38,11 @@ import NuxtFilesTree from '~components/FilesTree.vue'
 import HtmlParser from '~components/HtmlParser.vue'
 
 export default {
-  async data ({ route, store, error, isDev }) {
+  async data ({ route, store, error }) {
     // Default data
     let data = {
       attrs: {},
-      body: '',
-      isDev: isDev
+      body: ''
     }
     let slug = route.params.slug || 'hello-world'
     const path = `/${store.state.lang.iso}/examples/${slug}`

@@ -1,6 +1,6 @@
 <template>
   <div>
-    <carbon-ads v-if="!isDev && $store.state._lang === 'en'" :key="$route.params.slug"></carbon-ads>
+    <carbon-ads :key="$route.params.slug"></carbon-ads>
     <h1>{{ attrs.title }}</h1>
     <div class="video" v-if="attrs.youtube">
       <iframe class="youtube" :src="attrs.youtube" frameborder="0" allowfullscreen></iframe>
@@ -16,13 +16,12 @@ import CarbonAds from '~components/CarbonAds.vue'
 import HtmlParser from '~components/HtmlParser.vue'
 
 export default {
-  async data ({ route, store, error, isDev }) {
+  async data ({ route, store, error }) {
     // Default data
     let data = {
       attrs: {},
       body: '',
-      docLink: '',
-      isDev: isDev
+      docLink: ''
     }
     const slug = route.params.slug || 'index'
     const path = `/${store.state.lang.iso}/guide/${slug}`

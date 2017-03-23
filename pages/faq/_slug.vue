@@ -1,6 +1,6 @@
 <template>
   <div>
-    <carbon-ads v-if="!isDev && $store.state._lang === 'en'" :key="$route.params.slug"></carbon-ads>
+    <carbon-ads :key="$route.params.slug"></carbon-ads>
     <html-parser :content="body"></html-parser>
     <p class="contribute">{{ $store.state.lang.guide.contribute }} <a :href="docLink" target="_blank">{{ $store.state.lang.guide.edit_on_github }}</a></p>
   </div>
@@ -12,13 +12,12 @@ import CarbonAds from '~components/CarbonAds.vue'
 import HtmlParser from '~components/HtmlParser.vue'
 
 export default {
-  async data ({ route, store, error, isDev }) {
+  async data ({ route, store, error }) {
     // Default data
     let data = {
       attrs: {},
       body: '',
-      docLink: '',
-      isDev: isDev
+      docLink: ''
     }
     const slug = route.params.slug || 'external-resources'
     const path = `/${store.state.lang.iso}/faq/${slug}`

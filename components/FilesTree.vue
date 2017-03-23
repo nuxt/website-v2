@@ -230,6 +230,8 @@ export default {
         overflow: auto;
         code
         {
+          font-weight: 600;
+          color: #fff;
           padding: 0;
           margin: 0;
           display: block;

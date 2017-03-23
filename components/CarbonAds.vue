@@ -1,15 +1,19 @@
 <template>
-  <div class="ad" ref="carbonads"></div>
+  <div class="ad" ref="carbonads">
+    <a href="https://vuejobs.com/?ref=nuxtjs" target="_blank" class="vuejobs" v-if="$store.state._lang !== 'en'"></a>
+  </div>
 </template>
 
 <script>
 export default {
   mounted () {
-    const script = document.createElement('script')
-    script.setAttribute('type', 'text/javascript')
-    script.setAttribute('src', '//cdn.carbonads.com/carbon.js?zoneid=1673&serve=C6AILKT&placement=nuxtjsorg')
-    script.setAttribute('id', '_carbonads_js')
-    this.$refs.carbonads.appendChild(script)
+    if (this.$store.state._lang === 'en') {
+      const script = document.createElement('script')
+      script.setAttribute('type', 'text/javascript')
+      script.setAttribute('src', '//cdn.carbonads.com/carbon.js?zoneid=1673&serve=C6AILKT&placement=nuxtjsorg')
+      script.setAttribute('id', '_carbonads_js')
+      this.$refs.carbonads.appendChild(script)
+    }
   }
 }
 </script>
@@ -35,6 +39,13 @@ export default {
     bottom: 30px;
     right: 30px;
     margin-bottom: 0;
+  }
+  .vuejobs
+  {
+    display: block;
+    width: 130px;
+    height: 100px;
+    background-image: url('/vuejobs.png');
   }
   .carbon-img
   {

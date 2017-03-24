@@ -110,7 +110,7 @@ export default {
   margin: 30px 0;
   position: relative;
   overflow: hidden;
-  background-color: #2e2f30;
+  background-color: #fcfcfc;
   &__Left
   {
     top: 0;
@@ -118,7 +118,7 @@ export default {
     bottom: 0;
     width: 100%;
     position: absolute;
-    background-color: #1a1a1a;
+    background-color: lighten(#dbdfe1, 7%);
     transition: all 0.3s;
     @media (min-width: 576px)
     {
@@ -140,8 +140,8 @@ export default {
       padding: 0 20px;
       text-transform: uppercase;
       letter-spacing: 1px;
-      background-color: #000;
-      color: #fff;
+      background-color: #dbdfe1;
+      color: #35495e;
       font-weight: 400;
       white-space: nowrap;
       text-overflow: ellipsis;
@@ -154,7 +154,7 @@ export default {
         margin-left: 15px;
         .icon, .icon:before, .icon:after
         {
-          color: #fff;
+          color: #35495e;
         }
       }
     }
@@ -172,7 +172,7 @@ export default {
   }
   &__Right
   {
-    background-color: #222;
+    background-color: #fcfcfc;
     padding-left: 100%;
     transition: all 0.3s;
     @media (min-width: 576px)
@@ -189,8 +189,8 @@ export default {
       line-height: 50px;
       padding: 0 20px;
       letter-spacing: 1px;
-      background-color: #111;
-      color: #aaa;
+      background-color: lighten(#dbdfe1, 7%);
+      color: #35495e;
       text-align: right;
       font-size: 0.9em;
       font-weight: 400;
@@ -205,7 +205,7 @@ export default {
         margin-right: 15px;
         .icon, .icon:before, .icon:after
         {
-          color: #fff;
+          color: #35495e;
         }
       }
     }
@@ -230,8 +230,6 @@ export default {
         overflow: auto;
         code
         {
-          font-weight: 600;
-          color: #fff;
           padding: 0;
           margin: 0;
           display: block;
@@ -242,7 +240,7 @@ export default {
       &__Wait
       {
         padding: 20px;
-        color: #fff;
+        color: #35495e;
         font-weight: 400;
         letter-spacing: 1px;
       }

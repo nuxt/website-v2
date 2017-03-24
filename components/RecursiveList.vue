@@ -102,7 +102,7 @@ export default {
     }
     &__Link
     {
-      color: #ddd;
+      color: #35495e;
       font-size: 0.9em;
       font-weight: 400;
       line-height: 1em;
@@ -118,14 +118,18 @@ export default {
         cursor: default;
         &:hover
         {
-          background-color: #222;
-          color: #fff;
+          background-color: #dbdfe1;
+          color: #35495e;
         }
       }
       &--active
       {
         background-color: #3b8070;
         color: #fff;
+        .icon, .icon:before, .icon:after
+        {
+          border-color: #fff !important;
+        }
       }
       .Icon
       {
@@ -144,7 +148,7 @@ export default {
         }
         .icon, .icon:before, .icon:after
         {
-          border-color: #fff;
+          border-color: #35495e;
         }
       }
     }

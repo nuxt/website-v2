@@ -8,7 +8,7 @@
     "highlight.js": "^9.8.0",
     "lodash": "^4.17.4",
     "normalize.css": "^5.0.0",
-    "nuxt": "latest"
+    "nuxt": "0.9.9"
   },
   "devDependencies": {
     "babel-eslint": "^7.1.1",
@@ -27,10 +27,10 @@
     "build-check": "nuxt build --analyze",
     "start": "nuxt start",
     "generate": "nuxt generate",
-    "deploy": "push-dir --dir=dist --branch=gh-pages --cleanup",
     "deploy-en": "surge dist/ nuxtjs.org",
     "deploy-cn": "surge dist/ cn.nuxtjs.org",
     "deploy-ru": "surge dist/ ru.nuxtjs.org",
+    "deploy-jp": "surge dist/ jp.nuxtjs.org",
     "lint": "eslint --ext .js,.vue --ignore-path .gitignore --ignore-pattern plugins/ga.js .",
     "precommit": "npm run lint"
   },

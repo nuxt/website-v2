@@ -11,11 +11,9 @@
 .VueToNuxtLogo
 {
   display: inline-block;
-  animation: turn 2s linear forwards 1s;
+  animation: turn 2s linear forwards;
   transform: rotateX(180deg);
   position: relative;
-  // height: 346px;
-  // width: 536px;
   overflow: hidden;
   height: 180px;
   width: 245px;
@@ -29,51 +27,33 @@
   height: 0;
   &--one
   {
-    // border-left: 210px solid transparent;
-    // border-right: 210px solid transparent;
-    // border-bottom: 360px solid #41B883;
     border-left: 105px solid transparent;
     border-right: 105px solid transparent;
     border-bottom: 180px solid #41B883;
   }
   &--two
   {
-    // top: 60px;
-    // left: 70px;
     top: 30px;
     left: 35px;
-    animation: goright 0.5s linear forwards 3.5s;
-    // border-left: 175px solid transparent;
-    // border-right: 175px solid transparent;
-    // border-bottom: 300px solid #3B8070;
+    animation: goright 0.5s linear forwards 2.5s;
     border-left: 87.5px solid transparent;
     border-right: 87.5px solid transparent;
     border-bottom: 150px solid #3B8070;
   }
   &--three
   {
-    // top: 120px;
-    // left: 70px;
     top: 60px;
     left: 35px;
-    animation: goright 0.5s linear forwards 3.5s;
-    // border-left: 140px solid transparent;
-    // border-right: 140px solid transparent;
-    // border-bottom: 240px solid #35495E;
+    animation: goright 0.5s linear forwards 2.5s;
     border-left: 70px solid transparent;
     border-right: 70px solid transparent;
     border-bottom: 120px solid #35495E;
   }
   &--four
   {
-    // top: 240px;
-    // left: 140px;
     top: 120px;
     left: 70px;
-    animation: godown 0.5s linear forwards 3s;
-    // border-left: 70px solid transparent;
-    // border-right: 70px solid transparent;
-    // border-bottom: 120px solid #fff;
+    animation: godown 0.5s linear forwards 2s;
     border-left: 35px solid transparent;
     border-right: 35px solid transparent;
     border-bottom: 60px solid #fff;

@@ -46,10 +46,11 @@ module.exports = {
               return `/${category}/${slug}`
             })
             .value()
+            .concat(`/${category}`)
           })
         })
       )
-      .then((routes) => _.flatten(routes))
+      .then((routes) => _(routes).flatten().uniq().value())
     }
   }
 }

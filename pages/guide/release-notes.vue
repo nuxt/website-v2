@@ -15,7 +15,7 @@ import CarbonAds from '~components/CarbonAds.vue'
 import HtmlParser from '~components/HtmlParser.vue'
 
 export default {
-  async data ({ isDev, store }) {
+  async asyncData ({ isDev, store }) {
     // Default data
     let data = {
       releases: [],

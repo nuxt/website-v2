@@ -12,7 +12,7 @@ import CarbonAds from '~components/CarbonAds.vue'
 import HtmlParser from '~components/HtmlParser.vue'
 
 export default {
-  async data ({ route, store, error }) {
+  async asyncData ({ route, store, error }) {
     // Default data
     let data = {
       attrs: {},

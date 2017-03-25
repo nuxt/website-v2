@@ -29,31 +29,27 @@ module.exports = {
   },
   loading: { color: '#41B883' },
   generate: {
-    routeParams: {
-      '/guide/:slug': menuToRouteParams('guide'),
-      '/api/:slug': menuToRouteParams('api'),
-      '/examples/:slug': menuToRouteParams('examples'),
-      '/faq/:slug': menuToRouteParams('faq')
+    routes () {
+      const lang = 'en'
+      return Promise.all(
+        ['guide', 'api', 'examples', 'faq']
+        .map((category) => {
+          return axios.get(`https://docs.api.nuxtjs.org/menu/${lang}/${category}`)
+          .then((res) => res.data || [])
+          .then((menu) => {
+            return _(menu)
+            .map('links')
+            .flatten()
+            .map((m) => m.to.slice(1))
+            .compact()
+            .map((slug) => {
+              return `/${category}/${slug}`
+            })
+            .value()
+          })
+        })
+      )
+      .then((routes) => _.flatten(routes))
     }
-  }
-}
-
-function menuToRouteParams (category) {
-  return function () {
-    return axios.get(`https://docs.api.nuxtjs.org/menu/en/${category}`)
-    .then((res) => {
-      return res.data || []
-    })
-    .then((menu) => {
-      return _(menu)
-      .map('links')
-      .flatten()
-      .map((m) => m.to.slice(1))
-      .compact()
-      .map((slug) => {
-        return { slug }
-      })
-      .value()
-    })
   }
 }

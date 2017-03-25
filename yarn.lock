@@ -3150,8 +3150,8 @@ number-is-nan@^1.0.0:
   resolved "https://registry.yarnpkg.com/number-is-nan/-/number-is-nan-1.0.1.tgz#097b602b53422a522c1afb8790318336941a011d"
 
 nuxt@^0.10.3:
-  version "0.10.3"
-  resolved "https://registry.yarnpkg.com/nuxt/-/nuxt-0.10.3.tgz#739872e43b7e3a77d8b52686d2fc20bb3bbc92bd"
+  version "0.10.4"
+  resolved "https://registry.yarnpkg.com/nuxt/-/nuxt-0.10.4.tgz#b5529e4266bbca20ac1c62e9d6bc517f28ddbbf1"
   dependencies:
     ansi-html "^0.0.7"
     autoprefixer "^6.7.7"

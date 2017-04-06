@@ -16,7 +16,7 @@
         </li>
         <li class="Landscape__List__Item">
           <a class="button button--grey" href="https://github.com/nuxt/nuxt.js" target="_blank">
-            {{ $store.state.lang.links.github }} ({{ $store.state.version }})
+            {{ $store.state.lang.links.github }} ({{ $store.state.ghVersion }})
           </a>
         </li>
       </ul>

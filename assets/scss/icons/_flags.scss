@@ -8,6 +8,10 @@
   width: 32px;
   height: 32px;
   background: url('/flags.png') no-repeat;
+  &-ko
+  {
+    background-position: -64px -32px;
+  }
   &-cn
   {
     background-position: 0 0;
@@ -26,7 +30,7 @@
   }
   &-ru
   {
-    background-position: -64px -32px;
+    background-position: 0 -64px;
   }
   &-fr
   {

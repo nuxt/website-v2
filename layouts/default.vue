@@ -33,7 +33,8 @@ export default {
       { rel: 'alternate', hreflang: 'en', href: `https://nuxtjs.org${this.$route.path}` },
       { rel: 'alternate', hreflang: 'zh', href: `https://cn.nuxtjs.org${this.$route.path}` },
       { rel: 'alternate', hreflang: 'ru', href: `https://ru.nuxtjs.org${this.$route.path}` },
-      { rel: 'alternate', hreflang: 'jp', href: `https://jp.nuxtjs.org${this.$route.path}` }
+      { rel: 'alternate', hreflang: 'jp', href: `https://jp.nuxtjs.org${this.$route.path}` },
+      { rel: 'alternate', hreflang: 'ko', href: `https://ko.nuxtjs.org${this.$route.path}` }
     ]
     link.forEach((l) => {
       if (l.href.slice(-1) !== '/') {

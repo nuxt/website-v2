@@ -23,8 +23,8 @@ export default {
         { iso: 'cn', class: 'flag-cn', url: 'https://cn.nuxtjs.org' },
         { iso: 'en', class: 'flag-en', url: 'https://nuxtjs.org' },
         { iso: 'jp', class: 'flag-jp', url: 'https://jp.nuxtjs.org' },
-        { iso: 'ru', class: 'flag-ru', url: 'https://ru.nuxtjs.org' },
-        { iso: 'ko', class: 'flag-ko', url: 'https://ko.nuxtjs.org' }
+        { iso: 'ko', class: 'flag-ko', url: 'https://ko.nuxtjs.org' },
+        { iso: 'ru', class: 'flag-ru', url: 'https://ru.nuxtjs.org' }
       ]
     }
   }

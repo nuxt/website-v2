@@ -28,10 +28,10 @@
     "start": "nuxt start",
     "generate": "nuxt generate",
     "deploy-en": "surge dist/ nuxtjs.org",
-    "deploy-cn": "surge dist/ cn.nuxtjs.org",
-    "deploy-ru": "surge dist/ ru.nuxtjs.org",
-    "deploy-jp": "surge dist/ jp.nuxtjs.org",
+    "deploy-ja": "surge dist/ ja.nuxtjs.org",
     "deploy-ko": "surge dist/ ko.nuxtjs.org",
+    "deploy-ru": "surge dist/ ru.nuxtjs.org",
+    "deploy-zh": "surge dist/ zh.nuxtjs.org",
     "lint": "eslint --ext .js,.vue --ignore-path .gitignore --ignore-pattern plugins/ga.js .",
     "precommit": "npm run lint"
   },

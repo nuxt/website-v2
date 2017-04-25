@@ -20,11 +20,11 @@ export default {
     flag () { return 'flag-' + this.$store.state.lang.iso },
     langs () {
       return [
-        { iso: 'zh', class: 'flag-cn', url: 'https://zh.nuxtjs.org' },
         { iso: 'en', class: 'flag-en', url: 'https://nuxtjs.org' },
         { iso: 'ja', class: 'flag-jp', url: 'https://ja.nuxtjs.org' },
         { iso: 'ko', class: 'flag-ko', url: 'https://ko.nuxtjs.org' },
-        { iso: 'ru', class: 'flag-ru', url: 'https://ru.nuxtjs.org' }
+        { iso: 'ru', class: 'flag-ru', url: 'https://ru.nuxtjs.org' },
+        { iso: 'zh', class: 'flag-cn', url: 'https://zh.nuxtjs.org' }
       ]
     }
   }

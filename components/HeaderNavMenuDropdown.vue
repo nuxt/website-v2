@@ -90,7 +90,7 @@ export default {
     letter-spacing: 0.25px;
     @media (min-width: 991px)
     {
-      height: 100%;
+      height: 79px;
       padding-right: 15px;
     }
     &:after

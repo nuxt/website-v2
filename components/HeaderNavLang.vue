@@ -58,7 +58,7 @@ export default {
     @media (min-width: 991px)
     {
       padding: 0;
-      height: 100%;
+      height: 79px;
       border-bottom: none;
     }
   }

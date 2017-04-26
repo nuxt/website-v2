@@ -68,7 +68,7 @@ export default {
     {
       flex: 3;
       order: 1;
-      height: inherit;
+      height: 79px;
       border-bottom: none;
     }
   }
@@ -79,6 +79,7 @@ export default {
     @media (min-width: 991px)
     {
       width: 80px;
+      height: 79px;
     }
   }
   &__Menu
@@ -90,6 +91,7 @@ export default {
     {
       flex: 4;
       order: 2;
+      height: 79px;
       border-bottom: none;
     }
   }

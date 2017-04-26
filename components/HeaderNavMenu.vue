@@ -83,7 +83,7 @@ export default {
       }
       @media (min-width: 991px)
       {
-        height: 100%;
+        height: 79px;
       }
     }
     .nuxt-link-active, .nuxt-link-active:hover

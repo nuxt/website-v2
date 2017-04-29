@@ -6,8 +6,8 @@ Vue.use(Vuex)
 
 const store = new Vuex.Store({
   state: {
-    version: '0.10.6',
-    ghVersion: '0.10.6',
+    version: '0.10.7',
+    ghVersion: '0.10.7',
     visibleHeader: false,
     visibleAffix: false,
     apiURI: 'https://docs.api.nuxtjs.org',

@@ -1,10 +1,7 @@
 import axios from 'axios'
-import Vue from 'vue'
 import Vuex from 'vuex'
 
-Vue.use(Vuex)
-
-const store = new Vuex.Store({
+const store = () => new Vuex.Store({
   state: {
     version: '0.10.7',
     ghVersion: '0.10.7',

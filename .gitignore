@@ -8,3 +8,4 @@ npm-debug.log
 .nuxt
 dist
 .vscode
+.idea

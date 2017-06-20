@@ -4,22 +4,24 @@
   "description": "Nuxt.js official website",
   "main": "index.js",
   "dependencies": {
-    "axios": "^0.15.3",
-    "highlight.js": "^9.10.0",
+    "axios": "^0.16.2",
+    "highlight.js": "^9.12.0",
     "lodash": "^4.17.4",
-    "normalize.css": "^5.0.0",
-    "nuxt": "^0.10.3"
+    "normalize.css": "^7.0.0",
+    "nuxt": "1.0.0-alpha.4"
   },
   "devDependencies": {
-    "babel-eslint": "^7.2.1",
-    "eslint": "^3.18.0",
-    "eslint-config-standard": "^7.1.0",
-    "eslint-plugin-html": "^2.0.1",
+    "babel-eslint": "^7.2.3",
+    "eslint": "^4.0.0",
+    "eslint-config-standard": "^10.2.1",
+    "eslint-plugin-html": "^3.0.0",
+    "eslint-plugin-import": "^2.3.0",
+    "eslint-plugin-node": "^5.0.0",
     "eslint-plugin-promise": "^3.5.0",
-    "eslint-plugin-standard": "^2.1.1",
-    "node-sass": "^4.5.1",
+    "eslint-plugin-standard": "^3.0.1",
+    "node-sass": "^4.5.3",
     "push-dir": "^0.4.1",
-    "sass-loader": "^6.0.3"
+    "sass-loader": "^6.0.6"
   },
   "scripts": {
     "dev": "nuxt",

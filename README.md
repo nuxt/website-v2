@@ -1,6 +1,6 @@
 # nuxtjs.org
 
-Static Generated Vuejs web application built with [nuxtjs](https://github.com/nuxt/nuxtjs) and hosted on Github Pages.
+Static Generated Vuejs web application built with [Nuxt.js](https://github.com/nuxt/nuxt.js) and hosted on Github Pages.
 
 # cn.nuxtjs.org
 

@@ -1,6 +1,6 @@
 # nuxtjs.org
 
-Static Generated Vuejs web application built with [Nuxt.js](https://github.com/nuxt/nuxt.js) and hosted on Github Pages.
+Universal Vue.js Application built with [Nuxt.js](https://github.com/nuxt/nuxt.js).
 
 # cn.nuxtjs.org
 
@@ -14,7 +14,17 @@ Chinese translation of primary Nuxt.js documentation site. Supported by [AOTU La
 
 First, you need to setup the docs api server, see [https://github.com/nuxt/docs](https://github.com/nuxt/docs).
 
-Then, in another tab, start a dev server on `localhost:3000`
+Update your `/etc/hosts` to have the following lines:
+
+```
+127.0.0.1       nuxt
+127.0.0.1       ja.nuxt
+127.0.0.1       ko.nuxt
+127.0.0.1       ru.nuxt
+127.0.0.1       zh.nuxt
+```
+
+Then, in another tab, start a dev server on `http://nuxt:3000`
 
 ```bash
 npm install

@@ -5,7 +5,7 @@
     </div>
     <ul class="Lang__List" :class="{ 'Lang__List--visible': show }">
       <li class="Lang__List__Item" v-for="lang in langs" v-if="lang.iso !== $store.state.lang.iso">
-        <a class="flag " :class="lang.class" :href="lang.url + $route.path"></a>
+        <a class="flag" :class="lang.class" :href="lang.url + $route.path"></a>
       </li>
     </ul>
   </div>

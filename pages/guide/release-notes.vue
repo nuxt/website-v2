@@ -1,6 +1,6 @@
 <template>
   <div>
-    <carbon-ads v-if="!isDev && $store.state._lang === 'en'" :key="$route.params.slug"></carbon-ads>
+    <carbon-ads v-if="!isDev && $store.state.locale === 'en'" :key="$route.params.slug"></carbon-ads>
     <h1>{{ $store.state.lang.guide.release_notes }}</h1>
     <div v-for="release in releases">
       <h2 :id="release.name">{{ release.name }}</h2>
@@ -11,8 +11,8 @@
 
 <script>
 import axios from 'axios'
-import CarbonAds from '~components/CarbonAds.vue'
-import HtmlParser from '~components/HtmlParser.vue'
+import CarbonAds from '~/components/CarbonAds.vue'
+import HtmlParser from '~/components/HtmlParser.vue'
 
 export default {
   async asyncData ({ isDev, store }) {

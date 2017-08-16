@@ -3,30 +3,56 @@ import Vuex from 'vuex'
 
 const store = () => new Vuex.Store({
   state: {
-    version: '0.10.7',
-    ghVersion: '0.10.7',
+    docVersion: '',
+    ghVersion: '',
     visibleHeader: false,
     visibleAffix: false,
     apiURI: 'https://docs.api.nuxtjs.org',
-    _lang: 'en',
+    locale: 'en',
     lang: {},
     menu: {}
   },
   mutations: {
     toggle (state, key) {
       state[key] = !state[key]
+    },
+    setApiURI (state, apiURI) {
+      state.apiURI = apiURI
+    },
+    setDocVersion (state, docVersion) {
+      state.docVersion = docVersion
+    },
+    setGhVersion (state, ghVersion) {
+      state.ghVersion = ghVersion
+    },
+    setLocale (state, locale) {
+      state.locale = locale
+    },
+    setLang (state, lang) {
+      state.lang = lang
+    },
+    setMenu (state, menu) {
+      state.menu = menu
     }
   },
   actions: {
-    async nuxtServerInit ({ state }, { isDev }) {
+    async nuxtServerInit ({ state, commit }, { isDev, req }) {
       if (isDev) {
-        state.apiURI = 'http://localhost:4000'
+        commit('setApiURI', 'http://localhost:4000')
+      }
+      const hostParts = (req.headers.host || '' ).replace('.org', '').split('.')
+      // If url like ja.nuxtjs.org
+      if (hostParts.length === 2) {
+        commit('setLocale', hostParts[0])
       }
       try {
-        const resLang = await axios(state.apiURI + '/lang/' + state._lang)
-        state.lang = resLang.data
-        const resMenu = await axios(state.apiURI + '/menu/' + state._lang)
-        state.menu = resMenu.data
+        const resReleases = await axios(state.apiURI + '/releases')
+        commit('setGhVersion', resReleases.data[0].name)
+        const resLang = await axios(state.apiURI + '/lang/' + state.locale)
+        commit('setLang', resLang.data)
+        commit('setDocVersion', resLang.data.docVersion)
+        const resMenu = await axios(state.apiURI + '/menu/' + state.locale)
+        commit('setMenu', resMenu.data)
       } catch (e) {
         console.error('Error on [nuxtServerInit] action, please run the docs server.') // eslint-disable-line no-console
       }

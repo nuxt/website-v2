@@ -11,8 +11,8 @@
 </template>
 
 <script>
-import NuxtAffix from '~components/Affix.vue'
-import NuxtFooter from '~components/Footer.vue'
+import NuxtAffix from '~/components/Affix.vue'
+import NuxtFooter from '~/components/Footer.vue'
 
 export default {
   computed: {

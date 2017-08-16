@@ -8,7 +8,7 @@
 </template>
 
 <script>
-import Navbar from '~components/Header.vue'
+import Navbar from '~/components/Header.vue'
 
 export default {
   watch: {
@@ -25,8 +25,8 @@ export default {
   },
   head () {
     let canonical = `https://nuxtjs.org${this.$route.path}`
-    if (this.$store.state._lang !== 'en') {
-      canonical = `https://${this.$store.state._lang}.nuxtjs.org${this.$route.path}`
+    if (this.$store.state.locale !== 'en') {
+      canonical = `https://${this.$store.state.locale}.nuxtjs.org${this.$route.path}`
     }
     let link = [
       { rel: 'canonical', href: canonical },
@@ -42,7 +42,7 @@ export default {
       }
     })
     return {
-      htmlAttrs: { lang: this.$store.state._lang },
+      htmlAttrs: { lang: this.$store.state.locale },
       link
     }
   },

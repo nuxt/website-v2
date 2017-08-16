@@ -33,9 +33,9 @@
 
 <script>
 import axios from 'axios'
-import CarbonAds from '~components/CarbonAds.vue'
-import NuxtFilesTree from '~components/FilesTree.vue'
-import HtmlParser from '~components/HtmlParser.vue'
+import CarbonAds from '~/components/CarbonAds.vue'
+import NuxtFilesTree from '~/components/FilesTree.vue'
+import HtmlParser from '~/components/HtmlParser.vue'
 
 export default {
   async asyncData ({ route, store, error }) {

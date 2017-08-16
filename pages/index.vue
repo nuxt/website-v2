@@ -26,8 +26,8 @@
 </template>
 
 <script>
-import NuxtLogo from '~components/VueToNuxtLogo.vue'
-import NuxtFooter from '~components/Footer.vue'
+import NuxtLogo from '~/components/VueToNuxtLogo.vue'
+import NuxtFooter from '~/components/Footer.vue'
 
 export default {
   components: {

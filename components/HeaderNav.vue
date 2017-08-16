@@ -13,9 +13,9 @@
 </template>
 
 <script>
-import NuxtHeaderNavSearch from '~components/HeaderNavSearch.vue'
-import NuxtHeaderNavMenu from '~components/HeaderNavMenu.vue'
-import NuxtHeaderNavLang from '~components/HeaderNavLang.vue'
+import NuxtHeaderNavSearch from '~/components/HeaderNavSearch.vue'
+import NuxtHeaderNavMenu from '~/components/HeaderNavMenu.vue'
+import NuxtHeaderNavLang from '~/components/HeaderNavLang.vue'
 
 export default {
   computed: {

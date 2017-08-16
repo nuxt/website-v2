@@ -28,7 +28,7 @@
 </template>
 
 <script>
-import NuxtHeaderNavMenuDropdown from '~components/HeaderNavMenuDropdown.vue'
+import NuxtHeaderNavMenuDropdown from '~/components/HeaderNavMenuDropdown.vue'
 
 export default {
   components: {

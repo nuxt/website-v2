@@ -15,10 +15,10 @@ module.exports = {
   css: [
     'normalize.css',
     'highlight.js/styles/github.css',
-    { src: '~assets/scss/main.scss', lang: 'scss' }
+    '~assets/scss/main.scss'
   ],
   plugins: [
-    '~plugins/ga.js'
+    '~/plugins/ga.js'
   ],
   build: {
     vendor: ['axios']

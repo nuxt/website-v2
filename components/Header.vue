@@ -14,7 +14,7 @@
 </template>
 
 <script>
-import NuxtHeaderNav from '~components/HeaderNav.vue'
+import NuxtHeaderNav from '~/components/HeaderNav.vue'
 
 export default {
   computed: {

@@ -18,7 +18,7 @@ module.exports = {
     '~assets/scss/main.scss'
   ],
   plugins: [
-    '~/plugins/ga.js'
+    { src: '~/plugins/ga.js', ssr: false }
   ],
   build: {
     vendor: ['axios']

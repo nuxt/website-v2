@@ -3423,7 +3423,7 @@ number-is-nan@^1.0.0:
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/number-is-nan/-/number-is-nan-1.0.1.tgz#097b602b53422a522c1afb8790318336941a011d"
 
-nuxt@1.0.0-rc4:
+nuxt@^1.0.0-rc4:
   version "1.0.0-rc4"
   resolved "https://registry.yarnpkg.com/nuxt/-/nuxt-1.0.0-rc4.tgz#e7b94473cd2652afa7236e12fa5d904b2c496b9a"
   dependencies:

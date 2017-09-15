@@ -4,7 +4,7 @@
       {{ $store.state.lang.links.ecosystem }}
     </div>
     <ul class="Dropdown__List" :class="{ 'Dropdown__List--visible': show }">
-      <li class="Dropdown__List__Item" v-for="item in list">
+      <li class="Dropdown__List__Item" v-for="item in list" :key="item.name">
         <a class="Dropdown__List__Item__Link" :href="item.path" :target="item.target">
           {{ item.name }}
         </a>

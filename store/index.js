@@ -56,6 +56,7 @@ const store = () => new Vuex.Store({
         commit('setMenu', resMenu.data)
       } catch (e) {
         console.error('Error on [nuxtServerInit] action, please run the docs server.') // eslint-disable-line no-console
+        console.error(e) // eslint-disable-line no-console
       }
     }
   }

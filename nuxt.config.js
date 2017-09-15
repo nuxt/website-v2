@@ -1,3 +1,7 @@
+if (process.env.npm_lifecycle_event === 'start') {
+  require('@risingstack/trace');
+}
+
 module.exports = {
   head: {
     meta: [

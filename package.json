@@ -13,9 +13,9 @@
   },
   "devDependencies": {
     "babel-eslint": "^8.0.0",
-    "eslint": "^4.6.1",
+    "eslint": "^4.7.1",
     "eslint-config-standard": "^10.2.1",
-    "eslint-plugin-html": "^3.2.1",
+    "eslint-plugin-html": "^3.2.2",
     "eslint-plugin-import": "^2.7.0",
     "eslint-plugin-node": "^5.1.1",
     "eslint-plugin-promise": "^3.5.0",

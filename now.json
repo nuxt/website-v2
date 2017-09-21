@@ -1,0 +1,11 @@
+{
+  "name": "nuxtjs-website",
+  "alias": [
+    "nuxtjs.org",
+    "www.nuxtjs.org",
+    "ja.nuxtjs.org",
+    "ko.nuxtjs.org",
+    "ru.nuxtjs.org",
+    "zh.nuxtjs.org"
+  ]
+}

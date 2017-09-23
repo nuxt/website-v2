@@ -292,11 +292,11 @@ export default {
             width: 0;
             height: 0;
             top: 8px;
-            left: -13px;
+            left: -16px;
             position: absolute;
-            border-left: 5px solid #DBDFE1;
-            border-top: 5px solid transparent;
-            border-bottom: 5px solid transparent;
+            border-bottom: 9px solid #DBDFE1;
+            border-right: 5px solid transparent;
+            border-left: 5px solid transparent;
           }
           &__Link
           {

@@ -1,6 +1,6 @@
 <template>
   <div>
-    <carbon-ads :key="$route.params.slug"></carbon-ads>
+    <carbon-ads :key="$route.params.slug"/>
     <h1>{{ attrs.title }}</h1>
     <blockquote>
       <p>{{ attrs.description }}</p>
@@ -27,7 +27,7 @@
         {{ $store.state.lang.links.documentation }}
       </nuxt-link>
     </div>
-    <html-parser :content="body"></html-parser>
+    <html-parser :content="body"/>
   </div>
 </template>
 

@@ -1,12 +1,12 @@
 <template>
   <div>
-    <carbon-ads :key="$route.params.slug"></carbon-ads>
+    <carbon-ads :key="$route.params.slug"/>
     <h1>{{ attrs.title }}</h1>
     <div class="video" v-if="attrs.youtube">
       <iframe class="youtube" :src="attrs.youtube" frameborder="0" allowfullscreen></iframe>
     </div>
-    <html-parser :content="body"></html-parser>
-    <p class="contribute">{{ $store.state.lang.guide.contribute }} <a :href="docLink" target="_blank">{{ $store.state.lang.guide.edit_on_github }}</a></p>
+    <html-parser :content="body"/>
+    <contribute :doc-link="docLink"/>
   </div>
 </template>
 
@@ -14,6 +14,7 @@
 import axios from 'axios'
 import CarbonAds from '~/components/CarbonAds.vue'
 import HtmlParser from '~/components/HtmlParser.vue'
+import Contribute from '~/components/Contribute.vue'
 
 export default {
   async asyncData ({ route, store, error }) {
@@ -58,7 +59,8 @@ export default {
   },
   components: {
     CarbonAds,
-    HtmlParser
+    HtmlParser,
+    Contribute
   }
 }
 </script>

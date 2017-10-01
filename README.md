@@ -24,7 +24,7 @@ Update your `/etc/hosts` to have the following lines:
 127.0.0.1       zh.nuxt
 ```
 
-Then, in another tab, start a dev server on `http://nuxt:3000`
+Then on another tab, start a dev server on `http://nuxt:3000`
 
 ```bash
 npm install

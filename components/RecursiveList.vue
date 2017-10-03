@@ -1,6 +1,6 @@
 <template>
   <ul class="RecursiveList">
-    <li class="RecursiveList__Item" v-for="file in files">
+    <li class="RecursiveList__Item" v-for="file in files" :key="file.path">
       <div :class="linkClass(file)" @click="changeFile(file)">
         <div class="Icon">
           <div class="icon" :class="{'folder': file.type === 'dir', 'file': file.type === 'file'}"></div>

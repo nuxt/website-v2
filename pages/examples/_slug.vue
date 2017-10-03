@@ -63,7 +63,7 @@ export default {
   },
   computed: {
     downloadLink () {
-      return 'https://minhaskamal.github.io/DownGit/#/home?url=https://github.com/nuxt/nuxt.js/tree/master/examples/' + this.attrs.github
+      return 'https://minhaskamal.github.io/DownGit/#/home?url=https://github.com/nuxt/nuxt.js/tree/dev/examples/' + this.attrs.github
     }
   },
   scrollToTop: true,

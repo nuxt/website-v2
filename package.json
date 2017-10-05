@@ -4,7 +4,6 @@
   "description": "Nuxt.js official website",
   "main": "index.js",
   "dependencies": {
-    "@risingstack/trace": "^3.18.0",
     "axios": "^0.16.2",
     "highlight.js": "^9.12.0",
     "lodash": "^4.17.4",
@@ -28,7 +27,7 @@
     "dev": "nuxt",
     "build": "nuxt build",
     "build-check": "nuxt build --analyze",
-    "start": "nuxt start",
+    "start": "pm2 start start.js",
     "lint": "eslint --ext .js,.vue --ignore-path .gitignore --ignore-pattern plugins/ga.js .",
     "precommit": "npm run lint"
   },

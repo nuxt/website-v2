@@ -27,7 +27,7 @@
     "dev": "nuxt",
     "build": "nuxt build",
     "build-check": "nuxt build --analyze",
-    "start": "pm2 start start.js",
+    "start": "nuxt start",
     "lint": "eslint --ext .js,.vue --ignore-path .gitignore --ignore-pattern plugins/ga.js .",
     "precommit": "npm run lint"
   },

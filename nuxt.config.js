@@ -1,7 +1,3 @@
-if (process.env.npm_lifecycle_event === 'start') {
-  require('@risingstack/trace');
-}
-
 module.exports = {
   head: {
     meta: [
@@ -9,8 +5,7 @@ module.exports = {
       { name: 'viewport', content: 'width=device-width, initial-scale=1' }
     ],
     link: [
-      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
-      { rel: 'stylesheet', href: 'https://cdn.jsdelivr.net/docsearch.js/2/docsearch.min.css' }
+      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
     ]
   },
   css: [

@@ -7,7 +7,7 @@
   display: inline-block;
   width: 32px;
   height: 32px;
-  background: url('/flags.png') no-repeat;
+  background: url('~/static/flags.png') no-repeat;
   &-ko
   {
     background-position: -64px -32px;

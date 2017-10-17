@@ -5,19 +5,24 @@
   "main": "index.js",
   "dependencies": {
     "axios": "^0.16.2",
+    "express": "^4.16.2",
     "highlight.js": "^9.12.0",
     "lodash": "^4.17.4",
+    "newrelic": "^2.2.2",
     "normalize.css": "^7.0.0",
-    "nuxt": "^1.0.0-rc11"
+    "nuxt": "1.0.0-rc11",
+    "raven": "^2.2.1",
+    "raven-js": "^3.18.1",
+    "timber": "^3.0.4"
   },
   "devDependencies": {
     "babel-eslint": "^8.0.0",
-    "eslint": "^4.7.1",
+    "eslint": "^4.9.0",
     "eslint-config-standard": "^10.2.1",
     "eslint-plugin-html": "^3.2.2",
     "eslint-plugin-import": "^2.7.0",
     "eslint-plugin-node": "^5.1.1",
-    "eslint-plugin-promise": "^3.5.0",
+    "eslint-plugin-promise": "^3.6.0",
     "eslint-plugin-standard": "^3.0.1",
     "node-sass": "^4.5.3",
     "push-dir": "^0.4.1",
@@ -27,7 +32,7 @@
     "dev": "nuxt",
     "build": "nuxt build",
     "build-check": "nuxt build --analyze",
-    "start": "nuxt start",
+    "start": "NODE_ENV=production node start.js",
     "lint": "eslint --ext .js,.vue --ignore-path .gitignore --ignore-pattern plugins/ga.js .",
     "precommit": "npm run lint"
   },

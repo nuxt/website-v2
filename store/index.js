@@ -13,34 +13,34 @@ const store = () => new Vuex.Store({
     menu: {}
   },
   mutations: {
-    toggle (state, key) {
+    toggle(state, key) {
       state[key] = !state[key]
     },
-    setApiURI (state, apiURI) {
+    setApiURI(state, apiURI) {
       state.apiURI = apiURI
     },
-    setDocVersion (state, docVersion) {
+    setDocVersion(state, docVersion) {
       state.docVersion = docVersion
     },
-    setGhVersion (state, ghVersion) {
+    setGhVersion(state, ghVersion) {
       state.ghVersion = ghVersion
     },
-    setLocale (state, locale) {
+    setLocale(state, locale) {
       state.locale = locale
     },
-    setLang (state, lang) {
+    setLang(state, lang) {
       state.lang = lang
     },
-    setMenu (state, menu) {
+    setMenu(state, menu) {
       state.menu = menu
     }
   },
   actions: {
-    async nuxtServerInit ({ state, commit }, { isDev, req, redirect }) {
+    async nuxtServerInit({ state, commit }, { isDev, req, redirect }) {
       if (isDev) {
         commit('setApiURI', 'http://localhost:4000')
       }
-      const hostParts = (req.headers.host || '' ).replace('.org', '').split('.')
+      const hostParts = (req.headers.host || '').replace('.org', '').split('.')
       // If url like ja.nuxtjs.org
       if (hostParts.length === 2) {
         if (hostParts[0] === 'www') return redirect(301, 'https://nuxtjs.org' + req.url)
@@ -56,7 +56,6 @@ const store = () => new Vuex.Store({
         commit('setMenu', resMenu.data)
       } catch (e) {
         console.error('Error on [nuxtServerInit] action, please run the docs server.') // eslint-disable-line no-console
-        console.error(e) // eslint-disable-line no-console
       }
     }
   }

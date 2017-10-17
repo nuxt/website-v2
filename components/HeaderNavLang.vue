@@ -13,12 +13,12 @@
 
 <script>
 export default {
-  data () {
+  data() {
     return { show: false }
   },
   computed: {
-    flag () { return 'flag-' + this.$store.state.lang.iso },
-    langs () {
+    flag() { return 'flag-' + this.$store.state.lang.iso },
+    langs() {
       return [
         { iso: 'en', class: 'flag-en', url: 'https://nuxtjs.org' },
         { iso: 'ja', class: 'flag-ja', url: 'https://ja.nuxtjs.org' },
@@ -33,45 +33,37 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.Lang
-{
+.Lang {
   width: 100%;
   display: flex;
   flex-direction: column;
-  @media (min-width: 991px)
-  {
-    &:hover
-    {
-      .Lang__List
-      {
+  @media (min-width: 991px) {
+    &:hover {
+      .Lang__List {
         display: flex;
       }
     }
   }
-  &__Current
-  {
+  &__Current {
     height: 60px;
     display: flex;
     cursor: pointer;
     align-items: center;
     justify-content: center;
     border-bottom: 1px solid #dbdfe1;
-    @media (min-width: 991px)
-    {
+    @media (min-width: 991px) {
       padding: 0;
       height: 79px;
       border-bottom: none;
     }
   }
-  &__List
-  {
+  &__List {
     display: none;
     flex-direction: column;
     list-style: none;
     margin: 0;
     padding: 0;
-    @media (min-width: 991px)
-    {
+    @media (min-width: 991px) {
       width: 82px;
       position: absolute;
       top: 100%;
@@ -81,16 +73,13 @@ export default {
       border-left: 1px solid #dbdfe1;
       border-right: 1px solid #dbdfe1;
     }
-    &--visible
-    {
+    &--visible {
       display: flex;
-      @media (min-width: 991px)
-      {
+      @media (min-width: 991px) {
         display: none;
       }
     }
-    &__Item
-    {
+    &__Item {
       height: 60px;
       display: flex;
       align-items: center;

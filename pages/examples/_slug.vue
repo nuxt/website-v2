@@ -1,6 +1,6 @@
 <template>
   <div>
-    <carbon-ads :key="$route.params.slug"/>
+    <carbon-ads :key="$route.params.slug" />
     <h1>{{ attrs.title }}</h1>
     <blockquote>
       <p>{{ attrs.description }}</p>
@@ -12,22 +12,28 @@
     <nuxt-files-tree :example="attrs.github" :key="attrs.github"></nuxt-files-tree>
     <div>
       <a v-if="attrs.livedemo" :href="attrs.livedemo" class="button button--grey" target="_blank">
-        <span><div class="icon eye"></div></span>
+        <span>
+          <div class="icon eye"></div>
+        </span>
         {{ $store.state.lang.links.live_demo }}
       </a>
       <a v-if="attrs.liveedit" :href="attrs.liveedit" class="button button--grey" target="_blank">
-        <span><div class="icon edit"></div></span>
+        <span>
+          <div class="icon edit"></div>
+        </span>
         {{ $store.state.lang.links.live_edit }}
       </a>
       <a :href="downloadLink" class="button button--grey" target="_blank">
-        <span><div class="icon download"></div></span>
+        <span>
+          <div class="icon download"></div>
+        </span>
         {{ $store.state.lang.links.download }}
       </a>
       <nuxt-link v-if="attrs.documentation" :to="attrs.documentation" class="button button--grey">
         {{ $store.state.lang.links.documentation }}
       </nuxt-link>
     </div>
-    <html-parser :content="body"/>
+    <html-parser :content="body" />
   </div>
 </template>
 
@@ -38,7 +44,7 @@ import NuxtFilesTree from '~/components/FilesTree.vue'
 import HtmlParser from '~/components/HtmlParser.vue'
 
 export default {
-  async asyncData ({ route, store, error }) {
+  async asyncData({ route, store, error }) {
     // Default data
     let data = {
       attrs: {},
@@ -62,12 +68,12 @@ export default {
     return data
   },
   computed: {
-    downloadLink () {
+    downloadLink() {
       return 'https://minhaskamal.github.io/DownGit/#/home?url=https://github.com/nuxt/nuxt.js/tree/dev/examples/' + this.attrs.github
     }
   },
   scrollToTop: true,
-  head () {
+  head() {
     return {
       title: this.attrs.title,
       titleTemplate: '%s - Nuxt.js',
@@ -85,12 +91,12 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.button
-{
+.button {
   margin-bottom: 15px;
   margin-right: 15px;
-  .icon, .icon:before, .icon:after
-  {
+  .icon,
+  .icon:before,
+  .icon:after {
     color: #fff;
   }
 }

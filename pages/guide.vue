@@ -1,6 +1,6 @@
 <template>
   <div class="category">
-    <nuxt-affix :list="list" category="guide"/>
+    <nuxt-affix :list="list" category="guide" />
     <div class="category__content Content Content--hasCarbon" :class="{'category__content--hidden': visible}">
       <nuxt-child/>
     </div>
@@ -16,8 +16,8 @@ import NuxtFooter from '~/components/Footer.vue'
 
 export default {
   computed: {
-    visible () { return this.$store.state.visibleAffix },
-    list () { return this.$store.state.menu.guide }
+    visible() { return this.$store.state.visibleAffix },
+    list() { return this.$store.state.menu.guide }
   },
   components: {
     NuxtAffix,

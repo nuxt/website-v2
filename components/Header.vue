@@ -1,7 +1,7 @@
 <template>
   <header class="Header">
     <nuxt-link class="Header__Logo" to="/">
-      <img src="~static/logo_nav.png" alt="Nuxt"/>
+      <img src="~static/logo_nav.png" alt="Nuxt" />
       <h1 class="Header__Logo__Text">NUXT</h1>
     </nuxt-link>
     <div class="Header__Toggler">
@@ -18,10 +18,10 @@ import NuxtHeaderNav from '~/components/HeaderNav.vue'
 
 export default {
   computed: {
-    visible () { return this.$store.state.visibleHeader }
+    visible() { return this.$store.state.visibleHeader }
   },
   methods: {
-    toggle () { this.$store.commit('toggle', 'visibleHeader') }
+    toggle() { this.$store.commit('toggle', 'visibleHeader') }
   },
   components: {
     NuxtHeaderNav
@@ -30,8 +30,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.Header
-{
+.Header {
   top: 0;
   width: 100%;
   height: 60px;
@@ -42,39 +41,32 @@ export default {
   flex-direction: row;
   background-color: #fff;
   border-bottom: 1px solid #dbdfe1;
-  @media (min-width: 991px)
-  {
+  @media (min-width: 991px) {
     height: 80px;
     padding: 0 30px;
   }
-  &__Logo
-  {
+  &__Logo {
     display: flex;
     align-items: center;
-    @media (min-width: 991px)
-    {
+    @media (min-width: 991px) {
       width: 189px;
       border-right: 1px solid #dbdfe1;
     }
-    &__Text
-    {
+    &__Text {
       margin: 0;
       width: 0;
       overflow: hidden;
     }
   }
-  &__Toggler
-  {
+  &__Toggler {
     display: flex;
     flex: 1;
     align-items: center;
     justify-content: flex-end;
-    @media (min-width: 991px)
-    {
+    @media (min-width: 991px) {
       display: none;
     }
-    &__Button
-    {
+    &__Button {
       display: flex;
       width: 25px;
       height: 20px;

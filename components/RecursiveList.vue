@@ -24,56 +24,56 @@ export default {
       required: true
     }
   },
-  beforeCreate () {
+  beforeCreate() {
     // https://vuejs.org/v2/guide/components.html#Circular-References-Between-Components
     this.$options.components.RecursiveList = require('./RecursiveList.vue')
   },
-  mounted () {
+  mounted() {
     return axios({
       url: 'https://api.github.com/repos/nuxt/nuxt.js/contents/' + this.path,
       headers: {
         'Authorization': `token ${process.env.githubToken}`
       }
     })
-    .then((res) => {
-      res.data.sort((f1, f2) => {
-        // Same type, order by name
-        if (f1.type === f2.type) {
-          let n1 = f1.name.toUpperCase()
-          var n2 = f2.name.toUpperCase()
-          if (n1 < n2) return -1
-          if (n1 > n2) return 1
-          return 0
-        }
-        if (f1.type === 'dir') return -1
-        return 1
-      })
-      if (!this.currentFile) {
-        let f = res.data.find((file) => {
-          return file.name === 'package.json'
+      .then((res) => {
+        res.data.sort((f1, f2) => {
+          // Same type, order by name
+          if (f1.type === f2.type) {
+            let n1 = f1.name.toUpperCase()
+            var n2 = f2.name.toUpperCase()
+            if (n1 < n2) return -1
+            if (n1 > n2) return 1
+            return 0
+          }
+          if (f1.type === 'dir') return -1
+          return 1
         })
-        if (f) this.changeFile(f)
-      }
-      this.files = res.data.filter((f) => f.name.toLowerCase() !== 'readme.md')
-    })
+        if (!this.currentFile) {
+          let f = res.data.find((file) => {
+            return file.name === 'package.json'
+          })
+          if (f) this.changeFile(f)
+        }
+        this.files = res.data.filter((f) => f.name.toLowerCase() !== 'readme.md')
+      })
   },
-  data () {
+  data() {
     return {
       files: []
     }
   },
   computed: {
-    currentFile () {
+    currentFile() {
       return this.$parent.currentFile
     }
   },
   methods: {
-    linkClass (f) {
+    linkClass(f) {
       let c = 'RecursiveList__Item__Link '
       c += (this.currentFile && this.currentFile.path === f.path) ? 'RecursiveList__Item__Link--active' : 'RecursiveList__Item__Link--' + f.type
       return c
     },
-    changeFile (f) {
+    changeFile(f) {
       if (f.type === 'file' && (!this.currentFile || this.currentFile.path !== f.path)) {
         this.$emit('changeFile', f)
       }
@@ -83,25 +83,20 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.RecursiveList
-{
+.RecursiveList {
   padding: 0;
   padding-left: 10px;
   list-style: none;
   margin: 0;
-  &__Item
-  {
+  &__Item {
     padding: 1px 0;
-    &:last-child
-    {
+    &:last-child {
       padding-bottom: 0;
     }
-    &:first-child
-    {
+    &:first-child {
       padding-top: 2px;
     }
-    &__Link
-    {
+    &__Link {
       color: #35495e;
       font-size: 0.9em;
       font-weight: 400;
@@ -109,45 +104,40 @@ export default {
       letter-spacing: 0.5px;
       border-radius: 5px;
       padding: 10px 5px;
-      &--dir
-      {
+      &--dir {
         text-transform: uppercase;
       }
-      &--file
-      {
+      &--file {
         cursor: default;
-        &:hover
-        {
+        &:hover {
           background-color: #dbdfe1;
           color: #35495e;
         }
       }
-      &--active
-      {
+      &--active {
         background-color: #3b8070;
         color: #fff;
-        .icon, .icon:before, .icon:after
-        {
+        .icon,
+        .icon:before,
+        .icon:after {
           border-color: #fff !important;
         }
       }
-      .Icon
-      {
+      .Icon {
         float: left;
         padding: 0 5px;
         margin-right: 10px;
-        .file
-        {
+        .file {
           margin-left: 0;
           margin-top: 0;
         }
-        .folder
-        {
+        .folder {
           margin-left: 0;
           margin-top: 3px;
         }
-        .icon, .icon:before, .icon:after
-        {
+        .icon,
+        .icon:before,
+        .icon:after {
           border-color: #35495e;
         }
       }

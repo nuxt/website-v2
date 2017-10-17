@@ -6,7 +6,7 @@
 
 <script>
 export default {
-  mounted () {
+  mounted() {
     if (this.$store.state.locale === 'en') {
       this.loadScript()
     }
@@ -21,7 +21,7 @@ export default {
       script.setAttribute('src', '//m.servedby-buysellads.com/monetization.js')
     },
     scriptLoaded() {
-      if (typeof _bsa === 'undefined') return console.warning('Could not load Carbon Ads Text')
+      if (typeof _bsa === 'undefined') return console.warn('Could not load Carbon Ads Text') // eslint-disable-line no-console
       window._bsa.init('default', 'CKYD62QW', 'placement:nuxtjsorg', {
         target: '.bsa-cpc',
         align: 'horizontal',

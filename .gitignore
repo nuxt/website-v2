@@ -9,3 +9,4 @@ npm-debug.log
 dist
 .vscode
 .idea
+newrelic_agent.log

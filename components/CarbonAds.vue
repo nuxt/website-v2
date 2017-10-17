@@ -6,7 +6,7 @@
 
 <script>
 export default {
-  mounted () {
+  mounted() {
     if (this.$store.state.locale === 'en') {
       const script = document.createElement('script')
       script.setAttribute('type', 'text/javascript')

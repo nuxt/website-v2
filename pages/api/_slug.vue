@@ -1,8 +1,8 @@
 <template>
   <div>
-    <carbon-ads :key="$route.params.slug"/>
-    <html-parser :content="body"/>
-    <contribute :doc-link="docLink"/>
+    <carbon-ads :key="$route.params.slug" />
+    <html-parser :content="body" />
+    <contribute :doc-link="docLink" />
   </div>
 </template>
 
@@ -13,7 +13,7 @@ import HtmlParser from '~/components/HtmlParser.vue'
 import Contribute from '~/components/Contribute.vue'
 
 export default {
-  async asyncData ({ route, store, error }) {
+  async asyncData({ route, store, error }) {
     // Default data
     let data = {
       attrs: {},
@@ -44,10 +44,17 @@ export default {
     return data
   },
   scrollToTop: true,
-  head () {
-    return {
+  head() {
+    console.log({
       title: this.attrs.title,
       titleTemplatHtmlParsere: '%s - Nuxt.js',
+      meta: [
+        { hid: 'description', name: 'description', content: this.attrs.description }
+      ]
+    })
+    return {
+      title: this.attrs.title,
+      titleTemplate: '%s - Nuxt.js',
       meta: [
         { hid: 'description', name: 'description', content: this.attrs.description }
       ]

@@ -8,5 +8,12 @@
     "ru.nuxtjs.org",
     "zh.nuxtjs.org",
     "fr.nuxtjs.org"
-  ]
+  ],
+  "env": {
+    "NEWRELIC_KEY": "@nuxt-newrelic-key",
+    "TIMBER_KEY": "@nuxt-timber-key",
+    "SENTRY_PUBLIC_KEY": "@nuxt-sentry-public-key",
+    "SENTRY_PRIVATE_KEY": "@nuxt-sentry-private-key",
+    "SENTRY_PROJECT_ID": "@nuxt-sentry-project-id"
+  }
 }

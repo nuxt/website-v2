@@ -1,6 +1,6 @@
 <template>
   <div class="Search">
-    <input class="Search__Input" type="text" name="search" id="algolia" :placeholder="$store.state.lang.text.search"/>
+    <input class="Search__Input" type="text" name="search" id="algolia" :placeholder="$store.state.lang.text.search" />
   </div>
 </template>
 
@@ -11,7 +11,7 @@ let onScriptLoaded = (cb) => callbacks.push(cb)
 let scriptLoaded = () => callbacks.forEach((cb) => cb())
 
 export default {
-  mounted () {
+  mounted() {
     onScriptLoaded(() => this.addInstantSearch())
     if (scriptInjected) return
     // Load JS
@@ -29,7 +29,7 @@ export default {
     scriptInjected = true
   },
   methods: {
-    addInstantSearch () {
+    addInstantSearch() {
       window.docsearch({
         apiKey: process.env.docSearchApiKey,
         indexName: 'nuxtjs',
@@ -43,13 +43,11 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.Search
-{
+.Search {
   width: 100%;
   height: 100%;
   position: relative;
-  &__Input
-  {
+  &__Input {
     width: 100%;
     display: block;
     border: none;
@@ -60,13 +58,13 @@ export default {
     padding: 0 15px;
     letter-spacing: 0.5px;
     background-color: #fff;
-    @media (min-width: 991px)
-    {
+    @media (min-width: 991px) {
       padding: 0 30px;
       border-left: 1px solid #dbdfe1;
       border-right: 1px solid #dbdfe1;
-      &:focus, &:visited, &:active
-      {
+      &:focus,
+      &:visited,
+      &:active {
         border-left: 1px solid #dbdfe1;
         border-right: 1px solid #dbdfe1;
       }

@@ -1,40 +1,41 @@
 <template>
-  <div v-html="content"></div>
+  <div v-html="content">
+  </div>
 </template>
 
 <script>
 export default {
   props: ['content'],
-  mounted () {
+  mounted() {
     this.addListeners()
   },
-  beforeDestroy () {
+  beforeDestroy() {
     this.removeListeners()
   },
   watch: {
     'content': 'contentUpdated'
   },
   methods: {
-    navigate (event) {
+    navigate(event) {
       const href = event.target.getAttribute('href')
       if (href && href[0] === '/') {
         event.preventDefault()
         this.$router.push(href)
       }
     },
-    contentUpdated () {
+    contentUpdated() {
       this.removeListeners()
       this.$nextTick(() => {
         this.addListeners()
       })
     },
-    addListeners () {
+    addListeners() {
       this._links = this.$el.getElementsByTagName('a')
       for (let i = 0; i < this._links.length; i++) {
         this._links[i].addEventListener('click', this.navigate, false)
       }
     },
-    removeListeners () {
+    removeListeners() {
       for (let i = 0; i < this._links.length; i++) {
         this._links[i].removeEventListener('click', this.navigate, false)
       }

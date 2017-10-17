@@ -9,17 +9,17 @@
         <div class="icon close"></div>
       </div>
     </h2>
-    <template v-for="group in list">
-      <h3 class="Affix__Title">{{ group.title }}</h3>
-      <ul class="Affix__List">
-        <li class="Affix__List__Item" v-for="link in group.links">
+    <template v-for="(group, index) in list">
+      <h3 class="Affix__Title" :key="index">{{ group.title }}</h3>
+      <ul class="Affix__List" :key="index">
+        <li class="Affix__List__Item" v-for="(link, index) in group.links" :key="index">
           <nuxt-link class="Affix__List__Item__Link"
                      :class="{'nuxt-link-active': path === menu + link.to}"
                      :to="menu + link.to" exact>
             {{ link.name }}
           </nuxt-link>
           <ul v-if="path === menu + link.to" class="Affix__List__Item__Contents">
-            <li v-for="(content, index) in link.contents" class="Affix__List__Item__Contents__Item">
+            <li v-for="(content, index) in link.contents" class="Affix__List__Item__Contents__Item" :key="index">
               <a :href="menu + link.to + content.to"
                   @click.prevent="scrollTo(content.to)"
                   class="Affix__List__Item__Contents__Item__Link"
@@ -48,7 +48,7 @@ export default {
       required: true
     }
   },
-  mounted () {
+  mounted() {
     this.$nextTick(() => {
       window.addEventListener('scroll', throttle(() => this.scrolled(), 100))
       if (this.$route.hash.length) {
@@ -57,17 +57,17 @@ export default {
       this.scrolled()
     })
   },
-  data () {
+  data() {
     return { current: 0, setInter: null }
   },
   computed: {
-    visible () { return this.$store.state.visibleAffix },
-    path () { return this.$route.path.slice(-1) === '/' ? this.$route.path.slice(0, -1) : this.$route.path },
-    menu () { return '/' + this.category },
-    contents () {
+    visible() { return this.$store.state.visibleAffix },
+    path() { return this.$route.path.slice(-1) === '/' ? this.$route.path.slice(0, -1) : this.$route.path },
+    menu() { return '/' + this.category },
+    contents() {
       var c = []
       this.list.forEach((group) => {
-        if (group.links && !c.length) {
+        if (Array.isArray(group.links) && !c.length) {
           var l = group.links.find((link) => {
             return this.path === this.menu + link.to
           })
@@ -88,15 +88,15 @@ export default {
     '$route.fullPath': 'hashChanged'
   },
   methods: {
-    hashChanged (toPath, fromPath) {
+    hashChanged(toPath, fromPath) {
       toPath = toPath.split('#')
       fromPath = fromPath.split('#')
       if (toPath[0] !== fromPath[0] && this.$route.hash.length) {
         this.$nextTick(() => this.scrollTo(this.$route.hash))
       }
     },
-    toggle () { this.$store.commit('toggle', 'visibleAffix') },
-    scrolled () {
+    toggle() { this.$store.commit('toggle', 'visibleAffix') },
+    scrolled() {
       var h = window.innerHeight || document.documentElement.clientHeight || document.body.clientHeight
       var doc = document.documentElement
       var top = (window.pageYOffset || doc.scrollTop) - (doc.clientTop || 0)
@@ -105,7 +105,7 @@ export default {
       })
       this.current = (el ? this.contents.indexOf(el) : this.contents.length) - 1
     },
-    scrollTo (id) {
+    scrollTo(id) {
       if (this.$store.state.visibleAffix) {
         this.toggle()
       }

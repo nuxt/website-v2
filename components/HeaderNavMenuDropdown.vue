@@ -15,13 +15,13 @@
 
 <script>
 export default {
-  data () {
+  data() {
     return {
       show: false
     }
   },
   computed: {
-    list () {
+    list() {
       return [
         {
           name: this.$store.state.lang.links.github,
@@ -55,24 +55,19 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.Dropdown
-{
+.Dropdown {
   width: 100%;
   display: flex;
   flex-direction: column;
   position: relative;
-  @media (min-width: 991px)
-  {
-    &:hover
-    {
-      .Dropdown__List
-      {
+  @media (min-width: 991px) {
+    &:hover {
+      .Dropdown__List {
         display: block;
       }
     }
   }
-  &__Title
-  {
+  &__Title {
     height: 60px;
     width: 100%;
     display: flex;
@@ -83,13 +78,11 @@ export default {
     font-size: 16px;
     text-decoration: none;
     letter-spacing: 0.25px;
-    @media (min-width: 991px)
-    {
+    @media (min-width: 991px) {
       height: 79px;
       padding-right: 15px;
     }
-    &:after
-    {
+    &:after {
       content: " ";
       width: 0;
       height: 0;
@@ -99,40 +92,33 @@ export default {
       border-right: 6px solid transparent;
       border-top: 6px solid #35495e;
       border-left: 6px solid transparent;
-      @media (min-width: 991px)
-      {
+      @media (min-width: 991px) {
         top: 38px;
         right: 0;
         position: absolute;
       }
     }
-    &:hover, &:focus
-    {
+    &:hover,
+    &:focus {
       color: #41b883;
-      &:after
-      {
+      &:after {
         border-top: 6px solid #41b883;
       }
     }
-    &--mobile
-    {
+    &--mobile {
       color: #41b883;
-      &:after
-      {
+      &:after {
         border-top: 6px solid #41b883;
       }
-      @media (min-width: 991px)
-      {
+      @media (min-width: 991px) {
         color: #35495e;
-        &:after
-        {
+        &:after {
           border-top: 6px solid #35495e;
         }
       }
     }
   }
-  &__List
-  {
+  &__List {
     width: 100%;
     display: none;
     flex-wrap: wrap;
@@ -140,8 +126,7 @@ export default {
     padding: 0;
     margin: 0;
     list-style: none;
-    @media (min-width: 991px)
-    {
+    @media (min-width: 991px) {
       min-width: 100%;
       position: absolute;
       background-color: #fff;
@@ -149,8 +134,7 @@ export default {
       border-top: none;
       top: 100%;
       right: 0;
-      &::before
-      {
+      &::before {
         display: block;
         position: absolute;
         content: "";
@@ -167,22 +151,18 @@ export default {
         left: 45%;
       }
     }
-    &--visible
-    {
+    &--visible {
       display: flex;
-      @media (min-width: 991px)
-      {
+      @media (min-width: 991px) {
         display: none;
       }
     }
-    &__Item
-    {
+    &__Item {
       width: 100%;
       display: flex;
       height: 50px;
       border-top: 1px solid #dbdfe1;
-      &__Link
-      {
+      &__Link {
         width: 100%;
         display: flex;
         color: #35495e;
@@ -192,8 +172,7 @@ export default {
         letter-spacing: 0.25px;
         align-items: center;
         justify-content: center;
-        &:hover
-        {
+        &:hover {
           color: #41b883;
         }
       }

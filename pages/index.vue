@@ -34,7 +34,7 @@ export default {
     NuxtLogo,
     NuxtFooter
   },
-  head () {
+  head() {
     return {
       title: this.$store.state.lang.homepage.meta.title,
       meta: [

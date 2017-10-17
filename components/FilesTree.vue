@@ -20,7 +20,7 @@
       </div>
       <div class="FilesTree__Right__Body">
         <template v-if="parseContent">
-          <img v-if="isImage" :src="parseContent" alt="Image" class="FilesTree__Right__Body__Image"/>
+          <img v-if="isImage" :src="parseContent" alt="Image" class="FilesTree__Right__Body__Image" />
           <pre v-else class="FilesTree__Right__Body__File"><code v-html="parseContent"></code></pre>
         </template>
         <div v-else class="FilesTree__Right__Body__Wait">{{ $store.state.lang.text.please_wait }}</div>
@@ -44,7 +44,7 @@ export default {
       required: true
     }
   },
-  data () {
+  data() {
     return {
       hidden: false,
       currentFile: null,
@@ -52,7 +52,7 @@ export default {
     }
   },
   computed: {
-    parseContent () {
+    parseContent() {
       if (!this.content) {
         return ''
       }
@@ -61,21 +61,21 @@ export default {
       }
       return this.content
     },
-    breadcrumb () {
+    breadcrumb() {
       return this.currentFile.path.replace('examples/' + this.example, '')
     },
-    isImage () {
+    isImage() {
       if (this.currentFile && /[^\s]+\.(jpe?g|png|gif|bmp)$/i.test(this.currentFile.path)) {
         return true
       }
       return false
     },
-    isMobile () {
+    isMobile() {
       return window.innerWidth < 576
     }
   },
   methods: {
-    changeFile (file) {
+    changeFile(file) {
       this.currentFile = file
       this.content = cacheFiles[file.path]
       if (this.isMobile) {
@@ -88,12 +88,12 @@ export default {
             'Authorization': `token ${process.env.githubToken}`
           }
         })
-        .then((res) => {
-          let content = window.atob(res.data.content)
-          content = hljs.highlightAuto(content).value
-          cacheFiles[file.path] = content
-          this.content = cacheFiles[file.path]
-        })
+          .then((res) => {
+            let content = window.atob(res.data.content)
+            content = hljs.highlightAuto(content).value
+            cacheFiles[file.path] = content
+            this.content = cacheFiles[file.path]
+          })
       }
     }
   },
@@ -104,15 +104,13 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.FilesTree
-{
+.FilesTree {
   position: relative;
   margin: 30px 0;
   position: relative;
   overflow: hidden;
   background-color: #fcfcfc;
-  &__Left
-  {
+  &__Left {
     top: 0;
     left: 0;
     bottom: 0;
@@ -120,20 +118,16 @@ export default {
     position: absolute;
     background-color: lighten(#dbdfe1, 7%);
     transition: all 0.3s;
-    @media (min-width: 576px)
-    {
+    @media (min-width: 576px) {
       width: 200px;
     }
-    &--hidden
-    {
+    &--hidden {
       left: -100%;
-      @media (min-width: 576px)
-      {
+      @media (min-width: 576px) {
         left: -200px;
       }
     }
-    &__Header
-    {
+    &__Header {
       display: block;
       height: 50px;
       line-height: 50px;
@@ -146,20 +140,19 @@ export default {
       white-space: nowrap;
       text-overflow: ellipsis;
       overflow: hidden;
-      .Icon
-      {
+      .Icon {
         float: right;
         margin-top: 15px;
         cursor: pointer;
         margin-left: 15px;
-        .icon, .icon:before, .icon:after
-        {
+        .icon,
+        .icon:before,
+        .icon:after {
           color: #35495e;
         }
       }
     }
-    &__Body
-    {
+    &__Body {
       display: block;
       position: absolute;
       top: 50px;
@@ -170,21 +163,17 @@ export default {
       padding: 8px 10px 14px 0;
     }
   }
-  &__Right
-  {
+  &__Right {
     background-color: #fcfcfc;
     padding-left: 100%;
     transition: all 0.3s;
-    @media (min-width: 576px)
-    {
+    @media (min-width: 576px) {
       padding-left: 200px;
     }
-    &--hidden
-    {
+    &--hidden {
       padding-left: 0;
     }
-    &__Header
-    {
+    &__Header {
       height: 50px;
       line-height: 50px;
       padding: 0 20px;
@@ -197,29 +186,26 @@ export default {
       white-space: nowrap;
       text-overflow: ellipsis;
       overflow: hidden;
-      .Icon
-      {
+      .Icon {
         float: left;
         margin-top: 15px;
         cursor: pointer;
         margin-right: 15px;
-        .icon, .icon:before, .icon:after
-        {
+        .icon,
+        .icon:before,
+        .icon:after {
           color: #35495e;
         }
       }
     }
-    &__Body
-    {
+    &__Body {
       min-height: 400px;
-      &__Image
-      {
+      &__Image {
         margin: 20px;
         width: auto;
         max-width: 80%;
       }
-      &__File
-      {
+      &__File {
         position: relative;
         display: block;
         width: 100%;
@@ -228,8 +214,7 @@ export default {
         padding: 30px 15px;
         padding-top: 10px;
         overflow: auto;
-        code
-        {
+        code {
           padding: 0;
           margin: 0;
           display: block;
@@ -237,8 +222,7 @@ export default {
           border: none;
         }
       }
-      &__Wait
-      {
+      &__Wait {
         padding: 20px;
         color: #35495e;
         font-weight: 400;

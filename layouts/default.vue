@@ -15,15 +15,15 @@ export default {
     $route: 'setStore'
   },
   computed: {
-    visible () { return this.$store.state.visibleHeader }
+    visible() { return this.$store.state.visibleHeader }
   },
   methods: {
-    setStore () {
+    setStore() {
       if (this.$store.state.visibleHeader) this.$store.commit('toggle', 'visibleHeader')
       if (this.$store.state.visibleAffix) this.$store.commit('toggle', 'visibleAffix')
     }
   },
-  head () {
+  head() {
     let canonical = `https://nuxtjs.org${this.$route.path}`
     if (this.$store.state.locale !== 'en') {
       canonical = `https://${this.$store.state.locale}.nuxtjs.org${this.$route.path}`
@@ -54,13 +54,10 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.App
-{
-  &--hidden
-  {
+.App {
+  &--hidden {
     display: none;
-    @media (min-width: 992px)
-    {
+    @media (min-width: 992px) {
       display: block;
     }
   }

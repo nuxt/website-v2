@@ -31,6 +31,12 @@
         </li>
       </ul>
     </template>
+    <h3 class="Affix__Title" style="margin-bottom: 20px;">Open Collective Sponsors</h3>
+    <ul class="Affix__List">
+      <li class="Affix__List__Item">
+        <a href="https://t.co/sUZfRy6ZxS" target="_blank"><img src="https://user-images.githubusercontent.com/1016365/34124854-48fafa06-e3e9-11e7-8c04-251055feebee.png" style="width: 200px;max-width: 70%;" alt="Tipe.io"/></a>
+      </li>
+    </ul>
   </nav>
 </template>
 

@@ -7,7 +7,8 @@
     "ko.nuxtjs.org",
     "ru.nuxtjs.org",
     "zh.nuxtjs.org",
-    "fr.nuxtjs.org"
+    "fr.nuxtjs.org",
+    "id.nuxtjs.org"
   ],
   "env": {
     "NEWRELIC_KEY": "@nuxt-newrelic-key",

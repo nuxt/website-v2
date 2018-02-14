@@ -22,8 +22,17 @@ export default {
       return [
         { iso: 'cn', class: 'flag-cn', url: 'https://cn.nuxtjs.org' },
         { iso: 'en', class: 'flag-en', url: 'https://nuxtjs.org' },
+<<<<<<< HEAD
         { iso: 'ja', class: 'flag-ja', url: 'https://jp.nuxtjs.org' },
         { iso: 'ru', class: 'flag-ru', url: 'https://ru.nuxtjs.org' }
+=======
+        { iso: 'ja', class: 'flag-ja', url: 'https://ja.nuxtjs.org' },
+        { iso: 'ko', class: 'flag-ko', url: 'https://ko.nuxtjs.org' },
+        { iso: 'ru', class: 'flag-ru', url: 'https://ru.nuxtjs.org' },
+        { iso: 'zh', class: 'flag-zh', url: 'https://zh.nuxtjs.org' },
+        { iso: 'fr', class: 'flag-fr', url: 'https://fr.nuxtjs.org' },
+        { iso: 'id', class: 'flag-id', url: 'https://id.nuxtjs.org' }
+>>>>>>> ed901c38 (lang: Add indonesian language)
       ]
     }
   }

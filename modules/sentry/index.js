@@ -15,7 +15,7 @@ module.exports = function sentryErrorMiddleware(options) {
   this.addPlugin({ src: path.resolve(__dirname, 'sentry-client.js'), options })
 
   // Hook in to Nuxt renderer
-  this.nuxt.plugin('renderer', (renderer) => {
+  this.nuxt.hook('renderer', (renderer) => {
     renderer.app.use(Raven.requestHandler())
 
     // Grab Nuxt's original error middleware and overwrite it with our own

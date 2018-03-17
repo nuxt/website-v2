@@ -34,7 +34,9 @@ export default {
 <style lang="scss" scoped>
 .Landscape
 {
-  min-height: 100vh;
+  $footer-height: 50px;
+
+  min-height: calc(100vh - #{$footer-height});
   background-color: #fff;
   padding: 50px 15px;
   padding-top: 120px;

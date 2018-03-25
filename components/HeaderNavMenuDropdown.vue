@@ -35,11 +35,12 @@ export default {
 
 <style lang="scss" scoped>
 .Dropdown {
-  width: auto;
+  width: 100%;
   display: flex;
   flex-direction: column;
   position: relative;
   @media (min-width: 991px) {
+    width: auto;
     margin-right: auto;
     margin-left: auto;
     &:hover {
@@ -140,12 +141,15 @@ export default {
       }
     }
     &__Item {
-      width: auto;
+      width: 100%;
       display: flex;
       height: 50px;
       border-top: 1px solid #dbdfe1;
       padding-right: 5px;
       padding-left: 5px;
+      @media (min-width: 991px) {
+        width: auto;
+      }
       &__Link {
         width: 100%;
         display: flex;

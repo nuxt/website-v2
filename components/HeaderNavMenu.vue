@@ -21,7 +21,10 @@
       </nuxt-link>
     </li>
     <li class="Menu__Item">
-      <nuxt-header-nav-menu-dropdown/>
+      <nuxt-header-nav-menu-dropdown
+      :dropdownList="dropdownList"
+      :dropdownLabel="$store.state.lang.links.ecosystem"
+      />
     </li>
   </ul>
 </nav>
@@ -33,6 +36,37 @@ import NuxtHeaderNavMenuDropdown from '~/components/HeaderNavMenuDropdown.vue'
 export default {
   components: {
     NuxtHeaderNavMenuDropdown
+  },
+  data() {
+    return {
+      dropdownList: [
+        {
+          name: this.$store.state.lang.links.github,
+          path: 'https://github.com/nuxt',
+          target: '_blank'
+        },
+        {
+          name: this.$store.state.lang.links.twitter,
+          path: 'https://twitter.com/nuxt_js',
+          target: '_blank'
+        },
+        {
+          name: this.$store.state.lang.links.chat,
+          path: 'https://gitter.im/nuxt/nuxt.js',
+          target: '_blank'
+        },
+        {
+          name: this.$store.state.lang.links.vuejs,
+          path: 'https://vuejs.org',
+          target: '_blank'
+        },
+        {
+          name: this.$store.state.lang.links.vue_jobs,
+          path: 'https://vuejobs.com/?ref=nuxtjs',
+          target: '_blank'
+        }
+      ]
+    }
   }
 }
 </script>

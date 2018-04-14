@@ -1,8 +1,8 @@
 <template>
   <div>
     <carbon-ads :key="$route.params.slug" />
-    <contributor-list />
     <html-parser :content="body" />
+    <contributor-list />
     <contribute :doc-link="docLink" />
   </div>
 </template>

@@ -1,6 +1,7 @@
 <template>
   <div>
     <carbon-ads :key="$route.params.slug" />
+    <contributor-list />
     <html-parser :content="body" />
     <contribute :doc-link="docLink" />
   </div>
@@ -9,6 +10,7 @@
 <script>
 import axios from 'axios'
 import CarbonAds from '~/components/CarbonAds.vue'
+import ContributorList from '~/components/ContributorList.vue'
 import HtmlParser from '~/components/HtmlParser.vue'
 import Contribute from '~/components/Contribute.vue'
 
@@ -20,7 +22,7 @@ export default {
       body: '',
       docLink: ''
     }
-    const slug = route.params.slug || 'translation-contributors'
+    const slug = route.params.slug || 'contributors'
     const path = `/${store.state.lang.iso}/contribution/${slug}`
     let res
     try {
@@ -55,6 +57,7 @@ export default {
   },
   components: {
     CarbonAds,
+    ContributorList,
     HtmlParser,
     Contribute
   }

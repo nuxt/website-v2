@@ -78,8 +78,12 @@ const store = () => new Vuex.Store({
       }
 
       const committers = commitDataArray.map((commitData) => {
-        return commitData.committer.login
-      })
+        if (commitData.committer) {
+          return commitData.committer.login
+        } else {
+          return null
+        }
+      }).filter(committer => committer)
 
       const contributors = committers.reduce((accumulator, committer) => {
         accumulator.push({ userName: committer, commits: 1 })

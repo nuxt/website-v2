@@ -5,7 +5,7 @@
     </h2>
 
     <ul>
-      <li class="Contributor" v-for="contributor in contributors" :key="contributor.userName">
+      <li class="Contributor" v-for="contributor in sortedContributors" :key="contributor.userName">
         <a :href="`https://github.com/${contributor.userName}`" target="_blank" rel="noopener">
           <img class="Contributor__Image" :src="`https://github.com/${contributor.userName}.png`" />
           <p class="Contributor__UserName">
@@ -29,6 +29,9 @@ export default {
   computed: {
     contributors() {
       return this.$store.state.contributors[this.docPath] || []
+    },
+    sortedContributors() {
+      return this.contributors.sort((a, b) => a.commits < b.commits)
     }
   },
   methods: {

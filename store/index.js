@@ -87,7 +87,10 @@ const store = () => new Vuex.Store({
       }).filter(committer => committer)
 
       const contributors = committers.reduce((accumulator, committer) => {
-        accumulator.push({ userName: committer, commits: 1 })
+        if (accumulator.filter(item => item.userName === committer).length === 0) {
+          const commits = committers.filter((_committer) => _committer === committer).length
+          accumulator.push({ userName: committer, commits: commits })
+        }
         return accumulator
       }, [])
 

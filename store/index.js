@@ -66,34 +66,24 @@ const store = () => new Vuex.Store({
     },
     async fetchContributors({ commit }, { docPath }) {
       const perPage = 100
-      const githubClient = axios.create({
-        baseURL: 'https://api.github.com'
-      })
-      const firstPageRes = await githubClient.get(`/repos/nuxt/docs/commits?path=${docPath}&per_page=${perPage}`)
-      const lastPage = firstPageRes.headers.link.match(/&page=(\d+).*rel="last"$/)[1] || 1
+      const githubClient = axios.create({ baseURL: 'https://api.github.com' })
 
-      let resArray = [firstPageRes]
-
-      if (lastPage > 1) {
-        resArray.concat(
-          await Promise.all(
-            Array.from({ length: (lastPage - 1) }, (_, i) => i + 2).map((x) => {
-              return githubClient.get(`/repos/nuxt/docs/commits?path=${docPath}&per_page=${perPage}&page=${String(x)}`)
-            })
-          )
-        )
+      let commitDataArray = []
+      for (let page = 0; page < 10; page++) {
+        let res = await githubClient.get(`/repos/nuxt/docs/commits?path=${docPath}&per_page=${String(perPage)}&page=${String(page)}`)
+        commitDataArray = commitDataArray.concat(res.data)
+        if (!res.headers.link || !res.headers.link.match(/rel="next"/)) {
+          break
+        }
       }
-
-      const commitDataArray = resArray.reduce((accumulator, res) => {
-        return accumulator.concat(res.data)
-      }, [])
 
       const committers = commitDataArray.map((commitData) => {
         return commitData.committer.login
       })
 
       const contributors = committers.reduce((accumulator, committer) => {
-        return accumulator.push({ userName: committer, commits: 1 })
+        accumulator.push({ userName: committer, commits: 1 })
+        return accumulator
       }, [])
 
       commit('setContributors', { docPath, contributors })

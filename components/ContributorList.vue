@@ -21,27 +21,27 @@
 export default {
   name: 'contributor-list',
   props: {
-    path: {
+    docPath: {
       type: String,
       required: true
     }
   },
   computed: {
     contributors() {
-      return this.$store.state.contributors[this.path] || []
+      return this.$store.state.contributors[this.docPath] || []
     }
   },
   methods: {
     fetchContributors() {
-      if (!this.$store.state.contributors[this.path]) {
+      if (!this.$store.state.contributors[this.docPath]) {
         this.$store.dispatch('fetchContributors', {
-          path: this.path
+          docPath: this.docPath
         })
       }
     }
   },
   watch: {
-    path() {
+    docPath() {
       this.fetchContributors()
     }
   },

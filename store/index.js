@@ -35,8 +35,8 @@ const store = () => new Vuex.Store({
     setMenu(state, menu) {
       state.menu = menu
     },
-    setContributors(state, { path, contributors }) {
-      state.contributors[path] = contributors
+    setContributors(state, { docPath, contributors }) {
+      state.contributors[docPath] = contributors
     }
   },
   actions: {
@@ -64,7 +64,7 @@ const store = () => new Vuex.Store({
         console.error('Error on [nuxtServerInit] action, please run the docs server.') // eslint-disable-line no-console
       }
     },
-    async fetchContributors({ commit }, { path }) {
+    async fetchContributors({ commit }, { docPath }) {
       const contributors = [
         { userName: 'inouetakuya' },
         { userName: 'shika358' },
@@ -77,7 +77,7 @@ const store = () => new Vuex.Store({
         { userName: 'MasahiroHarada' }
       ]
 
-      commit('setContributors', { path, contributors })
+      commit('setContributors', { docPath, contributors })
     }
   }
 })

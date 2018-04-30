@@ -2,7 +2,7 @@
   <div>
     <carbon-ads :key="$route.params.slug" />
     <html-parser :content="body" />
-    <contributor-list :path="path" />
+    <contributor-list :doc-path="docPath" />
     <contribute :doc-link="docLink" />
   </div>
 </template>
@@ -36,7 +36,7 @@ export default {
     data.attrs = res.data.attrs
     data.body = res.data.body
     data.docLink = `https://github.com/nuxt/docs/blob/master${path}.md`
-    data.path = path
+    data.docPath = path + '.md'
     if (store.state.lang.iso === 'ru') {
       data.docLink = `https://github.com/translation-gang/ru.docs.nuxtjs/blob/translation-ru${path}.md`
     } else if (store.state.lang.iso === 'cn') {

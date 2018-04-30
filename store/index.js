@@ -1,5 +1,4 @@
 import axios from 'axios'
-import Vue from 'vue'
 import Vuex from 'vuex'
 
 const store = () => new Vuex.Store({
@@ -35,9 +34,6 @@ const store = () => new Vuex.Store({
     },
     setMenu(state, menu) {
       state.menu = menu
-    },
-    setContributors(state, { docPath, contributors }) {
-      Vue.set(state.contributors, docPath, contributors)
     }
   },
   actions: {
@@ -64,37 +60,6 @@ const store = () => new Vuex.Store({
       } catch (e) {
         console.error('Error on [nuxtServerInit] action, please run the docs server.') // eslint-disable-line no-console
       }
-    },
-    async fetchContributors({ commit }, { docPath }) {
-      const perPage = 100
-      const githubClient = axios.create({ baseURL: 'https://api.github.com' })
-
-      let commitDataArray = []
-      for (let page = 0; page < 10; page++) {
-        let res = await githubClient.get(`/repos/nuxt/docs/commits?path=${docPath}&per_page=${String(perPage)}&page=${String(page)}`)
-        commitDataArray = commitDataArray.concat(res.data)
-        if (!res.headers.link || !res.headers.link.match(/rel="next"/)) {
-          break
-        }
-      }
-
-      const committers = commitDataArray.map((commitData) => {
-        if (commitData.committer) {
-          return commitData.committer.login
-        } else {
-          return null
-        }
-      }).filter(committer => committer)
-
-      const contributors = committers.reduce((accumulator, committer) => {
-        if (accumulator.filter(item => item.userName === committer).length === 0) {
-          const commits = committers.filter((_committer) => _committer === committer).length
-          accumulator.push({ userName: committer, commits: commits })
-        }
-        return accumulator
-      }, [])
-
-      commit('setContributors', { docPath, contributors })
     }
   }
 })

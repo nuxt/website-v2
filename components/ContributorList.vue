@@ -18,6 +18,9 @@
 </template>
 
 <script>
+import axios from 'axios'
+import Vue from 'vue'
+
 export default {
   name: 'contributor-list',
   props: {
@@ -26,26 +29,57 @@ export default {
       required: true
     }
   },
+  data() {
+    return {
+      contributors: {}
+    }
+  },
   computed: {
-    contributors() {
-      return this.$store.state.contributors[this.docPath] || []
+    contributorsByDocPath() {
+      return this.contributors[this.docPath] || []
     },
     sortedContributors() {
-      return this.contributors.sort((a, b) => a.commits < b.commits)
+      return this.contributorsByDocPath.sort((a, b) => a.commits < b.commits)
     }
   },
   methods: {
-    fetchContributors() {
-      if (!this.$store.state.contributors[this.docPath]) {
-        this.$store.dispatch('fetchContributors', {
-          docPath: this.docPath
-        })
+    async fetchContributors() {
+      const perPage = 100
+      const githubClient = axios.create({ baseURL: 'https://api.github.com' })
+
+      let commitDataArray = []
+      for (let page = 0; page < 10; page++) {
+        let res = await githubClient.get(`/repos/nuxt/docs/commits?path=${this.docPath}&per_page=${String(perPage)}&page=${String(page)}`)
+        commitDataArray = commitDataArray.concat(res.data)
+        if (!res.headers.link || !res.headers.link.match(/rel="next"/)) {
+          break
+        }
       }
+
+      const committers = commitDataArray.map((commitData) => {
+        if (commitData.committer) {
+          return commitData.committer.login
+        } else {
+          return null
+        }
+      }).filter(committer => committer)
+
+      const contributors = committers.reduce((accumulator, committer) => {
+        if (accumulator.filter(item => item.userName === committer).length === 0) {
+          const commits = committers.filter((_committer) => _committer === committer).length
+          accumulator.push({ userName: committer, commits: commits })
+        }
+        return accumulator
+      }, [])
+
+      Vue.set(this.contributors, this.docPath, contributors)
     }
   },
   watch: {
     docPath() {
-      this.fetchContributors()
+      if (!this.contributors[this.docPath]) {
+        this.fetchContributors()
+      }
     }
   },
   mounted() {

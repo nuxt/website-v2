@@ -31,10 +31,22 @@ export default {
       return this.$store.state.contributors[this.path] || []
     }
   },
-  mounted() {
-    this.$store.dispatch('fetchContributors', {
-      path: this.path
-    })
+  methods: {
+    fetchContributors() {
+      if (!this.$store.state.contributors[this.path]) {
+        this.$store.dispatch('fetchContributors', {
+          path: this.path
+        })
+      }
+    }
+  },
+  watch: {
+    path() {
+      this.fetchContributors()
+    }
+  },
+  beforeMount() {
+    this.fetchContributors()
   }
 }
 </script>

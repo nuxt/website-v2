@@ -34,12 +34,14 @@
       </nuxt-link>
     </div>
     <html-parser :content="body" />
+    <contributor-list :doc-path="docPath" />
   </div>
 </template>
 
 <script>
 import axios from 'axios'
 import CarbonAds from '~/components/CarbonAds.vue'
+import ContributorList from '~/components/ContributorList.vue'
 import NuxtFilesTree from '~/components/FilesTree.vue'
 import HtmlParser from '~/components/HtmlParser.vue'
 
@@ -63,6 +65,7 @@ export default {
     }
     data.attrs = res.data.attrs
     data.body = res.data.body
+    data.docPath = path + '.md'
     if (!data.attrs.title) console.error(`[${path}] ${store.state.lang.text.please_define_title}.`) // eslint-disable-line no-console
     if (!data.attrs.description) console.error(`[${path}] ${store.state.lang.text.please_define_description}.`) // eslint-disable-line no-console
     return data
@@ -84,6 +87,7 @@ export default {
   },
   components: {
     CarbonAds,
+    ContributorList,
     NuxtFilesTree,
     HtmlParser
   }

@@ -64,8 +64,8 @@ export default {
     }
   },
   components: {
-    ContributorList,
     CarbonAds,
+    ContributorList,
     HtmlParser,
     Contribute
   }

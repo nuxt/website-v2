@@ -10,8 +10,7 @@ const store = () => new Vuex.Store({
     apiURI: 'https://docs.api.nuxtjs.org',
     locale: 'en',
     lang: {},
-    menu: {},
-    contributors: {}
+    menu: {}
   },
   mutations: {
     toggle(state, key) {
@@ -55,8 +54,6 @@ const store = () => new Vuex.Store({
         commit('setDocVersion', resLang.data.docVersion)
         const resMenu = await axios(state.apiURI + '/menu/' + state.locale)
         commit('setMenu', resMenu.data)
-        const resContributors = await axios(state.apiURI + '/contributors/' + state.locale)
-        commit('setContributors', resContributors.data)
       } catch (e) {
         console.error('Error on [nuxtServerInit] action, please run the docs server.') // eslint-disable-line no-console
       }

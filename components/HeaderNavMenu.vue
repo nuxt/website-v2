@@ -20,11 +20,6 @@
         {{ $store.state.lang.links.faq }}
       </nuxt-link>
     </li>
-    <li v-if="$store.state.lang.links.contribution" class="Menu__Item">
-      <nuxt-link class="Menu__Item__Link" to="/contribution">
-        {{ $store.state.lang.links.contribution }}
-      </nuxt-link>
-    </li>
     <li class="Menu__Item">
       <nuxt-header-nav-menu-dropdown/>
     </li>

@@ -11,7 +11,7 @@ const store = () => new Vuex.Store({
     locale: 'en',
     lang: {},
     menu: {},
-    contributors: []
+    contributors: {}
   },
   mutations: {
     toggle(state, key) {
@@ -35,8 +35,8 @@ const store = () => new Vuex.Store({
     setMenu(state, menu) {
       state.menu = menu
     },
-    setContributors(state, contributors) {
-      state.contributors = contributors
+    setContributors(state, { path, contributors }) {
+      state.contributors[path] = contributors
     }
   },
   actions: {
@@ -63,6 +63,21 @@ const store = () => new Vuex.Store({
       } catch (e) {
         console.error('Error on [nuxtServerInit] action, please run the docs server.') // eslint-disable-line no-console
       }
+    },
+    async fetchContributors({ commit }, { path }) {
+      const contributors = [
+        { userName: 'inouetakuya' },
+        { userName: 'shika358' },
+        { userName: 'kazupon' },
+        { userName: 'potato4d' },
+        { userName: '38elements' },
+        { userName: 'aytdm' },
+        { userName: 'chikathreesix' },
+        { userName: 'torounit' },
+        { userName: 'MasahiroHarada' }
+      ]
+
+      commit('setContributors', { path, contributors })
     }
   }
 })

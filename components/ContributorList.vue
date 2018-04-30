@@ -28,18 +28,13 @@ export default {
   },
   computed: {
     contributors() {
-      return [
-        { userName: 'inouetakuya' },
-        { userName: 'shika358' },
-        { userName: 'kazupon' },
-        { userName: 'potato4d' },
-        { userName: '38elements' },
-        { userName: 'aytdm' },
-        { userName: 'chikathreesix' },
-        { userName: 'torounit' },
-        { userName: 'MasahiroHarada' },
-      ]
+      return this.$store.state.contributors[this.path] || []
     }
+  },
+  mounted() {
+    this.$store.dispatch('fetchContributors', {
+      path: this.path
+    })
   }
 }
 </script>

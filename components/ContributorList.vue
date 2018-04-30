@@ -1,40 +1,50 @@
 <template>
-  <ul class="ContributorList">
-    <li class="ContributorGroup" v-for="group in groups" :key="group.title">
-      <h2>
-        {{ group.title }}
-      </h2>
+  <div class="ContributorList">
+    <h2>
+      Contributors to this page
+    </h2>
 
-      <ul>
-        <li class="Contributor" v-for="contributor in group.contributors" :key="contributor">
-          <a :href="`https://github.com/${contributor}`" target="_blank" rel="noopener">
-            <img class="Contributor__Image" :src="`https://github.com/${contributor}.png`" />
-            <p class="Contributor__Id">
-              {{ contributor }}
-            </p>
-          </a>
-        </li>
-      </ul>
-    </li>
-  </ul>
+    <ul>
+      <li class="Contributor" v-for="contributor in contributors" :key="contributor.userName">
+        <a :href="`https://github.com/${contributor.userName}`" target="_blank" rel="noopener">
+          <img class="Contributor__Image" :src="`https://github.com/${contributor.userName}.png`" />
+          <p class="Contributor__UserName">
+            {{ contributor.userName }}
+          </p>
+        </a>
+      </li>
+    </ul>
+  </div>
 </template>
 
 <script>
 export default {
   name: 'contributor-list',
+  props: {
+    path: {
+      type: String,
+      required: true
+    }
+  },
   computed: {
-    groups() {
-      return this.$store.state.contributors
+    contributors() {
+      return [
+        { userName: 'inouetakuya' },
+        { userName: 'shika358' },
+        { userName: 'kazupon' },
+        { userName: 'potato4d' },
+        { userName: '38elements' },
+        { userName: 'aytdm' },
+        { userName: 'chikathreesix' },
+        { userName: 'torounit' },
+        { userName: 'MasahiroHarada' },
+      ]
     }
   }
 }
 </script>
 
 <style lang="scss" scoped>
-.ContributorGroup {
-  list-style: none;
-}
-
 .Contributor {
   display: inline-block;
   margin: 10px 15px;
@@ -47,7 +57,7 @@ export default {
     border-radius: 64px;
   }
 
-  &__Id {
+  &__UserName {
     margin: 0;
   }
 }

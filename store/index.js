@@ -1,4 +1,5 @@
 import axios from 'axios'
+import Vue from 'vue'
 import Vuex from 'vuex'
 
 const store = () => new Vuex.Store({
@@ -36,7 +37,7 @@ const store = () => new Vuex.Store({
       state.menu = menu
     },
     setContributors(state, { docPath, contributors }) {
-      state.contributors[docPath] = contributors
+      Vue.set(state.contributors, docPath, contributors)
     }
   },
   actions: {

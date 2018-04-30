@@ -45,7 +45,7 @@ export default {
       this.fetchContributors()
     }
   },
-  beforeMount() {
+  mounted() {
     this.fetchContributors()
   }
 }

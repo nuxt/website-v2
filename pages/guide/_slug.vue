@@ -1,12 +1,13 @@
 <template>
   <div>
-    <carbon-ads :key="$route.params.slug"/>
+    <carbon-ads :key="$route.params.slug" />
     <h1>{{ attrs.title }}</h1>
     <div class="video" v-if="attrs.youtube">
       <iframe class="youtube" :src="attrs.youtube" frameborder="0" allowfullscreen></iframe>
     </div>
-    <html-parser :content="body"/>
-    <contribute :doc-link="docLink"/>
+    <html-parser :content="body" />
+    <contribute :doc-link="docLink" />
+    <contributor-list :doc-path="docPath" />
   </div>
 </template>
 
@@ -15,6 +16,7 @@ import axios from 'axios'
 import CarbonAds from '~/components/CarbonAds.vue'
 import HtmlParser from '~/components/HtmlParser.vue'
 import Contribute from '~/components/Contribute.vue'
+import ContributorList from '~/components/ContributorList.vue'
 
 export default {
   async asyncData({ route, store, error }) {
@@ -38,6 +40,7 @@ export default {
     data.attrs = res.data.attrs
     data.body = res.data.body
     data.docLink = `https://github.com/nuxt/docs/blob/master${path}.md`
+    data.docPath = path + '.md'
     if (store.state.lang.iso === 'ru') {
       data.docLink = `https://github.com/translation-gang/ru.docs.nuxtjs/blob/translation-ru${path}.md`
     } else if (store.state.lang.iso === 'cn') {
@@ -59,6 +62,7 @@ export default {
   },
   components: {
     CarbonAds,
+    ContributorList,
     HtmlParser,
     Contribute
   }

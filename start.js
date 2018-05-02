@@ -5,7 +5,7 @@ else console.warn('New Relic is disabled (process.env.NEWRELIC_KEY not found)') 
 const express = require('express')
 const { existsSync } = require('fs')
 const { resolve } = require('path')
-const { Nuxt } = require('nuxt')
+const { Nuxt } = require('nuxt-edge')
 
 const options = require('./nuxt.config')
 // Force production mode (no webpack middleware called)

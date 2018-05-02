@@ -10,7 +10,7 @@
     "lodash": "^4.17.5",
     "newrelic": "^3.2.0",
     "normalize.css": "^8.0.0",
-    "nuxt": "1.4.0",
+    "nuxt-edge": "^2.0.0-25420924.8feeeb0",
     "raven": "^2.4.2",
     "raven-js": "^3.23.2",
     "timber": "^3.1.1"

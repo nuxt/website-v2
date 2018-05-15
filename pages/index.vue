@@ -39,7 +39,7 @@ export default {
       title: this.$store.state.lang.homepage.meta.title,
       meta: [
         { name: 'description', hid: 'description', content: this.$store.state.lang.homepage.meta.description },
-        // Open Grapg
+        // Open Graph
         { name: 'og:title', content: this.$store.state.lang.homepage.meta.title },
         { name: 'og:description', content: this.$store.state.lang.homepage.meta.description },
         { name: 'og:type', content: 'website' },

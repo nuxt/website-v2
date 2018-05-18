@@ -1,6 +1,6 @@
 <template>
   <div>
-    <carbon-ads :key="$route.params.slug"/>
+    <code-fund-ads :key="$route.params.slug"/>
     <h1>{{ attrs.title }}</h1>
     <div class="video" v-if="attrs.youtube">
       <iframe class="youtube" :src="attrs.youtube" frameborder="0" allowfullscreen></iframe>
@@ -12,7 +12,7 @@
 
 <script>
 import axios from 'axios'
-import CarbonAds from '~/components/CarbonAds.vue'
+import CodeFundAds from '~/components/CodeFundAds.vue'
 import HtmlParser from '~/components/HtmlParser.vue'
 import Contribute from '~/components/Contribute.vue'
 
@@ -58,7 +58,7 @@ export default {
     }
   },
   components: {
-    CarbonAds,
+    CodeFundAds,
     HtmlParser,
     Contribute
   }

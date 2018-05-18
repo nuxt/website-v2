@@ -1,6 +1,6 @@
 <template>
   <div>
-    <carbon-ads :key="$route.params.slug" />
+    <code-fund-ads :key="$route.params.slug" />
     <html-parser :content="body" />
     <contribute :doc-link="docLink" />
   </div>
@@ -8,7 +8,7 @@
 
 <script>
 import axios from 'axios'
-import CarbonAds from '~/components/CarbonAds.vue'
+import CodeFundAds from '~/components/CodeFundAds.vue'
 import HtmlParser from '~/components/HtmlParser.vue'
 import Contribute from '~/components/Contribute.vue'
 
@@ -45,13 +45,6 @@ export default {
   },
   scrollToTop: true,
   head() {
-    console.log({
-      title: this.attrs.title,
-      titleTemplatHtmlParsere: '%s - Nuxt.js',
-      meta: [
-        { hid: 'description', name: 'description', content: this.attrs.description }
-      ]
-    })
     return {
       title: this.attrs.title,
       titleTemplate: '%s - Nuxt.js',
@@ -61,7 +54,7 @@ export default {
     }
   },
   components: {
-    CarbonAds,
+    CodeFundAds,
     HtmlParser,
     Contribute
   }

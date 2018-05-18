@@ -49,7 +49,7 @@ export default {
     width: auto;
   }
   #cf_ad .cf-text {
-    font-size: 12px;
+    font-size: 13px;
   }
   #cf_ad .cf-image-wrapper
   {

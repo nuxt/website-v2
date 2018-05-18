@@ -1,7 +1,5 @@
 <template>
-  <div class="ad" ref="carbonads">
-    <a href="https://vuejobs.com/?ref=nuxtjs" target="_blank" class="vuejobs" v-if="$store.state.locale !== 'en'"></a>
-  </div>
+  <div class="ad" ref="codefundads" id="codefund_ad"></div>
 </template>
 
 <script>
@@ -10,9 +8,9 @@ export default {
     if (this.$store.state.locale === 'en') {
       const script = document.createElement('script')
       script.setAttribute('type', 'text/javascript')
-      script.setAttribute('src', '//cdn.carbonads.com/carbon.js?zoneid=1673&serve=C6AILKT&placement=nuxtjsorg')
-      script.setAttribute('id', '_carbonads_js')
-      this.$refs.carbonads.appendChild(script)
+      script.setAttribute('src', '//codefund.io/scripts/7a55aa99-7866-418d-9720-8b1342303656/embed.js?template=vertical')
+      script.setAttribute('id', '_codefund_ad_js')
+      this.$refs.codefundads.appendChild(script)
     }
   }
 }
@@ -22,7 +20,6 @@ export default {
 .ad
 {
   background-color: #fff;
-  font-size: 13px;
   overflow: hidden;
   margin-bottom: 15px;
   height: 106px;
@@ -47,9 +44,15 @@ export default {
     height: 100px;
     background-image: url('/vuejobs.png');
   }
-  .carbon-img
+  #cf_ad,
+  #cf_ad .cf-wrapper {
+    width: auto;
+  }
+  #cf_ad .cf-text {
+    font-size: 12px;
+  }
+  #cf_ad .cf-image-wrapper
   {
-    display: inline-block;
     float: left;
     margin-right: 10px;
     @media (min-width: 625px)

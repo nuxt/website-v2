@@ -1,6 +1,6 @@
 <template>
   <div>
-    <carbon-ads :key="$route.params.slug" />
+    <code-fund-ads :key="$route.params.slug" />
     <h1>{{ attrs.title }}</h1>
     <blockquote>
       <p>{{ attrs.description }}</p>
@@ -39,7 +39,7 @@
 
 <script>
 import axios from 'axios'
-import CarbonAds from '~/components/CarbonAds.vue'
+import CodeFundAds from '~/components/CodeFundAds.vue'
 import NuxtFilesTree from '~/components/FilesTree.vue'
 import HtmlParser from '~/components/HtmlParser.vue'
 
@@ -83,7 +83,7 @@ export default {
     }
   },
   components: {
-    CarbonAds,
+    CodeFundAds,
     NuxtFilesTree,
     HtmlParser
   }

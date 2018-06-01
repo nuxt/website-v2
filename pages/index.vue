@@ -61,7 +61,7 @@ export default {
 <style lang="scss" scoped>
 .Landscape
 {
-  $footer-height: 50px;
+  $footer-height: 120px;
 
   min-height: calc(100vh - #{$footer-height});
   background-color: #fff;

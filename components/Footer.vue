@@ -3,6 +3,12 @@
     <!-- <div class="Footer__Links container">
       Links
     </div> -->
+
+    <div align="center" style="padding-bottom: 10px;">
+      <a href="https://www.shuttleworthfoundation.org">
+        <img src="/shuttleworth-funded.jpg" width="200" alt="shuttleworth funded"/>
+      </a>
+    </div>
     <div class="Footer__Author container">
       {{ $store.state.lang.footer.authors }}:
       <a href="https://github.com/Atinux" target="_blank">@Atinux</a>

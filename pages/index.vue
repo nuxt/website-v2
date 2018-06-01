@@ -143,12 +143,18 @@ export default {
 .Landscape
 {
 <<<<<<< HEAD
+<<<<<<< HEAD
   &__Content
   {
     padding: 100px 0;
     text-align: center;
     &__Image
 =======
+=======
+  $footer-height: 120px;
+
+  min-height: calc(100vh - #{$footer-height});
+>>>>>>> 67a0d05a (docs: Add Shuttleworth funded logo)
   background-color: #fff;
   padding: 70px 15px;
 <<<<<<< HEAD

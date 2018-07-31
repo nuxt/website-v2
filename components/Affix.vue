@@ -1,40 +1,41 @@
 <template>
   <nav class="Affix" :class="{'Affix--hidden': !visible}">
-    <div class="Affix__Toggler" :class="{'Affix__Toggler--hidden': visible}" @click="toggle">
-      <div class="icon more-vertical"></div>
-    </div>
-    <h3 class="Affix__Title" style="margin-bottom: 20px;">Open Collective Sponsors</h3>
-    <ul class="Affix__List">
-      <li class="Affix__List__Item">
-        <a href="https://t.co/sUZfRy6ZxS" target="_blank"><img src="https://user-images.githubusercontent.com/1016365/34124854-48fafa06-e3e9-11e7-8c04-251055feebee.png" style="width: 200px;max-width: 70%;" alt="Tipe.io"/></a>
-      </li>
-      <li class="Affix__List__Item">
-        <a href="https://www.storyblok.com/?ref=nuxt" target="_blank">
-          <img src="https://a.storyblok.com/f/39898/x/aa0dc897ff/storyblok-logo.svg" alt="Storyblok.com" style="width: 260px; max-width: 95%;">
-        </a>
-      </li>
-    </ul>
     <h2 class="Affix__Version">
       {{ $store.state.lang.text.version }} {{ $store.state.docVersion }}
       <div class="Affix__Version__Toggler" @click="toggle">
         <div class="icon close"></div>
       </div>
     </h2>
+    <div class="Affix__Toggler" :class="{'Affix__Toggler--hidden': visible}" @click="toggle">
+      <div class="icon more-vertical"></div>
+    </div>
+    <h3 class="Affix__Title" style="margin-bottom: 20px;">Open Collective Partners</h3>
+    <ul class="Affix__List">
+      <li class="Affix__List__Item">
+        <a class="Affix__List__Item__Sponsor" href="https://t.co/sUZfRy6ZxS" target="_blank" rel="noopener">
+          <img src="https://user-images.githubusercontent.com/1016365/34124854-48fafa06-e3e9-11e7-8c04-251055feebee.png" alt="Tipe.io" />
+        </a>
+      </li>
+      <li class="Affix__List__Item">
+        <a class="Affix__List__Item__Sponsor" href="https://www.storyblok.com/?ref=nuxt" target="_blank" rel="noopener">
+          <img src="https://a.storyblok.com/f/39898/x/aa0dc897ff/storyblok-logo.svg" alt="Storyblok.com">
+        </a>
+      </li>
+      <li class="Affix__List__Item">
+        Support us and
+        <a href="https://opencollective.com/nuxtjs" target="_blank" rel="noopener">become a partner</a>.
+      </li>
+    </ul>
     <template v-for="(group, index) in list">
-      <h3 class="Affix__Title" :key="index">{{ group.title }}</h3>
-      <ul class="Affix__List" :key="index">
+      <h3 class="Affix__Title" :key="`title-${index}`">{{ group.title }}</h3>
+      <ul class="Affix__List" :key="`list-${index}`">
         <li class="Affix__List__Item" v-for="(link, index) in group.links" :key="index">
-          <nuxt-link class="Affix__List__Item__Link"
-                     :class="{'nuxt-link-active': path === menu + link.to}"
-                     :to="menu + link.to" exact>
+          <nuxt-link class="Affix__List__Item__Link" :class="{'nuxt-link-active': path === menu + link.to}" :to="menu + link.to" exact>
             {{ link.name }}
           </nuxt-link>
           <ul v-if="path === menu + link.to" class="Affix__List__Item__Contents">
             <li v-for="(content, index) in link.contents" class="Affix__List__Item__Contents__Item" :key="index">
-              <a :href="menu + link.to + content.to"
-                  @click.prevent="scrollTo(content.to)"
-                  class="Affix__List__Item__Contents__Item__Link"
-                  :class="{'Affix__List__Item__Contents__Item__Link--active': current === index}">
+              <a :href="menu + link.to + content.to" @click.prevent="scrollTo(content.to)" class="Affix__List__Item__Contents__Item__Link" :class="{'Affix__List__Item__Contents__Item__Link--active': current === index}">
                 {{ content.name }}
               </a>
             </li>
@@ -147,8 +148,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.Affix
-{
+.Affix {
   width: 100%;
   top: 60px;
   left: 0;
@@ -158,26 +158,22 @@ export default {
   overflow-y: auto;
   background-color: #fff;
   z-index: 990;
-  @media (min-width: 992px)
-  {
+  @media (min-width: 992px) {
     top: 80px;
     width: 300px;
     padding: 20px 30px;
     border-right: 1px solid #dbdfe1;
   }
-  &--hidden
-  {
+  &--hidden {
     left: -100%;
     overflow-y: visible;
-    @media (min-width: 992px)
-    {
+    @media (min-width: 992px) {
       overflow-y: auto;
       left: 0;
     }
   }
-  &__Toggler
-  {
-    background-color: rgba(53, 73, 94, 0.70);
+  &__Toggler {
+    background-color: rgba(53, 73, 94, 0.7);
     width: 18px;
     height: 30px;
     position: fixed;
@@ -185,70 +181,61 @@ export default {
     right: 20px;
     z-index: 980;
     cursor: pointer;
-    .icon
-    {
+    .icon {
       color: #fff;
       margin-left: 7px;
       margin-top: 13px;
     }
-    &:before, &:after
-    {
+    &:before,
+    &:after {
       content: " ";
       width: 0;
       height: 0;
       top: 0;
       position: absolute;
     }
-    &:before
-    {
+    &:before {
       border-right: 10px solid;
       border-top: 15px solid transparent;
       border-bottom: 15px solid transparent;
       left: -10px;
-      border-right-color: rgba(53, 73, 94, 0.70);
+      border-right-color: rgba(53, 73, 94, 0.7);
     }
-    &:after
-    {
+    &:after {
       border-left: 10px solid;
       border-top: 15px solid transparent;
       border-bottom: 15px solid transparent;
       right: -10px;
-      border-left-color: rgba(53, 73, 94, 0.70);
+      border-left-color: rgba(53, 73, 94, 0.7);
     }
-    &--hidden
-    {
+    &--hidden {
       display: none;
     }
-    @media (min-width: 992px)
-    {
+    @media (min-width: 992px) {
       display: none;
     }
   }
-  &__Version
-  {
+  &__Version {
     position: relative;
     font-size: 15px;
-    font-weight: 400;
+    font-weight: 600;
     color: #35495e;
     margin: 0;
     padding: 10px 0;
     text-transform: uppercase;
     letter-spacing: 1px;
-    &__Toggler
-    {
+    &__Toggler {
       width: 25px;
       height: 22px;
       cursor: pointer;
       display: block;
       float: right;
-      @media (min-width: 992px)
-      {
+      @media (min-width: 992px) {
         display: none;
       }
     }
   }
-  &__Title
-  {
+  &__Title {
     margin: 10px 0;
     // margin-top: 30px;
     text-transform: uppercase;
@@ -257,17 +244,14 @@ export default {
     font-size: 15px;
     letter-spacing: 1px;
   }
-  &__List
-  {
+  &__List {
     list-style: none;
     margin: 0;
     margin-bottom: 20px;
     padding: 0;
-    &__Item
-    {
+    &__Item {
       padding: 2px 0;
-      &__Link
-      {
+      &__Link {
         display: block;
         font-size: 16px;
         text-decoration: none;
@@ -275,49 +259,50 @@ export default {
         padding: 2px 6px;
         border-radius: 4px;
         letter-spacing: 0.25px;
-        &:hover
-        {
+        &:hover {
           color: #111;
           background-color: #eee;
         }
       }
-      .nuxt-link-active
-      {
+      &__Sponsor {
+        display: inline-block;
+        height: 60px;
+        img {
+          height: 100%;
+        }
+      }
+      .nuxt-link-active {
         color: #fff;
         background-color: #41b883;
       }
-      &__Contents
-      {
+      &__Contents {
         margin: 0;
         padding: 0;
         padding-top: 3px;
         padding-left: 20px;
         list-style: none;
-        &__Item
-        {
+        &__Item {
           position: relative;
           padding: 2px 0;
-          &:before
-          {
+          &:before {
             content: " ";
             width: 0;
             height: 0;
             top: 8px;
             left: -16px;
             position: absolute;
-            border-bottom: 9px solid #DBDFE1;
+            border-bottom: 9px solid #dbdfe1;
             border-right: 5px solid transparent;
             border-left: 5px solid transparent;
           }
-          &__Link
-          {
+          &__Link {
             display: block;
             font-size: 14px;
             color: lighten(#35495e, 5%);
             text-decoration: none;
             letter-spacing: 0.25px;
-            &:hover, &--active
-            {
+            &:hover,
+            &--active {
               color: #41b883;
             }
           }

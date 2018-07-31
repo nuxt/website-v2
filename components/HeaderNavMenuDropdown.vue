@@ -1,10 +1,10 @@
 <template>
   <div class="Dropdown">
     <div class="Dropdown__Title" @click="show = !show" :class="{'Dropdown__Title--mobile': show}">
-      {{ $store.state.lang.links.ecosystem }}
+      {{ dropdownLabel }}
     </div>
     <ul class="Dropdown__List" :class="{ 'Dropdown__List--visible': show }">
-      <li class="Dropdown__List__Item" v-for="item in list" :key="item.name">
+      <li class="Dropdown__List__Item" v-for="item in dropdownList" :key="item.name">
         <a class="Dropdown__List__Item__Link" :href="item.path" :target="item.target">
           {{ item.name }}
         </a>
@@ -15,40 +15,19 @@
 
 <script>
 export default {
+  props: {
+    dropdownLabel: {
+      type: String,
+      required: true
+    },
+    dropdownList: {
+      type: Array,
+      required: true
+    }
+  },
   data() {
     return {
       show: false
-    }
-  },
-  computed: {
-    list() {
-      return [
-        {
-          name: this.$store.state.lang.links.github,
-          path: 'https://github.com/nuxt',
-          target: '_blank'
-        },
-        {
-          name: this.$store.state.lang.links.twitter,
-          path: 'https://twitter.com/nuxt_js',
-          target: '_blank'
-        },
-        {
-          name: this.$store.state.lang.links.chat,
-          path: 'https://discord.gg/VApZF5W',
-          target: '_blank'
-        },
-        {
-          name: this.$store.state.lang.links.vuejs,
-          path: 'https://vuejs.org',
-          target: '_blank'
-        },
-        {
-          name: this.$store.state.lang.links.vue_jobs,
-          path: 'https://vuejobs.com/?ref=nuxtjs',
-          target: '_blank'
-        }
-      ]
     }
   }
 }
@@ -94,7 +73,7 @@ export default {
       border-left: 6px solid transparent;
       @media (min-width: 991px) {
         top: 38px;
-        right: 0;
+        right: 10px;
         position: absolute;
       }
     }
@@ -119,7 +98,7 @@ export default {
     }
   }
   &__List {
-    width: 100%;
+    width: auto;
     display: none;
     flex-wrap: wrap;
     position: relative;
@@ -133,7 +112,8 @@ export default {
       border: 1px solid #dbdfe1;
       border-top: none;
       top: 100%;
-      right: 0;
+      left: -25px;
+      right: -25px;
       &::before {
         display: block;
         position: absolute;
@@ -162,6 +142,11 @@ export default {
       display: flex;
       height: 50px;
       border-top: 1px solid #dbdfe1;
+      padding-right: 5px;
+      padding-left: 5px;
+      @media (min-width: 991px) {
+        width: auto;
+      }
       &__Link {
         width: 100%;
         display: flex;

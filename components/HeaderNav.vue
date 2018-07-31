@@ -7,7 +7,7 @@
       <nuxt-header-nav-menu/>
     </div>
     <div class="Nav__Lang">
-      <nuxt-header-nav-lang/>
+      <nuxt-header-nav-menu-dropdown :dropdownList="langList" :dropdownLabel="$store.state.lang.iso.toUpperCase()" />
     </div>
   </nav>
 </template>
@@ -15,16 +15,27 @@
 <script>
 import NuxtHeaderNavSearch from '~/components/HeaderNavSearch.vue'
 import NuxtHeaderNavMenu from '~/components/HeaderNavMenu.vue'
-import NuxtHeaderNavLang from '~/components/HeaderNavLang.vue'
+import NuxtHeaderNavMenuDropdown from '~/components/HeaderNavMenuDropdown.vue'
 
 export default {
   computed: {
-    visible() { return this.$store.state.visibleHeader }
+    visible() { return this.$store.state.visibleHeader },
+    langList() {
+      return [
+        { name: 'English', path: 'https://nuxtjs.org' + this.$route.path, target: '_blank' },
+        { name: 'Français', path: 'https://fr.nuxtjs.org' + this.$route.path, target: '_blank' },
+        { name: '简体中文', path: 'https://zh.nuxtjs.org' + this.$route.path, target: '_blank' },
+        { name: '日本語', path: 'https://ja.nuxtjs.org' + this.$route.path, target: '_blank' },
+        { name: '한국어', path: 'https://ko.nuxtjs.org' + this.$route.path, target: '_blank' },
+        { name: 'Русский', path: 'https://ru.nuxtjs.org' + this.$route.path, target: '_blank' },
+        { name: 'Indonesian', path: 'https://id.nuxtjs.org' + this.$route.path, target: '_blank' }
+      ]
+    }
   },
   components: {
     NuxtHeaderNavSearch,
     NuxtHeaderNavMenu,
-    NuxtHeaderNavLang
+    NuxtHeaderNavMenuDropdown
   }
 }
 </script>

@@ -35,7 +35,7 @@ export default {
         },
         {
           name: this.$store.state.lang.links.chat,
-          path: 'https://gitter.im/nuxt/nuxt.js',
+          path: 'https://discord.gg/VApZF5W',
           target: '_blank'
         },
         {

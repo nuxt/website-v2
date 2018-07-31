@@ -21,10 +21,10 @@
       </nuxt-link>
     </li>
     <li class="Menu__Item">
-      <nuxt-header-nav-menu-dropdown/>
+      <nuxt-header-nav-menu-dropdown :dropdownList="dropdownList" :dropdownLabel="$store.state.lang.links.ecosystem" />
     </li>
   </ul>
-</nav>
+  </nav>
 </template>
 
 <script>
@@ -33,13 +33,43 @@ import NuxtHeaderNavMenuDropdown from '~/components/HeaderNavMenuDropdown.vue'
 export default {
   components: {
     NuxtHeaderNavMenuDropdown
+  },
+  data() {
+    return {
+      dropdownList: [
+        {
+          name: this.$store.state.lang.links.github,
+          path: 'https://github.com/nuxt',
+          target: '_blank'
+        },
+        {
+          name: this.$store.state.lang.links.twitter,
+          path: 'https://twitter.com/nuxt_js',
+          target: '_blank'
+        },
+        {
+          name: this.$store.state.lang.links.chat,
+          path: 'https://gitter.im/nuxt/nuxt.js',
+          target: '_blank'
+        },
+        {
+          name: this.$store.state.lang.links.vuejs,
+          path: 'https://vuejs.org',
+          target: '_blank'
+        },
+        {
+          name: this.$store.state.lang.links.vue_jobs,
+          path: 'https://vuejobs.com/?ref=nuxtjs',
+          target: '_blank'
+        }
+      ]
+    }
   }
 }
 </script>
 
 <style lang="scss" scoped>
-.Menu
-{
+.Menu {
   width: 100%;
   margin: 0;
   padding: 0;
@@ -47,27 +77,22 @@ export default {
   flex-wrap: wrap;
   list-style: none;
   justify-content: space-between;
-  @media (min-width: 991px)
-  {
+  @media (min-width: 991px) {
     flex: 1;
     flex-wrap: nowrap;
     padding-left: 15px;
   }
-  &__Item
-  {
+  &__Item {
     width: 100%;
     display: flex;
     border-bottom: 1px solid #dbdfe1;
-    @media (min-width: 991px)
-    {
+    @media (min-width: 991px) {
       border-bottom: none;
     }
-    &:last-child
-    {
+    &:last-child {
       border-bottom: none;
     }
-    &__Link
-    {
+    &__Link {
       height: 60px;
       display: flex;
       width: 100%;
@@ -77,17 +102,15 @@ export default {
       font-size: 16px;
       text-decoration: none;
       letter-spacing: 0.5px;
-      &:hover
-      {
+      &:hover {
         color: #41b883;
       }
-      @media (min-width: 991px)
-      {
+      @media (min-width: 991px) {
         height: 79px;
       }
     }
-    .nuxt-link-active, .nuxt-link-active:hover
-    {
+    .nuxt-link-active,
+    .nuxt-link-active:hover {
       color: #41b883;
     }
   }

@@ -1,7 +1,7 @@
 <template>
   <header class="Header">
     <nuxt-link class="Header__Logo" to="/">
-      <img src="~static/logo_nav.png" alt="Nuxt" />
+      <img src="~static/logo_nav.png" alt="Nuxt"/>
       <h1 class="Header__Logo__Text">NUXT</h1>
     </nuxt-link>
     <div class="Header__Toggler">

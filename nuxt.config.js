@@ -27,5 +27,14 @@ module.exports = {
     githubToken: '4aa6bcf919d238504e7db59a66d32e78281c0ad3',
     docSearchApiKey: 'ff80fbf046ce827f64f06e16f82f1401'
   },
-  loading: { color: '#41B883' }
+  loading: { color: '#41B883' },
+  router: {
+    scrollBehavior(to, from, savedPosition) {
+      // savedPosition is only available for popstate navigations (back button)
+      if (savedPosition) {
+        return savedPosition
+      }
+      return { x: 0, y: 0 }
+    }
+  }
 }

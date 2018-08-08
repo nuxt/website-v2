@@ -36,5 +36,13 @@ module.exports = {
       }
       return { x: 0, y: 0 }
     }
+  },
+  /*
+  ** Build configuration
+  */
+  build: {
+    styleResources: {
+      scss: ['./assets/styles/variables/_colors.scss']
+    }
   }
 }

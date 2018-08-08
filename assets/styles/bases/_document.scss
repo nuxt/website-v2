@@ -1,0 +1,46 @@
+/* Document
+ * ========================================================================== */
+
+/**
+ * 1. Remove repeating backgrounds in all browsers (opinionated).
+ * 2. Add border box sizing in all browsers (opinionated).
+ */
+
+ *,
+ ::before,
+ ::after {
+   background-repeat: no-repeat; /* 1 */
+   box-sizing: border-box; /* 2 */
+ }
+
+ /**
+  * 1. Add text decoration inheritance in all browsers (opinionated).
+  * 2. Add vertical alignment inheritance in all browsers (opinionated).
+  */
+
+ ::before,
+ ::after {
+   text-decoration: inherit; /* 1 */
+   vertical-align: inherit; /* 2 */
+ }
+
+ /**
+  * 1. Correct the line height in all browsers.
+  * 2. Add the default cursor in all browsers (opinionated).
+  * 3. Prevent adjustments of font size after orientation changes in
+  *    IE on Windows Phone and in iOS.
+  * 4. Breaks words to prevent prevent overflow in all browsers (opinionated).
+  */
+
+html {
+  line-height: $line-height-base;  /* 1 */
+  cursor: default; /* 2 */
+  -ms-text-size-adjust: 100%; /* 3 */
+  -webkit-text-size-adjust: 100%; /* 3 */
+  word-break: break-word; /* 4 */
+  font-family: sans-serif;
+  -ms-overflow-style: scrollbar;
+  // -webkit-tap-highlight-color: rgba($black, 0);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}

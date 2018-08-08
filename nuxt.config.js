@@ -11,7 +11,7 @@ module.exports = {
   css: [
     'normalize.css',
     'highlight.js/styles/github.css',
-    '~assets/scss/main.scss'
+    '~assets/styles/main.scss'
   ],
   modules: [
     ['~/modules/sentry', {

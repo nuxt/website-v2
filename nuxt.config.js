@@ -9,7 +9,7 @@ module.exports = {
     ]
   },
   css: [
-    'normalize.css',
+    'sanitize.css',
     'highlight.js/styles/github.css',
     '~assets/styles/main.scss'
   ],
@@ -42,7 +42,10 @@ module.exports = {
   */
   build: {
     styleResources: {
-      scss: ['./assets/styles/variables/_colors.scss']
+      scss: [
+        './assets/styles/variables/_colors.scss',
+        './assets/styles/variables/_typography.scss'
+      ]
     }
   }
 }

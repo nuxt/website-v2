@@ -13,13 +13,13 @@
   height: 28px;
   display: inline-block;
   .st0 {
-    fill: $green-nuxt;
+    fill: $color-nuxt-green;
   }
   .st1 {
-    fill: $green-vue;
+    fill: $color-vue-green;
   }
   .st2 {
-    fill: $blue-vue;
+    fill: $color-vue-grey;
   }
 }
 </style>

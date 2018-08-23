@@ -1,9 +1,4 @@
 @import "fonts/camphor";
-
-@import "variables/colors";
-@import "variables/typography";
-@import "variables/sizes";
-
-@import "bases/document";
-
+@import "variables/theme";
+@import "reboot/theme";
 @import "classes/container";

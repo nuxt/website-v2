@@ -1,5 +1,5 @@
 <template>
-  <footer class="Footer">
+  <footer>
     <!-- <div class="Footer__Links container">
       Links
     </div> -->
@@ -19,6 +19,13 @@
 </template>
 
 <style lang="scss" scoped>
+footer {
+  display: flex;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  background-color: $background-color-dark;
+}
 .Footer
 {
   &__Links

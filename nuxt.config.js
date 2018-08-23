@@ -43,8 +43,7 @@ module.exports = {
   build: {
     styleResources: {
       scss: [
-        './assets/styles/variables/_colors.scss',
-        './assets/styles/variables/_typography.scss'
+        './assets/styles/variables/theme.scss'
       ]
     }
   }

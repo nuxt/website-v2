@@ -9,7 +9,7 @@
     "highlight.js": "^9.12.0",
     "lodash": "^4.17.10",
     "newrelic": "^4.6.0",
-    "nuxt-edge": "^2.0.0-25549450.31d25df",
+    "nuxt-edge": "^2.0.0-25582396.3f7c5f6",
     "raven": "^2.6.3",
     "raven-js": "^3.26.4",
     "sanitize.css": "^6.0.0",

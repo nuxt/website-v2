@@ -1,14 +1,20 @@
 <template>
   <div>
-    <navbar></navbar>
-    <div :class="{'App--hidden': visible}">
+    <n-header></n-header>
+    <main>
       <nuxt/>
-    </div>
+    </main>
+    <footer>
+      Footer
+    </footer>
+    <!-- <navbar></navbar>
+    <div :class="{'App--hidden': visible}">
+    </div> -->
   </div>
 </template>
 
 <script>
-import Navbar from '~/components/Header.vue'
+import nHeader from '@/components/partials/Header.vue'
 
 export default {
   watch: {
@@ -49,7 +55,7 @@ export default {
     }
   },
   components: {
-    Navbar
+    nHeader
   }
 }
 </script>

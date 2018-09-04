@@ -10,7 +10,7 @@
 
 <style lang="scss">
 .SVG-nuxt {
-  height: 28px;
+  height: 32px;
   display: inline-block;
   .st0 {
     fill: $color-nuxt-green;

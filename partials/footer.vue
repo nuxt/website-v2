@@ -1,5 +1,0 @@
-<template>
-  <footer>
-
-  </footer>
-</template>

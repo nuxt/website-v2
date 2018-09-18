@@ -9,15 +9,9 @@
       <iframe class="youtube" :src="attrs.youtube" frameborder="0" allowfullscreen></iframe>
     </div>
     <h2>{{ $store.state.lang.examples.source_code }}</h2>
-    <nuxt-files-tree :example="attrs.github" :key="attrs.github"></nuxt-files-tree>
+    <iframe :src="codeSandBoxLink" style="width:100%; height:500px; border:0; border-radius: 4px; overflow:hidden; margin-bottom: 20px;" sandbox="allow-modals allow-forms allow-popups allow-scripts allow-same-origin"></iframe>
     <div>
-      <a v-if="attrs.livedemo" :href="attrs.livedemo" class="button button--grey" target="_blank">
-        <span>
-          <div class="icon eye"></div>
-        </span>
-        {{ $store.state.lang.links.live_demo }}
-      </a>
-      <a v-if="attrs.liveedit" :href="attrs.liveedit" class="button button--grey" target="_blank">
+      <a :href="liveEditLink" class="button button--grey" target="_blank">
         <span>
           <div class="icon edit"></div>
         </span>
@@ -65,9 +59,19 @@ export default {
     data.body = res.data.body
     if (!data.attrs.title) console.error(`[${path}] ${store.state.lang.text.please_define_title}.`) // eslint-disable-line no-console
     if (!data.attrs.description) console.error(`[${path}] ${store.state.lang.text.please_define_description}.`) // eslint-disable-line no-console
+
     return data
   },
   computed: {
+    codeSandBox() {
+      return `https://codesandbox.stream`
+    },
+    codeSandBoxLink() {
+      return `${this.codeSandBox}/embed/github/nuxt/nuxt.js/tree/dev/examples/${this.attrs.github}?autoresize=1&view=editor`
+    },
+    liveEditLink() {
+      return `${this.codeSandBox}/s/github/nuxt/nuxt.js/tree/dev/examples/${this.attrs.github}?from-embed`
+    },
     downloadLink() {
       return 'https://minhaskamal.github.io/DownGit/#/home?url=https://github.com/nuxt/nuxt.js/tree/dev/examples/' + this.attrs.github
     }

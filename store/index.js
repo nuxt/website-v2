@@ -36,15 +36,20 @@ const store = () => new Vuex.Store({
     }
   },
   actions: {
-    async nuxtServerInit({ state, commit }, { isDev, req, redirect }) {
+    async nuxtServerInit({ state, commit }, { isDev, env, req, redirect }) {
       if (isDev) {
         commit('setApiURI', 'http://localhost:4000')
       }
-      const hostParts = (req.headers.host || '').replace('.org', '').split('.')
-      // If url like ja.nuxtjs.org
-      if (hostParts.length === 2) {
-        if (hostParts[0] === 'www') return redirect(301, 'https://nuxtjs.org' + req.url)
-        commit('setLocale', hostParts[0])
+      // If SSR
+      if (req) {
+        const hostParts = (req.headers.host || '').replace('.org', '').split('.')
+        // If url like ja.nuxtjs.org
+        if (hostParts.length === 2) {
+          if (hostParts[0] === 'www') return redirect(301, 'https://nuxtjs.org' + req.url)
+        }
+      } else {
+        // Used with nuxt generate
+        commit('setLocale', env.locale)
       }
       try {
         const resReleases = await axios(state.apiURI + '/releases')

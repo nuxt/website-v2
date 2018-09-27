@@ -269,6 +269,13 @@ export default {
         height: 60px;
         img {
           height: 100%;
+          transition: all 0.3s ease;
+          filter: grayscale(100%);
+          opacity: 0.66;
+          &:hover, :focus {
+            filter: none;
+            opacity: 1;
+          }
         }
       }
       .nuxt-link-active {

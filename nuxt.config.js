@@ -44,6 +44,7 @@ export default {
     }
   },
   generate: {
+    fallback: true,
     routes() {
       return Promise.all(
         ['guide', 'api', 'examples', 'faq']

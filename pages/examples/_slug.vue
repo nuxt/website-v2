@@ -64,7 +64,7 @@ export default {
   },
   computed: {
     codeSandBox() {
-      return `https://codesandbox.stream`
+      return `https://codesandbox.io`
     },
     codeSandBoxLink() {
       return `${this.codeSandBox}/embed/github/nuxt/nuxt.js/tree/dev/examples/${this.attrs.github}?autoresize=1&view=editor`

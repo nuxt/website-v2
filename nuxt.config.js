@@ -19,11 +19,11 @@ export default {
     '~assets/scss/main.scss'
   ],
   modules: [
-    ['~/modules/sentry', {
-      project_id: process.env.SENTRY_PROJECT_ID,
-      public_key: process.env.SENTRY_PUBLIC_KEY,
-      private_key: process.env.SENTRY_PRIVATE_KEY
-    }]
+    // ['~/modules/sentry', {
+    //   project_id: process.env.SENTRY_PROJECT_ID,
+    //   public_key: process.env.SENTRY_PUBLIC_KEY,
+    //   private_key: process.env.SENTRY_PRIVATE_KEY
+    // }]
   ],
   plugins: [
     { src: '~/plugins/ga.js', ssr: false }

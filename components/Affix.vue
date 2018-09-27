@@ -272,7 +272,7 @@ export default {
           transition: all 0.3s ease;
           filter: grayscale(100%);
           opacity: 0.66;
-          &:hover, :focus {
+          &:hover {
             filter: none;
             opacity: 1;
           }

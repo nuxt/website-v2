@@ -31,7 +31,7 @@
 {
   text-align: center;
   background: #f6f6f6;
-  padding-top: 30px;
+  padding-top: 50px;
   &__Sponsors {
     max-width: 700px;
     padding-bottom: 10px;
@@ -53,14 +53,14 @@
         transition: all 0.3s ease;
         filter: grayscale(100%);
         opacity: 0.66;
-        &:hover, :focus {
+        &:hover {
           filter: none;
           opacity: 1;
         }
       }
     }
     &__Become {
-      padding-bottom: 10px;
+      padding-bottom: 40px;
     }
   }
   &__Links

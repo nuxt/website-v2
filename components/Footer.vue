@@ -1,7 +1,7 @@
 <template>
   <footer class="Footer">
     <div class="Footer__Sponsors">
-      <h3>Sponsors</h3>
+      <h3>{{ $store.state.lang.sponsors.title }}</h3>
       <a class="Footer__Sponsors__Link" href="https://t.co/sUZfRy6ZxS" target="_blank" rel="noopener">
         <img src="https://user-images.githubusercontent.com/1016365/34124854-48fafa06-e3e9-11e7-8c04-251055feebee.png" alt="Tipe.io" />
       </a>
@@ -14,8 +14,8 @@
       </a>
     </div>
     <p class="Footer__Sponsors__Become">
-      Support us and
-      <a href="https://opencollective.com/nuxtjs" target="_blank" rel="noopener">become a partner</a>.
+      {{ $store.state.lang.sponsors.become }}
+      <a href="https://opencollective.com/nuxtjs" target="_blank" rel="noopener">{{ $store.state.lang.sponsors.become_partner }}</a>.
     </p>
     <div class="Footer__Author container">
       {{ $store.state.lang.footer.authors }}:

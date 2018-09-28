@@ -26,6 +26,7 @@ export default {
     // }]
   ],
   plugins: [
+    '~/plugins/init',
     { src: '~/plugins/ga.js', ssr: false }
   ],
   env: {
@@ -45,6 +46,7 @@ export default {
   },
   generate: {
     fallback: true,
+    interval: 100,
     routes() {
       return Promise.all(
         ['guide', 'api', 'examples', 'faq']

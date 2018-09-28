@@ -9,7 +9,7 @@
     <div class="Affix__Toggler" :class="{'Affix__Toggler--hidden': visible}" @click="toggle">
       <div class="icon more-vertical"></div>
     </div>
-    <h3 class="Affix__Title" style="margin-bottom: 20px;">Open Collective Partners</h3>
+    <h3 class="Affix__Title" style="margin-bottom: 20px;">{{ $store.state.lang.sponsors.title }}</h3>
     <ul class="Affix__List">
       <li class="Affix__List__Item">
         <a class="Affix__List__Item__Sponsor" href="https://t.co/sUZfRy6ZxS" target="_blank" rel="noopener">
@@ -22,8 +22,8 @@
         </a>
       </li>
       <li class="Affix__List__Item">
-        Support us and
-        <a href="https://opencollective.com/nuxtjs" target="_blank" rel="noopener">become a partner</a>.
+        {{ $store.state.lang.sponsors.become }}
+        <a href="https://opencollective.com/nuxtjs" target="_blank" rel="noopener">{{ $store.state.lang.sponsors.become_partner }}</a>.
       </li>
     </ul>
     <template v-for="(group, index) in list">

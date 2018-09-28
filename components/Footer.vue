@@ -10,7 +10,7 @@
       </a>
       <br/>
       <a class="Footer__Sponsors__Link" href="https://www.shuttleworthfoundation.org">
-        <img src="/shuttleworth-funded.png" width="200" alt="shuttleworth funded"/>
+        <img src="/shuttleworth-funded.png" alt="shuttleworth funded"/>
       </a>
     </div>
     <p class="Footer__Sponsors__Become">

@@ -127,6 +127,7 @@ export default {
       padding-bottom: 0;
       span {
         font-weight: 400;
+        width: auto;
       }
     }
   }

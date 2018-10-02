@@ -1,7 +1,8 @@
 <template>
   <header class="Header">
     <nuxt-link class="Header__Logo" to="/">
-      <img src="~static/logo_nav.png" alt="Nuxt"/>
+      <n-logo/>
+      <!-- <img src="~static/logo_nav.png" alt="Nuxt"/> -->
       <h1 class="Header__Logo__Text">NUXT</h1>
     </nuxt-link>
     <div class="Header__Toggler">
@@ -14,7 +15,8 @@
 </template>
 
 <script>
-import NuxtHeaderNav from '~/components/HeaderNav.vue'
+import nLogo from '@/components/icons/nuxt'
+import NuxtHeaderNav from '@/components/HeaderNav'
 
 export default {
   computed: {
@@ -24,6 +26,7 @@ export default {
     toggle() { this.$store.commit('toggle', 'visibleHeader') }
   },
   components: {
+    nLogo,
     NuxtHeaderNav
   }
 }

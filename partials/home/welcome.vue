@@ -5,13 +5,22 @@
         <div class="nWelcome_Content">
           <h1 class="nWelcome_Content_Title">
             The Vue.js Developpers Framework
+          <!-- {{ $store.state.lang.homepage.title }} -->
           </h1>
-          <h2 class="nWelcome_Content_Subtitle">
+          <h3 class="nWelcome_Content_Subtitle">
             Your developpment will become enjoyable!
-          </h2>
+          </h3>
           <p class="nWelcome_Content_Description">
             Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dignissimos iusto temporibus possimus, est eius natus eos voluptate fuga quae nam, deserunt praesentium, earum ratione laudantium explicabo ea! Ea, suscipit similique.
           </p>
+          <div class="nWelcome_Content_Links">
+            <nuxt-link class="nWelcome_Content_Links_Button" to="/guide/installation">
+              {{ $store.state.lang.links.get_started }}
+            </nuxt-link>
+            <a class="nWelcome_Content_Links_Button" href="https://github.com/nuxt/nuxt.js" target="_blank">
+              {{ $store.state.lang.links.github }} <span class="version">{{ $store.state.ghVersion }}</span>
+            </a>
+          </div>
         </div>
         <figure class="nWelcome_Figure">
           <iframe src="https://www.youtube.com/embed/RIXOzJWFfc8" frameborder="0" allowfullscreen></iframe>
@@ -22,19 +31,6 @@
 </template>
 
 <style lang="scss">
-/* ---- Breakpoints ----*/
-$--xs:     576px !default;
-$--sm:     768px !default;
-$--md:     992px !default;
-$--lg:     1200px !default;
-$--xl:     1920px !default;
-
-$font-size-base:              1rem !default; // Assumes the browser default, typically `16px`
-$font-size-xl:                ($font-size-base * 1.5);
-$font-size-lg:                ($font-size-base * 1.25);
-$font-size-sm:                ($font-size-base * .875);
-$font-size-xs:                ($font-size-base * .75);
-
 .container {
   display: flex;
   flex-direction: column;
@@ -70,12 +66,48 @@ $font-size-xs:                ($font-size-base * .75);
 .nWelcome {
   margin-top: 80px;
   padding: 5rem 0;
+  // z-index: 100;
+  // box-shadow: $--box-shadow-2;
   &_Content {
-    width: 50%;
+    width: 45%;
+    &_Title {
+      margin-top: 0;
+      color: $color-text-primary;
+      font-size: $h1-font-size;
+      font-weight: $font-weight-regular;
+      line-height: normal;
+    }
+    &_Subtitle {
+      margin-top: 0;
+      color: $color-text-primary;
+      font-size: $h3-font-size;
+      font-weight: $font-weight-regular;
+      line-height: normal;
+    }
+    &_Description {
+
+    }
+    &_Links {
+      &_Button {
+
+      }
+    }
   }
   &_Figure {
-    width: 50%;
+    width: 45%;
     margin: 0;
+    // height: 0;
+    // /* 9/16 */
+    // padding-bottom: 56.25%;
+    // overflow: hidden;
+    // position: relative;
+    iframe, embed, object {
+      width: 100%;
+      height: 100%;
+      // position: absolute;
+      // top: 0;
+      // left: 0;
+    }
   }
 }
 </style>

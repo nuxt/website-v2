@@ -1,5 +1,5 @@
 <template>
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 105.65 90.99">
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 105.65 90.99" class="iModular">
     <title>Modular</title>
     <g id="Calque_2" data-name="Calque 2">
       <g id="Calque_1-2" data-name="Calque 1">
@@ -13,13 +13,15 @@
 </template>
 
 <style lang="scss">
-.cls-1 {
-  fill:#3b8070;
-}
-.cls-2 {
-  fill:#35495e;
-}
-.cls-3 {
-  fill:#41b883;
+.iModular {
+  .cls-1 {
+    fill:#3b8070;
+  }
+  .cls-2 {
+    fill:#35495e;
+  }
+  .cls-3 {
+    fill:#41b883;
+  }
 }
 </style>

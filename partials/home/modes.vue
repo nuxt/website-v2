@@ -1,7 +1,7 @@
 <template>
   <section class="nModes">
     <div class="container">
-      <h1 class="nModes_Title">Production modes</h1>
+      <h2 class="nModes_Title"><span>Production modes</span></h2>
       <div class="row">
         <ul class="nModes_Tabs">
           <li class="nModes_Tabs_Option" @click="mode = 0">Single Page</li>
@@ -48,14 +48,20 @@ export default {
   z-index: 100;
   position: relative;
   box-shadow: $--box-shadow-1;
-  padding: 5rem 0;
+  padding: 6rem 0;
   &_Title {
     text-align: center;
     margin-top: 0;
     color: $color-text-primary;
-    font-size: $h1-font-size;
+    font-size: $h2-font-size;
     font-weight: $font-weight-regular;
     line-height: normal;
+    margin-bottom: 6rem;
+    span {
+      padding-bottom: 10px;
+      border-bottom: 4px solid $color-vue-green;
+      border-radius: 4px;
+    }
   }
   &_Tabs {
     width: 30%;

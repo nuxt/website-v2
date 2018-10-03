@@ -1,10 +1,10 @@
 <template>
   <section class="nWhy">
     <div class="container">
-      <h1 class="nWhy_Title">Why Nuxt?</h1>
+      <h2 class="nWhy_Title">Why Nuxt?</h2>
       <div class="row">
         <div class="nWhy_Block">
-          <i-performant/>
+          <i-modular/>
           <h3 class="nWhy_Block_Title">Modular</h3>
           <p class="nWhy_Block_Description">
             Lorem ipsum dolor sit, amet consectetur adipisicing elit. Neque amet dolorum ea, quae commodi alias. In obcaecati optio, quis quaerat commodi, ducimus amet similique sed sequi, nobis fugit voluptatibus iusto.
@@ -18,7 +18,7 @@
           </p>
         </div>
         <div class="nWhy_Block">
-          <i-performant/>
+          <i-enjoyable/>
           <h3 class="nWhy_Block_Title">Enjoyable</h3>
           <p class="nWhy_Block_Description">
             Lorem ipsum dolor sit, amet consectetur adipisicing elit. Neque amet dolorum ea, quae commodi alias. In obcaecati optio, quis quaerat commodi, ducimus amet similique sed sequi, nobis fugit voluptatibus iusto.
@@ -31,25 +31,31 @@
 
 <script>
 import iPerformant from '@/components/icons/performant'
+import iModular from '@/components/icons/modular'
+import iEnjoyable from '@/components/icons/enjoyable'
 
 export default {
   components: {
-    iPerformant
+    iPerformant,
+    iModular,
+    iEnjoyable
   }
 }
 </script>
 
 <style lang="scss">
 .nWhy {
+  position: relative;
   padding: 5rem 0;
   background-color: $background-color-light;
   &_Title {
     text-align: center;
     margin-top: 0;
     color: $color-text-primary;
-    font-size: $h1-font-size;
-    font-weight: $font-weight-regular;
+    font-size: $h2-font-size;
+    font-weight: $font-weight-light;
     line-height: normal;
+    padding-bottom: 30px;
   }
   &_Block {
     width: 30%;

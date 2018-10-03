@@ -1,7 +1,7 @@
 <template>
   <section class="nBackers">
     <div class="container">
-      <h1 class="nBackers_Title">Support the Team</h1>
+      <h2 class="nBackers_Title"><span>Support the Team</span></h2>
       <p class="nBackers_Description">
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo reprehenderit necessitatibus corrupti vero ratione, ex voluptas dicta accusamus, ipsam corporis assumenda error, quis unde hic perferendis doloremque architecto eveniet cumque?
       </p>
@@ -46,14 +46,23 @@
 
 <style lang="scss">
 .nBackers {
-  padding: 5rem 0;
+  z-index: 100;
+  position: relative;
+  box-shadow: $--box-shadow-1;
+  padding: 6rem 0;
   &_Title {
     text-align: center;
     margin-top: 0;
     color: $color-text-primary;
-    font-size: $h1-font-size;
+    font-size: $h2-font-size;
     font-weight: $font-weight-regular;
     line-height: normal;
+    margin-bottom: 6rem;
+    span {
+      padding-bottom: 10px;
+      border-bottom: 4px solid $color-vue-green;
+      border-radius: 4px;
+    }
   }
   &_Description {
 

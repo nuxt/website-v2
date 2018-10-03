@@ -1,5 +1,5 @@
 <template>
-  <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 133.08 90.62">
+  <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 133.08 90.62" class="iPerformant">
     <defs>
       <clipPath id="clip-path">
         <rect class="cls-1" x="9.86" y="16.67" width="121.84" height="62.9"/>
@@ -25,19 +25,21 @@
 </template>
 
 <style lang="scss">
-.cls-1 {
-  fill:none;
-}
-.cls-2 {
-  fill:#41b883;
-}
-.cls-3 {
-  fill:#3b8070;
-}
-.cls-4 {
-  clip-path: url(#clip-path);
-}
-.cls-5 {
-  fill:#35495e;
+.iPerformant {
+  .cls-1 {
+    fill:none;
+  }
+  .cls-2 {
+    fill:#41b883;
+  }
+  .cls-3 {
+    fill:#3b8070;
+  }
+  .cls-4 {
+    clip-path: url(#clip-path);
+  }
+  .cls-5 {
+    fill:#35495e;
+  }
 }
 </style>

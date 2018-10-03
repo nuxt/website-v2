@@ -4,17 +4,17 @@
       <div class="row">
         <div class="nWelcome_Content">
           <h1 class="nWelcome_Content_Title">
-            The Vue.js Developpers Framework
+            The Vue.js <br>developpers framework
           <!-- {{ $store.state.lang.homepage.title }} -->
           </h1>
-          <h3 class="nWelcome_Content_Subtitle">
+          <h4 class="nWelcome_Content_Subtitle">
             Your developpment will become enjoyable!
-          </h3>
+          </h4>
           <p class="nWelcome_Content_Description">
             Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dignissimos iusto temporibus possimus, est eius natus eos voluptate fuga quae nam, deserunt praesentium, earum ratione laudantium explicabo ea! Ea, suscipit similique.
           </p>
           <div class="nWelcome_Content_Links">
-            <nuxt-link class="nWelcome_Content_Links_Button" to="/guide/installation">
+            <nuxt-link class="nWelcome_Content_Links_Button nWelcome_Content_Links_Button--green" to="/guide/installation">
               {{ $store.state.lang.links.get_started }}
             </nuxt-link>
             <a class="nWelcome_Content_Links_Button" href="https://github.com/nuxt/nuxt.js" target="_blank">
@@ -60,36 +60,63 @@
   flex-direction: row;
   justify-content: space-between;
   align-content: space-between;
-  align-items: center;
+  align-items: stretch;
 }
 
 .nWelcome {
   margin-top: 80px;
-  padding: 5rem 0;
-  // z-index: 100;
-  // box-shadow: $--box-shadow-2;
+  padding: 8rem 0;
+  z-index: 100;
+  position: relative;
+  box-shadow: $--box-shadow-1;
   &_Content {
     width: 45%;
     &_Title {
       margin-top: 0;
       color: $color-text-primary;
       font-size: $h1-font-size;
-      font-weight: $font-weight-regular;
+      font-weight: $font-weight-light;
       line-height: normal;
+      margin-bottom: 15px;
     }
     &_Subtitle {
       margin-top: 0;
-      color: $color-text-primary;
-      font-size: $h3-font-size;
-      font-weight: $font-weight-regular;
+      color: $color-text-regular;
+      font-size: $h4-font-size;
+      font-weight: $font-weight-light;
       line-height: normal;
     }
     &_Description {
-
+      margin: 30px 0;
     }
     &_Links {
       &_Button {
-
+        color: $color-text-regular;
+        display: inline-block;
+        padding: 1rem 2rem;
+        text-decoration: none;
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+        font-weight: $font-weight-bold;
+        box-shadow: $--box-shadow-1;
+        border-radius: 4px;
+        margin-right: 30px;
+        background-color: $background-color-lighter;
+        &:last-child {
+          margin-right: 0;
+        }
+        &:hover {
+          text-decoration: none;
+          color: $color-text-primary;
+          box-shadow: $--box-shadow-2;
+        }
+        &--green {
+          color: $background-color-lighter;
+          background-color: $color-vue-green;
+          &:hover {
+            color: #fff;
+          }
+        }
       }
     }
   }

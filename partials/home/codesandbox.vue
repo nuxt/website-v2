@@ -14,6 +14,7 @@
 
 <style lang="scss">
 .Codesandbox {
+  position: relative;
   background-color: $background-color-light;
   padding: 5rem 0;
   text-align: center;

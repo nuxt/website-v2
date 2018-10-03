@@ -45,6 +45,9 @@ export default {
 
 <style lang="scss">
 .nModes {
+  z-index: 100;
+  position: relative;
+  box-shadow: $--box-shadow-1;
   padding: 5rem 0;
   &_Title {
     text-align: center;

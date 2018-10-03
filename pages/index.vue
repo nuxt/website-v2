@@ -1,5 +1,6 @@
 <template>
   <div>
+    <s-welcome/>
     <section class="Landscape">
       <div class="Landscape__Logo">
         <nuxt-logo/>
@@ -35,11 +36,13 @@
 </template>
 
 <script>
+import sWelcome from '@/partials/home/welcome'
 import NuxtLogo from '~/components/VueToNuxtLogo.vue'
 import NuxtFooter from '~/components/Footer.vue'
 
 export default {
   components: {
+    sWelcome,
     NuxtLogo,
     NuxtFooter
   },

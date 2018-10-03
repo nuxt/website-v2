@@ -11,7 +11,7 @@
             Your developpment will become enjoyable!
           </h4>
           <p class="nWelcome_Content_Description">
-            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dignissimos iusto temporibus possimus, est eius natus eos voluptate fuga quae nam, deserunt praesentium, earum ratione laudantium explicabo ea! Ea, suscipit similique.
+            Nuxt.js presets all the configuration needed to make your development of a Vue.js Application Server Rendered more enjoyable.
           </p>
           <div class="nWelcome_Content_Links">
             <nuxt-link class="nWelcome_Content_Links_Button nWelcome_Content_Links_Button--green" to="/guide/installation">

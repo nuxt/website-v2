@@ -3,15 +3,14 @@
     <div class="container">
       <h2 class="nCodesandbox_Title"><span>{{ $store.state.lang.homepage.codesandbox_title }}</span></h2>
       <iframe src="https://codesandbox.io/s/github/nuxt/codesandbox-nuxt/tree/master/?autoresize=1&hidenavigation=1&view=preview" sandbox="allow-modals allow-forms allow-popups allow-scripts allow-same-origin"></iframe>
-      <p>
-        <a class="nCodesandbox_Link" href="https://codesandbox.io/s/github/nuxt/codesandbox-nuxt/tree/master/?autoresize=1&hidenavigation=1&view=preview" target="_blank" rel="noopener">
-          <svg class="nCodesandbox_Link_Icon" x="0px" y="0px" width="1em" height="1em" viewBox="0 0 1024 1024"><g id="Layer_1"><polyline class="fill" points="719.001,851 719.001,639.848 902,533.802 902,745.267 719.001,851"></polyline>
-          <polyline class="fill" points="302.082,643.438 122.167,539.135 122.167,747.741 302.082,852.573 302.082,643.438"></polyline><polyline class="fill" points="511.982,275.795 694.939,169.633 512.06,63 328.436,169.987 511.982,275.795"></polyline></g><g id="Layer_2"><polyline fill="none" class="stroke" stroke-width="80" stroke-miterlimit="10" points="899,287.833 509,513 509,963"></polyline><line fill="none" class="stroke" stroke-width="80" stroke-miterlimit="10" x1="122.167" y1="289" x2="511.5" y2="513"></line><polygon fill="none" class="stroke" stroke-width="80" stroke-miterlimit="10" points="121,739.083 510.917,963.042 901,738.333 901,288 511,62 121,289"></polygon></g>
-          </svg> {{ $store.state.lang.homepage.codesandbox_open }}
+      <div class="nCodesandbox_Content">
+        <a class="nCodesandbox_Content_Button nCodesandbox_Content_Button--green" href="https://codesandbox.io/s/github/nuxt/codesandbox-nuxt/tree/master/?autoresize=1&hidenavigation=1&view=preview" target="_blank" rel="noopener">
+          {{ $store.state.lang.homepage.codesandbox_open }}
         </a>
-        <br>
-        <nuxt-link class="nCodesandbox_Examples" to="/examples">{{ $store.state.lang.homepage.codesandbox_examples }}</nuxt-link>
-      </p>
+        <nuxt-link class="nCodesandbox_Content_Button" to="/examples">
+          {{ $store.state.lang.homepage.codesandbox_examples }}
+        </nuxt-link>
+      </div>
     </div>
   </section>
 </template>
@@ -36,6 +35,37 @@
       border-radius: 4px;
     }
   }
+  &_Content {
+    padding-top: 3rem;
+    &_Button {
+      color: $color-text-regular;
+      display: inline-block;
+      padding: 1rem 2rem;
+      text-decoration: none;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      font-weight: $font-weight-bold;
+      box-shadow: $--box-shadow-1;
+      border-radius: 4px;
+      margin-right: 30px;
+      background-color: $background-color-lighter;
+      &:last-child {
+        margin-right: 0;
+      }
+      &:hover {
+        text-decoration: none;
+        color: $color-text-primary;
+        box-shadow: $--box-shadow-2;
+      }
+      &--green {
+        color: $background-color-lighter;
+        background-color: $color-vue-green;
+        &:hover {
+          color: #fff;
+        }
+      }
+    }
+  }
   &_Link {
     border: 1px solid #41B883;
     padding: 10px 20px;
@@ -54,15 +84,6 @@
       }
       .stroke {
         stroke: #141618;
-      }
-    }
-    &_Icon {
-      margin-right: 8px;
-      .fill {
-        fill: #41B883;
-      }
-      .stroke {
-        stroke:#41B883;
       }
     }
   }

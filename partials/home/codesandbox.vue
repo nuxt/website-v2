@@ -19,7 +19,7 @@
 .nCodesandbox {
   position: relative;
   background-color: $background-color-light;
-  padding: 6rem 0;
+  padding: 8rem 0;
   text-align: center;
   &_Title {
     text-align: center;

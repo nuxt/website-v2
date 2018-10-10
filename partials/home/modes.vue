@@ -24,7 +24,9 @@
           <div v-show="mode === 2">
             <h3 class="nModes_Content_Title">Server Rendered (Universal SSR)</h3>
             <p class="nModes_Content_Description">
-              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Reiciendis est harum id vero nulla unde voluptatum quae sit aperiam alias similique facere assumenda debitis rerum, hic obcaecati, maiores iste aliquam?
+              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Reiciendis est harum id vero nulla unde voluptatum quae sit aperiam alias similique facere assumenda debitis rerum, hic obcaecati, maiores iste aliquam?<br>
+              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Reiciendis est harum id vero nulla unde voluptatum quae sit aperiam alias similique facere assumenda debitis rerum, hic obcaecati, maiores iste aliquam?<br>
+              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Reiciendis est harum id vero nulla unde voluptatum quae sit aperiam alias similique facere assumenda debitis rerum, hic obcaecati, maiores iste aliquam?<br>
             </p>
           </div>
         </div>
@@ -48,7 +50,7 @@ export default {
   z-index: 100;
   position: relative;
   box-shadow: $--box-shadow-1;
-  padding: 6rem 0;
+  padding: 8rem 0;
   &_Title {
     text-align: center;
     margin-top: 0;

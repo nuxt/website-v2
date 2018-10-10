@@ -65,7 +65,7 @@
 
 .nWelcome {
   margin-top: 80px;
-  padding: 8rem 0;
+  padding: 10rem 0;
   z-index: 100;
   position: relative;
   box-shadow: $--box-shadow-1;

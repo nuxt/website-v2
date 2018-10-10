@@ -46,7 +46,7 @@ export default {
 <style lang="scss">
 .nWhy {
   position: relative;
-  padding: 6rem 0;
+  padding: 8rem 0;
   background-color: $background-color-light;
   &_Title {
     text-align: center;
@@ -66,7 +66,7 @@ export default {
     width: 30%;
     text-align: center;
     .iPerformant, .iModular, .iEnjoyable {
-      height: 128px;
+      height: 100px;
       display: inline-block;
       margin-bottom: 15px;
     }
@@ -79,7 +79,7 @@ export default {
       font-weight: $font-weight-regular;
     }
     &_Description {
-      
+
     }
   }
 }

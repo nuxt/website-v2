@@ -60,8 +60,8 @@
   z-index: 100;
   position: relative;
   box-shadow: $--box-shadow-1;
-  padding-top: 6rem;
-  padding-bottom: 2rem;
+  padding-top: 8rem;
+  padding-bottom: 4rem;
   text-align: center;
   &_Title {
     margin-top: 0;

@@ -44,10 +44,10 @@
       </g>
       <g transform="translate(45 0)">
         <text>
-          <tspan x="175" y="293">Optional - Page Child</tspan>
+          <tspan x="175" y="287">Optional - Page Child</tspan>
         </text>
         <text font-size="15">
-          <tspan x="175" y="314">Vue component supercharges with Nuxt options</tspan>
+          <tspan x="175" y="312">Vue component supercharges with Nuxt options</tspan>
         </text>
       </g>
       <text x="580" y="270">

@@ -12,21 +12,26 @@
           <div v-show="mode === 0">
             <h3 class="nModes_Content_Title">Single Page Application (SPA)</h3>
             <p class="nModes_Content_Description">
-              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Reiciendis est harum id vero nulla unde voluptatum quae sit aperiam alias similique facere assumenda debitis rerum, hic obcaecati, maiores iste aliquam?
+              If, for any reason, you prefer not to use server side rendering or need static hosting for your applications, you can simply use SPA mode using nuxt --spa. In combination with the generate feature, it gives you a powerful SPA deployment mechanism without the need to use a Node.js runtime or any special server handling.
+              <br/>
+              Take a look at the commands to learn more about usage.
+              <br/>
+              If you already have a server, you can plug Nuxt.js by using it as a middleware. There is no restriction at all when using Nuxt.js for developing your Universal Web Applications. See the Using Nuxt.js Programmatically guide.
             </p>
           </div>
           <div v-show="mode === 1">
             <h3 class="nModes_Content_Title">Static Generated (Pre Rendering)</h3>
             <p class="nModes_Content_Description">
-              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Reiciendis est harum id vero nulla unde voluptatum quae sit aperiam alias similique facere assumenda debitis rerum, hic obcaecati, maiores iste aliquam?
-            </p>
+              The big innovation of Nuxt.js comes with the nuxt generate command.
+              <br/>
+              When building your application, it will generate the HTML for every one of your routes and store it in a file.            </p>
           </div>
           <div v-show="mode === 2">
             <h3 class="nModes_Content_Title">Server Rendered (Universal SSR)</h3>
             <p class="nModes_Content_Description">
-              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Reiciendis est harum id vero nulla unde voluptatum quae sit aperiam alias similique facere assumenda debitis rerum, hic obcaecati, maiores iste aliquam?<br>
-              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Reiciendis est harum id vero nulla unde voluptatum quae sit aperiam alias similique facere assumenda debitis rerum, hic obcaecati, maiores iste aliquam?<br>
-              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Reiciendis est harum id vero nulla unde voluptatum quae sit aperiam alias similique facere assumenda debitis rerum, hic obcaecati, maiores iste aliquam?<br>
+              You can use Nuxt.js as a framework to handle all the UI rendering of your project.
+              <br/>
+              When launching nuxt, it will start a development server with hot-reloading and Vue Server Renderer configured to automatically server-render your application.
             </p>
           </div>
         </div>

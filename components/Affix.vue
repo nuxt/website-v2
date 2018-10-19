@@ -22,6 +22,11 @@
         </a>
       </li>
       <li class="Affix__List__Item">
+        <a class="Affix__List__Item__Sponsor" href="https://www.vuemastery.com/?ref=nuxt" target="_blank" rel="noopener">
+          <img src="/vueMastery-brand.svg" alt="VueMastery.com" style="height: 40px;">
+        </a>
+      </li>
+      <li class="Affix__List__Item">
         {{ $store.state.lang.sponsors.become }}
         <a href="https://opencollective.com/nuxtjs" target="_blank" rel="noopener">{{ $store.state.lang.sponsors.become_partner }}</a>.
       </li>
@@ -266,9 +271,10 @@ export default {
       }
       &__Sponsor {
         display: inline-block;
-        height: 60px;
+        height: 54px;
         img {
           height: 100%;
+          max-width: 100%;
           transition: all 0.3s ease;
           filter: grayscale(100%);
           opacity: 0.66;

@@ -9,12 +9,45 @@
         <div class="icon close"></div>
       </div>
     </h2>
+<<<<<<< HEAD
     <template v-for="group in list">
       <h3 class="Affix__Title">{{ group.title }}</h3>
       <ul class="Affix__List">
 <<<<<<< HEAD
         <li class="Affix__List__Item" v-for="link in links">
           <nuxt-link class="Affix__List__Item__Link" :to="menu + link.to" exact>
+=======
+    <div class="Affix__Toggler" :class="{'Affix__Toggler--hidden': visible}" @click="toggle">
+      <div class="icon more-vertical"></div>
+    </div>
+    <h3 class="Affix__Title" style="margin-bottom: 20px;">{{ $store.state.lang.sponsors.title }}</h3>
+    <ul class="Affix__List">
+      <li class="Affix__List__Item">
+        <a class="Affix__List__Item__Sponsor" href="https://t.co/sUZfRy6ZxS" target="_blank" rel="noopener">
+          <img src="https://user-images.githubusercontent.com/1016365/34124854-48fafa06-e3e9-11e7-8c04-251055feebee.png" alt="Tipe.io" />
+        </a>
+      </li>
+      <li class="Affix__List__Item">
+        <a class="Affix__List__Item__Sponsor" href="https://www.storyblok.com/?ref=nuxt" target="_blank" rel="noopener">
+          <img src="https://a.storyblok.com/f/39898/x/aa0dc897ff/storyblok-logo.svg" alt="Storyblok.com">
+        </a>
+      </li>
+      <li class="Affix__List__Item">
+        <a class="Affix__List__Item__Sponsor" href="https://www.vuemastery.com/?ref=nuxt" target="_blank" rel="noopener">
+          <img src="/vueMastery-brand.svg" alt="VueMastery.com" style="height: 40px;">
+        </a>
+      </li>
+      <li class="Affix__List__Item">
+        {{ $store.state.lang.sponsors.become }}
+        <a href="https://opencollective.com/nuxtjs" target="_blank" rel="noopener">{{ $store.state.lang.sponsors.become_partner }}</a>.
+      </li>
+    </ul>
+    <template v-for="(group, index) in list">
+      <h3 class="Affix__Title" :key="`title-${index}`">{{ group.title }}</h3>
+      <ul class="Affix__List" :key="`list-${index}`">
+        <li class="Affix__List__Item" v-for="(link, index) in group.links" :key="index">
+          <nuxt-link class="Affix__List__Item__Link" :class="{'nuxt-link-active': path === menu + link.to}" :to="menu + link.to" exact>
+>>>>>>> 808215d6 (add VueMastery Sponsor Logo)
             {{ link.name }}
           </nuxt-link>
 =======
@@ -246,8 +279,27 @@ export default {
           background-color: #eee;
         }
       }
+<<<<<<< HEAD
       .nuxt-link-active
       {
+=======
+      &__Sponsor {
+        display: inline-block;
+        height: 54px;
+        img {
+          height: 100%;
+          max-width: 100%;
+          transition: all 0.3s ease;
+          filter: grayscale(100%);
+          opacity: 0.66;
+          &:hover {
+            filter: none;
+            opacity: 1;
+          }
+        }
+      }
+      .nuxt-link-active {
+>>>>>>> 808215d6 (add VueMastery Sponsor Logo)
         color: #fff;
         background-color: #41b883;
       }

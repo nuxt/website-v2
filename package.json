@@ -11,6 +11,7 @@
     "newrelic": "^4.6.0",
     "normalize.css": "^8.0.0",
     "nuxt": "^2.1.0",
+    "octicons": "^8.1.0",
     "raven": "^2.6.3",
     "raven-js": "^3.26.4",
     "timber": "^3.1.3"

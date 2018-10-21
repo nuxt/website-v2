@@ -15,6 +15,26 @@
     code {
       font-size: inherit;
     }
+
+    a
+    {
+      color: #35495e;
+
+      &.anchor
+      {
+        float: left;
+        padding-right: 4px;
+        margin-left: -24px;
+        line-height: 1;
+      }
+    }
+
+    &:hover {
+      .octicon-link
+      {
+        visibility: visible;
+      }
+    }
   }
   h1
   {

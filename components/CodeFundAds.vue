@@ -33,7 +33,7 @@ export default {
   @media (min-width: 1280px)
   {
     position: fixed;
-    bottom: 30px;
+    bottom: 70px;
     right: 30px;
     margin-bottom: 0;
   }

@@ -153,6 +153,16 @@ export default {
       float: left;
       font-size: 14px;
     }
+    @media (max-width: 450px) {
+      img {
+        display: none;
+      }
+      span {
+        padding: 0;
+        float: none;
+        display: inline-block;
+      }
+    }
   }
 }
 .Codesandbox {

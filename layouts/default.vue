@@ -1,8 +1,11 @@
 <template>
   <div>
     <navbar></navbar>
-    <div :class="{'App--hidden': visible}">
+    <div class="App" :class="{'App--hidden': visible}">
       <nuxt/>
+    </div>
+    <div class="EventInfo">
+      <a href="https://vuetoronto.com/tickets/?unii-discount-code=NUXTJS100" target="_blank" rel="noopener">{{ $store.state.lang.text.vue_toronto }}</a>
     </div>
   </div>
 </template>
@@ -61,6 +64,27 @@ export default {
     @media (min-width: 992px) {
       display: block;
     }
+  }
+  padding-bottom: 80px;
+  @media (min-width: 516px) {
+    padding-bottom: 60px;
+  }
+  @media (min-width: 1006px) {
+    padding-bottom: 40px;
+  }
+}
+.EventInfo {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 999;
+  padding: 10px;
+  text-align: center;
+  background-color: #41b883;
+  a {
+    color: #fff;
+    font-weight: 600;
   }
 }
 </style>

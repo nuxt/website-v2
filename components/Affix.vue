@@ -108,9 +108,7 @@ export default {
     hashChanged(toPath, fromPath) {
       toPath = toPath.split('#')
       fromPath = fromPath.split('#')
-      if (toPath[0] !== fromPath[0] && this.$route.hash.length) {
-        this.$nextTick(() => this.scrollTo(this.$route.hash))
-      }
+      this.$nextTick(() => this.scrollTo(this.$route.hash))
     },
     toggle() { this.$store.commit('toggle', 'visibleAffix') },
     scrolled() {
@@ -132,7 +130,7 @@ export default {
       this.$nextTick(() => {
         var el = document.getElementById(id.slice(1))
         if (!el) return
-        var to = el.offsetTop - 25
+        var to = el.offsetTop + 20
         var doc = document.documentElement
         var top = (window.pageYOffset || doc.scrollTop) - (doc.clientTop || 0)
         var diff = (to > top ? to - top : top - to) / 25
@@ -166,7 +164,6 @@ export default {
   @media (min-width: 992px) {
     width: 300px;
     top: 80px;
-    bottom: 40px;
     padding: 20px 30px;
     border-right: 1px solid #dbdfe1;
   }

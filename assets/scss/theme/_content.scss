@@ -1,55 +1,65 @@
-.Content
-{
-  &--hasCarbon
-  {
-    @media (min-width: 1280px)
-    {
+.Content {
+  &--hasCarbon {
+    @media (min-width: 1280px) {
       padding-right: 185px;
     }
   }
-  h1, h2, h3, h4, h5, h6
-  {
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
     color: #35495e;
     line-height: normal;
     word-spacing: 2px;
     code {
       font-size: inherit;
     }
+    a.anchor {
+      float: left;
+      padding-right: 4px;
+      margin-left: -20px;
+      line-height: 1;
+      svg {
+        color: #1b1f23;
+        vertical-align: middle;
+        visibility: hidden;
+      }
+    }
+    &:hover {
+      a.anchor svg {
+        visibility: visible;
+      }
+    }
   }
-  h1
-  {
+  h1 {
     margin-top: 0px;
     margin-bottom: 20px;
     overflow: hidden;
     font-size: 36px;
-    @media (min-width: 625px)
-    {
+    @media (min-width: 625px) {
       font-size: 42px;
       margin-bottom: 30px;
     }
   }
-  h2
-  {
+  h2 {
     padding-bottom: 15px;
     border-bottom: 1px solid #dbdfe1;
     margin-bottom: 20px;
     font-size: 33px;
-    @media (min-width: 625px)
-    {
+    @media (min-width: 625px) {
       font-size: 34px;
       margin-bottom: 30px;
     }
   }
-  a
-  {
+  a {
     color: #41b883;
-    &:hover
-    {
+    &:hover {
       text-decoration: underline;
     }
   }
-  p
-  {
+  p {
     font-weight: 400;
     color: #35495e;
     font-size: 15px;
@@ -57,35 +67,29 @@
     margin: 10px 0;
     word-spacing: 2px;
     overflow: hidden;
-    code
-    {
+    code {
       font-size: 14px;
     }
-    @media (min-width: 625px)
-    {
+    @media (min-width: 625px) {
       line-height: 25px;
       font-size: 16px;
     }
   }
-  img
-  {
+  img {
     max-width: 100%;
   }
-  code
-  {
+  code {
     color: #35495e;
     padding: 2px 7px;
     font-weight: 400;
     font-size: 13px;
     line-height: inherit;
-    font-family: "Andale Mono", monospace;
+    font-family: 'Andale Mono', monospace;
     background-color: rgba(200, 200, 200, 0.2);
   }
-  pre
-  {
+  pre {
     margin: 20px 0;
-    code
-    {
+    code {
       font-weight: 400;
       color: #35495e;
       letter-spacing: 0px;
@@ -93,49 +97,43 @@
       border: 1px solid #dbdfe1;
       border-radius: 4px;
       background-color: #fcfcfc;
-      @media (min-width: 625px)
-      {
+      @media (min-width: 625px) {
         padding: 12px 15px;
       }
     }
   }
-  ul, ol
-  {
+  ul,
+  ol {
     list-style-type: circle;
     margin-bottom: 15px;
     padding-left: 30px;
-    @media (min-width: 625px)
-    {
+    @media (min-width: 625px) {
       margin-bottom: 20px;
     }
-    li
-    {
+    li {
       color: #35495e;
       font-size: 16px;
       line-height: 25px;
       padding: 5px 0;
     }
-    ul, ol {
+    ul,
+    ol {
       margin-bottom: 0;
     }
   }
   ol {
     list-style-type: decimal;
   }
-  table
-  {
+  table {
     width: 100%;
     border-collapse: collapse;
-    tr
-    {
+    tr {
       background-color: #fff;
-      &:nth-child(2n)
-      {
+      &:nth-child(2n) {
         background-color: #fafafa;
       }
     }
-    th
-    {
+    th {
       border: 1px solid #ddd;
       background-color: #f6f6f6;
       padding: 10px 15px;
@@ -144,44 +142,40 @@
       text-transform: uppercase;
       text-align: left;
     }
-    td
-    {
+    td {
       padding: 10px;
       line-height: 20px;
       text-align: left;
       border: 1px solid #ddd;
     }
   }
-  blockquote
-  {
+  blockquote {
     margin: 20px 0;
     font-style: italic;
     overflow: hidden;
-    p
-    {
+    p {
       color: #75818b;
       margin: 0;
       font-size: 16px;
     }
   }
-  b, strong
-  {
+  b,
+  strong {
     font-weight: 600;
   }
-  em
-  {
+  em {
     color: #555;
   }
-  .video
-  {
+  .video {
     width: 100%;
     height: 0;
     padding-bottom: 56.25%;
     overflow: hidden;
     position: relative;
     margin: 30px 0;
-    iframe, embed, object
-    {
+    iframe,
+    embed,
+    object {
       width: 100%;
       height: 100%;
       position: absolute;
@@ -189,13 +183,12 @@
       left: 0;
     }
   }
-  .Release__Content
-  {
+  .Release__Content {
     background-color: #fcfcfc;
     border-left: 3px solid #dbdfe1;
     padding: 20px;
-    h1, h2
-    {
+    h1,
+    h2 {
       color: #35495e;
       margin-top: 0;
       font-size: 32px;
@@ -204,12 +197,11 @@
       border: none;
     }
   }
-  .Alert
-  {
+  .Alert {
     font-weight: 400;
     color: #fff;
     font-size: 15px;
-    background-color: #35495E;
+    background-color: #35495e;
     padding: 12px 15px;
     line-height: 20px;
     margin: 20px 0;
@@ -218,54 +210,42 @@
     -webkit-border-radius: 4px;
     -moz-border-radius: 4px;
     border-radius: 4px;
-    a
-    {
+    a {
       color: #eee;
       text-decoration: underline;
-      &:hover
-      {
+      &:hover {
         color: #fff;
       }
     }
-    code
-    {
+    code {
       font-size: 14px;
       color: #fff;
     }
-    &--vue-green
-    {
-      background-color: #41B883;
+    &--vue-green {
+      background-color: #41b883;
     }
-    &--nuxt-green
-    {
-      background-color: #3B8070;
+    &--nuxt-green {
+      background-color: #3b8070;
     }
-    &--green
-    {
+    &--green {
       background-color: #2ecc71;
     }
-    &--blue
-    {
+    &--blue {
       background-color: #3498db;
     }
-    &--purple
-    {
+    &--purple {
       background-color: #9b59b6;
     }
-    &--teal
-    {
+    &--teal {
       background-color: #1abc9c;
     }
-    &--red
-    {
+    &--red {
       background-color: #e74c3c;
     }
-    &--orange
-    {
+    &--orange {
       background-color: #e67e22;
     }
-    &--light
-    {
+    &--light {
       color: darken(#9aabb1, 7%);
       border: 1px solid #9aabb1;
       background-color: #fff;

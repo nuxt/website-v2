@@ -84,6 +84,11 @@
           </a>
         </li>
       </ul>
+      <div class="Landscape__Tidelift">
+        <a class="button button--grey" href="https://tidelift.com/subscription/pkg/npm-nuxt?utm_source=nuxt&utm_medium=referral" target="_blank">
+          <img src="/tidelift.svg" alt="tidelift"><span>{{ $store.state.lang.links.tidelift }}</span>
+        </a>
+      </div>
     </section>
     <nuxt-footer></nuxt-footer>
 >>>>>>> 2eed1dad (affix)
@@ -274,10 +279,73 @@ export default {
       padding: 15px;
       padding-bottom: 0;
 <<<<<<< HEAD
+<<<<<<< HEAD
       .button
       {
         font-size: 16px;
 >>>>>>> 2eed1dad (affix)
+=======
+      span {
+        font-weight: 400;
+      }
+    }
+  }
+  &__Tidelift
+  {
+    padding-top: 30px;
+    img {
+      height: 42px;
+      float: left;
+      display: block;
+      margin-right: 5px;
+      margin-top: -5px;
+      margin-bottom: -5px;
+    }
+    span {
+      width: auto;
+      padding: 5px 0;
+      display: block;
+      float: left;
+      font-size: 14px;
+    }
+  }
+}
+.Codesandbox {
+  background: #141618;
+  padding: 30px 0 50px 0;
+  text-align: center;
+  h3 {
+    color: #EEE;
+    font-weight: 600;
+  }
+  &__Link {
+    border: 1px solid #41B883;
+    padding: 10px 20px;
+    font-size: 20px;
+    position: relative;
+    right: 0;
+    margin: 10px 0;
+    text-decoration: none;
+    display: inline-flex;
+    align-self: center;
+    &:hover {
+      background: #41B883;
+      color: #141618;
+      .fill {
+        fill: #141618;
+      }
+      .stroke {
+        stroke: #141618;
+      }
+    }
+    &__Icon {
+      margin-right: 8px;
+      .fill {
+        fill: #41B883;
+      }
+      .stroke {
+        stroke:#41B883;
+>>>>>>> 6069e264 (add tidelift and vuemastery on homepage)
       }
 =======
 >>>>>>> 04981a67 (update homepage)

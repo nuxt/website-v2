@@ -8,6 +8,9 @@
       <a class="Footer__Sponsors__Link" href="https://www.storyblok.com/?ref=nuxt" target="_blank" rel="noopener">
         <img src="https://a.storyblok.com/f/39898/x/aa0dc897ff/storyblok-logo.svg" alt="Storyblok.com">
       </a>
+      <a class="Footer__Sponsors__Link" href="https://www.vuemastery.com/?ref=nuxt" target="_blank" rel="noopener">
+        <img src="/vueMastery-brand.svg" alt="VueMastery.com" style="height: 40px;">
+      </a>
       <br/>
       <a class="Footer__Sponsors__Link" href="https://www.shuttleworthfoundation.org">
         <img src="/shuttleworth-funded.png" width="200" alt="shuttleworth funded"/>

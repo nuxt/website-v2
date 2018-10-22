@@ -20,6 +20,11 @@
           </a>
         </li>
       </ul>
+      <div class="Landscape__Tidelift">
+        <a class="button button--grey" href="https://tidelift.com/subscription/pkg/npm-nuxt?utm_source=nuxt&utm_medium=referral" target="_blank">
+          <img src="/tidelift.svg" alt="tidelift"><span>{{ $store.state.lang.links.tidelift }}</span>
+        </a>
+      </div>
     </section>
     <section class="Codesandbox">
       <h3>{{ $store.state.lang.homepage.codesandbox_title }}</h3>
@@ -80,7 +85,7 @@ export default {
   @media (min-width: 992px)
   {
     padding: 100px 30px;
-    padding-top: 200px;
+    padding-top: 100px;
   }
   &__Logo
   {
@@ -127,6 +132,35 @@ export default {
       padding-bottom: 0;
       span {
         font-weight: 400;
+      }
+    }
+  }
+  &__Tidelift
+  {
+    padding-top: 20px;
+    img {
+      height: 42px;
+      float: left;
+      display: block;
+      margin-right: 5px;
+      margin-top: -5px;
+      margin-bottom: -5px;
+    }
+    span {
+      width: auto;
+      padding: 5px 0;
+      display: block;
+      float: left;
+      font-size: 14px;
+    }
+    @media (max-width: 450px) {
+      img {
+        display: none;
+      }
+      span {
+        padding: 0;
+        float: none;
+        display: inline-block;
       }
     }
   }

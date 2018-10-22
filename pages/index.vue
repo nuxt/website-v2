@@ -85,7 +85,7 @@ export default {
   @media (min-width: 992px)
   {
     padding: 100px 30px;
-    padding-top: 200px;
+    padding-top: 100px;
   }
   &__Logo
   {
@@ -137,7 +137,7 @@ export default {
   }
   &__Tidelift
   {
-    padding-top: 30px;
+    padding-top: 20px;
     img {
       height: 42px;
       float: left;

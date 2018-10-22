@@ -12,7 +12,7 @@
         <img src="/vueMastery-brand.svg" alt="VueMastery.com" style="height: 40px;">
       </a>
       <br/>
-      <a class="Footer__Sponsors__Link" href="https://www.shuttleworthfoundation.org">
+      <a class="Footer__Sponsors__Link" href="https://www.shuttleworthfoundation.org" target="_blank" rel="noopener">
         <img src="/shuttleworth-funded.png" alt="shuttleworth funded"/>
       </a>
     </div>

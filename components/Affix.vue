@@ -164,9 +164,9 @@ export default {
   background-color: #fff;
   z-index: 990;
   @media (min-width: 992px) {
+    width: 300px;
     top: 80px;
     bottom: 40px;
-    width: 300px;
     padding: 20px 30px;
     border-right: 1px solid #dbdfe1;
   }

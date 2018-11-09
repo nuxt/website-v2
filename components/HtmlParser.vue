@@ -17,7 +17,11 @@ export default {
   },
   methods: {
     navigate(event) {
-      const href = event.target.getAttribute('href')
+      let target = event.target
+      if (!(target instanceof HTMLAnchorElement) && target.parentNode instanceof HTMLAnchorElement) {
+        target = event.target.parentNode
+      }
+      const href = target.getAttribute('href')
       if (href && href[0] === '/') {
         event.preventDefault()
         this.$router.push(href)

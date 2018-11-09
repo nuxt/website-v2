@@ -9,6 +9,9 @@
     <div class="Affix__Toggler" :class="{'Affix__Toggler--hidden': visible}" @click="toggle">
       <div class="icon more-vertical"></div>
     </div>
+    <a class="Affix__Tidelift" href="https://tidelift.com/subscription/pkg/npm-nuxt?utm_source=nuxt&utm_medium=referral" target="_blank">
+      <img src="/tidelift.svg" alt="tidelift"><span>{{ $store.state.lang.links.tidelift_short }}</span>
+    </a>
     <h3 class="Affix__Title" style="margin-bottom: 20px;">{{ $store.state.lang.sponsors.title }}</h3>
     <ul class="Affix__List">
       <li class="Affix__List__Item">
@@ -216,6 +219,27 @@ export default {
     }
     @media (min-width: 992px) {
       display: none;
+    }
+  }
+  &__Tidelift {
+    font-size: 12px;
+    font-weight: 600;
+    color: #fff;
+    display: inline-block;
+    padding: 7px 12px;
+    margin: 10px 0;
+    background-color:#35495e;
+    border-radius: 4px;
+    &:hover {
+      text-decoration: none;
+    }
+    img {
+      float: left;
+      height: 24px;
+      margin-right: 5px;
+    }
+    span {
+      line-height: 24px;
     }
   }
   &__Version {

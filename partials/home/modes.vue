@@ -10,7 +10,7 @@
         </ul>
         <div class="nModes_Content">
           <div v-show="mode === 0">
-            <h3 class="nModes_Content_Title">Server Rendered (Universal SSR)</h3>
+            <h3 class="nModes_Content_Title">Server Rendered (Universal)</h3>
             <p class="nModes_Content_Description">
               You can use Nuxt.js as a framework to handle all the UI rendering of your project.
               <br/>

@@ -1,22 +1,20 @@
 <template>
   <section class="nModes">
     <div class="container">
-      <h2 class="nModes_Title"><span>Production modes</span></h2>
+      <h2 class="nModes_Title"><span>Rendering modes</span></h2>
       <div class="row">
         <ul class="nModes_Tabs">
-          <li class="nModes_Tabs_Option" :class="{'nModes_Tabs_Option--selected-first': mode === 0}" @click="mode = 0">Single Page</li>
+          <li class="nModes_Tabs_Option" :class="{'nModes_Tabs_Option--selected-first': mode === 0}" @click="mode = 0">Server Rendered</li>
           <li class="nModes_Tabs_Option" :class="{'nModes_Tabs_Option--selected': mode === 1}" @click="mode = 1">Static Generated</li>
-          <li class="nModes_Tabs_Option" :class="{'nModes_Tabs_Option--selected-last': mode === 2}" @click="mode = 2">Server Rendered</li>
+          <li class="nModes_Tabs_Option" :class="{'nModes_Tabs_Option--selected-last': mode === 2}" @click="mode = 2">Single Page App</li>
         </ul>
         <div class="nModes_Content">
           <div v-show="mode === 0">
-            <h3 class="nModes_Content_Title">Single Page Application (SPA)</h3>
+            <h3 class="nModes_Content_Title">Server Rendered (Universal SSR)</h3>
             <p class="nModes_Content_Description">
-              If, for any reason, you prefer not to use server side rendering or need static hosting for your applications, you can simply use SPA mode using nuxt --spa. In combination with the generate feature, it gives you a powerful SPA deployment mechanism without the need to use a Node.js runtime or any special server handling.
+              You can use Nuxt.js as a framework to handle all the UI rendering of your project.
               <br/>
-              Take a look at the commands to learn more about usage.
-              <br/>
-              If you already have a server, you can plug Nuxt.js by using it as a middleware. There is no restriction at all when using Nuxt.js for developing your Universal Web Applications. See the Using Nuxt.js Programmatically guide.
+              When launching nuxt, it will start a development server with hot-reloading and Vue Server Renderer configured to automatically server-render your application.
             </p>
           </div>
           <div v-show="mode === 1">
@@ -24,14 +22,18 @@
             <p class="nModes_Content_Description">
               The big innovation of Nuxt.js comes with the nuxt generate command.
               <br/>
-              When building your application, it will generate the HTML for every one of your routes and store it in a file.            </p>
+              When building your application, it will generate the HTML for every one of your routes and store it in an HTML file.
+              This way, you have both benefits from server-side rendering and CDN serving.
+            </p>
           </div>
           <div v-show="mode === 2">
-            <h3 class="nModes_Content_Title">Server Rendered (Universal SSR)</h3>
+            <h3 class="nModes_Content_Title">Single Page Application (SPA)</h3>
             <p class="nModes_Content_Description">
-              You can use Nuxt.js as a framework to handle all the UI rendering of your project.
+              If, for any reason, you prefer not to use server side rendering or need static hosting for your application, you can simply use SPA mode using <code>nuxt --spa</code>. In combination with the generate feature, it gives you a powerful SPA deployment mechanism without the need to use a Node.js runtime or any special server handling.
               <br/>
-              When launching nuxt, it will start a development server with hot-reloading and Vue Server Renderer configured to automatically server-render your application.
+              Take a look at the commands to learn more about usage.
+              <br/>
+              If you already have a server, you can plug Nuxt.js by using it as a middleware. There is no restriction at all when using Nuxt.js for developing your Universal Web Applications. See the Using Nuxt.js Programmatically guide.
             </p>
           </div>
         </div>
@@ -44,7 +46,7 @@
 export default {
   data () {
     return {
-      mode: 2
+      mode: 0
     }
   }
 }

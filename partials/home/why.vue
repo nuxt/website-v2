@@ -4,24 +4,24 @@
       <h2 class="nWhy_Title"><span>Why Nuxt?</span></h2>
       <div class="row">
         <div class="nWhy_Block">
-          <i-modular/>
-          <h4 class="nWhy_Block_Title">Modular</h4>
-          <p class="nWhy_Block_Description">
-            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Neque amet dolorum ea, quae commodi alias. In obcaecati optio, quis quaerat commodi, ducimus amet similique sed sequi, nobis fugit voluptatibus iusto.
-          </p>
-        </div>
-        <div class="nWhy_Block">
           <i-performant/>
           <h4 class="nWhy_Block_Title">Performant</h4>
           <p class="nWhy_Block_Description">
-            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Neque amet dolorum ea, quae commodi alias. In obcaecati optio, quis quaerat commodi, ducimus amet similique sed sequi, nobis fugit voluptatibus iusto.
+            With Nuxt.js, your application will be optimized by default. We do our best to build performant applications by respecting Vue.js and Node.js best practices.
+          </p>
+        </div>
+        <div class="nWhy_Block">
+          <i-modular/>
+          <h4 class="nWhy_Block_Title">Modular</h4>
+          <p class="nWhy_Block_Description">
+            Nuxt is based on a powerful modular architecture. You can use 50+ modules to make your developement faster & simplier. By installing a Nuxt module, you can benefits from enhancements like PWA, Offline and AMP support.
           </p>
         </div>
         <div class="nWhy_Block">
           <i-enjoyable/>
           <h4 class="nWhy_Block_Title">Enjoyable</h4>
           <p class="nWhy_Block_Description">
-            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Neque amet dolorum ea, quae commodi alias. In obcaecati optio, quis quaerat commodi, ducimus amet similique sed sequi, nobis fugit voluptatibus iusto.
+            Our main focus is the Developer Experience. We want Nuxt.js to be enjoyable, this is why we created Nuxt cli, the modules ecosystem, the ability to switch with one option between the rendering modes and more <3.
           </p>
         </div>
       </div>
@@ -79,7 +79,7 @@ export default {
       font-weight: $font-weight-regular;
     }
     &_Description {
-
+      text-align: justify;
     }
   }
 }

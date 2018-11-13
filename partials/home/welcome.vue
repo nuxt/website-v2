@@ -4,14 +4,14 @@
       <div class="row">
         <div class="nWelcome_Content">
           <h1 class="nWelcome_Content_Title">
-            The Vue.js <br>developpers framework
+            The <span class="nWelcome_Content_Title_Primary">Vue.js</span> Framework
           <!-- {{ $store.state.lang.homepage.title }} -->
           </h1>
           <h4 class="nWelcome_Content_Subtitle">
-            Your developpment will become enjoyable!
+            For <transition name="fade" mode="out-in"><span class="nWelcome_Content_Subtitle_Type" v-for="(appType, index) of appTypes" :key="appType" v-if="index === current">{{ appType }}</span></transition>.
           </h4>
           <p class="nWelcome_Content_Description">
-            Nuxt.js presets all the configuration needed to make your development of a Vue.js Application Server Rendered more enjoyable.
+            Nuxt.js presets all the configuration needed to make your development of a Vue.js application enjoyable.
           </p>
           <div class="nWelcome_Content_Links">
             <nuxt-link class="nWelcome_Content_Links_Button nWelcome_Content_Links_Button--green" to="/guide/installation">
@@ -29,6 +29,25 @@
     </div>
   </section>
 </template>
+
+<script>
+export default {
+  data() {
+    return {
+      appTypes: ['Universal Applications', 'Static Generated Applications', 'Single Page Applications', 'Desktop Applications', 'Mobile Applications', 'Progressive Web App'],
+      current: 0
+    }
+  },
+  mounted() {
+    this._timer = setInterval(() => {
+      this.current = (this.current + 1) % this.appTypes.length
+    }, 2500)
+  },
+  destroyed() {
+    clearInterval(this._timer)
+  }
+}
+</script>
 
 <style lang="scss">
 .container {
@@ -78,6 +97,9 @@
       font-weight: $font-weight-light;
       line-height: normal;
       margin-bottom: 15px;
+      &_Primary {
+        color: $color-vue-green;
+      }
     }
     &_Subtitle {
       margin-top: 0;
@@ -85,6 +107,11 @@
       font-size: $h4-font-size;
       font-weight: $font-weight-light;
       line-height: normal;
+      &_Type {
+        display: inline-block;
+        font-weight: $font-weight-semibold;
+        color: $color-vue-green;
+      }
     }
     &_Description {
       margin: 30px 0;
@@ -136,5 +163,18 @@
       // left: 0;
     }
   }
+}
+.fade-enter-active, .fade-leave-active {
+  transition: all .5s;
+}
+.fade-enter,
+.fade-leave-to {
+  opacity: 0;
+}
+.fade-enter {
+  transform: translateX(-5px)
+}
+.fade-leave-to {
+  transform: translateX(5px)
 }
 </style>

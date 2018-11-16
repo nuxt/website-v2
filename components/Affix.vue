@@ -9,6 +9,9 @@
     <div class="Affix__Toggler" :class="{'Affix__Toggler--hidden': visible}" @click="toggle">
       <div class="icon more-vertical"></div>
     </div>
+    <a class="Affix__Tidelift" href="https://tidelift.com/subscription/pkg/npm-nuxt?utm_source=nuxt&utm_medium=referral" target="_blank">
+      <img src="/tidelift.svg" alt="tidelift"><span>{{ $store.state.lang.links.tidelift_short }}</span>
+    </a>
     <h3 class="Affix__Title" style="margin-bottom: 20px;">{{ $store.state.lang.sponsors.title }}</h3>
     <ul class="Affix__List">
       <li class="Affix__List__Item">
@@ -19,6 +22,11 @@
       <li class="Affix__List__Item">
         <a class="Affix__List__Item__Sponsor" href="https://www.storyblok.com/?ref=nuxt" target="_blank" rel="noopener">
           <img src="https://a.storyblok.com/f/39898/x/aa0dc897ff/storyblok-logo.svg" alt="Storyblok.com">
+        </a>
+      </li>
+      <li class="Affix__List__Item">
+        <a class="Affix__List__Item__Sponsor" href="https://www.vuemastery.com/?ref=nuxt" target="_blank" rel="noopener">
+          <img src="/vueMastery-brand.svg" alt="VueMastery.com" style="height: 40px;">
         </a>
       </li>
       <li class="Affix__List__Item">
@@ -103,9 +111,7 @@ export default {
     hashChanged(toPath, fromPath) {
       toPath = toPath.split('#')
       fromPath = fromPath.split('#')
-      if (toPath[0] !== fromPath[0] && this.$route.hash.length) {
-        this.$nextTick(() => this.scrollTo(this.$route.hash))
-      }
+      this.$nextTick(() => this.scrollTo(this.$route.hash))
     },
     toggle() { this.$store.commit('toggle', 'visibleAffix') },
     scrolled() {
@@ -127,7 +133,7 @@ export default {
       this.$nextTick(() => {
         var el = document.getElementById(id.slice(1))
         if (!el) return
-        var to = el.offsetTop - 25
+        var to = el.offsetTop + 20
         var doc = document.documentElement
         var top = (window.pageYOffset || doc.scrollTop) - (doc.clientTop || 0)
         var diff = (to > top ? to - top : top - to) / 25
@@ -159,8 +165,8 @@ export default {
   background-color: #fff;
   z-index: 990;
   @media (min-width: 992px) {
-    top: 80px;
     width: 300px;
+    top: 80px;
     padding: 20px 30px;
     border-right: 1px solid #dbdfe1;
   }
@@ -215,6 +221,27 @@ export default {
       display: none;
     }
   }
+  &__Tidelift {
+    font-size: 12px;
+    font-weight: 600;
+    color: #fff;
+    display: inline-block;
+    padding: 7px 12px;
+    margin: 10px 0;
+    background-color:#35495e;
+    border-radius: 4px;
+    &:hover {
+      text-decoration: none;
+    }
+    img {
+      float: left;
+      height: 24px;
+      margin-right: 5px;
+    }
+    span {
+      line-height: 24px;
+    }
+  }
   &__Version {
     position: relative;
     font-size: 15px;
@@ -266,9 +293,10 @@ export default {
       }
       &__Sponsor {
         display: inline-block;
-        height: 60px;
+        height: 54px;
         img {
           height: 100%;
+          max-width: 100%;
           transition: all 0.3s ease;
           filter: grayscale(100%);
           opacity: 0.66;

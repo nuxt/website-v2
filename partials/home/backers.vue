@@ -3,7 +3,7 @@
     <div class="container">
       <h2 class="nBackers_Title"><span>Support the Team</span></h2>
       <p class="nBackers_Description">
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo reprehenderit necessitatibus corrupti vero ratione, ex voluptas dicta accusamus, ipsam corporis assumenda error, quis unde hic perferendis doloremque architecto eveniet cumque?
+        Nuxt.js is an MIT licensed open source project and completely free to use. However, the amount of effort needed to maintain and develop new features for the project is not sustainable without proper financial backing. Your donations directly support office hours, continued enhancements, and most importantly, great documentation and learning material.
       </p>
       <div class="nBackers_Group">
         <h3 class="nBackers_Group_Title">Partners</h3>
@@ -14,8 +14,8 @@
           <a class="nBackers_Group_Content_Link" href="https://www.storyblok.com/?ref=nuxt" target="_blank" rel="noopener">
             <img class="nBackers_Group_Content_Link_Image" src="https://a.storyblok.com/f/39898/x/aa0dc897ff/storyblok-logo.svg" alt="Storyblok.com">
           </a>
-          <a class="nBackers_Group_Content_Link" href="https://www.storyblok.com/?ref=nuxt" target="_blank" rel="noopener">
-            <img class="nBackers_Group_Content_Link_Image" src="https://a.storyblok.com/f/39898/x/aa0dc897ff/storyblok-logo.svg" alt="Storyblok.com">
+          <a class="nBackers_Group_Content_Link" href="https://www.vuemastery.com/?ref=nuxt" target="_blank" rel="noopener">
+            <img class="nBackers_Group_Content_Link_Image" src="/vueMastery-brand.svg" alt="VueMastery.com">
           </a>
         </div>
         <div class="nBackers_Group_Action">

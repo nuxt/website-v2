@@ -1,6 +1,6 @@
 /* eslint-disable */
 
-export default ({ app }) => {
+export default ({ app }, inject) => {
   /*
   ** Only run on client-side and only in production mode
   */
@@ -16,6 +16,7 @@ export default ({ app }) => {
   ** Set the current page
   */
   ga('create', 'UA-88662854-1', 'auto')
+  inject('ga', ga)
   /*
   ** Every time the route changes (fired on initialization too)
   */

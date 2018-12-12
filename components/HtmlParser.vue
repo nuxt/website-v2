@@ -7,7 +7,7 @@
 export default {
   props: ['content'],
   mounted() {
-    this.addListeners()
+    this.$nextTick(this.addListeners)
   },
   beforeDestroy() {
     this.removeListeners()
@@ -18,13 +18,28 @@ export default {
   methods: {
     navigate(event) {
       let target = event.target
-      if (!(target instanceof HTMLAnchorElement) && target.parentNode instanceof HTMLAnchorElement) {
-        target = event.target.parentNode
+      let i = 0
+
+      // Go throught 5 parents max to find a tag
+      while (i < 5 && !(target instanceof HTMLAnchorElement) && target.parentNode) {
+        target = target.parentNode
+        i++
       }
+      // If target is still not a link, ignore
+      if (!(target instanceof HTMLAnchorElement))
+        return
+
       const href = target.getAttribute('href')
+
+      // Get link target, if local link, navigate with router link
       if (href && href[0] === '/') {
         event.preventDefault()
         this.$router.push(href)
+      }
+      // If Google Analytics is activated & is external link
+      else if (this.$ga) {
+        // https://developers.google.com/analytics/devguides/collection/analyticsjs/events
+        this.$ga('send', 'event', 'Outbound Link', 'click', target.href)
       }
     },
     contentUpdated() {

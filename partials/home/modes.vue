@@ -4,36 +4,41 @@
       <h2 class="nModes_Title"><span>Rendering modes</span></h2>
       <div class="row">
         <ul class="nModes_Tabs">
-          <li class="nModes_Tabs_Option" :class="{'nModes_Tabs_Option--selected-first': mode === 0}" @click="mode = 0">Server Rendered</li>
-          <li class="nModes_Tabs_Option" :class="{'nModes_Tabs_Option--selected': mode === 1}" @click="mode = 1">Static Generated</li>
+          <li class="nModes_Tabs_Option" :class="{'nModes_Tabs_Option--selected-first': mode === 0}" @click="mode = 0">Server Side Rendered</li>
+          <li class="nModes_Tabs_Option" :class="{'nModes_Tabs_Option--selected': mode === 1}" @click="mode = 1">Statically Generated</li>
           <li class="nModes_Tabs_Option" :class="{'nModes_Tabs_Option--selected-last': mode === 2}" @click="mode = 2">Single Page App</li>
         </ul>
         <div class="nModes_Content">
           <div v-show="mode === 0">
-            <h3 class="nModes_Content_Title">Server Rendered (Universal)</h3>
+            <h3 class="nModes_Content_Title">Server Side Rendered (Universal)</h3>
             <p class="nModes_Content_Description">
-              You can use Nuxt.js as a framework to handle all the UI rendering of your project.
-              <br/>
-              When launching nuxt, it will start a development server with hot-reloading and Vue Server Renderer configured to automatically server-render your application.
+              The most popular mode for Nuxt. With SSR, also called "universal" or "isomorphic" mode, a Node.js server
+              will be used to deliver HTML based on your Vue components to the client instead of the pure javascript.
+              Using SSR will lead to a large SEO boost, better UX and more opportunities (compared to a traditional Vue SPA).
+              <br><br>
+              Because implementing SSR on your own can be really tedious, Nuxt.js gives you full support out of the box
+              and will take care of common pitfalls.
             </p>
           </div>
           <div v-show="mode === 1">
-            <h3 class="nModes_Content_Title">Static Generated (Pre Rendering)</h3>
+            <h3 class="nModes_Content_Title">Statically Generated (Pre-Rendering)</h3>
             <p class="nModes_Content_Description">
-              The big innovation of Nuxt.js comes with the nuxt generate command.
-              <br/>
-              When building your application, it will generate the HTML for every one of your routes and store it in an HTML file.
-              This way, you have both benefits from server-side rendering and CDN serving.
+              Static Site Generation is a very hot topic right now! Instead of switching to another framework and
+              spending time to get used to it, why not killing two birds with one stone?
+              <span style="color: #777">(only proverbial 🐦🐦)</span><br><br>
+              Nuxt.js supports generating a static website based on your Vue application. It is the "best of both worlds"
+              as you don't need a server but still have SEO benefits because Nuxt will pre-render all pages and include
+              the necessary HTML. Also, you can deploy the resulting page easily to Netlify or GitHub pages.
             </p>
           </div>
           <div v-show="mode === 2">
             <h3 class="nModes_Content_Title">Single Page Application (SPA)</h3>
             <p class="nModes_Content_Description">
-              If, for any reason, you prefer not to use server side rendering or need static hosting for your application, you can simply use SPA mode using <code>nuxt --spa</code>. In combination with the generate feature, it gives you a powerful SPA deployment mechanism without the need to use a Node.js runtime or any special server handling.
-              <br/>
-              Take a look at the commands to learn more about usage.
-              <br/>
-              If you already have a server, you can plug Nuxt.js by using it as a middleware. There is no restriction at all when using Nuxt.js for developing your Universal Web Applications. See the Using Nuxt.js Programmatically guide.
+              Don't need SSR or Static Site Generation but still want to profit from the benefits that Nuxt provides?
+              Are you slowly transitioning your app and want to start lightweight? Then the traditional SPA mode will
+              likely your choice.
+              The outcome will be a typical Vue SPA as you know it but influenced by your Nuxt configuration and the
+              framework itself.
             </p>
           </div>
         </div>

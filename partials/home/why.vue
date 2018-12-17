@@ -7,21 +7,29 @@
           <i-performant/>
           <h4 class="nWhy_Block_Title">Performant</h4>
           <p class="nWhy_Block_Description">
-            With Nuxt.js, your application will be optimized by default. We do our best to build performant applications by respecting Vue.js and Node.js best practices.
+            With Nuxt.js, your application will be optimized out of the box.
+            We do our best to build performant applications by utilizing Vue.js and Node.js best practices.
+            To squeeze every unnecessary bit out of your app Nuxt includes a bundle analyzer and lots of opportunities
+            to fine-tune your app.
           </p>
         </div>
         <div class="nWhy_Block">
           <i-modular/>
           <h4 class="nWhy_Block_Title">Modular</h4>
           <p class="nWhy_Block_Description">
-            Nuxt is based on a powerful modular architecture. You can use 50+ modules to make your developement faster & simplier. By installing a Nuxt module, you can benefits from enhancements like PWA, Offline and AMP support.
+            Nuxt is based on a powerful modular architecture. You can choose from more than 50 modules to make your
+            development faster and easier. You don't have to reinvent the wheel to get PWA benefits, add Google Analytics
+            to your page or generate a sitemap.
           </p>
         </div>
         <div class="nWhy_Block">
           <i-enjoyable/>
           <h4 class="nWhy_Block_Title">Enjoyable</h4>
           <p class="nWhy_Block_Description">
-            Our main focus is the Developer Experience. We want Nuxt.js to be enjoyable, this is why we created Nuxt cli, the modules ecosystem, the ability to switch with one option between the rendering modes and more <3.
+            Our main focus is the Developer Experience. We love Nuxt.js and continuously improve the framework
+            so you love it too! 💚<br>
+            Expect appealing solutions, descriptive error messages, powerful defaults and a detailed
+            documentation. If questions or problems come up, our helpful community will help you out.
           </p>
         </div>
       </div>

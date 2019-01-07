@@ -25,7 +25,7 @@ export default async function ({ isDev, env, req, store: { commit, state }, redi
   }
   try {
     const resReleases = await axios(state.apiURI + '/releases')
-    commit('setGhVersion', resReleases.data[0].name)
+    commit('setGhVersion', resReleases.data[0] ? resReleases.data[0].name : 'v2.4.0')
     const resLang = await axios(state.apiURI + '/lang/' + state.locale)
     commit('setLang', resLang.data)
     commit('setDocVersion', resLang.data.docVersion)

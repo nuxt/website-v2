@@ -11,6 +11,11 @@ export default {
     ],
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
+    ],
+    script: [
+      { body: true, type: 'text/javascript', innerHTML: 'var abp;' },
+      { body: true, type: 'text/javascript', src: 'https://cdn2.codefund.app/assets/px.js?ch=1' },
+      { body: true, type: 'text/javascript', src: 'https://cdn2.codefund.app/assets/px.js?ch=2' }
     ]
   },
   css: [

@@ -79,6 +79,7 @@
   }
   &_Description {
     padding: 3rem 0;
+    font-size: 16px;
   }
   &_Group {
     padding-bottom: 6rem;

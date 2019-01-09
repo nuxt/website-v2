@@ -14,6 +14,10 @@ export default async function ({ isDev, env, req, store: { commit, state }, redi
     // If url like ja.nuxtjs.org
     if (hostParts.length === 2) {
       if (hostParts[0] === 'www') return redirect(301, 'https://nuxtjs.org' + req.url)
+
+      if (isDev) {
+        commit('setLocale', hostParts[0])
+      }
     }
   } else {
     // Used with nuxt generate

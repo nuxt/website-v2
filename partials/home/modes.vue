@@ -129,7 +129,8 @@ export default {
 
     }
     &_Description {
-
+      text-align: justify;
+      font-size: 16px;
     }
   }
 }

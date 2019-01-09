@@ -1,7 +1,8 @@
 <template>
   <div>
-    <navbar></navbar>
-    <div :class="{'App--hidden': visible}">
+    <navbar/>
+    <div class="App" :class="{'App--hidden': visible}">
+      <event-info/>
       <nuxt/>
     </div>
   </div>
@@ -9,6 +10,7 @@
 
 <script>
 import Navbar from '~/components/Header.vue'
+import EventInfo from '~/components/EventInfo.vue'
 
 export default {
   watch: {
@@ -49,13 +51,18 @@ export default {
     }
   },
   components: {
-    Navbar
+    Navbar,
+    EventInfo
   }
 }
 </script>
 
 <style lang="scss" scoped>
 .App {
+  margin-top: 60px;
+  @media (min-width: 991px) {
+    margin-top: 80px;
+  }
   &--hidden {
     display: none;
     @media (min-width: 992px) {

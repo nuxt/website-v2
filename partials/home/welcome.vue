@@ -115,6 +115,7 @@ export default {
     }
     &_Description {
       margin: 30px 0;
+      font-size: 16px;
     }
     &_Links {
       &_Button {

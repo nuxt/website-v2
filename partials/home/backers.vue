@@ -95,6 +95,7 @@
         margin-right: 30px;
         &_Image {
           height: 80px;
+          max-width: 100%;
         }
         &:last-child {
           margin-right: 0;

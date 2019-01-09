@@ -16,10 +16,23 @@ module.exports = {
   },
   css: [
     'normalize.css',
+<<<<<<< HEAD
     { src: '~assets/scss/main.scss', lang: 'scss' }
 <<<<<<< HEAD
   ]
 =======
+=======
+    'highlight.js/styles/github.css',
+    '~/assets/scss/main.scss'
+  ],
+  modules: [
+    '@nuxtjs/style-resources'
+    // ['~/modules/sentry', {
+    //   project_id: process.env.SENTRY_PROJECT_ID,
+    //   public_key: process.env.SENTRY_PUBLIC_KEY,
+    //   private_key: process.env.SENTRY_PRIVATE_KEY
+    // }]
+>>>>>>> 5e315c38 (app: Support ad blockers, upgrade Nuxt)
   ],
 <<<<<<< HEAD
   router: {
@@ -38,8 +51,14 @@ module.exports = {
   //   ]
   // },
   plugins: [
+<<<<<<< HEAD
     '~plugins/ga.js',
     '~plugins/marked'
+=======
+    '~/plugins/init.js',
+    { src: '~/plugins/ga.client.js', ssr: false },
+    { src: '~/plugins/adblock.client.js', ssr: false }
+>>>>>>> 5e315c38 (app: Support ad blockers, upgrade Nuxt)
   ],
   build: {
     vendor: ['whatwg-fetch', 'marked', 'highlight.js']
@@ -49,12 +68,47 @@ module.exports = {
   },
   loading: { color: '#41B883' },
   generate: {
+<<<<<<< HEAD
     routeParams: {
       '/guide/:slug': _(require('./static/docs/en/guide/menu.json')).values().flatten().map('to').compact().map((slug) => { return { slug: slug.replace(/^\//, '') } }).value(),
       '/api/:slug': _(require('./static/docs/en/api/menu.json')).values().flatten().map('to').compact().map((slug) => { return { slug: slug.replace(/^\//, '') } }).value(),
       '/examples/:slug': _(require('./static/docs/en/examples/menu.json')).values().flatten().map('to').compact().map((slug) => { return { slug: slug.replace(/^\//, '') } }).value()
     }
 >>>>>>> 3d1d3d02 (new architecture)
+=======
+    fallback: true,
+    interval: 100,
+    routes() {
+      return Promise.all(
+        ['guide', 'api', 'examples', 'faq']
+          .map((category) => {
+            return axios.get(`https://docs.api.nuxtjs.org/menu/${locale}/${category}`)
+              .then((res) => res.data || [])
+              .then((menu) => {
+                return _(menu)
+                  .map('links')
+                  .flatten()
+                  .map((m) => m.to.slice(1))
+                  .compact()
+                  .map((slug) => {
+                    return `/${category}/${slug}`
+                  })
+                  .value()
+                  .concat(`/${category}`)
+              })
+          })
+      )
+        .then((routes) => _(routes).flatten().uniq().value())
+    }
+  },
+  /*
+  ** Build configuration
+  */
+  styleResources: {
+    scss: [
+      './assets/styles/variables/theme.scss'
+    ]
+>>>>>>> 5e315c38 (app: Support ad blockers, upgrade Nuxt)
   }
 >>>>>>> f4d82e28 (guide content from component)
 }

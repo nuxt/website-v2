@@ -74,5 +74,15 @@ export default {
       )
         .then((routes) => _(routes).flatten().uniq().value())
     }
+  },
+  /*
+  ** Build configuration
+  */
+  build: {
+    styleResources: {
+      scss: [
+        './assets/styles/variables/theme.scss'
+      ]
+    }
   }
 }

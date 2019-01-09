@@ -21,13 +21,13 @@ export default {
 {
   background-color: #fff;
   overflow: hidden;
-  margin-bottom: 15px;
-  height: 106px;
+  padding-bottom: 15px;
+  height: 140px;
   @media (min-width: 625px)
   {
     float: right;
-    width: 125px;
-    margin-left: 25px;
+    width: 150px;
+    padding-left: 25px;
     height: auto;
   }
   @media (min-width: 1280px)
@@ -35,7 +35,8 @@ export default {
     position: fixed;
     bottom: 30px;
     right: 30px;
-    margin-bottom: 0;
+    padding-bottom: 0;
+    height: 106px;
   }
   .vuejobs
   {
@@ -44,14 +45,14 @@ export default {
     height: 100px;
     background-image: url('/vuejobs.png');
   }
-  #cf_ad,
-  #cf_ad .cf-wrapper {
-    width: auto;
+  #cf,
+  #cf .cf-wrapper {
+    width: auto !important;
   }
-  #cf_ad .cf-text {
-    font-size: 13px;
+  #cf .cf-text {
+    font-size: 13px !important;
   }
-  #cf_ad .cf-image-wrapper
+  #cf .cf-img-wrapper
   {
     float: left;
     margin-right: 10px;

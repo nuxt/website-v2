@@ -64,7 +64,7 @@ export default {
     bottom: 30px;
     right: 30px;
     padding-bottom: 0;
-    height: 106px;
+    height: auto;
   }
   #cf,
   #cf .cf-wrapper {

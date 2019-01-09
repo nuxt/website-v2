@@ -1,5 +1,5 @@
 <template>
-  <div class="ad" ref="carbonads">
+  <div class="carbon_ad" ref="carbonads">
     <a href="https://vuejobs.com/?ref=nuxtjs" target="_blank" class="vuejobs" v-if="$store.state.locale !== 'en'"></a>
   </div>
 </template>
@@ -19,7 +19,7 @@ export default {
 </script>
 
 <style lang="scss">
-.ad {
+.carbon_ad {
   background-color: #fff;
   font-size: 13px;
   overflow: hidden;

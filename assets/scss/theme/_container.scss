@@ -20,13 +20,11 @@
     position: relative;
     z-index: 10;
     padding: 25px;
-    margin-top: 60px;
     height: 100%;
     overflow: auto;
     @media (min-width: 992px)
     {
       padding: 30px 45px;
-      margin-top: 80px;
       margin-left: 300px;
     }
     &--hidden

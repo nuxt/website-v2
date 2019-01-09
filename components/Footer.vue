@@ -50,7 +50,7 @@
                 The Nuxt Shop
               </a>
             </li>
-          </ul>          
+          </ul>
         </div>
       </div>
     </div>

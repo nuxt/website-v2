@@ -1,17 +1,40 @@
 <template>
-  <div class="ad" ref="codefundads" id="codefund_ad"></div>
+  <carbon-ads v-if="displayCarbon"/>
+  <div v-else class="ad" ref="codefundads" id="codefund_ad"></div>
 </template>
 
 <script>
+import CarbonAds from './CarbonAds'
+
 export default {
+  data() {
+    return {
+      displayCarbon: false
+    }
+  },
   mounted() {
     if (this.$store.state.locale === 'en') {
+      window.addEventListener('codefund', this.cardbonFallback)
       const script = document.createElement('script')
       script.setAttribute('type', 'text/javascript')
       script.setAttribute('src', '//codefund.io/scripts/7a55aa99-7866-418d-9720-8b1342303656/embed.js?template=vertical')
       script.setAttribute('id', '_codefund_ad_js')
       this.$refs.codefundads.appendChild(script)
     }
+  },
+  beforeDestroy() {
+    window.removeEventListener('codefund', this.cardbonFallback)
+  },
+  methods: {
+    cardbonFallback(event) {
+      if (event.detail.status !== 'ok') {
+        // Render Carbon Ad
+        this.displayCarbon = true
+      }
+    }
+  },
+  components: {
+    CarbonAds
   }
 }
 </script>

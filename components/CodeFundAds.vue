@@ -1,5 +1,9 @@
 <template>
-  <carbon-ads v-if="displayCarbon"/>
+  <div v-if="$store.state.adBlocked" class="ad_blocked">
+    <div class="img-wrapper"><img src="/ad-blocked.svg" alt="Support Nuxt.js"/></div>
+    <span class="text-wrapper"><strong>Nuxt.js needs you 💚</strong><br>By whitelisting nuxtjs.org on your Ad-Blocker, you support our work and help us financially.</span>
+  </div>
+  <carbon-ads v-else-if="displayCarbon"/>
   <div v-else class="ad" ref="codefundads" id="codefund_ad"></div>
 </template>
 
@@ -40,7 +44,8 @@ export default {
 </script>
 
 <style lang="scss">
-.ad
+.ad,
+.ad_blocked
 {
   background-color: #fff;
   overflow: hidden;
@@ -61,13 +66,6 @@ export default {
     padding-bottom: 0;
     height: 106px;
   }
-  .vuejobs
-  {
-    display: block;
-    width: 130px;
-    height: 100px;
-    background-image: url('/vuejobs.png');
-  }
   #cf,
   #cf .cf-wrapper {
     width: auto !important;
@@ -75,8 +73,8 @@ export default {
   #cf .cf-text {
     font-size: 13px !important;
   }
-  #cf .cf-img-wrapper
-  {
+  #cf .cf-img-wrapper,
+  .img-wrapper {
     float: left;
     margin-right: 10px;
     @media (min-width: 625px)
@@ -85,33 +83,8 @@ export default {
       margin-right: 0;
     }
   }
-  .carbon-text
-  {
-    color: #34495e;
-    text-decoration: none;
-    &:hover
-    {
-      text-decoration: none;
-    }
-    @media (min-width: 625px)
-    {
-      display: inline-block;
-      margin-top: 5px;
-    }
-  }
-  .carbon-wrap
-  {
-    @media (min-width: 625px)
-    {
-      display: inline-block;
-      margin-bottom: 5px;
-      line-height: normal;
-    }
-  }
-  .carbon-poweredby
-  {
-    color: #7f8c8d;
-    display: block;
+  .text-wrapper {
+    font-size: 13px;
   }
 }
 </style>

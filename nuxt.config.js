@@ -21,9 +21,10 @@ export default {
   css: [
     'normalize.css',
     'highlight.js/styles/github.css',
-    '~assets/scss/main.scss'
+    '~/assets/scss/main.scss'
   ],
   modules: [
+    '@nuxtjs/style-resources'
     // ['~/modules/sentry', {
     //   project_id: process.env.SENTRY_PROJECT_ID,
     //   public_key: process.env.SENTRY_PUBLIC_KEY,
@@ -31,8 +32,9 @@ export default {
     // }]
   ],
   plugins: [
-    '~/plugins/init',
-    { src: '~/plugins/ga.js', ssr: false }
+    '~/plugins/init.js',
+    { src: '~/plugins/ga.client.js', ssr: false },
+    { src: '~/plugins/adblock.client.js', ssr: false }
   ],
   env: {
     githubToken: '4aa6bcf919d238504e7db59a66d32e78281c0ad3',
@@ -78,11 +80,9 @@ export default {
   /*
   ** Build configuration
   */
-  build: {
-    styleResources: {
-      scss: [
-        './assets/styles/variables/theme.scss'
-      ]
-    }
+  styleResources: {
+    scss: [
+      './assets/styles/variables/theme.scss'
+    ]
   }
 }

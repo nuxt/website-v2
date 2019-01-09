@@ -1,10 +1,10 @@
 <template>
   <div v-if="$store.state.adBlocked" class="ad_blocked">
-    <div class="img-wrapper"><img src="/blocked.svg" alt="Support Nuxt.js"/></div>
+    <div class="img-wrapper"><img src="/blocked.svg" alt="Support Nuxt.js" width="125" height="125"/></div>
     <span class="text-wrapper"><strong>Nuxt.js needs you 💚</strong><br>By whitelisting nuxtjs.org on your Ad-Blocker, you support our work and help us financially.</span>
   </div>
   <carbon-ads v-else-if="displayCarbon"/>
-  <div v-else class="ad" ref="codefundads" id="codefund_ad"></div>
+  <div v-else class="cf_ad" ref="codefundads" id="codefund_ad"></div>
 </template>
 
 <script>
@@ -44,7 +44,7 @@ export default {
 </script>
 
 <style lang="scss">
-.ad,
+.cf_ad,
 .ad_blocked
 {
   background-color: #fff;

@@ -4,7 +4,7 @@ import _ from 'lodash'
 const locale = process.env.NUXT_LOCALE || 'en'
 
 export default {
-  modern: true,
+  modern: 'client',
   head: {
     meta: [
       { charset: 'utf-8' },

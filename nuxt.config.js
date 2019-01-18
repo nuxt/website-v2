@@ -25,7 +25,8 @@ export default {
     '~/assets/scss/main.scss'
   ],
   modules: [
-    '@nuxtjs/style-resources'
+    '@nuxtjs/style-resources',
+    'nuxt-svg-loader'
     // ['~/modules/sentry', {
     //   project_id: process.env.SENTRY_PROJECT_ID,
     //   public_key: process.env.SENTRY_PUBLIC_KEY,

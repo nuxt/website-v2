@@ -73,6 +73,7 @@
     "newrelic": "^5.0.0",
     "normalize.css": "^8.0.1",
     "nuxt-edge": "latest",
+    "nuxt-svg-loader": "^1.0.1",
     "raven": "^2.6.4",
     "raven-js": "^3.27.0",
     "timber": "^3.1.3",

@@ -10,7 +10,8 @@
       <div class="icon more-vertical"></div>
     </div>
     <a class="Affix__Tidelift" href="https://tidelift.com/subscription/pkg/npm-nuxt?utm_source=nuxt&utm_medium=referral" target="_blank">
-      <img src="/tidelift.svg" alt="tidelift"><span>{{ $store.state.lang.links.tidelift_short }}</span>
+      <Tidelift alt="tidelift"/>
+      <span>{{ $store.state.lang.links.tidelift_short }}</span>
     </a>
     <h3 class="Affix__Title" style="margin-bottom: 20px;">{{ $store.state.lang.sponsors.title }}</h3>
     <ul class="Affix__List">
@@ -58,6 +59,9 @@
 import throttle from 'lodash/throttle'
 
 export default {
+  components: {
+    Tidelift: () => import('~/assets/images/tidelift.svg')
+  },
   props: {
     list: {
       type: Array,
@@ -233,7 +237,7 @@ export default {
     &:hover {
       text-decoration: none;
     }
-    img {
+    svg {
       float: left;
       height: 24px;
       margin-right: 5px;

@@ -1,6 +1,6 @@
 <template>
   <div v-if="$store.state.adBlocked" class="ad_blocked">
-    <div class="img-wrapper"><img src="/blocked.svg" alt="Support Nuxt.js" width="125" height="125"/></div>
+    <div class="img-wrapper"><Blocked alt="Support Nuxt.js" width="125" height="125"/></div>
     <span class="text-wrapper"><strong>Nuxt.js needs you 💚</strong><br>By whitelisting nuxtjs.org on your Ad-Blocker, you support our work and help us financially.</span>
   </div>
   <carbon-ads v-else-if="displayCarbon"/>
@@ -9,7 +9,6 @@
 
 <script>
 import CarbonAds from './CarbonAds'
-
 export default {
   data() {
     return {
@@ -43,7 +42,8 @@ export default {
     }
   },
   components: {
-    CarbonAds
+    CarbonAds,
+    Blocked: () => import('~/assets/images/blocked.svg')
   }
 }
 </script>

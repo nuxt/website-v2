@@ -2,7 +2,7 @@
   <section class="nCodesandbox">
     <div class="container">
       <h2 class="nCodesandbox_Title"><span>{{ $store.state.lang.homepage.codesandbox_title }}</span></h2>
-      <iframe src="https://codesandbox.io/s/github/nuxt/codesandbox-nuxt/tree/master/?autoresize=1&hidenavigation=1&view=preview" sandbox="allow-modals allow-forms allow-popups allow-scripts allow-same-origin"></iframe>
+      <code-sandbox src="https://codesandbox.io/s/github/nuxt/codesandbox-nuxt/tree/master/?autoresize=1&hidenavigation=1&view=preview" />
       <div class="nCodesandbox_Content">
         <a class="nCodesandbox_Content_Button nCodesandbox_Content_Button--green" href="https://codesandbox.io/s/github/nuxt/codesandbox-nuxt/tree/master/?autoresize=1&hidenavigation=1&view=preview" target="_blank" rel="noopener">
           {{ $store.state.lang.homepage.codesandbox_open }}
@@ -14,6 +14,16 @@
     </div>
   </section>
 </template>
+
+<script>
+import CodeSandbox from '~/components/CodeSandbox.vue'
+
+export default {
+  components: {
+    CodeSandbox
+  }
+}
+</script>
 
 <style lang="scss">
 .nCodesandbox {
@@ -92,15 +102,6 @@
     text-decoration: underline;
     display: inline-block;
     margin-bottom: 10px;
-  }
-  iframe {
-    width:100%;
-    max-width: 1400px;
-    height:700px;
-    border:0;
-    border-radius: 4px;
-    overflow:hidden;
-    margin: 0 auto;
   }
 }
 @media (max-width: 991px) {

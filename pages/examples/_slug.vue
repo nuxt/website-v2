@@ -9,7 +9,7 @@
       <iframe class="youtube" :src="attrs.youtube" frameborder="0" allowfullscreen></iframe>
     </div>
     <h2>{{ $store.state.lang.examples.source_code }}</h2>
-    <iframe :src="codeSandBoxLink" style="width:100%; height:700px; border:0; border-radius: 4px; overflow:hidden; margin-bottom: 20px;" sandbox="allow-modals allow-forms allow-popups allow-scripts allow-same-origin"></iframe>
+    <code-sandbox :src="codeSandBoxLink" style="margin-bottom: 20px;"/>
     <div>
       <a :href="liveEditLink" class="button button--grey" target="_blank">
         <span>
@@ -33,11 +33,17 @@
 
 <script>
 import axios from 'axios'
+import CodeSandbox from '~/components/CodeSandbox.vue'
 import CodeFundAds from '~/components/CodeFundAds.vue'
 import NuxtFilesTree from '~/components/FilesTree.vue'
 import HtmlParser from '~/components/HtmlParser.vue'
 
 export default {
+  watch: {
+    '$route.params.slug': function () {
+      this.attrs.github = ''
+    }
+  },
   async asyncData({ route, store, error }) {
     // Default data
     let data = {
@@ -67,6 +73,9 @@ export default {
       return `https://codesandbox.io`
     },
     codeSandBoxLink() {
+      if (!this.attrs.github) {
+        return ''
+      }
       return `${this.codeSandBox}/embed/github/nuxt/nuxt.js/tree/dev/examples/${this.attrs.github}?autoresize=1&view=editor`
     },
     liveEditLink() {
@@ -87,6 +96,7 @@ export default {
     }
   },
   components: {
+    CodeSandbox,
     CodeFundAds,
     NuxtFilesTree,
     HtmlParser

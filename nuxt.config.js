@@ -14,9 +14,7 @@ export default {
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
     ],
     script: [
-      { body: true, type: 'text/javascript', innerHTML: 'var abp;' },
-      { body: true, type: 'text/javascript', src: 'https://cdn2.codefund.app/assets/px.js?ch=1' },
-      { body: true, type: 'text/javascript', src: 'https://cdn2.codefund.app/assets/px.js?ch=2' }
+      { src: 'https://polyfill.io/v2/polyfill.min.js?features=IntersectionObserver', body: true }
     ]
   },
   css: [
@@ -27,11 +25,6 @@ export default {
   modules: [
     '@nuxtjs/style-resources',
     'nuxt-svg-loader'
-    // ['~/modules/sentry', {
-    //   project_id: process.env.SENTRY_PROJECT_ID,
-    //   public_key: process.env.SENTRY_PUBLIC_KEY,
-    //   private_key: process.env.SENTRY_PRIVATE_KEY
-    // }]
   ],
   plugins: [
     '~/plugins/init.js',

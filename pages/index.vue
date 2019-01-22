@@ -12,19 +12,15 @@
 <script>
 import sWelcome from '@/partials/home/welcome'
 import sWhy from '@/partials/home/why'
-import sModes from '@/partials/home/modes'
-import sCodesandbox from '@/partials/home/codesandbox'
-import sBackers from '@/partials/home/backers'
-import NuxtFooter from '@/components/Footer.vue'
 
 export default {
   components: {
     sWelcome,
     sWhy,
-    sModes,
-    sCodesandbox,
-    sBackers,
-    NuxtFooter
+    sModes: () => import('@/partials/home/modes'),
+    sCodesandbox: () => import('@/partials/home/codesandbox'),
+    sBackers: () => import('@/partials/home/backers'),
+    NuxtFooter: () => import('@/components/Footer.vue')
   },
   head() {
     return {

@@ -17,12 +17,12 @@
     <ul class="Affix__List">
       <li class="Affix__List__Item">
         <a class="Affix__List__Item__Sponsor" href="https://t.co/sUZfRy6ZxS" target="_blank" rel="noopener">
-          <img src="https://user-images.githubusercontent.com/1016365/34124854-48fafa06-e3e9-11e7-8c04-251055feebee.png" alt="Tipe.io" />
+          <img src="/tipe-io-cms.png" srcset="/tipe-io-cms-2x.png 2x" alt="Tipe.io" />
         </a>
       </li>
       <li class="Affix__List__Item">
         <a class="Affix__List__Item__Sponsor" href="https://www.storyblok.com/?ref=nuxt" target="_blank" rel="noopener">
-          <img src="https://a.storyblok.com/f/39898/x/aa0dc897ff/storyblok-logo.svg" alt="Storyblok.com">
+          <img src="/storyblok-logo.svg" alt="Storyblok.com">
         </a>
       </li>
       <li class="Affix__List__Item">

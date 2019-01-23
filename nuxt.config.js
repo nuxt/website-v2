@@ -28,7 +28,7 @@ export default {
     // https://github.com/Developmint/nuxt-svg-loader/
     'nuxt-svg-loader',
     // https://github.com/DreaMinder/nuxt-payload-extractor
-    'nuxt-payload-extractor'
+    // 'nuxt-payload-extractor'
   ],
   plugins: [
     '~/plugins/init.js',

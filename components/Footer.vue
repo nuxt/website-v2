@@ -50,6 +50,11 @@
                 The Nuxt Shop
               </a>
             </li>
+            <li class="nFooter_Group_Content_Line">
+              <a class="nFooter_Group_Content_Line_Link" href="https://otechie.com/nuxt" target="_blank" rel="noopener">
+                Nuxt Consulting
+              </a>
+            </li>
           </ul>
         </div>
       </div>

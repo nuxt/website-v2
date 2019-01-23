@@ -27,6 +27,7 @@ module.exports = {
   ],
   modules: [
     '@nuxtjs/style-resources',
+<<<<<<< HEAD
     'nuxt-svg-loader'
     // ['~/modules/sentry', {
     //   project_id: process.env.SENTRY_PROJECT_ID,
@@ -34,6 +35,12 @@ module.exports = {
     //   private_key: process.env.SENTRY_PRIVATE_KEY
     // }]
 >>>>>>> 5e315c38 (app: Support ad blockers, upgrade Nuxt)
+=======
+    // https://github.com/Developmint/nuxt-svg-loader/
+    'nuxt-svg-loader',
+    // https://github.com/DreaMinder/nuxt-payload-extractor
+    // 'nuxt-payload-extractor'
+>>>>>>> b4c06c90 (Merge branch 'master' of https://github.com/nuxt/nuxtjs.org)
   ],
 <<<<<<< HEAD
   router: {

@@ -1,4 +1,5 @@
 <template>
+<<<<<<< HEAD
   <footer class="Footer">
     <div class="Footer__Sponsors">
       <h3>Sponsors</h3>
@@ -25,6 +26,67 @@
       <a href="https://github.com/Atinux" target="_blank">@Atinux</a>
       &
       <a href="https://github.com/alexchopin" target="_blank">@alexchopin</a>
+=======
+  <footer class="nFooter">
+    <div class="container">
+      <div class="row">
+        <div class="nFooter_Group">
+          <h4 class="nFooter_Group_Title">Translations</h4>
+          <ul class="nFooter_Group_Content">
+            <li class="nFooter_Group_Content_Line" v-for="(t, i) in translations" :key="i">
+              <a class="nFooter_Group_Content_Line_Link" :href="t.path" target="_blank" rel="noopener">
+                {{ t.name }}
+              </a>
+            </li>
+          </ul>
+        </div>
+        <div class="nFooter_Group">
+          <h4 class="nFooter_Group_Title">Ecosystem</h4>
+          <ul class="nFooter_Group_Content">
+            <li class="nFooter_Group_Content_Line">
+              <a class="nFooter_Group_Content_Line_Link" href="https://github.com/nuxt" target="_blank" rel="noopener">
+                GitHub
+              </a>
+            </li>
+            <li class="nFooter_Group_Content_Line">
+              <a class="nFooter_Group_Content_Line_Link" href="https://github.com/nuxt-community" target="_blank" rel="noopener">
+                Resources
+              </a>
+            </li>
+            <li class="nFooter_Group_Content_Line">
+              <a class="nFooter_Group_Content_Line_Link" href="https://cmty.app/nuxt" target="_blank" rel="noopener">
+                Community
+              </a>
+            </li>
+            <li class="nFooter_Group_Content_Line">
+              <a class="nFooter_Group_Content_Line_Link" href="https://twitter.com/nuxt_js" target="_blank" rel="noopener">
+                Twitter
+              </a>
+            </li>
+            <li class="nFooter_Group_Content_Line">
+              <a class="nFooter_Group_Content_Line_Link" href="https://discordapp.com/invite/VApZF5W" target="_blank" rel="noopener">
+                Chat
+              </a>
+            </li>
+            <li class="nFooter_Group_Content_Line">
+              <a class="nFooter_Group_Content_Line_Link" href="https://medium.com/@nuxt_js" target="_blank" rel="noopener">
+                Blog
+              </a>
+            </li>
+            <li class="nFooter_Group_Content_Line">
+              <a class="nFooter_Group_Content_Line_Link" href="https://nuxt.threadless.com" target="_blank" rel="noopener">
+                The Nuxt Shop
+              </a>
+            </li>
+            <li class="nFooter_Group_Content_Line">
+              <a class="nFooter_Group_Content_Line_Link" href="https://otechie.com/nuxt" target="_blank" rel="noopener">
+                Nuxt Consulting
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+>>>>>>> b4c06c90 (Merge branch 'master' of https://github.com/nuxt/nuxtjs.org)
     </div>
   </footer>
 </template>

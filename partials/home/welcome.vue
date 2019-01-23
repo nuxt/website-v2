@@ -23,7 +23,7 @@
           </div>
         </div>
         <figure class="nWelcome_Figure">
-          <iframe src="https://www.youtube.com/embed/kmf-p-pTi40" frameborder="0" allowfullscreen></iframe>
+          <youtube src="https://www.youtube.com/embed/kmf-p-pTi40"/>
         </figure>
       </div>
     </div>
@@ -31,6 +31,8 @@
 </template>
 
 <script>
+import Youtube from '~/components/Youtube.vue'
+
 export default {
   data() {
     return {
@@ -45,6 +47,9 @@ export default {
   },
   destroyed() {
     clearInterval(this._timer)
+  },
+  components: {
+    Youtube
   }
 }
 </script>

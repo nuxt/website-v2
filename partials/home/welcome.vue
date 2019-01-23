@@ -17,7 +17,7 @@
             <nuxt-link class="nWelcome_Content_Links_Button nWelcome_Content_Links_Button--green" to="/guide/installation">
               {{ $store.state.lang.links.get_started }}
             </nuxt-link>
-            <a class="nWelcome_Content_Links_Button" href="https://github.com/nuxt/nuxt.js" target="_blank">
+            <a class="nWelcome_Content_Links_Button" href="https://github.com/nuxt/nuxt.js" target="_blank" rel="noopener">
               {{ $store.state.lang.links.github }} <span class="version">{{ $store.state.ghVersion }}</span>
             </a>
           </div>

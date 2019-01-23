@@ -2,9 +2,7 @@
   <div>
     <code-fund-ads :key="$route.params.slug"/>
     <h1>{{ attrs.title }}</h1>
-    <div class="video" v-if="attrs.youtube">
-      <iframe class="youtube" :src="attrs.youtube" frameborder="0" allowfullscreen></iframe>
-    </div>
+    <youtube v-if="attrs.youtube" :src="attrs.youtube"/>
     <html-parser :content="body"/>
     <contribute :doc-link="docLink"/>
   </div>
@@ -12,6 +10,7 @@
 
 <script>
 import axios from 'axios'
+import Youtube from '~/components/Youtube.vue'
 import CodeFundAds from '~/components/CodeFundAds.vue'
 import HtmlParser from '~/components/HtmlParser.vue'
 import Contribute from '~/components/Contribute.vue'
@@ -58,6 +57,7 @@ export default {
     }
   },
   components: {
+    Youtube,
     CodeFundAds,
     HtmlParser,
     Contribute

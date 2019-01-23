@@ -5,9 +5,7 @@
     <blockquote>
       <p>{{ attrs.description }}</p>
     </blockquote>
-    <div class="video" v-if="attrs.youtube">
-      <iframe class="youtube" :src="attrs.youtube" frameborder="0" allowfullscreen></iframe>
-    </div>
+    <youtube v-if="attrs.youtube" :src="attrs.youtube"/>
     <h2>{{ $store.state.lang.examples.source_code }}</h2>
     <code-sandbox :src="codeSandBoxLink" style="margin-bottom: 20px;"/>
     <div>
@@ -33,6 +31,7 @@
 
 <script>
 import axios from 'axios'
+import Youtube from '~/components/Youtube.vue'
 import CodeSandbox from '~/components/CodeSandbox.vue'
 import CodeFundAds from '~/components/CodeFundAds.vue'
 import NuxtFilesTree from '~/components/FilesTree.vue'
@@ -96,6 +95,7 @@ export default {
     }
   },
   components: {
+    Youtube,
     CodeSandbox,
     CodeFundAds,
     NuxtFilesTree,

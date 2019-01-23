@@ -33,7 +33,7 @@
       <div class="nBackers_Group">
         <h3 class="nBackers_Group_Title">Sponsors</h3>
         <div class="nBackers_Group_Content">
-          <img src="https://opencollective.com/nuxtjs/tiers/sponsors.svg?avatarHeight=64&width=1155&button=false"/>
+          <img alt="Nuxt Sponsors" src="https://opencollective.com/nuxtjs/tiers/sponsors.svg?avatarHeight=64&width=1155&button=false"/>
         </div>
         <div class="nBackers_Group_Action">
           <a class="nBackers_Group_Action_Button nBackers_Group_Action_Button--green" href="https://opencollective.com/nuxtjs" target="_blank" rel="noopener">
@@ -44,7 +44,7 @@
       <div class="nBackers_Group">
         <h3 class="nBackers_Group_Title">Backers</h3>
         <div class="nBackers_Group_Content">
-          <img src="https://opencollective.com/nuxtjs/tiers/backers.svg?width=1155&button=false" />
+          <img alt="Nuxt Backers" src="https://opencollective.com/nuxtjs/tiers/backers.svg?width=1155&button=false" />
         </div>
         <div class="nBackers_Group_Action">
           <a class="nBackers_Group_Action_Button nBackers_Group_Action_Button--green" href="https://opencollective.com/nuxtjs" target="_blank" rel="noopener">

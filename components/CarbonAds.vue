@@ -1,6 +1,6 @@
 <template>
   <div class="carbon_ad" ref="carbonads">
-    <a href="https://vuejobs.com/?ref=nuxtjs" target="_blank" class="vuejobs" v-if="$store.state.locale !== 'en'"></a>
+    <a href="https://vuejobs.com/?ref=nuxtjs" target="_blank" rel="noopener" class="vuejobs" v-if="$store.state.locale !== 'en'"></a>
   </div>
 </template>
 

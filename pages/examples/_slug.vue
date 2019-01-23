@@ -9,13 +9,13 @@
     <h2>{{ $store.state.lang.examples.source_code }}</h2>
     <code-sandbox :src="codeSandBoxLink" style="margin-bottom: 20px;"/>
     <div>
-      <a :href="liveEditLink" class="button button--grey" target="_blank">
+      <a :href="liveEditLink" class="button button--grey" target="_blank" rel="noopener">
         <span>
           <div class="icon edit"></div>
         </span>
         {{ $store.state.lang.links.live_edit }}
       </a>
-      <a :href="downloadLink" class="button button--grey" target="_blank">
+      <a :href="downloadLink" class="button button--grey" target="_blank" rel="noopener">
         <span>
           <div class="icon download"></div>
         </span>

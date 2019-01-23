@@ -9,7 +9,7 @@
     <div class="Affix__Toggler" :class="{'Affix__Toggler--hidden': visible}" @click="toggle">
       <div class="icon more-vertical"></div>
     </div>
-    <a class="Affix__Tidelift" href="https://tidelift.com/subscription/pkg/npm-nuxt?utm_source=nuxt&utm_medium=referral" target="_blank">
+    <a class="Affix__Tidelift" href="https://tidelift.com/subscription/pkg/npm-nuxt?utm_source=nuxt&utm_medium=referral" target="_blank" rel="noopener">
       <Tidelift alt="tidelift"/>
       <span>{{ $store.state.lang.links.tidelift_short }}</span>
     </a>

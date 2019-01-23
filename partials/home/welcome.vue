@@ -143,8 +143,13 @@ export default {
         font-weight: $font-weight-bold;
         box-shadow: $--box-shadow-1;
         border-radius: 4px;
-        margin-right: 30px;
+        margin-right: 0;
+        margin-bottom: 1rem;
         background-color: $background-color-lighter;
+        @media (min-width: $--md) {
+          margin-bottom: 0;
+          margin-right: 30px;
+        }
         &:last-child {
           margin-right: 0;
         }

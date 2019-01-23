@@ -6,7 +6,7 @@
 </template>
 
 <script>
-import intersectingMixin from '~/plugins/mixins/intersecting.js'
+import intersectingMixin from '~/mixins/intersecting.js'
 
 export default {
   mixins: [intersectingMixin],

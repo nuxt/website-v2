@@ -50,7 +50,7 @@
         <h3 class="nBackers_Group_Title">Foundations</h3>
         <div class="nBackers_Group_Content">
           <a class="nBackers_Group_Content_Link" href="https://www.shuttleworthfoundation.org" target="_blank" rel="noopener">
-            <img class="nBackers_Group_Content_Link_Image" src="/shuttleworth-funded.png" alt="shuttleworth funded"/>
+            <img class="nBackers_Group_Content_Link_Image" src="/shuttleworth-funded.png" srcset="/shuttleworth-funded-2x.png 2x" alt="shuttleworth funded"/>
           </a>
         </div>
       </div>

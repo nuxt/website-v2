@@ -17,6 +17,12 @@
           <a class="nBackers_Group_Content_Link" href="https://www.vuemastery.com/?ref=nuxt" target="_blank" rel="noopener">
             <img class="nBackers_Group_Content_Link_Image" src="/vueMastery-brand.svg" alt="VueMastery.com">
           </a>
+          <a class="nBackers_Group_Content_Link" href="https://yakaz.com/" target="_blank" rel="noopener">
+            <img class="nBackers_Group_Content_Link_Image" src="/yakaz-partner.png" srcset="/yakaz-partner-2x.png 2x" alt="Yakaz.com" />
+          </a>
+          <a class="nBackers_Group_Content_Link" href="https://vueschool.io/?friend=nuxt&utm_source=Nuxtjs.org&utm_medium=banner&utm_campaign=Open%20Collective" target="_blank" rel="noopener">
+            <img class="nBackers_Group_Content_Link_Image" src="/vueschool.png" srcset="/vueschool-2x.png 2x" alt="VueSchool.io" />
+          </a>
         </div>
         <div class="nBackers_Group_Action">
           <a class="nBackers_Group_Action_Button nBackers_Group_Action_Button--green" href="https://opencollective.com/nuxtjs" target="_blank" rel="noopener">
@@ -101,8 +107,10 @@
       &_Link {
         display: inline-block;
         margin-right: 30px;
+        margin-bottom: 30px;
         &_Image {
-          height: 80px;
+          height: 64px;
+          // max-width: 200px !important;
         }
         &:last-child {
           margin-right: 0;

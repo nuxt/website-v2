@@ -13,21 +13,31 @@
       <Tidelift alt="tidelift"/>
       <span>{{ $store.state.lang.links.tidelift_short }}</span>
     </a>
-    <h3 class="Affix__Title" style="margin-bottom: 20px;">{{ $store.state.lang.sponsors.title }}</h3>
+    <h3 class="Affix__Title" style="margin-bottom: 15px;">{{ $store.state.lang.sponsors.title }}</h3>
     <ul class="Affix__List">
       <li class="Affix__List__Item">
         <a class="Affix__List__Item__Sponsor" href="https://t.co/sUZfRy6ZxS" target="_blank" rel="noopener">
-          <img src="/tipe-io-cms.png" srcset="/tipe-io-cms-2x.png 2x" alt="Tipe.io" />
+          <img src="/tipe-io-cms.png" srcset="/tipe-io-cms-2x.png 2x" style="height: 32px" alt="Tipe.io" />
         </a>
       </li>
       <li class="Affix__List__Item">
         <a class="Affix__List__Item__Sponsor" href="https://www.storyblok.com/?ref=nuxt" target="_blank" rel="noopener">
-          <img src="/storyblok-logo.svg" alt="Storyblok.com">
+          <img src="/storyblok-logo.svg" alt="Storyblok.com" style="height: 36px"/>
         </a>
       </li>
       <li class="Affix__List__Item">
         <a class="Affix__List__Item__Sponsor" href="https://www.vuemastery.com/?ref=nuxt" target="_blank" rel="noopener">
-          <img src="/vueMastery-brand.svg" alt="VueMastery.com" style="height: 40px;">
+          <img src="/vueMastery-brand.svg" alt="VueMastery.com" style="height: 28px">
+        </a>
+      </li>
+      <li class="Affix__List__Item">
+        <a class="Affix__List__Item__Sponsor" href="https://yakaz.com/" target="_blank" rel="noopener">
+          <img src="/yakaz-partner.png" srcset="/yakaz-partner-2x.png 2x" alt="Yakaz.com" style="height: 28px;">
+        </a>
+      </li>
+      <li class="Affix__List__Item">
+        <a class="Affix__List__Item__Sponsor" href="https://vueschool.io/?friend=nuxt&utm_source=Nuxtjs.org&utm_medium=banner&utm_campaign=Open%20Collective" target="_blank" rel="noopener">
+          <img src="/vueschool.png" srcset="/vueschool-2x.png 2x" alt="VueSchool.io" style="height: 28px">
         </a>
       </li>
       <li class="Affix__List__Item">
@@ -281,7 +291,7 @@ export default {
     margin-bottom: 20px;
     padding: 0;
     &__Item {
-      padding: 2px 0;
+      padding: 5px 0;
       &__Link {
         display: block;
         font-size: 16px;
@@ -297,7 +307,7 @@ export default {
       }
       &__Sponsor {
         display: inline-block;
-        height: 54px;
+        // height: 54px;
         img {
           height: 100%;
           max-width: 100%;

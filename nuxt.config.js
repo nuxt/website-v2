@@ -23,8 +23,12 @@ export default {
     '~/assets/scss/main.scss'
   ],
   modules: [
+    // https://github.com/nuxt-community/style-resources-module
     '@nuxtjs/style-resources',
-    'nuxt-svg-loader'
+    // https://github.com/Developmint/nuxt-svg-loader/
+    'nuxt-svg-loader',
+    // https://github.com/DreaMinder/nuxt-payload-extractor
+    'nuxt-payload-extractor'
   ],
   plugins: [
     '~/plugins/init.js',

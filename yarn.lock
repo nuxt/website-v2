@@ -5318,6 +5318,11 @@ nuxt-edge@latest:
     "@nuxt/opencollective" "^0.2.1"
     "@nuxt/webpack-edge" "2.4.0-25786640.3ebd6b70"
 
+nuxt-payload-extractor@^0.0.4:
+  version "0.0.4"
+  resolved "https://registry.yarnpkg.com/nuxt-payload-extractor/-/nuxt-payload-extractor-0.0.4.tgz#c0d355aa6744fd74422d33849503120de22e24f5"
+  integrity sha512-rbAyRTAPHUWq6V2H5Ax/5s9JORUA893WpSVhOx/16So25H4xZxt6tW0gEWZINM8GdQQ1+CrK/BHPUI6HGyKoHw==
+
 nuxt-svg-loader@^1.0.1:
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/nuxt-svg-loader/-/nuxt-svg-loader-1.0.1.tgz#4565f4a390be7c81b1f39197c7a69ea105da1912"

@@ -54,8 +54,11 @@ export default {
 <style lang="scss">
 .nWhy {
   position: relative;
-  padding: 8rem 0;
   background-color: $background-color-light;
+  padding: 5rem 1rem;
+  @media (min-width: $--md) {
+    padding: 8rem 0;
+  }
   &_Title {
     text-align: center;
     margin-top: 0;
@@ -71,8 +74,13 @@ export default {
     }
   }
   &_Block {
-    width: 30%;
+    width: 100%;
+    padding: 1rem 0;
     text-align: center;
+    @media (min-width: $--md) {
+      width: 30%;
+      padding: 0;
+    }
     .iPerformant, .iModular, .iEnjoyable {
       height: 100px;
       display: inline-block;

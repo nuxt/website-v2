@@ -12,10 +12,10 @@
             <v-lazy-image class="nBackers_Group_Content_Link_Image" src="/tipe-io-cms.png" srcset="/tipe-io-cms-2x.png 2x" alt="Tipe.io" />
           </a>
           <a class="nBackers_Group_Content_Link" href="https://www.storyblok.com/?ref=nuxt" target="_blank" rel="noopener">
-            <v-lazy-image class="nBackers_Group_Content_Link_Image" src="/storyblok-logo.svg" alt="Storyblok.com">
+            <v-lazy-image class="nBackers_Group_Content_Link_Image" src="/storyblok-logo.svg" alt="Storyblok.com"/>
           </a>
           <a class="nBackers_Group_Content_Link" href="https://www.vuemastery.com/?ref=nuxt" target="_blank" rel="noopener">
-            <v-lazy-image class="nBackers_Group_Content_Link_Image" src="/vueMastery-brand.svg" alt="VueMastery.com">
+            <v-lazy-image class="nBackers_Group_Content_Link_Image" src="/vueMastery-brand.svg" alt="VueMastery.com"/>
           </a>
           <a class="nBackers_Group_Content_Link" href="https://yakaz.com/" target="_blank" rel="noopener">
             <v-lazy-image class="nBackers_Group_Content_Link_Image" src="/yakaz-partner.png" srcset="/yakaz-partner-2x.png 2x" alt="Yakaz.com" />

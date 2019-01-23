@@ -9,10 +9,10 @@
         <h3 class="nBackers_Group_Title">Partners</h3>
         <div class="nBackers_Group_Content">
           <a class="nBackers_Group_Content_Link" href="https://t.co/sUZfRy6ZxS" target="_blank" rel="noopener">
-            <img class="nBackers_Group_Content_Link_Image" src="https://user-images.githubusercontent.com/1016365/34124854-48fafa06-e3e9-11e7-8c04-251055feebee.png" alt="Tipe.io" />
+            <img class="nBackers_Group_Content_Link_Image" src="/tipe-io-cms.png" srcset="/tipe-io-cms-2x.png 2x" alt="Tipe.io" />
           </a>
           <a class="nBackers_Group_Content_Link" href="https://www.storyblok.com/?ref=nuxt" target="_blank" rel="noopener">
-            <img class="nBackers_Group_Content_Link_Image" src="https://a.storyblok.com/f/39898/x/aa0dc897ff/storyblok-logo.svg" alt="Storyblok.com">
+            <img class="nBackers_Group_Content_Link_Image" src="/storyblok-logo.svg" alt="Storyblok.com">
           </a>
           <a class="nBackers_Group_Content_Link" href="https://www.vuemastery.com/?ref=nuxt" target="_blank" rel="noopener">
             <img class="nBackers_Group_Content_Link_Image" src="/vueMastery-brand.svg" alt="VueMastery.com">

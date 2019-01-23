@@ -76,10 +76,16 @@ export default {
 </script>
 <style lang="scss" scoped>
 .nFooter {
-  padding: 3rem 0;
+  padding: 2rem 1rem;
   background-color: $color-vue-grey;
+  @media (min-width: $--md) {
+    padding: 3rem 0;
+  }
   &_Group {
-    width: 45%;
+    width: 100%;
+    @media (min-width: $--md) {
+      width: 45%;
+    }
     &_Title {
       color: #fff;
       font-size: $h5-font-size;

@@ -63,8 +63,13 @@
   z-index: 100;
   position: relative;
   box-shadow: $--box-shadow-1;
-  padding-top: 8rem;
   text-align: center;
+  padding: 5rem 1rem;
+  padding-bottom: 0;
+  @media (min-width: $--md) {
+    padding: 0;
+    padding-top: 8rem;
+  }
   &_Title {
     margin-top: 0;
     color: $color-text-primary;
@@ -90,12 +95,14 @@
     }
     &_Content {
       padding: 3rem 0;
+      img {
+        max-width: 100%;
+      }
       &_Link {
         display: inline-block;
         margin-right: 30px;
         &_Image {
           height: 80px;
-          max-width: 100%;
         }
         &:last-child {
           margin-right: 0;

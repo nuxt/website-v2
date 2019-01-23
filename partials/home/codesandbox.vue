@@ -29,8 +29,17 @@ export default {
 .nCodesandbox {
   position: relative;
   background-color: $background-color-light;
-  padding: 8rem 0;
   text-align: center;
+  padding: 5rem 1rem;
+  .codesandbox {
+    display: none;
+  }
+  @media (min-width: $--md) {
+    padding: 8rem 0;
+    .codesandbox {
+      display: block;
+    }
+  }
   &_Title {
     text-align: center;
     margin-top: 0;
@@ -38,7 +47,9 @@ export default {
     font-size: $h2-font-size;
     font-weight: $font-weight-regular;
     line-height: normal;
-    margin-bottom: 6rem;
+    @media (min-width: $--md) {
+      margin-bottom: 6rem;
+    }
     span {
       padding-bottom: 10px;
       border-bottom: 4px solid $color-vue-green;
@@ -57,8 +68,13 @@ export default {
       font-weight: $font-weight-bold;
       box-shadow: $--box-shadow-1;
       border-radius: 4px;
-      margin-right: 30px;
+      margin-right: 0;
+      margin-bottom: 1rem;
       background-color: $background-color-lighter;
+      @media (min-width: $--md) {
+        margin-bottom: 0;
+        margin-right: 30px;
+      }
       &:last-child {
         margin-right: 0;
       }

@@ -2,7 +2,7 @@
   <div>
     <navbar/>
     <div class="App" :class="{'App--hidden': visible}">
-      <event-info/>
+      <!-- <event-info/> -->
       <nuxt/>
     </div>
   </div>

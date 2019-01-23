@@ -81,20 +81,31 @@ export default {
 
 .row {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: space-between;
   align-content: space-between;
   align-items: stretch;
+  @media (min-width: $--md) {
+    flex-direction: row;
+  }
 }
 
 .nWelcome {
-  margin-top: 80px;
-  padding: 10rem 0;
+  // margin-top: 80px;
+  padding: 5rem 1rem;
   z-index: 100;
   position: relative;
   box-shadow: $--box-shadow-1;
+  @media (min-width: $--md) {
+    padding: 10rem 0;
+  }
   &_Content {
-    width: 45%;
+    width: 100%;
+    padding-bottom: 30px;
+    @media (min-width: $--md) {
+      width: 45%;
+      padding-bottom: 0;
+    }
     &_Title {
       margin-top: 0;
       color: $color-text-primary;
@@ -153,8 +164,11 @@ export default {
     }
   }
   &_Figure {
-    width: 45%;
     margin: 0;
+    width: 100%;
+    @media (min-width: $--md) {
+      width: 45%;
+    }
     // height: 0;
     // /* 9/16 */
     // padding-bottom: 56.25%;

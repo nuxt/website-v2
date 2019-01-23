@@ -62,7 +62,10 @@ export default {
   z-index: 100;
   position: relative;
   box-shadow: $--box-shadow-1;
-  padding: 8rem 0;
+  padding: 5rem 1rem;
+  @media (min-width: $--md) {
+    padding: 8rem 0;
+  }
   &_Title {
     text-align: center;
     margin-top: 0;
@@ -78,8 +81,12 @@ export default {
     }
   }
   &_Tabs {
-    width: 30%;
+    width: 100%;
+    padding: 0;
     list-style: none;
+    @media (min-width: $--md) {
+      width: 30%;
+    }
     &_Option {
       position: relative;
       color: $color-text-regular;
@@ -124,9 +131,12 @@ export default {
     }
   }
   &_Content {
-    width: 60%;
+    width: 100%;
+    @media (min-width: $--md) {
+      width: 60%;
+    }
     &_Title {
-
+      line-height: 32px;
     }
     &_Description {
 

@@ -1,6 +1,6 @@
 <template>
   <div class="codesandbox">
-    <iframe v-if="isIntersecting && src" :src="src" sandbox="allow-modals allow-forms allow-popups allow-scripts allow-same-origin"/>
+    <iframe v-if="isIntersecting && src" :src="src" title="CodeSandbox editor" sandbox="allow-modals allow-forms allow-popups allow-scripts allow-same-origin"/>
     <span v-else>Loading Nuxt Sandbox...</span>
   </div>
 </template>

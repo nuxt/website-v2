@@ -9,13 +9,13 @@
         <h3 class="nBackers_Group_Title">Partners</h3>
         <div class="nBackers_Group_Content">
           <a class="nBackers_Group_Content_Link" href="https://t.co/sUZfRy6ZxS" target="_blank" rel="noopener">
-            <img class="nBackers_Group_Content_Link_Image" src="/tipe-io-cms.png" srcset="/tipe-io-cms-2x.png 2x" alt="Tipe.io" />
+            <v-lazy-image class="nBackers_Group_Content_Link_Image" src="/tipe-io-cms.png" srcset="/tipe-io-cms-2x.png 2x" alt="Tipe.io" />
           </a>
           <a class="nBackers_Group_Content_Link" href="https://www.storyblok.com/?ref=nuxt" target="_blank" rel="noopener">
-            <img class="nBackers_Group_Content_Link_Image" src="/storyblok-logo.svg" alt="Storyblok.com">
+            <v-lazy-image class="nBackers_Group_Content_Link_Image" src="/storyblok-logo.svg" alt="Storyblok.com">
           </a>
           <a class="nBackers_Group_Content_Link" href="https://www.vuemastery.com/?ref=nuxt" target="_blank" rel="noopener">
-            <img class="nBackers_Group_Content_Link_Image" src="/vueMastery-brand.svg" alt="VueMastery.com">
+            <v-lazy-image class="nBackers_Group_Content_Link_Image" src="/vueMastery-brand.svg" alt="VueMastery.com">
           </a>
         </div>
         <div class="nBackers_Group_Action">
@@ -27,7 +27,11 @@
       <div class="nBackers_Group">
         <h3 class="nBackers_Group_Title">Sponsors</h3>
         <div class="nBackers_Group_Content">
+<<<<<<< HEAD
           <img src="https://opencollective.com/nuxtjs/tiers/sponsors.svg?avatarHeight=64&width=1155&button=false"/>
+=======
+          <v-lazy-image alt="Nuxt Sponsors" src-placeholder="/oc-loading.svg" src="https://opencollective.com/nuxtjs/tiers/sponsors.svg?avatarHeight=64&width=1155&button=false"/>
+>>>>>>> 0d8f15b0 (feat(lazy): Add lazy loading image on homepage)
         </div>
         <div class="nBackers_Group_Action">
           <a class="nBackers_Group_Action_Button nBackers_Group_Action_Button--green" href="https://opencollective.com/nuxtjs" target="_blank" rel="noopener">
@@ -38,7 +42,11 @@
       <div class="nBackers_Group">
         <h3 class="nBackers_Group_Title">Backers</h3>
         <div class="nBackers_Group_Content">
+<<<<<<< HEAD
           <img src="https://opencollective.com/nuxtjs/tiers/backers.svg?width=1155&button=false" />
+=======
+          <v-lazy-image alt="Nuxt Backers" src-placeholder="/oc-loading.svg" src="https://opencollective.com/nuxtjs/tiers/backers.svg?width=1155&button=false" />
+>>>>>>> 0d8f15b0 (feat(lazy): Add lazy loading image on homepage)
         </div>
         <div class="nBackers_Group_Action">
           <a class="nBackers_Group_Action_Button nBackers_Group_Action_Button--green" href="https://opencollective.com/nuxtjs" target="_blank" rel="noopener">
@@ -50,13 +58,23 @@
         <h3 class="nBackers_Group_Title">Fundations</h3>
         <div class="nBackers_Group_Content">
           <a class="nBackers_Group_Content_Link" href="https://www.shuttleworthfoundation.org" target="_blank" rel="noopener">
-            <img class="nBackers_Group_Content_Link_Image" src="/shuttleworth-funded.png" srcset="/shuttleworth-funded-2x.png 2x" alt="shuttleworth funded"/>
+            <v-lazy-image class="nBackers_Group_Content_Link_Image" src="/shuttleworth-funded.png" srcset="/shuttleworth-funded-2x.png 2x" alt="shuttleworth funded"/>
           </a>
         </div>
       </div>
     </div>
   </section>
 </template>
+
+<script>
+import VLazyImage from 'v-lazy-image'
+
+export default {
+  components: {
+    VLazyImage
+  }
+}
+</script>
 
 <style lang="scss">
 .nBackers {

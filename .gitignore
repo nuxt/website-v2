@@ -10,3 +10,4 @@ dist
 .vscode
 .idea
 newrelic_agent.log
+.DS_Store

@@ -34,7 +34,6 @@ import axios from 'axios'
 import Youtube from '~/components/Youtube.vue'
 import CodeSandbox from '~/components/CodeSandbox.vue'
 import CodeFundAds from '~/components/CodeFundAds.vue'
-import NuxtFilesTree from '~/components/FilesTree.vue'
 import HtmlParser from '~/components/HtmlParser.vue'
 
 export default {
@@ -98,7 +97,6 @@ export default {
     Youtube,
     CodeSandbox,
     CodeFundAds,
-    NuxtFilesTree,
     HtmlParser
   }
 }

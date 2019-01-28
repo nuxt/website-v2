@@ -5,7 +5,9 @@ export default {
     }
   },
   mounted() {
-    if (!window.IntersectionObserver) return console.warn('IntersectionObserver polyfill is required.')
+    if (!window.IntersectionObserver) {
+      return console.warn('IntersectionObserver polyfill is required.')
+    }
 
     this.__observer = new window.IntersectionObserver((entries) => {
       entries.forEach(({ intersectionRatio, target: el }) => {

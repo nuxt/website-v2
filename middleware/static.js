@@ -1,18 +1,4 @@
-import {
-  applyAsyncData,
-  sanitizeComponent,
-  resolveRouteComponents,
-  getMatchedComponents,
-  getMatchedComponentsInstances,
-  flatMapComponents,
-  setContext,
-  middlewareSeries,
-  promisify,
-  getLocation,
-  compile,
-  getQueryDiff,
-  globalHandleError
-} from '~/.nuxt/utils.js'
+import { getMatchedComponents } from '~/.nuxt/utils.js'
 import axios from 'axios'
 
 // Static middleware to update `asyncData/fetch` when using `nuxt generate`

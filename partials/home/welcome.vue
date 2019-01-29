@@ -23,7 +23,8 @@
           </div>
         </div>
         <figure class="nWelcome_Figure">
-          <youtube src="https://www.youtube.com/embed/kmf-p-pTi40"/>
+          <youtube src="https://www.youtube.com/embed/7ITypVi-qRY" style="margin: 0;"/>
+          <p>Video produced by <a href="https://www.vuemastery.com" target="_blank" rel="noopener">Vue Mastery</a>, download their free <a href="https://www.vuemastery.com/nuxt-cheat-sheet/" target="_blank" rel="noopener">Nuxt Cheat Sheet</a>.</p>
         </figure>
       </div>
     </div>
@@ -185,6 +186,10 @@ export default {
       // position: absolute;
       // top: 0;
       // left: 0;
+    }
+    p {
+      font-style: italic;
+      color: #666;
     }
   }
 }

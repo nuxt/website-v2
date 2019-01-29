@@ -9,9 +9,8 @@
     <div class="Affix__Toggler" :class="{'Affix__Toggler--hidden': visible}" @click="toggle">
       <div class="icon more-vertical"></div>
     </div>
-    <a class="Affix__Tidelift" href="https://tidelift.com/subscription/pkg/npm-nuxt?utm_source=nuxt&utm_medium=referral" target="_blank" rel="noopener">
-      <Tidelift alt="tidelift"/>
-      <span>{{ $store.state.lang.links.tidelift_short }}</span>
+    <a class="Affix__Support" href="https://otechie.com/nuxt" target="_blank" rel="noopener">
+      <span>{{ $store.state.lang.links.official_support }}</span>
     </a>
     <h3 class="Affix__Title" style="margin-bottom: 15px;">{{ $store.state.lang.sponsors.title }}</h3>
     <ul class="Affix__List">
@@ -69,9 +68,6 @@
 import throttle from 'lodash/throttle'
 
 export default {
-  components: {
-    Tidelift: () => import('~/assets/images/tidelift.svg')
-  },
   props: {
     list: {
       type: Array,
@@ -235,14 +231,14 @@ export default {
       display: none;
     }
   }
-  &__Tidelift {
+  &__Support {
     font-size: 12px;
     font-weight: 600;
     color: #fff;
     display: inline-block;
     padding: 7px 12px;
     margin: 10px 0;
-    background-color:#35495e;
+    background-color:#42B883;
     border-radius: 4px;
     &:hover {
       text-decoration: none;

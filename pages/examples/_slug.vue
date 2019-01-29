@@ -5,7 +5,7 @@
     <blockquote>
       <p>{{ attrs.description }}</p>
     </blockquote>
-    <youtube v-if="attrs.youtube" :src="attrs.youtube"/>
+    <responsive-video v-if="attrs.youtube" :src="attrs.youtube"/>
     <h2>{{ $store.state.lang.examples.source_code }}</h2>
     <code-sandbox :src="codeSandBoxLink" style="margin-bottom: 20px;"/>
     <div>
@@ -31,7 +31,7 @@
 
 <script>
 import axios from 'axios'
-import Youtube from '~/components/Youtube.vue'
+import ResponsiveVideo from '~/components/ResponsiveVideo.vue'
 import CodeSandbox from '~/components/CodeSandbox.vue'
 import CodeFundAds from '~/components/CodeFundAds.vue'
 import HtmlParser from '~/components/HtmlParser.vue'
@@ -94,7 +94,7 @@ export default {
     }
   },
   components: {
-    Youtube,
+    ResponsiveVideo,
     CodeSandbox,
     CodeFundAds,
     HtmlParser

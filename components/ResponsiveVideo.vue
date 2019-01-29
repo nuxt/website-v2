@@ -1,6 +1,6 @@
 <template>
-  <div class="youtube">
-    <iframe v-if="isIntersecting && src" :src="src" frameborder="0" allowfullscreen title="Youtube video"/>
+  <div class="responsiveVideo">
+    <iframe v-if="isIntersecting && src" :src="src" frameborder="0" allowfullscreen title="Responsive video"/>
     <span v-else>Loading Youtube video...</span>
   </div>
 </template>
@@ -20,7 +20,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.youtube {
+.responsiveVideo {
   width: 100%;
   height: 0;
   padding-bottom: 56.25%;

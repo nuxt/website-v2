@@ -37,7 +37,7 @@ import ResponsiveVideo from '~/components/ResponsiveVideo.vue'
 export default {
   data() {
     return {
-      appTypes: ['Universal Applications', 'Static Generated Applications', 'Single Page Applications', 'Desktop Applications', 'Mobile Applications', 'Progressive Web App'],
+      appTypes: ['Universal Applications', 'Static Generated Applications', 'Single Page Applications', 'Desktop Applications', 'Mobile Applications', 'Progressive Web Apps'],
       current: 0
     }
   },

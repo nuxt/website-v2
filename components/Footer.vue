@@ -52,7 +52,7 @@
             </li>
             <li class="nFooter_Group_Content_Line">
               <a class="nFooter_Group_Content_Line_Link" href="https://otechie.com/nuxt" target="_blank" rel="noopener">
-                Nuxt Consulting
+                Tidelift Support
               </a>
             </li>
           </ul>

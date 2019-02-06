@@ -23,7 +23,8 @@
           </div>
         </div>
         <figure class="nWelcome_Figure">
-          <youtube src="https://www.youtube.com/embed/kmf-p-pTi40"/>
+          <responsive-video src="https://player.vimeo.com/video/311756540" style="margin: 0;"/>
+          <p>Video produced by <a href="https://www.vuemastery.com" target="_blank" rel="noopener">Vue Mastery</a>, download their free <a href="https://www.vuemastery.com/nuxt-cheat-sheet/" target="_blank" rel="noopener">Nuxt Cheat Sheet</a>.</p>
         </figure>
       </div>
     </div>
@@ -31,12 +32,12 @@
 </template>
 
 <script>
-import Youtube from '~/components/Youtube.vue'
+import ResponsiveVideo from '~/components/ResponsiveVideo.vue'
 
 export default {
   data() {
     return {
-      appTypes: ['Universal Applications', 'Static Generated Applications', 'Single Page Applications', 'Desktop Applications', 'Mobile Applications', 'Progressive Web App'],
+      appTypes: ['Universal Applications', 'Static Generated Applications', 'Single Page Applications', 'Desktop Applications', 'Mobile Applications', 'Progressive Web Apps'],
       current: 0
     }
   },
@@ -49,7 +50,7 @@ export default {
     clearInterval(this._timer)
   },
   components: {
-    Youtube
+    ResponsiveVideo
   }
 }
 </script>
@@ -175,17 +176,9 @@ export default {
     @media (min-width: $--md) {
       width: 45%;
     }
-    // height: 0;
-    // /* 9/16 */
-    // padding-bottom: 56.25%;
-    // overflow: hidden;
-    // position: relative;
-    iframe, embed, object {
-      width: 100%;
-      height: 100%;
-      // position: absolute;
-      // top: 0;
-      // left: 0;
+    p {
+      font-style: italic;
+      color: #666;
     }
   }
 }

@@ -3,7 +3,7 @@
     <div class="container">
       <div class="row">
         <div class="nFooter_Group">
-          <h4 class="nFooter_Group_Title">Translations</h4>
+          <h4 class="nFooter_Group_Title">Translation....</h4>
           <ul class="nFooter_Group_Content">
             <li class="nFooter_Group_Content_Line" v-for="(t, i) in translations" :key="i">
               <a class="nFooter_Group_Content_Line_Link" :href="t.path" target="_blank" rel="noopener">

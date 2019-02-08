@@ -3,7 +3,7 @@
     <nuxt-link class="Header__Logo" to="/">
       <n-logo/>
       <!-- <img src="~static/logo_nav.png" alt="Nuxt"/> -->
-      <h1 class="Header__Logo__Text">NUXTJS</h1>
+      <h1 class="Header__Logo__Text">mohammadkabir.com</h1>
     </nuxt-link>
     <div class="Header__Toggler">
       <div class="Header__Toggler__Button" @click="toggle">

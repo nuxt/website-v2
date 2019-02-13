@@ -23,6 +23,9 @@
           <a class="nBackers_Group_Content_Link" href="https://vueschool.io/?friend=nuxt&utm_source=Nuxtjs.org&utm_medium=banner&utm_campaign=Open%20Collective" target="_blank" rel="noopener">
             <v-lazy-image class="nBackers_Group_Content_Link_Image" src="/vueschool.png" srcset="/vueschool-2x.png 2x" alt="VueSchool.io" />
           </a>
+          <a class="nBackers_Group_Content_Link" href="https://shipshape.io/?ref=nuxt" target="_blank" rel="noopener">
+            <v-lazy-image class="nBackers_Group_Content_Link_Image" src="/shipshape-logo.svg" alt="Shipshape.io"/>
+          </a>
         </div>
         <div class="nBackers_Group_Action">
           <a class="nBackers_Group_Action_Button nBackers_Group_Action_Button--green" href="https://opencollective.com/nuxtjs" target="_blank" rel="noopener">

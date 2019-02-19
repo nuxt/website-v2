@@ -51,7 +51,7 @@
               </a>
             </li>
             <li class="nFooter_Group_Content_Line">
-              <a class="nFooter_Group_Content_Line_Link" href="https://otechie.com/nuxt" target="_blank" rel="noopener">
+              <a class="nFooter_Group_Content_Line_Link" href="https://tidelift.com/subscription/pkg/npm-nuxt?utm_source=nuxt&amp;utm_medium=referral&amp;utm_campaign=homepage" target="_blank" rel="noopener">
                 Tidelift Support
               </a>
             </li>

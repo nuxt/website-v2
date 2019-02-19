@@ -49,7 +49,7 @@ export default {
         },
         {
           name: this.$store.state.lang.links.chat,
-          path: 'https://discord.gg/VApZF5W',
+          path: 'https://discord.nuxtjs.org',
           target: '_blank'
         },
         {

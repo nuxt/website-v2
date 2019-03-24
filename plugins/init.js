@@ -31,6 +31,8 @@ export default async function ({ isDev, env, req, store: { commit, state }, redi
     commit('setDocVersion', resLang.data.docVersion)
     const resMenu = await axios(state.apiURI + '/menu/' + state.locale)
     commit('setMenu', resMenu.data)
+    const resHomepage = await axios(state.apiURI + '/homepage/' + state.locale)
+    commit('setHomepage', resHomepage.data)
     commit('setFilled')
   } catch (e) {
     console.error('Error on filling the store, please run the docs server.') // eslint-disable-line no-console

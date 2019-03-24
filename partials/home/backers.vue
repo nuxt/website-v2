@@ -6,7 +6,7 @@
         Nuxt.js is an MIT licensed open source project and completely free to use. However, the amount of effort needed to maintain and develop new features for the project is not sustainable without proper financial backing. Your donations directly support office hours, continued enhancements, and most importantly, great documentation and learning material.
       </p>
       <div class="nBackers_Group">
-        <h3 class="nBackers_Group_Title">Partners</h3>
+        <h3 class="nBackers_Group_Title">{{ $store.state.lang.homepage.backer_partners }}</h3>
         <div class="nBackers_Group_Content">
           <a class="nBackers_Group_Content_Link" href="https://t.co/sUZfRy6ZxS" target="_blank" rel="noopener">
             <v-lazy-image class="nBackers_Group_Content_Link_Image" src="/tipe-io-cms.png" srcset="/tipe-io-cms-2x.png 2x" alt="Tipe.io" />
@@ -29,34 +29,34 @@
         </div>
         <div class="nBackers_Group_Action">
           <a class="nBackers_Group_Action_Button nBackers_Group_Action_Button--green" href="https://opencollective.com/nuxtjs" target="_blank" rel="noopener">
-            Become a partner
+            {{ $store.state.lang.homepage.backer_become_a_partner }}
           </a>
         </div>
       </div>
       <div class="nBackers_Group">
-        <h3 class="nBackers_Group_Title">Sponsors</h3>
+        <h3 class="nBackers_Group_Title">{{ $store.state.lang.homepage.backer_sponsors }}</h3>
         <div class="nBackers_Group_Content">
           <v-lazy-image alt="Nuxt Sponsors" src-placeholder="/oc-loading.svg" src="https://opencollective.com/nuxtjs/tiers/sponsors.svg?avatarHeight=64&width=1155&button=false"/>
         </div>
         <div class="nBackers_Group_Action">
           <a class="nBackers_Group_Action_Button nBackers_Group_Action_Button--green" href="https://opencollective.com/nuxtjs" target="_blank" rel="noopener">
-            Become a sponsor
+            {{ $store.state.lang.homepage.backer_become_a_sponsor }}
           </a>
         </div>
       </div>
       <div class="nBackers_Group">
-        <h3 class="nBackers_Group_Title">Backers</h3>
+        <h3 class="nBackers_Group_Title">{{ $store.state.lang.homepage.backer_backers }}</h3>
         <div class="nBackers_Group_Content">
           <v-lazy-image alt="Nuxt Backers" src-placeholder="/oc-loading.svg" src="https://opencollective.com/nuxtjs/tiers/backers.svg?width=1155&button=false" />
         </div>
         <div class="nBackers_Group_Action">
           <a class="nBackers_Group_Action_Button nBackers_Group_Action_Button--green" href="https://opencollective.com/nuxtjs" target="_blank" rel="noopener">
-            Become a backer
+            {{ $store.state.lang.homepage.backer_become_a_backer }}
           </a>
         </div>
       </div>
       <div class="nBackers_Group">
-        <h3 class="nBackers_Group_Title">Foundations</h3>
+        <h3 class="nBackers_Group_Title">{{ $store.state.lang.homepage.backer_foundations }}</h3>
         <div class="nBackers_Group_Content">
           <a class="nBackers_Group_Content_Link" href="https://www.shuttleworthfoundation.org" target="_blank" rel="noopener">
             <v-lazy-image class="nBackers_Group_Content_Link_Image" src="/shuttleworth-funded.png" srcset="/shuttleworth-funded-2x.png 2x" alt="shuttleworth funded"/>

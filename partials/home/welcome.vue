@@ -8,7 +8,7 @@
           <!-- {{ $store.state.lang.homepage.title }} -->
           </h1>
           <h4 class="nWelcome_Content_Subtitle">
-            For <transition name="fade" mode="out-in"><span class="nWelcome_Content_Subtitle_Type" v-for="(appType, index) of appTypes" :key="appType" v-if="index === current">{{ appType }}</span></transition>.
+            {{ $store.state.lang.homepage.welcome.app_types_prefix }}<transition name="fade" mode="out-in"><span class="nWelcome_Content_Subtitle_Type" v-for="(appType, index) of appTypes" :key="appType" v-if="index === current">{{ appType }}</span></transition>{{ $store.state.lang.homepage.welcome.app_types_suffix }}
           </h4>
           <p class="nWelcome_Content_Description">
             Nuxt.js presets all the configuration needed to make your development of a Vue.js application enjoyable.
@@ -37,7 +37,7 @@ import ResponsiveVideo from '~/components/ResponsiveVideo.vue'
 export default {
   data() {
     return {
-      appTypes: ['Universal Applications', 'Static Generated Applications', 'Single Page Applications', 'Desktop Applications', 'Mobile Applications', 'Progressive Web Apps'],
+      appTypes: this.$store.state.lang.homepage.welcome.app_types,
       current: 0
     }
   },

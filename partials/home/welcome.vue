@@ -3,15 +3,13 @@
     <div class="container">
       <div class="row">
         <div class="nWelcome_Content">
-          <h1 class="nWelcome_Content_Title">
-            The <span class="nWelcome_Content_Title_Primary">Vue.js</span> Framework
-          <!-- {{ $store.state.lang.homepage.title }} -->
+          <h1 class="nWelcome_Content_Title" v-html="$store.state.homepage.welcome.attrs.title">
+            <!-- {{ $store.state.lang.homepage.title }} -->
           </h1>
           <h4 class="nWelcome_Content_Subtitle">
             {{ $store.state.lang.homepage.welcome.app_types_prefix }}<transition name="fade" mode="out-in"><span class="nWelcome_Content_Subtitle_Type" v-for="(appType, index) of appTypes" :key="appType" v-if="index === current">{{ appType }}</span></transition>{{ $store.state.lang.homepage.welcome.app_types_suffix }}
           </h4>
-          <p class="nWelcome_Content_Description">
-            Nuxt.js presets all the configuration needed to make your development of a Vue.js application enjoyable.
+          <p class="nWelcome_Content_Description" v-html="$store.state.homepage.welcome.body">
           </p>
           <div class="nWelcome_Content_Links">
             <nuxt-link class="nWelcome_Content_Links_Button nWelcome_Content_Links_Button--green" to="/guide/installation">
@@ -24,7 +22,7 @@
         </div>
         <figure class="nWelcome_Figure">
           <responsive-video src="https://player.vimeo.com/video/311756540" style="margin: 0;"/>
-          <p>Video produced by <a href="https://www.vuemastery.com" target="_blank" rel="noopener">Vue Mastery</a>, download their free <a href="https://www.vuemastery.com/nuxt-cheat-sheet/" target="_blank" rel="noopener">Nuxt Cheat Sheet</a>.</p>
+          <p v-html="$store.state.homepage.welcome_figure.body"></p>
         </figure>
       </div>
     </div>

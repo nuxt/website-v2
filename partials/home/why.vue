@@ -1,35 +1,24 @@
 <template>
   <section class="nWhy">
     <div class="container">
-      <h2 class="nWhy_Title"><span>Why Nuxt?</span></h2>
+      <h2 class="nWhy_Title"><span>{{ $store.state.homepage.why.attrs.title }}</span></h2>
       <div class="row">
         <div class="nWhy_Block">
           <i-performant/>
-          <h4 class="nWhy_Block_Title">Performant</h4>
-          <p class="nWhy_Block_Description">
-            With Nuxt.js, your application will be optimized out of the box.
-            We do our best to build performant applications by utilizing Vue.js and Node.js best practices.
-            To squeeze every unnecessary bit out of your app Nuxt includes a bundle analyzer and lots of opportunities
-            to fine-tune your app.
+          <h4 class="nWhy_Block_Title">{{ $store.state.homepage.why_performant.attrs.title }}</h4>
+          <p class="nWhy_Block_Description" v-html="$store.state.homepage.why_performant.body">
           </p>
         </div>
         <div class="nWhy_Block">
           <i-modular/>
-          <h4 class="nWhy_Block_Title">Modular</h4>
-          <p class="nWhy_Block_Description">
-            Nuxt is based on a powerful modular architecture. You can choose from more than 50 modules to make your
-            development faster and easier. You don't have to reinvent the wheel to get PWA benefits, add Google Analytics
-            to your page or generate a sitemap.
+          <h4 class="nWhy_Block_Title">{{ $store.state.homepage.why_modular.attrs.title }}</h4>
+          <p class="nWhy_Block_Description" v-html="$store.state.homepage.why_modular.body">
           </p>
         </div>
         <div class="nWhy_Block">
           <i-enjoyable/>
-          <h4 class="nWhy_Block_Title">Enjoyable</h4>
-          <p class="nWhy_Block_Description">
-            Our main focus is the Developer Experience. We love Nuxt.js and continuously improve the framework
-            so you love it too! 💚<br>
-            Expect appealing solutions, descriptive error messages, powerful defaults and a detailed
-            documentation. If questions or problems come up, our helpful community will help you out.
+          <h4 class="nWhy_Block_Title">{{ $store.state.homepage.why_enjoyable.attrs.title }}</h4>
+          <p class="nWhy_Block_Description" v-html="$store.state.homepage.why_enjoyable.body">
           </p>
         </div>
       </div>

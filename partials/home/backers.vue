@@ -1,9 +1,8 @@
 <template>
   <section class="nBackers">
     <div class="container">
-      <h2 class="nBackers_Title"><span>Support the Team</span></h2>
-      <p class="nBackers_Description">
-        Nuxt.js is an MIT licensed open source project and completely free to use. However, the amount of effort needed to maintain and develop new features for the project is not sustainable without proper financial backing. Your donations directly support office hours, continued enhancements, and most importantly, great documentation and learning material.
+      <h2 class="nBackers_Title"><span>{{ $store.state.homepage.backers.attrs.title }}</span></h2>
+      <p class="nBackers_Description" v-html="$store.state.homepage.backers.body">
       </p>
       <div class="nBackers_Group">
         <h3 class="nBackers_Group_Title">{{ $store.state.lang.homepage.backer_partners }}</h3>

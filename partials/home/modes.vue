@@ -1,44 +1,27 @@
 <template>
   <section class="nModes">
     <div class="container">
-      <h2 class="nModes_Title"><span>Rendering modes</span></h2>
+      <h2 class="nModes_Title"><span>{{ $store.state.homepage.modes.attrs.title }}</span></h2>
       <div class="row">
         <ul class="nModes_Tabs">
-          <li class="nModes_Tabs_Option" :class="{'nModes_Tabs_Option--selected-first': mode === 0}" @click="mode = 0">Server Side Rendered</li>
-          <li class="nModes_Tabs_Option" :class="{'nModes_Tabs_Option--selected': mode === 1}" @click="mode = 1">Statically Generated</li>
-          <li class="nModes_Tabs_Option" :class="{'nModes_Tabs_Option--selected-last': mode === 2}" @click="mode = 2">Single Page App</li>
+          <li class="nModes_Tabs_Option" :class="{'nModes_Tabs_Option--selected-first': mode === 0}" @click="mode = 0">{{ $store.state.homepage.modes_server_side_rendering.attrs.title }}</li>
+          <li class="nModes_Tabs_Option" :class="{'nModes_Tabs_Option--selected': mode === 1}" @click="mode = 1">{{ $store.state.homepage.modes_statically_generated.attrs.title }}</li>
+          <li class="nModes_Tabs_Option" :class="{'nModes_Tabs_Option--selected-last': mode === 2}" @click="mode = 2">{{ $store.state.homepage.modes_single_page_app.attrs.title }}</li>
         </ul>
         <div class="nModes_Content">
           <div v-show="mode === 0">
-            <h3 class="nModes_Content_Title">Server Side Rendered (Universal)</h3>
-            <p class="nModes_Content_Description">
-              The most popular mode for Nuxt. With SSR, also called "universal" or "isomorphic" mode, a Node.js server
-              will be used to deliver HTML based on your Vue components to the client instead of the pure javascript.
-              Using SSR will lead to a large SEO boost, better UX and more opportunities (compared to a traditional Vue SPA).
-              <br><br>
-              Because implementing SSR on your own can be really tedious, Nuxt.js gives you full support out of the box
-              and will take care of common pitfalls.
+            <h3 class="nModes_Content_Title">{{ $store.state.homepage.modes_server_side_rendering.attrs.content_title }}</h3>
+            <p class="nModes_Content_Description" v-html="$store.state.homepage.modes_server_side_rendering.body">
             </p>
           </div>
           <div v-show="mode === 1">
-            <h3 class="nModes_Content_Title">Statically Generated (Pre-Rendering)</h3>
-            <p class="nModes_Content_Description">
-              Static Site Generation is a very hot topic right now! Instead of switching to another framework and
-              spending time to get used to it, why not killing two birds with one stone?
-              <span style="color: #777">(only proverbial 🐦🐦)</span><br><br>
-              Nuxt.js supports generating a static website based on your Vue application. It is the "best of both worlds"
-              as you don't need a server but still have SEO benefits because Nuxt will pre-render all pages and include
-              the necessary HTML. Also, you can deploy the resulting page easily to Netlify or GitHub pages.
+            <h3 class="nModes_Content_Title">{{ $store.state.homepage.modes_statically_generated.attrs.content_title }}</h3>
+            <p class="nModes_Content_Description" v-html="$store.state.homepage.modes_statically_generated.body">
             </p>
           </div>
           <div v-show="mode === 2">
-            <h3 class="nModes_Content_Title">Single Page Application (SPA)</h3>
-            <p class="nModes_Content_Description">
-              Don't need SSR or Static Site Generation but still want to profit from the benefits that Nuxt provides?
-              Are you slowly transitioning your app and want to start lightweight? Then the traditional SPA mode will
-              likely be your choice.
-              The outcome will be a typical Vue SPA as you know it but influenced by your Nuxt configuration and the
-              framework itself.
+            <h3 class="nModes_Content_Title">{{ $store.state.homepage.modes_single_page_app.attrs.content_title }}</h3>
+            <p class="nModes_Content_Description" v-html="$store.state.homepage.modes_single_page_app.body">
             </p>
           </div>
         </div>

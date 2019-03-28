@@ -27,6 +27,6 @@ Update your `/etc/hosts` to have the following lines:
 Then on another tab, start a dev server on `http://nuxt:3000`
 
 ```bash
-npm install
-npm run dev
+yarn install
+yarn run dev
 ```

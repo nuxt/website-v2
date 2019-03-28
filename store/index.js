@@ -10,6 +10,7 @@ export const state = () => ({
   locale: 'en',
   lang: {},
   menu: {},
+  homepage: {},
   adBlocked: false
 })
 
@@ -34,6 +35,9 @@ export const mutations = {
   },
   setMenu(state, menu) {
     state.menu = menu
+  },
+  setHomepage(state, homepage) {
+    state.homepage = homepage
   },
   setFilled(state) {
     state.filled = true

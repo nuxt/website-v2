@@ -61,3 +61,50 @@
     }
   }
 }
+
+.Promo__Video {
+  position: relative;
+  margin: 20px 0;
+  padding: 0 20px;
+  color: #35495e;
+  background-color: #fff;
+  border: 1px solid #9aabb1;
+  border-radius: 4px;
+  > a {
+    color: #35495e;
+    text-decoration: none !important;
+  }
+  &__Icon {
+    margin-left: 28px !important;
+    &::before {
+      content: '';
+      position: absolute;
+      display: block;
+      width: 28px;
+      height: 28px;
+      top: 10px;
+      bottom: 10px;
+      left: 10px;
+      border-radius: 50%;
+      border: 2px solid #35495e;
+      @media (max-width: $--xs) {
+        top: 20px;        
+      }
+    }
+    &::after {
+      content: '';
+      position: absolute;
+      display: block;
+      width: 0;
+      height: 0;
+      top: 19px;
+      left: 21px;
+      border-top: 5px solid transparent;
+      border-bottom: 5px solid transparent;
+      border-left: 8px solid #35495e;
+      @media (max-width: $--xs) {
+        top: 29px;        
+      }
+    }
+  }
+}

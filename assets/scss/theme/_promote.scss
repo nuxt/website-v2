@@ -82,14 +82,10 @@
       display: block;
       width: 28px;
       height: 28px;
-      top: 10px;
-      bottom: 10px;
+      top: calc(50% - 15px);
       left: 10px;
       border-radius: 50%;
       border: 2px solid #35495e;
-      @media (max-width: $--xs) {
-        top: 20px;        
-      }
     }
     &::after {
       content: '';
@@ -97,14 +93,11 @@
       display: block;
       width: 0;
       height: 0;
-      top: 19px;
+      top: calc(50% - 5px);
       left: 21px;
       border-top: 5px solid transparent;
       border-bottom: 5px solid transparent;
       border-left: 8px solid #35495e;
-      @media (max-width: $--xs) {
-        top: 29px;        
-      }
     }
   }
 }

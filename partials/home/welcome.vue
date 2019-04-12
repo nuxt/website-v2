@@ -19,6 +19,13 @@
               {{ $store.state.lang.links.github }} <span class="version">{{ $store.state.ghVersion }}</span>
             </a>
           </div>
+          <div class="Promo__Video" style="display: inline-block;">
+            <a href="https://vueschool.io/courses/nuxtjs-fundamentals?friend=nuxt" target="_blank">
+              <p class="Promo__Video__Icon">
+                <strong>Watch a free video course on Vue School</strong>
+              </p>
+            </a>
+          </div>
         </div>
         <figure class="nWelcome_Figure">
           <responsive-video src="https://player.vimeo.com/video/311756540" style="margin: 0;"/>

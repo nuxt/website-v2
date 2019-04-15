@@ -12,7 +12,11 @@ Chinese translation of primary Nuxt.js documentation site. Supported by [AOTU La
 
 # Developing
 
-First, you need to setup the docs api server, see [https://github.com/nuxt/docs](https://github.com/nuxt/docs).
+The markdown files are store at [https://github.com/nuxt/docs](https://github.com/nuxt/docs), we use a git submodule to clone the repo:
+
+```
+git clone --recursive https://github.com/nuxt/nuxtjs.org.git
+```
 
 Update your `/etc/hosts` to have the following lines:
 
@@ -22,6 +26,7 @@ Update your `/etc/hosts` to have the following lines:
 127.0.0.1       ko.nuxt
 127.0.0.1       ru.nuxt
 127.0.0.1       zh.nuxt
+127.0.0.1       fr.nuxt
 ```
 
 Then on another tab, start a dev server on `http://nuxt:3000`

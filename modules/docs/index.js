@@ -10,6 +10,6 @@ module.exports = async function () {
   })
 
   // We need to run the server in order to serve the docs when running `nuxt generate`
-  this.nuxt.hook('generate:before', () => this.nuxt.server.listen())
-  this.nuxt.hook('generate:done', () => this.nuxt.server.close())
+  this.nuxt.hook('generate:before', (g) => g.nuxt.server.listen())
+  this.nuxt.hook('generate:done', (g) => g.nuxt.server.close())
 }

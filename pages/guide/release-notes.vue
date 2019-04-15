@@ -26,13 +26,13 @@ const monthNames = [
 ]
 
 export default {
-  async asyncData({ $http, isDev, store }) {
+  async asyncData({ $docs, isDev, store }) {
     // Default data
     const data = {
       releases: [],
       isDev: isDev
     }
-    data.releases = await $http.$get('releases')
+    data.releases = await $docs.get('/releases')
 
     return data
   },

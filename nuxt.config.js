@@ -1,6 +1,3 @@
-import axios from 'axios'
-import _ from 'lodash'
-
 const locale = process.env.NUXT_LOCALE || 'en'
 
 export default {
@@ -29,8 +26,6 @@ export default {
   ],
   modules: [
     '~/modules/docs/',
-    // https://http.nuxtjs.org
-    '@nuxt/http',
     // https://github.com/nuxt-community/style-resources-module
     '@nuxtjs/style-resources',
     // https://github.com/Developmint/nuxt-svg-loader/

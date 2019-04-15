@@ -41,17 +41,17 @@ export default {
       this.attrs.github = ''
     }
   },
-  async asyncData({ $http, route, store, error }) {
+  async asyncData({ $docs, route, store, error }) {
     // Default data
     let data = {
       attrs: {},
       body: ''
     }
     let slug = route.params.slug || 'hello-world'
-    const path = `${store.state.lang.iso}/examples/${slug}`
+    const path = `/${store.state.lang.iso}/examples/${slug}`
     let page
     try {
-      page = await $http.$get(path)
+      page = await $docs.get(path)
     } catch (err) {
       if (err.response.status !== 404) {
         return error({ statusCode: 500, message: store.state.lang.text.an_error_occured })
@@ -60,8 +60,8 @@ export default {
     }
     data.attrs = page.attrs
     data.body = page.body
-    if (!data.attrs.title) console.error(`[/${path}] ${store.state.lang.text.please_define_title}.`) // eslint-disable-line no-console
-    if (!data.attrs.description) console.error(`[/${path}] ${store.state.lang.text.please_define_description}.`) // eslint-disable-line no-console
+    if (!data.attrs.title) console.error(`[${path}] ${store.state.lang.text.please_define_title}.`) // eslint-disable-line no-console
+    if (!data.attrs.description) console.error(`[${path}] ${store.state.lang.text.please_define_description}.`) // eslint-disable-line no-console
 
     return data
   },

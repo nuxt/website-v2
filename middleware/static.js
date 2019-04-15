@@ -1,5 +1,4 @@
 import { getMatchedComponents } from '~/.nuxt/utils.js'
-import axios from 'axios'
 
 // Static middleware to update `asyncData/fetch` when using `nuxt generate`
 export default async ({ app, route }) => {
@@ -16,7 +15,7 @@ export default async ({ app, route }) => {
     }
     Component.options.asyncData = async function () {
       const payloadPath = (route.path + '/payload.json').replace(/\/+/, '/')
-      const { data } = await axios.get(payloadPath)
+      const { data } = await fetch(payloadPath).then((res) => res.json())
 
       return data
     }

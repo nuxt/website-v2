@@ -15,11 +15,6 @@
     <h3 class="Affix__Title" style="margin-bottom: 15px;">{{ $store.state.lang.sponsors.title }}</h3>
     <ul class="Affix__List">
       <li class="Affix__List__Item">
-        <a class="Affix__List__Item__Sponsor" href="https://t.co/sUZfRy6ZxS" target="_blank" rel="noopener">
-          <img src="/tipe-io-cms.png" srcset="/tipe-io-cms-2x.png 2x" style="height: 32px" alt="Tipe.io" />
-        </a>
-      </li>
-      <li class="Affix__List__Item">
         <a class="Affix__List__Item__Sponsor" href="https://www.storyblok.com/?ref=nuxt" target="_blank" rel="noopener">
           <img src="/storyblok-logo.svg" alt="Storyblok.com" style="height: 36px"/>
         </a>
@@ -41,7 +36,7 @@
       </li>
       <li class="Affix__List__Item">
         <a class="Affix__List__Item__Sponsor" href="https://shipshape.io/?ref=nuxt" target="_blank" rel="noopener">
-          <img src="/shipshape-logo.svg" alt="Shipshape.io" style="height: 36px"/>
+          <img src="/shipshape-logo.svg" alt="Shipshape.io" style="height: 28px"/>
         </a>
       </li>
       <li class="Affix__List__Item">

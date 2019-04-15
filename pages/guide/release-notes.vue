@@ -16,7 +16,6 @@
 </template>
 
 <script>
-import axios from 'axios'
 import CodeFundAds from '~/components/CodeFundAds.vue'
 import HtmlParser from '~/components/HtmlParser.vue'
 const monthNames = [
@@ -27,14 +26,13 @@ const monthNames = [
 ]
 
 export default {
-  async asyncData({ isDev, store }) {
+  async asyncData({ $http, isDev, store }) {
     // Default data
-    let data = {
+    const data = {
       releases: [],
       isDev: isDev
     }
-    const res = await axios.get(store.state.apiURI + '/releases')
-    data.releases = res.data
+    data.releases = await $http.$get('releases')
 
     return data
   },

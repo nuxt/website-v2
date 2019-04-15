@@ -2,7 +2,7 @@ const { promisify } = require('util')
 const { resolve } = require('path')
 const fs = require('fs')
 
-const micro = require('micro')
+const WebSocket = require('ws')
 const axios = require('axios')
 const marked = require('marked')
 const highlightjs = require('highlight.js')
@@ -14,8 +14,6 @@ const glob = promisify(require('glob'))
 const readFile = promisify(fs.readFile)
 
 const defaultLang = 'en'
-
-const send = micro.send
 
 // Use highlight.js for code blocks
 const renderer = new marked.Renderer()
@@ -262,78 +260,115 @@ function watchFiles(cwd) {
 }
 
 // Server handle request method
-const server = micro(async function (req, res) {
-  // Remove /api prefix
-  req.url = req.url.replace(/^\/api/i, '/').replace(/\/+/, '/')
-
-  res.setHeader('Access-Control-Allow-Origin', '*')
-  res.setHeader('Access-Control-Allow-Methods', 'GET,PUT,POST,DELETE')
-  res.setHeader('Access-Control-Allow-Headers', 'Content-Type')
-  // Releases
-  if (req.url === '/releases') {
-    return send(res, 200, RELEASES)
+const get = function (url) {
+    // Releases
+  if (url === '/releases') {
+    return RELEASES
   }
   // Menu
-  if (req.url.indexOf('/menu') === 0) {
-    const lang = req.url.split('/')[2]
-    const category = req.url.split('/')[3]
+  if (url.indexOf('/menu') === 0) {
+    const lang = url.split('/')[2]
+    const category = url.split('/')[3]
     if (lang && category && _MENU_[lang] && _MENU_[lang][category]) {
-      return send(res, 200, _MENU_[lang][category])
+      return _MENU_[lang][category]
     }
 
     if (lang && _MENU_[lang]) {
-      return send(res, 200, _MENU_[lang])
+      return _MENU_[lang]
     }
 
     if (lang) {
-      return send(res, 404, 'Language not found')
+      return new Error('Language not found')
     }
 
-    return send(res, 200, _MENU_)
+    return _MENU_
   }
   // Lang
-  if (req.url.indexOf('/lang') === 0) {
-    const lang = req.url.split('/')[2]
+  if (url.indexOf('/lang') === 0) {
+    const lang = url.split('/')[2]
     if (lang && _LANG_[lang]) {
-      return send(res, 200, _LANG_[lang])
+      return _LANG_[lang]
     }
 
     if (lang) {
-      return send(res, 404, 'Language not found')
+      return new Error('Language not found')
     }
 
-    return send(res, 200, _LANG_)
+    return _LANG_
   }
   // Homepgae
-  if (req.url.indexOf('/homepage') === 0) {
-    const lang = req.url.split('/')[2]
+  if (url.indexOf('/homepage') === 0) {
+    const lang = url.split('/')[2]
     if (lang && _HOMEPAGE_[lang]) {
-      return send(res, 200, _HOMEPAGE_[lang])
+      return _HOMEPAGE_[lang]
     }
 
     if (lang) {
-      return send(res, 404, 'Language not found')
+      return new Error('Language not found')
     }
 
-    return send(res, 200, _HOMEPAGE_)
+    return _HOMEPAGE_
   }
 
   // remove first /
-  const path = req.url.slice(1) + '.md'
+  const path = url.slice(1) + '.md'
   // Check if path exists
 
   if (!_DOC_FILES_[path]) {
-    return send(res, 404, 'File not found')
+    return new Error('File not found')
   }
   // Send back doc content
-  send(res, 200, _DOC_FILES_[path])
-})
+  return _DOC_FILES_[path]
+}
 
-module.exports = async function load(cwd) {
+module.exports = async function startDocsServer(cwd, port) {
   await getFiles(cwd)
   await getReleases()
   if (process.env.NODE_ENV !== 'production') {
     watchFiles(cwd)
   }
+
+
+  const server = new WebSocket.Server({ port })
+
+  server.on('connection', async (ws, req) => {
+    const context = { req, ws }
+    ws.on('error', err => console.error(err))
+    ws.on('message', async msg => {
+      let obj
+      try {
+        obj = JSON.parse(msg)
+      } catch (e) {
+        return // Ignore it
+      }
+      if (typeof obj.challenge === 'undefined')
+        return console.error('No challenge given to', obj)
+
+      let data = null
+      let error = null
+
+      switch (obj.action) {
+        case 'call':
+          try {
+            data = get(...obj.args)
+          } catch (e) {
+            console.error(e)
+            error = JSON.parse(JSON.stringify(e, Object.getOwnPropertyNames(e)))
+          }
+          break
+        default:
+      }
+
+      const payload = {
+        action: 'return',
+        challenge: obj.challenge || 0,
+        data,
+        error
+      }
+
+      ws.send(JSON.stringify(payload))
+    })
+  })
+
   return server
 }

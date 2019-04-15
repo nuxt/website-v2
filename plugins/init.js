@@ -1,4 +1,4 @@
-export default async function ({ $http, isDev, env, req, store: { commit, state }, redirect }) {
+export default async function ({ $docs, isDev, env, req, store: { commit, state }, redirect }) {
   // If state filled on server-side (to support spa fallback)
   if (state.filled) {
     return
@@ -19,14 +19,14 @@ export default async function ({ $http, isDev, env, req, store: { commit, state 
     commit('setLocale', env.locale)
   }
   try {
-    const releases = await $http.$get('releases')
+    const releases = await $docs.get('/releases')
     commit('setGhVersion', releases[0] ? releases[0].name : 'vX.Y.Z')
-    const lang = await $http.$get('lang/' + state.locale)
+    const lang = await $docs.get('/lang/' + state.locale)
     commit('setLang', lang)
     commit('setDocVersion', lang.docVersion)
-    const menu = await $http.$get('menu/' + state.locale)
+    const menu = await $docs.get('/menu/' + state.locale)
     commit('setMenu', menu)
-    const homepage = await $http.$get('homepage/' + state.locale)
+    const homepage = await $docs.get('/homepage/' + state.locale)
     commit('setHomepage', homepage)
     commit('setFilled')
   } catch (e) {

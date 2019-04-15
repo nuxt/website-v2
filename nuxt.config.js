@@ -25,13 +25,13 @@ export default {
     '~/assets/scss/main.scss'
   ],
   modules: [
-    '~/modules/docs/',
+    ['~/modules/docs/', { port: 3001 }],
     // https://github.com/nuxt-community/style-resources-module
     '@nuxtjs/style-resources',
     // https://github.com/Developmint/nuxt-svg-loader/
     'nuxt-svg-loader',
     // https://github.com/DreaMinder/nuxt-payload-extractor
-    // 'nuxt-payload-extractor'
+    'nuxt-payload-extractor'
   ],
   http: {
     prefix: '/_api/'
@@ -48,7 +48,7 @@ export default {
   },
   loading: { color: '#41B883' },
   router: {
-    // middleware: ['static'],
+    middleware: ['static'],
     scrollBehavior(to, from, savedPosition) {
       // savedPosition is only available for popstate navigations (back button)
       if (savedPosition) {

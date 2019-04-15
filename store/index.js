@@ -6,7 +6,6 @@ export const state = () => ({
   ghVersion: '',
   visibleHeader: false,
   visibleAffix: false,
-  apiURI: 'https://docs.api.nuxtjs.org',
   locale: 'en',
   lang: {},
   menu: {},
@@ -17,9 +16,6 @@ export const state = () => ({
 export const mutations = {
   toggle(state, key) {
     state[key] = !state[key]
-  },
-  setApiURI(state, apiURI) {
-    state.apiURI = apiURI
   },
   setDocVersion(state, docVersion) {
     state.docVersion = docVersion

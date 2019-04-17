@@ -15,11 +15,12 @@ export default async ({ app, route }) => {
     return
   }
   Component._payloads = Component._payloads || {}
-  const payloadPath = (route.path + '/payload.json').replace(/\/+/, '/')
-  let data = Component._payloads[payloadPath]
+  const path = route.path.replace(/\/$/, '')
+  const payloadPath = (path + '/payload.json').replace(/\/+/, '/')
+  let data = Component._payloads[path]
   if (!data) {
     data = await fetch(payloadPath).then((res) => res.json())
   }
   Component.options.asyncData = () => data
-  Component._payloads[payloadPath] = data
+  Component._payloads[path] = data
 }

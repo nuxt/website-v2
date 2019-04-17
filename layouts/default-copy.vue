@@ -1,6 +1,6 @@
 <template>
   <div>
-    <nui-header/>
+    <navbar/>
     <div class="App" :class="{'App--hidden': visible}">
       <!-- <event-info/> -->
       <nuxt/>
@@ -9,7 +9,7 @@
 </template>
 
 <script>
-import nuiHeader from '@/components/partials/Header'
+import Navbar from '~/components/Header.vue'
 import EventInfo from '~/components/EventInfo.vue'
 
 export default {
@@ -51,17 +51,13 @@ export default {
     }
   },
   components: {
-    nuiHeader,
+    Navbar,
     EventInfo
   }
 }
 </script>
 
-<style lang="scss">
-html {
-  font-family: 'Quicksand';
-  font-weight: 500;
-}
+<style lang="scss" scoped>
 .App {
   margin-top: 60px;
   @media (min-width: 991px) {

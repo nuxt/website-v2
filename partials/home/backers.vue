@@ -7,9 +7,6 @@
       <div class="nBackers_Group">
         <h3 class="nBackers_Group_Title">{{ $store.state.lang.homepage.backer_partners }}</h3>
         <div class="nBackers_Group_Content">
-          <a class="nBackers_Group_Content_Link" href="https://t.co/sUZfRy6ZxS" target="_blank" rel="noopener">
-            <v-lazy-image class="nBackers_Group_Content_Link_Image" src="/tipe-io-cms.png" srcset="/tipe-io-cms-2x.png 2x" alt="Tipe.io" />
-          </a>
           <a class="nBackers_Group_Content_Link" href="https://www.storyblok.com/?ref=nuxt" target="_blank" rel="noopener">
             <v-lazy-image class="nBackers_Group_Content_Link_Image" src="/storyblok-logo.svg" alt="Storyblok.com"/>
           </a>

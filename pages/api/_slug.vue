@@ -7,13 +7,12 @@
 </template>
 
 <script>
-import axios from 'axios'
 import CodeFundAds from '~/components/CodeFundAds.vue'
 import HtmlParser from '~/components/HtmlParser.vue'
 import Contribute from '~/components/Contribute.vue'
 
 export default {
-  async asyncData({ route, store, error }) {
+  async asyncData({ $docs, route, store, error }) {
     // Default data
     let data = {
       attrs: {},
@@ -22,17 +21,17 @@ export default {
     }
     const slug = route.params.slug || 'index'
     const path = `/${store.state.lang.iso}/api/${slug}`
-    let res
+    let page
     try {
-      res = await axios.get(store.state.apiURI + path)
+      page = await $docs.get(path)
     } catch (err) {
       if (err.response.status !== 404) {
         return error({ statusCode: 500, message: store.state.lang.text.an_error_occured })
       }
       return error({ statusCode: 404, message: store.state.lang.text.api_page_not_found })
     }
-    data.attrs = res.data.attrs
-    data.body = res.data.body
+    data.attrs = page.attrs
+    data.body = page.body
     data.docLink = `https://github.com/nuxt/docs/blob/master${path}.md`
     if (store.state.lang.iso === 'ru') {
       data.docLink = `https://github.com/translation-gang/ru.docs.nuxtjs/blob/translation-ru${path}.md`

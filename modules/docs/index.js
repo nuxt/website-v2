@@ -5,7 +5,7 @@ const startDocsServer = require('./server')
 const startServer = async function (srcDir, port) {
   const server = await startDocsServer(join(srcDir, 'docs'), port)
 
-  console.log(`Docs server listening on ws://localhost:${port}`)
+  console.log(`Docs server listening on http://localhost:${port}`)
   return server
 }
 
@@ -19,7 +19,7 @@ module.exports = async function (moduleOptions) {
   this.addPlugin({
     src: join(__dirname, 'plugin.js'),
     options: {
-      url: `ws://localhost:${port}`
+      url: `http://localhost:${port}`
     }
   })
 

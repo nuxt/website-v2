@@ -7,7 +7,7 @@
 <script>
 export default {
   mounted() {
-    if (this.$store.state.locale === 'en') {
+    if (this.$store.state.locale === 'en' && this.$refs.carbonads) {
       const script = document.createElement('script')
       script.setAttribute('type', 'text/javascript')
       script.setAttribute('src', '//cdn.carbonads.com/carbon.js?zoneid=1673&serve=C6AILKT&placement=nuxtjsorg')

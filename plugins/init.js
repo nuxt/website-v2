@@ -1,12 +1,7 @@
-import axios from 'axios'
-
-export default async function ({ isDev, env, req, store: { commit, state }, redirect }) {
+export default async function ({ $docs, isDev, env, req, store: { commit, state }, redirect }) {
   // If state filled on server-side (to support spa fallback)
   if (state.filled) {
     return
-  }
-  if (isDev) {
-    commit('setApiURI', 'http://localhost:4000')
   }
   // If SSR
   if (req) {
@@ -24,15 +19,15 @@ export default async function ({ isDev, env, req, store: { commit, state }, redi
     commit('setLocale', env.locale)
   }
   try {
-    const resReleases = await axios(state.apiURI + '/releases')
-    commit('setGhVersion', resReleases.data[0] ? resReleases.data[0].name : 'vX.Y.Z')
-    const resLang = await axios(state.apiURI + '/lang/' + state.locale)
-    commit('setLang', resLang.data)
-    commit('setDocVersion', resLang.data.docVersion)
-    const resMenu = await axios(state.apiURI + '/menu/' + state.locale)
-    commit('setMenu', resMenu.data)
-    const resHomepage = await axios(state.apiURI + '/homepage/' + state.locale)
-    commit('setHomepage', resHomepage.data)
+    const releases = await $docs.get('/releases')
+    commit('setGhVersion', releases[0] ? releases[0].name : 'vX.Y.Z')
+    const lang = await $docs.get('/lang/' + state.locale)
+    commit('setLang', lang)
+    commit('setDocVersion', lang.docVersion)
+    const menu = await $docs.get('/menu/' + state.locale)
+    commit('setMenu', menu)
+    const homepage = await $docs.get('/homepage/' + state.locale)
+    commit('setHomepage', homepage)
     commit('setFilled')
   } catch (e) {
     console.error('Error on filling the store, please run the docs server.') // eslint-disable-line no-console

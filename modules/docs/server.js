@@ -2,7 +2,8 @@ const { promisify } = require('util')
 const { resolve } = require('path')
 const fs = require('fs')
 
-const WebSocket = require('ws')
+const micro = require('micro')
+const { send } = require('micro')
 const axios = require('axios')
 const marked = require('marked')
 const highlightjs = require('highlight.js')
@@ -278,7 +279,7 @@ const get = function (url) {
     }
 
     if (lang) {
-      return new Error('Language not found')
+      throw new Error('Language not found')
     }
 
     return _MENU_
@@ -291,7 +292,7 @@ const get = function (url) {
     }
 
     if (lang) {
-      return new Error('Language not found')
+      throw new Error('Language not found')
     }
 
     return _LANG_
@@ -304,7 +305,7 @@ const get = function (url) {
     }
 
     if (lang) {
-      return new Error('Language not found')
+      throw new Error('Language not found')
     }
 
     return _HOMEPAGE_
@@ -315,7 +316,7 @@ const get = function (url) {
   // Check if path exists
 
   if (!_DOC_FILES_[path]) {
-    return new Error('File not found')
+    throw new Error('File not found')
   }
   // Send back doc content
   return _DOC_FILES_[path]
@@ -328,47 +329,18 @@ module.exports = async function startDocsServer(cwd, port) {
     watchFiles(cwd)
   }
 
-
-  const server = new WebSocket.Server({ port })
-
-  server.on('connection', async (ws, req) => {
-    const context = { req, ws }
-    ws.on('error', err => console.error(err))
-    ws.on('message', async msg => {
-      let obj
-      try {
-        obj = JSON.parse(msg)
-      } catch (e) {
-        return // Ignore it
-      }
-      if (typeof obj.challenge === 'undefined')
-        return console.error('No challenge given to', obj)
-
-      let data = null
-      let error = null
-
-      switch (obj.action) {
-        case 'call':
-          try {
-            data = get(...obj.args)
-          } catch (e) {
-            console.error(e)
-            error = JSON.parse(JSON.stringify(e, Object.getOwnPropertyNames(e)))
-          }
-          break
-        default:
-      }
-
-      const payload = {
-        action: 'return',
-        challenge: obj.challenge || 0,
-        data,
-        error
-      }
-
-      ws.send(JSON.stringify(payload))
-    })
+  const server = micro(async (req, res) => {
+    res.setHeader('Access-Control-Allow-Origin', '*')
+    res.setHeader('Access-Control-Allow-Methods', 'GET')
+    res.setHeader('Access-Control-Allow-Headers', 'Content-Type')
+    try {
+      const data = get(req.url)
+      send(res, 200, data)
+    } catch(err) {
+      send(res, 404, err.message)
+    }
   })
+  server.listen(port)
 
   return server
 }

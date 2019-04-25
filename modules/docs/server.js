@@ -59,7 +59,7 @@ const getReleases = async () => {
     const res = await axios(options)
     RELEASES = res.data.filter(r => !r.draft).map((release) => {
       return {
-        name: release.name,
+        name: release.name || release.tag_name,
         date: release.published_at,
         body: marked(release.body)
       }

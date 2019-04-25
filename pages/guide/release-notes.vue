@@ -3,8 +3,8 @@
     <code-fund-ads v-if="!isDev && $store.state.locale === ' en '" :key="$route.params.slug" />
     <h1>{{ $store.state.lang.guide.release_notes }}</h1>
     <div v-for="release in releases" :key="release.name">
-      <h2 :id="release.name">
-        {{ release.name }}
+      <h2>
+        <a :id="release.name" :href="'#' + release.name" class="anchor" aria-hidden="true">{{ release.name }}</a>
         <span class="Release__Date">
           Released on
           <time :datetime="release.date" :title="new Date(release.date).toString()">{{ release.date | dateFormat }}</time>

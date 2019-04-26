@@ -15,7 +15,7 @@ Chinese translation of primary Nuxt.js documentation site. Supported by [AOTU La
 The markdown files are store at [https://github.com/nuxt/docs](https://github.com/nuxt/docs), we use a git submodule to clone the repo:
 
 ```
-git clone --recursive https://github.com/nuxt/nuxtjs.org.git
+git clone --recurse-submodules https://github.com/nuxt/nuxtjs.org.git
 ```
 
 Update your `/etc/hosts` to have the following lines:

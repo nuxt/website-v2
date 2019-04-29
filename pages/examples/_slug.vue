@@ -54,7 +54,7 @@ export default {
       page = await $docs.get(path)
     } catch (err) {
       if (err.response.status !== 404) {
-        return error({ statusCode: 500, message: store.state.lang.text.an_error_occured })
+        return error({ statusCode: 500, message: store.state.lang.text.an_error_occurred })
       }
       return error({ statusCode: 404, message: store.state.lang.text.api_page_not_found })
     }

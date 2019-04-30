@@ -5,8 +5,6 @@
   "main": "index.js",
   "dependencies": {
     "@nuxtjs/style-resources": "^0.1.2",
-    "axios": "^0.18.0",
-    "express": "^4.16.4",
     "front-matter": "^3.0.1",
     "get-port": "^5.0.0",
     "glob": "^7.1.3",
@@ -14,13 +12,13 @@
     "lodash": "^4.17.11",
     "marked": "^0.6.2",
     "micro": "^9.3.3",
+    "node-fetch": "^2.4.1",
     "normalize.css": "^8.0.1",
     "nuxt-edge": "^2.6.2-25915688.22138535",
     "nuxt-payload-extractor": "^0.0.8",
     "nuxt-svg-loader": "^1.0.1",
     "octicons": "^8.5.0",
-    "v-lazy-image": "^1.3.2",
-    "whatwg-fetch": "^3.0.0"
+    "v-lazy-image": "^1.3.2"
   },
   "devDependencies": {
     "babel-eslint": "^10.0.1",

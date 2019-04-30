@@ -40,6 +40,11 @@
         </a>
       </li>
       <li class="Affix__List__Item">
+        <a class="Affix__List__Item__Sponsor" href="https://hapijs.com/?ref=nuxt" target="_blank" rel="noopener">
+          <img src="/hapi-logo.svg" alt="Hapi JS" style="height: 42px"/>
+        </a>
+      </li>
+      <li class="Affix__List__Item">
         {{ $store.state.lang.sponsors.become }}
         <a href="https://opencollective.com/nuxtjs" target="_blank" rel="noopener">{{ $store.state.lang.sponsors.become_partner }}</a>.
       </li>

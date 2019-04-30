@@ -23,4 +23,18 @@ npm-debug.log
 
 # other
 .nuxt
+<<<<<<< HEAD
 >>>>>>> 4cc9d7b5 (Home page and routes)
+=======
+dist
+.vscode
+.idea
+newrelic_agent.log
+.DS_STORE
+
+# docs
+docs
+
+# @nuxtjs/pwa
+sw.*
+>>>>>>> dd0be05d (feat(pwa): Add PWA mode)

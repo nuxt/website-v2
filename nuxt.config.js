@@ -39,8 +39,14 @@ module.exports = {
     // https://github.com/Developmint/nuxt-svg-loader/
     'nuxt-svg-loader',
     // https://github.com/DreaMinder/nuxt-payload-extractor
+<<<<<<< HEAD
     // 'nuxt-payload-extractor'
 >>>>>>> b4c06c90 (Merge branch 'master' of https://github.com/nuxt/nuxtjs.org)
+=======
+    'nuxt-payload-extractor',
+    // https://pwa.nuxtjs.org
+    '@nuxtjs/pwa'
+>>>>>>> dd0be05d (feat(pwa): Add PWA mode)
   ],
 <<<<<<< HEAD
   router: {
@@ -85,6 +91,7 @@ module.exports = {
 >>>>>>> 3d1d3d02 (new architecture)
 =======
     fallback: true,
+<<<<<<< HEAD
     interval: 100,
     routes() {
       return Promise.all(
@@ -117,6 +124,12 @@ module.exports = {
       './assets/styles/variables/theme.scss'
     ]
 >>>>>>> 5e315c38 (app: Support ad blockers, upgrade Nuxt)
+=======
+    interval: 100
+  },
+  manifest: {
+    lang: process.env.NUXT_LOCALE || 'en'
+>>>>>>> dd0be05d (feat(pwa): Add PWA mode)
   }
 >>>>>>> f4d82e28 (guide content from component)
 }

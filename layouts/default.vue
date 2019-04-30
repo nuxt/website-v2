@@ -63,10 +63,10 @@ html {
   font-weight: 500;
 }
 .App {
-  margin-top: 60px;
-  @media (min-width: 991px) {
-    margin-top: 80px;
-  }
+  // margin-top: 60px;
+  // @media (min-width: 991px) {
+  //   margin-top: 80px;
+  // }
   &--hidden {
     display: none;
     @media (min-width: 992px) {

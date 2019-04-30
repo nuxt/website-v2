@@ -35,7 +35,7 @@ export default {
   },
   methods: {
     cardbonFallback(event) {
-      if (event.detail.status !== 'ok') {
+      if (event && event.detail && event.detail.status !== 'ok') {
         // Render Carbon Ad
         this.displayCarbon = true
       }

@@ -20,7 +20,7 @@
             </a>
           </div>
           <div class="Promo__Video" style="display: inline-block;">
-            <a href="https://vueschool.io/courses/nuxtjs-fundamentals?friend=nuxt" target="_blank">
+            <a href="https://vueschool.io/courses/nuxtjs-fundamentals?friend=nuxt" target="_blank" rel="noopener">
               <p class="Promo__Video__Icon">
                 <strong>Watch a free video course on Vue School</strong>
               </p>

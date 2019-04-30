@@ -8,7 +8,8 @@ export default {
       { name: 'viewport', content: 'width=device-width, initial-scale=1' }
     ],
     link: [
-      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
+      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
+      { rel: 'preconnect', href: 'https://www.google-analytics.com' }
     ],
     script: [
       { src: 'https://polyfill.io/v2/polyfill.min.js?features=IntersectionObserver', body: true }

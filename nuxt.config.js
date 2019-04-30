@@ -31,7 +31,9 @@ export default {
     // https://github.com/Developmint/nuxt-svg-loader/
     'nuxt-svg-loader',
     // https://github.com/DreaMinder/nuxt-payload-extractor
-    'nuxt-payload-extractor'
+    'nuxt-payload-extractor',
+    // https://pwa.nuxtjs.org
+    '@nuxtjs/pwa'
   ],
   http: {
     prefix: '/_api/'
@@ -63,5 +65,8 @@ export default {
   generate: {
     fallback: true,
     interval: 100
+  },
+  manifest: {
+    lang: process.env.NUXT_LOCALE || 'en'
   }
 }

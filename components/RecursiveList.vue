@@ -14,8 +14,6 @@
 </template>
 
 <script>
-import axios from 'axios'
-
 export default {
   name: 'recursive-list',
   props: {
@@ -29,14 +27,15 @@ export default {
     this.$options.components.RecursiveList = require('./RecursiveList.vue')
   },
   mounted() {
-    return axios({
+    return fetch({
       url: 'https://api.github.com/repos/nuxt/nuxt.js/contents/' + this.path,
       headers: {
         'Authorization': `token ${process.env.githubToken}`
       }
     })
-      .then((res) => {
-        res.data.sort((f1, f2) => {
+      .then((res) => res.json())
+      .then((data) => {
+        data.sort((f1, f2) => {
           // Same type, order by name
           if (f1.type === f2.type) {
             let n1 = f1.name.toUpperCase()
@@ -49,12 +48,12 @@ export default {
           return 1
         })
         if (!this.currentFile) {
-          let f = res.data.find((file) => {
+          let f = data.find((file) => {
             return file.name === 'package.json'
           })
           if (f) this.changeFile(f)
         }
-        this.files = res.data.filter((f) => f.name.toLowerCase() !== 'readme.md')
+        this.files = data.filter((f) => f.name.toLowerCase() !== 'readme.md')
       })
   },
   data() {

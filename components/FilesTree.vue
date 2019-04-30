@@ -30,7 +30,6 @@
 </template>
 
 <script>
-import axios from 'axios'
 import hljs from 'highlight.js'
 
 import RecursiveList from './RecursiveList.vue'
@@ -82,14 +81,15 @@ export default {
         this.hidden = true
       }
       if (!this.content) {
-        axios({
+        fetch({
           url: 'https://api.github.com/repos/nuxt/nuxt.js/contents/' + file.path,
           headers: {
             'Authorization': `token ${process.env.githubToken}`
           }
         })
-          .then((res) => {
-            let content = window.atob(res.data.content)
+          .then((res) => res.json())
+          .then((data) => {
+            let content = window.atob(data.content)
             content = hljs.highlightAuto(content).value
             cacheFiles[file.path] = content
             this.content = cacheFiles[file.path]

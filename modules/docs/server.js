@@ -4,12 +4,12 @@ const fs = require('fs')
 
 const micro = require('micro')
 const { send } = require('micro')
-const axios = require('axios')
 const marked = require('marked')
 const highlightjs = require('highlight.js')
 const fm = require('front-matter')
 const consola = require('consola')
 const octicon = require('octicons')
+const fetch = require('node-fetch')
 
 const glob = promisify(require('glob'))
 const readFile = promisify(fs.readFile)
@@ -51,13 +51,13 @@ let RELEASES = []
 
 const getReleases = async () => {
   consola.info('Fetching releases...')
-  const options = { url: 'https://api.github.com/repos/nuxt/nuxt.js/releases' }
+  const options = {}
   if (process.env.GITHUB_TOKEN) {
     options.headers = { 'Authorization': `token ${process.env.GITHUB_TOKEN}` }
   }
   try {
-    const res = await axios(options)
-    RELEASES = res.data.filter(r => !r.draft).map((release) => {
+    const data = await fetch('https://api.github.com/repos/nuxt/nuxt.js/releases', options).then(res => res.json())
+    RELEASES = data.filter(r => !r.draft).map((release) => {
       return {
         name: release.name || release.tag_name,
         date: release.published_at,
@@ -65,7 +65,7 @@ const getReleases = async () => {
       }
     })
   } catch (e) {
-    consola.error('Could not fetch nuxt.js release notes.')
+    consola.error('Could not fetch nuxt.js release notes:', e.message)
   }
   const getMajorVersion = r => r.name && Number(r.name.substring(1, 2))
   RELEASES.sort((a, b) => {

@@ -7,7 +7,7 @@ const { send } = require('micro')
 const marked = require('marked')
 const highlightjs = require('highlight.js')
 const fm = require('front-matter')
-const consola = require('consola')
+const logger = require('consola').withScope('modules/docs')
 const octicon = require('octicons')
 const fetch = require('node-fetch')
 
@@ -50,7 +50,7 @@ partialRenderer.paragraph = (text) => {
 let RELEASES = []
 
 const getReleases = async () => {
-  consola.info('Fetching releases...')
+  logger.info('Fetching releases...')
   const options = {}
   if (process.env.GITHUB_TOKEN) {
     options.headers = { 'Authorization': `token ${process.env.GITHUB_TOKEN}` }
@@ -65,7 +65,7 @@ const getReleases = async () => {
       }
     })
   } catch (e) {
-    consola.error('Could not fetch nuxt.js release notes:', e.message)
+    logger.error('Could not fetch nuxt.js release notes:', e.message)
   }
   const getMajorVersion = r => r.name && Number(r.name.substring(1, 2))
   RELEASES.sort((a, b) => {
@@ -82,7 +82,7 @@ const getReleases = async () => {
 let _DOC_FILES_ = {}
 
 async function getFiles(cwd) {
-  consola.info('Building files...')
+  logger.info('Building files...')
   cwd = cwd || process.cwd()
   const docPaths = await glob('*/**/*.md', {
     cwd: cwd,
@@ -127,7 +127,7 @@ async function getDocFile(path, cwd, parseOptions) {
 let _MENU_ = {}
 
 async function getMenu(cwd) {
-  consola.info('Building menu...')
+  logger.info('Building menu...')
   cwd = cwd || process.cwd()
   const menuPaths = await glob('*/**/menu.json', {
     cwd: cwd,
@@ -144,7 +144,7 @@ async function getMenu(cwd) {
         const promise = readFile(resolve(cwd, path), 'utf-8')
         promise.then((fileContent) => {
           menu[key] = JSON.parse(fileContent)
-        }).catch((e) => { consola.error(e, path) })
+        }).catch((e) => { logger.error(e, path) })
         promises.push(promise)
         return
       }
@@ -160,7 +160,7 @@ async function getMenu(cwd) {
 let _LANG_ = {}
 
 async function getLanguages(cwd) {
-  consola.info('Building languages...')
+  logger.info('Building languages...')
   cwd = cwd || process.cwd()
   const langPaths = await glob('*/lang.json', {
     cwd: cwd,
@@ -185,7 +185,7 @@ async function getLanguages(cwd) {
 let _HOMEPAGE_ = {}
 
 async function getHomepage(cwd) {
-  consola.info('Building homepage object...')
+  logger.info('Building homepage object...')
   cwd = cwd || process.cwd()
   const homepagePaths = await glob('*/homepage/*.md', {
     cwd: cwd,
@@ -231,7 +231,7 @@ async function getHomepage(cwd) {
 
 // watch file changes
 function watchFiles(cwd) {
-  consola.info('Watch files changes...')
+  logger.info('Watch files changes...')
   const options = {
     cwd: cwd,
     ignoreInitial: true,

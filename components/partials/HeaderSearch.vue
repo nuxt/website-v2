@@ -64,7 +64,7 @@ $grey: #606F7B;
     font-weight: 500;
     font-family: 'Quicksand';
     background-color: $light_grey;
-    height: 36px;
+    height: 38px;
     border-radius: 18px;
     border: none;
     padding: 0 1rem;
@@ -72,6 +72,8 @@ $grey: #606F7B;
   }
   ::placeholder {
     color: $grey;
+    font-weight: 700;
+    font-size: 0.95rem;
   }
   .icon {
     z-index: 10;
@@ -79,8 +81,8 @@ $grey: #606F7B;
     position: absolute;
   }
   .search.icon {
-    margin-top: 10px;
-    margin-left: 11px;
+    margin-top: 11px;
+    margin-left: 12px;
     width: 10px;
     height: 10px;
     border: solid 2px currentColor;

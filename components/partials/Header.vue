@@ -35,8 +35,9 @@ export default {
 
 <style lang="scss">
 .nui-header {
-  padding: 1rem 0;
-  box-shadow: 0 2px 4px 0 rgba(0,0,0,0.10);
+  padding: 2rem 0;
+  z-index: 10;
+  // box-shadow: 0 2px 4px 0 rgba(0,0,0,0.10);
   &-container {
     align-items: center;
   }

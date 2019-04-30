@@ -14,3 +14,6 @@ newrelic_agent.log
 
 # docs
 docs
+
+# @nuxtjs/pwa
+sw.*

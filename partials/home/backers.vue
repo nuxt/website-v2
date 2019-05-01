@@ -22,7 +22,7 @@
           <a class="nBackers_Group_Content_Link" href="https://shipshape.io/?ref=nuxt" target="_blank" rel="noopener">
             <v-lazy-image class="nBackers_Group_Content_Link_Image" src="/shipshape-logo.svg" alt="Shipshape.io"/>
           </a>
-          <a class="nBackers_Group_Content_Link" href="hhttps://hapijs.com/?ref=nuxt" target="_blank" rel="noopener">
+          <a class="nBackers_Group_Content_Link" href="https://hapijs.com/?ref=nuxt" target="_blank" rel="noopener">
             <v-lazy-image class="nBackers_Group_Content_Link_Image" src="/hapi-logo.svg" alt="Hapi JS"/>
           </a>
         </div>

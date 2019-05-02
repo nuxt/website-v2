@@ -5,11 +5,13 @@
       <!-- <event-info/> -->
       <nuxt/>
     </div>
+    <nui-footer/>
   </div>
 </template>
 
 <script>
 import nuiHeader from '@/components/partials/Header'
+import nuiFooter from '@/components/partials/Footer'
 import EventInfo from '~/components/EventInfo.vue'
 
 export default {
@@ -52,6 +54,7 @@ export default {
   },
   components: {
     nuiHeader,
+    nuiFooter,
     EventInfo
   }
 }

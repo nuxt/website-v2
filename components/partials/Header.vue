@@ -19,7 +19,7 @@
 
 <script>
 import nuiContainer from '@/components/ui/Container'
-import nuiLogo from '@/components/icons/nuxtjs'
+import nuiLogo from '@/components/svg/Nuxtjs'
 import nuiLinks from '@/components/partials/HeaderLinks'
 import nuiSearch from '@/components/partials/HeaderSearch'
 

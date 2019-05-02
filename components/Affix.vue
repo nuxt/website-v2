@@ -45,6 +45,11 @@
         </a>
       </li>
       <li class="Affix__List__Item">
+        <a class="Affix__List__Item__Sponsor" href="https://blokt.com/?ref=nuxt" target="_blank" rel="noopener">
+          <img src="/blokt-logo.png" alt="Blokt" style="height: 28px"/>
+        </a>
+      </li>
+      <li class="Affix__List__Item">
         {{ $store.state.lang.sponsors.become }}
         <a href="https://opencollective.com/nuxtjs" target="_blank" rel="noopener">{{ $store.state.lang.sponsors.become_partner }}</a>.
       </li>

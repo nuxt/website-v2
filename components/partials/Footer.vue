@@ -12,16 +12,12 @@
     <div class="nui-footer-options">
       <nui-container>
         <nui-row>
-          <select class="nui-select">
-            <option>Theme</option>
-          </select>
+          <nui-select class="nui-select-theme" :options="themes" v-model="selectedTheme"/>
           <a class="nui-footer-options-logo-link" href="/" @click.prevent="$router.push('/')" @click.right.stop.prevent="$router.push('/design')">
             <h1>NUXTJS</h1>
             <nui-logo/>
           </a>
-          <select class="nui-select">
-            <option>Langue</option>
-          </select>
+          <nui-select class="nui-select-theme" :options="langs" v-model="selectedLang"/>
         </nui-row>
       </nui-container>
     </div>
@@ -31,13 +27,29 @@
 <script>
 import nuiContainer from '@/components/ui/Container'
 import nuiRow from '@/components/ui/Row'
+import nuiSelect from '@/components/ui/Select'
 import nuiLinks from '@/components/partials/FooterLinks'
 import nuiLogo from '@/components/svg/Mountains'
 
 export default {
+  data () {
+    return {
+      themes: [
+        { name: 'Light', value: 'light', icon: 'sun' },
+        { name: 'Dark', value: 'dark', icon: 'moon' }
+      ],
+      selectedTheme: 'light',
+      langs: [
+        { name: 'English', value: 'en', icon: 'globe' },
+        { name: 'Français', value: 'fr', icon: 'globe' }
+      ],
+      selectedLang: 'en'
+    }
+  },
   components: {
     nuiContainer,
     nuiRow,
+    nuiSelect,
     nuiLinks,
     nuiLogo
   }
@@ -64,17 +76,15 @@ $light_grey: #F1F5F8;
   }
   &-options {
     border-top: 1px solid $silver;
-    padding: 2rem 0;
-    &-logo {
-      display: block;
-      &-link {
-        display: block;
-        h1 {
-          margin: 0;
-          width: 0;
-          height: 0;
-          overflow: hidden;
-        }
+    padding: 1.5rem 0;
+    &-logo-link {
+      display: inline-block;
+      padding-top: 0.5rem;
+      h1 {
+        margin: 0;
+        width: 0;
+        height: 0;
+        overflow: hidden;
       }
     }
   }

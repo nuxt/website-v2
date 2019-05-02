@@ -5,7 +5,10 @@
     </div>
     <ul class="Dropdown__List" :class="{ 'Dropdown__List--visible': show }">
       <li class="Dropdown__List__Item" v-for="item in dropdownList" :key="item.name">
-        <a class="Dropdown__List__Item__Link" :href="item.path" :target="item.target">
+        <a v-if="item.blank" class="Dropdown__List__Item__Link" :href="item.path" target="_blank" rel="noopener">
+          {{ item.name }}
+        </a>
+        <a v-else class="Dropdown__List__Item__Link" :href="item.path">
           {{ item.name }}
         </a>
       </li>

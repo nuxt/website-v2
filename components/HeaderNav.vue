@@ -22,13 +22,13 @@ export default {
     visible() { return this.$store.state.visibleHeader },
     langList() {
       return [
-        { name: 'English', path: 'https://nuxtjs.org' + this.$route.path, target: '_blank' },
-        { name: 'Français', path: 'https://fr.nuxtjs.org' + this.$route.path, target: '_blank' },
-        { name: '简体中文', path: 'https://zh.nuxtjs.org' + this.$route.path, target: '_blank' },
-        { name: '日本語', path: 'https://ja.nuxtjs.org' + this.$route.path, target: '_blank' },
-        { name: '한국어', path: 'https://ko.nuxtjs.org' + this.$route.path, target: '_blank' },
-        { name: 'Русский', path: 'https://ru.nuxtjs.org' + this.$route.path, target: '_blank' },
-        { name: 'Indonesian', path: 'https://id.nuxtjs.org' + this.$route.path, target: '_blank' }
+        { name: 'English', path: 'https://nuxtjs.org' + this.$route.path },
+        { name: 'Français', path: 'https://fr.nuxtjs.org' + this.$route.path },
+        { name: '简体中文', path: 'https://zh.nuxtjs.org' + this.$route.path },
+        { name: '日本語', path: 'https://ja.nuxtjs.org' + this.$route.path },
+        { name: '한국어', path: 'https://ko.nuxtjs.org' + this.$route.path },
+        { name: 'Русский', path: 'https://ru.nuxtjs.org' + this.$route.path },
+        { name: 'Indonesian', path: 'https://id.nuxtjs.org' + this.$route.path }
       ]
     }
   },

@@ -10,9 +10,6 @@ export default {
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
       { rel: 'preconnect', href: 'https://www.google-analytics.com' }
-    ],
-    script: [
-      { src: 'https://polyfill.io/v2/polyfill.min.js?features=IntersectionObserver', body: true }
     ]
   },
   styleResources: {
@@ -41,8 +38,9 @@ export default {
   },
   plugins: [
     '~/plugins/init.js',
-    { src: '~/plugins/ga.client.js', ssr: false },
-    { src: '~/plugins/adblock.client.js', ssr: false }
+    '~/plugins/intersection-observer.client.js',
+    '~/plugins/ga.client.js',
+    '~/plugins/adblock.client.js'
   ],
   env: {
     githubToken: process.env.GITHUB_TOKEN || '4aa6bcf919d238504e7db59a66d32e78281c0ad3',

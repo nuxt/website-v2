@@ -21,16 +21,16 @@
     height: 26px;
   }
   .cls-1 {
-    fill:#2e495e
+    fill: #2e495e
   }
   .cls-2 {
-    fill:#00c48d
+    fill: #00c48d
   }
   .cls-3 {
-    fill:none
+    fill: none
   }
   .cls-5 {
-    fill:#108775
+    fill: #108775
   }
 }
 </style>

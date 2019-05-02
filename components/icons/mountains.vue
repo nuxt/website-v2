@@ -20,13 +20,13 @@
 .SVG-mountains {
   display: inline-block;
   .st0 {
-    fill: $blue-vue;
+    fill: #2e495e;
   }
   .st1 {
-    fill: $green-nuxt;
+    fill: #2e495e;
   }
   .st2 {
-    fill: $green-vue;
+    fill: #2e495e
   }
 }
 </style>

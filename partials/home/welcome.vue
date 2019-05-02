@@ -1,43 +1,45 @@
 <template>
-  <section class="nWelcome">
-    <div class="container">
-      <div class="row">
-        <div class="nWelcome_Content">
-          <h1 class="nWelcome_Content_Title" v-html="$store.state.homepage.welcome.attrs.title">
-            <!-- {{ $store.state.lang.homepage.title }} -->
+  <nui-hero class="Home__Welcome">
+    <nui-container>
+      <nui-row>
+        <div class="Home__Welcome__Text">
+          <h1>
+            The Vue.js Framework for <br>
+            <!-- <span>Universals Applications</span> -->
+            <!-- {{ $store.state.lang.homepage.welcome.app_types_prefix }} -->
+            <span>{{ appType }}</span>
+            <!-- {{ $store.state.lang.homepage.welcome.app_types_suffix }} -->
           </h1>
-          <h4 class="nWelcome_Content_Subtitle">
-            {{ $store.state.lang.homepage.welcome.app_types_prefix }}<transition name="fade" mode="out-in"><span class="nWelcome_Content_Subtitle_Type" v-for="(appType, index) of appTypes" :key="appType" v-if="index === current">{{ appType }}</span></transition>{{ $store.state.lang.homepage.welcome.app_types_suffix }}
-          </h4>
-          <p class="nWelcome_Content_Description" v-html="$store.state.homepage.welcome.body">
-          </p>
-          <div class="nWelcome_Content_Links">
-            <nuxt-link class="nWelcome_Content_Links_Button nWelcome_Content_Links_Button--green" to="/guide/installation">
-              {{ $store.state.lang.links.get_started }}
-            </nuxt-link>
-            <a class="nWelcome_Content_Links_Button" href="https://github.com/nuxt/nuxt.js" target="_blank" rel="noopener">
-              {{ $store.state.lang.links.github }} <span class="version">{{ $store.state.ghVersion }}</span>
-            </a>
-          </div>
-          <div class="Promo__Video" style="display: inline-block;">
-            <a href="https://vueschool.io/courses/nuxtjs-fundamentals?friend=nuxt" target="_blank">
-              <p class="Promo__Video__Icon">
-                <strong>Watch a free video course on Vue School</strong>
-              </p>
-            </a>
+          <h3>An open-source project under MIT license that make your Vue.js Application development enjoyable.</h3>
+          <div class="Home__Welcome__Text__Buttons">
+            <nui-button to="/" green>
+              <nui-svg-play/>
+              get started
+            </nui-button>
+            <nui-button to="/">
+              <nui-svg-gh/>
+              19K+ github stars
+            </nui-button>
           </div>
         </div>
-        <figure class="nWelcome_Figure">
-          <responsive-video src="https://player.vimeo.com/video/311756540" style="margin: 0;"/>
+        <figure class="Home__Welcome__Media">
+          <nui-media src="https://player.vimeo.com/video/311756540" style="margin: 0;"/>
           <p v-html="$store.state.homepage.welcome_figure.body"></p>
         </figure>
-      </div>
-    </div>
-  </section>
+      </nui-row>
+    </nui-container>
+  </nui-hero>
 </template>
 
 <script>
-import ResponsiveVideo from '~/components/ResponsiveVideo.vue'
+import nuiHero from '@/components/ui/Hero'
+import nuiContainer from '@/components/ui/Container'
+import nuiRow from '@/components/ui/Row'
+import nuiMedia from '@/components/ui/Media.vue'
+import nuiButton from '@/components/ui/Button.vue'
+import nuiSvgPlay from '@/components/svg/Play.vue'
+import nuiSvgGh from '@/components/svg/Github.vue'
+import { setTimeout } from 'timers';
 
 export default {
   data() {
@@ -51,153 +53,70 @@ export default {
       this.current = (this.current + 1) % this.appTypes.length
     }, 2500)
   },
+  computed: {
+    appType () {
+      return this.appTypes[this.current]
+    }
+  },
   destroyed() {
     clearInterval(this._timer)
   },
   components: {
-    ResponsiveVideo
+    nuiHero,
+    nuiContainer,
+    nuiRow,
+    nuiMedia,
+    nuiButton,
+    nuiSvgPlay,
+    nuiSvgGh
   }
 }
 </script>
 
 <style lang="scss">
-.container {
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-  padding: 0 $font-size-xs;
-  margin: 0 auto;
-  @media (min-width: $--xs) {
-    padding: 0 $font-size-sm;
-    max-width: $--xs;
-  }
-  @media (min-width: $--sm) {
-    padding: 0 $font-size-base;
-    max-width: $--sm;
-  }
-  @media (min-width: $--md) {
-    padding: 0 $font-size-lg;
-    max-width: $--md;
-  }
-  @media (min-width: $--lg) {
-    padding: 0 $font-size-xl;
-    max-width: $--lg;
-  }
-}
+$grey_blue: #2F495E;
+$light_green: #00C58E;
+$grey: #606F7B;
 
-.row {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-content: space-between;
-  align-items: stretch;
-  @media (min-width: $--md) {
-    flex-direction: row;
-  }
-}
-
-.nWelcome {
-  // margin-top: 80px;
-  padding: 5rem 1rem;
-  z-index: 100;
-  position: relative;
-  box-shadow: $--box-shadow-1;
-  @media (min-width: $--md) {
-    padding: 10rem 0;
-  }
-  &_Content {
-    width: 100%;
-    padding-bottom: 30px;
-    @media (min-width: $--md) {
-      width: 45%;
-      padding-bottom: 0;
-    }
-    &_Title {
-      margin-top: 0;
-      color: $color-text-primary;
-      font-size: $h1-font-size;
-      font-weight: $font-weight-light;
-      line-height: normal;
-      margin-bottom: 15px;
-      &_Primary {
-        color: $color-vue-green;
+.Home__Welcome {
+  padding-bottom: 6rem;
+  &__Text {
+    width: 42%;
+    h1 {
+      color: $grey_blue;
+      font-size: 2.25rem;
+      line-height: 3.25rem;
+      font-weight: 700;
+      margin: 0;
+      span {
+        color: $light_green;
       }
     }
-    &_Subtitle {
-      margin-top: 0;
-      color: $color-text-regular;
-      font-size: $h4-font-size;
-      font-weight: $font-weight-light;
-      line-height: normal;
-      &_Type {
-        display: inline-block;
-        font-weight: $font-weight-semibold;
-        color: $color-vue-green;
-      }
+    h3 {
+      color: $grey;
+      font-size: 1.15rem;
+      line-height: 1.8rem;
+      font-weight: 700;
+      margin: 1.25rem 0;
     }
-    &_Description {
-      margin: 30px 0;
-      font-size: 16px;
-    }
-    &_Links {
-      &_Button {
-        color: $color-text-regular;
-        display: inline-block;
-        padding: 1rem 2rem;
-        text-decoration: none;
-        text-transform: uppercase;
-        letter-spacing: 0.5px;
-        font-weight: $font-weight-bold;
-        box-shadow: $--box-shadow-1;
-        border-radius: 4px;
-        margin-right: 0;
-        margin-bottom: 1rem;
-        background-color: $background-color-lighter;
-        @media (min-width: $--md) {
-          margin-bottom: 0;
-          margin-right: 30px;
-        }
-        &:last-child {
-          margin-right: 0;
-        }
-        &:hover {
-          text-decoration: none;
-          color: $color-text-primary;
-          box-shadow: $--box-shadow-2;
-        }
-        &--green {
-          color: $background-color-lighter;
-          background-color: $color-vue-green;
-          &:hover {
-            color: #fff;
-          }
+    &__Buttons {
+      padding: 1.25rem 0;
+      .nui-button {
+        margin-right: 1rem;
+        .nui-svg-gh {
+          height: 20px;
         }
       }
     }
   }
-  &_Figure {
+  &__Media {
+    width: 40%;
     margin: 0;
-    width: 100%;
-    @media (min-width: $--md) {
-      width: 45%;
-    }
     p {
-      font-style: italic;
-      color: #666;
+      color: $grey;
+      font-size: 0.9rem;
+      text-align: center;
     }
   }
-}
-.fade-enter-active, .fade-leave-active {
-  transition: all .5s;
-}
-.fade-enter,
-.fade-leave-to {
-  opacity: 0;
-}
-.fade-enter {
-  transform: translateX(-5px)
-}
-.fade-leave-to {
-  transform: translateX(5px)
 }
 </style>

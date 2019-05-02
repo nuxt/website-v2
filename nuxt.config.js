@@ -9,7 +9,7 @@ export default {
     ],
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
-      { rel: 'preconnect', href: 'https://www.google-analytics.com' }
+      { rel: 'preconnect', crossorigin: 'crossorigin', href: 'https://www.google-analytics.com' }
     ]
   },
   styleResources: {

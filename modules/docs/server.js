@@ -7,7 +7,7 @@ const { send } = require('micro')
 const marked = require('marked')
 const highlightjs = require('highlight.js')
 const fm = require('front-matter')
-const logger = require('consola').withScope('modules/docs')
+const logger = require('consola').withScope('docs/server')
 const octicon = require('octicons')
 const fetch = require('node-fetch')
 
@@ -261,8 +261,8 @@ function watchFiles(cwd) {
 }
 
 // Server handle request method
-const get = function (url) {
-    // Releases
+function get(url) {
+  // Releases
   if (url === '/releases') {
     return RELEASES
   }
@@ -322,25 +322,51 @@ const get = function (url) {
   return _DOC_FILES_[path]
 }
 
-module.exports = async function startDocsServer(cwd, port) {
-  await getFiles(cwd)
-  await getReleases()
+let server
+
+// Start server
+exports.start = async function start(cwd, port) {
+  if (server) {
+    return
+  }
+
+  await Promise.all([
+    getFiles(cwd),
+    getReleases()
+  ])
+
   if (process.env.NODE_ENV !== 'production') {
     watchFiles(cwd)
   }
 
-  const server = micro(async (req, res) => {
+  server = micro(async (req, res) => {
     res.setHeader('Access-Control-Allow-Origin', '*')
     res.setHeader('Access-Control-Allow-Methods', 'GET')
     res.setHeader('Access-Control-Allow-Headers', 'Content-Type')
     try {
       const data = get(req.url)
       send(res, 200, data)
-    } catch(err) {
+    } catch (err) {
       send(res, 404, err.message)
     }
   })
-  server.listen(port)
+  server.listen = promisify(server.listen)
+  server.close = promisify(server.close)
 
-  return server
+  await server.listen(port)
+
+  server.url = `http://localhost:${port}`
+
+  logger.success(`Docs server listening on ${server.url}`)
+}
+
+// Stop server
+exports.stop = async function stop() {
+  if (!server) {
+    return
+  }
+
+  logger.info(`Stopping docs server...`)
+  await server.close()
+  server = null
 }

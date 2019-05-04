@@ -59,7 +59,11 @@ export default {
     }
   },
   build: {
-    hardSource: true // Add caching for faster initial build
+    hardSource: {
+      info: {
+        level: 'warn' // nuxt/nuxt.js#5653
+      }
+    }
   },
   generate: {
     fallback: true,

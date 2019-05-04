@@ -1,51 +1,43 @@
 const { join } = require('path')
-const fs = require('fs')
-const getPort = require('get-port')
-const degit = require('degit')
-const docsServer = require('./server')
-const logger = require('consola').withScope('docs/module')
+const DocsServer = require('./server')
+// const logger = require('consola').withScope('docs/module')
 
 module.exports = async function (moduleOptions) {
-  const options = { ...this.options.docs, ...moduleOptions }
-
+  const isDev = this.options.dev
   const isGenerate = this.options._generate
   const isStart = this.options._start
-  const runServer = this.options.dev || isGenerate || isStart
+  const isBuild = this.options._build
+  const runServer = isDev || isGenerate || isStart
 
-  // Port
-  if (!options.port) {
-    options.port = await getPort()
+  const options = {
+    port: 3001,
+    docsDir: join(isDev ? this.options.srcDir : this.options.buildDir, 'docs'),
+    repo: 'nuxt/docs',
+    watch: isDev,
+    ...this.options.docs,
+    ...moduleOptions
   }
 
-  // Docs Dir
-  if (!options.docsDir) {
-    options.docsDir = this.options.dev
-      ? join(this.options.srcDir, 'docs')
-      : join(this.options.buildDir, 'docs')
-  }
-
-  // Clone repo
-  if (!fs.existsSync(options.docsDir)) {
-    logger.info(`Cloning nuxt/docs into ${options.docsDir}`)
-    await degit('nuxt/docs', { force: true, cache: false }).clone(options.docsDir)
-  }
-
-  // Start server
+  // Start docs server
   if (runServer) {
-    await docsServer.start(options.docsDir, options.port)
+    const docsServer = new DocsServer(options)
+    await docsServer.cloneRepo()
+    await docsServer.init()
+    await docsServer.listen()
     if (isGenerate) {
-      // Add hook to close server after generate
-      this.nuxt.hook('generate:done', () => docsServer.stop())
+      this.nuxt.hook('generate:done', () => docsServer.close())
     }
   }
 
-  // Add runtime plugin
-  this.addPlugin({
-    src: join(__dirname, 'plugin.js'),
-    options: {
-      url: `http://localhost:${options.port}`
-    }
-  })
+  if (isBuild) {
+    // Add runtime plugin
+    this.addPlugin({
+      src: join(__dirname, 'plugin.js'),
+      options: {
+        url: `http://localhost:${options.port}`
+      }
+    })
+  }
 
   // Hook generator to extract routes
   this.nuxt.hook('generate:before', async (generator) => {

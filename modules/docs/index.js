@@ -1,6 +1,6 @@
 const { join } = require('path')
 const DocsServer = require('./server')
-// const logger = require('consola').withScope('docs/module')
+const logger = require('consola').withScope('docs/module')
 
 module.exports = async function (moduleOptions) {
   const isDev = this.options.dev
@@ -64,6 +64,18 @@ module.exports = async function (moduleOptions) {
         await generator.generateRoute({ route, payload: null })
       })
       await Promise.all(promises)
+    })
+
+    // Profile generate
+    const startTime = new Date()
+    let count = 0
+    this.nuxt.hook('generate:routeCreated', () => {
+      count++
+    })
+    this.nuxt.hook('generate:done', () => {
+      const time = (new Date() - startTime) / 1000
+      const rps = count / time
+      logger.info(`Generated ${count} routes in ${time} sec (${rps} r/s)`)
     })
   })
 }

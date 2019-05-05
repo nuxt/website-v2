@@ -67,10 +67,15 @@ module.exports = async function (moduleOptions) {
     })
 
     // Profile generate
-    const startTime = new Date()
-    let count = 0
+    let startTime
+    let count
     this.nuxt.hook('generate:routeCreated', () => {
-      count++
+      if (!startTime) {
+        startTime = new Date()
+        count = 0
+      } else {
+        count++
+      }
     })
     this.nuxt.hook('generate:done', () => {
       const time = (new Date() - startTime) / 1000

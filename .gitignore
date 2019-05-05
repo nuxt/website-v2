@@ -13,7 +13,7 @@ newrelic_agent.log
 .DS_STORE
 
 # docs
-docs
+/docs
 
 # @nuxtjs/pwa
 sw.*

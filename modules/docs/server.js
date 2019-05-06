@@ -337,7 +337,7 @@ module.exports = async function startDocsServer(cwd, port) {
       const data = get(req.url)
       send(res, 200, data)
     } catch(err) {
-      send(res, 404, err.message)
+      send(res, 404, { message: err.message })
     }
   })
   server.listen(port)

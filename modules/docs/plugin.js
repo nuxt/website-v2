@@ -24,7 +24,14 @@ export default async (ctx, inject) => {
   }
   const $docs = {
     async get(path) {
-      return await fetch('<%= options.url %>' + path).then(res => res.json())
+      return await fetch('<%= options.url %>' + path).then(response => {
+        if (!response.ok) {
+          const error = new Error(response.statusText)
+          error.response = response
+          throw error
+        }
+        return response.json()
+      })
     }
   }
   inject('docs', $docs)

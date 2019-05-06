@@ -12,12 +12,16 @@
     <div class="nui-footer-options">
       <nui-container>
         <nui-row>
-          <nui-select class="nui-select-theme" :options="themes" v-model="selectedTheme"/>
+          <div class="nui-footer-options-select">
+            <nui-select :options="themes" v-model="selectedTheme"/>
+          </div>
           <a class="nui-footer-options-logo-link" href="/" @click.prevent="$router.push('/')" @click.right.stop.prevent="$router.push('/design')">
             <h1>NUXTJS</h1>
             <nui-logo/>
           </a>
-          <nui-select class="nui-select-theme" :options="langs" v-model="selectedLang"/>
+          <div class="nui-footer-options-select">
+            <nui-select :options="langs" v-model="selectedLang" icon="globe"/>
+          </div>
         </nui-row>
       </nui-container>
     </div>
@@ -38,12 +42,12 @@ export default {
         { name: 'Light', value: 'light', icon: 'sun' },
         { name: 'Dark', value: 'dark', icon: 'moon' }
       ],
-      selectedTheme: 'light',
+      selectedTheme: { name: 'Light', value: 'light', icon: 'sun' },
       langs: [
-        { name: 'English', value: 'en', icon: 'globe' },
-        { name: 'Français', value: 'fr', icon: 'globe' }
+        { name: 'English', value: 'en' },
+        { name: 'Français', value: 'fr' }
       ],
-      selectedLang: 'en'
+      selectedLang: { name: 'English', value: 'en' }
     }
   },
   components: {
@@ -67,16 +71,25 @@ $light_grey: #F1F5F8;
   box-shadow: 0 -2px 4px 0 rgba(10, 31, 68, 0.08);
   &-infos {
     padding: 4rem 0;
-    nav:nth-child(2) {
-      text-align: center;
-    }
-    nav:nth-child(3) {
-      text-align: right;
+    nav {
+      width: 33%;
+      &:nth-child(2) {
+        text-align: center;
+      }
+      &:nth-child(3) {
+        text-align: right;
+      }
     }
   }
   &-options {
     border-top: 1px solid $silver;
     padding: 1.5rem 0;
+    &-select {
+      width: 40%;
+      &:last-child {
+        text-align: right;
+      }
+    }
     &-logo-link {
       display: inline-block;
       padding-top: 0.5rem;

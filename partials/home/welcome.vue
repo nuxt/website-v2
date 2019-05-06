@@ -3,14 +3,11 @@
     <div class="container">
       <div class="row">
         <div class="nWelcome_Content">
-          <h1 class="nWelcome_Content_Title" v-html="$store.state.homepage.welcome.attrs.title">
-            <!-- {{ $store.state.lang.homepage.title }} -->
-          </h1>
+          <h1 class="nWelcome_Content_Title" v-html="$store.state.homepage.welcome.attrs.title"></h1>
           <h4 class="nWelcome_Content_Subtitle">
             {{ $store.state.lang.homepage.welcome.app_types_prefix }}<transition name="fade" mode="out-in"><span class="nWelcome_Content_Subtitle_Type" v-for="(appType, index) of appTypes" :key="appType" v-if="index === current">{{ appType }}</span></transition>{{ $store.state.lang.homepage.welcome.app_types_suffix }}
           </h4>
-          <p class="nWelcome_Content_Description" v-html="$store.state.homepage.welcome.body">
-          </p>
+          <p class="nWelcome_Content_Description" v-html="$store.state.homepage.welcome.body"></p>
           <div class="nWelcome_Content_Links">
             <nuxt-link class="nWelcome_Content_Links_Button nWelcome_Content_Links_Button--green" to="/guide/installation">
               {{ $store.state.lang.links.get_started }}

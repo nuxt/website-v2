@@ -113,9 +113,6 @@ class DocsServer {
   async getFiles() {
     logger.info('Building files...')
 
-    // Get all docs files
-    await this.getDocFiles()
-
     // Construct the doc menu
     await this.getMenu()
 
@@ -124,6 +121,9 @@ class DocsServer {
 
     // Construct the homepage object
     await this.getHomepage()
+
+    // Get all docs files
+    await this.getDocFiles()
   }
 
   // Get all docs files

@@ -1,52 +1,46 @@
 const { join } = require('path')
-const getPort = require('get-port')
-const startDocsServer = require('./server')
-const degit = require('degit')
-const logger = require('consola').withScope('modules/docs')
-
-const startServer = async function (path, port) {
-  const server = await startDocsServer(path, port)
-
-  logger.success(`Docs server listening on http://localhost:${port}`)
-  return server
-}
+const DocsServer = require('./server')
+const logger = require('consola').withScope('docs/module')
 
 module.exports = async function (moduleOptions) {
-  const options = Object.assign({}, this.options.docs, moduleOptions)
+  const isDev = this.options.dev
+  const isGenerate = this.options._generate
+  const isStart = this.options._start
+  const isBuild = this.options._build
+  const runServer = isDev || isGenerate || isStart
 
-  let port = options.port
-  if (!port) {
-    port = await getPort()
+  const options = {
+    port: 3001,
+    docsDir: join(isDev ? this.options.srcDir : this.options.buildDir, 'docs'),
+    repo: 'nuxt/docs',
+    watch: isDev,
+    ...this.options.docs,
+    ...moduleOptions
   }
-  this.addPlugin({
-    src: join(__dirname, 'plugin.js'),
-    options: {
-      url: `http://localhost:${port}`
+
+  // Start docs server
+  if (runServer) {
+    const docsServer = new DocsServer(options)
+    await docsServer.cloneRepo()
+    await docsServer.init()
+    await docsServer.listen()
+    if (isGenerate) {
+      this.nuxt.hook('generate:done', () => docsServer.close())
     }
-  })
+  }
 
-  this.nuxt.hook('listen', () => startServer(join(this.options.srcDir, 'docs'), port))
-  // We need to run the server in order to serve the docs when running `nuxt generate`
+  if (isBuild) {
+    // Add runtime plugin
+    this.addPlugin({
+      src: join(__dirname, 'plugin.js'),
+      options: {
+        url: `http://localhost:${options.port}`
+      }
+    })
+  }
+
+  // Hook generator to extract routes
   this.nuxt.hook('generate:before', async (generator) => {
-    let server
-
-    // Wait for build to be done before
-    this.nuxt.hook('build:done', async () => {
-      // For generate, clone the repo in `.nuxt/docs` with degit
-      const path = join(this.options.buildDir, 'docs')
-      logger.info(`Cloning nuxt/docs into ${path}`)
-      await degit('nuxt/docs', { force: true, cache: false }).clone(path)
-      server = await startServer(path, port)
-    })
-
-    // Add hook when closing the server
-    this.nuxt.hook('generate:done', () => {
-      return new Promise((resolve) => {
-        logger.info(`Stopping docs server...`)
-        server.close(resolve)
-      })
-    })
-
     // Add hook for extending routes
     this.nuxt.hook('generate:extendRoutes', (routes) => {
       // Empty array
@@ -56,6 +50,7 @@ module.exports = async function (moduleOptions) {
     })
 
     const routes = {}
+
     // Add hook when a page is generated
     this.nuxt.hook('vue-renderer:ssr:context', async (context) => {
       routes[context.url] = true
@@ -69,6 +64,23 @@ module.exports = async function (moduleOptions) {
         await generator.generateRoute({ route, payload: null })
       })
       await Promise.all(promises)
+    })
+
+    // Profile generate
+    let startTime
+    let count
+    this.nuxt.hook('generate:routeCreated', () => {
+      if (!startTime) {
+        startTime = new Date()
+        count = 0
+      } else {
+        count++
+      }
+    })
+    this.nuxt.hook('generate:done', () => {
+      const time = (new Date() - startTime) / 1000
+      const rps = count / time
+      logger.info(`Generated ${count} routes in ${time} sec (${rps} r/s)`)
     })
   })
 }

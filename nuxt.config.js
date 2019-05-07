@@ -24,12 +24,11 @@ export default {
   ],
   modules: [
     ['~/modules/docs/', { port: 3001 }],
+    '~/modules/static/',
     // https://github.com/nuxt-community/style-resources-module
     '@nuxtjs/style-resources',
     // https://github.com/Developmint/nuxt-svg-loader/
     'nuxt-svg-loader',
-    // https://github.com/DreaMinder/nuxt-payload-extractor
-    'nuxt-payload-extractor',
     // https://pwa.nuxtjs.org
     '@nuxtjs/pwa'
   ],
@@ -49,7 +48,6 @@ export default {
   },
   loading: { color: '#41B883' },
   router: {
-    middleware: ['static'],
     scrollBehavior(to, from, savedPosition) {
       // savedPosition is only available for popstate navigations (back button)
       if (savedPosition) {

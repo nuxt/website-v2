@@ -1,24 +1,27 @@
 <template>
   <header class="nui-header">
-    <nui-container class="nui-header-container">
-      <div class="nui-header-logo">
-        <a class="nui-header-logo-link" href="/" @click.prevent="$router.push('/')" @click.right.stop.prevent="$router.push('/design')">
-          <h1>NUXTJS</h1>
-          <nui-logo/>
-        </a>
-      </div>
-      <nav class="nui-header-nav">
-        <nui-links/>
-      </nav>
-      <div class="nui-header-search">
-        <nui-search/>
-      </div>
+    <nui-container>
+      <nui-row class="nui-header-row">
+        <div class="nui-header-logo">
+          <a class="nui-header-logo-link" href="/" @click.prevent="$router.push('/')" @click.right.stop.prevent="$router.push('/design')">
+            <h1>NUXTJS</h1>
+            <nui-logo/>
+          </a>
+        </div>
+        <nav class="nui-header-nav">
+          <nui-links/>
+        </nav>
+        <div class="nui-header-search">
+          <nui-search/>
+        </div>
+      </nui-row>
     </nui-container>
   </header>
 </template>
 
 <script>
 import nuiContainer from '@/components/ui/Container'
+import nuiRow from '@/components/ui/Row'
 import nuiLogo from '@/components/svg/Nuxtjs'
 import nuiLinks from '@/components/partials/HeaderLinks'
 import nuiSearch from '@/components/partials/HeaderSearch'
@@ -26,6 +29,7 @@ import nuiSearch from '@/components/partials/HeaderSearch'
 export default {
   components: {
     nuiContainer,
+    nuiRow,
     nuiLogo,
     nuiLinks,
     nuiSearch
@@ -36,9 +40,10 @@ export default {
 <style lang="scss">
 .nui-header {
   padding: 2rem 0;
+  position: relative;
   z-index: 10;
-  // box-shadow: 0 2px 4px 0 rgba(0,0,0,0.10);
-  &-container {
+  background-color: #fff;
+  &-row {
     align-items: center;
   }
   &-logo {

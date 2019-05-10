@@ -15,6 +15,7 @@ $screens-xl: 1280px;
   padding: 0 1rem;
   margin: 0 auto;
   display: flex;
+  flex-direction: column;
   justify-content: space-between;
   @media (min-width: $screens-sm) {
     max-width: $screens-sm;

@@ -68,7 +68,9 @@ $silver: #DAE1E9;
 $light_grey: #F1F5F8;
 
 .nui-footer {
-  box-shadow: 0 -2px 4px 0 rgba(10, 31, 68, 0.08);
+  z-index: 10;
+  position: relative;
+  box-shadow: 0 0 8px 0 rgba(10, 31, 68, 0.08);
   &-infos {
     padding: 4rem 0;
     nav {

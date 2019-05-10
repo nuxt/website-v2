@@ -1,10 +1,9 @@
 <template>
   <div class="Home">
     <home-welcome/>
-    <section>
-      <br><br><br><br><br>Wtf<br><br><br><br><br>
-    </section>
-    <!-- <s-why/> -->
+    <home-why/>
+    <partial-partners/>
+    <br>
     <!-- <s-modes/>
     <s-codesandbox/>
     <s-backers/> -->
@@ -22,7 +21,8 @@ import nuiSvgPlay from '@/components/svg/Play.vue'
 import nuiSvgGh from '@/components/svg/Github.vue'
 
 import homeWelcome from '@/partials/home/welcome'
-import sWhy from '@/partials/home/why'
+import homeWhy from '@/partials/home/why'
+import partialPartners from '@/components/partials/Partners'
 
 export default {
   components: {
@@ -34,7 +34,8 @@ export default {
     nuiSvgPlay,
     nuiSvgGh,
     homeWelcome,
-    sWhy,
+    homeWhy,
+    partialPartners,
     sModes: () => import('@/partials/home/modes'),
     sCodesandbox: () => import('@/partials/home/codesandbox'),
     sBackers: () => import('@/partials/home/backers'),

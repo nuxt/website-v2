@@ -31,7 +31,7 @@ $light_green: #00C58E;
     padding: 1rem 0.5rem;
   }
   &-link {
-    font-size: 1rem;
+    font-size: 1.1rem;
     font-weight: 700;
     text-transform: uppercase;
     padding: 0.5rem 1rem;

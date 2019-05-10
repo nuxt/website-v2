@@ -66,6 +66,8 @@ html {
   font-weight: 500;
 }
 .App {
+  position: relative;
+  z-index: 0;
   // margin-top: 60px;
   // @media (min-width: 991px) {
   //   margin-top: 80px;

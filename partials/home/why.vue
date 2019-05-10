@@ -1,38 +1,48 @@
 <template>
-  <section class="nWhy">
-    <div class="container">
-      <h2 class="nWhy_Title"><span>{{ $store.state.homepage.why.attrs.title }}</span></h2>
-      <div class="row">
-        <div class="nWhy_Block">
-          <i-performant/>
-          <h4 class="nWhy_Block_Title">{{ $store.state.homepage.why_performant.attrs.title }}</h4>
-          <p class="nWhy_Block_Description" v-html="$store.state.homepage.why_performant.body">
-          </p>
-        </div>
-        <div class="nWhy_Block">
-          <i-modular/>
-          <h4 class="nWhy_Block_Title">{{ $store.state.homepage.why_modular.attrs.title }}</h4>
-          <p class="nWhy_Block_Description" v-html="$store.state.homepage.why_modular.body">
-          </p>
-        </div>
-        <div class="nWhy_Block">
-          <i-enjoyable/>
-          <h4 class="nWhy_Block_Title">{{ $store.state.homepage.why_enjoyable.attrs.title }}</h4>
-          <p class="nWhy_Block_Description" v-html="$store.state.homepage.why_enjoyable.body">
-          </p>
-        </div>
+  <section class="Home__Why">
+    <nui-container>
+      <div>
+        <nui-title>
+          Why NUXT<span>JS</span>
+        </nui-title>
       </div>
-    </div>
+      <nui-row>
+        <div class="Home__Why__Section">
+          <i-performant/>
+          <h4 class="Home__Why__Section__Title">{{ $store.state.homepage.why_performant.attrs.title }}</h4>
+          <p class="Home__Why__Section__Description" v-html="$store.state.homepage.why_performant.body">
+          </p>
+        </div>
+        <div class="Home__Why__Section">
+          <i-modular/>
+          <h4 class="Home__Why__Section__Title">{{ $store.state.homepage.why_modular.attrs.title }}</h4>
+          <p class="Home__Why__Section__Description" v-html="$store.state.homepage.why_modular.body">
+          </p>
+        </div>
+        <div class="Home__Why__Section">
+          <i-enjoyable/>
+          <h4 class="Home__Why__Section__Title">{{ $store.state.homepage.why_enjoyable.attrs.title }}</h4>
+          <p class="Home__Why__Section__Description" v-html="$store.state.homepage.why_enjoyable.body">
+          </p>
+        </div>
+      </nui-row>
+    </nui-container>
   </section>
 </template>
 
 <script>
-import iPerformant from '@/components/icons/performant'
-import iModular from '@/components/icons/modular'
-import iEnjoyable from '@/components/icons/enjoyable'
+import nuiContainer from '@/components/ui/Container'
+import nuiRow from '@/components/ui/Row'
+import nuiTitle from '@/components/ui/Title'
+import iPerformant from '@/components/svg/Rocket'
+import iModular from '@/components/svg/Puzzle'
+import iEnjoyable from '@/components/svg/Dancers'
 
 export default {
   components: {
+    nuiContainer,
+    nuiRow,
+    nuiTitle,
     iPerformant,
     iModular,
     iEnjoyable
@@ -41,51 +51,28 @@ export default {
 </script>
 
 <style lang="scss">
-.nWhy {
-  position: relative;
-  background-color: $background-color-light;
-  padding: 5rem 1rem;
-  @media (min-width: $--md) {
-    padding: 8rem 0;
-  }
-  &_Title {
-    text-align: center;
-    margin-top: 0;
-    color: $color-text-primary;
-    font-size: $h2-font-size;
-    font-weight: $font-weight-regular;
-    line-height: normal;
-    margin-bottom: 6rem;
-    span {
-      padding-bottom: 10px;
-      border-bottom: 4px solid $color-vue-green;
-      border-radius: 4px;
+$grey_blue: #2F495E;
+$light_green: #00C58E;
+$grey: #606F7B;
+
+.Home__Why {
+  color: $grey_blue;
+  text-align: center;
+  padding: 5rem 0;
+  &__Section {
+    width: 25%;
+    &__Title {
+      font-weight: 700;
+      margin: 0;
+      padding: 2rem 0;
     }
-  }
-  &_Block {
-    width: 100%;
-    padding: 1rem 0;
-    text-align: center;
-    @media (min-width: $--md) {
-      width: 30%;
-      padding: 0;
-    }
-    .iPerformant, .iModular, .iEnjoyable {
-      height: 100px;
-      display: inline-block;
-      margin-bottom: 15px;
-    }
-    .iEnjoyable {
-      padding-left: 30px;
-    }
-    &_Title {
-      color: $color-text-regular;
-      font-size: $h4-font-size;
-      font-weight: $font-weight-regular;
-    }
-    &_Description {
+    &__Description {
       text-align: justify;
-      font-size: 16px;
+      color: $grey;
+      font-weight: 700;
+      margin: 0;
+      line-height: 1.8rem;
+      font-size: 1.1rem;
     }
   }
 }

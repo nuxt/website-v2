@@ -3,14 +3,14 @@
     <nui-container>
       <nui-row>
         <div class="Home__Welcome__Text">
-          <h1>
+          <h1 class="Home__Welcome__Text__Title">
             The Vue.js Framework for <br>
             <!-- <span>Universals Applications</span> -->
             <!-- {{ $store.state.lang.homepage.welcome.app_types_prefix }} -->
             <span>{{ appType }}</span>
             <!-- {{ $store.state.lang.homepage.welcome.app_types_suffix }} -->
           </h1>
-          <h3>An open-source project under MIT license that make your Vue.js Application development enjoyable.</h3>
+          <h3 class="Home__Welcome__Text__Description">An open-source project under MIT license that make your Vue.js Application development enjoyable.</h3>
           <div class="Home__Welcome__Text__Buttons">
             <nui-button to="/" green>
               <nui-svg-play/>
@@ -82,7 +82,7 @@ $grey: #606F7B;
   padding-bottom: 6rem;
   &__Text {
     width: 42%;
-    h1 {
+    &__Title {
       color: $grey_blue;
       font-size: 2.25rem;
       line-height: 3.25rem;
@@ -92,7 +92,7 @@ $grey: #606F7B;
         color: $light_green;
       }
     }
-    h3 {
+    &__Description {
       color: $grey;
       font-size: 1.15rem;
       line-height: 1.8rem;

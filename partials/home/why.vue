@@ -67,11 +67,13 @@ $grey: #606F7B;
       padding: 2rem 0;
     }
     &__Description {
-      text-align: justify;
+      // text-align: justify;
+      // font-family: "Source Sans Pro", "Helvetica Neue", 'Segoe UI','Roboto', 'Oxygen','Ubuntu','Cantarell','Fira Sans','Droid Sans', 'Helvetica Neue',sans-serif;
+      // -webkit-font-smoothing: antialiased;
       color: $grey;
-      font-weight: 700;
+      font-weight: 500;
       margin: 0;
-      line-height: 1.8rem;
+      line-height: 1.7rem;
       font-size: 1.1rem;
     }
   }

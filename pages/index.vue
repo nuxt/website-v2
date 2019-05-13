@@ -3,43 +3,28 @@
     <home-welcome/>
     <home-why/>
     <partial-partners/>
-    <br>
-    <!-- <s-modes/>
-    <s-codesandbox/>
-    <s-backers/> -->
-    <!-- <nuxt-footer/> -->
+    <home-features/>
+    <home-showcase/>
+    <home-modes/>
   </div>
 </template>
 
 <script>
-import nuiHero from '@/components/ui/Hero'
-import nuiContainer from '@/components/ui/Container'
-import nuiRow from '@/components/ui/Row'
-import nuiMedia from '@/components/ui/Media.vue'
-import nuiButton from '@/components/ui/Button.vue'
-import nuiSvgPlay from '@/components/svg/Play.vue'
-import nuiSvgGh from '@/components/svg/Github.vue'
-
 import homeWelcome from '@/partials/home/welcome'
 import homeWhy from '@/partials/home/why'
 import partialPartners from '@/components/partials/Partners'
+import homeFeatures from '@/partials/home/features'
+import homeShowcase from '@/partials/home/showcase'
+import homeModes from '@/partials/home/modes'
 
 export default {
   components: {
-    nuiHero,
-    nuiContainer,
-    nuiRow,
-    nuiMedia,
-    nuiButton,
-    nuiSvgPlay,
-    nuiSvgGh,
     homeWelcome,
     homeWhy,
     partialPartners,
-    sModes: () => import('@/partials/home/modes'),
-    sCodesandbox: () => import('@/partials/home/codesandbox'),
-    sBackers: () => import('@/partials/home/backers'),
-    NuxtFooter: () => import('@/components/Footer.vue')
+    homeFeatures,
+    homeShowcase,
+    homeModes
   },
   head() {
     return {

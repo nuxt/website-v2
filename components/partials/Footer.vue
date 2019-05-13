@@ -70,6 +70,7 @@ $light_grey: #F1F5F8;
 .nui-footer {
   z-index: 10;
   position: relative;
+  background-color: #fff;
   box-shadow: 0 0 8px 0 rgba(10, 31, 68, 0.08);
   &-infos {
     padding: 4rem 0;

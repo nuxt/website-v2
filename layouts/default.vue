@@ -61,9 +61,12 @@ export default {
 </script>
 
 <style lang="scss">
+$light_grey: #F1F5F8;
+
 html {
   font-family: 'Quicksand';
   font-weight: 500;
+  background-color: $light_grey;
 }
 .App {
   position: relative;

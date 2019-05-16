@@ -37,7 +37,7 @@ class DocsServer {
     ])
 
     if (this.watch) {
-      this.watchFiles()
+      this.watchFiles(this.docsDir)
     }
   }
 

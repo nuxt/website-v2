@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="font-sans">
     <nui-header/>
     <div class="App" :class="{'App--hidden': visible}">
       <!-- <event-info/> -->
@@ -10,7 +10,7 @@
 </template>
 
 <script>
-import nuiHeader from '@/components/partials/Header'
+import nuiHeader from '@/components/nui/partials/Header'
 import nuiFooter from '@/components/partials/Footer'
 import EventInfo from '~/components/EventInfo.vue'
 
@@ -63,11 +63,11 @@ export default {
 <style lang="scss">
 $light_grey: #F1F5F8;
 
-html {
-  font-family: 'Quicksand';
-  font-weight: 500;
-  background-color: $light_grey;
-}
+// html {
+//   font-family: 'Quicksand';
+//   font-weight: 500;
+//   background-color: $light_grey;
+// }
 .App {
   position: relative;
   z-index: 0;

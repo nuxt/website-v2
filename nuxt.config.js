@@ -4,7 +4,7 @@ import _ from 'lodash'
 const locale = process.env.NUXT_LOCALE || 'en'
 
 export default {
-  modern: 'client',
+  // modern: 'client',
   head: {
     meta: [
       { charset: 'utf-8' },
@@ -18,9 +18,9 @@ export default {
     ]
   },
   css: [
-    'normalize.css',
-    'highlight.js/styles/github.css',
-    '~/assets/scss/main.scss'
+    // 'normalize.css',
+    // 'highlight.js/styles/github.css',
+    // '~/assets/scss/main.scss'
   ],
   modules: [
     // https://github.com/nuxt-community/style-resources-module

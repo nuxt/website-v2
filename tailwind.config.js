@@ -1,10 +1,22 @@
+const defaultTheme = require('tailwindcss/defaultTheme')
+
 module.exports = {
   theme: {
-    fill: theme => ({
-      'red': theme('colors.red.500'),
-      'green': theme('colors.green.500'),
-      'blue': theme('colors.blue.500'),
-    })
+    extend: {
+      fontFamily: {
+        sans: [
+          'Quicksand',
+          ...defaultTheme.fontFamily.sans,
+        ]
+      },
+      colors: {
+        nuxt: {
+          gray: '#2F495E',
+          lightgreen: '#00C58E',
+          green: '#108775'
+        }
+      }
+    }
   },
   variants: {},
   plugins: []

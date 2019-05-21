@@ -27,6 +27,7 @@ export default {
     '@nuxtjs/style-resources',
     // https://github.com/Developmint/nuxt-svg-loader/
     'nuxt-svg-loader',
+    '@nuxtjs/tailwindcss'
     // https://github.com/DreaMinder/nuxt-payload-extractor
     // 'nuxt-payload-extractor'
   ],

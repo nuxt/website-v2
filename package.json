@@ -5,6 +5,7 @@
   "main": "index.js",
   "dependencies": {
     "@nuxtjs/style-resources": "^0.1.1",
+    "@nuxtjs/tailwindcss": "0.0.3",
     "axios": "^0.18.0",
     "express": "^4.16.4",
     "highlight.js": "^9.13.1",

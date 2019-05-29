@@ -1,5 +1,3 @@
-import 'whatwg-fetch'
-
 export default ({ store }) => {
   window.onNuxtReady(async () => {
     if (await adsBlocked()) store.commit('setAdBlocked', true)

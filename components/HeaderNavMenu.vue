@@ -40,27 +40,27 @@ export default {
         {
           name: this.$store.state.lang.links.github,
           path: 'https://github.com/nuxt',
-          target: '_blank'
+          blank: true
         },
         {
           name: this.$store.state.lang.links.twitter,
           path: 'https://twitter.com/nuxt_js',
-          target: '_blank'
+          blank: true
         },
         {
           name: this.$store.state.lang.links.chat,
           path: 'https://discord.nuxtjs.org',
-          target: '_blank'
+          blank: true
         },
         {
           name: this.$store.state.lang.links.vuejs,
           path: 'https://vuejs.org',
-          target: '_blank'
+          blank: true
         },
         {
           name: this.$store.state.lang.links.vue_jobs,
           path: 'https://vuejobs.com/?ref=nuxtjs',
-          target: '_blank'
+          blank: true
         }
       ]
     }

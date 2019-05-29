@@ -17,7 +17,7 @@ export default {
     }
   },
   mounted() {
-    if (this.$store.state.locale === 'en') {
+    if (['en', 'fr'].indexOf(this.$store.state.locale) !== -1 && this.$refs.codefundads) {
       window.addEventListener('codefund', this.cardbonFallback)
       const script = document.createElement('script')
       script.setAttribute('type', 'text/javascript')
@@ -25,7 +25,7 @@ export default {
       script.setAttribute('id', '_codefund_ad_js')
       try {
         this.$refs.codefundads.appendChild(script)
-      }catch(e){
+      } catch(e){
         // In case codefund is *whyever* not available, the page will return a 500 if we don't catch the error
         console.error(e)
       }
@@ -36,7 +36,7 @@ export default {
   },
   methods: {
     cardbonFallback(event) {
-      if (event.detail.status !== 'ok') {
+      if (event && event.detail && event.detail.status !== 'ok') {
         // Render Carbon Ad
         this.displayCarbon = true
       }

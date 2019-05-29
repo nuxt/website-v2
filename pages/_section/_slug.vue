@@ -1,27 +1,32 @@
 <template>
-  <div>
-    <code-fund-ads :key="$route.params.slug" />
-    <html-parser :content="body" />
-    <contribute :doc-link="docLink" />
-  </div>
+  <nui-article>
+    <nui-ads :key="$route.params.slug" class="float-right ml-8 mb-8 shadow"/>
+    <h1>{{ attrs.title }}</h1>
+    <responsive-video v-if="attrs.youtube" :src="attrs.youtube"/>
+    <html-parser :content="body"/>
+    <contribute :doc-link="docLink"/>
+  </nui-article>
 </template>
 
 <script>
+import nuiArticle from '@/components/nui/commons/Article'
+import nuiAds from '@/components/nui/partials/Ads'
+
 import axios from 'axios'
-import CodeFundAds from '~/components/CodeFundAds.vue'
+import ResponsiveVideo from '~/components/ResponsiveVideo.vue'
 import HtmlParser from '~/components/HtmlParser.vue'
 import Contribute from '~/components/Contribute.vue'
 
 export default {
-  async asyncData({ route, store, error }) {
+  async asyncData({ params, store, error }) {
     // Default data
     let data = {
       attrs: {},
       body: '',
       docLink: ''
     }
-    const slug = route.params.slug || 'index'
-    const path = `/${store.state.lang.iso}/api/${slug}`
+    const slug = params.slug || 'index'
+    const path = `/${store.state.lang.iso}/${params.section}/${slug}`
     let res
     try {
       res = await axios.get(store.state.apiURI + path)
@@ -54,7 +59,9 @@ export default {
     }
   },
   components: {
-    CodeFundAds,
+    nuiArticle,
+    nuiAds,
+    ResponsiveVideo,
     HtmlParser,
     Contribute
   }

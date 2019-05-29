@@ -16,7 +16,7 @@ export default {
     }
   },
   mounted() {
-    if (this.$store.state.locale === 'en' && this.$refs.codefundads) {
+    if (['en', 'fr'].indexOf(this.$store.state.locale) !== -1 && this.$refs.codefundads) {
       window.addEventListener('codefund', this.cardbonFallback)
       const script = document.createElement('script')
       script.setAttribute('type', 'text/javascript')

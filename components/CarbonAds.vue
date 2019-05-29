@@ -1,7 +1,5 @@
 <template>
-  <div class="carbon_ad" ref="carbonads">
-    <a href="https://vuejobs.com/?ref=nuxtjs" target="_blank" rel="noopener" class="vuejobs" v-if="$store.state.locale !== 'en'"></a>
-  </div>
+  <div class="carbon_ad" ref="carbonads"></div>
 </template>
 
 <script>

@@ -1,5 +1,5 @@
 <template>
-  <div class="font-sans">
+  <div class="font-sans font-medium bg-gray-100 text-nuxt-gray">
     <nui-header/>
     <div class="App" :class="{'App--hidden': visible}">
       <!-- <event-info/> -->
@@ -61,13 +61,6 @@ export default {
 </script>
 
 <style lang="scss">
-$light_grey: #F1F5F8;
-
-// html {
-//   font-family: 'Quicksand';
-//   font-weight: 500;
-//   background-color: $light_grey;
-// }
 .App {
   position: relative;
   z-index: 0;

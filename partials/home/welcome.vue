@@ -1,41 +1,43 @@
 <template>
-  <nui-hero class="Home__Welcome">
+  <nui-hero class="pb-24">
     <nui-container>
-      <nui-row>
-        <div class="Home__Welcome__Text">
-          <h1 class="Home__Welcome__Text__Title">
+      <div class="flex justify-between">
+        <div class="lg:w-1/2 xl:w-5/12 text-center lg:text-left">
+          <h1 class="text-3xl xl:text-4xl text-nuxt-gray font-medium leading-normal">
             The Vue.js Framework for <br>
             <!-- <span>Universals Applications</span> -->
             <!-- {{ $store.state.lang.homepage.welcome.app_types_prefix }} -->
-            <span>{{ appType }}</span>
+            <span class="text-nuxt-lightgreen">{{ appType }}</span>
             <!-- {{ $store.state.lang.homepage.welcome.app_types_suffix }} -->
           </h1>
-          <h3 class="Home__Welcome__Text__Description">An open-source project under MIT license that make your Vue.js Application development enjoyable.</h3>
-          <div class="Home__Welcome__Text__Buttons">
+          <h3 class="xl:text-lg text-gray-600 font-medium leading-relaxed my-4">An open-source project under MIT license that make your Vue.js Application development enjoyable.</h3>
+          <div class="py-4">
             <nui-button to="/" green>
               <nui-svg-play/>
               get started
             </nui-button>
             <nui-button to="/">
               <nui-svg-gh/>
-              19K+ github stars
+              20K+ github stars
             </nui-button>
+            <nuxt-link to="/" class="px-4 py-3 rounded font-medium bg-gray-200 shadow text-gray-800 uppercase">
+            Test bouton
+            </nuxt-link>
           </div>
         </div>
-        <figure class="Home__Welcome__Media">
-          <nui-media src="https://player.vimeo.com/video/311756540" style="margin: 0;"/>
-          <p v-html="$store.state.homepage.welcome_figure.body"></p>
+        <figure class="hidden lg:block lg:w-5/12">
+          <nui-media src="https://player.vimeo.com/video/311756540"/>
+          <p class="font-medium py-2 text-xs xl:text-sm text-center text-gray-600" v-html="$store.state.homepage.welcome_figure.body"></p>
         </figure>
-      </nui-row>
+      </div>
     </nui-container>
   </nui-hero>
 </template>
 
 <script>
-import nuiHero from '@/components/ui/Hero'
-import nuiContainer from '@/components/ui/Container'
-import nuiRow from '@/components/ui/Row'
-import nuiMedia from '@/components/ui/Media.vue'
+import nuiHero from '@/components/nui/commons/Hero'
+import nuiContainer from '@/components/nui/commons/Container'
+import nuiMedia from '@/components/nui/commons/Media.vue'
 import nuiButton from '@/components/ui/Button.vue'
 import nuiSvgPlay from '@/components/svg/Play.vue'
 import nuiSvgGh from '@/components/svg/Github.vue'
@@ -64,7 +66,6 @@ export default {
   components: {
     nuiHero,
     nuiContainer,
-    nuiRow,
     nuiMedia,
     nuiButton,
     nuiSvgPlay,

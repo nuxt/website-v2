@@ -1,5 +1,5 @@
 <template>
-  <div v-if="$store.state.adBlocked" class="ad_blocked">
+  <div v-if="!$store.state.adBlocked" class="ad_blocked">
     <div class="img-wrapper"><Blocked alt="Support Nuxt.js" width="125" height="125"/></div>
     <span class="text-wrapper"><strong>Nuxt.js needs you 💚</strong><br>By whitelisting nuxtjs.org on your Ad-Blocker, you support our work and help us financially.</span>
   </div>
@@ -9,6 +9,7 @@
 
 <script>
 import CarbonAds from './CarbonAds'
+
 export default {
   data() {
     return {
@@ -56,21 +57,8 @@ export default {
   overflow: hidden;
   padding-bottom: 15px;
   height: 140px;
-  @media (min-width: 625px)
-  {
-    float: right;
-    width: 150px;
-    padding-left: 25px;
-    height: auto;
-  }
-  @media (min-width: 1280px)
-  {
-    position: fixed;
-    bottom: 30px;
-    right: 30px;
-    padding-bottom: 0;
-    height: auto;
-  }
+  width: 300px;
+  float: right;
   #cf,
   #cf .cf-wrapper {
     width: auto !important;
@@ -82,11 +70,6 @@ export default {
   .img-wrapper {
     float: left;
     margin-right: 10px;
-    @media (min-width: 625px)
-    {
-      float: none;
-      margin-right: 0;
-    }
   }
   .text-wrapper {
     font-size: 13px;

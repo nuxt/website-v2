@@ -20,7 +20,7 @@ export default {
   css: [
     // 'normalize.css',
     // 'highlight.js/styles/github.css',
-    // '~/assets/scss/main.scss'
+    '~/assets/css/themes/light.scss'
   ],
   modules: [
     // https://github.com/nuxt-community/style-resources-module

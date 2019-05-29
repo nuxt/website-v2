@@ -17,34 +17,27 @@ import Contribute from '~/components/Contribute.vue'
 
 export default {
   async asyncData({ $docs, params, store, error }) {
-    // Default data
-    let data = {
-      attrs: {},
-      body: '',
-      docLink: ''
-    }
-    const slug = params.slug || 'index'
+    let defaultSlugs = { guide: 'index', api: 'index', examples: 'hello-world', faq: 'external-resources' }
+    const slug = params.slug || defaultSlugs[params.section]
     const path = `/${store.state.lang.iso}/${params.section}/${slug}`
-    let page
-
-try {
-      page = await $docs.get(path)
+    let data = { docLink: `https://github.com/nuxt/docs/blob/master${path}.md` }
+    if (store.state.lang.iso === 'ru') {
+      data.docLink = `https://github.com/translation-gang/ru.docs.nuxtjs/blob/translation-ru${path}.md`
+    } else if (store.state.lang.iso === 'cn') {
+      data.docLink = `https://github.com/o2team/i18n-cn-nuxtjs-docs/blob/dev${path}.md`
+    }
+    try {
+      let page = await $docs.get(path)
+      data.attrs = page.attrs
+      data.body = page.body
+      if (!data.attrs.title) console.error(`[/${path}] ${store.state.lang.text.please_define_title}.`) // eslint-disable-line no-console
+      if (!data.attrs.description) console.error(`[/${path}] ${store.state.lang.text.please_define_description}.`) // eslint-disable-line no-console
     } catch (err) {
       if (err.response.status !== 404) {
         return error({ statusCode: 500, message: store.state.lang.text.an_error_occurred })
       }
       return error({ statusCode: 404, message: store.state.lang.text.api_page_not_found })
     }
-    data.attrs = page.attrs
-    data.body = page.body
-    data.docLink = `https://github.com/nuxt/docs/blob/master${path}.md`
-    if (store.state.lang.iso === 'ru') {
-      data.docLink = `https://github.com/translation-gang/ru.docs.nuxtjs/blob/translation-ru${path}.md`
-    } else if (store.state.lang.iso === 'cn') {
-      data.docLink = `https://github.com/o2team/i18n-cn-nuxtjs-docs/blob/dev${path}.md`
-    }
-    if (!data.attrs.title) console.error(`[/${path}] ${store.state.lang.text.please_define_title}.`) // eslint-disable-line no-console
-    if (!data.attrs.description) console.error(`[/${path}] ${store.state.lang.text.please_define_description}.`) // eslint-disable-line no-console
     return data
   },
   scrollToTop: true,

@@ -1,64 +1,4 @@
-.Content {
-  &--hasCarbon {
-    @media (min-width: 1280px) {
-      padding-right: 185px;
-    }
-  }
-  h1,
-  h2,
-  h3,
-  h4,
-  h5,
-  h6 {
-    color: #35495e;
-    line-height: normal;
-    word-spacing: 2px;
-    code {
-      font-size: inherit;
-    }
-    a.anchor {
-      float: left;
-      padding-right: 4px;
-      margin-left: -20px;
-      line-height: 1;
-      svg {
-        color: #1b1f23;
-        vertical-align: middle;
-        visibility: hidden;
-      }
-    }
-    &:hover {
-      a.anchor svg {
-        visibility: visible;
-      }
-    }
-  }
-  h1 {
-    margin-top: 0px;
-    margin-bottom: 20px;
-    overflow: hidden;
-    font-size: 36px;
-    @media (min-width: 625px) {
-      font-size: 42px;
-      margin-bottom: 30px;
-    }
-  }
-  h2 {
-    padding-bottom: 15px;
-    border-bottom: 1px solid #dbdfe1;
-    margin-bottom: 20px;
-    font-size: 33px;
-    @media (min-width: 625px) {
-      font-size: 34px;
-      margin-bottom: 30px;
-    }
-  }
-  a {
-    color: #41b883;
-    &:hover {
-      text-decoration: underline;
-    }
-  }
+article {
   p {
     font-weight: 400;
     color: #35495e;
@@ -69,10 +9,6 @@
     overflow: hidden;
     code {
       font-size: 14px;
-    }
-    @media (min-width: 625px) {
-      line-height: 25px;
-      font-size: 16px;
     }
   }
   img {

@@ -11,3 +11,9 @@ dist
 .idea
 newrelic_agent.log
 .DS_STORE
+
+# docs
+/docs
+
+# @nuxtjs/pwa
+sw.*

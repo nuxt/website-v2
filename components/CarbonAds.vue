@@ -1,13 +1,11 @@
 <template>
-  <div class="carbon_ad" ref="carbonads">
-    <a href="https://vuejobs.com/?ref=nuxtjs" target="_blank" rel="noopener" class="vuejobs" v-if="$store.state.locale !== 'en'"></a>
-  </div>
+  <div class="carbon_ad" ref="carbonads"></div>
 </template>
 
 <script>
 export default {
   mounted() {
-    if (this.$store.state.locale === 'en') {
+    if (['en', 'fr'].indexOf(this.$store.state.locale) !== -1 && this.$refs.carbonads) {
       const script = document.createElement('script')
       script.setAttribute('type', 'text/javascript')
       script.setAttribute('src', '//cdn.carbonads.com/carbon.js?zoneid=1673&serve=C6AILKT&placement=nuxtjsorg')

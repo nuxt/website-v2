@@ -45,7 +45,15 @@
 
 <script>
 export default {
-  transition: 'logos'
+  transition: 'logos',
+  head: {
+    title: 'Logos',
+    titleTemplate: '%s - Nuxt.js',
+    meta: [
+      { hid: 'description', name: 'description', content: 'Download Nuxt.js logos (SVG, icons, emoji and favicon).' },
+      { name: 'og:image', content: 'https://nuxtjs.org/meta_640.png' },
+    ]
+  }
 }
 </script>
 

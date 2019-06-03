@@ -7,6 +7,7 @@ Universal Vue.js Application built with [Nuxt.js](https://github.com/nuxt/nuxt.j
 ```
 git clone https://github.com/nuxt/nuxtjs.org.git
 cd nuxtjs.org/
+yarn install
 git clone https://github.com/nuxt/docs
 ```
 
@@ -29,7 +30,6 @@ Update your `/etc/hosts` to have the following lines:
 Start a dev server on `http://nuxt:3000`
 
 ```bash
-yarn install
 yarn dev
 ```
 

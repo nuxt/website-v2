@@ -70,4 +70,10 @@ export default {
     }
   }
 }
+.logos-enter-active, .logos-leave-active {
+  transition: opacity .3s;
+}
+.logos-enter, .logos-leave-to {
+  opacity: 0;
+}
 </style>

@@ -43,6 +43,12 @@
   </div>
 </template>
 
+<script>
+export default {
+  transition: 'logos'
+}
+</script>
+
 <style lang="scss" scoped>
 .container {
   display: flex;

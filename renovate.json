@@ -1,5 +1,12 @@
 {
   "extends": [
-    "config:base"
-  ]
+    "@nuxtjs"
+  ],
+  "baseBranches": [
+    "master"
+  ],
+  "ignoreDeps": [],
+  "lockFileMaintenance": {
+    "enabled": true
+  }
 }

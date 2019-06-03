@@ -50,42 +50,7 @@ export default {
 }
 </script>
 
-<style lang="scss">
-.container {
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-  padding: 0 $font-size-xs;
-  margin: 0 auto;
-  @media (min-width: $--xs) {
-    padding: 0 $font-size-sm;
-    max-width: $--xs;
-  }
-  @media (min-width: $--sm) {
-    padding: 0 $font-size-base;
-    max-width: $--sm;
-  }
-  @media (min-width: $--md) {
-    padding: 0 $font-size-lg;
-    max-width: $--md;
-  }
-  @media (min-width: $--lg) {
-    padding: 0 $font-size-xl;
-    max-width: $--lg;
-  }
-}
-
-.row {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-content: space-between;
-  align-items: stretch;
-  @media (min-width: $--md) {
-    flex-direction: row;
-  }
-}
-
+<style lang="scss" scoped>
 .nWelcome {
   // margin-top: 80px;
   padding: 5rem 1rem;

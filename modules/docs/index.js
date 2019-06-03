@@ -41,19 +41,12 @@ module.exports = async function (moduleOptions) {
 
   // Hook generator to extract routes
   this.nuxt.hook('generate:before', async (generator) => {
-    // Add hook for extending routes
-    this.nuxt.hook('generate:extendRoutes', (routes) => {
-      // Empty array
-      routes.splice(0, routes.length)
-      // Add home
-      routes.push({ route: '/', payload: null })
-    })
-
     const routes = {}
 
     // Add hook when a page is generated
     this.nuxt.hook('vue-renderer:ssr:context', async (context) => {
       routes[context.url] = true
+      context.links = context.links || []
 
       const promises = context.links.map(async (link) => {
         const route = link.replace(/\/+/, '/').replace(/\?.+/, '').replace(/#.+/, '')

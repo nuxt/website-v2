@@ -21,9 +21,9 @@
               </a>
             </li>
             <li class="nFooter_Group_Content_Line">
-              <a class="nFooter_Group_Content_Line_Link" href="https://github.com/nuxt-community" target="_blank" rel="noopener">
-                Resources
-              </a>
+              <nuxt-link class="nFooter_Group_Content_Line_Link" to="/logos">
+                Logos
+              </nuxt-link>
             </li>
             <li class="nFooter_Group_Content_Line">
               <a class="nFooter_Group_Content_Line_Link" href="https://cmty.app/nuxt" target="_blank" rel="noopener">

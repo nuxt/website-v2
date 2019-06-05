@@ -31,6 +31,10 @@
         <span class="dimensions">128 x 128</span>
       </figure>
     </div>
+<<<<<<< HEAD
+=======
+    <p class="info">You can also download our <a href="/favicon.ico" target="_blank" rel="noopener">favicon</a> or our  <a href="/logos/nuxt-logos.sketch" target="_blank" rel="noopener">Sketch file</a>.</p>
+>>>>>>> 5a763ab2 (add: Sketch file for logos)
   </div>
 </template>
 

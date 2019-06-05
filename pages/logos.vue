@@ -39,7 +39,7 @@
         <span class="dimensions">128 x 128</span>
       </figure>
     </div>
-    <p class="info">You can also download our <a href="/favicon.ico" target="_blank" rel="noopener">favicon.ico</a></p>
+    <p class="info">You can also download our <a href="/favicon.ico" target="_blank" rel="noopener">favicon</a> or our  <a href="/logos/nuxt-logos.sketch" target="_blank" rel="noopener">Sketch file</a>.</p>
   </div>
 </template>
 

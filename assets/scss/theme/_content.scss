@@ -26,6 +26,11 @@
         vertical-align: middle;
         visibility: hidden;
       }
+      &:focus {
+        svg {
+          visibility: visible;
+        }
+      }
     }
     &:hover {
       a.anchor svg {

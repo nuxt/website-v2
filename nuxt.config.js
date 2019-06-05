@@ -24,6 +24,7 @@ export default {
   ],
   modules: [
     ['~/modules/docs/', { port: 3001 }],
+    '~/modules/crawler/',
     '~/modules/static/',
     // https://github.com/nuxt-community/style-resources-module
     '@nuxtjs/style-resources',

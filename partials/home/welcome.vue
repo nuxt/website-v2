@@ -20,9 +20,6 @@
               <nui-svg-gh/>
               20K+ github stars
             </nui-button>
-            <nuxt-link to="/" class="px-4 py-3 rounded font-medium bg-gray-200 shadow text-gray-800 uppercase">
-            Test bouton
-            </nuxt-link>
           </div>
         </div>
         <figure class="hidden lg:block lg:w-5/12">

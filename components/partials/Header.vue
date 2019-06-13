@@ -3,7 +3,7 @@
     <nui-container>
       <nui-row class="nui-header-row">
         <div class="nui-header-logo">
-          <a class="nui-header-logo-link" href="/" @click.prevent="$router.push('/')" @click.right.stop.prevent="$router.push('/design')">
+          <a class="nui-header-logo-link" href="/" @click.prevent="$router.push(localePath('index'))" @click.right.stop.prevent="$router.push('/design')">
             <h1>NUXTJS</h1>
             <nui-logo/>
           </a>

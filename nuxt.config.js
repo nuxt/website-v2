@@ -32,7 +32,20 @@ export default {
     // https://github.com/Atinux/nuxt-tailwindcss/
     '@nuxtjs/tailwindcss',
     // https://pwa.nuxtjs.org
-    '@nuxtjs/pwa'
+    '@nuxtjs/pwa',
+    // https://nuxt-community.github.io/nuxt-i18n
+    ['nuxt-i18n', {
+      locales: [
+        { code: 'en', iso: 'en-US' },
+        { code: 'fr', iso: 'fr-FR' },
+        { code: 'zh', iso: 'zh-ZH' },
+        { code: 'ja', iso: 'ja-JA' },
+        { code: 'ko', iso: 'ko-KO' },
+        { code: 'ru', iso: 'ru-RU' },
+        { code: 'id', iso: 'id-ID' }
+      ],
+      defaultLocale: 'en'
+    }]
   ],
   http: {
     prefix: '/_api/'

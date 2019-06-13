@@ -20,6 +20,7 @@
     "node-fetch": "^2.6.0",
     "normalize.css": "^8.0.1",
     "nuxt-edge": "^2.8.0-25984809.e161d70a",
+    "nuxt-i18n": "^5.12.4",
     "nuxt-svg-loader": "^1.0.1",
     "octicons": "^8.5.0",
     "v-lazy-image": "^1.3.2"

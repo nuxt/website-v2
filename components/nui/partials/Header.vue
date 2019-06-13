@@ -5,15 +5,15 @@
         <a href="#" @click.prevent="openNav" class="lg:hidden block py-2 pr-2 text-nuxt-gray hover:text-nuxt-lightgreen">
           <nui-bars-icon class="block h-5 fill-current"/>
         </a>
-        <a class="block h-10 pt-1" href="/" @click.prevent="$router.push('/')" @click.right.stop.prevent="$router.push('/design')">
+        <a class="block h-10 pt-1" :href="localePath('index')" @click.prevent="$router.push(localePath('index'))" @click.right.stop.prevent="$router.push('/design')">
           <h1 class="m-0 h-0 w-0 overflow-hidden">NUXTJS</h1>
           <nui-logo/>
         </a>
         <nav class="lg:block hidden">
           <ul class="flex">
             <li v-for="link in links" :key="link" class="px-4">
-              <nuxt-link class="block p-2 font-medium text-nuxt-gray uppercase hover:no-underline hover:text-nuxt-lightgreen" :to="'/' + link">
-                {{ $store.state.lang.links[link] || 'modules' }}
+              <nuxt-link class="block p-2 font-medium text-nuxt-gray uppercase hover:no-underline hover:text-nuxt-lightgreen" :to="localePath(link)">
+                {{ $store.state.lang.links[link] || link }}
               </nuxt-link>
             </li>
           </ul>
@@ -37,7 +37,7 @@ import nuiSearchIcon from '@/components/nui/svg/Search'
 export default {
   data () {
     return {
-      links: ['guide', 'api', 'examples', 'faq', 'modules']
+      links: ['discover', 'learn', 'resources', 'ecosystem', 'support']
     }
   },
   methods: {

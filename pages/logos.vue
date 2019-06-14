@@ -6,10 +6,16 @@
         <img src="/logos/nuxt.svg" alt="nuxt-logo" />
         <figcaption><a href="/logos/nuxt.svg" target="_blank" rel="noopener">nuxt.svg</a> / <a href="/logos/nuxt-square.svg" target="_blank" rel="noopener">nuxt-square.svg</a></figcaption>
       </figure>
-      <figure class="transparent">
-        <img src="/logos/nuxtjs-typo.svg" alt="nuxt-logo" />
-        <figcaption><a href="/logos/nuxtjs-typo.svg" target="_blank" rel="noopener">nuxtjs-typo.svg</a></figcaption>
-      </figure>
+      <div>
+        <figure class="transparent">
+          <img src="/logos/nuxtjs-typo.svg" alt="nuxt-logo" />
+          <figcaption><a href="/logos/nuxtjs-typo.svg" target="_blank" rel="noopener">nuxtjs-typo.svg</a></figcaption>
+        </figure>
+        <figure style="margin-top: 20px;">
+          <img src="/logos/built-with-nuxt.svg" alt="built-with-nuxt-logo" />
+          <figcaption><a href="/logos/built-with-nuxt.svg" target="_blank" rel="noopener">built-with-nuxt.svg</a></figcaption>
+        </figure>
+      </div>
       <figure>
         <img src="/logos/nuxt-icon.png" srcset="/logos/nuxt-icon@2x.png 2x" alt="nuxt-logo" />
         <figcaption><a href="/logos/nuxt-icon.png" target="_blank" rel="noopener">nuxt-icon.png</a></figcaption>
@@ -24,10 +30,16 @@
         <img src="/logos/nuxt-white.svg" alt="nuxt-logo" />
         <figcaption><a href="/logos/nuxt-white.svg" target="_blank" rel="noopener">nuxt-white.svg</a> / <a href="/logos/nuxt-square-white.svg" target="_blank" rel="noopener">nuxt-square-white.svg</a></figcaption>
       </figure>
-      <figure class="dark">
-        <img src="/logos/nuxtjs-typo-white.svg" alt="nuxt-logo" />
-        <figcaption><a href="/logos/nuxtjs-typo-white.svg" target="_blank" rel="noopener">nuxtjs-typo-white.svg</a></figcaption>
-      </figure>
+      <div>
+        <figure class="dark">
+          <img src="/logos/nuxtjs-typo-white.svg" alt="nuxt-logo" />
+          <figcaption><a href="/logos/nuxtjs-typo-white.svg" target="_blank" rel="noopener">nuxtjs-typo-white.svg</a></figcaption>
+        </figure>
+        <figure class="dark" style="margin-top: 20px;">
+          <img src="/logos/built-with-nuxt-white.svg" alt="built-with-nuxt-logo" />
+          <figcaption><a href="/logos/built-with-nuxt-white.svg" target="_blank" rel="noopener">built-with-nuxt-white.svg</a></figcaption>
+        </figure>
+      </div>
       <figure class="dark">
         <img src="/logos/nuxt-icon-white.png" srcset="/logos/nuxt-icon-white@2x.png 2x" alt="nuxt-logo" />
         <figcaption><a href="/logos/nuxt-icon-white.png" target="_blank" rel="noopener">nuxt-icon-white.png</a></figcaption>

@@ -5,9 +5,9 @@
         <a href="#" @click.prevent="openNav" class="lg:hidden block py-2 pr-2 text-nuxt-gray hover:text-nuxt-lightgreen">
           <nui-bars-icon class="block h-5 fill-current"/>
         </a>
-        <a class="block h-10 pt-1" :href="localePath('index')" @click.prevent="$router.push(localePath('index'))" @click.right.stop.prevent="$router.push('/design')">
+        <a class="block h-7 lg:h-10 lg:pt-1" :href="localePath('index')" @click.prevent="$router.push(localePath('index'))" @click.right.stop.prevent="$router.push(localePath('resources-design'))">
           <h1 class="m-0 h-0 w-0 overflow-hidden">NUXTJS</h1>
-          <nui-logo/>
+          <nui-logo class="h-6 lg:h-auto"/>
         </a>
         <nav class="lg:block hidden">
           <ul class="flex">

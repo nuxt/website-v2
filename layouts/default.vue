@@ -11,7 +11,7 @@
 
 <script>
 import nuiHeader from '@/components/nui/partials/Header'
-import nuiFooter from '@/components/partials/Footer'
+import nuiFooter from '@/components/nui/partials/Footer'
 import EventInfo from '~/components/EventInfo.vue'
 
 export default {

@@ -1,31 +1,30 @@
 <template>
-  <div class="nui-select">
-    <nui-row>
-      <component :is="currentIcon" v-if="currentIcon"/>
-      <select v-model="selected">
-        <option v-for="option in options" :value="option" :key="option.value">{{ option.name }}</option>
+  <div class="inline-block text-nuxt-gray bg-gray-200 rounded-full">
+    <div class="flex items-center content-center px-4">
+      <div class="-mr-4">
+        <slot name="icon"/>
+      </div>
+      <select v-model="selected" class="bg-transparent cursor-pointer font-medium h-10 appearance-none focus:outline-none pl-6 pr-8 z-10">
+        <option v-for="(option, i) in options" :value="i" :key="i">{{ option.text }}</option>
       </select>
-      <nui-caret-down/>
-    </nui-row>
+      <nui-caret-down class="-ml-4"/>
+    </div>
   </div>
 </template>
 
 <script>
-import nuiRow from '@/components/ui/Row'
-import nuiGlobe from '@/components/svg/Globe'
-import nuiCaretDown from '@/components/svg/CaretDown'
+import nuiCaretDown from '@/components/nui/svg/CaretDown'
 
 export default {
   props: {
     value: {
-      type: Object,
+      type: Number,
       required: true
     },
     options: {
       type: Array,
       required: true
-    },
-    icon: String
+    }
   },
   computed: {
     selected: {
@@ -35,57 +34,10 @@ export default {
       set (value) {
         this.$emit('input', value)
       }
-    },
-    currentIcon () {
-      return this.selected.icon ? 'nui-' + this.selected.icon : (this.icon ? 'nui-' + this.icon : null)
     }
   },
   components: {
-    nuiRow,
-    nuiGlobe,
-    nuiCaretDown,
-    nuiSun: () => import('@/components/svg/Sun'),
-    nuiMoon: () => import('@/components/svg/Moon')
+    nuiCaretDown
   }
 }
 </script>
-
-<style lang="scss">
-$light_grey: #F1F5F8;
-$grey: #606F7B;
-
-.nui-select {
-  background-color: $light_grey;
-  height: 38px;
-  border-radius: 18px;
-  padding: 0 1rem;
-  display: inline-block;
-  position: relative;
-  .nui-row {
-    align-items: center;
-  }
-  .nui-svg {
-    margin-right: 0.75rem;
-    fill: $grey;
-  }
-  .nui-svg-caret-down {
-    margin: 0;
-    right: 1rem;
-    position: absolute;
-    z-index: 1;
-  }
-  select {
-    background-color: transparent;
-    font-family: 'Quicksand';
-    appearance: none;
-    height: 38px;
-    border: none;
-    color: $grey;
-    font-size: 1rem;
-    font-weight: 500;
-    text-align: right;
-    padding-right: 30px;
-    z-index: 2;
-  }
-}
-</style>

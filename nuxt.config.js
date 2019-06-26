@@ -36,13 +36,13 @@ export default {
     // https://nuxt-community.github.io/nuxt-i18n
     ['nuxt-i18n', {
       locales: [
-        { code: 'en', iso: 'en-US' },
-        { code: 'fr', iso: 'fr-FR' },
-        { code: 'zh', iso: 'zh-ZH' },
-        { code: 'ja', iso: 'ja-JA' },
-        { code: 'ko', iso: 'ko-KO' },
-        { code: 'ru', iso: 'ru-RU' },
-        { code: 'id', iso: 'id-ID' }
+        { code: 'en', iso: 'en-US', text: 'English' },
+        { code: 'fr', iso: 'fr-FR', text: 'Français' },
+        { code: 'zh', iso: 'zh-ZH', text: '简体中文' },
+        { code: 'ja', iso: 'ja-JA', text: '日本語' },
+        { code: 'ko', iso: 'ko-KO', text: '한국어' },
+        { code: 'ru', iso: 'ru-RU', text: 'Русский' },
+        { code: 'id', iso: 'id-ID', text: 'Indonesian' }
       ],
       defaultLocale: 'en'
     }]

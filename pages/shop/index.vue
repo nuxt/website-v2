@@ -3,12 +3,12 @@
     <nui-hero>
       <nui-container>
         <h1>
-          Support
+          Shop
         </h1>
       </nui-container>
     </nui-hero>
     <nui-container class="py-8">
-      Donations
+      Articles
     </nui-container>
   </div>
 </template>

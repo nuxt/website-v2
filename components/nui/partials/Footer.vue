@@ -61,23 +61,23 @@ export default {
         ]
       },
       links: {
-        discover: [
-          { key: 'Open Source projects', to: 'ecosystem-oss' },
-          { key: 'A worldwild team', to: 'ecosystem-team' },
-          { key: 'Events', to: 'ecosystem-events' },
-          { key: 'Companies', to: 'discover-showcase' }
+        ecosystem: [
+          { key: 'Events', to: 'events' },
+          { key: 'Become a Nuxter', to: 'support' },
+          { key: 'The NuxtJS Shop', to: 'shop' },
+          { key: 'Find or Post a Job', to: 'jobs' }
         ],
         follow: [
-          { key: 'News', to: 'ecosystem-oss' },
+          { key: 'News', to: 'blog' },
           { key: 'Github', href: 'https://github.com/nuxt/nuxt.js' },
           { key: 'Twitter', href: 'https://twitter.com/nuxt_js' },
           { key: 'Discord', href: 'https://discordapp.com/invite/ps2h6QT' }
         ],
-        support: [
-          { key: 'Become a nuxter', to: 'ecosystem-oss' },
-          { key: 'The NuxtJS Shop', to: 'ecosystem-oss' },
-          { key: 'Find a job', to: 'ecosystem-oss' },
-          { key: 'Become a contributor', to: 'ecosystem-oss' }
+        company: [
+          { key: 'About us', to: 'about-us' },
+          { key: 'Training', to: 'training' },
+          { key: 'Terms of Service', to: 'terms-of-service' },
+          { key: 'Privacy Policy', to: 'privacy-policy' }
         ]
       }
     }

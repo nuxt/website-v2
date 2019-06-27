@@ -3,23 +3,20 @@
     <nui-hero>
       <nui-container>
         <h1>
-          Ecosystem: Twitter, Discord, GitHub icons
+          Community: Twitter, Discord, GitHub icons + News (blog)
         </h1>
       </nui-container>
     </nui-hero>
     <nui-container class="py-8">
       <ul>
         <li>
-          <nuxt-link :to="localePath('ecosystem-team')">Team</nuxt-link>
+          <nuxt-link :to="localePath('community-team')">Team</nuxt-link>
         </li>
         <li>
-          <nuxt-link :to="localePath('ecosystem-events')">Events</nuxt-link>
+          <nuxt-link :to="localePath('community-roadmap')">Raodmap</nuxt-link>
         </li>
         <li>
-          <nuxt-link :to="localePath('ecosystem-oss')">OSS</nuxt-link>
-        </li>
-        <li>
-          <nuxt-link :to="localePath('ecosystem-blog')">Blog</nuxt-link>
+          <nuxt-link :to="localePath('community-oss')">OSS</nuxt-link>
         </li>
       </ul>
     </nui-container>

@@ -1,5 +1,5 @@
 <template>
   <div>
-    Donations
+    About us
   </div>
 </template>

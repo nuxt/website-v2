@@ -1,5 +1,5 @@
 <template>
   <div>
-    Consulting
+    Privacy policy
   </div>
 </template>

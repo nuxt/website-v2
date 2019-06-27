@@ -56,7 +56,7 @@ export default {
   },
   data () {
     return {
-      links: ['discover', 'learn', 'resources', 'ecosystem', 'support']
+      links: ['discover', 'learn', 'resources', 'community']
     }
   },
   components: {

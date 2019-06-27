@@ -1,10 +1,10 @@
 <template>
   <header class="relative bg-white z-20 py-8">
     <nui-container>
-      <div class="flex items-center justify-between">
-        <a href="#" @click.prevent="$emit('toggle', !mobileNav)" class="flex items-center justify-center bg-nuxt-gray text-white font-bold text-sm px-4 py-2 shadow uppercase rounded hover:bg-nuxt-green hover:shadow-md z-10 w-12 lg:hidden">
-          <nui-times-icon v-if="mobileNav" class="block h-4 fill-current"/>
-          <nui-bars-icon v-else class="block h-4 fill-current"/>
+      <div class="flex items-end justify-between">
+        <a href="#" @click.prevent="$emit('toggle', !mobileNav)" class="flex items-center justify-center text-nuxt-gray hover:text-nuxt-lightgreen z-10 lg:hidden">
+          <nui-times-icon v-if="mobileNav" class="block h-5 fill-current"/>
+          <nui-bars-icon v-else class="block h-5 fill-current"/>
         </a>
         <a class="block h-7 lg:h-10 lg:pt-1 z-10" :href="localePath('index')" @click.prevent="$router.push(localePath('index'))" @click.right.stop.prevent="$router.push(localePath('resources-design'))">
           <h1 class="m-0 h-0 w-0 overflow-hidden">NUXTJS</h1>
@@ -19,10 +19,13 @@
             </li>
           </ul>
         </nav>
-        <nui-btn :to="localePath('are-you-nuxt')" class="z-10 w-12 lg:w-auto justify-center">
-          <nui-user-icon class="block h-4 fill-current"/>
-          <span class="pl-2 hidden lg:block">Are you Nuxt?</span>
+        <nui-btn :to="localePath('are-you-nuxt')" class="hidden lg:flex">
+          <nui-user-icon class="h-4 mb-1 mr-3 fill-current"/>
+          <span>Are you Nuxt?</span>
         </nui-btn>
+        <nuxt-link :to="localePath('are-you-nuxt')" class="block flex items-center justify-center text-nuxt-gray hover:text-nuxt-lightgreen z-10 lg:hidden">
+          <nui-user-icon class="block h-5 fill-current"/>
+        </nuxt-link>
         <!-- <nui-search class="lg:block hidden"/> -->
         <!-- <a href="#" @click.prevent="openSearch" class="lg:hidden block z-10 py-2 pl-2 w-6 text-nuxt-gray hover:text-nuxt-lightgreen">
           <nui-search-icon class="block h-5 fill-current"/>

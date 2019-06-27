@@ -1,5 +1,5 @@
 <template>
-  <header class="relative bg-white z-10 py-8">
+  <header class="relative bg-white z-20 py-8">
     <nui-container>
       <div class="flex items-center justify-between">
         <a href="#" @click.prevent="openNav" class="lg:hidden block py-2 pr-2 text-nuxt-gray hover:text-nuxt-lightgreen">

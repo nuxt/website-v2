@@ -1,5 +1,5 @@
 <template>
   <div>
-    Shop
+    OSS Packages
   </div>
 </template>

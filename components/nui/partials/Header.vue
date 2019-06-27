@@ -2,15 +2,15 @@
   <header class="relative bg-white z-20 py-8">
     <nui-container>
       <div class="flex items-center justify-between">
-        <a href="#" @click.prevent="displayNav = !displayNav" class="flex items-center justify-center bg-nuxt-gray text-white font-bold text-sm px-4 py-2 shadow uppercase rounded hover:bg-nuxt-green hover:shadow-md z-10 w-12 lg:hidden">
-          <nui-times-icon v-if="displayNav" class="block h-4 fill-current"/>
+        <a href="#" @click.prevent="$emit('toggle', !mobileNav)" class="flex items-center justify-center bg-nuxt-gray text-white font-bold text-sm px-4 py-2 shadow uppercase rounded hover:bg-nuxt-green hover:shadow-md z-10 w-12 lg:hidden">
+          <nui-times-icon v-if="mobileNav" class="block h-4 fill-current"/>
           <nui-bars-icon v-else class="block h-4 fill-current"/>
         </a>
         <a class="block h-7 lg:h-10 lg:pt-1 z-10" :href="localePath('index')" @click.prevent="$router.push(localePath('index'))" @click.right.stop.prevent="$router.push(localePath('resources-design'))">
           <h1 class="m-0 h-0 w-0 overflow-hidden">NUXTJS</h1>
           <nui-logo class="h-6 lg:h-auto"/>
         </a>
-        <nav class="lg:block lg:relative lg:pt-0 fixed bg-white top-0 bottom-0 left-0 right-0 pt-24" :class="{'hidden': !displayNav}">
+        <nav class="lg:block lg:relative lg:pt-0 fixed bg-white top-0 bottom-0 left-0 right-0 pt-24 overflow-y-auto" :class="{'hidden': !mobileNav}">
           <ul class="lg:flex lg:pt-1 xl:pt-0 container mx-auto text-center">
             <li v-for="link in links" :key="link" class="xl:px-4 lg:py-0 lg:px-2 py-2">
               <nuxt-link class="block p-2 font-bold text-nuxt-gray uppercase hover:no-underline hover:text-nuxt-lightgreen" :to="localePath(link)">
@@ -41,18 +41,19 @@ import nuiTimesIcon from '@/components/nui/svg/Times'
 import nuiUserIcon from '@/components/nui/svg/User'
 
 export default {
-  data () {
-    return {
-      links: ['discover', 'learn', 'resources', 'ecosystem', 'support'],
-      displayNav: false
+  props: {
+    mobileNav: {
+      type: Boolean,
+      reuired: true
     }
   },
-  methods: {
-    openNav () {
-
-    },
-    openSearch () {
-
+  model: {
+    prop: 'mobileNav',
+    event: 'toggle'
+  },
+  data () {
+    return {
+      links: ['discover', 'learn', 'resources', 'ecosystem', 'support']
     }
   },
   components: {

@@ -2,9 +2,9 @@
   <header class="relative bg-white z-20 py-8">
     <nui-container>
       <div class="flex items-center justify-between">
-        <a href="#" @click.prevent="displayNav = !displayNav" class="lg:hidden block z-10 py-2 pr-2 w-6 text-nuxt-gray hover:text-nuxt-lightgreen">
-          <nui-times-icon v-if="displayNav" class="block h-5 fill-current"/>
-          <nui-bars-icon v-else class="block h-5 fill-current"/>
+        <a href="#" @click.prevent="displayNav = !displayNav" class="flex items-center justify-center bg-nuxt-gray text-white font-bold text-sm px-4 py-2 shadow uppercase rounded hover:bg-nuxt-green hover:shadow-md z-10 w-12 lg:hidden">
+          <nui-times-icon v-if="displayNav" class="block h-4 fill-current"/>
+          <nui-bars-icon v-else class="block h-4 fill-current"/>
         </a>
         <a class="block h-7 lg:h-10 lg:pt-1 z-10" :href="localePath('index')" @click.prevent="$router.push(localePath('index'))" @click.right.stop.prevent="$router.push(localePath('resources-design'))">
           <h1 class="m-0 h-0 w-0 overflow-hidden">NUXTJS</h1>
@@ -19,23 +19,26 @@
             </li>
           </ul>
         </nav>
-        <!-- TODO - Replace the search input by a Login/Signup Button -->
-        <nui-search class="lg:block hidden"/>
-        <a href="#" @click.prevent="openSearch" class="lg:hidden block z-10 py-2 pl-2 w-6 text-nuxt-gray hover:text-nuxt-lightgreen">
+        <nui-btn :to="localePath('are-you-nuxt')" class="z-10 w-12 lg:w-auto justify-center">
+          <nui-user-icon class="block h-4 fill-current"/>
+          <span class="pl-2 hidden lg:block">Are you Nuxt?</span>
+        </nui-btn>
+        <!-- <nui-search class="lg:block hidden"/> -->
+        <!-- <a href="#" @click.prevent="openSearch" class="lg:hidden block z-10 py-2 pl-2 w-6 text-nuxt-gray hover:text-nuxt-lightgreen">
           <nui-search-icon class="block h-5 fill-current"/>
-        </a>
+        </a> -->
       </div>
     </nui-container>
   </header>
 </template>
 
 <script>
+import nuiBtn from '@/components/nui/commons/Button'
 import nuiContainer from '@/components/nui/commons/Container'
 import nuiLogo from '@/components/nui/svg/Nuxtjs'
-import nuiSearch from '@/components/nui/partials/Search'
 import nuiBarsIcon from '@/components/nui/svg/Bars'
 import nuiTimesIcon from '@/components/nui/svg/Times'
-import nuiSearchIcon from '@/components/nui/svg/Search'
+import nuiUserIcon from '@/components/nui/svg/User'
 
 export default {
   data () {
@@ -53,12 +56,12 @@ export default {
     }
   },
   components: {
+    nuiBtn,
     nuiContainer,
     nuiBarsIcon,
     nuiTimesIcon,
     nuiLogo,
-    nuiSearch,
-    nuiSearchIcon
+    nuiUserIcon
   }
 }
 </script>

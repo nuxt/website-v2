@@ -1,10 +1,21 @@
 <template>
-  <footer class="bg-white shadow-reverse">
-    <nui-container class="flex items-center content-center justify-between py-8">
-      Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ipsum sequi voluptas cum provident aperiam sint quia magni, itaque laboriosam quis qui earum consequatur sit delectus quibusdam. Quisquam, molestiae! Asperiores, soluta.
-      <!-- // Links -->
+  <footer class="bg-white shadow z-10 relative">
+    <nui-container class="flex items-center content-center justify-between py-10">
+      <nav v-for="(l, title, index) in links" :key="title" :class="{'text-center': index === 1, 'text-right': index === 2}">
+        <h3 class="font-bold uppercase text-lg pb-4 text-nuxt-gray">{{ title }}</h3>
+        <ul>
+          <li v-for="(link, i) in l" :key="i" class="py-2">
+            <a v-if="link.href" :href="link.href" target="_blank" rel="noopener noreferrer" class="hover:text-nuxt-lightgreen">
+              {{ link.key }}
+            </a>
+            <nuxt-link v-else :to="localePath(link.to)" class="hover:text-nuxt-lightgreen">
+              {{ link.key }}
+            </nuxt-link>
+          </li>
+        </ul>
+      </nav>
     </nui-container>
-    <div class="border-t border-gray-200 py-4">
+    <div class="border-t border-gray-300 py-4">
       <nui-container class="flex items-center content-center justify-between">
         <nui-select v-model="themes.current" :options="themes.options">
           <template v-slot:icon>
@@ -41,6 +52,26 @@ export default {
         options: [
           { text: 'light', icon: 'nui-sun' },
           { text: 'dark', icon: 'nui-moon' }
+        ]
+      },
+      links: {
+        discover: [
+          { key: 'Open Source projects', to: 'ecosystem-oss' },
+          { key: 'A worldwild team', to: 'ecosystem-team' },
+          { key: 'Events', to: 'ecosystem-events' },
+          { key: 'Companies', to: 'discover-showcase' }
+        ],
+        follow: [
+          { key: 'News', to: 'ecosystem-oss' },
+          { key: 'Github', href: 'https://github.com/nuxt/nuxt.js' },
+          { key: 'Twitter', href: 'https://twitter.com/nuxt_js' },
+          { key: 'Discord', href: 'https://discordapp.com/invite/ps2h6QT' }
+        ],
+        support: [
+          { key: 'Become a nuxter', to: 'ecosystem-oss' },
+          { key: 'The NuxtJS Shop', to: 'ecosystem-oss' },
+          { key: 'Find a job', to: 'ecosystem-oss' },
+          { key: 'Become a contributor', to: 'ecosystem-oss' }
         ]
       }
     }

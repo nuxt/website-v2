@@ -2,17 +2,13 @@
   <nui-hero class="pb-24">
     <nui-container>
       <div class="flex justify-between">
-        <div class="lg:w-1/2 xl:w-5/12 text-center lg:text-left">
-          <h1 class="text-3xl xl:text-4xl text-nuxt-gray font-medium leading-normal">
-            The Vue.js Framework for <br>
-            <!-- <span>Universals Applications</span> -->
-            <!-- {{ $store.state.lang.homepage.welcome.app_types_prefix }} -->
-            <span class="text-nuxt-lightgreen">{{ appType }}</span>
-            <!-- {{ $store.state.lang.homepage.welcome.app_types_suffix }} -->
+        <div class="lg:w-1/2 xl:w-6/12 text-center lg:text-left">
+          <h1 class="text-3xl xl:text-4xl text-nuxt-gray font-medium leading-normal mb-6">
+            The Progressive<br><span class="text-nuxt-lightgreen">Vue.js</span> Framework<br>
           </h1>
-          <h3 class="xl:text-lg text-gray-600 font-medium leading-relaxed my-4">An open-source project under MIT license that make your Vue.js Application development enjoyable.</h3>
+          <h3 class="xl:text-lg text-gray-600 font-medium leading-relaxed mb-6">Build your next Vue.js application with confidence using NuxtJS. An <span title="Under MIT license">open source</span> framework making web development simple and powerful.</h3>
           <div class="py-4">
-            <nui-button to="/" green>
+            <nui-button to="/" green class="mr-4">
               <nui-svg-play/>
               get started
             </nui-button>

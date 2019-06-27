@@ -20,7 +20,7 @@ export default {
   css: [
     // 'normalize.css',
     // 'highlight.js/styles/github.css',
-    '~/assets/css/themes/light.scss'
+    // '~/assets/css/themes/light.scss'
   ],
   modules: [
     ['~/modules/docs/', { port: 3001 }],

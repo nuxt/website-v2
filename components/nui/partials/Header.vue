@@ -1,8 +1,8 @@
 <template>
   <header class="relative bg-white z-20 py-8">
     <nui-container>
-      <div class="flex items-end justify-between">
-        <a href="#" @click.prevent="$emit('toggle', !mobileNav)" class="flex items-center justify-center text-nuxt-gray hover:text-nuxt-lightgreen z-10 lg:hidden">
+      <div class="flex items-end lg:items-center justify-between">
+        <a href="#" @click.prevent="$emit('toggle', !mobileNav)" class="flex p-2 -m-2 items-center justify-center text-nuxt-gray hover:text-nuxt-lightgreen z-10 lg:hidden">
           <nui-times-icon v-if="mobileNav" class="block h-5 fill-current"/>
           <nui-bars-icon v-else class="block h-5 fill-current"/>
         </a>
@@ -23,7 +23,7 @@
           <nui-user-icon class="h-4 mb-1 mr-3 fill-current"/>
           <span>Are you Nuxt?</span>
         </nui-btn>
-        <nuxt-link :to="localePath('are-you-nuxt')" class="block flex items-center justify-center text-nuxt-gray hover:text-nuxt-lightgreen z-10 lg:hidden">
+        <nuxt-link :to="localePath('are-you-nuxt')" class="block flex p-2 -m-2 items-center justify-center text-nuxt-gray hover:text-nuxt-lightgreen z-10 lg:hidden">
           <nui-user-icon class="block h-5 fill-current"/>
         </nuxt-link>
         <!-- <nui-search class="lg:block hidden"/> -->

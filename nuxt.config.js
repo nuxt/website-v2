@@ -1,5 +1,3 @@
-const locale = process.env.NUXT_LOCALE || 'en'
-
 export default {
   // modern: 'client',
   head: {
@@ -17,11 +15,6 @@ export default {
       './assets/styles/variables/theme.scss'
     ]
   },
-  css: [
-    // 'normalize.css',
-    // 'highlight.js/styles/github.css',
-    // '~/assets/css/themes/light.scss'
-  ],
   modules: [
     ['~/modules/docs/', { port: 3001 }],
     '~/modules/static/',
@@ -47,9 +40,6 @@ export default {
       defaultLocale: 'en'
     }]
   ],
-  http: {
-    prefix: '/_api/'
-  },
   plugins: [
     '~/plugins/init.js',
     '~/plugins/intersection-observer.client.js',
@@ -58,8 +48,7 @@ export default {
   ],
   env: {
     githubToken: process.env.GITHUB_TOKEN || '4aa6bcf919d238504e7db59a66d32e78281c0ad3',
-    docSearchApiKey: 'ff80fbf046ce827f64f06e16f82f1401',
-    locale
+    docSearchApiKey: 'ff80fbf046ce827f64f06e16f82f1401'
   },
   loading: { color: '#41B883' },
   router: {
@@ -81,8 +70,5 @@ export default {
   generate: {
     fallback: true,
     interval: 100
-  },
-  manifest: {
-    lang: process.env.NUXT_LOCALE || 'en'
   }
 }

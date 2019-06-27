@@ -1,10 +1,10 @@
 <template>
   <div class="font-sans font-medium bg-gray-100 text-nuxt-gray">
     <nui-header/>
-    <div class="App" :class="{'App--hidden': visible}">
+    <main class="App" :class="{'App--hidden': visible}">
       <!-- <event-info/> -->
       <nuxt/>
-    </div>
+    </main>
     <nui-footer/>
   </div>
 </template>

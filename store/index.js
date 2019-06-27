@@ -2,7 +2,6 @@ export const state = () => ({
   filled: false,
   docVersion: '',
   ghVersion: '',
-  visibleHeader: false,
   visibleAffix: false,
   locale: 'en',
   lang: {},

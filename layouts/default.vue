@@ -1,11 +1,11 @@
 <template>
   <div class="font-sans font-medium bg-gray-100 text-nuxt-gray">
-    <nui-header/>
-    <main class="App" :class="{'App--hidden': visible}">
+    <nui-header v-model="mobileNav"/>
+    <main class="lg:block relative z-0" :class="{'hidden': mobileNav}">
       <!-- <event-info/> -->
       <nuxt/>
     </main>
-    <nui-footer/>
+    <nui-footer class="lg:block" :class="{'hidden': mobileNav}"/>
   </div>
 </template>
 
@@ -15,16 +15,14 @@ import nuiFooter from '@/components/nui/partials/Footer'
 import EventInfo from '~/components/EventInfo.vue'
 
 export default {
+  data () {
+    return {
+      mobileNav: false
+    }
+  },
   watch: {
-    $route: 'setStore'
-  },
-  computed: {
-    visible() { return this.$store.state.visibleHeader }
-  },
-  methods: {
-    setStore() {
-      if (this.$store.state.visibleHeader) this.$store.commit('toggle', 'visibleHeader')
-      if (this.$store.state.visibleAffix) this.$store.commit('toggle', 'visibleAffix')
+    $route () {
+      this.mobileNav = false
     }
   },
   head() {
@@ -59,20 +57,3 @@ export default {
   }
 }
 </script>
-
-<style lang="scss">
-.App {
-  position: relative;
-  z-index: 0;
-  // margin-top: 60px;
-  // @media (min-width: 991px) {
-  //   margin-top: 80px;
-  // }
-  &--hidden {
-    display: none;
-    @media (min-width: 992px) {
-      display: block;
-    }
-  }
-}
-</style>

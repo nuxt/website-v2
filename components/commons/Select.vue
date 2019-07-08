@@ -13,7 +13,7 @@
 </template>
 
 <script>
-import nuiCaretDown from '@/components/nui/svg/CaretDown'
+import nuiCaretDown from '@/components/svg/CaretDown'
 
 export default {
   props: {

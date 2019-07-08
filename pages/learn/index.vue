@@ -1,10 +1,17 @@
 <template>
   <div>
     <nui-hero>
-      <nui-container>
-        <h1>
-          Learn
-        </h1>
+      <nui-container class="flex">
+        <div class="w-3/4">
+          <h1 class="uppercase text-2xl">
+            Learn
+          </h1>
+          <p>
+          </p>
+        </div>
+        <div class="w-1/4">
+          <nui-install-icon/>
+        </div>
       </nui-container>
     </nui-hero>
     <nui-container class="py-8">
@@ -27,13 +34,15 @@
 </template>
 
 <script>
-import nuiHero from '@/components/nui/commons/Hero'
-import nuiContainer from '@/components/nui/commons/Container'
+import nuiHero from '@/components/commons/Hero'
+import nuiContainer from '@/components/commons/Container'
+import nuiInstallIcon from '@/components/svg/streamline/programming-approve-check'
 
 export default {
   components: {
     nuiHero,
-    nuiContainer
+    nuiContainer,
+    nuiInstallIcon
   }
 }
 </script>

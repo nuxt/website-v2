@@ -1,16 +1,24 @@
 <template>
-  <div class="Search">
-    <input class="Search__Input" type="text" name="search" id="algolia" :placeholder="$store.state.lang.text.search" />
+  <div>
+    <nui-search-icon class="block absolute text-gray-600 z-10 h-4 mt-3 ml-3 fill-current"/>
+    <input class="nui-search-input" type="text" name="search" v-model="q" id="algolia" :placeholder="$store.state.lang.text.search" />
   </div>
 </template>
 
 <script>
+import nuiSearchIcon from '@/components/svg/Search'
+
 let scriptInjected = false
 let callbacks = []
 let onScriptLoaded = (cb) => callbacks.push(cb)
 let scriptLoaded = () => callbacks.forEach((cb) => cb())
 
 export default {
+  data () {
+    return {
+      q: ''
+    }
+  },
   mounted() {
     onScriptLoaded(() => this.addInstantSearch())
     if (scriptInjected) return
@@ -37,38 +45,23 @@ export default {
         algoliaOptions: { 'facetFilters': [`tags:${this.$store.state.locale}`] },
         debug: true // Set debug to true if you want to inspect the dropdown
       })
+    },
+    reset () {
+      // todo call API
+      this.q = ''
     }
+  },
+  components: {
+    nuiSearchIcon
   }
 }
 </script>
 
-<style lang="scss" scoped>
-.Search {
-  width: 100%;
-  height: 100%;
-  position: relative;
-  &__Input {
-    width: 100%;
-    display: block;
-    border: none;
-    font-weight: 400;
-    height: 100%;
-    color: #35495e;
-    font-size: 16px;
-    padding: 0 15px;
-    letter-spacing: 0.5px;
-    background-color: #fff;
-    @media (min-width: 991px) {
-      padding: 0 30px;
-      border-left: 1px solid #dbdfe1;
-      border-right: 1px solid #dbdfe1;
-      &:focus,
-      &:visited,
-      &:active {
-        border-left: 1px solid #dbdfe1;
-        border-right: 1px solid #dbdfe1;
-      }
-    }
+<style lang="scss">
+.nui-search-input {
+  @apply bg-gray-200 text-nuxt-gray font-medium px-4 pl-10 rounded-full h-10 outline-none;
+  ::placeholder {
+    @apply text-gray-600;
   }
 }
 </style>

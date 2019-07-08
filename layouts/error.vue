@@ -21,7 +21,7 @@
 </template>
 
 <script>
-import NuxtFooter from '~/components/Footer.vue'
+import NuxtFooter from '@/components/partials/Footer.vue'
 
 export default {
   props: ['error'],

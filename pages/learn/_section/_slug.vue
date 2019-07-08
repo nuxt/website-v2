@@ -2,18 +2,18 @@
   <nui-article>
     <nui-ads :key="$route.params.slug" class="float-right ml-8 mb-8 shadow"/>
     <h1>{{ attrs.title }}</h1>
-    <responsive-video v-if="attrs.youtube" :src="attrs.youtube"/>
+    <!-- <responsive-video v-if="attrs.youtube" :src="attrs.youtube"/>
     <html-parser :content="body"/>
-    <contribute :doc-link="docLink"/>
+    <contribute :doc-link="docLink"/> -->
   </nui-article>
 </template>
 
 <script>
-import nuiArticle from '@/components/nui/commons/Article'
-import nuiAds from '@/components/nui/partials/Ads'
-import ResponsiveVideo from '~/components/ResponsiveVideo.vue'
-import HtmlParser from '~/components/HtmlParser.vue'
-import Contribute from '~/components/Contribute.vue'
+import nuiArticle from '@/components/commons/Article'
+import nuiAds from '@/components/partials/Ads'
+// import ResponsiveVideo from '~/components/ResponsiveVideo.vue'
+// import HtmlParser from '~/components/HtmlParser.vue'
+// import Contribute from '~/components/Contribute.vue'
 
 export default {
   async asyncData({ $docs, params, store, error }) {
@@ -52,10 +52,10 @@ export default {
   },
   components: {
     nuiArticle,
-    nuiAds,
-    ResponsiveVideo,
-    HtmlParser,
-    Contribute
+    nuiAds
+    // ResponsiveVideo,
+    // HtmlParser,
+    // Contribute
   }
 }
 </script>

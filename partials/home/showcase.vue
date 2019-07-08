@@ -22,10 +22,10 @@
 </template>
 
 <script>
-import nuiHero from '@/components/ui/Hero'
-import nuiContainer from '@/components/ui/Container'
-import nuiTitle from '@/components/ui/Title'
-import nuiButton from '@/components/ui/Button.vue'
+import nuiHero from '@/components/commons/Hero'
+import nuiContainer from '@/components/commons/Container'
+import nuiTitle from '@/components/commons/Title'
+import nuiButton from '@/components/commons/Button.vue'
 import nuiSvgPlay from '@/components/svg/Play.vue'
 
 export default {

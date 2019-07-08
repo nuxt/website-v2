@@ -21,10 +21,10 @@
 </template>
 
 <script>
-import nuiHero from '@/components/nui/commons/Hero'
-import nuiArticle from '@/components/nui/commons/Article'
-import nuiContainer from '@/components/nui/commons/Container'
-import nuiAside from '@/components/nui/partials/Aside'
+import nuiHero from '@/components/commons/Hero'
+import nuiArticle from '@/components/commons/Article'
+import nuiContainer from '@/components/commons/Container'
+import nuiAside from '@/components/partials/Aside'
 
 export default {
   validate ({ store, params }) {

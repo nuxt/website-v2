@@ -21,9 +21,6 @@
 </template>
 
 <script>
-import nuiHero from '@/components/commons/Hero'
-import nuiArticle from '@/components/commons/Article'
-import nuiContainer from '@/components/commons/Container'
 import nuiAside from '@/components/partials/Aside'
 
 export default {
@@ -35,9 +32,6 @@ export default {
     list() { return this.$store.state.menu[this.$route.params.section] }
   },
   components: {
-    nuiHero,
-    nuiArticle,
-    nuiContainer,
     nuiAside
   }
 }

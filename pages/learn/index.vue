@@ -34,14 +34,10 @@
 </template>
 
 <script>
-import nuiHero from '@/components/commons/Hero'
-import nuiContainer from '@/components/commons/Container'
 import nuiInstallIcon from '@/components/svg/streamline/programming-approve-check'
 
 export default {
   components: {
-    nuiHero,
-    nuiContainer,
     nuiInstallIcon
   }
 }

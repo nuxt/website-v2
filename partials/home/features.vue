@@ -61,13 +61,11 @@
 </template>
 
 <script>
-import nuiContainer from '@/components/commons/Container'
 import nuiRow from '@/components/commons/Row'
 import nuiTitle from '@/components/commons/Title'
 
 export default {
   components: {
-    nuiContainer,
     nuiRow,
     nuiTitle
   }

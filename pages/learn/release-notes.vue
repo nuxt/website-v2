@@ -16,7 +16,6 @@
 </template>
 
 <script>
-import nuiArticle from '@/components/commons/Article'
 // import CodeFundAds from '~/components/CodeFundAds.vue'
 // import HtmlParser from '~/components/HtmlParser.vue'
 const monthNames = [
@@ -61,7 +60,6 @@ export default {
     }
   },
   components: {
-    nuiArticle
     // CodeFundAds,
     // HtmlParser
   }

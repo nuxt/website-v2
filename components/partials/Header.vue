@@ -19,10 +19,10 @@
             </li>
           </ul>
         </nav>
-        <nui-btn :to="localePath('are-you-nuxt')" class="hidden lg:flex">
+        <nui-button :to="localePath('are-you-nuxt')" class="hidden lg:flex">
           <nui-user-icon class="h-4 mb-1 mr-3 fill-current"/>
           <span>Are you Nuxt?</span>
-        </nui-btn>
+        </nui-button>
         <nuxt-link :to="localePath('are-you-nuxt')" class="block flex p-2 -m-2 items-center justify-center text-nuxt-gray hover:text-nuxt-lightgreen z-10 lg:hidden">
           <nui-user-icon class="block h-5 fill-current"/>
         </nuxt-link>
@@ -36,8 +36,6 @@
 </template>
 
 <script>
-import nuiBtn from '@/components/commons/Button'
-import nuiContainer from '@/components/commons/Container'
 import nuiLogo from '@/components/svg/Nuxtjs'
 import nuiBarsIcon from '@/components/svg/Bars'
 import nuiTimesIcon from '@/components/svg/Times'
@@ -60,8 +58,6 @@ export default {
     }
   },
   components: {
-    nuiBtn,
-    nuiContainer,
     nuiBarsIcon,
     nuiTimesIcon,
     nuiLogo,

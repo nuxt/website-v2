@@ -3,3 +3,9 @@
     <slot/>
   </section>
 </template>
+
+<script>
+export default {
+  name: 'nui-hero'
+}
+</script>

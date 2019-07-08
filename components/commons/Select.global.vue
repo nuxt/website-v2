@@ -16,6 +16,7 @@
 import nuiCaretDown from '@/components/svg/CaretDown'
 
 export default {
+  name: 'nui-select',
   props: {
     value: {
       type: Number,

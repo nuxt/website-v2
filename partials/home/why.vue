@@ -31,9 +31,9 @@
 </template>
 
 <script>
-import nuiContainer from '@/components/ui/Container'
-import nuiRow from '@/components/ui/Row'
-import nuiTitle from '@/components/ui/Title'
+import nuiContainer from '@/components/commons/Container'
+import nuiRow from '@/components/commons/Row'
+import nuiTitle from '@/components/commons/Title'
 import iPerformant from '@/components/svg/Rocket'
 import iModular from '@/components/svg/Puzzle'
 import iEnjoyable from '@/components/svg/Dancers'

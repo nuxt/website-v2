@@ -1,6 +1,7 @@
 <template>
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
   <div class="Landscape">
     <nuxt-header></nuxt-header>
     <div class="Landscape__Content">
@@ -92,10 +93,21 @@
     </section>
     <nuxt-footer></nuxt-footer>
 >>>>>>> 2eed1dad (affix)
+=======
+  <div class="Home">
+    Todo: change partials
+    <!-- <home-welcome/>
+    <home-why/>
+    <partial-partners/>
+    <home-features/>
+    <home-showcase/>
+    <home-modes/> -->
+>>>>>>> cdec9baa (clean useless components)
   </div>
 </template>
 
 <script>
+<<<<<<< HEAD
 <<<<<<< HEAD
 import NuxtHeader from '~components/Header.vue'
 
@@ -110,6 +122,23 @@ export default {
   components: {
     NuxtLogo,
     NuxtFooter
+=======
+// import homeWelcome from '@/partials/home/welcome'
+// import homeWhy from '@/partials/home/why'
+// import partialPartners from '@/components/partials/Partners'
+// import homeFeatures from '@/partials/home/features'
+// import homeShowcase from '@/partials/home/showcase'
+// import homeModes from '@/partials/home/modes'
+
+export default {
+  components: {
+    // homeWelcome,
+    // homeWhy,
+    // partialPartners,
+    // homeFeatures,
+    // homeShowcase,
+    // homeModes
+>>>>>>> cdec9baa (clean useless components)
   },
   head () {
     return {

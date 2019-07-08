@@ -8,7 +8,12 @@
 </template>
 
 <script>
+<<<<<<< HEAD
 import Navbar from '~/components/Header.vue'
+=======
+import nuiHeader from '@/components/partials/Header'
+import nuiFooter from '@/components/partials/Footer'
+>>>>>>> cdec9baa (clean useless components)
 
 export default {
   watch: {
@@ -49,7 +54,12 @@ export default {
     }
   },
   components: {
+<<<<<<< HEAD
     Navbar
+=======
+    nuiHeader,
+    nuiFooter
+>>>>>>> cdec9baa (clean useless components)
   }
 }
 </script>

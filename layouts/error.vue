@@ -21,7 +21,11 @@
 </template>
 
 <script>
+<<<<<<< HEAD
 import NuxtFooter from '~components/Footer.vue'
+=======
+import NuxtFooter from '@/components/partials/Footer.vue'
+>>>>>>> cdec9baa (clean useless components)
 
 export default {
   props: ['error'],

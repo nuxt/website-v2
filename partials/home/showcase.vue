@@ -1,20 +1,20 @@
 <template>
-  <nui-hero class="nui-partners">
+  <nui-hero class="Home__Showcase">
     <nui-container>
       <div>
         <nui-title>
-          PROUDLY SUPPORT BY
+          Who's using nuxt<span>js</span>
         </nui-title>
       </div>
       <div>
-        <a class="nui-partners-link" v-for="(partner, i) in partners" :key="i" :href="partner.url" target="_blank" rel="noopener">
+        <a class="Home__Showcase__link" v-for="(partner, i) in partners" :key="i" :href="partner.url" target="_blank" rel="noopener">
           <img :src="'/img/partners/' + partner.img" :alt="partner.name" />
         </a>
       </div>
       <div>
         <nui-button to="/support-us" green>
-          <nui-svg-open-collective/>
-          become a partner
+          <nui-svg-play/>
+          discover more showcase
         </nui-button>
       </div>
     </nui-container>
@@ -22,11 +22,11 @@
 </template>
 
 <script>
-import nuiHero from '@/components/ui/Hero'
-import nuiContainer from '@/components/ui/Container'
-import nuiTitle from '@/components/ui/Title'
-import nuiButton from '@/components/ui/Button.vue'
-import nuiSvgOpenCollective from '@/components/svg/OpenCollective.vue'
+import nuiHero from '@/components/commons/Hero'
+import nuiContainer from '@/components/commons/Container'
+import nuiTitle from '@/components/commons/Title'
+import nuiButton from '@/components/commons/Button.vue'
+import nuiSvgPlay from '@/components/svg/Play.vue'
 
 export default {
   components: {
@@ -34,7 +34,7 @@ export default {
     nuiContainer,
     nuiTitle,
     nuiButton,
-    nuiSvgOpenCollective
+    nuiSvgPlay
   },
   data () {
     return {
@@ -53,12 +53,12 @@ export default {
 </script>
 
 <style lang="scss">
-.nui-partners {
+.Home__Showcase {
   text-align: center;
   .nui-svg-opencollective {
     height: 20px;
   }
-  &-link {
+  &__link {
     display: inline-block;
     margin: 1rem;
     img {

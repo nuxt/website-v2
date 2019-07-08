@@ -10,9 +10,8 @@
 </template>
 
 <script>
-import nuiHeader from '@/components/nui/partials/Header'
-import nuiFooter from '@/components/nui/partials/Footer'
-import EventInfo from '~/components/EventInfo.vue'
+import nuiHeader from '@/components/partials/Header'
+import nuiFooter from '@/components/partials/Footer'
 
 export default {
   data () {
@@ -52,8 +51,7 @@ export default {
   },
   components: {
     nuiHeader,
-    nuiFooter,
-    EventInfo
+    nuiFooter
   }
 }
 </script>

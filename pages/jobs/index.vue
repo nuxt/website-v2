@@ -14,8 +14,8 @@
 </template>
 
 <script>
-import nuiHero from '@/components/nui/commons/Hero'
-import nuiContainer from '@/components/nui/commons/Container'
+import nuiHero from '@/components/commons/Hero'
+import nuiContainer from '@/components/commons/Container'
 
 export default {
   components: {

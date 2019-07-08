@@ -28,10 +28,10 @@
 </template>
 
 <script>
-import nuiHero from '@/components/nui/commons/Hero'
-import nuiContainer from '@/components/nui/commons/Container'
-import nuiMedia from '@/components/nui/commons/Media.vue'
-import nuiButton from '@/components/ui/Button.vue'
+import nuiHero from '@/components/commons/Hero'
+import nuiContainer from '@/components/commons/Container'
+import nuiMedia from '@/components/commons/Media.vue'
+import nuiButton from '@/components/commons/Button.vue'
 import nuiSvgPlay from '@/components/svg/Play.vue'
 import nuiSvgGh from '@/components/svg/Github.vue'
 import { setTimeout } from 'timers';

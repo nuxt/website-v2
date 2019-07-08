@@ -1,30 +1,31 @@
 <template>
   <div class="Home">
-    <home-welcome/>
+    Todo: change partials
+    <!-- <home-welcome/>
     <home-why/>
     <partial-partners/>
     <home-features/>
     <home-showcase/>
-    <home-modes/>
+    <home-modes/> -->
   </div>
 </template>
 
 <script>
-import homeWelcome from '@/partials/home/welcome'
-import homeWhy from '@/partials/home/why'
-import partialPartners from '@/components/partials/Partners'
-import homeFeatures from '@/partials/home/features'
-import homeShowcase from '@/partials/home/showcase'
-import homeModes from '@/partials/home/modes'
+// import homeWelcome from '@/partials/home/welcome'
+// import homeWhy from '@/partials/home/why'
+// import partialPartners from '@/components/partials/Partners'
+// import homeFeatures from '@/partials/home/features'
+// import homeShowcase from '@/partials/home/showcase'
+// import homeModes from '@/partials/home/modes'
 
 export default {
   components: {
-    homeWelcome,
-    homeWhy,
-    partialPartners,
-    homeFeatures,
-    homeShowcase,
-    homeModes
+    // homeWelcome,
+    // homeWhy,
+    // partialPartners,
+    // homeFeatures,
+    // homeShowcase,
+    // homeModes
   },
   head() {
     return {

@@ -5,9 +5,9 @@
 </template>
 
 <script>
-import CodeFundAds from '@/components/nui/partials/ads/CodeFund'
-import CarbonAds from '@/components/nui/partials/ads/Carbon'
-import NuxtAds from '@/components/nui/partials/ads/Nuxt'
+import CodeFundAds from '@/components/partials/ads/CodeFund'
+import CarbonAds from '@/components/partials/ads/Carbon'
+import NuxtAds from '@/components/partials/ads/Nuxt'
 
 export default {
   data() {

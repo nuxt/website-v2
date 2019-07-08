@@ -1,6 +1,6 @@
 <template>
   <nui-article>
-    <code-fund-ads v-if="!isDev && $store.state.locale === ' en '" :key="$route.params.slug" />
+    <!-- <code-fund-ads v-if="!isDev && $store.state.locale === ' en '" :key="$route.params.slug" /> -->
     <h1>{{ $store.state.lang.guide.release_notes }}</h1>
     <div v-for="release in releases" :key="release.name">
       <h2>
@@ -10,15 +10,15 @@
           <time :datetime="release.date" :title="new Date(release.date).toString()">{{ release.date | dateFormat }}</time>
         </span>
       </h2>
-      <html-parser class="Release__Content" v-html="release.body" />
+      <!-- <html-parser class="Release__Content" v-html="release.body" /> -->
     </div>
   </nui-article>
 </template>
 
 <script>
-import nuiArticle from '@/components/nui/commons/Article'
-import CodeFundAds from '~/components/CodeFundAds.vue'
-import HtmlParser from '~/components/HtmlParser.vue'
+import nuiArticle from '@/components/commons/Article'
+// import CodeFundAds from '~/components/CodeFundAds.vue'
+// import HtmlParser from '~/components/HtmlParser.vue'
 const monthNames = [
   'January', 'February', 'March',
   'April', 'May', 'June', 'July',
@@ -61,9 +61,9 @@ export default {
     }
   },
   components: {
-    nuiArticle,
-    CodeFundAds,
-    HtmlParser
+    nuiArticle
+    // CodeFundAds,
+    // HtmlParser
   }
 }
 </script>

@@ -31,7 +31,6 @@
 </template>
 
 <script>
-import nuiContainer from '@/components/commons/Container'
 import nuiRow from '@/components/commons/Row'
 import nuiTitle from '@/components/commons/Title'
 import iPerformant from '@/components/svg/Rocket'
@@ -40,7 +39,6 @@ import iEnjoyable from '@/components/svg/Dancers'
 
 export default {
   components: {
-    nuiContainer,
     nuiRow,
     nuiTitle,
     iPerformant,

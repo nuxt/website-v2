@@ -43,8 +43,6 @@
 </template>
 
 <script>
-import nuiContainer from '@/components/commons/Container'
-import nuiSelect from '@/components/commons/Select'
 import nuiSun from '@/components/svg/Sun'
 import nuiMoon from '@/components/svg/Moon'
 import nuiGlobe from '@/components/svg/Globe'
@@ -96,8 +94,6 @@ export default {
     }
   },
   components: {
-    nuiContainer,
-    nuiSelect,
     nuiSun,
     nuiMoon,
     nuiGlobe,

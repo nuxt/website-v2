@@ -3,3 +3,9 @@
     <slot/>
   </div>
 </template>
+
+<script>
+export default {
+  name: 'nui-container'
+}
+</script>

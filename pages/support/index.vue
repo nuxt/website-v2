@@ -14,15 +14,3 @@
     </nui-container>
   </div>
 </template>
-
-<script>
-import nuiHero from '@/components/commons/Hero'
-import nuiContainer from '@/components/commons/Container'
-
-export default {
-  components: {
-    nuiHero,
-    nuiContainer
-  }
-}
-</script>

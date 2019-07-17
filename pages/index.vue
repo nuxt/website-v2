@@ -50,14 +50,3 @@ export default {
   }
 }
 </script>
-
-<style lang="scss">
-$grey_blue: #2F495E;
-$light_green: #00C58E;
-$grey: #606F7B;
-$light_grey: #F1F5F8;
-
-.Home {
-  background-color: $light_grey;
-}
-</style>

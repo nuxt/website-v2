@@ -1,5 +1,7 @@
 <template>
   <div>
-    Mentions
+    <h1>
+      GUIDE
+    </h1>
   </div>
 </template>

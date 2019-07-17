@@ -1,5 +1,5 @@
 <template>
   <div>
-    OSS Packages
+    Affix API
   </div>
 </template>

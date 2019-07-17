@@ -1,5 +1,5 @@
 <template>
   <div>
-    Blog
+    Affix API
   </div>
 </template>

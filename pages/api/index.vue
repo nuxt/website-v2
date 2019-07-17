@@ -1,5 +1,5 @@
 <template>
   <div>
-    About us
+    Affix API
   </div>
 </template>

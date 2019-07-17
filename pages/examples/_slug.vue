@@ -1,5 +1,5 @@
 <template>
   <div>
-    Privacy policy
+    Content API
   </div>
 </template>

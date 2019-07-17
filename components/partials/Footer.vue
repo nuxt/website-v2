@@ -1,8 +1,8 @@
 <template>
-  <footer class="bg-white shadow z-10 relative">
+  <footer class="footer shadow z-10 relative">
     <nui-container class="flex items-center content-center justify-between py-10">
       <nav v-for="(l, title, index) in links" :key="title" class="flex-1" :class="{'text-center': index === 1, 'text-right': index === 2}">
-        <h3 class="font-bold uppercase text-lg pb-4 text-nuxt-gray">{{ title }}</h3>
+        <h3 class="font-bold uppercase text-lg pb-4">{{ title }}</h3>
         <ul>
           <li v-for="(link, i) in l" :key="i" class="py-2">
             <a v-if="link.href" :href="link.href" target="_blank" rel="noopener noreferrer" class="hover:text-nuxt-lightgreen">
@@ -18,7 +18,7 @@
     <div class="border-t border-gray-300 py-4">
       <nui-container class="flex items-center content-center justify-between">
         <div class="flex-1">
-          <nui-select v-model="themes.current" :options="themes.options">
+          <nui-select v-model="currentTheme" :options="themes">
             <template v-slot:icon>
               <component :is="currentThemeIcon"/>
             </template>
@@ -51,31 +51,25 @@ import nuiLogo from '@/components/svg/Mountains'
 export default {
   data () {
     return {
-      themes: {
-        current: 0,
-        options: [
-          { text: 'light', icon: 'nui-sun' },
-          { text: 'dark', icon: 'nui-moon' }
-        ]
-      },
+      themes: [
+        { value: 'light', text: 'light', icon: 'nui-sun' },
+        { value: 'dark', text: 'dark', icon: 'nui-moon' }
+      ],
       links: {
-        ecosystem: [
-          { key: 'Events', to: 'events' },
-          { key: 'Become a Nuxter', to: 'support' },
-          { key: 'The NuxtJS Shop', to: 'shop' },
-          { key: 'Find or Post a Job', to: 'jobs' }
+        discover: [
+          { key: 'A worldwild team', to: 'index' },
+          { key: 'Events and mentions', to: 'index' },
+          { key: 'A worldwild team', to: 'index' }
         ],
         follow: [
-          { key: 'News', to: 'blog' },
           { key: 'Github', href: 'https://github.com/nuxt/nuxt.js' },
           { key: 'Twitter', href: 'https://twitter.com/nuxt_js' },
           { key: 'Discord', href: 'https://discordapp.com/invite/ps2h6QT' }
         ],
-        company: [
-          { key: 'About us', to: 'about-us' },
-          { key: 'Training', to: 'training' },
-          { key: 'Terms of Service', to: 'terms-of-service' },
-          { key: 'Privacy Policy', to: 'privacy-policy' }
+        support: [
+          { key: 'Become a Nuxter', to: 'index' },
+          { key: 'The NuxtJS Shop', to: 'index' },
+          { key: 'Find or Post a Job', to: 'index' }
         ]
       }
     }
@@ -89,8 +83,16 @@ export default {
         this.$router.push(this.switchLocalePath(this.$i18n.locales[value].code))
       }
     },
+    currentTheme: {
+      get () {
+        return this.themes.map(l => l.value).indexOf(this.$store.state.theme)
+      },
+      set (value) {
+        this.$store.commit('setTheme', this.themes[value].value)
+      }
+    },
     currentThemeIcon () {
-      return this.themes.options[this.themes.current].icon
+      return this.themes[this.currentTheme].icon
     }
   },
   components: {

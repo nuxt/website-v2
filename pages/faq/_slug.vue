@@ -1,5 +1,5 @@
 <template>
   <div>
-    Design
+    Content API
   </div>
 </template>

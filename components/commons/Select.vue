@@ -1,5 +1,5 @@
 <template>
-  <div class="inline-block text-nuxt-gray bg-gray-200 rounded-full">
+  <div class="nui-select inline-block rounded-full">
     <div class="flex items-center content-center px-4">
       <div class="-mr-4">
         <slot name="icon"/>

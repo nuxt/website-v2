@@ -16,6 +16,11 @@ module.exports = {
           green: '#108775'
         }
       },
+      fill: theme => ({
+        'nuxt-gray': theme('colors.nuxt.gray'),
+        'nuxt-lightgreen': theme('colors.nuxt.lightgreen'),
+        'nuxt-green': theme('colors.nuxt.green'),
+      }),
       boxShadow: {
         nuxt: '0 0 8px 0 rgba(10, 31, 68, 0.08)'
       }

@@ -9,6 +9,7 @@
 import intersectingMixin from '@/mixins/intersecting.js'
 
 export default {
+  name: 'nui-media',
   mixins: [intersectingMixin],
   props: {
     src: {

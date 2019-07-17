@@ -6,6 +6,7 @@
 
 <script>
 export default {
+  name: 'nui-button',
   props: {
     to: {
       type: [String, Object],

@@ -1,5 +1,5 @@
 <template>
-  <div class="Home">
+  <div>
     Todo: change partials
     <!-- <home-welcome/>
     <home-why/>

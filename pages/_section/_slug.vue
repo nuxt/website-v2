@@ -9,7 +9,6 @@
 </template>
 
 <script>
-import nuiArticle from '@/components/commons/Article'
 import nuiAds from '@/components/partials/Ads'
 // import ResponsiveVideo from '~/components/ResponsiveVideo.vue'
 // import HtmlParser from '~/components/HtmlParser.vue'
@@ -51,7 +50,6 @@ export default {
     }
   },
   components: {
-    nuiArticle,
     nuiAds
     // ResponsiveVideo,
     // HtmlParser,

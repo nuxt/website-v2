@@ -1,5 +1,20 @@
-@import '_links.scss';
-@import '_headings.scss';
-@import '_texts.scss';
-@import '_lists.scss';
-@import '_promote.scss';
+body {
+  .nui-select {
+    @apply text-nuxt-gray bg-gray-200;
+  }
+  .header {
+    background-color: white;
+    @apply bg-white;
+    &_nav {
+      @apply bg-white;
+      &_link {
+        @apply text-nuxt-gray;
+      }
+    }
+  }
+  .footer {
+    background-color: white;
+    @apply bg-white;
+  }
+}
+

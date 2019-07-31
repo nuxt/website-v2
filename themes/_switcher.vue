@@ -13,6 +13,9 @@ export default {
       required: true
     }
   },
+  mixins: [
+    {}
+  ],
   components : {
     // COMPONENTS, Lister tous les composants .vue dans components/ pour les pre-inclure
     // concaterner les Noms pour faire 'prefixDirectoryFile' usage: <prefix-directory-file/>

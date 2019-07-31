@@ -2,9 +2,9 @@
   <nui-hero class="Home__Showcase">
     <nui-container>
       <div>
-        <nui-title>
+        <h1>
           Who's using nuxt<span>js</span>
-        </nui-title>
+        </h1>
       </div>
       <div>
         <a class="Home__Showcase__link" v-for="(partner, i) in partners" :key="i" :href="partner.url" target="_blank" rel="noopener">
@@ -22,12 +22,12 @@
 </template>
 
 <script>
-import nuiTitle from '@/components/commons/Title'
+// import nuiTitle from '@/components/commons/Title'
 import nuiSvgPlay from '@/components/svg/Play.vue'
 
 export default {
   components: {
-    nuiTitle,
+    // nuiTitle,
     nuiSvgPlay
   },
   data () {

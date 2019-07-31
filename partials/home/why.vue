@@ -2,11 +2,11 @@
   <section class="Home__Why">
     <nui-container>
       <div>
-        <nui-title>
+        <h1>
           Why NUXT<span>JS</span>
-        </nui-title>
+        </h1>
       </div>
-      <nui-row>
+      <div class="flex items-end lg:items-center justify-between">
         <div class="Home__Why__Section">
           <i-performant/>
           <h4 class="Home__Why__Section__Title">{{ $store.state.homepage.why_performant.attrs.title }}</h4>
@@ -25,22 +25,20 @@
           <p class="Home__Why__Section__Description" v-html="$store.state.homepage.why_enjoyable.body">
           </p>
         </div>
-      </nui-row>
+      </div>
     </nui-container>
   </section>
 </template>
 
 <script>
-import nuiRow from '@/components/commons/Row'
-import nuiTitle from '@/components/commons/Title'
+// import nuiTitle from '@/components/commons/Title'
 import iPerformant from '@/components/svg/Rocket'
 import iModular from '@/components/svg/Puzzle'
 import iEnjoyable from '@/components/svg/Dancers'
 
 export default {
   components: {
-    nuiRow,
-    nuiTitle,
+    // nuiTitle,
     iPerformant,
     iModular,
     iEnjoyable

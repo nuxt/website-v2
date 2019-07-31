@@ -1,5 +1,5 @@
 <template>
-  <nui-hero class="pb-24">
+  <nui-hero class="z-20 pb-24">
     <nui-container>
       <div class="flex justify-between">
         <div class="lg:w-1/2 xl:w-6/12 text-center lg:text-left">

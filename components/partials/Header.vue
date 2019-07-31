@@ -13,17 +13,17 @@
         <nav class="header_nav lg:block lg:relative lg:pt-0 fixed top-0 bottom-0 left-0 right-0 pt-24 overflow-y-auto" :class="{'hidden': !mobileNav}">
           <ul class="lg:flex lg:pt-1 xl:pt-0 container mx-auto text-center">
             <li v-for="link in links" :key="link" class="xl:px-4 lg:py-0 lg:px-2 py-2">
-              <nuxt-link class="header_nav_link block p-2 font-bold uppercase hover:no-underline hover:text-nuxt-lightgreen" :to="localePath(link)">
-                {{ $store.state.lang.links[link] || link }}
+              <nuxt-link class="header_nav_link block p-2 font-bold uppercase hover:no-underline hover:text-nuxt-lightgreen" :to="localePath({ name: 'learn-section-slug', params: { section: link } })">
+                {{ $store.state.lang.links[link] || link}}
               </nuxt-link>
             </li>
           </ul>
         </nav>
-        <nui-button :to="localePath('are-you-nuxt')" class="hidden lg:flex">
+        <nui-button :to="localePath('index')" class="hidden lg:flex">
           <nui-user-icon class="h-4 mb-1 mr-3 fill-current"/>
           <span>Are you Nuxt?</span>
         </nui-button>
-        <nuxt-link :to="localePath('are-you-nuxt')" class="block flex p-2 -m-2 items-center justify-center text-nuxt-gray hover:text-nuxt-lightgreen z-10 lg:hidden">
+        <nuxt-link :to="localePath('index')" class="block flex p-2 -m-2 items-center justify-center text-nuxt-gray hover:text-nuxt-lightgreen z-10 lg:hidden">
           <nui-user-icon class="block h-5 fill-current"/>
         </nuxt-link>
         <!-- <nui-search class="lg:block hidden"/> -->

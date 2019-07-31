@@ -45,7 +45,7 @@ export default {
   computed: {
     visible() { return this.$store.state.visibleAffix },
     path() { return this.$route.path.slice(-1) === '/' ? this.$route.path.slice(0, -1) : this.$route.path },
-    menu() { return '/' + this.$route.params.section },
+    menu() { return '/learn/' + this.$route.params.section },
     contents() {
       var c = []
       this.list.forEach((group) => {

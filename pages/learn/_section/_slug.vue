@@ -2,17 +2,14 @@
   <nui-article>
     <nui-ads :key="$route.params.slug" class="float-right ml-8 mb-8 shadow"/>
     <h1>{{ attrs.title }}</h1>
-    <!-- <responsive-video v-if="attrs.youtube" :src="attrs.youtube"/>
+    <responsive-video v-if="attrs.youtube" :src="attrs.youtube"/>
     <html-parser :content="body"/>
-    <contribute :doc-link="docLink"/> -->
+    <contribute :doc-link="docLink"/>
   </nui-article>
 </template>
 
 <script>
 import nuiAds from '@/components/partials/Ads'
-// import ResponsiveVideo from '~/components/ResponsiveVideo.vue'
-// import HtmlParser from '~/components/HtmlParser.vue'
-// import Contribute from '~/components/Contribute.vue'
 
 export default {
   async asyncData({ $docs, params, store, error }) {
@@ -51,9 +48,6 @@ export default {
   },
   components: {
     nuiAds
-    // ResponsiveVideo,
-    // HtmlParser,
-    // Contribute
   }
 }
 </script>

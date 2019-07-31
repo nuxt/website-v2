@@ -2,9 +2,9 @@
   <section class="Home__Features">
     <nui-container>
       <div>
-        <nui-title>Features</nui-title>
+        <h1>Features</h1>
       </div>
-      <nui-row style="padding-bottom: 4rem;">
+      <div class="flex items-end lg:items-center justify-between">
         <div class="Home__Features__Section">
           <h4 class="Home__Features__Section__Title">
             .vue files based
@@ -29,8 +29,8 @@
             Lorem ipsum dolor sit, amet consectetur adipisicing elit. Labore nemo quasi quae amet blanditiis facere aliquid ducimus eum sunt aut magnam ipsam rem culpa ratione consectetur, recusandae vero odit illum?
           </p>
         </div>
-      </nui-row>
-      <nui-row>
+      </div>
+      <div>
         <div class="Home__Features__Section">
           <h4 class="Home__Features__Section__Title">
             .vue files based
@@ -55,22 +55,10 @@
             Lorem ipsum dolor sit, amet consectetur adipisicing elit. Labore nemo quasi quae amet blanditiis facere aliquid ducimus eum sunt aut magnam ipsam rem culpa ratione consectetur, recusandae vero odit illum?
           </p>
         </div>
-      </nui-row>
+      </div>
     </nui-container>
   </section>
 </template>
-
-<script>
-import nuiRow from '@/components/commons/Row'
-import nuiTitle from '@/components/commons/Title'
-
-export default {
-  components: {
-    nuiRow,
-    nuiTitle
-  }
-}
-</script>
 
 <style lang="scss">
 $grey_blue: #2F495E;

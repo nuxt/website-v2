@@ -2,46 +2,42 @@
   <section class="Home__Modes">
     <nui-container>
       <div>
-        <nui-title>
+        <h1>
           rendering modes
-        </nui-title>
+        </h1>
       </div>
-      <nui-row>
+      <div class="flex items-end lg:items-center justify-between">
         <i-performant/>
         <div class="Home__Modes__Section">
           <h4 class="Home__Modes__Section__Title">{{ $store.state.homepage.modes_server_side_rendering.attrs.content_title }}</h4>
           <p class="Home__Modes__Section__Description" v-html="$store.state.homepage.modes_server_side_rendering.body"></p>
         </div>
-      </nui-row>
-      <nui-row>
+      </div>
+      <div>
         <i-modular/>
         <div class="Home__Modes__Section">
           <h4 class="Home__Modes__Section__Title">{{ $store.state.homepage.modes_statically_generated.attrs.content_title }}</h4>
           <p class="Home__Modes__Section__Description" v-html="$store.state.homepage.modes_statically_generated.body"></p>
         </div>
-      </nui-row>
-      <nui-row>
+      </div>
+      <div>
         <i-enjoyable/>
         <div class="Home__Modes__Section">
           <h4 class="Home__Modes__Section__Title">{{ $store.state.homepage.modes_single_page_app.attrs.content_title }}</h4>
           <p class="Home__Modes__Section__Description" v-html="$store.state.homepage.modes_single_page_app.body"></p>
         </div>
-      </nui-row>
+      </div>
     </nui-container>
   </section>
 </template>
 
 <script>
-import nuiRow from '@/components/commons/Row'
-import nuiTitle from '@/components/commons/Title'
 import iPerformant from '@/components/svg/Rocket'
 import iModular from '@/components/svg/Puzzle'
 import iEnjoyable from '@/components/svg/Dancers'
 
 export default {
   components: {
-    nuiRow,
-    nuiTitle,
     iPerformant,
     iModular,
     iEnjoyable

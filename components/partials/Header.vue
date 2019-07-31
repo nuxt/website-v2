@@ -19,17 +19,17 @@
             </li>
           </ul>
         </nav>
-        <nui-button :to="localePath('index')" class="hidden lg:flex">
+        <!-- <nui-button :to="localePath('index')" class="hidden lg:flex">
           <nui-user-icon class="h-4 mb-1 mr-3 fill-current"/>
           <span>Are you Nuxt?</span>
-        </nui-button>
-        <nuxt-link :to="localePath('index')" class="block flex p-2 -m-2 items-center justify-center text-nuxt-gray hover:text-nuxt-lightgreen z-10 lg:hidden">
+        </nui-button> -->
+        <!-- <nuxt-link :to="localePath('index')" class="block flex p-2 -m-2 items-center justify-center text-nuxt-gray hover:text-nuxt-lightgreen z-10 lg:hidden">
           <nui-user-icon class="block h-5 fill-current"/>
-        </nuxt-link>
-        <!-- <nui-search class="lg:block hidden"/> -->
-        <!-- <a href="#" @click.prevent="openSearch" class="lg:hidden block z-10 py-2 pl-2 w-6 text-nuxt-gray hover:text-nuxt-lightgreen">
+        </nuxt-link> -->
+        <nui-search class="lg:block hidden"/>
+        <a href="#" @click.prevent="openSearch" class="block flex p-2 -m-2 items-center justify-center text-nuxt-gray hover:text-nuxt-lightgreen z-10 lg:hidden">
           <nui-search-icon class="block h-5 fill-current"/>
-        </a> -->
+        </a>
       </div>
     </nui-container>
   </header>
@@ -39,7 +39,8 @@
 import nuiLogo from '@/components/svg/Nuxtjs'
 import nuiBarsIcon from '@/components/svg/Bars'
 import nuiTimesIcon from '@/components/svg/Times'
-import nuiUserIcon from '@/components/svg/User'
+import nuiSearchIcon from '@/components/svg/Search'
+import nuiSearch from '@/components/partials/Search'
 
 export default {
   props: {
@@ -61,7 +62,8 @@ export default {
     nuiBarsIcon,
     nuiTimesIcon,
     nuiLogo,
-    nuiUserIcon
+    nuiSearchIcon,
+    nuiSearch
   }
 }
 </script>

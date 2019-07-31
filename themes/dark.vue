@@ -5,8 +5,11 @@
 </template>
 
 <style lang="scss" scoped>
-.nui-select {
+.nui-select { // Ne marche pas
   @apply text-white bg-gray-800;
+}
+body[data-theme='dark'] {
+
 }
 .header {
   @apply bg-nuxt-gray;

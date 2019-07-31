@@ -10,11 +10,6 @@ export default {
       { rel: 'preconnect', href: 'https://www.google-analytics.com' }
     ]
   },
-  styleResources: {
-    scss: [
-      './assets/styles/variables/theme.scss'
-    ]
-  },
   modules: [
     ['~/modules/docs/', { port: 3001 }],
     '~/modules/static/',

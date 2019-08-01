@@ -7,8 +7,8 @@
     </nui-hero> -->
     <nui-container>
       <div class="flex py-8">
-        <nui-aside class="w-3/12" :list="list"/>
-        <div class="w-9/12 pl-8">
+        <nui-aside class="hidden lg:block lg:w-3/12" :list="list"/>
+        <div class="lg:w-9/12">
           <nuxt-child/>
         </div>
       </div>

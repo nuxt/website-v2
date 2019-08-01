@@ -1,7 +1,7 @@
 <template>
   <div class="relative">
     <nui-container>
-      <div class="flex items-center justify-between bg-gray-100 border-2 border-b border-gray-300">
+      <div class="flex items-center justify-between">
         <div class="lg:w-1/2 text-center lg:text-left pl-8">
           <h1 class="text-6xl font-medium leading-normal text-nuxt-lightgreen">
             {{ error.statusCode }}
@@ -9,11 +9,6 @@
           <h3 class="text-4xl text-nuxt-gray font-medium leading-relaxed mb-6">
             {{ error.message }}
           </h3>
-          <div class="inline-block py-4">
-            <nui-button to="/" green class="mr-4">
-              Go back home...
-            </nui-button>
-          </div>
         </div>
         <div class="hidden lg:block lg:w-5/12 xl:w-4/12">
           <mountains-globe/>

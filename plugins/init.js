@@ -1,4 +1,4 @@
-export default async function ({ $docs, isDev, env, req, store: { commit, state }, redirect }) {
+export default async function ({ $docs, isDev, env, req, app, store: { commit, state, dispatch }, redirect }) {
   // If state filled on server-side (to support spa fallback)
   if (state.filled) {
     return
@@ -21,13 +21,7 @@ export default async function ({ $docs, isDev, env, req, store: { commit, state 
   try {
     const releases = await $docs.get('/releases')
     commit('setGhVersion', releases[0] ? releases[0].name : 'vX.Y.Z')
-    const lang = await $docs.get('/lang/' + state.locale)
-    commit('setLang', lang)
-    commit('setDocVersion', lang.docVersion)
-    const menu = await $docs.get('/menu/' + state.locale)
-    commit('setMenu', menu)
-    const homepage = await $docs.get('/homepage/' + state.locale)
-    commit('setHomepage', homepage)
+    await dispatch('getLangData', app.i18n.locale)
     commit('setFilled')
   } catch (e) {
     console.error('Error on filling the store, please run the docs server.') // eslint-disable-line no-console

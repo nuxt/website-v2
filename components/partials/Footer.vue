@@ -77,9 +77,10 @@ export default {
   computed: {
     currentLang: {
       get () {
-        return this.$i18n.locales.map(l => l.code).indexOf(this.$store.state.i18n.locale)
+        return this.$i18n.locales.map(l => l.code).indexOf(this.$i18n.locale)
       },
       set (value) {
+        this.$store.dispatch('getLangData', this.$i18n.locales[value].code)
         this.$router.push(this.switchLocalePath(this.$i18n.locales[value].code))
       }
     },

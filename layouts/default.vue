@@ -1,6 +1,6 @@
 <template>
   <!-- <nuxt-theme :theme="$store.state.theme"> -->
-  <div class="font-sans font-medium bg-gray-100 text-nuxt-gray">
+  <div>
     <nui-header v-model="mobileNav"/>
     <main class="lg:block relative pt-16 lg:pt-24" :class="{'hidden': mobileNav}">
       <!-- <event-info/> -->

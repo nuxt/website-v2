@@ -1,7 +1,7 @@
 <template>
   <svg id="Duotone" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 112">
     <path class="cls-2" d="M39.84,31.44a2.85,2.85,0,0,0-1,.2,4.75,4.75,0,0,0-9.39,0,2.86,2.86,0,1,0-1,5.53H39.84a2.86,2.86,0,0,0,0-5.73Z"/>
-    <path class="cls-2" d="M81.35,38.35a2.84,2.84,0,0,0-1,.2,4.75,4.75,0,0,0-9.39,0,2.86,2.86,0,1,0-1,5.53H81.35a2.86,2.86,0,0,0,0-5.73Z"/>
+    <path class="cls-2 cls-2-right" d="M81.35,38.35a2.84,2.84,0,0,0-1,.2,4.75,4.75,0,0,0-9.39,0,2.86,2.86,0,1,0-1,5.53H81.35a2.86,2.86,0,0,0,0-5.73Z"/>
     <path class="cls-3" d="M46.22,63.4,58.86,46.11a1.19,1.19,0,0,1,1.93,0L73.42,63.4Z"/>
     <path class="cls-4" d="M46.22,63.4,58.86,46.11a1.19,1.19,0,0,1,1.93,0L73.42,63.4Z"/>
     <path class="cls-3" d="M39.42,63.4,50.68,50.16a1.19,1.19,0,0,1,1.82,0L63.76,63.4Z"/>
@@ -40,5 +40,34 @@
 .cls-6 {
   /* fill:#d6daff; */
   @apply fill-nuxt-lightgreen;
+}
+@keyframes cloudLeft {
+  0% {
+    transform: translateX(-20px);
+  }
+  50% {
+    transform: translateX(50%);
+  }
+  100% {
+    transform: translateX(-20px);
+  }
+}
+@keyframes cloudRight {
+  0% {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(-50%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+.cls-2 {
+  position: absolute;
+  animation: cloudLeft 25s infinite alternate linear;
+}
+.cls-2-right {
+  animation: cloudRight 20s infinite alternate linear;
 }
 </style>

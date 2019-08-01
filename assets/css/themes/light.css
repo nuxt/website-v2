@@ -1,0 +1,20 @@
+body {
+  @apply font-sans font-medium text-nuxt-gray;
+  .header {
+    @apply bg-white;
+    &_nav {
+      @apply bg-white;
+      &_link {
+        @apply text-nuxt-gray;
+      }
+    }
+  }
+}
+
+body .nui-select {
+  @apply text-nuxt-gray bg-gray-200;
+}
+
+body .footer {
+  @apply bg-white;
+}

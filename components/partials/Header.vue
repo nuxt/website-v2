@@ -1,5 +1,5 @@
 <template>
-  <header class="header fixed top-0 right-0 left-0 z-10 bg-white">
+  <header class="header fixed top-0 right-0 left-0 z-10">
     <nui-container>
       <div class="flex py-6 lg:pt-8 items-end lg:items-center justify-between border-b border-gray-300">
         <a href="#" @click.prevent="$emit('toggle', !mobileNav)" class="flex p-2 -m-2 items-center justify-center text-nuxt-gray hover:text-nuxt-lightgreen z-10 lg:hidden">
@@ -13,7 +13,7 @@
         <nav class="header_nav lg:block lg:relative lg:pt-0 fixed top-0 bottom-0 left-0 right-0 pt-24 overflow-y-auto" :class="{'hidden': !mobileNav}">
           <ul class="lg:flex lg:pt-1 xl:pt-0 container mx-auto text-center">
             <li v-for="link in links" :key="link" class="xl:px-4 lg:py-0 lg:px-2 py-2">
-              <nuxt-link class="header_nav_link block p-2 font-bold uppercase hover:no-underline hover:text-nuxt-lightgreen" :to="localePath({ name: 'learn-section-slug', params: { section: link } })">
+              <nuxt-link class="header_nav_link block p-2 font-medium uppercase hover:no-underline hover:text-nuxt-lightgreen" :to="localePath({ name: 'learn-section-slug', params: { section: link } })">
                 {{ $store.state.lang.links[link] || link}}
               </nuxt-link>
             </li>

@@ -12,14 +12,14 @@
 import nuiAds from '@/components/partials/Ads'
 
 export default {
-  async asyncData({ $docs, params, store, error }) {
+  async asyncData({ $docs, params, store, error, app }) {
     let defaultSlugs = { guide: 'index', api: 'index', examples: 'hello-world', faq: 'external-resources' }
     const slug = params.slug || defaultSlugs[params.section]
-    const path = `/${store.state.lang.iso}/${params.section}/${slug}`
+    const path = `/${app.i18n.locale}/${params.section}/${slug}`
     let data = { docLink: `https://github.com/nuxt/docs/blob/master${path}.md` }
-    if (store.state.lang.iso === 'ru') {
+    if (app.i18n.locale === 'ru') {
       data.docLink = `https://github.com/translation-gang/ru.docs.nuxtjs/blob/translation-ru${path}.md`
-    } else if (store.state.lang.iso === 'cn') {
+    } else if (app.i18n.locale === 'cn') {
       data.docLink = `https://github.com/o2team/i18n-cn-nuxtjs-docs/blob/dev${path}.md`
     }
     try {

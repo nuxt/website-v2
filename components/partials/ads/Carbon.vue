@@ -16,20 +16,20 @@ export default {
 }
 </script>
 
-<style lang="scss">
+<style>
 .Carbon {
   @apply bg-white p-4 flex flex-col w-40;
-  .carbon-img {
+  & .carbon-img {
   }
-  .carbon-text {
+  & .carbon-text {
     @apply text-sm m-0 text-gray-600 block pt-2 leading-relaxed;
     &:hover {
       @apply no-underline text-gray-700;
     }
   }
-  .carbon-wrap {
+  & .carbon-wrap {
   }
-  .carbon-poweredby {
+  & .carbon-poweredby {
     @apply text-xs text-right text-gray-400 block pt-2;
     &:hover {
       @apply no-underline text-gray-500;

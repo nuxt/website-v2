@@ -18,7 +18,7 @@ export default {
 
 <style>
 .Carbon {
-  @apply bg-white p-4 flex flex-col w-40;
+  @apply flex flex-col w-32;
   & .carbon-img {
   }
   & .carbon-text {

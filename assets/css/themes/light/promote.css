@@ -1,0 +1,22 @@
+body {
+  & article {
+    & .Promote {
+      @apply flex p-4 my-4 rounded bg-gray-200 text-gray-600;
+      & .Promote__Content {
+        @apply pl-4;
+        & .Promote__Content__Title {
+          @apply text-gray-700 text-xl;
+        }
+        & .Promote__Content__Description {
+          @apply leading-relaxed py-2 text-sm;
+        }
+        & .Promote__Content__Signature {
+          @apply text-xs text-gray-500;
+        }
+      }
+      &:hover {
+        @apply no-underline text-nuxt-green;
+      }
+    }
+  }
+}

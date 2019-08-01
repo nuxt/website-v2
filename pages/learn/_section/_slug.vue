@@ -1,11 +1,15 @@
 <template>
-  <nui-article>
-    <nui-ads :key="$route.params.slug" class="float-right ml-8 mb-8 shadow"/>
-    <h1>{{ attrs.title }}</h1>
-    <responsive-video v-if="attrs.youtube" :src="attrs.youtube"/>
-    <html-parser :content="body"/>
-    <contribute :doc-link="docLink"/>
-  </nui-article>
+  <div class="flex">
+    <nui-article class="w-10/12 pr-8">
+      <h1>{{ attrs.title }}</h1>
+      <responsive-video v-if="attrs.youtube" :src="attrs.youtube"/>
+      <html-parser :content="body"/>
+      <contribute :doc-link="docLink"/>
+    </nui-article>
+    <div class="flex w-2/12 justify-end">
+      <nui-ads :key="$route.params.slug"/>
+    </div>
+  </div>
 </template>
 
 <script>

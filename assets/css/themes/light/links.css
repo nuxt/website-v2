@@ -1,0 +1,13 @@
+body {
+  & .nuxt-link-active, .nuxt-link-exact-active {
+    @apply text-nuxt-lightgreen;
+  }
+  & article {
+    & a {
+      color: #41b883;
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+}

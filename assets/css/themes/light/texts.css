@@ -1,0 +1,19 @@
+body {
+  & article {
+    & p {
+      @apply leading-loose py-1 mb-1;
+    }
+    & blockquote {
+      @apply italic text-gray-500 leading-loose;
+    }
+    & code {
+      @apply bg-gray-200 text-gray-700 py-1 px-2 not-italic rounded text-sm;
+    }
+    & pre {
+      @apply bg-gray-200 rounded p-2 my-2;
+    }
+    & b, & strong {
+      @apply font-bold text-nuxt-green;
+    }
+  }
+}

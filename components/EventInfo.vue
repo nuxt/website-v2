@@ -1,12 +1,11 @@
 <template>
   <div class="EventInfo" :class="{ hidden, 'full-width': isHome }">
-    <a href="https://vuetoronto.com/tickets/?unii-discount-code=NUXTJS100" target="_blank" rel="noopener">{{ $store.state.lang.text.vue_toronto }}</a>
+    <a href="https://www.creative-tim.com/product/nuxt-argon-dashboard-pro?partner=120213" target="_blank" rel="noopener">Nuxt Argon Dashboard PRO is out 🌟 The first premium Boostrap template for NuxtJS.</a><br>
+    Get 30% OFF with the promo code <u class="code">30nuxt-exclusive</u> and support us 💚
   </div>
 </template>
 
 <script>
-const dateUntil = new Date('2018-11-11')
-
 export default {
   data() {
     return { hidden: true }
@@ -17,9 +16,7 @@ export default {
     }
   },
   mounted() {
-    if (Date.now() <= dateUntil) {
-      this.hidden = false
-    }
+    this.hidden = false
   }
 }
 </script>
@@ -30,11 +27,12 @@ export default {
   overflow: hidden;
   text-align: center;
   padding: 10px;
-  background-color: #41b883;
+  background-color: #2F495E;
   opacity: 1;
   transition-property: all;
   transition-duration: 0.5s;
   padding-right: 60px;
+  color: #fff;
   @media (min-width: 992px) {
     padding-left: 300px;
   }
@@ -49,6 +47,9 @@ export default {
   a {
     color: #fff;
     font-weight: 600;
+  }
+  .code {
+    color: #00C58E;
   }
 }
 </style>

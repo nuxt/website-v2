@@ -57,9 +57,9 @@ export default {
       ],
       links: {
         discover: [
-          { key: 'A worldwild team', to: 'index' },
-          { key: 'Events and mentions', to: 'index' },
-          { key: 'A worldwild team', to: 'index' }
+          { key: 'The Framework', to: 'discover-features' },
+          { key: 'Events and mentions', to: 'discover-events' },
+          { key: 'A worldwild team', to: 'discover-team' }
         ],
         follow: [
           { key: 'Github', href: 'https://github.com/nuxt/nuxt.js' },
@@ -67,9 +67,9 @@ export default {
           { key: 'Discord', href: 'https://discordapp.com/invite/ps2h6QT' }
         ],
         support: [
-          { key: 'Become a Nuxter', to: 'index' },
-          { key: 'The NuxtJS Shop', to: 'index' },
-          { key: 'Find or Post a Job', to: 'index' }
+          { key: 'Support NuxtJS', to: 'support-nuxtjs' },
+          { key: 'The NuxtJS Shop', to: 'support-shop' },
+          { key: 'Need some consulting?', to: 'support-consulting' }
         ]
       }
     }

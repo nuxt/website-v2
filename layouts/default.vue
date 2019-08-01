@@ -1,7 +1,13 @@
 <template>
   <div>
+<<<<<<< HEAD
     <navbar></navbar>
     <div :class="{'App--hidden': visible}">
+=======
+    <navbar/>
+    <div class="App" :class="{'App--hidden': visible}">
+      <!-- <event-info/> -->
+>>>>>>> 018bcc7c (chore(ad): remove event-info and use a page)
       <nuxt/>
     </div>
   </div>

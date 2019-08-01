@@ -1,6 +1,6 @@
 <template>
   <div class="flex justify-end">
-    <nui-article class="w-10/12 pr-4 mr-auto">
+    <nui-article class="w-10/12 px-4 mr-auto">
       <h1>{{ attrs.title }}</h1>
       <responsive-video v-if="attrs.youtube" :src="attrs.youtube"/>
       <html-parser :content="body"/>

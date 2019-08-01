@@ -22,7 +22,7 @@ export default {
   & .carbon-img {
   }
   & .carbon-text {
-    @apply text-sm m-0 text-gray-600 block pt-2 leading-relaxed;
+    @apply text-sm m-0 text-left text-gray-600 block pt-2 leading-relaxed;
     &:hover {
       @apply no-underline text-gray-700;
     }

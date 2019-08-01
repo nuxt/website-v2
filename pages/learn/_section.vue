@@ -7,7 +7,7 @@
     </nui-hero> -->
     <nui-container>
       <div class="flex py-8">
-        <nui-aside class="fixed hidden lg:block overflow-y-scroll h-screen top-0 bottom-0 pt-32 pr-4" :list="list"/>
+        <nui-aside :list="list"/>
         <div class="lg:w-9/12 lg:ml-auto">
           <nuxt-child/>
         </div>

@@ -1,5 +1,5 @@
 <template>
-  <aside class="font-medium">
+  <aside class="aside font-medium fixed hidden lg:block overflow-y-scroll bottom-0 pt-8 pr-4">
     <template v-for="(group, index) in list">
       <h3 class="uppercase text-gray-500 pb-2" :key="`title-${index}`">{{ group.title }}</h3>
       <ul class="pb-8" :key="`list-${index}`">
@@ -114,3 +114,10 @@ export default {
   }
 }
 </script>
+
+<style>
+.aside {
+  top: 6rem;
+  height: calc(100vh - 6rem)
+}
+</style>

@@ -1,19 +1,20 @@
 <template>
-  <div class="flex">
-    <nui-article class="w-10/12 pr-8">
+  <div class="flex justify-end">
+    <nui-article class="w-10/12 pr-4 mr-auto">
       <h1>{{ attrs.title }}</h1>
       <responsive-video v-if="attrs.youtube" :src="attrs.youtube"/>
       <html-parser :content="body"/>
       <contribute :doc-link="docLink"/>
     </nui-article>
-    <div class="flex w-2/12 justify-end">
-      <nui-ads :key="$route.params.slug"/>
-    </div>
+    <nui-affix>
+      <nui-ads class="mx-auto" :key="$route.params.slug"/>
+    </nui-affix>
   </div>
 </template>
 
 <script>
 import nuiAds from '@/components/partials/Ads'
+import nuiAffix from '@/components/partials/Affix'
 
 export default {
   async asyncData({ $docs, params, store, error, app }) {
@@ -51,7 +52,8 @@ export default {
     }
   },
   components: {
-    nuiAds
+    nuiAds,
+    nuiAffix
   }
 }
 </script>

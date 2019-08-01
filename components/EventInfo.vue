@@ -1,8 +1,8 @@
 <template>
   <div class="EventInfo" :class="{ hidden, 'full-width': isHome }">
     <svg class="close" @click="closeEventInfo" xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" aria-labelledby="closeIconTitle" stroke="#FFF" stroke-width="2" stroke-linecap="square" fill="none" color="#2329D6"><path d="M6.34 6.34l11.32 11.32m-11.32 0L17.66 6.34"/></svg>
-    <a class="title" href="https://www.creative-tim.com/product/nuxt-argon-dashboard-pro?partner=120213" target="_blank" rel="noopener">Nuxt Argon Dashboard PRO is out 🌟 The first premium Boostrap template for NuxtJS.</a><br>
-    Get 30% OFF with the promo code <u class="code">30nuxt-exclusive</u> and support us 💚<br>
+    <span class="title"><span class="code">[AD]</span> <a href="https://www.creative-tim.com/product/nuxt-argon-dashboard-pro?partner=120213" target="_blank" rel="noopener">Nuxt Argon Dashboard PRO</a> is out 🌟 A premium Boostrap template for NuxtJS by our partner <a href="https://www.creative-tim.com/?partner=120213" target="_blank" rel="noopener">CreativeTim</a>.</span><br>
+    Get 30% OFF with the promo code <u class="code">30nuxt-exclusive</u> and support Nuxt.js 💚<br>
     <a class="btn" href="https://www.creative-tim.com/product/nuxt-argon-dashboard-pro?partner=120213" target="_blank" rel="noopener">Discover</a>
   </div>
 </template>

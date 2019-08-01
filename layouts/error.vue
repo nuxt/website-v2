@@ -1,8 +1,8 @@
 <template>
   <div class="relative">
     <nui-container>
-      <div class="flex items-center justify-between">
-        <div class="lg:w-1/2 text-center lg:text-left">
+      <div class="flex items-center justify-between bg-gray-100 border-2 border-b border-gray-300">
+        <div class="lg:w-1/2 text-center lg:text-left pl-8">
           <h1 class="text-6xl font-medium leading-normal text-nuxt-lightgreen">
             {{ error.statusCode }}
           </h1>

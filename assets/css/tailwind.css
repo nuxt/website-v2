@@ -3,7 +3,7 @@
 @import 'tailwindcss/base';
 @import 'tailwindcss/components';
 
-@import './themes/light.scss';
+@import './themes/light.css';
 /* @import './themes/dark.scss'; */
 
 @import 'tailwindcss/utilities';

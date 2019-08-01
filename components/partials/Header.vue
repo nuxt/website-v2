@@ -1,7 +1,7 @@
 <template>
-  <header class="header fixed top-0 right-0 left-0 shadow z-10 py-6 lg:pt-8 bg-white">
+  <header class="header fixed top-0 right-0 left-0 z-10 bg-white">
     <nui-container>
-      <div class="flex items-end lg:items-center justify-between">
+      <div class="flex py-6 lg:pt-8 items-end lg:items-center justify-between border-b border-gray-300">
         <a href="#" @click.prevent="$emit('toggle', !mobileNav)" class="flex p-2 -m-2 items-center justify-center text-nuxt-gray hover:text-nuxt-lightgreen z-10 lg:hidden">
           <nui-times-icon v-if="mobileNav" class="block h-5 fill-current"/>
           <nui-bars-icon v-else class="block h-5 fill-current"/>

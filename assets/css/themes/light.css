@@ -1,20 +1,24 @@
 body {
   @apply font-sans font-medium text-nuxt-gray;
-  .header {
+  & .header {
     @apply bg-white;
-    &_nav {
+    & .header_nav {
       @apply bg-white;
-      &_link {
+      & .header_nav_link {
         @apply text-nuxt-gray;
+      }
+      & .nuxt-link-active {
+        @apply text-nuxt-lightgreen;
       }
     }
   }
-}
-
-body .nui-select {
-  @apply text-nuxt-gray bg-gray-200;
-}
-
-body .footer {
-  @apply bg-white;
+  & .nui-select {
+    @apply text-nuxt-gray bg-gray-200;
+  }
+  & .footer {
+    @apply bg-white;
+  }
+  & .nuxt-link-exact-active {
+    @apply text-nuxt-lightgreen;
+  }
 }

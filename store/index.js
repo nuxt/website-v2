@@ -43,3 +43,15 @@ export const mutations = {
     state.theme = value
   }
 }
+
+export const actions = {
+  async getLangData({ commit }, locale) {
+    const lang = await this.$docs.get('/lang/' + locale)
+    commit('setLang', lang)
+    commit('setDocVersion', lang.docVersion)
+    const menu = await this.$docs.get('/menu/' + locale)
+    commit('setMenu', menu)
+    const homepage = await this.$docs.get('/homepage/' + locale)
+    commit('setHomepage', homepage)
+  }
+}

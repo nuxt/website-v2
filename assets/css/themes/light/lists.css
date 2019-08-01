@@ -1,0 +1,19 @@
+body {
+  & article {
+    & ul, & ol {
+      @apply list-inside py-1 pl-1;
+      & li {
+        @apply py-2;
+      }
+      & ul, & ol {
+        @apply pl-4 pt-1;
+      }
+    }
+    & ol {
+      @apply list-decimal;
+    }
+    & ul {
+      @apply list-disc;
+    }
+  }
+}

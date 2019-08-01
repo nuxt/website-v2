@@ -1,3 +1,9 @@
+@import './light/links.css';
+@import './light/headings.css';
+@import './light/texts.css';
+@import './light/lists.css';
+@import './light/promote.css';
+
 body {
   @apply font-sans font-medium text-nuxt-gray;
   & .header {
@@ -22,3 +28,4 @@ body {
     @apply text-nuxt-lightgreen;
   }
 }
+

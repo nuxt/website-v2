@@ -38,7 +38,9 @@
       <div class="nBackers_Group">
         <h3 class="nBackers_Group_Title">{{ $store.state.lang.homepage.backer_sponsors }}</h3>
         <div class="nBackers_Group_Content">
-          <v-lazy-image alt="Nuxt Sponsors" src-placeholder="/oc-loading.svg" src="https://opencollective.com/nuxtjs/tiers/sponsors.svg?avatarHeight=64&width=1155&button=false"/>
+          <a class="nBackers_Group_Content_Link" href="https://www.sparheld.de/" target="_blank" rel="noopener">
+            <v-lazy-image class="nBackers_Group_Content_Link_Image" src="/sponsors/de-black.png" alt="Sparheld"/>
+          </a>
         </div>
         <div class="nBackers_Group_Action">
           <a class="nBackers_Group_Action_Button nBackers_Group_Action_Button--green" href="https://opencollective.com/nuxtjs" target="_blank" rel="noopener">
@@ -49,7 +51,7 @@
       <div class="nBackers_Group">
         <h3 class="nBackers_Group_Title">{{ $store.state.lang.homepage.backer_backers }}</h3>
         <div class="nBackers_Group_Content">
-          <v-lazy-image alt="Nuxt Backers" src-placeholder="/oc-loading.svg" src="https://opencollective.com/nuxtjs/tiers/backers.svg?width=1155&button=false" />
+          <v-lazy-image alt="Nuxt Backers" src-placeholder="/oc-loading.svg" src="https://opencollective.com/nuxtjs/tiers/nuxters.svg?width=1155&button=false" />
         </div>
         <div class="nBackers_Group_Action">
           <a class="nBackers_Group_Action_Button nBackers_Group_Action_Button--green" href="https://opencollective.com/nuxtjs" target="_blank" rel="noopener">

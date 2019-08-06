@@ -12,6 +12,9 @@ body {
       @apply bg-white;
       & .header_nav_link {
         @apply text-nuxt-gray;
+        &:hover {
+          @apply text-nuxt-lightgreen;
+        }
       }
       & .nuxt-link-active {
         @apply text-nuxt-lightgreen;

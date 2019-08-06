@@ -46,7 +46,13 @@
           <a class="nBackers_Group_Content_Link" href="https://www.sparheld.de/" target="_blank" rel="noopener">
             <v-lazy-image class="nBackers_Group_Content_Link_Image" src="/sponsors/de-black.png" alt="Sparheld"/>
           </a>
+<<<<<<< HEAD
 >>>>>>> 92c33488 (feat(sponsor): Ad sparheld sponsor)
+=======
+          <a class="nBackers_Group_Content_Link" href="https://icons8.com" target="_blank" rel="noopener">
+            <v-lazy-image class="nBackers_Group_Content_Link_Image" src="/sponsors/icons8.png" alt="Sparheld"/>
+          </a>
+>>>>>>> 02915742 (chore(sponsors): Add Icons8 as sponsor)
         </div>
         <div class="nBackers_Group_Action">
           <a class="nBackers_Group_Action_Button nBackers_Group_Action_Button--green" href="https://opencollective.com/nuxtjs" target="_blank" rel="noopener">

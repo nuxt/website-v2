@@ -33,8 +33,8 @@
 <script>
 // import nuiTitle from '@/components/commons/Title'
 import iPerformant from '@/components/svg/Rocket'
-import iModular from '@/components/svg/Puzzle'
-import iEnjoyable from '@/components/svg/Dancers'
+import iModular from '@/components/svg/streamline/bricks'
+import iEnjoyable from '@/components/svg/streamline/enjoyable'
 
 export default {
   components: {

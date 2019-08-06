@@ -1,39 +1,34 @@
 <template>
-  <section class="Home__Why">
-    <nui-container>
-      <div>
-        <h1>
-          Why NUXT<span>JS</span>
-        </h1>
-      </div>
-      <div class="flex items-end lg:items-center justify-between">
-        <div class="Home__Why__Section">
-          <i-performant/>
-          <h4 class="Home__Why__Section__Title">{{ $store.state.homepage.why_performant.attrs.title }}</h4>
-          <p class="Home__Why__Section__Description" v-html="$store.state.homepage.why_performant.body">
-          </p>
+  <nui-container>
+    <section class="bg-gray-100 py-8">
+      <h1 class="text-3xl uppercase text-center py-8">
+        Why NUXT<span class="text-nuxt-lightgreen">JS</span>
+      </h1>
+      <div class="flex items-start justify-between">
+        <div class="w-1/3 p-8 text-center">
+          <i-modular class="inline-block"/>
+          <h4 class="uppercase text-xl py-8 font-bold">{{ $store.state.homepage.why_modular.attrs.title }}</h4>
+          <p class="leading-loose text-justify" v-html="$store.state.homepage.why_modular.body"></p>
         </div>
-        <div class="Home__Why__Section">
-          <i-modular/>
-          <h4 class="Home__Why__Section__Title">{{ $store.state.homepage.why_modular.attrs.title }}</h4>
-          <p class="Home__Why__Section__Description" v-html="$store.state.homepage.why_modular.body">
-          </p>
+        <div class="w-1/3 p-8 text-center">
+          <i-performant class="inline-block"/>
+          <h4 class="uppercase text-xl py-8 font-bold">{{ $store.state.homepage.why_performant.attrs.title }}</h4>
+          <p class="leading-loose text-justify" v-html="$store.state.homepage.why_performant.body"></p>
         </div>
-        <div class="Home__Why__Section">
-          <i-enjoyable/>
-          <h4 class="Home__Why__Section__Title">{{ $store.state.homepage.why_enjoyable.attrs.title }}</h4>
-          <p class="Home__Why__Section__Description" v-html="$store.state.homepage.why_enjoyable.body">
-          </p>
+        <div class="w-1/3 p-8 text-center">
+          <i-enjoyable class="inline-block"/>
+          <h4 class="uppercase text-xl py-8 font-bold">{{ $store.state.homepage.why_enjoyable.attrs.title }}</h4>
+          <p class="leading-loose text-justify" v-html="$store.state.homepage.why_enjoyable.body"></p>
         </div>
       </div>
-    </nui-container>
-  </section>
+    </section>
+  </nui-container>
 </template>
 
 <script>
 // import nuiTitle from '@/components/commons/Title'
-import iPerformant from '@/components/svg/Rocket'
-import iModular from '@/components/svg/streamline/bricks'
+import iPerformant from '@/components/svg/streamline/performant'
+import iModular from '@/components/svg/streamline/modular'
 import iEnjoyable from '@/components/svg/streamline/enjoyable'
 
 export default {
@@ -52,9 +47,6 @@ $light_green: #00C58E;
 $grey: #606F7B;
 
 .Home__Why {
-  color: $grey_blue;
-  text-align: center;
-  padding: 5rem 0;
   &__Section {
     width: 25%;
     &__Title {

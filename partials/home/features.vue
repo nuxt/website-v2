@@ -1,11 +1,11 @@
 <template>
-  <section class="Home__Features">
-    <nui-container>
-      <div>
-        <h1>Features</h1>
-      </div>
-      <div class="flex items-end lg:items-center justify-between">
-        <div class="Home__Features__Section">
+  <nui-container class="py-12">
+    <section>
+      <h1 class="text-3xl uppercase text-center pb-8">
+          Features
+      </h1>
+      <div class="flex items-start justify-between">
+        <div class="w-1/3 p-8 text-center">
           <h4 class="Home__Features__Section__Title">
             .vue files based
           </h4>
@@ -13,7 +13,7 @@
             Lorem ipsum dolor sit, amet consectetur adipisicing elit. Labore nemo quasi quae amet blanditiis facere aliquid ducimus eum sunt aut magnam ipsam rem culpa ratione consectetur, recusandae vero odit illum?
           </p>
         </div>
-        <div class="Home__Features__Section">
+        <div class="w-1/3 p-8 text-center">
           <h4 class="Home__Features__Section__Title">
             .vue files based
           </h4>
@@ -21,33 +21,7 @@
             Lorem ipsum dolor sit, amet consectetur adipisicing elit. Labore nemo quasi quae amet blanditiis facere aliquid ducimus eum sunt aut magnam ipsam rem culpa ratione consectetur, recusandae vero odit illum?
           </p>
         </div>
-        <div class="Home__Features__Section">
-          <h4 class="Home__Features__Section__Title">
-            .vue files based
-          </h4>
-          <p class="Home__Features__Section__Description">
-            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Labore nemo quasi quae amet blanditiis facere aliquid ducimus eum sunt aut magnam ipsam rem culpa ratione consectetur, recusandae vero odit illum?
-          </p>
-        </div>
-      </div>
-      <div>
-        <div class="Home__Features__Section">
-          <h4 class="Home__Features__Section__Title">
-            .vue files based
-          </h4>
-          <p class="Home__Features__Section__Description">
-            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Labore nemo quasi quae amet blanditiis facere aliquid ducimus eum sunt aut magnam ipsam rem culpa ratione consectetur, recusandae vero odit illum?
-          </p>
-        </div>
-        <div class="Home__Features__Section">
-          <h4 class="Home__Features__Section__Title">
-            .vue files based
-          </h4>
-          <p class="Home__Features__Section__Description">
-            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Labore nemo quasi quae amet blanditiis facere aliquid ducimus eum sunt aut magnam ipsam rem culpa ratione consectetur, recusandae vero odit illum?
-          </p>
-        </div>
-        <div class="Home__Features__Section">
+        <div class="w-1/3 p-8 text-center">
           <h4 class="Home__Features__Section__Title">
             .vue files based
           </h4>
@@ -56,8 +30,34 @@
           </p>
         </div>
       </div>
-    </nui-container>
-  </section>
+      <div class="flex items-start justify-between">
+        <div class="w-1/3 p-8 text-center">
+          <h4 class="Home__Features__Section__Title">
+            .vue files based
+          </h4>
+          <p class="Home__Features__Section__Description">
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Labore nemo quasi quae amet blanditiis facere aliquid ducimus eum sunt aut magnam ipsam rem culpa ratione consectetur, recusandae vero odit illum?
+          </p>
+        </div>
+        <div class="w-1/3 p-8 text-center">
+          <h4 class="Home__Features__Section__Title">
+            .vue files based
+          </h4>
+          <p class="Home__Features__Section__Description">
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Labore nemo quasi quae amet blanditiis facere aliquid ducimus eum sunt aut magnam ipsam rem culpa ratione consectetur, recusandae vero odit illum?
+          </p>
+        </div>
+        <div class="w-1/3 p-8 text-center">
+          <h4 class="Home__Features__Section__Title">
+            .vue files based
+          </h4>
+          <p class="Home__Features__Section__Description">
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Labore nemo quasi quae amet blanditiis facere aliquid ducimus eum sunt aut magnam ipsam rem culpa ratione consectetur, recusandae vero odit illum?
+          </p>
+        </div>
+      </div>
+    </section>
+  </nui-container>
 </template>
 
 <style lang="scss">
@@ -66,11 +66,7 @@ $light_green: #00C58E;
 $grey: #606F7B;
 
 .Home__Features {
-  color: $grey_blue;
-  text-align: center;
-  padding: 5rem 0;
   &__Section {
-    width: 25%;
     &__Title {
       font-size: 1.35rem;
       font-weight: 700;

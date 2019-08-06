@@ -1,11 +1,15 @@
 <template>
-  <section class="Home__Modes">
-    <nui-container>
-      <div>
-        <h1>
-          rendering modes
-        </h1>
-      </div>
+  <nui-container class="pb-12">
+    <section class="bg-gray-100 rounded p-6">
+      <h1 class="text-3xl uppercase text-center pb-8 pt-10">
+        rendering modes
+      </h1>
+      <p> Explain the new mode with steps:</p>
+      <p> 1) Create or migrate your Vue.js Application on NuxtJS</p>
+      <p> 2) Do you need to render every page?</p>
+      <p> YES - Image + SSR mode / NO - Image + SPA mode description</p>
+      <p> 3) Do you want to host your Application on a server or a CDN?</p>
+      <p> SERVER - Image + production ready / SERVERLESS - Image + static files generated
       <div class="flex items-end lg:items-center justify-between">
         <i-performant/>
         <div class="Home__Modes__Section">
@@ -27,8 +31,8 @@
           <p class="Home__Modes__Section__Description" v-html="$store.state.homepage.modes_single_page_app.body"></p>
         </div>
       </div>
-    </nui-container>
-  </section>
+    </section>
+  </nui-container>
 </template>
 
 <script>

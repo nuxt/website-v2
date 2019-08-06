@@ -58,7 +58,7 @@ export default {
       links: {
         discover: [
           { key: 'The Framework', to: 'discover-features' },
-          { key: 'Events and mentions', to: 'discover-events' },
+          { key: 'Design charte', to: 'resources-design' },
           { key: 'A worldwild team', to: 'discover-team' }
         ],
         follow: [

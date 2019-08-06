@@ -1,6 +1,6 @@
 <template>
-  <nui-container>
-    <section class="bg-gray-100 rounded p-4">
+  <nui-container class="pb-12">
+    <section class="bg-gray-100 rounded p-6">
       <h1 class="text-3xl uppercase text-center pt-10 pb-8">
         Why NUXT<span class="text-nuxt-lightgreen">JS</span>
       </h1>
@@ -26,43 +26,15 @@
 </template>
 
 <script>
-// import nuiTitle from '@/components/commons/Title'
 import iPerformant from '@/components/svg/streamline/performant'
 import iModular from '@/components/svg/streamline/modular'
 import iEnjoyable from '@/components/svg/streamline/enjoyable'
 
 export default {
   components: {
-    // nuiTitle,
     iPerformant,
     iModular,
     iEnjoyable
   }
 }
 </script>
-
-<style lang="scss">
-$grey_blue: #2F495E;
-$light_green: #00C58E;
-$grey: #606F7B;
-
-.Home__Why {
-  &__Section {
-    width: 25%;
-    &__Title {
-      font-size: 1.35rem;
-      font-weight: 700;
-      margin: 0;
-      text-transform: uppercase;
-      padding: 2rem 0;
-    }
-    &__Description {
-      color: $grey;
-      font-weight: 500;
-      margin: 0;
-      line-height: 1.7rem;
-      font-size: 1rem;
-    }
-  }
-}
-</style>

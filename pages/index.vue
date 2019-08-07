@@ -2,8 +2,10 @@
   <div>
     <home-welcome/>
     <home-why/>
-    <home-features/>
+    <home-showcase/>
     <home-modes/>
+    <home-targets/>
+    <home-features/>
     <home-nuxters/>
   </div>
 </template>
@@ -11,7 +13,9 @@
 <script>
 import homeWelcome from '@/partials/home/welcome'
 import homeWhy from '@/partials/home/why'
+import homeShowcase from '@/partials/home/showcase'
 import homeFeatures from '@/partials/home/features'
+import homeTargets from '@/partials/home/targets'
 import homeNuxters from '@/partials/home/nuxters'
 import homeModes from '@/partials/home/modes'
 
@@ -19,7 +23,9 @@ export default {
   components: {
     homeWelcome,
     homeWhy,
+    homeShowcase,
     homeFeatures,
+    homeTargets,
     homeNuxters,
     homeModes
   },

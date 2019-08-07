@@ -1,12 +1,15 @@
 <template>
-  <nui-container class="pb-12">
-    <section class="bg-gray-100 rounded p-6">
-      <h1 class="text-3xl uppercase text-center pb-8 pt-10">
-        Nuxt<span class="text-nuxt-lightgreen">JS</span> rendering
+  <nui-container class="py-12">
+    <section>
+      <h1 class="text-3xl uppercase text-center pb-8">
+        Nuxt<span class="text-nuxt-lightgreen">JS</span> targets
       </h1>
-      <p> (Default) Server Side Rendering</p>
-      <p> Single page Application</p>
-      <p> Custom Rendering</p>
+      <p> Explain the new mode with steps:</p>
+      <p> 1) Create or migrate your Vue.js Application on NuxtJS</p>
+      <p> 2) Do you need to render every page?</p>
+      <p> YES - Image + SSR mode / NO - Image + SPA mode description</p>
+      <p> 3) Do you want to host your Application on a server or a CDN?</p>
+      <p> SERVER - Image + production ready / SERVERLESS - Image + static files generated
       <div class="flex items-end lg:items-center justify-between">
         <i-performant/>
         <div class="Home__Modes__Section">

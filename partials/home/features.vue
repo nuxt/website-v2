@@ -1,8 +1,8 @@
 <template>
-  <nui-container class="py-12">
-    <section>
-      <h1 class="text-3xl uppercase text-center pb-8">
-          Features
+  <nui-container class="pb-12">
+    <section class="bg-gray-100 rounded p-6">
+      <h1 class="text-3xl uppercase text-center pb-8 pt-10">
+        Nuxt<span class="text-nuxt-lightgreen">JS</span> features
       </h1>
       <div class="flex items-start justify-between">
         <div class="w-1/3 p-8 text-center">

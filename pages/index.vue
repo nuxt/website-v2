@@ -49,6 +49,12 @@ export default {
         { name: 'twitter:image:alt', content: 'Nuxt.js Logo' }
       ]
     }
+  // },
+  // async asyncData () {
+  //   let sponsors = await fetch('https://opencollective.com/nuxtjs/members/organizations.json').then(res => res.json())
+  //   return {
+  //     sponsors
+  //   }
   }
 }
 </script>

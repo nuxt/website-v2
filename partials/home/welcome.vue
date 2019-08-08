@@ -1,4 +1,5 @@
 <template>
+<<<<<<< HEAD
   <nui-hero class="pb-24">
     <nui-container>
       <div class="flex justify-between">
@@ -17,6 +18,24 @@
               20K+ github stars
             </nui-button>
           </div>
+=======
+  <nui-container class="py-24">
+    <div class="flex justify-between">
+      <div class="lg:w-1/2 xl:w-6/12 text-center lg:text-left">
+        <h1 class="text-3xl xl:text-4xl text-nuxt-gray font-medium leading-normal mb-6">
+          The Progressive<br><span class="text-nuxt-lightgreen">Vue.js</span> Framework<br>
+        </h1>
+        <h3 class="xl:text-lg text-gray-600 font-medium leading-relaxed mb-6">Build your next Vue.js application with confidence using NuxtJS. An <span title="Under MIT license">open source</span> framework making web development simple and powerful.</h3>
+        <div class="py-4">
+          <nui-button :to="localePath({ name: 'guide-slug', params: { slug: 'installation'}})" class="mr-4 py-3 px-6 text-base">
+            <nui-svg-play slot="icon" class="h-4 -mt-1 mr-1"/>
+            get started
+          </nui-button>
+          <nui-button :to="localePath({ name: 'learn-section-slug', params: { section: 'guide', slug: 'installation'}})" class="mr-4 py-3 px-6 text-base button-gray">
+            <nui-svg-gh slot="icon" class="h-6 -mt-1 mr-1"/>
+            21K+ github stars
+          </nui-button>
+>>>>>>> ff8ee412 (add companies logo for i18n and transition on sponsors)
         </div>
         <figure class="hidden lg:block lg:w-5/12">
           <nui-media src="https://player.vimeo.com/video/311756540"/>

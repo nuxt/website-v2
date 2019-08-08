@@ -1,7 +1,7 @@
 <template>
   <footer class="footer z-10 relative bg-white">
-    <nui-container>
-      <div class="flex items-center content-center justify-between border-t border-gray-300 py-10">
+    <nui-container class="border-t border-gray-300 lg:border-0">
+      <div class="flex items-center content-center justify-between lg:border-t lg:border-gray-300 py-10">
         <nav v-for="(l, title, index) in links" :key="title" class="flex-1" :class="{'text-center': index === 1, 'text-right': index === 2}">
           <h3 class="font-bold uppercase text-lg pb-4">{{ title }}</h3>
           <ul>

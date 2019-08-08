@@ -2,31 +2,31 @@
   <div>
     <home-welcome/>
     <home-why/>
-    <home-showcase/>
+    <home-companies/>
     <home-modes/>
     <home-targets/>
     <home-features/>
-    <home-nuxters/>
+    <home-sponsors/>
   </div>
 </template>
 
 <script>
 import homeWelcome from '@/partials/home/welcome'
 import homeWhy from '@/partials/home/why'
-import homeShowcase from '@/partials/home/showcase'
+import homeCompanies from '@/partials/home/companies'
 import homeFeatures from '@/partials/home/features'
 import homeTargets from '@/partials/home/targets'
-import homeNuxters from '@/partials/home/nuxters'
+import homeSponsors from '@/partials/home/sponsors'
 import homeModes from '@/partials/home/modes'
 
 export default {
   components: {
     homeWelcome,
     homeWhy,
-    homeShowcase,
+    homeCompanies,
     homeFeatures,
     homeTargets,
-    homeNuxters,
+    homeSponsors,
     homeModes
   },
   head() {

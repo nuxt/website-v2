@@ -16,7 +16,7 @@ export default {
   data () {
     return {
       sponsors: [
-        { name: 'Storyblok', link: 'https://www.storyblok.com/?ref=nuxt', img: '/img/partners/storyblok-logo.svg' }
+        { name: 'Storyblok', link: 'https://www.storyblok.com/?ref=nuxt', img: '/img/sponsors/storyblok-logo.svg' }
       ]
     }
   }

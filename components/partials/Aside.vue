@@ -1,5 +1,12 @@
 <template>
+<<<<<<< HEAD
   <aside class="font-medium">
+=======
+  <aside class="aside font-medium fixed hidden lg:block overflow-y-scroll bottom-0 pt-8 pr-4">
+    <p class="uppercase font-bold pb-6">
+      {{ $store.state.lang.text.version }} <span class="text-nuxt-lightgreen">{{ $store.state.docVersion }}</span>
+    </p>
+>>>>>>> 9b732a8c (add doc version)
     <template v-for="(group, index) in list">
       <h3 class="uppercase text-gray-500 pb-2" :key="`title-${index}`">{{ group.title }}</h3>
       <ul class="pb-8" :key="`list-${index}`">

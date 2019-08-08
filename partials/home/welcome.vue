@@ -7,7 +7,7 @@
         </h1>
         <h3 class="xl:text-lg text-gray-600 font-medium leading-relaxed mb-6">Build your next Vue.js application with confidence using NuxtJS. An <span title="Under MIT license">open source</span> framework making web development simple and powerful.</h3>
         <div class="py-4">
-          <nui-button :to="localePath({ name: 'learn-section-slug', params: { section: 'guide', slug: 'installation'}})" class="mr-4 py-3 px-6 text-base">
+          <nui-button :to="localePath({ name: 'guide-slug', params: { slug: 'installation'}})" class="mr-4 py-3 px-6 text-base">
             <nui-svg-play slot="icon" class="h-4 -mt-1 mr-1"/>
             get started
           </nui-button>

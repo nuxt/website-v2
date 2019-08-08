@@ -160,7 +160,16 @@ export default {
         { name: 'twitter:image:alt', content: 'Nuxt.js Logo' }
       ]
     }
+<<<<<<< HEAD
 >>>>>>> 04981a67 (update homepage)
+=======
+  // },
+  // async asyncData () {
+  //   let sponsors = await fetch('https://opencollective.com/nuxtjs/members/organizations.json').then(res => res.json())
+  //   return {
+  //     sponsors
+  //   }
+>>>>>>> 2fb6a223 (sponsors and flat routes with header links)
   }
 }
 </script>

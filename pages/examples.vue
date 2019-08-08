@@ -1,5 +1,6 @@
 <template>
 <<<<<<< HEAD
+<<<<<<< HEAD
   <div class="Examples">
     <nuxt-affix :list="list"></nuxt-affix>
     <div class="Examples__Content" :class="{'Examples__Content--hidden': visible}">
@@ -68,3 +69,24 @@ export default {
   }
 }
 </style>
+=======
+  <nui-container>
+    <div class="flex py-8">
+      <nui-aside :list="$store.state.menu['examples']"/>
+      <div class="lg:w-9/12 lg:ml-auto">
+        <nuxt-child/>
+      </div>
+    </div>
+  </nui-container>
+</template>
+
+<script>
+import nuiAside from '@/components/partials/Aside'
+
+export default {
+  components: {
+    nuiAside
+  }
+}
+</script>
+>>>>>>> 2fb6a223 (sponsors and flat routes with header links)

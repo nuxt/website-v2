@@ -1,4 +1,5 @@
 <template>
+<<<<<<< HEAD
   <footer class="bg-white shadow z-10 relative">
     <nui-container class="flex items-center content-center justify-between py-10">
       <nav v-for="(l, title, index) in links" :key="title" class="flex-1" :class="{'text-center': index === 1, 'text-right': index === 2}">
@@ -17,6 +18,26 @@
     </nui-container>
     <div class="border-t border-gray-300 py-4">
       <nui-container class="flex items-center content-center justify-between">
+=======
+  <footer class="footer z-10 relative bg-white">
+    <nui-container class="border-t border-gray-300 lg:border-0">
+      <div class="flex items-center content-center justify-between lg:border-t lg:border-gray-300 py-10">
+        <nav v-for="(l, title, index) in links" :key="title" class="flex-1" :class="{'text-center': index === 1, 'text-right': index === 2}">
+          <h3 class="font-bold uppercase text-lg pb-4">{{ title }}</h3>
+          <ul>
+            <li v-for="(link, i) in l" :key="i" class="py-2">
+              <a v-if="link.href" :href="link.href" target="_blank" rel="noopener noreferrer" class="hover:text-nuxt-lightgreen">
+                {{ link.key }}
+              </a>
+              <nuxt-link v-else :to="localePath(link.to)" class="hover:text-nuxt-lightgreen">
+                {{ link.key }}
+              </nuxt-link>
+            </li>
+          </ul>
+        </nav>
+      </div>
+      <div class="flex items-center content-center justify-between py-4 border-t border-gray-300">
+>>>>>>> 2fb6a223 (sponsors and flat routes with header links)
         <div class="flex-1">
           <nui-select v-model="themes.current" :options="themes.options">
             <template v-slot:icon>

@@ -57,9 +57,9 @@ export default {
       ],
       links: {
         discover: [
-          { key: 'The Framework', to: 'discover-features' },
-          { key: 'Design charte', to: 'resources-design' },
-          { key: 'A worldwild team', to: 'discover-team' }
+          { key: 'The Framework', to: 'index' },
+          { key: 'Design charte', to: 'design' },
+          { key: 'A worldwild team', to: 'team' }
         ],
         follow: [
           { key: 'Github', href: 'https://github.com/nuxt/nuxt.js' },
@@ -68,8 +68,8 @@ export default {
         ],
         support: [
           { key: 'Support NuxtJS', to: 'support-nuxtjs' },
-          { key: 'The NuxtJS Shop', to: 'support-shop' },
-          { key: 'Need some consulting?', to: 'support-consulting' }
+          { key: 'The NuxtJS Shop', to: 'shop' },
+          { key: 'Need some consulting?', to: 'help' }
         ]
       }
     }

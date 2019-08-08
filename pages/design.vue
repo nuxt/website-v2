@@ -1,5 +1,5 @@
 <template>
   <div>
-    events
+    Design
   </div>
 </template>

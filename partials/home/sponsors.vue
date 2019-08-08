@@ -12,7 +12,7 @@
       </p>
       <div v-for="(group, groupKey) in sponsors" :key="groupKey" class="text-center pb-8">
         <h2 class="uppercase text-xl pb-4">{{ groupKey }}</h2>
-        <a class="inline-block m-4 mt-2" v-for="(sponsor, i) in group" :key="i" :href="sponsor.url" target="_blank" rel="noopener">
+        <a class="sponsor inline-block m-4 mt-2" v-for="(sponsor, i) in group" :key="i" :href="sponsor.url" target="_blank" rel="noopener">
           <img :src="'/img/sponsors/' + sponsor.img" :alt="sponsor.name" class="inline-block" :class="sponsor.class"/>
         </a>
       </div>
@@ -52,3 +52,19 @@ export default {
   }
 }
 </script>
+
+<style>
+.sponsor {
+  & img {
+    opacity: 0.75;
+    filter: grayscale(100%);
+    transition: all 0.5s;
+  }
+  &:hover {
+    & img {
+      opacity: 1;
+      filter: grayscale(0%);
+    }
+  }
+}
+</style>

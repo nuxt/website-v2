@@ -4,18 +4,18 @@
       <h1 class="text-3xl uppercase text-center pt-10 pb-8">
         Why NUXT<span class="text-nuxt-lightgreen">JS</span>
       </h1>
-      <div class="flex items-start justify-between">
-        <div class="w-1/3 p-8 text-center">
+      <div class="flex flex-col lg:flex-row items-start justify-between">
+        <div class="lg:w-1/3 p-8 text-center">
           <i-modular class="inline-block"/>
           <h4 class="uppercase text-2xl py-8">{{ $store.state.homepage.why_modular.attrs.title }}</h4>
           <p class="leading-loose text-justify" v-html="$store.state.homepage.why_modular.body"></p>
         </div>
-        <div class="w-1/3 p-8 text-center">
+        <div class="lg:w-1/3 p-8 text-center">
           <i-performant class="inline-block"/>
           <h4 class="uppercase text-2xl py-8">{{ $store.state.homepage.why_performant.attrs.title }}</h4>
           <p class="leading-loose text-justify" v-html="$store.state.homepage.why_performant.body"></p>
         </div>
-        <div class="w-1/3 p-8 text-center">
+        <div class="lg:w-1/3 p-8 text-center">
           <i-enjoyable class="inline-block"/>
           <h4 class="uppercase text-2xl py-8">{{ $store.state.homepage.why_enjoyable.attrs.title }}</h4>
           <p class="leading-loose text-justify" v-html="$store.state.homepage.why_enjoyable.body"></p>

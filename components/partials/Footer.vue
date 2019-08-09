@@ -1,8 +1,8 @@
 <template>
   <footer class="footer z-10 relative bg-white">
     <nui-container class="border-t border-gray-300 lg:border-0">
-      <div class="flex items-center content-center justify-between lg:border-t lg:border-gray-300 py-10">
-        <nav v-for="(l, title, index) in links" :key="title" class="flex-1" :class="{'text-center': index === 1, 'text-right': index === 2}">
+      <div class="flex flex-col sm:flex-row text-center sm:text-left items-center content-center justify-between lg:border-t lg:border-gray-300 pt-10 sm:py-10">
+        <nav v-for="(l, title, index) in links" :key="title" class="flex-1 w-full sm:w-auto mb-8 sm:mb-0" :class="{'sm:text-center': index === 1, 'sm:text-right': index === 2}">
           <h3 class="font-bold uppercase text-lg pb-4">{{ title }}</h3>
           <ul>
             <li v-for="(link, i) in l" :key="i" class="py-2">
@@ -16,7 +16,9 @@
           </ul>
         </nav>
       </div>
-      <div class="flex items-center content-center justify-between py-4 border-t border-gray-300">
+    </nui-container>
+    <nui-container class="border-t border-gray-300 lg:border-0">
+      <div class="flex flex-row items-center content-center justify-between py-4 lg:border-t lg:border-gray-300">
         <div class="flex-1">
           <nui-select v-model="currentTheme" :options="themes">
             <template v-slot:icon>
@@ -24,7 +26,7 @@
             </template>
           </nui-select>
         </div>
-        <div class="flex-1 text-center">
+        <div class="flex-1 text-center hidden sm:block">
           <a class="block" :href="localePath('index')" @click.prevent="$router.push(localePath('index'))" @click.right.stop.prevent="$router.push(localePath('resources-design'))">
             <h1 class="m-0 h-0 w-0 overflow-hidden">NUXTJS</h1>
             <nui-logo class="h-6 lg:h-auto"/>

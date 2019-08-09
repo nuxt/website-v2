@@ -4,7 +4,7 @@
       <h1 class="text-3xl uppercase text-center pb-8">
           Who's using nuxt<span class="text-nuxt-lightgreen">JS</span>
       </h1>
-      <div class="flex items-center justify-between">
+      <div class="flex flex-col lg:flex-row items-center justify-between">
         <div v-for="(company, i) in companies[$i18n.locale]" :key="i" class="p-8 text-center">
           <a :href="company.url" target="_blank" rel="noopener" class="company">
             <img :src="'/img/companies/' + $i18n.locale + '/' + company.img" :alt="company.name" :class="company.class">

@@ -1,6 +1,6 @@
 <template>
   <nui-container class="py-12 text-center">
-    <section>
+    <section class="px-4">
       <h1 class="text-3xl uppercase pb-16">
         sponsors
       </h1>

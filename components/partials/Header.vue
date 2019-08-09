@@ -1,5 +1,5 @@
 <template>
-  <header class="header fixed top-0 right-0 left-0 z-10">
+  <header class="header fixed top-0 right-0 left-0 z-20">
     <nui-container class="border-b border-gray-300 lg:border-0">
       <div class="flex py-6 lg:pt-8 items-end lg:items-center justify-between lg:border-b lg:border-gray-300">
         <a href="#" @click.prevent="$emit('toggle', !mobileNav)" class="flex p-2 -m-2 items-center justify-center text-nuxt-gray hover:text-nuxt-lightgreen z-10 lg:hidden">

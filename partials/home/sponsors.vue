@@ -1,18 +1,21 @@
 <template>
-  <nui-container class="py-12">
+  <nui-container class="py-12 text-center">
     <section>
-      <h1 class="text-3xl uppercase text-center pb-8">
+      <h1 class="text-3xl uppercase pb-16">
         sponsors
       </h1>
-      <p class="text-justify pb-8">
-        Nuxt.js is an MIT licensed open source project and completely free to use.
-        However, the amount of effort needed to maintain and develop new features for the project is not sustainable without proper financial backing.
-        If you run a business and are using Nuxt in a revenue-generating product, it makes business sense to sponsor Nuxt development: it ensures the project that your product relies on stays healthy and actively maintained. It can also help your exposure in the Vue/Nuxt community and makes it easier to attract Vue/Nuxt developers.
-        If you are an individual user and have enjoyed the productivity of using Nuxt, consider donating as a sign of appreciation.
-      </p>
+      <i-sponsoring class="inline-block"/>
+      <div class="py-12 leading-loose">
+        <p>
+          Nuxt.js is an MIT licensed open source project and completely free to use.
+          However, the amount of effort needed to maintain and develop new features for the project is not sustainable without proper financial backing.
+          If you run a business and are using Nuxt in a revenue-generating product, it makes business sense to sponsor Nuxt development: it ensures the project that your product relies on stays healthy and actively maintained. It can also help your exposure in the Vue/Nuxt community and makes it easier to attract Vue/Nuxt developers.
+          If you are an individual user and have enjoyed the productivity of using Nuxt, consider donating as a sign of appreciation.
+        </p>
+      </div>
       <div v-for="(group, groupKey) in sponsors" :key="groupKey" class="text-center pb-8">
-        <h2 class="uppercase text-xl pb-4">{{ groupKey }}</h2>
-        <a class="sponsor inline-block m-4 mt-2" v-for="(sponsor, i) in group" :key="i" :href="sponsor.url" target="_blank" rel="noopener">
+        <h2 class="uppercase text pb-8"><span class="pb-2 border-b-2 border-nuxt-lightgreen">{{ groupKey }}</span></h2>
+        <a class="sponsor inline-block m-4" v-for="(sponsor, i) in group" :key="i" :href="sponsor.url" target="_blank" rel="noopener">
           <img :src="'/img/sponsors/' + sponsor.img" :alt="sponsor.name" class="inline-block" :class="sponsor.class"/>
         </a>
       </div>
@@ -28,10 +31,12 @@
 
 <script>
 import nuiSvgPlay from '@/components/svg/Play.vue'
+import iSponsoring from '@/components/svg/streamline/sponsoring.vue'
 
 export default {
   components: {
-    nuiSvgPlay
+    nuiSvgPlay,
+    iSponsoring
   },
   data () {
     return {

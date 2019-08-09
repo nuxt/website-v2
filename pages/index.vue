@@ -4,8 +4,8 @@
     <home-why/>
     <home-companies/>
     <home-modes/>
-    <home-targets/>
-    <home-features/>
+    <!-- <home-targets/>
+    <home-features/> -->
     <home-sponsors/>
   </div>
 </template>

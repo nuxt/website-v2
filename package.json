@@ -1,8 +1,19 @@
 {
-  "name": "nuxtjs.org",
-  "version": "1.1.0",
-  "description": "Nuxt.js official website",
-  "main": "index.js",
+  "private": true,
+  "license": "MIT",
+  "contributors": [
+    "Alexandre Chopin (@alexchopin)",
+    "Sébastien Chopin (@atinux)"
+  ],
+  "scripts": {
+    "build": "nuxt build",
+    "build:check": "nuxt build --analyze",
+    "dev": "nuxt",
+    "generate": "nuxt generate",
+    "lint": "eslint --ext .js,.vue --ignore-path .gitignore --ignore-pattern plugins/ga.js .",
+    "precommit": "npm run lint",
+    "start": "nuxt start"
+  },
   "dependencies": {
     "@nuxtjs/pwa": "^3.0.0-beta.16",
     "@nuxtjs/style-resources": "^0.1.2",
@@ -34,30 +45,5 @@
     "eslint-plugin-standard": "^4.0.0",
     "node-sass": "^4.12.0",
     "sass-loader": "^7.1.0"
-  },
-  "scripts": {
-    "dev": "nuxt",
-    "build": "nuxt build",
-    "build:check": "nuxt build --analyze",
-    "start": "nuxt start",
-    "generate": "nuxt generate",
-    "lint": "eslint --ext .js,.vue --ignore-path .gitignore --ignore-pattern plugins/ga.js .",
-    "precommit": "npm run lint"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/nuxt/nuxtjs.org.git"
-  },
-  "keywords": [
-    "nuxt.js",
-    "vuejs",
-    "nextjs",
-    "js"
-  ],
-  "author": "alexchopin",
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/nuxt/nuxtjs.org/issues"
-  },
-  "homepage": "https://github.com/nuxt/nuxtjs.org#readme"
+  }
 }

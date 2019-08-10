@@ -25,6 +25,8 @@ module.exports = async function (moduleOptions) {
     await docsServer.listen()
     if (isGenerate) {
       this.nuxt.hook('generate:done', () => docsServer.close())
+    } else {
+      this.nuxt.hook('close', () => docsServer.close())
     }
   }
 

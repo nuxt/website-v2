@@ -1,10 +1,10 @@
-export default async (ctx, inject) => {
+export default (ctx, inject) => {
   if (process.client && process.static) {
     return
   }
   const $docs = {
-    async get(path) {
-      return await fetch('<%= options.url %>' + path).then(response => {
+    get (path) {
+      return fetch('<%= options.url %>' + path).then((response) => {
         if (!response.ok) {
           const error = new Error(response.statusText)
           error.response = response

@@ -1,16 +1,18 @@
 <template>
   <header class="Header">
     <nuxt-link class="Header__Logo" to="/" @click.right.native.prevent="showLogos">
-      <n-logo/>
+      <n-logo />
       <!-- <img src="~static/logo_nav.png" alt="Nuxt"/> -->
-      <h1 class="Header__Logo__Text">NUXTJS</h1>
+      <h1 class="Header__Logo__Text">
+        NUXTJS
+      </h1>
     </nuxt-link>
     <div class="Header__Toggler">
       <div class="Header__Toggler__Button" @click="toggle">
-        <div :class="{'icon menu': !visible, 'icon close': visible}"></div>
+        <div :class="{'icon menu': !visible, 'icon close': visible}" />
       </div>
     </div>
-    <nuxt-header-nav/>
+    <nuxt-header-nav />
   </header>
 </template>
 
@@ -19,18 +21,18 @@ import nLogo from '@/components/icons/nuxtjs'
 import NuxtHeaderNav from '@/components/HeaderNav'
 
 export default {
-  computed: {
-    visible() { return this.$store.state.visibleHeader }
-  },
-  methods: {
-    toggle() { this.$store.commit('toggle', 'visibleHeader') },
-    showLogos() {
-      this.$router.push('/logos')
-    }
-  },
   components: {
     nLogo,
     NuxtHeaderNav
+  },
+  computed: {
+    visible () { return this.$store.state.visibleHeader }
+  },
+  methods: {
+    toggle () { this.$store.commit('toggle', 'visibleHeader') },
+    showLogos () {
+      this.$router.push('/logos')
+    }
   }
 }
 </script>

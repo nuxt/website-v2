@@ -8,7 +8,7 @@ export default async function ({ $docs, isDev, env, req, store: { commit, state 
     const hostParts = (req.headers.host || '').replace('.org', '').split('.')
     // If url like ja.nuxtjs.org
     if (hostParts.length === 2) {
-      if (hostParts[0] === 'www') return redirect(301, 'https://nuxtjs.org' + req.url)
+      if (hostParts[0] === 'www') { return redirect(301, 'https://nuxtjs.org' + req.url) }
 
       if (isDev) {
         commit('setLocale', hostParts[0])

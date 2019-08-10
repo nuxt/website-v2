@@ -49,7 +49,7 @@ export default {
   },
   loading: { color: '#41B883' },
   router: {
-    scrollBehavior(to, from, savedPosition) {
+    scrollBehavior (to, from, savedPosition) {
       // savedPosition is only available for popstate navigations (back button)
       if (savedPosition) {
         return savedPosition

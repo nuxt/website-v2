@@ -1,19 +1,19 @@
 <template>
   <div class="Search">
-    <input class="Search__Input" type="text" name="search" id="algolia" :placeholder="$store.state.lang.text.search" />
+    <input id="algolia" class="Search__Input" type="text" name="search" :placeholder="$store.state.lang.text.search">
   </div>
 </template>
 
 <script>
 let scriptInjected = false
-let callbacks = []
-let onScriptLoaded = (cb) => callbacks.push(cb)
-let scriptLoaded = () => callbacks.forEach((cb) => cb())
+const callbacks = []
+const onScriptLoaded = cb => callbacks.push(cb)
+const scriptLoaded = () => callbacks.forEach(cb => cb())
 
 export default {
-  mounted() {
+  mounted () {
     onScriptLoaded(() => this.addInstantSearch())
-    if (scriptInjected) return
+    if (scriptInjected) { return }
     // Load JS
     const script = document.createElement('script')
     script.setAttribute('type', 'text/javascript')
@@ -21,7 +21,7 @@ export default {
     document.getElementsByTagName('body')[0].appendChild(script)
     script.onload = scriptLoaded
     // Load CSS
-    var link = document.createElement('link')
+    const link = document.createElement('link')
     link.setAttribute('rel', 'stylesheet')
     link.setAttribute('type', 'text/css')
     link.setAttribute('href', 'https://cdn.jsdelivr.net/docsearch.js/2/docsearch.min.css')
@@ -29,7 +29,7 @@ export default {
     scriptInjected = true
   },
   methods: {
-    addInstantSearch() {
+    addInstantSearch () {
       window.docsearch({
         apiKey: process.env.docSearchApiKey,
         indexName: 'nuxtjs',

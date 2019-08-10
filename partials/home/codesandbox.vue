@@ -1,7 +1,9 @@
 <template>
   <section class="nCodesandbox">
     <div class="container">
-      <h2 class="nCodesandbox_Title"><span>{{ $store.state.lang.homepage.codesandbox_title }}</span></h2>
+      <h2 class="nCodesandbox_Title">
+        <span>{{ $store.state.lang.homepage.codesandbox_title }}</span>
+      </h2>
       <code-sandbox src="https://codesandbox.io/s/github/nuxt/codesandbox-nuxt/tree/master/?autoresize=1&hidenavigation=1&view=preview" />
       <div class="nCodesandbox_Content">
         <a class="nCodesandbox_Content_Button nCodesandbox_Content_Button--green" href="https://codesandbox.io/s/github/nuxt/codesandbox-nuxt/tree/master/?autoresize=1&hidenavigation=1&view=preview" target="_blank" rel="noopener">

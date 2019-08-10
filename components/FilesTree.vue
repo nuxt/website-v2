@@ -3,27 +3,29 @@
     <div class="FilesTree__Left" :class="{'FilesTree__Left--hidden': hidden}">
       <div class="FilesTree__Left__Header">
         <div class="Icon" @click="hidden = true">
-          <div class="icon remove"></div>
+          <div class="icon remove" />
         </div>
         {{ $store.state.lang.text.example_file }}
       </div>
       <div class="FilesTree__Left__Body">
-        <recursive-list v-on:changeFile="changeFile" :path="'examples/'+example"></recursive-list>
+        <recursive-list :path="'examples/'+example" @changeFile="changeFile" />
       </div>
     </div>
-    <div class="FilesTree__Right" :class="{'FilesTree__Right--hidden': hidden}" v-if="currentFile">
+    <div v-if="currentFile" class="FilesTree__Right" :class="{'FilesTree__Right--hidden': hidden}">
       <div class="FilesTree__Right__Header">
-        <div class="Icon" @click="hidden = false" v-if="hidden">
-          <div class="icon menu"></div>
+        <div v-if="hidden" class="Icon" @click="hidden = false">
+          <div class="icon menu" />
         </div>
         {{ breadcrumb }}
       </div>
       <div class="FilesTree__Right__Body">
         <template v-if="parseContent">
-          <img v-if="isImage" :src="parseContent" alt="Image" class="FilesTree__Right__Body__Image" />
-          <pre v-else class="FilesTree__Right__Body__File"><code v-html="parseContent"></code></pre>
+          <img v-if="isImage" :src="parseContent" alt="Image" class="FilesTree__Right__Body__Image">
+          <pre v-else class="FilesTree__Right__Body__File"><code v-html="parseContent" /></pre>
         </template>
-        <div v-else class="FilesTree__Right__Body__Wait">{{ $store.state.lang.text.please_wait }}</div>
+        <div v-else class="FilesTree__Right__Body__Wait">
+          {{ $store.state.lang.text.please_wait }}
+        </div>
       </div>
     </div>
   </div>
@@ -34,16 +36,19 @@ import hljs from 'highlight.js'
 
 import RecursiveList from './RecursiveList.vue'
 
-let cacheFiles = {}
+const cacheFiles = {}
 
 export default {
+  components: {
+    RecursiveList
+  },
   props: {
     example: {
       type: String,
       required: true
     }
   },
-  data() {
+  data () {
     return {
       hidden: false,
       currentFile: null,
@@ -51,7 +56,7 @@ export default {
     }
   },
   computed: {
-    parseContent() {
+    parseContent () {
       if (!this.content) {
         return ''
       }
@@ -60,21 +65,21 @@ export default {
       }
       return this.content
     },
-    breadcrumb() {
+    breadcrumb () {
       return this.currentFile.path.replace('examples/' + this.example, '')
     },
-    isImage() {
+    isImage () {
       if (this.currentFile && /[^\s]+\.(jpe?g|png|gif|bmp)$/i.test(this.currentFile.path)) {
         return true
       }
       return false
     },
-    isMobile() {
+    isMobile () {
       return window.innerWidth < 576
     }
   },
   methods: {
-    changeFile(file) {
+    changeFile (file) {
       this.currentFile = file
       this.content = cacheFiles[file.path]
       if (this.isMobile) {
@@ -87,7 +92,7 @@ export default {
             'Authorization': `token ${process.env.githubToken}`
           }
         })
-          .then((res) => res.json())
+          .then(res => res.json())
           .then((data) => {
             let content = window.atob(data.content)
             content = hljs.highlightAuto(content).value
@@ -96,9 +101,6 @@ export default {
           })
       }
     }
-  },
-  components: {
-    RecursiveList
   }
 }
 </script>

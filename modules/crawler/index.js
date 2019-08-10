@@ -1,7 +1,7 @@
 const { join } = require('path')
 const logger = require('consola').withScope('docs/crawler')
 
-module.exports = async function () {
+module.exports = function () {
   const isBuild = this.options._build
 
   if (isBuild) {
@@ -12,7 +12,7 @@ module.exports = async function () {
   }
 
   // Hook generator to extract routes
-  this.nuxt.hook('generate:before', async (generator) => {
+  this.nuxt.hook('generate:before', (generator) => {
     const routes = {}
 
     // Add hook when a page is generated

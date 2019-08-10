@@ -1,10 +1,10 @@
 export default {
-  data() {
+  data () {
     return {
       isIntersecting: false
     }
   },
-  mounted() {
+  mounted () {
     if (!window.IntersectionObserver) {
       return console.warn('IntersectionObserver polyfill is required.')
     }
@@ -19,7 +19,7 @@ export default {
     })
     this.__observer.observe(this.$el)
   },
-  beforeDestroy() {
+  beforeDestroy () {
     if (this.__observer) {
       this.__observer.disconnect()
       delete this.__observer

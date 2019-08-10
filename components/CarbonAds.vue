@@ -1,11 +1,11 @@
 <template>
-  <div class="carbon_ad" ref="carbonads"></div>
+  <div ref="carbonads" class="carbon_ad" />
 </template>
 
 <script>
 export default {
-  mounted() {
-    if (['en', 'fr'].indexOf(this.$store.state.locale) !== -1 && this.$refs.carbonads) {
+  mounted () {
+    if (['en', 'fr'].includes(this.$store.state.locale) && this.$refs.carbonads) {
       const script = document.createElement('script')
       script.setAttribute('type', 'text/javascript')
       script.setAttribute('src', '//cdn.carbonads.com/carbon.js?zoneid=1673&serve=C6AILKT&placement=nuxtjsorg')

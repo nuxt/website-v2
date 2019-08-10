@@ -3,20 +3,22 @@
     <h2 class="Affix__Version">
       {{ $store.state.lang.text.version }} {{ $store.state.docVersion }}
       <div class="Affix__Version__Toggler" @click="toggle">
-        <div class="icon close"></div>
+        <div class="icon close" />
       </div>
     </h2>
     <div class="Affix__Toggler" :class="{'Affix__Toggler--hidden': visible}" @click="toggle">
-      <div class="icon more-vertical"></div>
+      <div class="icon more-vertical" />
     </div>
     <a class="Affix__Support" href="https://otechie.com/nuxt" target="_blank" rel="noopener">
       <span>{{ $store.state.lang.links.official_support }}</span>
     </a>
-    <h3 class="Affix__Title" style="margin-bottom: 15px;">{{ $store.state.lang.sponsors.title }}</h3>
+    <h3 class="Affix__Title" style="margin-bottom: 15px;">
+      {{ $store.state.lang.sponsors.title }}
+    </h3>
     <ul class="Affix__List">
       <li class="Affix__List__Item">
         <a class="Affix__List__Item__Sponsor" href="https://www.storyblok.com/?ref=nuxt" target="_blank" rel="noopener">
-          <img src="/storyblok-logo.svg" alt="Storyblok.com" style="height: 36px"/>
+          <img src="/storyblok-logo.svg" alt="Storyblok.com" style="height: 36px">
         </a>
       </li>
       <li class="Affix__List__Item">
@@ -36,17 +38,17 @@
       </li>
       <li class="Affix__List__Item">
         <a class="Affix__List__Item__Sponsor" href="https://shipshape.io/?ref=nuxt" target="_blank" rel="noopener">
-          <img src="/shipshape-logo.svg" alt="Shipshape.io" style="height: 28px"/>
+          <img src="/shipshape-logo.svg" alt="Shipshape.io" style="height: 28px">
         </a>
       </li>
       <li class="Affix__List__Item">
         <a class="Affix__List__Item__Sponsor" href="https://hapijs.com/?ref=nuxt" target="_blank" rel="noopener">
-          <img src="/hapi-logo.svg" alt="Hapi JS" style="height: 42px"/>
+          <img src="/hapi-logo.svg" alt="Hapi JS" style="height: 42px">
         </a>
       </li>
       <li class="Affix__List__Item">
         <a class="Affix__List__Item__Sponsor" href="https://blokt.com/?ref=nuxt" target="_blank" rel="noopener">
-          <img src="/blokt-logo.png" alt="Blokt" style="height: 28px"/>
+          <img src="/blokt-logo.png" alt="Blokt" style="height: 28px">
         </a>
       </li>
       <li class="Affix__List__Item">
@@ -54,16 +56,18 @@
         <a href="https://opencollective.com/nuxtjs" target="_blank" rel="noopener">{{ $store.state.lang.sponsors.become_partner }}</a>.
       </li>
     </ul>
-    <template v-for="(group, index) in list">
-      <h3 class="Affix__Title" :key="`title-${index}`">{{ group.title }}</h3>
-      <ul class="Affix__List" :key="`list-${index}`">
-        <li class="Affix__List__Item" v-for="(link, index) in group.links" :key="index">
+    <template v-for="(group, groupIndex) in list">
+      <h3 :key="`title-${groupIndex}`" class="Affix__Title">
+        {{ group.title }}
+      </h3>
+      <ul :key="`list-${groupIndex}`" class="Affix__List">
+        <li v-for="(link, linkIndex) in group.links" :key="linkIndex" class="Affix__List__Item">
           <nuxt-link class="Affix__List__Item__Link" :class="{'nuxt-link-active': path === menu + link.to}" :to="menu + link.to" exact>
             {{ link.name }}
           </nuxt-link>
           <ul v-if="path === menu + link.to" class="Affix__List__Item__Contents">
-            <li v-for="(content, index) in link.contents" class="Affix__List__Item__Contents__Item" :key="index">
-              <a :href="menu + link.to + content.to" @click.prevent="scrollTo(content.to)" class="Affix__List__Item__Contents__Item__Link" :class="{'Affix__List__Item__Contents__Item__Link--active': current === index}">
+            <li v-for="(content, contentIndex) in link.contents" :key="contentIndex" class="Affix__List__Item__Contents__Item">
+              <a :href="menu + link.to + content.to" class="Affix__List__Item__Contents__Item__Link" :class="{'Affix__List__Item__Contents__Item__Link--active': current === contentIndex}" @click.prevent="scrollTo(content.to)">
                 {{ content.name }}
               </a>
             </li>
@@ -88,32 +92,23 @@ export default {
       required: true
     }
   },
-  mounted() {
-    this.$nextTick(() => {
-      window.addEventListener('scroll', throttle(() => this.scrolled(), 100))
-      if (this.$route.hash.length) {
-        this.scrollTo(this.$route.hash)
-      }
-      this.scrolled()
-    })
-  },
-  data() {
+  data () {
     return { current: 0, setInter: null }
   },
   computed: {
-    visible() { return this.$store.state.visibleAffix },
-    path() { return this.$route.path.slice(-1) === '/' ? this.$route.path.slice(0, -1) : this.$route.path },
-    menu() { return '/' + this.category },
-    contents() {
-      var c = []
+    visible () { return this.$store.state.visibleAffix },
+    path () { return this.$route.path.slice(-1) === '/' ? this.$route.path.slice(0, -1) : this.$route.path },
+    menu () { return '/' + this.category },
+    contents () {
+      const c = []
       this.list.forEach((group) => {
         if (Array.isArray(group.links) && !c.length) {
-          var l = group.links.find((link) => {
+          const l = group.links.find((link) => {
             return this.path === this.menu + link.to
           })
           if (l && l.contents) {
             l.contents.forEach((content) => {
-              var el = document.getElementById(content.to.slice(1))
+              const el = document.getElementById(content.to.slice(1))
               if (el) {
                 c.push(el.offsetTop)
               }
@@ -127,23 +122,32 @@ export default {
   watch: {
     '$route.fullPath': 'hashChanged'
   },
+  mounted () {
+    this.$nextTick(() => {
+      window.addEventListener('scroll', throttle(() => this.scrolled(), 100))
+      if (this.$route.hash.length) {
+        this.scrollTo(this.$route.hash)
+      }
+      this.scrolled()
+    })
+  },
   methods: {
-    hashChanged(toPath, fromPath) {
+    hashChanged (toPath, fromPath) {
       toPath = toPath.split('#')
       fromPath = fromPath.split('#')
       this.$nextTick(() => this.scrollTo(this.$route.hash))
     },
-    toggle() { this.$store.commit('toggle', 'visibleAffix') },
-    scrolled() {
-      var h = window.innerHeight || document.documentElement.clientHeight || document.body.clientHeight
-      var doc = document.documentElement
-      var top = (window.pageYOffset || doc.scrollTop) - (doc.clientTop || 0)
-      var el = this.contents.find((pos) => {
+    toggle () { this.$store.commit('toggle', 'visibleAffix') },
+    scrolled () {
+      const h = window.innerHeight || document.documentElement.clientHeight || document.body.clientHeight
+      const doc = document.documentElement
+      const top = (window.pageYOffset || doc.scrollTop) - (doc.clientTop || 0)
+      const el = this.contents.find((pos) => {
         return pos > top + (h / 2)
       })
       this.current = (el ? this.contents.indexOf(el) : this.contents.length) - 1
     },
-    scrollTo(id) {
+    scrollTo (id) {
       if (this.$store.state.visibleAffix) {
         this.toggle()
       }
@@ -151,13 +155,13 @@ export default {
         this.$router.push(this.$route.fullPath.split('#')[0] + id)
       }
       this.$nextTick(() => {
-        var el = document.getElementById(id.slice(1))
-        if (!el) return
-        var to = el.offsetTop + 20
-        var doc = document.documentElement
-        var top = (window.pageYOffset || doc.scrollTop) - (doc.clientTop || 0)
-        var diff = (to > top ? to - top : top - to) / 25
-        var i = 0
+        const el = document.getElementById(id.slice(1))
+        if (!el) { return }
+        const to = el.offsetTop + 20
+        const doc = document.documentElement
+        let top = (window.pageYOffset || doc.scrollTop) - (doc.clientTop || 0)
+        const diff = (to > top ? to - top : top - to) / 25
+        let i = 0
         window.clearInterval(this.setInter)
         this.setInter = window.setInterval(() => {
           top = (to > top) ? top + diff : top - diff

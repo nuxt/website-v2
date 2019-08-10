@@ -3,11 +3,13 @@
     <div class="container">
       <div class="row">
         <div class="nWelcome_Content">
-          <h1 class="nWelcome_Content_Title" v-html="$store.state.homepage.welcome.attrs.title"></h1>
+          <h1 class="nWelcome_Content_Title" v-html="$store.state.homepage.welcome.attrs.title" />
           <h4 class="nWelcome_Content_Subtitle">
-            {{ $store.state.lang.homepage.welcome.app_types_prefix }}<transition name="fade" mode="out-in"><span class="nWelcome_Content_Subtitle_Type" v-for="(appType, index) of appTypes" :key="appType" v-if="index === current">{{ appType }}</span></transition>{{ $store.state.lang.homepage.welcome.app_types_suffix }}
+            {{ $store.state.lang.homepage.welcome.app_types_prefix }}<transition name="fade" mode="out-in">
+              <span :key="appType" class="nWelcome_Content_Subtitle_Type">{{ appType }}</span>
+            </transition>{{ $store.state.lang.homepage.welcome.app_types_suffix }}
           </h4>
-          <p class="nWelcome_Content_Description" v-html="$store.state.homepage.welcome.body"></p>
+          <p class="nWelcome_Content_Description" v-html="$store.state.homepage.welcome.body" />
           <div class="nWelcome_Content_Links">
             <nuxt-link class="nWelcome_Content_Links_Button nWelcome_Content_Links_Button--green" to="/guide/installation">
               {{ $store.state.lang.links.get_started }}
@@ -18,8 +20,8 @@
           </div>
         </div>
         <figure class="nWelcome_Figure">
-          <responsive-video src="https://player.vimeo.com/video/311756540" style="margin: 0;"/>
-          <p v-html="$store.state.homepage.welcome_figure.body"></p>
+          <responsive-video src="https://player.vimeo.com/video/311756540" style="margin: 0;" />
+          <p v-html="$store.state.homepage.welcome_figure.body" />
         </figure>
       </div>
     </div>
@@ -30,22 +32,27 @@
 import ResponsiveVideo from '~/components/ResponsiveVideo.vue'
 
 export default {
-  data() {
+  components: {
+    ResponsiveVideo
+  },
+  data () {
     return {
       appTypes: this.$store.state.lang.homepage.welcome.app_types,
       current: 0
     }
   },
-  mounted() {
+  computed: {
+    appType () {
+      return this.appTypes[this.current]
+    }
+  },
+  mounted () {
     this._timer = setInterval(() => {
       this.current = (this.current + 1) % this.appTypes.length
     }, 2500)
   },
-  destroyed() {
+  destroyed () {
     clearInterval(this._timer)
-  },
-  components: {
-    ResponsiveVideo
   }
 }
 </script>

@@ -3,9 +3,11 @@
     <div class="container">
       <div class="row">
         <div class="nFooter_Group">
-          <h4 class="nFooter_Group_Title">Translations</h4>
+          <h4 class="nFooter_Group_Title">
+            Translations
+          </h4>
           <ul class="nFooter_Group_Content">
-            <li class="nFooter_Group_Content_Line" v-for="(t, i) in translations" :key="i">
+            <li v-for="(t, i) in translations" :key="i" class="nFooter_Group_Content_Line">
               <a class="nFooter_Group_Content_Line_Link" :href="t.path" target="_blank" rel="noopener">
                 {{ t.name }}
               </a>
@@ -13,7 +15,9 @@
           </ul>
         </div>
         <div class="nFooter_Group">
-          <h4 class="nFooter_Group_Title">Ecosystem</h4>
+          <h4 class="nFooter_Group_Title">
+            Ecosystem
+          </h4>
           <ul class="nFooter_Group_Content">
             <li class="nFooter_Group_Content_Line">
               <a class="nFooter_Group_Content_Line_Link" href="https://github.com/nuxt" target="_blank" rel="noopener">
@@ -65,7 +69,7 @@
 <script>
 export default {
   computed: {
-    translations() {
+    translations () {
       return [
         { name: 'English', path: 'https://nuxtjs.org' + this.$route.path },
         { name: 'Français', path: 'https://fr.nuxtjs.org' + this.$route.path },

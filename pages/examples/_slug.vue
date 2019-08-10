@@ -5,19 +5,19 @@
     <blockquote>
       <p>{{ attrs.description }}</p>
     </blockquote>
-    <responsive-video v-if="attrs.youtube" :src="attrs.youtube"/>
+    <responsive-video v-if="attrs.youtube" :src="attrs.youtube" />
     <h2>{{ $store.state.lang.examples.source_code }}</h2>
-    <code-sandbox :src="codeSandBoxLink" style="margin-bottom: 20px;"/>
+    <code-sandbox :src="codeSandBoxLink" style="margin-bottom: 20px;" />
     <div>
       <a :href="liveEditLink" class="button button--grey" target="_blank" rel="noopener">
         <span>
-          <div class="icon edit"></div>
+          <div class="icon edit" />
         </span>
         {{ $store.state.lang.links.live_edit }}
       </a>
       <a :href="downloadLink" class="button button--grey" target="_blank" rel="noopener">
         <span>
-          <div class="icon download"></div>
+          <div class="icon download" />
         </span>
         {{ $store.state.lang.links.download }}
       </a>
@@ -36,18 +36,41 @@ import CodeFundAds from '~/components/CodeFundAds.vue'
 import HtmlParser from '~/components/HtmlParser.vue'
 
 export default {
+  components: {
+    ResponsiveVideo,
+    CodeSandbox,
+    CodeFundAds,
+    HtmlParser
+  },
+  computed: {
+    codeSandBox () {
+      return `https://codesandbox.io`
+    },
+    codeSandBoxLink () {
+      if (!this.attrs.github) {
+        return ''
+      }
+      return `${this.codeSandBox}/embed/github/nuxt/nuxt.js/tree/dev/examples/${this.attrs.github}?autoresize=1&view=editor`
+    },
+    liveEditLink () {
+      return `${this.codeSandBox}/s/github/nuxt/nuxt.js/tree/dev/examples/${this.attrs.github}?from-embed`
+    },
+    downloadLink () {
+      return 'https://minhaskamal.github.io/DownGit/#/home?url=https://github.com/nuxt/nuxt.js/tree/dev/examples/' + this.attrs.github
+    }
+  },
   watch: {
-    '$route.params.slug': function () {
+    '$route.params.slug' () {
       this.attrs.github = ''
     }
   },
-  async asyncData({ $docs, route, store, error }) {
+  async asyncData ({ $docs, route, store, error }) {
     // Default data
-    let data = {
+    const data = {
       attrs: {},
       body: ''
     }
-    let slug = route.params.slug || 'hello-world'
+    const slug = route.params.slug || 'hello-world'
     const path = `/${store.state.lang.iso}/examples/${slug}`
     let page
     try {
@@ -60,30 +83,13 @@ export default {
     }
     data.attrs = page.attrs
     data.body = page.body
-    if (!data.attrs.title) console.error(`[${path}] ${store.state.lang.text.please_define_title}.`) // eslint-disable-line no-console
-    if (!data.attrs.description) console.error(`[${path}] ${store.state.lang.text.please_define_description}.`) // eslint-disable-line no-console
+    if (!data.attrs.title) { console.error(`[${path}] ${store.state.lang.text.please_define_title}.`) } // eslint-disable-line no-console
+    if (!data.attrs.description) { console.error(`[${path}] ${store.state.lang.text.please_define_description}.`) } // eslint-disable-line no-console
 
     return data
   },
-  computed: {
-    codeSandBox() {
-      return `https://codesandbox.io`
-    },
-    codeSandBoxLink() {
-      if (!this.attrs.github) {
-        return ''
-      }
-      return `${this.codeSandBox}/embed/github/nuxt/nuxt.js/tree/dev/examples/${this.attrs.github}?autoresize=1&view=editor`
-    },
-    liveEditLink() {
-      return `${this.codeSandBox}/s/github/nuxt/nuxt.js/tree/dev/examples/${this.attrs.github}?from-embed`
-    },
-    downloadLink() {
-      return 'https://minhaskamal.github.io/DownGit/#/home?url=https://github.com/nuxt/nuxt.js/tree/dev/examples/' + this.attrs.github
-    }
-  },
   scrollToTop: true,
-  head() {
+  head () {
     return {
       title: this.attrs.title,
       titleTemplate: '%s - Nuxt.js',
@@ -91,12 +97,6 @@ export default {
         { hid: 'description', name: 'description', content: this.attrs.description }
       ]
     }
-  },
-  components: {
-    ResponsiveVideo,
-    CodeSandbox,
-    CodeFundAds,
-    HtmlParser
   }
 }
 </script>

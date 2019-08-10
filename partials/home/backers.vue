@@ -1,17 +1,20 @@
 <template>
   <section class="nBackers">
     <div class="container">
-      <h2 class="nBackers_Title"><span>{{ $store.state.homepage.backers.attrs.title }}</span></h2>
-      <p class="nBackers_Description" v-html="$store.state.homepage.backers.body">
-      </p>
+      <h2 class="nBackers_Title">
+        <span>{{ $store.state.homepage.backers.attrs.title }}</span>
+      </h2>
+      <p class="nBackers_Description" v-html="$store.state.homepage.backers.body" />
       <div class="nBackers_Group">
-        <h3 class="nBackers_Group_Title">{{ $store.state.lang.homepage.backer_partners }}</h3>
+        <h3 class="nBackers_Group_Title">
+          {{ $store.state.lang.homepage.backer_partners }}
+        </h3>
         <div class="nBackers_Group_Content">
           <a class="nBackers_Group_Content_Link" href="https://www.storyblok.com/?ref=nuxt" target="_blank" rel="noopener">
-            <v-lazy-image class="nBackers_Group_Content_Link_Image" src="/storyblok-logo.svg" alt="Storyblok.com"/>
+            <v-lazy-image class="nBackers_Group_Content_Link_Image" src="/storyblok-logo.svg" alt="Storyblok.com" />
           </a>
           <a class="nBackers_Group_Content_Link" href="https://www.vuemastery.com/?ref=nuxt" target="_blank" rel="noopener">
-            <v-lazy-image class="nBackers_Group_Content_Link_Image" src="/vueMastery-brand.svg" alt="VueMastery.com"/>
+            <v-lazy-image class="nBackers_Group_Content_Link_Image" src="/vueMastery-brand.svg" alt="VueMastery.com" />
           </a>
           <a class="nBackers_Group_Content_Link" href="https://yakaz.com/" target="_blank" rel="noopener">
             <v-lazy-image class="nBackers_Group_Content_Link_Image" src="/yakaz-partner.png" srcset="/yakaz-partner-2x.png 2x" alt="Yakaz.com" />
@@ -20,13 +23,13 @@
             <v-lazy-image class="nBackers_Group_Content_Link_Image" src="/vueschool.png" srcset="/vueschool-2x.png 2x" alt="VueSchool.io" />
           </a>
           <a class="nBackers_Group_Content_Link" href="https://shipshape.io/?ref=nuxt" target="_blank" rel="noopener">
-            <v-lazy-image class="nBackers_Group_Content_Link_Image" src="/shipshape-logo.svg" alt="Shipshape.io"/>
+            <v-lazy-image class="nBackers_Group_Content_Link_Image" src="/shipshape-logo.svg" alt="Shipshape.io" />
           </a>
           <a class="nBackers_Group_Content_Link" href="https://hapijs.com/?ref=nuxt" target="_blank" rel="noopener">
-            <v-lazy-image class="nBackers_Group_Content_Link_Image" src="/hapi-logo.svg" alt="Hapi JS"/>
+            <v-lazy-image class="nBackers_Group_Content_Link_Image" src="/hapi-logo.svg" alt="Hapi JS" />
           </a>
           <a class="nBackers_Group_Content_Link" href="https://blokt.com/?ref=nuxt" target="_blank" rel="noopener">
-            <v-lazy-image class="nBackers_Group_Content_Link_Image" src="/blokt-logo.png" alt="Blokt"/>
+            <v-lazy-image class="nBackers_Group_Content_Link_Image" src="/blokt-logo.png" alt="Blokt" />
           </a>
         </div>
         <div class="nBackers_Group_Action">
@@ -36,13 +39,15 @@
         </div>
       </div>
       <div class="nBackers_Group">
-        <h3 class="nBackers_Group_Title">{{ $store.state.lang.homepage.backer_sponsors }}</h3>
+        <h3 class="nBackers_Group_Title">
+          {{ $store.state.lang.homepage.backer_sponsors }}
+        </h3>
         <div class="nBackers_Group_Content">
           <a class="nBackers_Group_Content_Link" href="https://www.sparheld.de/" target="_blank" rel="noopener">
-            <v-lazy-image class="nBackers_Group_Content_Link_Image" src="/sponsors/de-black.png" alt="Sparheld"/>
+            <v-lazy-image class="nBackers_Group_Content_Link_Image" src="/sponsors/de-black.png" alt="Sparheld" />
           </a>
           <a class="nBackers_Group_Content_Link" href="https://icons8.com" target="_blank" rel="noopener">
-            <v-lazy-image class="nBackers_Group_Content_Link_Image" src="/sponsors/icons8.png" alt="Sparheld"/>
+            <v-lazy-image class="nBackers_Group_Content_Link_Image" src="/sponsors/icons8.png" alt="Sparheld" />
           </a>
         </div>
         <div class="nBackers_Group_Action">
@@ -52,7 +57,9 @@
         </div>
       </div>
       <div class="nBackers_Group">
-        <h3 class="nBackers_Group_Title">{{ $store.state.lang.homepage.backer_backers }}</h3>
+        <h3 class="nBackers_Group_Title">
+          {{ $store.state.lang.homepage.backer_backers }}
+        </h3>
         <div class="nBackers_Group_Content">
           <v-lazy-image alt="Nuxt Backers" src-placeholder="/oc-loading.svg" src="https://opencollective.com/nuxtjs/tiers/nuxters.svg?width=1155&button=false" />
         </div>
@@ -63,10 +70,12 @@
         </div>
       </div>
       <div class="nBackers_Group">
-        <h3 class="nBackers_Group_Title">{{ $store.state.lang.homepage.backer_foundations }}</h3>
+        <h3 class="nBackers_Group_Title">
+          {{ $store.state.lang.homepage.backer_foundations }}
+        </h3>
         <div class="nBackers_Group_Content">
           <a class="nBackers_Group_Content_Link" href="https://www.shuttleworthfoundation.org" target="_blank" rel="noopener">
-            <v-lazy-image class="nBackers_Group_Content_Link_Image" src="/shuttleworth-funded.png" srcset="/shuttleworth-funded-2x.png 2x" alt="shuttleworth funded"/>
+            <v-lazy-image class="nBackers_Group_Content_Link_Image" src="/shuttleworth-funded.png" srcset="/shuttleworth-funded-2x.png 2x" alt="shuttleworth funded" />
           </a>
         </div>
       </div>

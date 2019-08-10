@@ -21,7 +21,7 @@
       </nuxt-link>
     </li>
     <li class="Menu__Item">
-      <nuxt-header-nav-menu-dropdown :dropdownList="dropdownList" :dropdownLabel="$store.state.lang.links.ecosystem" />
+      <nuxt-header-nav-menu-dropdown :dropdown-list="dropdownList" :dropdown-label="$store.state.lang.links.ecosystem" />
     </li>
   </ul>
   </nav>
@@ -34,7 +34,7 @@ export default {
   components: {
     NuxtHeaderNavMenuDropdown
   },
-  data() {
+  data () {
     return {
       dropdownList: [
         {

@@ -1,10 +1,10 @@
 <template>
   <div>
-    <code-fund-ads :key="$route.params.slug"/>
+    <code-fund-ads :key="$route.params.slug" />
     <h1>{{ attrs.title }}</h1>
-    <responsive-video v-if="attrs.youtube" :src="attrs.youtube"/>
-    <html-parser :content="body"/>
-    <contribute :doc-link="docLink"/>
+    <responsive-video v-if="attrs.youtube" :src="attrs.youtube" />
+    <html-parser :content="body" />
+    <contribute :doc-link="docLink" />
   </div>
 </template>
 
@@ -15,9 +15,15 @@ import HtmlParser from '~/components/HtmlParser.vue'
 import Contribute from '~/components/Contribute.vue'
 
 export default {
-  async asyncData({ $docs, route, store, error }) {
+  components: {
+    ResponsiveVideo,
+    CodeFundAds,
+    HtmlParser,
+    Contribute
+  },
+  async asyncData ({ $docs, route, store, error }) {
     // Default data
-    let data = {
+    const data = {
       attrs: {},
       body: '',
       docLink: ''
@@ -41,12 +47,12 @@ export default {
     } else if (store.state.lang.iso === 'cn') {
       data.docLink = `https://github.com/o2team/i18n-cn-nuxtjs-docs/blob/dev${path}.md`
     }
-    if (!data.attrs.title) console.error(`[/${path}] ${store.state.lang.text.please_define_title}.`) // eslint-disable-line no-console
-    if (!data.attrs.description) console.error(`[/${path}] ${store.state.lang.text.please_define_description}.`) // eslint-disable-line no-console
+    if (!data.attrs.title) { console.error(`[/${path}] ${store.state.lang.text.please_define_title}.`) } // eslint-disable-line no-console
+    if (!data.attrs.description) { console.error(`[/${path}] ${store.state.lang.text.please_define_description}.`) } // eslint-disable-line no-console
     return data
   },
   scrollToTop: true,
-  head() {
+  head () {
     return {
       title: this.attrs.title,
       titleTemplate: '%s - Nuxt.js',
@@ -54,12 +60,6 @@ export default {
         { hid: 'description', name: 'description', content: this.attrs.description }
       ]
     }
-  },
-  components: {
-    ResponsiveVideo,
-    CodeFundAds,
-    HtmlParser,
-    Contribute
   }
 }
 </script>

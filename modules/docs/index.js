@@ -1,6 +1,5 @@
 const { join } = require('path')
 const DocsServer = require('./server')
-const logger = require('consola').withScope('docs/module')
 
 module.exports = async function (moduleOptions) {
   const isDev = this.options.dev

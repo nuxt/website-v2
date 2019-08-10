@@ -1,28 +1,39 @@
 <template>
   <section class="nModes">
     <div class="container">
-      <h2 class="nModes_Title"><span>{{ $store.state.homepage.modes.attrs.title }}</span></h2>
+      <h2 class="nModes_Title">
+        <span>{{ $store.state.homepage.modes.attrs.title }}</span>
+      </h2>
       <div class="row">
         <ul class="nModes_Tabs">
-          <li class="nModes_Tabs_Option" :class="{'nModes_Tabs_Option--selected-first': mode === 0}" @click="mode = 0">{{ $store.state.homepage.modes_server_side_rendering.attrs.title }}</li>
-          <li class="nModes_Tabs_Option" :class="{'nModes_Tabs_Option--selected': mode === 1}" @click="mode = 1">{{ $store.state.homepage.modes_statically_generated.attrs.title }}</li>
-          <li class="nModes_Tabs_Option" :class="{'nModes_Tabs_Option--selected-last': mode === 2}" @click="mode = 2">{{ $store.state.homepage.modes_single_page_app.attrs.title }}</li>
+          <li class="nModes_Tabs_Option" :class="{'nModes_Tabs_Option--selected-first': mode === 0}" @click="mode = 0">
+            {{ $store.state.homepage.modes_server_side_rendering.attrs.title }}
+          </li>
+          <li class="nModes_Tabs_Option" :class="{'nModes_Tabs_Option--selected': mode === 1}" @click="mode = 1">
+            {{ $store.state.homepage.modes_statically_generated.attrs.title }}
+          </li>
+          <li class="nModes_Tabs_Option" :class="{'nModes_Tabs_Option--selected-last': mode === 2}" @click="mode = 2">
+            {{ $store.state.homepage.modes_single_page_app.attrs.title }}
+          </li>
         </ul>
         <div class="nModes_Content">
           <div v-show="mode === 0">
-            <h3 class="nModes_Content_Title">{{ $store.state.homepage.modes_server_side_rendering.attrs.content_title }}</h3>
-            <p class="nModes_Content_Description" v-html="$store.state.homepage.modes_server_side_rendering.body">
-            </p>
+            <h3 class="nModes_Content_Title">
+              {{ $store.state.homepage.modes_server_side_rendering.attrs.content_title }}
+            </h3>
+            <p class="nModes_Content_Description" v-html="$store.state.homepage.modes_server_side_rendering.body" />
           </div>
           <div v-show="mode === 1">
-            <h3 class="nModes_Content_Title">{{ $store.state.homepage.modes_statically_generated.attrs.content_title }}</h3>
-            <p class="nModes_Content_Description" v-html="$store.state.homepage.modes_statically_generated.body">
-            </p>
+            <h3 class="nModes_Content_Title">
+              {{ $store.state.homepage.modes_statically_generated.attrs.content_title }}
+            </h3>
+            <p class="nModes_Content_Description" v-html="$store.state.homepage.modes_statically_generated.body" />
           </div>
           <div v-show="mode === 2">
-            <h3 class="nModes_Content_Title">{{ $store.state.homepage.modes_single_page_app.attrs.content_title }}</h3>
-            <p class="nModes_Content_Description" v-html="$store.state.homepage.modes_single_page_app.body">
-            </p>
+            <h3 class="nModes_Content_Title">
+              {{ $store.state.homepage.modes_single_page_app.attrs.content_title }}
+            </h3>
+            <p class="nModes_Content_Description" v-html="$store.state.homepage.modes_single_page_app.body" />
           </div>
         </div>
       </div>

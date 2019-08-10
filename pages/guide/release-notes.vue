@@ -26,27 +26,8 @@ const monthNames = [
 ]
 
 export default {
-  async asyncData({ $docs, isDev, store }) {
-    // Default data
-    const data = {
-      releases: [],
-      isDev: isDev
-    }
-    data.releases = await $docs.get('/releases')
-
-    return data
-  },
-  head() {
-    return {
-      title: 'Release Notes',
-      titleTemplate: '%s - Nuxt.js',
-      meta: [
-        { hid: 'description', name: 'description', content: 'Nuxt.js release notes from Github.' }
-      ]
-    }
-  },
   filters: {
-    dateFormat(date) {
+    dateFormat (date) {
       date = new Date(date)
 
       let s = date.getDate() + ' ' + monthNames[date.getMonth()]
@@ -59,6 +40,25 @@ export default {
   components: {
     CodeFundAds,
     HtmlParser
+  },
+  async asyncData ({ $docs, isDev, store }) {
+    // Default data
+    const data = {
+      releases: [],
+      isDev
+    }
+    data.releases = await $docs.get('/releases')
+
+    return data
+  },
+  head () {
+    return {
+      title: 'Release Notes',
+      titleTemplate: '%s - Nuxt.js',
+      meta: [
+        { hid: 'description', name: 'description', content: 'Nuxt.js release notes from Github.' }
+      ]
+    }
   }
 }
 </script>

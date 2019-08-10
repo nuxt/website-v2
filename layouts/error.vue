@@ -1,7 +1,7 @@
 <template>
   <div>
     <section class="Landscape">
-      <img src="~static/triangles.png" alt="Logo nuxt" class="Landscape__Image"/>
+      <img src="~static/triangles.png" alt="Logo nuxt" class="Landscape__Image">
       <h1 class="Landscape__Title">
         {{ error.statusCode }}
       </h1>
@@ -16,7 +16,7 @@
         </li>
       </ul>
     </section>
-    <nuxt-footer></nuxt-footer>
+    <nuxt-footer />
   </div>
 </template>
 
@@ -24,9 +24,14 @@
 import NuxtFooter from '~/components/Footer.vue'
 
 export default {
-  props: ['error'],
   components: {
     NuxtFooter
+  },
+  props: {
+    error: {
+      type: Object,
+      required: true
+    }
   }
 }
 </script>

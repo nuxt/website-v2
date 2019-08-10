@@ -1,13 +1,13 @@
 <template>
   <nav class="Nav" :class="{'Nav--hidden': !visible}">
     <div class="Nav__Search">
-      <nuxt-header-nav-search/>
+      <nuxt-header-nav-search />
     </div>
     <div class="Nav__Menu">
-      <nuxt-header-nav-menu/>
+      <nuxt-header-nav-menu />
     </div>
     <div class="Nav__Lang">
-      <nuxt-header-nav-menu-dropdown :dropdownList="langList" :dropdownLabel="$store.state.lang.iso.toUpperCase()" />
+      <nuxt-header-nav-menu-dropdown :dropdown-list="langList" :dropdown-label="$store.state.lang.iso.toUpperCase()" />
     </div>
   </nav>
 </template>
@@ -18,9 +18,14 @@ import NuxtHeaderNavMenu from '~/components/HeaderNavMenu.vue'
 import NuxtHeaderNavMenuDropdown from '~/components/HeaderNavMenuDropdown.vue'
 
 export default {
+  components: {
+    NuxtHeaderNavSearch,
+    NuxtHeaderNavMenu,
+    NuxtHeaderNavMenuDropdown
+  },
   computed: {
-    visible() { return this.$store.state.visibleHeader },
-    langList() {
+    visible () { return this.$store.state.visibleHeader },
+    langList () {
       return [
         { name: 'English', path: 'https://nuxtjs.org' + this.$route.path },
         { name: 'Français', path: 'https://fr.nuxtjs.org' + this.$route.path },
@@ -31,11 +36,6 @@ export default {
         { name: 'Indonesian', path: 'https://id.nuxtjs.org' + this.$route.path }
       ]
     }
-  },
-  components: {
-    NuxtHeaderNavSearch,
-    NuxtHeaderNavMenu,
-    NuxtHeaderNavMenuDropdown
   }
 }
 </script>

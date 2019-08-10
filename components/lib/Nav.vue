@@ -1,6 +1,6 @@
 <template>
   <nav class="Nav">
-    <slot/>
+    <slot />
   </nav>
 </template>
 

@@ -1,11 +1,11 @@
 <template>
   <div class="home">
-    <s-welcome/>
-    <s-why/>
-    <s-modes/>
-    <s-codesandbox/>
-    <s-backers/>
-    <nuxt-footer/>
+    <s-welcome />
+    <s-why />
+    <s-modes />
+    <s-codesandbox />
+    <s-backers />
+    <nuxt-footer />
   </div>
 </template>
 
@@ -22,7 +22,7 @@ export default {
     sBackers: () => import('@/partials/home/backers'),
     NuxtFooter: () => import('@/components/Footer.vue')
   },
-  head() {
+  head () {
     return {
       title: this.$store.state.lang.homepage.meta.title,
       meta: [

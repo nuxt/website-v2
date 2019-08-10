@@ -1,22 +1,28 @@
 <template>
   <div v-if="$store.state.adBlocked" class="ad_blocked">
-    <div class="img-wrapper"><Blocked alt="Support Nuxt.js" width="125" height="125"/></div>
+    <div class="img-wrapper">
+      <Blocked alt="Support Nuxt.js" width="125" height="125" />
+    </div>
     <span class="text-wrapper"><strong>Nuxt.js needs you 💚</strong><br>By whitelisting nuxtjs.org on your Ad-Blocker, you support our work and help us financially.</span>
   </div>
-  <carbon-ads v-else-if="displayCarbon"/>
-  <div v-else class="cf_ad" ref="codefundads" id="codefund_ad"></div>
+  <carbon-ads v-else-if="displayCarbon" />
+  <div v-else id="codefund_ad" ref="codefundads" class="cf_ad" />
 </template>
 
 <script>
 import CarbonAds from './CarbonAds'
 export default {
-  data() {
+  components: {
+    CarbonAds,
+    Blocked: () => import('~/assets/images/blocked.svg')
+  },
+  data () {
     return {
       displayCarbon: false
     }
   },
-  mounted() {
-    if (['en', 'fr'].indexOf(this.$store.state.locale) !== -1 && this.$refs.codefundads) {
+  mounted () {
+    if (['en', 'fr'].includes(this.$store.state.locale) && this.$refs.codefundads) {
       window.addEventListener('codefund', this.cardbonFallback)
       const script = document.createElement('script')
       script.setAttribute('type', 'text/javascript')
@@ -24,26 +30,22 @@ export default {
       script.setAttribute('id', '_codefund_ad_js')
       try {
         this.$refs.codefundads.appendChild(script)
-      } catch(e){
+      } catch (e) {
         // In case codefund is *whyever* not available, the page will return a 500 if we don't catch the error
         console.error(e)
       }
     }
   },
-  beforeDestroy() {
+  beforeDestroy () {
     window.removeEventListener('codefund', this.cardbonFallback)
   },
   methods: {
-    cardbonFallback(event) {
+    cardbonFallback (event) {
       if (event && event.detail && event.detail.status !== 'ok') {
         // Render Carbon Ad
         this.displayCarbon = true
       }
     }
-  },
-  components: {
-    CarbonAds,
-    Blocked: () => import('~/assets/images/blocked.svg')
   }
 }
 </script>

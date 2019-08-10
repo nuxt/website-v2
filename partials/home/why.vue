@@ -1,25 +1,30 @@
 <template>
   <section class="nWhy">
     <div class="container">
-      <h2 class="nWhy_Title"><span>{{ $store.state.homepage.why.attrs.title }}</span></h2>
+      <h2 class="nWhy_Title">
+        <span>{{ $store.state.homepage.why.attrs.title }}</span>
+      </h2>
       <div class="row">
         <div class="nWhy_Block">
-          <i-performant/>
-          <h4 class="nWhy_Block_Title">{{ $store.state.homepage.why_performant.attrs.title }}</h4>
-          <p class="nWhy_Block_Description" v-html="$store.state.homepage.why_performant.body">
-          </p>
+          <i-performant />
+          <h4 class="nWhy_Block_Title">
+            {{ $store.state.homepage.why_performant.attrs.title }}
+          </h4>
+          <p class="nWhy_Block_Description" v-html="$store.state.homepage.why_performant.body" />
         </div>
         <div class="nWhy_Block">
-          <i-modular/>
-          <h4 class="nWhy_Block_Title">{{ $store.state.homepage.why_modular.attrs.title }}</h4>
-          <p class="nWhy_Block_Description" v-html="$store.state.homepage.why_modular.body">
-          </p>
+          <i-modular />
+          <h4 class="nWhy_Block_Title">
+            {{ $store.state.homepage.why_modular.attrs.title }}
+          </h4>
+          <p class="nWhy_Block_Description" v-html="$store.state.homepage.why_modular.body" />
         </div>
         <div class="nWhy_Block">
-          <i-enjoyable/>
-          <h4 class="nWhy_Block_Title">{{ $store.state.homepage.why_enjoyable.attrs.title }}</h4>
-          <p class="nWhy_Block_Description" v-html="$store.state.homepage.why_enjoyable.body">
-          </p>
+          <i-enjoyable />
+          <h4 class="nWhy_Block_Title">
+            {{ $store.state.homepage.why_enjoyable.attrs.title }}
+          </h4>
+          <p class="nWhy_Block_Description" v-html="$store.state.homepage.why_enjoyable.body" />
         </div>
       </div>
     </div>

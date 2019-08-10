@@ -57,13 +57,6 @@ export default {
       return { x: 0, y: 0 }
     }
   },
-  build: {
-    hardSource: {
-      info: {
-        level: 'warn' // nuxt/nuxt.js#5653
-      }
-    }
-  },
   generate: {
     fallback: true,
     interval: 100

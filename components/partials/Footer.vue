@@ -82,11 +82,18 @@ export default {
         ]
       },
       links: {
+<<<<<<< HEAD
         ecosystem: [
           { key: 'Events', to: 'events' },
           { key: 'Become a Nuxter', to: 'support' },
           { key: 'The NuxtJS Shop', to: 'shop' },
           { key: 'Find or Post a Job', to: 'jobs' }
+=======
+        discover: [
+          { key: 'Resources', to: 'resources' },
+          { key: 'Design charte', to: 'design' },
+          { key: 'A worldwild team', to: 'team' }
+>>>>>>> ce84991b (support page)
         ],
         follow: [
           { key: 'News', to: 'blog' },

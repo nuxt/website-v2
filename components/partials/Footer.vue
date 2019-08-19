@@ -59,7 +59,7 @@ export default {
       ],
       links: {
         discover: [
-          { key: 'The Framework', to: 'index' },
+          { key: 'Resources', to: 'resources' },
           { key: 'Design charte', to: 'design' },
           { key: 'A worldwild team', to: 'team' }
         ],

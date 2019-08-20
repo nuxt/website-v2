@@ -1121,6 +1121,13 @@
   dependencies:
     "@nuxtjs/pwa-utils" "3.0.0-beta.16"
 
+"@nuxtjs/netlify-files@^1.0.0":
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/@nuxtjs/netlify-files/-/netlify-files-1.0.0.tgz#2c0d37050431db82b8698e47d1767a13e687da97"
+  integrity sha512-5hWJh5V9z84AabuDwdsG2BO1axef7D+UdoGMmiknp7XrN3HwyYblnOgnRlH9U/i8eLXtM28Tb0uC3zwygfB7+A==
+  dependencies:
+    fs-extra "^8.1.0"
+
 "@nuxtjs/pwa-utils@3.0.0-beta.16":
   version "3.0.0-beta.16"
   resolved "https://registry.yarnpkg.com/@nuxtjs/pwa-utils/-/pwa-utils-3.0.0-beta.16.tgz#808ddb090f3831c5b32931ab2d08231cc55abff9"

@@ -59,8 +59,8 @@ export default {
       ],
       links: {
         discover: [
-          { key: 'Resources', to: 'resources' },
-          { key: 'Design charte', to: 'design' },
+          { key: 'NuxtJS Themes', to: 'themes' },
+          { key: 'Design resources', to: 'design' },
           { key: 'A worldwild team', to: 'team' }
         ],
         follow: [
@@ -71,7 +71,7 @@ export default {
         support: [
           { key: 'Support NuxtJS', to: 'support-nuxtjs' },
           { key: 'The NuxtJS Shop', to: 'shop' },
-          { key: 'Need some consulting?', to: 'help' }
+          { key: 'Need some help?', to: 'help' }
         ]
       }
     }

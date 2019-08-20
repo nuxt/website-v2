@@ -1,7 +1,7 @@
 <template>
   <nui-container>
     <div class="flex py-8">
-      <nui-aside :list="$store.state.menu['examples']"/>
+      <nui-aside section="examples"/>
       <div class="lg:w-9/12 lg:ml-auto">
         <nuxt-child/>
       </div>

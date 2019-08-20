@@ -1,5 +1,4 @@
 <template>
-<nav>
   <ul class="Menu">
     <li class="Menu__Item">
       <nuxt-link class="Menu__Item__Link" to="/guide">
@@ -25,7 +24,6 @@
       <nuxt-header-nav-menu-dropdown :dropdownList="dropdownList" :dropdownLabel="$store.state.lang.links.ecosystem" />
     </li>
   </ul>
-  </nav>
 </template>
 
 <script>

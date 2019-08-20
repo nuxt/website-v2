@@ -1,4 +1,5 @@
 <template>
+<nav>
   <ul class="Menu">
     <li class="Menu__Item">
       <nuxt-link class="Menu__Item__Link" to="/guide">

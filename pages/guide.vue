@@ -1,8 +1,8 @@
 <template>
   <nui-container>
-    <div class="flex py-8">
+    <div class="lg:flex">
       <nui-aside section="guide"/>
-      <div class="lg:w-9/12 lg:ml-auto">
+      <div class="min-h-screen w-full py-8 lg:static lg:max-h-full lg:overflow-visible lg:w-3/4 xl:w-4/5">
         <nuxt-child/>
       </div>
     </div>

@@ -7,3 +7,11 @@
 /* @import './themes/dark.scss'; */
 
 @import 'tailwindcss/utilities';
+
+@supports (position: sticky) {
+  @media (min-width: 1024px) {
+    .sticky\?lg\:h-\(screen-24\) {
+      height: calc(100vh - 6rem);
+    }
+  }
+}

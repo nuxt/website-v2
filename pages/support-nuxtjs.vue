@@ -109,7 +109,7 @@ export default {
         ]
       },
       onetime: {
-        current: null,
+        current: 'btc',
         btc: {
           title: 'Bitcoin Address',
           address: '1DVJSFQzfVkLdW7drR7pRW2tWV1XDCv6gF',

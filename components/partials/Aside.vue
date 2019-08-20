@@ -1,25 +1,29 @@
 <template>
-  <aside class="aside font-medium fixed hidden lg:block overflow-y-scroll bottom-0 pt-8 pr-4">
-    <p class="uppercase font-bold pb-6">
-      {{ $store.state.lang.text.version }} <span class="text-nuxt-lightgreen">{{ $store.state.docVersion }}</span>
-    </p>
-    <template v-for="(group, index) in list">
-      <h3 class="uppercase text-gray-500 pb-2" :key="`title-${index}`">{{ group.title }}</h3>
-      <ul class="pb-8" :key="`list-${index}`">
-        <li class="py-2" v-for="(link, index) in group.links" :key="index">
-          <nuxt-link class="text-gray-700 hover:text-nuxt-lightgreen" :class="{'nuxt-link-active': path === menu + link.to}" :to="menu + link.to" exact>
-            {{ link.name }}
-          </nuxt-link>
-          <ul v-if="path === menu + link.to && link.contents" class="pl-2 py-1">
-            <li v-for="(content, index) in link.contents" class="py-1 text-sm" :key="index">
-              <a :href="menu + link.to + content.to" @click.prevent="scrollTo(content.to)" class="text-gray-600" :class="{'text-nuxt-gray': current === index}">
-                {{ content.name }}
-              </a>
+  <aside class="hidden fixed inset-0 pt-16 h-full bg-white z-90 w-full border-b lg:-mb-0 lg:static lg:h-auto lg:overflow-y-visible lg:border-b-0 lg:pt-0 lg:w-1/4 lg:block lg:border-0 xl:w-1/5">
+    <div class="h-full overflow-y-auto scrolling-touch lg:h-auto lg:block lg:relative lg:sticky lg:top-24 bg-white lg:bg-transparent">
+      <nav class="px-6 pt-6 overflow-y-auto lg:pt-8 lg:pl-0 lg:pr-8 sticky?lg:h-(screen-24)">
+        <p class="uppercase font-bold pb-6">
+          {{ $store.state.lang.text.version }} <span class="text-nuxt-lightgreen">{{ $store.state.docVersion }}</span>
+        </p>
+        <template v-for="(group, index) in list">
+          <h3 class="uppercase text-gray-500 pb-2" :key="`title-${index}`">{{ group.title }}</h3>
+          <ul class="pb-8" :key="`list-${index}`">
+            <li class="py-2" v-for="(link, index) in group.links" :key="index">
+              <nuxt-link class="text-gray-700 hover:text-nuxt-lightgreen" :class="{'nuxt-link-active': path === menu + link.to}" :to="menu + link.to" exact>
+                {{ link.name }}
+              </nuxt-link>
+              <ul v-if="path === menu + link.to && link.contents" class="pl-2 py-1">
+                <li v-for="(content, index) in link.contents" class="py-1 text-sm" :key="index">
+                  <a :href="menu + link.to + content.to" @click.prevent="scrollTo(content.to)" class="text-gray-600" :class="{'text-nuxt-gray': current === index}">
+                    {{ content.name }}
+                  </a>
+                </li>
+              </ul>
             </li>
           </ul>
-        </li>
-      </ul>
-    </template>
+        </template>
+      </nav>
+    </div>
   </aside>
 </template>
 
@@ -120,8 +124,8 @@ export default {
 </script>
 
 <style>
-.aside {
+/* .aside {
   top: 6rem;
   height: calc(100vh - 6rem)
-}
+} */
 </style>

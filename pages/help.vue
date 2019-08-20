@@ -1,5 +1,5 @@
 <template>
   <div>
-    Otechie
+    Otechie + Discord + Tidelift (inspiration donations)
   </div>
 </template>

@@ -28,8 +28,8 @@ import throttle from 'lodash/throttle'
 
 export default {
   props: {
-    list: {
-      type: Array,
+    section: {
+      type: String,
       required: true
     }
   },
@@ -46,9 +46,10 @@ export default {
     return { current: 0, setInter: null }
   },
   computed: {
+    list () { return this.$store.state.menu[this.section] },
     visible() { return this.$store.state.visibleAffix },
     path() { return this.$route.path.slice(-1) === '/' ? this.$route.path.slice(0, -1) : this.$route.path },
-    menu() { return (this.$i18n.locale !== 'en' ? `/${this.$i18n.locale}/` : '/') + this.$route.params.section },
+    menu() { return (this.$i18n.locale !== 'en' ? `/${this.$i18n.locale}/` : '/') + this.section },
     contents() {
       var c = []
       this.list.forEach((group) => {

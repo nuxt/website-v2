@@ -62,6 +62,8 @@ export default {
     interval: 100
   },
   manifest: {
-    lang: process.env.NUXT_LOCALE || 'en'
+    lang: locale,
+    name: 'Nuxt.js',
+    short_name: 'Nuxt.js'
   }
 }

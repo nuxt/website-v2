@@ -17,11 +17,18 @@ module.exports = async function (moduleOptions) {
     ...moduleOptions
   }
 
+  // Initialize docsServer
+  const docsServer = new DocsServer(options)
+  await docsServer.cloneRepo()
+  await docsServer.init()
+
+  // Read lang meta and update PWA manifest
+  const { locale } = this.options.env
+  const lang = require(join(options.docsDir, locale, 'lang.json'))
+  this.options.manifest.description = lang.homepage.meta.description
+
   // Start docs server
   if (runServer) {
-    const docsServer = new DocsServer(options)
-    await docsServer.cloneRepo()
-    await docsServer.init()
     await docsServer.listen()
     if (isGenerate) {
       this.nuxt.hook('generate:done', () => docsServer.close())

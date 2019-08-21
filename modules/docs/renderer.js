@@ -19,7 +19,7 @@ renderer.heading = (text, level) => {
     text = text.replace(patt, '')
     link = link[1]
   } else {
-    link = text.toLowerCase().replace(/[^\wА-яіІїЇєЄ\u4e00-\u9eff一-龠ぁ-ゔァ-ヴー々〆〤\u3130-\u318F\uAC00-\uD7AF]+/gi, '-')
+    link = text.toLowerCase().replace(/[^\wА-яіІїЇєЄ\u4E00-\u9EFF一-龠ぁ-ゔァ-ヴー々〆〤\u3130-\u318F\uAC00-\uD7AF]+/gi, '-')
   }
   return '<h' + level + '>' +
     '<a id="' + link + '" class="anchor" aria-hidden="true" href="#' + link + '">' +

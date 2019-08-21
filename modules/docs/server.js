@@ -13,7 +13,7 @@ const { marked, partialRenderer } = require('./renderer')
 const readFile = promisify(fs.readFile)
 
 class DocsServer {
-  constructor(options) {
+  constructor (options) {
     this.docsDir = options.docsDir || process.cwd()
     this.defaultLang = options.defaultLang || 'en'
     this.port = options.port || 3001
@@ -30,7 +30,7 @@ class DocsServer {
   }
 
   // Initialize
-  async init() {
+  async init () {
     await Promise.all([
       this.getFiles(),
       this.getReleases()
@@ -42,12 +42,12 @@ class DocsServer {
   }
 
   // Start server
-  async listen() {
+  async listen () {
     if (this.server) {
       return
     }
 
-    this.server = micro(async (req, res) => {
+    this.server = micro((req, res) => {
       res.setHeader('Access-Control-Allow-Origin', '*')
       res.setHeader('Access-Control-Allow-Methods', 'GET')
       res.setHeader('Access-Control-Allow-Headers', 'Content-Type')
@@ -69,7 +69,7 @@ class DocsServer {
   }
 
   // Stop server
-  async close() {
+  async close () {
     if (!this.server) {
       return
     }
@@ -80,7 +80,7 @@ class DocsServer {
   }
 
   // Fetch releases
-  async getReleases() {
+  async getReleases () {
     logger.info('Fetching releases...')
     const options = {}
     if (process.env.GITHUB_TOKEN) {
@@ -110,7 +110,7 @@ class DocsServer {
   }
 
   // Fetch doc and menu files
-  async getFiles() {
+  async getFiles () {
     logger.info('Building files...')
 
     // Construct the doc menu
@@ -127,13 +127,13 @@ class DocsServer {
   }
 
   // Get all docs files
-  async getDocFiles() {
+  async getDocFiles () {
     const docPaths = await this.glob('*/**/*.md')
-    await Promise.all(docPaths.map((path) => this.getDocFile(path)))
+    await Promise.all(docPaths.map(path => this.getDocFile(path)))
   }
 
   // Get doc file and sent back it's attributes and html body
-  async getDocFile(path, parseOptions, useCache = true) {
+  async getDocFile (path, parseOptions, useCache = true) {
     if (this.docsFiles[path] && useCache) {
       return this.docsFiles[path]
     }
@@ -153,14 +153,14 @@ class DocsServer {
   }
 
   // Get menu files and create the doc menu
-  async getMenu() {
+  async getMenu () {
     logger.info('Building menu...')
 
     const menuPaths = await this.glob('*/**/menu.json')
 
     const menu = {}
 
-    await Promise.all(menuPaths.map(async path => {
+    await Promise.all(menuPaths.map(async (path) => {
       const keys = path.split('/').slice(0, -1)
       const lastKey = keys.pop()
 
@@ -178,14 +178,14 @@ class DocsServer {
   }
 
   // Get lang files and create the lang object
-  async getLanguages() {
+  async getLanguages () {
     logger.info('Building languages...')
 
     const langPaths = await this.glob('*/lang.json')
 
     const langs = {}
 
-    await Promise.all(langPaths.map(async path => {
+    await Promise.all(langPaths.map(async (path) => {
       const lang = path.split('/')[0]
       const fileContent = await readFile(resolve(this.docsDir, path), 'utf-8')
       langs[lang] = JSON.parse(fileContent)
@@ -195,7 +195,7 @@ class DocsServer {
   }
 
   // Get homepage files and create the homepage object
-  async getHomepage() {
+  async getHomepage () {
     logger.info('Building homepage...')
 
     const homepagePaths = await this.glob('*/homepage/*.md')
@@ -225,7 +225,7 @@ class DocsServer {
         }
         if (!homepage[lang][part]) {
           homepage[lang][part] = homepage[this.defaultLang][part]
-          homepage[lang][part]['attrs']['fallback'] = true
+          homepage[lang][part].attrs.fallback = true
         }
       }
     }
@@ -234,11 +234,11 @@ class DocsServer {
   }
 
   // watch file changes
-  watchFiles(cwd) {
+  watchFiles (cwd) {
     logger.info('Watching files changes...')
 
     const options = {
-      cwd: cwd,
+      cwd,
       ignoreInitial: true,
       ignored: 'node_modules/**/*'
     }
@@ -269,7 +269,7 @@ class DocsServer {
   }
 
   // Server handle request method
-  get(url) {
+  get (url) {
     // Releases
     if (url === '/releases') {
       return this.releases
@@ -337,7 +337,7 @@ class DocsServer {
   }
 
   // Glob util
-  glob(pattern) {
+  glob (pattern) {
     return glob(pattern, {
       cwd: this.docsDir,
       ignore: 'node_modules/**/*',
@@ -346,7 +346,7 @@ class DocsServer {
   }
 
   // Clone repository
-  async cloneRepo() {
+  async cloneRepo () {
     if (fs.existsSync(this.docsDir)) {
       return
     }

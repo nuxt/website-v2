@@ -11,6 +11,7 @@ export default {
     ]
   },
   buildModules: [
+    '@nuxtjs/eslint-module',
     ['~/modules/docs/', { port: 3001 }],
     '~/modules/static/',
     '~/modules/components/',

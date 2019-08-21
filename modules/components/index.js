@@ -3,7 +3,7 @@ const { join, basename } = require('path')
 const globby = require('globby')
 
 export default async function () {
-  const { options, resolver } = this.nuxt
+  const { options } = this.nuxt
 
   const dir = options.dir.components || 'components'
   const componentsDir = join(options.srcDir, dir)
@@ -29,7 +29,7 @@ export default async function () {
   // globalComponents = this.nuxt.builder.ignore.filter(plugins.map(p => relative(builder.ignore.rootDir, p)))
   // plugins = plugins.map(p => join(builder.ignore.rootDir, p))
 
-  globalComponents = globalComponents.map(path => {
+  globalComponents = globalComponents.map((path) => {
     return {
       name: basename(path).replace(/\.global\.(vue|js)$/, ''),
       path: `~/${dir}/${path}`

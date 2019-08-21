@@ -25,16 +25,12 @@
     "v-lazy-image": "^1.3.2"
   },
   "devDependencies": {
+    "@nuxtjs/eslint-config": "^1.1.2",
+    "@nuxtjs/eslint-module": "^1.0.0",
     "@nuxtjs/netlify-files": "^1.0.0",
     "@nuxtjs/style-resources": "^1.0.0",
     "babel-eslint": "^10.0.2",
     "eslint": "^6.2.1",
-    "eslint-config-standard": "^14.0.0",
-    "eslint-plugin-html": "^6.0.0",
-    "eslint-plugin-import": "^2.18.2",
-    "eslint-plugin-node": "^9.1.0",
-    "eslint-plugin-promise": "^4.2.1",
-    "eslint-plugin-standard": "^4.0.1",
     "globby": "^10.0.1",
     "node-sass": "^4.12.0",
     "sass-loader": "^7.3.1"
@@ -45,7 +41,7 @@
     "build:check": "nuxt build --analyze",
     "start": "nuxt start",
     "generate": "nuxt generate",
-    "lint": "eslint --ext .js,.vue --ignore-path .gitignore --ignore-pattern plugins/ga.js .",
+    "lint": "eslint --ext .js,.vue --ignore-path .gitignore --ignore-pattern modules/ --ignore-pattern plugins/ga.js .",
     "precommit": "npm run lint"
   },
   "repository": {

@@ -45,7 +45,7 @@ export default {
   head() {
     return {
       title: this.attrs.title,
-      titleTemplate: '%s - Nuxt.js',
+      titleTemplate: '%s - NuxtJS',
       meta: [
         { hid: 'description', name: 'description', content: this.attrs.description }
       ]

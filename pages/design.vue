@@ -67,10 +67,9 @@
 export default {
   transition: 'logos',
   head: {
-    title: 'Logos',
-    titleTemplate: '%s - Nuxt.js',
+    title: 'Design Resources - NuxtJS',
     meta: [
-      { hid: 'description', name: 'description', content: 'Download Nuxt.js logos (SVG, icons, emoji and favicon).' },
+      { hid: 'description', name: 'description', content: 'Download NuxtJS design resources (SVG, icons, emoji and favicon).' },
       { name: 'og:image', content: 'https://nuxtjs.org/meta_640.png' }
     ]
   }

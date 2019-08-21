@@ -93,6 +93,12 @@ export default {
     nuiSvgLtc,
     iSponsoring
   },
+  head: {
+    title: 'Sponsor NuxtJS Development',
+    meta: [
+      { hid: 'description', name: 'description', content: 'You can support NuxtJS development via different methods and ensure regular updates to the framework.' }
+    ]
+  },
   data () {
     return {
       sponsors: {

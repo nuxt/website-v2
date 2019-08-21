@@ -4,7 +4,7 @@
       <h1 class="text-3xl uppercase pb-16">
         sponsors
       </h1>
-      <i-sponsoring class="inline-block"/>
+      <i-sponsoring class="inline-block" />
       <div class="py-12 leading-loose">
         <p>
           Nuxt.js is an MIT licensed open source project and completely free to use.
@@ -14,14 +14,23 @@
         </p>
       </div>
       <div v-for="(group, groupKey) in sponsors" :key="groupKey" class="text-center pb-8">
-        <h2 class="uppercase text pb-8"><span class="pb-2 border-b-2 border-nuxt-lightgreen">{{ groupKey }}</span></h2>
-        <a class="sponsor inline-block m-4" v-for="(sponsor, i) in group" :key="i" :href="sponsor.url" target="_blank" rel="noopener">
-          <img :src="'/img/sponsors/' + sponsor.img" :alt="sponsor.name" class="inline-block" :class="sponsor.class"/>
+        <h2 class="uppercase text pb-8">
+          <span class="pb-2 border-b-2 border-nuxt-lightgreen">{{ groupKey }}</span>
+        </h2>
+        <a
+          v-for="(sponsor, i) in group"
+          :key="i"
+          class="sponsor inline-block m-4"
+          :href="sponsor.url"
+          target="_blank"
+          rel="noopener"
+        >
+          <img :src="'/img/sponsors/' + sponsor.img" :alt="sponsor.name" class="inline-block" :class="sponsor.class">
         </a>
       </div>
       <div class="text-center">
         <nui-button :to="localePath('support-nuxtjs')" class="mr-4 py-3 px-6 text-base">
-          <nui-svg-play slot="icon" class="h-4 -mt-1 mr-1"/>
+          <nui-svg-play slot="icon" class="h-4 -mt-1 mr-1" />
           Become a sponsor
         </nui-button>
       </div>

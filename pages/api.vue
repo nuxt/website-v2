@@ -1,9 +1,9 @@
 <template>
   <nui-container>
     <div class="flex py-8">
-      <nui-aside section="api"/>
+      <nui-aside section="api" />
       <div class="lg:w-9/12 lg:ml-auto">
-        <nuxt-child/>
+        <nuxt-child />
       </div>
     </div>
   </nui-container>

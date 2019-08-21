@@ -1,5 +1,5 @@
 <template>
-  <div class="CodeFund" ref="codefundads" id="codefund_ad"></div>
+  <div id="codefund_ad" ref="codefundads" class="CodeFund" />
 </template>
 
 <script>
@@ -9,8 +9,8 @@ export default {
       type: Boolean
     }
   },
-  mounted() {
-    if (['en', 'fr'].indexOf(this.$store.state.locale) !== -1 && this.$refs.codefundads) {
+  mounted () {
+    if (['en', 'fr'].includes(this.$store.state.locale) && this.$refs.codefundads) {
       window.addEventListener('codefund', this.cardbonFallback)
       const script = document.createElement('script')
       script.setAttribute('type', 'text/javascript')
@@ -18,17 +18,17 @@ export default {
       script.setAttribute('id', '_codefund_ad_js')
       try {
         this.$refs.codefundads.appendChild(script)
-      }catch(e){
+      } catch (e) {
         // In case codefund is *whyever* not available, the page will return a 500 if we don't catch the error
-        console.error(e)
+        console.error(e) // eslint-disable-line no-console
       }
     }
   },
-  beforeDestroy() {
+  beforeDestroy () {
     window.removeEventListener('codefund', this.cardbonFallback)
   },
   methods: {
-    cardbonFallback(event) {
+    cardbonFallback (event) {
       if (event.detail.status !== 'ok') {
         // Render Carbon Ad
         this.$emit('update:fallback', true)

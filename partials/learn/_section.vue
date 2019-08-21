@@ -7,9 +7,9 @@
     </nui-hero> -->
     <nui-container>
       <div class="flex py-8">
-        <nui-aside :list="list"/>
+        <nui-aside :list="list" />
         <div class="lg:w-9/12 lg:ml-auto">
-          <nuxt-child/>
+          <nuxt-child />
         </div>
       </div>
       <!-- <nuxt-affix :list="list" category="guide" /> -->
@@ -27,12 +27,12 @@ export default {
   validate ({ store, params }) {
     return store.state.menu[params.section] !== undefined
   },
-  computed: {
-    visible() { return this.$store.state.visibleAffix },
-    list() { return this.$store.state.menu[this.$route.params.section] }
-  },
   components: {
     nuiAside
+  },
+  computed: {
+    visible () { return this.$store.state.visibleAffix },
+    list () { return this.$store.state.menu[this.$route.params.section] }
   }
 }
 </script>

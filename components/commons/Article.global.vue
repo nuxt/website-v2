@@ -1,11 +1,11 @@
 <template>
   <article>
-    <slot/>
+    <slot />
   </article>
 </template>
 
 <script>
 export default {
-  name: 'nui-article'
+  name: 'NuiArticle'
 }
 </script>

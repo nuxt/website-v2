@@ -1,7 +1,7 @@
 <template>
-  <nuxt-ads v-if="$store.state.adBlocked"/>
-  <carbon-ads v-else-if="displayCarbon"/>
-  <code-fund-ads v-else :fallback.sync="displayCarbon"/>
+  <nuxt-ads v-if="$store.state.adBlocked" />
+  <carbon-ads v-else-if="displayCarbon" />
+  <code-fund-ads v-else :fallback.sync="displayCarbon" />
 </template>
 
 <script>
@@ -10,15 +10,15 @@ import CarbonAds from '@/components/partials/ads/Carbon'
 import NuxtAds from '@/components/partials/ads/Nuxt'
 
 export default {
-  data() {
-    return {
-      displayCarbon: false
-    }
-  },
   components: {
     CodeFundAds,
     CarbonAds,
     NuxtAds
+  },
+  data () {
+    return {
+      displayCarbon: false
+    }
   }
 }
 </script>

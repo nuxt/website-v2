@@ -1,12 +1,12 @@
 export default {
-  data() {
+  data () {
     return {
       isIntersecting: false
     }
   },
-  mounted() {
+  mounted () {
     if (!window.IntersectionObserver) {
-      return console.warn('IntersectionObserver polyfill is required.')
+      return console.warn('IntersectionObserver polyfill is required.') // eslint-disable-line no-console
     }
 
     this.__observer = new window.IntersectionObserver((entries) => {
@@ -19,7 +19,7 @@ export default {
     })
     this.__observer.observe(this.$el)
   },
-  beforeDestroy() {
+  beforeDestroy () {
     if (this.__observer) {
       this.__observer.disconnect()
       delete this.__observer

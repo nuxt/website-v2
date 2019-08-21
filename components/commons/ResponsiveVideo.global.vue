@@ -1,6 +1,14 @@
 <template>
   <div class="responsiveVideo">
-    <iframe v-if="isIntersecting && src" :src="src" frameborder="0" allowfullscreen webkitallowfullscreen mozallowfullscreen title="Responsive video"/>
+    <iframe
+      v-if="isIntersecting && src"
+      :src="src"
+      frameborder="0"
+      allowfullscreen
+      webkitallowfullscreen
+      mozallowfullscreen
+      title="Responsive video"
+    />
     <span v-else>Loading video...</span>
   </div>
 </template>

@@ -3,12 +3,12 @@
 const path = require('path')
 const { writeFile, ensureDir } = require('fs-extra')
 
-let extractPayload = function({ html, route }, windowNamespace){
-  let chunks = html.split(`<script>window.${windowNamespace}=`)
-  let pre = chunks[0]
-  let payload = chunks[1].split('</script>').shift()
-  let post = chunks[1].split('</script>').slice(1).join('</script>')
-  let path = route === '/' ? '' : route
+const extractPayload = function ({ html, route }, windowNamespace) {
+  const chunks = html.split(`<script>window.${windowNamespace}=`)
+  const pre = chunks[0]
+  const payload = chunks[1].split('</script>').shift()
+  const post = chunks[1].split('</script>').slice(1).join('</script>')
+  const path = route === '/' ? '' : route
 
   return {
     html: pre + '<script defer src="' + path + '/payload.js"></script>' + post,
@@ -16,7 +16,7 @@ let extractPayload = function({ html, route }, windowNamespace){
   }
 }
 
-let writePayload = async function (payload, dir, windowNamespace){
+const writePayload = async function (payload, dir, windowNamespace) {
   // Make sure the directory exists
   await ensureDir(dir)
 
@@ -24,7 +24,7 @@ let writePayload = async function (payload, dir, windowNamespace){
   await writeFile(path.resolve(dir, 'payload.js'), `window.${windowNamespace}=${payload}`, 'utf-8')
 
   // if routes are nested, ignore parent routs and extract last one
-  const nuxtContext = eval('('+payload+')')
+  const nuxtContext = eval('(' + payload + ')') // eslint-disable-line no-eval
   const pageData = nuxtContext.data
 
   // Write payload.json (page data)
@@ -38,7 +38,7 @@ module.exports = function (moduleOptions) {
     ...moduleOptions
   }
 
-  this.nuxt.hook('generate:page', async page => {
+  this.nuxt.hook('generate:page', async (page) => {
     if (!this.nuxt.options.generate.subFolders) {
       throw new Error('generate.subFolders should be true for @nuxt/static')
     }
@@ -47,7 +47,7 @@ module.exports = function (moduleOptions) {
     }
 
     const windowNamespace = this.nuxt.options.globals.context(this.nuxt.options.globalName)
-    let { html, payload } = extractPayload(page, windowNamespace)
+    const { html, payload } = extractPayload(page, windowNamespace)
 
     await writePayload(payload, path.join(this.nuxt.options.generate.dir, page.route), windowNamespace)
     page.html = html

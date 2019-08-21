@@ -11,7 +11,7 @@
           </h3>
         </div>
         <div class="hidden lg:block lg:w-5/12 xl:w-4/12">
-          <mountains-globe/>
+          <mountains-globe />
         </div>
       </div>
     </nui-container>
@@ -22,9 +22,14 @@
 import mountainsGlobe from '@/components/svg/streamline/montains-globe'
 
 export default {
-  props: ['error'],
   components: {
     mountainsGlobe
+  },
+  props: {
+    error: {
+      type: Object,
+      required: true
+    }
   }
 }
 </script>

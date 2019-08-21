@@ -5,16 +5,22 @@
         NUXT<span class="text-nuxt-lightgreen">JS</span> rendering
       </h1>
       <div class="p-4 lg:p-8">
-        <h4 class="uppercase text-2xl py-8">{{ $store.state.homepage.modes_server_side_rendering.attrs.content_title }}</h4>
-        <p class="leading-loose text-justify" v-html="$store.state.homepage.modes_server_side_rendering.body"></p>
+        <h4 class="uppercase text-2xl py-8">
+          {{ $store.state.homepage.modes_server_side_rendering.attrs.content_title }}
+        </h4>
+        <p class="leading-loose text-justify" v-html="$store.state.homepage.modes_server_side_rendering.body" />
       </div>
       <div class="p-4 lg:p-8">
-        <h4 class="uppercase text-2xl py-8">{{ $store.state.homepage.modes_statically_generated.attrs.content_title }}</h4>
-        <p class="leading-loose text-justify" v-html="$store.state.homepage.modes_statically_generated.body"></p>
+        <h4 class="uppercase text-2xl py-8">
+          {{ $store.state.homepage.modes_statically_generated.attrs.content_title }}
+        </h4>
+        <p class="leading-loose text-justify" v-html="$store.state.homepage.modes_statically_generated.body" />
       </div>
       <div class="px-4 lg:p-8">
-        <h4 class="uppercase text-2xl py-8">{{ $store.state.homepage.modes_single_page_app.attrs.content_title }}</h4>
-        <p class="leading-loose text-justify" v-html="$store.state.homepage.modes_statically_generated.body"></p>
+        <h4 class="uppercase text-2xl py-8">
+          {{ $store.state.homepage.modes_single_page_app.attrs.content_title }}
+        </h4>
+        <p class="leading-loose text-justify" v-html="$store.state.homepage.modes_statically_generated.body" />
       </div>
     </section>
   </nui-container>

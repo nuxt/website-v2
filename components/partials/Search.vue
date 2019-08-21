@@ -1,7 +1,14 @@
 <template>
   <div>
-    <nui-search-icon class="block absolute text-gray-600 z-10 h-4 mt-3 ml-3 fill-current"/>
-    <input class="nui-search-input" type="text" name="search" v-model="q" id="algolia" :placeholder="$store.state.lang.text.search" />
+    <nui-search-icon class="block absolute text-gray-600 z-10 h-4 mt-3 ml-3 fill-current" />
+    <input
+      id="algolia"
+      v-model="q"
+      class="nui-search-input"
+      type="text"
+      name="search"
+      :placeholder="$store.state.lang.text.search"
+    >
   </div>
 </template>
 
@@ -9,19 +16,22 @@
 import nuiSearchIcon from '@/components/svg/Search'
 
 let scriptInjected = false
-let callbacks = []
-let onScriptLoaded = (cb) => callbacks.push(cb)
-let scriptLoaded = () => callbacks.forEach((cb) => cb())
+const callbacks = []
+const onScriptLoaded = cb => callbacks.push(cb)
+const scriptLoaded = () => callbacks.forEach(cb => cb())
 
 export default {
+  components: {
+    nuiSearchIcon
+  },
   data () {
     return {
       q: ''
     }
   },
-  mounted() {
+  mounted () {
     onScriptLoaded(() => this.addInstantSearch())
-    if (scriptInjected) return
+    if (scriptInjected) { return }
     // Load JS
     const script = document.createElement('script')
     script.setAttribute('type', 'text/javascript')
@@ -29,7 +39,7 @@ export default {
     document.getElementsByTagName('body')[0].appendChild(script)
     script.onload = scriptLoaded
     // Load CSS
-    var link = document.createElement('link')
+    const link = document.createElement('link')
     link.setAttribute('rel', 'stylesheet')
     link.setAttribute('type', 'text/css')
     link.setAttribute('href', 'https://cdn.jsdelivr.net/docsearch.js/2/docsearch.min.css')
@@ -37,7 +47,7 @@ export default {
     scriptInjected = true
   },
   methods: {
-    addInstantSearch() {
+    addInstantSearch () {
       window.docsearch({
         apiKey: process.env.docSearchApiKey,
         indexName: 'nuxtjs',
@@ -50,9 +60,6 @@ export default {
       // todo call API
       this.q = ''
     }
-  },
-  components: {
-    nuiSearchIcon
   }
 }
 </script>

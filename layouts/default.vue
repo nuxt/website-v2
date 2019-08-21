@@ -1,12 +1,12 @@
 <template>
   <!-- <nuxt-theme :theme="$store.state.theme"> -->
   <div>
-    <nui-header v-model="mobileNav"/>
+    <nui-header v-model="mobileNav" />
     <main class="lg:block relative pt-16 lg:pt-24" :class="{'hidden': mobileNav}">
       <!-- <event-info/> -->
-      <nuxt/>
+      <nuxt />
     </main>
-    <nui-footer class="lg:block" :class="{'hidden': mobileNav}"/>
+    <nui-footer class="lg:block" :class="{'hidden': mobileNav}" />
   </div>
   <!-- </nuxt-theme> -->
 </template>
@@ -17,6 +17,11 @@ import nuiHeader from '@/components/partials/Header'
 import nuiFooter from '@/components/partials/Footer'
 
 export default {
+  components: {
+    // nuxtTheme,
+    nuiHeader,
+    nuiFooter
+  },
   data () {
     return {
       mobileNav: false
@@ -27,12 +32,12 @@ export default {
       this.mobileNav = false
     }
   },
-  head() {
+  head () {
     let canonical = `https://nuxtjs.org${this.$route.path}`
     if (this.$store.state.locale !== 'en') {
       canonical = `https://${this.$store.state.locale}.nuxtjs.org${this.$route.path}`
     }
-    let link = [
+    const link = [
       { rel: 'canonical', href: canonical },
       { rel: 'alternate', hreflang: 'en', href: `https://nuxtjs.org${this.$route.path}` },
       { rel: 'alternate', hreflang: 'zh', href: `https://zh.nuxtjs.org${this.$route.path}` },
@@ -51,12 +56,6 @@ export default {
       htmlAttrs: { lang: this.$store.state.locale },
       link
     }
-  },
-  components: {
-    // nuxtTheme,
-    nuiHeader,
-    nuiFooter
   }
 }
 </script>
-

@@ -1,5 +1,5 @@
 <template>
-  <aside class="hidden fixed inset-0 pt-16 h-full bg-white z-90 w-full border-b lg:-mb-0 lg:static lg:h-auto lg:overflow-y-visible lg:border-b-0 lg:pt-0 lg:w-1/4 lg:block lg:border-0 xl:w-1/5">
+  <aside class="hidden fixed inset-0 pt-16 h-full bg-white z-90 w-full border-b lg:-mb-0 lg:static lg:h-auto lg:overflow-y-visible lg:border-b-0 lg:pt-0 lg:w-1/4 lg:block lg:border-0">
     <div class="h-full overflow-y-auto scrolling-touch lg:h-auto lg:block lg:relative lg:sticky lg:top-24 bg-white lg:bg-transparent">
       <nav class="px-6 pt-6 overflow-y-auto lg:pt-8 lg:pl-0 lg:pr-8 sticky?lg:h-(screen-24)">
         <p class="uppercase font-bold pb-6">
@@ -31,12 +31,6 @@
 import throttle from 'lodash/throttle'
 
 export default {
-  props: {
-    section: {
-      type: String,
-      required: true
-    }
-  },
   mounted() {
     this.$nextTick(() => {
       window.addEventListener('scroll', throttle(() => this.scrolled(), 100))
@@ -50,10 +44,10 @@ export default {
     return { current: 0, setInter: null }
   },
   computed: {
-    list () { return this.$store.state.menu[this.section] },
+    list () { return this.$store.state.menu[this.$route.params.section] },
     visible() { return this.$store.state.visibleAffix },
     path() { return this.$route.path.slice(-1) === '/' ? this.$route.path.slice(0, -1) : this.$route.path },
-    menu() { return (this.$i18n.locale !== 'en' ? `/${this.$i18n.locale}/` : '/') + this.section },
+    menu() { return (this.$i18n.locale !== 'en' ? `/${this.$i18n.locale}/` : '/') + this.$route.params.section },
     contents() {
       var c = []
       this.list.forEach((group) => {

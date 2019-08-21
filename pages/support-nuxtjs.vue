@@ -13,6 +13,7 @@
       </div>
       <i-sponsoring class="hidden lg:inline-block my-8"/>
     </div>
+<<<<<<< HEAD
     <section>
       <h2 class="text-2xl uppercase pt-10 pb-8">
         One-time donations
@@ -33,37 +34,65 @@
           </a>
           <a href="#ltc" @click.prevent="onetime.current = 'ltc'" class="flex items-center my-2 bg-gray-200 hover:bg-gray-300 rounded-full p-2 font-bold" :class="{ 'bg-gray-300': onetime.current === 'ltc' }">
             <nui-svg-ltc class="mr-3"/> LTC
+=======
+    <section class="flex bg-gray-100 p-8 rounded my-12">
+      <div class="w-2/3">
+        <h2 class="text-2xl uppercase pt-4 pb-6">
+          One-time donations
+        </h2>
+        <p class="mb-8 text-gray-600">
+          We accept donations through these channels
+        </p>
+        <div class="flex items-end mb-8">
+          <a href="#btc" class="flex items-center my-2 bg-gray-200 hover:bg-gray-300 rounded-full p-2 pr-6 font-bold mr-2 -ml-2" :class="{ 'bg-gray-300': onetime.current === 'btc' }" @click.prevent="onetime.current = 'btc'">
+            <nui-svg-btc class="mr-3" /> BTC
+          </a>
+          <a href="#bch" class="flex items-center my-2 bg-gray-200 hover:bg-gray-300 rounded-full p-2 pr-6 font-bold mx-2" :class="{ 'bg-gray-300': onetime.current === 'bch' }" @click.prevent="onetime.current = 'bch'">
+            <nui-svg-bch class="mr-3" /> BCH
+          </a>
+          <a href="#eth" class="flex items-center my-2 bg-gray-200 hover:bg-gray-300 rounded-full p-2 pr-6 font-bold mx-2" :class="{ 'bg-gray-300': onetime.current === 'eth' }" @click.prevent="onetime.current = 'eth'">
+            <nui-svg-eth class="mr-3" /> ETH
+          </a>
+          <a href="#ltc" class="flex items-center my-2 bg-gray-200 hover:bg-gray-300 rounded-full p-2 pr-6 font-bold mx-2" :class="{ 'bg-gray-300': onetime.current === 'ltc' }" @click.prevent="onetime.current = 'ltc'">
+            <nui-svg-ltc class="mr-3" /> LTC
+>>>>>>> 253c94b7 (support page)
           </a>
         </div>
-        <div v-if="currentOnetime" class="text-center">
-          <p class="text-xl">
-            {{ currentOnetime.title }}
-          </p>
-          <p class="py-3 text-gray-600">
-            {{ currentOnetime.address }}
-          </p>
-          <img :src="currentOnetime.img" :alt="currentOnetime.title" class="w-5/12 inline-block">
-        </div>
+      </div>
+      <div v-if="currentOnetime" class="text-center w-1/3">
+        <p class="text-xl">{{ currentOnetime.title }}</p>
+        <p class="py-3 text-gray-600">{{ currentOnetime.address }}</p>
+        <img :src="currentOnetime.img" :alt="currentOnetime.title" class="w-5/12 inline-block">
       </div>
     </section>
-    <section>
+    <section class="text-center">
       <h2 class="text-2xl uppercase pt-10 pb-8">
         Recurring Pledges
       </h2>
-      <p>
+      <p class="text-gray-600 mb-12">
         Recurring pledges come with exclusive perks, e.g. having your name listed in the Vue GitHub repository, or have your company logo placed on this website.
         Become a backer or sponsor via Patreon (goes directly to support Evan You's full-time work on Vue)
         Become a backer or sponsor via OpenCollective (goes into a fund with transparent expense models supporting community efforts and events)
       </p>
-    </section>
-    <section class="py-4">
-      <h2 class="text-2xl uppercase pt-10 pb-8">
-        Current Sponsors
-      </h2>
       <div v-for="(group, groupKey) in sponsors" :key="groupKey" class="text-center pb-8">
+<<<<<<< HEAD
         <h2 class="uppercase text pb-8"><span class="pb-2 border-b-2 border-nuxt-lightgreen">{{ groupKey }}</span></h2>
         <a class="sponsor inline-block m-4" v-for="(sponsor, i) in group" :key="i" :href="sponsor.url" target="_blank" rel="noopener">
           <img :src="'/img/sponsors/' + sponsor.img" :alt="sponsor.name" class="inline-block" :class="sponsor.class"/>
+=======
+        <h2 class="uppercase text-xl pb-8">
+          <span class="pb-2 border-b-2 border-nuxt-lightgreen text-gray-700">{{ groupKey }} SPONSORS</span>
+        </h2>
+        <a
+          v-for="(sponsor, i) in group"
+          :key="i"
+          class="sponsor inline-block m-4"
+          :href="sponsor.url"
+          target="_blank"
+          rel="noopener"
+        >
+          <img :src="'/img/sponsors/' + sponsor.img" :alt="sponsor.name" class="inline-block" :class="sponsor.class">
+>>>>>>> 253c94b7 (support page)
         </a>
       </div>
       <div class="text-center">
@@ -106,6 +135,13 @@ export default {
           { name: 'ShipShape', img: 'shipshape-logo.svg', url: 'https://shipshape.io/?ref=nuxt', class: 'h-12' },
           { name: 'Hapi', img: 'hapi-logo.svg', url: 'https://hapijs.com/?ref=nuxt', class: 'h-12' },
           { name: 'Blokt', img: 'blokt-logo.png', url: 'https://blokt.com/?ref=nuxt', class: 'h-10' }
+<<<<<<< HEAD
+=======
+        ],
+        silver: [
+          { name: 'Sparheld', img: 'de-black.png', url: 'https://www.sparheld.de/?ref=nuxt', class: 'h-10' },
+          { name: 'Icons8', img: 'icons8.png', url: 'https://icons8.com/?ref=nuxt', class: 'h-10' }
+>>>>>>> 253c94b7 (support page)
         ]
       },
       onetime: {

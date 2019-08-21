@@ -33,25 +33,16 @@
 import throttle from 'lodash/throttle'
 
 export default {
-  mounted() {
-    this.$nextTick(() => {
-      window.addEventListener('scroll', throttle(() => this.scrolled(), 100))
-      if (this.$route.hash.length) {
-        this.scrollTo(this.$route.hash)
-      }
-      this.scrolled()
-    })
-  },
-  data() {
+  data () {
     return { current: 0, setInter: null }
   },
   computed: {
     list () { return this.$store.state.menu[this.$route.params.section] },
-    visible() { return this.$store.state.visibleAffix },
-    path() { return this.$route.path.slice(-1) === '/' ? this.$route.path.slice(0, -1) : this.$route.path },
-    menu() { return (this.$i18n.locale !== 'en' ? `/${this.$i18n.locale}/` : '/') + this.$route.params.section },
-    contents() {
-      var c = []
+    visible () { return this.$store.state.visibleAffix },
+    path () { return this.$route.path.slice(-1) === '/' ? this.$route.path.slice(0, -1) : this.$route.path },
+    menu () { return (this.$i18n.locale !== 'en' ? `/${this.$i18n.locale}/` : '/') + this.$route.params.section },
+    contents () {
+      const c = []
       this.list.forEach((group) => {
         if (Array.isArray(group.links) && !c.length) {
           const l = group.links.find((link) => {

@@ -14,14 +14,14 @@
           <ul class="lg:flex lg:pt-1 xl:pt-0 container mx-auto text-center">
             <li v-for="link in links" :key="link" class="xl:px-4 lg:py-0 lg:px-2 py-2">
               <nuxt-link class="header_nav_link block p-2 font-medium uppercase hover:no-underline hover:text-nuxt-lightgreen" :to="localePath({ name: 'section-slug', params: { section: link }})">
-                {{ $store.state.lang.links[link] || link}}
+                {{ $store.state.lang.links[link] || link }}
               </nuxt-link>
             </li>
           </ul>
         </nav>
-        <nui-search class="lg:block hidden"/>
-        <a href="#" @click.prevent="openSearch" class="block flex p-2 -m-2 items-center justify-center text-nuxt-gray hover:text-nuxt-lightgreen z-10 lg:hidden">
-          <nui-search-icon class="block h-5 fill-current"/>
+        <nui-search class="lg:block hidden" />
+        <a href="#" class="block flex p-2 -m-2 items-center justify-center text-nuxt-gray hover:text-nuxt-lightgreen z-10 lg:hidden" @click.prevent="openSearch">
+          <nui-search-icon class="block h-5 fill-current" />
         </a>
       </div>
     </nui-container>

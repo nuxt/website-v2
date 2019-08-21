@@ -14,7 +14,7 @@
         <tspan>Layout - </tspan> <tspan font-size="17">Vue component + Nuxt options: middleware and head</tspan>
       </text>
       <text x="400" y="132">
-        <tspan>Page - </tspan> <tspan font-size="17">Vue component supercharges with Nuxt options</tspan>
+        <tspan>Page - </tspan> <tspan font-size="17">Vue component supercharged with Nuxt options</tspan>
       </text>
       <g text-anchor="start">
         <text>
@@ -47,7 +47,7 @@
           <tspan x="175" y="287">Optional - Page Child</tspan>
         </text>
         <text font-size="15">
-          <tspan x="175" y="312">Vue component supercharges with Nuxt options</tspan>
+          <tspan x="175" y="312">Vue component supercharged with Nuxt options</tspan>
         </text>
       </g>
       <text x="580" y="270">

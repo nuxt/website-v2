@@ -22,8 +22,8 @@
           Lives in Bordeaux, France
         </div>
         <div>
-          <twitter-icon class="h-5 w-5 inline-block text-blue-600 hover:text-blue-400 cursor-pointer"/>
-          <github-icon class="h-5 w-5 inline-block text-gray-700 hover:text-gray-900 cursor-pointer"/>
+          <twitter-icon class="h-5 w-5 inline-block text-blue-600 hover:text-blue-400 cursor-pointer" />
+          <github-icon class="h-5 w-5 inline-block text-gray-700 hover:text-gray-900 cursor-pointer" />
         </div>
       </div>
     </div>

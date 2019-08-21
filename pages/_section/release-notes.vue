@@ -34,6 +34,10 @@ const monthNames = [
 ]
 
 export default {
+  components: {
+    nuiAds,
+    nuiAffix
+  },
   validate ({ params }) {
     return params.section === 'guide'
   },
@@ -62,10 +66,6 @@ export default {
         { hid: 'description', name: 'description', content: 'Nuxt.js release notes from Github.' }
       ]
     }
-  },
-  components: {
-    nuiAds,
-    nuiAffix
   }
 }
 </script>

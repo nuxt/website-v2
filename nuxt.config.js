@@ -13,6 +13,7 @@ export default {
   buildModules: [
     '@nuxtjs/eslint-module',
     ['~/modules/docs/', { port: 3001 }],
+    '~/modules/crawler/',
     '~/modules/static/',
     '~/modules/components/',
     // https://github.com/nuxt-community/netlify-files-module

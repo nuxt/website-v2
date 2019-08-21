@@ -5,14 +5,12 @@
         NuxtJS is an MIT licensed open source project and completely free to use.<br>
         You can freely use our logos as long as you mention NuxtJS and link to nuxtjs.org.
     </h3>
-    <div class="flex -mx-2">
-      <div class="w-1/4 mx-2">
-        <figure class="transparent">
-          <img src="/logos/nuxt.svg" alt="nuxt-logo" />
-          <figcaption><a href="/logos/nuxt.svg" target="_blank" rel="noopener">nuxt.svg</a> / <a href="/logos/nuxt-square.svg" target="_blank" rel="noopener">nuxt-square.svg</a></figcaption>
-        </figure>
-      </div>
-      <div class="w-1/4 mx-2">
+    <div class="logos">
+      <figure class="transparent">
+        <img src="/logos/nuxt.svg" alt="nuxt-logo" />
+        <figcaption><a href="/logos/nuxt.svg" target="_blank" rel="noopener">nuxt.svg</a> / <a href="/logos/nuxt-square.svg" target="_blank" rel="noopener">nuxt-square.svg</a></figcaption>
+      </figure>
+      <div>
         <figure class="transparent">
           <img src="/logos/nuxtjs-typo.svg" alt="nuxt-logo" />
           <figcaption><a href="/logos/nuxtjs-typo.svg" target="_blank" rel="noopener">nuxtjs-typo.svg</a></figcaption>
@@ -22,29 +20,21 @@
           <figcaption><a href="/logos/built-with-nuxt.svg" target="_blank" rel="noopener">built-with-nuxt.svg</a></figcaption>
         </figure>
       </div>
-      <div class="w-1/4 mx-2">
-        <figure class="transparent">
-          <img src="/logos/nuxt-icon.png" srcset="/logos/nuxt-icon@2x.png 2x" alt="nuxt-logo" />
-          <figcaption><a href="/logos/nuxt-icon.png" target="_blank" rel="noopener">nuxt-icon.png</a></figcaption>
-          <span class="dimensions">512 x 512</span>
-        </figure>
-      </div>
-      <div class="w-1/4 mx-2">
-        <figure class="transparent">
-          <img src="/logos/nuxt-emoji.png" srcset="/logos/nuxt-emoji@2x.png 2x" alt="nuxt-logo" />
-          <figcaption><a href="/logos/nuxt-emoji.png" target="_blank" rel="noopener">nuxt-emoji.png</a></figcaption>
-          <span class="dimensions">128 x 128</span>
-        </figure>
-      </div>
-    </div>
-    <div class="flex -mx-2 mt-4">
-      <div class="w-1/4 mx-2">
-        <figure class="dark">
-          <img src="/logos/nuxt-white.svg" alt="nuxt-logo" />
-          <figcaption><a href="/logos/nuxt-white.svg" target="_blank" rel="noopener">nuxt-white.svg</a> / <a href="/logos/nuxt-square-white.svg" target="_blank" rel="noopener">nuxt-square-white.svg</a></figcaption>
-        </figure>
-      </div>
-      <div class="w-1/4 mx-2">
+      <figure class="transparent">
+        <img src="/logos/nuxt-icon.png" srcset="/logos/nuxt-icon@2x.png 2x" alt="nuxt-logo" />
+        <figcaption><a href="/logos/nuxt-icon.png" target="_blank" rel="noopener">nuxt-icon.png</a></figcaption>
+        <span class="dimensions">512 x 512</span>
+      </figure>
+      <figure class="transparent">
+        <img src="/logos/nuxt-emoji.png" srcset="/logos/nuxt-emoji@2x.png 2x" alt="nuxt-logo" />
+        <figcaption><a href="/logos/nuxt-emoji.png" target="_blank" rel="noopener">nuxt-emoji.png</a></figcaption>
+        <span class="dimensions">128 x 128</span>
+      </figure>
+      <figure class="dark">
+        <img src="/logos/nuxt-white.svg" alt="nuxt-logo" />
+        <figcaption><a href="/logos/nuxt-white.svg" target="_blank" rel="noopener">nuxt-white.svg</a> / <a href="/logos/nuxt-square-white.svg" target="_blank" rel="noopener">nuxt-square-white.svg</a></figcaption>
+      </figure>
+      <div>
         <figure class="dark">
           <img src="/logos/nuxtjs-typo-white.svg" alt="nuxt-logo" />
           <figcaption><a href="/logos/nuxtjs-typo-white.svg" target="_blank" rel="noopener">nuxtjs-typo-white.svg</a></figcaption>
@@ -54,20 +44,16 @@
           <figcaption><a href="/logos/built-with-nuxt-white.svg" target="_blank" rel="noopener">built-with-nuxt-white.svg</a></figcaption>
         </figure>
       </div>
-      <div class="w-1/4 mx-2">
-        <figure class="dark">
-          <img src="/logos/nuxt-icon-white.png" srcset="/logos/nuxt-icon-white@2x.png 2x" alt="nuxt-logo" />
-          <figcaption><a href="/logos/nuxt-icon-white.png" target="_blank" rel="noopener">nuxt-icon-white.png</a></figcaption>
-          <span class="dimensions">512 x 512</span>
-        </figure>
-      </div>
-      <div class="w-1/4 mx-2">
-        <figure class="dark">
-          <img src="/logos/nuxt-emoji-white.png" srcset="/logos/nuxt-emoji-white@2x.png 2x" alt="nuxt-logo" />
-          <figcaption><a href="/logos/nuxt-emoji-white.png" target="_blank" rel="noopener">nuxt-emoji-white.png</a></figcaption>
-          <span class="dimensions">128 x 128</span>
-        </figure>
-      </div>
+      <figure class="dark">
+        <img src="/logos/nuxt-icon-white.png" srcset="/logos/nuxt-icon-white@2x.png 2x" alt="nuxt-logo" />
+        <figcaption><a href="/logos/nuxt-icon-white.png" target="_blank" rel="noopener">nuxt-icon-white.png</a></figcaption>
+        <span class="dimensions">512 x 512</span>
+      </figure>
+      <figure class="dark">
+        <img src="/logos/nuxt-emoji-white.png" srcset="/logos/nuxt-emoji-white@2x.png 2x" alt="nuxt-logo" />
+        <figcaption><a href="/logos/nuxt-emoji-white.png" target="_blank" rel="noopener">nuxt-emoji-white.png</a></figcaption>
+        <span class="dimensions">128 x 128</span>
+      </figure>
     </div>
     <p class="info">You can also download our <a href="/favicon.ico" target="_blank" rel="noopener">favicon</a> or our  <a href="/logos/nuxt-logos.sketch" target="_blank" rel="noopener">Sketch file</a>.</p>
   </nui-container>
@@ -88,8 +74,32 @@ export default {
 </script>
 
 <style scoped>
+.logos {
+  @apply pb-4;
+  & figure {
+    @apply mb-4;
+  }
+}
+@screen md {
+  .logos {
+    display: grid;
+    grid-column-gap: 20px;
+    grid-row-gap: 20px;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    & figure {
+      @apply mb-0;
+    }
+  }
+}
+@screen lg {
+  .logos {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+  }
+}
 figure {
-  @apply relative p-4 shadow-md text-center text-gray-500;
+  @apply relative p-4 shadow-md text-center text-gray-500 table w-full;
   &:hover {
     & .dimensions {
       @apply opacity-100;

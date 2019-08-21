@@ -10,7 +10,7 @@ export default {
       { rel: 'preconnect', href: 'https://www.google-analytics.com' }
     ]
   },
-  modules: [
+  buildModules: [
     ['~/modules/docs/', { port: 3001 }],
     '~/modules/static/',
     '~/modules/components/',
@@ -38,6 +38,7 @@ export default {
       defaultLocale: 'en'
     }]
   ],
+  modules: [],
   plugins: [
     '~/plugins/init.js',
     '~/plugins/intersection-observer.client.js',
@@ -49,15 +50,6 @@ export default {
     docSearchApiKey: 'ff80fbf046ce827f64f06e16f82f1401'
   },
   loading: { color: '#41B883' },
-  router: {
-    scrollBehavior(to, from, savedPosition) {
-      // savedPosition is only available for popstate navigations (back button)
-      if (savedPosition) {
-        return savedPosition
-      }
-      return { x: 0, y: 0 }
-    }
-  },
   build: {
     hardSource: {
       info: {

@@ -4,7 +4,7 @@ body {
       & a.anchor {
         @apply float-left;
         margin-left: -1.5rem;
-        svg {
+        & svg {
           vertical-align: middle;
           visibility: hidden;
         }

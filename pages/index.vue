@@ -1,12 +1,12 @@
 <template>
   <div>
-    <home-welcome/>
-    <home-why/>
-    <home-companies/>
-    <home-modes/>
+    <home-welcome />
+    <home-why />
+    <home-companies />
+    <home-modes />
     <!-- <home-targets/>
     <home-features/> -->
-    <home-sponsors/>
+    <home-sponsors />
   </div>
 </template>
 
@@ -14,8 +14,8 @@
 import homeWelcome from '@/partials/home/welcome'
 import homeWhy from '@/partials/home/why'
 import homeCompanies from '@/partials/home/companies'
-import homeFeatures from '@/partials/home/features'
-import homeTargets from '@/partials/home/targets'
+// import homeFeatures from '@/partials/home/features'
+// import homeTargets from '@/partials/home/targets'
 import homeSponsors from '@/partials/home/sponsors'
 import homeModes from '@/partials/home/modes'
 
@@ -24,12 +24,12 @@ export default {
     homeWelcome,
     homeWhy,
     homeCompanies,
-    homeFeatures,
-    homeTargets,
+    // homeFeatures,
+    // homeTargets,
     homeSponsors,
     homeModes
   },
-  head() {
+  head () {
     return {
       title: this.$store.state.lang.homepage.meta.title,
       meta: [

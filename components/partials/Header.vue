@@ -2,13 +2,13 @@
   <header class="header fixed top-0 right-0 left-0 z-20">
     <nui-container class="border-b border-gray-300 lg:border-0">
       <div class="flex py-6 lg:pt-8 items-end lg:items-center justify-between lg:border-b lg:border-gray-300">
-        <a href="#" @click.prevent="$emit('toggle', !mobileNav)" class="flex p-2 -m-2 items-center justify-center text-nuxt-gray hover:text-nuxt-lightgreen z-10 lg:hidden">
-          <nui-times-icon v-if="mobileNav" class="block h-5 fill-current"/>
-          <nui-bars-icon v-else class="block h-5 fill-current"/>
+        <a href="#" class="flex p-2 -m-2 items-center justify-center text-nuxt-gray hover:text-nuxt-lightgreen z-10 lg:hidden" @click.prevent="$emit('toggle', !mobileNav)">
+          <nui-times-icon v-if="mobileNav" class="block h-5 fill-current" />
+          <nui-bars-icon v-else class="block h-5 fill-current" />
         </a>
         <a class="block h-7 lg:h-10 lg:pt-1 z-10" :href="localePath('index')" @click.prevent="$router.push(localePath('index'))" @click.right.stop.prevent="$router.push(localePath('design'))">
           <h1 class="m-0 h-0 w-0 overflow-hidden">NUXTJS</h1>
-          <nui-logo class="h-6 lg:h-auto"/>
+          <nui-logo class="h-6 lg:h-auto" />
         </a>
         <nav class="header_nav lg:block lg:relative lg:pt-0 fixed top-0 bottom-0 left-0 right-0 pt-24 overflow-y-auto" :class="{'hidden': !mobileNav}">
           <ul class="lg:flex lg:pt-1 xl:pt-0 container mx-auto text-center">
@@ -36,28 +36,27 @@ import nuiSearchIcon from '@/components/svg/Search'
 import nuiSearch from '@/components/partials/Search'
 
 export default {
-  props: {
-    mobileNav: {
-      type: Boolean,
-      reuired: true
-    }
-  },
-  model: {
-    prop: 'mobileNav',
-    event: 'toggle'
-  },
-  data () {
-    return {
-      links: ['guide', 'api', 'examples', 'faq']
-    }
-  },
   components: {
     nuiBarsIcon,
     nuiTimesIcon,
     nuiLogo,
     nuiSearchIcon,
     nuiSearch
+  },
+  model: {
+    prop: 'mobileNav',
+    event: 'toggle'
+  },
+  props: {
+    mobileNav: {
+      type: Boolean,
+      required: true
+    }
+  },
+  data () {
+    return {
+      links: ['guide', 'api', 'examples', 'faq']
+    }
   }
 }
 </script>
-

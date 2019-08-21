@@ -1,6 +1,6 @@
 const { join } = require('path')
-const DocsServer = require('./server')
 const logger = require('consola').withScope('docs/module')
+const DocsServer = require('./server')
 
 module.exports = async function (moduleOptions) {
   const isDev = this.options.dev
@@ -26,6 +26,8 @@ module.exports = async function (moduleOptions) {
     await docsServer.listen()
     if (isGenerate) {
       this.nuxt.hook('generate:done', () => docsServer.close())
+    } else {
+      this.nuxt.hook('close', () => docsServer.close())
     }
   }
 
@@ -40,7 +42,7 @@ module.exports = async function (moduleOptions) {
   }
 
   // Hook generator to extract routes
-  this.nuxt.hook('generate:before', async (generator) => {
+  this.nuxt.hook('generate:before', (generator) => {
     // Add hook for extending routes
     this.nuxt.hook('generate:extendRoutes', (routes) => {
       // Empty array

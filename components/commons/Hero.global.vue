@@ -1,11 +1,11 @@
 <template>
   <section class="bg-white py-16 relative shadow">
-    <slot/>
+    <slot />
   </section>
 </template>
 
 <script>
 export default {
-  name: 'nui-hero'
+  name: 'NuiHero'
 }
 </script>

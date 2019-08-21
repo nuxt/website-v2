@@ -46,7 +46,7 @@ export default {
   props: {
     mobileNav: {
       type: Boolean,
-      reuired: true
+      required: true
     }
   },
   model: {

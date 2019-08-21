@@ -5,7 +5,7 @@ if (process.server && process.static) {
   if (!Vue.__mixin_nuxt_links__) {
     Vue.__mixin_nuxt_links__ = true
     Vue.mixin({
-      created() {
+      created () {
         if (this.$options.name === 'NuxtLink' && this.to) {
           const { href } = this.$router.resolve(this.to, this.$route, this.append)
           const links = this.$ssrContext.links = this.$ssrContext.links || []
@@ -18,13 +18,13 @@ if (process.server && process.static) {
   }
 }
 
-export default async (ctx, inject) => {
+export default (ctx, inject) => {
   if (process.client && process.static) {
     return
   }
   const $docs = {
-    async get(path) {
-      return await fetch('<%= options.url %>' + path).then(response => {
+    get (path) {
+      return fetch('<%= options.url %>' + path).then((response) => {
         if (!response.ok) {
           const error = new Error(response.statusText)
           error.response = response

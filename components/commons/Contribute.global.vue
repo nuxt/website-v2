@@ -1,6 +1,6 @@
 <template>
   <div class="contribute">
-    <carbon-ads-text/>
+    <carbon-ads-text />
     <p>{{ $store.state.lang.guide.contribute }} <a :href="docLink" target="_blank" rel="noopener">{{ $store.state.lang.guide.edit_on_github }}</a></p>
   </div>
 </template>
@@ -9,9 +9,14 @@
 import CarbonAdsText from '@/components/partials/ads/CarbonText'
 
 export default {
-  props: ['docLink'],
   components: {
     CarbonAdsText
+  },
+  props: {
+    docLink: {
+      type: String,
+      required: true
+    }
   }
 }
 </script>

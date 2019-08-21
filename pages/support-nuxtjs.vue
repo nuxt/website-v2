@@ -6,12 +6,12 @@
           Sponsor NUXT<span class="text-nuxt-lightgreen">JS</span> Development<br>
         </h1>
         <h3 class="xl:text-lg text-gray-600 font-medium leading-relaxed mb-6">
-          NuxtJS is an MIT licensed open source project and completely free to use.<br/>
-          However, the amount of effort needed to maintain and develop new features for the project is not sustainable without proper financial backing.<br/>
+          NuxtJS is an MIT licensed open source project and completely free to use.<br>
+          However, the amount of effort needed to maintain and develop new features for the project is not sustainable without proper financial backing.<br>
           You can support NuxtJS development via the following methods:
         </h3>
       </div>
-      <i-sponsoring class="hidden lg:inline-block my-8"/>
+      <i-sponsoring class="hidden lg:inline-block my-8" />
     </div>
     <section>
       <h2 class="text-2xl uppercase pt-10 pb-8">
@@ -22,17 +22,17 @@
           <p class="mb-6">
             We accept donations through these channels:
           </p>
-          <a href="#btc" @click.prevent="onetime.current = 'btc'" class="flex items-center my-2 bg-gray-200 hover:bg-gray-300 rounded-full p-2 font-bold" :class="{ 'bg-gray-300': onetime.current === 'btc' }">
-            <nui-svg-btc class="mr-3"/> BTC
+          <a href="#btc" class="flex items-center my-2 bg-gray-200 hover:bg-gray-300 rounded-full p-2 font-bold" :class="{ 'bg-gray-300': onetime.current === 'btc' }" @click.prevent="onetime.current = 'btc'">
+            <nui-svg-btc class="mr-3" /> BTC
           </a>
-          <a href="#bch" @click.prevent="onetime.current = 'bch'" class="flex items-center my-2 bg-gray-200 hover:bg-gray-300 rounded-full p-2 font-bold" :class="{ 'bg-gray-300': onetime.current === 'bch' }">
-            <nui-svg-bch class="mr-3"/> BCH
+          <a href="#bch" class="flex items-center my-2 bg-gray-200 hover:bg-gray-300 rounded-full p-2 font-bold" :class="{ 'bg-gray-300': onetime.current === 'bch' }" @click.prevent="onetime.current = 'bch'">
+            <nui-svg-bch class="mr-3" /> BCH
           </a>
-          <a href="#eth" @click.prevent="onetime.current = 'eth'" class="flex items-center my-2 bg-gray-200 hover:bg-gray-300 rounded-full p-2 font-bold" :class="{ 'bg-gray-300': onetime.current === 'eth' }">
-            <nui-svg-eth class="mr-3"/> ETH
+          <a href="#eth" class="flex items-center my-2 bg-gray-200 hover:bg-gray-300 rounded-full p-2 font-bold" :class="{ 'bg-gray-300': onetime.current === 'eth' }" @click.prevent="onetime.current = 'eth'">
+            <nui-svg-eth class="mr-3" /> ETH
           </a>
-          <a href="#ltc" @click.prevent="onetime.current = 'ltc'" class="flex items-center my-2 bg-gray-200 hover:bg-gray-300 rounded-full p-2 font-bold" :class="{ 'bg-gray-300': onetime.current === 'ltc' }">
-            <nui-svg-ltc class="mr-3"/> LTC
+          <a href="#ltc" class="flex items-center my-2 bg-gray-200 hover:bg-gray-300 rounded-full p-2 font-bold" :class="{ 'bg-gray-300': onetime.current === 'ltc' }" @click.prevent="onetime.current = 'ltc'">
+            <nui-svg-ltc class="mr-3" /> LTC
           </a>
         </div>
         <div v-if="currentOnetime" class="text-center">
@@ -61,14 +61,23 @@
         Current Sponsors
       </h2>
       <div v-for="(group, groupKey) in sponsors" :key="groupKey" class="text-center pb-8">
-        <h2 class="uppercase text pb-8"><span class="pb-2 border-b-2 border-nuxt-lightgreen">{{ groupKey }}</span></h2>
-        <a class="sponsor inline-block m-4" v-for="(sponsor, i) in group" :key="i" :href="sponsor.url" target="_blank" rel="noopener">
-          <img :src="'/img/sponsors/' + sponsor.img" :alt="sponsor.name" class="inline-block" :class="sponsor.class"/>
+        <h2 class="uppercase text pb-8">
+          <span class="pb-2 border-b-2 border-nuxt-lightgreen">{{ groupKey }}</span>
+        </h2>
+        <a
+          v-for="(sponsor, i) in group"
+          :key="i"
+          class="sponsor inline-block m-4"
+          :href="sponsor.url"
+          target="_blank"
+          rel="noopener"
+        >
+          <img :src="'/img/sponsors/' + sponsor.img" :alt="sponsor.name" class="inline-block" :class="sponsor.class">
         </a>
       </div>
       <div class="text-center">
         <nui-button href="https://opencollective.com/nuxtjs" class="mr-4 py-3 px-6 text-base">
-          <nui-svg-play slot="icon" class="h-4 -mt-1 mr-1"/>
+          <nui-svg-play slot="icon" class="h-4 -mt-1 mr-1" />
           Become a sponsor
         </nui-button>
       </div>

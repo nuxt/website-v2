@@ -6,19 +6,25 @@
       </h1>
       <div class="flex flex-col lg:flex-row items-start justify-between">
         <div class="lg:w-1/3 px-4 py-8 lg:p-8 text-center">
-          <i-modular class="inline-block"/>
-          <h4 class="uppercase text-2xl py-8">{{ $store.state.homepage.why_modular.attrs.title }}</h4>
-          <p class="leading-loose text-justify" v-html="$store.state.homepage.why_modular.body"></p>
+          <i-modular class="inline-block" />
+          <h4 class="uppercase text-2xl py-8">
+            {{ $store.state.homepage.why_modular.attrs.title }}
+          </h4>
+          <p class="leading-loose text-justify" v-html="$store.state.homepage.why_modular.body" />
         </div>
         <div class="lg:w-1/3 px-4 py-8 lg:p-8 text-center">
-          <i-performant class="inline-block"/>
-          <h4 class="uppercase text-2xl py-8">{{ $store.state.homepage.why_performant.attrs.title }}</h4>
-          <p class="leading-loose text-justify" v-html="$store.state.homepage.why_performant.body"></p>
+          <i-performant class="inline-block" />
+          <h4 class="uppercase text-2xl py-8">
+            {{ $store.state.homepage.why_performant.attrs.title }}
+          </h4>
+          <p class="leading-loose text-justify" v-html="$store.state.homepage.why_performant.body" />
         </div>
         <div class="lg:w-1/3 px-4 py-8 lg:p-8 text-center">
-          <i-enjoyable class="inline-block"/>
-          <h4 class="uppercase text-2xl py-8">{{ $store.state.homepage.why_enjoyable.attrs.title }}</h4>
-          <p class="leading-loose text-justify" v-html="$store.state.homepage.why_enjoyable.body"></p>
+          <i-enjoyable class="inline-block" />
+          <h4 class="uppercase text-2xl py-8">
+            {{ $store.state.homepage.why_enjoyable.attrs.title }}
+          </h4>
+          <p class="leading-loose text-justify" v-html="$store.state.homepage.why_enjoyable.body" />
         </div>
       </div>
     </section>

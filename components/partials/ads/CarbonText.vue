@@ -1,18 +1,18 @@
 <template>
   <div ref="carbonadsText">
-    <div class="bsa-cpc"></div>
+    <div class="bsa-cpc" />
   </div>
 </template>
 
 <script>
 export default {
-  mounted() {
+  mounted () {
     if (this.$store.state.locale === 'en' && this.$refs.carbonadsText) {
       this.loadScript()
     }
   },
   methods: {
-    loadScript() {
+    loadScript () {
       // Order is important (https://stackoverflow.com/questions/16230886/trying-to-fire-the-onload-event-on-script-tag)
       const script = document.createElement('script')
       script.setAttribute('type', 'text/javascript')
@@ -20,8 +20,8 @@ export default {
       script.onload = this.scriptLoaded
       script.setAttribute('src', '//m.servedby-buysellads.com/monetization.js')
     },
-    scriptLoaded() {
-      if (typeof _bsa === 'undefined') return console.warn('Could not load Carbon Ads Text') // eslint-disable-line no-console
+    scriptLoaded () {
+      if (typeof _bsa === 'undefined') { return console.warn('Could not load Carbon Ads Text') } // eslint-disable-line no-console
       window._bsa.init('default', 'CKYD62QW', 'placement:nuxtjsorg', {
         target: '.bsa-cpc',
         align: 'horizontal',

@@ -115,6 +115,12 @@ export default {
           { name: 'ShipShape', img: 'shipshape-logo.svg', url: 'https://shipshape.io/?ref=nuxt', class: 'h-12' },
           { name: 'Hapi', img: 'hapi-logo.svg', url: 'https://hapijs.com/?ref=nuxt', class: 'h-12' },
           { name: 'Blokt', img: 'blokt-logo.png', url: 'https://blokt.com/?ref=nuxt', class: 'h-10' }
+        ],
+        silver: [
+          { name: 'Storyblok', img: 'storyblok-logo.svg', url: 'https://www.storyblok.com/?ref=nuxt', class: 'h-24' }
+        ],
+        bronze: [
+          { name: 'Storyblok', img: 'storyblok-logo.svg', url: 'https://www.storyblok.com/?ref=nuxt', class: 'h-24' }
         ]
       },
       onetime: {

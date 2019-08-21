@@ -46,7 +46,7 @@ export default {
         { name: 'twitter:title', content: this.$store.state.lang.homepage.meta.title },
         { name: 'twitter:description', content: this.$store.state.lang.homepage.meta.description },
         { name: 'twitter:image', content: 'https://nuxtjs.org/meta_640.png' },
-        { name: 'twitter:image:alt', content: 'Nuxt.js Logo' }
+        { name: 'twitter:image:alt', content: 'NuxtJS Logo' }
       ]
     }
   // },

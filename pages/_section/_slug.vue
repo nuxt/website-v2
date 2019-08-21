@@ -1,6 +1,6 @@
 <template>
-  <div class="lg:flex">
-    <nui-article class="min-h-screen w-full p-8 my-8 lg:static lg:max-h-full lg:overflow-visible lg:w-3/4 bg-gray-100 rounded">
+  <div class="-mx-4 lg:mx-0 flex flex-col-reverse lg:flex-row">
+    <nui-article class="lg:min-h-screen w-full p-8 my-8 lg:static lg:max-h-full lg:overflow-visible lg:w-3/4 bg-gray-100 rounded">
       <h1>{{ attrs.title }}</h1>
       <responsive-video v-if="attrs.youtube" :src="attrs.youtube"/>
       <html-parser :content="body"/>

@@ -1,4 +1,6 @@
 <template>
+  <!-- <nui-container class="mb-12 bg-gray-100 lg:bg-transparent rounded">
+    <section class="lg:bg-gray-100 rounded py-6 sm:p-6"> -->
   <nui-container>
     <div class="lg:flex">
       <nui-aside />

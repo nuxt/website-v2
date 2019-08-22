@@ -326,14 +326,21 @@ class DocsServer {
 
     // Remove first /
     const path = url.slice(1) + '.md'
+    const lang = path.slice(0, 2)
 
     // Check if path exists
-    if (!this.docsFiles[path]) {
-      throw new Error('File not found')
+    let doc = this.docsFiles[path]
+    if (!doc && lang !== 'en') {
+      // Check fallback for EN
+      doc = this.docsFiles['en' + path.slice(2)]
+      doc.langFallback = true
+      if (!doc) {
+        throw new Error('File not found')
+      }
     }
 
     // Send back doc content
-    return this.docsFiles[path]
+    return doc
   }
 
   // Glob util

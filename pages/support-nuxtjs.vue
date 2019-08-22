@@ -37,8 +37,12 @@
         </div>
       </div>
       <div v-if="currentOnetime" class="text-center w-1/3">
-        <p class="text-xl">{{ currentOnetime.title }}</p>
-        <p class="py-3 text-gray-600">{{ currentOnetime.address }}</p>
+        <p class="text-xl">
+          {{ currentOnetime.title }}
+        </p>
+        <p class="py-3 text-gray-600">
+          {{ currentOnetime.address }}
+        </p>
         <img :src="currentOnetime.img" :alt="currentOnetime.title" class="w-5/12 inline-block">
       </div>
     </section>

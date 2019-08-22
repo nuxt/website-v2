@@ -8,7 +8,8 @@ export const state = () => ({
   lang: {},
   menu: {},
   homepage: {},
-  adBlocked: false
+  adBlocked: false,
+  focusMode: false
 })
 
 export const mutations = {
@@ -41,6 +42,9 @@ export const mutations = {
   },
   setTheme (state, value) {
     state.theme = value
+  },
+  setFocusMode (state, value) {
+    state.focusMode = value
   }
 }
 

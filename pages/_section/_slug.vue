@@ -7,7 +7,7 @@
       <contribute :doc-link="docLink" />
     </nui-article>
     <nui-affix>
-      <nui-ads :key="$route.params.slug" class="mx-auto" />
+      <nui-ads :key="$route.params.slug"/>
     </nui-affix>
   </div>
 </template>

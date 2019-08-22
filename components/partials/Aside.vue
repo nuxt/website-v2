@@ -141,10 +141,3 @@ export default {
   }
 }
 </script>
-
-<style>
-/* .aside {
-  top: 6rem;
-  height: calc(100vh - 6rem)
-} */
-</style>

@@ -18,21 +18,38 @@ export default {
 
 <style>
 .Carbon {
-  @apply flex flex-col w-32;
-  & .carbon-img {
-  }
+  @apply p-4 flex flex-col mx-auto;
+  max-width: 160px;
   & .carbon-text {
     @apply text-sm m-0 text-left text-gray-600 block pt-2 leading-relaxed;
     &:hover {
       @apply no-underline text-gray-700;
     }
   }
-  & .carbon-wrap {
-  }
   & .carbon-poweredby {
     @apply text-xs text-right text-gray-400 block pt-2;
     &:hover {
       @apply no-underline text-gray-500;
+    }
+  }
+  @media (max-width: 1023px) {
+    max-width: 320px;
+    margin: 1rem 0;
+    & .carbon-img {
+      float: left;
+      display: block;
+    }
+    & .carbon-text {
+      width: 150px;
+      display: block;
+      float: left;
+      padding: 0.25rem 1rem;
+      padding-right: 0;
+    }
+    & .carbon-poweredby {
+      display: block;
+      float: right;
+      text-align: right;
     }
   }
 }

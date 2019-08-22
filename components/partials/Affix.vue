@@ -31,11 +31,9 @@
           <a v-for="sponsor in sponsors" :key="sponsor.name" :href="sponsor.link" class="inline-block my-4">
             <img :src="sponsor.img" :alt="sponsor.name" class="h-16">
           </a>
-          <p>
-            <nui-button :to="localePath('support-nuxtjs')" class="justify-center mb-4">
-              Support Us
-            </nui-button>
-          </p>
+          <nui-button :to="localePath('support-nuxtjs')" class="justify-center mb-4">
+            Support Us
+          </nui-button>
         </div>
         <div class="-m-4 lg:m-0">
           <slot />

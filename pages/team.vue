@@ -74,7 +74,7 @@ export default {
           twitter: 'iamnuxt',
           website: 'https://alexchopin.com',
           work: {
-            role: 'Creator',
+            role: 'Design',
             org: 'NuxtJS',
             orgUrl: 'https://nuxtjs.org'
           }
@@ -86,9 +86,9 @@ export default {
           github: 'pi0',
           twitter: '_pi0_',
           work: {
-            role: 'Lead Developer',
-            org: 'Passionate People',
-            orgUrl: 'https://passionatepeople.io'
+            role: 'Architect',
+            org: 'NuxtJS',
+            orgUrl: 'https://nuxtjs.org'
           }
         },
         {
@@ -110,9 +110,9 @@ export default {
           twitter: 'TheAlexLichter',
           website: 'https://blog.lichter.io',
           work: {
-            role: 'Founder',
-            org: 'Developmint',
-            orgUrl: 'https://www.developmint.de'
+            role: 'Community',
+            org: 'NuxtJS',
+            orgUrl: 'https://nuxtjs.org'
           }
         },
         {
@@ -134,7 +134,9 @@ export default {
           github: 'aldarund',
           twitter: 'aldarund',
           work: {
-            role: 'Freelancer'
+            role: 'Answer Machine',
+            org: 'NuxtJS',
+            orgUrl: 'https://stackoverflow.com/search?q=user%3A239354+%5Bnuxt.js%5D'
           }
         },
         {
@@ -151,10 +153,12 @@ export default {
         },
         {
           name: 'Pim',
-          city: 'Netherlands',
+          city: 'The Netherlands',
           github: 'pimlie',
           work: {
-            role: 'Freelancer'
+            role: 'Hacker',
+            org: 'NuxtJS',
+            orgUrl: 'https://nuxtjs.org'
           }
         }
       ]

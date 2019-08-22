@@ -98,7 +98,7 @@ export default {
           github: 'clarkdo',
           twitter: 'ClarkDu_',
           work: {
-            role: 'Hard Tester',
+            role: 'Core Expert',
             org: 'NuxtJS',
             orgUrl: 'https://nuxtjs.org'
           }

@@ -1,7 +1,12 @@
 <template>
-  <aside class="hidden fixed inset-0 pt-16 h-full bg-white z-90 w-full border-b lg:-mb-0 lg:static lg:h-auto lg:overflow-y-visible lg:border-b-0 lg:pt-0 lg:w-1/4 lg:block lg:border-0">
-    <div class="h-full overflow-y-auto scrolling-touch lg:h-auto lg:block lg:relative lg:sticky lg:top-24 bg-white lg:bg-transparent">
-      <nav class="px-6 pt-6 overflow-y-auto lg:pt-8 lg:pl-0 lg:pr-8 sticky?lg:h-(screen-24)">
+  <aside class="block bg-gray-100 mt-8 -mx-4 lg:bg-transparent lg:mt-0 lg:mx-0 lg:inset-0 z-90 lg:mb-0 lg:static lg:h-auto lg:overflow-y-visible lg:pt-0 lg:w-1/4 lg:block">
+    <div class="h-full overflow-y-auto scrolling-touch text-center lg:text-left lg:h-auto lg:block lg:relative lg:sticky lg:top-24">
+      <a href="#nav" class="block text-left p-4 lg:hidden" @click.prevent="showNav = !showNav" v-if="breadcrumb">
+        <nui-times v-if="showNav" class="float-right mt-1 mr-1 h-5" />
+        <nui-caret-down v-else class="float-right mt-2 mr-1" />
+        <span class="uppercase text-gray-500 ml-1">{{ breadcrumb.group }} :</span> {{ breadcrumb.title }}
+      </a>
+      <nav class="pt-8 lg:overflow-y-auto border-t lg:block lg:pl-0 lg:pr-8 sticky?lg:h-(screen-24)" :class="{ hidden: !showNav }">
         <p class="uppercase font-bold pb-6">
           {{ $store.state.lang.text.version }} <span class="text-nuxt-lightgreen">{{ $store.state.docVersion }}</span>
         </p>
@@ -31,16 +36,33 @@
 
 <script>
 import throttle from 'lodash/throttle'
+import nuiCaretDown from '@/components/svg/CaretDown'
+import nuiTimes from '@/components/svg/Times'
 
 export default {
+  components: {
+    nuiCaretDown,
+    nuiTimes
+  },
   data () {
-    return { current: 0, setInter: null }
+    return { current: 0, setInter: null, showNav: false }
   },
   computed: {
     list () { return this.$store.state.menu[this.$route.params.section] },
     visible () { return this.$store.state.visibleAffix },
     path () { return this.$route.path.slice(-1) === '/' ? this.$route.path.slice(0, -1) : this.$route.path },
     menu () { return (this.$i18n.locale !== 'en' ? `/${this.$i18n.locale}/` : '/') + this.$route.params.section },
+    breadcrumb () {
+      let breadcrumb = null
+      this.list.forEach((group) => {
+        group.links.forEach((link) => {
+          if ((this.$route.params.slug && link.to === '/' + this.$route.params.slug) || (!this.$route.params.slug && (link.to === '' || link.to === '/'))) {
+            breadcrumb = { group: group.title, title: link.name }
+          }
+        })
+      })
+      return breadcrumb
+    },
     contents () {
       const c = []
       this.list.forEach((group) => {
@@ -75,6 +97,7 @@ export default {
   },
   methods: {
     hashChanged (toPath, fromPath) {
+      this.showNav = false
       toPath = toPath.split('#')
       fromPath = fromPath.split('#')
       this.$nextTick(() => this.scrollTo(this.$route.hash))

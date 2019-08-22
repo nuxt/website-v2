@@ -1,17 +1,17 @@
 <template>
   <div class="-mx-4 lg:mx-0 flex flex-col-reverse lg:flex-row">
-    <div class="lg:min-h-screen w-full my-8 lg:static lg:max-h-full lg:w-3/4 rounded overflow-hidden">
-      <div v-if="page.langFallback" class="p-4 bg-orange-200">
+    <div class="lg:min-h-screen w-full py-8 px-4 lg:static lg:overflow-visible lg:max-h-full lg:w-3/4" @mouseover="focus" @mouseleave="blur">
+      <div v-if="page.langFallback" class="p-4 mb-6 bg-orange-200 rounded">
         ⚠️ You are looking at the english version of the page. Help us translate it <a :href="docLink" class="text-orange-600">here</a>.
       </div>
-      <nui-article class="lg:min-h-screen p-4 lg:p-8 lg:static bg-gray-100">
+      <nui-article>
         <h1>{{ page.attrs.title }}</h1>
         <responsive-video v-if="page.attrs.youtube" :src="page.attrs.youtube" />
         <html-parser :content="page.body" />
         <contribute :doc-link="docLink" />
       </nui-article>
     </div>
-    <nui-affix>
+    <nui-affix class="opacity-transition" :class="{ 'opacity-50': $store.state.focusMode }">
       <nui-ads :key="$route.params.slug" class="mx-auto" />
     </nui-affix>
   </div>
@@ -54,6 +54,21 @@ export default {
       return error({ statusCode: 404, message: store.state.lang.text.api_page_not_found })
     }
     return data
+  },
+  methods: {
+    focus () {
+      if (this._timeout) {
+        return
+      }
+      this._timeout = setTimeout(() => this.$store.commit('setFocusMode', true), 1300)
+    },
+    blur () {
+      if (this._timeout) {
+        clearTimeout(this._timeout)
+        delete this._timeout
+      }
+      this.$store.commit('setFocusMode', false)
+    }
   },
   scrollToTop: true,
   head () {

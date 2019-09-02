@@ -5,6 +5,9 @@
 
 @import './themes/light.css';
 /* @import './themes/dark.scss'; */
+/* @import 'highlight.js/styles/nord.css'; */
+/* @import 'highlight.js/styles/tomorrow-night-blue.css'; */
+/* @import 'highlight.js/styles/ocean.css'; */
 
 @import 'tailwindcss/utilities';
 
@@ -15,3 +18,4 @@
     }
   }
 }
+

@@ -3,6 +3,7 @@
 @import './light/texts.css';
 @import './light/lists.css';
 @import './light/promote.css';
+@import './light/highlight.css';
 
 body {
   @apply font-sans font-medium text-nuxt-gray;

@@ -10,7 +10,9 @@ body {
       @apply bg-gray-100 text-red-500 p-1 not-italic rounded text-sm;
     }
     & pre {
-      @apply bg-gray-200 rounded p-2 my-2 overflow-auto;
+      @apply rounded p-2 my-2 overflow-auto bg-nuxt-gray;
+      /* background-color: #2E3440; nord.css */
+      /* background-color: #002451; tomorrow-night-blue.css */
       & code {
         @apply text-gray-800 bg-transparent;
       }
@@ -19,18 +21,12 @@ body {
       @apply font-bold text-nuxt-gray;
     }
     & .Alert {
-      @apply px-4 py-2 rounded my-4;
-      & b, & strong {
-        @apply text-nuxt-gray;
+      @apply px-4 py-2 rounded my-4 bg-blue-100;
+      & a {
+        @apply text-blue-600;
       }
-      &.Alert--nuxt-green {
-        @apply bg-blue-100;
-        & a {
-          @apply text-blue-600;
-        }
-        & code {
-          @apply text-blue-800 bg-blue-200;
-        }
+      & code {
+        @apply text-blue-800 bg-blue-200;
       }
       &.Alert--orange {
         @apply bg-orange-100;

@@ -18,7 +18,7 @@
     "micro": "^9.3.4",
     "node-fetch": "^2.6.0",
     "normalize.css": "^8.0.1",
-    "nuxt-edge": "^2.9.2-26105770.3ca7eca7",
+    "nuxt": "^2.9.2",
     "nuxt-i18n": "^6.0.2",
     "nuxt-svg-loader": "^1.0.1",
     "octicons": "^8.5.0",

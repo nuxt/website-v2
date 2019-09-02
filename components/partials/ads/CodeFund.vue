@@ -40,15 +40,33 @@ export default {
 
 <style lang="scss">
 .CodeFund {
-  @apply bg-white p-4 flex flex-col w-40;
-  .cf-img-wrapper {
-
-  }
-  .cf-text {
-
-  }
-  .cf-powered-by {
-    @apply text-xs;
+  @apply p-4 flex flex-col;
+  @media (max-width: 1023px) {
+    #cf {
+      width: 280px !important;
+      margin: 1rem 0 !important;
+    }
+    .cf-wrapper {
+      height: 125px;
+      position: relative;
+    }
+    .cf-img-wrapper {
+      float: left;
+      display: block;
+    }
+    .cf-text {
+      width: 155px;
+      display: block;
+      float: right;
+      padding: 0.5rem 1rem;
+      padding-right: 0;
+    }
+    .cf-powered-by {
+      @apply text-xs;
+      display: block;
+      float: right;
+      text-align: right;
+    }
   }
 }
 </style>

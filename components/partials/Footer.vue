@@ -79,7 +79,7 @@ export default {
         support: [
           { key: 'Support NuxtJS', to: 'support-nuxtjs' },
           { key: 'The NuxtJS Shop', to: 'shop' },
-          { key: 'Need some help?', to: 'help' }
+          { key: 'NuxtJS Consulting', to: 'support' }
         ]
       }
     }

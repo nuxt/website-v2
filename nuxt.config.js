@@ -40,7 +40,19 @@ export default {
       defaultLocale: 'en'
     }]
   ],
-  modules: [],
+  modules: [
+    // https://http.nuxtjs.or
+    '@nuxt/http'
+  ],
+  http: {
+    proxy: true
+  },
+  proxy: {
+    '/api/otechie': {
+      target: 'https://api.otechie.com',
+      pathRewrite: { '^/api/otechie': '' }
+    }
+  },
   plugins: [
     '~/plugins/init.js',
     '~/plugins/intersection-observer.client.js',

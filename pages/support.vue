@@ -3,7 +3,7 @@
     <div class="flex justify-between">
       <div class="lg:w-1/2 xl:w-8/12 text-center lg:text-left p-4 sm:p-0">
         <h1 class="text-3xl xl:text-4xl text-nuxt-gray font-medium leading-normal mb-6">
-          NUXT<span class="text-nuxt-lightgreen">JS</span> Support<br>
+          NUXT<span class="text-nuxt-lightgreen">JS</span> Consulting & Support<br>
         </h1>
         <h3 class="xl:text-lg text-gray-600 font-medium leading-relaxed mb-6">
           Our <nuxt-link to="/team" class="text-nuxt-green underline">core team</nuxt-link> now offers official consulting services for your NuxtJS applications.<br>

@@ -9,7 +9,7 @@
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga magni cum, nisi animi quae sit in, corporis explicabo architecto natus vero voluptate maiores beatae, et quo possimus. Rerum, consequatur aperiam!
         </h3>
       </div>
-      <i-sponsoring class="hidden lg:inline-block my-8" />
+      <i-help class="hidden lg:inline-block my-8" />
     </div>
     <section class="flex bg-gray-100 p-8 rounded my-12">
       Otechie + Discord + Tidelift (inspiration donations)
@@ -20,11 +20,11 @@
 </template>
 
 <script>
-import iSponsoring from '@/components/svg/streamline/sponsoring.vue'
+import iHelp from '@/components/svg/streamline/help.vue'
 
 export default {
   components: {
-    iSponsoring
+    iHelp
   },
   head: {
     title: 'The NuxtJS Shop',

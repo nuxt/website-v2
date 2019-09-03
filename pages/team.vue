@@ -1,11 +1,16 @@
 <template>
   <nui-container class="py-16">
-    <h1 class="text-3xl xl:text-4xl text-nuxt-gray font-medium leading-normal mb-6">
-      Nuxt<span class="text-nuxt-lightgreen">JS</span> Team
-    </h1>
-    <h3 class="xl:text-lg text-gray-600 font-medium leading-relaxed mb-8">
-      The development of NuxtJS and its ecosystem is guided by an international team. We have a very active and engaged team that is constantly striving to push Nuxt forward.
-    </h3>
+    <div class="flex justify-between">
+      <div class="lg:w-1/2 xl:w-8/12 text-center lg:text-left p-4 sm:p-0">
+        <h1 class="text-3xl xl:text-4xl text-nuxt-gray font-medium leading-normal mb-6">
+          The NUXT<span class="text-nuxt-lightgreen">JS</span> Team<br>
+        </h1>
+        <h3 class="xl:text-lg text-gray-600 font-medium leading-relaxed mb-6">
+          The development of NuxtJS and its ecosystem is guided by an international team. We have a very active and engaged team that is constantly striving to push Nuxt forward.
+        </h3>
+      </div>
+      <i-team class="hidden lg:inline-block my-8" />
+    </div>
     <h2 class="text-2xl xl:text-3xl text-nuxt-gray font-medium leading-normal mb-6">
       Active Core Team Members
     </h2>
@@ -39,12 +44,14 @@
 import TwitterIcon from '~/assets/images/twitter.svg'
 import GithubIcon from '~/assets/images/github.svg'
 import WebsiteIcon from '~/assets/images/link.svg'
+import iTeam from '@/components/svg/streamline/team.vue'
 
 export default {
   components: {
     TwitterIcon,
     GithubIcon,
-    WebsiteIcon
+    WebsiteIcon,
+    iTeam
   },
   head: {
     title: 'The NuxtJS Team',

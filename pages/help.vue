@@ -10,7 +10,7 @@
           We offer different services depending of your needs, from technical support to custom development.
         </h3>
       </div>
-      <i-sponsoring class="hidden lg:inline-block my-8" />
+      <i-help class="hidden lg:inline-block my-8" />
     </div>
     <div class="flex flex-wrap -mx-2 mb-4">
       <section v-for="service of services" :key="service.slug" class="w-full md:w-1/2 p-2">
@@ -29,11 +29,11 @@
 </template>
 
 <script>
-import iSponsoring from '@/components/svg/streamline/sponsoring.vue'
+import iHelp from '@/components/svg/streamline/help.vue'
 
 export default {
   components: {
-    iSponsoring
+    iHelp
   },
   head: {
     title: 'The NuxtJS Shop',

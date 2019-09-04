@@ -77,9 +77,9 @@ export default {
           { key: 'Discord', href: 'https://discordapp.com/invite/ps2h6QT' }
         ],
         support: [
-          { key: 'Support NuxtJS', to: 'support-nuxtjs' },
+          { key: 'Sponsor NuxtJS', to: 'sponsor-nuxtjs' },
           { key: 'The NuxtJS Shop', to: 'shop' },
-          { key: 'Need some help?', to: 'help' }
+          { key: 'NuxtJS Consulting', to: 'support' }
         ]
       }
     }

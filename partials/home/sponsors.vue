@@ -29,7 +29,7 @@
         </a>
       </div>
       <div class="text-center">
-        <nui-button :to="localePath('support-nuxtjs')" class="mr-4 py-3 px-6 text-base">
+        <nui-button :to="localePath('sponsor-nuxtjs')" class="mr-4 py-3 px-6 text-base">
           <nui-svg-play slot="icon" class="h-4 -mt-1 mr-1" />
           Become a sponsor
         </nui-button>
@@ -58,8 +58,7 @@ export default {
           { name: 'VueMastery', img: 'vueMastery-brand.svg', url: 'https://www.vuemastery.com/?ref=nuxt', class: 'h-10' },
           { name: 'VueSchool', img: 'vueschool.png', url: 'https://vueschool.io/?friend=nuxt&utm_source=Nuxtjs.org&utm_medium=banner&utm_campaign=Open%20Collective', class: 'h-12' },
           { name: 'ShipShape', img: 'shipshape-logo.svg', url: 'https://shipshape.io/?ref=nuxt', class: 'h-12' },
-          { name: 'Hapi', img: 'hapi-logo.svg', url: 'https://hapijs.com/?ref=nuxt', class: 'h-12' },
-          { name: 'Blokt', img: 'blokt-logo.png', url: 'https://blokt.com/?ref=nuxt', class: 'h-10' }
+          { name: 'Hapi', img: 'hapi-logo.svg', url: 'https://hapijs.com/?ref=nuxt', class: 'h-12' }
         ]
       }
     }

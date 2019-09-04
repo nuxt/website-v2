@@ -53,7 +53,7 @@ export default {
           price: '99$',
           link: 'https://www.creative-tim.com/product/nuxt-argon-dashboard-pro?partner=120213',
           img: 'nuxt-argon-dashboard-pro',
-          discount: 'Get 30% off with the discount code: <span class="whitespace-no-wrap">30nuxt-exclusive</span>'
+          discount: 'Get 30% off with the discount code: <b class="whitespace-no-wrap">30nuxt-exclusive</b>'
         },
         {
           title: 'Nuxt Now UI Kit',

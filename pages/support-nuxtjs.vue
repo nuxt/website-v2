@@ -67,7 +67,7 @@
           target="_blank"
           rel="noopener"
         >
-          <img :src="'/img/sponsors/' + sponsor.img" :alt="sponsor.name" class="inline-block" :class="sponsor.class">
+          <img :src="'/img/sponsors/' + sponsor.img" :alt="sponsor.name" :title="sponsor.name" class="inline-block" :class="sponsor.class">
         </a>
       </div>
       <div class="text-center">
@@ -118,7 +118,9 @@ export default {
         ],
         silver: [
           { name: 'Sparheld', img: 'de-black.png', url: 'https://www.sparheld.de/?ref=nuxt', class: 'h-10' },
-          { name: 'Icons8', img: 'icons8.png', url: 'https://icons8.com/?ref=nuxt', class: 'h-10' }
+          { name: 'Icons8', img: 'icons8.png', url: 'https://icons8.com/?ref=nuxt', class: 'h-10' },
+          { name: 'Clay', img: 'clay.png', url: 'https://clay.global/?ref=nuxt', class: 'h-10' },
+          { name: 'UX Planet', img: 'ux-planet.png', url: 'https://uxplanet.org/top-ui-ux-design-agencies-user-experience-firms-8c54697e290/?ref=nuxt', class: 'h-10' }
         ]
       },
       onetime: {

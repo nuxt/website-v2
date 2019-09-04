@@ -29,7 +29,7 @@
           </nui-select>
         </div>
         <div class="flex-1 text-center hidden sm:block">
-          <a class="block" :href="localePath('index')" @click.prevent="$router.push(localePath('index'))" @click.right.stop.prevent="$router.push(localePath('resources-design'))">
+          <a class="block" :href="localePath('index')" @click.prevent="$router.push(localePath('index'))" @click.right.stop.prevent="$router.push(localePath('design'))">
             <h1 class="m-0 h-0 w-0 overflow-hidden">NUXTJS</h1>
             <nui-logo class="h-6 lg:h-auto" />
           </a>

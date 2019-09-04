@@ -11,7 +11,7 @@
         <contribute :doc-link="docLink" />
       </nui-article>
     </div>
-    <nui-affix class="opacity-transition" :class="{ 'opacity-50': $store.state.focusMode }">
+    <nui-affix class="opacity-transition" :class="{ 'opacity-25': $store.state.focusMode }">
       <nui-ads :key="$route.params.slug" class="mx-auto" />
     </nui-affix>
   </div>

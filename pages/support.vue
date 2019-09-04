@@ -24,7 +24,7 @@
     </div>
     <section class="text-center italic flex justify-center items-center flex-wrap mb-16">
       <span class="flex">We partnered with</span>
-      <a href="https://otechie.com" rel="noopener" target="_blank" class="flex"><img src="/img/partners/otechie.svg" alt="Otechie Logo" class="inline-block h-4 px-2" /></a>
+      <a href="https://otechie.com" rel="noopener" target="_blank" class="flex"><img src="/img/partners/otechie.svg" alt="Otechie Logo" class="inline-block h-4 px-2"></a>
       <span class="flex">to offer these services so we can focus on helping you as fast as possible.</span>
     </section>
     <h2 class="text-3xl xl:text-4xl text-nuxt-gray font-medium leading-normal mb-6">
@@ -32,7 +32,7 @@
     </h2>
     <h3 class="xl:text-lg text-gray-600 font-medium leading-relaxed mb-4 flex flex-wrap items-center">
       <span class="flex">Available as part of the</span>
-      <a href="https://tidelift.com" rel="noopener" target="_blank" class="flex"><img src="/img/partners/tidelift.svg" alt="Tidelift Logo" class="inline-block px-2 h-5"/></a>
+      <a href="https://tidelift.com" rel="noopener" target="_blank" class="flex"><img src="/img/partners/tidelift.svg" alt="Tidelift Logo" class="inline-block px-2 h-5"></a>
       <span class="flex">subscription.</span>
     </h3>
     <p class="mb-4">

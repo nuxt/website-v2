@@ -13,6 +13,7 @@ dist
 .idea
 newrelic_agent.log
 .DS_STORE
+.eslintrc
 
 # docs
 /docs

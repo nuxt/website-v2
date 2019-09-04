@@ -11,6 +11,7 @@
   "rules": {
     "vue/no-v-html": 0,
     "vue/max-attributes-per-line": 0,
-    "vue/html-closing-bracket-spacing": 0
+    "vue/html-closing-bracket-spacing": 0,
+    "vue/html-self-closing": 0
   }
 }

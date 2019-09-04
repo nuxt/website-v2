@@ -21,7 +21,7 @@
               <span class="float-right text-nuxt-lightgreen">{{ theme.price }}</span>
             </h4>
             <p class="pb-2 text-gray-600">{{ theme.description }}</p>
-            <p class="text-sm italic text-nuxt-lightgreen" v-if="theme.discount" v-html="theme.discount" />
+            <p v-if="theme.discount" class="text-sm italic text-nuxt-lightgreen" v-html="theme.discount" />
           </div>
         </a>
       </div>

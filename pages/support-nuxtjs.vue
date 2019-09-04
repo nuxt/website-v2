@@ -91,8 +91,12 @@
           target="_blank"
           rel="noopener"
         >
+<<<<<<< HEAD
           <img :src="'/img/sponsors/' + sponsor.img" :alt="sponsor.name" class="inline-block" :class="sponsor.class">
 >>>>>>> 253c94b7 (support page)
+=======
+          <img :src="'/img/sponsors/' + sponsor.img" :alt="sponsor.name" :title="sponsor.name" class="inline-block" :class="sponsor.class">
+>>>>>>> 1806fa3d (sponsors: add two new silver sponsors)
         </a>
       </div>
       <div class="text-center">
@@ -140,8 +144,14 @@ export default {
         ],
         silver: [
           { name: 'Sparheld', img: 'de-black.png', url: 'https://www.sparheld.de/?ref=nuxt', class: 'h-10' },
+<<<<<<< HEAD
           { name: 'Icons8', img: 'icons8.png', url: 'https://icons8.com/?ref=nuxt', class: 'h-10' }
 >>>>>>> 253c94b7 (support page)
+=======
+          { name: 'Icons8', img: 'icons8.png', url: 'https://icons8.com/?ref=nuxt', class: 'h-10' },
+          { name: 'Clay', img: 'clay.png', url: 'https://clay.global/?ref=nuxt', class: 'h-10' },
+          { name: 'UX Planet', img: 'ux-planet.png', url: 'https://uxplanet.org/top-ui-ux-design-agencies-user-experience-firms-8c54697e290/?ref=nuxt', class: 'h-10' }
+>>>>>>> 1806fa3d (sponsors: add two new silver sponsors)
         ]
       },
       onetime: {

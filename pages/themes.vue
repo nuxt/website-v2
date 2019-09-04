@@ -21,7 +21,7 @@
               <span class="float-right text-nuxt-lightgreen">{{ theme.price }}</span>
             </h4>
             <p class="pb-2 text-gray-600">{{ theme.description }}</p>
-            <p class="text-sm italic text-nuxt-lightgreen" v-if="theme.discount">{{ theme.discount }}</p>
+            <p class="text-sm italic text-nuxt-lightgreen" v-if="theme.discount" v-html="theme.discount" />
           </div>
         </a>
       </div>
@@ -53,7 +53,7 @@ export default {
           price: '99$',
           link: 'https://www.creative-tim.com/product/nuxt-argon-dashboard-pro?partner=120213',
           img: 'nuxt-argon-dashboard-pro',
-          discount: 'Get 30% off with the discount code: 30nuxt-exclusive'
+          discount: 'Get 30% off with the discount code: <span class="whitespace-no-wrap">30nuxt-exclusive</span>'
         },
         {
           title: 'Nuxt Now UI Kit',

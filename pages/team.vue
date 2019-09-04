@@ -14,9 +14,9 @@
     <h2 class="text-2xl xl:text-3xl text-nuxt-gray font-medium leading-normal mb-6">
       Active Core Team Members
     </h2>
-    <div class="flex flex-wrap -mx-2">
-      <div v-for="profile of core" :key="profile.name" class="w-full md:w-1/2 xl:w-1/3 p-2">
-        <div class="md:flex h-full bg-white rounded-lg p-6 shadow-md">
+    <div class="flex flex-wrap -mx-2 md:-mx-4">
+      <div v-for="profile of core" :key="profile.name" class="w-full md:w-1/2 xl:w-1/3 p-2 md:p-4">
+        <div class="md:flex h-full bg-white rounded-lg p-6 shadow hover:shadow-xl">
           <img class="h-16 w-16 md:h-24 md:w-24 rounded-full mx-auto md:mx-0 md:mr-6" :src="`https://github.com/${profile.github}.png`">
           <div class="text-center md:text-left">
             <h2 class="text-lg font-semibold">

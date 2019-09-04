@@ -1,7 +1,13 @@
 <template>
-  <div class="contribute">
-    <carbon-ads-text />
-    <p>{{ $store.state.lang.guide.contribute }} <a :href="docLink" target="_blank" rel="noopener">{{ $store.state.lang.guide.edit_on_github }}</a></p>
+  <div class="pt-4">
+    <div class="clearfix">
+      <span v-if="prevLink">← <nuxt-link :to="baseLink + prevLink.to">{{ prevLink.name }}</nuxt-link></span>
+      <span v-if="nextLink" class="inline-block float-right"><nuxt-link :to="baseLink + nextLink.to">{{ nextLink.name }}</nuxt-link> →</span>
+    </div>
+    <div class="pt-6 mt-6 border-t border-gray-300">
+      <carbon-ads-text />
+      <p class="text-gray-700 p-0">{{ $store.state.lang.guide.contribute }} <a :href="docLink" target="_blank" rel="noopener">{{ $store.state.lang.guide.edit_on_github }}</a></p>
+    </div>
   </div>
 </template>
 
@@ -17,20 +23,24 @@ export default {
       type: String,
       required: true
     }
+  },
+  computed: {
+    baseLink () {
+      return (this.$i18n.locale !== 'en' ? `/${this.$i18n.locale}/` : '/') + this.$route.params.section
+    },
+    list () {
+      return this.$store.state.menu[this.$route.params.section].reduce((links, section) => links.concat(section.links), [])
+    },
+    prevLink () {
+      const index = this.list.findIndex(link => (link.to || '/') === `/${this.$route.params.slug || ''}`)
+
+      return this.list[index - 1] || null
+    },
+    nextLink () {
+      const index = this.list.findIndex(link => (link.to || '/') === `/${this.$route.params.slug || ''}`)
+
+      return this.list[index + 1] || null
+    }
   }
 }
 </script>
-
-<style scoped>
-.contribute {
-  margin-top: 30px;
-  border-top: 1px solid #e5e5e5;
-}
-.contribute p {
-  color: #7f8c8d;
-  padding-top: 15px;
-  padding-bottom: 0;
-  margin: 0;
-  font-size: 14px;
-}
-</style>

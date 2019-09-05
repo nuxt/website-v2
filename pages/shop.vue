@@ -12,8 +12,10 @@
       <i-shop class="hidden lg:inline-block my-8" />
     </div>
     <section class="flex bg-gray-100 p-8 rounded my-12">
+      1
     </section>
     <section class="text-center">
+      2
     </section>
   </nui-container>
 </template>

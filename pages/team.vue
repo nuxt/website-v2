@@ -1,6 +1,6 @@
 <template>
   <nui-container class="py-16">
-    <div class="flex justify-between">
+    <div class="flex justify-between mb-16">
       <div class="lg:w-1/2 xl:w-8/12 text-center lg:text-left p-4 sm:p-0">
         <h1 class="text-3xl xl:text-4xl text-nuxt-gray font-medium leading-normal mb-6">
           The NUXT<span class="text-nuxt-lightgreen">JS</span> Team<br>
@@ -9,23 +9,23 @@
           The development of NuxtJS and its ecosystem is guided by an international team. We have a very active and engaged team that is constantly striving to push Nuxt forward.
         </h3>
       </div>
-      <i-team class="hidden lg:inline-block my-8" />
+      <i-team class="hidden lg:inline-block" />
     </div>
     <h2 class="text-2xl xl:text-3xl text-nuxt-gray font-medium leading-normal mb-6">
       Active Core Team Members
     </h2>
     <div class="flex flex-wrap -mx-2 md:-mx-4">
-      <div v-for="profile of core" :key="profile.name" class="w-full md:w-1/2 xl:w-1/3 p-2 md:p-4">
-        <div class="md:flex h-full bg-white rounded-lg p-6 shadow hover:shadow-xl">
-          <img class="h-16 w-16 md:h-24 md:w-24 rounded-full mx-auto md:mx-0 md:mr-6" :src="`https://github.com/${profile.github}.png`">
-          <div class="text-center md:text-left">
-            <h2 class="text-lg font-semibold">
+      <div v-for="profile of core" :key="profile.name" class="w-full md:w-1/2 lg:w-1/3 p-4">
+        <div class="bg-gray-100 hover:bg-gray-200 rounded p-6">
+          <img class="h-32 w-32 rounded-full mx-auto" :src="`https://github.com/${profile.github}.png`">
+          <div class="text-center pt-4">
+            <h2 class="text-xl">
               {{ profile.name }} <span v-if="profile.alias" class="font-normal text-sm">({{ profile.alias }})</span>
             </h2>
-            <div class="text-nuxt-gray">
-              {{ profile.work.role }} <span v-if="profile.work.org">@ <a :href="profile.work.orgUrl" target="_blank" rel="noopener" class="text-nuxt-green">{{ profile.work.org }}</a></span>
+            <div class="text-gray-600 pb-1">
+              {{ profile.work.role }} <span v-if="profile.work.org" class="text-nuxt-lightgreen">@<a :href="profile.work.orgUrl" target="_blank" rel="noopener">{{ profile.work.org }}</a></span>
             </div>
-            <div class="text-gray-600">
+            <div class="text-sm pb-1">
               {{ profile.city }}
             </div>
             <div>

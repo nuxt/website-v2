@@ -143,6 +143,7 @@ export default {
 =======
         ],
         silver: [
+<<<<<<< HEAD:pages/support-nuxtjs.vue
           { name: 'Sparheld', img: 'de-black.png', url: 'https://www.sparheld.de/?ref=nuxt', class: 'h-10' },
 <<<<<<< HEAD
           { name: 'Icons8', img: 'icons8.png', url: 'https://icons8.com/?ref=nuxt', class: 'h-10' }
@@ -152,6 +153,13 @@ export default {
           { name: 'Clay', img: 'clay.png', url: 'https://clay.global/?ref=nuxt', class: 'h-10' },
           { name: 'UX Planet', img: 'ux-planet.png', url: 'https://uxplanet.org/top-ui-ux-design-agencies-user-experience-firms-8c54697e290/?ref=nuxt', class: 'h-10' }
 >>>>>>> 1806fa3d (sponsors: add two new silver sponsors)
+=======
+          { name: 'Sparheld', img: 'de-black.png', url: 'https://www.sparheld.de/?ref=nuxt', class: 'h-8' },
+          { name: 'Icons8', img: 'icons8.png', url: 'https://icons8.com/?ref=nuxt', class: 'h-8' },
+          { name: 'Clay', img: 'clay.png', url: 'https://clay.global/?ref=nuxt', class: 'h-8' },
+          { name: 'UX Planet', img: 'ux-planet.png', url: 'https://uxplanet.org/top-ui-ux-design-agencies-user-experience-firms-8c54697e290/?ref=nuxt', class: 'h-8' },
+          { name: 'FireStickHow', img: 'fire-stick-how.png', url: 'hhttps://www.firestickhow.com/?ref=nuxt', class: 'h-8' }
+>>>>>>> 8f5bfbf4 (sponsors: add fire-stick-how):pages/sponsor-nuxtjs.vue
         ]
       },
       onetime: {

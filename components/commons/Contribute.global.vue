@@ -5,7 +5,7 @@
       <span v-if="nextLink" class="inline-block float-right"><nuxt-link :to="baseLink + nextLink.to">{{ nextLink.name }}</nuxt-link> →</span>
     </div>
     <div class="pt-6 mt-6 border-t border-gray-300">
-      <carbon-ads-text />
+      <carbon-ads-text :key="$route.path" />
       <p class="text-gray-700 p-0">{{ $store.state.lang.guide.contribute }} <a :href="docLink" target="_blank" rel="noopener">{{ $store.state.lang.guide.edit_on_github }}</a></p>
     </div>
   </div>

@@ -59,15 +59,15 @@ export default {
       { hid: 'description', name: 'description', content: '' }
     ]
   },
-  async asyncData ({ $http }) {
-    const { services } = await $http.$get('api/otechie/consultancy/nuxt')
-
-    return { services }
-  },
   filters: {
     currency (value) {
       return (value / 100).toFixed(2).replace(/\d(?=(\d{3})+\.)/g, '$&,').replace(/\.00$/, '')
     }
+  },
+  async asyncData ({ $http }) {
+    const { services } = await $http.$get('api/otechie/consultancy/nuxt')
+
+    return { services }
   }
 }
 </script>

@@ -117,10 +117,11 @@ export default {
           { name: 'Hapi', img: 'hapi-logo.svg', url: 'https://hapijs.com/?ref=nuxt', class: 'h-12' }
         ],
         silver: [
-          { name: 'Sparheld', img: 'de-black.png', url: 'https://www.sparheld.de/?ref=nuxt', class: 'h-10' },
-          { name: 'Icons8', img: 'icons8.png', url: 'https://icons8.com/?ref=nuxt', class: 'h-10' },
-          { name: 'Clay', img: 'clay.png', url: 'https://clay.global/?ref=nuxt', class: 'h-10' },
-          { name: 'UX Planet', img: 'ux-planet.png', url: 'https://uxplanet.org/top-ui-ux-design-agencies-user-experience-firms-8c54697e290/?ref=nuxt', class: 'h-10' }
+          { name: 'Sparheld', img: 'de-black.png', url: 'https://www.sparheld.de/?ref=nuxt', class: 'h-8' },
+          { name: 'Icons8', img: 'icons8.png', url: 'https://icons8.com/?ref=nuxt', class: 'h-8' },
+          { name: 'Clay', img: 'clay.png', url: 'https://clay.global/?ref=nuxt', class: 'h-8' },
+          { name: 'UX Planet', img: 'ux-planet.png', url: 'https://uxplanet.org/top-ui-ux-design-agencies-user-experience-firms-8c54697e290/?ref=nuxt', class: 'h-8' },
+          { name: 'FireStickHow', img: 'fire-stick-how.png', url: 'hhttps://www.firestickhow.com/?ref=nuxt', class: 'h-8' }
         ]
       },
       onetime: {

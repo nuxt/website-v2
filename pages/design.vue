@@ -1,6 +1,6 @@
 <template>
   <nui-container class="py-16">
-    <div class="flex justify-between">
+    <div class="flex justify-between mb-16">
       <div class="lg:w-1/2 xl:w-8/12 text-center lg:text-left p-4 sm:p-0">
         <h1 class="text-3xl xl:text-4xl text-nuxt-gray font-medium leading-normal mb-6">
           Nuxt<span class="text-nuxt-lightgreen">JS</span> Design
@@ -10,7 +10,7 @@
           You can freely use our logos as long as you mention NuxtJS and link to nuxtjs.org.
         </h3>
       </div>
-      <i-design class="hidden lg:inline-block my-8" />
+      <i-design class="hidden lg:inline-block" />
     </div>
     <div class="logos">
       <figure class="transparent">

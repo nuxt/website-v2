@@ -1,6 +1,6 @@
 <template>
   <nui-container class="py-16">
-    <div class="flex justify-between">
+    <div class="flex justify-between mb-16">
       <div class="lg:w-1/2 xl:w-8/12 text-center lg:text-left p-4 sm:p-0">
         <h1 class="text-3xl xl:text-4xl text-nuxt-gray font-medium leading-normal mb-6">
           NUXT<span class="text-nuxt-lightgreen">JS</span> Consulting <span class="text-nuxt-green">&</span> Support<br>
@@ -13,12 +13,16 @@
       <i-help class="hidden lg:inline-block" />
     </div>
     <div class="flex flex-wrap -mx-2 md:-mx-4 mb-4">
-      <section v-for="service of services" :key="service.slug" class="w-full md:w-1/2 p-2 md:p-4">
-        <div class="shadow hover:shadow-lg p-8 rounded h-full relative">
+      <section v-for="service of services" :key="service.slug" class="w-full lg:w-1/2 p-2 md:p-4">
+        <div class="bg-gray-100 hover:bg-gray-200 p-8 rounded h-full relative">
+          <component :is="service.slug" class="float-right mb-4"/>
           <h2 class="text-2xl font-medium mb-2">{{ service.name }}</h2>
-          <h3 class="text-nuxt-lightgreen font-medium text-2xl mb-2">${{ service.hourlyRate / 100 }} <span class="text-sm">/hr</span> <span class="inline-block pl-2 text-base text-gray-600">${{ service.minimumFee | currency }} minimum</span></h3>
-          <p class="mb-4">{{ service.description }}</p>
-          <a :href="`https://otechie.com/nuxt/${service.slug}`" class="btn" rel="noopener" target="_blank">Start chat</a>
+          <h3 class="text-nuxt-lightgreen font-medium text-2xl mb-4">${{ service.hourlyRate / 100 }} <span class="text-sm">/hr</span> <span class="inline-block pl-2 text-base text-gray-600">${{ service.minimumFee | currency }} minimum</span></h3>
+          <p class="mb-6">{{ service.description }}</p>
+          <nui-button :href="`https://otechie.com/nuxt/${service.slug}`" rel="noopener" target="_blank" class="sm:mr-4 py-3 px-6 text-base">
+            <nui-svg-play slot="icon" class="h-4 -mt-1 mr-1" />
+            Start chat
+          </nui-button>
         </div>
       </section>
     </div>
@@ -47,11 +51,21 @@
 </template>
 
 <script>
+import nuiSvgPlay from '@/components/svg/Play.vue'
 import iHelp from '@/components/svg/streamline/help.vue'
+import appDeployment from '@/components/svg/streamline/app-deployment.vue'
+import customDevelopment from '@/components/svg/streamline/custom-development.vue'
+import projectAudit from '@/components/svg/streamline/project-audit.vue'
+import technicalSupport from '@/components/svg/streamline/technical-support.vue'
 
 export default {
   components: {
-    iHelp
+    nuiSvgPlay,
+    iHelp,
+    appDeployment,
+    customDevelopment,
+    projectAudit,
+    technicalSupport
   },
   head: {
     title: 'The NuxtJS Shop',

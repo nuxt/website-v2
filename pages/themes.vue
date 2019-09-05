@@ -14,7 +14,7 @@
     <section class="flex flex-wrap items-stretch -mx-4">
       <div v-for="theme in themes" :key="theme.title" class="w-full lg:w-1/2 p-4">
         <a :href="theme.link" target="_blank" rel="noopener" class="block sm:flex w-full bg-gray-100 hover:bg-gray-200 rounded">
-          <img :src="'/themes/' + theme.img + '.jpg'" :srcset="'/themes/' + theme.img + '-2x.jpg 2x'" :alt="theme.title" class="w-full sm:w-auto">
+          <img :src="'/themes/' + theme.img + '.jpg'" :srcset="'/themes/' + theme.img + '-2x.jpg 2x'" :alt="theme.title" class="w-full sm:w-auto rounded">
           <div class="w-full p-6">
             <h4 class="block w-full font-medium text-xl pb-2">
               {{ theme.title }}

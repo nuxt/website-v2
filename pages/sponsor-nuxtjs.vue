@@ -72,7 +72,7 @@
       </div>
       <div class="text-center">
         <nui-button href="https://opencollective.com/nuxtjs" class="mr-4 py-3 px-6 text-base">
-          <nui-svg-play slot="icon" class="h-4 -mt-1 mr-1" />
+          <nui-svg-play slot="icon" class="h-5 -mt-1 mr-1" />
           Become a sponsor
         </nui-button>
       </div>
@@ -81,7 +81,7 @@
 </template>
 
 <script>
-import nuiSvgPlay from '@/components/svg/Play.vue'
+import nuiSvgPlay from '@/components/svg/OpenCollective.vue'
 import nuiSvgBtc from '@/components/svg/wallet/btc.vue'
 import nuiSvgBch from '@/components/svg/wallet/bch.vue'
 import nuiSvgEth from '@/components/svg/wallet/eth.vue'

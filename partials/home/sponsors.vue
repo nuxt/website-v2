@@ -30,7 +30,7 @@
       </div>
       <div class="text-center">
         <nui-button :to="localePath('sponsor-nuxtjs')" class="mr-4 py-3 px-6 text-base">
-          <nui-svg-play slot="icon" class="h-4 -mt-1 mr-1" />
+          <nui-svg-go slot="icon" class="h-5 -mt-1 mr-1" />
           Become a sponsor
         </nui-button>
       </div>
@@ -39,12 +39,12 @@
 </template>
 
 <script>
-import nuiSvgPlay from '@/components/svg/Play.vue'
+import nuiSvgGo from '@/components/svg/OpenCollective.vue'
 import iSponsoring from '@/components/svg/streamline/sponsoring.vue'
 
 export default {
   components: {
-    nuiSvgPlay,
+    nuiSvgGo,
     iSponsoring
   },
   data () {

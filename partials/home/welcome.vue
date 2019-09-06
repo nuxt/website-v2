@@ -10,7 +10,7 @@
         </h3>
         <div class="flex flex-col sm:block py-4">
           <nui-button :to="localePath({ name: 'section-slug', params: { section: 'guide', slug: 'installation'}})" class="sm:mr-4 py-3 px-6 text-base mb-4">
-            <nui-svg-play slot="icon" class="h-4 -mt-1 mr-1" />
+            <nui-svg-meteor slot="icon" class="h-5 -mb-1 mr-1" />
             get started
           </nui-button>
           <nui-button href="https://github.com/nuxt/nuxt.js" class="sm:mr-4 py-3 px-6 text-base button-gray">
@@ -28,12 +28,12 @@
 </template>
 
 <script>
-import nuiSvgPlay from '@/components/svg/Play.vue'
+import nuiSvgMeteor from '@/components/svg/Meteor.vue'
 import nuiSvgGh from '@/components/svg/Github.vue'
 
 export default {
   components: {
-    nuiSvgPlay,
+    nuiSvgMeteor,
     nuiSvgGh
   },
   data () {

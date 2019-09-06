@@ -20,7 +20,7 @@
           <h3 class="text-nuxt-lightgreen font-medium text-2xl mb-4">${{ service.hourlyRate / 100 }} <span class="text-sm">/hr</span> <span class="inline-block pl-2 text-base text-gray-600">${{ service.minimumFee | currency }} minimum</span></h3>
           <p class="mb-6">{{ service.description }}</p>
           <nui-button :href="`https://otechie.com/nuxt/${service.slug}`" rel="noopener" target="_blank" class="sm:mr-4 py-3 px-6 text-base">
-            <nui-svg-play slot="icon" class="h-4 -mt-1 mr-1" />
+            <nui-svg-comments slot="icon" class="h-5 -mb-1 mr-1" />
             Start chat
           </nui-button>
         </div>
@@ -34,24 +34,30 @@
     <h2 class="text-3xl xl:text-4xl text-nuxt-gray font-medium leading-normal mb-6">
       Nuxt<span class="text-nuxt-lightgreen">JS</span> for enterprise
     </h2>
-    <h3 class="xl:text-lg text-gray-600 font-medium leading-relaxed mb-4 flex flex-wrap items-center">
+    <h3 class="xl:text-lg text-gray-600 font-medium leading-relaxed mb-6 flex flex-wrap items-center">
       <span class="flex">Available as part of the</span>
       <a href="https://tidelift.com" rel="noopener" target="_blank" class="flex"><img src="/img/partners/tidelift.svg" alt="Tidelift Logo" class="inline-block px-2 h-5"></a>
       <span class="flex">subscription.</span>
     </h3>
-    <p class="mb-4">
+    <p class="mb-8">
       NuxtJS and the maintainers of thousands of other packages are working with Tidelift to deliver one enterprise subscription that covers all of the open source you use.<br>
       If you want the flexibility of open source and the confidence of commerical-grade software, this is for you.
     </p>
-    <div class="flex">
-      <a href="https://tidelift.com/subscription/pkg/npm-nuxt?utm_source=nuxt&utm_medium=referral&utm_campaign=enterprise" class="btn btn-gray mr-2" rel="noopener" target="_blank">Learn more</a>
-      <a href="https://tidelift.com/subscription/request-a-demo?utm_source=nuxt&utm_medium=referral&utm_campaign=enterprise" class="btn" rel="noopener" target="_blank">Request a demo</a>
-    </div>
+    <nui-button href="https://tidelift.com/subscription/pkg/npm-nuxt?utm_source=nuxt&utm_medium=referral&utm_campaign=enterprise" rel="noopener" target="_blank" class="sm:mr-4 py-3 px-6 text-base button-gray">
+      <nui-svg-play slot="icon" class="h-5 -mb-1 mr-1" />
+      Learn more
+    </nui-button>
+    <nui-button href="https://tidelift.com/subscription/request-a-demo?utm_source=nuxt&utm_medium=referral&utm_campaign=enterprise" rel="noopener" target="_blank" class="sm:mr-4 py-3 px-6 text-base">
+      <nui-svg-ticket slot="icon" class="h-5 -mb-1 mr-1" />
+      Request a demo
+    </nui-button>
   </nui-container>
 </template>
 
 <script>
-import nuiSvgPlay from '@/components/svg/Play.vue'
+import nuiSvgPlay from '@/components/svg/AngleDoubleRight.vue'
+import nuiSvgTicket from '@/components/svg/InboxIn.vue'
+import nuiSvgComments from '@/components/svg/Comments.vue'
 import iHelp from '@/components/svg/streamline/help.vue'
 import appDeployment from '@/components/svg/streamline/app-deployment.vue'
 import customDevelopment from '@/components/svg/streamline/custom-development.vue'
@@ -61,6 +67,8 @@ import technicalSupport from '@/components/svg/streamline/technical-support.vue'
 export default {
   components: {
     nuiSvgPlay,
+    nuiSvgComments,
+    nuiSvgTicket,
     iHelp,
     appDeployment,
     customDevelopment,

@@ -14,19 +14,17 @@
     <section class="flex flex-wrap items-stretch -mx-4">
       <div v-for="theme in themes" :key="theme.title" class="w-full lg:w-1/2 p-4">
         <a :href="theme.link" target="_blank" rel="noopener" class="block sm:flex w-full bg-gray-100 hover:bg-gray-200 rounded">
-          <img :src="'/themes/' + theme.img + '.jpg'" :srcset="'/themes/' + theme.img + '-2x.jpg 2x'" :alt="theme.title" class="w-full sm:w-auto rounded">
+          <img :src="'/themes/' + theme.img + '.jpg'" :srcset="'/themes/' + theme.img + '-2x.jpg 2x'" :alt="theme.title" class="w-full sm:w-auto">
           <div class="w-full p-6">
             <h4 class="block w-full font-medium text-xl pb-2">
               {{ theme.title }}
               <span class="float-right text-nuxt-lightgreen">{{ theme.price }}</span>
             </h4>
             <p class="pb-2 text-gray-600">{{ theme.description }}</p>
-            <p v-if="theme.discount" class="text-sm italic text-nuxt-lightgreen" v-html="theme.discount" />
+            <p class="text-sm italic text-nuxt-lightgreen" v-if="theme.discount" v-html="theme.discount" />
           </div>
         </a>
       </div>
-    </section>
-    <section class="text-center">
     </section>
   </nui-container>
 </template>

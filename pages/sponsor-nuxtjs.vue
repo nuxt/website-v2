@@ -13,15 +13,15 @@
       </div>
       <i-sponsoring class="hidden lg:inline-block my-8" />
     </div>
-    <section class="flex bg-gray-100 p-8 rounded my-12">
-      <div class="w-2/3">
+    <section class="flex flex-wrap bg-gray-100 p-8 rounded my-12">
+      <div class="w-full lg:w-2/3 text-center lg:text-left">
         <h2 class="text-2xl uppercase pt-4 pb-6">
           One-time donations
         </h2>
         <p class="mb-8 text-gray-600">
           We accept donations through these channels
         </p>
-        <div class="flex items-end mb-8">
+        <div class="flex justify-center lg:justify-start items-end mb-8">
           <a href="#btc" class="flex items-center my-2 bg-gray-200 hover:bg-gray-300 rounded-full p-2 pr-6 font-bold mr-2 -ml-2" :class="{ 'bg-gray-300': onetime.current === 'btc' }" @click.prevent="onetime.current = 'btc'">
             <nui-svg-btc class="mr-3" /> BTC
           </a>
@@ -36,7 +36,7 @@
           </a>
         </div>
       </div>
-      <div v-if="currentOnetime" class="text-center w-1/3">
+      <div v-if="currentOnetime" class="text-center w-full lg:w-1/3">
         <p class="text-xl">
           {{ currentOnetime.title }}
         </p>

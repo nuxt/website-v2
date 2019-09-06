@@ -22,16 +22,16 @@
             <h2 class="text-xl">
               {{ profile.name }} <span v-if="profile.alias" class="font-normal text-sm">({{ profile.alias }})</span>
             </h2>
-            <div class="text-gray-600 pb-1">
+            <div class="text-gray-600 py-1">
               {{ profile.work.role }} <span v-if="profile.work.org" class="text-nuxt-lightgreen">@<a :href="profile.work.orgUrl" target="_blank" rel="noopener">{{ profile.work.org }}</a></span>
             </div>
-            <div class="text-sm pb-1">
+            <div class="text-sm py-1">
               {{ profile.city }}
             </div>
-            <div>
-              <a :href="`https://github.com/${profile.github}`" rel="noopener" target="_blank"><github-icon class="h-5 w-5 inline-block text-gray-700 hover:text-gray-900 cursor-pointer" /></a>
-              <a v-if="profile.twitter" :href="`https://twitter.com/${profile.twitter}`" rel="noopener" target="_blank"><twitter-icon class="h-5 w-5 ml-1 inline-block text-blue-600 hover:text-blue-400" /></a>
-              <a v-if="profile.website" :href="profile.website" rel="noopener" target="_blank"><website-icon class="h-5 w-5 inline-block text-nuxt-green hover:text-nuxt-lightgreen" /></a>
+            <div class="py-2">
+              <a :href="`https://github.com/${profile.github}`" rel="noopener" target="_blank" class="mx-1"><github-icon class="h-5 inline-block text-gray-700 hover:text-gray-900 cursor-pointer" /></a>
+              <a v-if="profile.twitter" :href="`https://twitter.com/${profile.twitter}`" rel="noopener" target="_blank" class="mx-1"><twitter-icon class="h-5 ml-1 inline-block text-blue-600 hover:text-blue-400" /></a>
+              <a v-if="profile.website" :href="profile.website" rel="noopener" target="_blank" class="mx-1"><website-icon class="h-5 inline-block text-nuxt-green hover:text-nuxt-lightgreen" /></a>
             </div>
           </div>
         </div>
@@ -41,9 +41,9 @@
 </template>
 
 <script>
-import TwitterIcon from '~/assets/images/twitter.svg'
-import GithubIcon from '~/assets/images/github.svg'
-import WebsiteIcon from '~/assets/images/link.svg'
+import TwitterIcon from '@/components/svg/Twitter'
+import GithubIcon from '@/components/svg/Github'
+import WebsiteIcon from '@/components/svg/Link'
 import iTeam from '@/components/svg/streamline/team.vue'
 
 export default {

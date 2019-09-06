@@ -21,7 +21,7 @@
         <p class="mb-8 text-gray-600">
           We accept donations through these channels
         </p>
-        <div class="flex justify-center lg:justify-start items-end mb-8">
+        <div class="flex flex-wrap justify-center lg:justify-start items-end mb-8">
           <a href="#btc" class="flex items-center my-2 bg-gray-200 hover:bg-gray-300 rounded-full p-2 pr-6 font-bold mr-2 -ml-2" :class="{ 'bg-gray-300': onetime.current === 'btc' }" @click.prevent="onetime.current = 'btc'">
             <nui-svg-btc class="mr-3" /> BTC
           </a>

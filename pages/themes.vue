@@ -13,17 +13,21 @@
     </div>
     <section class="flex flex-wrap items-stretch -mx-4">
       <div v-for="theme in themes" :key="theme.title" class="w-full lg:w-1/2 p-4">
-        <a :href="theme.link" target="_blank" rel="noopener" class="block sm:flex w-full bg-gray-100 hover:bg-gray-200 rounded">
-          <img :src="'/themes/' + theme.img + '.jpg'" :srcset="'/themes/' + theme.img + '-2x.jpg 2x'" :alt="theme.title" class="w-full sm:w-auto">
+        <div class="block sm:flex w-full bg-gray-100 hover:bg-gray-200 rounded">
+          <img :src="'/themes/' + theme.img + '.jpg'" :srcset="'/themes/' + theme.img + '-2x.jpg 2x'" :alt="theme.title" class="w-full sm:w-auto rounded">
           <div class="w-full p-6">
             <h4 class="block w-full font-medium text-xl pb-2">
               {{ theme.title }}
-              <span class="float-right text-nuxt-lightgreen">{{ theme.price }}</span>
+              <!-- <span class="float-right text-nuxt-lightgreen">{{ theme.price }}</span> -->
             </h4>
-            <p class="pb-2 text-gray-600">{{ theme.description }}</p>
+            <p class="mb-3 text-gray-600">{{ theme.description }}</p>
             <p class="text-sm italic text-nuxt-lightgreen" v-if="theme.discount" v-html="theme.discount" />
+            <nui-button :href="theme.link" rel="noopener" target="_blank" class="sm:mr-4 p-3 mt-3 text-sm text-left">
+              <!-- <nui-svg-shopping slot="icon" class="h-4 -mb-1 mr-1" /> -->
+              GET IT for {{ theme.price }}
+            </nui-button>
           </div>
-        </a>
+        </div>
       </div>
     </section>
   </nui-container>
@@ -31,10 +35,12 @@
 
 <script>
 import iTheme from '@/components/svg/streamline/theme.vue'
+// import nuiSvgShopping from '@/components/svg/Shopping'
 
 export default {
   components: {
     iTheme
+    // nuiSvgShopping
   },
   head: {
     title: 'NuxtJS Themes',
@@ -51,7 +57,7 @@ export default {
           price: '99$',
           link: 'https://www.creative-tim.com/product/nuxt-argon-dashboard-pro?partner=120213',
           img: 'nuxt-argon-dashboard-pro',
-          discount: 'Get 30% off with the discount code: <b class="whitespace-no-wrap">30nuxt-exclusive</b>'
+          discount: '-30% discount code: <b class="whitespace-no-wrap">30nuxt-exclusive</b>'
         },
         {
           title: 'Nuxt Now UI Kit',

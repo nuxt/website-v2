@@ -20,8 +20,17 @@
               {{ theme.title }}
               <span class="float-right text-nuxt-lightgreen">{{ theme.price }}</span>
             </h4>
+<<<<<<< HEAD
             <p class="pb-2 text-gray-600">{{ theme.description }}</p>
             <p class="text-sm italic text-nuxt-lightgreen" v-if="theme.discount" v-html="theme.discount" />
+=======
+            <p class="mb-3 text-gray-600">{{ theme.description }}</p>
+            <p v-if="theme.discount" class="text-sm italic text-nuxt-lightgreen" v-html="theme.discount" />
+            <nui-button :href="theme.link" rel="noopener" target="_blank" class="sm:mr-4 p-3 mt-3 text-sm text-left">
+              <!-- <nui-svg-shopping slot="icon" class="h-4 -mb-1 mr-1" /> -->
+              GET IT for {{ theme.price }}
+            </nui-button>
+>>>>>>> fa45fc8a (shop wireframe)
           </div>
         </a>
       </div>

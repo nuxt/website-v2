@@ -1,6 +1,6 @@
 <template>
   <nui-container class="py-16">
-    <div class="flex justify-between mb-16">
+    <div ref="shop" class="flex justify-between mb-16">
       <div class="lg:w-1/2 xl:w-8/12 text-center lg:text-left p-4 sm:p-0">
         <h1 class="text-3xl xl:text-4xl text-nuxt-gray font-medium leading-normal mb-6">
           The NUXT<span class="text-nuxt-lightgreen">JS</span> Shop<br>
@@ -12,18 +12,20 @@
       <i-shop class="hidden lg:inline-block" />
     </div>
     <section class="flex flex-wrap items-stretch -mx-4">
-      <div v-for="product in products" :key="product.name" class="w-full lg:w-1/2 p-4">
+      <div v-for="(product, i) in products" :key="i" class="w-full lg:w-1/2 p-4">
         <div class="block sm:flex w-full bg-gray-100 hover:bg-gray-200 p-6 rounded">
           <img :src="'/shop/' + product.img + '.png'" :srcset="'/shop/' + product.img + '-2x.png 2x'" :alt="product.name" class="w-full sm:w-auto rounded border border-gray-300">
           <div class="w-full px-6 py-2">
             <h4 class="block w-full font-medium text-xl pb-4">
               {{ product.name }}
-              <!-- <span class="float-right text-nuxt-lightgreen">{{ theme.price }}</span> -->
             </h4>
-            <p class="mb-4 text-gray-600 leading-relaxed" v-html="product.description"></p>
-            <nui-button :href="product.url" rel="noopener" target="_blank" class="sm:mr-4 p-3 mt-3 text-sm text-left">
-              GET IT for {{ product.price }}€
-            </nui-button>
+            <p class="mb-4 text-gray-600 leading-relaxed">{{ product.description }}</p>
+            <button class="snipcart-add-item inline-block bg-nuxt-lightgreen text-white font-medium text-sm px-4 py-2 shadow uppercase rounded hover:bg-nuxt-green hover:shadow-md sm:mr-4 p-3 mt-3 text-sm text-left" :data-item-id="i + 1" :data-item-name="product.name" :data-item-description="product.description" :data-item-image="'/shop/' + product.img + '.png'" :data-item-price="product.price" :data-item-url="localePath('shop')">
+              <!-- <div class="inline-block fill-current stroke-current mr-1">
+                <slot name="icon" />
+              </div> -->
+              GET IT for only {{ product.price }}€
+            </button>
           </div>
         </div>
       </div>
@@ -41,7 +43,8 @@ export default {
   head: {
     title: 'The NuxtJS Shop',
     meta: [
-      { hid: 'description', name: 'description', content: '' }
+      { hid: 'description', name: 'description', content: '' },
+      { }
     ]
   },
   data () {
@@ -51,7 +54,6 @@ export default {
           name: 'Classic T-shirt White',
           description: 'Ce superbe t-shirt en coton bio, eleve en plein air sans pesticide, ogm, nourriture, eau.. Bref sans rien du tout vous avez bien compris!',
           img: 'tshirt_white',
-          url: '',
           price: 29
         },
         {
@@ -76,14 +78,14 @@ export default {
           price: 49
         },
         {
-          name: 'New Stickers',
+          name: 'New Stickers Pack',
           description: '8 New Design stickers: <br> - 4 Mountains Logo Stickers <br> - 4 NuxtJS Logo Stickers',
           img: 'new_stickers',
           url: '',
           price: 5
         },
         {
-          name: 'Vintage Stickers',
+          name: 'Vintage Stickers Pack',
           description: '8 Vintage design stickers: <br> - 4 Mountains Logo Stickers <br> - 4 Are You Nuxt? Stickers',
           img: 'vintage_stickers',
           url: '',
@@ -91,10 +93,22 @@ export default {
         }
       ]
     }
+  },
+  mounted () {
+    const jquery = document.createElement('script')
+    jquery.setAttribute('type', 'text/javascript')
+    jquery.setAttribute('src', '//ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js')
+    const script = document.createElement('script')
+    script.setAttribute('type', 'text/javascript')
+    script.setAttribute('src', '//cdn.snipcart.com/scripts/2.0/snipcart.js')
+    script.setAttribute('id', 'snipcart')
+    script.setAttribute('data-api-key', 'YzRlMjRiNmItNWJjNC00OWMxLWE1ODgtZmIyNzAwYmIyMmI5NjM3MDM3MTc0OTkxOTU5OTA0')
+    this.$refs.shop.appendChild(jquery)
+    this.$refs.shop.appendChild(script)
   }
 }
 </script>
 
 <style>
-
+@import url('https://cdn.snipcart.com/themes/2.0/base/snipcart.min.css');
 </style>

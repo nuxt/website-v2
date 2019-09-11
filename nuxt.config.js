@@ -60,8 +60,8 @@ export default {
     '~/plugins/adblock.client.js'
   ],
   env: {
-    githubToken: process.env.GITHUB_TOKEN || '4aa6bcf919d238504e7db59a66d32e78281c0ad3',
-    docSearchApiKey: 'ff80fbf046ce827f64f06e16f82f1401'
+    DOC_SEARCH_API_KEY: process.env.DOC_SEARCH_API_KEY || 'ff80fbf046ce827f64f06e16f82f1401',
+    NUXT_API: process.env.NUXT_API || 'https://api-nuxtjs-com.onrender.com'
   },
   loading: { color: '#41B883' },
   build: {

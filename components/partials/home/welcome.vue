@@ -1,6 +1,6 @@
 <template>
-  <nui-container class="py-16 sm:py-24">
-    <div class="flex justify-between">
+  <nui-container>
+    <div class="flex justify-between py-16 sm:py-24">
       <div class="lg:w-1/2 xl:w-6/12 text-center lg:text-left p-4 sm:p-0">
         <h1 class="text-3xl xl:text-4xl text-nuxt-gray font-medium leading-normal mb-6">
           The Progressive<br><span class="text-nuxt-lightgreen">Vue.js</span> Framework<br>

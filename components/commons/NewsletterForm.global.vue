@@ -7,7 +7,7 @@
         <form @submit.prevent="subscribe">
           <div>
             <label for="news-email" class="hidden">Email</label>
-            <input v-model="email" id="news-email" type="email" required placeholder="Email" class="border border-r-0 w-48 md:w-64 rounded py-2 px-2 rounded-r-none outline-none focus:border-nuxt-lightgreen">
+            <input id="news-email" v-model="email" type="email" required placeholder="Email" class="border border-r-0 w-48 md:w-64 rounded py-2 px-2 rounded-r-none outline-none focus:border-nuxt-lightgreen">
           </div>
           <input type="submit" :value="pending ? 'Subscribing...' : 'Subscribe'" name="subscribe" class="cursor-pointer inline-block bg-nuxt-lightgreen text-white font-medium text-sm px-4 py-2 shadow uppercase rounded rounded-l-none hover:bg-nuxt-green hover:shadow-md text-base" :class="[pending ? 'bg-nuxt-green': '']">
         </form>
@@ -37,7 +37,7 @@ export default {
       this.pending = true
       try {
         await new Promise(resolve => setTimeout(resolve, 400))
-        await this.$http.$post('http://localhost:3333/newsletter', { email: this.email })
+        await this.$http.$post(`${process.env.NUXT_API}/newsletter`, { email: this.email })
         this.subscribed = true
         this.pending = false
       } catch (err) {

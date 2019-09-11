@@ -49,7 +49,7 @@ export default {
   methods: {
     addInstantSearch () {
       window.docsearch({
-        apiKey: process.env.docSearchApiKey,
+        apiKey: process.env.DOC_SEARCH_API_KEY,
         indexName: 'nuxtjs',
         inputSelector: '#algolia',
         algoliaOptions: { 'facetFilters': [`tags:${this.$store.state.locale}`] },

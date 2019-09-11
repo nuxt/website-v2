@@ -11,13 +11,13 @@
 </template>
 
 <script>
-import homeWelcome from '@/partials/home/welcome'
-import homeWhy from '@/partials/home/why'
-import homeCompanies from '@/partials/home/companies'
-// import homeFeatures from '@/partials/home/features'
-// import homeTargets from '@/partials/home/targets'
-import homeSponsors from '@/partials/home/sponsors'
-import homeModes from '@/partials/home/modes'
+import homeWelcome from '@/components/partials/home/welcome'
+import homeWhy from '@/components/partials/home/why'
+import homeCompanies from '@/components/partials/home/companies'
+// import homeFeatures from '@/components/partials/home/features'
+// import homeTargets from '@/components/partials/home/targets'
+import homeSponsors from '@/components/partials/home/sponsors'
+import homeModes from '@/components/partials/home/modes'
 
 export default {
   components: {

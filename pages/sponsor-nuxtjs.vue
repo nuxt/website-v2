@@ -65,7 +65,7 @@
           class="sponsor inline-block m-4"
           :href="sponsor.url"
           target="_blank"
-          rel="noopener"
+          rel="noopener sponsored"
         >
           <img :src="'/img/sponsors/' + sponsor.img" :alt="sponsor.name" :title="sponsor.name" class="inline-block" :class="sponsor.class">
         </a>

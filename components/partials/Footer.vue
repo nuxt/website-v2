@@ -74,6 +74,7 @@ import nuiLogo from '@/components/svg/Mountains'
 export default {
   data () {
     return {
+<<<<<<< HEAD
       themes: {
         current: 0,
         options: [
@@ -81,6 +82,12 @@ export default {
           { text: 'dark', icon: 'nui-moon' }
         ]
       },
+=======
+      themes: [
+        { value: 'light', text: 'light', icon: 'nui-sun' }
+        // { value: 'dark', text: 'dark', icon: 'nui-moon' }
+      ],
+>>>>>>> c7763d43 (New design with illustrations)
       links: {
 <<<<<<< HEAD
         ecosystem: [

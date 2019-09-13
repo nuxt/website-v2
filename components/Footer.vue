@@ -36,7 +36,7 @@
               </a>
             </li>
             <li class="nFooter_Group_Content_Line">
-              <a class="nFooter_Group_Content_Line_Link" href="https://discordapp.com/invite/VApZF5W" target="_blank" rel="noopener">
+              <a class="nFooter_Group_Content_Line_Link" href="https://discord.nuxtjs.org/" target="_blank" rel="noopener">
                 Chat
               </a>
             </li>

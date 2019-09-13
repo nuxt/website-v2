@@ -1,8 +1,8 @@
 <template>
-  <nui-container class="py-16">
-    <div class="flex justify-between">
-      <div class="lg:w-1/2 xl:w-8/12 text-center lg:text-left p-4 sm:p-0">
-        <h1 class="text-3xl xl:text-4xl text-nuxt-gray font-medium leading-normal mb-6">
+  <nui-container class="pt-16">
+    <div class="flex flex-wrap justify-between mb-8">
+      <div class="lg:w-6/12 lg:text-left text-center p-4 sm:p-0">
+        <h1 class="text-3xl xl:text-4xl text-nuxt-gray font-medium leading-normal mb-6 lg:pt-4">
           Sponsor NUXT<span class="text-nuxt-lightgreen">JS</span> Development<br>
         </h1>
         <h3 class="xl:text-lg text-gray-600 font-medium leading-relaxed mb-6">
@@ -11,7 +11,7 @@
           You can support NuxtJS development via the following methods:
         </h3>
       </div>
-      <i-sponsoring class="hidden lg:inline-block my-8" />
+      <img src="/img/illustrations/success.png" alt="Shop" class="w-2/3 mx-auto lg:mx-0 lg:w-5/12 lg:-mt-8">
     </div>
     <section class="flex flex-wrap bg-gray-100 p-8 rounded my-12">
       <div class="w-full lg:w-2/3 text-center lg:text-left">
@@ -86,7 +86,6 @@ import nuiSvgBtc from '@/components/svg/wallet/btc.vue'
 import nuiSvgBch from '@/components/svg/wallet/bch.vue'
 import nuiSvgEth from '@/components/svg/wallet/eth.vue'
 import nuiSvgLtc from '@/components/svg/wallet/ltc.vue'
-import iSponsoring from '@/components/svg/streamline/sponsoring.vue'
 
 export default {
   components: {
@@ -94,8 +93,7 @@ export default {
     nuiSvgBtc,
     nuiSvgBch,
     nuiSvgEth,
-    nuiSvgLtc,
-    iSponsoring
+    nuiSvgLtc
   },
   head: {
     title: 'Sponsor NuxtJS Development',

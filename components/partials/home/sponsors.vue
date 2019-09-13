@@ -4,7 +4,7 @@
       <h1 class="text-3xl uppercase pb-16">
         sponsors
       </h1>
-      <i-sponsoring class="inline-block" />
+      <i-sponsoring class="inline-block float-right" />
       <div class="py-12 leading-loose">
         <p>
           NuxtJS is an MIT licensed open source project and completely free to use.

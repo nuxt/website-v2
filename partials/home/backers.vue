@@ -8,25 +8,23 @@
         <h3 class="nBackers_Group_Title">{{ $store.state.lang.homepage.backer_partners }}</h3>
         <div class="nBackers_Group_Content">
           <a class="nBackers_Group_Content_Link" href="https://www.storyblok.com/?ref=nuxt" target="_blank" rel="noopener">
-            <v-lazy-image class="nBackers_Group_Content_Link_Image" src="/storyblok-logo.svg" alt="Storyblok.com"/>
+            <v-lazy-image class="nBackers_Group_Content_Link_Image" src="/storyblok-logo.svg" alt="Storyblok.com" style="height: 80px;"/>
+          </a>
+          <br>
+          <a class="nBackers_Group_Content_Link" href="https://tipe.io/?ref=nuxt" target="_blank" rel="noopener">
+            <v-lazy-image class="nBackers_Group_Content_Link_Image" src="/tipe-io-cms.png" alt="Tipe.io" style="height: 40px;"/>
           </a>
           <a class="nBackers_Group_Content_Link" href="https://www.vuemastery.com/?ref=nuxt" target="_blank" rel="noopener">
-            <v-lazy-image class="nBackers_Group_Content_Link_Image" src="/vueMastery-brand.svg" alt="VueMastery.com"/>
-          </a>
-          <a class="nBackers_Group_Content_Link" href="https://yakaz.com/" target="_blank" rel="noopener">
-            <v-lazy-image class="nBackers_Group_Content_Link_Image" src="/yakaz-partner.png" srcset="/yakaz-partner-2x.png 2x" alt="Yakaz.com" />
+            <v-lazy-image class="nBackers_Group_Content_Link_Image" src="/vueMastery-brand.svg" alt="VueMastery.com" style="height: 40px;"/>
           </a>
           <a class="nBackers_Group_Content_Link" href="https://vueschool.io/?friend=nuxt&utm_source=Nuxtjs.org&utm_medium=banner&utm_campaign=Open%20Collective" target="_blank" rel="noopener">
-            <v-lazy-image class="nBackers_Group_Content_Link_Image" src="/vueschool.png" srcset="/vueschool-2x.png 2x" alt="VueSchool.io" />
+            <v-lazy-image class="nBackers_Group_Content_Link_Image" src="/vueschool.png" srcset="/vueschool-2x.png 2x" alt="VueSchool.io" style="height: 40px;"/>
           </a>
           <a class="nBackers_Group_Content_Link" href="https://shipshape.io/?ref=nuxt" target="_blank" rel="noopener">
-            <v-lazy-image class="nBackers_Group_Content_Link_Image" src="/shipshape-logo.svg" alt="Shipshape.io"/>
+            <v-lazy-image class="nBackers_Group_Content_Link_Image" src="/shipshape-logo.svg" alt="Shipshape.io" style="height: 40px;"/>
           </a>
           <a class="nBackers_Group_Content_Link" href="https://hapijs.com/?ref=nuxt" target="_blank" rel="noopener">
-            <v-lazy-image class="nBackers_Group_Content_Link_Image" src="/hapi-logo.svg" alt="Hapi JS"/>
-          </a>
-          <a class="nBackers_Group_Content_Link" href="https://blokt.com/?ref=nuxt" target="_blank" rel="noopener">
-            <v-lazy-image class="nBackers_Group_Content_Link_Image" src="/blokt-logo.png" alt="Blokt"/>
+            <v-lazy-image class="nBackers_Group_Content_Link_Image" src="/hapi-logo.svg" alt="Hapi JS" style="height: 40px;"/>
           </a>
         </div>
         <div class="nBackers_Group_Action">
@@ -38,11 +36,20 @@
       <div class="nBackers_Group">
         <h3 class="nBackers_Group_Title">{{ $store.state.lang.homepage.backer_sponsors }}</h3>
         <div class="nBackers_Group_Content">
-          <a class="nBackers_Group_Content_Link" href="https://www.sparheld.de/" target="_blank" rel="noopener">
-            <v-lazy-image class="nBackers_Group_Content_Link_Image" src="/sponsors/de-black.png" alt="Sparheld"/>
+          <a class="nBackers_Group_Content_Link" href="https://www.sparheld.de/?ref=nuxt" target="_blank" rel="noopener">
+            <v-lazy-image class="nBackers_Group_Content_Link_Image" src="/sponsors/de-black.png" alt="Sparheld" style="height: 36px;"/>
           </a>
-          <a class="nBackers_Group_Content_Link" href="https://icons8.com" target="_blank" rel="noopener">
-            <v-lazy-image class="nBackers_Group_Content_Link_Image" src="/sponsors/icons8.png" alt="Sparheld"/>
+          <a class="nBackers_Group_Content_Link" href="https://icons8.com/?ref=nuxt" target="_blank" rel="noopener">
+            <v-lazy-image class="nBackers_Group_Content_Link_Image" src="/sponsors/icons8.png" alt="Icons8"  style="height: 36px;"/>
+          </a>
+          <a class="nBackers_Group_Content_Link" href="https://clay.global/?ref=nuxt" target="_blank" rel="noopener">
+            <v-lazy-image class="nBackers_Group_Content_Link_Image" src="/sponsors/clay.png" alt="Clay"  style="height: 36px;"/>
+          </a>
+          <a class="nBackers_Group_Content_Link" href="https://uxplanet.org/top-ui-ux-design-agencies-user-experience-firms-8c54697e290/?ref=nuxt" target="_blank" rel="noopener">
+            <v-lazy-image class="nBackers_Group_Content_Link_Image" src="/sponsors/ux-planet.png" alt="Clay"  style="height: 36px;"/>
+          </a>
+          <a class="nBackers_Group_Content_Link" href="hhttps://www.firestickhow.com/?ref=nuxt" target="_blank" rel="noopener">
+            <v-lazy-image class="nBackers_Group_Content_Link_Image" src="/sponsors/fire-stick-how.png" alt="Fire Stick How"  style="height: 36px;"/>
           </a>
         </div>
         <div class="nBackers_Group_Action">

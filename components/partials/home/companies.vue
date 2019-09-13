@@ -6,7 +6,7 @@
       </h1>
       <div class="flex flex-col lg:flex-row items-center justify-between">
         <div v-for="(company, i) in companies[$i18n.locale]" :key="i" class="p-8 text-center">
-          <a :href="company.url" target="_blank" rel="noopener" class="company">
+          <a :href="company.url" target="_blank" rel="noopener nofollow" class="company">
             <img :src="'/img/companies/' + $i18n.locale + '/' + company.img" :alt="company.name" :class="company.class">
           </a>
         </div>

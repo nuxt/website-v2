@@ -1,37 +1,40 @@
 <template>
-  <nui-container class="py-16">
-    <div class="flex justify-between mb-16">
-      <div class="lg:w-1/2 xl:w-8/12 text-center lg:text-left p-4 sm:p-0">
-        <h1 class="text-3xl xl:text-4xl text-nuxt-gray font-medium leading-normal mb-6">
+  <nui-container class="pt-16">
+    <div class="flex flex-wrap justify-between mb-8">
+      <div class="lg:w-6/12 lg:text-left text-center p-4 sm:p-0">
+        <h1 class="text-3xl xl:text-4xl text-nuxt-gray font-medium leading-normal mb-6 lg:pt-4">
           The NUXT<span class="text-nuxt-lightgreen">JS</span> Team<br>
         </h1>
         <h3 class="xl:text-lg text-gray-600 font-medium leading-relaxed mb-6">
           The development of NuxtJS and its ecosystem is guided by an international team. We have a very active and engaged team that is constantly striving to push Nuxt forward.
         </h3>
       </div>
-      <i-team class="hidden lg:inline-block" />
+      <!-- <i-team class="hidden lg:inline-block" /> -->
+      <img src="/img/illustrations/workflow.png" alt="A worldwild team" class="w-2/3 mx-auto lg:mx-0 lg:w-5/12 lg:-mt-8">
     </div>
-    <h2 class="text-2xl xl:text-3xl text-nuxt-gray font-medium leading-normal mb-6">
-      Active Core Team Members
-    </h2>
-    <div class="flex flex-wrap -mx-2 md:-mx-4">
-      <div v-for="profile of core" :key="profile.name" class="w-full md:w-1/2 lg:w-1/3 p-4">
-        <div class="bg-gray-100 hover:bg-gray-200 rounded p-6">
-          <img class="h-32 w-32 rounded-full mx-auto" :src="`https://github.com/${profile.github}.png`">
-          <div class="text-center pt-4">
-            <h2 class="text-xl">
-              {{ profile.name }} <span v-if="profile.alias" class="font-normal text-sm">({{ profile.alias }})</span>
-            </h2>
-            <div class="text-gray-600 py-1">
-              {{ profile.work.role }} <span v-if="profile.work.org" class="text-nuxt-lightgreen">@<a :href="profile.work.orgUrl" target="_blank" rel="noopener">{{ profile.work.org }}</a></span>
-            </div>
-            <div class="text-sm py-1">
-              {{ profile.city }}
-            </div>
-            <div class="py-2">
-              <a :href="`https://github.com/${profile.github}`" rel="noopener" target="_blank" class="mx-1"><github-icon class="h-5 inline-block text-gray-700 hover:text-gray-900 cursor-pointer" /></a>
-              <a v-if="profile.twitter" :href="`https://twitter.com/${profile.twitter}`" rel="noopener" target="_blank" class="mx-1"><twitter-icon class="h-5 ml-1 inline-block text-blue-600 hover:text-blue-400" /></a>
-              <a v-if="profile.website" :href="profile.website" rel="noopener" target="_blank" class="mx-1"><website-icon class="h-5 inline-block text-nuxt-green hover:text-nuxt-lightgreen" /></a>
+    <div class="bg-gray-100 rounded p-8">
+      <h2 class="text-2xl xl:text-3xl text-center text-nuxt-gray font-medium leading-normal mb-6 pt-4">
+        Active Core Team Members
+      </h2>
+      <div class="flex flex-wrap -mx-2 md:-mx-4">
+        <div v-for="profile of core" :key="profile.name" class="w-full md:w-1/2 lg:w-1/3 p-4">
+          <div class="bg-gray-100 hover:bg-gray-200 rounded p-6">
+            <img class="h-32 w-32 rounded-full mx-auto" :src="`https://github.com/${profile.github}.png`">
+            <div class="text-center pt-4">
+              <h2 class="text-xl">
+                {{ profile.name }} <span v-if="profile.alias" class="font-normal text-sm">({{ profile.alias }})</span>
+              </h2>
+              <div class="text-gray-600 py-1">
+                {{ profile.work.role }} <span v-if="profile.work.org" class="text-nuxt-lightgreen">@<a :href="profile.work.orgUrl" target="_blank" rel="noopener">{{ profile.work.org }}</a></span>
+              </div>
+              <div class="text-sm py-1">
+                {{ profile.city }}
+              </div>
+              <div class="py-2">
+                <a :href="`https://github.com/${profile.github}`" rel="noopener" target="_blank" class="mx-1"><github-icon class="h-5 inline-block text-gray-700 hover:text-gray-900 cursor-pointer" /></a>
+                <a v-if="profile.twitter" :href="`https://twitter.com/${profile.twitter}`" rel="noopener" target="_blank" class="mx-1"><twitter-icon class="h-5 ml-1 inline-block text-blue-600 hover:text-blue-400" /></a>
+                <a v-if="profile.website" :href="profile.website" rel="noopener" target="_blank" class="mx-1"><website-icon class="h-5 inline-block text-nuxt-green hover:text-nuxt-lightgreen" /></a>
+              </div>
             </div>
           </div>
         </div>
@@ -44,14 +47,14 @@
 import TwitterIcon from '@/components/svg/Twitter'
 import GithubIcon from '@/components/svg/Github'
 import WebsiteIcon from '@/components/svg/Link'
-import iTeam from '@/components/svg/streamline/team.vue'
+// import iTeam from '@/components/svg/streamline/team.vue'
 
 export default {
   components: {
     TwitterIcon,
     GithubIcon,
-    WebsiteIcon,
-    iTeam
+    WebsiteIcon
+    // iTeam
   },
   head: {
     title: 'The NuxtJS Team',

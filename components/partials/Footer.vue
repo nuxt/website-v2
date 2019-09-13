@@ -65,8 +65,8 @@ export default {
   data () {
     return {
       themes: [
-        { value: 'light', text: 'light', icon: 'nui-sun' },
-        { value: 'dark', text: 'dark', icon: 'nui-moon' }
+        { value: 'light', text: 'light', icon: 'nui-sun' }
+        // { value: 'dark', text: 'dark', icon: 'nui-moon' }
       ],
       links: {
         discover: [

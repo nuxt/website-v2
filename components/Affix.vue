@@ -12,7 +12,7 @@
     <h3 class="Affix__Title" style="margin-bottom: 15px;">Platinium {{ $store.state.lang.sponsors.title }}</h3>
     <ul class="Affix__List">
       <li class="Affix__List__Item">
-        <a class="Affix__List__Item__Sponsor" href="https://www.storyblok.com/?ref=nuxt" target="_blank" rel="noopener">
+        <a class="Affix__List__Item__Sponsor" href="https://www.storyblok.com/?ref=nuxt" target="_blank" rel="noopener nofollow sponsored">
           <img src="/storyblok-logo.svg" alt="Storyblok.com" style="height: 36px"/>
         </a>
       </li>

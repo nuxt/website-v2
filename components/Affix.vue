@@ -20,11 +20,15 @@
     <div class="Affix__Toggler" :class="{'Affix__Toggler--hidden': visible}" @click="toggle">
       <div class="icon more-vertical"></div>
     </div>
+<<<<<<< HEAD
     <a class="Affix__Tidelift" href="https://tidelift.com/subscription/pkg/npm-nuxt?utm_source=nuxt&utm_medium=referral" target="_blank">
       <Tidelift alt="tidelift"/>
       <span>{{ $store.state.lang.links.tidelift_short }}</span>
     </a>
     <h3 class="Affix__Title" style="margin-bottom: 20px;">{{ $store.state.lang.sponsors.title }}</h3>
+=======
+    <h3 class="Affix__Title" style="margin-bottom: 15px;">Platinium {{ $store.state.lang.sponsors.title }}</h3>
+>>>>>>> 3eccfd27 (sponsors: update)
     <ul class="Affix__List">
       <li class="Affix__List__Item">
         <a class="Affix__List__Item__Sponsor" href="https://t.co/sUZfRy6ZxS" target="_blank" rel="noopener">
@@ -32,6 +36,7 @@
         </a>
       </li>
       <li class="Affix__List__Item">
+<<<<<<< HEAD
         <a class="Affix__List__Item__Sponsor" href="https://www.storyblok.com/?ref=nuxt" target="_blank" rel="noopener">
           <img src="/storyblok-logo.svg" alt="Storyblok.com">
         </a>
@@ -57,6 +62,8 @@
         </a>
       </li>
       <li class="Affix__List__Item">
+=======
+>>>>>>> 3eccfd27 (sponsors: update)
         {{ $store.state.lang.sponsors.become }}
         <a href="https://opencollective.com/nuxtjs" target="_blank" rel="noopener">{{ $store.state.lang.sponsors.become_partner }}</a>.
       </li>

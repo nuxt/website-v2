@@ -48,10 +48,12 @@ export default {
     return { current: 0, setInter: null, showNav: false }
   },
   computed: {
-    list () { return this.$store.state.menu[this.$route.params.section] },
+    list () {
+      return this.$store.state.menu[this.$route.params.section] || []
+    },
     visible () { return this.$store.state.visibleAffix },
     path () { return this.$route.path.slice(-1) === '/' ? this.$route.path.slice(0, -1) : this.$route.path },
-    menu () { return (this.$i18n.locale !== 'en' ? `/${this.$i18n.locale}/` : '/') + this.$route.params.section },
+    menu () { return (this.$i18n && this.$i18n.locale !== 'en' ? `/${this.$i18n.locale}/` : '/') + this.$route.params.section },
     breadcrumb () {
       let breadcrumb = null
       this.list.forEach((group) => {

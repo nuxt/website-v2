@@ -87,7 +87,7 @@ export default {
     }
   },
   async asyncData ({ $http }) {
-    const baseApi = process.server ? 'https://api.otechie.com' : '/api/otechie'
+    const baseApi = process.server ? 'https://api.otechie.com' : 'api/otechie'
     const { services } = await $http.$get(`${baseApi}/consultancy/nuxt`)
 
     return { services }

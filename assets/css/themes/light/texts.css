@@ -3,6 +3,9 @@ body {
     & p {
       @apply leading-loose py-1 mb-1;
     }
+    & li p {
+      @apply inline-block;
+    }
     & blockquote {
       @apply italic text-gray-600 leading-loose;
     }

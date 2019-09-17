@@ -1,4 +1,5 @@
 <template>
+<<<<<<< HEAD
   <nui-container class="py-16">
     <h1 class="text-3xl xl:text-4xl text-nuxt-gray font-medium leading-normal mb-6">Nuxt<span class="text-nuxt-lightgreen">JS</span> Design</h1>
     <h3 class="xl:text-lg text-gray-600 font-medium leading-relaxed mb-8">
@@ -36,6 +37,20 @@
           <span class="dimensions">128 x 128</span>
         </figure>
       </div>
+=======
+  <nui-container class="pt-16">
+    <div class="flex flex-wrap justify-between mb-8">
+      <div class="lg:w-6/12 lg:text-left text-center p-4 sm:p-0">
+        <h1 class="text-3xl xl:text-4xl text-nuxt-gray font-medium leading-normal mb-6 lg:pt-4">
+          Nuxt<span class="text-nuxt-lightgreen">JS</span> Design
+        </h1>
+        <h3 class="xl:text-lg text-gray-600 font-medium leading-relaxed mb-6">
+          NuxtJS is an MIT licensed open source project and completely free to use.<br>
+          You can freely use our logos as long as you mention NuxtJS and link to nuxtjs.org.
+        </h3>
+      </div>
+      <img src="/img/illustrations/design.png" alt="Design" class="w-2/3 mx-auto lg:mx-0 lg:w-5/12 lg:-mt-8">
+>>>>>>> c0fbfb0b (add illustrations)
     </div>
     <div class="flex -mx-2 mt-4">
       <div class="w-1/4 mx-2">

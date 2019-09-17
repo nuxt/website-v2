@@ -51,9 +51,8 @@
         Recurring Pledges
       </h2>
       <p class="text-gray-600 mb-12">
-        Recurring pledges come with exclusive perks, e.g. having your name listed in the Vue GitHub repository, or have your company logo placed on this website.
-        Become a backer or sponsor via Patreon (goes directly to support Evan You's full-time work on Vue)
-        Become a backer or sponsor via OpenCollective (goes into a fund with transparent expense models supporting community efforts and events)
+        Recurring pledges come with exclusive perks, e.g. having your name listed in the NuxtJS GitHub repository, or have your company logo placed on this website.
+        Become a nuxter or sponsor via <a href="https://opencollective.com/nuxtjs">OpenCollective</a> (goes into a fund with transparent expense models supporting community efforts and events).
       </p>
       <div v-for="(group, groupKey) in sponsors" :key="groupKey" class="text-center pb-8">
         <h2 class="uppercase text-xl pb-8">

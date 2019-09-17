@@ -61,7 +61,7 @@ export default {
   ],
   env: {
     DOC_SEARCH_API_KEY: process.env.DOC_SEARCH_API_KEY || 'ff80fbf046ce827f64f06e16f82f1401',
-    NUXT_API: process.env.NUXT_API || 'https://api-nuxtjs-com.onrender.com'
+    NUXT_API: process.env.NUXT_API || 'https://api.nuxtjs.com'
   },
   loading: { color: '#41B883' },
   build: {

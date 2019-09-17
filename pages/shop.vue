@@ -6,7 +6,7 @@
           The NUXT<span class="text-nuxt-lightgreen">JS</span> Shop<br>
         </h1>
         <h3 class="xl:text-lg text-gray-600 font-medium leading-relaxed mb-6">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga magni cum, nisi animi quae sit in, corporis explicabo architecto natus vero voluptate maiores beatae, et quo possimus. Rerum, consequatur aperiam!
+          You want to support the NuxtJS project and show your love to the rest of the community?<br/> Here our products with the best quality ever!
         </h3>
       </div>
       <img src="/img/illustrations/shop.png" alt="Shop" class="w-2/3 mx-auto lg:mx-0 lg:w-5/12 lg:-mt-8">
@@ -20,12 +20,11 @@
               {{ product.name }}
             </h4>
             <p class="mb-4 text-gray-600 leading-relaxed">{{ product.description }}</p>
-            <button class="snipcart-add-item inline-block bg-nuxt-lightgreen text-white font-medium text-sm px-4 py-2 shadow uppercase rounded hover:bg-nuxt-green hover:shadow-md sm:mr-4 p-3 mt-3 text-sm text-left" :data-item-id="i + 1" :data-item-name="product.name" :data-item-description="product.description" :data-item-image="'/shop/' + product.img + '.png'" :data-item-price="product.price" :data-item-url="localePath('shop')">
-              <!-- <div class="inline-block fill-current stroke-current mr-1">
-                <slot name="icon" />
-              </div> -->
-              GET IT for only {{ product.price }}€
+            <button class="inline-block bg-nuxt-lightgreen text-white font-medium text-sm px-4 py-2 shadow uppercase rounded hover:bg-nuxt-green hover:shadow-md sm:mr-4 p-3 mt-3 text-sm text-left">
+              Coming soon
             </button>
+            <!-- <button class="snipcart-add-item inline-block bg-nuxt-lightgreen text-white font-medium text-sm px-4 py-2 shadow uppercase rounded hover:bg-nuxt-green hover:shadow-md sm:mr-4 p-3 mt-3 text-sm text-left" :data-item-id="i + 1" :data-item-name="product.name" :data-item-description="product.description" :data-item-image="'/shop/' + product.img + '.png'" :data-item-price="product.price" :data-item-url="localePath('shop')">
+            </button> -->
           </div>
         </div>
       </div>
@@ -52,63 +51,63 @@ export default {
       products: [
         {
           name: 'Classic T-shirt White',
-          description: 'Ce superbe t-shirt en coton bio, eleve en plein air sans pesticide, ogm, nourriture, eau.. Bref sans rien du tout vous avez bien compris!',
+          description: 'Unisex White T-shirt with Nuxt Mountains Logo embroidered.',
           img: 'tshirt_white',
-          price: 29
+          price: 999
         },
         {
-          name: 'Classic T-shirt Blue',
-          description: 'Ce superbe t-shirt en coton bio, eleve en plein air sans pesticide, ogm, nourriture, eau.. Bref sans rien du tout vous avez bien compris!',
+          name: 'Classic T-shirt Black Heather Blue',
+          description: 'Unisex Black Heather Blue T-shirt with Nuxt Mountains Logo embroidered.',
           img: 'tshirt_blue',
           url: '',
-          price: 29
+          price: 999
         },
         {
           name: 'NuxtJS Sweatshirt White',
-          description: 'Ce superbe t-shirt en coton bio, eleve en plein air sans pesticide, ogm, nourriture, eau.. Bref sans rien du tout vous avez bien compris!',
+          description: 'Unisex White Sweatshirt with The NuxtJS Logo embroidered.',
           img: 'sweat_white',
           url: '',
-          price: 49
+          price: 999
         },
         {
-          name: 'NuxtJS Sweatshirt Blue',
-          description: 'Ce superbe t-shirt en coton bio, eleve en plein air sans pesticide, ogm, nourriture, eau.. Bref sans rien du tout vous avez bien compris!',
+          name: 'NuxtJS Sweatshirt Black Heather Blue',
+          description: 'Unisex Black Heather Blue Sweatshirt with The NuxtJS Logo embroidered.',
           img: 'sweat_blue',
           url: '',
-          price: 49
+          price: 999
         },
         {
           name: 'New Stickers Pack',
-          description: '8 New Design stickers: <br> - 4 Mountains Logo Stickers <br> - 4 NuxtJS Logo Stickers',
+          description: '8 New Design stickers: 4 Mountains Logo Stickers and- 4 NuxtJS Logo Stickers.',
           img: 'new_stickers',
           url: '',
-          price: 5
+          price: 999
         },
         {
           name: 'Vintage Stickers Pack',
-          description: '8 Vintage design stickers: <br> - 4 Mountains Logo Stickers <br> - 4 Are You Nuxt? Stickers',
+          description: '8 Vintage Design stickers: 4 Mountains Logo Stickers and 4 Are You Nuxt? Stickers.',
           img: 'vintage_stickers',
           url: '',
-          price: 5
+          price: 999
         }
       ]
     }
-  },
-  mounted () {
-    const jquery = document.createElement('script')
-    jquery.setAttribute('type', 'text/javascript')
-    jquery.setAttribute('src', '//ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js')
-    const script = document.createElement('script')
-    script.setAttribute('type', 'text/javascript')
-    script.setAttribute('src', '//cdn.snipcart.com/scripts/2.0/snipcart.js')
-    script.setAttribute('id', 'snipcart')
-    script.setAttribute('data-api-key', 'YzRlMjRiNmItNWJjNC00OWMxLWE1ODgtZmIyNzAwYmIyMmI5NjM3MDM3MTc0OTkxOTU5OTA0')
-    this.$refs.shop.appendChild(jquery)
-    this.$refs.shop.appendChild(script)
+  // },
+  // mounted () {
+  //   const jquery = document.createElement('script')
+  //   jquery.setAttribute('type', 'text/javascript')
+  //   jquery.setAttribute('src', '//ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js')
+  //   const script = document.createElement('script')
+  //   script.setAttribute('type', 'text/javascript')
+  //   script.setAttribute('src', '//cdn.snipcart.com/scripts/2.0/snipcart.js')
+  //   script.setAttribute('id', 'snipcart')
+  //   script.setAttribute('data-api-key', 'YzRlMjRiNmItNWJjNC00OWMxLWE1ODgtZmIyNzAwYmIyMmI5NjM3MDM3MTc0OTkxOTU5OTA0')
+  //   this.$refs.shop.appendChild(jquery)
+  //   this.$refs.shop.appendChild(script)
   }
 }
 </script>
 
 <style>
-@import url('https://cdn.snipcart.com/themes/2.0/base/snipcart.min.css');
+/* @import url('https://cdn.snipcart.com/themes/2.0/base/snipcart.min.css'); */
 </style>

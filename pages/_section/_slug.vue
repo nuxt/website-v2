@@ -16,6 +16,7 @@
             {{ $store.state.lang.links.download }}
           </a>
         </div>
+        <contribute :doc-link="docLink" />
       </nui-article>
       <nui-article v-else>
         <h1>{{ page.attrs.title }}</h1>

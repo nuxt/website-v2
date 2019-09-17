@@ -2,9 +2,9 @@
   <nui-container class="py-12 text-center">
     <section class="px-4">
       <h1 class="text-3xl uppercase pb-16">
-        sponsors
+        Sponsors
       </h1>
-      <i-sponsoring class="inline-block float-right" />
+      <i-sponsoring class="inline-block float-right ml-4" />
       <div class="py-12 leading-loose">
         <p>
           NuxtJS is an MIT licensed open source project and completely free to use.

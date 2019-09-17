@@ -4,7 +4,20 @@
       <div v-if="page.langFallback" class="p-4 mb-6 bg-orange-200 rounded">
         ⚠️ You are looking at the english version of the page. Help us translate it <a :href="docLink" class="text-orange-600">here</a>.
       </div>
-      <nui-article>
+      <nui-article v-if="section === 'examples'">
+        <h1>{{ page.attrs.title }}</h1>
+        <p class="mb-6">{{ page.attrs.description }}</p>
+        <code-sandbox v-if="codeSandBoxLink" :src="codeSandBoxLink" style="margin-bottom: 20px;"/>
+        <div>
+          <a :href="liveEditLink" class="inline-block bg-nuxt-lightgreen text-white font-medium text-sm px-4 py-2 shadow uppercase no-underline rounded hover:bg-nuxt-green hover:shadow-md sm:mr-4 py-3 px-6 text-base" target="_blank" rel="noopener">
+            {{ $store.state.lang.links.live_edit }}
+          </a>
+          <a :href="downloadLink" class="inline-block bg-nuxt-lightgreen text-white font-medium text-sm px-4 py-2 shadow uppercase no-underline rounded hover:bg-nuxt-green hover:shadow-md sm:mr-4 py-3 px-6 text-base" target="_blank" rel="noopener">
+            {{ $store.state.lang.links.download }}
+          </a>
+        </div>
+      </nui-article>
+      <nui-article v-else>
         <h1>{{ page.attrs.title }}</h1>
         <responsive-video v-if="page.attrs.youtube" :src="page.attrs.youtube" />
         <html-parser :content="page.body" />
@@ -20,11 +33,13 @@
 <script>
 import nuiAds from '@/components/partials/Ads'
 import nuiAffix from '@/components/partials/Affix'
+const CodeSandbox = () => import('@/components/commons/CodeSandbox.vue')
 
 export default {
   components: {
     nuiAds,
-    nuiAffix
+    nuiAffix,
+    CodeSandbox
   },
   computed: {
     docLink () {
@@ -35,13 +50,32 @@ export default {
         docLink = `https://github.com/o2team/i18n-cn-nuxtjs-docs/blob/dev${this.path}.md`
       }
       return docLink
+    },
+    codeSandBox () {
+      return `https://codesandbox.io`
+    },
+    codeSandBoxLink () {
+      if (!this.page.attrs.github) {
+        return ''
+      }
+      return `${this.codeSandBox}/embed/github/nuxt/nuxt.js/tree/dev/examples/${this.page.attrs.github}?autoresize=1&view=editor`
+    },
+    liveEditLink () {
+      return `${this.codeSandBox}/s/github/nuxt/nuxt.js/tree/dev/examples/${this.page.attrs.github}?from-embed`
+    },
+    downloadLink () {
+      return 'https://minhaskamal.github.io/DownGit/#/home?url=https://github.com/nuxt/nuxt.js/tree/dev/examples/' + this.page.attrs.github
     }
   },
   async asyncData ({ $docs, params, store, error, app }) {
     const defaultSlugs = { guide: 'index', api: 'index', examples: 'hello-world', faq: 'external-resources' }
     const slug = params.slug || defaultSlugs[params.section]
     const path = `/${app.i18n.locale}/${params.section}/${slug}`
-    const data = { path, page: {} }
+    const data = {
+      path,
+      section: params.section,
+      page: {}
+    }
     try {
       const page = await $docs.get(path)
       if (!page.attrs.title) { console.error(`[/${path}] ${store.state.lang.text.please_define_title}.`) } // eslint-disable-line no-console

@@ -74,7 +74,7 @@ export default {
     technicalSupport
   },
   head: {
-    title: 'The NuxtJS Shop',
+    title: 'The NuxtJS Support',
     meta: [
       { hid: 'description', name: 'description', content: '' }
     ]

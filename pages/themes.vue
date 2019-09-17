@@ -1,15 +1,15 @@
 <template>
-  <nui-container class="py-16">
-    <div class="flex justify-between mb-16">
-      <div class="lg:w-1/2 xl:w-8/12 text-center lg:text-left p-4 sm:p-0">
-        <h1 class="text-3xl xl:text-4xl text-nuxt-gray font-medium leading-normal mb-6">
+  <nui-container class="pt-16">
+    <div class="flex flex-wrap justify-between mb-8">
+      <div class="lg:w-6/12 lg:text-left text-center p-4 sm:p-0">
+        <h1 class="text-3xl xl:text-4xl text-nuxt-gray font-medium leading-normal mb-6 lg:pt-4">
           NUXT<span class="text-nuxt-lightgreen">JS</span> Themes<br>
         </h1>
         <h3 class="xl:text-lg text-gray-600 font-medium leading-relaxed mb-6">
           With the themes below built by our partners from Creative Tim and Theme Forest you can see how a real world application is built, with Nuxt.js stack behind.
         </h3>
       </div>
-      <i-theme class="hidden lg:inline-block" />
+      <img src="/img/illustrations/themes.png" alt="Themes" class="w-2/3 mx-auto lg:mx-0 lg:w-5/12 lg:-mt-8">
     </div>
     <section class="flex flex-wrap items-stretch -mx-4">
       <div v-for="theme in themes" :key="theme.title" class="w-full lg:w-1/2 p-4">
@@ -34,14 +34,7 @@
 </template>
 
 <script>
-import iTheme from '@/components/svg/streamline/theme.vue'
-// import nuiSvgShopping from '@/components/svg/Shopping'
-
 export default {
-  components: {
-    iTheme
-    // nuiSvgShopping
-  },
   head: {
     title: 'NuxtJS Themes',
     meta: [

@@ -1,8 +1,8 @@
 <template>
-  <nui-container class="py-16">
-    <div class="flex justify-between mb-16">
-      <div class="lg:w-1/2 xl:w-8/12 text-center lg:text-left p-4 sm:p-0">
-        <h1 class="text-3xl xl:text-4xl text-nuxt-gray font-medium leading-normal mb-6">
+  <nui-container class="pt-16">
+    <div class="flex flex-wrap justify-between mb-8">
+      <div class="lg:w-6/12 lg:text-left text-center p-4 sm:p-0">
+        <h1 class="text-3xl xl:text-4xl text-nuxt-gray font-medium leading-normal mb-6 lg:pt-4">
           NUXT<span class="text-nuxt-lightgreen">JS</span> Consulting <span class="text-nuxt-green">&</span> Support<br>
         </h1>
         <h3 class="xl:text-lg text-gray-600 font-medium leading-relaxed mb-6">
@@ -10,7 +10,7 @@
           We offer different services depending of your needs, from technical support to custom development. Expect a reply within one business day, we can sign custom NDA and you can get a full refund if you are not satisfied with our service.
         </h3>
       </div>
-      <i-help class="hidden lg:inline-block" />
+      <img src="/img/illustrations/welcome.png" alt="Support" class="w-2/3 mx-auto lg:mx-0 lg:w-5/12 lg:-mt-8">
     </div>
     <div class="flex flex-wrap -mx-2 md:-mx-4 mb-4">
       <section v-for="service of services" :key="service.slug" class="w-full lg:w-1/2 p-2 md:p-4">
@@ -58,7 +58,6 @@
 import nuiSvgPlay from '@/components/svg/AngleDoubleRight.vue'
 import nuiSvgTicket from '@/components/svg/InboxIn.vue'
 import nuiSvgComments from '@/components/svg/Comments.vue'
-import iHelp from '@/components/svg/streamline/help.vue'
 import appDeployment from '@/components/svg/streamline/app-deployment.vue'
 import customDevelopment from '@/components/svg/streamline/custom-development.vue'
 import projectAudit from '@/components/svg/streamline/project-audit.vue'
@@ -69,7 +68,6 @@ export default {
     nuiSvgPlay,
     nuiSvgComments,
     nuiSvgTicket,
-    iHelp,
     appDeployment,
     customDevelopment,
     projectAudit,

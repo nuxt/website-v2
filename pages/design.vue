@@ -1,16 +1,16 @@
 <template>
-  <nui-container class="py-16">
-    <div class="flex justify-between mb-16">
-      <div class="lg:w-1/2 xl:w-8/12 text-center lg:text-left p-4 sm:p-0">
-        <h1 class="text-3xl xl:text-4xl text-nuxt-gray font-medium leading-normal mb-6">
+  <nui-container class="pt-16">
+    <div class="flex flex-wrap justify-between mb-8">
+      <div class="lg:w-6/12 lg:text-left text-center p-4 sm:p-0">
+        <h1 class="text-3xl xl:text-4xl text-nuxt-gray font-medium leading-normal mb-6 lg:pt-4">
           Nuxt<span class="text-nuxt-lightgreen">JS</span> Design
         </h1>
-        <h3 class="xl:text-lg text-gray-600 font-medium leading-relaxed mb-8">
+        <h3 class="xl:text-lg text-gray-600 font-medium leading-relaxed mb-6">
           NuxtJS is an MIT licensed open source project and completely free to use.<br>
           You can freely use our logos as long as you mention NuxtJS and link to nuxtjs.org.
         </h3>
       </div>
-      <i-design class="hidden lg:inline-block" />
+      <img src="/img/illustrations/design.png" alt="Design" class="w-2/3 mx-auto lg:mx-0 lg:w-5/12 lg:-mt-8">
     </div>
     <div class="flex flex-wrap -mx-4">
       <div class="w-full lg:w-1/2 p-4">
@@ -79,12 +79,7 @@
 </template>
 
 <script>
-import iDesign from '@/components/svg/streamline/design.vue'
-
 export default {
-  components: {
-    iDesign
-  },
   transition: 'logos',
   head: {
     title: 'Design Resources - NuxtJS',

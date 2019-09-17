@@ -21,8 +21,8 @@ renderer.heading = (text, level) => {
   } else {
     link = text.toLowerCase().replace(/[^\wА-яіІїЇєЄ\u4E00-\u9EFF一-龠ぁ-ゔァ-ヴー々〆〤\u3130-\u318F\uAC00-\uD7AF]+/gi, '-')
   }
-  return '<h' + level + '>' +
-    '<a id="' + link + '" class="anchor" aria-hidden="true" href="#' + link + '">' +
+  return '<h' + level + ' id="' + link + '">' +
+    '<a class="anchor" aria-hidden="true" href="#' + link + '">' +
     octicon.link.toSVG() +
     '</a>' + text + '</h' + level + '>'
 }

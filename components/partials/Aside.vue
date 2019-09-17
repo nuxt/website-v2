@@ -115,6 +115,10 @@ export default {
       this.current = (el ? this.contents.indexOf(el) : this.contents.length) - 1
     },
     scrollTo (id) {
+      if (this._scrolling) {
+        return
+      }
+      this._scrolling = true
       if (this.$store.state.visibleAffix) {
         this.toggle()
       }
@@ -123,8 +127,11 @@ export default {
       }
       this.$nextTick(() => {
         const el = document.getElementById(id.slice(1))
-        if (!el) { return }
-        const to = el.offsetTop + 20
+        if (!el) {
+          this._scrolling = false
+          return
+        }
+        const to = el.offsetTop - 120
         const doc = document.documentElement
         let top = (window.pageYOffset || doc.scrollTop) - (doc.clientTop || 0)
         const diff = (to > top ? to - top : top - to) / 25
@@ -135,6 +142,7 @@ export default {
           window.scrollTo(0, top)
           i++
           if (i === 25) {
+            this._scrolling = false
             window.clearInterval(this.setInter)
           }
         }, 10)

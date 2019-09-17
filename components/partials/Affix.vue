@@ -6,7 +6,7 @@
           <p class="lg:text-sm text-gray-600">
             Platinum Sponsors
           </p>
-          <a v-for="sponsor in sponsors" :key="sponsor.name" :href="sponsor.link" class="inline-block my-4" rel="noopener sponsored">
+          <a v-for="sponsor in sponsors" :key="sponsor.name" :href="sponsor.link" class="block lg:inline-block my-4" rel="noopener sponsored">
             <img :src="sponsor.img" :alt="sponsor.name" class="h-16">
           </a>
           <nui-button :to="localePath('sponsor-nuxtjs')" class="justify-center mb-4">

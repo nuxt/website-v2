@@ -6,7 +6,7 @@
     </div>
     <div class="pt-6 mt-6 border-t border-gray-300">
       <carbon-ads-text :key="$route.path" />
-      <p class="text-gray-700 p-0">{{ $store.state.lang.guide.contribute }} <a :href="docLink" target="_blank" rel="noopener">{{ $store.state.lang.guide.edit_on_github }}</a></p>
+      <p v-if="docLink" class="text-gray-700 p-0">{{ $store.state.lang.guide.contribute }} <a :href="docLink" target="_blank" rel="noopener">{{ $store.state.lang.guide.edit_on_github }}</a></p>
     </div>
   </div>
 </template>
@@ -21,7 +21,8 @@ export default {
   props: {
     docLink: {
       type: String,
-      required: true
+      required: false,
+      default: ''
     }
   },
   computed: {
@@ -31,13 +32,16 @@ export default {
     list () {
       return this.$store.state.menu[this.$route.params.section].reduce((links, section) => links.concat(section.links), [])
     },
+    lastPathPart () {
+      return this.$route.path.replace(/\/$/, '').split('/')[2] || ''
+    },
     prevLink () {
-      const index = this.list.findIndex(link => (link.to || '/') === `/${this.$route.params.slug || ''}`)
+      const index = this.list.findIndex(link => (link.to || '/') === `/${this.lastPathPart}`)
 
       return this.list[index - 1] || null
     },
     nextLink () {
-      const index = this.list.findIndex(link => (link.to || '/') === `/${this.$route.params.slug || ''}`)
+      const index = this.list.findIndex(link => (link.to || '/') === `/${this.lastPathPart}`)
 
       return this.list[index + 1] || null
     }

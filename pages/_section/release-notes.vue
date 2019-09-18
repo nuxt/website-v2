@@ -15,9 +15,7 @@
           </div>
           <html-parser v-show="show === release.name" class="bg-gray-100 px-4 pb-4 break-words" :content="release.body" />
         </div>
-        <!-- <responsive-video v-if="attrs.youtube" :src="attrs.youtube" />
-        <html-parser :content="body" />
-        <contribute :doc-link="docLink" /> -->
+        <contribute/>
       </nui-article>
     </div>
     <nui-affix class="opacity-transition" :class="{ 'opacity-25': $store.state.focusMode }">

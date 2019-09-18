@@ -20,8 +20,8 @@
                 {{ link.name }}
               </nuxt-link>
               <ul v-if="path === menu + link.to && link.contents" class="pl-2 py-1">
-                <li v-for="(content, index) in link.contents" :key="content.to" class="py-1 text-sm">
-                  <a :href="menu + link.to + content.to" class="text-gray-600" :class="{'text-nuxt-lightgreen': current === index}" @click.prevent="scrollTo(content.to)">
+                <li v-for="(content, i) in link.contents" :key="content.to" class="py-1 text-sm">
+                  <a :href="menu + link.to + content.to" class="text-gray-600" :class="{'text-nuxt-lightgreen': current === i}" @click.prevent="scrollTo(content.to)">
                     {{ content.name }}
                   </a>
                 </li>

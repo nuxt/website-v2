@@ -1,6 +1,6 @@
 <template>
   <div class="-mx-4 lg:mx-0 flex flex-col-reverse lg:flex-row">
-    <div class="lg:min-h-screen w-full py-8 px-4 lg:static lg:overflow-visible lg:max-h-full lg:w-3/4" @mouseover="focus" @mouseleave="blur">
+    <div class="lg:min-h-screen w-full py-8 px-4 lg:static lg:overflow-visible lg:max-h-full lg:w-3/4" @mouseover="$store.dispatch('focusMode')" @mouseleave="$store.dispatch('clearFocusMode')">
       <div v-if="page.langFallback" class="p-4 mb-6 bg-orange-200 rounded">
         ⚠️ You are looking at the english version of the page. Help us translate it <a :href="docLink" class="text-orange-600">here</a>.
       </div>
@@ -89,21 +89,6 @@ export default {
       return error({ statusCode: 404, message: store.state.lang.text.api_page_not_found })
     }
     return data
-  },
-  methods: {
-    focus () {
-      if (this._timeout) {
-        return
-      }
-      this._timeout = setTimeout(() => this.$store.commit('setFocusMode', true), 1300)
-    },
-    blur () {
-      if (this._timeout) {
-        clearTimeout(this._timeout)
-        delete this._timeout
-      }
-      this.$store.commit('setFocusMode', false)
-    }
   },
   scrollToTop: true,
   head () {

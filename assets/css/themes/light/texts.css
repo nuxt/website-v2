@@ -12,6 +12,14 @@ body {
     & code {
       @apply bg-gray-100 text-red-500 p-1 not-italic rounded text-sm;
     }
+    & a {
+      & code {
+        @apply text-nuxt-lightgreen;
+        &:hover {
+          @apply text-nuxt-green;
+        }
+      }
+    }
     & pre {
       @apply rounded p-2 my-2 overflow-auto bg-nuxt-gray;
       /* background-color: #2E3440; nord.css */

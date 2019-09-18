@@ -131,7 +131,7 @@ export default {
           this._scrolling = false
           return
         }
-        const to = el.offsetTop - 120
+        const to = el.offsetTop - (window.outerWidth < 1024 ? 90 : 120)
         const doc = document.documentElement
         let top = (window.pageYOffset || doc.scrollTop) - (doc.clientTop || 0)
         const diff = (to > top ? to - top : top - to) / 25

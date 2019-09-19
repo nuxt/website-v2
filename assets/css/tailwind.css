@@ -1,6 +1,8 @@
 @import url('https://fonts.googleapis.com/css?family=Quicksand:300,400,500,700');
 
+/* purgecss start ignore */
 @import 'tailwindcss/base';
+/* purgecss end ignore */
 @import 'tailwindcss/components';
 
 @import './themes/light.css';

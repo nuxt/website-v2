@@ -10,8 +10,8 @@
         </div>
       </div>
     </nui-container>
-    <nui-container v-else class="flex flex-wrap items-center justify-between">
-      <div class="lg:w-1/2 text-center lg:text-left pl-8">
+    <nui-container v-else class="flex flex-wrap items-center justify-between pt-20 lg:pt-0">
+      <div class="w-full lg:w-1/2 text-center lg:text-left pl-8">
         <h1 class="text-6xl font-medium leading-normal text-nuxt-lightgreen">
           {{ error.statusCode }}
         </h1>

@@ -1,5 +1,4 @@
 <template>
-  <!-- <nuxt-theme :theme="$store.state.theme"> -->
   <div>
     <nui-header v-model="mobileNav" />
     <main class="lg:block relative pt-16 lg:pt-24" :class="{'hidden': mobileNav}">
@@ -8,17 +7,14 @@
     </main>
     <nui-footer class="lg:block" :class="{'hidden': mobileNav}" />
   </div>
-  <!-- </nuxt-theme> -->
 </template>
 
 <script>
-// import nuxtTheme from '@/themes/_switcher' // nouveau composant nuxt-theme ?
 import nuiHeader from '@/components/partials/Header'
 import nuiFooter from '@/components/partials/Footer'
 
 export default {
   components: {
-    // nuxtTheme,
     nuiHeader,
     nuiFooter
   },

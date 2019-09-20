@@ -1,11 +1,11 @@
 <template>
   <div>
-    <nui-header v-model="mobileNav" />
-    <main class="lg:block relative pt-16 lg:pt-24" :class="{'hidden': mobileNav}">
+    <nui-header v-model="action" />
+    <main class="lg:block relative pt-16 lg:pt-24" :class="{'hidden': action}">
       <!-- <event-info/> -->
       <nuxt />
     </main>
-    <nui-footer class="lg:block" :class="{'hidden': mobileNav}" />
+    <nui-footer class="pb-16 lg:pb-0 lg:block" :class="{'hidden': action}" />
   </div>
 </template>
 
@@ -20,12 +20,12 @@ export default {
   },
   data () {
     return {
-      mobileNav: false
+      action: ''
     }
   },
   watch: {
     $route () {
-      this.mobileNav = false
+      this.action = ''
     }
   },
   head () {

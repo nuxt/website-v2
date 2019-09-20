@@ -6,7 +6,7 @@
         <nui-caret-down v-else class="float-right mt-2 mr-1" />
         <span class="uppercase text-gray-500 ml-1">{{ breadcrumb.group }} :</span> {{ breadcrumb.title }}
       </a>
-      <nav class="pt-8 lg:overflow-y-auto border-t lg:block lg:pl-0 lg:pr-8 sticky?lg:h-(screen-24)" :class="{ hidden: !showNav }">
+      <nav class="pt-8 lg:overflow-y-auto lg:block lg:pl-0 lg:pr-8 sticky?lg:h-(screen-24)" :class="{ hidden: !showNav }">
         <p class="uppercase font-bold pb-6">
           {{ $store.state.lang.text.version }} <span class="text-nuxt-lightgreen">{{ $store.state.docVersion }}</span>
         </p>

@@ -5,20 +5,20 @@
         Who's using nuxt<span class="text-nuxt-lightgreen">JS</span>
       </h1>
       <div class="flex flex-col lg:flex-row items-center justify-between">
-        <div v-for="(company, i) in langCompanies.slice(0, 5)" :key="i" class="p-8 text-center">
+        <div v-for="(company, i) in langCompanies.slice(0, 5)" :key="i" class="p-4 lg:p-8 text-center">
           <a :href="company.url" target="_blank" rel="noopener nofollow" class="company">
             <img :src="'/img/companies/' + company.img" :alt="company.name" :class="company.class">
           </a>
         </div>
       </div>
       <div class="flex flex-col lg:flex-row items-center justify-between">
-        <div v-for="(company, i) in langCompanies.slice(5, 10)" :key="i" class="p-8 text-center">
+        <div v-for="(company, i) in langCompanies.slice(5, 10)" :key="i" class="p-4 lg:p-8 text-center">
           <a :href="company.url" target="_blank" rel="noopener nofollow" class="company">
             <img :src="'/img/companies/' + company.img" :alt="company.name" :class="company.class">
           </a>
         </div>
       </div>
-      <div v-if="langCompanies.length > 10" class="flex flex-col lg:flex-row items-center justify-between">
+      <div v-if="langCompanies.length > 10" class="hidden lg:flex flex-col lg:flex-row items-center justify-between">
         <div v-for="(company, i) in langCompanies.slice(10, 15)" :key="i" class="p-8 text-center">
           <a :href="company.url" target="_blank" rel="noopener nofollow" class="company">
             <img :src="'/img/companies/' + company.img" :alt="company.name" :class="company.class">

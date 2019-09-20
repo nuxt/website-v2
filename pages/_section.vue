@@ -3,7 +3,7 @@
     <section class="lg:bg-gray-100 rounded py-6 sm:p-6"> -->
   <nui-container>
     <div class="lg:flex">
-      <nui-aside />
+      <nui-aside class="hidden lg:block"/>
       <div class="min-h-screen w-full lg:static lg:max-h-full lg:overflow-visible lg:w-3/4">
         <nuxt-child />
       </div>

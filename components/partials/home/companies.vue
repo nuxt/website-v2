@@ -69,14 +69,20 @@ export default {
           { name: 'Ecosia', img: 'ecosia.svg', url: 'https://www.ecosia.org', class: 'h-16' }
         ],
         zh: [
-          { name: 'Meituan Flight', img: 'meituan.png', url: 'https://www.meituan.com/flight/', class: 'h-12' }
+          { name: 'Meituan Flight', img: 'meituan.png', url: 'https://www.meituan.com/flight/', class: 'h-10' },
+          { name: 'CoinEx', img: 'coin-ex.svg', url: 'https://www.coinex.com', class: 'h-10' }
         ],
         ja: [
           { name: 'Rakuten', img: 'rakuten.png', url: 'https://biccamera.rakuten.co.jp', class: 'h-10' },
           { name: 'Coconala', img: 'coconala.svg', url: 'https://profile.coconala.com', class: 'h-10' },
           { name: 'JobTalk', img: 'jobtalk.svg', url: 'https://jobtalk.jp', class: 'h-10' },
           { name: 'MuuMuuDomain', img: 'muu-muu-domain.svg', url: 'https://muumuu-domain.com', class: 'h-10' },
-          { name: 'Ekiten', img: 'ekiten.png', url: 'https://pro.ekiten.jp', class: 'h-8' }
+          { name: 'Ekiten', img: 'ekiten.png', url: 'https://pro.ekiten.jp', class: 'h-8' },
+          { name: 'KG', img: 'kg.png', url: 'https://kg.com', class: 'h-8' },
+          { name: 'Suzuri', img: 'suzuri.svg', url: 'https://people.suzuri.jp', class: 'h-10' },
+          { name: 'Bijutsu Techo', img: 'bijutsu-techo.svg', url: 'https://bijutsutecho.com', class: 'h-8' },
+          { name: 'Skeb', img: 'skeb.svg', url: 'https://skeb.jp', class: 'h-10' },
+          { name: 'ReRe', img: 'rere.svg', url: 'https://www.rere.jp', class: 'h-10' }
         ],
         ko: [],
         ru: [

@@ -49,8 +49,12 @@
           You can freely use our logos as long as you mention NuxtJS and link to nuxtjs.org.
         </h3>
       </div>
+<<<<<<< HEAD
       <img src="/img/illustrations/design.png" alt="Design" class="w-2/3 mx-auto lg:mx-0 lg:w-5/12 lg:-mt-8">
 >>>>>>> c0fbfb0b (add illustrations)
+=======
+      <i-design class="w-2/3 mx-auto lg:mx-0 lg:w-5/12 lg:-mt-8"/>
+>>>>>>> 163e1225 (Use icons8 SVG Illustrations)
     </div>
     <div class="flex -mx-2 mt-4">
       <div class="w-1/4 mx-2">
@@ -89,6 +93,8 @@
 </template>
 
 <script>
+import iDesign from '@/components/svg/fogg/design'
+
 export default {
   transition: 'logos',
   head: {
@@ -98,6 +104,9 @@ export default {
       { hid: 'description', name: 'description', content: 'Download Nuxt.js logos (SVG, icons, emoji and favicon).' },
       { name: 'og:image', content: 'https://nuxtjs.org/meta_640.png' },
     ]
+  },
+  components: {
+    iDesign
   }
 }
 </script>

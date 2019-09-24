@@ -16,7 +16,7 @@
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga magni cum, nisi animi quae sit in, corporis explicabo architecto natus vero voluptate maiores beatae, et quo possimus. Rerum, consequatur aperiam!
         </h3>
       </div>
-      <img src="/img/illustrations/shop.png" alt="Shop" class="w-2/3 mx-auto lg:mx-0 lg:w-5/12 lg:-mt-8">
+      <i-shop class="w-2/3 mx-auto lg:mx-0 lg:w-5/12 lg:-mt-8"/>
     </div>
     <section class="flex flex-wrap items-stretch -mx-4">
       <div v-for="product in products" :key="product.name" class="w-full lg:w-1/2 p-4">
@@ -39,12 +39,12 @@
 </template>
 
 <script>
-// import iShop from '@/components/svg/streamline/shop.vue'
+import iShop from '@/components/svg/fogg/shop'
 
 export default {
-  // components: {
-  //   iShop
-  // },
+  components: {
+    iShop
+  },
   head: {
     title: 'The NuxtJS Shop',
     meta: [

@@ -10,7 +10,7 @@
           We offer different services depending of your needs, from technical support to custom development. Expect a reply within one business day, we can sign custom NDA and you can get a full refund if you are not satisfied with our service.
         </h3>
       </div>
-      <img src="/img/illustrations/welcome.png" alt="Support" class="w-2/3 mx-auto lg:mx-0 lg:w-5/12 lg:-mt-8">
+      <i-support class="w-2/3 mx-auto lg:mx-0 lg:w-5/12 lg:-mt-8"/>
     </div>
     <div class="flex flex-wrap -mx-2 md:-mx-4 mb-4">
       <section v-for="service of services" :key="service.slug" class="w-full lg:w-1/2 p-2 md:p-4">
@@ -62,9 +62,11 @@ import appDeployment from '@/components/svg/streamline/app-deployment.vue'
 import customDevelopment from '@/components/svg/streamline/custom-development.vue'
 import projectAudit from '@/components/svg/streamline/project-audit.vue'
 import technicalSupport from '@/components/svg/streamline/technical-support.vue'
+import iSupport from '@/components/svg/fogg/support'
 
 export default {
   components: {
+    iSupport,
     nuiSvgPlay,
     nuiSvgComments,
     nuiSvgTicket,

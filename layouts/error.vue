@@ -26,7 +26,7 @@
           {{ error.message }}
         </h1>
         <div class="w-full lg:w-2/3 mx-auto">
-          <img src="/img/illustrations/404.png" alt="404">
+          <lost-image/>
         </div>
       </div>
     </nui-container>
@@ -49,15 +49,31 @@
 
 <script>
 <<<<<<< HEAD
+<<<<<<< HEAD
 import NuxtFooter from '~components/Footer.vue'
 =======
 import NuxtFooter from '@/components/partials/Footer.vue'
 >>>>>>> cdec9baa (clean useless components)
+=======
+import mountainsGlobe from '@/components/svg/streamline/montains-globe'
+import lostImage from '@/components/svg/fogg/404'
+>>>>>>> 163e1225 (Use icons8 SVG Illustrations)
 
 export default {
   props: ['error'],
   components: {
+<<<<<<< HEAD
     NuxtFooter
+=======
+    mountainsGlobe,
+    lostImage
+  },
+  props: {
+    error: {
+      type: Object,
+      required: true
+    }
+>>>>>>> 163e1225 (Use icons8 SVG Illustrations)
   }
 }
 </script>

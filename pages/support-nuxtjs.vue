@@ -12,10 +12,14 @@
         </h3>
       </div>
 <<<<<<< HEAD:pages/support-nuxtjs.vue
+<<<<<<< HEAD:pages/support-nuxtjs.vue
       <i-sponsoring class="hidden lg:inline-block my-8"/>
 =======
       <img src="/img/illustrations/success.png" alt="Shop" class="w-2/3 mx-auto lg:mx-0 lg:w-5/12 lg:-mt-8">
 >>>>>>> c7763d43 (New design with illustrations):pages/sponsor-nuxtjs.vue
+=======
+      <i-sponsor class="w-2/3 mx-auto lg:mx-0 lg:w-5/12 lg:-mt-8"/>
+>>>>>>> 163e1225 (Use icons8 SVG Illustrations):pages/sponsor-nuxtjs.vue
     </div>
 <<<<<<< HEAD
     <section>
@@ -127,9 +131,11 @@ import nuiSvgBtc from '@/components/svg/wallet/btc.vue'
 import nuiSvgBch from '@/components/svg/wallet/bch.vue'
 import nuiSvgEth from '@/components/svg/wallet/eth.vue'
 import nuiSvgLtc from '@/components/svg/wallet/ltc.vue'
+import iSponsor from '@/components/svg/fogg/sponsor'
 
 export default {
   components: {
+    iSponsor,
     nuiSvgPlay,
     nuiSvgBtc,
     nuiSvgBch,

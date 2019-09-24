@@ -9,7 +9,7 @@
           You want to support the NuxtJS project and show your love to the rest of the community?<br/> Here our products with the best quality ever!
         </h3>
       </div>
-      <img src="/img/illustrations/shop.png" alt="Shop" class="w-2/3 mx-auto lg:mx-0 lg:w-5/12 lg:-mt-8">
+      <i-shop class="w-2/3 mx-auto lg:mx-0 lg:w-5/12 lg:-mt-8"/>
     </div>
     <section class="flex flex-wrap items-stretch -mx-4">
       <div v-for="(product, i) in products" :key="i" class="w-full lg:w-1/2 p-4">
@@ -33,12 +33,12 @@
 </template>
 
 <script>
-// import iShop from '@/components/svg/streamline/shop.vue'
+import iShop from '@/components/svg/fogg/shop'
 
 export default {
-  // components: {
-  //   iShop
-  // },
+  components: {
+    iShop
+  },
   head: {
     title: 'The NuxtJS Shop',
     meta: [

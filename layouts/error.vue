@@ -6,7 +6,7 @@
           {{ error.message }}
         </h1>
         <div class="w-full lg:w-2/3 mx-auto">
-          <img src="/img/illustrations/404.png" alt="404">
+          <lost-image/>
         </div>
       </div>
     </nui-container>
@@ -28,10 +28,12 @@
 
 <script>
 import mountainsGlobe from '@/components/svg/streamline/montains-globe'
+import lostImage from '@/components/svg/fogg/404'
 
 export default {
   components: {
-    mountainsGlobe
+    mountainsGlobe,
+    lostImage
   },
   props: {
     error: {

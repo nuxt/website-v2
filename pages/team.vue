@@ -9,8 +9,7 @@
           The development of NuxtJS and its ecosystem is guided by an international team. We have a very active and engaged team that is constantly striving to push Nuxt forward.
         </h3>
       </div>
-      <!-- <i-team class="hidden lg:inline-block" /> -->
-      <img src="/img/illustrations/workflow.png" alt="A worldwild team" class="w-2/3 mx-auto lg:mx-0 lg:w-5/12 lg:-mt-8">
+      <i-team class="w-2/3 mx-auto lg:mx-0 lg:w-5/12 lg:-mt-8"/>
     </div>
     <div class="bg-gray-100 rounded p-8">
       <h2 class="text-2xl xl:text-3xl text-center text-nuxt-gray font-medium leading-normal mb-6 pt-4">
@@ -47,14 +46,14 @@
 import TwitterIcon from '@/components/svg/Twitter'
 import GithubIcon from '@/components/svg/Github'
 import WebsiteIcon from '@/components/svg/Link'
-// import iTeam from '@/components/svg/streamline/team.vue'
+import iTeam from '@/components/svg/fogg/team'
 
 export default {
   components: {
     TwitterIcon,
     GithubIcon,
-    WebsiteIcon
-    // iTeam
+    WebsiteIcon,
+    iTeam
   },
   head: {
     title: 'The NuxtJS Team',

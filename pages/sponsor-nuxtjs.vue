@@ -11,7 +11,7 @@
           You can support NuxtJS development via the following methods:
         </h3>
       </div>
-      <img src="/img/illustrations/success.png" alt="Shop" class="w-2/3 mx-auto lg:mx-0 lg:w-5/12 lg:-mt-8">
+      <i-sponsor class="w-2/3 mx-auto lg:mx-0 lg:w-5/12 lg:-mt-8"/>
     </div>
     <section class="flex flex-wrap bg-gray-100 p-8 rounded my-12">
       <div class="w-full lg:w-2/3 text-center lg:text-left">
@@ -88,9 +88,11 @@ import nuiSvgBtc from '@/components/svg/wallet/btc.vue'
 import nuiSvgBch from '@/components/svg/wallet/bch.vue'
 import nuiSvgEth from '@/components/svg/wallet/eth.vue'
 import nuiSvgLtc from '@/components/svg/wallet/ltc.vue'
+import iSponsor from '@/components/svg/fogg/sponsor'
 
 export default {
   components: {
+    iSponsor,
     nuiSvgPlay,
     nuiSvgBtc,
     nuiSvgBch,

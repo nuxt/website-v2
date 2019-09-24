@@ -9,7 +9,7 @@
           With the themes below built by our partners from Creative Tim and Theme Forest you can see how a real world application is built, with Nuxt.js stack behind.
         </h3>
       </div>
-      <img src="/img/illustrations/themes.png" alt="Themes" class="w-2/3 mx-auto lg:mx-0 lg:w-5/12 lg:-mt-8">
+      <i-themes class="w-2/3 mx-auto lg:mx-0 lg:w-5/12 lg:-mt-8"/>
     </div>
     <section class="flex flex-wrap items-stretch -mx-4">
       <div v-for="theme in themes" :key="theme.title" class="w-full lg:w-1/2 p-4">
@@ -34,7 +34,12 @@
 </template>
 
 <script>
+import iThemes from '@/components/svg/fogg/themes'
+
 export default {
+  components: {
+    iThemes
+  },
   head: {
     title: 'NuxtJS Themes',
     meta: [

@@ -83,6 +83,9 @@ export default {
       if (!page.attrs.description) { console.error(`[/${path}] ${store.state.lang.text.please_define_description}.`) } // eslint-disable-line no-console
       data.page = page
     } catch (err) {
+      if (!err.response) {
+        return console.error('Unknown error', err)
+      }
       if (err.response.status !== 404) {
         return error({ statusCode: 500, message: store.state.lang.text.an_error_occurred })
       }

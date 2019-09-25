@@ -16,7 +16,7 @@ export default async function ({ $docs, isDev, env, req, app, store: { commit, s
     }
   } else {
     // Used with nuxt generate
-    commit('setLocale', env.locale)
+    commit('setLocale', env.LOCALE)
   }
   try {
     const releases = await $docs.get('/releases')

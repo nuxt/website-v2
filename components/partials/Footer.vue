@@ -80,9 +80,9 @@ export default {
           { key: 'Discord', href: 'https://discord.nuxtjs.org' }
         ],
         support: [
-          { key: 'Sponsor NuxtJS', to: 'sponsor-nuxtjs' },
-          { key: 'The NuxtJS Shop', to: 'shop' },
-          { key: 'NuxtJS Consulting', to: 'support' }
+          { key: 'Sponsor NuxtJS', to: '/sponsor-nuxtjs' },
+          { key: 'The NuxtJS Shop', to: '/shop' },
+          { key: 'NuxtJS Consulting', to: '/support' }
         ]
       }
     }

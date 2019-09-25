@@ -5,7 +5,9 @@
 /* purgecss end ignore */
 @import 'tailwindcss/components';
 
+/* purgecss start ignore */
 @import './themes/light.css';
+/* purgecss end ignore */
 /* @import './themes/dark.scss'; */
 /* @import 'highlight.js/styles/nord.css'; */
 /* @import 'highlight.js/styles/tomorrow-night-blue.css'; */

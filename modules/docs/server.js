@@ -309,7 +309,7 @@ class DocsServer {
 
       return this.langs
     }
-    // Homepgae
+    // Homepage
     if (url.indexOf('/homepage') === 0) {
       const lang = url.split('/')[2]
 
@@ -334,10 +334,10 @@ class DocsServer {
     if (isInvalid && lang !== 'en') {
       // Check fallback for EN
       doc = this.docsFiles['en' + path.slice(2)]
-      doc.langFallback = true
       if (!doc) {
         throw new Error('File not found')
       }
+      doc.langFallback = true
     }
 
     // Send back doc content

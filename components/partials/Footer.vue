@@ -70,9 +70,9 @@ export default {
       ],
       links: {
         discover: [
-          { key: 'NuxtJS Themes', to: 'themes' },
-          { key: 'Design resources', to: 'design' },
-          { key: 'A worldwild team', to: 'team' }
+          { key: 'NuxtJS Themes', to: '/themes' },
+          { key: 'Design resources', to: '/design' },
+          { key: 'A worldwild team', to: '/team' }
         ],
         follow: [
           { key: 'Github', href: 'https://github.com/nuxt/nuxt.js' },

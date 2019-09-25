@@ -27,7 +27,7 @@ export default {
   },
   computed: {
     baseLink () {
-      return (this.$i18n.locale !== 'en' ? `/${this.$i18n.locale}/` : '/') + this.$route.params.section
+      return '/' + this.$route.params.section
     },
     list () {
       return this.$store.state.menu[this.$route.params.section].reduce((links, section) => links.concat(section.links), [])

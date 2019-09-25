@@ -94,10 +94,11 @@ export default {
   },
   computed: {
     langCompanies () {
-      const companies = this.companies[this.$i18n.locale] || []
+      const locale = this.$store.state.locale
+      const companies = this.companies[locale] || []
 
       // minimum 10 companies
-      if (companies.length < 15 && this.$i18n.locale !== 'en') {
+      if (companies.length < 15 && locale !== 'en') {
         // Fill with english companies and remove duplicates
         return companies.concat(this.companies.en.filter(enCompany => !companies.find(c => c.img === enCompany.img)))
       }

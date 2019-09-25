@@ -29,7 +29,7 @@
         </a>
       </div>
       <div class="text-center">
-        <nui-button :to="localePath('sponsor-nuxtjs')" class="mr-4 py-3 px-6 text-base">
+        <nui-button :to="{ name: 'sponsor-nuxtjs' }" class="mr-4 py-3 px-6 text-base">
           <nui-svg-go slot="icon" class="h-5 -mt-1 mr-1" />
           Become a sponsor
         </nui-button>

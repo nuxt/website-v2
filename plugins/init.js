@@ -21,7 +21,7 @@ export default async function ({ $docs, isDev, env, req, app, store: { commit, s
   try {
     const releases = await $docs.get('/releases')
     commit('setGhVersion', releases[0] ? releases[0].name : 'vX.Y.Z')
-    await dispatch('getLangData', app.i18n.locale)
+    await dispatch('getLangData', state.locale)
     commit('setFilled')
   } catch (e) {
     console.error('Error on filling the store, please run the docs server.') // eslint-disable-line no-console

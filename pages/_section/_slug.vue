@@ -45,9 +45,9 @@ export default {
   computed: {
     docLink () {
       let docLink = `https://github.com/nuxt/docs/blob/master${this.path}.md`
-      if (this.$i18n.locale === 'ru') {
+      if (this.$store.state.locale === 'ru') {
         docLink = `https://github.com/translation-gang/ru.docs.nuxtjs/blob/translation-ru${this.path}.md`
-      } else if (this.$i18n.locale === 'cn') {
+      } else if (this.$store.state.locale === 'cn') {
         docLink = `https://github.com/o2team/i18n-cn-nuxtjs-docs/blob/dev${this.path}.md`
       }
       return docLink
@@ -71,7 +71,7 @@ export default {
   async asyncData ({ $docs, params, store, error, app }) {
     const defaultSlugs = { guide: 'index', api: 'index', examples: 'hello-world', faq: 'external-resources' }
     const slug = params.slug || defaultSlugs[params.section]
-    const path = `/${app.i18n.locale}/${params.section}/${slug}`
+    const path = `/${store.state.locale}/${params.section}/${slug}`
     const data = {
       path,
       section: params.section,

@@ -53,7 +53,7 @@ export default {
     },
     visible () { return this.$store.state.visibleAffix },
     path () { return this.$route.path.slice(-1) === '/' ? this.$route.path.slice(0, -1) : this.$route.path },
-    menu () { return (this.$i18n && this.$i18n.locale !== 'en' ? `/${this.$i18n.locale}/` : '/') + this.$route.params.section },
+    menu () { return '/' + this.$route.params.section },
     breadcrumb () {
       let breadcrumb = null
       this.list.forEach((group) => {

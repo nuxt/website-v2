@@ -5,14 +5,14 @@
       <template v-if="action === ''">
         <nui-container class="flex items-center justify-between lg:py-6">
           <!-- Left Title -->
-          <a class="block text-nuxt-gray h-7 lg:h-10 lg:pt-1 z-10" :href="localePath('index')" @click.prevent="$router.push(localePath('index'))" @click.right.stop.prevent="$router.push(localePath('design'))">
+          <a class="block text-nuxt-gray h-7 lg:h-10 lg:pt-1 z-10" href="/" @click.prevent="$router.push('/')" @click.right.stop.prevent="$router.push('/design')">
             <h1 class="m-0 h-0 w-0 overflow-hidden">NUXTJS</h1>
             <nui-logo class="h-6 lg:h-auto" />
           </a>
           <!-- Center Navigation -->
           <ul class="hidden lg:flex lg:pt-1 xl:pt-0 text-center">
             <li v-for="link in links" :key="link" class="header_nav_link xl:px-4 lg:py-0 lg:px-2 py-2">
-              <nuxt-link class="block p-2 font-medium uppercase hover:no-underline hover:text-nuxt-lightgreen" :to="localePath({ name: 'section-slug', params: { section: link }})">
+              <nuxt-link class="block p-2 font-medium uppercase hover:no-underline hover:text-nuxt-lightgreen" :to="{ name: 'section-slug', params: { section: link } }">
                 {{ $store.state.lang.links[link] || link }}
               </nuxt-link>
             </li>
@@ -43,7 +43,7 @@
     <!-- Mobile Main Navigation -->
     <nav class="header_mobile_nav block lg:hidden">
       <nui-container class="flex justify-between">
-        <a v-for="link in links" :key="link" class="block md:flex p-2 md:p-4 text-nuxt-gray hover:no-underline hover:text-nuxt-lightgreen text-center visited:text-nuxt-gray" :href="localePath({ name: 'section-slug', params: { section: action }})" @click.prevent="$emit('change', action === link ? '' : link)">
+        <a v-for="link in links" :key="link" class="block md:flex p-2 md:p-4 text-nuxt-gray hover:no-underline hover:text-nuxt-lightgreen text-center visited:text-nuxt-gray" :href="{ name: 'section-slug', params: { section: action } }" @click.prevent="$emit('change', action === link ? '' : link)">
           <component :is="'nui-' + link + '-icon'" class="inline-block h-5 fill-current mb-1" :class="{'text-nuxt-lightgreen': action === link}"/>
           <span class="block text-xs md:text-base md:pl-3 font-medium text-nuxt-gray">{{ $store.state.lang.links[link] || link }}</span>
         </a>
@@ -109,7 +109,7 @@ export default {
   },
   computed: {
     path () { return this.$route.path.slice(-1) === '/' ? this.$route.path.slice(0, -1) : this.$route.path },
-    locale () { return (this.$i18n && this.$i18n.locale !== 'en' ? `/${this.$i18n.locale}/` : '/') + this.action },
+    locale () { return '/' + this.action },
     sublinks () { return this.$store.state.menu[this.action] || [] }
   },
   methods: {

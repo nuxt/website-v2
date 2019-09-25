@@ -1,3 +1,5 @@
+const locale = process.env.NUXT_LOCALE || 'en'
+
 export default {
   // modern: 'client',
   head: {
@@ -25,20 +27,7 @@ export default {
     // https://github.com/Atinux/nuxt-tailwindcss/
     '@nuxtjs/tailwindcss',
     // https://pwa.nuxtjs.org
-    '@nuxtjs/pwa',
-    // https://nuxt-community.github.io/nuxt-i18n
-    ['nuxt-i18n', {
-      locales: [
-        { code: 'fr', iso: 'fr-FR', text: 'Français' },
-        { code: 'zh', iso: 'zh-ZH', text: '简体中文' },
-        { code: 'ja', iso: 'ja-JA', text: '日本語' },
-        { code: 'ko', iso: 'ko-KO', text: '한국어' },
-        { code: 'ru', iso: 'ru-RU', text: 'Русский' },
-        { code: 'id', iso: 'id-ID', text: 'Indonesian' },
-        { code: 'en', iso: 'en-US', text: 'English' }
-      ],
-      defaultLocale: 'en'
-    }]
+    '@nuxtjs/pwa'
   ],
   modules: [
     // https://http.nuxtjs.or
@@ -61,7 +50,11 @@ export default {
   ],
   env: {
     DOC_SEARCH_API_KEY: process.env.DOC_SEARCH_API_KEY || 'ff80fbf046ce827f64f06e16f82f1401',
-    NUXT_API: process.env.NUXT_API || 'https://api.nuxtjs.com'
+    NUXT_API: process.env.NUXT_API || 'https://api.nuxtjs.com',
+    LOCALE: locale
+  },
+  manifest: {
+    lang: locale
   },
   loading: { color: '#41B883' },
   build: {

@@ -12,7 +12,7 @@
               <a v-if="link.href" :href="link.href" target="_blank" rel="noopener noreferrer" class="hover:text-nuxt-lightgreen">
                 {{ link.key }}
               </a>
-              <nuxt-link v-else :to="localePath(link.to)" class="hover:text-nuxt-lightgreen">
+              <nuxt-link v-else :to="link.to" class="hover:text-nuxt-lightgreen">
                 {{ link.key }}
               </nuxt-link>
             </li>
@@ -30,13 +30,13 @@
           </nui-select>
         </div>
         <div class="flex-1 text-center hidden sm:block">
-          <a class="block" :href="localePath('index')" @click.prevent="$router.push(localePath('index'))" @click.right.stop.prevent="$router.push(localePath('design'))">
+          <a class="block" href="/" @click.prevent="$router.push('/')" @click.right.stop.prevent="$router.push('/design')">
             <h1 class="m-0 h-0 w-0 overflow-hidden">NUXTJS</h1>
             <nui-logo class="h-6 lg:h-auto" />
           </a>
         </div>
         <div class="flex-1 text-right">
-          <nui-select v-model="currentLang" :options="$i18n.locales">
+          <nui-select v-model="currentLang" :options="locales">
             <template v-slot:icon>
               <nui-globe />
             </template>
@@ -88,13 +88,30 @@ export default {
     }
   },
   computed: {
+    locales () {
+      return [
+        { text: 'English', locale: 'en', path: 'https://nuxtjs.org' + this.$route.path },
+        { text: 'Français', locale: 'fr', path: 'https://fr.nuxtjs.org' + this.$route.path },
+        { text: '简体中文', locale: 'zh', path: 'https://zh.nuxtjs.org' + this.$route.path },
+        { text: '日本語', locale: 'ja', path: 'https://ja.nuxtjs.org' + this.$route.path },
+        { text: '한국어', locale: 'ko', path: 'https://ko.nuxtjs.org' + this.$route.path },
+        { text: 'Русский', locale: 'ru', path: 'https://ru.nuxtjs.org' + this.$route.path },
+        { text: 'Indonesian', locale: 'id', path: 'https://id.nuxtjs.org' + this.$route.path }
+      ]
+    },
     currentLang: {
       get () {
-        return this.$i18n.locales.map(l => l.code).indexOf(this.$i18n.locale)
+        return this.locales.map(l => l.locale).indexOf(this.$store.state.locale)
       },
-      set (value) {
-        this.$store.dispatch('getLangData', this.$i18n.locales[value].code)
-        this.$router.push(this.switchLocalePath(this.$i18n.locales[value].code))
+      set (index) {
+        const lang = this.locales[index]
+        if (!lang) {
+          return
+        }
+        if (process.env.NODE_ENV === 'development') {
+          lang.path = lang.path.replace('https', 'http').replace('nuxtjs.org', window.location.host.split('.').slice(-1)[0])
+        }
+        window.location.href = lang.path
       }
     },
     currentTheme: {

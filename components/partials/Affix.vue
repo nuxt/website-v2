@@ -9,7 +9,7 @@
           <a v-for="sponsor in sponsors" :key="sponsor.name" :href="sponsor.link" class="block lg:inline-block my-4" rel="noopener sponsored">
             <img :src="sponsor.img" :alt="sponsor.name" class="h-16">
           </a>
-          <nui-button :to="localePath('sponsor-nuxtjs')" class="justify-center mb-4">
+          <nui-button :to="{ name: 'sponsor-nuxtjs' }" class="justify-center mb-4">
             Support Us
           </nui-button>
         </div>

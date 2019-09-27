@@ -1,3 +1,4 @@
+/* purgecss start ignore */
 body {
   & article {
     & ul, & ol {
@@ -17,3 +18,4 @@ body {
     }
   }
 }
+/* purgecss end ignore */

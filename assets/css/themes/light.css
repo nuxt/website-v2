@@ -1,3 +1,4 @@
+/* purgecss start ignore */
 @import './light/links.css';
 @import './light/headings.css';
 @import './light/texts.css';
@@ -21,3 +22,4 @@ body {
     transition: opacity 0.5s ease-out;
   }
 }
+/* purgecss end ignore */

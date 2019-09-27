@@ -125,36 +125,39 @@ export default {
 .header {
   @apply fixed bg-white top-0 left-0 right-0 z-30;
 }
-  .header_mobile_nav {
-    @apply fixed bg-white border-t border-gray-300 left-0 bottom-0 right-0 z-30;
-  }
-  .header_mobile_aside {
-    @apply fixed left-0 bg-gray-100 pt-6 z-20 w-full overflow-y-auto;
-    top: 72px;
-    bottom: 60px;
+.header_nav_link a.nuxt-link-active {
+    @apply text-nuxt-lightgreen;
+}
+.header_mobile_nav {
+  @apply fixed bg-white border-t border-gray-300 left-0 bottom-0 right-0 z-30;
+}
+.header_mobile_aside {
+  @apply fixed left-0 bg-gray-100 pt-6 z-20 w-full overflow-y-auto;
+  top: 72px;
+  bottom: 60px;
+  transform: translateX(-100%);
+  transition-property: transform;
+  transition-duration: 1s;
+  transition-timing-function: cubic-bezier(0.23, 1, 0.32, 1);
+  /* transition-delay: .5s; */
+  & .header_mobile_aside_group {
     transform: translateX(-100%);
     transition-property: transform;
-    transition-duration: 1s;
-    transition-timing-function: cubic-bezier(0.23, 1, 0.32, 1);
-    /* transition-delay: .5s; */
-    & .header_mobile_aside_group {
-      transform: translateX(-100%);
-      transition-property: transform;
-      transition-duration: 0.3s;
-      transition-timing-function: ease-in-out;
-      &:nth-child(1) { transition-delay: 0.2s; }
-      &:nth-child(2) { transition-delay: 0.3s; }
-      &:nth-child(3) { transition-delay: 0.4s; }
-      &:nth-child(4) { transition-delay: 0.5s; }
-    }
+    transition-duration: 0.3s;
+    transition-timing-function: ease-in-out;
+    &:nth-child(1) { transition-delay: 0.2s; }
+    &:nth-child(2) { transition-delay: 0.3s; }
+    &:nth-child(3) { transition-delay: 0.4s; }
+    &:nth-child(4) { transition-delay: 0.5s; }
   }
-  .header_mobile_aside--open {
+}
+.header_mobile_aside--open {
+  transform: translateX(0px);
+  transition-delay: 0s;
+  & .header_mobile_aside_group {
     transform: translateX(0px);
-    transition-delay: 0s;
-    & .header_mobile_aside_group {
-      transform: translateX(0px);
-    }
   }
+}
 .list-enter-active, .list-leave-active {
   transition: all 1s;
 }

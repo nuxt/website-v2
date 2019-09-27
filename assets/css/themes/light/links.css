@@ -1,7 +1,0 @@
-/* purgecss start ignore */
-body {
-  & .nuxt-link-active, .nuxt-link-exact-active {
-    @apply text-nuxt-lightgreen;
-  }
-}
-/* purgecss end ignore */

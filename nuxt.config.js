@@ -36,12 +36,6 @@ export default {
   http: {
     proxy: true
   },
-  proxy: {
-    '/api/otechie': {
-      target: 'https://api.otechie.com',
-      pathRewrite: { '^/api/otechie': '' }
-    }
-  },
   plugins: [
     '~/plugins/init.js',
     '~/plugins/intersection-observer.client.js',

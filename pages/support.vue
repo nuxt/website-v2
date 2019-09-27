@@ -12,14 +12,14 @@
       </div>
       <i-support class="w-2/3 mx-auto lg:mx-0 lg:w-5/12 lg:-mt-8"/>
     </div>
-    <div class="flex flex-wrap -mx-2 md:-mx-4 mb-4">
-      <section v-for="service of services" :key="service.slug" class="w-full lg:w-1/2 p-2 md:p-4">
-        <div class="bg-gray-100 hover:bg-gray-200 p-8 rounded h-full relative">
-          <component :is="service.slug" class="float-right mb-4"/>
-          <h2 class="text-2xl font-medium mb-2">{{ service.name }}</h2>
-          <h3 class="text-nuxt-lightgreen font-medium text-2xl mb-4">${{ service.hourlyRate / 100 }} <span class="text-sm">/hr</span> <span class="inline-block pl-2 text-base text-gray-600">${{ service.minimumFee | currency }} minimum</span></h3>
-          <p class="mb-6">{{ service.description }}</p>
-          <nui-button :href="`https://otechie.com/nuxt/${service.slug}`" rel="noopener" target="_blank" class="sm:mr-4 py-3 px-6 text-base">
+    <div class="flex -mx-2 md:-mx-4 mb-4">
+      <section class="w-full p-2 md:p-4">
+        <div class="bg-gray-100 hover:bg-gray-200 p-8 rounded w-full relative">
+          <technical-support class="float-right mb-4"/>
+          <h2 class="text-2xl font-medium mb-2">Technical support</h2>
+          <h3 class="text-nuxt-lightgreen font-medium text-2xl mb-4">$250 <span class="text-sm">/hr</span></h3>
+          <p class="mb-6">Get project audits, app deployments, custom development and technical support from the NuxtJS core team.</p>
+          <nui-button href="https://otechie.com/nuxt" rel="noopener" target="_blank" class="sm:mr-4 py-3 px-6 text-base">
             <nui-svg-comments slot="icon" class="h-5 -mb-1 mr-1" />
             Start chat
           </nui-button>
@@ -58,9 +58,6 @@
 import nuiSvgPlay from '@/components/svg/AngleDoubleRight.vue'
 import nuiSvgTicket from '@/components/svg/InboxIn.vue'
 import nuiSvgComments from '@/components/svg/Comments.vue'
-import appDeployment from '@/components/svg/streamline/app-deployment.vue'
-import customDevelopment from '@/components/svg/streamline/custom-development.vue'
-import projectAudit from '@/components/svg/streamline/project-audit.vue'
 import technicalSupport from '@/components/svg/streamline/technical-support.vue'
 import iSupport from '@/components/svg/fogg/support'
 
@@ -70,9 +67,6 @@ export default {
     nuiSvgPlay,
     nuiSvgComments,
     nuiSvgTicket,
-    appDeployment,
-    customDevelopment,
-    projectAudit,
     technicalSupport
   },
   head: {
@@ -80,17 +74,6 @@ export default {
     meta: [
       { hid: 'description', name: 'description', content: '' }
     ]
-  },
-  filters: {
-    currency (value) {
-      return (value / 100).toFixed(2).replace(/\d(?=(\d{3})+\.)/g, '$&,').replace(/\.00$/, '')
-    }
-  },
-  async asyncData ({ $http }) {
-    const baseApi = process.server ? 'https://api.otechie.com' : 'api/otechie'
-    const { services } = await $http.$get(`${baseApi}/consultancy/nuxt`)
-
-    return { services }
   }
 }
 </script>

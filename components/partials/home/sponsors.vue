@@ -1,7 +1,7 @@
 <template>
   <nui-container class="py-12 text-center">
     <section class="px-4">
-      <h1 class="text-3xl uppercase pb-16">
+      <h1 class="text-3xl uppercase">
         Sponsors
       </h1>
       <i-sponsoring class="inline-block float-right ml-4" />

@@ -3,11 +3,5 @@ body {
   & .nuxt-link-active, .nuxt-link-exact-active {
     @apply text-nuxt-lightgreen;
   }
-  & .button-gray {
-    @apply bg-gray-200 text-nuxt-gray;
-    &:hover {
-      @apply bg-gray-300;
-    }
-  }
 }
 /* purgecss end ignore */

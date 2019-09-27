@@ -1,8 +1,8 @@
 /* purgecss start ignore */
-@import './light/links.css';
 @import './light/headings.css';
 @import './light/texts.css';
 @import './light/lists.css';
+@import './light/links.css';
 @import './light/promote.css';
 @import './light/highlight.css';
 @import './light/algolia.css';

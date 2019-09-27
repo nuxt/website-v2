@@ -18,8 +18,8 @@ export default {
 
 <style>
 .Carbon {
-  @apply p-4 flex flex-col mx-auto;
-  max-width: 160px;
+  @apply p-4 flex flex-col mx-auto bg-gray-200 mt-4;
+  max-width: 100%;
   & .carbon-text {
     @apply text-sm m-0 text-left text-gray-600 block pt-2 leading-relaxed;
     &:hover {
@@ -33,7 +33,6 @@ export default {
     }
   }
   @media (max-width: 1023px) {
-    max-width: 320px;
     margin: 1rem 0;
     & .carbon-img {
       float: left;
@@ -51,6 +50,17 @@ export default {
       float: right;
       text-align: right;
     }
+  }
+}
+@screen sm {
+  .Carbon {
+    max-width: 320px;
+  }
+}
+@screen lg {
+  .Carbon {
+    @apply bg-white mt-0;
+    max-width: 160px;
   }
 }
 </style>

@@ -330,7 +330,7 @@ class DocsServer {
 
     // Check if path exists
     let doc = this.docsFiles[path]
-    const isInvalid = !doc || (!doc.body && !Object.keys(doc.attrs))
+    const isInvalid = !doc || (!doc.body && !Object.keys(doc.attrs).length)
     if (isInvalid && lang !== 'en') {
       // Check fallback for EN
       doc = this.docsFiles['en' + path.slice(2)]

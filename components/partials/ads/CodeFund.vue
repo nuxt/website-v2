@@ -40,7 +40,7 @@ export default {
 
 <style lang="scss">
 .CodeFund {
-  @apply p-4 flex flex-col;
+  @apply p-4 flex flex-col bg-gray-200 mt-4;
   @media (max-width: 1023px) {
     #cf {
       width: 280px !important;
@@ -67,6 +67,11 @@ export default {
       float: right;
       text-align: right;
     }
+  }
+}
+@screen lg {
+  .CodeFund {
+    @apply bg-white mt-0;
   }
 }
 </style>

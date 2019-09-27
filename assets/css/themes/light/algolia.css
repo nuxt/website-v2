@@ -1,3 +1,4 @@
+/* purgecss start ignore */
 .algolia-autocomplete {
   display: block !important;
   height: inherit;
@@ -38,3 +39,4 @@
     }
   }
 }
+/* purgecss end ignore */

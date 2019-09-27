@@ -1,3 +1,4 @@
+/* purgecss start ignore */
 body {
   & article {
     & .Promote {
@@ -20,3 +21,4 @@ body {
     }
   }
 }
+/* purgecss end ignore */

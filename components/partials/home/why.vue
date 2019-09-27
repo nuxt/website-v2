@@ -27,6 +27,20 @@
           <p class="leading-loose text-justify" v-html="$store.state.homepage.why_enjoyable.body" />
         </div>
       </div>
+      <div class="text-center">
+        <nui-button href="https://template.nuxtjs.org" class="mr-4 py-3 px-6 text-base">
+          <svg slot="icon" aria-label="CodeSandbox" class="inline-block h-5 -mt-1 mr-1" viewBox="0 0 1024 1024" style="vertical-align:middle">
+            <g fill="currentColor">
+              <path d="M719 851V639.85L902 533.8v211.47L719 851M302.08 643.44l-179.91-104.3v208.6l179.91 104.83V643.44M511.98 275.8l182.96-106.17L512.06 63 328.44 169.99l183.54 105.8"/>
+            </g>
+            <g fill="none" stroke="currentColor" stroke-width="80" stroke-miterlimit="10">
+              <path d="M899 287.83L509 513v450M122.17 289L511.5 513"/>
+              <path d="M121 739.08l389.92 223.96L901 738.34V288L511 62 121 289z"/>
+            </g>
+          </svg>
+          Try NuxtJS Online
+        </nui-button>
+      </div>
     </section>
   </nui-container>
 </template>

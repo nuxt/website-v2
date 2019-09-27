@@ -43,7 +43,7 @@
       NuxtJS and the maintainers of thousands of other packages are working with Tidelift to deliver one enterprise subscription that covers all of the open source you use.<br>
       If you want the flexibility of open source and the confidence of commerical-grade software, this is for you.
     </p>
-    <nui-button href="https://tidelift.com/subscription/pkg/npm-nuxt?utm_source=nuxt&utm_medium=referral&utm_campaign=enterprise" rel="noopener" target="_blank" class="sm:mr-4 py-3 px-6 text-base button-gray">
+    <nui-button href="https://tidelift.com/subscription/pkg/npm-nuxt?utm_source=nuxt&utm_medium=referral&utm_campaign=enterprise" rel="noopener" target="_blank" class="sm:mr-4 py-3 px-6 text-base">
       <nui-svg-play slot="icon" class="h-5 -mb-1 mr-1" />
       Learn more
     </nui-button>

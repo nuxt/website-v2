@@ -13,7 +13,7 @@
             <nui-svg-meteor slot="icon" class="h-5 -mb-1 mr-1" />
             get started
           </nui-button>
-          <nui-button href="https://github.com/nuxt/nuxt.js" class="sm:mr-4 py-3 px-6 text-base button-gray">
+          <nui-button href="https://github.com/nuxt/nuxt.js" variant="gray" class="sm:mr-4 py-3 px-6 text-base">
             <nui-svg-gh slot="icon" class="h-6 -mt-1 mr-1" />
             22K+ github stars
           </nui-button>

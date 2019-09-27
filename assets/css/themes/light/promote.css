@@ -2,22 +2,34 @@
 body {
   & article {
     & .Promote {
-      @apply flex p-4 my-4 rounded bg-gray-200 text-gray-600;
+      @apply flex flex-col p-4 my-4 rounded bg-gray-200 text-gray-600;
+      & img {
+        width: 240px;
+        height: 120px;
+        @apply mb-3;
+      }
       & .Promote__Content {
-        @apply pl-4;
         & .Promote__Content__Title {
           @apply text-gray-700 text-xl;
         }
         & .Promote__Content__Description {
-          @apply leading-relaxed py-2 text-sm;
+          @apply leading-relaxed py-1 text-sm;
         }
         & .Promote__Content__Signature {
-          @apply text-xs text-gray-500;
+          @apply text-xs text-gray-500 m-0 p-0;
         }
       }
       &:hover {
-        @apply no-underline text-nuxt-green;
+        @apply no-underline bg-gray-300;
       }
+    }
+  }
+}
+@screen md {
+  body article .Promote {
+    @apply flex-row items-center;
+    & .Promote__Content {
+      @apply pl-4;
     }
   }
 }

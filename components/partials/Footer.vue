@@ -72,7 +72,7 @@ export default {
         discover: [
           { key: 'NuxtJS Themes', to: '/themes' },
           { key: 'Design resources', to: '/design' },
-          { key: 'A worldwild team', to: '/team' }
+          { key: 'A worldwilde team', to: '/team' }
         ],
         follow: [
           { key: 'Github', href: 'https://github.com/nuxt/nuxt.js' },

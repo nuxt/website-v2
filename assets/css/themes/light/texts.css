@@ -14,6 +14,10 @@ body {
       @apply bg-gray-100 text-red-500 p-1 not-italic rounded text-sm;
     }
     & a {
+      @apply text-nuxt-lightgreen;
+      &:hover {
+        @apply underline;
+      }
       & code {
         @apply text-nuxt-lightgreen;
         &:hover {

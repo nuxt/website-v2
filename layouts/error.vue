@@ -40,6 +40,7 @@ export default {
       type: Object,
       required: true
     }
-  }
+  },
+  layout: 'default'
 }
 </script>

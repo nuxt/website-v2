@@ -33,6 +33,16 @@ Start a dev server on `http://nuxt:3000`
 yarn dev
 ```
 
+## Production
+
+Make sure to install [serve](http://npmjs.com/package/serve) with `yarn global add serve`.
+
+```bash
+yarn generate
+serve dist/
+# Checkout http://localhost:5000
+```
+
 # zh.nuxtjs.org
 
 Nuxt.js 官网 [nuxtjs.org](https://nuxtjs.org) 的简体中文版，由[凹凸实验室](https://aotu.io)负责翻译整理。

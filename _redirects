@@ -5,3 +5,4 @@ https://www.nuxtjs.org/* https://nuxtjs.org/:splat 301!
 # Redirect /logos to /design
 /logos /design
 /guide/themes /themes
+/api/components-no-ssr /api/components-client-only

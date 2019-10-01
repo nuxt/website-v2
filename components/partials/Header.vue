@@ -43,10 +43,10 @@
     <!-- Mobile Main Navigation -->
     <nav class="header_mobile_nav block lg:hidden">
       <nui-container class="flex justify-between">
-        <a v-for="link in links" :key="link" class="block md:flex p-2 md:p-4 text-nuxt-gray hover:no-underline hover:text-nuxt-lightgreen text-center visited:text-nuxt-gray" :href="{ name: 'section-slug', params: { section: action } }" @click.prevent="$emit('change', action === link ? '' : link)">
+        <nuxt-link v-for="link in links" :key="link" class="block md:flex p-2 md:p-4 text-nuxt-gray hover:no-underline hover:text-nuxt-lightgreen text-center visited:text-nuxt-gray" :to="{ name: 'section-slug', params: { section: link } }" @click.prevent="$emit('change', action === link ? '' : link)">
           <component :is="'nui-' + link + '-icon'" class="inline-block h-5 fill-current mb-1" :class="{'text-nuxt-lightgreen': action === link}"/>
           <span class="block text-xs md:text-base md:pl-3 font-medium text-nuxt-gray">{{ $store.state.lang.links[link] || link }}</span>
-        </a>
+        </nuxt-link>
       </nui-container>
     </nav>
     <!-- Mobile Aside Navigation -->

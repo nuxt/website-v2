@@ -18,24 +18,18 @@ body {
     }
     & h1 {
       @apply text-nuxt-gray relative text-3xl inline-block mb-8;
-      &::before {
+      &::after {
         content: " ";
         width: 80%;
-        height: 4px;
-        top: 3.25rem;
-        left: 0;
-        @apply rounded absolute bg-nuxt-lightgreen;
+        @apply block border-2 border-nuxt-lightgreen my-2 rounded;
       }
     }
     & h2 {
       @apply text-nuxt-gray relative text-2xl inline-block my-8;
-      &::before {
+      &::after {
         content: " ";
         width: 80%;
-        height: 4px;
-        top: 3rem;
-        left: 0;
-        @apply rounded absolute bg-nuxt-green;
+        @apply block border-2 border-nuxt-green my-2 rounded;
       }
       & code {
         @apply text-xl;
@@ -46,13 +40,10 @@ body {
     }
     & h3 {
       @apply text-nuxt-gray relative text-xl inline-block my-8;
-      &::before {
+      &::after {
         content: " ";
         width: 80%;
-        height: 4px;
-        top: 2.5rem;
-        left: 0;
-        @apply rounded absolute bg-gray-600;
+        @apply block border-2 border-gray-600 my-2 rounded;
       }
       & code {
         @apply text-lg;

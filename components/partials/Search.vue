@@ -30,6 +30,12 @@ export default {
     }
   },
   mounted () {
+    const mousetrap = require('mousetrap')
+    mousetrap.bind('/', function (e) {
+      e.preventDefault()
+      document.getElementById('algolia').focus()
+    })
+
     onScriptLoaded(() => this.addInstantSearch())
     if (scriptInjected) { return }
     // Load JS

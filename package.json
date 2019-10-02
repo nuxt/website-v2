@@ -17,6 +17,7 @@
     "lodash": "^4.17.15",
     "marked": "^0.7.0",
     "micro": "^9.3.4",
+    "mousetrap": "^1.6.3",
     "node-fetch": "^2.6.0",
     "normalize.css": "^8.0.1",
     "nuxt": "^2.9.2",

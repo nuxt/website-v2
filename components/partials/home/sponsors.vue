@@ -1,11 +1,11 @@
 <template>
   <nui-container class="py-12 text-center">
     <section class="px-4">
-      <h1 class="text-3xl uppercase">
+      <h1 class="text-3xl uppercase mb-2 sm:mb-0">
         Sponsors
       </h1>
-      <i-sponsoring class="inline-block float-right ml-4" />
-      <div class="pt-6 pb-12 leading-loose">
+      <i-sponsoring id="sponsor-img" class="inline-block float-right lg:ml-4" />
+      <div class="pt-6 pb-12 leading-loose text-left">
         <p>
           NuxtJS is an MIT licensed open source project and completely free to use.
           However, the amount of effort needed to maintain and develop new features for the project is not sustainable without proper financial backing.
@@ -66,7 +66,7 @@ export default {
 }
 </script>
 
-<style>
+<style lang="scss">
 .sponsor {
   & img {
     opacity: 0.75;
@@ -79,5 +79,8 @@ export default {
       filter: grayscale(0%);
     }
   }
+}
+#sponsor-img {
+  shape-outside: circle(49.5% at 90px 95px);
 }
 </style>

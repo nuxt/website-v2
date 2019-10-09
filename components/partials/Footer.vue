@@ -77,7 +77,8 @@ export default {
         follow: [
           { key: 'Github', href: 'https://github.com/nuxt/nuxt.js' },
           { key: 'Twitter', href: 'https://twitter.com/nuxt_js' },
-          { key: 'Discord', href: 'https://discord.nuxtjs.org' }
+          { key: 'Discord', href: 'https://discord.nuxtjs.org' },
+          { key: 'DEV Community', href: 'https://dev.to/t/nuxt' }
         ],
         support: [
           { key: 'Sponsor NuxtJS', to: '/sponsor-nuxtjs' },

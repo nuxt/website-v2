@@ -11,7 +11,7 @@
           </div>
           <input type="submit" :value="pending ? 'Subscribing...' : 'Subscribe'" name="subscribe" class="cursor-pointer inline-block bg-nuxt-lightgreen text-white font-medium text-sm px-4 py-2 shadow uppercase rounded rounded-l-none hover:bg-nuxt-green hover:shadow-md text-base" :class="[pending ? 'bg-nuxt-green': '']">
         </form>
-        <p v-if="subscribed" class="text-nuxt-green py-1">An email to confirm your subscription has been sent to {{ email }} 💚</p>
+        <p v-if="subscribed" class="text-nuxt-green py-1">An email to confirm your subscription has been sent to {{ subscribedEmail }} 💚</p>
         <p v-if="error" class="text-red-600 py-1">{{ error }}</p>
       </client-only>
     </section>
@@ -23,6 +23,7 @@ export default {
   data () {
     return {
       email: '',
+      subscribedEmail: '',
       pending: false,
       subscribed: false,
       error: null
@@ -38,6 +39,7 @@ export default {
       try {
         await new Promise(resolve => setTimeout(resolve, 400))
         await this.$http.$post(`${process.env.NUXT_API}/newsletter`, { email: this.email })
+        this.subscribedEmail = this.email
         this.subscribed = true
         this.pending = false
       } catch (err) {

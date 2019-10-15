@@ -10,21 +10,21 @@
           <h4 class="text-center uppercase text-2xl pt-8 pb-4">
             {{ $store.state.homepage.modes_server_side_rendering.attrs.content_title }}
           </h4>
-          <p class="leading-loose text-justify" v-html="$store.state.homepage.modes_server_side_rendering.body" />
+          <p class="leading-loose text-left sm:text-justify" v-html="$store.state.homepage.modes_server_side_rendering.body" />
         </div>
         <div class="lg:w-1/2 p-4 lg:p-8">
           <i-snow class="mx-auto my-8 w-32"/>
           <h4 class="text-center uppercase text-2xl pt-8 pb-4">
             {{ $store.state.homepage.modes_statically_generated.attrs.content_title }}
           </h4>
-          <p class="leading-loose text-justify" v-html="$store.state.homepage.modes_statically_generated.body" />
+          <p class="leading-loose text-left sm:text-justify" v-html="$store.state.homepage.modes_statically_generated.body" />
         </div>
       </div>
       <div class="px-4 lg:p-8">
         <h4 class="uppercase text-2xl pt-8 pb-4">
           {{ $store.state.homepage.modes_single_page_app.attrs.content_title }}
         </h4>
-        <p class="leading-loose text-justify" v-html="$store.state.homepage.modes_single_page_app.body" />
+        <p class="leading-loose text-left sm:text-justify" v-html="$store.state.homepage.modes_single_page_app.body" />
       </div>
     </section>
   </nui-container>

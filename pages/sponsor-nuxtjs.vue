@@ -123,7 +123,11 @@ export default {
           { name: 'Icons8', img: 'icons8.png', url: 'https://icons8.com/?ref=nuxt', class: 'h-8' },
           { name: 'Clay', img: 'clay.png', url: 'https://clay.global/?ref=nuxt', class: 'h-8' },
           { name: 'UX Planet', img: 'ux-planet.png', url: 'https://uxplanet.org/top-ui-ux-design-agencies-user-experience-firms-8c54697e290/?ref=nuxt', class: 'h-8' },
-          { name: 'FireStickHow', img: 'fire-stick-how.png', url: 'hhttps://www.firestickhow.com/?ref=nuxt', class: 'h-8' }
+          { name: 'FireStickHow', img: 'fire-stick-how.png', url: 'https://www.firestickhow.com/?ref=nuxt', class: 'h-8' },
+          { name: 'CrossWordSolver', img: 'crosswordsolver.svg', url: 'https://www.crosswordsolver.com/?ref=nuxt', class: 'h-8' }
+        ],
+        special: [
+          { name: 'Google Chrome', img: 'google-chrome.svg', url: 'https://www.google.com/chrome/?ref=nuxt', class: 'h-12' }
         ]
       },
       onetime: {

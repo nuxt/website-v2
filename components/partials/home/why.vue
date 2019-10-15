@@ -24,7 +24,7 @@
           <h4 class="uppercase text-2xl py-8">
             {{ $store.state.homepage.why_enjoyable.attrs.title }}
           </h4>
-          <p class="leading-loose text-justify" v-html="$store.state.homepage.why_enjoyable.body" />
+          <p class="leading-loose text-left sm:text-justify" v-html="$store.state.homepage.why_enjoyable.body" />
         </div>
       </div>
       <div class="text-center">

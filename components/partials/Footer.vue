@@ -75,7 +75,7 @@ export default {
           { key: 'A worldwide team', to: '/team' }
         ],
         follow: [
-          { key: 'Github', href: 'https://github.com/nuxt/nuxt.js' },
+          { key: 'GitHub', href: 'https://github.com/nuxt/nuxt.js' },
           { key: 'Twitter', href: 'https://twitter.com/nuxt_js' },
           { key: 'Discord', href: 'https://discord.nuxtjs.org' }
         ],

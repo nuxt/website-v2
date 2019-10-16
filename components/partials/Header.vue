@@ -42,12 +42,12 @@
     </header>
     <!-- Mobile Main Navigation -->
     <nav class="header_mobile_nav block lg:hidden">
-      <nui-container class="flex justify-between">
-        <nuxt-link v-for="link in links" :key="link" class="block md:flex p-2 md:p-4 text-nuxt-gray hover:no-underline hover:text-nuxt-lightgreen text-center visited:text-nuxt-gray" :to="{ name: 'section-slug', params: { section: link } }" @click.prevent.native="$emit('change', action === link ? '' : ($route.params.section !== link ? '' : link))">
+      <div class="flex justify-between">
+        <nuxt-link v-for="link in links" :key="link" class="block md:flex md:justify-center w-full p-2 md:p-4 text-nuxt-gray hover:no-underline hover:text-nuxt-lightgreen text-center visited:text-nuxt-gray" :to="{ name: 'section-slug', params: { section: link } }" @click.prevent.native="$emit('change', action === link ? '' : ($route.params.section !== link ? '' : link))">
           <component :is="'nui-' + link + '-icon'" class="inline-block h-5 fill-current mb-1" :class="{'text-nuxt-lightgreen': action === link}"/>
           <span class="block text-xs md:text-base md:pl-3 font-medium text-nuxt-gray">{{ $store.state.lang.links[link] || link }}</span>
         </nuxt-link>
-      </nui-container>
+      </div>
     </nav>
     <!-- Mobile Aside Navigation -->
     <div class="header_mobile_aside block lg:hidden" :class="{'header_mobile_aside--open': sublinks.length}">

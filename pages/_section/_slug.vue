@@ -16,13 +16,13 @@
             {{ $store.state.lang.links.download }}
           </a>
         </div>
-        <contribute :doc-link="docLink" />
+        <contribute :doc-link="docLink" :contributors="contributors" />
       </nui-article>
       <nui-article v-else>
         <h1>{{ page.attrs.title }}</h1>
         <responsive-video v-if="page.attrs.youtube" :src="page.attrs.youtube" />
         <html-parser :content="page.body" />
-        <contribute :doc-link="docLink" />
+        <contribute :doc-link="docLink" :contributors="contributors" />
       </nui-article>
     </div>
     <nui-affix class="opacity-transition" :class="{ 'opacity-25': $store.state.focusMode }">
@@ -79,6 +79,7 @@ export default {
     }
     try {
       const page = await $docs.get(path)
+      data.contributors = (await fetch('https://contributors.api.nuxtjs.com' + path).then(res => res.json())).map(({ author }) => ({ author }))
       if (!page.attrs.title) { console.error(`[/${path}] ${store.state.lang.text.please_define_title}.`) } // eslint-disable-line no-console
       if (!page.attrs.description) { console.error(`[/${path}] ${store.state.lang.text.please_define_description}.`) } // eslint-disable-line no-console
       data.page = page

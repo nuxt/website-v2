@@ -17,7 +17,7 @@ export default {
   },
   data () {
     return {
-      displayCarbon: false
+      displayCarbon: true
     }
   }
 }

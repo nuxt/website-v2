@@ -7,7 +7,7 @@
 <script>
 export default {
   mounted () {
-    if (this.$store.state.locale === 'en' && this.$refs.carbonadsText) {
+    if (this.$refs.carbonadsText) {
       this.loadScript()
     }
   },

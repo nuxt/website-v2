@@ -1,30 +1,28 @@
 <template>
   <nui-container class="mb-12 bg-gray-100 lg:bg-transparent rounded">
     <section class="lg:bg-gray-100 rounded py-6 sm:p-6">
-      <h1 class="text-3xl uppercase text-center pt-10 pb-8">
-        Why NUXT<span class="text-nuxt-lightgreen">JS</span>
-      </h1>
+      <h1 class="text-3xl uppercase text-center pt-10 pb-8" v-html="wordings.why.body" />
       <div class="flex flex-col lg:flex-row items-start justify-between">
         <div class="lg:w-1/3 px-4 py-8 lg:p-8 text-center">
           <i-modular class="inline-block" />
           <h4 class="uppercase text-2xl py-8">
-            {{ $store.state.homepage.why_modular.attrs.title }}
+            {{ wordings.why_modular.attrs.title }}
           </h4>
-          <p class="leading-loose text-left sm:text-justify" v-html="$store.state.homepage.why_modular.body" />
+          <p class="leading-loose text-left sm:text-justify" v-html="wordings.why_modular.body" />
         </div>
         <div class="lg:w-1/3 px-4 py-8 lg:p-8 text-center">
           <i-performant class="inline-block" />
           <h4 class="uppercase text-2xl py-8">
-            {{ $store.state.homepage.why_performant.attrs.title }}
+            {{ wordings.why_performant.attrs.title }}
           </h4>
-          <p class="leading-loose text-left sm:text-justify" v-html="$store.state.homepage.why_performant.body" />
+          <p class="leading-loose text-left sm:text-justify" v-html="wordings.why_performant.body" />
         </div>
         <div class="lg:w-1/3 px-4 py-8 lg:p-8 text-center">
           <i-enjoyable class="inline-block" />
           <h4 class="uppercase text-2xl py-8">
-            {{ $store.state.homepage.why_enjoyable.attrs.title }}
+            {{ wordings.why_enjoyable.attrs.title }}
           </h4>
-          <p class="leading-loose text-left sm:text-justify" v-html="$store.state.homepage.why_enjoyable.body" />
+          <p class="leading-loose text-left sm:text-justify" v-html="wordings.why_enjoyable.body" />
         </div>
       </div>
       <div class="text-center">
@@ -38,7 +36,7 @@
               <path d="M121 739.08l389.92 223.96L901 738.34V288L511 62 121 289z"/>
             </g>
           </svg>
-          Try NuxtJS Online
+          {{ buttonWording }}
         </nui-button>
       </div>
     </section>
@@ -55,6 +53,12 @@ export default {
     iPerformant,
     iModular,
     iEnjoyable
+  },
+  data () {
+    return {
+      wordings: this.$store.state.homepage,
+      buttonWording: this.$store.state.lang.homepage.why.try_nuxtjs_online
+    }
   }
 }
 </script>

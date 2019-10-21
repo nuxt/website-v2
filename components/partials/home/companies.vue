@@ -1,9 +1,7 @@
 <template>
   <nui-container class="py-24 md:mb-8">
     <section>
-      <h1 class="text-3xl uppercase text-center pb-8">
-        Who's using nuxt<span class="text-nuxt-lightgreen">JS</span>
-      </h1>
+      <h1 class="text-3xl uppercase text-center pb-8" v-html="$store.state.homepage.companies.attrs.title" />
       <div class="flex flex-col lg:flex-row items-center justify-between">
         <div v-for="(company, i) in langCompanies.slice(0, 5)" :key="i" class="p-4 lg:p-8 text-center">
           <a :href="company.url" target="_blank" rel="noopener nofollow" class="company">

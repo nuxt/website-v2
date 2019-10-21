@@ -1,17 +1,10 @@
 <template>
   <nui-container class="py-12 text-center">
     <section class="px-4">
-      <h1 class="text-3xl uppercase mb-2 sm:mb-0">
-        Sponsors
-      </h1>
+      <h1 class="text-3xl uppercase mb-2 sm:mb-0" v-html="wordings.attrs.title" />
       <i-sponsoring id="sponsor-img" class="inline-block float-right lg:ml-4" />
       <div class="pt-6 pb-12 leading-loose text-left">
-        <p>
-          NuxtJS is an MIT licensed open source project and completely free to use.
-          However, the amount of effort needed to maintain and develop new features for the project is not sustainable without proper financial backing.
-          If you run a business and are using Nuxt in a revenue-generating product, it makes business sense to sponsor Nuxt development: it ensures the project that your product relies on stays healthy and actively maintained. It can also help your exposure in the Vue/Nuxt community and makes it easier to attract Vue/Nuxt developers.
-          If you are an individual user and have enjoyed the productivity of using Nuxt, consider donating as a sign of appreciation.
-        </p>
+        <p v-html="wordings.body" />
       </div>
       <div v-for="(group, groupKey) in sponsors" :key="groupKey" class="text-center pb-8">
         <h2 class="uppercase text pb-8">
@@ -31,7 +24,7 @@
       <div class="text-center">
         <nui-button :to="{ name: 'sponsor-nuxtjs' }" class="mr-4 py-3 px-6 text-base">
           <nui-svg-go slot="icon" class="h-5 -mt-1 mr-1" />
-          Become a sponsor
+          {{ buttonWording }}
         </nui-button>
       </div>
     </section>
@@ -63,7 +56,9 @@ export default {
         special: [
           { name: 'Google Chrome', img: 'google-chrome.svg', url: 'https://www.google.com/chrome/?ref=nuxt', class: 'h-12' }
         ]
-      }
+      },
+      wordings: this.$store.state.homepage.sponsors,
+      buttonWording: this.$store.state.lang.homepage.sponsors.become_a_sponsor
     }
   }
 }

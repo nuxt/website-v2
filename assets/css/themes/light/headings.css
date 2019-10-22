@@ -17,7 +17,7 @@ body {
       }
     }
     & h1 {
-      @apply text-nuxt-gray relative text-3xl inline-block mb-8;
+      @apply text-nuxt-gray relative text-3xl table mb-8;
       &::after {
         content: " ";
         width: 80%;
@@ -25,7 +25,7 @@ body {
       }
     }
     & h2 {
-      @apply text-nuxt-gray relative text-2xl inline-block my-8;
+      @apply text-nuxt-gray relative text-2xl table my-8;
       &::after {
         content: " ";
         width: 80%;
@@ -39,7 +39,7 @@ body {
       }
     }
     & h3 {
-      @apply text-nuxt-gray relative text-xl inline-block my-8;
+      @apply text-nuxt-gray relative text-xl table my-8;
       &::after {
         content: " ";
         width: 80%;

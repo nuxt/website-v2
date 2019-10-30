@@ -79,7 +79,7 @@ export default {
     }
     try {
       const page = await $docs.get(path)
-      data.contributors = (await fetch('https://contributors.api.nuxtjs.com' + path).then(res => res.json())).map(({ author }) => ({ author }))
+      data.contributors = (await fetch('https://contributors-api.onrender.com' + path).then(res => res.json())).map(({ author }) => ({ author }))
       if (!page.attrs.title) { console.error(`[/${path}] ${store.state.lang.text.please_define_title}.`) } // eslint-disable-line no-console
       if (!page.attrs.description) { console.error(`[/${path}] ${store.state.lang.text.please_define_description}.`) } // eslint-disable-line no-console
       data.page = page

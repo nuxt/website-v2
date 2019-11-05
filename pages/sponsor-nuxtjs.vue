@@ -114,9 +114,7 @@ export default {
         gold: [
           { name: 'Tipe', img: 'tipe-io-cms.png', url: 'https://tipe.io/?ref=nuxt', class: 'h-12' },
           { name: 'VueMastery', img: 'vueMastery-brand.svg', url: 'https://www.vuemastery.com/?ref=nuxt', class: 'h-10' },
-          { name: 'VueSchool', img: 'vueschool.png', url: 'https://vueschool.io/?friend=nuxt&utm_source=Nuxtjs.org&utm_medium=banner&utm_campaign=Open%20Collective', class: 'h-12' },
-          { name: 'ShipShape', img: 'shipshape-logo.svg', url: 'https://shipshape.io/?ref=nuxt', class: 'h-12' },
-          { name: 'Hapi', img: 'hapi-logo.svg', url: 'https://hapijs.com/?ref=nuxt', class: 'h-12' }
+          { name: 'VueSchool', img: 'vueschool.png', url: 'https://vueschool.io/?friend=nuxt&utm_source=Nuxtjs.org&utm_medium=banner&utm_campaign=Open%20Collective', class: 'h-12' }
         ],
         silver: [
           { name: 'Sparheld', img: 'de-black.png', url: 'https://www.sparheld.de/?ref=nuxt', class: 'h-8' },
@@ -124,7 +122,8 @@ export default {
           { name: 'Clay', img: 'clay.png', url: 'https://clay.global/?ref=nuxt', class: 'h-8' },
           { name: 'UX Planet', img: 'ux-planet.png', url: 'https://uxplanet.org/top-ui-ux-design-agencies-user-experience-firms-8c54697e290/?ref=nuxt', class: 'h-8' },
           { name: 'FireStickHow', img: 'fire-stick-how.png', url: 'https://www.firestickhow.com/?ref=nuxt', class: 'h-8' },
-          { name: 'CrossWordSolver', img: 'crosswordsolver.svg', url: 'https://www.crosswordsolver.com/?ref=nuxt', class: 'h-8' }
+          { name: 'CrossWordSolver', img: 'crosswordsolver.svg', url: 'https://www.crosswordsolver.com/?ref=nuxt', class: 'h-8' },
+          { name: 'ShipShape', img: 'shipshape-logo.svg', url: 'https://shipshape.io/?ref=nuxt', class: 'h-8' }
         ],
         special: [
           { name: 'Google Chrome', img: 'google-chrome.svg', url: 'https://www.google.com/chrome/?ref=nuxt', class: 'h-12' }

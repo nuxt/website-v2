@@ -28,6 +28,11 @@
 >>>>>>> 2fb6a223 (sponsors and flat routes with header links)
               </nuxt-link>
             </li>
+            <li class="header_nav_link xl:px-4 lg:py-0 lg:px-2 py-2">
+              <nuxt-link class="block p-2 font-medium uppercase hover:no-underline hover:text-nuxt-lightgreen" :to="{ name: 'resources' }">
+                {{ $store.state.lang.links['resources'] || 'resources' }}
+              </nuxt-link>
+            </li>
           </ul>
         </nav>
         <nui-btn :to="localePath('are-you-nuxt')" class="hidden lg:flex">
@@ -37,10 +42,17 @@
         <nuxt-link :to="localePath('are-you-nuxt')" class="block flex p-2 -m-2 items-center justify-center text-nuxt-gray hover:text-nuxt-lightgreen z-10 lg:hidden">
           <nui-user-icon class="block h-5 fill-current"/>
         </nuxt-link>
+<<<<<<< HEAD
         <!-- <nui-search class="lg:block hidden"/> -->
         <!-- <a href="#" @click.prevent="openSearch" class="lg:hidden block z-10 py-2 pl-2 w-6 text-nuxt-gray hover:text-nuxt-lightgreen">
           <nui-search-icon class="block h-5 fill-current"/>
         </a> -->
+=======
+        <nuxt-link class="block md:flex md:justify-center w-full p-2 md:p-4 text-nuxt-gray hover:no-underline hover:text-nuxt-lightgreen text-center visited:text-nuxt-gray" :to="{ name: 'resources' }">
+          <nui-resources-icon class="inline-block h-5 fill-current mb-1"/>
+          <span class="block text-xs md:text-base md:pl-3 font-medium text-nuxt-gray">{{ $store.state.lang.links['resources'] || 'resources' }}</span>
+        </nuxt-link>
+>>>>>>> b25bdbb3 (add resources)
       </div>
     </nui-container>
   </header>
@@ -50,11 +62,38 @@
 import nuiBtn from '@/components/commons/Button'
 import nuiContainer from '@/components/commons/Container'
 import nuiLogo from '@/components/svg/Nuxtjs'
+<<<<<<< HEAD
 import nuiBarsIcon from '@/components/svg/Bars'
+=======
+import nuiExamplesIcon from '@/components/svg/Code'
+import nuiGuideIcon from '@/components/svg/Books'
+import nuiApiIcon from '@/components/svg/List'
+import nuiFaqIcon from '@/components/svg/Faq'
+import nuiResourcesIcon from '@/components/svg/Resources'
+>>>>>>> b25bdbb3 (add resources)
 import nuiTimesIcon from '@/components/svg/Times'
 import nuiUserIcon from '@/components/svg/User'
 
 export default {
+<<<<<<< HEAD
+=======
+  components: {
+    nuiTimesIcon,
+    nuiExamplesIcon,
+    nuiGuideIcon,
+    nuiApiIcon,
+    nuiFaqIcon,
+    nuiResourcesIcon,
+    nuiLogo,
+    nuiSearchIcon,
+    nuiSearch,
+    nuiArrowLeft
+  },
+  model: {
+    prop: 'action',
+    event: 'change'
+  },
+>>>>>>> b25bdbb3 (add resources)
   props: {
     mobileNav: {
       type: Boolean,

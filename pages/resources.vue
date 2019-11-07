@@ -3,7 +3,7 @@
     <div class="flex flex-wrap justify-between mb-8">
       <div class="lg:w-6/12 lg:text-left text-center p-4 sm:p-0">
         <h1 class="text-3xl xl:text-4xl text-nuxt-gray font-medium leading-normal mb-6 lg:pt-4">
-          NUXT<span class="text-nuxt-lightgreen">JS</span> Themes<br>
+          NUXT<span class="text-nuxt-lightgreen">JS</span> Resources<br>
         </h1>
         <h3 class="xl:text-lg text-gray-600 font-medium leading-relaxed mb-6">
           With the themes below built by our partners from Creative Tim and Theme Forest you can see how a real world application is built, with Nuxt.js stack behind.
@@ -12,23 +12,16 @@
       <i-themes class="w-2/3 mx-auto lg:mx-0 lg:w-5/12 lg:-mt-8"/>
     </div>
     <section class="flex flex-wrap items-stretch -mx-4">
-      <div v-for="theme in themes" :key="theme.title" class="w-full p-4">
-        <div class="block sm:flex w-full h-full items-start bg-gray-100 hover:bg-gray-200 rounded">
-          <img :src="'/themes/' + theme.img + '.jpg'" :srcset="'/themes/' + theme.img + '-2x.jpg 2x'" :alt="theme.title" class="block w-full sm:w-auto sm:h-full rounded">
-          <div class="w-full p-6">
-            <h4 class="block w-full font-medium text-xl pb-2">
-              {{ theme.title }}
-              <!-- <span class="float-right text-nuxt-lightgreen">{{ theme.price }}</span> -->
-            </h4>
-            <p class="mb-3 text-gray-600">{{ theme.description }}</p>
-            <p v-if="theme.discount" class="text-sm italic text-nuxt-lightgreen" v-html="theme.discount" />
-            <nui-button :href="theme.link" rel="noopener sponsored" target="_blank" class="sm:mr-4 p-3 mt-3 text-sm text-left">
-              <!-- <nui-svg-shopping slot="icon" class="h-4 -mb-1 mr-1" /> -->
-              GET IT for {{ theme.price }}
-            </nui-button>
-          </div>
+      <nuxt-link :to="{ name: 'themes' }" class="w-full lg:w-1/2 p-4">
+        <div class="block sm:flex w-full bg-gray-100 hover:bg-gray-200 rounded">
+          Themes
         </div>
-      </div>
+      </nuxt-link>
+      <nuxt-link :to="{ name: 'video-courses' }" class="w-full lg:w-1/2 p-4">
+        <div class="block sm:flex w-full bg-gray-100 hover:bg-gray-200 rounded">
+          Video Courses
+        </div>
+      </nuxt-link>
     </section>
   </nui-container>
 </template>

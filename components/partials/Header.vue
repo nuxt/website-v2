@@ -16,6 +16,11 @@
                 {{ $store.state.lang.links[link] || link }}
               </nuxt-link>
             </li>
+            <li class="header_nav_link xl:px-4 lg:py-0 lg:px-2 py-2">
+              <nuxt-link class="block p-2 font-medium uppercase hover:no-underline hover:text-nuxt-lightgreen" :to="{ name: 'resources' }">
+                {{ $store.state.lang.links['resources'] || 'resources' }}
+              </nuxt-link>
+            </li>
           </ul>
           <!-- Right Action -->
           <a href="#" class="block md:hidden flex p-2 -m-2 items-center justify-center text-nuxt-gray hover:text-nuxt-lightgreen z-10 lg:hidden" @click.prevent="$emit('change', 'search')">
@@ -47,6 +52,10 @@
           <component :is="'nui-' + link + '-icon'" class="inline-block h-5 fill-current mb-1" :class="{'text-nuxt-lightgreen': action === link}"/>
           <span class="block text-xs md:text-base md:pl-3 font-medium text-nuxt-gray">{{ $store.state.lang.links[link] || link }}</span>
         </nuxt-link>
+        <nuxt-link class="block md:flex md:justify-center w-full p-2 md:p-4 text-nuxt-gray hover:no-underline hover:text-nuxt-lightgreen text-center visited:text-nuxt-gray" :to="{ name: 'resources' }">
+          <nui-resources-icon class="inline-block h-5 fill-current mb-1"/>
+          <span class="block text-xs md:text-base md:pl-3 font-medium text-nuxt-gray">{{ $store.state.lang.links['resources'] || 'resources' }}</span>
+        </nuxt-link>
       </div>
     </nav>
     <!-- Mobile Aside Navigation -->
@@ -75,6 +84,7 @@ import nuiExamplesIcon from '@/components/svg/Code'
 import nuiGuideIcon from '@/components/svg/Books'
 import nuiApiIcon from '@/components/svg/List'
 import nuiFaqIcon from '@/components/svg/Faq'
+import nuiResourcesIcon from '@/components/svg/Resources'
 import nuiTimesIcon from '@/components/svg/Times'
 import nuiSearchIcon from '@/components/svg/Search'
 import nuiSearch from '@/components/partials/Search'
@@ -87,6 +97,7 @@ export default {
     nuiGuideIcon,
     nuiApiIcon,
     nuiFaqIcon,
+    nuiResourcesIcon,
     nuiLogo,
     nuiSearchIcon,
     nuiSearch,

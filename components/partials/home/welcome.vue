@@ -15,6 +15,13 @@
           </nui-button>
         </div>
       </div>
+      <!-- <div class="hidden lg:block lg:w-5/12 bg-nuxt-gray rounded-lg">
+        <div class="">
+          <div class="bg-red-500 w-3 h-3 rounded-full"></div>
+          <div class="bg-orange-500 w-3 h-3 rounded-full"></div>
+          <div class="bg-green-500 w-3 h-3 rounded-full"></div>
+        </div>
+      </div> -->
       <figure class="hidden lg:block lg:w-5/12">
         <nui-media src="https://player.vimeo.com/video/311756540" />
         <p class="font-medium py-2 text-xs xl:text-sm text-center text-gray-600" v-html="wordings.welcome_figure.body" />

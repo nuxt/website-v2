@@ -6,7 +6,7 @@
           NUXT<span class="text-nuxt-lightgreen">JS</span> Video Courses<br>
         </h1>
         <h3 class="xl:text-lg text-gray-600 font-medium leading-relaxed mb-8">
-          With the video courses below created by our partner <a>VueSchool</a> you can discover and learn more about the Nuxt.js Framework.
+          With the video courses below created by our partner VueSchool you can discover and learn more about the Nuxt.js Framework.
         </h3>
         <nui-button href="https://vueschool.io/?friend=nuxt&utm_source=Nuxtjs.org&utm_medium=Link&utm_content=HomeHero&utm_content=V1" rel="noopener sponsored" target="_blank" class="sm:mr-4 py-3 px-6 text-base mb-4">
           <nui-svg-meteor slot="icon" class="h-5 -mb-1 mr-1" />
@@ -49,7 +49,7 @@ export default {
   head: {
     title: 'NuxtJS Video Courses',
     meta: [
-      { hid: 'description', name: 'description', content: '' }
+      { hid: 'description', name: 'description', content: 'With the video courses below created by our partner VueSchool you can discover and learn more about the Nuxt.js Framework.' }
     ]
   },
   data () {

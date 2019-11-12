@@ -43,7 +43,7 @@ export default {
   head: {
     title: 'NuxtJS Themes',
     meta: [
-      { hid: 'description', name: 'description', content: '' }
+      { hid: 'description', name: 'description', content: 'With the themes below built by our partners from Creative Tim and Theme Forest you can see how a real world application is built, with Nuxt.js stack behind.' }
     ]
   },
   data () {

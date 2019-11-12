@@ -13,13 +13,13 @@
     </div>
     <section class="flex flex-wrap -mx-4">
       <nuxt-link :to="{ name: 'themes' }" class="w-full lg:w-1/2 p-4">
-        <div class="block bg-gray-100 hover:bg-gray-200 rounded p-12 text-center">
+        <div class="block bg-gray-100 hover:bg-gray-200 rounded p-8 text-center">
           <h2 class="text-2xl text-nuxt-gray font-medium uppercase mb-8">Themes</h2>
           <i-theming class="inline-block w-auto h-40 sm:h-56 xl:h-64"/>
         </div>
       </nuxt-link>
       <nuxt-link :to="{ name: 'video-courses' }" class="w-full lg:w-1/2 p-4">
-        <div class="block bg-gray-100 hover:bg-gray-200 rounded p-12 text-center">
+        <div class="block bg-gray-100 hover:bg-gray-200 rounded p-8 text-center">
           <h2 class="text-2xl text-nuxt-gray font-medium uppercase mb-8">Video Courses</h2>
           <i-videos class="inline-block w-auto h-40 sm:h-56 xl:h-64"/>
         </div>

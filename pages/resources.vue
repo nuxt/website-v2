@@ -12,16 +12,16 @@
       <i-themes class="w-2/3 mx-auto lg:mx-0 lg:w-5/12 lg:-mt-8"/>
     </div>
     <section class="flex flex-wrap -mx-4">
-      <nuxt-link :to="{ name: 'themes' }" class="w-full lg:w-1/2 p-4">
+      <nuxt-link :to="{ name: 'themes' }" class="block w-full lg:w-1/2 p-4">
         <div class="block bg-gray-100 hover:bg-gray-200 rounded p-8 text-center">
           <h2 class="text-2xl text-nuxt-gray font-medium uppercase mb-8">Themes</h2>
-          <i-theming class="inline-block w-auto h-32 sm:h-40 xl:h-56"/>
+          <i-theming class="inline-block w-auto h-40 sm:h-56 xl:h-64"></i-theming>
         </div>
       </nuxt-link>
       <nuxt-link :to="{ name: 'video-courses' }" class="w-full lg:w-1/2 p-4">
         <div class="block bg-gray-100 hover:bg-gray-200 rounded p-8 text-center">
           <h2 class="text-2xl text-nuxt-gray font-medium uppercase mb-8">Video Courses</h2>
-          <i-videos class="inline-block w-auto h-32 sm:h-40 xl:h-56"/>
+          <i-videos class="inline-block w-auto h-40 sm:h-56 xl:h-64"></i-videos>
         </div>
       </nuxt-link>
     </section>
@@ -40,45 +40,10 @@ export default {
     iVideos
   },
   head: {
-    title: 'NuxtJS Themes',
+    title: 'NuxtJS Resources',
     meta: [
       { hid: 'description', name: 'description', content: '' }
     ]
-  },
-  data () {
-    return {
-      themes: [
-        {
-          title: 'Nuxt Argon Dashboard PRO',
-          description: 'Premium Bootstrap 4 + NuxtJS Admin Template',
-          price: '99$',
-          link: 'https://www.creative-tim.com/product/nuxt-argon-dashboard-pro?partner=120213',
-          img: 'nuxt-argon-dashboard-pro',
-          discount: '-30% discount code: <b class="whitespace-no-wrap">30nuxt-exclusive</b>'
-        },
-        {
-          title: 'Nuxt Now UI Kit',
-          description: 'Premium Bootstrap Nuxt.js UI Kit',
-          price: '89$',
-          link: 'https://www.creative-tim.com/product/nuxt-now-ui-kit-pro?partner=120213',
-          img: 'nuxt-now-ui-kit'
-        },
-        {
-          title: 'Nuxt Black Dashboard PRO',
-          description: 'Premium Bootstrap 4 Nuxt.js Admin Template',
-          price: '79$',
-          link: 'https://www.creative-tim.com/product/nuxt-black-dashboard-pro?partner=120213',
-          img: 'nuxt-black-dashboard-pro'
-        },
-        {
-          title: 'Nuxt Scutum Dashboard',
-          description: 'Professional Material Design UIkit Admin Template',
-          price: '26$',
-          link: 'https://1.envato.market/scutum-nuxt',
-          img: 'nuxt-scutum-dashboard'
-        }
-      ]
-    }
   }
 }
 </script>

@@ -6,20 +6,22 @@
           NUXT<span class="text-nuxt-lightgreen">JS</span> Resources<br>
         </h1>
         <h3 class="xl:text-lg text-gray-600 font-medium leading-relaxed mb-6">
-          With the themes below built by our partners from Creative Tim and Theme Forest you can see how a real world application is built, with Nuxt.js stack behind.
+          Discover a panel of resources made by our partners. By using thoses affiliate resources links, you are helping us to maintain and develop the Open Source Framework.
         </h3>
       </div>
       <i-themes class="w-2/3 mx-auto lg:mx-0 lg:w-5/12 lg:-mt-8"/>
     </div>
-    <section class="flex flex-wrap items-stretch -mx-4">
+    <section class="flex flex-wrap -mx-4">
       <nuxt-link :to="{ name: 'themes' }" class="w-full lg:w-1/2 p-4">
-        <div class="block sm:flex w-full bg-gray-100 hover:bg-gray-200 rounded">
-          Themes
+        <div class="block bg-gray-100 hover:bg-gray-200 rounded p-12 text-center">
+          <h2 class="text-2xl text-nuxt-gray font-medium uppercase mb-8">Themes</h2>
+          <i-theming class="inline-block w-auto h-40 sm:h-56 xl:h-64"/>
         </div>
       </nuxt-link>
       <nuxt-link :to="{ name: 'video-courses' }" class="w-full lg:w-1/2 p-4">
-        <div class="block sm:flex w-full bg-gray-100 hover:bg-gray-200 rounded">
-          Video Courses
+        <div class="block bg-gray-100 hover:bg-gray-200 rounded p-12 text-center">
+          <h2 class="text-2xl text-nuxt-gray font-medium uppercase mb-8">Video Courses</h2>
+          <i-videos class="inline-block w-auto h-40 sm:h-56 xl:h-64"/>
         </div>
       </nuxt-link>
     </section>
@@ -28,10 +30,14 @@
 
 <script>
 import iThemes from '@/components/svg/fogg/themes'
+import iTheming from '@/components/svg/fogg/theming'
+import iVideos from '@/components/svg/fogg/videos'
 
 export default {
   components: {
-    iThemes
+    iThemes,
+    iTheming,
+    iVideos
   },
   head: {
     title: 'NuxtJS Themes',

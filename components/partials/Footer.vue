@@ -70,9 +70,9 @@ export default {
       ],
       links: {
         discover: [
-          { key: 'NuxtJS Themes', to: '/themes' },
           { key: 'Design resources', to: '/design' },
-          { key: 'A worldwide team', to: '/team' }
+          { key: 'A worldwide team', to: '/team' },
+          { key: 'VueSchool video courses', href: 'https://vueschool.io/?friend=nuxt&utm_source=Nuxtjs.org&utm_medium=Link&utm_content=Footer' }
         ],
         follow: [
           { key: 'GitHub', href: 'https://github.com/nuxt/nuxt.js' },

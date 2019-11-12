@@ -17,8 +17,7 @@
     </div>
     <section class="flex flex-wrap items-stretch -mx-4">
       <div v-for="course in courses" :key="course.title" class="w-full p-4">
-        <div class="block sm:flex w-full h-full items-start bg-gray-100 hover:bg-gray-200 rounded">
-          <img :src="'/courses/' + course.img + '.png'" :srcset="'/courses/' + course.img + '-2x.png 2x'" :alt="course.title" class="block w-full sm:w-auto sm:h-full rounded">
+        <div class="block sm:flex w-full h-full items-center pr-6 bg-gray-100 hover:bg-gray-200 rounded">
           <div class="w-full p-6">
             <h4 class="block w-full font-medium text-xl pb-2">
               {{ course.title }}
@@ -29,6 +28,7 @@
               START COURSE
             </nui-button>
           </div>
+          <img :src="'/courses/' + course.img + '.png'" :srcset="'/courses/' + course.img + '-2x.png 2x'" :alt="course.title" class="block w-auto rounded">
         </div>
       </div>
     </section>

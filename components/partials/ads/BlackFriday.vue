@@ -2,9 +2,9 @@
   <nui-container class="mt-6 lg:-mt-1 xl:-mt-2">
     <div class="bg-deep-cove bg-blackfriday px-4">
       <a href="https://vueschool.io/sales/blackfriday?friend=nuxt&utm_source=Nuxtjs.org&utm_medium=Link&utm_content=TopBanner&utm_campaign=Black%20Friday" target="_blank" rel="noopener noreferrer" class="mx-4 flex items-center justify-between py-3 max-w-160 md:py-2 md:mx-auto">
-        <img src="https://vueschool.io/img/blackfriday/percent.png" width="47px" alt="percent" class="w-8 md:w-12">
-        <img src="https://vueschool.io/img/blackfriday/title.png" width="180px" alt="BLACK FRIDAY SALE" class="max-w-2xs md:max-w-full pulse">
-        <img src="https://vueschool.io/img/blackfriday/40off.png" width="113px" alt="40% off" class="w-24 md:w-28 tada">
+        <img src="/img/blackfriday/percent.png" width="47px" alt="percent" class="w-8 md:w-12">
+        <img src="/img/blackfriday/title.png" width="180px" alt="BLACK FRIDAY SALE" class="max-w-2xs md:max-w-full pulse">
+        <img src="/img/blackfriday/40off.png" width="113px" alt="40% off" class="w-24 md:w-28 tada">
         <div class="hidden rounded-full bg-nuxt-lightgreen text-white text-sm font-medium py-2 px-4 md:inline-block md:py-3 md:px-5">
           ENROLL NOW
         </div>
@@ -15,7 +15,7 @@
 
 <style>
 .bg-blackfriday {
-  background-image: url('https://vueschool.io/img/blackfriday/background.png');
+  background-image: url('/img/blackfriday/background.png');
   background-position: 50%;
   background-repeat: no-repeat;
   background-size: cover;

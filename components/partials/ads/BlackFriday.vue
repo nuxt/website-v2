@@ -1,7 +1,8 @@
 <template>
-  <nui-container class="mt-6 lg:-mt-1 xl:-mt-2">
-    <div class="bg-deep-cove bg-blackfriday px-4">
-      <a href="https://vueschool.io/sales/blackfriday?friend=nuxt&utm_source=Nuxtjs.org&utm_medium=Link&utm_content=TopBanner&utm_campaign=Black%20Friday" target="_blank" rel="noopener sponsored" class="mx-4 flex items-center justify-between py-3 max-w-160 md:py-2 md:mx-auto">
+  <nui-container class="mt-6 lg:-mt-1 xl:-mt-2" v-if="isDisplayed">
+    <div class="bg-deep-cove bg-blackfriday">
+      <icon-times class="fill-current text-gray-500 w-3 m-2 float-right cursor-pointer hover:text-gray-300" @click.native="isDisplayed = false"/>
+      <a href="https://vueschool.io/sales/blackfriday?friend=nuxt&utm_source=Nuxtjs.org&utm_medium=Link&utm_content=TopBanner&utm_campaign=Black%20Friday" target="_blank" rel="noopener sponsored" class="px-4 flex items-center justify-between py-3 max-w-160 md:py-2 md:mx-auto">
         <img src="/img/blackfriday/percent.png" width="47px" alt="percent" class="w-8 md:w-12">
         <img src="/img/blackfriday/vueschool_logo.svg" width="160px" alt="VueSchool" class="hidden lg:inline-block md:max-w-full">
         <img src="/img/blackfriday/title.png" width="180px" alt="BLACK FRIDAY SALE" class="max-w-2xs md:max-w-full pulse">
@@ -13,6 +14,21 @@
     </div>
   </nui-container>
 </template>
+
+<script>
+import IconTimes from '@/components/svg/Times'
+
+export default {
+  components: {
+    IconTimes
+  },
+  data () {
+    return {
+      isDisplayed: true
+    }
+  }
+}
+</script>
 
 <style>
 .bg-blackfriday {

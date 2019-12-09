@@ -2,7 +2,6 @@
   <div>
     <nui-header v-model="action" />
     <main class="lg:block relative pt-16 lg:pt-24" :class="{'hidden': action}">
-      <black-friday/>
       <nuxt />
     </main>
     <nui-footer class="pb-16 lg:pb-0 lg:block" :class="{'hidden': action}" />
@@ -12,13 +11,11 @@
 <script>
 import nuiHeader from '@/components/partials/Header'
 import nuiFooter from '@/components/partials/Footer'
-import blackFriday from '@/components/partials/ads/BlackFriday'
 
 export default {
   components: {
     nuiHeader,
-    nuiFooter,
-    blackFriday
+    nuiFooter
   },
   data () {
     return {

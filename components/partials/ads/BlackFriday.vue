@@ -1,5 +1,5 @@
 <template>
-  <nui-container class="mt-6 lg:-mt-1 xl:-mt-2" v-if="isDisplayed">
+  <nui-container v-if="isDisplayed" class="mt-6 lg:-mt-1 xl:-mt-2">
     <div class="bg-deep-cove bg-blackfriday">
       <icon-times class="fill-current text-gray-500 w-3 m-2 float-right cursor-pointer hover:text-gray-300" @click.native="isDisplayed = false"/>
       <a href="https://vueschool.io/sales/blackfriday?friend=nuxt&utm_source=Nuxtjs.org&utm_medium=Link&utm_content=TopBanner&utm_campaign=Black%20Friday" target="_blank" rel="noopener sponsored" class="px-4 flex items-center justify-between py-3 max-w-160 md:py-2 md:mx-auto">

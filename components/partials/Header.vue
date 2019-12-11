@@ -3,14 +3,14 @@
     <!-- Common Header -->
     <header class="header border-b border-gray-300 lg:border-0" :class="action === 'search' ? 'py-4' : 'py-6 lg:py-0'">
       <template v-if="action === ''">
-        <nui-container class="flex items-center justify-between lg:py-6">
+        <nui-container class="flex items-center lg:py-6">
           <!-- Left Title -->
-          <a class="block text-nuxt-gray h-7 lg:h-10 lg:pt-1 z-10" href="/" @click.prevent="$router.push('/')" @click.right.stop.prevent="$router.push('/design')">
+          <a class="inline-block text-nuxt-gray h-7 lg:h-10 z-10 mr-auto" href="/" @click.prevent="$router.push('/')" @click.right.stop.prevent="$router.push('/design')">
             <h1 class="m-0 h-0 w-0 overflow-hidden">NUXTJS</h1>
-            <nui-logo class="h-6 lg:h-auto" />
+            <nui-logo class="h-6 lg:h-8" />
           </a>
           <!-- Center Navigation -->
-          <ul class="hidden lg:flex lg:pt-1 xl:pt-0 text-center">
+          <ul class="hidden lg:flex lg:pt-1 xl:pt-0 text-center mx-auto">
             <li v-for="link in links" :key="link" class="header_nav_link xl:px-4 lg:py-0 lg:px-2 py-2">
               <nuxt-link class="block p-2 font-medium uppercase hover:no-underline hover:text-nuxt-lightgreen" :to="{ name: 'section-slug', params: { section: link } }">
                 {{ $store.state.lang.links[link] || link }}
@@ -23,10 +23,15 @@
             </li>
           </ul>
           <!-- Right Action -->
-          <a href="#" class="block md:hidden flex p-2 -m-2 items-center justify-center text-nuxt-gray hover:text-nuxt-lightgreen z-10 lg:hidden" @click.prevent="$emit('change', 'search')">
+          <a href="#" class="block md:hidden flex p-2 -m-2 mr-4 items-center justify-center text-nuxt-gray hover:text-nuxt-lightgreen z-10 lg:hidden" @click.prevent="$emit('change', 'search')">
             <nui-search-icon class="block h-5 fill-current" />
           </a>
-          <nui-search class="hidden md:block -my-2"/>
+          <nui-search class="hidden md:inline-block align-middle mr-2"/>
+          <nui-select v-model="currentLang" mode="slim" :options="locales" class="inline-block align-middle">
+            <template v-slot:icon>
+              <nui-globe />
+            </template>
+          </nui-select>
         </nui-container>
         <nui-container class="hidden lg:block">
           <hr class="border-b border-t-0 border-gray-300 h-0"/>
@@ -80,6 +85,7 @@
 
 <script>
 import nuiLogo from '@/components/svg/Nuxtjs'
+import nuiGlobe from '@/components/svg/Globe'
 import nuiExamplesIcon from '@/components/svg/Code'
 import nuiGuideIcon from '@/components/svg/Books'
 import nuiApiIcon from '@/components/svg/List'
@@ -89,6 +95,7 @@ import nuiTimesIcon from '@/components/svg/Times'
 import nuiSearchIcon from '@/components/svg/Search'
 import nuiSearch from '@/components/partials/Search'
 import nuiArrowLeft from '@/components/svg/ArrowLeft'
+import localeManager from '@/mixins/localeManager'
 
 export default {
   components: {
@@ -101,8 +108,10 @@ export default {
     nuiLogo,
     nuiSearchIcon,
     nuiSearch,
-    nuiArrowLeft
+    nuiArrowLeft,
+    nuiGlobe
   },
+  mixins: [ localeManager ],
   model: {
     prop: 'action',
     event: 'change'

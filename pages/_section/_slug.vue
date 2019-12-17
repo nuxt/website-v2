@@ -42,32 +42,6 @@ export default {
     nuiAffix,
     CodeSandbox
   },
-  computed: {
-    docLink () {
-      let docLink = `https://github.com/nuxt/docs/blob/master${this.path}.md`
-      if (this.$store.state.locale === 'ru') {
-        docLink = `https://github.com/translation-gang/ru.docs.nuxtjs/blob/translation-ru${this.path}.md`
-      } else if (this.$store.state.locale === 'cn') {
-        docLink = `https://github.com/o2team/i18n-cn-nuxtjs-docs/blob/dev${this.path}.md`
-      }
-      return docLink
-    },
-    codeSandBox () {
-      return `https://codesandbox.io`
-    },
-    codeSandBoxLink () {
-      if (!this.page.attrs.github) {
-        return ''
-      }
-      return `${this.codeSandBox}/embed/github/nuxt/nuxt.js/tree/dev/examples/${this.page.attrs.github}?autoresize=1&view=editor`
-    },
-    liveEditLink () {
-      return `${this.codeSandBox}/s/github/nuxt/nuxt.js/tree/dev/examples/${this.page.attrs.github}?from-embed`
-    },
-    downloadLink () {
-      return 'https://minhaskamal.github.io/DownGit/#/home?url=https://github.com/nuxt/nuxt.js/tree/dev/examples/' + this.page.attrs.github
-    }
-  },
   async asyncData ({ $docs, params, store, error, app }) {
     const defaultSlugs = { guide: 'index', api: 'index', examples: 'hello-world', faq: 'external-resources' }
     const slug = params.slug || defaultSlugs[params.section]
@@ -90,6 +64,32 @@ export default {
       return error({ statusCode: 404, message: store.state.lang.text.api_page_not_found })
     }
     return data
+  },
+  computed: {
+    docLink () {
+      let docLink = `https://github.com/nuxt/docs/blob/master${this.path}.md`
+      if (this.$store.state.locale === 'ru') {
+        docLink = `https://github.com/translation-gang/ru.docs.nuxtjs/blob/translation-ru${this.path}.md`
+      } else if (this.$store.state.locale === 'cn') {
+        docLink = `https://github.com/o2team/i18n-cn-nuxtjs-docs/blob/dev${this.path}.md`
+      }
+      return docLink
+    },
+    codeSandBox () {
+      return 'https://codesandbox.io'
+    },
+    codeSandBoxLink () {
+      if (!this.page.attrs.github) {
+        return ''
+      }
+      return `${this.codeSandBox}/embed/github/nuxt/nuxt.js/tree/dev/examples/${this.page.attrs.github}?autoresize=1&view=editor`
+    },
+    liveEditLink () {
+      return `${this.codeSandBox}/s/github/nuxt/nuxt.js/tree/dev/examples/${this.page.attrs.github}?from-embed`
+    },
+    downloadLink () {
+      return 'https://minhaskamal.github.io/DownGit/#/home?url=https://github.com/nuxt/nuxt.js/tree/dev/examples/' + this.page.attrs.github
+    }
   },
   scrollToTop: true,
   head () {

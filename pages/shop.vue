@@ -39,13 +39,6 @@ export default {
   components: {
     iShop
   },
-  head: {
-    title: 'The NuxtJS Shop',
-    meta: [
-      { hid: 'description', name: 'description', content: '' },
-      { }
-    ]
-  },
   data () {
     return {
       products: [
@@ -104,6 +97,13 @@ export default {
   //   script.setAttribute('data-api-key', 'YzRlMjRiNmItNWJjNC00OWMxLWE1ODgtZmIyNzAwYmIyMmI5NjM3MDM3MTc0OTkxOTU5OTA0')
   //   this.$refs.shop.appendChild(jquery)
   //   this.$refs.shop.appendChild(script)
+  },
+  head: {
+    title: 'The NuxtJS Shop',
+    meta: [
+      { hid: 'description', name: 'description', content: '' },
+      { }
+    ]
   }
 }
 </script>

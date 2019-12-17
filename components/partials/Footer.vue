@@ -63,7 +63,9 @@ export default {
     nuiGlobe,
     nuiLogo
   },
-  mixins: [ localeManager ],
+  mixins: [
+    localeManager
+  ],
   data () {
     return {
       themes: [

@@ -111,7 +111,9 @@ export default {
     nuiArrowLeft,
     nuiGlobe
   },
-  mixins: [ localeManager ],
+  mixins: [
+    localeManager
+  ],
   model: {
     prop: 'action',
     event: 'change'

@@ -53,6 +53,7 @@ import nuiSun from '@/components/svg/Sun'
 import nuiMoon from '@/components/svg/Moon'
 import nuiGlobe from '@/components/svg/Globe'
 import nuiLogo from '@/components/svg/Mountains'
+import localeManager from '@/mixins/localeManager'
 
 export default {
   components: {
@@ -62,6 +63,9 @@ export default {
     nuiGlobe,
     nuiLogo
   },
+  mixins: [
+    localeManager
+  ],
   data () {
     return {
       themes: [
@@ -88,32 +92,6 @@ export default {
     }
   },
   computed: {
-    locales () {
-      return [
-        { text: 'English', locale: 'en', path: 'https://nuxtjs.org' + this.$route.path },
-        { text: 'Français', locale: 'fr', path: 'https://fr.nuxtjs.org' + this.$route.path },
-        { text: '简体中文', locale: 'zh', path: 'https://zh.nuxtjs.org' + this.$route.path },
-        { text: '日本語', locale: 'ja', path: 'https://ja.nuxtjs.org' + this.$route.path },
-        { text: '한국어', locale: 'ko', path: 'https://ko.nuxtjs.org' + this.$route.path },
-        { text: 'Русский', locale: 'ru', path: 'https://ru.nuxtjs.org' + this.$route.path },
-        { text: 'Indonesian', locale: 'id', path: 'https://id.nuxtjs.org' + this.$route.path }
-      ]
-    },
-    currentLang: {
-      get () {
-        return this.locales.map(l => l.locale).indexOf(this.$store.state.locale)
-      },
-      set (index) {
-        const lang = this.locales[index]
-        if (!lang) {
-          return
-        }
-        if (process.env.NODE_ENV === 'development') {
-          lang.path = lang.path.replace('https', 'http').replace('nuxtjs.org', window.location.host.split('.').slice(-1)[0])
-        }
-        window.location.href = lang.path
-      }
-    },
     currentTheme: {
       get () {
         return this.themes.map(l => l.value).indexOf(this.$store.state.theme)

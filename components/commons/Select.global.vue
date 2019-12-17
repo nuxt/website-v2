@@ -7,7 +7,7 @@
       <template v-if="options.length > 1">
         <select v-model="selected" class="bg-transparent cursor-pointer font-medium h-10 appearance-none focus:outline-none pl-6 pr-8 z-10">
           <option v-for="(option, i) in options" :key="i" :value="i">
-            {{ option.text }}
+            {{ getOptionDescription(option) }}
           </option>
         </select>
         <nui-caret-down class="-ml-4" />
@@ -22,6 +22,11 @@
 <script>
 import nuiCaretDown from '@/components/svg/CaretDown'
 
+const Modes = Object.freeze({
+  SLIM: 'slim',
+  NORMAL: 'normal'
+})
+
 export default {
   name: 'NuiSelect',
   components: {
@@ -35,6 +40,11 @@ export default {
     options: {
       type: Array,
       required: true
+    },
+    mode: {
+      type: String,
+      required: false,
+      default: Modes.NORMAL
     }
   },
   computed: {
@@ -44,6 +54,17 @@ export default {
       },
       set (value) {
         this.$emit('input', value)
+      }
+    }
+  },
+  methods: {
+    getOptionDescription (option) {
+      switch (this.mode) {
+        case Modes.SLIM:
+          return option.locale.toLocaleUpperCase()
+        case Modes.NORMAL:
+        default:
+          return option.text
       }
     }
   }

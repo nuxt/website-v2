@@ -66,6 +66,12 @@ export default {
       this.show = this.$route.hash.slice(1)
     }
   },
+  methods: {
+    showRelease (name) {
+      this.$router.push(this.$route.path + '#' + name)
+      this.show = name
+    }
+  },
   head () {
     return {
       title: 'Release Notes',
@@ -73,12 +79,6 @@ export default {
       meta: [
         { hid: 'description', name: 'description', content: 'Nuxt.js release notes from Github.' }
       ]
-    }
-  },
-  methods: {
-    showRelease (name) {
-      this.$router.push(this.$route.path + '#' + name)
-      this.show = name
     }
   }
 }

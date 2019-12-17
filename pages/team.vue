@@ -55,12 +55,6 @@ export default {
     WebsiteIcon,
     iTeam
   },
-  head: {
-    title: 'The NuxtJS Team',
-    meta: [
-      { hid: 'description', name: 'description', content: 'NuxtJS has a very active and engaged team that is constantly striving to push Nuxt forward.' }
-    ]
-  },
   data () {
     return {
       core: [
@@ -172,6 +166,12 @@ export default {
         }
       ]
     }
+  },
+  head: {
+    title: 'The NuxtJS Team',
+    meta: [
+      { hid: 'description', name: 'description', content: 'NuxtJS has a very active and engaged team that is constantly striving to push Nuxt forward.' }
+    ]
   }
 }
 </script>

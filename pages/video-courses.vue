@@ -46,12 +46,6 @@ export default {
     nuiSvgPlay,
     nuiSvgMeteor
   },
-  head: {
-    title: 'NuxtJS Video Courses',
-    meta: [
-      { hid: 'description', name: 'description', content: 'With the video courses below created by our partner VueSchool you can discover and learn more about the Nuxt.js Framework.' }
-    ]
-  },
   data () {
     return {
       courses: [
@@ -75,6 +69,12 @@ export default {
         }
       ]
     }
+  },
+  head: {
+    title: 'NuxtJS Video Courses',
+    meta: [
+      { hid: 'description', name: 'description', content: 'With the video courses below created by our partner VueSchool you can discover and learn more about the Nuxt.js Framework.' }
+    ]
   }
 }
 </script>

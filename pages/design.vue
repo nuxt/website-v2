@@ -83,15 +83,15 @@ import iDesign from '@/components/svg/fogg/design'
 
 export default {
   transition: 'logos',
+  components: {
+    iDesign
+  },
   head: {
     title: 'Design Resources - NuxtJS',
     meta: [
       { hid: 'description', name: 'description', content: 'Download NuxtJS design resources (SVG, icons, emoji and favicon).' },
       { name: 'og:image', content: 'https://nuxtjs.org/meta_640.png' }
     ]
-  },
-  components: {
-    iDesign
   }
 }
 </script>

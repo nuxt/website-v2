@@ -30,7 +30,7 @@ module.exports = {
         nuxt: '0 0 8px 0 rgba(10, 31, 68, 0.08)'
       },
       inset: {
-        '24': '6rem'
+        24: '6rem'
       }
     }
   },

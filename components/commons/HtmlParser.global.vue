@@ -11,7 +11,7 @@ export default {
     }
   },
   watch: {
-    'content': 'contentUpdated'
+    content: 'contentUpdated'
   },
   mounted () {
     this.$nextTick(this.addListeners)

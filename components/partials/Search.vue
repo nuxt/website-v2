@@ -58,7 +58,7 @@ export default {
         apiKey: process.env.DOC_SEARCH_API_KEY,
         indexName: 'nuxtjs',
         inputSelector: '#algolia',
-        algoliaOptions: { 'facetFilters': [`tags:${this.$store.state.locale}`] },
+        algoliaOptions: { facetFilters: [`tags:${this.$store.state.locale}`] },
         debug: true // Set debug to true if you want to inspect the dropdown
       })
     },

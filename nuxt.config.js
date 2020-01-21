@@ -59,6 +59,9 @@ export default {
       }
     }
   },
+  purgeCSS: {
+    whitelistPatterns: [/snackbar/]
+  },
   generate: {
     fallback: true,
     interval: 100

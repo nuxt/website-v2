@@ -34,7 +34,7 @@
 <script>
 import nuiAds from '@/components/partials/Ads'
 import nuiAffix from '@/components/partials/Affix'
-const CodeSandbox = () => import('@/components/commons/CodeSandbox.vue')
+const CodeSandbox = () => import('@/components/commons/CodeSandbox.vue' /* webpackChunkName: "components/CodeSandbox" */)
 
 export default {
   components: {

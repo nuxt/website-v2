@@ -17,7 +17,7 @@
 <script>
 export default {
   components: {
-    Blocked: () => import('~/assets/images/blocked.svg')
+    Blocked: () => import('~/assets/images/blocked.svg' /* webpackChunkName: "images/blocked" */)
   }
 }
 </script>

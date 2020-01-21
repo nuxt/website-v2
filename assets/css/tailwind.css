@@ -8,6 +8,9 @@
 /* purgecss start ignore */
 @import './themes/light.css';
 /* purgecss end ignore */
+/* purgecss start ignore */
+@import '@snackbar/core/dist/snackbar.css';
+/* purgecss end ignore */
 
 /* @import './themes/dark.scss'; */
 /* @import 'highlight.js/styles/nord.css'; */

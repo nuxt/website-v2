@@ -1,4 +1,3 @@
-import '@snackbar/core/dist/snackbar.css'
 const SnackBar = () => import('@snackbar/core' /* webpackChunkName: "snackbar/core" */)
 
 window.onNuxtReady(async (nuxt) => {

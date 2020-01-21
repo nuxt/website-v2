@@ -52,16 +52,6 @@ export default {
     lang: locale
   },
   loading: { color: '#41B883' },
-  build: {
-    hardSource: {
-      info: {
-        level: 'warn' // nuxt/nuxt.js#5653
-      }
-    }
-  },
-  purgeCSS: {
-    whitelistPatterns: [/snackbar/]
-  },
   generate: {
     fallback: true,
     interval: 100

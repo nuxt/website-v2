@@ -1152,6 +1152,11 @@
     mustache "^2.3.0"
     stack-trace "0.0.10"
 
+"@snackbar/core@^1.7.0":
+  version "1.7.0"
+  resolved "https://registry.yarnpkg.com/@snackbar/core/-/core-1.7.0.tgz#a12708f2df8dbb0f8de885b8460c94ab3f659333"
+  integrity sha512-CxBEpC/boiGc0PGASQSYU4YmPFkyBhki8n2uJad593VlHcISJjgMMoD1Kk/sdqkEYxKF9zx64aY5F/fP1VfCjg==
+
 "@types/color-name@^1.1.1":
   version "1.1.1"
   resolved "https://registry.yarnpkg.com/@types/color-name/-/color-name-1.1.1.tgz#1c1261bbeaa10a8055bbc5d8ab84b7b2afc846a0"

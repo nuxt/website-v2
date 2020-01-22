@@ -58,7 +58,7 @@ export default {
           { name: 'Spendesk', img: 'spendesk.svg', url: 'https://www.spendesk.com/fr', class: 'h-10' },
           { name: 'Luko', img: 'luko.svg', url: 'https://www.luko.eu', class: 'h-10' },
           { name: 'MyScript', img: 'my-script.svg', url: 'https://www.myscript.com/', class: 'h-10' },
-          { name: 'PayFit', img: 'payfit.svg', url: 'https://payfit.com/fr/', class: 'h-10' },
+          { name: 'Tediber', img: 'tediber.svg', url: 'https://www.tediber.com/', class: 'h-16' },
           { name: 'Voodoo', img: 'voodoo.png', url: 'https://www.voodoo.io', class: 'h-8' },
           { name: 'Le Collectionist', img: 'le-collectionist.svg', url: 'https://www.lecollectionist.com', class: 'h-8' },
           { name: 'HelloAsso', img: 'helloasso.svg', url: 'https://www.helloasso.com', class: 'h-8' },

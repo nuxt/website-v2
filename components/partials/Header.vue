@@ -153,6 +153,9 @@ export default {
 .header_mobile_nav {
   @apply fixed bg-white border-t border-gray-300 left-0 bottom-0 right-0 z-30;
 }
+.header_mobile_nav a {
+  padding-bottom: max(0.5rem,env(safe-area-inset-bottom));
+}
 .header_mobile_aside {
   @apply fixed left-0 bg-gray-100 pt-6 z-20 w-full overflow-y-auto;
   top: 72px;

@@ -30,7 +30,7 @@ export default {
     '@nuxtjs/pwa'
   ],
   modules: [
-    // https://http.nuxtjs.or
+    // https://http.nuxtjs.org
     '@nuxt/http'
   ],
   http: {

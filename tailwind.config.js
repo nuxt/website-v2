@@ -14,6 +14,16 @@ module.exports = {
           gray: '#2F495E',
           lightgreen: '#00C58E',
           green: '#108775'
+        },
+        light: {
+          text: '#2F495E',
+          surface: defaultTheme.colors.white,
+          elevatedSurface: defaultTheme.colors.gray['100']
+        },
+        dark: {
+          text: '#F5F7FA',
+          surface: '#2C3E50',
+          elevatedSurface: '#2F495E'
         }
       },
       fill: theme => ({

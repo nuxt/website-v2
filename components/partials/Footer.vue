@@ -1,5 +1,5 @@
 <template>
-  <footer class="footer z-10 relative bg-white">
+  <footer class="footer z-10 relative">
     <newsletter-form/>
     <nui-container class="border-t border-gray-300 lg:border-0">
       <div class="flex flex-col sm:flex-row text-center sm:text-left items-center content-center justify-between lg:border-t lg:border-gray-300 pt-10 sm:py-10">
@@ -69,8 +69,8 @@ export default {
   data () {
     return {
       themes: [
-        { value: 'light', text: 'light', icon: 'nui-sun' }
-        // { value: 'dark', text: 'dark', icon: 'nui-moon' }
+        { value: 'light', text: 'light', icon: 'nui-sun' },
+        { value: 'dark', text: 'dark', icon: 'nui-moon' }
       ],
       links: {
         discover: [
@@ -94,10 +94,10 @@ export default {
   computed: {
     currentTheme: {
       get () {
-        return this.themes.map(l => l.value).indexOf(this.$store.state.theme)
+        return this.themes.map(l => l.value).indexOf(this.$store.state.storage.theme)
       },
       set (value) {
-        this.$store.commit('setTheme', this.themes[value].value)
+        this.$storage.setUniversal('theme', this.themes[value].value)
       }
     },
     currentThemeIcon () {

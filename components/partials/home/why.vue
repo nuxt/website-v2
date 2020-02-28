@@ -1,6 +1,6 @@
 <template>
   <nui-container class="mb-12 bg-gray-100 lg:bg-transparent rounded">
-    <section class="lg:bg-gray-100 rounded py-6 sm:p-6">
+    <section class="elevated-block rounded py-6 sm:p-6">
       <h1 class="text-3xl uppercase text-center pt-10 pb-8" v-html="wordings.why.body" />
       <div class="flex flex-col lg:flex-row items-start justify-between">
         <div class="lg:w-1/3 px-4 py-8 lg:p-8 text-center">

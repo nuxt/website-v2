@@ -7,6 +7,7 @@
     "@nuxt/http": "^0.3.8",
     "@nuxtjs/pwa": "^3.0.0-beta.19",
     "@nuxtjs/tailwindcss": "1.2.0",
+    "@nuxtjs/universal-storage": "^0.5.4",
     "@snackbar/core": "^1.7.0",
     "degit": "^2.2.2",
     "front-matter": "^3.0.2",

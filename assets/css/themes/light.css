@@ -6,12 +6,15 @@
 @import './light/algolia.css';
 
 body {
-  @apply font-sans font-medium text-nuxt-gray;
+  @apply font-sans font-medium text-light-text bg-light-surface;
   & .nui-select {
     @apply text-nuxt-gray bg-gray-200;
   }
+  & .elevated-block {
+    @apply .bg-light-elevatedSurface;
+  }
   & .footer {
-    @apply bg-white;
+    @apply bg-light-surface;
   }
   & .nuxt-link-exact-active {
     @apply text-nuxt-lightgreen;

@@ -12,7 +12,7 @@
 @import '@snackbar/core/dist/snackbar.css';
 /* purgecss end ignore */
 
-/* @import './themes/dark.scss'; */
+ @import './themes/dark.css';
 /* @import 'highlight.js/styles/nord.css'; */
 /* @import 'highlight.js/styles/tomorrow-night-blue.css'; */
 /* @import 'highlight.js/styles/ocean.css'; */

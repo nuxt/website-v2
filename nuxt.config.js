@@ -31,7 +31,13 @@ export default {
   ],
   modules: [
     // https://http.nuxtjs.org
-    '@nuxt/http'
+    '@nuxt/http',
+    ['@nuxtjs/universal-storage', {
+      localStorage: {
+        prefix: ''
+      },
+      initialState: { theme: true }
+    }]
   ],
   http: {
     proxy: true

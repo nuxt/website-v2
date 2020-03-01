@@ -36,7 +36,7 @@ export default {
       localStorage: {
         prefix: ''
       },
-      initialState: { theme: true }
+      initialState: { theme: 'light' }
     }]
   ],
   http: {

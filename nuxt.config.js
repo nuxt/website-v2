@@ -18,6 +18,7 @@ export default {
     '~/modules/crawler/',
     '~/modules/static/',
     '~/modules/components/',
+    '~/modules/theme/',
     // https://github.com/nuxt-community/netlify-files-module
     '@nuxtjs/netlify-files',
     // https://github.com/nuxt-community/style-resources-module
@@ -31,13 +32,7 @@ export default {
   ],
   modules: [
     // https://http.nuxtjs.org
-    '@nuxt/http',
-    ['@nuxtjs/universal-storage', {
-      localStorage: {
-        prefix: ''
-      },
-      initialState: { theme: 'light' }
-    }]
+    '@nuxt/http'
   ],
   http: {
     proxy: true
@@ -61,5 +56,8 @@ export default {
   generate: {
     fallback: true,
     interval: 100
+  },
+  theme: {
+    value: 'light'
   }
 }

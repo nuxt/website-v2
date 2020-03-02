@@ -69,8 +69,9 @@ export default {
   data () {
     return {
       themes: [
-        { value: 'light', text: 'light', icon: 'nui-sun' },
-        { value: 'dark', text: 'dark', icon: 'nui-moon' }
+        { value: 'system', text: 'Auto', icon: 'nui-sun' },
+        { value: 'light', text: 'Light', icon: 'nui-sun' },
+        { value: 'dark', text: 'Dark', icon: 'nui-moon' }
       ],
       links: {
         discover: [
@@ -94,10 +95,12 @@ export default {
   computed: {
     currentTheme: {
       get () {
-        return this.themes.map(l => l.value).indexOf(this.$store.state.storage.theme)
+        const index = this.themes.map(l => l.value).indexOf(this.$theme.value)
+
+        return index === -1 ? 0 : index
       },
-      set (value) {
-        this.$storage.setUniversal('theme', this.themes[value].value)
+      set (index) {
+        this.$theme.set(this.themes[index].value)
       }
     },
     currentThemeIcon () {

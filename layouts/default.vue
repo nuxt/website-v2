@@ -9,7 +9,6 @@
 </template>
 
 <script>
-import { mapState } from 'vuex'
 import nuiHeader from '@/components/partials/Header'
 import nuiFooter from '@/components/partials/Footer'
 
@@ -22,11 +21,6 @@ export default {
     return {
       action: ''
     }
-  },
-  computed: {
-    ...mapState({
-      theme: state => state.storage.theme
-    })
   },
   watch: {
     $route () {
@@ -55,10 +49,7 @@ export default {
     })
     return {
       htmlAttrs: { lang: this.$store.state.locale },
-      link,
-      bodyAttrs: {
-        'data-theme': this.theme
-      }
+      link
     }
   }
 }

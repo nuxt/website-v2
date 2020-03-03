@@ -15,15 +15,28 @@ module.exports = {
           lightgreen: '#00C58E',
           green: '#108775'
         },
+        primary: {
+          base: '#00C58E',
+          light: '#00E0A1',
+          dark: '#07A377'
+        },
         light: {
-          text: '#2F495E',
-          surface: defaultTheme.colors.white,
-          elevatedSurface: defaultTheme.colors.gray['100']
+          // textPrimary: '#2F495E',
+          // textSecondary: '#606F7B',
+          surface: '#F8FAFC',
+          onSurfacePrimary: '#2F495E',
+          onSurfaceSecondary: '#606F7B',
+          elevatedSurface: defaultTheme.colors.white
         },
         dark: {
-          text: '#F5F7FA',
+          // textPrimary: '#F5F7FA',
+          // textSecondary: '#B8C2CC',
           surface: '#2C3E50',
+          onSurfacePrimary: '#F5F7FA',
+          onSurfaceSecondary: '#B8C2CC',
           elevatedSurface: '#2F495E'
+          // onElevatedSurfacePrimary: '#F5F7FA',
+          // onElevatedSurfaceSecondary: '#B8C2CC'
         }
       },
       fill: theme => ({
@@ -37,7 +50,7 @@ module.exports = {
         'nuxt-green': theme('colors.nuxt.green')
       }),
       boxShadow: {
-        nuxt: '0 0 8px 0 rgba(10, 31, 68, 0.08)'
+        nuxt: '0px 0px 8px rgba(0, 0, 0, 0.101562)'
       },
       inset: {
         24: '6rem'

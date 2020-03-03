@@ -1,30 +1,32 @@
 <template>
-  <nui-container class="py-24 md:mb-8">
-    <section>
-      <h1 class="text-3xl uppercase text-center pb-8" v-html="$store.state.homepage.companies.attrs.title" />
-      <div class="flex flex-col lg:flex-row items-center justify-between">
-        <div v-for="(company, i) in langCompanies.slice(0, 5)" :key="i" class="p-4 lg:p-8 text-center">
-          <a :href="company.url" target="_blank" rel="noopener nofollow" class="company">
-            <img :src="'/img/companies/' + company.img" :alt="company.name" :class="company.class">
-          </a>
+  <div class="bg-elevatedSurface shadow-nuxt">
+    <div class="container mx-auto px-4 py-24 md:mb-8">
+      <section>
+        <h1 class="text-3xl font-bold uppercase text-center pb-8" v-html="$store.state.homepage.companies.attrs.title" />
+        <div class="flex flex-col lg:flex-row items-center justify-between">
+          <div v-for="(company, i) in langCompanies.slice(0, 5)" :key="i" class="p-4 lg:p-8 text-center">
+            <a :href="company.url" target="_blank" rel="noopener nofollow" class="company">
+              <img :src="'/img/companies/' + company.img" :alt="company.name" :class="company.class">
+            </a>
+          </div>
         </div>
-      </div>
-      <div class="flex flex-col lg:flex-row items-center justify-between">
-        <div v-for="(company, i) in langCompanies.slice(5, 10)" :key="i" class="p-4 lg:p-8 text-center">
-          <a :href="company.url" target="_blank" rel="noopener nofollow" class="company">
-            <img :src="'/img/companies/' + company.img" :alt="company.name" :class="company.class">
-          </a>
+        <div class="flex flex-col lg:flex-row items-center justify-between">
+          <div v-for="(company, i) in langCompanies.slice(5, 10)" :key="i" class="p-4 lg:p-8 text-center">
+            <a :href="company.url" target="_blank" rel="noopener nofollow" class="company">
+              <img :src="'/img/companies/' + company.img" :alt="company.name" :class="company.class">
+            </a>
+          </div>
         </div>
-      </div>
-      <div v-if="langCompanies.length > 10" class="hidden lg:flex flex-col lg:flex-row items-center justify-between">
-        <div v-for="(company, i) in langCompanies.slice(10, 15)" :key="i" class="p-8 text-center">
-          <a :href="company.url" target="_blank" rel="noopener nofollow" class="company">
-            <img :src="'/img/companies/' + company.img" :alt="company.name" :class="company.class">
-          </a>
+        <div v-if="langCompanies.length > 10" class="hidden lg:flex flex-col lg:flex-row items-center justify-between">
+          <div v-for="(company, i) in langCompanies.slice(10, 15)" :key="i" class="p-8 text-center">
+            <a :href="company.url" target="_blank" rel="noopener nofollow" class="company">
+              <img :src="'/img/companies/' + company.img" :alt="company.name" :class="company.class">
+            </a>
+          </div>
         </div>
-      </div>
-    </section>
-  </nui-container>
+      </section>
+    </div>
+  </div>
 </template>
 
 <script>

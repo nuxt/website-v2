@@ -1,0 +1,64 @@
+[data-theme='light'] {
+  background-color: theme('colors.light.surface');
+  color: theme('colors.light.onSurfacePrimary');
+  & .bg-surface {
+    background-color: theme('colors.light.surface');
+  }
+  & .border-surface {
+    border-color: theme('colors.gray.300');
+  }
+  & .text-onSurfacePrimary {
+    color: theme('colors.light.onSurfacePrimary');
+  }
+  & .fill-onSurfacePrimary {
+    fill: theme('colors.light.onSurfacePrimary');
+  }
+  & .text-surface {
+    color: theme('colors.light.surface');
+  }
+  & .text-elevatedSurface {
+    color: theme('colors.light.elevatedSurface');
+  }
+  & .text-onSurfaceSecondary {
+    color: theme('colors.light.onSurfaceSecondary');
+  }
+  & .fill-onSurfaceSecondary {
+    fill: theme('colors.light.onSurfaceSecondary');
+  }
+  & .bg-elevatedSurface {
+    background-color: theme('colors.light.elevatedSurface');
+  }
+}
+
+[data-theme='dark'] {
+  background-color: theme('colors.dark.surface');
+  color: theme('colors.dark.onSurfacePrimary');
+  & .bg-surface {
+    background-color: theme('colors.dark.surface');
+  }
+  & .border-surface {
+    border-color: theme('colors.gray.900');
+  }
+  & .text-surface {
+    color: theme('colors.dark.surface');
+  }
+  & .text-elevatedSurface {
+    color: theme('colors.dark.elevatedSurface');
+  }
+  & .text-onSurfacePrimary {
+    color: theme('colors.dark.onSurfacePrimary');
+  }
+  & .fill-onSurfacePrimary {
+    fill: theme('colors.dark.onSurfacePrimary');
+  }
+  & .text-onSurfaceSecondary {
+    color: theme('colors.dark.onSurfaceSecondary');
+  }
+  & .fill-onSurfaceSecondary {
+    fill: theme('colors.dark.onSurfaceSecondary');
+  }
+  & .bg-elevatedSurface {
+    background-color: theme('colors.dark.elevatedSurface');
+  }
+}
+

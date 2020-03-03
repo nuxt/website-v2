@@ -1,49 +1,51 @@
 <template>
   <footer class="footer z-10 relative">
     <newsletter-form/>
-    <nui-container class="border-t border-gray-300 lg:border-0">
-      <div class="flex flex-col sm:flex-row text-center sm:text-left items-center content-center justify-between lg:border-t lg:border-gray-300 pt-10 sm:py-10">
-        <nav v-for="(l, title, index) in links" :key="title" class="flex-1 w-full sm:w-auto mb-8 sm:mb-0" :class="{'sm:text-center': index === 1, 'sm:text-right': index === 2}">
-          <h3 class="font-bold uppercase text-lg pb-4">
-            {{ title }}
-          </h3>
-          <ul>
-            <li v-for="(link, i) in l" :key="i" class="py-2">
-              <a v-if="link.href" :href="link.href" target="_blank" rel="noopener noreferrer" class="hover:text-nuxt-lightgreen">
-                {{ link.key }}
-              </a>
-              <nuxt-link v-else :to="link.to" class="hover:text-nuxt-lightgreen">
-                {{ link.key }}
-              </nuxt-link>
-            </li>
-          </ul>
-        </nav>
-      </div>
-    </nui-container>
-    <nui-container class="border-t border-gray-300 lg:border-0">
-      <div class="flex flex-row items-center content-center justify-between py-4 lg:border-t lg:border-gray-300">
-        <div class="flex-1">
-          <nui-select v-model="currentTheme" :options="themes">
-            <template v-slot:icon>
-              <component :is="currentThemeIcon" />
-            </template>
-          </nui-select>
-        </div>
-        <div class="flex-1 text-center hidden sm:block">
-          <a class="block" href="/" @click.prevent="$router.push('/')" @click.right.stop.prevent="$router.push('/design')">
-            <h1 class="m-0 h-0 w-0 overflow-hidden">NUXTJS</h1>
-            <nui-logo class="h-6 lg:h-auto" />
-          </a>
-        </div>
-        <div class="flex-1 text-right">
-          <nui-select v-model="currentLang" :options="locales">
-            <template v-slot:icon>
-              <nui-globe />
-            </template>
-          </nui-select>
+    <div class="bg-elevatedSurface shadow-nuxt">
+      <div class="container mx-auto px-4">
+        <div class="flex flex-col sm:flex-row text-center sm:text-left items-center content-center justify-between pt-10 sm:py-10">
+          <nav v-for="(l, title, index) in links" :key="title" class="flex-1 w-full sm:w-auto mb-8 sm:mb-0" :class="{'sm:text-center': index === 1, 'sm:text-right': index === 2}">
+            <h3 class="font-bold uppercase text-onSurfacePrimary text-lg pb-4">
+              {{ title }}
+            </h3>
+            <ul class="text-onSurfaceSecondary">
+              <li v-for="(link, i) in l" :key="i" class="py-2">
+                <a v-if="link.href" :href="link.href" target="_blank" rel="noopener noreferrer" class="hover:text-nuxt-lightgreen">
+                  {{ link.key }}
+                </a>
+                <nuxt-link v-else :to="link.to" class="hover:text-nuxt-lightgreen">
+                  {{ link.key }}
+                </nuxt-link>
+              </li>
+            </ul>
+          </nav>
         </div>
       </div>
-    </nui-container>
+      <div class="lg:border-t border-surface">
+        <div class="container mx-auto px-4 flex flex-row items-center content-center justify-between py-4 ">
+          <div class="flex-1">
+            <nui-select v-model="currentTheme" :options="themes">
+              <template v-slot:icon>
+                <component :is="currentThemeIcon" />
+              </template>
+            </nui-select>
+          </div>
+          <div class="flex-1 text-center hidden sm:block">
+            <a class="block" href="/" @click.prevent="$router.push('/')" @click.right.stop.prevent="$router.push('/design')">
+              <h1 class="m-0 h-0 w-0 overflow-hidden">NUXTJS</h1>
+              <nui-logo class="h-6 lg:h-auto" />
+            </a>
+          </div>
+          <div class="flex-1 text-right">
+            <nui-select v-model="currentLang" :options="locales">
+              <template v-slot:icon>
+                <nui-globe />
+              </template>
+            </nui-select>
+          </div>
+        </div>
+      </div>
+    </div>
   </footer>
 </template>
 

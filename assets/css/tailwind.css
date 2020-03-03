@@ -1,4 +1,6 @@
-@import url('https://fonts.googleapis.com/css?family=Quicksand:300,400,500,700');
+@import url('https://fonts.googleapis.com/css?family=Quicksand:300,400,500,700&display=swap');
+
+@import './base.scss';
 
 /* purgecss start ignore */
 @import 'tailwindcss/base';
@@ -12,7 +14,7 @@
 @import '@snackbar/core/dist/snackbar.css';
 /* purgecss end ignore */
 
- @import './themes/dark.css';
+/*@import './themes/dark.css';*/
 /* @import 'highlight.js/styles/nord.css'; */
 /* @import 'highlight.js/styles/tomorrow-night-blue.css'; */
 /* @import 'highlight.js/styles/ocean.css'; */

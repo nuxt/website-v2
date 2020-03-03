@@ -1,12 +1,12 @@
 body[data-theme='dark'] {
-  @apply text-dark-text bg-dark-surface;
+  /*@apply text-dark-text bg-dark-surface;*/
   & .nui-select {
     @apply text-white bg-gray-800;
   }
-  & .elevated-block {
-    @apply .bg-dark-elevatedSurface;
-  }
-  & .header {
+  /*& .elevated-block {
+    @apply .bg-dark-elevatedSurfaceColor;
+  }*/
+  /*& .header {
     @apply bg-nuxt-gray;
     & _nav {
       @apply bg-nuxt-gray;
@@ -14,8 +14,8 @@ body[data-theme='dark'] {
         @apply text-white;
       }
     }
-  }
-  & .footer {
-    @apply bg-dark-surface;
-  }
+  }*/
+  /*& .footer {
+    @apply bg-surfaceColor;
+  }*/
 }

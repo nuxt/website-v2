@@ -11,17 +11,17 @@
           {{ $store.state.lang.text.version }} <span class="text-nuxt-lightgreen">{{ $store.state.docVersion }}</span>
         </p>
         <template v-for="(group, index) in list">
-          <h3 :key="`title-${index}`" class="uppercase text-gray-500 pb-2">
+          <h3 :key="`title-${index}`" class="uppercase font-bold text-onSurfaceSecondary pb-2">
             {{ group.title }}
           </h3>
           <ul :key="`list-${index}`" class="pb-8">
             <li v-for="link in group.links" :key="link.to" class="py-2">
-              <nuxt-link class="text-gray-700 hover:text-nuxt-lightgreen" :class="{'text-nuxt-lightgreen': path === menu + link.to}" :to="menu + link.to" exact>
+              <nuxt-link class="text-onSurfacePrimary hover:text-nuxt-lightgreen" :class="{'current-link': path === menu + link.to}" :to="menu + link.to" exact>
                 {{ link.name }}
               </nuxt-link>
               <ul v-if="path === menu + link.to && link.contents" class="pl-2 py-1">
                 <li v-for="(content, i) in link.contents" :key="content.to" class="py-1 text-sm">
-                  <a :href="menu + link.to + content.to" class="text-gray-600" :class="{'text-nuxt-lightgreen': current === i}" @click.prevent="scrollTo(content.to)">
+                  <a :href="menu + link.to + content.to" class="text-onSurfaceSecondary" :class="{'current-link': current === i}" @click.prevent="scrollTo(content.to)">
                     {{ content.name }}
                   </a>
                 </li>
@@ -151,3 +151,9 @@ export default {
   }
 }
 </script>
+
+<style lang="scss" scoped>
+.current-link {
+  color: theme('colors.primary.base');
+}
+</style>

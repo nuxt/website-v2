@@ -1,10 +1,10 @@
 <template>
   <div>
-    <nui-search-icon class="block absolute text-gray-600 z-10 h-4 mt-3 ml-3 fill-current" />
+    <nui-search-icon class="block absolute z-10 h-4 mt-3 ml-3 fill-onSurfaceSecondary" />
     <input
       id="algolia"
       v-model="q"
-      class="nui-search-input"
+      class="nui-search-input bg-surface text-onSurfaceSecondary font-bold"
       type="text"
       name="search"
       :placeholder="$store.state.lang.text.search"
@@ -70,11 +70,12 @@ export default {
 }
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
 .nui-search-input {
-  @apply bg-gray-200 text-nuxt-gray font-medium px-4 pl-10 rounded-full h-10 outline-none w-full;
-  ::placeholder {
-    @apply text-gray-600;
+  @apply px-4 pl-10 rounded-full h-10 outline-none w-full;
+  &::placeholder {
+    @apply opacity-50;
   }
 }
+
 </style>

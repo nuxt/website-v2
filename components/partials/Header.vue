@@ -1,9 +1,9 @@
 <template>
   <div class="absolute">
     <!-- Common Header -->
-    <header class="header border-b border-gray-300 lg:border-0" :class="action === 'search' ? 'py-4' : 'py-6 lg:py-0'">
+    <header class="header bg-elevatedSurface border-b border-surface lg:border-0 h-16 lg:h-24" :class="action === 'search' ? 'py-4' : 'py-6 lg:py-0'">
       <template v-if="action === ''">
-        <nui-container class="flex items-center lg:py-6">
+        <div class="container mx-auto px-4 flex items-center lg:py-6 h-full">
           <!-- Left Title -->
           <a class="inline-block text-nuxt-gray h-7 lg:h-10 z-10 mr-auto" href="/" @click.prevent="$router.push('/')" @click.right.stop.prevent="$router.push('/design')">
             <h1 class="m-0 h-0 w-0 overflow-hidden">NUXTJS</h1>
@@ -12,12 +12,12 @@
           <!-- Center Navigation -->
           <ul class="hidden lg:flex lg:pt-1 xl:pt-0 text-center mx-auto">
             <li v-for="link in links" :key="link" class="header_nav_link xl:px-4 lg:py-0 lg:px-2 py-2">
-              <nuxt-link class="block p-2 font-medium uppercase hover:no-underline hover:text-nuxt-lightgreen" :to="{ name: 'section-slug', params: { section: link } }">
+              <nuxt-link class="block p-2 font-bold uppercase hover:no-underline hover:text-nuxt-lightgreen" :to="{ name: 'section-slug', params: { section: link } }">
                 {{ $store.state.lang.links[link] || link }}
               </nuxt-link>
             </li>
             <li class="header_nav_link xl:px-4 lg:py-0 lg:px-2 py-2">
-              <nuxt-link class="block p-2 font-medium uppercase hover:no-underline hover:text-nuxt-lightgreen" :to="{ name: 'resources' }">
+              <nuxt-link class="block p-2 font-bold uppercase hover:no-underline hover:text-nuxt-lightgreen" :to="{ name: 'resources' }">
                 {{ $store.state.lang.links['resources'] || 'resources' }}
               </nuxt-link>
             </li>
@@ -32,17 +32,17 @@
               <nui-globe />
             </template>
           </nui-select>
-        </nui-container>
-        <nui-container class="hidden lg:block">
-          <hr class="border-b border-t-0 border-gray-300 h-0"/>
-        </nui-container>
+        </div>
+        <!-- <nui-container class="hidden lg:block">
+          <hr class="border-b border-t-0 border-borderColor h-0"/>
+        </nui-container> -->
       </template>
       <nui-container v-else class="flex justify-between lg:hidden">
         <!-- Left Title -->
         <nui-search v-if="action === 'search'" class="w-full pr-4"/>
         <div v-else class="flex items-end">
           <component :is="'nui-' + action + '-icon'" class="block h-6 text-nuxt-lightgreen fill-current" />
-          <span class="block text-lg font-medium uppercase text-nuxt-gray pl-4 h-6">{{ $store.state.lang.links[action] || action }}</span>
+          <span class="block text-lg font-bold uppercase text-nuxt-gray pl-4 h-6">{{ $store.state.lang.links[action] || action }}</span>
         </div>
         <!-- Right Action -->
         <a href="#" class="block flex p-2 -m-2 items-center justify-center text-nuxt-gray hover:text-nuxt-lightgreen z-10 lg:hidden" :class="action === 'search' ? 'pt-3' : ''" @click.prevent="$emit('change', '')">
@@ -51,15 +51,15 @@
       </nui-container>
     </header>
     <!-- Mobile Main Navigation -->
-    <nav class="header_mobile_nav block lg:hidden">
-      <div class="flex justify-between">
-        <nuxt-link v-for="link in links" :key="link" class="block md:flex md:justify-center w-full p-2 md:p-4 text-nuxt-gray hover:no-underline hover:text-nuxt-lightgreen text-center visited:text-nuxt-gray" :to="{ name: 'section-slug', params: { section: link } }" @click.prevent.native="$emit('change', action === link ? '' : ($route.params.section !== link ? '' : link))">
+    <nav class="header_mobile_nav fixed h-16 bg-elevatedSurface border-t left-0 bottom-0 right-0 z-30 border-surface block lg:hidden">
+      <div class="flex justify-between items-center h-full">
+        <nuxt-link v-for="link in links" :key="link" class="block md:flex md:justify-center w-full p-2 md:p-4 text-onSurfacePrimary hover:no-underline hover:text-primary-base text-center visited:text-nuxt-gray" :to="{ name: 'section-slug', params: { section: link } }" @click.prevent.native="$emit('change', action === link ? '' : ($route.params.section !== link ? '' : link))">
           <component :is="'nui-' + link + '-icon'" class="inline-block h-5 fill-current mb-1" :class="{'text-nuxt-lightgreen': action === link}"/>
-          <span class="block text-xs md:text-base md:pl-3 font-medium text-nuxt-gray">{{ $store.state.lang.links[link] || link }}</span>
+          <span class="block text-xs md:text-base md:pl-3 font-bold text-onSurfacePrimary">{{ $store.state.lang.links[link] || link }}</span>
         </nuxt-link>
-        <nuxt-link class="block md:flex md:justify-center w-full p-2 md:p-4 text-nuxt-gray hover:no-underline hover:text-nuxt-lightgreen text-center visited:text-nuxt-gray" :to="{ name: 'resources' }">
+        <nuxt-link class="block md:flex md:justify-center w-full p-2 md:p-4 text-onSurfacePrimary hover:no-underline hover:text-primary-base text-center visited:text-nuxt-gray" :to="{ name: 'resources' }">
           <nui-resources-icon class="inline-block h-5 fill-current mb-1"/>
-          <span class="block text-xs md:text-base md:pl-3 font-medium text-nuxt-gray">{{ $store.state.lang.links['resources'] || 'resources' }}</span>
+          <span class="block text-xs md:text-base md:pl-3 font-bold text-onSurfacePrimary">{{ $store.state.lang.links['resources'] || 'resources' }}</span>
         </nuxt-link>
       </div>
     </nav>
@@ -145,17 +145,14 @@ export default {
 
 <style>
 .header {
-  @apply fixed bg-white top-0 left-0 right-0 z-30;
+  @apply fixed top-0 left-0 right-0 z-30;
 }
 .header_nav_link a.nuxt-link-active {
     @apply text-nuxt-lightgreen;
 }
-.header_mobile_nav {
-  @apply fixed bg-white border-t border-gray-300 left-0 bottom-0 right-0 z-30;
-}
-.header_mobile_nav a {
+/*.header_mobile_nav a {
   padding-bottom: max(0.5rem,env(safe-area-inset-bottom));
-}
+}*/
 .header_mobile_aside {
   @apply fixed left-0 bg-gray-100 pt-6 z-20 w-full overflow-y-auto;
   top: 72px;

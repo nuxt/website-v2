@@ -1,85 +1,87 @@
 <template>
-  <nui-container class="pt-16">
-    <div class="flex flex-wrap justify-between mb-8">
-      <div class="lg:w-6/12 lg:text-left text-center p-4 sm:p-0">
-        <h1 class="text-3xl xl:text-4xl text-nuxt-gray font-medium leading-normal mb-6 lg:pt-4">
-          Sponsor NUXT<span class="text-nuxt-lightgreen">JS</span> Development<br>
-        </h1>
-        <h3 class="xl:text-lg text-gray-600 font-medium leading-relaxed mb-6">
-          NuxtJS is an MIT licensed open source project and completely free to use.<br>
-          However, the amount of effort needed to maintain and develop new features for the project is not sustainable without proper financial backing.<br>
-          You can support NuxtJS development via the following methods:
-        </h3>
+  <div class="bg-elevatedSurface shadow-nuxt">
+    <div class="container mx-auto px-4 pt-16 pb-12">
+      <div class="flex flex-wrap justify-between mb-8">
+        <div class="lg:w-6/12 lg:text-left text-center p-4 sm:p-0">
+          <h1 class="text-3xl xl:text-4xl text-onSurfacePrimary font-bold leading-normal mb-6 lg:pt-4">
+            Sponsor NUXT<span class="text-nuxt-lightgreen">JS</span> Development<br>
+          </h1>
+          <h3 class="xl:text-lg text-onSurfaceSecondary font-medium leading-relaxed mb-6">
+            NuxtJS is an MIT licensed open source project and completely free to use.<br>
+            However, the amount of effort needed to maintain and develop new features for the project is not sustainable without proper financial backing.<br>
+            You can support NuxtJS development via the following methods:
+          </h3>
+        </div>
+        <i-sponsor class="w-2/3 mx-auto lg:mx-0 lg:w-5/12 lg:-mt-8 text-elevatedSurface"/>
       </div>
-      <i-sponsor class="w-2/3 mx-auto lg:mx-0 lg:w-5/12 lg:-mt-8"/>
-    </div>
-    <section class="flex flex-wrap bg-gray-100 p-8 rounded my-12">
-      <div class="w-full lg:w-2/3 text-center lg:text-left">
-        <h2 class="text-2xl uppercase pt-4 pb-6">
-          One-time donations
+      <section class="flex flex-wrap bg-surface p-8 rounded-lg my-12 shadow-lg">
+        <div class="w-full lg:w-2/3 text-center lg:text-left">
+          <h2 class="text-2xl uppercase pt-4 pb-6">
+            One-time donations
+          </h2>
+          <p class="mb-8 text-gray-600">
+            We accept donations through these channels
+          </p>
+          <div class="flex flex-wrap justify-center lg:justify-start items-end mb-8 text-light-onSurfacePrimary">
+            <a href="https://www.paypal.me/nuxtjs" target="_blank" class="flex items-center my-2 bg-gray-200 hover:bg-gray-300 rounded-full px-6 py-4 font-bold mr-2 -ml-2">
+              <img src="/img/wallet/paypal.png" alt="Paypal" class="h-6 block">
+            </a>
+            <a href="#btc" class="flex items-center my-2 bg-gray-200 hover:bg-gray-300 rounded-full p-2 pr-6 font-bold mx-2" :class="{ 'bg-gray-300': onetime.current === 'btc' }" @click.prevent="onetime.current = 'btc'">
+              <nui-svg-btc class="mr-3" /> BTC
+            </a>
+            <a href="#bch" class="flex items-center my-2 bg-gray-200 hover:bg-gray-300 rounded-full p-2 pr-6 font-bold mx-2" :class="{ 'bg-gray-300': onetime.current === 'bch' }" @click.prevent="onetime.current = 'bch'">
+              <nui-svg-bch class="mr-3" /> BCH
+            </a>
+            <a href="#eth" class="flex items-center my-2 bg-gray-200 hover:bg-gray-300 rounded-full p-2 pr-6 font-bold mx-2" :class="{ 'bg-gray-300': onetime.current === 'eth' }" @click.prevent="onetime.current = 'eth'">
+              <nui-svg-eth class="mr-3" /> ETH
+            </a>
+            <a href="#ltc" class="flex items-center my-2 bg-gray-200 hover:bg-gray-300 rounded-full p-2 pr-6 font-bold mx-2" :class="{ 'bg-gray-300': onetime.current === 'ltc' }" @click.prevent="onetime.current = 'ltc'">
+              <nui-svg-ltc class="mr-3" /> LTC
+            </a>
+          </div>
+        </div>
+        <div v-if="currentOnetime" class="text-center w-full lg:w-1/3">
+          <p class="text-xl">
+            {{ currentOnetime.title }}
+          </p>
+          <p class="py-3 text-gray-600">
+            {{ currentOnetime.address }}
+          </p>
+          <img :src="currentOnetime.img" :alt="currentOnetime.title" class="w-5/12 inline-block">
+        </div>
+      </section>
+      <section class="text-center">
+        <h2 class="text-2xl text-onSurfacePrimary font-bold uppercase pt-10 pb-8">
+          Recurring Pledges
         </h2>
-        <p class="mb-8 text-gray-600">
-          We accept donations through these channels
+        <p class="text-onSurfaceSecondary mb-12">
+          Recurring pledges come with exclusive perks, e.g. having your name listed in the NuxtJS GitHub repository, or have your company logo placed on this website.
+          Become a nuxter or sponsor via <a href="https://opencollective.com/nuxtjs">OpenCollective</a> (goes into a fund with transparent expense models supporting community efforts and events).
         </p>
-        <div class="flex flex-wrap justify-center lg:justify-start items-end mb-8">
-          <a href="https://www.paypal.me/nuxtjs" target="_blank" class="flex items-center my-2 bg-gray-200 hover:bg-gray-300 rounded-full px-6 py-4 font-bold mr-2 -ml-2">
-            <img src="/img/wallet/paypal.png" alt="Paypal" class="h-6 block">
-          </a>
-          <a href="#btc" class="flex items-center my-2 bg-gray-200 hover:bg-gray-300 rounded-full p-2 pr-6 font-bold mx-2" :class="{ 'bg-gray-300': onetime.current === 'btc' }" @click.prevent="onetime.current = 'btc'">
-            <nui-svg-btc class="mr-3" /> BTC
-          </a>
-          <a href="#bch" class="flex items-center my-2 bg-gray-200 hover:bg-gray-300 rounded-full p-2 pr-6 font-bold mx-2" :class="{ 'bg-gray-300': onetime.current === 'bch' }" @click.prevent="onetime.current = 'bch'">
-            <nui-svg-bch class="mr-3" /> BCH
-          </a>
-          <a href="#eth" class="flex items-center my-2 bg-gray-200 hover:bg-gray-300 rounded-full p-2 pr-6 font-bold mx-2" :class="{ 'bg-gray-300': onetime.current === 'eth' }" @click.prevent="onetime.current = 'eth'">
-            <nui-svg-eth class="mr-3" /> ETH
-          </a>
-          <a href="#ltc" class="flex items-center my-2 bg-gray-200 hover:bg-gray-300 rounded-full p-2 pr-6 font-bold mx-2" :class="{ 'bg-gray-300': onetime.current === 'ltc' }" @click.prevent="onetime.current = 'ltc'">
-            <nui-svg-ltc class="mr-3" /> LTC
+        <div v-for="(group, groupKey) in sponsors" :key="groupKey" class="text-center pb-8">
+          <h2 class="uppercase text-xl pb-8">
+            <span class="pb-2 border-b-2 border-nuxt-lightgreen text-onSurfacePrimary">{{ groupKey }} SPONSORS</span>
+          </h2>
+          <a
+            v-for="(sponsor, i) in group"
+            :key="i"
+            class="sponsor inline-block m-4"
+            :href="sponsor.url"
+            target="_blank"
+            rel="noopener sponsored"
+          >
+            <img :src="'/img/sponsors/' + sponsor.img" :alt="sponsor.name" :title="sponsor.name" class="inline-block" :class="sponsor.class">
           </a>
         </div>
-      </div>
-      <div v-if="currentOnetime" class="text-center w-full lg:w-1/3">
-        <p class="text-xl">
-          {{ currentOnetime.title }}
-        </p>
-        <p class="py-3 text-gray-600">
-          {{ currentOnetime.address }}
-        </p>
-        <img :src="currentOnetime.img" :alt="currentOnetime.title" class="w-5/12 inline-block">
-      </div>
-    </section>
-    <section class="text-center">
-      <h2 class="text-2xl uppercase pt-10 pb-8">
-        Recurring Pledges
-      </h2>
-      <p class="text-gray-600 mb-12">
-        Recurring pledges come with exclusive perks, e.g. having your name listed in the NuxtJS GitHub repository, or have your company logo placed on this website.
-        Become a nuxter or sponsor via <a href="https://opencollective.com/nuxtjs">OpenCollective</a> (goes into a fund with transparent expense models supporting community efforts and events).
-      </p>
-      <div v-for="(group, groupKey) in sponsors" :key="groupKey" class="text-center pb-8">
-        <h2 class="uppercase text-xl pb-8">
-          <span class="pb-2 border-b-2 border-nuxt-lightgreen text-gray-700">{{ groupKey }} SPONSORS</span>
-        </h2>
-        <a
-          v-for="(sponsor, i) in group"
-          :key="i"
-          class="sponsor inline-block m-4"
-          :href="sponsor.url"
-          target="_blank"
-          rel="noopener sponsored"
-        >
-          <img :src="'/img/sponsors/' + sponsor.img" :alt="sponsor.name" :title="sponsor.name" class="inline-block" :class="sponsor.class">
-        </a>
-      </div>
-      <div class="text-center">
-        <nui-button href="https://opencollective.com/nuxtjs" class="mr-4 py-3 px-6 text-base">
-          <nui-svg-play slot="icon" class="h-5 -mt-1 mr-1" />
-          Become a sponsor
-        </nui-button>
-      </div>
-    </section>
-  </nui-container>
+        <div class="text-center">
+          <nui-button href="https://opencollective.com/nuxtjs" class="py-3 px-6 text-base">
+            <nui-svg-play slot="icon" class="h-5 -mt-1 mr-1" />
+            Become a sponsor
+          </nui-button>
+        </div>
+      </section>
+    </div>
+  </div>
 </template>
 
 <script>

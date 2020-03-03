@@ -4,26 +4,26 @@
       <div v-if="page.langFallback" class="p-4 mb-6 bg-orange-200 rounded">
         ⚠️ You are looking at the english version of the page. Help us translate it <a :href="docLink" class="text-orange-600">here</a>.
       </div>
-      <nui-article v-if="section === 'examples'">
-        <h1>{{ page.attrs.title }}</h1>
+      <article v-if="section === 'examples'">
+        <h1 class="text-onSurfacePrimary">{{ page.attrs.title }}</h1>
         <p class="mb-6">{{ page.attrs.description }}</p>
         <code-sandbox v-if="codeSandBoxLink" :src="codeSandBoxLink" style="margin-bottom: 20px;"/>
         <div>
-          <a :href="liveEditLink" class="inline-block bg-nuxt-lightgreen text-white font-medium text-sm px-4 py-2 shadow uppercase no-underline rounded hover:bg-nuxt-green hover:shadow-md sm:mr-4 py-3 px-6 text-base" target="_blank" rel="noopener">
+          <nui-button :href="liveEditLink" variant="primary" class="sm:mr-4 py-3 px-6 text-base mb-4">
             {{ $store.state.lang.links.live_edit }}
-          </a>
-          <a :href="downloadLink" class="inline-block bg-nuxt-lightgreen text-white font-medium text-sm px-4 py-2 shadow uppercase no-underline rounded hover:bg-nuxt-green hover:shadow-md sm:mr-4 py-3 px-6 text-base" target="_blank" rel="noopener">
+          </nui-button>
+          <nui-button :href="downloadLink" variant="primary" class="sm:mr-4 py-3 px-6 text-base mb-4">
             {{ $store.state.lang.links.download }}
-          </a>
+          </nui-button>
         </div>
         <contribute :doc-link="docLink" :contributors="contributors" />
-      </nui-article>
-      <nui-article v-else>
-        <h1>{{ page.attrs.title }}</h1>
+      </article>
+      <article v-else>
+        <h1 class="text-onSurfacePrimary">{{ page.attrs.title }}</h1>
         <responsive-video v-if="page.attrs.youtube" :src="page.attrs.youtube" />
         <html-parser :content="page.body" />
         <contribute :doc-link="docLink" :contributors="contributors" />
-      </nui-article>
+      </article>
     </div>
     <nui-affix class="opacity-transition" :class="{ 'opacity-25': $store.state.focusMode }">
       <nui-ads :key="$route.params.slug" class="mx-auto" />
@@ -103,3 +103,14 @@ export default {
   }
 }
 </script>
+
+<style lang="scss" scoped>
+article h1 {
+  @apply font-bold relative text-3xl table mb-8;
+  &::after {
+    content: " ";
+    width: 80%;
+    @apply block border-2 border-nuxt-lightgreen mt-2 mb-1 rounded;
+  }
+}
+</style>

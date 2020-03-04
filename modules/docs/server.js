@@ -324,6 +324,23 @@ class DocsServer {
       return this.homepage
     }
 
+    // Blog
+    const prettierUrl = url.slice(1).replace(/\/$/, '') // removing first and last slash
+    const splittedUrl = prettierUrl.split('/')
+    if (splittedUrl[1] === 'blog') {
+      if (splittedUrl.length === 2) { // blog directory
+        let posts = Object.keys(this.docsFiles).filter(path => path.indexOf(prettierUrl) === 0)
+        posts = posts.map(path => {
+         return {
+          ...this.docsFiles[path].attrs,
+          slug: path.split('/').slice(-1)[0].replace(/\.md$/, '') // remove lang and extension
+         }
+        })
+        posts.sort((p1, p2) => p2.date - p1.date)
+        return posts
+      }
+    }
+
     // Remove first /
     const path = url.slice(1) + '.md'
     const lang = path.slice(0, 2)

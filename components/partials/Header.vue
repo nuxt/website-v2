@@ -16,9 +16,9 @@
                 {{ $store.state.lang.links[link] || link }}
               </nuxt-link>
             </li>
-            <li class="header_nav_link xl:px-4 lg:py-0 lg:px-2 py-2">
-              <nuxt-link class="block p-2 font-medium uppercase hover:no-underline hover:text-nuxt-lightgreen" :to="{ name: 'resources' }">
-                {{ $store.state.lang.links['resources'] || 'resources' }}
+            <li v-for="l in ['resources', 'blog']" :key="l" class="header_nav_link xl:px-4 lg:py-0 lg:px-2 py-2">
+              <nuxt-link class="block p-2 font-medium uppercase hover:no-underline hover:text-nuxt-lightgreen" :to="{ name: l }">
+                {{ $store.state.lang.links[l] || l }}
               </nuxt-link>
             </li>
           </ul>

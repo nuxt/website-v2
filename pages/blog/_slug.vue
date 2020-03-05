@@ -62,7 +62,7 @@ export default {
   @apply font-semibold
 }
 .blog-post-footer {
-  @apply mt-4
+  @apply mt-4 border-t border-gray-300 pt-2
 }
 .blog-post-tags {
   @apply flex list-none p-0 mt-4

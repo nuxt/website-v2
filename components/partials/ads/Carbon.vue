@@ -17,14 +17,37 @@ export default {
 }
 </script>
 
-<style>
-.Carbon {
-  @apply p-4 flex flex-col mx-auto bg-gray-200 mt-4;
-  max-width: 100%;
-  & .carbon-text {
-    @apply text-sm m-0 text-left text-gray-600 block pt-2 leading-relaxed;
+<style lang="scss">
+[data-theme='dark'] .Carbon {
+  background-color: theme('colors.dark.surface');
+  .carbon-text {
+    color: theme('colors.dark.onSurfacePrimary');
     &:hover {
-      @apply no-underline text-gray-700;
+      color: theme('colors.dark.onSurfaceSecondary');
+    }
+  }
+}
+
+[data-theme='light'] .Carbon {
+  background-color: theme('colors.light.surface');
+  .carbon-text {
+    @apply text-gray-600;
+    &:hover {
+      @apply text-gray-800;
+    }
+  }
+}
+
+.Carbon {
+  @apply p-4 flex flex-col mx-auto mt-4;
+  max-width: 100%;
+  img {
+    @apply w-full;
+  }
+  & .carbon-text {
+    @apply text-sm m-0 text-left block pt-2 leading-relaxed;
+    &:hover {
+      @apply no-underline;
     }
   }
   & .carbon-poweredby {
@@ -60,7 +83,7 @@ export default {
 }
 @screen lg {
   .Carbon {
-    @apply bg-white mt-0;
+    @apply mt-0;
     max-width: 160px;
   }
 }

@@ -12,7 +12,7 @@
           <span class="inline-block px-2 leading-loose">{{ contributor.author }}</span>
         </a>
       </div>
-      <p v-if="docLink" class="text-onSurfaceSecondary pt-1 mb-3">{{ $store.state.lang.guide.contribute }} <a :href="docLink" target="_blank" rel="noopener" class="text-primary-base hover:underline">{{ $store.state.lang.guide.edit_on_github }}</a></p>
+      <p v-if="docLink" class="text-onSurfaceSecondary pt-1 mb-8">{{ $store.state.lang.guide.contribute }} <a :href="docLink" target="_blank" rel="noopener" class="text-primary-base hover:underline">{{ $store.state.lang.guide.edit_on_github }}</a></p>
       <carbon-ads-text :key="$route.path" />
     </div>
   </div>

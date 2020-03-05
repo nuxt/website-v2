@@ -34,19 +34,38 @@ export default {
 }
 </script>
 
-<style>
+<style lang="scss">
+[data-theme='light'] #bsa-native {
+  .native-box {
+    @apply shadow-lg;
+    border-color: theme('colors.gray.300');
+    background-color: theme('colors.light.surface');
+  }
+}
+
+[data-theme='dark'] #bsa-native {
+  .native-box {
+    @apply shadow-lg;
+    border-color: theme('colors.gray.900');
+    background-color: theme('colors.dark.surface');
+  }
+}
+
 #bsa-native {
   & .native-box {
-    @apply flex p-2 border rounded text-nuxt-gray bg-gray-100 items-center mb-4;
+    @apply flex p-2 border rounded-lg items-center mb-4;
   }
   & a {
     @apply no-underline;
   }
   & .native-sponsor {
-    @apply bg-nuxt-green text-white rounded uppercase py-1 px-3 font-medium text-xs mr-2;
+    @apply bg-primary-base text-white rounded-md uppercase py-1 px-3 font-bold text-xs mx-2;
+    &:hover {
+      @apply bg-primary-light;
+    }
   }
   & .native-text {
-    @apply font-normal text-base;
+    @apply font-normal text-base pl-2;
   }
 }
 </style>

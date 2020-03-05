@@ -80,10 +80,71 @@ export default {
   & blockquote {
     color: theme('colors.light.onSurfaceSecondary');
   }
+  & a {
+    @apply text-nuxt-lightgreen;
+    &:hover {
+      @apply underline;
+    }
+    & code {
+      @apply text-nuxt-lightgreen;
+      &:hover {
+        @apply text-nuxt-green;
+      }
+    }
+  }
+  // inline code snippet
+  & code {
+    @apply bg-gray-100 text-red-500;
+  }
   & pre {
     background-color: theme('colors.dark.elevatedSurface');
     code {
       color: theme('colors.dark.onSurfacePrimary');
+    }
+  }
+  // code snippet block
+  & pre {
+    code {
+      @apply bg-transparent;
+      color: theme('colors.dark.onSurfacePrimary');
+    }
+  }
+  & .Alert {
+    @apply bg-blue-100 text-light-onSurfacePrimary;
+    & a {
+      @apply text-blue-600;
+    }
+    & code {
+      @apply text-blue-800 bg-blue-200;
+    }
+    &.Alert--orange {
+      @apply bg-orange-100;
+      & a {
+        @apply text-orange-600;
+      }
+      & code {
+        @apply text-orange-800 bg-orange-200;
+      }
+    }
+  }
+  .Promote {
+    @apply shadow-md;
+    background-color: theme('colors.gray.200');
+    .Promote__Content {
+      .Promote__Content__Title {
+        color: theme('colors.light.onSurfacePrimary');
+      }
+      .Promote__Content__Description {
+        color: theme('colors.light.onSurfaceSecondary');
+      }
+      .Promote__Content__Signature {
+        @apply text-gray-500;
+      }
+    }
+    &:hover {
+      @apply shadow-lg;
+      background-color: theme('colors.gray.300');
+      text-decoration: none;
     }
   }
 }
@@ -95,10 +156,69 @@ export default {
   & blockquote {
     color: theme('colors.dark.onSurfaceSecondary');
   }
+  & a {
+    @apply text-nuxt-lightgreen;
+    &:hover {
+      @apply underline;
+    }
+    & code {
+      @apply text-nuxt-lightgreen;
+      &:hover {
+        @apply text-nuxt-green;
+      }
+    }
+  }
+  // inline code snippet
+  & code {
+    @apply bg-gray-800;
+    color: #E1E8F5;
+  }
+  // code snippet block
   & pre {
-    background-color: theme('colors.light.elevatedSurface');
+    background-color: #1E344C;
     code {
-      color: theme('colors.light.onSurfacePrimary');
+      @apply bg-transparent;
+      color: theme('colors.dark.onSurfacePrimary');
+    }
+  }
+  & .Alert {
+    // @apply bg-gray-600 text-dark-onSurfacePrimary;
+    background-color: #205D80;
+    & a {
+      @apply text-blue-300;
+    }
+    & code {
+      @apply text-blue-800 bg-blue-200;
+    }
+    &.Alert--orange {
+      // @apply bg-orange-200;
+      background-color: #4c4c4c;
+      & a {
+        @apply text-orange-600;
+      }
+      & code {
+        @apply text-orange-800 bg-orange-200;
+      }
+    }
+  }
+  .Promote {
+    @apply shadow-md;
+    background: theme('colors.dark.surface');
+    .Promote__Content {
+      .Promote__Content__Title {
+        color: theme('colors.dark.onSurfacePrimary');
+      }
+      .Promote__Content__Description {
+        color: theme('colors.dark.onSurfaceSecondary');
+      }
+      .Promote__Content__Signature {
+        @apply text-gray-500;
+      }
+    }
+    &:hover {
+      @apply shadow-lg;
+      background-color: #233344;
+      text-decoration: none;
     }
   }
 }
@@ -155,7 +275,7 @@ div ::v-deep {
 
 div ::v-deep {
   & p {
-    @apply leading-loose py-1 mb-1;
+    @apply leading-relaxed py-1 mb-2;
   }
   & li p {
     @apply inline-block;
@@ -164,22 +284,16 @@ div ::v-deep {
     @apply italic leading-loose;
   }
   & code {
-    @apply bg-gray-100 text-red-500 p-1 not-italic rounded text-sm;
+    @apply p-1 not-italic rounded text-sm;
   }
   & a {
-    @apply text-nuxt-lightgreen;
     &:hover {
       @apply underline;
     }
-    & code {
-      @apply text-nuxt-lightgreen;
-      &:hover {
-        @apply text-nuxt-green;
-      }
-    }
   }
+  // code snippet block
   & pre {
-    @apply rounded p-2 my-2 overflow-auto;
+    @apply rounded-lg p-2 my-2 overflow-auto;
     & code {
       @apply bg-transparent;
     }
@@ -189,56 +303,43 @@ div ::v-deep {
     @apply font-bold;
   }
   & .Alert {
-    @apply px-4 py-2 rounded my-4 bg-blue-100;
-    & a {
-      @apply text-blue-600;
-    }
-    & code {
-      @apply text-blue-800 bg-blue-200;
-    }
-    &.Alert--orange {
-      @apply bg-orange-100;
-      & a {
-        @apply text-orange-600;
-      }
-      & code {
-        @apply text-orange-800 bg-orange-200;
-      }
+    @apply px-4 py-2 rounded-lg my-4;
+    p {
+      @apply mb-0;
     }
   }
   & .Promote {
-    @apply flex flex-col p-4 my-4 rounded bg-gray-200 text-gray-600;
+    @apply flex flex-col p-4 my-4 rounded-lg;
     & img {
-      width: 240px;
-      height: 120px;
-      @apply mb-3;
+      width: 100%;
+      height: auto;
+      @apply mb-3 rounded-lg;
+      @screen sm {
+        max-width: 240px;
+        @apply mb-0;
+      }
     }
     & .Promote__Content {
       & .Promote__Content__Title {
-        @apply text-gray-700 text-xl;
+        @apply text-xl;
       }
       & .Promote__Content__Description {
-        @apply leading-relaxed py-1 text-sm;
+        @apply leading-relaxed py-1 pb-4 text-sm;
       }
       & .Promote__Content__Signature {
-        @apply text-xs text-gray-500 m-0 p-0;
+        @apply text-xs m-0 p-0 leading-none;
       }
     }
-    &:hover {
-      @apply no-underline bg-gray-300;
+    @screen sm {
+      @apply flex-row;
+      & .Promote__Content {
+        @apply pl-4;
+      }
     }
   }
 }
 
-@screen md {
-  body article .Promote {
-    @apply flex-row items-center;
-    & .Promote__Content {
-      @apply pl-4;
-    }
-  }
-}
-
+// lists
 div ::v-deep {
   & ul, & ol {
     @apply list-inside py-1 pl-1;
@@ -255,5 +356,86 @@ div ::v-deep {
   & ul {
     @apply list-disc;
   }
+}
+
+// code hightlight
+div ::v-deep {
+  /* Ocean Dark Theme */
+  /* https://github.com/gavsiu */
+  /* Original theme - https://github.com/chriskempson/base16 */
+  /* purgecss start ignore */
+
+  /* Ocean Comment */
+  .hljs-comment,
+  .hljs-quote {
+    color: #9ca1a5;
+  }
+
+  /* Ocean Red */
+  .hljs-variable,
+  .hljs-template-variable,
+  .hljs-tag,
+  .hljs-name,
+  .hljs-selector-id,
+  .hljs-selector-class,
+  .hljs-regexp,
+  .hljs-deletion {
+    color: #f99595;
+  }
+
+  /* Ocean Orange */
+  .hljs-number,
+  .hljs-built_in,
+  .hljs-builtin-name,
+  .hljs-literal,
+  .hljs-type,
+  .hljs-params,
+  .hljs-meta,
+  .hljs-link {
+    color: #f56565;
+  }
+
+  /* Ocean Yellow */
+  .hljs-attr {
+    color: #88aaff;
+  }
+
+  /* Ocean Green */
+  .hljs-string,
+  .hljs-symbol,
+  .hljs-bullet,
+  .hljs-addition {
+    color: #00C58E;
+  }
+
+  /* Ocean Blue */
+  .hljs-title,
+  .hljs-section {
+    color: #8fa1b3;
+  }
+
+  /* Ocean Purple */
+  .hljs-keyword,
+  .hljs-selector-tag {
+    color: #b48ead;
+  }
+
+  .hljs {
+    display: block;
+    overflow-x: auto;
+    background: transparent;
+    color: white;
+    padding: 0.5em;
+  }
+
+  .hljs-emphasis {
+    font-style: italic;
+  }
+
+  .hljs-strong {
+    font-weight: bold;
+  }
+  /* purgecss end ignore */
+
 }
 </style>

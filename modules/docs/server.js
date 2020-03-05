@@ -11,6 +11,7 @@ const degit = require('degit')
 const logger = require('consola').withScope('docs/server')
 const { marked, partialRenderer } = require('./renderer')
 const readFile = promisify(fs.readFile)
+const readingTime = require('reading-time');
 
 class DocsServer {
   constructor (options) {
@@ -143,10 +144,11 @@ class DocsServer {
 
     // Transform markdown to html
     file = fm(file)
-
+    const body = marked(file.body, parseOptions)
     this.docsFiles[path] = {
       attrs: file.attributes,
-      body: marked(file.body, parseOptions)
+      body,
+      readtime: readingTime(body)
     }
 
     return this.docsFiles[path]
@@ -333,7 +335,8 @@ class DocsServer {
         posts = posts.map(path => {
          return {
           ...this.docsFiles[path].attrs,
-          slug: path.split('/').slice(-1)[0].replace(/\.md$/, '') // remove lang and extension
+          slug: path.split('/').slice(-1)[0].replace(/\.md$/, ''),  // remove lang and extension
+          readtime: readingTime(this.docsFiles[path].body)
          }
         })
         posts.sort((p1, p2) => p2.date - p1.date)

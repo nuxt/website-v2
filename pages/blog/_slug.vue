@@ -4,7 +4,7 @@
       <div class="blog-post-title">{{ page.attrs.title }}</div>
       <div class="flex items-baseline justify-between text-sm text-gray-600 mb-8">
         <div class="blog-post-author">{{ page.attrs.author }}</div>
-        <div class="blog-post-readtime">{{ page.attrs.readtime }} min</div>
+        <div class="blog-post-readtime">{{ page.readtime.text }}</div>
       </div>
       <div class="blog-post-description">{{ page.attrs.description }}</div>
     </div>

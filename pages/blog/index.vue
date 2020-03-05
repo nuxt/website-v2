@@ -32,7 +32,7 @@
                 {{ post.author }}
               </div>
               <div class="post-card-readtime">
-                {{ post.readtime }} min
+                {{ post.readtime.text }}
               </div>
             </div>
           </footer>

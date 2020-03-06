@@ -34,7 +34,7 @@ export default {
 }
 </script>
 
-<style lang="scss">
+<style>
 [data-theme='light'] #bsa-native {
   .native-box {
     @apply shadow-lg;

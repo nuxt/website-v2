@@ -7,7 +7,7 @@
             Platinum Sponsors
           </p>
           <a v-for="sponsor in sponsors" :key="sponsor.name" :href="sponsor.link" class="block lg:inline-block my-4" rel="noopener sponsored">
-            <img :src="sponsor.img" :alt="sponsor.name" class="h-16">
+            <img :src="`/img/sponsors/${$theme.value}/${sponsor.img}`" :alt="sponsor.name">
           </a>
           <nui-button :to="{ name: 'sponsor-nuxtjs' }" class="justify-center mb-8">
             Support Us
@@ -26,7 +26,7 @@ export default {
   data () {
     return {
       sponsors: [
-        { name: 'Storyblok', link: 'https://www.storyblok.com/?ref=nuxt', img: '/img/sponsors/storyblok-logo.svg' }
+        { name: 'Storyblok', link: 'https://www.storyblok.com/?ref=nuxt', img: 'storyblok-logo.svg' }
       ]
     }
   }

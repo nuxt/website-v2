@@ -125,6 +125,7 @@ export default {
     background-color: theme('colors.dark.elevatedSurface');
   }
   .algolia-docsearch-suggestion--category-header {
+    border-color: #618092;
     & span {
       color: theme('colors.dark.onSurfacePrimary');
     }
@@ -137,6 +138,9 @@ export default {
   }
   .algolia-docsearch-suggestion--text {
     color: theme('colors.dark.onSurfacePrimary');
+  }
+  .algolia-docsearch-suggestion--content:before {
+    background: #618092;
   }
 }
 

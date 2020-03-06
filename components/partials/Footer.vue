@@ -71,7 +71,7 @@ export default {
   data () {
     return {
       themes: [
-        { value: 'system', text: 'Auto', icon: 'nui-sun' },
+        // { value: 'system', text: 'Auto', icon: 'nui-sun' },
         { value: 'light', text: 'Light', icon: 'nui-sun' },
         { value: 'dark', text: 'Dark', icon: 'nui-moon' }
       ],

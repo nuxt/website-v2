@@ -70,7 +70,7 @@
             target="_blank"
             rel="noopener sponsored"
           >
-            <img :src="'/img/sponsors/' + sponsor.img" :alt="sponsor.name" :title="sponsor.name" class="inline-block" :class="sponsor.class">
+            <img :src="`/img/sponsors/${$theme.value}/${sponsor.img}`" :alt="sponsor.name" :title="sponsor.name" class="inline-block" :class="sponsor.class">
           </a>
         </div>
         <div class="text-center">
@@ -108,13 +108,13 @@ export default {
           { name: 'Storyblok', img: 'storyblok-logo.svg', url: 'https://www.storyblok.com/?ref=nuxt', class: 'h-24' }
         ],
         gold: [
-          { name: 'Tipe', img: 'tipe-io-cms.png', url: 'https://tipe.io/?ref=nuxt', class: 'h-12' },
+          { name: 'Tipe', img: 'tipe-io.svg', url: 'https://tipe.io/?ref=nuxt', class: 'h-12' },
           { name: 'VueMastery', img: 'vueMastery-brand.svg', url: 'https://www.vuemastery.com/?ref=nuxt', class: 'h-10' }
         ],
         silver: [
-          { name: 'Sparheld', img: 'de-black.png', url: 'https://www.sparheld.de/?ref=nuxt', class: 'h-8' },
-          { name: 'Icons8', img: 'icons8.png', url: 'https://icons8.com/?ref=nuxt', class: 'h-8' },
-          { name: 'Clay', img: 'clay.png', url: 'https://clay.global/?ref=nuxt', class: 'h-8' },
+          { name: 'Sparheld', img: 'sparheld.svg', url: 'https://www.sparheld.de/?ref=nuxt', class: 'h-8' },
+          { name: 'Icons8', img: 'icons8.svg', url: 'https://icons8.com/?ref=nuxt', class: 'h-8' },
+          { name: 'Clay', img: 'clay.svg', url: 'https://clay.global/?ref=nuxt', class: 'h-8' },
           { name: 'UX Planet', img: 'ux-planet.png', url: 'https://uxplanet.org/top-ui-ux-design-agencies-user-experience-firms-8c54697e290/?ref=nuxt', class: 'h-8' },
           { name: 'FireStickHow', img: 'fire-stick-how.png', url: 'https://www.firestickhow.com/?ref=nuxt', class: 'h-8' },
           { name: 'CrossWordSolver', img: 'crosswordsolver.svg', url: 'https://www.crosswordsolver.com/?ref=nuxt', class: 'h-8' },

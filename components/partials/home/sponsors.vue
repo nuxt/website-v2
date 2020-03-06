@@ -19,7 +19,7 @@
             target="_blank"
             rel="noopener sponsored"
           >
-            <img :src="'/img/sponsors/' + sponsor.img" :alt="sponsor.name" class="inline-block" :class="sponsor.class">
+            <img :src="`/img/sponsors/${$theme.value}/${sponsor.img}`" :alt="sponsor.name" class="inline-block" :class="sponsor.class">
           </a>
         </div>
         <div class="text-center">
@@ -49,7 +49,7 @@ export default {
           { name: 'Storyblok', img: 'storyblok-logo.svg', url: 'https://www.storyblok.com/?ref=nuxt', class: 'h-24' }
         ],
         gold: [
-          { name: 'Tipe', img: 'tipe-io-cms.png', url: 'https://tipe.io/?ref=nuxt', class: 'h-12' },
+          { name: 'Tipe', img: 'tipe-io.svg', url: 'https://tipe.io/?ref=nuxt', class: 'h-12' },
           { name: 'VueMastery', img: 'vueMastery-brand.svg', url: 'https://www.vuemastery.com/?ref=nuxt', class: 'h-10' }
         ],
         special: [

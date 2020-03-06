@@ -9,7 +9,7 @@
           Discover articles from the core team and contributors about NuxtJS, tips and tricks included!
         </h3>
       </div>
-      <img src="#" alt="Blog" class="hidden w-2/3 mx-auto lg:mx-0 lg:w-5/12 lg:-mt-8">
+      <img src="#" alt="Blog" class="w-2/3 mx-auto lg:mx-0 lg:w-5/12 lg:-mt-8">
     </div>
     <section class="post-feed">
       <article v-for="(post, p) in posts" :key="p" class="post-card-container hover:shadow-nuxt">

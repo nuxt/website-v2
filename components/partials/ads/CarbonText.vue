@@ -52,19 +52,19 @@ export default {
 }
 
 #bsa-native {
-  & .native-box {
+  .native-box {
     @apply flex p-2 border rounded-lg items-center mb-4;
   }
-  & a {
+  a {
     @apply no-underline;
   }
-  & .native-sponsor {
+  .native-sponsor {
     @apply bg-primary-base text-white rounded-md uppercase py-1 px-3 font-bold text-xs mx-2;
     &:hover {
       @apply bg-primary-light;
     }
   }
-  & .native-text {
+  .native-text {
     @apply font-normal text-base pl-2;
   }
 }

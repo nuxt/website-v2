@@ -23,9 +23,13 @@ export default function (ctx, inject) {
 
   // Read from cookie
   if (process.server && ctx.req) {
-    const cookies = parse(ctx.req.headers.cookie)
-    if (cookies[key] && cookies[key] !== theme.value) {
-      theme.value = cookies[key]
+    // Check if cookie exist, otherwise TypeError: argument str must be a string
+    const cookieExist = ctx.req.headers.cookie
+    if (cookieExist) {
+      const cookies = parse(ctx.req.headers.cookie)
+      if (cookies[key] && cookies[key] !== theme.value) {
+        theme.value = cookies[key]
+      }
     }
   }
 

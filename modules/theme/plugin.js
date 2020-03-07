@@ -16,7 +16,7 @@ export default function (ctx, inject) {
         document.cookie = serialize(key, value, cookieOptions)
       }
       // Force data-theme update
-      document.body.setAttribute('data-theme', theme.value)
+      document.documentElement.setAttribute('data-theme', theme.value)
     }
   }
   theme.set = setTheme
@@ -40,8 +40,8 @@ export default function (ctx, inject) {
   }
 
   if (process.static && process.client) {
-    // Static generated, read from cookie + update body attrs manually
-    document.body.setAttribute('data-theme', theme.value)
+    // Static generated, read from cookie + update html attrs manually
+    document.documentElement.setAttribute('data-theme', theme.value)
   }
 
   inject('theme', theme)

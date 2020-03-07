@@ -1,17 +1,17 @@
 <template>
-  <div class="bg-elevatedSurface shadow-nuxt">
+  <div class="bg-light-elevatedSurface dark:bg-dark-elevatedSurface shadow-nuxt">
     <div class="container mx-auto px-4 pt-16 pb-12">
       <div class="flex flex-wrap justify-between mb-8">
         <div class="lg:w-6/12 lg:text-left text-center p-4 sm:p-0">
-          <h1 class="text-3xl xl:text-4xl text-onSurfacePrimary font-bold leading-normal mb-6 lg:pt-4">
+          <h1 class="text-3xl xl:text-4xl text-light-onSurfacePrimary dark:text-dark-onSurfacePrimary font-bold leading-normal mb-6 lg:pt-4">
             Nuxt<span class="text-primary-base">JS</span> Design
           </h1>
-          <h3 class="xl:text-lg text-onSurfaceSecondary font-medium leading-relaxed mb-6">
+          <h3 class="xl:text-lg text-light-onSurfaceSecondary dark:text-dark-onSurfaceSecondary font-medium leading-relaxed mb-6">
             NuxtJS is an MIT licensed open source project and completely free to use.<br>
             You can freely use our logos as long as you mention NuxtJS and link to nuxtjs.org.
           </h3>
         </div>
-        <i-design class="w-2/3 mx-auto lg:mx-0 lg:w-5/12 lg:-mt-8 text-elevatedSurface"/>
+        <i-design class="w-2/3 mx-auto lg:mx-0 lg:w-5/12 lg:-mt-8 text-light-elevatedSurface dark:text-dark-elevatedSurface"/>
       </div>
       <div class="flex flex-wrap -mx-4">
         <div class="w-full lg:w-1/2 p-4">

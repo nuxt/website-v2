@@ -1,5 +1,5 @@
 <template>
-  <div class="bg-elevatedSurface shadow-nuxt">
+  <div class="bg-light-elevatedSurface dark:bg-dark-elevatedSurface shadow-nuxt">
     <div class="container mx-auto px-4 py-24 md:mb-8">
       <section>
         <h1 class="text-3xl font-bold uppercase text-center pb-8" v-html="$store.state.homepage.companies.attrs.title" />

@@ -1,8 +1,8 @@
 <template>
   <nui-container class="px-4">
-    <section class="bg-elevatedSurfaceColor py-8 px-3 -mx-4 lg:mx-0 text-center rounded-t-lg">
-      <h2 class="text-3xl font-bold text-onSurfacePrimary mb-2" v-html="headerWordings.attrs.title" />
-      <p class="mb-6 text-onSurfaceSecondary" v-html="headerWordings.body" />
+    <section class="py-8 px-3 -mx-4 lg:mx-0 text-center rounded-t-lg">
+      <h2 class="text-3xl font-bold text-light-onSurfacePrimary dark:text-dark-onSurfacePrimary mb-2" v-html="headerWordings.attrs.title" />
+      <p class="mb-6 text-light-onSurfaceSecondary dark:text-dark-onSurfaceSecondary" v-html="headerWordings.body" />
       <client-only>
         <form @submit.prevent="subscribe">
           <div>
@@ -53,7 +53,7 @@ export default {
             return
           }
         }
-        this.error = 'Unkown error'
+        this.error = 'Unknown error'
       }
     }
   }

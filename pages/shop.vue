@@ -1,20 +1,20 @@
 <template>
-  <div class="bg-elevatedSurface shadow-nuxt">
+  <div class="bg-light-elevatedSurface dark:bg-dark-elevatedSurface shadow-nuxt">
     <div class="container mx-auto px-4 pt-16 pb-12">
       <div ref="shop" class="flex flex-wrap justify-between mb-8">
         <div class="lg:w-6/12 lg:text-left text-center p-4 sm:p-0">
-          <h1 class="text-3xl xl:text-4xl text-onSurfacePrimary font-bold leading-normal mb-6 lg:pt-4">
+          <h1 class="text-3xl xl:text-4xl text-light-onSurfacePrimary dark:text-dark-onSurfacePrimary font-bold leading-normal mb-6 lg:pt-4">
             The NUXT<span class="text-primary-base">JS</span> Shop<br>
           </h1>
-          <h3 class="xl:text-lg text-onSurfaceSecondary font-medium leading-relaxed mb-6">
+          <h3 class="xl:text-lg text-light-onSurfaceSecondary dark:text-dark-onSurfaceSecondary font-medium leading-relaxed mb-6">
             You want to support the NuxtJS project and show your love to the rest of the community?<br/> Here our products with the best quality ever!
           </h3>
         </div>
-        <i-shop class="w-2/3 mx-auto lg:mx-0 lg:w-5/12 lg:-mt-8 text-elevatedSurface"/>
+        <i-shop class="w-2/3 mx-auto lg:mx-0 lg:w-5/12 lg:-mt-8 text-light-elevatedSurface dark:text-dark-elevatedSurface"/>
       </div>
       <section class="flex flex-wrap items-stretch -mx-4">
         <div v-for="(product, i) in products" :key="i" class="w-full lg:w-1/2 p-4">
-          <div class="block sm:flex w-full bg-surface p-6 rounded-lg shadow-md">
+          <div class="block sm:flex w-full bg-light-surface dark:bg-dark-surface p-6 rounded-lg shadow-md">
             <img :src="'/shop/' + product.img + '.png'" :srcset="'/shop/' + product.img + '-2x.png 2x'" :alt="product.name" class="w-full sm:w-auto rounded border border-gray-300">
             <div class="w-full px-6 py-2">
               <h4 class="block w-full font-medium text-xl pb-4">

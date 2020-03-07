@@ -19,5 +19,5 @@
     theme = (darkQuery.matches ? 'dark' : 'light');
   }
   window.__nuxt_theme = theme
-  document.body.setAttribute('data-theme', theme)
+  document.documentElement.setAttribute('data-theme', theme)
 })();

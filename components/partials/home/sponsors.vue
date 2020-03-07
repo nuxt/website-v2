@@ -1,14 +1,14 @@
 <template>
-  <div class="bg-elevatedSurface shadow-nuxt">
+  <div class="bg-light-elevatedSurface dark:bg-dark-elevatedSurface shadow-nuxt">
     <div class="container mx-auto px-4 py-12 text-center">
       <section class="px-4">
         <h1 class="text-3xl uppercase mb-2 sm:mb-0 font-bold" v-html="wordings.attrs.title" />
         <i-sponsoring id="sponsor-img" class="inline-block float-right lg:ml-4" />
-        <div class="pt-6 pb-12 leading-loose text-left text-onSurfaceSecondary">
+        <div class="pt-6 pb-12 leading-loose text-left text-light-onSurfaceSecondary dark:text-dark-onSurfaceSecondary">
           <p v-html="wordings.body" />
         </div>
         <div v-for="(group, groupKey) in sponsors" :key="groupKey" class="text-center pb-8">
-          <h2 class="uppercase text text-onSurfacePrimary font-bold pb-8">
+          <h2 class="uppercase text text-light-onSurfacePrimary dark:text-dark-onSurfacePrimary font-bold pb-8">
             <span class="pb-2 border-b-2 border-nuxt-lightgreen">{{ groupKey }}</span>
           </h2>
           <a

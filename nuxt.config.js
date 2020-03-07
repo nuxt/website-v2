@@ -10,7 +10,10 @@ export default {
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
       { rel: 'preconnect', href: 'https://www.google-analytics.com' }
-    ]
+    ],
+    bodyAttrs: {
+      class: ['font-sans font-medium bg-light-surface dark:bg-dark-surface text-light-onSurfacePrimary dark:text-dark-onSurfacePrimary']
+    }
   },
   buildModules: [
     '@nuxtjs/eslint-module',

@@ -1,19 +1,19 @@
 <template>
-  <div class="bg-elevatedSurface shadow-nuxt">
+  <div class="bg-light-elevatedSurface dark:bg-dark-elevatedSurface shadow-nuxt">
     <div class="container mx-auto px-4 pt-16 pb-12">
       <div class="flex flex-wrap justify-between mb-8">
         <div class="lg:w-6/12 lg:text-left text-center p-4 sm:p-0">
-          <h1 class="text-3xl xl:text-4xl text-onSurfacePrimary font-bold leading-normal mb-6 lg:pt-4">
+          <h1 class="text-3xl xl:text-4xl text-light-onSurfacePrimary dark:text-dark-onSurfacePrimary font-bold leading-normal mb-6 lg:pt-4">
             The NUXT<span class="text-nuxt-lightgreen">JS</span> Team<br>
           </h1>
-          <h3 class="xl:text-lg text-onSurfaceSecondary font-medium leading-relaxed mb-6">
+          <h3 class="xl:text-lg text-light-onSurfaceSecondary dark:text-dark-onSurfaceSecondary font-medium leading-relaxed mb-6">
             The development of NuxtJS and its ecosystem is guided by an international team. We have a very active and engaged team that is constantly striving to push Nuxt forward.
           </h3>
         </div>
-        <i-team class="w-2/3 mx-auto lg:mx-0 lg:w-5/12 lg:-mt-8 text-elevatedSurface"/>
+        <i-team class="w-2/3 mx-auto lg:mx-0 lg:w-5/12 lg:-mt-8 text-light-elevatedSurface dark:text-dark-elevatedSurface"/>
       </div>
-      <div class="bg-surface rounded-lg p-8">
-        <h2 class="text-2xl xl:text-3xl text-center text-onSurfacePrimary font-bold leading-normal mb-6 pt-4">
+      <div class="bg-light-surface dark:bg-dark-surface rounded-lg p-8">
+        <h2 class="text-2xl xl:text-3xl text-center text-light-onSurfacePrimary dark:text-dark-onSurfacePrimary font-bold leading-normal mb-6 pt-4">
           Active Core Team Members
         </h2>
         <div class="flex flex-wrap -mx-2 md:-mx-4">
@@ -31,7 +31,7 @@
                   {{ profile.city }}
                 </div>
                 <div class="py-2">
-                  <a :href="`https://github.com/${profile.github}`" rel="noopener" target="_blank" class="mx-1"><github-icon class="h-5 inline-block text-gray-700 hover:text-gray-900 cursor-pointer text-onSurfacePrimary" /></a>
+                  <a :href="`https://github.com/${profile.github}`" rel="noopener" target="_blank" class="mx-1"><github-icon class="h-5 inline-block text-gray-700 hover:text-gray-900 cursor-pointer text-light-onSurfacePrimary dark:text-dark-onSurfacePrimary" /></a>
                   <a v-if="profile.twitter" :href="`https://twitter.com/${profile.twitter}`" rel="noopener" target="_blank" class="mx-1"><twitter-icon class="h-5 ml-1 inline-block text-blue-600 hover:text-blue-400" /></a>
                   <a v-if="profile.website" :href="profile.website" rel="noopener" target="_blank" class="mx-1"><website-icon class="h-5 inline-block text-nuxt-green hover:text-nuxt-lightgreen" /></a>
                 </div>

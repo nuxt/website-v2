@@ -1,12 +1,12 @@
 <template>
-  <div class="bg-elevatedSurface shadow-nuxt">
+  <div class="bg-light-elevatedSurface dark:bg-dark-elevatedSurface shadow-nuxt">
     <div class="container mx-auto px-4 pt-16">
       <div class="flex flex-wrap justify-between mb-8">
         <div class="lg:w-6/12 lg:text-left text-center p-4 sm:p-0">
-          <h1 class="text-3xl xl:text-4xl text-onSurfacePrimary font-bold leading-normal mb-6 lg:pt-4">
+          <h1 class="text-3xl xl:text-4xl text-light-onSurfacePrimary dark:text-dark-onSurfacePrimary font-bold leading-normal mb-6 lg:pt-4">
             NUXT<span class="text-primary-base">JS</span> Video Courses<br>
           </h1>
-          <h3 class="xl:text-lg text-onSurfaceSecondary font-medium leading-relaxed mb-8">
+          <h3 class="xl:text-lg text-light-onSurfaceSecondary dark:text-dark-onSurfaceSecondary font-medium leading-relaxed mb-8">
             With the video courses below created by our partner VueSchool you can discover and learn more about the Nuxt.js Framework.
           </h3>
           <nui-button href="https://vueschool.io/?friend=nuxt&utm_source=Nuxtjs.org&utm_medium=Link&utm_content=HomeHero&utm_content=V1" rel="noopener sponsored" target="_blank" class="sm:mr-4 py-3 px-6 text-base mb-4">
@@ -14,11 +14,11 @@
             Discover vueschool
           </nui-button>
         </div>
-        <i-themes class="w-2/3 mx-auto lg:mx-0 lg:w-5/12 lg:-mt-8 text-elevatedSurface"/>
+        <i-themes class="w-2/3 mx-auto lg:mx-0 lg:w-5/12 lg:-mt-8 text-light-elevatedSurface dark:text-dark-elevatedSurface"/>
       </div>
       <section class="flex flex-wrap items-stretch -mx-4">
         <div v-for="course in courses" :key="course.title" class="w-full p-4">
-          <div class="block sm:flex w-full h-full items-center pr-6 bg-surface rounded-lg shadow-md">
+          <div class="block sm:flex w-full h-full items-center pr-6 bg-light-surface dark:bg-dark-surface rounded-lg shadow-md">
             <div class="w-full p-6">
               <h4 class="block w-full font-medium text-xl pb-2">
                 {{ course.title }}

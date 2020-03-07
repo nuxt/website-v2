@@ -1,10 +1,10 @@
 <template>
   <div class="algolia-wrapper">
-    <nui-search-icon class="block absolute z-10 h-4 mt-3 ml-3 fill-onSurfaceSecondary" />
+    <nui-search-icon class="block absolute z-10 h-4 mt-3 ml-3 fill-current text-light-onSurfaceSecondary dark:text-dark-onSurfaceSecondary" />
     <input
       id="algolia"
       v-model="q"
-      class="nui-search-input bg-surface text-onSurfaceSecondary font-bold"
+      class="nui-search-input bg-light-surface dark:bg-dark-surface text-light-onSurfaceSecondary dark:text-dark-onSurfaceSecondary font-bold"
       type="text"
       name="search"
       :placeholder="$store.state.lang.text.search"

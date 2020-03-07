@@ -1,3 +1,4 @@
+const plugin = require('tailwindcss/plugin')
 const defaultTheme = require('tailwindcss/defaultTheme')
 
 module.exports = {
@@ -22,22 +23,18 @@ module.exports = {
           dark: '#07A377'
         },
         light: {
-          // textPrimary: '#2F495E',
-          // textSecondary: '#606F7B',
           surface: '#F8FAFC',
           onSurfacePrimary: '#2F495E',
           onSurfaceSecondary: '#606F7B',
-          elevatedSurface: defaultTheme.colors.white
+          elevatedSurface: defaultTheme.colors.white,
+          border: defaultTheme.colors.gray['300']
         },
         dark: {
-          // textPrimary: '#F5F7FA',
-          // textSecondary: '#B8C2CC',
           surface: '#2C3E50',
           onSurfacePrimary: '#F5F7FA',
           onSurfaceSecondary: '#B8C2CC',
-          elevatedSurface: '#2F495E'
-          // onElevatedSurfacePrimary: '#F5F7FA',
-          // onElevatedSurfaceSecondary: '#B8C2CC'
+          elevatedSurface: '#2F495E',
+          border: defaultTheme.colors.gray['900']
         }
       },
       fill: theme => ({
@@ -59,7 +56,17 @@ module.exports = {
     }
   },
   variants: {
-    textColor: ['responsive', 'hover', 'focus', 'group-hover']
+    borderColor: ['responsive', 'hover', 'focus', 'dark'],
+    backgroundColor: ['responsive', 'hover', 'focus', 'dark'],
+    textColor: ['responsive', 'hover', 'focus', 'group-hover', 'dark']
   },
-  plugins: []
+  plugins: [
+    plugin(function ({ addVariant, theme, e, prefix, config }) {
+      addVariant('dark', ({ modifySelectors, separator }) => {
+        modifySelectors(({ className }) => {
+          return `[data-theme='dark'] .${e(`dark${separator}${className}`)}`
+        })
+      })
+    })
+  ]
 }

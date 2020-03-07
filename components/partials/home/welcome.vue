@@ -1,10 +1,10 @@
 <template>
-  <div class="bg-elevatedSurface shadow-nuxt">
+  <div class="bg-light-elevatedSurface dark:bg-dark-elevatedSurface shadow-nuxt">
     <div class="container mx-auto px-4">
       <div class="flex justify-between py-16 sm:py-24">
         <div class="lg:w-1/2 xl:w-6/12 text-center lg:text-left p-4 sm:p-0">
-          <h1 class="text-3xl xl:text-4xl text-onSurfacePrimary font-bold tracking-wide leading-normal mb-6" v-html="wordings.welcome.attrs.title" />
-          <h3 class="xl:text-lg text-onSurfaceSecondary font-medium leading-relaxed mb-6" v-html="wordings.welcome.body" />
+          <h1 class="text-3xl xl:text-4xl text-light-onSurfacePrimary dark:text-dark-onSurfacePrimary font-bold tracking-wide leading-normal mb-6" v-html="wordings.welcome.attrs.title" />
+          <h3 class="xl:text-lg text-light-onSurfaceSecondary dark:text-dark-onSurfaceSecondary font-medium leading-relaxed mb-6" v-html="wordings.welcome.body" />
           <div class="flex flex-col sm:block py-4">
             <nui-button :to="{ name: 'section-slug', params: { section: 'guide', slug: 'installation'} }" variant="primary" class="sm:mr-4 py-3 px-6 text-base mb-4">
               <nui-svg-meteor slot="icon" class="h-5 -mb-1 mr-1" />
@@ -25,7 +25,7 @@
         </div> -->
         <figure class="hidden lg:block lg:w-5/12">
           <nui-media src="https://player.vimeo.com/video/311756540" />
-          <p class="font-medium py-2 text-xs xl:text-sm text-center text-onSurfaceSecondary" v-html="wordings.welcome_figure.body" />
+          <p class="font-medium py-2 text-xs xl:text-sm text-center text-light-onSurfaceSecondary dark:text-dark-onSurfaceSecondary" v-html="wordings.welcome_figure.body" />
         </figure>
       </div>
     </div>

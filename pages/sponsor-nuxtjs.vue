@@ -1,20 +1,20 @@
 <template>
-  <div class="bg-elevatedSurface shadow-nuxt">
+  <div class="bg-light-elevatedSurface dark:bg-dark-elevatedSurface shadow-nuxt">
     <div class="container mx-auto px-4 pt-16 pb-12">
       <div class="flex flex-wrap justify-between mb-8">
         <div class="lg:w-6/12 lg:text-left text-center p-4 sm:p-0">
-          <h1 class="text-3xl xl:text-4xl text-onSurfacePrimary font-bold leading-normal mb-6 lg:pt-4">
+          <h1 class="text-3xl xl:text-4xl text-light-onSurfacePrimary dark:text-dark-onSurfacePrimary font-bold leading-normal mb-6 lg:pt-4">
             Sponsor NUXT<span class="text-nuxt-lightgreen">JS</span> Development<br>
           </h1>
-          <h3 class="xl:text-lg text-onSurfaceSecondary font-medium leading-relaxed mb-6">
+          <h3 class="xl:text-lg text-light-onSurfaceSecondary dark:text-dark-onSurfaceSecondary font-medium leading-relaxed mb-6">
             NuxtJS is an MIT licensed open source project and completely free to use.<br>
             However, the amount of effort needed to maintain and develop new features for the project is not sustainable without proper financial backing.<br>
             You can support NuxtJS development via the following methods:
           </h3>
         </div>
-        <i-sponsor class="w-2/3 mx-auto lg:mx-0 lg:w-5/12 lg:-mt-8 text-elevatedSurface"/>
+        <i-sponsor class="w-2/3 mx-auto lg:mx-0 lg:w-5/12 lg:-mt-8 text-light-elevatedSurface dark:text-dark-elevatedSurface"/>
       </div>
-      <section class="flex flex-wrap bg-surface p-8 rounded-lg my-12 shadow-lg">
+      <section class="flex flex-wrap bg-light-surface dark:bg-dark-surface p-8 rounded-lg my-12 shadow-lg">
         <div class="w-full lg:w-2/3 text-center lg:text-left">
           <h2 class="text-2xl uppercase pt-4 pb-6">
             One-time donations
@@ -51,16 +51,16 @@
         </div>
       </section>
       <section class="text-center">
-        <h2 class="text-2xl text-onSurfacePrimary font-bold uppercase pt-10 pb-8">
+        <h2 class="text-2xl text-light-onSurfacePrimary dark:text-dark-onSurfacePrimary font-bold uppercase pt-10 pb-8">
           Recurring Pledges
         </h2>
-        <p class="text-onSurfaceSecondary mb-12">
+        <p class="text-light-onSurfaceSecondary dark:text-dark-onSurfaceSecondary mb-12">
           Recurring pledges come with exclusive perks, e.g. having your name listed in the NuxtJS GitHub repository, or have your company logo placed on this website.
           Become a nuxter or sponsor via <a href="https://opencollective.com/nuxtjs">OpenCollective</a> (goes into a fund with transparent expense models supporting community efforts and events).
         </p>
         <div v-for="(group, groupKey) in sponsors" :key="groupKey" class="text-center pb-8">
           <h2 class="uppercase text-xl pb-8">
-            <span class="pb-2 border-b-2 border-nuxt-lightgreen text-onSurfacePrimary">{{ groupKey }} SPONSORS</span>
+            <span class="pb-2 border-b-2 border-nuxt-lightgreen text-light-onSurfacePrimary dark:text-dark-onSurfacePrimary">{{ groupKey }} SPONSORS</span>
           </h2>
           <a
             v-for="(sponsor, i) in group"

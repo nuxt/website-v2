@@ -3,7 +3,7 @@
     <div class="lg:overflow-y-auto lg:scrolling-touch lg:h-auto lg:block lg:relative lg:sticky lg:top-24">
       <div class="flex flex-col sm:flex-row px-4 pt-8 justify-between lg:justify-start lg:flex-col lg:overflow-y-auto lg:pr-0 lg:pl-8 sticky?lg:h-(screen-24)">
         <div class="lg:text-center flex flex-col items-center">
-          <p class="lg:text-sm text-onSurfacePrimary">
+          <p class="lg:text-sm text-light-onSurfacePrimary dark:text-dark-onSurfacePrimary">
             Platinum Sponsors
           </p>
           <a v-for="sponsor in sponsors" :key="sponsor.name" :href="sponsor.link" class="block lg:inline-block my-4" rel="noopener sponsored">

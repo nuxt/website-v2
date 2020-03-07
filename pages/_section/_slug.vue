@@ -7,7 +7,7 @@
       <article v-if="section === 'examples'">
         <h1 class="text-light-onSurfacePrimary dark:text-dark-onSurfacePrimary">{{ page.attrs.title }}</h1>
         <p class="mb-6">{{ page.attrs.description }}</p>
-        <code-sandbox v-if="codeSandBoxLink" :src="codeSandBoxLink" style="margin-bottom: 20px;"/>
+        <code-sandbox v-if="codeSandBoxLink" :src="codeSandBoxLink"/>
         <div>
           <nui-button :href="liveEditLink" variant="primary" class="sm:mr-4 py-3 px-6 text-base mb-4">
             {{ $store.state.lang.links.live_edit }}

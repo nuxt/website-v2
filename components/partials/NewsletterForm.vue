@@ -4,10 +4,10 @@
       <h2 class="text-3xl font-bold text-light-onSurfacePrimary dark:text-dark-onSurfacePrimary mb-2" v-html="headerWordings.attrs.title" />
       <p class="mb-6 text-light-onSurfaceSecondary dark:text-dark-onSurfaceSecondary" v-html="headerWordings.body" />
       <client-only>
-        <form @submit.prevent="subscribe">
+        <form class="flex flex-row justify-center mb-2" @submit.prevent="subscribe">
           <div>
             <label for="news-email" class="hidden">{{ formWordings.email }}</label>
-            <input id="news-email" v-model="email" type="email" required :placeholder="formWordings.email" class="border border-r-0 w-48 md:w-64 bg-light-elevatedSurface text-light-onSurfacePrimary rounded-lg py-2 px-4 font-bold rounded-r-none outline-none focus:border-primary-base">
+            <input id="news-email" v-model="email" type="email" required :placeholder="formWordings.email" class="border border-r-0 w-48 md:w-64 bg-light-elevatedSurface text-light-onSurfacePrimary rounded-lg py-3 px-4 font-bold rounded-r-none outline-none focus:border-primary-base shadow-inner">
           </div>
           <input type="submit" :value="pending ? formWordings.subscribing : formWordings.subscribe" name="subscribe" class="cursor-pointer inline-block bg-primary-base text-white font-bold text-sm px-4 py-2 shadow uppercase rounded-lg rounded-l-none hover:bg-primary-light hover:shadow-md text-base" :class="[pending ? 'bg-nuxt-green': '']">
         </form>
@@ -59,9 +59,3 @@ export default {
   }
 }
 </script>
-
-<style scoped>
-form {
-  @apply flex flex-row justify-center mb-2;
-}
-</style>

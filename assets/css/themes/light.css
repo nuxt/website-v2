@@ -7,9 +7,9 @@
 
 body {
   /*@apply font-sans font-medium text-light-text bg-light-surface;*/
-  & .nui-select {
+  /*& .nui-select {
     @apply text-nuxt-gray bg-gray-200;
-  }
+  }*/
   /*& .elevated-block {
     @apply .bg-light-elevatedSurfaceColor;
   }

@@ -5,11 +5,13 @@
 /* purgecss start ignore */
 @import 'tailwindcss/base';
 /* purgecss end ignore */
+
 @import 'tailwindcss/components';
 
 /* purgecss start ignore */
 @import './themes/light.css';
 /* purgecss end ignore */
+
 /* purgecss start ignore */
 @import '@snackbar/core/dist/snackbar.css';
 /* purgecss end ignore */
@@ -30,3 +32,7 @@
   }
 }
 /* purgecss end ignore */
+
+.empty-after:after {
+  content: '';
+}

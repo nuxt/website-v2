@@ -56,15 +56,51 @@ module.exports = {
     }
   },
   variants: {
-    borderColor: ['responsive', 'hover', 'focus', 'dark'],
-    backgroundColor: ['responsive', 'hover', 'focus', 'dark'],
-    textColor: ['responsive', 'hover', 'focus', 'group-hover', 'dark']
+    display: ['responsive', 'after'],
+    margin: ['responsive', 'after'],
+    width: ['responsive', 'after'],
+    borderWidth: ['responsive', 'after'],
+    borderRadius: ['responsive', 'after'],
+    borderColor: ['responsive', 'hover', 'focus', 'dark', 'light', 'after', 'light:after', 'dark:after'],
+    backgroundColor: ['responsive', 'hover', 'focus', 'dark', 'light'],
+    textColor: ['responsive', 'hover', 'focus', 'group-hover', 'dark', 'light']
   },
   plugins: [
     plugin(function ({ addVariant, theme, e, prefix, config }) {
-      addVariant('dark', ({ modifySelectors, separator }) => {
-        modifySelectors(({ className }) => {
-          return `[data-theme='dark'] .${e(`dark${separator}${className}`)}`
+      // addVariant('dark', ({ modifySelectors, separator }) => {
+      //   modifySelectors(({ className }) => {
+      //     return `[data-theme='dark'] .${e(`dark${separator}${className}`)}`
+      //   })
+      // })
+      // addVariant('after', ({ modifySelectors, separator }) => {
+      //   modifySelectors(({ className }) => {
+      //     return `.${e(`after${separator}${className}`)}::after`
+      //   })
+      // })
+      const themeVariants = ['light', 'dark']
+      themeVariants.forEach((mode) => {
+        addVariant(mode, ({ modifySelectors, separator }) => {
+          modifySelectors(({ className }) => {
+            return `[data-theme='${mode}'] .${e(`${mode}${separator}${className}`)}`
+          })
+        })
+      })
+      const pseudoVariants = ['after', 'before']
+      pseudoVariants.forEach((pseudo) => {
+        addVariant(pseudo, ({ modifySelectors, separator }) => {
+          modifySelectors(({ className }) => {
+            return `.${e(`${pseudo}${separator}${className}`)}::${pseudo}`
+          })
+        })
+      })
+      // generate chained color mode and pseudo variants
+      themeVariants.forEach((mode) => {
+        pseudoVariants.forEach((pseudo) => {
+          addVariant(`${mode}:${pseudo}`, ({ modifySelectors, separator }) => {
+            modifySelectors(({ className }) => {
+              return `[data-theme='${mode}'] .${e(`${mode}${separator}${pseudo}${separator}${className}`)}::${pseudo}`
+            })
+          })
         })
       })
     })

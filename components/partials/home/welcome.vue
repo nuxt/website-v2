@@ -24,7 +24,7 @@
           </div>
         </div> -->
         <figure class="hidden lg:block lg:w-5/12">
-          <nui-media src="https://player.vimeo.com/video/311756540" />
+          <nui-media src="https://player.vimeo.com/video/311756540" class="mb-4" />
           <p class="font-medium py-2 text-xs xl:text-sm text-center text-light-onSurfaceSecondary dark:text-dark-onSurfaceSecondary" v-html="wordings.welcome_figure.body" />
         </figure>
       </div>

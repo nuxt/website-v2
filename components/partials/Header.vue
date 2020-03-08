@@ -1,7 +1,7 @@
 <template>
   <div class="absolute">
     <!-- Common Header -->
-    <header class="header bg-light-elevatedSurface dark:bg-dark-elevatedSurface border-b border-light-border dark:border-dark-border lg:border-0 h-16 lg:h-24" :class="action === 'search' ? 'py-4' : 'py-6 lg:py-0'">
+    <header class="header bg-light-elevatedSurface dark:bg-dark-elevatedSurface border-b border-light-border dark:border-dark-border lg:border-0 h-16 lg:h-24">
       <template v-if="action === ''">
         <div class="container mx-auto px-4 flex items-center lg:py-6 h-full">
           <!-- Left Title -->
@@ -23,9 +23,9 @@
             </li>
           </ul>
           <!-- Right Action -->
-          <a href="#" class="block md:hidden flex p-2 -m-2 mr-4 items-center justify-center text-nuxt-gray hover:text-nuxt-lightgreen z-10 lg:hidden" @click.prevent="$emit('change', 'search')">
+          <button class="block md:hidden flex p-2 -m-2 mr-4 items-center justify-center text-light-onSurfaceSecondary dark:text-dark-onSurfaceSecondary hover:text-nuxt-lightgreen z-10 lg:hidden" @click.prevent="$emit('change', 'search')">
             <nui-search-icon class="block h-5 fill-current" />
-          </a>
+          </button>
           <nui-search class="hidden md:inline-block align-middle mr-2"/>
           <nui-select v-model="currentLang" mode="slim" :options="locales" class="inline-block align-middle">
             <template v-slot:icon>
@@ -33,11 +33,8 @@
             </template>
           </nui-select>
         </div>
-        <!-- <nui-container class="hidden lg:block">
-          <hr class="border-b border-t-0 border-borderColor h-0"/>
-        </nui-container> -->
       </template>
-      <nui-container v-else class="flex justify-between lg:hidden">
+      <nui-container v-else class="flex justify-between lg:hidden h-full items-center">
         <!-- Left Title -->
         <nui-search v-if="action === 'search'" class="w-full pr-4"/>
         <div v-else class="flex items-end">
@@ -45,9 +42,9 @@
           <span class="block text-lg font-bold uppercase text-nuxt-gray pl-4 h-6">{{ $store.state.lang.links[action] || action }}</span>
         </div>
         <!-- Right Action -->
-        <a href="#" class="block flex p-2 -m-2 items-center justify-center text-nuxt-gray hover:text-nuxt-lightgreen z-10 lg:hidden" :class="action === 'search' ? 'pt-3' : ''" @click.prevent="$emit('change', '')">
+        <button class="block flex p-2 -m-2 items-center justify-center text-light-onSurfaceSecondary dark:text-dark-onSurfaceSecondary hover:text-nuxt-lightgreen z-10 lg:hidden" :class="action === 'search' ? 'pt-3' : ''" @click.prevent="$emit('change', '')">
           <nui-times-icon class="block h-5 fill-current"/>
-        </a>
+        </button>
       </nui-container>
     </header>
     <!-- Mobile Main Navigation -->

@@ -2,8 +2,8 @@
   <div class="bg-light-elevatedSurface dark:bg-dark-elevatedSurface shadow-nuxt">
     <div class="container mx-auto px-4">
       <div class="flex justify-between py-16 sm:py-24">
-        <div class="lg:w-1/2 xl:w-6/12 text-center lg:text-left p-4 sm:p-0">
-          <h1 class="text-3xl xl:text-4xl text-light-onSurfacePrimary dark:text-dark-onSurfacePrimary font-bold tracking-wide leading-normal mb-6" v-html="wordings.welcome.attrs.title" />
+        <div class="lg:w-1/2 xl:w-6/12 text-center lg:text-left py-4 sm:p-0">
+          <h1 class="text-4xl xl:text-5xl text-light-onSurfacePrimary dark:text-dark-onSurfacePrimary font-semibold tracking-normal leading-tight mb-6" v-html="wordings.welcome.attrs.title" />
           <h3 class="xl:text-lg text-light-onSurfaceSecondary dark:text-dark-onSurfaceSecondary font-medium leading-relaxed mb-6" v-html="wordings.welcome.body" />
           <div class="flex flex-col sm:block py-4">
             <nui-button :to="{ name: 'section-slug', params: { section: 'guide', slug: 'installation'} }" variant="primary" class="sm:mr-4 py-3 px-6 text-base mb-4">

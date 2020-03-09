@@ -3,7 +3,7 @@
     <div class="container mx-auto px-4 pt-16">
       <div class="flex flex-wrap justify-between mb-8">
         <div class="lg:w-6/12 lg:text-left text-center p-4 sm:p-0">
-          <h1 class="text-3xl xl:text-4xl text-light-onSurfacePrimary dark:text-dark-onSurfacePrimary font-bold leading-normal mb-6 lg:pt-4">
+          <h1 class="text-3xl xl:text-4xl text-light-onSurfacePrimary dark:text-dark-onSurfacePrimary font-medium leading-normal mb-6 lg:pt-4">
             NUXT<span class="text-primary-base">JS</span> Video Courses<br>
           </h1>
           <h3 class="xl:text-lg text-light-onSurfaceSecondary dark:text-dark-onSurfaceSecondary font-medium leading-relaxed mb-8">
@@ -18,7 +18,7 @@
       </div>
       <section class="flex flex-wrap items-stretch -mx-4">
         <div v-for="course in courses" :key="course.title" class="w-full p-4">
-          <div class="block sm:flex w-full h-full items-center pr-6 bg-light-surface dark:bg-dark-surface rounded-lg shadow-md">
+          <div class="block sm:flex w-full h-full items-center pr-6 bg-light-surface dark:bg-dark-surface rounded shadow-md">
             <div class="w-full p-6">
               <h4 class="block w-full font-medium text-xl pb-2">
                 {{ course.title }}
@@ -29,7 +29,7 @@
                 START COURSE
               </nui-button>
             </div>
-            <img :src="'/courses/' + course.img + '.png'" :srcset="'/courses/' + course.img + '-2x.png 2x'" :alt="course.title" class="block w-auto rounded-lg">
+            <img :src="'/courses/' + course.img + '.png'" :srcset="'/courses/' + course.img + '-2x.png 2x'" :alt="course.title" class="block w-auto rounded">
           </div>
         </div>
       </section>

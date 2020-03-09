@@ -12,12 +12,12 @@
           <!-- Center Navigation -->
           <ul class="hidden lg:flex lg:pt-1 xl:pt-0 text-center mx-auto">
             <li v-for="link in links" :key="link" class="header_nav_link xl:px-4 lg:py-0 lg:px-2 py-2">
-              <nuxt-link class="block p-2 font-bold uppercase hover:no-underline hover:text-nuxt-lightgreen" :to="{ name: 'section-slug', params: { section: link } }">
+              <nuxt-link class="block p-2 font-medium uppercase hover:no-underline hover:text-nuxt-lightgreen" :to="{ name: 'section-slug', params: { section: link } }">
                 {{ $store.state.lang.links[link] || link }}
               </nuxt-link>
             </li>
             <li class="header_nav_link xl:px-4 lg:py-0 lg:px-2 py-2">
-              <nuxt-link class="block p-2 font-bold uppercase hover:no-underline hover:text-nuxt-lightgreen" :to="{ name: 'resources' }">
+              <nuxt-link class="block p-2 font-medium uppercase hover:no-underline hover:text-nuxt-lightgreen" :to="{ name: 'resources' }">
                 {{ $store.state.lang.links['resources'] || 'resources' }}
               </nuxt-link>
             </li>
@@ -39,7 +39,7 @@
         <nui-search v-if="action === 'search'" class="w-full pr-4"/>
         <div v-else class="flex items-end">
           <component :is="'nui-' + action + '-icon'" class="block h-6 text-nuxt-lightgreen fill-current" />
-          <span class="block text-lg font-bold uppercase text-nuxt-gray pl-4 h-6">{{ $store.state.lang.links[action] || action }}</span>
+          <span class="block text-lg font-medium uppercase text-nuxt-gray pl-4 h-6">{{ $store.state.lang.links[action] || action }}</span>
         </div>
         <!-- Right Action -->
         <button class="block flex p-2 -m-2 items-center justify-center text-light-onSurfaceSecondary dark:text-dark-onSurfaceSecondary hover:text-nuxt-lightgreen z-10 lg:hidden" :class="action === 'search' ? 'pt-3' : ''" @click.prevent="$emit('change', '')">
@@ -52,11 +52,11 @@
       <div class="flex justify-between items-center h-full">
         <nuxt-link v-for="link in links" :key="link" class="block md:flex md:justify-center w-full p-2 md:p-4 text-light-onSurfacePrimary dark:text-dark-onSurfacePrimary hover:no-underline hover:text-primary-base text-center visited:text-nuxt-gray" :to="{ name: 'section-slug', params: { section: link } }" @click.prevent.native="$emit('change', action === link ? '' : ($route.params.section !== link ? '' : link))">
           <component :is="'nui-' + link + '-icon'" class="inline-block h-5 fill-current mb-1" :class="{'text-nuxt-lightgreen': action === link}"/>
-          <span class="block text-xs md:text-base md:pl-3 font-bold text-light-onSurfacePrimary dark:text-dark-onSurfacePrimary">{{ $store.state.lang.links[link] || link }}</span>
+          <span class="block text-xs md:text-base md:pl-3 font-medium text-light-onSurfacePrimary dark:text-dark-onSurfacePrimary">{{ $store.state.lang.links[link] || link }}</span>
         </nuxt-link>
         <nuxt-link class="block md:flex md:justify-center w-full p-2 md:p-4 text-light-onSurfacePrimary dark:text-dark-onSurfacePrimary hover:no-underline hover:text-primary-base text-center visited:text-nuxt-gray" :to="{ name: 'resources' }">
           <nui-resources-icon class="inline-block h-5 fill-current mb-1"/>
-          <span class="block text-xs md:text-base md:pl-3 font-bold text-light-onSurfacePrimary dark:text-dark-onSurfacePrimary">{{ $store.state.lang.links['resources'] || 'resources' }}</span>
+          <span class="block text-xs md:text-base md:pl-3 font-medium text-light-onSurfacePrimary dark:text-dark-onSurfacePrimary">{{ $store.state.lang.links['resources'] || 'resources' }}</span>
         </nuxt-link>
       </div>
     </nav>

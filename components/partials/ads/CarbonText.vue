@@ -61,7 +61,7 @@ export default {
     padding: theme('spacing.2');
     margin-bottom: theme('spacing.4');
     border: 1px solid transparent;
-    border-radius: theme('borderRadius.lg');
+    border-radius: theme('borderRadius.default');
   }
   a {
     // @apply no-underline;
@@ -71,11 +71,11 @@ export default {
     // @apply bg-primary-base text-white rounded-md uppercase py-1 px-3 font-bold text-xs mx-2;
     background-color: theme('colors.primary.base');
     color: theme('colors.white');
-    border-radius: theme('borderRadius.md');
+    border-radius: theme('borderRadius.default');
     text-transform: uppercase;
     padding: theme('spacing.1') theme('spacing.3');
     margin: 0 theme('spacing.2');
-    font-weight: 700;
+    font-weight: 500;
     font-size: theme('fontSize.xs');
     &:hover {
       // @apply bg-primary-light;

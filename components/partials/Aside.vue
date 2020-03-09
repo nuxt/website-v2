@@ -11,7 +11,7 @@
           {{ $store.state.lang.text.version }} <span class="text-nuxt-lightgreen">{{ $store.state.docVersion }}</span>
         </p>
         <template v-for="(group, index) in list">
-          <h3 :key="`title-${index}`" class="uppercase font-bold text-light-onSurfaceSecondary dark:text-dark-onSurfaceSecondary pb-2">
+          <h3 :key="`title-${index}`" class="uppercase font-medium text-light-onSurfaceSecondary dark:text-dark-onSurfaceSecondary pb-2">
             {{ group.title }}
           </h3>
           <ul :key="`list-${index}`" class="pb-8">

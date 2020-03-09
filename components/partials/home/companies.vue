@@ -2,7 +2,7 @@
   <div class="bg-light-elevatedSurface dark:bg-dark-elevatedSurface shadow-nuxt">
     <div class="container mx-auto px-4 py-24 md:mb-8">
       <section>
-        <h1 class="text-3xl font-bold uppercase text-center pb-8" v-html="$store.state.homepage.companies.attrs.title" />
+        <h1 class="text-3xl font-medium uppercase text-center pb-8" v-html="$store.state.homepage.companies.attrs.title" />
         <div class="flex flex-col lg:flex-row items-center justify-between">
           <div v-for="(company, i) in langCompanies.slice(0, 5)" :key="i" class="p-4 lg:p-8 text-center">
             <a :href="company.url" target="_blank" rel="noopener nofollow" class="company relative block">

@@ -86,7 +86,7 @@ export default {
 
 <style lang="scss" scoped>
 article h1 {
-  @apply font-bold relative text-3xl table mb-8;
+  @apply font-medium relative text-3xl table mb-8;
   &::after {
     content: " ";
     width: 80%;

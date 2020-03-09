@@ -3,7 +3,7 @@
     <div class="container mx-auto px-4 pt-16 pb-12">
       <div class="flex flex-wrap justify-between mb-8">
         <div class="lg:w-6/12 lg:text-left text-center p-4 sm:p-0">
-          <h1 class="text-3xl xl:text-4xl text-light-onSurfacePrimary dark:text-dark-onSurfacePrimary font-bold leading-normal mb-6 lg:pt-4">
+          <h1 class="text-3xl xl:text-4xl text-light-onSurfacePrimary dark:text-dark-onSurfacePrimary font-medium leading-normal mb-6 lg:pt-4">
             Sponsor NUXT<span class="text-nuxt-lightgreen">JS</span> Development<br>
           </h1>
           <h3 class="xl:text-lg text-light-onSurfaceSecondary dark:text-dark-onSurfaceSecondary font-medium leading-relaxed mb-6">
@@ -14,7 +14,7 @@
         </div>
         <i-sponsor class="w-2/3 mx-auto lg:mx-0 lg:w-5/12 lg:-mt-8 text-light-elevatedSurface dark:text-dark-elevatedSurface"/>
       </div>
-      <section class="flex flex-wrap bg-light-surface dark:bg-dark-surface p-8 rounded-lg my-12 shadow-lg">
+      <section class="flex flex-wrap bg-light-surface dark:bg-dark-surface p-8 rounded my-12 shadow-lg">
         <div class="w-full lg:w-2/3 text-center lg:text-left">
           <h2 class="text-2xl uppercase pt-4 pb-6">
             One-time donations
@@ -51,7 +51,7 @@
         </div>
       </section>
       <section class="text-center">
-        <h2 class="text-2xl text-light-onSurfacePrimary dark:text-dark-onSurfacePrimary font-bold uppercase pt-10 pb-8">
+        <h2 class="text-2xl text-light-onSurfacePrimary dark:text-dark-onSurfacePrimary font-medium uppercase pt-10 pb-8">
           Recurring Pledges
         </h2>
         <p class="text-light-onSurfaceSecondary dark:text-dark-onSurfaceSecondary mb-12">

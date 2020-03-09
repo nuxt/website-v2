@@ -4,7 +4,7 @@
     <input
       id="algolia"
       v-model="q"
-      class="nui-search-input shadow-inner bg-light-surface dark:bg-dark-surface text-light-onSurfaceSecondary dark:text-dark-onSurfaceSecondary font-bold"
+      class="nui-search-input shadow-inner bg-light-surface dark:bg-dark-surface text-light-onSurfaceSecondary dark:text-dark-onSurfaceSecondary font-medium"
       type="text"
       name="search"
       :placeholder="$store.state.lang.text.search"
@@ -145,9 +145,9 @@ export default {
 }
 
 .algolia-wrapper .algolia-autocomplete .ds-dropdown-menu {
-  @apply rounded-lg;
+  @apply rounded;
   [class^=ds-dataset-] {
-    @apply rounded-lg;
+    @apply rounded;
   }
 }
 

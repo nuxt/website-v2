@@ -3,7 +3,7 @@
     <div class="container mx-auto px-4 pt-16 pb-12">
       <div class="flex flex-wrap justify-between mb-8">
         <div class="lg:w-6/12 lg:text-left text-center p-4 sm:p-0">
-          <h1 class="text-3xl xl:text-4xl text-light-onSurfacePrimary dark:text-dark-onSurfacePrimary font-bold leading-normal mb-6 lg:pt-4">
+          <h1 class="text-3xl xl:text-4xl text-light-onSurfacePrimary dark:text-dark-onSurfacePrimary font-medium leading-normal mb-6 lg:pt-4">
             The NUXT<span class="text-nuxt-lightgreen">JS</span> Team<br>
           </h1>
           <h3 class="xl:text-lg text-light-onSurfaceSecondary dark:text-dark-onSurfaceSecondary font-medium leading-relaxed mb-6">
@@ -12,8 +12,8 @@
         </div>
         <i-team class="w-2/3 mx-auto lg:mx-0 lg:w-5/12 lg:-mt-8 text-light-elevatedSurface dark:text-dark-elevatedSurface"/>
       </div>
-      <div class="bg-light-surface dark:bg-dark-surface rounded-lg p-8">
-        <h2 class="text-2xl xl:text-3xl text-center text-light-onSurfacePrimary dark:text-dark-onSurfacePrimary font-bold leading-normal mb-6 pt-4">
+      <div class="bg-light-surface dark:bg-dark-surface rounded p-8">
+        <h2 class="text-2xl xl:text-3xl text-center text-light-onSurfacePrimary dark:text-dark-onSurfacePrimary font-medium leading-normal mb-6 pt-4">
           Active Core Team Members
         </h2>
         <div class="flex flex-wrap -mx-2 md:-mx-4">

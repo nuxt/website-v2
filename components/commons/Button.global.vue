@@ -1,11 +1,11 @@
 <template>
-  <nuxt-link v-if="to" :to="to" class="no-underline inline-block font-bold text-sm px-4 py-2 shadow uppercase rounded-lg hover:shadow-md" :class="variant">
+  <nuxt-link v-if="to" :to="to" class="no-underline inline-block font-medium text-sm px-4 py-2 shadow uppercase rounded hover:shadow-md" :class="variant">
     <div v-if="$slots.icon" class="inline-block fill-current stroke-current mr-1">
       <slot name="icon" />
     </div>
     <slot />
   </nuxt-link>
-  <a v-else :href="href" target="_blank" rel="noopener" class="no-underline inline-block font-bold text-sm px-4 py-2 shadow uppercase rounded-lg hover:shadow-md" :class="variant">
+  <a v-else :href="href" target="_blank" rel="noopener" class="no-underline inline-block font-medium text-sm px-4 py-2 shadow uppercase rounded hover:shadow-md" :class="variant">
     <div v-if="$slots.icon" class="inline-block fill-current stroke-current mr-1">
       <slot name="icon" />
     </div>

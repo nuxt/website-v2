@@ -293,7 +293,7 @@ div ::v-deep {
   }
   // code snippet block
   & pre {
-    @apply rounded-lg p-2 my-2 overflow-auto;
+    @apply rounded p-2 my-2 overflow-auto;
     & code {
       @apply bg-transparent;
     }
@@ -303,17 +303,17 @@ div ::v-deep {
     @apply font-bold;
   }
   & .Alert {
-    @apply px-4 py-2 rounded-lg my-4;
+    @apply px-4 py-2 rounded my-4;
     p {
       @apply mb-0;
     }
   }
   & .Promote {
-    @apply flex flex-col p-4 my-4 rounded-lg;
+    @apply flex flex-col p-4 my-4 rounded;
     & img {
       width: 100%;
       height: auto;
-      @apply mb-3 rounded-lg;
+      @apply mb-3 rounded;
       @screen sm {
         max-width: 240px;
         @apply mb-0;

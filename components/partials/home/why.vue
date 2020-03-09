@@ -1,25 +1,25 @@
 <template>
   <div class="container mx-auto px-4 mb-12">
     <section class="rounded py-6 sm:p-6">
-      <h1 class="text-3xl uppercase font-bold pt-10 pb-8 text-center" v-html="wordings.why.body" />
+      <h1 class="text-3xl uppercase font-medium pt-10 pb-8 text-center" v-html="wordings.why.body" />
       <div class="flex flex-col lg:flex-row items-start justify-between">
         <div class="lg:w-1/3 px-4 py-8 lg:p-8 flex flex-col items-center">
           <i-modular class="inline-block" />
-          <h4 class="uppercase font-bold text-2xl py-8">
+          <h4 class="uppercase font-medium text-2xl py-8">
             {{ wordings.why_modular.attrs.title }}
           </h4>
           <p class="leading-loose text-light-onSurfaceSecondary dark:text-dark-onSurfaceSecondary" v-html="wordings.why_modular.body" />
         </div>
         <div class="lg:w-1/3 px-4 py-8 lg:p-8 flex flex-col items-center">
           <i-performant class="inline-block" />
-          <h4 class="uppercase font-bold text-2xl py-8">
+          <h4 class="uppercase font-medium text-2xl py-8">
             {{ wordings.why_performant.attrs.title }}
           </h4>
           <p class="leading-loose text-light-onSurfaceSecondary dark:text-dark-onSurfaceSecondary" v-html="wordings.why_performant.body" />
         </div>
         <div class="lg:w-1/3 px-4 py-8 lg:p-8 flex flex-col items-center">
           <i-enjoyable class="inline-block" />
-          <h4 class="uppercase font-bold text-2xl py-8">
+          <h4 class="uppercase font-medium text-2xl py-8">
             {{ wordings.why_enjoyable.attrs.title }}
           </h4>
           <p class="leading-loose text-light-onSurfaceSecondary dark:text-dark-onSurfaceSecondary" v-html="wordings.why_enjoyable.body" />

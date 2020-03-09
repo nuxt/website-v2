@@ -1,5 +1,5 @@
 <template>
-  <div class="nui-media h-0 w-full overflow-hidden relative m-0 rounded-lg bg-dark-surface shadow-lg">
+  <div class="nui-media h-0 w-full overflow-hidden relative m-0 rounded bg-dark-surface shadow-lg">
     <iframe
       v-if="isIntersecting && src"
       :src="src"

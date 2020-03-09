@@ -34,7 +34,7 @@ module.exports = {
           onSurfacePrimary: '#F5F7FA',
           onSurfaceSecondary: '#B8C2CC',
           elevatedSurface: '#2F495E',
-          border: defaultTheme.colors.gray['900']
+          border: defaultTheme.colors.gray['600']
         }
       },
       fill: theme => ({

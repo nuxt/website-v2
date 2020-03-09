@@ -1,5 +1,5 @@
 <template>
-  <div class="bg-light-elevatedSurface dark:bg-dark-elevatedSurface shadow-nuxt">
+  <div class="bg-light-elevatedSurface dark:bg-dark-elevatedSurface">
     <div class="container mx-auto px-4 pt-16 pb-12">
       <div class="flex flex-wrap justify-between mb-4">
         <div class="lg:w-6/12 lg:text-left text-center p-4 sm:p-0">
@@ -15,7 +15,7 @@
       </div>
       <div class="flex -mx-2 md:-mx-4 mb-4">
         <section class="w-full p-2 md:p-4">
-          <div class="bg-light-surface dark:bg-dark-surface p-8 rounded shadow-lg w-full relative">
+          <div class="bg-light-surface dark:bg-dark-surface p-8 rounded w-full relative">
             <technical-support class="float-right mb-4"/>
             <h2 class="text-2xl font-medium mb-2">Technical support</h2>
             <h3 class="text-nuxt-lightgreen font-medium text-2xl mb-4">$250 <span class="text-sm">/hr</span></h3>

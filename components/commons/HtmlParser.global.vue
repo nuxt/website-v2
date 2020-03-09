@@ -128,7 +128,7 @@ export default {
     }
   }
   .Promote {
-    @apply shadow-md;
+    // @apply shadow-md;
     background-color: theme('colors.gray.200');
     .Promote__Content {
       .Promote__Content__Title {
@@ -142,7 +142,7 @@ export default {
       }
     }
     &:hover {
-      @apply shadow-lg;
+      // @apply shadow-lg;
       background-color: theme('colors.gray.300');
       text-decoration: none;
     }

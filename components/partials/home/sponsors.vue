@@ -1,5 +1,5 @@
 <template>
-  <div class="bg-light-elevatedSurface dark:bg-dark-elevatedSurface shadow-nuxt">
+  <div class="bg-light-elevatedSurface dark:bg-dark-elevatedSurface">
     <div class="container mx-auto px-4 py-12 text-center">
       <section class="px-4">
         <h1 class="text-3xl uppercase mb-2 sm:mb-0 font-medium" v-html="wordings.attrs.title" />

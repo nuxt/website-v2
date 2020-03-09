@@ -38,7 +38,7 @@ export default {
 [data-theme='light'] #bsa-native {
   .native-box {
     // @apply shadow-lg;
-    box-shadow: theme('boxShadow.lg');
+    // box-shadow: theme('boxShadow.lg');
     border-color: theme('colors.gray.300');
     background-color: theme('colors.light.surface');
   }
@@ -47,7 +47,7 @@ export default {
 [data-theme='dark'] #bsa-native {
   .native-box {
     // @apply shadow-lg;
-    box-shadow: theme('boxShadow.lg');
+    // box-shadow: theme('boxShadow.lg');
     border-color: theme('colors.gray.900');
     background-color: theme('colors.dark.surface');
   }

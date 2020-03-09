@@ -1,5 +1,5 @@
 <template>
-  <div class="bg-light-elevatedSurface dark:bg-dark-elevatedSurface shadow-nuxt">
+  <div class="bg-light-elevatedSurface dark:bg-dark-elevatedSurface">
     <div class="container mx-auto px-4 pt-16">
       <div class="flex flex-wrap justify-between mb-8">
         <div class="lg:w-6/12 lg:text-left text-center p-4 sm:p-0">
@@ -18,7 +18,7 @@
       </div>
       <section class="flex flex-wrap items-stretch -mx-4">
         <div v-for="course in courses" :key="course.title" class="w-full p-4">
-          <div class="block sm:flex w-full h-full items-center pr-6 bg-light-surface dark:bg-dark-surface rounded shadow-md">
+          <div class="block sm:flex w-full h-full items-center pr-6 bg-light-surface hover:bg-gray-200 dark:bg-dark-surface rounded">
             <div class="w-full p-6">
               <h4 class="block w-full font-medium text-xl pb-2">
                 {{ course.title }}

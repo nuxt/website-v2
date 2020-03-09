@@ -4,7 +4,7 @@
     <input
       id="algolia"
       v-model="q"
-      class="nui-search-input shadow-inner bg-light-surface dark:bg-dark-surface text-light-onSurfaceSecondary dark:text-dark-onSurfaceSecondary font-medium"
+      class="nui-search-input bg-gray-200 text-nuxt-gray dark:bg-dark-surface dark:text-dark-onSurfaceSecondary font-medium"
       type="text"
       name="search"
       :placeholder="$store.state.lang.text.search"

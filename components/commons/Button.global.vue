@@ -42,7 +42,7 @@ export default {
   };
 }
 .secondary {
-  @apply bg-gray-400 text-nuxt-gray;
+  @apply bg-gray-200 text-nuxt-gray;
   &:hover {
     @apply bg-gray-300;
   };

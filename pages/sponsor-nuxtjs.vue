@@ -1,5 +1,5 @@
 <template>
-  <div class="bg-light-elevatedSurface dark:bg-dark-elevatedSurface shadow-nuxt">
+  <div class="bg-light-elevatedSurface dark:bg-dark-elevatedSurface">
     <div class="container mx-auto px-4 pt-16 pb-12">
       <div class="flex flex-wrap justify-between mb-8">
         <div class="lg:w-6/12 lg:text-left text-center p-4 sm:p-0">
@@ -14,7 +14,7 @@
         </div>
         <i-sponsor class="w-2/3 mx-auto lg:mx-0 lg:w-5/12 lg:-mt-8 text-light-elevatedSurface dark:text-dark-elevatedSurface"/>
       </div>
-      <section class="flex flex-wrap bg-light-surface dark:bg-dark-surface p-8 rounded my-12 shadow-lg">
+      <section class="flex flex-wrap bg-light-surface dark:bg-dark-surface p-8 rounded my-12">
         <div class="w-full lg:w-2/3 text-center lg:text-left">
           <h2 class="text-2xl uppercase pt-4 pb-6">
             One-time donations

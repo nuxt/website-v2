@@ -1,7 +1,7 @@
 <template>
   <footer class="footer z-10 relative">
     <newsletter-form/>
-    <div class="bg-light-elevatedSurface dark:bg-dark-elevatedSurface">
+    <div class="bg-light-elevatedSurface dark:bg-dark-elevatedSurface shadow-nuxt">
       <div class="container mx-auto px-4">
         <div class="flex flex-col sm:flex-row text-center sm:text-left items-center content-center justify-between pt-10 sm:py-10">
           <nav v-for="(l, title, index) in links" :key="title" class="flex-1 w-full sm:w-auto mb-8 sm:mb-0" :class="{'sm:text-center': index === 1, 'sm:text-right': index === 2}">

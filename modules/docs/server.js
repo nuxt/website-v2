@@ -11,7 +11,7 @@ const degit = require('degit')
 const logger = require('consola').withScope('docs/server')
 const { marked, partialRenderer } = require('./renderer')
 const readFile = promisify(fs.readFile)
-const readingTime = require('reading-time');
+const readingTime = require('reading-time')
 
 class DocsServer {
   constructor (options) {
@@ -331,11 +331,13 @@ class DocsServer {
     const splittedUrl = prettierUrl.split('/')
     if (splittedUrl[1] === 'blog') {
       if (splittedUrl.length === 2) { // blog directory
-        let posts = Object.keys(this.docsFiles).filter(path => path.indexOf(prettierUrl) === 0)
+        let posts = Object.keys(this.docsFiles).filter(path => {
+          return path.indexOf(prettierUrl) === 0 || path.indexOf('en/blog') === 0
+        })
         posts = posts.map(path => {
          return {
           ...this.docsFiles[path].attrs,
-          slug: path.split('/').slice(-1)[0].replace(/\.md$/, ''),  // remove lang and extension
+          slug: this.slugify(path),  // remove lang and extension
           readtime: readingTime(this.docsFiles[path].body)
          }
         })
@@ -380,6 +382,11 @@ class DocsServer {
     }
     logger.info(`Cloning ${this.repo} into ${this.docsDir}`)
     await degit(this.repo, { force: true, cache: false }).clone(this.docsDir)
+  }
+
+  // slugify path
+  slugify (path) {
+    return path.split('/').slice(-1)[0].replace(/\.md$/, '')
   }
 }
 

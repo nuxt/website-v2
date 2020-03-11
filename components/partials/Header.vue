@@ -61,7 +61,7 @@
       </div>
     </nav>
     <!-- Mobile Aside Navigation -->
-    <div class="header_mobile_aside block lg:hidden" :class="{'header_mobile_aside--open': sublinks.length}">
+    <div class="header_mobile_aside block lg:hidden fixed left-0 light:bg-light-surface dark:bg-dark-surface pt-6 z-20 w-full overflow-y-auto" :class="{'header_mobile_aside--open': sublinks.length}">
       <nui-container>
         <transition-group v-for="(group, index) in sublinks" :key="index" tag="div" name="list" class="header_mobile_aside_group">
           <h3 :key="`title-${index}`" class="uppercase text-gray-500 pb-2">
@@ -69,7 +69,7 @@
           </h3>
           <ul :key="`list-${index}`" class="pb-6">
             <li v-for="l in group.links" :key="l.to" class="py-2">
-              <nuxt-link class="block text-gray-700 hover:text-nuxt-lightgreen" :class="{'text-nuxt-lightgreen': path === locale + l.to}" :to="locale + l.to" exact>
+              <nuxt-link class="block dark:text-dark-onSurfacePrimary hover:text-nuxt-lightgreen" :class="{'text-nuxt-lightgreen': path === locale + l.to}" :to="locale + l.to" exact>
                 {{ l.name }}
               </nuxt-link>
             </li>
@@ -151,7 +151,6 @@ export default {
   padding-bottom: max(0.5rem,env(safe-area-inset-bottom));
 }*/
 .header_mobile_aside {
-  @apply fixed left-0 bg-gray-100 pt-6 z-20 w-full overflow-y-auto;
   top: 72px;
   bottom: 60px;
   transform: translateX(-100%);

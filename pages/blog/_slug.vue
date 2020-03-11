@@ -1,24 +1,28 @@
 <template>
-  <nui-article class="blog-post-container">
-    <div class="blog-post-header">
-      <div class="blog-post-title">{{ page.attrs.title }}</div>
-      <div class="flex items-baseline justify-between text-sm text-gray-600 mb-8">
-        <div class="blog-post-author">{{ page.attrs.author }}</div>
-        <div class="blog-post-readtime">{{ page.readtime.text }}</div>
+  <div class="max-w-4xl mx-auto">
+    <nui-article class="mt-12 mx-6">
+      <div class="blog-post-header">
+        <div class="flex justify-center">
+          <h1 class="blog-post-title">{{ page.attrs.title }}</h1>
+        </div>
+        <div class="flex items-baseline justify-between text-sm text-gray-600 font-semibold mb-8">
+          <div class="blog-post-author">{{ page.attrs.author }}</div>
+          <div class="blog-post-readtime">{{ page.readtime.text }}</div>
+        </div>
+        <div class="blog-post-description">{{ page.attrs.description }}</div>
       </div>
-      <div class="blog-post-description">{{ page.attrs.description }}</div>
-    </div>
-    <div class="blog-post-content">
-      <html-parser :content="page.body" />
-    </div>
-    <div class="blog-post-footer">
-      <ul class="blog-post-tags">
-        <li v-for="(tag, i) in page.attrs.tags" :key="i" class="blog-post-tag">
-          {{ tag }}
-        </li>
-      </ul>
-    </div>
-  </nui-article>
+      <div class="blog-post-content">
+        <html-parser :content="page.body" />
+      </div>
+      <div v-if="hasTags" class="blog-post-footer">
+        <ul class="blog-post-tags">
+          <li v-for="(tag, i) in page.attrs.tags" :key="i" class="blog-post-tag">
+            {{ tag }}
+          </li>
+        </ul>
+      </div>
+    </nui-article>
+  </div>
 </template>
 
 <script>
@@ -42,21 +46,25 @@ export default {
       return error({ statusCode: 404, message: store.state.lang.text.api_page_not_found })
     }
     return data
+  },
+  computed: {
+    hasTags () {
+      return this.page.attrs.tags
+    }
   }
 }
 </script>
 
 <style lang="postcss">
-.blog-post-container {
-  @apply max-w-2xl mx-auto mt-4
+.blog-post-header {
+  @apply flex flex-col justify-center
 }
-.blog-post-header {}
 .blog-post-title {
-  @apply font-bold text-nuxt-gray text-4xl
+  @apply font-bold text-4xl
 }
 .blog-post-author {}
 .blog-post-description {
-  @apply mb-8
+  @apply mb-8 text-gray-600 italic
 }
 .blog-post-content h1, h2, h3, h4, h5, h6 {
   @apply font-semibold
@@ -72,10 +80,5 @@ export default {
 }
 .blog-post-tag:first-of-type {
   @apply ml-0
-}
-@media (max-width: 376px) {
-  .blog-post-container {
-    @apply max-w-xs mt-10
-  }
 }
 </style>

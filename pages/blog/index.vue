@@ -1,7 +1,7 @@
 <template>
   <nui-container class="pt-16">
-    <div class="flex flex-wrap justify-between mb-8">
-      <div class="lg:w-6/12 lg:text-left text-center p-4 sm:p-0">
+    <div class="flex flex-wrap justify-center mb-8">
+      <div class="text-center p-4 sm:p-0">
         <h1 class="text-3xl xl:text-4xl text-nuxt-gray font-medium leading-normal mb-6 lg:pt-4">
           NUXT<span class="text-nuxt-lightgreen">JS</span> Blog<br>
         </h1>
@@ -9,7 +9,6 @@
           Discover articles from the core team and contributors about NuxtJS, tips and tricks included!
         </h3>
       </div>
-      <img src="#" alt="Blog" class="w-2/3 mx-auto lg:mx-0 lg:w-5/12 lg:-mt-8">
     </div>
     <section class="post-feed">
       <article v-for="(post, p) in posts" :key="p" class="post-card-container hover:shadow-nuxt">
@@ -62,7 +61,7 @@ export default {
 
 <style lang="postcss" scoped>
 .post-feed {
- @apply max-w-2xl mx-auto
+ @apply max-w-4xl mx-auto
 
 }
 .post-card-container {
@@ -77,9 +76,14 @@ export default {
 .post-card-title {
   @apply text-xl text-nuxt-gray font-semibold mb-2
 }
+.post-card-title::after {
+  content: " ";
+  width: 80%;
+  @apply block border-2 border-nuxt-lightgreen mt-2 mb-1 rounded
+}
 .post-card-content {}
 .post-card-description {
-  @apply text-gray-600
+  @apply text-gray-600 italic
 }
 .post-card-footer {
   @apply mt-2
@@ -88,7 +92,7 @@ export default {
   @apply text-sm
 }
 .post-card-author {
-  @apply text-sm
+  @apply text-sm font-semibold
 }
 .post-card-tags {
   @apply flex list-none p-0 mt-4
@@ -101,5 +105,13 @@ export default {
 }
 .post-card-readtime {
   @apply text-sm
+}
+@media only screen and (max-width: 320px) {
+  .post-card-header {
+    @apply flex-col mb-2
+  }
+  .post-card-title {
+    @apply mb-0
+  }
 }
 </style>

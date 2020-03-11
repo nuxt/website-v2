@@ -62,7 +62,7 @@ module.exports = {
     borderWidth: ['responsive', 'after'],
     borderRadius: ['responsive', 'after'],
     borderColor: ['responsive', 'hover', 'focus', 'dark', 'light', 'after', 'light:after', 'dark:after'],
-    backgroundColor: ['responsive', 'hover', 'focus', 'dark', 'light'],
+    backgroundColor: ['responsive', 'hover', 'focus', 'dark', 'light', 'dark:hover', 'light:hover'],
     textColor: ['responsive', 'hover', 'focus', 'group-hover', 'dark', 'light']
   },
   plugins: [
@@ -99,6 +99,17 @@ module.exports = {
           addVariant(`${mode}:${pseudo}`, ({ modifySelectors, separator }) => {
             modifySelectors(({ className }) => {
               return `[data-theme='${mode}'] .${e(`${mode}${separator}${pseudo}${separator}${className}`)}::${pseudo}`
+            })
+          })
+        })
+      })
+      // states for color modes
+      const states = ['hover']
+      themeVariants.forEach((mode) => {
+        states.forEach((state) => {
+          addVariant(`${mode}:${state}`, ({ modifySelectors, separator }) => {
+            modifySelectors(({ className }) => {
+              return `[data-theme='${mode}'] .${e(`${mode}${separator}${state}${separator}${className}`)}:${state}`
             })
           })
         })

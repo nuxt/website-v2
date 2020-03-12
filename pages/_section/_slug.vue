@@ -26,7 +26,7 @@
       </article>
     </div>
     <nui-affix class="opacity-transition" :class="{ 'opacity-25': $store.state.focusMode }">
-      <nui-ads :key="$route.params.slug" class="mx-auto" />
+      <nui-ads :key="$route.params.slug" />
     </nui-affix>
   </div>
 </template>

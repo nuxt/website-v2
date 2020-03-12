@@ -3,6 +3,10 @@ const defaultTheme = require('tailwindcss/defaultTheme')
 
 module.exports = {
   theme: {
+    screens: {
+      xs: '320px',
+      ...defaultTheme.screens
+    },
     extend: {
       fontFamily: {
         sans: [
@@ -69,6 +73,9 @@ module.exports = {
     borderColor: ['responsive', 'hover', 'focus', 'dark', 'light', 'after', 'light:after', 'dark:after'],
     backgroundColor: ['responsive', 'hover', 'focus', 'dark', 'light', 'dark:hover', 'light:hover'],
     textColor: ['responsive', 'hover', 'focus', 'group-hover', 'dark', 'light']
+  },
+  corePlugins: {
+    container: false
   },
   plugins: [
     plugin(function ({ addVariant, theme, e, prefix, config }) {

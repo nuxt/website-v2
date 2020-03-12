@@ -6,7 +6,7 @@
           <p class="lg:text-sm text-light-onSurfacePrimary dark:text-dark-onSurfacePrimary text-center">
             Platinum Sponsors
           </p>
-          <a v-for="sponsor in sponsors" :key="sponsor.name" :href="sponsor.link" class="block lg:inline-block my-4 max-w-xs" rel="noopener sponsored">
+          <a v-for="sponsor in sponsors" :key="sponsor.name" :href="sponsor.link" class="block lg:inline-block my-4 max-w-3/4 sm:max-w-1/2 lg:max-w-full" rel="noopener sponsored">
             <img :src="`/img/sponsors/${$theme.value}/${sponsor.img}`" :alt="sponsor.name">
           </a>
           <nui-button :to="{ name: 'sponsor-nuxtjs' }" class="justify-center mb-8">

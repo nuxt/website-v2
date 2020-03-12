@@ -1,11 +1,33 @@
 <template>
-  <div class="max-w-4xl mx-auto">
+  <div class="container mx-auto p-4">
+    <nui-button :to="{ name: 'blog' }" class="inline-flex items-center shadow-none hover:shadow-none" variant="gray">
+      <nuiSvgArrowLeft slot="icon" class="h-5 mr-1"/>
+      back to the blog list
+    </nui-button>
     <blogPostItem :post="post"/>
+    <!-- blogPost navigation -->
+    <div class="flex justify-between items-center">
+      <nui-button :to="{ name: 'blog-slug', params: { slug: '' } }" class="inline-flex items-center shadow-none hover:shadow-none" variant="gray">
+        <nuiSvgArrowLeft slot="icon" class="h-5 mr-1"/>
+        prev
+      </nui-button>
+      <nuxt-link :to="{ name: 'blog-slug', params: { slug: '' } }" class="inline-flex items-center hover:text-nuxt-lightgreen">
+        next
+        <nuiSvgArrowRight class="h-5 ml-2"/>
+      </nuxt-link>
+    </div>
   </div>
 </template>
 
 <script>
+import nuiSvgArrowLeft from '@/components/svg/ArrowLeft.vue'
+import nuiSvgArrowRight from '@/components/svg/ArrowRight.vue'
+
 export default {
+  components: {
+    nuiSvgArrowLeft,
+    nuiSvgArrowRight
+  },
   async asyncData ({ $docs, params, store, error }) {
     const slug = params.slug
     const path = `/${store.state.locale}/blog/${slug}`

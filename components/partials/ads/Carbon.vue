@@ -45,7 +45,7 @@ export default {
     max-width: 320px;
   }
   @screen lg {
-    @apply mt-0;
+    @apply mt-0 mx-auto;
     max-width: 160px;
   }
   #carbonads span {

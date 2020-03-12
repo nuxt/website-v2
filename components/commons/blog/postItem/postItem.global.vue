@@ -16,7 +16,7 @@
         <html-parser :content="post.body" />
       </article>
     </div>
-    <div class="border-t border-gray-300 my-10">
+    <div v-if="hasTags" class="border-t border-gray-300 my-10">
         <div class="flex flex-row justify-start my-10">
           <span v-for="(tag, id) in post.attrs.tags" :key="id" class="uppercase text-xs px-1 py-1 rounded-sm mr-2 bg-gray-300">{{ tag }}</span>
         </div>
@@ -39,6 +39,11 @@ export default {
       const currentLocale = this.$store.state.locale || 'en'
       const options = { year: 'numeric', month: 'long', day: 'numeric' }
       return new Date(d).toLocaleDateString(currentLocale, options)
+    }
+  },
+  computed: {
+    hasTags () {
+      return this.post.attrs.tags
     }
   }
 }

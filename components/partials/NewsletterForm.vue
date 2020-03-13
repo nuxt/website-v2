@@ -1,8 +1,8 @@
 <template>
   <nui-container class="px-4">
     <section class="py-8 px-3 -mx-4 lg:mx-0 text-center rounded-t-lg">
-      <h2 class="text-3xl font-medium text-light-onSurfacePrimary dark:text-dark-onSurfacePrimary mb-2" v-html="headerWordings.attrs.title" />
-      <p class="mb-6 text-light-onSurfaceSecondary dark:text-dark-onSurfaceSecondary" v-html="headerWordings.body" />
+      <h2 class="text-3xl font-medium text-light-onSurfacePrimary dark:text-dark-onSurfacePrimary mb-2 transition-colors duration-300 ease-linear" v-html="headerWordings.attrs.title" />
+      <p class="mb-6 text-light-onSurfaceSecondary dark:text-dark-onSurfaceSecondary transition-colors duration-300 ease-linear" v-html="headerWordings.body" />
       <client-only>
         <form class="flex flex-row justify-center mb-2" @submit.prevent="subscribe">
           <div>

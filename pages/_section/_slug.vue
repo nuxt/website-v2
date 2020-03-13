@@ -5,7 +5,7 @@
         ⚠️ You are looking at the english version of the page. Help us translate it <a :href="docLink" class="text-orange-600">here</a>.
       </div>
       <article v-if="section === 'examples'">
-        <h1 class="text-light-onSurfacePrimary dark:text-dark-onSurfacePrimary">{{ page.attrs.title }}</h1>
+        <h1 class="text-light-onSurfacePrimary dark:text-dark-onSurfacePrimary transition-colors duration-300 ease-linear">{{ page.attrs.title }}</h1>
         <p class="mb-6">{{ page.attrs.description }}</p>
         <code-sandbox v-if="codeSandBoxLink" :src="codeSandBoxLink"/>
         <div>
@@ -19,7 +19,7 @@
         <contribute :doc-link="docLink" :contributors="contributors" />
       </article>
       <article v-else>
-        <h1 class="text-light-onSurfacePrimary dark:text-dark-onSurfacePrimary">{{ page.attrs.title }}</h1>
+        <h1 class="text-light-onSurfacePrimary dark:text-dark-onSurfacePrimary transition-colors duration-300 ease-linear">{{ page.attrs.title }}</h1>
         <responsive-video v-if="page.attrs.youtube" :src="page.attrs.youtube" />
         <html-parser :content="page.body" />
         <contribute :doc-link="docLink" :contributors="contributors" />

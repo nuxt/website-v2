@@ -1,5 +1,5 @@
 <template>
-  <div class="bg-light-elevatedSurface dark:bg-dark-elevatedSurface shadow-nuxt">
+  <div class="bg-light-elevatedSurface dark:bg-dark-elevatedSurface shadow-nuxt transition-colors duration-300 ease-linear">
     <div class="container mx-auto px-4 pt-16 pb-12">
       <div class="flex flex-wrap justify-between mb-8">
         <div class="lg:w-6/12 lg:text-left text-center p-4 sm:p-0">
@@ -60,7 +60,7 @@
         </p>
         <div v-for="(group, groupKey) in sponsors" :key="groupKey" class="text-center pb-8">
           <h2 class="uppercase text-xl pb-8">
-            <span class="pb-2 border-b-2 border-nuxt-lightgreen text-light-onSurfacePrimary dark:text-dark-onSurfacePrimary">{{ groupKey }} SPONSORS</span>
+            <span class="pb-2 border-b-2 border-nuxt-lightgreen text-light-onSurfacePrimary dark:text-dark-onSurfacePrimary transition-colors duration-300 ease-linear">{{ groupKey }} SPONSORS</span>
           </h2>
           <a
             v-for="(sponsor, i) in group"

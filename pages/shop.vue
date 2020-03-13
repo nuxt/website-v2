@@ -1,5 +1,5 @@
 <template>
-  <div class="bg-light-elevatedSurface dark:bg-dark-elevatedSurface shadow-nuxt">
+  <div class="bg-light-elevatedSurface dark:bg-dark-elevatedSurface shadow-nuxt transition-colors duration-300 ease-linear">
     <div class="container mx-auto px-4 pt-16 pb-12">
       <div ref="shop" class="flex flex-wrap justify-between mb-8">
         <div class="lg:w-6/12 lg:text-left text-center p-4 sm:p-0">
@@ -14,10 +14,10 @@
       </div>
       <section class="flex flex-wrap items-stretch -mx-4">
         <div v-for="(product, i) in products" :key="i" class="w-full lg:w-1/2 p-4">
-          <div class="block sm:flex w-full bg-light-surface dark:bg-dark-surface p-6 rounded">
+          <div class="block sm:flex w-full bg-light-surface dark:bg-dark-surface p-6 rounded transition-colors duration-300 ease-linear">
             <img :src="'/shop/' + product.img + '.png'" :srcset="'/shop/' + product.img + '-2x.png 2x'" :alt="product.name" class="w-full sm:w-auto rounded border border-gray-300">
             <div class="w-full px-6 py-2">
-              <h4 class="block w-full font-medium text-xl pb-4">
+              <h4 class="block w-full font-medium text-xl pb-4 text-light-onSurfacePrimary dark:text-dark-onSurfacePrimary transition-colors duration-300 ease-linear">
                 {{ product.name }}
               </h4>
               <p class="mb-4 text-gray-600 leading-relaxed">{{ product.description }}</p>

@@ -42,6 +42,9 @@ export default {
     border-color: theme('colors.gray.300');
     background-color: theme('colors.light.surface');
   }
+  .native-text {
+    @apply text-light-onSurfacePrimary transition-colors duration-300 ease-linear;
+  }
 }
 
 [data-theme='dark'] #bsa-native {
@@ -51,10 +54,14 @@ export default {
     border-color: theme('colors.gray.900');
     background-color: theme('colors.dark.surface');
   }
+  .native-text {
+    @apply text-dark-onSurfacePrimary transition-colors duration-300 ease-linear;
+  }
 }
 
 #bsa-native {
   .native-box {
+    @apply transition-colors duration-300 ease-linear;
     // @apply flex p-2 border rounded-lg items-center mb-4;
     display: flex;
     align-items: center;

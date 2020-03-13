@@ -1,7 +1,5 @@
 @import url('https://fonts.googleapis.com/css?family=Quicksand:400,500,600,700&display=swap');
 
-/*@import './base.scss';*/
-
 /* purgecss start ignore */
 @import 'tailwindcss/base';
 /* purgecss end ignore */

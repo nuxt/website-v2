@@ -12,7 +12,7 @@ export default {
       { rel: 'preconnect', href: 'https://www.google-analytics.com' }
     ],
     bodyAttrs: {
-      class: ['font-sans font-medium bg-light-surface dark:bg-dark-surface text-light-onSurfacePrimary dark:text-dark-onSurfacePrimary']
+      class: ['font-sans font-medium bg-light-surface dark:bg-dark-surface text-light-onSurfacePrimary dark:text-dark-onSurfacePrimary transition-colors duration-300 ease-linear ']
     }
   },
   buildModules: [

@@ -1,5 +1,5 @@
 <template>
-  <div class="bg-light-elevatedSurface dark:bg-dark-elevatedSurface shadow-nuxt">
+  <div class="bg-light-elevatedSurface dark:bg-dark-elevatedSurface shadow-nuxt transition-colors duration-300 ease-linear">
     <div class="container mx-auto px-4 pt-16">
       <div class="flex flex-wrap justify-between mb-8">
         <div class="lg:w-6/12 lg:text-left text-center p-4 sm:p-0">
@@ -14,15 +14,15 @@
       </div>
       <section class="flex flex-wrap -mx-4">
         <nuxt-link :to="{ name: 'themes' }" class="block w-full lg:w-1/2 p-4">
-          <div class="block bg-light-surface dark:bg-dark-surface hover:bg-gray-200 rounded p-8 text-center">
-            <h2 class="text-2xl text-light-onSurfacePrimary dark:text-dark-onSurfacePrimary font-medium uppercase mb-8">Themes</h2>
-            <i-theming class="text-light-onSurfacePrimary dark:text-dark-onSurfacePrimary inline-block w-auto h-40 sm:h-56 xl:h-64"></i-theming>
+          <div class="block bg-light-surface dark:bg-dark-surface hover:bg-gray-200 rounded p-8 text-center transition-colors duration-300 ease-linear">
+            <h2 class="text-2xl text-light-onSurfacePrimary dark:text-dark-onSurfacePrimary font-medium uppercase mb-8 transition-colors duration-300 ease-linear">Themes</h2>
+            <i-theming class="text-light-onSurfacePrimary dark:text-dark-onSurfacePrimary inline-block w-auto h-40 sm:h-56 xl:h-64 transition-colors duration-300 ease-linear"></i-theming>
           </div>
         </nuxt-link>
         <nuxt-link :to="{ name: 'video-courses' }" class="w-full lg:w-1/2 p-4">
-          <div class="block bg-light-surface dark:bg-dark-surface hover:bg-gray-200 rounded p-8 text-center">
-            <h2 class="text-2xl text-light-onSurfacePrimary dark:text-dark-onSurfacePrimary font-medium uppercase mb-8">Video Courses</h2>
-            <i-videos class="text-light-onSurfacePrimary dark:text-dark-onSurfacePrimary inline-block w-auto h-40 sm:h-56 xl:h-64"></i-videos>
+          <div class="block bg-light-surface dark:bg-dark-surface hover:bg-gray-200 rounded p-8 text-center transition-colors duration-300 ease-linear">
+            <h2 class="text-2xl text-light-onSurfacePrimary dark:text-dark-onSurfacePrimary font-medium uppercase mb-8 transition-colors duration-300 ease-linear">Video Courses</h2>
+            <i-videos class="text-light-onSurfacePrimary dark:text-dark-onSurfacePrimary inline-block w-auto h-40 sm:h-56 xl:h-64 transition-colors duration-300 ease-linear"></i-videos>
           </div>
         </nuxt-link>
       </section>

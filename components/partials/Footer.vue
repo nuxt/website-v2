@@ -52,8 +52,6 @@
 
 <script>
 import NewsletterForm from './NewsletterForm'
-// import nuiSun from '@/components/svg/Sun'
-// import nuiMoon from '@/components/svg/Moon'
 import nuiGlobe from '@/components/svg/Globe'
 import nuiLogo from '@/components/svg/Mountains'
 import localeManager from '@/mixins/localeManager'
@@ -62,8 +60,6 @@ import DarkModeToggle from '@/components/partials/DarkModeToggle'
 export default {
   components: {
     NewsletterForm,
-    // nuiSun,
-    // nuiMoon,
     nuiGlobe,
     nuiLogo,
     DarkModeToggle

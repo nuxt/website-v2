@@ -1,16 +1,11 @@
 <template>
   <button class="relative overflow-hidden px-4 flex bg-gray-200 dark:bg-dark-surface dark:text-dark-onSurfaceSecondary rounded-full h-10 outline-none text-light-onSurfacePrimary dark:text-dark-onSurfacePrimary transition-colors duration-300 ease-linear" @click="setCurrentTheme">
+    <!-- bug with transition on svg elements -->
+    <!-- https://github.com/vuejs/vue/blob/59868bbe92059c690b6a146aaf1504925455384f/src/transition/transition.js#L375 -->
+    <!-- https://github.com/vuejs/vue/issues/2396 -->
     <span class="relative mr-1 overflow-hidden inline-block w-6 h-6 flex items-center justify-center">
-      <transition name="sunset">
-        <svg v-if="$theme.value === 'dark'" key="moon" class="absolute w-6 h-6" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <!-- <path d="M18.2505 15.4255C15.1013 16.0253 12.1935 13.6177 12.1935 10.4193C12.1935 8.57894 13.1798 6.89334 14.774 5.98616C15.5812 5.52678 15.3781 4.30306 14.461 4.13366C13.9791 4.04482 13.49 4.00008 13 4C8.58331 4 5 7.57956 5 12C5 16.4167 8.57959 20 13 20C15.4666 20 17.7212 18.8774 19.2141 17.038C19.803 16.3124 19.1607 15.2521 18.2505 15.4255ZM13 19C9.134 19 6 15.866 6 12C6 8.134 9.134 5 13 5C13.437 5 13.8645 5.04044 14.2794 5.11703C12.4365 6.16578 11.1935 8.14731 11.1935 10.4193C11.1935 14.2508 14.6814 17.1232 18.4376 16.4078C17.1542 17.9892 15.1953 19 13 19Z" fill="currentColor"/> -->
-          <path d="M20.3542 15.3542L21.2821 15.7271C21.4314 15.3554 21.3446 14.9304 21.0613 14.6471C20.778 14.3639 20.353 14.277 19.9813 14.4264L20.3542 15.3542ZM8.64581 3.64587L9.57369 4.01876C9.72307 3.64704 9.6362 3.22204 9.35292 2.93877C9.06964 2.65549 8.64465 2.56861 8.27293 2.718L8.64581 3.64587ZM19.9813 14.4264C19.0613 14.7961 18.0557 15.0001 17 15.0001V17.0001C18.3155 17.0001 19.5739 16.7455 20.7271 16.2821L19.9813 14.4264ZM17 15.0001C12.5817 15.0001 9 11.4183 9 7.00006H7C7 12.5229 11.4772 17.0001 17 17.0001V15.0001ZM9 7.00006C9 5.94438 9.20396 4.93879 9.57369 4.01876L7.71794 3.27299C7.25452 4.42612 7 5.6846 7 7.00006H9ZM4 12.0001C4 8.6372 6.07526 5.75664 9.0187 4.57375L8.27293 2.718C4.59771 4.19496 2 7.79294 2 12.0001H4ZM12 20.0001C7.58172 20.0001 4 16.4183 4 12.0001H2C2 17.5229 6.47715 22.0001 12 22.0001V20.0001ZM19.4263 14.9814C18.2434 17.9248 15.3629 20.0001 12 20.0001V22.0001C16.2071 22.0001 19.8051 19.4024 21.2821 15.7271L19.4263 14.9814Z" fill="currentColor"/>
-        </svg>
-        <svg v-else-if="$theme.value === 'light'" key="sun" class="absolute w-6 h-6" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <!-- <path d="M12 8.48984C10.0688 8.48984 8.5 10.0617 8.5 11.993C8.5 13.9242 10.0688 15.4961 12 15.4961C13.9312 15.4961 15.5 13.9242 15.5 11.993C15.5 10.0617 13.9312 8.48984 12 8.48984ZM12 14.4961C10.6219 14.4961 9.5 13.3742 9.5 11.993C9.5 10.6117 10.6219 9.48984 12 9.48984C13.3781 9.48984 14.5 10.6117 14.5 11.993C14.5 13.3742 13.3781 14.4961 12 14.4961ZM20 11.993C20 11.8273 19.9156 11.6711 19.7781 11.5773L17.1875 9.84297L17.7937 6.78359C17.825 6.62109 17.775 6.44922 17.6562 6.33359C17.5375 6.21484 17.3719 6.16172 17.2063 6.19609L14.15 6.80234L12.4156 4.20859C12.2281 3.93047 11.7719 3.93047 11.5844 4.20859L9.85 6.80234L6.79375 6.19297C6.62813 6.15859 6.4625 6.21172 6.34375 6.33047C6.225 6.44922 6.175 6.61797 6.20625 6.78047L6.8125 9.84297L4.22187 11.5773C4.08437 11.6711 4 11.8273 4 11.993C4 12.1586 4.08437 12.3148 4.22187 12.4086L6.8125 14.143L6.20625 17.2023C6.175 17.3648 6.225 17.5367 6.34375 17.6523C6.4625 17.7711 6.62813 17.8242 6.79375 17.7898L9.85 17.1836L11.5844 19.7773C11.6781 19.918 11.8344 19.9992 12 19.9992C12.1656 19.9992 12.3219 19.9148 12.4156 19.7773L14.15 17.1836L17.2063 17.7898C17.375 17.8273 17.5406 17.7711 17.6562 17.6523C17.775 17.5336 17.825 17.3648 17.7937 17.2023L17.1875 14.143L19.7781 12.4086C19.9156 12.3148 20 12.1586 20 11.993V11.993ZM16.3531 13.4961C16.1844 13.6086 16.1031 13.8117 16.1406 14.0086L16.6656 16.6617L14.0156 16.1367C13.8094 16.093 13.6156 16.1805 13.5031 16.3492L12 18.5992L10.4969 16.3523C10.4031 16.2117 10.2469 16.1305 10.0813 16.1305C10.05 16.1305 10.0156 16.1336 9.98438 16.1398L7.33437 16.6648L7.85938 14.0117C7.89688 13.8148 7.81562 13.6117 7.64687 13.4992L5.4 11.9961L7.64687 10.4898C7.81562 10.3773 7.89688 10.1742 7.85938 9.97734L7.33437 7.32422L9.98438 7.84922C10.1875 7.88984 10.3844 7.80547 10.4969 7.63672L12 5.38672L13.5031 7.63672C13.6156 7.80547 13.8125 7.88984 14.0156 7.84922L16.6656 7.32422L16.1406 9.97734C16.1031 10.1742 16.1844 10.3773 16.3531 10.4898L18.6 11.9961L16.3531 13.4961V13.4961Z" fill="currentColor"/> -->
-          <path d="M12 3V4M12 20V21M21 12H20M4 12H3M18.364 18.364L17.6569 17.6569M6.34315 6.34315L5.63604 5.63604M18.364 5.63609L17.6569 6.3432M6.3432 17.6569L5.63609 18.364M16 12C16 14.2091 14.2091 16 12 16C9.79086 16 8 14.2091 8 12C8 9.79086 9.79086 8 12 8C14.2091 8 16 9.79086 16 12Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-        </svg>
-      </transition>
+      <nui-moon class="w-6 h-6 absolute" :class="$theme.value === 'dark' ? 'show' : 'hide'"/>
+      <nui-sun class="w-6 h-6 absolute" :class="$theme.value === 'light' ? 'show' : 'hide'"/>
     </span>
     <transition name="from-bottom-to-bottom" mode="out-in">
       <span v-if="$theme.value === 'dark'" key="dark" class="inline-block font-medium mr-1">Dark</span>
@@ -20,7 +15,14 @@
 </template>
 
 <script>
+import nuiSun from '@/components/svg/Sun'
+import nuiMoon from '@/components/svg/Moon'
+
 export default {
+  components: {
+    nuiSun,
+    nuiMoon
+  },
   props: [],
   data () {
     return {
@@ -36,43 +38,77 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.sunset-enter-active {
-  opacity: 1;
-  transition: transform 300ms cubic-bezier(0.4, 0, 0.2, 1);
+// .sunset-enter-active {
+//   opacity: 1;
+//   transition: transform 300ms cubic-bezier(0.4, 0, 0.2, 1);
+// }
+
+// .sunset-leave-active {
+//   opacity: 1;
+//   transition: transform 300ms cubic-bezier(0.4, 0, 0.2, 1);
+// }
+
+// .sunset-enter {
+//   // opacity: 0;
+//   transform: translate3d(-100%, 10px, 0) rotate(-90deg) scale3d(0.5, 0.5, 0.5);
+// }
+
+// .sunset-leave-active {
+//   // opacity: 0;
+//   transform:  translate3d(100%, 10px, 0) rotate(180deg) scale3d(0.5, 0.5, 0.5);
+// }
+
+.show {
+  animation: show-icon 300ms forwards;
 }
 
-.sunset-leave-active {
-  opacity: 1;
-  transition: transform 300ms cubic-bezier(0.4, 0, 0.2, 1);
+.hide {
+  animation: hide-icon 300ms forwards;
 }
 
-.sunset-enter {
-  // opacity: 0;
-  transform: translate3d(-100%, 10px, 0) rotate(-90deg) scale3d(0.5, 0.5, 0.5);
+@keyframes show-icon {
+  from {
+    opacity: 0;
+    transform: scaleX(0);
+    // transform: translate3d(-100%, 10px, 0) rotate(-180deg) scale3d(0.5, 0.5, 0.5);
+  }
+  to {
+    opacity: 1;
+    transform: scaleX(1);
+    // transform: translate3d(0, 0, 0) rotate(0) scale3d(1, 1, 1);
+  }
 }
 
-.sunset-leave-active {
-  // opacity: 0;
-  transform:  translate3d(100%, 10px, 0) rotate(180deg) scale3d(0.5, 0.5, 0.5);
+@keyframes hide-icon {
+  from {
+    opacity: 1;
+    transform: scaleX(1);
+    // transform: translate3d(0, 0, 0) rotate(0) scale3d(1, 1, 1);
+  }
+  to {
+    opacity: 0;
+    transform: scaleX(0);
+    // transform:  translate3d(100%, 10px, 0) rotate(180deg) scale3d(0.5, 0.5, 0.5);
+  }
 }
 
 .from-bottom-to-bottom-enter-active {
   opacity: 1;
-  transition: opacity 150ms, transform 150ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: opacity 100ms, transform 100ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .from-bottom-to-bottom-leave-active {
   opacity: 1;
-  transition: opacity 150ms,  transform 150ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: opacity 100ms,  transform 100ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .from-bottom-to-bottom-enter {
   opacity: 0;
-  transform: translate3d(0, 5px, 0);
+  transform: translate3d(0, 3px, 0) scaleY(0);
 }
 
 .from-bottom-to-bottom-leave-active {
   opacity: 0;
-  transform:  translate3d(0, 5px, 0);
+  transform:  translate3d(0, 3px, 0) scaleY(0);
 }
 </style>

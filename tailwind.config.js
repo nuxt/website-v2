@@ -72,7 +72,7 @@ module.exports = {
     borderRadius: ['responsive', 'after'],
     borderColor: ['responsive', 'hover', 'focus', 'dark', 'light', 'after', 'light:after', 'dark:after'],
     backgroundColor: ['responsive', 'hover', 'focus', 'dark', 'light', 'dark:hover', 'light:hover'],
-    textColor: ['responsive', 'hover', 'focus', 'group-hover', 'dark', 'light']
+    textColor: ['responsive', 'hover', 'focus', 'group-hover', 'dark', 'light', 'dark:hover', 'light:hover']
   },
   corePlugins: {
     container: false

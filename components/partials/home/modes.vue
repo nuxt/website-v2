@@ -4,7 +4,7 @@
       <h1 class="text-3xl uppercase text-center pt-10 font-medium" v-html="wordings.modes.attrs.title" />
       <div class="flex flex-wrap">
         <div class="lg:w-1/2 p-4 lg:p-8">
-          <i-fire class="text-nuxt-green mx-auto my-8 w-32"/>
+          <i-fire class="text-nuxt-green dark:text-nuxt-lightgreen mx-auto my-8 w-32"/>
           <h4 class="text-center uppercase text-2xl pt-8 pb-4 font-medium">
             {{ wordings.modes_server_side_rendering.attrs.content_title }}
           </h4>

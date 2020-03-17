@@ -8,7 +8,7 @@ export default function (ctx, inject) {
   const theme = Vue.observable({
     value: (process.client ? window.__nuxt_theme : '<%= options.value %>')
   })
-  const setTheme = (value, persist = true) => {
+  const setTheme = (value, { persist = true } = {}) => {
     theme.value = value
     if (process.client) {
       // update cookie
@@ -36,7 +36,7 @@ export default function (ctx, inject) {
   // Reads from color-scheme
   if (process.client && window.matchMedia) {
     const darkQuery = window.matchMedia('(prefers-color-scheme: dark)')
-    darkQuery.addListener((e) => setTheme(e.matches ? 'dark' : 'light', false))
+    darkQuery.addListener((e) => setTheme(e.matches ? 'dark' : 'light', { persist: false }))
   }
 
   if (process.static && process.client) {

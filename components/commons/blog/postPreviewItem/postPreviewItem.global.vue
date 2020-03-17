@@ -1,5 +1,5 @@
 <template>
-  <div class="flex flex-col-reverse md:flex-row mb-8 bg-gray-100 hover:bg-gray-200 rounded py-4 px-6">
+  <div class="bg-light-surface dark:bg-dark-surface flex flex-col-reverse lg:flex-row mb-8 rounded py-4 px-6 hover:bg-gray-200 transition-colors duration-300 ease-linear">
     <div class="flex flex-col justify-between pr-4">
       <div class="">
         <div class="font-semibold text-xl mb-3">
@@ -9,7 +9,7 @@
           <p class="">{{ post.description }}</p>
         </div>
         <div class="flex flex-row justify-start mb-3">
-          <span v-for="(tag, id) in post.tags" :key="id" class="uppercase text-xs px-1 py-1 rounded-sm mr-2 bg-gray-300">{{ tag }}</span>
+          <span v-for="(tag, id) in post.tags" :key="id" class="uppercase text-xs px-1 py-1 rounded-sm mr-2 border">{{ tag }}</span>
         </div>
       </div>
       <div class="text-xs">
@@ -21,7 +21,7 @@
       </div>
     </div>
     <div
-      class="w-auto h-48 md:h-auto md:w-3/4 mb-4 md:mb-0 bg-cover bg-center"
+      class="w-auto h-48 lg:h-auto lg:w-3/4 mb-4 lg:mb-0 bg-cover bg-center"
       :style="{backgroundImage: `url(${post.imgUrl})` }"
     >
     </div>

@@ -1,11 +1,13 @@
 <template>
-  <div class="container mx-auto p-4">
-    <nui-button :to="{ name: 'blog' }" class="inline-flex items-center shadow-none hover:shadow-none" variant="gray">
-      <nuiSvgArrowLeft slot="icon" class="h-5 mr-1"/>
-      back to the blog list
-    </nui-button>
-    <blogPostItem :post="post" />
-    <blogPostNavigationLinks :post="post" />
+  <div class="bg-light-elevatedSurface dark:bg-dark-elevatedSurface">
+    <div class="container mx-auto p-4">
+      <nui-button :to="{ name: 'blog' }" class="inline-flex items-center shadow-none hover:shadow-none" variant="gray">
+        <nuiSvgArrowLeft slot="icon" class="h-5 mr-1"/>
+        back to the blog list
+      </nui-button>
+      <blogPostItem :post="post" />
+      <blogPostNavigationLinks :post="post" />
+    </div>
   </div>
 </template>
 

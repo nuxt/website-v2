@@ -16,7 +16,7 @@
           </h3>
           <ul :key="`list-${index}`" class="pb-8">
             <li v-for="link in group.links" :key="link.to" class="py-2">
-              <nuxt-link class="text-light-onSurfacePrimary dark:text-dark-onSurfacePrimary hover:text-nuxt-lightgreen dark:hover:text-nuxt-lightgreen transition-colors duration-300 ease-linear" :class="{'current-link': path === menu + link.to}" :to="menu + link.to" exact>
+              <nuxt-link class="text-light-onSurfacePrimary dark:text-dark-onSurfacePrimary hover:text-nuxt-lightgreen transition-colors duration-300 ease-linear" :class="{'current-link': path === menu + link.to}" :to="menu + link.to" exact>
                 {{ link.name }}
               </nuxt-link>
               <ul v-if="path === menu + link.to && link.contents" class="pl-2 py-1">

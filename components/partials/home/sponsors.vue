@@ -19,7 +19,7 @@
             target="_blank"
             rel="noopener sponsored"
           >
-            <img :src="`/img/sponsors/${currentTheme}/${sponsor.img}`" :alt="sponsor.name" class="inline-block" :class="sponsor.class">
+            <img :src="`/img/sponsors/${$theme.value}/${sponsor.img}`" :alt="sponsor.name" class="inline-block" :class="sponsor.class">
           </a>
         </div>
         <div class="text-center">
@@ -56,13 +56,8 @@ export default {
         ]
       },
       wordings: this.$store.state.homepage.sponsors,
-      buttonWording: this.$store.state.lang.homepage.sponsors.become_a_sponsor,
-      currentTheme: 'light'
+      buttonWording: this.$store.state.lang.homepage.sponsors.become_a_sponsor
     }
-  },
-  mounted () {
-    // TODO: bug when generate static: wrong theme is set when dark mode
-    this.currentTheme = this.$theme.value
   }
 }
 </script>

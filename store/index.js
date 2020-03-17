@@ -1,5 +1,4 @@
 export const state = () => ({
-  theme: 'light', // mixin comme i18n ?
   filled: false,
   docVersion: '',
   ghVersion: '',
@@ -39,9 +38,6 @@ export const mutations = {
   },
   setAdBlocked (state, value) {
     state.adBlocked = value
-  },
-  setTheme (state, value) {
-    state.theme = value
   },
   setFocusMode (state, value) {
     state.focusMode = value

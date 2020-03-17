@@ -6,7 +6,7 @@ const cookieOptions = <%= JSON.stringify(options.cookie.options, null, 2) %>
 
 export default function (ctx, inject) {
   const theme = Vue.observable({
-    value: (process.client ? window.__nuxt_theme : '<%= options.value %>')
+    value: (process.client && !process.static ? window.__nuxt_theme : '<%= options.value %>')
   })
   const setTheme = (value, { persist = true } = {}) => {
     theme.value = value
@@ -40,8 +40,8 @@ export default function (ctx, inject) {
   }
 
   if (process.static && process.client) {
-    // Static generated, read from cookie + update html attrs manually
-    document.documentElement.setAttribute('data-theme', theme.value)
+    // Static generated, refresh theme.value when app is mounted
+    window.onNuxtReady(() => theme.value = window.__nuxt_theme)
   }
 
   inject('theme', theme)

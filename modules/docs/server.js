@@ -23,6 +23,7 @@ class DocsServer {
 
     this.releases = []
     this.docsFiles = {}
+    this.blogPostFiles = []
     this.menu = {}
     this.langs = {}
     this.homepage = {}
@@ -123,8 +124,16 @@ class DocsServer {
     // Construct the homepage object
     await this.getHomepage()
 
+    // Get all blog posts
+    await this.getBlogPosts()
+
     // Get all docs files
     await this.getDocFiles()
+  }
+
+  // Get all blog posts
+  async getBlogPosts () {
+    this.blogPostFiles = await this.glob('*/blog/*.md')
   }
 
   // Get all docs files
@@ -148,10 +157,39 @@ class DocsServer {
     this.docsFiles[path] = {
       attrs: file.attributes,
       body,
-      readtime: readingTime(body)
+      readtime: readingTime(body),
+      // ...this.getNavigationLinks(path)
     }
 
     return this.docsFiles[path]
+  }
+
+  // get prev and next links
+  getNavigationLinks (path) {
+    let links = {
+      prevLink: null,
+      nextLink: null
+    }
+    const lang = path.split('/')[0]
+    const array = this.blogPostFiles
+    const len = array.length
+    const i = array.indexOf(path)
+    const previous = i !== -1 ? array[(i+len-1)%len] : ''
+    const next = i !== -1 ? array[(i+1)%len] : ''
+    if (i !== -1) {
+      if (previous.split('/')[0] === lang) {
+        const prevPath = array[(i+len-1)%len]
+        console.log('prevPath', prevPath)
+        let post = this.docsFiles[prevPath]
+        console.log('post',post)
+        links.prevLink = {
+          title: this.docsFiles[prevPath].title,
+          slug: this.docsFiles[prevPath].slug,
+        }
+      }
+      next.split('/')[0] === lang ? links.nextLink = array[(i+1)%len] : null
+    }
+    return links
   }
 
   // Get menu files and create the doc menu

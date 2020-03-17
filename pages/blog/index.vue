@@ -12,7 +12,7 @@
       <i-design class="w-2/3 mx-auto lg:mx-0 lg:w-5/12 lg:-mt-8"/>
     </div>
     <section class="">
-      <blogPostPreviewItem v-for="post in posts" :key="post.slug" :post="post" />
+      <blogPostPreviewItem v-for="(post, index) in posts" :key="index" :post="post" />
     </section>
   </nui-container>
 </template>

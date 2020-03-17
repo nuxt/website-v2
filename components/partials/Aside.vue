@@ -1,5 +1,6 @@
 <template>
 <<<<<<< HEAD
+<<<<<<< HEAD
   <aside class="font-medium">
 =======
   <aside class="aside font-medium fixed hidden lg:block overflow-y-scroll bottom-0 pt-8 pr-4">
@@ -19,6 +20,35 @@
               <a :href="menu + link.to + content.to" @click.prevent="scrollTo(content.to)" class="text-gray-600" :class="{'text-nuxt-gray': current === index}">
                 {{ content.name }}
               </a>
+=======
+  <aside :class="{ 'opacity-25': $store.state.focusMode }" class="opacity-transition block bg-gray-100 mt-8 -mx-4 lg:bg-transparent lg:mt-0 lg:mx-0 lg:inset-0 z-90 lg:mb-0 lg:static lg:h-auto lg:overflow-y-visible lg:pt-0 lg:w-1/4 lg:block">
+    <div class="h-full overflow-y-auto scrolling-touch text-center lg:text-left lg:h-auto lg:block lg:relative lg:sticky lg:top-24">
+      <a v-if="breadcrumb" class="block text-left p-4 lg:hidden" href="#nav" @click.prevent="showNav = !showNav">
+        <nui-times v-if="showNav" class="float-right mt-1 mr-1 h-5" />
+        <nui-caret-down v-else class="float-right mt-2 mr-1" />
+        <span class="uppercase text-gray-500 ml-1">{{ breadcrumb.group }} :</span> {{ breadcrumb.title }}
+      </a>
+      <nav class="pt-8 lg:overflow-y-auto lg:block lg:pl-0 lg:pr-8 sticky?lg:h-(screen-24)" :class="{ hidden: !showNav }">
+        <p class="uppercase font-bold pb-6">
+          {{ $store.state.lang.text.version }} <span class="text-nuxt-lightgreen">{{ $store.state.docVersion }}</span>
+        </p>
+        <template v-for="(group, index) in list">
+          <h3 :key="`title-${index}`" class="uppercase font-medium text-light-onSurfaceSecondary dark:text-dark-onSurfaceSecondary pb-2 transition-colors duration-300 ease-linear">
+            {{ group.title }}
+          </h3>
+          <ul :key="`list-${index}`" class="pb-8">
+            <li v-for="link in group.links" :key="link.to" class="py-2">
+              <nuxt-link class="text-light-onSurfacePrimary dark:text-dark-onSurfacePrimary hover:text-nuxt-lightgreen transition-colors duration-300 ease-linear" :class="{'current-link': path === menu + link.to}" :to="menu + link.to" exact>
+                {{ link.name }}
+              </nuxt-link>
+              <ul v-if="path === menu + link.to && link.contents" class="pl-2 py-1">
+                <li v-for="(content, i) in link.contents" :key="content.to" class="py-1 text-sm">
+                  <a :href="menu + link.to + content.to" class="text-light-onSurfaceSecondary dark:text-dark-onSurfaceSecondary transition-colors duration-300 ease-linear" :class="{'current-link': current === i}" @click.prevent="scrollTo(content.to)">
+                    {{ content.name }}
+                  </a>
+                </li>
+              </ul>
+>>>>>>> 1b87907b (feat: dark mode (#303))
             </li>
           </ul>
         </li>
@@ -121,3 +151,9 @@ export default {
   }
 }
 </script>
+
+<style lang="scss" scoped>
+.current-link {
+  color: theme('colors.primary.base');
+}
+</style>

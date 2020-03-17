@@ -11,6 +11,7 @@ module.exports = {
 >>>>>>> 925b7850 (navbar)
     ],
     link: [
+<<<<<<< HEAD
       { rel: 'icon', type: 'image/x-icon', href: 'favicon.ico' }
     ]
   },
@@ -26,6 +27,25 @@ module.exports = {
     '~/assets/scss/main.scss'
   ],
   modules: [
+=======
+      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
+      { rel: 'preconnect', href: 'https://www.google-analytics.com' }
+    ],
+    bodyAttrs: {
+      class: ['font-sans font-medium bg-light-surface dark:bg-dark-surface text-light-onSurfacePrimary dark:text-dark-onSurfacePrimary transition-colors duration-300 ease-linear ']
+    }
+  },
+  buildModules: [
+    '@nuxtjs/eslint-module',
+    ['~/modules/docs/', { port: 3001 }],
+    '~/modules/crawler/',
+    '~/modules/static/',
+    '~/modules/components/',
+    '~/modules/theme/',
+    // https://github.com/nuxt-community/netlify-files-module
+    '@nuxtjs/netlify-files',
+    // https://github.com/nuxt-community/style-resources-module
+>>>>>>> 1b87907b (feat: dark mode (#303))
     '@nuxtjs/style-resources',
 <<<<<<< HEAD
     'nuxt-svg-loader'
@@ -127,9 +147,14 @@ module.exports = {
 =======
     interval: 100
   },
+<<<<<<< HEAD
   manifest: {
     lang: process.env.NUXT_LOCALE || 'en'
 >>>>>>> dd0be05d (feat(pwa): Add PWA mode)
+=======
+  theme: {
+    value: 'light'
+>>>>>>> 1b87907b (feat: dark mode (#303))
   }
 >>>>>>> f4d82e28 (guide content from component)
 }

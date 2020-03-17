@@ -79,16 +79,6 @@ module.exports = {
   },
   plugins: [
     plugin(function ({ addVariant, theme, e, prefix, config }) {
-      // addVariant('dark', ({ modifySelectors, separator }) => {
-      //   modifySelectors(({ className }) => {
-      //     return `[data-theme='dark'] .${e(`dark${separator}${className}`)}`
-      //   })
-      // })
-      // addVariant('after', ({ modifySelectors, separator }) => {
-      //   modifySelectors(({ className }) => {
-      //     return `.${e(`after${separator}${className}`)}::after`
-      //   })
-      // })
       const themeVariants = ['light', 'dark']
       themeVariants.forEach((mode) => {
         addVariant(mode, ({ modifySelectors, separator }) => {

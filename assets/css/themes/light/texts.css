@@ -15,9 +15,9 @@ body {
     }
     & a {
       @apply text-nuxt-lightgreen;
-      &:hover {
+      /*&:hover {
         @apply underline;
-      }
+      }*/
       & code {
         @apply text-nuxt-lightgreen;
         &:hover {
@@ -78,6 +78,7 @@ body {
     }
   }
 }
+
 @screen md {
   body article .Promote {
     @apply flex-row items-center;

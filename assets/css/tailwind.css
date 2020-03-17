@@ -1,21 +1,18 @@
-@import url('https://fonts.googleapis.com/css?family=Quicksand:300,400,500,700');
+@import url('https://fonts.googleapis.com/css?family=Quicksand:400,500,600,700&display=swap');
 
 /* purgecss start ignore */
 @import 'tailwindcss/base';
 /* purgecss end ignore */
+
 @import 'tailwindcss/components';
 
 /* purgecss start ignore */
 @import './themes/light.css';
 /* purgecss end ignore */
+
 /* purgecss start ignore */
 @import '@snackbar/core/dist/snackbar.css';
 /* purgecss end ignore */
-
-/* @import './themes/dark.scss'; */
-/* @import 'highlight.js/styles/nord.css'; */
-/* @import 'highlight.js/styles/tomorrow-night-blue.css'; */
-/* @import 'highlight.js/styles/ocean.css'; */
 
 @import 'tailwindcss/utilities';
 
@@ -28,3 +25,46 @@
   }
 }
 /* purgecss end ignore */
+
+.empty-after:after {
+  content: '';
+}
+
+.container-fluid {
+  max-width: theme('screens.xl');
+  margin: auto;
+}
+
+.container{
+  width: 100%;
+}
+
+/*@media (min-width: 320px){
+  .container{
+    max-width: 320px;
+  }
+}*/
+
+@media (min-width: 640px){
+  .container{
+    max-width: 640px;
+  }
+}
+
+@media (min-width: 768px){
+  .container{
+    max-width: 768px;
+  }
+}
+
+@media (min-width: 1024px){
+  .container{
+    max-width: 1024px;
+  }
+}
+
+@media (min-width: 1280px){
+  .container{
+    max-width: 1280px;
+  }
+}

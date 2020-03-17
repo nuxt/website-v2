@@ -1,36 +1,38 @@
 <template>
-  <nui-container class="pt-16">
-    <div class="flex flex-wrap justify-between mb-8">
-      <div class="lg:w-6/12 lg:text-left text-center p-4 sm:p-0">
-        <h1 class="text-3xl xl:text-4xl text-nuxt-gray font-medium leading-normal mb-6 lg:pt-4">
-          NUXT<span class="text-nuxt-lightgreen">JS</span> Themes<br>
-        </h1>
-        <h3 class="xl:text-lg text-gray-600 font-medium leading-relaxed mb-6">
-          With the themes below built by our partners from Creative Tim and Theme Forest you can see how a real world application is built, with Nuxt.js stack behind.
-        </h3>
+  <div class="bg-light-elevatedSurface dark:bg-dark-elevatedSurface shadow-nuxt transition-colors duration-300 ease-linear">
+    <div class="container mx-auto px-4 pt-16">
+      <div class="flex flex-wrap justify-between mb-8">
+        <div class="lg:w-6/12 lg:text-left text-center p-4 sm:p-0">
+          <h1 class="text-3xl xl:text-4xl text-light-onSurfacePrimary dark:text-dark-onSurfacePrimary font-medium leading-normal mb-6 lg:pt-4">
+            NUXT<span class="text-primary-base">JS</span> Themes<br>
+          </h1>
+          <h3 class="xl:text-lg text-light-onSurfaceSecondary dark:text-dark-onSurfaceSecondary font-medium leading-relaxed mb-6">
+            With the themes below built by our partners from Creative Tim and Theme Forest you can see how a real world application is built, with Nuxt.js stack behind.
+          </h3>
+        </div>
+        <i-themes class="w-2/3 mx-auto lg:mx-0 lg:w-5/12 lg:-mt-8 text-light-elevatedSurface dark:text-dark-elevatedSurface"/>
       </div>
-      <i-themes class="w-2/3 mx-auto lg:mx-0 lg:w-5/12 lg:-mt-8"/>
-    </div>
-    <section class="flex flex-wrap items-stretch -mx-4">
-      <div v-for="theme in themes" :key="theme.title" class="w-full p-4">
-        <div class="block sm:flex w-full h-full items-start bg-gray-100 hover:bg-gray-200 rounded">
-          <img :src="'/themes/' + theme.img + '.jpg'" :srcset="'/themes/' + theme.img + '-2x.jpg 2x'" :alt="theme.title" class="block w-full sm:w-auto sm:h-full rounded">
-          <div class="w-full p-6">
-            <h4 class="block w-full font-medium text-xl pb-2">
-              {{ theme.title }}
-              <!-- <span class="float-right text-nuxt-lightgreen">{{ theme.price }}</span> -->
-            </h4>
-            <p class="mb-3 text-gray-600">{{ theme.description }}</p>
-            <p v-if="theme.discount" class="text-sm italic text-nuxt-lightgreen" v-html="theme.discount" />
-            <nui-button :href="theme.link" rel="noopener sponsored" target="_blank" class="sm:mr-4 p-3 mt-3 text-sm text-left">
-              <!-- <nui-svg-shopping slot="icon" class="h-4 -mb-1 mr-1" /> -->
-              GET IT for {{ theme.price }}
-            </nui-button>
+      <section class="flex flex-wrap items-stretch -mx-4">
+        <div v-for="theme in themes" :key="theme.title" class="w-full p-4">
+          <div class="block sm:flex w-full h-full items-start bg-light-surface dark:bg-dark-surface rounded transition-colors duration-300 ease-linear">
+            <img :src="'/themes/' + theme.img + '.jpg'" :srcset="'/themes/' + theme.img + '-2x.jpg 2x'" :alt="theme.title" class="block w-full sm:w-auto sm:h-full rounded">
+            <div class="w-full p-6">
+              <h4 class="block w-full font-medium text-xl pb-2 text-light-onSurfacePrimary dark:text-dark-onSurfacePrimary transition-colors duration-300 ease-linear">
+                {{ theme.title }}
+                <!-- <span class="float-right text-nuxt-lightgreen">{{ theme.price }}</span> -->
+              </h4>
+              <p class="mb-3 text-gray-600">{{ theme.description }}</p>
+              <p v-if="theme.discount" class="text-sm italic text-nuxt-lightgreen" v-html="theme.discount" />
+              <nui-button :href="theme.link" rel="noopener sponsored" target="_blank" class="sm:mr-4 p-3 mt-3 text-sm text-left">
+                <!-- <nui-svg-shopping slot="icon" class="h-4 -mb-1 mr-1" /> -->
+                GET IT for {{ theme.price }}
+              </nui-button>
+            </div>
           </div>
         </div>
-      </div>
-    </section>
-  </nui-container>
+      </section>
+    </div>
+  </div>
 </template>
 
 <script>

@@ -1,6 +1,6 @@
 <template>
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600">
-    <path fill="#fff" d="M0 0h800v600H0z"/>
+    <path fill="currentColor" d="M0 0h800v600H0z"/>
     <linearGradient id="a" gradientUnits="userSpaceOnUse" x1="496.5" y1="-872.3665" x2="496.5" y2="-683.3665" gradientTransform="matrix(1 0 0 -1 0 -505.3665)">
       <stop offset="0" stop-color="#fff" stop-opacity="0"/>
       <stop offset=".3493" stop-color="#fafafa" stop-opacity=".3493"/>

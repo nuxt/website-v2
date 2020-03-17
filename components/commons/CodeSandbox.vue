@@ -1,6 +1,6 @@
 <template>
-  <div class="codesandbox">
-    <iframe v-if="isIntersecting && src" :src="src" title="CodeSandbox editor" sandbox="allow-modals allow-forms allow-popups allow-scripts allow-same-origin"/>
+  <div class="codesandbox w-full mb-6 mx-auto bg-black text-white text-3xl text-center flex items-center justify-center overflow-hidden rounded">
+    <iframe v-if="isIntersecting && src" :src="src" title="CodeSandbox editor" sandbox="allow-modals allow-forms allow-popups allow-scripts allow-same-origin" class="w-full overflow-hidden" />
     <span v-else>Loading Nuxt Sandbox...</span>
   </div>
 </template>
@@ -19,21 +19,9 @@ export default {
 </script>
 
 <style scoped>
-.codesandbox {
-  margin: 0 auto;
-  background-color: #212527;
-  color: white;
-  font-size: 40px;
-  line-height: 700px;
-  text-align: center;
-}
 .codesandbox,
 .codesandbox iframe {
   max-width: 1400px;
-  border: 0;
-  border-radius: 4px;
-  overflow: hidden;
-  width: 100%;
   height: 700px;
 }
 </style>

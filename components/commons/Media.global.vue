@@ -1,5 +1,5 @@
 <template>
-  <div class="nui-media">
+  <div class="nui-media h-0 w-full overflow-hidden relative m-0 rounded bg-dark-surface">
     <iframe
       v-if="isIntersecting && src"
       :src="src"
@@ -30,13 +30,7 @@ export default {
 
 <style lang="scss" scoped>
 .nui-media {
-  width: 100%;
-  height: 0;
   padding-bottom: 56.25%;
-  overflow: hidden;
-  position: relative;
-  margin: 0;
-  background: black;
   iframe,
   embed,
   object {

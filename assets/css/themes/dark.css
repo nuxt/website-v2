@@ -1,17 +1,21 @@
 body[data-theme='dark'] {
-  .nui-select {
+  /*@apply text-dark-text bg-dark-surface;*/
+  & .nui-select {
     @apply text-white bg-gray-800;
   }
-  .header {
+  /*& .elevated-block {
+    @apply .bg-dark-elevatedSurfaceColor;
+  }*/
+  /*& .header {
     @apply bg-nuxt-gray;
-    &_nav {
+    & _nav {
       @apply bg-nuxt-gray;
-      &_link {
+      & _link {
         @apply text-white;
       }
     }
-  }
-  .footer {
-    @apply bg-nuxt-gray;
-  }
+  }*/
+  /*& .footer {
+    @apply bg-surfaceColor;
+  }*/
 }

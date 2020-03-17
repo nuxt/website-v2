@@ -1,6 +1,6 @@
 <template>
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600">
-    <path fill="#fff" d="M0 0h800v600H0z"/>
+    <path fill="currentColor" d="M0 0h800v600H0z"/>
     <radialGradient id="a" cx="-4141.0288" cy="739.7511" r="172.8223" gradientTransform="matrix(.4478 0 0 -.4741 2418.3528 514.716)" gradientUnits="userSpaceOnUse">
       <stop offset="0" stop-color="#e0e0e0"/>
       <stop offset=".5864" stop-color="#f5f5f5" stop-opacity=".4136"/>

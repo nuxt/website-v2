@@ -57,7 +57,7 @@
         <stop offset=".87" stop-color="#f5f5f5" stop-opacity="0"/>
       </radialGradient>
     </defs>
-    <path fill="#fff" d="M0 0h800v600H0z"/>
+    <path fill="currentColor" d="M0 0h800v600H0z"/>
     <path fill="url(#a)" d="M0 0h800v600H0z"/>
     <circle cx="208.5" cy="188.5" r="41.5" fill="#cdcdcd"/>
     <path d="M250 188.5a41.51 41.51 0 0 1-62 36.07 294.45 294.45 0 0 1 60.46-47.45A41.26 41.26 0 0 1 250 188.5z" fill="#c8c8c8"/>

@@ -1,30 +1,35 @@
 <template>
-  <nui-container class="py-24 md:mb-8">
-    <section>
-      <h1 class="text-3xl uppercase text-center pb-8" v-html="$store.state.homepage.companies.attrs.title" />
-      <div class="flex flex-col lg:flex-row items-center justify-between">
-        <div v-for="(company, i) in langCompanies.slice(0, 5)" :key="i" class="p-4 lg:p-8 text-center">
-          <a :href="company.url" target="_blank" rel="noopener nofollow" class="company">
-            <img :src="'/img/companies/' + company.img" :alt="company.name" :class="company.class">
-          </a>
+  <div class="bg-light-elevatedSurface dark:bg-dark-elevatedSurface shadow-nuxt">
+    <div class="container mx-auto px-4 py-24 md:mb-8">
+      <section>
+        <h1 class="text-3xl font-medium uppercase text-center pb-8" v-html="$store.state.homepage.companies.attrs.title" />
+        <div class="flex flex-col lg:flex-row items-center justify-between">
+          <div v-for="(company, i) in langCompanies.slice(0, 5)" :key="i" class="p-4 lg:p-8 text-center">
+            <a :href="company.url" target="_blank" rel="noopener nofollow" class="company relative block">
+              <img :src="'/img/companies/original/' + company.img" :alt="company.name" :class="[company.class, $theme.value === 'dark' ? 'absolute top-0 left-0 opacity-0' : '']" class="original">
+              <img v-if="$theme.value === 'dark'" :src="'/img/companies/preview/' + company.img" :alt="company.name" :class="company.class" class="preview">
+            </a>
+          </div>
         </div>
-      </div>
-      <div class="flex flex-col lg:flex-row items-center justify-between">
-        <div v-for="(company, i) in langCompanies.slice(5, 10)" :key="i" class="p-4 lg:p-8 text-center">
-          <a :href="company.url" target="_blank" rel="noopener nofollow" class="company">
-            <img :src="'/img/companies/' + company.img" :alt="company.name" :class="company.class">
-          </a>
+        <div class="flex flex-col lg:flex-row items-center justify-between">
+          <div v-for="(company, i) in langCompanies.slice(5, 10)" :key="i" class="p-4 lg:p-8 text-center">
+            <a :href="company.url" target="_blank" rel="noopener nofollow" class="company relative block">
+              <img :src="'/img/companies/original/' + company.img" :alt="company.name" :class="[company.class, $theme.value === 'dark' ? 'absolute top-0 left-0 opacity-0' : '']" class="original">
+              <img v-if="$theme.value === 'dark'" :src="'/img/companies/preview/' + company.img" :alt="company.name" :class="company.class" class="preview">
+            </a>
+          </div>
         </div>
-      </div>
-      <div v-if="langCompanies.length > 10" class="hidden lg:flex flex-col lg:flex-row items-center justify-between">
-        <div v-for="(company, i) in langCompanies.slice(10, 15)" :key="i" class="p-8 text-center">
-          <a :href="company.url" target="_blank" rel="noopener nofollow" class="company">
-            <img :src="'/img/companies/' + company.img" :alt="company.name" :class="company.class">
-          </a>
+        <div v-if="langCompanies.length > 10" class="hidden lg:flex flex-col lg:flex-row items-center justify-between">
+          <div v-for="(company, i) in langCompanies.slice(10, 15)" :key="i" class="p-8 text-center">
+            <a :href="company.url" target="_blank" rel="noopener nofollow" class="company relative block">
+              <img :src="'/img/companies/original/' + company.img" :alt="company.name" :class="[company.class, $theme.value === 'dark' ? 'absolute top-0 left-0 opacity-0' : '']" class="original">
+              <img v-if="$theme.value === 'dark'" :src="'/img/companies/preview/' + company.img" :alt="company.name" :class="company.class" class="preview">
+            </a>
+          </div>
         </div>
-      </div>
-    </section>
-  </nui-container>
+      </section>
+    </div>
+  </div>
 </template>
 
 <script>
@@ -106,17 +111,25 @@ export default {
 }
 </script>
 
-<style>
+<style lang="scss" scoped>
 .company {
-  & img {
+  .preview {
     opacity: 0.5;
     filter: grayscale(100%);
-    transition: all 0.2s ease;
+    transition: all 250ms ease;
+  }
+  .original {
+    opacity: 0.5;
+    filter: grayscale(100%);
+    transition: all 250ms ease;
   }
   &:hover {
-    & img {
-      opacity: 1;
+    .preview {
+      opacity: 0;
+    }
+    .original {
       filter: grayscale(0%);
+      opacity: 1;
     }
   }
 }

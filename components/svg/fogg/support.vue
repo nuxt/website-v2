@@ -67,10 +67,10 @@
     <path fill="#fafafa" d="M719.618 219.95v59.97L382.819 56.84l.559-.84h88.7zM719.618 302.42L346.818 56h-36.26l409.06 270.39zM446.178 429h-54.37L79.618 222.45v-35.97zM358.469 429h-36.32L79.618 268.94v-23.97z"/>
     <path fill="#fff" d="M279.118 50.301h21v384.398h-21zM499.118 50.301h21v384.398h-21z"/>
     <radialGradient id="f" cx="492.2429" cy="89.1889" r="238.4447" gradientTransform="matrix(1.339 0 0 1.2858 -261.1463 257.0781)" gradientUnits="userSpaceOnUse">
-      <stop offset=".0031" stop-color="#fff" stop-opacity="0"/>
-      <stop offset=".8167" stop-color="#fff" stop-opacity=".7344"/>
-      <stop offset=".9506" stop-color="#fff" stop-opacity=".8553"/>
-      <stop offset="1" stop-color="#fff"/>
+      <stop offset=".0031" stop-color="currentColor" stop-opacity="0"/>
+      <stop offset=".8167" stop-color="currentColor" stop-opacity=".7344"/>
+      <stop offset=".9506" stop-color="currentColor" stop-opacity=".8553"/>
+      <stop offset="1" stop-color="currentColor"/>
     </radialGradient>
     <path fill="url(#f)" d="M0-.25h800v600H0z"/>
     <linearGradient id="g" gradientUnits="userSpaceOnUse" x1="396.625" y1="1680.3665" x2="396.625" y2="1660.3665" gradientTransform="translate(0 -1179.3665)">

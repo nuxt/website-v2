@@ -1,12 +1,12 @@
 <template>
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600">
-    <path fill="#fff" d="M0 0h800v600H0z"/>
+    <path fill="currentColor" d="M0 0h800v600H0z"/>
     <radialGradient id="a" cx="844.5729" cy="-2102.498" r="264.3628" gradientTransform="matrix(1.339 0 0 1.0196 -730.8832 2521.2075)" gradientUnits="userSpaceOnUse">
       <stop offset="0" stop-color="#e0e0e0"/>
-      <stop offset="1" stop-color="#fff"/>
+      <stop offset="1" stop-color="currentColor"/>
     </radialGradient>
     <path fill="url(#a)" d="M0 105h800v495H0z"/>
-    <path fill="#fff" d="M0 429h800v171H0z"/>
+    <path fill="currentColor" d="M0 429h800v171H0z"/>
     <linearGradient id="b" gradientUnits="userSpaceOnUse" x1="424" y1="-1951" x2="424" y2="-1970" gradientTransform="translate(0 2426)">
       <stop offset="0" stop-color="#fff"/>
       <stop offset="1" stop-color="#e0e0e0"/>

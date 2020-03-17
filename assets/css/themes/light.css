@@ -1,18 +1,21 @@
 /* purgecss start ignore */
-@import './light/headings.css';
-@import './light/texts.css';
-@import './light/lists.css';
-@import './light/highlight.css';
-@import './light/algolia.css';
+/*@import './light/headings.css';*/
+/*@import './light/texts.css';*/
+/*@import './light/lists.css';*/
+/*@import './light/highlight.css';*/
+/*@import './light/algolia.css';*/
 
 body {
-  @apply font-sans font-medium text-nuxt-gray;
-  & .nui-select {
+  /*@apply font-sans font-medium text-light-text bg-light-surface;*/
+  /*& .nui-select {
     @apply text-nuxt-gray bg-gray-200;
+  }*/
+  /*& .elevated-block {
+    @apply .bg-light-elevatedSurfaceColor;
   }
   & .footer {
-    @apply bg-white;
-  }
+    @apply bg-surfaceColor;
+  }*/
   & .nuxt-link-exact-active {
     @apply text-nuxt-lightgreen;
   }

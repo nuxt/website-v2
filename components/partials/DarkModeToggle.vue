@@ -1,5 +1,5 @@
 <template>
-  <button class="relative overflow-hidden px-4 flex items-center bg-gray-200 dark:bg-dark-surface dark:text-dark-onSurfaceSecondary rounded-full h-10 outline-none text-light-onSurfacePrimary dark:text-dark-onSurfacePrimary transition-colors duration-300 ease-linear" @click="setCurrentTheme">
+  <button class="relative overflow-hidden px-4 flex bg-gray-200 dark:bg-dark-surface dark:text-dark-onSurfaceSecondary rounded-full h-10 outline-none text-light-onSurfacePrimary dark:text-dark-onSurfacePrimary transition-colors duration-300 ease-linear" @click="setCurrentTheme">
     <!-- bug with transition on svg elements -->
     <!-- https://github.com/vuejs/vue/blob/59868bbe92059c690b6a146aaf1504925455384f/src/transition/transition.js#L375 -->
     <!-- https://github.com/vuejs/vue/issues/2396 -->
@@ -69,12 +69,12 @@ export default {
 @keyframes show-icon {
   from {
     opacity: 0;
-    transform: scaleY(0);
+    transform: scaleX(0);
     // transform: translate3d(-100%, 10px, 0) rotate(-180deg) scale3d(0.5, 0.5, 0.5);
   }
   to {
     opacity: 1;
-    transform: scaleY(1);
+    transform: scaleX(1);
     // transform: translate3d(0, 0, 0) rotate(0) scale3d(1, 1, 1);
   }
 }
@@ -82,12 +82,12 @@ export default {
 @keyframes hide-icon {
   from {
     opacity: 1;
-    transform: scaleY(1);
+    transform: scaleX(1);
     // transform: translate3d(0, 0, 0) rotate(0) scale3d(1, 1, 1);
   }
   to {
     opacity: 0;
-    transform: scaleY(0);
+    transform: scaleX(0);
     // transform:  translate3d(100%, 10px, 0) rotate(180deg) scale3d(0.5, 0.5, 0.5);
   }
 }

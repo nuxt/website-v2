@@ -70,7 +70,7 @@
             target="_blank"
             rel="noopener sponsored"
           >
-            <img :src="`/img/sponsors/${currentTheme}/${sponsor.img}`" :alt="sponsor.name" :title="sponsor.name" class="inline-block" :class="sponsor.class">
+            <img :src="`/img/sponsors/${$theme.value}/${sponsor.img}`" :alt="sponsor.name" :title="sponsor.name" class="inline-block" :class="sponsor.class">
           </a>
         </div>
         <div class="text-center">
@@ -145,18 +145,13 @@ export default {
           address: 'MSoJB2AUZMss82HLk7fwggZhJDKxQ1HZAh',
           img: '/img/wallet/ltc.png'
         }
-      },
-      currentTheme: 'light'
+      }
     }
   },
   computed: {
     currentOnetime () {
       return this.onetime.current ? this.onetime[this.onetime.current] : null
     }
-  },
-  mounted () {
-    // TODO: bug when generate static: wrong theme is set when dark mode
-    this.currentTheme = this.$theme.value
   },
   head: {
     title: 'Sponsor NuxtJS Development',

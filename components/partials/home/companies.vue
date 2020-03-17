@@ -6,24 +6,24 @@
         <div class="flex flex-col lg:flex-row items-center justify-between">
           <div v-for="(company, i) in langCompanies.slice(0, 5)" :key="i" class="p-4 lg:p-8 text-center">
             <a :href="company.url" target="_blank" rel="noopener nofollow" class="company relative block">
-              <img :src="'/img/companies/original/' + company.img" :alt="company.name" :class="[company.class]" class="original">
-              <img :src="'/img/companies/preview/' + company.img" :alt="company.name" :class="company.class" class="preview">
+              <img :src="'/img/companies/original/' + company.img" :alt="company.name" :class="[company.class, $theme.value === 'dark' ? 'absolute top-0 left-0 opacity-0' : '']" class="original">
+              <img v-if="$theme.value === 'dark'" :src="'/img/companies/preview/' + company.img" :alt="company.name" :class="company.class" class="preview">
             </a>
           </div>
         </div>
         <div class="flex flex-col lg:flex-row items-center justify-between">
           <div v-for="(company, i) in langCompanies.slice(5, 10)" :key="i" class="p-4 lg:p-8 text-center">
             <a :href="company.url" target="_blank" rel="noopener nofollow" class="company relative block">
-              <img :src="'/img/companies/original/' + company.img" :alt="company.name" :class="[company.class]" class="original">
-              <img :src="'/img/companies/preview/' + company.img" :alt="company.name" :class="company.class" class="preview">
+              <img :src="'/img/companies/original/' + company.img" :alt="company.name" :class="[company.class, $theme.value === 'dark' ? 'absolute top-0 left-0 opacity-0' : '']" class="original">
+              <img v-if="$theme.value === 'dark'" :src="'/img/companies/preview/' + company.img" :alt="company.name" :class="company.class" class="preview">
             </a>
           </div>
         </div>
         <div v-if="langCompanies.length > 10" class="hidden lg:flex flex-col lg:flex-row items-center justify-between">
           <div v-for="(company, i) in langCompanies.slice(10, 15)" :key="i" class="p-8 text-center">
             <a :href="company.url" target="_blank" rel="noopener nofollow" class="company relative block">
-              <img :src="'/img/companies/original/' + company.img" :alt="company.name" :class="[company.class]" class="original">
-              <img :src="'/img/companies/preview/' + company.img" :alt="company.name" :class="company.class" class="preview">
+              <img :src="'/img/companies/original/' + company.img" :alt="company.name" :class="[company.class, $theme.value === 'dark' ? 'absolute top-0 left-0 opacity-0' : '']" class="original">
+              <img v-if="$theme.value === 'dark'" :src="'/img/companies/preview/' + company.img" :alt="company.name" :class="company.class" class="preview">
             </a>
           </div>
         </div>
@@ -112,13 +112,6 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-
-[data-theme='dark'] {
-  .original {
-    @apply absolute top-0 left-0 opacity-0;
-  }
-}
-
 .company {
   .preview {
     opacity: 0.5;

@@ -10,7 +10,10 @@ export default {
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
       { rel: 'preconnect', href: 'https://www.google-analytics.com' }
-    ]
+    ],
+    bodyAttrs: {
+      class: ['font-sans font-medium bg-light-surface dark:bg-dark-surface text-light-onSurfacePrimary dark:text-dark-onSurfacePrimary transition-colors duration-300 ease-linear ']
+    }
   },
   buildModules: [
     '@nuxtjs/eslint-module',
@@ -18,6 +21,7 @@ export default {
     '~/modules/crawler/',
     '~/modules/static/',
     '~/modules/components/',
+    '~/modules/theme/',
     // https://github.com/nuxt-community/netlify-files-module
     '@nuxtjs/netlify-files',
     // https://github.com/nuxt-community/style-resources-module
@@ -55,5 +59,8 @@ export default {
   generate: {
     fallback: true,
     interval: 100
+  },
+  theme: {
+    value: 'light'
   }
 }

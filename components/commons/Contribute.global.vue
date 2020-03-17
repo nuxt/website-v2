@@ -1,18 +1,18 @@
 <template>
   <div class="pt-4">
     <div class="clearfix">
-      <span v-if="prevLink">← <nuxt-link :to="baseLink + prevLink.to">{{ prevLink.name }}</nuxt-link></span>
-      <span v-if="nextLink" class="inline-block float-right"><nuxt-link :to="baseLink + nextLink.to">{{ nextLink.name }}</nuxt-link> →</span>
+      <span v-if="prevLink" class="text-primary-base hover:underline">← <nuxt-link :to="baseLink + prevLink.to">{{ prevLink.name }}</nuxt-link></span>
+      <span v-if="nextLink" class="inline-block float-right text-primary-base hover:underline"><nuxt-link :to="baseLink + nextLink.to">{{ nextLink.name }}</nuxt-link> →</span>
     </div>
-    <div class="pt-3 mt-6 border-t border-gray-300">
-      <h3 v-if="contributors.length" class="my-2">Contributors</h3>
+    <div class="pt-3 mt-6 border-t border-light-border dark:border-dark-border">
+      <h3 v-if="contributors.length" class="empty-after after:block after:border-2 after:rounded dark:after:border-dark-onSurfacePrimary light:after:border-light-onSurfacePrimary after:mt-2 after:mb-1 after:w-4/5 my-2 text-light-onSurfacePrimary dark:text-dark-onSurfacePrimary relative text-xl table transition-colors duration-300 ease-linear">Contributors</h3>
       <div v-if="contributors.length">
-        <a v-for="contributor of contributors" :key="contributor.author" :href="`https://github.com/${contributor.author}`" rel="noopener" target="_blank" class="text-nuxt-gray rounded overflow-hidden rounded-md inline-flex mb-2 mr-2 border hover:bg-gray-200">
-          <img :alt="contributor.author" :src="`https://github.com/${contributor.author}.png?size=32`" class="h-8">
+        <a v-for="contributor of contributors" :key="contributor.author" :href="`https://github.com/${contributor.author}`" rel="noopener" target="_blank" class="text-light-onSurfacePrimary dark:text-dark-onSurfacePrimary bg-light-surfaceElevated light:hover:bg-gray-300 dark:bg-dark-elevatedSurface dark:hover:bg-dark-surface rounded overflow-hidden inline-flex mb-2 mr-2 border border-light-border dark:border-dark-border transition-colors duration-300 ease-linear">
+          <img :alt="contributor.author" :srcset="`https://github.com/${contributor.author}.png?size=32 1x, https://github.com/${contributor.author}.png?size=64 2x`" :src="`https://github.com/${contributor.author}.png?size=32`" class="h-8">
           <span class="inline-block px-2 leading-loose">{{ contributor.author }}</span>
         </a>
       </div>
-      <p v-if="docLink" class="text-gray-700 pt-1 mb-3">{{ $store.state.lang.guide.contribute }} <a :href="docLink" target="_blank" rel="noopener">{{ $store.state.lang.guide.edit_on_github }}</a></p>
+      <p v-if="docLink" class="text-light-onSurfaceSecondary dark:text-dark-onSurfaceSecondary pt-1 mb-8 transition-colors duration-300 ease-linear">{{ $store.state.lang.guide.contribute }} <a :href="docLink" target="_blank" rel="noopener" class="text-primary-base hover:underline">{{ $store.state.lang.guide.edit_on_github }}</a></p>
       <carbon-ads-text :key="$route.path" />
     </div>
   </div>

@@ -1,19 +1,18 @@
 <template>
   <div class="flex justify-between items-center">
-    <nui-button
-      :to="previousRoute"
-      class="inline-flex items-center shadow-none hover:shadow-none"
-      variant="gray"
-    >
-      <nuiSvgArrowLeft slot="icon" class="h-5 mr-1"/>
-      {{ post.prevLink || 'blog' }}
-    </nui-button>
     <nuxt-link
-      v-if="post.nextLink"
+      :to="previousRoute"
+      class="inline-flex items-center hover:text-nuxt-lightgreen"
+    >
+      <nuiSvgArrowLeft class="h-5 mr-2"/>
+      {{ links.previous.title || 'blog' }}
+    </nuxt-link>
+    <nuxt-link
+      v-if="hasNextLink"
       :to="{ name: 'blog-slug', params: { slug: nextSlug } }"
       class="inline-flex items-center hover:text-nuxt-lightgreen"
     >
-      {{ post.nextLink }}
+      {{ links.next.title }}
       <nuiSvgArrowRight class="h-5 ml-2"/>
     </nuxt-link>
   </div>
@@ -30,24 +29,30 @@ export default {
     nuiSvgArrowRight
   },
   props: {
-    post: {
+    links: {
       type: Object,
       required: true
     }
   },
   computed: {
     previousRoute () {
-      if (this.post.prevLink) {
+      if (this.hasPreviousLink) {
         return {
           name: 'blog-slug',
-          params: { slug: this.post.prevLink.split('/')[2].replace(/\.md$/, '') }
+          params: { slug: this.links.previous.slug }
         }
       } else {
         return { name: 'blog' }
       }
     },
     nextSlug () {
-      return this.post.nextLink.split('/')[2].replace(/\.md$/, '')
+      return this.links.next.slug
+    },
+    hasNextLink () {
+      return this.links.next && this.links.next.title && this.links.next.slug
+    },
+    hasPreviousLink () {
+      return this.links.previous && this.links.previous.title && this.links.previous.slug
     }
   }
 }

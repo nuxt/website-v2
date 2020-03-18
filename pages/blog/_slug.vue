@@ -6,7 +6,7 @@
         back to the blog list
       </nui-button>
       <blogPostItem :post="post" />
-      <blogPostNavigationLinks :post="post" />
+      <blogPostNavigationLinks :links="post.links" />
     </div>
   </div>
 </template>

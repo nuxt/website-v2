@@ -1,10 +1,10 @@
 <template>
   <div class="bg-light-elevatedSurface dark:bg-dark-elevatedSurface">
     <div class="container mx-auto p-4">
-      <nui-button :to="{ name: 'blog' }" class="inline-flex items-center shadow-none hover:shadow-none" variant="gray">
-        <nuiSvgArrowLeft slot="icon" class="h-5 mr-1"/>
-        back to the blog list
-      </nui-button>
+      <nuxt-link :to="{ name: 'blog' }" class="inline-flex items-center hover:text-nuxt-lightgreen">
+        <nuiSvgArrowLeft class="h-5 mr-2"/>
+        back to blog list
+      </nuxt-link>
       <blogPostItem :post="post" />
       <blogPostNavigationLinks :links="post.links" />
     </div>

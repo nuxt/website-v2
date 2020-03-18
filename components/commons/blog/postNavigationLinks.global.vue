@@ -5,7 +5,7 @@
       class="inline-flex items-center hover:text-nuxt-lightgreen"
     >
       <nuiSvgArrowLeft class="h-5 mr-2"/>
-      {{ links.previous.title || 'blog' }}
+      {{ links.previous.title || 'back to blog list' }}
     </nuxt-link>
     <nuxt-link
       v-if="hasNextLink"

@@ -1,6 +1,9 @@
 <template>
   <div class="bg-light-elevatedSurface dark:bg-dark-elevatedSurface">
     <div class="container mx-auto p-4">
+      <div v-if="post.langFallback" class="p-4 mb-6 rounded bg-orange-200 dark:text-light-onSurfacePrimary">
+        ⚠️ You are looking at the english version of the page. Help us translate it <a :href="docLink" class="text-orange-600">here</a>.
+      </div>
       <nuxt-link :to="{ name: 'blog' }" class="inline-flex items-center hover:text-nuxt-lightgreen">
         <nuiSvgArrowLeft class="h-5 mr-2"/>
         back to blog list
@@ -37,6 +40,17 @@ export default {
       return error({ statusCode: 404, message: store.state.lang.text.api_page_not_found })
     }
     return data
+  },
+  computed: {
+    docLink () {
+      let docLink = `https://github.com/nuxt/docs/blob/master/${this.post.path}`
+      if (this.$store.state.locale === 'ru') {
+        docLink = `https://github.com/translation-gang/ru.docs.nuxtjs/blob/translation-ru/${this.post.path}`
+      } else if (this.$store.state.locale === 'cn') {
+        docLink = `https://github.com/o2team/i18n-cn-nuxtjs-docs/blob/dev/${this.post.path}`
+      }
+      return docLink
+    }
   }
 }
 </script>

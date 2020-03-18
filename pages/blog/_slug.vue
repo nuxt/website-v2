@@ -27,8 +27,8 @@ export default {
     }
     try {
       const post = await $docs.get(path)
-      if (!post.attrs.title) { console.error(`[/${path}] ${store.state.lang.text.please_define_title}.`) } // eslint-disable-line no-console
-      if (!post.attrs.description) { console.error(`[/${path}] ${store.state.lang.text.please_define_description}.`) } // eslint-disable-line no-console
+      if (!post.title) { console.error(`[/${path}] ${store.state.lang.text.please_define_title}.`) } // eslint-disable-line no-console
+      if (!post.description) { console.error(`[/${path}] ${store.state.lang.text.please_define_description}.`) } // eslint-disable-line no-console
       data.post = post
     } catch (err) {
       if (!err.response || err.response.status !== 404) {

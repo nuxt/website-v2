@@ -1,10 +1,10 @@
 <template>
-  <div class="bg-light-surface dark:bg-dark-surface flex flex-col-reverse lg:flex-row mb-8 rounded py-4 px-6 hover:bg-gray-200 transition-colors duration-300 ease-linear">
+  <nuxt-link tag="article" :to="`/blog/${post.slug}`" class="bg-light-surface dark:bg-dark-surface flex flex-col-reverse lg:flex-row mb-8 rounded py-4 px-6 hover:bg-gray-200 cursor-pointer transition-colors duration-300 ease-linear">
     <div class="w-full lg:w-3/4 flex flex-col justify-between pr-4">
       <div class="">
-        <div class="font-semibold text-xl mb-3">
+        <h2 class="font-semibold text-xl mb-3">
           <nuxt-link :to="`/blog/${post.slug}`" tag="a">{{ post.title }}</nuxt-link>
-        </div>
+        </h2>
         <div class="mb-3">
           <p class="truncate-multiline-3">{{ post.description }}</p>
         </div>
@@ -23,9 +23,8 @@
     <div
       class="w-full lg:w-1/4 h-48 lg:h-auto mb-4 lg:mb-0 bg-cover bg-center rounded"
       :style="{backgroundImage: `url(${post.imgUrl})` }"
-    >
-    </div>
-  </div>
+    ></div>
+  </nuxt-link>
 </template>
 
 <script>

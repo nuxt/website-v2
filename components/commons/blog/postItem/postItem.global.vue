@@ -47,6 +47,28 @@ export default {
       const options = { year: 'numeric', month: 'long', day: 'numeric' }
       return new Date(d).toLocaleDateString(currentLocale, options)
     }
+  },
+  head () {
+    return {
+      title: this.post.title,
+      titleTemplate: '%s - NuxtJS',
+      meta: [
+        { name: 'description', hid: 'description', content: this.post.description },
+        // Open Graph
+        { name: 'og:title', content: this.post.title },
+        { name: 'og:description', content: this.post.description },
+        { name: 'og:type', content: 'blog' },
+        { name: 'og:url', content: `https://nuxtjs.org/${this.post.path.split('/')[0]}/blog/${this.post.slug}` },
+        { name: 'og:image', content: this.post.imgUrl ? this.post.imgUrl : 'https://nuxtjs.org/meta_640.png' },
+        // Twitter Card
+        { name: 'twitter:card', content: 'summary' },
+        { name: 'twitter:site', content: '@nuxt_js' },
+        { name: 'twitter:title', content: this.post.title },
+        { name: 'twitter:description', content: this.post.description },
+        { name: 'twitter:image', content: this.post.imgUrl ? this.post.imgUrl : 'https://nuxtjs.org/meta_640.png' },
+        { name: 'twitter:image:alt', content: this.post.imgUrl ? 'Blog post image' : 'NuxtJS Logo' }
+      ]
+    }
   }
 }
 </script>

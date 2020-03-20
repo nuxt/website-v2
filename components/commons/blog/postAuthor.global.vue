@@ -1,5 +1,5 @@
 <template>
-  <a href="" class="inline-flex items-center hover:text-nuxt-lightgreen transition ease-in-out duration-150" @click.stop.prevent="handleClick">
+  <a href="" class="inline-flex items-center hover:text-nuxt-lightgreen transition ease-linear duration-150" @click.stop.prevent="handleClick">
     <img class="inline-block h-6 w-6 rounded-full" :src="author.avatarUrl" alt="" />
     <span class="mx-2 last:mr-0">{{ author.name }}</span>
   </a>

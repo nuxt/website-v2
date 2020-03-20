@@ -2,7 +2,7 @@
   <nuxt-link tag="article" :to="`/blog/${post.slug}`" class="bg-light-surface dark:bg-dark-surface flex flex-col-reverse lg:flex-row mb-8 rounded py-4 px-6 hover:bg-gray-200 cursor-pointer transition-colors duration-300 ease-linear">
     <div class="w-full lg:w-3/4 flex flex-col justify-between pr-4">
       <div class="">
-        <h2 class="font-semibold text-xl mb-3">
+        <h2 class="font-semibold text-xl mb-3 hover:text-nuxt-lightgreen inline-block transition-colors duration-150 ease-linear">
           <nuxt-link :to="`/blog/${post.slug}`" tag="a">{{ post.title }}</nuxt-link>
         </h2>
         <div class="mb-3">

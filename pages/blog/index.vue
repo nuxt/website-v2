@@ -30,6 +30,14 @@ export default {
     const path = `/${store.state.locale}/blog`
     const posts = await $docs.get(path)
     return { posts }
+  },
+  head () {
+    return {
+      title: 'NuxtJS Blog',
+      meta: [
+        { hid: 'description', name: 'description', content: 'Discover articles from the core team and contributors about NuxtJS, tips and tricks included!' }
+      ]
+    }
   }
 }
 </script>

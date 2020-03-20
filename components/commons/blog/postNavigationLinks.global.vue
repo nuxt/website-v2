@@ -10,7 +10,7 @@
     <nuxt-link
       v-if="hasNextLink"
       :to="{ name: 'blog-slug', params: { slug: nextSlug } }"
-      class="inline-flex items-center hover:text-nuxt-lightgreen"
+      class="inline-flex items-center text-right hover:text-nuxt-lightgreen"
     >
       {{ links.next.title }}
       <nuiSvgArrowRight class="h-5 ml-2"/>

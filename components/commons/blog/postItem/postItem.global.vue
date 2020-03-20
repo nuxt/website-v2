@@ -4,8 +4,8 @@
       <div class="flex flex-1 flex-col  mt-4 lg:items-left">
         <h1 class="text-3xl font-semibold mb-2 lg:mb-6">{{ post.title }}</h1>
         <div class="text-sm flex justify-between lg:flex-col">
-          <p class="text-nuxt-lightgreen">{{ post.author }}</p>
-          <div class="">
+          <blogPostAuthor v-for="(author, index) in post.authors" :key="index" :author="author"/>
+          <div class="mt-1">
             {{ formatDateByLocale(post.date) }}
             <span class="text-xs mx-1">&bullet;</span>
             {{ post.readtime.text }}

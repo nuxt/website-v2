@@ -12,9 +12,9 @@
           <span v-for="(tag, id) in post.tags" :key="id" class="uppercase text-xs px-1 py-1 rounded-sm mr-2 border">{{ tag }}</span>
         </div>
       </div>
-      <div class="text-xs">
-        <span class="text-nuxt-lightgreen">{{ post.author }}</span>
-        <span class="text-xs mx-2">&bullet;</span>
+      <div class="flex items-center text-sm">
+        <blogPostAuthor v-for="(author, index) in post.authors" :key="index" :author="author"/>
+        <span class="text-xs mr-2">&bullet;</span>
         <span class="">{{ formatDateByLocale(post.date) }}</span>
         <span class="text-xs mx-2">&bullet;</span>
         <span class="">{{ post.readtime.text }}</span>

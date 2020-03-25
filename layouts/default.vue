@@ -5,17 +5,20 @@
       <nuxt />
     </main>
     <nui-footer class="pb-16 lg:pb-0 lg:block" :class="{'hidden': action}" />
+    <mobile-main-navigation />
   </div>
 </template>
 
 <script>
 import nuiHeader from '@/components/partials/Header'
 import nuiFooter from '@/components/partials/Footer'
+import MobileMainNavigation from '@/components/partials/MobileMainNavigation'
 
 export default {
   components: {
     nuiHeader,
-    nuiFooter
+    nuiFooter,
+    MobileMainNavigation
   },
   data () {
     return {

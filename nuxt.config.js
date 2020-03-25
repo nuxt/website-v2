@@ -9,7 +9,11 @@ export default {
     ],
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
-      { rel: 'preconnect', href: 'https://www.google-analytics.com' }
+      { rel: 'preconnect', href: 'https://www.google-analytics.com' },
+      { rel: 'stylesheet', type: 'text/css', href: 'https://cdn.jsdelivr.net/docsearch.js/2/docsearch.min.css' }
+    ],
+    script: [
+      { src: 'https://cdn.jsdelivr.net/docsearch.js/2/docsearch.min.js', async: true, defer: true }
     ],
     bodyAttrs: {
       class: ['font-sans font-medium bg-light-surface dark:bg-dark-surface text-light-onSurfacePrimary dark:text-dark-onSurfacePrimary transition-colors duration-300 ease-linear ']

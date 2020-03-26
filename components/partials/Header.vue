@@ -51,11 +51,6 @@ export default {
   mixins: [
     localeManager
   ],
-  data () {
-    return {
-      links: ['guide', 'api', 'examples', 'faq']
-    }
-  },
   computed: {
     ...mapState({
       headerLinks: state => state.lang.headerLinks
@@ -68,5 +63,3 @@ export default {
   }
 }
 </script>
-
-<style lang="scss"></style>

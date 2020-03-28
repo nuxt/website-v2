@@ -1,52 +1,77 @@
 <template>
-  <div class="header_mobile_aside block lg:hidden fixed left-0 light:bg-light-surface dark:bg-dark-surface pt-6 z-20 w-full overflow-y-auto transition-colors duration-300 ease-linear" :class="{'header_mobile_aside--open': sublinks.length}">
-    <nui-container>
-      <transition-group v-for="(group, index) in sublinks" :key="index" tag="div" name="list" class="header_mobile_aside_group">
-        <h3 :key="`title-${index}`" class="uppercase text-gray-500 pb-2">
-          {{ group.title }}
-        </h3>
-        <ul :key="`list-${index}`" class="pb-6">
-          <li v-for="l in group.links" :key="l.to" class="py-2">
-            <nuxt-link class="block dark:text-dark-onSurfacePrimary hover:text-nuxt-lightgreen transition-colors duration-300 ease-linear" :class="{'text-nuxt-lightgreen': path === locale + l.to}" :to="locale + l.to" exact>
-              {{ l.name }}
-            </nuxt-link>
-          </li>
-        </ul>
-      </transition-group>
-    </nui-container>
+  <div v-click-outside="clickOutsideHandler" class="header_mobile_aside shadow-nuxt block lg:hidden fixed left-0 z-20 w-full sm:w-1/2" :class="{'header_mobile_aside--open': show}">
+    <div class="mx-auto h-full light:bg-light-surface dark:bg-dark-surface transition-colors duration-300 ease-linear" >
+      <div class="content-wrapper h-full relative">
+        <div class="overflow-y-auto h-full pt-4">
+          <transition-group v-for="(group, index) in sublinks" :key="index" tag="div" name="list" class="header_mobile_aside_group">
+            <h3 :key="`title-${index}`" class="uppercase text-gray-500 pb-2">
+              {{ group.title }}
+            </h3>
+            <ul :key="`list-${index}`" class="pb-6">
+              <li v-for="l in group.links" :key="l.to" class="py-2">
+                <nuxt-link class="block dark:text-dark-onSurfacePrimary hover:text-nuxt-lightgreen transition-colors duration-300 ease-linear" :class="{'text-nuxt-lightgreen': path === locale + l.to}" :to="locale + l.to" exact @click.native="show = false">
+                  {{ l.name }}
+                </nuxt-link>
+              </li>
+            </ul>
+          </transition-group>
+        </div>
+        <button class="inner-button sm:hidden absolute h-10 w-10 flex items-center justify-center text-nuxt-gray bg-gray-200 dark:bg-dark-elevatedSurface dark:text-dark-onSurfaceSecondary transition-colors duration-300 ease-linear" @click="show = false">
+          <nui-times-icon class="block h-5 fill-current transition-colors duration-300 ease-linear" />
+        </button>
+      </div>
+
+      <button class="bookmark-button absolute h-10 w-10 flex items-center justify-center text-nuxt-gray bg-gray-200 dark:bg-dark-surface dark:text-dark-onSurfaceSecondary transition-colors duration-300 ease-linear" @click="show = !show">
+        <list-icon v-if="!show" class="block text-nuxt-gray dark:text-dark-onSurfaceSecondary stroke-current transition-colors duration-300 ease-linear" />
+        <nui-times-icon v-else class="block h-5 fill-current transition-colors duration-300 ease-linear" />
+      </button>
+    </div>
   </div>
 </template>
 
 <script>
+import ListIcon from '~/assets/images/list.svg'
+import nuiTimesIcon from '@/components/svg/Times'
+
 export default {
+  components: {
+    ListIcon,
+    nuiTimesIcon
+  },
+  data () {
+    return {
+      show: false
+    }
+  },
   computed: {
     path () { return this.$route.path.slice(-1) === '/' ? this.$route.path.slice(0, -1) : this.$route.path },
     locale () { return '/' + this.$route.params.section },
     sublinks () { return this.$store.state.menu[this.$route.params.section] || [] }
+  },
+  methods: {
+    clickOutsideHandler () {
+      if (this.show) {
+        this.show = false
+      }
+    }
   }
 }
 </script>
 
 <style lang="scss" scoped>
 .header_mobile_aside {
-  top: 72px;
-  bottom: 60px;
-  transform: translateX(-100%);
-  transition-property: transform;
-  transition-duration: 1s;
-  transition-timing-function: cubic-bezier(0.23, 1, 0.32, 1);
-  /* transition-delay: .5s; */
-  & .header_mobile_aside_group {
-    transform: translateX(-100%);
-    transition-property: transform;
-    transition-duration: 0.3s;
-    transition-timing-function: ease-in-out;
-    &:nth-child(1) { transition-delay: 0.2s; }
-    &:nth-child(2) { transition-delay: 0.3s; }
-    &:nth-child(3) { transition-delay: 0.4s; }
-    &:nth-child(4) { transition-delay: 0.5s; }
+  top: theme('spacing.16');
+  @screen lg {
+    top: theme('spacing.24');
   }
+  bottom: theme('spacing.16');
+  transform: translateX(calc(-100% - 1px));
+  transition-property: transform;
+  transition-duration: 0.35s;
+  // transition-timing-function: cubic-bezier(0.23, 1, 0.32, 1);
+  transition-timing-function: theme('transitionTimingFunction.ease-in-out-material-sharp');
 }
+
 .header_mobile_aside--open {
   transform: translateX(0px);
   transition-delay: 0s;
@@ -55,11 +80,30 @@ export default {
   }
 }
 
-.list-enter-active, .list-leave-active {
-  transition: all 1s;
+.content-wrapper {
+  margin-left: auto;
+  padding-left: 1rem;
+  @screen sm {
+    max-width: calc(theme('screens.sm') / 2);
+  }
+  @screen md {
+    max-width: calc(theme('screens.md') / 2);
+  }
 }
-.list-enter, .list-leave-to {
-  opacity: 0;
-  transform: translateY(30px);
+
+.bookmark-button {
+  top: 1rem;
+  right: 0;
+  transform: translateX(100%);
+  border-radius: 0 9999px 9999px 0;
+  box-shadow: 4px 2px 4px rgba(0, 0, 0, 0.101562);
+}
+
+.inner-button {
+  top: 1rem;
+  right: 0;
+  transform: translateX(-100%);
+  border-radius: 100%;
+  box-shadow: 4px 2px 4px rgba(0, 0, 0, 0.101562);
 }
 </style>

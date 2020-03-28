@@ -68,3 +68,7 @@
 a.nuxt-link-exact-active, a.nuxt-link-active {
   @apply text-nuxt-lightgreen;
 }
+
+.opacity-transition {
+  transition: opacity 0.5s ease-out;
+}

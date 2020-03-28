@@ -46,6 +46,7 @@ export default {
   },
   plugins: [
     '~/plugins/init.js',
+    '~/plugins/directives',
     '~/plugins/intersection-observer.client.js',
     '~/plugins/ga.client.js',
     '~/plugins/adblock.client.js',

@@ -30,7 +30,6 @@
       </nui-select>
     </div>
   </header>
-  <!-- <mobile-aside-navigation /> -->
 </template>
 
 <script>
@@ -39,14 +38,12 @@ import nuiLogo from '@/components/svg/Nuxtjs'
 import nuiGlobe from '@/components/svg/Globe'
 import localeManager from '@/mixins/localeManager'
 import AlgoliaSearch from '@/components/partials/AlgoliaSearch'
-// import MobileAsideNavigation from '@/components/partials/MobileAsideNavigation'
 
 export default {
   components: {
     nuiLogo,
     nuiGlobe,
     AlgoliaSearch
-    // MobileAsideNavigation
   },
   mixins: [
     localeManager

@@ -15,6 +15,9 @@ module.exports = {
           "-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans', sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji'"
         ]
       },
+      fontSize: {
+        ss: '0.666666rem'
+      },
       colors: {
         nuxt: {
           gray: '#2F495E',

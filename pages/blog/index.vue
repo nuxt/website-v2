@@ -6,7 +6,7 @@
           <h1 class="text-3xl xl:text-4xl text-light-onSurfacePrimary dark:text-dark-onSurfacePrimary font-medium leading-normal mb-6 lg:pt-4">
             NUXT<span class="text-nuxt-lightgreen">JS</span> Blog
           </h1>
-          <h3 class="xl:text-lg text-gray-600 font-medium leading-relaxed mb-6">
+          <h3 class="xl:text-lg light:text-light-onSurfaceSecondary dark:text-dark-onSurfaceSecondary font-medium leading-relaxed mb-6">
             Discover articles from the core team and contributors about NuxtJS, tips and tricks included!
           </h3>
         </div>

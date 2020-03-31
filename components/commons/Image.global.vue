@@ -8,30 +8,35 @@
     :style="[intristicRatioStyle]"
     class="overflow-hidden relative light:bg-light-surface dark:bg-dark-surface"
   >
-    <noscript inline-template>
-      <img :src="`https://res.cloudinary.com/nuxt/image/upload/w_1200,${ratio ? `h_${Math.round(1200 * intristicRatio)},` : ''}c_fill,f_auto/remote/nuxt-org/${src}`" :alt="alt" />
-    </noscript>
-    <img
-      v-if="show"
-      ref="img"
-      :src="`https://res.cloudinary.com/nuxt/image/upload/w_1200,${ratio ? `h_${Math.round(1200 * intristicRatio)},` : ''}c_fill,f_auto/remote/nuxt-org/${src}`"
-      :srcset="
+    <template v-if="!isCloudinary">
+      <img v-if="show" ref="img" :src="`/${src}`" :alt="alt" class="w-full opacity-0 transition-opacity duration-500" :class="[ratio && 'absolute top-0 left-0']">
+    </template>
+    <template v-else>
+      <noscript inline-template>
+        <img :src="`https://res.cloudinary.com/nuxt/image/upload/w_1200,${ratio ? `h_${Math.round(1200 * intristicRatio)},` : ''}c_fill,f_auto/remote/nuxt-org/${src}`" :alt="alt" />
+      </noscript>
+      <img
+        v-if="show"
+        ref="img"
+        :src="`https://res.cloudinary.com/nuxt/image/upload/w_1200,${ratio ? `h_${Math.round(1200 * intristicRatio)},` : ''}c_fill,f_auto/remote/nuxt-org/${src}`"
+        :srcset="
+          `
+          https://res.cloudinary.com/nuxt/image/upload/w_160,${ratio ? `h_${Math.round(160 * intristicRatio)},` : ''}c_fill,f_auto/remote/nuxt-org/${src} 160w,
+          https://res.cloudinary.com/nuxt/image/upload/w_240,${ratio ? `h_${Math.round(240 * intristicRatio)},` : ''}c_fill,f_auto/remote/nuxt-org/${src} 240w,
+          https://res.cloudinary.com/nuxt/image/upload/w_320,${ratio ? `h_${Math.round(320 * intristicRatio)},` : ''}c_fill,f_auto/remote/nuxt-org/${src} 320w,
+          https://res.cloudinary.com/nuxt/image/upload/w_560,${ratio ? `h_${Math.round(560 * intristicRatio)},` : ''}c_fill,f_auto/remote/nuxt-org/${src} 560w,
+          https://res.cloudinary.com/nuxt/image/upload/w_800,${ratio ? `h_${Math.round(800 * intristicRatio)},` : ''}c_fill,f_auto/remote/nuxt-org/${src} 800w,
+          https://res.cloudinary.com/nuxt/image/upload/w_920,${ratio ? `h_${Math.round(920 * intristicRatio)},` : ''}c_fill,f_auto/remote/nuxt-org/${src} 920w,
+          https://res.cloudinary.com/nuxt/image/upload/w_1040,${ratio ? `h_${Math.round(1040 * intristicRatio)},` : ''}c_fill,f_auto/remote/nuxt-org/${src} 1040w,
+          https://res.cloudinary.com/nuxt/image/upload/w_1200,${ratio ? `h_${Math.round(1200 * intristicRatio)},` : ''}c_fill,f_auto/remote/nuxt-org/${src} 1200w
         `
-        https://res.cloudinary.com/nuxt/image/upload/w_160,${ratio ? `h_${Math.round(160 * intristicRatio)},` : ''}c_fill,f_auto/remote/nuxt-org/${src} 160w,
-        https://res.cloudinary.com/nuxt/image/upload/w_240,${ratio ? `h_${Math.round(240 * intristicRatio)},` : ''}c_fill,f_auto/remote/nuxt-org/${src} 240w,
-        https://res.cloudinary.com/nuxt/image/upload/w_320,${ratio ? `h_${Math.round(320 * intristicRatio)},` : ''}c_fill,f_auto/remote/nuxt-org/${src} 320w,
-        https://res.cloudinary.com/nuxt/image/upload/w_560,${ratio ? `h_${Math.round(560 * intristicRatio)},` : ''}c_fill,f_auto/remote/nuxt-org/${src} 560w,
-        https://res.cloudinary.com/nuxt/image/upload/w_800,${ratio ? `h_${Math.round(800 * intristicRatio)},` : ''}c_fill,f_auto/remote/nuxt-org/${src} 800w,
-        https://res.cloudinary.com/nuxt/image/upload/w_920,${ratio ? `h_${Math.round(920 * intristicRatio)},` : ''}c_fill,f_auto/remote/nuxt-org/${src} 920w,
-        https://res.cloudinary.com/nuxt/image/upload/w_1040,${ratio ? `h_${Math.round(1040 * intristicRatio)},` : ''}c_fill,f_auto/remote/nuxt-org/${src} 1040w,
-        https://res.cloudinary.com/nuxt/image/upload/w_1200,${ratio ? `h_${Math.round(1200 * intristicRatio)},` : ''}c_fill,f_auto/remote/nuxt-org/${src} 1200w
-      `
-      "
-      :sizes="sizes"
-      :alt="alt"
-      class="w-full opacity-0 transition-opacity duration-500"
-      :class="[ratio && 'absolute top-0 left-0']"
-    />
+        "
+        :sizes="sizes"
+        :alt="alt"
+        class="w-full opacity-0 transition-opacity duration-500"
+        :class="[ratio && 'absolute top-0 left-0']"
+      />
+    </template>
   </div>
 </template>
 
@@ -58,6 +63,7 @@ export default {
   },
   data () {
     return {
+      isCloudinary: process.env.isCloudinary,
       show: false,
       loaded: false
     }

@@ -7,10 +7,6 @@
 @import 'tailwindcss/components';
 
 /* purgecss start ignore */
-@import './themes/light.css';
-/* purgecss end ignore */
-
-/* purgecss start ignore */
 @import '@snackbar/core/dist/snackbar.css';
 /* purgecss end ignore */
 
@@ -67,4 +63,12 @@
   .container{
     max-width: 1280px;
   }
+}
+
+a.nuxt-link-exact-active, a.nuxt-link-active {
+  @apply text-nuxt-lightgreen;
+}
+
+.opacity-transition {
+  transition: opacity 0.5s ease-out;
 }

@@ -43,6 +43,7 @@ export default {
   plugins: [
     '~/plugins/init.js',
     '~/plugins/intersection-observer.client.js',
+    '~/plugins/vue-observe-visibility.client.js',
     '~/plugins/ga.client.js',
     '~/plugins/adblock.client.js',
     '~/plugins/newsletter.client.js'

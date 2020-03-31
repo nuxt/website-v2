@@ -1,10 +1,10 @@
 <template>
   <div class="bg-light-elevatedSurface dark:bg-dark-elevatedSurface">
-    <div class="container mx-auto p-4">
+    <div class="container mx-auto p-4 pb-8">
       <div v-if="post.langFallback" class="p-4 mb-6 rounded bg-orange-200 dark:text-light-onSurfacePrimary">
         ⚠️ You are looking at the english version of the page. Help us translate it <a :href="docLink" class="text-orange-600">here</a>.
       </div>
-      <nuxt-link :to="{ name: 'blog' }" class="inline-flex items-center hover:text-nuxt-lightgreen">
+      <nuxt-link :to="{ name: 'blog' }" class="inline-flex items-center dark:hover:text-nuxt-lightgreen light:hover:text-nuxt-lightgreen dark:text-dark-onSurfaceSecondary light:text-light-onSurfaceSecondary">
         <nuiSvgArrowLeft class="h-5 mr-2"/>
         back to blog list
       </nuxt-link>

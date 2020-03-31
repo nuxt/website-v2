@@ -1,5 +1,6 @@
 <template>
   <div v-html="content" />
+  <!-- <component :is="{template: content}" /> -->
 </template>
 
 <script>
@@ -224,6 +225,10 @@ export default {
 }
 
 div ::v-deep {
+  img {
+    @apply rounded;
+    margin: auto;
+  }
   & h2,
   & h3,
   & h4,
@@ -287,6 +292,7 @@ div ::v-deep {
     @apply p-1 not-italic rounded text-sm;
   }
   & a {
+    overflow-wrap: break-word;
     &:hover {
       @apply underline;
     }

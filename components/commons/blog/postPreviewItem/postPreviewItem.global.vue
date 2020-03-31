@@ -1,9 +1,9 @@
 <template>
-  <nuxt-link tag="article" :to="`/blog/${post.slug}`" class="light:bg-light-surface dark:bg-dark-surface flex flex-col-reverse lg:flex-row mb-8 rounded py-8 px-8 light:hover:bg-gray-200 dark:hover:bg-gray-800 cursor-pointer transition-colors duration-300 ease-linear">
-    <div class="w-full lg:w-3/4 flex flex-col justify-between pr-4">
+  <nuxt-link tag="article" :to="{name: 'blog-slug', params: {slug: post.slug}}" class="light:bg-light-surface dark:bg-dark-surface flex flex-col-reverse lg:flex-row mb-8 rounded p-4 sm:p-8 lg:p-4 light:hover:bg-gray-200 dark:hover:bg-gray-800 cursor-pointer transition-colors duration-300 ease-linear" @click.native="whyNavigationDoesntWork">
+    <div class="w-full lg:w-2/3 flex flex-col justify-between pr-4">
       <div class="mb-2">
-        <h2 class="leading-tight light:text-light-onSurfacePrimary dark:text-dark-onSurfacePrimary font-semibold text-xl mb-4 hover:text-nuxt-lightgreen inline-block transition-colors duration-300 ease-linear">
-          <nuxt-link :to="`/blog/${post.slug}`" tag="a">{{ post.title }}</nuxt-link>
+        <h2 class="mb-4 inline-block">
+          <nuxt-link :to="{name: 'blog-slug', params: {slug: post.slug}}" class="flex leading-tight light:hover:text-nuxt-lightgreen dark:hover:text-nuxt-lightgreen light:text-light-onSurfacePrimary dark:text-dark-onSurfacePrimary font-semibold text-xl transition-colors duration-300 ease-linear">{{ post.title }}</nuxt-link>
         </h2>
         <div class="mb-4">
           <p class="truncate-multiline-3 light:text-light-onSurfaceSecondary dark:text-dark-onSurfaceSecondary transition-colors duration-300 ease-linear">{{ post.description }}</p>
@@ -27,10 +27,9 @@
         </div>
       </div>
     </div>
-    <div
-      class="w-full lg:w-1/4 h-48 lg:h-auto mb-6 lg:mb-0 bg-cover bg-center rounded"
-      :style="{backgroundImage: `url(${post.imgUrl})` }"
-    ></div>
+    <div class="w-full lg:w-1/3 mb-6 lg:mb-0 rounded overflow-hidden">
+      <picture-tag :src="post.imgUrl" ratio="16:9" />
+    </div>
   </nuxt-link>
 </template>
 
@@ -48,6 +47,9 @@ export default {
       const currentLocale = this.$store.state.locale || 'en'
       const options = { year: 'numeric', month: 'long', day: 'numeric' }
       return new Date(d).toLocaleDateString(currentLocale, options)
+    },
+    whyNavigationDoesntWork () {
+      this.$router.push({ name: 'blog-slug', params: { slug: this.post.slug } })
     }
   }
 }

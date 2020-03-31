@@ -1,30 +1,28 @@
 <template>
-  <div>
-    <div class="flex items-left justify-between flex-col-reverse lg:flex-row lg:items-center mt-12">
-      <div class="flex flex-1 flex-col  mt-4 lg:items-left">
-        <h1 class="text-3xl font-semibold mb-2 lg:mb-6">{{ post.title }}</h1>
-        <div class="text-sm flex justify-between lg:flex-col">
+  <article class="max-w-3xl m-auto">
+    <header class="flex items-left justify-between flex-col mt-12">
+      <div class="flex flex-1 flex-col mb-8">
+        <h1 class="text-4xl font-semibold mb-4 leading-tight">{{ post.title }}</h1>
+        <div class="text-sm flex justify-between flex-col sm:flex-row">
           <blogPostAuthor v-for="(author, index) in post.authors" :key="index" :author="author"/>
-          <div class="mt-1">
+          <div class="mt-1 dark:text-dark-onSurfaceSecondary light:text-light-onSurfaceSecondary">
             {{ formatDateByLocale(post.date) }}
             <span class="text-xs mx-1">&bullet;</span>
             {{ post.readtime.text }}
           </div>
         </div>
       </div>
-      <div class="bg-cover bg-center h-64 w-full lg:w-2/6" :style="{backgroundImage: `url(${post.imgUrl})`}"></div>
-    </div>
+      <picture-tag :src="post.imgUrl" ratio="16:9" class="rounded" />
+    </header>
     <div class="mt-12">
-      <article>
-        <html-parser :content="post.body" />
-      </article>
+      <html-parser :content="post.body" />
     </div>
-    <div v-if="hasTags" class="border-t border-gray-200 my-10">
-      <div class="flex flex-row justify-start my-10">
-        <span v-for="(tag, id) in post.tags" :key="id" class="uppercase text-xs px-1 py-1 rounded-sm mr-2 border">{{ tag }}</span>
+    <div v-if="hasTags" class="border-t border-light-border dark:border-dark-border my-10">
+      <div class="flex flex-row justify-start my-10 light:text-light-onSurfaceSecondary dark:text-dark-onSurfaceSecondary">
+        <span v-for="(tag, id) in post.tags" :key="id" class="flex uppercase tracking-wider font-medium text-ss px-2 py-1 rounded-full mr-2 border border-light-border dark:border-dark-border transition-colors duration-300 ease-linear">{{ tag }}</span>
       </div>
     </div>
-  </div>
+  </article>
 </template>
 
 <script>

@@ -27,7 +27,8 @@
     "nuxt-svg-loader": "^1.2.0",
     "octicons": "^8.5.0",
     "reading-time": "^1.2.0",
-    "v-lazy-image": "^1.4.0"
+    "v-lazy-image": "^1.4.0",
+    "vue-observe-visibility": "^0.4.6"
   },
   "devDependencies": {
     "@nuxtjs/eslint-config": "^2.0.2",

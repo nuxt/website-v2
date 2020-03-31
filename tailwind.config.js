@@ -61,6 +61,12 @@ module.exports = {
         '1/4': '25%',
         '1/2': '50%',
         '3/4': '75%'
+      },
+      transitionTimingFunction: {
+        'ease-in-material': 'cubic-bezier(0.4, 0, 1, 1)',
+        'ease-out-material': 'cubic-bezier(0, 0, 0.2, 1)',
+        'ease-in-out-material': 'cubic-bezier(0.4, 0, 0.2, 1)',
+        'ease-in-out-material-sharp': 'cubic-bezier(0.4, 0, 0.6, 1)'
       }
     }
   },

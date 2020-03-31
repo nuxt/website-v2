@@ -1,8 +1,5 @@
 <template>
   <button class="relative overflow-hidden px-4 flex items-center bg-gray-200 dark:bg-dark-surface dark:text-dark-onSurfaceSecondary rounded-full h-10 outline-none text-light-onSurfacePrimary dark:text-dark-onSurfacePrimary transition-colors duration-300 ease-linear" @click="setCurrentTheme">
-    <!-- bug with transition on svg elements -->
-    <!-- https://github.com/vuejs/vue/blob/59868bbe92059c690b6a146aaf1504925455384f/src/transition/transition.js#L375 -->
-    <!-- https://github.com/vuejs/vue/issues/2396 -->
     <span class="relative mr-1 overflow-hidden inline-block w-6 h-6 flex items-center justify-center">
       <nui-moon class="w-6 h-6 absolute" :class="$theme.value === 'dark' ? 'show' : 'hide'"/>
       <nui-sun class="w-6 h-6 absolute" :class="$theme.value === 'light' ? 'show' : 'hide'"/>

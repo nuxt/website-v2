@@ -27,6 +27,14 @@
             </a>
           </div>
         </div>
+        <div v-if="langCompanies.length > 15" class="hidden lg:flex flex-col lg:flex-row items-center justify-center">
+          <div v-for="(company, i) in langCompanies.slice(15, 20)" :key="i" class="p-8 text-center">
+            <a :href="company.url" target="_blank" rel="noopener nofollow" class="company relative block">
+              <img :src="'/img/companies/original/' + company.img" :alt="company.name" :class="[company.class, $theme.value === 'dark' ? 'absolute top-0 left-0 opacity-0' : '']" class="original">
+              <img v-if="$theme.value === 'dark'" :src="'/img/companies/preview/' + company.img" :alt="company.name" :class="company.class" class="preview">
+            </a>
+          </div>
+        </div>
       </section>
     </div>
   </div>
@@ -52,7 +60,8 @@ export default {
           { name: 'Ecosia', img: 'ecosia.svg', url: 'https://www.ecosia.org', class: 'h-16' },
           { name: 'Ozon', img: 'ozon.svg', url: 'https://www.ozon.ru', class: 'h-8' },
           { name: 'Sprinter', img: 'sprinter.svg', url: 'https://www.sprinter.es', class: 'h-8' },
-          { name: 'BackMarket', img: 'backmarket.svg', url: 'https://www.backmarket.com', class: 'h-8' }
+          { name: 'BackMarket', img: 'backmarket.svg', url: 'https://www.backmarket.com', class: 'h-8' },
+          { name: 'Hive', img: 'hive.svg', url: 'https://hive.io', class: 'h-8' }
         ],
         fr: [
           { name: 'Ubisoft', img: 'ubisoft.svg', url: 'https://assassinscreed.ubisoft.com/story-creator-mode', class: 'h-12' },

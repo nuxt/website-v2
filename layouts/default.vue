@@ -1,31 +1,24 @@
 <template>
   <div>
-    <nui-header v-model="action" />
-    <main class="lg:block relative pt-16 lg:pt-24" :class="{'hidden': action}">
+    <nui-header />
+    <main class="lg:block relative pt-16 lg:pt-24">
       <nuxt />
     </main>
-    <nui-footer class="pb-16 lg:pb-0 lg:block" :class="{'hidden': action}" />
+    <nui-footer class="pb-16 lg:pb-0 lg:block" />
+    <mobile-main-navigation />
   </div>
 </template>
 
 <script>
 import nuiHeader from '@/components/partials/Header'
 import nuiFooter from '@/components/partials/Footer'
+import MobileMainNavigation from '@/components/partials/MobileMainNavigation'
 
 export default {
   components: {
     nuiHeader,
-    nuiFooter
-  },
-  data () {
-    return {
-      action: ''
-    }
-  },
-  watch: {
-    $route () {
-      this.action = ''
-    }
+    nuiFooter,
+    MobileMainNavigation
   },
   head () {
     let canonical = `https://nuxtjs.org${this.$route.path}`

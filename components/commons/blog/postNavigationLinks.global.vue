@@ -2,7 +2,7 @@
   <div class="flex justify-between items-center">
     <nuxt-link
       :to="previousRoute"
-      class="inline-flex items-center dark:hover:text-nuxt-lightgreen light:hover:text-nuxt-lightgreen dark:text-dark-onSurfaceSecondary light:text-light-onSurfaceSecondary"
+      class="inline-flex items-center dark:hover:text-nuxt-lightgreen light:hover:text-nuxt-lightgreen dark:text-dark-onSurfaceSecondary light:text-light-onSurfaceSecondary transition-colors duration-300 ease-linear"
     >
       <nuiSvgArrowLeft class="h-5 mr-2"/>
       {{ links.previous.title || 'back to blog list' }}
@@ -10,7 +10,7 @@
     <nuxt-link
       v-if="hasNextLink"
       :to="{ name: 'blog-slug', params: { slug: nextSlug } }"
-      class="inline-flex items-center text-right dark:hover:text-nuxt-lightgreen light:hover:text-nuxt-lightgreen dark:text-dark-onSurfaceSecondary light:text-light-onSurfaceSecondary"
+      class="inline-flex items-center text-right dark:hover:text-nuxt-lightgreen light:hover:text-nuxt-lightgreen dark:text-dark-onSurfaceSecondary light:text-light-onSurfaceSecondary transition-colors duration-300 ease-linear"
     >
       {{ links.next.title }}
       <nuiSvgArrowRight class="h-5 ml-2"/>

@@ -28,7 +28,7 @@
       </div>
     </div>
     <div class="w-full lg:w-1/3 mb-6 lg:mb-0 rounded overflow-hidden">
-      <picture-tag :src="post.imgUrl" ratio="16:9" />
+      <nui-image :src="post.imgUrl" ratio="16:9" />
     </div>
   </nuxt-link>
 </template>

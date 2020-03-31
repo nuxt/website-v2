@@ -25,6 +25,7 @@ import nuiGuideIcon from '@/components/svg/Books'
 import nuiApiIcon from '@/components/svg/List'
 import nuiFaqIcon from '@/components/svg/Faq'
 import nuiResourcesIcon from '@/components/svg/Resources'
+import nuiBlogIcon from '@/components/svg/Blog'
 
 export default {
   components: {
@@ -32,7 +33,8 @@ export default {
     nuiGuideIcon,
     nuiApiIcon,
     nuiFaqIcon,
-    nuiResourcesIcon
+    nuiResourcesIcon,
+    nuiBlogIcon
   },
   computed: {
     ...mapState({

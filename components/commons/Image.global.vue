@@ -27,6 +27,7 @@
         https://res.cloudinary.com/nuxt/image/upload/w_1200,${ratio ? `h_${Math.round(1200 * intristicRatio)},` : ''}c_fill,f_auto/remote/nuxt-org/${src} 1200w
       `
       "
+      :sizes="sizes"
       :alt="alt"
       class="w-full opacity-0 transition-opacity duration-500"
       :class="[ratio && 'absolute top-0 left-0']"
@@ -36,6 +37,7 @@
 
 <script>
 export default {
+  name: 'NuiImage',
   props: {
     src: {
       type: String,
@@ -46,6 +48,10 @@ export default {
       default: null
     },
     ratio: {
+      type: String,
+      default: null
+    },
+    sizes: {
       type: String,
       default: null
     }

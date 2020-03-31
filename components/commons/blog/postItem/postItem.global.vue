@@ -1,5 +1,5 @@
 <template>
-  <article class="max-w-3xl m-auto">
+  <article>
     <header class="flex items-left justify-between flex-col mt-12">
       <div class="flex flex-1 flex-col mb-8">
         <h1 class="text-4xl font-semibold mb-4 leading-tight">{{ post.title }}</h1>
@@ -12,7 +12,7 @@
           </div>
         </div>
       </div>
-      <picture-tag :src="post.imgUrl" ratio="16:9" class="rounded" />
+      <nui-image :src="post.imgUrl" ratio="16:9" sizes="80vh" class="rounded" />
     </header>
     <div class="mt-12">
       <html-parser :content="post.body" />

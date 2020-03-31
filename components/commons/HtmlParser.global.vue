@@ -75,10 +75,10 @@ export default {
 
 <style lang="scss" scoped>
 [data-theme='light'] div ::v-deep {
-  & h2, &h3 {
+  h2, h3, p {
     color: theme('colors.light.onSurfacePrimary');
   }
-  & blockquote {
+  blockquote {
     color: theme('colors.light.onSurfaceSecondary');
   }
   & a {
@@ -151,7 +151,7 @@ export default {
 }
 
 [data-theme='dark'] div ::v-deep {
-  & h2, &h3 {
+  h2, h3, p {
     color: theme('colors.dark.onSurfacePrimary');
   }
   & blockquote {
@@ -279,8 +279,8 @@ div ::v-deep {
 }
 
 div ::v-deep {
-  & p {
-    @apply leading-relaxed py-1 mb-2;
+  p {
+    @apply leading-relaxed py-1 mb-2 transition-colors duration-300 ease-linear;
   }
   & li p {
     @apply inline-block;

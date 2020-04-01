@@ -3,7 +3,7 @@
     <div class="w-full lg:w-2/3 flex flex-col justify-between pr-4">
       <div class="mb-2">
         <h2 class="mb-4 inline-block">
-          <nuxt-link :to="{name: 'blog-slug', params: {slug: post.slug}}" class="flex leading-tight light:hover:text-nuxt-lightgreen dark:hover:text-nuxt-lightgreen light:text-light-onSurfacePrimary dark:text-dark-onSurfacePrimary font-semibold text-xl transition-colors duration-300 ease-linear">{{ post.title }}</nuxt-link>
+          <nuxt-link :to="{name: 'blog-slug', params: {slug: post.slug}}" class="flex leading-tight light:hover:text-nuxt-lightgreen dark:hover:text-nuxt-lightgreen light:text-light-onSurfacePrimary dark:text-dark-onSurfacePrimary font-semibold text-2xl md:text-3xl transition-colors duration-300 ease-linear">{{ post.title }}</nuxt-link>
         </h2>
         <div class="mb-4">
           <p class="truncate-multiline-3 light:text-light-onSurfaceSecondary dark:text-dark-onSurfaceSecondary transition-colors duration-300 ease-linear">{{ post.description }}</p>

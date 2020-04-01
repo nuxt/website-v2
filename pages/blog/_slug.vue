@@ -50,6 +50,15 @@ export default {
         docLink = `https://github.com/o2team/i18n-cn-nuxtjs-docs/blob/dev/${this.post.path}`
       }
       return docLink
+    },
+    socialImage () {
+      const host = process.env.DEPLOY_PRIME_URL || process.env.URL || 'http://localhost:3000'
+      const image = this.post.imgUrl ? this.post.imgUrl : 'meta_640.png'
+      if (process.env.useCloudinary) {
+        return `https://res.cloudinary.com/nuxt/image/upload/w_1200,c_fill,f_auto/remote/nuxt-org/${this.post.imgUrl}`
+      } else {
+        return `${host}/${image}`
+      }
     }
   },
   head () {
@@ -63,13 +72,13 @@ export default {
         { name: 'og:description', content: this.post.description },
         { name: 'og:type', content: 'blog' },
         { name: 'og:url', content: `https://nuxtjs.org/${this.post.path.split('/')[0]}/blog/${this.post.slug}` },
-        { name: 'og:image', content: this.post.imgUrl ? this.post.imgUrl : 'https://nuxtjs.org/meta_640.png' },
+        { name: 'og:image', content: this.socialImage },
         // Twitter Card
         { name: 'twitter:card', content: 'summary' },
         { name: 'twitter:site', content: '@nuxt_js' },
         { name: 'twitter:title', content: this.post.title },
         { name: 'twitter:description', content: this.post.description },
-        { name: 'twitter:image', content: this.post.imgUrl ? this.post.imgUrl : 'https://nuxtjs.org/meta_640.png' },
+        { name: 'twitter:image', content: this.socialImage },
         { name: 'twitter:image:alt', content: this.post.imgUrl ? 'Blog post image' : 'NuxtJS Logo' }
       ]
     }

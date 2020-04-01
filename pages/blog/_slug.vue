@@ -60,7 +60,7 @@ export default {
     },
     socialImage () {
       const image = this.post.imgUrl ? this.post.imgUrl : 'meta_640.png'
-      if (process.env.isProd) {
+      if (this.isProd) {
         return `https://res.cloudinary.com/nuxt/image/upload/w_1200,h_628,c_fill,f_auto/remote/nuxt-org/${this.post.imgUrl}`
       } else {
         return `${this.host}/${image}`

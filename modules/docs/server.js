@@ -206,7 +206,7 @@ class DocsServer {
 
   // Get all docs files
   async getDocFiles () {
-    const docPaths = await this.glob('*/[!blog]**/*.md')
+    const docPaths = await this.glob('*/!(blog)/*.md')
     await Promise.all(docPaths.map(path => this.getDocFile(path)))
   }
 
@@ -224,8 +224,7 @@ class DocsServer {
     const body = marked(file.body, parseOptions)
     this.docsFiles[path] = {
       attrs: file.attributes,
-      body,
-      readtime: readingTime(body)
+      body
     }
 
     return this.docsFiles[path]

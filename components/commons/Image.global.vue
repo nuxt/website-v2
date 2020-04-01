@@ -8,7 +8,7 @@
     :style="[intristicRatioStyle]"
     class="overflow-hidden relative light:bg-light-surface dark:bg-dark-surface"
   >
-    <template v-if="!isCloudinary">
+    <template v-if="!useCloudinary">
       <img v-if="show" ref="img" :src="`/${src}`" :alt="alt" class="w-full opacity-0 transition-opacity duration-500" :class="[ratio && 'absolute top-0 left-0']">
     </template>
     <template v-else>
@@ -63,7 +63,7 @@ export default {
   },
   data () {
     return {
-      isCloudinary: process.env.isCloudinary,
+      useCloudinary: process.env.useCloudinary,
       show: false,
       loaded: false
     }

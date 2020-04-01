@@ -59,9 +59,6 @@ export default {
       return docLink
     },
     socialImage () {
-      console.log('this.isTest', this.isTest)
-      console.log('this.isDev', this.isDev)
-      console.log('this.isProd', this.isProd)
       const image = this.post.imgUrl ? this.post.imgUrl : 'meta_640.png'
       if (this.isTest || this.isDev) {
         return `${this.host}/${image}`

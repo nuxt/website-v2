@@ -55,7 +55,7 @@ export default {
       const host = process.env.DEPLOY_PRIME_URL || process.env.URL || 'http://localhost:3000'
       const image = this.post.imgUrl ? this.post.imgUrl : 'meta_640.png'
       if (process.env.useCloudinary) {
-        return `https://res.cloudinary.com/nuxt/image/upload/w_1200,c_fill,f_auto/remote/nuxt-org/${this.post.imgUrl}`
+        return `https://res.cloudinary.com/nuxt/image/upload/w_1200,h_628,c_fill,f_auto/remote/nuxt-org/${this.post.imgUrl}`
       } else {
         return `${host}/${image}`
       }
@@ -68,13 +68,14 @@ export default {
       meta: [
         { name: 'description', hid: 'description', content: this.post.description },
         // Open Graph
+        { hid: 'og:site_name', property: 'og:site_name', content: process.env.DEPLOY_PRIME_URL || process.env.URL || 'http://localhost:3000' },
         { name: 'og:title', content: this.post.title },
         { name: 'og:description', content: this.post.description },
-        { name: 'og:type', content: 'blog' },
-        { name: 'og:url', content: `https://nuxtjs.org/${this.post.path.split('/')[0]}/blog/${this.post.slug}` },
+        { name: 'og:type', content: 'article' },
+        { name: 'og:url', content: `https://nuxtjs.org/blog/${this.post.slug}` },
         { name: 'og:image', content: this.socialImage },
         // Twitter Card
-        { name: 'twitter:card', content: 'summary' },
+        { name: 'twitter:card', content: 'summary_large_image' },
         { name: 'twitter:site', content: '@nuxt_js' },
         { name: 'twitter:title', content: this.post.title },
         { name: 'twitter:description', content: this.post.description },

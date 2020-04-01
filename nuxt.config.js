@@ -54,7 +54,8 @@ export default {
     '~/plugins/newsletter.client.js'
   ],
   env: {
-    useCloudinary: process.env.USE_CLOUDINARY === 'true' || false,
+    DEPLOY_PRIME_URL: process.env.DEPLOY_PRIME_URL || false,
+    URL: process.env.URL || false,
     DOC_SEARCH_API_KEY: process.env.DOC_SEARCH_API_KEY || 'ff80fbf046ce827f64f06e16f82f1401',
     NUXT_API: process.env.NUXT_API || 'https://api.nuxtjs.com',
     LOCALE: locale

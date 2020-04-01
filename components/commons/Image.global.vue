@@ -8,8 +8,10 @@
     :style="[intristicRatioStyle]"
     class="overflow-hidden relative light:bg-light-surface dark:bg-dark-surface"
   >
-    <template v-if="!useCloudinary">
-      <img v-if="show" ref="img" :src="`/${src}`" :alt="alt" class="w-full opacity-0 transition-opacity duration-500" :class="[ratio && 'absolute top-0 left-0']">
+    <div>
+    </div>
+    <template v-if="isTest || isDev">
+      <img v-if="show" ref="img" :src="`${host}/${src}`" :alt="alt" class="w-full opacity-0 transition-opacity duration-500" :class="[ratio && 'absolute top-0 left-0']">
     </template>
     <template v-else>
       <noscript inline-template>
@@ -41,6 +43,8 @@
 </template>
 
 <script>
+import { mapState } from 'vuex'
+
 export default {
   name: 'NuiImage',
   props: {
@@ -63,12 +67,17 @@ export default {
   },
   data () {
     return {
-      useCloudinary: process.env.useCloudinary,
       show: false,
       loaded: false
     }
   },
   computed: {
+    ...mapState({
+      host: state => state.host,
+      isDev: state => state.isDev,
+      isTest: state => state.isTest,
+      isProd: state => state.isProd
+    }),
     intristicRatio () {
       if (!this.ratio) {
         return 0

@@ -15,6 +15,7 @@
 </template>
 
 <script>
+import { mapState } from 'vuex'
 import nuiSvgArrowLeft from '@/components/svg/ArrowLeft.vue'
 
 export default {
@@ -42,6 +43,12 @@ export default {
     return data
   },
   computed: {
+    ...mapState({
+      host: state => state.host,
+      isDev: state => state.isDev,
+      isTest: state => state.isTest,
+      isProd: state => state.isProd
+    }),
     docLink () {
       let docLink = `https://github.com/nuxt/docs/blob/master/${this.post.path}`
       if (this.$store.state.locale === 'ru') {
@@ -52,12 +59,11 @@ export default {
       return docLink
     },
     socialImage () {
-      const host = process.env.DEPLOY_PRIME_URL || process.env.URL || 'http://localhost:3000'
       const image = this.post.imgUrl ? this.post.imgUrl : 'meta_640.png'
-      if (process.env.useCloudinary) {
+      if (process.env.isProd) {
         return `https://res.cloudinary.com/nuxt/image/upload/w_1200,h_628,c_fill,f_auto/remote/nuxt-org/${this.post.imgUrl}`
       } else {
-        return `${host}/${image}`
+        return `${this.host}/${image}`
       }
     }
   },

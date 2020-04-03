@@ -14,10 +14,10 @@
       </div>
       <div class="flex flex-col lg:flex-row text-sm">
         <div class="mb-4 lg:mb-0 flex items-center">
-          <a v-for="(author, index) in post.authors" :key="index" :href="author.link" target="_blank" class="flex items-center">
+          <span v-for="(author, index) in post.authors" :key="index" class="flex items-center">
             <img class="inline-block h-6 w-6 rounded-full mr-2" :src="author.avatarUrl" alt="" />
             <span class="leading-none last:mr-0 light:text-light-onSurfacePrimary dark:text-dark-onSurfacePrimary hover:text-nuxt-lightgreen transition-colors duration-300 ease-linear">{{ author.name }}</span>
-          </a>
+          </span>
         </div>
         <div class="flex w-full lg:w-auto items-center justify-between leading-none">
           <span class="hidden lg:inline-block text-xs mx-2 light:text-light-onSurfaceSecondary dark:text-dark-onSurfaceSecondary transition-colors duration-300 ease-linear">&bullet;</span>

@@ -101,8 +101,7 @@ export default {
 
 .inner-button {
   top: 1rem;
-  right: 0;
-  transform: translateX(-100%);
+  right: 1rem;
   border-radius: 100%;
   box-shadow: 4px 2px 4px rgba(0, 0, 0, 0.101562);
 }

@@ -74,7 +74,7 @@ export default {
       meta: [
         { name: 'description', hid: 'description', content: this.post.description },
         // Open Graph
-        { hid: 'og:site_name', property: 'og:site_name', content: this.$store.state.host },
+        { hid: 'og:site_name', property: 'og:site_name', content: 'NuxtJS' },
         { hid: 'og:title', name: 'og:title', content: this.post.title },
         { hid: 'og:description', name: 'og:description', content: this.post.description },
         { hid: 'og:type', name: 'og:type', content: 'article' },

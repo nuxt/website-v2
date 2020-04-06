@@ -23,7 +23,7 @@
       <!-- Algolia Search -->
       <algolia-search />
       <!-- Locale Selector -->
-      <nui-select v-model="currentLang" mode="slim" :options="locales" class="inline-block align-middle">
+      <nui-select v-model="currentLang" mode="slim" :options="locales" label="Select language" class="inline-block align-middle">
         <template v-slot:icon>
           <nui-globe />
         </template>

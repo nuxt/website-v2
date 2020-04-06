@@ -7,7 +7,7 @@
         <form class="flex flex-row justify-center mb-2" @submit.prevent="subscribe">
           <div>
             <label for="news-email" class="hidden">{{ formWordings.email }}</label>
-            <input id="news-email" v-model="email" type="email" required :placeholder="formWordings.email" class="border border-r-0 w-48 md:w-64 bg-light-elevatedSurface text-light-onSurfacePrimary rounded py-3 px-4 font-medium rounded-r-none outline-none focus:border-primary-base">
+            <input id="news-email" v-model="email" type="email" required :placeholder="formWordings.email" class="border border-r-0 w-48 md:w-64 bg-light-elevatedSurface text-light-onSurfacePrimary rounded py-3 px-4 font-medium rounded-r-none outline-none focus:border-primary-base" aria-label="Newsletter">
           </div>
           <input type="submit" :value="pending ? formWordings.subscribing : formWordings.subscribe" name="subscribe" class="cursor-pointer inline-block bg-primary-base text-white font-medium text-sm px-4 py-2 shadow uppercase rounded rounded-l-none hover:bg-primary-light hover:shadow-md text-base" :class="[pending ? 'bg-nuxt-green': '']">
         </form>

@@ -7,27 +7,23 @@
         <nui-logo class="h-6 lg:h-8 text-light-onSurfacePrimary dark:text-dark-onSurfacePrimary transition-colors duration-300 ease-linear" />
       </nuxt-link>
       <!-- Center Navigation -->
-      <ul class="hidden lg:flex lg:pt-1 xl:pt-0 text-center mx-auto">
-        <li v-for="link in headerLinks.filter(l => l.slug !== 'blog')" :key="link.slug" class="xl:px-4 lg:py-0 lg:px-2 py-2">
-          <nuxt-link v-if="link.type === 'dynamic'" class="block p-2 font-medium uppercase hover:no-underline hover:text-nuxt-lightgreen text-light-onSurfacePrimary dark:text-dark-onSurfacePrimary transition-colors duration-300 ease-linear" :to="{ name: link.routeName, params: { section: link.slug } }">
-            {{ link.name }}
-          </nuxt-link>
-          <nuxt-link v-else-if="link.type === 'static'" class="block p-2 font-medium uppercase hover:no-underline hover:text-nuxt-lightgreen text-light-onSurfacePrimary dark:text-dark-onSurfacePrimary transition-colors duration-300 ease-linear" :to="{ name: link.slug }">
-            {{ link.name }}
-          </nuxt-link>
-          <a v-else-if="link.type === 'external'" :key="link.href" :href="link.href" class="block p-2 font-medium uppercase hover:no-underline hover:text-nuxt-lightgreen text-light-onSurfacePrimary dark:text-dark-onSurfacePrimary transition-colors duration-300 ease-linear">
-            {{ link.name }}
-          </a>
-        </li>
-      </ul>
+      <nav class="hidden lg:flex lg:pt-1 xl:pt-0 mx-auto">
+        <ul class="flex text-center">
+          <li v-for="link in headerLinks" :key="link.slug" class="xl:px-4 lg:py-0 lg:px-2 py-2">
+            <nuxt-link v-if="link.type === 'dynamic'" class="block p-2 font-medium uppercase hover:no-underline light:hover:text-nuxt-lightgreen dark:hover:text-nuxt-lightgreen text-light-onSurfacePrimary dark:text-dark-onSurfacePrimary transition-colors duration-300 ease-linear" :to="{ name: link.routeName, params: { section: link.slug } }">
+              {{ link.name }}
+            </nuxt-link>
+            <nuxt-link v-else-if="link.type === 'static'" class="block p-2 font-medium uppercase hover:no-underline light:hover:text-nuxt-lightgreen dark:hover:text-nuxt-lightgreen text-light-onSurfacePrimary dark:text-dark-onSurfacePrimary transition-colors duration-300 ease-linear" :to="{ name: link.slug }">
+              {{ link.name }}
+            </nuxt-link>
+            <a v-else-if="link.type === 'external'" :key="link.href" :href="link.href" class="block p-2 font-medium uppercase hover:no-underline hover:text-nuxt-lightgreen text-light-onSurfacePrimary dark:text-dark-onSurfacePrimary transition-colors duration-300 ease-linear">
+              {{ link.name }}
+            </a>
+          </li>
+        </ul>
+      </nav>
       <!-- Algolia Search -->
       <algolia-search />
-      <!-- Locale Selector -->
-      <nui-select v-model="currentLang" mode="slim" :options="locales" class="inline-block align-middle">
-        <template v-slot:icon>
-          <nui-globe />
-        </template>
-      </nui-select>
     </div>
   </header>
 </template>
@@ -35,28 +31,17 @@
 <script>
 import { mapState } from 'vuex'
 import nuiLogo from '@/components/svg/Nuxtjs'
-import nuiGlobe from '@/components/svg/Globe'
-import localeManager from '@/mixins/localeManager'
 import AlgoliaSearch from '@/components/partials/AlgoliaSearch'
 
 export default {
   components: {
     nuiLogo,
-    nuiGlobe,
     AlgoliaSearch
   },
-  mixins: [
-    localeManager
-  ],
   computed: {
     ...mapState({
       headerLinks: state => state.lang.headerLinks
     })
-  },
-  methods: {
-    nav (section) {
-      this.currentSection = (this.currentSection === section ? '' : section)
-    }
   }
 }
 </script>

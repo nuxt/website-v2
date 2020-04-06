@@ -78,7 +78,7 @@ export default {
         discover: [
           { key: 'Design resources', to: '/design' },
           { key: 'A worldwide team', to: '/team' },
-          { key: 'VueSchool video courses', href: 'https://vueschool.io/?friend=nuxt&utm_source=Nuxtjs.org&utm_medium=Link&utm_content=Footer' }
+          { key: 'Blog', to: '/blog' }
         ],
         follow: [
           { key: 'GitHub', href: 'https://github.com/nuxt/nuxt.js' },

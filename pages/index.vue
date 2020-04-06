@@ -35,18 +35,18 @@ export default {
       meta: [
         { name: 'description', hid: 'description', content: this.$store.state.lang.homepage.meta.description },
         // Open Graph
-        { name: 'og:title', content: this.$store.state.lang.homepage.meta.title },
-        { name: 'og:description', content: this.$store.state.lang.homepage.meta.description },
-        { name: 'og:type', content: 'website' },
-        { name: 'og:url', content: 'https://nuxtjs.org' },
-        { name: 'og:image', content: 'https://nuxtjs.org/meta_640.png' },
+        { hid: 'og:title', name: 'og:title', content: this.$store.state.lang.homepage.meta.title },
+        { hid: 'og:description', name: 'og:description', content: this.$store.state.lang.homepage.meta.description },
+        { hid: 'og:type', name: 'og:type', content: 'website' },
+        { hid: 'og:url', name: 'og:url', content: 'https://nuxtjs.org' },
+        { hid: 'og:image', name: 'og:image', content: 'https://nuxtjs.org/meta_640.png' },
         // Twitter Card
-        { name: 'twitter:card', content: 'summary' },
-        { name: 'twitter:site', content: '@nuxt_js' },
-        { name: 'twitter:title', content: this.$store.state.lang.homepage.meta.title },
-        { name: 'twitter:description', content: this.$store.state.lang.homepage.meta.description },
-        { name: 'twitter:image', content: 'https://nuxtjs.org/meta_640.png' },
-        { name: 'twitter:image:alt', content: 'NuxtJS Logo' }
+        { hid: 'twitter:card', name: 'twitter:card', content: 'summary' },
+        { hid: 'twitter:site', name: 'twitter:site', content: '@nuxt_js' },
+        { hid: 'twitter:title', name: 'twitter:title', content: this.$store.state.lang.homepage.meta.title },
+        { hid: 'twitter:description', name: 'twitter:description', content: this.$store.state.lang.homepage.meta.description },
+        { hid: 'twitter:image', name: 'twitter:image', content: 'https://nuxtjs.org/meta_640.png' },
+        { hid: 'twitter:image:alt', name: 'twitter:image:alt', content: 'NuxtJS Logo' }
       ]
     }
   // },

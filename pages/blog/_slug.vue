@@ -74,19 +74,19 @@ export default {
       meta: [
         { name: 'description', hid: 'description', content: this.post.description },
         // Open Graph
-        { hid: 'og:site_name', property: 'og:site_name', content: process.env.DEPLOY_PRIME_URL || process.env.URL || 'http://localhost:3000' },
-        { name: 'og:title', content: this.post.title },
-        { name: 'og:description', content: this.post.description },
-        { name: 'og:type', content: 'article' },
-        { name: 'og:url', content: `https://nuxtjs.org/blog/${this.post.slug}` },
-        { name: 'og:image', content: this.socialImage },
+        { hid: 'og:site_name', property: 'og:site_name', content: this.$store.state.host },
+        { hid: 'og:title', name: 'og:title', content: this.post.title },
+        { hid: 'og:description', name: 'og:description', content: this.post.description },
+        { hid: 'og:type', name: 'og:type', content: 'article' },
+        { hid: 'og:url', name: 'og:url', content: `https://nuxtjs.org/blog/${this.post.slug}` },
+        { hid: 'og:image', name: 'og:image', content: this.socialImage },
         // Twitter Card
-        { name: 'twitter:card', content: 'summary_large_image' },
-        { name: 'twitter:site', content: '@nuxt_js' },
-        { name: 'twitter:title', content: this.post.title },
-        { name: 'twitter:description', content: this.post.description },
-        { name: 'twitter:image', content: this.socialImage },
-        { name: 'twitter:image:alt', content: this.post.imgUrl ? 'Blog post image' : 'NuxtJS Logo' }
+        { hid: 'twitter:card', name: 'twitter:card', content: 'summary_large_image' },
+        { hid: 'twitter:site', name: 'twitter:site', content: '@nuxt_js' },
+        { hid: 'twitter:title', name: 'twitter:title', content: this.post.title },
+        { hid: 'twitter:description', name: 'twitter:description', content: this.post.description },
+        { hid: 'twitter:image', name: 'twitter:image', content: this.socialImage },
+        { hid: 'twitter:image:', name: 'twitter:image:alt', content: this.post.imgUrl ? 'Blog post image' : 'NuxtJS Logo' }
       ]
     }
   }

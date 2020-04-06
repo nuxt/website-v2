@@ -90,12 +90,28 @@ module.exports = {
     '~plugins/marked'
 =======
     '~/plugins/init.js',
+<<<<<<< HEAD
     { src: '~/plugins/ga.client.js', ssr: false },
     { src: '~/plugins/adblock.client.js', ssr: false }
 >>>>>>> 5e315c38 (app: Support ad blockers, upgrade Nuxt)
   ],
   build: {
     vendor: ['whatwg-fetch', 'marked', 'highlight.js']
+=======
+    '~/plugins/directives',
+    '~/plugins/intersection-observer.client.js',
+    '~/plugins/vue-observe-visibility.client.js',
+    '~/plugins/ga.client.js',
+    '~/plugins/adblock.client.js',
+    '~/plugins/newsletter.client.js'
+  ],
+  env: {
+    DEPLOY_PRIME_URL: process.env.DEPLOY_PRIME_URL || false,
+    URL: process.env.URL || false,
+    DOC_SEARCH_API_KEY: process.env.DOC_SEARCH_API_KEY || 'ff80fbf046ce827f64f06e16f82f1401',
+    NUXT_API: process.env.NUXT_API || 'https://api.nuxtjs.com',
+    LOCALE: locale
+>>>>>>> 61b90c66 (feat: Add /blog section (#307))
   },
   env: {
     githubToken: '4aa6bcf919d238504e7db59a66d32e78281c0ad3'

@@ -173,10 +173,16 @@ export default {
           { key: 'Find or Post a Job', to: 'jobs' }
 =======
         discover: [
+<<<<<<< HEAD
           { key: 'Resources', to: 'resources' },
           { key: 'Design charte', to: 'design' },
           { key: 'A worldwild team', to: 'team' }
 >>>>>>> ce84991b (support page)
+=======
+          { key: 'Design resources', to: '/design' },
+          { key: 'A worldwide team', to: '/team' },
+          { key: 'Blog', to: '/blog' }
+>>>>>>> 61b90c66 (feat: Add /blog section (#307))
         ],
         follow: [
           { key: 'News', to: 'blog' },

@@ -68,3 +68,18 @@
     max-width: 1280px;
   }
 }
+<<<<<<< HEAD
+=======
+
+body {
+  min-width: 320px;
+}
+
+a.nuxt-link-exact-active, a.nuxt-link-active {
+  @apply text-nuxt-lightgreen;
+}
+
+.opacity-transition {
+  transition: opacity 0.5s ease-out;
+}
+>>>>>>> 61b90c66 (feat: Add /blog section (#307))

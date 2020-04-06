@@ -126,7 +126,9 @@
     "nuxt": "^2.11.0",
     "nuxt-svg-loader": "^1.2.0",
     "octicons": "^8.5.0",
-    "v-lazy-image": "^1.4.0"
+    "reading-time": "^1.2.0",
+    "v-lazy-image": "^1.4.0",
+    "vue-observe-visibility": "^0.4.6"
   },
   "devDependencies": {
     "@nuxtjs/eslint-config": "^2.0.2",
@@ -138,11 +140,23 @@
     "eslint": "^6.8.0",
     "globby": "^11.0.0",
     "node-sass": "^4.13.1",
+    "nodemon": "^2.0.2",
     "sass-loader": "^8.0.2"
 >>>>>>> 1b87907b (feat: dark mode (#303))
   },
   "scripts": {
+<<<<<<< HEAD
     "start": "nuxt"
+=======
+    "dev:api:docs": "nodemon modules/docs/dev.js",
+    "dev": "nuxt",
+    "build": "nuxt build",
+    "build:check": "nuxt build --analyze",
+    "start": "nuxt start",
+    "generate": "nuxt generate",
+    "lint": "eslint --ext .js,.vue --ignore-path .gitignore --ignore-pattern modules/ --ignore-pattern plugins/ga.js .",
+    "precommit": "npm run lint"
+>>>>>>> 61b90c66 (feat: Add /blog section (#307))
   },
   "repository": {
     "type": "git",

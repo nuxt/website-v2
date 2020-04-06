@@ -1,5 +1,6 @@
 <template>
   <div v-html="content" />
+  <!-- <component :is="{template: content}" /> -->
 </template>
 
 <script>
@@ -74,10 +75,10 @@ export default {
 
 <style lang="scss" scoped>
 [data-theme='light'] div ::v-deep {
-  & h2, &h3 {
+  h2, h3, p {
     color: theme('colors.light.onSurfacePrimary');
   }
-  & blockquote {
+  blockquote {
     color: theme('colors.light.onSurfaceSecondary');
   }
   & a {
@@ -150,7 +151,7 @@ export default {
 }
 
 [data-theme='dark'] div ::v-deep {
-  & h2, &h3 {
+  h2, h3, p {
     color: theme('colors.dark.onSurfacePrimary');
   }
   & blockquote {
@@ -224,6 +225,10 @@ export default {
 }
 
 div ::v-deep {
+  img {
+    @apply rounded;
+    margin: auto;
+  }
   & h2,
   & h3,
   & h4,
@@ -274,8 +279,8 @@ div ::v-deep {
 }
 
 div ::v-deep {
-  & p {
-    @apply leading-relaxed py-1 mb-2;
+  p {
+    @apply leading-relaxed py-1 mb-2 transition-colors duration-300 ease-linear;
   }
   & li p {
     @apply inline-block;
@@ -287,6 +292,7 @@ div ::v-deep {
     @apply p-1 not-italic rounded text-sm;
   }
   & a {
+    overflow-wrap: break-word;
     &:hover {
       @apply underline;
     }

@@ -11,6 +11,7 @@ const degit = require('degit')
 const logger = require('consola').withScope('docs/server')
 const { marked, partialRenderer } = require('./renderer')
 const readFile = promisify(fs.readFile)
+const readingTime = require('reading-time')
 
 class DocsServer {
   constructor(options) {
@@ -22,6 +23,7 @@ class DocsServer {
 
     this.releases = []
     this.docsFiles = {}
+    this.blogPostFiles = {}
     this.menu = {}
     this.langs = {}
     this.homepage = {}
@@ -122,14 +124,96 @@ class DocsServer {
     // Construct the homepage object
     await this.getHomepage()
 
+    // Get all blog posts
+    await this.getBlogPostFiles()
+
     // Get all docs files
     await this.getDocFiles()
   }
 
+  // Get all blog posts
+  async getBlogPostFiles () {
+    // en lang
+    const enBlogPaths = await this.glob('en/blog/*.md')
+    this.blogPostFiles.en =
+      await Promise.all(
+        enBlogPaths.map((path) => this.getBlogPost(path))
+      )
+    // sort by date descending
+    this.blogPostFiles.en.sort((a, b) => b.date - a.date)
+    this.addNavigationLinks(this.blogPostFiles.en)
+
+    // other langs
+    const langs = Object.keys(this.langs).filter(lang => lang !== 'en')
+    for (const lang of langs) {
+      this.blogPostFiles[lang] = []
+      // Add english posts but overwrites if current lang exists
+      for (let i = 0; i < this.blogPostFiles.en.length; i++) {
+        const post = this.blogPostFiles.en[i]
+        const path = `${lang}/blog/${post.slug}.md`
+
+        await this.getBlogPost(path)
+          .then(otherLangPost => {
+            this.blogPostFiles[lang].push(otherLangPost)
+          })
+          .catch((err) => {
+            // If post does not exists in other language
+            this.blogPostFiles[lang].push({
+              ...post,
+              langFallback: true
+            })
+          })
+      }
+      // add other blog posts from lang
+      const currentLangBlogPaths = await this.glob(`${lang}/blog/*.md`)
+      for (const path of currentLangBlogPaths) {
+        // Is this path already in the list of posts?
+        const postFound = this.blogPostFiles[lang].find((post) => post.path === path)
+        // If post not found
+        if (!postFound) {
+          const post = await this.getBlogPost(path)
+          this.blogPostFiles[lang].push(post)
+        }
+      }
+      // sort again if posts added
+      if (this.blogPostFiles[lang].length !== this.blogPostFiles.en.length) {
+        this.blogPostFiles[lang].sort((a, b) => b.date - a.date)
+      }
+      // add navigation links
+      this.addNavigationLinks(this.blogPostFiles[lang])
+    }
+    return this.blogPostFiles
+  }
+
+  async getBlogPost (path, parseOptions) {
+    let blogPost = {}
+
+    // Read file
+    let file = await readFile(resolve(this.docsDir, path), 'utf-8')
+
+    // Transform markdown to html
+    file = fm(file)
+    const body = marked(file.body, parseOptions)
+    blogPost = {
+      path: path,
+      slug: this.slugify(path),
+      readtime: readingTime(body),
+      ...file.attributes,
+      body,
+    }
+    return blogPost
+  }
+
   // Get all docs files
+<<<<<<< HEAD
   async getDocFiles() {
     const docPaths = await this.glob('*/**/*.md')
     await Promise.all(docPaths.map((path) => this.getDocFile(path)))
+=======
+  async getDocFiles () {
+    const docPaths = await this.glob('*/!(blog)/*.md')
+    await Promise.all(docPaths.map(path => this.getDocFile(path)))
+>>>>>>> 61b90c66 (feat: Add /blog section (#307))
   }
 
   // Get doc file and sent back it's attributes and html body
@@ -143,13 +227,31 @@ class DocsServer {
 
     // Transform markdown to html
     file = fm(file)
-
+    const body = marked(file.body, parseOptions)
     this.docsFiles[path] = {
       attrs: file.attributes,
-      body: marked(file.body, parseOptions)
+      body
     }
 
     return this.docsFiles[path]
+  }
+
+  // get prev and next links
+  addNavigationLinks (posts) {
+    posts.forEach((post, i) => {
+      const previousPost = posts[i-1]
+      const nextPost = posts[i+1]
+      post.links = {
+        previous: {
+          title: previousPost ? previousPost.title : null,
+          slug: previousPost ? previousPost.slug : null
+        },
+        next: {
+          title: nextPost ? nextPost.title : null,
+          slug: nextPost ? nextPost.slug : null
+        }
+      }
+    })
   }
 
   // Get menu files and create the doc menu
@@ -244,10 +346,16 @@ class DocsServer {
     }
 
     // Doc Pages
-    chokidar.watch('*/**/*.md', options)
+    chokidar.watch('*/[!blog]**/*.md', options)
       .on('add', path => this.getDocFile(path, null, false))
       .on('change', path => this.getDocFile(path, null, false))
       .on('unlink', path => delete this.docsFiles[path])
+
+    // Blog
+    chokidar.watch('*/blog/*.md', options)
+      .on('add', () => this.getBlogPostFiles())
+      .on('change', () => this.getBlogPostFiles())
+      .on('unlink', () => this.getBlogPostFiles())
 
     // Menu
     chokidar.watch('*/**/menu.json', options)
@@ -324,6 +432,18 @@ class DocsServer {
       return this.homepage
     }
 
+    // Blog
+    const prettierUrl = url.slice(1).replace(/\/$/, '') // removing first and last slash
+    const splittedUrl = prettierUrl.split('/')
+    if (splittedUrl[1] === 'blog') {
+      if (splittedUrl.length === 2) { // blog directory
+        return this.blogPostFiles[splittedUrl[0]]
+      } else { // blog/_slug
+        const slug = splittedUrl[2]
+        return this.blogPostFiles[splittedUrl[0]].find(post => post.slug === slug)
+      }
+    }
+
     // Remove first /
     const path = url.slice(1) + '.md'
 
@@ -352,6 +472,11 @@ class DocsServer {
     }
     logger.info(`Cloning ${this.repo} into ${this.docsDir}`)
     await degit(this.repo, { force: true, cache: false }).clone(this.docsDir)
+  }
+
+  // slugify path
+  slugify (path) {
+    return path.split('/').slice(-1)[0].replace(/\.md$/, '')
   }
 }
 

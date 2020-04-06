@@ -38,6 +38,10 @@ const store = new Vuex.Store({
 export const mutations = {
 =======
 export const state = () => ({
+  host: process.env.DEPLOY_PRIME_URL || process.env.URL || 'http://localhost:3000',
+  isProd: process.env.URL,
+  isTest: process.env.DEPLOY_PRIME_URL,
+  isDev: !process.env.DEPLOY_PRIME_URL && !process.env.URL,
   filled: false,
   docVersion: '',
   ghVersion: '',

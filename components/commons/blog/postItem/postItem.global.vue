@@ -18,8 +18,10 @@
       <html-parser :content="post.body" />
     </div>
     <div v-if="hasTags" class="border-t border-light-border dark:border-dark-border my-10">
-      <div class="flex flex-row justify-start my-10 light:text-light-onSurfaceSecondary dark:text-dark-onSurfaceSecondary">
-        <span v-for="(tag, id) in post.tags" :key="id" class="flex uppercase tracking-wider font-medium text-ss px-2 py-1 rounded-full mr-2 border border-light-border dark:border-dark-border transition-colors duration-300 ease-linear">{{ tag }}</span>
+      <div class="flex flex-row flex-wrap justify-start my-10 light:text-light-onSurfaceSecondary dark:text-dark-onSurfaceSecondary">
+        <span v-for="(tag, id) in post.tags" :key="id" class="truncate uppercase tracking-wider font-medium text-ss px-2 py-1 rounded-full mr-2 mb-2 border border-light-border dark:border-dark-border transition-colors duration-300 ease-linear">
+          {{ tag }}
+        </span>
       </div>
     </div>
   </article>

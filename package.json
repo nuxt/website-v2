@@ -12,7 +12,7 @@
     "defu": "^1.0.0",
     "degit": "^2.8.0",
     "front-matter": "^3.1.0",
-    "fs-extra": "^8.1.0",
+    "fs-extra": "^9.0.0",
     "get-port": "^5.1.1",
     "glob": "^7.1.6",
     "highlight.js": "^9.18.1",

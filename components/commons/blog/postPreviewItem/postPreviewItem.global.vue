@@ -8,8 +8,8 @@
         <div class="mb-4">
           <p class="truncate-multiline-3 light:text-light-onSurfaceSecondary dark:text-dark-onSurfaceSecondary transition-colors duration-300 ease-linear">{{ post.description }}</p>
         </div>
-        <div class="flex flex-row justify-start mb-2 light:text-light-onSurfaceSecondary dark:text-dark-onSurfaceSecondary">
-          <span v-for="(tag, id) in post.tags" :key="id" class="flex uppercase tracking-wider font-medium text-ss px-2 py-1 rounded-full mr-2 border border-light-border dark:border-dark-border transition-colors duration-300 ease-linear">{{ tag }}</span>
+        <div class="flex flex-row flex-wrap justify-start mb-2 light:text-light-onSurfaceSecondary dark:text-dark-onSurfaceSecondary">
+          <span v-for="(tag, id) in post.tags" :key="id" class="truncate uppercase tracking-wider font-medium text-ss px-2 py-1 rounded-full mr-2 mb-2 border border-light-border dark:border-dark-border transition-colors duration-300 ease-linear">{{ tag }}</span>
         </div>
       </div>
       <div class="flex flex-col lg:flex-row text-sm">

@@ -9674,6 +9674,7 @@ detect-indent@^5.0.0:
 >>>>>>> 5e315c38 (app: Support ad blockers, upgrade Nuxt)
   integrity sha1-OHHMCmoALow+Wzz38zYmRnXwa50=
 
+<<<<<<< HEAD
 detect-libc@^1.0.3:
   version "1.0.3"
 <<<<<<< HEAD
@@ -9697,6 +9698,8 @@ diffie-hellman@^5.0.0:
   resolved "https://registry.yarnpkg.com/detect-libc/-/detect-libc-1.0.3.tgz#fa137c4bd698edf55cd5cd02ac559f91a4c4ba9b"
   integrity sha1-+hN8S9aY7fVc1c0CrFWfkaTEups=
 
+=======
+>>>>>>> 5873216b (replace krutie article image (#335))
 detective@^5.2.0:
   version "5.2.0"
   resolved "https://registry.yarnpkg.com/detective/-/detective-5.2.0.tgz#feb2a77e85b904ecdea459ad897cc90a99bd2a7b"
@@ -11850,6 +11853,7 @@ fs-extra@^8.1.0:
     universalify "^0.1.0"
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 fs-extra@^9.0.0, fs-extra@^9.0.1, fs-extra@^9.1.0:
   version "9.1.0"
   resolved "https://registry.npmjs.org/fs-extra/-/fs-extra-9.1.0.tgz"
@@ -11871,6 +11875,8 @@ fs-memo@^1.2.0:
   resolved "https://registry.npmjs.org/fs-memo/-/fs-memo-1.2.0.tgz"
   integrity sha512-YEexkCpL4j03jn5SxaMHqcO6IuWuqm8JFUYhyCep7Ao89JIYmB8xoKhK7zXXJ9cCaNXpyNH5L3QtAmoxjoHW2w==
 
+=======
+>>>>>>> 5873216b (replace krutie article image (#335))
 fs-minipass@^2.0.0:
   version "2.1.0"
 <<<<<<< HEAD
@@ -13055,7 +13061,11 @@ iconv-lite@0.4.23:
     safer-buffer ">= 2.1.2 < 3"
 >>>>>>> 5e315c38 (app: Support ad blockers, upgrade Nuxt)
 
+<<<<<<< HEAD
 iconv-lite@^0.4.24, iconv-lite@^0.4.8:
+=======
+iconv-lite@0.4.24, iconv-lite@^0.4.24:
+>>>>>>> 5873216b (replace krutie article image (#335))
   version "0.4.24"
 <<<<<<< HEAD
   resolved "https://registry.npmjs.org/iconv-lite/-/iconv-lite-0.4.24.tgz"
@@ -13119,6 +13129,7 @@ ignore-by-default@^1.0.1:
   resolved "https://registry.yarnpkg.com/ignore-by-default/-/ignore-by-default-1.0.1.tgz#48ca6d72f6c6a3af00a9ad4ae6876be3889e2b09"
   integrity sha1-SMptcvbGo68Aqa1K5odr44ieKwk=
 
+<<<<<<< HEAD
 ignore-walk@^3.0.1:
 <<<<<<< HEAD
   version "3.0.1"
@@ -13133,6 +13144,8 @@ ignore-walk@^3.0.1:
     minimatch "^3.0.4"
 >>>>>>> 5e315c38 (app: Support ad blockers, upgrade Nuxt)
 
+=======
+>>>>>>> 5873216b (replace krutie article image (#335))
 ignore@^4.0.6:
   version "4.0.6"
   resolved "https://registry.yarnpkg.com/ignore/-/ignore-4.0.6.tgz#750e3db5862087b4737ebac8207ffd1ef27b25fc"
@@ -15819,6 +15832,7 @@ minizlib@^1.1.1:
     minipass "^3.0.0"
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 minipass@^3.0.0, minipass@^3.1.1:
   version "3.1.3"
   resolved "https://registry.npmjs.org/minipass/-/minipass-3.1.3.tgz"
@@ -15833,6 +15847,8 @@ minizlib@^2.1.1:
   resolved "https://registry.npmjs.org/minizlib/-/minizlib-2.1.2.tgz"
   integrity sha512-bAxsR8BVfj60DWXHE3u30oHzfl4G7khkSuPW+qvpd7jFRHm7dLxOjUk1EHACJ/hxLY8phGJ0YhYHZo7jil7Qdg==
 =======
+=======
+>>>>>>> 5873216b (replace krutie article image (#335))
 minipass@^3.0.0, minipass@^3.1.1:
   version "3.1.1"
   resolved "https://registry.yarnpkg.com/minipass/-/minipass-3.1.1.tgz#7607ce778472a185ad6d89082aa2070f79cedcd5"
@@ -15841,6 +15857,7 @@ minipass@^3.0.0, minipass@^3.1.1:
   dependencies:
     minipass "^3.0.0"
     yallist "^4.0.0"
+<<<<<<< HEAD
 =======
 minizlib@^1.2.1:
   version "1.3.3"
@@ -15849,6 +15866,8 @@ minizlib@^1.2.1:
   dependencies:
     minipass "^2.9.0"
 >>>>>>> 1b87907b (feat: dark mode (#303))
+=======
+>>>>>>> 5873216b (replace krutie article image (#335))
 
 mississippi@^3.0.0:
   version "3.0.0"
@@ -16088,6 +16107,7 @@ natural-compare@^1.4.0:
   integrity sha1-Sr6/7tdUHywnrPspvbvRXI1bpPc=
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 negotiator@0.6.2:
   version "0.6.2"
   resolved "https://registry.npmjs.org/negotiator/-/negotiator-0.6.2.tgz"
@@ -16126,6 +16146,12 @@ negotiator@0.6.1:
   version "0.6.1"
   resolved "https://registry.yarnpkg.com/negotiator/-/negotiator-0.6.1.tgz#2b327184e8992101177b28563fb5e7102acd0ca9"
   integrity sha1-KzJxhOiZIQEXeyhWP7XnECrNDKk=
+=======
+negotiator@0.6.2:
+  version "0.6.2"
+  resolved "https://registry.yarnpkg.com/negotiator/-/negotiator-0.6.2.tgz#feacf7ccf525a77ae9634436a64883ffeca346fb"
+  integrity sha512-hZXc7K2e+PgeI1eDBe/10Ard4ekbfrrqG8Ep+8Jmf4JID2bNg7NvCPOZN+kfF574pFQI7mum2AUqDidoKqcTOw==
+>>>>>>> 5873216b (replace krutie article image (#335))
 
 neo-async@^2.5.0, neo-async@^2.6.0:
   version "2.6.0"
@@ -16277,6 +16303,7 @@ node-object-hash@^1.2.0:
   integrity sha512-UdS4swXs85fCGWWf6t6DMGgpN/vnlKeSGEQ7hJcrs7PBFoxoKLmibc3QRb7fwiYsjdL7PX8iI/TMSlZ90dgHhQ==
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 node-releases@^1.1.73:
   version "1.1.73"
   resolved "https://registry.npmjs.org/node-releases/-/node-releases-1.1.73.tgz"
@@ -16323,6 +16350,8 @@ node-releases@^1.1.3:
   resolved "https://registry.yarnpkg.com/node-releases/-/node-releases-1.1.3.tgz#aad9ce0dcb98129c753f772c0aa01360fb90fbd2"
   integrity sha512-6VrvH7z6jqqNFY200kdB6HdzkgM96Oaj9v3dqGfgp6mF+cHmU4wyQKZ2/WPDRVoR0Jz9KqbamaBN0ZhdUaysUQ==
 =======
+=======
+>>>>>>> 5873216b (replace krutie article image (#335))
 node-releases@^1.1.53:
   version "1.1.53"
   resolved "https://registry.yarnpkg.com/node-releases/-/node-releases-1.1.53.tgz#2d821bfa499ed7c5dffc5e2f28c88e78a08ee3f4"
@@ -16402,6 +16431,7 @@ node-url-utils@^0.4.0:
   resolved "https://registry.npmjs.org/node-url-utils/-/node-url-utils-0.4.0.tgz"
   integrity sha1-4qEOfdqq4FEiNGTMewPSHulcrxU=
 
+<<<<<<< HEAD
 normalize-package-data@^2.3.2, normalize-package-data@^2.5.0:
   version "2.5.0"
   resolved "https://registry.yarnpkg.com/normalize-package-data/-/normalize-package-data-2.5.0.tgz#e66db1838b200c1dfc233225d12cb36520e234a8"
@@ -16422,6 +16452,8 @@ normalize-package-data@^2.3.2, normalize-package-data@^2.3.4:
   integrity sha512-9jjUFbTPfEy3R/ad/2oNbKtW9Hgovl5O1FvFWKkKblNXoN/Oou6+9+KKohPK13Yc3/TyunyWhJp6gvRNR/PPAw==
 >>>>>>> 5e315c38 (app: Support ad blockers, upgrade Nuxt)
 =======
+=======
+>>>>>>> 5873216b (replace krutie article image (#335))
 nopt@~1.0.10:
   version "1.0.10"
   resolved "https://registry.yarnpkg.com/nopt/-/nopt-1.0.10.tgz#6ddd21bd2a31417b92727dd585f8a6f37608ebee"
@@ -16518,6 +16550,7 @@ normalize.css@^8.0.1:
   resolved "https://registry.yarnpkg.com/normalize.css/-/normalize.css-8.0.1.tgz#9b98a208738b9cc2634caacbc42d131c97487bf3"
   integrity sha512-qizSNPO93t1YUuUhP22btGOo3chcvDFqFaj2TRybP0DMxkHOCTYwp3n34fel4a31ORXy4m1Xq0Gyqpb5m33qIg==
 
+<<<<<<< HEAD
 npm-bundled@^1.0.1:
 <<<<<<< HEAD
   version "1.0.5"
@@ -16558,6 +16591,8 @@ npmlog@^4.0.1:
   version "4.1.2"
   resolved "https://registry.npmjs.org/npmlog/-/npmlog-4.1.2.tgz"
 =======
+=======
+>>>>>>> 5873216b (replace krutie article image (#335))
 npm-run-path@^2.0.0:
   version "2.0.2"
   resolved "https://registry.yarnpkg.com/npm-run-path/-/npm-run-path-2.0.2.tgz#35a9232dfa35d7067b4cb2ddf2357b1871536c5f"
@@ -16574,8 +16609,12 @@ npm-run-path@^4.0.0:
   dependencies:
     path-key "^3.0.0"
 
+<<<<<<< HEAD
 >>>>>>> 61b90c66 (feat: Add /blog section (#307))
 "npmlog@0 || 1 || 2 || 3 || 4", npmlog@^4.0.0, npmlog@^4.0.2:
+=======
+"npmlog@0 || 1 || 2 || 3 || 4", npmlog@^4.0.0:
+>>>>>>> 5873216b (replace krutie article image (#335))
   version "4.1.2"
   resolved "https://registry.yarnpkg.com/npmlog/-/npmlog-4.1.2.tgz#08a7f2a8bf734604779a9efa4ad5cc717abb954b"
 >>>>>>> 5e315c38 (app: Support ad blockers, upgrade Nuxt)
@@ -17081,7 +17120,7 @@ os-tmpdir@^1.0.0, os-tmpdir@~1.0.2:
   resolved "https://registry.yarnpkg.com/os-tmpdir/-/os-tmpdir-1.0.2.tgz#bbe67406c79aa85c5cfec766fe5734555dfa1274"
   integrity sha1-u+Z0BseaqFxc/sdm/lc0VV36EnQ=
 
-osenv@0, osenv@^0.1.4:
+osenv@0:
   version "0.1.5"
   resolved "https://registry.yarnpkg.com/osenv/-/osenv-0.1.5.tgz#85cdfafaeb28e8677f416e287592b5f3f49ea410"
   integrity sha512-0CWcCECdMVc2Rw3U5w9ZjqX6ga6ubk1xDVKxtBQPK7wis/0F2r9T6k4ydGYhecl7YUBxBVxhL5oisPsNxAPe2g==
@@ -19655,7 +19694,7 @@ raw-body@2.3.3:
     destr "^1.0.0"
     flat "^5.0.0"
 
-rc@^1.0.1, rc@^1.1.6, rc@^1.2.7:
+rc@^1.0.1, rc@^1.1.6:
   version "1.2.8"
 <<<<<<< HEAD
   resolved "https://registry.npmjs.org/rc/-/rc-1.2.8.tgz"
@@ -20506,12 +20545,16 @@ rgba-regex@^1.0.0:
   integrity sha1-QzdOLiyglosO8VI0YLfXMP8i7rM=
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 rimraf@3.0.2, rimraf@^3.0.2:
   version "3.0.2"
   resolved "https://registry.npmjs.org/rimraf/-/rimraf-3.0.2.tgz"
   integrity sha512-JZkJMZkAGFFPP2YqXZXPbMlMBgsxzE8ILs4lMIX/2o0L9UBw9O/Y3o6wFw/i9YLapcUJWwqbi3kdxIPdC62TIA==
 =======
 rimraf@2, rimraf@^2.5.4, rimraf@^2.6.1, rimraf@^2.6.2, rimraf@^2.6.3, rimraf@^2.7.1:
+=======
+rimraf@2, rimraf@^2.5.4, rimraf@^2.6.2, rimraf@^2.6.3, rimraf@^2.7.1:
+>>>>>>> 5873216b (replace krutie article image (#335))
   version "2.7.1"
   resolved "https://registry.yarnpkg.com/rimraf/-/rimraf-2.7.1.tgz#35797f13a7fdadc566142c29d4f07ccad483e3ec"
   integrity sha512-uWjbaKIK3T1OSVptzX7Nl6PvQ3qAGtKEtVRjRuazjfL3Bx5eI409VZSqgND+4UNnmzLVdPj9FqFJNPqBZFve4w==
@@ -20757,7 +20800,11 @@ sass-resources-loader@^2.0.0:
     glob "^7.1.1"
     loader-utils "^1.0.4"
 
+<<<<<<< HEAD
 sax@>=0.6.0, sax@^1.2.4, sax@~1.2.4:
+=======
+sax@~1.2.4:
+>>>>>>> 5873216b (replace krutie article image (#335))
   version "1.2.4"
   resolved "https://registry.yarnpkg.com/sax/-/sax-1.2.4.tgz#2816234e2378bddc4e5354fab5caa895df7100d9"
   integrity sha512-NqVDv9TpANUjFm0N8uM5GxL36UgKi9/atZw+x7YFnQ8ckwFGKrl4xX4yWtrey3UJm5nP1kUbnYgLopqWNSRhWw==
@@ -20879,8 +20926,12 @@ semver-diff@^2.0.0:
   dependencies:
     semver "^5.0.3"
 
+<<<<<<< HEAD
 "semver@2 || 3 || 4 || 5", semver@^5.0.3, semver@^5.1.0, semver@^5.3.0, semver@^5.4.1, semver@^5.5.0, semver@^5.5.1, semver@^5.6.0, semver@^5.7.1:
 >>>>>>> 61b90c66 (feat: Add /blog section (#307))
+=======
+"semver@2 || 3 || 4 || 5", semver@^5.0.3, semver@^5.1.0, semver@^5.4.1, semver@^5.5.0, semver@^5.5.1, semver@^5.6.0, semver@^5.7.1:
+>>>>>>> 5873216b (replace krutie article image (#335))
   version "5.7.1"
   resolved "https://registry.yarnpkg.com/semver/-/semver-5.7.1.tgz#a954f931aeba508d307bbf069eff0c01c96116f7"
   integrity sha512-sauaDf/PZdVgrLTNYHRtpXa1iRiKcaebiKQ1BJdpQlWH2lCvexQdX55snPFyK7QzpudqbCI0qXFfOasHdyNDGQ==
@@ -22290,6 +22341,7 @@ tar-stream@^2.0.0, tar-stream@^2.1.4:
     readable-stream "^3.1.1"
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 tar@^6.0.2:
   version "6.1.6"
   resolved "https://registry.yarnpkg.com/tar/-/tar-6.1.6.tgz#c23d797b0a1efe5d479b1490805c5443f3560c5d"
@@ -22314,6 +22366,8 @@ tar@^4.4.2:
     safe-buffer "^5.1.2"
     yallist "^3.0.2"
 
+=======
+>>>>>>> 5873216b (replace krutie article image (#335))
 term-size@^1.2.0:
   version "1.2.0"
   resolved "https://registry.yarnpkg.com/term-size/-/term-size-1.2.0.tgz#458b83887f288fc56d6fffbfad262e26638efa69"
@@ -24733,12 +24787,16 @@ yallist@^2.1.2:
   integrity sha1-HBH5IY8HYImkfdUS+TxmmaaoHVI=
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 yallist@^3.0.0, yallist@^3.0.2:
   version "3.0.3"
   resolved "https://registry.yarnpkg.com/yallist/-/yallist-3.0.3.tgz#b4b049e314be545e3ce802236d6cd22cd91c3de9"
   integrity sha512-S+Zk8DEWE6oKpV+vI3qWkaK+jSbIK86pCwe2IF/xwIpQ8jEuxpw9NyaGjmp9+BoJv5FV2piqCDcoCtStppiq2A==
 =======
 yallist@^3.0.0, yallist@^3.0.2, yallist@^3.0.3:
+=======
+yallist@^3.0.2:
+>>>>>>> 5873216b (replace krutie article image (#335))
   version "3.1.1"
   resolved "https://registry.yarnpkg.com/yallist/-/yallist-3.1.1.tgz#dbb7daf9bfd8bac9ab45ebf602b8cbad0d5d08fd"
   integrity sha512-a4UGQaWPH59mOXUYnAG2ewncQS4i4F43Tv3JoAM+s2VDAmS9NsK8GpDMLrCHPksFT7h3K6TOoUNn2pb7RoXx4g==

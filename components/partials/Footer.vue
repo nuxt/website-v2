@@ -38,7 +38,7 @@
             </a>
           </div>
           <div class="flex-1 text-right">
-            <nui-select v-model="currentLang" :options="locales">
+            <nui-select v-model="currentLang" :options="locales" label="Select language">
               <template v-slot:icon>
                 <nui-globe />
               </template>

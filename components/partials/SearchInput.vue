@@ -20,6 +20,7 @@
     <button
       v-if="q || appearance === 'mobile'"
       class="absolute right-0 top-0 block outline-none flex h-full px-4 items-center justify-center text-nuxt-gray dark:text-dark-onSurfaceSecondary hover:text-nuxt-lightgreen dark:hover:text-nuxt-lightgreen z-10"
+      aria-label="Clear input"
       @click="handleCloseClick"
     >
       <nui-times-icon class="block h-5 fill-current transition-colors duration-300 ease-linear" />

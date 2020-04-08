@@ -229,6 +229,9 @@ div ::v-deep {
     @apply rounded;
     margin: auto;
   }
+  video {
+    width: 100%;
+  }
   & h2,
   & h3,
   & h4,

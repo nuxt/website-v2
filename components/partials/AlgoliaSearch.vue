@@ -1,6 +1,6 @@
 <template>
   <div class="algolia-search">
-    <button v-if="!showMobile" class="block md:hidden flex items-center p-2 -m-2 mr-4 justify-center text-light-onSurfaceSecondary dark:text-dark-onSurfaceSecondary hover:text-nuxt-lightgreen dark:hover:text-nuxt-lightgreen z-10 lg:hidden fill-current transition-colors duration-300 ease-linear" @click="showMobile = true">
+    <button v-if="!showMobile" class="block md:hidden flex items-center p-2 -m-2 mr-4 justify-center text-light-onSurfaceSecondary dark:text-dark-onSurfaceSecondary hover:text-nuxt-lightgreen dark:hover:text-nuxt-lightgreen z-10 lg:hidden fill-current transition-colors duration-300 ease-linear" aria-label="Search" @click="showMobile = true">
       <nui-search-icon class="block h-5 fill-current" />
     </button>
     <nui-search class="hidden md:inline-block align-middle" appearance="main" />

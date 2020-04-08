@@ -13,7 +13,6 @@
 import nuiHeader from '@/components/partials/Header'
 import nuiFooter from '@/components/partials/Footer'
 import MobileMainNavigation from '@/components/partials/MobileMainNavigation'
-
 export default {
   components: {
     nuiHeader,
@@ -47,3 +46,23 @@ export default {
   }
 }
 </script>
+
+<style>
+::-webkit-scrollbar-track,
+::-webkit-scrollbar {
+  background-color: transparent;
+}
+
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 2px #2C3E50;
+}
+
+::-webkit-scrollbar {
+  width: 3px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: white;
+  border-radius: 7px;
+}
+</style>

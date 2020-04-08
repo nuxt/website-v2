@@ -5,7 +5,8 @@
         <slot name="icon" />
       </div>
       <template v-if="options.length > 1">
-        <select v-model="selected" class="bg-transparent cursor-pointer font-medium h-10 appearance-none focus:outline-none pl-6 pr-8 z-10">
+        <!-- <label :for="id">Choose a pet:</label> -->
+        <select v-model="selected" class="bg-transparent cursor-pointer font-medium h-10 appearance-none focus:outline-none pl-6 pr-8 z-10" :aria-label="label">
           <option v-for="(option, i) in options" :key="i" :value="i">
             {{ getOptionDescription(option) }}
           </option>
@@ -45,6 +46,10 @@ export default {
       type: String,
       required: false,
       default: Modes.NORMAL
+    },
+    label: {
+      type: String,
+      required: true
     }
   },
   computed: {

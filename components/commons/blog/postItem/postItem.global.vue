@@ -4,7 +4,9 @@
       <div class="flex flex-1 flex-col mb-8">
         <h1 class="text-4xl font-semibold mb-4 leading-tight">{{ post.title }}</h1>
         <div class="text-sm flex justify-between flex-col sm:flex-row">
-          <blogPostAuthor v-for="(author, index) in post.authors" :key="index" :author="author"/>
+          <div>
+            <blogPostAuthor v-for="(author, index) in post.authors" :key="index" :author="author"/>
+          </div>
           <div class="mt-1 dark:text-dark-onSurfaceSecondary light:text-light-onSurfaceSecondary">
             {{ formatDateByLocale(post.date) }}
             <span class="text-xs mx-1">&bullet;</span>

@@ -58,11 +58,11 @@ export default {
 }
 
 ::-webkit-scrollbar {
-  width: 3px;
+  width: 10px;
 }
 
 ::-webkit-scrollbar-thumb {
-  background-color: white;
+  background-color: #41B883;
   border-radius: 7px;
 }
 </style>

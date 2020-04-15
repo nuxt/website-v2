@@ -367,7 +367,7 @@ div ::v-deep {
   }
 }
 
-// code hightlight
+// code highlight
 div ::v-deep {
   /* Ocean Dark Theme */
   /* https://github.com/gavsiu */

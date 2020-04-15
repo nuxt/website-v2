@@ -1,12 +1,12 @@
 <template>
   <button class="relative overflow-hidden px-4 flex items-center bg-gray-200 dark:bg-dark-surface dark:text-dark-onSurfaceSecondary rounded-full h-10 outline-none text-light-onSurfacePrimary dark:text-dark-onSurfacePrimary transition-colors duration-300 ease-linear" @click="setCurrentTheme">
     <span class="relative mr-1 overflow-hidden inline-block w-6 h-6 flex items-center justify-center">
-      <nui-moon class="w-6 h-6 absolute" :class="$theme.value === 'dark' ? 'show' : 'hide'"/>
-      <nui-sun class="w-6 h-6 absolute" :class="$theme.value === 'light' ? 'show' : 'hide'"/>
+      <nui-moon class="w-6 h-6 absolute" :class="$colorMode.value === 'dark' ? 'show' : 'hide'"/>
+      <nui-sun class="w-6 h-6 absolute" :class="$colorMode.value === 'light' ? 'show' : 'hide'"/>
     </span>
     <transition name="from-bottom-to-bottom" mode="out-in">
-      <span v-if="$theme.value === 'dark'" key="dark" class="inline-block font-medium mr-1">Dark</span>
-      <span v-else-if="$theme.value === 'light'" key="light" class="inline-block font-medium mr-1">Light</span>
+      <span v-if="$colorMode.value === 'dark'" key="dark" class="inline-block font-medium mr-1">Dark</span>
+      <span v-else-if="$colorMode.value === 'light'" key="light" class="inline-block font-medium mr-1">Light</span>
     </transition>
   </button>
 </template>
@@ -28,7 +28,7 @@ export default {
   },
   methods: {
     setCurrentTheme () {
-      this.$theme.set(this.$theme.value === 'dark' ? 'light' : 'dark')
+      this.$colorMode.preference = this.$colorMode.preference === 'dark' ? 'light' : 'dark'
     }
   }
 }

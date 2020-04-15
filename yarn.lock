@@ -1087,6 +1087,15 @@
     webpack-node-externals "^1.7.2"
     webpackbar "^4.0.0"
 
+"@nuxtjs/color-mode@^0.0.2":
+  version "0.0.2"
+  resolved "https://registry.yarnpkg.com/@nuxtjs/color-mode/-/color-mode-0.0.2.tgz#d6910b13e7ea1d7f70711174bd6f610fe0d69a62"
+  integrity sha512-Rbuszjxv20S8PYBmUrzKBrwL1L8dFWrA9G6hiHzXOyZmzQjeplrYTF+0RqyuiZyhjpPcGb9dW3+oRIqbqnVYpA==
+  dependencies:
+    defu "^1.0.0"
+    lodash.template "^4.5.0"
+    terser "^4.6.11"
+
 "@nuxtjs/eslint-config@^2.0.2":
   version "2.0.2"
   resolved "https://registry.yarnpkg.com/@nuxtjs/eslint-config/-/eslint-config-2.0.2.tgz#ff521ee1c0b875ac340f17ed656db213b6af854e"
@@ -9054,6 +9063,15 @@ terser@^4.1.2, terser@^4.4.3:
   version "4.6.10"
   resolved "https://registry.yarnpkg.com/terser/-/terser-4.6.10.tgz#90f5bd069ff456ddbc9503b18e52f9c493d3b7c2"
   integrity sha512-qbF/3UOo11Hggsbsqm2hPa6+L4w7bkr+09FNseEe8xrcVD3APGLFqE+Oz1ZKAxjYnFsj80rLOfgAtJ0LNJjtTA==
+  dependencies:
+    commander "^2.20.0"
+    source-map "~0.6.1"
+    source-map-support "~0.5.12"
+
+terser@^4.6.11:
+  version "4.6.11"
+  resolved "https://registry.yarnpkg.com/terser/-/terser-4.6.11.tgz#12ff99fdd62a26de2a82f508515407eb6ccd8a9f"
+  integrity sha512-76Ynm7OXUG5xhOpblhytE7X58oeNSmC8xnNhjWVo8CksHit0U0kO4hfNbPrrYwowLWFgM2n9L176VNx2QaHmtA==
   dependencies:
     commander "^2.20.0"
     source-map "~0.6.1"

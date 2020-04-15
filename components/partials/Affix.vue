@@ -7,7 +7,7 @@
             Platinum Sponsors
           </p>
           <a v-for="sponsor in sponsors" :key="sponsor.name" :href="sponsor.link" class="block lg:inline-block my-4 w-48 lg:w-full" rel="noopener sponsored">
-            <img :src="`/img/sponsors/${$theme.value}/${sponsor.img}`" :alt="sponsor.name">
+            <img :src="`/img/sponsors/${$colorMode.value}/${sponsor.img}`" :alt="sponsor.name">
           </a>
           <nui-button :to="{ name: 'sponsor-nuxtjs' }" class="justify-center mb-8">
             Support Us

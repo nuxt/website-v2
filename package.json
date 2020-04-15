@@ -30,6 +30,7 @@
     "vue-observe-visibility": "^0.4.6"
   },
   "devDependencies": {
+    "@nuxtjs/color-mode": "^0.0.2",
     "@nuxtjs/eslint-config": "^2.0.2",
     "@nuxtjs/eslint-module": "^1.1.0",
     "@nuxtjs/netlify-files": "^1.0.0",

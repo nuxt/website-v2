@@ -25,7 +25,8 @@ export default {
     '~/modules/crawler/',
     '~/modules/static/',
     '~/modules/components/',
-    '~/modules/theme/',
+    // https://github.com/nuxt-community/color-mode-module
+    '@nuxtjs/color-mode',
     // https://github.com/nuxt-community/netlify-files-module
     '@nuxtjs/netlify-files',
     // https://github.com/nuxt-community/style-resources-module
@@ -41,6 +42,9 @@ export default {
     // https://http.nuxtjs.org
     '@nuxt/http'
   ],
+  colorMode: {
+    preference: 'light' // disable system
+  },
   http: {
     proxy: true
   },
@@ -67,8 +71,5 @@ export default {
   generate: {
     fallback: true,
     interval: 100
-  },
-  theme: {
-    value: 'light'
   }
 }

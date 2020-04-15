@@ -88,11 +88,11 @@ module.exports = {
   },
   plugins: [
     plugin(function ({ addVariant, theme, e, prefix, config }) {
-      const themeVariants = ['light', 'dark']
-      themeVariants.forEach((mode) => {
+      const colorModeVariants = ['light', 'dark']
+      colorModeVariants.forEach((mode) => {
         addVariant(mode, ({ modifySelectors, separator }) => {
           modifySelectors(({ className }) => {
-            return `[data-theme='${mode}'] .${e(`${mode}${separator}${className}`)}`
+            return `.${mode}-mode .${e(`${mode}${separator}${className}`)}`
           })
         })
       })
@@ -105,22 +105,22 @@ module.exports = {
         })
       })
       // generate chained color mode and pseudo variants
-      themeVariants.forEach((mode) => {
+      colorModeVariants.forEach((mode) => {
         pseudoVariants.forEach((pseudo) => {
           addVariant(`${mode}:${pseudo}`, ({ modifySelectors, separator }) => {
             modifySelectors(({ className }) => {
-              return `[data-theme='${mode}'] .${e(`${mode}${separator}${pseudo}${separator}${className}`)}::${pseudo}`
+              return `.${mode}-mode .${e(`${mode}${separator}${pseudo}${separator}${className}`)}::${pseudo}`
             })
           })
         })
       })
       // states for color modes
       const states = ['hover']
-      themeVariants.forEach((mode) => {
+      colorModeVariants.forEach((mode) => {
         states.forEach((state) => {
           addVariant(`${mode}:${state}`, ({ modifySelectors, separator }) => {
             modifySelectors(({ className }) => {
-              return `[data-theme='${mode}'] .${e(`${mode}${separator}${state}${separator}${className}`)}:${state}`
+              return `.${mode}-mode .${e(`${mode}${separator}${state}${separator}${className}`)}:${state}`
             })
           })
         })

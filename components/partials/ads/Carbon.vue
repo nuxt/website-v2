@@ -18,7 +18,7 @@ export default {
 </script>
 
 <style lang="scss">
-[data-theme='dark'] .Carbon {
+.dark-mode .Carbon {
   background-color: theme('colors.dark.surface');
   .carbon-text {
     color: theme('colors.dark.onSurfacePrimary');
@@ -28,7 +28,7 @@ export default {
   }
 }
 
-[data-theme='light'] .Carbon {
+.light-mode .Carbon {
   background-color: theme('colors.gray.200');
   .carbon-text {
     @apply text-gray-600;

@@ -35,7 +35,7 @@ export default {
 </script>
 
 <style lang="scss">
-[data-theme='light'] #bsa-native {
+.light-mode #bsa-native {
   .native-box {
     // @apply shadow-lg;
     // box-shadow: theme('boxShadow.lg');
@@ -47,7 +47,7 @@ export default {
   }
 }
 
-[data-theme='dark'] #bsa-native {
+.dark-mode #bsa-native {
   .native-box {
     // @apply shadow-lg;
     // box-shadow: theme('boxShadow.lg');

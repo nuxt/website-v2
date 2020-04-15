@@ -93,20 +93,5 @@ export default {
       }
     }
   }
-  // computed: {
-  //   currentTheme: {
-  //     get () {
-  //       const index = this.themes.map(l => l.value).indexOf(this.$theme.value)
-
-  //       return index === -1 ? 0 : index
-  //     },
-  //     set (index) {
-  //       this.$theme.set(this.themes[index].value)
-  //     }
-  //   },
-  //   currentThemeIcon () {
-  //     return this.themes[this.currentTheme].icon
-  //   }
-  // }
 }
 </script>

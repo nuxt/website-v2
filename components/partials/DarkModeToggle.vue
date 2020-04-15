@@ -1,12 +1,14 @@
 <template>
   <button class="relative overflow-hidden px-4 flex items-center bg-gray-200 dark:bg-dark-surface dark:text-dark-onSurfaceSecondary rounded-full h-10 outline-none text-light-onSurfacePrimary dark:text-dark-onSurfacePrimary transition-colors duration-300 ease-linear" @click="setCurrentTheme">
-    <span class="relative mr-1 overflow-hidden inline-block w-6 h-6 flex items-center justify-center">
-      <nui-moon class="w-6 h-6 absolute" :class="$theme.value === 'dark' ? 'show' : 'hide'"/>
-      <nui-sun class="w-6 h-6 absolute" :class="$theme.value === 'light' ? 'show' : 'hide'"/>
+    <span class="relative mr-2 overflow-hidden inline-block w-5 h-5 flex items-center justify-center">
+      <nui-moon class="w-5 h-5 absolute" :class="$colorMode.preference === 'dark' ? 'show' : 'hide'"/>
+      <nui-system class="w-5 h-5 absolute" :class="$colorMode.preference === 'system' ? 'show' : 'hide'"/>
+      <nui-sun class="w-5 h-5 absolute" :class="$colorMode.preference === 'light' ? 'show' : 'hide'"/>
     </span>
     <transition name="from-bottom-to-bottom" mode="out-in">
-      <span v-if="$theme.value === 'dark'" key="dark" class="inline-block font-medium mr-1">Dark</span>
-      <span v-else-if="$theme.value === 'light'" key="light" class="inline-block font-medium mr-1">Light</span>
+      <span v-if="$colorMode.preference === 'dark'" key="dark" class="inline-block font-medium mr-1">Dark</span>
+      <span v-if="$colorMode.preference === 'system'" key="system" class="inline-block font-medium mr-1">System</span>
+      <span v-else-if="$colorMode.preference === 'light'" key="light" class="inline-block font-medium mr-1">Light</span>
     </transition>
   </button>
 </template>
@@ -14,11 +16,13 @@
 <script>
 import nuiSun from '@/components/svg/Sun'
 import nuiMoon from '@/components/svg/Moon'
+import nuiSystem from '@/components/svg/System'
 
 export default {
   components: {
     nuiSun,
-    nuiMoon
+    nuiMoon,
+    nuiSystem
   },
   props: [],
   data () {
@@ -28,32 +32,16 @@ export default {
   },
   methods: {
     setCurrentTheme () {
-      this.$theme.set(this.$theme.value === 'dark' ? 'light' : 'dark')
+      this.$colorMode.preference = this.$colorMode.preference === 'system' ? 'light' : this.$colorMode.preference === 'light' ? 'dark' : 'system'
     }
   }
 }
 </script>
 
 <style lang="scss" scoped>
-// .sunset-enter-active {
-//   opacity: 1;
-//   transition: transform 300ms cubic-bezier(0.4, 0, 0.2, 1);
-// }
-
-// .sunset-leave-active {
-//   opacity: 1;
-//   transition: transform 300ms cubic-bezier(0.4, 0, 0.2, 1);
-// }
-
-// .sunset-enter {
-//   // opacity: 0;
-//   transform: translate3d(-100%, 10px, 0) rotate(-90deg) scale3d(0.5, 0.5, 0.5);
-// }
-
-// .sunset-leave-active {
-//   // opacity: 0;
-//   transform:  translate3d(100%, 10px, 0) rotate(180deg) scale3d(0.5, 0.5, 0.5);
-// }
+button {
+  outline: none;
+}
 
 .show {
   animation: show-icon 300ms forwards;
@@ -96,16 +84,16 @@ export default {
 
 .from-bottom-to-bottom-leave-active {
   opacity: 1;
-  transition: opacity 100ms,  transform 100ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: opacity 100ms, transform 100ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .from-bottom-to-bottom-enter {
   opacity: 0;
-  transform: translate3d(0, 3px, 0) scaleY(0);
+  transform: scaleY(0);
 }
 
 .from-bottom-to-bottom-leave-active {
   opacity: 0;
-  transform:  translate3d(0, 3px, 0) scaleY(0);
+  transform: scaleY(0);
 }
 </style>

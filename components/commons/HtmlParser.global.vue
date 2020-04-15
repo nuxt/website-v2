@@ -74,7 +74,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-[data-theme='light'] div ::v-deep {
+.light-mode div ::v-deep {
   h2, h3, p {
     color: theme('colors.light.onSurfacePrimary');
   }
@@ -150,7 +150,7 @@ export default {
   }
 }
 
-[data-theme='dark'] div ::v-deep {
+.dark-mode div ::v-deep {
   h2, h3, p {
     color: theme('colors.dark.onSurfacePrimary');
   }

@@ -70,7 +70,7 @@
             target="_blank"
             rel="noopener sponsored"
           >
-            <img :src="`/img/sponsors/${$theme.value}/${sponsor.img}`" :alt="sponsor.name" :title="sponsor.name" class="inline-block" :class="sponsor.class">
+            <img :src="`/img/sponsors/${$colorMode.value}/${sponsor.img}`" :alt="sponsor.name" :title="sponsor.name" class="inline-block" :class="sponsor.class">
           </a>
         </div>
         <div class="text-center">

@@ -106,7 +106,7 @@ export default {
 </script>
 
 <style lang="scss">
-[data-theme='light'] .algolia-wrapper {
+.light-mode .algolia-wrapper {
   .nui-search-input {
     background-color: theme('colors.gray.200') !important;
     color: theme('colors.nuxt.gray') !important;
@@ -141,7 +141,7 @@ export default {
   }
 }
 
-[data-theme='dark'] .algolia-wrapper {
+.dark-mode .algolia-wrapper {
   .nui-search-input {
     background-color: theme('colors.dark.surface') !important;
     color: theme('colors.dark.onSurfaceSecondary') !important;

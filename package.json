@@ -9,7 +9,7 @@
     "@nuxtjs/tailwindcss": "1.4.0",
     "@snackbar/core": "^1.7.0",
     "cookie": "^0.4.0",
-    "defu": "^1.0.0",
+    "defu": "^2.0.2",
     "degit": "^2.8.0",
     "front-matter": "^3.1.0",
     "fs-extra": "^8.1.0",

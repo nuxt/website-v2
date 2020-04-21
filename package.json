@@ -18,7 +18,7 @@
     "highlight.js": "^9.18.1",
     "intersection-observer": "^0.7.0",
     "lodash": "^4.17.15",
-    "marked": "^0.8.0",
+    "marked": "^1.0.0",
     "micro": "^9.3.4",
     "node-fetch": "^2.6.0",
     "normalize.css": "^8.0.1",

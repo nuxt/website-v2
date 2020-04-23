@@ -22,6 +22,19 @@
             <img :src="`/img/sponsors/${$colorMode.value}/${sponsor.img}`" :alt="sponsor.name" class="inline-block" :class="sponsor.class">
           </a>
         </div>
+        <div class="text-center pb-8">
+          <h2 class="uppercase text text-light-onSurfacePrimary dark:text-dark-onSurfacePrimary font-medium pb-8 transition-colors duration-300 ease-linear">
+            <span class="pb-2 border-b-2 border-nuxt-lightgreen">Educational Partner</span>
+          </h2>
+          <a
+            class="sponsor inline-block m-4"
+            href="https://vueschool.io?friend=nuxt"
+            target="_blank"
+            rel="noopener sponsored"
+          >
+            <img :src="`/img/partners/${$colorMode.value}/vueschool.svg`" alt="Vue School logo" title="Vue School is an official Nuxt.js Educational Partner" class="inline-block h-10">
+          </a>
+        </div>
         <div class="text-center">
           <nui-button :to="{ name: 'sponsor-nuxtjs' }" class="py-3 px-6 text-base">
             <nui-svg-go slot="icon" class="h-5 -mt-1 mr-1" />

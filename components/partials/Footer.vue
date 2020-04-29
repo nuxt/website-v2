@@ -97,6 +97,8 @@ export default {
 </script>
 <style lang="scss" scope>
 .footer {
-  padding-bottom: calc(4em + env(safe-area-inset-bottom));
+  @media (max-width: 767px) {
+    padding-bottom: calc(4em + env(safe-area-inset-bottom));
+  }
 }
 </style>

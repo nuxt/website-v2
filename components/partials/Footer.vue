@@ -95,3 +95,8 @@ export default {
   }
 }
 </script>
+<style lang="scss" scope>
+.footer {
+  padding-bottom: calc(4em + env(safe-area-inset-bottom));
+}
+</style>

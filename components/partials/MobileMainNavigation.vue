@@ -46,6 +46,8 @@ export default {
 
 <style lang="scss" scoped>
 .header_mobile_nav {
-  padding-bottom: env(safe-area-inset-bottom);
+  @media(orientation: portrait) {
+    padding-bottom: env(safe-area-inset-bottom);
+  }
 }
 </style>

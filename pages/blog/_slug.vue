@@ -72,14 +72,13 @@ export default {
       title: this.post.title,
       titleTemplate: '%s - NuxtJS',
       meta: [
-        { name: 'description', hid: 'description', content: this.post.description },
+        { hid: 'description', name: 'description', content: this.post.description },
         // Open Graph
-        { hid: 'og:site_name', property: 'og:site_name', content: 'NuxtJS' },
-        { hid: 'og:title', name: 'og:title', content: this.post.title },
-        { hid: 'og:description', name: 'og:description', content: this.post.description },
-        { hid: 'og:type', name: 'og:type', content: 'article' },
-        { hid: 'og:url', name: 'og:url', content: `https://nuxtjs.org/blog/${this.post.slug}` },
-        { hid: 'og:image', name: 'og:image', content: this.socialImage },
+        { hid: 'og:title', property: 'og:title', content: this.post.title },
+        { hid: 'og:description', property: 'og:description', content: this.post.description },
+        { hid: 'og:type', property: 'og:type', content: 'article' },
+        { hid: 'og:url', property: 'og:url', content: `https://nuxtjs.org/blog/${this.post.slug}` },
+        { hid: 'og:image', property: 'og:image', content: this.socialImage },
         // Twitter Card
         { hid: 'twitter:card', name: 'twitter:card', content: 'summary_large_image' },
         { hid: 'twitter:site', name: 'twitter:site', content: '@nuxt_js' },

@@ -161,6 +161,7 @@ export default {
         { name: 'twitter:image:alt', content: 'Nuxt.js Logo' }
 =======
         // Open Graph
+<<<<<<< HEAD
         { hid: 'og:title', name: 'og:title', content: this.$store.state.lang.homepage.meta.title },
         { hid: 'og:description', name: 'og:description', content: this.$store.state.lang.homepage.meta.description },
         { hid: 'og:type', name: 'og:type', content: 'website' },
@@ -180,13 +181,26 @@ export default {
 >>>>>>> 04981a67 (update homepage)
 =======
   // },
+=======
+        { hid: 'og:title', property: 'og:title', content: this.$store.state.lang.homepage.meta.title },
+        { hid: 'og:description', property: 'og:description', content: this.$store.state.lang.homepage.meta.description },
+        // Twitter Card
+        { hid: 'twitter:title', name: 'twitter:title', content: this.$store.state.lang.homepage.meta.title },
+        { hid: 'twitter:description', name: 'twitter:description', content: this.$store.state.lang.homepage.meta.description }
+      ]
+    }
+  }
+>>>>>>> 419b6c38 (chore: improve meta and add sponsor)
   // async asyncData () {
   //   let sponsors = await fetch('https://opencollective.com/nuxtjs/members/organizations.json').then(res => res.json())
   //   return {
   //     sponsors
   //   }
+<<<<<<< HEAD
 >>>>>>> 2fb6a223 (sponsors and flat routes with header links)
   }
+=======
+>>>>>>> 419b6c38 (chore: improve meta and add sponsor)
 }
 </script>
 

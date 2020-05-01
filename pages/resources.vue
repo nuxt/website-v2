@@ -71,6 +71,7 @@ export default {
   components: {
     iThemes
   },
+<<<<<<< HEAD
   head: {
     title: 'NuxtJS Themes',
     meta: [
@@ -109,6 +110,22 @@ export default {
           link: 'https://1.envato.market/scutum-nuxt',
           img: 'nuxt-scutum-dashboard'
         }
+=======
+  head () {
+    const title = 'NuxtJS Resources'
+    const description = 'Discover a panel of resources made by our partners. By using thoses affiliate resources links, you are helping us to maintain and develop the Open Source Framework.'
+
+    return {
+      title,
+      meta: [
+        { hid: 'description', name: 'description', content: description },
+        // Open Graph
+        { hid: 'og:title', property: 'og:title', content: title },
+        { hid: 'og:description', property: 'og:description', content: description },
+        // Twitter Card
+        { hid: 'twitter:title', name: 'twitter:title', content: title },
+        { hid: 'twitter:description', name: 'twitter:description', content: description }
+>>>>>>> 419b6c38 (chore: improve meta and add sponsor)
       ]
     }
   }

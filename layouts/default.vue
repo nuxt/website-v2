@@ -56,7 +56,23 @@ export default {
     })
     return {
       htmlAttrs: { lang: this.$store.state.locale },
-      link
+      link,
+      meta: [
+        // Open Graph
+        { hid: 'og:site_name', property: 'og:site_name', content: 'NuxtJS' },
+        { hid: 'og:title', property: 'og:title', content: this.$store.state.lang.homepage.meta.title },
+        { hid: 'og:description', property: 'og:description', content: this.$store.state.lang.homepage.meta.description },
+        { hid: 'og:type', property: 'og:type', content: 'website' },
+        { hid: 'og:url', property: 'og:url', content: canonical },
+        { hid: 'og:image', property: 'og:image', content: 'https://nuxtjs.org/nuxt-card.png' },
+        // Twitter Card
+        { hid: 'twitter:card', name: 'twitter:card', content: 'summary_large_image' },
+        { hid: 'twitter:site', name: 'twitter:site', content: '@nuxt_js' },
+        { hid: 'twitter:title', name: 'twitter:title', content: this.$store.state.lang.homepage.meta.title },
+        { hid: 'twitter:description', name: 'twitter:description', content: this.$store.state.lang.homepage.meta.description },
+        { hid: 'twitter:image', name: 'twitter:image', content: 'https://nuxtjs.org/nuxt-card.png' },
+        { hid: 'twitter:image:alt', name: 'twitter:image:alt', content: 'The NuxtJS Framework' }
+      ]
     }
   },
   components: {

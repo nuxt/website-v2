@@ -180,6 +180,7 @@ import iDesign from '@/components/svg/fogg/design'
 
 export default {
   transition: 'logos',
+<<<<<<< HEAD
   head: {
     title: 'Logos',
     titleTemplate: '%s - Nuxt.js',
@@ -194,6 +195,27 @@ export default {
   },
   components: {
     iDesign
+=======
+  components: {
+    iDesign
+  },
+  head () {
+    const title = 'Design Resources - NuxtJS'
+    const description = 'Download NuxtJS design resources (SVG, icons, emoji and favicon).'
+
+    return {
+      title,
+      meta: [
+        { hid: 'description', name: 'description', content: description },
+        // Open Graph
+        { hid: 'og:title', property: 'og:title', content: title },
+        { hid: 'og:description', property: 'og:description', content: description },
+        // Twitter Card
+        { hid: 'twitter:title', name: 'twitter:title', content: title },
+        { hid: 'twitter:description', name: 'twitter:description', content: description }
+      ]
+    }
+>>>>>>> 419b6c38 (chore: improve meta and add sponsor)
   }
 }
 </script>

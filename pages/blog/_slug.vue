@@ -81,12 +81,19 @@ export default {
         { name: 'og:url', content: `https://nuxtjs.org/blog/${this.post.slug}` },
         { name: 'og:image', content: this.socialImage },
         // Twitter Card
+<<<<<<< HEAD
         { name: 'twitter:card', content: 'summary_large_image' },
         { name: 'twitter:site', content: '@nuxt_js' },
         { name: 'twitter:title', content: this.post.title },
         { name: 'twitter:description', content: this.post.description },
         { name: 'twitter:image', content: this.socialImage },
         { name: 'twitter:image:alt', content: this.post.imgUrl ? 'Blog post image' : 'NuxtJS Logo' }
+=======
+        { hid: 'twitter:title', name: 'twitter:title', content: this.post.title },
+        { hid: 'twitter:description', name: 'twitter:description', content: this.post.description },
+        { hid: 'twitter:image', name: 'twitter:image', content: this.socialImage },
+        { hid: 'twitter:image:', name: 'twitter:image:alt', content: this.post.imgUrl ? 'Blog post image' : 'NuxtJS' }
+>>>>>>> 419b6c38 (chore: improve meta and add sponsor)
       ]
     }
   }

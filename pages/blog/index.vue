@@ -32,10 +32,19 @@ export default {
     return { posts }
   },
   head () {
+    const title = 'NuxtJS Blog'
+    const description = 'Discover articles from the core team and contributors about NuxtJS, tips and tricks included!'
+
     return {
-      title: 'NuxtJS Blog',
+      title,
       meta: [
-        { hid: 'description', name: 'description', content: 'Discover articles from the core team and contributors about NuxtJS, tips and tricks included!' }
+        { hid: 'description', name: 'description', content: description },
+        // Open Graph
+        { hid: 'og:title', property: 'og:title', content: title },
+        { hid: 'og:description', property: 'og:description', content: description },
+        // Twitter Card
+        { hid: 'twitter:title', name: 'twitter:title', content: title },
+        { hid: 'twitter:description', name: 'twitter:description', content: description }
       ]
     }
   }

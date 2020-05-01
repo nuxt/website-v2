@@ -174,6 +174,26 @@ export default {
         }
       ]
     }
+<<<<<<< HEAD
+=======
+  },
+  head () {
+    const title = 'The NuxtJS Team'
+    const description = 'NuxtJS has a very active and engaged team that is constantly striving to push Nuxt forward.'
+
+    return {
+      title,
+      meta: [
+        { hid: 'description', name: 'description', content: description },
+        // Open Graph
+        { hid: 'og:title', property: 'og:title', content: title },
+        { hid: 'og:description', property: 'og:description', content: description },
+        // Twitter Card
+        { hid: 'twitter:title', name: 'twitter:title', content: title },
+        { hid: 'twitter:description', name: 'twitter:description', content: description }
+      ]
+    }
+>>>>>>> 419b6c38 (chore: improve meta and add sponsor)
   }
 }
 </script>

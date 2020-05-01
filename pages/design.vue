@@ -91,8 +91,7 @@ export default {
   head: {
     title: 'Design Resources - NuxtJS',
     meta: [
-      { hid: 'description', name: 'description', content: 'Download NuxtJS design resources (SVG, icons, emoji and favicon).' },
-      { name: 'og:image', content: 'https://nuxtjs.org/meta_640.png' }
+      { hid: 'description', name: 'description', content: 'Download NuxtJS design resources (SVG, icons, emoji and favicon).' }
     ]
   }
 }

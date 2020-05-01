@@ -39,14 +39,14 @@ export default {
         { hid: 'og:description', name: 'og:description', content: this.$store.state.lang.homepage.meta.description },
         { hid: 'og:type', name: 'og:type', content: 'website' },
         { hid: 'og:url', name: 'og:url', content: 'https://nuxtjs.org' },
-        { hid: 'og:image', name: 'og:image', content: 'https://nuxtjs.org/meta_640.png' },
+        { hid: 'og:image', name: 'og:image', content: 'https://nuxtjs.org/nuxt-card.png' },
         // Twitter Card
         { hid: 'twitter:card', name: 'twitter:card', content: 'summary' },
         { hid: 'twitter:site', name: 'twitter:site', content: '@nuxt_js' },
         { hid: 'twitter:title', name: 'twitter:title', content: this.$store.state.lang.homepage.meta.title },
         { hid: 'twitter:description', name: 'twitter:description', content: this.$store.state.lang.homepage.meta.description },
-        { hid: 'twitter:image', name: 'twitter:image', content: 'https://nuxtjs.org/meta_640.png' },
-        { hid: 'twitter:image:alt', name: 'twitter:image:alt', content: 'NuxtJS Logo' }
+        { hid: 'twitter:image', name: 'twitter:image', content: 'https://nuxtjs.org/nuxt-card.png' },
+        { hid: 'twitter:image:alt', name: 'twitter:image:alt', content: 'The NuxtJS Framework' }
       ]
     }
   // },

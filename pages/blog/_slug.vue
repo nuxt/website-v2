@@ -59,7 +59,7 @@ export default {
       return docLink
     },
     socialImage () {
-      const image = this.post.imgUrl ? this.post.imgUrl : 'meta_640.png'
+      const image = this.post.imgUrl ? this.post.imgUrl : 'nuxt-card.png'
       if (this.isTest || this.isDev) {
         return `${this.host}/${image}`
       } else {

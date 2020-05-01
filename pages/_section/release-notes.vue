@@ -77,7 +77,13 @@ export default {
       title: 'Release Notes',
       titleTemplate: '%s - Nuxt.js',
       meta: [
-        { hid: 'description', name: 'description', content: 'Nuxt.js release notes from Github.' }
+        { hid: 'description', name: 'description', content: 'Nuxt.js release notes.' },
+        // Open Graph
+        { hid: 'og:title', property: 'og:title', content: 'Release Notes' },
+        { hid: 'og:description', property: 'og:description', content: 'Nuxt.js release notes.' },
+        // Twitter Card
+        { hid: 'twitter:title', name: 'twitter:title', content: 'Release Notes' },
+        { hid: 'twitter:description', name: 'twitter:description', content: 'Nuxt.js release notes.' }
       ]
     }
   }

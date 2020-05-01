@@ -100,12 +100,22 @@ export default {
   //   this.$refs.shop.appendChild(jquery)
   //   this.$refs.shop.appendChild(script)
   },
-  head: {
-    title: 'The NuxtJS Shop',
-    meta: [
-      { hid: 'description', name: 'description', content: '' },
-      { }
-    ]
+  head () {
+    const title = 'The NuxtJS Shop'
+    const description = 'You want to support the NuxtJS project and show your love to the rest of the community? Here our products with the best quality ever!'
+
+    return {
+      title,
+      meta: [
+        { hid: 'description', name: 'description', content: description },
+        // Open Graph
+        { hid: 'og:title', property: 'og:title', content: title },
+        { hid: 'og:description', property: 'og:description', content: description },
+        // Twitter Card
+        { hid: 'twitter:title', name: 'twitter:title', content: title },
+        { hid: 'twitter:description', name: 'twitter:description', content: description }
+      ]
+    }
   }
 }
 </script>

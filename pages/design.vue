@@ -184,8 +184,12 @@ export default {
     title: 'Logos',
     titleTemplate: '%s - Nuxt.js',
     meta: [
+<<<<<<< HEAD
       { hid: 'description', name: 'description', content: 'Download Nuxt.js logos (SVG, icons, emoji and favicon).' },
       { name: 'og:image', content: 'https://nuxtjs.org/meta_640.png' },
+=======
+      { hid: 'description', name: 'description', content: 'Download NuxtJS design resources (SVG, icons, emoji and favicon).' }
+>>>>>>> 01593a68 (chore: change og:image)
     ]
   },
   components: {

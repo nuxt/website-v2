@@ -145,6 +145,7 @@ export default {
       title: this.$store.state.lang.homepage.meta.title,
       meta: [
         { name: 'description', hid: 'description', content: this.$store.state.lang.homepage.meta.description },
+<<<<<<< HEAD
         // Open Grapg
         { name: 'og:title', content: this.$store.state.lang.homepage.meta.title },
         { name: 'og:description', content: this.$store.state.lang.homepage.meta.description },
@@ -158,6 +159,21 @@ export default {
         { name: 'twitter:description', content: this.$store.state.lang.homepage.meta.description },
         { name: 'twitter:image', content: 'https://nuxtjs.org/meta_640.png' },
         { name: 'twitter:image:alt', content: 'Nuxt.js Logo' }
+=======
+        // Open Graph
+        { hid: 'og:title', name: 'og:title', content: this.$store.state.lang.homepage.meta.title },
+        { hid: 'og:description', name: 'og:description', content: this.$store.state.lang.homepage.meta.description },
+        { hid: 'og:type', name: 'og:type', content: 'website' },
+        { hid: 'og:url', name: 'og:url', content: 'https://nuxtjs.org' },
+        { hid: 'og:image', name: 'og:image', content: 'https://nuxtjs.org/nuxt-card.png' },
+        // Twitter Card
+        { hid: 'twitter:card', name: 'twitter:card', content: 'summary' },
+        { hid: 'twitter:site', name: 'twitter:site', content: '@nuxt_js' },
+        { hid: 'twitter:title', name: 'twitter:title', content: this.$store.state.lang.homepage.meta.title },
+        { hid: 'twitter:description', name: 'twitter:description', content: this.$store.state.lang.homepage.meta.description },
+        { hid: 'twitter:image', name: 'twitter:image', content: 'https://nuxtjs.org/nuxt-card.png' },
+        { hid: 'twitter:image:alt', name: 'twitter:image:alt', content: 'The NuxtJS Framework' }
+>>>>>>> 01593a68 (chore: change og:image)
       ]
     }
 <<<<<<< HEAD

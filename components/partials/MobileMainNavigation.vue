@@ -45,10 +45,6 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-/*.header_mobile_nav a {
-  padding-bottom: max(0.5rem,env(safe-area-inset-bottom));
-}*/
-
 nav {
   padding-bottom: constant(safe-area-inset-bottom);
   padding-bottom: env(safe-area-inset-bottom);

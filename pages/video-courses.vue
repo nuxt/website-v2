@@ -72,11 +72,22 @@ export default {
       ]
     }
   },
-  head: {
-    title: 'NuxtJS Video Courses',
-    meta: [
-      { hid: 'description', name: 'description', content: 'With the video courses below created by our partner VueSchool you can discover and learn more about the Nuxt.js Framework.' }
-    ]
+  head () {
+    const title = 'NuxtJS Video Courses'
+    const description = 'With the video courses below created by our partner VueSchool you can discover and learn more about the Nuxt.js Framework.'
+
+    return {
+      title,
+      meta: [
+        { hid: 'description', name: 'description', content: description },
+        // Open Graph
+        { hid: 'og:title', property: 'og:title', content: title },
+        { hid: 'og:description', property: 'og:description', content: description },
+        // Twitter Card
+        { hid: 'twitter:title', name: 'twitter:title', content: title },
+        { hid: 'twitter:description', name: 'twitter:description', content: description }
+      ]
+    }
   }
 }
 </script>

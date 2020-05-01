@@ -117,7 +117,8 @@ export default {
           { name: 'UX Planet', img: 'ux-planet.png', url: 'https://uxplanet.org/top-ui-ux-design-agencies-user-experience-firms-8c54697e290/?ref=nuxt', class: 'h-8' },
           { name: 'FireStickHow', img: 'fire-stick-how.png', url: 'https://www.firestickhow.com/?ref=nuxt', class: 'h-8' },
           { name: 'CrossWordSolver', img: 'crosswordsolver.svg', url: 'https://www.crosswordsolver.com/?ref=nuxt', class: 'h-8' },
-          { name: 'Top Web Agencies', img: 'top-web-agencies.png', url: 'https://medium.com/@niksundin/best-web-design-companies-1872e445775f?ref=nuxt', class: 'h-8' }
+          { name: 'Top Web Agencies', img: 'top-web-agencies.png', url: 'https://medium.com/@niksundin/best-web-design-companies-1872e445775f?ref=nuxt', class: 'h-8' },
+          { name: 'MiniTool', img: 'minitool.png', url: 'https://www.minitool.com', class: 'h-8' }
         ],
         special: [
           { name: 'Google Chrome', img: 'google-chrome.svg', url: 'https://www.google.com/chrome/?ref=nuxt', class: 'h-12' }
@@ -153,11 +154,22 @@ export default {
       return this.onetime.current ? this.onetime[this.onetime.current] : null
     }
   },
-  head: {
-    title: 'Sponsor NuxtJS Development',
-    meta: [
-      { hid: 'description', name: 'description', content: 'You can support NuxtJS development via different methods and ensure regular updates to the framework.' }
-    ]
+  head () {
+    const title = 'Sponsor NuxtJS Development'
+    const description = 'You can support NuxtJS development via different methods and ensure regular updates to the framework.'
+
+    return {
+      title,
+      meta: [
+        { hid: 'description', name: 'description', content: description },
+        // Open Graph
+        { hid: 'og:title', property: 'og:title', content: title },
+        { hid: 'og:description', property: 'og:description', content: description },
+        // Twitter Card
+        { hid: 'twitter:title', name: 'twitter:title', content: title },
+        { hid: 'twitter:description', name: 'twitter:description', content: description }
+      ]
+    }
   }
 }
 </script>

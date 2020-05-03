@@ -15,7 +15,7 @@
     "fs-extra": "^8.1.0",
     "get-port": "^5.1.1",
     "glob": "^7.1.6",
-    "highlight.js": "^9.18.1",
+    "highlight.js": "^10.0.2",
     "intersection-observer": "^0.7.0",
     "lodash": "^4.17.15",
     "marked": "^0.8.0",

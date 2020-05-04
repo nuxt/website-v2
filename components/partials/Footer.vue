@@ -1,5 +1,5 @@
 <template>
-  <footer class="footer z-10 relative">
+  <footer class="z-10 relative pb-16 lg:pb-0 lg:block">
     <newsletter-form/>
     <div class="bg-light-elevatedSurface dark:bg-dark-elevatedSurface shadow-nuxt transition-colors duration-300 ease-linear">
       <div class="container mx-auto px-4">
@@ -25,11 +25,6 @@
         <div class="container mx-auto px-4 flex flex-row items-center content-center justify-between py-4 ">
           <div class="flex-1 flex">
             <dark-mode-toggle />
-            <!-- <nui-select v-model="currentTheme" :options="themes">
-              <template v-slot:icon>
-                <component :is="currentThemeIcon" />
-              </template>
-            </nui-select> -->
           </div>
           <div class="flex-1 text-center hidden sm:block">
             <a class="block" href="/" @click.prevent="$router.push('/')" @click.right.stop.prevent="$router.push('/design')">
@@ -69,11 +64,6 @@ export default {
   ],
   data () {
     return {
-      // themes: [
-      //   // { value: 'system', text: 'Auto', icon: 'nui-sun' },
-      //   { value: 'light', text: 'Light', icon: 'nui-sun' },
-      //   { value: 'dark', text: 'Dark', icon: 'nui-moon' }
-      // ],
       links: {
         discover: [
           { key: 'Design resources', to: '/design' },

@@ -4,7 +4,7 @@
     <main class="lg:block relative pt-16 lg:pt-24">
       <nuxt />
     </main>
-    <nui-footer class="pb-16 lg:pb-0 lg:block" />
+    <nui-footer />
     <mobile-main-navigation />
   </div>
 </template>

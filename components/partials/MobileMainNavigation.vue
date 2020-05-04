@@ -1,5 +1,5 @@
 <template>
-  <nav class="header_mobile_nav fixed bg-light-elevatedSurface dark:bg-dark-elevatedSurface border-t left-0 bottom-0 right-0 z-30 border-light-border dark:border-dark-border block lg:hidden transition-colors duration-300 ease-linear">
+  <nav class="fixed bg-light-elevatedSurface dark:bg-dark-elevatedSurface border-t left-0 bottom-0 right-0 z-30 border-light-border dark:border-dark-border block lg:hidden transition-colors duration-300 ease-linear">
     <div class="flex justify-between items-center h-16">
       <template v-for="link in headerLinks">
         <nuxt-link v-if="link.type === 'dynamic'" :key="link.slug" class="block md:flex md:justify-center w-full p-2 md:p-4 text-light-onSurfacePrimary dark:text-dark-onSurfacePrimary hover:no-underline hover:text-primary-base dark:hover:text-primary-base text-center visited:text-nuxt-gray transition-colors duration-300 ease-linear" :to="{ name: link.routeName, params: { section: link.slug } }">
@@ -45,9 +45,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.header_mobile_nav {
-  @media(orientation: portrait) {
-    padding-bottom: env(safe-area-inset-bottom);
-  }
+nav {
+  padding-bottom: env(safe-area-inset-bottom);
 }
 </style>

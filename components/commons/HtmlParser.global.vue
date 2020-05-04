@@ -25,7 +25,7 @@ export default {
       let target = event.target
       let i = 0
 
-      // Go throught 5 parents max to find a tag
+      // Go through 5 parents max to find a tag
       while (
         i < 5 &&
         !(target instanceof HTMLAnchorElement) &&

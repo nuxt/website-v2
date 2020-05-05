@@ -80,7 +80,7 @@ export default {
   & img {
     opacity: 0.75;
     filter: grayscale(100%);
-    transition: all 0.5s;
+    transition: all 250ms ease;
   }
   &:hover {
     & img {

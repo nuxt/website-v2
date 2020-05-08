@@ -1,6 +1,8 @@
 const locale = process.env.NUXT_LOCALE || 'en'
 
 export default {
+  target: 'static',
+  ssr: true,
   // modern: 'client',
   head: {
     meta: [
@@ -21,9 +23,6 @@ export default {
   },
   buildModules: [
     '@nuxtjs/eslint-module',
-    ['~/modules/docs/', { port: 3001 }],
-    '~/modules/crawler/',
-    '~/modules/static/',
     '~/modules/components/',
     // https://github.com/nuxt-community/color-mode-module
     '@nuxtjs/color-mode',
@@ -39,6 +38,7 @@ export default {
     '@nuxtjs/pwa'
   ],
   modules: [
+    ['~/modules/docs/', { port: 3001 }],
     // https://http.nuxtjs.org
     '@nuxt/http'
   ],
@@ -69,7 +69,7 @@ export default {
   },
   loading: { color: '#41B883' },
   generate: {
-    fallback: true,
+    fallback: '404.html', // for Netlify
     interval: 100
   }
 }

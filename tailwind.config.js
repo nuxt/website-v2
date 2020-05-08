@@ -126,5 +126,18 @@ module.exports = {
         })
       })
     })
-  ]
+  ],
+  purge: {
+    enabled: true,
+    content: [
+      'components/**/*.vue',
+      'layouts/**/*.vue',
+      'pages/**/*.vue',
+      'plugins/**/*.js',
+      'nuxt.config.js'
+    ],
+    options: {
+      whitelist: ['dark-mode', 'light-mode']
+    }
+  }
 }

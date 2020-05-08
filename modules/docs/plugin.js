@@ -1,7 +1,4 @@
 export default (ctx, inject) => {
-  if (process.client && process.static) {
-    return
-  }
   const $docs = {
     get (path) {
       return fetch('<%= options.url %>' + path).then((response) => {

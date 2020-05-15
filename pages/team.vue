@@ -10,7 +10,7 @@
             The development of NuxtJS and its ecosystem is guided by an international team. We have a very active and engaged team that is constantly striving to push Nuxt forward.
           </h3>
         </div>
-        <i-team class="w-2/3 mx-auto lg:mx-0 lg:w-5/12 lg:-mt-8 text-light-elevatedSurface dark:text-dark-elevatedSurface"/>
+        <TeamIllustration class="w-2/3 mx-auto lg:mx-0 lg:w-5/12 lg:-mt-8 text-light-elevatedSurface dark:text-dark-elevatedSurface"/>
       </div>
       <div class="bg-light-surface dark:bg-dark-surface rounded p-8 transition-colors duration-300 ease-linear">
         <h2 class="text-2xl xl:text-3xl text-center text-light-onSurfacePrimary dark:text-dark-onSurfacePrimary font-medium leading-normal mb-6 pt-4">
@@ -31,9 +31,15 @@
                   {{ profile.city }}
                 </div>
                 <div class="py-2">
-                  <a :href="`https://github.com/${profile.github}`" rel="noopener" target="_blank" class="mx-1"><github-icon class="h-5 inline-block text-gray-700 hover:text-gray-900 cursor-pointer text-light-onSurfacePrimary dark:text-dark-onSurfacePrimary transition-colors duration-300 ease-linear" /></a>
-                  <a v-if="profile.twitter" :href="`https://twitter.com/${profile.twitter}`" rel="noopener" target="_blank" class="mx-1"><twitter-icon class="h-5 ml-1 inline-block text-blue-600 hover:text-blue-400" /></a>
-                  <a v-if="profile.website" :href="profile.website" rel="noopener" target="_blank" class="mx-1"><website-icon class="h-5 inline-block text-nuxt-green hover:text-nuxt-lightgreen" /></a>
+                  <a :href="`https://github.com/${profile.github}`" rel="noopener" target="_blank" class="mx-1">
+                    <github-icon class="h-5 inline-block text-gray-700 hover:text-gray-900 cursor-pointer text-light-onSurfacePrimary dark:text-dark-onSurfacePrimary transition-colors duration-300 ease-linear" />
+                  </a>
+                  <a v-if="profile.twitter" :href="`https://twitter.com/${profile.twitter}`" rel="noopener" target="_blank" class="mx-1">
+                    <twitter-icon class="h-5 ml-1 inline-block text-blue-600 hover:text-blue-400" />
+                  </a>
+                  <a v-if="profile.website" :href="profile.website" rel="noopener" target="_blank" class="mx-1">
+                    <website-icon class="h-5 inline-block text-nuxt-green hover:text-nuxt-lightgreen" />
+                  </a>
                 </div>
               </div>
             </div>
@@ -45,17 +51,17 @@
 </template>
 
 <script>
-import TwitterIcon from '@/components/svg/Twitter'
-import GithubIcon from '@/components/svg/Github'
-import WebsiteIcon from '@/components/svg/Link'
-import iTeam from '@/components/svg/fogg/team'
+import TwitterIcon from '@/assets/icons/twitter.svg?inline'
+import GithubIcon from '@/assets/icons/github.svg?inline'
+import WebsiteIcon from '@/assets/icons/link.svg?inline'
+import TeamIllustration from '@/assets/illustrations/team.svg?inline'
 
 export default {
   components: {
     TwitterIcon,
     GithubIcon,
     WebsiteIcon,
-    iTeam
+    TeamIllustration
   },
   data () {
     return {

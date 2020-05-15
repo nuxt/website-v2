@@ -23,7 +23,6 @@ export default {
   },
   buildModules: [
     '@nuxtjs/eslint-module',
-    '~/modules/components/',
     // https://github.com/nuxt-community/color-mode-module
     '@nuxtjs/color-mode',
     // https://github.com/nuxt-community/netlify-files-module
@@ -31,11 +30,14 @@ export default {
     // https://github.com/nuxt-community/style-resources-module
     '@nuxtjs/style-resources',
     // https://github.com/Developmint/nuxt-svg-loader/
-    'nuxt-svg-loader',
+    // 'nuxt-svg-loader',
+    '@nuxtjs/svg',
     // https://github.com/Atinux/nuxt-tailwindcss/
     '@nuxtjs/tailwindcss',
     // https://pwa.nuxtjs.org
-    '@nuxtjs/pwa'
+    '@nuxtjs/pwa',
+    // https://www.npmjs.com/package/@nuxt/components
+    '@nuxt/components'
   ],
   modules: [
     ['~/modules/docs/', { port: 3001 }],

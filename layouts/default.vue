@@ -1,25 +1,17 @@
 <template>
   <div>
-    <nui-header />
+    <TheHeader />
     <main class="lg:block relative pt-16 lg:pt-24">
-      <nuxt />
+      <Nuxt />
     </main>
-    <nui-footer />
-    <mobile-main-navigation />
+    <TheFooter />
+    <TheMobileBottomNav />
   </div>
 </template>
 
 <script>
-import nuiHeader from '@/components/partials/Header'
-import nuiFooter from '@/components/partials/Footer'
-import MobileMainNavigation from '@/components/partials/MobileMainNavigation'
 
 export default {
-  components: {
-    nuiHeader,
-    nuiFooter,
-    MobileMainNavigation
-  },
   head () {
     let canonical = `https://nuxtjs.org${this.$route.path}`
     if (this.$store.state.locale !== 'en') {

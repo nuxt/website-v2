@@ -1,34 +1,18 @@
 <template>
   <div>
-    <home-welcome />
-    <home-why />
-    <home-companies />
-    <home-modes />
+    <HomeWelcome />
+    <HomeWhy />
+    <HomeCompanies />
+    <HomeModes />
     <!-- <home-targets/>
     <home-features/> -->
-    <home-sponsors />
+    <HomeSponsors />
   </div>
 </template>
 
 <script>
-import homeWelcome from '@/components/partials/home/welcome'
-import homeWhy from '@/components/partials/home/why'
-import homeCompanies from '@/components/partials/home/companies'
-// import homeFeatures from '@/components/partials/home/features'
-// import homeTargets from '@/components/partials/home/targets'
-import homeSponsors from '@/components/partials/home/sponsors'
-import homeModes from '@/components/partials/home/modes'
 
 export default {
-  components: {
-    homeWelcome,
-    homeWhy,
-    homeCompanies,
-    // homeFeatures,
-    // homeTargets,
-    homeSponsors,
-    homeModes
-  },
   head () {
     return {
       title: this.$store.state.lang.homepage.meta.title,

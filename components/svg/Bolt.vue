@@ -1,3 +1,0 @@
-<template>
-  <svg aria-hidden="true" focusable="false" data-prefix="fad" data-icon="bolt" class="svg-inline--fa fa-bolt fa-w-10" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><g class="fa-group"><path class="fa-secondary" fill="currentColor" d="M224 24.19a23.89 23.89 0 0 1-.79 6L180.61 160l-37.9 128H24a24 24 0 0 1-24-24 24.45 24.45 0 0 1 .21-3.2l32-240A24 24 0 0 1 56 0h144a24.09 24.09 0 0 1 24 24.19z" opacity="0.4"></path><path class="fa-primary" fill="currentColor" d="M319.93 184.07a23.93 23.93 0 0 1-3.22 11.93l-176 304a24 24 0 0 1-44.1-17.5l46.1-194.5 37.9-128H296a24 24 0 0 1 23.93 24.07z"></path></g></svg>
-</template>

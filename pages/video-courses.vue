@@ -9,12 +9,12 @@
           <h3 class="xl:text-lg text-light-onSurfaceSecondary dark:text-dark-onSurfaceSecondary font-medium leading-relaxed mb-8">
             With the video courses below created by our partner VueSchool you can discover and learn more about the Nuxt.js Framework.
           </h3>
-          <nui-button href="https://vueschool.io/?friend=nuxt&utm_source=Nuxtjs.org&utm_medium=Link&utm_content=HomeHero&utm_content=V1" rel="noopener sponsored" target="_blank" class="sm:mr-4 py-3 px-6 text-base mb-4">
-            <nui-svg-meteor slot="icon" class="h-5 -mb-1 mr-1" />
+          <AppButton href="https://vueschool.io/?friend=nuxt&utm_source=Nuxtjs.org&utm_medium=Link&utm_content=HomeHero&utm_content=V1" rel="noopener sponsored" target="_blank" class="sm:mr-4 py-3 px-6 text-base mb-4">
+            <MeteorIcon slot="icon" class="h-5 -mb-1 mr-1" />
             Discover vueschool
-          </nui-button>
+          </AppButton>
         </div>
-        <i-themes class="w-2/3 mx-auto lg:mx-0 lg:w-5/12 lg:-mt-8 text-light-elevatedSurface dark:text-dark-elevatedSurface"/>
+        <ThemesIllustration class="w-2/3 mx-auto lg:mx-0 lg:w-5/12 lg:-mt-8 text-light-elevatedSurface dark:text-dark-elevatedSurface"/>
       </div>
       <section class="flex flex-wrap items-stretch -mx-4">
         <div v-for="course in courses" :key="course.title" class="w-full p-4">
@@ -24,10 +24,10 @@
                 {{ course.title }}
               </h4>
               <p class="mb-3 text-gray-600">{{ course.description }}</p>
-              <nui-button :href="course.link" rel="noopener sponsored" target="_blank" class="sm:mr-4 p-3 mt-3 text-sm text-left">
-                <nui-svg-play slot="icon" class="h-4 -mb-1 mr-1" />
+              <AppButton :href="course.link" rel="noopener sponsored" target="_blank" class="sm:mr-4 p-3 mt-3 text-sm text-left">
+                <PlayCircleIcon slot="icon" class="h-4 -mb-1 mr-1" />
                 START COURSE
-              </nui-button>
+              </AppButton>
             </div>
             <img :src="'/courses/' + course.img + '.png'" :srcset="'/courses/' + course.img + '-2x.png 2x'" :alt="course.title" class="block w-auto rounded">
           </div>
@@ -38,15 +38,15 @@
 </template>
 
 <script>
-import iThemes from '@/components/svg/fogg/themes'
-import nuiSvgPlay from '@/components/svg/PlayCircle'
-import nuiSvgMeteor from '@/components/svg/Meteor.vue'
+import ThemesIllustration from '@/assets/illustrations/themes.svg?inline'
+import PlayCircleIcon from '@/assets/icons/play-circle.svg?inline'
+import MeteorIcon from '@/assets/icons/meteor.svg?inline'
 
 export default {
   components: {
-    iThemes,
-    nuiSvgPlay,
-    nuiSvgMeteor
+    ThemesIllustration,
+    PlayCircleIcon,
+    MeteorIcon
   },
   data () {
     return {

@@ -10,7 +10,7 @@
             With the themes below built by our partners from Creative Tim and Theme Forest you can see how a real world application is built, with Nuxt.js stack behind.
           </h3>
         </div>
-        <i-themes class="w-2/3 mx-auto lg:mx-0 lg:w-5/12 lg:-mt-8 text-light-elevatedSurface dark:text-dark-elevatedSurface"/>
+        <ThemesIllustration class="w-2/3 mx-auto lg:mx-0 lg:w-5/12 lg:-mt-8 text-light-elevatedSurface dark:text-dark-elevatedSurface"/>
       </div>
       <section class="flex flex-wrap items-stretch -mx-4">
         <div v-for="theme in themes" :key="theme.title" class="w-full p-4">
@@ -23,10 +23,10 @@
               </h4>
               <p class="mb-3 text-gray-600">{{ theme.description }}</p>
               <p v-if="theme.discount" class="text-sm italic text-nuxt-lightgreen" v-html="theme.discount" />
-              <nui-button :href="theme.link" rel="noopener sponsored" target="_blank" class="sm:mr-4 p-3 mt-3 text-sm text-left">
+              <AppButton :href="theme.link" rel="noopener sponsored" target="_blank" class="sm:mr-4 p-3 mt-3 text-sm text-left">
                 <!-- <nui-svg-shopping slot="icon" class="h-4 -mb-1 mr-1" /> -->
                 GET IT for {{ theme.price }}
-              </nui-button>
+              </AppButton>
             </div>
           </div>
         </div>
@@ -36,11 +36,11 @@
 </template>
 
 <script>
-import iThemes from '@/components/svg/fogg/themes'
+import ThemesIllustration from '@/assets/illustrations/themes.svg?inline'
 
 export default {
   components: {
-    iThemes
+    ThemesIllustration
   },
   data () {
     return {

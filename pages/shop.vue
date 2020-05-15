@@ -10,7 +10,7 @@
             You want to support the NuxtJS project and show your love to the rest of the community?<br/> Here our products with the best quality ever!
           </h3>
         </div>
-        <i-shop class="w-2/3 mx-auto lg:mx-0 lg:w-5/12 lg:-mt-8 text-light-elevatedSurface dark:text-dark-elevatedSurface"/>
+        <ShopIllustration class="w-2/3 mx-auto lg:mx-0 lg:w-5/12 lg:-mt-8 text-light-elevatedSurface dark:text-dark-elevatedSurface"/>
       </div>
       <section class="flex flex-wrap items-stretch -mx-4">
         <div v-for="(product, i) in products" :key="i" class="w-full lg:w-1/2 p-4">
@@ -21,9 +21,9 @@
                 {{ product.name }}
               </h4>
               <p class="mb-4 text-gray-600 leading-relaxed">{{ product.description }}</p>
-              <nui-button href="#" rel="noopener sponsored" target="_blank" class="sm:mr-4 p-3 mt-3 text-sm text-left">
+              <AppButton href="#" rel="noopener sponsored" target="_blank" class="sm:mr-4 p-3 mt-3 text-sm text-left">
                 Coming soon
-              </nui-button>
+              </AppButton>
               <!-- <button class="snipcart-add-item inline-block bg-nuxt-lightgreen text-white font-medium text-sm px-4 py-2 shadow uppercase rounded hover:bg-nuxt-green hover:shadow-md sm:mr-4 p-3 mt-3 text-sm text-left" :data-item-id="i + 1" :data-item-name="product.name" :data-item-description="product.description" :data-item-image="'/shop/' + product.img + '.png'" :data-item-price="product.price" :data-item-url="{ name: 'shop' }">
               </button> -->
             </div>
@@ -35,11 +35,11 @@
 </template>
 
 <script>
-import iShop from '@/components/svg/fogg/shop'
+import ShopIllustration from '@/assets/illustrations/shop.svg?inline'
 
 export default {
   components: {
-    iShop
+    ShopIllustration
   },
   data () {
     return {

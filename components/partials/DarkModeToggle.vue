@@ -1,9 +1,9 @@
 <template>
   <button class="relative overflow-hidden px-4 flex items-center bg-gray-200 dark:bg-dark-surface dark:text-dark-onSurfaceSecondary rounded-full h-10 outline-none text-light-onSurfacePrimary dark:text-dark-onSurfacePrimary transition-colors duration-300 ease-linear" @click="setCurrentTheme">
     <span class="relative mr-2 overflow-hidden inline-block w-5 h-5 flex items-center justify-center">
-      <nui-moon class="w-5 h-5 absolute" :class="$colorMode.preference === 'dark' ? 'show' : 'hide'"/>
-      <nui-system class="w-5 h-5 absolute" :class="$colorMode.preference === 'system' ? 'show' : 'hide'"/>
-      <nui-sun class="w-5 h-5 absolute" :class="$colorMode.preference === 'light' ? 'show' : 'hide'"/>
+      <MoonIcon class="w-5 h-5 absolute" :class="$colorMode.preference === 'dark' ? 'show' : 'hide'"/>
+      <SystemIcon class="w-5 h-5 absolute" :class="$colorMode.preference === 'system' ? 'show' : 'hide'"/>
+      <SunIcon class="w-5 h-5 absolute" :class="$colorMode.preference === 'light' ? 'show' : 'hide'"/>
     </span>
     <transition name="from-bottom-to-bottom" mode="out-in">
       <span v-if="$colorMode.preference === 'dark'" key="dark" class="inline-block font-medium mr-1">Dark</span>
@@ -14,15 +14,15 @@
 </template>
 
 <script>
-import nuiSun from '@/components/svg/Sun'
-import nuiMoon from '@/components/svg/Moon'
-import nuiSystem from '@/components/svg/System'
+import SunIcon from '@/assets/icons/sun.svg?inline'
+import MoonIcon from '@/assets/icons/moon.svg?inline'
+import SystemIcon from '@/assets/icons/system.svg?inline'
 
 export default {
   components: {
-    nuiSun,
-    nuiMoon,
-    nuiSystem
+    SunIcon,
+    MoonIcon,
+    SystemIcon
   },
   props: [],
   data () {

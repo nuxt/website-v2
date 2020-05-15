@@ -4,23 +4,23 @@
       <div v-if="post.langFallback" class="p-4 mb-6 rounded bg-orange-200 dark:text-light-onSurfacePrimary">
         ⚠️ You are looking at the english version of the page. Help us translate it <a :href="docLink" class="text-orange-600">here</a>.
       </div>
-      <nuxt-link :to="{ name: 'blog' }" class="inline-flex items-center dark:hover:text-nuxt-lightgreen light:hover:text-nuxt-lightgreen dark:text-dark-onSurfaceSecondary light:text-light-onSurfaceSecondary">
-        <nuiSvgArrowLeft class="h-5 mr-2"/>
+      <NuxtLink :to="{ name: 'blog' }" class="inline-flex items-center dark:hover:text-nuxt-lightgreen light:hover:text-nuxt-lightgreen dark:text-dark-onSurfaceSecondary light:text-light-onSurfaceSecondary">
+        <ArrowLeftIcon class="h-5 mr-2"/>
         back to blog list
-      </nuxt-link>
-      <blogPostItem :post="post" />
-      <blogPostNavigationLinks :links="post.links" />
+      </NuxtLink>
+      <BlogpostItem :post="post" />
+      <BlogpostNavigationLinks :links="post.links" />
     </div>
   </div>
 </template>
 
 <script>
 import { mapState } from 'vuex'
-import nuiSvgArrowLeft from '@/components/svg/ArrowLeft.vue'
+import ArrowLeftIcon from '@/assets/icons/arrow-left.svg?inline'
 
 export default {
   components: {
-    nuiSvgArrowLeft
+    ArrowLeftIcon
   },
   async asyncData ({ $docs, params, store, error }) {
     const slug = params.slug

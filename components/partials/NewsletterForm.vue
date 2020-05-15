@@ -1,9 +1,9 @@
 <template>
-  <nui-container class="px-4">
+  <AppContainer class="px-4">
     <section id="subscribe-to-newsletter" class="py-8 px-3 -mx-4 lg:mx-0 text-center rounded-t-lg">
       <h2 class="text-3xl font-medium text-light-onSurfacePrimary dark:text-dark-onSurfacePrimary mb-2 transition-colors duration-300 ease-linear" v-html="headerWordings.attrs.title" />
       <p class="mb-6 text-light-onSurfaceSecondary dark:text-dark-onSurfaceSecondary transition-colors duration-300 ease-linear" v-html="headerWordings.body" />
-      <client-only>
+      <ClientOnly>
         <form class="flex flex-row justify-center mb-2" @submit.prevent="subscribe">
           <div>
             <label for="news-email" class="hidden">{{ formWordings.email }}</label>
@@ -13,9 +13,9 @@
         </form>
         <p v-if="subscribed" class="text-nuxt-green py-1">{{ formWordings.subscribed_messages.pre }} {{ subscribedEmail }} {{ formWordings.subscribed_messages.post }}</p>
         <p v-if="error" class="text-red-600 py-1">{{ error }}</p>
-      </client-only>
+      </ClientOnly>
     </section>
-  </nui-container>
+  </AppContainer>
 </template>
 
 <script>

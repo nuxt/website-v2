@@ -13,20 +13,18 @@
               Released on <time :datetime="release.date" :title="new Date(release.date).toString()">{{ release.date | dateFormat }}</time>
             </span>
           </div>
-          <html-parser v-show="show === release.name" class="bg-light-surface dark:bg-dark-surface px-4 pb-4 break-words" :content="release.body" />
+          <AppHtmlParser v-show="show === release.name" class="bg-light-surface dark:bg-dark-surface px-4 pb-4 break-words" :content="release.body" />
         </div>
-        <contribute/>
+        <AppContribute/>
       </article>
     </div>
-    <nui-affix class="opacity-transition" :class="{ 'opacity-25': $store.state.focusMode }">
-      <nui-ads key="release-notes" class="mx-auto" />
-    </nui-affix>
+    <AffixBlock class="opacity-transition" :class="{ 'opacity-25': $store.state.focusMode }">
+      <AdsBlock key="release-notes" class="mx-auto" />
+    </AffixBlock>
   </div>
 </template>
 
 <script>
-import nuiAds from '@/components/partials/Ads'
-import nuiAffix from '@/components/partials/Affix'
 
 const monthNames = [
   'January', 'February', 'March',
@@ -36,10 +34,6 @@ const monthNames = [
 ]
 
 export default {
-  components: {
-    nuiAds,
-    nuiAffix
-  },
   validate ({ params }) {
     return params.section === 'guide'
   },

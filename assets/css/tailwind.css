@@ -76,3 +76,10 @@ a.nuxt-link-exact-active, a.nuxt-link-active {
 .opacity-transition {
   transition: opacity 0.5s ease-out;
 }
+
+.truncate-multiline-3 {
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+}

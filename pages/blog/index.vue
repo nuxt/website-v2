@@ -10,21 +10,21 @@
             Discover articles from the core team and contributors about NuxtJS, tips and tricks included!
           </h3>
         </div>
-        <i-design class="w-2/3 mx-auto lg:mx-0 lg:w-5/12 lg:-mt-8 text-light-elevatedSurface dark:text-dark-elevatedSurface"/>
+        <DesignIllustration class="w-2/3 mx-auto lg:mx-0 lg:w-5/12 lg:-mt-8 text-light-elevatedSurface dark:text-dark-elevatedSurface"/>
       </div>
       <section>
-        <blogPostPreviewItem v-for="(post, index) in posts" :key="index" :post="post" />
+        <BlogpostPreviewItem v-for="(post, index) in posts" :key="index" :post="post" />
       </section>
     </div>
   </div>
 </template>
 
 <script>
-import iDesign from '@/components/svg/fogg/design'
+import DesignIllustration from '@/assets/illustrations/design.svg?inline'
 
 export default {
   components: {
-    iDesign
+    DesignIllustration
   },
   async asyncData ({ $docs, store }) {
     const path = `/${store.state.locale}/blog`

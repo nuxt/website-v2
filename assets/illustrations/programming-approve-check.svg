@@ -1,0 +1,37 @@
+  <svg id="Duotone" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 112">
+  <style>
+.cls-n1 { fill: #00C58E; }
+.cls-n2 { fill: #108775; }
+.cls-n3 { fill: #2F495E; }
+
+.cls-1{fill:#00C58E;}
+.cls-2{fill:none;}
+.cls-2,.cls-3,.cls-6{stroke:#2F495E;}
+.cls-2,.cls-3{stroke-linecap:round;stroke-linejoin:round;}
+.cls-3,.cls-5{fill:#fff;}
+.cls-4,.cls-6{fill:#00C58E;}
+.cls-6{stroke-miterlimit:10;}
+</style>
+
+    <g id="Icons">
+      <g id="Background">
+        <path class="cls-1" d="M90.34,56A40,40,0,1,0,13.9,72.5H86.77A39.7,39.7,0,0,0,90.34,56Z" />
+        <line class="cls-2" x1="11.34" y1="72.5" x2="89.34" y2="72.5" />
+        <line class="cls-2" x1="6.84" y1="72.5" x2="9.34" y2="72.5" />
+        <line class="cls-2" x1="91.34" y1="72.5" x2="93.84" y2="72.5" />
+      </g>
+      <g id="Scene">
+        <ellipse class="cls-1" cx="49.74" cy="85.79" rx="27.6" ry="1.72" />
+        <path class="cls-3" d="M26.15,47.86H71a2,2,0,0,1,2,2v29a0,0,0,0,1,0,0H24.15a0,0,0,0,1,0,0v-29A2,2,0,0,1,26.15,47.86Z" />
+        <polygon class="cls-4" points="69.58 51.31 27.65 51.31 27.6 78.89 69.58 78.89 69.58 51.31" />
+        <polygon class="cls-5" points="59.18 51.31 29.56 78.89 27.6 78.89 27.65 51.31 59.18 51.31" />
+        <polygon class="cls-2" points="69.58 51.31 27.65 51.31 27.6 78.89 69.58 78.89 69.58 51.31" />
+        <path class="cls-3" d="M20.84,78.89h55.5a1,1,0,0,1,1,1v2.45a0,0,0,0,1,0,0H19.84a0,0,0,0,1,0,0V79.89A1,1,0,0,1,20.84,78.89Z" />
+        <path class="cls-3" d="M77.34,82.34a60,60,0,0,1-16.42,2.3H36.26a60,60,0,0,1-16.42-2.3h57.5Z" />
+        <circle class="cls-5" cx="71.89" cy="43.54" r="16.97" />
+        <circle class="cls-2" cx="71.89" cy="43.54" r="16.97" />
+        <path class="cls-6" d="M68.36,52.38a2.45,2.45,0,0,1-1.74-.72l-4.93-4.93a2.46,2.46,0,1,1,3.48-3.48l3.19,3.18,10-10a2.46,2.46,0,0,1,3.48,3.49L70.1,51.66A2.45,2.45,0,0,1,68.36,52.38Z" />
+      </g>
+    </g>
+  </svg>
+

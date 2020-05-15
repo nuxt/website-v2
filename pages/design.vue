@@ -11,7 +11,7 @@
             You can freely use our logos as long as you mention NuxtJS and link to nuxtjs.org.
           </h3>
         </div>
-        <i-design class="w-2/3 mx-auto lg:mx-0 lg:w-5/12 lg:-mt-8 text-light-elevatedSurface dark:text-dark-elevatedSurface"/>
+        <DesignIllustration class="w-2/3 mx-auto lg:mx-0 lg:w-5/12 lg:-mt-8 text-light-elevatedSurface dark:text-dark-elevatedSurface"/>
       </div>
       <div class="flex flex-wrap -mx-4">
         <div class="w-full lg:w-1/2 p-4">
@@ -81,12 +81,12 @@
 </template>
 
 <script>
-import iDesign from '@/components/svg/fogg/design'
+import DesignIllustration from '@/assets/illustrations/design.svg?inline'
 
 export default {
   transition: 'logos',
   components: {
-    iDesign
+    DesignIllustration
   },
   head () {
     const title = 'Design Resources - NuxtJS'

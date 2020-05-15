@@ -12,7 +12,7 @@
             You can support NuxtJS development via the following methods:
           </h3>
         </div>
-        <i-sponsor class="w-2/3 mx-auto lg:mx-0 lg:w-5/12 lg:-mt-8 text-light-elevatedSurface dark:text-dark-elevatedSurface"/>
+        <SponsorIllustration class="w-2/3 mx-auto lg:mx-0 lg:w-5/12 lg:-mt-8 text-light-elevatedSurface dark:text-dark-elevatedSurface"/>
       </div>
       <section class="flex flex-wrap bg-light-surface dark:bg-dark-surface p-8 rounded my-12">
         <div class="w-full lg:w-2/3 text-center lg:text-left">
@@ -27,16 +27,16 @@
               <img src="/img/wallet/paypal.png" alt="Paypal" class="h-6 block">
             </a>
             <a href="#btc" class="flex items-center my-2 bg-gray-200 hover:bg-gray-300 rounded-full p-2 pr-6 font-bold mx-2" :class="{ 'bg-gray-300': onetime.current === 'btc' }" @click.prevent="onetime.current = 'btc'">
-              <nui-svg-btc class="mr-3" /> BTC
+              <BtcLogo class="mr-3" /> BTC
             </a>
             <a href="#bch" class="flex items-center my-2 bg-gray-200 hover:bg-gray-300 rounded-full p-2 pr-6 font-bold mx-2" :class="{ 'bg-gray-300': onetime.current === 'bch' }" @click.prevent="onetime.current = 'bch'">
-              <nui-svg-bch class="mr-3" /> BCH
+              <BchLogo class="mr-3" /> BCH
             </a>
             <a href="#eth" class="flex items-center my-2 bg-gray-200 hover:bg-gray-300 rounded-full p-2 pr-6 font-bold mx-2" :class="{ 'bg-gray-300': onetime.current === 'eth' }" @click.prevent="onetime.current = 'eth'">
-              <nui-svg-eth class="mr-3" /> ETH
+              <EthLogo class="mr-3" /> ETH
             </a>
             <a href="#ltc" class="flex items-center my-2 bg-gray-200 hover:bg-gray-300 rounded-full p-2 pr-6 font-bold mx-2" :class="{ 'bg-gray-300': onetime.current === 'ltc' }" @click.prevent="onetime.current = 'ltc'">
-              <nui-svg-ltc class="mr-3" /> LTC
+              <LtcLogo class="mr-3" /> LTC
             </a>
           </div>
         </div>
@@ -70,14 +70,16 @@
             target="_blank"
             rel="noopener sponsored"
           >
-            <img :src="`/img/sponsors/${$colorMode.value}/${sponsor.img}`" :alt="sponsor.name" :title="sponsor.name" class="inline-block" :class="sponsor.class">
+            <ClientOnly>
+              <img :src="`/img/sponsors/${$colorMode.value}/${sponsor.img}`" :alt="sponsor.name" :title="sponsor.name" class="inline-block" :class="sponsor.class">
+            </ClientOnly>
           </a>
         </div>
         <div class="text-center">
-          <nui-button href="https://opencollective.com/nuxtjs" class="py-3 px-6 text-base">
-            <nui-svg-play slot="icon" class="h-5 -mt-1 mr-1" />
+          <AppButton href="https://opencollective.com/nuxtjs" class="py-3 px-6 text-base">
+            <OpenCollectiveIcon slot="icon" class="h-5 -mt-1 mr-1 inline-block" />
             Become a sponsor
-          </nui-button>
+          </AppButton>
         </div>
       </section>
     </div>
@@ -85,21 +87,21 @@
 </template>
 
 <script>
-import nuiSvgPlay from '@/components/svg/OpenCollective.vue'
-import nuiSvgBtc from '@/components/svg/wallet/btc.vue'
-import nuiSvgBch from '@/components/svg/wallet/bch.vue'
-import nuiSvgEth from '@/components/svg/wallet/eth.vue'
-import nuiSvgLtc from '@/components/svg/wallet/ltc.vue'
-import iSponsor from '@/components/svg/fogg/sponsor'
+import OpenCollectiveIcon from '@/assets/icons/open-collective.svg?inline'
+import BtcLogo from '@/assets/icons/btc.svg?inline'
+import BchLogo from '@/assets/icons/bch.svg?inline'
+import EthLogo from '@/assets/icons/eth.svg?inline'
+import LtcLogo from '@/assets/icons/ltc.svg?inline'
+import SponsorIllustration from '@/assets/illustrations/sponsor.svg?inline'
 
 export default {
   components: {
-    iSponsor,
-    nuiSvgPlay,
-    nuiSvgBtc,
-    nuiSvgBch,
-    nuiSvgEth,
-    nuiSvgLtc
+    SponsorIllustration,
+    OpenCollectiveIcon,
+    BtcLogo,
+    BchLogo,
+    EthLogo,
+    LtcLogo
   },
   data () {
     return {

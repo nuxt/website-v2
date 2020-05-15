@@ -1,7 +1,7 @@
 <template>
-  <nui-container v-if="isDisplayed" class="mt-6 lg:-mt-1 xl:-mt-2">
+  <AppContainer v-if="isDisplayed" class="mt-6 lg:-mt-1 xl:-mt-2">
     <div class="bg-deep-cove bg-blackfriday">
-      <icon-times class="fill-current text-gray-500 w-3 m-2 float-right cursor-pointer hover:text-gray-300" @click.native="isDisplayed = false"/>
+      <TimesIcon class="fill-current text-gray-500 w-3 m-2 float-right cursor-pointer hover:text-gray-300" @click.native="isDisplayed = false"/>
       <a href="https://vueschool.io/sales/blackfriday?friend=nuxt&utm_source=Nuxtjs.org&utm_medium=Link&utm_content=TopBanner&utm_campaign=Black%20Friday" target="_blank" rel="noopener sponsored" class="px-4 flex items-center justify-between py-3 max-w-160 md:py-2 md:mx-auto">
         <img src="/img/blackfriday/percent.png" width="47px" alt="percent" class="w-8 md:w-12">
         <img src="/img/blackfriday/vueschool_logo.svg" width="160px" alt="VueSchool" class="hidden lg:inline-block md:max-w-full">
@@ -12,15 +12,15 @@
         </div>
       </a>
     </div>
-  </nui-container>
+  </AppContainer>
 </template>
 
 <script>
-import IconTimes from '@/components/svg/Times'
+import TimesIcon from '@/assets/icons/times.svg?inline'
 
 export default {
   components: {
-    IconTimes
+    TimesIcon
   },
   data () {
     return {

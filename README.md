@@ -15,18 +15,6 @@ git clone https://github.com/nuxt/docs
 
 The markdown files are store at [https://github.com/nuxt/docs](https://github.com/nuxt/docs), this is why we clone it inside the nuxtjs.org directory.
 
-
-Update your `/etc/hosts` to have the following lines:
-
-```
-127.0.0.1       nuxt
-127.0.0.1       ja.nuxt
-127.0.0.1       ko.nuxt
-127.0.0.1       ru.nuxt
-127.0.0.1       zh.nuxt
-127.0.0.1       fr.nuxt
-```
-
 ## Development
 
 Start a dev server on `http://nuxt:3000`
@@ -35,14 +23,21 @@ Start a dev server on `http://nuxt:3000`
 yarn dev
 ```
 
-## Production
+To change the locale, use `NUXT_LOCALE` env:
 
-Make sure to install [serve](http://npmjs.com/package/serve) with `yarn global add serve`.
+``bash
+# start the documentation in french
+NUXT_LOCALE=fr yarn dev
+```
+
+The value represents the directory name inside [docs](https://github.com/nuxt/docs), default value is `en`.
+
+## Production
 
 ```bash
 yarn generate
-serve dist/
-# Checkout http://localhost:5000
+yarn serve
+# Checkout http://localhost:3000
 ```
 
 # zh.nuxtjs.org

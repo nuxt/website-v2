@@ -22,7 +22,7 @@
     "micro": "^9.3.4",
     "node-fetch": "^2.6.0",
     "normalize.css": "^8.0.1",
-    "nuxt-edge": "^2.13.0-26482486.631be3a1",
+    "nuxt-edge": "^2.13.0-26496727.6a6794e0",
     "nuxt-svg-loader": "^1.2.0",
     "octicons": "^8.5.0",
     "reading-time": "^1.2.0",
@@ -30,7 +30,6 @@
     "vue-observe-visibility": "^0.4.6"
   },
   "devDependencies": {
-    "@nuxt/components": "^0.2.1",
     "@nuxtjs/color-mode": "^1.0.0",
     "@nuxtjs/eslint-config": "^2.0.2",
     "@nuxtjs/eslint-module": "^2.0.0",

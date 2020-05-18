@@ -35,15 +35,15 @@ export default {
     // https://github.com/Atinux/nuxt-tailwindcss/
     '@nuxtjs/tailwindcss',
     // https://pwa.nuxtjs.org
-    '@nuxtjs/pwa',
-    // https://www.npmjs.com/package/@nuxt/components
-    '@nuxt/components'
+    '@nuxtjs/pwa'
   ],
   modules: [
     ['~/modules/docs/', { port: 3001 }],
     // https://http.nuxtjs.org
     '@nuxt/http'
   ],
+  // Auto import components, see https://github.com/nuxt/components
+  components: true,
   colorMode: {
     preference: 'light' // disable system
   },

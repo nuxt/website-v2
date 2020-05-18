@@ -20,9 +20,6 @@ export default {
         if (!lang) {
           return
         }
-        if (process.env.NODE_ENV === 'development') {
-          lang.path = lang.path.replace('https', 'http').replace('nuxtjs.org', window.location.host.split('.').slice(-1)[0])
-        }
         window.location.href = lang.path
       }
     }

@@ -25,7 +25,7 @@ yarn dev
 
 To change the locale, use `NUXT_LOCALE` env:
 
-``bash
+```bash
 # start the documentation in french
 NUXT_LOCALE=fr yarn dev
 ```

@@ -74,6 +74,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+/* purgecss start ignore */
 .light-mode div ::v-deep {
   h2, h3, p {
     color: theme('colors.light.onSurfacePrimary');
@@ -372,7 +373,6 @@ div ::v-deep {
   /* Ocean Dark Theme */
   /* https://github.com/gavsiu */
   /* Original theme - https://github.com/chriskempson/base16 */
-  /* purgecss start ignore */
 
   /* Ocean Comment */
   .hljs-comment,
@@ -444,7 +444,7 @@ div ::v-deep {
   .hljs-strong {
     font-weight: bold;
   }
-  /* purgecss end ignore */
 
 }
+/* purgecss end ignore */
 </style>

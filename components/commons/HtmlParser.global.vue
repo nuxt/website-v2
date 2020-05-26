@@ -74,7 +74,12 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+<<<<<<< HEAD:components/commons/HtmlParser.global.vue
 [data-theme='light'] div ::v-deep {
+=======
+/* purgecss start ignore */
+.light-mode div ::v-deep {
+>>>>>>> 527d15bb (docs: add images color-mode blog (#363)):components/common/AppHtmlParser.vue
   h2, h3, p {
     color: theme('colors.light.onSurfacePrimary');
   }
@@ -372,7 +377,6 @@ div ::v-deep {
   /* Ocean Dark Theme */
   /* https://github.com/gavsiu */
   /* Original theme - https://github.com/chriskempson/base16 */
-  /* purgecss start ignore */
 
   /* Ocean Comment */
   .hljs-comment,
@@ -444,7 +448,7 @@ div ::v-deep {
   .hljs-strong {
     font-weight: bold;
   }
-  /* purgecss end ignore */
 
 }
+/* purgecss end ignore */
 </style>

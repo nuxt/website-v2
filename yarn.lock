@@ -3257,6 +3257,7 @@
     ufo "^0.7.7"
     upath "^2.0.1"
 
+<<<<<<< HEAD
 "@nuxtjs/eslint-config-typescript@latest":
   version "6.0.1"
   resolved "https://registry.yarnpkg.com/@nuxtjs/eslint-config-typescript/-/eslint-config-typescript-6.0.1.tgz#11e91a5e25aca6855ec7525080da694c4b3cd4d4"
@@ -3267,11 +3268,18 @@
   resolved "https://registry.yarnpkg.com/@babel/plugin-transform-template-literals/-/plugin-transform-template-literals-7.2.0.tgz#d87ed01b8eaac7a92473f608c97c089de2ba1e5b"
   integrity sha512-FkPix00J9A/XWXv4VoKJBMeSkyY9x/TqIh76wzcdfl57RJJcf8CehQ08uwfhCDNtRQYtHQKBTwKZDEyjE13Lwg==
 >>>>>>> 5e315c38 (app: Support ad blockers, upgrade Nuxt)
+=======
+"@nuxt/babel-preset-app-edge@2.13.0-26506104.f13b3752":
+  version "2.13.0-26506104.f13b3752"
+  resolved "https://registry.yarnpkg.com/@nuxt/babel-preset-app-edge/-/babel-preset-app-edge-2.13.0-26506104.f13b3752.tgz#7b4f438fe4a4c2d0c8fd4f474f83d4a91d16a41b"
+  integrity sha512-c61HfEEQnl7v4DvPnJivbRajbdUBNEWmLBRzz2IBOXBmNMGd43uXCgUC6sKGFFiPUsFqdVkCjo4/X8zxpoXv4A==
+>>>>>>> 527d15bb (docs: add images color-mode blog (#363))
   dependencies:
     "@nuxtjs/eslint-config" "6.0.1"
     "@typescript-eslint/eslint-plugin" "^4.25.0"
     "@typescript-eslint/parser" "^4.25.0"
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 "@nuxtjs/eslint-config@6.0.1":
   version "6.0.1"
@@ -3306,9 +3314,54 @@
     hasha "^5.2.2"
     jimp-compact "^0.16.1"
     lodash.template "^4.5.0"
+=======
+"@nuxt/builder-edge@2.13.0-26506104.f13b3752":
+  version "2.13.0-26506104.f13b3752"
+  resolved "https://registry.yarnpkg.com/@nuxt/builder-edge/-/builder-edge-2.13.0-26506104.f13b3752.tgz#7780b71c71a9f77bf1596f83c4deee10d4d16f45"
+  integrity sha512-NCezXrO5xGMfXBxUNLM/gGvWL5HywQWmtVmta0bHR0TSoXlofM6pCss6dKG5Acl2sSaSsbVHbrx+JCfYygbBTA==
+  dependencies:
+    "@nuxt/devalue" "^1.2.4"
+    "@nuxt/utils-edge" "2.13.0-26506104.f13b3752"
+    "@nuxt/vue-app-edge" "2.13.0-26506104.f13b3752"
+    "@nuxt/webpack-edge" "2.13.0-26506104.f13b3752"
+    chalk "^3.0.0"
+    chokidar "^3.4.0"
+    consola "^2.12.1"
+    fs-extra "^8.1.0"
+    glob "^7.1.6"
+    hash-sum "^2.0.0"
+    ignore "^5.1.4"
+    lodash "^4.17.15"
+    pify "^4.0.1"
+    semver "^7.3.2"
+    serialize-javascript "^3.0.0"
+    upath "^1.2.0"
+
+"@nuxt/cli-edge@2.13.0-26506104.f13b3752":
+  version "2.13.0-26506104.f13b3752"
+  resolved "https://registry.yarnpkg.com/@nuxt/cli-edge/-/cli-edge-2.13.0-26506104.f13b3752.tgz#071884047d3188dc08df1dad7a84654c978ef215"
+  integrity sha512-n3TTGtFeIb17fMU02JZrXJ/rEk22bbkyB8VoNqO4lePE8rRqCV3qZ4HFlcNNa7Ar1lLUmPXK11j9LMBkeOsqTw==
+  dependencies:
+    "@nuxt/config-edge" "2.13.0-26506104.f13b3752"
+    "@nuxt/utils-edge" "2.13.0-26506104.f13b3752"
+    boxen "^4.2.0"
+    chalk "^3.0.0"
+    compression "^1.7.4"
+    connect "^3.7.0"
+    consola "^2.12.1"
+    esm "^3.2.25"
+    execa "^3.4.0"
+    exit "^0.1.2"
+    fs-extra "^8.1.0"
+    hable "^3.0.0"
+    minimist "^1.2.5"
+    opener "1.5.1"
+    pretty-bytes "^5.3.0"
+>>>>>>> 527d15bb (docs: add images color-mode blog (#363))
     serve-static "^1.14.1"
     workbox-cdn "^5.1.4"
 
+<<<<<<< HEAD
 "@nuxtjs/recaptcha@^1.0.4":
   version "1.0.4"
   resolved "https://registry.npmjs.org/@nuxtjs/recaptcha/-/recaptcha-1.0.4.tgz"
@@ -3328,6 +3381,43 @@
     cookie "^0.3.1"
     mustache "^2.3.0"
     stack-trace "0.0.10"
+=======
+"@nuxt/components@^0.2.3":
+  version "0.2.5"
+  resolved "https://registry.yarnpkg.com/@nuxt/components/-/components-0.2.5.tgz#c47b40dadd810cc54853715dd0e0e482e79ffe4e"
+  integrity sha512-mmZBngU7uP4Z+hRUn3VD3H7K40WKFSqqnfZ6m2CWqjQV61jXdnhILPXdM878lOIAjX1MYnZZk6gAVV8JZ5Wq/A==
+
+"@nuxt/config-edge@2.13.0-26506104.f13b3752":
+  version "2.13.0-26506104.f13b3752"
+  resolved "https://registry.yarnpkg.com/@nuxt/config-edge/-/config-edge-2.13.0-26506104.f13b3752.tgz#ba8e76615a10654a18bc49ace9be6b2bf254939d"
+  integrity sha512-ttGiuuNR97IJRbF9KqSmgWECUoLyecFwSqXP1F3236dUe9lWsNCAURTCtlfaLv73Nw0LebNTdQAIpLYqz631Ig==
+  dependencies:
+    "@nuxt/utils-edge" "2.13.0-26506104.f13b3752"
+    consola "^2.12.1"
+    defu "^2.0.2"
+    destr "^0.1.4"
+    dotenv "^8.2.0"
+    esm "^3.2.25"
+    std-env "^2.2.1"
+
+"@nuxt/core-edge@2.13.0-26506104.f13b3752":
+  version "2.13.0-26506104.f13b3752"
+  resolved "https://registry.yarnpkg.com/@nuxt/core-edge/-/core-edge-2.13.0-26506104.f13b3752.tgz#ecb9ffcae2f60f185ca21651450dda7409115c10"
+  integrity sha512-x7vWk/z29UuZeUK+iTIB49SOtuvql7zIgAyBceD/JrfMLVRhZsll34J2rXpaM3PB9aDspBSV6qSM/4tUA68/4Q==
+  dependencies:
+    "@nuxt/config-edge" "2.13.0-26506104.f13b3752"
+    "@nuxt/devalue" "^1.2.4"
+    "@nuxt/server-edge" "2.13.0-26506104.f13b3752"
+    "@nuxt/utils-edge" "2.13.0-26506104.f13b3752"
+    "@nuxt/vue-renderer-edge" "2.13.0-26506104.f13b3752"
+    consola "^2.12.1"
+    debug "^4.1.1"
+    esm "^3.2.25"
+    fs-extra "^8.1.0"
+    hable "^3.0.0"
+    hash-sum "^2.0.0"
+    std-env "^2.2.1"
+>>>>>>> 527d15bb (docs: add images color-mode blog (#363))
 
 <<<<<<< HEAD
 "@polka/url@^1.0.0-next.15":
@@ -4132,6 +4222,7 @@
     string-width "^2.0.0"
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 "@nuxt/generator-edge@2.4.0-25783204.eef2af35":
   version "2.4.0-25783204.eef2af35"
   resolved "https://registry.yarnpkg.com/@nuxt/generator-edge/-/generator-edge-2.4.0-25783204.eef2af35.tgz#1b880c0c26e477774b5268e66045889f7aa6a8c0"
@@ -4152,6 +4243,14 @@
   integrity sha512-Yetb3O7U9k9Df3PYj/DMCbUwjSWjTHLXRxjLSTd5cY7ebfWj+iD4ZOHA25K6m+xzuu8SyIUyjf0MeBNVm1NH9w==
   dependencies:
     "@nuxt/utils" "2.12.2"
+=======
+"@nuxt/generator-edge@2.13.0-26506104.f13b3752":
+  version "2.13.0-26506104.f13b3752"
+  resolved "https://registry.yarnpkg.com/@nuxt/generator-edge/-/generator-edge-2.13.0-26506104.f13b3752.tgz#e420fbd9c47f5624bc8b58865205a7cca051f23c"
+  integrity sha512-8k9ad9UUNxU9DTgP2UiK7aI0lLm16vnJ6enVqZ24Mln/DFXF3uPKI6k+UZWJHVM91oCkOkskxuU6UilyCZCStA==
+  dependencies:
+    "@nuxt/utils-edge" "2.13.0-26506104.f13b3752"
+>>>>>>> 527d15bb (docs: add images color-mode blog (#363))
     chalk "^3.0.0"
     consola "^2.11.3"
 >>>>>>> 61b90c66 (feat: Add /blog section (#307))
@@ -4190,6 +4289,7 @@
     node-fetch "^2.3.0"
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 "@nuxt/server-edge@2.4.0-25783204.eef2af35":
   version "2.4.0-25783204.eef2af35"
   resolved "https://registry.yarnpkg.com/@nuxt/server-edge/-/server-edge-2.4.0-25783204.eef2af35.tgz#06e37372c8f22c206f78ae10a8b79f544f6fa094"
@@ -4211,6 +4311,16 @@
     "@nuxt/config" "2.12.2"
     "@nuxt/utils" "2.12.2"
     "@nuxt/vue-renderer" "2.12.2"
+=======
+"@nuxt/server-edge@2.13.0-26506104.f13b3752":
+  version "2.13.0-26506104.f13b3752"
+  resolved "https://registry.yarnpkg.com/@nuxt/server-edge/-/server-edge-2.13.0-26506104.f13b3752.tgz#11b7571ccac1b386b6947b72e609d4d7f0ce8b50"
+  integrity sha512-kxqu1TFzeRhk/jKCA0GSMgyWYTL64IGAmBsr6DSqGs7yCQiX6FeA9rHc99o82R2BNtEv9iIHy2DukMvBknRKWA==
+  dependencies:
+    "@nuxt/config-edge" "2.13.0-26506104.f13b3752"
+    "@nuxt/utils-edge" "2.13.0-26506104.f13b3752"
+    "@nuxt/vue-renderer-edge" "2.13.0-26506104.f13b3752"
+>>>>>>> 527d15bb (docs: add images color-mode blog (#363))
     "@nuxtjs/youch" "^4.2.3"
     chalk "^3.0.0"
     compression "^1.7.4"
@@ -4243,10 +4353,33 @@
     consola "^2.3.2"
     serialize-javascript "^1.6.1"
 
+<<<<<<< HEAD
 "@nuxt/vue-app-edge@2.4.0-25783204.eef2af35":
   version "2.4.0-25783204.eef2af35"
   resolved "https://registry.yarnpkg.com/@nuxt/vue-app-edge/-/vue-app-edge-2.4.0-25783204.eef2af35.tgz#e30c03722005d49ee36499e79fa13163d3935383"
   integrity sha512-/loZjbxVP34wiI0SwSsg0ZLNeZgc1IhEZO5CH1Du33HnyN61MPBZbcrDNH+wSImFKs3aYABVOggW6jaAt17PPA==
+=======
+"@nuxt/telemetry@^0.0.3":
+  version "0.0.3"
+  resolved "https://registry.yarnpkg.com/@nuxt/telemetry/-/telemetry-0.0.3.tgz#996b634363c47a5bf278e945d247b6353e2ac946"
+  integrity sha512-QQ+H0mW9O/Tpv0ebDaixbQ6y1rW6s0BfAcEPDK/x7mzV9ThZYpZTHblkyAmF7uvEv/1dCw51/edltfwtK1s5og==
+  dependencies:
+    ci-info "^2.0.0"
+    consola "^2.11.3"
+    defu "^2.0.4"
+    destr "^0.1.4"
+    fs-extra "^9.0.0"
+    git-url-parse "^11.1.2"
+    is-docker "^2.0.0"
+    node-fetch "^2.6.0"
+    node-machine-id "^1.1.12"
+    parse-git-config "^3.0.0"
+
+"@nuxt/utils-edge@2.13.0-26506104.f13b3752":
+  version "2.13.0-26506104.f13b3752"
+  resolved "https://registry.yarnpkg.com/@nuxt/utils-edge/-/utils-edge-2.13.0-26506104.f13b3752.tgz#d0fcd5543ada40e23641b98ee598a3b86f88fd6e"
+  integrity sha512-Jee0HRqCmAtWMRi6Le6vGaATmbzF2rUIwOmh1tXUZK9nCqCrMtuCTSFPUhXKtV35CiJP/l2b+DhwGHR7R4s1Qg==
+>>>>>>> 527d15bb (docs: add images color-mode blog (#363))
   dependencies:
     vue "^2.5.21"
     vue-meta "^1.5.8"
@@ -4306,10 +4439,17 @@
     signal-exit "^3.0.2"
     ua-parser-js "^0.7.21"
 
+<<<<<<< HEAD
 "@nuxt/vue-app@2.12.2":
   version "2.12.2"
   resolved "https://registry.yarnpkg.com/@nuxt/vue-app/-/vue-app-2.12.2.tgz#cc4b68356996eb71d398a30f3b9c9d15f7d531bc"
   integrity sha512-ZCnEIgxy+rpRdbHdGfAYdBJhWhiSFQsXPOtQb3lOz9PXUyd0bjAX1e1LbyyAjE1npBnKCL3XtF4hNRsJVK1oNw==
+=======
+"@nuxt/vue-app-edge@2.13.0-26506104.f13b3752":
+  version "2.13.0-26506104.f13b3752"
+  resolved "https://registry.yarnpkg.com/@nuxt/vue-app-edge/-/vue-app-edge-2.13.0-26506104.f13b3752.tgz#94b06a74f8a178ba2c9899701e079dd43432a4f1"
+  integrity sha512-4dzPknkGn0qSRrPApLP2lCzqTjzKqt9f7RiDtG6AuPdRRLyUsp2dwNH7u34YTXgTnlAoEbU6SHnBLlWzyz3xjQ==
+>>>>>>> 527d15bb (docs: add images color-mode blog (#363))
   dependencies:
     node-fetch "^2.6.0"
     unfetch "^4.1.0"
@@ -4317,10 +4457,11 @@
     vue-client-only "^2.0.0"
     vue-meta "^2.3.3"
     vue-no-ssr "^1.1.1"
-    vue-router "^3.1.6"
+    vue-router "^3.2.0"
     vue-template-compiler "^2.6.11"
     vuex "^3.1.3"
 
+<<<<<<< HEAD
 "@nuxt/vue-renderer@2.12.2":
   version "2.12.2"
   resolved "https://registry.yarnpkg.com/@nuxt/vue-renderer/-/vue-renderer-2.12.2.tgz#cc17d8183a3fcda665eaa176691f25f9589b7d82"
@@ -4329,12 +4470,23 @@
     "@nuxt/devalue" "^1.2.4"
     "@nuxt/utils" "2.12.2"
     consola "^2.11.3"
+=======
+"@nuxt/vue-renderer-edge@2.13.0-26506104.f13b3752":
+  version "2.13.0-26506104.f13b3752"
+  resolved "https://registry.yarnpkg.com/@nuxt/vue-renderer-edge/-/vue-renderer-edge-2.13.0-26506104.f13b3752.tgz#a429c98202b3dff4ca3b67f5005fbac7650a14dc"
+  integrity sha512-nqI2o4xLCrfXHJkjioh37ykeLo1RJ7nQUBcrAbs/7CCBbI+BSgY2OKfqjWN+d/IK9t0OqsvA2DTU14WJEDq4Lw==
+  dependencies:
+    "@nuxt/devalue" "^1.2.4"
+    "@nuxt/utils-edge" "2.13.0-26506104.f13b3752"
+    consola "^2.12.1"
+>>>>>>> 527d15bb (docs: add images color-mode blog (#363))
     fs-extra "^8.1.0"
     lru-cache "^5.1.1"
     vue "^2.6.11"
     vue-meta "^2.3.3"
     vue-server-renderer "^2.6.11"
 
+<<<<<<< HEAD
 "@nuxt/webpack@2.12.2":
   version "2.12.2"
   resolved "https://registry.yarnpkg.com/@nuxt/webpack/-/webpack-2.12.2.tgz#21cac1e6030d384191afc9260b5cd9edebdaa5d6"
@@ -4347,12 +4499,26 @@
     babel-loader "^8.1.0"
     cache-loader "^4.1.0"
     caniuse-lite "^1.0.30001036"
+=======
+"@nuxt/webpack-edge@2.13.0-26506104.f13b3752":
+  version "2.13.0-26506104.f13b3752"
+  resolved "https://registry.yarnpkg.com/@nuxt/webpack-edge/-/webpack-edge-2.13.0-26506104.f13b3752.tgz#dd3d92822975ce791e374fb4d39d15f14060f453"
+  integrity sha512-xSk13CkzN/Du/ICAUOPoGPiqRriN1+MkbxBeyBeyzDZKkNUgEMzIifu9hnKbx41G8a3NKfAvvXqKuf4RhYUw5g==
+  dependencies:
+    "@babel/core" "^7.9.6"
+    "@nuxt/babel-preset-app-edge" "2.13.0-26506104.f13b3752"
+    "@nuxt/friendly-errors-webpack-plugin" "^2.5.0"
+    "@nuxt/utils-edge" "2.13.0-26506104.f13b3752"
+    babel-loader "^8.1.0"
+    cache-loader "^4.1.0"
+    caniuse-lite "^1.0.30001062"
+>>>>>>> 527d15bb (docs: add images color-mode blog (#363))
     chalk "^3.0.0"
     consola "^2.11.3"
     css-loader "^3.4.2"
     cssnano "^4.1.10"
     eventsource-polyfill "^0.9.6"
-    extract-css-chunks-webpack-plugin "^4.7.4"
+    extract-css-chunks-webpack-plugin "^4.7.5"
     file-loader "^4.3.0"
     glob "^7.1.6"
 >>>>>>> 61b90c66 (feat: Add /blog section (#307))
@@ -4392,9 +4558,15 @@
     thread-loader "^2.1.3"
     time-fix-plugin "^2.0.6"
     url-loader "^2.3.0"
+<<<<<<< HEAD
     vue-loader "^15.9.1"
     webpack "^4.42.1"
     webpack-bundle-analyzer "^3.6.1"
+=======
+    vue-loader "^15.9.2"
+    webpack "^4.43.0"
+    webpack-bundle-analyzer "^3.8.0"
+>>>>>>> 527d15bb (docs: add images color-mode blog (#363))
     webpack-dev-middleware "^3.7.2"
     webpack-hot-middleware "^2.25.0"
 >>>>>>> 61b90c66 (feat: Add /blog section (#307))
@@ -7688,6 +7860,11 @@ capture-stack-trace@^1.0.0:
   integrity sha512-mYQLZnx5Qt1JgB1WEiMCf2647plpGeQ2NMR/5L0HNZzGQo4fuSPnK+wjfPnKZV0aiJDgzmWqqkV/g7JD+DW0qw==
 >>>>>>> 61b90c66 (feat: Add /blog section (#307))
 
+caniuse-lite@^1.0.30001062:
+  version "1.0.30001065"
+  resolved "https://registry.yarnpkg.com/caniuse-lite/-/caniuse-lite-1.0.30001065.tgz#e8d7fef61cdfd8a7107493ad6bf551a4eb59c68f"
+  integrity sha512-DDxCLgJ266YnAHQv0jS1wdOaihRFF52Zgmlag39sQJVy2H46oROpJp4hITstqhdB8qnHSrKNoAEkQA9L/oYF9A==
+
 caseless@~0.12.0:
   version "0.12.0"
   resolved "https://registry.yarnpkg.com/caseless/-/caseless-0.12.0.tgz#1b681c21ff84033c826543090689420d187151dc"
@@ -9592,6 +9769,19 @@ defu@^1.0.0:
   resolved "https://registry.yarnpkg.com/defu/-/defu-1.0.0.tgz#43acb09dfcf81866fa3b0fc047ece18e5c30df71"
   integrity sha512-1Y1KRFxiiq+LYsZ3iP7xYSR8bHfmHFOUpDunZCN1ld1fGfDJWJIvkUBtjl3apnBwPuJtL/H7cwwlLYX8xPkraQ==
 
+<<<<<<< HEAD
+=======
+defu@^2.0.2:
+  version "2.0.2"
+  resolved "https://registry.yarnpkg.com/defu/-/defu-2.0.2.tgz#9a3d4c1330d60c0ed4812e51864b948c51f7ad45"
+  integrity sha512-E5dO3ji0TmVcZaB/2G6Ovu5zNHbWkgCU7v+EoE/Jj1Lbwv1BB6hNNKLkio2ZLI3/e3avlO634QUhQl4iCpm3Bg==
+
+defu@^2.0.4:
+  version "2.0.4"
+  resolved "https://registry.yarnpkg.com/defu/-/defu-2.0.4.tgz#09659a6e87a8fd7178be13bd43e9357ebf6d1c46"
+  integrity sha512-G9pEH1UUMxShy6syWk01VQSRVs3CDWtlxtZu7A+NyqjxaCA4gSlWAKDBx6QiUEKezqS8+DUlXLI14Fp05Hmpwg==
+
+>>>>>>> 527d15bb (docs: add images color-mode blog (#363))
 degit@^2.8.0:
   version "2.8.0"
   resolved "https://registry.yarnpkg.com/degit/-/degit-2.8.0.tgz#ac0bff89987735ab19d02338fa8717d16137ea68"
@@ -9643,10 +9833,17 @@ des.js@^1.0.0:
     inherits "^2.0.1"
     minimalistic-assert "^1.0.0"
 
+<<<<<<< HEAD
 destr@^1.0.0, destr@^1.0.1, destr@^1.1.0:
   version "1.1.0"
   resolved "https://registry.npmjs.org/destr/-/destr-1.1.0.tgz"
   integrity sha512-Ev/sqS5AzzDwlpor/5wFCDu0dYMQu/0x2D6XfAsQ0E7uQmamIgYJ6Dppo2T2EOFVkeVYWjc+PCLKaqZZ57qmLg==
+=======
+destr@^0.1.4:
+  version "0.1.4"
+  resolved "https://registry.yarnpkg.com/destr/-/destr-0.1.4.tgz#5ade43c2c02ffa7ad80e4d1516db309158d03d90"
+  integrity sha512-jGvlTgd/uZHtImTF8idU1FGu0Sg2/KBRp17HdsZ9dgZSkjt6lJRp/YW1gzHb1iEk0yJ4RrSQ3ujxbswa0gmwzQ==
+>>>>>>> 527d15bb (docs: add images color-mode blog (#363))
 
 destroy@^1.0.4, destroy@~1.0.4:
   version "1.0.4"
@@ -11218,6 +11415,7 @@ extglob@^2.0.4:
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 extract-css-chunks-webpack-plugin@^4.9.0:
   version "4.9.0"
   resolved "https://registry.npmjs.org/extract-css-chunks-webpack-plugin/-/extract-css-chunks-webpack-plugin-4.9.0.tgz"
@@ -11228,10 +11426,17 @@ extract-css-chunks-webpack-plugin@^4.7.4:
   resolved "https://registry.yarnpkg.com/extract-css-chunks-webpack-plugin/-/extract-css-chunks-webpack-plugin-4.7.4.tgz#db6465ca18d1fe8a89bad3dc72803127638fb477"
   integrity sha512-Q0iLfJnS+MT8L/KbiPxFeTLi06dBzJaAphXJg00rIlcyjSqNx5yI0/V8ODGWCcwUO1V7W2z3dpjC+8eBKBoQrA==
 >>>>>>> 61b90c66 (feat: Add /blog section (#307))
+=======
+extract-css-chunks-webpack-plugin@^4.7.5:
+  version "4.7.5"
+  resolved "https://registry.yarnpkg.com/extract-css-chunks-webpack-plugin/-/extract-css-chunks-webpack-plugin-4.7.5.tgz#d85ebf0aaf3366f942502eced275711d72bd4ba9"
+  integrity sha512-7XlPj/OW+vpIdMcm1H/mo5hgJubMKXlWF5Pgq9F/db39b19A+XlRWppyAZHNaJChC8kJKQl5n8PbfwouIl9AJQ==
+>>>>>>> 527d15bb (docs: add images color-mode blog (#363))
   dependencies:
     loader-utils "^2.0.0"
     normalize-url "1.9.1"
     schema-utils "^1.0.0"
+<<<<<<< HEAD
 <<<<<<< HEAD
     webpack-sources "^1.1.0"
 
@@ -11262,6 +11467,9 @@ extract-css-chunks-webpack-plugin@^3.3.2:
 =======
     webpack-external-import "^1.1.0-beta.3"
 >>>>>>> 61b90c66 (feat: Add /blog section (#307))
+=======
+    webpack-external-import "^2.2.4"
+>>>>>>> 527d15bb (docs: add images color-mode blog (#363))
     webpack-sources "^1.1.0"
 
 extsprintf@1.3.0:
@@ -12144,6 +12352,26 @@ getpass@^0.1.1:
 >>>>>>> 5e315c38 (app: Support ad blockers, upgrade Nuxt)
   dependencies:
     emoji-regex ">=6.0.0 <=6.1.1"
+
+git-config-path@^2.0.0:
+  version "2.0.0"
+  resolved "https://registry.yarnpkg.com/git-config-path/-/git-config-path-2.0.0.tgz#62633d61af63af4405a5024efd325762f58a181b"
+  integrity sha512-qc8h1KIQbJpp+241id3GuAtkdyJ+IK+LIVtkiFTRKRrmddDzs3SI9CvP1QYmWBFvm1I/PWRwj//of8bgAc0ltA==
+
+git-up@^4.0.0:
+  version "4.0.1"
+  resolved "https://registry.yarnpkg.com/git-up/-/git-up-4.0.1.tgz#cb2ef086653640e721d2042fe3104857d89007c0"
+  integrity sha512-LFTZZrBlrCrGCG07/dm1aCjjpL1z9L3+5aEeI9SBhAqSc+kiA9Or1bgZhQFNppJX6h/f5McrvJt1mQXTFm6Qrw==
+  dependencies:
+    is-ssh "^1.3.0"
+    parse-url "^5.0.0"
+
+git-url-parse@^11.1.2:
+  version "11.1.2"
+  resolved "https://registry.yarnpkg.com/git-url-parse/-/git-url-parse-11.1.2.tgz#aff1a897c36cc93699270587bea3dbcbbb95de67"
+  integrity sha512-gZeLVGY8QVKMIkckncX+iCq2/L8PlwncvDFKiWkBn9EtCfYDbliRTTp6qzyQ1VMdITUfq7293zDzfpjdiGASSQ==
+  dependencies:
+    git-up "^4.0.0"
 
 glob-all@^3.1.0:
   version "3.2.1"
@@ -13764,6 +13992,11 @@ is-extendable@^0.1.0, is-extendable@^0.1.1:
   resolved "https://registry.yarnpkg.com/is-directory/-/is-directory-0.3.1.tgz#61339b6f2475fc772fd9c9d83f5c8575dc154ae1"
   integrity sha1-YTObbyR1/Hcv2cnYP1yFddwVSuE=
 
+is-docker@^2.0.0:
+  version "2.0.0"
+  resolved "https://registry.yarnpkg.com/is-docker/-/is-docker-2.0.0.tgz#2cb0df0e75e2d064fe1864c37cdeacb7b2dcf25b"
+  integrity sha512-pJEdRugimx4fBMra5z2/5iRdZ63OhYV0vr0Dwm5+xtW4D1FvRkB8hamMIhnWfyJeDdyr/aa7BDyNbtG38VxgoQ==
+
 is-extendable@^0.1.0, is-extendable@^0.1.1:
   version "0.1.1"
   resolved "https://registry.yarnpkg.com/is-extendable/-/is-extendable-0.1.1.tgz#62b110e289a471418e3ec36a617d472e301dfc89"
@@ -14062,6 +14295,7 @@ is-ssh@^1.3.0:
   integrity sha512-qgDYXFSR5WvEfuS5dMj6oTMEbrrSaM0CrFk2Yiq/gXnBvD9pMa2jGXxyhGLfvhZpuMZe18CJpFxAt3CRs42NMg==
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 is-stream@^1.1.0:
 =======
 is-retry-allowed@^1.0.0:
@@ -14071,6 +14305,16 @@ is-retry-allowed@^1.0.0:
 
 is-stream@1.1.0, is-stream@^1.0.0, is-stream@^1.1.0:
 >>>>>>> 61b90c66 (feat: Add /blog section (#307))
+=======
+is-ssh@^1.3.0:
+  version "1.3.1"
+  resolved "https://registry.yarnpkg.com/is-ssh/-/is-ssh-1.3.1.tgz#f349a8cadd24e65298037a522cf7520f2e81a0f3"
+  integrity sha512-0eRIASHZt1E68/ixClI8bp2YK2wmBPVWEismTs6M+M099jKgrzl/3E976zIbImSIob48N2/XGe9y7ZiYdImSlg==
+  dependencies:
+    protocols "^1.1.0"
+
+is-stream@1.1.0, is-stream@^1.1.0:
+>>>>>>> 527d15bb (docs: add images color-mode blog (#363))
   version "1.1.0"
   resolved "https://registry.yarnpkg.com/is-stream/-/is-stream-1.1.0.tgz#12d4a3dd4e68e0b79ceb8dbc84173ae80d91ca44"
   integrity sha1-EtSj3U5o4Lec6428hBc66A2RykQ=
@@ -15166,11 +15410,16 @@ make-dir@^3.0.2, make-dir@^3.1.0, make-dir@~3.1.0:
 
 map-age-cleaner@^0.1.3:
   version "0.1.3"
+<<<<<<< HEAD
   resolved "https://registry.npmjs.org/map-age-cleaner/-/map-age-cleaner-0.1.3.tgz"
+=======
+  resolved "https://registry.yarnpkg.com/map-age-cleaner/-/map-age-cleaner-0.1.3.tgz#7d583a7306434c055fe474b0f45078e6e1b4b92a"
+>>>>>>> 527d15bb (docs: add images color-mode blog (#363))
   integrity sha512-bJzx6nMoP6PDLPBFmg7+xRKeFZvFboMrGlxmNj9ClvX53KrmvM5bXFXEWjbz4cz1AFn+jWJ9z/DJSz7hrs0w3w==
   dependencies:
     p-defer "^1.0.0"
 
+<<<<<<< HEAD
 =======
 make-dir@^3.0.2:
   version "3.0.2"
@@ -15180,6 +15429,8 @@ make-dir@^3.0.2:
     semver "^6.0.0"
 
 >>>>>>> 61b90c66 (feat: Add /blog section (#307))
+=======
+>>>>>>> 527d15bb (docs: add images color-mode blog (#363))
 map-cache@^0.2.2:
   version "0.2.2"
 <<<<<<< HEAD
@@ -15438,6 +15689,14 @@ media-typer@0.3.0:
   integrity sha1-hxDXrwqmJvj/+hzgAWhUUmMlV0g=
 >>>>>>> 5e315c38 (app: Support ad blockers, upgrade Nuxt)
 
+mem@^6.0.1:
+  version "6.1.0"
+  resolved "https://registry.yarnpkg.com/mem/-/mem-6.1.0.tgz#846eca0bd4708a8f04b9c3f3cd769e194ae63c5c"
+  integrity sha512-RlbnLQgRHk5lwqTtpEkBTQ2ll/CG/iB+J4Hy2Wh97PjgZgXgWJWrFF+XXujh3UUVLvR4OOTgZzcWMMwnehlEUg==
+  dependencies:
+    map-age-cleaner "^0.1.3"
+    mimic-fn "^3.0.0"
+
 memory-fs@^0.4.1:
   version "0.4.1"
 <<<<<<< HEAD
@@ -15676,6 +15935,7 @@ mimic-fn@^2.1.0:
   resolved "https://registry.npmjs.org/mimic-fn/-/mimic-fn-2.1.0.tgz"
   integrity sha512-OqbOk5oEQeAZ8WXWydlu9HJjz9WVdEIvamMCcXmuqUYjTknH/sqsWvhQ3vgwKFRR1HpjvNBKQ37nbJgYzGqGcg==
 
+<<<<<<< HEAD
 mimic-fn@^3.1.0:
   version "3.1.0"
   resolved "https://registry.npmjs.org/mimic-fn/-/mimic-fn-3.1.0.tgz"
@@ -15687,6 +15947,14 @@ mimic-response@^2.0.0:
   integrity sha512-wXqjST+SLt7R009ySCglWBCFpjUygmCIfD790/kVbiGmUgfYGuB14PiTd5DwVxSV4NcYHjzMkoj5LjQZwTQLEA==
 
 minimalistic-assert@^1.0.0, minimalistic-assert@^1.0.1:
+=======
+mimic-fn@^3.0.0:
+  version "3.0.0"
+  resolved "https://registry.yarnpkg.com/mimic-fn/-/mimic-fn-3.0.0.tgz#76044cfa8818bbf6999c5c9acadf2d3649b14b4b"
+  integrity sha512-PiVO95TKvhiwgSwg1IdLYlCTdul38yZxZMIcnDSFIBUm4BNZha2qpQ4GpJ++15bHoKDtrW2D69lMfFwdFYtNZQ==
+
+mimic-response@^1.0.0, mimic-response@^1.0.1:
+>>>>>>> 527d15bb (docs: add images color-mode blog (#363))
   version "1.0.1"
   resolved "https://registry.npmjs.org/minimalistic-assert/-/minimalistic-assert-1.0.1.tgz"
 =======
@@ -16297,6 +16565,11 @@ node-libs-browser@^2.0.0:
     util "^0.11.0"
     vm-browserify "^1.0.1"
 
+node-machine-id@^1.1.12:
+  version "1.1.12"
+  resolved "https://registry.yarnpkg.com/node-machine-id/-/node-machine-id-1.1.12.tgz#37904eee1e59b320bb9c5d6c0a59f3b469cb6267"
+  integrity sha512-QNABxbrPa3qEIfrE6GOJ7BYIuignnJw7iQ2YPbc3Nla1HzRJjXzZOiikfF8m7eAMfichLt3M4VgLOetqgDmgGQ==
+
 node-object-hash@^1.2.0:
   version "1.4.2"
   resolved "https://registry.npmjs.org/node-object-hash/-/node-object-hash-1.4.2.tgz"
@@ -16510,7 +16783,7 @@ normalize-url@1.9.1:
     query-string "^4.1.0"
     sort-keys "^1.0.0"
 
-normalize-url@^3.0.0:
+normalize-url@^3.0.0, normalize-url@^3.3.0:
   version "3.3.0"
   resolved "https://registry.npmjs.org/normalize-url/-/normalize-url-3.3.0.tgz"
   integrity sha512-U+JJi7duF1o+u2pynbp2zXDW2/PADgC30f0GsHZtRh+HOcXHnw137TrNlyxxRvWW5fjKd3bcLHPxofWuCjaeZg==
@@ -16746,6 +17019,7 @@ oauth-sign@~0.9.0:
   resolved "https://registry.yarnpkg.com/number-is-nan/-/number-is-nan-1.0.1.tgz#097b602b53422a522c1afb8790318336941a011d"
   integrity sha1-CXtgK1NCKlIsGvuHkDGDNpQaAR0=
 
+<<<<<<< HEAD
 nuxt-edge@latest:
   version "2.4.0-25783204.eef2af35"
   resolved "https://registry.yarnpkg.com/nuxt-edge/-/nuxt-edge-2.4.0-25783204.eef2af35.tgz#669bbbb4674f67523aca9f3df03a2e55a1ec1ba3"
@@ -16757,6 +17031,22 @@ nuxt-edge@latest:
     "@nuxt/generator-edge" "2.4.0-25783204.eef2af35"
     "@nuxt/opencollective" "^0.2.1"
     "@nuxt/webpack-edge" "2.4.0-25783204.eef2af35"
+=======
+nuxt-edge@^2.13.0-26496727.6a6794e0:
+  version "2.13.0-26506104.f13b3752"
+  resolved "https://registry.yarnpkg.com/nuxt-edge/-/nuxt-edge-2.13.0-26506104.f13b3752.tgz#af2d51a7646b63212d5e8e8e7470dce4c38612ef"
+  integrity sha512-8HY7l7+7/W93lsHUqDgTG9Ky39NNA7mTGoDHHR3KCCh2r4uvUgkqmm2Z4f/tltX9sPQ8Lo9X7KfPrgB0itbAUw==
+  dependencies:
+    "@nuxt/builder-edge" "2.13.0-26506104.f13b3752"
+    "@nuxt/cli-edge" "2.13.0-26506104.f13b3752"
+    "@nuxt/components" "^0.2.3"
+    "@nuxt/core-edge" "2.13.0-26506104.f13b3752"
+    "@nuxt/generator-edge" "2.13.0-26506104.f13b3752"
+    "@nuxt/loading-screen" "^1.2.0"
+    "@nuxt/opencollective" "^0.3.0"
+    "@nuxt/telemetry" "^0.0.3"
+    "@nuxt/webpack-edge" "2.13.0-26506104.f13b3752"
+>>>>>>> 527d15bb (docs: add images color-mode blog (#363))
 
 nuxt-svg-loader@^1.2.0:
   version "1.2.0"
@@ -17129,6 +17419,11 @@ osenv@0:
     os-tmpdir "^1.0.0"
 >>>>>>> 5e315c38 (app: Support ad blockers, upgrade Nuxt)
 
+p-defer@^1.0.0:
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/p-defer/-/p-defer-1.0.0.tgz#9f6eb182f6c9aa8cd743004a7d4f96b196b0fb0c"
+  integrity sha1-n26xgvbJqozXQwBKfU+WsZaw+ww=
+
 p-finally@^1.0.0:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/p-finally/-/p-finally-1.0.0.tgz#3fbcfb15b899a44123b34b6dcc18b724336a2cae"
@@ -17329,6 +17624,7 @@ parse-asn1@^5.0.0, parse-asn1@^5.1.5:
     safe-buffer "^5.1.1"
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 parse-entities@^2.0.0:
   version "2.0.0"
   resolved "https://registry.npmjs.org/parse-entities/-/parse-entities-2.0.0.tgz"
@@ -17346,6 +17642,16 @@ parse-git-config@^3.0.0:
   resolved "https://registry.npmjs.org/parse-git-config/-/parse-git-config-3.0.0.tgz"
   integrity sha512-wXoQGL1D+2COYWCD35/xbiKma1Z15xvZL8cI25wvxzled58V51SJM04Urt/uznS900iQor7QO04SgdfT/XlbuA==
 =======
+=======
+parse-git-config@^3.0.0:
+  version "3.0.0"
+  resolved "https://registry.yarnpkg.com/parse-git-config/-/parse-git-config-3.0.0.tgz#4a2de08c7b74a2555efa5ae94d40cd44302a6132"
+  integrity sha512-wXoQGL1D+2COYWCD35/xbiKma1Z15xvZL8cI25wvxzled58V51SJM04Urt/uznS900iQor7QO04SgdfT/XlbuA==
+  dependencies:
+    git-config-path "^2.0.0"
+    ini "^1.3.5"
+
+>>>>>>> 527d15bb (docs: add images color-mode blog (#363))
 parse-json@^2.2.0:
   version "2.2.0"
   resolved "https://registry.yarnpkg.com/parse-json/-/parse-json-2.2.0.tgz#f480f40434ef80741f8469099f8dea18f55a4dc9"
@@ -17475,6 +17781,7 @@ parse-bmfont-xml@^1.1.4:
     xml-parse-from-string "^1.0.0"
     xml2js "^0.4.5"
 
+<<<<<<< HEAD
 parse-headers@^2.0.0:
   version "2.0.2"
   resolved "https://registry.yarnpkg.com/parse-headers/-/parse-headers-2.0.2.tgz#9545e8a4c1ae5eaea7d24992bca890281ed26e34"
@@ -17482,6 +17789,30 @@ parse-headers@^2.0.0:
   dependencies:
     for-each "^0.3.3"
     string.prototype.trim "^1.1.2"
+=======
+parse-path@^4.0.0:
+  version "4.0.1"
+  resolved "https://registry.yarnpkg.com/parse-path/-/parse-path-4.0.1.tgz#0ec769704949778cb3b8eda5e994c32073a1adff"
+  integrity sha512-d7yhga0Oc+PwNXDvQ0Jv1BuWkLVPXcAoQ/WREgd6vNNoKYaW52KI+RdOFjI63wjkmps9yUE8VS4veP+AgpQ/hA==
+  dependencies:
+    is-ssh "^1.3.0"
+    protocols "^1.4.0"
+
+parse-url@^5.0.0:
+  version "5.0.1"
+  resolved "https://registry.yarnpkg.com/parse-url/-/parse-url-5.0.1.tgz#99c4084fc11be14141efa41b3d117a96fcb9527f"
+  integrity sha512-flNUPP27r3vJpROi0/R3/2efgKkyXqnXwyP1KQ2U0SfFRgdizOdWfvrrvJg1LuOoxs7GQhmxJlq23IpQ/BkByg==
+  dependencies:
+    is-ssh "^1.3.0"
+    normalize-url "^3.3.0"
+    parse-path "^4.0.0"
+    protocols "^1.4.0"
+
+parseurl@~1.3.3:
+  version "1.3.3"
+  resolved "https://registry.yarnpkg.com/parseurl/-/parseurl-1.3.3.tgz#9da19e7bee8d12dff0513ed5b76957793bc2e8d4"
+  integrity sha512-CiyeOxFT/JZyN5m0z9PfXw4SCBJ6Sygz1Dpl0wqjlhDEGGBP1GnsUVEL0p63hoG1fcj3fHynXi9NYO4nWOL+qQ==
+>>>>>>> 527d15bb (docs: add images color-mode blog (#363))
 
 parse-json@^2.2.0:
   version "2.2.0"
@@ -19257,6 +19588,7 @@ proper-lockfile@^4.1.2:
     signal-exit "^3.0.2"
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 property-information@5.6.0, property-information@^5.0.0, property-information@^5.3.0:
   version "5.6.0"
   resolved "https://registry.npmjs.org/property-information/-/property-information-5.6.0.tgz"
@@ -19279,6 +19611,13 @@ proxy-from-env@1.1.0:
   resolved "https://registry.npmjs.org/proxy-from-env/-/proxy-from-env-1.1.0.tgz"
   integrity sha512-D+zkORCbA9f1tdWRK0RaCR3GPv50cMxcrz4X8k5LTSUD1Dkw47mKJEZQNunItRTkWwgtaUSo1RVFRIG9ZXiFYg==
 =======
+=======
+protocols@^1.1.0, protocols@^1.4.0:
+  version "1.4.7"
+  resolved "https://registry.yarnpkg.com/protocols/-/protocols-1.4.7.tgz#95f788a4f0e979b291ffefcf5636ad113d037d32"
+  integrity sha512-Fx65lf9/YDn3hUX08XUc0J8rSux36rEsyiv21ZGUC1mOyeM3lTRpZLcrm8aAolzS4itwVfm7TAPyxC2E5zd6xg==
+
+>>>>>>> 527d15bb (docs: add images color-mode blog (#363))
 proxy-addr@~2.0.5:
   version "2.0.6"
   resolved "https://registry.yarnpkg.com/proxy-addr/-/proxy-addr-2.0.6.tgz#fdc2336505447d3f2f2c638ed272caf614bbb2bf"
@@ -23991,11 +24330,18 @@ vue-observe-visibility@^0.4.6:
   resolved "https://registry.yarnpkg.com/vue-observe-visibility/-/vue-observe-visibility-0.4.6.tgz#878cb8ebcf3078e40807af29774e97105ebd519e"
   integrity sha512-xo0CEVdkjSjhJoDdLSvoZoQrw/H2BlzB5jrCBKGZNXN2zdZgMuZ9BKrxXDjNP2AxlcCoKc8OahI3F3r3JGLv2Q==
 
+<<<<<<< HEAD
 vue-router@^3.1.6:
   version "3.1.6"
   resolved "https://registry.yarnpkg.com/vue-router/-/vue-router-3.1.6.tgz#45f5a3a3843e31702c061dd829393554e4328f89"
   integrity sha512-GYhn2ynaZlysZMkFE5oCHRUTqE8BWs/a9YbKpNLi0i7xD6KG1EzDqpHQmv1F5gXjr8kL5iIVS8EOtRaVUEXTqA==
 >>>>>>> 61b90c66 (feat: Add /blog section (#307))
+=======
+vue-router@^3.2.0:
+  version "3.2.0"
+  resolved "https://registry.yarnpkg.com/vue-router/-/vue-router-3.2.0.tgz#da35195ffe37fdf0bec9f5f8f72781d2a7718815"
+  integrity sha512-khkrcUIzMcI1rDcNtqkvLwfRFzB97GmJEsPAQdj7t/VvpGhmXLOkUfhc+Ah8CvpSXGXwuWuQO+x8Sy/xDhXZIA==
+>>>>>>> 527d15bb (docs: add images color-mode blog (#363))
 
 vue-server-renderer@^2.5.21:
   version "2.5.21"
@@ -24113,6 +24459,7 @@ watchpack@^1.6.0:
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 watchpack@^2.2.0:
   version "2.2.0"
   resolved "https://registry.npmjs.org/watchpack/-/watchpack-2.2.0.tgz"
@@ -24131,6 +24478,12 @@ webpack-bundle-analyzer@^3.6.1:
   version "3.6.1"
   resolved "https://registry.yarnpkg.com/webpack-bundle-analyzer/-/webpack-bundle-analyzer-3.6.1.tgz#bdb637c2304424f2fbff9a950c7be42a839ae73b"
   integrity sha512-Nfd8HDwfSx1xBwC+P8QMGvHAOITxNBSvu/J/mCJvOwv+G4VWkU7zir9SSenTtyCi0LnVtmsc7G5SZo1uV+bxRw==
+=======
+webpack-bundle-analyzer@^3.8.0:
+  version "3.8.0"
+  resolved "https://registry.yarnpkg.com/webpack-bundle-analyzer/-/webpack-bundle-analyzer-3.8.0.tgz#ce6b3f908daf069fd1f7266f692cbb3bded9ba16"
+  integrity sha512-PODQhAYVEourCcOuU+NiYI7WdR8QyELZGgPvB1y2tjbUpbmcQOt5Q7jEK+ttd5se0KSBKD9SXHCEozS++Wllmw==
+>>>>>>> 527d15bb (docs: add images color-mode blog (#363))
   dependencies:
     acorn "^7.1.1"
     acorn-walk "^7.1.1"
@@ -24159,6 +24512,7 @@ web-namespaces@^2.0.0:
   resolved "https://registry.yarnpkg.com/web-namespaces/-/web-namespaces-2.0.0.tgz#1f6a2d7b5823329abaedeb6bdf09ef2fed35db13"
   integrity sha512-dE7ELZRVWh0ceQsRgkjLgsAvwTuv3kcjSY/hLjqL0llleUlQBDjE9JkB9FCBY5F2mnFEwiyJoowl8+NVGHe8dw==
 
+<<<<<<< HEAD
 web-streams-polyfill@^3.0.1:
   version "3.1.0"
   resolved "https://registry.npmjs.org/web-streams-polyfill/-/web-streams-polyfill-3.1.0.tgz"
@@ -24201,13 +24555,24 @@ webpack-external-import@^1.1.0-beta.3:
   version "1.1.3"
   resolved "https://registry.yarnpkg.com/webpack-external-import/-/webpack-external-import-1.1.3.tgz#9782c1df397f5847c02be6507eadbf16be9991b6"
   integrity sha512-vK2h9WZEukZzPT4T2GYTkaH4Ow7ZpJkH4279lHKyrMc1BhS98LHezahX8qansDOvkNwyaSVmLF+ltX1G1Y5t1Q==
+=======
+webpack-external-import@^2.2.4:
+  version "2.2.4"
+  resolved "https://registry.yarnpkg.com/webpack-external-import/-/webpack-external-import-2.2.4.tgz#954c0a43f27af5e01db0c6454eee8232cebce8a5"
+  integrity sha512-yJUHeu/UaZ8o0gCQyor6nsjEVdgc3ao8w7E6j28Dh1BanMxnqm0PumdElh2C5z/DMTcw1knQbpEArRo6/knNog==
+>>>>>>> 527d15bb (docs: add images color-mode blog (#363))
   dependencies:
     assert "^2.0.0"
     dimport "^1.0.0"
     fs-extra "^8.1.0"
     loadjs "^4.2.0"
+    mem "^6.0.1"
     pkg-up "^3.1.0"
+<<<<<<< HEAD
 >>>>>>> 61b90c66 (feat: Add /blog section (#307))
+=======
+    tapable "^1.1.3"
+>>>>>>> 527d15bb (docs: add images color-mode blog (#363))
 
 <<<<<<< HEAD
 webpack-hot-middleware@^2.25.0:

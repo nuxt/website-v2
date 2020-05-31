@@ -50,7 +50,7 @@ export default {
           { name: 'System76', img: 'system76.svg', url: 'https://system76.com', class: 'h-10' },
           { name: 'Aircall', img: 'aircall.svg', url: 'https://aircall.io', class: 'h-10' },
           { name: 'Instrument', img: 'instrument.svg', url: 'https://www.instrument.com', class: 'h-8' },
-          { name: 'FoxNews', img: 'fox-news.svg', url: 'https://www.foxnews.com/opinion/', class: 'h-16' },
+          { name: 'Ubisoft', img: 'ubisoft.svg', url: 'https://assassinscreed.ubisoft.com/story-creator-mode', class: 'h-12' },
           { name: 'MyScript', img: 'my-script.svg', url: 'https://www.myscript.com', class: 'h-10' },
           { name: 'Roland Garros', img: 'roland-garros.svg', url: 'https://www.rolandgarros.com', class: 'h-16' },
           { name: 'BitPay', img: 'bitpay.svg', url: 'https://bitpay.com', class: 'h-10' },

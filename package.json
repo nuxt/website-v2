@@ -38,7 +38,7 @@
     "@nuxtjs/style-resources": "^1.0.0",
     "@nuxtjs/svg": "^0.1.11",
     "babel-eslint": "^10.1.0",
-    "eslint": "^6.8.0",
+    "eslint": "^7.2.0",
     "globby": "^11.0.0",
     "node-sass": "^4.14.1",
     "nodemon": "^2.0.3",

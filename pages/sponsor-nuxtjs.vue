@@ -115,11 +115,7 @@ export default {
         silver: [
           { name: 'Sparheld', img: 'sparheld.svg', url: 'https://www.sparheld.de/?ref=nuxt', class: 'h-8' },
           { name: 'Icons8', img: 'icons8.svg', url: 'https://icons8.com/?ref=nuxt', class: 'h-8' },
-          { name: 'Clay', img: 'clay.svg', url: 'https://clay.global/?ref=nuxt', class: 'h-8' },
-          { name: 'UX Planet', img: 'ux-planet.png', url: 'https://uxplanet.org/top-ui-ux-design-agencies-user-experience-firms-8c54697e290/?ref=nuxt', class: 'h-8' },
           { name: 'FireStickHow', img: 'fire-stick-how.png', url: 'https://www.firestickhow.com/?ref=nuxt', class: 'h-8' },
-          { name: 'CrossWordSolver', img: 'crosswordsolver.svg', url: 'https://www.crosswordsolver.com/?ref=nuxt', class: 'h-8' },
-          { name: 'Top Web Agencies', img: 'top-web-agencies.png', url: 'https://medium.com/@niksundin/best-web-design-companies-1872e445775f?ref=nuxt', class: 'h-8' },
           { name: 'MiniTool', img: 'minitool.png', url: 'https://www.minitool.com', class: 'h-8' }
         ],
         special: [

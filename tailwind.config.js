@@ -55,7 +55,8 @@ module.exports = {
         'nuxt-green': theme('colors.nuxt.green')
       }),
       boxShadow: {
-        nuxt: '0px 0px 8px rgba(0, 0, 0, 0.101562)'
+        nuxt: '0px 0px 8px rgba(0, 0, 0, 0.101562)',
+        'inset-nuxt': 'inset 0px 0px 8px rgba(0, 0, 0, 0.101562)'
       },
       inset: {
         24: '6rem'

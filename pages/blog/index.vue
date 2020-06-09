@@ -1,5 +1,5 @@
 <template>
-  <div class="bg-light-elevatedSurface dark:bg-dark-elevatedSurface shadow-nuxt">
+  <div class="shadow-nuxt">
     <div class="container mx-auto px-4 pt-16 pb-8">
       <div class="flex flex-wrap justify-between mb-8">
         <div class="lg:w-6/12 lg:text-left text-center p-4 sm:p-0">

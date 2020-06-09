@@ -1,5 +1,5 @@
 <template>
-  <div class="bg-light-elevatedSurface dark:bg-dark-elevatedSurface shadow-nuxt transition-colors duration-300 ease-linear">
+  <div class="shadow-nuxt">
     <div class="container mx-auto px-4 lg:flex pb-12">
       <TheMobileAsideNav />
       <TheAsideNav class="hidden lg:block"/>

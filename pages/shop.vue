@@ -121,5 +121,5 @@ export default {
 </script>
 
 <style>
-/* @import url('https://cdn.snipcart.com/themes/2.0/base/snipcart.min.css'); */
+/*  @import url('https://cdn.snipcart.com/themes/2.0/base/snipcart.min.css'); */
 </style>

@@ -1,5 +1,5 @@
 <template>
-  <div class="bg-light-elevatedSurface dark:bg-dark-elevatedSurface transition-colors duration-300 ease-linear">
+  <div class="">
     <div class="container lg:max-w-4xl mx-auto p-4 pb-8">
       <div v-if="post.langFallback" class="p-4 mb-6 rounded bg-orange-200 dark:text-light-onSurfacePrimary">
         ⚠️ You are looking at the english version of the page. Help us translate it <a :href="docLink" class="text-orange-600">here</a>.

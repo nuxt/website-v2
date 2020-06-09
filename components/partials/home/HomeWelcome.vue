@@ -1,5 +1,5 @@
 <template>
-  <div class="bg-light-elevatedSurface dark:bg-dark-elevatedSurface shadow-nuxt">
+  <div class="bg-light-elevatedSurface dark:bg-dark-elevatedSurface shadow-nuxt relative">
     <div class="container mx-auto px-4">
       <div class="flex justify-between py-16 sm:py-24">
         <div class="lg:w-1/2 xl:w-6/12 text-center lg:text-left py-4 sm:p-0">

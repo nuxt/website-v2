@@ -14,8 +14,7 @@ export const state = () => ({
   lang: {},
   menu: {},
   homepage: {},
-  adBlocked: false,
-  focusMode: false
+  adBlocked: false
 })
 
 export const mutations = {
@@ -45,13 +44,8 @@ export const mutations = {
   },
   setAdBlocked (state, value) {
     state.adBlocked = value
-  },
-  setFocusMode (state, value) {
-    state.focusMode = value
   }
 }
-
-let _focusTimeout = null
 
 export const actions = {
   async getLangData ({ commit }, locale) {
@@ -62,18 +56,5 @@ export const actions = {
     commit('setMenu', menu)
     const homepage = await this.$docs.get('/homepage/' + locale)
     commit('setHomepage', homepage)
-  },
-  focusMode ({ commit }) {
-    if (_focusTimeout) {
-      return
-    }
-    _focusTimeout = setTimeout(() => commit('setFocusMode', true), 1300)
-  },
-  clearFocusMode ({ commit }) {
-    if (_focusTimeout) {
-      clearTimeout(_focusTimeout)
-      _focusTimeout = null
-    }
-    commit('setFocusMode', false)
   }
 }

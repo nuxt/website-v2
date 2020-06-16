@@ -1,6 +1,6 @@
 <template>
   <div class="-mx-4 lg:mx-0 flex flex-col-reverse lg:flex-row">
-    <div class="lg:min-h-screen w-full py-8 px-4 lg:static lg:overflow-visible lg:max-h-full lg:w-3/4" @mouseover="$store.dispatch('focusMode')" @mouseleave="$store.dispatch('clearFocusMode')">
+    <div class="lg:min-h-screen w-full py-8 px-4 lg:static lg:overflow-visible lg:max-h-full lg:w-3/4">
       <article>
         <h1>{{ $store.state.lang.guide.release_notes }}</h1>
         <div v-for="release in releases" :key="release.name">
@@ -18,7 +18,7 @@
         <AppContribute/>
       </article>
     </div>
-    <AffixBlock class="opacity-transition" :class="{ 'opacity-25': $store.state.focusMode }">
+    <AffixBlock class="opacity-transition">
       <AdsBlock key="release-notes" class="mx-auto" />
     </AffixBlock>
   </div>

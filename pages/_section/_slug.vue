@@ -1,6 +1,6 @@
 <template>
   <div class="-mx-4 lg:mx-0 flex flex-col-reverse lg:flex-row">
-    <div class="lg:min-h-screen w-full py-8 px-4 lg:static lg:overflow-visible lg:max-h-full lg:w-3/4" @mouseover="$store.dispatch('focusMode')" @mouseleave="$store.dispatch('clearFocusMode')">
+    <div class="lg:min-h-screen w-full py-8 px-4 lg:static lg:overflow-visible lg:max-h-full lg:w-3/4">
       <div v-if="page.langFallback" class="p-4 mb-6 rounded bg-orange-200 dark:text-light-onSurfacePrimary">
         ⚠️ You are looking at the english version of the page. Help us translate it <a :href="docLink" class="text-orange-600">here</a>.
       </div>
@@ -25,7 +25,7 @@
         <AppContribute :doc-link="docLink" :contributors="contributors" />
       </article>
     </div>
-    <AffixBlock class="opacity-transition" :class="{ 'opacity-25': $store.state.focusMode }">
+    <AffixBlock class="opacity-transition">
       <AdsBlock :key="$route.params.slug" />
     </AffixBlock>
   </div>

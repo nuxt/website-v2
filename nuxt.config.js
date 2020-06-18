@@ -40,12 +40,20 @@ export default {
   modules: [
     ['~/modules/docs/', { port: 3001 }],
     // https://http.nuxtjs.org
-    '@nuxt/http'
+    '@nuxt/http',
+    '@nuxt/content'
   ],
   // Auto import components, see https://github.com/nuxt/components
   components: true,
   colorMode: {
     preference: 'light' // disable system
+  },
+  content: {
+    markdown: {
+      prism: {
+        theme: 'prism-themes/themes/prism-material-oceanic.css'
+      }
+    }
   },
   http: {
     proxy: true
@@ -57,7 +65,9 @@ export default {
     '~/plugins/vue-observe-visibility.client.js',
     '~/plugins/ga.client.js',
     '~/plugins/adblock.client.js',
-    '~/plugins/newsletter.client.js'
+    '~/plugins/newsletter.client.js',
+    '@/plugins/vue-scrollactive',
+    '@/plugins/components'
   ],
   env: {
     DEPLOY_PRIME_URL: process.env.DEPLOY_PRIME_URL || false,

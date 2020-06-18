@@ -4,6 +4,7 @@
   "description": "Nuxt.js official website",
   "main": "index.js",
   "dependencies": {
+    "@nuxt/content": "nuxt/content",
     "@nuxt/http": "^0.5.1",
     "@nuxtjs/pwa": "^3.0.0-beta.20",
     "@nuxtjs/tailwindcss": "2.0.0",
@@ -18,6 +19,8 @@
     "highlight.js": "^10.0.2",
     "intersection-observer": "^0.10.0",
     "lodash": "^4.17.15",
+    "lodash.groupby": "^4.6.0",
+    "lodash.shuffle": "^4.2.0",
     "marked": "^1.0.0",
     "micro": "^9.3.4",
     "node-fetch": "^2.6.0",
@@ -25,9 +28,13 @@
     "nuxt-edge": "^2.13.0-26496727.6a6794e0",
     "nuxt-svg-loader": "^1.2.0",
     "octicons": "^8.5.0",
+    "prism-themes": "^1.4.0",
+    "prismjs": "^1.20.0",
     "reading-time": "^1.2.0",
+    "slugify": "^1.4.0",
     "v-lazy-image": "^1.4.0",
-    "vue-observe-visibility": "^0.4.6"
+    "vue-observe-visibility": "^0.4.6",
+    "vue-scrollactive": "^0.9.3"
   },
   "devDependencies": {
     "@nuxtjs/color-mode": "^1.0.0",

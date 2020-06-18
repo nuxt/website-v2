@@ -47,9 +47,6 @@ export default {
   colorMode: {
     preference: 'light' // disable system
   },
-  http: {
-    proxy: true
-  },
   plugins: [
     '~/plugins/init.js',
     '~/plugins/directives',

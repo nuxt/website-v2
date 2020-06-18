@@ -340,7 +340,10 @@ class DocsServer {
     }
 
     // Doc Pages
-    chokidar.watch('*/[!blog]**/*.md', options)
+    chokidar.watch('*/**/*.md', {
+      ...options,
+      ignored: (path) => path.includes('node_modules') || path.includes('blog/')
+    })
       .on('add', path => this.getDocFile(path, null, false))
       .on('change', path => this.getDocFile(path, null, false))
       .on('unlink', path => delete this.docsFiles[path])

@@ -27,7 +27,6 @@ It's time to migrate from @nuxtjs/dotenv module to use our new runtime config wh
 - [Migrating your config values in your templates](#migrating-your-config-values-in-your-templates)
 - [Expand/Interpolation Support](#expandinterpolation-support)
 - [Best Practices:](#best-practices)
-- [Conclusion](#conclusion)
 - [What to do next](#what-to-do-next)
 
 ## What are environment variables
@@ -63,7 +62,7 @@ export default {
 }
 ```
 
-###The new runtime config values are:
+### The new runtime config values are:
 
 - `publicRuntimeConfig` should hold all env variables that are public as these will be exposed on the frontend. This could include a reference to your public URL for example.
 - `privateRuntimeConfig` should hold all env variables that are private and that should not be exposed on the frontend. This could include a reference to your API secret tokens for example.
@@ -133,8 +132,8 @@ If your env variables in your nuxt.config look like this:
 ```js
 export default {
 	env:  {
-		BASE_URL=https://nuxtjs.org
-		API_SECRET=1234
+		BASE_URL: 'https://nuxtjs.org',
+		API_SECRET: '1234'
 	}
 }
 ```
@@ -278,10 +277,6 @@ export default {
 ✅ Follow JS naming convention (secretKey rather than SECRET_KEY) for runtimeConfig
 
 ✅ Prefer using runtimeConfig rather than `env` option
-
-## Conclusion
-
-And there you have your beautiful and fully working color-mode component. Feel free to have some more fun by changing the icons or adding more colors or modifying the color scheme. Have fun.
 
 
 ## What to do next

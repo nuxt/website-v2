@@ -13,7 +13,7 @@
       class="nui-search-input px-4 pl-10 rounded-full h-10 outline-none w-full font-medium transition-colors duration-300 ease-linear"
       type="text"
       :name="`search-${appearance}`"
-      :placeholder="$store.state.lang.text.search"
+      :placeholder="$t('header.search.placeholder')"
       @focus="focusHandler"
       @blur="blurHandler"
     />
@@ -60,7 +60,7 @@ export default {
           openOnFocus: true,
           ariaLabel: true
         },
-        algoliaOptions: { facetFilters: [`tags:${this.$store.state.locale}`] },
+        algoliaOptions: { facetFilters: [`tags:${this.$i18n.locale}`] },
         debug: true // Set debug to true if you want to inspect the dropdown
       })
     }
@@ -83,11 +83,15 @@ export default {
   methods: {
     resetInputValue () {
       this.q = ''
-      this.search.autocomplete.autocomplete.setVal('')
+      if (this.search) {
+        this.search.autocomplete.autocomplete.setVal('')
+      }
     },
     handleCloseClick () {
       this.resetInputValue()
-      this.search.autocomplete.autocomplete.close()
+      if (this.search) {
+        this.search.autocomplete.autocomplete.close()
+      }
       if (this.appearance === 'mobile') {
         this.$emit('close-search')
       } else {
@@ -110,71 +114,71 @@ export default {
 <style lang="scss">
 .light-mode .algolia-wrapper {
   .nui-search-input {
-    background-color: theme('colors.gray.200') !important;
-    color: theme('colors.nuxt.gray') !important;
+    background-color: theme("colors.gray.200") !important;
+    color: theme("colors.nuxt.gray") !important;
   }
   .algolia-autocomplete .ds-dropdown-menu {
     @apply shadow-lg;
     &:before {
-      border-color: theme('colors.gray.300');
-      background-color: theme('colors.light.elevatedSurface');
+      border-color: theme("colors.gray.300");
+      background-color: theme("colors.light.elevatedSurface");
     }
-    [class^='ds-dataset-'] {
-      background-color: theme('colors.light.elevatedSurface');
-      border-color: theme('colors.gray.300');
+    [class^="ds-dataset-"] {
+      background-color: theme("colors.light.elevatedSurface");
+      border-color: theme("colors.gray.300");
     }
     .algolia-docsearch-suggestion {
-      background-color: theme('colors.light.elevatedSurface');
+      background-color: theme("colors.light.elevatedSurface");
     }
     .algolia-docsearch-suggestion--category-header {
       & span {
-        color: theme('colors.light.onSurfacePrimary');
+        color: theme("colors.light.onSurfacePrimary");
       }
     }
     .algolia-docsearch-suggestion--title {
-      color: theme('colors.light.onSurfacePrimary');
+      color: theme("colors.light.onSurfacePrimary");
     }
     .algolia-docsearch-suggestion--subcategory-column {
-      color: theme('colors.light.onSurfaceSecondary');
+      color: theme("colors.light.onSurfaceSecondary");
     }
     .algolia-docsearch-suggestion--text {
-      color: theme('colors.light.onSurfacePrimary');
+      color: theme("colors.light.onSurfacePrimary");
     }
   }
 }
 
 .dark-mode .algolia-wrapper {
   .nui-search-input {
-    background-color: theme('colors.dark.surface') !important;
-    color: theme('colors.dark.onSurfaceSecondary') !important;
+    background-color: theme("colors.dark.surface") !important;
+    color: theme("colors.dark.onSurfaceSecondary") !important;
   }
   .algolia-autocomplete .ds-dropdown-menu {
     @apply shadow-2xl;
     &:before {
-      border-color: theme('colors.gray.900');
-      background-color: theme('colors.dark.elevatedSurface');
+      border-color: theme("colors.gray.900");
+      background-color: theme("colors.dark.elevatedSurface");
     }
-    [class^='ds-dataset-'] {
-      background-color: theme('colors.dark.elevatedSurface');
-      border-color: theme('colors.gray.900');
+    [class^="ds-dataset-"] {
+      background-color: theme("colors.dark.elevatedSurface");
+      border-color: theme("colors.gray.900");
     }
     .algolia-docsearch-suggestion {
-      background-color: theme('colors.dark.elevatedSurface');
+      background-color: theme("colors.dark.elevatedSurface");
     }
     .algolia-docsearch-suggestion--category-header {
       border-color: #618092;
       & span {
-        color: theme('colors.dark.onSurfacePrimary');
+        color: theme("colors.dark.onSurfacePrimary");
       }
     }
     .algolia-docsearch-suggestion--title {
-      color: theme('colors.dark.onSurfacePrimary');
+      color: theme("colors.dark.onSurfacePrimary");
     }
     .algolia-docsearch-suggestion--subcategory-column {
-      color: theme('colors.dark.onSurfaceSecondary');
+      color: theme("colors.dark.onSurfaceSecondary");
     }
     .algolia-docsearch-suggestion--text {
-      color: theme('colors.dark.onSurfacePrimary');
+      color: theme("colors.dark.onSurfacePrimary");
     }
     .algolia-docsearch-suggestion--content:before {
       background: #618092;
@@ -184,7 +188,7 @@ export default {
 
 .algolia-wrapper .algolia-autocomplete .ds-dropdown-menu {
   @apply rounded;
-  [class^=ds-dataset-] {
+  [class^="ds-dataset-"] {
     @apply rounded;
   }
 }
@@ -212,15 +216,15 @@ export default {
     padding: 10px 15px;
     & .algolia-docsearch-suggestion--title {
       & .algolia-docsearch-suggestion--highlight {
-        color: theme('colors.primary.base');
+        color: theme("colors.primary.base");
         background-color: transparent;
       }
     }
     & .algolia-docsearch-suggestion--text {
       & .algolia-docsearch-suggestion--highlight {
-        color: theme('colors.primary.base');
+        color: theme("colors.primary.base");
         background-color: transparent;
-        box-shadow: inset 0 -2px 0 0 theme('colors.primary.light');
+        box-shadow: inset 0 -2px 0 0 theme("colors.primary.light");
       }
     }
   }

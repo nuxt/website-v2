@@ -22,9 +22,12 @@ tags:
 4. That's it ✨
 
 *Bonus: you can run `nuxt serve` to run a local server serving your generated static application.*
-video
 
-<source src="https://res.cloudinary.com/nuxt/video/upload/v1592503417/nuxt-full-static_rnnbvm.mp4" type="video/mp4" />
+<video poster="https://res.cloudinary.com/nuxt/video/upload/v1588095794/nuxt-full-static_rnnbvm.jpg" loop playsinline controls>
+  <source src="https://res.cloudinary.com/nuxt/video/upload/v1588095794/nuxt-full-static_rnnbvm.webm" type="video/webm" />
+  <source src="https://res.cloudinary.com/nuxt/video/upload/v1592503417/nuxt-full-static_rnnbvm.mp4" type="video/mp4" />
+  <source src="https://res.cloudinary.com/nuxt/video/upload/v1588095794/nuxt-full-static_rnnbvm.ogv" type="video/ogg" />
+</video>
 
 ## Table of Contents
 
@@ -32,12 +35,12 @@ video
 - [Table of Contents](#table-of-contents)
 - [History](#history)
 - [Current issues](#current-issues)
-- [New config option: `target`](#new-config-option-target)
-- [New command: `nuxt export`](#new-command-nuxt-export)
+- [New config option: `target`](#new-config-option-code-target-code-)
+- [New command: `nuxt export`](#new-command-code-nuxt-export-code-)
   - [Crazy fast static applications](#crazy-fast-static-applications)
   - [Crawler integrated](#crawler-integrated)
   - [Faster re-deploy](#faster-re-deploy)
-- [New command: `nuxt serve`](#new-command-nuxt-serve)
+- [New command: `nuxt serve`](#new-command-code-nuxt-serve-code-)
 - [Preview mode](#preview-mode)
 - [Commands](#commands)
 - [Notes](#notes)
@@ -46,19 +49,19 @@ video
 
 ## History
 
-Nuxt had the static generation feature with `nuxt generate` since its [v0.3.2](https://github.com/nuxt/nuxt.js/releases/tag/v0.3.2) (November 2016), since then we improved it in multiple ways but never achieved full static generation. Today I am excited to announce that full static export is now possible with Nuxt 2.13.
+Nuxt had the static generation feature with `nuxt generate` since [v0.3.2](https://github.com/nuxt/nuxt.js/releases/tag/v0.3.2) (November 2016), since then we have improved it in multiple ways but never achieved full static generation. Today I am excited to announce that full static export is now possible with Nuxt 2.13.
 
 ## Current issues
 
-`nuxt generate` is mostly pre-rendering, when you navigates on client-side, `asyncData` and `fetch` are called, *making a request to your API*. A lot of users asked to support a "full static" mode, meaning to not call these 2 hooks on navigation since the next page has been already pre-rendered.
+`nuxt generate` is mostly pre-rendering, when you navigate client-side, `asyncData` and `fetch` are called, *making a request to your API*. A lot of users asked to support a "full static" mode, meaning to not call these 2 hooks on navigation, since the next page has been already pre-rendered.
 
 Also, the developer experience is not optimal:
 
 - You have access to `req` or `res` on SSR but not when running `nuxt generate`
 - `process.static` is `true` only when running `nuxt generate`, making it slow to develop Nuxt modules or plugins for static generation
-- You have to specific all your [dynamic routes](https://nuxtjs.org/guide/routing#dynamic-routes) in `generate.routes`, making it harder since you don't have access to nuxt modules there.
+- You have to specify all your [dynamic routes](https://nuxtjs.org/guide/routing#dynamic-routes) in `generate.routes`, making it harder since you don't have access to nuxt modules there.
 - You cannot test the [SPA fallback](https://nuxtjs.org/guide/routing#spa-fallback) in development, the fallback is a client-only version of your Nuxt application that loads when hitting a 404 page
-- `nuxt generate` run `nuxt build` by default, making it slower to generate your website if only your content changed
+- `nuxt generate` runs `nuxt build` by default, making it slower to generate your website if only your content changed
 
 Note that it was possible to have full static support with [nuxt-payload-extractor](https://github.com/DreaMinder/nuxt-payload-extractor) module but it was more verbose to use and had limitations.
 
@@ -79,7 +82,7 @@ Running `nuxt dev` with the static target will improve the developer experience:
 - `$route.query` will always be equal to `{}` on server-side rendering
 - `process.static` is `true`
 
-We are also exposing `process.target` for modules author to add logic depending of the user target.
+We are also exposing `process.target` for modules author to add logic depending on the user target.
 
 ## New command: `nuxt export`
 
@@ -93,17 +96,13 @@ To avoid introducing a breaking change for `nuxt generate`, we are introducing a
 
 ### Crazy fast static applications
 
-`nuxt export` will pre-render all your pages to HTML and saves a payload file in order to mock `asyncData` and `fetch` on client-side navigation, this means **no** **more HTTP calls to your API on client-side navigation.** By extracting the page payload to a js file, **it also reduces the HTML size**  served as well as preloading it (from the <link> in the header) for best performances.
+`nuxt export` will pre-render all your pages to HTML and save a payload file in order to mock `asyncData` and `fetch` on client-side navigation, this means **no** **more HTTP calls to your API on client-side navigation.** By extracting the page payload to a js file, **it also reduces the HTML size**  served as well as preloading it (from the <link> in the header) for optimal performance.
 
-We also improved the [smart prefetching](https://nuxtjs.org/blog/introducing-smart-prefetching) when doing full static, it will also fetch the payloads, making instant navigations 👀
-
-<video src="/blog/going-full-static/" autoplay loop playsinline controls></video>
+We also improved the [smart prefetching](https://nuxtjs.org/blog/introducing-smart-prefetching) when doing full static, it will also fetch the payloads, making navigation instant 👀
 
 ### Crawler integrated
 
-On top of it, it has a crawler inside, detecting every relative link and generate it:
-
-<video src="/blog/going-full-static/" autoplay loop playsinline controls></video>
+On top of that, it also has a crawler inside, detecting every relative link and generating it:
 
 If you want to exclude a bunch of routes, use the [generate.exclude](https://nuxtjs.org/api/configuration-generate#exclude). You can keep using [generate.routes](https://nuxtjs.org/api/configuration-generate#routes) to add extra routes that the crawler could not detect.
 
@@ -111,9 +110,7 @@ To disable the crawler, set `generate.crawler: false` in your `nuxt.config.js`
 
 ### Faster re-deploy
 
-By separating `nuxt build` and `nuxt export`, we are opening a new range of improvement: pre-render your pages only if you content has changed, this means: no Wepack build → faster redeployments.
-
-<video src="/blog/going-full-static/" autoplay loop playsinline controls></video>
+By separating `nuxt build` and `nuxt export`, we are opening a new range of improvements: pre-render your pages only if you content has changed, this means: no Wepack build → faster redeployments.
 
 ## New command: `nuxt serve`
 
@@ -137,8 +134,6 @@ export default async function ({ query, enablePreview }) {
 It will automatically refresh the page data (calling `nuxtServerInit`, `asyncData` and `fetch`).
 
 When the preview mode is activated, `asyncData` and `fetch` original methods will be called.
-
-<video src="/blog/going-full-static/" autoplay loop playsinline controls></video>
 
 ## Commands
 

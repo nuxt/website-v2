@@ -2,33 +2,95 @@
   <div class="bg-light-elevatedSurface dark:bg-dark-elevatedSurface shadow-nuxt relative">
     <div class="container mx-auto px-4 py-24">
       <section>
-        <h1 class="text-3xl font-medium uppercase text-center pb-8" v-html="$store.state.homepage.companies.attrs.title" />
+        <h1
+          class="text-3xl font-medium uppercase text-center pb-8"
+          v-html="$t('homepage.companies.title')"
+        />
         <div class="flex flex-col lg:flex-row items-center justify-between">
-          <div v-for="(company, i) in langCompanies.slice(0, 5)" :key="i" class="p-4 lg:p-8 text-center">
-            <a :href="company.url" target="_blank" rel="noopener nofollow" class="company relative block">
+          <div
+            v-for="(company, i) in langCompanies.slice(0, 5)"
+            :key="i"
+            class="p-4 lg:p-8 text-center"
+          >
+            <a
+              :href="company.url"
+              target="_blank"
+              rel="noopener nofollow"
+              class="company relative block"
+            >
               <ClientOnly>
-                <img :src="'/img/companies/original/' + company.img" :alt="company.name" :class="[company.class, $colorMode.value === 'dark' ? 'absolute top-0 left-0 opacity-0' : '']" class="original">
-                <img v-if="$colorMode.value === 'dark'" :src="'/img/companies/preview/' + company.img" :alt="company.name" :class="company.class" class="preview">
+                <img
+                  :src="'/img/companies/original/' + company.img"
+                  :alt="company.name"
+                  :class="[company.class, $colorMode.value === 'dark' ? 'absolute top-0 left-0 opacity-0' : '']"
+                  class="original"
+                />
+                <img
+                  v-if="$colorMode.value === 'dark'"
+                  :src="'/img/companies/preview/' + company.img"
+                  :alt="company.name"
+                  :class="company.class"
+                  class="preview"
+                />
               </ClientOnly>
             </a>
           </div>
         </div>
         <div class="flex flex-col lg:flex-row items-center justify-between">
-          <div v-for="(company, i) in langCompanies.slice(5, 10)" :key="i" class="p-4 lg:p-8 text-center">
-            <a :href="company.url" target="_blank" rel="noopener nofollow" class="company relative block">
+          <div
+            v-for="(company, i) in langCompanies.slice(5, 10)"
+            :key="i"
+            class="p-4 lg:p-8 text-center"
+          >
+            <a
+              :href="company.url"
+              target="_blank"
+              rel="noopener nofollow"
+              class="company relative block"
+            >
               <ClientOnly>
-                <img :src="'/img/companies/original/' + company.img" :alt="company.name" :class="[company.class, $colorMode.value === 'dark' ? 'absolute top-0 left-0 opacity-0' : '']" class="original">
-                <img v-if="$colorMode.value === 'dark'" :src="'/img/companies/preview/' + company.img" :alt="company.name" :class="company.class" class="preview">
+                <img
+                  :src="'/img/companies/original/' + company.img"
+                  :alt="company.name"
+                  :class="[company.class, $colorMode.value === 'dark' ? 'absolute top-0 left-0 opacity-0' : '']"
+                  class="original"
+                />
+                <img
+                  v-if="$colorMode.value === 'dark'"
+                  :src="'/img/companies/preview/' + company.img"
+                  :alt="company.name"
+                  :class="company.class"
+                  class="preview"
+                />
               </ClientOnly>
             </a>
           </div>
         </div>
-        <div v-if="langCompanies.length > 10" class="hidden lg:flex flex-col lg:flex-row items-center justify-between">
+        <div
+          v-if="langCompanies.length > 10"
+          class="hidden lg:flex flex-col lg:flex-row items-center justify-between"
+        >
           <div v-for="(company, i) in langCompanies.slice(10, 15)" :key="i" class="p-8 text-center">
-            <a :href="company.url" target="_blank" rel="noopener nofollow" class="company relative block">
+            <a
+              :href="company.url"
+              target="_blank"
+              rel="noopener nofollow"
+              class="company relative block"
+            >
               <ClientOnly>
-                <img :src="'/img/companies/original/' + company.img" :alt="company.name" :class="[company.class, $colorMode.value === 'dark' ? 'absolute top-0 left-0 opacity-0' : '']" class="original">
-                <img v-if="$colorMode.value === 'dark'" :src="'/img/companies/preview/' + company.img" :alt="company.name" :class="company.class" class="preview">
+                <img
+                  :src="'/img/companies/original/' + company.img"
+                  :alt="company.name"
+                  :class="[company.class, $colorMode.value === 'dark' ? 'absolute top-0 left-0 opacity-0' : '']"
+                  class="original"
+                />
+                <img
+                  v-if="$colorMode.value === 'dark'"
+                  :src="'/img/companies/preview/' + company.img"
+                  :alt="company.name"
+                  :class="company.class"
+                  class="preview"
+                />
               </ClientOnly>
             </a>
           </div>
@@ -103,7 +165,7 @@ export default {
   },
   computed: {
     langCompanies () {
-      const locale = this.$store.state.locale
+      const locale = this.$i18n.locale
       const companies = this.companies[locale] || []
 
       // minimum 10 companies

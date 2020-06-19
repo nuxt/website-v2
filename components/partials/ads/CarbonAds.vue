@@ -5,7 +5,7 @@
 <script>
 export default {
   mounted () {
-    // if (['en', 'fr'].includes(this.$store.state.locale) && this.$refs.carbonads) {
+    // if (['en', 'fr'].includes(this.$i18n.locale) && this.$refs.carbonads) {
     if (this.$refs.carbonads) {
       const script = document.createElement('script')
       script.setAttribute('type', 'text/javascript')
@@ -19,17 +19,17 @@ export default {
 
 <style lang="scss">
 .dark-mode .Carbon {
-  background-color: theme('colors.dark.surface');
+  background-color: theme("colors.dark.surface");
   .carbon-text {
-    color: theme('colors.dark.onSurfacePrimary');
+    color: theme("colors.dark.onSurfacePrimary");
     &:hover {
-      color: theme('colors.dark.onSurfaceSecondary');
+      color: theme("colors.dark.onSurfaceSecondary");
     }
   }
 }
 
 .light-mode .Carbon {
-  background-color: theme('colors.gray.200');
+  background-color: theme("colors.gray.200");
   .carbon-text {
     @apply text-gray-600;
     &:hover {
@@ -115,5 +115,4 @@ export default {
     }
   }
 }
-
 </style>

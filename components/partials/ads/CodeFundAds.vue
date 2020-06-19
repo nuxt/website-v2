@@ -10,7 +10,7 @@ export default {
     }
   },
   mounted () {
-    if (['en', 'fr'].includes(this.$store.state.locale) && this.$refs.codefundads) {
+    if (['en', 'fr'].includes(this.$i18n.locale) && this.$refs.codefundads) {
       window.addEventListener('codefund', this.cardbonFallback)
       const script = document.createElement('script')
       script.setAttribute('type', 'text/javascript')

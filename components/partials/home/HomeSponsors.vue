@@ -1,14 +1,23 @@
 <template>
-  <div class="bg-light-elevatedSurface dark:bg-dark-elevatedSurface shadow-nuxt transition-colors duration-300 ease-linear">
+  <div
+    class="bg-light-elevatedSurface dark:bg-dark-elevatedSurface shadow-nuxt transition-colors duration-300 ease-linear"
+  >
     <div class="container mx-auto px-4 py-12 text-centshadow-nuxter">
       <section class="px-4">
-        <h1 class="text-3xl uppercase mb-2 sm:mb-0 font-medium" v-html="wordings.attrs.title" />
+        <h1
+          class="text-3xl uppercase mb-2 sm:mb-0 font-medium"
+          v-html="$t('homepage.sponsors.title')"
+        />
         <SponsoringIllustration id="sponsor-img" class="inline-block float-right lg:ml-4" />
-        <div class="pt-6 pb-12 leading-loose text-left text-light-onSurfaceSecondary dark:text-dark-onSurfaceSecondary transition-colors duration-300 ease-linear">
-          <p v-html="wordings.body" />
+        <div
+          class="pt-6 pb-12 leading-loose text-left text-light-onSurfaceSecondary dark:text-dark-onSurfaceSecondary transition-colors duration-300 ease-linear"
+        >
+          <p v-html="$t('homepage.sponsors.description')" />
         </div>
         <div v-for="(group, groupKey) in sponsors" :key="groupKey" class="text-center pb-8">
-          <h2 class="uppercase text text-light-onSurfacePrimary dark:text-dark-onSurfacePrimary font-medium pb-8 transition-colors duration-300 ease-linear">
+          <h2
+            class="uppercase text text-light-onSurfacePrimary dark:text-dark-onSurfacePrimary font-medium pb-8 transition-colors duration-300 ease-linear"
+          >
             <span class="pb-2 border-b-2 border-nuxt-lightgreen">{{ groupKey }}</span>
           </h2>
           <a
@@ -20,12 +29,19 @@
             rel="noopener sponsored"
           >
             <ClientOnly>
-              <img :src="`/img/sponsors/${$colorMode.value}/${sponsor.img}`" :alt="sponsor.name" class="inline-block" :class="sponsor.class">
+              <img
+                :src="`/img/sponsors/${$colorMode.value}/${sponsor.img}`"
+                :alt="sponsor.name"
+                class="inline-block"
+                :class="sponsor.class"
+              />
             </ClientOnly>
           </a>
         </div>
         <div class="text-center pb-8">
-          <h2 class="uppercase text text-light-onSurfacePrimary dark:text-dark-onSurfacePrimary font-medium pb-8 transition-colors duration-300 ease-linear">
+          <h2
+            class="uppercase text text-light-onSurfacePrimary dark:text-dark-onSurfacePrimary font-medium pb-8 transition-colors duration-300 ease-linear"
+          >
             <span class="pb-2 border-b-2 border-nuxt-lightgreen">Educational Partner</span>
           </h2>
           <a
@@ -35,14 +51,19 @@
             rel="noopener sponsored"
           >
             <ClientOnly>
-              <img :src="`/img/partners/${$colorMode.value}/vueschool.svg`" alt="Vue School logo" title="Vue School is an official Nuxt.js Educational Partner" class="inline-block h-10">
+              <img
+                :src="`/img/partners/${$colorMode.value}/vueschool.svg`"
+                alt="Vue School logo"
+                title="Vue School is an official Nuxt.js Educational Partner"
+                class="inline-block h-10"
+              />
             </ClientOnly>
           </a>
         </div>
         <div class="text-center">
           <AppButton :to="{ name: 'sponsor-nuxtjs' }" class="py-3 px-6 text-base">
             <OpenCollectiveIcon slot="icon" class="inline-block h-5 -mt-1 mr-1" />
-            {{ buttonWording }}
+            {{ $t('homepage.sponsors.become_a_sponsor') }}
           </AppButton>
         </div>
       </section>
@@ -71,9 +92,7 @@ export default {
         special: [
           { name: 'Google Chrome', img: 'google-chrome.svg', url: 'https://www.google.com/chrome/?ref=nuxt', class: 'h-12' }
         ]
-      },
-      wordings: this.$store.state.homepage.sponsors,
-      buttonWording: this.$store.state.lang.homepage.sponsors.become_a_sponsor
+      }
     }
   }
 }

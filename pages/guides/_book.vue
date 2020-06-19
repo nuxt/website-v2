@@ -1,22 +1,39 @@
 <template>
-  <div class="bg-light-elevatedSurface dark:bg-dark-elevatedSurface shadow-nuxt transition-colors duration-300 ease-linear">
+  <div
+    class="bg-light-elevatedSurface dark:bg-dark-elevatedSurface shadow-nuxt transition-colors duration-300 ease-linear"
+  >
     <div class="container mx-auto px-4 lg:flex pb-12">
       <template>
-        <aside :class="{ 'opacity-25': $store.state.focusMode }" class="opacity-transition block bg-gray-100 mt-8 -mx-4 lg:bg-transparent lg:mt-0 lg:mx-0 lg:inset-0 z-90 lg:mb-0 lg:static lg:h-auto lg:overflow-y-visible lg:pt-0 lg:w-1/4 lg:block">
-          <div class="h-full overflow-y-auto scrolling-touch text-center lg:text-left lg:h-auto lg:block lg:relative lg:sticky lg:top-24">
-            <a v-if="breadcrumb" class="block text-left p-4 lg:hidden" href="#nav" @click.prevent="showNav = !showNav">
+        <aside
+          :class="{ 'opacity-25': $store.state.focusMode }"
+          class="opacity-transition block bg-gray-100 mt-8 -mx-4 lg:bg-transparent lg:mt-0 lg:mx-0 lg:inset-0 z-90 lg:mb-0 lg:static lg:h-auto lg:overflow-y-visible lg:pt-0 lg:w-1/4 lg:block"
+        >
+          <div
+            class="h-full overflow-y-auto scrolling-touch text-center lg:text-left lg:h-auto lg:block lg:relative lg:sticky lg:top-24"
+          >
+            <a
+              v-if="breadcrumb"
+              class="block text-left p-4 lg:hidden"
+              href="#nav"
+              @click.prevent="showNav = !showNav"
+            >
               <TimesIcon v-if="showNav" class="float-right mt-1 mr-1 h-5" />
               <CaretDownIcon v-else class="float-right mt-2 mr-1" />
-              <span class="uppercase text-gray-500 ml-1">{{ breadcrumb.group }} :</span> {{ breadcrumb.title }}
+              <span class="uppercase text-gray-500 ml-1">{{ breadcrumb.group }} :</span>
+              {{ breadcrumb.title }}
             </a>
-            <nav class="pt-8 lg:overflow-y-auto lg:block lg:pl-0 lg:pr-8 sticky?lg:h-(screen-24)" :class="{ hidden: !showNav }">
+            <nav
+              class="pt-8 lg:overflow-y-auto lg:block lg:pl-0 lg:pr-8 sticky?lg:h-(screen-24)"
+              :class="{ hidden: !showNav }"
+            >
               <!-- <p class="uppercase font-bold pb-6">
           {{ $store.state.lang.text.version }} <span class="text-nuxt-lightgreen">{{ $store.state.docVersion }}</span>
-        </p> -->
+              </p>-->
               <template v-for="(docs, category) in categories">
-                <h3 :key="`title-${category}`" class="uppercase font-medium text-light-onSurfaceSecondary dark:text-dark-onSurfaceSecondary pb-2 transition-colors duration-300 ease-linear">
-                  {{ category }}
-                </h3>
+                <h3
+                  :key="`title-${category}`"
+                  class="uppercase font-medium text-light-onSurfaceSecondary dark:text-dark-onSurfaceSecondary pb-2 transition-colors duration-300 ease-linear"
+                >{{ category }}</h3>
                 <ul :key="`list-${category}`" class="pb-8">
                   <li v-for="doc of docs" :key="doc.slug" class="py-2">
                     <NuxtLink
@@ -24,16 +41,14 @@
                       :class="{'current-link': path === toLink(category, doc.slug)}"
                       :to="toLink(category, doc.slug)"
                       exact
-                    >
-                      {{ doc.title }}
-                    </NuxtLink>
+                    >{{ doc.title }}</NuxtLink>
                     <!-- <ul v-if="path === menu + link.to && link.contents" class="pl-2 py-1">
                 <li v-for="(content, i) in link.contents" :key="content.to" class="py-1 text-sm">
                   <a :href="menu + link.to + content.to" class="text-light-onSurfaceSecondary dark:text-dark-onSurfaceSecondary transition-colors duration-300 ease-linear" :class="{'current-link': current === i}" @click.prevent="scrollTo(content.to)">
                     {{ content.name }}
                   </a>
                 </li>
-              </ul> -->
+                    </ul>-->
                   </li>
                 </ul>
               </template>
@@ -63,7 +78,7 @@ export default {
   async asyncData ({ $content, params, app, store }) {
     const { section } = params
 
-    const docs = await $content(store.state.locale, section, { deep: true })
+    const docs = await $content(app.i18n.locale, section, { deep: true })
       .only(['category', 'title', 'slug'])
       .sortBy('categoryPosition', 'asc')
       .sortBy('position', 'asc')

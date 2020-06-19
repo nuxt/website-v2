@@ -24,7 +24,7 @@
           :book="book"
           class="lg:px-8 mt-4"
         />
-        <!-- <AppContributeNewDocs :doc-link="docLink" :contributors="contributors" /> -->
+        <AppContributeNewDocs :doc-link="docLink" :contributors="contributors" />
       </article>
     </div>
     <ArticleToc
@@ -49,15 +49,14 @@ export default {
   },
   async asyncData ({ $content, store, app, params, error, router }) {
     const { book, slug } = params
-
     let doc
     try {
-      doc = await $content('guides', book, slug).fetch()
+      doc = await $content(store.state.locale, 'guides', book, slug).fetch()
     } catch (e) {
       return error({ statusCode: 404, message: 'Page not found' })
     }
 
-    const [prev, next] = await $content('guides', book)
+    const [prev, next] = await $content(store.state.locale, 'guides', book)
       .only(['title', 'slug'])
       .sortBy('position', 'asc')
       .surround(slug, { before: 1, after: 1 })

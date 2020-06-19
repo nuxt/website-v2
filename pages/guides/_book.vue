@@ -60,10 +60,10 @@ export default {
     CaretDownIcon,
     TimesIcon
   },
-  async asyncData ({ $content, params, app }) {
+  async asyncData ({ $content, params, app, store }) {
     const { section } = params
 
-    const docs = await $content(section, { deep: true })
+    const docs = await $content(store.state.locale, section, { deep: true })
       .only(['category', 'title', 'slug'])
       .sortBy('categoryPosition', 'asc')
       .sortBy('position', 'asc')

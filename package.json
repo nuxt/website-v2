@@ -25,7 +25,7 @@
     "micro": "^9.3.4",
     "node-fetch": "^2.6.0",
     "normalize.css": "^8.0.1",
-    "nuxt-edge": "^2.13.0-26496727.6a6794e0",
+    "nuxt": "^2.13.0",
     "nuxt-svg-loader": "^1.2.0",
     "octicons": "^8.5.0",
     "prism-themes": "^1.4.0",

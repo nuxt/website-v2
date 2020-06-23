@@ -10,22 +10,22 @@
       <div class="content-wrapper h-full relative">
         <div class="overflow-y-auto h-full pt-4">
           <transition-group
-            v-for="(group, index) in links"
-            :key="index"
+            v-for="(sublinks, group) in links"
+            :key="group"
             tag="div"
             name="list"
             class="header_mobile_aside_group"
           >
-            <h3 :key="`title-${index}`" class="uppercase text-gray-500 pb-2">{{ group.title }}</h3>
-            <ul :key="`list-${index}`" class="pb-6">
-              <li v-for="l in group.links" :key="l.to" class="py-2">
+            <h3 :key="`title-${group}`" class="uppercase text-gray-500 pb-2">{{ group }}</h3>
+            <ul :key="`list-${group}`" class="pb-6">
+              <li v-for="(link, index) in sublinks" :key="index" class="py-2">
                 <NuxtLink
                   class="block dark:text-dark-onSurfacePrimary hover:text-nuxt-lightgreen transition-colors duration-300 ease-linear"
-                  :class="{'text-nuxt-lightgreen': path === locale + l.to}"
-                  :to="locale + l.to"
+                  exact-active-class="text-nuxt-lightgreen"
+                  :to="localePath({ name: 'section-slug', params: { slug: link.slug } })"
                   exact
                   @click.native="show = false"
-                >{{ l.name }}</NuxtLink>
+                >{{ link.title }}</NuxtLink>
               </li>
             </ul>
           </transition-group>

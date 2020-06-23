@@ -61,7 +61,7 @@
           </a>
         </div>
         <div class="text-center">
-          <AppButton :to="{ name: 'sponsor-nuxtjs' }" class="py-3 px-6 text-base">
+          <AppButton :to="localePath({ name: 'sponsor-nuxtjs' })" class="py-3 px-6 text-base">
             <OpenCollectiveIcon slot="icon" class="inline-block h-5 -mt-1 mr-1" />
             {{ $t('homepage.sponsors.become_a_sponsor') }}
           </AppButton>

@@ -15,7 +15,7 @@
         >{{ doc.title }}</h1>
         <nuxt-content :document="doc" />
         <EditOnGithub :document="doc" />
-        <LazyArticlePrevNext
+        <LazyAppPrevNextNew
           :prev="prev"
           :next="next"
           section="guides"
@@ -25,7 +25,7 @@
         <AppContributeNewDocs :doc-link="docLink" :contributors="contributors" />
       </article>
     </div>
-    <ArticleToc
+    <AppToc
       v-if="doc.toc && doc.toc.length"
       class="opacity-transition"
       :class="{ 'opacity-25': $store.state.focusMode }"

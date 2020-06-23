@@ -18,7 +18,11 @@ export default {
   //   return store.state.menu[params.section] !== undefined
   // }
   async asyncData ({ $content, app, params }) {
-    const links = await $content(app.i18n.locale, params.section).only(['slug', 'title', 'group']).fetch()
+    const links = await $content(app.i18n.locale, params.section)
+      .only(['slug', 'title', 'group'])
+      .sortBy('groupPosition', 'asc')
+      .sortBy('position', 'asc')
+      .fetch()
 
     return {
       links: groupBy(links, 'group')

@@ -39,10 +39,14 @@
         <AppResponsiveVideo v-if="page.youtube" :src="page.youtube" />
         <!-- <AppHtmlParser :content="page.body" /> -->
         <nuxt-content :document="page" />
-        <!-- <AppContribute :doc-link="docLink" :contributors="contributors" /> -->
+        <AppPrevNext :prev="prev" :next="next" :section="section" class="mt-4" />
+        <AppContribute :doc-link="docLink" :contributors="contributors" />
       </article>
     </div>
     <AffixBlock class="opacity-transition" :class="{ 'opacity-25': $store.state.focusMode }">
+      <AppToc v-if="page.toc && page.toc.length" :toc="page.toc" class="mb-8" />
+
+      <SponsorsBlock />
       <AdsBlock :key="$route.params.slug" />
     </AffixBlock>
   </div>
@@ -62,6 +66,14 @@ export default {
     try {
       data.page = await $content(path).fetch()
       data.contributors = (await fetch('https://contributors-api.onrender.com' + path).then(res => res.json())).map(({ author }) => ({ author }))
+      const [prev, next] = await $content(`/${app.i18n.locale}/${params.section}`)
+        .only(['title', 'slug'])
+        .sortBy('groupPosition', 'asc')
+        .sortBy('position', 'asc')
+        .surround(slug, { before: 1, after: 1 })
+        .fetch()
+      data.prev = prev
+      data.next = next
     } catch (err) {
       if (!err.response || err.response.status !== 404) {
         return error({ statusCode: 500, message: app.i18n.t('common.an_error_occurred') })
@@ -72,13 +84,7 @@ export default {
   },
   computed: {
     docLink () {
-      let docLink = `https://github.com/nuxt/docs/blob/master${this.path}.md`
-      if (this.$i18n.locale.locale === 'ru') {
-        docLink = `https://github.com/translation-gang/ru.docs.nuxtjs/blob/translation-ru${this.path}.md`
-      } else if (this.$i18n.locale.locale === 'cn') {
-        docLink = `https://github.com/o2team/i18n-cn-nuxtjs-docs/blob/dev${this.path}.md`
-      }
-      return docLink
+      return `https://github.com/nuxt/nuxtjs.org/blob/master/content${this.path}.md`
     },
     codeSandBox () {
       return 'https://codesandbox.io'

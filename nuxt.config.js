@@ -71,8 +71,8 @@ export default {
     '~/plugins/vue-observe-visibility.client.js',
     '~/plugins/ga.client.js',
     '~/plugins/adblock.client.js',
-    '~/plugins/newsletter.client.js'
-    // '@/plugins/vue-scrollactive'
+    '~/plugins/newsletter.client.js',
+    '@/plugins/vue-scrollactive'
     // '@/plugins/components'
   ],
   env: {

@@ -206,8 +206,7 @@
       @apply pt-2;
     }
   }
-}
-div ::v-deep {
+
   p {
     @apply leading-relaxed py-1 mb-2 transition-colors duration-300 ease-linear;
   }

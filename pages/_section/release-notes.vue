@@ -18,7 +18,7 @@
         <AppContribute/>
       </article>
     </div>
-    <AffixBlock class="opacity-transition" :class="{ 'opacity-25': $store.state.focusMode }">
+    <AffixBlock>
       <AdsBlock key="release-notes" class="mx-auto" />
     </AffixBlock>
   </div>

@@ -1,0 +1,58 @@
+<template>
+  <aside
+    class="opacity-transition block bg-gray-100 mt-8 -mx-4 lg:bg-transparent lg:mt-0 lg:mx-0 lg:inset-0 z-90 lg:mb-0 lg:static lg:h-auto lg:overflow-y-visible lg:pt-0 lg:w-1/4 lg:block"
+  >
+    <div
+      class="h-full overflow-y-auto scrolling-touch text-center lg:text-left lg:h-auto lg:block lg:relative lg:sticky lg:top-24"
+    >
+      <nav
+        class="pt-8 lg:overflow-y-auto lg:block lg:pl-0 lg:pr-8 sticky?lg:h-(screen-24)"
+        :class="{ hidden: !showNav }"
+      >
+        <p class="uppercase font-bold pb-6">
+          {{ $t('common.version') }}
+          <span class="text-nuxt-lightgreen">{{ $t('docVersion') }}</span>
+        </p>
+        <div v-for="(sublinks, group) in links" :key="`links-${group}`">
+          <h3
+            :key="`title-${group}`"
+            class="uppercase font-medium text-light-onSurfaceSecondary dark:text-dark-onSurfaceSecondary pb-2 transition-colors duration-300 ease-linear"
+          >{{ group }}</h3>
+          <ul class="pb-8">
+            <li v-for="(link, index) in sublinks" :key="index" class="py-2">
+              <NuxtLink
+                class="text-light-onSurfacePrimary dark:text-dark-onSurfacePrimary hover:text-nuxt-lightgreen dark:hover:text-nuxt-lightgreen transition-colors duration-300 ease-linear"
+                exact-active-class="text-nuxt-lightgreen"
+                :to="toLink (group, link)"
+                exact
+              >{{ link.title }}</NuxtLink>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </div>
+  </aside>
+</template>
+
+<script>
+import slugify from 'slugify'
+export default {
+  props: {
+    links: {
+      type: Object,
+      default: () => []
+    }
+  },
+  data () {
+    return { current: 0, setInter: null, showNav: false }
+  },
+  methods: {
+    toLink (group, link) {
+      return this.localePath({ name: 'guides-book-slug', params: { book: slugify(group, { lower: true }), slug: link.slug } })
+    }
+  }
+}
+</script>
+
+<style lang="scss" scoped>
+</style>

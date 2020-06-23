@@ -3,18 +3,12 @@
   <div class="-mx-4 lg:mx-0 flex flex-col-reverse lg:flex-row">
     <div
       class="lg:min-h-screen w-full py-8 px-4 lg:static lg:overflow-visible lg:max-h-full lg:w-3/4"
-      @mouseover="$store.dispatch('focusMode')"
-      @mouseleave="$store.dispatch('clearFocusMode')"
     >
-      <!-- <div v-if="page.langFallback" class="p-4 mb-6 rounded bg-orange-200 dark:text-light-onSurfacePrimary">
-        ⚠️ You are looking at the english version of the page. Help us translate it <a :href="docLink" class="text-orange-600">here</a>.
-      </div>-->
       <article>
         <h1
           class="text-light-onSurfacePrimary dark:text-dark-onSurfacePrimary transition-colors duration-300 ease-linear"
-        >{{ doc.title }}</h1>
-        <nuxt-content :document="doc" />
-        <EditOnGithub :document="doc" />
+        >{{ page.title }}</h1>
+        <nuxt-content :document="page" />
         <LazyAppPrevNextNew
           :prev="prev"
           :next="next"
@@ -22,71 +16,138 @@
           :book="book"
           class="lg:px-8 mt-4"
         />
-        <AppContributeNewDocs :doc-link="docLink" :contributors="contributors" />
+        <AppContribute :doc-link="docLink" :contributors="contributors" />
       </article>
     </div>
-    <AppToc
-      v-if="doc.toc && doc.toc.length"
-      class="opacity-transition"
-      :class="{ 'opacity-25': $store.state.focusMode }"
-      :toc="doc.toc"
-    />
+    <AffixBlock>
+      <AppToc v-if="page.toc && page.toc.length" :toc="page.toc" class="mb-8" />
+      <SponsorsBlock />
+      <AdsBlock :key="$route.params.slug" />
+    </AffixBlock>
   </div>
 </template>
 
 <script>
 import shuffle from 'lodash/shuffle'
-
 export default {
-  name: 'PageSlug',
-  scrollToTop: true,
-  middleware ({ params, redirect }) {
-    if (params.slug === 'index') {
-      redirect('/')
+  async asyncData ({ $content, params, store, error, app }) {
+    const slug = params.slug
+    const path = `/${app.i18n.locale}/guides/${params.book}/${slug}`
+    const data = {
+      path,
+      section: params.section,
+      book: params.book,
+      page: {}
     }
-  },
-  async asyncData ({ $content, store, app, params, error, router }) {
-    const { book, slug } = params
-    let doc
     try {
-      doc = await $content(app.i18n.locale, 'guides', book, slug).fetch()
-    } catch (e) {
-      return error({ statusCode: 404, message: 'Page not found' })
+      data.page = await $content(path).fetch()
+      data.contributors = (await fetch('https://contributors-api.onrender.com' + path).then(res => res.json())).map(({ author }) => ({ author }))
+      const [prev, next] = await $content(`/${app.i18n.locale}/guides/${params.book}`)
+        .only(['title', 'slug'])
+        .sortBy('groupPosition', 'asc')
+        .sortBy('position', 'asc')
+        .surround(slug, { before: 1, after: 1 })
+        .fetch()
+      data.prev = prev
+      data.next = next
+    } catch (err) {
+      if (!err.response || err.response.status !== 404) {
+        return error({ statusCode: 500, message: app.i18n.t('common.an_error_occurred') })
+      }
+      return error({ statusCode: 404, message: app.i18n.t('common.api_page_not_found') })
     }
-
-    const [prev, next] = await $content(app.i18n.locale, 'guides', book)
-      .only(['title', 'slug'])
-      .sortBy('position', 'asc')
-      .surround(slug, { before: 1, after: 1 })
-      .fetch()
-
-    if (doc && doc.questions) {
-      doc.questions = shuffle(doc.questions.map(question => ({ ...question, answers: shuffle(question.answers) })))
+    if (data.page && data.page.questions) {
+      data.page.questions = shuffle(data.page.questions.map(question => ({ ...question, answers: shuffle(question.answers) })))
     }
-
-    return {
-      doc,
-      book,
-      slug,
-      prev,
-      next
+    return data
+  },
+  computed: {
+    docLink () {
+      return `https://github.com/nuxt/nuxtjs.org/blob/master/content${this.path}.md`
+    },
+    codeSandBox () {
+      return 'https://codesandbox.io'
+    },
+    codeSandBoxLink () {
+      if (!this.page.github) {
+        return ''
+      }
+      return `${this.codeSandBox}/embed/github/nuxt/nuxt.js/tree/dev/examples/${this.page.github}?autoresize=1&view=editor`
+    },
+    liveEditLink () {
+      return `${this.codeSandBox}/s/github/nuxt/nuxt.js/tree/dev/examples/${this.page.github}?from-embed`
+    },
+    downloadLink () {
+      return 'https://minhaskamal.github.io/DownGit/#/home?url=https://github.com/nuxt/nuxt.js/tree/dev/examples/' + this.page.github
     }
   },
+  scrollToTop: true,
   head () {
     return {
-      title: this.doc.title,
+      title: this.page.title,
+      titleTemplate: '%s - NuxtJS',
       meta: [
-        { hid: 'description', name: 'description', content: this.doc.description },
+        { hid: 'description', name: 'description', content: this.page.description },
         // Open Graph
-        { hid: 'og:title', property: 'og:title', content: this.doc.title },
-        { hid: 'og:description', property: 'og:description', content: this.doc.description },
+        { hid: 'og:title', property: 'og:title', content: this.page.title },
+        { hid: 'og:description', property: 'og:description', content: this.page.description },
         // Twitter Card
-        { hid: 'twitter:title', name: 'twitter:title', content: this.doc.title },
-        { hid: 'twitter:description', name: 'twitter:description', content: this.doc.description }
+        { hid: 'twitter:title', name: 'twitter:title', content: this.page.title },
+        { hid: 'twitter:description', name: 'twitter:description', content: this.page.description }
       ]
     }
   }
 }
+// export default {
+//   name: 'PageSlug',
+//   scrollToTop: true,
+//   middleware ({ params, redirect }) {
+//     if (params.slug === 'index') {
+//       redirect('/')
+//     }
+//   },
+//   async asyncData ({ $content, store, app, params, error, router }) {
+//     const { book, slug } = params
+//     let doc
+//     try {
+//       doc = await $content(app.i18n.locale, 'guides', book, slug).fetch()
+//     } catch (e) {
+//       return error({ statusCode: 404, message: 'Page not found' })
+//     }
+
+//     const [prev, next] = await $content(app.i18n.locale, 'guides', book)
+//       .only(['title', 'slug'])
+//       .sortBy('position', 'asc')
+//       .surround(slug, { before: 1, after: 1 })
+//       .fetch()
+
+//     if (doc && doc.questions) {
+//       doc.questions = shuffle(doc.questions.map(question => ({ ...question, answers: shuffle(question.answers) })))
+//     }
+
+//     return {
+//       doc,
+//       book,
+//       slug,
+//       prev,
+//       next
+//     }
+//   },
+//   head () {
+//     return {
+//       title: this.doc.title,
+//       meta: [
+//         { hid: 'description', name: 'description', content: this.doc.description },
+//         // Open Graph
+//         { hid: 'og:title', property: 'og:title', content: this.doc.title },
+//         { hid: 'og:description', property: 'og:description', content: this.doc.description },
+//         // Twitter Card
+//         { hid: 'twitter:title', name: 'twitter:title', content: this.doc.title },
+//         { hid: 'twitter:description', name: 'twitter:description', content: this.doc.description }
+//       ]
+//     }
+//   }
+// }
 </script>
 <style lang="scss" scoped>
 </style>

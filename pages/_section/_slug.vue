@@ -2,8 +2,6 @@
   <div class="-mx-4 lg:mx-0 flex flex-col-reverse lg:flex-row">
     <div
       class="lg:min-h-screen w-full py-8 px-4 lg:static lg:overflow-visible lg:max-h-full lg:w-3/4"
-      @mouseover="$store.dispatch('focusMode')"
-      @mouseleave="$store.dispatch('clearFocusMode')"
     >
       <article v-if="section === 'examples'">
         <h1
@@ -34,7 +32,7 @@
         <AppContribute :doc-link="docLink" :contributors="contributors" />
       </article>
     </div>
-    <AffixBlock class="opacity-transition" :class="{ 'opacity-25': $store.state.focusMode }">
+    <AffixBlock>
       <AppToc v-if="page.toc && page.toc.length" :toc="page.toc" class="mb-8" />
 
       <SponsorsBlock />

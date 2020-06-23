@@ -72,8 +72,8 @@ export default {
     '~/plugins/ga.client.js',
     '~/plugins/adblock.client.js',
     '~/plugins/newsletter.client.js',
-    '@/plugins/vue-scrollactive'
-    // '@/plugins/components'
+    '@/plugins/vue-scrollactive',
+    '@/plugins/components'
   ],
   env: {
     DEPLOY_PRIME_URL: process.env.DEPLOY_PRIME_URL || false,

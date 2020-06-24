@@ -22,7 +22,7 @@
                 <NuxtLink
                   class="block dark:text-dark-onSurfacePrimary hover:text-nuxt-lightgreen transition-colors duration-300 ease-linear"
                   exact-active-class="text-nuxt-lightgreen"
-                  :to="localePath({ name: 'guides-blog-slug', params: { slug: link.slug } })"
+                  :to="localePath({ name: 'guides-book-slug', params: { slug: link.slug } })"
                   exact
                   @click.native="show = false"
                 >{{ link.title }}</NuxtLink>
@@ -75,10 +75,10 @@ export default {
       show: false
     }
   },
-  computed: {
-    path () { return this.$route.path.slice(-1) === '/' ? this.$route.path.slice(0, -1) : this.$route.path },
-    locale () { return '/guides' }
-  },
+  // computed: {
+  //   path () { return this.$route.path.slice(-1) === '/' ? this.$route.path.slice(0, -1) : this.$route.path },
+  //   locale () { return '/guides' }
+  // },
   methods: {
     clickOutsideHandler () {
       if (this.show) {

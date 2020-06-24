@@ -17,17 +17,16 @@
       <!-- Center Navigation -->
       <nav class="hidden lg:flex lg:pt-1 xl:pt-0 mx-auto">
         <ul class="flex text-center">
-          <li class="xl:px-2 lg:py-0 py-2">
-            <NuxtLink class="block p-2 font-medium uppercase hover:no-underline light:hover:text-nuxt-lightgreen dark:hover:text-nuxt-lightgreen text-light-onSurfacePrimary dark:text-dark-onSurfacePrimary transition-colors duration-300 ease-linear" to="/guides/get-started/installation">
-              Guide <span class="bg-green-200 text-ss align-top px-1 rounded-sm lowercase">beta</span>
-            </NuxtLink>
-          </li>
-
           <li
             v-for="link in $t('header.links')"
             :key="link.slug"
             class="xl:px-4 lg:py-0 lg:px-2 py-2"
           >
+            <NuxtLink
+              v-if="link.type === 'newDocs'"
+              class="block p-2 font-medium uppercase hover:no-underline light:hover:text-nuxt-lightgreen dark:hover:text-nuxt-lightgreen text-light-onSurfacePrimary dark:text-dark-onSurfacePrimary transition-colors duration-300 ease-linear"
+              :to="localePath( { name: link.routeName, params: { section: 'guides', book: 'get-started', slug: 'installation' } })"
+            >{{ link.name }}<span class="bg-green-200 text-ss align-top px-1 rounded-sm lowercase">beta</span></NuxtLink>
             <NuxtLink
               v-if="link.type === 'dynamic'"
               class="block p-2 font-medium uppercase hover:no-underline light:hover:text-nuxt-lightgreen dark:hover:text-nuxt-lightgreen text-light-onSurfacePrimary dark:text-dark-onSurfacePrimary transition-colors duration-300 ease-linear"

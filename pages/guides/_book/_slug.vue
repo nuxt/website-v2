@@ -29,7 +29,12 @@
 
 <script>
 import shuffle from 'lodash/shuffle'
+import quiz from '~/components/Quiz'
 export default {
+  components: {
+    // eslint-disable-next-line vue/no-unused-components
+    quiz
+  },
   async asyncData ({ $content, params, store, error, app }) {
     const slug = params.slug
     const path = `/${app.i18n.locale}/guides/${params.book}/${slug}`

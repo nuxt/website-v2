@@ -2,7 +2,13 @@ module.exports = {
   header: {
     links: [
       {
-        name: 'Guide French',
+        name: 'Guides',
+        slug: 'guides',
+        type: 'newDocs',
+        routeName: 'guides-book-slug'
+      },
+      {
+        name: 'Guide',
         slug: 'guide',
         type: 'dynamic',
         routeName: 'section-slug'
@@ -42,7 +48,7 @@ module.exports = {
   },
   homepage: {
     meta: {
-      title: 'Nuxt.js - The Intuitive Vue Framework in French',
+      title: 'Nuxt.js - The Intuitive Vue Framework',
       description: 'Build your next Vue.js application with confidence using NuxtJS. An open source framework making web development simple and powerful.'
     },
     welcome: {
@@ -92,7 +98,7 @@ module.exports = {
       become_a_sponsor: 'Become a sponsor'
     },
     newsletter: {
-      title: 'Nuxt<span class="text-nuxt-lightgreen">JS</span> Newsletter French',
+      title: 'Nuxt<span class="text-nuxt-lightgreen">JS</span> Newsletter',
       description: 'Get the latest Nuxt news to your inbox, curated by the core team and contributors.',
       form: {
         email: 'Email',

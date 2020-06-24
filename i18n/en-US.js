@@ -16,6 +16,12 @@ module.exports = {
   header: {
     links: [
       {
+        name: 'Guides',
+        slug: 'guides',
+        type: 'newDocs',
+        routeName: 'guides-book-slug'
+      },
+      {
         name: 'Guide',
         slug: 'guide',
         type: 'dynamic',

@@ -14,9 +14,6 @@
 import groupBy from 'lodash.groupby'
 
 export default {
-  // validate ({ store, params }) {
-  //   return store.state.menu[params.section] !== undefined
-  // }
   async asyncData ({ $content, app, params }) {
     const links = await $content(app.i18n.locale, params.section)
       .only(['slug', 'title', 'group'])

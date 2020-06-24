@@ -66,6 +66,7 @@ export default {
     proxy: true
   },
   plugins: [
+    '~/plugins/i18n',
     '~/plugins/directives',
     '~/plugins/intersection-observer.client.js',
     '~/plugins/vue-observe-visibility.client.js',
@@ -80,7 +81,8 @@ export default {
     DEPLOY_PRIME_URL: process.env.DEPLOY_PRIME_URL || false,
     URL: process.env.URL || false,
     DOC_SEARCH_API_KEY: process.env.DOC_SEARCH_API_KEY || 'ff80fbf046ce827f64f06e16f82f1401',
-    NUXT_API: process.env.NUXT_API || 'https://api.nuxtjs.com'
+    NUXT_API: process.env.NUXT_API || 'https://api.nuxtjs.com',
+    NUXT_LOCALE: process.env.NUXT_LOCALE || 'en'
   },
   loading: { color: '#41B883' },
   generate: {
@@ -94,18 +96,20 @@ export default {
       iso: 'en-US',
       file: 'en-US.js',
       name: 'English',
-      domain: 'nuxtjs.org'
+      domain: 'https://nuxtjs.org'
     }, {
       code: 'fr',
       iso: 'fr-FR',
       file: 'fr-FR.js',
       name: 'Français',
-      domain: 'fr.nuxtjs.org'
+      domain: 'https://fr.nuxtjs.org'
     }],
-    defaultLocale: process.env.NUXT_LOCALE || 'en',
+    vueI18n: {
+      fallbackLocale: 'en'
+    },
+    defaultLocale: 'en',
     parsePages: false,
     detectBrowserLanguage: false,
-    // differentDomains: (process.env.NODE_ENV === 'production'),
     seo: false,
     lazy: true,
     langDir: 'i18n/'

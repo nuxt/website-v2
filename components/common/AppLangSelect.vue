@@ -50,7 +50,9 @@ export default {
   },
   methods: {
     onChange (event) {
-      window.location.href = this.switchLocalePath(event.target.value)
+      const locale = this.$i18n.locales.find(locale => locale.code === event.target.value)
+
+      window.location.href = locale.domain
     },
     getLocaleDescription (locale) {
       switch (this.mode) {

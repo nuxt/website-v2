@@ -214,6 +214,6 @@ You may want to only disable this option if you have many pages and routes.
 
 ➡️Resource Hints
 
-## Quiz
+
 
 <quiz :questions="questions"></quiz>

@@ -39,7 +39,8 @@ export default {
     // https://http.nuxtjs.org
     '@nuxt/http',
     '@nuxt/content',
-    'nuxt-i18n'
+    'nuxt-i18n',
+    'vue-scrollto/nuxt'
   ],
   // Auto import components, see https://github.com/nuxt/components
   components: true,

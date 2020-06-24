@@ -283,6 +283,6 @@ Strict mode is enabled by default on dev mode and turned off in production mode.
 export const strict = false
 ```
 
-## Quiz
+
 
 <quiz :questions="questions"></quiz>

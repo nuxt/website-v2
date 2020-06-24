@@ -134,5 +134,8 @@ module.exports = {
     contribute: 'Caught a mistake or want to contribute to the documentation?',
     edit_on_github: 'Edit this page on GitHub!',
     toc_title: 'On this page'
+  },
+  quiz: {
+    title: 'Quiz'
   }
 }

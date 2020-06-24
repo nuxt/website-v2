@@ -252,6 +252,6 @@ export default {
 
 In the example, `renderedOn` will evaluate to `'server'` when using server-side rendering and a user accesses the page directly. When the user would navigate to the page from another part of the application, e.g. by click on a `<NuxtLink>`, it will evaluate to client.
 
-## Quiz
+
 
 <quiz :questions="questions"></quiz>

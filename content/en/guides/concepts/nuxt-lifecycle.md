@@ -152,6 +152,6 @@ Same as for the *client* part, everything is happening in the browser but only w
 
 ---
 
-## Quiz
+
 
 <quiz :questions="questions"></quiz>

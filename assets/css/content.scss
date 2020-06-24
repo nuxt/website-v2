@@ -164,16 +164,26 @@
   & h4,
   & h5,
   & h6 {
-    & a.anchor {
-      @apply float-left;
+    & a{
       margin-left: -1.5rem;
-      & svg {
-        vertical-align: middle;
+    }
+    & a, .icon-link{
+      @apply float-left;
+      position: relative;
+      display: inline-block;
+      width: 14px;
+      height: 14px;
+      margin-top: 8px;
+
+      & .icon-link{
         visibility: hidden;
+        background-image: url('~assets/images/link.svg');
+        background-size: 14px 14px;
       }
     }
+
     &:hover {
-      & a.anchor svg {
+      & .icon-link {
         visibility: visible;
       }
     }
@@ -188,7 +198,7 @@
     & code {
       @apply text-xl;
     }
-    & a.anchor {
+    & a.icon-link {
       @apply pt-3;
     }
   }
@@ -202,7 +212,7 @@
     & code {
       @apply text-lg;
     }
-    & a.anchor {
+    & a.icon {
       @apply pt-2;
     }
   }

@@ -342,6 +342,6 @@ export default {
 
 ➡️link to Data Fetching chapter
 
-## Quiz
+
 
 <quiz :questions="questions"></quiz>

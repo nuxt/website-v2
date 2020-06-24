@@ -360,6 +360,6 @@ export default {
 
 The `nuxt.config.js` has way more customization and configuration options! Check out all its keys in the glossary.
 
-## Quiz
+
 
 <quiz :questions="questions"></quiz>

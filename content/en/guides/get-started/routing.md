@@ -11,7 +11,7 @@ Most websites have more than just one page. For example a home page, about page,
 
 In other words, all you have to do to have routing in your application is to create `.vue` files in the `pages` folder. 
 
-➡️Learn more about Routing
+➡️ [Learn more about Routing](/guides/features/file-system-routing)
 
 ## Navigation
 

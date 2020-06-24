@@ -2775,7 +2775,7 @@ bcrypt-pbkdf@^1.0.0:
   dependencies:
     tweetnacl "^0.14.3"
 
-bezier-easing@^2.0.3:
+bezier-easing@2.1.0, bezier-easing@^2.0.3:
   version "2.1.0"
   resolved "https://registry.yarnpkg.com/bezier-easing/-/bezier-easing-2.1.0.tgz#c04dfe8b926d6ecaca1813d69ff179b7c2025d86"
   integrity sha1-wE3+i5JtbsrKGBPWn/F5t8ICXYY=
@@ -11661,6 +11661,13 @@ vue-scrollactive@^0.9.3:
   integrity sha512-W7Z2EQGDjnvgZ4h+/bpRVjiVU3bKWQDmT9f0bUL+zq3C/VSZaQiQ+qzWlMYDEpJbm13wJ6KIE6ry3HKLVyU4cQ==
   dependencies:
     bezier-easing "^2.0.3"
+
+vue-scrollto@^2.18.1:
+  version "2.18.1"
+  resolved "https://registry.yarnpkg.com/vue-scrollto/-/vue-scrollto-2.18.1.tgz#e23620489583f0b3f21410f149b6585a730672f2"
+  integrity sha512-JojeVOP1Z50Jt0OCOd61jRRRF8TrNvPAzF4LAKwkTEZnt30mpDd48aDZZOEPD3l6z2PybOyUGFT/FNWfTtFv9w==
+  dependencies:
+    bezier-easing "2.1.0"
 
 vue-server-renderer@^2.6.11:
   version "2.6.11"

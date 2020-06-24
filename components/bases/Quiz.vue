@@ -1,5 +1,6 @@
 <template>
-  <div>
+  <div v-if="quiz">
+    <h2>{{ $t('quiz.title') }}</h2>
     <ul>
       <li v-for="(question, index) of questions" :key="index" class="list-none mb-2 font-medium">
         <span>{{ index +1 }}) {{ question.question }}</span>

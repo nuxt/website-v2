@@ -492,6 +492,6 @@ export default {
 
 Setting this field may be necessary if your project is organized as a Yarn workspace-styled mono-repository.
 
-## Quiz
+
 
 <quiz :questions="questions"></quiz>

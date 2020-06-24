@@ -246,6 +246,6 @@ If you need your own special indicator, a String value or Name key can also be a
 
 Nuxt's built-in [source code](https://github.com/nuxt/nuxt.js/tree/dev/packages/vue-app/template/views/loading) is also available if you need a base!
 
-## Quiz
+
 
 <quiz :questions="questions"></quiz>

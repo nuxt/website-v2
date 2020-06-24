@@ -338,6 +338,6 @@ if (!Vue.__my_mixin__) {
 }
 ```
 
-## Quiz
+
 
 <quiz :questions="questions"></quiz>

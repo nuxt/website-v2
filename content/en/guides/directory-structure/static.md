@@ -86,6 +86,6 @@ Default: `/blog/my-image.png`
 
 With `static.prefix` disabled: `/my-image.png`
 
-## Quiz
+
 
 <quiz :questions="questions"></quiz>

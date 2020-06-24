@@ -209,6 +209,6 @@ While you can add JavaScript and CSS files in the `app.html`, it is recommended 
 
 </base-alert>
 
-## Quiz
+
 
 <quiz :questions="questions"></quiz>

@@ -263,6 +263,6 @@ Example (`/components/Avatar.vue`)
 
 You can use the alias of `@@` for the root directory.
 
-## Quiz
+
 
 <quiz :questions="questions"></quiz>

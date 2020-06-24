@@ -508,6 +508,6 @@ This option should not be set without preparation and has to be tested thoroughl
 
 ➡️trailingSlash Property
 
-### Quiz
+#
 
 <quiz :questions="questions"></quiz>

@@ -132,6 +132,6 @@ You can also use a regex expression here to exclude pages starting or ending wit
 
 </base-alert>
 
-### Quiz
+#
 
 <quiz :questions="questions"></quiz>

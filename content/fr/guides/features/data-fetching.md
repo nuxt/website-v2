@@ -303,6 +303,6 @@ The `asyncData` method is not called on query string changes by default. If 
 
 ➡️[To see the list of available keys in `context`](https://www.notion.so/Context-and-Utils-2c164875fe4841bab327e501dccadf31)
 
-## Quiz
+
 
 <quiz :questions="questions"></quiz>

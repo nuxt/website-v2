@@ -36,7 +36,8 @@
     "slugify": "^1.4.0",
     "v-lazy-image": "^1.4.0",
     "vue-observe-visibility": "^0.4.6",
-    "vue-scrollactive": "^0.9.3"
+    "vue-scrollactive": "^0.9.3",
+    "vue-scrollto": "^2.18.1"
   },
   "devDependencies": {
     "@nuxtjs/color-mode": "^1.0.0",

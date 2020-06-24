@@ -179,7 +179,7 @@ If using Nuxt <2.13 you can generate your static site using `nuxt generate` and 
 
 ➡️ [To see the full documentation for the content module](https://content.nuxtjs.org/)
 
-## Quiz
+
 
 <quiz :questions="questions"></quiz>
 

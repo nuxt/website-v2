@@ -319,6 +319,6 @@ If you do modify the page Transition name you will also have to rename the css c
 }
 ```
 
-## Quiz
+
 
 <quiz :questions="questions"></quiz>

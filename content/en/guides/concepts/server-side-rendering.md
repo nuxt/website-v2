@@ -114,6 +114,6 @@ The browser receives the rendered page from the server with the generated HTML. 
 
 Navigating between pages with `<nuxt-link>` is done on the client side so you don't hit the server again unless you hard refresh the browser.
 
-## Quiz
+
 
 <quiz :questions="questions"></quiz>

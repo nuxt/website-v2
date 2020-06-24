@@ -76,6 +76,6 @@ export default {
 
 The `.nuxt` folder is part of the files needed to deploy your SSR application. It is not needed for deploying your static Nuxt.js app though because we use the `dist` folder for that.
 
-### Quiz
+#
 
 <quiz :questions="questions"></quiz>

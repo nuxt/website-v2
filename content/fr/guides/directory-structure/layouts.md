@@ -156,6 +156,6 @@ The default error page source code is [available on GitHub](https://github.com/
 
 </base-alert>
 
-## Quiz
+
 
 <quiz :questions="questions"></quiz>

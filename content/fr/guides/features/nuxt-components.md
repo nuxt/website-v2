@@ -418,6 +418,6 @@ If you are using a version of Nuxt < v2.9.0, use `<no-ssr>` instead of `<client-
 
 </base-alert>
 
-## Quiz
+
 
 <quiz :questions="questions"></quiz>

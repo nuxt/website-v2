@@ -76,7 +76,7 @@ Congratulations you have now created your first Nuxt.js app and you may now cons
 
 ⭐️ Did you like Nuxt.js so far? Don't forget to [star our project](https://github.com/nuxt/nuxt.js) on GitHub
 
-## Quiz
+
 
 Test your Nuxt.js knowledge and see if you are a Nuxter.
 

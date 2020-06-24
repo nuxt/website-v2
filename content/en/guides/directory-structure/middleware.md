@@ -181,6 +181,6 @@ export default {
 
 ➡️[https://nuxtjs.org/examples/middleware](https://nuxtjs.org/examples/middleware)
 
-## Quiz
+
 
 <quiz :questions="questions"></quiz>

@@ -1,4 +1,18 @@
 module.exports = {
+  common: {
+    an_error_occurred: 'An error occurred',
+    api_page_not_found: 'API page not found',
+    please_define_title: 'Please define a title in the front matter',
+    please_define_description: 'Please define a description in the front matter',
+    search: 'Search ("/" to focus)',
+    version: 'Version'
+  },
+  iso: 'en',
+  docVersion: '2.13.X',
+  links: {
+    download: 'Download',
+    live_edit: 'Live Edit'
+  },
   header: {
     links: [
       {
@@ -52,7 +66,7 @@ module.exports = {
       description: 'Build your next Vue.js application with confidence using NuxtJS. An open source framework making web development simple and powerful.'
     },
     welcome: {
-      title: 'The Intuitive<br><span class="text-nuxt-lightgreen">Vue</span> Framework<br> French',
+      title: 'The Intuitive<br><span class="text-nuxt-lightgreen">Vue</span> Framework<br>',
       description: 'Build your next Vue.js application with confidence using NuxtJS. An <span title="Under MIT license">open source</span> framework making web development simple and powerful.',
       get_started: 'get started',
       github_stars: '27K+ github stars',
@@ -114,5 +128,14 @@ module.exports = {
   blog: {
     title: 'NuxtJS Blog',
     description: 'Discover articles from the core team and contributors about NuxtJS, tips and tricks included!'
+  },
+  guide: {
+    release_notes: 'Release Notes',
+    contribute: 'Caught a mistake or want to contribute to the documentation?',
+    edit_on_github: 'Edit this page on GitHub!',
+    toc_title: 'On this page'
+  },
+  quiz: {
+    title: 'Quiz'
   }
 }

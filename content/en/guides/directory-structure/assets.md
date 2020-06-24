@@ -75,7 +75,7 @@ Inside your `css` files, if you need to reference your  `assets`  directory,
 background: url("~assets/banner.svg")
 ```
 
-➡️Learn more about webpack Assets
+➡️ Learn more about webpack Assets
 
 ## Styles:
 

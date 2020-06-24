@@ -28,40 +28,40 @@ These are the main directories and files that we use when building an Nuxt.js ap
 
 The `pages` directory contains your application's views and routes. As you've learned in the last chapter, Nuxt.js reads all the `.vue` files inside this directory and uses them to create the application router.
 
-➡️Learn more about the pages directory
+➡️ Learn more about the [pages directory](/guides/directory-structure/pages)
 
 ### The components directory
 
 The `components` directory is where you put all your Vue.js components which are then imported into your pages. 
 
-➡️Learn more about the components directory
+➡️ Learn more about the [components directory](/guides/directory-structure/components)
 
 ### The assets directory
 
 The `assets` directory contains your uncompiled assets such as your styles, images, or fonts.
 
-➡️Learn more about the assets directory
+➡️ Learn more about the [assets directory](/guides/directory-structure/assets)
 
 ### The static directory
 
 The `static` directory is directly mapped to the server root and contains files that have to keep their names (e.g. `robots.txt`) *or* likely won't change (e.g. the favicon)
 
-➡️Learn more about the static directory
+➡️ Learn more about the [static directory](/guides/directory-structure/static)
 
 ### The nuxt.config.js file
 
 The `nuxt.config.js` file is the single point of configuration for Nuxt.js. If you want to add modules or override default settings, this is the place to apply the changes.
 
-➡️Learn more about the nuxt.config.js file
+➡️ Learn more about the [nuxt.config.js file](/guides/directory-structure/nuxt-config)
 
 ### The package.json file
 
 The `package.json` file contains all the dependencies and scripts for your application.
 
-➡️Learn more about the package.json file
+➡️ Learn more about the [package.json file](/guides/directory-structure/package-json)
 
 ## More about the project structures
 
-There are more helpful directories and files, including `layouts`, `middleware`, `modules`, `plugins`, `functions` and `store` . As they aren't necessary for small applications, they are not covered here. 
+There are more helpful directories and files, including [content](/guides/directory-structure/content), [layouts](/guides/directory-structure/layouts), [middleware](/guides/directory-structure/middleware), [modules](/guides/directory-structure/modules), [plugins](/guides/directory-structure/plugins) and [store](/guides/directory-structure/store) . As they aren't necessary for small applications, they are not covered here. 
 
 🎓To learn about all directories in detail, feel free to read the the book on Project Directories.

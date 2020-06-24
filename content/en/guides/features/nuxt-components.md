@@ -77,7 +77,7 @@ Nuxt.js comes with a few important components included out of the box, which wil
 
 In the following paragraphs, each of the included components is explained.
 
-# The `<Nuxt>` Component
+# The <Nuxt> Component
 
 The `<Nuxt>` component is the component you use to display your page components. Basically, this component gets replaced by what is inside your page components depending on the page that is being shown. Therefore it is important that you add the `<Nuxt>` component to your layouts.
 
@@ -125,7 +125,7 @@ export default {
 }
 ```
 
-## The `<NuxtChild>` Component
+## The NuxtChild Component
 
 This component is used for displaying the children components in a nested route.
 
@@ -220,7 +220,7 @@ Both, the `<Nuxt>` component and the `<NuxtChild/>` component, accept `keep-al
 
 To see an example, take a look at the [nested-routes example](https://nuxtjs.org/examples/nested-routes).
 
-# The `<NuxtLink>` Component
+## The NuxtLink Component
 
 To navigate between pages of your app, you should use the  `<NuxtLink>` component. This component is included with Nuxt.js and therefore you don't have to import it like you do with other components. It is similar to the HTML `<a>` tag except that instead of using a `href="/about"` you use `to="/about"`. If you've used `vue-router` before, you can think of `<NuxtLink>` as a replacement of `<RouterLink>`
 
@@ -375,7 +375,7 @@ In this example we have used the class `nuxt-link-prefetched` but you can name i
 
 </base-alert>
 
-# The `<client-only>` Component
+# The client-only Component
 
 This component is used to purposely render a component only on client-side. To import a component only on the client, register the component in a client-side only plugin.
 

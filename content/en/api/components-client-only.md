@@ -1,6 +1,7 @@
 ---
 title: "API: The <client-only> Component"
 description: Render a component only on client-side, and display a placeholder text on server-side.
+menu: Client Only
 ---
 
 > This component is used to purposely render a component only on client-side. To import a component only on the client, register the component in a [client-side only plugin](/guide/plugins#client-side-only).

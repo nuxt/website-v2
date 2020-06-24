@@ -132,6 +132,7 @@ module.exports = {
   guide: {
     release_notes: 'Release Notes',
     contribute: 'Caught a mistake or want to contribute to the documentation?',
-    edit_on_github: 'Edit this page on GitHub!'
+    edit_on_github: 'Edit this page on GitHub!',
+    toc_title: 'On this page'
   }
 }

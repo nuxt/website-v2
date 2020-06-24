@@ -1,6 +1,7 @@
 ---
 title: "$nuxt: The NuxtJS helper"
 description: $nuxt is a helper designed to improve user experience.
+menu: "$nuxt"
 ---
 
 `$nuxt` is a helper designed to improve user experience.

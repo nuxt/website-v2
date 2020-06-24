@@ -2,7 +2,7 @@
   <div>
     <h3
       class="mb-3 lg:mb-2 text-gray-500 dark:text-gray-600 uppercase tracking-wide font-bold text-sm lg:text-xs"
-    >On this page</h3>
+    >{{ $t('guide.toc_title') }}</h3>
     <nav>
       <scrollactive highlight-first-item active-class="text-green-500" tag="ul">
         <li

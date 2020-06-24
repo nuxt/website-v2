@@ -25,7 +25,14 @@
                 exact-active-class="text-nuxt-lightgreen"
                 :to="localePath({ name: 'section-slug', params: { slug: link.slug } })"
                 exact
-              >{{ link.title }}</NuxtLink>
+              >
+                <template v-if="link.menu">
+                  {{ link.menu }}
+                </template>
+                <template v-else>
+                  {{ link.title }}
+                </template>
+              </NuxtLink>
             </li>
           </ul>
         </div>

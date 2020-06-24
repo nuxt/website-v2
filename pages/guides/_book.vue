@@ -15,7 +15,7 @@ import groupBy from 'lodash.groupby'
 export default {
   async asyncData ({ $content, app, params }) {
     const links = await $content(app.i18n.locale, 'guides', { deep: true })
-      .only(['slug', 'title', 'category'])
+      .only(['slug', 'title', 'menu', 'category'])
       .sortBy('categoryPosition', 'asc')
       .sortBy('position', 'asc')
       .fetch()

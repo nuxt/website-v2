@@ -7,7 +7,7 @@ categoryPosition: 1
 ---
 The default Nuxt.js application structure is intended to provide a great starting point for both small and large applications. Of course, you are free to organise your application however you like and can create other directories as and when you need them.
 
-Let's create the directories and files that do not exist in our project yet. 
+Let's create the directories and files that do not exist in our project yet.
 
 ```bash
 mkdir components assets static
@@ -32,7 +32,7 @@ The `pages` directory contains your application's views and routes. As you've 
 
 ### The components directory
 
-The `components` directory is where you put all your Vue.js components which are then imported into your pages. 
+The `components` directory is where you put all your Vue.js components which are then imported into your pages.
 
 ➡️ Learn more about the [components directory](/guides/directory-structure/components)
 
@@ -58,10 +58,8 @@ The `nuxt.config.js` file is the single point of configuration for Nuxt.js. If
 
 The `package.json` file contains all the dependencies and scripts for your application.
 
-➡️ Learn more about the [package.json file](/guides/directory-structure/package-json)
-
 ## More about the project structures
 
-There are more helpful directories and files, including [content](/guides/directory-structure/content), [layouts](/guides/directory-structure/layouts), [middleware](/guides/directory-structure/middleware), [modules](/guides/directory-structure/modules), [plugins](/guides/directory-structure/plugins) and [store](/guides/directory-structure/store) . As they aren't necessary for small applications, they are not covered here. 
+There are more helpful directories and files, including [content](/guides/directory-structure/content), [layouts](/guides/directory-structure/layouts), [middleware](/guides/directory-structure/middleware), [modules](/guides/directory-structure/modules), [plugins](/guides/directory-structure/plugins) and [store](/guides/directory-structure/store) . As they aren't necessary for small applications, they are not covered here.
 
 🎓To learn about all directories in detail, feel free to read the the book on Project Directories.

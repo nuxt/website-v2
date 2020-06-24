@@ -33,7 +33,7 @@
       </article>
     </div>
     <AffixBlock>
-      <AppToc v-if="page.toc && page.toc.length" :toc="page.toc" class="mb-8" />
+      <AppToc v-if="page.toc && page.toc.length" :toc="page.toc" class="mb-8 hidden lg:block" />
 
       <SponsorsBlock />
       <AdsBlock :key="$route.params.slug" />

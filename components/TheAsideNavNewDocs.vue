@@ -23,8 +23,7 @@
               <NuxtLink
                 class="text-light-onSurfacePrimary dark:text-dark-onSurfacePrimary hover:text-nuxt-lightgreen dark:hover:text-nuxt-lightgreen transition-colors duration-300 ease-linear"
                 exact-active-class="text-nuxt-lightgreen"
-                :to="toLink (group, link)"
-                exact
+                :to="toLink(group, link)"
               >{{ link.title }}</NuxtLink>
             </li>
           </ul>
@@ -36,6 +35,7 @@
 
 <script>
 import slugify from 'slugify'
+
 export default {
   props: {
     links: {

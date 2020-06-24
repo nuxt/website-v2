@@ -19,19 +19,20 @@
             class="uppercase font-medium text-light-onSurfaceSecondary dark:text-dark-onSurfaceSecondary pb-2 transition-colors duration-300 ease-linear"
           >{{ group }}</h3>
           <ul class="pb-8">
-            <li v-for="(link, index) in sublinks" :key="index" class="py-2">
+            <li
+              v-for="(link, index) in sublinks"
+              :key="index"
+              class="py-2 text-light-onSurfacePrimary"
+            >
               <NuxtLink
-                class="text-light-onSurfacePrimary dark:text-dark-onSurfacePrimary hover:text-nuxt-lightgreen dark:hover:text-nuxt-lightgreen transition-colors duration-300 ease-linear"
-                exact-active-class="text-nuxt-lightgreen"
-                :to="localePath({ name: 'section-slug', params: { slug: link.slug } })"
+                class="dark:text-dark-onSurfacePrimary hover:text-nuxt-lightgreen dark:hover:text-nuxt-lightgreen transition-colors duration-300 ease-linear"
+                active-class
                 exact
+                exact-active-class="text-nuxt-lightgreen"
+                :to="toLink(link)"
               >
-                <template v-if="link.menu">
-                  {{ link.menu }}
-                </template>
-                <template v-else>
-                  {{ link.title }}
-                </template>
+                <template v-if="link.menu">{{ link.menu }}</template>
+                <template v-else>{{ link.title }}</template>
               </NuxtLink>
             </li>
           </ul>
@@ -56,6 +57,12 @@ export default {
     visible () { return this.$store.state.visibleAffix },
     path () { return this.$route.path.slice(-1) === '/' ? this.$route.path.slice(0, -1) : this.$route.path },
     menu () { return '/' + this.$route.params.section }
+  },
+  methods: {
+    toLink (link) {
+      const slug = link.slug === 'index' ? undefined : link.slug
+      return this.localePath({ name: 'section-slug', params: { section: this.$route.params.section, slug } })
+    }
   }
 }
 </script>

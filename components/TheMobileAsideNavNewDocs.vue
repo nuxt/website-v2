@@ -22,8 +22,7 @@
                 <NuxtLink
                   class="block dark:text-dark-onSurfacePrimary hover:text-nuxt-lightgreen transition-colors duration-300 ease-linear"
                   exact-active-class="text-nuxt-lightgreen"
-                  :to="localePath({ name: 'guides-book-slug', params: { slug: link.slug } })"
-                  exact
+                  :to="toLink(group, link)"
                   @click.native="show = false"
                 >{{ link.title }}</NuxtLink>
               </li>
@@ -56,6 +55,8 @@
 </template>
 
 <script>
+import slugify from 'slugify'
+
 import ListIcon from '~/assets/images/list.svg?inline'
 import TimesIcon from '@/assets/icons/times.svg?inline'
 
@@ -84,6 +85,9 @@ export default {
       if (this.show) {
         this.show = false
       }
+    },
+    toLink (group, link) {
+      return this.localePath({ name: 'guides-book-slug', params: { book: slugify(group, { lower: true }), slug: link.slug } })
     }
   }
 }

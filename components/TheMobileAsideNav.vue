@@ -21,9 +21,10 @@
               <li v-for="(link, index) in sublinks" :key="index" class="py-2">
                 <NuxtLink
                   class="block dark:text-dark-onSurfacePrimary hover:text-nuxt-lightgreen transition-colors duration-300 ease-linear"
-                  exact-active-class="text-nuxt-lightgreen"
-                  :to="localePath({ name: 'section-slug', params: { slug: link.slug } })"
+                  active-class
                   exact
+                  exact-active-class="text-nuxt-lightgreen"
+                  :to="toLink(link)"
                   @click.native="show = false"
                 >{{ link.title }}</NuxtLink>
               </li>
@@ -80,6 +81,10 @@ export default {
     locale () { return '/' + this.$route.params.section }
   },
   methods: {
+    toLink (link) {
+      const slug = link.slug === 'index' ? undefined : link.slug
+      return this.localePath({ name: 'section-slug', params: { section: this.$route.params.section, slug } })
+    },
     clickOutsideHandler () {
       if (this.show) {
         this.show = false

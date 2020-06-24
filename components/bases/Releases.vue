@@ -102,7 +102,6 @@ export default {
           }
         })
       } catch (e) {
-        console.log('e', e)
       }
 
       const getMajorVersion = r => r.name && Number(r.name.substring(1, 2))

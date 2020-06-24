@@ -2,6 +2,7 @@
 title: Configuration
 description: By default, Nuxt.js is configured to cover most use cases. This default configuration can be overwritten by using the `nuxt.config.js` file.
 group: Getting Started
+groupPosition: 2
 ---
 
 > By default, Nuxt.js is configured to cover most use cases. This default configuration can be overwritten with the `nuxt.config.js` file.

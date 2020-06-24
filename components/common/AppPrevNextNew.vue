@@ -2,7 +2,7 @@
   <div class="flex justify-between items-center">
     <NuxtLink
       v-if="prev"
-      :to="localePath({ name: 'guides-book-slug', params: { book, slug: prev.slug } })"
+      :to="localePath({ name: 'guides-book-slug', params: { book: prevBook, slug: prev.slug } })"
       class="text-green-500 font-bold hover:underline flex items-center p-2 pl-0"
     >
       <IconArrowLeft class="w-4 h-4 mr-1" />
@@ -11,7 +11,7 @@
     <span v-else>&nbsp;</span>
     <NuxtLink
       v-if="next"
-      :to="localePath({ name: 'guides-book-slug', params: { book, slug: next.slug } })"
+      :to="localePath({ name: 'guides-book-slug', params: { book: nextBook, slug: next.slug } })"
       class="text-green-500 font-bold hover:underline flex items-center p-2 pr-0"
     >
       {{ next.title }}
@@ -35,10 +35,26 @@ export default {
     section: {
       type: String,
       default: ''
+    }
+  },
+  computed: {
+    prevBook () {
+      if (!this.prev) {
+        return
+      }
+
+      const dirs = this.prev.dir.split('/').slice(-1)
+
+      return dirs[dirs.length - 1]
     },
-    book: {
-      type: String,
-      default: ''
+    nextBook () {
+      if (!this.next) {
+        return
+      }
+
+      const dirs = this.next.dir.split('/')
+
+      return dirs[dirs.length - 1]
     }
   }
 }

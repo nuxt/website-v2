@@ -65,15 +65,15 @@ export default {
     proxy: true
   },
   plugins: [
-    // '~/plugins/init.js',
     '~/plugins/directives',
     '~/plugins/intersection-observer.client.js',
     '~/plugins/vue-observe-visibility.client.js',
     '~/plugins/ga.client.js',
     '~/plugins/adblock.client.js',
     '~/plugins/newsletter.client.js',
-    '@/plugins/vue-scrollactive',
-    '@/plugins/components'
+    '~/plugins/vue-scrollactive',
+    '~/plugins/components',
+    '~/plugins/markdown'
   ],
   env: {
     DEPLOY_PRIME_URL: process.env.DEPLOY_PRIME_URL || false,
@@ -84,9 +84,10 @@ export default {
   loading: { color: '#41B883' },
   generate: {
     fallback: '404.html', // for Netlify
-    interval: 100
+    routes: ['/']
   },
   i18n: {
+    strategy: 'no_prefix',
     locales: [{
       code: 'en',
       iso: 'en-US',
@@ -100,10 +101,10 @@ export default {
       name: 'Français',
       domain: 'fr.nuxtjs.org'
     }],
-    defaultLocale: 'en',
+    defaultLocale: process.env.NUXT_LOCALE || 'en',
     parsePages: false,
     detectBrowserLanguage: false,
-    differentDomains: (process.env.NODE_ENV === 'production'),
+    // differentDomains: (process.env.NODE_ENV === 'production'),
     seo: false,
     lazy: true,
     langDir: 'i18n/'

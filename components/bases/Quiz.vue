@@ -17,7 +17,7 @@
               :value="answer"
               :name="`answer-${index}-${i}`"
               :disabled="isSubmitted ? 'disabled': null"
-            >
+            />
 
             <label :for="`answer-${index}-${i}`" class="cursor-pointer">
               {{ answer }}
@@ -31,18 +31,12 @@
       class="disabled:opacity-50 text-white bg-green-500 rounded hover:bg-green-400 py-1 px-2"
       :disabled="buttonDisabled"
       @click="showScore"
-    >
-      Send
-    </button>
+    >Send</button>
     <button
       class="text-white bg-green-500 rounded hover:bg-green-400 py-1 px-2"
       @click="resetScore"
-    >
-      Reset
-    </button>
-    <div v-if="score !== null">
-      {{ score }} / {{ questions.length }}
-    </div>
+    >Reset</button>
+    <div v-if="score !== null">{{ score }} / {{ questions.length }}</div>
   </div>
 </template>
 

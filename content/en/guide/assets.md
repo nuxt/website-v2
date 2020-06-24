@@ -2,6 +2,7 @@
 title: Assets
 description: By default, Nuxt uses vue-loader, file-loader and url-loader webpack loaders for strong assets serving. You can also use Static directory for static assets.
 group: Getting Started
+groupPosition: 2
 ---
 
 > By default, Nuxt uses vue-loader, file-loader and url-loader webpack loaders for strong assets serving. You can also use the `static` directory for static assets.

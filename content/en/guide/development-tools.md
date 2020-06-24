@@ -2,6 +2,7 @@
 title: Development Tools
 description: Nuxt.js helps you to make your web development enjoyable.
 group: Getting Started
+groupPosition: 2
 ---
 
 > Testing your application is part of the web development. Nuxt.js helps you to make it as easy as possible.

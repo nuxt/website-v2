@@ -2,6 +2,7 @@
 title: Runtime Config
 description: Runtime config allows passing dynamic config and environment variables to the nuxt context
 group: Getting Started
+groupPosition: 2
 ---
 
 Nuxt.js supports [env](/api/configuration-env) config to provide configuration via `process.env`. This is done by webpack's [DefinePlugin](https://webpack.js.org/plugins/define-plugin/).

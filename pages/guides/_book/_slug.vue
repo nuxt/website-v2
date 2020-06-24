@@ -9,18 +9,12 @@
           class="text-light-onSurfacePrimary dark:text-dark-onSurfacePrimary transition-colors duration-300 ease-linear"
         >{{ page.title }}</h1>
         <nuxt-content :document="page" />
-        <LazyAppPrevNextNew
-          :prev="prev"
-          :next="next"
-          section="guides"
-          :book="book"
-          class="lg:px-8 mt-4"
-        />
+        <LazyAppPrevNextNew :prev="prev" :next="next" section="guides" class="mt-4" />
         <AppContribute :doc-link="docLink" :contributors="contributors" />
       </article>
     </div>
     <AffixBlock>
-      <AppToc v-if="page.toc && page.toc.length" :toc="page.toc" class="mb-8" />
+      <AppToc v-if="page.toc && page.toc.length" :toc="page.toc" class="mb-8 hidden lg:block" />
       <SponsorsBlock />
       <AdsBlock :key="$route.params.slug" />
     </AffixBlock>
@@ -43,12 +37,13 @@ export default {
     try {
       data.page = await $content(path).fetch()
       data.contributors = (await fetch('https://contributors-api.onrender.com' + path).then(res => res.json())).map(({ author }) => ({ author }))
-      const [prev, next] = await $content(`/${app.i18n.locale}/guides/${params.book}`)
-        .only(['title', 'slug'])
-        .sortBy('groupPosition', 'asc')
+      const [prev, next] = await $content(app.i18n.locale, 'guides', { deep: true })
+        .only(['title', 'slug', 'dir'])
         .sortBy('position', 'asc')
+        .sortBy('categoryPosition', 'asc')
         .surround(slug, { before: 1, after: 1 })
         .fetch()
+
       data.prev = prev
       data.next = next
     } catch (err) {

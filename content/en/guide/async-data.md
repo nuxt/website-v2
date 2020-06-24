@@ -2,6 +2,7 @@
 title: Async Data
 description: You may want to fetch data and render it on the server-side. Nuxt.js adds an `asyncData` method to let you handle async operations before setting the component data.
 group: Getting Started
+groupPosition: 2
 ---
 
 > You may want to fetch data and render it on the server-side. Nuxt.js adds an `asyncData` method to let you handle async operations before initializing the component

@@ -2,6 +2,7 @@
 title: Modules
 description: Modules are Nuxt.js extensions which can extend its core functionality and add endless integrations.
 group: Getting Started
+groupPosition: 2
 ---
 
 > Modules are Nuxt.js extensions which can extend its core functionality and add endless integrations.

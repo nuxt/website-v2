@@ -265,8 +265,6 @@ nuxt.hook('listen', async (server, {host, port})) => {
 
 `this`: Context of modules. All modules will be called within context of the ModuleContainer instance. 
 
-SEB - ADD EXAMPLES HERE OR LEAVE AS LINK
-
 Please look into the [ModuleContainer](https://nuxtjs.org/api/internals-module-container) class docs for available methods.
 
 ### Run Tasks on Specific hooks
@@ -276,8 +274,6 @@ Your module may need to do things only on specific conditions and not just durin
 Here are some basic examples:
 
 `modules/myModule.js`
-
-@SEB should we add examples here or just leave comments
 
 ```js
 export default function myModule () {

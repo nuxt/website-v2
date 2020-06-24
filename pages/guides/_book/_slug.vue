@@ -98,56 +98,14 @@ export default {
     }
   }
 }
-// export default {
-//   name: 'PageSlug',
-//   scrollToTop: true,
-//   middleware ({ params, redirect }) {
-//     if (params.slug === 'index') {
-//       redirect('/')
-//     }
-//   },
-//   async asyncData ({ $content, store, app, params, error, router }) {
-//     const { book, slug } = params
-//     let doc
-//     try {
-//       doc = await $content(app.i18n.locale, 'guides', book, slug).fetch()
-//     } catch (e) {
-//       return error({ statusCode: 404, message: 'Page not found' })
-//     }
-
-//     const [prev, next] = await $content(app.i18n.locale, 'guides', book)
-//       .only(['title', 'slug'])
-//       .sortBy('position', 'asc')
-//       .surround(slug, { before: 1, after: 1 })
-//       .fetch()
-
-//     if (doc && doc.questions) {
-//       doc.questions = shuffle(doc.questions.map(question => ({ ...question, answers: shuffle(question.answers) })))
-//     }
-
-//     return {
-//       doc,
-//       book,
-//       slug,
-//       prev,
-//       next
-//     }
-//   },
-//   head () {
-//     return {
-//       title: this.doc.title,
-//       meta: [
-//         { hid: 'description', name: 'description', content: this.doc.description },
-//         // Open Graph
-//         { hid: 'og:title', property: 'og:title', content: this.doc.title },
-//         { hid: 'og:description', property: 'og:description', content: this.doc.description },
-//         // Twitter Card
-//         { hid: 'twitter:title', name: 'twitter:title', content: this.doc.title },
-//         { hid: 'twitter:description', name: 'twitter:description', content: this.doc.description }
-//       ]
-//     }
-//   }
-// }
 </script>
 <style lang="scss" scoped>
+article h1 {
+  @apply font-medium relative text-3xl table mb-8;
+  &::after {
+    content: " ";
+    width: 80%;
+    @apply block border-2 border-nuxt-lightgreen mt-2 mb-1 rounded;
+  }
+}
 </style>

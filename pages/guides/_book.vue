@@ -11,15 +11,8 @@
 </template>
 
 <script>
-// import throttle from 'lodash/throttle'
 import groupBy from 'lodash.groupby'
-// import slugify from 'slugify'
-// import TimesIcon from '@/assets/icons/times.svg?inline'
-// import CaretDownIcon from '@/assets/icons/caret-down.svg?inline'
 export default {
-  // validate ({ store, params }) {
-  //   return store.state.menu[params.section] !== undefined
-  // }
   async asyncData ({ $content, app, params }) {
     const links = await $content(app.i18n.locale, 'guides', { deep: true })
       .only(['slug', 'title', 'category'])

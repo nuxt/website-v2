@@ -78,7 +78,6 @@ You can also create routes with .js files and .ts files
 
 </base-alert>
 
-[https://github.com/nuxt/nuxt.js/blob/dev/examples/jsx/pages/about.js](https://github.com/nuxt/nuxt.js/blob/dev/examples/jsx/pages/about.js)
 
 Every Page component is a Vue component but Nuxt.js adds special attributes and functions to make the development of your universal application as easy as possible.
 
@@ -164,7 +163,7 @@ export default {
 </script>
 ```
 
-➡️Link to Data Fetching chapter
+➡️ See more on how asnycData works in our [Data Fetching](/guides/features/data-fetching#async-data) chapter
 
 ### fetch
 
@@ -186,7 +185,7 @@ export default {
 </script>
 ```
 
-➡️Link to Data Fetching chapter
+➡️ See more on how fetch works in our [Data Fetching](/guides/features/data-fetching) chapter
 
 ### head
 
@@ -204,7 +203,7 @@ export default {
 </script>
 ```
 
-➡️Link to Meta and Seo Head chapter
+➡️ See more in our [Meta Tags and SEO](/guides/features/meta-tags-seo) chapter
 
 ### layout
 
@@ -220,7 +219,7 @@ export default {
 </script>
 ```
 
-➡️Link to views chapter
+➡️ See more on layouts in our [Views](http://localhost:3000/guides/concepts/views#layouts) chapter
 
 ### loading
 
@@ -242,7 +241,7 @@ Only applies if loading is also set in nuxt.config.js.
 
 </base-alert>
 
-➡️Link to loading chapter
+➡️ See more in our [Loading](/guides/features/loading) chapter
 
 ### transition
 
@@ -258,7 +257,7 @@ export default {
 </script>
 ```
 
-➡️Link to transition chapter
+➡️ See more on transitions in our [Transitions](/guides/features/transitions) chapter
 
 ### scrollToTop
 
@@ -278,7 +277,7 @@ Conversely, you can manually set `scrollToTop` to `false` on parent routes a
 
 If you want to overwrite the default scroll behavior of Nuxt.js, take a look at the [scrollBehavior option](https://nuxtjs.org/api/configuration-router#scrollbehavior).
 
-➡️Link to scrollToTop
+➡️ Link to scrollToTop
 
 ### middleware
 
@@ -294,7 +293,7 @@ export default {
 </script>
 ```
 
-➡️Link to middleware
+➡️ See more on middleware in our [Middleware](/guides/features/middleware) chapter
 
 ### The watchQuery Property
 
@@ -340,7 +339,7 @@ export default {
 }
 ```
 
-➡️link to Data Fetching chapter
+➡️ See more on the watch query property in our [Data Fetching](/guides/features/data-fetching) chapter
 
 
 

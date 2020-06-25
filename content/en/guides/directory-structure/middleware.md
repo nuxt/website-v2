@@ -72,7 +72,7 @@ Shared middleware should be placed in the  `middleware/`  directory. The file
 
 A middleware receives [the context](https://nuxtjs.org/api/context) as the first argument.
 
-Example: `middleware/user-agent.js`
+`middleware/user-agent.js`
 
 ```js
 export default function (context) {
@@ -178,9 +178,6 @@ export default {
 }
 </script>
 ```
-
-➡️[https://nuxtjs.org/examples/middleware](https://nuxtjs.org/examples/middleware)
-
 
 
 <quiz :questions="questions"></quiz>

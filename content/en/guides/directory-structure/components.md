@@ -35,7 +35,7 @@ The components directory contains your Vue.js Components. Components are what ma
 
 ### Fetching Data
 
-When working with data inside components we cannot use asyncData as this only works in page components. To access data from an API in your components you can use the Nuxt fetch(). Using $fetchState. pending we can show a message when the data is waiting to be loaded and using $fetchState.error we can show an error message if there is an error fetching the data. When using fetch we must declare the data in the data property. This then gets filled with the data that comes from the fetch.
+When working with data inside components we cannot use asyncData as this only works in page components. To access data from an API in your components you can use the Nuxt fetch(). Using `$fetchState.pending` we can show a message when the data is waiting to be loaded and using `$fetchState.error` we can show an error message if there is an error fetching the data. When using fetch we must declare the data in the data property. This then gets filled with the data that comes from the fetch.
 
 `components/MountainsList.vue`
 
@@ -66,7 +66,7 @@ export default {
 </script>
 ```
 
-➡️ See the chapter on fetch() for more details on how fetch works
+➡️ See the chapter on [fetch()](/guides/features/data-fetching#the-fetch-method) for more details on how fetch works
 
 ### Nuxt Components
 

@@ -72,7 +72,6 @@ This is one of the reasons why Nuxt.js provides a higher-order module system tha
 
 Best of all, Nuxt.js modules can be incorporated into npm packages. This makes them easy to reuse across projects and to share with the community, helping create an ecosystem of high-quality add-ons.
 
-➡️ Discover the list of Nuxt.js modules in resources/modules
 
 ## The modules Property
 
@@ -379,7 +378,7 @@ export default function (moduleOptions) {
 
 ## Async Modules
 
-Not all modules will do everything synchronous. For example you may want to develop a module which needs fetching some API or doing async IO (SEB ????). For this, Nuxt.js supports async modules which can return a Promise or call a callback.
+Not all modules will do everything synchronous. For example you may want to develop a module which needs fetching some API or doing async IO. For this, Nuxt.js supports async modules which can return a Promise or call a callback.
 
 ### Use async/await
 

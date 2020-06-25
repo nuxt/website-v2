@@ -75,7 +75,7 @@ Inside your `css` files, if you need to reference your  `assets`  directory,
 background: url("~assets/banner.svg")
 ```
 
-➡️ Learn more about webpack Assets
+➡️ Learn more about [webpack Assets](/guides/directory-structure/assets#webpack-assets)
 
 ## Styles:
 
@@ -121,8 +121,6 @@ In case you want to use `sass` make sure that you have installed `node-sass`�
 
 Nuxt.js will automatically guess the file type by its extension and use the appropriate pre-processor loader for webpack. You will still need to install the required loader if you need to use them.
 
-➡️[Global CSS example with Nuxt.js]()
-
 ## Fonts:
 
 You can use local fonts by adding them to your assets folder. Once they have been added you can then access them though your css using the @font-face.
@@ -153,7 +151,7 @@ You can use local fonts by adding them to your assets folder. Once they have bee
 }
 ```
 
-➡️To add external fonts such as google fonts check out the Meta Tags and SEO chapter
+➡️ To add external fonts such as google fonts check out the [Meta Tags and SEO chapter](/guides/features/meta-tags-seo#external-resources)
 
 ## Webpack Assets
 
@@ -250,7 +248,7 @@ By default the source directory (srcDir) and the root directory (rootDir) are th
 
 Both will achieve the same results.
 
-Example (`/components/Avatar.vue`)
+`/components/Avatar.vue`
 
 ```html
 <template>

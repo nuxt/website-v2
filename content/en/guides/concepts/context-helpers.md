@@ -45,7 +45,7 @@ questions:
 
 ![nuxt-js-context-keys](https://user-images.githubusercontent.com/13063165/83777134-5bda8780-a689-11ea-8c50-bbee8dc75714.jpeg)
 
-The `context` object is available in specific Nuxt functions like [asyncData](https://nuxtjs.org/api), [plugins](https://nuxtjs.org/guide/plugins), [middleware](https://nuxtjs.org/guide/routing#middleware) and [nuxtServerInit](https://nuxtjs.org/guide/vuex-store#the-nuxtserverinit-action). It provides *additional* and often optional information about the current request to the application.
+The `context` object is available in specific Nuxt functions like [asyncData](/guides/features/data-fetching#async-data), [plugins](/guides/directory-structure/plugins), [middleware](/guides/directory-structure/middleware) and [nuxtServerInit](http://localhost:3000/guides/directory-structure/store#the-nuxtserverinit-action). It provides *additional* and often optional information about the current request to the application.
 
 First and foremost, the context is used to provide access to other parts of the Nuxt.js application, e.g. the Vuex store or the underlying `connect` instance. Thus, we have the `req` and `res` objects in the context available on the server side and `store` always available. But with time, the context was extended with many other helpful variables and shortcuts. Now we have access to HMR functionalities in `development` mode, the current `route`, page `params` and `query`, as well as the option to access environment variables through the context. Furthermore, module functions and helpers can be exposed through the context to be available on both - the client and the server side.
 
@@ -78,10 +78,13 @@ function (context) { // Could be asyncData, nuxtServerInit, ...
   }
 }
 ```
+<base-alert>
 
-**Important:** The *context* we refer to here is not to be confused with the `context` object available in `[Vuex Actions](https://vuex.vuejs.org/guide/actions.html)` or the one available in the `build.extend` function in your `nuxt.config.js`. These are all not related to each other!
+The *context* we refer to here is not to be confused with the `context` object available in `[Vuex Actions](https://vuex.vuejs.org/guide/actions.html)` or the one available in the `build.extend` function in your `nuxt.config.js`. These are all not related to each other!
 
-Learn more about the different context keys in our Glossary
+</base-alert>
+
+Learn more about the different context keys in our [Glossary](https://nuxtjs.org/api/context)
 
 ## Examples
 
@@ -148,11 +151,11 @@ export default {
 }
 ```
 
-# Helpers
+## Helpers
 
 Besides the shortcuts in the context, there are also other tiny helpers present in your Nuxt.js application.
 
-# $nuxt: The Nuxt.js helper
+## $nuxt: The Nuxt.js helper
 
 `$nuxt` is a helper designed to improve the user experience and to be an escape hatch in some situations. It is accessible via `this.$nuxt` in Vue components and via `window.$nuxt` otherwise on the client side.
 

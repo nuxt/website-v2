@@ -69,19 +69,19 @@ The Nuxt.js lifecycle describes what happens after the build phase, where your a
 
 Dynamic SSR (`nuxt start`) 
 
-or Static Site Generation (`nuxt generate`).
+or Static Site Generation (`nuxt export`).
 
 ## Lifecycle
 
 ### Server
 
-For dynamic SSR, these steps will be executed for every initial request to your app on the fly
+For SSR, these steps will be executed for every initial request to your app
 
 - The server starts (`nuxt start`)
 
 When using static site generation, the server steps are only executed on build time, but once for every page that will be generated
 
-- The generation process starts (`nuxt generate`)
+- The generation process starts (`nuxt build && nuxt export`)
 
 - Nuxt hooks
 - serverMiddleware
@@ -134,11 +134,11 @@ This part of the lifecycle is fully executed in the browser, no matter which Nux
 - beforeMount (Vue lifecycle method)
 - mounted (Vue lifecycle method)
 
-### Navigate through `<NuxtLink>`
+### Navigate using the NuxtLink component
 
 Same as for the *client* part, everything is happening in the browser but only when navigating via `<NuxtLink>`. Furthermore, no page content is displayed until all *blocking* tasks are fulfilled.
 
-➡️Check out the component chapter to see more info on the `<NuxtLink>` component 
+➡️ Check out the component chapter to see more info on the [NuxtLink component](/guides/features/nuxt-components#the-nuxtlink-component) 
 
 - middleware (blocking)
     - Global middleware
@@ -147,7 +147,7 @@ Same as for the *client* part, everything is happening in the browser but only w
 - asyncData (blocking)
 - asyncData (blocking) [or full static payload loading]
 - beforeCreate & created (Vue lifecycle methods)
-- fetch (non-blocking) [Link to the blog post?]
+- fetch (non-blocking)
 - beforeMount & mounted
 
 ---

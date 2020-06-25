@@ -41,8 +41,6 @@ With static site generation you can render your application during the build pha
 
 When deploying your site in static mode all your `.vue` pages will be generated into HTML and JavaScript files. All calls to API's will be made and cached in a folder called static inside your generated content so that no calls to your API need to be made on client side navigation.
 
-Flow chart IMAGE HERE
-
 ### Step 1: Browser to CDN
 
 When a browser sends the initial request, it will hit the CDN. 

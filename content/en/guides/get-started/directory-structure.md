@@ -18,7 +18,7 @@ These are the main directories and files that we use when building an Nuxt.js ap
 
 <base-alert type="info">
 
-**Creating directories with these names enables features in your Nuxt.js project.
+Creating directories with these names enables features in your Nuxt.js project.
 
 </base-alert>
 

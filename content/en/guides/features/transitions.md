@@ -67,7 +67,7 @@ questions:
     correctAnswer: nuxt.config.js
 ---
 
-Nuxt.js uses the `[<transition>](http://vuejs.org/v2/guide/transitions.html#Transitioning-Single-Elements-Components)` component to let you create amazing transitions/animations between your routes.
+Nuxt.js uses the [transition component](http://vuejs.org/v2/guide/transitions.html#Transitioning-Single-Elements-Components) to let you create amazing transitions/animations between your routes.
 
 To define a custom transition for a specific route, simply add the `transition` key to the page component.
 
@@ -195,10 +195,6 @@ export default {
 Transitions applied on navigation:
 
 `/` to `/posts` => `slide-left`,`/posts` to `/posts?page=3` => `slide-left`,`/posts?page=3` to `/posts?page=2` => `slide-right`.
-
-Routes transitions example with Nuxt.js
-
-[https://nuxtjs.org/examples/routes-transitions#__layout](https://nuxtjs.org/examples/routes-transitions#__layout)
 
 ## Global Settings
 

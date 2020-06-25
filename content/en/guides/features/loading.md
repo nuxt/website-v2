@@ -84,7 +84,17 @@ export default {
 
 List of properties to customize the progress bar.
 
-[Properties](https://www.notion.so/0c8ff96dfa6740e39f3fae6b641bbc6d)
+| Key         	| Type    	| Default 	| Description                                                                                                                       	|   	|
+|-------------	|---------	|---------	|-----------------------------------------------------------------------------------------------------------------------------------	|---	|
+| color       	| String  	| 'black' 	| CSS color of the progress bar                                                                                                     	|   	|
+| failedColor 	| String  	| 'red'   	| CSS color of the progress bar when an error appended while rendering the route (if data or fetch sent back an error for example). 	|   	|
+| height      	| String  	| '2px'   	| Height of the progress bar (used in the style property of the progress bar)                                                       	|   	|
+| throttle    	| Number  	| 200     	| In ms, wait for the specified time before displaying the progress bar. Useful for preventing the bar from flashing.               	|   	|
+| duration    	| Number  	| 5000    	| In ms, the maximum duration of the progress bar, Nuxt.js assumes that the route will be rendered before 5 seconds.                	|   	|
+| continuous  	| Boolean 	| false   	| Keep animating progress bar when loading takes longer than duration.                                                              	|   	|
+| css         	| Boolean 	| true    	| Set to false to remove default progress bar styles (and add your own).                                                            	|   	|
+| rtl         	| Boolean 	| false   	| Set the direction of the progress bar from right to left.                                                                         	|   	|
+
 
 ## Disable the Progress Bar
 
@@ -155,7 +165,12 @@ You can also create your own component that Nuxt.js will call instead of the def
 
 Your component has to expose some of these methods:
 
-[Copy of Untitled](https://www.notion.so/aa235b612c1d48599e69179040b5c809)
+| Method        	| Required 	| Description                                                                              	|
+|---------------	|----------	|------------------------------------------------------------------------------------------	|
+| start()       	| Required 	| Called when a route changes, this is where you display your component.                   	|
+| finish()      	| Required 	| Called when a route is loaded (and data fetched), this is where you hide your component. 	|
+| fail(error)   	| Optional 	| Called when a route couldn't be loaded (failed to fetch data for example).               	|
+| increase(num) 	| Optional 	| Called during loading the route component, num is an Integer < 100.                      	|
 
 We can create our custom component in `components/LoadingBar.vue`:
 

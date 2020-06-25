@@ -85,7 +85,7 @@ export default {
 
 <base-alert> 
 
-`fetch(context)` has been deprecated, instead you can use an [anonymous middleware](https://nuxtjs.org/api/pages-middleware#anonymous-middleware) in your page:  `middleware(context)`
+`fetch(context)` has been deprecated, instead you can use an [anonymous middleware](/guides/directory-structure/middleware#anonymous-middleware) in your page:  `middleware(context)`
 
 </base-alert>
 
@@ -105,7 +105,7 @@ If you want to call the `fetch` hook from your component methods or template u
 <button @click="$fetch">Refresh</button>
 ```
 
-You can access the Nuxt [context](https://nuxtjs.org/api/context) within the fetch hook using `this.$nuxt.context`.
+You can access the Nuxt [context](/guides/concepts/context-helpers) within the fetch hook using `this.$nuxt.context`.
 
 ### Options
 
@@ -207,7 +207,7 @@ The navigation to the same page will not call `fetch` if last `fetch` call w
 
 Sometimes you just want to fetch data and pre-render it on the server without using a store. 
 
-`asyncData` is called every time before loading the page component. It will be called server-side once (on the first request to the Nuxt app) and client-side when navigating to further routes. This method receives [the context](https://nuxtjs.org/api/context) as the first argument. You can use it to fetch some data and Nuxt.js will automatically merge the returned object with the component data.
+`asyncData` is called every time before loading the page component. It will be called server-side once (on the first request to the Nuxt app) and client-side when navigating to further routes. This method receives [the context](/guides/concepts/context-helpers) as the first argument. You can use it to fetch some data and Nuxt.js will automatically merge the returned object with the component data.
 
 ```js
 export default {
@@ -299,9 +299,9 @@ export default {
 
 The `asyncData` method is not called on query string changes by default. If you want to change this behavior, for example when building a pagination component, you can set up parameters that should be listened to with the `watchQuery` property of your page component. 
 
-➡️[Learn more about the`watchQuery` property](https://www.notion.so/The-watchQuery-Property-d96b2d92bf0849a583ccb4bf6e6b0805)
+➡️ Learn more about the [watchQuery property](/api/pages-watchquery)
 
-➡️[To see the list of available keys in `context`](https://www.notion.so/Context-and-Utils-2c164875fe4841bab327e501dccadf31)
+➡️ To see the list of available [keys in context](/guides/concepts/context-helpers)
 
 
 

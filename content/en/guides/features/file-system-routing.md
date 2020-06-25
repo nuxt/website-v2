@@ -77,7 +77,7 @@ Nuxt.js gives you automatic code splitting for your routes, no configuration is 
 
 <base-alert type="info">
 
-Use the `[<nuxt-link>](https://nuxtjs.org/api/components-nuxt-link)` component to navigate between pages
+Use the [NuxtLink component](/guides/features/nuxt-components#the-nuxtlink-component) to navigate between pages
 
 </base-alert>
 
@@ -129,7 +129,6 @@ router: {
 
 Sometimes it is not possible to know the name of the route such as when we make a call to an api to get a list of users or blog posts. We call these dynamic routes. To create a dynamic route you need to add an underscore before the .vue file name or before the name of the directory. You can name the file or directory anything you want but you must prefix it with an underscore.
 
-📺[Watch a free lesson about dynamic routes on Vue School](https://vueschool.io/lessons/nuxtjs-dynamic-routes?friend=nuxt)
 
 This file tree:
 
@@ -178,13 +177,13 @@ As you can see the route named `users-id` has the path `:id?` which makes it
 
 </base-alert>
 
-<base-alert> 
+<base-alert type="info"> 
 
-Dynamic routes are ignored by the `generate` command. 
+As of Nuxt >= v2.13 there is a crawler installed that will now crawl your link tags and generate your dynamic routes based on those links. However if you have pages that are not linked to such as a secret page, then you will need to manually generate those dynamic routes.
 
 </base-alert>
 
-➡️Generate dynamic routes for static sites
+➡️ [Generate dynamic routes](/guides/concepts/static-site-generation) for static sites
 
 ### Locally Accessing Route Params
 
@@ -196,7 +195,7 @@ Nuxt.js lets you create nested routes by using the children routes of vue-router
 
 <base-alert> 
 
-Don't forget to include the `<nuxt-child/>` component inside the parent component (`.vue` file).
+Don't forget to include the [NuxtChild component](/guides/features/nuxt-components#the-nuxtchild-component) inside the parent component (`.vue` file).
 
 </base-alert>
 
@@ -234,8 +233,6 @@ router: {
   ]
 }
 ```
-
-📦[https://nuxtjs.org/examples/nested-routes](https://nuxtjs.org/examples/nested-routes)
 
 ## Dynamic Nested Routes
 
@@ -312,16 +309,20 @@ pages/
 ```
 
 Will handle requests like this:
-
-[Copy of Untitled](https://www.notion.so/1214a50fbe0740f7bb3966b97264bb76)
+```
+/ -> index.vue
+/people -> people/index.vue
+/people/123 -> people/_id.vue
+/about -> _.vue
+/about/careers -> _.vue
+/about/careers/chicago -> _.vue
+```
 
 <base-alert type="info">
 
 Handling 404 pages is now up to the logic of the `_.vue` page. 
 
 </base-alert>
-
-➡️[More on 404 redirecting can be found here](https://nuxtjs.org/guide/async-data#handling-errors).
 
 ## Extending the router
 
@@ -335,7 +336,7 @@ There are multiple ways to extend the routing with Nuxt:
 
 The router property lets you customise the Nuxt.js router (vue-router).
 
-nuxt.config.js
+`nuxt.config.js`
 
 ```js
 export default {
@@ -349,7 +350,7 @@ export default {
 
 The base URL of the app. For example, if the entire single page application is served under `/app/`, then base should use the value `'/app/'`.
 
-➡️Router Base Property
+➡️ [Router Base Property](/api/configuration-router#base)
 
 ### extendRoutes
 
@@ -424,25 +425,25 @@ export default {
 }
 ```
 
-➡️extendRoutes Property
+➡️ [extendRoutes Property](/api/configuration-router#extendroutes)
 
 ### fallback
 
 Controls whether the router should fallback to hash mode when the browser does not support history.pushState but mode is set to history.
 
-➡️fallback Property
+➡️ [fallback Property](/api/configuration-router#fallback)
 
 ### mode
 
 Configure the router mode, it is not recommended to change it due to server-side rendering.
 
-➡️mode Property
+➡️ [mode Property](/api/configuration-router#mode)
 
 ### parseQuery / stringifyQuery
 
 Provide custom query string parse / stringify functions. 
 
-➡️parseQuery / stringifyQuery Property
+➡️ [parseQuery / stringifyQuery Property](/api/configuration-router#parsequery-stringifyquery)
 
 ### routeNameSplitter
 
@@ -462,7 +463,7 @@ export default {
 
 The `scrollBehavior` option lets you define a custom behavior for the scroll position between the routes. This method is called every time a page is rendered. 
 
-🎓To learn more about it, see [vue-router scrollBehavior documentation](https://router.vuejs.org/guide/advanced/scroll-behavior.html).
+🎓 To learn more about it, see [vue-router scrollBehavior documentation](https://router.vuejs.org/guide/advanced/scroll-behavior.html).
 
 Available since:v2.9.0,
 
@@ -482,7 +483,7 @@ export default function (to, from, savedPosition) {
 
 🎓[Nuxt.js default `router.scrollBehavior.js` file.](packages/vue-app/template/router.scrollBehavior.js)
 
-➡️scrollBehavior Property
+➡️ [scrollBehavior Property](/api/configuration-router#scrollbehavior)
 
 ### trailingSlash
 
@@ -506,8 +507,7 @@ This option should not be set without preparation and has to be tested thoroughl
 
 </base-alert>
 
-➡️trailingSlash Property
+➡️ [trailingSlash Property](/api/configuration-router#trailingslash)
 
-#
 
 <quiz :questions="questions"></quiz>

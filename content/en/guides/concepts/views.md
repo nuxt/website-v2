@@ -74,7 +74,7 @@ export default {
 
 There are many properties of the page component such as the head property in the example above. 
 
-➡️See the directory book to learn more about all the properties can use on your page
+➡️ See the [directories structure book](/guides/directory-structure/nuxt) to learn more about all the properties can use on your page
 
 ## Layouts
 
@@ -92,7 +92,7 @@ You can define a default layout by adding a `default.vue` file inside the layo
 </template>
 ```
 
-➡️Learn more about the Nuxt component in the components chapter
+➡️ Learn more about the [Nuxt component](http://localhost:3000/guides/features/nuxt-components) in the components chapter
 
 ### Custom Layout
 

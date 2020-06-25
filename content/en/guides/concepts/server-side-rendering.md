@@ -54,7 +54,6 @@ A JavaScript environment is required to render your web page.
 
 A Node.js server needs to be configured to execute your Vue.js application.
 
-[Schema]
 
 ## Extend and control the server
 
@@ -96,11 +95,6 @@ mounted{
 
 ## Server-side rendering steps with Nuxt.js
 
-## Needs better image
-
-![https://s3-us-west-2.amazonaws.com/secure.notion-static.com/c8e8997d-dcb2-4d3d-9060-72621dbcdd36/Untitled.png](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/c8e8997d-dcb2-4d3d-9060-72621dbcdd36/Untitled.png)
-
-Schema for dynamic server-side rendering
 
 ### Step 1: Browser to Server
 

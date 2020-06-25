@@ -79,9 +79,9 @@ Open the package.json file in your favourite code editor and fill it with this J
 
 </base-alert>
 
-The `package.json` is like the ID card of your project. If you don't know what the `package.json` file is, we highly recommend you to have a quick read on the NPM documentation: [https://docs.npmjs.com/creating-a-package-json-file](https://docs.npmjs.com/creating-a-package-json-file)
+The `package.json` is like the ID card of your project. If you don't know what the `package.json` file is, we highly recommend you to have a quick read on the [NPM documentation](https://docs.npmjs.com/creating-a-package-json-file).
 
-### Second step: Install `nuxt` in your project
+### Second step: Install nuxt in your project
 
 Once the `package.json` has been created, you need to add `nuxt` to your project via the NPM or Yarn command below:
 

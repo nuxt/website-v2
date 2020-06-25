@@ -77,7 +77,7 @@ Nuxt.js comes with a few important components included out of the box, which wil
 
 In the following paragraphs, each of the included components is explained.
 
-# The <Nuxt> Component
+## The Nuxt Component
 
 The `<Nuxt>` component is the component you use to display your page components. Basically, this component gets replaced by what is inside your page components depending on the page that is being shown. Therefore it is important that you add the `<Nuxt>` component to your layouts.
 
@@ -92,8 +92,6 @@ The `<Nuxt>` component is the component you use to display your page components.
   </div>
 </template>
 ```
-
-➡️To see an example, take a look at the [layouts example](https://nuxtjs.org/examples/layouts).
 
 <base-alert> 
 
@@ -172,7 +170,7 @@ To display the `child.vue` component, you have to insert the `<NuxtChild>` co
 
 Both, the `<Nuxt>` component and the `<NuxtChild/>` component, accept `keep-alive` and `keep-alive-props.`
 
-🎓To learn more about keep-alive and [keep-alive-props](https://vuejs.org/v2/api/#keep-alive) see the [vue docs](https://vuejs.org/v2/guide/components-dynamic-async.html)
+🎓To learn more about keep-alive and keep-alive-props see the [vue docs](https://vuejs.org/v2/api/#keep-alive) 
 
 `layouts/default.vue`
 
@@ -375,7 +373,7 @@ In this example we have used the class `nuxt-link-prefetched` but you can name i
 
 </base-alert>
 
-# The client-only Component
+## The client-only Component
 
 This component is used to purposely render a component only on client-side. To import a component only on the client, register the component in a client-side only plugin.
 

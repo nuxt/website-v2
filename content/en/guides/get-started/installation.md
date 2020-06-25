@@ -42,6 +42,14 @@ In this example we will use the terminal to create the directories and files but
 
 ### First step: Set up your project
 
+<iframe
+     src="https://codesandbox.io/embed/github/nuxt-academy/book-get-started/tree/master/01_installation?fontsize=14&hidenavigation=1&theme=dark"
+     style="width:100%; height:500px; border:0; border-radius: 4px; overflow:hidden;"
+     title="nuxt-academy/book-get-started: 01_installation"
+     allow="accelerometer; ambient-light-sensor; camera; encrypted-media; geolocation; gyroscope; hid; microphone; midi; payment; usb; vr; xr-spatial-tracking"
+     sandbox="allow-autoplay allow-forms allow-modals allow-popups allow-presentation allow-same-origin allow-scripts"
+   ></iframe>
+   
 To get started create an empty directory with the name of your project and navigate into it:
 
 ```bash
@@ -66,7 +74,7 @@ Open the package.json file in your favourite code editor and fill it with this J
     "dev": "nuxt",
     "build": "nuxt build",
     "start": "nuxt start",
-    "generate": "nuxt generate"
+    "generate": "nuxt build && nuxt export"
   }
 }
 ```

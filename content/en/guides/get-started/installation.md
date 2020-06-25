@@ -4,6 +4,7 @@ description: There is not much you need in order to get started with Nuxt.js. Be
 position: 1
 category: Get Started
 categoryPosition: 1
+csb_link: https://codesandbox.io/embed/github/nuxt-academy/book-get-started/tree/master/01_installation?fontsize=14&hidenavigation=1&theme=dark
 ---
 
 ## Prerequisites
@@ -42,14 +43,6 @@ In this example we will use the terminal to create the directories and files but
 
 ### First step: Set up your project
 
-<iframe
-     src="https://codesandbox.io/embed/github/nuxt-academy/book-get-started/tree/master/01_installation?fontsize=14&hidenavigation=1&theme=dark"
-     style="width:100%; height:500px; border:0; border-radius: 4px; overflow:hidden;"
-     title="nuxt-academy/book-get-started: 01_installation"
-     allow="accelerometer; ambient-light-sensor; camera; encrypted-media; geolocation; gyroscope; hid; microphone; midi; payment; usb; vr; xr-spatial-tracking"
-     sandbox="allow-autoplay allow-forms allow-modals allow-popups allow-presentation allow-same-origin allow-scripts"
-   ></iframe>
-   
 To get started create an empty directory with the name of your project and navigate into it:
 
 ```bash
@@ -167,6 +160,8 @@ Open it in your browser by clicking the link in your terminal and you should see
 When launching *Nuxt.js in development mode, it will listen for file changes in most directories, so there is no need to restart the application when e.g. adding new pages.*
 
 </base-alert>
+
+<code-sandbox :src="csb_link"></code-sandbox>
 
 ### 🍄 Bonus step:
 

@@ -63,7 +63,6 @@ The `store` directory contains your [Vuex Store](http://vuex.vuejs.org/en/) 
 
 Using a store to manage the state is important for every big application. That's why Nuxt.js implements Vuex in its core.
 
-➡️[Vuex Store example with Nuxt.js](https://nuxtjs.org/examples/vuex-store)
 
 ## Activate the Store
 
@@ -257,7 +256,7 @@ Only the primary module (in store/index.js) will receive this action. You'll ne
 
 </base-alert>
 
-The [context](https://nuxtjs.org/api/context) is given to `nuxtServerInit` as the 2nd argument in the `asyncData` method.
+The [context](/guides/concepts/context-helpers) is given to `nuxtServerInit` as the 2nd argument in the `asyncData` method.
 
 If `nuxt generate` is ran, `nuxtServerInit` will be executed for every dynamic route generated.
 

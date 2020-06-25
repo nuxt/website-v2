@@ -305,7 +305,7 @@ export const actions = {
 
 ## The extendPlugins Property
 
-You may want to extend plugins or change the plugins order created by Nuxt.js. This function accepts an array of [plugin](https://nuxtjs.org/api/configuration-plugins) objects and should return an array of plugin objects.
+You may want to extend plugins or change the plugins order created by Nuxt.js. This function accepts an array of [plugin](/api/configuration-plugins) objects and should return an array of plugin objects.
 
 Example of changing plugins order (`nuxt.config.js`)
 
@@ -327,7 +327,7 @@ export default {
 
 ### Global mixins
 
-Global mixins can be easily added with [Nuxt plugins] but can cause trouble and memory leaks when not handled correctly. Whenever you add a global mixin to your application, you should use a flag to avoid registering it multiple times:
+Global mixins can be easily added with Nuxt plugins but can cause trouble and memory leaks when not handled correctly. Whenever you add a global mixin to your application, you should use a flag to avoid registering it multiple times:
 
 `plugins/my-mixin-plugin.js`
 

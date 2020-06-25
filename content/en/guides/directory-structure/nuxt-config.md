@@ -52,7 +52,7 @@ export default {
 }
 ```
 
-➡️[Documentation about `build` integration](https://nuxtjs.org/api/configuration-build)
+➡️ See more on the  [build property](/api/configuration-build)
 
 ### css
 
@@ -68,7 +68,7 @@ export default {
 }
 ```
 
-➡️[Documentation about `css` integration](https://nuxtjs.org/api/configuration-css)
+➡️ See more on the [css property](/api/configuration-css)
 
 ### dev
 
@@ -82,7 +82,7 @@ export default {
 }
 ```
 
-➡️[Documentation about `dev` integration](https://nuxtjs.org/api/configuration-dev)
+➡️ See more on the [dev property](/api/configuration-dev)
 
 ### env
 
@@ -98,7 +98,7 @@ export default {
 }
 ```
 
-➡️[Documentation about `env` integration](https://nuxtjs.org/api/configuration-env)
+➡️ See more on the [env property](/api/configuration-env)
 
 ### generate
 
@@ -115,7 +115,7 @@ export default {
 }
 ```
 
-➡️[Documentation about generate integration](https://nuxtjs.org/api/configuration-generate)
+➡️ See more on the [generate property](/api/configuration-generate)
 
 ### head
 
@@ -135,7 +135,7 @@ export default {
 
 This option lets you define all default meta tags for your application.
 
-➡️[Documentation about head integration](https://nuxtjs.org/api/configuration-head)
+➡️ See more on  [head integration](/api/configuration-head)
 
 ### loading
 
@@ -151,7 +151,7 @@ export default {
 }
 ```
 
-➡️[Documentation about `loading` integration](https://nuxtjs.org/api/configuration-loading)
+➡️ See more on [loading integration](/api/configuration-loading)
 
 ### modules
 
@@ -167,7 +167,7 @@ export default {
 }
 ```
 
-➡️[Documentation about `modules` integration](https://nuxtjs.org/api/configuration-modules)
+➡️ See more on the [modules property](/api/configuration-modules)
 
 ### plugins
 
@@ -183,7 +183,7 @@ export default {
 }
 ```
 
-➡️[Documentation about `plugins` integration](https://nuxtjs.org/api/configuration-plugins)
+➡️ See more on the [plugins property](/api/configuration-plugins)
 
 ### router
 
@@ -199,7 +199,7 @@ export default {
 }
 ```
 
-➡️[Documentation about `router` integration](https://nuxtjs.org/api/configuration-router)
+➡️ See more on the [router property](/api/configuration-router)
 
 ### server
 
@@ -221,7 +221,7 @@ export default {
 }
 ```
 
-➡️[Documentation about `server` integration](https://nuxtjs.org/api/configuration-server)
+➡️ See more on the [server property](/api/configuration-server)
 
 ### srcDir
 
@@ -265,7 +265,7 @@ export default {
 }
 ```
 
-➡️[Documentation about `dir` integration](https://nuxtjs.org/api/configuration-dir)
+➡️ See more on the [dir property](/api/configuration-dir)
 
 ### pageTransition
 
@@ -279,11 +279,11 @@ export default {
 }
 ```
 
-➡️[Documentation about `transition` integration](https://nuxtjs.org/api/configuration-transition)
+➡️ See more on the [transition property](/api/configuration-transition)
 
 # Other configuration files
 
-Besides the `nuxt.config.js` there might be other config files in your project root, such as `[.eslintrc](https://eslint.org/)`, `[prettier.config.json](https://prettier.io/)` or `[.gitignore](https://git-scm.com/docs/gitignore)`. These are used to configure other tools such as your linter, code formatter or your git repository and detached from the `nuxt.config.js`.
+Besides the `nuxt.config.js` there might be other config files in your project root, such as [.eslintrc](https://eslint.org/), [prettier.config.json](https://prettier.io/) or [.gitignore](https://git-scm.com/docs/gitignore). These are used to configure other tools such as your linter, code formatter or your git repository and detached from the `nuxt.config.js`.
 
 ### .gitignore
 

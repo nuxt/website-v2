@@ -66,9 +66,6 @@ In your code, you can then reference these files relative to the root (`/`):
 
 Should you need to you can configure the `static/` directory behaviour in the `nuxt.config.js` file. 
 
-➡️To learn more on configuring the static directory
-
-[https://nuxtjs.org/api/configuration-render#static](https://nuxtjs.org/api/configuration-render#static)
 
 ### Static asset Prefix
 

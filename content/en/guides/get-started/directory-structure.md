@@ -4,7 +4,7 @@ description: The default Nuxt.js application structure is intended to provide a 
 position: 3
 category: Get Started
 categoryPosition: 1
-csb_link: https://codesandbox.io/embed/github/nuxt-academy/book-get_started/tree/master/03_directory_structure?fontsize=14&hidenavigation=1&theme=dark
+csb_link: https://codesandbox.io/embed/github/nuxt-academy/guides-examples/tree/master/get_started/03_directory_structure?fontsize=14&hidenavigation=1&theme=dark
 ---
 The default Nuxt.js application structure is intended to provide a great starting point for both small and large applications. Of course, you are free to organise your application however you like and can create other directories as and when you need them.
 

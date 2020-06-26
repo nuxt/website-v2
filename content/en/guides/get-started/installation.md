@@ -4,7 +4,7 @@ description: There is not much you need in order to get started with Nuxt.js. Be
 position: 1
 category: Get Started
 categoryPosition: 1
-csb_link: https://codesandbox.io/embed/github/nuxt-academy/book-get_started/tree/master/01_installation?fontsize=14&hidenavigation=1&theme=dark
+csb_link: https://codesandbox.io/embed/github/nuxt-academy/guides-examples/tree/master/get_started/01_installation?fontsize=14&hidenavigation=1&theme=dark
 ---
 
 ## Prerequisites

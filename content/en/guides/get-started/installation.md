@@ -103,7 +103,7 @@ This command will add `nuxt` as a dependency to your project and it will add it 
 
 <base-alert type="info"> 
 
-A `package-lock.json` is also created which ensures a consistent install and compatible dependencies of your packages installed in your project.
+A `yarn.lock` or `package-lock.json` is also created which ensures a consistent install and compatible dependencies of your packages installed in your project.
 
 </base-alert>
 
@@ -137,13 +137,26 @@ Open the `index.vue` page in your editor and add the following content:
 
 Run your project by typing the NPM command below in your terminal:
 
-```bash
-npm run dev
-```
+<code-group>
+  <code-block label="Yarn" active>
+
+  ```bash
+  yarn dev
+  ```
+
+  </code-block>
+  <code-block label="NPM" >
+
+  ```bash
+  npm run dev
+  ```
+
+  </code-block>
+</code-group>
 
 <base-alert type="info"> 
 
-*We use the `npm run dev` command because we are running our application in development mode.*
+We use the the dev command because we are running our application in development mode.
 
 </base-alert>
 
@@ -153,7 +166,7 @@ Open it in your browser by clicking the link in your terminal and you should see
 
 <base-alert type="info"> 
 
-When launching *Nuxt.js in development mode, it will listen for file changes in most directories, so there is no need to restart the application when e.g. adding new pages.*
+When launching Nuxt.js in development mode, it will listen for file changes in most directories, so there is no need to restart the application when e.g. adding new pages
 
 </base-alert>
 
@@ -169,6 +182,6 @@ Then, go to your browser and see your new page on **[http://localhost:3000/fun](
 
 <base-alert type="info"> 
 
-*Create a directory name `more-fun` and put an `index.vue` file inside. This will give the same result as creating a `more-fun.vue` file*
+Create a directory name `more-fun` and put an `index.vue` file inside. This will give the same result as creating a `more-fun.vue` file
 
 </base-alert>

@@ -35,6 +35,8 @@ The `pages` directory contains your application's views and routes. As you've 
 
 The `components` directory is where you put all your Vue.js components which are then imported into your pages.
 
+With Nuxt.js you can create your components and auto import them into your .vue files meaning there is no need to manually import them in the script section. Nuxt.js will scan and auto import these for you once you have components set to true.
+
 ➡️ Learn more about the [components directory](/guides/directory-structure/components)
 
 ### The assets directory

@@ -89,6 +89,8 @@ The middleware will be executed in series in this order:
 2. Matched layouts
 3. Matched pages
 
+## Router Middleware
+
 A middleware can be asynchronous. To do this, simply return a  `Promise` or use async/await.
 
 `middleware/stats.js`

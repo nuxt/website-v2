@@ -4,6 +4,7 @@ description: The default Nuxt.js application structure is intended to provide a 
 position: 3
 category: Get Started
 categoryPosition: 1
+csb_link: https://codesandbox.io/embed/github/nuxt-academy/book-get_started/tree/master/03_directory_structure?fontsize=14&hidenavigation=1&theme=dark
 ---
 The default Nuxt.js application structure is intended to provide a great starting point for both small and large applications. Of course, you are free to organise your application however you like and can create other directories as and when you need them.
 
@@ -57,6 +58,8 @@ The `nuxt.config.js` file is the single point of configuration for Nuxt.js. If
 ### The package.json file
 
 The `package.json` file contains all the dependencies and scripts for your application.
+
+<code-sandbox :src="csb_link"></code-sandbox>
 
 ## More about the project structures
 

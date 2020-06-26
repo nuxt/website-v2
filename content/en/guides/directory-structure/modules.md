@@ -378,7 +378,7 @@ export default function (moduleOptions) {
 
 ## Async Modules
 
-Not all modules will do everything synchronous. For example you may want to develop a module which needs fetching some API or doing async IO. For this, Nuxt.js supports async modules which can return a Promise or call a callback.
+Not all modules will do everything synchronous. For example you may want to develop a module which needs fetching some API or doing asynchronous Operation. For this, Nuxt.js supports async modules which can return a Promise or call a callback.
 
 ### Use async/await
 

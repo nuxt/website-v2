@@ -68,11 +68,11 @@ export default {
 
 ➡️ See the chapter on [fetch()](/guides/features/data-fetching#the-fetch-method) for more details on how fetch works
 
-### Nuxt Components
+## Components Module
 
 With Nuxt.js you can now create your components and auto import them into your .vue files meaning there is no need to manually import them in the script section. Nuxt.js will scan and auto import these components for you and can be used in pages, layouts or even other components. 
 
-If you are using Nuxt 2.13+ then all you need to do is set components to true in your nuxt.config file.
+If you are using Nuxt 2.13+ then all you need to do is set components to true in your nuxt.config file. The [components module](https://github.com/nuxt/components) is included by default but it is not activated by default. 
 
 `nuxt.config.js`
 
@@ -231,3 +231,4 @@ And now in your template you can use the BaseButton instead of Button without ha
 ```html
 <BaseButton />
 ```
+➡️ To learn more about the [components module](/blog/improve-your-developer-experience-with-nuxt-components)

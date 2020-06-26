@@ -13,11 +13,11 @@ There is not much you need in order to get started with Nuxt.js. Below you will 
 
 <base-alert type="info">
 
-Another way to get started with Nuxt.js is to use [CodeSandbox](http://template.nuxtjs.org) which is a great way for quickly playing around with Nuxt.js or sharing your code with other people. 
+Another way to get started with Nuxt.js is to use [CodeSandbox](https://template.nuxtjs.org) which is a great way for quickly playing around with Nuxt.js or sharing your code with other people. 
 
 </base-alert>
 
-## Requirements
+### Node & NPM
 
 [node](https://nodejs.org/en/download/) - at least v8.9.0
 
@@ -27,11 +27,11 @@ Another way to get started with Nuxt.js is to use [CodeSandbox](http://template.
 
 *We recommend you have the latest version installed*
 
-## Text editor
+### Text editor
 
 Use whatever you like, but we recommend [VSCode](https://code.visualstudio.com/) and further examples will be shown with it.
 
-## Terminal
+### Terminal
 
 Use whatever you like, but we recommend to use the VSCode terminal and further examples will be shown with it.
 

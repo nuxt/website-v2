@@ -17,15 +17,11 @@ Another way to get started with Nuxt.js is to use [CodeSandbox](https://template
 
 </base-alert>
 
-### Node & NPM
+### Node
 
 [node](https://nodejs.org/en/download/) - at least v8.9.0
 
 *We recommend you have the latest version installed.* 
-
-[NPM](https://docs.npmjs.com/cli/install) - at least v5.2.0
-
-*We recommend you have the latest version installed*
 
 ### Text editor
 
@@ -67,7 +63,7 @@ Open the package.json file in your favourite code editor and fill it with this J
     "dev": "nuxt",
     "build": "nuxt build",
     "start": "nuxt start",
-    "generate": "nuxt build && nuxt export"
+    "export": "nuxt export"
   }
 }
 ```

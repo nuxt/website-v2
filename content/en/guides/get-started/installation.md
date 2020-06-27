@@ -185,3 +185,57 @@ Then, go to your browser and see your new page on **[http://localhost:3000/fun](
 Create a directory name `more-fun` and put an `index.vue` file inside. This will give the same result as creating a `more-fun.vue` file
 
 </base-alert>
+
+## Using create-nuxt-app
+
+To get started quickly you can use the [create-nuxt-app](https://github.com/nuxt/create-nuxt-app).
+
+Make sure you have npx installed (npx is shipped by default since NPM 5.2.0) or npm v6.1 or yarn.
+
+<code-group>
+  <code-block label="Yarn" active>
+
+  ```bash
+  yarn create nuxt-app <project-name>
+  ```
+
+  </code-block>
+  <code-block label="NPX">
+
+  ```bash
+  npx create nuxt-app <project-name>
+  ```
+
+  </code-block>
+    <code-block label="NPM">
+
+  ```bash
+  npm init nuxt-app <project-name>
+  ```
+
+  </code-block>
+
+</code-group>
+
+It will ask you some questions (name, Nuxt options, UI framework, TypeScript, linter, testing framework, etc.), when answered, it will install all the dependencies so the next step is to navigate to the project folder and launch it with:
+
+<code-group>
+  <code-block label="Yarn" active>
+
+  ```bash
+  cd <project-name>
+  Yarn dev
+  ```
+
+  </code-block>
+  <code-block label="NPM" >
+
+  ```bash
+  cd <project-name>
+  npm run dev
+  ```
+
+  </code-block>
+</code-group>
+
+The application is now running on http://localhost:3000.

@@ -9,6 +9,7 @@
           class="text-light-onSurfacePrimary dark:text-dark-onSurfacePrimary transition-colors duration-300 ease-linear"
         >{{ page.title }}</h1>
         <nuxt-content :document="page" />
+
         <LazyAppPrevNextNew :prev="prev" :next="next" section="guides" class="mt-4" />
         <AppContribute :doc-link="docLink" :contributors="contributors" />
       </article>
@@ -29,6 +30,7 @@ export default {
     const slug = params.slug
     const path = `/${app.i18n.locale}/guides/${params.book}/${slug}`
     const data = {
+      showModal: false,
       path,
       section: params.section,
       book: params.book,

@@ -61,7 +61,11 @@ The `nuxt.config.js` file is the single point of configuration for Nuxt.js. If
 
 The `package.json` file contains all the dependencies and scripts for your application.
 
-<code-sandbox :src="csb_link"></code-sandbox>
+<button id="show-modal" @click="showModal = true">Show Modal</button>
+
+<AppModal v-if="showModal" @close="showModal = false">
+          <code-sandbox slot="body" :src="csb_link"></code-sandbox>
+</AppModal>
 
 ## More about the project structures
 

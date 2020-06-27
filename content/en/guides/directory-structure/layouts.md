@@ -74,7 +74,7 @@ Layouts are a great help when you want to change the look and feel of your Nuxt.
 
 You can extend the main layout by adding a `layouts/default.vue` file. It will be used for all pages that don't have a layout specified. Make sure to add the `<Nuxt>` component when creating a layout to actually include the page component.
 
-All you need in your layout is three lines of code and this simply renders the page component.
+All you need in your layout is three lines of code which will render the page component.
 
 ```html
 <template>

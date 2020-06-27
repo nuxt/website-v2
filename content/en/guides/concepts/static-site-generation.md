@@ -39,7 +39,7 @@ With static site generation you can render your application during the build pha
 
 ### Generating your site
 
-When deploying your site in static mode all your `.vue` pages will be generated into HTML and JavaScript files. All calls to API's will be made and cached in a folder called static inside your generated content so that no calls to your API need to be made on client side navigation.
+When deploying your site in static mode all your `.vue` pages will be generated into HTML and JavaScript files. All calls to APIs will be made and cached in a folder called static inside your generated content so that no calls to your API need to be made on client side navigation.
 
 ### Step 1: Browser to CDN
 
@@ -59,7 +59,7 @@ Pages that have been excluded from generation, by using the `generate.exclude` p
 
 ### Updating your content
 
-In order to get new content to your site from your API you will need to regenerate your site again. With most static sites hosting providers you can do this by simply pushing your changes to your master branch via the git command or via a pull request.
+In order to get new content to your site from your API you will need to regenerate your site again. With most static sites hosting providers you can do this by pushing your changes to your master branch via the git command or via a pull request.
 
 # Quiz
 

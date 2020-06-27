@@ -328,20 +328,20 @@ Handling 404 pages is now up to the logic of the `_.vue` page. 
 
 There are multiple ways to extend the routing with Nuxt:
 
-- [router-extras-module](https://github.com/nuxt-community/router-extras-module) to customise the route parameters in the page
+- [router-extras-module](https://github.com/nuxt-community/router-extras-module) to customize the route parameters in the page
 - component[@nuxtjs/router](https://github.com/nuxt-community/router-module) to overwrite the Nuxt router and write your own `router.js` file
 - Use the [router.extendRoutes](https://nuxtjs.org/api/configuration-router#extendroutes) property in your `nuxt.config.js`
 
 ## The router Property
 
-The router property lets you customise the Nuxt.js router (vue-router).
+The router property lets you customize the Nuxt.js router (vue-router).
 
 `nuxt.config.js`
 
 ```js
 export default {
 	router: {
-    // customise the Nuxt.js router
+    // customize the Nuxt.js router
   },
 }
 ```

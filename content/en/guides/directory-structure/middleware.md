@@ -91,7 +91,7 @@ The middleware will be executed in series in this order:
 
 ## Router Middleware
 
-A middleware can be asynchronous. To do this, simply return a  `Promise` or use async/await.
+A middleware can be asynchronous. To do this return a  `Promise` or use async/await.
 
 `middleware/stats.js`
 

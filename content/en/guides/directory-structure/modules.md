@@ -1,6 +1,6 @@
 ---
 title: modules
-description: Nuxt.js provides a higher-order module system that makes it easy to extend the core. Modules are functions that are called sequentially when booting Nuxt.js.
+description: Nuxt.js provides a higher-order module system that makes it possible to extend the core. Modules are functions that are called sequentially when booting Nuxt.js.
 position: 9
 category: Directory Structure
 categoryPosition: 4
@@ -43,7 +43,7 @@ questions:
     answers:
       - plugins
       - hooks
-      - asnycData
+      - asyncData
     correctAnswer: hooks
   - question: Modules can
     answers:
@@ -55,7 +55,7 @@ questions:
     answers:
       - module.exports
       - module.exports.meta
-      - module.expots.module
+      - module.exports.module
     correctAnswer: module.exports.meta
   - question: You can tell Nuxt.js to load modules with optional parameters as options
     answers:
@@ -66,11 +66,11 @@ questions:
 
 ![modules-servermiddleware-plugins-in-nuxt-js](https://user-images.githubusercontent.com/13063165/83777478-c390d280-a689-11ea-90cf-17d93bcda23a.jpg)
 
-While developing production-grade applications with Nuxt.js you might find that the framework's core functionality is not enough. Nuxt.js can be extended with configuration options and plugins, but maintaining these customisations across multiple projects is tedious, repetitive and time-consuming. On the other hand, supporting every project's needs out of the box would make Nuxt.js very complex and hard to use.
+While developing production-grade applications with Nuxt.js you might find that the framework's core functionality is not enough. Nuxt.js can be extended with configuration options and plugins, but maintaining these customizations across multiple projects is tedious, repetitive and time-consuming. On the other hand, supporting every project's needs out of the box would make Nuxt.js very complex and hard to use.
 
-This is one of the reasons why Nuxt.js provides a higher-order module system that makes it easy to extend the core. Modules are functions that are called sequentially when booting Nuxt.js. The framework waits for each module to finish before continuing. In this way, modules can customize almost any aspect of your project. Thanks to Nuxt.js's modular design (based on webpack's [Tapable](https://github.com/webpack/tapable)), modules can easily register hooks for certain entry points like the builder initialization. Modules can also override templates, configure webpack loaders, add CSS libraries, and perform many other useful tasks.
+This is one of the reasons why Nuxt.js provides a higher-order module system that makes it possible to extend the core. Modules are functions that are called sequentially when booting Nuxt.js. The framework waits for each module to finish before continuing. In this way, modules can customize almost any aspect of your project. Thanks to Nuxt.js' modular design (based on webpack's [Tapable](https://github.com/webpack/tapable)), modules can easily register hooks for certain entry points like the builder initialization. Modules can also override templates, configure webpack loaders, add CSS libraries, and perform many other useful tasks.
 
-Best of all, Nuxt.js modules can be incorporated into npm packages. This makes them easy to reuse across projects and to share with the community, helping create an ecosystem of high-quality add-ons.
+Best of all, Nuxt.js modules can be incorporated into npm packages. This makes it possible to reuse across projects and to share with the community, helping create an ecosystem of high-quality add-ons.
 
 
 ## The modules Property

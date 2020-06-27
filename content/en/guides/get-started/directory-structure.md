@@ -1,12 +1,12 @@
 ---
 title: Directory Structure
-description: The default Nuxt.js application structure is intended to provide a great starting point for both small and large applications. Of course, you are free to organise your application however you like and can create other directories as and when you need them.
+description: The default Nuxt.js application structure is intended to provide a great starting point for both small and large applications. You are free to organize your application however you like and can create other directories as and when you need them.
 position: 3
 category: Get Started
 categoryPosition: 1
 csb_link: https://codesandbox.io/embed/github/nuxt-academy/guides-examples/tree/master/get_started/03_directory_structure?fontsize=14&hidenavigation=1&theme=dark
 ---
-The default Nuxt.js application structure is intended to provide a great starting point for both small and large applications. Of course, you are free to organise your application however you like and can create other directories as and when you need them.
+The default Nuxt.js application structure is intended to provide a great starting point for both small and large applications. You are free to organize your application however you like and can create other directories as and when you need them.
 
 Let's create the directories and files that do not exist in our project yet.
 

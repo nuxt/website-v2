@@ -79,7 +79,7 @@ In the following paragraphs, each of the included components is explained.
 
 # The `<Nuxt>` Component
 
-The `<Nuxt>` component is the component you use to display your page components. Basically, this component gets replaced by what is inside your page components depending on the page that is being shown. Therefore it is important that you add the `<Nuxt>` component to your layouts.
+The `<Nuxt>` component is the component you use to display your page components. This component gets replaced by what is inside your page components depending on the page that is being shown. Therefore it is important that you add the `<Nuxt>` component to your layouts.
 
 `layouts/default.vue`
 

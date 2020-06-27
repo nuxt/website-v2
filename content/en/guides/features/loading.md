@@ -1,6 +1,6 @@
 ---
 title: Loading
-description: Out of the box, Nuxt.js gives you its own loading progress bar component that's shown between routes. You can customise it, disable it or even create your own loading component.
+description: Out of the box, Nuxt.js gives you its own loading progress bar component that's shown between routes. You can customize it, disable it or even create your own loading component.
 position: 8
 category: Features
 categoryPosition: 3
@@ -65,7 +65,7 @@ questions:
       - "name: circle"
     correctAnswer: "name: circle"
 ---
-Out of the box, Nuxt.js gives you its own loading progress bar component that's shown between routes. You can customise it, disable it or even create your own loading component.
+Out of the box, Nuxt.js gives you its own loading progress bar component that's shown between routes. You can customize it, disable it or even create your own loading component.
 
 ## Customising the Progress Bar
 
@@ -98,7 +98,7 @@ List of properties to customize the progress bar.
 
 ## Disable the Progress Bar
 
-If you don't want to display the progress bar between the routes, simply add `loading: false` in your `nuxt.config.js` file:
+If you don't want to display the progress bar between the routes add `loading: false` in your `nuxt.config.js` file:
 
 ```js
 export default {
@@ -223,7 +223,7 @@ export default {
 
 ## The loading indicator Property
 
-When running Nuxt.js in SPA mode, there is no content from the server side on the first page load. So, instead of showing a blank page while the page loads, Nuxt.js gives you a spinner which you can customise to add your own colours or background and even change the the indicator. 
+When running Nuxt.js in SPA mode, there is no content from the server side on the first page load. So, instead of showing a blank page while the page loads, Nuxt.js gives you a spinner which you can customize to add your own colors or background and even change the the indicator. 
 
 `nuxt.config.js`
 

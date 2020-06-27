@@ -163,7 +163,7 @@ export default {
 </script>
 ```
 
-➡️ See more on how asnycData works in our [Data Fetching](/guides/features/data-fetching#async-data) chapter
+➡️ See more on how asyncData works in our [Data Fetching](/guides/features/data-fetching#async-data) chapter
 
 ### fetch
 

@@ -285,7 +285,7 @@ Since Nuxt.js v2.10.0, if you have set `prefetchLinks` to `false` but you wa
 
 ## linkActiveClass
 
-The `linkActiveClass` works just the same as the `vue-router` class for active links. If we want to show which links are active all you have to do is create some css for the class `nuxt-link-active` . 
+The `linkActiveClass` works the same as the `vue-router` class for active links. If we want to show which links are active all you have to do is create some css for the class `nuxt-link-active` . 
 
 ```css
 .nuxt-link-active {
@@ -317,7 +317,7 @@ This option is given directly to the `vue-router` linkActiveClass. See the [vue-
 
 ## linkExactActiveClass
 
-The `linkExactActiveClass` works just the same as the `vue-router` class for exact active links. If we want to show which links are active with an exact match all you have to do is create some css for the class `nuxt-link-exact-active` . 
+The `linkExactActiveClass` works the same as the `vue-router` class for exact active links. If we want to show which links are active with an exact match all you have to do is create some css for the class `nuxt-link-exact-active` . 
 
 ```css
 .nuxt-link-exact-active {

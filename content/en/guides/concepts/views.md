@@ -82,7 +82,7 @@ Layouts are a great help when you want to change the look and feel of your Nuxt.
 
 ### Default Layout
 
-You can define a default layout by adding a `default.vue` file inside the layouts directory. This will be used for all pages that don't have a layout specified. The only thing you need to include in the layout is the `<Nuxt />` component which simply renders the page component.
+You can define a default layout by adding a `default.vue` file inside the layouts directory. This will be used for all pages that don't have a layout specified. The only thing you need to include in the layout is the `<Nuxt />` component which renders the page component.
 
 `layouts/default.vue`
 
@@ -151,7 +151,7 @@ Although this file is placed in the `layouts` folder, it should be treated as 
 
 As mentioned above, this layout is special, since you should not include the `<Nuxt/>`  component inside its template. You must see this layout as a component displayed when an error occurs (`404`, `500`, etc.). Similar to other page components, you can set a custom layout for the error page as well in the usual way.
 
-You can customise the error page by adding a `layouts/error.vue` file:
+You can customize the error page by adding a `layouts/error.vue` file:
 
 ```html
 <template>
@@ -172,7 +172,7 @@ export default {
 
 ## Document: App.html
 
-The app template is used to create the actual HTML frame of your document for your Nuxt.js application which injects the content as well as variables for the head and body. This file is created automatically for you and in general rarely needs to be modified. However you can customize the HTML app template used by Nuxt.js to include scripts or conditional CSS classes by creating an `app.html` file in the source directory of your project which by default is the root directory.
+The app template is used to create the actual HTML frame of your document for your Nuxt.js application which injects the content as well as variables for the head and body. This file is created automatically for you and in general rarely needs to be modified. You can customize the HTML app template used by Nuxt.js to include scripts or conditional CSS classes by creating an `app.html` file in the source directory of your project which by default is the root directory.
 
 The default template used by Nuxt.js is:
 

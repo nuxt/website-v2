@@ -8,7 +8,7 @@ csb_link: https://codesandbox.io/embed/github/nuxt-academy/guides-examples/tree/
 ---
 ## Automatic Routes
 
-Most websites have more than just one page. For example a home page, about page, contact page etc. In order to show these pages we need a Router. That's where `vue-router` comes in. Normally you would have to set up a configuration file and add all your routes manually to it. However, Nuxt.js automatically generates the `vue-router` configuration based on your provided Vue files inside the `pages` directory. That means you never have to write a router config again! Nuxt.js also gives you automatic code splitting for all your routes. 
+Most websites have more than one page. For example a home page, about page, contact page etc. In order to show these pages we need a Router. That's where `vue-router` comes in. When working with vue application you have to set up a configuration file and add all your routes manually to it. Nuxt.js automatically generates the `vue-router` configuration for you, based on your provided Vue files inside the `pages` directory. That means you never have to write a router config again! Nuxt.js also gives you automatic code splitting for all your routes. 
 
 In other words, all you have to do to have routing in your application is to create `.vue` files in the `pages` folder. 
 

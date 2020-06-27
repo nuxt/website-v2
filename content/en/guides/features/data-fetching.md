@@ -205,7 +205,7 @@ The navigation to the same page will not call `fetch` if last `fetch` call w
 
 ## Async Data
 
-Sometimes you just want to fetch data and pre-render it on the server without using a store. 
+Sometimes you want to fetch data and pre-render it on the server without using a store. 
 
 `asyncData` is called every time before loading the page component. It will be called server-side once (on the first request to the Nuxt app) and client-side when navigating to further routes. This method receives [the context](/guides/concepts/context-helpers) as the first argument. You can use it to fetch some data and Nuxt.js will automatically merge the returned object with the component data.
 
@@ -240,7 +240,7 @@ You do NOT have access to the component instance through `this` inside `asy
 
 <base-alert type="info">
 
-In the upcoming examples, we are using our [http module](https://http.nuxtjs.org/) which we recommend you use for all your applications. You will of course need to install it first in order to use and also add it to your modules section of your nuxt config.
+In the upcoming examples, we are using our [http module](https://http.nuxtjs.org/) which we recommend you use for all your applications. You will need to install it first in order to use and also add it to your modules section of your nuxt config.
 
 </base-alert>
 

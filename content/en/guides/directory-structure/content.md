@@ -99,7 +99,7 @@ This module converts your .md files into a JSON AST tree structure, stored in a 
 
 ### Vue components in Markdown
 
-You can use Vue components directly in your markdown files just like you would only any vue file. You will however need to use your components as kebab case and cannot use self-closing tags.
+You can use Vue components directly in your markdown files. You will however need to use your components as kebab case and cannot use self-closing tags.
 
 ➡️ See the content module docs](https://content.nuxtjs.org/writing#vue-components) for more details
 
@@ -129,7 +129,7 @@ This module automatically wraps codeblocks and applies [PrismJS](https://prismj
 
 ### Extend Markdown Parsing
 
-Originally markdown does not support highlighting lines inside codeblock nor filenames. However, this module allows it with its own custom syntax. Line numbers are added to the pre tag in data-line attributes and the filename will be converted to a span with a filename class, so you can style it.
+Originally markdown does not support highlighting lines inside codeblock nor filenames. The content module allows it with its own custom syntax. Line numbers are added to the pre tag in data-line attributes and the filename will be converted to a span with a filename class, so you can style it.
 
 ➡️ See the [content module docs](https://content.nuxtjs.org/writing#codeblocks) for more details
 

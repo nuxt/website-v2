@@ -72,8 +72,8 @@
 </template>
 
 <script>
-import OpenCollectiveIcon from '@/assets/icons/open-collective.svg?inline'
-import SponsoringIllustration from '@/assets/illustrations/sponsoring.svg?inline'
+import OpenCollectiveIcon from '~/assets/icons/open-collective.svg?inline'
+import SponsoringIllustration from '~/assets/illustrations/sponsoring.svg?inline'
 
 export default {
   components: {

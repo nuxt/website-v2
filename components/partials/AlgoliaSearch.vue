@@ -12,7 +12,7 @@
 </template>
 
 <script>
-import SearchIcon from '@/assets/icons/search.svg?inline'
+import SearchIcon from '~/assets/icons/search.svg?inline'
 
 export default {
   components: {

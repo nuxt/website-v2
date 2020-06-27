@@ -217,7 +217,7 @@ Then, we update our `nuxt.config.js` to tell Nuxt.js to use our component:
 
 ```js
 export default {
-  loading: '@/components/LoadingBar.vue'
+  loading: '~/components/LoadingBar.vue'
 }
 ```
 

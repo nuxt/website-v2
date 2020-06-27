@@ -14,9 +14,9 @@
 </template>
 
 <script>
-import SunIcon from '@/assets/icons/sun.svg?inline'
-import MoonIcon from '@/assets/icons/moon.svg?inline'
-import SystemIcon from '@/assets/icons/system.svg?inline'
+import SunIcon from '~/assets/icons/sun.svg?inline'
+import MoonIcon from '~/assets/icons/moon.svg?inline'
+import SystemIcon from '~/assets/icons/system.svg?inline'
 
 export default {
   components: {

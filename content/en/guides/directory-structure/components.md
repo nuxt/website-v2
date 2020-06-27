@@ -217,9 +217,9 @@ components/
 ```bash
 components: {
     dirs: [
-      '@/components',
+      '~/components',
       {
-        path: '@/components/base/',
+        path: '~/components/base/',
         prefix: 'Base'
       }
     ]

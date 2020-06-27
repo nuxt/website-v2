@@ -26,7 +26,7 @@
 </template>
 
 <script>
-import CaretDownIcon from '@/assets/icons/caret-down.svg?inline'
+import CaretDownIcon from '~/assets/icons/caret-down.svg?inline'
 
 const Modes = Object.freeze({
   SLIM: 'slim',

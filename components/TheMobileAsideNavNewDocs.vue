@@ -58,7 +58,7 @@
 import slugify from 'slugify'
 
 import ListIcon from '~/assets/images/list.svg?inline'
-import TimesIcon from '@/assets/icons/times.svg?inline'
+import TimesIcon from '~/assets/icons/times.svg?inline'
 
 export default {
   components: {

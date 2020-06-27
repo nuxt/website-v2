@@ -57,11 +57,11 @@
 </template>
 
 <script>
-import AngleDoubleRightIcon from '@/assets/icons/angle-double-right.svg?inline'
-import InboxInIcon from '@/assets/icons/inbox-in.svg?inline'
-import CommentsIcon from '@/assets/icons/comments.svg?inline'
-import TechnicalSupportIllustration from '@/assets/illustrations/technical-support.svg?inline'
-import SupportIllustration from '@/assets/illustrations/support.svg?inline'
+import AngleDoubleRightIcon from '~/assets/icons/angle-double-right.svg?inline'
+import InboxInIcon from '~/assets/icons/inbox-in.svg?inline'
+import CommentsIcon from '~/assets/icons/comments.svg?inline'
+import TechnicalSupportIllustration from '~/assets/illustrations/technical-support.svg?inline'
+import SupportIllustration from '~/assets/illustrations/support.svg?inline'
 
 export default {
   components: {

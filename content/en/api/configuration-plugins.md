@@ -41,7 +41,7 @@ UI framework example (`nuxt.config.js`):
 
 ```js
 export default {
-  plugins: ['@/plugins/ant-design-vue']
+  plugins: ['~/plugins/ant-design-vue']
 }
 ```
 

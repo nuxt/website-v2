@@ -89,9 +89,9 @@ export default {
     // Load a Node.js module directly (here it's a Sass file)
     'bulma',
     // CSS file in the project
-    '@/assets/css/main.css',
+    '~/assets/css/main.css',
     // SCSS file in the project
-    '@/assets/css/main.scss'
+    '~/assets/css/main.scss'
   ]
 }
 ```
@@ -170,11 +170,11 @@ For example, we have this file tree:
 ----| index.vue
 ```
 
-If you use `url('@assets/image.png')` in your CSS, it will be translated  into  `require('@/assets/image.png')`.
+If you use `url('~assets/image.png')` in your CSS, it will be translated  into  `require('~/assets/image.png')`.
 
 <base-alert>
 
-The `@/` alias won't be resolved correctly in your CSS files. You must use `@assets` (**without a slash**) in `url` CSS references, i.e. `background: url("@assets/banner.svg")`
+The `~/` alias won't be resolved correctly in your CSS files. You must use `~assets` (**without a slash**) in `url` CSS references, i.e. `background: url("~assets/banner.svg")`
 
 </base-alert>
 
@@ -189,7 +189,7 @@ If you reference that image in your `pages/index.vue`:
 It will be compiled into:
 
 ```js
-createElement('img', { attrs: { src: require('@/assets/image.png') } })
+createElement('img', { attrs: { src: require('~/assets/image.png') } })
 ```
 
 Because `.png` is not a JavaScript file, Nuxt.js configures webpack to use [file-loader](https://github.com/webpack/file-loader) and [url-loader](https://github.com/webpack/url-loader) to handle them for you.

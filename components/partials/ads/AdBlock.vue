@@ -15,7 +15,7 @@
 </template>
 
 <script>
-import BlockedIcon from '@/assets/images/blocked.svg?inline'
+import BlockedIcon from '~/assets/images/blocked.svg?inline'
 
 export default {
   components: {

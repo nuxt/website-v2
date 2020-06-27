@@ -70,8 +70,8 @@
 </template>
 
 <script>
-import GlobeIcon from '@/assets/icons/globe.svg?inline'
-import SmallNuxtLogo from '@/assets/images/logo-small.svg?inline'
+import GlobeIcon from '~/assets/icons/globe.svg?inline'
+import SmallNuxtLogo from '~/assets/images/logo-small.svg?inline'
 
 export default {
   components: {

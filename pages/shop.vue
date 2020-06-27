@@ -35,7 +35,7 @@
 </template>
 
 <script>
-import ShopIllustration from '@/assets/illustrations/shop.svg?inline'
+import ShopIllustration from '~/assets/illustrations/shop.svg?inline'
 
 export default {
   components: {

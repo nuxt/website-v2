@@ -53,7 +53,7 @@
 </template>
 
 <script>
-import NuxtLogo from '@/assets/images/logo.svg?inline'
+import NuxtLogo from '~/assets/images/logo.svg?inline'
 
 export default {
   components: {

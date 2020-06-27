@@ -25,7 +25,7 @@
 </template>
 
 <script>
-import DesignIllustration from '@/assets/illustrations/design.svg?inline'
+import DesignIllustration from '~/assets/illustrations/design.svg?inline'
 
 export default {
   components: {

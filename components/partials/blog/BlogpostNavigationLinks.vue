@@ -20,8 +20,8 @@
 </template>
 
 <script>
-import ArrowLeftIcon from '@/assets/icons/arrow-left.svg?inline'
-import ArrowRightIcon from '@/assets/icons/arrow-right.svg?inline'
+import ArrowLeftIcon from '~/assets/icons/arrow-left.svg?inline'
+import ArrowRightIcon from '~/assets/icons/arrow-right.svg?inline'
 
 export default {
   name: 'BlogpostNavigationLinks',

@@ -87,12 +87,12 @@
 </template>
 
 <script>
-import OpenCollectiveIcon from '@/assets/icons/open-collective.svg?inline'
-import BtcLogo from '@/assets/icons/btc.svg?inline'
-import BchLogo from '@/assets/icons/bch.svg?inline'
-import EthLogo from '@/assets/icons/eth.svg?inline'
-import LtcLogo from '@/assets/icons/ltc.svg?inline'
-import SponsorIllustration from '@/assets/illustrations/sponsor.svg?inline'
+import OpenCollectiveIcon from '~/assets/icons/open-collective.svg?inline'
+import BtcLogo from '~/assets/icons/btc.svg?inline'
+import BchLogo from '~/assets/icons/bch.svg?inline'
+import EthLogo from '~/assets/icons/eth.svg?inline'
+import LtcLogo from '~/assets/icons/ltc.svg?inline'
+import SponsorIllustration from '~/assets/illustrations/sponsor.svg?inline'
 
 export default {
   components: {

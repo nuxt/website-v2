@@ -117,7 +117,7 @@ module.exports = {
     '@nuxtjs/axios',
   ],
   plugins: [
-    '@/plugins/axios.js'
+    '~/plugins/axios.js'
   ]
 }
 ```
@@ -179,7 +179,7 @@ Then we add the file path inside the `plugins` key of our `nuxt.config.js`. T
 
 ```js
 export default {
-  plugins: ['@/plugins/vue-tooltip.js']
+  plugins: ['~/plugins/vue-tooltip.js']
 }
 ```
 

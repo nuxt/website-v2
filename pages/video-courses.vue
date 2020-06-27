@@ -38,9 +38,9 @@
 </template>
 
 <script>
-import ThemesIllustration from '@/assets/illustrations/themes.svg?inline'
-import PlayCircleIcon from '@/assets/icons/play-circle.svg?inline'
-import MeteorIcon from '@/assets/icons/meteor.svg?inline'
+import ThemesIllustration from '~/assets/illustrations/themes.svg?inline'
+import PlayCircleIcon from '~/assets/icons/play-circle.svg?inline'
+import MeteorIcon from '~/assets/icons/meteor.svg?inline'
 
 export default {
   components: {

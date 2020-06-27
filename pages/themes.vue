@@ -36,7 +36,7 @@
 </template>
 
 <script>
-import ThemesIllustration from '@/assets/illustrations/themes.svg?inline'
+import ThemesIllustration from '~/assets/illustrations/themes.svg?inline'
 
 export default {
   components: {

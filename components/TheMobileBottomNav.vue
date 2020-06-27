@@ -41,12 +41,12 @@
 </template>
 
 <script>
-import ExamplesIcon from '@/assets/icons/code.svg?inline'
-import GuideIcon from '@/assets/icons/books.svg?inline'
-import ApiIcon from '@/assets/icons/list.svg?inline'
-import FaqIcon from '@/assets/icons/faq.svg?inline'
-import ResourcesIcon from '@/assets/icons/resources.svg?inline'
-import BlogIcon from '@/assets/icons/blog.svg?inline'
+import ExamplesIcon from '~/assets/icons/code.svg?inline'
+import GuideIcon from '~/assets/icons/books.svg?inline'
+import ApiIcon from '~/assets/icons/list.svg?inline'
+import FaqIcon from '~/assets/icons/faq.svg?inline'
+import ResourcesIcon from '~/assets/icons/resources.svg?inline'
+import BlogIcon from '~/assets/icons/blog.svg?inline'
 
 export default {
   components: {

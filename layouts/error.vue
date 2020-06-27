@@ -27,8 +27,8 @@
 </template>
 
 <script>
-import MountainsGlobeIllustration from '@/components/animated-svg/montains-globe'
-import LostImageIllustration from '@/assets/illustrations/404.svg?inline'
+import MountainsGlobeIllustration from '~/components/animated-svg/montains-globe'
+import LostImageIllustration from '~/assets/illustrations/404.svg?inline'
 
 export default {
   components: {

@@ -31,9 +31,9 @@
 </template>
 
 <script>
-import ThemesIllustration from '@/assets/illustrations/themes.svg?inline'
-import ThemingIllustration from '@/assets/illustrations/theming.svg?inline'
-import VideosIllustration from '@/assets/illustrations/videos.svg?inline'
+import ThemesIllustration from '~/assets/illustrations/themes.svg?inline'
+import ThemingIllustration from '~/assets/illustrations/theming.svg?inline'
+import VideosIllustration from '~/assets/illustrations/videos.svg?inline'
 
 export default {
   components: {

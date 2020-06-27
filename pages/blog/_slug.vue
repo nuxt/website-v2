@@ -16,7 +16,7 @@
 <script>
 import { mapState } from 'vuex'
 
-import ArrowLeftIcon from '@/assets/icons/arrow-left.svg?inline'
+import ArrowLeftIcon from '~/assets/icons/arrow-left.svg?inline'
 
 export default {
   name: 'PageSlug',

@@ -29,8 +29,8 @@
 </template>
 
 <script>
-import SearchIcon from '@/assets/icons/search.svg?inline'
-import TimesIcon from '@/assets/icons/times.svg?inline'
+import SearchIcon from '~/assets/icons/search.svg?inline'
+import TimesIcon from '~/assets/icons/times.svg?inline'
 
 export default {
   components: {

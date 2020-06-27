@@ -69,7 +69,7 @@ By default, Nuxt.js is configured to cover most use cases. This default configur
 
 ## Asynchronous Configuration
 
-Although it is better to use the normal configuration (export default {}) you can have an async configuration by exporting an async function that return the config object.
+Although it is better to use the normal configuration `export default {}` you can have an async configuration by exporting an async function that return the config object.
 
 `nuxt.config.js`
 

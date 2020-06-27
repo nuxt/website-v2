@@ -23,18 +23,9 @@
           <span class="inline-block px-2 leading-loose">{{ contributor.author }}</span>
         </a>
       </div>
-      <p
-        v-if="docLink"
-        class="text-light-onSurfaceSecondary dark:text-dark-onSurfaceSecondary pt-1 mb-8 transition-colors duration-300 ease-linear"
-      >
-        {{ $t('guide.contribute') }}
-        <a
-          :href="docLink"
-          target="_blank"
-          rel="noopener"
-          class="text-primary-base hover:underline"
-        >{{ $t('guide.edit_on_github') }}</a>
-      </p>
+      <BaseAlert type="info">{{ $t('contribute.msg1') }}
+        <NuxtLink class="text-nuxt-lightgreen" to="/guides/get-started/installation">{{ $t('contribute.link') }}</NuxtLink>
+      </BaseAlert>
       <CarbonAdsText :key="$route.path" />
     </div>
   </div>

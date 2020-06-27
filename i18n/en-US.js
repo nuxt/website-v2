@@ -137,5 +137,14 @@ module.exports = {
   },
   quiz: {
     title: 'Quiz'
+  },
+  tryNewDocs: {
+    msg1: 'Want to take a look at our new docs? Our ',
+    link: 'new docs',
+    msg2: 'are now in beta. Have fun!'
+  },
+  contribute: {
+    msg1: 'Contribution for this page is now closed. If you would like to contribute please check out our',
+    link: 'new docs'
   }
 }

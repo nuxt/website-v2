@@ -23,6 +23,7 @@
         </div>
       </article>
       <article v-else>
+        <BaseAlert type="info">{{ $t('tryNewDocs.msg1') }}<NuxtLink class="text-nuxt-lightgreen" to="/guides/get-started/installation">{{ $t('tryNewDocs.link') }}</NuxtLink> {{ $t('tryNewDocs.msg2') }}</BaseAlert>
         <h1
           class="text-light-onSurfacePrimary dark:text-dark-onSurfacePrimary transition-colors duration-300 ease-linear"
         >{{ page.title }}</h1>

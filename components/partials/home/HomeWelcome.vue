@@ -15,6 +15,9 @@
               {{ buttonWordings.github_stars }}
             </AppButton>
           </div>
+          <div class="flex flex-col sm:block text-light-onSurfaceSecondary dark:text-dark-onSurfaceSecondary">
+            <a href="#subscribe-to-newsletter" class="hover:text-light-onSurfacePrimary dark:hover:text-dark-onSurfacePrimary">{{ wordings.welcome.attrs.newsletter_cta }}</a>
+          </div>
         </div>
         <figure class="hidden lg:block lg:w-5/12">
           <AppMedia src="https://player.vimeo.com/video/311756540" class="mb-4" />

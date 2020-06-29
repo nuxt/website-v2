@@ -47,7 +47,7 @@ export default {
       } catch (err) {
         this.pending = false
         if (err.response) {
-          const { code } = await err.response.json()
+          const { code } = await err.response.data
           if (code === 'member-exists') {
             this.error = 'You are already registered.'
             return

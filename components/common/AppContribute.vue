@@ -38,6 +38,7 @@ export default {
       return '/' + this.$route.params.section
     },
     list () {
+      if (!this.$route.params.section) { return [] }
       return this.$store.state.menu[this.$route.params.section].reduce((links, section) => links.concat(section.links), [])
     },
     lastPathPart () {

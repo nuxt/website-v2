@@ -10,6 +10,7 @@
       </NuxtLink>
       <BlogpostItem :post="post" />
       <BlogpostNavigationLinks :links="post.links" />
+      <AppContribute :doc-link="docLink" />
     </div>
   </div>
 </template>

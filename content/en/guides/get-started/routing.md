@@ -4,7 +4,7 @@ description: Most websites have more than just one page. For example a home page
 position: 2
 category: Get Started
 categoryPosition: 1
-csb_link: https://codesandbox.io/embed/github/nuxt-academy/guides-examples/tree/master/get_started/02_routing?fontsize=14&hidenavigation=1&theme=dark
+csb_link: https://codesandbox.io/embed/github/nuxt-academy/guides-examples/tree/master/01_get_started/02_routing?fontsize=14&hidenavigation=1&theme=dark
 ---
 ## Automatic Routes
 
@@ -37,6 +37,8 @@ The `<NuxtLink>` component should be used for all internal links. That means for
   </main>
 </template>
 ```
-<code-sandbox :src="csb_link"></code-sandbox>
+<app-modal>
+  <code-sandbox  :src="csb_link"></code-sandbox>
+</app-modal>
 
 ➡️ Learn more about the [NuxtLink component](/guides/features/nuxt-components#the-nuxtlink-component)

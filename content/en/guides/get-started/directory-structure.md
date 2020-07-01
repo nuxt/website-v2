@@ -51,9 +51,6 @@ The `static` directory is directly mapped to the server root and contains file
 
 ➡️ Learn more about the [static directory](/guides/directory-structure/static)
 
-<app-modal>
-          <code-sandbox  :src="csb_link"></code-sandbox>
-</app-modal>
 
 ### The nuxt.config.js file
 
@@ -66,7 +63,7 @@ The `nuxt.config.js` file is the single point of configuration for Nuxt.js. If
 The `package.json` file contains all the dependencies and scripts for your application.
 
 <app-modal>
-          <code-sandbox  :src="csb_link"></code-sandbox>
+  <code-sandbox  :src="csb_link"></code-sandbox>
 </app-modal>
 
 ## More about the project structures

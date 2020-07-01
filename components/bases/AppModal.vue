@@ -1,24 +1,23 @@
 <template>
-  <div keep-alive>
+  <div>
     <button id="show-modal"
             class="no-underline mt-4 font-medium text-sm px-4 py-2 shadow uppercase rounded hover:shadow-md sm:mr-4 py-3 px-6 text-base mb-4 primary bg-primary-base text-white hover:bg-primary-light"
             @click="showModal = true"
     >{{ $t('codeSandbox.open') }}</button>
     <transition name="modal">
-      <div v-if="showModal" class="modal-mask">
-        <div class="modal-wrapper">
-          <div class="modal-container flex">
-
+      <div v-if="showModal" class="modal-mask" keep-alive>
+        <div class="modal-wrapper" >
+          <div class="modal-container flex flex-col">
+            <div class="w-full flex justify-end">
+              <button class="mb-4 w-auto" @click="showModal = false">
+                <XmarkCircleIcon class="svg" />
+              </button>
+            </div>
             <div class="modal-body flex-1">
               <slot>
               </slot>
             </div>
 
-            <div class="close">
-              <button class="ml-4 w-full" @click="showModal = false">
-                <CloseIcon />
-              </button>
-            </div>
           </div>
         </div>
       </div>
@@ -28,28 +27,37 @@
 </template>
 
 <script>
-import CloseIcon from '~/assets/icons/times.svg?inline'
+import XmarkCircleIcon from '~/assets/icons/xmark-circle.svg?inline'
 
 export default {
   components: {
-    CloseIcon
+    XmarkCircleIcon
   },
   data () {
     return {
       showModal: false
     }
   },
-  head () {
-    return {
-      bodyAttrs: {
-        class: this.showModal ? 'overflow-y-scroll' : 'do-nothing'
-      }
+  computed: {
+    open () {
+      return this.showModal
     }
+  },
+  head () {
+    return this.open ? {
+      bodyAttrs: {
+        class: ['overflow-hidden']
+      }
+    } : undefined
   }
 }
 </script>
 
 <style>
+
+.svg {
+  width: 20px;
+}
 
 .modal-mask {
   position: fixed;
@@ -58,26 +66,19 @@ export default {
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.5);
-  display: table;
-  transition: opacity 0.3s ease;
-}
-
-.modal-wrapper {
-  display: table-cell;
-  vertical-align: middle;
+  background-color: rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(18px)
 }
 
 .modal-container {
-  width:100vw;
-  height: 100vh;
-  margin: 0px auto;
+  width: calc(100vw - 80px);
+  height: calc(100vh - 80px);
+  margin: 40px 40px;
   padding: 20px 30px;
   background-color: #fff;
-  border-radius: 2px;
+  border-radius: 8px;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.33);
   transition: all 0.3s ease;
-  font-family: Helvetica, Arial, sans-serif;
 }
 
 .modal-body {

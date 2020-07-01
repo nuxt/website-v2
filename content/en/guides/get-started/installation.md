@@ -4,7 +4,7 @@ description: There is not much you need in order to get started with Nuxt.js. Be
 position: 1
 category: Get Started
 categoryPosition: 1
-csb_link: https://codesandbox.io/embed/github/nuxt-academy/guides-examples/tree/master/get_started/01_installation?fontsize=14&hidenavigation=1&theme=dark
+csb_link: https://codesandbox.io/embed/github/nuxt-academy/guides-examples/tree/master/01_get_started/01_installation?fontsize=14&hidenavigation=1&theme=dark
 ---
 
 ## Prerequisites
@@ -170,8 +170,6 @@ When launching Nuxt.js in development mode, it will listen for file changes in m
 
 </base-alert>
 
-<code-sandbox :src="csb_link"></code-sandbox>
-
 ### 🍄 Bonus step:
 
 Create a page named `fun.vue` in the `pages` directory. 
@@ -185,6 +183,10 @@ Then, go to your browser and see your new page on **[http://localhost:3000/fun](
 Create a directory name `more-fun` and put an `index.vue` file inside. This will give the same result as creating a `more-fun.vue` file
 
 </base-alert>
+
+<app-modal>
+  <code-sandbox  :src="csb_link"></code-sandbox>
+</app-modal>
 
 ## Using create-nuxt-app
 

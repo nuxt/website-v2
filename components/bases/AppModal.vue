@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div keep-alive>
     <button id="show-modal"
             class="no-underline mt-4 font-medium text-sm px-4 py-2 shadow uppercase rounded hover:shadow-md sm:mr-4 py-3 px-6 text-base mb-4 primary bg-primary-base text-white hover:bg-primary-light"
             @click="showModal = true"
@@ -9,22 +9,15 @@
         <div class="modal-wrapper">
           <div class="modal-container flex">
 
-            <div class="modal-header">
-              <slot name="header">
-              </slot>
-            </div>
-
             <div class="modal-body flex-1">
               <slot>
               </slot>
             </div>
 
-            <div class="modal-footer">
-              <slot name="footer">
-                <button class="modal-default-button" @click="showModal = false">
-                  X
-                </button>
-              </slot>
+            <div class="close">
+              <button class="ml-4 w-full" @click="showModal = false">
+                <CloseIcon />
+              </button>
             </div>
           </div>
         </div>
@@ -35,10 +28,22 @@
 </template>
 
 <script>
+import CloseIcon from '~/assets/icons/times.svg?inline'
+
 export default {
+  components: {
+    CloseIcon
+  },
   data () {
     return {
       showModal: false
+    }
+  },
+  head () {
+    return {
+      bodyAttrs: {
+        class: this.showModal ? 'overflow-y-scroll' : 'do-nothing'
+      }
     }
   }
 }
@@ -75,28 +80,11 @@ export default {
   font-family: Helvetica, Arial, sans-serif;
 }
 
-.modal-header h3 {
-  margin-top: 0;
-  color: #42b983;
-}
-
 .modal-body {
   margin: 0;
   display:flex;
-}
 
-.modal-default-button {
-  float: right;
 }
-
-/*
- * The following styles are auto-applied to elements with
- * transition="modal" when their visibility is toggled
- * by Vue.js.
- *
- * You can easily play with the modal transition by editing
- * these styles.
- */
 
 .modal-enter {
   opacity: 0;

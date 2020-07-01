@@ -146,5 +146,9 @@ module.exports = {
   contribute: {
     msg1: 'Contribution for this page is now closed. If you would like to contribute please check out our',
     link: 'new docs'
+  },
+  codeSandbox: {
+    open: 'Open CodeSandbox'
+
   }
 }

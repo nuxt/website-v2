@@ -4,7 +4,7 @@ description: The default Nuxt.js application structure is intended to provide a 
 position: 3
 category: Get Started
 categoryPosition: 1
-csb_link: https://codesandbox.io/embed/github/nuxt-academy/guides-examples/tree/master/get_started/03_directory_structure?fontsize=14&hidenavigation=1&theme=dark
+csb_link: https://codesandbox.io/embed/github/nuxt-academy/guides-examples/tree/master/01_get_started/03_directory_structure?fontsize=14&hidenavigation=1&theme=dark
 ---
 The default Nuxt.js application structure is intended to provide a great starting point for both small and large applications. You are free to organize your application however you like and can create other directories as and when you need them.
 
@@ -51,6 +51,10 @@ The `static` directory is directly mapped to the server root and contains file
 
 ➡️ Learn more about the [static directory](/guides/directory-structure/static)
 
+<app-modal>
+          <code-sandbox  :src="csb_link"></code-sandbox>
+</app-modal>
+
 ### The nuxt.config.js file
 
 The `nuxt.config.js` file is the single point of configuration for Nuxt.js. If you want to add modules or override default settings, this is the place to apply the changes.
@@ -61,11 +65,9 @@ The `nuxt.config.js` file is the single point of configuration for Nuxt.js. If
 
 The `package.json` file contains all the dependencies and scripts for your application.
 
-<button id="show-modal" @click="showModal = true">Show Modal</button>
-
-<AppModal v-if="showModal" @close="showModal = false">
-          <code-sandbox slot="body" :src="csb_link"></code-sandbox>
-</AppModal>
+<app-modal>
+          <code-sandbox  :src="csb_link"></code-sandbox>
+</app-modal>
 
 ## More about the project structures
 

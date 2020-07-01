@@ -1,39 +1,51 @@
 <template>
-  <transition name="modal">
-    <div class="modal-mask">
-      <div class="modal-wrapper">
-        <div class="modal-container">
+  <div>
+    <button id="show-modal"
+            class="no-underline mt-4 font-medium text-sm px-4 py-2 shadow uppercase rounded hover:shadow-md sm:mr-4 py-3 px-6 text-base mb-4 primary bg-primary-base text-white hover:bg-primary-light"
+            @click="showModal = true"
+    >{{ $t('codeSandbox.open') }}</button>
+    <transition name="modal">
+      <div v-if="showModal" class="modal-mask">
+        <div class="modal-wrapper">
+          <div class="modal-container flex">
 
-          <div class="modal-header">
-            <slot name="header">
-            </slot>
-          </div>
+            <div class="modal-header">
+              <slot name="header">
+              </slot>
+            </div>
 
-          <div class="modal-body">
-            <slot name="body">
-            </slot>
-          </div>
+            <div class="modal-body flex-1">
+              <slot>
+              </slot>
+            </div>
 
-          <div class="modal-footer">
-            <slot name="footer">
-              <button class="modal-default-button" @click="$emit('close')">
-                Close
-              </button>
-            </slot>
+            <div class="modal-footer">
+              <slot name="footer">
+                <button class="modal-default-button" @click="showModal = false">
+                  X
+                </button>
+              </slot>
+            </div>
           </div>
         </div>
       </div>
-    </div>
-  </transition>
+    </transition>
+  </div>
+
 </template>
 
 <script>
 export default {
-
+  data () {
+    return {
+      showModal: false
+    }
+  }
 }
 </script>
 
-<style scoped>
+<style>
+
 .modal-mask {
   position: fixed;
   z-index: 9998;
@@ -52,7 +64,8 @@ export default {
 }
 
 .modal-container {
-  width: 300px;
+  width:100vw;
+  height: 100vh;
   margin: 0px auto;
   padding: 20px 30px;
   background-color: #fff;
@@ -68,7 +81,8 @@ export default {
 }
 
 .modal-body {
-  margin: 20px 0;
+  margin: 0;
+  display:flex;
 }
 
 .modal-default-button {

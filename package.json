@@ -5,6 +5,7 @@
   "main": "index.js",
   "dependencies": {
     "@nuxt/http": "^0.5.5",
+    "@nuxt/static": "^0.0.9",
     "@nuxtjs/pwa": "^3.0.0-beta.20",
     "@nuxtjs/tailwindcss": "2.0.0",
     "@snackbar/core": "^1.7.0",
@@ -51,7 +52,7 @@
     "build": "nuxt build",
     "build:check": "nuxt build --analyze",
     "start": "nuxt start",
-    "generate": "nuxt build && nuxt export",
+    "generate": "nuxt-static",
     "serve": "nuxt serve",
     "lint": "eslint --ext .js,.vue --ignore-path .gitignore --ignore-pattern modules/ --ignore-pattern plugins/ga.js .",
     "precommit": "npm run lint"

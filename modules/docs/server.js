@@ -7,11 +7,12 @@ const fm = require('front-matter')
 const fetch = require('node-fetch')
 const glob = promisify(require('glob'))
 const chokidar = require('chokidar')
-const degit = require('degit')
+const download = promisify(require('download-git-repo'))
 const logger = require('consola').withScope('docs/server')
 const { marked, partialRenderer } = require('./renderer')
 const readFile = promisify(fs.readFile)
 const readingTime = require('reading-time')
+const del = require('del')
 
 class DocsServer {
   constructor (options) {
@@ -473,10 +474,11 @@ class DocsServer {
   // Clone repository
   async cloneRepo () {
     if (fs.existsSync(this.docsDir)) {
-      return
+      logger.info(`Removing ${this.docsDir}`)
+      await del(this.docsDir)
     }
     logger.info(`Cloning ${this.repo} into ${this.docsDir}`)
-    await degit(this.repo, { force: true, cache: false }).clone(this.docsDir)
+    await download(this.repo, this.docsDir)
   }
 
   // slugify path

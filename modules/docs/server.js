@@ -473,7 +473,7 @@ class DocsServer {
 
   // Clone repository
   async cloneRepo () {
-    if (fs.existsSync(this.docsDir)) {
+    if (fs.existsSync(this.docsDir) && !this.watch) {
       logger.info(`Removing ${this.docsDir}`)
       await del(this.docsDir)
     }

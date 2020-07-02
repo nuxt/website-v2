@@ -69,6 +69,9 @@ export default {
   loading: { color: '#41B883' },
   generate: {
     fallback: '404.html', // for Netlify
-    interval: 10
+    interval: 50
+  },
+  static: {
+    ignore: ['docs']
   }
 }

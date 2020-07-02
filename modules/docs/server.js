@@ -473,7 +473,14 @@ class DocsServer {
 
   // Clone repository
   async cloneRepo () {
-    if (fs.existsSync(this.docsDir) && !this.watch) {
+    // don't clone in dev
+    if (this.watch) {
+      if (!fs.existsSync(this.docsDir)) {
+        logger.info(`Please clone docs repository with: git clone git@github.com:nuxt/docs.git`)
+      }
+      return
+    }
+    if (fs.existsSync(this.docsDir)) {
       logger.info(`Removing ${this.docsDir}`)
       await del(this.docsDir)
     }

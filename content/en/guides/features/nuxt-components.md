@@ -4,6 +4,8 @@ description: Nuxt.js comes with a few important components included out of the b
 position: 9
 category: Features
 categoryPosition: 3
+csb_link_nuxt_link: https://codesandbox.io/embed/github/nuxt-academy/guides-examples/tree/master/03_features/09_components_nuxt-link?fontsize=14&hidenavigation=1&theme=dark
+csb_link_nuxt: https://codesandbox.io/embed/github/nuxt-academy/guides-examples/tree/master/03_features/09_components_nuxt?fontsize=14&hidenavigation=1&theme=dark
 questions:
   - question: What component do you use to display your page components?
     answers:
@@ -218,6 +220,10 @@ Both, the `<Nuxt>` component and the `<NuxtChild/>` component, accept `keep-al
 
 To see an example, take a look at the [nested-routes example](https://nuxtjs.org/examples/nested-routes).
 
+<app-modal>
+  <code-sandbox  :src="csb_link_nuxt"></code-sandbox>
+</app-modal>
+
 ## The NuxtLink Component
 
 To navigate between pages of your app, you should use the  `<NuxtLink>` component. This component is included with Nuxt.js and therefore you don't have to import it like you do with other components. It is similar to the HTML `<a>` tag except that instead of using a `href="/about"` you use `to="/about"`. If you've used `vue-router` before, you can think of `<NuxtLink>` as a replacement of `<RouterLink>`
@@ -372,6 +378,10 @@ Then you can add the styles for that class.
 In this example we have used the class `nuxt-link-prefetched` but you can name it anything you like
 
 </base-alert>
+
+<app-modal>
+  <code-sandbox  :src="csb_link_nuxt_link"></code-sandbox>
+</app-modal>
 
 ## The client-only Component
 

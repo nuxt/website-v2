@@ -8,7 +8,10 @@
         <ArrowLeftIcon class="h-5 mr-2" />back to blog list
       </NuxtLink>
       <BlogpostItem :post="post" />
+
       <BlogpostNavigationLinks :prev="prev" :next="next" />
+      <AppContribute :doc-link="docLink" :contributors="contributors" />
+
     </div>
   </div>
 </template>
@@ -32,8 +35,12 @@ export default {
   async asyncData ({ $content, store, app, params, error, router }) {
     const { slug } = params
     let post
+    let contributors
+    const path = `/${app.i18n.locale}/blog/${slug}`
+
     try {
       post = await $content(app.i18n.locale, 'blog', slug).fetch()
+      contributors = (await fetch('https://contributors-api.onrender.com' + path).then(res => res.json())).map(({ author }) => ({ author }))
     } catch (e) {
       return error({ statusCode: 404, message: 'Page not found' })
     }
@@ -47,11 +54,16 @@ export default {
     return {
       post,
       slug,
+      contributors,
       prev,
       next
     }
   },
+
   computed: {
+    docLink () {
+      return `https://github.com/nuxt/nuxtjs.org/blob/master/content${this.path}.md`
+    },
     ...mapState({
       host: state => state.host,
       isDev: state => state.isDev,

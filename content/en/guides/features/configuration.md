@@ -4,6 +4,8 @@ description: By default, Nuxt.js is configured to cover most use cases. This def
 position: 7
 category: Features
 categoryPosition: 3
+csb_link_host_port: https://codesandbox.io/embed/github/nuxt-academy/guides-examples/tree/master/03_features/07_configuration_host_port?fontsize=14&hidenavigation=1&theme=dark
+csb_link_pre-processors: https://codesandbox.io/embed/github/nuxt-academy/guides-examples/tree/master/03_features/07_configuration_pre-processors?fontsize=14&hidenavigation=1&theme=dark
 questions:
   - question: You can use the axios-module in the nuxt.config.js?
     answers:
@@ -141,6 +143,10 @@ or create a script in your package.json
 }
 ```
 
+<app-modal>
+  <code-sandbox  :src="csb_link_host_port"></code-sandbox>
+</app-modal>
+
 ## Pre-processors
 
 Thanks to [Vue Loader](http://vue-loader.vuejs.org/en/configurations/pre-processors.html), you can use any kind of pre-processor for your  `<template>` or `<style>`: use the `lang` attribute.
@@ -210,6 +216,10 @@ export default {
 Nuxt.js will automatically guess the file type by its extension and use the appropriate pre-processor loader for webpack. You will still need to install the required loader if you need to use them.
 
 </base-alert>
+
+<app-modal>
+  <code-sandbox  :src="csb_link_pre-processors"></code-sandbox>
+</app-modal>
 
 ## JSX
 

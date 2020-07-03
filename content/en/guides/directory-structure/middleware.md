@@ -4,6 +4,9 @@ description: The `middleware` directory contains your application middleware. 
 position: 8
 category: Directory Structure
 categoryPosition: 4
+csb_link_anonymous: https://codesandbox.io/embed/github/nuxt-academy/guides-examples/tree/master/04_directory_structure/09_middleware_anonymous?fontsize=14&hidenavigation=1&theme=dark
+csb_link_named: https://codesandbox.io/embed/github/nuxt-academy/guides-examples/tree/master/04_directory_structure/09_middleware_named?fontsize=14&hidenavigation=1&theme=dark
+csb_link_router: https://codesandbox.io/embed/github/nuxt-academy/guides-examples/tree/master/04_directory_structure/09_middleware_router?fontsize=14&hidenavigation=1&theme=dark
 questions:
   - question: Middleware lets you define functions that run
     answers:
@@ -129,6 +132,10 @@ export default {
 }
 ```
 
+<app-modal>
+  <code-sandbox  :src="csb_link_router"></code-sandbox>
+</app-modal>
+
 ## Named middleware
 
 You can create named middleware by creating a file inside the  `middleware/` directory, the file name will be the middleware name.
@@ -157,6 +164,9 @@ export default {
 }
 </script>
 ```
+<app-modal>
+  <code-sandbox  :src="csb_link_named"></code-sandbox>
+</app-modal>
 
 ## Anonymous middleware
 
@@ -180,6 +190,8 @@ export default {
 }
 </script>
 ```
-
+<app-modal>
+  <code-sandbox  :src="csb_link_anonymous"></code-sandbox>
+</app-modal>
 
 <quiz :questions="questions"></quiz>

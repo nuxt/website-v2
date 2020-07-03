@@ -127,12 +127,11 @@ module.exports = {
   },
   blog: {
     title: 'NuxtJS Blog',
-    description: 'Discover articles from the core team and contributors about NuxtJS, tips and tricks included!'
+    description: 'Discover articles from the core team and contributors about NuxtJS, tips and tricks included!',
+    contribute: 'Caught a mistake or want to contribute to this blog post?'
   },
   guide: {
     release_notes: 'Release Notes',
-    contribute: 'Caught a mistake or want to contribute to the documentation?',
-    edit_on_github: 'Edit this page on GitHub!',
     toc_title: 'On this page'
   },
   quiz: {
@@ -144,6 +143,10 @@ module.exports = {
     msg2: 'are now in beta. Have fun!'
   },
   contribute: {
+    title: 'Contributors',
+    docs: 'Caught a mistake or want to contribute to the documentation?',
+    blog: 'Caught a mistake or want to contribute to this blog post?',
+    edit_on_github: 'Edit this page on GitHub!',
     msg1: 'Contribution for this page is now closed. If you would like to contribute please check out our',
     link: 'new docs'
   },

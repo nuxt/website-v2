@@ -4,6 +4,7 @@ description: In Nuxt.js we have 2 ways of getting data from an api. We can use t
 position: 4
 category: Features
 categoryPosition: 3
+csb_link: https://codesandbox.io/embed/github/nuxt-academy/guides-examples/tree/master/03_features/04_data_fetching?fontsize=14&hidenavigation=1&theme=dark
 questions:
   - question: Where can you use the Nuxt.js fetch hook?
     answers:
@@ -203,6 +204,7 @@ export default {
 
 The navigation to the same page will not call `fetch` if last `fetch` call was before 30 sec ago.
 
+
 ## Async Data
 
 Sometimes you want to fetch data and pre-render it on the server without using a store. 
@@ -303,6 +305,8 @@ The `asyncData` method is not called on query string changes by default. If 
 
 ➡️ To see the list of available [keys in context](/guides/concepts/context-helpers)
 
-
+<app-modal>
+  <code-sandbox  :src="csb_link"></code-sandbox>
+</app-modal>
 
 <quiz :questions="questions"></quiz>

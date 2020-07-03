@@ -4,6 +4,7 @@ description: The `assets` directory contains your un-compiled assets such as S
 position: 2
 category: Directory Structure
 categoryPosition: 4
+csb_link: https://codesandbox.io/embed/github/nuxt-academy/guides-examples/tree/master/04_directory_structure/02_assets?fontsize=14&hidenavigation=1&theme=dark
 videoScript: 
   - assets-video.md
 questions:
@@ -182,7 +183,7 @@ If you reference that image in your `pages/index.vue`:
 
 ```html
 <template>
-  <img src="@/assets/image.png">
+  <img src="~/assets/image.png">
 </template>
 ```
 
@@ -241,6 +242,10 @@ Will be transformed into:
 ```
 
 If you want to change the loader configurations, please use [build.extend](https://nuxtjs.org/api/configuration-build#extend).
+
+<app-modal>
+  <code-sandbox  :src="csb_link"></code-sandbox>
+</app-modal>
 
 ## Aliases
 

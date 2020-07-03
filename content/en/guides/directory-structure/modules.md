@@ -4,6 +4,7 @@ description: Nuxt.js provides a higher-order module system that makes it possibl
 position: 9
 category: Directory Structure
 categoryPosition: 4
+csb_link: https://codesandbox.io/embed/github/nuxt-academy/guides-examples/tree/master/04_directory_structure/10_modules?fontsize=14&hidenavigation=1&theme=dark
 questions:
   - question: When are modules called?
     answers:
@@ -491,6 +492,8 @@ export default {
 
 Setting this field may be necessary if your project is organized as a Yarn workspace-styled mono-repository.
 
-
+<app-modal>
+  <code-sandbox  :src="csb_link"></code-sandbox>
+</app-modal>
 
 <quiz :questions="questions"></quiz>

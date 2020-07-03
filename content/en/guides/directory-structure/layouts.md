@@ -4,6 +4,7 @@ description: Layouts are a great help when you want to change the look and feel 
 position: 7
 category: Directory Structure
 categoryPosition: 4
+csb_link: https://codesandbox.io/embed/github/nuxt-academy/guides-examples/tree/master/04_directory_structure/07_layouts?fontsize=14&hidenavigation=1&theme=dark
 questions:
   - question: You can easily rename the layouts directory without any configuration
     answers:
@@ -118,6 +119,10 @@ export default {
 }
 </script>
 ```
+
+<app-modal>
+  <code-sandbox  :src="csb_link"></code-sandbox>
+</app-modal>
 
 ## Error Page
 

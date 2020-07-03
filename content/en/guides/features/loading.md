@@ -4,6 +4,7 @@ description: Out of the box, Nuxt.js gives you its own loading progress bar comp
 position: 8
 category: Features
 categoryPosition: 3
+csb_link: https://codesandbox.io/embed/github/nuxt-academy/guides-examples/tree/master/03_features/08_loading?fontsize=14&hidenavigation=1&theme=dark
 questions:
   - question: In order for the Nuxt.js loading progress bar to work what do you have to do?
     answers:
@@ -261,6 +262,9 @@ If you need your own special indicator, a String value or Name key can also be a
 
 Nuxt's built-in [source code](https://github.com/nuxt/nuxt.js/tree/dev/packages/vue-app/template/views/loading) is also available if you need a base!
 
+<app-modal>
+  <code-sandbox  :src="csb_link"></code-sandbox>
+</app-modal>
 
 
 <quiz :questions="questions"></quiz>

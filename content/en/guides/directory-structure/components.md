@@ -4,6 +4,7 @@ description: The components directory contains your Vue.js Components. Component
 position: 3
 category: Directory Structure
 categoryPosition: 4
+csb_link: https://codesandbox.io/embed/github/nuxt-academy/guides-examples/tree/master/04_directory_structure/03_components?fontsize=14&hidenavigation=1&theme=dark
 questions:
   - question: 
     answers:
@@ -231,4 +232,9 @@ And now in your template you can use the BaseButton instead of Button without ha
 ```html
 <BaseButton />
 ```
+
+<app-modal>
+  <code-sandbox  :src="csb_link"></code-sandbox>
+</app-modal>
+
 ➡️ To learn more about the [components module](/blog/improve-your-developer-experience-with-nuxt-components)

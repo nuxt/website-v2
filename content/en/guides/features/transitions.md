@@ -4,6 +4,7 @@ description: Nuxt.js uses the `<transition>` component to let you create amazi
 position: 5
 category: Features
 categoryPosition: 3
+csb_link: https://codesandbox.io/embed/github/nuxt-academy/guides-examples/tree/master/03_features/05_transitions?fontsize=14&hidenavigation=1&theme=dark
 questions:
   - question: To define a custom transition for a specific route what key do you add to your page?
     answers:
@@ -315,6 +316,9 @@ If you do modify the page Transition name you will also have to rename the css c
 }
 ```
 
+<app-modal>
+  <code-sandbox  :src="csb_link"></code-sandbox>
+</app-modal>
 
 
 <quiz :questions="questions"></quiz>

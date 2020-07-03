@@ -4,6 +4,7 @@ description: The `dist` folder, short for *distribution* folder. It is dynamical
 position: 5
 category: Directory Structure
 categoryPosition: 4
+csb_link: https://codesandbox.io/embed/github/nuxt-academy/guides-examples/tree/master/04_directory_structure/05_dist?fontsize=14&hidenavigation=1&theme=dark
 questions:
   - question: What what commands do you generate the dist folder?
     answers:
@@ -132,6 +133,8 @@ You can also use a regex expression here to exclude pages starting or ending wit
 
 </base-alert>
 
-#
+<app-modal>
+  <code-sandbox  :src="csb_link"></code-sandbox>
+</app-modal>
 
 <quiz :questions="questions"></quiz>

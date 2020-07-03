@@ -4,6 +4,10 @@ description: The `plugins` directory contains your Javascript plugins that you
 position: 11
 category: Directory Structure
 categoryPosition: 4
+csb_link_plugins_client: https://codesandbox.io/embed/github/nuxt-academy/guides-examples/tree/master/04_directory_structure/12_plugins_client?fontsize=14&hidenavigation=1&theme=dark
+csb_link_plugins_external: https://codesandbox.io/embed/github/nuxt-academy/guides-examples/tree/master/04_directory_structure/12_plugins_external?fontsize=14&hidenavigation=1&theme=dark
+csb_link_plugins_custom: https://codesandbox.io/embed/github/nuxt-academy/guides-examples/tree/master/04_directory_structure/12_plugins_custom_plugin?fontsize=14&hidenavigation=1&theme=dark
+csb_link_plugins_vue: https://codesandbox.io/embed/github/nuxt-academy/guides-examples/tree/master/04_directory_structure/12_plugins_vue?fontsize=14&hidenavigation=1&theme=dark
 questions:
   - question: The `plugins` directory contains your Javascript plugins that you want to run 
     answers:
@@ -141,6 +145,10 @@ export default {
 </script>
 ```
 
+<app-modal>
+  <code-sandbox  :src="csb_link_plugins_external"></code-sandbox>
+</app-modal>
+
 ## Vue Plugins
 
 If we want to use Vue plugins, like [v-tooltip](https://akryum.github.io/v-tooltip) to display tooltips in our application, we need to setup the plugin before launching the app.
@@ -172,6 +180,10 @@ import VTooltip from 'v-tooltip'
 
 Vue.use(VTooltip)
 ```
+
+<app-modal>
+  <code-sandbox  :src="csb_link_plugins_vue"></code-sandbox>
+</app-modal>
 
 ## The plugins Property
 
@@ -232,6 +244,10 @@ export default {
   ]
 }
 ```
+
+<app-modal>
+  <code-sandbox  :src="csb_link_plugins_client"></code-sandbox>
+</app-modal>
 
 ## Inject in $root & context
 
@@ -302,6 +318,10 @@ export const actions = {
   }
 }
 ```
+
+<app-modal>
+  <code-sandbox  :src="csb_link_plugins_custom"></code-sandbox>
+</app-modal>
 
 ## The extendPlugins Property
 

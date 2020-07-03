@@ -4,6 +4,7 @@ description: The `pages` directory contains your Application Views and Routes.
 position: 10
 category: Directory Structure
 categoryPosition: 4
+csb_link: https://codesandbox.io/embed/github/nuxt-academy/guides-examples/tree/master/04_directory_structure/11_pages?fontsize=14&hidenavigation=1&theme=dark
 questions:
   - question: In which directory do you put your page components?
     answers:
@@ -340,6 +341,9 @@ export default {
 
 ➡️ See more on the watch query property in our [Data Fetching](/guides/features/data-fetching) chapter
 
+<app-modal>
+  <code-sandbox  :src="csb_link"></code-sandbox>
+</app-modal>
 
 
 <quiz :questions="questions"></quiz>

@@ -4,6 +4,7 @@ description: The Views section describes all you need to know to configure data 
 position: 1
 category: Concepts
 categoryPosition: 2
+csb_link: https://codesandbox.io/embed/github/nuxt-academy/guides-examples/tree/master/02_concepts/01_views?fontsize=14&hidenavigation=1&theme=dark
 questions:
   - question: What is the composition order of a Nuxt view (top-down)?
     answers:
@@ -137,6 +138,10 @@ If you don't add a layout property to your page, eg `layout: 'blog'` then the de
 
 </base-alert>
 
+<app-modal>
+  <code-sandbox  :src="csb_link"></code-sandbox>
+</app-modal>
+
 ### Error Page
 
 
@@ -208,7 +213,6 @@ One use case of using a custom app template is to add conditional CSS classes fo
 While you can add JavaScript and CSS files in the `app.html`, it is recommended to use the `nuxt.config.js` for these tasks instead!
 
 </base-alert>
-
 
 
 <quiz :questions="questions"></quiz>

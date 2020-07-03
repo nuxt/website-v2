@@ -4,6 +4,8 @@ description: The context provides *additional* and often optional information ab
 position: 2
 category: Concepts
 categoryPosition: 2
+csb_link_context: https://codesandbox.io/embed/github/nuxt-academy/guides-examples/tree/master/02_concepts/02_context_helpers-context?fontsize=14&hidenavigation=1&theme=dark
+csb_link_helpers: https://codesandbox.io/embed/github/nuxt-academy/guides-examples/tree/master/02_concepts/02_context_helpers-helpers?fontsize=14&hidenavigation=1&theme=dark
 questions:
   - question: What is the reason the context exists?
     answers:
@@ -151,6 +153,10 @@ export default {
 }
 ```
 
+<app-modal>
+  <code-sandbox  :src="csb_link_context"></code-sandbox>
+</app-modal>
+
 ## Helpers
 
 Besides the shortcuts in the context, there are also other tiny helpers present in your Nuxt.js application.
@@ -255,6 +261,8 @@ export default {
 
 In the example, `renderedOn` will evaluate to `'server'` when using server-side rendering and a user accesses the page directly. When the user would navigate to the page from another part of the application, e.g. by click on a `<NuxtLink>`, it will evaluate to client.
 
-
+<app-modal>
+  <code-sandbox  :src="csb_link_helpers"></code-sandbox>
+</app-modal>
 
 <quiz :questions="questions"></quiz>

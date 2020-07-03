@@ -62,22 +62,22 @@ export default {
   computed: {
     docLink () {
       return `https://github.com/nuxt/nuxtjs.org/blob/master/content${this.path}.md`
-    },
-    codeSandBox () {
-      return 'https://codesandbox.io'
-    },
-    codeSandBoxLink () {
-      if (!this.page.github) {
-        return ''
-      }
-      return `${this.codeSandBox}/embed/github/nuxt/nuxt.js/tree/dev/examples/${this.page.github}?autoresize=1&view=editor`
-    },
-    liveEditLink () {
-      return `${this.codeSandBox}/s/github/nuxt/nuxt.js/tree/dev/examples/${this.page.github}?from-embed`
-    },
-    downloadLink () {
-      return 'https://minhaskamal.github.io/DownGit/#/home?url=https://github.com/nuxt/nuxt.js/tree/dev/examples/' + this.page.github
     }
+    // codeSandBox () {
+    //   return 'https://codesandbox.io'
+    // },
+    // codeSandBoxLink () {
+    //   if (!this.page.github) {
+    //     return ''
+    //   }
+    //   return `${this.codeSandBox}/embed/github/nuxt/nuxt.js/tree/dev/examples/${this.page.github}?autoresize=1&view=editor`
+    // },
+    // liveEditLink () {
+    //   return `${this.codeSandBox}/s/github/nuxt/nuxt.js/tree/dev/examples/${this.page.github}?from-embed`
+    // },
+    // downloadLink () {
+    //   return 'https://minhaskamal.github.io/DownGit/#/home?url=https://github.com/nuxt/nuxt.js/tree/dev/examples/' + this.page.github
+    // }
   },
   scrollToTop: true,
   head () {

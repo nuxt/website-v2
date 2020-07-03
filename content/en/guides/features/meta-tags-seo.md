@@ -4,6 +4,7 @@ description: Nuxt.js lets you define all default `<meta>` tags for your applicat
 position: 6
 category: Features
 categoryPosition: 3
+csb_link: https://codesandbox.io/embed/github/nuxt-academy/guides-examples/tree/master/03_features/06_meta_tags_seo?fontsize=14&hidenavigation=1&theme=dark
 questions:
   - question: Where do you set the title and meta descriptions globally?
     answers:
@@ -210,6 +211,8 @@ You may want to only disable this option if you have many pages and routes.
 
 ➡️ [Resource Hints](https://nuxtjs.org/api/configuration-render#resourcehints)
 
-
+<app-modal>
+  <code-sandbox  :src="csb_link"></code-sandbox>
+</app-modal>
 
 <quiz :questions="questions"></quiz>

@@ -56,7 +56,8 @@ export default {
       slug,
       contributors,
       prev,
-      next
+      next,
+      path
     }
   },
 

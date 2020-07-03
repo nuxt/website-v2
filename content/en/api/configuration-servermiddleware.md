@@ -1,6 +1,10 @@
 ---
 title: "API: The serverMiddleware Property"
 description: Define server-side middleware.
+menu: serverMiddleware
+group: Configuration
+groupPosition: 5
+position: 27
 ---
 
 - Type: `Array`

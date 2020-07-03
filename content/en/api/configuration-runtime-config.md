@@ -1,6 +1,10 @@
 ---
 title: "API: RuntimeConfig properties"
 description: RuntimeConfig allows passing dynamic config and environment variables to the nuxt context
+menu: runtimeConfig
+group: Configuration
+groupPosition: 5
+position: 25
 ---
 
 Runtime config allows passing dynamic config and environment variables to the nuxt context.

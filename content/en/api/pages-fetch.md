@@ -1,6 +1,10 @@
 ---
 title: "API: The fetch Method"
 description: The `fetch` method is used to fill the store before rendering the page, it's like the `asyncData` method except it doesn't set the component data.
+menu: fetch
+group: Pages
+groupPosition: 2
+position: 2
 ---
 
 ## Nuxt >= 2.12

@@ -1,6 +1,10 @@
 ---
 title: "API: The target Property"
 description: Change default nuxt target
+menu: target
+group: Configuration
+groupPosition: 5
+position: 29
 ---
 
 Deployment targets for Nuxt >= v2.13:

@@ -1,6 +1,10 @@
 ---
 title: "How to Deploy on AWS w/ S3 and Cloudfront?"
 description: Static Hosting on AWS with S3 and Cloudfront
+menu: Deploy on Aws w/ S3 and Cloudfront
+group: Deployment
+groupPosition: 3
+position: 1
 ---
 
 AWS stands for Amazon Web Services.  

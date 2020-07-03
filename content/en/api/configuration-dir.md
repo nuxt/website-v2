@@ -1,6 +1,10 @@
 ---
 title: "API: The dir Property"
 description: Define the custom directories for your Nuxt.js application
+menu: dir
+group: Configuration
+groupPosition: 5
+position: 7
 ---
 
 - Type: `Object`

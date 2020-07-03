@@ -1,6 +1,10 @@
 ---
 title: How to deploy on Google Cloud Run?
 description: How to deploy NuxtJS on Google Cloud Run?
+menu: Deploy on Google Cloud Run
+group: Deployment
+groupPosition: 3
+position: 7
 ---
 
 [Google Cloud Run](https://cloud.google.com/run) is a fully managed compute platform for deploying and scaling containerized applications quickly and securely.

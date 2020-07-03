@@ -1,6 +1,10 @@
 ---
 title: "API: The ModuleContainer Class"
 description: Nuxt ModuleContainer Class
+menu: Module Container
+group: Internals
+groupPosition: 7
+position: 3
 ---
 
 - Source: **[core/module.js](https://github.com/nuxt/nuxt.js/blob/dev/packages/core/src/module.js)**

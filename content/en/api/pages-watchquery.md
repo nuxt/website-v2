@@ -1,6 +1,10 @@
 ---
 title: "API: The watchQuery Property"
 description: Watch query strings and execute component methods on change (asyncData, fetch, validate, layout, ...)
+menu: watchQuery
+group: Pages
+groupPosition: 2
+position: 12
 ---
 
 > Watch query strings and execute component methods on change (asyncData, fetch(context), validate, layout, ...)

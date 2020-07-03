@@ -1,6 +1,10 @@
 ---
 title: "API: The srcDir Property"
 description: Define the source directory of your Nuxt.js application
+menu: srcDir
+group: Configuration
+groupPosition: 5
+position: 28
 ---
 
 - Type: `String`

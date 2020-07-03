@@ -1,6 +1,10 @@
 ---
 title: "API: The watchers Property"
 description: The watchers property lets you overwrite watchers configuration.
+menu: watchers
+group: Configuration
+groupPosition: 5
+position: 34
 ---
 
 - Type: `Object`

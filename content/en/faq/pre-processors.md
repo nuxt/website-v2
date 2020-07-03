@@ -1,6 +1,9 @@
 ---
 title: How to use CSS pre-processors?
 description: How to use pre-processors with Nuxt.js?
+group: Configuration
+groupPosition: 1
+position: 2
 ---
 
 Thanks to [Vue Loader](http://vue-loader.vuejs.org/en/configurations/pre-processors.html), you can use any kind of pre-processor for your `<template>`, `<script>` or `<style>`: simply use the `lang` attribute.

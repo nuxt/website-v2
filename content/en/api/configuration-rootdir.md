@@ -1,6 +1,10 @@
 ---
 title: "API: The rootDir Property"
 description: Define the workspace of Nuxt.js application
+menu: rootDir
+group: Configuration
+groupPosition: 5
+position: 23
 ---
 
 - Type: `String`

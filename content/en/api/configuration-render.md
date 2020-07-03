@@ -1,6 +1,10 @@
 ---
 title: "API: The render Property"
 description: Nuxt.js lets you customize runtime options for rendering pages
+menu: render
+group: Configuration
+groupPosition: 5
+position: 22
 ---
 
 > Nuxt.js lets you customize runtime options for rendering pages
@@ -122,6 +126,15 @@ You may want to only disable this option if you have many pages and routes.
 
 This option is automatically set based on `mode` value if not provided.
 This can be useful to dynamically enable/disable SSR on runtime after image builds (with docker for example).
+
+## crossorigin
+
+- Type: `String`
+- Default: `undefined`
+
+  Configure the `crossorigin` attribute on `<link rel="stylesheet">` and `<script>` tags in generated HTML.
+
+  More Info: [CORS settings attributes](https://developer.mozilla.org/en-US/docs/Web/HTML/CORS_settings_attributes)
 
 ## ssrLog
 

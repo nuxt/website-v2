@@ -1,6 +1,10 @@
 ---
 title: "API: The dev Property"
 description: Define the development or production mode.
+menu: dev
+group: Configuration
+groupPosition: 5
+position: 6
 ---
 
 - Type: `Boolean`

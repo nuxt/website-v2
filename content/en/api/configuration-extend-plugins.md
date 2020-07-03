@@ -1,6 +1,10 @@
 ---
 title: "API: The extendPlugins Property"
 description: The extendPlugins property lets you customize Nuxt.js plugins.
+menu: extendPlugins
+group: Configuration
+groupPosition: 5
+position: 9
 ---
 
 > The extendPlugins property lets you customize Nuxt.js plugins ([options.plugins](/api/configuration-plugins)).

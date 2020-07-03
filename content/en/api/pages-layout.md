@@ -1,6 +1,10 @@
 ---
 title: "API: The layout Property"
 description: Every file (first level) in the `layouts` directory will create a custom layout accessible with the layout property in the page component.
+menu: layout
+group: Pages
+groupPosition: 2
+position: 5
 ---
 
 > Every file (first level) in the layouts directory will create a custom layout accessible with the layout property in the page component.

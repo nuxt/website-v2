@@ -1,6 +1,10 @@
 ---
 title: How to deploy with Vercel?
 description: How to deploy Nuxt.js app with Vercel?
+menu: Deploy on Vercel
+group: Deployment
+groupPosition: 3
+position: 10
 ---
 
 ![nuxt-now-builder](https://user-images.githubusercontent.com/904724/61308402-7a752d00-a7f0-11e9-9502-23731ccd00fd.png)

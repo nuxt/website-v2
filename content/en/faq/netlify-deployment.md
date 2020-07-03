@@ -1,6 +1,10 @@
 ---
 title: How to deploy on Netlify?
 description: How to deploy Nuxt.js on Netlify?
+menu: Deploy on Netlify
+group: Deployment
+groupPosition: 3
+position: 9
 ---
 
 Deploying to [Netlify](https://www.netlify.com) is a low friction option for getting a __statically generated__ Nuxt.js site online quickly.

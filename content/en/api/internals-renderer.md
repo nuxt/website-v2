@@ -1,6 +1,10 @@
 ---
 title: "API: The Renderer Class"
 description: Nuxt Renderer Class
+menu: Renderer
+group: Internals
+groupPosition: 7
+position: 3
 ---
 
 - Source: **[vue-renderer/renderer.js](https://github.com/nuxt/nuxt.js/blob/dev/packages/vue-renderer/src/renderer.js)**

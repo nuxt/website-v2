@@ -1,6 +1,10 @@
 ---
 title: "API: The css Property"
 description: Nuxt.js lets you define the CSS files/modules/libraries you want to set globally (included in every page).
+menu: css
+group: Configuration
+groupPosition: 5
+position: 4
 ---
 
 > Nuxt.js lets you define the CSS files/modules/libraries you want to set globally (included in every page).
@@ -22,9 +26,9 @@ export default {
     // Load a Node.js module directly (here it's a Sass file)
     'bulma',
     // CSS file in the project
-    '~/assets/css/main.css',
+    '@/assets/css/main.css',
     // SCSS file in the project
-    '~/assets/css/main.scss'
+    '@/assets/css/main.scss'
   ]
 }
 ```

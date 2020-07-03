@@ -1,6 +1,9 @@
 ---
 title: How to share cross-origin resource?
 description: How to share cross origin resource?
+group: Configuration
+groupPosition: 1
+position: 10
 ---
 
 [The solution of cross origin resource sharing in Nuxt.js ](https://github.com/nuxt-community/proxy-module#readme)

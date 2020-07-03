@@ -1,6 +1,10 @@
 ---
 title: "API: The middleware Property"
 description: Set the middleware for a specific page of the application.
+menu: middleware
+group: Pages
+groupPosition: 2
+position: 7
 ---
 
 - Type: `String` or `Array` or `Function`

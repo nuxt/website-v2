@@ -1,6 +1,10 @@
 ---
 title: "API: The scrollToTop Property"
 description: The `scrollToTop` property lets you tell Nuxt.js to scroll to the top before rendering the page.
+menu: scrollToTop
+group: Pages
+groupPosition: 2
+position: 8
 ---
 
 > The scrollToTop property lets you tell Nuxt.js to scroll to the top before rendering the page.

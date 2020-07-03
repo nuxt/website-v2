@@ -1,6 +1,10 @@
 ---
 title: "API: The server Property"
 description: Nuxt.js let you define the server connection variables for your application inside `nuxt.config.js`.
+menu: server
+group: Configuration
+groupPosition: 5
+position: 26
 ---
 
 - Type: `Object`

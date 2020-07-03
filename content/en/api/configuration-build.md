@@ -1,6 +1,10 @@
 ---
 title: "API: The build Property"
 description: Nuxt.js lets you customize the webpack configuration for building your web application as you want.
+menu: build
+group: Configuration
+groupPosition: 4
+position: 1
 ---
 
 > Nuxt.js lets you customize the webpack configuration for building your web application as you want.
@@ -109,15 +113,6 @@ export default {
 - ⚠️ Experimental
 
 > Enable cache of [terser-webpack-plugin](https://github.com/webpack-contrib/terser-webpack-plugin#options) and [cache-loader](https://github.com/webpack-contrib/cache-loader#cache-loader)
-
-## crossorigin
-
-- Type: `String`
-- Default: `undefined`
-
-  Configure the `crossorigin` attribute on `<link rel="stylesheet">` and `<script>` tags in generated HTML.
-
-  More Info: [CORS settings attributes](https://developer.mozilla.org/en-US/docs/Web/HTML/CORS_settings_attributes)
 
 ## cssSourceMap
 

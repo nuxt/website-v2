@@ -1,6 +1,10 @@
 ---
 title: "API: The Generator Class"
 description: Nuxt Generator Class
+menu: Generator
+group: Internals
+groupPosition: 7
+position: 5
 ---
 
 - Source: **[generator/generator.js](https://github.com/nuxt/nuxt.js/blob/dev/packages/generator/src/generator.js)**
@@ -11,11 +15,11 @@ Starting with Nuxt `2.13+`, you have access to `nuxt export` for full static gen
 
 Hook                    | Arguments                   | When
 ------------------------|-----------------------------|-----------------------------------------------
-`export:before`         | (generator)                 | Hook on before exporting, you have acces to `generator.setPayload` for adding a payload for every route that will be generated.
+`export:before`         | (generator)                 | Hook on before exporting, you have access to `generator.setPayload` for adding a payload for every route that will be generated.
 `export:distRemoved`    | (generator)                 | Hook on  destination folder  cleaned
 `export:distCopied`     | (generator)                 | Hook on copy static and built files
 `export:route`          | ({ route, setPayload })     | Hook before generating the page, useful for dynamic payload, see [#7422](https://github.com/nuxt/nuxt.js/pull/7422)
-`export:page`           | ({ page, errors })          | Hook to update page details, you can exlude to `dist/` by setting `page.exclude = true`.
+`export:page`           | ({ page, errors })          | Hook to update page details, you can exclude to `dist/` by setting `page.exclude = true`.
 `export:routeCreated`   | ({ route, path, errors })   | Hook on saving generated page success, errors can be because of `context.error()` or HTML minification error.
 `export:extendRoutes`   | ({ routes })                | Hook to let user update the routes to generate
 `export:routeFailed`    | ({ route, errors })         | Hook on saving generated page failure

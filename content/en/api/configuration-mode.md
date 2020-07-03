@@ -1,6 +1,10 @@
 ---
 title: "API: The mode Property"
 description: Change default nuxt mode
+menu: mode
+group: Configuration
+groupPosition: 5
+position: 17
 ---
 
 - Type: `string`

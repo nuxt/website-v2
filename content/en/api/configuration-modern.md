@@ -1,6 +1,10 @@
 ---
 title: "API: The modern Property"
 description: Build and server a modern bundle
+menu: modern
+group: Configuration
+groupPosition: 5
+position: 18
 ---
 
 > This feature is inspired by [vue-cli modern mode](https://cli.vuejs.org/guide/browser-compatibility.html#modern-mode) 
@@ -39,6 +43,6 @@ The two versions of bundles are:
 | spa           | client        |
 
 - Modern mode for `nuxt build && nuxt export` or `nuxt generate` can only be `client`
-- Use [`build.crossorigin`](/api/configuration-build#crossorigin) to set `crossorigin` attribute in `<link>` and `<script>`
+- Use [`render.crossorigin`](/api/configuration-render#crossorigin) to set `crossorigin` attribute in `<link>` and `<script>`
 
 > Please refer [Phillip Walton's excellent post](https://philipwalton.com/articles/deploying-es2015-code-in-production-today/) for more knowledge regarding modern builds.

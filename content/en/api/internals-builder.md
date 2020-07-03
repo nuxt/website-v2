@@ -1,6 +1,10 @@
 ---
 title: "API: The Builder Class"
 description: Nuxt `Builder` Class
+menu: Builder
+group: Internals
+groupPosition: 7
+position: 5
 ---
 
 - Source: **[builder/builder.js](https://github.com/nuxt/nuxt.js/blob/dev/packages/builder/src/builder.js)**

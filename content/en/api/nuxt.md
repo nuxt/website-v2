@@ -1,6 +1,10 @@
 ---
 title: "API: Using Nuxt.js Programmatically"
 description: You can use Nuxt.js programmatically to use it as a middleware giving you the freedom of creating your own server for rendering your web applications.
+menu: Usage
+group: Programmatically
+groupPosition: 6
+position: 1
 ---
 
 You might want to use your own server with your middleware and your API. That's why you can use Nuxt.js programmatically.

@@ -1,6 +1,10 @@
 ---
 title: "API: The Nuxt Class"
 description: Nuxt Core Class
+menu: Nuxt
+group: Internals
+groupPosition: 7
+position: 2
 ---
 
 - Source: **[core/nuxt.js](https://github.com/nuxt/nuxt.js/blob/dev/packages/core/src/nuxt.js)**

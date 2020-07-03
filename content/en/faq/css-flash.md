@@ -1,6 +1,10 @@
 ---
 title: Why does the CSS flash on page reload?
 description: Why do I see a flash of reloading styles in Nuxt.js?
+menu: Why a CSS flash appears
+group: Development
+groupPosition: 2
+position: 2
 ---
 
 ![cssflash](/flash_css.gif)

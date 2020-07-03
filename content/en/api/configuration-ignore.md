@@ -1,6 +1,10 @@
 ---
 title: "API: The ignore Property"
 description: Define the ignore files for your Nuxt.js application
+menu: ignore
+group: Configuration
+groupPosition: 5
+position: 14
 ---
 
 ## .nuxtignore

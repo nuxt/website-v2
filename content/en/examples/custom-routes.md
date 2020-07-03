@@ -4,4 +4,7 @@ description: Custom Routes example with Nuxt.js
 github: custom-routes
 livedemo: https://custom-routes.nuxtjs.org
 documentation: /guide/routing#dynamic-routes
+group: Customization
+groupPosition: 2
+position: 3
 ---

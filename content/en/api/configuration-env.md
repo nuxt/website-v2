@@ -1,6 +1,10 @@
 ---
 title: "API: The env Property"
 description: Share environment variables between client and server.
+menu: env
+group: Configuration
+groupPosition: 5
+position: 8
 ---
 
 - Type: `Object`

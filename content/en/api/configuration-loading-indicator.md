@@ -1,6 +1,10 @@
 ---
 title: "API: The loading indicator Property"
 description: Show fancy loading indicator while SPA page is loading!
+menu: loadingIndicator
+group: Configuration
+groupPosition: 5
+position: 16
 ---
 
 > Show fancy loading indicator while SPA page is loading!

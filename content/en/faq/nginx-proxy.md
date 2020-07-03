@@ -1,6 +1,10 @@
 ---
 title: Using nginx as a reverse proxy
 description: How to use nginx as a reverse proxy
+menu: Using nginx as a proxy
+group: Deployment
+groupPosition: 3
+position: 13
 ---
 
 ```nginx

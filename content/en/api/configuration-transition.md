@@ -1,6 +1,10 @@
 ---
 title: "API: transition Properties"
 description: Set the default properties of the page and layout transitions.
+menu: transition
+group: Configuration
+groupPosition: 5
+position: 31
 ---
 
 ## The pageTransition Property

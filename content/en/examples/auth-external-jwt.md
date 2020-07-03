@@ -3,6 +3,9 @@ title: Auth External API (JWT)
 description: Authentication with external API service (jsonwebtoken) example with Nuxt.js
 github: auth-jwt
 code: https://github.com/ahadyekta/nuxt-auth-external-jwt
+group: Advanced
+groupPosition: 3
+position: 3
 ---
 
 # Documentation

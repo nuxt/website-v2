@@ -1,6 +1,9 @@
 ---
 title: How to use Google Analytics?
 description: How to use Google Analytics in my NuxtJS app?
+group: Configuration
+groupPosition: 1
+position: 9
 ---
 
 First, please check the [official Google Analytics module](https://github.com/nuxt-community/analytics-module) for Nuxt.js.

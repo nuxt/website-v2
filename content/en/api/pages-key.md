@@ -1,6 +1,10 @@
 ---
 title: "API: The key Property"
 description: Set the `key` property of internal `<router-view>` component
+menu: key
+group: Pages
+groupPosition: 2
+position: 4
 ---
 
 > Set the `key` property of internal `<router-view>` component

@@ -4,7 +4,7 @@ description: Nuxt Generator Class
 menu: Generator
 category: Glossary
 categoryPosition: 4
-position: 35
+position: 34
 ---
 
 - Source: **[generator/generator.js](https://github.com/nuxt/nuxt.js/blob/dev/packages/generator/src/generator.js)**

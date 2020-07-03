@@ -4,6 +4,7 @@ description: Define the custom directories for your Nuxt.js application
 menu: dir
 category: Glossary
 categoryPosition: 4
+position: 7
 ---
 
 - Type: `Object`

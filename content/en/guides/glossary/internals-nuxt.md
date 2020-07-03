@@ -4,6 +4,7 @@ description: Nuxt Core Class
 menu: Nuxt
 category: Glossary
 categoryPosition: 4
+position: 32
 ---
 
 - Source: **[core/nuxt.js](https://github.com/nuxt/nuxt.js/blob/dev/packages/core/src/nuxt.js)**

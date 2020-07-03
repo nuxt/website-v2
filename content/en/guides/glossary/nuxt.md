@@ -4,6 +4,7 @@ description: You can use Nuxt.js programmatically to use it as a middleware givi
 menu: Usage
 category: Glossary
 categoryPosition: 4
+position: 41
 ---
 
 You might want to use your own server with your middleware and your API. That's why you can use Nuxt.js programmatically.

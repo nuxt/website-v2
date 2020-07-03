@@ -4,6 +4,7 @@ description: Nuxt.js lets you customize runtime options for rendering pages
 menu: render
 category: Glossary
 categoryPosition: 4
+position: 22
 ---
 
 > Nuxt.js lets you customize runtime options for rendering pages

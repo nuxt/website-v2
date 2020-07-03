@@ -4,6 +4,7 @@ description: Share environment variables between client and server.
 menu: env
 category: Glossary
 categoryPosition: 4
+position: 8
 ---
 
 - Type: `Object`

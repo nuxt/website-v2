@@ -4,6 +4,7 @@ description: Nuxt.js lets you define the CSS files/modules/libraries you want to
 menu: css
 category: Glossary
 categoryPosition: 4
+position: 4
 ---
 
 > Nuxt.js lets you define the CSS files/modules/libraries you want to set globally (included in every page).

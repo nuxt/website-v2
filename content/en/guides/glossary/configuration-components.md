@@ -4,6 +4,7 @@ description: "Nuxt.js 2.13+ can scan and auto import your components using @nuxt
 menu: components
 category: Glossary
 categoryPosition: 4
+position: 5
 ---
 
 > Nuxt.js 2.13+ can scan and auto import your components.

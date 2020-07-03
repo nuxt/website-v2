@@ -4,6 +4,7 @@ description: Nuxt.js lets you customize the CLI configuration.
 menu: cli
 category: Glossary
 categoryPosition: 4
+position: 3
 ---
 
 > Nuxt.js lets you customize the CLI configuration.

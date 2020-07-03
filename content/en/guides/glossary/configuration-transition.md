@@ -4,6 +4,7 @@ description: Set the default properties of the page and layout transitions.
 menu: transition
 category: Glossary
 categoryPosition: 4
+position: 31
 ---
 
 ## The pageTransition Property

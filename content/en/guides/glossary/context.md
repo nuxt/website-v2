@@ -4,6 +4,7 @@ description: The `context` provides additional objects/params from Nuxt not trad
 menu: context
 category: Glossary
 categoryPosition: 4
+position: 30
 ---
 
 The `context` provides additional objects/params from Nuxt to Vue components and is available in special nuxt lifecycle areas like [`asyncData`](/api), [`fetch`](/api/pages-fetch), [`plugins`](/guide/plugins), [`middleware`](/guide/routing#middleware) and [`nuxtServerInit`](/guide/vuex-store#the-nuxtserverinit-action).

@@ -4,6 +4,7 @@ description: Nuxt `Builder` Class
 menu: Builder
 category: Glossary
 categoryPosition: 4
+position: 35
 ---
 
 - Source: **[builder/builder.js](https://github.com/nuxt/nuxt.js/blob/dev/packages/builder/src/builder.js)**

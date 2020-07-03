@@ -4,6 +4,7 @@ description: Define the dist directory for your Nuxt.js application
 menu: buildDir
 category: Glossary
 categoryPosition: 4
+position: 2
 ---
 
 - Type: `String`

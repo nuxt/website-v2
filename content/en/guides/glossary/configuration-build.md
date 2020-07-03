@@ -4,6 +4,7 @@ description: Nuxt.js lets you customize the webpack configuration for building y
 menu: build
 category: Glossary
 categoryPosition: 4
+position: 1
 ---
 
 > Nuxt.js lets you customize the webpack configuration for building your web application as you want.

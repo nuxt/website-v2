@@ -4,6 +4,7 @@ description: Define server-side middleware.
 menu: serverMiddleware
 category: Glossary
 categoryPosition: 4
+position: 27
 ---
 
 - Type: `Array`

@@ -4,6 +4,7 @@ description: Get the `window` from a given URL of a Nuxt.js Application.
 menu: renderAndGetWindow
 category: Glossary
 categoryPosition: 4
+position: 44
 ---
 
 - Type: `Function`

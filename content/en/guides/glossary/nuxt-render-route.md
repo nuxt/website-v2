@@ -4,6 +4,7 @@ description: Render a specific route with a given context.
 menu: renderRoute
 category: Glossary
 categoryPosition: 4
+position: 43
 ---
 
 - Type: `Function`

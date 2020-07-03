@@ -4,6 +4,7 @@ description: Configure the generation of your universal web application to a sta
 menu: generate
 category: Glossary
 categoryPosition: 4
+position: 10
 ---
 
 - Type: `Object`

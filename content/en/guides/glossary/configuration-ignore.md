@@ -4,6 +4,7 @@ description: Define the ignore files for your Nuxt.js application
 menu: ignore
 category: Glossary
 categoryPosition: 4
+position: 14
 ---
 
 ## .nuxtignore

@@ -4,6 +4,7 @@ description: The watch property lets you watch custom files for restarting the s
 menu: watch
 category: Glossary
 categoryPosition: 4
+position: 33
 ---
 
 - Type: `Object`

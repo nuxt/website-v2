@@ -4,6 +4,7 @@ description: Change default nuxt target
 menu: target
 category: Glossary
 categoryPosition: 4
+position: 29
 ---
 
 Deployment targets for Nuxt >= v2.13:

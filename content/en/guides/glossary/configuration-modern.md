@@ -4,6 +4,7 @@ description: Build and server a modern bundle
 menu: modern
 category: Glossary
 categoryPosition: 4
+position: 18
 ---
 
 > This feature is inspired by [vue-cli modern mode](https://cli.vuejs.org/guide/browser-compatibility.html#modern-mode) 

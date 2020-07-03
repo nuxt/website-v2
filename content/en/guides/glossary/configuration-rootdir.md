@@ -4,6 +4,7 @@ description: Define the workspace of Nuxt.js application
 menu: rootDir
 category: Glossary
 categoryPosition: 4
+position: 23
 ---
 
 - Type: `String`

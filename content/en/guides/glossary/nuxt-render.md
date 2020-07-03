@@ -4,6 +4,7 @@ description: You can use Nuxt.js as a middleware for your Node.js server.
 menu: render
 category: Glossary
 categoryPosition: 4
+position: 42
 ---
 
 - Type: `Function`

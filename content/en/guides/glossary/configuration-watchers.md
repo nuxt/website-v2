@@ -4,6 +4,7 @@ description: The watchers property lets you overwrite watchers configuration.
 menu: watchers
 category: Glossary
 categoryPosition: 4
+position: 34
 ---
 
 - Type: `Object`

@@ -4,6 +4,7 @@ description: Define the development or production mode.
 menu: dev
 category: Glossary
 categoryPosition: 4
+position: 6
 ---
 
 - Type: `Boolean`

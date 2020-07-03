@@ -6,4 +6,4 @@ category: Features
 categoryPosition: 3
 ---
 
-future chapter
+Target static

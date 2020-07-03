@@ -4,6 +4,7 @@ description: RuntimeConfig allows passing dynamic config and environment variabl
 menu: runtimeConfig
 category: Glossary
 categoryPosition: 4
+position: 25
 ---
 
 Runtime config allows passing dynamic config and environment variables to the nuxt context.

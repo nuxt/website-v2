@@ -4,6 +4,7 @@ description: Nuxt ModuleContainer Class
 menu: Module Container
 category: Glossary
 categoryPosition: 4
+position: 33
 ---
 
 - Source: **[core/module.js](https://github.com/nuxt/nuxt.js/blob/dev/packages/core/src/module.js)**

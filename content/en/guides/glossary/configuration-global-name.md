@@ -4,6 +4,7 @@ description: Nuxt.js lets you customize the global ID used in the main HTML temp
 menu: globalName
 category: Glossary
 categoryPosition: 4
+position: 11
 ---
 
 > Nuxt.js lets you customize the global ID used in the main HTML template as well as the main Vue instance name and other options.

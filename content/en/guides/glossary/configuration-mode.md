@@ -4,6 +4,7 @@ description: Change default nuxt mode
 menu: mode
 category: Glossary
 categoryPosition: 4
+position: 17
 ---
 
 - Type: `string`

@@ -4,6 +4,7 @@ description: Nuxt Renderer Class
 menu: Renderer
 category: Glossary
 categoryPosition: 4
+position: 33
 ---
 
 - Source: **[vue-renderer/renderer.js](https://github.com/nuxt/nuxt.js/blob/dev/packages/vue-renderer/src/renderer.js)**

@@ -4,6 +4,7 @@ description: Define the modules directory for your Nuxt.js application
 menu: modulesDir
 category: Glossary
 categoryPosition: 4
+position: 20
 ---
 
 - Type: `Array`

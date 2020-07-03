@@ -4,6 +4,7 @@ description: A config object for Vue.config
 menu: vue.config
 category: Glossary
 categoryPosition: 4
+position: 32
 ---
 
 - Type: `Object`

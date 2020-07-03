@@ -4,6 +4,7 @@ description: Define the source directory of your Nuxt.js application
 menu: srcDir
 category: Glossary
 categoryPosition: 4
+position: 28
 ---
 
 - Type: `String`

@@ -4,6 +4,7 @@ description: Hooks are listeners to Nuxt events that are typically used in Nuxt 
 menu: hooks
 category: Glossary
 categoryPosition: 4
+position: 13
 ---
 
 - Type: `Object`

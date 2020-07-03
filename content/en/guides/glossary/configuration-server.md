@@ -4,6 +4,7 @@ description: Nuxt.js let you define the server connection variables for your app
 menu: server
 category: Glossary
 categoryPosition: 4
+position: 26
 ---
 
 - Type: `Object`

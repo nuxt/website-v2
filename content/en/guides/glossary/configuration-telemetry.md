@@ -4,6 +4,7 @@ description: 'Nuxt.js collects anonymous telemetry data about general usage. Thi
 menu: telemetry
 category: Glossary
 categoryPosition: 4
+position: 30
 ---
 
 ## The telemetry Property

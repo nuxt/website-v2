@@ -1018,7 +1018,7 @@
     rehype-raw "^4.0.2"
     rehype-sort-attribute-values "^3.0.1"
     rehype-sort-attributes "^3.0.1"
-    remark-autolink-headings "^6.0.1"
+    remark-autolink-headings "^6.0.0"
     remark-external-links "^6.1.0"
     remark-footnotes "^1.0.0"
     remark-parse "^8.0.2"
@@ -2759,7 +2759,7 @@ cli-width@^2.0.0:
   resolved "https://registry.yarnpkg.com/cli-width/-/cli-width-2.2.1.tgz#b0433d0b4e9c847ef18868a4ef16fd5fc8271c48"
   integrity sha512-GRMWDxpOB6Dgk2E5Uo+3eEBvtOOlimMmpbFiKuLFnQzYDavtLFY3K5ona41jgN/WdRZtG7utuVSVTL4HbZHGkw==
 
-clipboard@^2.0.0:
+clipboard@^2.0.0, clipboard@^2.0.6:
   version "2.0.6"
   resolved "https://registry.yarnpkg.com/clipboard/-/clipboard-2.0.6.tgz#52921296eec0fdf77ead1749421b21c968647376"
   integrity sha512-g5zbiixBRk/wyKakSwCKd7vQXDjFnAMGHoEyBogG/bw9kTD9GvdAvaoRR1ALcEzt3pVKxZR0pViekPMIS0QyGg==

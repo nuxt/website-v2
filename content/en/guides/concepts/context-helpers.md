@@ -96,9 +96,8 @@ The context directly exposes possible dynamic parameters of the route via `conte
 
 Also, we wrap the API call in a `try/catch` statement to handle potential errors. With the `context.error` function, we can directly show Nuxt's error page and pass in the occurred error.
 
-`pages/posts/_id.vue`
 
-```js
+```js{}[pages/posts/_id.vue]
 export default {
   async asyncData (context) {
     const id = context.params.id
@@ -116,9 +115,8 @@ export default {
 
 With [ES6](https://hacks.mozilla.org/2015/05/es6-in-depth-destructuring/) we can use this syntax to descructure our context object. We can pass in the objects we want to have access to and then we can use them in the code without using the word context.
 
-`pages/posts/_id.vue`
 
-```js
+```js{}[pages/posts/_id.vue]
 export default {
   async asyncData ({params, $http, error}) {
     const id = params.id
@@ -169,9 +167,8 @@ Besides the shortcuts in the context, there are also other tiny helpers present 
 
 The `$nuxt` helper provides a quick way to find out whether the internet connection of a user is present or not: It exposes the boolean values `isOffline` and `isOnline`. We can use these to show a message as soon as the user is offline (for example).
 
-Example in your default layout ( `layouts/default.vue`)
 
-```html
+```html{}[layouts/default.vue]
 <template>
   <div>
     <div v-if="$nuxt.isOffline">You are offline</div>
@@ -243,9 +240,8 @@ window.onNuxtReady(() => {
 
 Nuxt.js injects three boolean values into the global `process` object which will help you to determine whether your app was rendered on the server or fully on the client, as well as checking for static site generation. These helpers are available across your application and are commonly used in `asyncData` userland code.
 
-`pages/about.vue`
 
-```js
+```js{}[pages/about.vue]
 <template>
   <h1>I am rendered on the {{ renderedOn }} side </h1>
 </template>

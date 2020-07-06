@@ -24,6 +24,7 @@
 
 <script>
 import shuffle from 'lodash/shuffle'
+import Clipboard from 'clipboard'
 
 export default {
   async asyncData ({ $content, params, store, error, app }) {
@@ -64,6 +65,29 @@ export default {
       return `https://github.com/nuxt/nuxtjs.org/blob/master/content${this.path}.md`
     }
   },
+  mounted () {
+    const blocks = document.getElementsByClassName('nuxt-content-highlight')
+    for (const block of blocks) {
+      const pre = block.getElementsByTagName('pre')[0]
+      const button = document.createElement('button')
+      button.className = 'copy'
+      button.textContent = 'Copy'
+      pre.appendChild(button)
+    }
+    const copyCode = new Clipboard('.copy', {
+      target (trigger) {
+        return trigger.previousElementSibling
+      }
+    })
+    copyCode.on('success', function (event) {
+      event.clearSelection()
+      event.trigger.textContent = 'Copied!'
+      window.setTimeout(function () {
+        event.trigger.textContent = 'Copy'
+      }, 2000)
+    })
+  },
+
   scrollToTop: true,
   head () {
     return {

@@ -48,9 +48,9 @@ Composition of a View in Nuxt.js
 
 Every Page component is a Vue component but Nuxt.js adds special attributes and functions to make the development of your application as easy as possible.
 
-`index.vue`
 
-```html
+
+```html{}[pages/index.vue]
 <template>
   <h1 class="red">Hello World</h1>
 </template>
@@ -85,9 +85,8 @@ Layouts are a great help when you want to change the look and feel of your Nuxt.
 
 You can define a default layout by adding a `default.vue` file inside the layouts directory. This will be used for all pages that don't have a layout specified. The only thing you need to include in the layout is the `<Nuxt />` component which renders the page component.
 
-`layouts/default.vue`
 
-```html
+```html{}[layouts/default.vue]
 <template>
   <Nuxt/>
 </template>
@@ -101,7 +100,7 @@ You can create custom layouts by adding a `.vue` file to the layouts directory. 
 
 To create a blog layout add a `blog.vue` file to your layouts directory `layouts/blog.vue`:
 
-```html
+```html{}[layouts/blog.vue]
 <template>
   <div>
     <div>My blog navigation bar here</div>
@@ -118,9 +117,9 @@ Make sure to add the `<Nuxt/>` component when creating a layout to actually in
 
 We then use the layout property with the value of 'blog' in the page where we want that layout to be used. 
 
-`pages/posts.vue`
 
-```html
+
+```html{}[pages/posts.vue]
 <template>
 <!-- Your template -->
 </template>
@@ -158,7 +157,7 @@ As mentioned above, this layout is special, since you should not include the 
 
 You can customize the error page by adding a `layouts/error.vue` file:
 
-```html
+```html{}[layouts/error.vue]
 <template>
   <div>
     <h1 v-if="error.statusCode === 404">Page not found</h1>

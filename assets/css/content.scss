@@ -302,4 +302,28 @@
     @apply list-disc;
   }
 }
+
+/* highlight page in corner of code */
+.nuxt-content-highlight {
+  @apply relative;
+  & > .filename {
+    @apply absolute right-0 top-0 text-gray-600 font-light z-10 mr-2 mt-1 text-sm;
+  }
+  & > pre {
+    & > .copy {
+      @apply hidden absolute right-0 bottom-0 shadow-lg px-3 py-1 text-white text-sm uppercase font-sans rounded-md bg-transparent border border-white tracking-wide font-semibold mr-3 mb-3;
+      &:hover {
+        @apply bg-gray-700;
+      }
+      &:focus {
+        @apply outline-none bg-gray-900;
+      }
+    }
+    &:hover {
+      & > .copy {
+        @apply block;
+      }
+    }
+  }
+}
 /* purgecss end ignore */

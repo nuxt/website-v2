@@ -3,7 +3,7 @@ title: "API: The rootDir Property"
 description: Define the workspace of Nuxt.js application
 menu: rootDir
 category: Glossary
-categoryPosition: 4
+categoryPosition: 5
 position: 23
 ---
 

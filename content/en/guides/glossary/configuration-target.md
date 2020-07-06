@@ -3,7 +3,7 @@ title: "API: The target Property"
 description: Change default nuxt target
 menu: target
 category: Glossary
-categoryPosition: 4
+categoryPosition: 5
 position: 29
 ---
 

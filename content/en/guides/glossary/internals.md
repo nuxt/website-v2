@@ -3,7 +3,7 @@ title: "API: Nuxt Modules Intro"
 description: Better understand Nuxt internals
 menu: Intro
 category: Glossary
-categoryPosition: 4
+categoryPosition: 5
 position: 31
 ---
 

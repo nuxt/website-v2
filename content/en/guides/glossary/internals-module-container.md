@@ -3,7 +3,7 @@ title: "API: The ModuleContainer Class"
 description: Nuxt ModuleContainer Class
 menu: Module Container
 category: Glossary
-categoryPosition: 4
+categoryPosition: 5
 position: 33
 ---
 

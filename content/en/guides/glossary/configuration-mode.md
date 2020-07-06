@@ -3,7 +3,7 @@ title: "API: The mode Property"
 description: Change default nuxt mode
 menu: mode
 category: Glossary
-categoryPosition: 4
+categoryPosition: 5
 position: 17
 ---
 

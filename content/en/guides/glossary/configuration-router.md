@@ -3,7 +3,7 @@ title: "API: The router Property"
 description: The router property lets you customize Nuxt.js router.
 menu: router
 category: Glossary
-categoryPosition: 4
+categoryPosition: 5
 position: 24
 ---
 

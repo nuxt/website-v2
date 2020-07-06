@@ -3,7 +3,7 @@ title: "API: The dir Property"
 description: Define the custom directories for your Nuxt.js application
 menu: dir
 category: Glossary
-categoryPosition: 4
+categoryPosition: 5
 position: 7
 ---
 

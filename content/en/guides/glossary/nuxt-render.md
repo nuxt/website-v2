@@ -3,7 +3,7 @@ title: "API: nuxt.render(req, res)"
 description: You can use Nuxt.js as a middleware for your Node.js server.
 menu: render
 category: Glossary
-categoryPosition: 4
+categoryPosition: 5
 position: 42
 ---
 

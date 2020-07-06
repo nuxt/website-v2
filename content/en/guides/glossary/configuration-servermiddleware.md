@@ -3,7 +3,7 @@ title: "API: The serverMiddleware Property"
 description: Define server-side middleware.
 menu: serverMiddleware
 category: Glossary
-categoryPosition: 4
+categoryPosition: 5
 position: 27
 ---
 

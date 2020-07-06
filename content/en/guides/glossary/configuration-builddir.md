@@ -3,7 +3,7 @@ title: "API: The buildDir Property"
 description: Define the dist directory for your Nuxt.js application
 menu: buildDir
 category: Glossary
-categoryPosition: 4
+categoryPosition: 5
 position: 2
 ---
 

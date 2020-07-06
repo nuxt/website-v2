@@ -3,7 +3,7 @@ title: "API: nuxt.renderRoute(route, context)"
 description: Render a specific route with a given context.
 menu: renderRoute
 category: Glossary
-categoryPosition: 4
+categoryPosition: 5
 position: 43
 ---
 

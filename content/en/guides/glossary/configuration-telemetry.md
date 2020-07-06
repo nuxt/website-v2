@@ -3,7 +3,7 @@ title: "API: telemetry Property"
 description: 'Nuxt.js collects anonymous telemetry data about general usage. This helps us to accurately gauge Nuxt feature usage and customization across all our users.'
 menu: telemetry
 category: Glossary
-categoryPosition: 4
+categoryPosition: 5
 position: 30
 ---
 

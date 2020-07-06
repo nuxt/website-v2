@@ -3,7 +3,7 @@ title: "API: The dev Property"
 description: Define the development or production mode.
 menu: dev
 category: Glossary
-categoryPosition: 4
+categoryPosition: 5
 position: 6
 ---
 

@@ -3,7 +3,7 @@ title: "API: transition Properties"
 description: Set the default properties of the page and layout transitions.
 menu: transition
 category: Glossary
-categoryPosition: 4
+categoryPosition: 5
 position: 31
 ---
 

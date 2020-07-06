@@ -3,7 +3,7 @@ title: "API: The generate Property"
 description: Configure the generation of your universal web application to a static web application.
 menu: generate
 category: Glossary
-categoryPosition: 4
+categoryPosition: 5
 position: 10
 ---
 

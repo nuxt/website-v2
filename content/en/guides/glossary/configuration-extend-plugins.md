@@ -3,7 +3,7 @@ title: "API: The extendPlugins Property"
 description: The extendPlugins property lets you customize Nuxt.js plugins.
 menu: extendPlugins
 category: Glossary
-categoryPosition: 4
+categoryPosition: 5
 position: 9
 ---
 

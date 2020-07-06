@@ -3,7 +3,7 @@ title: "API: The Nuxt Class"
 description: Nuxt Core Class
 menu: Nuxt
 category: Glossary
-categoryPosition: 4
+categoryPosition: 5
 position: 32
 ---
 

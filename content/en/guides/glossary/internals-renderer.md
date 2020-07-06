@@ -3,7 +3,7 @@ title: "API: The Renderer Class"
 description: Nuxt Renderer Class
 menu: Renderer
 category: Glossary
-categoryPosition: 4
+categoryPosition: 5
 position: 33
 ---
 

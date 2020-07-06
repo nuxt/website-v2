@@ -3,7 +3,7 @@ title: "API: The Generator Class"
 description: Nuxt Generator Class
 menu: Generator
 category: Glossary
-categoryPosition: 4
+categoryPosition: 5
 position: 34
 ---
 

@@ -3,7 +3,7 @@ title: "API: The modern Property"
 description: Build and server a modern bundle
 menu: modern
 category: Glossary
-categoryPosition: 4
+categoryPosition: 5
 position: 18
 ---
 

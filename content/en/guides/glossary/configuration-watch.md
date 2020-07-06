@@ -3,7 +3,7 @@ title: "API: The watch Property"
 description: The watch property lets you watch custom files for restarting the server.
 menu: watch
 category: Glossary
-categoryPosition: 4
+categoryPosition: 5
 position: 33
 ---
 

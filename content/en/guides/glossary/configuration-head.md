@@ -3,7 +3,7 @@ title: "API: The head Property"
 description: Nuxt.js let you define all default meta for your application inside nuxt.config.js.
 menu: head
 category: Glossary
-categoryPosition: 4
+categoryPosition: 5
 position: 12
 ---
 

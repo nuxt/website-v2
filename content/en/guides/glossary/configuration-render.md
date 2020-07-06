@@ -3,7 +3,7 @@ title: "API: The render Property"
 description: Nuxt.js lets you customize runtime options for rendering pages
 menu: render
 category: Glossary
-categoryPosition: 4
+categoryPosition: 5
 position: 22
 ---
 

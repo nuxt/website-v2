@@ -3,7 +3,7 @@ title: "API: The watchers Property"
 description: The watchers property lets you overwrite watchers configuration.
 menu: watchers
 category: Glossary
-categoryPosition: 4
+categoryPosition: 5
 position: 34
 ---
 

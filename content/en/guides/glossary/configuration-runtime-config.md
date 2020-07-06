@@ -3,7 +3,7 @@ title: "API: RuntimeConfig properties"
 description: RuntimeConfig allows passing dynamic config and environment variables to the nuxt context
 menu: runtimeConfig
 category: Glossary
-categoryPosition: 4
+categoryPosition: 5
 position: 25
 ---
 

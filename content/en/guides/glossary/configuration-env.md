@@ -3,7 +3,7 @@ title: "API: The env Property"
 description: Share environment variables between client and server.
 menu: env
 category: Glossary
-categoryPosition: 4
+categoryPosition: 5
 position: 8
 ---
 

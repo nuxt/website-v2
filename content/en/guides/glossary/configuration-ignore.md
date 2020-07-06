@@ -3,7 +3,7 @@ title: "API: The ignore Property"
 description: Define the ignore files for your Nuxt.js application
 menu: ignore
 category: Glossary
-categoryPosition: 4
+categoryPosition: 5
 position: 14
 ---
 

@@ -3,7 +3,7 @@ title: "API: The css Property"
 description: Nuxt.js lets you define the CSS files/modules/libraries you want to set globally (included in every page).
 menu: css
 category: Glossary
-categoryPosition: 4
+categoryPosition: 5
 position: 4
 ---
 

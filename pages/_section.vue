@@ -23,18 +23,18 @@ export default {
         .sortBy('position')
         .fetch()
 
-      console.log('pages', pages)
+      if (app.i18n.locale !== app.i18n.defaultLocale) {
+        const newPages = await $content(app.i18n.locale, params.section)
+          .only(['slug', 'title', 'position', 'menu', 'category'])
+          .sortBy('position')
+          .fetch()
 
-      const newPages = await $content(app.i18n.locale, params.section)
-        .only(['slug', 'title', 'position', 'menu', 'category'])
-        .sortBy('position')
-        .fetch()
+        pages = pages.map((page) => {
+          const newPage = newPages.find(newPage => newPage.slug === page.slug)
 
-      pages = pages.map((page) => {
-        const newPage = newPages.find(newPage => newPage.slug === page.slug)
-
-        return newPage || page
-      })
+          return newPage || page
+        })
+      }
     } catch (e) { }
 
     return {

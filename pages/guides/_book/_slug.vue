@@ -10,7 +10,7 @@
       >
         ⚠️ You are looking at the english version of the page. Help us translate it
         <a
-          :href="docLink"
+          href="https://github.com/nuxt/nuxtjs.org/blob/master/content"
           class="text-orange-600"
           target="_blank"
         >here</a>.
@@ -54,9 +54,11 @@ export default {
     }
 
     try {
-      currentPage = await $content(path).fetch()
-      if (currentPage) {
-        assign(page, currentPage)
+      if (path !== defaultPath) {
+        currentPage = await $content(path).fetch()
+        if (currentPage) {
+          assign(page, currentPage)
+        }
       }
     } catch (e) {
       langFallback = true
@@ -67,10 +69,11 @@ export default {
     } catch (e) { }
 
     try {
-      [prev, next] = await $content(currentPage ? app.i18n.locale : app.i18n.defaultLocale, 'guides', { deep: true })
+      [prev, next] = await $content(currentPage ? app.i18n.locale : app.i18n.defaultLocale, 'guides', params.book)
         .only(['title', 'slug', 'dir'])
+        .sortBy('title', 'asc')
+        .sortBy('menu', 'asc')
         .sortBy('position', 'asc')
-        .sortBy('categoryPosition', 'asc')
         .surround(params.slug, { before: 1, after: 1 })
         .fetch()
     } catch (e) { }

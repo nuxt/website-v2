@@ -82,7 +82,7 @@ export default {
     URL: process.env.URL || false,
     DOC_SEARCH_API_KEY: process.env.DOC_SEARCH_API_KEY || 'ff80fbf046ce827f64f06e16f82f1401',
     NUXT_API: process.env.NUXT_API || 'https://api.nuxtjs.com',
-    NUXT_LOCALE: process.env.NUXT_LOCALE || 'fr'
+    NUXT_LOCALE: process.env.NUXT_LOCALE || 'en'
   },
   loading: { color: '#41B883' },
   generate: {
@@ -102,8 +102,7 @@ export default {
       iso: 'fr-FR',
       file: 'fr-FR.js',
       name: 'Français',
-      // domain: 'https://fr.nuxtjs.org'
-      domain: 'https://fr.localhost:3000'
+      domain: 'https://fr.nuxtjs.org'
     }],
     vueI18n: {
       fallbackLocale: 'en'

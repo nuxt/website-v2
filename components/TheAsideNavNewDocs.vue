@@ -14,11 +14,14 @@
           <span class="text-nuxt-lightgreen">{{ $t('docVersion') }}</span>
         </p>
         <div v-for="(sublinks, group) in sortedLinks" :key="`links-${group}`">
-          <h3
+          <component
+            :is="$route.params.book === group ? `h3` : 'nuxt-link'"
             :key="`title-${group}`"
+            :to="{ name: 'guides-book', params: { book: group } }"
             class="uppercase font-medium text-light-onSurfaceSecondary dark:text-dark-onSurfaceSecondary pb-2 transition-colors duration-300 ease-linear"
-          >{{ $t(`content.guides.${group}`) }}</h3>
-          <ul class="pb-8">
+            :class="{ 'hover:text-nuxt-lightgreen mb-4 block': $route.params.book !== group, 'font-bold': $route.params.book === group }"
+          >{{ $t(`content.guides.${group}`) }}</component>
+          <ul v-if="$route.params.book === group" class="pb-8">
             <li v-for="(link, index) in sublinks" :key="index" class="py-2">
               <NuxtLink
                 class="text-light-onSurfacePrimary dark:text-dark-onSurfacePrimary hover:text-nuxt-lightgreen dark:hover:text-nuxt-lightgreen transition-colors duration-300 ease-linear"
@@ -56,7 +59,7 @@ export default {
       sortBy(Object.keys(this.links), (link) => {
         return Object.keys(this.$i18n.t('content.guides')).indexOf(link)
       }).forEach((key) => {
-        links[key] = sortBy(this.links[key], ['position', 'menu', 'title'])
+        links[key] = this.links[key]
       })
       return links
     }

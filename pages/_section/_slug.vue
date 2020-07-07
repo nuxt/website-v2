@@ -83,9 +83,11 @@ export default {
     }
 
     try {
-      currentPage = await $content(path).fetch()
-      if (currentPage) {
-        assign(page, currentPage)
+      if (path !== defaultPath) {
+        currentPage = await $content(path).fetch()
+        if (currentPage) {
+          assign(page, currentPage)
+        }
       }
     } catch (e) {
       langFallback = true

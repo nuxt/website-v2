@@ -83,7 +83,7 @@ export default {
       sortBy(Object.keys(this.links), (link) => {
         return Object.keys(this.$i18n.t('content.guides')).indexOf(link)
       }).forEach((key) => {
-        links[key] = sortBy(this.links[key], ['position', 'menu', 'title'])
+        links[key] = this.links[key]
       })
       return links
     }

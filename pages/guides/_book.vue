@@ -14,31 +14,41 @@
 import groupBy from 'lodash.groupby'
 
 export default {
-  async asyncData ({ $content, app, params }) {
+  async asyncData ({ $content, app, params, redirect }) {
     let pages = []
 
     try {
       pages = await $content(app.i18n.defaultLocale, 'guides', { deep: true })
         .only(['slug', 'title', 'menu', 'category', 'position'])
+        .sortBy('title', 'asc')
+        .sortBy('menu', 'asc')
         .sortBy('position', 'asc')
-        .sortBy('categoryPosition', 'asc')
         .fetch()
 
-      const newPages = await $content(app.i18n.locale, 'guides', { deep: true })
-        .only(['slug', 'title', 'menu', 'category', 'position'])
-        .sortBy('position', 'asc')
-        .sortBy('categoryPosition', 'asc')
-        .fetch()
+      if (app.i18n.locale !== app.i18n.defaultLocale) {
+        const newPages = await $content(app.i18n.locale, 'guides', { deep: true })
+          .only(['slug', 'title', 'menu', 'category', 'position'])
+          .sortBy('title', 'asc')
+          .sortBy('menu', 'asc')
+          .sortBy('position', 'asc')
+          .fetch()
 
-      pages = pages.map((page) => {
-        const newPage = newPages.find(newPage => newPage.slug === page.slug)
+        pages = pages.map((page) => {
+          const newPage = newPages.find(newPage => newPage.slug === page.slug)
 
-        return newPage || page
-      })
+          return newPage || page
+        })
+      }
     } catch (e) { }
 
+    const links = groupBy(pages, 'category')
+
+    if (!params.slug) {
+      return redirect({ name: 'guides-book-slug', params: { book: params.book, slug: links[params.book][0].slug } })
+    }
+
     return {
-      links: groupBy(pages, 'category')
+      links
     }
   }
 }

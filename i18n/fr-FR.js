@@ -68,38 +68,37 @@ module.exports = {
     },
     welcome: {
       title:
-        'The Intuitive<br><span class="text-nuxt-lightgreen">Vue</span> Framework<br>',
+        'Le Framework Intuitif<br>basé sur <span class="text-nuxt-lightgreen">Vue</span><br>',
       description:
-        'Build your next Vue.js application with confidence using NuxtJS. An <span title="Under MIT license">open source</span> framework making web development simple and powerful.',
+        'Construisez votre prochaine application Vue.js en toute confiance avec NuxtJS. Un framework open source rendant le développement web simple et puissant.',
       get_started: 'Commencer',
       github_stars: '27K+ github stars',
-      video:
-        'Video produced by <a href="https://www.vuemastery.com" target="_blank" rel="noopener">Vue Mastery</a>, download their free <a href="https://www.vuemastery.com/nuxt-cheat-sheet/" target="_blank" rel="noopener">Nuxt Cheat Sheet</a>.'
+      video: 'Vidéo produite par <a href="https://www.vuemastery.com" target="_blank" rel="noopener">Vue Mastery</a>, téléchargez gratuitement <a href="https://www.vuemastery.com/nuxt-cheat-sheet/" target="_blank" rel="noopener">Nuxt Cheat Sheet</a>.'
     },
     why: {
-      title: 'Why NUXT<span class="text-nuxt-lightgreen">JS</span>',
+      title: 'Pourquoi Nuxt<span class="text-nuxt-lightgreen">JS</span>',
       try_nuxtjs_online: 'Essayez NuxtJS Online',
       enjoyable: {
         title: 'Enjoyable',
         description:
-          'Our main focus is the Developer Experience. We love Nuxt.js and continuously improve the framework so you love it too! 💚<br>Expect appealing solutions, descriptive error messages, powerful defaults and detailed documentation. If questions or problems come up, our helpful community will help you out.'
+          'Notre principal objectif est l\'expérience des développeurs. Nous aimons Nuxt.js et améliorons continuellement le framework pour que vous l\'aimiez aussi! 💚 Attendez-vous à des solutions attrayantes, des messages d\'erreur descriptifs, des paramètres par défaut puissants et une documentation détaillée. Si des questions ou des problèmes surviennent, notre communauté attentionnée vous aidera.'
       },
       modular: {
         title: 'Modular',
         description:
-          "Nuxt is based on a powerful modular architecture. You can choose from more than 50 modules to make your development faster and easier. You don't have to reinvent the wheel to get PWA benefits, add Google Analytics to your page or generate a sitemap."
+          "Nuxt repose sur une puissante architecture modulaire. Vous pouvez choisir parmi plus de 50 modules pour rendre votre développement plus rapide et plus facile. Il n'est pas nécessaire de réinventer la roue pour obtenir les avantages PWA, ajouter Google Analytics à votre page ou générer un plan du site."
       },
       performant: {
         title: 'Performant',
         description:
-          'With Nuxt.js, your application will be optimized out of the box.<br>We do our best to build performant applications by utilizing Vue.js and Node.js best practices.<br>To squeeze every unnecessary bit out of your app Nuxt includes a bundle analyzer and lots of opportunities to fine-tune your app.'
+          'Avec Nuxt.js, votre application sera optimisée et prête à l\'emploi. Nous faisons de notre mieux pour créer des applications performantes en appliquant les meilleures pratiques de Vue.js et Node.js. Pour tirer le meilleur parti de votre application, Nuxt inclut un analyseur de bundles et de nombreuses possibilités d\'ajuster votre application.'
       }
     },
     companies: {
-      title: 'Who\'s using nuxt<span class= "text-nuxt-lightgreen" > JS</span>'
+      title: 'Qui utilise nuxt<span class="text-nuxt-lightgreen">JS</span>'
     },
     modes: {
-      title: 'NUXT<span class="text-nuxt-lightgreen">JS</span> rendering',
+      title: 'Rendu NUXT<span class="text-nuxt-lightgreen">JS</span>',
       ssr: {
         title: 'Server Side Rendered',
         description:
@@ -119,13 +118,13 @@ module.exports = {
     sponsors: {
       title: 'Sponsors',
       description:
-        'NuxtJS is an MIT licensed open source project and completely free to use. However, the amount of effort needed to maintain and develop new features for the project is not sustainable without proper financial backing. If you run a business and are using Nuxt in a revenue-generating product, it makes business sense to sponsor Nuxt development: it ensures the project that your product relies on stays healthy and actively maintained. It can also help your exposure in the Vue/Nuxt community and makes it easier to attract Vue/Nuxt developers. If you are an individual user and have enjoyed the productivity of using Nuxt, consider donating as a sign of appreciation.',
+        'NuxtJS est un projet open source sous licence MIT entièrement gratuit. Cependant, les efforts nécessaires pour maintenir et développer de nouvelles fonctionnalités pour le projet ne sont pas durables sans un soutien financier adéquat. Si vous exploitez une entreprise et utilisez Nuxt dans un produit générateur de revenus, il est logique de parrainer le développement Nuxt: cela garantit que le projet sur lequel votre produit repose reste en bonne santé et activement entretenu. Cela peut également vous aider à mieux faire connaître votre entreprise dans la communauté Vue/Nuxt et à attirer plus facilement les développeurs Vue/Nuxt. Si vous êtes un utilisateur individuel et avez apprécié la productivité de l’utilisation de Nuxt, envisagez de faire un don en guise de remerciement.',
       become_a_sponsor: 'Devenir sponsor'
     },
     newsletter: {
       title: 'Nuxt<span class="text-nuxt-lightgreen">JS</span> Newsletter',
       description:
-        'Get the latest Nuxt news to your inbox, curated by the core team and contributors.',
+        'Recevez les dernières nouvelles de Nuxt dans votre boîte de réception, organisée par l\'équipe Nuxt et les contributeurs.',
       form: {
         email: 'Email',
         subscribing: "S'abonner",

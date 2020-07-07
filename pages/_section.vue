@@ -15,14 +15,30 @@ import groupBy from 'lodash.groupby'
 
 export default {
   async asyncData ({ $content, app, params }) {
-    const links = await $content(app.i18n.locale, params.section)
-      .only(['slug', 'title', 'menu', 'group'])
-      .sortBy('groupPosition', 'asc')
-      .sortBy('position', 'asc')
-      .fetch()
+    let pages = []
+
+    try {
+      pages = await $content(app.i18n.defaultLocale, params.section)
+        .only(['slug', 'title', 'menu', 'group'])
+        .sortBy('position', 'asc')
+        .sortBy('groupPosition', 'asc')
+        .fetch()
+
+      const newPages = await $content(app.i18n.locale, params.section)
+        .only(['slug', 'title', 'menu', 'group'])
+        .sortBy('position', 'asc')
+        .sortBy('groupPosition', 'asc')
+        .fetch()
+
+      pages = pages.map((page) => {
+        const newPage = newPages.find(newPage => newPage.slug === page.slug)
+
+        return newPage || page
+      })
+    } catch (e) { }
 
     return {
-      links: groupBy(links, 'group')
+      links: groupBy(pages, 'group')
     }
   }
 }

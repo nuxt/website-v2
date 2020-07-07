@@ -1,5 +1,5 @@
 ---
-title: "API: The ModuleContainer Class"
+title: "The ModuleContainer Class"
 description: Nuxt ModuleContainer Class
 menu: Module Container
 category: Internals Glossary
@@ -16,23 +16,22 @@ All [modules](/guide/modules) will be called within context of `ModuleContainer`
 We can register hooks on certain life cycle events.
 
 ```js
-nuxt.moduleContainer.plugin('ready', async (moduleContainer) => {
+nuxt.moduleContainer.plugin("ready", async moduleContainer => {
   // Do this after all modules where ready
-})
+});
 ```
 
 Inside [modules](/guide/modules) context we can use this instead:
 
 ```js
-this.plugin('ready', async (moduleContainer) => {
+this.plugin("ready", async moduleContainer => {
   // Do this after all modules where ready
-})
+});
 ```
 
-Plugin | Arguments       | When
--------|-----------------|-----------------------------------------------------
-`ready`| moduleContainer | All modules in `nuxt.config.js` has been initialized
-
+| Plugin  | Arguments       | When                                                 |
+| ------- | --------------- | ---------------------------------------------------- |
+| `ready` | moduleContainer | All modules in `nuxt.config.js` has been initialized |
 
 ## Methods
 
@@ -45,9 +44,9 @@ Adds to `options.build.vendor` and apply unique filter.
 ### addTemplate (template)
 
 - **template**: `String` or `Object`
-    - `src`
-    - `options`
-    - `fileName`
+  - `src`
+  - `options`
+  - `fileName`
 
 Renders given template using [lodash template](https://lodash.com/docs/4.17.4#template) during build into project `buildDir` (`.nuxt`).
 
@@ -79,14 +78,14 @@ Allows easily extending plugins by chaining [options.extendPlugins](/api/configu
 
 ### addModule (moduleOpts, requireOnce)
 
-*Async function*
+_Async function_
 
-Registers a module. `moduleOpts` can be a string or an array (`[src, options]`). 
+Registers a module. `moduleOpts` can be a string or an array (`[src, options]`).
 If `requireOnce` is `true` and the resolved module exports `meta`, it prevents registering same module twice.
 
 ### requireModule (moduleOpts)
 
-*Async function*
+_Async function_
 
 Is a shortcut for `addModule(moduleOpts, true)`
 
@@ -94,8 +93,7 @@ Is a shortcut for `addModule(moduleOpts, true)`
 
 We can register hooks on certain life cycle events.
 
-Hook                      | Arguments                  | When
---------------------------|----------------------------|--------------------------------------------------------------------------------------
- `modules:before`         | (moduleContainer, options) | Called before creating ModuleContainer class, useful to overload methods and options.
- `modules:done`           | (moduleContainer)          | Called when all modules have been loaded.
-
+| Hook             | Arguments                  | When                                                                                  |
+| ---------------- | -------------------------- | ------------------------------------------------------------------------------------- |
+| `modules:before` | (moduleContainer, options) | Called before creating ModuleContainer class, useful to overload methods and options. |
+| `modules:done`   | (moduleContainer)          | Called when all modules have been loaded.                                             |

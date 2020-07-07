@@ -1,5 +1,5 @@
 ---
-title: "API: Nuxt Modules Intro"
+title: "Nuxt Modules Intro"
 description: Better understand Nuxt internals
 menu: Nuxt Modules
 category: Internals Glossary
@@ -61,7 +61,7 @@ These classes are only needed for build or dev mode.
 Nuxt exports all classes by default. To import them:
 
 ```js
-import { Nuxt, Builder, Utils } from 'nuxt'
+import { Nuxt, Builder, Utils } from "nuxt";
 ```
 
 ## Common patterns
@@ -70,28 +70,28 @@ All Nuxt classes have a reference to `nuxt` instance and options, this way we al
 
 ```js
 class SomeClass {
-  constructor (nuxt) {
-    super()
-    this.nuxt = nuxt
-    this.options = nuxt.options
+  constructor(nuxt) {
+    super();
+    this.nuxt = nuxt;
+    this.options = nuxt.options;
   }
 
-  someFunction () {
+  someFunction() {
     // We have access to `this.nuxt` and `this.options`
   }
 }
 ```
 
-Classes are *plugable* so they should register a plugin on main `nuxt` container to register more hooks.
+Classes are _plugable_ so they should register a plugin on main `nuxt` container to register more hooks.
 
 ```js
 class FooClass {
-  constructor (nuxt) {
-    super()
-    this.nuxt = nuxt
-    this.options = nuxt.options
+  constructor(nuxt) {
+    super();
+    this.nuxt = nuxt;
+    this.options = nuxt.options;
 
-    this.nuxt.callHook('foo', this)
+    this.nuxt.callHook("foo", this);
   }
 }
 ```
@@ -99,7 +99,7 @@ class FooClass {
 So we can hook into `foo` module like this:
 
 ```js
-nuxt.hook('foo', (foo) => {
+nuxt.hook("foo", foo => {
   // ...
-})
+});
 ```

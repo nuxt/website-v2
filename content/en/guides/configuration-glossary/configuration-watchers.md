@@ -1,5 +1,5 @@
 ---
-title: "API: The watchers Property"
+title: "The watchers Property"
 description: The watchers property lets you overwrite watchers configuration.
 menu: watchers
 category: Configuration Glossary

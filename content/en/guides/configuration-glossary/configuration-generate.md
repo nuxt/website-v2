@@ -1,5 +1,5 @@
 ---
-title: "API: The generate Property"
+title: "The generate Property"
 description: Configure the generation of your universal web application to a static web application.
 menu: generate
 category: Configuration Glossary
@@ -13,7 +13,8 @@ position: 10
 
 When launching `nuxt build && nuxt export`(>= v2.13) or `nuxt generate` (<= v2.12) or calling `nuxt.generate()`, Nuxt.js will use the configuration defined in the `generate` property.
 
-nuxt.config.js 
+nuxt.config.js
+
 ```js
 export default {
   generate: {
@@ -30,8 +31,9 @@ export default {
 The generation of routes are concurrent, `generate.concurrency` specifies the amount of routes that run in one thread.
 
 ## crawler
- - Type: `boolean`
- - Default: true
+
+- Type: `boolean`
+- Default: true
 
 As of Nuxt >= v2.13 Nuxt.js comes with a crawler installed that will crawl your relative links and generate your dynamic links based on these links. If you want to disable this feature you can set the value to `false`
 
@@ -40,7 +42,7 @@ export default {
   generate: {
     crawler: false
   }
-}
+};
 ```
 
 ## dir
@@ -67,6 +69,7 @@ If you already activated through nuxt.config.js or otherwise, devtools enable re
 It accepts an array of string or regular expressions and will prevent generation of routes matching them. The routes will still be accessible when `generate.fallback` is used.
 
 Taking this examples of structure:
+
 ```bash
 -| pages/
 ---| index.vue
@@ -87,7 +90,8 @@ By default, running `nuxt build && nuxt export`(>= v2.13) or `nuxt generate` (<=
 
 When adding a regular expression which matches all routes with "ignore", it will prevent the generation of these routes.
 
-nuxt.config.js 
+nuxt.config.js
+
 ```js
 export default {
   generate: {
@@ -95,7 +99,7 @@ export default {
       /^\/admin/ // path starts with /admin
     ]
   }
-}
+};
 ```
 
 ```bash
@@ -108,9 +112,9 @@ You can also exclude a specific route by giving a string:
 ```js
 export default {
   generate: {
-    exclude: ['/my-secret-page']
+    exclude: ["/my-secret-page"]
   }
-}
+};
 ```
 
 ## fallback
@@ -121,9 +125,9 @@ export default {
 ```js
 export default {
   generate: {
-    fallback: '404.html'
+    fallback: "404.html"
   }
-}
+};
 ```
 
 The path to the fallback HTML file. It should be set as the error page, so that also unknown routes are rendered via Nuxt.
@@ -132,23 +136,23 @@ If unset or set to a falsy value, the name of the fallback HTML file will be `20
 When running a SPA it is more idiomatic to use a `200.html`, as it's the only file necessary as no other routes are generated.
 
 ```js
-fallback: false
+fallback: false;
 ```
 
 If working with statically generated pages then it is recommended to use a `404.html` for error pages and for those covered by [excludes](https://nuxtjs.org/api/configuration-generate#exclude) (the files that you do not want generated as static pages).
 
 ```js
-fallback: true
+fallback: true;
 ```
 
 However, Nuxt allows you to configure any page you like so if you don't want to use the `200.html` or `404.html` you can add a string and then you just have to make sure you redirect to that page instead. This is of course not necessary and is best to redirect to `200.html`/`404.html`.
 
 ```js
-fallback: 'fallbackPage.html'
+fallback: "fallbackPage.html";
 ```
 
- *Note: Multiple services (e.g. Netlify) detect a `404.html` automatically. If you configure your webserver on your own, please consult it's documentation to find out how to set up an error page (and set it to the `404.html` file) * 
- 
+_Note: Multiple services (e.g. Netlify) detect a `404.html` automatically. If you configure your webserver on your own, please consult it's documentation to find out how to set up an error page (and set it to the `404.html` file) _
+
 ## interval
 
 - Type: `Number`
@@ -167,7 +171,7 @@ Interval between two render cycles to avoid flooding a potential API with API ca
 
 <div class="Alert Alert-blue">
 
-As of Nuxt v2.13 there is a crawler installed that will now crawl your link tags and generate your routes when using the command `nuxt export` based on those links. 
+As of Nuxt v2.13 there is a crawler installed that will now crawl your link tags and generate your routes when using the command `nuxt export` based on those links.
 
 </div>
 
@@ -175,7 +179,7 @@ As of Nuxt v2.13 there is a crawler installed that will now crawl your link tags
 
 **Warning:** If you using Nuxt >= v2.13 and have pages that have no links such as secret pages and you would like these to also be generated then you can use the `generate.routes` property.
 
-**Warning:** dynamic routes are ignored by the `generate` command when using Nuxt <= v2.12 
+**Warning:** dynamic routes are ignored by the `generate` command when using Nuxt <= v2.12
 
 </div>
 
@@ -197,13 +201,9 @@ We add routes for `/users/:id` in `nuxt.config.js`:
 ```js
 export default {
   generate: {
-    routes: [
-      '/users/1',
-      '/users/2',
-      '/users/3'
-    ]
+    routes: ["/users/1", "/users/2", "/users/3"]
   }
-}
+};
 ```
 
 Then when we launch `nuxt generate`:
@@ -233,20 +233,19 @@ Great, but what if we have **dynamic params**?
 `nuxt.config.js`
 
 ```js
-import axios from 'axios'
+import axios from "axios";
 
 export default {
   generate: {
-    routes () {
-      return axios.get('https://my-api/users')
-        .then((res) => {
-          return res.data.map((user) => {
-            return '/users/' + user.id
-          })
-        })
+    routes() {
+      return axios.get("https://my-api/users").then(res => {
+        return res.data.map(user => {
+          return "/users/" + user.id;
+        });
+      });
     }
   }
-}
+};
 ```
 
 ### Function with a callback
@@ -254,22 +253,23 @@ export default {
 `nuxt.config.js`
 
 ```js
-import axios from 'axios'
+import axios from "axios";
 
 export default {
   generate: {
-    routes (callback) {
-      axios.get('https://my-api/users')
-        .then((res) => {
-          const routes = res.data.map((user) => {
-            return '/users/' + user.id
-          })
-          callback(null, routes)
+    routes(callback) {
+      axios
+        .get("https://my-api/users")
+        .then(res => {
+          const routes = res.data.map(user => {
+            return "/users/" + user.id;
+          });
+          callback(null, routes);
         })
-        .catch(callback)
+        .catch(callback);
     }
   }
-}
+};
 ```
 
 ### Speeding up dynamic route generation with `payload`
@@ -279,23 +279,22 @@ In the example above, we're using the `user.id` from the server to generate the 
 `nuxt.config.js`
 
 ```js
-import axios from 'axios'
+import axios from "axios";
 
 export default {
   generate: {
-    routes () {
-      return axios.get('https://my-api/users')
-        .then((res) => {
-          return res.data.map((user) => {
-            return {
-              route: '/users/' + user.id,
-              payload: user
-            }
-          })
-        })
+    routes() {
+      return axios.get("https://my-api/users").then(res => {
+        return res.data.map(user => {
+          return {
+            route: "/users/" + user.id,
+            payload: user
+          };
+        });
+      });
     }
   }
-}
+};
 ```
 
 Now we can access the `payload` from `/users/_id.vue` like so:
@@ -328,13 +327,14 @@ Example:
 
 When set to false, HTML files are generated according to the route path:
 
-nuxt.config.js 
+nuxt.config.js
+
 ```js
 export default {
   generate: {
     subFolders: false
   }
-}
+};
 ```
 
 ```bash
@@ -344,6 +344,3 @@ export default {
 ---| products/
 -----| item.html
 ```
-
-
-

@@ -1,5 +1,5 @@
 ---
-title: "API: nuxt.renderRoute(route, context)"
+title: "nuxt.renderRoute(route, context)"
 description: Render a specific route with a given context.
 menu: renderRoute
 category: Internals Glossary
@@ -10,7 +10,7 @@ Position: 11
 - Type: `Function`
 - Arguments:
   1. `String` : route to render
-  2. *Optional*, `Object`, context given, available keys: `req` & `res`
+  2. _Optional_, `Object`, context given, available keys: `req` & `res`
 - Returns: `Promise`
   - `html`: `String`
   - `error`: `null` or `Object`
@@ -29,14 +29,14 @@ This method should be used mostly for [test purposes](/guide/development-tools#e
 Example:
 
 ```js
-const { loadNuxt, build } = require('nuxt')
+const { loadNuxt, build } = require("nuxt");
 
 async function start() {
   // Get nuxt instance for start (production mode)
   // Make sure to have run `nuxt build` before running this script
-  const nuxt = await loadNuxt({ for: 'start' })
+  const nuxt = await loadNuxt({ for: "start" });
 
-  const { html, error, redirected } = await nuxt.renderRoute('/')
+  const { html, error, redirected } = await nuxt.renderRoute("/");
 
   // `html` will always be a string
 
@@ -47,5 +47,5 @@ async function start() {
   // { path: '/other-path', query: {}, status: 302 }
 }
 
-start()
+start();
 ```

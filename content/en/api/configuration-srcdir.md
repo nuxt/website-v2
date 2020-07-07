@@ -1,5 +1,5 @@
 ---
-title: "API: The srcDir Property"
+title: "The srcDir Property"
 description: Define the source directory of your Nuxt.js application
 menu: srcDir
 group: Configuration
@@ -16,6 +16,7 @@ If a relative path is specified it will be relative to the rootDir
 
 Example 1:
 Prerequisites:
+
 ```js
 // nuxt.config.js
 export default {
@@ -27,7 +28,9 @@ export default {
     "dev": "yarn nuxt"
   }
 ```
+
 works with the following folder structure (note that nuxt.config is listed in the app directory)
+
 ```bash
 -| app/
 ---| node_modules/
@@ -49,6 +52,7 @@ Example 2:
 Instead of example 1 you can also move the nuxt.config into your src folder. In this case you only need to specify client as the rootDir and you can leave srcDir empty:
 
 Prerequisites:
+
 ```js
 // nuxt.config.js
 export default {
@@ -60,7 +64,9 @@ export default {
     "dev": "yarn nuxt client" // this sets client as the rootDir
   }
 ```
+
 works with the following folder structure (note that nuxt.config is listed in the client directory)
+
 ```bash
 -| app/
 ---| node_modules/

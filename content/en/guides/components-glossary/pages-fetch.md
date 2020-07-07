@@ -1,5 +1,5 @@
 ---
-title: "API: The fetch Method"
+title: "The fetch Method"
 description: The `fetch` method is used to fill the store before rendering the page, it's like the `asyncData` method except it doesn't set the component data.
 menu: Fetch Method
 category: Components Glossary
@@ -23,7 +23,8 @@ See [live demo](https://nuxt-new-fetch.surge.sh) and [code example](https://gith
 Every time you need to get **asynchronous** data. `fetch` is called on server-side when rendering the route, and on client-side when navigating.
 
 It exposes `$fetchState` at the component level:
-- `$fetchState.pending`: `Boolean`, allows you to display a placeholder when `fetch` is being called *on client-side*.
+
+- `$fetchState.pending`: `Boolean`, allows you to display a placeholder when `fetch` is being called _on client-side_.
 - `$fetchState.error`: `null` or `Error`, allows you to display an error message
 - `$fetchState.timestamp`: `Integer`, is a timestamp of the last fetch, useful for caching with `keep-alive`
 
@@ -32,6 +33,7 @@ If you want to call the `fetch` hook from your template use:
 ```html
 <button @click="$fetch">Refresh</button>
 ```
+
 or component method:
 
 ```javascript
@@ -60,17 +62,18 @@ When `fetchOnServer` is falsy (`false` or returns `false`), `fetch` will be call
 
 ```html
 <script>
-export default {
-  data () {
-    return {
-      posts: []
-    }
-  },
-  async fetch () {
-    this.posts = await this.$http.$get('https://jsonplaceholder.typicode.com/posts')
-  },
-  fetchOnServer: false
-}
+  export default {
+    data() {
+      return {
+        posts: []
+      };
+    },
+    async fetch() {
+      this.posts = await this.$http.$get(
+        "https://jsonplaceholder.typicode.com/posts"
+      );
+    },
+    fetchOnServer: false
+  };
 </script>
 ```
-

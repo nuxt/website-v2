@@ -1,5 +1,5 @@
 ---
-title: "API: The render Property"
+title: "The render Property"
 description: Nuxt.js lets you customize runtime options for rendering pages
 menu: render
 category: Configuration Glossary
@@ -20,13 +20,13 @@ export default {
   render: {
     bundleRenderer: {
       directives: {
-        custom1 (el, dir) {
+        custom1(el, dir) {
           // something ...
         }
       }
     }
   }
-}
+};
 ```
 
 Learn more about available options on [Vue SSR API Reference](https://ssr.vuejs.org/en/api.html#renderer-options).
@@ -44,8 +44,9 @@ See [etag](https://www.npmjs.com/package/etag) docs for possible options.
 You can use your own hash function by specifying `etag.hash`:
 
 `nuxt.config.js`
+
 ```js
-import { murmurHash128 } from 'murmurhash-native'
+import { murmurHash128 } from "murmurhash-native";
 
 export default {
   render: {
@@ -53,7 +54,7 @@ export default {
       hash: html => murmurHash128(html)
     }
   }
-}
+};
 ```
 
 In this case we use [murmurhash-native](https://github.com/royaltm/node-murmurhash-native), which is faster for larger html body sizes. Note that the `weak` option is ignored, when specifying your own hash function.
@@ -90,16 +91,18 @@ If you want to disable one of them or both, you can pass a falsy value.
 You can control what links to push using `pushAssets` function.
 
 Example:
+
 ```js
-pushAssets: (req, res, publicPath, preloadFiles) => preloadFiles
-  .filter(f => f.asType === 'script' && f.file === 'runtime.js')
-  .map(f => `<${publicPath}${f.file}>; rel=preload; as=${f.asType}`)
+pushAssets: (req, res, publicPath, preloadFiles) =>
+  preloadFiles
+    .filter(f => f.asType === "script" && f.file === "runtime.js")
+    .map(f => `<${publicPath}${f.file}>; rel=preload; as=${f.asType}`);
 ```
 
 You can add your own assets to the array as well.
 Using `req` and `res` you can decide what links to push based on the request headers, for example using the cookie with application version.
 
-The assets will be joined together with `, ` and passed as a single `Link` header.
+The assets will be joined together with `,` and passed as a single `Link` header.
 
 ## injectScripts
 
@@ -159,10 +162,10 @@ It will add the router base to your static assets.
 
 **Example:**
 
-* Assets: `favicon.ico`
-* Router base: `/t`
-* With `prefix: true` (default): `/t/favicon.ico`
-* With `prefix: false`: `/favicon.ico`
+- Assets: `favicon.ico`
+- Router base: `/t`
+- With `prefix: true` (default): `/t/favicon.ico`
+- With `prefix: false`: `/favicon.ico`
 
 **Caveats:**
 
@@ -195,29 +198,27 @@ export default {
   render: {
     csp: true
   }
-}
+};
 
 // OR
 
 export default {
   render: {
     csp: {
-      hashAlgorithm: 'sha256',
+      hashAlgorithm: "sha256",
       policies: {
-        'script-src': [
-          'https://www.google-analytics.com',
-          'https://name.example.com'
+        "script-src": [
+          "https://www.google-analytics.com",
+          "https://name.example.com"
         ],
-        'report-uri': [
-          'https://report.example.com/report-csp-violations'
-        ]
+        "report-uri": ["https://report.example.com/report-csp-violations"]
       },
       addMeta: true
     }
   }
-}
+};
 
-// OR 
+// OR
 /*
   The following example allows Google Analytics, LogRocket.io, and Sentry.io
   for logging and analytic tracking.
@@ -227,27 +228,34 @@ export default {
 
   To learn what tracking link you should use.
 */
-const PRIMARY_HOSTS = `loc.example-website.com`
+const PRIMARY_HOSTS = `loc.example-website.com`;
 export default {
   csp: {
     reportOnly: true,
-    hashAlgorithm: 'sha256',
+    hashAlgorithm: "sha256",
     policies: {
-      'default-src': ["'self'"],
-      'img-src': ['https:', '*.google-analytics.com'],
-      'worker-src': ["'self'", `blob:`, PRIMARY_HOSTS, '*.logrocket.io'],
-      'style-src': ["'self'", "'unsafe-inline'", PRIMARY_HOSTS],
-      'script-src': ["'self'", "'unsafe-inline'", PRIMARY_HOSTS, 'sentry.io', '*.sentry-cdn.com', '*.google-analytics.com', '*.logrocket.io'],
-      'connect-src': [PRIMARY_HOSTS, 'sentry.io', '*.google-analytics.com'],
-      'form-action': ["'self'"],
-      'frame-ancestors': ["'none'"],
-      'object-src': ["'none'"],
-      'base-uri': [PRIMARY_HOSTS],
-      'report-uri': [
+      "default-src": ["'self'"],
+      "img-src": ["https:", "*.google-analytics.com"],
+      "worker-src": ["'self'", `blob:`, PRIMARY_HOSTS, "*.logrocket.io"],
+      "style-src": ["'self'", "'unsafe-inline'", PRIMARY_HOSTS],
+      "script-src": [
+        "'self'",
+        "'unsafe-inline'",
+        PRIMARY_HOSTS,
+        "sentry.io",
+        "*.sentry-cdn.com",
+        "*.google-analytics.com",
+        "*.logrocket.io"
+      ],
+      "connect-src": [PRIMARY_HOSTS, "sentry.io", "*.google-analytics.com"],
+      "form-action": ["'self'"],
+      "frame-ancestors": ["'none'"],
+      "object-src": ["'none'"],
+      "base-uri": [PRIMARY_HOSTS],
+      "report-uri": [
         `https://sentry.io/api/<project>/security/?sentry_key=<key>`
       ]
     }
   }
-}
-
+};
 ```

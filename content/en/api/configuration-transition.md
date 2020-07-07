@@ -1,5 +1,5 @@
 ---
-title: "API: transition Properties"
+title: "transition Properties"
 description: Set the default properties of the page and layout transitions.
 menu: transition
 group: Configuration
@@ -16,6 +16,7 @@ position: 31
 > Used to set the default properties of the page transitions.
 
 Default:
+
 ```js
 {
   name: 'page',
@@ -72,10 +73,12 @@ export default {
 Example global `css`:
 
 ```css
-.layout-enter-active, .layout-leave-active {
-  transition: opacity .5s
+.layout-enter-active,
+.layout-leave-active {
+  transition: opacity 0.5s;
 }
-.layout-enter, .layout-leave-active {
-  opacity: 0
+.layout-enter,
+.layout-leave-active {
+  opacity: 0;
 }
 ```

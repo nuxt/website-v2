@@ -1,5 +1,5 @@
 ---
-title: "API: The extendPlugins Property"
+title: "The extendPlugins Property"
 description: The extendPlugins property lets you customize Nuxt.js plugins.
 menu: extendPlugins
 group: Configuration
@@ -19,16 +19,16 @@ Example of changing plugins order (`nuxt.config.js`):
 
 ```js
 export default {
-  extendPlugins (plugins) {
+  extendPlugins(plugins) {
     const pluginIndex = plugins.findIndex(
-      ({ src }) => src === '~/plugins/shouldBeFirst.js'
-    )
-    const shouldBeFirstPlugin = plugins[pluginIndex]
+      ({ src }) => src === "~/plugins/shouldBeFirst.js"
+    );
+    const shouldBeFirstPlugin = plugins[pluginIndex];
 
-    plugins.splice(pluginIndex, 1)
-    plugins.unshift(shouldBeFirstPlugin)
+    plugins.splice(pluginIndex, 1);
+    plugins.unshift(shouldBeFirstPlugin);
 
-    return plugins
+    return plugins;
   }
-}
+};
 ```

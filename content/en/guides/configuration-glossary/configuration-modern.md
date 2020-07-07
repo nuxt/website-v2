@@ -1,5 +1,5 @@
 ---
-title: "API: The modern Property"
+title: "The modern Property"
 description: Build and server a modern bundle
 menu: modern
 category: Configuration Glossary
@@ -7,7 +7,7 @@ categoryPosition: 5
 position: 18
 ---
 
-> This feature is inspired by [vue-cli modern mode](https://cli.vuejs.org/guide/browser-compatibility.html#modern-mode) 
+> This feature is inspired by [vue-cli modern mode](https://cli.vuejs.org/guide/browser-compatibility.html#modern-mode)
 
 - Type: `String` or `Boolean`
   - Default: false
@@ -33,14 +33,15 @@ The two versions of bundles are:
   }
 }
 ```
-**Note about *nuxt generate*:** The `modern` property also works with the `nuxt build && nuxt export`(>= v2.13) or `nuxt generate`(<= v2.12) command, but in this case only the `client` option is honored and will be selected automatically when launching the `nuxt build --modern && nuxt export` or `nuxt generate --modern` command without providing any values.
+
+**Note about _nuxt generate_:** The `modern` property also works with the `nuxt build && nuxt export`(>= v2.13) or `nuxt generate`(<= v2.12) command, but in this case only the `client` option is honored and will be selected automatically when launching the `nuxt build --modern && nuxt export` or `nuxt generate --modern` command without providing any values.
 
 - Nuxt will automatically detect `modern` build in `nuxt start` when `modern` is not specified, auto-detected mode is:
 
-| Mode          | Modern Mode   |
-| ------------- |:-------------:|
-| universal     | server        |
-| spa           | client        |
+| Mode      | Modern Mode |
+| --------- | :---------: |
+| universal |   server    |
+| spa       |   client    |
 
 - Modern mode for `nuxt build && nuxt export` or `nuxt generate` can only be `client`
 - Use [`render.crossorigin`](/api/configuration-render#crossorigin) to set `crossorigin` attribute in `<link>` and `<script>`

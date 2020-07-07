@@ -1,5 +1,5 @@
 ---
-title: "API: The key Property"
+title: "The key Property"
 description: Set the `key` property of internal `<router-view>` component
 menu: Key Property
 category: Components Glossary
@@ -7,6 +7,7 @@ categoryPosition: 7
 ---
 
 > Set the `key` property of internal `<router-view>` component
+
 - **Type:** `String` or `Function`
 
 The `key` property is propagated into `<router-view>`, which is useful to make transitions inside a dynamic page and different route. Different keys result in rerendering of page components.
@@ -15,8 +16,8 @@ There are several ways to set the key. For more details, please refer to the `nu
 
 ```js
 export default {
-  key (route) {
-    return route.fullPath
+  key(route) {
+    return route.fullPath;
   }
-}
+};
 ```

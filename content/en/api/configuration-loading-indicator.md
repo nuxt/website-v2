@@ -1,5 +1,5 @@
 ---
-title: "API: The loading indicator Property"
+title: "The loading indicator Property"
 description: Show fancy loading indicator while SPA page is loading!
 menu: loadingIndicator
 group: Configuration
@@ -14,6 +14,7 @@ When running Nuxt.js in SPA mode, there is no content from the server side on th
 This property can have 3 different types: `string` or `false` or `object`. If a string value is provided it is converted to object style.
 
 Default value is:
+
 ```js
 loadingIndicator: {
   name: 'circle',

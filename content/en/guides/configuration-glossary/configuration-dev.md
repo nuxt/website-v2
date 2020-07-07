@@ -1,5 +1,5 @@
 ---
-title: "API: The dev Property"
+title: "The dev Property"
 description: Define the development or production mode.
 menu: dev
 category: Configuration Glossary

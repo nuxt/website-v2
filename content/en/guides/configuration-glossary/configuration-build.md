@@ -1,5 +1,5 @@
 ---
-title: "API: The build Property"
+title: "The build Property"
 description: Nuxt.js lets you customize the webpack configuration for building your web application as you want.
 menu: build
 category: Configuration Glossary
@@ -26,10 +26,10 @@ export default {
     analyze: true,
     // or
     analyze: {
-      analyzerMode: 'static'
+      analyzerMode: "static"
     }
   }
-}
+};
 ```
 
 <div class="Alert Alert--teal">
@@ -61,8 +61,8 @@ The default targets of [@nuxt/babel-preset-app](https://github.com/nuxt/nuxt.js/
 - Argument:
   1. `Object`: { isServer: true | false }
   2. `Array`:
-      - preset name `@nuxt/babel-preset-app`
-      - [`options`](https://github.com/nuxt/nuxt.js/tree/dev/packages/babel-preset-app#options) of `@nuxt/babel-preset-app`
+     - preset name `@nuxt/babel-preset-app`
+     - [`options`](https://github.com/nuxt/nuxt.js/tree/dev/packages/babel-preset-app#options) of `@nuxt/babel-preset-app`
 
 **Note**: The presets configured in `build.babel.presets` will be applied to both, the client and the server build. The target will be set by Nuxt accordingly (client/server). If you want configure the preset differently for the client or the server build, please use `presets` as a function:
 
@@ -89,21 +89,23 @@ Or override default value by returning whole presets list:
 export default {
   build: {
     babel: {
-      presets ({ isServer }, [ preset, options ]) {
+      presets({ isServer }, [preset, options]) {
         return [
           [
-            preset, {
-              buildTarget: isServer ? 'server' : 'client',
+            preset,
+            {
+              buildTarget: isServer ? "server" : "client",
               ...options
-            }],
+            }
+          ],
           [
             // Other presets
           ]
-        ]
+        ];
       }
     }
   }
-}
+};
 ```
 
 ## cache
@@ -147,29 +149,27 @@ The extend is called twice, one time for the server bundle, and one time for the
 1. The Webpack config object,
 2. An object with the following keys (all boolean except `loaders`): `isDev`, `isClient`, `isServer`, `loaders`.
 
-
 <div class="Alert Alert--orange">
 
-  **Warning:**
-  The `isClient` and `isServer` keys provided in are separate from the keys available in [`context`](/api/context).
-  They are **not** deprecated. Do not use `process.client` and `process.server` here as they are `undefined` at this point.
+**Warning:**
+The `isClient` and `isServer` keys provided in are separate from the keys available in [`context`](/api/context).
+They are **not** deprecated. Do not use `process.client` and `process.server` here as they are `undefined` at this point.
 
 </div>
-
 
 Example (`nuxt.config.js`):
 
 ```js
 export default {
   build: {
-    extend (config, { isClient }) {
+    extend(config, { isClient }) {
       // Extend only webpack config for client-bundle
       if (isClient) {
-        config.devtool = 'source-map'
+        config.devtool = "source-map";
       }
     }
   }
-}
+};
 ```
 
 If you want to see more about our default webpack configuration, take a look at our [webpack directory](https://github.com/nuxt/nuxt.js/tree/dev/packages/webpack/src/config).
@@ -183,14 +183,14 @@ Example (`nuxt.config.js`):
 ```js
 export default {
   build: {
-    extend (config, { isClient, loaders: { vue } }) {
+    extend(config, { isClient, loaders: { vue } }) {
       // Extend only webpack config for client-bundle
       if (isClient) {
-        vue.transformAssetUrls.video = ['src', 'poster']
+        vue.transformAssetUrls.video = ["src", "poster"];
       }
     }
   }
-}
+};
 ```
 
 ## extractCSS
@@ -225,16 +225,16 @@ export default {
       splitChunks: {
         cacheGroups: {
           styles: {
-            name: 'styles',
+            name: "styles",
             test: /\.(css|vue)$/,
-            chunks: 'all',
+            chunks: "all",
             enforce: true
           }
         }
       }
     }
   }
-}
+};
 ```
 
 ## filenames
@@ -261,10 +261,10 @@ This example changes fancy chunk names to numerical ids (`nuxt.config.js`):
 export default {
   build: {
     filenames: {
-      chunk: ({ isDev }) => isDev ? '[name].js' : '[id].[contenthash].js'
+      chunk: ({ isDev }) => (isDev ? "[name].js" : "[id].[contenthash].js")
     }
   }
-}
+};
 ```
 
 To understand a bit more about the use of manifests, take a look at this [webpack documentation](https://webpack.js.org/guides/code-splitting/).
@@ -312,11 +312,12 @@ See [webpack-hot-middleware](https://github.com/glenjamin/webpack-hot-middleware
 **Attention:** If you make changes to `html.minify`, they won't be merged with the defaults!
 
 Configuration for the [html-minifier](https://github.com/kangax/html-minifier) plugin used to minify
-HTML files created during the build process (will be applied for *all modes*).
+HTML files created during the build process (will be applied for _all modes_).
 
 ## indicator
 
 > Display build indicator for hot module replacement in development (available in `v2.8.0+`)
+
 - Type: `Boolean`
 - Default: `true`
 
@@ -450,17 +451,17 @@ See [NMFR/optimize-css-assets-webpack-plugin](https://github.com/NMFR/optimize-c
 Example (`nuxt.config.js`):
 
 ```js
-import webpack from 'webpack'
-import { version } from './package.json'
+import webpack from "webpack";
+import { version } from "./package.json";
 export default {
   build: {
     plugins: [
       new webpack.DefinePlugin({
-        'process.VERSION': version
+        "process.VERSION": version
       })
     ]
   }
-}
+};
 ```
 
 ## postcss
@@ -498,11 +499,11 @@ export default {
     postcss: {
       plugins: {
         // Disable `postcss-url`
-        'postcss-url': false,
+        "postcss-url": false,
         // Add some plugins
-        'postcss-nested': {},
-        'postcss-responsive-type': {},
-        'postcss-hexrgba': {}
+        "postcss-nested": {},
+        "postcss-responsive-type": {},
+        "postcss-hexrgba": {}
       },
       preset: {
         autoprefixer: {
@@ -511,7 +512,7 @@ export default {
       }
     }
   }
-}
+};
 ```
 
 If the postcss configuration is an `Object`, `order` can be used for defining the plugin order:
@@ -535,6 +536,7 @@ export default {
   }
 }
 ```
+
 ### postcss plugins & nuxt-tailwindcss
 
 If you want to apply postcss plugin (eg. postcss-pxtorem) on the nuxt-tailwindcss configuration, you have to change order and load first tailwindcss.
@@ -544,24 +546,21 @@ If you want to apply postcss plugin (eg. postcss-pxtorem) on the nuxt-tailwindcs
 Example (`nuxt.config.js`):
 
 ```js
-import { join } from 'path'
+import { join } from "path";
 
 export default {
   // ...
   build: {
     postcss: {
       plugins: {
-        tailwindcss: join(__dirname, 'tailwind.config.js'),
-        'postcss-pxtorem': {
-          propList: [
-            '*',
-            '!border*',
-          ]
+        tailwindcss: join(__dirname, "tailwind.config.js"),
+        "postcss-pxtorem": {
+          propList: ["*", "!border*"]
         }
       }
     }
   }
-}
+};
 ```
 
 ## profile
@@ -583,9 +582,9 @@ Example (`nuxt.config.js`):
 ```js
 export default {
   build: {
-    publicPath: 'https://cdn.nuxtjs.org'
+    publicPath: "https://cdn.nuxtjs.org"
   }
-}
+};
 ```
 
 Then, when launching `nuxt build`, upload the content of `.nuxt/dist/client` directory to your CDN and voilà!
@@ -611,7 +610,6 @@ Then, when launching `nuxt build`, upload the content of `.nuxt/dist/client` dir
   ```
 
 If split codes for `layout`, `pages` and `commons` (common libs: vue|vue-loader|vue-router|vuex...).
-
 
 ## ssr
 
@@ -673,15 +671,16 @@ export default {
   build: {
     templates: [
       {
-        src: '~/modules/support/plugin.js', // `src` can be absolute or relative
-        dst: 'support.js', // `dst` is relative to project `.nuxt` dir
-        options: { // Options are provided to template as `options` key
+        src: "~/modules/support/plugin.js", // `src` can be absolute or relative
+        dst: "support.js", // `dst` is relative to project `.nuxt` dir
+        options: {
+          // Options are provided to template as `options` key
           live_chat: false
         }
       }
     ]
   }
-}
+};
 ```
 
 Templates are rendered using [`lodash.template`](https://lodash.com/docs/#template) you can learn more about using them [here](https://github.com/learn-co-students/javascript-lodash-templates-v-000).
@@ -725,9 +724,7 @@ Starting with `v2.9.0`, you can also use a function to conditionally transpile, 
 ```js
 {
   build: {
-    transpile: [
-      ({ isLegacy }) => isLegacy && 'ky'
-    ]
+    transpile: [({ isLegacy }) => isLegacy && "ky"];
   }
 }
 ```
@@ -762,11 +759,9 @@ Starting with `v2.9.0`, you can also use a function to conditionally transpile, 
 ```js
 export default {
   build: {
-    watch: [
-      '~/.nuxt/support.js'
-    ]
+    watch: ["~/.nuxt/support.js"]
   }
-}
+};
 ```
 
 ## followSymlinks
@@ -780,5 +775,5 @@ export default {
   build: {
     followSymlinks: true
   }
-}
+};
 ```

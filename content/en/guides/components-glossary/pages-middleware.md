@@ -1,5 +1,5 @@
 ---
-title: "API: The middleware Property"
+title: "The middleware Property"
 description: Set the middleware for a specific page of the application.
 menu: Middleware Property
 category: Components Glossary
@@ -15,17 +15,14 @@ Set the middleware for a specific page of the application.
 
 You can create named middleware by creating a file inside the `middleware/` directory, the file name will be the middleware name.
 
-
 ```js{[middleware/authenticated.js]}
-export default function ({ store, redirect }) {
+export default function({ store, redirect }) {
   // If the user is not authenticated
   if (!store.state.authenticated) {
-    return redirect('/login')
+    return redirect("/login");
   }
 }
 ```
-
-
 
 ```html{}[pages/secret.vue]
 <template>
@@ -33,9 +30,9 @@ export default function ({ store, redirect }) {
 </template>
 
 <script>
-export default {
-  middleware: 'authenticated'
-}
+  export default {
+    middleware: "authenticated"
+  };
 </script>
 ```
 
@@ -43,20 +40,19 @@ export default {
 
 If you need to use a middleware only for a specific page, you can directly use a function for it (or an array of functions):
 
-
 ```html{[pages/secret.vue]}
 <template>
   <h1>Secret page</h1>
 </template>
 
 <script>
-export default {
-  middleware ({ store, redirect }) {
-    // If the user is not authenticated
-    if (!store.state.authenticated) {
-      return redirect('/login')
+  export default {
+    middleware({ store, redirect }) {
+      // If the user is not authenticated
+      if (!store.state.authenticated) {
+        return redirect("/login");
+      }
     }
-  }
-}
+  };
 </script>
 ```

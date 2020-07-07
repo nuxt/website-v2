@@ -1,5 +1,5 @@
 ---
-title: "API: The ignore Property"
+title: "The ignore Property"
 description: Define the ignore files for your Nuxt.js application
 menu: ignore
 group: Configuration
@@ -64,5 +64,5 @@ export default {
   ignoreOptions: {
     ignorecase: false
   }
-}
+};
 ```

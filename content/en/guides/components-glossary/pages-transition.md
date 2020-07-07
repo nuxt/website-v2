@@ -1,5 +1,5 @@
 ---
-title: "API: The page `transition` Property"
+title: "The page `transition` Property"
 description: Nuxt.js uses the `<transition>` component to let you create and apply amazing transitions/animations as you navigate between your pages.
 menu: Transition Property
 category: Components Glossary
@@ -29,14 +29,14 @@ If the `transition` key is set as a string, it will be used as the `transition.n
 
 ```js
 export default {
-  transition: 'test'
-}
+  transition: "test"
+};
 ```
 
 Nuxt.js will use these settings to set the component as follows:
 
 ```html
-<transition name="test">
+<transition name="test"></transition>
 ```
 
 ## Object
@@ -46,22 +46,22 @@ If the `transition` key is set as an object:
 ```js
 export default {
   transition: {
-    name: 'test',
-    mode: 'out-in'
+    name: "test",
+    mode: "out-in"
   }
-}
+};
 ```
 
 Nuxt.js will use these settings to set the component as follows:
 
 ```html
-<transition name="test" mode="out-in">
+<transition name="test" mode="out-in"></transition>
 ```
 
 The `transition` object can have the following properties:
 
 | key                | Type      | Default    | definition                                                                                                                                                                                                                 |
-|--------------------|-----------|------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| ------------------ | --------- | ---------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | `name`             | `String`  | `"page"`   | The transition name applied on all the route transitions.                                                                                                                                                                  |
 | `mode`             | `String`  | `"out-in"` | The transition mode applied on all routes, see [Vue.js documentation](https://vuejs.org/v2/guide/transitions.html#Transition-Modes).                                                                                       |
 | `css`              | `Boolean` | `true`     | Whether to apply CSS transition classes. Defaults to `true`. If set to `false`, will only trigger JavaScript hooks registered via component events.                                                                        |
@@ -89,25 +89,25 @@ You can also define methods in the page `transition` property, these are for the
 export default {
   transition: {
     afterLeave(el) {
-      console.log('afterLeave', el)
+      console.log("afterLeave", el);
     }
   }
-}
+};
 ```
 
-*Note: it’s also a good idea to explicitly add `css: false` for JavaScript-only transitions so that Vue can skip the CSS detection. This also prevents CSS rules from accidentally interfering with the transition.*
+_Note: it’s also a good idea to explicitly add `css: false` for JavaScript-only transitions so that Vue can skip the CSS detection. This also prevents CSS rules from accidentally interfering with the transition._
 
 ### Transition Mode
 
-**The default transition mode for pages differs from the default mode in Vue.js**. The `transition` mode is by default set to `out-in`. If you want to run leaving and entering transitions simultaneously, you have to set the mode to the empty string `mode: ''`. 
+**The default transition mode for pages differs from the default mode in Vue.js**. The `transition` mode is by default set to `out-in`. If you want to run leaving and entering transitions simultaneously, you have to set the mode to the empty string `mode: ''`.
 
 ```js
 export default {
   transition: {
-    name: 'test',
-    mode: ''
+    name: "test",
+    mode: ""
   }
-}
+};
 ```
 
 ## Function
@@ -116,11 +116,13 @@ If the `transition` key is set as a function:
 
 ```js
 export default {
-  transition (to, from) {
-    if (!from) { return 'slide-left' }
-    return +to.query.page < +from.query.page ? 'slide-right' : 'slide-left'
+  transition(to, from) {
+    if (!from) {
+      return "slide-left";
+    }
+    return +to.query.page < +from.query.page ? "slide-right" : "slide-left";
   }
-}
+};
 ```
 
 Transitions applied on navigation:

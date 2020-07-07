@@ -1,5 +1,5 @@
 ---
-title: "API: The Context"
+title: "The Context"
 description: The `context` provides additional objects/params from Nuxt not traditionally available to Vue components. The `context` is available in special nuxt lifecycle areas like `asyncData`, `plugins`, `middlewares`, `modules`, and `store/nuxtServerInit`.
 menu: context
 category: Internals Glossary
@@ -9,7 +9,7 @@ Position: 1
 
 The `context` provides additional objects/params from Nuxt to Vue components and is available in special nuxt lifecycle areas like [`asyncData`](/api), [`fetch`](/api/pages-fetch), [`plugins`](/guide/plugins), [`middleware`](/guide/routing#middleware) and [`nuxtServerInit`](/guide/vuex-store#the-nuxtserverinit-action).
 
-> *Note: "The Context" we refer to here is not to be confused with the `context` object available in [`Vuex Actions`](https://vuex.vuejs.org/guide/actions.html). The two are unrelated.*
+> _Note: "The Context" we refer to here is not to be confused with the `context` object available in [`Vuex Actions`](https://vuex.vuejs.org/guide/actions.html). The two are unrelated._
 
 ```js
 function (context) {
@@ -43,61 +43,61 @@ These keys are available both on client-side and server-side.
 
 ### app
 
-`app` (*NuxtAppOptions*)
+`app` (_NuxtAppOptions_)
 
 The root Vue instance options that includes all your plugins. For example, when using `i18n`, you can get access to `$i18n` through `context.app.i18n`.
 
 ### store
 
-`store` ([*Vuex Store*](https://vuex.vuejs.org/en/api.html#vuexstore-instance-properties))
+`store` ([_Vuex Store_](https://vuex.vuejs.org/en/api.html#vuexstore-instance-properties))
 
 Vuex Store instance. **Available only if the [vuex store](/guide/vuex-store) is set**.
 
 ### route
 
-`route` ([*Vue Router Route*](https://router.vuejs.org/en/api/route-object.html))
+`route` ([_Vue Router Route_](https://router.vuejs.org/en/api/route-object.html))
 
 Vue Router route instance.
 
 ### params
 
-`params` (*Object*)
+`params` (_Object_)
 
 Alias of `route.params`.
 
 ### query
 
-`query` (*Object*)
+`query` (_Object_)
 
 Alias of `route.query`.
 
 ### env
 
-`env` (*Object*)
+`env` (_Object_)
 
 Environment variables set in `nuxt.config.js`, see [env api](/api/configuration-env).
 
 ### IsDev
 
-`isDev` (*Boolean*)
+`isDev` (_Boolean_)
 
-Boolean to let you know if you're in dev mode, can be useful for caching some data in production. 
+Boolean to let you know if you're in dev mode, can be useful for caching some data in production.
 
 ### isHMR
 
-`isHMR` (*Boolean*)
+`isHMR` (_Boolean_)
 
-Boolean to let you know if the method/middleware is called from webpack hot module replacement (*true only on client-side in dev mode*).
+Boolean to let you know if the method/middleware is called from webpack hot module replacement (_true only on client-side in dev mode_).
 
 ### redirect
 
-`redirect` (*Function*)
+`redirect` (_Function_)
 
 Use this method to redirect the user to another route, the status code is used on the server-side, defaults to `302`. `redirect([status,] path [, query])`.
 
 ### error
 
-`error` (*Function*)
+`error` (_Function_)
 
 Use this method to show the error page: `error(params)`. The `params` should have the properties `statusCode` and `message`.
 
@@ -107,19 +107,19 @@ These keys are available only on the server-side.
 
 ### req
 
-`req` ([*http.Request*](https://nodejs.org/api/http.html#http_class_http_incomingmessage))
+`req` ([_http.Request_](https://nodejs.org/api/http.html#http_class_http_incomingmessage))
 
-Request from the Node.js server. If Nuxt is used as a middleware, the request object might be different depending on the framework you're using.<br>**Not available via `nuxt build && nuxt export` or `nuxt generate`**.  
+Request from the Node.js server. If Nuxt is used as a middleware, the request object might be different depending on the framework you're using.<br>**Not available via `nuxt build && nuxt export` or `nuxt generate`**.
 
 ### Res
 
-`res` ([*http.Response*](https://nodejs.org/api/http.html#http_class_http_serverresponse))
+`res` ([_http.Response_](https://nodejs.org/api/http.html#http_class_http_serverresponse))
 
 Response from the Node.js server. If Nuxt is used as a middleware, the res object might be different depending on the framework you're using.<br>**Not available via `nuxt build && nuxt export` or `nuxt generate`**.
 
 ### beforeNuxtRender
 
-`beforeNuxtRender(fn)` (*Function*)
+`beforeNuxtRender(fn)` (_Function_)
 
 Use this method to update `__NUXT__` variable rendered on client-side, the `fn` (can be asynchronous) is called with `{ Components, nuxtState }`, see [example](https://github.com/nuxt/nuxt.js/blob/cf6b0df45f678c5ac35535d49710c606ab34787d/test/fixtures/basic/pages/special-state.vue).
 
@@ -129,12 +129,12 @@ These keys are available only on client-side.
 
 ### from
 
-`from` ([*Vue Router Route*](https://router.vuejs.org/en/api/route-object.html))
+`from` ([_Vue Router Route_](https://router.vuejs.org/en/api/route-object.html))
 
 The route navigated from.
 
 ### nuxtState
 
-`nuxtState` *(Object)*
+`nuxtState` _(Object)_
 
 Nuxt state, useful for plugins which uses `beforeNuxtRender` to get the nuxt state on client-side before hydration. **Available only in `universal` mode**.

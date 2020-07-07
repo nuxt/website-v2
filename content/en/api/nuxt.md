@@ -1,5 +1,5 @@
 ---
-title: "API: Using Nuxt.js Programmatically"
+title: "Using Nuxt.js Programmatically"
 description: You can use Nuxt.js programmatically to use it as a middleware giving you the freedom of creating your own server for rendering your web applications.
 menu: Usage
 group: Programmatically
@@ -15,17 +15,17 @@ You can see programmatic examples at [examples/programmatic](https://github.com/
 To see the list of options to give to Nuxt.js, see the configuration section.
 
 ```js
-const { loadNuxt, build } = require('nuxt')
+const { loadNuxt, build } = require("nuxt");
 
 // Check if we need to run Nuxt in development mode
-const isDev = process.env.NODE_ENV !== 'production'
+const isDev = process.env.NODE_ENV !== "production";
 
 // Get a ready to use Nuxt instance
-const nuxt = await loadNuxt(isDev ? 'dev' : 'start')
+const nuxt = await loadNuxt(isDev ? "dev" : "start");
 
 // Enable live build & reloading on dev
 if (isDev) {
-  build(nuxt)
+  build(nuxt);
 }
 
 // We can use `nuxt.render(req, res)` or `nuxt.renderRoute(route, context)`
@@ -38,5 +38,5 @@ You can take a look at the [nuxt-express](https://github.com/nuxt/express) and [
 If you want to display Nuxt.js logs, you can add the following to the top of your file:
 
 ```js
-process.env.DEBUG = 'nuxt:*'
+process.env.DEBUG = "nuxt:*";
 ```

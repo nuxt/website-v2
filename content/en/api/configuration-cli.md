@@ -1,5 +1,5 @@
 ---
-title: "API: The cli Property"
+title: "The cli Property"
 description: Nuxt.js lets you customize the CLI configuration.
 menu: cli
 group: Configuration
@@ -17,6 +17,7 @@ position: 3
 Change the color of the 'Nuxt.js' title in the CLI banner.
 
 Available colors:
+
 - `black`, `red`, `green`, `yellow`, `blue`, `magenta`, `cyan`, `white`, `gray`, `redBright`, `greenBright`, `yellowBright`, `blueBright`, `magentaBright`, `cyanBright`, `whiteBright`
 
 Example (`nuxt.config.js`):
@@ -24,7 +25,7 @@ Example (`nuxt.config.js`):
 ```js
 export default {
   cli: {
-    bannerColor: 'yellow'
+    bannerColor: "yellow"
   }
-}
+};
 ```

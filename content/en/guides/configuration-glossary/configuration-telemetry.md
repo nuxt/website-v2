@@ -1,6 +1,6 @@
 ---
-title: "API: telemetry Property"
-description: 'Nuxt.js collects anonymous telemetry data about general usage. This helps us to accurately gauge Nuxt feature usage and customization across all our users.'
+title: "telemetry Property"
+description: "Nuxt.js collects anonymous telemetry data about general usage. This helps us to accurately gauge Nuxt feature usage and customization across all our users."
 menu: telemetry
 category: Configuration Glossary
 categoryPosition: 5
@@ -23,6 +23,7 @@ However, this manual process only collects feedback from a subset of users that 
 Nuxt Telemetry collects **anonymous telemetry data about general usage**. This helps us to accurately gauge feature usage and customization across all our users. This data will let us better understand how Nuxt.js is used globally, measuring improvements made (DX and performances) and their relevance.
 
 We collect multiple events:
+
 - Command invoked (nuxt dev, nuxt build, etc)
 - Versions of Nuxt.js and Node.js
 - General machine informations (MacOS/Linux/Windows and if command is run within CI, ci name)
@@ -52,7 +53,7 @@ NUXT_TELEMETRY_DISABLED=1
 ```js
 export default {
   telemetry: false
-}
+};
 ```
 
 You can learn more about Nuxt Telemetry and the events sent on https://github.com/nuxt/telemetry

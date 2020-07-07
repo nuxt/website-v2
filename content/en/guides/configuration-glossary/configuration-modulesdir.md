@@ -1,5 +1,5 @@
 ---
-title: "API: The modulesDir Property"
+title: "The modulesDir Property"
 description: Define the modules directory for your Nuxt.js application
 menu: modulesDir
 category: Configuration Glossary
@@ -16,9 +16,8 @@ Example (`nuxt.config.js`):
 
 ```js
 export default {
-  modulesDir: ['../../node_modules']
-}
+  modulesDir: ["../../node_modules"]
+};
 ```
 
 Setting this field may be necessary if your project is organized as a Yarn workspace-styled mono-repository.
-

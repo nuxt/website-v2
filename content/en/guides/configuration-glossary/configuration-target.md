@@ -1,5 +1,5 @@
 ---
-title: "API: The target Property"
+title: "The target Property"
 description: Change default nuxt target
 menu: target
 category: Configuration Glossary

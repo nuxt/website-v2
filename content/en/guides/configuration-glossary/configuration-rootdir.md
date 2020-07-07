@@ -1,5 +1,5 @@
 ---
-title: "API: The rootDir Property"
+title: "The rootDir Property"
 description: Define the workspace of Nuxt.js application
 menu: rootDir
 category: Configuration Glossary

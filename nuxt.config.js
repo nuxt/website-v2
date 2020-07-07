@@ -82,7 +82,7 @@ export default {
     URL: process.env.URL || false,
     DOC_SEARCH_API_KEY: process.env.DOC_SEARCH_API_KEY || 'ff80fbf046ce827f64f06e16f82f1401',
     NUXT_API: process.env.NUXT_API || 'https://api.nuxtjs.com',
-    NUXT_LOCALE: process.env.NUXT_LOCALE || 'en'
+    NUXT_LOCALE: process.env.NUXT_LOCALE || 'id'
   },
   loading: { color: '#41B883' },
   generate: {
@@ -97,20 +97,51 @@ export default {
       file: 'en-US.js',
       name: 'English',
       domain: 'https://nuxtjs.org'
-    }, {
-      code: 'fr',
-      iso: 'id-ID',
-      file: 'id-ID.js',
-      name: 'Indonesian',
-      domain: 'https://fr.nuxtjs.org'
     },
     {
-      code: 'id',
+      code: 'fr',
       iso: 'fr-FR',
       file: 'fr-FR.js',
       name: 'Français',
+      domain: 'https://fr.nuxtjs.org'
+    },
+    {
+      code: 'zh',
+      iso: 'zh-ZH',
+      file: 'zh-ZH.js',
+      name: '简体中文',
+      domain: 'https://zh.nuxtjs.org'
+    },
+
+    {
+      code: 'jp',
+      iso: 'jp-JP',
+      file: 'jp-JP.js',
+      name: '日本語',
+      domain: 'https://jp.nuxtjs.org'
+    },
+    {
+      code: 'ko',
+      iso: 'ko-KO',
+      file: 'ko-KO.js',
+      name: '한국어',
+      domain: 'https://ko.nuxtjs.org'
+    },
+    {
+      code: 'ru',
+      iso: 'ru-RU',
+      file: 'ru-RU.js',
+      name: 'Русский',
+      domain: 'https://ru.nuxtjs.org'
+    },
+    {
+      code: 'id',
+      iso: 'id-ID',
+      file: 'id-ID.js',
+      name: 'Indonesian',
       domain: 'https://id.nuxtjs.org'
-    }],
+    }
+    ],
     vueI18n: {
       fallbackLocale: 'en'
     },

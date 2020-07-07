@@ -20,3 +20,5 @@ newrelic_agent.log
 
 # @nuxtjs/pwa
 sw.*
+
+.env

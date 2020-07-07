@@ -12,16 +12,33 @@
 
 <script>
 import groupBy from 'lodash.groupby'
+
 export default {
   async asyncData ({ $content, app, params }) {
-    const links = await $content(app.i18n.locale, 'guides', { deep: true })
-      .only(['slug', 'title', 'menu', 'category'])
-      .sortBy('position', 'asc')
-      .sortBy('categoryPosition', 'asc')
-      .fetch()
+    let pages = []
+
+    try {
+      pages = await $content(app.i18n.defaultLocale, 'guides', { deep: true })
+        .only(['slug', 'title', 'menu', 'category'])
+        .sortBy('position', 'asc')
+        .sortBy('categoryPosition', 'asc')
+        .fetch()
+
+      const newPages = await $content(app.i18n.locale, 'guides', { deep: true })
+        .only(['slug', 'title', 'menu', 'category'])
+        .sortBy('position', 'asc')
+        .sortBy('categoryPosition', 'asc')
+        .fetch()
+
+      pages = pages.map((page) => {
+        const newPage = newPages.find(newPage => newPage.slug === page.slug)
+
+        return newPage || page
+      })
+    } catch (e) { }
 
     return {
-      links: groupBy(links, 'category')
+      links: groupBy(pages, 'category')
     }
   }
 }

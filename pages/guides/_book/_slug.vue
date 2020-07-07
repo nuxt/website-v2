@@ -4,6 +4,17 @@
     <div
       class="lg:min-h-screen w-full py-8 px-4 lg:static lg:overflow-visible lg:max-h-full lg:w-3/4"
     >
+      <div
+        v-if="langFallback"
+        class="p-4 mb-6 rounded bg-orange-200 dark:text-light-onSurfacePrimary"
+      >
+        ⚠️ You are looking at the english version of the page. Help us translate it
+        <a
+          :href="docLink"
+          class="text-orange-600"
+          target="_blank"
+        >here</a>.
+      </div>
       <article>
         <h1
           class="text-light-onSurfacePrimary dark:text-dark-onSurfacePrimary transition-colors duration-300 ease-linear"
@@ -23,42 +34,62 @@
 </template>
 
 <script>
-import shuffle from 'lodash/shuffle'
+import { assign, shuffle } from 'lodash'
 import Clipboard from 'clipboard'
 
 export default {
   async asyncData ({ $content, params, store, error, app }) {
-    const slug = params.slug
-    const path = `/${app.i18n.locale}/guides/${params.book}/${slug}`
-    const data = {
-      showModal: false,
-      path,
-      section: params.section,
-      book: params.book,
-      page: {}
-    }
-    try {
-      data.page = await $content(path).fetch()
-      data.contributors = (await fetch('https://contributors-api.onrender.com' + path).then(res => res.json())).map(({ author }) => ({ author }))
-      const [prev, next] = await $content(app.i18n.locale, 'guides', { deep: true })
-        .only(['title', 'slug', 'dir'])
-        .sortBy('position', 'asc')
-        .sortBy('categoryPosition', 'asc')
-        .surround(slug, { before: 1, after: 1 })
-        .fetch()
+    let page, currentPage, prev, next, contributors, langFallback
 
-      data.prev = prev
-      data.next = next
+    const defaultPath = `/${app.i18n.defaultLocale}/guides/${params.book}/${params.slug}`
+    const path = `/${app.i18n.locale}/guides/${params.book}/${params.slug}`
+
+    try {
+      page = await $content(defaultPath).fetch()
     } catch (err) {
       if (!err.response || err.response.status !== 404) {
         return error({ statusCode: 500, message: app.i18n.t('common.an_error_occurred') })
       }
       return error({ statusCode: 404, message: app.i18n.t('common.api_page_not_found') })
     }
-    if (data.page && data.page.questions) {
-      data.page.questions = shuffle(data.page.questions.map(question => ({ ...question, answers: shuffle(question.answers) })))
+
+    try {
+      currentPage = await $content(path).fetch()
+      if (currentPage) {
+        assign(page, currentPage)
+      }
+    } catch (e) {
+      langFallback = true
     }
-    return data
+
+    try {
+      contributors = (await fetch('https://contributors-api.onrender.com' + path).then(res => res.json())).map(({ author }) => ({ author }))
+    } catch (e) { }
+
+    try {
+      [prev, next] = await $content(currentPage ? app.i18n.locale : app.i18n.defaultLocale, 'guides', { deep: true })
+        .only(['title', 'slug', 'dir'])
+        .sortBy('position', 'asc')
+        .sortBy('categoryPosition', 'asc')
+        .surround(params.slug, { before: 1, after: 1 })
+        .fetch()
+    } catch (e) { }
+
+    if (page && page.questions) {
+      page.questions = shuffle(page.questions.map(question => ({ ...question, answers: shuffle(question.answers) })))
+    }
+
+    return {
+      showModal: false,
+      langFallback,
+      path,
+      section: params.section,
+      book: params.book,
+      page,
+      prev,
+      next,
+      contributors
+    }
   },
   computed: {
     docLink () {

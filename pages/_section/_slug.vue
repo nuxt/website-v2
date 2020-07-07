@@ -3,6 +3,17 @@
     <div
       class="lg:min-h-screen w-full py-8 px-4 lg:static lg:overflow-visible lg:max-h-full lg:w-3/4"
     >
+      <div
+        v-if="langFallback"
+        class="p-4 mb-6 rounded bg-orange-200 dark:text-light-onSurfacePrimary"
+      >
+        ⚠️ You are looking at the english version of the page. Help us translate it
+        <a
+          :href="docLink"
+          class="text-orange-600"
+          target="_blank"
+        >here</a>.
+      </div>
       <article v-if="section === 'examples'">
         <h1
           class="text-light-onSurfacePrimary dark:text-dark-onSurfacePrimary transition-colors duration-300 ease-linear"
@@ -23,7 +34,14 @@
         </div>
       </article>
       <article v-else>
-        <BaseAlert type="info">{{ $t('tryNewDocs.msg1') }}<NuxtLink class="text-nuxt-lightgreen" to="/guides/get-started/installation">{{ $t('tryNewDocs.link') }}</NuxtLink> {{ $t('tryNewDocs.msg2') }}</BaseAlert>
+        <BaseAlert type="info">
+          {{ $t('tryNewDocs.msg1') }}
+          <NuxtLink
+            class="text-nuxt-lightgreen"
+            to="/guides/get-started/installation"
+          >{{ $t('tryNewDocs.link') }}</NuxtLink>
+          {{ $t('tryNewDocs.msg2') }}
+        </BaseAlert>
         <h1
           class="text-light-onSurfacePrimary dark:text-dark-onSurfacePrimary transition-colors duration-300 ease-linear"
         >{{ page.title }}</h1>
@@ -43,34 +61,58 @@
 </template>
 
 <script>
+import { assign } from 'lodash'
+
 export default {
   async asyncData ({ $content, params, store, error, app }) {
     const defaultSlugs = { guide: 'index', api: 'index', examples: 'hello-world', faq: 'external-resources' }
     const slug = params.slug || defaultSlugs[params.section]
+
+    let page, currentPage, prev, next, contributors, langFallback
+
+    const defaultPath = `/${app.i18n.defaultLocale}/${params.section}/${slug}`
     const path = `/${app.i18n.locale}/${params.section}/${slug}`
-    const data = {
-      path,
-      section: params.section,
-      page: {}
-    }
+
     try {
-      data.page = await $content(path).fetch()
-      data.contributors = (await fetch('https://contributors-api.onrender.com' + path).then(res => res.json())).map(({ author }) => ({ author }))
-      const [prev, next] = await $content(`/${app.i18n.locale}/${params.section}`)
-        .only(['title', 'slug'])
-        .sortBy('groupPosition', 'asc')
-        .sortBy('position', 'asc')
-        .surround(slug, { before: 1, after: 1 })
-        .fetch()
-      data.prev = prev
-      data.next = next
+      page = await $content(defaultPath).fetch()
     } catch (err) {
       if (!err.response || err.response.status !== 404) {
         return error({ statusCode: 500, message: app.i18n.t('common.an_error_occurred') })
       }
       return error({ statusCode: 404, message: app.i18n.t('common.api_page_not_found') })
     }
-    return data
+
+    try {
+      currentPage = await $content(path).fetch()
+      if (currentPage) {
+        assign(page, currentPage)
+      }
+    } catch (e) {
+      langFallback = true
+    }
+
+    try {
+      contributors = (await fetch('https://contributors-api.onrender.com' + path).then(res => res.json())).map(({ author }) => ({ author }))
+    } catch (e) { }
+
+    try {
+      [prev, next] = await $content(currentPage ? app.i18n.locale : app.i18n.defaultLocale, params.section)
+        .only(['title', 'slug', 'dir'])
+        .sortBy('position', 'asc')
+        .sortBy('groupPosition', 'asc')
+        .surround(slug, { before: 1, after: 1 })
+        .fetch()
+    } catch (e) { }
+
+    return {
+      langFallback,
+      path,
+      section: params.section,
+      page,
+      prev,
+      next,
+      contributors
+    }
   },
   computed: {
     docLink () {

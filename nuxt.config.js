@@ -99,10 +99,17 @@ export default {
       domain: 'https://nuxtjs.org'
     }, {
       code: 'fr',
+      iso: 'id-ID',
+      file: 'id-ID.js',
+      name: 'Indonesian',
+      domain: 'https://fr.nuxtjs.org'
+    },
+    {
+      code: 'id',
       iso: 'fr-FR',
       file: 'fr-FR.js',
       name: 'Français',
-      domain: 'https://fr.nuxtjs.org'
+      domain: 'https://id.nuxtjs.org'
     }],
     vueI18n: {
       fallbackLocale: 'en'

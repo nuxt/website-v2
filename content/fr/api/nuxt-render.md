@@ -1,6 +1,10 @@
 ---
 title: "API : nuxt.render(req, res)"
 description: Vous pouvez utiliser Nuxt.js comme un middleware pour votre serveur Node.js.
+menu: render
+group: Programmation
+groupPosition: 6
+position: 2
 ---
 
 - Type : `Function`

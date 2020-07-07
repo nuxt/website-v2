@@ -2,7 +2,7 @@
 title: "API: Le composant <nuxt-child>"
 description: Afficher la page courante.
 menu: nuxt-child
-group: Components
+group: Composants
 groupPosition: 3
 position: 2
 ---

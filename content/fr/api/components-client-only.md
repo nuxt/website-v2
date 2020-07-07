@@ -2,7 +2,7 @@
 title: "API: Le composant <client-only>"
 description: Rendre un composant uniquement côté client et afficher un texte d'espace réservé côté serveur.
 menu: client-only
-group: Components
+group: Composants
 groupPosition: 3
 position: 4
 ---

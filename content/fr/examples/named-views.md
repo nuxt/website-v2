@@ -4,4 +4,7 @@ description: Exemple de vue nommées avec Nuxt.js
 github: named-views
 livedemo: https://named-views.nuxtjs.org
 documentation: /guide/routing#named-views
+group: Personnalisation
+groupPosition: 2
+position: 7
 ---

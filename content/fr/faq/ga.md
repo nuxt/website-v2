@@ -1,6 +1,9 @@
 ---
 title: Intégration de Google Analytics
 description: Comment intégrer Google Analytics avec NuxtJS ?
+group: Configuration
+groupPosition: 1
+position: 9
 ---
 
 Tout d'abord consultez le [module officiel Google Analytics](https://github.com/nuxt-community/analytics-module) pour Nuxt.js.

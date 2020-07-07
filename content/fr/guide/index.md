@@ -1,6 +1,9 @@
 ---
 title: Introduction
 description: "Nuxt.js est un framework pour créer des applications Vue, vous pouvez choisir entre application Universelle, Générée Statiquement ou Monopage."
+group: Prologue
+groupPosition: 1
+position: 1
 ---
 
 > Nuxt.js est un framework pour créer des applications Vue, vous pouvez choisir entre application Universelle, Générée Statiquement ou Monopage.

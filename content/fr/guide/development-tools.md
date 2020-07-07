@@ -1,6 +1,8 @@
 ---
 title: Outils de développement
 description: Nuxt.js vous aide à rendre votre développement web agréable.
+group: Pour Commencer
+groupPosition: 2
 ---
 
 > Le test de votre application fait partie du développement web. Nuxt.js vous aide à le rendre aussi facile que possible.

@@ -1,6 +1,10 @@
 ---
 title: Comment déployer sur AWS avec S3 et Cloudfront
 description: Hébergement statique sur AWS avec S3 et Cloudfront pour NuxtJS
+menu: Deploy on Aws w/ S3 and Cloudfront
+group: Déploiement
+groupPosition: 3
+position: 1
 ---
 
 AWS est un service web d'Amazon.

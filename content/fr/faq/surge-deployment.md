@@ -1,6 +1,9 @@
 ---
 title: Déployer avec Surge
 description: Comment déployer une application Nuxt.js avec Surge ?
+group: Déploiement
+groupPosition: 3
+position: 11
 ---
 
 Nuxt.js vous donne la possibilité d'héberger votre application web sur n'importe quel hébergeur statique tel que [Surge](https://surge.sh/) par exemple.

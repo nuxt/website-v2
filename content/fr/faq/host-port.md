@@ -1,6 +1,9 @@
 ---
 title: Comment modifier l'hôte et le port ?
 description: Comment modifier l'hôte et le port avec Nuxt.js ?
+group: Configuration
+groupPosition: 1
+position: 7
 ---
 
 Par défaut, l'hôte du serveur de développement Nuxt est `localhost` (accessible uniquement depuis la machine hôte).

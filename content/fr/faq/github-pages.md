@@ -1,6 +1,10 @@
 ---
 title: Déployer sur GitHub Pages
 description: Comment déployer une application Nuxt.js sur GitHub Pages
+menu: Deploy on Github
+group: Déploiement
+groupPosition: 3
+position: 5
 ---
 
 Nuxt.js vous offre la possibilité d'héberger votre application web sur n'importe quel hébergeur statique tel que [GitHub Pages](https://pages.github.com/) par exemple.

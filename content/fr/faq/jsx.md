@@ -1,6 +1,9 @@
 ---
 title: Comment utiliser JSX ?
 description: Comment utiliser JSX avec Nuxt.js ?
+group: Configuration
+groupPosition: 1
+position: 3
 ---
 
 Nuxt.js utilise [@nuxt/babel-preset-app](https://github.com/nuxt/nuxt.js/tree/dev/packages/babel-preset-app), basée sur [@vue/babel-preset-app](https://github.com/vuejs/vue-cli/tree/dev/packages/%40vue/babel-preset-app) comme configuration par default, ce qui vous permet d'utiliser JSX dans vos composants.

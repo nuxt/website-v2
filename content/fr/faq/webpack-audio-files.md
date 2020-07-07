@@ -1,6 +1,9 @@
 ---
 title: Comment étendre Webpack pour charger des fichiers audio ?
 description: Comment étendre Webpack pour charger des fichiers audio ?
+group: Configuration
+groupPosition: 1
+position: 11
 ---
 
 Les fichiers audio doivent être traités par `file-loader`. Ce chargement est déjà inclus dans la configuration Webpack 

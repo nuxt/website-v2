@@ -2,8 +2,7 @@
 title: "API: La propriété watchers"
 description: La propriété watchers vous permet d'écraser la configuration des observateurs.
 menu: watchers
-group: Configuration
-groupPosition: 5
+category: configuration
 position: 34
 ---
 

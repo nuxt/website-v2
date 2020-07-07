@@ -2,8 +2,7 @@
 title: "The srcDir Property"
 description: Define the source directory of your Nuxt.js application
 menu: srcDir
-group: Configuration
-groupPosition: 5
+category: configuration
 position: 28
 ---
 

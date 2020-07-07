@@ -1,8 +1,7 @@
 ---
 title: How to share cross-origin resource?
 description: How to share cross origin resource?
-group: Configuration
-groupPosition: 1
+category: configuration
 position: 10
 ---
 

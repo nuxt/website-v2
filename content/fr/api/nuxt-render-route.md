@@ -2,8 +2,7 @@
 title: "API : nuxt.renderRoute(route, context)"
 description: Faire le rendu d'une route spécifique avec un contexte donné.
 menu: renderRoute
-group: Programmation
-groupPosition: 6
+category: programmatically
 position: 3
 ---
 

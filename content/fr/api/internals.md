@@ -2,8 +2,7 @@
 title: "API : Mécanismes de Nuxt"
 description: Mieux comprendre les mécanismes de Nuxt
 menu: Intro
-group: Mécanismes
-groupPosition: 7
+category: internals
 position: 1
 ---
 

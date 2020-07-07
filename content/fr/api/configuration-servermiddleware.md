@@ -2,8 +2,7 @@
 title: "API: La propriété serverMiddleware"
 description: Définissez le middleware côté serveur.
 menu: serverMiddleware
-group: Configuration
-groupPosition: 5
+category: configuration
 position: 27
 ---
 

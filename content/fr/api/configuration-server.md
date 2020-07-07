@@ -2,8 +2,7 @@
 title: "API: La propriété server"
 description: Nuxt.js vous permet de définir les variables de connexion au serveur pour votre application dans `nuxt.config.js`.
 menu: server
-group: Configuration
-groupPosition: 5
+category: configuration
 position: 26
 ---
 

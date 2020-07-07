@@ -1,8 +1,7 @@
 ---
 title: How to extend Webpack to load audio files?
 description: How to extend Webpack config to load audio files?
-group: Configuration
-groupPosition: 1
+category: configuration
 position: 11
 ---
 

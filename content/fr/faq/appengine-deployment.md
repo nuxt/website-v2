@@ -2,8 +2,7 @@
 title: Déploiement sur Google App Engine
 description: Comment déployer une application Nuxt.js sur Google App Engine ?
 menu: Usage
-group: Programmation
-groupPosition: 6
+category: programmatically
 position: 1
 ---
 

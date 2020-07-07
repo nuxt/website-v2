@@ -2,8 +2,7 @@
 title: "API : La propriété dev"
 description: Défini le mode développement ou le mode production.
 menu: dev
-group: Configuration
-groupPosition: 5
+category: configuration
 position: 6
 ---
 

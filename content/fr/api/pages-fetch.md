@@ -2,8 +2,7 @@
 title: "API : la méthode fetch"
 description: La méthode `fetch` est utilisée pour remplir le store avant de rendre la page, elle est similaire à la méthode `asyncData` sauf qu'elle ne définit pas les données du composant.
 menu: fetch
-group: Pages
-groupPosition: 2
+category: pages
 position: 2
 ---
 

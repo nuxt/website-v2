@@ -2,8 +2,7 @@
 title: "The layout Property"
 description: Every file (first level) in the `layouts` directory will create a custom layout accessible with the layout property in the page component.
 menu: layout
-group: Pages
-groupPosition: 2
+category: pages
 position: 5
 ---
 

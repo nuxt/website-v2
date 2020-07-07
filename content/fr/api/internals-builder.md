@@ -2,8 +2,7 @@
 title: "API : la classe Builder"
 description: La classe `Builder` de Nuxt
 menu: Builder
-group: Mécanismes
-groupPosition: 7
+category: internals
 position: 5
 ---
 

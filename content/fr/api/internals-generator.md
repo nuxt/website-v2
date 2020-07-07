@@ -2,8 +2,7 @@
 title: "API : la classe Generator"
 description: La classe `Generator` de Nuxt
 menu: Generator
-group: Mécanismes
-groupPosition: 7
+category: internals
 position: 5
 ---
 

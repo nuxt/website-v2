@@ -2,8 +2,7 @@
 title: "$nuxt: The NuxtJS helper"
 description: $nuxt is a helper designed to improve user experience.
 menu: $nuxt
-group: Utils
-groupPosition: 4
+category: utils
 position: 1
 ---
 

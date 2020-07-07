@@ -2,8 +2,7 @@
 title: "API: La propriété watch"
 description: La propriété watch vous permet de regarder des fichiers personnalisés pour redémarrer le serveur.
 menu: watch
-group: Configuration
-groupPosition: 5
+category: configuration
 position: 33
 ---
 

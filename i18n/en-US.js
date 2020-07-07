@@ -167,5 +167,30 @@ module.exports = {
   },
   codeSandbox: {
     open: 'Open CodeSandbox'
+  },
+  content: {
+    guide: {
+      prologue: 'Prologue',
+      'getting-started': 'Getting Started'
+    },
+    api: {
+      essential: 'Essential',
+      pages: 'Pages',
+      components: 'Components',
+      utils: 'Utils',
+      configuration: 'Configuration',
+      programmatically: 'Programmatically',
+      internals: 'Internals'
+    },
+    examples: {
+      essentials: 'Essentials',
+      customization: 'Customization',
+      advanced: 'Advanced'
+    },
+    faq: {
+      configuration: 'Configuration',
+      development: 'Development',
+      deployment: 'Deployment'
+    }
   }
 }

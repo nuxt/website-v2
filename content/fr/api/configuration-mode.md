@@ -2,8 +2,7 @@
 title: "API: La propriété mode"
 description: Changer le mode nuxt par défaut
 menu: mode
-group: Configuration
-groupPosition: 5
+category: configuration
 position: 17
 ---
 

@@ -2,8 +2,7 @@
 title: "The middleware Property"
 description: Set the middleware for a specific page of the application.
 menu: middleware
-group: Pages
-groupPosition: 2
+category: pages
 position: 7
 ---
 

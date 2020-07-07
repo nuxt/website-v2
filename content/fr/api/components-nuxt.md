@@ -2,8 +2,7 @@
 title: "API: Le composant <nuxt>"
 description: Affichez les composants de la page dans une mise en page.
 menu: nuxt
-group: Composants
-groupPosition: 3
+category: components
 position: 1
 ---
 

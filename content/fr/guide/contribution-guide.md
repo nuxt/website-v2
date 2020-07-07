@@ -1,8 +1,7 @@
 ---
 title: Guide de contribution
 description: Toute contribution à Nuxt.js est plus que bienvenue !
-group: Prologue
-groupPosition: 1
+category: prologue
 position: 2
 ---
 

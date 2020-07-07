@@ -2,8 +2,7 @@
 title: "The page `transition` Property"
 description: Nuxt.js uses the `<transition>` component to let you create and apply amazing transitions/animations as you navigate between your pages.
 menu: transition
-group: Pages
-groupPosition: 2
+category: pages
 position: 9
 ---
 

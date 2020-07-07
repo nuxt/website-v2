@@ -2,8 +2,7 @@
 title: "API : La propriété css"
 description: Nuxt.js vous permet de définir le fichier, la bibliothèque ou le module CSS que vous souhaiter définir globalement (inclue sur toutes les pages).
 menu: css
-group: Configuration
-groupPosition: 5
+category: configuration
 position: 4
 ---
 

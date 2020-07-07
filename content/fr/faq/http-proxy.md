@@ -1,8 +1,7 @@
 ---
 title: Comment partager des ressources cross-origin ?
 description: Comment partager des ressources cross-origin ?
-group: Configuration
-groupPosition: 1
+category: configuration
 position: 10
 ---
 

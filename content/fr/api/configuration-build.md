@@ -2,8 +2,7 @@
 title: "API: La propriété build"
 description: Nuxt.js vous permet de personnaliser la configuration de webpack pour créer votre application web comme vous le souhaitez.
 menu: build
-group: Configuration
-groupPosition: 4
+category: configuration
 position: 1
 ---
 

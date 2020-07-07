@@ -1,8 +1,7 @@
 ---
 title: Upgrading
 description: Upgrading Nuxt.js is quick, but more involved than updating your package.json
-group: Prologue
-groupPosition: 1
+category: prologue
 position: 4
 ---
 

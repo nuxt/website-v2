@@ -2,8 +2,7 @@
 title: "API : la classe Renderer"
 description: La classe `Renderer` de Nuxt
 menu: Renderer
-group: Mécanismes
-groupPosition: 7
+category: internals
 position: 3
 ---
 

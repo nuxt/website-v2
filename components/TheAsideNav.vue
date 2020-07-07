@@ -13,11 +13,11 @@
           {{ $t('common.version') }}
           <span class="text-nuxt-lightgreen">{{ $t('docVersion') }}</span>
         </p>
-        <div v-for="(sublinks, group) in links" :key="`links-${group}`">
+        <div v-for="(sublinks, group) in sortedLinks" :key="`links-${group}`">
           <h3
             :key="`title-${group}`"
             class="uppercase font-medium text-light-onSurfaceSecondary dark:text-dark-onSurfaceSecondary pb-2 transition-colors duration-300 ease-linear"
-          >{{ group }}</h3>
+          >{{ $t(`content.${section}.${group}`) }}</h3>
           <ul class="pb-8">
             <li
               v-for="(link, index) in sublinks"
@@ -43,25 +43,41 @@
 </template>
 
 <script>
+import { sortBy } from 'lodash'
+
 export default {
   props: {
     links: {
       type: Object,
-      default: () => []
+      default: () => {}
     }
   },
   data () {
-    return { current: 0, setInter: null, showNav: false }
+    return {
+      current: 0,
+      setInter: null,
+      showNav: false,
+      section: this.$route.params.section
+    }
   },
   computed: {
     visible () { return this.$store.state.visibleAffix },
     path () { return this.$route.path.slice(-1) === '/' ? this.$route.path.slice(0, -1) : this.$route.path },
-    menu () { return '/' + this.$route.params.section }
+    menu () { return '/' + this.$route.params.section },
+    sortedLinks () {
+      const links = {}
+      sortBy(Object.keys(this.links), (link) => {
+        return Object.keys(this.$i18n.t(`content.${this.section}`)).indexOf(link)
+      }).forEach((key) => {
+        links[key] = this.links[key]
+      })
+      return links
+    }
   },
   methods: {
     toLink (link) {
       const slug = link.slug === 'index' ? undefined : link.slug
-      return this.localePath({ name: 'section-slug', params: { section: this.$route.params.section, slug } })
+      return this.localePath({ name: 'section-slug', params: { section: this.section, slug } })
     }
   }
 }

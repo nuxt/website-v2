@@ -2,8 +2,7 @@
 title: "The watch Property"
 description: The watch property lets you watch custom files for restarting the server.
 menu: watch
-group: Configuration
-groupPosition: 5
+category: configuration
 position: 33
 ---
 

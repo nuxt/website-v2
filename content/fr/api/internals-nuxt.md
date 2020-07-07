@@ -2,8 +2,7 @@
 title: "API : la classe Nuxt"
 description: La classe cœur Nuxt
 menu: Nuxt
-group: Mécanismes
-groupPosition: 7
+category: internals
 position: 2
 ---
 

@@ -1,8 +1,7 @@
 ---
 title: How to use Google Analytics?
 description: How to use Google Analytics in my NuxtJS app?
-group: Configuration
-groupPosition: 1
+category: configuration
 position: 9
 ---
 

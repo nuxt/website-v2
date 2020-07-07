@@ -5,7 +5,6 @@ github: routes-transitions
 youtube: https://www.youtube.com/embed/RIXOzJWFfc8
 livedemo: https://routes-transitions.nuxtjs.org
 documentation: /guide/routing#transitions
-group: Personnalisation
-groupPosition: 2
+category: customization
 position: 10
 ---

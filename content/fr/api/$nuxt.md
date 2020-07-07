@@ -2,8 +2,7 @@
 title: "$nuxt: L'assistant NuxtJS"
 description: $nuxt est un assistant conçu pour améliorer l'expérience utilisateur.
 menu: $nuxt
-group: Utilitaires
-groupPosition: 4
+category: utils
 position: 1
 ---
 

@@ -3,7 +3,6 @@ title: Middleware
 description: Middleware example with Nuxt.js
 github: middleware
 documentation: /guide/routing#middleware
-group: Customization
-groupPosition: 2
+category: customization
 position: 6
 ---

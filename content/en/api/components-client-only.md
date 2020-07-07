@@ -2,8 +2,7 @@
 title: "API: The <client-only> Component"
 description: Render a component only on client-side, and display a placeholder text on server-side.
 menu: client-only
-group: Components
-groupPosition: 3
+category: components
 position: 4
 
 ---

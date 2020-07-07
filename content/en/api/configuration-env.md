@@ -2,8 +2,7 @@
 title: "The env Property"
 description: Share environment variables between client and server.
 menu: env
-group: Configuration
-groupPosition: 5
+category: configuration
 position: 8
 ---
 

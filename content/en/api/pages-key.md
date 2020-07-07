@@ -2,8 +2,7 @@
 title: "The key Property"
 description: Set the `key` property of internal `<router-view>` component
 menu: key
-group: Pages
-groupPosition: 2
+category: pages
 position: 4
 ---
 

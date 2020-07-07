@@ -2,8 +2,7 @@
 title: "The components Property"
 description: "Nuxt.js 2.13+ can scan and auto import your components using @nuxt/components module"
 menu: components
-group: Configuration
-groupPosition: 5
+category: configuration
 position: 5
 ---
 

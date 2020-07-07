@@ -2,8 +2,7 @@
 title: 'API: The plugins Property'
 description: 'Use vue.js plugins with the plugins option of Nuxt.js.'
 menu: plugins
-group: Configuration
-groupPosition: 5
+category: configuration
 position: 21
 ---
 

@@ -2,8 +2,7 @@
 title: "The Generator Class"
 description: Nuxt Generator Class
 menu: Generator
-group: Internals
-groupPosition: 7
+category: internals
 position: 5
 ---
 

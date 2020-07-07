@@ -150,5 +150,30 @@ module.exports = {
   },
   quiz: {
     title: 'Quiz'
+  },
+  content: {
+    guide: {
+      prologue: 'Prologue',
+      'getting-started': 'Pour Commencer'
+    },
+    api: {
+      essential: 'Essentiel',
+      pages: 'Pages',
+      components: 'Composants',
+      utils: 'Utilitaires',
+      configuration: 'Configuration',
+      programmatically: 'Programmation',
+      internals: 'Mécanismes'
+    },
+    examples: {
+      essentials: 'Essentiels',
+      customization: 'Personnalisation',
+      advanced: 'Avancé'
+    },
+    faq: {
+      configuration: 'Configuration',
+      development: 'Développement',
+      deployment: 'Déploiement'
+    }
   }
 }

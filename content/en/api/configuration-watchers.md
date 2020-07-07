@@ -2,8 +2,7 @@
 title: "The watchers Property"
 description: The watchers property lets you overwrite watchers configuration.
 menu: watchers
-group: Configuration
-groupPosition: 5
+category: configuration
 position: 34
 ---
 

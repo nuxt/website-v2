@@ -19,15 +19,15 @@ export default {
 
     try {
       pages = await $content(app.i18n.defaultLocale, params.section)
-        .only(['slug', 'title', 'menu', 'group'])
-        .sortBy('position', 'asc')
-        .sortBy('groupPosition', 'asc')
+        .only(['slug', 'title', 'position', 'menu', 'category'])
+        .sortBy('position')
         .fetch()
 
+      console.log('pages', pages)
+
       const newPages = await $content(app.i18n.locale, params.section)
-        .only(['slug', 'title', 'menu', 'group'])
-        .sortBy('position', 'asc')
-        .sortBy('groupPosition', 'asc')
+        .only(['slug', 'title', 'position', 'menu', 'category'])
+        .sortBy('position')
         .fetch()
 
       pages = pages.map((page) => {
@@ -38,7 +38,7 @@ export default {
     } catch (e) { }
 
     return {
-      links: groupBy(pages, 'group')
+      links: groupBy(pages, 'category')
     }
   }
 }

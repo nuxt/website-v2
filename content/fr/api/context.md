@@ -2,8 +2,7 @@
 title: "API: Le contexte"
 description: Le `context` fournit des objets/paramètres de Nuxt qui ne sont pas traditionnellement disponible dans les composants de Vue. Le `context` est disponible dans des zones spéciales du cycle de vie de Nuxt comme `asyncData`, `plugins`,` middlewares`, `modules` et` store / nuxtServerInit`.
 menu: context
-group: Essentiel
-groupPosition: 1
+category: essential
 position: 1
 ---
 

@@ -2,8 +2,7 @@
 title: "transition Properties"
 description: Set the default properties of the page and layout transitions.
 menu: transition
-group: Configuration
-groupPosition: 5
+category: configuration
 position: 31
 ---
 

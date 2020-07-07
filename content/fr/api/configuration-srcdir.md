@@ -2,8 +2,7 @@
 title: "API: La propriété srcDir"
 description: Définissez le répertoire source de votre application Nuxt.js
 menu: srcDir
-group: Configuration
-groupPosition: 5
+category: configuration
 position: 28
 ---
 

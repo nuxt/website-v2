@@ -2,8 +2,7 @@
 title: "The cli Property"
 description: Nuxt.js lets you customize the CLI configuration.
 menu: cli
-group: Configuration
-groupPosition: 5
+category: configuration
 position: 3
 ---
 

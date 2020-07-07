@@ -2,8 +2,7 @@
 title: "API: The <nuxt> Component"
 description: Display the page components inside a layout.
 menu: nuxt
-group: Components
-groupPosition: 3
+category: components
 position: 1
 ---
 

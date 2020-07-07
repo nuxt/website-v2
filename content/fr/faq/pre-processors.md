@@ -1,8 +1,7 @@
 ---
 title: Comment utiliser des préprocesseurs?
 description: Comment utiliser des préprocesseurs avec Nuxt.js ?
-group: Configuration
-groupPosition: 1
+category: configuration
 position: 2
 ---
 

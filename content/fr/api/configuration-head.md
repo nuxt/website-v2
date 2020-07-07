@@ -2,8 +2,7 @@
 title: "API: La propriété d'entête"
 description: Nuxt.js vous permet de définir toutes les méta par défaut pour votre application dans nuxt.config.js.
 menu: head
-group: Configuration
-groupPosition: 5
+category: configuration
 position: 12
 ---
 

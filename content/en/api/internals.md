@@ -2,8 +2,7 @@
 title: "Nuxt Modules Intro"
 description: Better understand Nuxt internals
 menu: Intro
-group: Internals
-groupPosition: 7
+category: internals
 position: 1
 ---
 

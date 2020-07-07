@@ -2,8 +2,7 @@
 title: "API : la classe ModuleContainer"
 description: La classe `ModuleContainer` de Nuxt
 menu: Module Container
-group: Mécanismes
-groupPosition: 7
+category: internals
 position: 3
 ---
 

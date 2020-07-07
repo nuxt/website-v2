@@ -4,8 +4,7 @@ description: Exemple d'authentification de routes avec Nuxt.js
 github: auth-routes
 livedemo: https://nuxt-auth-routes.gomix.me
 liveedit: https://gomix.com/#!/project/nuxt-auth-routes
-group: Avancé
-groupPosition: 3
+category: advanced
 position: 2
 ---
 

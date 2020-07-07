@@ -1,8 +1,7 @@
 ---
 title: Commandes et déploiement
 description: Nuxt.js est livré avec un ensemble de commandes utiles, tant pour le développement que pour la production.
-group: Pour Commencer
-groupPosition: 2
+category: getting-started
 ---
 
 > Nuxt.js est livré avec un ensemble de commandes utiles, tant pour le développement que pour la production.

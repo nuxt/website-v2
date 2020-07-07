@@ -2,8 +2,7 @@
 title: "API: La propriété env"
 description: Partager les variables d'environement entre client et serveur.
 menu: env
-group: Configuration
-groupPosition: 5
+category: configuration
 position: 8
 ---
 

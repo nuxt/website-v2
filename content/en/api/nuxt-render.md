@@ -2,8 +2,7 @@
 title: "nuxt.render(req, res)"
 description: You can use Nuxt.js as a middleware for your Node.js server.
 menu: render
-group: Programmatically
-groupPosition: 6
+category: programmatically
 position: 2
 ---
 

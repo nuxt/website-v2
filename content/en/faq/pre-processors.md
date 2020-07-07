@@ -1,8 +1,7 @@
 ---
 title: How to use CSS pre-processors?
 description: How to use pre-processors with Nuxt.js?
-group: Configuration
-groupPosition: 1
+category: configuration
 position: 2
 ---
 

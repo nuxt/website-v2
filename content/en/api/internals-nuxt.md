@@ -2,8 +2,7 @@
 title: "The Nuxt Class"
 description: Nuxt Core Class
 menu: Nuxt
-group: Internals
-groupPosition: 7
+category: internals
 position: 2
 ---
 

@@ -2,8 +2,7 @@
 title: "API : Nuxt(options)"
 description: Vous pouvez utiliser Nuxt.js par programmation et l'utiliser en tant que middleware vous donnant la possibilité de créer votre propre serveur pour le rendu de vos applications web.
 menu: Usage
-group: Programmation
-groupPosition: 6
+category: programmatically
 position: 1
 ---
 

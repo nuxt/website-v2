@@ -2,8 +2,7 @@
 title: "API: The <nuxt-link> Component"
 description: Link the pages between them with nuxt-link.
 menu: nuxt-link
-group: Components
-groupPosition: 3
+category: components
 position: 3
 ---
 

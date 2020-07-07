@@ -1,8 +1,7 @@
 ---
 title: How to edit host and port?
 description: How to edit host and port with Nuxt.js?
-group: Configuration
-groupPosition: 1
+category: configuration
 position: 7
 ---
 

@@ -2,8 +2,7 @@
 title: "The modern Property"
 description: Build and server a modern bundle
 menu: modern
-group: Configuration
-groupPosition: 5
+category: configuration
 position: 18
 ---
 

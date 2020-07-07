@@ -1,8 +1,7 @@
 ---
 title: How to extend webpack config?
 description: How to extend webpack config into my Nuxt.js application?
-group: Configuration
-groupPosition: 1
+category: configuration
 position: 5
 ---
 

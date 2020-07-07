@@ -2,8 +2,7 @@
 title: "API : la propriété middleware"
 description: Définit le middleware pour une page spécifique de l'application.
 menu: middleware
-group: Pages
-groupPosition: 2
+category: pages
 position: 7
 ---
 

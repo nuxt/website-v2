@@ -1,8 +1,7 @@
 ---
 title: How to use external resources?
 description: How to use external resources with Nuxt.js?
-group: Configuration
-groupPosition: 1
+category: configuration
 position: 1
 ---
 

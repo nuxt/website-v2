@@ -1,8 +1,7 @@
 ---
 title: Comment étendre Webpack pour charger des fichiers audio ?
 description: Comment étendre Webpack pour charger des fichiers audio ?
-group: Configuration
-groupPosition: 1
+category: configuration
 position: 11
 ---
 

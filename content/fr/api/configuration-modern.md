@@ -2,8 +2,7 @@
 title: "API: La propriété modern"
 description: Créez et servez un bundle moderne
 menu: modern
-group: Configuration
-groupPosition: 5
+category: configuration
 position: 18
 ---
 

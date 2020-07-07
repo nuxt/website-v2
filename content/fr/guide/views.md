@@ -1,8 +1,7 @@
 ---
 title: Vues
 description: La section des vues décrit tout ce dont vous avez besoin pour configurer les données et les vues pour une route spécifique dans votre application Nuxt.js (document, mises en page, pages et entête HTML).
-group: Pour Commencer
-groupPosition: 2
+category: getting-started
 ---
 
 > La section des vues décrit tout ce dont vous avez besoin pour configurer les données et les vues pour une route spécifique dans votre application Nuxt.js (document, mises en page, pages et entête HTML).

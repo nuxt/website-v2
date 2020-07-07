@@ -1,8 +1,7 @@
 ---
 title: How to use JSX?
 description: How to use JSX with Nuxt.js?
-group: Configuration
-groupPosition: 1
+category: configuration
 position: 3
 ---
 

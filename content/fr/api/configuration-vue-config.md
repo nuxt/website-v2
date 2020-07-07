@@ -2,8 +2,7 @@
 title: "API: La propriété vue.config"
 description: Un objet de configuration pour Vue.config
 menu: vue.config
-group: Configuration
-groupPosition: 5
+category: configuration
 position: 32
 ---
 

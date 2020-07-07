@@ -2,8 +2,7 @@
 title: "The Renderer Class"
 description: Nuxt Renderer Class
 menu: Renderer
-group: Internals
-groupPosition: 7
+category: internals
 position: 3
 ---
 

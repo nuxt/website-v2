@@ -1,8 +1,7 @@
 ---
 title: Ressources
 description: Nuxt utilise vue-loader, file-loader et url-loader avec webpack par défaut pour servir les fichiers statiques mais vous pouvez également utiliser un répertoire `static` pour les fichiers statiques.
-group: Pour Commencer
-groupPosition: 2
+category: getting-started
 ---
 
 > Par défaut, Nuxt utilise vue-loader, file-loader et url-loader avec webpack pour servir les fichiers statiques. Vous pouvez également utiliser un répertoire `static` pour les fichiers statiques.

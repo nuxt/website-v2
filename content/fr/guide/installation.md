@@ -1,8 +1,7 @@
 ---
 title: Installation
 description: Débuter avec Nuxt.js est vraiment facile. Un projet simple n'a besoin que d'une dépendance à `nuxt`.
-group: Pour Commencer
-groupPosition: 2
+category: getting-started
 ---
 
 > Débuter avec Nuxt.js est vraiment facile. Un projet simple n'a besoin que d'une dépendance à `nuxt`.

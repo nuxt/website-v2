@@ -5,7 +5,6 @@ github: custom-layouts
 livedemo: https://nuxt-custom-layouts.gomix.me/
 liveedit: https://gomix.com/#!/project/nuxt-custom-layouts
 documentation: /guide/views#mises-en-page
-group: Personnalisation
-groupPosition: 2
+category: customization
 position: 5
 ---

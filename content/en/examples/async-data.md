@@ -3,7 +3,6 @@ title: Async Data
 description: Async Data example with Nuxt.js
 github: async-data
 documentation: /guide/async-data
-group: Advanced
-groupPosition: 3
+category: advanced
 position: 1
 ---

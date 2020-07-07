@@ -2,8 +2,7 @@
 title: "API : la méthode validate"
 description: Nuxt.js vous permet de définir une méthode de validation dans votre composant de route dynamique.
 menu: validate
-group: Pages
-groupPosition: 2
+category: pages
 position: 11
 ---
 

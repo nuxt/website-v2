@@ -2,8 +2,7 @@
 title: "The dev Property"
 description: Define the development or production mode.
 menu: dev
-group: Configuration
-groupPosition: 5
+category: configuration
 position: 6
 ---
 

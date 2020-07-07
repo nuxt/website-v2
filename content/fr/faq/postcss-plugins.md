@@ -1,8 +1,7 @@
 ---
 title: Comment ajouter des plugins PostCSS?
 description: Comment ajouter des plugins PostCSS dans NuxtJS?
-group: Configuration
-groupPosition: 1
+category: configuration
 position: 4
 ---
 

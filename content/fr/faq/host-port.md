@@ -1,8 +1,7 @@
 ---
 title: Comment modifier l'hôte et le port ?
 description: Comment modifier l'hôte et le port avec Nuxt.js ?
-group: Configuration
-groupPosition: 1
+category: configuration
 position: 7
 ---
 

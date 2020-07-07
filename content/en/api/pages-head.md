@@ -2,8 +2,7 @@
 title: "The head Method"
 description: Nuxt.js uses vue-meta to update the headers and HTML attributes of your application.
 menu: head
-group: Pages
-groupPosition: 2
+category: pages
 position: 3
 ---
 

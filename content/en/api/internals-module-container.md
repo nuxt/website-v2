@@ -2,8 +2,7 @@
 title: "The ModuleContainer Class"
 description: Nuxt ModuleContainer Class
 menu: Module Container
-group: Internals
-groupPosition: 7
+category: internals
 position: 3
 ---
 

@@ -2,8 +2,7 @@
 title: "API: La propriété render"
 description: Nuxt.js vous permet de personnaliser les options d'exécution pour le rendu des pages
 menu: render
-group: Configuration
-groupPosition: 5
+category: configuration
 position: 22
 ---
 

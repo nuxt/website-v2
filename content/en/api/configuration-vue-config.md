@@ -2,8 +2,7 @@
 title: "The vue.config Property"
 description: A config object for Vue.config
 menu: vue.config
-group: Configuration
-groupPosition: 5
+category: configuration
 position: 32
 ---
 

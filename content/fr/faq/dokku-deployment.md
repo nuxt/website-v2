@@ -2,8 +2,7 @@
 title: Comment déployer sur Dokku ?
 description: Comment déployer une application Nuxt.js sur Dokku ?
 menu: Deploy on Dokku
-group: Déploiement
-groupPosition: 3
+category: deployment
 position: 4
 ---
 

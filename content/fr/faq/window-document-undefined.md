@@ -1,8 +1,7 @@
 ---
 title: window ou document non défini ?
 description: window ou document non défini avec Nuxt.js ?
-group: Développement
-groupPosition: 2
+category: development
 position: 1
 ---
 

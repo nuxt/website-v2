@@ -2,8 +2,7 @@
 title: components
 description: The components directory contains your Vue.js Components. Components are what makes up the different parts of your page and can be reused and imported into your pages, layouts and even other components.
 position: 3
-category: Directory Structure
-categoryPosition: 4
+category: directory-structure
 csb_link: https://codesandbox.io/embed/github/nuxt-academy/guides-examples/tree/master/04_directory_structure/03_components?fontsize=14&hidenavigation=1&theme=dark
 questions:
   - question: 

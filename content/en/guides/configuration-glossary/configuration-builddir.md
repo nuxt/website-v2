@@ -2,8 +2,7 @@
 title: "The buildDir Property"
 description: Define the dist directory for your Nuxt.js application
 menu: buildDir
-category: Configuration Glossary
-categoryPosition: 5
+category: configuration-glossary
 position: 2
 ---
 

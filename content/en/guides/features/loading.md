@@ -2,8 +2,7 @@
 title: Loading
 description: Out of the box, Nuxt.js gives you its own loading progress bar component that's shown between routes. You can customize it, disable it or even create your own loading component.
 position: 8
-category: Features
-categoryPosition: 3
+category: features
 csb_link: https://codesandbox.io/embed/github/nuxt-academy/guides-examples/tree/master/03_features/08_loading?fontsize=14&hidenavigation=1&theme=dark
 questions:
   - question: In order for the Nuxt.js loading progress bar to work what do you have to do?

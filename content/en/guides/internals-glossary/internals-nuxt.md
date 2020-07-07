@@ -2,8 +2,7 @@
 title: "The Nuxt Class"
 description: Nuxt Core Class
 menu: Nuxt Class
-category: Internals Glossary
-categoryPosition: 6
+category: internals-glossary
 Position: 4
 ---
 

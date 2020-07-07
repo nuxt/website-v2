@@ -1,8 +1,7 @@
 ---
 title: Déployer avec Now
 description: Comment déployer une application Nuxt.js avec Now ?
-group: Déploiement
-groupPosition: 3
+category: deployment
 position: 10
 ---
 

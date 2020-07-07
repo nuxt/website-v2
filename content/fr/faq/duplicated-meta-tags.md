@@ -1,8 +1,7 @@
 ---
 title: Balises meta dupliquées
 description: Balises meta dupliquées avec Nuxt.js ?
-group: Développement
-groupPosition: 2
+category: development
 position: 4
 ---
 

@@ -2,8 +2,7 @@
 title: dist
 description: The `dist` folder, short for *distribution* folder. It is dynamically generated when using the `nuxt build && nuxt export` or `nuxt generate` commands and includes the generated production ready HTML files and assets that are necessary to deploy and run your statically generated Nuxt.js application.
 position: 5
-category: Directory Structure
-categoryPosition: 4
+category: directory-structure
 csb_link: https://codesandbox.io/embed/github/nuxt-academy/guides-examples/tree/master/04_directory_structure/05_dist?fontsize=14&hidenavigation=1&theme=dark
 questions:
   - question: What what commands do you generate the dist folder?

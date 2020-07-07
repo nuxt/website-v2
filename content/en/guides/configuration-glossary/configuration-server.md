@@ -2,8 +2,7 @@
 title: "The server Property"
 description: Nuxt.js let you define the server connection variables for your application inside `nuxt.config.js`.
 menu: server
-category: Configuration Glossary
-categoryPosition: 5
+category: configuration-glossary
 position: 26
 ---
 

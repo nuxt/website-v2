@@ -1,8 +1,7 @@
 ---
 title: "$nuxt: The NuxtJS helper"
 description: $nuxt is a helper designed to improve user experience.
-category: Internals Glossary
-categoryPosition: 6
+category: internals-glossary
 Position: 2
 ---
 

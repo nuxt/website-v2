@@ -19,13 +19,13 @@ export default {
 
     try {
       pages = await $content(app.i18n.defaultLocale, 'guides', { deep: true })
-        .only(['slug', 'title', 'menu', 'category'])
+        .only(['slug', 'title', 'menu', 'category', 'position'])
         .sortBy('position', 'asc')
         .sortBy('categoryPosition', 'asc')
         .fetch()
 
       const newPages = await $content(app.i18n.locale, 'guides', { deep: true })
-        .only(['slug', 'title', 'menu', 'category'])
+        .only(['slug', 'title', 'menu', 'category', 'position'])
         .sortBy('position', 'asc')
         .sortBy('categoryPosition', 'asc')
         .fetch()

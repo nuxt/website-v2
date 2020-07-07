@@ -2,8 +2,7 @@
 title: File System Routing
 description: Nuxt.js automatically generates the vue-router configuration based on your file tree of Vue files inside the pages directory. When you create a .vue file in your pages directory you will have basic routing working with no extra configuration needed.
 position: 3
-category: Features
-categoryPosition: 3
+category: features
 questions:
   - question: What is the name of the component you use to navigate between pages?
     answers:

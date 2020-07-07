@@ -1,8 +1,7 @@
 ---
 title: Async data in components?
 description: Async data in NuxtJS components?
-group: Development
-groupPosition: 2
+category: development
 position: 3
 ---
 

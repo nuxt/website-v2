@@ -2,8 +2,7 @@
 title: Context and Helpers
 description: The context provides *additional* and often optional information about the current request to the application.
 position: 2
-category: Concepts
-categoryPosition: 2
+category: concepts
 csb_link_context: https://codesandbox.io/embed/github/nuxt-academy/guides-examples/tree/master/02_concepts/02_context_helpers-context?fontsize=14&hidenavigation=1&theme=dark
 csb_link_helpers: https://codesandbox.io/embed/github/nuxt-academy/guides-examples/tree/master/02_concepts/02_context_helpers-helpers?fontsize=14&hidenavigation=1&theme=dark
 questions:

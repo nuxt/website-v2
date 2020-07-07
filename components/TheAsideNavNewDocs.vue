@@ -13,11 +13,11 @@
           {{ $t('common.version') }}
           <span class="text-nuxt-lightgreen">{{ $t('docVersion') }}</span>
         </p>
-        <div v-for="(sublinks, group) in links" :key="`links-${group}`">
+        <div v-for="(sublinks, group) in sortedLinks" :key="`links-${group}`">
           <h3
             :key="`title-${group}`"
             class="uppercase font-medium text-light-onSurfaceSecondary dark:text-dark-onSurfaceSecondary pb-2 transition-colors duration-300 ease-linear"
-          >{{ group }}</h3>
+          >{{ $t(`content.guides.${group}`) }}</h3>
           <ul class="pb-8">
             <li v-for="(link, index) in sublinks" :key="index" class="py-2">
               <NuxtLink
@@ -38,6 +38,7 @@
 
 <script>
 import slugify from 'slugify'
+import { sortBy } from 'lodash'
 
 export default {
   props: {
@@ -48,6 +49,17 @@ export default {
   },
   data () {
     return { current: 0, setInter: null, showNav: false }
+  },
+  computed: {
+    sortedLinks () {
+      const links = {}
+      sortBy(Object.keys(this.links), (link) => {
+        return Object.keys(this.$i18n.t('content.guides')).indexOf(link)
+      }).forEach((key) => {
+        links[key] = sortBy(this.links[key], ['position', 'menu', 'title'])
+      })
+      return links
+    }
   },
   methods: {
     toLink (group, link) {

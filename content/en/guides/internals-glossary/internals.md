@@ -2,8 +2,7 @@
 title: "Nuxt Modules Intro"
 description: Better understand Nuxt internals
 menu: Nuxt Modules
-category: Internals Glossary
-categoryPosition: 6
+category: internals-glossary
 Position: 3
 ---
 

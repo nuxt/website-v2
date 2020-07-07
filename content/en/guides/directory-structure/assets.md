@@ -2,8 +2,7 @@
 title: assets
 description: The `assets` directory contains your un-compiled assets such as Stylus or Sass files, images, or fonts.
 position: 2
-category: Directory Structure
-categoryPosition: 4
+category: directory-structure
 csb_link: https://codesandbox.io/embed/github/nuxt-academy/guides-examples/tree/master/04_directory_structure/02_assets?fontsize=14&hidenavigation=1&theme=dark
 videoScript: 
   - assets-video.md

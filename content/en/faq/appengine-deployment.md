@@ -2,8 +2,7 @@
 title: How to deploy on Google App Engine?
 description: How to deploy Nuxt.js on Google App Engine?
 menu: Deploy on Google App Engine
-group: Deployment
-groupPosition: 3
+category: deployment
 position: 6
 ---
 

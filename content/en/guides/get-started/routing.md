@@ -2,8 +2,7 @@
 title: Routing
 description: Most websites have more than just one page. For example a home page, about page, contact page etc. In order to show these pages we need a Router.
 position: 2
-category: Get Started
-categoryPosition: 1
+category: get-started
 csb_link: https://codesandbox.io/embed/github/nuxt-academy/guides-examples/tree/master/01_get_started/02_routing?fontsize=14&hidenavigation=1&theme=dark
 ---
 ## Automatic Routes

@@ -2,8 +2,7 @@
 title: Conclusion
 description: Congratulations you have now created your first Nuxt.js app and you may now consider yourself a Nuxter. But there is so much more to learn and so much more you can do with Nuxt.js. Here are a few recommendations.
 position: 4
-category: Get Started
-categoryPosition: 1
+category: get-started
 questions:
   - question: What is the name of the directory you need to have for Nuxt.js to work?
     answers:

@@ -2,8 +2,7 @@
 title: "The serverMiddleware Property"
 description: Define server-side middleware.
 menu: serverMiddleware
-category: Configuration Glossary
-categoryPosition: 5
+category: configuration-glossary
 position: 27
 ---
 

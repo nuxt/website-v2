@@ -1,8 +1,7 @@
 ---
 title: window or document undefined
 description: window or document undefined with Nuxt.js?
-group: Development
-groupPosition: 2
+category: development
 position: 1
 ---
 

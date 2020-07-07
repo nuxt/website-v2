@@ -2,8 +2,7 @@
 title: How to deploy with Vercel?
 description: How to deploy Nuxt.js app with Vercel?
 menu: Deploy on Vercel
-group: Deployment
-groupPosition: 3
+category: deployment
 position: 10
 ---
 

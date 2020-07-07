@@ -2,8 +2,7 @@
 title: How to deploy on Netlify?
 description: How to deploy Nuxt.js on Netlify?
 menu: Deploy on Netlify
-group: Deployment
-groupPosition: 3
+category: deployment
 position: 9
 ---
 

@@ -1,8 +1,7 @@
 ---
 title: Using Nuxt with Cloudflare
 description: What needs to be considered when using Nuxt with Cloudflare
-group: Development
-groupPosition: 2
+category: development
 position: 6
 ---
 

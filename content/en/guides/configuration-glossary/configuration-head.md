@@ -2,8 +2,7 @@
 title: "The head Property"
 description: Nuxt.js let you define all default meta for your application inside nuxt.config.js.
 menu: head
-category: Configuration Glossary
-categoryPosition: 5
+category: configuration-glossary
 position: 12
 ---
 

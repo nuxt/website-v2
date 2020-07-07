@@ -2,8 +2,7 @@
 title: "The render Property"
 description: Nuxt.js lets you customize runtime options for rendering pages
 menu: render
-category: Configuration Glossary
-categoryPosition: 5
+category: configuration-glossary
 position: 22
 ---
 

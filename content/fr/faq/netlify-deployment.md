@@ -1,8 +1,7 @@
 ---
 title: Déploiement sur Netlify
 description: Comment déployer une application Nuxt.js sur Netlify ?
-group: Déploiement
-groupPosition: 3
+category: deployment
 position: 9
 ---
 

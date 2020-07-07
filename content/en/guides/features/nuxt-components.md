@@ -2,8 +2,7 @@
 title: Nuxt Components
 description: Nuxt.js comes with a few important components included out of the box, which will be helpful when building your application.
 position: 9
-category: Features
-categoryPosition: 3
+category: features
 csb_link_nuxt_link: https://codesandbox.io/embed/github/nuxt-academy/guides-examples/tree/master/03_features/09_components_nuxt-link?fontsize=14&hidenavigation=1&theme=dark
 csb_link_nuxt: https://codesandbox.io/embed/github/nuxt-academy/guides-examples/tree/master/03_features/09_components_nuxt?fontsize=14&hidenavigation=1&theme=dark
 questions:

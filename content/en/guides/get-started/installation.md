@@ -2,8 +2,7 @@
 title: Installation
 description: There is not much you need in order to get started with Nuxt.js. Below you will find a few recommendations and then we will walk you through the 4 steps so you can have your first Nuxt.js project up and and running in no time.
 position: 1
-category: Get Started
-categoryPosition: 1
+category: get-started
 csb_link: https://codesandbox.io/embed/github/nuxt-academy/guides-examples/tree/master/01_get_started/01_installation?fontsize=14&hidenavigation=1&theme=dark
 ---
 

@@ -1,8 +1,7 @@
 ---
 title: iOS et numéros de téléphone
 description: Safari sur iOS change les numéros de téléphone en liens qui peuvent causer des problèmes de rendu avec NuxtJS
-group: Développement
-groupPosition: 2
+category: development
 position: 5
 ---
 

@@ -1,8 +1,7 @@
 ---
 title: Données asynchrones dans les composants
 description: Comment gérer les données asynchrones dans les composants avec NuxtJS ?
-group: Développement
-groupPosition: 2
+category: development
 position: 3
 ---
 

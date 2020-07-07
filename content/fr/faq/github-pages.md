@@ -2,8 +2,7 @@
 title: Déployer sur GitHub Pages
 description: Comment déployer une application Nuxt.js sur GitHub Pages
 menu: Deploy on Github
-group: Déploiement
-groupPosition: 3
+category: deployment
 position: 5
 ---
 

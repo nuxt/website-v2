@@ -2,8 +2,7 @@
 title: "The mode Property"
 description: Change default nuxt mode
 menu: mode
-category: Configuration Glossary
-categoryPosition: 5
+category: configuration-glossary
 position: 17
 ---
 

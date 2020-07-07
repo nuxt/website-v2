@@ -2,8 +2,7 @@
 title: Meta Tags and SEO
 description: Nuxt.js lets you define all default `<meta>` tags for your application inside the nuxt.config.js file using the head property. This is very useful for adding a default title and description tag for SEO purposes or for setting the viewport or adding the favicon.
 position: 6
-category: Features
-categoryPosition: 3
+category: features
 csb_link: https://codesandbox.io/embed/github/nuxt-academy/guides-examples/tree/master/03_features/06_meta_tags_seo?fontsize=14&hidenavigation=1&theme=dark
 questions:
   - question: Where do you set the title and meta descriptions globally?

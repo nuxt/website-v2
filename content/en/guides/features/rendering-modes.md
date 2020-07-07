@@ -2,8 +2,7 @@
 title: Rendering Modes
 description: Rendering Modes
 position: 1
-category: Features
-categoryPosition: 3
+category: features
 ---
 
 SSR TRUE/FALSE

@@ -2,8 +2,7 @@
 title: Views
 description: The Views section describes all you need to know to configure data and views for a specific route in your Nuxt.js Application. Views consist of an app template, a layout, and the actual page.
 position: 1
-category: Concepts
-categoryPosition: 2
+category: concepts
 csb_link: https://codesandbox.io/embed/github/nuxt-academy/guides-examples/tree/master/02_concepts/01_views?fontsize=14&hidenavigation=1&theme=dark
 questions:
   - question: What is the composition order of a Nuxt view (top-down)?

@@ -2,8 +2,7 @@
 title: "The Generator Class"
 description: Nuxt Generator Class
 menu: Generator
-category: Internals Glossary
-categoryPosition: 6
+category: internals-glossary
 Position: 8
 ---
 

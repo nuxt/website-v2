@@ -2,8 +2,7 @@
 title: "The Context"
 description: The `context` provides additional objects/params from Nuxt not traditionally available to Vue components. The `context` is available in special nuxt lifecycle areas like `asyncData`, `plugins`, `middlewares`, `modules`, and `store/nuxtServerInit`.
 menu: context
-category: Internals Glossary
-categoryPosition: 6
+category: internals-glossary
 Position: 1
 ---
 

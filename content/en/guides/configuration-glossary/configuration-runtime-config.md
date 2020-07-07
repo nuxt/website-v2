@@ -2,8 +2,7 @@
 title: "RuntimeConfig properties"
 description: RuntimeConfig allows passing dynamic config and environment variables to the nuxt context
 menu: runtimeConfig
-category: Configuration Glossary
-categoryPosition: 5
+category: configuration-glossary
 position: 25
 ---
 

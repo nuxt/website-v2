@@ -2,8 +2,7 @@
 title: modules
 description: Nuxt.js provides a higher-order module system that makes it possible to extend the core. Modules are functions that are called sequentially when booting Nuxt.js.
 position: 9
-category: Directory Structure
-categoryPosition: 4
+category: directory-structure
 csb_link: https://codesandbox.io/embed/github/nuxt-academy/guides-examples/tree/master/04_directory_structure/10_modules?fontsize=14&hidenavigation=1&theme=dark
 questions:
   - question: When are modules called?

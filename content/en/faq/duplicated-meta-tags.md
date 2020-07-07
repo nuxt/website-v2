@@ -1,8 +1,7 @@
 ---
 title: Duplicated Meta Tags?
 description: Duplicated Meta tags with Nuxt.js?
-group: Development
-groupPosition: 2
+category: development
 position: 4
 ---
 

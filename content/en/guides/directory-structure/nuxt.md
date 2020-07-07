@@ -2,8 +2,7 @@
 title: .nuxt
 description: The `.nuxt` directory is the so-called *build directory*. It is dynamically generated and hidden by default. Inside the directory you can find automatically generated files when using `nuxt dev` or your build artefacts when using `nuxt build`.
 position: 1
-category: Directory Structure
-categoryPosition: 4
+category: directory-structure
 questions:
   - question: What what commands is the .nuxt folder generated?
     answers:

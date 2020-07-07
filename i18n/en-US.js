@@ -191,6 +191,15 @@ module.exports = {
       configuration: 'Configuration',
       development: 'Development',
       deployment: 'Deployment'
+    },
+    guides: {
+      'get-started': 'Get Started',
+      concepts: 'Concepts',
+      features: 'Features',
+      'directory-structure': 'Directory Structure',
+      'configuration-glossary': 'Configuration Glossary',
+      'internals-glossary': 'Internals Glossary',
+      'components-glossary': 'Components Glossary'
     }
   }
 }

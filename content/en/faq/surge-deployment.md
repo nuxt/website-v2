@@ -2,8 +2,7 @@
 title: How to deploy with Surge?
 description: How to deploy Nuxt.js app with Surge?
 menu: Deploy on Surge
-group: Deployment
-groupPosition: 3
+category: deployment
 position: 11
 ---
 

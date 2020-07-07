@@ -2,8 +2,7 @@
 title: "The target Property"
 description: Change default nuxt target
 menu: target
-category: Configuration Glossary
-categoryPosition: 5
+category: configuration-glossary
 position: 29
 ---
 

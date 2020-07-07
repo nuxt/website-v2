@@ -1,8 +1,7 @@
 ---
 title: iOS and phone numbers
 description: Safari on iOS changes phone numbers to links which can cause a render mismatch
-group: Development
-groupPosition: 2
+category: development
 position: 5
 ---
 

@@ -2,8 +2,7 @@
 title: "The middleware Property"
 description: Set the middleware for a specific page of the application.
 menu: Middleware Property
-category: Components Glossary
-categoryPosition: 7
+category: components-glossary
 ---
 
 - Type: `String` or `Array` or `Function`

@@ -2,8 +2,7 @@
 title: Transitions
 description: Nuxt.js uses the `<transition>` component to let you create amazing transitions/animations between your routes.
 position: 5
-category: Features
-categoryPosition: 3
+category: features
 csb_link: https://codesandbox.io/embed/github/nuxt-academy/guides-examples/tree/master/03_features/05_transitions?fontsize=14&hidenavigation=1&theme=dark
 questions:
   - question: To define a custom transition for a specific route what key do you add to your page?

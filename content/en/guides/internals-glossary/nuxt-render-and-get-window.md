@@ -2,8 +2,7 @@
 title: "nuxt.renderAndGetWindow(url, options)"
 description: Get the `window` from a given URL of a Nuxt.js Application.
 menu: renderAndGetWindow
-category: Internals Glossary
-categoryPosition: 6
+category: internals-glossary
 Position: 12
 ---
 

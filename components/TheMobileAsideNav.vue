@@ -10,13 +10,13 @@
       <div class="content-wrapper h-full relative">
         <div class="overflow-y-auto h-full pt-4">
           <transition-group
-            v-for="(sublinks, group) in links"
+            v-for="(sublinks, group) in sortedLinks"
             :key="group"
             tag="div"
             name="list"
             class="header_mobile_aside_group"
           >
-            <h3 :key="`title-${group}`" class="uppercase text-gray-500 pb-2">{{ group }}</h3>
+            <h3 :key="`title-${group}`" class="uppercase text-gray-500 pb-2">{{ $t(`content.${section}.${group}`) }}</h3>
             <ul :key="`list-${group}`" class="pb-6">
               <li v-for="(link, index) in sublinks" :key="index" class="py-2">
                 <NuxtLink
@@ -57,6 +57,8 @@
 </template>
 
 <script>
+import { sortBy } from 'lodash'
+
 import ListIcon from '~/assets/images/list.svg?inline'
 import TimesIcon from '~/assets/icons/times.svg?inline'
 
@@ -73,12 +75,22 @@ export default {
   },
   data () {
     return {
-      show: false
+      show: false,
+      section: this.$route.params.section
     }
   },
   computed: {
     path () { return this.$route.path.slice(-1) === '/' ? this.$route.path.slice(0, -1) : this.$route.path },
-    locale () { return '/' + this.$route.params.section }
+    locale () { return '/' + this.$route.params.section },
+    sortedLinks () {
+      const links = {}
+      sortBy(Object.keys(this.links), (link) => {
+        return Object.keys(this.$i18n.t(`content.${this.section}`)).indexOf(link)
+      }).forEach((key) => {
+        links[key] = sortBy(this.links[key], ['position', 'menu', 'title'])
+      })
+      return links
+    }
   },
   methods: {
     toLink (link) {

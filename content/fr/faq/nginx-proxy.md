@@ -1,8 +1,7 @@
 ---
 title: Utiliser nginx comme proxy inverse
 description: Comment utiliser nginx en tant que proxy inverse ?
-group: Déploiement
-groupPosition: 3
+category: deployment
 position: 13
 ---
 

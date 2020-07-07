@@ -2,8 +2,7 @@
 title: "The Builder Class"
 description: Nuxt `Builder` Class
 menu: Builder
-category: Internals Glossary
-categoryPosition: 6
+category: internals-glossary
 Position: 7
 ---
 

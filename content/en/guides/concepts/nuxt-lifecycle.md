@@ -2,8 +2,7 @@
 title: Nuxt Lifecycle
 description: No matter which tool you use, you will always feel more confident when you understand how the tool works under the hood. The same applies to Nuxt.js.
 position: 5
-category: Concepts
-categoryPosition: 2
+category: concepts
 questions:
   - question: When does the Nuxt.js lifecycle start?
     answers:

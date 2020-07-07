@@ -2,8 +2,7 @@
 title: "Hooks"
 description: 'Nuxt Hooks'
 position: 5
-category: Features
-categoryPosition: 10
+category: features
 ---
 
 chapter on nuxt hooks

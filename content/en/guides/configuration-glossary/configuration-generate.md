@@ -2,8 +2,7 @@
 title: "The generate Property"
 description: Configure the generation of your universal web application to a static web application.
 menu: generate
-category: Configuration Glossary
-categoryPosition: 5
+category: configuration-glossary
 position: 10
 ---
 

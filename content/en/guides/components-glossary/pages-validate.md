@@ -2,8 +2,7 @@
 title: "The validate Method"
 description: Nuxt.js lets you define a validator method inside your dynamic route component.
 menu: Validate Method
-category: Components Glossary
-categoryPosition: 7
+category: components-glossary
 ---
 
 > Nuxt.js lets you define a validator method inside your dynamic route component.

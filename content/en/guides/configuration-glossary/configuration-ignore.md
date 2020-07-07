@@ -2,8 +2,7 @@
 title: "The ignore Property"
 description: Define the ignore files for your Nuxt.js application
 menu: ignore
-category: Configuration Glossary
-categoryPosition: 5
+category: configuration-glossary
 position: 14
 ---
 

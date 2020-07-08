@@ -62,9 +62,9 @@ export default {
       item.readingTime = stats
     }
   },
-  http: {
-    proxy: true
-  },
+  // http: {
+  //   proxy: true
+  // },
   plugins: [
     '~/plugins/i18n',
     '~/plugins/directives',

@@ -34,42 +34,30 @@
 </template>
 
 <script>
-import { assign, shuffle } from 'lodash'
+// import { shuffle } from 'lodash'
 import Clipboard from 'clipboard'
 
 export default {
   async asyncData ({ $content, params, store, error, app }) {
-    let page, currentPage, prev, next, contributors, langFallback
+    let path = `/${app.i18n.defaultLocale}/guides/${params.book}`
+    let prev, next, contributors, langFallback
+    let page = await $content(path, params.slug).fetch()
 
-    const defaultPath = `/${app.i18n.defaultLocale}/guides/${params.book}/${params.slug}`
-    const path = `/${app.i18n.locale}/guides/${params.book}/${params.slug}`
-
-    try {
-      page = await $content(defaultPath).fetch()
-    } catch (err) {
-      if (!err.response || err.response.status !== 404) {
-        return error({ statusCode: 500, message: app.i18n.t('common.an_error_occurred') })
+    if (app.i18n.defaultLocale !== app.i18n.locale) {
+      try {
+        path = `/${app.i18n.locale}/guides/${params.book}`
+        page = await $content(path, params.slug).fetch()
+      } catch (err) {
+        langFallback = true
       }
-      return error({ statusCode: 404, message: app.i18n.t('common.api_page_not_found') })
     }
 
     try {
-      if (path !== defaultPath) {
-        currentPage = await $content(path).fetch()
-        if (currentPage) {
-          assign(page, currentPage)
-        }
-      }
-    } catch (e) {
-      langFallback = true
-    }
-
-    try {
-      contributors = (await fetch('https://contributors-api.onrender.com' + path).then(res => res.json())).map(({ author }) => ({ author }))
+      contributors = (await fetch(`https://contributors-api.onrender.com/${path}/${params.slug}`).then(res => res.json())).map(({ author }) => ({ author }))
     } catch (e) { }
 
     try {
-      [prev, next] = await $content(currentPage ? app.i18n.locale : app.i18n.defaultLocale, 'guides', params.book)
+      [prev, next] = await $content(path)
         .only(['title', 'slug', 'dir'])
         .sortBy('title', 'asc')
         .sortBy('menu', 'asc')
@@ -78,14 +66,14 @@ export default {
         .fetch()
     } catch (e) { }
 
-    if (page && page.questions) {
-      page.questions = shuffle(page.questions.map(question => ({ ...question, answers: shuffle(question.answers) })))
-    }
+    // if (page && page.questions) {
+    //   page.questions = shuffle(page.questions.map(question => ({ ...question, answers: shuffle(question.answers) })))
+    // }
 
     return {
+      path,
       showModal: false,
       langFallback,
-      path,
       section: params.section,
       book: params.book,
       page,
@@ -96,7 +84,7 @@ export default {
   },
   computed: {
     docLink () {
-      return `https://github.com/nuxt/nuxtjs.org/blob/master/content${this.path}.md`
+      return `https://github.com/nuxt/nuxtjs.org/blob/master/content/${this.path}/${this.$route.params.slug}.md`
     }
   },
   mounted () {

@@ -32,8 +32,14 @@ export default {
     DesignIllustration
   },
   async asyncData ({ $content, app }) {
-    const posts = await $content(app.i18n.locale, 'blog').sortBy('date', 'desc').fetch()
-
+    let posts = await $content(app.i18n.defaultLocale, 'blog').sortBy('date', 'desc').fetch()
+    if (app.i18n.defaultLocale !== app.i18n.locale) {
+      try {
+        posts = await $content(app.i18n.locale, 'blog').sortBy('date', 'desc').fetch()
+      } catch (err) {
+        console.log(err.message)
+      }
+    }
     return {
       posts
     }

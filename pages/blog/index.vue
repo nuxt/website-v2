@@ -37,7 +37,6 @@ export default {
       try {
         posts = await $content(app.i18n.locale, 'blog').sortBy('date', 'desc').fetch()
       } catch (err) {
-        console.log(err.message)
       }
     }
     return {

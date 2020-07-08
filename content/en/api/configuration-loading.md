@@ -3,7 +3,7 @@ title: "The loading Property"
 description: Nuxt.js uses its own component to show a progress bar between the routes. You can customize it, disable it or create your own component.
 menu: loading
 category: configuration
-position: 15
+position: 115
 ---
 
 - Type: `Boolean` or `Object` or `String`

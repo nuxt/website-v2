@@ -3,7 +3,7 @@ title: "The dev Property"
 description: Define the development or production mode.
 menu: dev
 category: configuration
-position: 6
+position: 106
 ---
 
 - Type: `Boolean`

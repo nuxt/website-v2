@@ -3,7 +3,7 @@ title: "The dir Property"
 description: Define the custom directories for your Nuxt.js application
 menu: dir
 category: configuration
-position: 7
+position: 107
 ---
 
 - Type: `Object`

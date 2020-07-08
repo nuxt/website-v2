@@ -2,6 +2,7 @@
 title: Directory Structure
 description: The default Nuxt.js application structure is intended to provide a great starting point for both large and small applications.
 category: getting-started
+position: 102
 ---
 
 > The default Nuxt.js application structure is intended to provide a great starting point for both small and large applications. Of course, you are free to organize your application however you like.

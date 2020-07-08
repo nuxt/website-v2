@@ -3,7 +3,7 @@ title: "API: La propriété d'écouteurs"
 description: Les écouteurs écoutent les événements Nuxt qui sont généralement utilisés dans les modules Nuxt, mais sont également disponibles dans `nuxt.config.js`.
 menu: hooks
 category: configuration
-position: 13
+position: 113
 ---
 
 - Type: `Object`

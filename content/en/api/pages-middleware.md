@@ -3,7 +3,7 @@ title: "The middleware Property"
 description: Set the middleware for a specific page of the application.
 menu: middleware
 category: pages
-position: 7
+position: 27
 ---
 
 - Type: `String` or `Array` or `Function`

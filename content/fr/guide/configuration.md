@@ -2,6 +2,7 @@
 title: Configuration
 description: La configuration par défaut de Nuxt.js couvre la plupart des cas d'usage. Cette configuration peut être surchargée en utilisant le fichier `nuxt.config.js`.
 category: getting-started
+position: 103
 ---
 
 > La configuration par défaut de Nuxt.js couvre la plupart des cas d'usage. Cette configuration peut être surchargée en utilisant le fichier `nuxt.config.js`.

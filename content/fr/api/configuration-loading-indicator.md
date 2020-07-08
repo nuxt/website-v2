@@ -3,7 +3,7 @@ title: "API: Propriété de l'indicateur de chargement"
 description: Afficher un indicateur de fantaisie pendant le chargement de la page SPA!
 menu: loadingIndicator
 category: configuration
-position: 16
+position: 116
 ---
 
 > Afficher un indicateur de fantaisie pendant le chargement de la page SPA!

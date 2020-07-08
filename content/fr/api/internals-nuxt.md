@@ -3,7 +3,7 @@ title: "API : la classe Nuxt"
 description: La classe cœur Nuxt
 menu: Nuxt
 category: internals
-position: 2
+position: 302
 ---
 
 - Source : **[core/nuxt.js](https://github.com/nuxt/nuxt.js/blob/dev/packages/core/src/nuxt.js)**

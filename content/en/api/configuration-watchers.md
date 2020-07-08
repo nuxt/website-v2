@@ -3,7 +3,7 @@ title: "The watchers Property"
 description: The watchers property lets you overwrite watchers configuration.
 menu: watchers
 category: configuration
-position: 34
+position: 134
 ---
 
 - Type: `Object`

@@ -3,7 +3,7 @@ title: "API: Les propriétés transition"
 description: Définissez les propriétés par défaut des transitions de page et de mise en page.
 menu: transition
 category: configuration
-position: 31
+position: 131
 ---
 
 ## La propriété pageTransition

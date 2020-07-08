@@ -3,7 +3,7 @@ title: "The loading indicator Property"
 description: Show fancy loading indicator while SPA page is loading!
 menu: loadingIndicator
 category: configuration
-position: 16
+position: 116
 ---
 
 > Show fancy loading indicator while SPA page is loading!

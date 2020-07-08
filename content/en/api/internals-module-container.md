@@ -3,7 +3,7 @@ title: "The ModuleContainer Class"
 description: Nuxt ModuleContainer Class
 menu: Module Container
 category: internals
-position: 3
+position: 304
 ---
 
 - Source: **[core/module.js](https://github.com/nuxt/nuxt.js/blob/dev/packages/core/src/module.js)**

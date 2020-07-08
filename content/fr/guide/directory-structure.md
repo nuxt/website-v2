@@ -2,6 +2,7 @@
 title: Structure des répertoires
 description: La structure par défaut d'une application Nuxt.js est destinée à fournir un excellent point de départ pour les petites et grandes applications. Bien sûr, vous êtes libre d'organiser votre application comme vous le souhaitez.
 category: getting-started
+position: 102
 ---
 
 > La structure par défaut d'une application Nuxt.js est destinée à fournir un excellent point de départ pour les petites et grandes applications. Bien sûr, vous êtes libre d'organiser votre application comme vous le souhaitez.

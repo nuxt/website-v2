@@ -3,7 +3,7 @@ title: "API: Le composant <client-only>"
 description: Rendre un composant uniquement côté client et afficher un texte d'espace réservé côté serveur.
 menu: client-only
 category: components
-position: 4
+position: 44
 ---
 
 > Ce composant est utilisé pour rendre intentionnellement un composant uniquement côté client. Pour importer un 

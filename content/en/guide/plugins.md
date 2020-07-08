@@ -2,6 +2,7 @@
 title: Plugins
 description: Nuxt.js allows you to define JavaScript plugins to be run before instantiating the root Vue.js Application. This is especially helpful when using Vue libraries, external modules or your own plugins.
 category: getting-started
+position: 108
 ---
 
 > Nuxt.js allows you to define JavaScript plugins to be run before instantiating the root Vue.js Application. This is especially helpful when using Vue libraries, external modules or your own plugins.

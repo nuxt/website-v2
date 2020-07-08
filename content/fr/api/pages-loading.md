@@ -3,7 +3,7 @@ title: "API: la propriété loading"
 description: La propriété `loading` vous permet de désactiver la barre de progression du chargement par défaut sur une page spécifique.
 menu: loading
 category: pages
-position: 6
+position: 26
 ---
 
 > La propriété loading vous permet de désactiver la barre de progression du chargement par défaut sur une page spécifique.

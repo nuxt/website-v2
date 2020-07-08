@@ -3,7 +3,7 @@ title: "API : la propriété scrollToTop"
 description: La propriété `scrollToTop` vous permet d'indiquer à Nuxt.js de faire défiler la page tout en haut avant de faire le rendu.
 menu: scrollToTop
 category: pages
-position: 8
+position: 28
 ---
 
 > La propriété `scrollToTop` vous permet d'indiquer à Nuxt.js de faire défiler la page tout en haut avant de faire le rendu.

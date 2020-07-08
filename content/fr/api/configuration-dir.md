@@ -3,7 +3,7 @@ title: "API: La propriété dir"
 description: Définir les dossiers personnalisés de votre application Nuxt.js.
 menu: dir
 category: configuration
-position: 7
+position: 107
 ---
 
 - Type: `Object`

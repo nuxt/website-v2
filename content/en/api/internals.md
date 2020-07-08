@@ -3,7 +3,7 @@ title: "Nuxt Modules Intro"
 description: Better understand Nuxt internals
 menu: Intro
 category: internals
-position: 1
+position: 301
 ---
 
 Nuxt.js has a fully modular architecture which allows developers extending any part of Nuxt Core using a flexible API.

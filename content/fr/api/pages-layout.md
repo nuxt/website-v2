@@ -3,7 +3,7 @@ title: "API : la propriété layout"
 description: Chaque fichier (premier niveau) dans le répertoire `layouts` créera un layout personnalisé accessible avec la propriété layout dans le composant page.
 menu: layout
 category: pages
-position: 5
+position: 25
 ---
 
 > Chaque fichier (premier niveau) dans le répertoire `layouts` créera une mise en page personnalisée accessible avec la propriété `layout` dans le composant de page.

@@ -3,7 +3,7 @@ title: "The vue.config Property"
 description: A config object for Vue.config
 menu: vue.config
 category: configuration
-position: 32
+position: 132
 ---
 
 - Type: `Object`

@@ -3,7 +3,7 @@ title: "The Generator Class"
 description: Nuxt Generator Class
 menu: Generator
 category: internals
-position: 5
+position: 306
 ---
 
 - Source: **[generator/generator.js](https://github.com/nuxt/nuxt.js/blob/dev/packages/generator/src/generator.js)**

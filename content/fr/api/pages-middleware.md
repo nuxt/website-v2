@@ -3,7 +3,7 @@ title: "API : la propriété middleware"
 description: Définit le middleware pour une page spécifique de l'application.
 menu: middleware
 category: pages
-position: 7
+position: 27
 ---
 
 - Type : `String` ou `Array`

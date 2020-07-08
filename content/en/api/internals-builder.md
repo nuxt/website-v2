@@ -3,7 +3,7 @@ title: "The Builder Class"
 description: Nuxt `Builder` Class
 menu: Builder
 category: internals
-position: 5
+position: 305
 ---
 
 - Source: **[builder/builder.js](https://github.com/nuxt/nuxt.js/blob/dev/packages/builder/src/builder.js)**

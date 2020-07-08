@@ -3,7 +3,7 @@ title: "API: La propriété modules"
 description: Les modules sont des extensions Nuxt.js qui peuvent étendre ses fonctionnalités de base et ajouter des intégrations sans fin.
 menu: modules
 category: configuration
-position: 19
+position: 119
 ---
 
 - Type: `Array`

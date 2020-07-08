@@ -3,7 +3,7 @@ title: "API : la méthode fetch"
 description: La méthode `fetch` est utilisée pour remplir le store avant de rendre la page, elle est similaire à la méthode `asyncData` sauf qu'elle ne définit pas les données du composant.
 menu: fetch
 category: pages
-position: 2
+position: 22
 ---
 
 ## Nuxt >= 2.12

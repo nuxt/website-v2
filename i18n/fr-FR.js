@@ -139,17 +139,33 @@ module.exports = {
   blog: {
     title: 'NuxtJS Blog',
     description:
-      'Discover articles from the core team and contributors about NuxtJS, tips and tricks included!'
+      'Discover articles from the core team and contributors about NuxtJS, tips and tricks included!',
+    contribute: 'Caught a mistake or want to contribute to this blog post?'
+
   },
   guide: {
     release_notes: 'Notes de versions (en)',
-    contribute:
-      'Vous avez vu une erreur ou vous souhaitez contribuer à la documentation ?',
-    edit_on_github: 'Éditez cette page sur GitHub !',
     toc_title: 'On this page'
   },
   quiz: {
     title: 'Quiz'
+  },
+  tryNewDocs: {
+    msg1: 'Want to take a look at our new docs? Our ',
+    link: 'new docs',
+    msg2: 'are now in beta. Have fun!'
+  },
+  contribute: {
+    title: 'Contributors',
+    docs: 'Vous avez vu une erreur ou vous souhaitez contribuer à la documentation ?',
+    blog: 'Caught a mistake or want to contribute to this blog post?',
+    edit_on_github: 'Éditez cette page sur GitHub !',
+    msg1:
+      'Contribution for this page is now closed. If you would like to contribute please check out our',
+    link: 'new docs'
+  },
+  codeSandbox: {
+    open: 'Open CodeSandbox'
   },
   content: {
     guide: {

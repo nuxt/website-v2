@@ -3,7 +3,7 @@ title: "API: La propriété cli"
 description: Nuxt.js vous permet de personnaliser la configuration CLI.
 menu: cli
 category: configuration
-position: 3
+position: 103
 ---
 
 > Nuxt.js vous permet de personnaliser la configuration CLI.

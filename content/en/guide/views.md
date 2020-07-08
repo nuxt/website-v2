@@ -2,6 +2,7 @@
 title: Views
 description: The Views section describes all you need to configure data and views for a specific route in your Nuxt.js Application (Document, Layouts, Pages and HTML Head).
 category: getting-started
+position: 105
 ---
 
 > The Views section describes all you need to configure data and views for a specific route in your Nuxt.js Application (App Template, Layouts, Pages and HTML Head).

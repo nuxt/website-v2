@@ -3,7 +3,7 @@ title: "API: la propriété key"
 description: Définir la propriété `key` du composant `<router-view>`
 menu: key
 category: pages
-position: 4
+position: 24
 ---
 
 > Définir la propriété `key` du composant `<router-view>`

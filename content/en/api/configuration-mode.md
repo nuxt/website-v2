@@ -3,7 +3,7 @@ title: "The mode Property"
 description: Change default nuxt mode
 menu: mode
 category: configuration
-position: 17
+position: 117
 ---
 
 - Type: `string`

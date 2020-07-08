@@ -3,7 +3,7 @@ title: "API : La propriété generate"
 description: Configure la génération de votre application web universelle vers une application web statique.
 menu: generate
 category: configuration
-position: 10
+position: 110
 ---
 
 - Type : `Object`

@@ -3,7 +3,7 @@ title: "The css Property"
 description: Nuxt.js lets you define the CSS files/modules/libraries you want to set globally (included in every page).
 menu: css
 category: configuration
-position: 4
+position: 104
 ---
 
 > Nuxt.js lets you define the CSS files/modules/libraries you want to set globally (included in every page).

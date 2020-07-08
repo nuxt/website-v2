@@ -3,7 +3,7 @@ title: "API: La propriété mode"
 description: Changer le mode nuxt par défaut
 menu: mode
 category: configuration
-position: 17
+position: 117
 ---
 
 - Type: `string`

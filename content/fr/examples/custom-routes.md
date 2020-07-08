@@ -5,5 +5,5 @@ github: custom-routes
 livedemo: https://custom-routes.nuxtjs.org
 documentation: /guide/routing#routes-dynamiques
 category: customization
-position: 3
+position: 23
 ---

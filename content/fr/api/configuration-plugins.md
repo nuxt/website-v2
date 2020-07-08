@@ -3,7 +3,7 @@ title: 'API: La propriété plugins'
 description: Utilisez les plugins vue.js avec l'option plugins de Nuxt.js.
 menu: plugins
 category: configuration
-position: 21
+position: 121
 ---
 
 **Remarque**: Depuis Nuxt.js 2.4, `mode` a été introduit comme option de `plugins` pour spécifier le type de plugin, 

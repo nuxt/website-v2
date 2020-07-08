@@ -3,7 +3,7 @@ title: "The watch Property"
 description: The watch property lets you watch custom files for restarting the server.
 menu: watch
 category: configuration
-position: 33
+position: 133
 ---
 
 - Type: `Object`

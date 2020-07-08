@@ -3,7 +3,7 @@ title: "The Nuxt Class"
 description: Nuxt Core Class
 menu: Nuxt
 category: internals
-position: 2
+position: 302
 ---
 
 - Source: **[core/nuxt.js](https://github.com/nuxt/nuxt.js/blob/dev/packages/core/src/nuxt.js)**

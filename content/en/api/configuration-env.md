@@ -3,7 +3,7 @@ title: "The env Property"
 description: Share environment variables between client and server.
 menu: env
 category: configuration
-position: 8
+position: 108
 ---
 
 - Type: `Object`

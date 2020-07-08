@@ -3,7 +3,7 @@ title: "The watchQuery Property"
 description: Watch query strings and execute component methods on change (asyncData, fetch, validate, layout, ...)
 menu: watchQuery
 category: pages
-position: 12
+position: 31
 ---
 
 > Watch query strings and execute component methods on change (asyncData, fetch(context), validate, layout, ...)

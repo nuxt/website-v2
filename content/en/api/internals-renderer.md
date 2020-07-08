@@ -3,7 +3,7 @@ title: "The Renderer Class"
 description: Nuxt Renderer Class
 menu: Renderer
 category: internals
-position: 3
+position: 303
 ---
 
 - Source: **[vue-renderer/renderer.js](https://github.com/nuxt/nuxt.js/blob/dev/packages/vue-renderer/src/renderer.js)**

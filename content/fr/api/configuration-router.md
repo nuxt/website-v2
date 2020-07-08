@@ -3,7 +3,7 @@ title: "API: La propriété router"
 description: La propriété router vous permet de personnaliser le routeur Nuxt.js.
 menu: router
 category: configuration
-position: 24
+position: 124
 ---
 
 > La propriété router vous permet de personnaliser le routeur Nuxt.js. ([vue-router](https://router.vuejs.org/en/)).

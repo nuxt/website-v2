@@ -4,7 +4,7 @@ description: Exemple d'authentification avec le service d'API externe (jsonwebto
 github: auth-jwt
 code: https://github.com/ahadyekta/nuxt-auth-external-jwt
 category: advanced
-position: 3
+position: 43
 ---
 
 # Documentation

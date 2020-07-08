@@ -5,7 +5,7 @@ github: auth-routes
 livedemo: https://nuxt-auth-routes.gomix.me
 liveedit: https://gomix.com/#!/project/nuxt-auth-routes
 category: advanced
-position: 2
+position: 42
 ---
 
 # Documentation

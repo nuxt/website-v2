@@ -5,5 +5,5 @@ github: custom-page-loading
 livedemo: https://custom-loading.nuxtjs.org
 documentation: /api/configuration-loading
 category: customization
-position: 2
+position: 22
 ---

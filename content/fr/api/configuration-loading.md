@@ -3,7 +3,7 @@ title: "API: La propriété loading"
 description: Nuxt.js utilise son propre composant pour afficher une barre de progression entre les chemins. Vous pouvez la personnaliser, la désactiver ou créer votre propre composant.
 menu: loading
 category: configuration
-position: 15
+position: 115
 ---
 
 - Type: `Boolean` ou `Object` ou `String`

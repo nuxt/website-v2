@@ -5,5 +5,5 @@ github: named-views
 livedemo: https://named-views.nuxtjs.org
 documentation: /guide/routing#named-views
 category: customization
-position: 7
+position: 27
 ---

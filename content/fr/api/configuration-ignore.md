@@ -3,7 +3,7 @@ title: "API: La propriété ignore"
 description: Définissez les fichiers ignorés pour votre application Nuxt.js
 menu: ignore
 category: configuration
-position: 14
+position: 114
 ---
 
 ## .nuxtignore

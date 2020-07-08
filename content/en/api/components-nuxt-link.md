@@ -3,7 +3,7 @@ title: "API: The <nuxt-link> Component"
 description: Link the pages between them with nuxt-link.
 menu: nuxt-link
 category: components
-position: 3
+position: 43
 ---
 
 > This component is used to provide navigations between page components and enhance performances with smart prefetching.

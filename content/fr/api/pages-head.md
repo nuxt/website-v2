@@ -3,7 +3,7 @@ title: "API : la méthode head"
 description: Nuxt.js utilise vue-meta pour mettre à jour les entêtes et les attributs HTML de votre application.
 menu: head
 category: pages
-position: 3
+position: 23
 ---
 
 > Nuxt.js utilise [vue-meta](https://github.com/nuxt/vue-meta) pour mettre à jour les entêtes et les attributs HTML de votre application.

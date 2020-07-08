@@ -3,7 +3,7 @@ title: "The target Property"
 description: Change default nuxt target
 menu: target
 category: configuration
-position: 29
+position: 129
 ---
 
 Deployment targets for Nuxt >= v2.13:

@@ -3,7 +3,7 @@ title: "API: La propriété env"
 description: Partager les variables d'environement entre client et serveur.
 menu: env
 category: configuration
-position: 8
+position: 108
 ---
 
 - Type: `Object`

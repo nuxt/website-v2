@@ -3,7 +3,7 @@ title: "The key Property"
 description: Set the `key` property of internal `<router-view>` component
 menu: key
 category: pages
-position: 4
+position: 24
 ---
 
 > Set the `key` property of internal `<router-view>` component

@@ -3,7 +3,7 @@ title: "The router Property"
 description: The router property lets you customize Nuxt.js router.
 menu: router
 category: configuration
-position: 24
+position: 124
 ---
 
 > The router property lets you customize Nuxt.js router ([vue-router](https://router.vuejs.org/en/)).

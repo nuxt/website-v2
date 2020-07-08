@@ -3,7 +3,7 @@ title: "API : la méthode asyncData"
 description: Vous voudriez peut-être récupérer des données et faire le rendu côté serveur. Nuxt.js ajoute une méthode `asyncData` vous permettant de gérer des opérations asynchrones avant de définir les données du composant.
 menu: asyncData
 category: pages
-position: 1
+position: 21
 ---
 
 > Vous voudriez peut-être récupérer des données et faire le rendu côté serveur. Nuxt.js ajoute une méthode `asyncData` vous permettant de gérer des opérations asynchrones avant de définir les données du composant.

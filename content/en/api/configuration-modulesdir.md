@@ -3,7 +3,7 @@ title: "The modulesDir Property"
 description: Define the modules directory for your Nuxt.js application
 menu: modulesDir
 category: configuration
-position: 20
+position: 120
 ---
 
 - Type: `Array`

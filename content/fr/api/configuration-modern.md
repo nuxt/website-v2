@@ -3,7 +3,7 @@ title: "API: La propriété modern"
 description: Créez et servez un bundle moderne
 menu: modern
 category: configuration
-position: 18
+position: 118
 ---
 
 > Cette fonctionnalité est inspirée du [mode moderne vue-cli](https://cli.vuejs.org/guide/browser-compatibility.html#modern-mode) 

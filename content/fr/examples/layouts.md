@@ -6,5 +6,5 @@ livedemo: https://nuxt-custom-layouts.gomix.me/
 liveedit: https://gomix.com/#!/project/nuxt-custom-layouts
 documentation: /guide/views#mises-en-page
 category: customization
-position: 5
+position: 25
 ---

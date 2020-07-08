@@ -3,7 +3,7 @@ title: "API: The <nuxt> Component"
 description: Display the page components inside a layout.
 menu: nuxt
 category: components
-position: 1
+position: 41
 ---
 
 > This component is used only in [layouts](/guide/views#layouts) to display the page components.

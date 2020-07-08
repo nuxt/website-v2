@@ -3,7 +3,7 @@ title: "API : nuxt.renderRoute(route, context)"
 description: Faire le rendu d'une route spécifique avec un contexte donné.
 menu: renderRoute
 category: programmatically
-position: 3
+position: 203
 ---
 
 - Type : `Function`

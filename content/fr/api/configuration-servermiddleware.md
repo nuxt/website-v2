@@ -3,7 +3,7 @@ title: "API: La propriété serverMiddleware"
 description: Définissez le middleware côté serveur.
 menu: serverMiddleware
 category: configuration
-position: 27
+position: 127
 ---
 
 - Type: `Array`

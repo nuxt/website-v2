@@ -3,7 +3,7 @@ title: "API: Le composant <nuxt-child>"
 description: Afficher la page courante.
 menu: nuxt-child
 category: components
-position: 2
+position: 42
 ---
 
 > Ce composant est utilisé pour afficher les composants enfants dans une [route imbriquée](/guide/routing#nested-routes).

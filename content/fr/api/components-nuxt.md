@@ -3,7 +3,7 @@ title: "API: Le composant <nuxt>"
 description: Affichez les composants de la page dans une mise en page.
 menu: nuxt
 category: components
-position: 1
+position: 41
 ---
 
 > Ce composant est utilisé uniquement dans les [mises en page](/guide/views#layouts) pour afficher les composants de la 

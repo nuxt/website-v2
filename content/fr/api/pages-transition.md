@@ -3,7 +3,7 @@ title: "API : la propriété transition"
 description: Nuxt.js utilise le composant de `<transition>` afin de créer des transitions / animations époustouflantes entre vos pages.
 menu: transition
 category: pages
-position: 9
+position: 29
 ---
 
 > Nuxt.js utilise le composant de `<transition>` afin de créer des transitions / animations époustouflantes entre vos pages.

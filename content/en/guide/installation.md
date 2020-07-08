@@ -2,6 +2,7 @@
 title: Installation
 description: Nuxt.js is really easy to get started with. A simple project only needs the `nuxt` dependency.
 category: getting-started
+position: 101
 ---
 
 > Nuxt.js is really easy to get started with. A simple project only needs the `nuxt` dependency.

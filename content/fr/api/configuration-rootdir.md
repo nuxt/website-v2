@@ -3,7 +3,7 @@ title: "API: La propriété rootDir"
 description: Définissez l'espace de travail de l'application Nuxt.js
 menu: rootDir
 category: configuration
-position: 23
+position: 123
 ---
 
 - Type: `String`

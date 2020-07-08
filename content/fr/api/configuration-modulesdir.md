@@ -3,7 +3,7 @@ title: "API: La propriété modulesDir"
 description: Définissez le répertoire des modules pour votre application Nuxt.js
 menu: modulesDir
 category: configuration
-position: 20
+position: 120
 ---
 
 - Type: `Array`

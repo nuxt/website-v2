@@ -3,7 +3,7 @@ title: "API : la classe Builder"
 description: La classe `Builder` de Nuxt
 menu: Builder
 category: internals
-position: 5
+position: 305
 ---
 
 - Source : **[builder/builder.js](https://github.com/nuxt/nuxt.js/blob/dev/packages/builder/src/builder.js)**

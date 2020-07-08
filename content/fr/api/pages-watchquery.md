@@ -3,7 +3,7 @@ title: "API: la propriété watchQuery"
 description: Observer les chaînes de requête et exécuter les méthodes du composant lors d'une modification (asyncData, fetch, validate, layout, ...)
 menu: watchQuery
 category: pages
-position: 12
+position: 32
 ---
 
 > Observer les chaînes de requête et exécuter les méthodes du composant lors de modifications (asyncData, fetch, validate, layout, ...)

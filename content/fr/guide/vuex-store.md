@@ -2,6 +2,7 @@
 title: Store Vuex
 description: L'utilisation d'un store pour gérer l'état est important pour toutes les applications de taille importante. C'est pourquoi Vuex est implémenté au cœur de Nuxt.js.
 category: getting-started
+position: 110
 ---
 
 > L'utilisation d'un store pour gérer l'état est important pour toutes les applications de taille importante. C'est pourquoi [Vuex](https://vuex.vuejs.org/fr/) est implémenté au cœur de Nuxt.js.

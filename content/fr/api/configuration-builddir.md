@@ -3,7 +3,7 @@ title: "API: La propriété buildDir"
 description: Définissez le dossier dist de votre application Nuxt.js
 menu: buildDir
 category: configuration
-position: 2
+position: 102
 ---
 
 - Type: `String`

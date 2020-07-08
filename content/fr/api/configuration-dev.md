@@ -3,7 +3,7 @@ title: "API : La propriété dev"
 description: Défini le mode développement ou le mode production.
 menu: dev
 category: configuration
-position: 6
+position: 106
 ---
 
 - Type : `Boolean`

@@ -3,7 +3,7 @@ title: "The serverMiddleware Property"
 description: Define server-side middleware.
 menu: serverMiddleware
 category: configuration
-position: 27
+position: 127
 ---
 
 - Type: `Array`

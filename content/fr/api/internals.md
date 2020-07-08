@@ -3,7 +3,7 @@ title: "API : Mécanismes de Nuxt"
 description: Mieux comprendre les mécanismes de Nuxt
 menu: Intro
 category: internals
-position: 1
+position: 301
 ---
 
 Nuxt.js a une architecture intégralement modulable permettant au développeur d'étendre n'importe quelle partie du cœur de Nuxt en utilisant son API.

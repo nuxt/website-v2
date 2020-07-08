@@ -2,6 +2,7 @@
 title: Données asynchrones
 description: Vous voudriez peut-être récupérer des données et faire le rendu côté serveur. Nuxt.js ajoute une méthode `asyncData` pour vous permettre de gérer les opérations asynchrones avant de définir les données du composant.
 category: getting-started
+position: 106
 ---
 
 > Vous voudriez peut-être récupérer des données et faire leur rendu côté serveur. Nuxt.js ajoute une méthode `asyncData` pour vous permettre de gérer les opérations asynchrones avant d'initialiser le composant.

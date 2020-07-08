@@ -2,7 +2,7 @@
 title: Async data in components?
 description: Async data in NuxtJS components?
 category: development
-position: 3
+position: 103
 ---
 
 Because components do not have an `asyncData` method, you cannot directly fetch async data server side within a component. In order to get around this limitation you have two basic options:

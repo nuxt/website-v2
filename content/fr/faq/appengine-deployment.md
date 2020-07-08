@@ -2,8 +2,8 @@
 title: Déploiement sur Google App Engine
 description: Comment déployer une application Nuxt.js sur Google App Engine ?
 menu: Usage
-category: programmatically
-position: 1
+category: deployment
+position: 201
 ---
 
 Déployer sur [Google App Engine](https://cloud.google.com/appengine/) est une solution rapide et facile pour héberger vos applications universelles Nuxt sur le service de Cloud Google.

@@ -3,7 +3,7 @@ title: Comment déployer sur Azure Portal ?
 description: Comment déployer une application Nuxt.js application sur Azure Portal ?
 menu: Deploy on Azure Portal
 category: deployment
-position: 2
+position: 302
 ---
 
 ## Exigences

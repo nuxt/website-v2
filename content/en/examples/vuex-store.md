@@ -5,5 +5,5 @@ github: vuex-store
 livedemo: https://vuex-store.nuxtjs.org
 documentation: /guide/vuex-store
 category: advanced
-position: 4
+position: 304
 ---

@@ -3,7 +3,7 @@ title: How to deploy on Azure Static Web Apps?
 description: How to deploy a Nuxt.js application on Azure Static Web Apps?
 menu: Deploy on Azure Static Web Apps
 category: deployment
-position: 3
+position: 203
 ---
 You can now deploy your static sites to Azure using Azure static web apps. You will need to have your app in Github as Azure static web apps leverages Github actions which allow you to re-build your static site on every git push.
 

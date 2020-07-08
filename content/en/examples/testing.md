@@ -4,5 +4,5 @@ description: Testing example with Nuxt.js
 github: with-ava
 documentation: /guide/development-tools#end-to-end-testing
 category: advanced
-position: 6
+position: 306
 ---

@@ -2,7 +2,7 @@
 title: Données asynchrones dans les composants
 description: Comment gérer les données asynchrones dans les composants avec NuxtJS ?
 category: development
-position: 3
+position: 203
 ---
 
 Étant donné que les composants ne comportent pas de méthode `asyncData`, vous ne pouvez pas récupérer directement côté serveur de données asynchrones dans un composant. Pour contourner cette limitation, vous avez deux possibilités :

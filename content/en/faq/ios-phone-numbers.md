@@ -2,7 +2,7 @@
 title: iOS and phone numbers
 description: Safari on iOS changes phone numbers to links which can cause a render mismatch
 category: development
-position: 5
+position: 105
 ---
 
 Some mobile Safari versions will automatically transform phone numbers into links. This will trigger a `NodeMismatch` warning as the SSR content doesn't match the website content anymore. This can make your app unusable on these Safari versions.

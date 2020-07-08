@@ -74,7 +74,6 @@ export default {
     '~/plugins/adblock.client.js',
     '~/plugins/newsletter.client.js',
     '~/plugins/vue-scrollactive',
-    '~/plugins/components',
     '~/plugins/markdown'
   ],
   env: {

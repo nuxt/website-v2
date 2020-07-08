@@ -1,6 +1,6 @@
 ---
 title: Configuration
-description: By default, Nuxt.js is configured to cover most use cases. This default configuration can be overwritten with the nuxt.config.js file. 
+description: By default, Nuxt.js is configured to cover most use cases. This default configuration can be overwritten with the nuxt.config.js file.
 position: 7
 category: features
 csb_link_host_port: https://codesandbox.io/embed/github/nuxt-academy/guides-examples/tree/master/03_features/07_configuration_host_port?fontsize=14&hidenavigation=1&theme=dark
@@ -88,7 +88,7 @@ export default async () => {
 }
 ```
 
-<base-alert> 
+<base-alert>
 
 The axios-module cannot be used in `nuxt.config.js`. You will need to import axios and configure it again.
 
@@ -96,7 +96,7 @@ The axios-module cannot be used in `nuxt.config.js`. You will need to import axi
 
 ## Edit host and port
 
-By default, the Nuxt.js development server host is `localhost`  which is only accessible from within the host machine. In order to view your app on another device you need to modify the host. You can modify the host in your nuxt.config.js file. 
+By default, the Nuxt.js development server host is `localhost`  which is only accessible from within the host machine. In order to view your app on another device you need to modify the host. You can modify the host in your nuxt.config.js file.
 
 Host `'0.0.0.0'`  is designated to tell Nuxt.js to resolve a host address, which is accessible to connections *outside* of the host machine (e.g. LAN). If the host is assigned the string value of `'0'` (not 0, which is falsy), or `'0.0.0.0'` your local IP address will be assigned to your Nuxt.js application.
 
@@ -175,7 +175,7 @@ To use these pre-processors, we need to install their webpack loaders:
   ```
 
   </code-block>
-  <code-block label="NPM" >
+  <code-block label="NPM">
 
   ```bash
   npm install --save-dev pug pug-plain-loader
@@ -189,9 +189,9 @@ To use these pre-processors, we need to install their webpack loaders:
 
 Nuxt.js lets you define the CSS files/modules/libraries you want to set globally (included in every page).
 
-<base-alert> 
+<base-alert>
 
-In case you want to use `sass` make sure that you have installed the `node-sass` and `sass-loader` packages. 
+In case you want to use `sass` make sure that you have installed the `node-sass` and `sass-loader` packages.
 
 </base-alert>
 
@@ -210,7 +210,7 @@ export default {
 }
 ```
 
-<base-alert> 
+<base-alert>
 
 Nuxt.js will automatically guess the file type by its extension and use the appropriate pre-processor loader for webpack. You will still need to install the required loader if you need to use them.
 

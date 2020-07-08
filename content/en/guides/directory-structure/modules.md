@@ -103,9 +103,9 @@ Module developers usually provide additionally needed steps and details for usag
 
 </base-alert>
 
-Nuxt.js tries to resolve each item in the modules array using node require path (in the `node_modules`) and then will resolved from the project `srcDir` if `@` alias is used. 
+Nuxt.js tries to resolve each item in the modules array using node require path (in the `node_modules`) and then will resolved from the project `srcDir` if `@` alias is used.
 
-<base-alert> 
+<base-alert>
 
 Modules are executed sequentially so the order is important.
 
@@ -262,7 +262,7 @@ nuxt.hook('listen', async (server, {host, port})) => {
 })
 ```
 
-`this`: Context of modules. All modules will be called within context of the ModuleContainer instance. 
+`this`: Context of modules. All modules will be called within context of the ModuleContainer instance.
 
 Please look into the [ModuleContainer](https://nuxtjs.org/api/internals-module-container) class docs for available methods.
 
@@ -449,7 +449,7 @@ export default {
   ```
 
   </code-block>
-  <code-block label="NPM" >
+  <code-block label="NPM">
 
   ```bash
   npm install --save-dev @nuxtjs/eslint-module

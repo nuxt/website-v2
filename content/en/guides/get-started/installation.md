@@ -8,11 +8,11 @@ csb_link: https://codesandbox.io/embed/github/nuxt-academy/guides-examples/tree/
 
 ## Prerequisites
 
-There is not much you need in order to get started with Nuxt.js. Below you will find a few recommendations and then we will walk you through the 4 steps so you can have your first Nuxt.js project up and and running in no time. 
+There is not much you need in order to get started with Nuxt.js. Below you will find a few recommendations and then we will walk you through the 4 steps so you can have your first Nuxt.js project up and and running in no time.
 
 <base-alert type="info">
 
-Another way to get started with Nuxt.js is to use [CodeSandbox](https://template.nuxtjs.org) which is a great way for quickly playing around with Nuxt.js or sharing your code with other people. 
+Another way to get started with Nuxt.js is to use [CodeSandbox](https://template.nuxtjs.org) which is a great way for quickly playing around with Nuxt.js or sharing your code with other people.
 
 </base-alert>
 
@@ -20,7 +20,7 @@ Another way to get started with Nuxt.js is to use [CodeSandbox](https://template
 
 [node](https://nodejs.org/en/download/) - at least v8.9.0
 
-*We recommend you have the latest version installed.* 
+*We recommend you have the latest version installed.*
 
 ### Text editor
 
@@ -34,7 +34,7 @@ Use whatever you like, but we recommend to use the VSCode terminal and further e
 
 Creating a Nuxt.js project from scratch only requires one file and one directory.
 
-In this example we will use the terminal to create the directories and files but feel free to create them using your editor if you prefer. 
+In this example we will use the terminal to create the directories and files but feel free to create them using your editor if you prefer.
 
 ### First step: Set up your project
 
@@ -53,7 +53,7 @@ Then create a file named `package.json`:
 touch package.json
 ```
 
-Open the package.json file in your favourite code editor and fill it with this JSON content: 
+Open the package.json file in your favourite code editor and fill it with this JSON content:
 
 ```json
 {
@@ -69,7 +69,7 @@ Open the package.json file in your favourite code editor and fill it with this J
 
 `scripts` define Nuxt.js commands that will be launched with the command `npm run <command>`.
 
-<base-alert type="info"> 
+<base-alert type="info">
 
 **What is a package.json file?**
 
@@ -89,7 +89,7 @@ Once the `package.json` has been created, you need to add `nuxt` to your pro
   ```
 
   </code-block>
-  <code-block label="NPM" >
+  <code-block label="NPM">
 
   ```bash
   npm install nuxt
@@ -98,9 +98,9 @@ Once the `package.json` has been created, you need to add `nuxt` to your pro
   </code-block>
 </code-group>
 
-This command will add `nuxt` as a dependency to your project and it will add it to your `package.json` automatically. The `node_modules` directory will also be created which is where all your installed packages and their dependencies are stored. 
+This command will add `nuxt` as a dependency to your project and it will add it to your `package.json` automatically. The `node_modules` directory will also be created which is where all your installed packages and their dependencies are stored.
 
-<base-alert type="info"> 
+<base-alert type="info">
 
 A `yarn.lock` or `package-lock.json` is also created which ensures a consistent install and compatible dependencies of your packages installed in your project.
 
@@ -144,7 +144,7 @@ Run your project by typing the NPM command below in your terminal:
   ```
 
   </code-block>
-  <code-block label="NPM" >
+  <code-block label="NPM">
 
   ```bash
   npm run dev
@@ -153,17 +153,17 @@ Run your project by typing the NPM command below in your terminal:
   </code-block>
 </code-group>
 
-<base-alert type="info"> 
+<base-alert type="info">
 
 We use the the dev command because we are running our application in development mode.
 
 </base-alert>
 
-The application is now running on **[http://localhost:3000](http://localhost:3000/).** 
+The application is now running on **[http://localhost:3000](http://localhost:3000/).**
 
-Open it in your browser by clicking the link in your terminal and you should see the text "Hello World" we copied in the previous step. 
+Open it in your browser by clicking the link in your terminal and you should see the text "Hello World" we copied in the previous step.
 
-<base-alert type="info"> 
+<base-alert type="info">
 
 When launching Nuxt.js in development mode, it will listen for file changes in most directories, so there is no need to restart the application when e.g. adding new pages
 
@@ -171,13 +171,13 @@ When launching Nuxt.js in development mode, it will listen for file changes in m
 
 ### 🍄 Bonus step:
 
-Create a page named `fun.vue` in the `pages` directory. 
+Create a page named `fun.vue` in the `pages` directory.
 
-Add a `<template></template>` and include a heading with a funny sentence inside. 
+Add a `<template></template>` and include a heading with a funny sentence inside.
 
 Then, go to your browser and see your new page on **[http://localhost:3000/fun](http://localhost:3000/fun).**
 
-<base-alert type="info"> 
+<base-alert type="info">
 
 Create a directory name `more-fun` and put an `index.vue` file inside. This will give the same result as creating a `more-fun.vue` file
 
@@ -229,7 +229,7 @@ It will ask you some questions (name, Nuxt options, UI framework, TypeScript, li
   ```
 
   </code-block>
-  <code-block label="NPM" >
+  <code-block label="NPM">
 
   ```bash
   cd <project-name>

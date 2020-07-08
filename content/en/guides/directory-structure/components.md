@@ -5,30 +5,30 @@ position: 3
 category: directory-structure
 csb_link: https://codesandbox.io/embed/github/nuxt-academy/guides-examples/tree/master/04_directory_structure/03_components?fontsize=14&hidenavigation=1&theme=dark
 questions:
-  - question: 
+  - question:
     answers:
-      - 
-      - 
-      - 
-    correctAnswer: 
-  - question: 
+      -
+      -
+      -
+    correctAnswer:
+  - question:
     answers:
-      - 
-      - 
-      - 
-    correctAnswer: 
-  - question: 
+      -
+      -
+      -
+    correctAnswer:
+  - question:
     answers:
-      - 
-      - 
-      - 
-    correctAnswer: 
-  - question: 
+      -
+      -
+      -
+    correctAnswer:
+  - question:
     answers:
-      - 
-      - 
-      - 
-    correctAnswer: 
+      -
+      -
+      -
+    correctAnswer:
 ---
 
 The components directory contains your Vue.js Components. Components are what makes up the different parts of your page and can be reused and imported into your pages, layouts and even other components.
@@ -70,9 +70,9 @@ export default {
 
 ## Components Module
 
-With Nuxt.js you can now create your components and auto import them into your .vue files meaning there is no need to manually import them in the script section. Nuxt.js will scan and auto import these components for you and can be used in pages, layouts or even other components. 
+With Nuxt.js you can now create your components and auto import them into your .vue files meaning there is no need to manually import them in the script section. Nuxt.js will scan and auto import these components for you and can be used in pages, layouts or even other components.
 
-If you are using Nuxt 2.13+ then all you need to do is set components to true in your nuxt.config file. The [components module](https://github.com/nuxt/components) is included by default but it is not activated by default. 
+If you are using Nuxt 2.13+ then all you need to do is set components to true in your nuxt.config file. The [components module](https://github.com/nuxt/components) is included by default but it is not activated by default.
 
 `nuxt.config.js`
 
@@ -92,7 +92,7 @@ If you are suing Nuxt 2.10+ you need to first import the module
   ```
 
   </code-block>
-  <code-block label="NPM" >
+  <code-block label="NPM">
 
   ```bash
   npm install --save-dev @nuxt/components
@@ -137,7 +137,7 @@ components/
 
 ### Dynamic Imports
 
-To dynamically import a component also known, as lazy loading a component, all you need to do is add the lazy prefix in your templates. 
+To dynamically import a component also known, as lazy loading a component, all you need to do is add the lazy prefix in your templates.
 
 `layouts.default.vue`
 

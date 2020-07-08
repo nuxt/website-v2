@@ -8,7 +8,7 @@ csb_link_plugins_external: https://codesandbox.io/embed/github/nuxt-academy/guid
 csb_link_plugins_custom: https://codesandbox.io/embed/github/nuxt-academy/guides-examples/tree/master/04_directory_structure/12_plugins_custom_plugin?fontsize=14&hidenavigation=1&theme=dark
 csb_link_plugins_vue: https://codesandbox.io/embed/github/nuxt-academy/guides-examples/tree/master/04_directory_structure/12_plugins_vue?fontsize=14&hidenavigation=1&theme=dark
 questions:
-  - question: The `plugins` directory contains your Javascript plugins that you want to run 
+  - question: The `plugins` directory contains your Javascript plugins that you want to run
     answers:
       - before instantiating the root Vue.js Application
       - while instantiating the root Vue.js Application
@@ -45,10 +45,10 @@ questions:
     correctAnswer: .server.js
   - question: What two modes can you use for your plugins?
     answers:
-      - server and client 
+      - server and client
       - ssr and client
       - server-side and client-side
-    correctAnswer: server and client 
+    correctAnswer: server and client
   - question: What do you do to make functions or values available across your app?
     answers:
       - create a plugin
@@ -87,7 +87,7 @@ First, install it via NPM or Yarn.
   ```
 
   </code-block>
-  <code-block label="NPM" >
+  <code-block label="NPM">
 
   ```bash
   npm install @nuxtjs/axios
@@ -162,7 +162,7 @@ First we need to install it
   ```
 
   </code-block>
-  <code-block label="NPM" >
+  <code-block label="NPM">
 
   ```bash
   npm install v-tooltip
@@ -351,7 +351,7 @@ Global mixins can be easily added with Nuxt plugins but can cause trouble and me
 `plugins/my-mixin-plugin.js`
 
 ```js
-if (!Vue.__my_mixin__) { 
+if (!Vue.__my_mixin__) {
 	Vue.__my__mixin__ = true
   Vue.mixin({ ... }) // Set up your mixin then
 }

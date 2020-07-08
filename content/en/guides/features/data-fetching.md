@@ -1,6 +1,6 @@
 ---
 title: Data Fetching
-description: In Nuxt.js we have 2 ways of getting data from an api. We can use the fetch method or the asyncData method. 
+description: In Nuxt.js we have 2 ways of getting data from an api. We can use the fetch method or the asyncData method.
 position: 4
 category: features
 csb_link: https://codesandbox.io/embed/github/nuxt-academy/guides-examples/tree/master/03_features/04_data_fetching?fontsize=14&hidenavigation=1&theme=dark
@@ -63,7 +63,7 @@ questions:
     correctAnswer: true
 ---
 
-In Nuxt.js we have 2 ways of getting data from an api. We can use the fetch method or the asyncData method. 
+In Nuxt.js we have 2 ways of getting data from an api. We can use the fetch method or the asyncData method.
 
 ## The fetch Method
 
@@ -83,7 +83,7 @@ export default {
 };
 ```
 
-<base-alert> 
+<base-alert>
 
 `fetch(context)` has been deprecated, instead you can use an [anonymous middleware](/guides/directory-structure/middleware#anonymous-middleware) in your page:  `middleware(context)`
 
@@ -233,7 +233,7 @@ Nuxt.js offers you different ways to use `asyncData`. Choose the one you're mos
 1. Returning a `Promise`. Nuxt.js will wait for the promise to be resolved before rendering the component.
 2. Using the [async/await](https://javascript.info/async-await) ([learn more about it](https://zeit.co/blog/async-and-await))
 
-<base-alert> 
+<base-alert>
 
 You do NOT have access to the component instance through `this` inside `asyncData` because it is called before initialising the component.
 
@@ -253,7 +253,7 @@ In the upcoming examples, we are using our [http module](https://http.nuxtjs.or
   ```
 
   </code-block>
-  <code-block label="NPM" >
+  <code-block label="NPM">
 
   ```bash
   npm install @nuxt/http
@@ -298,7 +298,7 @@ export default {
 
 ### Listening to query changes
 
-The `asyncData` method is not called on query string changes by default. If you want to change this behavior, for example when building a pagination component, you can set up parameters that should be listened to with the `watchQuery` property of your page component. 
+The `asyncData` method is not called on query string changes by default. If you want to change this behavior, for example when building a pagination component, you can set up parameters that should be listened to with the `watchQuery` property of your page component.
 
 ➡️ Learn more about the [watchQuery property](/api/pages-watchquery)
 

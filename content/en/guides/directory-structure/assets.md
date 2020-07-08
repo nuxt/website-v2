@@ -4,14 +4,14 @@ description: The `assets` directory contains your un-compiled assets such as S
 position: 2
 category: directory-structure
 csb_link: https://codesandbox.io/embed/github/nuxt-academy/guides-examples/tree/master/04_directory_structure/02_assets?fontsize=14&hidenavigation=1&theme=dark
-videoScript: 
+videoScript:
   - assets-video.md
 questions:
   - question: Which directory contains your un-compiled assets such as Stylus or Sass files, images, or fonts?
     answers:
       - static
       - assets
-      - pages 
+      - pages
     correctAnswer: assets
   - question: What do you use if you need to reference your  assets directory inside your vue templates?
     answers:
@@ -79,7 +79,7 @@ background: url("~assets/banner.svg")
 
 ## Styles:
 
-Nuxt.js lets you define the CSS files/modules/libraries you want to set globally (included in every page). In the nuxt.config you can easily add your styles using the CSS Property. 
+Nuxt.js lets you define the CSS files/modules/libraries you want to set globally (included in every page). In the nuxt.config you can easily add your styles using the CSS Property.
 
 `nuxt.config.js`
 
@@ -98,7 +98,7 @@ export default {
 
 <base-alert type="info">
 
-In case you want to use `sass` make sure that you have installed `node-sass` and `sass-loader` packages. 
+In case you want to use `sass` make sure that you have installed `node-sass` and `sass-loader` packages.
 
 </base-alert>
 
@@ -110,7 +110,7 @@ In case you want to use `sass` make sure that you have installed `node-sass`�
   ```
 
   </code-block>
-  <code-block label="NPM" >
+  <code-block label="NPM">
 
   ```bash
   npm install --save-dev node-sass sass-loader

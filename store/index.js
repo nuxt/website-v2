@@ -45,35 +45,35 @@ export const mutations = {
   },
   setAdBlocked (state, value) {
     state.adBlocked = value
-  },
-  setFocusMode (state, value) {
-    state.focusMode = value
   }
+  // setFocusMode (state, value) {
+  //   state.focusMode = value
+  // }
 }
 
-let _focusTimeout = null
+// let _focusTimeout = null
 
-export const actions = {
-  // async getLangData ({ commit }, locale) {
-  //   const lang = await this.$docs.get('/lang/' + locale)
-  //   commit('setLang', lang)
-  //   commit('setDocVersion', lang.docVersion)
-  //   const menu = await this.$docs.get('/menu/' + locale)
-  //   commit('setMenu', menu)
-  //   const homepage = await this.$docs.get('/homepage/' + locale)
-  //   commit('setHomepage', homepage)
-  // },
-  focusMode ({ commit }) {
-    if (_focusTimeout) {
-      return
-    }
-    _focusTimeout = setTimeout(() => commit('setFocusMode', true), 1300)
-  },
-  clearFocusMode ({ commit }) {
-    if (_focusTimeout) {
-      clearTimeout(_focusTimeout)
-      _focusTimeout = null
-    }
-    commit('setFocusMode', false)
-  }
-}
+// export const actions = {
+//   // async getLangData ({ commit }, locale) {
+//   //   const lang = await this.$docs.get('/lang/' + locale)
+//   //   commit('setLang', lang)
+//   //   commit('setDocVersion', lang.docVersion)
+//   //   const menu = await this.$docs.get('/menu/' + locale)
+//   //   commit('setMenu', menu)
+//   //   const homepage = await this.$docs.get('/homepage/' + locale)
+//   //   commit('setHomepage', homepage)
+//   // },
+//   focusMode ({ commit }) {
+//     if (_focusTimeout) {
+//       return
+//     }
+//     _focusTimeout = setTimeout(() => commit('setFocusMode', true), 1300)
+//   },
+//   clearFocusMode ({ commit }) {
+//     if (_focusTimeout) {
+//       clearTimeout(_focusTimeout)
+//       _focusTimeout = null
+//     }
+//     commit('setFocusMode', false)
+//   }
+// }

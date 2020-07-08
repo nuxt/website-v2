@@ -7,11 +7,11 @@
       >
         <ArrowLeftIcon class="h-5 mr-2" />back to blog list
       </NuxtLink>
+
       <BlogpostItem :post="post" />
 
       <BlogpostNavigationLinks :prev="prev" :next="next" />
       <AppContribute :doc-link="docLink" :contributors="contributors" />
-
     </div>
   </div>
 </template>
@@ -34,22 +34,35 @@ export default {
   },
   async asyncData ({ $content, store, app, params, error, router }) {
     const { slug } = params
-    let post
-    let contributors
-    const path = `/${app.i18n.locale}/blog/${slug}`
+    let path = `/${app.i18n.defaultLocale}/blog`
+    let post, prev, next, contributors
 
     try {
-      post = await $content(app.i18n.locale, 'blog', slug).fetch()
-      contributors = (await fetch('https://contributors-api.onrender.com' + path).then(res => res.json())).map(({ author }) => ({ author }))
+      post = await $content(path, slug).fetch()
     } catch (e) {
       return error({ statusCode: 404, message: 'Page not found' })
     }
 
-    const [prev, next] = await $content(app.i18n.locale, 'blog')
-      .only(['title', 'slug'])
-      .sortBy('date', 'desc')
-      .surround(slug, { before: 1, after: 1 })
-      .fetch()
+    if (app.i18n.defaultLocale !== app.i18n.locale) {
+      try {
+        path = `/${app.i18n.locale}/blog`
+        post = await $content(path, slug).fetch()
+      } catch (err) {
+        path = `/${app.i18n.defaultLocale}/blog`
+      }
+    }
+
+    try {
+      contributors = (await fetch(`https://contributors-api.onrender.com/${path}/${slug}`).then(res => res.json())).map(({ author }) => ({ author }))
+    } catch (e) { }
+
+    try {
+      [prev, next] = await $content(path)
+        .only(['title', 'slug'])
+        .sortBy('date', 'desc')
+        .surround(slug, { before: 1, after: 1 })
+        .fetch()
+    } catch (e) { }
 
     return {
       post,

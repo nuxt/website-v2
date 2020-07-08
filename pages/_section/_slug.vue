@@ -61,20 +61,16 @@
 </template>
 
 <script>
-import { assign } from 'lodash'
-
 export default {
   async asyncData ({ $content, params, store, error, app }) {
     const defaultSlugs = { guide: 'index', api: 'index', examples: 'hello-world', faq: 'external-resources' }
     const slug = params.slug || defaultSlugs[params.section]
 
-    let page, currentPage, prev, next, contributors, langFallback
-
-    const defaultPath = `/${app.i18n.defaultLocale}/${params.section}/${slug}`
-    const path = `/${app.i18n.locale}/${params.section}/${slug}`
+    let path = `/${app.i18n.defaultLocale}/${params.section}`
+    let page, prev, next, contributors, langFallback
 
     try {
-      page = await $content(defaultPath).fetch()
+      page = await $content(path, slug).fetch()
     } catch (err) {
       if (!err.response || err.response.status !== 404) {
         return error({ statusCode: 500, message: app.i18n.t('common.an_error_occurred') })
@@ -82,26 +78,24 @@ export default {
       return error({ statusCode: 404, message: app.i18n.t('common.api_page_not_found') })
     }
 
-    try {
-      if (path !== defaultPath) {
-        currentPage = await $content(path).fetch()
-        if (currentPage) {
-          assign(page, currentPage)
-        }
+    if (app.i18n.defaultLocale !== app.i18n.locale) {
+      try {
+        path = `/${app.i18n.locale}/${params.section}`
+        page = await $content(path, slug).fetch()
+      } catch (err) {
+        langFallback = true
+        path = `/${app.i18n.defaultLocale}/${params.section}`
       }
-    } catch (e) {
-      langFallback = true
     }
 
     try {
-      contributors = (await fetch('https://contributors-api.onrender.com' + path).then(res => res.json())).map(({ author }) => ({ author }))
+      contributors = (await fetch(`https://contributors-api.onrender.com/${path}/${slug}`).then(res => res.json())).map(({ author }) => ({ author }))
     } catch (e) { }
 
     try {
-      [prev, next] = await $content(currentPage ? app.i18n.locale : app.i18n.defaultLocale, params.section)
+      [prev, next] = await $content(path)
         .only(['title', 'slug', 'dir'])
         .sortBy('position', 'asc')
-        .sortBy('groupPosition', 'asc')
         .surround(slug, { before: 1, after: 1 })
         .fetch()
     } catch (e) { }

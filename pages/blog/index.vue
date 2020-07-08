@@ -33,9 +33,16 @@ export default {
   },
   async asyncData ({ $content, app }) {
     let posts = await $content(app.i18n.defaultLocale, 'blog').sortBy('date', 'desc').fetch()
+
     if (app.i18n.defaultLocale !== app.i18n.locale) {
       try {
-        posts = await $content(app.i18n.locale, 'blog').sortBy('date', 'desc').fetch()
+        const newPosts = await $content(app.i18n.locale, 'blog').sortBy('date', 'desc').fetch()
+
+        posts = posts.map((post) => {
+          const newPost = newPosts.find(newPost => newPost.slug === post.slug)
+
+          return newPost || post
+        })
       } catch (err) {
       }
     }

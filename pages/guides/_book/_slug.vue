@@ -40,8 +40,17 @@ import Clipboard from 'clipboard'
 export default {
   async asyncData ({ $content, params, store, error, app }) {
     let path = `/${app.i18n.defaultLocale}/guides/${params.book}`
-    let prev, next, contributors, langFallback
-    let page = await $content(path, params.slug).fetch()
+    let page, prev, next, contributors, langFallback
+
+    try {
+      page = await $content(path, params.slug).fetch()
+    } catch (err) {
+      if (!err.response || err.response.status !== 404) {
+        return error({ statusCode: 500, message: app.i18n.t('common.an_error_occurred') })
+      }
+
+      return error({ statusCode: 404, message: app.i18n.t('common.api_page_not_found') })
+    }
 
     if (app.i18n.defaultLocale !== app.i18n.locale) {
       try {
@@ -49,6 +58,7 @@ export default {
         page = await $content(path, params.slug).fetch()
       } catch (err) {
         langFallback = true
+        path = `/${app.i18n.defaultLocale}/guides/${params.book}`
       }
     }
 

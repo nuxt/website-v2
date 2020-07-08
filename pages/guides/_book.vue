@@ -41,15 +41,19 @@ export default {
       }
     } catch (e) { }
 
-    const links = groupBy(pages, 'category')
-
-    if (!params.slug) {
-      return redirect({ name: 'guides-book-slug', params: { book: params.book, slug: links[params.book][0].slug } })
-    }
-
     return {
-      links
+      links: groupBy(pages, 'category')
     }
+  },
+  mounted () {
+    if (this.$route.params.slug) {
+      return
+    }
+
+    const { book } = this.$route.params
+    const slug = this.links[book][0].slug
+
+    this.$router.push({ name: 'guides-book-slug', params: { book, slug } })
   }
 }
 

@@ -20,17 +20,17 @@ export default {
     try {
       pages = await $content(app.i18n.defaultLocale, 'guides', { deep: true })
         .only(['slug', 'title', 'menu', 'category', 'position'])
-        .sortBy('title', 'asc')
-        .sortBy('menu', 'asc')
-        .sortBy('position', 'asc')
+        .sortBy('position')
+        .sortBy('title')
+        .sortBy('menu')
         .fetch()
 
       if (app.i18n.locale !== app.i18n.defaultLocale) {
         const newPages = await $content(app.i18n.locale, 'guides', { deep: true })
           .only(['slug', 'title', 'menu', 'category', 'position'])
-          .sortBy('title', 'asc')
-          .sortBy('menu', 'asc')
-          .sortBy('position', 'asc')
+          .sortBy('position')
+          .sortBy('title')
+          .sortBy('menu')
           .fetch()
 
         pages = pages.map((page) => {

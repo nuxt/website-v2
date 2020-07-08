@@ -22,9 +22,13 @@
             :class="{ 'hover:text-nuxt-lightgreen mb-4 block': $route.params.book !== group, 'font-bold': $route.params.book === group }"
           >{{ $t(`content.guides.${group}`) }}</component>
           <ul v-if="$route.params.book === group" class="pb-8">
-            <li v-for="(link, index) in sublinks" :key="index" class="py-2">
+            <li
+              v-for="(link, index) in sublinks"
+              :key="index"
+              class="py-2 text-light-onSurfacePrimary dark:text-dark-onSurfacePrimary"
+            >
               <NuxtLink
-                class="text-light-onSurfacePrimary dark:text-dark-onSurfacePrimary hover:text-nuxt-lightgreen dark:hover:text-nuxt-lightgreen transition-colors duration-300 ease-linear"
+                class="hover:text-nuxt-lightgreen dark:hover:text-nuxt-lightgreen transition-colors duration-300 ease-linear"
                 exact-active-class="text-nuxt-lightgreen"
                 :to="toLink(group, link)"
               >

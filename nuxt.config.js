@@ -36,7 +36,7 @@ export default {
     '@nuxtjs/pwa'
   ],
   modules: [
-    // https://http.nuxtjs.org
+    '~/modules/releases',
     '@nuxt/http',
     '@nuxt/content',
     'nuxt-i18n',
@@ -59,12 +59,13 @@ export default {
     'content:file:beforeInsert': (item) => {
       const stats = require('reading-time')(item.text)
 
+      if (item.slug === 'release-notes' && item.extension === '.md') {
+
+      }
+
       item.readingTime = stats
     }
   },
-  // http: {
-  //   proxy: true
-  // },
   plugins: [
     '~/plugins/i18n',
     '~/plugins/directives',
@@ -73,15 +74,13 @@ export default {
     '~/plugins/ga.client.js',
     '~/plugins/adblock.client.js',
     '~/plugins/newsletter.client.js',
-    '~/plugins/vue-scrollactive',
-    '~/plugins/markdown'
+    '~/plugins/vue-scrollactive'
   ],
   env: {
     DEPLOY_PRIME_URL: process.env.DEPLOY_PRIME_URL || false,
     URL: process.env.URL || false,
     DOC_SEARCH_API_KEY: process.env.DOC_SEARCH_API_KEY || 'ff80fbf046ce827f64f06e16f82f1401',
     NUXT_API: process.env.NUXT_API || 'https://api.nuxtjs.com'
-
   },
   publicRuntimeConfig: {
     nuxtLocale: process.env.nuxtLocale || 'en'

@@ -1,18 +1,18 @@
 module.exports = {
   common: {
-    an_error_occurred: 'An error occurred',
-    api_page_not_found: 'API page not found',
-    please_define_title: 'Please define a title in the front matter',
+    an_error_occurred: '文档API服务异常',
+    api_page_not_found: 'API页面不存在',
+    please_define_title: '请在文档页头中指定标题(title)字段',
     please_define_description:
-      'Please define a description in the front matter',
-    search: 'Search ("/" to focus)',
-    version: 'Version'
+      '请在文档页头中指定描述(description)字段',
+    search: '搜索 ("/" to focus)',
+    version: '版本'
   },
-  iso: 'en',
+  iso: 'zh',
   docVersion: '2.13.X',
   links: {
-    download: 'Download',
-    live_edit: 'Live Edit'
+    download: '下载',
+    live_edit: '在线编辑'
   },
   header: {
     links: [
@@ -63,23 +63,23 @@ module.exports = {
   },
   homepage: {
     meta: {
-      title: 'Nuxt.js - The Intuitive Vue Framework',
+      title: 'Nuxt.js - Vue.js 通用应用框架',
       description:
-        'Build your next Vue.js application with confidence using NuxtJS. An open source framework making web development simple and powerful.'
+        'Nuxt.js 是一个基于 Vue.js 的轻量级应用框架，可用来创建服务端渲染 (SSR) 应用，也可充当静态站点引擎生成静态站点应用，具有优雅的代码结构分层和热加载等特性。'
     },
     welcome: {
       title:
         'The Intuitive<br><span class="text-nuxt-lightgreen">Vue</span> Framework<br>',
       description:
         'Build your next Vue.js application with confidence using NuxtJS. An <span title="Under MIT license">open source</span> framework making web development simple and powerful.',
-      get_started: 'get started',
+      get_started: '开始使用',
       github_stars: '27K+ github stars',
       video:
         'Video produced by <a href="https://www.vuemastery.com" target="_blank" rel="noopener">Vue Mastery</a>, download their free <a href="https://www.vuemastery.com/nuxt-cheat-sheet/" target="_blank" rel="noopener">Nuxt Cheat Sheet</a>.'
     },
     why: {
-      title: 'Why NUXT<span class="text-nuxt-lightgreen">JS</span>',
-      try_nuxtjs_online: 'Try NuxtJS Online',
+      title: '为什么选择 Nuxt<span class="text-nuxt-lightgreen">JS</span>',
+      try_nuxtjs_online: '在线尝试 NuxtJS',
       enjoyable: {
         title: 'Enjoyable',
         description:
@@ -97,10 +97,10 @@ module.exports = {
       }
     },
     companies: {
-      title: 'Who\'s using nuxt<span class= "text-nuxt-lightgreen" > JS</span>'
+      title: '谁在使用 nuxt<span class="text-nuxt-lightgreen">JS</span>'
     },
     modes: {
-      title: 'NUXT<span class="text-nuxt-lightgreen">JS</span> rendering',
+      title: 'NUXT<span class="text-nuxt-lightgreen">JS</span> 渲染',
       ssr: {
         title: 'Server Side Rendered',
         description:
@@ -118,10 +118,10 @@ module.exports = {
       }
     },
     sponsors: {
-      title: 'Sponsors',
+      title: '赞助商',
       description:
-        'NuxtJS is an MIT licensed open source project and completely free to use. However, the amount of effort needed to maintain and develop new features for the project is not sustainable without proper financial backing. If you run a business and are using Nuxt in a revenue-generating product, it makes business sense to sponsor Nuxt development: it ensures the project that your product relies on stays healthy and actively maintained. It can also help your exposure in the Vue/Nuxt community and makes it easier to attract Vue/Nuxt developers. If you are an individual user and have enjoyed the productivity of using Nuxt, consider donating as a sign of appreciation.',
-      become_a_sponsor: 'Become a sponsor'
+        'NuxtJS 是 MIT 许可的开源项目，完全免费使用。但是，如果没有适当的资金支持，为项目维护和开发新功能所需的工作量将无法持续。如果您经营一家企业并在产生收入的产品中使用 Nuxt，则赞助Nuxt开发具有商业意义：它可以确保您的产品所依赖的项目保持健康并得到积极维护。 它还可以帮助您在 Vue/Nuxt 社区中曝光，并更容易吸引 Vue/Nuxt 开发人员。如果您是个人用户，并且享受使用 Nuxt 带来的生产力，请考虑捐赠作为一种感激之情。',
+      become_a_sponsor: '成为赞助商'
     },
     newsletter: {
       title: 'Nuxt<span class="text-nuxt-lightgreen">JS</span> Newsletter',
@@ -145,7 +145,7 @@ module.exports = {
     contribute: 'Caught a mistake or want to contribute to this blog post?'
   },
   guide: {
-    release_notes: 'Release Notes',
+    release_notes: '版本信息',
     toc_title: 'On this page'
   },
   quiz: {
@@ -158,9 +158,9 @@ module.exports = {
   },
   contribute: {
     title: 'Contributors',
-    docs: 'Caught a mistake or want to contribute to the documentation?',
+    docs: '如何提交问题或文档贡献？',
     blog: 'Caught a mistake or want to contribute to this blog post?',
-    edit_on_github: 'Edit this page on GitHub!',
+    edit_on_github: '在 GitHub 编辑此页面！',
     msg1:
       'Contribution for this page is now closed. If you would like to contribute please check out our',
     link: 'new docs'

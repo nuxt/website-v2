@@ -5,14 +5,14 @@ module.exports = {
     please_define_title: 'Please define a title in the front matter',
     please_define_description:
       'Please define a description in the front matter',
-    search: 'Search ("/" to focus)',
-    version: 'Version'
+    search: 'Поиск ("/" to focus)',
+    version: 'Версия'
   },
-  iso: 'en',
+  iso: 'ru',
   docVersion: '2.13.X',
   links: {
-    download: 'Download',
-    live_edit: 'Live Edit'
+    download: 'Скачать',
+    live_edit: 'Живое редактирование'
   },
   header: {
     links: [
@@ -63,44 +63,44 @@ module.exports = {
   },
   homepage: {
     meta: {
-      title: 'Nuxt.js - The Intuitive Vue Framework',
+      title: 'Nuxt.js — Универсальные приложения на Vue.js',
       description:
-        'Build your next Vue.js application with confidence using NuxtJS. An open source framework making web development simple and powerful.'
+        'Nuxt.js — это минималистичный фреймворк для создания приложений на Vue.js с серверным рендерингом, разделением кода, горячей заменой модулей, статической генерацией и другими крутыми штуками!'
     },
     welcome: {
       title:
         'The Intuitive<br><span class="text-nuxt-lightgreen">Vue</span> Framework<br>',
       description:
         'Build your next Vue.js application with confidence using NuxtJS. An <span title="Under MIT license">open source</span> framework making web development simple and powerful.',
-      get_started: 'get started',
+      get_started: 'начало работы',
       github_stars: '27K+ github stars',
       video:
         'Video produced by <a href="https://www.vuemastery.com" target="_blank" rel="noopener">Vue Mastery</a>, download their free <a href="https://www.vuemastery.com/nuxt-cheat-sheet/" target="_blank" rel="noopener">Nuxt Cheat Sheet</a>.'
     },
     why: {
-      title: 'Why NUXT<span class="text-nuxt-lightgreen">JS</span>',
-      try_nuxtjs_online: 'Try NuxtJS Online',
+      title: 'Почему NUXT<span class="text-nuxt-lightgreen">JS</span>',
+      try_nuxtjs_online: 'Попробуйте NuxtJS онлайн',
       enjoyable: {
-        title: 'Enjoyable',
+        title: 'Приятный',
         description:
-          'Our main focus is the Developer Experience. We love Nuxt.js and continuously improve the framework so you love it too! 💚<br>Expect appealing solutions, descriptive error messages, powerful defaults and detailed documentation. If questions or problems come up, our helpful community will help you out.'
+          'Наша главная цель - удобство разработки. Мы любим Nuxt.js и постоянно улучшаем его, надеемся, вы тоже его полюбите. 💚 В вашим услугам отличная документация, информативные описания ошибок, сбалансированные настройки по умолчанию и прочие интересные решения. А если у вас возникнут вопросы или проблемы, наше дружелюбное сообщество всегда готово помочь.'
       },
       modular: {
-        title: 'Modular',
+        title: 'Модульный',
         description:
-          "Nuxt is based on a powerful modular architecture. You can choose from more than 50 modules to make your development faster and easier. You don't have to reinvent the wheel to get PWA benefits, add Google Analytics to your page or generate a sitemap."
+          'Nuxt разработан на основе мощной модульной архитектуры. Более 50 разнообразных модулей сделают разработку проще и быстрее. Вам не придется изобретать велосипед, чтобы прикрутить PWA-фичи, Google Analytics, генерацию sitemap и многие другие типовые вещи.'
       },
       performant: {
-        title: 'Performant',
+        title: 'Быстрый',
         description:
-          'With Nuxt.js, your application will be optimized out of the box.<br>We do our best to build performant applications by utilizing Vue.js and Node.js best practices.<br>To squeeze every unnecessary bit out of your app Nuxt includes a bundle analyzer and lots of opportunities to fine-tune your app.'
+          'Nuxt.js оптимизирует ваше приложение сразу из коробки. Мы постоянно работаем над повышением производительности приложений, используя наработки Vue.js и Node.js. Чтобы выжать максимум из вашего приложения в Nuxt влючен анализатор бандлов и множество возможностей для тонкой настройки приложения.'
       }
     },
     companies: {
-      title: 'Who\'s using nuxt<span class= "text-nuxt-lightgreen" > JS</span>'
+      title: 'Кто использует nuxt<span class="text-nuxt-lightgreen">JS</span>'
     },
     modes: {
-      title: 'NUXT<span class="text-nuxt-lightgreen">JS</span> rendering',
+      title: 'Рендеринг NUXT<span class="text-nuxt-lightgreen">JS</span>',
       ssr: {
         title: 'Server Side Rendered',
         description:
@@ -118,10 +118,10 @@ module.exports = {
       }
     },
     sponsors: {
-      title: 'Sponsors',
+      title: 'Спонсоры',
       description:
-        'NuxtJS is an MIT licensed open source project and completely free to use. However, the amount of effort needed to maintain and develop new features for the project is not sustainable without proper financial backing. If you run a business and are using Nuxt in a revenue-generating product, it makes business sense to sponsor Nuxt development: it ensures the project that your product relies on stays healthy and actively maintained. It can also help your exposure in the Vue/Nuxt community and makes it easier to attract Vue/Nuxt developers. If you are an individual user and have enjoyed the productivity of using Nuxt, consider donating as a sign of appreciation.',
-      become_a_sponsor: 'Become a sponsor'
+        'NuxtJS - это проект с открытым исходным кодом, лицензированный MIT и полностью бесплатный для использования. Тем не менее, объем усилий, необходимых для поддержания и разработки новых функций для проекта, не является устойчивым без надлежащей финансовой поддержки. Если вы управляете бизнесом и используете Nuxt в продукте, приносящем доход, имеет смысл спонсировать разработку Nuxt: это гарантирует, что проект, на который опирается ваш продукт, остается здоровым и активно поддерживается. Это также может помочь вам разобраться в сообществе Vue/Nuxt и упростить привлечение разработчиков Vue/Nuxt. Если вы являетесь индивидуальным пользователем и наслаждались продуктивностью использования Nuxt, рассмотрите возможность пожертвования в знак признательности.',
+      become_a_sponsor: 'Стань спонсором'
     },
     newsletter: {
       title: 'Nuxt<span class="text-nuxt-lightgreen">JS</span> Newsletter',
@@ -145,7 +145,7 @@ module.exports = {
     contribute: 'Caught a mistake or want to contribute to this blog post?'
   },
   guide: {
-    release_notes: 'Release Notes',
+    release_notes: 'Замечания о релизе',
     toc_title: 'On this page'
   },
   quiz: {
@@ -158,9 +158,9 @@ module.exports = {
   },
   contribute: {
     title: 'Contributors',
-    docs: 'Caught a mistake or want to contribute to the documentation?',
+    docs: 'Обнаружили ошибку или хотите внести свой вклад в документацию?',
     blog: 'Caught a mistake or want to contribute to this blog post?',
-    edit_on_github: 'Edit this page on GitHub!',
+    edit_on_github: 'Отредактировать эту страницу на GitHub!',
     msg1:
       'Contribution for this page is now closed. If you would like to contribute please check out our',
     link: 'new docs'

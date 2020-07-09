@@ -1003,7 +1003,7 @@
 
 "@nuxt/content@nuxt/content#fix/use-compound-sort":
   version "1.4.1"
-  resolved "https://codeload.github.com/nuxt/content/tar.gz/508e078981664fadd0cc20eb3d9620312537acbc"
+  resolved "https://codeload.github.com/nuxt/content/tar.gz/e9ed0a48f4db6afd4647b4a687672d86d2bce1e7"
   dependencies:
     "@lokidb/full-text-search" "^2.0.0-beta.9"
     "@lokidb/loki" "^2.0.0-beta.9"

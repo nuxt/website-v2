@@ -28,7 +28,6 @@
 </template>
 
 <script>
-// import { shuffle } from 'lodash'
 import Clipboard from 'clipboard'
 
 export default {

@@ -45,7 +45,7 @@
 
 <script>
 import slugify from 'slugify'
-import { sortBy } from 'lodash'
+import sortBy from 'lodash.sortby'
 
 export default {
   props: {

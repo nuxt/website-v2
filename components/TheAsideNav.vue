@@ -43,7 +43,7 @@
 </template>
 
 <script>
-import { sortBy } from 'lodash'
+import sortBy from 'lodash.sortby'
 
 export default {
   props: {

@@ -69,9 +69,9 @@ export default {
     try {
       [prev, next] = await $content(path)
         .only(['title', 'slug', 'dir'])
-        .sortBy('title', 'asc')
-        .sortBy('menu', 'asc')
-        .sortBy('position', 'asc')
+        .sortBy('position')
+        .sortBy('title')
+        .sortBy('menu')
         .surround(params.slug, { before: 1, after: 1 })
         .fetch()
     } catch (e) { }

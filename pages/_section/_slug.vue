@@ -95,7 +95,7 @@ export default {
     try {
       [prev, next] = await $content(path)
         .only(['title', 'slug', 'dir'])
-        .sortBy('position', 'asc')
+        .sortBy('position')
         .surround(slug, { before: 1, after: 1 })
         .fetch()
     } catch (e) { }

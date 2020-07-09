@@ -26,7 +26,7 @@
               class="sm:mr-4 py-3 px-6 text-base"
             >
               <GithubIcon slot="icon" class="inline-block h-6 -mt-1 mr-1" />
-              {{ $t('homepage.welcome.github_stars') }}
+              28K+ github stars
             </AppButton>
           </div>
         </div>

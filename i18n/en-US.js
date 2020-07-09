@@ -9,7 +9,7 @@ module.exports = {
     version: 'Version'
   },
   iso: 'en',
-  docVersion: '2.13.X',
+
   links: {
     download: 'Download',
     live_edit: 'Live Edit'
@@ -73,7 +73,7 @@ module.exports = {
       description:
         'Build your next Vue.js application with confidence using NuxtJS. An <span title="Under MIT license">open source</span> framework making web development simple and powerful.',
       get_started: 'get started',
-      github_stars: '27K+ github stars',
+
       video:
         'Video produced by <a href="https://www.vuemastery.com" target="_blank" rel="noopener">Vue Mastery</a>, download their free <a href="https://www.vuemastery.com/nuxt-cheat-sheet/" target="_blank" rel="noopener">Nuxt Cheat Sheet</a>.'
     },

@@ -9,7 +9,7 @@ module.exports = {
     version: 'バージョン'
   },
   iso: 'ja',
-  docVersion: '2.13.X',
+
   links: {
     download: 'ダウンロード',
     live_edit: 'ライブ編集'
@@ -73,7 +73,7 @@ module.exports = {
       description:
         'NuxtJS を使用し自信を持って次の Vue.js アプリケーションをビルドしましょう。ウェブ開発をシンプルかつ強力にする<span title="Under MIT license">オープンソース</span>フレームワークです。',
       get_started: 'はじめる',
-      github_stars: '27K+ github stars',
+
       video:
         '動画は <a href="https://www.vuemastery.com" target="_blank" rel="noopener">Vue Mastery</a> による提供で、彼らの <a href="https://www.vuemastery.com/nuxt-cheat-sheet/" target="_blank" rel="noopener">Nuxt チートシート</a>は無料でダウンロードできます。.'
     },

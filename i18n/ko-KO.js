@@ -9,7 +9,7 @@ module.exports = {
     version: '버전'
   },
   iso: 'ko',
-  docVersion: '2.13.X',
+
   links: {
     download: '다운로드',
     live_edit: '라이브 수정'
@@ -73,7 +73,7 @@ module.exports = {
       description:
         '웹 개발을 쉽고 강력하게 만들어주는 오픈소스 프레임워크인 Nuxt.js로 여러분의 다음 Vue.js 애플리케이션을 만들어보세요.',
       get_started: '시작하기',
-      github_stars: '27K+ github stars',
+
       video:
         '해당 비디오는 <a href="https://www.vuemastery.com" target="_blank" rel="noopener">Vue Mastery</a>가 제작하였고, <a href="https://www.vuemastery.com/nuxt-cheat-sheet/" target="_blank" rel="noopener">Nuxt Cheat Sheet</a>에서 무료로 받으실 수 있습니다.'
     },

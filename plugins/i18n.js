@@ -1,3 +1,3 @@
-export default ({ app }) => {
-  app.i18n.setLocale(process.env.nuxtLocale)
+export default ({ app, $config: { nuxtLocale } }) => {
+  app.i18n.setLocale(nuxtLocale)
 }

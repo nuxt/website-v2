@@ -11,7 +11,7 @@
       >
         <p class="uppercase font-bold pb-6">
           {{ $t('common.version') }}
-          <span class="text-nuxt-lightgreen">{{ $t('docVersion') }}</span>
+          <span class="text-nuxt-lightgreen">2.13.X</span>
         </p>
         <div v-for="(sublinks, group) in sortedLinks" :key="`links-${group}`">
           <component

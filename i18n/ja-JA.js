@@ -1,18 +1,18 @@
 module.exports = {
   common: {
-    an_error_occurred: 'An error occurred',
-    api_page_not_found: 'API page not found',
-    please_define_title: 'Please define a title in the front matter',
+    an_error_occurred: 'エラーが発生しました',
+    api_page_not_found: 'API ページが見つかりません',
+    please_define_title: 'Frontmatter 内の title を定義してください',
     please_define_description:
-      'Please define a description in the front matter',
-    search: 'Search ("/" to focus)',
-    version: 'Version'
+      'Frontmatter 内の description を定義してください',
+    search: '検索 ("/" でフォーカス)',
+    version: 'バージョン'
   },
-  iso: 'en',
+  iso: 'ja',
   docVersion: '2.13.X',
   links: {
-    download: 'Download',
-    live_edit: 'Live Edit'
+    download: 'ダウンロード',
+    live_edit: 'ライブ編集'
   },
   header: {
     links: [
@@ -58,82 +58,82 @@ module.exports = {
       }
     ],
     search: {
-      placeholder: 'Search ("/" to focus)'
+      placeholder: '検索 ("/" でフォーカス)'
     }
   },
   homepage: {
     meta: {
-      title: 'Nuxt.js - The Intuitive Vue Framework',
+      title: 'Nuxt.js - ユニバーサル Vue.js アプリケーション',
       description:
-        'Build your next Vue.js application with confidence using NuxtJS. An open source framework making web development simple and powerful.'
+        'Nuxt.js はサーバーサイドレンダリングやコード分割、ホットリローディング、静的ファイル生成などを備えた Vue.js アプリケーションを構築するためのミニマルなフレームワークです！'
     },
     welcome: {
       title:
-        'The Intuitive<br><span class="text-nuxt-lightgreen">Vue</span> Framework<br>',
+        '使いやすい<br><span class="text-nuxt-lightgreen">Vue</span> フレームワーク<br>',
       description:
-        'Build your next Vue.js application with confidence using NuxtJS. An <span title="Under MIT license">open source</span> framework making web development simple and powerful.',
-      get_started: 'get started',
+        'NuxtJS を使用し自信を持って次の Vue.js アプリケーションをビルドしましょう。ウェブ開発をシンプルかつ強力にする<span title="Under MIT license">オープンソース</span>フレームワークです。',
+      get_started: 'はじめる',
       github_stars: '27K+ github stars',
       video:
-        'Video produced by <a href="https://www.vuemastery.com" target="_blank" rel="noopener">Vue Mastery</a>, download their free <a href="https://www.vuemastery.com/nuxt-cheat-sheet/" target="_blank" rel="noopener">Nuxt Cheat Sheet</a>.'
+        '動画は <a href="https://www.vuemastery.com" target="_blank" rel="noopener">Vue Mastery</a> による提供で、彼らの <a href="https://www.vuemastery.com/nuxt-cheat-sheet/" target="_blank" rel="noopener">Nuxt チートシート</a>は無料でダウンロードできます。.'
     },
     why: {
-      title: 'Why NUXT<span class="text-nuxt-lightgreen">JS</span>',
-      try_nuxtjs_online: 'Try NuxtJS Online',
+      title: 'なぜ NUXT<span class="text-nuxt-lightgreen">JS</span> なのか？',
+      try_nuxtjs_online: 'Nuxt.js をオンラインで試す',
       enjoyable: {
-        title: 'Enjoyable',
+        title: '楽しみ',
         description:
-          'Our main focus is the Developer Experience. We love Nuxt.js and continuously improve the framework so you love it too! 💚<br>Expect appealing solutions, descriptive error messages, powerful defaults and detailed documentation. If questions or problems come up, our helpful community will help you out.'
+          '私たちのメインフォーカスは開発者体験です。私たちは Nuxt.js が好きで、継続的にフレームワークの改善をしているため、あなたも好きになることでしょう！💚 魅力的な解決策や、説明的なエラーメッセージ、強力なデフォルト設定、詳細なドキュメントが待っています。もし質問や問題が発生した場合、私たちの有用なコミュニティが助けてくれるでしょう。'
       },
       modular: {
-        title: 'Modular',
+        title: 'モジュール',
         description:
-          "Nuxt is based on a powerful modular architecture. You can choose from more than 50 modules to make your development faster and easier. You don't have to reinvent the wheel to get PWA benefits, add Google Analytics to your page or generate a sitemap."
+          'Nuxt は強力なモジュール構造に基づいています。開発をより早く簡単にするために、50を超えるモジュールから選ぶことができます。PWA の利点を得るため、ページに Google アナリティクスを追加するため、サイトマップの生成のために車輪の再発明をする必要はありません。'
       },
       performant: {
-        title: 'Performant',
+        title: 'パフォーマンス',
         description:
-          'With Nuxt.js, your application will be optimized out of the box.<br>We do our best to build performant applications by utilizing Vue.js and Node.js best practices.<br>To squeeze every unnecessary bit out of your app Nuxt includes a bundle analyzer and lots of opportunities to fine-tune your app.'
+          'Nuxt.js は、あなたのアプリケーションをすぐに最適化することでしょう。Vue.js と Node.js のベストプラクティスを利用することで、パフォーマンスの高いアプリケーションを構築することに最善を尽くします。 アプリケーションから不要な部分を絞りだすために、Nuxt はバンドルアナライザや多くの微調整の機会を含んでいます。'
       }
     },
     companies: {
-      title: 'Who\'s using nuxt<span class= "text-nuxt-lightgreen" > JS</span>'
+      title: 'nuxt<span class="text-nuxt-lightgreen">JS</span> を使っている企業 '
     },
     modes: {
-      title: 'NUXT<span class="text-nuxt-lightgreen">JS</span> rendering',
+      title: 'NUXT<span class="text-nuxt-lightgreen">JS</span> のレンダリング',
       ssr: {
-        title: 'Server Side Rendered',
+        title: 'サーバーサイドレンダリング',
         description:
-          'The most popular mode for Nuxt. With SSR, also called "universal" or "isomorphic" mode, a Node.js server will be used to deliver HTML based on your Vue components to the client instead of the pure javascript. Using SSR will lead to a large SEO boost, better UX and more opportunities (compared to a traditional Vue SPA).<br><br>Because implementing SSR on your own can be really tedious, Nuxt.js gives you full support out of the box and will take care of common pitfalls.'
+          'Nuxt で一番人気のモードです。サーバーサイドレンダリングでは「ユニバーサル」または「アイソモーフィック」モードと呼ばれ、Node.js サーバーではピュア JavaScript の代わりに Vue コンポーネントベースの HTML をクライアントに配信するために利用しています。サーバーサイドレンダリングを利用すると従来の Vue SPA と比較し SEO が大幅に向上し、UX がよくなり、より多くの機会が増えます。<br><br>サーバーサイドレンダリングを自分で実装するのは非常に面倒です。Nuxt.js はそのまま利用でき、よくある落とし穴を回避します。'
       },
       spa: {
-        title: 'Single Page Application (SPA)',
+        title: 'シングルページアプリケーション（SPA）',
         description:
-          "Don't need SSR or Static Site Generation but still want to profit from the benefits that Nuxt provides? Are you slowly transitioning your app and want to start lightweight? Then the traditional SPA mode will likely be your choice. The outcome will be a typical Vue SPA as you know it but influenced by your Nuxt configuration and the framework itself."
+          'サーバーサイドレンダリングや静的サイト生成は必要ありませんが、それでも Nuxt が提供する利点から利益を得たいですか？徐々にアプリを移行し、軽量に始めたいですか？その場合従来の SPA モードがあなたに適しています。結果はあなたも知っているごく普通の Vue SPA になりますが、Nuxt の設定とフレームワーク自身の影響を受けています。'
       },
       ssg: {
-        title: 'Statically Generated',
+        title: '静的ファイルの生成',
         description:
-          'Static Site Generation is a very hot topic right now (aka JAMStack). Instead of switching to another framework and spending time to get used to it, why not kill two birds with one stone? <span style="color: #777">(only proverbial 🐦🐦)</span><br><br> Nuxt.js supports generating a static website based on your Vue application. It is the "best of both worlds" as you don\'t need a server but still have SEO benefits because Nuxt will pre-render all pages and include the necessary HTML. Also, you can deploy the resulting page easily to Netlify or GitHub pages.'
+          '静的サイト生成は現在非常に注目されているトピックです（JAMStack として知られます）。別のフレームワークに切り替えて慣れるのに時間を費やす代わりに、なぜ一石二鳥ではいけないのでしょうか？<span style = "color：＃777">（ただのことわざ🐦🐦）</span> <br> <br>Nuxt.js はあなたの Vue アプリケーションに基づく静的ウェブサイトの生成をサポートします。Nuxt はすべてのページを事前にレンダリングしてインクルードするため、サーバーは必要ありませんが SEO の利点はあるという、いいとこ取りをしています。また、作成したページを Netlify または GitHub Pages に簡単に配置できます。'
       }
     },
     sponsors: {
-      title: 'Sponsors',
+      title: 'スポンサー',
       description:
-        'NuxtJS is an MIT licensed open source project and completely free to use. However, the amount of effort needed to maintain and develop new features for the project is not sustainable without proper financial backing. If you run a business and are using Nuxt in a revenue-generating product, it makes business sense to sponsor Nuxt development: it ensures the project that your product relies on stays healthy and actively maintained. It can also help your exposure in the Vue/Nuxt community and makes it easier to attract Vue/Nuxt developers. If you are an individual user and have enjoyed the productivity of using Nuxt, consider donating as a sign of appreciation.',
-      become_a_sponsor: 'Become a sponsor'
+        'Nuxt.js は MIT ライセンスのオープンソースプロジェクトで、完全無料で使用できます。ただし、プロジェクトの新しい機能を維持および開発するために必要な作業は、適切な資金援助なしには持続できません。もし、あなたがビジネスで営利目的の製品に Nuxt を使用しているのであれば、Nuxt の開発をサポートすることは理に適っています。サポートいただくことで、Nuxt プロジェクトを健全でアクティブに維持することができます。また、サポートにより Vue/Nuxt コミュニティに露出することで、Vue/Nuxt 開発者を引きつけやすくなります。もし、あなたが個人ユーザーで Nuxt を使用した開発を楽しんでいるのであれば、感謝の印として寄付を検討いただけると幸いです。',
+      become_a_sponsor: 'スポンサーになる'
     },
     newsletter: {
-      title: 'Nuxt<span class="text-nuxt-lightgreen">JS</span> Newsletter',
+      title: 'Nuxt<span class="text-nuxt-lightgreen">JS</span> ニュースレター',
       description:
-        'Get the latest Nuxt news to your inbox, curated by the core team and contributors.',
+        'コアチームとコントリビューターがキュレーションした最新の Nuxt のニュースをメールで受信できます。',
       form: {
-        email: 'Email',
-        subscribing: 'Subscribing...',
-        subscribe: 'Subscribe',
+        email: 'メールアドレス',
+        subscribing: '送信中...',
+        subscribe: '購読する',
         subscribed_messages: {
-          pre: 'An email to confirm your subscription has been sent to',
-          post: '💚'
+          pre: '購読を確認するメールを',
+          post: 'に送信しました 💚'
         }
       }
     }
@@ -145,7 +145,7 @@ module.exports = {
     contribute: 'Caught a mistake or want to contribute to this blog post?'
   },
   guide: {
-    release_notes: 'Release Notes',
+    release_notes: 'リリースノート',
     toc_title: 'On this page'
   },
   quiz: {
@@ -158,9 +158,9 @@ module.exports = {
   },
   contribute: {
     title: 'Contributors',
-    docs: 'Caught a mistake or want to contribute to the documentation?',
+    docs: '間違いを見つけた、またはドキュメントに貢献したいですか？',
     blog: 'Caught a mistake or want to contribute to this blog post?',
-    edit_on_github: 'Edit this page on GitHub!',
+    edit_on_github: 'GitHub でこのページを編集する',
     msg1:
       'Contribution for this page is now closed. If you would like to contribute please check out our',
     link: 'new docs'

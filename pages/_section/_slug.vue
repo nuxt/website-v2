@@ -5,7 +5,6 @@
     >
       <LangFallback :doc-link="docLink" :lang-fallback="langFallback" />
 
-      <AppToc v-if="page.toc && page.toc.length" :toc="page.toc" class="mb-8 hidden lg:block" />
       <article v-if="section === 'examples'">
         <h1
           class="text-light-onSurfacePrimary dark:text-dark-onSurfacePrimary transition-colors duration-300 ease-linear"

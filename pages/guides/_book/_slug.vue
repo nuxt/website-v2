@@ -4,18 +4,12 @@
     <div
       class="lg:min-h-screen w-full py-8 px-4 lg:static lg:overflow-visible lg:max-h-full lg:w-3/4"
     >
-      <div
-        v-if="langFallback"
-        class="p-4 mb-6 rounded bg-orange-200 dark:text-light-onSurfacePrimary"
-      >
-        ⚠️ You are looking at the english version of the page. Help us translate it
-        <a
-          href="https://github.com/nuxt/nuxtjs.org/blob/master/content"
-          class="text-orange-600"
-          target="_blank"
-        >here</a>.
-      </div>
+      <LangFallback :doc-link="docLink" :lang-fallback="langFallback" />
+
+      <AppToc v-if="page.toc && page.toc.length" :toc="page.toc" class="mb-8 hidden lg:block" />
+
       <article>
+
         <h1
           class="text-light-onSurfacePrimary dark:text-dark-onSurfacePrimary transition-colors duration-300 ease-linear"
         >{{ page.title }}</h1>
@@ -26,7 +20,7 @@
       </article>
     </div>
     <AffixBlock>
-      <AppToc v-if="page.toc && page.toc.length" :toc="page.toc" class="mb-8 hidden lg:block" />
+
       <SponsorsBlock />
       <AdsBlock :key="$route.params.slug" />
     </AffixBlock>

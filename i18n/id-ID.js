@@ -1,18 +1,18 @@
 module.exports = {
   common: {
     an_error_occurred: 'An error occurred',
-    api_page_not_found: 'API page not found',
+    api_page_not_found: 'Halaman API tidak ditemukand',
     please_define_title: 'Please define a title in the front matter',
     please_define_description:
       'Please define a description in the front matter',
-    search: 'Search ("/" to focus)',
-    version: 'Version'
+    search: 'Cari ("/" to focus)',
+    version: 'Versi'
   },
-  iso: 'en',
+  iso: 'id',
   docVersion: '2.13.X',
   links: {
-    download: 'Download',
-    live_edit: 'Live Edit'
+    download: 'Unduh',
+    live_edit: 'Sunting Langsung'
   },
   header: {
     links: [
@@ -63,23 +63,23 @@ module.exports = {
   },
   homepage: {
     meta: {
-      title: 'Nuxt.js - The Intuitive Vue Framework',
+      title: 'Nuxt.js - Aplikasi Vue.js Universal',
       description:
-        'Build your next Vue.js application with confidence using NuxtJS. An open source framework making web development simple and powerful.'
+        'Nuxt.js adalah framework minimalis untuk membuat aplikasi Vue.js dengan server side rendering, hot-reloading, static generation, dan banyak lagi!'
     },
     welcome: {
       title:
         'The Intuitive<br><span class="text-nuxt-lightgreen">Vue</span> Framework<br>',
       description:
         'Build your next Vue.js application with confidence using NuxtJS. An <span title="Under MIT license">open source</span> framework making web development simple and powerful.',
-      get_started: 'get started',
+      get_started: 'Memulai',
       github_stars: '27K+ github stars',
       video:
         'Video produced by <a href="https://www.vuemastery.com" target="_blank" rel="noopener">Vue Mastery</a>, download their free <a href="https://www.vuemastery.com/nuxt-cheat-sheet/" target="_blank" rel="noopener">Nuxt Cheat Sheet</a>.'
     },
     why: {
-      title: 'Why NUXT<span class="text-nuxt-lightgreen">JS</span>',
-      try_nuxtjs_online: 'Try NuxtJS Online',
+      title: 'Mengapa NUXT<span class="text-nuxt-lightgreen">JS</span>',
+      try_nuxtjs_online: 'Coba NuxtJS Online',
       enjoyable: {
         title: 'Enjoyable',
         description:
@@ -97,7 +97,7 @@ module.exports = {
       }
     },
     companies: {
-      title: 'Who\'s using nuxt<span class= "text-nuxt-lightgreen" > JS</span>'
+      title: 'Siapa yang menggunakan nuxt<span class="text-nuxt-lightgreen">JS</span>'
     },
     modes: {
       title: 'NUXT<span class="text-nuxt-lightgreen">JS</span> rendering',
@@ -118,9 +118,9 @@ module.exports = {
       }
     },
     sponsors: {
-      title: 'Sponsors',
+      title: 'Menjadi Sponsor',
       description:
-        'NuxtJS is an MIT licensed open source project and completely free to use. However, the amount of effort needed to maintain and develop new features for the project is not sustainable without proper financial backing. If you run a business and are using Nuxt in a revenue-generating product, it makes business sense to sponsor Nuxt development: it ensures the project that your product relies on stays healthy and actively maintained. It can also help your exposure in the Vue/Nuxt community and makes it easier to attract Vue/Nuxt developers. If you are an individual user and have enjoyed the productivity of using Nuxt, consider donating as a sign of appreciation.',
+        'NuxtJS adalah proyek open source berlisensi MIT dan sepenuhnya gratis untuk digunakan. Namun, jumlah upaya yang diperlukan untuk mempertahankan dan mengembangkan fitur-fitur baru untuk proyek ini tidak berkelanjutan tanpa dukungan keuangan yang tepat. Jika Anda menjalankan bisnis dan menggunakan Nuxt dalam produk yang menghasilkan pendapatan, masuk akal bagi bisnis untuk mensponsori pengembangan Nuxt: memastikan proyek yang diandalkan produk Anda tetap sehat dan dipelihara secara aktif. Ini juga dapat membantu pemaparan Anda di komunitas Vue/Nuxt dan membuatnya lebih mudah untuk menarik pengembang Vue/Nuxt. Jika Anda adalah pengguna individu dan telah menikmati produktivitas menggunakan Nuxt, pertimbangkan untuk memberi donasi sebagai tanda penghargaan.',
       become_a_sponsor: 'Become a sponsor'
     },
     newsletter: {
@@ -158,9 +158,9 @@ module.exports = {
   },
   contribute: {
     title: 'Contributors',
-    docs: 'Caught a mistake or want to contribute to the documentation?',
+    docs: 'Jumpa kesalahan atau ingin berkontribusi pada dokumentasi ini?',
     blog: 'Caught a mistake or want to contribute to this blog post?',
-    edit_on_github: 'Edit this page on GitHub!',
+    edit_on_github: 'Sunting halaman ini di GitHub!',
     msg1:
       'Contribution for this page is now closed. If you would like to contribute please check out our',
     link: 'new docs'

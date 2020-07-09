@@ -15,7 +15,10 @@
           target="_blank"
         >here</a>.
       </div>
+      <AppToc v-if="page.toc && page.toc.length" :toc="page.toc" class="mb-8 hidden lg:block" />
+
       <article>
+
         <h1
           class="text-light-onSurfacePrimary dark:text-dark-onSurfacePrimary transition-colors duration-300 ease-linear"
         >{{ page.title }}</h1>
@@ -26,7 +29,7 @@
       </article>
     </div>
     <AffixBlock>
-      <AppToc v-if="page.toc && page.toc.length" :toc="page.toc" class="mb-8 hidden lg:block" />
+
       <SponsorsBlock />
       <AdsBlock :key="$route.params.slug" />
     </AffixBlock>

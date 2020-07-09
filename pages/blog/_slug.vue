@@ -53,7 +53,7 @@ export default {
     }
 
     try {
-      contributors = (await fetch(`https://contributors-api.onrender.com/${path}/${slug}`).then(res => res.json())).map(({ author }) => ({ author }))
+      contributors = (await fetch(`https://contributors-api.onrender.com${path}/${slug}`).then(res => res.json())).map(({ author }) => ({ author }))
     } catch (e) { }
 
     try {

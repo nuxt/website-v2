@@ -64,7 +64,7 @@ questions:
     correctAnswer: true
 ---
 
-![modules-servermiddleware-plugins-in-nuxt-js](https://user-images.githubusercontent.com/13063165/83777478-c390d280-a689-11ea-90cf-17d93bcda23a.jpg)
+![modules-servermiddleware-plugins-in-nuxt-js](/guides/modules.jpg)
 
 While developing production-grade applications with Nuxt.js you might find that the framework's core functionality is not enough. Nuxt.js can be extended with configuration options and plugins, but maintaining these customizations across multiple projects is tedious, repetitive and time-consuming. On the other hand, supporting every project's needs out of the box would make Nuxt.js very complex and hard to use.
 

@@ -44,7 +44,7 @@ questions:
     correctAnswer: server, client and static
 ---
 
-![nuxt-js-context-keys](https://user-images.githubusercontent.com/13063165/83777134-5bda8780-a689-11ea-8c50-bbee8dc75714.jpeg)
+![nuxt-js-context-keys](/guides/context.jpeg)
 
 The `context` object is available in specific Nuxt functions like [asyncData](/guides/features/data-fetching#async-data), [plugins](/guides/directory-structure/plugins), [middleware](/guides/directory-structure/middleware) and [nuxtServerInit](http://localhost:3000/guides/directory-structure/store#the-nuxtserverinit-action). It provides *additional* and often optional information about the current request to the application.
 

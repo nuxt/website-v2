@@ -47,7 +47,7 @@
         </ul>
       </nav>
       <!-- Algolia Search -->
-      <AlgoliaSearch />
+      <ContentSearch />
     </div>
   </header>
 </template>

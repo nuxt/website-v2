@@ -69,7 +69,7 @@ questions:
     correctAnswer: extendPlugins
 ---
 
-![modules-servermiddleware-plugins-in-nuxt-js](https://user-images.githubusercontent.com/13063165/83777478-c390d280-a689-11ea-90cf-17d93bcda23a.jpg)
+![modules-servermiddleware-plugins-in-nuxt-js](/guides/plugins.jpg)
 
 The `plugins` directory contains your Javascript plugins that you want to run before instantiating the root Vue.js Application. This is the place to add Vue plugins and to inject functions or constants. Every time you need to use `Vue.use()`, you should create a file in `plugins/` and add its path to `plugins` in `nuxt.config.js`.
 

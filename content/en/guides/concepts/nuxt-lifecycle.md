@@ -60,7 +60,7 @@ questions:
     correctAnswer: asyncData is blocking while fetch is not
 ---
 
-![understanding-nuxt-2-12-lifecycle-hooks](https://user-images.githubusercontent.com/13063165/83777042-3a799b80-a689-11ea-9b08-f91562eaf832.png)
+![understanding-nuxt-2-12-lifecycle-hooks](/guides/nuxt-lifecycle.png)
 
 No matter which tool you use, you will always feel more confident when you understand how the tool works under the hood. The same applies to Nuxt.js. The goal of this chapter is to give you a high-level overview of the different parts of the framework, their order of execution and how they work together.
 

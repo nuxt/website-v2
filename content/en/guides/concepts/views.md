@@ -39,7 +39,7 @@ questions:
 
 The Views section describes all you need to know to configure data and views for a specific route in your Nuxt.js Application. Views consist of an app template, a layout, and the actual page. In addition, you can define custom meta tags for the head section of each page which are important for SEO (Search Engine Optimization).
 
-![Views](https://user-images.githubusercontent.com/13063165/83776926-11590b00-a689-11ea-8142-a4975d5b978a.png)
+![Composition of a View in Nuxt.js](/guides/views.png)
 
 Composition of a View in Nuxt.js
 

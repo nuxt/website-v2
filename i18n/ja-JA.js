@@ -9,7 +9,6 @@ module.exports = {
     version: 'バージョン'
   },
   iso: 'ja',
-
   links: {
     download: 'ダウンロード',
     live_edit: 'ライブ編集'

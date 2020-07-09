@@ -115,9 +115,9 @@ export default {
     },
 
     {
-      code: 'jp',
-      iso: 'jp-JP',
-      file: 'jp-JP.js',
+      code: 'ja',
+      iso: 'ja-JA',
+      file: 'ja-JA.js',
       name: '日本語',
       domain: 'https://jp.nuxtjs.org'
     },

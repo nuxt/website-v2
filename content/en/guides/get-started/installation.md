@@ -53,7 +53,7 @@ Then create a file named `package.json`:
 touch package.json
 ```
 
-Open the package.json file in your favourite code editor and fill it with this JSON content:
+Open the package.json file in your favorite code editor and fill it with this JSON content:
 
 ```json
 {
@@ -124,7 +124,7 @@ touch pages/index.vue
 
 It is important that this page is called `index.vue` as this will be the default page Nuxt shows when the application opens. It is the home page and it must be called index.
 
-Open the `index.vue` page in your editor and add the following content:
+Open the `index.vue` file in your editor and add the following content:
 
 ```html
 <template>
@@ -239,4 +239,4 @@ It will ask you some questions (name, Nuxt options, UI framework, TypeScript, li
   </code-block>
 </code-group>
 
-The application is now running on http://localhost:3000.
+The application is now running on [http://localhost:3000](http://localhost:3000).

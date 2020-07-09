@@ -80,8 +80,11 @@ export default {
     DEPLOY_PRIME_URL: process.env.DEPLOY_PRIME_URL || false,
     URL: process.env.URL || false,
     DOC_SEARCH_API_KEY: process.env.DOC_SEARCH_API_KEY || 'ff80fbf046ce827f64f06e16f82f1401',
-    NUXT_API: process.env.NUXT_API || 'https://api.nuxtjs.com',
-    NUXT_LOCALE: process.env.NUXT_LOCALE || 'en'
+    NUXT_API: process.env.NUXT_API || 'https://api.nuxtjs.com'
+
+  },
+  publicRuntimeConfig: {
+    nuxtLocale: process.env.nuxtLocale || 'en'
   },
   loading: { color: '#41B883' },
   generate: {

@@ -128,7 +128,7 @@ If you go directly to [http://localhost:3000/](http://localhost:3000/), you will
 
 <div class="Alert Alert--green">
   
-Nuxt will intelligently detect what data you mutated inside `fetch` and will optimise the JSON included in the returned HTML.
+Nuxt will intelligently detect what data you mutated inside `fetch` and will optimize the JSON included in the returned HTML.
 
 </div>
 

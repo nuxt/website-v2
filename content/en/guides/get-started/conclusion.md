@@ -67,15 +67,14 @@ questions:
 
 Congratulations you have now created your first Nuxt.js app and you may now consider yourself a Nuxter. But there is so much more to learn and so much more you can do with Nuxt.js. Here are a few recommendations. 
 
+➡️ Check out the [Concepts book](../concepts/views)
+
 ➡️ Working with [asyncData](/guides/features/data-fetching#async-data)
 
 ➡️ Choosing between different [Rendering modes](/guides/features/rendering-modes)
 
-➡️ Deploying your application
 
 ⭐️ Did you like Nuxt.js so far? Don't forget to [star our project](https://github.com/nuxt/nuxt.js) on GitHub
-
-Check out the [concepts book](../concepts/views)
 
 
 <quiz :questions="questions"></quiz>

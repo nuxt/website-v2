@@ -188,7 +188,7 @@ In addition, we can pass `:keep-alive-props` to `<nuxt />` component to cache a 
 <nuxt keep-alive :keep-alive-props="{ max: 10 }" />
 ```
 
-Above is one way to boost page performance which is more high-level and generic, while the next one drills down to optimise the fetch request calls by using the `timestamp` property of `$fetchState` and comparing it against the number of seconds delay before it re-fetches the data.
+Above is one way to boost page performance which is more high-level and generic, while the next one drills down to optimize the fetch request calls by using the `timestamp` property of `$fetchState` and comparing it against the number of seconds delay before it re-fetches the data.
 
 Vue’s `activated` hook is used here with Nuxt's `keep-alive` prop to re-fetch the data.
 

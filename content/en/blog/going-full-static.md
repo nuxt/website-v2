@@ -35,12 +35,12 @@ tags:
 - [Table of Contents](#table-of-contents)
 - [History](#history)
 - [Current issues](#current-issues)
-- [New config option: `target`](#new-config-option-code-target-code-)
-- [New command: `nuxt export`](#new-command-code-nuxt-export-code-)
+- [New config option: `target`](#new-config-option-target)
+- [New command: `nuxt export`](#new-command-nuxt-export)
   - [Crazy fast static applications](#crazy-fast-static-applications)
   - [Crawler integrated](#crawler-integrated)
   - [Faster re-deploy](#faster-re-deploy)
-- [New command: `nuxt serve`](#new-command-code-nuxt-serve-code-)
+- [New command: `nuxt serve`](#new-command-nuxt-serve)
 - [Preview mode](#preview-mode)
 - [Commands](#commands)
 - [Notes](#notes)
@@ -110,13 +110,13 @@ To disable the crawler, set `generate.crawler: false` in your `nuxt.config.js`
 
 ### Faster re-deploy
 
-By separating `nuxt build` and `nuxt export`, we are opening a new range of improvements: pre-render your pages only if you content has changed, this means: no Wepack build → faster redeployments.
+By separating `nuxt build` and `nuxt export`, we are opening a new range of improvements: pre-render your pages only if you content has changed, this means: no webpack build → faster re-deployments.
 
 ## New command: `nuxt serve`
 
 Once you statically generated your Nuxt app into `dist/`, use `nuxt serve` to start a production HTTP server and serve your static app, supporting [SPA Fallback](/guide/routing#spa-fallback).
 
-This command is perfect to locally test your static application before pushing to your favourite static hosting provider.
+This command is perfect to locally test your static application before pushing to your favorite static hosting provider.
 
 ## Preview mode
 

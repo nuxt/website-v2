@@ -219,7 +219,7 @@ export default {
 </script>
 ```
 
-➡️ See more on layouts in our [Views](http://localhost:3000/guides/concepts/views#layouts) chapter
+➡️ See more on layouts in our [Views](/guides/concepts/views#layouts) chapter
 
 ### loading
 
@@ -292,7 +292,7 @@ export default {
 </script>
 ```
 
-➡️ See more on middleware in our [Middleware](/guides/features/middleware) chapter
+➡️ See more on middleware in our [Middleware](/guides/directory-structure/middleware) chapter
 
 ### The watchQuery Property
 

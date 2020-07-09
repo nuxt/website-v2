@@ -56,7 +56,7 @@ If you follow the established conventions, you can develop a Nuxt.js application
 ### Modularity
 
 By keeping the core light and extensible with hooks, we opened a new range of possibilities: Nuxt Modules.
-You can use [analytics](https://github.com/nuxt-community/analytics-module), [authentication](https://auth.nuxtjs.org), send [HTTP requests](https://http.nuxtjs.org/), use your favourite [UI framework](https://github.com/nuxt-community/tailwindcss-module), support [dark mode](https://github.com/nuxt-community/color-mode-module), [optimizes your images](https://github.com/aceforth/nuxt-optimized-images), make a [PWA](https://pwa.nuxtjs.org) and [much more](https://awesomejs.dev/for/nuxt/) with only one line in your config file.
+You can use [analytics](https://github.com/nuxt-community/analytics-module), [authentication](https://auth.nuxtjs.org), send [HTTP requests](https://http.nuxtjs.org/), use your favorite [UI framework](https://github.com/nuxt-community/tailwindcss-module), support [dark mode](https://github.com/nuxt-community/color-mode-module), [optimizes your images](https://github.com/aceforth/nuxt-optimized-images), make a [PWA](https://pwa.nuxtjs.org) and [much more](https://awesomejs.dev/for/nuxt/) with only one line in your config file.
 
 ### Performances
 

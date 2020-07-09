@@ -240,4 +240,4 @@ Il vous sera demandé quelques questions (name, Nuxt options, UI framework, Type
   </code-block>
 </code-group>
 
-Votre application est en cours d'exécution sur http://localhost:3000.
+Votre application est en cours d'exécution sur [http://localhost:3000](http://localhost:3000).

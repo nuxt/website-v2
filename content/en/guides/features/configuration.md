@@ -72,9 +72,7 @@ By default, Nuxt.js is configured to cover most use cases. This default configur
 
 Although it is better to use the normal configuration `export default {}` you can have an async configuration by exporting an async function that return the config object.
 
-`nuxt.config.js`
-
-```js
+```js{}[nuxt.config.js]
 import axios from 'axios'
 
 export default async () => {
@@ -100,9 +98,7 @@ By default, the Nuxt.js development server host is `localhost`  which is only 
 
 Host `'0.0.0.0'`  is designated to tell Nuxt.js to resolve a host address, which is accessible to connections *outside* of the host machine (e.g. LAN). If the host is assigned the string value of `'0'` (not 0, which is falsy), or `'0.0.0.0'` your local IP address will be assigned to your Nuxt.js application.
 
-`nuxt.config.js`
-
-```js
+```js{}[nuxt.config.js]
 export default {
   server: {
     host: '0' // default: localhost
@@ -112,9 +108,7 @@ export default {
 
 You can also change the port number from the default port of 3000.
 
-`nuxt.config.js`
-
-```js
+```js{}[nuxt.config.js]
 export default {
   server: {
     port: 8000, // default: 3000
@@ -152,7 +146,7 @@ Thanks to [Vue Loader](http://vue-loader.vuejs.org/en/configurations/pre-proces
 
 Example of our `pages/index.vue` using [Pug](https://github.com/pugjs/pug) and [Sass](http://sass-lang.com/):
 
-```html
+```html{}[pages/index.vue]
 <template lang="pug">
   h1.red Hello {{ name }}!
 </template>
@@ -197,7 +191,7 @@ In case you want to use `sass` make sure that you have installed the `node-sa
 
 In `nuxt.config.js`, add the CSS resources:
 
-```js
+```js{}[nuxt.config.js]
 export default {
   css: [
     // Load a Node.js module directly (here it's a Sass file)
@@ -226,7 +220,7 @@ Nuxt.js uses [@nuxt/babel-preset-app](https://github.com/nuxt/nuxt.js/tree/dev/
 
 You can also use JSX in the `render` method of your components:
 
-```js
+```jsx
 <script>
 export default {
   data () {
@@ -247,7 +241,7 @@ You can learn more about how to use it in the [JSX section](https://vuejs.org/v
 
 You can extend nuxt's webpack configuration via the `extend` option in your `nuxt.config.js`. The `extend` option of the `build` property is a method that accepts two arguments. The first argument is the webpack `config` object exported from nuxt's webpack config. The second parameter is a context object with the following boolean properties: `{ isDev, isClient, isServer, loaders }`.
 
-```js
+```js{}[nuxt.config.js]
 export default {
   build: {
     extend (config, { isDev, isClient }) {
@@ -273,7 +267,7 @@ The `extend` method gets called twice - Once for the client bundle and the oth
 
 You may want to tweak the [optimization configuration](https://nuxtjs.org/api/configuration-build#optimization) a bit, avoiding a rewrite of the default object.
 
-```js
+```js{}[nuxt.config.js]
 export default {
   build: {
     extend (config, { isClient }) {
@@ -289,7 +283,7 @@ export default {
 
 In order to be aware of code style errors, you may want to run [ESLint](https://github.com/webpack-contrib/eslint-loader) on every build in the dev environment.
 
-```js
+```js{}[nuxt.config.js]
 export default {
   build: {
     extend (config, { isDev, isClient }) {
@@ -312,9 +306,7 @@ export default {
 
 You can use a `.nuxtignore` file to let Nuxt.js ignore  `layout`, `page`, `store` and `middleware`  files in your project’s root directory (`rootDir`) during the build phase. The `.nuxtignore` file is subject to the same specification as  `.gitignore`  and  `.eslintignore` files, in which each line is a glob pattern indicating which files should be ignored.
 
-For example `.nuxtignore`:
-
-```markdown
+```markdown{}[.nuxtignore]
 # ignore layout foo.vue
 layouts/foo.vue
 # ignore layout files whose name ends with -ignore.vue
@@ -345,7 +337,7 @@ By default all files which start with `-` will be ignored, such as `store/-fo
 
 More customizable than ignorePrefix: all files matching glob patterns specified inside ignore will be ignored in building.
 
-```js
+```js{}[nuxt.config.js]
 export default {
     ignore: 'pages/bar.vue'
 }
@@ -355,9 +347,7 @@ export default {
 
 `nuxtignore` is using `node-ignore` under the hood, `ignoreOptions` can be configured as `options` of `node-ignore`.
 
-Example (`nuxt.config.js`, make .nuxtignore patterns case-sensitive ):
-
-```js
+```js{}[nuxt.config.js]
 export default {
   ignoreOptions: {
     ignorecase: false

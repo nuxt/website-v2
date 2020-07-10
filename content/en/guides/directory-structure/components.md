@@ -37,9 +37,7 @@ The components directory contains your Vue.js Components. Components are what ma
 
 When working with data inside components we cannot use asyncData as this only works in page components. To access data from an API in your components you can use the Nuxt fetch(). Using `$fetchState.pending` we can show a message when the data is waiting to be loaded and using `$fetchState.error` we can show an error message if there is an error fetching the data. When using fetch we must declare the data in the data property. This then gets filled with the data that comes from the fetch.
 
-`components/MountainsList.vue`
-
-```html
+```html{}[components/MountainsList.vue]
 <template>
 <div>
     <p v-if="$fetchState.pending">Loading....</p>
@@ -74,9 +72,7 @@ With Nuxt.js you can now create your components and auto import them into your .
 
 If you are using Nuxt 2.13+ then all you need to do is set components to true in your nuxt.config file. The [components module](https://github.com/nuxt/components) is included by default but it is not activated by default.
 
-`nuxt.config.js`
-
-```js
+```js{}[nuxt.config.js]
 export default {
   components: true
 }
@@ -103,9 +99,7 @@ If you are suing Nuxt 2.10+ you need to first import the module
 
 And then add the module to the build modules section of your nuxt.config.js
 
-`nuxt.config.js`
-
-```bash
+```js{}[nuxt.config.js]
 export default {
   buildModules: [
     '@nuxt/components'
@@ -123,9 +117,8 @@ components/
   TheFooter.vue
 ```
 
-`layouts.default.vue`
 
-```html
+```html{}[layouts.default.vue]
 <template>
   <TheHeader />
 	<Nuxt />
@@ -139,9 +132,8 @@ components/
 
 To dynamically import a component also known, as lazy loading a component, all you need to do is add the lazy prefix in your templates.
 
-`layouts.default.vue`
 
-```html
+```html{}[layouts.default.vue]
 <template>
   <TheHeader />
 	<Nuxt />
@@ -153,9 +145,8 @@ To dynamically import a component also known, as lazy loading a component, all y
 
 Using the lazy prefix you can also dynamically import a component when an event is triggered.
 
-`pages/index.vue`
 
-```html
+```html{}[pages/index.vue]
 <template>
     <div>
         <h1>Mountains</h1>
@@ -212,9 +203,7 @@ components/
    Button.vue
 ```
 
-`nuxt.config.js`
-
-```bash
+```bash{}[nuxt.config.js]
 components: {
     dirs: [
       '~/components',
@@ -228,7 +217,7 @@ components: {
 
 And now in your template you can use the BaseButton instead of Button without having to make changes to the name of your `Button.vue` file.
 
-```html
+```html{}[pages/index.vue]
 <BaseButton />
 ```
 

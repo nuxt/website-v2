@@ -74,9 +74,8 @@ Shared middleware should be placed in the  `middleware/`  directory. The file
 
 A middleware receives [the context](https://nuxtjs.org/api/context) as the first argument.
 
-`middleware/user-agent.js`
 
-```js
+```js{}[middleware/user-agent.js]
 export default function (context) {
   // Add the userAgent property to the context
   context.userAgent = process.server ? context.req.headers['user-agent'] : navigator.userAgent
@@ -95,9 +94,8 @@ The middleware will be executed in series in this order:
 
 A middleware can be asynchronous. To do this return a  `Promise` or use async/await.
 
-`middleware/stats.js`
 
-```js
+```js{}[middleware/stats.js]
 import http from 'http'
 
 export default function ({ route }) {
@@ -109,9 +107,7 @@ export default function ({ route }) {
 
 Then, in your `nuxt.config.js`, use the `router.middleware` key.
 
-`nuxt.config.js`
-
-```js
+```js{}[nuxt.config.js]
 export default {
   router: {
     middleware: 'stats'
@@ -123,9 +119,7 @@ Now the `stats` middleware will be called for every route change.
 
 You can add your middleware (even multiple) to a specific layout or page as well.
 
-`pages/index.vue` or `layouts/default.vue`
-
-```js
+```js{}[pages/index.vue / layouts/default.vue]
 export default {
   middleware: ['auth', 'stats']
 }
@@ -139,9 +133,7 @@ export default {
 
 You can create named middleware by creating a file inside the  `middleware/` directory, the file name will be the middleware name.
 
-`middleware/authenticated.js`
-
-```js
+```js{}[middleware/authenticated.js]
 export default function ({ store, redirect }) {
   // If the user is not authenticated
   if (!store.state.authenticated) {
@@ -150,9 +142,7 @@ export default function ({ store, redirect }) {
 }
 ```
 
-`pages/secret.vue`
-
-```js
+```js{}[pages/secret.vue]
 <template>
   <h1>Secret page</h1>
 </template>
@@ -171,9 +161,7 @@ export default {
 
 If you need to use a middleware only for a specific page, you can directly use a function for it (or an array of functions):
 
-`pages/secret.vue`
-
-```js
+```js{}[pages/secret.vue]
 <template>
   <h1>Secret page</h1>
 </template>

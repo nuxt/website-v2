@@ -17,9 +17,7 @@ npm install --save-dev node-sass sass-loader
 - Type: `Array`
 - Items: `string`
 
-In `nuxt.config.js`, add the CSS resources:
-
-```js
+```js{}[nuxt.config.js]
 export default {
   css: [
     // Load a Node.js module directly (here it's a Sass file)

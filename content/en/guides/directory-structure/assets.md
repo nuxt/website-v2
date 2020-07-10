@@ -81,9 +81,7 @@ background: url("~assets/banner.svg")
 
 Nuxt.js lets you define the CSS files/modules/libraries you want to set globally (included in every page). In the nuxt.config you can easily add your styles using the CSS Property.
 
-`nuxt.config.js`
-
-```js
+```js{}[nuxt.config.js]
 export default {
   css: [
     // Load a Node.js module directly (here it's a Sass file)
@@ -132,8 +130,7 @@ You can use local fonts by adding them to your assets folder. Once they have bee
 ------| DMSans-Bold.ttf
 ```
 
-`assets/main.css`
-```css
+```css{}[assets/main.css]
 @font-face {
   font-family: 'DM Sans';
   font-style: normal;
@@ -180,7 +177,7 @@ The `~/` alias won't be resolved correctly in your CSS files. You must use `~as
 
 If you reference that image in your `pages/index.vue`:
 
-```html
+```html{}[pages/index.vue]
 <template>
   <img src="~/assets/image.png">
 </template>
@@ -228,7 +225,7 @@ Which means that every file below 1 KB will be inlined as base-64 data URL. Othe
 
 When launching our application with `nuxt`, our template in `pages/index.vue`:
 
-```html
+```html{}[pages/index.vue]
 <template>
   <img src="@/assets/your_image.png">
 </template>
@@ -252,9 +249,7 @@ By default the source directory (srcDir) and the root directory (rootDir) are th
 
 Both will achieve the same results.
 
-`/components/Avatar.vue`
-
-```html
+```html{}[components/Avatar.vue]
 <template>
   <div>
     <img src="../assets/your_image.png">

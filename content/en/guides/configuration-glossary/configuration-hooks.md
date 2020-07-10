@@ -10,9 +10,7 @@ position: 13
 
 > Hooks are [listeners to Nuxt events](/api/internals) that are typically used in Nuxt modules, but are also available in `nuxt.config.js`. [Learn More](/api/internals)
 
-Example (`nuxt.config.js`):
-
-```js
+```js{}[nuxt.config.js]
 import fs from "fs";
 import path from "path";
 
@@ -56,8 +54,7 @@ Maybe redirecting is not the best use-case for a production Web site, but this w
 
 To begin, you [can change `router.base`](/api/configuration-router#base); Update your `nuxt.config.js`:
 
-```js
-// nuxt.config.js
+```js{}[nuxt.config.js]
 import hooks from './hooks'
 export default {
   router: {
@@ -71,8 +68,7 @@ Then, create a few files;
 
 1. `hooks/index.js`, Hooks module
 
-   ```js
-   // file: hooks/index.js
+   ```js{}[hooks/index.js]
    import render from "./render";
 
    export default nuxtConfig => ({
@@ -82,8 +78,7 @@ Then, create a few files;
 
 1. `hooks/render.js`, Render hook
 
-   ```js
-   // file: hooks/render.js
+   ```js{}[hooks/render.js]
    import redirectRootToPortal from "./route-redirect-portal";
 
    export default nuxtConfig => {
@@ -104,9 +99,7 @@ Then, create a few files;
 
 1. `hooks/route-redirect-portal.js`, The Middleware itself
 
-   ```js
-   // file: hooks/route-redirect-portal.js
-
+   ```js{}[hooks/route-redirect-portal.js]
    /**
     * Nuxt middleware hook to redirect from / to /portal (or whatever we set in nuxt.config.js router.base)
     *

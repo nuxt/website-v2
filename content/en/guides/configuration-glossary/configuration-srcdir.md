@@ -16,13 +16,12 @@ If a relative path is specified it will be relative to the rootDir
 Example 1:
 Prerequisites:
 
-```js
-// nuxt.config.js
+```js{}[nuxt.config.js]
 export default {
   srcDir: 'client/'
 }
-
-// package.json
+```
+```js{}[package.json]
   "script": {
     "dev": "yarn nuxt"
   }
@@ -52,13 +51,13 @@ Instead of example 1 you can also move the nuxt.config into your src folder. In 
 
 Prerequisites:
 
-```js
-// nuxt.config.js
+```js{}[nuxt.config.js]
 export default {
   srcDir: '' // or just remove it
 }
+```
 
-// package.json
+```js{}[package.json]
   "script": {
     "dev": "yarn nuxt client" // this sets client as the rootDir
   }

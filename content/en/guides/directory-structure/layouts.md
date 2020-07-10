@@ -76,7 +76,7 @@ You can extend the main layout by adding a `layouts/default.vue` file. It will
 
 All you need in your layout is three lines of code which will render the page component.
 
-```html
+```html{}[layouts/default.vue]
 <template>
   <Nuxt />
 </template>
@@ -94,7 +94,7 @@ Every file (*top-level*) in the `layouts` directory will create a custom layou
 
 Let's say we want to create a blog layout and save it to `layouts/blog.vue`:
 
-```html
+```html{}[layouts/blog.vue]
 <template>
   <div>
     <div>My blog navigation bar here</div>
@@ -105,9 +105,8 @@ Let's say we want to create a blog layout and save it to `layouts/blog.vue`:
 
 Then you have to tell the pages to use your custom layout
 
-`pages/posts.vue`
 
-```js
+```js{}[pages/posts.vue]
 <script>
 export default {
   layout: 'blog',
@@ -137,7 +136,7 @@ As mentioned above, this layout is special and you should not include `<Nuxt>
 
 You can customize the error page by adding a `layouts/error.vue` file:
 
-```js
+```js{}[layouts/error.vue]
 <template>
   <div class="container">
     <h1 v-if="error.statusCode === 404">Page not found</h1>

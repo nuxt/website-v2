@@ -71,9 +71,7 @@ Nuxt.js uses the [transition component](http://vuejs.org/v2/guide/transitions.h
 
 To define a custom transition for a specific route add the `transition` key to the page component.
 
-`pages/index.vue`
-
-```js
+```js{}[pages/index.vue]
 export default {
   // Can be a String
   transition: ''
@@ -88,9 +86,7 @@ export default {
 
 If the `transition` key is set as a string, it will be used as the `transition.name`.
 
-`pages/index.vue`
-
-```js
+```js{}[pages/index.vue]
 export default {
   transition: 'home'
 }
@@ -98,7 +94,7 @@ export default {
 
 Nuxt.js will use these settings to set the component as follows:
 
-```html
+```html{}[pages/index.vue]
 <transition name="home">
 ```
 
@@ -110,9 +106,7 @@ This is automatically done for you and you do not need to add the `<transition>`
 
 Now all you have to do is create the new class for your transitions. 
 
-`pages/index.vue`
-
-```html
+```html{}[pages/index.vue]
 <styles>
 .home-enter-active, .home-leave-active {
   transition: opacity .5s;
@@ -127,9 +121,7 @@ Now all you have to do is create the new class for your transitions.
 
 If the `transition` key is set as an object:
 
-`pages/index.vue`
-
-```js
+```js{}[pages/index.vue]
 export default {
   transition: {
     name: 'home',
@@ -140,7 +132,7 @@ export default {
 
 Nuxt.js will use these settings to set the component as follows:
 
-```html
+```html{}[pages/index.vue]
 <transition name="test" mode="out-in">
 ```
 
@@ -166,9 +158,7 @@ The default transition mode for pages differs from the default mode in Vue.js. T
 
 </base-alert>
 
-`pages/index.vue`
-
-```
+```js{}[pages/index.vue]
 export default {
   transition: {
     name: 'home',
@@ -181,9 +171,7 @@ export default {
 
 If the `transition` key is set as a function:
 
-`pages/index.vue`
-
-```
+```js{}[pages/index.vue]
 export default {
   transition (to, from) {
     if (!from) { return 'slide-left' }
@@ -202,7 +190,7 @@ The Nuxt.js default transition name is `"page"`. To add a fade transition to e
 
 Our global css in `assets/main.css`:
 
-```css
+```css{}[assets/main.css]
 .page-enter-active, .page-leave-active {
   transition: opacity .5s;
 }
@@ -213,7 +201,7 @@ Our global css in `assets/main.css`:
 
 Then we add its path to the `css` array in our `nuxt.config.js` file:
 
-```js
+```js{}[nuxt.config.js]
 export default {
   css: [
     '~/assets/main.css'
@@ -236,9 +224,7 @@ The default settings for layout transitions are:
 }
 ```
 
-`assets/main.css`
-
-```js
+```js{}[assets/main.css]
 .layout-enter-active, .layout-leave-active {
   transition: opacity .5s
 }
@@ -249,9 +235,7 @@ The default settings for layout transitions are:
 
 If you want to change the default settings for your layout transitions you can do so in the nuxt.config.js file.
 
-`nuxt.config.js`
-
-```js
+```js{}[nuxt.config.js]
 export default {
   layoutTransition: 'my-layouts'
   // or
@@ -262,9 +246,7 @@ export default {
 }
 ```
 
-`assets/main.css`
-
-```js
+```css{}[assets/main.css]
 .my-layouts-enter-active, .my-layouts-leave-active {
   transition: opacity .5s
 }
@@ -286,9 +268,7 @@ The default settings for page transitions are:
 
 Should you wish to modify the default settings you can do so in the nuxt.config.js
 
-`nuxt.config.js`
-
-```js
+```js{}[nuxt.config.js]
 export default {
   pageTransition: 'my-page'
   // or
@@ -304,9 +284,7 @@ export default {
 
 If you do modify the page Transition name you will also have to rename the css class.
 
-`assets/main.css`
-
-```css
+```css{}[assets/main.css]
 .my-page-enter-active, .my-page-leave-active {
   transition: opacity .5s;
 }

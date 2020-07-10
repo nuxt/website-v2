@@ -151,9 +151,7 @@ export default {
 
 You can use `keep-alive` directive in `<nuxt/>` and `<nuxt-child/>` component to save `fetch` calls on pages you already visited:
 
-`layouts/default.vue`
-
-```html
+```html{}[layouts/default.vue]
 <template>
   <nuxt keep-alive />
 </template>
@@ -161,9 +159,8 @@ You can use `keep-alive` directive in `<nuxt/>` and `<nuxt-child/>` compon
 
 You can also specify the [props](https://vuejs.org/v2/api/#keep-alive) passed to `<keep-alive>` by passing a prop `keep-alive-props` to the `<nuxt>`  component.
 
-`layouts/default.vue`
 
-```js
+```html{}[layouts/default.vue]
 <nuxt keep-alive :keep-alive-props="{ max: 10 }" />
 ```
 
@@ -173,9 +170,7 @@ Keeps only 10 page components in memory.
 
 Nuxt will directly fill  `this.$fetchState.timestamp`  (timestamp) of the last `fetch` call (ssr included). You can use this property combined with `activated` hook to add a 30 seconds cache to `fetch`:
 
-`pages/posts/_id.vue`
-
-```js
+```js{}[pages/posts/_id.vue]
 <template>
   ...
 </template>
@@ -222,7 +217,7 @@ export default {
 
 You can display the data inside your template like you're used to doing:
 
-```js
+```html
 <template>
   <h1>{{ project }}</h1>
 </template>
@@ -262,9 +257,7 @@ In the upcoming examples, we are using our [http module](https://http.nuxtjs.or
   </code-block>
 </code-group>
 
-`nuxt.config.js`
-
-```js
+```js{}[nuxt.config.js]
 export default{
 	modules: [
     '@nuxt/http',

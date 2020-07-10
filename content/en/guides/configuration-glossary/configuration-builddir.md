@@ -11,9 +11,7 @@ position: 2
 
 > Define the dist directory for your Nuxt.js application
 
-Example (`nuxt.config.js`):
-
-```js
+```js{}[nuxt.config.js]
 export default {
   buildDir: "nuxt-dist"
 };

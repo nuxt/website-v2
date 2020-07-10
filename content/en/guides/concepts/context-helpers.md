@@ -186,7 +186,7 @@ When you want to refresh the current page for the user, you don't want to fully 
 
 You can do so, by using `this.$nuxt.refresh()`!
 
-```js
+```html
 <template>
  <div>
    <div>{{ content }}</div>
@@ -240,7 +240,7 @@ window.onNuxtReady(() => {
 Nuxt.js injects three boolean values into the global `process` object which will help you to determine whether your app was rendered on the server or fully on the client, as well as checking for static site generation. These helpers are available across your application and are commonly used in `asyncData` userland code.
 
 
-```js{}[pages/about.vue]
+```html{}[pages/about.vue]
 <template>
   <h1>I am rendered on the {{ renderedOn }} side </h1>
 </template>

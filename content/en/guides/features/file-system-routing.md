@@ -80,8 +80,6 @@ Use the [NuxtLink component](/guides/features/nuxt-components#the-nuxtlink-comp
 
 </base-alert>
 
-For example:
-
 ```html
 <template>
   <nuxt-link to="/">Home page</nuxt-link>
@@ -335,9 +333,7 @@ There are multiple ways to extend the routing with Nuxt:
 
 The router property lets you customize the Nuxt.js router (vue-router).
 
-`nuxt.config.js`
-
-```js
+```js{}[nuxt.config.js]
 export default {
 	router: {
     // customize the Nuxt.js router
@@ -357,9 +353,7 @@ You may want to extend the routes created by Nuxt.js. You can do so via the `ex
 
 Example of adding a custom route:
 
-`nuxt.config.js`
-
-```js
+```js{}[nuxt.config.js]
 export default {
   router: {
     extendRoutes (routes, resolve) {
@@ -375,9 +369,7 @@ export default {
 
 If you want to sort your routes, you can use the  `sortRoutes(routes)`  function from `@nuxt/utils`:
 
-`nuxt.config.js`
-
-```js
+```js{}[nuxt.config.js]
 import { sortRoutes } from '@nuxt/utils'
 export default {
   router: {
@@ -403,9 +395,7 @@ When adding routes that use [Named Views](https://nuxtjs.org/guide/routing#name
 
 </base-alert>
 
-`nuxt.config.js`
-
-```js
+```js{}[nuxt.config.js]
 export default {
   router: {
     extendRoutes (routes, resolve) {
@@ -448,9 +438,7 @@ Provide custom query string parse / stringify functions.
 
 You may want to change the separator between route names that Nuxt.js uses. You can do so via the `routeNameSplitter` option in your configuration file. Imagine we have the page file `pages/posts/_id.vue`. Nuxt.js will generate the route name programmatically, in this case `posts-id`. Changing the `routeNameSplitter` config to `/` the name will therefore change to `posts/id`.
 
-Example (`nuxt.config.js`):
-
-```js
+```js{}[nuxt.config.js]
 export default {
   router: {
     routeNameSplitter: '/'
@@ -472,9 +460,7 @@ In Nuxt.js you can use a file to overwrite the router scrollBehavior. This file 
 
 Example of forcing the scroll position to the top for every route:
 
-`app/router.scrollBehavior.js`
-
-```js
+```js{}[app/router.scrollBehavior.js]
 export default function (to, from, savedPosition) {
   return { x: 0, y: 0 }
 }
@@ -490,9 +476,7 @@ Available since: v2.10
 
 If this option is set to true, trailing slashes will be appended to every route. If set to false, they'll be removed.
 
-`nuxt.config.js`
-
-```js
+```js{}[nuxt.config.js]
 export default {
 	router: {
     trailingSlash: true,

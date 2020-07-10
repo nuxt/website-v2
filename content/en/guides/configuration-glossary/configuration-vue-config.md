@@ -13,9 +13,7 @@ position: 32
 
 **Example**
 
-`nuxt.config.js`
-
-```js
+```js{}[nuxt.config.js]
 export default {
   vue: {
     config: {

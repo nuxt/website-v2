@@ -105,9 +105,8 @@ Dynamic pages can be created when you don't know the name of the page due to it 
 
 If you've defined a file named `_slug.vue` in your pages folder, you can access the value using the context with params.slug
 
-`pages/_slug.vue`
 
-```jsx
+```html{}[pages/_slug.vue]
 <template>
   <h1>{{ this.slug }}</h1>
 </template>
@@ -123,9 +122,7 @@ export default {
 
 If you've defined a file named _slug.vue inside a folder called _book.vue you can access the value using the context with params.slug and params.book
 
-`pages/_book/_slug.vue`
-
-```jsx
+```html{}[pages/_book/_slug.vue]
 <template>
   <h1>{{ this.book }} / {{ this.slug }}</h1>
 </template>
@@ -152,9 +149,8 @@ For example: `pages/-about.vue`
 
 AsyncData is called every time before loading the component. It can be asynchronous and receives the context as an argument. The returned object will be merged with your data object.
 
-`pages/index.vue`
 
-```js
+```js{}[pages/index.vue]
 <script>
 export default {
   asyncData (context) {
@@ -191,9 +187,7 @@ export default {
 
 Set specific <meta> tags for the current page. Nuxt.js uses `vue-meta` to update the document head and meta attributes of your application. 
 
-`pages/index.vue`
-
-```js
+```js{}[pages/index.vue]
 <script>
 export default {
   head () {
@@ -209,9 +203,7 @@ export default {
 
 Specify a layout defined in the layouts directory.
 
-`pages/index.vue`
-
-```js
+```js{}[pages/index.vue]
 <script>
 export default {
   layout: 'blog'
@@ -225,9 +217,7 @@ export default {
 
 If set to false, prevents a page from automatically calling `this.$nuxt.$loading.finish()` as you enter it and `this.$nuxt.$loading.start()` as you leave it, allowing you to manually control the behavior, as [this example](https://nuxtjs.org/examples/custom-page-loading) shows. 
 
-`pages/index.vue`
-
-```js
+```js{}[pages/index.vue]
 <script>
 export default {
   loading: false
@@ -247,9 +237,7 @@ Only applies if loading is also set in nuxt.config.js.
 
 Defines a specific transition for the page.
 
-`pages/index.vue`
-
-```js
+```js{}[pages/index.vue]
 <script>
 export default {
   transition: 'fade'
@@ -263,9 +251,7 @@ export default {
 
 The scrollToTop property lets you tell Nuxt.js to scroll to the top before rendering the page. By default, Nuxt.js scrolls to the top when you go to another page, but with child routes, Nuxt.js keeps the scroll position. If you want to tell Nuxt.js to scroll to the top when rendering your child route, set `scrollToTop` to `true`
 
-`pages/index.vue`
-
-```js
+```js{}[pages/index.vue]
 <script>
 export default {
   scrollToTop: true
@@ -282,9 +268,7 @@ If you want to overwrite the default scroll behavior of Nuxt.js, take a look at 
 
 Defines middleware for this page. The middleware will be called before rendering the page.
 
-`pages/index.vue`
-
-```js
+```js{}[pages/index.vue]
 <script>
 export default {
   middleware: 'auth'
@@ -298,9 +282,7 @@ export default {
 
 Use the `watchQuery` key to set up a watcher for query strings. If the defined strings change, all component methods (asyncData, fetch, validate, layout, ...) will be called. Watching is disabled by default to improve performance.
 
-`pages/index.vue`
-
-```js
+```js{}[pages/index.vue]
 <script>
 export default {
   watchQuery: ['page']
@@ -314,9 +296,7 @@ If you want to set up a watcher for all query strings, set `watchQuery` to `tru
 
 </base-alert>
 
-`pages/index.vue`
-
-```js
+```js{}[pages/index.vue]
 <script>
 export default {
   watchQuery: true
@@ -326,9 +306,7 @@ export default {
 
 You can also use the function `watchQuery(newQuery, oldQuery)` to have more refined watchers.
 
-`pages/index.vue`
-
-```js
+```js{}[pages/index.vue]
 export default {
   watchQuery (newQuery, oldQuery) {
     // Only execute component methods if the old query string contained `bar`

@@ -23,9 +23,7 @@ Default:
 }
 ```
 
-Example (`nuxt.config.js`):
-
-```js
+```js{}[nuxt.config.js]
 export default {
   pageTransition: 'page'
   // or
@@ -56,9 +54,7 @@ Default:
 }
 ```
 
-Example (`nuxt.config.js`):
-
-```js
+```js{}[nuxt.config.js]
 export default {
   layoutTransition: 'layout'
   // or
@@ -69,9 +65,7 @@ export default {
 }
 ```
 
-Example global `css`:
-
-```css
+```css{}[assets/main.css]
 .layout-enter-active,
 .layout-leave-active {
   transition: opacity 0.5s;

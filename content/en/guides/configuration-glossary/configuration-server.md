@@ -10,9 +10,9 @@ position: 26
 
 > Nuxt.js let you define the server connection variables for your application inside `nuxt.config.js`.
 
-## Basic example (`nuxt.config.js`):
+## Basic example:
 
-```js
+```js{}[nuxt.config.js]
 export default {
   server: {
     port: 8000, // default: 3000
@@ -26,9 +26,7 @@ This lets you specify the [host and port](/faq/host-port) for your Nuxt.js serve
 
 ## Example using HTTPS configuration
 
-`nuxt.config.js`
-
-```js
+```js{}[nuxt.config.js]
 import path from "path";
 import fs from "fs";
 
@@ -46,7 +44,7 @@ You can find additional information on creating server keys and certificates on 
 
 ## Example using sockets configuration
 
-```js
+```js{}[nuxt.config.js]
 export default {
   server: {
     socket: "/tmp/nuxt.socket"
@@ -65,7 +63,7 @@ Enabling the `server.timing` option adds a middleware to measure the time elapse
 
 `server.timing` can be an object for providing options. Currently, only `total` is supported (which directly tracks the whole time spent on server-side rendering)
 
-```js
+```js{}[nuxt.config.js]
 export default {
   server: {
     timing: {

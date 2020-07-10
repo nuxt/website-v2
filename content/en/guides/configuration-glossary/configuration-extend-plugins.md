@@ -14,9 +14,9 @@ position: 9
 You may want to extend plugins or change plugins order created by Nuxt.js.
 This function accepts an array of [plugin](/api/configuration-plugins) objects and should return array of plugin objects.
 
-Example of changing plugins order (`nuxt.config.js`):
+Example of changing plugins order:
 
-```js
+```js{}[nuxt.config.js]
 export default {
   extendPlugins(plugins) {
     const pluginIndex = plugins.findIndex(

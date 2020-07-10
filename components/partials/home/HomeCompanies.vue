@@ -24,6 +24,7 @@
                   :alt="company.name"
                   :class="[company.class, $colorMode.value === 'dark' ? 'absolute top-0 left-0 opacity-0' : '']"
                   class="original"
+                  loading="lazy"
                 />
                 <img
                   v-if="$colorMode.value === 'dark'"
@@ -31,6 +32,7 @@
                   :alt="company.name"
                   :class="company.class"
                   class="preview"
+                  loading="lazy"
                 />
               </ClientOnly>
             </a>
@@ -54,6 +56,7 @@
                   :alt="company.name"
                   :class="[company.class, $colorMode.value === 'dark' ? 'absolute top-0 left-0 opacity-0' : '']"
                   class="original"
+                  loading="lazy"
                 />
                 <img
                   v-if="$colorMode.value === 'dark'"
@@ -61,6 +64,7 @@
                   :alt="company.name"
                   :class="company.class"
                   class="preview"
+                  loading="lazy"
                 />
               </ClientOnly>
             </a>
@@ -83,6 +87,7 @@
                   :alt="company.name"
                   :class="[company.class, $colorMode.value === 'dark' ? 'absolute top-0 left-0 opacity-0' : '']"
                   class="original"
+                  loading="lazy"
                 />
                 <img
                   v-if="$colorMode.value === 'dark'"
@@ -90,6 +95,7 @@
                   :alt="company.name"
                   :class="company.class"
                   class="preview"
+                  loading="lazy"
                 />
               </ClientOnly>
             </a>

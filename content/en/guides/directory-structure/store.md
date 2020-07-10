@@ -77,9 +77,7 @@ Every `.js` file inside the `store` directory is transformed as a [namespac
 
 To get started, export the state as a function, and the mutations and actions as objects. 
 
-`store/index.js`
-
-```js
+```js{}[store/index.js]
 export const state = () => ({
   counter: 0
 })
@@ -93,7 +91,7 @@ export const mutations = {
 
 Then, you can have a `store/todos.js` file:
 
-```js
+```js{}[store/todos.js]
 export const state = () => ({
   list: []
 })
@@ -153,7 +151,7 @@ new Vuex.Store({
 
 And in your `pages/todos.vue`, using the `todos` module:
 
-```js
+```js{}[pages/todos.vue]
 <template>
   <ul>
     <li v-for="todo in todos" :key="todo.text">
@@ -204,7 +202,7 @@ export default () => ({
 
 And the corresponding mutations can be in the file  `store/mutations.js`
 
-```js
+```js{}[store/mutations.js]
 export default {
   increment (state) {
     state.counter++
@@ -216,7 +214,7 @@ export default {
 
 You can add additional plugins to the store by putting them into the `store/index.js` file:
 
-```js
+```js{}[store/index.js]
 import myPlugin from 'myPlugin'
 
 export const plugins = [ myPlugin ]
@@ -240,7 +238,7 @@ If the action `nuxtServerInit` is defined in the store and the mode is `unive
 
 For example, let's say we have sessions on the server-side and we can access the connected user through `req.session.user`. To give the authenticated user to our store, we update our `store/index.js` to the following:
 
-```js
+```js{}[store/index.js]
 actions: {
   nuxtServerInit ({ commit }, { req }) {
     if (req.session.user) {
@@ -266,7 +264,7 @@ Asynchronous nuxtServerInit actions must return a Promise or leverage async/aw
 
 </base-alert>
 
-```js
+```js{}[store/index.js]
 actions: {
   async nuxtServerInit({ dispatch }) {
     await dispatch('core/load')

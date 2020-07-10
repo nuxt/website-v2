@@ -11,11 +11,7 @@ position: 11
 - Type: `String`
 - Default: `nuxt`
 
-Example:
-
-`nuxt.config.js`
-
-```js
+```js{}[nuxt.config.js]
 {
   globalName: "myCustomName";
 }
@@ -34,7 +30,7 @@ The `globalName` needs to be a valid JavaScript identifier, and changing it may 
 - Type: `Object`
 - Default:
 
-```js
+```js{}[nuxt.config.js]
 globals: {
   id: globalName => `__${globalName}`,
   nuxt: globalName => `$${globalName}`,

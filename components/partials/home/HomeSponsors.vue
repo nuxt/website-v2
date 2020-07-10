@@ -34,6 +34,7 @@
                 :alt="sponsor.name"
                 class="inline-block"
                 :class="sponsor.class"
+                loading="lazy"
               />
             </ClientOnly>
           </a>
@@ -56,6 +57,7 @@
                 alt="Vue School logo"
                 title="Vue School is an official Nuxt.js Educational Partner"
                 class="inline-block h-10"
+                loading="lazy"
               />
             </ClientOnly>
           </a>

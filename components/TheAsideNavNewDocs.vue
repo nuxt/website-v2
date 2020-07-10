@@ -17,7 +17,7 @@
           <component
             :is="$route.params.book === group ? `h3` : 'nuxt-link'"
             :key="`title-${group}`"
-            :to="{ name: 'guides-book', params: { book: group } }"
+            :to="{ name: 'guides-book-slug', params: { book: group, slug: sublinks[0].slug } }"
             class="uppercase font-medium text-light-onSurfaceSecondary dark:text-dark-onSurfaceSecondary pb-2 transition-colors duration-300 ease-linear"
             :class="{ 'hover:text-nuxt-lightgreen mb-4 block': $route.params.book !== group, 'font-bold': $route.params.book === group }"
           >{{ $t(`content.guides.${group}`) }}</component>
@@ -44,7 +44,6 @@
 </template>
 
 <script>
-import slugify from 'slugify'
 import sortBy from 'lodash.sortby'
 
 export default {
@@ -70,7 +69,7 @@ export default {
   },
   methods: {
     toLink (group, link) {
-      return this.localePath({ name: 'guides-book-slug', params: { book: slugify(group, { lower: true }), slug: link.slug } })
+      return this.localePath({ name: 'guides-book-slug', params: { book: group, slug: link.slug } })
     }
   }
 }

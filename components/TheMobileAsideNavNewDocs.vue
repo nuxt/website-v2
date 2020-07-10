@@ -16,8 +16,14 @@
             name="list"
             class="header_mobile_aside_group"
           >
-            <h3 :key="`title-${group}`" class="uppercase text-gray-500 pb-2">{{ $t(`content.guides.${group}`) }}</h3>
-            <ul :key="`list-${group}`" class="pb-6">
+            <component
+              :is="$route.params.book === group ? `h3` : 'nuxt-link'"
+              :key="`title-${group}`"
+              :to="{ name: 'guides-book-slug', params: { book: group, slug: sublinks[0].slug } }"
+              class="uppercase text-gray-500 pb-2"
+              :class="{ 'hover:text-nuxt-lightgreen mb-4 block': $route.params.book !== group, 'font-bold': $route.params.book === group }"
+            >{{ $t(`content.guides.${group}`) }}</component>
+            <ul v-if="$route.params.book === group" :key="`list-${group}`" class="pb-6">
               <li v-for="(link, index) in sublinks" :key="index" class="py-2">
                 <NuxtLink
                   class="block dark:text-dark-onSurfacePrimary hover:text-nuxt-lightgreen transition-colors duration-300 ease-linear"
@@ -55,7 +61,6 @@
 </template>
 
 <script>
-import slugify from 'slugify'
 import sortBy from 'lodash.sortby'
 
 import ListIcon from '~/assets/images/list.svg?inline'
@@ -95,7 +100,7 @@ export default {
       }
     },
     toLink (group, link) {
-      return this.localePath({ name: 'guides-book-slug', params: { book: slugify(group, { lower: true }), slug: link.slug } })
+      return this.localePath({ name: 'guides-book-slug', params: { book: group, slug: link.slug } })
     }
   }
 }

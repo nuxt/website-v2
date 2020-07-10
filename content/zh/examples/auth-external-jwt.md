@@ -3,6 +3,8 @@ title: 跨域身份验证 (JWT)
 description: 使用Nuxt.js通过外部API服务(jsonwebtoken)示例进行身份验证
 github: auth-jwt
 code: https://github.com/ahadyekta/nuxt-auth-external-jwt
+category: advanced
+position: 303
 ---
 
 # 文档

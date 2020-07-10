@@ -19,7 +19,7 @@ To navigate between pages of your app, you should use the [NuxtLink](/guides/fea
 
 A simple link to the `index.vue` page in your `pages` folder:
 
-```html
+```html{}[pages/index.vue]
 <template>
   <NuxtLink to="/">Home page</NuxtLink>
 </template>
@@ -27,7 +27,7 @@ A simple link to the `index.vue` page in your `pages` folder:
 
 The `<NuxtLink>` component should be used for all internal links. That means for all links to the pages within your site you should use `<NuxtLink>`. The `<a>` tag should be used for all external links. That means if you have links to other websites you should use the `<a>` tag for those.
 
-```html
+```html{}[pages/index.vue]
 <template>
   <main>
     <h1>Home page</h1>

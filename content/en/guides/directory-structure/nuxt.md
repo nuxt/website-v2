@@ -47,9 +47,7 @@ The `.nuxt` directory should not be committed to your version control system and
 
 By default, many tools assume that `.nuxt` is a hidden directory, because its name starts with a dot. You can use the buildDir option to prevent that. If you do change the name remember to add the new name to your `.gitignore` file.
 
-`nuxt.config.js`
-
-```js
+```js{}[nuxt.config.js]
 export default {
   buildDir: 'nuxt-dist'
 }

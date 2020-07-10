@@ -56,9 +56,7 @@ By default all files which start with `-` will be ignored, such as `store/-foo.j
 
 `nuxtignore` is using `node-ignore` under the hood, `ignoreOptions` can be configured as `options` of `node-ignore`.
 
-Example (`nuxt.config.js`, make .nuxtignore patterns case-sensitive ):
-
-```js
+```js{}[nuxt.config.js]
 export default {
   ignoreOptions: {
     ignorecase: false

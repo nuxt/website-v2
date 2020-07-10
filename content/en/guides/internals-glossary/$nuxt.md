@@ -14,11 +14,7 @@ Position: 2
   - Type: `Boolean`
   - Description: Opposite of `isOffline`
 
-Example:
-
-`layouts/default.vue`:
-
-```html
+```html{}[layouts/default.vue]
 <template>
   <div>
     <div v-if="$nuxt.isOffline">You are offline</div>

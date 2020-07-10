@@ -19,9 +19,7 @@ Available colors:
 
 - `black`, `red`, `green`, `yellow`, `blue`, `magenta`, `cyan`, `white`, `gray`, `redBright`, `greenBright`, `yellowBright`, `blueBright`, `magentaBright`, `cyanBright`, `whiteBright`
 
-Example (`nuxt.config.js`):
-
-```js
+```js{}[nuxt.config.js]
 export default {
   cli: {
     bannerColor: "yellow"

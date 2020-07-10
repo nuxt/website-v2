@@ -22,9 +22,9 @@ The two versions of bundles are:
 
 **Info:**
 
-- Use command option `[--modern | -m]=[mode]` to build/start modern bundles, for example: in `package.json`:
+- Use command option `[--modern | -m]=[mode]` to build/start modern bundles:
 
-```json
+```json{}[package.json]
 {
   "scripts": {
     "build:modern": "nuxt build --modern=server",

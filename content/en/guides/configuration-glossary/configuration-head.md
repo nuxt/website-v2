@@ -10,9 +10,7 @@ position: 12
 
 - Type: `Object` or `Function`
 
-An example `nuxt.config.js`:
-
-```js
+```js{}[nuxt.config.js]
 export default {
   head: {
     titleTemplate: "%s - Nuxt.js",

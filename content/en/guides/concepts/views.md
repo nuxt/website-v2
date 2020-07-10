@@ -179,7 +179,7 @@ The app template is used to create the actual HTML frame of your document for yo
 
 The default template used by Nuxt.js is:
 
-```html
+```html{}[app.html]
 <!DOCTYPE html>
 <html {{ HTML_ATTRS }}>
   <head {{ HEAD_ATTRS }}>
@@ -193,7 +193,7 @@ The default template used by Nuxt.js is:
 
 One use case of using a custom app template is to add conditional CSS classes for IE:
 
-```html
+```html{}[app.html]
 <!DOCTYPE html>
 <!--[if IE 9]><html class="lt-ie9 ie9" {{ HTML_ATTRS }}><![endif]-->
 <!--[if (gt IE 9)|!(IE)]><!--><html {{ HTML_ATTRS }}><!--<![endif]-->

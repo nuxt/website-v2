@@ -82,9 +82,7 @@ In the following paragraphs, each of the included components is explained.
 
 The `<Nuxt>` component is the component you use to display your page components. Basically, this component gets replaced by what is inside your page components depending on the page that is being shown. Therefore it is important that you add the `<Nuxt>` component to your layouts.
 
-`layouts/default.vue`
-
-```html
+```html{}[layouts/default.vue]
 <template>
   <div>
     <div>My nav bar</div>
@@ -106,7 +104,7 @@ There are 2 ways to handle the internal `key` prop of `<RouterView>`.
 
 1) Use a `nuxtChildKey` prop on your `<Nuxt>` component
 
-```html
+```html{}[layouts/default.vue]
 <template>
   <div>
     <Nuxt :nuxt-child-key="someKey" />
@@ -158,7 +156,7 @@ This file tree will generate these routes:
 
 To display the `child.vue` component, you have to insert the `<NuxtChild>` component inside `pages/parent.vue`:
 
-```html
+```html{}[pages/parent.vue]
 <template>
   <div>
     <h1>I am the parent view</h1>
@@ -173,9 +171,7 @@ Both, the `<Nuxt>` component and the `<NuxtChild/>` component, accept `keep-al
 
 🎓To learn more about keep-alive and keep-alive-props see the [vue docs](https://vuejs.org/v2/api/#keep-alive) 
 
-`layouts/default.vue`
-
-```html
+```html{}[layouts/default.vue]
 <template>
   <div>
     <Nuxt keep-alive :keep-alive-props="{ exclude: ['modal'] }" />
@@ -190,9 +186,7 @@ Both, the `<Nuxt>` component and the `<NuxtChild/>` component, accept `keep-al
 </div>
 ```
 
-`parent.vue`
-
-```html
+```html{}[pages/parent.vue]
 <template>
   <div>
     <NuxtChild keep-alive :keep-alive-props="{ exclude: ['modal'] }" />
@@ -272,9 +266,7 @@ However sometimes you may want to disable prefetching on some links if your page
 
 To disable the prefetching on all links, set the `prefetchLinks` to `false`:
 
-`nuxt.config.js`
-
-```js
+```js{}[nuxt.config.js]
 export default {
   router: {
     prefetchLinks: false
@@ -338,7 +330,7 @@ This css can be added to the navigation component or for a specific page or layo
 
 If you want to you can also configure the class name to be something else. You con do this by modifying the `linkActiveClass` in the router property in your `nuxt.config.js` file.
 
-```js
+```js{}[nuxt.config.js]
 export default {
   router: {
     linkExactActiveClass: 'my-custom-exact-active-link'
@@ -356,7 +348,7 @@ This option is given directly to the `vue-router` linkExactActiveClass. See the 
 
 The linkPrefetchedClass will allow you to add styles for all links that have been prefetched. This is great for testing which links are being prefetched after modifying the default behaviour. The linkPrefetchedClass is disabled by default. If you want to enable it you need to add it to the router property in your `nuxt-config.js` file.
 
-```js
+```js{}[nuxt.config.js]
 export default {
   router: {
     linkPrefetchedClass: 'nuxt-link-prefetched'
@@ -366,7 +358,7 @@ export default {
 
 Then you can add the styles for that class.
 
-```js
+```css
 .nuxt-link-prefetched {
   color: orangeRed;
 }
@@ -386,9 +378,7 @@ In this example we have used the class `nuxt-link-prefetched` but you can name i
 
 This component is used to purposely render a component only on client-side. To import a component only on the client, register the component in a client-side only plugin.
 
-`pages/example.vue`
-
-```html
+```html{}[pages/example.vue]
 <template>
   <div>
     <sidebar />
@@ -402,9 +392,7 @@ This component is used to purposely render a component only on client-side. To i
 
 Use a slot as placeholder until `<client-only />` is mounted on client-side.
 
-`pages/example.vue`
-
-```html
+```html{}[pages/example.vue]
 <template>
 <div>
   <sidebar />

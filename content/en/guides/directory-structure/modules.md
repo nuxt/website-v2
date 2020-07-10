@@ -77,9 +77,7 @@ Best of all, Nuxt.js modules can be incorporated into npm packages. This makes i
 
 Modules are Nuxt.js extensions which can extend the framework's core functionality and add endless integrations. Once you have installed the modules you can then add them to your nuxt.config.js file under the modules property.
 
-`nuxt.config.js`
-
-```js
+```js{}[nuxt.config.js]
 export default {
   modules: [
     // Using package name
@@ -117,9 +115,7 @@ Modules should export a function to enhance build/runtime and optionally return 
 
 Modules are functions. They can be packaged as npm modules or directly included in your project source code.
 
-`nuxt.config.js`
-
-```js
+```js{}[nuxt.config.js]
 export default {
 	exampleMsg: 'hello',
   modules: [
@@ -132,9 +128,7 @@ export default {
 }
 ```
 
-`modules/example.js`
-
-```js
+```js{}[modules/example.js]
 export default function ExampleModule (moduleOptions) {
   console.log(moduleOptions.token) // '123'
   console.log(this.options.exampleMsg) // 'hello'
@@ -156,9 +150,7 @@ module.exports.meta = require('./package.json')
 
 Sometimes it is more convenient if we can use top level options while registering modules in `nuxt.config.js`. This allows us to combine multiple option sources.
 
-`nuxt.config.js`
-
-```js
+```js{}[nuxt.config.js]
 export default {
   modules: [
     ['@nuxtjs/axios', { anotherOption: true }]
@@ -176,9 +168,8 @@ export default {
 
 `this.options`: You can directly access the Nuxt.js options using this reference. This is the content of the user's `nuxt.config.js` with all default options assigned to it. It can be used for shared options between modules.
 
-`module.js`
 
-```js
+```js{}[module.js]
 export default function (moduleOptions) {
   // `options` will contain option1, option2 and anotherOption
   const options = Object.assign({}, this.options.axios, moduleOptions)
@@ -191,9 +182,8 @@ export default function (moduleOptions) {
 
 If your module will provide a CSS library, make sure to perform a check if the user already included the library to avoid duplicates, and add an option to disable the CSS library in the module.
 
-`module.js`
 
-```js
+```js{}[module.js]
 export default function (moduleOptions) {
   if (moduleOptions.fontAwesome !== false) {
     // Add Font Awesome
@@ -206,9 +196,8 @@ export default function (moduleOptions) {
 
 We can register webpack plugins to emit assets during build.
 
-`module.js`
 
-```js
+```js{}[module.js]
 export default function (moduleOptions) {
   const info = 'Built by awesome module - 1.3 alpha on ' + Date.now()
 
@@ -272,9 +261,7 @@ Your module may need to do things only on specific conditions and not just durin
 
 Here are some basic examples:
 
-`modules/myModule.js`
-
-```js
+```js{}[modules/myModule.js]
 export default function myModule () {
   this.nuxt.hook('modules:done', (moduleContainer) => {
     // This will be called when all modules finished loading
@@ -298,18 +285,15 @@ export default function myModule () {
 
 It is common that modules provide one or more plugins when added. For example [bootstrap-vue](https://bootstrap-vue.js.org/) module would require to register itself into Vue. In such situations we can use the `this.addPlugin` helper.
 
-`plugin.js`
 
-```js
+```js{}[plugin.js]
 import Vue from 'vue'
 import BootstrapVue from 'bootstrap-vue/dist/bootstrap-vue.esm'
 
 Vue.use(BootstrapVue)
 ```
 
-`module.js`
-
-```js
+```js{}[module.js]
 import path from 'path'
 
 export default function nuxtBootstrapVue (moduleOptions) {
@@ -322,9 +306,7 @@ export default function nuxtBootstrapVue (moduleOptions) {
 
 Registered templates and plugins can leverage [lodash templates](https://lodash.com/docs/4.17.4#template) to conditionally change registered plugins output.
 
-`plugin.js`
-
-```js
+```js{}[plugin.js]
 // Set Google Analytics UA
 ga('create', '<%= options.ua %>', 'auto')
 
@@ -333,9 +315,7 @@ ga('create', '<%= options.ua %>', 'auto')
 <% } %>
 ```
 
-`module.js`
-
-```js
+```js{}[module.js]
 import path from 'path'
 
 export default function nuxtBootstrapVue (moduleOptions) {
@@ -357,9 +337,7 @@ export default function nuxtBootstrapVue (moduleOptions) {
 
 We can do the same as  `build.extend`  in  `nuxt.config.js`  using  `this.extendBuild`.
 
-`module.js`
-
-```js
+```js{}[module.js]
 export default function (moduleOptions) {
     this.extendBuild((config, { isClient, isServer }) => {
       // `.foo` Loader
@@ -394,10 +372,9 @@ export default async function asyncModule () {
 ### Return a Promise
 
 ```js
-import axios from 'axios' TODO CHANGE TO HTTP
 
-export default function asyncModule () {
-  return axios.get('https://jsonplaceholder.typicode.com/users')
+export default function asyncModule ($http) {
+  return $http.get('https://jsonplaceholder.typicode.com/users')
     .then(res => res.data.map(user => '/users/' + user.username))
     .then((routes) => {
       // Do something by extending Nuxt routes
@@ -415,9 +392,8 @@ There are way more hooks and possibilities for modules. Please read the [Nuxt I
 
 `module.exports.meta`: This line is required if you are publishing the module as an npm package. Nuxt internally uses meta to work better with your package.
 
-`modules/myModule.js`
 
-```js
+```js{}[modules/myModule.js]
 module.exports.meta = require('./package.json')
 ```
 
@@ -429,9 +405,7 @@ The usage difference is:
 
 - Instead of adding to `modules` inside `nuxt.config.js`, use `buildModules`
 
-`nuxt.config.js`
-
-```js
+```js{}[nuxt.config.js]
 export default {
   buildModules: [
     '@nuxtjs/eslint-module'
@@ -481,9 +455,7 @@ If you are going to offer using `buildModules` please mention that this featur
 
 The modulesDir property is used to set the modules directories for path resolving. For example: Webpack's resolveLoading, nodeExternals and postcss. The configuration path is relative to `options.rootDir` (default: process.cwd()).
 
-`nuxt.config.js`
-
-```js
+```js{}[nuxt.config.js]
 export default {
   modulesDir: ['../../node_modules']
 }

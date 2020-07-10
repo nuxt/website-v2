@@ -55,7 +55,7 @@ touch package.json
 
 Open the package.json file in your favorite code editor and fill it with this JSON content:
 
-```json
+```json{}[package.json]
 {
   "name": "my-app",
   "scripts": {
@@ -126,7 +126,7 @@ It is important that this page is called `index.vue` as this will be the default
 
 Open the `index.vue` file in your editor and add the following content:
 
-```html
+```html{}[pages/index.vue]
 <template>
   <h1>Hello world!</h1>
 </template>

@@ -46,9 +46,7 @@ Nuxt.js gives you 3 different ways to add meta data to your application:
 
 Nuxt.js lets you define all default `<meta>` tags for your application inside the nuxt.config.js file using the head property. This is very useful for adding a default title and description tag for SEO purposes or for setting the viewport or adding the favicon.
 
-`nuxt.config.js`
-
-```js
+```js{}[nuxt.config.js]
 export default {
   head: {
     title: 'my website title',
@@ -76,9 +74,7 @@ This will give you the same title and description on every page
 
 You can also add titles and meta for each page using the `head` method inside your script tag on every page.
 
-`index.vue`
-
-```js
+```js{}[pages/index.vue]
 <script>
 export default {
   head: {
@@ -100,9 +96,7 @@ Use `head` as an object to set a title and description only for the home page
 
 </base-alert>
 
-`index.vue`
-
-```js
+```html{}[pages/index.vue]
 <template>
   <h1>{{ title }}</h1>
 </template>
@@ -156,9 +150,7 @@ You can also pass each resource an optional `body: true` to include the resour
 
 ## Global Settings
 
-`nuxt.config.js` 
-
-```js
+```js{}[nuxt.config.js]
 export default {
   head: {
     script: [
@@ -173,9 +165,7 @@ export default {
 
 ## Local Settings
 
-`index.vue`
-
-```js
+```html{}[pages/index.vue]
 <template>
   <h1>About page with jQuery and Roboto font</h1>
 </template>

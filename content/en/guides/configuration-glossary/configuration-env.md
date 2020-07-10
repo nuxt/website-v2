@@ -14,9 +14,7 @@ The env property defines environment variables that should be available on the c
 
 **Make sure to read about `process.env` and `process.env == {}` below for better troubleshooting.**
 
-Example (`nuxt.config.js`):
-
-```js
+```js{}[nuxt.config.js]
 export default {
   env: {
     baseUrl: process.env.BASE_URL || "http://localhost:3000"
@@ -36,9 +34,7 @@ You can use the `env` property for giving a public token for example.
 
 For the example above, we can use it to configure [axios](https://github.com/mzabriskie/axios).
 
-`plugins/axios.js`:
-
-```js
+```js{}[plugins/axios.js]
 import axios from "axios";
 
 export default axios.create({

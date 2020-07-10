@@ -23,9 +23,7 @@ position: 7
 
 > Define the custom directories for your Nuxt.js application
 
-Example (`nuxt.config.js`):
-
-```js
+```js{}[nuxt.config.js]
 export default {
   dir: {
     assets: "custom-assets",

@@ -98,9 +98,7 @@ First, install it via NPM or Yarn.
 
 You can configure for example the axios interceptors to react on possible errors from our API calls across the application. In this example we redirect the user to a custom error page called sorry when we get a 500 status error from our API.
 
-`plugins/axios.js`
-
-```js
+```js{}[plugins/axios.js]
 export default function ({ $axios, redirect }) {
   $axios.onError(error => {
     if(error.response.status === 500) {
@@ -112,9 +110,8 @@ export default function ({ $axios, redirect }) {
 
 Last but not least, add the module and the newly created plugin to the project configuration.
 
-`nuxt.config.js`
 
-```js
+```js{}[nuxt.config.js]
 module.exports = {
   modules: [
     '@nuxtjs/axios',
@@ -127,9 +124,8 @@ module.exports = {
 
 Then we can use it directly in your page components:
 
-`pages/index.vue`
 
-```js
+```js{}[pages/index.vue]
 <template>
   <h1>{{ title }}</h1>
 </template>
@@ -173,7 +169,7 @@ First we need to install it
 
 The we create the file `plugins/vue-notifications.js`
 
-```js
+```js{}[plugins/vue-notifications.js]
 import Vue from 'vue'
 import VTooltip from 'v-tooltip'
 
@@ -188,7 +184,7 @@ Vue.use(VTooltip)
 
 Then we add the file path inside the `plugins` key of our `nuxt.config.js`. The plugins property lets you add vue.js plugins easily to your main application. All the paths defined in the `plugins` property will be imported before initializing the main application.
 
-```js
+```js{}[nuxt.config.js]
 export default {
   plugins: ['~/plugins/vue-tooltip.js']
 }
@@ -198,7 +194,7 @@ export default {
 
 If the plugin is located in `node_modules` and exports an ES6 module, you may need to add it to the `transpile` build option:
 
-```js
+```js{}[nuxt.config.js]
 module.exports = {
   build: {
     transpile: ['vue-tooltip']
@@ -216,9 +212,7 @@ Some plugins might work only in the browser because they lack SSR support.
 
 If a plugin is assumed to be run only on client or server side,  `.client.js`  or `.server.js` can be applied as an extension of the plugin file. The file will be automatically included only on the respective (client or server) side.
 
-`nuxt.config.js`
-
-```js
+```js{}[nuxt.config.js]
 export default {
   plugins: [
     '~/plugins/foo.client.js', // only in client side
@@ -232,9 +226,7 @@ export default {
 
 You can also use the object syntax with the `mode` property (`'client'`  or `'server'`) in `plugins`.
 
-`nuxt.config.js`
-
-```js
+```js{}[nuxt.config.js]
 export default {
   plugins: [
     { src: '~/plugins/both-sides.js' },
@@ -260,18 +252,15 @@ It is important to know that in any Vue [instance lifecycle](https://vuejs.org/
 
 </base-alert>
 
-`plugins/hello.js`
 
-```js
+```js{}[plugins/hello.js]
 export default ({ app }, inject) => {
   // Inject $hello(msg) in Vue, context and store.
   inject('hello', (msg) => console.log(`Hello ${msg}!`))
 }
 ```
 
-`nuxt.config.js`
-
-```js
+```js{}[nuxt.config.js]
 export default {
   plugins: ['~/plugins/hello.js']
 }
@@ -279,9 +268,7 @@ export default {
 
 Now `$hello(msg)` can be used from `context`, via `this` in Vue instances and via `this` in store `actions`/`mutations`.
 
-`example-component.vue`
-
-```js
+```js{}[example-component.vue]
 export default {
   mounted () {
     this.$hello('mounted')
@@ -295,9 +282,7 @@ export default {
 }
 ```
 
-`store/index.js`:
-
-```js
+```js{}[store/index.js]
 export const state = () => ({
   someValue: ''
 })
@@ -326,9 +311,9 @@ export const actions = {
 
 You may want to extend plugins or change the plugins order created by Nuxt.js. This function accepts an array of [plugin](/api/configuration-plugins) objects and should return an array of plugin objects.
 
-Example of changing plugins order (`nuxt.config.js`)
+Example of changing plugins order:
 
-```js
+```js{}[nuxt.config.js]
 export default {
   extendPlugins (plugins) {
     const pluginIndex = plugins.findIndex(
@@ -348,9 +333,7 @@ export default {
 
 Global mixins can be easily added with Nuxt plugins but can cause trouble and memory leaks when not handled correctly. Whenever you add a global mixin to your application, you should use a flag to avoid registering it multiple times:
 
-`plugins/my-mixin-plugin.js`
-
-```js
+```js{}[plugins/my-mixin-plugin.js]
 if (!Vue.__my_mixin__) {
 	Vue.__my__mixin__ = true
   Vue.mixin({ ... }) // Set up your mixin then

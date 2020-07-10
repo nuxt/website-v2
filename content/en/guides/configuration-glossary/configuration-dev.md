@@ -18,19 +18,14 @@ This property is overwritten by [nuxt commands](/guide/commands):
 
 This property should be used when using [Nuxt.js programmatically](/api/nuxt):
 
-Example:
 
-`nuxt.config.js`
-
-```js
+```js{}[nuxt.config.js]
 export default {
   dev: (process.env.NODE_ENV !== 'production')
 }
 ```
 
-`server.js`
-
-```js
+```js{}[server.js]
 const { Nuxt, Builder } = require('nuxt')
 const app = require('express')()
 const port = process.env.PORT || 3000
@@ -51,9 +46,7 @@ app.listen(port, '0.0.0.0').then(() => {
 })
 ```
 
-Then in your `package.json`:
-
-```json
+```json{}[package.json]
 {
   "scripts": {
     "dev": "node server.js",

@@ -39,9 +39,7 @@ By default, Nuxt.js is configured to cover most use cases. This default configur
 
 This option lets you configure various settings for the `build` step, including `loaders`, `filenames`, the `webpack` config and `transpilation`.
 
-`nuxt.config.js`
-
-```js
+```js{}[nuxt.config.js]
 export default {
 	build: {
 	    /*
@@ -58,9 +56,7 @@ export default {
 
 This option lets you define the CSS files, modules, and libraries you want to include globally (on every page).
 
-`nuxt.config.js`
-
-```js
+```js{}[nuxt.config.js]
 export default {
 	css: [
 	    '~/assets/css/main.css',
@@ -74,9 +70,7 @@ export default {
 
 This option lets you define the `development` or `production` mode of Nuxt.js (important when you use Nuxt.js programatically)
 
-`nuxt.config.js`
-
-```js
+```js{}[nuxt.config.js]
 export default {
   dev: (process.env.NODE_ENV !== 'production')
 }
@@ -88,9 +82,7 @@ export default {
 
 This option lets you define environment variables that are available to both client and server.
 
-`nuxt.config.js`
-
-```js
+```js{}[nuxt.config.js]
 export default {
 	env: {
 	    baseUrl: process.env.BASE_URL || baseUrl
@@ -104,9 +96,7 @@ export default {
 
 This option lets you set up parameter values for every dynamic route in your application that will be transformed into HTML files by Nuxt.js.
 
-`nuxt.config.js`
-
-```js
+```js{}[nuxt.config.js]
 export default {
 	generate: {
 	   dir: 'gh_pages', // gh_pages/ instead of dist/
@@ -119,9 +109,7 @@ export default {
 
 ### head
 
-`nuxt.config.js`
-
-```js
+```js{}[nuxt.config.js]
 export default {
 	head: {
     title: 'my title',
@@ -141,9 +129,7 @@ This option lets you define all default meta tags for your application.
 
 This option lets you customize the loading component that Nuxt.js uses by default.
 
-`nuxt.config.js`
-
-```js
+```js{}[nuxt.config.js]
 export default {
 	loading: {
 	    color: '#fff'
@@ -155,11 +141,9 @@ export default {
 
 ### modules
 
-`nuxt.config.js`
-
 With this option you can add Nuxt.js modules to your project.
 
-```js
+```js{}[nuxt.config.js]
 export default {
 	modules: [
     '@nuxtjs/axios',
@@ -173,9 +157,7 @@ export default {
 
 This option lets you define JavaScript plugins that should be run before instantiating the root Vue.js application.
 
-`nuxt.config.js`
-
-```js
+```js{}[nuxt.config.js]
 export default {
 	plugins: [
     '~/plugins/url-helpers.js',
@@ -189,9 +171,7 @@ export default {
 
 With the `router` option you can overwrite the default Nuxt.js configuration of Vue Router.
 
-`nuxt.config.js`
-
-```js
+```js{}[nuxt.config.js]
 export default {
 	router: {
     linkExactActiveClass: 'text-primary'
@@ -205,9 +185,7 @@ export default {
 
 This option lets you configure the connection variables for the server instance of your Nuxt.js application.
 
-`nuxt.config.js`
-
-```js
+```js{}[nuxt.config.js]
 import path from 'path'
 import fs from 'fs'
 
@@ -227,9 +205,7 @@ export default {
 
 This option lets you define the source directory of your Nuxt.js application.
 
-`nuxt.config.js`
-
-```js
+```js{}[nuxt.config.js]
 export default {
 	srcDir: 'client/'
 }
@@ -257,9 +233,7 @@ Project structure example with your Nuxt.js application in the `source` director
 
 This option lets you define custom names of your Nuxt.js directories.
 
-`nuxt.config.js`
-
-```js
+```js{}[nuxt.config.js]
 export default {
 	pages: 'views' // Nuxt will look for the views/ instead of the pages/ folder 
 }
@@ -271,9 +245,7 @@ export default {
 
 This option lets you define the default properties of the page transitions.
 
-`nuxt.config.js`
-
-```js
+```js{}[nuxt.config.js]
 export default {
 	pageTransition: 'page'
 }
@@ -289,9 +261,7 @@ Besides the `nuxt.config.js` there might be other config files in your project r
 
 In your .gitignore file you will need to add the following so that they are ignored and not added to version control. `node_modules` which is where all your installed modules are. The `nuxt` folder which is what gets created when running the dev or build commands. The `dist` folder is the folder that gets created when running the generate command. 
 
-`.gitignore`
-
-```markdown
+```markdown{}[.gitignore]
 node_modules
 .nuxt
 dist

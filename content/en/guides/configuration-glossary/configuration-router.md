@@ -19,9 +19,7 @@ This can be useful if you need to serve Nuxt as a different context root, from w
 
 If you want to have a redirect to `router.base`, you can do so [using a Hook, see _Redirect to router.base when not on root_](/api/configuration-hooks#redirect-to-router-base-when-not-on-root).
 
-Example (`nuxt.config.js`):
-
-```js
+```js{}[nuxt.config.js]
 export default {
   router: {
     base: "/app/"
@@ -45,9 +43,7 @@ When `base` is set, Nuxt.js will also add in the document header `<base href="{{
 You may want to change the separator between route names that Nuxt.js uses. You can do so via the `routeNameSplitter` option in your configuration file.
 Imagine we have the page file `pages/posts/_id.vue`. Nuxt will generate the route name programatically, in this case `posts-id`. Changing the `routeNameSplitter` config to `/` the name will therefore change to `posts/id`.
 
-Example (`nuxt.config.js`):
-
-```js
+```js{}[nuxt.config.js]
 export default {
   router: {
     routeNameSplitter: "/"
@@ -61,11 +57,7 @@ export default {
 
 You may want to extend the routes created by Nuxt.js. You can do so via the `extendRoutes` option.
 
-Example of adding a custom route:
-
-`nuxt.config.js`
-
-```js
+```js{}[nuxt.config.js]
 export default {
   router: {
     extendRoutes(routes, resolve) {
@@ -81,9 +73,7 @@ export default {
 
 If you want to sort your routes, you can use the `sortRoutes(routes)` function from `@nuxt/utils`:
 
-`nuxt.config.js`
-
-```js
+```js{}[nuxt.config.js]
 import { sortRoutes } from "@nuxt/utils";
 export default {
   router: {
@@ -105,9 +95,7 @@ The schema of the route should respect the [vue-router](https://router.vuejs.org
 
 </div>
 
-`nuxt.config.js`
-
-```js
+```js{}[nuxt.config.js]
 export default {
   router: {
     extendRoutes(routes, resolve) {
@@ -144,9 +132,7 @@ Setting this to false essentially makes every router-link navigation a full page
 
 Globally configure [`<nuxt-link>`](/api/components-nuxt-link) default active class.
 
-Example (`nuxt.config.js`):
-
-```js
+```js{}[nuxt.config.js]
 export default {
   router: {
     linkActiveClass: "active-link"
@@ -163,9 +149,7 @@ export default {
 
 Globally configure [`<nuxt-link>`](/api/components-nuxt-link) default exact active class.
 
-Example (`nuxt.config.js`):
-
-```js
+```js{}[nuxt.config.js]
 export default {
   router: {
     linkExactActiveClass: "exact-active-link"
@@ -182,9 +166,7 @@ export default {
 
 Globally configure [`<nuxt-link>`](/api/components-nuxt-link) default prefetch class (feature disabled by default)
 
-Example (`nuxt.config.js`):
-
-```js
+```js{}[nuxt.config.js]
 export default {
   router: {
     linkPrefetchedClass: "nuxt-link-prefetched"
@@ -199,11 +181,7 @@ export default {
 
 Set the default(s) middleware for every page of the application.
 
-Example:
-
-`nuxt.config.js`
-
-```js
+```js{}[nuxt.config.js]
 export default {
   router: {
     // Run the middleware/user-agent.js on every page
@@ -212,9 +190,7 @@ export default {
 };
 ```
 
-`middleware/user-agent.js`
-
-```js
+```js{}[middleware/user-agent.js]
 export default function(context) {
   // Add the userAgent property in the context (available in `asyncData` and `fetch`)
   context.userAgent = process.server
@@ -232,9 +208,7 @@ To learn more about the middleware, see the [middleware guide](/guide/routing#mi
 
 Configure the router mode, this is not recommended to change it due to server-side rendering.
 
-Example (`nuxt.config.js`):
-
-```js
+```js{}[nuxt.config.js]
 export default {
   router: {
     mode: "hash"
@@ -264,9 +238,7 @@ Requires [IntersectionObserver](https://developer.mozilla.org/en-US/docs/Web/API
 
 We recommend conditionally polyfilling this feature with a service like [Polyfill.io](https://polyfill.io):
 
-`nuxt.config.js`
-
-```js
+```js{}[nuxt.config.js]
 export default {
   head: {
     script: [
@@ -289,8 +261,7 @@ To disable the prefetching on a specific link, you can use the `no-prefetch` pro
 
 To disable the prefetching on all links, set the `prefetchLinks` to `false`:
 
-```js
-// nuxt.config.js
+```js{}[nuxt.config.js]
 export default {
   router: {
     prefetchLinks: false
@@ -322,7 +293,7 @@ Example of forcing the scroll position to the top for every routes:
 
 `app/router.scrollBehavior.js`
 
-```js
+```js{}[app/router.scrollBehavior.js]
 export default function(to, from, savedPosition) {
   return { x: 0, y: 0 };
 }

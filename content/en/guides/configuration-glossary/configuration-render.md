@@ -14,7 +14,7 @@ position: 22
 
 > Use this option to customize vue SSR bundle renderer. This option is skipped for spa mode.
 
-```js
+```js{}[nuxt.config.js]
 export default {
   render: {
     bundleRenderer: {
@@ -42,9 +42,7 @@ See [etag](https://www.npmjs.com/package/etag) docs for possible options.
 
 You can use your own hash function by specifying `etag.hash`:
 
-`nuxt.config.js`
-
-```js
+```js{}[nuxt.config.js]
 import { murmurHash128 } from "murmurhash-native";
 
 export default {
@@ -190,9 +188,7 @@ Note that CSP hashes will not be added if `script-src` policy contains `'unsafe-
 
 In order to add [`<meta http-equiv="Content-Security-Policy"/>`](https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP) with all the CSP policies you need to set `csp.addMeta` to `true`.
 
-Example (`nuxt.config.js`)
-
-```js
+```js{}[nuxt.config.js]
 export default {
   render: {
     csp: true

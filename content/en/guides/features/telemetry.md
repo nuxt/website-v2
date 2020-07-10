@@ -47,7 +47,7 @@ NUXT_TELEMETRY_DISABLED=1
 
 3. Setting `telemetry: false` in your `nuxt.config.js`:
 
-```js
+```js{}[nuxt.config.js]
 export default {
   telemetry: false
 }

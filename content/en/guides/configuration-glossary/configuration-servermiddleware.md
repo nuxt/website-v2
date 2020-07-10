@@ -32,9 +32,7 @@ Middleware listed in the `serverMiddleware` property runs server-side **before**
 
 If middleware is String Nuxt.js will try to automatically resolve and require it.
 
-Example (`nuxt.config.js`):
-
-```js
+```js{}[nuxt.config.js]
 import serveStatic from "serve-static";
 
 export default {
@@ -63,7 +61,7 @@ It is also possible to write custom middleware. For more information See [Connec
 
 Middleware (`api/logger.js`):
 
-```js
+```js{}[api/logger.js]
 export default function(req, res, next) {
   // req is the Node.js http request object
   console.log(req.url);
@@ -76,9 +74,7 @@ export default function(req, res, next) {
 }
 ```
 
-Nuxt Config (`nuxt.config.js`):
-
-```js
+```js{}[nuxt.config.js]
 serverMiddleware: ["~/api/logger"];
 ```
 

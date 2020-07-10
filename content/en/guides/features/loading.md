@@ -100,7 +100,7 @@ List of properties to customize the progress bar.
 
 If you don't want to display the progress bar between the routes add `loading: false` in your `nuxt.config.js` file:
 
-```js
+```js{}[nuxt.config.js]
 export default {
   loading: false
 }
@@ -108,9 +108,7 @@ export default {
 
 The loading property gives you the option to disable the default loading progress bar on a specific page.
 
-`index.vue`
-
-```html
+```html{}[pages/index.vue]
 <template>
   <h1>My page</h1>
 </template>
@@ -174,7 +172,7 @@ Your component has to expose some of these methods:
 
 We can create our custom component in `components/LoadingBar.vue`:
 
-```js
+```html{}[components/LoadingBar.vue]
 <template>
   <div v-if="loading" class="loading-page">
     <p>Loading...</p>
@@ -215,7 +213,7 @@ export default {
 
 Then, we update our `nuxt.config.js` to tell Nuxt.js to use our component:
 
-```js
+```js{}[nuxt.config.js]
 export default {
   loading: '~/components/LoadingBar.vue'
 }
@@ -225,9 +223,7 @@ export default {
 
 When running Nuxt.js in SPA mode, there is no content from the server side on the first page load. So, instead of showing a blank page while the page loads, Nuxt.js gives you a spinner which you can customize to add your own colors or background and even change the the indicator. 
 
-`nuxt.config.js`
-
-```js
+```js{}[nuxt.config.js]
 export default {
 	loadingIndicator: {
 	  name: 'circle',

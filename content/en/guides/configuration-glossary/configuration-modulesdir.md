@@ -11,9 +11,7 @@ position: 20
 
 > Used to set the modules directories for path resolving, for example: Webpack's `resolveLoading`, `nodeExternals` and `postcss`. Configuration path is relative to [options.rootDir](/api/configuration-rootdir) (default: `process.cwd()`).
 
-Example (`nuxt.config.js`):
-
-```js
+```js{}[nuxt.config.js]
 export default {
   modulesDir: ["../../node_modules"]
 };

@@ -17,9 +17,7 @@ position: 1
 
 If an object, see available properties [here](https://github.com/webpack-contrib/webpack-bundle-analyzer#options-for-plugin).
 
-Example (`nuxt.config.js`):
-
-```js
+```js{}[nuxt.config.js]
 export default {
   build: {
     analyze: true,
@@ -156,9 +154,7 @@ They are **not** deprecated. Do not use `process.client` and `process.server` he
 
 </div>
 
-Example (`nuxt.config.js`):
-
-```js
+```js{}[nuxt.config.js]
 export default {
   build: {
     extend(config, { isClient }) {
@@ -177,9 +173,7 @@ If you want to see more about our default webpack configuration, take a look at 
 
 `loaders` has the same object structure as [build.loaders](#loaders), so you can change the options of loaders inside `extend`.
 
-Example (`nuxt.config.js`):
-
-```js
+```js{}[nuxt.config.js]
 export default {
   build: {
     extend(config, { isClient, loaders: { vue } }) {
@@ -254,9 +248,9 @@ export default {
   }
   ```
 
-This example changes fancy chunk names to numerical ids (`nuxt.config.js`):
+This example changes fancy chunk names to numerical ids:
 
-```js
+```js{}[nuxt.config.js]
 export default {
   build: {
     filenames: {
@@ -447,9 +441,7 @@ See [NMFR/optimize-css-assets-webpack-plugin](https://github.com/NMFR/optimize-c
 - Type: `Array`
 - Default: `[]`
 
-Example (`nuxt.config.js`):
-
-```js
+```js{}[nuxt.config.js]
 import webpack from "webpack";
 import { version } from "./package.json";
 export default {
@@ -473,7 +465,7 @@ export default {
 
 - Default:
 
-  ```js
+  ```js{}[nuxt.config.js]
   {
     plugins: {
       'postcss-import': {},
@@ -490,9 +482,7 @@ export default {
 
 Your custom plugin settings will be merged with the default plugins (unless you are using an `Array` instead of an `Object`).
 
-Example (`nuxt.config.js`):
-
-```js
+```js{}[nuxt.config.js]
 export default {
   build: {
     postcss: {
@@ -519,9 +509,7 @@ If the postcss configuration is an `Object`, `order` can be used for defining th
 - Type: `Array` (ordered plugin names), `String` (order preset name), `Function`
 - Default: `cssnanoLast` (put `cssnano` in last)
 
-Example (`nuxt.config.js`):
-
-```js
+```js{}[nuxt.config.js]
 export default {
   build: {
     postcss: {
@@ -542,9 +530,7 @@ If you want to apply postcss plugin (eg. postcss-pxtorem) on the nuxt-tailwindcs
 
 **This setup have no impact on the nuxt-purgecss.**
 
-Example (`nuxt.config.js`):
-
-```js
+```js{}[nuxt.config.js]
 import { join } from "path";
 
 export default {
@@ -576,9 +562,7 @@ export default {
 - Type: `String`
 - Default: `'/_nuxt/'`
 
-Example (`nuxt.config.js`):
-
-```js
+```js{}[nuxt.config.js]
 export default {
   build: {
     publicPath: "https://cdn.nuxtjs.org"
@@ -600,7 +584,7 @@ Then, when launching `nuxt build`, upload the content of `.nuxt/dist/client` dir
 - Type: `Object`
 - Default:
 
-  ```js
+  ```js{}[nuxt.config.js]
   {
     layouts: false,
     pages: true,
@@ -638,9 +622,7 @@ You need to specify the patterns/path you want to include for the given pre-proc
 
 You cannot use path aliases here (`~` and `@`), you need to use relative or absolute paths.
 
-`nuxt.config.js`:
-
-```js
+```js{}[nuxt.config.js]
 {
   build: {
     styleResources: {
@@ -663,9 +645,7 @@ You cannot use path aliases here (`~` and `@`), you need to use relative or abso
 
 - Type: `Array`
 
-Example (`nuxt.config.js`):
-
-```js
+```js{}[nuxt.config.js]
 export default {
   build: {
     templates: [
@@ -689,7 +669,7 @@ Templates are rendered using [`lodash.template`](https://lodash.com/docs/#templa
 - Type: `Object` or `Boolean`
 - Default:
 
-```js
+```js{}[nuxt.config.js]
 {
   parallel: true,
   cache: false,
@@ -720,7 +700,7 @@ If you want to transpile specific dependencies with Babel, you can add them in `
 
 Starting with `v2.9.0`, you can also use a function to conditionally transpile, the function will receive a object (`{ isDev, isServer, isClient, isModern, isLegacy }`):
 
-```js
+```js{}[nuxt.config.js]
 {
   build: {
     transpile: [({ isLegacy }) => isLegacy && "ky"];
@@ -735,7 +715,7 @@ Starting with `v2.9.0`, you can also use a function to conditionally transpile, 
 - Type: `Object`
 - Default:
 
-  ```js
+  ```js{}[nuxt.config.js]
   {
     productionMode: !this.options.dev,
     transformAssetUrls: {
@@ -755,7 +735,7 @@ Starting with `v2.9.0`, you can also use a function to conditionally transpile, 
 
 - Type: `Array<String>`
 
-```js
+```js{}[nuxt.config.js]
 export default {
   build: {
     watch: ["~/.nuxt/support.js"]
@@ -769,7 +749,7 @@ export default {
 
 - Type: `Boolean`
 
-```js
+```js{}[nuxt.config.js]
 export default {
   build: {
     followSymlinks: true

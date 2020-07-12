@@ -4,7 +4,9 @@
       <h3
         v-if="contributors.length"
         class="empty-after after:block after:border-2 after:rounded dark:after:border-dark-onSurfacePrimary light:after:border-light-onSurfacePrimary after:mt-2 after:mb-1 after:w-4/5 my-2 text-light-onSurfacePrimary dark:text-dark-onSurfacePrimary relative text-xl table transition-colors duration-300 ease-linear"
-      >{{ $t('contribute.title') }}</h3>
+      >
+        {{ $t('contribute.title') }}
+      </h3>
       <div v-if="contributors.length">
         <a
           v-for="contributor of contributors"
@@ -20,10 +22,27 @@
             :src="`https://github.com/${contributor.author}.png?size=32`"
             class="h-8"
           />
-          <span class="inline-block px-2 leading-loose">{{ contributor.author }}</span>
+          <span class="inline-block px-2 leading-loose">{{
+            contributor.author
+          }}</span>
         </a>
       </div>
-      <BaseAlert v-if="!$route.path.startsWith('/guides') && !$route.path.startsWith('/blog')" type="warning" class="my-4">{{ $t('contribute.msg1') }}<NuxtLink class="text-nuxt-lightgreen" to="/guides/get-started/installation">{{ $t('contribute.link') }}</NuxtLink> {{ $t('tryNewDocs.msg2') }}</BaseAlert>
+      <BaseAlert
+        v-if="
+          !$route.path.startsWith('/guides') && !$route.path.startsWith('/blog')
+        "
+        type="warning"
+        class="my-4"
+      >
+        {{ $t('contribute.msg1') }}
+        <NuxtLink
+          class="text-nuxt-lightgreen"
+          to="/guides/get-started/installation"
+        >
+          {{ $t('contribute.link') }}
+        </NuxtLink>
+        {{ $t('tryNewDocs.msg2') }}
+      </BaseAlert>
       <p
         v-if="docLink && $route.params.book"
         class="text-light-onSurfaceSecondary dark:text-dark-onSurfaceSecondary pt-1 mb-8 transition-colors duration-300 ease-linear"
@@ -34,7 +53,9 @@
           target="_blank"
           rel="noopener"
           class="text-primary-base hover:underline"
-        >{{ $t('contribute.edit_on_github') }}</a>
+        >
+          {{ $t('contribute.edit_on_github') }}
+        </a>
       </p>
       <p
         v-else-if="docLink && $route.path.startsWith('/blog')"
@@ -46,7 +67,9 @@
           target="_blank"
           rel="noopener"
           class="text-primary-base hover:underline"
-        >{{ $t('contribute.edit_on_github') }}</a>
+        >
+          {{ $t('contribute.edit_on_github') }}
+        </a>
       </p>
       <CarbonAdsText :key="$route.path" />
     </div>
@@ -54,27 +77,26 @@
 </template>
 
 <script>
-
-export default {
-  props: {
-    docLink: {
-      type: String,
-      required: false,
-      default: ''
+  export default {
+    props: {
+      docLink: {
+        type: String,
+        required: false,
+        default: ''
+      },
+      contributors: {
+        type: Array,
+        required: false,
+        default: () => []
+      }
     },
-    contributors: {
-      type: Array,
-      required: false,
-      default: () => []
-    }
-  },
-  computed: {
-    baseLink () {
-      return '/' + this.$route.params.section
-    },
-    lastPathPart () {
-      return this.$route.path.replace(/\/$/, '').split('/')[2] || ''
+    computed: {
+      baseLink() {
+        return '/' + this.$route.params.section
+      },
+      lastPathPart() {
+        return this.$route.path.replace(/\/$/, '').split('/')[2] || ''
+      }
     }
   }
-}
 </script>

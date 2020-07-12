@@ -8,17 +8,26 @@
           class="text-3xl uppercase mb-2 sm:mb-0 font-medium"
           v-html="$t('homepage.sponsors.title')"
         />
-        <SponsoringIllustration id="sponsor-img" class="inline-block float-right lg:ml-4" />
+        <SponsoringIllustration
+          id="sponsor-img"
+          class="inline-block float-right lg:ml-4"
+        />
         <div
           class="pt-6 pb-12 leading-loose text-left text-light-onSurfaceSecondary dark:text-dark-onSurfaceSecondary transition-colors duration-300 ease-linear"
         >
           <p v-html="$t('homepage.sponsors.description')" />
         </div>
-        <div v-for="(group, groupKey) in sponsors" :key="groupKey" class="text-center pb-8">
+        <div
+          v-for="(group, groupKey) in sponsors"
+          :key="groupKey"
+          class="text-center pb-8"
+        >
           <h2
             class="uppercase text text-light-onSurfacePrimary dark:text-dark-onSurfacePrimary font-medium pb-8 transition-colors duration-300 ease-linear"
           >
-            <span class="pb-2 border-b-2 border-nuxt-lightgreen">{{ groupKey }}</span>
+            <span class="pb-2 border-b-2 border-nuxt-lightgreen">{{
+              groupKey
+            }}</span>
           </h2>
           <a
             v-for="(sponsor, i) in group"
@@ -43,7 +52,9 @@
           <h2
             class="uppercase text text-light-onSurfacePrimary dark:text-dark-onSurfacePrimary font-medium pb-8 transition-colors duration-300 ease-linear"
           >
-            <span class="pb-2 border-b-2 border-nuxt-lightgreen">Educational Partner</span>
+            <span class="pb-2 border-b-2 border-nuxt-lightgreen">
+              Educational Partner
+            </span>
           </h2>
           <a
             class="sponsor inline-block m-4"
@@ -63,8 +74,14 @@
           </a>
         </div>
         <div class="text-center">
-          <AppButton :to="localePath({ name: 'sponsor-nuxtjs' })" class="py-3 px-6 text-base">
-            <OpenCollectiveIcon slot="icon" class="inline-block h-5 -mt-1 mr-1" />
+          <AppButton
+            :to="localePath({ name: 'sponsor-nuxtjs' })"
+            class="py-3 px-6 text-base"
+          >
+            <OpenCollectiveIcon
+              slot="icon"
+              class="inline-block h-5 -mt-1 mr-1"
+            />
             {{ $t('homepage.sponsors.become_a_sponsor') }}
           </AppButton>
         </div>
@@ -74,47 +91,62 @@
 </template>
 
 <script>
-import OpenCollectiveIcon from '~/assets/icons/open-collective.svg?inline'
-import SponsoringIllustration from '~/assets/illustrations/sponsoring.svg?inline'
+  import OpenCollectiveIcon from '~/assets/icons/open-collective.svg?inline'
+  import SponsoringIllustration from '~/assets/illustrations/sponsoring.svg?inline'
 
-export default {
-  components: {
-    OpenCollectiveIcon,
-    SponsoringIllustration
-  },
-  data () {
-    return {
-      sponsors: {
-        platinum: [
-          { name: 'Storyblok', img: 'storyblok-logo.svg', url: 'https://www.storyblok.com/?ref=nuxt', class: 'h-24' }
-        ],
-        gold: [
-          { name: 'VueMastery', img: 'vueMastery-brand.svg', url: 'https://www.vuemastery.com/?ref=nuxt', class: 'h-10' }
-        ],
-        special: [
-          { name: 'Google Chrome', img: 'google-chrome.svg', url: 'https://www.google.com/chrome/?ref=nuxt', class: 'h-12' }
-        ]
+  export default {
+    components: {
+      OpenCollectiveIcon,
+      SponsoringIllustration
+    },
+    data() {
+      return {
+        sponsors: {
+          platinum: [
+            {
+              name: 'Storyblok',
+              img: 'storyblok-logo.svg',
+              url: 'https://www.storyblok.com/?ref=nuxt',
+              class: 'h-24'
+            }
+          ],
+          gold: [
+            {
+              name: 'VueMastery',
+              img: 'vueMastery-brand.svg',
+              url: 'https://www.vuemastery.com/?ref=nuxt',
+              class: 'h-10'
+            }
+          ],
+          special: [
+            {
+              name: 'Google Chrome',
+              img: 'google-chrome.svg',
+              url: 'https://www.google.com/chrome/?ref=nuxt',
+              class: 'h-12'
+            }
+          ]
+        }
       }
     }
   }
-}
 </script>
 
 <style lang="scss">
-.sponsor {
-  & img {
-    opacity: 0.75;
-    filter: grayscale(100%);
-    transition: all 0.5s;
-  }
-  &:hover {
+  .sponsor {
     & img {
-      opacity: 1;
-      filter: grayscale(0%);
+      opacity: 0.75;
+      filter: grayscale(100%);
+      transition: all 0.5s;
+    }
+    &:hover {
+      & img {
+        opacity: 1;
+        filter: grayscale(0%);
+      }
     }
   }
-}
-#sponsor-img {
-  shape-outside: circle(49.5% at 90px 95px);
-}
+  #sponsor-img {
+    shape-outside: circle(49.5% at 90px 95px);
+  }
 </style>

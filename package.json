@@ -46,9 +46,11 @@
     "@nuxtjs/svg": "^0.1.11",
     "babel-eslint": "^10.1.0",
     "eslint": "^7.4.0",
+    "eslint-config-prettier": "^6.11.0",
     "globby": "^11.0.1",
     "node-sass": "^4.14.1",
     "nodemon": "^2.0.4",
+    "prettier": "^2.0.5",
     "sass-loader": "^9.0.2"
   },
   "scripts": {

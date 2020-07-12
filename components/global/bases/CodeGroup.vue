@@ -1,6 +1,8 @@
 <template>
   <div class="code-group">
-    <div class="rounded-t border-b-2 border-gray-700 px-2 bg-gray-800 text-sm text-white relative">
+    <div
+      class="rounded-t border-b-2 border-dark-border px-2 bg-dark-elevatedSurface text-sm text-white relative"
+    >
       <button
         v-for="({ label }, i) in tabs"
         ref="tabs"
@@ -76,7 +78,7 @@ button {
 }
 
 .highlight-underline {
-  @apply bg-green-600 absolute;
+  @apply bg-nuxt-lightgreen absolute;
   bottom: -2px;
   height: 2px;
   transition: left 150ms, width 150ms;
@@ -84,7 +86,7 @@ button {
 
 .code-group ::v-deep {
   & pre[class*="language-"] {
-    @apply rounded-t-none;
+    @apply rounded-t-none mt-0 mb-2;
   }
 }
 </style>

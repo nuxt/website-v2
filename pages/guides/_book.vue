@@ -44,16 +44,6 @@ export default {
     return {
       links: groupBy(pages, 'category')
     }
-  },
-  mounted () {
-    if (this.$route.params.slug) {
-      return
-    }
-
-    const { book } = this.$route.params
-    const slug = this.links[book][0].slug
-
-    this.$router.push({ name: 'guides-book-slug', params: { book, slug } })
   }
 }
 

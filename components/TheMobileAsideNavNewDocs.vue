@@ -1,77 +1,61 @@
 <template>
-  <div
-    v-click-outside="clickOutsideHandler"
-    class="header_mobile_aside shadow-nuxt block lg:hidden fixed left-0 z-20 w-full sm:w-1/2"
-    :class="{ 'header_mobile_aside--open': show }"
+  <aside
+    class="opacity-transition block bg-gray-100 mt-8 -mx-4 lg:bg-transparent lg:mt-0 lg:mx-0 lg:inset-0 z-90 lg:mb-0 lg:static lg:h-auto lg:overflow-y-visible lg:pt-0 lg:w-1/4 lg:block"
   >
     <div
-      class="mx-auto h-full light:bg-light-surface dark:bg-dark-surface transition-colors duration-300 ease-linear"
+      class="h-full overflow-y-auto scrolling-touch text-center lg:text-left lg:h-auto lg:block lg:relative lg:sticky lg:top-24"
     >
-      <div class="content-wrapper h-full relative">
-        <div class="overflow-y-auto h-full pt-4">
-          <transition-group
-            v-for="(sublinks, group) in sortedLinks"
-            :key="group"
-            tag="div"
-            name="list"
-            class="header_mobile_aside_group"
-          >
-            <h3 :key="`title-${group}`" class="uppercase text-gray-500 pb-2">
-              {{ $t(`content.guides.${group}`) }}
-            </h3>
-            <ul :key="`list-${group}`" class="pb-6">
-              <li v-for="(link, index) in sublinks" :key="index" class="py-2">
-                <NuxtLink
-                  class="block dark:text-dark-onSurfacePrimary hover:text-nuxt-lightgreen transition-colors duration-300 ease-linear"
-                  exact-active-class="text-nuxt-lightgreen"
-                  :to="toLink(group, link)"
-                  @click.native="show = false"
-                >
-                  {{ link.title }}
-                </NuxtLink>
-              </li>
-            </ul>
-          </transition-group>
-        </div>
-        <button
-          class="inner-button sm:hidden absolute h-10 w-10 flex items-center justify-center text-nuxt-gray bg-gray-200 dark:bg-dark-elevatedSurface dark:text-dark-onSurfaceSecondary transition-colors duration-300 ease-linear"
-          @click="show = false"
-        >
-          <TimesIcon
-            class="block h-5 fill-current transition-colors duration-300 ease-linear"
-          />
-        </button>
-      </div>
-
-      <button
-        class="bookmark-button absolute h-10 w-10 flex items-center justify-center text-nuxt-gray bg-gray-200 dark:bg-dark-surface dark:text-dark-onSurfaceSecondary transition-colors duration-300 ease-linear"
-        @click="show = !show"
+      <nav
+        class="pt-8 lg:overflow-y-auto lg:block lg:pl-0 lg:pr-8 sticky?lg:h-(screen-24)"
+        :class="{ hidden: !showNav }"
       >
-        <ListIcon
-          v-if="!show"
-          class="block text-nuxt-gray dark:text-dark-onSurfaceSecondary stroke-current transition-colors duration-300 ease-linear"
-        />
-        <TimesIcon
-          v-else
-          class="block h-5 fill-current transition-colors duration-300 ease-linear"
-        />
-      </button>
+        <p class="uppercase font-bold pb-6">
+          {{ $t('common.version') }}
+          <span class="text-nuxt-lightgreen">2.13.X</span>
+        </p>
+        <div v-for="(sublinks, group) in sortedLinks" :key="`links-${group}`">
+          <component
+            :is="$route.params.book === group ? `h3` : 'nuxt-link'"
+            :key="`title-${group}`"
+            :to="{
+              name: 'guides-book-slug',
+              params: { book: group, slug: sublinks[0].slug }
+            }"
+            class="uppercase font-medium text-light-onSurfaceSecondary dark:text-dark-onSurfaceSecondary pb-2 transition-colors duration-300 ease-linear"
+            :class="{
+              'hover:text-nuxt-lightgreen mb-4 block':
+                $route.params.book !== group,
+              'font-bold': $route.params.book === group
+            }"
+          >
+            {{ $t(`content.guides.${group}`) }}
+          </component>
+          <ul v-if="$route.params.book === group" class="pb-8">
+            <li
+              v-for="(link, index) in sublinks"
+              :key="index"
+              class="py-2 text-light-onSurfacePrimary dark:text-dark-onSurfacePrimary"
+            >
+              <NuxtLink
+                class="hover:text-nuxt-lightgreen dark:hover:text-nuxt-lightgreen transition-colors duration-300 ease-linear"
+                exact-active-class="text-nuxt-lightgreen"
+                :to="toLink(group, link)"
+              >
+                <template v-if="link.menu">{{ link.menu }}</template>
+                <template v-else>{{ link.title }}</template>
+              </NuxtLink>
+            </li>
+          </ul>
+        </div>
+      </nav>
     </div>
-  </div>
+  </aside>
 </template>
 
 <script>
-  import slugify from 'slugify'
   import sortBy from 'lodash.sortby'
 
-  import ListIcon from '~/assets/images/list.svg?inline'
-  import TimesIcon from '~/assets/icons/times.svg?inline'
-
   export default {
-    components: {
-      ListIcon,
-      TimesIcon
-    },
     props: {
       links: {
         type: Object,
@@ -79,9 +63,7 @@
       }
     },
     data() {
-      return {
-        show: false
-      }
+      return { current: 0, setInter: null, showNav: false }
     },
     computed: {
       sortedLinks() {
@@ -95,72 +77,14 @@
       }
     },
     methods: {
-      clickOutsideHandler() {
-        if (this.show) {
-          this.show = false
-        }
-      },
       toLink(group, link) {
         return this.localePath({
           name: 'guides-book-slug',
-          params: { book: slugify(group, { lower: true }), slug: link.slug }
+          params: { book: group, slug: link.slug }
         })
       }
     }
   }
 </script>
 
-<style lang="scss" scoped>
-  .header_mobile_aside {
-    top: theme('spacing.16');
-    @screen lg {
-      top: theme('spacing.24');
-    }
-    bottom: theme('spacing.16');
-    transform: translateX(calc(-100% - 1px));
-    transition-property: transform;
-    transition-duration: 0.35s;
-    // transition-timing-function: cubic-bezier(0.23, 1, 0.32, 1);
-    transition-timing-function: theme(
-      'transitionTimingFunction.ease-in-out-material-sharp'
-    );
-  }
-
-  .header_mobile_aside--open {
-    transform: translateX(0px);
-    transition-delay: 0s;
-    & .header_mobile_aside_group {
-      transform: translateX(0px);
-    }
-  }
-
-  .content-wrapper {
-    margin-left: auto;
-    padding-left: 1rem;
-    @screen sm {
-      max-width: calc(theme('screens.sm') / 2);
-    }
-    @screen md {
-      max-width: calc(theme('screens.md') / 2);
-    }
-  }
-
-  button {
-    outline: none;
-  }
-
-  .bookmark-button {
-    top: 1rem;
-    right: 0;
-    transform: translateX(100%);
-    border-radius: 0 9999px 9999px 0;
-    box-shadow: 4px 2px 4px rgba(0, 0, 0, 0.101562);
-  }
-
-  .inner-button {
-    top: 1rem;
-    right: 1rem;
-    border-radius: 100%;
-    box-shadow: 4px 2px 4px rgba(0, 0, 0, 0.101562);
-  }
-</style>
+<style lang="scss" scoped></style>

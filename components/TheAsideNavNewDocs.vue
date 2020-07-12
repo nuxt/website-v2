@@ -17,10 +17,19 @@
           <component
             :is="$route.params.book === group ? `h3` : 'nuxt-link'"
             :key="`title-${group}`"
-            :to="{ name: 'guides-book-slug', params: { book: group, slug: sublinks[0].slug } }"
+            :to="{
+              name: 'guides-book-slug',
+              params: { book: group, slug: sublinks[0].slug }
+            }"
             class="uppercase font-medium text-light-onSurfaceSecondary dark:text-dark-onSurfaceSecondary pb-2 transition-colors duration-300 ease-linear"
-            :class="{ 'hover:text-nuxt-lightgreen mb-4 block': $route.params.book !== group, 'font-bold': $route.params.book === group }"
-          >{{ $t(`content.guides.${group}`) }}</component>
+            :class="{
+              'hover:text-nuxt-lightgreen mb-4 block':
+                $route.params.book !== group,
+              'font-bold': $route.params.book === group
+            }"
+          >
+            {{ $t(`content.guides.${group}`) }}
+          </component>
           <ul v-if="$route.params.book === group" class="pb-8">
             <li
               v-for="(link, index) in sublinks"
@@ -44,36 +53,38 @@
 </template>
 
 <script>
-import sortBy from 'lodash.sortby'
+  import sortBy from 'lodash.sortby'
 
-export default {
-  props: {
-    links: {
-      type: Object,
-      default: () => []
-    }
-  },
-  data () {
-    return { current: 0, setInter: null, showNav: false }
-  },
-  computed: {
-    sortedLinks () {
-      const links = {}
-      sortBy(Object.keys(this.links), (link) => {
-        return Object.keys(this.$i18n.t('content.guides')).indexOf(link)
-      }).forEach((key) => {
-        links[key] = this.links[key]
-      })
-      return links
-    }
-  },
-  methods: {
-    toLink (group, link) {
-      return this.localePath({ name: 'guides-book-slug', params: { book: group, slug: link.slug } })
+  export default {
+    props: {
+      links: {
+        type: Object,
+        default: () => []
+      }
+    },
+    data() {
+      return { current: 0, setInter: null, showNav: false }
+    },
+    computed: {
+      sortedLinks() {
+        const links = {}
+        sortBy(Object.keys(this.links), link => {
+          return Object.keys(this.$i18n.t('content.guides')).indexOf(link)
+        }).forEach(key => {
+          links[key] = this.links[key]
+        })
+        return links
+      }
+    },
+    methods: {
+      toLink(group, link) {
+        return this.localePath({
+          name: 'guides-book-slug',
+          params: { book: group, slug: link.slug }
+        })
+      }
     }
   }
-}
 </script>
 
-<style lang="scss" scoped>
-</style>
+<style lang="scss" scoped></style>

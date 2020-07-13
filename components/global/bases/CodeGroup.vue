@@ -30,15 +30,6 @@ export default {
       this.switchTab(newValue)
     }
   },
-  created () {
-    this.$slots.default.filter(slot => Boolean(slot.componentOptions)).map((slot) => {
-      this.tabs.push({
-        label: slot.componentOptions.propsData.label,
-        elm: null
-      })
-    })
-    this.activeTabIndex = 0
-  },
   mounted () {
     this.tabs = this.$slots.default.filter(slot => Boolean(slot.componentOptions)).map((slot) => {
       return {
@@ -46,7 +37,7 @@ export default {
         elm: slot.elm
       }
     })
-    this.updateHighlighteUnderlinePosition()
+    this.$nextTick(this.updateHighlighteUnderlinePosition)
   },
   methods: {
     switchTab (i) {

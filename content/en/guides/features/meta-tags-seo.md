@@ -81,9 +81,10 @@ export default {
     title: 'Home page',
     meta: [
       { 
-				hid: 'description', 
-				name: 'description', 
-				content: 'Home page description' }
+        hid: 'description', 
+        name: 'description', 
+        content: 'Home page description' 
+      }
     ],
   }
 }
@@ -112,9 +113,10 @@ export default {
       title: this.title,
       meta: [
         { 
-					hid: 'description', 
-					name: 'description', 
-					content: 'Home page description' }
+          hid: 'description', 
+          name: 'description', 
+          content: 'Home page description' 
+        }
       ]
     }
   }
@@ -154,10 +156,15 @@ You can also pass each resource an optional `body: true` to include the resour
 export default {
   head: {
     script: [
-      { src: 'https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js' }
+      { 
+          src: 'https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js' 
+      }
     ],
     link: [
-      { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css?family=Roboto&display=swap' }
+      { 
+          rel: 'stylesheet', 
+          href: 'https://fonts.googleapis.com/css?family=Roboto&display=swap' 
+       }
     ]
   }
 }
@@ -175,10 +182,15 @@ export default {
   head () {
     return {
       script: [
-        { src: 'https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js' }
+        { 
+            src: 'https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js' 
+         }
       ],
       link: [
-        { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css?family=Roboto&display=swap' }
+        { 
+            rel: 'stylesheet', 
+            href: 'https://fonts.googleapis.com/css?family=Roboto&display=swap' 
+        }
       ]
     }
   }

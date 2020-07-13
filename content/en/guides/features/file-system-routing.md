@@ -335,7 +335,7 @@ The router property lets you customize the Nuxt.js router (vue-router).
 
 ```js{}[nuxt.config.js]
 export default {
-	router: {
+  router: {
     // customize the Nuxt.js router
   },
 }
@@ -345,7 +345,7 @@ export default {
 
 The base URL of the app. For example, if the entire single page application is served under `/app/`, then base should use the value `'/app/'`.
 
-➡️ [Router Base Property](/api/configuration-router#base)
+➡️ [Router Base Property](/guides/configuration-glossary/configuration-router#base)
 
 ### extendRoutes
 
@@ -414,25 +414,25 @@ export default {
 }
 ```
 
-➡️ [extendRoutes Property](/api/configuration-router#extendroutes)
+➡️ [extendRoutes Property](/guides/configuration-glossary/configuration-router#extendroutes)
 
 ### fallback
 
 Controls whether the router should fallback to hash mode when the browser does not support history.pushState but mode is set to history.
 
-➡️ [fallback Property](/api/configuration-router#fallback)
+➡️ [fallback Property](/guides/configuration-glossary/configuration-router#fallback)
 
 ### mode
 
 Configure the router mode, it is not recommended to change it due to server-side rendering.
 
-➡️ [mode Property](/api/configuration-router#mode)
+➡️ [mode Property](/guides/configuration-glossary/configuration-router#mode)
 
 ### parseQuery / stringifyQuery
 
 Provide custom query string parse / stringify functions. 
 
-➡️ [parseQuery / stringifyQuery Property](/api/configuration-router#parsequery-stringifyquery)
+➡️ [parseQuery / stringifyQuery Property](/guides/configuration-glossary/configuration-router#parsequery--stringifyquery)
 
 ### routeNameSplitter
 
@@ -468,7 +468,7 @@ export default function (to, from, savedPosition) {
 
 🎓[Nuxt.js default `router.scrollBehavior.js` file.](packages/vue-app/template/router.scrollBehavior.js)
 
-➡️ [scrollBehavior Property](/api/configuration-router#scrollbehavior)
+➡️ [scrollBehavior Property](/guides/configuration-glossary/configuration-router#scrollbehavior)
 
 ### trailingSlash
 
@@ -478,7 +478,7 @@ If this option is set to true, trailing slashes will be appended to every route.
 
 ```js{}[nuxt.config.js]
 export default {
-	router: {
+  router: {
     trailingSlash: true,
   },
 }
@@ -490,7 +490,7 @@ This option should not be set without preparation and has to be tested thoroughl
 
 </base-alert>
 
-➡️ [trailingSlash Property](/api/configuration-router#trailingslash)
+➡️ [trailingSlash Property](/guides/configuration-glossary/configuration-router#trailingslash)
 
 
 <quiz :questions="questions"></quiz>

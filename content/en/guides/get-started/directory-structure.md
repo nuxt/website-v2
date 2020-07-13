@@ -69,4 +69,4 @@ The `package.json` file contains all the dependencies and scripts for your app
 
 There are more helpful directories and files, including [content](/guides/directory-structure/content), [layouts](/guides/directory-structure/layouts), [middleware](/guides/directory-structure/middleware), [modules](/guides/directory-structure/modules), [plugins](/guides/directory-structure/plugins) and [store](/guides/directory-structure/store) . As they aren't necessary for small applications, they are not covered here.
 
-🎓To learn about all directories in detail, feel free to read the the book on Project Directories.
+🎓To learn about all directories in detail, feel free to read the the [Directory Structure book](/guides/directory-structure/nuxt).

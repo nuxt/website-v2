@@ -68,7 +68,7 @@ The Nuxt.js lifecycle describes what happens after the build phase, where your a
 
 Dynamic SSR (`nuxt start`) 
 
-or Static Site Generation (`nuxt export`).
+or Static Site Generation (`nuxt generate`).
 
 ## Lifecycle
 
@@ -80,7 +80,7 @@ For SSR, these steps will be executed for every initial request to your app
 
 When using static site generation, the server steps are only executed on build time, but once for every page that will be generated
 
-- The generation process starts (`nuxt build && nuxt export`)
+- The generation process starts (`nuxt generate`)
 
 - Nuxt hooks
 - serverMiddleware

@@ -220,7 +220,7 @@ Nuxt.js uses [@nuxt/babel-preset-app](https://github.com/nuxt/nuxt.js/tree/dev/
 
 You can also use JSX in the `render` method of your components:
 
-```jsx
+```js
 <script>
 export default {
   data () {
@@ -339,7 +339,7 @@ More customizable than ignorePrefix: all files matching glob patterns specified
 
 ```js{}[nuxt.config.js]
 export default {
-    ignore: 'pages/bar.vue'
+  ignore: 'pages/bar.vue'
 }
 ```
 

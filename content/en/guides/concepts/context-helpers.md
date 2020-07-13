@@ -85,7 +85,7 @@ The *context* we refer to here is not to be confused with the `context` object
 
 </base-alert>
 
-Learn more about the different context keys in our [Glossary](https://nuxtjs.org/api/context)
+Learn more about the different context keys in our [Internals Glossary](http://localhost:3000/guides/internals-glossary/context)
 
 ## Examples
 
@@ -242,7 +242,7 @@ Nuxt.js injects three boolean values into the global `process` object which will
 
 ```html{}[pages/about.vue]
 <template>
-  <h1>I am rendered on the {{ renderedOn }} side </h1>
+  <h1>I am rendered on the {{ renderedOn }} side</h1>
 </template>
 
 <script>

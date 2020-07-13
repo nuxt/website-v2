@@ -74,7 +74,7 @@ export default {
 
 There are many properties of the page component such as the head property in the example above. 
 
-➡️ See the [directories structure book](/guides/directory-structure/nuxt) to learn more about all the properties can use on your page
+➡️ See the [Directory Structure book](/guides/directory-structure/nuxt) to learn more about all the properties can use on your page
 
 ## Layouts
 

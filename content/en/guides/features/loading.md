@@ -225,11 +225,11 @@ When running Nuxt.js in SPA mode, there is no content from the server side on th
 
 ```js{}[nuxt.config.js]
 export default {
-	loadingIndicator: {
-	  name: 'circle',
-	  color: '#3B8070',
-	  background: 'white'
-	}
+  loadingIndicator: {
+    name: 'circle',
+    color: '#3B8070',
+    background: 'white'
+  }
 }
 ```
 

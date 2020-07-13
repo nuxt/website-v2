@@ -61,16 +61,16 @@ You can extend the server with serverMiddleware and control routes with middlewa
 
 ```js{}[middleware/api/logger.js]
 export default function (req, res, next) {
- console.log(req.url)
- next()
+  console.log(req.url)
+  next()
 }
 ```
 
 ```js{}[nuxt.config.js]
 export default: {
-	serverMiddleware: [
-	  '~/api/logger'
-	]
+  serverMiddleware: [
+     '~/api/logger'
+  ]
 }
 ```
 
@@ -82,10 +82,10 @@ Because you are in a Node.js environment you have access to Node.js objects such
 
 ```js
 beforeMount{
-	window.alert('hello');
+  window.alert('hello');
 }
 mounted{
-	window.alert('hello');
+  window.alert('hello');
 }
 ```
 

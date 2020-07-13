@@ -5,34 +5,31 @@ position: 1
 category: features
 ---
 
-SSR TRUE/FALSE
+## Universal
 
-## Server
+mode: `'universal'`: Isomorphic application (server-side rendering or static sites). 
 
-→ classic
-
-→ modern
-
-mode:
-
-→ `'spa'`: No server-side rendering (only client-side navigation)
-
-→ `'universal'`: Isomorphic application (server-side rendering + client-side navigation)
-
-*You can use this option to change the default nuxt mode for your project using `nuxt.config.js`*
-
-```js
+```js{}[nuxt.config.js]
 export default {
-  mode: 'universal'
+  mode: 'universal'  // default universal
+}
+```
+<base-alert type="info">
+You do not need to add this to your nuxt config in order for universal mode to be applied as the default mode is universal.
+</base-alert>
+
+## SPA
+
+mode: `'spa'`: No server-side rendering (only client-side navigation)
+
+You can use the mode property to change the default nuxt mode for your project:
+
+```js{}[nuxt.config.js]
+export default {
+  mode: 'spa'  // default universal
 }
 ```
 
 ➡️The mode property
 
-## Static
 
-→ classic
-
-→ modern
-
-SPA FALLBACK AND EXCLUDE

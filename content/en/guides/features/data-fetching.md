@@ -69,7 +69,7 @@ In Nuxt.js we have 2 ways of getting data from an api. We can use the fetch meth
 
 ## Nuxt >= 2.12
 
-Nuxt.js `v2.12` introduces a new hook called `fetch` which you can use in any of your Vue components.
+Nuxt.js `v2.12` introduced a new hook called `fetch` which you can use in any of your Vue components.
 
 In terms of Nuxt lifecycle hooks, fetch sits within Vue lifecycle after created hook. As we already know that, all Vue lifecycle hooks are called with their this context. The same applies to fetch hook as well.
 
@@ -259,8 +259,8 @@ In the upcoming examples, we are using our [http module](https://http.nuxtjs.or
 
 ```js{}[nuxt.config.js]
 export default{
-	modules: [
-    '@nuxt/http',
+  modules: [
+     '@nuxt/http',
   ],
 }
 ```
@@ -271,9 +271,9 @@ export default{
 export default {
   asyncData ({ params, $http }) {
     return $http.$get(`https://api.nuxtjs.dev/posts/${params.id}`)
-      .then((data)=> {
-        return { title: data.title }
-      })
+    .then((data)=> {
+      return { title: data.title }
+    })
   }
 }
 ```

@@ -61,19 +61,16 @@ Open the package.json file in your favorite code editor and fill it with this JS
   "scripts": {
     "dev": "nuxt",
     "build": "nuxt build",
+    "generate": "nuxt generate"
     "start": "nuxt start",
-    "export": "nuxt export"
   }
 }
 ```
 
 `scripts` define Nuxt.js commands that will be launched with the command `npm run <command>`.
 
-<base-alert type="info">
+#### **What is a package.json file?**
 
-**What is a package.json file?**
-
-</base-alert>
 
 The `package.json` is like the ID card of your project. If you don't know what the `package.json` file is, we highly recommend you to have a quick read on the [NPM documentation](https://docs.npmjs.com/creating-a-package-json-file).
 

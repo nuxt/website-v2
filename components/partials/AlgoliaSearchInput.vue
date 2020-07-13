@@ -51,7 +51,16 @@ export default {
     }
   },
   mounted () {
-    if (window.docsearch) {
+    // // Avoid loading the script twice
+    if (document.getElementById('_algolia_doc_search_')) {
+      return
+    }
+    const script = document.createElement('script')
+
+    script.setAttribute('type', 'text/javascript')
+    script.setAttribute('src', '//cdn.jsdelivr.net/docsearch.js/2/docsearch.min.js')
+    script.setAttribute('id', '_algolia_doc_search_')
+    script.onload = () => {
       this.search = window.docsearch({
         apiKey: process.env.DOC_SEARCH_API_KEY,
         indexName: 'nuxtjs',
@@ -64,12 +73,8 @@ export default {
         debug: true // Set debug to true if you want to inspect the dropdown
       })
     }
-    // this.search.autocomplete.on('autocomplete:opened', (event) => {
-    //   console.log('OPENED')
-    // })
-    // this.search.autocomplete.on('autocomplete:closed', (event) => {
-    //   console.log('CLOSED')
-    // })
+    document.body.appendChild(script)
+
     if (this.appearance === 'mobile') {
       this.$refs['algolia-mobile'].focus()
     }
@@ -83,15 +88,11 @@ export default {
   methods: {
     resetInputValue () {
       this.q = ''
-      if (this.search) {
-        this.search.autocomplete.autocomplete.setVal('')
-      }
+      this.search && this.search.autocomplete.autocomplete.setVal('')
     },
     handleCloseClick () {
       this.resetInputValue()
-      if (this.search) {
-        this.search.autocomplete.autocomplete.close()
-      }
+      this.search && this.search.autocomplete.autocomplete.close()
       if (this.appearance === 'mobile') {
         this.$emit('close-search')
       } else {
@@ -103,9 +104,7 @@ export default {
     },
     blurHandler () {
       this.focused = false
-      if (this.search) {
-        this.search.autocomplete.autocomplete.close()
-      }
+      this.search && this.search.autocomplete.autocomplete.close()
     }
   }
 }

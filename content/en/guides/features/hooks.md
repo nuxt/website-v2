@@ -1,5 +1,5 @@
 ---
-title: "Hooks"
+title: 'Hooks'
 description: 'Nuxt Hooks'
 position: 5
 category: features

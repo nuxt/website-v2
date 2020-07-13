@@ -148,11 +148,11 @@ Using the lazy prefix you can also dynamically import a component when an event 
 
 ```html{}[pages/index.vue]
 <template>
-    <div>
-        <h1>Mountains</h1>
-        <LazyMountainsList v-if="show" />
-        <button v-if="!show" @click="showList">Show List</button>
-    </div>
+  <div>
+    <h1>Mountains</h1>
+    <LazyMountainsList v-if="show" />
+    <button v-if="!show" @click="showList">Show List</button>
+  </div>
 </template>
 
 <script>
@@ -165,7 +165,7 @@ export default {
   methods: {
     showList() {
       this.show = true
-    },
+    }
   }
 }
 </script>
@@ -205,14 +205,14 @@ components/
 
 ```bash{}[nuxt.config.js]
 components: {
-    dirs: [
-      '~/components',
+  dirs: [
+    '~/components',
       {
         path: '~/components/base/',
         prefix: 'Base'
       }
-    ]
-  }
+  ]
+}
 ```
 
 And now in your template you can use the BaseButton instead of Button without having to make changes to the name of your `Button.vue` file.

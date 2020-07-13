@@ -61,11 +61,11 @@ The `assets` directory contains your un-compiled assets such as Stylus or Sass
 
 ## Images:
 
-Inside your `vue` templates, if you need to link to your `assets` directory use  `@/assets/your_image.png` with a slash before assets.
+Inside your `vue` templates, if you need to link to your `assets` directory use  `~/assets/your_image.png` with a slash before assets.
 
 ```html
 <template>
-  <img src="@/assets/your_image.png">
+  <img src="~/assets/your_image.png">
 </template>
 ```
 
@@ -74,7 +74,10 @@ Inside your `css` files, if you need to reference your  `assets`  directory,
 ```css
 background: url("~assets/banner.svg")
 ```
-
+When working with dynamic images you will need to use require
+```html
+<img :src="require(`~/assets/img/${image}.jpg`)">
+```
 ➡️ Learn more about [webpack Assets](/guides/directory-structure/assets#webpack-assets)
 
 ## Styles:
@@ -245,7 +248,7 @@ If you want to change the loader configurations, please use [build.extend](http
 
 ## Aliases
 
-By default the source directory (srcDir) and the root directory (rootDir) are the same. You can use the alias of `@` for the source directory. Instead of writing relative paths like `../assets/your_image.png` you can use `@/assets/your_image.png`.
+By default the source directory (srcDir) and the root directory (rootDir) are the same. You can use the alias of `~` for the source directory. Instead of writing relative paths like `../assets/your_image.png` you can use `~/assets/your_image.png`.
 
 Both will achieve the same results.
 
@@ -253,13 +256,17 @@ Both will achieve the same results.
 <template>
   <div>
     <img src="../assets/your_image.png">
-    <img src="@/assets/your_image.png">
+    <img src="~/assets/your_image.png">
   </div>
 </template>
 ```
 
-You can use the alias of `@@` for the root directory.
+We recommend using the `~` as an alias. `@` is still supported but will not work in all cases such as with background images in your css. 
 
+You can use the alias of `~~` or `@@` for the root directory.
 
+<base-alert type="info">
+Tip: On Spanish keyboard you can access ~ with (Option + ñ) on Mac
+</base-alert>
 
 <quiz :questions="questions"></quiz>

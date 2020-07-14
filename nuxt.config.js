@@ -1,7 +1,6 @@
 export default {
   target: 'static',
   ssr: true,
-  // modern: 'client',
   head: {
     meta: [
       { charset: 'utf-8' },

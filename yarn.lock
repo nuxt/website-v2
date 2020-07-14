@@ -1084,16 +1084,16 @@
     html-minifier "^4.0.0"
     node-html-parser "^1.2.20"
 
-"@nuxt/http@^0.5.7":
-  version "0.5.7"
-  resolved "https://registry.yarnpkg.com/@nuxt/http/-/http-0.5.7.tgz#b2cf6ca5d53d8744d7aceac9700feabffc117176"
-  integrity sha512-VprYdTChj0RE1a/8mpGC+VEzlsaoNg5ZTbzmwQWExHoCVyhivaSDJv4mKV+Fge+IooW4BrMcFpYsY7MiSFb/Pg==
+"@nuxt/http@^0.5.8":
+  version "0.5.8"
+  resolved "https://registry.yarnpkg.com/@nuxt/http/-/http-0.5.8.tgz#bd21025b961f8d0a4021ac8b743d7c1101473cff"
+  integrity sha512-SP7MeH2vsbfXTN5Dvip1xMIYsx30DBw11aY06hUWNH0+dgGIn4k0Rt71jVGvdPnaBj/tRVC6WvPrTY6rwkkCXQ==
   dependencies:
     "@nuxtjs/proxy" "^2.0.0"
     abort-controller "^3.0.0"
-    consola "^2.13.0"
+    consola "^2.14.0"
     destr "^1.0.0"
-    ky "^0.20.0"
+    ky "^0.21.0"
     node-fetch "^2.6.0"
     web-streams-polyfill "^2.1.1"
 
@@ -1141,10 +1141,10 @@
     serve-static "^1.14.1"
     server-destroy "^1.0.1"
 
-"@nuxt/static@^0.0.12":
-  version "0.0.12"
-  resolved "https://registry.yarnpkg.com/@nuxt/static/-/static-0.0.12.tgz#21911adda84999efe2a09dbba48dedf43fa51db5"
-  integrity sha512-gZ7PfgU3DIz4N8uOrNLEEbTeN19hS0UBvhquSO5t4N6KfjWDYhvVVetRVisiTNbkcpeUg8uSXOzIN7KzCPyaqg==
+"@nuxt/static@^1.0.0":
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/@nuxt/static/-/static-1.0.0.tgz#32fb4345a38a220b3f79e083f17e134ff695a822"
+  integrity sha512-giYaEwPsKDqqXiR4uXvsNAwJ1gGEPg/hLMLWvXC56YF5FNbdc3kOroq0/TtQ2eF0OCu38olJs8IEyLjYUdP5Vg==
   dependencies:
     consola "^2.14.0"
     crc "^3.8.0"
@@ -6141,10 +6141,10 @@ klona@^1.1.1:
   resolved "https://registry.yarnpkg.com/klona/-/klona-1.1.2.tgz#a79e292518a5a5412ec8d097964bff1571a64db0"
   integrity sha512-xf88rTeHiXk+XE2Vhi6yj8Wm3gMZrygGdKjJqN8HkV+PwF/t50/LdAKHoHpPcxFAlmQszTZ1CugrK25S7qDRLA==
 
-ky@^0.20.0:
-  version "0.20.0"
-  resolved "https://registry.yarnpkg.com/ky/-/ky-0.20.0.tgz#4cebcd208f2d0d0b5970a63523afecfd79bd9e46"
-  integrity sha512-JAfwtwj+t7WqRus88PfBj25aAjRQUgMhk7aB2ufjQ6v8faoNwMy02mfSQ0iNXWCbJGcSl2JZ5ckaiywRjbq0Uw==
+ky@^0.21.0:
+  version "0.21.0"
+  resolved "https://registry.yarnpkg.com/ky/-/ky-0.21.0.tgz#341eafec690f8a314392a9869074cc4665992bfa"
+  integrity sha512-b0byZCPvuikmLj3vSH7V/LdkzBC5rpiRr75ZD9PLg9nGMO1u3o1kmzaMPvVvQolyZnNqtuvm0eq3h3nMUzg98A==
 
 last-call-webpack-plugin@^3.0.0:
   version "3.0.0"

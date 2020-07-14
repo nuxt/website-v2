@@ -7,6 +7,11 @@ const logger = consola.withScope('releases')
 export default function () {
   let releases = []
 
+  // No need to fetch the releases when running `nuxt build`
+  if (!this.options.dev && this.options._build) {
+    return
+  }
+
   this.nuxt.hook('content:ready', async ({ database }) => {
     releases = await fetchReleases(database.markdown)
   })

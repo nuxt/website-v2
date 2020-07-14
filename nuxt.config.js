@@ -10,10 +10,16 @@ export default {
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
       { rel: 'preconnect', href: 'https://www.google-analytics.com' },
-      { rel: 'stylesheet', type: 'text/css', href: 'https://cdn.jsdelivr.net/docsearch.js/2/docsearch.min.css' }
+      {
+        rel: 'stylesheet',
+        type: 'text/css',
+        href: 'https://cdn.jsdelivr.net/docsearch.js/2/docsearch.min.css'
+      }
     ],
     bodyAttrs: {
-      class: ['font-sans font-medium bg-light-surface dark:bg-dark-surface text-light-onSurfacePrimary dark:text-dark-onSurfacePrimary transition-colors duration-300 ease-linear']
+      class: [
+        'font-sans font-medium bg-light-surface dark:bg-dark-surface text-light-onSurfacePrimary dark:text-dark-onSurfacePrimary transition-colors duration-300 ease-linear'
+      ]
     }
   },
   buildModules: [
@@ -53,11 +59,10 @@ export default {
   },
   css: ['~/assets/css/main.scss'],
   hooks: {
-    'content:file:beforeInsert': (item) => {
+    'content:file:beforeInsert': item => {
       const stats = require('reading-time')(item.text)
 
       if (item.slug === 'release-notes' && item.extension === '.md') {
-
       }
 
       item.readingTime = stats
@@ -76,11 +81,13 @@ export default {
   env: {
     DEPLOY_PRIME_URL: process.env.DEPLOY_PRIME_URL || false,
     URL: process.env.URL || false,
-    DOC_SEARCH_API_KEY: process.env.DOC_SEARCH_API_KEY || 'ff80fbf046ce827f64f06e16f82f1401',
+    DOC_SEARCH_API_KEY:
+      process.env.DOC_SEARCH_API_KEY || 'ff80fbf046ce827f64f06e16f82f1401',
     NUXT_API: process.env.NUXT_API || 'https://api.nuxtjs.com'
   },
   publicRuntimeConfig: {
-    nuxtLocale: process.env.nuxtLocale || 'en'
+    nuxtLocale: process.env.nuxtLocale || 'en',
+    nuxtVersion: '2.13.3'
   },
   loading: { color: '#41B883' },
   generate: {
@@ -89,56 +96,57 @@ export default {
   },
   i18n: {
     strategy: 'no_prefix',
-    locales: [{
-      code: 'en',
-      iso: 'en-US',
-      file: 'en-US.js',
-      name: 'English',
-      domain: 'https://nuxtjs.org'
-    },
-    {
-      code: 'fr',
-      iso: 'fr-FR',
-      file: 'fr-FR.js',
-      name: 'Français',
-      domain: 'https://fr.nuxtjs.org'
-    },
-    {
-      code: 'zh',
-      iso: 'zh-ZH',
-      file: 'zh-ZH.js',
-      name: '简体中文',
-      domain: 'https://zh.nuxtjs.org'
-    },
+    locales: [
+      {
+        code: 'en',
+        iso: 'en-US',
+        file: 'en-US.js',
+        name: 'English',
+        domain: 'https://nuxtjs.org'
+      },
+      {
+        code: 'fr',
+        iso: 'fr-FR',
+        file: 'fr-FR.js',
+        name: 'Français',
+        domain: 'https://fr.nuxtjs.org'
+      },
+      {
+        code: 'zh',
+        iso: 'zh-ZH',
+        file: 'zh-ZH.js',
+        name: '简体中文',
+        domain: 'https://zh.nuxtjs.org'
+      },
 
-    {
-      code: 'ja',
-      iso: 'ja-JA',
-      file: 'ja-JA.js',
-      name: '日本語',
-      domain: 'https://jp.nuxtjs.org'
-    },
-    {
-      code: 'ko',
-      iso: 'ko-KO',
-      file: 'ko-KO.js',
-      name: '한국어',
-      domain: 'https://ko.nuxtjs.org'
-    },
-    {
-      code: 'ru',
-      iso: 'ru-RU',
-      file: 'ru-RU.js',
-      name: 'Русский',
-      domain: 'https://ru.nuxtjs.org'
-    },
-    {
-      code: 'id',
-      iso: 'id-ID',
-      file: 'id-ID.js',
-      name: 'Indonesian',
-      domain: 'https://id.nuxtjs.org'
-    }
+      {
+        code: 'ja',
+        iso: 'ja-JA',
+        file: 'ja-JA.js',
+        name: '日本語',
+        domain: 'https://jp.nuxtjs.org'
+      },
+      {
+        code: 'ko',
+        iso: 'ko-KO',
+        file: 'ko-KO.js',
+        name: '한국어',
+        domain: 'https://ko.nuxtjs.org'
+      },
+      {
+        code: 'ru',
+        iso: 'ru-RU',
+        file: 'ru-RU.js',
+        name: 'Русский',
+        domain: 'https://ru.nuxtjs.org'
+      },
+      {
+        code: 'id',
+        iso: 'id-ID',
+        file: 'id-ID.js',
+        name: 'Indonesian',
+        domain: 'https://id.nuxtjs.org'
+      }
     ],
     vueI18n: {
       fallbackLocale: 'en'

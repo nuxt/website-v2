@@ -9,9 +9,15 @@
         class="pt-8 lg:overflow-y-auto lg:block lg:pl-0 lg:pr-8 sticky?lg:h-(screen-24)"
         :class="{ hidden: !showNav }"
       >
-        <p class="uppercase font-bold pb-6">
-          {{ $t('common.version') }}
-          <span class="text-nuxt-lightgreen">2.13.X</span>
+        <p class="uppercase font-bold mb-6 text-xs">
+          <NuxtLink
+            to="/guide/release-notes"
+            active-class=""
+            exact-active-class=""
+          >
+            {{ $t('common.version') }}
+            <span class="text-nuxt-lightgreen">{{ $config.nuxtVersion }}</span>
+          </NuxtLink>
         </p>
         <div v-for="(sublinks, group) in sortedLinks" :key="`links-${group}`">
           <component

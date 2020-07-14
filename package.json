@@ -5,7 +5,7 @@
   "main": "index.js",
   "dependencies": {
     "@nuxt/content": "nuxt/content#dev",
-    "@nuxt/http": "^0.5.8",
+    "@nuxt/http": "^0.5.9",
     "@nuxt/static": "^1.0.0",
     "@nuxtjs/tailwindcss": "2.0.0",
     "@snackbar/core": "^1.7.0",

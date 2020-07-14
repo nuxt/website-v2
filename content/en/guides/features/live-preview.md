@@ -47,8 +47,8 @@ npx nuxt generate
 npx nuxt start
 ```
 
-  </code-block>
-  <code-block label="Yarn" >
+</code-block>
+<code-block label="Yarn" >
 
 ```bash
 yarn generate
@@ -66,7 +66,7 @@ the page you want to see once:
 ```
 
 <base-alert>
-enablePreview should be tested locally with yarn serve and not yarn
+enablePreview should be tested locally with yarn start and not yarn
 dev
 </base-alert>
 
@@ -74,9 +74,9 @@ For pages that are not yet generated, SPA fallback will still call the API
 before showing the 404 page as these pages exist on the API but are not
 re-generated yet
 
-For pages that are not generated and don't exist on the API (usually draft
-content in CMS that is not publicly available) you will need to use the validate
-hook:
+For pages that are not generated and don't exist on the API, for example draft
+content in your CMS that is not publicly available, you will need to use the
+validate hook:
 
 ```js
 async validate({ app, params, $preview }) {

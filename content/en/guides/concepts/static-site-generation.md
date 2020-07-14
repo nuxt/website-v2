@@ -38,7 +38,7 @@ With static site generation you can render your application during the build pha
 
 ### Generating your site
 
-When deploying your site in static mode all your `.vue` pages will be generated into HTML and JavaScript files. All calls to APIs will be made and cached in a folder called static inside your generated content so that no calls to your API need to be made on client side navigation.
+When deploying your site in with [target:static](http://localhost:3000/guides/features/deployment-targets#static-hosting) all your `.vue` pages will be generated into HTML and JavaScript files. All calls to APIs will be made and cached in a folder called static inside your generated content so that no calls to your API need to be made on client side navigation.
 
 ### Step 1: Browser to CDN
 
@@ -50,17 +50,21 @@ The CDN will send the already generated HTML, JavaScript and static assets and s
 
 ### Step 3: Browser to Browser
 
-Navigating between pages with `<NuxtLink>` is done on the client side so you don't hit the CDN again and all API calls will be loaded from the already cached static folder even if you hard refresh the browser.
+Navigating between pages with [`<NuxtLink>`](/guides/features/nuxt-components#the-nuxtlink-component) is done on the client side so you don't hit the CDN again and all API calls will be loaded from the already cached static folder even if you hard refresh the browser.
 
 ### SPA Fallback
 
 Pages that have been excluded from generation, by using the `generate.exclude` property will fallback to being a single page application. These pages will therefore not exist in the CDN and will be rendered on client side in the browser once the user navigates to that page. 
 
+➡️ To learn more about the [generate property](/guides/configuration-glossary/configuration-generate#exclude)
+
 ### Updating your content
 
 In order to get new content to your site from your API you will need to regenerate your site again. With most static sites hosting providers you can do this by pushing your changes to your master branch via the git command or via a pull request.
 
-# Quiz
+### Preview Mode
+
+The Preview mode will call your API or your CMS so you can see the changes live before deploying. See the [preview mode](/guides/features/live-preview) on how to enable this feature.
 
 <quiz :questions="questions"></quiz>
 

@@ -30,6 +30,6 @@ export default {
 }
 ```
 
-➡️The mode property
+➡️ [The mode property](/guides/configuration-glossary/configuration-mode)
 
 

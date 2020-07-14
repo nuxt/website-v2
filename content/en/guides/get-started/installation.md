@@ -8,7 +8,7 @@ csb_link: https://codesandbox.io/embed/github/nuxt-academy/guides-examples/tree/
 
 ## Prerequisites
 
-There is not much you need in order to get started with Nuxt.js. Below you will find a few recommendations and then we will walk you through the 4 steps so you can have your first Nuxt.js project up and and running in no time.
+There is not much you need in order to get started with Nuxt.js. Below you will find a few recommendations. Then we will walk you through the 4 steps so you can have your first Nuxt.js project up and and running in no time.
 
 <base-alert type="info">
 

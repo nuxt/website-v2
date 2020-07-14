@@ -23,7 +23,7 @@
                 name: 'guides-book-slug',
                 params: { book: group, slug: sublinks[0].slug }
               }"
-              class="uppercase text-gray-500 pb-2"
+              class="uppercase text-gray-600 pb-2"
               :class="{
                 'hover:text-nuxt-lightgreen mb-4 block':
                   $route.params.book !== group,

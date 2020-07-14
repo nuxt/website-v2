@@ -147,7 +147,7 @@ description: Learning how to use @nuxt/content to create a blog
 ```
 
 ➡️ See the [content module docs](https://content.nuxtjs.org/writing#markdown)
-for more details]
+for more details
 
 ### Vue components in Markdown
 
@@ -170,8 +170,7 @@ need to use your components as kebab case and cannot use self-closing tags.
 </info-box>
 ```
 
-➡️ See the content module
-docs](https://content.nuxtjs.org/writing#vue-components) for more details
+➡️ See the [content module docs](https://content.nuxtjs.org/writing#vue-components) for more details
 
 ### Fully Searchable API
 

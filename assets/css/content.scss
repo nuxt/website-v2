@@ -3,10 +3,10 @@
   h2,
   h3,
   p {
-    color: theme("colors.light.onSurfacePrimary");
+    color: theme('colors.light.onSurfacePrimary');
   }
   blockquote {
-    color: theme("colors.light.onSurfaceSecondary");
+    color: theme('colors.light.onSurfaceSecondary');
   }
   & a {
     @apply text-nuxt-lightgreen;
@@ -25,16 +25,16 @@
     @apply bg-gray-100 text-red-500;
   }
   & pre {
-    background-color: theme("colors.dark.elevatedSurface");
+    background-color: theme('colors.dark.elevatedSurface');
     code {
-      color: theme("colors.dark.onSurfacePrimary");
+      color: theme('colors.dark.onSurfacePrimary');
     }
   }
   // code snippet block
   & pre {
     code {
       @apply bg-transparent;
-      color: theme("colors.dark.onSurfacePrimary");
+      color: theme('colors.dark.onSurfacePrimary');
     }
   }
   & .Alert {
@@ -57,13 +57,13 @@
   }
   .Promote {
     // @apply shadow-md;
-    background-color: theme("colors.gray.200");
+    background-color: theme('colors.gray.200');
     .Promote__Content {
       .Promote__Content__Title {
-        color: theme("colors.light.onSurfacePrimary");
+        color: theme('colors.light.onSurfacePrimary');
       }
       .Promote__Content__Description {
-        color: theme("colors.light.onSurfaceSecondary");
+        color: theme('colors.light.onSurfaceSecondary');
       }
       .Promote__Content__Signature {
         @apply text-gray-500;
@@ -71,7 +71,7 @@
     }
     &:hover {
       // @apply shadow-lg;
-      background-color: theme("colors.gray.300");
+      background-color: theme('colors.gray.300');
       text-decoration: none;
     }
   }
@@ -80,10 +80,10 @@
   h2,
   h3,
   p {
-    color: theme("colors.dark.onSurfacePrimary");
+    color: theme('colors.dark.onSurfacePrimary');
   }
   & blockquote {
-    color: theme("colors.dark.onSurfaceSecondary");
+    color: theme('colors.dark.onSurfaceSecondary');
   }
   & a {
     @apply text-nuxt-lightgreen;
@@ -107,7 +107,7 @@
     background-color: #1e344c;
     code {
       @apply bg-transparent;
-      color: theme("colors.dark.onSurfacePrimary");
+      color: theme('colors.dark.onSurfacePrimary');
     }
   }
   & .Alert {
@@ -132,13 +132,13 @@
   }
   .Promote {
     @apply shadow-md;
-    background: theme("colors.dark.surface");
+    background: theme('colors.dark.surface');
     .Promote__Content {
       .Promote__Content__Title {
-        color: theme("colors.dark.onSurfacePrimary");
+        color: theme('colors.dark.onSurfacePrimary');
       }
       .Promote__Content__Description {
-        color: theme("colors.dark.onSurfaceSecondary");
+        color: theme('colors.dark.onSurfaceSecondary');
       }
       .Promote__Content__Signature {
         @apply text-gray-500;
@@ -164,10 +164,11 @@
   & h4,
   & h5,
   & h6 {
-    & a{
+    & a {
       margin-left: -1.5rem;
     }
-    & a, .icon-link{
+    & a,
+    .icon-link {
       @apply float-left;
       position: relative;
       display: inline-block;
@@ -175,7 +176,7 @@
       height: 14px;
       margin-top: 8px;
 
-      & .icon-link{
+      & .icon-link {
         visibility: hidden;
         background-image: url('~assets/images/link.svg');
         background-size: 14px 14px;
@@ -191,7 +192,7 @@
   & h2 {
     @apply relative text-2xl table my-8;
     &::after {
-      content: " ";
+      content: ' ';
       width: 80%;
       @apply block border-2 border-nuxt-green mt-2 mb-1 rounded;
     }
@@ -205,7 +206,7 @@
   & h3 {
     @apply relative text-xl table my-8;
     &::after {
-      content: " ";
+      content: ' ';
       width: 80%;
       @apply block border-2 border-gray-600 mt-2 mb-1 rounded;
     }
@@ -307,7 +308,7 @@
 .nuxt-content-highlight {
   @apply relative;
   & > .filename {
-    @apply absolute right-0 top-0 text-gray-600 font-light z-10 mr-2 mt-1 text-sm;
+    @apply absolute right-0 top-0 text-gray-400 font-light z-10 mr-2 mt-1 text-sm;
   }
   & > pre {
     & > .copy {

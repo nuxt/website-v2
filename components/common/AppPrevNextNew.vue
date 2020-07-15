@@ -2,8 +2,13 @@
   <div class="flex justify-between items-center">
     <NuxtLink
       v-if="prev"
-      :to="localePath({ name: 'guides-book-slug', params: { book: prevBook, slug: prev.slug } })"
-      class="text-green-500 font-bold hover:underline flex items-center p-2 pl-0"
+      :to="
+        localePath({
+          name: 'guides-book-slug',
+          params: { book: prevBook, slug: prev.slug }
+        })
+      "
+      class="text-primary-base font-bold hover:underline flex items-center p-2 pl-0"
     >
       <IconArrowLeft class="w-4 h-4 mr-1" />
       {{ prev.title }}
@@ -11,8 +16,13 @@
     <span v-else>&nbsp;</span>
     <NuxtLink
       v-if="next"
-      :to="localePath({ name: 'guides-book-slug', params: { book: nextBook, slug: next.slug } })"
-      class="text-green-500 font-bold hover:underline flex items-center p-2 pr-0"
+      :to="
+        localePath({
+          name: 'guides-book-slug',
+          params: { book: nextBook, slug: next.slug }
+        })
+      "
+      class="text-primary-base font-bold hover:underline flex items-center p-2 pr-0"
     >
       {{ next.title }}
       <IconArrowRight class="w-4 h-4 ml-1" />
@@ -22,40 +32,40 @@
 </template>
 
 <script>
-export default {
-  props: {
-    prev: {
-      type: Object,
-      default: () => null
-    },
-    next: {
-      type: Object,
-      default: () => null
-    },
-    section: {
-      type: String,
-      default: ''
-    }
-  },
-  computed: {
-    prevBook () {
-      if (!this.prev) {
-        return
+  export default {
+    props: {
+      prev: {
+        type: Object,
+        default: () => null
+      },
+      next: {
+        type: Object,
+        default: () => null
+      },
+      section: {
+        type: String,
+        default: ''
       }
-
-      const dirs = this.prev.dir.split('/').slice(-1)
-
-      return dirs[dirs.length - 1]
     },
-    nextBook () {
-      if (!this.next) {
-        return
+    computed: {
+      prevBook() {
+        if (!this.prev) {
+          return
+        }
+
+        const dirs = this.prev.dir.split('/').slice(-1)
+
+        return dirs[dirs.length - 1]
+      },
+      nextBook() {
+        if (!this.next) {
+          return
+        }
+
+        const dirs = this.next.dir.split('/')
+
+        return dirs[dirs.length - 1]
       }
-
-      const dirs = this.next.dir.split('/')
-
-      return dirs[dirs.length - 1]
     }
   }
-}
 </script>

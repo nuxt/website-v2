@@ -93,9 +93,6 @@
         return links
       }
     },
-    mounted () {
-      console.log(this.$route);
-    },
     methods: {
       toLink(group, link) {
         return this.localePath({

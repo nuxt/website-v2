@@ -1,5 +1,5 @@
 ---
-title: "The dev Property"
+title: 'The dev Property'
 description: Define the development or production mode.
 menu: dev
 category: configuration-glossary
@@ -14,14 +14,13 @@ position: 6
 This property is overwritten by [nuxt commands](/guide/commands):
 
 - `dev` is forced to `true` with `nuxt`
-- `dev` is forced to `false` with `nuxt build`, `nuxt start`, `nuxt export` and `nuxt generate`
+- `dev` is forced to `false` with `nuxt build`, `nuxt start` and `nuxt generate`
 
 This property should be used when using [Nuxt.js programmatically](/api/nuxt):
 
-
 ```js{}[nuxt.config.js]
 export default {
-  dev: (process.env.NODE_ENV !== 'production')
+  dev: process.env.NODE_ENV !== 'production'
 }
 ```
 

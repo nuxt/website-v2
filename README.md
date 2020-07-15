@@ -13,19 +13,37 @@ cd nuxtjs.org/
 yarn
 ```
 
+## Content and Translations
+
 The markdown files are stored in the content folder.
+
+- The new docs are in the folder called `guides`.
+- The i18n folder contains the locale file for each language
+- The navigation is created from the markdown files using the `menu` if it exits
+  and if not the `title` which are found in the yaml of each file (You can add a
+  `menu` key if you need one if there isn't one already there).
+
+### When working on a new language you will need to:
+
+- create the 18n locale file in the i18n folder by copying the en version and
+  modifying it to the new language.
+- add your language to the nuxt.config file in the i18n property by copying the
+  en version and modifying it to the new language
+- in the content directory copy the en folder and rename it to your language's
+  locale.
+- You can then start translating your files.
 
 ## Development
 
-Start a dev server on `http://nuxt:3000`
+Start the dev server on [http://localhost:3000](http://localhost:3000)
 
 ```bash
 yarn dev
 ```
 
-To change the locale, create a .env file with the locale you want to use. An
+To change the locale, create a `.env` file with the locale you want to use. An
 example .env file has been provided which you can copy it's contents to your
-.env file and change the language to the one you want to see the site in.
+`.env` file and change the language to the one you want to see the site in.
 
 ```bash
 nuxtLocale=fr
@@ -38,7 +56,24 @@ or add the local in the command line.
 nuxtLocale=fr yarn dev
 ```
 
+<base-alert type="info">
+
+As we are using the content module you can double click on the page in the
+browser and modify your text directly there which will save your changes just
+like when you edit in your browser.
+
+</base-alert>
+
 ## Production
+
+<base-alert>
+
+If working with a language other than English you will not be able to see the
+language when running the generate command as for production builds we will only
+show the English version of the new guides until the guides are almost fully
+translated. You can still see your translated pages when using the dev command.
+
+</base-alert>
 
 ```bash
 yarn generate

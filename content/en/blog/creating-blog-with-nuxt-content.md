@@ -713,7 +713,7 @@ us on our blog post page.
 ```
 
 We can now get our prev and next articles by adding them to our `asyncData`. We
-create an array of const with with the name `prev` and `next` and we await the
+create an array of const with the name `prev` and `next` and we await the
 content from the articles folder. This time we only need the title and the slug
 so we can chain `only()` to our await and pass in title and slug.
 

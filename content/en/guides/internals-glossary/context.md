@@ -61,15 +61,14 @@ using `i18n`, you can get access to `$i18n` through `context.app.i18n`.
 ### store
 
 `store`
-([_Vuex Store_](https://vuex.vuejs.org/en/api.html#vuexstore-instance-properties))
+([_Vuex Store_](https://vuex.vuejs.org/api/#vuex-store-instance-properties))
 
 Vuex Store instance. **Available only if the [vuex store](/guide/vuex-store) is
 set**.
 
 ### route
 
-`route`
-([_Vue Router Route_](https://router.vuejs.org/en/api/route-object.html))
+`route` ([_Vue Router Route_](https://router.vuejs.org/api/#the-route-object))
 
 Vue Router route instance.
 
@@ -156,7 +155,7 @@ These keys are available only on client-side.
 
 ### from
 
-`from` ([_Vue Router Route_](https://router.vuejs.org/en/api/route-object.html))
+`from` ([_Vue Router Route_](https://router.vuejs.org/api/#the-route-object))
 
 The route navigated from.
 

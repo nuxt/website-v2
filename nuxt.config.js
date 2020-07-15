@@ -85,7 +85,7 @@ export default {
     NUXT_API: process.env.NUXT_API || 'https://api.nuxtjs.com'
   },
   publicRuntimeConfig: {
-    nuxtLocale: process.env.nuxtLocale || 'en',
+    nuxtLocale: process.env.NUXT_LOCALE || 'en',
     nuxtVersion: '2.13.3'
   },
   loading: { color: '#41B883' },

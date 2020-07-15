@@ -71,6 +71,7 @@
           {{ $t('contribute.edit_on_github') }}
         </a>
       </p>
+
       <CarbonAdsText :key="$route.path" />
     </div>
   </div>

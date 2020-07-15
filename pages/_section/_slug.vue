@@ -48,7 +48,9 @@
         </h1>
         <AppResponsiveVideo v-if="page.youtube" :src="page.youtube" />
         <nuxt-content :document="page" />
-        <AppContribute :doc-link="docLink" :contributors="contributors" />
+        <template v-if="!$route.path.startsWith('/guide/release-notes')">
+          <AppContribute :doc-link="docLink" :contributors="contributors" />
+        </template>
       </article>
     </div>
     <AffixBlock>

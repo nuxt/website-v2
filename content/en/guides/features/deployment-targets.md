@@ -5,7 +5,7 @@ position: 2
 category: features
 ---
 
-## static hosting:
+## Static Hosting
 For static hosting (hosting where no server is needed) the target of static needs to be added to your nuxt.config file.
 
 ```js{}[nuxt.config.js]
@@ -24,7 +24,7 @@ Running nuxt dev with the static target will improve the developer experience:
 We are also exposing process.target for module authors to add logic depending on the user target.
 </base-alert>
 
-## server hosting:
+## Server Hosting
 
 For server hosting the target of server is used which is the default value. 
 

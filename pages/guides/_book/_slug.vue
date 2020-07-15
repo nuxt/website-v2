@@ -9,7 +9,6 @@
       <AppToc v-if="page.toc && page.toc.length" :toc="page.toc" class="mb-8 hidden lg:block" />
 
       <article>
-
         <h1
           class="text-light-onSurfacePrimary dark:text-dark-onSurfacePrimary transition-colors duration-300 ease-linear"
         >{{ page.title }}</h1>
@@ -20,7 +19,6 @@
       </article>
     </div>
     <AffixBlock>
-
       <SponsorsBlock />
       <AdsBlock :key="$route.params.slug" />
     </AffixBlock>
@@ -60,7 +58,7 @@ export default {
     } catch (e) { }
 
     try {
-      [prev, next] = await $content(path)
+      [prev, next] = await $content(`/${app.i18n.defaultLocale}/guides/${params.book}`)
         .only(['title', 'slug', 'dir'])
         .sortBy('position')
         .sortBy('title')
@@ -135,7 +133,7 @@ export default {
 article h1 {
   @apply font-medium relative text-3xl table mb-8;
   &::after {
-    content: " ";
+    content: ' ';
     width: 80%;
     @apply block border-2 border-nuxt-lightgreen mt-2 mb-1 rounded;
   }

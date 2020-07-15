@@ -27,16 +27,21 @@
               name: 'guides-book-slug',
               params: { book: group, slug: sublinks[0].slug }
             }"
-            class="uppercase font-medium text-light-onSurfaceSecondary dark:text-dark-onSurfaceSecondary pb-2 transition-colors duration-300 ease-linear"
+            class="flex items-center uppercase font-medium text-light-onSurfaceSecondary dark:text-dark-onSurfaceSecondary pb-2 transition-colors duration-300 ease-linear"
             :class="{
               'hover:text-nuxt-lightgreen mb-4 block':
                 $route.params.book !== group,
               'font-bold': $route.params.book === group
             }"
           >
-            {{ $t(`content.guides.${group}`) }}
+            <ChevronDownIcon
+              v-if="$route.params.book === group"
+              class="w-4 h-4 mr-2"
+            />
+            <ChevronRightIcon v-else class="w-4 h-4 mr-2" />
+            <span>{{ $t(`content.guides.${group}`) }}</span>
           </component>
-          <ul v-if="$route.params.book === group" class="pb-8">
+          <ul v-if="$route.params.book === group" class="pb-8 pl-6">
             <li
               v-for="(link, index) in sublinks"
               :key="index"
@@ -60,8 +65,14 @@
 
 <script>
   import sortBy from 'lodash.sortby'
+  import ChevronDownIcon from '~/assets/icons/chevron-down.svg?inline'
+  import ChevronRightIcon from '~/assets/icons/chevron-right.svg?inline'
 
   export default {
+    components: {
+      ChevronDownIcon,
+      ChevronRightIcon
+    },
     props: {
       links: {
         type: Object,
@@ -81,6 +92,9 @@
         })
         return links
       }
+    },
+    mounted () {
+      console.log(this.$route);
     },
     methods: {
       toLink(group, link) {

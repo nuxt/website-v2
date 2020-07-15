@@ -23,14 +23,19 @@
                 name: 'guides-book-slug',
                 params: { book: group, slug: sublinks[0].slug }
               }"
-              class="uppercase text-gray-600 pb-2"
+              class="flex items-center uppercase text-gray-600 pb-2"
               :class="{
                 'hover:text-nuxt-lightgreen mb-4 block':
                   $route.params.book !== group,
                 'font-bold': $route.params.book === group
               }"
             >
-              {{ $t(`content.guides.${group}`) }}
+              <ChevronDownIcon
+                v-if="$route.params.book === group"
+                class="w-4 h-4 mr-2"
+              />
+              <ChevronRightIcon v-else class="w-4 h-4 mr-2" />
+              <span>{{ $t(`content.guides.${group}`) }}</span>
             </component>
             <ul
               v-if="$route.params.book === group"
@@ -82,11 +87,15 @@
 
   import ListIcon from '~/assets/images/list.svg?inline'
   import TimesIcon from '~/assets/icons/times.svg?inline'
+  import ChevronDownIcon from '~/assets/icons/chevron-down.svg?inline'
+  import ChevronRightIcon from '~/assets/icons/chevron-right.svg?inline'
 
   export default {
     components: {
       ListIcon,
-      TimesIcon
+      TimesIcon,
+      ChevronDownIcon,
+      ChevronRightIcon
     },
     props: {
       links: {

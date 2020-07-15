@@ -8,6 +8,8 @@ category: get-started
 
 > Upgrading Nuxt.js is quick, but more involved than updating your package.json
 
+If you are upgrading to Nuxt v2.14 you will need to add [target:static](http://localhost:3000/guides/features/deployment-targets#static-hosting) to your package.json file in order for the generate command to work. 
+
 ## Getting Started
 
 1. Check the [release notes](/guide/release-notes) for the version you wish to

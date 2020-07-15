@@ -40,7 +40,7 @@
             >
               {{ link.name }}
               <span
-                class="bg-green-200 text-ss align-top px-1 rounded-sm lowercase"
+                class="bg-green-200 dark:text-black text-ss align-top px-1 rounded-sm lowercase"
               >
                 beta
               </span>

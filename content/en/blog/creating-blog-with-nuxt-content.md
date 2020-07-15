@@ -63,11 +63,22 @@ blog with it.
 To get started with content module we will first need to install the module
 using npm or yarn.
 
+<code-group>
+  <code-block label="Yarn" active>
+
 ```bash
-npm install @nuxt/content
-// or
 yarn add @nuxt/content
 ```
+
+  </code-block>
+  <code-block label="NPM">
+
+```bash
+npm install @nuxt/content
+```
+
+  </code-block>
+</code-group>
 
 Then we can add it to our modules property inside our nuxt.config file.
 

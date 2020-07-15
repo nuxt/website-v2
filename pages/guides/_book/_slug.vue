@@ -43,7 +43,7 @@ export default {
       return error({ statusCode: 404, message: app.i18n.t('common.api_page_not_found') })
     }
 
-    if (app.i18n.defaultLocale !== app.i18n.locale) {
+    if (process.env.NODE_ENV !== 'production' && app.i18n.defaultLocale !== app.i18n.locale) {
       try {
         path = `/${app.i18n.locale}/guides/${params.book}`
         page = await $content(path, params.slug).fetch()

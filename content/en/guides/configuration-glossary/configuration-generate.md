@@ -190,15 +190,15 @@ calls from the web application.
 
 - Type: `Array`
 
-<div class="Alert Alert-blue">
+<base-alert type="info">
 
 As of Nuxt v2.13 there is a crawler installed that will now crawl your link tags
 and generate your routes when using the command `nuxt generate` based on those
 links.
 
-</div>
+</base-alert>
 
-<div class="Alert Alert--orange">
+<base-alert>
 
 **Warning:** If you using Nuxt >= v2.13 and have pages that have no links such
 as secret pages and you would like these to also be generated then you can use
@@ -207,7 +207,7 @@ the `generate.routes` property.
 **Warning:** dynamic routes are ignored by the `generate` command when using
 Nuxt <= v2.12
 
-</div>
+</base-alert>
 
 Example:
 

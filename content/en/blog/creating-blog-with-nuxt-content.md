@@ -79,12 +79,12 @@ export default {
 }
 ```
 
-<div class="Alert">
+<base-alert>
 
 If you have created a new project with `create nuxt-app` you can choose to add
 the content module and therefore it will be installed for you.
 
-</div>
+</base-alert>
 
 ### Let's create our markdown page
 
@@ -94,12 +94,12 @@ The content module works by reading the files in our `content/` directory.
 mkdir content
 ```
 
-<div class="Alert">
+<base-alert>
 
 If you have created your project with `create nuxt-app`, the `content/`
 directory will be already created.
 
-</div>
+</base-alert>
 
 Let's create an `articles/` directory where we can add the articles for our
 blog.
@@ -123,13 +123,13 @@ We can now add a title and text for our blog post:
 Welcome to my first blog post using content module
 ```
 
-<div class="Alert">
+<base-alert>
 
 In markdown we create a `<h1>` title by using `#`. Make sure you leave a space
 between it and your blog title. For more info on writing in markdown see the
 [basic syntax guide](https://www.markdownguide.org/basic-syntax).
 
-</div>
+</base-alert>
 
 ### Displaying your content
 
@@ -563,13 +563,13 @@ bio of the author.
 </template>
 ```
 
-<div class="Alert">
+<base-alert>
 
 Styles have been removed from these examples, feel free to add the styles
 yourself or copy the styles from the
 [demo code](https://github.com/nuxt-company/demo-blog-nuxt-content).
 
-</div>
+</base-alert>
 
 Then in our script tag we can add our props of author which is an object and set
 required to true.
@@ -815,12 +815,12 @@ of prev and next.
 </template>
 ```
 
-<div class="Alert">
+<base-alert>
 
 As we have set `components: true` in our nuxt.config file we do not need to
 import this component in order to be able to use it.
 
-</div>
+</base-alert>
 
 ### Working with the API
 
@@ -833,20 +833,20 @@ therefore we need to use this url
 [http://localhost:3000/\_content/articles](http://localhost:3000/_content/articles)
 to see our list of articles.
 
-<div class="Alert">
+<base-alert>
 
 We can see individual articles by adding the name of the slug
 [http://localhost:3000/\_content/articles/my-first-blog-post](http://localhost:3000/_content/articles/my-first-blog-post)
 
-</div>
+</base-alert>
 
-<div class="Alert">
+<base-alert>
 
 You can use a chrome extension such as
 [JSON Viewer Awesome](https://chrome.google.com/webstore/detail/json-viewer-awesome/iemadiahhbebdklepanmkjenfdebfpfe?hl=en)
 so you can better see your results.
 
-</div>
+</base-alert>
 
 We can now query our results directly in the url and see our results as a JSON
 which we can then use to create our blog index page that will have a list of all
@@ -868,14 +868,14 @@ We can now create our blog index page to list out our blog posts. As we already
 have an index page created we just need to delete all the demo code inside this
 page.
 
-<div class="Alert">
+<base-alert>
 
 In the [demo code](https://github.com/nuxt-company/demo-blog-nuxt-content) I
 used the main index page instead of creating an index file inside the blog
 folder because for this example I have no other pages but normally you might
 have a home page, contact page and then the blog page etc.
 
-</div>
+</base-alert>
 
 Passing in `$content` and `params` to the context in our `asyncData` function we
 then use a const of articles to await our returned content by passing into
@@ -996,12 +996,12 @@ don't wan't to return which is the body of the post.
 </script>
 ```
 
-<div class="Alert">
+<base-alert>
 
 You can use an array and pass in more than just 'body' to the `without()`
 method:
 
-</div>
+</base-alert>
 
 ```js
 without(['body', 'title'])
@@ -1034,13 +1034,13 @@ and bio as well as each post.
 </template>
 ```
 
-<div class="Alert">
+<base-alert>
 
 Please note all styles have been removed from this example. You can either style
 the page yourself or copy the styles from the
 [demo code](https://github.com/nuxt-company/demo-blog-nuxt-content).
 
-</div>
+</base-alert>
 
 To format our date we can add the method we created earlier:
 
@@ -1152,14 +1152,14 @@ page.
 <AppSearchInput />
 ```
 
-<div class="Alert">
+<base-alert>
 
 See the [demo code](https://github.com/nuxt-company/demo-blog-nuxt-content) for
 improved styling of this page as well as the header component that was added
 which includes the search component and is therefore displayed on the author and
 index page.
 
-</div>
+</base-alert>
 
 ## Live editing our content
 

@@ -42,6 +42,7 @@
           <AppButton
             href="https://template.nuxtjs.org"
             class="py-3 px-6 text-base"
+            data-cy="why"
           >
             <svg
               slot="icon"

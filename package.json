@@ -67,7 +67,6 @@
     "build:check": "nuxt build --analyze",
     "start": "nuxt start",
     "generate": "nuxt-static && npm run test:e2e:run",
-    "generate-github-actions": "nuxt-static",
     "serve": "nuxt serve",
     "lintold": "eslint --ext .js,.vue --ignore-path .gitignore --ignore-pattern modules/ --ignore-pattern plugins/ga.js .",
     "cy:open": "cypress open",

@@ -47,6 +47,7 @@
     "cypress": "^4.10.0",
     "eslint": "^7.4.0",
     "eslint-config-prettier": "^6.11.0",
+    "eslint-plugin-cypress": "^2.11.1",
     "globby": "^11.0.1",
     "node-sass": "^4.14.1",
     "nodemon": "^2.0.4",
@@ -61,7 +62,7 @@
     "start": "nuxt start",
     "generate": "nuxt-static",
     "serve": "nuxt serve",
-    "lint": "eslint --ext .js,.vue --ignore-path .gitignore --ignore-pattern modules/ --ignore-pattern plugins/ga.js --ignore-pattern cypress/ .",
+    "lint": "eslint --ext .js,.vue --ignore-path .gitignore --ignore-pattern modules/ --ignore-pattern plugins/ga.js .",
     "precommit": "npm run lint",
     "cypress:open": "cypress open"
   },

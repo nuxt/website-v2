@@ -15,7 +15,7 @@ questions:
     answers:
       - true
       - false
-    correctAnswer: 
+    correctAnswer:
   - question: You can create routes with .js files and .ts files
     answers:
       - true
@@ -42,12 +42,12 @@ questions:
   - question: How do you set the scrollToTop property if you want to tell Nuxt.js to scroll to the top when rendering your child route?
     answers:
       - "scrollToTop: 'scroll'"
-      - "scrollToTop: true"
+      - 'scrollToTop: true'
       - "scroll: 'top'"
-    correctAnswer: "scrollToTop: true"
+    correctAnswer: 'scrollToTop: true'
   - question: How do you add the middleware/auth.js to your page?
     answers:
-      - "middleware: true"
+      - 'middleware: true'
       - "middleware: 'auth'"
       - "import auth from 'middleware/auth.js'"
     correctAnswer: "middleware: 'auth'"
@@ -64,7 +64,7 @@ questions:
     correctAnswer: true
 ---
 
-The `pages` directory contains your Application Views and Routes. Nuxt.js reads all the `.vue` files inside this directory and automatically creates the  router configuration for you.
+The `pages` directory contains your Application Views and Routes. Nuxt.js reads all the `.vue` files inside this directory and automatically creates the router configuration for you.
 
 <base-alert>
 
@@ -77,7 +77,6 @@ This directory cannot be renamed without extra configuration.
 You can also create routes with .js files and .ts files
 
 </base-alert>
-
 
 Every Page component is a Vue component but Nuxt.js adds special attributes and functions to make the development of your universal application as easy as possible.
 
@@ -105,41 +104,40 @@ Dynamic pages can be created when you don't know the name of the page due to it 
 
 If you've defined a file named `_slug.vue` in your pages folder, you can access the value using the context with params.slug
 
-
 ```html{}[pages/_slug.vue]
 <template>
   <h1>{{ this.slug }}</h1>
 </template>
 <script>
-export default {
-  async asyncData ({ params }) {
-    const slug = params.slug // When calling /abc the slug will be "abc"
-    return { slug }
+  export default {
+    async asyncData({ params }) {
+      const slug = params.slug // When calling /abc the slug will be "abc"
+      return { slug }
+    }
   }
-}
 </script>
 ```
 
-If you've defined a file named _slug.vue inside a folder called _book.vue you can access the value using the context with params.slug and params.book
+If you've defined a file named \_slug.vue inside a folder called \_book.vue you can access the value using the context with params.slug and params.book
 
 ```html{}[pages/_book/_slug.vue]
 <template>
   <h1>{{ this.book }} / {{ this.slug }}</h1>
 </template>
 <script>
-export default {
-  async asyncData ({ params }) {
-    const book = params.book
-    const slug = params.slug
-    return { book, slug }
+  export default {
+    async asyncData({ params }) {
+      const book = params.book
+      const slug = params.slug
+      return { book, slug }
+    }
   }
-}
 </script>
 ```
 
 ## Ignoring pages
 
-If you want to ignore pages so that they are not included in the generated router.js file then you can ignore them by prefixing them with a `-`. This is great for debugging when for example you are not sure if a certain file is causing you a problem or not and saves you from having to delete the file or comment out all its contents. Remember when finished debugging to remove the `-`or else it will be ignored forever and therefore not exist in your build. 
+If you want to ignore pages so that they are not included in the generated router.js file then you can ignore them by prefixing them with a `-`. This is great for debugging when for example you are not sure if a certain file is causing you a problem or not and saves you from having to delete the file or comment out all its contents. Remember when finished debugging to remove the `-`or else it will be ignored forever and therefore not exist in your build.
 
 For example: `pages/-about.vue`
 
@@ -148,7 +146,6 @@ For example: `pages/-about.vue`
 ### asyncData
 
 AsyncData is called every time before loading the component. It can be asynchronous and receives the context as an argument. The returned object will be merged with your data object.
-
 
 ```js{}[pages/index.vue]
 <script>
@@ -185,7 +182,7 @@ export default {
 
 ### head
 
-Set specific <meta> tags for the current page. Nuxt.js uses `vue-meta` to update the document head and meta attributes of your application. 
+Set specific <meta> tags for the current page. Nuxt.js uses `vue-meta` to update the document head and meta attributes of your application.
 
 ```js{}[pages/index.vue]
 <script>
@@ -215,7 +212,7 @@ export default {
 
 ### loading
 
-If set to false, prevents a page from automatically calling `this.$nuxt.$loading.finish()` as you enter it and `this.$nuxt.$loading.start()` as you leave it, allowing you to manually control the behavior, as [this example](https://nuxtjs.org/examples/custom-page-loading) shows. 
+If set to false, prevents a page from automatically calling `this.$nuxt.$loading.finish()` as you enter it and `this.$nuxt.$loading.start()` as you leave it, allowing you to manually control the behavior, as [this example](https://nuxtjs.org/examples/custom-page-loading) shows.
 
 ```js{}[pages/index.vue]
 <script>
@@ -263,7 +260,6 @@ Conversely, you can manually set `scrollToTop` to `false` on parent routes a
 
 If you want to overwrite the default scroll behavior of Nuxt.js, take a look at the [scrollBehavior option](https://nuxtjs.org/api/configuration-router#scrollbehavior).
 
-
 ### middleware
 
 Defines middleware for this page. The middleware will be called before rendering the page.
@@ -308,7 +304,7 @@ You can also use the function `watchQuery(newQuery, oldQuery)` to have more re
 
 ```js{}[pages/index.vue]
 export default {
-  watchQuery (newQuery, oldQuery) {
+  watchQuery(newQuery, oldQuery) {
     // Only execute component methods if the old query string contained `bar`
     // and the new query string contains `foo`
     return newQuery.foo && oldQuery.bar
@@ -321,6 +317,5 @@ export default {
 <app-modal>
   <code-sandbox  :src="csb_link"></code-sandbox>
 </app-modal>
-
 
 <quiz :questions="questions"></quiz>

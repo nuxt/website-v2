@@ -1,6 +1,6 @@
 ---
 title: store
-description: The `store` directory contains your Vuex Store files. The Vuex Store comes with Nuxt.js out of the box but is disabled by default. Creating an  `index.js`  file in this directory enables the store.
+description: The `store` directory contains your Vuex Store files. The Vuex Store comes with Nuxt.js out of the box but is disabled by default. Creating an `index.js`  file in this directory enables the store.
 position: 13
 category: directory-structure
 csb_link: https://codesandbox.io/embed/github/nuxt-academy/guides-examples/tree/master/04_directory_structure/14_store?fontsize=14&hidenavigation=1&theme=dark
@@ -9,7 +9,7 @@ questions:
     answers:
       - It is enabled by default
       - create a js file in the store folder
-      - "add store: true to your nuxt.config.js file"
+      - 'add store: true to your nuxt.config.js file'
     correctAnswer: create an js file in the store folder
   - question: Every .js file in the store directory is transformed to a
     answers:
@@ -21,7 +21,7 @@ questions:
     answers:
       - a function
       - an object
-      - a string 
+      - a string
     correctAnswer: a function
   - question: In the store you should export the mutations and actions as
     answers:
@@ -53,16 +53,16 @@ questions:
       - third argument
     correctAnswer: second argument
 ---
+
 The `store` directory contains your [Vuex Store](http://vuex.vuejs.org/en/) files. The Vuex Store comes with Nuxt.js out of the box but is disabled by default. Creating an  `index.js`  file in this directory enables the store.
 
-<base-alert> 
+<base-alert>
 
-*This directory cannot be renamed without extra configuration.*
+_This directory cannot be renamed without extra configuration._
 
 </base-alert>
 
 Using a store to manage the state is important for every big application. That's why Nuxt.js implements Vuex in its core.
-
 
 ## Activate the Store
 
@@ -75,7 +75,7 @@ Nuxt.js will look for the `store` directory, if it exists, it will:
 
 Every `.js` file inside the `store` directory is transformed as a [namespaced module](http://vuex.vuejs.org/en/modules.html) (`index` being the root module). Your `state` value should always be a `function` to avoid unwanted *shared* state on the server side.
 
-To get started, export the state as a function, and the mutations and actions as objects. 
+To get started, export the state as a function, and the mutations and actions as objects.
 
 ```js{}[store/index.js]
 export const state = () => ({
@@ -83,7 +83,7 @@ export const state = () => ({
 })
 
 export const mutations = {
-  increment (state) {
+  increment(state) {
     state.counter++
   }
 }
@@ -97,16 +97,16 @@ export const state = () => ({
 })
 
 export const mutations = {
-  add (state, text) {
+  add(state, text) {
     state.list.push({
       text,
       done: false
     })
   },
-  remove (state, { todo }) {
+  remove(state, { todo }) {
     state.list.splice(state.list.indexOf(todo), 1)
   },
-  toggle (todo) {
+  toggle(todo) {
     todo.done = !todo.done
   }
 }
@@ -120,7 +120,7 @@ new Vuex.Store({
     counter: 0
   }),
   mutations: {
-    increment (state) {
+    increment(state) {
       state.counter++
     }
   },
@@ -131,16 +131,16 @@ new Vuex.Store({
         list: []
       }),
       mutations: {
-        add (state, { text }) {
+        add(state, { text }) {
           state.list.push({
             text,
             done: false
           })
         },
-        remove (state, { todo }) {
+        remove(state, { todo }) {
           state.list.splice(state.list.indexOf(todo), 1)
         },
-        toggle (state, { todo }) {
+        toggle(state, { todo }) {
           todo.done = !todo.done
         }
       }
@@ -204,7 +204,7 @@ And the corresponding mutations can be in the file  `store/mutations.js`
 
 ```js{}[store/mutations.js]
 export default {
-  increment (state) {
+  increment(state) {
     state.counter++
   }
 }
@@ -217,14 +217,14 @@ You can add additional plugins to the store by putting them into the `store/ind
 ```js{}[store/index.js]
 import myPlugin from 'myPlugin'
 
-export const plugins = [ myPlugin ]
+export const plugins = [myPlugin]
 
 export const state = () => ({
   counter: 0
 })
 
 export const mutations = {
-  increment (state) {
+  increment(state) {
     state.counter++
   }
 }
@@ -248,7 +248,7 @@ actions: {
 }
 ```
 
-<base-alert> 
+<base-alert>
 
 Only the primary module (in store/index.js) will receive this action. You'll need to chain your module actions from there.
 

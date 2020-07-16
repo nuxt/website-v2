@@ -1,5 +1,5 @@
 ---
-title: "API: nuxt.renderRoute(route, context)"
+title: 'API: nuxt.renderRoute(route, context)'
 description: 제공된 문장으로 특정 route를 랜더합니다.
 menu: renderRoute
 category: programmatically
@@ -11,7 +11,7 @@ position: 203
 - 타입: `Function`
 - 인자:
   1. `String`, 경로를 랜더
-  2. *Optional*, `Object`, 제공된 문장, 가능한 키값: `req` & `res`
+  2. _Optional_, `Object`, 제공된 문장, 가능한 키값: `req` & `res`
 - 반환값: `Promise`
   - `html`: `String`
   - `error`: `null` or `Object`
@@ -28,23 +28,23 @@ position: 203
 </div>
 
 예제:
+
 ```js
 const Nuxt = require('nuxt')
 const config = require('./nuxt.config.js')
 config.dev = false
 const nuxt = new Nuxt(config)
 
-nuxt.build()
+nuxt
+  .build()
   .then(() => {
     return nuxt.renderRoute('/')
   })
   .then(({ html, error, redirected }) => {
-  // html은 항상 문자열 입니다.
-
+    // html은 항상 문자열 입니다.
     // error가 null이 아닐 때 아래와 같은 형식으로 보여집니다.
     // { statusCode: 500, message: '에러 메세지' }
-
-  // redirected는 redirect()가 date() 또는 fetch()로 사용되면 false가 아닙니다:
-  // { path: '/other-path', query: {}, status: 302 }
+    // redirected는 redirect()가 date() 또는 fetch()로 사용되면 false가 아닙니다:
+    // { path: '/other-path', query: {}, status: 302 }
   })
 ```

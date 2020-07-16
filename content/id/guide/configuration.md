@@ -1,7 +1,6 @@
 ---
 title: Konfigurasi
-description: Secara umum, Nuxt.js dikonfigurasi untuk menutupi sebagian besar kasus
-  penggunaan. Konfigurasi default ini dapat ditimpa dengan menggunakan file `nuxt.config.js`.
+description: Secara umum, Nuxt.js dikonfigurasi untuk menutupi sebagian besar kasus penggunaan. Konfigurasi default ini dapat ditimpa dengan menggunakan file `nuxt.config.js`.
 category: getting-started
 position: 103
 ---

@@ -18,8 +18,7 @@ Position: 12
 
 <base-alert>
 
-This method is made for
-[test purposes](/guide/development-tools#end-to-end-testing).
+This method is made for [test purposes](/guide/development-tools#end-to-end-testing).
 
 </base-alert>
 

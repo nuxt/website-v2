@@ -20,7 +20,7 @@ position: 42
 このファイルの木構造から次のルーティングが生成されます:
 
 ```js
-[
+;[
   {
     path: '/parent',
     component: '~/pages/parent.vue',
@@ -72,7 +72,7 @@ position: 42
 
 > Nuxt v2.4.0 で導入されました
 
-`<nuxt-child/>` は名前付きビューを描画するために `name` プロパティを受け入れます:
+`<nuxt-child/>` は名前付きビューを描画するために `name` プロパティを受け入れます :
 
 ```html
 <template>

@@ -1,7 +1,6 @@
 ---
 title: 'API: asyncData 메소드'
-description: 서버사이드 데이타를 가져와서, 랜더링을 하고싶은 경우가 있겠죠. Nuxt.js 는 컴포넌트 데이타를 세팅하기 전에 비동기 처리를
-  할 수 있도록 하기 위해서 `asyncData` 메소드를 추가해 두었습니다.
+description: 서버사이드 데이타를 가져와서, 랜더링을 하고싶은 경우가 있겠죠. Nuxt.js 는 컴포넌트 데이타를 세팅하기 전에 비동기 처리를 할 수 있도록 하기 위해서 `asyncData` 메소드를 추가해 두었습니다.
 menu: asyncData
 category: pages
 position: 21
@@ -23,10 +22,10 @@ asyncData의 결과는 데이터와 **병합**됩니다.
 
 ```js
 export default {
-  data () {
+  data() {
     return { project: 'default' }
   },
-  asyncData (context) {
+  asyncData(context) {
     return { project: 'nuxt' }
   }
 }

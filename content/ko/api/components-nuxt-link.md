@@ -1,5 +1,5 @@
 ---
-title: "API: <nuxt-link> 컴포넌트"
+title: 'API: <nuxt-link> 컴포넌트'
 description: 다른 페이지에 연결합니다.
 menu: nuxt-link
 category: components
@@ -10,7 +10,7 @@ position: 43
 
 > 해당 컴포넌트는 현재 페이지와 다른 페이지를 연결하는 데 사용됩니다.
 
-현재 `<nuxt-link>` 는 [`<router-link>`](https://router.vuejs.org/en/api/router-link.html) 와 동일합니다. 사용 방법은 [vue-router documentation](https://router.vuejs.org/en/api/router-link.html) 를 확인해보세요.
+현재 `<nuxt-link>` 는 [`<router-link>`](https://router.vuejs.org/en/api/router-link.html) 와 동일합니다. 사용 방법은 [vue-router documentation](https://router.vuejs.org/en/api/router-link.html) 를확인해보세요.
 
 예제 (`pages/index.vue`):
 

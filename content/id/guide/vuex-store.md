@@ -1,14 +1,13 @@
 ---
 title: Vuex Store (Penyimpanan).
-description: Menggunakan store untuk mengelola state adalah penting untuk setiap aplikasi
-  besar, itulah sebabnya Nuxt.js menerapkan Vuex sebagai inti.
+description: Menggunakan store untuk mengelola state adalah penting untuk setiap aplikasi besar, itulah sebabnya Nuxt.js menerapkan Vuex sebagai inti.
 category: getting-started
 position: 110
 ---
 
 > Menggunakan store untuk mengelola state adalah penting untuk setiap aplikasi besar, itulah sebabnya Nuxt.js menerapkan [Vuex](https://vuex.vuejs.org/en/) sebagai inti.
 
-## Mengaktifkan store 
+## Mengaktifkan store
 
 Nuxt.js akan mencari direktori `store`, jika ada, maka akan:
 
@@ -34,7 +33,7 @@ const createStore = () => {
       counter: 0
     },
     mutations: {
-      increment (state) {
+      increment(state) {
         state.counter++
       }
     }
@@ -50,7 +49,9 @@ Sekarang kita bisa menggunakan `this.$store` di dalam komponen kita:
 
 ```html
 <template>
-  <button @click="$store.commit('increment')">{{ $store.state.counter }}</button>
+  <button @click="$store.commit('increment')">
+    {{ $store.state.counter }}
+  </button>
 </template>
 ```
 
@@ -66,7 +67,7 @@ export const state = () => ({
 })
 
 export const mutations = {
-  increment (state) {
+  increment(state) {
     state.counter++
   }
 }
@@ -80,16 +81,16 @@ export const state = () => ({
 })
 
 export const mutations = {
-  add (state, text) {
+  add(state, text) {
     state.list.push({
       text,
       done: false
     })
   },
-  remove (state, { todo }) {
+  remove(state, { todo }) {
     state.list.splice(state.list.indexOf(todo), 1)
   },
-  toggle (state, todo) {
+  toggle(state, todo) {
     todo.done = !todo.done
   }
 }
@@ -101,7 +102,7 @@ Store akan menjadi seperti:
 new Vuex.Store({
   state: { counter: 0 },
   mutations: {
-    increment (state) {
+    increment(state) {
       state.counter++
     }
   },
@@ -111,16 +112,16 @@ new Vuex.Store({
         list: []
       },
       mutations: {
-        add (state, { text }) {
+        add(state, { text }) {
           state.list.push({
             text,
             done: false
           })
         },
-        remove (state, { todo }) {
+        remove(state, { todo }) {
           state.list.splice(state.list.indexOf(todo), 1)
         },
-        toggle (state, { todo }) {
+        toggle(state, { todo }) {
           todo.done = !todo.done
         }
       }
@@ -135,36 +136,40 @@ Dan pada file `pages/todos.vue`, dengan menggunakan modul `todos`:
 <template>
   <ul>
     <li v-for="todo in todos">
-      <input type="checkbox" :checked="todo.done" @change="toggle(todo)">
+      <input type="checkbox" :checked="todo.done" @change="toggle(todo)" />
       <span :class="{ done: todo.done }">{{ todo.text }}</span>
     </li>
-    <li><input placeholder="What needs to be done?" @keyup.enter="addTodo"></li>
+    <li>
+      <input placeholder="What needs to be done?" @keyup.enter="addTodo" />
+    </li>
   </ul>
 </template>
 
 <script>
-import { mapMutations } from 'vuex'
+  import { mapMutations } from 'vuex'
 
-export default {
-  computed: {
-    todos () { return this.$store.state.todos.list }
-  },
-  methods: {
-    addTodo (e) {
-      this.$store.commit('todos/add', e.target.value)
-      e.target.value = ''
+  export default {
+    computed: {
+      todos() {
+        return this.$store.state.todos.list
+      }
     },
-    ...mapMutations({
-      toggle: 'todos/toggle'
-    })
+    methods: {
+      addTodo(e) {
+        this.$store.commit('todos/add', e.target.value)
+        e.target.value = ''
+      },
+      ...mapMutations({
+        toggle: 'todos/toggle'
+      })
+    }
   }
-}
 </script>
 
 <style>
-.done {
-  text-decoration: line-through;
-}
+  .done {
+    text-decoration: line-through;
+  }
 </style>
 ```
 
@@ -181,14 +186,14 @@ Anda dapat menambahkan plugin tambahan pada store (pada mode Module) dan meletak
 ```js
 import myPlugin from 'myPlugin'
 
-export const plugins = [ myPlugin ]
+export const plugins = [myPlugin]
 
 export const state = () => ({
   counter: 0
 })
 
 export const mutations = {
-  increment (state) {
+  increment(state) {
     state.counter++
   }
 }
@@ -218,7 +223,7 @@ actions: {
 }
 ```
 
-> Apabila Anda menggunakan mode *Modules* Vuex store, hanya modul utama (di dalam `store/index.js`) akan menerima action ini. Anda harus mengatur modul actions Anda dari sana.
+> Apabila Anda menggunakan mode _Modules_ Vuex store, hanya modul utama (di dalam `store/index.js`) akan menerima action ini. Anda harus mengatur modul actions Anda dari sana.
 
 [Context](/api/context) akan dilemparkan ke `nuxtServerInit` sebagai argumen kedua, hal ini sama dengan `asyncData` atau metode `fetch`.
 

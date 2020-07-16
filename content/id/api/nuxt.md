@@ -1,8 +1,6 @@
 ---
 title: 'API: Nuxt(pilihan)'
-description: Anda dapat menggunakan Nuxt.js secara terprogram untuk menggunakannya
-  sebagai middleware yang memberi Anda kebebasan untuk membuat server Anda sendiri
-  untuk me-render aplikasi web Anda.
+description: Anda dapat menggunakan Nuxt.js secara terprogram untuk menggunakannya sebagai middleware yang memberi Anda kebebasan untuk membuat server Anda sendiri untuk me-render aplikasi web Anda.
 menu: Usage
 category: programmatically
 position: 201

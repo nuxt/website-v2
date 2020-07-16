@@ -1,14 +1,12 @@
 ---
-title: "S3 と CloudFront を使用して AWS へデプロイするには？"
-description: "S3 と CloudFront を使用した AWS での静的ホスティング"
+title: 'S3 と CloudFront を使用して AWS へデプロイするには？'
+description: 'S3 と CloudFront を使用した AWS での静的ホスティング'
 menu: Deploy on Aws w/ S3 and Cloudfront
 category: deployment
 position: 201
 ---
 
-AWS は Amazon Web Services の略称です。
-S3 は、静的サイトホスティング用に設定できる静的ストレージです。
-CloudFront は、AWS の CDN（コンテンツ配信ネットワーク）です。
+AWS は Amazon Web Services の略称です。 S3 は、静的サイトホスティング用に設定できる静的ストレージです。 CloudFront は、AWS の CDN（コンテンツ配信ネットワーク）です。
 
 **静的に生成された** Nuxt アプリケーションを、S3 と CloudFront を使用して AWS 上にホスティングする方法は強力かつ安価です。
 
@@ -64,7 +62,7 @@ gulpfile.js     -  ファイルを S3 にプッシュして CloudFront のキャ
 
 ### AWS: S3 バケットと CloudFront Distribution の設定
 
-ステップ1 と 2 については、この [S3 と CloudFront をセットアップするためのチュートリアル](https://reidweb.com/2017/02/06/cloudfront-cdn-tutorial/)に従ってください。
+ステップ 1 と 2 については、この [S3 と CloudFront をセットアップするためのチュートリアル](https://reidweb.com/2017/02/06/cloudfront-cdn-tutorial/)に従ってください。
 
 あなたは今このデータを持っているはずです:
 
@@ -73,7 +71,7 @@ gulpfile.js     -  ファイルを S3 にプッシュして CloudFront のキャ
 
 ### AWS: セキュリティアクセスを設定する
 
-ステップ3 では、以下のことができるユーザーを作成する必要があります:
+ステップ 3 では、以下のことができるユーザーを作成する必要があります:
 
 - バケットのコンテンツを更新する
 - CloudFront distribution でのキャッシュ削除（変更をいち早くユーザーに伝える）
@@ -84,38 +82,37 @@ gulpfile.js     -  ファイルを S3 にプッシュして CloudFront のキャ
 
 ```json
 {
-    "Version": "2012-10-17",
-    "Statement": [ {
-            "Effect": "Allow",
-            "Action": [ "s3:ListBucket" ],
-            "Resource": [
-                "arn:aws:s3:::example.com"
-            ]
-        }, {
-            "Effect": "Allow",
-            "Action": [
-                "s3:PutObject",
-                "s3:PutObjectAcl",
-                "s3:GetObject",
-                "s3:GetObjectAcl",
-                "s3:DeleteObject",
-                "s3:ListMultipartUploadParts",
-                "s3:AbortMultipartUpload"
-            ],
-            "Resource": [
-                "arn:aws:s3:::example.com/*"
-            ]
-        }, {
-            "Effect": "Allow",
-            "Action": [
-                "cloudfront:CreateInvalidation",
-                "cloudfront:GetInvalidation",
-                "cloudfront:ListInvalidations",
-                "cloudfront:UnknownOperation"
-            ],
-            "Resource": "*"
-        }
-    ]
+  "Version": "2012-10-17",
+  "Statement": [
+    {
+      "Effect": "Allow",
+      "Action": ["s3:ListBucket"],
+      "Resource": ["arn:aws:s3:::example.com"]
+    },
+    {
+      "Effect": "Allow",
+      "Action": [
+        "s3:PutObject",
+        "s3:PutObjectAcl",
+        "s3:GetObject",
+        "s3:GetObjectAcl",
+        "s3:DeleteObject",
+        "s3:ListMultipartUploadParts",
+        "s3:AbortMultipartUpload"
+      ],
+      "Resource": ["arn:aws:s3:::example.com/*"]
+    },
+    {
+      "Effect": "Allow",
+      "Action": [
+        "cloudfront:CreateInvalidation",
+        "cloudfront:GetInvalidation",
+        "cloudfront:ListInvalidations",
+        "cloudfront:UnknownOperation"
+      ],
+      "Resource": "*"
+    }
+  ]
 }
 ```
 
@@ -179,7 +176,6 @@ const parallelize = require('concurrent-transform')
 // https://docs.aws.amazon.com/cli/latest/userguide/cli-environment.html
 
 const config = {
-
   // 必須
   params: {
     Bucket: process.env.AWS_BUCKET_NAME
@@ -194,7 +190,9 @@ const config = {
   deleteOldVersions: false, // PRODUCTION で使用しない
   distribution: process.env.AWS_CLOUDFRONT, // CloudFront distribution ID
   region: process.env.AWS_DEFAULT_REGION,
-  headers: { /* 'Cache-Control': 'max-age=315360000, no-transform, public', */ },
+  headers: {
+    /* 'Cache-Control': 'max-age=315360000, no-transform, public', */
+  },
 
   // 適切なデフォルト値 - これらのファイル及びディレクトリは gitignore されている
   distDir: 'dist',
@@ -212,18 +210,24 @@ gulp.task('deploy', function () {
   let g = gulp.src('./' + config.distDir + '/**')
   // publisher は、上記で指定した Content-Length、Content-Type、および他のヘッダーを追加する
   // 指定しない場合、はデフォルトで x-amz-acl が public-read に設定される
-  g = g.pipe(parallelize(publisher.publish(config.headers), config.concurrentUploads))
+  g = g.pipe(
+    parallelize(publisher.publish(config.headers), config.concurrentUploads)
+  )
 
   // CDN のキャッシュを削除する
   if (config.distribution) {
     console.log('Configured with CloudFront distribution')
     g = g.pipe(cloudfront(config))
   } else {
-    console.log('No CloudFront distribution configured - skipping CDN invalidation')
+    console.log(
+      'No CloudFront distribution configured - skipping CDN invalidation'
+    )
   }
 
   // 削除したファイルを同期する
-  if (config.deleteOldVersions) { g = g.pipe(publisher.sync()) }
+  if (config.deleteOldVersions) {
+    g = g.pipe(publisher.sync())
+  }
   // 連続したアップロードを高速化するためにキャッシュファイルを作成する
   g = g.pipe(publisher.cache())
   // アップロードの更新をコンソールに出力する
@@ -282,7 +286,7 @@ Hash: 9fd206f4b4e571e9571f
 Version: webpack 3.12.0
 Time: 2239ms
              Asset    Size  Chunks             Chunk Names
-server-bundle.json  306 kB          [emitted]  
+server-bundle.json  306 kB          [emitted]
   nuxt: Call generate:distRemoved hooks (1) +0ms
   nuxt:generate Destination folder cleaned +10s
   nuxt: Call generate:distCopied hooks (1) +8ms

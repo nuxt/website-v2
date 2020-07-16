@@ -3,8 +3,7 @@ module.exports = {
     an_error_occurred: 'Ha ocurrido un error',
     api_page_not_found: 'Página API no encontrada',
     please_define_title: 'Por favor, añade un título',
-    please_define_description:
-      'Por favor, añade una descripción',
+    please_define_description: 'Por favor, añade una descripción',
     search: 'Buscar ("/" to focus)',
     version: 'Version'
   },

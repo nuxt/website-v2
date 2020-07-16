@@ -1,5 +1,5 @@
 ---
-title: "API: La propriété mode"
+title: 'API: La propriété mode'
 description: Changer le mode nuxt par défaut
 menu: mode
 category: configuration
@@ -13,4 +13,3 @@ position: 117
     - `'universal'`: Application isomorphe (rendu côté serveur + navigation côté client)
 
 > Vous pouvez utiliser cette option pour changer le mode nuxt par défaut pour votre projet en utilisant `nuxt.config.js`
-

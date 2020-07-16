@@ -19,7 +19,7 @@ npm install --save-dev ava jsdom
 
 然后在 `package.json` 中添加测试脚本，并配置 ava 如果编译待测试的文件：
 
-__package.json__
+**package.json**
 
 ```javascript
 "scripts": {
@@ -38,28 +38,30 @@ __package.json__
 ```
 
 接下来我们可以在 `test` 目录下编写单元测试的逻辑代码：
+
 ```bash
 mkdir test
 ```
 
 假设我们有这样一个页面 `pages/index.vue`：
+
 ```html
 <template>
   <h1 class="red">Hello {{ name }}!</h1>
 </template>
 
 <script>
-export default {
-  data () {
-    return { name: 'world' }
+  export default {
+    data() {
+      return { name: 'world' }
+    }
   }
-}
 </script>
 
 <style>
-.red {
-  color: red;
-}
+  .red {
+    color: red;
+  }
 </style>
 ```
 
@@ -77,10 +79,12 @@ import { Nuxt, Builder } from 'nuxt'
 let nuxt = null
 
 // 初始化 Nuxt.js 并创建一个监听 localhost:4000 的服务器
-test.before('Init Nuxt.js', async (t) => {
+test.before('Init Nuxt.js', async t => {
   const rootDir = resolve(__dirname, '..')
   let config = {}
-  try { config = require(resolve(rootDir, 'nuxt.config.js')) } catch (e) {}
+  try {
+    config = require(resolve(rootDir, 'nuxt.config.js'))
+  } catch (e) {}
   config.rootDir = rootDir // 项目目录
   config.dev = false // 生产构建模式
   nuxt = new Nuxt(config)
@@ -89,14 +93,14 @@ test.before('Init Nuxt.js', async (t) => {
 })
 
 // 测试生成的html
-test('路由 / 有效且能渲染 HTML', async (t) => {
+test('路由 / 有效且能渲染 HTML', async t => {
   const context = {}
   const { html } = await nuxt.renderRoute('/', context)
   t.true(html.includes('<h1 class="red">Hello world!</h1>'))
 })
 
 // 测试元素的有效性
-test('路由 / 有效且渲染的HTML有特定的CSS样式', async (t) => {
+test('路由 / 有效且渲染的HTML有特定的CSS样式', async t => {
   const window = await nuxt.renderAndGetWindow('http://localhost:4000/')
   const element = window.document.querySelector('.red')
   t.not(element, null)
@@ -106,18 +110,18 @@ test('路由 / 有效且渲染的HTML有特定的CSS样式', async (t) => {
 })
 
 // 关掉服务器和Nuxt实例，停止文件监听。
-test.after('Closing server and nuxt.js', (t) => {
+test.after('Closing server and nuxt.js', t => {
   nuxt.close()
 })
 ```
 
 运行上面的单元测试：
+
 ```bash
 npm test
 ```
 
-实际上 `jsdom` 会有一定的限制性，因为它背后并没有使用任何的浏览器引擎，但是也能涵盖大部分关于 dom元素 的测试了。
-如果想使用真实的浏览器引擎来测试你的应用，推荐瞅瞅 [Nightwatch.js](http://nightwatchjs.org)。
+实际上 `jsdom` 会有一定的限制性，因为它背后并没有使用任何的浏览器引擎，但是也能涵盖大部分关于 dom 元素 的测试了。如果想使用真实的浏览器引擎来测试你的应用，推荐瞅瞅 [Nightwatch.js](http://nightwatchjs.org)。
 
 ## ESLint
 
@@ -149,15 +153,13 @@ module.exports = {
     'plugin:prettier/recommended'
   ],
   // 校验 .vue 文件
-  plugins: [
-    'vue'
-  ],
+  plugins: ['vue'],
   // 自定义规则
   rules: {
-    'semi': [2, 'never'],
+    semi: [2, 'never'],
     'no-console': 'off',
     'vue/max-attributes-per-line': 'off',
-    'prettier/prettier': ['error', { 'semi': false }]
+    'prettier/prettier': ['error', { semi: false }]
   }
 }
 ```
@@ -183,9 +185,9 @@ npm run lint
 npm run lintfix
 ```
 
-ESLint将检测校验所有JavaScript和Vue文件，同时忽略`.gitignore`中定义的被忽略文件。
+ESLint 将检测校验所有 JavaScript 和 Vue 文件，同时忽略`.gitignore`中定义的被忽略文件。
 
-还建议通过webpack启用ESLint热更新模式。这样ESLint将在`npm run dev`时保存。只需将以下内容添加到您的`nuxt.config.js`：
+还建议通过 webpack 启用 ESLint 热更新模式。这样 ESLint 将在`npm run dev`时保存。只需将以下内容添加到您的`nuxt.config.js`：
 
 ```js
 ...
@@ -209,6 +211,7 @@ ESLint将检测校验所有JavaScript和Vue文件，同时忽略`.gitignore`中�
     }
   }
 ```
+
 <div class="Alert Alert--orange">
 
 有个最佳实践是在 `package.json` 中增加 `"precommit": "npm run lint"` ，这样可以实现每次提交代码之前自动进行代码检测校验。

@@ -9,19 +9,15 @@ position: 2
 
 ## Signaler des problèmes
 
-Une excellente façon de contribuer au projet est d'envoyer un rapport détaillé (« issue ») lorsque vous rencontrez un problème.
-Pour simplifier les choses pour les contributeurs et les responsables, nous utilisons [CMTY](https://cmty.nuxtjs.org/).
+Une excellente façon de contribuer au projet est d'envoyer un rapport détaillé (« issue ») lorsque vous rencontrez un problème. Pour simplifier les choses pour les contributeurs et les responsables, nous utilisons [CMTY](https://cmty.nuxtjs.org/).
 
-Merci de vous assurer d'inclure la méthode pour reproduire ou un [CodeSandBox](https://template.nuxtjs.org/)
-de sorte que les bogues puissent être reproduits sans grands efforts. Plus un bogue peut être reproduit, plus vite nous pourrons commencer à le réparer !
+Merci de vous assurer d'inclure la méthode pour reproduire ou un [CodeSandBox](https://template.nuxtjs.org/) de sorte que les bogues puissent être reproduits sans grands efforts. Plus un bogue peut être reproduit, plus vite nous pourrons commencer à le réparer !
 
 ## Propositions de d'amelioration (Merge Request / Pull request)
 
 Nous aimons voir vos propositions d'amélioration, même s'il ne s'agit que d'une faute de frappe !
 
-Cependant, toute amélioration significative doit être associée à une
-[demande d'amélioration](https://feature.nuxtjs.org/) existante
-ou un [Rapport de bogue](https://bug.nuxtjs.org/).
+Cependant, toute amélioration significative doit être associée à une [demande d'amélioration](https://feature.nuxtjs.org/) existante ou un [Rapport de bogue](https://bug.nuxtjs.org/).
 
 ### Pour commencer
 
@@ -36,25 +32,22 @@ ou un [Rapport de bogue](https://bug.nuxtjs.org/).
 
 Avant même d'exécuter vos tests, pensez à installer toutes les dépendances.
 
- ```sh
+```sh
 yarn
 yarn build
 ```
 
 ### Structure de test
 
-Une bonne pull request, qui inclue une correction de bogue ou une nouvelle fonctionnalité, comprendra souvent des tests.
-Pour écrire de bons tests, laissez-nous expliquer notre structure de test :
+Une bonne pull request, qui inclue une correction de bogue ou une nouvelle fonctionnalité, comprendra souvent des tests. Pour écrire de bons tests, laissez-nous expliquer notre structure de test :
 
 #### Correctifs
 
-Les correctifs (que vous trouverez dans `tests/fixtures`) contiennent plusieurs applications Nuxt. Afin de conserver un temps de construction le plus court possible,
-nous ne construisons pas une application Nuxt par correctifs. Au lieu de cela, les correctifs sont construits (`yarn test:fixtures`) avant d'exécuter les tests unitaires actuels.
+Les correctifs (que vous trouverez dans `tests/fixtures`) contiennent plusieurs applications Nuxt. Afin de conserver un temps de construction le plus court possible, nous ne construisons pas une application Nuxt par correctifs. Au lieu de cela, les correctifs sont construits (`yarn test:fixtures`) avant d'exécuter les tests unitaires actuels.
 
 Assurez-vous **de modifier** ou **d'ajouter un nouveau correctif** lorsque vous soumettez une pull request afin de refléter correctement les changements (si nécessaire).
 
-De plus, n'oubliez pas de **reconstruire** un correctif après l'avoir modifié en lançant le test correspondant
-avec `jest test/fixtures/my-fixture/my-fixture.test.js` !
+De plus, n'oubliez pas de **reconstruire** un correctif après l'avoir modifié en lançant le test correspondant avec `jest test/fixtures/my-fixture/my-fixture.test.js` !
 
 #### Tests unitaires
 
@@ -89,8 +82,7 @@ yarn nuxt test/fixtures/your-fixture-app
 
 ### Exemples
 
-Si vous travaillez sur une fonctionnalité plus importante, merci de configurer une application exemple dans `examples/`.
-Cela aidera grandement à comprendre les changements et aussi aider les utilisateurs de Nuxt à comprendre en profondeur la fonctionnalité que vous avez construite.
+Si vous travaillez sur une fonctionnalité plus importante, merci de configurer une application exemple dans `examples/`. Cela aidera grandement à comprendre les changements et aussi aider les utilisateurs de Nuxt à comprendre en profondeur la fonctionnalité que vous avez construite.
 
 ### Mise en forme
 
@@ -98,13 +90,11 @@ Comme vous l'avez peut-être remarqué, nous utilisons ESLint pour appliquer un 
 
 ### Documentation
 
-Si vous avez ajouté une nouvelle fonctionnalité, fait une refonte ou changé le comportement de Nuxt d'une autre manière, vous voudrez probablement documenter les changements. Merci de le faire par une pull request sur le dépôt de la [documentation](https://github.com/nuxt/docs/pulls).
-Vous n'êtes pas obligé de modifier la documentation immédiatement (mais veuillez le faire dès que votre pull request est suffisamment mature).
+Si vous avez ajouté une nouvelle fonctionnalité, fait une refonte ou changé le comportement de Nuxt d'une autre manière, vous voudrez probablement documenter les changements. Merci de le faire par une pull request sur le dépôt de la [documentation](https://github.com/nuxt/docs/pulls). Vous n'êtes pas obligé de modifier la documentation immédiatement (mais veuillez le faire dès que votre pull request est suffisamment mature).
 
 ### Listes de contrôle finales
 
-Lors de la soumission de votre pull request, il y a un formulaire simple que vous devez remplir.
-Veuillez cocher toutes les "réponses" appropriées dans les listes de contrôle.
+Lors de la soumission de votre pull request, il y a un formulaire simple que vous devez remplir. Veuillez cocher toutes les "réponses" appropriées dans les listes de contrôle.
 
 ### Dépannages
 

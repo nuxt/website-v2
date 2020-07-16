@@ -7,7 +7,6 @@ position: 108
 
 > Nuxt.js では JavaScript プラグインを定義することができ、それはルートの Vue.js アプリケーションがインスタンス化される前に実行されます。この機能は、自前のライブラリや外部のモジュールを使用する際にとりわけ有用です。
 
-
 <div class="Alert">
 
 Vue インスタンスの [ライフサイクル](https://vuejs.org/v2/guide/instance.html#Lifecycle-Diagram) において、`beforeCreate` と `created` フックのみが **クライアントサイドとサーバーサイドの両方** で呼び出されることに注意してください。それ以外のすべてのフックはクライアントサイドでのみ呼び出されます。
@@ -32,20 +31,18 @@ npm install --save axios
 </template>
 
 <script>
-import axios from 'axios'
+  import axios from 'axios'
 
-export default {
-  async asyncData ({ params }) {
-    let { data } = await axios.get(`https://my-api/posts/${params.id}`)
-    return { title: data.title }
+  export default {
+    async asyncData({ params }) {
+      let { data } = await axios.get(`https://my-api/posts/${params.id}`)
+      return { title: data.title }
+    }
   }
-}
 </script>
 ```
 
 ## Vue プラグイン
-
-
 
 アプリケーション内で通知を表示する [vue-notifications](https://github.com/se-panfilov/vue-notifications) のような Vue プラグインを使用したい場合には、アプリケーションを起動する前にプラグインをセットアップする必要があります。
 
@@ -70,7 +67,7 @@ export default {
 
 ### ES6 プラグイン
 
-プラグインが `node_modules` にあり、ES6 モジュールをエクスポートしている場合、それを ` transpile` ビルドオプションに追加する必要があるかもしれません:
+プラグインが `node_modules` にあり、ES6 モジュールをエクスポートしている場合、それを `transpile` ビルドオプションに追加する必要があるかもしれません:
 
 ```js
 module.exports = {
@@ -79,13 +76,12 @@ module.exports = {
   }
 }
 ```
+
 その他のビルドオプションについては [configuration build](/api/configuration-build/#transpile) のドキュメントを参照することができます。
 
 ## アプリケーションのルートや context に注入する
 
-関数や値をアプリケーション全体で利用できるようにしたい場合もあるでしょう。
-そのような変数を Vue インスタンス（クライアントサイド）やコンテキスト（サーバーサイド）、さらに Vuex ストアへ注入することが可能です。
-それらの関数の前には `$` を付けるのが一般的です。
+関数や値をアプリケーション全体で利用できるようにしたい場合もあるでしょう。そのような変数を Vue インスタンス（クライアントサイド）やコンテキスト（サーバーサイド）、さらに Vuex ストアへ注入することが可能です。それらの関数の前には `$` を付けるのが一般的です。
 
 ### Vue インスタンスに注入する
 
@@ -96,7 +92,8 @@ Vue インスタンスへのコンテキストの注入は、通常の Vue ア�
 ```js
 import Vue from 'vue'
 
-Vue.prototype.$myInjectedFunction = string => console.log('This is an example', string)
+Vue.prototype.$myInjectedFunction = string =>
+  console.log('This is an example', string)
 ```
 
 `nuxt.config.js`:
@@ -113,7 +110,7 @@ export default {
 
 ```js
 export default {
-  mounted () {
+  mounted() {
     this.$myInjectedFunction('test')
   }
 }
@@ -128,7 +125,8 @@ Vue インスタンスへのコンテキストの注入は、通常の Vue ア�
 ```js
 export default ({ app }, inject) => {
   // context.app オブジェクトへ関数を直接セットします
-  app.myInjectedFunction = string => console.log('Okay, another function', string)
+  app.myInjectedFunction = string =>
+    console.log('Okay, another function', string)
 }
 ```
 
@@ -146,7 +144,7 @@ export default {
 
 ```js
 export default {
-  asyncData (context) {
+  asyncData(context) {
     context.app.myInjectedFunction('ctx!')
   }
 }
@@ -180,10 +178,10 @@ export default {
 
 ```js
 export default {
-  mounted () {
+  mounted() {
     this.$myInjectedFunction('works in mounted')
   },
-  asyncData (context) {
+  asyncData(context) {
     context.app.$myInjectedFunction('works with context')
   }
 }
@@ -197,26 +195,24 @@ export const state = () => ({
 })
 
 export const mutations = {
-  changeSomeValue (state, newValue) {
+  changeSomeValue(state, newValue) {
     this.$myInjectedFunction('accessible in mutations')
     state.someValue = newValue
   }
 }
 
 export const actions = {
-  setSomeValueToWhatever ({ commit }) {
+  setSomeValueToWhatever({ commit }) {
     this.$myInjectedFunction('accessible in actions')
     const newValue = 'whatever'
     commit('changeSomeValue', newValue)
   }
 }
-
 ```
 
 <div class="Alert">
 
-Vue プラグインは、 export 関数の中で使用できないことに注意してください。それぞれのリクエストの前に export 関数を呼び出す、
-つまり、`Vue.use(...)`, `Vue.mixin(...)`, `Vue.component(...)`などを多数呼び出すことは、アプリのクラッシュを引き起こす可能性があります。
+Vue プラグインは、 export 関数の中で使用できないことに注意してください。それぞれのリクエストの前に export 関数を呼び出す、つまり、`Vue.use(...)`, `Vue.mixin(...)`, `Vue.component(...)`などを多数呼び出すことは、アプリのクラッシュを引き起こす可能性があります。
 
 </div>
 
@@ -230,9 +226,7 @@ Vue プラグインは、 export 関数の中で使用できないことに注�
 
 ```js
 export default {
-  plugins: [
-    { src: '~/plugins/vue-notifications', mode: 'client' }
-  ]
+  plugins: [{ src: '~/plugins/vue-notifications', mode: 'client' }]
 }
 ```
 

@@ -17,14 +17,14 @@ Kelas ini mengekspor middleware koneksi yang menangani dan menyajikan semua perm
 Kita bisa mendaftarkan kait (hooks) pada peristiwa siklus hidup (life cycle) tertentu.
 
 ```js
-nuxt.plugin('renderer', (renderer) => {
-  renderer.plugin('setupMiddleware', (app) => {
+nuxt.plugin('renderer', renderer => {
+  renderer.plugin('setupMiddleware', app => {
     // ...
   })
 })
 ```
 
-Plugin | Argumen | Keterangan
---- | --- | ---
-`ready` | renderer | SSR Middleware dan semua sumbernya sudah siap
-`setupMiddleware` | sambungkan instansi (app) | Sebelum Nuxt menambahkan tumpukan middleware itu. Kita bisa menggunakannya untuk mendaftarkan middleware sisi-server kustom
+| Plugin | Argumen | Keterangan |
+| --- | --- | --- |
+| `ready` | renderer | SSR Middleware dan semua sumbernya sudah siap |
+| `setupMiddleware` | sambungkan instansi (app) | Sebelum Nuxt menambahkan tumpukan middleware itu. Kita bisa menggunakannya untuk mendaftarkan middleware sisi-server kustom |

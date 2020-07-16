@@ -1,7 +1,6 @@
 ---
 title: 'API: Properti scrollToTop'
-description: Properti `scrollToTop`  memungkinkan Anda memberitahu Nuxt.js untuk menggulir
-  (scroll) ke atas sebelum me-render halaman.
+description: Properti `scrollToTop`  memungkinkan Anda memberitahu Nuxt.js untuk menggulir (scroll) ke atas sebelum me-render halaman.
 menu: scrollToTop
 category: pages
 position: 28
@@ -9,7 +8,7 @@ position: 28
 
 # Properti scrollToTop
 
-> Properti scrollToTop  memungkinkan Anda memberitahu Nuxt.js untuk menggulir (scroll) ke atas sebelum me-render halaman.
+> Properti scrollToTop memungkinkan Anda memberitahu Nuxt.js untuk menggulir (scroll) ke atas sebelum me-render halaman.
 
 - **Tipe:** `Boolean` (default: `false`)
 
@@ -21,9 +20,9 @@ Secara default, Nuxt.js bergulir (scroll) ke atas halaman ketika Anda membuka ha
 </template>
 
 <script>
-export default {
-  scrollToTop: true
-}
+  export default {
+    scrollToTop: true
+  }
 </script>
 ```
 

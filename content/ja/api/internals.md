@@ -65,18 +65,17 @@ import { Nuxt, Builder, Utils } from 'nuxt'
 
 ## よくあるパターン
 
-すべての Nuxt クラスは `nuxt` インスタンスとオプションへの参照を持っています。
-これにより `options` と `nuxt` にアクセスするための一貫した API を実現しています。
+すべての Nuxt クラスは `nuxt` インスタンスとオプションへの参照を持っています。これにより `options` と `nuxt` にアクセスするための一貫した API を実現しています。
 
 ```js
 class SomeClass {
-  constructor (nuxt) {
+  constructor(nuxt) {
     super()
     this.nuxt = nuxt
     this.options = nuxt.options
   }
 
-  someFunction () {
+  someFunction() {
     // We have access to `this.nuxt` and `this.options`
   }
 }
@@ -86,7 +85,7 @@ class SomeClass {
 
 ```js
 class FooClass {
-  constructor (nuxt) {
+  constructor(nuxt) {
     super()
     this.nuxt = nuxt
     this.options = nuxt.options
@@ -99,7 +98,7 @@ class FooClass {
 `foo` モジュールにフックするにはこうします:
 
 ```js
-nuxt.hook('foo', (foo) => {
+nuxt.hook('foo', foo => {
   // ...
 })
 ```

@@ -1,5 +1,5 @@
 ---
-title: "API: rootDir 属性配置"
+title: 'API: rootDir 属性配置'
 description: 设置 Nuxt.js 应用的根目录。
 menu: rootDir
 category: configuration

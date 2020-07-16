@@ -1,5 +1,5 @@
 ---
-title: "NuxtJS: From Terminal to Browser"
+title: 'NuxtJS: From Terminal to Browser'
 description: How we changed the developer experience to stop switching between the terminal and browser.
 imgUrl: blog/nuxtjs-from-terminal-to-browser/main.png
 date: 2019-06-04
@@ -8,9 +8,10 @@ authors:
     avatarUrl: https://pbs.twimg.com/profile_images/1042510623962275840/1Iw_Mvud_400x400.jpg
     link: https://twitter.com/atinux
 tags:
-    - webpack
-    - DX
+  - webpack
+  - DX
 ---
+
 How we changed the developer experience to stop switching between the terminal and browser.
 
 > Nuxt.js is a Vue.js framework to create different kind of web applications with the **same directory structure & conventions**: Universal, Single Page, PWA or Static Generated.
@@ -46,7 +47,7 @@ Now you can focus right on your code and its visual result 🙂
 
 Links:
 
-*   Documentation: [https://nuxtjs.org](https://nuxtjs.org)
-*   GitHub: [https://github.com/nuxt/nuxt.js](https://github.com/nuxt/nuxt.js)
-*   Loading Screen source code: [https://github.com/nuxt/loading-screen](https://github.com/nuxt/loading-screen)
-*   Twitter: [https://twitter.com/nuxt_js](https://twitter.com/nuxt_js)
+- Documentation: [https://nuxtjs.org](https://nuxtjs.org)
+- GitHub: [https://github.com/nuxt/nuxt.js](https://github.com/nuxt/nuxt.js)
+- Loading Screen source code: [https://github.com/nuxt/loading-screen](https://github.com/nuxt/loading-screen)
+- Twitter: [https://twitter.com/nuxt_js](https://twitter.com/nuxt_js)

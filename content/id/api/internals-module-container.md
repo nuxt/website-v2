@@ -17,7 +17,7 @@ Semua [modules](/guide/modules) akan dipanggil di dalam konteks dari instansi `M
 Kita bisa mendaftarkan kait (hooks) pada peristiwa siklus hidup (life cycle) tertentu.
 
 ```js
-nuxt.moduleContainer.plugin('ready', async (moduleContainer) => {
+nuxt.moduleContainer.plugin('ready', async moduleContainer => {
   // Lakukan hal ini setelah semua modul siap
 })
 ```
@@ -25,14 +25,14 @@ nuxt.moduleContainer.plugin('ready', async (moduleContainer) => {
 Di dalam konteks [modules](/guide/modules) kita bisa menggunakan ini sebagai gantinya:
 
 ```js
-this.plugin('ready', async (moduleContainer) => {
+this.plugin('ready', async moduleContainer => {
   // Lakukan hal ini setelah semua modul siap
 })
 ```
 
-Plugin | Argumen | Keterangan
---- | --- | ---
-`ready` | moduleContainer | Semua modul di `nuxt.config.js` telah diinisialisasi
+| Plugin | Argumen | Keterangan |
+| --- | --- | --- |
+| `ready` | moduleContainer | Semua modul di `nuxt.config.js` telah diinisialisasi |
 
 ## Metode
 
@@ -43,9 +43,9 @@ Menambahkan ke `options.build.vendor` dan menerapkan filter yang unik.
 ### addTemplate (template)
 
 - **template**: `String` atau `Object`
-    - `src`
-    - `options`
-    - `fileName`
+  - `src`
+  - `options`
+  - `fileName`
 
 Me-render templat yang diberikan menggunakan [lodash template](https://lodash.com/docs/4.17.4#template) selama membangun (build) ke `buildDir` proyek (`.nuxt`).
 

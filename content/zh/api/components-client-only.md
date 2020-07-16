@@ -1,5 +1,5 @@
 ---
-title: "API: The <client-only> Component"
+title: 'API: The <client-only> Component'
 description: Render a component only on client-side, and display a placeholder text on server-side.
 menu: client-only
 category: components
@@ -38,16 +38,16 @@ position: 44
 - placeholder:
   - 在 `<client-only />` 被挂载之前, 使用此属性作为插槽.
 
- ```html
+```html
 <template>
   <div>
     <sidebar />
     <client-only>
       <!-- comments 组件只会在客户端被渲染 -->
       <comments />
-  
+
       <!-- comments-placeholder 会在服务端被加载-->
-      <comments-placeholder slot="placeholder" />
+      <comments-placeholder slot="placeholder" />
     </client-only>
   </div>
 </template>

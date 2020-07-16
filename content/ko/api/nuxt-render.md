@@ -1,5 +1,5 @@
 ---
-title: "API: nuxt.render(req, res)"
+title: 'API: nuxt.render(req, res)'
 description: 당신의 node.js 서버를 위해 Nuxt.js를 미들웨어로 사용할 수 있습니다.
 menu: render
 category: programmatically
@@ -17,10 +17,11 @@ position: 202
 > 당신의 node.js 서버를 위해 Nuxt.js를 `nuxt.render` 기능과 함께 미들웨어로 사용할 수 있습니다.
 
 [Express.js](https://github.com/expressjs/express) 예제:
+
 ```js
 const Nuxt = require('nuxt')
 const app = require('express')()
-const isProd = (process.env.NODE_ENV === 'production')
+const isProd = process.env.NODE_ENV === 'production'
 const port = process.env.PORT || 3000
 
 // options으로 nuxt.js를 인스턴스화 합니다.
@@ -43,6 +44,6 @@ console.log('Server listening on localhost:' + port)
 
 <div class="Alert">
 
-**nuxt.render** 는 사용자의 웹 어플리케이션을 랜더링하고, next()는 호출하지 않기 때문에 미들웨어가 끝나는 시점에 호출하는 것을 권장합니다.
+**nuxt.render** 는 사용자의 웹 어플리케이션을 랜더링하고, next()는 호출하지 않기때문에 미들웨어가 끝나는 시점에 호출하는 것을 권장합니다.
 
 </div>

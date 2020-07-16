@@ -45,15 +45,14 @@ Un cas usuel d'utilisation d'un modèle personnalisé d'application est d'ajoute
 ```
 
 <!-- TODO: Load polyfills here? -->
+
 ## Mises en page
 
-Les mises en pages sont une aide appréciable quand vous voulez changer l'aspect de votre application Nuxt.js.
-Que vous souhaitez inclure une barre latérale ou avoir une disposition distincte pour mobile ou ordinateur
+Les mises en pages sont une aide appréciable quand vous voulez changer l'aspect de votre application Nuxt.js. Que vous souhaitez inclure une barre latérale ou avoir une disposition distincte pour mobile ou ordinateur
 
 ### Mise en page par défaut
 
-Vous pouvez étendre la mise en page principale en ajoutant un fichier `layouts/default.vue`.
-Il sera utilisé pour toutes les pages qui n'ont pas de mise en page spécifiée.
+Vous pouvez étendre la mise en page principale en ajoutant un fichier `layouts/default.vue`. Il sera utilisé pour toutes les pages qui n'ont pas de mise en page spécifiée.
 
 <div class="Alert Alert--nuxt-green">
 
@@ -65,13 +64,13 @@ La mise en page fournie par défaut fait simplement trois lignes et affiche simp
 
 ```html
 <template>
-  <nuxt/>
+  <nuxt />
 </template>
 ```
 
 ### Mise en page personnalisée
 
-Chaque fichier (*premier niveau*) dans le répertoire `layouts` créera une mise en page personnalisée accessible via la propriété `layout` des composants page.
+Chaque fichier (_premier niveau_) dans le répertoire `layouts` créera une mise en page personnalisée accessible via la propriété `layout` des composants page.
 
 Disons que nous voulons créer une mise en page de blog et l'enregistrer sous `layouts/blog.vue` :
 
@@ -79,7 +78,7 @@ Disons que nous voulons créer une mise en page de blog et l'enregistrer sous `l
 <template>
   <div>
     <div>Ma navigation de blog est ici</div>
-    <nuxt/>
+    <nuxt />
   </div>
 </template>
 ```
@@ -88,13 +87,13 @@ Maintenant nous devons indiquer aux pages (par exemple `pages/posts.vue`) d'util
 
 ```html
 <template>
-<!-- Your template -->
+  <!-- Your template -->
 </template>
 <script>
-export default {
-  layout: 'blog'
-  // définitions du composant page
-}
+  export default {
+    layout: 'blog'
+    // définitions du composant page
+  }
 </script>
 ```
 
@@ -106,7 +105,7 @@ Regardez la [vidéo de démonstration](https://www.youtube.com/watch?v=YOKnSTp7d
 
 ### Page d'erreur
 
-La page d'erreur est une *page composant* qui sera toujours affichée lorsqu'une erreur se produit (qui ne survient pas pendant le rendu côté serveur).
+La page d'erreur est une _page composant_ qui sera toujours affichée lorsqu'une erreur se produit (qui ne survient pas pendant le rendu côté serveur).
 
 <div class="Alert Alert--orange">
 
@@ -114,9 +113,7 @@ La page d'erreur est une *page composant* qui sera toujours affichée lorsqu'une
 
 </div>
 
-Comme mentionné précédemment, cette mise en page est spéciale, car vous **ne devez pas** inclure `<nuxt/>` dans cette mise en page.
-Vous devez voir cette mise en page comme un composant affiché quand une erreur survient (`404`, `500`, etc.).
-Similaire aux autre composants page, vous pouvez définir une mise en page personnalisée pour la page d'erreur.
+Comme mentionné précédemment, cette mise en page est spéciale, car vous **ne devez pas** inclure `<nuxt/>` dans cette mise en page. Vous devez voir cette mise en page comme un composant affiché quand une erreur survient (`404`, `500`, etc.). Similaire aux autre composants page, vous pouvez définir une mise en page personnalisée pour la page d'erreur.
 
 Le code source de la page d'erreur par défaut est [disponible sur GitHub](https://github.com/nuxt/nuxt.js/blob/dev/packages/vue-app/template/components/nuxt-error.vue).
 
@@ -132,13 +129,12 @@ Vous pouvez personnaliser la page d'erreur en ajoutant un fichier `layouts/error
 </template>
 
 <script>
-export default {
-  props: ['error'],
-  layout: 'blog' // vous pouvez définir une mise en page personnalisée pour la page d'erreur
-}
+  export default {
+    props: ['error'],
+    layout: 'blog' // vous pouvez définir une mise en page personnalisée pour la page d'erreur
+  }
 </script>
 ```
-
 
 ## Pages
 
@@ -158,33 +154,33 @@ Chaque composant page est un composant Vue, mais Nuxt.js ajoute des clés spéci
 </template>
 
 <script>
-export default {
-  asyncData (context) {
-    // appelé à chaque fois avant le chargement du composant
-    // comme son nom l'indique, il peut être asynchrone
-    // De plus, l'objet retourné sera ajouté à votre objet `data`
-    return { name: 'le Monde' }
-  },
-  fetch () {
-    // La méthode `fetch` est utilisée pour peupler le store avant d'effectuer le rendu de la page
-  },
-  head () {
-    // Définit les balises meta pour cette page
-  },
-  // et plus de fonctionnalités à découvrir
-  ...
-}
+  export default {
+    asyncData (context) {
+      // appelé à chaque fois avant le chargement du composant
+      // comme son nom l'indique, il peut être asynchrone
+      // De plus, l'objet retourné sera ajouté à votre objet `data`
+      return { name: 'le Monde' }
+    },
+    fetch () {
+      // La méthode `fetch` est utilisée pour peupler le store avant d'effectuer le rendu de la page
+    },
+    head () {
+      // Définit les balises meta pour cette page
+    },
+    // et plus de fonctionnalités à découvrir
+    ...
+  }
 </script>
 
 <style>
-.red {
-  color: red;
-}
+  .red {
+    color: red;
+  }
 </style>
 ```
 
 | Attribut | Description | Documentation |
-|----------|-------------|---------------|
+| --- | --- | --- |
 | `asyncData` | L'attribut le plus important. Il peut être asynchrone et reçoit le contexte comme argument. | [Guide : Données asynchrones](/guide/async-data) |
 | `fetch` | Utilisé pour peupler le store avant de faire le rendu de la page. Identique à la méthode `asyncData`, sauf qu'il ne peuple pas le composant `data` | [pages de l'API sur `fetch`](/api/pages-fetch) |
 | `head` | Défini des balises `<meta>` spécifiques pour la page en cours. | [pages de l'API sur `head`](/api/pages-head) |
@@ -212,7 +208,6 @@ Nuxt.js utilise [vue-meta](https://github.com/declandewet/vue-meta) pour mettre 
 <b>Info :</b> Nuxt.js utilise la clé <code>hid</code> à la place de la clé <code>vmid</code> par défaut pour identifier les éléments <meta>
 
 </div>
-
 
 ### Balises meta par défaut
 

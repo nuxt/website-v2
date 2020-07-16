@@ -7,9 +7,7 @@ position: 1
 
 ## Global Settings
 
-You can include your external resources in the head object or function.
-As described in the [head API docs](https://nuxtjs.org/api/pages-head/), the following examples shows the use of `head` as an object and as a function. 
-If you want to use values from your Vue component like computed properties or data, you can use the `head()` function, returning the final head object. You can also pass each resource an optional `body: true` to include the resource before the closing `</body>` tag.
+You can include your external resources in the head object or function. As described in the [head API docs](https://nuxtjs.org/api/pages-head/), the following examples shows the use of `head` as an object and as a function. If you want to use values from your Vue component like computed properties or data, you can use the `head()` function, returning the final head object. You can also pass each resource an optional `body: true` to include the resource before the closing `</body>` tag.
 
 Include your resources in `nuxt.config.js` (here in the head object):
 
@@ -17,10 +15,15 @@ Include your resources in `nuxt.config.js` (here in the head object):
 export default {
   head: {
     script: [
-      { src: 'https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js' }
+      {
+        src: 'https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js'
+      }
     ],
     link: [
-      { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css?family=Roboto&display=swap' }
+      {
+        rel: 'stylesheet',
+        href: 'https://fonts.googleapis.com/css?family=Roboto&display=swap'
+      }
     ]
   }
 }
@@ -36,23 +39,29 @@ Include your resources in your `.vue` file inside the `pages/` directory (here i
 </template>
 
 <script>
-export default {
-  head () {
-    return {
-      script: [
-        { src: 'https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js' }
-      ],
-      link: [
-        { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css?family=Roboto&display=swap' }
-      ]
+  export default {
+    head() {
+      return {
+        script: [
+          {
+            src:
+              'https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js'
+          }
+        ],
+        link: [
+          {
+            rel: 'stylesheet',
+            href: 'https://fonts.googleapis.com/css?family=Roboto&display=swap'
+          }
+        ]
+      }
     }
   }
-}
 </script>
 
 <style scoped>
-h1 {
-  font-family: Roboto, sans-serif;
-}
+  h1 {
+    font-family: Roboto, sans-serif;
+  }
 </style>
 ```

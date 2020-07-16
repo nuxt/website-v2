@@ -9,7 +9,7 @@ position: 108
 
 <div class="Alert">
 
-Il est important de savoir que, dans le [cycle de vie d'une instance de Vue](https://fr.vuejs.org/v2/guide/instance.html#Diagramme-du-cycle-de-vie), les hooks `beforeCreate` et `created` sont appelés **à la fois du côté client et du côté serveur**. Tous les autres *hooks* ne sont appelés que depuis le client.
+Il est important de savoir que, dans le [cycle de vie d'une instance de Vue](https://fr.vuejs.org/v2/guide/instance.html#Diagramme-du-cycle-de-vie), les hooks `beforeCreate` et `created` sont appelés **à la fois du côté client et du côté serveur**. Tous les autres _hooks_ ne sont appelés que depuis le client.
 
 </div>
 
@@ -31,14 +31,14 @@ Puis nous pouvons l'utiliser directement dans nos pages :
 </template>
 
 <script>
-import axios from 'axios'
+  import axios from 'axios'
 
-export default {
-  async asyncData ({ params }) {
-    let { data } = await axios.get(`https://my-api/posts/${params.id}`)
-    return { titre: data.titre }
+  export default {
+    async asyncData({ params }) {
+      let { data } = await axios.get(`https://my-api/posts/${params.id}`)
+      return { titre: data.titre }
+    }
   }
-}
 </script>
 ```
 
@@ -76,14 +76,12 @@ module.exports = {
   }
 }
 ```
-Vous pouvez vous référer à la documentation de [configuration](/api/configuration-build/#transpile) 
-pour plus d'options de construction.
 
-## Injection dans $root et le contexte
+Vous pouvez vous référer à la documentation de [configuration](/api/configuration-build/#transpile) pour plus d'options de construction.
 
-Parfois vous souhaitez rendre des fonctions ou des valeurs disponibles à travers votre application.
-Vous pouvez injecter ces variables dans les instances Vue (côté client), le contexte (côté serveur) et même dans le magasin Vuex.
-C'est une convention de préfixer ces fonctions avec un `$`.
+## Injection dans \$root et le contexte
+
+Parfois vous souhaitez rendre des fonctions ou des valeurs disponibles à travers votre application. Vous pouvez injecter ces variables dans les instances Vue (côté client), le contexte (côté serveur) et même dans le magasin Vuex. C'est une convention de préfixer ces fonctions avec un `$`.
 
 ### Injection dans les instances Vue
 
@@ -94,7 +92,8 @@ L'injection de contenu dans les instances Vue fonctionne de la même façon que 
 ```js
 import Vue from 'vue'
 
-Vue.prototype.$maFonctionInjectee = chaine => console.log('Ceci est un example', chaine)
+Vue.prototype.$maFonctionInjectee = chaine =>
+  console.log('Ceci est un example', chaine)
 ```
 
 `nuxt.config.js`:
@@ -111,12 +110,11 @@ Vous pouvez maintenant utiliser cette fonction dans tous vos composants Vue.
 
 ```js
 export default {
-  mounted () {
+  mounted() {
     this.$maFonctionInjectee('test')
   }
 }
 ```
-
 
 ### Injection dans le contexte
 
@@ -127,7 +125,8 @@ L'injection de contenu dans les instances Vue fonctionne de la même façon que 
 ```js
 export default ({ app }, inject) => {
   // Défini la fonction directement dans l'objet context.app
-  app.maFonctionInjectee = chaine => console.log('Ok, une autre fonction', chaine)
+  app.maFonctionInjectee = chaine =>
+    console.log('Ok, une autre fonction', chaine)
 }
 ```
 
@@ -145,7 +144,7 @@ La fonction est maintenant disponible partout où vous aurez accès au `context`
 
 ```js
 export default {
-  asyncData (context) {
+  asyncData(context) {
     context.app.maFonctionInjectee('Contexte !')
   }
 }
@@ -179,10 +178,10 @@ Maintenant la fonction peut être utilisé depuis `context`, via `this` dans les
 
 ```js
 export default {
-  mounted () {
+  mounted() {
     this.$maFonctionInjectee('fonctionne dans mounted()')
   },
-  asyncData (context) {
+  asyncData(context) {
     context.app.$maFonctionInjectee('fonctionne avec le contexte')
   }
 }
@@ -196,27 +195,24 @@ export const state = () => ({
 })
 
 export const mutations = {
-  changeUneValeur (state, nouvelleValeur) {
+  changeUneValeur(state, nouvelleValeur) {
     this.$maFonctionInjectee('accessible dans les mutations')
     state.uneValeur = nouvelleValeur
   }
 }
 
 export const actions = {
-  setUneValeurAvecQuelquechose ({ commit }) {
+  setUneValeurAvecQuelquechose({ commit }) {
     this.$maFonctionInjectee('accessible dans les actions')
     const nouvelleValeur = 'quelquechose'
     commit('changeUneValeur', nouvelleValeur)
   }
 }
-
 ```
-
 
 ## Côté client uniquement
 
-Certains plugins fonctionnent **uniquement dans un navigateur** due à un manque de support SSR.
-Vous pouvez utiliser l'option `ssr: false` dans `plugins` pour exécuter le fichier uniquement côté client.
+Certains plugins fonctionnent **uniquement dans un navigateur** due à un manque de support SSR. Vous pouvez utiliser l'option `ssr: false` dans `plugins` pour exécuter le fichier uniquement côté client.
 
 Exemple :
 
@@ -224,9 +220,7 @@ Exemple :
 
 ```js
 export default {
-  plugins: [
-    { src: '~/plugins/notifications-vue', ssr: false }
-  ]
+  plugins: [{ src: '~/plugins/notifications-vue', ssr: false }]
 }
 ```
 
@@ -239,7 +233,7 @@ import NotificationsVue from 'notifications-vue'
 Vue.use(NotificationsVue)
 ```
 
-Dans le cas où vous devez importer certaines bibliothèques uniquement *côté serveur*, vous pouvez vérifier si la variable `process.server` est définie à `true`.
+Dans le cas où vous devez importer certaines bibliothèques uniquement _côté serveur_, vous pouvez vérifier si la variable `process.server` est définie à `true`.
 
 Si vous avez besoin également de savoir si vous êtes dans une application générée (via `nuxt generate`), vous pouvez vérifier la propriété `process.static` est à `true`. C'est le cas seulement pendant la génération et après.
 

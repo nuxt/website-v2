@@ -1,5 +1,5 @@
 ---
-title: "API: transition 属性配置"
+title: 'API: transition 属性配置'
 description: 用于设置页面切换过渡效果的默认属性值。
 menu: transition
 category: configuration
@@ -13,6 +13,7 @@ position: 131
 > 用于设置页面切换过渡效果的默认属性值。
 
 默认值：
+
 ```js
 {
   name: 'page',
@@ -69,10 +70,12 @@ export default {
 全局配置示例 `css`:
 
 ```css
-.layout-enter-active, .layout-leave-active {
-  transition: opacity .5s
+.layout-enter-active,
+.layout-leave-active {
+  transition: opacity 0.5s;
 }
-.layout-enter, .layout-leave-active {
-  opacity: 0
+.layout-enter,
+.layout-leave-active {
+  opacity: 0;
 }
 ```

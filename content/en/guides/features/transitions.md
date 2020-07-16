@@ -31,10 +31,10 @@ questions:
     correctAnswer: A global css file
   - question: In which array in the nuxt.config.js file do you add your global stylesheet?
     answers:
-      - "css: []"
-      - "styles: []"
-      - "transitions: []"
-    correctAnswer: "css: []"
+      - 'css: []'
+      - 'styles: []'
+      - 'transitions: []'
+    correctAnswer: 'css: []'
   - question: What is the default css class for layout transitions?
     answers:
       - layout
@@ -95,25 +95,21 @@ export default {
 Nuxt.js will use these settings to set the component as follows:
 
 ```html{}[pages/index.vue]
-<transition name="home">
+<transition name="home"></transition>
 ```
 
-<base-alert> 
+<base-alert>
 
 This is automatically done for you and you do not need to add the `<transition>` component to your pages or layouts.
 
 </base-alert>
 
-Now all you have to do is create the new class for your transitions. 
+Now all you have to do is create the new class for your transitions.
 
 ```html{}[pages/index.vue]
 <styles>
-.home-enter-active, .home-leave-active {
-  transition: opacity .5s;
-}
-.home-enter, .home-leave-active {
-  opacity: 0;
-}
+  .home-enter-active, .home-leave-active { transition: opacity .5s; }
+  .home-enter, .home-leave-active { opacity: 0; }
 </styles>
 ```
 
@@ -133,7 +129,7 @@ export default {
 Nuxt.js will use these settings to set the component as follows:
 
 ```html{}[pages/index.vue]
-<transition name="test" mode="out-in">
+<transition name="test" mode="out-in"></transition>
 ```
 
 The `transition` object can have many properties such as name, mode, css, duration and many more. Please see the vue docs for more info.
@@ -152,7 +148,7 @@ export default {
 
 ### Transition Mode
 
-<base-alert> 
+<base-alert>
 
 The default transition mode for pages differs from the default mode in Vue.js. The `transition` mode is by default set to `out-in`. If you want to run leaving and entering transitions simultaneously, you have to set the mode to the empty string `mode: ''`.
 
@@ -173,8 +169,10 @@ If the `transition` key is set as a function:
 
 ```js{}[pages/index.vue]
 export default {
-  transition (to, from) {
-    if (!from) { return 'slide-left' }
+  transition(to, from) {
+    if (!from) {
+      return 'slide-left'
+    }
     return +to.query.page < +from.query.page ? 'slide-right' : 'slide-left'
   }
 }
@@ -186,15 +184,17 @@ Transitions applied on navigation:
 
 ## Global Settings
 
-The Nuxt.js default transition name is `"page"`. To add a fade transition to every page of your application, all you need is a CSS file that is shared across all your routes. 
+The Nuxt.js default transition name is `"page"`. To add a fade transition to every page of your application, all you need is a CSS file that is shared across all your routes.
 
 Our global css in `assets/main.css`:
 
 ```css{}[assets/main.css]
-.page-enter-active, .page-leave-active {
-  transition: opacity .5s;
+.page-enter-active,
+.page-leave-active {
+  transition: opacity 0.5s;
 }
-.page-enter, .page-leave-to {
+.page-enter,
+.page-leave-to {
   opacity: 0;
 }
 ```
@@ -203,9 +203,7 @@ Then we add its path to the `css` array in our `nuxt.config.js` file:
 
 ```js{}[nuxt.config.js]
 export default {
-  css: [
-    '~/assets/main.css'
-  ]
+  css: ['~/assets/main.css']
 }
 ```
 
@@ -213,7 +211,7 @@ export default {
 
 ## The layoutTransition Property
 
-The layout transition is used to set the default properties of the layout transitions. 
+The layout transition is used to set the default properties of the layout transitions.
 
 The default settings for layout transitions are:
 
@@ -247,11 +245,13 @@ export default {
 ```
 
 ```css{}[assets/main.css]
-.my-layouts-enter-active, .my-layouts-leave-active {
-  transition: opacity .5s
+.my-layouts-enter-active,
+.my-layouts-leave-active {
+  transition: opacity 0.5s;
 }
-.my-layouts-enter, .my-layouts-leave-active {
-  opacity: 0
+.my-layouts-enter,
+.my-layouts-leave-active {
+  opacity: 0;
 }
 ```
 
@@ -285,10 +285,12 @@ export default {
 If you do modify the page Transition name you will also have to rename the css class.
 
 ```css{}[assets/main.css]
-.my-page-enter-active, .my-page-leave-active {
-  transition: opacity .5s;
+.my-page-enter-active,
+.my-page-leave-active {
+  transition: opacity 0.5s;
 }
-.my-page-enter, .my-page-leave-to {
+.my-page-enter,
+.my-page-leave-to {
   opacity: 0;
 }
 ```
@@ -296,6 +298,5 @@ If you do modify the page Transition name you will also have to rename the css c
 <app-modal>
   <code-sandbox  :src="csb_link"></code-sandbox>
 </app-modal>
-
 
 <quiz :questions="questions"></quiz>

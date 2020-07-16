@@ -16,6 +16,7 @@ position: 110
 3. Опция `store` добавляется к корневому экземпляру `Vue`.
 
 Nuxt.js позволяет выбрать один из двух подходов при работе с хранилищем:
+
 - **Обыкновенный:** `store/index.js` возвращает экземпляр хранилища
 - **Модульный:** каждый `.js`-файл в папке `store` считается [модулем с пространством имён](http://vuex.vuejs.org/en/modules.html) (`index` считается корневым модулем)
 
@@ -27,17 +28,17 @@ import Vuex from 'vuex'
 
 Vue.use(Vuex)
 
-const store = () => new Vuex.Store({
-
-  state: {
-    counter: 0
-  },
-  mutations: {
-    increment (state) {
-      state.counter++
+const store = () =>
+  new Vuex.Store({
+    state: {
+      counter: 0
+    },
+    mutations: {
+      increment(state) {
+        state.counter++
+      }
     }
-  }
-})
+  })
 
 export default store
 ```
@@ -48,7 +49,9 @@ export default store
 
 ```html
 <template>
-  <button @click="$store.commit('increment')">{{ $store.state.counter }}</button>
+  <button @click="$store.commit('increment')">
+    {{ $store.state.counter }}
+  </button>
 </template>
 ```
 
@@ -64,26 +67,27 @@ export const state = () => ({
 })
 
 export const mutations = {
-  increment (state) {
+  increment(state) {
     state.counter++
   }
 }
 ```
 
 Предположим, у нас есть модуль `store/todos.js`:
+
 ```js
 export const state = () => ({
   list: []
 })
 
 export const mutations = {
-  add (state, text) {
+  add(state, text) {
     state.list.push({
       text,
       done: false
     })
   },
-  toggle (state, todo) {
+  toggle(state, todo) {
     todo.done = !todo.done
   }
 }
@@ -95,36 +99,40 @@ export const mutations = {
 <template>
   <ul>
     <li v-for="todo in todos">
-      <input type="checkbox" :checked="todo.done" @change="toggle(todo)">
+      <input type="checkbox" :checked="todo.done" @change="toggle(todo)" />
       <span :class="{ done: todo.done }">{{ todo.text }}</span>
     </li>
-    <li><input placeholder="What needs to be done?" @keyup.enter="addTodo"></li>
+    <li>
+      <input placeholder="What needs to be done?" @keyup.enter="addTodo" />
+    </li>
   </ul>
 </template>
 
 <script>
-import { mapMutations } from 'vuex'
+  import { mapMutations } from 'vuex'
 
-export default {
-  computed: {
-    todos () { return this.$store.state.todos.list }
-  },
-  methods: {
-    addTodo (e) {
-      this.$store.commit('todos/add', e.target.value)
-      e.target.value = ''
+  export default {
+    computed: {
+      todos() {
+        return this.$store.state.todos.list
+      }
     },
-    ...mapMutations({
-      toggle: 'todos/toggle'
-    })
+    methods: {
+      addTodo(e) {
+        this.$store.commit('todos/add', e.target.value)
+        e.target.value = ''
+      },
+      ...mapMutations({
+        toggle: 'todos/toggle'
+      })
+    }
   }
-}
 </script>
 
 <style>
-.done {
-  text-decoration: line-through;
-}
+  .done {
+    text-decoration: line-through;
+  }
 </style>
 ```
 
@@ -138,25 +146,25 @@ export default {
 
 > Метод `fetch` используется для заполнения хранилища перед рендерингом страницы. Он похож на метод `data`, но не устанавливает данные компонента.
 
-Метод `fetch`, *если он указан*, вызывается каждый раз перед загрузкой компонента (**вышесказанное справедливо только для компонентов-страниц**). Он может быть вызван как при рендеренге на сервере, так и при переходе по ссылке на клиенте.
+Метод `fetch`, _если он указан_, вызывается каждый раз перед загрузкой компонента (**вышесказанное справедливо только для компонентов-страниц**). Он может быть вызван как при рендеренге на сервере, так и при переходе по ссылке на клиенте.
 
 Метод `fetch` получает в качестве первого аргумента [контекст](/api/pages-context). Чтобы сделать метод асинхронным, **верните промис** — nuxt.js дождётся его разрешения перед тем как рендерить компонент.
 
 Пример `pages/index.vue`:
+
 ```html
 <template>
   <h1>Звёзды: {{ $store.state.stars }}</h1>
 </template>
 
 <script>
-export default {
-  fetch ({ store, params }) {
-    return axios.get('http://my-api/stars')
-    .then((res) => {
-      store.commit('setStars', res.data)
-    })
+  export default {
+    fetch({ store, params }) {
+      return axios.get('http://my-api/stars').then(res => {
+        store.commit('setStars', res.data)
+      })
+    }
   }
-}
 </script>
 ```
 
@@ -168,12 +176,12 @@ export default {
 </template>
 
 <script>
-export default {
-  async fetch ({ store, params }) {
-    let { data } = await axios.get('http://my-api/stars')
-    store.commit('setStars', data)
+  export default {
+    async fetch({ store, params }) {
+      let { data } = await axios.get('http://my-api/stars')
+      store.commit('setStars', data)
+    }
   }
-}
 </script>
 ```
 
@@ -183,7 +191,7 @@ export default {
 
 ## Действие nuxtServerInit
 
-Если действие `nuxtServerInit` определено для хранилища, nuxt.js вызовет его в рамках контекста (только на сервере). Это может быть полезным, если у нас есть данные на сервере, которые мы хотим передать клиентскому приложению напрямую. 
+Если действие `nuxtServerInit` определено для хранилища, nuxt.js вызовет его в рамках контекста (только на сервере). Это может быть полезным, если у нас есть данные на сервере, которые мы хотим передать клиентскому приложению напрямую.
 
 Например, предположим что у нас есть хранилище сессий и мы можем получить доступ к пользователю через `req.authUser`. Чтобы указать данные о пользователе в хранилище, добавьте в `store/index.js` следующий код:
 

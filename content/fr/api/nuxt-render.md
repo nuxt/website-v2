@@ -1,5 +1,5 @@
 ---
-title: "API : nuxt.render(req, res)"
+title: 'API : nuxt.render(req, res)'
 description: Vous pouvez utiliser Nuxt.js comme un middleware pour votre serveur Node.js.
 menu: render
 category: programmatically
@@ -20,7 +20,7 @@ Exemple avec [Express](https://github.com/expressjs/express) :
 const { Nuxt, Builder } = require('nuxt')
 
 const app = require('express')()
-const isProd = (process.env.NODE_ENV === 'production')
+const isProd = process.env.NODE_ENV === 'production'
 const port = process.env.PORT || 3000
 
 // Nous instancions Nuxt.js avec les options
@@ -33,13 +33,12 @@ app.use(nuxt.render)
 
 // Faire le build seulement en mode de développement avec du rechargement à chaud
 if (config.dev) {
-  new Builder(nuxt).build()
-    .then(listen)
+  new Builder(nuxt).build().then(listen)
 } else {
   listen()
 }
 
-function listen () {
+function listen() {
   // Écouter le serveur
   app.listen(port, '0.0.0.0')
   console.log('Le serveur écoute sur `localhost:' + port + '`.')

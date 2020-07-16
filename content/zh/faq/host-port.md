@@ -9,14 +9,16 @@ position: 7
 
 您可以通过不同方式配置主机和端口，如下列出**从最高优先级到最低优先级**。
 
-> **注意：** 如果为`port`指定字符串值`'0'`（不是 `0`），将为您的Nuxt应用程序分配一个随机端口。
+> **注意：** 如果为`port`指定字符串值`'0'`（不是 `0`），将为您的 Nuxt 应用程序分配一个随机端口。
 
 ## 作为命令参数直接传递
 
 ```sh
 nuxt --hostname myhost --port 3333
 ```
+
 或
+
 ```js
 "scripts": {
   "dev": "nuxt --hostname myhost --port 3333"
@@ -37,7 +39,6 @@ export default {
 }
 ```
 
-
 ## 使用 NUXT_HOST 和 NUXT_PORT env 变量
 
 与 HOST 和 PORT 类似，但更具体，以防您需要添加其他东西。
@@ -55,7 +56,8 @@ export default {
 ```bash
 npm install --save-dev cross-env
 ```
-配置cross-env:
+
+配置 cross-env:
 
 ```js
 "scripts": {
@@ -63,14 +65,13 @@ npm install --save-dev cross-env
 }
 ```
 
-## 使用HOST和PORT env变量
+## 使用 HOST 和 PORT env 变量
 
 ```js
 "scripts": {
   "dev": "HOST=0.0.0.0 PORT=3333 nuxt"
 }
 ```
-
 
 ## 在 `package.json` 中配置 `nuxt` :
 

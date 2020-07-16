@@ -1,5 +1,5 @@
 ---
-title: "API: nuxt.renderRoute(route, context)"
+title: 'API: nuxt.renderRoute(route, context)'
 description: Render a specific route with a given context.
 menu: renderRoute
 category: programmatically
@@ -9,7 +9,7 @@ position: 203
 - 型: `Function`
 - 引数:
   1. `String`、レンダリングするルート
-  2. *オプション*、`Object`、付与するコンテキスト、利用できるキー: `req` 及び `res`
+  2. _オプション_、`Object`、付与するコンテキスト、利用できるキー: `req` 及び `res`
 - 戻り値: `Promise`
   - `html`: `String`
   - `error`: `null` または `Object`

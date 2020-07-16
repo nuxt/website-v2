@@ -1,5 +1,5 @@
 ---
-title: "The generate Property"
+title: 'The generate Property'
 description: Configure the generation of your universal web application to a static web application.
 menu: generate
 category: configuration
@@ -41,7 +41,7 @@ export default {
   generate: {
     crawler: false
   }
-};
+}
 ```
 
 ## dir
@@ -98,7 +98,7 @@ export default {
       /^\/admin/ // path starts with /admin
     ]
   }
-};
+}
 ```
 
 ```bash
@@ -111,9 +111,9 @@ You can also exclude a specific route by giving a string:
 ```js
 export default {
   generate: {
-    exclude: ["/my-secret-page"]
+    exclude: ['/my-secret-page']
   }
-};
+}
 ```
 
 ## fallback
@@ -124,30 +124,29 @@ export default {
 ```js
 export default {
   generate: {
-    fallback: "404.html"
+    fallback: '404.html'
   }
-};
+}
 ```
 
-The path to the fallback HTML file. It should be set as the error page, so that also unknown routes are rendered via Nuxt.
-If unset or set to a falsy value, the name of the fallback HTML file will be `200.html`. If set to `true`, the filename will be `404.html`. If you provide a string as a value, it will be used instead.
+The path to the fallback HTML file. It should be set as the error page, so that also unknown routes are rendered via Nuxt. If unset or set to a falsy value, the name of the fallback HTML file will be `200.html`. If set to `true`, the filename will be `404.html`. If you provide a string as a value, it will be used instead.
 
 When running a SPA it is more idiomatic to use a `200.html`, as it's the only file necessary as no other routes are generated.
 
 ```js
-fallback: false;
+fallback: false
 ```
 
 If working with statically generated pages then it is recommended to use a `404.html` for error pages and for those covered by [excludes](https://nuxtjs.org/api/configuration-generate#exclude) (the files that you do not want generated as static pages).
 
 ```js
-fallback: true;
+fallback: true
 ```
 
 However, Nuxt allows you to configure any page you like so if you don't want to use the `200.html` or `404.html` you can add a string and then you just have to make sure you redirect to that page instead. This is of course not necessary and is best to redirect to `200.html`/`404.html`.
 
 ```js
-fallback: "fallbackPage.html";
+fallback: 'fallbackPage.html'
 ```
 
 _Note: Multiple services (e.g. Netlify) detect a `404.html` automatically. If you configure your webserver on your own, please consult it's documentation to find out how to set up an error page (and set it to the `404.html` file) _
@@ -200,9 +199,9 @@ We add routes for `/users/:id` in `nuxt.config.js`:
 ```js
 export default {
   generate: {
-    routes: ["/users/1", "/users/2", "/users/3"]
+    routes: ['/users/1', '/users/2', '/users/3']
   }
-};
+}
 ```
 
 Then when we launch `nuxt generate`:
@@ -232,19 +231,19 @@ Great, but what if we have **dynamic params**?
 `nuxt.config.js`
 
 ```js
-import axios from "axios";
+import axios from 'axios'
 
 export default {
   generate: {
     routes() {
-      return axios.get("https://my-api/users").then(res => {
+      return axios.get('https://my-api/users').then(res => {
         return res.data.map(user => {
-          return "/users/" + user.id;
-        });
-      });
+          return '/users/' + user.id
+        })
+      })
     }
   }
-};
+}
 ```
 
 ### Function with a callback
@@ -252,23 +251,23 @@ export default {
 `nuxt.config.js`
 
 ```js
-import axios from "axios";
+import axios from 'axios'
 
 export default {
   generate: {
     routes(callback) {
       axios
-        .get("https://my-api/users")
+        .get('https://my-api/users')
         .then(res => {
           const routes = res.data.map(user => {
-            return "/users/" + user.id;
-          });
-          callback(null, routes);
+            return '/users/' + user.id
+          })
+          callback(null, routes)
         })
-        .catch(callback);
+        .catch(callback)
     }
   }
-};
+}
 ```
 
 ### Speeding up dynamic route generation with `payload`
@@ -278,22 +277,22 @@ In the example above, we're using the `user.id` from the server to generate the 
 `nuxt.config.js`
 
 ```js
-import axios from "axios";
+import axios from 'axios'
 
 export default {
   generate: {
     routes() {
-      return axios.get("https://my-api/users").then(res => {
+      return axios.get('https://my-api/users').then(res => {
         return res.data.map(user => {
           return {
-            route: "/users/" + user.id,
+            route: '/users/' + user.id,
             payload: user
-          };
-        });
-      });
+          }
+        })
+      })
     }
   }
-};
+}
 ```
 
 Now we can access the `payload` from `/users/_id.vue` like so:
@@ -333,7 +332,7 @@ export default {
   generate: {
     subFolders: false
   }
-};
+}
 ```
 
 ```bash

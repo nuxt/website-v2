@@ -22,7 +22,7 @@ Pertama, kita instal dependensi:
 yarn add express express-session body-parser whatwg-fetch
 ```
 
-*Kita akan membahas tentang `whatwg-fetch` nanti.*
+_Kita akan membahas tentang `whatwg-fetch` nanti._
 
 Kemudian buat `server.js` kita:
 
@@ -36,12 +36,14 @@ const app = require('express')()
 app.use(bodyParser.json())
 
 // Sessions untuk membuat `req.session`
-app.use(session({
-  secret: 'super-secret-key',
-  resave: false,
-  saveUninitialized: false,
-  cookie: { maxAge: 60000 }
-}))
+app.use(
+  session({
+    secret: 'super-secret-key',
+    resave: false,
+    saveUninitialized: false,
+    cookie: { maxAge: 60000 }
+  })
+)
 
 // POST `/api/login` untuk memasukkan (log in) pengguna dan menambahkannya ke `req.session.authUser`
 app.post('/api/login', function (req, res) {
@@ -83,7 +85,7 @@ Dan kita perbarui skrip `package.json` kita:
 // ...
 ```
 
-Catatan: Anda perlu untuk menjalankan `npm install --save-dev cross-env` agar contoh di atas dapat bekerja. Jika Anda *tidak* mengembangkan di Windows Anda tidak memerlukan cross-env di dalam skrip `start` Anda dan mengatur `NODE_ENV` secara langsung.
+Catatan: Anda perlu untuk menjalankan `npm install --save-dev cross-env` agar contoh di atas dapat bekerja. Jika Anda _tidak_ mengembangkan di Windows Anda tidak memerlukan cross-env di dalam skrip `start` Anda dan mengatur `NODE_ENV` secara langsung.
 
 ## Menggunakan store
 
@@ -100,23 +102,22 @@ Vue.use(Vuex)
 // Polyfill untuk `window.fetch()`
 require('whatwg-fetch')
 
-const store = () => new Vuex.Store({
+const store = () =>
+  new Vuex.Store({
+    state: {
+      authUser: null
+    },
 
-  state: {
-    authUser: null
-  },
+    mutations: {
+      SET_USER(state, user) {
+        state.authUser = user
+      }
+    },
 
-  mutations: {
-    SET_USER (state, user) {
-      state.authUser = user
+    actions: {
+      // ...
     }
-  },
-
-  actions: {
-    // ...
-  }
-
-})
+  })
 
 export default store
 ```
@@ -208,14 +209,14 @@ Mari tambahkan sebuah rute `/secret` di mana hanya pengguna yang terhubung yang 
 </template>
 
 <script>
-export default {
-  // kita menggunakan fetch() karena kita tidak ingin mengatur data untuk komponen ini
-  fetch ({ store, redirect }) {
-    if (!store.state.authUser) {
-      return redirect('/')
+  export default {
+    // kita menggunakan fetch() karena kita tidak ingin mengatur data untuk komponen ini
+    fetch({ store, redirect }) {
+      if (!store.state.authUser) {
+        return redirect('/')
+      }
     }
   }
-}
 </script>
 ```
 

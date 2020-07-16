@@ -1,5 +1,5 @@
 ---
-title: "API: render プロパティ"
+title: 'API: render プロパティ'
 description: Nuxt.js はページレンダリングの実行時オプションをカスタマイズできます。
 menu: render
 category: configuration
@@ -19,7 +19,7 @@ export default {
   render: {
     bundleRenderer: {
       directives: {
-        custom1 (el, dir) {
+        custom1(el, dir) {
           // 何かの処理 ...
         }
       }
@@ -28,8 +28,7 @@ export default {
 }
 ```
 
-利用可能なオプションは [Vue SSR API リファレンス](https://ssr.vuejs.org/ja/api/#レンダラオプション) でより詳しく学べます。
-Nuxt.js は既に最高の SSR のデフォルト設定を提供していて、誤った設定が SSR の問題を引き起こす可能性があるため、このオプションを使用しないことをお勧めします。
+利用可能なオプションは [Vue SSR API リファレンス](https://ssr.vuejs.org/ja/api/#レンダラオプション) でより詳しく学べます。 Nuxt.js は既に最高の SSR のデフォルト設定を提供していて、誤った設定が SSR の問題を引き起こす可能性があるため、このオプションを使用しないことをお勧めします。
 
 ## etag
 
@@ -43,6 +42,7 @@ Nuxt.js は既に最高の SSR のデフォルト設定を提供していて、�
 `etag.hash` を指定することで、独自のハッシュ関数を使用することができます。
 
 `nuxt.config.js`
+
 ```js
 import { murmurHash128 } from 'murmurhash-native'
 
@@ -75,7 +75,7 @@ Object を設定する場合、[compression](https://www.npmjs.com/package/compr
 
 > [serve-placeholder](https://github.com/nuxt/serve-placeholder) ミドルウェアのオプションです。
 
-もしこれらのうち1つか両方を無効にする場合は、偽となる値を渡すことができます。
+もしこれらのうち 1 つか両方を無効にする場合は、偽となる値を渡すことができます。
 
 ## http2
 
@@ -89,22 +89,22 @@ Object を設定する場合、[compression](https://www.npmjs.com/package/compr
 **例:**
 
 ```js
-pushAssets: (req, res, publicPath, preloadFiles) => preloadFiles
-  .filter(f => f.asType === 'script' && f.file === 'runtime.js')
-  .map(f => `<${publicPath}${f.file}>; rel=preload; as=${f.asType}`)
+pushAssets: (req, res, publicPath, preloadFiles) =>
+  preloadFiles
+    .filter(f => f.asType === 'script' && f.file === 'runtime.js')
+    .map(f => `<${publicPath}${f.file}>; rel=preload; as=${f.asType}`)
 ```
 
-配列と同様に自分のアセットを追加することができます。
-`req` と `res` を使うことで、例えばアプリケーションバージョンを持ったクッキーを使うといったように、リクエストヘッダを元にどのリンクをプッシュするか決めることができます。
+配列と同様に自分のアセットを追加することができます。 `req` と `res` を使うことで、例えばアプリケーションバージョンを持ったクッキーを使うといったように、リクエストヘッダを元にどのリンクをプッシュするか決めることができます。
 
-それらのアセットは `,` を区切り文字として合成され、1つの `Link` ヘッダに渡されます。
+それらのアセットは `,` を区切り文字として合成され、1 つの `Link` ヘッダに渡されます。
 
 ## injectScripts
 
 - 型: `Boolean`
- - デフォルト: `true`
+- デフォルト: `true`
 
-> Nuxtのバンドルに `<script>` を追加します。JSを除く純粋なHTMLを表示する場合は `false` に設定してください。(`v2.8.0+` から利用可能)
+> Nuxt のバンドルに `<script>` を追加します。JS を除く純粋な HTML を表示する場合は `false` に設定してください。(`v2.8.0+` から利用可能)
 
 ## resourceHints
 
@@ -122,13 +122,12 @@ pushAssets: (req, res, publicPath, preloadFiles) => preloadFiles
 
 > SSR レンダリングを有効にする
 
-このオプションは、提供されていなければ `mode` に基づいて自動的に設定されます。
-これは（例えば Docker で）イメージビルド後にランタイムで SSR を動的に有効/無効にするのに便利です。
+このオプションは、提供されていなければ `mode` に基づいて自動的に設定されます。これは（例えば Docker で）イメージビルド後にランタイムで SSR を動的に有効/無効にするのに便利です。
 
 ## ssrLog
 
 - 型: `Boolean` | `String`
- - デフォルト: `true` in dev mode and `false` in production
+- デフォルト: `true` in dev mode and `false` in production
 
 > デバックしやすいように、サーバーサイドのログをブラウザに転送します（開発モードのみ利用可能）
 
@@ -141,17 +140,16 @@ pushAssets: (req, res, publicPath, preloadFiles) => preloadFiles
 
 > `static/` ディレクトリの振る舞いを設定します
 
-利用可能なオプションは  [serve-static](https://www.npmjs.com/package/serve-static) を参照してください。
+利用可能なオプションは [serve-static](https://www.npmjs.com/package/serve-static) を参照してください。
 
-それらに加えて、デフォルトで `true` になる `prefix` オプションを導入しました。
-静的なアセットに router base を追加します。
+それらに加えて、デフォルトで `true` になる `prefix` オプションを導入しました。静的なアセットに router base を追加します。
 
 **例:**
 
-* アセット: `favicon.ico`
-* Router base: `/t`
-* `prefix: true`（デフォルト）: `/t/favicon.ico`
-* `prefix: false`: `/favicon.ico`
+- アセット: `favicon.ico`
+- Router base: `/t`
+- `prefix: true`（デフォルト）: `/t/favicon.ico`
+- `prefix: false`: `/favicon.ico`
 
 **Caveats:**
 
@@ -164,7 +162,7 @@ pushAssets: (req, res, publicPath, preloadFiles) => preloadFiles
 
 > 配布ファイルの配信に使用されるオプションです。本番でのみ適用されます。
 
-利用可能なオプションは  [serve-static](https://www.npmjs.com/package/serve-static) を参照してください。
+利用可能なオプションは [serve-static](https://www.npmjs.com/package/serve-static) を参照してください。
 
 ## csp
 
@@ -197,9 +195,7 @@ export default {
           'https://www.google-analytics.com',
           'https://name.example.com'
         ],
-        'report-uri': [
-          'https://report.example.com/report-csp-violations'
-        ]
+        'report-uri': ['https://report.example.com/report-csp-violations']
       },
       addMeta: true
     }
@@ -226,7 +222,15 @@ export default {
       'img-src': ['https:', '*.google-analytics.com'],
       'worker-src': ["'self'", `blob:`, PRIMARY_HOSTS, '*.logrocket.io'],
       'style-src': ["'self'", "'unsafe-inline'", PRIMARY_HOSTS],
-      'script-src': ["'self'", "'unsafe-inline'", PRIMARY_HOSTS, 'sentry.io', '*.sentry-cdn.com', '*.google-analytics.com', '*.logrocket.io'],
+      'script-src': [
+        "'self'",
+        "'unsafe-inline'",
+        PRIMARY_HOSTS,
+        'sentry.io',
+        '*.sentry-cdn.com',
+        '*.google-analytics.com',
+        '*.logrocket.io'
+      ],
       'connect-src': [PRIMARY_HOSTS, 'sentry.io', '*.google-analytics.com'],
       'form-action': ["'self'"],
       'frame-ancestors': ["'none'"],
@@ -238,5 +242,4 @@ export default {
     }
   }
 }
-
 ```

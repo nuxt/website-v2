@@ -5,6 +5,7 @@ menu: Deploy on Azure Static Web Apps
 category: deployment
 position: 203
 ---
+
 You can now deploy your static sites to Azure using Azure static web apps. You will need to have your app in Github as Azure static web apps leverages Github actions which allow you to re-build your static site on every git push.
 
 There are 2 things you need to configure in order to deploy your app to Azure static web apps. The first one is to modify the build command as Azure reads the build command from your package.json and for static sites we need to use the generate command.
@@ -95,7 +96,7 @@ Now all you have to do is modify your code and push your changes. Pushing your c
 
 ### **How to handle dynamic routes**
 
-If you are working with dynamic pages such as _id.vue then you you will need to add these routes to the generate property in your nuxt config.
+If you are working with dynamic pages such as \_id.vue then you you will need to add these routes to the generate property in your nuxt config.
 
 [See the documentation on how to handle dynamic routes.](https://nuxtjs.org/api/configuration-generate#routes)
 
@@ -105,7 +106,7 @@ If you are using Nuxt 2.13+ then you won't have to worry about this as there is 
 
 ### How to add an error page
 
-In order to not have the default 404 page you can create an `error.vue` file in your layouts folder. 
+In order to not have the default 404 page you can create an `error.vue` file in your layouts folder.
 
 ### How to add SPA fallback
 

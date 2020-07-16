@@ -9,12 +9,12 @@ position: 121
 # Properti plugin
 
 - Type: `Array`
-    - Items: `String` atau `Object`
+  - Items: `String` atau `Object`
 
 Jika item adalah objek, propertinya adalah:
 
 - src: `String` (path dari file)
-- ssr: `Boolean` (default ke `true`) *Jika `false`, file tersebut akan disertakan hanya pada sisi-klien.*
+- ssr: `Boolean` (default ke `true`) _Jika `false`, file tersebut akan disertakan hanya pada sisi-klien._
 
 > Properti plugin memungkinkan Anda menambahkan plugin Vue.js dengan mudah ke aplikasi utama Anda.
 

@@ -1,5 +1,5 @@
 ---
-title: "API: La propriété ignore"
+title: 'API: La propriété ignore'
 description: Définissez les fichiers ignorés pour votre application Nuxt.js
 menu: ignore
 category: configuration
@@ -8,9 +8,7 @@ position: 114
 
 ## .nuxtignore
 
-Vous pouvez utiliser un fichier `.nuxtignore` pour permettre à Nuxt.js d'ignorer les fichiers `layout`, `page`, `store` et `middleware` dans le répertoire racine de votre projet (`rootDir`) pendant la phase de construction.
-Le fichier `.nuxtignore` est soumis aux mêmes spécifications que les fichiers `.gitignore` et `.eslintignore`, dans 
-lequel chaque ligne est un modèle global indiquant quels fichiers doivent être ignorés.
+Vous pouvez utiliser un fichier `.nuxtignore` pour permettre à Nuxt.js d'ignorer les fichiers `layout`, `page`, `store` et `middleware` dans le répertoire racine de votre projet (`rootDir`) pendant la phase de construction. Le fichier `.nuxtignore` est soumis aux mêmes spécifications que les fichiers `.gitignore` et `.eslintignore`, dans lequel chaque ligne est un modèle global indiquant quels fichiers doivent être ignorés.
 
 Par exemple:
 
@@ -42,20 +40,16 @@ middleware/foo/*.js
 - Type: `String`
 - Par défaut : `'-'`
 
-> Tout fichier dans pages/, layout/, middleware/ ou store/ sera ignoré lors de la construction si son nom de fichier 
-> commence par le préfixe spécifié par `ignorePrefix`.
+> Tout fichier dans pages/, layout/, middleware/ ou store/ sera ignoré lors de la construction si son nom de fichier commence par le préfixe spécifié par `ignorePrefix`.
 
-Par défaut, tous les fichiers commençant par `-` seront ignorés, tels que `store/-foo.js` et `pages / -bar.vue`. Cela 
-permet de localiser les tests, les utilitaires et les composants avec leurs appelants sans être eux-mêmes convertis en 
-chemin, store, etc.
+Par défaut, tous les fichiers commençant par `-` seront ignorés, tels que `store/-foo.js` et `pages / -bar.vue`. Cela permet de localiser les tests, les utilitaires et les composants avec leurs appelants sans être eux-mêmes convertis en chemin, store, etc.
 
 ## La propriété ignore
 
 - Type: `Array`
 - Par défaut : `['**/*.test.*']`
 
-> Plus personnalisable que `ignorePrefix`: tous les fichiers correspondant aux motifs globaux spécifiés dans `ignore` 
-> seront ignorés lors de la construction.
+> Plus personnalisable que `ignorePrefix`: tous les fichiers correspondant aux motifs globaux spécifiés dans `ignore` seront ignorés lors de la construction.
 
 ## ignoreOptions
 

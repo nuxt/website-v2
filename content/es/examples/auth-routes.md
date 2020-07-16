@@ -26,7 +26,7 @@ First, we install the dependencies:
 yarn add express express-session body-parser whatwg-fetch
 ```
 
-*We will talk about `whatwg-fetch` later.*
+_We will talk about `whatwg-fetch` later._
 
 Then we create our `server.js`:
 
@@ -40,12 +40,14 @@ const app = require('express')()
 app.use(bodyParser.json())
 
 // Sessions to create `req.session`
-app.use(session({
-  secret: 'super-secret-key',
-  resave: false,
-  saveUninitialized: false,
-  cookie: { maxAge: 60000 }
-}))
+app.use(
+  session({
+    secret: 'super-secret-key',
+    resave: false,
+    saveUninitialized: false,
+    cookie: { maxAge: 60000 }
+  })
+)
 
 // POST `/api/login` to log in the user and add him to the `req.session.authUser`
 app.post('/api/login', function (req, res) {
@@ -102,23 +104,22 @@ Vue.use(Vuex)
 // Polyfill for `window.fetch()`
 require('whatwg-fetch')
 
-const store = () => new Vuex.Store({
+const store = () =>
+  new Vuex.Store({
+    state: () => ({
+      authUser: null
+    }),
 
-  state: () => ({
-    authUser: null
-  }),
+    mutations: {
+      SET_USER(state, user) {
+        state.authUser = user
+      }
+    },
 
-  mutations: {
-    SET_USER (state, user) {
-      state.authUser = user
+    actions: {
+      // ...
     }
-  },
-
-  actions: {
-    // ...
-  }
-
-})
+  })
 
 export default store
 ```
@@ -210,14 +211,14 @@ Let's add a `/secret` route where only the connected user can see its content:
 </template>
 
 <script>
-export default {
-  // we use fetch() because we do not need to set data to this component
-  fetch ({ store, redirect }) {
-    if (!store.state.authUser) {
-      return redirect('/')
+  export default {
+    // we use fetch() because we do not need to set data to this component
+    fetch({ store, redirect }) {
+      if (!store.state.authUser) {
+        return redirect('/')
+      }
     }
   }
-}
 </script>
 ```
 

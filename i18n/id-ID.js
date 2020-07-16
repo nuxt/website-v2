@@ -97,7 +97,8 @@ module.exports = {
       }
     },
     companies: {
-      title: 'Siapa yang menggunakan nuxt<span class="text-nuxt-lightgreen">JS</span>'
+      title:
+        'Siapa yang menggunakan nuxt<span class="text-nuxt-lightgreen">JS</span>'
     },
     modes: {
       title: 'NUXT<span class="text-nuxt-lightgreen">JS</span> rendering',

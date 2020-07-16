@@ -9,7 +9,7 @@ position: 107
 
 ## Webpack 사용
 
-기본적으로 [vue-loader](http://vue-loader.vuejs.org/en/)는 자동으로 style과  template 파일을 `css-loader`와 Vue template compiler를 사용해 처리합니다. 이 컴파일 프로세스에서, `<img src="...">`나 `background: url(...)`, `@import` 같은 모든 에셋 URL은 모듈 디펜던시로 처리됩니다.
+기본적으로 [vue-loader](http://vue-loader.vuejs.org/en/)는 자동으로 style과 template 파일을 `css-loader`와 Vue template compiler를 사용해 처리합니다. 이 컴파일 프로세스에서, `<img src="...">`나 `background: url(...)`, `@import` 같은 모든 에셋 URL은 모듈 디펜던시로 처리됩니다.
 
 아래와 같은 파일 구조로 예를 들겠습니다:
 
@@ -24,14 +24,15 @@ position: 107
 
 <div class="Alert Alert--orange">
 
-**경고:** Nuxt 2.0에서부터 `~/` 알리아스는 CSS 파일에서 올바르게 처리되지 않습니다. 여러분은 (슬래시 없이) `~assets` 이나 `@` 알리아스를 `url` CSS 참조 경로에서 사용하셔야 합니다, 예를 들어, `background: url("~assets/banner.svg")`
+**경고:** Nuxt 2.0에서부터 `~/` 알리아스는 CSS 파일에서 올바르게 처리되지 않습니다. 여러분은 (슬래시 없이) `~assets` 이나 `@` 알리아스를 `url` CSS 참조 경로에서사용하셔야 합니다, 예를 들어, `background: url("~assets/banner.svg")`
 
 </div>
 
 또한 만약 `page/index.vue`에서 아래와 같이 사용했다면,:
+
 ```html
 <template>
-  <img src="~assets/image.png">
+  <img src="~assets/image.png" />
 </template>
 ```
 
@@ -45,13 +46,13 @@ createElement('img', { attrs: { src: require('~assets/image.png') } })
 
 이럴 때 얻게되는 이익은 아래와 같습니다:
 
-- `file-loader`는 에셋 파일을 복사하고 배치할 위치를 지정하고 캐싱을 위해 버전 해시를 사용하여 이름을 지정하는 방법을 제공합니다. 프로덕션 모드에서, 기본적으로 장기적인 캐싱 처리라는 이득을 보실 수 있습니다!
-- `url-loader`는 한계치보다 작은 용량의 파일을 base-64 데이터 URL로 인라인할 수 있습니다. 이렇게하면 작은 파일에 대한 HTTP 요청 수를 줄일 수 있습니다. 만약 파일이 한계치보다 크면 자동으로 다시 `file-loader`로 폴백합니다.
+- `file-loader`는 에셋 파일을 복사하고 배치할 위치를 지정하고 캐싱을 위해 버전해시를 사용하여 이름을 지정하는 방법을 제공합니다. 프로덕션 모드에서, 기본적으로장기적인 캐싱 처리라는 이득을 보실 수 있습니다!
+- `url-loader`는 한계치보다 작은 용량의 파일을 base-64 데이터 URL로 인라인할 수있습니다. 이렇게하면 작은 파일에 대한 HTTP 요청 수를 줄일 수 있습니다. 만약 파일이 한계치보다 크면 자동으로 다시 `file-loader`로 폴백합니다.
 
 사실, Nuxt.js의 기본 로더 설정은 아래와 같습니다:
 
 ```js
-[
+;[
   {
     test: /\.(png|jpe?g|gif|svg)$/,
     loader: 'url-loader',
@@ -77,13 +78,14 @@ createElement('img', { attrs: { src: require('~assets/image.png') } })
 
 ```html
 <template>
-  <img src="~assets/image.png">
+  <img src="~assets/image.png" />
 </template>
 ```
 
 아래와 같이 생성됩니다:
+
 ```html
-<img src="/_nuxt/img/image.0c61159.png">
+<img src="/_nuxt/img/image.0c61159.png" />
 ```
 
 만약 로더 설정을 변경하고 싶다면, [build.extend](/api/configuration-build#extend) 페이지를 참고합니다.
@@ -100,8 +102,8 @@ createElement('img', { attrs: { src: require('~assets/image.png') } })
 
 ```html
 <!-- Static image from static directory -->
-<img src="/my-image.png"/>
+<img src="/my-image.png" />
 
 <!-- Webpacked image from assets directory -->
-<img src="/assets/my-image-2.png"/>
+<img src="/assets/my-image-2.png" />
 ```

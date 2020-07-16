@@ -14,26 +14,29 @@ Untuk menghindari boilerplate, gunakan [modul Component Cache](https://github.co
 
 ## Cara Penggunaan
 
-- Tambahkan `@nuxtjs/component-cache` menggunakan  `Yarn` atau `npm` di proyek Anda.
+- Tambahkan `@nuxtjs/component-cache` menggunakan `Yarn` atau `npm` di proyek Anda.
 - Tambahkan `@nuxtjs/component-cache` ke bagian `modules` pada `nuxt.config.js`
 
 ```js
 {
   modules: [
     '@nuxtjs/component-cache',
-    ['@nuxtjs/component-cache', {
-      max: 10000,
-      maxAge: 1000 * 60 * 60
-    }]
+    [
+      '@nuxtjs/component-cache',
+      {
+        max: 10000,
+        maxAge: 1000 * 60 * 60
+      }
+    ]
   ]
 }
 ```
 
 Baca [component-level caching](http://ssr.vuejs.org/en/caching.html#component-level-caching) untuk keterangan lebih lanjut.
 
-## Dan, jangan lupa 
+## Dan, jangan lupa
 
 - Komponen yang bisa di-cache **harus didefinisikan dengan `name` yang unik**.
-- Anda ***DILARANG*** menggunakan cache komponen, jika
-    - Mempunyai "child-component" yang bergantung pada global state.
-    - Mempunyai "child-component" yang menimbulkan efek samping ketika me-render `context`.
+- Anda **_DILARANG_** menggunakan cache komponen, jika
+  - Mempunyai "child-component" yang bergantung pada global state.
+  - Mempunyai "child-component" yang menimbulkan efek samping ketika me-render `context`.

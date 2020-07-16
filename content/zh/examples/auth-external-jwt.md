@@ -9,23 +9,23 @@ position: 303
 
 # 文档
 
-在auth-routes示例中，api和nuxt一起启动并使用一个Node.js服务器实例。但是，有时我们应该使用`jsonWebToken`处理外部api身份验证问题。在这个例子中，将用最简单的方式解释。
+在 auth-routes 示例中，api 和 nuxt 一起启动并使用一个 Node.js 服务器实例。但是，有时我们应该使用`jsonWebToken`处理外部 api 身份验证问题。在这个例子中，将用最简单的方式解释。
 
 ## 官方 `auth-module`
 
-如果要实现复杂的身份验证流程，例如OAuth2，我们建议使用官方 [`auth-module`](https://github.com/nuxt-community/auth-module)
+如果要实现复杂的身份验证流程，例如 OAuth2，我们建议使用官方 [`auth-module`](https://github.com/nuxt-community/auth-module)
 
 ## 结构
 
-由于Nuxt.js同时提供服务器和客户端呈现，并且浏览器的cookie与Node.js服务器的cookie不同，因此我们应该将令牌(token)数据推送到可以在两端访问的某个存储空间中。
+由于 Nuxt.js 同时提供服务器和客户端呈现，并且浏览器的 cookie 与 Node.js 服务器的 cookie 不同，因此我们应该将令牌(token)数据推送到可以在两端访问的某个存储空间中。
 
 ### 用于服务器端渲染
 
-我们应该在登录后在会话浏览器cookie中保存令牌(token)，然后可以通过中间件文件中的 `req.headers.cookie`， `nuxtServerInit` 函数或者你可以访问 `req` 来得到它。
+我们应该在登录后在会话浏览器 cookie 中保存令牌(token)，然后可以通过中间件文件中的 `req.headers.cookie`， `nuxtServerInit` 函数或者你可以访问 `req` 来得到它。
 
 ### 用于客户端渲染
 
-我们直接在商店中提交令牌(token)，只要页面没有关闭或重新加载，我们就有令牌(token)。
+我们直接在商店中提交令牌(token)，只要页面没有关闭或重新加载，我们就有令牌 (token)。
 
 首先，我们安装依赖项：
 
@@ -44,8 +44,9 @@ const Cookie = process.client ? require('js-cookie') : undefined
 export default {
   middleware: 'notAuthenticated',
   methods: {
-    postLogin () {
-      setTimeout(() => { // 我们用超时模拟异步请求。
+    postLogin() {
+      setTimeout(() => {
+        // 我们用超时模拟异步请求。
         const auth = {
           accessToken: 'someStringGotFromApiServiceWithAjax'
         }
@@ -75,12 +76,12 @@ const createStore = () => {
       auth: null
     }),
     mutations: {
-      setAuth (state, auth) {
+      setAuth(state, auth) {
         state.auth = auth
       }
     },
     actions: {
-      nuxtServerInit ({ commit }, { req }) {
+      nuxtServerInit({ commit }, { req }) {
         let auth = null
         if (req.headers.cookie) {
           const parsed = cookieparser.parse(req.headers.cookie)
@@ -99,11 +100,11 @@ const createStore = () => {
 export default createStore
 ```
 
-> 注意：`nuxtServerInit` 函数仅在每个服务器端渲染中运行。因此我们使用store来改变中浏览器cookie。我们可以使用`req.headers.cookie`获取浏览器cookie，并使用`cookie-parser`解析它。
+> 注意：`nuxtServerInit` 函数仅在每个服务器端渲染中运行。因此我们使用 store 来改变中浏览器 cookie。我们可以使用`req.headers.cookie`获取浏览器 cookie，并使用`cookie-parser`解析它。
 
-## 检查auth中间件
+## 检查 auth 中间件
 
-我们可以检查商店是否在我们需要限制访问的每个页面中都有访问令牌(token)。在中间件(middleware)目录中，我们新建 `authenticated.js` 文件：
+我们可以检查商店是否在我们需要限制访问的每个页面中都有访问令牌(token)。在中间件 (middleware)目录中，我们新建 `authenticated.js` 文件：
 
 ```javascript
 export default function ({ store, redirect }) {
@@ -128,14 +129,15 @@ export default function ({ store, redirect }) {
 > 注意：对于需要身份验证的页面使用 `authenticated` 中间件，并在 登录/注册 和类似页面中使用 `notAuthenticated` 中间件。
 
 ## 注销用户
-最后为了允许用户退出登录，我们可以删除cookie：
+
+最后为了允许用户退出登录，我们可以删除 cookie：
 
 ```javascript
 const Cookie = process.client ? require('js-cookie') : undefined
 
 export default {
   methods: {
-    logout () {
+    logout() {
       // 使外部API上的JWT Cookie无效
       Cookie.remove('auth')
       this.$store.commit('setAuth', null)

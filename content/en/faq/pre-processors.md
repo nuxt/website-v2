@@ -15,14 +15,14 @@ Example of our `pages/index.vue` using [Pug](https://github.com/pugjs/pug) and [
 </template>
 
 <style lang="sass">
-.red
-  color: red
+  .red
+    color: red
 </style>
 
 <style lang="scss">
-.red {
-  color: red
-}
+  .red {
+    color: red;
+  }
 </style>
 ```
 

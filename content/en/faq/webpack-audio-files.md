@@ -10,7 +10,7 @@ Audio files should be processed by `file-loader`. This loader is already include
 ```js
 export default {
   build: {
-    extend (config, ctx) {
+    extend(config, ctx) {
       config.module.rules.push({
         test: /\.(ogg|mp3|wav|mpe?g)$/i,
         loader: 'file-loader',
@@ -38,7 +38,7 @@ export default {
       }
     },
 
-    extend (config, ctx) {
+    extend(config, ctx) {
       config.module.rules.push({
         test: /\.(ogg|mp3|wav|mpe?g)$/i,
         loader: 'file-loader',

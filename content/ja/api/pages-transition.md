@@ -1,6 +1,6 @@
 ---
-title: "API: ページ `transition` プロパティ"
-description: "Nuxt.js では `<transition>` コンポーネントを使って、ページ間を遷移する際のトランジション/アニメーションを行うことができます。"
+title: 'API: ページ `transition` プロパティ'
+description: 'Nuxt.js では `<transition>` コンポーネントを使って、ページ間を遷移する際のトランジション/アニメーションを行うことができます。'
 menu: transition
 category: pages
 position: 29
@@ -36,7 +36,7 @@ export default {
 上のように設定されると、コンポーネントは次のようにセットされます:
 
 ```html
-<transition name="test">
+<transition name="test"></transition>
 ```
 
 ## オブジェクト
@@ -55,13 +55,13 @@ export default {
 上のように設定されると、コンポーネントは次のようにセットされます:
 
 ```html
-<transition name="test" mode="out-in">
+<transition name="test" mode="out-in"></transition>
 ```
 
 `transition` オブジェクトが持つことができるプロパティは以下のとおり:
 
 | キー | 型 | デフォルト | 定義 |
-|------|------|---------|-----------|
+| --- | --- | --- | --- |
 | `name` | `String` | `"page"` | すべてのトランジション時に適用されるトランジション名 |
 | `mode` | `String` | `"out-in"` | すべてのトランジション時に適用されるトランジションモード。詳細は [Vue.js のドキュメント](https://vuejs.org/v2/guide/transitions.html#Transition-Modes) 参照 |
 | `css` | `Boolean` | `true` | CSS トランジションクラスを適用するか否か。デフォルトは `true` です。`false` を設定すると、コンポーネントのイベントで登録された JavaScript フックのみがトリガーになります |
@@ -95,7 +95,7 @@ export default {
 }
 ```
 
-*メモ: JavaScript のみのトランジションのために明示的に `css: false` を追加しておくのは良いアイディアです。これは Vue は CSS 判定をスキップさせます。また誤って CSS ルールがトランジションに干渉するのを防ぎます。*
+_メモ: JavaScript のみのトランジションのために明示的に `css: false` を追加しておくのは良いアイディアです。これは Vue は CSS 判定をスキップさせます。また誤って CSS ルールがトランジションに干渉するのを防ぎます。_
 
 ### トランジションモード
 
@@ -116,8 +116,10 @@ export default {
 
 ```js
 export default {
-  transition (to, from) {
-    if (!from) { return 'slide-left' }
+  transition(to, from) {
+    if (!from) {
+      return 'slide-left'
+    }
     return +to.query.page < +from.query.page ? 'slide-right' : 'slide-left'
   }
 }

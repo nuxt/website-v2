@@ -5,6 +5,7 @@ position: 3
 category: get-started
 csb_link: https://codesandbox.io/embed/github/nuxt-academy/guides-examples/tree/master/01_get_started/03_directory_structure?fontsize=14&hidenavigation=1&theme=dark
 ---
+
 The default Nuxt.js application structure is intended to provide a great starting point for both small and large applications. You are free to organize your application however you like and can create other directories as and when you need them.
 
 Let's create the directories and files that do not exist in our project yet.
@@ -46,10 +47,9 @@ The `assets` directory contains your uncompiled assets such as your styles, im
 
 ### The static directory
 
-The `static` directory is directly mapped to the server root and contains files that have to keep their names (e.g. `robots.txt`) *or* likely won't change (e.g. the favicon)
+The `static` directory is directly mapped to the server root and contains files that have to keep their names (e.g. `robots.txt`) _or_ likely won't change (e.g. the favicon)
 
 ➡️ Learn more about the [static directory](/guides/directory-structure/static)
-
 
 ### The nuxt.config.js file
 

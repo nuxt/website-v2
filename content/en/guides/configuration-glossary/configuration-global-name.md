@@ -1,5 +1,5 @@
 ---
-title: "The globalName Property"
+title: 'The globalName Property'
 description: Nuxt.js lets you customize the global ID used in the main HTML template as well as the main Vue instance name and other options.
 menu: globalName
 category: configuration-glossary
@@ -13,7 +13,7 @@ position: 11
 
 ```js{}[nuxt.config.js]
 {
-  globalName: "myCustomName";
+  globalName: 'myCustomName'
 }
 ```
 

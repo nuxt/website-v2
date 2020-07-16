@@ -1,5 +1,5 @@
 ---
-title: "API: La propriété router"
+title: 'API: La propriété router'
 description: La propriété router vous permet de personnaliser le routeur Nuxt.js.
 menu: router
 category: configuration
@@ -13,15 +13,14 @@ position: 124
 - Type: `String`
 - Par défaut: `'/'`
 
-L'URL de base de l'application. Par exemple, si l'intégralité de l'application d'une seule page est servie sous `/app/`, 
-alors la base doit utiliser la valeur `'/app/'`.
+L'URL de base de l'application. Par exemple, si l'intégralité de l'application d'une seule page est servie sous `/app/`, alors la base doit utiliser la valeur `'/app/'`.
 
-Cela peut être utile si vous devez servir Nuxt en tant que racine de contexte différente, à partir d'un site Web plus 
-grand. Notez que vous pouvez ou non configurer un serveur Web Front Proxy.
+Cela peut être utile si vous devez servir Nuxt en tant que racine de contexte différente, à partir d'un site Web plus grand. Notez que vous pouvez ou non configurer un serveur Web Front Proxy.
 
-Si vous voulez avoir une redirection vers `router.base`, vous pouvez le faire [en utilisant un écouteur, voir *Rediriger vers router.base lorsqu'il n'est pas sur la racine*](/api/configuration-hooks#redirect-to-router-base-quand-pas-sur-root).
+Si vous voulez avoir une redirection vers `router.base`, vous pouvez le faire [en utilisant un écouteur, voir _Rediriger vers router.base lorsqu'il n'est pas sur la racine_](/api/configuration-hooks#redirect-to-router-base-quand-pas-sur-root).
 
 Exemple (`nuxt.config.js`):
+
 ```js
 export default {
   router: {
@@ -43,12 +42,10 @@ Lorsque `base` est défini, Nuxt.js ajoutera également dans l'en-tête du docum
 - Type: `String`
 - Par défaut: `'-'`
 
-Vous souhaiterez peut-être modifier le séparateur entre les noms de route utilisés par Nuxt.js. Vous pouvez le faire 
-via l'option `routeNameSplitter` dans votre fichier de configuration.
-Imaginez que nous ayons le fichier d'échange `pages/posts/_id.vue`. Nuxt générera le nom de la route par programmation, 
-dans ce cas `posts-id`. En changeant la configuration de `routeNameSplitter` en `/` le nom changera donc en `posts/id`.
+Vous souhaiterez peut-être modifier le séparateur entre les noms de route utilisés par Nuxt.js. Vous pouvez le faire via l'option `routeNameSplitter` dans votre fichier de configuration. Imaginez que nous ayons le fichier d'échange `pages/posts/_id.vue`. Nuxt générera le nom de la route par programmation, dans ce cas `posts-id`. En changeant la configuration de `routeNameSplitter` en `/` le nom changera donc en `posts/id`.
 
 Exemple (`nuxt.config.js`):
+
 ```js
 export default {
   router: {
@@ -66,10 +63,11 @@ Vous souhaiterez peut-être étendre les routes créées par Nuxt.js. Vous pouve
 Exemple d'ajout d'un chemin personnalisé:
 
 `nuxt.config.js`
+
 ```js
 export default {
   router: {
-    extendRoutes (routes, resolve) {
+    extendRoutes(routes, resolve) {
       routes.push({
         name: 'custom',
         path: '*',
@@ -83,11 +81,12 @@ export default {
 Si vous souhaitez trier vos chemins, vous pouvez utiliser la fonction `sortRoutes(routes)` de `@nuxt/utils`:
 
 `nuxt.config.js`
+
 ```js
 import { sortRoutes } from '@nuxt/utils'
 export default {
   router: {
-    extendRoutes (routes, resolve) {
+    extendRoutes(routes, resolve) {
       // Ajoutez des chemins ici ...
 
       // puis trier les
@@ -101,16 +100,16 @@ Le schéma du chemin doit respecter le schéma [vue-router](https://router.vuejs
 
 <div class="Alert Alert--orange">
 
-<b>Avertissement:</b> lors de l'ajout de chemins qui utilisent [les routes nommées](/guide/routing#named-views), 
-n'oubliez pas d'ajouter les `chunkNames` correspondants des `components` nommés.
+<b>Avertissement:</b> lors de l'ajout de chemins qui utilisent [les routes nommées](/guide/routing#named-views), n'oubliez pas d'ajouter les `chunkNames` correspondants des `components` nommés.
 
 </div>
 
 `nuxt.config.js`
+
 ```js
 export default {
   router: {
-    extendRoutes (routes, resolve) {
+    extendRoutes(routes, resolve) {
       routes.push({
         path: '/users/:id',
         components: {
@@ -131,12 +130,9 @@ export default {
 - Type: `boolean`
 - Par défaut: `false`
 
-Contrôle si le routeur doit revenir au mode de hachage lorsque le navigateur ne prend pas en charge history.pushState 
-mais que le mode est défini sur history.
+Contrôle si le routeur doit revenir au mode de hachage lorsque le navigateur ne prend pas en charge history.pushState mais que le mode est défini sur history.
 
-La définition de ce paramètre sur false fait une actualisation de page complète dans IE9. Cela est utile lorsque 
-l'application est rendue par le serveur et doit fonctionner dans IE9, car une URL en mode de hachage ne fonctionne pas 
-avec SSR.
+La définition de ce paramètre sur false fait une actualisation de page complète dans IE9. Cela est utile lorsque l'application est rendue par le serveur et doit fonctionner dans IE9, car une URL en mode de hachage ne fonctionne pas avec SSR.
 
 > Cette option est donnée directement au router vue [fallback](https://router.vuejs.org/api/#fallback).
 
@@ -183,8 +179,7 @@ export default {
 - Type: `String`
 - Par défaut: `false`
 
-Configurer globalement [`<nuxt-link>`](/api/components-nuxt-link) par défaut la classe de prefetch (fonctionnalité 
-désactivée par défaut)
+Configurer globalement [`<nuxt-link>`](/api/components-nuxt-link) par défaut la classe de prefetch (fonctionnalité désactivée par défaut)
 
 Exemple (`nuxt.config.js`):
 
@@ -217,10 +212,13 @@ export default {
 ```
 
 `middleware/user-agent.js`
+
 ```js
 export default function (context) {
   // Ajoutez la propriété userAgent dans le contexte (disponible dans `asyncData` et` fetch`)
-  context.userAgent = process.server ? context.req.headers['user-agent'] : navigator.userAgent
+  context.userAgent = process.server
+    ? context.req.headers['user-agent']
+    : navigator.userAgent
 }
 ```
 
@@ -260,9 +258,7 @@ Fournissez des fonctions d'analyse / chaîne de chaîne de requête personnalis�
 - Type: `Boolean`
 - Par défaut: `true`
 
-Configurez `<nuxt-link>` pour pré-charger la page *divisée par code* lorsqu'elle est détectée dans la fenêtre.
-Nécessite [IntersectionObserver](https://developer.mozilla.org/en-US/docs/Web/API/Intersection_Observer_API) pour être 
-pris en charge (voir [CanIUse](https://caniuse.com/#feat=intersectionobserver)) .
+Configurez `<nuxt-link>` pour pré-charger la page _divisée par code_ lorsqu'elle est détectée dans la fenêtre. Nécessite [IntersectionObserver](https://developer.mozilla.org/en-US/docs/Web/API/Intersection_Observer_API) pour être pris en charge (voir [CanIUse](https://caniuse.com/#feat=intersectionobserver)) .
 
 Nous vous recommandons de polyfiller conditionnellement cette fonctionnalité avec un service comme [Polyfill.io](https://polyfill.io):
 
@@ -272,14 +268,17 @@ Nous vous recommandons de polyfiller conditionnellement cette fonctionnalité av
 export default {
   head: {
     script: [
-      { src: 'https://polyfill.io/v2/polyfill.min.js?features=IntersectionObserver', body: true }
+      {
+        src:
+          'https://polyfill.io/v2/polyfill.min.js?features=IntersectionObserver',
+        body: true
+      }
     ]
   }
 }
 ```
 
-Pour désactiver le préchargement sur un lien spécifique, vous pouvez utiliser la propriété `no-prefetch`. Depuis Nuxt.js 
-v2.10.0, vous pouvez également utiliser la propriété `prefetch` à `false`:
+Pour désactiver le préchargement sur un lien spécifique, vous pouvez utiliser la propriété `no-prefetch`. Depuis Nuxt.js v2.10.0, vous pouvez également utiliser la propriété `prefetch` à `false`:
 
 ```html
 <nuxt-link to="/about" no-prefetch>About page not pre-fetched</nuxt-link>
@@ -297,8 +296,7 @@ export default {
 }
 ```
 
-Depuis Nuxt.js v2.10.0, si vous avez défini `prefetchLinks` sur `false` mais que vous souhaitez pré-charger un lien 
-spécifique, vous pouvez utiliser la propriété `prefetch`:
+Depuis Nuxt.js v2.10.0, si vous avez défini `prefetchLinks` sur `false` mais que vous souhaitez pré-charger un lien spécifique, vous pouvez utiliser la propriété `prefetch`:
 
 ```html
 <nuxt-link to="/about" prefetch>About page pre-fetched</nuxt-link>
@@ -308,14 +306,11 @@ spécifique, vous pouvez utiliser la propriété `prefetch`:
 
 - Type: `Function`
 
-L'option `scrollBehavior` vous permet de définir un comportement personnalisé pour la position de défilement entre les 
-chemins. Cette méthode est appelée chaque fois qu'une page est rendue. Pour en savoir plus à ce sujet, consultez la 
-[documentation de vue-router scrollBehavior](https://router.vuejs.org/guide/advanced/scroll-behavior.html).
+L'option `scrollBehavior` vous permet de définir un comportement personnalisé pour la position de défilement entre les chemins. Cette méthode est appelée chaque fois qu'une page est rendue. Pour en savoir plus à ce sujet, consultez la [documentation de vue-router scrollBehavior](https://router.vuejs.org/guide/advanced/scroll-behavior.html).
 
 <div class="Alert Alert-blue">
 
-À partir de la v2.9.0, vous pouvez utiliser un fichier pour remplacer le scrollBehavior du routeur, ce fichier doit être 
-placé dans `~/app/router.scrollBehavior.js`.
+À partir de la v2.9.0, vous pouvez utiliser un fichier pour remplacer le scrollBehavior du routeur, ce fichier doit être placé dans `~/app/router.scrollBehavior.js`.
 
 </div>
 
@@ -324,6 +319,7 @@ Vous pouvez voir le fichier par défaut de Nuxt `router.scrollBehavior.js` ici: 
 Exemple pour forcer la position de défilement vers le haut pour chaque chemin:
 
 `app/router.scrollBehavior.js`
+
 ```js
 export default function (to, from, savedPosition) {
   return { x: 0, y: 0 }
@@ -336,10 +332,6 @@ export default function (to, from, savedPosition) {
 - Par défaut: `undefined`
 - Disponible depuis: v2.10
 
-Si cette option est définie sur true, des barres obliques de fin seront ajoutées à chaque chemin. S'il est défini sur 
-false, elles seront supprimées.
+Si cette option est définie sur true, des barres obliques de fin seront ajoutées à chaque chemin. S'il est défini sur false, elles seront supprimées.
 
-**Attention**: Cette option ne doit pas être définie sans préparation ni être testée de manière approximative. Lorsque vous 
-définissez `router.trailingSlash` sur autre chose que `undefined`, la route opposée cessera de fonctionner. Ainsi, les 
-redirections 301 doivent être en place et votre *lien interne* doit être adapté correctement. Si vous définissez 
-`trailingSlash` sur `true`, seul `example.com/abc/` fonctionnera mais pas `example.com/abc`. Sur faux, vice-versa.
+**Attention**: Cette option ne doit pas être définie sans préparation ni être testée de manière approximative. Lorsque vous définissez `router.trailingSlash` sur autre chose que `undefined`, la route opposée cessera de fonctionner. Ainsi, les redirections 301 doivent être en place et votre _lien interne_ doit être adapté correctement. Si vous définissez `trailingSlash` sur `true`, seul `example.com/abc/` fonctionnera mais pas `example.com/abc`. Sur faux, vice-versa.

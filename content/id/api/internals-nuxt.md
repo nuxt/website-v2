@@ -17,14 +17,14 @@ Ini adalah wadah inti yang memungkinkan semua modul dan kelas berkomunikasi satu
 Kita bisa mendaftarkan kait (hooks) pada peristiwa siklus hidup (life cycle) tertentu.
 
 ```js
-nuxt.plugin('ready', async (nuxt) => {
+nuxt.plugin('ready', async nuxt => {
   // Kode kustom Anda di sini
 })
 ```
 
-Plugin | Argumen | Keterangan
---- | --- | ---
-`ready` | nuxt | Semua modul diinisialisasi dan sebelum menginisialisasi `renderer`
-`error` | error args | An unhandled error by one of Nuxt modules caught
-`close` | - | Instansi Nuxt ditutup dengan luwes
-`listen` | ({server, host, port}) | **Internal** server Nuxt mulai mendengarkan (listening). (Menggunakan `nuxt start` atau `nuxt dev`)
+| Plugin | Argumen | Keterangan |
+| --- | --- | --- |
+| `ready` | nuxt | Semua modul diinisialisasi dan sebelum menginisialisasi `renderer` |
+| `error` | error args | An unhandled error by one of Nuxt modules caught |
+| `close` | - | Instansi Nuxt ditutup dengan luwes |
+| `listen` | ({server, host, port}) | **Internal** server Nuxt mulai mendengarkan (listening). (Menggunakan `nuxt start` atau `nuxt dev`) |

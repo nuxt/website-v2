@@ -1,5 +1,5 @@
 ---
-title: "API: The ModuleContainer Class"
+title: 'API: The ModuleContainer Class'
 description: Nuxt ModuleContainer Class
 menu: Module Container
 category: internals
@@ -14,10 +14,10 @@ position: 304
 
 ## Tapable plugins
 
-我们可以在某些生命周期事件中注册hooks。
+我们可以在某些生命周期事件中注册 hooks。
 
 ```js
-nuxt.moduleContainer.plugin('ready', async (moduleContainer) => {
+nuxt.moduleContainer.plugin('ready', async moduleContainer => {
   // Do this after all modules where ready
 })
 ```
@@ -25,19 +25,18 @@ nuxt.moduleContainer.plugin('ready', async (moduleContainer) => {
 在 [modules](/guide/modules) 的`context`中我们可以使用它:
 
 ```js
-this.plugin('ready', async (moduleContainer) => {
+this.plugin('ready', async moduleContainer => {
   // Do this after all modules where ready
 })
 ```
 
-插件 | 参数       | 说明
--------|-----------------|-----------------------------------------------------
-`ready`| moduleContainer | `nuxt.config.js`中的所有模块都已初始化
-
+| 插件    | 参数            | 说明                                   |
+| ------- | --------------- | -------------------------------------- |
+| `ready` | moduleContainer | `nuxt.config.js`中的所有模块都已初始化 |
 
 ## 方法
 
-### ~~添加Vendor(vendor)~~
+### ~~添加 Vendor(vendor)~~
 
 **`vendor`已经废弃不再使用**
 
@@ -46,9 +45,9 @@ this.plugin('ready', async (moduleContainer) => {
 ### 添加到模板中 (template)
 
 - **template**: `String` or `Object`
-    - `src`
-    - `options`
-    - `fileName`
+  - `src`
+  - `options`
+  - `fileName`
 
 在构建到项目`buildDir` (`.nuxt`)期间使用[lodash 模板](https://lodash.com/docs/4.17.4#template)渲染指定模板。
 
@@ -60,7 +59,7 @@ this.plugin('ready', async (moduleContainer) => {
 
 使用`addTemplate`注册插件并将其添加到 `plugins[]`选项。
 
-您可以使用`template.ssr: false`来禁用包含在SSR中的插件。
+您可以使用`template.ssr: false`来禁用包含在 SSR 中的插件。
 
 ### 添加服务器端渲染中间件 (middleware)
 
@@ -72,7 +71,7 @@ Allows easily extending webpack build config by chaining [options.build.extend](
 
 ### extendRoutes (fn)
 
-允许通过链接[options.build.extendRoutes](/api/configuration-router#extendroutes)函数轻松扩展webpack构建配置。
+允许通过链接[options.build.extendRoutes](/api/configuration-router#extendroutes)函数轻松扩展 webpack 构建配置。
 
 ### 添加模块 (moduleOpts, requireOnce)
 
@@ -86,7 +85,7 @@ Allows easily extending webpack build config by chaining [options.build.extend](
 
 我们可以在某些生命周期事件中注册钩子。
 
-Hook                      | Arguments                  | When
---------------------------|----------------------------|--------------------------------------------------------------------------------------
- `modules:before`         | (moduleContainer, options) | 在创建ModuleContainer类之前调用​​，对重载方法和选项很有用。
- `modules:done`           | (moduleContainer)          | 加载所有模块时调用。
+| Hook | Arguments | When |
+| --- | --- | --- |
+| `modules:before` | (moduleContainer, options) | 在创建 ModuleContainer 类之前调用 ​​，对重载方法和选项很有用。 |
+| `modules:done` | (moduleContainer) | 加载所有模块时调用。 |

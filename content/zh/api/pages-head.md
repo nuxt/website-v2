@@ -1,5 +1,5 @@
 ---
-title: "API: head 方法"
+title: 'API: head 方法'
 description: Nuxt.js 使用了 vue-meta 更新应用的头部标签和html属性。
 menu: head
 category: pages
@@ -22,26 +22,30 @@ position: 23
 </template>
 
 <script>
-export default {
-  data () {
-    return {
-      title: 'Hello World!'
-    }
-  },
-  head () {
-    return {
-      title: this.title,
-      meta: [
-        { hid: 'description', name: 'description', content: 'My custom description' }
-      ]
+  export default {
+    data() {
+      return {
+        title: 'Hello World!'
+      }
+    },
+    head() {
+      return {
+        title: this.title,
+        meta: [
+          {
+            hid: 'description',
+            name: 'description',
+            content: 'My custom description'
+          }
+        ]
+      }
     }
   }
-}
 </script>
 ```
 
 <div class="Alert Alert--teal">
 
-注意：为了避免子组件中的meta标签不能正确覆盖父组件中相同的标签而产生重复的现象，建议利用 `hid` 键为meta标签配一个唯一的标识编号。请阅读[关于 `vue-meta` 的更多信息](https://vue-meta.nuxtjs.org/api/#tagidkeyname)。
+注意：为了避免子组件中的 meta 标签不能正确覆盖父组件中相同的标签而产生重复的现象，建议利用 `hid` 键为 meta 标签配一个唯一的标识编号。请阅读[关于 `vue-meta` 的更多信息](https://vue-meta.nuxtjs.org/api/#tagidkeyname)。
 
 </div>

@@ -1,5 +1,5 @@
 ---
-title: "API: build 프로퍼티"
+title: 'API: build 프로퍼티'
 description: Nuxt.js를 사용하면 당신의 웹 어플리케이션을 원하는대로 빌드할 수 있도록 webpack 설정을 사용자 정의할 수 있습니다.
 menu: build
 category: configuration
@@ -12,7 +12,7 @@ position: 101
 
 ## analyze
 
-> Nuxt.js는 [webpack-bundle-analyzer](https://github.com/th0r/webpack-bundle-analyzer)를 사용하여 번들을 시각화, 최적화 할 수 있도록 알려줍니다.
+> Nuxt.js는 [webpack-bundle-analyzer](https://github.com/th0r/webpack-bundle-analyzer)를사용하여 번들을 시각화, 최적화 할 수 있도록 알려줍니다.
 
 - 타입: `Boolean` or `Object`
 - 기본값: `false`
@@ -20,6 +20,7 @@ position: 101
 만약 object라면 [여기](https://github.com/th0r/webpack-bundle-analyzer#as-plugin) 작성된 문서처럼 프로퍼티를 사용할 수 있습니다.
 
 예제 (`nuxt.config.js`):
+
 ```js
 module.exports = {
   build: {
@@ -34,7 +35,7 @@ module.exports = {
 
 <div class="Alert Alert--teal">
 
-**정보:** `nuxt build --analyze` 또는 `nuxt build -a` 명령어를 사용하여 당신의 어플리케이션을 빌드하거나 [http://localhost:8888](http://localhost:8888)로 시각화 하여 실행할 수 있습니다.
+**정보:** `nuxt build --analyze` 또는 `nuxt build -a` 명령어를 사용하여 당신의어플리케이션을 빌드하거나 [http://localhost:8888](http://localhost:8888)로 시각화하여 실행할 수 있습니다.
 
 </div>
 
@@ -45,6 +46,7 @@ module.exports = {
 > JS와 Vue 파일에 대한 babel 설정을 사용자 정의 합니다.
 
 기본값:
+
 ```js
 {
   presets: ['@nuxt/babel-preset-app']
@@ -52,6 +54,7 @@ module.exports = {
 ```
 
 예제 (`nuxt.config.js`):
+
 ```js
 module.exports = {
   build: {
@@ -69,14 +72,16 @@ module.exports = {
 > 클라이언트 및 서버 번들에 대한 webpack 구성을 수동으로 확장합니다.
 
 확장은 두번 호출되는데, 한 번은 서버 번들, 또 한번은 클라이언트 번들에서 입니다. 메서드의 인자는 아래와 같습니다:
+
 1. Webpack 설정 object
 2. 다음 키가 있는 객체 (모두 boolean): `isDev`, `isClient`, `isServer`
 
 예제 (`nuxt.config.js`):
+
 ```js
 module.exports = {
   build: {
-    extend (config, { isClient }) {
+    extend(config, { isClient }) {
       // 오직 client-bundle을 위한 webpack 설정만을 확장합니다.
       if (isClient) {
         config.devtool = 'eval-source-map'
@@ -113,15 +118,13 @@ module.exports = {
 export default {
   build: {
     filenames: {
-      chunk: ({ isDev }) => isDev ? '[name].js' : '[id].[contenthash].js'
+      chunk: ({ isDev }) => (isDev ? '[name].js' : '[id].[contenthash].js')
     }
   }
 }
 ```
 
-
-To understand a bit more about the use of manifest and vendor, take a look at this
-manifest 와 vendor의 사용법에 대해 자세히 알아 보시려면 [Webpack 문서](https://webpack.js.org/guides/code-splitting-libraries/)를 확인해주세요.
+To understand a bit more about the use of manifest and vendor, take a look at this manifest 와 vendor의 사용법에 대해 자세히 알아 보시려면 [Webpack 문서](https://webpack.js.org/guides/code-splitting-libraries/)를 확인해주세요.
 
 ## loaders
 
@@ -131,8 +134,9 @@ manifest 와 vendor의 사용법에 대해 자세히 알아 보시려면 [Webpac
 > 사용자가 정의한 webpack loaders
 
 기본값:
+
 ```js
-[
+;[
   {
     test: /\.(png|jpe?g|gif|svg)$/,
     loader: 'url-loader',
@@ -153,6 +157,7 @@ manifest 와 vendor의 사용법에 대해 자세히 알아 보시려면 [Webpac
 ```
 
 예제 (`nuxt.config.js`):
+
 ```js
 module.exports = {
   build: {
@@ -184,6 +189,7 @@ module.exports = {
 > Webpack plugins 추가
 
 예제 (`nuxt.config.js`):
+
 ```js
 const webpack = require('webpack')
 
@@ -205,8 +211,9 @@ module.exports = {
 > 사용자 정의 [postcss](https://github.com/postcss/postcss) 옵션
 
 기본값:
+
 ```js
-[
+;[
   require('autoprefixer')({
     browsers: ['last 3 versions']
   })
@@ -214,6 +221,7 @@ module.exports = {
 ```
 
 예제 (`nuxt.config.js`):
+
 ```js
 module.exports = {
   build: {
@@ -250,12 +258,12 @@ module.exports = {
 
 ## vendor
 
-> Nuxt.js는 생성된 `vendor.bundle.js` 파일 내에 모듈을 추가하여 어플리케이션 번들의 용량을 줄여줍니다. 이것은 외부 모듈을 사용할 때 정말 효율적입니다 (예를 들어 `axios`).
+> Nuxt.js는 생성된 `vendor.bundle.js` 파일 내에 모듈을 추가하여 어플리케이션 번들의 용량을 줄여줍니다. 이것은 외부 모듈을 사용할 때 정말 효율적입니다 (예를들어 `axios`).
 
 - 타입: `Array`
- - Items: `String`
+- Items: `String`
 
-vendor 번들 안에 모듈/파일을 추가하려면 `nuxt.config.js`안에 `build.vendor`키를 추가해주세요:
+vendor 번들 안에 모듈/파일을 추가하려면 `nuxt.config.js`안에 `build.vendor`키를추가해주세요:
 
 ```js
 module.exports = {
@@ -266,13 +274,11 @@ module.exports = {
 ```
 
 사용자가 만든 라이브러리의 파일 경로를 정의할 수도 있습니다:
+
 ```js
 module.exports = {
   build: {
-    vendor: [
-      'axios',
-      '~plugins/my-lib.js'
-    ]
+    vendor: ['axios', '~plugins/my-lib.js']
   }
 }
 ```

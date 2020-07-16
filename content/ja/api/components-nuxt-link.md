@@ -1,5 +1,5 @@
 ---
-title: "API: <nuxt-link> コンポーネント"
+title: 'API: <nuxt-link> コンポーネント'
 description: ページ間を nuxt-link を使ってリンクさせます。
 menu: nuxt-link
 category: components
@@ -16,7 +16,9 @@ position: 43
 <template>
   <div>
     <h1>ホームページ</h1>
-    <nuxt-link to="/about">このサイトについて（Nuxt アプリケーション内部リンク）</nuxt-link>
+    <nuxt-link to="/about"
+      >このサイトについて（Nuxt アプリケーション内部リンク）</nuxt-link
+    >
     <a href="https://nuxtjs.org">別のページへの外部リンク</a>
   </div>
 </template>

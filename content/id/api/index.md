@@ -1,8 +1,6 @@
 ---
 title: 'API: Metode asyncData'
-description: Anda mungkin ingin mengambil data dan me-render-nya di sisi-server. Nuxt.js
-  menambahkan metode `asyncData` yang memungkinkan Anda menangani operasi async sebelum
-  mengatur data komponen.
+description: Anda mungkin ingin mengambil data dan me-render-nya di sisi-server. Nuxt.js menambahkan metode `asyncData` yang memungkinkan Anda menangani operasi async sebelum mengatur data komponen.
 menu: asyncData
 category: pages
 position: 21
@@ -20,10 +18,10 @@ Hasil dari asyncData akan **digabung** dengan data.
 
 ```js
 export default {
-  data () {
+  data() {
     return { project: 'default' }
   },
-  asyncData (context) {
+  asyncData(context) {
     return { project: 'nuxt' }
   }
 }

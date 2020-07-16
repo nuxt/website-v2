@@ -1,6 +1,6 @@
 ---
-title: "API: loading プロパティ"
-description: "`loading` プロパティは特定のページに対してデフォルトの loading プログレスバーを無効にするオプションを提供します。"
+title: 'API: loading プロパティ'
+description: '`loading` プロパティは特定のページに対してデフォルトの loading プログレスバーを無効にするオプションを提供します。'
 menu: loading
 category: pages
 position: 26
@@ -20,9 +20,9 @@ position: 26
 </template>
 
 <script>
-export default {
-  loading: false
-}
+  export default {
+    loading: false
+  }
 </script>
 ```
 

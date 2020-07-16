@@ -7,13 +7,14 @@ category: features
 
 ## Universal
 
-mode: `'universal'`: Isomorphic application (server-side rendering or static sites). 
+mode: `'universal'`: Isomorphic application (server-side rendering or static sites).
 
 ```js{}[nuxt.config.js]
 export default {
-  mode: 'universal'  // default universal
+  mode: 'universal' // default universal
 }
 ```
+
 <base-alert type="info">
 You do not need to add this to your nuxt config in order for universal mode to be applied as the default mode is universal.
 </base-alert>
@@ -26,10 +27,8 @@ You can use the mode property to change the default nuxt mode for your project:
 
 ```js{}[nuxt.config.js]
 export default {
-  mode: 'spa'  // default universal
+  mode: 'spa' // default universal
 }
 ```
 
 ➡️ [The mode property](/guides/configuration-glossary/configuration-mode)
-
-

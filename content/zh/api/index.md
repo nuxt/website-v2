@@ -1,5 +1,5 @@
 ---
-title: "API: asyncData 方法"
+title: 'API: asyncData 方法'
 description: 你可能想要在服务器端获取并渲染数据。Nuxt.js添加了`asyncData`方法使得你能够在渲染组件之前异步获取数据。
 menu: asyncData
 category: pages
@@ -8,7 +8,7 @@ position: 21
 
 # asyncData 方法
 
-> 你可能想要在服务器端获取并渲染数据。Nuxt.js添加了`asyncData`方法使得你能够在渲染组件之前异步获取数据。
+> 你可能想要在服务器端获取并渲染数据。Nuxt.js 添加了`asyncData`方法使得你能够在渲染组件之前异步获取数据。
 
 - **类型：** `Function`
 
@@ -16,10 +16,10 @@ position: 21
 
 ```js
 export default {
-  data () {
+  data() {
     return { project: 'default' }
   },
-  asyncData (context) {
+  asyncData(context) {
     return { project: 'nuxt' }
   }
 }

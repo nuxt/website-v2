@@ -9,8 +9,7 @@ position: 107
 
 ## Avec webpack
 
-Par défaut, [vue-loader](http://vue-loader.vuejs.org/) traite automatiquement vos fichiers de styles et vos templates à l'aide de `css-loader` et du compilateur de template de Vue.
-Dans ce processus de compilation, toutes les URL des fichiers comme `<img src="...">`, `background: url(...)` et les CSS `@import` sont résolus en tant que dépendances des modules.
+Par défaut, [vue-loader](http://vue-loader.vuejs.org/) traite automatiquement vos fichiers de styles et vos templates à l'aide de `css-loader` et du compilateur de template de Vue. Dans ce processus de compilation, toutes les URL des fichiers comme `<img src="...">`, `background: url(...)` et les CSS `@import` sont résolus en tant que dépendances des modules.
 
 Imaginons par exemple cette arborescence :
 
@@ -21,21 +20,19 @@ Imaginons par exemple cette arborescence :
 ----| index.vue
 ```
 
-Dans votre CSS, si vous utilisez `url('~assets/image.png')`, cela sera *transformé* en `require('~/assets/image.png')`.
+Dans votre CSS, si vous utilisez `url('~assets/image.png')`, cela sera _transformé_ en `require('~/assets/image.png')`.
 
 <div class="Alert Alert--orange">
 
-**Attention:** À partir de Nuxt 2.0 l'alias `~/` n'est plus résolu correctement dans vos fichiers CSS.
-Vous devez utiliser `~assets` (sans le slash) ou l'alias `@` dans la référence CSS `url`, par exemple `background: url("~assets/banner.svg")`
+**Attention:** À partir de Nuxt 2.0 l'alias `~/` n'est plus résolu correctement dans vos fichiers CSS. Vous devez utiliser `~assets` (sans le slash) ou l'alias `@` dans la référence CSS `url`, par exemple `background: url("~assets/banner.svg")`
 
 </div>
-
 
 Ou si vous référencez cette image dans `pages/index.vue` :
 
 ```html
 <template>
-  <img src="~/assets/image.png">
+  <img src="~/assets/image.png" />
 </template>
 ```
 
@@ -56,7 +53,7 @@ Pour ces deux chargeurs, la configuration par défaut est la suivante :
 
 ```js
 // https://github.com/nuxt/nuxt.js/blob/dev/packages/webpack/src/config/base.js#L297-L316
-[
+;[
   {
     test: /\.(png|jpe?g|gif|svg|webp)$/,
     loader: 'url-loader',
@@ -76,26 +73,23 @@ Pour ces deux chargeurs, la configuration par défaut est la suivante :
 ]
 ```
 
-Ce qui signifie que tous les fichiers inférieurs à 1 ko seront intégrés comme URL base-64.
-Sinon, l'image / police sera copiée dans son dossier correspondant (dans le répertoire `.nuxt`)
-avec un nom contenant des hashs de version pour une meilleure mise en cache.
+Ce qui signifie que tous les fichiers inférieurs à 1 ko seront intégrés comme URL base-64. Sinon, l'image / police sera copiée dans son dossier correspondant (dans le répertoire `.nuxt`) avec un nom contenant des hashs de version pour une meilleure mise en cache.
 
 Lors du lancement de notre application avec `nuxt`, notre template dans `pages/index.vue` :
 
 ```html
 <template>
-  <img src="~/assets/image.png">
+  <img src="~/assets/image.png" />
 </template>
 ```
 
 Sera transformé en :
 
 ```html
-<img src="/_nuxt/img/image.0c61159.png">
+<img src="/_nuxt/img/image.0c61159.png" />
 ```
 
 Si vous désirez modifier la configuration de ces loaders, merci d'utiliser [build.extend](/api/configuration-build#extend).
-
 
 ## Avec des fichiers statiques
 
@@ -109,8 +103,8 @@ Dans votre code, vous pouvez ensuite référencer ces fichiers relativement à l
 
 ```html
 <!-- Image statique du répertoire `static` -->
-<img src="/mon-image.png"/>
+<img src="/mon-image.png" />
 
 <!-- Image avec webpack du répertoire `assets` -->
-<img src="~/assets/mon-image-2.png"/>
+<img src="~/assets/mon-image-2.png" />
 ```

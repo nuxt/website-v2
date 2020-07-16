@@ -1,5 +1,5 @@
 ---
-title: "API: validate メソッド"
+title: 'API: validate メソッド'
 description: Nuxt.js では動的なルーティングを行うコンポーネント内でバリデーションメソッドを定義できます。
 menu: validate
 category: pages
@@ -10,7 +10,7 @@ position: 30
 
 - **型:** `Function` または `Async Function`
 
-`validate` は新しいルートに移動する前に毎回呼び出されます。これは、サーバサイド（Nuxt アプリへの最初のリクエスト）で1回、クライアントサイドで別のルートに移動しても呼び出されます。このメソッドは、引数として [`context`](/api/context) オブジェクトを受け取ります。
+`validate` は新しいルートに移動する前に毎回呼び出されます。これは、サーバサイド（Nuxt アプリへの最初のリクエスト）で 1 回、クライアントサイドで別のルートに移動しても呼び出されます。このメソッドは、引数として [`context`](/api/context) オブジェクトを受け取ります。
 
 ```js
 validate({ params, query, store }) {
@@ -41,7 +41,7 @@ Nuxt.js では動的なルーティングを行うコンポーネント内でバ
 
 ```js
 export default {
-  validate ({ params }) {
+  validate({ params }) {
     // 数値でなければならない
     return /^\d+$/.test(params.id)
   }
@@ -52,7 +52,7 @@ export default {
 
 ```js
 export default {
-  validate ({ params, store }) {
+  validate({ params, store }) {
     // `params.id` が存在している category の id なのか否かをチェックする
     return store.state.categories.some(category => category.id === params.id)
   }
@@ -61,11 +61,11 @@ export default {
 
 さらにバリデーション関数を実行中に、想定したエラーや想定外のエラーを投げることもできます:
 
- ```js
+```js
 export default {
-   async validate ({ params, store }) {
-     // 500 internal server error とともにカスタムメッセージを投げる
-     throw new Error('Under Construction!')
-   }
+  async validate({ params, store }) {
+    // 500 internal server error とともにカスタムメッセージを投げる
+    throw new Error('Under Construction!')
+  }
 }
 ```

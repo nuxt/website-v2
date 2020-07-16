@@ -8,8 +8,8 @@ position: 202
 
 - 型: `Function`
 - 引数:
-    1. [リクエスト](https://nodejs.org/api/http.html#http_class_http_incomingmessage)
-    2. [レスポンス](https://nodejs.org/api/http.html#http_class_http_serverresponse)
+  1. [リクエスト](https://nodejs.org/api/http.html#http_class_http_incomingmessage)
+  2. [レスポンス](https://nodejs.org/api/http.html#http_class_http_serverresponse)
 - 戻り値: `Promise`
 
 > `nuxt.render` を使うと、Node.js サーバーのミドルウェアとして Nuxt.js を使うことができます。
@@ -20,7 +20,7 @@ position: 202
 const { loadNuxt, build } = require('nuxt')
 
 const app = require('express')()
-const isDev = (process.env.NODE_ENV !== 'production')
+const isDev = process.env.NODE_ENV !== 'production'
 const port = process.env.PORT || 3000
 
 async function start() {

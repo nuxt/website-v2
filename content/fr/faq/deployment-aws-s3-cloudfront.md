@@ -6,9 +6,7 @@ category: deployment
 position: 301
 ---
 
-AWS est un service web d'Amazon.
-S3 est leur stockage statique qui peut être configuré pour de l'hébergement de site statique.
-Cloudfront est leur CDN (content delivery network)
+AWS est un service web d'Amazon. S3 est leur stockage statique qui peut être configuré pour de l'hébergement de site statique. Cloudfront est leur CDN (content delivery network)
 
 Héberger une **générération statique** Nuxt sur AWS avec S3 et Cloudfront est puissant et pas cher.
 
@@ -18,13 +16,13 @@ Héberger une **générération statique** Nuxt sur AWS avec S3 et Cloudfront es
 
 Nous allons héberger à pas cher avec quelques services AWS. Brièvement :
 
- - S3 
-   - des "boites" ("bucket") de données cloud pour nos fichiers de site web
-   - peut être configuré pour héberger des sites web statiques
- - CloudFront 
-   - un CDN (content delivery network)
-   - offre des certificats HTTPS gratuits
-   - rend le chargement de votre site rapide
+- S3
+  - des "boites" ("bucket") de données cloud pour nos fichiers de site web
+  - peut être configuré pour héberger des sites web statiques
+- CloudFront
+  - un CDN (content delivery network)
+  - offre des certificats HTTPS gratuits
+  - rend le chargement de votre site rapide
 
 Nous allons envoyer le site de cette façon :
 
@@ -34,21 +32,21 @@ Nuxt Generate -> Local folder -> AWS S3 Bucket -> AWS Cloudfront CDN -> Browser
   [                         deploy.sh                            ]
 ```
 
-Premièrement, nous allons générer le site avec `nuxt generate`.
-Puis nous utiliserons [Gulp](https://gulpjs.com/) pour publier les fichiers dans une boite S3 et invalider un CDN CouldFront.
+Premièrement, nous allons générer le site avec `nuxt generate`. Puis nous utiliserons [Gulp](https://gulpjs.com/) pour publier les fichiers dans une boite S3 et invalider un CDN CouldFront.
 
-  - [gulp](https://www.npmjs.com/package/gulp)
-  - [gulp-awspublish](https://www.npmjs.com/package/gulp-awspublish)
-  - [gulp-cloudfront-invalidate-aws-publish](https://www.npmjs.com/package/gulp-cloudfront-invalidate-aws-publish)
-  - [concurrent-transform](https://www.npmjs.com/package/concurrent-transform) (for parallel uploads)
+- [gulp](https://www.npmjs.com/package/gulp)
+- [gulp-awspublish](https://www.npmjs.com/package/gulp-awspublish)
+- [gulp-cloudfront-invalidate-aws-publish](https://www.npmjs.com/package/gulp-cloudfront-invalidate-aws-publish)
+- [concurrent-transform](https://www.npmjs.com/package/concurrent-transform) (for parallel uploads)
 
 Nos scripts de déploiement ont besoin des variables d'environnement suivantes :
-  - AWS_BUCKET_NAME="example.com" 
-  - AWS_CLOUDFRONT="UPPERCASE"
-  - AWS_ACCESS_KEY_ID="key" 
-  - AWS_SECRET_ACCESS_KEY="secret" 
 
-Nous avons ces fichiers : 
+- AWS_BUCKET_NAME="example.com"
+- AWS_CLOUDFRONT="UPPERCASE"
+- AWS_ACCESS_KEY_ID="key"
+- AWS_SECRET_ACCESS_KEY="secret"
+
+Nous avons ces fichiers :
 
 ```
 deploy.sh       -  exécute `nuxt generate` et `gulp deploy`
@@ -57,83 +55,86 @@ gulpfile.js     -  le code `gulp deploy` pour envoyer les fichiers à S3 et inva
 
 ## Mise en place
 
-  1. Créer une boite S3 et la configurer pour de l'hébergement de site statique
-  2. Créer une distribution cloudfront
-  3. Configurer l'accès sécurisé
-  4. Paramétrer le script de build dans votre projet
-  
+1. Créer une boite S3 et la configurer pour de l'hébergement de site statique
+2. Créer une distribution cloudfront
+3. Configurer l'accès sécurisé
+4. Paramétrer le script de build dans votre projet
+
 ### 1. AWS: Configurez votre boite S3
+
 ### 2. AWS: Configurez votre distribution Cloudfront
 
 Pour les étapes 1 et 2, suivre ce [tutoriel pour configurer S3 et Cloudfront](https://reidweb.com/2017/02/06/cloudfront-cdn-tutorial/)
 
 Vous devriez avoir maintenant ces données :
-  - AWS_BUCKET_NAME="example.com" 
-  - AWS_CLOUDFRONT="UPPERCASE"
+
+- AWS_BUCKET_NAME="example.com"
+- AWS_CLOUDFRONT="UPPERCASE"
 
 ### 3. AWS: Configurer l'accès sécurisé
 
 Pour l'étape 3, nous devons créer un utilisateur qui peut :
-  - Mettre à jour le contenu de la boite
-  - Invalidater la distribution cloudfront (propage plus rapidement les modifications aux utilisateurs)
+
+- Mettre à jour le contenu de la boite
+- Invalidater la distribution cloudfront (propage plus rapidement les modifications aux utilisateurs)
 
 [Créer un utilisateur avec cette stratégie](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_users_create.html) :
 
 > NOTE: remplacer ci-dessous les deux `example.com` avec le nom de votre boite S3. Cette stratégie permet de pousser les boites spécifiques, et invalider toutes les distributions CloudFront.
 
-``` json
+```json
 {
-    "Version": "2012-10-17",
-    "Statement": [ {
-            "Effect": "Allow",
-            "Action": [ "s3:ListBucket" ],
-            "Resource": [
-                "arn:aws:s3:::example.com"
-            ]
-        }, {
-            "Effect": "Allow",
-            "Action": [
-                "s3:PutObject",
-                "s3:PutObjectAcl",
-                "s3:GetObject",
-                "s3:GetObjectAcl",
-                "s3:DeleteObject",
-                "s3:ListMultipartUploadParts",
-                "s3:AbortMultipartUpload"
-            ],
-            "Resource": [
-                "arn:aws:s3:::example.com/*"
-            ]
-        }, {
-            "Effect": "Allow",
-            "Action": [
-                "cloudfront:CreateInvalidation",
-                "cloudfront:GetInvalidation",
-                "cloudfront:ListInvalidations",
-                "cloudfront:UnknownOperation"
-            ],
-            "Resource": "*"
-        }
-    ]
+  "Version": "2012-10-17",
+  "Statement": [
+    {
+      "Effect": "Allow",
+      "Action": ["s3:ListBucket"],
+      "Resource": ["arn:aws:s3:::example.com"]
+    },
+    {
+      "Effect": "Allow",
+      "Action": [
+        "s3:PutObject",
+        "s3:PutObjectAcl",
+        "s3:GetObject",
+        "s3:GetObjectAcl",
+        "s3:DeleteObject",
+        "s3:ListMultipartUploadParts",
+        "s3:AbortMultipartUpload"
+      ],
+      "Resource": ["arn:aws:s3:::example.com/*"]
+    },
+    {
+      "Effect": "Allow",
+      "Action": [
+        "cloudfront:CreateInvalidation",
+        "cloudfront:GetInvalidation",
+        "cloudfront:ListInvalidations",
+        "cloudfront:UnknownOperation"
+      ],
+      "Resource": "*"
+    }
+  ]
 }
 ```
 
 Puis [obtenez une clé d'accès et un code secret](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_access-keys.html).
 
 Vous devriez maintenant avoir ces données :
-  - AWS_ACCESS_KEY_ID="key" 
-  - AWS_SECRET_ACCESS_KEY="secret" 
+
+- AWS_ACCESS_KEY_ID="key"
+- AWS_SECRET_ACCESS_KEY="secret"
 
 ### 4. Ordinateur: Configurez le script de build de votre projet
 
 4.1) Créer un script `deploy.sh`. Voir les options [nvm (node version manager)](https://github.com/creationix/nvm).
 
-``` bash
+```bash
 #!/bin/bash
 
-export AWS_ACCESS_KEY_ID="key" 
-export AWS_SECRET_ACCESS_KEY="secret" 
-export AWS_BUCKET_NAME="example.com" 
+export AWS_ACCESS_KEY_ID="key"
+export AWS_SECRET_ACCESS_KEY="secret"
+export AWS_BUCKET_NAME="example.com"
 export AWS_CLOUDFRONT="UPPERCASE"
 
 # charger nvm (node version manager), installer node (version in .nvmrc), et les paquets d'installation npm
@@ -146,7 +147,8 @@ gulp deploy
 ```
 
 4.2) Rendre `deploy.sh` exécutable et NE PAS LE VALIDER DANS GIT (deploy.sh contient des informations secrètes)
-``` bash
+
+```bash
 chmod +x deploy.sh
 echo "
 # ne pas commiter les fichiers de build
@@ -159,14 +161,15 @@ deploy.sh
 ```
 
 4.3) Ajouter Gulp à votre projet et à votre ligne de commande
-``` bash
+
+```bash
 npm install --save-dev gulp gulp-awspublish gulp-cloudfront-invalidate-aws-publish concurrent-transform
 npm install -g gulp
 ```
 
 4.4) Créer `gulpfile.js` avec le script de build
 
-``` javascript
+```javascript
 const gulp = require('gulp')
 const awspublish = require('gulp-awspublish')
 const cloudfront = require('gulp-cloudfront-invalidate-aws-publish')
@@ -175,7 +178,6 @@ const parallelize = require('concurrent-transform')
 // https://docs.aws.amazon.com/cli/latest/userguide/cli-environment.html
 
 const config = {
-
   // Obligatoire
   params: {
     Bucket: process.env.AWS_BUCKET_NAME
@@ -190,7 +192,9 @@ const config = {
   deleteOldVersions: false, // NOT FOR PRODUCTION
   distribution: process.env.AWS_CLOUDFRONT, // CloudFront distribution ID
   region: process.env.AWS_DEFAULT_REGION,
-  headers: { /* 'Cache-Control': 'max-age=315360000, no-transform, public', */ },
+  headers: {
+    /* 'Cache-Control': 'max-age=315360000, no-transform, public', */
+  },
 
   // Sensible Defaults - ajouter ces fichiers et répertoires à gitignore
   distDir: 'dist',
@@ -208,18 +212,24 @@ gulp.task('deploy', function () {
   let g = gulp.src('./' + config.distDir + '/**')
   // le publieur ajoutera Content-Length, Content-Type les les entêtes spécifiées ci-dessous
   // Si non renseignés, x-amz-acl aura la valeur public-read par défaut
-  g = g.pipe(parallelize(publisher.publish(config.headers), config.concurrentUploads))
+  g = g.pipe(
+    parallelize(publisher.publish(config.headers), config.concurrentUploads)
+  )
 
   // Invalide le CDN
   if (config.distribution) {
     console.log('Configured with CloudFront distribution')
     g = g.pipe(cloudfront(config))
   } else {
-    console.log('No CloudFront distribution configured - skipping CDN invalidation')
+    console.log(
+      'No CloudFront distribution configured - skipping CDN invalidation'
+    )
   }
 
   // supprimer les fichiers à supprimer
-  if (config.deleteOldVersions) { g = g.pipe(publisher.sync()) }
+  if (config.deleteOldVersions) {
+    g = g.pipe(publisher.sync())
+  }
   // créer un fichier de cache pour accélérer les envois successifs
   g = g.pipe(publisher.cache())
   // afficher l'avancement de l'envoi dans la console
@@ -227,16 +237,19 @@ gulp.task('deploy', function () {
   return g
 })
 ```
+
 4.5) Deployer et déboguer
 
 Lancer ceci :
-``` bash
+
+```bash
 ./deploy.sh
 ```
 
 Vous devriez avoir un affichage comme celui-ci :
-``` bash
-$ ./deploy.sh                                                                                                                 
+
+```bash
+$ ./deploy.sh
 
 Found '/home/michael/scm/example.com/www/.nvmrc' with version <8>
 Now using node v8.11.2 (npm v5.6.0)
@@ -250,7 +263,7 @@ Now using node v8.11.2 (npm v5.6.0)
   nuxt:build Generating files... +36ms
   nuxt:build Generating routes... +10ms
   nuxt:build Building files... +24ms
-  ████████████████████ 100% 
+  ████████████████████ 100%
 
 Build completed in 7.009s
 
@@ -275,7 +288,7 @@ Hash: 9fd206f4b4e571e9571f
 Version: webpack 3.12.0
 Time: 2239ms
              Asset    Size  Chunks             Chunk Names
-server-bundle.json  306 kB          [emitted]  
+server-bundle.json  306 kB          [emitted]
   nuxt: Call generate:distRemoved hooks (1) +0ms
   nuxt:generate Destination folder cleaned +10s
   nuxt: Call generate:distCopied hooks (1) +8ms

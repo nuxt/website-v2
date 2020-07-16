@@ -1,6 +1,6 @@
 ---
-title: "$nuxt: NuxtJS のヘルパー"
-description: "$nuxt はユーザーエクスペリエンスを向上させることを目的としたヘルパーです。"
+title: '$nuxt: NuxtJS のヘルパー'
+description: '$nuxt はユーザーエクスペリエンスを向上させることを目的としたヘルパーです。'
 menu: $nuxt
 category: utils
 position: 50
@@ -23,7 +23,7 @@ position: 50
 <template>
   <div>
     <div v-if="$nuxt.isOffline">オフラインです</div>
-    <nuxt/>
+    <nuxt />
   </div>
 </template>
 ```

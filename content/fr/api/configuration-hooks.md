@@ -19,8 +19,11 @@ import path from 'path'
 export default {
   hooks: {
     build: {
-      done (builder) {
-        const extraFilePath = path.join(builder.nuxt.options.buildDir, 'extra-file')
+      done(builder) {
+        const extraFilePath = path.join(
+          builder.nuxt.options.buildDir,
+          'extra-file'
+        )
         fs.writeFileSync(extraFilePath, 'Something extra')
       }
     }
@@ -28,10 +31,7 @@ export default {
 }
 ```
 
-En interne, les écouteurs respectent un modèle de nommage en utilisant à l'aide des deux points (cf, `build:done`). Pour 
-faciliter la configuration, vous pouvez les structurer comme un objet hiérarchique lorsque vous utilisez `nuxt.config.js` 
-(comme illustré ci-dessus) pour définir vos propres écouteurs. Voir [Nuxt en interne](/api/internals) pour des 
-informations plus détaillées sur leur fonctionnement. 
+En interne, les écouteurs respectent un modèle de nommage en utilisant à l'aide des deux points (cf, `build:done`). Pour faciliter la configuration, vous pouvez les structurer comme un objet hiérarchique lorsque vous utilisez `nuxt.config.js` (comme illustré ci-dessus) pour définir vos propres écouteurs. Voir [Nuxt en interne](/api/internals) pour des informations plus détaillées sur leur fonctionnement.
 
 ## Listes des écouteurs
 
@@ -47,14 +47,11 @@ informations plus détaillées sur leur fonctionnement.
 
 Supposons que vous souhaitiez servir des pages en tant que `/portal` au lieu de `/`.
 
-Il s'agit peut-être d'un cas limite, et l'intérêt de _nuxt.config.js_ `router.base` est pour quand un serveur Web 
-servira Nuxt ailleurs que la racine du domaine.
+Il s'agit peut-être d'un cas limite, et l'intérêt de _nuxt.config.js_ `router.base` est pour quand un serveur Web servira Nuxt ailleurs que la racine du domaine.
 
-Mais en développement local, en tapant sur _localhost_, lorsque router.base n'est pas / retourne un 404.
-Pour éviter cela, vous pouvez configurer un écouteur.
+Mais en développement local, en tapant sur _localhost_, lorsque router.base n'est pas / retourne un 404. Pour éviter cela, vous pouvez configurer un écouteur.
 
-La redirection n'est peut-être pas le meilleur cas d'utilisation pour un site Web de production, mais cela vous aidera 
-à tirer parti des écouteurs.
+La redirection n'est peut-être pas le meilleur cas d'utilisation pour un site Web de production, mais cela vous aidera à tirer parti des écouteurs.
 
 Pour commencer, vous [pouvez changer `router.base`](/api/configuration-router#base); Mettez à jour votre `nuxt.config.js`:
 
@@ -88,7 +85,7 @@ Ensuite, créez quelques fichiers;
    // file: hooks/render.js
    import redirectRootToPortal from './route-redirect-portal'
 
-   export default (nuxtConfig) => {
+   export default nuxtConfig => {
      const router = Reflect.has(nuxtConfig, 'router') ? nuxtConfig.router : {}
      const base = Reflect.has(router, 'base') ? router.base : '/portal'
 
@@ -97,7 +94,7 @@ Ensuite, créez quelques fichiers;
         * 'render:setupMiddleware'
         * {@link node_modules/nuxt/lib/core/renderer.js}
         */
-       setupMiddleware (app) {
+       setupMiddleware(app) {
          app.use('/', redirectRootToPortal(base))
        }
      }
@@ -135,7 +132,7 @@ Ensuite, créez quelques fichiers;
     * @param {Function} next middleware callback
     */
    export default desiredContextRoot =>
-     function projectHooksRouteRedirectPortal (req, res, next) {
+     function projectHooksRouteRedirectPortal(req, res, next) {
        const desiredContextRootRegExp = new RegExp(`^${desiredContextRoot}`)
        const _parsedUrl = Reflect.has(req, '_parsedUrl') ? req._parsedUrl : null
        const url = _parsedUrl !== null ? _parsedUrl : parseurl(req)
@@ -154,5 +151,4 @@ Ensuite, créez quelques fichiers;
      }
    ```
 
-Ainsi, chaque fois qu'un collègue en développement frappe accidentellement `/` pour atteindre le service de 
-développement Web, Nuxt redirigera automatiquement vers `/portal`
+Ainsi, chaque fois qu'un collègue en développement frappe accidentellement `/` pour atteindre le service de développement Web, Nuxt redirigera automatiquement vers `/portal`

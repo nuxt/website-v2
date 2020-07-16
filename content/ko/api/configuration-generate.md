@@ -1,5 +1,5 @@
 ---
-title: "API: generate 프로퍼티"
+title: 'API: generate 프로퍼티'
 description: 범용 웹 어플리케이션의 생성을 정적 웹 어플리케이션에 구성합니다.
 menu: generate
 category: configuration
@@ -49,8 +49,7 @@ minify: {
 }
 ```
 
-사용자는 nuxt.js의 generate 명령어가 실행되는 동안 만들어질 minify html files에 대한 기본 설정을 [html-minifier](https://github.com/kangax/html-minifier)으로 바꿀 수 있습니다.
-
+사용자는 nuxt.js의 generate 명령어가 실행되는 동안 만들어질 minify html files에대한 기본 설정을 [html-minifier](https://github.com/kangax/html-minifier)으로 바꿀 수 있습니다.
 
 ## 경로
 
@@ -69,22 +68,20 @@ minify: {
 
 nuxt.js는 `/`경로만 생성합니다.
 
-만약 nuxt.js로 동적 params를 사용하는 경로하려면, 동적 경로를 배열로 설정해줘야 합니다.
+만약 nuxt.js로 동적 params를 사용하는 경로하려면, 동적 경로를 배열로 설정해줘야합니다.
 
 `nuxt.config.js`내부의 `/users/:id`를 위해 경로를 추가합니다.:
+
 ```js
 module.exports = {
   generate: {
-    routes: [
-      '/users/1',
-      '/users/2',
-      '/users/3'
-    ]
+    routes: ['/users/1', '/users/2', '/users/3']
   }
 }
 ```
 
 `nuxt generate`를 실행:
+
 ```bash
 [nuxt] Generating...
 [...]
@@ -101,24 +98,25 @@ nuxt:generate HTML Files generated in 7.6s +6ms
 ```
 
 훌륭합니다. 그런데 만약 사용자가 **동적 params** 를 사용한다면?
+
 1. `Promise`를 반환하는 `함수`를 사용합니다.
 2. `콜백`을 사용하는 `함수`를 사용합니다.
 
 ### Promise를 반환하는 함수
 
 `nuxt.config.js`
+
 ```js
 const axios = require('axios')
 
 module.exports = {
   generate: {
-    routes () {
-      return axios.get('https://my-api/users')
-        .then((res) => {
-          return res.data.map((user) => {
-            return '/users/' + user.id
-          })
+    routes() {
+      return axios.get('https://my-api/users').then(res => {
+        return res.data.map(user => {
+          return '/users/' + user.id
         })
+      })
     }
   }
 }
@@ -127,15 +125,17 @@ module.exports = {
 ### 콜백을 사용하는 함수
 
 `nuxt.config.js`
+
 ```js
 const axios = require('axios')
 
 module.exports = {
   generate: {
-    routes (callback) {
-      axios.get('https://my-api/users')
-        .then((res) => {
-          const routes = res.data.map((user) => {
+    routes(callback) {
+      axios
+        .get('https://my-api/users')
+        .then(res => {
+          const routes = res.data.map(user => {
             return '/users/' + user.id
           })
           callback(null, routes)

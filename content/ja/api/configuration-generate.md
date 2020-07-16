@@ -1,5 +1,5 @@
 ---
-title: "API: generate プロパティ"
+title: 'API: generate プロパティ'
 description: ユニバーサルなウェブアプリケーションから静的なウェブアプリケーションの生成について設定します。
 menu: generate
 category: configuration
@@ -12,7 +12,8 @@ position: 110
 
 `nuxt generate` コマンドを実行するか `nuxt.generate()` を呼び出したとき、Nuxt.js は `generate` プロパティで定義された設定を使います。
 
-`nuxt.config.js` 
+`nuxt.config.js`
+
 ```js
 export default {
   generate: {
@@ -27,7 +28,6 @@ export default {
 - デフォルト: `500`
 
 `generate.concurrency` では、単一のスレッドで同時に生成されるルーティングの生成の数を設定します。
-
 
 ## dir
 
@@ -63,13 +63,12 @@ export default {
 
 「ignore」をもつすべてのルートに一致する正規表現を追加すると、これらのルートの生成が防止されます。
 
-nuxt.config.js 
+nuxt.config.js
+
 ```js
 export default {
   generate: {
-    exclude: [
-      /^(?=.*\bignore\b).*$/
-    ]
+    exclude: [/^(?=.*\bignore\b).*$/]
   }
 }
 ```
@@ -92,8 +91,7 @@ export default {
 }
 ```
 
-フォールバックする HTML ファイルのパス。エラーページとして設定する必要があります。この設定により、不明なルートも Nuxt を介してレンダリングされます。
-未設定またはファルシーな値が設定されている場合、フォールバック HTML ファイルの名前は `200.html` になります。もし、`true` を設定すると、ファイル名は `404.html` になります。値として文字列を指定すると、その文字列が代わりに使用されます。
+フォールバックする HTML ファイルのパス。エラーページとして設定する必要があります。この設定により、不明なルートも Nuxt を介してレンダリングされます。未設定またはファルシーな値が設定されている場合、フォールバック HTML ファイルの名前は `200.html` になります。もし、`true` を設定すると、ファイル名は `404.html` になります。値として文字列を指定すると、その文字列が代わりに使用されます。
 
 SPA を実行するときは、他のルートが生成されず必要となる唯一のファイルになるので、`200.html` を使用するのがより慣用的です。
 
@@ -113,14 +111,14 @@ fallback: true
 fallback: 'fallbackPage.html'
 ```
 
-*情報：複数のサービス（例えば Netlify）では、`404.html` を自動的に検出します。ウェブサーバーを独自に設定する場合は、ドキュメントを参照してエラーページの設定方法を確認してください（そして、エラーページを `404.html` ファイルに設定してください）。*
+_情報：複数のサービス（例えば Netlify）では、`404.html` を自動的に検出します。ウェブサーバーを独自に設定する場合は、ドキュメントを参照してエラーページの設定方法を確認してください（そして、エラーページを `404.html` ファイルに設定してください）。_
 
 ## interval
 
 - 型: `Number`
 - デフォルト: `0`
 
-2つのレンダーの間でのインターバルで、ウェブアプリケーションからの潜在的な API に対して溢れでないようにするためのものです。
+2 つのレンダーの間でのインターバルで、ウェブアプリケーションからの潜在的な API に対して溢れでないようにするためのものです。
 
 ## minify
 
@@ -151,11 +149,7 @@ fallback: 'fallbackPage.html'
 ```js
 export default {
   generate: {
-    routes: [
-      '/users/1',
-      '/users/2',
-      '/users/3'
-    ]
+    routes: ['/users/1', '/users/2', '/users/3']
   }
 }
 ```
@@ -191,13 +185,12 @@ import axios from 'axios'
 
 export default {
   generate: {
-    routes () {
-      return axios.get('https://my-api/users')
-        .then((res) => {
-          return res.data.map((user) => {
-            return '/users/' + user.id
-          })
+    routes() {
+      return axios.get('https://my-api/users').then(res => {
+        return res.data.map(user => {
+          return '/users/' + user.id
         })
+      })
     }
   }
 }
@@ -212,10 +205,11 @@ import axios from 'axios'
 
 export default {
   generate: {
-    routes (callback) {
-      axios.get('https://my-api/users')
-        .then((res) => {
-          const routes = res.data.map((user) => {
+    routes(callback) {
+      axios
+        .get('https://my-api/users')
+        .then(res => {
+          const routes = res.data.map(user => {
             return '/users/' + user.id
           })
           callback(null, routes)
@@ -237,16 +231,15 @@ import axios from 'axios'
 
 export default {
   generate: {
-    routes () {
-      return axios.get('https://my-api/users')
-        .then((res) => {
-          return res.data.map((user) => {
-            return {
-              route: '/users/' + user.id,
-              payload: user
-            }
-          })
+    routes() {
+      return axios.get('https://my-api/users').then(res => {
+        return res.data.map(user => {
+          return {
+            route: '/users/' + user.id,
+            payload: user
+          }
         })
+      })
     }
   }
 }
@@ -282,7 +275,8 @@ async asyncData ({ params, error, payload }) {
 
 false を設定した場合、ルーティングパスに従う形で HTML ファイルを生成します:
 
-`nuxt.config.js` 
+`nuxt.config.js`
+
 ```js
 export default {
   generate: {

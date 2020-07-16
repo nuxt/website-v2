@@ -59,9 +59,11 @@ git push heroku master
 ```
 
 Pour déployer une branche non master sur Heroku, utilisez :
+
 ```bash
 git push heroku develop:master
 ```
+
 où `develop` est le nom de votre branche.
 
 Voilà ! Votre application Nuxt.js est hébergée sur Heroku !

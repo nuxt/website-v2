@@ -59,7 +59,7 @@ questions:
     answers:
       - $
       - _
-      - ?
+      - :
     correctAnswer: $
   - question: To change the order of your plugins what property do you use?
     answers:
@@ -82,16 +82,16 @@ First, install it via NPM or Yarn.
 <code-group>
   <code-block label="Yarn" active>
 
-  ```bash
-  yarn add @nuxtjs/axios
-  ```
+```bash
+yarn add @nuxtjs/axios
+```
 
   </code-block>
   <code-block label="NPM">
 
-  ```bash
-  npm install @nuxtjs/axios
-  ```
+```bash
+npm install @nuxtjs/axios
+```
 
   </code-block>
 </code-group>
@@ -101,7 +101,7 @@ You can configure for example the axios interceptors to react on possible errors
 ```js{}[plugins/axios.js]
 export default function ({ $axios, redirect }) {
   $axios.onError(error => {
-    if(error.response.status === 500) {
+    if (error.response.status === 500) {
       redirect('/sorry')
     }
   })
@@ -110,20 +110,14 @@ export default function ({ $axios, redirect }) {
 
 Last but not least, add the module and the newly created plugin to the project configuration.
 
-
 ```js{}[nuxt.config.js]
 module.exports = {
-  modules: [
-    '@nuxtjs/axios',
-  ],
-  plugins: [
-    '~/plugins/axios.js'
-  ]
+  modules: ['@nuxtjs/axios'],
+  plugins: ['~/plugins/axios.js']
 }
 ```
 
 Then we can use it directly in your page components:
-
 
 ```js{}[pages/index.vue]
 <template>
@@ -153,16 +147,16 @@ First we need to install it
 <code-group>
   <code-block label="Yarn" active>
 
-  ```bash
-  yarn add v-tooltip
-  ```
+```bash
+yarn add v-tooltip
+```
 
   </code-block>
   <code-block label="NPM">
 
-  ```bash
-  npm install v-tooltip
-  ```
+```bash
+npm install v-tooltip
+```
 
   </code-block>
 </code-group>
@@ -240,7 +234,7 @@ export default {
   <code-sandbox  :src="csb_link_plugins_client"></code-sandbox>
 </app-modal>
 
-## Inject in $root & context
+## Inject in \$root & context
 
 Sometimes you want to make functions or values available across your app. You can inject those variables into Vue instances (client side), the context (server side) and even in the Vuex store. It is a convention to prefix those functions with a `$`.
 
@@ -252,11 +246,10 @@ It is important to know that in any Vue [instance lifecycle](https://vuejs.org/
 
 </base-alert>
 
-
 ```js{}[plugins/hello.js]
 export default ({ app }, inject) => {
   // Inject $hello(msg) in Vue, context and store.
-  inject('hello', (msg) => console.log(`Hello ${msg}!`))
+  inject('hello', msg => console.log(`Hello ${msg}!`))
 }
 ```
 
@@ -270,11 +263,11 @@ Now `$hello(msg)` can be used from `context`, via `this` in Vue instances a
 
 ```js{}[example-component.vue]
 export default {
-  mounted () {
+  mounted() {
     this.$hello('mounted')
     // will console.log 'Hello mounted!'
   },
-  asyncData (context) {
+  asyncData(context) {
     context.$hello('asyncData')
     // If using Nuxt <= 2.12, use 👇
     context.app.$hello('asyncData')
@@ -288,14 +281,14 @@ export const state = () => ({
 })
 
 export const mutations = {
-  changeSomeValue (state, newValue) {
+  changeSomeValue(state, newValue) {
     this.$hello('store mutation')
     state.someValue = newValue
   }
 }
 
 export const actions = {
-  setSomeValueToWhatever ({ commit }) {
+  setSomeValueToWhatever({ commit }) {
     this.$hello('store action')
     const newValue = 'whatever'
     commit('changeSomeValue', newValue)
@@ -315,7 +308,7 @@ Example of changing plugins order:
 
 ```js{}[nuxt.config.js]
 export default {
-  extendPlugins (plugins) {
+  extendPlugins(plugins) {
     const pluginIndex = plugins.findIndex(
       ({ src }) => src === '~/plugins/shouldBeFirst.js'
     )
@@ -339,7 +332,5 @@ if (!Vue.__my_mixin__) {
   Vue.mixin({ ... }) // Set up your mixin then
 }
 ```
-
-
 
 <quiz :questions="questions"></quiz>

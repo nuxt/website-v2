@@ -1,5 +1,5 @@
 ---
-title: "The modern Property"
+title: 'The modern Property'
 description: Build and server a modern bundle
 menu: modern
 category: configuration

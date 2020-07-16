@@ -15,10 +15,10 @@ questions:
     correctAnswer: assets
   - question: What do you use if you need to reference your  assets directory inside your vue templates?
     answers:
-      - "/assets/your_image.png"
-      - "@assets/your_image.png"
-      - "@/assets/your_image.png"
-    correctAnswer: "@/assets/your_image.png"
+      - '/assets/your_image.png'
+      - '@assets/your_image.png'
+      - '@/assets/your_image.png'
+    correctAnswer: '@/assets/your_image.png'
   - question: What do you use if you need to reference your  assets directory inside your css files?
     answers:
       - url("@assets/banner.svg")
@@ -45,39 +45,42 @@ questions:
     correctAnswer: url-loader
   - question: What is the aliases for the source directory?
     answers:
-      - "@"
-      - "@@"
-      - "^"
-    correctAnswer: "@"
+      - '@'
+      - '@@'
+      - '^'
+    correctAnswer: '@'
   - question: What is the aliases for the root directory?
     answers:
-      - "@"
-      - "@@"
-      - "@root"
-    correctAnswer: "@@"
+      - '@'
+      - '@@'
+      - '@root'
+    correctAnswer: '@@'
 ---
 
 The `assets` directory contains your un-compiled assets such as Stylus or Sass files, images, or fonts.
 
 ## Images:
 
-Inside your `vue` templates, if you need to link to your `assets` directory use  `~/assets/your_image.png` with a slash before assets.
+Inside your `vue` templates, if you need to link to your `assets` directory use `~/assets/your_image.png` with a slash before assets.
 
 ```html
 <template>
-  <img src="~/assets/your_image.png">
+  <img src="~/assets/your_image.png" />
 </template>
 ```
 
 Inside your `css` files, if you need to reference your  `assets`  directory, use `~assets/your_image.png`(without a slash)
 
 ```css
-background: url("~assets/banner.svg")
+background: url('~assets/banner.svg');
 ```
+
 When working with dynamic images you will need to use require
+
 ```html
-<img :src="require(`~/assets/img/${image}.jpg`)">
+<img :src="require(`~/assets/img/${image}.jpg`)" />
 ```
+
 ➡️ Learn more about [webpack Assets](/guides/directory-structure/assets#webpack-assets)
 
 ## Styles:
@@ -106,16 +109,16 @@ In case you want to use `sass` make sure that you have installed `node-sass`�
 <code-group>
   <code-block label="Yarn" active>
 
-  ```bash
-  yarn add -D node-sass sass-loader
-  ```
+```bash
+yarn add -D node-sass sass-loader
+```
 
   </code-block>
   <code-block label="NPM">
 
-  ```bash
-  npm install --save-dev node-sass sass-loader
-  ```
+```bash
+npm install --save-dev node-sass sass-loader
+```
 
   </code-block>
 </code-group>
@@ -182,7 +185,7 @@ If you reference that image in your `pages/index.vue`:
 
 ```html{}[pages/index.vue]
 <template>
-  <img src="~/assets/image.png">
+  <img src="~/assets/image.png" />
 </template>
 ```
 
@@ -204,7 +207,7 @@ For these two loaders, the default configuration is:
 
 ```js
 // https://github.com/nuxt/nuxt.js/blob/dev/packages/webpack/src/config/base.js#L297-L316
-[
+;[
   {
     test: /\.(png|jpe?g|gif|svg|webp)$/,
     loader: 'url-loader',
@@ -230,14 +233,14 @@ When launching our application with `nuxt`, our template in `pages/index.vue`:
 
 ```html{}[pages/index.vue]
 <template>
-  <img src="@/assets/your_image.png">
+  <img src="@/assets/your_image.png" />
 </template>
 ```
 
 Will be transformed into:
 
 ```html
-<img src="/_nuxt/img/your_image.0c61159.png">
+<img src="/_nuxt/img/your_image.0c61159.png" />
 ```
 
 If you want to change the loader configurations, please use [build.extend](https://nuxtjs.org/api/configuration-build#extend).
@@ -255,13 +258,13 @@ Both will achieve the same results.
 ```html{}[components/Avatar.vue]
 <template>
   <div>
-    <img src="../assets/your_image.png">
-    <img src="~/assets/your_image.png">
+    <img src="../assets/your_image.png" />
+    <img src="~/assets/your_image.png" />
   </div>
 </template>
 ```
 
-We recommend using the `~` as an alias. `@` is still supported but will not work in all cases such as with background images in your css. 
+We recommend using the `~` as an alias. `@` is still supported but will not work in all cases such as with background images in your css.
 
 You can use the alias of `~~` or `@@` for the root directory.
 

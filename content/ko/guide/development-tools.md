@@ -9,7 +9,7 @@ position: 114
 
 ## End-To-End 테스트
 
-[Ava](https://github.com/avajs/ava)는 [jsdom](https://github.com/tmpvar/jsdom)과 같이 사용할 수 있는 JavaScript의 강력한 테스트 프레임워크입니다. 엔드 투 엔드 테스트를 쉽게 하기 위해서 이 두가지를 사용합니다.
+[Ava](https://github.com/avajs/ava)는 [jsdom](https://github.com/tmpvar/jsdom)과같이 사용할 수 있는 JavaScript의 강력한 테스트 프레임워크입니다. 엔드 투 엔드 테스트를 쉽게 하기 위해서 이 두가지를 사용합니다.
 
 우선은, ava와 jsdom을 개발디펜던시에 추가해야 합니다.
 
@@ -49,17 +49,17 @@ mkdir test
 </template>
 
 <script>
-export default {
-  data () {
-    return { name: 'world' }
+  export default {
+    data() {
+      return { name: 'world' }
+    }
   }
-}
 </script>
 
 <style>
-.red {
-  color: red;
-}
+  .red {
+    color: red;
+  }
 </style>
 ```
 
@@ -73,10 +73,12 @@ import test from 'ava'
 import { Nuxt, Builder } from 'nuxt'
 
 // Nuxt.js 를 초기화하고 localhost:4000 에서 리스닝하는 서버를 작성합니다.
-test.before('Init Nuxt.js', async (t) => {
+test.before('Init Nuxt.js', async t => {
   const rootDir = resolve(__dirname, '..')
   let config = {}
-  try { config = require(resolve(rootDir, 'nuxt.config.js')) } catch (e) {}
+  try {
+    config = require(resolve(rootDir, 'nuxt.config.js'))
+  } catch (e) {}
   config.rootDir = rootDir // project folder
   config.dev = false // production build
   config.mode = 'universal' // Isomorphic application
@@ -87,7 +89,7 @@ test.before('Init Nuxt.js', async (t) => {
 })
 
 // 생성된 HTML 만을 테스트하는 예제
-test('Route / exists and render HTML', async (t) => {
+test('Route / exists and render HTML', async t => {
   const { nuxt } = t.context
   const context = {}
   const { html } = await nuxt.renderRoute('/', context)
@@ -95,7 +97,7 @@ test('Route / exists and render HTML', async (t) => {
 })
 
 // DOM 을 경유하여 체크하는 테스트 예제
-test('Route / exists and renders HTML with CSS applied', async (t) => {
+test('Route / exists and renders HTML with CSS applied', async t => {
   const { nuxt } = t.context
   const window = await nuxt.renderAndGetWindow('http://localhost:4000/')
   const element = window.document.querySelector('.red')
@@ -106,7 +108,7 @@ test('Route / exists and renders HTML with CSS applied', async (t) => {
 })
 
 // 서버를 닫음
-test.after('Closing server', (t) => {
+test.after('Closing server', t => {
   const { nuxt } = t.context
   nuxt.close()
 })
@@ -118,7 +120,7 @@ test.after('Closing server', (t) => {
 npm test
 ```
 
-jsdom 은 브라우저를 사용하지 않기 때문에 제약점이 몇가지 있지만, 대부분의 테스트는 커버할 수 있습니다. 혹시 어플리케이션을 테스트하기 위해서 브라우저를 사용하고 싶을 경우에는 [Nightwatch.js](http://nightwatchjs.org) 를 체크해 보시면 될 것 같습니다.
+jsdom 은 브라우저를 사용하지 않기 때문에 제약점이 몇가지 있지만, 대부분의 테스트는 커버할 수 있습니다. 혹시 어플리케이션을 테스트하기 위해서 브라우저를 사용하고싶을 경우에는 [Nightwatch.js](http://nightwatchjs.org) 를 체크해 보시면 될 것 같습니다.
 
 ## ESLint와 Prettier
 
@@ -132,7 +134,7 @@ jsdom 은 브라우저를 사용하지 않기 때문에 제약점이 몇가지 �
 npm install --save-dev babel-eslint eslint eslint-config-prettier eslint-loader eslint-plugin-vue eslint-plugin-prettier prettier
 ```
 
-그리고 `.eslintrc.js` 파일을 프로젝트의 루트 디렉토리에 두고 ESLint를 설정합니다:
+그리고 `.eslintrc.js` 파일을 프로젝트의 루트 디렉토리에 두고 ESLint를 설정합니다 :
 
 ```js
 module.exports = {
@@ -152,15 +154,13 @@ module.exports = {
     'plugin:prettier/recommended'
   ],
   // required to lint *.vue files
-  plugins: [
-    'vue'
-  ],
+  plugins: ['vue'],
   // add your custom rules here
   rules: {
-    'semi': [2, 'never'],
+    semi: [2, 'never'],
     'no-console': 'off',
     'vue/max-attributes-per-line': 'off',
-    'prettier/prettier': ['error', { 'semi': false }]
+    'prettier/prettier': ['error', { semi: false }]
   }
 }
 ```
@@ -188,7 +188,7 @@ npm run lintfix
 
 ESLint 는 `.gitignore`에 정의된 파일들을 무시하면서 모든 JavaScript 및 Vue 파일을 lint 합니다.
 
-또한 webpack을 통해 핫 리로드 모드에서 ESLint를 활성화하는 것이 좋습니다. 이렇게 하면 ESLint는 `npm run dev` 실행 동안 저장시 실행 됩니다. `nuxt.config.js`에 다음을 추가하십시오.:
+또한 webpack을 통해 핫 리로드 모드에서 ESLint를 활성화하는 것이 좋습니다. 이렇게하면 ESLint는 `npm run dev` 실행 동안 저장시 실행 됩니다. `nuxt.config.js`에 다음을 추가하십시오.:
 
 ```js
 ...

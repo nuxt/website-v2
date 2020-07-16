@@ -1,5 +1,5 @@
 ---
-title: "API: head 프로퍼티"
+title: 'API: head 프로퍼티'
 description: Nuxt.js를 사용하면 nuxt.config.js의 모든 기본 메타값을 정의할 수 있습니다.
 menu: head
 category: configuration

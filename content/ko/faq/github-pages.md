@@ -8,7 +8,7 @@ position: 205
 
 # GitHub Pages 에 배포하려면?
 
-Nuxt.js를 사용하면, 예를 들어 [GitHub Pages](https://pages.github.com/)과 같은 정적호스팅 서비스에서 웹 어플리케이션을 호스팅할 수 있습니다.
+Nuxt.js를 사용하면, 예를 들어 [GitHub Pages](https://pages.github.com/)과 같은정적호스팅 서비스에서 웹 어플리케이션을 호스팅할 수 있습니다.
 
 GitHub Pages에 배포하려면 정적 웹 어플리케이션을 생성해야 합니다:
 
@@ -16,8 +16,7 @@ GitHub Pages에 배포하려면 정적 웹 어플리케이션을 생성해야 �
 npm run generate
 ```
 
-이때 `dist` 폴더가 생성되는데, 그 안에 GitHub pages에 배포될 모든 것이 들어가 있습니다.
-프로젝트 리포지토리라면 `gh-pages` 브랜치, 사용자 혹은 조직 사이트라면 `master` 브랜치를 지정하세요.
+이때 `dist` 폴더가 생성되는데, 그 안에 GitHub pages에 배포될 모든 것이 들어가 있습니다. 프로젝트 리포지토리라면 `gh-pages` 브랜치, 사용자 혹은 조직 사이트라면 `master` 브랜치를 지정하세요.
 
 <!-- <div class="Alert Alert--nuxt-green">
 
@@ -43,7 +42,7 @@ npm run generate
 npm install push-dir --save-dev
 ```
 
-`deploy` 커맨드를 package.json에 추가해 주세요. 브랜치는 프로젝트 리포지토리라면 `gh-pages` 브랜치를, 사용자 혹은 조직 사이트라면 `master` 브랜치를 지정해 주세요.
+`deploy` 커맨드를 package.json에 추가해 주세요. 브랜치는 프로젝트 리포지토리라면 `gh-pages` 브랜치를, 사용자 혹은 조직 사이트라면 `master` 브랜치를 지정해 주세요 .
 
 ```js
 "scripts": {

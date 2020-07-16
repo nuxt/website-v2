@@ -39,33 +39,33 @@
 </template>
 
 <style lang="scss">
-$grey_blue: #2F495E;
-$light_green: #00C58E;
-$grey: #606F7B;
+  $grey_blue: #2f495e;
+  $light_green: #00c58e;
+  $grey: #606f7b;
 
-.Home__Modes {
-  color: $grey_blue;
-  text-align: center;
-  padding: 5rem 0;
-  &__Section {
-    width: 80%;
-    text-align: left;
-    padding-bottom: 4rem;
-    &__Title {
-      font-size: 1.35rem;
-      font-weight: 700;
-      margin: 0;
-      text-transform: uppercase;
-      padding: 0;
-      padding-bottom: 2rem;
-    }
-    &__Description {
-      color: $grey;
-      font-weight: 500;
-      margin: 0;
-      line-height: 1.7rem;
-      font-size: 1rem;
+  .Home__Modes {
+    color: $grey_blue;
+    text-align: center;
+    padding: 5rem 0;
+    &__Section {
+      width: 80%;
+      text-align: left;
+      padding-bottom: 4rem;
+      &__Title {
+        font-size: 1.35rem;
+        font-weight: 700;
+        margin: 0;
+        text-transform: uppercase;
+        padding: 0;
+        padding-bottom: 2rem;
+      }
+      &__Description {
+        color: $grey;
+        font-weight: 500;
+        margin: 0;
+        line-height: 1.7rem;
+        font-size: 1rem;
+      }
     }
   }
-}
 </style>

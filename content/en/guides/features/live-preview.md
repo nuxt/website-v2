@@ -5,16 +5,11 @@ category: features
 position: 12
 ---
 
-With Nuxt.js and full static you can now use live preview out of the box which
-will call your API or your CMS so you can see the changes live before deploying.
+With Nuxt.js and full static you can now use live preview out of the box which will call your API or your CMS so you can see the changes live before deploying.
 
-<base-alert> Only available when using
-[target:static](/guides/features/deployment-targets#static-hosting)
-</base-alert>
+<base-alert> Only available when using [target:static](/guides/features/deployment-targets#static-hosting) </base-alert>
 
-The preview mode will automatically refresh the page data as it uses
-`$nuxt.refresh` under the hood and therefore calls nuxtServerInit, asyncData and
-fetch on the client side.
+The preview mode will automatically refresh the page data as it uses `$nuxt.refresh` under the hood and therefore calls nuxtServerInit, asyncData and fetch on the client side.
 
 In order to activate live preview you will need to add the following plugin:
 
@@ -58,8 +53,7 @@ yarn start
   </code-block>
 </code-group>
 
-Then you can then see your preview page by adding the query param to the end of
-the page you want to see once:
+Then you can then see your preview page by adding the query param to the end of the page you want to see once:
 
 ```js
 ?preview=true
@@ -70,13 +64,9 @@ enablePreview should be tested locally with yarn start and not yarn
 dev
 </base-alert>
 
-For pages that are not yet generated, SPA fallback will still call the API
-before showing the 404 page as these pages exist on the API but are not
-re-generated yet
+For pages that are not yet generated, SPA fallback will still call the API before showing the 404 page as these pages exist on the API but are not re-generated yet
 
-For pages that are not generated and don't exist on the API, for example draft
-content in your CMS that is not publicly available, you will need to use the
-validate hook:
+For pages that are not generated and don't exist on the API, for example draft content in your CMS that is not publicly available, you will need to use the validate hook:
 
 ```js
 async validate({ app, params, $preview }) {

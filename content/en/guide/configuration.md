@@ -61,7 +61,6 @@ This option lets you define the node_modules folder of your Nuxt.js Application.
 
 [Documentation about `modulesDir` integration](/api/configuration-modulesdir)
 
-
 ### plugins
 
 This option lets you define JavaScript plugins that should be run before instantiating the root Vue.js application.
@@ -104,7 +103,6 @@ This option lets you define the default properties of the page transitions.
 
 [Documentation about `transition` integration](/api/configuration-transition)
 
-
 ## Asynchronous Configuration
 
 If you need to populate some options (e.g. the head) with asynchronous data (e.g. coming from an API), you have the possibility to return a promise. Here is an example:
@@ -120,7 +118,7 @@ export default async () => {
   const data = await axios.get('endpoint')
   return {
     head: {
-      title: data.head.title,
+      title: data.head.title
       //... rest of config
     }
   }

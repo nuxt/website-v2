@@ -1,5 +1,5 @@
 ---
-title: "API: scrollToTop 属性"
+title: 'API: scrollToTop 属性'
 description: scrollToTop 属性用于控制页面渲染前是否先滚动至页面顶部。
 menu: scrollToTop
 category: pages
@@ -20,9 +20,9 @@ position: 28
 </template>
 
 <script>
-export default {
-  scrollToTop: true
-}
+  export default {
+    scrollToTop: true
+  }
 </script>
 ```
 

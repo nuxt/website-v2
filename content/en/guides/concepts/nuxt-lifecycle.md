@@ -38,7 +38,7 @@ questions:
     answers:
       - Executing asyncData
       - Executing serverMiddleware
-      - Executing fetch 
+      - Executing fetch
     correctAnswer: Executing serverMiddleware
   - question: Which Vue methods are called on both, server and client side?
     answers:
@@ -64,9 +64,9 @@ questions:
 
 No matter which tool you use, you will always feel more confident when you understand how the tool works under the hood. The same applies to Nuxt.js. The goal of this chapter is to give you a high-level overview of the different parts of the framework, their order of execution and how they work together.
 
-The Nuxt.js lifecycle describes what happens after the build phase, where your application is bundled, chunked and minified. What happens after this phase depends on whether you have server-side rendering enabled or not. If you have, it furthermore depends on the type of server-side rendering you have chosen: 
+The Nuxt.js lifecycle describes what happens after the build phase, where your application is bundled, chunked and minified. What happens after this phase depends on whether you have server-side rendering enabled or not. If you have, it furthermore depends on the type of server-side rendering you have chosen:
 
-Dynamic SSR (`nuxt start`) 
+Dynamic SSR (`nuxt start`)
 
 or Static Site Generation (`nuxt generate`).
 
@@ -85,16 +85,16 @@ When using static site generation, the server steps are only executed on build t
 - Nuxt hooks
 - serverMiddleware
 - Server-side Nuxt plugins
-    - in order as defined in nuxt.config.js
+  - in order as defined in nuxt.config.js
 - nuxtServerInit
-    - Vuex action that is called only on server-side to pre-populate the store
-    - First argument is the **Vuex context**, second argument is the **Nuxt.js context**
-        - Dispatch other actions from here → only "entry point" for subsequent store actions on server-side
-    - can only be defined in `store/index.js`
+  - Vuex action that is called only on server-side to pre-populate the store
+  - First argument is the **Vuex context**, second argument is the **Nuxt.js context**
+    - Dispatch other actions from here → only "entry point" for subsequent store actions on server-side
+  - can only be defined in `store/index.js`
 - Middleware
-    - Global middleware
-    - Layout middleware
-    - Route middleware
+  - Global middleware
+  - Layout middleware
+  - Route middleware
 - asyncData
 - beforeCreate (Vue lifecycle method)
 - created (Vue lifecycle method)
@@ -107,15 +107,15 @@ When using static site generation, the server steps are only executed on build t
 
 - `generate:before` Nuxt.js hook
 - HTML files are generated
-    - **Full static generation**
-        - e.g. static payloads are extracted
-    - `generate:page` (HTML editable)
-    - `generate:routeCreated` (Route generated)
+  - **Full static generation**
+    - e.g. static payloads are extracted
+  - `generate:page` (HTML editable)
+  - `generate:routeCreated` (Route generated)
 - `generate:done` when all HTML files have been generated
 
 ### Client
 
-This part of the lifecycle is fully executed in the browser, no matter which Nuxt.js mode you've chosen. 
+This part of the lifecycle is fully executed in the browser, no matter which Nuxt.js mode you've chosen.
 
 - Receives the HTML
 - Loading assets (e.g. Javascript)
@@ -135,14 +135,14 @@ This part of the lifecycle is fully executed in the browser, no matter which Nux
 
 ### Navigate using the NuxtLink component
 
-Same as for the *client* part, everything is happening in the browser but only when navigating via `<NuxtLink>`. Furthermore, no page content is displayed until all *blocking* tasks are fulfilled.
+Same as for the _client_ part, everything is happening in the browser but only when navigating via `<NuxtLink>`. Furthermore, no page content is displayed until all _blocking_ tasks are fulfilled.
 
-➡️ Check out the component chapter to see more info on the [NuxtLink component](/guides/features/nuxt-components#the-nuxtlink-component) 
+➡️ Check out the component chapter to see more info on the [NuxtLink component](/guides/features/nuxt-components#the-nuxtlink-component)
 
 - middleware (blocking)
-    - Global middleware
-    - Layout middleware
-    - Route middleware
+  - Global middleware
+  - Layout middleware
+  - Route middleware
 - asyncData (blocking)
 - asyncData (blocking) [or full static payload loading]
 - beforeCreate & created (Vue lifecycle methods)
@@ -150,7 +150,5 @@ Same as for the *client* part, everything is happening in the browser but only w
 - beforeMount & mounted
 
 ---
-
-
 
 <quiz :questions="questions"></quiz>

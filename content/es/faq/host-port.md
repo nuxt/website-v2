@@ -9,7 +9,7 @@ By default, Nuxt development server host is `localhost` (only accessible from wi
 
 Host `0.0.0.0` is designated to tell Nuxt to resolve a host address, which is accessible to connections _outside_ of the host machine (e.g. LAN).
 
-You can configure the connection variables in different ways.  They are listed **from highest to lowest priority**.
+You can configure the connection variables in different ways. They are listed **from highest to lowest priority**.
 
 > **Note:** If `port` is assigned the string value of `'0'` (not `0`, which is falsy), a random port will be assigned to your Nuxt application.
 
@@ -18,7 +18,9 @@ You can configure the connection variables in different ways.  They are listed *
 ```sh
 nuxt --hostname myhost --port 3333
 ```
+
 Or
+
 ```js
 "scripts": {
   "dev": "nuxt --hostname myhost --port 3333"
@@ -39,7 +41,6 @@ export default {
 }
 ```
 
-
 ## With NUXT_HOST and NUXT_PORT env variables
 
 Similar to HOST and PORT but more specific in case you need those for something else.
@@ -57,7 +58,6 @@ Similar to HOST and PORT but more specific in case you need those for something 
   "dev": "HOST=0.0.0.0 PORT=3333 nuxt"
 }
 ```
-
 
 ## Via a `nuxt` config in the `package.json`:
 

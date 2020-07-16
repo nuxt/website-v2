@@ -40,7 +40,7 @@ server {
 
 # Laravel Forge를 위한 nginx 설정
 
-`YOUR_WEBSITE_FOLDER`를 웹 사이트 폴더로 변경하고 `YOUR_WEBSITE_DOMAIN` 를 웹 사이트 URL로 변경하세요. Laravel Forge 가 이 값들로 채워질것 입니다. 하지만 두 번 확인하세요.
+`YOUR_WEBSITE_FOLDER`를 웹 사이트 폴더로 변경하고 `YOUR_WEBSITE_DOMAIN` 를 웹 사이트 URL로 변경하세요. Laravel Forge 가 이 값들로 채워질것 입니다. 하지만 두 번확인하세요.
 
 ```nginx
 # FORGE CONFIG (DOT NOT REMOVE!)
@@ -97,7 +97,7 @@ include forge-conf/YOUR_WEBSITE_FOLDER/after/*;
 
 # TLS로 Laravel Forge 보안 설정
 
-Laravel Forge가 사이트 -> YOUR_WEBSITE_DOMAIN (SERVER_NAME)를 클릭하여 `nginx.conf`의 편집을 실행 한 다음 SSL를 클릭하고 공급자 중 하나에서 인증서를 설치하는 것이 가장 좋습니다. 인증서를 활성화해야 합니다.  `nginx.conf`는 다음과 같이 보일 것입니다 :
+Laravel Forge가 사이트 -> YOUR_WEBSITE_DOMAIN (SERVER_NAME)를 클릭하여 `nginx.conf`의 편집을 실행 한 다음 SSL를 클릭하고 공급자 중 하나에서 인증서를 설치하는 것이 가장 좋습니다. 인증서를 활성화해야 합니다. `nginx.conf`는 다음과 같이 보일 것입니다 :
 
 ```nginx
 # FORGE CONFIG (DOT NOT REMOVE!)

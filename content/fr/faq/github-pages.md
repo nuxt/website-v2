@@ -45,11 +45,14 @@ Il existe un inconvénient à ajouter un `router.base` par défaut dans `nuxt.co
 ```js
 /* nuxt.config.js */
 // ajouter seulement `router.base = '/<nom-du-depot>/'` si `DEPLOY_ENV` est `GH_PAGES`
-const routerBase = process.env.DEPLOY_ENV === 'GH_PAGES' ? {
-  router: {
-    base: '/<nom-du-depot>/'
-  }
-} : {}
+const routerBase =
+  process.env.DEPLOY_ENV === 'GH_PAGES'
+    ? {
+        router: {
+          base: '/<nom-du-depot>/'
+        }
+      }
+    : {}
 
 export default {
   ...routerBase
@@ -130,18 +133,18 @@ On the same screen, scroll down to the Environment Variables section and create 
 
 Finally, create a `.travis.yml` configuration file in the root of your repository with the following contents
 
-````yaml
+```yaml
 language: node_js
 node_js:
-  - "8"
+  - '8'
 
 cache:
   directories:
-    - "node_modules"
+    - 'node_modules'
 
 branches:
   only:
-  - master
+    - master
 
 install:
   - npm install
@@ -153,19 +156,21 @@ script:
 deploy:
   provider: pages
   skip-cleanup: true
-  github-token: $GITHUB_ACCESS_TOKEN  # Set in travis-ci.org dashboard, marked secure https://docs.travis-ci.com/user/deployment/pages/#Setting-the-GitHub-token
+  github-token: $GITHUB_ACCESS_TOKEN # Set in travis-ci.org dashboard, marked secure https://docs.travis-ci.com/user/deployment/pages/#Setting-the-GitHub-token
   target-branch: gh-pages
   local-dir: dist
   on:
     branch: master
-````
+```
+
 and then commit this to your repository
 
-````bash
+```bash
 git add .travis.yml
 git commit -m "Adding travis deploy configuration"
 git push origin
-````
+```
+
 Now, whenever you commit any changes to your repository, from within Travis, you'll see a new build start up
 
 ![Travis Builder Server Output](/github_pages_travis_04.png)
@@ -182,10 +187,10 @@ Once signed in, click the 'New project' link and then click the 'Add' button bes
 
 Next, in the root of your repository, create an `appveyor.yml` configuration file with the following contents
 
-````yaml
+```yaml
 environment:
   # Nuxt requires node v8 minimum
-  nodejs_version: "8"
+  nodejs_version: '8'
   # Encrypt sensitive data (https://ci.appveyor.com/tools/encrypt)
   github_access_token:
     secure: ENCRYPTED_GITHUB_ACCESS_TOKEN
@@ -195,7 +200,7 @@ environment:
 # Only run on master branch
 branches:
   only:
-  - master
+    - master
 
 # Install scripts. (runs after repo cloning)
 install:
@@ -217,19 +222,20 @@ test: off
 
 # Don't actually build.
 build: off
-````
+```
 
-***NB*** This configuration assumes you've configured your `package.json` file as per the [Command line deployment](#command-line-deployment) instructions
+**_NB_** This configuration assumes you've configured your `package.json` file as per the [Command line deployment](#command-line-deployment) instructions
 
 Before you commit this file however, you'll need to change the `ENCRYPTED_GITHUB_ACCESS_TOKEN` and `ENCRYPTED_GITHUB_EMAIL` variables with your GitHub personal access token from earlier and your GitHub email address, encrypted using the [Appveyor encryption tool](https://ci.appveyor.com/tools/encrypt).
 
 Once updated, commit the file to your repository
 
-````bash
+```bash
 git add appveyor.yml
 git commit -m "Adding appveyor deploy configuration"
 git push origin
-````
+```
+
 Now, whenever you commit any changes to your repository, from within Appveyor, you'll see a new build start up
 
 ![Appveyor Builder Server Output](/github_pages_appveyor_02.png)

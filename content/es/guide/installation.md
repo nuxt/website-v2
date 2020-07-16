@@ -53,7 +53,7 @@ To discover more about the directory structure of the project: [Directory Struct
 
 ## Starting from scratch
 
-Creating a Nuxt.js project from scratch is easy, only *1 file and 1 directory* are required. Create an empty directory to start:
+Creating a Nuxt.js project from scratch is easy, only _1 file and 1 directory_ are required. Create an empty directory to start:
 
 ```bash
 $ mkdir <project-name>

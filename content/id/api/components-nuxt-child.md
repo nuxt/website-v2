@@ -1,5 +1,5 @@
 ---
-title: "API: The <nuxt-child> Component"
+title: 'API: The <nuxt-child> Component'
 description: Menampilkan halaman saat ini.
 menu: nuxt-child
 category: components
@@ -22,7 +22,7 @@ Contoh:
 File tree di atas akan menghasilkan rute sebagai berikut:
 
 ```js
-[
+;[
   {
     path: '/parent',
     component: '~/pages/parent.vue',
@@ -44,7 +44,7 @@ Untuk menampilkan komponen `child.vue`, kita harus memasukkan `<nuxt-child/>` di
 <template>
   <div>
     <h1>I am the parent view</h1>
-    <nuxt-child/>
+    <nuxt-child />
   </div>
 </template>
 ```

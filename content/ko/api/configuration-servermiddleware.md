@@ -1,5 +1,5 @@
 ---
-title: "API: serverMiddleware 프로퍼티"
+title: 'API: serverMiddleware 프로퍼티'
 description: 서버 사이드 미들웨어를 정의합니다.
 menu: serverMiddleware
 category: configuration
@@ -7,21 +7,20 @@ position: 127
 ---
 
 - 타입: `Array`
-    - 항목: `String`, `Object` 또는 `Function`
+  - 항목: `String`, `Object` 또는 `Function`
 
 Nuxt는 커스텀 미들웨어를 추가할 수 있는 [connect](https://github.com/senchalabs/connect) 인스턴스를 내부적으로 생성합니다. 이는 개발자들에게 **외부 서버 없이도** 추가적인 라우트를 (일반적으로 `/api`와 같은 라우트들) 등록할 수 있게 해줍니다.
 
-connect 자체는 미들웨어이므로 등록된 미들웨어는 `nuxt start`로도 동작하고, [express-template](https://github.com/nuxt-community/express-template)처럼 프로그래밍적인 방식의 미들웨어로도 동작합니다.
-Nuxt [Modules](/guide/modules) 역시 [this.addServerMiddleware()](/api/internals-module-container#addservermiddleware-middleware-)를 사용해서 `serverMiddleware`를 제공할 수 있습니다.
+connect 자체는 미들웨어이므로 등록된 미들웨어는 `nuxt start`로도 동작하고, [express-template](https://github.com/nuxt-community/express-template)처럼 프로그래밍적인 방식의 미들웨어로도 동작합니다. Nuxt [Modules](/guide/modules) 역시 [this.addServerMiddleware()](/api/internals-module-container#addservermiddleware-middleware-)를사용해서 `serverMiddleware`를 제공할 수 있습니다.
 
-여기에 더하여 기본값이 `true`인 `prefix` 옵션을 소개하겠습니다. 이 옵션은 서버 미들웨어에 라우터 베이스를 추가합니다.
+여기에 더하여 기본값이 `true`인 `prefix` 옵션을 소개하겠습니다. 이 옵션은 서버미들웨어에 라우터 베이스를 추가합니다.
 
 **예시:**
 
-* 서버 미들웨어 경로: `/api`
-* 라우터 베이스: `/admin`
-* `prefix: true`일때 (기본값): `/admin/api`
-* `prefix: false`일때: `/api`
+- 서버 미들웨어 경로: `/api`
+- 라우터 베이스: `/admin`
+- `prefix: true`일때 (기본값): `/admin/api`
+- `prefix: false`일때: `/api`
 
 ## serverMiddleware vs middleware!
 
@@ -77,9 +76,7 @@ export default function (req, res, next) {
 Nuxt Config (`nuxt.config.js`):
 
 ```js
-serverMiddleware: [
-  '~/api/logger'
-]
+serverMiddleware: ['~/api/logger']
 ```
 
 ## 객체 구문
@@ -91,7 +88,7 @@ export default {
   serverMiddleware: [
     { path: '/a', handler: '~/api/a.js' },
     { path: '/b', handler: '~/api/b.js' },
-    { path: '/c', handler: '~/api/c.js' },
+    { path: '/c', handler: '~/api/c.js' }
   ]
 }
 ```
@@ -103,8 +100,7 @@ export default {
   serverMiddleware: {
     '/a': '~/api/a.js',
     '/b': '~/api/b.js',
-    '/c': '~/api/c.js',
+    '/c': '~/api/c.js'
   }
 }
 ```
-

@@ -47,11 +47,11 @@ module.exports = {
 
 - Default:
 
-    ```js
-    {
-      presets: ['@nuxt/babel-preset-app']
-    }
-    ```
+  ```js
+  {
+    presets: ['@nuxt/babel-preset-app']
+  }
+  ```
 
 Contoh (`nuxt.config.js`):
 
@@ -94,7 +94,7 @@ Contoh (`nuxt.config.js`):
 ```js
 module.exports = {
   build: {
-    extend (config, { isClient }) {
+    extend(config, { isClient }) {
       // hanya mengExtend webpack config untuk client-bundle
       if (isClient) {
         config.devtool = 'eval-source-map'
@@ -140,7 +140,7 @@ Contoh berikut ini mengubah nama-nama chunk menjadi id numerik (`nuxt.config.js`
 export default {
   build: {
     filenames: {
-      chunk: ({ isDev }) => isDev ? '[name].js' : '[id].[contenthash].js'
+      chunk: ({ isDev }) => (isDev ? '[name].js' : '[id].[contenthash].js')
     }
   }
 }
@@ -183,19 +183,19 @@ module.exports = {
 
 - Type: `Array`, `Object` (direkomendasikan), `Function` atau `Boolean`
 
-    **Catatan:** Ketika preset standarnya adalah OK dan cukup fleksibel untuk kasus penggunaan normal, penggunaan yang direkomendasikan oleh [`vue-loader`](https://vue-loader.vuejs.org/en/options.html#postcss) adalah menggunakan file `postcss.config.js` pada proyek Anda. Dengan membuat file tersebut maka akan otomatis terdeteksi dan pilihan ini terabaikan.
+  **Catatan:** Ketika preset standarnya adalah OK dan cukup fleksibel untuk kasus penggunaan normal, penggunaan yang direkomendasikan oleh [`vue-loader`](https://vue-loader.vuejs.org/en/options.html#postcss) adalah menggunakan file `postcss.config.js` pada proyek Anda. Dengan membuat file tersebut maka akan otomatis terdeteksi dan pilihan ini terabaikan.
 
 - Default:
 
-    ```js
-    {
-      plugins: {
-      'postcss-import' : {},
-      'postcss-url': {},
-      'postcss-cssnext': {}
-      }
+  ```js
+  {
+    plugins: {
+    'postcss-import' : {},
+    'postcss-url': {},
+    'postcss-cssnext': {}
     }
-    ```
+  }
+  ```
 
 Contoh (`nuxt.config.js`):
 
@@ -267,7 +267,8 @@ module.exports = {
       {
         src: '~/modules/support/plugin.js', // `src` can be absolute or relative
         dst: 'support.js', // `dst` is relative to project `.nuxt` dir
-        options: { // Options are provided to template as `options` key
+        options: {
+          // Options are provided to template as `options` key
           live_chat: false
         }
       }
@@ -299,10 +300,7 @@ Anda juga bisa membuat file path, seperti kustom librari yang sudah Anda buat:
 ```js
 module.exports = {
   build: {
-    vendor: [
-      'axios',
-      '~/plugins/my-lib.js'
-    ]
+    vendor: ['axios', '~/plugins/my-lib.js']
   }
 }
 ```
@@ -316,9 +314,7 @@ module.exports = {
 ```js
 module.exports = {
   build: {
-    watch: [
-      '~/.nuxt/support.js'
-    ]
+    watch: ['~/.nuxt/support.js']
   }
 }
 ```

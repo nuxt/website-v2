@@ -1,5 +1,5 @@
 ---
-title: "The env Property"
+title: 'The env Property'
 description: Share environment variables between client and server.
 menu: env
 category: configuration-glossary
@@ -17,13 +17,12 @@ The env property defines environment variables that should be available on the c
 ```js{}[nuxt.config.js]
 export default {
   env: {
-    baseUrl: process.env.BASE_URL || "http://localhost:3000"
+    baseUrl: process.env.BASE_URL || 'http://localhost:3000'
   }
-};
+}
 ```
 
-This lets you create a `baseUrl` property that will be equal to the `BASE_URL` server side environment variable if available or defined. If not, `baseUrl` in client side will be equal to `'http://localhost:3000'`. The server side variable BASE_URL is therefore copied to the client side via the `env` property in the `nuxt.config.js`.
-Alternatively, the other value is defined (http://localhost:3000).
+This lets you create a `baseUrl` property that will be equal to the `BASE_URL` server side environment variable if available or defined. If not, `baseUrl` in client side will be equal to `'http://localhost:3000'`. The server side variable BASE_URL is therefore copied to the client side via the `env` property in the `nuxt.config.js`. Alternatively, the other value is defined (http://localhost:3000).
 
 Then, I can access my `baseUrl` variable in 2 ways:
 
@@ -35,11 +34,11 @@ You can use the `env` property for giving a public token for example.
 For the example above, we can use it to configure [axios](https://github.com/mzabriskie/axios).
 
 ```js{}[plugins/axios.js]
-import axios from "axios";
+import axios from 'axios'
 
 export default axios.create({
   baseURL: process.env.baseUrl
-});
+})
 ```
 
 Then, in your pages, you can import axios like this: `import axios from '~/plugins/axios'`

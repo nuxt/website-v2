@@ -1,7 +1,6 @@
 ---
 title: Perintah dan Penerapan (Deployment)
-description: Nuxt.js hadir dengan seperangkat perintah yang berguna, baik untuk tujuan
-  pengembangan maupun produksi.
+description: Nuxt.js hadir dengan seperangkat perintah yang berguna, baik untuk tujuan pengembangan maupun produksi.
 category: getting-started
 position: 113
 ---
@@ -10,12 +9,12 @@ position: 113
 
 ## Daftar Perintah
 
-Perintah | Penjelasan
---- | ---
-nuxt | Meluncurkan server pengembangan (development) di localhost:3000 dengan hot-reload.
-nuxt build | Membangun (build) aplikasi Anda dengan webpack dan minify JS & CSS (untuk produksi).
-nuxt start | Menjalankan server dalam mode produksi (setelah menjalankan `nuxt build`).
-nuxt generate | Membangun aplikasi dan membuat setiap rute sebagai file HTML (digunakan untuk hosting statis).
+| Perintah | Penjelasan |
+| --- | --- |
+| nuxt | Meluncurkan server pengembangan (development) di localhost:3000 dengan hot-reload. |
+| nuxt build | Membangun (build) aplikasi Anda dengan webpack dan minify JS & CSS (untuk produksi). |
+| nuxt start | Menjalankan server dalam mode produksi (setelah menjalankan `nuxt build`). |
+| nuxt generate | Membangun aplikasi dan membuat setiap rute sebagai file HTML (digunakan untuk hosting statis). |
 
 #### Argumen
 
@@ -63,7 +62,6 @@ Nuxt.js memungkinkan Anda memilih antara tiga mode untuk menerapkan aplikasi And
 
 Alih-alih menjalankan `nuxt` untuk menyebarkan (deploy), Anda mungkin ingin membangun (build) terlebih dahulu. Oleh karena itu, membangun (build) dan memulai (start) adalah perintah yang terpisah:
 
-
 ```bash
 nuxt build
 nuxt start
@@ -109,9 +107,9 @@ Saat membuat aplikasi web Anda dengan `nuxt generate`, [konteks](/api/context) y
 
 ### Penyebaran Aplikasi Halaman Tunggal (SPA)
 
-`nuxt generate` masih membutuhkan mesin SSR selama membangun (build) atau menghasilkan (generate), sembari kita mendapatkan pra-render semua halaman kita, dan mendapat SEO yang tinggi dan skor pemuatan halaman (page load score). Konten dihasilkan pada *waktu pembuatan*. Misalnya, kita tidak dapat menggunakannya untuk aplikasi yang kontennya bergantung pada autentikasi pengguna atau API waktu-nyata (setidaknya untuk muatan pertama).
+`nuxt generate` masih membutuhkan mesin SSR selama membangun (build) atau menghasilkan (generate), sembari kita mendapatkan pra-render semua halaman kita, dan mendapat SEO yang tinggi dan skor pemuatan halaman (page load score). Konten dihasilkan pada _waktu pembuatan_. Misalnya, kita tidak dapat menggunakannya untuk aplikasi yang kontennya bergantung pada autentikasi pengguna atau API waktu-nyata (setidaknya untuk muatan pertama).
 
-Ide SPA itu sederhana! Saat mode SPA diaktifkan menggunakan `mode: 'spa'` atau  flag `--spa`, dan kita jalankan build, generation otomatis dimulai setelah build. Generasi ini berisi meta yang umum dan tautan sumber daya (resource), namun bukan konten halaman.
+Ide SPA itu sederhana! Saat mode SPA diaktifkan menggunakan `mode: 'spa'` atau flag `--spa`, dan kita jalankan build, generation otomatis dimulai setelah build. Generasi ini berisi meta yang umum dan tautan sumber daya (resource), namun bukan konten halaman.
 
 Jadi, untuk penyebaran SPA, Anda harus melakukan hal berikut:
 
@@ -123,12 +121,12 @@ Metode penyebaran lain adalah menggunakan Nuxt sebagai middleware dalam kerangka
 
 <div class="Alert">
 
-Lihat [Bagaimana cara deploy di Heroku?] (/faq/heroku-deployment) untuk contoh penyebaran ke host populer.
+Lihat [Bagaimana cara deploy di Heroku?](/faq/heroku-deployment) untuk contoh penyebaran ke host populer.
 
 </div>
 
 <div class="Alert">
 
-Lihat [Cara memasang di Halaman GitHub?] (/faq/github-pages) untuk detail lebih lanjut tentang cara menyebarkan ke Halaman GitHub.
+Lihat [Cara memasang di Halaman GitHub?](/faq/github-pages) untuk detail lebih lanjut tentang cara menyebarkan ke Halaman GitHub.
 
 </div>

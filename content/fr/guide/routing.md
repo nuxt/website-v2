@@ -126,7 +126,7 @@ Par exemple : `pages/users/_id.vue`
 
 ```js
 export default {
-  validate ({ params }) {
+  validate({ params }) {
     // Doit être un nombre
     return /^\d+$/.test(params.id)
   }
@@ -245,8 +245,7 @@ router: {
 
 ### Itinéraire dynamique inconnu imbriqué
 
-Si vous ne connaissez pas la profondeur de la structure de vos URL, vous pouvez utiliser `_.vue` pour correspondre dynamiquement au chemin demandé.
-Ceci gérera les requêtes qui ne correpondent pas à une requête _plus spécifique_ .
+Si vous ne connaissez pas la profondeur de la structure de vos URL, vous pouvez utiliser `_.vue` pour correspondre dynamiquement au chemin demandé. Ceci gérera les requêtes qui ne correpondent pas à une requête _plus spécifique_ .
 
 Cette arborescence :
 
@@ -261,25 +260,25 @@ pages/
 
 traitera les requêtes comme cela :
 
-Chemin | Fichier
---- | ---
-`/` | `index.vue`
-`/personne` | `personne/index.vue`
-`/personne/123` | `personne/_id.vue`
-`/apropos` | `_.vue`
-`/apropos/carriere` | `_.vue`
-`/apropos/carriere/paris` | `_.vue`
+| Chemin                    | Fichier              |
+| ------------------------- | -------------------- |
+| `/`                       | `index.vue`          |
+| `/personne`               | `personne/index.vue` |
+| `/personne/123`           | `personne/_id.vue`   |
+| `/apropos`                | `_.vue`              |
+| `/apropos/carriere`       | `_.vue`              |
+| `/apropos/carriere/paris` | `_.vue`              |
 
-__Note :__ traiter les pages 404 est maintenant inclu dans la logique de la page `_.vue`. [Vous trouverez ici plus d'information sur les redirections 404](/guide/async-data#handling-errors).
+**Note :** traiter les pages 404 est maintenant inclu dans la logique de la page `_.vue`. [Vous trouverez ici plus d'information sur les redirections 404](/guide/async-data#handling-errors).
 
 ### Routes nommées
 
 Pour afficher les routes nommées, vous pouvez utiliser les composants `<nuxt name="top"/>` ou `<nuxt-child name="top"/>` dans votre layout/page. Pour spécifier une route nommée dans une page vous devez d'abord étendre la config de votre routeur dans le fichier `nuxt.config.js`:
-  
-``` js
+
+```js
 export default {
   router: {
-    extendRoutes (routes, resolve) {
+    extendRoutes(routes, resolve) {
       const index = routes.findIndex(route => route.name === 'main')
       routes[index] = {
         ...routes[index],
@@ -295,6 +294,7 @@ export default {
   }
 }
 ```
+
 Il est nécessaire d'étendre la route en question avec 2 propriétés, `components` and `chunkNames`. La vue nommée dans cet exemple a dans sa configuration une clef `name` avec comme valeur `top`.
 
 Pour voir un exemple, jetez un coup d'œil au [examples de vue nommées](/examples/named-views).
@@ -305,7 +305,7 @@ Vous pouvez activer l'alternative pour application monopage pour les routes dyna
 
 Nous pouvons activer cela dans notre fichier `nuxt.config.js` :
 
-``` js
+```js
 export default {
   generate: {
     fallback: true, // si vous souhaitez utiliser un fichier '404.html'
@@ -326,15 +326,11 @@ GitHub Pages et Netlify reconnaissent les fichiers `404.html` automatiquement, d
 
 Pour utiliser Firebase Hosting, configurez `generate.fallback` à `true` et utilisez la configuration suivante ([plus d'informations](https://firebase.google.com/docs/hosting/url-redirects-rewrites#section-rewrites)) :
 
-``` json
+```json
 {
   "hosting": {
     "public": "dist",
-    "ignore": [
-      "firebase.json",
-      "**/.*",
-      "**/node_modules/**"
-    ],
+    "ignore": ["firebase.json", "**/.*", "**/node_modules/**"],
     "rewrites": [
       {
         "source": "**",
@@ -362,10 +358,12 @@ Pour ajouter une transition de fondu à chaque page de votre application, nous a
 Notre CSS global dans `assets/main.css` :
 
 ```css
-.page-enter-active, .page-leave-active {
-  transition: opacity .5s;
+.page-enter-active,
+.page-leave-active {
+  transition: opacity 0.5s;
 }
-.page-enter, .page-leave-active {
+.page-enter,
+.page-leave-active {
   opacity: 0;
 }
 ```
@@ -374,9 +372,7 @@ Nous ajoutons son chemin dans le tableau des `css` de notre fichier de configura
 
 ```js
 export default {
-  css: [
-    '~/assets/main.css'
-  ]
+  css: ['~/assets/main.css']
 }
 ```
 
@@ -389,10 +385,12 @@ Vous êtes également libre de définir une transition personnalisée pour une s
 Nous ajoutons une nouvelle classe dans notre CSS global `assets/main.css` :
 
 ```css
-.test-enter-active, .test-leave-active {
-  transition: opacity .5s;
+.test-enter-active,
+.test-leave-active {
+  transition: opacity 0.5s;
 }
-.test-enter, .test-leave-active {
+.test-enter,
+.test-leave-active {
   opacity: 0;
 }
 ```
@@ -417,9 +415,12 @@ Un middleware reçoit [le contexte](/api#context) comme premier argument :
 
 ```js
 export default function (context) {
-  context.userAgent = process.server ? context.req.headers['user-agent'] : navigator.userAgent
+  context.userAgent = process.server
+    ? context.req.headers['user-agent']
+    : navigator.userAgent
 }
 ```
+
 En mode universel, les middlewares seront appelés une seule fois côté serveur (à la première requête à l'application Nuxt ou sur le rechargement de la page) et côté client lors de la navigation vers une autre route. En mode SPA, les middlewares seront appelés côté client sur la première requête et à chaque navigation à travers les routes.
 
 Le middleware sera exécuté en série dans l'ordre suivant :

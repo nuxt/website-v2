@@ -4,7 +4,6 @@ description: 開発モードかプロダクションモードかを指定しま�
 menu: dev
 category: configuration
 position: 106
-
 ---
 
 - 型: `Boolean`
@@ -25,7 +24,7 @@ position: 106
 
 ```js
 export default {
-  dev: (process.env.NODE_ENV !== 'production')
+  dev: process.env.NODE_ENV !== 'production'
 }
 ```
 
@@ -64,4 +63,4 @@ app.listen(port, '0.0.0.0').then(() => {
 }
 ```
 
-情報: 上の例を動かすためには `npm install --save-dev cross-env` を実行する必要があります。もし Windows で開発しているの *でない* ならば、`start` スクリプトから cross-env を削除して、直接 `NODE_ENV` をセットすることもできます。
+情報: 上の例を動かすためには `npm install --save-dev cross-env` を実行する必要があります。もし Windows で開発しているの _でない_ ならば、`start` スクリプトから cross-env を削除して、直接 `NODE_ENV` をセットすることもできます。

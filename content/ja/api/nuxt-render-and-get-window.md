@@ -1,5 +1,5 @@
 ---
-title: "API: nuxt.renderAndGetWindow(url, options)"
+title: 'API: nuxt.renderAndGetWindow(url, options)'
 description: Nuxt.js アプリケーションの URL を渡して window を取得します。
 menu: renderAndGetWindow
 category: programmatically
@@ -9,8 +9,8 @@ position: 204
 - 型: `Function`
 - 引数: `String`
   1. `String`: レンダリングする URL
-  2. *オプション*, `Object`: オプション
-    - virtualConsole: `Boolean`（デフォルト: `true`）
+  2. _オプション_, `Object`: オプション
+  - virtualConsole: `Boolean`（デフォルト: `true`）
 - 戻り値: `Promise`
   - 戻り値: `window`
 
@@ -38,9 +38,8 @@ config.dev = false
 
 const nuxt = new Nuxt(config)
 
-nuxt.renderAndGetWindow('http://localhost:3000')
-  .then((window) => {
+nuxt.renderAndGetWindow('http://localhost:3000').then(window => {
   // head 内の <title> の内容を表示
-    console.log(window.document.title)
-  })
+  console.log(window.document.title)
+})
 ```

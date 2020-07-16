@@ -8,6 +8,7 @@ position: 111
 Nuxt.js supports [env](/api/configuration-env) config to provide configuration via `process.env`. This is done by webpack's [DefinePlugin](https://webpack.js.org/plugins/define-plugin/).
 
 This approach had two downsides:
+
 - Values are read during build time and persisted into webpack bundle. So for a change to `process.env` we need to rebuild which is against [12factor](https://12factor.net/) app design
 - It can easily mislead to expose secret keys to client-side bundle
 
@@ -29,13 +30,13 @@ export default {
 - `publicRuntimeConfig` is available using `$config` in both server and client.
 - `privateRuntimeConfig` is **only available on server** using same `$config` (it overrides `publicRuntimeConfig`)
 
-###  Usage
+### Usage
 
 `$config` is available anywhere from context (including pages, store and plugins)
 
 ```js
 export default {
-  asyncData ({ $config: { baseURL } }) {
+  asyncData({ $config: { baseURL } }) {
     fetch(`${baseURL}/test`)
   },
   mounted() {
@@ -78,7 +79,7 @@ export default {
   privateRuntimeConfig: {
     baseURL: '${PUBLIC_URL}${BASE_URL}',
     API_SECRET: '${API_SECRET}' // similar to using process.env.API_SECRET
-  },
+  }
 }
 ```
 

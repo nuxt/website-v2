@@ -34,11 +34,15 @@ Dans votre page individuelle :
 
 ```js
 export default {
-  head () {
+  head() {
     return {
       title: `Page 1 (${this.name}-side)`,
       meta: [
-        { hid: 'description', name: 'description', content: 'Page 1 description' }
+        {
+          hid: 'description',
+          name: 'description',
+          content: 'Page 1 description'
+        }
       ]
     }
   }

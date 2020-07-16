@@ -12,7 +12,7 @@ position: 5
 ```js
 module.exports = {
   build: {
-    extend (config, { isDev, isClient }) {
+    extend(config, { isDev, isClient }) {
       // ...
     }
   }

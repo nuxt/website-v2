@@ -15,7 +15,7 @@ questions:
     answers:
       - true
       - false
-    correctAnswer: 
+    correctAnswer:
   - question: Where should you put your images if you want webpack to bundle them?
     answers:
       - static
@@ -42,9 +42,9 @@ The `static` directory is directly mapped to the server root () and contains f
 
 This option is helpful for files like `robots.txt`, `sitemap.xml` or `CNAME` (which is important for GitHub Pages deployment).
 
-<base-alert> 
+<base-alert>
 
-*This directory cannot be renamed without extra configuration.*
+_This directory cannot be renamed without extra configuration._
 
 </base-alert>
 
@@ -56,16 +56,15 @@ In your code, you can then reference these files relative to the root (`/`):
 
 ```html
 <!-- Static image from static directory -->
-<img src="/my-image.png"/>
+<img src="/my-image.png" />
 
 <!-- webpacked image from assets directory -->
-<img src="@/assets/my-image-2.png"/>
+<img src="@/assets/my-image-2.png" />
 ```
 
 ## Static Directory Config
 
-Should you need to you can configure the `static/` directory behaviour in the `nuxt.config.js` file. 
-
+Should you need to you can configure the `static/` directory behaviour in the `nuxt.config.js` file.
 
 ### Static asset Prefix
 

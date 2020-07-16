@@ -89,11 +89,7 @@ Kita tambahkan rute untuk `/users/:id` di dalam file `nuxt.config.js`:
 ```js
 module.exports = {
   generate: {
-    routes: [
-      '/users/1',
-      '/users/2',
-      '/users/3'
-    ]
+    routes: ['/users/1', '/users/2', '/users/3']
   }
 }
 ```
@@ -129,13 +125,12 @@ const axios = require('axios')
 
 module.exports = {
   generate: {
-    routes () {
-      return axios.get('https://my-api/users')
-        .then((res) => {
-          return res.data.map((user) => {
-            return '/users/' + user.id
-          })
+    routes() {
+      return axios.get('https://my-api/users').then(res => {
+        return res.data.map(user => {
+          return '/users/' + user.id
         })
+      })
     }
   }
 }
@@ -150,10 +145,11 @@ const axios = require('axios')
 
 module.exports = {
   generate: {
-    routes (callback) {
-      axios.get('https://my-api/users')
-        .then((res) => {
-          const routes = res.data.map((user) => {
+    routes(callback) {
+      axios
+        .get('https://my-api/users')
+        .then(res => {
+          const routes = res.data.map(user => {
             return '/users/' + user.id
           })
           callback(null, routes)
@@ -175,16 +171,15 @@ const axios = require('axios')
 
 module.exports = {
   generate: {
-    routes () {
-      return axios.get('https://my-api/users')
-        .then((res) => {
-          return res.data.map((user) => {
-            return {
-              route: '/users/' + user.id,
-              payload: user
-            }
-          })
+    routes() {
+      return axios.get('https://my-api/users').then(res => {
+        return res.data.map(user => {
+          return {
+            route: '/users/' + user.id,
+            payload: user
+          }
         })
+      })
     }
   }
 }
@@ -228,4 +223,4 @@ Ketika di-set menjadi false, file-file HTML akan di-generate berdasarkan path pa
 -----| item.html
 ```
 
-*Catatan: cara ini akan lebih bermanfaat ketika kita menggunakan [Netlify](https://netlify.com) atau hosting statis menggunakan HTML fallbacks.*
+_Catatan: cara ini akan lebih bermanfaat ketika kita menggunakan [Netlify](https://netlify.com) atau hosting statis menggunakan HTML fallbacks._

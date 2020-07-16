@@ -1,6 +1,6 @@
 ---
 title: Introducing Smart Prefeching
-description: "Starting from Nuxt v2.4.0, Nuxt.js will automagically prefetch the code-splitted pages linked with a nuxt-link when visible in the viewport by default."
+description: 'Starting from Nuxt v2.4.0, Nuxt.js will automagically prefetch the code-splitted pages linked with a nuxt-link when visible in the viewport by default.'
 imgUrl: blog/introducing-smart-prefetching/main.png
 date: 2019-01-28
 authors:
@@ -8,9 +8,9 @@ authors:
     avatarUrl: https://pbs.twimg.com/profile_images/1042510623962275840/1Iw_Mvud_400x400.jpg
     link: https://twitter.com/atinux
 tags:
-    - framework
-    - feature
-    - performance
+  - framework
+  - feature
+  - performance
 ---
 
 ## Introducing Smart prefetching ⚡️
@@ -21,7 +21,7 @@ Starting from [Nuxt v2.4.0](https://github.com/nuxt/nuxt.js/releases/tag/v2.4.0)
 
 Demos are online and we recommend you to try it out to feel the difference:
 
-*   No prefetching (v2.3): [https://nuxt-no-prefetch.surge.sh](https://nuxt-no-prefetch.surge.sh)
-*   With prefetching (v2.4): [https://nuxt-prefetch.surge.sh](https://nuxt-prefetch.surge.sh)
+- No prefetching (v2.3): [https://nuxt-no-prefetch.surge.sh](https://nuxt-no-prefetch.surge.sh)
+- With prefetching (v2.4): [https://nuxt-prefetch.surge.sh](https://nuxt-prefetch.surge.sh)
 
 You can learn more about this feature in the [`<nuxt-link>`](/api/components-nuxt-link) section of the documentation.

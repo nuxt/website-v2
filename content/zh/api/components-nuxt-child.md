@@ -1,5 +1,5 @@
 ---
-title: "API: <nuxt-child> 组件"
+title: 'API: <nuxt-child> 组件'
 description: 显示当前页面
 menu: nuxt-child
 category: components
@@ -22,7 +22,7 @@ position: 42
 上面的目录树结构会生成下面这些路由配置：
 
 ```js
-[
+;[
   {
     path: '/parent',
     component: '~/pages/parent.vue',
@@ -48,6 +48,7 @@ position: 42
   </div>
 </template>
 ```
+
 `<nuxt-child/>` 接收 `keep-alive` 和 `keep-alive-props`:
 
 ```html
@@ -65,7 +66,7 @@ position: 42
 </div>
 ```
 
-> 子组件还可以接收Vue组件等属性。
+> 子组件还可以接收 Vue 组件等属性。
 
 可以看这个实际案例：[嵌套路由示例](/examples/nested-routes)
 

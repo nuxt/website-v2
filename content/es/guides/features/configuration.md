@@ -40,7 +40,7 @@ questions:
       - True
       - False
     correctAnswer: True
-  - question:  In the nuxt.config.js what property do you use to add global CSS files?
+  - question: In the nuxt.config.js what property do you use to add global CSS files?
     answers:
       - styles
       - css
@@ -79,7 +79,7 @@ export default async () => {
   const data = await axios.get('https://api.nuxtjs.dev/posts')
   return {
     head: {
-      title: data.title,
+      title: data.title
       //... rest of config
     }
   }
@@ -111,7 +111,7 @@ You can also change the port number from the default port of 3000.
 ```js{}[nuxt.config.js]
 export default {
   server: {
-    port: 8000, // default: 3000
+    port: 8000 // default: 3000
   }
 }
 ```
@@ -152,9 +152,9 @@ Example of our `pages/index.vue` using [Pug](https://github.com/pugjs/pug) an
 </template>
 
 <style lang="scss">
-.red {
-  color: red
-}
+  .red {
+    color: red;
+  }
 </style>
 ```
 
@@ -163,18 +163,18 @@ To use these pre-processors, we need to install their webpack loaders:
 <code-group>
   <code-block label="Yarn" active>
 
-  ```bash
-  yarn add -D pug pug-plain-loader
-  yarn add -D node-sass sass-loader
-  ```
+```bash
+yarn add -D pug pug-plain-loader
+yarn add -D node-sass sass-loader
+```
 
   </code-block>
   <code-block label="NPM">
 
-  ```bash
-  npm install --save-dev pug pug-plain-loader
-  npm install --save-dev node-sass sass-loader
-  ```
+```bash
+npm install --save-dev pug pug-plain-loader
+npm install --save-dev node-sass sass-loader
+```
 
   </code-block>
 </code-group>
@@ -244,16 +244,16 @@ You can extend nuxt's webpack configuration via the `extend` option in your `
 ```js{}[nuxt.config.js]
 export default {
   build: {
-    extend (config, { isDev, isClient }) {
+    extend(config, { isDev, isClient }) {
       // ..
-      config.module.rules.push(
-        {
-          test: /\.(ttf|eot|svg|woff(2)?)(\?[a-z0-9=&.]+)?$/,
-          loader: 'file-loader'
-        }
-      )
+      config.module.rules.push({
+        test: /\.(ttf|eot|svg|woff(2)?)(\?[a-z0-9=&.]+)?$/,
+        loader: 'file-loader'
+      })
       // Sets webpack's mode to development if `isDev` is true.
-      if (isDev) { config.mode = 'development' }
+      if (isDev) {
+        config.mode = 'development'
+      }
     }
   }
 }
@@ -270,9 +270,9 @@ You may want to tweak the [optimization configuration](https://nuxtjs.org/api/c
 ```js{}[nuxt.config.js]
 export default {
   build: {
-    extend (config, { isClient }) {
+    extend(config, { isClient }) {
       if (isClient) {
-          config.optimization.splitChunks.maxSize = 200000;
+        config.optimization.splitChunks.maxSize = 200000
       }
     }
   }
@@ -286,14 +286,14 @@ In order to be aware of code style errors, you may want to run [ESLint](https:/
 ```js{}[nuxt.config.js]
 export default {
   build: {
-    extend (config, { isDev, isClient }) {
+    extend(config, { isDev, isClient }) {
       if (isDev && isClient) {
-          config.module.rules.push({
-              enforce: 'pre',
-              test: /\.(js|vue)$/,
-              loader: 'eslint-loader',
-              exclude: /(node_modules)/,
-          });
+        config.module.rules.push({
+          enforce: 'pre',
+          test: /\.(js|vue)$/,
+          loader: 'eslint-loader',
+          exclude: /(node_modules)/
+        })
       }
     }
   }
@@ -308,23 +308,32 @@ You can use a `.nuxtignore` file to let Nuxt.js ignore  `layout`, `page`, `
 
 ```markdown{}[.nuxtignore]
 # ignore layout foo.vue
+
 layouts/foo.vue
+
 # ignore layout files whose name ends with -ignore.vue
-layouts/*-ignore.vue
+
+layouts/\*-ignore.vue
 
 # ignore page bar.vue
+
 pages/bar.vue
+
 # ignore page inside ignore folder
-pages/ignore/*.vue
+
+pages/ignore/\*.vue
 
 # ignore store baz.js
+
 store/baz.js
-# ignore store files match *.test.*
-store/ignore/*.test.*
+
+# ignore store files match _.test._
+
+store/ignore/_.test._
 
 # ignore middleware files under foo folder except foo/bar.js
-middleware/foo/*.js
-!middleware/foo/bar.js
+
+middleware/foo/\*.js !middleware/foo/bar.js
 ```
 
 ## The ignorePrefix Property
@@ -358,7 +367,5 @@ export default {
 ## Further configuration
 
 The `nuxt.config.js` has way more customization and configuration options! Check out all its keys in the glossary.
-
-
 
 <quiz :questions="questions"></quiz>

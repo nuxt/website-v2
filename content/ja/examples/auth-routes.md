@@ -16,7 +16,6 @@ position: 302
 
 OAuth2 などの複雑な認証フローを実装したい場合は、公式の `auth-module` を使用することをお勧めします。
 
-
 ## express とセッションを使う
 
 アプリケーションにセッション機能を追加するために `express` と `express-session` を使います。そのために Nuxt.js をプログラムで使う必要があります。
@@ -27,7 +26,7 @@ OAuth2 などの複雑な認証フローを実装したい場合は、公式の 
 yarn add express express-session body-parser whatwg-fetch
 ```
 
-*`whatwg-fetch` については後ほど述べます。*
+_`whatwg-fetch` については後ほど述べます。_
 
 それから `server.js` ファイルを作成します:
 
@@ -41,12 +40,14 @@ const app = require('express')()
 app.use(bodyParser.json())
 
 // `req.session` を作るためのセッション
-app.use(session({
-  secret: 'super-secret-key',
-  resave: false,
-  saveUninitialized: false,
-  cookie: { maxAge: 60000 }
-}))
+app.use(
+  session({
+    secret: 'super-secret-key',
+    resave: false,
+    saveUninitialized: false,
+    cookie: { maxAge: 60000 }
+  })
+)
 
 // POST `/api/login` でログイン、`req.session.authUser` に追加
 app.post('/api/login', function (req, res) {
@@ -88,7 +89,7 @@ console.log('Server is listening on http://localhost:3000')
 // ...
 ```
 
-情報: 上の例を動かすためには `npm install --save-dev cross-env` を実行する必要があります。もし Windows で開発しているの *でない* ならば、`start` スクリプトから cross-env を削除して、直接 `NODE_ENV` をセットすることもできます。
+情報: 上の例を動かすためには `npm install --save-dev cross-env` を実行する必要があります。もし Windows で開発しているの _でない_ ならば、`start` スクリプトから cross-env を削除して、直接 `NODE_ENV` をセットすることもできます。
 
 ## ストアを使う
 
@@ -105,23 +106,22 @@ Vue.use(Vuex)
 // `window.fetch()` 用のポリフィル
 require('whatwg-fetch')
 
-const store = () => new Vuex.Store({
+const store = () =>
+  new Vuex.Store({
+    state: () => ({
+      authUser: null
+    }),
 
-  state: () => ({
-    authUser: null
-  }),
+    mutations: {
+      SET_USER(state, user) {
+        state.authUser = user
+      }
+    },
 
-  mutations: {
-    SET_USER (state, user) {
-      state.authUser = user
+    actions: {
+      // ...
     }
-  },
-
-  actions: {
-    // ...
-  }
-
-})
+  })
 
 export default store
 ```
@@ -213,14 +213,14 @@ logout ({ commit }) {
 </template>
 
 <script>
-export default {
-  // データをこのコンポーネントにセットする必要がないため fetch() を使う
-  fetch ({ store, redirect }) {
-    if (!store.state.authUser) {
-      return redirect('/')
+  export default {
+    // データをこのコンポーネントにセットする必要がないため fetch() を使う
+    fetch({ store, redirect }) {
+      if (!store.state.authUser) {
+        return redirect('/')
+      }
     }
   }
-}
 </script>
 ```
 

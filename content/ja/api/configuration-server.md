@@ -1,5 +1,5 @@
 ---
-title: "API: server プロパティ"
+title: 'API: server プロパティ'
 description: Nuxt.js では、アプリケーションのサーバー接続用の変数を `nuxt.config.js` 内に定義できます。
 menu: server
 category: configuration
@@ -27,6 +27,7 @@ export default {
 ## HTTPS 設定を用いた例
 
 `nuxt.config.js`
+
 ```js
 import path from 'path'
 import fs from 'fs'

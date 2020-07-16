@@ -25,9 +25,9 @@ Nuxt.js will look for the `store` directory, if it exists, it will:
 Nuxt.js lets you decide between **2 store modes**. You can choose the one you prefer:
 
 - **Modules:** every `.js` file inside the `store` directory is transformed as a [namespaced module](http://vuex.vuejs.org/en/modules.html) (`index` being the root module).
-- **Classic (__deprecated__):** `store/index.js` returns a method to create a store instance.
+- **Classic (**deprecated**):** `store/index.js` returns a method to create a store instance.
 
-Regardless of the mode, your `state` value should **always be a `function`** to avoid unwanted *shared* state on the server side.
+Regardless of the mode, your `state` value should **always be a `function`** to avoid unwanted _shared_ state on the server side.
 
 ## Modules mode
 
@@ -41,7 +41,7 @@ export const state = () => ({
 })
 
 export const mutations = {
-  increment (state) {
+  increment(state) {
     state.counter++
   }
 }
@@ -55,16 +55,16 @@ export const state = () => ({
 })
 
 export const mutations = {
-  add (state, text) {
+  add(state, text) {
     state.list.push({
       text,
       done: false
     })
   },
-  remove (state, { todo }) {
+  remove(state, { todo }) {
     state.list.splice(state.list.indexOf(todo), 1)
   },
-  toggle (state, todo) {
+  toggle(state, todo) {
     todo.done = !todo.done
   }
 }
@@ -78,7 +78,7 @@ new Vuex.Store({
     counter: 0
   }),
   mutations: {
-    increment (state) {
+    increment(state) {
       state.counter++
     }
   },
@@ -89,17 +89,17 @@ new Vuex.Store({
         list: []
       }),
       mutations: {
-        add (state, { text }) {
+        add(state, { text }) {
           state.list.push({
             text,
             done: false,
             id: Date.now()
           })
         },
-        remove (state, { todo }) {
+        remove(state, { todo }) {
           state.list = state.list.filter(item => item.id !== todo.id)
         },
-        toggle (state, { todo }) {
+        toggle(state, { todo }) {
           todo.done = !todo.done
         }
       }
@@ -114,42 +114,44 @@ And in your `pages/todos.vue`, using the `todos` module:
 <template>
   <ul>
     <li v-for="todo in todos" :key="todo.id">
-      <input :checked="todo.done" @change="toggle(todo)" type="checkbox">
+      <input :checked="todo.done" @change="toggle(todo)" type="checkbox" />
       <span :class="{ done: todo.done }">{{ todo.text }}</span>
       <button @click="removeTodo(todo)">remove</button>
     </li>
-    <li><input @keyup.enter="addTodo" placeholder="What needs to be done?"></li>
+    <li>
+      <input @keyup.enter="addTodo" placeholder="What needs to be done?" />
+    </li>
   </ul>
 </template>
 
 <script>
-import { mapMutations } from 'vuex'
+  import { mapMutations } from 'vuex'
 
-export default {
-  computed: {
-    todos () {
-      return this.$store.state.todos.list
-    }
-  },
-  methods: {
-    addTodo (e) {
-      this.$store.commit('todos/add', e.target.value)
-      e.target.value = ''
+  export default {
+    computed: {
+      todos() {
+        return this.$store.state.todos.list
+      }
     },
-    ...mapMutations({
-      toggle: 'todos/toggle'
-    }),
-    removeTodo (todo){
-      this.$store.commit('todos/remove', todo)
+    methods: {
+      addTodo(e) {
+        this.$store.commit('todos/add', e.target.value)
+        e.target.value = ''
+      },
+      ...mapMutations({
+        toggle: 'todos/toggle'
+      }),
+      removeTodo(todo) {
+        this.$store.commit('todos/remove', todo)
+      }
     }
   }
-}
 </script>
 
 <style>
-.done {
-  text-decoration: line-through;
-}
+  .done {
+    text-decoration: line-through;
+  }
 </style>
 ```
 
@@ -167,7 +169,7 @@ And the corresponding mutations can be in the file `store/mutations.js`
 
 ```js
 export default {
-  increment (state) {
+  increment(state) {
     state.counter++
   }
 }
@@ -177,7 +179,7 @@ export default {
 
 You can optionally break down a module file into separate files: `state.js`, `actions.js`, `mutations.js` and `getters.js`. If you maintain an `index.js` file with state, getters and mutations while having a single separate file for actions, that will also still be properly recognized.
 
-> Note: Whilst using split-file modules, you must remember that using arrow functions, ```this``` is only lexically available. Lexical scoping means that the ```this``` always references the owner of the arrow function. If the arrow function is not contained then ```this``` would be undefined. The solution is to use a "normal" function which produces its own scope and thus has ```this``` available.
+> Note: Whilst using split-file modules, you must remember that using arrow functions, `this` is only lexically available. Lexical scoping means that the `this` always references the owner of the arrow function. If the arrow function is not contained then `this` would be undefined. The solution is to use a "normal" function which produces its own scope and thus has `this` available.
 
 ### Plugins
 
@@ -186,14 +188,14 @@ You can add additional plugins to the store (in the modules mode) by putting the
 ```js
 import myPlugin from 'myPlugin'
 
-export const plugins = [ myPlugin ]
+export const plugins = [myPlugin]
 
 export const state = () => ({
   counter: 0
 })
 
 export const mutations = {
-  increment (state) {
+  increment(state) {
     state.counter++
   }
 }
@@ -260,7 +262,7 @@ const createStore = () => {
       counter: 0
     }),
     mutations: {
-      increment (state) {
+      increment(state) {
         state.counter++
       }
     }
@@ -276,6 +278,8 @@ We can now use `this.$store` inside our components:
 
 ```html
 <template>
-  <button @click="$store.commit('increment')">{{ $store.state.counter }}</button>
+  <button @click="$store.commit('increment')">
+    {{ $store.state.counter }}
+  </button>
 </template>
 ```

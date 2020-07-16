@@ -1,5 +1,5 @@
 ---
-title: "The ignore Property"
+title: 'The ignore Property'
 description: Define the ignore files for your Nuxt.js application
 menu: ignore
 category: configuration
@@ -8,8 +8,7 @@ position: 114
 
 ## .nuxtignore
 
-You can use a `.nuxtignore` file to let Nuxt.js ignore `layout`, `page`, `store` and `middleware` files in your project’s root directory (`rootDir`) during the build phase.
-The `.nuxtignore` file is subject to the same specification as `.gitignore` and `.eslintignore` files, in which each line is a glob pattern indicating which files should be ignored.
+You can use a `.nuxtignore` file to let Nuxt.js ignore `layout`, `page`, `store` and `middleware` files in your project’s root directory (`rootDir`) during the build phase. The `.nuxtignore` file is subject to the same specification as `.gitignore` and `.eslintignore` files, in which each line is a glob pattern indicating which files should be ignored.
 
 For example:
 
@@ -63,5 +62,5 @@ export default {
   ignoreOptions: {
     ignorecase: false
   }
-};
+}
 ```

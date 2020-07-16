@@ -9,7 +9,7 @@ position: 27
 # Properti middleware
 
 - Type: `String` atau `Array`
-    - Items: `String`
+  - Items: `String`
 
 Menetapkan middleware untuk halaman tertentu dari aplikasi.
 
@@ -23,9 +23,9 @@ Contoh:
 </template>
 
 <script>
-export default {
-  middleware: 'authenticated'
-}
+  export default {
+    middleware: 'authenticated'
+  }
 </script>
 ```
 

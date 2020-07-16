@@ -1,11 +1,11 @@
 ---
 title: はじめに
-description: "Nuxtは、モダンな Web アプリケーションを作成する Vue.js に基づいたプログレッシブフレームワークです。Vue.js 公式ライブラリ（vue、vue-router や vuex）および強力な開発ツール（webpack、Babel や PostCSS）に基づいています。"
+description: 'Nuxtは、モダンな Web アプリケーションを作成する Vue.js に基づいたプログレッシブフレームワークです。Vue.js 公式ライブラリ（vue、vue-router や vuex）および強力な開発ツール（webpack、Babel や PostCSS）に基づいています。'
 category: prologue
 position: 1
 ---
 
-> Nuxtは、モダンな web アプリケーションを作成する Vue.js に基づいたプログレッシブフレームワークです。Vue.js 公式ライブラリ（vue、vue-router や vuex）および強力な開発ツール（webpack、Babel や PostCSS）に基づいています。 Nuxt の目標は、優れた開発者エクスペリエンスを念頭に置き、Web 開発を強力かつ高性能にすることです。
+> Nuxt は、モダンな web アプリケーションを作成する Vue.js に基づいたプログレッシブフレームワークです。Vue.js 公式ライブラリ（vue、vue-router や vuex）および強力な開発ツール（webpack、Babel や PostCSS）に基づいています。 Nuxt の目標は、優れた開発者エクスペリエンスを念頭に置き、Web 開発を強力かつ高性能にすることです。
 
 ## NuxtJS とは何か？
 
@@ -34,7 +34,7 @@ NuxtJS は Vue.js プロジェクトのバックボーンであり、柔軟で�
 
 ## どのように動作するか？
 
-Nuxt.js はリッチなウェブアプリケーションを構築するために下記のものを含んでいます:
+Nuxt.js はリッチなウェブアプリケーションを構築するために下記のものを含んでいます :
 
 - [Vue 2](https://vuejs.org/)
 - [Vue Router](https://router.vuejs.org/ja/)

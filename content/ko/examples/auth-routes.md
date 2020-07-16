@@ -17,13 +17,15 @@ position: 302
 Nuxt.js를 사용하면서 어플리케이션에 세션 기능을 추가할 때 `express`와 `express-session`을 사용합니다.
 
 우선, 의존성을 설치해야 합니다:
+
 ```bash
 yarn add express express-session body-parser whatwg-fetch
 ```
 
-*`whatwg-fetch`에 대해서는 뒤에 말씀드리겠습니다.*
+_`whatwg-fetch`에 대해서는 뒤에 말씀드리겠습니다._
 
 `server.js`를 만듭니다.:
+
 ```js
 const { Nuxt, Builder } = require('nuxt')
 const bodyParser = require('body-parser')
@@ -34,12 +36,14 @@ const app = require('express')()
 app.use(bodyParser.json())
 
 // req.session을 만들기 위한 session
-app.use(session({
-  secret: 'super-secret-key',
-  resave: false,
-  saveUninitialized: false,
-  cookie: { maxAge: 60000 }
-}))
+app.use(
+  session({
+    secret: 'super-secret-key',
+    resave: false,
+    saveUninitialized: false,
+    cookie: { maxAge: 60000 }
+  })
+)
 
 // POST /api/login 로 로그인하여 req.session.authUser에 추가.
 app.post('/api/login', function (req, res) {
@@ -70,6 +74,7 @@ console.log('Server is listening on http://localhost:3000')
 ```
 
 `package.json` 파일 업데이트:
+
 ```json
 // ...
 "scripts": {
@@ -79,11 +84,12 @@ console.log('Server is listening on http://localhost:3000')
 }
 // ...
 ```
-주의: 위 예제를 확인하기 위해 `npm install --save-dev cross-env` 명령어를 실행해야 합니다. 윈도우에서 개발하지 *않는다면* `start` 스크립트에서 cross-env를 제외하고 직접 `NODE_ENV`를 설정할 수 있습니다.
+
+주의: 위 예제를 확인하기 위해 `npm install --save-dev cross-env` 명령어를 실행해야 합니다. 윈도우에서 개발하지 _않는다면_ `start` 스크립트에서 cross-env를 제외하고 직접 `NODE_ENV`를 설정할 수 있습니다.
 
 ## Store 사용하기
 
-사용자가 페이지 **전체** 에 연결되어 있는지 여부를 응용 프로그램에 알리려면 전역 상태가 필요합니다.
+사용자가 페이지 **전체** 에 연결되어 있는지 여부를 응용 프로그램에 알리려면 전역상태가 필요합니다.
 
 Nuxt.js가 Vuex를 사용하기 위해서 `store/index.js` 파일을 만듭니다:
 
@@ -96,23 +102,22 @@ Vue.use(Vuex)
 // window.fetch()를 위한 Polyfill
 require('whatwg-fetch')
 
-const store = () => new Vuex.Store({
+const store = () =>
+  new Vuex.Store({
+    state: {
+      authUser: null
+    },
 
-  state: {
-    authUser: null
-  },
+    mutations: {
+      SET_USER(state, user) {
+        state.authUser = user
+      }
+    },
 
-  mutations: {
-    SET_USER (state, user) {
-      state.authUser = user
+    actions: {
+      // ...
     }
-  },
-
-  actions: {
-    // ...
-  }
-
-})
+  })
 
 export default store
 ```
@@ -127,6 +132,7 @@ export default store
 Nuxt.js는 인자에 컨텍스트가 있는 'nuxtServerInit`라는 특정 작업을 호출했을 때, 앱이 로드되며 store는 서버에서 이미 가져온 일부 데이터로 채워집니다.
 
 `store/index.js`에서 `nuxtServerInit` 액션을 추가 할 수 있습니다:
+
 ```js
 nuxtServerInit ({ commit }, { req }) {
   if (req.session && req.session.authUser) {
@@ -135,7 +141,7 @@ nuxtServerInit ({ commit }, { req }) {
 }
 ```
 
-nuxt.js는 비동기 데이터 메소드를 만들기 위해 가장 익숙한 메소드를 선택할 수 있는 다른 방법들을 제공합니다:
+nuxt.js는 비동기 데이터 메소드를 만들기 위해 가장 익숙한 메소드를 선택할 수 있는다른 방법들을 제공합니다:
 
 1. Promise를 반환하면, nuxt.js는 컴포넌트를 렌더링하기 전에 Promise가 해결 될 때까지 기다립니다.
 2. [async/await proposal](https://github.com/lukehoban/ecmascript-asyncawait) 사용하기 ([더 배워보기](https://zeit.co/blog/async-and-await))
@@ -143,6 +149,7 @@ nuxt.js는 비동기 데이터 메소드를 만들기 위해 가장 익숙한 �
 ### login() 액션
 
 우리는 사용자 로그인을 위해 호출 될 Pages 컴포넌트에 `login` 액션을 추가합니다:
+
 ```js
 login ({ commit }, { username, password }) {
   return fetch('/api/login', {
@@ -192,6 +199,7 @@ logout ({ commit }) {
 ### 사용자가 연결되지 않았다면 Redirect
 
 연결된 사용자만 볼 수 있는 `/secret` 라우터를 추가합니다.
+
 ```html
 <template>
   <div>
@@ -201,14 +209,14 @@ logout ({ commit }) {
 </template>
 
 <script>
-export default {
-  // 이 컴포넌트에 데이터를 설정할 필요가 없으므로 fetch()를 사용합니다.
-  fetch ({ store, redirect }) {
-    if (!store.state.authUser) {
-      return redirect('/')
+  export default {
+    // 이 컴포넌트에 데이터를 설정할 필요가 없으므로 fetch()를 사용합니다.
+    fetch({ store, redirect }) {
+      if (!store.state.authUser) {
+        return redirect('/')
+      }
     }
   }
-}
 </script>
 ```
 

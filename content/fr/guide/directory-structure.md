@@ -91,9 +91,9 @@ _Ce fichier ne peut pas être renommé._
 
 ## Alias
 
-| Alias | Répertoire |
-|-----|------|
-| `~` or `@` | [srcDir](/api/configuration-srcdir) |
+| Alias        | Répertoire                            |
+| ------------ | ------------------------------------- |
+| `~` or `@`   | [srcDir](/api/configuration-srcdir)   |
 | `~~` or `@@` | [rootDir](/api/configuration-rootdir) |
 
 Par défaut, `srcDir` est le même répertoire que `rootDir`.

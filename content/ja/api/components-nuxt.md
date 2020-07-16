@@ -14,7 +14,7 @@ position: 41
 <template>
   <div>
     <div>My nav bar</div>
-    <nuxt/>
+    <nuxt />
     <div>My footer</div>
   </div>
 </template>
@@ -32,25 +32,25 @@ position: 41
 
 1. `nuxtChildKey` prop
 
-  ```html
-  <template>
-     <div>
-       <nuxt :nuxt-child-key="someKey"/>
-     </div>
-  </template>
-  ```
+```html
+<template>
+  <div>
+    <nuxt :nuxt-child-key="someKey" />
+  </div>
+</template>
+```
 
 2. 各ページコンポーネントの `key` オプション: `string` or `function`
 
-  ```js
-  export default {
-    key (route) {
-      return route.fullPath
-    }
+```js
+export default {
+  key(route) {
+    return route.fullPath
   }
-  ```
+}
+```
 
-- name：`string` (_Nuxt v2.4.0で導入されました_)
+- name：`string` (_Nuxt v2.4.0 で導入されました_)
   - この prop は `<router-view/>` に設定され、ページコンポーネントの名前付きビューをレンダリングするのに利用されます
   - デフォルト: `default`
 

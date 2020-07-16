@@ -1,5 +1,5 @@
 ---
-title: "API: The <client-only> Component"
+title: 'API: The <client-only> Component'
 description: Melewati render komponen pada server side (rendering), dan menampilkan
 menu: client-only
 category: components
@@ -13,7 +13,7 @@ position: 44
 **Props**:
 
 - placeholder: `String`
-    - Prop ini digunakan  sebagai konten di dalam `div` dan ditampilkan sebagai text pada server side rendering.
+  - Prop ini digunakan sebagai konten di dalam `div` dan ditampilkan sebagai text pada server side rendering.
 
 ```html
 <template>
@@ -26,5 +26,4 @@ position: 44
 </template>
 ```
 
-Komponen ini adalah klon dari [egoist/vue-no-ssr](https://github.com/egoist/vue-no-ssr).
-Terima kasih [@egoist](https://github.com/egoist)!
+Komponen ini adalah klon dari [egoist/vue-no-ssr](https://github.com/egoist/vue-no-ssr). Terima kasih [@egoist](https://github.com/egoist)!

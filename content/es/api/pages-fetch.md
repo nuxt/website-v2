@@ -1,5 +1,5 @@
 ---
-title: "The fetch Method"
+title: 'The fetch Method'
 description: The `fetch` method is used to fill the store before rendering the page, it's like the `asyncData` method except it doesn't set the component data.
 menu: fetch
 category: pages
@@ -41,10 +41,10 @@ or component method:
 export default {
   methods: {
     refresh() {
-      this.$fetch();
+      this.$fetch()
     }
   }
-};
+}
 ```
 
 You can access the Nuxt [context](/api/context) within the fetch hook using `this.$nuxt.context`.
@@ -66,15 +66,15 @@ When `fetchOnServer` is falsy (`false` or returns `false`), `fetch` will be call
     data() {
       return {
         posts: []
-      };
+      }
     },
     async fetch() {
       this.posts = await this.$http.$get(
-        "https://jsonplaceholder.typicode.com/posts"
-      );
+        'https://jsonplaceholder.typicode.com/posts'
+      )
     },
     fetchOnServer: false
-  };
+  }
 </script>
 ```
 
@@ -111,14 +111,14 @@ Let's have a blog with our home page listing our posts:
     data() {
       return {
         posts: []
-      };
+      }
     },
     async fetch() {
       this.posts = await this.$http.$get(
-        "https://jsonplaceholder.typicode.com/posts"
-      );
+        'https://jsonplaceholder.typicode.com/posts'
+      )
     }
-  };
+  }
 </script>
 ```
 
@@ -151,14 +151,14 @@ Now, let's add `pages/posts/_id.vue` page to display a post on `/posts/:id`.
     data() {
       return {
         post: {}
-      };
+      }
     },
     async fetch() {
       this.post = await this.$http.$get(
         `https://jsonplaceholder.typicode.com/posts/${this.$route.params.id}`
-      );
+      )
     }
-  };
+  }
 </script>
 ```
 
@@ -179,12 +179,12 @@ The `fetch` hook **is not called** on query string changes by default. To watch 
 ```js
 export default {
   watch: {
-    "$route.query": "$fetch"
+    '$route.query': '$fetch'
   },
   async fetch() {
     // Called also on query changes
   }
-};
+}
 ```
 
 ### Caching
@@ -222,20 +222,20 @@ Nuxt will directly fill `this.$fetchState.timestamp` (timestamp) of the last `fe
     data() {
       return {
         post: {}
-      };
+      }
     },
     activated() {
       // Call fetch again if last fetch more than 30 sec ago
       if (this.$fetchState.timestamp <= Date.now() - 30000) {
-        this.$fetch();
+        this.$fetch()
       }
     },
     async fetch() {
       this.post = await this.$http.$get(
         `https://jsonplaceholder.typicode.com/posts/${this.$route.params.id}`
-      );
+      )
     }
-  };
+  }
 </script>
 ```
 
@@ -269,11 +269,11 @@ Example of `pages/index.vue`:
 <script>
   export default {
     fetch({ store, params }) {
-      return axios.get("http://my-api/stars").then(res => {
-        store.commit("setStars", res.data);
-      });
+      return axios.get('http://my-api/stars').then(res => {
+        store.commit('setStars', res.data)
+      })
     }
-  };
+  }
 </script>
 ```
 
@@ -287,10 +287,10 @@ You can also use `async`/`await` to make your code cleaner:
 <script>
   export default {
     async fetch({ store, params }) {
-      let { data } = await axios.get("http://my-api/stars");
-      store.commit("setStars", data);
+      let { data } = await axios.get('http://my-api/stars')
+      store.commit('setStars', data)
     }
-  };
+  }
 </script>
 ```
 
@@ -302,9 +302,9 @@ If you want to call a store action, use `store.dispatch` inside `fetch`, make su
 <script>
   export default {
     async fetch({ store, params }) {
-      await store.dispatch("GET_STARS");
+      await store.dispatch('GET_STARS')
     }
-  };
+  }
 </script>
 ```
 
@@ -314,10 +314,10 @@ If you want to call a store action, use `store.dispatch` inside `fetch`, make su
 // ...
 export const actions = {
   async GET_STARS({ commit }) {
-    const { data } = await axios.get("http://my-api/stars");
-    commit("SET_STARS", data);
+    const { data } = await axios.get('http://my-api/stars')
+    commit('SET_STARS', data)
   }
-};
+}
 ```
 
 ### Listening to query string changes

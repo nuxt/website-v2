@@ -22,9 +22,9 @@
             :src="`https://github.com/${contributor.author}.png?size=32`"
             class="h-8"
           />
-          <span class="inline-block px-2 leading-loose">{{
-            contributor.author
-          }}</span>
+          <span class="inline-block px-2 leading-loose">
+            {{ contributor.author }}
+          </span>
         </a>
       </div>
       <BaseAlert

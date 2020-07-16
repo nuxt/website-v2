@@ -1,5 +1,5 @@
 ---
-title: "API: buildDir 프로퍼티"
+title: 'API: buildDir 프로퍼티'
 description: Nuxt.js 애플리케이션의 dist 디렉토리를 정의합니다
 menu: buildDir
 category: configuration

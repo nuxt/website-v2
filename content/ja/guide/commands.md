@@ -9,12 +9,12 @@ position: 113
 
 ## コマンド一覧
 
-コマンド | 説明
---- | ---
-nuxt | 開発サーバーを [localhost:3000](http://localhost:3000) で起動します。このサーバーはホットリローディングします
-nuxt build | アプリケーションを Webpack でビルドし、JS と CSS をプロダクション向けにミニファイします
-nuxt start | プロダクションモードでサーバーを起動します（`nuxt build` 後に実行してください）
-nuxt generate | アプリケーションをビルドして、ルートごとに HTML ファイルを生成します（静的ファイルのホスティングに用います）
+| コマンド | 説明 |
+| --- | --- |
+| nuxt | 開発サーバーを [localhost:3000](http://localhost:3000) で起動します。このサーバーはホットリローディングします |
+| nuxt build | アプリケーションを Webpack でビルドし、JS と CSS をプロダクション向けにミニファイします |
+| nuxt start | プロダクションモードでサーバーを起動します（`nuxt build` 後に実行してください） |
+| nuxt generate | アプリケーションをビルドして、ルートごとに HTML ファイルを生成します（静的ファイルのホスティングに用います） |
 
 #### 引数
 
@@ -26,11 +26,11 @@ nuxt generate | アプリケーションをビルドして、ルートごとに 
 
 #### フック
 
-フック                 | 目的
----------------------|----------------------------------------------------------------------------------------------------------------------------------------
-`cli:buildError` | 開発モードでビルドエラーをキャプチャし、読み込み画面に表示します。
+| フック | 目的 |
+| --- | --- |
+| `cli:buildError` | 開発モードでビルドエラーをキャプチャし、読み込み画面に表示します。 |
 
-#### package.jsonで使用する
+#### package.json で使用する
 
 これらのコマンドを `package.json` に書いておくと良いでしょう:
 
@@ -63,7 +63,7 @@ npm run dev
 
 ## プロダクションのデプロイ
 
-Nuxt.js では 3つのモードからアプリケーションのデプロイを選択できます。 SSR 、SPA 、そして静的生成です。
+Nuxt.js では 3 つのモードからアプリケーションのデプロイを選択できます。 SSR 、SPA 、そして静的生成です。
 
 ### サーバーサイドレンダリングモードのデプロイ（ユニバーサル SSR）
 
@@ -74,9 +74,7 @@ nuxt build
 nuxt start
 ```
 
-Nuxt.js を HTTPS モードで提供することを選択した場合、 [`https.createServer`](https://nodejs.org/api/https.html) に渡されるオプションと同じオプションを使って `nuxt.config.js` に `server.https`を設定することもできます。 
-`nuxt.config.js`に `server.socket` オプションを設定（または [CLI](https://ja.nuxtjs.org/guide/commands/#%E3%82%B3%E3%83%9E%E3%83%B3%E3%83%89%E4%B8%80%E8%A6%A7) の `-n` 引数を使用）すると、 Unix ソケットも利用できます。
-[Unix ソケット](https://en.wikipedia.org/wiki/Berkeley_sockets)を利用する場合は、 `host` パラメータと ` port` パラメータを設定しないでください。設定した場合、 `socket` パラメータは無視されます。
+Nuxt.js を HTTPS モードで提供することを選択した場合、 [`https.createServer`](https://nodejs.org/api/https.html) に渡されるオプションと同じオプションを使って `nuxt.config.js` に `server.https`を設定することもできます。 `nuxt.config.js`に `server.socket` オプションを設定（または [CLI](https://ja.nuxtjs.org/guide/commands/#%E3%82%B3%E3%83%9E%E3%83%B3%E3%83%89%E4%B8%80%E8%A6%A7) の `-n` 引数を使用）すると、 Unix ソケットも利用できます。 [Unix ソケット](https://en.wikipedia.org/wiki/Berkeley_sockets)を利用する場合は、 `host` パラメータと `port` パラメータを設定しないでください。設定した場合、 `socket` パラメータは無視されます。
 
 `package.json` では下記のように記述することが推奨されています:
 
@@ -108,7 +106,7 @@ npm run generate
 
 静的なホスティングサイトにデプロイする準備が整ったものが全て入った `dist` フォルダが作成されます。
 
-ページエラーが発生した際に0以外のステータスコードを返し、CI/CD によるデプロイまたはビルドを失敗させるには、 `--fail-on-error` 引数を使用することができます。
+ページエラーが発生した際に 0 以外のステータスコードを返し、CI/CD によるデプロイまたはビルドを失敗させるには、 `--fail-on-error` 引数を使用することができます。
 
 ```bash
 npm run generate --fail-on-error
@@ -117,7 +115,6 @@ npm run generate --fail-on-error
 
 yarn generate --fail-on-error
 ```
-
 
 プロジェクトで [動的なルーティング](/guide/routing#dynamic-routes) を使っている場合は、Nuxt.js に動的なルーティングを生成させるために [generate 設定](/api/configuration-generate) に目を通してください。
 

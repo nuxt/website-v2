@@ -1,5 +1,5 @@
 ---
-title: "$nuxt: NuxtJS 的优化帮手"
+title: '$nuxt: NuxtJS 的优化帮手'
 description: $nuxt 是一个专注于改善用户用户体验的帮手。
 menu: $nuxt
 category: utils
@@ -23,7 +23,7 @@ position: 50
 <template>
   <div>
     <div v-if="$nuxt.isOffline">You are offline</div>
-    <nuxt/>
+    <nuxt />
   </div>
 </template>
 ```

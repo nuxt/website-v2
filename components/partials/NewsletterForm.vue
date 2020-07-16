@@ -19,9 +19,9 @@
           @submit.prevent="subscribe"
         >
           <div>
-            <label for="news-email" class="hidden">{{
-              $t('homepage.newsletter.form.email')
-            }}</label>
+            <label for="news-email" class="hidden">
+              {{ $t('homepage.newsletter.form.email') }}
+            </label>
             <input
               id="news-email"
               v-model="email"
@@ -49,7 +49,9 @@
           {{ subscribedEmail }}
           {{ $t('homepage.newsletter.form.subscribed_messages.post') }}
         </p>
-        <p v-if="error" class="text-red-600 py-1">{{ error }}</p>
+        <p v-if="error" class="text-red-600 py-1">
+          {{ error }}
+        </p>
       </ClientOnly>
     </section>
   </AppContainer>

@@ -1,5 +1,5 @@
 ---
-title: "API: buildDir 属性"
+title: 'API: buildDir 属性'
 description: 为Nuxt.js应用程序定义 dist 目录
 menu: buildDir
 category: configuration
@@ -11,7 +11,7 @@ position: 102
 - 类型: `String`
 - 默认: `.nuxt`
 
-> 为Nuxt.js应用程序定义.nuxt(默认)目录
+> 为 Nuxt.js 应用程序定义.nuxt(默认)目录
 
 例如 (`nuxt.config.js`):
 

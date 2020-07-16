@@ -128,16 +128,16 @@ Nuxt.js 可以让你在动态路由组件中定义参数校验方法。
 
 ```js
 export default {
-  validate ({ params }) {
+  validate({ params }) {
     // 必须是number类型
     return /^\d+$/.test(params.id)
   }
 }
 ```
 
-如果校验方法返回的值不为 `true`或`Promise`中resolve 解析为`false`或抛出Error ， Nuxt.js 将自动加载显示 404 错误页面或 500 错误页面。
+如果校验方法返回的值不为 `true`或`Promise`中 resolve 解析为`false`或抛出 Error ， Nuxt.js 将自动加载显示 404 错误页面或 500 错误页面。
 
-想了解关于路由参数校验的信息，请参考 [页面校验API](/api/pages-validate)。
+想了解关于路由参数校验的信息，请参考 [页面校验 API](/api/pages-validate)。
 
 ## 嵌套路由
 
@@ -247,7 +247,7 @@ router: {
 
 ### 未知嵌套深度的动态嵌套路由
 
-如果您不知道URL结构的深度，您可以使用`_.vue`动态匹配嵌套路径。这将处理与*更具体*请求不匹配的情况。
+如果您不知道 URL 结构的深度，您可以使用`_.vue`动态匹配嵌套路径。这将处理与*更具体*请求不匹配的情况。
 
 文件结构:
 
@@ -262,24 +262,25 @@ pages/
 
 将处理这样的请求：
 
-Path | File
---- | ---
-`/` | `index.vue`
-`/people` | `people/index.vue`
-`/people/123` | `people/_id.vue`
-`/about` | `_.vue`
-`/about/careers` | `_.vue`
-`/about/careers/chicago` | `_.vue`
+| Path                     | File               |
+| ------------------------ | ------------------ |
+| `/`                      | `index.vue`        |
+| `/people`                | `people/index.vue` |
+| `/people/123`            | `people/_id.vue`   |
+| `/about`                 | `_.vue`            |
+| `/about/careers`         | `_.vue`            |
+| `/about/careers/chicago` | `_.vue`            |
 
-__Note:__ 处理404页面，现在符合`_.vue`页面的逻辑。 [有关404重定向的更多信息，请点击此处](/guide/async-data#handling-errors).
+**Note:** 处理 404 页面，现在符合`_.vue`页面的逻辑。 [有关 404 重定向的更多信息，请点击此处](/guide/async-data#handling-errors).
 
 ### 命名视图
 
 要渲染命名视图，您可以在`布局(layout) / 页面(page)`中使用 `<nuxt name="top"/>` 或 `<nuxt-child name="top"/>` 组件。要指定页面的**命名视图**，我们需要在`nuxt.config.js`文件中扩展路由器配置：
-``` js
+
+```js
 export default {
   router: {
-    extendRoutes (routes, resolve) {
+    extendRoutes(routes, resolve) {
       const index = routes.findIndex(route => route.name === 'main')
       routes[index] = {
         ...routes[index],
@@ -295,14 +296,16 @@ export default {
   }
 }
 ```
+
 它需要使用**两个属性** `components` 和 `chunkNames` 扩展路由。此配置示例中的命名视图名称为 `top` 。看一个例子:[命名视图 例子](/examples/named-views)。
 
 ### SPA fallback
 
-您也可以为动态路由启用`SPA fallback`。在使用`mode:'spa'`模式下，Nuxt.js将输出一个与`index.html`相同的额外文件。如果没有文件匹配，大多数静态托管服务可以配置为使用SPA模板。生成文件不包含头信息或任何HTML，但它仍将解析并加载API中的数据。
+您也可以为动态路由启用`SPA fallback`。在使用`mode:'spa'`模式下，Nuxt.js 将输出一个与`index.html`相同的额外文件。如果没有文件匹配，大多数静态托管服务可以配置为使用 SPA 模板。生成文件不包含头信息或任何 HTML，但它仍将解析并加载 API 中的数据。
 
 我们在`nuxt.config.js`文件中启用它：
-``` js
+
+```js
 export default {
   generate: {
     fallback: true, // if you want to use '404.html'
@@ -311,7 +314,7 @@ export default {
 }
 ```
 
-#### 在Surge上实现
+#### 在 Surge 上实现
 
 Surge [可以处理](https://surge.sh/help/adding-a-custom-404-not-found-page)`200.html` 和 `404.html`，`generate.fallback`默认设置为`200.html`，因此无需更改它。
 
@@ -321,17 +324,13 @@ GitHub Pages 和 Netlify 自动识别 `404.html`文件，所以我们需要做�
 
 #### 在 Firebase Hosting 上实现
 
-要在Firebase Hosting上使用，请将 `generate.fallback` 配置为 `true` 并使用以下配置([more info](https://firebase.google.com/docs/hosting/url-redirects-rewrites#section-rewrites))：
+要在 Firebase Hosting 上使用，请将 `generate.fallback` 配置为 `true` 并使用以下配置 ([more info](https://firebase.google.com/docs/hosting/url-redirects-rewrites#section-rewrites))：
 
-``` json
+```json
 {
   "hosting": {
     "public": "dist",
-    "ignore": [
-      "firebase.json",
-      "**/.*",
-      "**/node_modules/**"
-    ],
+    "ignore": ["firebase.json", "**/.*", "**/node_modules/**"],
     "rewrites": [
       {
         "source": "**",
@@ -357,60 +356,68 @@ Nuxt.js 使用 Vue.js 的[&lt;transition&gt;](http://vuejs.org/v2/guide/transiti
 如果想让每一个页面的切换都有淡出 (fade) 效果，我们需要创建一个所有路由共用的 CSS 文件。所以我们可以在 `assets/` 目录下创建这个文件：
 
 在全局样式文件 `assets/main.css` 里添加一下样式：
+
 ```css
-.page-enter-active, .page-leave-active {
-  transition: opacity .5s;
+.page-enter-active,
+.page-leave-active {
+  transition: opacity 0.5s;
 }
-.page-enter, .page-leave-active {
+.page-enter,
+.page-leave-active {
   opacity: 0;
 }
 ```
 
 然后添加到 `nuxt.config.js` 文件中：
+
 ```js
 module.exports = {
-  css: [
-    'assets/main.css'
-  ]
+  css: ['assets/main.css']
 }
 ```
 
-关于过渡效果 `transition` 属性配置的更多信息可参看 [页面过渡效果API](/api/pages-transition)。
+关于过渡效果 `transition` 属性配置的更多信息可参看 [页面过渡效果 API](/api/pages-transition)。
 
 ### 页面过渡动效设置
 
 如果想给某个页面自定义过渡特效的话，只要在该页面组件中配置 `transition` 字段即可：
 
 在全局样式 `assets/main.css` 中添加一下内容：
+
 ```css
-.test-enter-active, .test-leave-active {
-  transition: opacity .5s;
+.test-enter-active,
+.test-leave-active {
+  transition: opacity 0.5s;
 }
-.test-enter, .test-leave-active {
+.test-enter,
+.test-leave-active {
   opacity: 0;
 }
 ```
 
 然后我们将页面组件中的 `transition` 属性的值设置为 `test` 即可：
+
 ```js
 export default {
   transition: 'test'
 }
 ```
 
-关于过渡效果 `transition` 属性配置的更多信息可参看 [页面过渡效果API](/api/pages-transition)。
+关于过渡效果 `transition` 属性配置的更多信息可参看 [页面过渡效果 API](/api/pages-transition)。
 
 ## 中间件
 
 > 中间件允许您定义一个自定义函数运行在一个页面或一组页面渲染之前。
 
-每一个中间件应放置在 `middleware/` 目录。文件名的名称将成为中间件名称(`middleware/auth.js`将成为 `auth` 中间件)。
+每一个中间件应放置在 `middleware/` 目录。文件名的名称将成为中间件名称 (`middleware/auth.js`将成为 `auth` 中间件)。
 
 一个中间件接收 [context](/api#上下文对象) 作为第一个参数：
 
 ```javascript
 export default function (context) {
-  context.userAgent = process.server ? context.req.headers['user-agent'] : navigator.userAgent
+  context.userAgent = process.server
+    ? context.req.headers['user-agent']
+    : navigator.userAgent
 }
 ```
 
@@ -420,7 +427,7 @@ export default function (context) {
 2. 匹配布局
 3. 匹配页面
 
-中间件可以异步执行,只需要返回一个 `Promise` 或使用第2个 `callback` 作为第一个参数：
+中间件可以异步执行,只需要返回一个 `Promise` 或使用第 2 个 `callback` 作为第一个参数：
 
 `middleware/stats.js`
 

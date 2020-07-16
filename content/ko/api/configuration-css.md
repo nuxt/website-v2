@@ -1,5 +1,5 @@
 ---
-title: "API: css 프로퍼티"
+title: 'API: css 프로퍼티'
 description: Nuxt.js를 사용하면 (포함된 모든 페이지에서) 전역으로 사용할 CSS 파일 / 모듈 / 라이브러리를 설정할 수 있습니다.
 menu: css
 category: configuration
@@ -11,9 +11,10 @@ position: 104
 > Nuxt.js를 사용하면 (포함된 모든 페이지에서) 전역으로 사용할 CSS 파일 / 모듈 / 라이브러리를 설정할 수 있습니다.
 
 - 타입: `Array`
- - items: `String` or `Object`
+- items: `String` or `Object`
 
 만약 items가 object일 경우의 프로퍼티:
+
 - src: `String` (파일 경로)
 - lang: `String` ([사용된 전처리기](/faq/pre-processors))
 

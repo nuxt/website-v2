@@ -24,7 +24,7 @@ questions:
       - req
       - res
       - context
-    correctAnswer: 
+    correctAnswer:
   - question: In universal mode when is middleware called?
     answers:
       - server side on first request and server side when navigating
@@ -56,8 +56,8 @@ questions:
     correctAnswer: true
   - question: How do you add this named middleware (`middleware/authenticated.js`) to your page?
     answers:
-      - "middleware: authenticated"
-      - "middleware: true"
+      - 'middleware: authenticated'
+      - 'middleware: true'
       - "middleware: 'authenticated'"
     correctAnswer: "middleware: 'authenticated'"
   - question: How do you use anonymous middleware, middleware only for a specific page?
@@ -74,11 +74,12 @@ Shared middleware should be placed in the  `middleware/`  directory. The file
 
 A middleware receives [the context](https://nuxtjs.org/api/context) as the first argument.
 
-
 ```js{}[middleware/user-agent.js]
 export default function (context) {
   // Add the userAgent property to the context
-  context.userAgent = process.server ? context.req.headers['user-agent'] : navigator.userAgent
+  context.userAgent = process.server
+    ? context.req.headers['user-agent']
+    : navigator.userAgent
 }
 ```
 
@@ -93,7 +94,6 @@ The middleware will be executed in series in this order:
 ## Router Middleware
 
 A middleware can be asynchronous. To do this return a  `Promise` or use async/await.
-
 
 ```js{}[middleware/stats.js]
 import http from 'http'
@@ -115,7 +115,7 @@ export default {
 }
 ```
 
-Now the `stats` middleware will be called for every route change. 
+Now the `stats` middleware will be called for every route change.
 
 You can add your middleware (even multiple) to a specific layout or page as well.
 
@@ -153,6 +153,7 @@ export default {
 }
 </script>
 ```
+
 <app-modal>
   <code-sandbox  :src="csb_link_named"></code-sandbox>
 </app-modal>
@@ -177,6 +178,7 @@ export default {
 }
 </script>
 ```
+
 <app-modal>
   <code-sandbox  :src="csb_link_anonymous"></code-sandbox>
 </app-modal>

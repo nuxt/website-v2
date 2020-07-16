@@ -1,13 +1,12 @@
 ---
-title: "RuntimeConfig properties"
+title: 'RuntimeConfig properties'
 description: RuntimeConfig allows passing dynamic config and environment variables to the nuxt context
 menu: runtimeConfig
 category: configuration
 position: 125
 ---
 
-Runtime config allows passing dynamic config and environment variables to the nuxt context.
-For more information of usage, please see [runtime config guide](/guide/runtime-config)
+Runtime config allows passing dynamic config and environment variables to the nuxt context. For more information of usage, please see [runtime config guide](/guide/runtime-config)
 
 ## `publicRuntimeConfig`
 

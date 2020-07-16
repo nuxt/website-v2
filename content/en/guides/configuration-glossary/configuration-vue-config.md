@@ -1,5 +1,5 @@
 ---
-title: "The vue.config Property"
+title: 'The vue.config Property'
 description: A config object for Vue.config
 menu: vue.config
 category: configuration-glossary
@@ -21,16 +21,16 @@ export default {
       devtools: false
     }
   }
-};
+}
 ```
 
 This configuration will lead to the following Vue.config:
 
 ```js
-Vue.config.productionTip; // true
-Vue.config.devtools; // false
-Vue.config.silent; // !isDev [default value]
-Vue.config.performance; // isDev [default value]
+Vue.config.productionTip // true
+Vue.config.devtools // false
+Vue.config.silent // !isDev [default value]
+Vue.config.performance // isDev [default value]
 ```
 
 To learn more about the `Vue.config` API, check out the [official Vue documentation](https://vuejs.org/v2/api/#Global-Config)

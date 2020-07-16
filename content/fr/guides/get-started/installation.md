@@ -20,7 +20,7 @@ Une autre façon de commencer avec Nuxt.js et d'utiliser [CodeSandbox](https://t
 
 [node](https://nodejs.org/en/download/) - au moins v8.9.0
 
-*Nous recoommandons d'avoir la dernière version installé.*
+_Nous recoommandons d'avoir la dernière version installé._
 
 ### Éditeur de texte
 
@@ -40,13 +40,12 @@ Dans cet exemple, nous allons utiliser le terminal pour créer les dossiers et f
 
 Pour commencer, créez un dossier vide avec le nom de votre projet et naviguer à l'intérieur de celui-ci.
 
-
 ```bash
 mkdir <nom-du-projet>
 cd <nom-du-projet>
 ```
 
-*Remplacez `<nom-du-projet>` avec le nomo de votre projet.*
+_Remplacez `<nom-du-projet>` avec le nomo de votre projet._
 
 Puis créez un fichier nommer `package.json`:
 
@@ -85,16 +84,16 @@ Une fois que le fichier `package.json` a été créé, vous devez ajouter `nuxt`
 <code-group>
   <code-block label="Yarn" active>
 
-  ```bash
-  yarn add nuxt
-  ```
+```bash
+yarn add nuxt
+```
 
   </code-block>
   <code-block label="NPM">
 
-  ```bash
-  npm install nuxt
-  ```
+```bash
+npm install nuxt
+```
 
   </code-block>
 </code-group>
@@ -116,6 +115,7 @@ Créer le dossier `pages` dans votre projet:
 ```bash
 mkdir pages
 ```
+
 Puis, créez un fichier `index.vue` dans le dossier `pages`:
 
 ```bash
@@ -139,16 +139,16 @@ Lancez votre projet en tapant la commande ci-dessous dans votre terminal :
 <code-group>
   <code-block label="Yarn" active>
 
-  ```bash
-  yarn dev
-  ```
+```bash
+yarn dev
+```
 
   </code-block>
   <code-block label="NPM">
 
-  ```bash
-  npm run dev
-  ```
+```bash
+npm run dev
+```
 
   </code-block>
 </code-group>
@@ -175,7 +175,6 @@ Créez une page nommée `fun.vue` dans le dossier `pages`.
 
 Ajoutez un `<template></template>` et inclure un titre avec une phrase drôle à l'intérieur.
 
-
 Puis, allez sur votre navigateur et regarder votre nouvelle page sur **[http://localhost:3000/fun](http://localhost:3000/fun).**
 
 <base-alert type="info">
@@ -197,23 +196,23 @@ Soyez sur d'avoir npx d'installer (npx est embarqué par défaut depuis NPM 5.2.
 <code-group>
   <code-block label="Yarn" active>
 
-  ```bash
-  yarn create nuxt-app <project-name>
-  ```
+```bash
+yarn create nuxt-app <project-name>
+```
 
   </code-block>
   <code-block label="NPX">
 
-  ```bash
-  npx create nuxt-app <project-name>
-  ```
+```bash
+npx create nuxt-app <project-name>
+```
 
   </code-block>
     <code-block label="NPM">
 
-  ```bash
-  npm init nuxt-app <project-name>
-  ```
+```bash
+npm init nuxt-app <project-name>
+```
 
   </code-block>
 
@@ -224,18 +223,18 @@ Il vous sera demandé quelques questions (name, Nuxt options, UI framework, Type
 <code-group>
   <code-block label="Yarn" active>
 
-  ```bash
-  cd <project-name>
-  Yarn dev
-  ```
+```bash
+cd <project-name>
+Yarn dev
+```
 
   </code-block>
   <code-block label="NPM">
 
-  ```bash
-  cd <project-name>
-  npm run dev
-  ```
+```bash
+cd <project-name>
+npm run dev
+```
 
   </code-block>
 </code-group>

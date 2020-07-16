@@ -1,5 +1,5 @@
 ---
-title: "nuxt.renderRoute(route, context)"
+title: 'nuxt.renderRoute(route, context)'
 description: Render a specific route with a given context.
 menu: renderRoute
 category: programmatically
@@ -28,14 +28,14 @@ This method should be used mostly for [test purposes](/guide/development-tools#e
 Example:
 
 ```js
-const { loadNuxt, build } = require("nuxt");
+const { loadNuxt, build } = require('nuxt')
 
 async function start() {
   // Get nuxt instance for start (production mode)
   // Make sure to have run `nuxt build` before running this script
-  const nuxt = await loadNuxt({ for: "start" });
+  const nuxt = await loadNuxt({ for: 'start' })
 
-  const { html, error, redirected } = await nuxt.renderRoute("/");
+  const { html, error, redirected } = await nuxt.renderRoute('/')
 
   // `html` will always be a string
 
@@ -46,5 +46,5 @@ async function start() {
   // { path: '/other-path', query: {}, status: 302 }
 }
 
-start();
+start()
 ```

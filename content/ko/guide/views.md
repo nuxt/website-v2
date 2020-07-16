@@ -13,7 +13,7 @@ position: 105
 
 > Nuxt.js에서 사용하는 HTML 앱 템플릿을 스크립트나 조건적인 CSS 클래스를 포함하도록 사용자 정의할 수 있습니다.
 
-템플릿을 변경하려면 프로젝트의 src 폴더에 `app.html`파일을 생성하세요(기본적으로 프로젝트의 루트 디렉토리입니다).
+템플릿을 변경하려면 프로젝트의 src 폴더에 `app.html`파일을 생성하세요(기본적으로프로젝트의 루트 디렉토리입니다).
 
 Nuxt.js에서 사용하는 기본 템플릿입니다:
 
@@ -55,19 +55,20 @@ Nuxt.js에서 사용하는 기본 템플릿입니다:
 <div class="Alert Alert--nuxt-green">
 
 <b>Info:</b> 레이아웃을 생성할 때 페이지 컴포넌트를 실제로 포함하도록 `<nuxt/>` 컴포넌트를 추가하세요.
+
 </div>
 
 기본 레이아웃은 세 줄에 불과하며 간단히 페이지 컴포넌트를 렌더링할 수 있습니다:
 
 ```html
 <template>
-  <nuxt/>
+  <nuxt />
 </template>
 ```
 
 ### 커스텀 레이아웃
 
-`layouts` 폴더에 있는 모든 파일(*최상위 레벨*)은 각 페이지 컴포넌트에 `layout` 속성으로 접근할 수 있는 사용자 정의 레이아웃을 생성합니다.
+`layouts` 폴더에 있는 모든 파일(_최상위 레벨_)은 각 페이지 컴포넌트에 `layout` 속성으로 접근할 수 있는 사용자 정의 레이아웃을 생성합니다.
 
 예를 들어 우리가 블로그 레이아웃을 만들 것이고, `layouts/blog.vue`에 이를 저장한다고 해 봅시다:
 
@@ -75,7 +76,7 @@ Nuxt.js에서 사용하는 기본 템플릿입니다:
 <template>
   <div>
     <div>My blog navigation bar here</div>
-    <nuxt/>
+    <nuxt />
   </div>
 </template>
 ```
@@ -84,13 +85,13 @@ Nuxt.js에서 사용하는 기본 템플릿입니다:
 
 ```html
 <template>
-<!-- Your template -->
+  <!-- Your template -->
 </template>
 <script>
-export default {
-  layout: 'blog'
-  // page component definitions
-}
+  export default {
+    layout: 'blog'
+    // page component definitions
+  }
 </script>
 ```
 
@@ -108,9 +109,7 @@ export default {
 
 </div>
 
-위에서 언급한 바와 같이, 이 레이아웃은 특수합니다. 템플릿 안에 `<nuxt/>`를 포함하면 **안됩니다**.
-이 레이아웃은 오류가 발생할 때 표시되는 컴포넌트로 여겨져야 합니다(`404`, `500` 등).
-다른 페이지 컴포넌트와 마찬가지로 오류 페이지에 대한 사용자 정의 레이아웃도 일반적인 방법으로 설정할 수 있습니다.
+위에서 언급한 바와 같이, 이 레이아웃은 특수합니다. 템플릿 안에 `<nuxt/>`를 포함하면 **안됩니다**. 이 레이아웃은 오류가 발생할 때 표시되는 컴포넌트로 여겨져야합니다(`404`, `500` 등). 다른 페이지 컴포넌트와 마찬가지로 오류 페이지에 대한 사용자 정의 레이아웃도 일반적인 방법으로 설정할 수 있습니다.
 
 기본 에러 페이지 소스 코드는 [깃허브](https://github.com/nuxt/nuxt.js/blob/dev/packages/vue-app/template/components/nuxt-error.vue)에서 확인할 수 있습니다.
 
@@ -126,10 +125,10 @@ export default {
 </template>
 
 <script>
-export default {
-  props: ['error'],
-  layout: 'blog' // you can set a custom layout for the error page
-}
+  export default {
+    props: ['error'],
+    layout: 'blog' // you can set a custom layout for the error page
+  }
 </script>
 ```
 
@@ -151,42 +150,41 @@ export default {
 </template>
 
 <script>
-export default {
-  asyncData (context) {
-    // called every time before loading the component
-    // as the name said, it can be async
-    // Also, the returned object will be merged with your data object
-    return { name: 'World' }
-  },
-  fetch () {
-    // The `fetch` method is used to fill the store before rendering the page
-  },
-  head () {
-    // Set Meta Tags for this Page
-  },
-  // and more functionality to discover
-  ...
-}
+  export default {
+    asyncData (context) {
+      // called every time before loading the component
+      // as the name said, it can be async
+      // Also, the returned object will be merged with your data object
+      return { name: 'World' }
+    },
+    fetch () {
+      // The `fetch` method is used to fill the store before rendering the page
+    },
+    head () {
+      // Set Meta Tags for this Page
+    },
+    // and more functionality to discover
+    ...
+  }
 </script>
 
 <style>
-.red {
-  color: red;
-}
+  .red {
+    color: red;
+  }
 </style>
 ```
 
-
 | 속성 | 설명 | 문서 |
-|-----------|-------------|-------------|
+| --- | --- | --- |
 | `asyncData` | 가장 중요한 키이고 비동기적이며, 컨텍스트를 인자로 전달 받을 수 있습니다. | [가이드: Async data](/guide/async-data) |
 | `fetch` | 페이지가 렌더링되기 전에 스토어를 채우기 위해 사용되며, 컴포넌트 데이터를 설정하지 않는다는 점을 제외하면 `asyncData`와 같습니다. | [API Pages `fetch`](/api/pages-fetch) |
 | `head` | 현재 페이지에 대한 특정 `<meta>` 태그를 설정합니다. | [API Pages `head`](/api/pages-head) |
-| `layout` | `layouts` 폴더에 정의된 레이아웃을 지정할 수 있습니다.  | [API Pages `layout`](/api/pages-layout) |
+| `layout` | `layouts` 폴더에 정의된 레이아웃을 지정할 수 있습니다. | [API Pages `layout`](/api/pages-layout) |
 | `loading` | `false`로 세팅하면 자동적으로 페이지에 들어가면 `this.$nuxt.$loading.finish()`를 호출하고, 페이지에서 나오면 `this.$nuxt.$loading.start()`를 페이지가 호출하는 것을 막을 수 있습니다. 이는 [예시](/examples/custom-page-loading)에서처럼 **수동으로** 로딩 액션을 컨트롤 하게 해줍니다. `loading`이 `nuxt.config.js`에 설정된 경우에만 적용됩니다. | [API Configuration `loading`](/api/configuration-loading) |
 | `transition` | 페이지에 대한 특정 트랜지션을 설정합니다. | [API Pages `transition`](/api/pages-transition) |
 | `scrollToTop` | 기본값은 `false` 입니다. 페이지를 렌더링하기 전에 페이지를 맨 위로 스크롤할 것인지를 나타내며, 중첩 라우트를 위해 사용됩니다. | [API Pages `scrollToTop`](/guide/routing#nested-routes) |
-| `validate` | 동적 라우트에 대한 유효성을 검사합니다.  | [API Pages `validate`](/guide/routing#dynamic-routes) |
+| `validate` | 동적 라우트에 대한 유효성을 검사합니다. | [API Pages `validate`](/guide/routing#dynamic-routes) |
 | `middleware` | 페이지에 대한 미들웨어를 설정하면, 미들웨어는 페이지를 렌더링하기 전에 호출됩니다. | [Guide: middleware](/guide/routing#middleware) |
 
 페이지 속성의 사용법에 대한 더 많은 정보: [API](/api)
@@ -202,7 +200,6 @@ Nuxt.js가 `vue-meta`를 사용한 소스 코드는 [깃허브](https://github.c
 <b>Info:</b> Nuxt.js는 메타 요소를 식별하기 위해서 <code>hid</code>를 디폴트인 <code>vmid</code> 대신 사용합니다.
 
 </div>
-
 
 ### 기본 메타 태그
 

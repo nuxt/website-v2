@@ -1,5 +1,5 @@
 ---
-title: "API: server 프로퍼티"
+title: 'API: server 프로퍼티'
 description: '`nuxt.config.js`를 통해서 애플리케이션의 서버 연결 변수를 설정할 수 있습니다.'
 menu: server
 category: configuration
@@ -27,6 +27,7 @@ export default {
 ## HTTPS 설정을 사용한 예제
 
 `nuxt.config.js`
+
 ```js
 import path from 'path'
 import fs from 'fs'
@@ -42,7 +43,6 @@ export default {
 ```
 
 [certificates for localhost](https://letsencrypt.org/docs/certificates-for-localhost/)에서 로컬 호스트에서 사용될 서버 키와 인증서를 만드는 방법에 대한 정보를 제공합니다.
-
 
 ## 소켓 설정을 사용한 예제
 
@@ -63,7 +63,7 @@ export default {
 
 ### timing 설정을 이용한 예제
 
-`server.timing`은 옵션을 제공하는 객체가 될 수 있습니다. 현재로써는 `total`만이 지원됩니다. (서버 사이드 렌더링에 걸리는 전체 시간을 직접적으로 추적하는 설정입니다.)
+`server.timing`은 옵션을 제공하는 객체가 될 수 있습니다. 현재로써는 `total`만이지원됩니다. (서버 사이드 렌더링에 걸리는 전체 시간을 직접적으로 추적하는 설정입니다.)
 
 ```js
 export default {
@@ -104,4 +104,4 @@ export default function (req, res, next) {
 Server-Timing: midd;desc="Middleware timing description";dur=2.4
 ```
 
-더 자세한 내용은 [Server-Timing MDN](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Server-Timing)을 참조하세요.
+더 자세한 내용은 [Server-Timing MDN](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Server-Timing)을참조하세요.

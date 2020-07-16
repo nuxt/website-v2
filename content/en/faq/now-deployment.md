@@ -27,7 +27,6 @@ All you have to do is to setup a `now.json` file:
 }
 ```
 
-
 ### Service Worker with Nuxt PWA Module
 
 To avoid 404 for Service Workers, make sure to include `sw` to your routes settings.
@@ -60,7 +59,6 @@ To avoid 404 for Service Workers, make sure to include `sw` to your routes setti
 ```
 
 You can learn more and see examples on https://github.com/nuxt/now-builder
-
 
 ## Now V1 (legacy)
 

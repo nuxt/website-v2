@@ -1,5 +1,5 @@
 ---
-title: "API: <nuxt-child> 컴포넌트"
+title: 'API: <nuxt-child> 컴포넌트'
 description: 현재 페이지를 보여줍니다
 menu: nuxt-child
 category: components
@@ -20,8 +20,9 @@ position: 42
 ```
 
 이 파일 트리는 다음과 같이 생성됩니다:
+
 ```js
-[
+;[
   {
     path: '/parent',
     component: '~pages/parent.vue',
@@ -37,13 +38,13 @@ position: 42
 ]
 ```
 
-`child.vue` 컴포넌트를 보여주기 위해, `pages/parent.vue`에 `<nuxt-child/>`넣어야 합니다:
+`child.vue` 컴포넌트를 보여주기 위해, `pages/parent.vue`에 `<nuxt-child/>`넣어야합니다:
 
 ```html
 <template>
   <div>
     <h1>난 부모 View 입니다~</h1>
-    <nuxt-child/>
+    <nuxt-child />
   </div>
 </template>
 ```

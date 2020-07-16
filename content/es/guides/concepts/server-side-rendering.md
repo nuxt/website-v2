@@ -53,11 +53,9 @@ A JavaScript environment is required to render your web page.
 
 A Node.js server needs to be configured to execute your Vue.js application.
 
-
 ## Extend and control the server
 
 You can extend the server with serverMiddleware and control routes with middleware.
-
 
 ```js{}[middleware/api/logger.js]
 export default function (req, res, next) {
@@ -91,7 +89,6 @@ mounted{
 
 ## Server-side rendering steps with Nuxt.js
 
-
 ### Step 1: Browser to Server
 
 When a browser sends the initial request, it will hit the Node.js internal server. Nuxt.js will generate the HTML and send it back to the browser with results from executed functions, e.g. `asyncData`, `nuxtServerInit` or `fetch`. Hooks functions are executed as well.
@@ -103,7 +100,5 @@ The browser receives the rendered page from the server with the generated HTML. 
 ### Step 3: Browser to Browser
 
 Navigating between pages with [`<NuxtLink>`](/guides/features/nuxt-components#the-nuxtlink-component) is done on the client side so you don't hit the server again unless you hard refresh the browser.
-
-
 
 <quiz :questions="questions"></quiz>

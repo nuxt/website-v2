@@ -20,7 +20,7 @@ Another way to get started with Nuxt.js is to use [CodeSandbox](https://template
 
 [node](https://nodejs.org/en/download/) - at least v8.9.0
 
-*We recommend you have the latest version installed.*
+_We recommend you have the latest version installed._
 
 ### Text editor
 
@@ -45,7 +45,7 @@ mkdir <project-name>
 cd <project-name>
 ```
 
-*Replace `<project-name>` with the name of your project.*
+_Replace `<project-name>` with the name of your project._
 
 Then create a file named `package.json`:
 
@@ -71,7 +71,6 @@ Open the package.json file in your favorite code editor and fill it with this JS
 
 #### **What is a package.json file?**
 
-
 The `package.json` is like the ID card of your project. If you don't know what the `package.json` file is, we highly recommend you to have a quick read on the [NPM documentation](https://docs.npmjs.com/creating-a-package-json-file).
 
 ### Second step: Install nuxt in your project
@@ -81,16 +80,16 @@ Once the `package.json` has been created, you need to add `nuxt` to your pro
 <code-group>
   <code-block label="Yarn" active>
 
-  ```bash
-  yarn add nuxt
-  ```
+```bash
+yarn add nuxt
+```
 
   </code-block>
   <code-block label="NPM">
 
-  ```bash
-  npm install nuxt
-  ```
+```bash
+npm install nuxt
+```
 
   </code-block>
 </code-group>
@@ -136,16 +135,16 @@ Run your project by typing the NPM command below in your terminal:
 <code-group>
   <code-block label="Yarn" active>
 
-  ```bash
-  yarn dev
-  ```
+```bash
+yarn dev
+```
 
   </code-block>
   <code-block label="NPM">
 
-  ```bash
-  npm run dev
-  ```
+```bash
+npm run dev
+```
 
   </code-block>
 </code-group>
@@ -193,23 +192,23 @@ Make sure you have npx installed (npx is shipped by default since NPM 5.2.0) or 
 <code-group>
   <code-block label="Yarn" active>
 
-  ```bash
-  yarn create nuxt-app <project-name>
-  ```
+```bash
+yarn create nuxt-app <project-name>
+```
 
   </code-block>
   <code-block label="NPX">
 
-  ```bash
-  npx create nuxt-app <project-name>
-  ```
+```bash
+npx create nuxt-app <project-name>
+```
 
   </code-block>
     <code-block label="NPM">
 
-  ```bash
-  npm init nuxt-app <project-name>
-  ```
+```bash
+npm init nuxt-app <project-name>
+```
 
   </code-block>
 
@@ -220,18 +219,18 @@ It will ask you some questions (name, Nuxt options, UI framework, TypeScript, li
 <code-group>
   <code-block label="Yarn" active>
 
-  ```bash
-  cd <project-name>
-  Yarn dev
-  ```
+```bash
+cd <project-name>
+Yarn dev
+```
 
   </code-block>
   <code-block label="NPM">
 
-  ```bash
-  cd <project-name>
-  npm run dev
-  ```
+```bash
+cd <project-name>
+npm run dev
+```
 
   </code-block>
 </code-group>

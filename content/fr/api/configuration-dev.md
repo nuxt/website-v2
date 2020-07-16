@@ -1,5 +1,5 @@
 ---
-title: "API : La propriété dev"
+title: 'API : La propriété dev'
 description: Défini le mode développement ou le mode production.
 menu: dev
 category: configuration
@@ -24,7 +24,7 @@ Exemple :
 
 ```js
 export default {
-  dev: (process.env.NODE_ENV !== 'production')
+  dev: process.env.NODE_ENV !== 'production'
 }
 ```
 

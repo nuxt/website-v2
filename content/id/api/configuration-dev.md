@@ -26,7 +26,7 @@ Contoh:
 
 ```js
 module.exports = {
-  dev: (process.env.NODE_ENV !== 'production')
+  dev: process.env.NODE_ENV !== 'production'
 }
 ```
 
@@ -65,4 +65,4 @@ Kemudian pada `package.json`:
 }
 ```
 
-Catatan: Anda harus menjalankan `npm install --save-dev cross-env` pada contoh di atas supaya bisa bekerja. Jika Anda *tidak* bekerja menggunakan Windows, Anda dapat mengabaikan cross-env dil uar dari script `start` milik Anda dan mengatur `NODE_ENV` secara langsung.
+Catatan: Anda harus menjalankan `npm install --save-dev cross-env` pada contoh di atas supaya bisa bekerja. Jika Anda _tidak_ bekerja menggunakan Windows, Anda dapat mengabaikan cross-env dil uar dari script `start` milik Anda dan mengatur `NODE_ENV` secara langsung.

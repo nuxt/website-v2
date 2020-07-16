@@ -1,5 +1,5 @@
 ---
-title: "API: The <nuxt-link> Component"
+title: 'API: The <nuxt-link> Component'
 description: Link the pages between them with nuxt-link.
 menu: nuxt-link
 category: components
@@ -16,7 +16,9 @@ Example (`pages/index.vue`):
 <template>
   <div>
     <h1>Home page</h1>
-    <nuxt-link to="/about">About (internal link that belongs to the Nuxt App)</nuxt-link>
+    <nuxt-link to="/about"
+      >About (internal link that belongs to the Nuxt App)</nuxt-link
+    >
     <a href="https://nuxtjs.org">External Link to another page</a>
   </div>
 </template>
@@ -26,7 +28,7 @@ Example (`pages/index.vue`):
 
 > Added with Nuxt.js v2.4.0
 
-To improve the responsiveness of your Nuxt.js applications, when the link will be displayed within the viewport, Nuxt.js will automatically prefetch the *code splitted* page. This feature is inspired by [quicklink.js](https://github.com/GoogleChromeLabs/quicklink) by Google Chrome Labs.
+To improve the responsiveness of your Nuxt.js applications, when the link will be displayed within the viewport, Nuxt.js will automatically prefetch the _code splitted_ page. This feature is inspired by [quicklink.js](https://github.com/GoogleChromeLabs/quicklink) by Google Chrome Labs.
 
 To disable the prefetching of the linked page, you can use the `no-prefetch` prop. Since Nuxt.js v2.10.0, you can also use the `prefetch` prop set to `false`:
 

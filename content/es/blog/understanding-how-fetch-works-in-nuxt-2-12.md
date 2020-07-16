@@ -1,5 +1,5 @@
 ---
-title: "Understanding how fetch works in Nuxt 2.12"
+title: 'Understanding how fetch works in Nuxt 2.12'
 description: Explore different features of the fetch hook and learn a brand new way to bring data into Nuxt applications.
 imgUrl: blog/understanding-how-fetch-works-in-nuxt-2-12/main.png
 date: 2020-04-06
@@ -29,9 +29,9 @@ Fetch hook is called after the component instance is created on the server-side.
 ```js
 export default {
   fetch() {
-    console.log(this);
+    console.log(this)
   }
-};
+}
 ```
 
 Let’s see what this could mean for page components.
@@ -79,7 +79,7 @@ In addition, we can even disable fetch on the server-side if required.
 ```js
 export default {
   fetchOnServer: false
-};
+}
 ```
 
 And this way, the fetch hook will only be called on client-side. When `fetchOnServer` is set to false, `$fetchState.pending` becomes `true` when the component is rendered on server-side.
@@ -156,10 +156,10 @@ New fetch hook also acts as a method that can be invoked upon user interaction o
 export default {
   methods: {
     refresh() {
-      this.$fetch();
+      this.$fetch()
     }
   }
-};
+}
 ```
 
 ## Making Nuxt pages more performant
@@ -197,10 +197,10 @@ export default {
   activated() {
     // Call fetch again if last fetch more than a minute ago
     if (this.$fetchState.timestamp <= Date.now() - 60000) {
-      this.$fetch();
+      this.$fetch()
     }
   }
-};
+}
 ```
 
 ## asyncData vs Fetch
@@ -220,12 +220,12 @@ export default {
   async asyncData(context) {
     const data = await context.$axios.$get(
       `https://jsonplaceholder.typicode.com/todos`
-    );
+    )
     // `todos` does not have to be declared in data()
-    return { todos: data.Item };
+    return { todos: data.Item }
     // `todos` is merged with local data
   }
-};
+}
 ```
 
 ### New Fetch
@@ -239,16 +239,16 @@ export default {
   data() {
     return {
       todos: []
-    };
+    }
   },
   async fetch() {
     const { data } = await axios.get(
       `https://jsonplaceholder.typicode.com/todos`
-    );
+    )
     // `todos` has to be declared in data()
-    this.todos = data;
+    this.todos = data
   }
-};
+}
 ```
 
 ## Fetch before Nuxt 2.12
@@ -276,7 +276,7 @@ export default {
   fetch(context) {
     // …
   }
-};
+}
 ```
 
 **After -** We can access `this` context just like Vue client-side hooks without passing any parameters.
@@ -284,9 +284,9 @@ export default {
 ```js
 export default {
   fetch() {
-    console.log(this);
+    console.log(this)
   }
-};
+}
 ```
 
 ### 3. Availability of `fetch` hook

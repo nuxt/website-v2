@@ -1,5 +1,5 @@
 ---
-title: "API: The <nuxt-child> Component"
+title: 'API: The <nuxt-child> Component'
 description: Display the current page.
 menu: nuxt-child
 category: components
@@ -20,7 +20,7 @@ Example:
 This file tree will generate these routes:
 
 ```js
-[
+;[
   {
     path: '/parent',
     component: '~/pages/parent.vue',
@@ -70,9 +70,7 @@ To see an example, take a look at the [nested-routes example](/examples/nested-r
 
 ## The activated and deactivated hooks
 
-When using `keep-alive` on `<nuxt-child/>`, the children components will register two additional lifecycle hooks:
-[activated](https://vuejs.org/v2/api/#activated) and [deactivated](https://vuejs.org/v2/api/#deactivated).
-These hooks are called on the client side when entering and leaving the child component.
+When using `keep-alive` on `<nuxt-child/>`, the children components will register two additional lifecycle hooks: [activated](https://vuejs.org/v2/api/#activated) and [deactivated](https://vuejs.org/v2/api/#deactivated). These hooks are called on the client side when entering and leaving the child component.
 
 ## Named View
 

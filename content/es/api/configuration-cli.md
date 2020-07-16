@@ -1,5 +1,5 @@
 ---
-title: "The cli Property"
+title: 'The cli Property'
 description: Nuxt.js lets you customize the CLI configuration.
 menu: cli
 category: configuration
@@ -24,7 +24,7 @@ Example (`nuxt.config.js`):
 ```js
 export default {
   cli: {
-    bannerColor: "yellow"
+    bannerColor: 'yellow'
   }
-};
+}
 ```

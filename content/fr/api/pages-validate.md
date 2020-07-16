@@ -1,5 +1,5 @@
 ---
-title: "API : la méthode validate"
+title: 'API : la méthode validate'
 description: Nuxt.js vous permet de définir une méthode de validation dans votre composant de route dynamique.
 menu: validate
 category: pages
@@ -39,7 +39,7 @@ Si la méthode de validation retourne `false`, Nuxt.js chargera automatiquement 
 
 ```js
 export default {
-  validate ({ params }) {
+  validate({ params }) {
     // Doit être un nombre
     return /^\d+$/.test(params.id)
   }
@@ -50,7 +50,7 @@ Vous pouvez aussi vérifier les données dans votre [store](/guide/vuex-store) (
 
 ```js
 export default {
-  validate ({ params, store }) {
+  validate({ params, store }) {
     // Vérifier si `params.id` est une catégorie existante
     return store.state.categories.some(category => category.id === params.id)
   }
@@ -61,7 +61,7 @@ Vous pouvez aussi émettre une erreur dans la fonction directement pour afficher
 
 ```js
 export default {
-  async validate ({ params, store }) {
+  async validate({ params, store }) {
     // Émet une erreur 500 (internal server error) avec un message
     throw new Error('En construction!')
   }

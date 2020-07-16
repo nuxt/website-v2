@@ -1,5 +1,5 @@
 ---
-title: "$nuxt: The NuxtJS helper"
+title: '$nuxt: The NuxtJS helper'
 description: $nuxt is a helper designed to improve user experience.
 menu: $nuxt
 category: utils
@@ -23,7 +23,7 @@ Example:
 <template>
   <div>
     <div v-if="$nuxt.isOffline">You are offline</div>
-    <nuxt/>
+    <nuxt />
   </div>
 </template>
 ```

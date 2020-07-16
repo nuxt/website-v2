@@ -6,11 +6,11 @@ category: configuration
 position: 8
 ---
 
-# 如何使用Vue组件中的 cache？
+# 如何使用 Vue 组件中的 cache？
 
-> 虽然Vue的SSR非常快，但由于创建组件实例和Virtual DOM节点的成本，它无法与纯粹基于字符串的模板的性能相匹配。在SSR性能至关重要的情况下，合理地利用缓存策略可以大大缩短响应时间并减少服务器负载。
+> 虽然 Vue 的 SSR 非常快，但由于创建组件实例和 Virtual DOM 节点的成本，它无法与纯粹基于字符串的模板的性能相匹配。在 SSR 性能至关重要的情况下，合理地利用缓存策略可以大大缩短响应时间并减少服务器负载。
 
-请使用Nuxt.js的[Component Cache module](https://github.com/nuxt-community/modules/tree/master/packages/component-cache)模块。此模块使用vue-server-renderer为Vue组件添加LRU缓存支持。
+请使用 Nuxt.js 的[Component Cache module](https://github.com/nuxt-community/modules/tree/master/packages/component-cache)模块。此模块使用 vue-server-renderer 为 Vue 组件添加 LRU 缓存支持。
 
 ## 使用
 
@@ -24,10 +24,13 @@ position: 8
     '@nuxtjs/component-cache',
 
     // 配置选项
-    ['@nuxtjs/component-cache', {
-      max: 10000,
-      maxAge: 1000 * 60 * 60
-    }]
+    [
+      '@nuxtjs/component-cache',
+      {
+        max: 10000,
+        maxAge: 1000 * 60 * 60
+      }
+    ]
   ]
 }
 ```

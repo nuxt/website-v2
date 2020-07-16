@@ -8,12 +8,12 @@
 </template>
 
 <script>
-export default {
-  props: {
-    items: {
-      type: Array,
-      default: () => []
+  export default {
+    props: {
+      items: {
+        type: Array,
+        default: () => []
+      }
     }
   }
-}
 </script>

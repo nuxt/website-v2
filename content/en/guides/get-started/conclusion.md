@@ -54,18 +54,18 @@ questions:
     correctAnswer: static
   - question: What component do we use to navigate between pages?
     answers:
-      - "<Nuxt>"
-      - "<RouterLink>"
-      - "<NuxtLink>"
-    correctAnswer: "<NuxtLink>"
-  - question: "`<NuxtLink>` is used for internal links that belong to the Nuxt.js app?"
+      - '<Nuxt>'
+      - '<RouterLink>'
+      - '<NuxtLink>'
+    correctAnswer: '<NuxtLink>'
+  - question: '`<NuxtLink>` is used for internal links that belong to the Nuxt.js app?'
     answers:
       - True
       - False
     correctAnswer: True
 ---
 
-Congratulations you have now created your first Nuxt.js app and you may now consider yourself a Nuxter. But there is so much more to learn and so much more you can do with Nuxt.js. Here are a few recommendations. 
+Congratulations you have now created your first Nuxt.js app and you may now consider yourself a Nuxter. But there is so much more to learn and so much more you can do with Nuxt.js. Here are a few recommendations.
 
 ➡️ Check out the [Concepts book](../concepts/views)
 
@@ -73,9 +73,6 @@ Congratulations you have now created your first Nuxt.js app and you may now cons
 
 ➡️ Choosing between different [Rendering modes](/guides/features/rendering-modes)
 
-
 ⭐️ Did you like Nuxt.js so far? Don't forget to [star our project](https://github.com/nuxt/nuxt.js) on GitHub
 
-
 <quiz :questions="questions"></quiz>
-

@@ -5,7 +5,7 @@ category: deployment
 position: 309
 ---
 
-Déployer sur [Netlify](https://www.netlify.com) est une option sans friction pour obtenir en ligne rapidement un site Nuxt.js __généré statiquement__.
+Déployer sur [Netlify](https://www.netlify.com) est une option sans friction pour obtenir en ligne rapidement un site Nuxt.js **généré statiquement**.
 
 Le coeur du processus tire parti de la commande `nuxt generate` lors du déploiement pour créer une version statique de votre application Nuxt.js dans le répertoire `dist`. Le contenu de ce répertoire peut ensuite être déployé sur une URL de production.
 
@@ -25,17 +25,17 @@ Appuyez sur le bouton _"Nouveau site depuis Git"_ sur le dashboard Netlify. Auth
 
 ### Pour un site générée statiquement
 
-1. __Branche à déployer :__ `master`, ou bien la branche que vous préférez
-1. __Commande de Build :__ `npm run generate`
-1. __Répertoire de publication :__ `dist`
+1. **Branche à déployer :** `master`, ou bien la branche que vous préférez
+1. **Commande de Build :** `npm run generate`
+1. **Répertoire de publication :** `dist`
 
 ### Pour un site généré en mode monopage (SPA)
 
-1. __Branche à déployer :__ `master`, ou bien la branche que vous préférez
-1. __Commande de Build :__ `npm run build`
-1. __Répertoire de publication :__ `dist`
+1. **Branche à déployer :** `master`, ou bien la branche que vous préférez
+1. **Commande de Build :** `npm run build`
+1. **Répertoire de publication :** `dist`
 
-Pour les applications monopages il y a un problème avec le rafraichissement de l'application. En effet par défaut Netlify redirige vers *"404 not found"*. Ce problème peut être [évité](https://www.netlify.com/docs/redirects/#rewrites-and-proxying) en configurant des redirections. Il existe à cet effet [nuxt-netlify](https://www.bazzite.com/docs/nuxt-netlify) qui permet d'aider à configurer les en-têtes et les redirections de l'application.
+Pour les applications monopages il y a un problème avec le rafraichissement de l'application. En effet par défaut Netlify redirige vers _"404 not found"_. Ce problème peut être [évité](https://www.netlify.com/docs/redirects/#rewrites-and-proxying) en configurant des redirections. Il existe à cet effet [nuxt-netlify](https://www.bazzite.com/docs/nuxt-netlify) qui permet d'aider à configurer les en-têtes et les redirections de l'application.
 
 > Pour une explication simple des redirections Netlify, vous pouvez lire cet [article (EN)](https://www.netlify.com/blog/2019/01/16/redirect-rules-for-all-how-to-configure-redirects-for-your-static-site) par Divya Sasidharan.
 

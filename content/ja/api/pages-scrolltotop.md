@@ -1,5 +1,5 @@
 ---
-title: "API: scrollToTop プロパティ"
+title: 'API: scrollToTop プロパティ'
 description: scrollToTop プロパティで、ページをレンダリングする前にトップまでスクロールか否かを指定できます。
 menu: scrollToTop
 category: pages
@@ -18,12 +18,11 @@ position: 28
 </template>
 
 <script>
-export default {
-  scrollToTop: true
-}
+  export default {
+    scrollToTop: true
+  }
 </script>
 ```
-
 
 逆に、親ルートでは `scrollToTop` を手動で `false` に設定することができます。
 

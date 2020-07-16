@@ -1,5 +1,5 @@
 ---
-title: "The css Property"
+title: 'The css Property'
 description: Nuxt.js lets you define the CSS files/modules/libraries you want to set globally (included in every page).
 menu: css
 category: configuration
@@ -23,13 +23,13 @@ In `nuxt.config.js`, add the CSS resources:
 export default {
   css: [
     // Load a Node.js module directly (here it's a Sass file)
-    "bulma",
+    'bulma',
     // CSS file in the project
-    "@/assets/css/main.css",
+    '@/assets/css/main.css',
     // SCSS file in the project
-    "@/assets/css/main.scss"
+    '@/assets/css/main.scss'
   ]
-};
+}
 ```
 
 Nuxt.js will automatically guess the file type by its extension and use the appropriate pre-processor loader for webpack. You will still need to install the required loader if you need to use them.

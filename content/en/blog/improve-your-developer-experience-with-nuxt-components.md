@@ -1,7 +1,7 @@
 ---
-title: "Improve Your Developer Experience With Nuxt Components"
+title: 'Improve Your Developer Experience With Nuxt Components'
 description: Explore how you can import and register Vue components automatically using @nuxt/components module.
-imgUrl: "blog/improve-developer-experience-nuxt-components/main.png"
+imgUrl: 'blog/improve-developer-experience-nuxt-components/main.png'
 date: 2020-06-24
 authors:
   - name: Krutie Patel
@@ -75,11 +75,11 @@ From Nuxt v2.13 onward, this module **will be available by default** when you cr
 // For nuxt v2.13+
 // nuxt.config.js
 export default {
-  components: true,
+  components: true
 }
 ```
 
-In case your project is using Nuxt version below v2.13**we recommend you to upgrade your Nuxt version since there is no breaking between these versions.
+In case your project is using Nuxt version below v2.13\*\*we recommend you to upgrade your Nuxt version since there is no breaking between these versions.
 
 💡 **If `components: true` is set, `~/components` directory is scanned by default.**
 
@@ -107,8 +107,8 @@ For example, in our sample project, we can use string notation like below to aut
 // nuxt.config.js
 export default {
   // Module options as an Array of String
-  components: ["~/components/ui-1/", "~/components/ui-2/"],
-};
+  components: ['~/components/ui-1/', '~/components/ui-2/']
+}
 ```
 
 ## Directory path as an Object
@@ -119,8 +119,8 @@ Directory path as an object gets bit more interesting! **When path is given as a
 // nuxt.config.js
 export default {
   // Module options as an Array of Object
-  components: [{ path: "~/components/ui-1/" }, { path: "~/components/ui-2/" }],
-};
+  components: [{ path: '~/components/ui-1/' }, { path: '~/components/ui-2/' }]
+}
 ```
 
 In addition to `path`, we can also define additional configuration to include, exclude, watch or even add prefix to components based on their location & extensions.
@@ -133,11 +133,11 @@ export default {
   // Module options as an Array of Object
   components: [
     {
-      path: "~/components/ui-2/",
-      prefix: "aex",
-    },
-  ],
-};
+      path: '~/components/ui-2/',
+      prefix: 'aex'
+    }
+  ]
+}
 ```
 
 It’s important to note that, the scope of these options is limited to the `path` provided in that object. In the example above, only components located at `~/components/ui-2/` will be registered with the prefix **`aex`**.
@@ -245,7 +245,7 @@ As mentioned earlier, **both `.vue` and `.js` are included as default extensions
 
 ```js
 // Default pattern
-pattern: `**/*.{vue,js}`;
+pattern: `**/*.{vue,js}`
 ```
 
 If you are using TypeScript, then `ts` & `tsx` extensions are supported by default as well.
@@ -261,9 +261,9 @@ export default {
    ** Build configuration
    */
   build: {
-    additionalExtensions: ['jsx'],
-  },
-};
+    additionalExtensions: ['jsx']
+  }
+}
 ```
 
 Above code adds `.jsx` extension to the default pattern, makes the resulting pattern look like: `**/*.{vue,js,jsx}`
@@ -330,8 +330,8 @@ It's important we highlight two similar features of Nuxt that ignore files just 
 // nuxt.config.js
 
 export default {
-  ignore: ["**/*.test.*"],
-};
+  ignore: ['**/*.test.*']
+}
 ```
 
 The impact of both `.nuxtignore` and `ignore` property is realised during build-process, and they operate project-wide, while `ignore` option operates locally and ignores files from `/components` directory.
@@ -374,8 +374,7 @@ Lazy loading is already implemented at `/pages/lazy-loading-example.vue`
 - visit [http://localhost:3000/lazy-loading-example](http://localhost:3000/lazy-loading-example)
 - Open Chrome DevTools - Browser's Inspect Panel, then go to Network Tab.
 
-Here, you can see that lazy components are loaded when the data becomes available, and they have their own separate bundles.
-See `List.js, ListItem.js` and `ListItemIcon.js` in the screenshot below.
+Here, you can see that lazy components are loaded when the data becomes available, and they have their own separate bundles. See `List.js, ListItem.js` and `ListItemIcon.js` in the screenshot below.
 
 ![Lazy loading with nuxt/components](https://cdn.krutiepatel.com/2020-06/lazy-loading-with-nuxt-components.png)
 
@@ -392,13 +391,13 @@ Kru-components library exposes a hook called, `components:dirs`, that allows you
 ```js
 // https://github.com/Krutie/Kru-Components/blob/master/src/nuxt.js
 
-this.nuxt.hook("components:dirs", (dirs) => {
+this.nuxt.hook('components:dirs', dirs => {
   // Add ./components dir to the list
   dirs.push({
-    path: join(__dirname, "components"),
-    prefix: "kru",
-  });
-});
+    path: join(__dirname, 'components'),
+    prefix: 'kru'
+  })
+})
 ```
 
 This way, components of this external library can take advantage of **automatic tree-shaking** and **component registration**.

@@ -1,5 +1,5 @@
 ---
-title: "API: ModuleContainer クラス"
+title: 'API: ModuleContainer クラス'
 description: Nuxt ModuleContainer クラス
 menu: Module Container
 category: internals
@@ -15,7 +15,7 @@ position: 304
 特定のライフサイクルイベントでのフックを登録できます。
 
 ```js
-nuxt.moduleContainer.plugin('ready', async (moduleContainer) => {
+nuxt.moduleContainer.plugin('ready', async moduleContainer => {
   // すべてのモジュールの準備ができたらここを実行します
 })
 ```
@@ -23,15 +23,14 @@ nuxt.moduleContainer.plugin('ready', async (moduleContainer) => {
 [モジュール](/guide/modules) コンテキストの中では代わりに以下のようにできます:
 
 ```js
-this.plugin('ready', async (moduleContainer) => {
+this.plugin('ready', async moduleContainer => {
   // すべてのモジュールの準備ができたらここを実行します
 })
 ```
 
-プラグイン | 引数       | タイミング
--------|-----------------|-----------------------------------------------------
-`ready`| moduleContainer | `nuxt.config.js` にあるすべてのモジュールが初期化されたとき
-
+| プラグイン | 引数 | タイミング |
+| --- | --- | --- |
+| `ready` | moduleContainer | `nuxt.config.js` にあるすべてのモジュールが初期化されたとき |
 
 ## メソッド
 
@@ -44,9 +43,9 @@ this.plugin('ready', async (moduleContainer) => {
 ### addTemplate (template)
 
 - **テンプレート**: `String` または `Object`
-    - `src`
-    - `options`
-    - `fileName`
+  - `src`
+  - `options`
+  - `fileName`
 
 プロジェクトの `buildDir` (`.nuxt`) へのビルド中に、[lodash template](https://lodash.com/docs/4.17.4#template) を使って与えられたテンプレートをレンダリングします。
 
@@ -88,7 +87,7 @@ this.plugin('ready', async (moduleContainer) => {
 
 特定のライフサイクルイベントでのフックを登録できます。
 
-フック                      | 引数                  | タイミング
---------------------------|----------------------------|--------------------------------------------------------------------------------------
- `modules:before`         | (moduleContainer, options) | ModuleContainer クラスが作られる前に呼ばれ、メソッドとオプションのオーバーロードに役立ちます。
- `modules:done`           | (moduleContainer)          | すべてのモジュールがロードされたときに呼ばれます。
+| フック | 引数 | タイミング |
+| --- | --- | --- |
+| `modules:before` | (moduleContainer, options) | ModuleContainer クラスが作られる前に呼ばれ、メソッドとオプションのオーバーロードに役立ちます。 |
+| `modules:done` | (moduleContainer) | すべてのモジュールがロードされたときに呼ばれます。 |

@@ -1,5 +1,5 @@
 ---
-title: "API: <nuxt-link> 组件"
+title: 'API: <nuxt-link> 组件'
 description: nuxt-link 组件用于在页面中添加链接至别的页面。
 menu: nuxt-link
 category: components
@@ -10,7 +10,7 @@ position: 43
 
 > nuxt-link 组件用于在页面中添加链接至别的页面。
 
-目前 `<nuxt-link>` 的作用和 [`<router-link>`](https://router.vuejs.org/zh-cn/api/router-link.html) 一致，推荐阅读 [Vue路由文档](https://router.vuejs.org/zh-cn/api/router-link.html) 来了解它的使用方法。
+目前 `<nuxt-link>` 的作用和 [`<router-link>`](https://router.vuejs.org/zh-cn/api/router-link.html) 一致，推荐阅读 [Vue 路由文档](https://router.vuejs.org/zh-cn/api/router-link.html) 来了解它的使用方法。
 
 例如 (`pages/index.vue`)：
 
@@ -22,11 +22,12 @@ position: 43
   </div>
 </template>
 ```
+
 **别名:** `<n-link>`, `<NuxtLink>`, 和 `<NLink>`
 
-> Nuxt.js v2.4.0添加
+> Nuxt.js v2.4.0 添加
 
-为了提高Nuxt.js应用程序的响应能力，当链接将显示在视口中时，Nuxt.js将自动预获取代码分割页面。此功能的灵感来自Google Chrome Labs的[quicklink.js](https://github.com/GoogleChromeLabs/quicklink)。
+为了提高 Nuxt.js 应用程序的响应能力，当链接将显示在视口中时，Nuxt.js 将自动预获取代码分割页面。此功能的灵感来自 Google Chrome Labs 的[quicklink.js](https://github.com/GoogleChromeLabs/quicklink)。
 
 要禁用链接页面的预获取，可以使用`no-prefetch`：
 

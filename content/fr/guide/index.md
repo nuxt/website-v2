@@ -1,6 +1,6 @@
 ---
 title: Introduction
-description: "Nuxt.js est un framework pour créer des applications Vue, vous pouvez choisir entre application Universelle, Générée Statiquement ou Monopage."
+description: 'Nuxt.js est un framework pour créer des applications Vue, vous pouvez choisir entre application Universelle, Générée Statiquement ou Monopage.'
 category: prologue
 position: 1
 ---
@@ -15,11 +15,11 @@ Notre but est de créer un framework suffisamment flexible afin que vous puissie
 
 Nuxt.js fournit toute la configuration nécessaire pour rendre votre développement de **rendu côté serveur** avec Vue.js agréable avec son mode **universel** par défaut.
 
-De plus, nous fournissons également une option de déploiement appelée [*nuxt generate*](https://fr.nuxtjs.org/api/configuration-generate/#la-propri-t-generate). Elle va créer une application Vue.js pré-rendu et pré-configuré avec **génération statique**. Elle vous permettra donc de profiter du SSR sans avoir besoin d'un vrai server nuxt. Nous pensons que cette option sera la prochaine grosse étape dans le développement de vos applications web avec micro services.
+De plus, nous fournissons également une option de déploiement appelée [_nuxt generate_](https://fr.nuxtjs.org/api/configuration-generate/#la-propri-t-generate). Elle va créer une application Vue.js pré-rendu et pré-configuré avec **génération statique**. Elle vous permettra donc de profiter du SSR sans avoir besoin d'un vrai server nuxt. Nous pensons que cette option sera la prochaine grosse étape dans le développement de vos applications web avec micro services.
 
 Bien entendu, vous pouvez également utiliser Nuxt.js pour créer des applications monopages rapidement (mode `spa`), ce qui est utile pour conserver les fonctionnalités de Nuxt quand vous travaillez sur la partie backoffice de vos applications.
 
-En tant que framework, Nuxt.js est doté de nombreuses fonctionnalités pour vous aider dans votre développement entre côté client et serveur tels que les données asynchrones, les *middlewares*, les *layouts*, etc.
+En tant que framework, Nuxt.js est doté de nombreuses fonctionnalités pour vous aider dans votre développement entre côté client et serveur tels que les données asynchrones, les _middlewares_, les _layouts_, etc.
 
 ## Comment ça marche
 
@@ -66,11 +66,11 @@ En utilisant la commande `nuxt`, Nuxt démarrera un serveur de développement av
 
 ## Application monopage
 
-Si pour une quelconque raison vous préférez ne pas utiliser le rendu côté serveur ou que vous avez besoin d'un hébergement statique pour votre application, vous pouvez simplement utiliser le mode application monopage (ou « SPA » pour « Simple Page Application ») en utilisant la commande `nuxt --spa`. Combiné avec la fonctionnalité de *génération*, vous avez la une puissante application monopage qui ne nécessite aucunement Node.js ou un serveur spécial pour fonctionner.
+Si pour une quelconque raison vous préférez ne pas utiliser le rendu côté serveur ou que vous avez besoin d'un hébergement statique pour votre application, vous pouvez simplement utiliser le mode application monopage (ou « SPA » pour « Simple Page Application ») en utilisant la commande `nuxt --spa`. Combiné avec la fonctionnalité de _génération_, vous avez la une puissante application monopage qui ne nécessite aucunement Node.js ou un serveur spécial pour fonctionner.
 
 Jetez un œil à [la liste des commandes](/guide/commands) pour en savoir plus.
 
-Si vous avez déjà un serveur, vous pouvez greffer Nuxt.js en l'utilisant comme *middleware*. Il n'y a aucune restriction quand vous utilisez Nuxt.js pour développer votre application web universelle. Consultez le guide d'[Utilisation de Nuxt.js par programmation](/api/nuxt).
+Si vous avez déjà un serveur, vous pouvez greffer Nuxt.js en l'utilisant comme _middleware_. Il n'y a aucune restriction quand vous utilisez Nuxt.js pour développer votre application web universelle. Consultez le guide d'[Utilisation de Nuxt.js par programmation](/api/nuxt).
 
 ## Génération statique (pré-rendu)
 

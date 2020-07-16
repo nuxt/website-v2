@@ -13,20 +13,20 @@ Nuxt.js 使用 Vue.js 官方的 [babel-preset-vue-app](https://github.com/vuejs/
 
 ```html
 <script>
-export default {
-  data () {
-    return { name: 'World' }
-  },
-  render (h) {
-    return <h1 class="red">{this.name}</h1>
+  export default {
+    data() {
+      return { name: 'World' }
+    },
+    render(h) {
+      return <h1 class="red">{this.name}</h1>
+    }
   }
-}
 </script>
 ```
 
 <div class="Alert Alert--orange">
 
-这里的 `h` 为 `createElement` 的简化别名，你会在Vue生态系统中看到它，但它实际上是JSX的可选项，因为它会在**ES2015+语法**中 **声明的任何方法和getter（不是函数或箭头函数）** 中自动注入`const h = this.$createElement` ，所以你可以删除`(h)`参数。
+这里的 `h` 为 `createElement` 的简化别名，你会在 Vue 生态系统中看到它，但它实际上是 JSX 的可选项，因为它会在**ES2015+语法**中 **声明的任何方法和 getter（不是函数或箭头函数）** 中自动注入`const h = this.$createElement` ，所以你可以删除`(h)`参数。
 
 </div>
 

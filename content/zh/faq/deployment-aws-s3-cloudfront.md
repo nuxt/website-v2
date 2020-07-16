@@ -1,5 +1,5 @@
 ---
-title: "AWS: S3+Cloudfront 部署"
+title: 'AWS: S3+Cloudfront 部署'
 description: 使用S3和Cloudfront在AWS上进行静态托管
 menu: Deploy on Aws w/ S3 and Cloudfront
 category: deployment
@@ -8,25 +8,23 @@ position: 201
 
 # 如何在 AWS 上部署 S3 和 Cloudfront
 
-AWS是Amazon Web Services。
-S3是他们的静态存储，可以配置为静态站点托管。
-Cloudfront是他们的CDN（内容分发网络）
+AWS 是 Amazon Web Services。 S3 是他们的静态存储，可以配置为静态站点托管。 Cloudfront 是他们的 CDN（内容分发网络）
 
-在AWS w / S3 + Cloudfront上托管**静态页面**的 Nuxt应用程序功能强大且价格低廉。
+在 AWS w / S3 + Cloudfront 上托管**静态页面**的 Nuxt 应用程序功能强大且价格低廉。
 
-> 如果我们错过了一个步骤，请提交PR以更新此文档。
+> 如果我们错过了一个步骤，请提交 PR 以更新此文档。
 
 ## 概览
 
-我们将通过一些AWS服务托管超级便宜：
+我们将通过一些 AWS 服务托管超级便宜：
 
- - S3
-   - 云数据"bucket"为我们的网站文件
-   - 可以配置为托管静态网站
- - CloudFront
-   - CDN（内容分发网络）
-   - 提供免费的HTTPS证书
-   - 使您的网站加载速度更快
+- S3
+  - 云数据"bucket"为我们的网站文件
+  - 可以配置为托管静态网站
+- CloudFront
+  - CDN（内容分发网络）
+  - 提供免费的 HTTPS 证书
+  - 使您的网站加载速度更快
 
 我们会像这样推送网站：
 
@@ -36,19 +34,19 @@ Nuxt Generate -> Local folder -> AWS S3 Bucket -> AWS Cloudfront CDN -> Browser
   [                         deploy.sh                            ]
 ```
 
-首先，我们将使用`nuxt generate`生成网站。
-然后，我们将使用 [Gulp](https://gulpjs.com/) 将文件发布到S3存储桶并使CouldFront CDN生效。
+首先，我们将使用`nuxt generate`生成网站。然后，我们将使用 [Gulp](https://gulpjs.com/) 将文件发布到 S3 存储桶并使 CouldFront CDN 生效。
 
-  - [gulp](https://www.npmjs.com/package/gulp)
-  - [gulp-awspublish](https://www.npmjs.com/package/gulp-awspublish)
-  - [gulp-cloudfront-invalidate-aws-publish](https://www.npmjs.com/package/gulp-cloudfront-invalidate-aws-publish)
-  - [concurrent-transform](https://www.npmjs.com/package/concurrent-transform) (for parallel uploads)
+- [gulp](https://www.npmjs.com/package/gulp)
+- [gulp-awspublish](https://www.npmjs.com/package/gulp-awspublish)
+- [gulp-cloudfront-invalidate-aws-publish](https://www.npmjs.com/package/gulp-cloudfront-invalidate-aws-publish)
+- [concurrent-transform](https://www.npmjs.com/package/concurrent-transform) (for parallel uploads)
 
 我们的部署脚本需要设置以下环境变量：
-  - AWS_BUCKET_NAME="example.com"
-  - AWS_CLOUDFRONT="UPPERCASE"
-  - AWS_ACCESS_KEY_ID="key"
-  - AWS_SECRET_ACCESS_KEY="secret"
+
+- AWS_BUCKET_NAME="example.com"
+- AWS_CLOUDFRONT="UPPERCASE"
+- AWS_ACCESS_KEY_ID="key"
+- AWS_SECRET_ACCESS_KEY="secret"
 
 我们将有这些文件：
 
@@ -59,77 +57,81 @@ gulpfile.js     -  `gulp deploy` code to push files to S3 and invalidate CloudFr
 
 ## 设置它
 
-  1. 创建一个S3 bucket并将其配置为静态站点托管
-  2. 创建云端分发
-  3. 配置安全访问
-  4. 在项目中设置构建脚本
+1. 创建一个 S3 bucket 并将其配置为静态站点托管
+2. 创建云端分发
+3. 配置安全访问
+4. 在项目中设置构建脚本
 
 ### 1. AWS: 设置你的 S3 bucket
+
 ### 2. AWS: 设置你的 Cloudfront 分配
 
-对于步骤1和2，请按照此步骤操作 [设置S3和Cloudfront的教程](https://reidweb.com/2017/02/06/cloudfront-cdn-tutorial/)
+对于步骤 1 和 2，请按照此步骤操作 [设置 S3 和 Cloudfront 的教程](https://reidweb.com/2017/02/06/cloudfront-cdn-tutorial/)
 
 您现在应该拥有以下数据：
-  - AWS_BUCKET_NAME="example.com"
-  - AWS_CLOUDFRONT="UPPERCASE"
+
+- AWS_BUCKET_NAME="example.com"
+- AWS_CLOUDFRONT="UPPERCASE"
 
 ### 3. AWS: 配置安全访问
 
-对于第3步，我们需要创建：
-  - 更新bucket内容
-  - 使云端分发生效（更快地将更改传播给用户）
+对于第 3 步，我们需要创建：
+
+- 更新 bucket 内容
+- 使云端分发生效（更快地将更改传播给用户）
 
 [使用此策略创建程序化用户](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_users_create.html):
 
-> 注意：用下面的S3 bucket 名称替换2x `example.com`。 此策略允许推送到指定的存储桶，并使任何云端分发生效。
+> 注意：用下面的 S3 bucket 名称替换 2x `example.com`。 此策略允许推送到指定的存储桶，并使任何云端分发生效。
 
-``` json
+```json
 {
-    "Version": "2012-10-17",
-    "Statement": [ {
-            "Effect": "Allow",
-            "Action": [ "s3:ListBucket" ],
-            "Resource": [
-                "arn:aws:s3:::example.com"
-            ]
-        }, {
-            "Effect": "Allow",
-            "Action": [
-                "s3:PutObject",
-                "s3:PutObjectAcl",
-                "s3:GetObject",
-                "s3:GetObjectAcl",
-                "s3:DeleteObject",
-                "s3:ListMultipartUploadParts",
-                "s3:AbortMultipartUpload"
-            ],
-            "Resource": [
-                "arn:aws:s3:::example.com/*"
-            ]
-        }, {
-            "Effect": "Allow",
-            "Action": [
-                "cloudfront:CreateInvalidation",
-                "cloudfront:GetInvalidation",
-                "cloudfront:ListInvalidations",
-                "cloudfront:UnknownOperation"
-            ],
-            "Resource": "*"
-        }
-    ]
+  "Version": "2012-10-17",
+  "Statement": [
+    {
+      "Effect": "Allow",
+      "Action": ["s3:ListBucket"],
+      "Resource": ["arn:aws:s3:::example.com"]
+    },
+    {
+      "Effect": "Allow",
+      "Action": [
+        "s3:PutObject",
+        "s3:PutObjectAcl",
+        "s3:GetObject",
+        "s3:GetObjectAcl",
+        "s3:DeleteObject",
+        "s3:ListMultipartUploadParts",
+        "s3:AbortMultipartUpload"
+      ],
+      "Resource": ["arn:aws:s3:::example.com/*"]
+    },
+    {
+      "Effect": "Allow",
+      "Action": [
+        "cloudfront:CreateInvalidation",
+        "cloudfront:GetInvalidation",
+        "cloudfront:ListInvalidations",
+        "cloudfront:UnknownOperation"
+      ],
+      "Resource": "*"
+    }
+  ]
 }
 ```
 
 [获取访问密钥和密钥](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_access-keys.html).
 
 您现在应该拥有以下数据：
-  - AWS_ACCESS_KEY_ID="key"
-  - AWS_SECRET_ACCESS_KEY="secret"
+
+- AWS_ACCESS_KEY_ID="key"
+- AWS_SECRET_ACCESS_KEY="secret"
 
 ### 4. Laptop: 设置项目的构建脚本
 
 4.1) 创建一个`deploy.sh`脚本。 参考 [nvm (node version manager)](https://github.com/creationix/nvm).
-``` bash
+
+```bash
 #!/bin/bash
 
 export AWS_ACCESS_KEY_ID="key"
@@ -146,8 +148,9 @@ npm run generate
 gulp deploy
 ```
 
-4.2) 使`deploy.sh`可运行，不要检查进入GIT（deploy.sh中有隐私）
-``` bash
+4.2) 使`deploy.sh`可运行，不要检查进入 GIT（deploy.sh 中有隐私）
+
+```bash
 chmod +x deploy.sh
 echo "
 # Don't commit build files
@@ -159,15 +162,16 @@ deploy.sh
 " >> .gitignore
 ```
 
-4.3) 将Gulp添加到项目和命令行
-``` bash
+4.3) 将 Gulp 添加到项目和命令行
+
+```bash
 npm install --save-dev gulp gulp-awspublish gulp-cloudfront-invalidate-aws-publish concurrent-transform
 npm install -g gulp
 ```
 
 4.4) 使用构建脚本创建`gulpfile.js`
 
-``` javascript
+```javascript
 const gulp = require('gulp')
 const awspublish = require('gulp-awspublish')
 const cloudfront = require('gulp-cloudfront-invalidate-aws-publish')
@@ -176,7 +180,6 @@ const parallelize = require('concurrent-transform')
 // https://docs.aws.amazon.com/cli/latest/userguide/cli-environment.html
 
 const config = {
-
   // Required
   params: { Bucket: process.env.AWS_BUCKET_NAME },
   accessKeyId: process.env.AWS_ACCESS_KEY_ID,
@@ -186,7 +189,9 @@ const config = {
   deleteOldVersions: false, // NOT FOR PRODUCTION
   distribution: process.env.AWS_CLOUDFRONT, // Cloudfront distribution ID
   region: process.env.AWS_DEFAULT_REGION,
-  headers: { /* 'Cache-Control': 'max-age=315360000, no-transform, public', */ },
+  headers: {
+    /* 'Cache-Control': 'max-age=315360000, no-transform, public', */
+  },
 
   // Sensible Defaults - gitignore these Files and Dirs
   distDir: 'dist',
@@ -204,18 +209,24 @@ gulp.task('deploy', function () {
   let g = gulp.src('./' + config.distDir + '/**')
   // publisher will add Content-Length, Content-Type and headers specified above
   // If not specified it will set x-amz-acl to public-read by default
-  g = g.pipe(parallelize(publisher.publish(config.headers), config.concurrentUploads))
+  g = g.pipe(
+    parallelize(publisher.publish(config.headers), config.concurrentUploads)
+  )
 
   // Invalidate CDN
   if (config.distribution) {
     console.log('Configured with Cloudfront distribution')
     g = g.pipe(cloudfront(config))
   } else {
-    console.log('No Cloudfront distribution configured - skipping CDN invalidation')
+    console.log(
+      'No Cloudfront distribution configured - skipping CDN invalidation'
+    )
   }
 
   // Delete removed files
-  if (config.deleteOldVersions) { g = g.pipe(publisher.sync()) }
+  if (config.deleteOldVersions) {
+    g = g.pipe(publisher.sync())
+  }
   // create a cache file to speed up consecutive uploads
   g = g.pipe(publisher.cache())
   // print upload updates to console
@@ -223,15 +234,18 @@ gulp.task('deploy', function () {
   return g
 })
 ```
+
 4.5) 部署和调试
 
 运行：
-``` bash
+
+```bash
 ./deploy.sh
 ```
 
 您应该得到类似于此的输出：
-``` bash
+
+```bash
 $ ./deploy.sh
 
 Found '/home/michael/scm/example.com/www/.nvmrc' with version <8>
@@ -331,4 +345,4 @@ Configured with Cloudfront distribution
 [21:26:09] Finished 'deploy' after 42 s
 ```
 
-请注意，创建的`Cloudfront invalidation created: XXXX`是来自cloudfront invalidation npm包的唯一输出。 如果你没有看到，它就不起作用了。
+请注意，创建的`Cloudfront invalidation created: XXXX`是来自 cloudfront invalidation npm 包的唯一输出。 如果你没有看到，它就不起作用了。

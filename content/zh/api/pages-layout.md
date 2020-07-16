@@ -1,5 +1,5 @@
 ---
-title: "API: layout 属性"
+title: 'API: layout 属性'
 description: layouts 根目录下的所有文件都属于个性化布局文件，可以在页面组件中利用 layout 属性来引用。
 menu: layout
 category: pages
@@ -18,7 +18,7 @@ position: 25
 export default {
   layout: 'blog',
   // 或
-  layout (context) {
+  layout(context) {
     return 'blog'
   }
 }

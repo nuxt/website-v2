@@ -1,6 +1,6 @@
 ---
 title: Perkenalan
-description: "25 Oktober 2016, tim dari zeit.co, mengumumkan Next.js, sebuah framework untuk me-render server aplikasi React. Beberapa jam setelah pengumuman, ide untuk membuat aplikasi render-server Vue.js dengan cara yang sama seperti Next.js semakin nyata: Nuxt.js telah lahir."
+description: '25 Oktober 2016, tim dari zeit.co, mengumumkan Next.js, sebuah framework untuk me-render server aplikasi React. Beberapa jam setelah pengumuman, ide untuk membuat aplikasi render-server Vue.js dengan cara yang sama seperti Next.js semakin nyata: Nuxt.js telah lahir.'
 category: prologue
 position: 1
 ---
@@ -15,10 +15,9 @@ Ruang lingkup utamanya adalah **Me-render UI** sembari mengabtraksi distribusi c
 
 Tujuan kami adalah untuk membuat framework yang cukup fleksibel yang bisa Anda gunakan sebagai basis proyek utama atau disamping proyek Anda saat ini yang berbasis Node.js.
 
-Nuxt.js mengatur semua konfigurasi yang diperlukan untuk membuat pengembangan  **Pe-render-an Server** Aplikasi Vue.js Anda lebih menyenangkan.
+Nuxt.js mengatur semua konfigurasi yang diperlukan untuk membuat pengembangan **Pe-render-an Server** Aplikasi Vue.js Anda lebih menyenangkan.
 
-Selain itu, kami juga menyediakan opsi penempatan lain yang disebut: *nuxt generate*. Ini akan membangun Aplikasi Vue.js **Secara Statis**.
-Kami percaya bahwa opsi itu bisa menjadi langkah besar selanjutnya dalam pengembangan Aplikasi Web dengan microservis.
+Selain itu, kami juga menyediakan opsi penempatan lain yang disebut: _nuxt generate_. Ini akan membangun Aplikasi Vue.js **Secara Statis**. Kami percaya bahwa opsi itu bisa menjadi langkah besar selanjutnya dalam pengembangan Aplikasi Web dengan microservis.
 
 Sebagai framework, Nuxt.js hadir dengan banyak fitur untuk membantu Anda dalam pengembangan antara sisi client dan sisi server seperti Data Asinkronus, Middleware, Layout, dll.
 
@@ -67,7 +66,7 @@ Ketika meluncurkan `nuxt`, ini akan memulai sebuah pengembangan server hot-reloa
 
 ### Single Page Applications (SPA)
 
-Jika, untuk beberapa alasan, Anda lebih suka untuk tidak menggunakan render sisi server atau butuh hosting statis untuk aplikasi Anda, Anda bisa menggunakan mode SPA dengan mudah menggunala `nuxt --spa`. Dalam kombinasi dengan fitur *generate*, ini memberi Anda sebuah mekanisme pengembangan SPA yang kuat tanpa menggunakan runtime Node.js atau penanganan server khusus lainnya.
+Jika, untuk beberapa alasan, Anda lebih suka untuk tidak menggunakan render sisi server atau butuh hosting statis untuk aplikasi Anda, Anda bisa menggunakan mode SPA dengan mudah menggunala `nuxt --spa`. Dalam kombinasi dengan fitur _generate_, ini memberi Anda sebuah mekanisme pengembangan SPA yang kuat tanpa menggunakan runtime Node.js atau penanganan server khusus lainnya.
 
 Lihat di [sebuah perintah](/guide/commands) untuk belajar lebih banyak tentang kegunaannya.
 

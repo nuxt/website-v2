@@ -1,5 +1,5 @@
 ---
-title: "API: router 属性配置"
+title: 'API: router 属性配置'
 description: router 属性让你可以个性化配置 Nuxt.js 应用的路由。
 menu: router
 category: configuration
@@ -15,9 +15,10 @@ position: 124
 - 类型： `String`
 - 默认值： `'/'`
 
-应用的根URL。举个例子，如果整个单页面应用的所有资源可以通过 `/app/` 来访问，那么 `base` 配置项的值需要设置为 `'/app/'`。
+应用的根 URL。举个例子，如果整个单页面应用的所有资源可以通过 `/app/` 来访问，那么 `base` 配置项的值需要设置为 `'/app/'`。
 
 例如 (`nuxt.config.js`)：
+
 ```js
 module.exports = {
   router: {
@@ -39,9 +40,10 @@ module.exports = {
 - 类型: `String`
 - 默认: `'-'`
 
-您可能希望更改Nuxt.js使用的路由名称之间的分隔符。您可以通过配置文件中的`routeNameSplitter`选项执行此操作。想象一下，我们有页面文件`pages/posts/_id.vue`。Nuxt将以编程方式生成路由名称，在本例中为`posts-id`。因此，将`routeNameSplitter`配置修改为`/`，这样路由名称生成为`posts/id`。
+您可能希望更改 Nuxt.js 使用的路由名称之间的分隔符。您可以通过配置文件中的`routeNameSplitter`选项执行此操作。想象一下，我们有页面文件`pages/posts/_id.vue`。Nuxt 将以编程方式生成路由名称，在本例中为`posts-id`。因此，将`routeNameSplitter`配置修改为`/`，这样路由名称生成为`posts/id`。
 
 例如 (`nuxt.config.js`):
+
 ```js
 export default {
   router: {
@@ -59,10 +61,11 @@ export default {
 例如添加自定义路由:
 
 `nuxt.config.js`
+
 ```js
 export default {
   router: {
-    extendRoutes (routes, resolve) {
+    extendRoutes(routes, resolve) {
       routes.push({
         name: 'custom',
         path: '*',
@@ -83,6 +86,7 @@ export default {
 全局配置 [`<nuxt-link>`](/api/components-nuxt-link) 组件默认的激活类名。
 
 例如 (`nuxt.config.js`)：
+
 ```js
 module.exports = {
   router: {
@@ -98,9 +102,10 @@ module.exports = {
 - 类型: `String`
 - 默认: `'nuxt-link-exact-active'`
 
-全局配置 [`<nuxt-link>`](/api/components-nuxt-link) 默认的active class。
+全局配置 [`<nuxt-link>`](/api/components-nuxt-link) 默认的 active class。
 
 例如 (`nuxt.config.js`):
+
 ```js
 export default {
   router: {
@@ -109,7 +114,7 @@ export default {
 }
 ```
 
-> 此选项直接提供给vue-router [linkexactactiveclass](https://router.vuejs.org/api/#linkexactactiveclass).
+> 此选项直接提供给 vue-router [linkexactactiveclass](https://router.vuejs.org/api/#linkexactactiveclass).
 
 ## linkPrefetchedClass
 
@@ -138,6 +143,7 @@ export default {
 例如：
 
 `nuxt.config.js`
+
 ```js
 module.exports = {
   router: {
@@ -148,10 +154,13 @@ module.exports = {
 ```
 
 `middleware/user-agent.js`
+
 ```js
 export default function (context) {
   // 给上下文对象增加 userAgent 属性（增加的属性可在 `asyncData` 和 `fetch` 方法中获取）
-  context.userAgent = process.server ? context.req.headers['user-agent'] : navigator.userAgent
+  context.userAgent = process.server
+    ? context.req.headers['user-agent']
+    : navigator.userAgent
 }
 ```
 
@@ -165,6 +174,7 @@ export default function (context) {
 配置路由的模式，鉴于服务端渲染的特性，不建议修改该配置。
 
 示例 (`nuxt.config.js`):
+
 ```js
 module.exports = {
   router: {
@@ -182,6 +192,7 @@ module.exports = {
 `scrollBehavior` 配置项用于个性化配置跳转至目标页面后的页面滚动位置。每次页面渲染后都会调用 `scrollBehavior` 配置的方法。
 
 `scrollBehavior` 的默认配置为：
+
 ```js
 const scrollBehavior = function (to, from, savedPosition) {
   // if the returned position is falsy or an empty object,
@@ -205,7 +216,7 @@ const scrollBehavior = function (to, from, savedPosition) {
     position = savedPosition
   }
 
-  return new Promise((resolve) => {
+  return new Promise(resolve => {
     // wait for the out transition to complete (if necessary)
     window.$nuxt.$once('triggerScroll', () => {
       // coords will be used if no selector is provided,
@@ -213,7 +224,10 @@ const scrollBehavior = function (to, from, savedPosition) {
       if (to.hash) {
         let hash = to.hash
         // CSS.escape() is not supported with IE and Edge.
-        if (typeof window.CSS !== 'undefined' && typeof window.CSS.escape !== 'undefined') {
+        if (
+          typeof window.CSS !== 'undefined' &&
+          typeof window.CSS.escape !== 'undefined'
+        ) {
           hash = '#' + window.CSS.escape(hash.substr(1))
         }
         try {
@@ -222,7 +236,9 @@ const scrollBehavior = function (to, from, savedPosition) {
             position = { selector: hash }
           }
         } catch (e) {
-          console.warn('Failed to save scroll position. Please add CSS.escape() polyfill (https://github.com/mathiasbynens/CSS.escape).')
+          console.warn(
+            'Failed to save scroll position. Please add CSS.escape() polyfill (https://github.com/mathiasbynens/CSS.escape).'
+          )
         }
       }
       resolve(position)
@@ -234,10 +250,11 @@ const scrollBehavior = function (to, from, savedPosition) {
 举个例子，我们可以配置所有页面渲染后滚动至顶部：
 
 `nuxt.config.js`：
+
 ```js
 module.exports = {
   router: {
-    scrollBehavior (to, from, savedPosition) {
+    scrollBehavior(to, from, savedPosition) {
       return { x: 0, y: 0 }
     }
   }
@@ -252,7 +269,7 @@ module.exports = {
 
 提供自定义查询字符串解析/字符串化功能。覆盖默认值。
 
-> 此选项直接提供在vue-router [parseQuery / stringifyQuery](https://router.vuejs.org/api/#parsequery-stringifyquery).
+> 此选项直接提供在 vue-router [parseQuery / stringifyQuery](https://router.vuejs.org/api/#parsequery-stringifyquery).
 
 ## prefetchLinks
 
@@ -261,7 +278,7 @@ module.exports = {
 - 类型: `Boolean`
 - 默认: `true`
 
-在视图中检测到时，配置`<nuxt-link>`用来预获取*代码分割*页面。需要支持[IntersectionObserver](https://developer.mozilla.org/en-US/docs/Web/API/Intersection_Observer_API)(参阅 [CanIUse](https://caniuse.com/#feat=intersectionobserver))。
+在视图中检测到时，配置`<nuxt-link>`用来预获取*代码分割*页面。需要支持[IntersectionObserver](https://developer.mozilla.org/en-US/docs/Web/API/Intersection_Observer_API)( 参阅 [CanIUse](https://caniuse.com/#feat=intersectionobserver))。
 
 我们建议使用[Polyfill.io](https://polyfill.io)等服务有条件地填充此功能：
 
@@ -271,7 +288,11 @@ module.exports = {
 export default {
   head: {
     script: [
-      { src: 'https://polyfill.io/v2/polyfill.min.js?features=IntersectionObserver', body: true }
+      {
+        src:
+          'https://polyfill.io/v2/polyfill.min.js?features=IntersectionObserver',
+        body: true
+      }
     ]
   }
 }
@@ -299,8 +320,8 @@ export default {
 - 类型: `boolean`
 - 默认: `false`
 
-当浏览器不支持history.pushState但模式设置为history时，控制路由器是否应回退。
+当浏览器不支持 history.pushState 但模式设置为 history 时，控制路由器是否应回退。
 
-将此设置为`false`实质上会使每个路由器链接导航在IE9中刷新整页。当应用程序是服务器呈现并且需要在IE9中工作时，这很有用，因为**hash模式**URL不适用于SSR。
+将此设置为`false`实质上会使每个路由器链接导航在 IE9 中刷新整页。当应用程序是服务器呈现并且需要在 IE9 中工作时，这很有用，因为**hash 模式**URL 不适用于 SSR。
 
-> 此选项直接提供在vue-router [fallback](https://router.vuejs.org/api/#fallback).
+> 此选项直接提供在 vue-router [fallback](https://router.vuejs.org/api/#fallback).

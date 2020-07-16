@@ -1,5 +1,5 @@
 ---
-title: "The build Property"
+title: 'The build Property'
 description: Nuxt.js lets you customize the webpack configuration for building your web application as you want.
 menu: build
 category: configuration
@@ -25,10 +25,10 @@ export default {
     analyze: true,
     // or
     analyze: {
-      analyzerMode: "static"
+      analyzerMode: 'static'
     }
   }
-};
+}
 ```
 
 <div class="Alert Alert--teal">
@@ -93,18 +93,18 @@ export default {
           [
             preset,
             {
-              buildTarget: isServer ? "server" : "client",
+              buildTarget: isServer ? 'server' : 'client',
               ...options
             }
           ],
           [
             // Other presets
           ]
-        ];
+        ]
       }
     }
   }
-};
+}
 ```
 
 ## cache
@@ -150,9 +150,7 @@ The extend is called twice, one time for the server bundle, and one time for the
 
 <div class="Alert Alert--orange">
 
-**Warning:**
-The `isClient` and `isServer` keys provided in are separate from the keys available in [`context`](/api/context).
-They are **not** deprecated. Do not use `process.client` and `process.server` here as they are `undefined` at this point.
+**Warning:** The `isClient` and `isServer` keys provided in are separate from the keys available in [`context`](/api/context). They are **not** deprecated. Do not use `process.client` and `process.server` here as they are `undefined` at this point.
 
 </div>
 
@@ -164,11 +162,11 @@ export default {
     extend(config, { isClient }) {
       // Extend only webpack config for client-bundle
       if (isClient) {
-        config.devtool = "source-map";
+        config.devtool = 'source-map'
       }
     }
   }
-};
+}
 ```
 
 If you want to see more about our default webpack configuration, take a look at our [webpack directory](https://github.com/nuxt/nuxt.js/tree/dev/packages/webpack/src/config).
@@ -185,11 +183,11 @@ export default {
     extend(config, { isClient, loaders: { vue } }) {
       // Extend only webpack config for client-bundle
       if (isClient) {
-        vue.transformAssetUrls.video = ["src", "poster"];
+        vue.transformAssetUrls.video = ['src', 'poster']
       }
     }
   }
-};
+}
 ```
 
 ## extractCSS
@@ -207,8 +205,7 @@ Using [`extract-css-chunks-webpack-plugin`](https://github.com/faceyspacey/extra
 
 </div>
 
-You may want to extract all your CSS to a single file.
-There is a workaround for this:
+You may want to extract all your CSS to a single file. There is a workaround for this:
 
 <div class="Alert Alert--orange">
 ⚠️ It is not recommended extracting everything into a single file.
@@ -224,16 +221,16 @@ export default {
       splitChunks: {
         cacheGroups: {
           styles: {
-            name: "styles",
+            name: 'styles',
             test: /\.(css|vue)$/,
-            chunks: "all",
+            chunks: 'all',
             enforce: true
           }
         }
       }
     }
   }
-};
+}
 ```
 
 ## filenames
@@ -260,10 +257,10 @@ This example changes fancy chunk names to numerical ids (`nuxt.config.js`):
 export default {
   build: {
     filenames: {
-      chunk: ({ isDev }) => (isDev ? "[name].js" : "[id].[contenthash].js")
+      chunk: ({ isDev }) => (isDev ? '[name].js' : '[id].[contenthash].js')
     }
   }
-};
+}
 ```
 
 To understand a bit more about the use of manifests, take a look at this [webpack documentation](https://webpack.js.org/guides/code-splitting/).
@@ -310,8 +307,7 @@ See [webpack-hot-middleware](https://github.com/glenjamin/webpack-hot-middleware
 
 **Attention:** If you make changes to `html.minify`, they won't be merged with the defaults!
 
-Configuration for the [html-minifier](https://github.com/kangax/html-minifier) plugin used to minify
-HTML files created during the build process (will be applied for _all modes_).
+Configuration for the [html-minifier](https://github.com/kangax/html-minifier) plugin used to minify HTML files created during the build process (will be applied for _all modes_).
 
 ## indicator
 
@@ -377,8 +373,7 @@ HTML files created during the build process (will be applied for _all modes_).
 
 ### loaders.css and loaders.cssModules
 
-> More details are in [css-loader options](https://github.com/webpack-contrib/css-loader#options).
-> Note: cssModules is loader options for usage of [CSS Modules](https://vue-loader.vuejs.org/guide/css-modules.html#css-modules)
+> More details are in [css-loader options](https://github.com/webpack-contrib/css-loader#options). Note: cssModules is loader options for usage of [CSS Modules](https://vue-loader.vuejs.org/guide/css-modules.html#css-modules)
 
 ### loaders.less
 
@@ -386,8 +381,7 @@ HTML files created during the build process (will be applied for _all modes_).
 
 ### loaders.sass and loaders.scss
 
-> See the [Node Sass documentation](https://github.com/sass/node-sass/blob/master/README.md#options) for all available Sass options.
-> Note: `loaders.sass` is for [Sass Indented Syntax](http://sass-lang.com/documentation/file.INDENTED_SYNTAX.html)
+> See the [Node Sass documentation](https://github.com/sass/node-sass/blob/master/README.md#options) for all available Sass options. Note: `loaders.sass` is for [Sass Indented Syntax](http://sass-lang.com/documentation/file.INDENTED_SYNTAX.html)
 
 ### loaders.vueStyle
 
@@ -416,8 +410,7 @@ HTML files created during the build process (will be applied for _all modes_).
 
 The default value of `splitChunks.name` is `true` in `dev` or `analyze` mode.
 
-You can set `minimizer` to a customized Array of plugins or set `minimize` to `false` to disable all minimizers.
-(`minimize` is being disabled for development by default)
+You can set `minimizer` to a customized Array of plugins or set `minimize` to `false` to disable all minimizers. (`minimize` is being disabled for development by default)
 
 See [Webpack Optimization](https://webpack.js.org/configuration/optimization).
 
@@ -450,17 +443,17 @@ See [NMFR/optimize-css-assets-webpack-plugin](https://github.com/NMFR/optimize-c
 Example (`nuxt.config.js`):
 
 ```js
-import webpack from "webpack";
-import { version } from "./package.json";
+import webpack from 'webpack'
+import { version } from './package.json'
 export default {
   build: {
     plugins: [
       new webpack.DefinePlugin({
-        "process.VERSION": version
+        'process.VERSION': version
       })
     ]
   }
-};
+}
 ```
 
 ## postcss
@@ -498,11 +491,11 @@ export default {
     postcss: {
       plugins: {
         // Disable `postcss-url`
-        "postcss-url": false,
+        'postcss-url': false,
         // Add some plugins
-        "postcss-nested": {},
-        "postcss-responsive-type": {},
-        "postcss-hexrgba": {}
+        'postcss-nested': {},
+        'postcss-responsive-type': {},
+        'postcss-hexrgba': {}
       },
       preset: {
         autoprefixer: {
@@ -511,7 +504,7 @@ export default {
       }
     }
   }
-};
+}
 ```
 
 If the postcss configuration is an `Object`, `order` can be used for defining the plugin order:
@@ -545,21 +538,21 @@ If you want to apply postcss plugin (eg. postcss-pxtorem) on the nuxt-tailwindcs
 Example (`nuxt.config.js`):
 
 ```js
-import { join } from "path";
+import { join } from 'path'
 
 export default {
   // ...
   build: {
     postcss: {
       plugins: {
-        tailwindcss: join(__dirname, "tailwind.config.js"),
-        "postcss-pxtorem": {
-          propList: ["*", "!border*"]
+        tailwindcss: join(__dirname, 'tailwind.config.js'),
+        'postcss-pxtorem': {
+          propList: ['*', '!border*']
         }
       }
     }
   }
-};
+}
 ```
 
 ## profile
@@ -581,9 +574,9 @@ Example (`nuxt.config.js`):
 ```js
 export default {
   build: {
-    publicPath: "https://cdn.nuxtjs.org"
+    publicPath: 'https://cdn.nuxtjs.org'
   }
-};
+}
 ```
 
 Then, when launching `nuxt build`, upload the content of `.nuxt/dist/client` directory to your CDN and voilà!
@@ -670,8 +663,8 @@ export default {
   build: {
     templates: [
       {
-        src: "~/modules/support/plugin.js", // `src` can be absolute or relative
-        dst: "support.js", // `dst` is relative to project `.nuxt` dir
+        src: '~/modules/support/plugin.js', // `src` can be absolute or relative
+        dst: 'support.js', // `dst` is relative to project `.nuxt` dir
         options: {
           // Options are provided to template as `options` key
           live_chat: false
@@ -679,7 +672,7 @@ export default {
       }
     ]
   }
-};
+}
 ```
 
 Templates are rendered using [`lodash.template`](https://lodash.com/docs/#template) you can learn more about using them [here](https://github.com/learn-co-students/javascript-lodash-templates-v-000).
@@ -723,7 +716,7 @@ Starting with `v2.9.0`, you can also use a function to conditionally transpile, 
 ```js
 {
   build: {
-    transpile: [({ isLegacy }) => isLegacy && "ky"];
+    transpile: [({ isLegacy }) => isLegacy && 'ky']
   }
 }
 ```
@@ -758,9 +751,9 @@ Starting with `v2.9.0`, you can also use a function to conditionally transpile, 
 ```js
 export default {
   build: {
-    watch: ["~/.nuxt/support.js"]
+    watch: ['~/.nuxt/support.js']
   }
-};
+}
 ```
 
 ## followSymlinks
@@ -774,5 +767,5 @@ export default {
   build: {
     followSymlinks: true
   }
-};
+}
 ```

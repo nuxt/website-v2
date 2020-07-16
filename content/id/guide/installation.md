@@ -37,26 +37,28 @@ $ yarn create nuxt-app <my-project>
 Kemudian akan muncul beberapa pertanyaan:
 
 1. Pilih framework untuk integrasi server-side:
-  - None (Nuxt default server)
-  - [Express](https://github.com/expressjs/express)
-  - [Koa](https://github.com/koajs/koa)
-  - [Hapi](https://github.com/hapijs/hapi)
-  - [Feathers](https://github.com/feathersjs/feathers)
-  - [Micro](https://github.com/zeit/micro)
-  - [Fastify](https://github.com/fastify/fastify)
-  - [Adonis](https://github.com/adonisjs/adonis-framework) (WIP)
+
+- None (Nuxt default server)
+- [Express](https://github.com/expressjs/express)
+- [Koa](https://github.com/koajs/koa)
+- [Hapi](https://github.com/hapijs/hapi)
+- [Feathers](https://github.com/feathersjs/feathers)
+- [Micro](https://github.com/zeit/micro)
+- [Fastify](https://github.com/fastify/fastify)
+- [Adonis](https://github.com/adonisjs/adonis-framework) (WIP)
 
 2. Pilih framework UI kesukaan anda:
-  - None (feel free to add one later)
-  - [Bootstrap](https://github.com/bootstrap-vue/bootstrap-vue)
-  - [Vuetify](https://github.com/vuetifyjs/vuetify)
-  - [Bulma](https://github.com/jgthms/bulma)
-  - [Tailwind](https://github.com/tailwindcss/tailwindcss)
-  - [Element UI](https://github.com/ElemeFE/element)
-  - [Ant Design Vue](https://github.com/vueComponent/ant-design-vue)
-  - [Buefy](https://github.com/buefy/buefy)
-  - [iView](https://github.com/iview/iview)
-  - [Tachyons](https://github.com/tachyons-css/tachyons)
+
+- None (feel free to add one later)
+- [Bootstrap](https://github.com/bootstrap-vue/bootstrap-vue)
+- [Vuetify](https://github.com/vuetifyjs/vuetify)
+- [Bulma](https://github.com/jgthms/bulma)
+- [Tailwind](https://github.com/tailwindcss/tailwindcss)
+- [Element UI](https://github.com/ElemeFE/element)
+- [Ant Design Vue](https://github.com/vueComponent/ant-design-vue)
+- [Buefy](https://github.com/buefy/buefy)
+- [iView](https://github.com/iview/iview)
+- [Tachyons](https://github.com/tachyons-css/tachyons)
 
 3. [Mode Nuxt yang anda inginkan (`Universal` or `SPA`)](https://nuxtjs.org/guide/release-notes#better-spa-experience)
 4. Menambah [axios module](https://github.com/nuxt-community/axios-module) untuk mempermudah melakukan HTTP request pada aplikasi anda.

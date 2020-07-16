@@ -10,11 +10,11 @@ position: 204
 
 - Type: `Function`
 - Argument: `String`
-    1. `String`: URL untuk render
-    2. *Optional*, `Object`: options
-    - virtualConsole: `Boolean` (default: `true`)
+  1. `String`: URL untuk render
+  2. _Optional_, `Object`: options
+  - virtualConsole: `Boolean` (default: `true`)
 - Returns: `Promise`
-    - Returns: `window`
+  - Returns: `window`
 
 > Mendapatkan `window` dari URL tertentu dari Aplikasi Nuxt.js.
 
@@ -40,9 +40,8 @@ config.dev = false
 
 const nuxt = new Nuxt(config)
 
-nuxt.renderAndGetWindow('http://localhost:3000')
-  .then((window) => {
+nuxt.renderAndGetWindow('http://localhost:3000').then(window => {
   // Tampilkan `<title>` pada head
-    console.log(window.document.title)
-  })
+  console.log(window.document.title)
+})
 ```

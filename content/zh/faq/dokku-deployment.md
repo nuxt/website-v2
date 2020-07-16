@@ -6,13 +6,13 @@ category: deployment
 position: 204
 ---
 
-# 如何在Dokku上部署Nuxt.js应用程序？
+# 如何在 Dokku 上部署 Nuxt.js 应用程序？
 
-我们建议阅读[Dokku文档的设置](http://dokku.viewdocs.io/dokku/getting-started/installation/)和[使用Dokku部署Node.js应用程序](http://jakeklassen.com/post/deploying-a-node-app-on-digital-ocean-using-dokku/)
+我们建议阅读[Dokku 文档的设置](http://dokku.viewdocs.io/dokku/getting-started/installation/)和[使用 Dokku 部署 Node.js 应用程序](http://jakeklassen.com/post/deploying-a-node-app-on-digital-ocean-using-dokku/)
 
-例如，我们将调用我们的Nuxt.js应用程序`my-nuxt-app`。
+例如，我们将调用我们的 Nuxt.js 应用程序`my-nuxt-app`。
 
-我们需要告诉Dokku安装项目的`devDependencies`(能够启动`npm run build`)：
+我们需要告诉 Dokku 安装项目的`devDependencies`(能够启动`npm run build`)：
 
 ```bash
 // on Dokku Server
@@ -26,7 +26,7 @@ dokku config:set my-nuxt-app NPM_CONFIG_PRODUCTION=false
 dokku config:set my-nuxt-app HOST=0.0.0.0 NODE_ENV=production
 ```
 
-当你输入`dokku config my-nuxt-app`时，你会看到这3行
+当你输入`dokku config my-nuxt-app`时，你会看到这 3 行
 
 ![nuxt config vars Dokku](https://i.imgur.com/9FNsaoQ.png)
 
@@ -50,7 +50,7 @@ dokku config:set my-nuxt-app HOST=0.0.0.0 NODE_ENV=production
 web: npm run start
 ```
 
-最后，我们可以在Dokku上推送我们的应用：
+最后，我们可以在 Dokku 上推送我们的应用：
 
 ```bash
 // commit your change before push.
@@ -58,4 +58,4 @@ git remote add dokku dokku@yourServer:my-nuxt-app
 git push dokku master
 ```
 
-瞧！ 我们的Nuxt.js应用程序现在托管在Dokku上！
+瞧！ 我们的 Nuxt.js 应用程序现在托管在 Dokku 上！

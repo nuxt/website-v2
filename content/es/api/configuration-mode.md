@@ -1,5 +1,5 @@
 ---
-title: "The mode Property"
+title: 'The mode Property'
 description: Change default nuxt mode
 menu: mode
 category: configuration

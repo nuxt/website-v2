@@ -44,17 +44,17 @@ Let's say we have a page in `pages/index.vue`:
 </template>
 
 <script>
-export default {
-  data () {
-    return { name: 'world' }
+  export default {
+    data() {
+      return { name: 'world' }
+    }
   }
-}
 </script>
 
 <style>
-.red {
-  color: red;
-}
+  .red {
+    color: red;
+  }
 </style>
 ```
 
@@ -68,10 +68,12 @@ import test from 'ava'
 import { Nuxt, Builder } from 'nuxt'
 
 // Init Nuxt.js and start listening on localhost:4000
-test.before('Init Nuxt.js', async (t) => {
+test.before('Init Nuxt.js', async t => {
   const rootDir = resolve(__dirname, '..')
   let config = {}
-  try { config = require(resolve(rootDir, 'nuxt.config.js')) } catch (e) {}
+  try {
+    config = require(resolve(rootDir, 'nuxt.config.js'))
+  } catch (e) {}
   config.rootDir = rootDir // project folder
   config.dev = false // production build
   config.mode = 'universal' // Isomorphic application
@@ -82,7 +84,7 @@ test.before('Init Nuxt.js', async (t) => {
 })
 
 // Example of testing only generated html
-test('Route / exists and render HTML', async (t) => {
+test('Route / exists and render HTML', async t => {
   const { nuxt } = t.context
   const context = {}
   const { html } = await nuxt.renderRoute('/', context)
@@ -90,7 +92,7 @@ test('Route / exists and render HTML', async (t) => {
 })
 
 // Example of testing via DOM checking
-test('Route / exists and renders HTML with CSS applied', async (t) => {
+test('Route / exists and renders HTML with CSS applied', async t => {
   const { nuxt } = t.context
   const window = await nuxt.renderAndGetWindow('http://localhost:4000/')
   const element = window.document.querySelector('.red')
@@ -101,7 +103,7 @@ test('Route / exists and renders HTML with CSS applied', async (t) => {
 })
 
 // Close the Nuxt server
-test.after('Closing server', (t) => {
+test.after('Closing server', t => {
   const { nuxt } = t.context
   nuxt.close()
 })
@@ -128,6 +130,7 @@ npm install --save-dev babel-eslint eslint eslint-config-prettier eslint-loader 
 ```
 
 Then, you can configure ESLint via a `.eslintrc.js` file in your root project directory:
+
 ```js
 module.exports = {
   root: true,
@@ -146,15 +149,13 @@ module.exports = {
     'plugin:prettier/recommended'
   ],
   // required to lint *.vue files
-  plugins: [
-    'vue'
-  ],
+  plugins: ['vue'],
   // add your custom rules here
   rules: {
-    'semi': [2, 'never'],
+    semi: [2, 'never'],
     'no-console': 'off',
     'vue/max-attributes-per-line': 'off',
-    'prettier/prettier': ['error', { 'semi': false }]
+    'prettier/prettier': ['error', { semi: false }]
   }
 }
 ```

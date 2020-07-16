@@ -41,16 +41,17 @@ server {
 もし、あなたが頻繁に更新するコンテンツがある大容量のウェブサイトを持っているとき、 Nuxt の生成機能と [nginx キャッシング](https://www.nginx.com/blog/nginx-caching-guide) の恩恵が必要となるでしょう。
 
 以下は設定例です。次のことを忘れないでください:
+
 - ルートフォルダは [generate.dir の設定](/api/configuration-generate#dir)と同じにするべきです
 - （キャッシュのために）Nuxt によって設定された expire ヘッダは外されます
-- Nuxt と nginx ともに追加のヘッダを設定することができますが、どちらか1つを選ぶことをお勧めします（もし迷ったら、nginx を選んでください）
+- Nuxt と nginx ともに追加のヘッダを設定することができますが、どちらか 1 つを選ぶことをお勧めします（もし迷ったら、nginx を選んでください）
 - もしあなたのサイト大部分が静的な場合、`proxy_cache_path inactive` と `proxy_cache_valid` の値を増加させます
 
 たとえルーティングを生成しない場合も、nginx キャッシュの恩恵を受けることができるでしょう:
+
 - `root` エントリを削除します
 - `location @proxy {` を `location / {` に変更します
-- その他2つの `location` エントリを削除します
-
+- その他 2 つの `location` エントリを削除します
 
 ```nginx
 proxy_cache_path  /data/nginx/cache levels=1:2 keys_zone=nuxt-cache:25m max_size=1g inactive=60m use_temp_path=off;
@@ -120,7 +121,6 @@ server {
 }
 ```
 
-
 # Laravel Forge 用の nginx の設定:
 
 `YOUR_WEBSITE_FOLDER` をウェブサイトのフォルダ名に、`YOUR_WEBSITE_DOMAIN` をウェブサイトの URL に変更してください。Laravel Forge はこれらの値を補完しますが、ダブルチェックを行ってください。
@@ -180,7 +180,7 @@ include forge-conf/YOUR_WEBSITE_FOLDER/after/*;
 
 # TLS で Laravel Forge を保護する:
 
-Laravel Forge に `nginx.conf` の編集を許可するには、Sites -> ウェブサイトドメイン（サーバー名）をクリック 、SSL をクリックしてプロバイダの1つから証明書をインストールします。証明書を有効にすることを忘れないでください。`nginx.conf` は以下のようになります:
+Laravel Forge に `nginx.conf` の編集を許可するには、Sites -> ウェブサイトドメイン（サーバー名）をクリック 、SSL をクリックしてプロバイダの 1 つから証明書をインストールします。証明書を有効にすることを忘れないでください。`nginx.conf` は以下のようになります:
 
 ```nginx
 # FORGE CONFIG (消さないでください！)

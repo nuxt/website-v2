@@ -1,5 +1,5 @@
 ---
-title: "API : la propriété middleware"
+title: 'API : la propriété middleware'
 description: Définit le middleware pour une page spécifique de l'application.
 menu: middleware
 category: pages
@@ -21,9 +21,9 @@ Exemple :
 </template>
 
 <script>
-export default {
-  middleware: 'authenticated'
-}
+  export default {
+    middleware: 'authenticated'
+  }
 </script>
 ```
 

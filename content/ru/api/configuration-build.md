@@ -93,13 +93,14 @@ export default {
 Функция вызывается дважды, один раз для серверной сборки и один раз для клиентской. Аргументы метода:
 
 1. Конфигурационный объект Webpack
-2. Объект со следующими ключами (все логические, кроме `loaders`):` isDev`, `isClient`,` isServer`
+2. Объект со следующими ключами (все логические, кроме `loaders`):`isDev`, `isClient`,`isServer`
 
 Пример (`nuxt.config.js`):
+
 ```js
 module.exports = {
   build: {
-    extend (config, { isClient }) {
+    extend(config, { isClient }) {
       // Расширить конфигурацию webpack только для клиентской сборки
       if (isClient) {
         config.devtool = 'eval-source-map'
@@ -126,13 +127,11 @@ module.exports = {
 ```
 
 Вы можете также указать путь к файлу, например, к своей собственной библиотеке:
+
 ```js
 module.exports = {
   build: {
-    vendor: [
-      'axios',
-      '~plugins/my-lib.js'
-    ]
+    vendor: ['axios', '~plugins/my-lib.js']
   }
 }
 ```

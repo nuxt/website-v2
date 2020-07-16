@@ -1,5 +1,5 @@
 ---
-title: "API:globalName 属性"
+title: 'API:globalName 属性'
 description: Nuxt.js允许您自定义主HTML模板中使用的全局ID以及主Vue实例名称和其他选项。
 menu: globalName
 category: configuration
@@ -8,7 +8,7 @@ position: 111
 
 # globalName 属性
 
-> Nuxt.js允许您自定义主HTML模板中使用的全局ID以及主Vue实例名称和其他选项。
+> Nuxt.js 允许您自定义主 HTML 模板中使用的全局 ID 以及主 Vue 实例名称和其他选项。
 
 - 类型: `String`
 - 默认: `nuxt`
@@ -23,7 +23,7 @@ position: 111
 }
 ```
 
-它必须是有效的JavaScript标识符。
+它必须是有效的 JavaScript 标识符。
 
 ## globals 属性
 
@@ -42,4 +42,3 @@ position: 111
   loadedCallback: globalName => `_on${_.capitalize(globalName)}Loaded`
 },
 ```
-

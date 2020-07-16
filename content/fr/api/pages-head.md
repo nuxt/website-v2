@@ -1,5 +1,5 @@
 ---
-title: "API : la méthode head"
+title: 'API : la méthode head'
 description: Nuxt.js utilise vue-meta pour mettre à jour les entêtes et les attributs HTML de votre application.
 menu: head
 category: pages
@@ -20,22 +20,26 @@ Les données de votre composant sont disponibles avec `this` au sein de la méth
 </template>
 
 <script>
-export default {
-  data () {
-    return {
-      title: 'Hello World !'
-    }
-  },
-  head () {
-    return {
-      title: this.title,
-      meta: [
-        // hid est utilisé comme identifiant unique. N'utilisez pas `vmid` car ça ne fonctionnera pas
-        { hid: 'description', name: 'description', content: 'Ma description personnalisée' }
-      ]
+  export default {
+    data() {
+      return {
+        title: 'Hello World !'
+      }
+    },
+    head() {
+      return {
+        title: this.title,
+        meta: [
+          // hid est utilisé comme identifiant unique. N'utilisez pas `vmid` car ça ne fonctionnera pas
+          {
+            hid: 'description',
+            name: 'description',
+            content: 'Ma description personnalisée'
+          }
+        ]
+      }
     }
   }
-}
 </script>
 ```
 

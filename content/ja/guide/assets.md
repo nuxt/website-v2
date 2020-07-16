@@ -9,8 +9,7 @@ position: 107
 
 ## Webpack
 
-[vue-loader](http://vue-loader.vuejs.org/) は `css-loader` と `vue-template-compiler` を用いて、スタイルやテンプレートファイルを自動的に処理します。
-このコンパイル処理の中で、 `<img src="...">` や `background: url(...)` や CSS `@import` などのすべてのアセット URL はモジュールの依存関係として解決されます。
+[vue-loader](http://vue-loader.vuejs.org/) は `css-loader` と `vue-template-compiler` を用いて、スタイルやテンプレートファイルを自動的に処理します。このコンパイル処理の中で、 `<img src="...">` や `background: url(...)` や CSS `@import` などのすべてのアセット URL はモジュールの依存関係として解決されます。
 
 例えば、次のようなファイル構成があるとします:
 
@@ -25,16 +24,15 @@ CSS で `url('~assets/image.png')` と書いた場合、それは `require('~/as
 
 <div class="Alert Alert--orange">
 
-**Warning:** Nuxt 2.0からは `~/` エイリアスは CSS ファイルで正しく解決されないでしょう。
-CSS の参照には、`~assets`（スラッシュなし）か、`@` のエイリアスを使わなければなりません。 例：`background: url("~assets/banner.svg")`
-</div>
+**Warning:** Nuxt 2.0 からは `~/` エイリアスは CSS ファイルで正しく解決されないでしょう。 CSS の参照には、`~assets`（スラッシュなし）か、`@` のエイリアスを使わなければなりません。 例：`background: url("~assets/banner.svg")`
 
+</div>
 
 `pages/index.vue`で画像を参照するなら:
 
 ```html
 <template>
-  <img src="~/assets/image.png">
+  <img src="~/assets/image.png" />
 </template>
 ```
 
@@ -51,11 +49,11 @@ createElement('img', { attrs: { src: require('~/assets/image.png') } })
 - `file-loader` は、アセットファイルをコピー・配置する場所と、キャッシュ改善のためにバージョンハッシュを用いてファイル名を指定することができます。本番環境では、デフォルトで長期キャッシングの恩恵を受けるでしょう。
 - `url-loader` は、指定した閾値よりも小さい場合に、Base64 データ URL として条件付きでファイルに埋め込むことができます。これにより、小さなファイル取得のための HTTP リクエスト数を減らすことができます。もし閾値よりも大きい場合は、file-loader に自動的にフォールバックします。
 
-これら2つのローダーのデフォルトの設定は次の通りです。:
+これら 2 つのローダーのデフォルトの設定は次の通りです。:
 
 ```js
 // https://github.com/nuxt/nuxt.js/blob/dev/packages/webpack/src/config/base.js#L297-L316
-[
+;[
   {
     test: /\.(png|jpe?g|gif|svg|webp)$/,
     loader: 'url-loader',
@@ -75,22 +73,20 @@ createElement('img', { attrs: { src: require('~/assets/image.png') } })
 ]
 ```
 
-つまり、1 KB 未満のすべてのファイルは Base64 データ URL としてインライン化されます。
-それ以外の場合、画像/フォントは、対応するフォルダ（`.nuxt` ディレクトリの下）にコピーされ、
-より良いキャッシュのためにバージョンハッシュを含む名前が付けられます。
+つまり、1 KB 未満のすべてのファイルは Base64 データ URL としてインライン化されます。それ以外の場合、画像/フォントは、対応するフォルダ（`.nuxt` ディレクトリの下）にコピーされ、より良いキャッシュのためにバージョンハッシュを含む名前が付けられます。
 
 アプリケーションを `nuxt` コマンドで起動するとき、`pages/index.vue` 内のテンプレートは下記のようになっており:
 
 ```html
 <template>
-  <img src="~/assets/image.png">
+  <img src="~/assets/image.png" />
 </template>
 ```
 
 そこから次のように生成されます:
 
 ```html
-<img src="/_nuxt/img/image.0c61159.png">
+<img src="/_nuxt/img/image.0c61159.png" />
 ```
 
 ローダーの設定を変更したい場合は、[build.extend](/api/configuration-build#extend)を使用してください。
@@ -107,8 +103,8 @@ createElement('img', { attrs: { src: require('~/assets/image.png') } })
 
 ```html
 <!-- static ディレクトリにある静的イメージ  -->
-<img src="/my-image.png"/>
+<img src="/my-image.png" />
 
 <!-- assets ディレクトリにある webpack されたイメージ -->
-<img src="~/assets/my-image-2.png"/>
+<img src="~/assets/my-image-2.png" />
 ```

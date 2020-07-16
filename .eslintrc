@@ -11,8 +11,14 @@
     "vue/max-attributes-per-line": 0,
     "vue/html-closing-bracket-spacing": 0,
     "vue/html-self-closing": 0,
-    "vue/singleline-html-element-content-newline": 0,
-    "vue/multiline-html-element-content-newline": 0,
+    "vue/multiline-html-element-content-newline": [
+      "error",
+      {
+        "ignoreWhenEmpty": true,
+        "ignores": ["pre", "textarea", "design.vue"],
+        "allowEmptyLines": false
+      }
+    ],
     "vue/html-indent": 0
   },
   "env": { "browser": true }

@@ -1,8 +1,6 @@
 ---
 title: Plugin
-description: Nuxt.js memungkinkan Anda menentukan plugin JavaScript yang akan dijalankan
-  sebelum menginstal Aplikasi root Vue.js. Hal ini sangat membantu saat menggunakan
-  pustaka (library) atau modul eksternal Anda sendiri.
+description: Nuxt.js memungkinkan Anda menentukan plugin JavaScript yang akan dijalankan sebelum menginstal Aplikasi root Vue.js. Hal ini sangat membantu saat menggunakan pustaka (library) atau modul eksternal Anda sendiri.
 category: getting-started
 position: 108
 ---
@@ -11,7 +9,7 @@ position: 108
 
 <div class="Alert">
 
-Penting untuk diketahui bahwa dalam Vue [instance lifecycle] (https://vuejs.org/v2/guide/instance.html#Lifecycle-Diagram), hanya kait (hook) `beforeCreate` dan` created` yang dipanggil **keduanya dari sisi-klien dan sisi-server**. Semua kait (hook) lainnya hanya dipanggil dari sisi-klien.
+Penting untuk diketahui bahwa dalam Vue [instance lifecycle](https://vuejs.org/v2/guide/instance.html#Lifecycle-Diagram), hanya kait (hook) `beforeCreate` dan`created` yang dipanggil **keduanya dari sisi-klien dan sisi-server**. Semua kait (hook) lainnya hanya dipanggil dari sisi-klien.
 
 </div>
 
@@ -33,18 +31,18 @@ Kemudian, kita bisa menggunakannya langsung di halaman kita:
 </template>
 
 <script>
-import axios from 'axios'
+  import axios from 'axios'
 
-export default {
-  async asyncData ({ params }) {
-    let { data } = await axios.get(`https://my-api/posts/${params.id}`)
-    return { title: data.title }
+  export default {
+    async asyncData({ params }) {
+      let { data } = await axios.get(`https://my-api/posts/${params.id}`)
+      return { title: data.title }
+    }
   }
-}
 </script>
 ```
 
-Tapi ada **satu masalah di sini**. Jika kita mengimpor axios di halaman lain, maka ia akan disertakan lagi untuk bundel halaman. Kita ingin menyertakan `axios` hanya satu kali dalam aplikasi kita. Untuk melakukan ini, kita menggunakan kunci  `build.vendor` pada `nuxt.config.js` kita:
+Tapi ada **satu masalah di sini**. Jika kita mengimpor axios di halaman lain, maka ia akan disertakan lagi untuk bundel halaman. Kita ingin menyertakan `axios` hanya satu kali dalam aplikasi kita. Untuk melakukan ini, kita menggunakan kunci `build.vendor` pada `nuxt.config.js` kita:
 
 ```js
 module.exports = {
@@ -92,7 +90,7 @@ module.exports = {
 }
 ```
 
-## Memasukkan (inject) dalam $root & context
+## Memasukkan (inject) dalam \$root & context
 
 Beberapa plugin perlu dimasukkan di dalam root Aplikasi untuk dapat digunakan, seperti [vue-i18n](https://github.com/kazupon/vue-i18n). Dengan Nuxt.js, Anda dapat menggunakan `app` yang tersedia ke dalam `context` saat mengekspor sebuah metode:
 
@@ -124,7 +122,7 @@ module.exports = {
 }
 ```
 
-Silakan lihat [contoh i18n](/examples/i18n) untuk melihat bagaimana cara  menggunakannya.
+Silakan lihat [contoh i18n](/examples/i18n) untuk melihat bagaimana cara menggunakannya.
 
 ## Hanya pada sisi-klien (client-side only)
 
@@ -136,9 +134,7 @@ Contoh:
 
 ```js
 module.exports = {
-  plugins: [
-    { src: '~/plugins/vue-notifications', ssr: false }
-  ]
+  plugins: [{ src: '~/plugins/vue-notifications', ssr: false }]
 }
 ```
 

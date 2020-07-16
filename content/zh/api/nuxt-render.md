@@ -1,5 +1,5 @@
 ---
-title: "API: nuxt.render(req, res)"
+title: 'API: nuxt.render(req, res)'
 description: 你可以把 Nuxt.js 当做是中间件来集成到已有的 Node.js 应用中。
 menu: render
 category: programmatically
@@ -17,11 +17,12 @@ position: 202
 > 你可以通过 `nuxt.render` 函数，把 Nuxt.js 变成你 Node.js 服务端的中间件。
 
 例如，结合 [Express.js](https://github.com/expressjs/express) 使用：
+
 ```js
 const { Nuxt, Builder } = require('nuxt')
 
 const app = require('express')()
-const isProd = (process.env.NODE_ENV === 'production')
+const isProd = process.env.NODE_ENV === 'production'
 const port = process.env.PORT || 3000
 
 // 用指定的配置对象实例化 Nuxt.js
@@ -34,13 +35,12 @@ app.use(nuxt.render)
 
 // 在开发模式下启用编译构建和热加载
 if (config.dev) {
-  new Builder(nuxt).build()
-    .then(listen)
+  new Builder(nuxt).build().then(listen)
 } else {
   listen()
 }
 
-function listen () {
+function listen() {
   // 服务端监听
   app.listen(port, '0.0.0.0')
   console.log('Server listening on `localhost:' + port + '`.')

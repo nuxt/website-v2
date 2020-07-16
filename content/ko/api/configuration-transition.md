@@ -1,5 +1,5 @@
 ---
-title: "API: transition 프로퍼티"
+title: 'API: transition 프로퍼티'
 description: 페이지 transitions의 기본 프로퍼티 세팅하기
 menu: transition
 category: configuration
@@ -10,10 +10,10 @@ position: 131
 
 - 타입: `String` or `Object`
 
->
 > 페이지 transitions의 기본 프로퍼티를 설정하는 것에 사용됩니다.
 
 기본값:
+
 ```js
 {
   name: 'page',

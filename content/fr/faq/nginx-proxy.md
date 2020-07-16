@@ -40,16 +40,17 @@ server {
 Si vous avez un site web très important avec du contenu changeant régulièrement, vous voudriez bénéficier des capacités de génération de Nuxt et de [nginx caching](https://www.nginx.com/blog/nginx-caching-guide).
 
 Vous trouverez ci-dessous un exemple de configuration. Gardez à l'esprit que :
+
 - le répertoire racine doit être le même que celui définit par [la configuration du répertoire de génération](/api/configuration-generate#dir)
 - les entêtes d'expiration définis par Nuxt sont supprimés (en raison du cache)
 - Nuxt comme nginx peuvent ajouter des entêtes supplémentaires, il est conseillé d'en choisir un (dans le doute, choisissez nginx)
 - si votre site est principalement statique, augmentez les nombres `proxy_cache_path inactive` et `proxy_cache_valid`
 
 Si vous ne générez pas vos itinéraires mais que vous souhaitez bénéficier du cache nginx :
+
 - supprimez l'entrée `root`
 - changez `location @proxy {` par `location / {`
 - supprimez les 2 autres entrées `location`
-
 
 ```nginx
 proxy_cache_path  /data/nginx/cache levels=1:2 keys_zone=nuxt-cache:25m max_size=1g inactive=60m use_temp_path=off;
@@ -178,7 +179,7 @@ include forge-conf/REPERTOIRE_DE_VOTRE_SITE_WEB/after/*;
 
 # Securisation de Laravel Forge avec TLS
 
-C'est mieux de laisser Laravel éditer le fichier `nginx.conf pour vous, en cliquant sur Sites -> DOMAINE_DE_VOTRE_SITE_WEB (NOM_DU_SERVEUR) puis cliquer sur SSL et installer un certificat de l'un des fournisseurs. Rappelez-vous d'activer le certificat. Votre fichier `nginx.conf` devrait maintenant ressembler à ça :
+C'est mieux de laisser Laravel éditer le fichier `nginx.conf pour vous, en cliquant sur Sites -> DOMAINE_DE_VOTRE_SITE_WEB (NOM_DU_SERVEUR) puis cliquer sur SSL et installer un certificat de l'un des fournisseurs. Rappelez-vous d'activer le certificat. Votre fichier`nginx.conf` devrait maintenant ressembler à ça :
 
 ```nginx
 # CONFIGURATION FORGE (NE PAS SUPPRIMER !)

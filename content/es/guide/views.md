@@ -15,7 +15,6 @@ position: 105
 
 To change the template, create an `app.html` file, in the src folder of your project. (which is the project's root directory by default).
 
-
 The default template used by Nuxt.js is:
 
 ```html
@@ -53,8 +52,7 @@ Layouts are a great help when you want to change the look and feel of your Nuxt.
 
 ### Default Layout
 
-You can extend the main layout by adding a `layouts/default.vue` file.
-It will be used for all pages that don't have a layout specified.
+You can extend the main layout by adding a `layouts/default.vue` file. It will be used for all pages that don't have a layout specified.
 
 <div class="Alert Alert--nuxt-green">
 
@@ -66,13 +64,13 @@ The default layout that comes out of the box is just three lines long and simply
 
 ```html
 <template>
-  <nuxt/>
+  <nuxt />
 </template>
 ```
 
 ### Custom Layout
 
-Every file (*top-level*) in the `layouts` directory will create a custom layout accessible with the `layout` property in the page components.
+Every file (_top-level_) in the `layouts` directory will create a custom layout accessible with the `layout` property in the page components.
 
 Let's say we want to create a blog layout and save it to `layouts/blog.vue`:
 
@@ -80,7 +78,7 @@ Let's say we want to create a blog layout and save it to `layouts/blog.vue`:
 <template>
   <div>
     <div>My blog navigation bar here</div>
-    <nuxt/>
+    <nuxt />
   </div>
 </template>
 ```
@@ -89,13 +87,13 @@ Then we have to tell the pages (i.e. `pages/posts.vue`) to use your custom layou
 
 ```html
 <template>
-<!-- Your template -->
+  <!-- Your template -->
 </template>
 <script>
-export default {
-  layout: 'blog'
-  // page component definitions
-}
+  export default {
+    layout: 'blog'
+    // page component definitions
+  }
 </script>
 ```
 
@@ -107,7 +105,7 @@ Check out the [demonstration video](https://www.youtube.com/watch?v=YOKnSTp7d38)
 
 ### Error Page
 
-The error page is a *page component* which is always displayed when an error occurs (that does not happen while server-side rendering).
+The error page is a _page component_ which is always displayed when an error occurs (that does not happen while server-side rendering).
 
 <div class="Alert Alert--orange">
 
@@ -115,9 +113,7 @@ The error page is a *page component* which is always displayed when an error occ
 
 </div>
 
-As mentioned above, this layout is special, since you **should not** include `<nuxt/>` inside its template.
-You must see this layout as a component displayed when an error occurs (`404`, `500`, etc.).
-Similar to other page components, you can set a custom layout for the error page as well in the usual way.
+As mentioned above, this layout is special, since you **should not** include `<nuxt/>` inside its template. You must see this layout as a component displayed when an error occurs (`404`, `500`, etc.). Similar to other page components, you can set a custom layout for the error page as well in the usual way.
 
 The default error page source code is [available on GitHub](https://github.com/nuxt/nuxt.js/blob/dev/packages/vue-app/template/components/nuxt-error.vue).
 
@@ -133,13 +129,12 @@ You can customize the error page by adding a `layouts/error.vue` file:
 </template>
 
 <script>
-export default {
-  props: ['error'],
-  layout: 'blog' // you can set a custom layout for the error page
-}
+  export default {
+    props: ['error'],
+    layout: 'blog' // you can set a custom layout for the error page
+  }
 </script>
 ```
-
 
 ## Pages
 
@@ -159,33 +154,33 @@ Every Page component is a Vue component but Nuxt.js adds special attributes and 
 </template>
 
 <script>
-export default {
-  asyncData (context) {
-    // called every time before loading the component
-    // as the name said, it can be async
-    // Also, the returned object will be merged with your data object
-    return { name: 'World' }
-  },
-  fetch () {
-    // The `fetch` method is used to fill the store before rendering the page
-  },
-  head () {
-    // Set Meta Tags for this Page
-  },
-  // and more functionality to discover
-  ...
-}
+  export default {
+    asyncData (context) {
+      // called every time before loading the component
+      // as the name said, it can be async
+      // Also, the returned object will be merged with your data object
+      return { name: 'World' }
+    },
+    fetch () {
+      // The `fetch` method is used to fill the store before rendering the page
+    },
+    head () {
+      // Set Meta Tags for this Page
+    },
+    // and more functionality to discover
+    ...
+  }
 </script>
 
 <style>
-.red {
-  color: red;
-}
+  .red {
+    color: red;
+  }
 </style>
 ```
 
 | Attribute | Description | Documentation |
-|-----------|-------------| ------------- |
+| --- | --- | --- |
 | `asyncData` | The most important key. It can be asynchronous and receives the context as argument. | [Guide: Async data](/guide/async-data) |
 | `fetch` | Used to fill the store before rendering the page. It's like the `asyncData` method, except it doesn't set the component data. | [API Pages `fetch`](/api/pages-fetch) |
 | `head` | Set specific `<meta>` tags for the current page. | [API Pages `head`](/api/pages-head) |
@@ -209,7 +204,6 @@ The `vue-meta` Nuxt.js uses can be found [on GitHub](https://github.com/nuxt/nux
 <b>Info:</b> Nuxt.js uses <code>hid</code> instead of the default <code>vmid</code> key to identify meta elements
 
 </div>
-
 
 ### Default Meta Tags
 

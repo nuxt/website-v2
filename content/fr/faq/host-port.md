@@ -18,7 +18,9 @@ Vous pouvez configurer les variables de connexion de plusieurs façons. Ces dern
 ```sh
 nuxt --hostname votrehote --port 3333
 ```
+
 Ou
+
 ```js
 "scripts": {
   "dev": "nuxt --hostname votrehote --port 3333"
@@ -41,7 +43,7 @@ export default {
 
 ## En utilisant les variables d'environnement NUXT_HOST et NUXT_PORT
 
-Similaires à HOST et PORT, mais plus spécifiques, au cas où vous auriez besoin de celles-ci pour autre chose. 
+Similaires à HOST et PORT, mais plus spécifiques, au cas où vous auriez besoin de celles-ci pour autre chose.
 
 ```js
 "scripts": {

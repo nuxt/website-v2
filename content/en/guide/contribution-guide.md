@@ -9,19 +9,15 @@ position: 2
 
 ## Reporting Issues
 
-A great way to contribute to the project is to send a detailed report when you encounter an issue.
-To make things easier for contributors and maintainers, we use [CMTY](https://cmty.nuxtjs.org/).
+A great way to contribute to the project is to send a detailed report when you encounter an issue. To make things easier for contributors and maintainers, we use [CMTY](https://cmty.nuxtjs.org/).
 
-Please make sure to include a reproduction repository or [CodeSandBox](https://template.nuxtjs.org/)
-so that bugs can be reproduced without great efforts. The better a bug can be reproduced, the faster we can start fixing it!
+Please make sure to include a reproduction repository or [CodeSandBox](https://template.nuxtjs.org/) so that bugs can be reproduced without great efforts. The better a bug can be reproduced, the faster we can start fixing it!
 
 ## Pull Requests
 
 We'd love to see your pull requests, even if it's just to fix a typo!
 
-However, any significant improvement should be associated to an existing
-[feature request](https://feature.nuxtjs.org/)
-or [bug report](https://bug.nuxtjs.org/).
+However, any significant improvement should be associated to an existing [feature request](https://feature.nuxtjs.org/) or [bug report](https://bug.nuxtjs.org/).
 
 ### Getting started
 
@@ -33,32 +29,29 @@ or [bug report](https://bug.nuxtjs.org/).
 > If you are adding a dependency, please use `yarn add`. The `yarn.lock` file is the source of truth for all Nuxt dependencies.
 
 ### Setup
- Before running any tests, make sure all dependencies are met and build all packages:
- ```sh
+
+Before running any tests, make sure all dependencies are met and build all packages:
+
+```sh
 yarn
 yarn build
 ```
 
 ### Test structure
 
-A great PR, whether it includes a bug fix or a new feature, will often include tests.
-To write great tests, let us explain our test structure:
+A great PR, whether it includes a bug fix or a new feature, will often include tests. To write great tests, let us explain our test structure:
 
 #### Fixtures
 
-The fixtures (found under `tests/fixtures`) contain several Nuxt applications. To keep build time as short as possible,
-we don't build an own Nuxt application per test. Instead, the fixtures are built (`yarn test:fixtures`) before running
-the actual unit tests.
+The fixtures (found under `tests/fixtures`) contain several Nuxt applications. To keep build time as short as possible, we don't build an own Nuxt application per test. Instead, the fixtures are built (`yarn test:fixtures`) before running the actual unit tests.
 
 Please make sure to **alter** or **add a new fixture** when submitting a PR to reflect the changes properly (if applicable).
 
-Also, don't forget to **rebuild** a fixture after changing it by running the corresponding test
-with `jest test/fixtures/my-fixture/my-fixture.test.js`!
+Also, don't forget to **rebuild** a fixture after changing it by running the corresponding test with `jest test/fixtures/my-fixture/my-fixture.test.js`!
 
 #### Unit tests
 
-The unit tests can be found in `tests/unit` and will be executed after building the fixtures. A fresh Nuxt server will be used
-per test so that no shared state (except the initial state from the build step) is present.
+The unit tests can be found in `tests/unit` and will be executed after building the fixtures. A fresh Nuxt server will be used per test so that no shared state (except the initial state from the build step) is present.
 
 After adding your unit tests, you can run them directly:
 
@@ -89,25 +82,19 @@ yarn nuxt test/fixtures/your-fixture-app
 
 ### Examples
 
-If you are working on a larger feature, please set up an example app in `examples/`.
-This will help greatly in understanding changes and also help Nuxt users to understand the feature you've built in-depth.
+If you are working on a larger feature, please set up an example app in `examples/`. This will help greatly in understanding changes and also help Nuxt users to understand the feature you've built in-depth.
 
 ### Linting
 
-As you might have noticed already, we are using ESLint to enforce a code standard. Please run `yarn lint` before committing
-your changes to verify that the code style is correct. If not, you can use `yarn lint --fix` or `npm run lint -- --fix` (no typo!) to fix most of the
-style changes. If there are still errors left, you must correct them manually.
+As you might have noticed already, we are using ESLint to enforce a code standard. Please run `yarn lint` before committing your changes to verify that the code style is correct. If not, you can use `yarn lint --fix` or `npm run lint -- --fix` (no typo!) to fix most of the style changes. If there are still errors left, you must correct them manually.
 
 ### Documentation
 
-If you are adding a new feature, or refactoring or changing the behavior of Nuxt in any other manner, you'll likely
-want to document the changes. Please do so with a PR to the [docs](https://github.com/nuxt/docs/pulls) repository.
-You don't have to write documentation up immediately (but please do so as soon as your pull request is mature enough).
+If you are adding a new feature, or refactoring or changing the behavior of Nuxt in any other manner, you'll likely want to document the changes. Please do so with a PR to the [docs](https://github.com/nuxt/docs/pulls) repository. You don't have to write documentation up immediately (but please do so as soon as your pull request is mature enough).
 
 ### Final checklist
 
-When submitting your PR, there is a simple template that you have to fill out.
-Please tick all appropriate "answers" in the checklists.
+When submitting your PR, there is a simple template that you have to fill out. Please tick all appropriate "answers" in the checklists.
 
 ### Troubleshooting
 

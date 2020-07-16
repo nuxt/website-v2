@@ -52,8 +52,12 @@
                 exact-active-class="text-nuxt-lightgreen"
                 :to="toLink(group, link)"
               >
-                <template v-if="link.menu">{{ link.menu }}</template>
-                <template v-else>{{ link.title }}</template>
+                <template v-if="link.menu">
+                  {{ link.menu }}
+                </template>
+                <template v-else>
+                  {{ link.title }}
+                </template>
               </NuxtLink>
             </li>
           </ul>

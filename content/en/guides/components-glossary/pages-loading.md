@@ -1,5 +1,5 @@
 ---
-title: "The loading Property"
+title: 'The loading Property'
 description: The `loading` property gives you the option to disable the default loading progress bar on a specific page.
 menu: Loading Property
 category: components-glossary
@@ -21,6 +21,6 @@ You can disable or customize it globally through the [Configuration's loading op
 <script>
   export default {
     loading: false
-  };
+  }
 </script>
 ```

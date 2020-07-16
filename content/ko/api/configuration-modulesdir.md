@@ -1,5 +1,5 @@
 ---
-title: "API: modulesDir 프로퍼티"
+title: 'API: modulesDir 프로퍼티'
 description: Nuxt.js 어플리케이션의 모듈 디렉토리를 정의합니다
 menu: modulesDir
 category: configuration
@@ -19,5 +19,4 @@ export default {
 }
 ```
 
-프로젝트가 Yarn workspace 스타일의 mono-repository로 조직되어 있다면 이 필드의 설정은 반드시 필요할 것입니다.
-
+프로젝트가 Yarn workspace 스타일의 mono-repository로 조직되어 있다면 이 필드의설정은 반드시 필요할 것입니다.

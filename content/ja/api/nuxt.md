@@ -6,9 +6,7 @@ category: programmatically
 position: 201
 ---
 
-あなた自身のサーバーと共にミドルウェアや API を使いたい場合もあるかもしれません。
-そういった場合、 Nuxt.js をプログラムから利用することが可能です。
-プログラムの例は、[examples/programmtic](https://github.com/nuxt/nuxt.js/tree/dev/examples/programmatic/scripts) で見ることができます。
+あなた自身のサーバーと共にミドルウェアや API を使いたい場合もあるかもしれません。そういった場合、 Nuxt.js をプログラムから利用することが可能です。プログラムの例は、[examples/programmtic](https://github.com/nuxt/nuxt.js/tree/dev/examples/programmatic/scripts) で見ることができます。
 
 ## Nuxt のコンストラクタ
 

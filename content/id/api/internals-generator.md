@@ -1,6 +1,6 @@
 ---
 title: 'API: Kelas Generator'
-description: Kelas Generator 
+description: Kelas Generator
 menu: Generator
 category: internals
 position: 306
@@ -22,7 +22,7 @@ nuxt.plugin('generator', generator => {
 })
 ```
 
-Plugin | Argumen | Keterangan
---- | --- | ---
-`generateRoutes` | {generator, generateRoutes} | Setelah menyelesaikan rute untuk menghasilkan (generate), maka kita memiliki perubahan untuk menyesuaikannya
-`generate` | {generator, routes} | Tepat sebelum mulai menghasilkan rute. Rute didekorasi dengan payload
+| Plugin | Argumen | Keterangan |
+| --- | --- | --- |
+| `generateRoutes` | {generator, generateRoutes} | Setelah menyelesaikan rute untuk menghasilkan (generate), maka kita memiliki perubahan untuk menyesuaikannya |
+| `generate` | {generator, routes} | Tepat sebelum mulai menghasilkan rute. Rute didekorasi dengan payload |

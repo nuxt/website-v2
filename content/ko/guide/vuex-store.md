@@ -5,7 +5,7 @@ category: getting-started
 position: 110
 ---
 
-> Nuxt.js가 [Vuex](https://github.com/vuejs/vuex) 구현하는 핵심 이유는, 저장소를 사용하여 상태를 관리하는 것은 모든 대형 애플리케이션에서 중요하기 때문입니다.
+> Nuxt.js가 [Vuex](https://github.com/vuejs/vuex) 구현하는 핵심 이유는, 저장소를사용하여 상태를 관리하는 것은 모든 대형 애플리케이션에서 중요하기 때문입니다.
 
 <div class="Promo__Video">
   <a href="https://vueschool.io/lessons/utilising-the-vuex-store-nuxtjs?friend=nuxt" target="_blank">
@@ -15,10 +15,9 @@ position: 110
   </a>
 </div>
 
-
 ## Store 활성화하기
 
-Nuxt.js는 store 디렉토리를 지켜보고 있습니다. 만약 `store` 디렉토리가 존재한다면:
+Nuxt.js는 store 디렉토리를 지켜보고 있습니다. 만약 `store` 디렉토리가 존재한다면 :
 
 1. Vuex를 불러오고,
 2. 루트 `Vue` 인스턴스에 `store` 옵션을 추가합니다.
@@ -26,7 +25,7 @@ Nuxt.js는 store 디렉토리를 지켜보고 있습니다. 만약 `store` 디�
 Nuxt.js에서는 **2가지 store 모드** 를 지원하며, 선호하는 모드를 사용하세요:
 
 - **모듈:** store 디렉토리 내의 모든 .js 파일이 [같은 이름의 모듈](http://vuex.vuejs.org/en/modules.html)로 변환됩니다. (`index`는 루트 모듈이 됩니다.)
-- **클래식(__deprecated__):** `store/index.js`에서 store 인스턴스를 return 합니다.
+- **클래식(**deprecated**):** `store/index.js`에서 store 인스턴스를 return 합니다.
 
 모드와 관계없이, 서버 측에서 원치 않을 상태 *공유*를 방지하려면 항상 `state` 값은 **항상 `함수`**여야 합니다.
 
@@ -42,40 +41,42 @@ export const state = () => ({
 })
 
 export const mutations = {
-  increment (state) {
+  increment(state) {
     state.counter++
   }
 }
 ```
 
 이제 `store/todos.js` 파일을 만들 수 있습니다:
+
 ```js
 export const state = () => ({
   list: []
 })
 
 export const mutations = {
-  add (state, text) {
+  add(state, text) {
     state.list.push({
       text,
       done: false
     })
   },
-  remove (state, { todo }) {
+  remove(state, { todo }) {
     state.list.splice(state.list.indexOf(todo), 1)
   },
-  toggle (state, todo) {
+  toggle(state, todo) {
     todo.done = !todo.done
   }
 }
 ```
 
 store는 아래와 같이 생성될 것입니다:
+
 ```js
 new Vuex.Store({
   state: { counter: 0 },
   mutations: {
-    increment (state) {
+    increment(state) {
       state.counter++
     }
   },
@@ -85,16 +86,16 @@ new Vuex.Store({
         list: []
       },
       mutations: {
-        add (state, { text }) {
+        add(state, { text }) {
           state.list.push({
             text,
             done: false
           })
         },
-        remove (state, { todo }) {
+        remove(state, { todo }) {
           state.list.splice(state.list.indexOf(todo), 1)
         },
-        toggle (state, { todo }) {
+        toggle(state, { todo }) {
           todo.done = !todo.done
         }
       }
@@ -109,38 +110,40 @@ new Vuex.Store({
 <template>
   <ul>
     <li v-for="todo in todos" :key="todo.text">
-      <input type="checkbox" :checked="todo.done" @change="toggle(todo)">
+      <input type="checkbox" :checked="todo.done" @change="toggle(todo)" />
       <span :class="{ done: todo.done }">{{ todo.text }}</span>
     </li>
-    <li><input @keyup.enter="addTodo" placeholder="What needs to be done?"></li>
+    <li>
+      <input @keyup.enter="addTodo" placeholder="What needs to be done?" />
+    </li>
   </ul>
 </template>
 
 <script>
-import { mapMutations } from 'vuex'
+  import { mapMutations } from 'vuex'
 
-export default {
-  computed: {
-    todos () {
-      return this.$store.state.todos.list
-    }
-  },
-  methods: {
-    addTodo (e) {
-      this.$store.commit('todos/add', e.target.value)
-      e.target.value = ''
+  export default {
+    computed: {
+      todos() {
+        return this.$store.state.todos.list
+      }
     },
-    ...mapMutations({
-      toggle: 'todos/toggle'
-    })
+    methods: {
+      addTodo(e) {
+        this.$store.commit('todos/add', e.target.value)
+        e.target.value = ''
+      },
+      ...mapMutations({
+        toggle: 'todos/toggle'
+      })
+    }
   }
-}
 </script>
 
 <style>
-.done {
-  text-decoration: line-through;
-}
+  .done {
+    text-decoration: line-through;
+  }
 </style>
 ```
 
@@ -153,11 +156,12 @@ export default () => ({
   counter: 0
 })
 ```
+
 그런 다음 mutation을 `store/mutations.js`에 두면 됩니다.
 
 ```js
 export default {
-  increment (state) {
+  increment(state) {
     state.counter++
   }
 }
@@ -167,7 +171,7 @@ export default {
 
 선택적으로 모듈 파일을 개별 파일들로 나눌 수 있습니다: `state.js`, `actions.js`, `mutations.js`과 `getters.js`. actions에 대해 별도의 단일 파일이 있는 상태에서 index.js 파일을 state, getters 및 mutations으로 유지해도 제대로 인식됩니다.
 
-> Note: 모듈 파일을 나누었더라도, 화살표 함수의 경우 ```this```는 렉시컬(lexical)하게 사용가능함을 기억해주세요. 렉시컬 스포킹이란 ```this```는 항상 arrow function의 주인만을 참조함을 의미합니다. 화살표 함수가 포함되지 않았다면 ```this```는 undefined일 것입니다. 이에 대한 해결책은 자기 자신의 스코프를 형성하는 "일반" 함수를 사용해 ```this```를 사용가능하게끔 하는 것입니다.
+> Note: 모듈 파일을 나누었더라도, 화살표 함수의 경우 `this`는 렉시컬(lexical)하게 사용가능함을 기억해주세요. 렉시컬 스포킹이란 `this`는 항상 arrow function의주인만을 참조함을 의미합니다. 화살표 함수가 포함되지 않았다면 `this`는 undefined일 것입니다. 이에 대한 해결책은 자기 자신의 스코프를 형성하는 "일반" 함수를 사용해 `this`를 사용가능하게끔 하는 것입니다.
 
 ### 플러그인
 
@@ -176,14 +180,14 @@ export default {
 ```js
 import myPlugin from 'myPlugin'
 
-export const plugins = [ myPlugin ]
+export const plugins = [myPlugin]
 
 export const state = () => ({
   counter: 0
 })
 
 export const mutations = {
-  increment (state) {
+  increment(state) {
     state.counter++
   }
 }
@@ -213,7 +217,7 @@ actions: {
 }
 ```
 
-> 만약 Vuex 스토어의 _모듈_ 모드를 사용한다면 최상위 모듈(`store/index.js`)에서만 이 함수가 호출되기 때문에, 다른 모듈에 대한 액션을 이곳에서 같이 처리해야 합니다.
+> 만약 Vuex 스토어의 _모듈_ 모드를 사용한다면 최상위 모듈(`store/index.js`)에서만 이 함수가 호출되기 때문에, 다른 모듈에 대한 액션을 이곳에서 같이 처리해야합니다.
 
 [context](/api/context)는 `nuxtServerInit` 함수의 두 번째 인자로 주어지는데, `asyncData`나 `fetch` 메소드와 같습니다.
 
@@ -231,7 +235,7 @@ actions: {
 
 ## Vuex Strict 모드
 
-Strict 모드는 기본적으로 dev 모드에서 활성화되어 있으며, production 모드에서는 꺼져있습니다. dev에서 strict 모드 비활성화를 위해서는 아래와 같이 `store/index.js`에서 처리해 주세요:
+Strict 모드는 기본적으로 dev 모드에서 활성화되어 있으며, production 모드에서는꺼져있습니다. dev에서 strict 모드 비활성화를 위해서는 아래와 같이 `store/index.js`에서 처리해 주세요:
 
 `export const strict = false`
 
@@ -250,7 +254,7 @@ const createStore = () => {
       counter: 0
     }),
     mutations: {
-      increment (state) {
+      increment(state) {
         state.counter++
       }
     }
@@ -266,6 +270,8 @@ export default createStore
 
 ```html
 <template>
-  <button @click="$store.commit('increment')">{{ $store.state.counter }}</button>
+  <button @click="$store.commit('increment')">
+    {{ $store.state.counter }}
+  </button>
 </template>
 ```

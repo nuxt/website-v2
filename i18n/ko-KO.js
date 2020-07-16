@@ -3,8 +3,7 @@ module.exports = {
     an_error_occurred: '에러가 발생했습니다.',
     api_page_not_found: 'API 페이지를 찾을 수 없습니다.',
     please_define_title: 'front matter에 title을 정의해주세요.',
-    please_define_description:
-      'front matter에 description을 정의해주세요.',
+    please_define_description: 'front matter에 description을 정의해주세요.',
     search: '검색 ("/" to focus)',
     version: '버전'
   },
@@ -97,7 +96,8 @@ module.exports = {
       }
     },
     companies: {
-      title: '누가 nuxt<span class="text-nuxt-lightgreen">JS</span> 를 사용하고 있나요?'
+      title:
+        '누가 nuxt<span class="text-nuxt-lightgreen">JS</span> 를 사용하고 있나요?'
     },
     modes: {
       title: 'NUXT<span class="text-nuxt-lightgreen">JS</span> 렌더링',

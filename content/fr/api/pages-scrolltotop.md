@@ -1,5 +1,5 @@
 ---
-title: "API : la propriété scrollToTop"
+title: 'API : la propriété scrollToTop'
 description: La propriété `scrollToTop` vous permet d'indiquer à Nuxt.js de faire défiler la page tout en haut avant de faire le rendu.
 menu: scrollToTop
 category: pages
@@ -18,12 +18,11 @@ Par défaut, Nuxt.js fait défiler la page vers le sommet quand vous changez de 
 </template>
 
 <script>
-export default {
-  scrollToTop: true
-}
+  export default {
+    scrollToTop: true
+  }
 </script>
 ```
-
 
 À l'inverse, vous pouvez manuellement définir `scrollToTop` à `false` sur les routes parentes aussi.
 

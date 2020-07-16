@@ -49,17 +49,17 @@ Katakanlah kita memiliki halaman di `pages/index.vue`:
 </template>
 
 <script>
-export default {
-  data () {
-    return { name: 'world' }
+  export default {
+    data() {
+      return { name: 'world' }
+    }
   }
-}
 </script>
 
 <style>
-.red {
-  color: red;
-}
+  .red {
+    color: red;
+  }
 </style>
 ```
 
@@ -77,10 +77,12 @@ import { Nuxt, Builder } from 'nuxt'
 let nuxt = null
 
 // Init Nuxt.js dan mulai `listening` pada localhost:4000
-test.before('Init Nuxt.js', async (t) => {
+test.before('Init Nuxt.js', async t => {
   const rootDir = resolve(__dirname, '..')
   let config = {}
-  try { config = require(resolve(rootDir, 'nuxt.config.js')) } catch (e) {}
+  try {
+    config = require(resolve(rootDir, 'nuxt.config.js'))
+  } catch (e) {}
   config.rootDir = rootDir // project folder
   config.dev = false // production build
   nuxt = new Nuxt(config)
@@ -89,14 +91,14 @@ test.before('Init Nuxt.js', async (t) => {
 })
 
 // Contoh `testing` only generated html
-test('Route / exits and render HTML', async (t) => {
+test('Route / exits and render HTML', async t => {
   const context = {}
   const { html } = await nuxt.renderRoute('/', context)
   t.true(html.includes('<h1 class="red">Hello world!</h1>'))
 })
 
 // Example of testing via DOM checking
-test('Route / exits and render HTML with CSS applied', async (t) => {
+test('Route / exits and render HTML with CSS applied', async t => {
   const window = await nuxt.renderAndGetWindow('http://localhost:4000/')
   const element = window.document.querySelector('.red')
   t.not(element, null)
@@ -106,7 +108,7 @@ test('Route / exits and render HTML with CSS applied', async (t) => {
 })
 
 // Close the Nuxt server
-test.after('Closing server', (t) => {
+test.after('Closing server', t => {
   nuxt.close()
 })
 ```
@@ -131,7 +133,7 @@ Anda dapat menambahkan ESLint dengan mudah di Nuxt.js. Pertama, Anda perlu menam
 npm install --save-dev babel-eslint eslint eslint-config-prettier eslint-loader eslint-plugin-vue eslint-plugin-prettier prettier
 ```
 
-Kemudian, Anda dapat mengkonfigurasi ESLint melalui file `.eslintrc.js`  di direktori proyek root Anda:
+Kemudian, Anda dapat mengkonfigurasi ESLint melalui file `.eslintrc.js` di direktori proyek root Anda:
 
 ```js
 module.exports = {
@@ -151,15 +153,13 @@ module.exports = {
     'plugin:prettier/recommended'
   ],
   // diperlukan untuk melinting file *.vue
-  plugins: [
-    'vue'
-  ],
+  plugins: ['vue'],
   // tambahkan aturan anda disini
   rules: {
-    'semi': [2, 'never'],
+    semi: [2, 'never'],
     'no-console': 'off',
     'vue/max-attributes-per-line': 'off',
-    'prettier/prettier': ['error', { 'semi': false }]
+    'prettier/prettier': ['error', { semi: false }]
   }
 }
 ```
@@ -185,7 +185,7 @@ Atau `lintfix` untuk bisa memperbaikinya
 npm run lintfix
 ```
 
-ESLint akan membungkus setiap file JavaScript dan Vue Anda sambil mengabaikan file yang Anda abaikan yang didefinisikan di  `.gitignore` anda.
+ESLint akan membungkus setiap file JavaScript dan Vue Anda sambil mengabaikan file yang Anda abaikan yang didefinisikan di `.gitignore` anda.
 
 <div class="Alert Alert--orange">
 

@@ -1,7 +1,6 @@
 ---
 title: watchQuery プロパティ
-description: クエリ文字列を監視し、変更時にコンポーネントメソッドを実行します （asyncData, fetch, validate, layout,
-  ...）
+description: クエリ文字列を監視し、変更時にコンポーネントメソッドを実行します （asyncData, fetch, validate, layout, ...）
 menu: watchQuery
 category: pages
 position: 31
@@ -25,14 +24,15 @@ export default {
 
 ```js
 export default {
-  watchQuery (newQuery, oldQuery) {
+  watchQuery(newQuery, oldQuery) {
     // 古いクエリストリングに `bar` が含まれ、新しいクエリストリングに `foo` が含まれている場合のみ、コンポーネントメソッドを実行します
     return newQuery.foo && oldQuery.bar
   }
 }
 ```
+
 <div class="Alert Alert--orange">
 
-**警告**: 2.12で導入された新しい `fetch` フックは `watchQuery` の影響を受けません。詳しくは、 [クエリ文字列の変化のリスニング](/api/pages-fetch#クエリ文字列の変化のリスニング)を参照してください。
+**警告**: 2.12 で導入された新しい `fetch` フックは `watchQuery` の影響を受けません。詳しくは、 [クエリ文字列の変化のリスニング](/api/pages-fetch#クエリ文字列の変化のリスニング)を参照してください。
 
 </div>

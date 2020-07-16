@@ -1,5 +1,5 @@
 ---
-title: "nuxt.renderAndGetWindow(url, options)"
+title: 'nuxt.renderAndGetWindow(url, options)'
 description: Get the `window` from a given URL of a Nuxt.js Application.
 menu: renderAndGetWindow
 category: programmatically
@@ -31,15 +31,15 @@ npm install --save-dev jsdom
 Example:
 
 ```js
-const { Nuxt, Builder } = require("nuxt");
+const { Nuxt, Builder } = require('nuxt')
 
-const config = require("./nuxt.config.js");
-config.dev = false;
+const config = require('./nuxt.config.js')
+config.dev = false
 
-const nuxt = new Nuxt(config);
+const nuxt = new Nuxt(config)
 
-nuxt.renderAndGetWindow("http://localhost:3000").then(window => {
+nuxt.renderAndGetWindow('http://localhost:3000').then(window => {
   // Display the head `<title>`
-  console.log(window.document.title);
-});
+  console.log(window.document.title)
+})
 ```

@@ -1,5 +1,5 @@
 ---
-title: "API: La propriété serverMiddleware"
+title: 'API: La propriété serverMiddleware'
 description: Définissez le middleware côté serveur.
 menu: serverMiddleware
 category: configuration
@@ -7,32 +7,24 @@ position: 127
 ---
 
 - Type: `Array`
-    - Éléments: `String` ou `Object` ou `Function`
+  - Éléments: `String` ou `Object` ou `Function`
 
-Nuxt crée en interne une instance [connect](https://github.com/senchalabs/connect) à laquelle nous pouvons ajouter notre 
-propre middleware personnalisé. Cela nous permet d'enregistrer des chemins supplémentaires (généralement des chemins `/api`) 
-**sans avoir besoin d'un serveur externe**.
+Nuxt crée en interne une instance [connect](https://github.com/senchalabs/connect) à laquelle nous pouvons ajouter notre propre middleware personnalisé. Cela nous permet d'enregistrer des chemins supplémentaires (généralement des chemins `/api`) **sans avoir besoin d'un serveur externe**.
 
-Parce que connect lui-même est un middleware, le middleware enregistré fonctionnera à la fois avec `nuxt start` et également 
-lorsqu'il sera utilisé comme middleware avec des utilisations programmatiques comme [express-template](https://github.com/nuxt-community/express-template).
-Les [Modules](/guide/modules) de Nuxt peuvent également fournir `serverMiddleware` en utilisant [this.addServerMiddleware()](/api/internals-module-container#addservermiddleware-middleware-)
+Parce que connect lui-même est un middleware, le middleware enregistré fonctionnera à la fois avec `nuxt start` et également lorsqu'il sera utilisé comme middleware avec des utilisations programmatiques comme [express-template](https://github.com/nuxt-community/express-template). Les [Modules](/guide/modules) de Nuxt peuvent également fournir `serverMiddleware` en utilisant [this.addServerMiddleware()](/api/internals-module-container#addservermiddleware-middleware-)
 
-En plus de cela, nous avons introduit une option `prefix` qui par défaut est `true`. Il ajoutera la base du routeur 
-aux middlewares de votre serveur.
+En plus de cela, nous avons introduit une option `prefix` qui par défaut est `true`. Il ajoutera la base du routeur aux middlewares de votre serveur.
 
 **Exemple:**
 
-* Chemin du serveur middleware: `/api`
-* Base du router: `/admin`
-* Avec `prefix: true` (par défaut): `/admin/api`
-* Avec `prefix: false`: `/api`
+- Chemin du serveur middleware: `/api`
+- Base du router: `/admin`
+- Avec `prefix: true` (par défaut): `/admin/api`
+- Avec `prefix: false`: `/api`
 
 ## serverMiddleware vs middleware!
 
-Ne le confondez pas avec [routes middleware](/guide/routing#middleware) qui est appelé avant chaque route par Vue du
-côté client ou SSR. 
-Le middleware répertorié dans la propriété `serverMiddleware` s'exécute côté serveur **avant** `vue-server-renderer` et 
-peut être utilisé pour des tâches spécifiques au serveur telles que la gestion des demandes d'API ou le service des ressources.
+Ne le confondez pas avec [routes middleware](/guide/routing#middleware) qui est appelé avant chaque route par Vue du côté client ou SSR. Le middleware répertorié dans la propriété `serverMiddleware` s'exécute côté serveur **avant** `vue-server-renderer` et peut être utilisé pour des tâches spécifiques au serveur telles que la gestion des demandes d'API ou le service des ressources.
 
 ## Utilisation
 
@@ -85,9 +77,7 @@ export default function (req, res, next) {
 Configuration de Nuxt (`nuxt.config.js`):
 
 ```js
-serverMiddleware: [
-  '~/api/logger'
-]
+serverMiddleware: ['~/api/logger']
 ```
 
 ## Syntaxe d'objet
@@ -99,7 +89,7 @@ export default {
   serverMiddleware: [
     { path: '/a', handler: '~/api/a.js' },
     { path: '/b', handler: '~/api/b.js' },
-    { path: '/c', handler: '~/api/c.js' },
+    { path: '/c', handler: '~/api/c.js' }
   ]
 }
 ```
@@ -111,8 +101,7 @@ export default {
   serverMiddleware: {
     '/a': '~/api/a.js',
     '/b': '~/api/b.js',
-    '/c': '~/api/c.js',
+    '/c': '~/api/c.js'
   }
 }
 ```
-

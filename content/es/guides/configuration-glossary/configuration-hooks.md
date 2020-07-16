@@ -1,5 +1,5 @@
 ---
-title: "The hooks Property"
+title: 'The hooks Property'
 description: Hooks are listeners to Nuxt events that are typically used in Nuxt modules, but are also available in `nuxt.config.js`.
 menu: hooks
 category: configuration-glossary
@@ -11,8 +11,8 @@ position: 13
 > Hooks are [listeners to Nuxt events](/api/internals) that are typically used in Nuxt modules, but are also available in `nuxt.config.js`. [Learn More](/api/internals)
 
 ```js{}[nuxt.config.js]
-import fs from "fs";
-import path from "path";
+import fs from 'fs'
+import path from 'path'
 
 export default {
   hooks: {
@@ -20,13 +20,13 @@ export default {
       done(builder) {
         const extraFilePath = path.join(
           builder.nuxt.options.buildDir,
-          "extra-file"
-        );
-        fs.writeFileSync(extraFilePath, "Something extra");
+          'extra-file'
+        )
+        fs.writeFileSync(extraFilePath, 'Something extra')
       }
     }
   }
-};
+}
 ```
 
 Internally, hooks follow a naming pattern using colons (e.g., `build:done`). For ease of configuration, you can structure them as an hierarchical object when using `nuxt.config.js` (as exemplifed above) to set your own hooks. See [Nuxt Internals](/api/internals) for more detailed information on how they work.
@@ -47,8 +47,7 @@ Let´s say you want to serve pages as `/portal` instead of `/`.
 
 This is maybe an edge-case, and the point of _nuxt.config.js_’ `router.base` is for when a Web server will serve Nuxt elsewhere than the domain root.
 
-But when in local development, hitting _localhost_, when router.base is not / returns a 404.
-In order to prevent this, you can setup a Hook.
+But when in local development, hitting _localhost_, when router.base is not / returns a 404. In order to prevent this, you can setup a Hook.
 
 Maybe redirecting is not the best use-case for a production Web site, but this will help you leverage Hooks.
 
@@ -69,21 +68,21 @@ Then, create a few files;
 1. `hooks/index.js`, Hooks module
 
    ```js{}[hooks/index.js]
-   import render from "./render";
+   import render from './render'
 
    export default nuxtConfig => ({
      render: render(nuxtConfig)
-   });
+   })
    ```
 
 1. `hooks/render.js`, Render hook
 
    ```js{}[hooks/render.js]
-   import redirectRootToPortal from "./route-redirect-portal";
+   import redirectRootToPortal from './route-redirect-portal'
 
    export default nuxtConfig => {
-     const router = Reflect.has(nuxtConfig, "router") ? nuxtConfig.router : {};
-     const base = Reflect.has(router, "base") ? router.base : "/portal";
+     const router = Reflect.has(nuxtConfig, 'router') ? nuxtConfig.router : {}
+     const base = Reflect.has(router, 'base') ? router.base : '/portal'
 
      return {
        /**
@@ -91,10 +90,10 @@ Then, create a few files;
         * {@link node_modules/nuxt/lib/core/renderer.js}
         */
        setupMiddleware(app) {
-         app.use("/", redirectRootToPortal(base));
+         app.use('/', redirectRootToPortal(base))
        }
-     };
-   };
+     }
+   }
    ```
 
 1. `hooks/route-redirect-portal.js`, The Middleware itself
@@ -106,7 +105,7 @@ Then, create a few files;
     * Should be the same version as connect
     * {@link node_modules/connect/package.json}
     */
-   import parseurl from "parseurl";
+   import parseurl from 'parseurl'
 
    /**
     * Connect middleware to handle redirecting to desired Web Applicatin Context Root.
@@ -127,24 +126,22 @@ Then, create a few files;
     */
    export default desiredContextRoot =>
      function projectHooksRouteRedirectPortal(req, res, next) {
-       const desiredContextRootRegExp = new RegExp(`^${desiredContextRoot}`);
-       const _parsedUrl = Reflect.has(req, "_parsedUrl")
-         ? req._parsedUrl
-         : null;
-       const url = _parsedUrl !== null ? _parsedUrl : parseurl(req);
-       const startsWithDesired = desiredContextRootRegExp.test(url.pathname);
-       const isNotProperContextRoot = desiredContextRoot !== url.pathname;
+       const desiredContextRootRegExp = new RegExp(`^${desiredContextRoot}`)
+       const _parsedUrl = Reflect.has(req, '_parsedUrl') ? req._parsedUrl : null
+       const url = _parsedUrl !== null ? _parsedUrl : parseurl(req)
+       const startsWithDesired = desiredContextRootRegExp.test(url.pathname)
+       const isNotProperContextRoot = desiredContextRoot !== url.pathname
        if (isNotProperContextRoot && startsWithDesired === false) {
-         const pathname = url.pathname === null ? "" : url.pathname;
-         const search = url.search === null ? "" : url.search;
-         const Location = desiredContextRoot + pathname + search;
+         const pathname = url.pathname === null ? '' : url.pathname
+         const search = url.search === null ? '' : url.search
+         const Location = desiredContextRoot + pathname + search
          res.writeHead(302, {
            Location
-         });
-         res.end();
+         })
+         res.end()
        }
-       next();
-     };
+       next()
+     }
    ```
 
 Then, whenever a colleague in development accidentally hits `/` to reach the development web development service, Nuxt will automatically redirect to `/portal`

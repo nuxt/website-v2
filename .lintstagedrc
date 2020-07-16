@@ -1,0 +1,15 @@
+{
+  '*.js': ['yarn lint:eslint', 'yarn lint:prettier', 'git add'],
+  '{!(package)*.json,*.code-snippets,.*rc}': [
+    'yarn lint:prettier --parser json',
+    'git add',
+  ],
+  'package.json': ['yarn lint:prettier', 'git add'],
+  '*.vue': [
+    'yarn lint:eslint',
+    'yarn lint:prettier',
+    'git add',
+  ],
+  '*.scss': ['yarn lint:prettier', 'git add'],
+  '*.md': ['yarn lint:markdownlint', 'yarn lint:prettier', 'git add'],
+}

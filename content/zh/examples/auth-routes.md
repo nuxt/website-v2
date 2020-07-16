@@ -17,11 +17,12 @@ position: 302
 想要给应用添加 sessions 特性的话，我们将要用到 `express` and `express-session`。因此，我们需要以编程形式使用 Nuxt.js。
 
 首先，我们先安装依赖包：
+
 ```bash
 yarn add express express-session body-parser whatwg-fetch
 ```
 
-*我们待会会讲到 `whatwg-fetch`。*
+_我们待会会讲到 `whatwg-fetch`。_
 
 然后创建 `server.js`：
 
@@ -35,12 +36,14 @@ const app = require('express')()
 app.use(bodyParser.json())
 
 // Sessions 来创建 req.session
-app.use(session({
-  secret: 'super-secret-key',
-  resave: false,
-  saveUninitialized: false,
-  cookie: { maxAge: 60000 }
-}))
+app.use(
+  session({
+    secret: 'super-secret-key',
+    resave: false,
+    saveUninitialized: false,
+    cookie: { maxAge: 60000 }
+  })
+)
 
 // 发起 POST /api/login 请求完成用户登录，并添加该用户到 req.session.authUser
 app.post('/api/login', function (req, res) {
@@ -99,23 +102,22 @@ Vue.use(Vuex)
 // window.fetch() 的 Polyfill
 require('whatwg-fetch')
 
-const store = () => new Vuex.Store({
+const store = () =>
+  new Vuex.Store({
+    state: {
+      authUser: null
+    },
 
-  state: {
-    authUser: null
-  },
+    mutations: {
+      SET_USER(state, user) {
+        state.authUser = user
+      }
+    },
 
-  mutations: {
-    SET_USER (state, user) {
-      state.authUser = user
+    actions: {
+      // ...
     }
-  },
-
-  actions: {
-    // ...
-  }
-
-})
+  })
 
 export default store
 ```
@@ -141,7 +143,7 @@ nuxtServerInit ({ commit }, { req }) {
 
 有几种方式可以使 `nuxtServerInit` 的方法体异步化，你可以根据自己的情况选择其一：
 
-1. 调用返回 `Promise` 的函数， nuxt.js会等待该`Promise`被解析之后才会设置组件的数据，从而渲染组件。
+1. 调用返回 `Promise` 的函数， nuxt.js 会等待该`Promise`被解析之后才会设置组件的数据，从而渲染组件。
 2. 使用 [async 或 await](https://github.com/lukehoban/ecmascript-asyncawait) ([了解更多](https://zeit.co/blog/async-and-await))
 3. 调用使用回调函数作为参数的函数。
 
@@ -198,6 +200,7 @@ logout ({ commit }) {
 ### 如果没登录则跳转
 
 我们来试着添加一个只有登录用户可见的 `/secret` 路由：
+
 ```html
 <template>
   <div>
@@ -207,14 +210,14 @@ logout ({ commit }) {
 </template>
 
 <script>
-export default {
-  // 这里只用 fetch() 方法，因为我们不需要在这个组件中设置 data
-  fetch ({ store, redirect }) {
-    if (!store.state.authUser) {
-      return redirect('/')
+  export default {
+    // 这里只用 fetch() 方法，因为我们不需要在这个组件中设置 data
+    fetch({ store, redirect }) {
+      if (!store.state.authUser) {
+        return redirect('/')
+      }
     }
   }
-}
 </script>
 ```
 

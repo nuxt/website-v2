@@ -1,5 +1,5 @@
 ---
-title: "key プロパティ"
+title: 'key プロパティ'
 description: 内部の `<router-view>` コンポーネントに `key` プロパティを設定します
 menu: key
 category: pages
@@ -16,7 +16,7 @@ position: 24
 
 ```js
 export default {
-  key (route) {
+  key(route) {
     return route.fullPath
   }
 }

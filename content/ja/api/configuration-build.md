@@ -60,8 +60,8 @@ export default {
 - 引数:
   1. `Object`: { isServer: true | false }
   2. `Array`:
-      - プリセット名 `@nuxt/babel-preset-app`
-      - `@nuxt/babel-preset-app` の [`options`](https://github.com/nuxt/nuxt.js/tree/dev/packages/babel-preset-app#options)
+     - プリセット名 `@nuxt/babel-preset-app`
+     - `@nuxt/babel-preset-app` の [`options`](https://github.com/nuxt/nuxt.js/tree/dev/packages/babel-preset-app#options)
 
 **メモ**: `build.babel.presets` のプリセットの設定はクライアントビルド、サーバービルド両方に適用されます。ターゲットは（クライアント/サーバー）それぞれに応じて Nuxt によって設定されます。クライアントビルドとサーバービルドで異なるプリセットの設定をしたい場合は、関数として `presets` を使用してください。
 
@@ -88,13 +88,15 @@ export default {
 export default {
   build: {
     babel: {
-      presets ({ isServer }, [ preset, options ]) {
+      presets({ isServer }, [preset, options]) {
         return [
           [
-            preset, {
+            preset,
+            {
               buildTarget: isServer ? 'server' : 'client',
               ...options
-            }],
+            }
+          ],
           [
             // 他のプリセット
           ]
@@ -155,22 +157,18 @@ extend メソッドは一度はサーバーのバンドルのため、一度は�
 1. Webpack 設定オブジェクト
 2. 次のキーを持つオブジェクト（`loaders` を除きすべてブーリアン）: `isDev`, `isClient`, `isServer`, `loaders`
 
-
 <div class="Alert Alert--orange">
 
-  **警告:**
-  提供される `isClient` および `isServer` は [`context`](/api/context) で利用可能なキーとは別物です。
-  これらは非推奨 **ではありません**。ここでは `process.client` および `process.server` は undefined となるため使用しないでください。
+**警告:** 提供される `isClient` および `isServer` は [`context`](/api/context) で利用可能なキーとは別物です。 これらは非推奨 **ではありません**。ここでは `process.client` および `process.server` は undefined となるため使用しないでください。
 
 </div>
-
 
 例（`nuxt.config.js`）:
 
 ```js
 export default {
   build: {
-    extend (config, { isClient }) {
+    extend(config, { isClient }) {
       // クライアントのバンドルの Webpack 設定のみを拡張する
       if (isClient) {
         config.devtool = 'source-map'
@@ -191,7 +189,7 @@ export default {
 ```js
 export default {
   build: {
-    extend (config, { isClient, loaders: { vue } }) {
+    extend(config, { isClient, loaders: { vue } }) {
       // クライアントのバンドルの Webpack 設定のみを拡張する
       if (isClient) {
         vue.transformAssetUrls.video = ['src', 'poster']
@@ -208,7 +206,7 @@ export default {
 - 型: `Boolean`
 - デフォルト: `false`
 
-内部で [`extract-css-chunks-webpack-plugin`](https://github.com/faceyspacey/extract-css-chunks-webpack-plugin/) が使われ、全ての CSS は別々のファイルに、通常はコンポーネントごとに1つ抽出されます。これは CSS と JavaScript を別々にキャッシュすることを可能にし、多くのグローバルまたは共通 CSS が存在する場合には試してみる価値があります。
+内部で [`extract-css-chunks-webpack-plugin`](https://github.com/faceyspacey/extract-css-chunks-webpack-plugin/) が使われ、全ての CSS は別々のファイルに、通常はコンポーネントごとに 1 つ抽出されます。これは CSS と JavaScript を別々にキャッシュすることを可能にし、多くのグローバルまたは共通 CSS が存在する場合には試してみる価値があります。
 
 <div class="Alert Alert--teal">
 
@@ -216,8 +214,7 @@ export default {
 
 </div>
 
-全ての CSS を単一ファイルに抽出した方がいいこともあります。
-このための回避策があります。:
+全ての CSS を単一ファイルに抽出した方がいいこともあります。このための回避策があります。:
 
 <div class="Alert Alert--orange">
 ⚠️ 全てのファイルを単一ファイルに抽出することは推奨しません。
@@ -269,7 +266,7 @@ export default {
 export default {
   build: {
     filenames: {
-      chunk: ({ isDev }) => isDev ? '[name].js' : '[id].[contenthash].js'
+      chunk: ({ isDev }) => (isDev ? '[name].js' : '[id].[contenthash].js')
     }
   }
 }
@@ -385,8 +382,7 @@ manifest の使い方をより理解するためには [webpack のドキュメ�
 
 ### loaders.css と loaders.cssModules
 
-> 詳細は [css-loader options](https://github.com/webpack-contrib/css-loader#options) を参照してください。
-> 注意: cssModules は、[CSS Modules](https://vue-loader.vuejs.org/guide/css-modules.html#css-modules) を使うための loader オプションです。
+> 詳細は [css-loader options](https://github.com/webpack-contrib/css-loader#options) を参照してください。注意: cssModules は、[CSS Modules](https://vue-loader.vuejs.org/guide/css-modules.html#css-modules) を使うための loader オプションです。
 
 ### loaders.less
 
@@ -394,8 +390,7 @@ manifest の使い方をより理解するためには [webpack のドキュメ�
 
 ### loaders.sass と loaders.scss
 
-> 利用可能な全てのオプションについては [Node Sass documentation](https://github.com/sass/node-sass/blob/master/README.md#options) を参照してください。
-> 注意: `loaders.sass` は [Sass Indented Syntax](http://sass-lang.com/documentation/file.INDENTED_SYNTAX.html) 用です。
+> 利用可能な全てのオプションについては [Node Sass documentation](https://github.com/sass/node-sass/blob/master/README.md#options) を参照してください。注意: `loaders.sass` は [Sass Indented Syntax](http://sass-lang.com/documentation/file.INDENTED_SYNTAX.html) 用です。
 
 ### loaders.vueStyle
 
@@ -424,8 +419,7 @@ manifest の使い方をより理解するためには [webpack のドキュメ�
 
 `dev` または `analyze` モードでは、`splitChunks.name` のデフォルト値は `true` になっています。
 
-カスタマイズされたプラグインの配列に `minimizer` を設定するか、`minimize` を `false` にすることで全ての minimizer を無効にできます。
-（`minimize` はデフォルトで開発用に無効になっています）
+カスタマイズされたプラグインの配列に `minimizer` を設定するか、`minimize` を `false` にすることで全ての minimizer を無効にできます。（`minimize` はデフォルトで開発用に無効になっています）
 
 [Webpack の最適化](https://webpack.js.org/configuration/optimization/)を参照してください。
 
@@ -477,7 +471,7 @@ export default {
 
 - 型: `Array`、`Object`（推奨）、`Function` または `Boolean`
 
-  **注意：**  Nuxt.js は [PostCSS Preset Env](https://github.com/csstools/postcss-preset-env) を適用しました。デフォルトでは、[Stage 2 features](https://cssdb.org/) と [Autoprefixer](https://github.com/postcss/autoprefixer) が有効になっています。`build.postcss.preset` を使うことで設定が出来ます
+  **注意：** Nuxt.js は [PostCSS Preset Env](https://github.com/csstools/postcss-preset-env) を適用しました。デフォルトでは、[Stage 2 features](https://cssdb.org/) と [Autoprefixer](https://github.com/postcss/autoprefixer) が有効になっています。`build.postcss.preset` を使うことで設定が出来ます
 
 - デフォルト:
 
@@ -654,7 +648,8 @@ export default {
       {
         src: '~/modules/support/plugin.js', // `src` は絶対パスもしくは相対パスで指定してください
         dst: 'support.js', // `dst` は `.nuxt` ディレクトリからみた相対パスです
-        options: { // Options は `options` キーとしてテンプレートに提供されます
+        options: {
+          // Options は `options` キーとしてテンプレートに提供されます
           live_chat: false
         }
       }
@@ -704,9 +699,7 @@ Terser プラグインのオプションです。 `false` を設定するとこ�
 ```js
 {
   build: {
-    transpile: [
-      ({ isLegacy }) => isLegacy && 'ky'
-    ]
+    transpile: [({ isLegacy }) => isLegacy && 'ky']
   }
 }
 ```
@@ -741,12 +734,11 @@ Terser プラグインのオプションです。 `false` を設定するとこ�
 ```js
 export default {
   build: {
-    watch: [
-      '~/.nuxt/support.js'
-    ]
+    watch: ['~/.nuxt/support.js']
   }
 }
 ```
+
 ## followSymlinks
 
 > デフォルトでは、ビルドプロセスはシンボリックリンク内のファイルをスキャンしません。`followSymlinks` を `true` に設定するとフォルダー（例えば `pages`）内のシンボリックリンクがビルドプロセスでスキャンされます。

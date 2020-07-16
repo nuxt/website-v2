@@ -1,7 +1,6 @@
 ---
 title: 'API: fetch メソッド'
-description: "`fetch` メソッドは、ページがレンダリングされる前に、データをストアに入れるために使われます。コンポーネントのデータをセットしないという点を除いては
-  `asyncData`メソッドとよく似ています。"
+description: '`fetch` メソッドは、ページがレンダリングされる前に、データをストアに入れるために使われます。コンポーネントのデータをセットしないという点を除いては `asyncData`メソッドとよく似ています。'
 menu: fetch
 category: pages
 position: 22
@@ -24,6 +23,7 @@ Nuxt.js `v2.12` では、**あらゆる Vue コンポーネント**に `fetch` �
 **非同期**データ取得の必要がある度です。`fetch` はサーバーサイドでルートをレンダリングするときに呼び出され、クライアントサイドでは遷移するときに呼び出されます。
 
 コンポーネントレベルで `$fetchState` を公開します:
+
 - `$fetchState.pending`: `Boolean`。`fetch` が*クライアントサイド*で呼び出されたときにプレースホルダを示します。
 - `$fetchState.error`: `null` または `Error`。エラーメッセージを示します。
 - `$fetchState.timestamp`: `Integer`。最後に fetch したタイムスタンプです。`keep-alive` でのキャッシングに便利です。
@@ -33,6 +33,7 @@ Nuxt.js `v2.12` では、**あらゆる Vue コンポーネント**に `fetch` �
 ```html
 <button @click="$fetch">Refresh</button>
 ```
+
 コンポーネントメソッドでは以下のとおりです:
 
 ```javascript
@@ -40,10 +41,10 @@ Nuxt.js `v2.12` では、**あらゆる Vue コンポーネント**に `fetch` �
 export default {
   methods: {
     refresh() {
-      this.$fetch();
+      this.$fetch()
     }
   }
-};
+}
 ```
 
 fetch フック内では `this.$nuxt.context` を使用して、Nuxt [context](/api/context) にアクセスできます。
@@ -61,17 +62,19 @@ fetch フック内では `this.$nuxt.context` を使用して、Nuxt [context](/
 
 ```html
 <script>
-export default {
-  data () {
-    return {
-      posts: []
-    }
-  },
-  async fetch () {
-    this.posts = await this.$http.$get('https://jsonplaceholder.typicode.com/posts')
-  },
-  fetchOnServer: false
-}
+  export default {
+    data() {
+      return {
+        posts: []
+      }
+    },
+    async fetch() {
+      this.posts = await this.$http.$get(
+        'https://jsonplaceholder.typicode.com/posts'
+      )
+    },
+    fetchOnServer: false
+  }
 </script>
 ```
 
@@ -92,7 +95,9 @@ export default {
   <div>
     <h1>Blog posts</h1>
     <p v-if="$fetchState.pending">Fetching posts...</p>
-    <p v-else-if="$fetchState.error">Error while fetching posts: {{ $fetchState.error.message }}</p>
+    <p v-else-if="$fetchState.error">
+      Error while fetching posts: {{ $fetchState.error.message }}
+    </p>
     <ul v-else>
       <li v-for="post of posts" :key="post.id">
         <n-link :to="`/posts/${post.id}`">{{ post.title }}</n-link>
@@ -102,23 +107,24 @@ export default {
 </template>
 
 <script>
-export default {
-  data () {
-    return {
-      posts: []
+  export default {
+    data() {
+      return {
+        posts: []
+      }
+    },
+    async fetch() {
+      this.posts = await this.$http.$get(
+        'https://jsonplaceholder.typicode.com/posts'
+      )
     }
-  },
-  async fetch () {
-    this.posts = await this.$http.$get('https://jsonplaceholder.typicode.com/posts')
   }
-}
 </script>
 ```
 
 あなたが直接 [http://localhost:3000/](http://localhost:3000/) にアクセスすると、**サーバーレンダリング**（SEO に効果があります）されている完全な投稿リストを見ることができます。
 
 <img width="669" alt="Screenshot 2019-03-11 at 23 04 57" src="https://user-images.githubusercontent.com/904724/54161334-1f9e8400-4452-11e9-97bf-996a6e69d9db.png">
-
 
 <div class="Alert Alert--green">
 
@@ -129,6 +135,7 @@ Nuxt は、`fetch` の中でどのようなデータを変化させたかをう�
 では、`pages/posts/_id.vue` ページを追加して、`/posts/:id` に投稿を表示させてみましょう。
 
 `pages/posts/_id.vue`
+
 ```html
 <template>
   <div v-if="$fetchState.pending">Fetching post #{{$route.params.id}}...</div>
@@ -140,16 +147,18 @@ Nuxt は、`fetch` の中でどのようなデータを変化させたかをう�
 </template>
 
 <script>
-export default {
-  data () {
-    return {
-      post: {}
+  export default {
+    data() {
+      return {
+        post: {}
+      }
+    },
+    async fetch() {
+      this.post = await this.$http.$get(
+        `https://jsonplaceholder.typicode.com/posts/${this.$route.params.id}`
+      )
     }
-  },
-  async fetch() {
-    this.post = await this.$http.$get(`https://jsonplaceholder.typicode.com/posts/${this.$route.params.id}`)
   }
-}
 </script>
 ```
 
@@ -162,7 +171,6 @@ export default {
 `fetch` フックを含むコンポーネントの場合、`this.$fetch()` にアクセスして `fetch` フックを再呼び出しします（`$fetchState.pending` は再び `true` になります）。
 
 </div>
-
 
 ### クエリ文字列の変化のリスニング
 
@@ -184,6 +192,7 @@ export default {
 `<nuxt/>` や `<nuxt-child/>` コンポーネントで `keep-alive` ディレクティブを使うと、既に訪問したページの `fetch` 呼び出しを保存することができます:
 
 `layouts/default.vue`
+
 ```html
 <template>
   <nuxt keep-alive />
@@ -192,14 +201,13 @@ export default {
 
 <div class="Alert Alert--green">
 
-また、`<nuxt>` コンポーネントに prop の `keep-alive-props` を渡すことで、`<keep-alive>` に渡す [props](https://jp.vuejs.org/v2/api/index.html#keep-alive) を指定することもできます。<br>
-例: `<nuxt keep-alive :keep-alive-props="{ max: 10 }" />` ページコンポーネントを 10 ページ分だけメモリに保持するようにします。
+また、`<nuxt>` コンポーネントに prop の `keep-alive-props` を渡すことで、`<keep-alive>` に渡す [props](https://jp.vuejs.org/v2/api/index.html#keep-alive) を指定することもできます。<br> 例: `<nuxt keep-alive :keep-alive-props="{ max: 10 }" />` ページコンポーネントを 10 ページ分だけメモリに保持するようにします。
 
 </div>
 
 ### `activated` フックを使う
 
-Nuxt は、最後に `fetch` を呼び出したときの `this.$fetchState.timestamp`（タイムスタンプ）を直接付与します（SSR を含む）。このプロパティを `activated` フックと組み合わせることで、`fetch` に30秒のキャッシュを追加することができます。
+Nuxt は、最後に `fetch` を呼び出したときの `this.$fetchState.timestamp`（タイムスタンプ）を直接付与します（SSR を含む）。このプロパティを `activated` フックと組み合わせることで、`fetch` に 30 秒のキャッシュを追加することができます。
 
 `pages/posts/_id.vue`
 
@@ -209,29 +217,30 @@ Nuxt は、最後に `fetch` を呼び出したときの `this.$fetchState.times
 </template>
 
 <script>
-export default {
-  data () {
-    return {
-      post: {}
+  export default {
+    data() {
+      return {
+        post: {}
+      }
+    },
+    activated() {
+      // 最後の fetch から30秒以上経っていれば、fetch を呼び出します
+      if (this.$fetchState.timestamp <= Date.now() - 30000) {
+        this.$fetch()
+      }
+    },
+    async fetch() {
+      this.post = await this.$http.$get(
+        `https://jsonplaceholder.typicode.com/posts/${this.$route.params.id}`
+      )
     }
-  },
-  activated() {
-    // 最後の fetch から30秒以上経っていれば、fetch を呼び出します
-    if (this.$fetchState.timestamp <= (Date.now() - 30000)) {
-      this.$fetch()
-    }
-  },
-  async fetch() {
-    this.post = await this.$http.$get(`https://jsonplaceholder.typicode.com/posts/${this.$route.params.id}`)
   }
-}
 </script>
 ```
 
-最後の `fetch` 呼び出しが30秒以内であれば、同じページへの遷移で `fetch` は呼ばれません。
+最後の `fetch` 呼び出しが 30 秒以内であれば、同じページへの遷移で `fetch` は呼ばれません。
 
 ![fetch-keep-alive-nuxt](https://user-images.githubusercontent.com/904724/54164405-c6881d80-445c-11e9-94e0-366406270874.gif)
-
 
 ## Nuxt <= 2.11
 
@@ -257,14 +266,13 @@ export default {
 </template>
 
 <script>
-export default {
-  fetch ({ store, params }) {
-    return axios.get('http://my-api/stars')
-    .then((res) => {
-      store.commit('setStars', res.data)
-    })
+  export default {
+    fetch({ store, params }) {
+      return axios.get('http://my-api/stars').then(res => {
+        store.commit('setStars', res.data)
+      })
+    }
   }
-}
 </script>
 ```
 
@@ -276,12 +284,12 @@ export default {
 </template>
 
 <script>
-export default {
-  async fetch ({ store, params }) {
-    let { data } = await axios.get('http://my-api/stars')
-    store.commit('setStars', data)
+  export default {
+    async fetch({ store, params }) {
+      let { data } = await axios.get('http://my-api/stars')
+      store.commit('setStars', data)
+    }
   }
-}
 </script>
 ```
 
@@ -291,11 +299,11 @@ export default {
 
 ```html
 <script>
-export default {
-  async fetch ({ store, params }) {
-    await store.dispatch('GET_STARS');
+  export default {
+    async fetch({ store, params }) {
+      await store.dispatch('GET_STARS')
+    }
   }
-}
 </script>
 ```
 
@@ -304,7 +312,7 @@ export default {
 ```js
 // ...
 export const actions = {
-  async GET_STARS ({ commit }) {
+  async GET_STARS({ commit }) {
     const { data } = await axios.get('http://my-api/stars')
     commit('SET_STARS', data)
   }

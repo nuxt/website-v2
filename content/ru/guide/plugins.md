@@ -31,14 +31,14 @@ npm install --save axios
 </template>
 
 <script>
-import axios from 'axios'
+  import axios from 'axios'
 
-export default {
-  async data ({ params }) {
-    let { data } = await axios.get(`https://my-api/posts/${params.id}`)
-    return { title: data.title }
+  export default {
+    async data({ params }) {
+      let { data } = await axios.get(`https://my-api/posts/${params.id}`)
+      return { title: data.title }
+    }
   }
-}
 </script>
 ```
 
@@ -59,6 +59,7 @@ module.exports = {
 Если мы хотим использовать [vue-notifications](https://github.com/se-panfilov/vue-notifications) для отображения уведомлений, нам нужно установить плагин до запуска приложения.
 
 Файл `plugins/vue-notifications.js`:
+
 ```js
 import Vue from 'vue'
 import VueNotifications from 'vue-notifications'
@@ -67,6 +68,7 @@ Vue.use(VueNotifications)
 ```
 
 Затем в `nuxt.config.js` мы добавляем ссылку на файл плагина в свойстве `plugins`:
+
 ```js
 module.exports = {
   plugins: ['~plugins/vue-notifications']
@@ -78,6 +80,7 @@ module.exports = {
 Вообще, `vue-notifications` будет добавлен к финальному коду вашего приложения, но поскольку это библиотека, мы бы предпочли добавить код плагина в отдельный файл, содержащий код и возможных других внешних библиотек.
 
 Для этого добавим значение `vue-notifications` в файл `nuxt.config.js` в свойство `buid.vendor`:
+
 ```js
 module.exports = {
   build: {
@@ -92,6 +95,7 @@ module.exports = {
 Некоторые плагины могут работать **только в браузерах**. Вы можете использовать переменную `process.client`, чтобы проверить, что плагин будет работать на стороне клиента.
 
 Пример:
+
 ```js
 import Vue from 'vue'
 import VueNotifications from 'vue-notifications'

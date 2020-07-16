@@ -1,5 +1,5 @@
 ---
-title: "API: watchers プロパティ"
+title: 'API: watchers プロパティ'
 description: watchers プロパティで監視設定を上書きできます。
 menu: watchers
 category: configuration

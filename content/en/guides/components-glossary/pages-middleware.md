@@ -1,5 +1,5 @@
 ---
-title: "The middleware Property"
+title: 'The middleware Property'
 description: Set the middleware for a specific page of the application.
 menu: Middleware Property
 category: components-glossary
@@ -15,10 +15,10 @@ Set the middleware for a specific page of the application.
 You can create named middleware by creating a file inside the `middleware/` directory, the file name will be the middleware name.
 
 ```js{[middleware/authenticated.js]}
-export default function({ store, redirect }) {
+export default function ({ store, redirect }) {
   // If the user is not authenticated
   if (!store.state.authenticated) {
-    return redirect("/login");
+    return redirect('/login')
   }
 }
 ```
@@ -30,8 +30,8 @@ export default function({ store, redirect }) {
 
 <script>
   export default {
-    middleware: "authenticated"
-  };
+    middleware: 'authenticated'
+  }
 </script>
 ```
 
@@ -49,9 +49,9 @@ If you need to use a middleware only for a specific page, you can directly use a
     middleware({ store, redirect }) {
       // If the user is not authenticated
       if (!store.state.authenticated) {
-        return redirect("/login");
+        return redirect('/login')
       }
     }
-  };
+  }
 </script>
 ```

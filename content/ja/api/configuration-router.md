@@ -1,5 +1,5 @@
 ---
-title: "API: router プロパティ"
+title: 'API: router プロパティ'
 description: router プロパティを使って Nuxt.js のルーターをカスタマイズできます。
 menu: router
 category: configuration
@@ -42,10 +42,10 @@ export default {
 - 型: `String`
 - デフォルト: `'-'`
 
-Nuxt.js が使うルート名の区切り文字を変更したい場合があるでしょう。設定ファイル内の `routeNameSplitter` オプションを使用して変更することが可能です。
-`pages/posts/_id.vue` というページファイルがあるとします。Nuxt はプログラムに従ってルート名を生成します。この場合は `posts-id` です。`routeNameSplitter` の設定を `/` に変更することによって `posts/id` へ変更されます。
+Nuxt.js が使うルート名の区切り文字を変更したい場合があるでしょう。設定ファイル内の `routeNameSplitter` オプションを使用して変更することが可能です。 `pages/posts/_id.vue` というページファイルがあるとします。Nuxt はプログラムに従ってルート名を生成します。この場合は `posts-id` です。`routeNameSplitter` の設定を `/` に変更することによって `posts/id` へ変更されます。
 
 例 (`nuxt.config.js`):
+
 ```js
 export default {
   router: {
@@ -67,7 +67,7 @@ Nuxt.js によって作成されるルーティングを拡張したいことが
 ```js
 export default {
   router: {
-    extendRoutes (routes, resolve) {
+    extendRoutes(routes, resolve) {
       routes.push({
         name: 'custom',
         path: '*',
@@ -81,11 +81,12 @@ export default {
 ルートをソートしたい場合、`@nuxt/utils` の `sortRoutes(routes)` 関数を使用できます。
 
 `nuxt.config.js`
+
 ```js
 import { sortRoutes } from '@nuxt/utils'
 export default {
   router: {
-    extendRoutes (routes, resolve) {
+    extendRoutes(routes, resolve) {
       // ルートをここに追加する
 
       // ソートをする
@@ -104,10 +105,11 @@ export default {
 </div>
 
 `nuxt.config.js`
+
 ```js
 export default {
   router: {
-    extendRoutes (routes, resolve) {
+    extendRoutes(routes, resolve) {
       routes.push({
         path: '/users/:id',
         components: {
@@ -210,10 +212,13 @@ export default {
 ```
 
 `middleware/user-agent.js`
+
 ```js
 export default function (context) {
   // userAgent プロパティを context 内に追加します（context は `data` メソッドや `fetch` メソッド内で利用できます）
-  context.userAgent = process.server ? context.req.headers['user-agent'] : navigator.userAgent
+  context.userAgent = process.server
+    ? context.req.headers['user-agent']
+    : navigator.userAgent
 }
 ```
 
@@ -253,8 +258,7 @@ export default {
 - 型: `Boolean`
 - デフォルト: `true`
 
-viewport（ブラウザの表示領域）内にリンクが表示されたとき *コード分割された* ページを先読みする `<nuxt-link>` の設定をします。
-[IntersectionObserver](https://developer.mozilla.org/ja/docs/Web/API/Intersection_Observer_API) がサポートされている必要があります ([CanIUse](https://caniuse.com/#feat=intersectionobserver)を御覧ください）。
+viewport（ブラウザの表示領域）内にリンクが表示されたとき _コード分割された_ ページを先読みする `<nuxt-link>` の設定をします。 [IntersectionObserver](https://developer.mozilla.org/ja/docs/Web/API/Intersection_Observer_API) がサポートされている必要があります ([CanIUse](https://caniuse.com/#feat=intersectionobserver)を御覧ください）。
 
 この機能を [Polyfill.io](https://polyfill.io) のようなサービスで条件付きで埋め込むことをお勧めします:
 
@@ -264,7 +268,11 @@ viewport（ブラウザの表示領域）内にリンクが表示されたとき
 export default {
   head: {
     script: [
-      { src: 'https://polyfill.io/v3/polyfill.min.js?features=IntersectionObserver', body: true }
+      {
+        src:
+          'https://polyfill.io/v3/polyfill.min.js?features=IntersectionObserver',
+        body: true
+      }
     ]
   }
 }
@@ -308,10 +316,10 @@ v2.9.0 以降、ファイルを使用してルーターの scrollBehavior を上
 
 Nuxt のデフォルトの `router.scrollBehavior.js` ファイルは次の場所にあります：[packages/vue-app/template/router.scrollBehavior.js](https://github.com/nuxt/nuxt.js/blob/dev/packages/vue-app/template/router.scrollBehavior.js)
 
-
 すべてのルートにおいて強制的にトップまでスクロールさせる例:
 
 `app/router.scrollBehavior.js`
+
 ```js
 export default function (to, from, savedPosition) {
   return { x: 0, y: 0 }

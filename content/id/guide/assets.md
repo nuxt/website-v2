@@ -1,8 +1,6 @@
 ---
 title: Aset
-description: Secara default, Nuxt menggunakan vue-loader, file-loader dan url-loader
-  webpack loaders untuk penyimpanan aset yang kukuh. Kamu juga dapat menggunakan direktori
-  Static untuk aset yang statis.
+description: Secara default, Nuxt menggunakan vue-loader, file-loader dan url-loader webpack loaders untuk penyimpanan aset yang kukuh. Kamu juga dapat menggunakan direktori Static untuk aset yang statis.
 category: getting-started
 position: 107
 ---
@@ -28,7 +26,7 @@ Atau jika pada `pages/index.vue` Anda menggunakan:
 
 ```html
 <template>
-  <img src="~/assets/image.png">
+  <img src="~/assets/image.png" />
 </template>
 ```
 
@@ -48,7 +46,7 @@ Manfaat menggunakan file-loader dan url-loader adalah:
 Sebenarnya, konfigurasi pemindah aset yang default dari Nuxt.js adalah:
 
 ```js
-[
+;[
   {
     test: /\.(png|jpe?g|gif|svg)$/,
     loader: 'url-loader',
@@ -74,14 +72,14 @@ Saat menjalankan aplikasi kita dengan `nuxt`, templat kita berada pada `pages/in
 
 ```html
 <template>
-  <img src="~/assets/image.png">
+  <img src="~/assets/image.png" />
 </template>
 ```
 
 Maka akan menjadi:
 
 ```html
-<img src="/_nuxt/img/image.0c61159.png">
+<img src="/_nuxt/img/image.0c61159.png" />
 ```
 
 Jika Anda ingin memperbarui loader ini atau menonaktifkannya, silakan menggunakan [build.extend](/api/configuration-build#extend).
@@ -98,8 +96,8 @@ Dari kode Anda, Anda bisa merujuk file tersebut dengan `/` URL di bawah ini:
 
 ```html
 <!-- Gambar statis dari direktori static -->
-<img src="/my-image.png"/>
+<img src="/my-image.png" />
 
 <!-- Gambar webpacked dari direktori assets -->
-<img src="~/assets/my-image-2.png"/>
+<img src="~/assets/my-image-2.png" />
 ```

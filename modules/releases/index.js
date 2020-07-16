@@ -18,14 +18,14 @@ export default function () {
 
   this.addServerMiddleware({
     path: '/_releases',
-    handler (req, res) {
+    handler(req, res) {
       nodeRes.send(req, res, releases)
     }
   })
 }
 
 // Fetch releases
-async function fetchReleases (markdown) {
+async function fetchReleases(markdown) {
   logger.info('Fetching releases...')
   const options = {
     per_page: 20
@@ -35,17 +35,26 @@ async function fetchReleases (markdown) {
   }
   let releases = []
   try {
-    const data = await fetch('https://api.github.com/repos/nuxt/nuxt.js/releases', options).then(res => res.json())
-    releases = await Promise.all(data.filter(r => !r.draft).map(async (release) => {
-      // Transform h2 to h3
-      const body = release.body.replace(/\n## /g, '\n### ').replace(/^## /g, '\n### ')
+    const data = await fetch(
+      'https://api.github.com/repos/nuxt/nuxt.js/releases',
+      options
+    ).then(res => res.json())
+    releases = await Promise.all(
+      data
+        .filter(r => !r.draft)
+        .map(async release => {
+          // Transform h2 to h3
+          const body = release.body
+            .replace(/\n## /g, '\n### ')
+            .replace(/^## /g, '\n### ')
 
-      return {
-        name: release.name || release.tag_name,
-        date: release.published_at,
-        body: (await markdown.toJSON(body)).body
-      }
-    }))
+          return {
+            name: release.name || release.tag_name,
+            date: release.published_at,
+            body: (await markdown.toJSON(body)).body
+          }
+        })
+    )
   } catch (e) {
     logger.error('Could not fetch nuxt.js release notes:', e.message)
     return []

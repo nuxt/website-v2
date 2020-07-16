@@ -1,5 +1,5 @@
 ---
-title: "Moving from @nuxtjs/dotenv to runtime config"
+title: 'Moving from @nuxtjs/dotenv to runtime config'
 description: 'In our frontend applications, we often use APIs and third-party integrations which require us to use configuration data which is usually provided by environment variables. These variables should not be exposed to the frontend as the browser environment is accessible by all visitors.'
 imgUrl: blog/moving-from-nuxtjs-dotenv-to-runtime-config/main.png
 date: 2020-06-15
@@ -31,7 +31,7 @@ It's time to migrate from @nuxtjs/dotenv module to use our new runtime config wh
 
 ## What are environment variables
 
-In our frontend applications, we often use APIs and third-party integrations which require us to use configuration data which is usually provided by environment variables. These variables should not be exposed to the frontend as the browser environment is accessible by all visitors. Instead, we can store sensitive information, like keys and secrets, in password-protected CI tools or deployment pipelines. However, when we are developing applications locally we might not have access to deployment pipelines and therefore need somewhere to store these environment variables. 
+In our frontend applications, we often use APIs and third-party integrations which require us to use configuration data which is usually provided by environment variables. These variables should not be exposed to the frontend as the browser environment is accessible by all visitors. Instead, we can store sensitive information, like keys and secrets, in password-protected CI tools or deployment pipelines. However, when we are developing applications locally we might not have access to deployment pipelines and therefore need somewhere to store these environment variables.
 
 ## Misconceptions
 
@@ -39,13 +39,13 @@ It is very easy to think that your secret keys are safe by placing them somewher
 
 ## Why we need webpack
 
-Isomorphic applications, otherwise known as universal applications, need to share code between both the server and the client. Babel is used to compile our modern ES6 JavaScript code down to ES5 JavaScript so that it can work across all platforms. Node.js which is an asynchronous event-driven JavaScript runtime that can be used in computers and servers outside of a browser environment, uses the module system. 
+Isomorphic applications, otherwise known as universal applications, need to share code between both the server and the client. Babel is used to compile our modern ES6 JavaScript code down to ES5 JavaScript so that it can work across all platforms. Node.js which is an asynchronous event-driven JavaScript runtime that can be used in computers and servers outside of a browser environment, uses the module system.
 
 Using modules in Node.js is done using require, eg require('lodash'). However, browser support for modules is still incomplete and therefore we need bundling tools such as webpack to transpile these modules into code that the browsers can read. Webpack basically makes client-side development more "Node-like" with the same module system semantics. This means that a require statement or an ES6 import statement will resolve the same way. And as our applications are not only JavaScript but also HTML, CSS and images we can require these using webpack's loaders.
 
 ## How environment variables work
 
-At runtime, Node.js automatically loads environment variables into `process.env` so that they are available to use in your application. The reference to the environment variable is replaced with the correct value. For example, if you had an `API_SECRET` key with the value of `'my-secret'` then in your application where you had used `process.env.API_SECRET` this would be replaced with the value of my-secret. 
+At runtime, Node.js automatically loads environment variables into `process.env` so that they are available to use in your application. The reference to the environment variable is replaced with the correct value. For example, if you had an `API_SECRET` key with the value of `'my-secret'` then in your application where you had used `process.env.API_SECRET` this would be replaced with the value of my-secret.
 
 Values are read during build time and persisted in the webpack bundle. Therefore if we change our `API_SECRET` we will need to rebuild our application so that it can read the new value.
 
@@ -92,12 +92,12 @@ export default {
     baseURL: process.env.BASE_URL
   },
   privateRuntimeConfig: {
-		apiSecret: process.env.API_SECRET
-  },
+    apiSecret: process.env.API_SECRET
+  }
 }
 ```
 
-This can be simplified even further by using a default value instead of having to maintain the value in both the runtime config and the `.env` file when using non-sensitive values. 
+This can be simplified even further by using a default value instead of having to maintain the value in both the runtime config and the `.env` file when using non-sensitive values.
 
 `nuxt.config.js`
 
@@ -105,7 +105,7 @@ This can be simplified even further by using a default value instead of having t
 export default {
   publicRuntimeConfig: {
     baseURL: process.env.BASE_URL || 'https://nuxtjs.org'
-  },
+  }
 }
 ```
 
@@ -117,7 +117,7 @@ Also this can be a better replacement for `.env.example` and the default values 
 export default {
   publicRuntimeConfig: {
     baseURL: 'https://dev.nuxtjs.org' || 'https://nuxtjs.org'
-  },
+  }
 }
 ```
 
@@ -131,10 +131,10 @@ If your env variables in your nuxt.config look like this:
 
 ```js
 export default {
-	env:  {
-		BASE_URL: 'https://nuxtjs.org',
-		API_SECRET: '1234'
-	}
+  env: {
+    BASE_URL: 'https://nuxtjs.org',
+    API_SECRET: '1234'
+  }
 }
 ```
 
@@ -148,8 +148,8 @@ export default {
     baseURL: 'https://nuxtjs.org'
   },
   privateRuntimeConfig: {
-		apiSecret: process.env.API_SECRET
-  },
+    apiSecret: process.env.API_SECRET
+  }
 }
 ```
 
@@ -157,7 +157,7 @@ export default {
 
 ## The env property v runtime config
 
-You can still use the env property and it is still useful for env variables that are required at build time rather than runtime such as NODE_ENV=staging or VERSION=1.2.3. However for runtime env variables the runtime config is preferred as using the env property can be as dangerous as  using the dotenv module when used incorrectly.
+You can still use the env property and it is still useful for env variables that are required at build time rather than runtime such as NODE_ENV=staging or VERSION=1.2.3. However for runtime env variables the runtime config is preferred as using the env property can be as dangerous as using the dotenv module when used incorrectly.
 
 ## Using your config values
 
@@ -167,7 +167,7 @@ Once you have stored your values in the public or private runtime config in your
 
 ```js
 <script>
-		asyncData ({ $config: { baseURL } }) { 
+		asyncData ({ $config: { baseURL } }) {
 			const posts = await fetch(`${baseURL}/posts`)
       .then(res => res.json())
 		}
@@ -180,7 +180,7 @@ And inside your templates you can access it directly using `{{ $config.* }}`
 
 ```html
 <template>
-	<p>Our Url is: {{ $config.baseURL}}</p>
+  <p>Our Url is: {{ $config.baseURL}}</p>
 </template>
 ```
 
@@ -192,19 +192,19 @@ If you are already using the env variable in your script tags such as in async d
 async asyncData ({ env }) {
 ```
 
- then you can just replace env for $config when passing into the context. Here we also pass in the key from the config that we want to access. In this case baseURL.
+then you can just replace env for \$config when passing into the context. Here we also pass in the key from the config that we want to access. In this case baseURL.
 
 ```js
 async asyncData ({ $config: { baseURL } }) {
 ```
 
-Then instead of using env.apiUrl 
+Then instead of using env.apiUrl
 
 ```js
 const posts = await fetch(`${env.baseUrl}/posts`)
 ```
 
-you can use baseUrl direct in your code as we have already passed this in into the config option above and therefore we don't have to reference $config in our fetch.
+you can use baseUrl direct in your code as we have already passed this in into the config option above and therefore we don't have to reference \$config in our fetch.
 
 ```js
 const posts = await fetch(`${baseURL}/posts`)
@@ -212,13 +212,13 @@ const posts = await fetch(`${baseURL}/posts`)
 
 ## Migrating your config values in your templates
 
-If you have code that is using the env variables you can migrate to using the $config option. For example if in your code you had
+If you have code that is using the env variables you can migrate to using the \$config option. For example if in your code you had
 
 ```html
 <p>{{process.env.baseURL}}</p>
 ```
 
-You can change this by using $config instead
+You can change this by using \$config instead
 
 ```html
 <p>{{$config.baseURL}}</p>
@@ -226,7 +226,7 @@ You can change this by using $config instead
 
 ## Expand/Interpolation Support
 
-Expand for run time config happens only if there is already a key. 
+Expand for run time config happens only if there is already a key.
 
 `.env`
 
@@ -240,11 +240,11 @@ API_SECRET=1234
 export default {
   privateRuntimeConfig: {
     API_SECRET: ''
-  },
+  }
 }
 ```
 
-Interpolation allows nesting env vars. 
+Interpolation allows nesting env vars.
 
 `.env`
 
@@ -258,7 +258,8 @@ PUBLIC_URL=https://nuxtjs.org
 ```js
 export default {
   privateRuntimeConfig: {
-		baseURL: '${PUBLIC_URL}${BASE_URL}',  },
+    baseURL: '${PUBLIC_URL}${BASE_URL}'
+  }
 }
 ```
 
@@ -277,7 +278,6 @@ export default {
 ✅ Follow JS naming convention (secretKey rather than SECRET_KEY) for runtimeConfig
 
 ✅ Prefer using runtimeConfig rather than `env` option
-
 
 ## What to do next
 

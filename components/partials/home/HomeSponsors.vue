@@ -25,9 +25,9 @@
           <h2
             class="uppercase text text-light-onSurfacePrimary dark:text-dark-onSurfacePrimary font-medium pb-8 transition-colors duration-300 ease-linear"
           >
-            <span class="pb-2 border-b-2 border-nuxt-lightgreen">{{
-              groupKey
-            }}</span>
+            <span class="pb-2 border-b-2 border-nuxt-lightgreen">
+              {{ groupKey }}
+            </span>
           </h2>
           <a
             v-for="(sponsor, i) in group"

@@ -15,14 +15,14 @@ position: 2
 </template>
 
 <style lang="sass">
-.red
-  color: red
+  .red
+    color: red
 </style>
 
 <style lang="scss">
-.red {
-  color: red
-}
+  .red {
+    color: red;
+  }
 </style>
 ```
 

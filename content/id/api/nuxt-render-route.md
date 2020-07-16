@@ -10,12 +10,12 @@ position: 203
 
 - Type: `Function`
 - Argumen:
-    1. `String` : rute untuk di-render
-    2. *Optional*, `Object`, `context` yang diberikan, kunci yang tersedia: `req` & `res`
+  1. `String` : rute untuk di-render
+  2. _Optional_, `Object`, `context` yang diberikan, kunci yang tersedia: `req` & `res`
 - Returns: `Promise`
-    - `html`: `String`
-    - `error`: `null` atau `Object`
-    - `redirected`: `false` atau `Object`
+  - `html`: `String`
+  - `error`: `null` atau `Object`
+  - `redirected`: `false` atau `Object`
 
 > Me-render rute tertentu dengan konteks tertentu.
 
@@ -41,12 +41,10 @@ new Builder(nuxt)
   .build()
   .then(() => nuxt.renderRoute('/'))
   .then(({ html, error, redirected }) => {
-  // `html` will be always a string
-
+    // `html` will be always a string
     // `error` not null when the error layout is displayed, the error format is:
     // { statusCode: 500, message: 'My error message' }
-
-  // `redirected` is not `false` when `redirect()` has been used in `data()` or `fetch()`
-  // { path: '/other-path', query: {}, status: 302 }
+    // `redirected` is not `false` when `redirect()` has been used in `data()` or `fetch()`
+    // { path: '/other-path', query: {}, status: 302 }
   })
 ```

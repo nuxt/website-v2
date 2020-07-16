@@ -11,14 +11,14 @@ Nuxt.js は babel のデフォルトの設定用の公式の [@vue/babel-preset-
 
 ```html
 <script>
-export default {
-  data () {
-    return { name: 'World' }
-  },
-  render (h) {
-    return <h1 class="red">{this.name}</h1>
+  export default {
+    data() {
+      return { name: 'World' }
+    },
+    render(h) {
+      return <h1 class="red">{this.name}</h1>
+    }
   }
-}
 </script>
 ```
 

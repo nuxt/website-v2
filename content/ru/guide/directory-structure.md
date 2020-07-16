@@ -81,12 +81,12 @@ _Этот файл переименовывать нельзя._
 
 ## Псевдонимы
 
-| Псевдоним | Папка |
-|-----|------|
-| ~ | / |
-| ~assets | /assets |
+| Псевдоним   | Папка       |
+| ----------- | ----------- |
+| ~           | /           |
+| ~assets     | /assets     |
 | ~components | /components |
-| ~pages | /pages |
-| ~plugins | /plugins |
-| ~static | /static |
-| ~store | /store |
+| ~pages      | /pages      |
+| ~plugins    | /plugins    |
+| ~static     | /static     |
+| ~store      | /store      |

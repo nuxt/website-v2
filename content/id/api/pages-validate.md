@@ -1,7 +1,6 @@
 ---
 title: 'API: Metode validitas'
-description: Nuxt.js memungkinkan Anda menentukan metode validator di dalam komponen
-  rute dinamis Anda.
+description: Nuxt.js memungkinkan Anda menentukan metode validator di dalam komponen rute dinamis Anda.
 menu: validate
 category: pages
 position: 30
@@ -26,7 +25,7 @@ Jika metode validitas tidak mengembalikan nilai `true` , Nuxt.js secara otomatis
 
 ```js
 export default {
-  validate ({ params }) {
+  validate({ params }) {
     // Harus berupa angka
     return /^\d+$/.test(params.id)
   }

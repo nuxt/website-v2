@@ -7,8 +7,7 @@ position: 4
 
 ### Méthode recommandée
 
-S'il est présent, renommez ou supprimez le `postcss.config.js` dans votre répertoire de projet. Ensuite, dans votre 
-fichier `nuxt.config.js`, ajoutez ce qui suit:
+S'il est présent, renommez ou supprimez le `postcss.config.js` dans votre répertoire de projet. Ensuite, dans votre fichier `nuxt.config.js`, ajoutez ce qui suit:
 
 ```js
 export default {

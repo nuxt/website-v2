@@ -19,8 +19,11 @@ import path from 'path'
 export default {
   hooks: {
     build: {
-      done (builder) {
-        const extraFilePath = path.join(builder.nuxt.options.buildDir, 'extra-file')
+      done(builder) {
+        const extraFilePath = path.join(
+          builder.nuxt.options.buildDir,
+          'extra-file'
+        )
         fs.writeFileSync(extraFilePath, 'Something extra')
       }
     }
@@ -46,13 +49,11 @@ export default {
 
 これはおそらくエッジケースで、 _nuxt.config.js_ における `router.base` のポイントは Web サーバーがドメインルート以外の場所で Nuxt を提供する時のためのものです。
 
-しかし、ローカル開発中に _localhost_ にアクセスすると、router.base が / でない場合は 404 が返されてしまいます。
-フックを設定することでこれを防ぐことができます。
+しかし、ローカル開発中に _localhost_ にアクセスすると、router.base が / でない場合は 404 が返されてしまいます。フックを設定することでこれを防ぐことができます。
 
 リダイレクトは、プロダクション用の Web サイトでは最適なユースケースではないかもしれませんが、これはフックを活用するのに役立ちます。
 
-まずはじめに、 [`router.base` を変更できます](/api/configuration-router#base)
-`nuxt.config.js` を更新してみましょう:
+まずはじめに、 [`router.base` を変更できます](/api/configuration-router#base) `nuxt.config.js` を更新してみましょう:
 
 ```js
 // nuxt.config.js
@@ -84,7 +85,7 @@ export default {
    // file: hooks/render.js
    import redirectRootToPortal from './route-redirect-portal'
 
-   export default (nuxtConfig) => {
+   export default nuxtConfig => {
      const router = Reflect.has(nuxtConfig, 'router') ? nuxtConfig.router : {}
      const base = Reflect.has(router, 'base') ? router.base : '/portal'
 
@@ -93,7 +94,7 @@ export default {
         * 'render:setupMiddleware'
         * {@link node_modules/nuxt/lib/core/renderer.js}
         */
-       setupMiddleware (app) {
+       setupMiddleware(app) {
          app.use('/', redirectRootToPortal(base))
        }
      }
@@ -131,7 +132,7 @@ export default {
     * @param {Function} next ミドルウェアのコールバック
     */
    export default desiredContextRoot =>
-     function projectHooksRouteRedirectPortal (req, res, next) {
+     function projectHooksRouteRedirectPortal(req, res, next) {
        const desiredContextRootRegExp = new RegExp(`^${desiredContextRoot}`)
        const _parsedUrl = Reflect.has(req, '_parsedUrl') ? req._parsedUrl : null
        const url = _parsedUrl !== null ? _parsedUrl : parseurl(req)

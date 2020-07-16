@@ -31,7 +31,7 @@ position: 102
 
 ### Layouts 디렉토리
 
-`layouts` 디렉토리는 애플리케이션의 레이아웃을 포함하는 디렉토리입니다. 레이아웃은 여러분의 페이지의 모습이나 느낌을 변경하는 데 사용됩니다(예를 들어 사이드바를 포함하는 것 같은).
+`layouts` 디렉토리는 애플리케이션의 레이아웃을 포함하는 디렉토리입니다. 레이아웃은 여러분의 페이지의 모습이나 느낌을 변경하는 데 사용됩니다(예를 들어 사이드바를포함하는 것 같은).
 
 _이 디렉토리 이름은 추가적인 설정 없이는 변경할 수 없습니다._
 
@@ -39,7 +39,7 @@ _이 디렉토리 이름은 추가적인 설정 없이는 변경할 수 없습�
 
 ### Middleware 디렉토리
 
-`middleware` 디렉토리는 애플리케이션의 미들웨어를 포함하는 디렉토리 입니다. 미들웨어는 페이지나 레이아웃이 렌더링되기 전에 실행할 사용자 정의 함수를 정의할 수 있습니다.
+`middleware` 디렉토리는 애플리케이션의 미들웨어를 포함하는 디렉토리 입니다. 미들웨어는 페이지나 레이아웃이 렌더링되기 전에 실행할 사용자 정의 함수를 정의할 수있습니다.
 
 [Middleware의 동작에 대한 문서](/guide/routing#middleware)
 
@@ -59,7 +59,7 @@ _이 디렉토리 이름은 추가적인 설정 없이는 변경할 수 없습�
 
 ### Static 디렉토리
 
-`static` 디렉토리는 서버의 루트(`/static/robots.txt`는 `http://localhost:3000/robots.txt`로 접근 가능)에 바로 연결되고, 변경되지 않을 파일들을 담습니다(예를 들어, favicon과 같은).
+`static` 디렉토리는 서버의 루트(`/static/robots.txt`는 `http://localhost:3000/robots.txt`로 접근 가능)에 바로 연결되고, 변경되지 않을파일들을 담습니다(예를 들어, favicon과 같은).
 
 **예를 들어:** `/static/robots.txt`는 `/robots.txt`로 연결됩니다.
 
@@ -69,7 +69,7 @@ _이 디렉토리 이름은 추가적인 설정 없이는 변경할 수 없습�
 
 ### Store 디렉토리
 
-`store` 디렉토리는 [Vuex Store](http://vuex.vuejs.org) 파일을 포함하는 디렉토리 입니다. Vuex Store는 Nuxt.js에 의해 바로 사용이 가능하나, 기본적으로는 비활성화되어 있습니다. `index.js` 파일을 생성하면 프레임워크가 자동으로 Store를 활성화합니다.
+`store` 디렉토리는 [Vuex Store](http://vuex.vuejs.org) 파일을 포함하는 디렉토리입니다. Vuex Store는 Nuxt.js에 의해 바로 사용이 가능하나, 기본적으로는 비활성화되어 있습니다. `index.js` 파일을 생성하면 프레임워크가 자동으로 Store를 활성화합니다.
 
 _이 디렉토리 이름은 추가적인 설정 없이는 변경할 수 없습니다._
 
@@ -91,15 +91,15 @@ _이 파일의 이름은 변경할 수 없습니다._
 
 ## 별칭
 
-| 별칭 | 디렉토리 |
-|-----|------|
-| `~` or `@` | [srcDir](/api/configuration-srcdir) |
+| 별칭         | 디렉토리                              |
+| ------------ | ------------------------------------- |
+| `~` or `@`   | [srcDir](/api/configuration-srcdir)   |
 | `~~` or `@@` | [rootDir](/api/configuration-rootdir) |
 
 설정을 변경하지 않았다면, `srcDir` 은 `rootDir` 와 같습니다.
 
 <div class="Alert Alert--nuxt-green">
 
-<b>Info:</b> `vue` 템플릿 내에서 `assets` 이나 `static` 디렉토리에 링크할 필요가 있다면 `~assets/your_image.png`, `~static/your_image.png` 처럼 입력해야 합니다.
+<b>Info:</b> `vue` 템플릿 내에서 `assets` 이나 `static` 디렉토리에 링크할 필요가있다면 `~assets/your_image.png`, `~static/your_image.png` 처럼 입력해야 합니다.
 
 </div>

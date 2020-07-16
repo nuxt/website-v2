@@ -9,8 +9,7 @@ position: 107
 
 ## Webpack
 
-[vue-loader](http://vue-loader.vuejs.org/) automatically processes your style and template files with `css-loader` and the Vue template compiler out of the box.
-In this compilation process, all asset URLs such as `<img src="...">`, `background: url(...)` and CSS `@import` are resolved as module dependencies.
+[vue-loader](http://vue-loader.vuejs.org/) automatically processes your style and template files with `css-loader` and the Vue template compiler out of the box. In this compilation process, all asset URLs such as `<img src="...">`, `background: url(...)` and CSS `@import` are resolved as module dependencies.
 
 For example, we have this file tree:
 
@@ -21,21 +20,19 @@ For example, we have this file tree:
 ----| index.vue
 ```
 
-If you use `url('~assets/image.png')` in your CSS, it will be *translated* into `require('~/assets/image.png')`.
+If you use `url('~assets/image.png')` in your CSS, it will be _translated_ into `require('~/assets/image.png')`.
 
 <div class="Alert Alert--orange">
 
-**Warning:** Starting from Nuxt 2.0 the `~/` alias won't be resolved correctly in your CSS files.
-You must use `~assets` (without a slash) or the `@` alias in `url` CSS references, i.e. `background: url("~assets/banner.svg")`
+**Warning:** Starting from Nuxt 2.0 the `~/` alias won't be resolved correctly in your CSS files. You must use `~assets` (without a slash) or the `@` alias in `url` CSS references, i.e. `background: url("~assets/banner.svg")`
 
 </div>
-
 
 Or if you reference that image in your `pages/index.vue`:
 
 ```html
 <template>
-  <img src="~/assets/image.png">
+  <img src="~/assets/image.png" />
 </template>
 ```
 
@@ -56,7 +53,7 @@ For those two loaders, the default configuration is:
 
 ```js
 // https://github.com/nuxt/nuxt.js/blob/dev/packages/webpack/src/config/base.js#L297-L316
-[
+;[
   {
     test: /\.(png|jpe?g|gif|svg|webp)$/,
     loader: 'url-loader',
@@ -76,26 +73,23 @@ For those two loaders, the default configuration is:
 ]
 ```
 
-Which means that every file below 1 KB will be inlined as base-64 data URL.
-Otherwise, the image/font will be copied in its corresponding folder (under the `.nuxt` directory)
-with a name containing a version hash for better caching.
+Which means that every file below 1 KB will be inlined as base-64 data URL. Otherwise, the image/font will be copied in its corresponding folder (under the `.nuxt` directory) with a name containing a version hash for better caching.
 
 When launching our application with `nuxt`, our template in `pages/index.vue`:
 
 ```html
 <template>
-  <img src="~/assets/image.png">
+  <img src="~/assets/image.png" />
 </template>
 ```
 
 Will be transformed into:
 
 ```html
-<img src="/_nuxt/img/image.0c61159.png">
+<img src="/_nuxt/img/image.0c61159.png" />
 ```
 
 If you want to change the loader configurations, please use [build.extend](/api/configuration-build#extend).
-
 
 ## Static
 
@@ -109,8 +103,8 @@ In your code, you can then reference these files relative to the root (`/`):
 
 ```html
 <!-- Static image from static directory -->
-<img src="/my-image.png"/>
+<img src="/my-image.png" />
 
 <!-- webpacked image from assets directory -->
-<img src="~/assets/my-image-2.png"/>
+<img src="~/assets/my-image-2.png" />
 ```

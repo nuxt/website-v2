@@ -1,5 +1,5 @@
 ---
-title: "API: 유효성 검증된 메서드"
+title: 'API: 유효성 검증된 메서드'
 description: Nuxt.js는 당신의 동적 route 컴포넌트 안에서 유효성 검증 메서드를 정의합니다.
 menu: validate
 category: pages
@@ -19,11 +19,11 @@ validate({ params, query, store }) {
 
 Nuxt.js는 당신의 동적 route 컴포넌트 안에서 유효성 검증 메서드를 정의합니다 (예제: `pages/users/_id.vue`).
 
-유효성 검사에서 `true`가 나오지 않을 경우, Nuxt.js는 자동으로 404 에러 페이지를 로드합니다.
+유효성 검사에서 `true`가 나오지 않을 경우, Nuxt.js는 자동으로 404 에러 페이지를로드합니다.
 
 ```js
 export default {
-  validate ({ params }) {
+  validate({ params }) {
     // 숫자만 가능합니다.
     return /^\d+$/.test(params.id)
   }
@@ -34,7 +34,7 @@ export default {
 
 ```js
 export default {
-  validate ({ params, store }) {
+  validate({ params, store }) {
     // `params.id` 항목이 존재한다면 검사합니다.
     return store.state.categories.some(category => category.id === params.id)
   }

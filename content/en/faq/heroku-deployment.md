@@ -33,7 +33,7 @@ Heroku uses a [Procfile](https://devcenter.heroku.com/articles/procfile) (name t
 web: nuxt start
 ```
 
-This will instruct run the `nuxt start` command and tell heroku to direct external HTTP traffic to it. 
+This will instruct run the `nuxt start` command and tell heroku to direct external HTTP traffic to it.
 
 Finally, we can push the app on Heroku with:
 
@@ -42,9 +42,11 @@ git push heroku master
 ```
 
 To deploy a non-master branch to Heroku use:
+
 ```bash
 git push heroku develop:master
 ```
+
 where `develop` is the name of your branch.
 
 Voilà! Your Nuxt.js application is now hosted on Heroku!

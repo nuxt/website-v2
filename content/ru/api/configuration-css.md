@@ -11,9 +11,10 @@ position: 104
 > Nuxt.js позволяет указать глобальные CSS-файлы/модули/библиотеки (подключённые к каждой странице).
 
 - Type: `Array`
- - `String | Object`
+- `String | Object`
 
 Если элемент типа объект, то параметры следующие:
+
 - src: `String` (путь к файлу)
 - lang: `String` ([используется пре-процессор](/guide/pages#using-pre-processors))
 

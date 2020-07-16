@@ -1,12 +1,11 @@
 {
   "arrowParens": "avoid",
   "bracketSpacing": true,
-  "htmlWhitespaceSensitivity": "css",
   "insertPragma": false,
   "jsxBracketSameLine": false,
   "jsxSingleQuote": false,
   "printWidth": 80,
-  "proseWrap": "always",
+  "proseWrap": "never",
   "quoteProps": "as-needed",
   "requirePragma": false,
   "semi": false,
@@ -14,5 +13,6 @@
   "tabWidth": 2,
   "trailingComma": "none",
   "useTabs": false,
-  "vueIndentScriptAndStyle": true
+  "vueIndentScriptAndStyle": true,
+  "htmlWhitespaceSensitivity": "strict"
 }

@@ -240,7 +240,7 @@
   & pre {
     @apply rounded p-2 my-2 overflow-auto;
     & code {
-      @apply bg-transparent;
+      @apply bg-transparent p-0;
     }
   }
   & b,

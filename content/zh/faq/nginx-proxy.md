@@ -6,7 +6,7 @@ category: deployment
 position: 213
 ---
 
-# 使用nginx作为反向代理
+# 使用 nginx 作为反向代理
 
 ```nginx
 map $sent_http_content_type $expires {
@@ -38,21 +38,22 @@ server {
 }
 ```
 
-# 将nginx与生成的页面和缓存代理一起使用
+# 将 nginx 与生成的页面和缓存代理一起使用
 
-如果您有一个定期更改内容的大量网站，您可能希望受益于Nuxt生成功能和[nginx缓存](https://www.nginx.com/blog/nginx-caching-guide)。
+如果您有一个定期更改内容的大量网站，您可能希望受益于 Nuxt 生成功能和[nginx 缓存](https://www.nginx.com/blog/nginx-caching-guide)。
 
 以下是示例配置。 请记住：
-- 根文件夹 应与 [配置generate.dir](/api/configuration-generate#dir) 设置相同
-- 由Nuxt设置的过期标头被剥离 (由于缓存)
-- Nuxt 和 nginx都可以设置额外的标题，建议选择一个(如果有疑问，请选择nginx)
+
+- 根文件夹 应与 [配置 generate.dir](/api/configuration-generate#dir) 设置相同
+- 由 Nuxt 设置的过期标头被剥离 (由于缓存)
+- Nuxt 和 nginx 都可以设置额外的标题，建议选择一个(如果有疑问，请选择 nginx)
 - 如果您的站点大部分是静态的，请增加 `proxy_cache_path inactive` 和 `proxy_cache_valid` 数值
 
-如果您不生成路由但仍希望受益于nginx缓存：
+如果您不生成路由但仍希望受益于 nginx 缓存：
+
 - 删除 `root` 配置
 - 将 `location @proxy {` 更改为 `location / {`
-- 删除其他2个 `location` 配置
-
+- 删除其他 2 个 `location` 配置
 
 ```nginx
 proxy_cache_path  /data/nginx/cache levels=1:2 keys_zone=nuxt-cache:25m max_size=1g inactive=60m use_temp_path=off;
@@ -122,7 +123,7 @@ server {
 }
 ```
 
-# Laravel Forge的 nginx 配置
+# Laravel Forge 的 nginx 配置
 
 将 `YOUR_WEBSITE_FOLDER` 更改为您的网站文件夹，将 `YOUR_WEBSITE_DOMAIN` 更改为您的网站网址。 Laravel Forge 将为您填写这些，但一定要仔细检查。
 
@@ -181,7 +182,7 @@ include forge-conf/YOUR_WEBSITE_FOLDER/after/*;
 
 # 使用 TLS 配置 Laravel Forge
 
-最好让 Laravel Forge 为您编辑 `nginx.conf` ，点击 Sites -> YOUR_WEBSITE_DOMAIN (SERVER_NAME)，然后点击SSL并从其中一个提供商安装证书，请记住激活证书，你的 `nginx.conf` 现在应该是这样的：
+最好让 Laravel Forge 为您编辑 `nginx.conf` ，点击 Sites -> YOUR_WEBSITE_DOMAIN (SERVER_NAME)，然后点击 SSL 并从其中一个提供商安装证书，请记住激活证书，你的 `nginx.conf` 现在应该是这样的：
 
 ```nginx
 # FORGE CONFIG (DOT NOT REMOVE!)

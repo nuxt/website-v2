@@ -10,9 +10,11 @@ Some mobile Safari versions will automatically transform phone numbers into link
 If you include telephone numbers in your Nuxt page, you have two options.
 
 ## Use a meta tag to stop the transformation
+
 ```html
-<meta name="format-detection" content="telephone=no">
+<meta name="format-detection" content="telephone=no" />
 ```
+
 ## Wrap your phone numbers in links
 
 ```html
@@ -21,5 +23,4 @@ If you include telephone numbers in your Nuxt page, you have two options.
 <template>
   <a href="tel: +7 (982) 536-50-77">+7 (982) 536-50-77</a>
 </template>
-
 ```

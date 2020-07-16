@@ -1,5 +1,5 @@
 ---
-title: "The modules Property"
+title: 'The modules Property'
 description: Modules are Nuxt.js extensions which can extend its core functionality and add endless integrations.
 menu: modules
 category: configuration
@@ -16,29 +16,27 @@ Example (`nuxt.config.js`):
 export default {
   modules: [
     // Using package name
-    "@nuxtjs/axios",
+    '@nuxtjs/axios',
 
     // Relative to your project srcDir
-    "~/modules/awesome.js",
+    '~/modules/awesome.js',
 
     // Providing options
-    ["@nuxtjs/google-analytics", { ua: "X1234567" }],
+    ['@nuxtjs/google-analytics', { ua: 'X1234567' }],
 
     // Inline definition
-    function() {}
+    function () {}
   ]
-};
+}
 ```
 
 Module developers usually provide additionally needed steps and details for usage.
 
 Nuxt.js tries to resolve each item in the modules array using node require path (in the `node_modules`) and then will be resolved from project `srcDir` if `~` alias is used. Modules are executed sequentially so the order is important.
 
-Modules should export a function to enhance nuxt build/runtime and optionally return a promise until their job is finished.
-Note that they are required at runtime so should be already transpiled if depending on modern ES6 features.
+Modules should export a function to enhance nuxt build/runtime and optionally return a promise until their job is finished. Note that they are required at runtime so should be already transpiled if depending on modern ES6 features.
 
-Please see [Modules Guide](/guide/modules) for more detailed information on how they work or if interested developing your own module.
-Also we have provided an official [Modules](https://github.com/nuxt-community/awesome-nuxt#modules) Section listing dozens of production ready modules made by Nuxt Community.
+Please see [Modules Guide](/guide/modules) for more detailed information on how they work or if interested developing your own module. Also we have provided an official [Modules](https://github.com/nuxt-community/awesome-nuxt#modules) Section listing dozens of production ready modules made by Nuxt Community.
 
 ## `buildModules`
 

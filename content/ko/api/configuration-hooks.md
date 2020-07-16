@@ -1,5 +1,5 @@
 ---
-title: "API: hooks 프로퍼티"
+title: 'API: hooks 프로퍼티'
 description: Hooks는 Nuxt event를 감지하는 리스너로써 일반적으로 Nuxt 모듈에서 사용되지만 `nuxt.config.js`에서도 사용할 수 있습니다.
 menu: hooks
 category: configuration
@@ -19,8 +19,11 @@ import path from 'path'
 export default {
   hooks: {
     build: {
-      done (builder) {
-        const extraFilePath = path.join(builder.nuxt.options.buildDir, 'extra-file')
+      done(builder) {
+        const extraFilePath = path.join(
+          builder.nuxt.options.buildDir,
+          'extra-file'
+        )
         fs.writeFileSync(extraFilePath, 'Something extra')
       }
     }
@@ -44,10 +47,9 @@ export default {
 
 여러분이 `/` 대신에 `/portal`에서 페이지를 제공하길 원한다고 가정해봅시다.
 
-이것은 거의 경계조건에 가까울테지만, _nuxt.config.js_의 `router.base`는 웹서버가 Nuxt를 도메인 루트가 아닌 곳에서 제공할 때 사용하도록 만들어졌습니다.
+이것은 거의 경계조건에 가까울테지만, *nuxt.config.js*의 `router.base`는 웹서버가 Nuxt를 도메인 루트가 아닌 곳에서 제공할 때 사용하도록 만들어졌습니다.
 
-하지만 router.base가 /가 아닌데 로컬 개발환경에서 주소창에 _localhost_를 입력한다면 404 응답을 받게 됩니다.
-이런 문제를 방지하기 위해서 여러분들은 Hook을 설정할 수 있습니다.
+하지만 router.base가 /가 아닌데 로컬 개발환경에서 주소창에 *localhost*를 입력한다면 404 응답을 받게 됩니다. 이런 문제를 방지하기 위해서 여러분들은 Hook을 설정할 수 있습니다.
 
 리다이렉트가 production 웹사이트에 가장 적합한 활용사례는 아니겠지만 hook을 활용하는데는 도움이 됩니다.
 
@@ -83,7 +85,7 @@ export default {
    // file: hooks/render.js
    import redirectRootToPortal from './route-redirect-portal'
 
-   export default (nuxtConfig) => {
+   export default nuxtConfig => {
      const router = Reflect.has(nuxtConfig, 'router') ? nuxtConfig.router : {}
      const base = Reflect.has(router, 'base') ? router.base : '/portal'
 
@@ -92,7 +94,7 @@ export default {
         * 'render:setupMiddleware'
         * {@link node_modules/nuxt/lib/core/renderer.js}
         */
-       setupMiddleware (app) {
+       setupMiddleware(app) {
          app.use('/', redirectRootToPortal(base))
        }
      }
@@ -130,7 +132,7 @@ export default {
     * @param {Function} next middleware callback
     */
    export default desiredContextRoot =>
-     function projectHooksRouteRedirectPortal (req, res, next) {
+     function projectHooksRouteRedirectPortal(req, res, next) {
        const desiredContextRootRegExp = new RegExp(`^${desiredContextRoot}`)
        const _parsedUrl = Reflect.has(req, '_parsedUrl') ? req._parsedUrl : null
        const url = _parsedUrl !== null ? _parsedUrl : parseurl(req)
@@ -149,4 +151,4 @@ export default {
      }
    ```
 
-이후, 동료가 실수로 개발 환경에서 `/`를 입력한다면 Nuxt는 자동으로 `/portal`로 리다이렉트 시켜줄 것입니다.
+이후, 동료가 실수로 개발 환경에서 `/`를 입력한다면 Nuxt는 자동으로 `/portal`로리다이렉트 시켜줄 것입니다.

@@ -1,5 +1,5 @@
 ---
-title: "API: La propriété globalName"
+title: 'API: La propriété globalName'
 description: Nuxt.js vous permet de personnaliser l'ID global utilisé dans le modèle HTML principal ainsi que le nom de l'instance principale de Vue et d'autres options.
 menu: globalName
 category: configuration
@@ -40,4 +40,3 @@ Il doit s'agir d'un identifiant JavaScript valide.
   loadedCallback: globalName => `_on${_.capitalize(globalName)}Loaded`
 },
 ```
-

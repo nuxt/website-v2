@@ -18,7 +18,9 @@ position: 7
 ```sh
 nuxt --hostname myhost --port 3333
 ```
+
 もしくは
+
 ```js
 "scripts": {
   "dev": "nuxt --hostname myhost --port 3333"
@@ -38,7 +40,6 @@ export default {
   // その他の設定
 }
 ```
-
 
 ## 環境変数 NUXT_HOST と NUXT_PORT を使う:
 

@@ -46,7 +46,7 @@ questions:
 
 ![nuxt-js-context-keys](/guides/context.jpeg)
 
-The `context` object is available in specific Nuxt functions like [asyncData](/guides/features/data-fetching#async-data), [plugins](/guides/directory-structure/plugins), [middleware](/guides/directory-structure/middleware) and [nuxtServerInit](http://localhost:3000/guides/directory-structure/store#the-nuxtserverinit-action). It provides *additional* and often optional information about the current request to the application.
+The `context` object is available in specific Nuxt functions like [asyncData](/guides/features/data-fetching#async-data), [plugins](/guides/directory-structure/plugins), [middleware](/guides/directory-structure/middleware) and [nuxtServerInit](http://localhost:3000/guides/directory-structure/store#the-nuxtserverinit-action). It provides _additional_ and often optional information about the current request to the application.
 
 First and foremost, the context is used to provide access to other parts of the Nuxt.js application, e.g. the Vuex store or the underlying `connect` instance. Thus, we have the `req` and `res` objects in the context available on the server side and `store` always available. But with time, the context was extended with many other helpful variables and shortcuts. Now we have access to HMR functionalities in `development` mode, the current `route`, page `params` and `query`, as well as the option to access environment variables through the context. Furthermore, module functions and helpers can be exposed through the context to be available on both - the client and the server side.
 
@@ -67,21 +67,22 @@ function (context) { // Could be asyncData, nuxtServerInit, ...
     redirect,
     error
   } = context
-  
+
   // Only available on the Server-side
   if (process.server) {
     const { req, res, beforeNuxtRender } = context
   }
-  
+
   // Only available on the Client-side
   if (process.client) {
     const { from, nuxtState } = context
   }
 }
 ```
+
 <base-alert>
 
-The *context* we refer to here is not to be confused with the `context` object available in [Vuex Actions](https://vuex.vuejs.org/guide/actions.html) or the one available in the `build.extend` function in your `nuxt.config.js`. These are all not related to each other!
+The _context_ we refer to here is not to be confused with the `context` object available in [Vuex Actions](https://vuex.vuejs.org/guide/actions.html) or the one available in the `build.extend` function in your `nuxt.config.js`. These are all not related to each other!
 
 </base-alert>
 
@@ -95,17 +96,17 @@ The context directly exposes possible dynamic parameters of the route via `conte
 
 Also, we wrap the API call in a `try/catch` statement to handle potential errors. With the `context.error` function, we can directly show Nuxt's error page and pass in the occurred error.
 
-
 ```js{}[pages/posts/_id.vue]
 export default {
-  async asyncData (context) {
+  async asyncData(context) {
     const id = context.params.id
-    try { 
-		  // Using the nuxtjs/http module here exposed via context.app
-	    const post = await context.app.$http.$get(`https://api.nuxtjs.dev/posts/${id}`)
+    try {
+      // Using the nuxtjs/http module here exposed via context.app
+      const post = await context.app.$http.$get(
+        `https://api.nuxtjs.dev/posts/${id}`
+      )
       return { post }
-    } 
-		catch (error) {
+    } catch (error) {
       context.error(error) // Show the nuxt error page with the thrown error
     }
   }
@@ -114,18 +115,16 @@ export default {
 
 With [ES6](https://hacks.mozilla.org/2015/05/es6-in-depth-destructuring/) we can use this syntax to descructure our context object. We can pass in the objects we want to have access to and then we can use them in the code without using the word context.
 
-
 ```js{}[pages/posts/_id.vue]
 export default {
-  async asyncData ({params, $http, error}) {
+  async asyncData({ params, $http, error }) {
     const id = params.id
-    
-    try { 
-		  // Using the nuxtjs/http module here exposed via context.app
-	    const post = await $http.$get(`https://api.nuxtjs.dev/posts/${id}`)
+
+    try {
+      // Using the nuxtjs/http module here exposed via context.app
+      const post = await $http.$get(`https://api.nuxtjs.dev/posts/${id}`)
       return { post }
-    } 
-		catch (error) {
+    } catch (error) {
       error(error) // Show the nuxt error page with the thrown error
     }
   }
@@ -136,12 +135,12 @@ Want to use query parameters instead? You then use [context.query.id](http://con
 
 ### Redirecting users & accessing the store
 
-Accessing the Vuex store (when you have it set up through the `store` directory) is also possible through the context. It provides a `store` object which can be treated as `this.$store` in Vue components.
-In addition, we use the `redirect` method, an exposed helper through the context, to redirect the user in case the `authenticated` state is falsy.
+Accessing the Vuex store (when you have it set up through the `store` directory) is also possible through the context. It provides a `store` object which can be treated as `this.$store` in Vue components. In addition, we use the `redirect` method, an exposed helper through the context, to redirect the user in case the `authenticated` state is falsy.
 
 ```js
 export default {
-  middleware ({ store, redirect }) { // retrieving keys via object destructuring
+  middleware({ store, redirect }) {
+    // retrieving keys via object destructuring
     const isAuthenticated = store.state.authenticated
     if (!isAuthenticated) {
       return redirect('/login')
@@ -158,7 +157,7 @@ export default {
 
 Besides the shortcuts in the context, there are also other tiny helpers present in your Nuxt.js application.
 
-## $nuxt: The Nuxt.js helper
+## \$nuxt: The Nuxt.js helper
 
 `$nuxt` is a helper designed to improve the user experience and to be an escape hatch in some situations. It is accessible via `this.$nuxt` in Vue components and via `window.$nuxt` otherwise on the client side.
 
@@ -166,12 +165,11 @@ Besides the shortcuts in the context, there are also other tiny helpers present 
 
 The `$nuxt` helper provides a quick way to find out whether the internet connection of a user is present or not: It exposes the boolean values `isOffline` and `isOnline`. We can use these to show a message as soon as the user is offline (for example).
 
-
 ```html{}[layouts/default.vue]
 <template>
   <div>
     <div v-if="$nuxt.isOffline">You are offline</div>
-    <Nuxt/>
+    <Nuxt />
   </div>
 </template>
 ```
@@ -188,23 +186,23 @@ You can do so, by using `this.$nuxt.refresh()`!
 
 ```html
 <template>
- <div>
-   <div>{{ content }}</div>
-   <button @click="refresh">Refresh</button>
- </div>
+  <div>
+    <div>{{ content }}</div>
+    <button @click="refresh">Refresh</button>
+  </div>
 </template>
 
 <script>
-export default {
-  asyncData () {
-   return { content: 'Created at: ' + new Date() }
-  },
-  methods: {
-    refresh () {
-      this.$nuxt.refresh()
+  export default {
+    asyncData() {
+      return { content: 'Created at: ' + new Date() }
+    },
+    methods: {
+      refresh() {
+        this.$nuxt.refresh()
+      }
     }
   }
-}
 </script>
 ```
 
@@ -214,7 +212,7 @@ With `$nuxt`, you can also control Nuxt's loading bar programmatically via `this
 
 ```js
 export default {
-  mounted () {
+  mounted() {
     this.$nextTick(() => {
       this.$nuxt.$loading.start()
       setTimeout(() => this.$nuxt.$loading.finish(), 500)
@@ -227,7 +225,7 @@ Read more in the corresponding loading feature chapter
 
 ## onNuxtReady helper
 
-If you want to run some scripts *after* your Nuxt.js application has been loaded and is ready, you can use the `window.onNuxtReady` function. This can be useful when you want to execute a function on the client-side without increasing the time to interactive of your site.
+If you want to run some scripts _after_ your Nuxt.js application has been loaded and is ready, you can use the `window.onNuxtReady` function. This can be useful when you want to execute a function on the client-side without increasing the time to interactive of your site.
 
 ```js
 window.onNuxtReady(() => {
@@ -239,18 +237,17 @@ window.onNuxtReady(() => {
 
 Nuxt.js injects three boolean values into the global `process` object which will help you to determine whether your app was rendered on the server or fully on the client, as well as checking for static site generation. These helpers are available across your application and are commonly used in `asyncData` userland code.
 
-
 ```html{}[pages/about.vue]
 <template>
   <h1>I am rendered on the {{ renderedOn }} side</h1>
 </template>
 
 <script>
-export default {
-  asyncData () {
-    return { renderedOn: process.client ? 'client' : 'server' }
+  export default {
+    asyncData() {
+      return { renderedOn: process.client ? 'client' : 'server' }
+    }
   }
-}
 </script>
 ```
 

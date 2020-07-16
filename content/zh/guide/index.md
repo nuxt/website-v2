@@ -1,6 +1,6 @@
 ---
 title: 关于 Nuxt.js
-description: "2016 年 10 月 25 日, zeit.co 背后的团队对外发布了 Next.js，一个 React 的服务端渲染应用框架。几小时后，与 Next.js 异曲同工，一个基于 Vue.js 的服务端渲染应用框架应运而生，我们称之为：Nuxt.js。"
+description: '2016 年 10 月 25 日, zeit.co 背后的团队对外发布了 Next.js，一个 React 的服务端渲染应用框架。几小时后，与 Next.js 异曲同工，一个基于 Vue.js 的服务端渲染应用框架应运而生，我们称之为：Nuxt.js。'
 category: prologue
 position: 1
 ---
@@ -11,7 +11,7 @@ position: 1
 
 Nuxt.js 是一个基于 Vue.js 的通用应用框架。
 
-通过对客户端/服务端基础架构的抽象组织，Nuxt.js 主要关注的是应用的 **UI渲染**。
+通过对客户端/服务端基础架构的抽象组织，Nuxt.js 主要关注的是应用的 **UI 渲染**。
 
 我们的目标是创建一个灵活的应用框架，你可以基于它初始化新项目的基础结构代码，或者在已有 Node.js 项目中使用 Nuxt.js。
 
@@ -28,6 +28,7 @@ Nuxt.js 预设了利用 Vue.js 开发**服务端渲染**的应用所需要的各
 ![基于 Vue、Webpack 和 Babel](https://i.imgur.com/avEUftE.png)
 
 Nuxt.js 集成了以下组件/框架，用于开发完整而强大的 Web 应用：
+
 - [Vue 2](https://github.com/vuejs/vue)
 - [Vue-Router](https://github.com/vuejs/vue-router)
 - [Vuex](https://github.com/vuejs/vuex) (当配置了 [Vuex 状态树配置项](/guide/vuex-store) 时才会引入)
@@ -59,20 +60,19 @@ Nuxt.js 集成了以下组件/框架，用于开发完整而强大的 Web 应用
 
 ![nuxt-schema](/nuxt-schema.svg)
 
-## 服务端渲染(通过SSR)
+## 服务端渲染(通过 SSR)
 
-您可以使用**Nuxt.js**作为框架来处理项目的所有UI呈现。
+您可以使用**Nuxt.js**作为框架来处理项目的所有 UI 呈现。
 
 启动时`nuxt`，它将启动具有热更新加载的开发服务器，并且[Vue 服务器端渲染](https://ssr.vuejs.org/en/)配置为自动为服务器呈现应用程序。
 
 ### 单页应用程序 (SPA)
 
-如果您不想使用服务器端渲染或需要应用程序提供静态托管，则可以使用 `nuxt --spa` 命令即可使用 `SPA` 模式。
-它为您提供了强大的SPA部署机制，无需使用 `Node.js` 来运行应用程序或任何特殊的服务器端处理。
+如果您不想使用服务器端渲染或需要应用程序提供静态托管，则可以使用 `nuxt --spa` 命令即可使用 `SPA` 模式。它为您提供了强大的 SPA 部署机制，无需使用 `Node.js` 来运行应用程序或任何特殊的服务器端处理。
 
 可以查看 Nuxt.js 提供的各种 [命令](/guide/commands) 来了解更多相关使用信息。
 
-如果你的项目有自己的 Web 服务器（例如用 Express.js 启动的Web服务），你仍然可以将 Nuxt.js 当作是中间件来使用，负责UI渲染部分的功能。在开发通用的 Web 应用过程中，Nuxt.js 是可插拔的，没有太多的限制，可通过 [开发编码中使用Nuxt.js](/api/nuxt) 了解更多的信息。
+如果你的项目有自己的 Web 服务器（例如用 Express.js 启动的 Web 服务），你仍然可以将 Nuxt.js 当作是中间件来使用，负责 UI 渲染部分的功能。在开发通用的 Web 应用过程中，Nuxt.js 是可插拔的，没有太多的限制，可通过 [开发编码中使用 Nuxt.js](/api/nuxt) 了解更多的信息。
 
 ## 静态化 (预渲染)
 
@@ -100,6 +100,7 @@ Nuxt.js 集成了以下组件/框架，用于开发完整而强大的 Web 应用
 ```
 
 静态化后变成：
+
 ```
 -| dist/
 ----| about/
@@ -107,7 +108,7 @@ Nuxt.js 集成了以下组件/框架，用于开发完整而强大的 Web 应用
 ----| index.html
 ```
 
-静态化可以让你在任何一个静态站点服务商托管你的Web应用。
+静态化可以让你在任何一个静态站点服务商托管你的 Web 应用。
 
 Nuxt.js 的官网就是一个绝佳的例子, 它静态化后托管在 [Netlify](https://www.netlify.com) 上，也可以参考我们的 [源代码](https://github.com/nuxt/nuxtjs.org) 。
 
@@ -118,12 +119,12 @@ Nuxt.js 的官网就是一个绝佳的例子, 它静态化后托管在 [Netlify]
 3. 运行 `npm run generate`
 4. 生成 `dist` 目录
 
-我们现在就有了一个 **无服务端的自动静态化的Web应用** :)
+我们现在就有了一个 **无服务端的自动静态化的 Web 应用** :)
 
 我们进一步考虑下电商应用的场景，利用 `nuxt generate`，是不是可以将应用静态化后部署在 CDN 服务器，每当一个商品的库存发生变化时，就重新静态化下，更新下商品的库存。但是如果用户访问的时候恰巧更新了呢？我们可以通过调用电商的 API ，保证用户访问的是最新的数据。这样相对于传统的电商应用来说，这种静态化的方案可以大大节省服务器的资源。
 
 <div class="Alert">
 
-查看 [如何在Netlify上部署？](/faq/netlify-deployment) 来获取更多相关信息。
+查看 [如何在 Netlify 上部署？](/faq/netlify-deployment) 来获取更多相关信息。
 
 </div>

@@ -47,32 +47,30 @@ Composition of a View in Nuxt.js
 
 Every Page component is a Vue component but Nuxt.js adds special attributes and functions to make the development of your application as easy as possible.
 
-
-
 ```html{}[pages/index.vue]
 <template>
   <h1 class="red">Hello World</h1>
 </template>
 
 <script>
-export default {
-  head() {
-    // Set Meta Tags for this Page
-  },
-  // ...
-}
+  export default {
+    head() {
+      // Set Meta Tags for this Page
+    }
+    // ...
+  }
 </script>
 
 <style>
-.red {
-  color: red;
-}
+  .red {
+    color: red;
+  }
 </style>
 ```
 
 ## Properties of a page component
 
-There are many properties of the page component such as the head property in the example above. 
+There are many properties of the page component such as the head property in the example above.
 
 ➡️ See the [Directory Structure book](/guides/directory-structure/nuxt) to learn more about all the properties can use on your page
 
@@ -84,10 +82,9 @@ Layouts are a great help when you want to change the look and feel of your Nuxt.
 
 You can define a default layout by adding a `default.vue` file inside the layouts directory. This will be used for all pages that don't have a layout specified. The only thing you need to include in the layout is the `<Nuxt />` component which renders the page component.
 
-
 ```html{}[layouts/default.vue]
 <template>
-  <Nuxt/>
+  <Nuxt />
 </template>
 ```
 
@@ -95,7 +92,7 @@ You can define a default layout by adding a `default.vue` file inside the layo
 
 ### Custom Layout
 
-You can create custom layouts by adding a `.vue` file to the layouts directory. In order to use the custom layout you need to set the `layout` property in the page component where you want to use that layout. The value will be the name of the custom layout that you have created. 
+You can create custom layouts by adding a `.vue` file to the layouts directory. In order to use the custom layout you need to set the `layout` property in the page component where you want to use that layout. The value will be the name of the custom layout that you have created.
 
 To create a blog layout add a `blog.vue` file to your layouts directory `layouts/blog.vue`:
 
@@ -103,7 +100,7 @@ To create a blog layout add a `blog.vue` file to your layouts directory `layouts
 <template>
   <div>
     <div>My blog navigation bar here</div>
-    <Nuxt/>
+    <Nuxt />
   </div>
 </template>
 ```
@@ -114,25 +111,23 @@ Make sure to add the `<Nuxt/>` component when creating a layout to actually in
 
 </base-alert>
 
-We then use the layout property with the value of 'blog' in the page where we want that layout to be used. 
-
-
+We then use the layout property with the value of 'blog' in the page where we want that layout to be used.
 
 ```html{}[pages/posts.vue]
 <template>
-<!-- Your template -->
+  <!-- Your template -->
 </template>
 <script>
-export default {
-  layout: 'blog'
-  // page component definitions
-}
+  export default {
+    layout: 'blog'
+    // page component definitions
+  }
 </script>
 ```
 
 <base-alert type="info">
 
-If you don't add a layout property to your page, eg `layout: 'blog'` then the default.vue layout will be used. 
+If you don't add a layout property to your page, eg `layout: 'blog'` then the default.vue layout will be used.
 
 </base-alert>
 
@@ -142,7 +137,6 @@ If you don't add a layout property to your page, eg `layout: 'blog'` then the de
 
 ### Error Page
 
-
 The error page is a *page component* which is always displayed when an error occurs (that does not happen while server-side rendering).
 
 <base-alert>
@@ -150,7 +144,6 @@ The error page is a *page component* which is always displayed when an error o
 Although this file is placed in the `layouts` folder, it should be treated as a page.
 
 </base-alert>
-
 
 As mentioned above, this layout is special, since you should not include the `<Nuxt/>`  component inside its template. You must see this layout as a component displayed when an error occurs (`404`, `500`, etc.). Similar to other page components, you can set a custom layout for the error page as well in the usual way.
 
@@ -166,10 +159,10 @@ You can customize the error page by adding a `layouts/error.vue` file:
 </template>
 
 <script>
-export default {
-  props: ['error'],
-  layout: 'error' // you can set a custom layout for the error page
-}
+  export default {
+    props: ['error'],
+    layout: 'error' // you can set a custom layout for the error page
+  }
 </script>
 ```
 
@@ -211,6 +204,5 @@ One use case of using a custom app template is to add conditional CSS classes fo
 While you can add JavaScript and CSS files in the `app.html`, it is recommended to use the `nuxt.config.js` for these tasks instead!
 
 </base-alert>
-
 
 <quiz :questions="questions"></quiz>

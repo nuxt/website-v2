@@ -73,7 +73,8 @@ module.exports = {
         'Construisez votre prochaine application Vue.js en toute confiance avec NuxtJS. Un framework open source rendant le développement web simple et puissant.',
       get_started: 'Commencer',
 
-      video: 'Vidéo produite par <a href="https://www.vuemastery.com" target="_blank" rel="noopener">Vue Mastery</a>, téléchargez gratuitement <a href="https://www.vuemastery.com/nuxt-cheat-sheet/" target="_blank" rel="noopener">Nuxt Cheat Sheet</a>.'
+      video:
+        'Vidéo produite par <a href="https://www.vuemastery.com" target="_blank" rel="noopener">Vue Mastery</a>, téléchargez gratuitement <a href="https://www.vuemastery.com/nuxt-cheat-sheet/" target="_blank" rel="noopener">Nuxt Cheat Sheet</a>.'
     },
     why: {
       title: 'Pourquoi Nuxt<span class="text-nuxt-lightgreen">JS</span>',
@@ -81,7 +82,7 @@ module.exports = {
       enjoyable: {
         title: 'Enjoyable',
         description:
-          'Notre principal objectif est l\'expérience des développeurs. Nous aimons Nuxt.js et améliorons continuellement le framework pour que vous l\'aimiez aussi! 💚 Attendez-vous à des solutions attrayantes, des messages d\'erreur descriptifs, des paramètres par défaut puissants et une documentation détaillée. Si des questions ou des problèmes surviennent, notre communauté attentionnée vous aidera.'
+          "Notre principal objectif est l'expérience des développeurs. Nous aimons Nuxt.js et améliorons continuellement le framework pour que vous l'aimiez aussi! 💚 Attendez-vous à des solutions attrayantes, des messages d'erreur descriptifs, des paramètres par défaut puissants et une documentation détaillée. Si des questions ou des problèmes surviennent, notre communauté attentionnée vous aidera."
       },
       modular: {
         title: 'Modular',
@@ -91,7 +92,7 @@ module.exports = {
       performant: {
         title: 'Performant',
         description:
-          'Avec Nuxt.js, votre application sera optimisée et prête à l\'emploi. Nous faisons de notre mieux pour créer des applications performantes en appliquant les meilleures pratiques de Vue.js et Node.js. Pour tirer le meilleur parti de votre application, Nuxt inclut un analyseur de bundles et de nombreuses possibilités d\'ajuster votre application.'
+          "Avec Nuxt.js, votre application sera optimisée et prête à l'emploi. Nous faisons de notre mieux pour créer des applications performantes en appliquant les meilleures pratiques de Vue.js et Node.js. Pour tirer le meilleur parti de votre application, Nuxt inclut un analyseur de bundles et de nombreuses possibilités d'ajuster votre application."
       }
     },
     companies: {
@@ -124,7 +125,7 @@ module.exports = {
     newsletter: {
       title: 'Nuxt<span class="text-nuxt-lightgreen">JS</span> Newsletter',
       description:
-        'Recevez les dernières nouvelles de Nuxt dans votre boîte de réception, organisée par l\'équipe Nuxt et les contributeurs.',
+        "Recevez les dernières nouvelles de Nuxt dans votre boîte de réception, organisée par l'équipe Nuxt et les contributeurs.",
       form: {
         email: 'Email',
         subscribing: "S'abonner",
@@ -141,7 +142,6 @@ module.exports = {
     description:
       'Discover articles from the core team and contributors about NuxtJS, tips and tricks included!',
     contribute: 'Caught a mistake or want to contribute to this blog post?'
-
   },
   guide: {
     release_notes: 'Notes de versions (en)',
@@ -157,7 +157,8 @@ module.exports = {
   },
   contribute: {
     title: 'Contributors',
-    docs: 'Vous avez vu une erreur ou vous souhaitez contribuer à la documentation ?',
+    docs:
+      'Vous avez vu une erreur ou vous souhaitez contribuer à la documentation ?',
     blog: 'Caught a mistake or want to contribute to this blog post?',
     edit_on_github: 'Éditez cette page sur GitHub !',
     msg1:

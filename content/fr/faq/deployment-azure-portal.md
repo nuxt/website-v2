@@ -7,14 +7,15 @@ position: 302
 ---
 
 ## Exigences
+
 - Il est nécessaire de sélectionner un backend lors de la configuration du projet. Même si vous n'en avez pas besoin, sinon le site ne démarrera pas.
 - Le serveur exécute Node 8 ou plus
 
 ## Et si j'ai déjà un projet sans backend ?
+
 Pas de soucis. Il est facile d'ajouter un serveur express à un projet existant.
 
-Créez un nouveau dossier appelé `server` à la racine du projet. Créez ensuite un fichier `index.js` dans le dossier 
-`server` et collez ce qui suit dans `index.js`:
+Créez un nouveau dossier appelé `server` à la racine du projet. Créez ensuite un fichier `index.js` dans le dossier `server` et collez ce qui suit dans `index.js`:
 
 ```
 const express = require('express')
@@ -66,7 +67,8 @@ export default {
 }
 ```
 
-Après: 
+Après:
+
 ```
 module.exports = {
 ... config
@@ -80,27 +82,23 @@ C'est tout !
 
 ## Comment définir la version de Node d'une application Web dans DevOps
 
-Vous pouvez définir la version Node sur le serveur, via le paramètre d'application dans la tâche "Deploy Azure Web Service" 
-dans le pipeline de versions
+Vous pouvez définir la version Node sur le serveur, via le paramètre d'application dans la tâche "Deploy Azure Web Service" dans le pipeline de versions
 
 Ajoutez ceci au champ paramètres de l'application sous "Application and Configuration Settings"
+
 ```
 -WEBSITE_NODE_DEFAULT_VERSION 10.16.3
 ```
+
 Il est recommandé d'utiliser la version LTS.
 
 ## Artefacts
 
-Si vous utilisez Azure DevOps et laissez le pipeline de génération faire son travail lui-même et souhaitez stocker des 
-artefacts. Les dossiers qui sont préfixés par un `.` doivent être déplacés explicitement dans le dossier d'artefact. 
-Ensuite, vous pouvez créer une archive d'artefacts et la télécharger ensuite dans votre version de déploiement.
+Si vous utilisez Azure DevOps et laissez le pipeline de génération faire son travail lui-même et souhaitez stocker des artefacts. Les dossiers qui sont préfixés par un `.` doivent être déplacés explicitement dans le dossier d'artefact. Ensuite, vous pouvez créer une archive d'artefacts et la télécharger ensuite dans votre version de déploiement.
 
 ## Exécution du webserver
-Pour Azure Portal, vous aurez besoin d'un fichier `web.config`. S'il n'est pas fourni, il en créera un lui-même. 
-Celui-ci **ne fonctionnera pas pour Nuxt** cependant. Ajoutez un fichier web.config à votre projet. Pour la dernière 
-version de `Nuxt`, le fichier serveur se trouve dans `server/index.js`.
-Dans le web.config, ne spécifiez pas le chemin exact `server/index.js` mais juste `server`. Voir l'exemple web.config 
-ci-dessous. Si vous ne le faites pas, les logs vous diront que Vue ne peut trouver aucun chemin.
+
+Pour Azure Portal, vous aurez besoin d'un fichier `web.config`. S'il n'est pas fourni, il en créera un lui-même. Celui-ci **ne fonctionnera pas pour Nuxt** cependant. Ajoutez un fichier web.config à votre projet. Pour la dernière version de `Nuxt`, le fichier serveur se trouve dans `server/index.js`. Dans le web.config, ne spécifiez pas le chemin exact `server/index.js` mais juste `server`. Voir l'exemple web.config ci-dessous. Si vous ne le faites pas, les logs vous diront que Vue ne peut trouver aucun chemin.
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
@@ -165,4 +163,3 @@ ci-dessous. Si vous ne le faites pas, les logs vous diront que Vue ne peut trouv
   </system.webServer>
 </configuration>
 ```
-

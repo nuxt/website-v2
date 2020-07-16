@@ -15,19 +15,19 @@ Exemple d'une `pages/index.vue` utilisant [Pug](https://github.com/pugjs/pug), [
 </template>
 
 <script lang="coffee">
-export default data: ->
-  { name: 'le Monde' }
+  export default data: ->
+    { name: 'le Monde' }
 </script>
 
 <style lang="sass">
-.red
-  color: red
+  .red
+    color: red
 </style>
 
 <style lang="scss">
-.red {
-  color: red
-}
+  .red {
+    color: red;
+  }
 </style>
 ```
 

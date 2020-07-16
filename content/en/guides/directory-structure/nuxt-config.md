@@ -5,30 +5,30 @@ position: 14
 category: directory-structure
 csb_link: https://codesandbox.io/embed/github/nuxt-academy/guides-examples/tree/master/04_directory_structure/15_nuxt-config?fontsize=14&hidenavigation=1&theme=dark
 questions:
-  - question: 
+  - question:
     answers:
-      - 
-      - 
-      - 
-    correctAnswer: 
-  - question: 
+      -
+      -
+      -
+    correctAnswer:
+  - question:
     answers:
-      - 
-      - 
-      - 
-    correctAnswer: 
-  - question: 
+      -
+      -
+      -
+    correctAnswer:
+  - question:
     answers:
-      - 
-      - 
-      - 
-    correctAnswer: 
-  - question: 
+      -
+      -
+      -
+    correctAnswer:
+  - question:
     answers:
-      - 
-      - 
-      - 
-    correctAnswer: 
+      -
+      -
+      -
+    correctAnswer:
 ---
 
 By default, Nuxt.js is configured to cover most use cases. This default configuration can be overwritten with the nuxt.config.js file.
@@ -41,12 +41,12 @@ This option lets you configure various settings for the `build` step, includin
 
 ```js{}[nuxt.config.js]
 export default {
-	build: {
-	    /*
-	     ** You can extend webpack config here
-	     */
-	    extend(config, ctx) {}
-	  }
+  build: {
+    /*
+     ** You can extend webpack config here
+     */
+    extend(config, ctx) {}
+  }
 }
 ```
 
@@ -58,9 +58,7 @@ This option lets you define the CSS files, modules, and libraries you want to in
 
 ```js{}[nuxt.config.js]
 export default {
-	css: [
-	    '~/assets/css/main.css',
-	  ],
+  css: ['~/assets/css/main.css']
 }
 ```
 
@@ -72,7 +70,7 @@ This option lets you define the `development` or `production` mode of Nuxt.j
 
 ```js{}[nuxt.config.js]
 export default {
-  dev: (process.env.NODE_ENV !== 'production')
+  dev: process.env.NODE_ENV !== 'production'
 }
 ```
 
@@ -84,9 +82,9 @@ This option lets you define environment variables that are available to both cli
 
 ```js{}[nuxt.config.js]
 export default {
-	env: {
-	    baseUrl: process.env.BASE_URL || baseUrl
-	}
+  env: {
+    baseUrl: process.env.BASE_URL || baseUrl
+  }
 }
 ```
 
@@ -98,10 +96,10 @@ This option lets you set up parameter values for every dynamic route in your app
 
 ```js{}[nuxt.config.js]
 export default {
-	generate: {
-	   dir: 'gh_pages', // gh_pages/ instead of dist/
-		 subFolders: false // HTML files are generated according to the route path
-	}
+  generate: {
+    dir: 'gh_pages', // gh_pages/ instead of dist/
+    subFolders: false // HTML files are generated according to the route path
+  }
 }
 ```
 
@@ -123,7 +121,7 @@ export default {
 
 This option lets you define all default meta tags for your application.
 
-➡️ See more on  [head integration](/api/configuration-head)
+➡️ See more on [head integration](/api/configuration-head)
 
 ### loading
 
@@ -131,9 +129,9 @@ This option lets you customize the loading component that Nuxt.js uses by defaul
 
 ```js{}[nuxt.config.js]
 export default {
-	loading: {
-	    color: '#fff'
-	  },
+  loading: {
+    color: '#fff'
+  }
 }
 ```
 
@@ -145,9 +143,7 @@ With this option you can add Nuxt.js modules to your project.
 
 ```js{}[nuxt.config.js]
 export default {
-	modules: [
-    '@nuxtjs/axios',
-  ],
+  modules: ['@nuxtjs/axios']
 }
 ```
 
@@ -159,9 +155,7 @@ This option lets you define JavaScript plugins that should be run before instant
 
 ```js{}[nuxt.config.js]
 export default {
-	plugins: [
-    '~/plugins/url-helpers.js',
-  ],
+  plugins: ['~/plugins/url-helpers.js']
 }
 ```
 
@@ -173,9 +167,9 @@ With the `router` option you can overwrite the default Nuxt.js configuration o
 
 ```js{}[nuxt.config.js]
 export default {
-	router: {
+  router: {
     linkExactActiveClass: 'text-primary'
-  },
+  }
 }
 ```
 
@@ -207,7 +201,7 @@ This option lets you define the source directory of your Nuxt.js application.
 
 ```js{}[nuxt.config.js]
 export default {
-	srcDir: 'client/'
+  srcDir: 'client/'
 }
 ```
 
@@ -235,7 +229,7 @@ This option lets you define custom names of your Nuxt.js directories.
 
 ```js{}[nuxt.config.js]
 export default {
-	pages: 'views' // Nuxt will look for the views/ instead of the pages/ folder 
+  pages: 'views' // Nuxt will look for the views/ instead of the pages/ folder
 }
 ```
 
@@ -247,7 +241,7 @@ This option lets you define the default properties of the page transitions.
 
 ```js{}[nuxt.config.js]
 export default {
-	pageTransition: 'page'
+  pageTransition: 'page'
 }
 ```
 
@@ -259,12 +253,10 @@ Besides the `nuxt.config.js` there might be other config files in your project r
 
 ### .gitignore
 
-In your .gitignore file you will need to add the following so that they are ignored and not added to version control. `node_modules` which is where all your installed modules are. The `nuxt` folder which is what gets created when running the dev or build commands. The `dist` folder is the folder that gets created when running the generate command. 
+In your .gitignore file you will need to add the following so that they are ignored and not added to version control. `node_modules` which is where all your installed modules are. The `nuxt` folder which is what gets created when running the dev or build commands. The `dist` folder is the folder that gets created when running the generate command.
 
 ```markdown{}[.gitignore]
-node_modules
-.nuxt
-dist
+node_modules .nuxt dist
 ```
 
 <app-modal>

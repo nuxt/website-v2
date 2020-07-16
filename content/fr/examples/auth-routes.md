@@ -14,8 +14,7 @@ position: 42
 
 ## Module officiel `auth-module`
 
-Si vous souhaitez implémenter des flux d'authentification complexes, par exemple OAuth2, nous vous suggérons d'utiliser 
-la fonction officielle [`auth-module`](https://github.com/nuxt-community/auth-module)
+Si vous souhaitez implémenter des flux d'authentification complexes, par exemple OAuth2, nous vous suggérons d'utiliser la fonction officielle [`auth-module`](https://github.com/nuxt-community/auth-module)
 
 ## Avec Express et Sessions
 
@@ -31,7 +30,7 @@ Premièrement, nous installons les dépendances :
 yarn add express express-session body-parser whatwg-fetch
 ```
 
-*Nous parlerons de `whatwg-fetch` plus loin.*
+_Nous parlerons de `whatwg-fetch` plus loin._
 
 Puis nous créons notre `server.js` :
 
@@ -45,12 +44,14 @@ const app = require('express')()
 app.use(bodyParser.json())
 
 // Mise en place de sessions pour y accéder via `req.session`
-app.use(session({
-  secret: 'cle-super-secrete',
-  resave: false,
-  saveUninitialized: false,
-  cookie: { maxAge: 60000 }
-}))
+app.use(
+  session({
+    secret: 'cle-super-secrete',
+    resave: false,
+    saveUninitialized: false,
+    cookie: { maxAge: 60000 }
+  })
+)
 
 // Accès à `/api/login` en POST pour connecter l'utilisateur et l'ajouter à `req.session.authUser`
 app.post('/api/login', function (req, res) {
@@ -110,13 +111,12 @@ Vue.use(Vuex)
 require('whatwg-fetch')
 
 const store = new Vuex.Store({
-
   state: () => ({
     authUser: null
   }),
 
   mutations: {
-    SET_USER (state, user) {
+    SET_USER(state, user) {
       state.authUser = user
     }
   },
@@ -124,7 +124,6 @@ const store = new Vuex.Store({
   actions: {
     // ...
   }
-
 })
 
 export default store
@@ -133,7 +132,7 @@ export default store
 1. Nous importons `Vue` et `Vuex` (inclus dans Nuxt.js) et nous indiquons à Vue d'utiliser Vuex afin de pouvoir utiliser `$store` dans nos composants.
 2. Nous utilisons `require('whatwg-fetch')` afin d'obtenir un polyfill pour la méthode `fetch()` pour tous les navigateurs (consultez le [dépôt fetch](https://github.com/github/fetch)).
 3. Nous créons notre mutation `SET_USER` qui va instancier `state.authUser` avec l'utilisateur connecté.
-4. Nous exportons notre instance du *store* vers Nuxt.js afin qu'il puisse l'injecter dans notre application principale.
+4. Nous exportons notre instance du _store_ vers Nuxt.js afin qu'il puisse l'injecter dans notre application principale.
 
 ### Fonction nuxtServerInit()
 
@@ -217,14 +216,14 @@ Ajoutons une route `/secret` dont le contenu ne peut être vu que par un utilisa
 </template>
 
 <script>
-export default {
-  // Nous utilisons`fetch()` car nous n'avons pas besoin d'associer les données à ce composant
-  fetch ({ store, redirect }) {
-    if (!store.state.authUser) {
-      return redirect('/')
+  export default {
+    // Nous utilisons`fetch()` car nous n'avons pas besoin d'associer les données à ce composant
+    fetch({ store, redirect }) {
+      if (!store.state.authUser) {
+        return redirect('/')
+      }
     }
   }
-}
 </script>
 ```
 

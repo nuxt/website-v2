@@ -1,5 +1,5 @@
 ---
-title: "API: <nuxt> 组件"
+title: 'API: <nuxt> 组件'
 description: 该组件用于在布局中显示页面组件（即非布局内容）。
 menu: nuxt
 category: components
@@ -16,7 +16,7 @@ position: 41
 <template>
   <div>
     <div>页头</div>
-    <nuxt/>
+    <nuxt />
     <div>页脚</div>
   </div>
 </template>
@@ -27,7 +27,7 @@ position: 41
 **Props**:
 
 - nuxtChildKey: `string`
-  - 此prop将设置为`<router-view />`，可用于在动态页面和不同路由内进行过渡。
+  - 此 prop 将设置为`<router-view />`，可用于在动态页面和不同路由内进行过渡。
   - 默认: `$route.path`
 
 有三种方式可以处理 `<router-view />` 内部属性的 `key`。
@@ -36,9 +36,9 @@ position: 41
 
 ```html
 <template>
-   <div>
-     <nuxt :nuxt-child-key="someKey"/>
-   </div>
+  <div>
+    <nuxt :nuxt-child-key="someKey" />
+  </div>
 </template>
 ```
 
@@ -46,7 +46,7 @@ position: 41
 
 ```js
 export default {
-  key (route) {
+  key(route) {
     return route.fullPath
   }
 }

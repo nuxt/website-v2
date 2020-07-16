@@ -1,5 +1,5 @@
 ---
-title: "API : la méthode fetch"
+title: 'API : la méthode fetch'
 description: La méthode `fetch` est utilisée pour remplir le store avant de rendre la page, elle est similaire à la méthode `asyncData` sauf qu'elle ne définit pas les données du composant.
 menu: fetch
 category: pages
@@ -20,11 +20,11 @@ Voir la [démo en direct](https://nuxt-new-fetch.surge.sh) et [le code d'exemple
 
 ### Quand utiliser fetch?
 
-Chaque fois que vous devez obtenir des données **asynchrones**. `fetch` est appelé côté serveur lors du rendu du chemin 
-et côté client lors de la navigation.
+Chaque fois que vous devez obtenir des données **asynchrones**. `fetch` est appelé côté serveur lors du rendu du chemin et côté client lors de la navigation.
 
 Il expose `$fetchState` au niveau du composant:
-- `$fetchState.pending`: `Boolean`, vous permet d'afficher quelque chose lorsque `fetch` est appelé *côté client*.
+
+- `$fetchState.pending`: `Boolean`, vous permet d'afficher quelque chose lorsque `fetch` est appelé _côté client_.
 - `$fetchState.error`: `null` ou `Error`, vous permet d'afficher un message d'erreur.
 - `$fetchState.timestamp`: `Integer`, est un timestamp de la dernière extraction, utile pour la mise en cache avec `keep-alive`
 
@@ -50,17 +50,19 @@ et `$fetchState.pending` renverra `true` lors du rendu du serveur par le composa
 
 ```html
 <script>
-export default {
-  data () {
-    return {
-      posts: []
-    }
-  },
-  async fetch () {
-    this.posts = await this.$http.$get('https://jsonplaceholder.typicode.com/posts')
-  },
-  fetchOnServer: false
-}
+  export default {
+    data() {
+      return {
+        posts: []
+      }
+    },
+    async fetch() {
+      this.posts = await this.$http.$get(
+        'https://jsonplaceholder.typicode.com/posts'
+      )
+    },
+    fetchOnServer: false
+  }
 </script>
 ```
 
@@ -81,7 +83,9 @@ Récupérons un blog avec notre page d'accueil répertoriant nos articles:
   <div>
     <h1>Blog posts</h1>
     <p v-if="$fetchState.pending">Fetching posts...</p>
-    <p v-else-if="$fetchState.error">Error while fetching posts: {{ $fetchState.error.message }}</p>
+    <p v-else-if="$fetchState.error">
+      Error while fetching posts: {{ $fetchState.error.message }}
+    </p>
     <ul v-else>
       <li v-for="post of posts" :key="post.id">
         <n-link :to="`/posts/${post.id}`">{{ post.title }}</n-link>
@@ -91,24 +95,24 @@ Récupérons un blog avec notre page d'accueil répertoriant nos articles:
 </template>
 
 <script>
-export default {
-  data () {
-    return {
-      posts: []
+  export default {
+    data() {
+      return {
+        posts: []
+      }
+    },
+    async fetch() {
+      this.posts = await this.$http.$get(
+        'https://jsonplaceholder.typicode.com/posts'
+      )
     }
-  },
-  async fetch () {
-    this.posts = await this.$http.$get('https://jsonplaceholder.typicode.com/posts')
   }
-}
 </script>
 ```
 
-Si vous allez directement sur [http://localhost:3000/](http://localhost:3000/), vous verrez directement la liste 
-complète des articles qui ont été **rendus par le serveur** (idéal pour le référencement) .
+Si vous allez directement sur [http://localhost:3000/](http://localhost:3000/), vous verrez directement la liste complète des articles qui ont été **rendus par le serveur** (idéal pour le référencement) .
 
 <img width="669" alt="Screenshot 2019-03-11 at 23 04 57" src="https://user-images.githubusercontent.com/904724/54161334-1f9e8400-4452-11e9-97bf-996a6e69d9db.png">
-
 
 <div class="Alert Alert--green">
   
@@ -119,6 +123,7 @@ Nuxt détectera intelligemment les données que vous avez mutées dans `fetch` e
 Maintenant, ajoutons la page `pages/posts/_id.vue` pour afficher une publication sur `/posts/:id`.
 
 `pages/posts/_id.vue`
+
 ```html
 <template>
   <div v-if="$fetchState.pending">Fetching post #{{$route.params.id}}...</div>
@@ -128,23 +133,24 @@ Maintenant, ajoutons la page `pages/posts/_id.vue` pour afficher une publication
     <p><n-link to="/">Back to posts</n-link></p>
   </div>
 </template>
-    
+
 <script>
-export default {
-  data () {
-    return {
-      post: {}
+  export default {
+    data() {
+      return {
+        post: {}
+      }
+    },
+    async fetch() {
+      this.post = await this.$http.$get(
+        `https://jsonplaceholder.typicode.com/posts/${this.$route.params.id}`
+      )
     }
-  },
-  async fetch() {
-    this.post = await this.$http.$get(`https://jsonplaceholder.typicode.com/posts/${this.$route.params.id}`)
   }
-}
 </script>
 ```
 
-Lors de la navigation, vous devriez maintenant voir `"Fetching post #... "` côté client, et pas de chargement 
-lors de l'actualisation d'un article (actualisation depuis le navigateur).
+Lors de la navigation, vous devriez maintenant voir `"Fetching post #... "` côté client, et pas de chargement lors de l'actualisation d'un article (actualisation depuis le navigateur).
 
 <img width="669" alt="fetch-nuxt3" src="https://user-images.githubusercontent.com/904724/54161844-d3544380-4453-11e9-9586-7428597db40e.gif">
 
@@ -155,11 +161,9 @@ Si le composant contient l'écouteur `fetch`, vous aurez également accès à `t
 
 </div>
 
-
 ### Écoute des modifications de chaîne de requête
 
-L'écouteur `fetch` **n'est pas appelé** lors des changements de chaîne de requête par défaut. Pour surveiller les 
-changements de requête, vous pouvez ajouter un observateur sur `$route.query` et appeler `$fetch`:
+L'écouteur `fetch` **n'est pas appelé** lors des changements de chaîne de requête par défaut. Pour surveiller les changements de requête, vous pouvez ajouter un observateur sur `$route.query` et appeler `$fetch`:
 
 ```js
 export default {
@@ -174,10 +178,10 @@ export default {
 
 ### Mise en cache
 
-Vous pouvez utiliser la directive `keep-alive` dans les composants `<nuxt />` et `<nuxt-child />` pour enregistrer les 
-appels `fetch` sur les pages que vous avez déjà visitées:
+Vous pouvez utiliser la directive `keep-alive` dans les composants `<nuxt />` et `<nuxt-child />` pour enregistrer les appels `fetch` sur les pages que vous avez déjà visitées:
 
 `layouts/default.vue`
+
 ```html
 <template>
   <nuxt keep-alive />
@@ -194,8 +198,7 @@ Exemple: `<nuxt keep-alive :keep-alive-props="{ max: 10 }" />` pour ne conserver
 
 ### Utilisation de l'écouteur `activated`
 
-Nuxt remplira directement `this.$fetchState.timestamp` (timestamp) du dernier appel `fetch` (ssr inclus). Vous pouvez 
-utiliser cette propriété combinée avec l'écouteur `activated` pour ajouter un cache de 30 secondes à `fetch`:
+Nuxt remplira directement `this.$fetchState.timestamp` (timestamp) du dernier appel `fetch` (ssr inclus). Vous pouvez utiliser cette propriété combinée avec l'écouteur `activated` pour ajouter un cache de 30 secondes à `fetch`:
 
 `pages/posts/_id.vue`
 
@@ -203,24 +206,26 @@ utiliser cette propriété combinée avec l'écouteur `activated` pour ajouter u
 <template>
   ...
 </template>
-    
+
 <script>
-export default {
-  data () {
-    return {
-      post: {}
+  export default {
+    data() {
+      return {
+        post: {}
+      }
+    },
+    activated() {
+      // Récupération de l'appel si la dernière récupération remonte à plus de 30 secondes
+      if (this.$fetchState.timestamp <= Date.now() - 30000) {
+        this.$fetch()
+      }
+    },
+    async fetch() {
+      this.post = await this.$http.$get(
+        `https://jsonplaceholder.typicode.com/posts/${this.$route.params.id}`
+      )
     }
-  },
-  activated() {
-    // Récupération de l'appel si la dernière récupération remonte à plus de 30 secondes
-    if (this.$fetchState.timestamp <= (Date.now() - 30000)) {
-      this.$fetch()
-    }
-  },
-  async fetch() {
-    this.post = await this.$http.$get(`https://jsonplaceholder.typicode.com/posts/${this.$route.params.id}`)
   }
-}
 </script>
 ```
 
@@ -234,17 +239,15 @@ La navigation vers la même page n'appellera pas `fetch` si le dernier appel `fe
 
 - **Type:** `Function`
 
-La méthode `fetch`, *si définie*, est appelée à chaque fois avant de charger le composant (**uniquement pour les composants de page**). Elle sera appelée une fois côté serveur (lors de la première requête à l'application Nuxt) et côté client lors de la navigation vers d'autres routes.
+La méthode `fetch`, _si définie_, est appelée à chaque fois avant de charger le composant (**uniquement pour les composants de page**). Elle sera appelée une fois côté serveur (lors de la première requête à l'application Nuxt) et côté client lors de la navigation vers d'autres routes.
 
-La méthode `fetch` reçoit l'object [`context`](/api/context) comme  premier argument. Nous pouvons l'utiliser pour récupérer des données et remplir le store. Pour rendre la méthode `fetch` asynchrone, **renvoyer une promesse**, Nuxt.js attendra que la promesse soit résolue avant de restituer le composant.
-
+La méthode `fetch` reçoit l'object [`context`](/api/context) comme premier argument. Nous pouvons l'utiliser pour récupérer des données et remplir le store. Pour rendre la méthode `fetch` asynchrone, **renvoyer une promesse**, Nuxt.js attendra que la promesse soit résolue avant de restituer le composant.
 
 <div class="Alert Alert--orange">
 
-**Avertissement**: Vous **n'avez** pas accès à l'instance du composant via `this` avec` fetch` car elle s'appelle **avant d'initier** le composant.
+**Avertissement**: Vous **n'avez** pas accès à l'instance du composant via `this` avec`fetch` car elle s'appelle **avant d'initier** le composant.
 
 </div>
-
 
 Exemple `pages/index.vue`:
 
@@ -254,14 +257,13 @@ Exemple `pages/index.vue`:
 </template>
 
 <script>
-export default {
-  fetch ({ store, params }) {
-    return axios.get('http://my-api/stars')
-    .then((res) => {
-      store.commit('setStars', res.data)
-    })
+  export default {
+    fetch({ store, params }) {
+      return axios.get('http://my-api/stars').then(res => {
+        store.commit('setStars', res.data)
+      })
+    }
   }
-}
 </script>
 ```
 
@@ -273,12 +275,12 @@ Vous pouvez également utiliser `async`/`await` pour rendre votre code plus prop
 </template>
 
 <script>
-export default {
-  async fetch ({ store, params }) {
-    let { data } = await axios.get('http://my-api/stars')
-    store.commit('setStars', data)
+  export default {
+    async fetch({ store, params }) {
+      let { data } = await axios.get('http://my-api/stars')
+      store.commit('setStars', data)
+    }
   }
-}
 </script>
 ```
 
@@ -288,11 +290,11 @@ Si vous souhaitez appeler une action du store, utilisez `store.dispatch` à l'in
 
 ```html
 <script>
-export default {
-  async fetch ({ store, params }) {
-    await store.dispatch('GET_STARS');
+  export default {
+    async fetch({ store, params }) {
+      await store.dispatch('GET_STARS')
+    }
   }
-}
 </script>
 ```
 
@@ -301,7 +303,7 @@ export default {
 ```js
 // ...
 export const actions = {
-  async GET_STARS ({ commit }) {
+  async GET_STARS({ commit }) {
     const { data } = await axios.get('http://my-api/stars')
     commit('SET_STARS', data)
   }

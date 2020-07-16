@@ -22,10 +22,10 @@ Nuxt.js は `store` ディレクトリを探索し存在するときには以下
 1. Vuex をインポートします
 2. `store` オプションをルートの Vue インスタンスに追加します
 
-Nuxt.js では **2つのモードのストア** があります。どちらか好みのほうを選んで使ってください:
+Nuxt.js では **2 つのモードのストア** があります。どちらか好みのほうを選んで使ってください:
 
 - **モジュールモード:** `store` ディレクトリ内のすべての `*.js` ファイルが [名前空間付きモジュール](https://vuex.vuejs.org/ja/guide/modules.html) に変換されます（`index` はルートモジュールとして存在します）
-- **クラシックモード (__廃止予定__):** `store/index.js` がストアインスタンスを返します
+- **クラシックモード (**廃止予定**):** `store/index.js` がストアインスタンスを返します
 
 モードに関わらず、サーバーサイドで不要な*共有*状態を避けるため、`state` の値は**常に `function`** でなければなりません。
 
@@ -41,7 +41,7 @@ export const state = () => ({
 })
 
 export const mutations = {
-  increment (state) {
+  increment(state) {
     state.counter++
   }
 }
@@ -55,16 +55,16 @@ export const state = () => ({
 })
 
 export const mutations = {
-  add (state, text) {
+  add(state, text) {
     state.list.push({
       text,
       done: false
     })
   },
-  remove (state, { todo }) {
+  remove(state, { todo }) {
     state.list.splice(state.list.indexOf(todo), 1)
   },
-  toggle (state, todo) {
+  toggle(state, todo) {
     todo.done = !todo.done
   }
 }
@@ -78,7 +78,7 @@ new Vuex.Store({
     counter: 0
   }),
   mutations: {
-    increment (state) {
+    increment(state) {
       state.counter++
     }
   },
@@ -89,17 +89,17 @@ new Vuex.Store({
         list: []
       }),
       mutations: {
-        add (state, { text }) {
+        add(state, { text }) {
           state.list.push({
             text,
             done: false,
             id: Date.now()
           })
         },
-        remove (state, { todo }) {
+        remove(state, { todo }) {
           state.list = state.list.filter(item => item.id !== todo.id)
         },
-        toggle (state, { todo }) {
+        toggle(state, { todo }) {
           todo.done = !todo.done
         }
       }
@@ -108,48 +108,50 @@ new Vuex.Store({
 })
 ```
 
-そして `pages/todos.vue` 内で `todos` モジュールを下記のように使うことができます:
+そして `pages/todos.vue` 内で `todos` モジュールを下記のように使うことができます :
 
 ```html
 <template>
   <ul>
     <li v-for="todo in todos" :key="todo.id">
-      <input :checked="todo.done" @change="toggle(todo)" type="checkbox">
+      <input :checked="todo.done" @change="toggle(todo)" type="checkbox" />
       <span :class="{ done: todo.done }">{{ todo.text }}</span>
       <button @click="removeTodo(todo)">remove</button>
     </li>
-    <li><input @keyup.enter="addTodo" placeholder="What needs to be done?"></li>
+    <li>
+      <input @keyup.enter="addTodo" placeholder="What needs to be done?" />
+    </li>
   </ul>
 </template>
 
 <script>
-import { mapMutations } from 'vuex'
+  import { mapMutations } from 'vuex'
 
-export default {
-  computed: {
-    todos () {
-      return this.$store.state.todos.list
-    }
-  },
-  methods: {
-    addTodo (e) {
-      this.$store.commit('todos/add', e.target.value)
-      e.target.value = ''
+  export default {
+    computed: {
+      todos() {
+        return this.$store.state.todos.list
+      }
     },
-    ...mapMutations({
-      toggle: 'todos/toggle'
-    }),
-    removeTodo (todo){
-      this.$store.commit('todos/remove', todo)
+    methods: {
+      addTodo(e) {
+        this.$store.commit('todos/add', e.target.value)
+        e.target.value = ''
+      },
+      ...mapMutations({
+        toggle: 'todos/toggle'
+      }),
+      removeTodo(todo) {
+        this.$store.commit('todos/remove', todo)
+      }
     }
   }
-}
 </script>
 
 <style>
-.done {
-  text-decoration: line-through;
-}
+  .done {
+    text-decoration: line-through;
+  }
 </style>
 ```
 
@@ -167,7 +169,7 @@ export default () => ({
 
 ```js
 export default {
-  increment (state) {
+  increment(state) {
     state.counter++
   }
 }
@@ -175,9 +177,9 @@ export default {
 
 ### モジュールファイル
 
-オプションでモジュールファイルを `state.js`、` actions.js`、 `mutations.js`、` getters.js` といった別々のファイルに分離することができます。`index.js` ファイルで状態やゲッター、ミューテーションを持ちながら、アクションを別のファイルを分けた場合もまた適切に認識されます。
+オプションでモジュールファイルを `state.js`、`actions.js`、 `mutations.js`、`getters.js` といった別々のファイルに分離することができます。`index.js` ファイルで状態やゲッター、ミューテーションを持ちながら、アクションを別のファイルを分けた場合もまた適切に認識されます。
 
-> 情報: 分割ファイルモジュールを使っている時にアロー関数を使うと、```this``` は構文的にしか利用できないことを覚えておく必要があります。 レキシカルスコープは ```this``` が常にアロー関数の所有者を参照することを意味しています。もしアロー関数が含まれていない場合、 ```this``` は undefined になります。解決策として「普通の」関数でスコープを作ると、そこで ```this``` を使うことができるようになります。
+> 情報: 分割ファイルモジュールを使っている時にアロー関数を使うと、`this` は構文的にしか利用できないことを覚えておく必要があります。 レキシカルスコープは `this` が常にアロー関数の所有者を参照することを意味しています。もしアロー関数が含まれていない場合、 `this` は undefined になります。解決策として「普通の」関数でスコープを作ると、そこで `this` を使うことができるようになります。
 
 ### プラグイン
 
@@ -186,14 +188,14 @@ export default {
 ```js
 import myPlugin from 'myPlugin'
 
-export const plugins = [ myPlugin ]
+export const plugins = [myPlugin]
 
 export const state = () => ({
   counter: 0
 })
 
 export const mutations = {
-  increment (state) {
+  increment(state) {
     state.counter++
   }
 }
@@ -223,7 +225,7 @@ actions: {
 }
 ```
 
-> Vuex ストアの *モジュール* モードを使っている場合はなら、プライマリモジュール（`store/index.js`）のみ、このアクションを受け取ることができます。その他のモジュールのアクションでも使いたい場合は、プライマリモジュールからチェインする必要があります。
+> Vuex ストアの _モジュール_ モードを使っている場合はなら、プライマリモジュール（`store/index.js`）のみ、このアクションを受け取ることができます。その他のモジュールのアクションでも使いたい場合は、プライマリモジュールからチェインする必要があります。
 
 [コンテキスト](/api/context)は、`asyncData`や `fetch` メソッドと同様に `nuxtServerInit` に第二引数として渡されます。
 
@@ -260,7 +262,7 @@ const createStore = () => {
       counter: 0
     }),
     mutations: {
-      increment (state) {
+      increment(state) {
         state.counter++
       }
     }
@@ -276,6 +278,8 @@ export default createStore
 
 ```html
 <template>
-  <button @click="$store.commit('increment')">{{ $store.state.counter }}</button>
+  <button @click="$store.commit('increment')">
+    {{ $store.state.counter }}
+  </button>
 </template>
 ```

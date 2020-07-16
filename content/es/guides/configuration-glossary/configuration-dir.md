@@ -1,5 +1,5 @@
 ---
-title: "The dir Property"
+title: 'The dir Property'
 description: Define the custom directories for your Nuxt.js application
 menu: dir
 category: configuration-glossary
@@ -26,13 +26,13 @@ position: 7
 ```js{}[nuxt.config.js]
 export default {
   dir: {
-    assets: "custom-assets",
-    app: "custom-app",
-    layouts: "custom-layouts",
-    middleware: "custom-middleware",
-    pages: "custom-pages",
-    static: "custom-static",
-    store: "custom-store"
+    assets: 'custom-assets',
+    app: 'custom-app',
+    layouts: 'custom-layouts',
+    middleware: 'custom-middleware',
+    pages: 'custom-pages',
+    static: 'custom-static',
+    store: 'custom-store'
   }
-};
+}
 ```

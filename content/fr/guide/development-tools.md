@@ -44,17 +44,17 @@ Imaginons que nous avons une page dans `pages/index.vue` :
 </template>
 
 <script>
-export default {
-  data () {
-    return { name: 'World' }
+  export default {
+    data() {
+      return { name: 'World' }
+    }
   }
-}
 </script>
 
 <style>
-.red {
-  color: red;
-}
+  .red {
+    color: red;
+  }
 </style>
 ```
 
@@ -72,10 +72,12 @@ import { Nuxt, Builder } from 'nuxt'
 let nuxt = null
 
 // Initialiser Nuxt.js et démarrer l'écoute sur localhost:4000
-test.before('Init Nuxt.js', async (t) => {
+test.before('Init Nuxt.js', async t => {
   const rootDir = resolve(__dirname, '..')
   let config = {}
-  try { config = require(resolve(rootDir, 'nuxt.config.js')) } catch (e) {}
+  try {
+    config = require(resolve(rootDir, 'nuxt.config.js'))
+  } catch (e) {}
   config.rootDir = rootDir // dossier du projet
   config.dev = false // build de production
   config.mode = 'universal' // application isomorphique
@@ -85,14 +87,14 @@ test.before('Init Nuxt.js', async (t) => {
 })
 
 // Exemple de test uniquement sur le HTML généré
-test('Route / exits and render HTML', async (t) => {
+test('Route / exits and render HTML', async t => {
   const context = {}
   const { html } = await nuxt.renderRoute('/', context)
   t.true(html.includes('<h1 class="red">Hello World !</h1>'))
 })
 
 // Exemple de test via la vérification du DOM
-test('Route / exits and render HTML with CSS applied', async (t) => {
+test('Route / exits and render HTML with CSS applied', async t => {
   const window = await nuxt.renderAndGetWindow('http://localhost:4000/')
   const element = window.document.querySelector('.red')
   t.not(element, null)
@@ -102,7 +104,7 @@ test('Route / exits and render HTML with CSS applied', async (t) => {
 })
 
 // Arrêter le serveur Nuxt
-test.after('Closing server', (t) => {
+test.after('Closing server', t => {
   nuxt.close()
 })
 ```
@@ -128,6 +130,7 @@ npm install --save-dev babel-eslint eslint eslint-config-prettier eslint-loader 
 ```
 
 Puis, configurez ESLint via un fichier `.eslintrc.js` à la racine de votre projet :
+
 ```js
 module.exports = {
   root: true,
@@ -146,15 +149,13 @@ module.exports = {
     'plugin:prettier/recommended'
   ],
   // required to lint *.vue files
-  plugins: [
-    'vue'
-  ],
+  plugins: ['vue'],
   // add your custom rules here
   rules: {
-    'semi': [2, 'never'],
+    semi: [2, 'never'],
     'no-console': 'off',
     'vue/max-attributes-per-line': 'off',
-    'prettier/prettier': ['error', { 'semi': false }]
+    'prettier/prettier': ['error', { semi: false }]
   }
 }
 ```

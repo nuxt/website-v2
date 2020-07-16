@@ -1,5 +1,5 @@
 ---
-title: "API: ignore 프로퍼티"
+title: 'API: ignore 프로퍼티'
 description: Nuxt.js 어플리케이션에서 무시할 파일을을 정의합니다
 menu: ignore
 category: configuration
@@ -8,8 +8,7 @@ position: 114
 
 ## .nuxtignore
 
-빌드 타임 동안에 Nuxt.js가 `layout`, `page`, `store`, `middleware` 파일들을 무시하게 하도록 프로젝트 루트 디렉토리(`rootDir`)의 `.nuxtignore` 파일을 사용할 수 있습니다.
-`.nuxtignore` 파일은`.gitignore`이나 `.eslintignore` 파일과 동일한 스펙을 따릅니다. 각 줄은 무시할 파일을 나타내는 glob 패턴입니다.
+빌드 타임 동안에 Nuxt.js가 `layout`, `page`, `store`, `middleware` 파일들을 무시하게 하도록 프로젝트 루트 디렉토리(`rootDir`)의 `.nuxtignore` 파일을 사용할 수있습니다. `.nuxtignore` 파일은`.gitignore`이나 `.eslintignore` 파일과 동일한 스펙을 따릅니다. 각 줄은 무시할 파일을 나타내는 glob 패턴입니다.
 
 예제:
 
@@ -34,7 +33,7 @@ middleware/foo/*.js
 !middleware/foo/bar.js
 ```
 
-> [gitignore doc](https://git-scm.com/docs/gitignore)에서 스펙에 대해 더 자세히 알아보세요.
+> [gitignore doc](https://git-scm.com/docs/gitignore)에서 스펙에 대해 더 자세히알아보세요.
 
 ## ignorePrefix 프로퍼티
 

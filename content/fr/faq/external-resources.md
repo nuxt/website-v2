@@ -13,10 +13,15 @@ Ajoutez vos ressources dans le fichier `nuxt.config.js` :
 export default {
   head: {
     script: [
-      { src: 'https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js' }
+      {
+        src: 'https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js'
+      }
     ],
     link: [
-      { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css?family=Roboto' }
+      {
+        rel: 'stylesheet',
+        href: 'https://fonts.googleapis.com/css?family=Roboto'
+      }
     ]
   }
 }
@@ -32,23 +37,29 @@ Ajoutez vos ressources dans votre fichier `.vue` dans votre répertoire `pages/`
 </template>
 
 <script>
-export default {
-  head () {
-    return {
-      script: [
-        { src: 'https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js' }
-      ],
-      link: [
-        { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css?family=Roboto' }
-      ]
+  export default {
+    head() {
+      return {
+        script: [
+          {
+            src:
+              'https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js'
+          }
+        ],
+        link: [
+          {
+            rel: 'stylesheet',
+            href: 'https://fonts.googleapis.com/css?family=Roboto'
+          }
+        ]
+      }
     }
   }
-}
 </script>
 
 <style scoped>
-h1 {
-  font-family: Roboto, sans-serif;
-}
+  h1 {
+    font-family: Roboto, sans-serif;
+  }
 </style>
 ```

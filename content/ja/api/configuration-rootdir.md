@@ -1,5 +1,5 @@
 ---
-title: "API: rootDir プロパティ"
+title: 'API: rootDir プロパティ'
 description: Nuxt.js アプリケーションのワークスペースを指定します。
 menu: rootDir
 category: configuration

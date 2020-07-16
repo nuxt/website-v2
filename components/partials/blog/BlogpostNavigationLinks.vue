@@ -20,32 +20,32 @@
 </template>
 
 <script>
-import ArrowLeftIcon from '~/assets/icons/arrow-left.svg?inline'
-import ArrowRightIcon from '~/assets/icons/arrow-right.svg?inline'
+  import ArrowLeftIcon from '~/assets/icons/arrow-left.svg?inline'
+  import ArrowRightIcon from '~/assets/icons/arrow-right.svg?inline'
 
-export default {
-  name: 'BlogpostNavigationLinks',
-  components: {
-    ArrowLeftIcon,
-    ArrowRightIcon
-  },
-  props: {
-    prev: {
-      type: Object,
-      default: null
+  export default {
+    name: 'BlogpostNavigationLinks',
+    components: {
+      ArrowLeftIcon,
+      ArrowRightIcon
     },
-    next: {
-      type: Object,
-      default: null
-    }
-  },
-  methods: {
-    toLink (slug) {
-      if (slug === 'index') {
-        return this.localePath('blog')
+    props: {
+      prev: {
+        type: Object,
+        default: null
+      },
+      next: {
+        type: Object,
+        default: null
       }
-      return this.localePath({ name: 'blog-slug', params: { slug } })
+    },
+    methods: {
+      toLink(slug) {
+        if (slug === 'index') {
+          return this.localePath('blog')
+        }
+        return this.localePath({ name: 'blog-slug', params: { slug } })
+      }
     }
   }
-}
 </script>

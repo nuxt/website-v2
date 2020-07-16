@@ -1,5 +1,5 @@
 ---
-title: "API : la classe ModuleContainer"
+title: 'API : la classe ModuleContainer'
 description: La classe `ModuleContainer` de Nuxt
 menu: Module Container
 category: internals
@@ -15,7 +15,7 @@ Tous les [modules](/guide/modules) seront appelés dans le contexte de l'instanc
 Nous pouvons enregistrer des points d'ancrage sur certains évènements du cycle de vie.
 
 ```js
-nuxt.moduleContainer.plugin('ready', async (moduleContainer) => {
+nuxt.moduleContainer.plugin('ready', async moduleContainer => {
   // Faire ceci après que tous les modules soient prêts
 })
 ```
@@ -23,14 +23,14 @@ nuxt.moduleContainer.plugin('ready', async (moduleContainer) => {
 Dans le contexte des [modules](/guide/modules) nous pouvons utiliser ceci à la place :
 
 ```js
-this.plugin('ready', async (moduleContainer) => {
+this.plugin('ready', async moduleContainer => {
   // Faire ceci après que tous les modules soient prêts
 })
 ```
 
-Plugin  | Arguments       | Quand
---------|-----------------|-----------------------------------------------------------
-`ready` | moduleContainer | Tous les modules dans `nuxt.config.js` ont été initialisés
+| Plugin | Arguments | Quand |
+| --- | --- | --- |
+| `ready` | moduleContainer | Tous les modules dans `nuxt.config.js` ont été initialisés |
 
 ## Méthodes
 
@@ -43,9 +43,9 @@ Ajoute à `options.build.vendor` et applique un filtre unique.
 ### addTemplate (template)
 
 - **template**: `String` ou `Object`
-    - `src`
-    - `options`
-    - `fileName`
+  - `src`
+  - `options`
+  - `fileName`
 
 Le rendu des templates sont faits dans le projet `buildDir` (`.nuxt`) en utilisant [lodash template](https://lodash.com/docs/4.17.4#template).
 
@@ -73,14 +73,13 @@ Permet d'étendre facilement les routes en chainant la fonction [options.build.e
 
 ### addModule (moduleOpts, requireOnce)
 
-*Async function*
+_Async function_
 
-Enregistre le module. `moduleOpts` peut être une chaine de caractères ou `[src, options]`.
-Si `requireOnce` est `true`, les modules résolus `meta` préviennent l'enregistrement du même module plus d'une fois.
+Enregistre le module. `moduleOpts` peut être une chaine de caractères ou `[src, options]`. Si `requireOnce` est `true`, les modules résolus `meta` préviennent l'enregistrement du même module plus d'une fois.
 
 ### requireModule (moduleOpts)
 
-*Async function*
+_Async function_
 
 C'est un alias raccourci de `addModule(moduleOpts, true)`
 
@@ -88,7 +87,7 @@ C'est un alias raccourci de `addModule(moduleOpts, true)`
 
 We can register hooks on certain life cycle events.
 
-Points d'ancrage          | Arguments                  | Quand
---------------------------|----------------------------|-------------------------------------------------------------------------------------------------------
- `modules:before`         | (moduleContainer, options) | Appelé avant la création de la classe ModuleContainer, utile pour surcharger les méthodes et options.
- `modules:done`           | (moduleContainer)          | Appelé quand tous les modules ont été chargés.
+| Points d'ancrage | Arguments | Quand |
+| --- | --- | --- |
+| `modules:before` | (moduleContainer, options) | Appelé avant la création de la classe ModuleContainer, utile pour surcharger les méthodes et options. |
+| `modules:done` | (moduleContainer) | Appelé quand tous les modules ont été chargés. |

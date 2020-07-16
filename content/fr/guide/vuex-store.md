@@ -25,9 +25,9 @@ Nuxt.js recherchera le répertoire `store`. S'il existe, il :
 Nuxt.js vous laisse le choix entre **2 modes de store**, choisissez celui qui vous convient le mieux :
 
 - **Modules :** chaque fichier `.js` dans le répertoire `store` est transformé en tant que module avec son propre espace de nom (`index` étant le module racine).
-- **Classique (__deprécié__):** `store/index.js` retourne une méthode pour créer une instance de store.
+- **Classique (**deprécié**):** `store/index.js` retourne une méthode pour créer une instance de store.
 
-Quelque soit le mode utilisé, votre valeur `state` devrait **toujours être une `function`** afin d'éviter tout état *partagé* non désiré du côté serveur.
+Quelque soit le mode utilisé, votre valeur `state` devrait **toujours être une `function`** afin d'éviter tout état _partagé_ non désiré du côté serveur.
 
 ## Mode modules
 
@@ -41,7 +41,7 @@ export const state = () => ({
 })
 
 export const mutations = {
-  increment (state) {
+  increment(state) {
     state.counter++
   }
 }
@@ -55,16 +55,16 @@ export const state = () => ({
 })
 
 export const mutations = {
-  add (state, text) {
+  add(state, text) {
     state.list.push({
       text,
       done: false
     })
   },
-  remove (state, { todo }) {
+  remove(state, { todo }) {
     state.list.splice(state.list.indexOf(todo), 1)
   },
-  toggle (state, todo) {
+  toggle(state, todo) {
     todo.done = !todo.done
   }
 }
@@ -78,7 +78,7 @@ new Vuex.Store({
     counter: 0
   }),
   mutations: {
-    increment (state) {
+    increment(state) {
       state.counter++
     }
   },
@@ -89,16 +89,16 @@ new Vuex.Store({
         list: []
       }),
       mutations: {
-        add (state, { text }) {
+        add(state, { text }) {
           state.list.push({
             text,
             done: false
           })
         },
-        remove (state, { todo }) {
+        remove(state, { todo }) {
           state.list.splice(state.list.indexOf(todo), 1)
         },
-        toggle (state, { todo }) {
+        toggle(state, { todo }) {
           todo.done = !todo.done
         }
       }
@@ -113,38 +113,43 @@ Et dans votre `pages/todos.vue`, utiliser le module `todos` :
 <template>
   <ul>
     <li v-for="todo in todos">
-      <input type="checkbox" :checked="todo.done" @change="toggle(todo)">
+      <input type="checkbox" :checked="todo.done" @change="toggle(todo)" />
       <span :class="{ done: todo.done }">{{ todo.text }}</span>
     </li>
-    <li><input placeholder="Qu'est-ce qui doit être fait ?" @keyup.enter="addTodo"></li>
+    <li>
+      <input
+        placeholder="Qu'est-ce qui doit être fait ?"
+        @keyup.enter="addTodo"
+      />
+    </li>
   </ul>
 </template>
 
 <script>
-import { mapMutations } from 'vuex'
+  import { mapMutations } from 'vuex'
 
-export default {
-  computed: {
-    todos () {
-      return this.$store.state.todos.list
-    }
-  },
-  methods: {
-    addTodo (e) {
-      this.$store.commit('todos/add', e.target.value)
-      e.target.value = ''
+  export default {
+    computed: {
+      todos() {
+        return this.$store.state.todos.list
+      }
     },
-    ...mapMutations({
-      toggle: 'todos/toggle'
-    })
+    methods: {
+      addTodo(e) {
+        this.$store.commit('todos/add', e.target.value)
+        e.target.value = ''
+      },
+      ...mapMutations({
+        toggle: 'todos/toggle'
+      })
+    }
   }
-}
 </script>
 
 <style>
-.done {
-  text-decoration: line-through;
-}
+  .done {
+    text-decoration: line-through;
+  }
 </style>
 ```
 
@@ -162,7 +167,7 @@ Et les mutations correspondantes peuvent être dans le fichier `store/mutations.
 
 ```js
 export default {
-  increment (state) {
+  increment(state) {
     state.counter++
   }
 }
@@ -178,9 +183,9 @@ Vous pouvez également avoir des modules en exportant une instance de store, vou
 
 Vous pouvez optionnellement scinder un fichier de module en plusieurs fichiers séparés : `state.js`, `actions.js`, `mutations.js` et `getters.js`. Si vous maintenez un fichier `index.js` avec un état, des accesseurs et des mutations alors que les actions sont dans un fichier séparé, cela va également être proprement interprété.
 
-> Note : lorsque vous utilisez des modules en fichiers séparés, vous devez vous rappeler que d'utiliser des fonctions fléchées , ```this``` n'est disponible que de façon lexicale. La portée lexicale signifie simplement que le ```this``` fait toujours référence au propriétaire de la fonction fléchée. Si la fonction fléchée n'est pas contenue, alors ```this``` sera non défini. La solution est d'utiliser une fonction "normale" qui produira sa propre portée et qui dispose donc de ```this```.
+> Note : lorsque vous utilisez des modules en fichiers séparés, vous devez vous rappeler que d'utiliser des fonctions fléchées , `this` n'est disponible que de façon lexicale. La portée lexicale signifie simplement que le `this` fait toujours référence au propriétaire de la fonction fléchée. Si la fonction fléchée n'est pas contenue, alors `this` sera non défini. La solution est d'utiliser une fonction "normale" qui produira sa propre portée et qui dispose donc de `this`.
 
-> Note: Whilst using split-file modules, you must remember that using arrow functions, ```this``` is only lexically available. Lexical scoping simply means that the ```this``` always references the owner of the arrow function. If the arrow function is not contained then ```this``` would be undefined. The solution is to use a "normal" function which produces its own scope and thus has ```this``` available.
+> Note: Whilst using split-file modules, you must remember that using arrow functions, `this` is only lexically available. Lexical scoping simply means that the `this` always references the owner of the arrow function. If the arrow function is not contained then `this` would be undefined. The solution is to use a "normal" function which produces its own scope and thus has `this` available.
 
 ### Plugins
 
@@ -189,14 +194,14 @@ Vous pouvez ajouter des plugins additionnels au store (en mode modules) en les a
 ```js
 import myPlugin from 'myPlugin'
 
-export const plugins = [ myPlugin ]
+export const plugins = [myPlugin]
 
 export const state = () => ({
   counter: 0
 })
 
 export const mutations = {
-  increment (state) {
+  increment(state) {
     state.counter++
   }
 }
@@ -261,7 +266,7 @@ const createStore = () => {
       counter: 0
     }),
     mutations: {
-      increment (state) {
+      increment(state) {
         state.counter++
       }
     }
@@ -277,6 +282,8 @@ Nous pouvons alors utiliser `this.$store` dans nos composants :
 
 ```html
 <template>
-  <button @click="$store.commit('increment')">{{ $store.state.counter }}</button>
+  <button @click="$store.commit('increment')">
+    {{ $store.state.counter }}
+  </button>
 </template>
 ```

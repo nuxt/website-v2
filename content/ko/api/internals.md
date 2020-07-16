@@ -1,5 +1,5 @@
 ---
-title: "API: Nuxt 모듈 소개"
+title: 'API: Nuxt 모듈 소개'
 description: Nuxt 내부 모듈에 대한 더 나은 이해
 menu: Intro
 category: internals
@@ -69,13 +69,13 @@ import { Nuxt, Builder, Utils } from 'nuxt'
 
 ```js
 class SomeClass {
-  constructor (nuxt) {
+  constructor(nuxt) {
     super()
     this.nuxt = nuxt
     this.options = nuxt.options
   }
 
-  someFunction () {
+  someFunction() {
     // `this.nuxt`와 `this.options`에 접근하실 수 있습니다.
   }
 }
@@ -85,7 +85,7 @@ class SomeClass {
 
 ```js
 class FooClass {
-  constructor (nuxt) {
+  constructor(nuxt) {
     super()
     this.nuxt = nuxt
     this.options = nuxt.options
@@ -98,7 +98,7 @@ class FooClass {
 그래서 우리는 다음과 같이 `foo` 모듈에 훅(hook)을 걸 수 있습니다:
 
 ```js
-nuxt.hook('foo', (foo) => {
+nuxt.hook('foo', foo => {
   // ...
 })
 ```

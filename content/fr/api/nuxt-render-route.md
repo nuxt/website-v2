@@ -1,5 +1,5 @@
 ---
-title: "API : nuxt.renderRoute(route, context)"
+title: 'API : nuxt.renderRoute(route, context)'
 description: Faire le rendu d'une route spécifique avec un contexte donné.
 menu: renderRoute
 category: programmatically
@@ -9,7 +9,7 @@ position: 203
 - Type : `Function`
 - Arguments :
   1. `String` : route sur laquelle faire le rendu
-  2. *Optionnel*, `Object`, donne le contexte, propriétés disponibles : `req` & `res`
+  2. _Optionnel_, `Object`, donne le contexte, propriétés disponibles : `req` & `res`
 - Valeur de retour : `Promise`
   - `html`: `String`
   - `error`: `null` ou `Object`
@@ -39,12 +39,10 @@ new Builder(nuxt)
   .build()
   .then(() => nuxt.renderRoute('/'))
   .then(({ html, error, redirected }) => {
-  // `html` sera toujours une chaine de caractères
-
+    // `html` sera toujours une chaine de caractères
     // `error` sera non `null` quand le layout d'erreur est affiché, le format d'erreur est :
     // { statusCode: 500, message: 'Mon message d\'erreur' }
-
-  // `redirected` n'est pas `false` quand `redirect()` est utilisé dans `asyncData()` ou `fetch()`
-  // { path: '/other-path', query: {}, status: 302 }
+    // `redirected` n'est pas `false` quand `redirect()` est utilisé dans `asyncData()` ou `fetch()`
+    // { path: '/other-path', query: {}, status: 302 }
   })
 ```

@@ -1,5 +1,5 @@
 ---
-title: "API: watchers 프로퍼티"
+title: 'API: watchers 프로퍼티'
 description: watchers 프로퍼티는 watchers 설정을 덮어씌웁니다
 menu: watchers
 category: configuration

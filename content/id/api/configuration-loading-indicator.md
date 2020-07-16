@@ -12,9 +12,7 @@ position: 116
 
 Saat menjalankan nuxt.js dalam mode SPA, tidak ada konten dari server side pada saat halaman pertama dimuat, Jadi, selama proses menampilkan halaman kosong dimuat, kita bisa menampilkan spiner.
 
-Properti ini bisa memiliki 3 tipe yang berbeda:
- `string` atau `false` atau `object`.
-Jika nilai string telah ditetapkan, itu akan diubah menjadi objek style.
+Properti ini bisa memiliki 3 tipe yang berbeda: `string` atau `false` atau `object`. Jika nilai string telah ditetapkan, itu akan diubah menjadi objek style.
 
 Nilai defaultnya adalah:
 

@@ -95,9 +95,9 @@ _このファイル名は変更できません。_
 
 ## エイリアス（別名）
 
-| エイリアス | ディレクトリ |
-|-----|------|
-| `~` or `@` | [srcDir](/api/configuration-srcdir) |
+| エイリアス   | ディレクトリ                          |
+| ------------ | ------------------------------------- |
+| `~` or `@`   | [srcDir](/api/configuration-srcdir)   |
 | `~~` or `@@` | [rootDir](/api/configuration-rootdir) |
 
 デフォルトでは `srcDir` は `rootDir` と同じです。

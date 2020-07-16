@@ -1,23 +1,16 @@
 ---
 title: content
-description:
-  Empower your NuxtJS application with `@nuxtjs/content` module where you can
-  write in a `content/` directory and fetch your Markdown, JSON, YAML and CSV
-  files through a MongoDB like API, acting as a **Git-based Headless CMS**.
+description: Empower your NuxtJS application with `@nuxtjs/content` module where you can write in a `content/` directory and fetch your Markdown, JSON, YAML and CSV files through a MongoDB like API, acting as a **Git-based Headless CMS**.
 position: 4
 category: directory-structure
 questions:
-  - question:
-      What is the default directory name of the directory where you add your
-      markdown files?
+  - question: What is the default directory name of the directory where you add your markdown files?
     answers:
       - markdown
       - content
       - pages
     correctAnswer: content
-  - question:
-      What component do you use in your template to display your markdown page
-      body?
+  - question: What component do you use in your template to display your markdown page body?
     answers:
       - <markdown>
       - <nuxt>
@@ -56,8 +49,7 @@ questions:
       - true
       - false
     correctAnswer: true
-  - question:
-      What is the default URL you use to access the API to see your JSON?
+  - question: What is the default URL you use to access the API to see your JSON?
     answers:
       - http://localhost:3000/content
       - http://localhost:3000/_content
@@ -76,25 +68,17 @@ questions:
     correctAnswer: true
 ---
 
-Empower your NuxtJS application with `@nuxtjs/content` module where you can
-write in a `content/` directory and fetch your Markdown, JSON, YAML and CSV
-files through a MongoDB like API, acting as a **Git-based Headless CMS**.
+Empower your NuxtJS application with `@nuxtjs/content` module where you can write in a `content/` directory and fetch your Markdown, JSON, YAML and CSV files through a MongoDB like API, acting as a **Git-based Headless CMS**.
 
 ### Hot reload in development
 
-The content module is blazing fast when it comes to hot reloading in development
-due to not having to go through webpack when you make changes to your markdown
-files. You can also listen to the `content:update` event and create a plugin so
-that every time you update a file in your content directory it will dispatch a
-fetchCategories method for example.
+The content module is blazing fast when it comes to hot reloading in development due to not having to go through webpack when you make changes to your markdown files. You can also listen to the `content:update` event and create a plugin so that every time you update a file in your content directory it will dispatch a fetchCategories method for example.
 
-➡️
-[See the content module docs for more details](https://content.nuxtjs.org/advanced#handling-hot-reload)
+➡️ [See the content module docs for more details](https://content.nuxtjs.org/advanced#handling-hot-reload)
 
 ### Displaying content
 
-You can use `<nuxt-content>` component directly in your template to display the
-page body.
+You can use `<nuxt-content>` component directly in your template to display the page body.
 
 ```html{}[pages/blog/_slug.vue]
 <template>
@@ -104,17 +88,13 @@ page body.
 </template>
 ```
 
-➡️ See the
-[content module docs](https://content.nuxtjs.org/displaying#component) for more
-details
+➡️ See the [content module docs](https://content.nuxtjs.org/displaying#component) for more details
 
 ### Styling your content
 
-Depending on what you're using to design your app, you may need to write some
-style to properly display the markdown.
+Depending on what you're using to design your app, you may need to write some style to properly display the markdown.
 
-`<nuxt-content>` component will automatically add a `.nuxt-content` class, you
-can use it to customize your styles.
+`<nuxt-content>` component will automatically add a `.nuxt-content` class, you can use it to customize your styles.
 
 ```html
 <style>
@@ -128,16 +108,11 @@ can use it to customize your styles.
 </style>
 ```
 
-➡️ See the [content module docs](https://content.nuxtjs.org/displaying#style)
-for more details
+➡️ See the [content module docs](https://content.nuxtjs.org/displaying#style) for more details
 
 ### Handles Markdown, CSV, YAML, JSON(5)
 
-This module converts your .md files into a JSON AST tree structure, stored in a
-body variable. You can also add a YAML front matter block to your markdown files
-or a .yaml file which will be injected into the document. You can also add a
-json/json5 file which can also be injected into the document. And you can use a
-.csv file where rows will be assigned to the body variable.
+This module converts your .md files into a JSON AST tree structure, stored in a body variable. You can also add a YAML front matter block to your markdown files or a .yaml file which will be injected into the document. You can also add a json/json5 file which can also be injected into the document. And you can use a .csv file where rows will be assigned to the body variable.
 
 ```md
 ---
@@ -146,13 +121,11 @@ description: Learning how to use @nuxt/content to create a blog
 ---
 ```
 
-➡️ See the [content module docs](https://content.nuxtjs.org/writing#markdown)
-for more details
+➡️ See the [content module docs](https://content.nuxtjs.org/writing#markdown) for more details
 
 ### Vue components in Markdown
 
-You can use Vue components directly in your markdown files. You will however
-need to use your components as kebab case and cannot use self-closing tags.
+You can use Vue components directly in your markdown files. You will however need to use your components as kebab case and cannot use self-closing tags.
 
 ```html{}[components/global/InfoBox.vue]
 <template>
@@ -193,13 +166,11 @@ You can use `$content()` to list, filter and search your content easily.
 </script>
 ```
 
-➡️ See the [content module docs](https://content.nuxtjs.org/fetching#methods)
-for more details
+➡️ See the [content module docs](https://content.nuxtjs.org/fetching#methods) for more details
 
 ### Previous and Next articles
 
-The content module includes a `.surround(slug)` so that you get previous and
-next articles easily.
+The content module includes a `.surround(slug)` so that you get previous and next articles easily.
 
 ```js
 async asyncData({ $content, params }) {
@@ -223,14 +194,11 @@ async asyncData({ $content, params }) {
 <prev-next :prev="prev" :next="next" />
 ```
 
-➡️ See the
-[content module docs](https://content.nuxtjs.org/fetching#surroundslug-options)
-for more details
+➡️ See the [content module docs](https://content.nuxtjs.org/fetching#surroundslug-options) for more details
 
 ### Full-text search
 
-The content module comes with a full text search so you can easily search across
-your markdown files without having to install anything.
+The content module comes with a full text search so you can easily search across your markdown files without having to install anything.
 
 ```html{}[components/AppSearchInput.vue]
 <script>
@@ -257,15 +225,11 @@ your markdown files without having to install anything.
 </script>
 ```
 
-➡️ See the
-[content module docs](https://content.nuxtjs.org/fetching#searchfield-value) for
-more details
+➡️ See the [content module docs](https://content.nuxtjs.org/fetching#searchfield-value) for more details
 
 ### Syntax highlighting
 
-This module automatically wraps codeblocks and
-applies [PrismJS](https://prismjs.com/) classes. You can also add a different
-prismJS theme or disable it altogether.
+This module automatically wraps codeblocks and applies [PrismJS](https://prismjs.com/) classes. You can also add a different prismJS theme or disable it altogether.
 
 <code-group>
   <code-block label="Yarn" active>
@@ -294,24 +258,17 @@ content: {
 }
 ```
 
-➡️ See the
-[content module docs](https://content.nuxtjs.org/writing#syntax-highlighting)
-for more details
+➡️ See the [content module docs](https://content.nuxtjs.org/writing#syntax-highlighting) for more details
 
 ### Extend Markdown Parsing
 
-Originally markdown does not support highlighting lines inside codeblock nor
-filenames. The content module allows it with its own custom syntax. Line numbers
-are added to the pre tag in data-line attributes and the filename will be
-converted to a span with a filename class, so you can style it.
+Originally markdown does not support highlighting lines inside codeblock nor filenames. The content module allows it with its own custom syntax. Line numbers are added to the pre tag in data-line attributes and the filename will be converted to a span with a filename class, so you can style it.
 
-➡️ See the [content module docs](https://content.nuxtjs.org/writing#codeblocks)
-for more details
+➡️ See the [content module docs](https://content.nuxtjs.org/writing#codeblocks) for more details
 
 ### Table of contents generation
 
-A toc(Table of Contents) array property will be injected into your document,
-listing all the headings with their titles and ids, so you can link to them.
+A toc(Table of Contents) array property will be injected into your document, listing all the headings with their titles and ids, so you can link to them.
 
 ```html{}[pages/blog/_slug.vue]
 <nav>
@@ -323,56 +280,40 @@ listing all the headings with their titles and ids, so you can link to them.
 </nav>
 ```
 
-➡️ See the
-[content module docs](https://content.nuxtjs.org/writing#table-of-contents) for
-more details
+➡️ See the [content module docs](https://content.nuxtjs.org/writing#table-of-contents) for more details
 
 ### Powerful QueryBuilder API (MongoDB like)
 
-The content module comes with a powerful QueryBuilder API similar to MongoDB
-which allows you to easily see the JSON of each directory at
-`http://localhost:3000/_content/` . The endpoint is accessible on GET and POST
-request, so you can use query params.
+The content module comes with a powerful QueryBuilder API similar to MongoDB which allows you to easily see the JSON of each directory at `http://localhost:3000/_content/` . The endpoint is accessible on GET and POST request, so you can use query params.
 
 `http://localhost:3000/_content/articles?only=title&only=description&limit=10`
 
-➡️ See the [content module docs](https://content.nuxtjs.org/fetching#api) for
-more details
+➡️ See the [content module docs](https://content.nuxtjs.org/fetching#api) for more details
 
 ### Extend with hooks
 
-You can use hooks to extend the module so you can add data to a document before
-it is stored
+You can use hooks to extend the module so you can add data to a document before it is stored
 
-➡️ See the [content module docs](https://content.nuxtjs.org/advanced#hooks) for
-more details
+➡️ See the [content module docs](https://content.nuxtjs.org/advanced#hooks) for more details
 
 ### Integration with @nuxtjs/feed
 
-In the case of articles, the content can be used to generate news feeds using
-[@nuxtjs/feed](https://www.npmjs.com/package/@nuxtjs/feed) module.
+In the case of articles, the content can be used to generate news feeds using [@nuxtjs/feed](https://www.npmjs.com/package/@nuxtjs/feed) module.
 
-➡️ See the
-[content module docs](https://content.nuxtjs.org/advanced#integration-with-nuxtjsfeed)
-for more details
+➡️ See the [content module docs](https://content.nuxtjs.org/advanced#integration-with-nuxtjsfeed) for more details
 
 ### Support static site generation
 
-The content module works with static site generation using the `nuxt generate.`
-All routes will be automatically generated thanks to the nuxt crawler feature.
+The content module works with static site generation using the `nuxt generate.` All routes will be automatically generated thanks to the nuxt crawler feature.
 
 <base-alert>
 
-If using Nuxt <2.13 and you need to specify the dynamic routes you can do so
-using the generate property and using @nuxt/content programmatically.
+If using Nuxt <2.13 and you need to specify the dynamic routes you can do so using the generate property and using @nuxt/content programmatically.
 
 </base-alert>
 
-➡️ See the
-[content module docs](https://content.nuxtjs.org/advanced#programmatic-usage)
-for more details
+➡️ See the [content module docs](https://content.nuxtjs.org/advanced#programmatic-usage) for more details
 
-➡️ To see the full
-[documentation for the content module](https://content.nuxtjs.org/)
+➡️ To see the full [documentation for the content module](https://content.nuxtjs.org/)
 
 <quiz :questions="questions"></quiz>

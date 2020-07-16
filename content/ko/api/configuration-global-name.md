@@ -1,5 +1,5 @@
 ---
-title: "API: globalName 프로퍼티"
+title: 'API: globalName 프로퍼티'
 description: Nuxt.js를 사용하여 기본 Vue 인스턴스 이름 및 기타 옵션뿐만 아니라 기본 HTML 템플릿에 사용되는 전역 ID까지 커스터마이즈할 수 있습니다.
 menu: globalName
 category: configuration
@@ -40,4 +40,3 @@ position: 111
   loadedCallback: globalName => `_on${_.capitalize(globalName)}Loaded`
 },
 ```
-

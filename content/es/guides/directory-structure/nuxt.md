@@ -35,9 +35,9 @@ questions:
     correctAnswer: false
 ---
 
- The `.nuxt` directory is the so-called *build directory*. It is dynamically generated and hidden by default. Inside the directory you can find automatically generated files when using `nuxt dev` or your build artefacts when using `nuxt build`. Modifying these files is great for debugging but remember that they are generated files and once you run the `dev` or `build` command again, anything that was saved here will be regenerated. 
+The `.nuxt` directory is the so-called _build directory_. It is dynamically generated and hidden by default. Inside the directory you can find automatically generated files when using `nuxt dev` or your build artefacts when using `nuxt build`. Modifying these files is great for debugging but remember that they are generated files and once you run the `dev` or `build` command again, anything that was saved here will be regenerated.
 
-<base-alert> 
+<base-alert>
 
 The `.nuxt` directory should not be committed to your version control system and should be ignored through your `.gitignore` as it will be generated automatically when executing `nuxt dev` or `nuxt build`.
 
@@ -58,7 +58,7 @@ export default {
 - The router.js file is the generated router file that Nuxt.js generates for you when you put `.vue` files inside the pages folder. You can use this file for debugging for when you want to look up which routes are generated for vue-router and find out the names of a specific route.
 - The router.scrollBehaviorjs which is our Router ScrollBehavior
 - The Components folder has all our Nuxt components such as NuxtChild and NuxtLink. It also contains the nuxt-build-indicator which is the page we see when our application is building and nuxt-loading which is our loading component that gets seen when we are waiting for our page to load. You will also find the nuxt-error page in here which contains the Nuxt default error page.
-- The mixins folder has the files needed for the Nuxt $fetch method.
+- The mixins folder has the files needed for the Nuxt \$fetch method.
 - The views folder contains our app template and our server error page.
 - The app.js is our main application file.
 - The client.js file is our client file needed for everything that happens client side.

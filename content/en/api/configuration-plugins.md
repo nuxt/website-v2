@@ -13,8 +13,8 @@ position: 121
 
 If the item is an object, the properties are:
 
-  - src: `String` (path of the file)
-  - mode: `String` (can be `client` or `server`) *If defined, the file will be included only on the respective (client or server) side.*
+- src: `String` (path of the file)
+- mode: `String` (can be `client` or `server`) _If defined, the file will be included only on the respective (client or server) side._
 
 **Note**: Old version
 
@@ -23,8 +23,8 @@ If the item is an object, the properties are:
 
 If the item is an object, the properties are:
 
-  - src: `String` (path of the file)
-  - ssr: `Boolean` (default to `true`) *If false, the file will be included only on the client-side.*
+- src: `String` (path of the file)
+- ssr: `Boolean` (default to `true`) _If false, the file will be included only on the client-side._
 
 > The plugins property lets you add vue.js plugins easily to your main application.
 
@@ -58,8 +58,7 @@ import 'ant-design-vue/dist/antd.css' // Per Ant Design's docs
 Vue.use(Antd)
 ```
 
-Note that the css was [imported as per Ant Design Documentation](https://vue.ant.design/docs/vue/getting-started/#3.-Use-antd's-Components "External tip relevant to building plugins")
-
+Note that the css was [imported as per Ant Design Documentation](https://vue.ant.design/docs/vue/getting-started/#3.-Use-antd's-Components 'External tip relevant to building plugins')
 
 All the paths defined in the `plugins` property will be **imported** before initializing the main application.
 

@@ -11,7 +11,9 @@
         >
           {{ page.title }}
         </h1>
-        <p class="mb-6">{{ page.description }}</p>
+        <p class="mb-6">
+          {{ page.description }}
+        </p>
         <LazyAppCodeSandbox v-if="codeSandBoxLink" :src="codeSandBoxLink" />
         <div>
           <AppButton

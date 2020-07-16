@@ -1,5 +1,5 @@
 ---
-title: "API: server 属性"
+title: 'API: server 属性'
 description: Nuxt.js允许您为应用程序内部定义服务器访问变量 `nuxt.config.js`.
 menu: server
 category: configuration
@@ -10,7 +10,7 @@ position: 126
 
 - 类型: `Object`
 
-> Nuxt.js允许您为应用程序内部`nuxt.config.js`中定义服务器访问主机和端口.
+> Nuxt.js 允许您为应用程序内部`nuxt.config.js`中定义服务器访问主机和端口.
 
 ## Basic example (`nuxt.config.js`):
 
@@ -23,7 +23,7 @@ export default {
 }
 ```
 
-这允许您指定Nuxt.js服务器实例的[主机和端口](/faq/host-port)。
+这允许您指定 Nuxt.js 服务器实例的[主机和端口](/faq/host-port)。
 
 ## 使用 HTTPS 配置的示例
 
@@ -74,7 +74,7 @@ export default {
 
 ### 使用 timing api
 
-当启用`server.time`时，`timing` api也被注入服务器端的`response`。
+当启用`server.time`时，`timing` api 也被注入服务器端的`response`。
 
 #### Syntax
 

@@ -21,7 +21,7 @@ module.exports = {
   render: {
     bundleRenderer: {
       directives: {
-        custom1 (el, dir) {
+        custom1(el, dir) {
           // something ...
         }
       }
@@ -35,7 +35,7 @@ Pelajari lebih lanjut tentang opsi yang tersedia pada [Referensi API Vue SSR](ht
 ## etag
 
 - Type: `object`
-    - Default: `{ weak: true }`
+  - Default: `{ weak: true }`
 
 Untuk menonaktifkan etag pada halaman gunakan `etag: false`
 
@@ -44,21 +44,21 @@ Lihat dokumentasi [etag](https://www.npmjs.com/package/etag) untuk opsi lainnya.
 ### gzip
 
 - Type `object`
-    - Default: `{ threshold: 0 }`
+  - Default: `{ threshold: 0 }`
 
 Lihat dokumentasi [compression](https://www.npmjs.com/package/compression) untuk opsi lainnya.
 
 ### http2
 
 - Type `object`
-    - Default: `{ push: false }`
+  - Default: `{ push: false }`
 
 Aktifkan header push HTTP2.
 
 ## resourceHints
 
 - Type: `boolean`
-    - Default: `true`
+  - Default: `true`
 
 > Menambahkan link `prefetch` dan `preload` untuk membuka halaman awal menjadi lebih cepat.
 
@@ -67,7 +67,7 @@ Anda mungkin hanya ingin menonaktifkan opsi ini jika memiliki banyak halaman dan
 ## ssr
 
 - Type: `boolean`
-    - Default: `true` pada mode universal dan `false` pada mode spa
+  - Default: `true` pada mode universal dan `false` pada mode spa
 
 > Aktifkan render SSR
 
@@ -76,6 +76,6 @@ Pilihan ini diatur secara otomatis berdasarkan nilai `mode` jika tidak ditentuka
 ## static
 
 - Type: `object`
-    - Default: `{}`
+  - Default: `{}`
 
 Lihat dokumentasi [serve-static](https://www.npmjs.com/package/serve-static) untuk opsi lainnya.

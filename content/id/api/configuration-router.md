@@ -48,7 +48,7 @@ Contoh menambahkan rute khusus:
 ```js
 module.exports = {
   router: {
-    extendRoutes (routes, resolve) {
+    extendRoutes(routes, resolve) {
       routes.push({
         name: 'custom',
         path: '*',
@@ -102,7 +102,7 @@ module.exports = {
 ## middleware
 
 - Tipe: `String` atau `Array`
-    - Items: `String`
+  - Items: `String`
 
 Menetapkan middleware default untuk setiap halaman aplikasi.
 
@@ -124,7 +124,9 @@ module.exports = {
 ```js
 export default function (context) {
   // Tambah properti userAgent dalam konteks (tersedia dalam `data` dan `fetch`)
-  context.userAgent = process.server ? context.req.headers['user-agent'] : navigator.userAgent
+  context.userAgent = process.server
+    ? context.req.headers['user-agent']
+    : navigator.userAgent
 }
 ```
 
@@ -180,7 +182,7 @@ const scrollBehavior = function (to, from, savedPosition) {
     position = savedPosition
   }
 
-  return new Promise((resolve) => {
+  return new Promise(resolve => {
     // wait for the out transition to complete (if necessary)
     window.$nuxt.$once('triggerScroll', () => {
       // coords will be used if no selector is provided,
@@ -188,7 +190,10 @@ const scrollBehavior = function (to, from, savedPosition) {
       if (to.hash) {
         let hash = to.hash
         // CSS.escape() is not supported with IE and Edge.
-        if (typeof window.CSS !== 'undefined' && typeof window.CSS.escape !== 'undefined') {
+        if (
+          typeof window.CSS !== 'undefined' &&
+          typeof window.CSS.escape !== 'undefined'
+        ) {
           hash = '#' + window.CSS.escape(hash.substr(1))
         }
         try {
@@ -197,7 +202,9 @@ const scrollBehavior = function (to, from, savedPosition) {
             position = { selector: hash }
           }
         } catch (e) {
-          console.warn('Failed to save scroll position. Please add CSS.escape() polyfill (https://github.com/mathiasbynens/CSS.escape).')
+          console.warn(
+            'Failed to save scroll position. Please add CSS.escape() polyfill (https://github.com/mathiasbynens/CSS.escape).'
+          )
         }
       }
       resolve(position)
@@ -213,7 +220,7 @@ Contoh memaksa posisi gulir (scroll position) ke atas untuk setiap rute:
 ```js
 module.exports = {
   router: {
-    scrollBehavior (to, from, savedPosition) {
+    scrollBehavior(to, from, savedPosition) {
       return { x: 0, y: 0 }
     }
   }

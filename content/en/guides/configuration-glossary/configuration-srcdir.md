@@ -1,5 +1,5 @@
 ---
-title: "The srcDir Property"
+title: 'The srcDir Property'
 description: Define the source directory of your Nuxt.js application
 menu: srcDir
 category: configuration-glossary
@@ -13,14 +13,14 @@ position: 28
 
 If a relative path is specified it will be relative to the rootDir
 
-Example 1:
-Prerequisites:
+Example 1: Prerequisites:
 
 ```js{}[nuxt.config.js]
 export default {
   srcDir: 'client/'
 }
 ```
+
 ```js{}[package.json]
   "script": {
     "dev": "yarn nuxt"

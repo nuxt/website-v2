@@ -1,5 +1,5 @@
 ---
-title: "The loading indicator Property"
+title: 'The loading indicator Property'
 description: Show fancy loading indicator while SPA page is loading!
 menu: loadingIndicator
 category: configuration

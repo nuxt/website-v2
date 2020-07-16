@@ -37,7 +37,7 @@ questions:
     answers:
       - "layout: 'blog'"
       - "name: 'blog'"
-      - "blog: true"
+      - 'blog: true'
     correctAnswer: "layout: 'blog'"
   - question: In which directory do you add an error page?
     answers:
@@ -64,9 +64,9 @@ questions:
 
 Layouts are a great help when you want to change the look and feel of your Nuxt.js app. Whether you want to include a sidebar or have distinct layouts for mobile and desktop.
 
-<base-alert> 
+<base-alert>
 
-*This directory cannot be renamed without extra configuration.*
+_This directory cannot be renamed without extra configuration._
 
 </base-alert>
 
@@ -84,13 +84,13 @@ All you need in your layout is three lines of code which will render the page co
 
 <base-alert type="info">
 
-You can add more components here such as Navigation, Header, Footer etc. You will need to import them as well as add them to your template. 
+You can add more components here such as Navigation, Header, Footer etc. You will need to import them as well as add them to your template.
 
 </base-alert>
 
 ## Custom Layout
 
-Every file (*top-level*) in the `layouts` directory will create a custom layout accessible with the `layout` property in the page components.
+Every file (_top-level_) in the `layouts` directory will create a custom layout accessible with the `layout` property in the page components.
 
 Let's say we want to create a blog layout and save it to `layouts/blog.vue`:
 
@@ -104,7 +104,6 @@ Let's say we want to create a blog layout and save it to `layouts/blog.vue`:
 ```
 
 Then you have to tell the pages to use your custom layout
-
 
 ```js{}[pages/posts.vue]
 <script>
@@ -126,7 +125,7 @@ export default {
 
 The error page is a *page component* which is always displayed when an error occurs (that is not thrown on the server-side).
 
-<base-alert> 
+<base-alert>
 
 Though this file is placed in the `layouts` folder, it should be treated as a page.
 
@@ -158,7 +157,5 @@ export default {
 The default error page source code is [available on GitHub](https://github.com/nuxt/nuxt.js/blob/dev/packages/vue-app/template/components/nuxt-error.vue).
 
 </base-alert>
-
-
 
 <quiz :questions="questions"></quiz>

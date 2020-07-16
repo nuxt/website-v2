@@ -1,5 +1,5 @@
 ---
-title: "API: srcDir 属性配置"
+title: 'API: srcDir 属性配置'
 description: 设置 Nuxt.js 应用的源码目录
 menu: srcDir
 category: configuration
@@ -22,6 +22,7 @@ module.exports = {
 ```
 
 此时，应用的目录结构应为：
+
 ```bash
 -| app/
 ---| node_modules/

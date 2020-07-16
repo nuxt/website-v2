@@ -1,5 +1,5 @@
 ---
-title: "The layout Property"
+title: 'The layout Property'
 description: Every file (first level) in the `layouts` directory will create a custom layout accessible with the layout property in the page component.
 menu: layout
 category: pages
@@ -14,12 +14,12 @@ Use the `layout` key in your pages components to define which layout to use:
 
 ```js
 export default {
-  layout: "blog",
+  layout: 'blog',
   // OR
   layout(context) {
-    return "blog";
+    return 'blog'
   }
-};
+}
 ```
 
 In this example, Nuxt.js will include the `layouts/blog.vue` file as a layout for this page component.

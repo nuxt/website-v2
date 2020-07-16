@@ -78,9 +78,9 @@ The Nuxt.js fetch hook is called after the component instance is created on the 
 ```js
 export default {
   fetch() {
-    console.log(this);
+    console.log(this)
   }
-};
+}
 ```
 
 <base-alert>
@@ -159,7 +159,6 @@ You can use `keep-alive` directive in `<nuxt/>` and `<nuxt-child/>` compon
 
 You can also specify the [props](https://vuejs.org/v2/api/#keep-alive) passed to `<keep-alive>` by passing a prop `keep-alive-props` to the `<nuxt>`  component.
 
-
 ```html{}[layouts/default.vue]
 <nuxt keep-alive :keep-alive-props="{ max: 10 }" />
 ```
@@ -198,16 +197,15 @@ export default {
 
 The navigation to the same page will not call `fetch` if last `fetch` call was before 30 sec ago.
 
-
 ## Async Data
 
-Sometimes you want to fetch data and pre-render it on the server without using a store. 
+Sometimes you want to fetch data and pre-render it on the server without using a store.
 
 `asyncData` is called every time before loading the page component. It will be called server-side once (on the first request to the Nuxt app) and client-side when navigating to further routes. This method receives [the context](/guides/concepts/context-helpers) as the first argument. You can use it to fetch some data and Nuxt.js will automatically merge the returned object with the component data.
 
 ```js
 export default {
-  asyncData (context) {
+  asyncData(context) {
     return { project: 'nuxt' }
   }
 }
@@ -243,25 +241,23 @@ In the upcoming examples, we are using our [http module](https://http.nuxtjs.or
 <code-group>
   <code-block label="Yarn" active>
 
-  ```bash
-  yarn add @nuxt/http
-  ```
+```bash
+yarn add @nuxt/http
+```
 
   </code-block>
   <code-block label="NPM">
 
-  ```bash
-  npm install @nuxt/http
-  ```
+```bash
+npm install @nuxt/http
+```
 
   </code-block>
 </code-group>
 
 ```js{}[nuxt.config.js]
-export default{
-  modules: [
-     '@nuxt/http',
-  ],
+export default {
+  modules: ['@nuxt/http']
 }
 ```
 
@@ -269,11 +265,12 @@ export default{
 
 ```js
 export default {
-  asyncData ({ params, $http }) {
-    return $http.$get(`https://api.nuxtjs.dev/posts/${params.id}`)
-    .then((data)=> {
-      return { title: data.title }
-    })
+  asyncData({ params, $http }) {
+    return $http
+      .$get(`https://api.nuxtjs.dev/posts/${params.id}`)
+      .then(data => {
+        return { title: data.title }
+      })
   }
 }
 ```
@@ -282,8 +279,10 @@ export default {
 
 ```js
 export default {
-  async asyncData ({ params, $http }) {
-    const { title } = await $http.$get(`https://api.nuxtjs.dev/posts/${params.id}`)
+  async asyncData({ params, $http }) {
+    const { title } = await $http.$get(
+      `https://api.nuxtjs.dev/posts/${params.id}`
+    )
     return { title }
   }
 }

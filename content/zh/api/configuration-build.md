@@ -1,5 +1,5 @@
 ---
-title: "API: 构建配置"
+title: 'API: 构建配置'
 description: Nuxt.js 允许你根据服务端需求，自定义 webpack 的构建配置。
 menu: build
 category: configuration
@@ -20,6 +20,7 @@ position: 101
 如果是 `Object` 类型， 可以移步 [这里](https://github.com/th0r/webpack-bundle-analyzer#as-plugin) 查看可用的属性。
 
 例如 (`nuxt.config.js`):
+
 ```js
 module.exports = {
   build: {
@@ -52,19 +53,18 @@ module.exports = {
   presets: ['@nuxt/babel-preset-app']
 }
 ```
+
 默认为 [@nuxt/babel-preset-app](https://github.com/nuxt/nuxt.js/blob/dev/packages/babel-preset-app/src/index.js) 在`client`构建中是`ie：'9'`，在`server`构建中是`node:'current'`。
 
-**注意**: `build.babel.presets` 中配置的预设将应用于客户端和服务器构建。目标将由Nuxt相应地设置（客户端/服务器）。如果要为客户端或服务器版本配置不同的预设，请使用`presets`作为函数：
+**注意**: `build.babel.presets` 中配置的预设将应用于客户端和服务器构建。目标将由 Nuxt 相应地设置（客户端/服务器）。如果要为客户端或服务器版本配置不同的预设，请使用`presets`作为函数：
 
 ```js
 export default {
   build: {
     babel: {
-      presets ({ isServer }) {
+      presets({ isServer }) {
         const targets = isServer ? { node: '10' } : { ie: '11' }
-        return [
-          [ require.resolve('@nuxt/babel-preset-app'), { targets } ]
-        ]
+        return [[require.resolve('@nuxt/babel-preset-app'), { targets }]]
       }
     }
   }
@@ -73,7 +73,8 @@ export default {
 
 我们**强烈建议**使用默认预设。但是,如果必须，您可以更改预设。
 
-*Example* for custom presets:
+_Example_ for custom presets:
+
 ```js
 export default {
   build: {
@@ -97,8 +98,7 @@ export default {
 - 类型: `String`
 - 默认: `undefined`
 
-在生成的HTML中的 `<link rel="stylesheet">` 和 `<script>` 标记上配置 `crossorigin` 属性。
-请查看 [CORS settings attributes](https://developer.mozilla.org/en-US/docs/Web/HTML/CORS_settings_attributes) 了解更多可用选项。
+在生成的 HTML 中的 `<link rel="stylesheet">` 和 `<script>` 标记上配置 `crossorigin` 属性。请查看 [CORS settings attributes](https://developer.mozilla.org/en-US/docs/Web/HTML/CORS_settings_attributes) 了解更多可用选项。
 
 ## cssSourceMap
 
@@ -120,7 +120,7 @@ export default {
 
 配置是否允许 [vue-devtools](https://github.com/vuejs/vue-devtools) 调试。
 
-如果您已经通过 nuxt.config.js 或其他方式激活，则无论标志为 true 或 false，devtools都会启用。
+如果您已经通过 nuxt.config.js 或其他方式激活，则无论标志为 true 或 false，devtools 都会启用。
 
 ## extend
 
@@ -129,14 +129,13 @@ export default {
 > 为客户端和服务端的构建配置进行手工的扩展处理。
 
 该扩展方法会被调用两次，一次在服务端打包构建的时候，另外一次是在客户端打包构建的时候。该方法的参数如下：
+
 1. Webpack 配置对象
 2. 构建环境对象，包括这些属性(全部为布尔类型):`isDev`，`isClient`，`isServer`
 
 <div class="Alert Alert--orange">
 
-  **警告:**
-  提供的`isClient`和`isServer`键与[`context`](/api/context)中可用的键分开，
-  它们是**长期支持**的。这里不要使用`process.client`和`process.server`，因为它们是`'undefined'`。
+**警告:** 提供的`isClient`和`isServer`键与[`context`](/api/context)中可用的键分开， 它们是**长期支持**的。这里不要使用`process.client`和`process.server`，因为它们是`'undefined'`。
 
 </div>
 
@@ -145,7 +144,7 @@ export default {
 ```js
 module.exports = {
   build: {
-    extend (config, { isClient }) {
+    extend(config, { isClient }) {
       // 为 客户端打包 进行扩展配置
       if (isClient) {
         config.devtool = 'eval-source-map'
@@ -155,7 +154,7 @@ module.exports = {
 }
 ```
 
-如果你想了解更多关于webpack的配置，可以移步 Nuxt.js 源码的 [webpack 目录](https://github.com/nuxt/nuxt.js/tree/dev/packages/webpack/src/config)。
+如果你想了解更多关于 webpack 的配置，可以移步 Nuxt.js 源码的 [webpack 目录](https://github.com/nuxt/nuxt.js/tree/dev/packages/webpack/src/config)。
 
 ### loaders in extend
 
@@ -166,7 +165,7 @@ module.exports = {
 ```js
 export default {
   build: {
-    extend (config, { isClient, loaders: { vue } }) {
+    extend(config, { isClient, loaders: { vue } }) {
       // 仅扩展客户端中的webpack配置
       if (isClient) {
         vue.transformAssetUrls.video = ['src', 'poster']
@@ -178,12 +177,12 @@ export default {
 
 ## extractCSS
 
-> 使用Vue 服务器端渲染[指南](https://ssr.vuejs.org/en/css.html)启用常见CSS提取。
+> 使用 Vue 服务器端渲染[指南](https://ssr.vuejs.org/en/css.html)启用常见 CSS 提取。
 
 - 类型: `Boolean`
 - 默认: `false`
 
-使用[`extract-css-chunks-webpack-plugin`](https://github.com/faceyspacey/extract-css-chunks-webpack-plugin)将主块中的 CSS 提取到一个单独的 CSS 文件中（自动注入模板），该文件允许单独缓存文件。当有很多共用 CSS 时建议使用此方法，异步组件中的 CSS 将保持内联为JavaScript字符串并由vue-style-loader处理。
+使用[`extract-css-chunks-webpack-plugin`](https://github.com/faceyspacey/extract-css-chunks-webpack-plugin)将主块中的 CSS 提取到一个单独的 CSS 文件中（自动注入模板），该文件允许单独缓存文件。当有很多共用 CSS 时建议使用此方法，异步组件中的 CSS 将保持内联为 JavaScript 字符串并由 vue-style-loader 处理。
 
 ## filenames
 
@@ -204,13 +203,13 @@ export default {
   }
   ```
 
-此示例将 chunk 名称更改为数字id (`nuxt.config.js`):
+此示例将 chunk 名称更改为数字 id (`nuxt.config.js`):
 
 ```js
 export default {
   build: {
     filenames: {
-      chunk: ({ isDev }) => isDev ? '[name].js' : '[id].[contenthash].js'
+      chunk: ({ isDev }) => (isDev ? '[name].js' : '[id].[contenthash].js')
     }
   }
 }
@@ -266,7 +265,7 @@ export default {
 }
 ```
 
-用于压缩在构建打包过程中创建的HTML文件配置[html-minifier](https://github.com/kangax/html-minifier)的插件（将应用于**所有模式**）。
+用于压缩在构建打包过程中创建的 HTML 文件配置[html-minifier](https://github.com/kangax/html-minifier)的插件（将应用于**所有模式**）。
 
 ## loaders
 
@@ -324,17 +323,15 @@ export default {
 
 ### loaders.css and loaders.cssModules
 
-> 更多详情查看 [css-loader 配置](https://github.com/webpack-contrib/css-loader#options).
-> 注意：cssModules是使用的loader选项 [CSS Modules](https://vue-loader.vuejs.org/guide/css-modules.html#css-modules)
+> 更多详情查看 [css-loader 配置](https://github.com/webpack-contrib/css-loader#options). 注意：cssModules 是使用的 loader 选项 [CSS Modules](https://vue-loader.vuejs.org/guide/css-modules.html#css-modules)
 
 ### loaders.less
 
-> 您可以通过`loaders.less`将任何Less特定选项传递给`less-loader`。 请查看 [Less 文档](http://lesscss.org/usage/#command-line-usage-options) 来获取更多配置信息。
+> 您可以通过`loaders.less`将任何 Less 特定选项传递给`less-loader`。 请查看 [Less 文档](http://lesscss.org/usage/#command-line-usage-options) 来获取更多配置信息。
 
 ### loaders.sass and loaders.scss
 
-> 查看 [Node Sass 文档](https://github.com/sass/node-sass/blob/master/README.md#options) 来获取更多配置信息。
-> Note: `loaders.sass` is for [Sass Indented Syntax](http://sass-lang.com/documentation/file.INDENTED_SYNTAX.html)
+> 查看 [Node Sass 文档](https://github.com/sass/node-sass/blob/master/README.md#options) 来获取更多配置信息。 Note: `loaders.sass` is for [Sass Indented Syntax](http://sass-lang.com/documentation/file.INDENTED_SYNTAX.html)
 
 > 注意：`loaders.sass`用于[Sass 缩进](http://sass-lang.com/documentation/file.INDENTED_SYNTAX.html)
 
@@ -363,9 +360,7 @@ export default {
   }
   ```
 
-在**开发**或**分析模式**下，`splitChunks.name`的默认值为`true`。
-You can set `minimizer` to a customized Array of plugins or set `minimize` to `false` to disable all minimizers.
-您可以将`minimizer`设置为自定义插件，或将`minim`设置为`false`以禁用所有`minimize`。(默认在**开发环境**情况下，`minimize`被禁用)。
+在**开发**或**分析模式**下，`splitChunks.name`的默认值为`true`。 You can set `minimizer` to a customized Array of plugins or set `minimize` to `false` to disable all minimizers. 您可以将`minimizer`设置为自定义插件，或将`minim`设置为`false`以禁用所有`minimize`。(默认在**开发环境**情况下，`minimize`被禁用)。
 
 查看 [Webpack Optimization](https://webpack.js.org/configuration/optimization)来了解更多配置信息。
 
@@ -392,7 +387,7 @@ You can set `minimizer` to a customized Array of plugins or set `minimize` to `f
 
 设置为`false`可以禁用此插件。
 
-当webpack中 `config.devtool` 与`source-?map`匹配时，将启用`sourceMap`
+当 webpack 中 `config.devtool` 与`source-?map`匹配时，将启用`sourceMap`
 
 查看 [webpack-contrib/terser-webpack-plugin](https://github.com/webpack-contrib/terser-webpack-plugin)来了解更多配置信息。
 
@@ -410,7 +405,7 @@ OptimizeCSSAssets 插件配置查看[NMFR/optimize-css-assets-webpack-plugin](ht
 - 类型: `Boolean`
 - 默认: `false`
 
-> 在webpack构建打包中开启 [thread-loader](https://github.com/webpack-contrib/thread-loader#thread-loader)。
+> 在 webpack 构建打包中开启 [thread-loader](https://github.com/webpack-contrib/thread-loader#thread-loader)。
 
 ## plugins
 
@@ -420,6 +415,7 @@ OptimizeCSSAssets 插件配置查看[NMFR/optimize-css-assets-webpack-plugin](ht
 > 配置 Webpack 插件
 
 例如 (`nuxt.config.js`):
+
 ```js
 import webpack from 'webpack'
 import { version } from './package.json'
@@ -438,11 +434,12 @@ export default {
 
 - 类型： `Array`, `Object`(推荐), `Function` 或 `Boolean`
 
-> 注意：Nuxt.js已应用[PostCSS Preset Env](https://github.com/csstools/postcss-preset-env)。默认情况下，它将启用`Stage 2`功能和`Autoprefixer`,你可以使用`build.postcss.preset`来配置它。
+> 注意：Nuxt.js 已应用[PostCSS Preset Env](https://github.com/csstools/postcss-preset-env)。默认情况下，它将启用`Stage 2`功能和`Autoprefixer`,你可以使用`build.postcss.preset`来配置它。
 
 > 自定义 [postcss](https://github.com/postcss/postcss) 配置
 
 默认值：
+
 ```js
 {
   plugins: {
@@ -455,6 +452,7 @@ export default {
 ```
 
 例如 (`nuxt.config.js`)：
+
 ```js
 export default {
   build: {
@@ -486,7 +484,7 @@ export default {
 
 ## publicPath
 
-> Nuxt.js允许您将`dist`文件上传到CDN来获得最快渲染性能，只需将`publicPath`设置为CDN即可。
+> Nuxt.js 允许您将`dist`文件上传到 CDN 来获得最快渲染性能，只需将`publicPath`设置为 CDN 即可。
 
 - 类型: `String`
 - 默认: `'/_nuxt/'`
@@ -501,7 +499,7 @@ export default {
 }
 ```
 
-然后，当启动`nuxt build`时， 将`.nuxt/dist/client`目录的内容上传到您的CDN即可！
+然后，当启动`nuxt build`时， 将`.nuxt/dist/client`目录的内容上传到您的 CDN 即可！
 
 ## quiet
 
@@ -527,7 +525,7 @@ export default {
 
 ## ssr
 
-> 为服务器端渲染创建特殊的webpack包。
+> 为服务器端渲染创建特殊的 webpack 包。
 
 - 类型: `Boolean`
 - 默认: `true` 为通用模式，`false` 为`spa`模式
@@ -543,7 +541,7 @@ export default {
 
 Nuxt.js 使用 https://github.com/nuxt-community/style-resources-module 来实现这种行为。
 
-您需要为css预处理器指定要包含的 模式 / 路径 ： `less`, `sass`, `scss` 或 `stylus`
+您需要为 css 预处理器指定要包含的 模式 / 路径 ： `less`, `sass`, `scss` 或 `stylus`
 
 <div class="Alert Alert--orange">
 
@@ -560,6 +558,7 @@ $ yarn add @nuxtjs/style-resources
 ```
 
 根据需要安装：
+
 - SASS: `$ yarn add sass-loader node-sass`
 - LESS: `$ yarn add less-loader less`
 - Stylus: `$ yarn add stylus-loader stylus`
@@ -568,9 +567,7 @@ $ yarn add @nuxtjs/style-resources
 
 ```js
 export default {
-  modules: [
-    '@nuxtjs/style-resources'
-  ],
+  modules: ['@nuxtjs/style-resources'],
   styleResources: {
     scss: './assets/variables.scss',
     less: './assets/**/*.less'
@@ -583,7 +580,7 @@ export default {
 
 ## templates
 
-> Nuxt.js允许您自定义自己的模板，这些模板将基于Nuxt配置进行渲染。 此功能特别适用于使用 [modules](/guide/modules)。
+> Nuxt.js 允许您自定义自己的模板，这些模板将基于 Nuxt 配置进行渲染。 此功能特别适用于使用 [modules](/guide/modules)。
 
 - 类型: `Array`
 
@@ -596,7 +593,8 @@ export default {
       {
         src: '~/modules/support/plugin.js', // `src` 可以是绝对的或相对的路径
         dst: 'support.js', // `dst` 是相对于项目`.nuxt`目录
-        options: { // 选项`options`选项可以将参数提供给模板
+        options: {
+          // 选项`options`选项可以将参数提供给模板
           live_chat: false
         }
       }
@@ -612,7 +610,7 @@ export default {
 - 类型: `Array<string | RegExp>`
 - 默认: `[]`
 
-如果要使用Babel与特定的依赖关系进行转换，你可以在`build.transpile`中添加它们，`transpile`中的选项可以是**字符串**或**正则表达式**对象，用于匹配依赖项文件名。
+如果要使用 Babel 与特定的依赖关系进行转换，你可以在`build.transpile`中添加它们，`transpile`中的选项可以是**字符串**或**正则表达式**对象，用于匹配依赖项文件名。
 
 ## vueLoader
 
@@ -620,7 +618,7 @@ export default {
 
 <div class="Alert Alert--orange">
 
-注意：此配置在Nuxt 2.0+中已被删除，请使用 [`build.loaders.vue`](#loaders) 来替代
+注意：此配置在 Nuxt 2.0+中已被删除，请使用 [`build.loaders.vue`](#loaders) 来替代
 
 </div>
 
@@ -641,19 +639,18 @@ export default {
 
 > 指定 [Vue Loader 配置](https://vue-loader.vuejs.org/options.html).
 
-
 ## ~~vendor~~ <Badge text="废弃的" type="error"/>
 
 <div class="Alert Alert--orange">
 
-注意：在Nuxt.js 2.0+版本中，`vendor`由于Webpack 4，将废弃该API但保留使用方法作为兼容低版本处理。查看：[Nuxt.js 2.0 更新文档](https://github.com/nuxt/nuxt.js/releases/tag/v2.0.0)
+注意：在 Nuxt.js 2.0+版本中，`vendor`由于 Webpack 4，将废弃该 API 但保留使用方法作为兼容低版本处理。查看：[Nuxt.js 2.0 更新文档](https://github.com/nuxt/nuxt.js/releases/tag/v2.0.0)
 
 </div>
 
 > Nuxt.js 允许你在自动生成的 `vendor.bundle.js` 文件中添加一些模块，以减少应用 bundle 的体积。这里说的是一些你所依赖的第三方模块 (比如 `axios`)
 
 - 类型： `Array`
- - 数组元素类型： `String`
+- 数组元素类型： `String`
 
 想要把模块打包进 vendor bundle，你可以在 `nuxt.config.js` 的 `build.vendor` 字段中配置：
 
@@ -670,10 +667,7 @@ module.exports = {
 ```js
 module.exports = {
   build: {
-    vendor: [
-      'axios',
-      '~plugins/my-lib.js'
-    ]
+    vendor: ['axios', '~plugins/my-lib.js']
   }
 }
 ```
@@ -687,9 +681,7 @@ module.exports = {
 ```js
 export default {
   build: {
-    watch: [
-      '~/.nuxt/support.js'
-    ]
+    watch: ['~/.nuxt/support.js']
   }
 }
 ```

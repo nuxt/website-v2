@@ -30,13 +30,13 @@ module.exports = {
 
 Daftar properti untuk mengkostumisasi progress bar.
 
-Key | Tipe | Default | Keterangan
---- | --- | --- | ---
-`color` | String | `'black'` | Warna CSS dari progress bar
-`failedColor` | String | `'red'` | Warna CSS dari progress bar saat terjadi error ketika me-render rute (misalnya jika `data` atau `fetch` mengembalikan error).
-`height` | String | `'2px'` | Ketinggian progress bar (digunakan pada properti `style` progress bar)
-`duration` | Number | `5000` | Dalam ms (miliseconds), durasi maksimum progress bar, Nuxt.js mengasumsikan bahwa rute akan di-render sebelum 5 detik.
-`rtl` | Boolean | `false` | Atur arah progress bar dari kanan ke kiri.
+| Key | Tipe | Default | Keterangan |
+| --- | --- | --- | --- |
+| `color` | String | `'black'` | Warna CSS dari progress bar |
+| `failedColor` | String | `'red'` | Warna CSS dari progress bar saat terjadi error ketika me-render rute (misalnya jika `data` atau `fetch` mengembalikan error). |
+| `height` | String | `'2px'` | Ketinggian progress bar (digunakan pada properti `style` progress bar) |
+| `duration` | Number | `5000` | Dalam ms (miliseconds), durasi maksimum progress bar, Nuxt.js mengasumsikan bahwa rute akan di-render sebelum 5 detik. |
+| `rtl` | Boolean | `false` | Atur arah progress bar dari kanan ke kiri. |
 
 Untuk progress bar warna biru dengan tinggi 5px, kita bisa memperbarui `nuxt.config.js` menjadi seperti berikut:
 
@@ -57,12 +57,12 @@ Anda dapat membuat komponen Anda sendiri, yang mana Nuxt.js akan memanggilnya se
 
 **Komponen Anda harus mengekspos beberapa metode berikut:**
 
-Method | Required | Keterangan
---- | --- | ---
-`start()` | Required | Dipanggil ketika sebuah route berpindah, di sini di mana Anda menampilkan komponen Anda.
-`finish()` | Required | Dipanggil ketika rute dimuat (dan data diambil (fetch)), di sini tempat Anda menyembunyikan komponen Anda.
-`fail(error)` | *Optional* | Dipanggil ketika route tidak dapat dimuat (misalnya ketika gagal untuk mengambil data).
-`increase(num)` | *Optional* | Dipanggil pada saat memuat komponen route, `num` adalah Integer 
+| Method | Required | Keterangan |
+| --- | --- | --- |
+| `start()` | Required | Dipanggil ketika sebuah route berpindah, di sini di mana Anda menampilkan komponen Anda. |
+| `finish()` | Required | Dipanggil ketika rute dimuat (dan data diambil (fetch)), di sini tempat Anda menyembunyikan komponen Anda. |
+| `fail(error)` | _Optional_ | Dipanggil ketika route tidak dapat dimuat (misalnya ketika gagal untuk mengambil data). |
+| `increase(num)` | _Optional_ | Dipanggil pada saat memuat komponen route, `num` adalah Integer |
 
 Kita dapat membuat komponen kustom pada `components/loading.vue` :
 
@@ -74,34 +74,34 @@ Kita dapat membuat komponen kustom pada `components/loading.vue` :
 </template>
 
 <script>
-export default {
-  data: () => ({
-    loading: false
-  }),
-  methods: {
-    start () {
-      this.loading = true
-    },
-    finish () {
-      this.loading = false
+  export default {
+    data: () => ({
+      loading: false
+    }),
+    methods: {
+      start() {
+        this.loading = true
+      },
+      finish() {
+        this.loading = false
+      }
     }
   }
-}
 </script>
 
 <style scoped>
-.loading-page {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(255, 255, 255, 0.8);
-  text-align: center;
-  padding-top: 200px;
-  font-size: 30px;
-  font-family: sans-serif;
-}
+  .loading-page {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.8);
+    text-align: center;
+    padding-top: 200px;
+    font-size: 30px;
+    font-family: sans-serif;
+  }
 </style>
 ```
 

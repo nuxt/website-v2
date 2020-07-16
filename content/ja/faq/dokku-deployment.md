@@ -24,7 +24,7 @@ dokku config:set my-nuxt-app NPM_CONFIG_PRODUCTION=false YARN_PRODUCTION=false
 dokku config:set my-nuxt-app HOST=0.0.0.0 NODE_ENV=production
 ```
 
-`dokku config my-nuxt-app` を入力し、以下の 3行を確認します。
+`dokku config my-nuxt-app` を入力し、以下の 3 行を確認します。
 
 ![nuxt config vars Dokku](https://i.imgur.com/9FNsaoQ.png)
 

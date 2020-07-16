@@ -1,5 +1,5 @@
 ---
-title: "API: La propriété dir"
+title: 'API: La propriété dir'
 description: Définir les dossiers personnalisés de votre application Nuxt.js.
 menu: dir
 category: configuration

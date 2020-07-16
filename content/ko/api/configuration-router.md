@@ -1,5 +1,5 @@
 ---
-title: "API: router 프로퍼티"
+title: 'API: router 프로퍼티'
 description: router 프로퍼티를 이용하여 nuxt.js 라우터를 사용자 정의할 수 있습니다.
 menu: router
 category: configuration
@@ -15,9 +15,10 @@ position: 124
 - 타입: `String`
 - 기본값: `'/'`
 
-어플리케이션의 기본 URL입니다. 예를 들어, SPA가 `/app/` 아래에서 돌아가고 있다고 한다면, 기본값은 `/app/`이 되어야 합니다.
+어플리케이션의 기본 URL입니다. 예를 들어, SPA가 `/app/` 아래에서 돌아가고 있다고한다면, 기본값은 `/app/`이 되어야 합니다.
 
 예제 (`nuxt.config.js`):
+
 ```js
 module.exports = {
   router: {
@@ -42,6 +43,7 @@ module.exports = {
 router 모드를 설정하면, server-side rendering으로 이 값을 바꾸지 않는 것을 추천합니다.
 
 예제 (`nuxt.config.js`):
+
 ```js
 module.exports = {
   router: {
@@ -60,6 +62,7 @@ module.exports = {
 [`<nuxt-link>`](/api/components-nuxt-link)는 기본 active 클래스의 전역 설정 입니다.
 
 예제 (`nuxt.config.js`):
+
 ```js
 module.exports = {
   router: {
@@ -77,6 +80,7 @@ module.exports = {
 `scrollBehavior` 옵션으로 경로 사이의, 스크롤 위치에 대한 사용자 지정 동작을 정의 할 수 있습니다. 이 메서드는 페이지가 렌더링 될 때마다 호출됩니다.
 
 기본적으로, scrollBehavior은 아래와 같이 설정됩니다:
+
 ```js
 const scrollBehavior = function (to, from, savedPosition) {
   // if the returned position is falsy or an empty object,
@@ -100,7 +104,7 @@ const scrollBehavior = function (to, from, savedPosition) {
     position = savedPosition
   }
 
-  return new Promise((resolve) => {
+  return new Promise(resolve => {
     // wait for the out transition to complete (if necessary)
     window.$nuxt.$once('triggerScroll', () => {
       // coords will be used if no selector is provided,
@@ -108,7 +112,10 @@ const scrollBehavior = function (to, from, savedPosition) {
       if (to.hash) {
         let hash = to.hash
         // CSS.escape() is not supported with IE and Edge.
-        if (typeof window.CSS !== 'undefined' && typeof window.CSS.escape !== 'undefined') {
+        if (
+          typeof window.CSS !== 'undefined' &&
+          typeof window.CSS.escape !== 'undefined'
+        ) {
           hash = '#' + window.CSS.escape(hash.substr(1))
         }
         try {
@@ -117,7 +124,9 @@ const scrollBehavior = function (to, from, savedPosition) {
             position = { selector: hash }
           }
         } catch (e) {
-          console.warn('Failed to save scroll position. Please add CSS.escape() polyfill (https://github.com/mathiasbynens/CSS.escape).')
+          console.warn(
+            'Failed to save scroll position. Please add CSS.escape() polyfill (https://github.com/mathiasbynens/CSS.escape).'
+          )
         }
       }
       resolve(position)
@@ -129,10 +138,11 @@ const scrollBehavior = function (to, from, savedPosition) {
 모든 경로가 스크롤 위치를 최상단으로 가지는 예제입니다:
 
 `nuxt.config.js`
+
 ```js
 module.exports = {
   router: {
-    scrollBehavior (to, from, savedPosition) {
+    scrollBehavior(to, from, savedPosition) {
       return { x: 0, y: 0 }
     }
   }
@@ -151,6 +161,7 @@ module.exports = {
 예제:
 
 `nuxt.config.js`
+
 ```js
 module.exports = {
   router: {
@@ -161,10 +172,13 @@ module.exports = {
 ```
 
 `middleware/user-agent.js`
+
 ```js
 export default function (context) {
   // 컨텍스트에 userAgent 프로퍼티를 추가합니다. (`data`와 `fetch`에서 사용 가능)
-  context.userAgent = process.server ? context.req.headers['user-agent'] : navigator.userAgent
+  context.userAgent = process.server
+    ? context.req.headers['user-agent']
+    : navigator.userAgent
 }
 ```
 
@@ -179,10 +193,11 @@ nuxt.js가 만든 경로를 `extendRoutes` 옵션을 통해 확장할 수 있습
 사용자 정의 경로를 추가하는 예제입니다:
 
 `nuxt.config.js`
+
 ```js
 module.exports = {
   router: {
-    extendRoutes (routes, resolve) {
+    extendRoutes(routes, resolve) {
       routes.push({
         name: 'custom',
         path: '*',

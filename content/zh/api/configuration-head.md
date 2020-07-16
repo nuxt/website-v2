@@ -1,5 +1,5 @@
 ---
-title: "API: head 属性配置"
+title: 'API: head 属性配置'
 description: Nuxt.js 让你可以在 nuxt.config.js 中配置应用的 meta 信息。
 menu: head
 category: configuration

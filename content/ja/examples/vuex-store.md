@@ -7,4 +7,3 @@ documentation: /guide/vuex-store
 category: advanced
 position: 304
 ---
-

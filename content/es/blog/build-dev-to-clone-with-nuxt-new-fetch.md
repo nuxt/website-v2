@@ -1,5 +1,5 @@
 ---
-title: "Build a DEV.TO clone with Nuxt new fetch"
+title: 'Build a DEV.TO clone with Nuxt new fetch'
 description: Let’s build a blazing fast articles and tutorials app using Nuxt, Dev.to API, with lazy loading, placeholders, caching and trendy neumorphic design UI.
 imgUrl: blog/build-dev-to-clone-with-nuxt-new-fetch/main.png
 date: 2020-04-08
@@ -17,8 +17,7 @@ tags:
   - API
 ---
 
-*Let’s build a blazing fast articles and tutorials app using Nuxt, Dev.to API, with lazy loading, placeholders, caching and trendy neumorphic design UI.*
-
+_Let’s build a blazing fast articles and tutorials app using Nuxt, Dev.to API, with lazy loading, placeholders, caching and trendy neumorphic design UI._
 
 <video src="/blog/build-dev-to-clone-with-nuxt-new-fetch/dev-clone-nuxt.mp4" autoplay loop playsinline controls></video>
 
@@ -27,53 +26,52 @@ tags:
   <a href="https://github.com/bdrtsky/nuxt-dev-to-clone" target="_blank" rel="noopener nofollow">Source</a>
 </p>
 
-This article is intended to demonstrate use cases and awesomeness of new NuxtJS `fetch` functionality  [introduced in release v2.12](https://nuxtjs.org/api/pages-fetch#nuxt-gt-2-12), and show you how to apply its power in your own projects. For in-depth technical analysis and details of the new `fetch` you can check [Krutie Patel’s article](https://nuxtjs.org/blog/understanding-how-fetch-works-in-nuxt-2-12).
+This article is intended to demonstrate use cases and awesomeness of new NuxtJS `fetch` functionality [introduced in release v2.12](https://nuxtjs.org/api/pages-fetch#nuxt-gt-2-12), and show you how to apply its power in your own projects. For in-depth technical analysis and details of the new `fetch` you can check [Krutie Patel’s article](https://nuxtjs.org/blog/understanding-how-fetch-works-in-nuxt-2-12).
 
 Here’s the high-level outline of how we will build our dev.to clone using `fetch` hook. We will:
 
-* use `$fetchState` for showing nice placeholders while data is fetching on the client side
-* use `keep-alive` and `activated` hook to efficiently cache API requests on pages that have already been visited
-* reuse the `fetch` hook with `this.$fetch()`
-* set `fetchOnServer` value to control when we need to render our data on the server side or not
-* find a way to handle errors from `fetch` hook.
+- use `$fetchState` for showing nice placeholders while data is fetching on the client side
+- use `keep-alive` and `activated` hook to efficiently cache API requests on pages that have already been visited
+- reuse the `fetch` hook with `this.$fetch()`
+- set `fetchOnServer` value to control when we need to render our data on the server side or not
+- find a way to handle errors from `fetch` hook.
 
 ## Table of Contents
 
 1. [DEV.TO API](#dev-to-api)
 2. [Setting up the Project](#setting-up-the-project)
-	1. [CSS Styles](#css-styles)
-	2. [UI Design](#ui-design)
-	3. [SVG icons](#svg-icons)
-	4. [Dependencies](#dependencies)
+   1. [CSS Styles](#css-styles)
+   2. [UI Design](#ui-design)
+   3. [SVG icons](#svg-icons)
+   4. [Dependencies](#dependencies)
 3. [Developing the Application](#developing-the-application)
-	1. [URL structure](#url-structure)
-	2. [Caching requests with `keep-alive` and `activated` hook](#caching-requests-with-code-keep-alive-code-and-code-activated-code-hook)
-	3. [Using `fetch` in page components](#using-code-fetch-code-in-page-components)
-	4. [Reuse `fetch` with `this.$fetch()`](#reuse-code-fetch-code-with-code-this-fetch-code-)
-	5. [Applying placeholders with `$fetchState`](#applying-placeholders-with-code-fetchstate-code-)
-	6. [Using `fetch` in any other component  🔥](#using-code-fetch-code-in-any-other-component-)
-	7. [Error handling](#error-handling)
+   1. [URL structure](#url-structure)
+   2. [Caching requests with `keep-alive` and `activated` hook](#caching-requests-with-code-keep-alive-code-and-code-activated-code-hook)
+   3. [Using `fetch` in page components](#using-code-fetch-code-in-page-components)
+   4. [Reuse `fetch` with `this.$fetch()`](#reuse-code-fetch-code-with-code-this-fetch-code-)
+   5. [Applying placeholders with `$fetchState`](#applying-placeholders-with-code-fetchstate-code-)
+   6. [Using `fetch` in any other component 🔥](#using-code-fetch-code-in-any-other-component-)
+   7. [Error handling](#error-handling)
 4. [Conclusion](#conclusion)
 
 ## DEV.TO API
 
-In September 2019 DEV.TO  [opened](https://twitter.com/bendhalpern/status/1176663688742395904)  their public API that we can now use to access articles, users and other resources data. *Please note that it’s still Beta, so it could change in future or some things might not work as expected.*
+In September 2019 DEV.TO [opened](https://twitter.com/bendhalpern/status/1176663688742395904) their public API that we can now use to access articles, users and other resources data. _Please note that it’s still Beta, so it could change in future or some things might not work as expected._
 
 For creating our DEV.TO clone we are interested in such API endpoints:
 
-* [getArticles](https://docs.dev.to/api/#operation/getArticles): to access a list of articles, filtered by the `tag`, `state`, `top`, `username` and paginated with `page` parameters
-* [getArticleById](https://docs.dev.to/api/#operation/getArticleById): to access an article content
-* [getUser](https://docs.dev.to/api/#operation/getUser): to access user data 
-* [getCommentsByArticleId](https://docs.dev.to/api/#operation/getCommentsByArticleId): to fetch comments related to the article
+- [getArticles](https://docs.dev.to/api/#operation/getArticles): to access a list of articles, filtered by the `tag`, `state`, `top`, `username` and paginated with `page` parameters
+- [getArticleById](https://docs.dev.to/api/#operation/getArticleById): to access an article content
+- [getUser](https://docs.dev.to/api/#operation/getUser): to access user data
+- [getCommentsByArticleId](https://docs.dev.to/api/#operation/getCommentsByArticleId): to fetch comments related to the article
 
-
-To keep it simple, for communication with DEV.TO API we will use native Javascript  [Fetch API](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API) .
+To keep it simple, for communication with DEV.TO API we will use native Javascript [Fetch API](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API) .
 
 ## Setting up the Project
 
 If you are an experienced developer you can skip this part and [get straight to the point](#developing-the-application).
 
-Make sure you have Node and npm installed. We will use `create-nuxt-app` to  [initialize](/guide/installation#using-code-create-nuxt-app-code-)  the project, so just type the following command in terminal:
+Make sure you have Node and npm installed. We will use `create-nuxt-app` to [initialize](/guide/installation#using-code-create-nuxt-app-code-) the project, so just type the following command in terminal:
 
 ```
 npx create-nuxt-app nuxt-dev-to-clone
@@ -101,9 +99,7 @@ npm i -D @nuxtjs/style-resources
 Now tell Nuxt to use it by adding this code to `nuxt.config.js`
 
 ```js
-buildModules: [
-  '@nuxtjs/style-resources'
-]
+buildModules: ['@nuxtjs/style-resources']
 ```
 
 Read more about this module [here](https://github.com/nuxt-community/style-resources-module#scss-example), regarding `buildModules`, you can learn more on it in the [modules vs buildModules](/api/configuration-modules#-code-buildmodules-code-) section of the documentation.
@@ -124,7 +120,7 @@ It will be kinda boring just to copy existing DEV.TO design and layout, so why d
 
 We can find a lot of [dribbble shots](https://dribbble.com/tags/neumorphism) (from where this trend came from), but still only a few examples of real-world web apps built with neumorphism style interface, so we just can’t miss the chance to recreate it with CSS and Vue.js. It’s simple, clean and fresh.
 
-I am not going to describe the styling aspect of this application in detail, but if you are interested, you can check this awesome article from  [CSS Tricks](https://css-tricks.com/neumorphism-and-css/) about neumorphism and CSS.
+I am not going to describe the styling aspect of this application in detail, but if you are interested, you can check this awesome article from [CSS Tricks](https://css-tricks.com/neumorphism-and-css/) about neumorphism and CSS.
 
 ### SVG icons
 
@@ -137,18 +133,15 @@ npm i -D @nuxtjs/svg
 `nuxt.config.js`
 
 ```js
-buildModules: [
-  '@nuxtjs/svg',
-  '@nuxtjs/style-resources'
-]
+buildModules: ['@nuxtjs/svg', '@nuxtjs/style-resources']
 ```
 
 ### Dependencies
 
 To keep front-end app fast and simple we will use only two dependencies, both from Vue.js core members:
 
-* [vue-observe-visibility](https://github.com/Akryum/vue-observe-visibility) by [Guillaume Chau](https://twitter.com/Akryum), for effective detecting elements in viewport with IntersectionObserver and trigger lazy loading. Only 1.6kB gzipped
-* [vue-content-placeholders](https://github.com/michalsnik/vue-content-placeholders) by [Michał Sajnóg](https://twitter.com/michalsnik), for showing nicely animated placeholders for UI elements while content is fetching. Only 650B gzipped.
+- [vue-observe-visibility](https://github.com/Akryum/vue-observe-visibility) by [Guillaume Chau](https://twitter.com/Akryum), for effective detecting elements in viewport with IntersectionObserver and trigger lazy loading. Only 1.6kB gzipped
+- [vue-content-placeholders](https://github.com/michalsnik/vue-content-placeholders) by [Michał Sajnóg](https://twitter.com/michalsnik), for showing nicely animated placeholders for UI elements while content is fetching. Only 650B gzipped.
 
 Let’s add them as Nuxt [plugins](https://nuxtjs.org/api/configuration-plugins#__layout), by creating two files.
 
@@ -199,14 +192,14 @@ Let’s imitate DEV.TO URL structure for our simple app. Our [pages](https://nux
 
 We will have 2 [static pages](https://nuxtjs.org/guide/routing#basic-routes):
 
-* `index.vue`: latest articles about Nuxt.js will be listed
-* `top.vue`: most popular articles for last year period.
+- `index.vue`: latest articles about Nuxt.js will be listed
+- `top.vue`: most popular articles for last year period.
 
 For the rest of the app URL’s we will use convenient Nuxt file based [dynamic routes](https://nuxtjs.org/guide/routing#dynamic-routes) feature to scaffold necessary pages by creating such file structure:
 
-* `_username/index.vue` - user profile page with list of his published articles
-* `_username/_article.vue` - this is where article, author profile and comments will be rendered
-* `t/_tag.vue` - list of best articles by any tag that exist on DEV.TO
+- `_username/index.vue` - user profile page with list of his published articles
+- `_username/_article.vue` - this is where article, author profile and comments will be rendered
+- `t/_tag.vue` - list of best articles by any tag that exist on DEV.TO
 
 That’s all. Pretty simple, right?
 
@@ -226,7 +219,7 @@ Moreover, Nuxt gives us fine grained control over `keep-alive` with the `keep-al
 
 ### Using `fetch` in page components
 
-Let’s dive into the `fetch` feature itself. 
+Let’s dive into the `fetch` feature itself.
 
 Currently as you can see from the [final result](https://dev-clone.nuxtjs.app/) we have 3 page components that basically reuse the same code — it’s the `index.vue`, `top.vue` and `t/_tag.vue` page components. They simply render a list of article preview cards.
 
@@ -236,35 +229,37 @@ Currently as you can see from the [final result](https://dev-clone.nuxtjs.app/) 
 <template>
   <div class="page-wrapper">
     <div class="article-cards-wrapper">
-	    <article-card-block
-	      v-for="(article, i) in articles"
-	      :key="article.id"
-	      :article="article"
-	      class="article-card-block"
-	    />
-	  </div>
+      <article-card-block
+        v-for="(article, i) in articles"
+        :key="article.id"
+        :article="article"
+        class="article-card-block"
+      />
+    </div>
   </div>
 </template>
 
 <script>
-import ArticleCardBlock from '@/components/blocks/ArticleCardBlock'
+  import ArticleCardBlock from '@/components/blocks/ArticleCardBlock'
 
-export default {
-  components: {
-    ArticleCardBlock
-  },
-  data() {
-    return {
-      currentPage: 1,
-      articles: []
+  export default {
+    components: {
+      ArticleCardBlock
+    },
+    data() {
+      return {
+        currentPage: 1,
+        articles: []
+      }
+    },
+    async fetch() {
+      const articles = await fetch(
+        `https://dev.to/api/articles?tag=nuxt&state=rising&page=${this.currentPage}`
+      ).then(res => res.json())
+
+      this.articles = this.articles.concat(articles)
     }
-  },
-  async fetch() {
-    const articles = await fetch(`https://dev.to/api/articles?tag=nuxt&state=rising&page=${this.currentPage}`).then((res) => res.json())
-
-    this.articles = this.articles.concat(articles)
   }
-}
 </script>
 ```
 
@@ -288,17 +283,31 @@ Now let’s markup the `<article-card-block>` component which receives `article`
 
 ```html
 <template>
-  <nuxt-link :to="{ name: 'username-article', params: { username: article.user.username, article: article.id } }" tag="article" >
+  <nuxt-link
+    :to="{ name: 'username-article', params: { username: article.user.username, article: article.id } }"
+    tag="article"
+  >
     <div class="image-wrapper">
-      <img v-if="article.cover_image" :src="article.cover_image" :alt="article.title" />
+      <img
+        v-if="article.cover_image"
+        :src="article.cover_image"
+        :alt="article.title"
+      />
       <img v-else :src="article.social_image" :alt="article.title" />
     </div>
     <div class="content">
-      <nuxt-link :to="{name: 'username-article', params: { username: article.user.username, article: article.id } }">
+      <nuxt-link
+        :to="{name: 'username-article', params: { username: article.user.username, article: article.id } }"
+      >
         <h1>{{ article.title }}</h1>
       </nuxt-link>
       <div class="tags">
-        <nuxt-link v-for="tag in article.tag_list" :key="tag" :to="{ name: 't-tag', params: { tag } }" class="tag">
+        <nuxt-link
+          v-for="tag in article.tag_list"
+          :key="tag"
+          :to="{ name: 't-tag', params: { tag } }"
+          class="tag"
+        >
           #{{ tag }}
         </nuxt-link>
       </div>
@@ -320,21 +329,21 @@ Now let’s markup the `<article-card-block>` component which receives `article`
 </template>
 
 <script>
-import HeartIcon from '@/assets/icons/heart.svg?inline'
-import CommentsIcon from '@/assets/icons/comments.svg?inline'
+  import HeartIcon from '@/assets/icons/heart.svg?inline'
+  import CommentsIcon from '@/assets/icons/comments.svg?inline'
 
-export default {
-  components: {
-    HeartIcon,
-    CommentsIcon
-  },
-  props: {
-    article: {
-      type: Object,
-      default: null
+  export default {
+    components: {
+      HeartIcon,
+      CommentsIcon
+    },
+    props: {
+      article: {
+        type: Object,
+        default: null
+      }
     }
   }
-}
 </script>
 ```
 
@@ -419,7 +428,7 @@ Thanks to `$fetchState.pending` wisely provided by the `fetch` hook we can use t
 
 We imitate how `<article-card-block>` looks with [vue-content-placeholders components](https://github.com/michalsnik/vue-content-placeholders#available-components-and-properties), and as you could see in source code it will be used in almost every component that uses the `fetch` hook, so let’s not pay attention on those parts of code anymore (they are basically the same in each component).
 
-### Using `fetch` in any other component  🔥
+### Using `fetch` in any other component 🔥
 
 This is probably the most interesting feature of the new `fetch` hook. **We can now use the `fetch` hook in any Vue component without worrying about breaking SSR!** This means far less headache about how to structure your async API calls and components.
 
@@ -439,23 +448,23 @@ To explore this great functionality let’s move to `_username/_article.vue` pag
 </template>
 
 <script>
-import ArticleBlock from '@/components/blocks/ArticleBlock'
-import CommentsBlock from '@/components/blocks/CommentsBlock'
-import AsideUsernameBlock from '@/components/blocks/AsideUsernameBlock'
+  import ArticleBlock from '@/components/blocks/ArticleBlock'
+  import CommentsBlock from '@/components/blocks/CommentsBlock'
+  import AsideUsernameBlock from '@/components/blocks/AsideUsernameBlock'
 
-export default {
-  components: {
-    ArticleBlock,
-    CommentsBlock,
-    AsideUsernameBlock
+  export default {
+    components: {
+      ArticleBlock,
+      CommentsBlock,
+      AsideUsernameBlock
+    }
   }
-}
 </script>
 ```
 
 Here we see no data fetching at all, only a template layout consisting of 3 components: `<article-block/>`, `<aside-username-block/>`, `<comments-block/>`. And each of those components has its own `fetch` hook. With old `fetch` or current `asyncData` earlier we would have to make all three requests to three different DEV.TO endpoints and then pass them to each component as a prop. But now those components are completely encapsulated.
 
-In `<article-block/>` we use `fetch` just like we’d use it in a page component. 
+In `<article-block/>` we use `fetch` just like we’d use it in a page component.
 
 ```js
 async fetch() {
@@ -552,7 +561,6 @@ In this article we explored Nuxt.js new `fetch` and built an app with basic DEV.
 
 **What to do next:**
 
-* Read [Krutie Patel article](/blog/understanding-how-fetch-works-in-nuxt-2-12) with in-depth analysis of how new `fetch` hook works
-* Check [nuxt-hackernews](https://github.com/nuxt/hackernews) for similar usage of [Hacker News API](https://github.com/HackerNews/API) 
-* [Subscribe](#subscribe-to-newsletter) to the newsletter to not miss the upcoming articles and resources, I plan to write an article about How to create your personal blog with Nuxt and Dev.to as CMS.
-
+- Read [Krutie Patel article](/blog/understanding-how-fetch-works-in-nuxt-2-12) with in-depth analysis of how new `fetch` hook works
+- Check [nuxt-hackernews](https://github.com/nuxt/hackernews) for similar usage of [Hacker News API](https://github.com/HackerNews/API)
+- [Subscribe](#subscribe-to-newsletter) to the newsletter to not miss the upcoming articles and resources, I plan to write an article about How to create your personal blog with Nuxt and Dev.to as CMS.

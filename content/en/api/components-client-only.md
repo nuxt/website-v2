@@ -1,10 +1,9 @@
 ---
-title: "API: The <client-only> Component"
+title: 'API: The <client-only> Component'
 description: Render a component only on client-side, and display a placeholder text on server-side.
 menu: client-only
 category: components
 position: 44
-
 ---
 
 > This component is used to purposely render a component only on client-side. To import a component only on the client, register the component in a [client-side only plugin](/guide/plugins#client-side-only).
@@ -15,8 +14,8 @@ position: 44
 
 </div>
 
-
 **Props**:
+
 - placeholder: `string`
   - Use a text as placeholder until `<client-only />` is mounted on client-side.
 
@@ -36,17 +35,17 @@ position: 44
 
 - placeholder:
   - Use a slot as placeholder until `<client-only />` is mounted on client-side.
- 
- ```html
+
+```html
 <template>
   <div>
     <sidebar />
     <client-only>
       <!-- this component will only be rendered on client-side -->
       <comments />
-  
+
       <!-- loading indicator, rendered on server-side -->
-      <comments-placeholder slot="placeholder" />
+      <comments-placeholder slot="placeholder" />
     </client-only>
   </div>
 </template>

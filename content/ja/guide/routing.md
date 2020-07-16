@@ -1,6 +1,6 @@
 ---
 title: ルーティング
-description: "Nuxt.js はウェブアプリケーションのルーティングを生成するためにファイルシステムを利用します。"
+description: 'Nuxt.js はウェブアプリケーションのルーティングを生成するためにファイルシステムを利用します。'
 category: getting-started
 position: 104
 ---
@@ -114,7 +114,7 @@ router: {
 
 <div class="Alert Alert--orange">
 
-**警告**: `generate` コマンドで動的なルーティングは無視されます。:  [generate 設定 API](/api/configuration-generate#routes)
+**警告**: `generate` コマンドで動的なルーティングは無視されます。: [generate 設定 API](/api/configuration-generate#routes)
 
 </div>
 
@@ -126,7 +126,7 @@ Nuxt.js では、動的なルーティングをするコンポーネント内に
 
 ```js
 export default {
-  validate ({ params }) {
+  validate({ params }) {
     // 数値でなければならない
     return /^\d+$/.test(params.id)
   }
@@ -245,8 +245,7 @@ router: {
 
 ### 未知の動的でネストされたルート
 
-もし URL 構造の深さが不明な場合は、ネストされたパスに動的にマッチさせる `_.vue` ファイルを使用することができます。
-これは _より詳細な_ リクエストにマッチしなかったリクエストをハンドリングします。
+もし URL 構造の深さが不明な場合は、ネストされたパスに動的にマッチさせる `_.vue` ファイルを使用することができます。これは _より詳細な_ リクエストにマッチしなかったリクエストをハンドリングします。
 
 下記のようなファイルの木構造のとき:
 
@@ -261,16 +260,16 @@ pages/
 
 次のようにリクエストをハンドリングします:
 
-Path | File
---- | ---
-`/` | `index.vue`
-`/people` | `people/index.vue`
-`/people/123` | `people/_id.vue`
-`/about` | `_.vue`
-`/about/careers` | `_.vue`
-`/about/careers/chicago` | `_.vue`
+| Path                     | File               |
+| ------------------------ | ------------------ |
+| `/`                      | `index.vue`        |
+| `/people`                | `people/index.vue` |
+| `/people/123`            | `people/_id.vue`   |
+| `/about`                 | `_.vue`            |
+| `/about/careers`         | `_.vue`            |
+| `/about/careers/chicago` | `_.vue`            |
 
-__注意:__ 404 ページのハンドリングは `_.vue` ページのロジックに依存します。[404 リダイレクトについての詳細はこちら](/guide/async-data#handling-errors)を参照してください。
+**注意:** 404 ページのハンドリングは `_.vue` ページのロジックに依存します。[404 リダイレクトについての詳細はこちら](/guide/async-data#handling-errors)を参照してください。
 
 ## router の拡張
 
@@ -282,13 +281,12 @@ Nuxt のルーティングを拡張するためにはいくつかの方法があ
 
 ## 名前付きビュー
 
-名前付きビューをレンダリングするために `<nuxt name="top"/>` または `<nuxt-child name="top"/>` コンポーネントを layout/page 内で使用できます。
-名前付きビューを特定するには `nuxt.config.js` ファイルのルータ設定の拡張が必要です。
+名前付きビューをレンダリングするために `<nuxt name="top"/>` または `<nuxt-child name="top"/>` コンポーネントを layout/page 内で使用できます。名前付きビューを特定するには `nuxt.config.js` ファイルのルータ設定の拡張が必要です。
 
-``` js
+```js
 export default {
   router: {
-    extendRoutes (routes, resolve) {
+    extendRoutes(routes, resolve) {
       const index = routes.findIndex(route => route.name === 'main')
       routes[index] = {
         ...routes[index],
@@ -305,7 +303,7 @@ export default {
 }
 ```
 
-これには関連する2つのプロパティ `components` と `chunkNames` を拡張する必要があります。上記の設定例の名前付きビューは `top` という名前を持っています。
+これには関連する 2 つのプロパティ `components` と `chunkNames` を拡張する必要があります。上記の設定例の名前付きビューは `top` という名前を持っています。
 
 名前付きビューの例が見たい場合は [名前付きビューの例](/examples/named-views) を参照してください。
 
@@ -357,10 +355,12 @@ Nuxt.js では [`<transition>`](https://jp.vuejs.org/v2/guide/transitions.html#%
 `assets/main.css` 内にグローバルな CSS を書きます:
 
 ```css
-.page-enter-active, .page-leave-active {
-  transition: opacity .5s;
+.page-enter-active,
+.page-leave-active {
+  transition: opacity 0.5s;
 }
-.page-enter, .page-leave-to {
+.page-enter,
+.page-leave-to {
   opacity: 0;
 }
 ```
@@ -369,9 +369,7 @@ Nuxt.js では [`<transition>`](https://jp.vuejs.org/v2/guide/transitions.html#%
 
 ```js
 export default {
-  css: [
-    '~/assets/main.css'
-  ]
+  css: ['~/assets/main.css']
 }
 ```
 
@@ -384,10 +382,12 @@ export default {
 `assets/main.css` 内に新しい CSS 定義を追加します:
 
 ```css
-.test-enter-active, .test-leave-active {
-  transition: opacity .5s;
+.test-enter-active,
+.test-leave-active {
+  transition: opacity 0.5s;
 }
-.test-enter, .test-leave-active {
+.test-enter,
+.test-leave-active {
   opacity: 0;
 }
 ```
@@ -412,7 +412,9 @@ export default {
 
 ```js
 export default function (context) {
-  context.userAgent = process.server ? context.req.headers['user-agent'] : navigator.userAgent
+  context.userAgent = process.server
+    ? context.req.headers['user-agent']
+    : navigator.userAgent
 }
 ```
 
@@ -424,7 +426,7 @@ export default function (context) {
 2. マッチしたレイアウト
 3. マッチしたページ
 
-ミドルウェアは非同期に実行することもできます。そのためには、単に `Promise` を返却するか、第2引数の `callback` を使用します:
+ミドルウェアは非同期に実行することもできます。そのためには、単に `Promise` を返却するか、第 2 引数の `callback` を使用します:
 
 `middleware/stats.js`
 
@@ -453,7 +455,6 @@ export default {
 これで `stats` ミドルウェアはすべてのルート変更時に呼び出されるようになります。
 
 同様に、特定のレイアウトもしくはページ内にもミドルウェア（複数であっても）を追加することができます:
-
 
 `pages/index.vue` または `layouts/default.vue`
 

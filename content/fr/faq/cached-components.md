@@ -22,10 +22,13 @@ Vous pouvez utiliser le module [Component Cache](https://github.com/nuxt-communi
     '@nuxtjs/component-cache',
 
     // Avec des options
-    ['@nuxtjs/component-cache', {
-      max: 10000,
-      maxAge: 1000 * 60 * 60
-    }]
+    [
+      '@nuxtjs/component-cache',
+      {
+        max: 10000,
+        maxAge: 1000 * 60 * 60
+      }
+    ]
   ]
 }
 ```
@@ -35,6 +38,6 @@ Voir [la mise en cache au niveau composant](http://ssr.vuejs.org/en/caching.html
 ## N'oubliez pas
 
 - Les composants à mettre en cache **doivent définir une option `name` unique**.
-- Vous **NE** devez ***PAS*** mettre en cache un composant si
+- Vous **NE** devez **_PAS_** mettre en cache un composant si
   - ses composants enfants sont liés à l'état global ou si
   - ses composants enfants produisent des effets de bord sur le rendu de `context`.

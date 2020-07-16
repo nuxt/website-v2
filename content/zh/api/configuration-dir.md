@@ -1,5 +1,5 @@
 ---
-title: "API: dir 属性"
+title: 'API: dir 属性'
 description: 定义Nuxt.js应用程序的自定义目录
 menu: dir
 category: configuration
@@ -22,7 +22,7 @@ position: 107
 }
 ```
 
-> 定义Nuxt.js应用程序的自定义目录
+> 定义 Nuxt.js 应用程序的自定义目录
 
 例如 (`nuxt.config.js`):
 

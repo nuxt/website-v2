@@ -1,5 +1,5 @@
 ---
-title: "API: head 메서드"
+title: 'API: head 메서드'
 description: Nuxt.js는 vue-meta를 사용하여 애플리케이션의 `헤더`와 `html 속성`을 업데이트합니다.
 menu: head
 category: pages
@@ -20,22 +20,26 @@ position: 23
 </template>
 
 <script>
-export default {
-  data () {
-    return {
-      title: 'Hello World!'
-    }
-  },
-  head () {
-    return {
-      title: this.title,
-      meta: [
-        // hid는 유니크한 식별자입니다. `vmid`를 여기에 사용하지 마세요.
-        { hid: '유니크한 아이디', name: '설명', content: '내가 커스텀한 설명' }
-      ]
+  export default {
+    data() {
+      return {
+        title: 'Hello World!'
+      }
+    },
+    head() {
+      return {
+        title: this.title,
+        meta: [
+          // hid는 유니크한 식별자입니다. `vmid`를 여기에 사용하지 마세요.
+          {
+            hid: '유니크한 아이디',
+            name: '설명',
+            content: '내가 커스텀한 설명'
+          }
+        ]
+      }
     }
   }
-}
 </script>
 ```
 

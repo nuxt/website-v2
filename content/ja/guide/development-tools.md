@@ -44,17 +44,17 @@ mkdir test
 </template>
 
 <script>
-export default {
-  data () {
-    return { name: 'world' }
+  export default {
+    data() {
+      return { name: 'world' }
+    }
   }
-}
 </script>
 
 <style>
-.red {
-  color: red;
-}
+  .red {
+    color: red;
+  }
 </style>
 ```
 
@@ -68,10 +68,12 @@ import test from 'ava'
 import { Nuxt, Builder } from 'nuxt'
 
 // Nuxt.js を初期化し localhost:4000 のリスニングを開始します
-test.before('Init Nuxt.js', async (t) => {
+test.before('Init Nuxt.js', async t => {
   const rootDir = resolve(__dirname, '..')
   let config = {}
-  try { config = require(resolve(rootDir, 'nuxt.config.js')) } catch (e) {}
+  try {
+    config = require(resolve(rootDir, 'nuxt.config.js'))
+  } catch (e) {}
   config.rootDir = rootDir // project folder
   config.dev = false // production build
   config.mode = 'universal' // Isomorphic application
@@ -82,7 +84,7 @@ test.before('Init Nuxt.js', async (t) => {
 })
 
 // 生成された HTML のみをテストする例
-test('Route / exists and render HTML', async (t) => {
+test('Route / exists and render HTML', async t => {
   const { nuxt } = t.context
   const context = {}
   const { html } = await nuxt.renderRoute('/', context)
@@ -90,7 +92,7 @@ test('Route / exists and render HTML', async (t) => {
 })
 
 // DOM チェックを経由してテストする例
-test('Route / exists and renders HTML with CSS applied', async (t) => {
+test('Route / exists and renders HTML with CSS applied', async t => {
   const { nuxt } = t.context
   const window = await nuxt.renderAndGetWindow('http://localhost:4000/')
   const element = window.document.querySelector('.red')
@@ -101,7 +103,7 @@ test('Route / exists and renders HTML with CSS applied', async (t) => {
 })
 
 // Nuxt サーバーをクローズする
-test.after('Closing server', (t) => {
+test.after('Closing server', t => {
   const { nuxt } = t.context
   nuxt.close()
 })
@@ -147,20 +149,18 @@ module.exports = {
     'plugin:prettier/recommended'
   ],
   // *.vue ファイルを lint にかけるために必要
-  plugins: [
-    'vue'
-  ],
+  plugins: ['vue'],
   // ここにカスタムルールを追加します。
   rules: {
-    'semi': [2, 'never'],
+    semi: [2, 'never'],
     'no-console': 'off',
     'vue/max-attributes-per-line': 'off',
-    'prettier/prettier': ['error', { 'semi': false }]
+    'prettier/prettier': ['error', { semi: false }]
   }
 }
 ```
 
-そして、`lint` と `lintfix` スクリプトを `package.json` に追加することができます:
+そして、`lint` と `lintfix` スクリプトを `package.json` に追加することができます :
 
 ```js
 "scripts": {

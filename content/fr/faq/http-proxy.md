@@ -11,7 +11,7 @@ position: 10
 npm i @nuxtjs/proxy
 ```
 
-Dans nuxt.config.js 
+Dans nuxt.config.js
 
 ```
  modules: [

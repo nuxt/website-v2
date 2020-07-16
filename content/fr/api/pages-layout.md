@@ -1,5 +1,5 @@
 ---
-title: "API : la propriété layout"
+title: 'API : la propriété layout'
 description: Chaque fichier (premier niveau) dans le répertoire `layouts` créera un layout personnalisé accessible avec la propriété layout dans le composant page.
 menu: layout
 category: pages
@@ -16,7 +16,7 @@ Utilisez la clé `layout` dans vos composants de page pour définir la mise en p
 export default {
   layout: 'blog',
   // OU
-  layout (context) {
+  layout(context) {
     return 'blog'
   }
 }

@@ -1,5 +1,5 @@
 ---
-title: "The render Property"
+title: 'The render Property'
 description: Nuxt.js lets you customize runtime options for rendering pages
 menu: render
 category: configuration-glossary
@@ -25,11 +25,10 @@ export default {
       }
     }
   }
-};
+}
 ```
 
-Learn more about available options on [Vue SSR API Reference](https://ssr.vuejs.org/en/api.html#renderer-options).
-It is recommended to not use this option as Nuxt.js is already providing best SSR defaults and misconfiguration might lead to SSR problems.
+Learn more about available options on [Vue SSR API Reference](https://ssr.vuejs.org/en/api.html#renderer-options). It is recommended to not use this option as Nuxt.js is already providing best SSR defaults and misconfiguration might lead to SSR problems.
 
 ## etag
 
@@ -43,7 +42,7 @@ See [etag](https://www.npmjs.com/package/etag) docs for possible options.
 You can use your own hash function by specifying `etag.hash`:
 
 ```js{}[nuxt.config.js]
-import { murmurHash128 } from "murmurhash-native";
+import { murmurHash128 } from 'murmurhash-native'
 
 export default {
   render: {
@@ -51,7 +50,7 @@ export default {
       hash: html => murmurHash128(html)
     }
   }
-};
+}
 ```
 
 In this case we use [murmurhash-native](https://github.com/royaltm/node-murmurhash-native), which is faster for larger html body sizes. Note that the `weak` option is ignored, when specifying your own hash function.
@@ -61,11 +60,9 @@ In this case we use [murmurhash-native](https://github.com/royaltm/node-murmurha
 - Type `Object`
   - Default: `{ threshold: 0 }`
 
-When providing an object, the [compression](https://www.npmjs.com/package/compression) middleware
-will be used (with respective options).
+When providing an object, the [compression](https://www.npmjs.com/package/compression) middleware will be used (with respective options).
 
-If you want to use your own compression middleware, you can reference it
-directly (f.ex. `otherComp({ myOptions: 'example' })`).
+If you want to use your own compression middleware, you can reference it directly (f.ex. `otherComp({ myOptions: 'example' })`).
 
 To disable compression, use `compressor: false`.
 
@@ -92,12 +89,11 @@ Example:
 ```js
 pushAssets: (req, res, publicPath, preloadFiles) =>
   preloadFiles
-    .filter(f => f.asType === "script" && f.file === "runtime.js")
-    .map(f => `<${publicPath}${f.file}>; rel=preload; as=${f.asType}`);
+    .filter(f => f.asType === 'script' && f.file === 'runtime.js')
+    .map(f => `<${publicPath}${f.file}>; rel=preload; as=${f.asType}`)
 ```
 
-You can add your own assets to the array as well.
-Using `req` and `res` you can decide what links to push based on the request headers, for example using the cookie with application version.
+You can add your own assets to the array as well. Using `req` and `res` you can decide what links to push based on the request headers, for example using the cookie with application version.
 
 The assets will be joined together with `,` and passed as a single `Link` header.
 
@@ -124,8 +120,7 @@ You may want to only disable this option if you have many pages and routes.
 
 > Enable SSR rendering
 
-This option is automatically set based on `mode` value if not provided.
-This can be useful to dynamically enable/disable SSR on runtime after image builds (with docker for example).
+This option is automatically set based on `mode` value if not provided. This can be useful to dynamically enable/disable SSR on runtime after image builds (with docker for example).
 
 ## crossorigin
 
@@ -154,8 +149,7 @@ To collapse the logs, use `'collapsed'` value.
 
 See [serve-static](https://www.npmjs.com/package/serve-static) docs for possible options.
 
-Additional to them, we introduced a `prefix` option which defaults to `true`.
-It will add the router base to your static assets.
+Additional to them, we introduced a `prefix` option which defaults to `true`. It will add the router base to your static assets.
 
 **Example:**
 
@@ -193,25 +187,25 @@ export default {
   render: {
     csp: true
   }
-};
+}
 
 // OR
 
 export default {
   render: {
     csp: {
-      hashAlgorithm: "sha256",
+      hashAlgorithm: 'sha256',
       policies: {
-        "script-src": [
-          "https://www.google-analytics.com",
-          "https://name.example.com"
+        'script-src': [
+          'https://www.google-analytics.com',
+          'https://name.example.com'
         ],
-        "report-uri": ["https://report.example.com/report-csp-violations"]
+        'report-uri': ['https://report.example.com/report-csp-violations']
       },
       addMeta: true
     }
   }
-};
+}
 
 // OR
 /*
@@ -223,34 +217,34 @@ export default {
 
   To learn what tracking link you should use.
 */
-const PRIMARY_HOSTS = `loc.example-website.com`;
+const PRIMARY_HOSTS = `loc.example-website.com`
 export default {
   csp: {
     reportOnly: true,
-    hashAlgorithm: "sha256",
+    hashAlgorithm: 'sha256',
     policies: {
-      "default-src": ["'self'"],
-      "img-src": ["https:", "*.google-analytics.com"],
-      "worker-src": ["'self'", `blob:`, PRIMARY_HOSTS, "*.logrocket.io"],
-      "style-src": ["'self'", "'unsafe-inline'", PRIMARY_HOSTS],
-      "script-src": [
+      'default-src': ["'self'"],
+      'img-src': ['https:', '*.google-analytics.com'],
+      'worker-src': ["'self'", `blob:`, PRIMARY_HOSTS, '*.logrocket.io'],
+      'style-src': ["'self'", "'unsafe-inline'", PRIMARY_HOSTS],
+      'script-src': [
         "'self'",
         "'unsafe-inline'",
         PRIMARY_HOSTS,
-        "sentry.io",
-        "*.sentry-cdn.com",
-        "*.google-analytics.com",
-        "*.logrocket.io"
+        'sentry.io',
+        '*.sentry-cdn.com',
+        '*.google-analytics.com',
+        '*.logrocket.io'
       ],
-      "connect-src": [PRIMARY_HOSTS, "sentry.io", "*.google-analytics.com"],
-      "form-action": ["'self'"],
-      "frame-ancestors": ["'none'"],
-      "object-src": ["'none'"],
-      "base-uri": [PRIMARY_HOSTS],
-      "report-uri": [
+      'connect-src': [PRIMARY_HOSTS, 'sentry.io', '*.google-analytics.com'],
+      'form-action': ["'self'"],
+      'frame-ancestors': ["'none'"],
+      'object-src': ["'none'"],
+      'base-uri': [PRIMARY_HOSTS],
+      'report-uri': [
         `https://sentry.io/api/<project>/security/?sentry_key=<key>`
       ]
     }
   }
-};
+}
 ```

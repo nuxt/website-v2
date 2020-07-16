@@ -9,14 +9,18 @@
       <div class="mb-2">
         <h2 class="mb-4 inline-block">
           <NuxtLink
-            :to="localePath({ name: 'blog-slug', params: { slug: post.slug }})"
+            :to="localePath({ name: 'blog-slug', params: { slug: post.slug } })"
             class="flex leading-tight light:hover:text-nuxt-lightgreen dark:hover:text-nuxt-lightgreen light:text-light-onSurfacePrimary dark:text-dark-onSurfacePrimary font-semibold text-2xl md:text-3xl transition-colors duration-300 ease-linear"
-          >{{ post.title }}</NuxtLink>
+          >
+            {{ post.title }}
+          </NuxtLink>
         </h2>
         <div class="mb-4">
           <p
             class="truncate-multiline-3 light:text-light-onSurfaceSecondary dark:text-dark-onSurfaceSecondary transition-colors duration-300 ease-linear"
-          >{{ post.description }}</p>
+          >
+            {{ post.description }}
+          </p>
         </div>
         <div
           class="flex flex-row flex-wrap justify-start mb-2 light:text-light-onSurfaceSecondary dark:text-dark-onSurfaceSecondary"
@@ -25,31 +29,53 @@
             v-for="(tag, id) in post.tags"
             :key="id"
             class="truncate uppercase tracking-wider font-medium text-ss px-2 py-1 rounded-full mr-2 mb-2 border border-light-border dark:border-dark-border transition-colors duration-300 ease-linear"
-          >{{ tag }}</span>
+          >
+            {{ tag }}
+          </span>
         </div>
       </div>
       <div class="flex flex-col lg:flex-row text-sm">
         <div class="mb-4 lg:mb-0 flex items-center">
-          <span v-for="(author, index) in post.authors" :key="index" class="flex items-center mr-4">
-            <img class="inline-block h-6 w-6 rounded-full mr-2" :src="author.avatarUrl" alt />
+          <span
+            v-for="(author, index) in post.authors"
+            :key="index"
+            class="flex items-center mr-4"
+          >
+            <img
+              class="inline-block h-6 w-6 rounded-full mr-2"
+              :src="author.avatarUrl"
+              alt
+            />
             <span
               class="leading-none last:mr-0 light:text-light-onSurfacePrimary dark:text-dark-onSurfacePrimary hover:text-nuxt-lightgreen transition-colors duration-300 ease-linear"
-            >{{ author.name }}</span>
+            >
+              {{ author.name }}
+            </span>
           </span>
         </div>
-        <div class="flex w-full lg:w-auto items-center justify-between leading-none">
+        <div
+          class="flex w-full lg:w-auto items-center justify-between leading-none"
+        >
           <span
             class="hidden lg:inline-block text-xs mx-2 light:text-light-onSurfaceSecondary dark:text-dark-onSurfaceSecondary transition-colors duration-300 ease-linear"
-          >&bullet;</span>
+          >
+            &bullet;
+          </span>
           <span
             class="light:text-light-onSurfaceSecondary dark:text-dark-onSurfaceSecondary transition-colors duration-300 ease-linear"
-          >{{ formatDateByLocale(post.date) }}</span>
+          >
+            {{ formatDateByLocale(post.date) }}
+          </span>
           <span
             class="hidden lg:inline-block text-xs mx-2 light:text-light-onSurfaceSecondary dark:text-dark-onSurfaceSecondary transition-colors duration-300 ease-linear"
-          >&bullet;</span>
+          >
+            &bullet;
+          </span>
           <span
             class="light:text-light-onSurfaceSecondary dark:text-dark-onSurfaceSecondary transition-colors duration-300 ease-linear"
-          >{{ post.readingTime.text }}</span>
+          >
+            {{ post.readingTime.text }}
+          </span>
         </div>
       </div>
     </div>
@@ -60,22 +86,27 @@
 </template>
 
 <script>
-export default {
-  props: {
-    post: {
-      type: Object,
-      required: true
-    }
-  },
-  methods: {
-    formatDateByLocale (d) {
-      const currentLocale = this.$i18n.locale || 'en'
-      const options = { year: 'numeric', month: 'long', day: 'numeric' }
-      return new Date(d).toLocaleDateString(currentLocale, options)
+  export default {
+    props: {
+      post: {
+        type: Object,
+        required: true
+      }
     },
-    whyNavigationDoesntWork () {
-      this.$router.push(this.localePath({ name: 'blog-slug', params: { slug: this.post.slug } }))
+    methods: {
+      formatDateByLocale(d) {
+        const currentLocale = this.$i18n.locale || 'en'
+        const options = { year: 'numeric', month: 'long', day: 'numeric' }
+        return new Date(d).toLocaleDateString(currentLocale, options)
+      },
+      whyNavigationDoesntWork() {
+        this.$router.push(
+          this.localePath({
+            name: 'blog-slug',
+            params: { slug: this.post.slug }
+          })
+        )
+      }
     }
   }
-}
 </script>

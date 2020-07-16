@@ -1,5 +1,5 @@
 ---
-title: "API: watch プロパティ"
+title: 'API: watch プロパティ'
 description: watch プロパティはサーバーの再起動のためにカスタムファイルを監視してくれます。
 menu: watch
 category: configuration

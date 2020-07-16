@@ -13,8 +13,8 @@ position: 128
 
 例（`nuxt.config.js`）:
 
-例1:
-前提条件:
+例 1: 前提条件:
+
 ```js
 // nuxt.config.js
 export default {
@@ -26,7 +26,9 @@ export default {
     "dev": "yarn nuxt"
   }
 ```
+
 次のフォルダ構成で動作します（nuxt.config は app ディレクトリにあることに注意してください）。
+
 ```bash
 -| app/
 ---| node_modules/
@@ -43,11 +45,12 @@ export default {
 ------| store/
 ```
 
-例2:
+例 2:
 
-例1の代わりに、nuxt.config を src フォルダに移動することもできます。以下の例だと、client を rootDir として指定するだけで、srcDir を空のままにできます:
+例 1 の代わりに、nuxt.config を src フォルダに移動することもできます。以下の例だと、client を rootDir として指定するだけで、srcDir を空のままにできます:
 
 前提条件:
+
 ```js
 // nuxt.config.js
 export default {
@@ -58,7 +61,9 @@ export default {
     "dev": "yarn nuxt client" // client を rootDir として設定
   }
 ```
+
 次のフォルダ構成で動作します（nuxt.config は client ディレクトリにあることに注意してください）。
+
 ```bash
 -| app/
 ---| node_modules/

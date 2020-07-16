@@ -1,5 +1,5 @@
 ---
-title: "API: srcDir 프로퍼티"
+title: 'API: srcDir 프로퍼티'
 description: 당신의 nuxt.js 어플리케이션 소스 폴더를 정의합니다
 menu: srcDir
 category: configuration
@@ -22,6 +22,7 @@ module.exports = {
 ```
 
 그러면, 당신의 어플리케이션 구조는 다음과 같습니다:
+
 ```bash
 -| app/
 ---| node_modules/

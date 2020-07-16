@@ -1,5 +1,5 @@
 ---
-title: "API : Mécanismes de Nuxt"
+title: 'API : Mécanismes de Nuxt'
 description: Mieux comprendre les mécanismes de Nuxt
 menu: Intro
 category: internals
@@ -69,23 +69,23 @@ Toutes les classes Nuxt ont une référence à l'instance `nuxt` et aux `options
 
 ```js
 class SomeClass {
-  constructor (nuxt) {
+  constructor(nuxt) {
     super()
     this.nuxt = nuxt
     this.options = nuxt.options
   }
 
-  someFunction () {
+  someFunction() {
     // Nous avons accès à `this.nuxt` and `this.options`
   }
 }
 ```
 
-Les classes sont *plugable* aussi elle devrait enregistrer un plugin sur le conteneur `nuxt` principal pour enregistrer plus de points d'ancrage.
+Les classes sont _plugable_ aussi elle devrait enregistrer un plugin sur le conteneur `nuxt` principal pour enregistrer plus de points d'ancrage.
 
 ```js
 class FooClass {
-  constructor (nuxt) {
+  constructor(nuxt) {
     super()
     this.nuxt = nuxt
     this.options = nuxt.options
@@ -98,7 +98,7 @@ class FooClass {
 Aussi nous pouvons l'ancrer dans le module `foo` comme ceci :
 
 ```js
-nuxt.hook('foo', (foo) => {
+nuxt.hook('foo', foo => {
   // ...
 })
 ```

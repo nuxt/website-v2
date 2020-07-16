@@ -73,23 +73,23 @@ Semua kelas Nuxt merujuk pada instansi dan pilihan (options) `nuxt`. Setiap kela
 const Tapable = require('tappable')
 
 class SomeClass extends Tapable {
-  constructor (nuxt, builder) {
+  constructor(nuxt, builder) {
     super()
     this.nuxt = nuxt
     this.options = nuxt.options
   }
 
-  someFunction () {
+  someFunction() {
     // Kita memiliki akses ke `this.nuxt` dan `this.options`
   }
 }
 ```
 
-Kelas-kelas tersebut *plugable* sehingga mereka harus mendaftarkan (register) plugin pada wadah (container) utama `nuxt` untuk mendaftarkan (register) pengait (hooks) lainnya.
+Kelas-kelas tersebut _plugable_ sehingga mereka harus mendaftarkan (register) plugin pada wadah (container) utama `nuxt` untuk mendaftarkan (register) pengait (hooks) lainnya.
 
 ```js
 class FooClass extends Tapable {
-  constructor (nuxt, builder) {
+  constructor(nuxt, builder) {
     super()
     this.nuxt = nuxt
     this.options = nuxt.options
@@ -102,7 +102,7 @@ class FooClass extends Tapable {
 Jadi kita dapat mengaitkan (hook) modul `foo` seperti ini:
 
 ```js
-nuxt.plugin('foo', (foo) => {
+nuxt.plugin('foo', foo => {
   // ...
 })
 ```

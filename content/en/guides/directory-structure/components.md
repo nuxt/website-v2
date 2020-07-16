@@ -39,28 +39,29 @@ When working with data inside components we cannot use asyncData as this only wo
 
 ```html{}[components/MountainsList.vue]
 <template>
-<div>
+  <div>
     <p v-if="$fetchState.pending">Loading....</p>
     <p v-else-if="$fetchState.error">Error while fetching mountains</p>
     <ul v-else>
-        <li v-for="(mountain, index) in mountains" :key="index.id">
-           {{ mountain.title }}
-        </li>
+      <li v-for="(mountain, index) in mountains" :key="index.id">
+        {{ mountain.title }}
+      </li>
     </ul>
-</div>
+  </div>
 </template>
 <script>
-export default {
-  data() {
-    return {
-      mountains: []
+  export default {
+    data() {
+      return {
+        mountains: []
+      }
+    },
+    async fetch() {
+      this.mountains = await fetch(
+        'https://api.nuxtjs.dev/mountains'
+      ).then(res => res.json())
     }
-  },
-  async fetch() {
-      this.mountains = await fetch('https://api.nuxtjs.dev/mountains')
-      .then(res => res.json())
-  },
-}
+  }
 </script>
 ```
 
@@ -83,16 +84,16 @@ If you are suing Nuxt 2.10+ you need to first import the module
 <code-group>
   <code-block label="Yarn" active>
 
-  ```bash
-  yarn add -D @nuxt/components
-  ```
+```bash
+yarn add -D @nuxt/components
+```
 
   </code-block>
   <code-block label="NPM">
 
-  ```bash
-  npm install --save-dev @nuxt/components
-  ```
+```bash
+npm install --save-dev @nuxt/components
+```
 
   </code-block>
 </code-group>
@@ -101,9 +102,7 @@ And then add the module to the build modules section of your nuxt.config.js
 
 ```js{}[nuxt.config.js]
 export default {
-  buildModules: [
-    '@nuxt/components'
-  ]
+  buildModules: ['@nuxt/components']
 }
 ```
 
@@ -112,39 +111,32 @@ Once you create your components in the components directory they will then be av
 `components directory`
 
 ```html
-components/
-  TheHeader.vue
-  TheFooter.vue
+components/ TheHeader.vue TheFooter.vue
 ```
-
 
 ```html{}[layouts.default.vue]
 <template>
   <TheHeader />
-	<Nuxt />
+  <Nuxt />
   <TheFooter />
 </template>
-<script>
-</script>
+<script></script>
 ```
 
 ### Dynamic Imports
 
 To dynamically import a component also known, as lazy loading a component, all you need to do is add the lazy prefix in your templates.
 
-
 ```html{}[layouts.default.vue]
 <template>
   <TheHeader />
-	<Nuxt />
+  <Nuxt />
   <LazyTheFooter />
 </template>
-<script>
-</script>
+<script></script>
 ```
 
 Using the lazy prefix you can also dynamically import a component when an event is triggered.
-
 
 ```html{}[pages/index.vue]
 <template>
@@ -156,18 +148,18 @@ Using the lazy prefix you can also dynamically import a component when an event 
 </template>
 
 <script>
-export default {
-  data() {
-    return {
-      show: false
-    }
-  },
-  methods: {
-    showList() {
-      this.show = true
+  export default {
+    data() {
+      return {
+        show: false
+      }
+    },
+    methods: {
+      showList() {
+        this.show = true
+      }
     }
   }
-}
 </script>
 ```
 
@@ -184,7 +176,7 @@ components/
 The component name will be based on its own filename. Therefore the component will be:
 
 ```html
-<Button />
+<button />
 ```
 
 We recommend you use the directory name in the filename for clarity

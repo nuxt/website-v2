@@ -1,5 +1,5 @@
 ---
-title: "API: generate 属性配置"
+title: 'API: generate 属性配置'
 description: 配置 Nuxt.js 应用生成静态站点的具体方式。
 menu: generate
 category: configuration
@@ -28,7 +28,7 @@ position: 110
 
 配置是否允许 [vue-devtools](https://github.com/vuejs/vue-devtools) 调试。
 
-如果您已经通过 nuxt.config.js 或其他方式激活，则无论标志为 `true` 或者 `false`，devtools都会启用。
+如果您已经通过 nuxt.config.js 或其他方式激活，则无论标志为 `true` 或者 `false`，devtools 都会启用。
 
 ## fallback
 
@@ -42,7 +42,7 @@ position: 110
 - 类型: `Number`
 - 默认: `0`
 
-两个渲染周期之间的间隔，以避免使用来自Web应用程序的API调用互相干扰。
+两个渲染周期之间的间隔，以避免使用来自 Web 应用程序的 API 调用互相干扰。
 
 ## minify
 
@@ -64,23 +64,20 @@ position: 110
 -----| _id.vue
 ```
 
-上面的目录结构，Nuxt.js 只会生成路由 `/` 对应的静态文件。（译者注：因为 `/users/:id` 是动态路由）
-如果想让 Nuxt.js 为动态路由也生成静态文件，你需要指定动态路由参数的值，并配置到 `routes` 数组中去。
+上面的目录结构，Nuxt.js 只会生成路由 `/` 对应的静态文件。（译者注：因为 `/users/:id` 是动态路由）如果想让 Nuxt.js 为动态路由也生成静态文件，你需要指定动态路由参数的值，并配置到 `routes` 数组中去。
 
 例如，我们可以在 `nuxt.config.js` 中为 `/users/:id` 路由配置如下：
+
 ```js
 module.exports = {
   generate: {
-    routes: [
-      '/users/1',
-      '/users/2',
-      '/users/3'
-    ]
+    routes: ['/users/1', '/users/2', '/users/3']
   }
 }
 ```
 
 当我们运行 `nuxt generate` 命令时：
+
 ```bash
 [nuxt] Generating...
 [...]
@@ -97,24 +94,25 @@ nuxt:generate HTML Files generated in 7.6s +6ms
 ```
 
 棒极了，但是如果路由**动态参数**的值是动态的而不是固定的，应该怎么做呢？
+
 1. 使用一个返回 `Promise` 对象类型 的 `函数`。
 2. 使用一个回调是 `callback(err, params)` 的 `函数`。
 
 ### 返回一个 Promise 对象的函数
 
 `nuxt.config.js`
+
 ```js
 const axios = require('axios')
 
 module.exports = {
   generate: {
-    routes () {
-      return axios.get('https://my-api/users')
-        .then((res) => {
-          return res.data.map((user) => {
-            return '/users/' + user.id
-          })
+    routes() {
+      return axios.get('https://my-api/users').then(res => {
+        return res.data.map(user => {
+          return '/users/' + user.id
         })
+      })
     }
   }
 }
@@ -123,15 +121,17 @@ module.exports = {
 ### 返回回调函数
 
 `nuxt.config.js`
+
 ```js
 const axios = require('axios')
 
 module.exports = {
   generate: {
-    routes (callback) {
-      axios.get('https://my-api/users')
-        .then((res) => {
-          const routes = res.data.map((user) => {
+    routes(callback) {
+      axios
+        .get('https://my-api/users')
+        .then(res => {
+          const routes = res.data.map(user => {
             return '/users/' + user.id
           })
           callback(null, routes)
@@ -153,16 +153,15 @@ import axios from 'axios'
 
 export default {
   generate: {
-    routes () {
-      return axios.get('https://my-api/users')
-        .then((res) => {
-          return res.data.map((user) => {
-            return {
-              route: '/users/' + user.id,
-              payload: user
-            }
-          })
+    routes() {
+      return axios.get('https://my-api/users').then(res => {
+        return res.data.map(user => {
+          return {
+            route: '/users/' + user.id,
+            payload: user
+          }
         })
+      })
     }
   }
 }
@@ -196,7 +195,7 @@ async asyncData ({ params, error, payload }) {
 -------| index.html
 ```
 
-设置为`false`时，将根据路由路径生成HTML文件：
+设置为`false`时，将根据路由路径生成 HTML 文件：
 
 ```bash
 -| dist/
@@ -205,7 +204,8 @@ async asyncData ({ params, error, payload }) {
 ---| products/
 -----| item.html
 ```
-_注意：使用[Netlify](https://netlify.com)或使用HTML回退的任何静态托管服务器，此选项可能很有用。_
+
+_注意：使用[Netlify](https://netlify.com)或使用 HTML 回退的任何静态托管服务器，此选项可能很有用。_
 
 ## 并发
 

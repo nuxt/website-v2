@@ -5,12 +5,9 @@ category: configuration
 position: 6
 ---
 
-In your `nuxt.config.js` file, under the `build` option, you can pass webpack `plugins`, the same way you would do
-it in [a `webpack.config.js` file](https://webpack.js.org/configuration/plugins/).
+In your `nuxt.config.js` file, under the `build` option, you can pass webpack `plugins`, the same way you would do it in [a `webpack.config.js` file](https://webpack.js.org/configuration/plugins/).
 
-In this example we add the webpack built-in [ProvidePlugin](https://webpack.js.org/plugins/provide-plugin/)
-for automatically loading JavaScript modules (_lodash_ and _jQuery_) instead of having to `import` or `require`
-them everywhere.
+In this example we add the webpack built-in [ProvidePlugin](https://webpack.js.org/plugins/provide-plugin/) for automatically loading JavaScript modules (_lodash_ and _jQuery_) instead of having to `import` or `require` them everywhere.
 
 ```js
 import webpack from 'webpack'
@@ -20,8 +17,8 @@ export default {
     plugins: [
       new webpack.ProvidePlugin({
         // global modules
-        '$': 'jquery',
-        '_': 'lodash'
+        $: 'jquery',
+        _: 'lodash'
       })
     ]
   }

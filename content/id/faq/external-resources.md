@@ -15,10 +15,15 @@ Masukan tautan sumber daya Anda didalam file `nuxt.config.js`:
 module.exports = {
   head: {
     script: [
-      { src: 'https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js' }
+      {
+        src: 'https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js'
+      }
     ],
     link: [
-      { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css?family=Roboto' }
+      {
+        rel: 'stylesheet',
+        href: 'https://fonts.googleapis.com/css?family=Roboto'
+      }
     ]
   }
 }
@@ -34,21 +39,27 @@ Masukan tautan sumber daya Anda didalam file `.vue` yang berada didalam direktor
 </template>
 
 <script>
-export default {
-  head: {
-    script: [
-      { src: 'https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js' }
-    ],
-    link: [
-      { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css?family=Roboto' }
-    ]
+  export default {
+    head: {
+      script: [
+        {
+          src:
+            'https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js'
+        }
+      ],
+      link: [
+        {
+          rel: 'stylesheet',
+          href: 'https://fonts.googleapis.com/css?family=Roboto'
+        }
+      ]
+    }
   }
-}
 </script>
 
 <style scoped>
-h1 {
-  font-family: Roboto, sans-serif;
-}
+  h1 {
+    font-family: Roboto, sans-serif;
+  }
 </style>
 ```

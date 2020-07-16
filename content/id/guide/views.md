@@ -1,8 +1,6 @@
 ---
 title: View (Tampilan)
-description: Bagian View (Tampilan) menggambarkan semua yang Anda perlukan untuk mengonfigurasi
-  data dan tampilan untuk rute tertentu pada Aplikasi Nuxt.js Anda (Dokumen, Layout,
-  Halaman, dan HTML Head).
+description: Bagian View (Tampilan) menggambarkan semua yang Anda perlukan untuk mengonfigurasi data dan tampilan untuk rute tertentu pada Aplikasi Nuxt.js Anda (Dokumen, Layout, Halaman, dan HTML Head).
 category: getting-started
 position: 105
 ---
@@ -54,13 +52,13 @@ Nuxt.js memungkinkan Anda meng-extend layout utama atau membuat layout secara ku
 
 Anda bisa meng-extend layout utama dengan menambahkan file `layouts/default.vue` .
 
-*Pastikan untuk menambahkan komponen `<nuxt/>` saat membuat layout untuk menampilkan komponen halaman.*
+_Pastikan untuk menambahkan komponen `<nuxt/>` saat membuat layout untuk menampilkan komponen halaman._
 
 Kode sumber layout yang default adalah:
 
 ```html
 <template>
-  <nuxt/>
+  <nuxt />
 </template>
 ```
 
@@ -68,7 +66,7 @@ Kode sumber layout yang default adalah:
 
 Anda dapat mengkustomisasi halaman kesalahan ini dengan cara menambahkan file `layouts/error.vue`.
 
-Layout ini spesial, karena Anda *tidak* harus menyertakan `<nuxt/>` pada templatnya. Anda harus memahami layout ini sebagai komponen yang ditampilkan ketika terjadi kesalahan (error) (`404`, `500`, dan sebagainya.).
+Layout ini spesial, karena Anda _tidak_ harus menyertakan `<nuxt/>` pada templatnya. Anda harus memahami layout ini sebagai komponen yang ditampilkan ketika terjadi kesalahan (error) (`404`, `500`, dan sebagainya.).
 
 Kode sumber halaman kesalahan yang default [tersedia di GitHub](https://github.com/nuxt/nuxt.js/blob/dev/packages/vue-app/template/components/nuxt-error.vue).
 
@@ -84,18 +82,18 @@ Contoh kustomisasi halaman kesalahan pada file `layouts/error.vue`:
 </template>
 
 <script>
-export default {
-  props: ['error'],
-  layout: 'blog' // Anda dapat mengatur layout kustom untuk halaman kesalahan
-}
+  export default {
+    props: ['error'],
+    layout: 'blog' // Anda dapat mengatur layout kustom untuk halaman kesalahan
+  }
 </script>
 ```
 
 ### Kustom Layout
 
-Setiap file (*level pertama *) pada folder `layouts` akan membuat kustom layout yang dapat diakses dengan properti `layout` di dalam komponen halaman.
+Setiap file (_level pertama _) pada folder `layouts` akan membuat kustom layout yang dapat diakses dengan properti `layout` di dalam komponen halaman.
 
-*Pastikan Anda menambahkan komponen `<nuxt/>` ketika membuat layout untuk menampilkan komponen halaman.*
+_Pastikan Anda menambahkan komponen `<nuxt/>` ketika membuat layout untuk menampilkan komponen halaman._
 
 Contoh `layouts/blog.vue`:
 
@@ -103,7 +101,7 @@ Contoh `layouts/blog.vue`:
 <template>
   <div>
     <div>My blog navigation bar here</div>
-    <nuxt/>
+    <nuxt />
   </div>
 </template>
 ```
@@ -112,9 +110,9 @@ Dan kemudian pada file `pages/posts.vue`, Anda bisa memberitahu Nuxt.js untuk me
 
 ```html
 <script>
-export default {
-  layout: 'blog'
-}
+  export default {
+    layout: 'blog'
+  }
 </script>
 ```
 
@@ -132,39 +130,39 @@ Setiap komponen Halaman (Page) adalah komponen Vue, namun Nuxt.js menambahkan pe
 </template>
 
 <script>
-export default {
-  asyncData (context) {
-    // dipanggil setiap saat sebelum memuat komponen
-    return { name: 'World' }
-  },
-  fetch () {
-    // Metode `fetch` digunakan untuk mengisi store sebelum me-render halaman
-  },
-  head () {
-    // Set Meta Tags untuk Halaman (Page) ini
-  },
-  // dan fungsionalitas lainnya untuk digali
-  ...
-}
+  export default {
+    asyncData (context) {
+      // dipanggil setiap saat sebelum memuat komponen
+      return { name: 'World' }
+    },
+    fetch () {
+      // Metode `fetch` digunakan untuk mengisi store sebelum me-render halaman
+    },
+    head () {
+      // Set Meta Tags untuk Halaman (Page) ini
+    },
+    // dan fungsionalitas lainnya untuk digali
+    ...
+  }
 </script>
 
 <style>
-.red {
-  color: red;
-}
+  .red {
+    color: red;
+  }
 </style>
 ```
 
-Atribut | Penjelasan
---- | ---
-`asyncData` | Kunci yang paling penting, bisa asinkronus dan menerima konteks sebagai argumen, baca [dokumentasi async data](/guide/async-data) untuk mengetahui bagaimana ia bekerja.
-`fetch` | Digunakan untuk mengisi store sebelum me-render halaman, ini seperti metode `data` kecuali ia tidak mengatur data komponen. Lihat [dokumentasi Halaman API `fetch`](/api/pages-fetch).
-`head` | Mengatur `<meta>` tag khusus untuk halaman (aktif) saat ini. Lihat [dokumentasi Halaman API `head`](/api/pages-head).
-`layout` | Menentukan layout yang ditetapkan dalam direktori `layouts`. Lihat [dokumentasi Halaman API `layout` ](/api/pages-layout).
-`transition` | Mengatur transisi tertentu untuk sebuah halaman. Lihat [Halaman API `transition`](/api/pages-transition).
-`scrollToTop` | Boolean (secara default: `false`). Tentukan apakah Anda ingin halaman men-scroll ke atas sebelum me-render halaman, ia digunakan untuk [nested routes](/guide/routing#nested-routes).
-`validate` | Fungsi Validator untuk [rute dinamis](/guide/routing#dynamic-routes).
-`middleware` | Menetapkan middleware untuk halaman ini. Middleware akan dipanggil sebelum me-render halaman, melihat rute [middleware](/guide/routing#middleware).
+| Atribut | Penjelasan |
+| --- | --- |
+| `asyncData` | Kunci yang paling penting, bisa asinkronus dan menerima konteks sebagai argumen, baca [dokumentasi async data](/guide/async-data) untuk mengetahui bagaimana ia bekerja. |
+| `fetch` | Digunakan untuk mengisi store sebelum me-render halaman, ini seperti metode `data` kecuali ia tidak mengatur data komponen. Lihat [dokumentasi Halaman API `fetch`](/api/pages-fetch). |
+| `head` | Mengatur `<meta>` tag khusus untuk halaman (aktif) saat ini. Lihat [dokumentasi Halaman API `head`](/api/pages-head). |
+| `layout` | Menentukan layout yang ditetapkan dalam direktori `layouts`. Lihat [dokumentasi Halaman API `layout` ](/api/pages-layout). |
+| `transition` | Mengatur transisi tertentu untuk sebuah halaman. Lihat [Halaman API `transition`](/api/pages-transition). |
+| `scrollToTop` | Boolean (secara default: `false`). Tentukan apakah Anda ingin halaman men-scroll ke atas sebelum me-render halaman, ia digunakan untuk [nested routes](/guide/routing#nested-routes). |
+| `validate` | Fungsi Validator untuk [rute dinamis](/guide/routing#dynamic-routes). |
+| `middleware` | Menetapkan middleware untuk halaman ini. Middleware akan dipanggil sebelum me-render halaman, melihat rute [middleware](/guide/routing#middleware). |
 
 Informasi lebih lanjut tentang penggunaan properti halaman: [Halaman API](/api)
 
@@ -211,6 +209,6 @@ Informasi lebih lanjut tentang metode head : [Halaman API `head`](/api/pages-hea
 
 <div class="Alert">
 
-Untuk menghindari duplikasi saat menggunakannya pada child komponen, berikan pengenal unik dengan key `hid`. [Baca lebih lanjut] (https://vue-meta.nuxtjs.org/api/#tagidkeyname) .
+Untuk menghindari duplikasi saat menggunakannya pada child komponen, berikan pengenal unik dengan key `hid`. [Baca lebih lanjut](https://vue-meta.nuxtjs.org/api/#tagidkeyname) .
 
 </div>

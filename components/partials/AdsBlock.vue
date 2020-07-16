@@ -5,12 +5,11 @@
 </template>
 
 <script>
-
-export default {
-  data () {
-    return {
-      displayCarbon: true
+  export default {
+    data() {
+      return {
+        displayCarbon: true
+      }
     }
   }
-}
 </script>

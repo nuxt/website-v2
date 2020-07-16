@@ -1,5 +1,5 @@
 ---
-title: "API: key 프로퍼티"
+title: 'API: key 프로퍼티'
 description: 내부의 `<router-view>` 컴포넌트의 `key` 프로퍼티를 설정합니다.
 menu: key
 category: pages
@@ -16,7 +16,7 @@ position: 24
 
 ```js
 export default {
-  keys (route) {
+  keys(route) {
     return route.fullPath
   }
 }

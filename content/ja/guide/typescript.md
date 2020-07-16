@@ -1,6 +1,6 @@
 ---
 title: TypeScript サポート
-description: "Nuxt.js 公式の TypeScript サポート"
+description: 'Nuxt.js 公式の TypeScript サポート'
 category: getting-started
 position: 112
 ---

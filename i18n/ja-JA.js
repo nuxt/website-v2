@@ -96,7 +96,8 @@ module.exports = {
       }
     },
     companies: {
-      title: 'nuxt<span class="text-nuxt-lightgreen">JS</span> を使っている企業 '
+      title:
+        'nuxt<span class="text-nuxt-lightgreen">JS</span> を使っている企業 '
     },
     modes: {
       title: 'NUXT<span class="text-nuxt-lightgreen">JS</span> のレンダリング',

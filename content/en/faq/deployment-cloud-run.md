@@ -6,22 +6,13 @@ category: deployment
 position: 207
 ---
 
-[Google Cloud Run](https://cloud.google.com/run) is a fully managed compute
-platform for deploying and scaling containerized applications quickly and
-securely.
+[Google Cloud Run](https://cloud.google.com/run) is a fully managed compute platform for deploying and scaling containerized applications quickly and securely.
 
-In this guide, we simply upload the entire project folder to Google Cloud Build
-with a Dockerfile. After the upload, Cloud Build will automatically generate a
-container. Then we will deploy this container to Google Cloud Run which will
-start it with the `start` script in our package.json.
+In this guide, we simply upload the entire project folder to Google Cloud Build with a Dockerfile. After the upload, Cloud Build will automatically generate a container. Then we will deploy this container to Google Cloud Run which will start it with the `start` script in our package.json.
 
 ## Getting Started
 
-Make sure you have a Google Cloud Account, a project and the accesses as editor
-on Cloud Build and Cloud Run. Furthermore, make sure to download and install the
-Cloud SDK (CLI) from Google as explained [here](https://cloud.google.com/sdk/)
-and log into your Google Cloud Account. If you do not want to download the Cloud
-SDK, be aware that you can use gcloud CLI from the Google Cloud Console.
+Make sure you have a Google Cloud Account, a project and the accesses as editor on Cloud Build and Cloud Run. Furthermore, make sure to download and install the Cloud SDK (CLI) from Google as explained [here](https://cloud.google.com/sdk/) and log into your Google Cloud Account. If you do not want to download the Cloud SDK, be aware that you can use gcloud CLI from the Google Cloud Console.
 
 Now, let's do few checks!
 
@@ -59,11 +50,9 @@ Check that everything works.
 
 ## Application configuration
 
-!Attention: from now and on, the port is set to `3000`, change all occurrences
-if needed.
+!Attention: from now and on, the port is set to `3000`, change all occurrences if needed.
 
-The host should not be set to localhost, but to 0.0.0.0. You can update the
-server configuration in `nuxt.config.js`:
+The host should not be set to localhost, but to 0.0.0.0. You can update the server configuration in `nuxt.config.js`:
 
 ```javascript
 export default {
@@ -95,8 +84,7 @@ Or, add this to your package.json file:
 
 Now, we will create a container with Cloud Build.
 
-You need to add to your Nuxt app a `Dockerfile`. Create a new file named
-`Dockerfile` in your root project directory and add the following content:
+You need to add to your Nuxt app a `Dockerfile`. Create a new file named `Dockerfile` in your root project directory and add the following content:
 
 For yarn users:
 
@@ -138,9 +126,7 @@ Run the following command to start the build process:
 
 `gcloud builds submit --tag gcr.io/<YOUR_GOOGLE_CLOUD_PROJECT_ID>/my-nuxt-app-name:1.0.0 .`
 
-!Attention: if you want to implement continuous delivery or .env files
-configurations, you will have to use a
-[Cloud Build configuration file](https://cloud.google.com/cloud-build/docs/build-config).
+!Attention: if you want to implement continuous delivery or .env files configurations, you will have to use a [Cloud Build configuration file](https://cloud.google.com/cloud-build/docs/build-config).
 
 ## Deploying your application on Cloud Run
 
@@ -150,9 +136,7 @@ Run the following command to deploy your application:
 
 Allow unauthenticated invocations if you want to set up a public access.
 
-Be aware that Cloud Run applications will have a default concurrency value of 80
-(each container instance will handle up to 80 requests at a time). You can
-specify the concurrency value this way:
+Be aware that Cloud Run applications will have a default concurrency value of 80 (each container instance will handle up to 80 requests at a time). You can specify the concurrency value this way:
 
 `gcloud run deploy --image=gcr.io/<YOUR_GOOGLE_CLOUD_PROJECT_ID>/my-nuxt-app-name:1.0.0 --platform managed --port 3000 --concurrency <YOUR_CONCURRENCY_VALUE>`
 
@@ -160,5 +144,4 @@ Run the following command to check if the deployment was created successfully:
 
 `gcloud run services list --platform managed`
 
-A list of Cloud Run services is displayed. Click on the URL of your deployment
-and enjoy the result!
+A list of Cloud Run services is displayed. Click on the URL of your deployment and enjoy the result!

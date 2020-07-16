@@ -1,5 +1,5 @@
 ---
-title: "API: plugins 프로퍼티"
+title: 'API: plugins 프로퍼티'
 description: nuxt.js plugins 옵션으로 vue.js 플러그인 사용하기.
 menu: plugins
 category: configuration
@@ -12,14 +12,15 @@ position: 121
   - Items: `String` or `Object`
 
 만약 item이 object일 때, 프로퍼티는:
-  - src: `String` (파일 경로)
-  - injectAs: `String` (기본값은 `false`) *만약 정의되어 있다면, 내보내진 객체는 메인 어플리케이션과 컨텍스트에 주입됩니다.*
-  - ssr: `Boolean` (기본값은 `true`) *만약 false라면, 파일은 클라이언트에만 포함될 것입니다.*
 
+- src: `String` (파일 경로)
+- injectAs: `String` (기본값은 `false`) _만약 정의되어 있다면, 내보내진 객체는메인 어플리케이션과 컨텍스트에 주입됩니다._
+- ssr: `Boolean` (기본값은 `true`) _만약 false라면, 파일은 클라이언트에만 포함될것입니다._
 
 > plugins 프로퍼티에 손쉽게 메인 어플리케이션의 vue.js plugins 추가할 수 있습니다.
 
 예제 (`nuxt.config.js`):
+
 ```js
 module.exports = {
   plugins: ['~plugins/vue-notifications']

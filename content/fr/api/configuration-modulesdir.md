@@ -1,5 +1,5 @@
 ---
-title: "API: La propriété modulesDir"
+title: 'API: La propriété modulesDir'
 description: Définissez le répertoire des modules pour votre application Nuxt.js
 menu: modulesDir
 category: configuration
@@ -19,6 +19,4 @@ export default {
 }
 ```
 
-La définition de ce champ peut être nécessaire si votre projet est organisé comme un mono-référentiel de style espace de 
-travail Yarn.
-
+La définition de ce champ peut être nécessaire si votre projet est organisé comme un mono-référentiel de style espace de travail Yarn.

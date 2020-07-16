@@ -1,5 +1,5 @@
 ---
-title: "API: dir 프로퍼티"
+title: 'API: dir 프로퍼티'
 description: Nuxt.js 애플리케이션의 커스텀 디렉토리를 정의합니다
 menu: dir
 category: configuration

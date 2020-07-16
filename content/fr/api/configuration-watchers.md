@@ -1,5 +1,5 @@
 ---
-title: "API: La propriété watchers"
+title: 'API: La propriété watchers'
 description: La propriété watchers vous permet d'écraser la configuration des observateurs.
 menu: watchers
 category: configuration

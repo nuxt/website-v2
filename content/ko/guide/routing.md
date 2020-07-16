@@ -13,7 +13,7 @@ position: 104
 
 </div>
 
-예를 들어, 
+예를 들어,
 
 ```html
 <template>
@@ -110,7 +110,7 @@ router: {
 }
 ```
 
-위에서 볼 수 있듯이, `users-id` 라우트는 `:id?`라는 선택적 경로를 가집니다. 만약 이를 필수 경로로 만드려면 `users/_id` 폴더 안에 `index.vue` 파일을 만듭니다.
+위에서 볼 수 있듯이, `users-id` 라우트는 `:id?`라는 선택적 경로를 가집니다. 만약이를 필수 경로로 만드려면 `users/_id` 폴더 안에 `index.vue` 파일을 만듭니다.
 
 <div class="Alert Alert--orange">
 
@@ -120,13 +120,13 @@ router: {
 
 ### 라우트 파라미터의 유효성 체크하기
 
-Nuxt.js를 사용하면 동적 라우트 컴포넌트 내에 유효성을 검증하는 메소드를 정의할 수 있습니다.
+Nuxt.js를 사용하면 동적 라우트 컴포넌트 내에 유효성을 검증하는 메소드를 정의할수있습니다.
 
 예시: `pages/users/_id.vue`
 
 ```js
 export default {
-  validate ({ params }) {
+  validate({ params }) {
     // Must be a number
     return /^\d+$/.test(params.id)
   }
@@ -139,13 +139,13 @@ export default {
 
 ## 중첩 라우트
 
-Nuxt.js를 사용하면 vue-router의 자식 라우트를 사용함으로써 중첩 라우트를 만들 수 있습니다.
+Nuxt.js를 사용하면 vue-router의 자식 라우트를 사용함으로써 중첩 라우트를 만들 수있습니다.
 
-중첩 라우트의 부모 컴포넌트를 정의하기 위해서는 자식 뷰를 포함하고 있는 **폴더와 같은 이름** 으로 Vue 파일을 생성해야 합니다.
+중첩 라우트의 부모 컴포넌트를 정의하기 위해서는 자식 뷰를 포함하고 있는 **폴더와같은 이름** 으로 Vue 파일을 생성해야 합니다.
 
 <div class="Alert Alert--orange">
 
-<b>Warning:</b> 부모 컴포넌트(<code>.vue</code> file)에 `<nuxt-child/>` 태그를 사용해야 함을 잊지마세요!
+<b>Warning:</b> 부모 컴포넌트(<code>.vue</code> file)에 `<nuxt-child/>` 태그를사용해야 함을 잊지마세요!
 
 </div>
 
@@ -186,7 +186,7 @@ router: {
 
 ## 동적 중첩 라우트
 
-Nuxt.js에서 동적 중첩 라우트는 자주 사용되지는 않지만, 동적 라우트 하위에 동적 라우트가 있는 경우에도 가능하기는 합니다.
+Nuxt.js에서 동적 중첩 라우트는 자주 사용되지는 않지만, 동적 라우트 하위에 동적라우트가 있는 경우에도 가능하기는 합니다.
 
 아래의 폴더 구조는
 
@@ -243,10 +243,9 @@ router: {
 }
 ```
 
-### 언노운(Unknown) 동적 중첩 라우트 
+### 언노운(Unknown) 동적 중첩 라우트
 
-만약 URL 구조에 대해서 아직은 알 수 없다면, 중첩 경로에 매치될 `_.vue` 파일을 사용할 수 있습니다.
-이 파일은 _구체적인 요청_과 매치되지 않는 요청에 대해 응답할 것입니다.
+만약 URL 구조에 대해서 아직은 알 수 없다면, 중첩 경로에 매치될 `_.vue` 파일을 사용할 수 있습니다. 이 파일은 *구체적인 요청*과 매치되지 않는 요청에 대해 응답할것입니다.
 
 아래의 폴더 구조는
 
@@ -258,27 +257,28 @@ pages/
 --| _.vue
 --| index.vue
 ```
-아래와 같은 요청을 다룰 것입니다: 
 
-Path | File
---- | ---
-`/` | `index.vue`
-`/people` | `people/index.vue`
-`/people/123` | `people/_id.vue`
-`/about` | `_.vue`
-`/about/careers` | `_.vue`
-`/about/careers/chicago` | `_.vue`
+아래와 같은 요청을 다룰 것입니다:
 
-__Note:__ 404 페이지는 이제 `_.vue` 페이지의 로직에 달렸습니다[404 리디렉션에 대한 정보를 여기서 찾아주세요](/guide/async-data#handling-errors).
+| Path                     | File               |
+| ------------------------ | ------------------ |
+| `/`                      | `index.vue`        |
+| `/people`                | `people/index.vue` |
+| `/people/123`            | `people/_id.vue`   |
+| `/about`                 | `_.vue`            |
+| `/about/careers`         | `_.vue`            |
+| `/about/careers/chicago` | `_.vue`            |
+
+**Note:** 404 페이지는 이제 `_.vue` 페이지의 로직에 달렸습니다[404 리디렉션에 대한 정보를 여기서 찾아주세요](/guide/async-data#handling-errors).
 
 ## Named Views
 
 Named view들을 렌더링하기 위해서 `<nuxt name="top"/>`나 `<nuxt-child name="top"/>` 컴포넌트를 layout/page에서 사용할 수 있습니다. 페이지의 named view를 구체적으로 표시하기 위해서는 `nuxt.config.js` 파일의 라우터 설정을 확장해야합니다:
-  
-``` js
+
+```js
 export default {
   router: {
-    extendRoutes (routes, resolve) {
+    extendRoutes(routes, resolve) {
       const index = routes.findIndex(route => route.name === 'main')
       routes[index] = {
         ...routes[index],
@@ -294,17 +294,18 @@ export default {
   }
 }
 ```
+
 이 코드는 `components`와 `chunkNames` 두 프로퍼티로 해당 경로를 확장하기를 요청하고 있습니다. 이 설정에서 named view는 `top`이라는 이름을 가지고 있습니다.
 
 예시에 대한 더 많은 정보: [named-views 예시](/examples/named-views)
 
 ### SPA fallback
 
-동적 경로에 대해서도 SPA 폴백을 활성화할 수 있습니다. Nuxt.js는 `mode: 'spa`'에서 사용될 `index.html`과 같은 파일을 추가로 내보낼 수 있습니다. 대부분의 정적 호스팅 서비스는 일치하는 파일이 없을 경우 SPA 템플릿을 사용하도록 구성할 수 있습니다. 그것은 `head` 정보나 HTML은 포함하지 않겠지만, API에서 데이터를 resolve하고 로드할 것입니다.
+동적 경로에 대해서도 SPA 폴백을 활성화할 수 있습니다. Nuxt.js는 `mode: 'spa`'에서 사용될 `index.html`과 같은 파일을 추가로 내보낼 수 있습니다. 대부분의 정적 호스팅 서비스는 일치하는 파일이 없을 경우 SPA 템플릿을 사용하도록 구성할 수 있습니다. 그것은 `head` 정보나 HTML은 포함하지 않겠지만, API에서 데이터를 resolve하고로드할 것입니다.
 
 `nuxt.config.js` 파일에서 이를 설정할 수 있습니다:
 
-``` js
+```js
 export default {
   generate: {
     fallback: true, // '200.html' 대신에 '404.html'를 사용하고 싶다면
@@ -315,11 +316,11 @@ export default {
 
 ### 로컬 접근 라우트 파라미터
 
-`this.$route.params.{parameterName}`를 로컬 페이지나 컴포넌트에서 참조하는 것으로, 현재 라우트에 접근 가능합니다. 예를 들어, 동적 사용자 페이지(`users\_id.vue`)가 있고 사용자나 프로세스 정보를 로드하기 위해서 `id` 파라미터에 접근하고 싶다면 `this.$route.params.id`와 같은 변수로 접근 가능합니다.
+`this.$route.params.{parameterName}`를 로컬 페이지나 컴포넌트에서 참조하는 것으로, 현재 라우트에 접근 가능합니다. 예를 들어, 동적 사용자 페이지 (`users\_id.vue`)가 있고 사용자나 프로세스 정보를 로드하기 위해서 `id` 파라미터에 접근하고 싶다면 `this.$route.params.id`와 같은 변수로 접근 가능합니다.
 
 #### Surge의 경우
 
-Surge는 `200.html`와 `404.html` 모두 [처리 가능합니다](https://surge.sh/help/adding-a-custom-404-not-found-page). `generate.fallback`은 기본적으로 `200.html`로 세팅되어 있으므로, 변경할 필요가 없습니다.
+Surge는 `200.html`와 `404.html` 모두 [처리 가능합니다](https://surge.sh/help/adding-a-custom-404-not-found-page). `generate.fallback`은 기본적으로 `200.html`로 세팅되어 있으므로, 변경할 필요가없습니다.
 
 #### GitHub Pages나 Netlify 호스팅의 경우
 
@@ -327,7 +328,7 @@ GitHub Pages나 Netlify는 `404.html`를 자동으로 인식합니다. 그래서
 
 #### Firebase 호스팅의 경우
 
-Firebase 호스팅은 자동적으로 `404.html`파일 [처리가 가능합니다](https://firebase.google.com/docs/hosting/full-config#404). 그래서  `generate.fallback`을 `true`로 설정하면 이 설정이 404 기본 응답 코드와 함께 에러 페이지를 렌더링할 것입니다.
+Firebase 호스팅은 자동적으로 `404.html`파일 [처리가 가능합니다](https://firebase.google.com/docs/hosting/full-config#404). 그래서 `generate.fallback`을 `true`로 설정하면 이 설정이 404 기본 응답 코드와 함께 에러 페이지를 렌더링할 것입니다.
 
 ## 트랜지션
 
@@ -344,11 +345,14 @@ Nuxt.js는 경로 전환 과정에서 [`<transition>`](http://vuejs.org/v2/guide
 모든 페이지에 페이드 애니메이션을 추가하기 위해서는 모든 라우트에 사용될 CSS 파일을 작성해야 합니다. 따라서 `assets` 폴더에 CSS 파일을 만드는 것부터 시작하겠습니다.
 
 전역 css 파일인 `assets/main.css` 입니다:
+
 ```css
-.page-enter-active, .page-leave-active {
-  transition: opacity .5s;
+.page-enter-active,
+.page-leave-active {
+  transition: opacity 0.5s;
 }
-.page-enter, .page-leave-to {
+.page-enter,
+.page-leave-to {
   opacity: 0;
 }
 ```
@@ -357,9 +361,7 @@ Nuxt.js는 경로 전환 과정에서 [`<transition>`](http://vuejs.org/v2/guide
 
 ```js
 module.exports = {
-  css: [
-    'assets/main.css'
-  ]
+  css: ['assets/main.css']
 }
 ```
 
@@ -372,10 +374,12 @@ transition 키에 대한 더 많은 정보: [API transition 구성](/api/pages-t
 전역 css 파일인 `assets/main.css`에 새로운 클래스를 추가합니다:
 
 ```css
-.test-enter-active, .test-leave-active {
-  transition: opacity .5s;
+.test-enter-active,
+.test-leave-active {
+  transition: opacity 0.5s;
 }
-.test-enter, .test-leave-active {
+.test-enter,
+.test-leave-active {
   opacity: 0;
 }
 ```
@@ -392,20 +396,24 @@ transition 속성에 대한 더 많은 정보: [API Pages 트랜지션](/api/pag
 
 ## 미들웨어
 
-> 미들웨어를 사용하면 페이지나 페이지 그룹을 렌더링하기 전에 실행할 사용자 지정 함수를 정의할 수 있습니다.
+> 미들웨어를 사용하면 페이지나 페이지 그룹을 렌더링하기 전에 실행할 사용자 지정함수를 정의할 수 있습니다.
 
-**모든 미들웨어는 `middleware/` 디렉토리에 있어야합니다.** 파일 이름은 곧 미들웨어의 이름이 됩니다. (예를 들어 `middleware/auth.js`는 `auth` 미들웨어가 됩니다.) 직접적으로 함수를 사용하는 것으로 페이지에 특화된 미들웨어를 여러분은 정의할 수 있습니다. [익명 미들웨어](/api/pages-middleware#anonymous-middleware)를 참조해 주세요.
+**모든 미들웨어는 `middleware/` 디렉토리에 있어야합니다.** 파일 이름은 곧 미들웨어의 이름이 됩니다. (예를 들어 `middleware/auth.js`는 `auth` 미들웨어가 됩니다.) 직접적으로 함수를 사용하는 것으로 페이지에 특화된 미들웨어를 여러분은 정의할 수있습니다. [익명 미들웨어](/api/pages-middleware#anonymous-middleware)를 참조해주세요.
 
 미들웨어는 [context](/api#context)를 첫 인자로 전달받습니다:
 
 ```js
 export default function (context) {
-  context.userAgent = process.server ? context.req.headers['user-agent'] : navigator.userAgent
+  context.userAgent = process.server
+    ? context.req.headers['user-agent']
+    : navigator.userAgent
 }
 ```
-유니버셜 모드에서는, 미들웨어는 서버 측에서 한 번 호출됩니다(Nuxt 앱의 첫 리퀘스트 혹은 새로 고침 시) 그리고 클라이언트 측에서 이후의 라우팅을 담당합니다. SPA 모드에서는, 미들웨어는 처음 리퀘스트 시 클라이언트 측에서 호출되고 이후의 라우팅 시에 호출됩니다.
+
+유니버셜 모드에서는, 미들웨어는 서버 측에서 한 번 호출됩니다(Nuxt 앱의 첫 리퀘스트 혹은 새로 고침 시) 그리고 클라이언트 측에서 이후의 라우팅을 담당합니다. SPA 모드에서는, 미들웨어는 처음 리퀘스트 시 클라이언트 측에서 호출되고 이후의 라우팅시에 호출됩니다.
 
 미들웨어는 아래의 세 가지에서 순차적으로 실행됩니다:
+
 1. `nuxt.config.js`
 2. 매칭된 레이아웃
 3. 매칭된 페이지
@@ -413,6 +421,7 @@ export default function (context) {
 미들웨어는 비동기가 될 수 있고 간단하게 `Promise`를 반환하거나 두 번째 인자인 `callback`을 사용할 수 있습니다.
 
 `middleware/stats.js`
+
 ```js
 import axios from 'axios'
 
@@ -426,6 +435,7 @@ export default function ({ route }) {
 이제 `nuxt.config.js`나 레이아웃, 페이지에서 `middleware` 키를 사용할 수 있습니다:
 
 `nuxt.config.js`
+
 ```js
 module.exports = {
   router: {

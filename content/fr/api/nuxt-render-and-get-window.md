@@ -1,5 +1,5 @@
 ---
-title: "API: nuxt.renderAndGetWindow(url, options)"
+title: 'API: nuxt.renderAndGetWindow(url, options)'
 description: Obtient la `window` depuis un URL donné d'une application Nuxt.js.
 menu: renderAndGetWindow
 category: programmatically
@@ -9,8 +9,8 @@ position: 204
 - Type : `Function`
 - Argument : `String`
   1. `String` : l'URL à rendre
-  2. *Optional*, `Object` : options
-    - virtualConsole : `Boolean` (par défaut : `true`)
+  2. _Optional_, `Object` : options
+  - virtualConsole : `Boolean` (par défaut : `true`)
 - Valeur de retour : `Promise`
   - Valeur de retour : `window`
 
@@ -38,9 +38,8 @@ config.dev = false
 
 const nuxt = new Nuxt(config)
 
-nuxt.renderAndGetWindow('http://localhost:3000')
-  .then((window) => {
+nuxt.renderAndGetWindow('http://localhost:3000').then(window => {
   // Afficher l'entête `<title>`
-    console.log(window.document.title)
-  })
+  console.log(window.document.title)
+})
 ```

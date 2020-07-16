@@ -1,5 +1,5 @@
 ---
-title: "API: globalName プロパティ"
+title: 'API: globalName プロパティ'
 description: Nuxt.js はメインの Vue インスタンスとその他のオプションだけでなく、メインの HTML テンプレート上でもグローバル ID をカスタマイズできます。
 menu: globalName
 category: configuration
@@ -40,4 +40,3 @@ position: 111
   loadedCallback: globalName => `_on${_.capitalize(globalName)}Loaded`
 },
 ```
-

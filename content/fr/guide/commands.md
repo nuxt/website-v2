@@ -9,11 +9,11 @@ position: 113
 
 ## Liste des commandes
 
-| Commande      | Description                                                                                                       |
-|---------------|-------------------------------------------------------------------------------------------------------------------|
-| nuxt          | Lancer un serveur de développement sur localhost:3000 avec du rechargement à chaud.                               |
-| nuxt build    | Créez votre application avec webpack et minifiez les JS & CSS (pour la production).                               |
-| nuxt start    | Démarrez le serveur en mode production (après avoir exécuté `nuxt build`).                                        |
+| Commande | Description |
+| --- | --- |
+| nuxt | Lancer un serveur de développement sur localhost:3000 avec du rechargement à chaud. |
+| nuxt build | Créez votre application avec webpack et minifiez les JS & CSS (pour la production). |
+| nuxt start | Démarrez le serveur en mode production (après avoir exécuté `nuxt build`). |
 | nuxt generate | Créez l'application et générez toutes les routes en tant que fichiers HTML (utilisé pour l'hébergement statique). |
 
 #### Arguments
@@ -68,9 +68,7 @@ nuxt build
 nuxt start
 ```
 
-Vous pouvez aussi définir `server.https` dans votre fichier `nuxt.config.js` avec le même ensemble d'options passé à [`https.createServer`](https://nodejs.org/api/https.html), si vous décidez de servir Nuxt.js en mode HTTPS.
-Les sockets Unix sont aussi disponibles si vous spécifiez l'option `server.socket` dans `nuxt.config.js` (ou `-n` dans [CLI](https://nuxtjs.org/guide/commands#list-of-commands)).
-Si vous utilisez les [sockets Unix](https://en.wikipedia.org/wiki/Berkeley_sockets), assurez-vous de laisser les paramètres `host` et `port` vides, sinon le paramètre `socket` sera ignoré.
+Vous pouvez aussi définir `server.https` dans votre fichier `nuxt.config.js` avec le même ensemble d'options passé à [`https.createServer`](https://nodejs.org/api/https.html), si vous décidez de servir Nuxt.js en mode HTTPS. Les sockets Unix sont aussi disponibles si vous spécifiez l'option `server.socket` dans `nuxt.config.js` (ou `-n` dans [CLI](https://nuxtjs.org/guide/commands#list-of-commands)). Si vous utilisez les [sockets Unix](https://en.wikipedia.org/wiki/Berkeley_sockets), assurez-vous de laisser les paramètres `host` et `port` vides, sinon le paramètre `socket` sera ignoré.
 
 Le fichier `package.json` suivant est recommandé :
 
@@ -112,7 +110,7 @@ Lors de la génération de votre application web avec `nuxt generate`, [le conte
 
 ### Déploiement pour une application monopage (SPA)
 
-`nuxt generate` a toujours besoin du moteur SSR pendant la génération afin de pré-rendre toutes les pages, et d'avoir du contenu solide pour la SEO et un chargement de page rapide. Le contenu est généré lors de la *phase de build*. Il ne faut pas l'utiliser, par exemple, pour les applications où le contenu dépend de l'authentification de l'utilisateur ou pour une API en temps réel (du moins pour le premier chargement).
+`nuxt generate` a toujours besoin du moteur SSR pendant la génération afin de pré-rendre toutes les pages, et d'avoir du contenu solide pour la SEO et un chargement de page rapide. Le contenu est généré lors de la _phase de build_. Il ne faut pas l'utiliser, par exemple, pour les applications où le contenu dépend de l'authentification de l'utilisateur ou pour une API en temps réel (du moins pour le premier chargement).
 
 L'idée de l'application monopage est simple ! Quand le mode SPA est activé en utilisant `mode: 'spa'` ou l'option `--spa`, et que nous lançons la construction, la génération se lance automatiquement après la construction. Cette génération contient les meta, ressources et liens communs, mais sans contenu de page.
 

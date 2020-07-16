@@ -1,5 +1,5 @@
 ---
-title: "API: Le composant <nuxt-child>"
+title: 'API: Le composant <nuxt-child>'
 description: Afficher la page courante.
 menu: nuxt-child
 category: components
@@ -20,7 +20,7 @@ Exemple:
 Cette arborescence de fichiers va générer ces chemins :
 
 ```js
-[
+;[
   {
     path: '/parent',
     component: '~/pages/parent.vue',

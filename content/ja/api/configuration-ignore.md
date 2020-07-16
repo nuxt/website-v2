@@ -1,5 +1,5 @@
 ---
-title: "API: ignore プロパティ"
+title: 'API: ignore プロパティ'
 description: ignore 対象とするファイルを定義します
 menu: ignore
 category: configuration

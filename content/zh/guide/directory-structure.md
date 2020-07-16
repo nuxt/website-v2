@@ -5,7 +5,7 @@ category: getting-started
 position: 102
 ---
 
-> Nuxt.js 的默认应用目录架构提供了良好的代码分层结构，适用于开发或大或小的应用。 当然，你也可以根据自己的偏好组织应用代码。
+> Nuxt.js 的默认应用目录架构提供了良好的代码分层结构，适用于开发或大或小的应用。当然，你也可以根据自己的偏好组织应用代码。
 
 <div class="Promo__Video">
   <a href="https://vueschool.io/lessons/guided-nuxtjs-project-tour?friend=nuxt" target="_blank">
@@ -59,8 +59,7 @@ _若无额外配置，该目录不能被重命名。_
 
 ### 静态文件目录
 
-静态文件目录 `static` 用于存放应用的静态文件，此类文件不会被 Nuxt.js 调用 Webpack 进行构建编译处理。
-服务器启动的时候，该目录下的文件会映射至应用的根路径 `/` 下。
+静态文件目录 `static` 用于存放应用的静态文件，此类文件不会被 Nuxt.js 调用 Webpack 进行构建编译处理。服务器启动的时候，该目录下的文件会映射至应用的根路径 `/` 下。
 
 **举个例子:** `/static/robots.txt` 映射至 `/robots.txt`
 
@@ -70,8 +69,7 @@ _若无额外配置，该目录不能被重命名。_
 
 ### Store 目录
 
-`store` 目录用于组织应用的 [Vuex 状态树](http://vuex.vuejs.org) 文件。
-Nuxt.js 框架集成了 [Vuex 状态树](http://vuex.vuejs.org) 的相关功能配置，在 `store` 目录下创建一个 `index.js` 文件可激活这些配置。
+`store` 目录用于组织应用的 [Vuex 状态树](http://vuex.vuejs.org) 文件。 Nuxt.js 框架集成了 [Vuex 状态树](http://vuex.vuejs.org) 的相关功能配置，在 `store` 目录下创建一个 `index.js` 文件可激活这些配置。
 
 _若无额外配置，该目录不能被重命名。_
 
@@ -79,7 +77,7 @@ _若无额外配置，该目录不能被重命名。_
 
 ### nuxt.config.js 文件
 
-`nuxt.config.js` 文件用于组织Nuxt.js 应用的个性化配置，以便覆盖默认配置。
+`nuxt.config.js` 文件用于组织 Nuxt.js 应用的个性化配置，以便覆盖默认配置。
 
 _若无额外配置，该文件不能被重命名。_
 
@@ -93,9 +91,9 @@ _该文件不能被重命名。_
 
 ## 别名
 
-| 别名 | 目录 |
-|-----|------|
-| `~` 或 `@` | [srcDir](/api/configuration-srcdir) |
+| 别名         | 目录                                  |
+| ------------ | ------------------------------------- |
+| `~` 或 `@`   | [srcDir](/api/configuration-srcdir)   |
 | `~~` 或 `@@` | [rootDir](/api/configuration-rootdir) |
 
 默认情况下，`srcDir` 和 `rootDir` 相同。

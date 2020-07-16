@@ -1,10 +1,6 @@
 ---
 title: dist
-description:
-  The `dist` folder, short for *distribution* folder. It is dynamically
-  generated when using the `nuxt generate` commands and includes the generated
-  production ready HTML files and assets that are necessary to deploy and run
-  your statically generated Nuxt.js application.
+description: The `dist` folder, short for *distribution* folder. It is dynamically generated when using the `nuxt generate` commands and includes the generated production ready HTML files and assets that are necessary to deploy and run your statically generated Nuxt.js application.
 position: 5
 category: directory-structure
 csb_link: https://codesandbox.io/embed/github/nuxt-academy/guides-examples/tree/master/04_directory_structure/05_dist?fontsize=14&hidenavigation=1&theme=dark
@@ -15,8 +11,7 @@ questions:
       - nuxt start
       - nuxt generate
     correctAnswer: nuxt generate
-  - question:
-      This is the folder you need to use to upload to your static site hosting
+  - question: This is the folder you need to use to upload to your static site hosting
     answers:
       - true
       - false
@@ -27,9 +22,7 @@ questions:
       - dir
       - buildDir
     correctAnswer: dir
-  - question:
-      What property do you use so that you don't have all your generated pages
-      in a folder?
+  - question: What property do you use so that you don't have all your generated pages in a folder?
     answers:
       - 'folders: false'
       - 'subFolders: false'
@@ -41,17 +34,13 @@ questions:
       - "'404.html'"
       - 'false'
     correctAnswer: "'200.html'"
-  - question:
-      When working with statically generated pages it is recommended to use
-      which file for the error pages?
+  - question: When working with statically generated pages it is recommended to use which file for the error pages?
     answers:
       - "'200.html'"
       - "'404.html'"
       - false
     correctAnswer: "'404.html'"
-  - question:
-      Which property can you use to ignore certain files so that they are not
-      statically generated?
+  - question: Which property can you use to ignore certain files so that they are not statically generated?
     answers:
       - ignore
       - exclude
@@ -59,28 +48,21 @@ questions:
     correctAnswer: exclude
 ---
 
-The `dist` folder, short for _distribution_ folder. It is dynamically generated
-when using the `nuxt generate` commands and includes the generated production
-ready HTML files and assets that are necessary to deploy and run your statically
-generated Nuxt.js application.
+The `dist` folder, short for _distribution_ folder. It is dynamically generated when using the `nuxt generate` commands and includes the generated production ready HTML files and assets that are necessary to deploy and run your statically generated Nuxt.js application.
 
 ### Deploying
 
-This is the folder you need to **upload for static hosting** as it contains your
-generated production ready HTML files and assets
+This is the folder you need to **upload for static hosting** as it contains your generated production ready HTML files and assets
 
 <base-alert>
 
-The `dist` directory should not be committed to your version control system and
-should be ignored through your `.gitignore` as it will be generated
-automatically every time you run `nuxt generate`.
+The `dist` directory should not be committed to your version control system and should be ignored through your `.gitignore` as it will be generated automatically every time you run `nuxt generate`.
 
 </base-alert>
 
 ### The dir property
 
-The dist folder is named dist by default but can be configured in your
-nuxt.config file.
+The dist folder is named dist by default but can be configured in your nuxt.config file.
 
 ```js{}[nuxt.config.js]
 generate: {
@@ -90,16 +72,13 @@ generate: {
 
 <base-alert>
 
-If you do change your dist folder then you will need to add that to your version
-control so that git will ignore it.
+If you do change your dist folder then you will need to add that to your version control so that git will ignore it.
 
 </base-alert>
 
 ### The subFolders Property
 
-Nuxt.js puts all your generated pages inside a folder by default, however you
-can change this if you wanted to by modifying the nuxt.config and changing the
-subFolders to be false.
+Nuxt.js puts all your generated pages inside a folder by default, however you can change this if you wanted to by modifying the nuxt.config and changing the subFolders to be false.
 
 ```js{}[nuxt.config.js]
 generate: {
@@ -109,22 +88,15 @@ generate: {
 
 ### The fallback Property
 
-When deploying your site you will need to make sure the fallback html path is
-set correctly. It should be set as the error page so that unknown routes are
-rendered via Nuxt. If it is unset Nuxt.js will use the default value which is
-200.html.
+When deploying your site you will need to make sure the fallback html path is set correctly. It should be set as the error page so that unknown routes are rendered via Nuxt. If it is unset Nuxt.js will use the default value which is 200.html.
 
-When running a single page application it makes more sense to use 200.html as it
-is the only file necessary as no other routes are generated.
+When running a single page application it makes more sense to use 200.html as it is the only file necessary as no other routes are generated.
 
-When working with statically generated pages it is recommended to use a 404.html
-for error pages.
+When working with statically generated pages it is recommended to use a 404.html for error pages.
 
 <base-alert>
 
-Depending on where you are hosting your site, you way have to use 200.html or
-404.html. Please check with your hosting provider. Netlify, for example uses
-404.html.
+Depending on where you are hosting your site, you way have to use 200.html or 404.html. Please check with your hosting provider. Netlify, for example uses 404.html.
 
 </base-alert>
 
@@ -138,9 +110,7 @@ export default {
 
 ### The excludes property
 
-You can exclude pages from being generated by using the generate excludes
-property. Instead of being generated as a static page it will fallback to be a
-single page application page and will only be rendered on the client side.
+You can exclude pages from being generated by using the generate excludes property. Instead of being generated as a static page it will fallback to be a single page application page and will only be rendered on the client side.
 
 ```js{}[nuxt.config.js]
 generate{
@@ -150,8 +120,7 @@ generate{
 
 <base-alert type="info">
 
-You can also use a regex expression here to exclude pages starting or ending
-with a particular word
+You can also use a regex expression here to exclude pages starting or ending with a particular word
 
 </base-alert>
 

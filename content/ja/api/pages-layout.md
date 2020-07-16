@@ -1,6 +1,6 @@
 ---
 title: 'API: layout プロパティ'
-description: "`layouts` ディレクトリの（第一階層の）ファイルはカスタムレイアウトになります。これらはページコンポーネントの layout プロパティで指定して利用できます"
+description: '`layouts` ディレクトリの（第一階層の）ファイルはカスタムレイアウトになります。これらはページコンポーネントの layout プロパティで指定して利用できます'
 menu: layout
 category: pages
 position: 25
@@ -16,7 +16,7 @@ position: 25
 export default {
   layout: 'blog',
   // または
-  layout (context) {
+  layout(context) {
     return 'blog'
   }
 }
@@ -26,4 +26,4 @@ export default {
 
 動作する様子を [デモ動画](https://www.youtube.com/watch?v=YOKnSTp7d38) で確認してみてください。
 
-Nuxt.js でレイアウトがどのように動作するか理解するためには[layoutドキュメント](/guide/views#layouts) を参照してください。
+Nuxt.js でレイアウトがどのように動作するか理解するためには[layout ドキュメント](/guide/views#layouts) を参照してください。

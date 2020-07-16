@@ -30,10 +30,10 @@ questions:
     correctAnswer: false
   - question: To include scripts before the closing body tag use
     answers:
-      - "body: true"
-      - "body: false"
-      - "scripts: true"
-    correctAnswer: "body: true"
+      - 'body: true'
+      - 'body: false'
+      - 'scripts: true'
+    correctAnswer: 'body: true'
 ---
 
 Nuxt.js gives you 3 different ways to add meta data to your application:
@@ -59,8 +59,8 @@ export default {
         content: 'my website description'
       }
     ],
-    link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }],
-  },
+    link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }]
+  }
 }
 ```
 
@@ -80,10 +80,10 @@ export default {
   head: {
     title: 'Home page',
     meta: [
-      { 
-        hid: 'description', 
-        name: 'description', 
-        content: 'Home page description' 
+      {
+        hid: 'description',
+        name: 'description',
+        content: 'Home page description'
       }
     ],
   }
@@ -102,25 +102,25 @@ Use `head` as an object to set a title and description only for the home page
   <h1>{{ title }}</h1>
 </template>
 <script>
-export default {
-  data () {
-    return {
-      title: 'Home page'
-    }
-  },
-  head () {
-    return {
-      title: this.title,
-      meta: [
-        { 
-          hid: 'description', 
-          name: 'description', 
-          content: 'Home page description' 
-        }
-      ]
+  export default {
+    data() {
+      return {
+        title: 'Home page'
+      }
+    },
+    head() {
+      return {
+        title: this.title,
+        meta: [
+          {
+            hid: 'description',
+            name: 'description',
+            content: 'Home page description'
+          }
+        ]
+      }
     }
   }
-}
 </script>
 ```
 
@@ -130,7 +130,7 @@ Use `head` as a function to set a title and description only for the home page. 
 
 </base-alert>
 
-Nuxt.js uses [vue-meta](https://vue-meta.nuxtjs.org/) to update the document head and meta attributes of your application. 
+Nuxt.js uses [vue-meta](https://vue-meta.nuxtjs.org/) to update the document head and meta attributes of your application.
 
 <base-alert>
 
@@ -142,7 +142,7 @@ To avoid any duplication when used in child components, please give a unique ide
 
 ## External Resources
 
-You can include external resources such as scripts and fonts by adding them globally to the `nuxt.config.js` or locally in the `head` object or function. 
+You can include external resources such as scripts and fonts by adding them globally to the `nuxt.config.js` or locally in the `head` object or function.
 
 <base-alert type="info">
 
@@ -156,15 +156,15 @@ You can also pass each resource an optional `body: true` to include the resour
 export default {
   head: {
     script: [
-      { 
-          src: 'https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js' 
+      {
+        src: 'https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js'
       }
     ],
     link: [
-      { 
-          rel: 'stylesheet', 
-          href: 'https://fonts.googleapis.com/css?family=Roboto&display=swap' 
-       }
+      {
+        rel: 'stylesheet',
+        href: 'https://fonts.googleapis.com/css?family=Roboto&display=swap'
+      }
     ]
   }
 }
@@ -178,29 +178,30 @@ export default {
 </template>
 
 <script>
-export default {
-  head () {
-    return {
-      script: [
-        { 
-            src: 'https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js' 
-         }
-      ],
-      link: [
-        { 
-            rel: 'stylesheet', 
-            href: 'https://fonts.googleapis.com/css?family=Roboto&display=swap' 
-        }
-      ]
+  export default {
+    head() {
+      return {
+        script: [
+          {
+            src:
+              'https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js'
+          }
+        ],
+        link: [
+          {
+            rel: 'stylesheet',
+            href: 'https://fonts.googleapis.com/css?family=Roboto&display=swap'
+          }
+        ]
+      }
     }
   }
-}
 </script>
 
 <style scoped>
-h1 {
-  font-family: Roboto, sans-serif;
-}
+  h1 {
+    font-family: Roboto, sans-serif;
+  }
 </style>
 ```
 

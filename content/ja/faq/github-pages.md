@@ -14,8 +14,7 @@ GitHub Pages へデプロイするには、静的なウェブアプリケーシ�
 npm run generate
 ```
 
-GitHub Pages のホスティングにデプロイするもの全てが入った
- `dist` フォルダが作成されます。プロジェクトリポジトリであれば `gh-pages` ブランチ、ユーザーや組織のサイトであれば `master` ブランチにデプロイしてください 。
+GitHub Pages のホスティングにデプロイするもの全てが入った `dist` フォルダが作成されます。プロジェクトリポジトリであれば `gh-pages` ブランチ、ユーザーや組織のサイトであれば `master` ブランチにデプロイしてください 。
 
 <div class="Alert Alert--nuxt-green">
 
@@ -46,11 +45,14 @@ export default {
 ```js
 /* nuxt.config.js */
 // `DEPLOY_ENV` が `GH_PAGES` の場合のみ `router.base = '/<repository-name>/'` を追加する
-const routerBase = process.env.DEPLOY_ENV === 'GH_PAGES' ? {
-  router: {
-    base: '/<repository-name>/'
-  }
-} : {}
+const routerBase =
+  process.env.DEPLOY_ENV === 'GH_PAGES'
+    ? {
+        router: {
+          base: '/<repository-name>/'
+        }
+      }
+    : {}
 
 export default {
   ...routerBase
@@ -134,15 +136,15 @@ npm run deploy
 ```yaml
 language: node_js
 node_js:
-  - "8"
+  - '8'
 
 cache:
   directories:
-    - "node_modules"
+    - 'node_modules'
 
 branches:
   only:
-  - master
+    - master
 
 install:
   - npm install
@@ -154,7 +156,7 @@ script:
 deploy:
   provider: pages
   skip-cleanup: true
-  github-token: $GITHUB_ACCESS_TOKEN  # セキュアとマークされたアクセストークンを travis-ci.org のダッシュボードに設定してください。https://docs.travis-ci.com/user/deployment/pages/#Setting-the-GitHub-token
+  github-token: $GITHUB_ACCESS_TOKEN # セキュアとマークされたアクセストークンを travis-ci.org のダッシュボードに設定してください。https://docs.travis-ci.com/user/deployment/pages/#Setting-the-GitHub-token
   target-branch: gh-pages
   local-dir: dist
   on:
@@ -177,7 +179,7 @@ git push origin
 
 ### Appveyor
 
-もう1つのオープンソースプロジェクトのビルドサーバーである [Appveyor](https://www.appveyor.com) でデプロイするには、GitHub の認証を使用して、自分の GitHub アカウントを使って新しいアカウントを作成します。
+もう 1 つのオープンソースプロジェクトのビルドサーバーである [Appveyor](https://www.appveyor.com) でデプロイするには、GitHub の認証を使用して、自分の GitHub アカウントを使って新しいアカウントを作成します。
 
 サインインしたら、'New project'（新規プロジェクト）のリンクをクリックして、表示されたリスト中のリポジトリ名の横にある 'Add'（追加）ボタンを押して、リポジトリに対してビルドサーバーを有効にします。
 
@@ -188,7 +190,7 @@ git push origin
 ```yaml
 environment:
   # Nuxt には最低でも node v8 が必要
-  nodejs_version: "8"
+  nodejs_version: '8'
   # 暗号化したセンシティブなデータ (https://ci.appveyor.com/tools/encrypt)
   github_access_token:
     secure: ENCRYPTED_GITHUB_ACCESS_TOKEN
@@ -198,7 +200,7 @@ environment:
 # master ブランチのみで実行する
 branches:
   only:
-  - master
+    - master
 
 # スクリプトをインストール (リポジトリのクローン後に実行する)
 install:
@@ -222,7 +224,7 @@ test: off
 build: off
 ```
 
-***メモ*** この設定ファイルでは、`package.json` ファイル内に [コマンドラインでデプロイする](#command-line-deployment) のコマンドがあらかじめ設定されているをことを想定しています。
+**_メモ_** この設定ファイルでは、`package.json` ファイル内に [コマンドラインでデプロイする](#command-line-deployment) のコマンドがあらかじめ設定されているをことを想定しています。
 
 このファイルをコミットする前に、先ほどメモしておいた GitHub personal access token と GitHub アカウントのメールアドレスを [Appveyor encryption tool](https://ci.appveyor.com/tools/encrypt) を使用して暗号化し、それら暗号化した値を `ENCRYPTED_GITHUB_ACCESS_TOKEN` と `ENCRYPTED_GITHUB_EMAIL` の両変数に設定しておく必要があります。
 

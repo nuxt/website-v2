@@ -1,5 +1,5 @@
 ---
-title: "API: The <nuxt-link> Component"
+title: 'API: The <nuxt-link> Component'
 description: Menghubungkan antar halaman menggunakan nuxt-link.
 menu: nuxt-link
 category: components

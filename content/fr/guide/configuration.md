@@ -61,7 +61,6 @@ Cette option vous permet de définir le répertoire node_modules de votre applic
 
 [Consultez la documentation à propos de `modulesDir`](/api/configuration-modulesdir)
 
-
 ### plugins
 
 Cette option vous permet de définir des plugins JavaScript qui seront exécutés avant d'instancier la racine de l'application Vue.js.

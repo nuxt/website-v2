@@ -21,7 +21,7 @@ Since Nuxt.js provides both server and client rendering and the cookie of browse
 
 ### For server rendering
 
-We should save the token in session browser cookie after login, then it can be accessed through `req.headers.cookie` in middleware files, `nuxtServerInit` function or  wherever you can access the `req`.
+We should save the token in session browser cookie after login, then it can be accessed through `req.headers.cookie` in middleware files, `nuxtServerInit` function or wherever you can access the `req`.
 
 ### For client rendering
 
@@ -44,8 +44,9 @@ const Cookie = process.client ? require('js-cookie') : undefined
 export default {
   middleware: 'notAuthenticated',
   methods: {
-    postLogin () {
-      setTimeout(() => { // we simulate the async request with timeout.
+    postLogin() {
+      setTimeout(() => {
+        // we simulate the async request with timeout.
         const auth = {
           accessToken: 'someStringGotFromApiServiceWithAjax'
         }
@@ -75,12 +76,12 @@ const createStore = () => {
       auth: null
     }),
     mutations: {
-      setAuth (state, auth) {
+      setAuth(state, auth) {
         state.auth = auth
       }
     },
     actions: {
-      nuxtServerInit ({ commit }, { req }) {
+      nuxtServerInit({ commit }, { req }) {
         let auth = null
         if (req.headers.cookie) {
           const parsed = cookieparser.parse(req.headers.cookie)
@@ -128,14 +129,15 @@ export default function ({ store, redirect }) {
 > Note: use `authenticated` middleware for pages which need authentication and use `notAuthenticated` middleware inside the login/register and similar pages.
 
 ## Logging out the User
-Finally to allow the user to logout of the system, we can remove the cookie: 
+
+Finally to allow the user to logout of the system, we can remove the cookie:
 
 ```javascript
 const Cookie = process.client ? require('js-cookie') : undefined
 
 export default {
   methods: {
-    logout () {
+    logout() {
       // Code will also be required to invalidate the JWT Cookie on external API
       Cookie.remove('auth')
       this.$store.commit('setAuth', null)
@@ -145,4 +147,3 @@ export default {
 ```
 
 > Note: refer to the method using @click="logout"
-

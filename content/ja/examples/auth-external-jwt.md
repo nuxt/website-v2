@@ -9,8 +9,7 @@ position: 303
 
 # ドキュメント
 
-auth-routes の例では、 api と nuxt の両方を同時に起動し、1つの Node.js サーバインスタンスを使用していました。
-しかし、時には jsonWebToken を使って外部 API を使う必要が出てきます。ここでは簡単に説明します。
+auth-routes の例では、 api と nuxt の両方を同時に起動し、1 つの Node.js サーバインスタンスを使用していました。しかし、時には jsonWebToken を使って外部 API を使う必要が出てきます。ここでは簡単に説明します。
 
 ## 公式の `auth-module`
 
@@ -45,8 +44,9 @@ const Cookie = process.client ? require('js-cookie') : undefined
 export default {
   middleware: 'notAuthenticated',
   methods: {
-    postLogin () {
-      setTimeout(() => { // 非同期リクエストのタイムアウトをシミュレートします
+    postLogin() {
+      setTimeout(() => {
+        // 非同期リクエストのタイムアウトをシミュレートします
         const auth = {
           accessToken: 'someStringGotFromApiServiceWithAjax'
         }
@@ -61,7 +61,7 @@ export default {
 
 > 注意: この例では非同期のリクエストをタイムアウトを使って再現しています。
 
-## storeを使った例
+## store を使った例
 
 その後、 `store` ディレクトリ内に `index.js` をこのように作成します:
 
@@ -76,12 +76,12 @@ const createStore = () => {
       auth: null
     }),
     mutations: {
-      setAuth (state, auth) {
+      setAuth(state, auth) {
         state.auth = auth
       }
     },
     actions: {
-      nuxtServerInit ({ commit }, { req }) {
+      nuxtServerInit({ commit }, { req }) {
         let auth = null
         if (req.headers.cookie) {
           const parsed = cookieparser.parse(req.headers.cookie)
@@ -100,8 +100,7 @@ const createStore = () => {
 export default createStore
 ```
 
-> 注意: `nuxtServerInit` 関数はサーバサイドでレンダリングされるたびに実行されます。これを使ってストア内のセッションブラウザのクッキーを更新します。
-その後、 `req.headers.cookie` を使ってそのクッキーを取得して、 `cookieparser` を使ってパースすることができます。
+> 注意: `nuxtServerInit` 関数はサーバサイドでレンダリングされるたびに実行されます。これを使ってストア内のセッションブラウザのクッキーを更新します。その後、 `req.headers.cookie` を使ってそのクッキーを取得して、 `cookieparser` を使ってパースすることができます。
 
 ## 認証用ミドルウェアによる検証
 
@@ -130,6 +129,7 @@ export default function ({ store, redirect }) {
 > 注意: 認証が必要なページには `authenticated` ミドルウェアを使用し、 login/register などのページには `notAuthenticated` ミドルウェアを使います。
 
 ## ユーザのログアウト
+
 最後に、ユーザをシステムからログアウトさせるため、クッキーを削除することができます:
 
 ```javascript
@@ -137,7 +137,7 @@ const Cookie = process.client ? require('js-cookie') : undefined
 
 export default {
   methods: {
-    logout () {
+    logout() {
       // 外部 API 上の JWT クッキーを無効化させるコードも必要です
       Cookie.remove('auth')
       this.$store.commit('setAuth', null)
@@ -147,4 +147,3 @@ export default {
 ```
 
 > 注意: @click="logout" を使用して、このメソッドを参照します
-

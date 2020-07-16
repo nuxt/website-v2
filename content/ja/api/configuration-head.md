@@ -1,5 +1,5 @@
 ---
-title: "API: head プロパティ"
+title: 'API: head プロパティ'
 description: Nuxt.js では nuxt.config.js 内にアプリケーションのデフォルトのメタ情報を定義できます。
 menu: head
 category: configuration
@@ -11,6 +11,7 @@ position: 112
 - 型: `Object` or `Function`
 
 An example `nuxt.config.js`:
+
 ```js
 export default {
   head: {

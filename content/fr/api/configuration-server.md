@@ -1,5 +1,5 @@
 ---
-title: "API: La propriété server"
+title: 'API: La propriété server'
 description: Nuxt.js vous permet de définir les variables de connexion au serveur pour votre application dans `nuxt.config.js`.
 menu: server
 category: configuration
@@ -27,6 +27,7 @@ Cela vous permet de spécifier [l'hôte et le port](/faq/host-port) pour votre i
 ## Exemple d'utilisation de configuration HTTPS
 
 `nuxt.config.js`
+
 ```js
 import path from 'path'
 import fs from 'fs'
@@ -41,8 +42,7 @@ export default {
 }
 ```
 
-Vous pouvez trouver des informations supplémentaires sur la création de clés de serveur et de certificats sur 
-`localhost` dans l'article de [certificats pour localhost](https://letsencrypt.org/docs/certificates-for-localhost/).
+Vous pouvez trouver des informations supplémentaires sur la création de clés de serveur et de certificats sur `localhost` dans l'article de [certificats pour localhost](https://letsencrypt.org/docs/certificates-for-localhost/).
 
 ## Exemple d'utilisation de configuration des sockets
 
@@ -59,13 +59,11 @@ export default {
 - Type: `Object` ou `Boolean`
 - Par défaut: `false`
 
-L'activation de l'option `server.timing` ajoute un middleware pour mesurer le temps écoulé pendant le rendu côté serveur 
-et l'ajoute aux en-têtes comme 'Server-Timing'
+L'activation de l'option `server.timing` ajoute un middleware pour mesurer le temps écoulé pendant le rendu côté serveur et l'ajoute aux en-têtes comme 'Server-Timing'
 
 ### Exemple d'utilisation de configuration de synchronisation
 
-`server.timing` peut être un objet pour fournir des options. Actuellement, seul `total` est pris en charge (qui suit 
-directement tout le temps passé sur le rendu côté serveur)
+`server.timing` peut être un objet pour fournir des options. Actuellement, seul `total` est pris en charge (qui suit directement tout le temps passé sur le rendu côté serveur)
 
 ```js
 export default {
@@ -106,5 +104,4 @@ Ensuite, `server-timing` sera incluse dans l'en-tête de réponse comme:
 Server-Timing: midd;desc="Middleware timing description";dur=2.4
 ```
 
-Veuillez vous reporter à [Server-Timing MDN](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Server-Timing) 
-pour plus d'informations.
+Veuillez vous reporter à [Server-Timing MDN](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Server-Timing) pour plus d'informations.

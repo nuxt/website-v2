@@ -1,5 +1,5 @@
 ---
-title: "API: Les propriétés transition"
+title: 'API: Les propriétés transition'
 description: Définissez les propriétés par défaut des transitions de page et de mise en page.
 menu: transition
 category: configuration
@@ -15,6 +15,7 @@ position: 131
 > Utilisé pour définir les propriétés par défaut des transitions de page.
 
 Par défaut:
+
 ```js
 {
   name: 'page',
@@ -38,8 +39,7 @@ export default {
 }
 ```
 
-La clé de transition dans `nuxt.config.js` est utilisée pour définir les propriétés par défaut des transitions de page. 
-Pour en savoir plus sur les clés disponibles lorsque la clé `transition` est un objet, consultez la [propriété de transition des pages](/api/pages-transition#object).
+La clé de transition dans `nuxt.config.js` est utilisée pour définir les propriétés par défaut des transitions de page. Pour en savoir plus sur les clés disponibles lorsque la clé `transition` est un objet, consultez la [propriété de transition des pages](/api/pages-transition#object).
 
 ## La propriété layoutTransition
 
@@ -72,10 +72,12 @@ export default {
 Exemple global `css`:
 
 ```css
-.layout-enter-active, .layout-leave-active {
-  transition: opacity .5s
+.layout-enter-active,
+.layout-leave-active {
+  transition: opacity 0.5s;
 }
-.layout-enter, .layout-leave-active {
-  opacity: 0
+.layout-enter,
+.layout-leave-active {
+  opacity: 0;
 }
 ```

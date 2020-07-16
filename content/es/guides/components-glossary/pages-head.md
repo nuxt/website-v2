@@ -1,5 +1,5 @@
 ---
-title: "The head Method"
+title: 'The head Method'
 description: Nuxt.js uses vue-meta to update the headers and HTML attributes of your application.
 menu: Head Method
 category: components-glossary
@@ -20,8 +20,8 @@ Use the `head` method to set the HTML Head tags for the current page.
   export default {
     data() {
       return {
-        title: "Hello World!"
-      };
+        title: 'Hello World!'
+      }
     },
     head() {
       return {
@@ -29,13 +29,13 @@ Use the `head` method to set the HTML Head tags for the current page.
         meta: [
           // hid is used as unique identifier. Do not use `vmid` for it as it will not work
           {
-            hid: "description",
-            name: "description",
-            content: "My custom description"
+            hid: 'description',
+            name: 'description',
+            content: 'My custom description'
           }
         ]
-      };
+      }
     }
-  };
+  }
 </script>
 ```

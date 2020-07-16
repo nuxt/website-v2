@@ -5,7 +5,7 @@ category: getting-started
 position: 106
 ---
 
-> Nuxt.js *перегружает* метод `data` от Vue.js, чтобы позволить обрабатывать асинхронные данные прежде, чем сохранить их.
+> Nuxt.js _перегружает_ метод `data` от Vue.js, чтобы позволить обрабатывать асинхронные данные прежде, чем сохранить их.
 
 <div>
   <a href="http://vueschool.io/?friend=nuxt" target="_blank" class="Promote">
@@ -35,21 +35,22 @@ position: 106
 3. Определить колбэк в качестве второго аргумента и вызывать его в виде: `callback(err, data)`
 
 ### Способ первый: возвращая Promise
+
 ```js
 export default {
-  data ({ params }) {
-    return axios.get(`https://my-api/posts/${params.id}`)
-      .then((res) => {
-        return { title: res.data.title }
-      })
+  data({ params }) {
+    return axios.get(`https://my-api/posts/${params.id}`).then(res => {
+      return { title: res.data.title }
+    })
   }
 }
 ```
 
 ### Используя async/await
+
 ```js
 export default {
-  async data ({ params }) {
+  async data({ params }) {
     const { data } = await axios.get(`https://my-api/posts/${params.id}`)
     return { title: data.title }
   }
@@ -57,13 +58,13 @@ export default {
 ```
 
 ### Используя callback
+
 ```js
 export default {
-  data ({ params }, callback) {
-    axios.get(`https://my-api/posts/${params.id}`)
-      .then((res) => {
-        callback(null, { title: res.data.title })
-      })
+  data({ params }, callback) {
+    axios.get(`https://my-api/posts/${params.id}`).then(res => {
+      callback(null, { title: res.data.title })
+    })
   }
 }
 ```
@@ -74,7 +75,7 @@ export default {
 
 ```js
 export default {
-  data (context) {
+  data(context) {
     return { foo: 'bar' }
   }
 }
@@ -99,14 +100,16 @@ export default {
 Добавив метод `error(params)` в аргумент `context`, вы можете показать страницу ошибки. Также значение `params.statusCode`, пришедшее с сервера, будет использоваться для отображения соответствующей ошибки.
 
 Пример с `Promise`:
+
 ```js
 export default {
-  data ({ params, error }) {
-    return axios.get(`https://my-api/posts/${params.id}`)
-      .then((res) => {
+  data({ params, error }) {
+    return axios
+      .get(`https://my-api/posts/${params.id}`)
+      .then(res => {
         return { title: res.data.title }
       })
-      .catch((e) => {
+      .catch(e => {
         error({ statusCode: 404, message: 'Страница не найдена' })
       })
   }
@@ -114,14 +117,16 @@ export default {
 ```
 
 При использовании параметра 'callback' можно вызвать его непосредственно с нужной ошибкой, и тогда Nuxt.js сам вызовет метод `error`:
+
 ```js
 export default {
-  data ({ params }, callback) {
-    axios.get(`https://my-api/posts/${params.id}`)
-      .then((res) => {
+  data({ params }, callback) {
+    axios
+      .get(`https://my-api/posts/${params.id}`)
+      .then(res => {
         callback(null, { title: res.data.title })
       })
-      .catch((e) => {
+      .catch(e => {
         callback({ statusCode: 404, message: 'Сообщение не найдено' })
       })
   }

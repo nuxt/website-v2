@@ -95,9 +95,9 @@ _This file cannot be renamed._
 
 ## Aliases
 
-| Alias | Directory |
-|-----|------|
-| `~` or `@` | [srcDir](/api/configuration-srcdir) |
+| Alias        | Directory                             |
+| ------------ | ------------------------------------- |
+| `~` or `@`   | [srcDir](/api/configuration-srcdir)   |
 | `~~` or `@@` | [rootDir](/api/configuration-rootdir) |
 
 By default, `srcDir` is the same as `rootDir`.

@@ -1,13 +1,12 @@
 ---
-title: "API: Le composant <client-only>"
+title: 'API: Le composant <client-only>'
 description: Rendre un composant uniquement côté client et afficher un texte d'espace réservé côté serveur.
 menu: client-only
 category: components
 position: 44
 ---
 
-> Ce composant est utilisé pour rendre intentionnellement un composant uniquement côté client. Pour importer un 
-> composant uniquement sur le client, enregistrez-le dans un [plugin côté client uniquement](/guide/plugins#client-side-only).
+> Ce composant est utilisé pour rendre intentionnellement un composant uniquement côté client. Pour importer un composant uniquement sur le client, enregistrez-le dans un [plugin côté client uniquement](/guide/plugins#client-side-only).
 
 <div class="Alert Alert--orange">
 
@@ -15,8 +14,8 @@ position: 44
 
 </div>
 
-
 **Propriétés**:
+
 - chaine prédéfinie : `string`
   - Utiliser un texte comme chaine prédéfinie jusqu'à ce que `<client-only />` soit monté côté client.
 
@@ -36,21 +35,20 @@ position: 44
 
 - chaine prédéfinie :
   - Utiliser un espace comme chaine prédéfinie jusqu'à ce que `<client-only />` soit monté côté client.
- 
- ```html
+
+```html
 <template>
   <div>
     <sidebar />
     <client-only>
       <!-- ce composant ne sera rendu que côté client -->
       <comments />
-  
+
       <!-- indicateur de chargement, rendu côté serveur -->
-      <comments-placeholder slot="placeholder" />
+      <comments-placeholder slot="placeholder" />
     </client-only>
   </div>
 </template>
 ```
 
-Ce composant est importé de [egoist/vue-client-only](https://github.com/egoist/vue-client-only). 
-Merci [@egoist](https://github.com/egoist) !
+Ce composant est importé de [egoist/vue-client-only](https://github.com/egoist/vue-client-only). Merci [@egoist](https://github.com/egoist) !

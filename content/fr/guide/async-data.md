@@ -20,10 +20,7 @@ position: 106
 
 ## La méthode asyncData
 
-Parfois vous souhaitez simplement récupérer des données et faire le rendu côté serveur sans utiliser de store.
-`asyncData` est appelé avant chaque chargement du composant **page**.
-Il sera appelé côté serveur une seule fois (au premier appel à l'application Nuxt) et côté client lors de la navigation vers la route correspondante.
-Cette méthode reçoit [le contexte](/api/context) comme premier argument, vous pouvez l'utiliser pour récupérer différentes données et Nuxt.js les fusionnera avec les données du composant.
+Parfois vous souhaitez simplement récupérer des données et faire le rendu côté serveur sans utiliser de store. `asyncData` est appelé avant chaque chargement du composant **page**. Il sera appelé côté serveur une seule fois (au premier appel à l'application Nuxt) et côté client lors de la navigation vers la route correspondante. Cette méthode reçoit [le contexte](/api/context) comme premier argument, vous pouvez l'utiliser pour récupérer différentes données et Nuxt.js les fusionnera avec les données du composant.
 
 Nuxt.js fusionnera automatiquement l'objet retourné avec les données du composant.
 
@@ -48,11 +45,10 @@ Nous utilisons [axios](https://github.com/mzabriskie/axios) pour faire des requ�
 
 ```js
 export default {
-  asyncData ({ params }) {
-    return axios.get(`https://my-api/posts/${params.id}`)
-      .then((res) => {
-        return { title: res.data.title }
-      })
+  asyncData({ params }) {
+    return axios.get(`https://my-api/posts/${params.id}`).then(res => {
+      return { title: res.data.title }
+    })
   }
 }
 ```
@@ -61,18 +57,16 @@ export default {
 
 ```js
 export default {
-  async asyncData ({ params }) {
+  async asyncData({ params }) {
     const { data } = await axios.get(`https://my-api/posts/${params.id}`)
     return { title: data.title }
   }
 }
 ```
 
-
 ### Afficher les données
 
-Le résultat de `asyncData` sera **fusionné** avec les données.
-Vous pouvez afficher les données au sein du template comme habituellement :
+Le résultat de `asyncData` sera **fusionné** avec les données. Vous pouvez afficher les données au sein du template comme habituellement :
 
 ```html
 <template>
@@ -90,7 +84,7 @@ Lorsque `asyncData` est appelé du côté serveur, vous avez accès aux objets `
 
 ```js
 export default {
-  async asyncData ({ req, res }) {
+  async asyncData({ req, res }) {
     // Merci de vérifier en premier lieu si vous êtes du côté serveur
     // avant d'utiliser req et res
     if (process.server) {
@@ -104,13 +98,11 @@ export default {
 
 ### Accéder aux données des routes dynamiques
 
-Vous pouvez utiliser le paramètre `context` afin d'accéder aux données des routes dynamiques.
-Par exemple, les données des routes dynamiques peuvent être accédées en utilisant le nom du fichier ou du dossier qui la configure.
-Si vous définissez un fichier nommé `_slug.vue` dans votre dossier `page`, vous pourrez accéder à sa valeur via `context.params.slug` :
+Vous pouvez utiliser le paramètre `context` afin d'accéder aux données des routes dynamiques. Par exemple, les données des routes dynamiques peuvent être accédées en utilisant le nom du fichier ou du dossier qui la configure. Si vous définissez un fichier nommé `_slug.vue` dans votre dossier `page`, vous pourrez accéder à sa valeur via `context.params.slug` :
 
 ```js
 export default {
-  async asyncData ({ params }) {
+  async asyncData({ params }) {
     const slug = params.slug // en appelant /abc la valeur de slug sera "abc"
     return { slug }
   }
@@ -119,10 +111,7 @@ export default {
 
 ### Écouter les changements de query
 
-La méthode `asyncData` **n'est pas appelée** par défaut lors du changement sur la chaine de requête.
-Si vous souhaitez changer ce comportement, par exemple quand vous construisez un composant de pagination,
-vous pouvez initialiser les paramètres qui devraient être écoutés avec la propriété `watchQuery` de votre composant de page.
-Consultez la page de [l'API `watchQuery`](/api/pages-watchquery) pour en savoir plus.
+La méthode `asyncData` **n'est pas appelée** par défaut lors du changement sur la chaine de requête. Si vous souhaitez changer ce comportement, par exemple quand vous construisez un composant de pagination, vous pouvez initialiser les paramètres qui devraient être écoutés avec la propriété `watchQuery` de votre composant de page. Consultez la page de [l'API `watchQuery`](/api/pages-watchquery) pour en savoir plus.
 
 ## Gestion des erreurs
 
@@ -132,12 +121,13 @@ Exemple avec une `Promise` :
 
 ```js
 export default {
-  asyncData ({ params, error }) {
-    return axios.get(`https://my-api/posts/${params.id}`)
-      .then((res) => {
+  asyncData({ params, error }) {
+    return axios
+      .get(`https://my-api/posts/${params.id}`)
+      .then(res => {
         return { title: res.data.title }
       })
-      .catch((e) => {
+      .catch(e => {
         error({ statusCode: 404, message: 'Billet non trouvé' })
       })
   }

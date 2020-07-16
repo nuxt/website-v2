@@ -21,9 +21,10 @@ position: 107
 Если в CSS мы используем `url('~assets/image.png')`, то эта строчка будет преобразована в `require('~assets/image.png')`.
 
 Если код страницы `pages/index.vue` следующий:
+
 ```html
 <template>
-  <img src="~assets/image.png">
+  <img src="~assets/image.png" />
 </template>
 ```
 
@@ -36,13 +37,14 @@ createElement('img', { attrs: { src: require('~assets/image.png') } })
 Из-за того, что `.png` — не JavaScript-файл, то Nuxt.js конфигурирует Webpack таким образом, чтобы [file-loader](https://github.com/webpack/file-loader) и [url-loader](https://github.com/webpack/url-loader) сделали преобразования вместо вас.
 
 Это даёт нам следующие плюшки:
+
 - `file-loader` позволяет указать, куда копировать файлы с исходным кодом и как его назвать с использованием хеша для правильного кеширования.
 - `url-loader` позволяет (по условию) сконвертировать и включить содержимое файла в формате base-64 в случае, если его размер не превосходит допустимый размер. Подоный подход уменьшает количество HTTP-запросов при наличие обычных файлов. Если размер файла больше допустимого размера, процесс автоматически переходит к `file-loader`.
 
 Конфигурация Nuxt.js по-умолчанию следующая:
 
 ```js
-[
+;[
   {
     test: /\.(png|jpe?g|gif|svg)$/,
     loader: 'url-loader',
@@ -68,13 +70,14 @@ createElement('img', { attrs: { src: require('~assets/image.png') } })
 
 ```html
 <template>
-  <img src="~assets/image.png">
+  <img src="~assets/image.png" />
 </template>
 ```
 
 Будет преобразован в:
+
 ```html
-<img src="/_nuxt/img/image.0c61159.png">
+<img src="/_nuxt/img/image.0c61159.png" />
 ```
 
 Если вы хотите обновить эти загрузчики или отключить их, пожалуйста, обратитесь к [конфигурации загрузчиков](/api/configuration-build).

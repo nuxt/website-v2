@@ -11,14 +11,14 @@ You can now use JSX in the `render` method of your components:
 
 ```html
 <script>
-export default {
-  data () {
-    return { name: 'World' }
-  },
-  render (h) {
-    return <h1 class="red">{this.name}</h1>
+  export default {
+    data() {
+      return { name: 'World' }
+    },
+    render(h) {
+      return <h1 class="red">{this.name}</h1>
+    }
   }
-}
 </script>
 ```
 

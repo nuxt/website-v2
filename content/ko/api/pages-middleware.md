@@ -1,5 +1,5 @@
 ---
-title: "API: middleware 프로퍼티"
+title: 'API: middleware 프로퍼티'
 description: 어플리케이션의 특정 페이지에 대한 미들웨어를 설정합니다.
 menu: middleware
 category: pages
@@ -13,7 +13,7 @@ position: 27
 
 ## 이름이 있는 미들웨어
 
-`middleware/` 디렉토리에 파일을 생성하는 것으로 이름이 있는 미들웨어를 만드실 수 있습니다. 파일명이 미들웨어명이 될 것입니다.
+`middleware/` 디렉토리에 파일을 생성하는 것으로 이름이 있는 미들웨어를 만드실 수있습니다. 파일명이 미들웨어명이 될 것입니다.
 
 `middleware/authenticated.js`:
 
@@ -34,9 +34,9 @@ export default function ({ store, redirect }) {
 </template>
 
 <script>
-export default {
-  middleware: 'authenticated'
-}
+  export default {
+    middleware: 'authenticated'
+  }
 </script>
 ```
 
@@ -52,16 +52,15 @@ export default {
 </template>
 
 <script>
-export default {
-  middleware ({ store, redirect }) {
-    // 유저가 인증되지 않았다면
-    if (!store.state.authenticated) {
-      return redirect('/login')
+  export default {
+    middleware({ store, redirect }) {
+      // 유저가 인증되지 않았다면
+      if (!store.state.authenticated) {
+        return redirect('/login')
+      }
     }
   }
-}
 </script>
 ```
 
 미들웨어에 대해 더 알고 싶으시다면, [미들웨어 가이드](/guide/routing#middleware)를 참조해 주세요..
-

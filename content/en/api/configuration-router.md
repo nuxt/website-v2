@@ -1,5 +1,5 @@
 ---
-title: "The router Property"
+title: 'The router Property'
 description: The router property lets you customize Nuxt.js router.
 menu: router
 category: configuration
@@ -24,9 +24,9 @@ Example (`nuxt.config.js`):
 ```js
 export default {
   router: {
-    base: "/app/"
+    base: '/app/'
   }
-};
+}
 ```
 
 <div class="Alert Alert-blue">
@@ -42,17 +42,16 @@ When `base` is set, Nuxt.js will also add in the document header `<base href="{{
 - Type: `String`
 - Default: `'-'`
 
-You may want to change the separator between route names that Nuxt.js uses. You can do so via the `routeNameSplitter` option in your configuration file.
-Imagine we have the page file `pages/posts/_id.vue`. Nuxt will generate the route name programatically, in this case `posts-id`. Changing the `routeNameSplitter` config to `/` the name will therefore change to `posts/id`.
+You may want to change the separator between route names that Nuxt.js uses. You can do so via the `routeNameSplitter` option in your configuration file. Imagine we have the page file `pages/posts/_id.vue`. Nuxt will generate the route name programatically, in this case `posts-id`. Changing the `routeNameSplitter` config to `/` the name will therefore change to `posts/id`.
 
 Example (`nuxt.config.js`):
 
 ```js
 export default {
   router: {
-    routeNameSplitter: "/"
+    routeNameSplitter: '/'
   }
-};
+}
 ```
 
 ## extendRoutes
@@ -70,13 +69,13 @@ export default {
   router: {
     extendRoutes(routes, resolve) {
       routes.push({
-        name: "custom",
-        path: "*",
-        component: resolve(__dirname, "pages/404.vue")
-      });
+        name: 'custom',
+        path: '*',
+        component: resolve(__dirname, 'pages/404.vue')
+      })
     }
   }
-};
+}
 ```
 
 If you want to sort your routes, you can use the `sortRoutes(routes)` function from `@nuxt/utils`:
@@ -84,17 +83,17 @@ If you want to sort your routes, you can use the `sortRoutes(routes)` function f
 `nuxt.config.js`
 
 ```js
-import { sortRoutes } from "@nuxt/utils";
+import { sortRoutes } from '@nuxt/utils'
 export default {
   router: {
     extendRoutes(routes, resolve) {
       // Add some routes here ...
 
       // and then sort them
-      sortRoutes(routes);
+      sortRoutes(routes)
     }
   }
-};
+}
 ```
 
 The schema of the route should respect the [vue-router](https://router.vuejs.org/en/) schema.
@@ -112,18 +111,18 @@ export default {
   router: {
     extendRoutes(routes, resolve) {
       routes.push({
-        path: "/users/:id",
+        path: '/users/:id',
         components: {
-          default: resolve(__dirname, "pages/users"), // or routes[index].component
-          modal: resolve(__dirname, "components/modal.vue")
+          default: resolve(__dirname, 'pages/users'), // or routes[index].component
+          modal: resolve(__dirname, 'components/modal.vue')
         },
         chunkNames: {
-          modal: "components/modal"
+          modal: 'components/modal'
         }
-      });
+      })
     }
   }
-};
+}
 ```
 
 ## fallback
@@ -149,9 +148,9 @@ Example (`nuxt.config.js`):
 ```js
 export default {
   router: {
-    linkActiveClass: "active-link"
+    linkActiveClass: 'active-link'
   }
-};
+}
 ```
 
 > This option is given directly to the vue-router [linkactiveclass](https://router.vuejs.org/api/#linkactiveclass).
@@ -168,9 +167,9 @@ Example (`nuxt.config.js`):
 ```js
 export default {
   router: {
-    linkExactActiveClass: "exact-active-link"
+    linkExactActiveClass: 'exact-active-link'
   }
-};
+}
 ```
 
 > This option is given directly to the vue-router [linkexactactiveclass](https://router.vuejs.org/api/#linkexactactiveclass).
@@ -187,9 +186,9 @@ Example (`nuxt.config.js`):
 ```js
 export default {
   router: {
-    linkPrefetchedClass: "nuxt-link-prefetched"
+    linkPrefetchedClass: 'nuxt-link-prefetched'
   }
-};
+}
 ```
 
 ## middleware
@@ -207,19 +206,19 @@ Example:
 export default {
   router: {
     // Run the middleware/user-agent.js on every page
-    middleware: "user-agent"
+    middleware: 'user-agent'
   }
-};
+}
 ```
 
 `middleware/user-agent.js`
 
 ```js
-export default function(context) {
+export default function (context) {
   // Add the userAgent property in the context (available in `asyncData` and `fetch`)
   context.userAgent = process.server
-    ? context.req.headers["user-agent"]
-    : navigator.userAgent;
+    ? context.req.headers['user-agent']
+    : navigator.userAgent
 }
 ```
 
@@ -237,9 +236,9 @@ Example (`nuxt.config.js`):
 ```js
 export default {
   router: {
-    mode: "hash"
+    mode: 'hash'
   }
-};
+}
 ```
 
 > This option is given directly to the vue-router [mode](https://router.vuejs.org/api/#mode).
@@ -259,8 +258,7 @@ Provide custom query string parse / stringify functions. Overrides the default.
 - Type: `Boolean`
 - Default: `true`
 
-Configure `<nuxt-link>` to prefetch the _code-splitted_ page when detected within the viewport.
-Requires [IntersectionObserver](https://developer.mozilla.org/en-US/docs/Web/API/Intersection_Observer_API) to be supported (see [CanIUse](https://caniuse.com/#feat=intersectionobserver)).
+Configure `<nuxt-link>` to prefetch the _code-splitted_ page when detected within the viewport. Requires [IntersectionObserver](https://developer.mozilla.org/en-US/docs/Web/API/Intersection_Observer_API) to be supported (see [CanIUse](https://caniuse.com/#feat=intersectionobserver)).
 
 We recommend conditionally polyfilling this feature with a service like [Polyfill.io](https://polyfill.io):
 
@@ -272,12 +270,12 @@ export default {
     script: [
       {
         src:
-          "https://polyfill.io/v3/polyfill.min.js?features=IntersectionObserver",
+          'https://polyfill.io/v3/polyfill.min.js?features=IntersectionObserver',
         body: true
       }
     ]
   }
-};
+}
 ```
 
 To disable the prefetching on a specific link, you can use the `no-prefetch` prop. Since Nuxt.js v2.10.0, you can also use the `prefetch` prop set to `false`:
@@ -295,7 +293,7 @@ export default {
   router: {
     prefetchLinks: false
   }
-};
+}
 ```
 
 Since Nuxt.js v2.10.0, if you have set `prefetchLinks` to `false` but you want to prefetch a specific link, you can use the `prefetch` prop:
@@ -323,8 +321,8 @@ Example of forcing the scroll position to the top for every routes:
 `app/router.scrollBehavior.js`
 
 ```js
-export default function(to, from, savedPosition) {
-  return { x: 0, y: 0 };
+export default function (to, from, savedPosition) {
+  return { x: 0, y: 0 }
 }
 ```
 

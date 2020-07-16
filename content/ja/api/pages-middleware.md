@@ -1,5 +1,5 @@
 ---
-title: "API: middleware プロパティ"
+title: 'API: middleware プロパティ'
 description: アプリケーションの特定のページにミドルウェアを設定します。
 menu: middleware
 category: pages
@@ -34,9 +34,9 @@ export default function ({ store, redirect }) {
 </template>
 
 <script>
-export default {
-  middleware: 'authenticated'
-}
+  export default {
+    middleware: 'authenticated'
+  }
 </script>
 ```
 
@@ -52,14 +52,14 @@ export default {
 </template>
 
 <script>
-export default {
-  middleware ({ store, redirect }) {
-    // ユーザーが認証されていないとき
-    if (!store.state.authenticated) {
-      return redirect('/login')
+  export default {
+    middleware({ store, redirect }) {
+      // ユーザーが認証されていないとき
+      if (!store.state.authenticated) {
+        return redirect('/login')
+      }
     }
   }
-}
 </script>
 ```
 

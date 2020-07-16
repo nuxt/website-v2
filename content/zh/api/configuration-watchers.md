@@ -1,5 +1,5 @@
 ---
-title: "API: watchers 属性"
+title: 'API: watchers 属性'
 description: watchers 属性可用来覆盖 Nuxt.js 默认的 watchers 配置。
 menu: watchers
 category: configuration

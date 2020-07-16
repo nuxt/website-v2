@@ -1,5 +1,5 @@
 ---
-title: "API: The <nuxt> Component"
+title: 'API: The <nuxt> Component'
 description: Display the page components inside a layout.
 menu: nuxt
 category: components
@@ -14,7 +14,7 @@ Example (`layouts/default.vue`):
 <template>
   <div>
     <div>My nav bar</div>
-    <nuxt/>
+    <nuxt />
     <div>My footer</div>
   </div>
 </template>
@@ -32,23 +32,23 @@ There are 2 ways to handle internal `key` prop of `<router-view/>`.
 
 1. `nuxtChildKey` prop
 
-  ```html
-  <template>
-     <div>
-       <nuxt :nuxt-child-key="someKey"/>
-     </div>
-  </template>
-  ```
+```html
+<template>
+  <div>
+    <nuxt :nuxt-child-key="someKey" />
+  </div>
+</template>
+```
 
 2. `key` option in page components: `string` or `function`
 
-  ```js
-  export default {
-    key (route) {
-      return route.fullPath
-    }
+```js
+export default {
+  key(route) {
+    return route.fullPath
   }
-  ```
+}
+```
 
 - name: `string` (_introduced with Nuxt v2.4.0_)
   - This prop will be set to `<router-view/>`, used to render named-view of page component.

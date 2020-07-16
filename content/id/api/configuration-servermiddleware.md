@@ -9,20 +9,13 @@ position: 127
 # Properti serverMiddleware
 
 - Tipe: `Array`
-    - Item: `String` atau `Object` atau `Function`
+  - Item: `String` atau `Object` atau `Function`
 
-Nuxt secara internal membuat sebuah instansi [connect](https://github.com/senchalabs/connect),
-jadi kita bisa mendaftarkan middleware ke stack-nya dan berkesempatan
-untuk menyediakan lebih banyak rute seperti API **tanpa perlu server eksternal**.
-Karena `connect` sendiri adalah sebuah middleware, middleware yang terdaftar akan bekerja baik di `nuxt start`
-dan juga ketika digunakan sebagai middleware dengan penggunaan terprogram seperti [express-template](https://github.com/nuxt-community/express-template).
-[Modules](/guide/modules) Nuxt juga dapat menyediakan `serverMiddleware`
-menggunakan [this.addServerMiddleware()](/api/internals-module-container#addservermiddleware-middleware-)
+Nuxt secara internal membuat sebuah instansi [connect](https://github.com/senchalabs/connect), jadi kita bisa mendaftarkan middleware ke stack-nya dan berkesempatan untuk menyediakan lebih banyak rute seperti API **tanpa perlu server eksternal**. Karena `connect` sendiri adalah sebuah middleware, middleware yang terdaftar akan bekerja baik di `nuxt start` dan juga ketika digunakan sebagai middleware dengan penggunaan terprogram seperti [express-template](https://github.com/nuxt-community/express-template). [Modules](/guide/modules) Nuxt juga dapat menyediakan `serverMiddleware` menggunakan [this.addServerMiddleware()](/api/internals-module-container#addservermiddleware-middleware-)
 
 ## serverMiddleware vs middleware!
 
-Jangan bingung dengan [rute middleware](/guide/routing#middleware) yang dipanggil sebelum masing-masing rute oleh Vue di Sisi-Client atau Sisi-Server (SSR).
-`serverMiddleware` hanya berjalan di sisi-server  **sebelum** vue-server-renderer dan dapat digunakan untuk tugas-tugas spesifik server seperti menangani permintaan API atau aset layanan (serving assets).
+Jangan bingung dengan [rute middleware](/guide/routing#middleware) yang dipanggil sebelum masing-masing rute oleh Vue di Sisi-Client atau Sisi-Server (SSR). `serverMiddleware` hanya berjalan di sisi-server **sebelum** vue-server-renderer dan dapat digunakan untuk tugas-tugas spesifik server seperti menangani permintaan API atau aset layanan (serving assets).
 
 ## Penggunaan
 
@@ -75,7 +68,5 @@ module.exports = function (req, res, next) {
 Konfigurasi Nuxt (`nuxt.config.js`):
 
 ```js
-serverMiddleware: [
-  '~/api/logger'
-]
+serverMiddleware: ['~/api/logger']
 ```

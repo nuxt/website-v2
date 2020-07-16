@@ -17,19 +17,19 @@ position: 2
 </template>
 
 <script lang="coffee">
-export default data: ->
-  { name: 'World' }
+  export default data: ->
+    { name: 'World' }
 </script>
 
 <style lang="sass">
-.red
-  color: red
+  .red
+    color: red
 </style>
 
 <style lang="scss">
-.red {
-  color: red
-}
+  .red {
+    color: red;
+  }
 </style>
 ```
 

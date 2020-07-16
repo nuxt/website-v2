@@ -1,5 +1,5 @@
 ---
-title: "The validate Method"
+title: 'The validate Method'
 description: Nuxt.js lets you define a validator method inside your dynamic route component.
 menu: Validate Method
 category: components-glossary
@@ -42,9 +42,9 @@ If the validate method does not return `true`, Nuxt.js will automatically load t
 export default {
   validate({ params }) {
     // Must be a number
-    return /^\d+$/.test(params.id);
+    return /^\d+$/.test(params.id)
   }
-};
+}
 ```
 
 You can also check some data in your [store](/guide/vuex-store) for example (filled by [`nuxtServerInit`](/guide/vuex-store#the-nuxtserverinit-action) before action):
@@ -53,9 +53,9 @@ You can also check some data in your [store](/guide/vuex-store) for example (fil
 export default {
   validate({ params, store }) {
     // Check if `params.id` is an existing category
-    return store.state.categories.some(category => category.id === params.id);
+    return store.state.categories.some(category => category.id === params.id)
   }
-};
+}
 ```
 
 You can also throw expected or unexpected errors during validate function execution:
@@ -64,7 +64,7 @@ You can also throw expected or unexpected errors during validate function execut
 export default {
   async validate({ params, store }) {
     // Throws a 500 internal server error with custom message
-    throw new Error("Under Construction!");
+    throw new Error('Under Construction!')
   }
-};
+}
 ```

@@ -1,5 +1,5 @@
 ---
-title: "API: <client-only> コンポーネント"
+title: 'API: <client-only> コンポーネント'
 description: コンポーネントをクライアント側でのみレンダリングし、サーバー側でプレースホルダーテキストを表示します。
 menu: client-only
 category: components
@@ -14,8 +14,8 @@ position: 44
 
 </div>
 
-
 **Props**:
+
 - placeholder: `string`
   - `<client-only />` がクライアント側にマウントされるまで、プレースホルダーとしてテキストを使用します。
 
@@ -35,17 +35,17 @@ position: 44
 
 - placeholder:
   - `<client-only />` がクライアント側にマウントされるまで、プレースホルダーとしてスロットを使用します。
- 
- ```html
+
+```html
 <template>
   <div>
     <sidebar />
     <client-only>
       <!-- このコンポーネントは、クライアント側でレンダリングするためだけに使用されます -->
       <comments />
-  
+
       <!-- サーバー側でレンダリングされた loading indicator -->
-      <comments-placeholder slot="placeholder" />
+      <comments-placeholder slot="placeholder" />
     </client-only>
   </div>
 </template>

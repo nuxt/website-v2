@@ -1,5 +1,5 @@
 ---
-title: "The key Property"
+title: 'The key Property'
 description: Set the `key` property of internal `<router-view>` component
 menu: key
 category: pages
@@ -17,7 +17,7 @@ There are several ways to set the key. For more details, please refer to the `nu
 ```js
 export default {
   key(route) {
-    return route.fullPath;
+    return route.fullPath
   }
-};
+}
 ```

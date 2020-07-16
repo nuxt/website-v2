@@ -5,7 +5,7 @@ category: getting-started
 position: 103
 ---
 
->  Nuxt.js ではデフォルトの設定でほとんどのユースケースをカバーしています。`nuxt.config.js` を使ってこの設定を上書きすることができます。
+> Nuxt.js ではデフォルトの設定でほとんどのユースケースをカバーしています。`nuxt.config.js` を使ってこの設定を上書きすることができます。
 
 ### build
 
@@ -61,7 +61,6 @@ position: 103
 
 [`modulesDir` オプションに関するドキュメント](/api/configuration-modulesdir)
 
-
 ### plugins
 
 このオプションで、ルートの Vue.js アプリケーションをインスタンス化する前に実行したい JavaScript plugin を指定できます。
@@ -104,7 +103,6 @@ position: 103
 
 [`transition` オプションに関するドキュメント](/api/configuration-transition)
 
-
 ## Asynchronous Configuration
 
 一部のオプション（例えば、head）に非同期データ（例えば、API からのデータなど）を入力する必要がある場合は、promise を返す可能性があります。例は以下のとおりです。
@@ -120,7 +118,7 @@ export default async () => {
   const data = await axios.get('endpoint')
   return {
     head: {
-      title: data.head.title,
+      title: data.head.title
       //... REST の設定
     }
   }

@@ -15,19 +15,19 @@ position: 305
 Kita bisa mendaftarkan kait pada acara siklus hidup tertentu.
 
 ```js
-nuxt.plugin('build', (builder) => {
+nuxt.plugin('build', builder => {
   builder.plugin('extendRoutes', async ({ routes }) => {
     // ...
   })
 })
 ```
 
-Plugin | Argumen | Keterangan
---- | --- | ---
-`build` | builder | Pertama membangun dimulai
-`built` | builder | Pertama membangun selesai
-`extendRoutes` | {routes, templateVars, r} | Membangkitkan rute
-`generate` | {builder, templatesFiles, templateVars} | Membangkitkan file templat `.nuxt` 
-`done` | {builder, stats} | pembuatan webpack sudah selesai
-`compile` | {builder, compiler} | Sebelum kompilasi webpack (compiler adalah contoh `MultiCompiler`)
-`compiled` | builder | pembuatan webpack selesai
+| Plugin | Argumen | Keterangan |
+| --- | --- | --- |
+| `build` | builder | Pertama membangun dimulai |
+| `built` | builder | Pertama membangun selesai |
+| `extendRoutes` | {routes, templateVars, r} | Membangkitkan rute |
+| `generate` | {builder, templatesFiles, templateVars} | Membangkitkan file templat `.nuxt` |
+| `done` | {builder, stats} | pembuatan webpack sudah selesai |
+| `compile` | {builder, compiler} | Sebelum kompilasi webpack (compiler adalah contoh `MultiCompiler`) |
+| `compiled` | builder | pembuatan webpack selesai |

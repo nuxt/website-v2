@@ -1,7 +1,6 @@
 ---
 title: 'API: Metode head'
-description: Nuxt.js menggunakan vue-meta untuk memperbarui `headers` dan `HTML attributes`
-  pada aplikasi Anda.
+description: Nuxt.js menggunakan vue-meta untuk memperbarui `headers` dan `HTML attributes` pada aplikasi Anda.
 menu: head
 category: pages
 position: 23
@@ -15,8 +14,7 @@ position: 23
 
 Gunakan metode `head` untuk mengatur tag HTML Head untuk halaman saat ini.
 
-Your component data are available with `this` in the `head` method, you can use set custom meta tags with the page data.
-Data komponen Anda tersedia dengan `this` pada metode `head`, Anda dapat menggunakan set kustom meta tag dengan data halaman.
+Your component data are available with `this` in the `head` method, you can use set custom meta tags with the page data. Data komponen Anda tersedia dengan `this` pada metode `head`, Anda dapat menggunakan set kustom meta tag dengan data halaman.
 
 ```html
 <template>
@@ -24,26 +22,30 @@ Data komponen Anda tersedia dengan `this` pada metode `head`, Anda dapat menggun
 </template>
 
 <script>
-export default {
-  data () {
-    return {
-      title: 'Hello World!'
-    }
-  },
-  head () {
-    return {
-      title: this.title,
-      meta: [
-        { hid: 'description', name: 'description', content: 'My custom description' }
-      ]
+  export default {
+    data() {
+      return {
+        title: 'Hello World!'
+      }
+    },
+    head() {
+      return {
+        title: this.title,
+        meta: [
+          {
+            hid: 'description',
+            name: 'description',
+            content: 'My custom description'
+          }
+        ]
+      }
     }
   }
-}
 </script>
 ```
 
 <div class="Alert">
 
-Untuk menghindari duplikasi saat menggunakannya pada "komponen child", berikan pengenal unik dengan key `yang tersembunyi`, [baca lebih lanjut] (https://vue-meta.nuxtjs.org/api/#tagidkeyname).
+Untuk menghindari duplikasi saat menggunakannya pada "komponen child", berikan pengenal unik dengan key `yang tersembunyi`, [baca lebih lanjut](https://vue-meta.nuxtjs.org/api/#tagidkeyname).
 
 </div>

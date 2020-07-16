@@ -1,12 +1,12 @@
 ---
-title: "API: La propriété modern"
+title: 'API: La propriété modern'
 description: Créez et servez un bundle moderne
 menu: modern
 category: configuration
 position: 118
 ---
 
-> Cette fonctionnalité est inspirée du [mode moderne vue-cli](https://cli.vuejs.org/guide/browser-compatibility.html#modern-mode) 
+> Cette fonctionnalité est inspirée du [mode moderne vue-cli](https://cli.vuejs.org/guide/browser-compatibility.html#modern-mode)
 
 - Type: `String` or `Boolean`
   - Par défaut: false
@@ -32,16 +32,15 @@ Les deux versions de bundles sont:
   }
 }
 ```
-**Remarque sur *nuxt generate*:** La propriété `modern` fonctionne également avec la commande `nuxt generate`, mais dans 
-ce cas seule l'option `client` est honorée et sélectionnée automatiquement lors du lancement de la commande 
-`nuxt generate --modern` sans fournir de valeur.
 
-- Nuxt détectera automatiquement la version `modern` dans` nuxt start` lorsque `modern` n'est pas spécifiée, le mode auto-détecté est:
+**Remarque sur _nuxt generate_:** La propriété `modern` fonctionne également avec la commande `nuxt generate`, mais dans ce cas seule l'option `client` est honorée et sélectionnée automatiquement lors du lancement de la commande `nuxt generate --modern` sans fournir de valeur.
 
-| Mode          | Modern Mode   |
-| ------------- |:-------------:|
-| universal     | server        |
-| spa           | client        |
+- Nuxt détectera automatiquement la version `modern` dans`nuxt start` lorsque `modern` n'est pas spécifiée, le mode auto-détecté est:
+
+| Mode      | Modern Mode |
+| --------- | :---------: |
+| universal |   server    |
+| spa       |   client    |
 
 - Le mode moderne pour `nuxt generate` peut seulement être `client`
 - Utilisez [`build.crossorigin`](/api/configuration-build#crossorigin) pour modifier l'attribut `crossorigin` dans `<link>` et `<script>`

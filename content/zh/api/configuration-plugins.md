@@ -1,5 +1,5 @@
 ---
-title: "API: plugins 属性配置"
+title: 'API: plugins 属性配置'
 description: plugins 属性使得你可以轻易地为 Nuxt.js 配置使用 Vue.js 插件。
 menu: plugins
 category: configuration
@@ -12,12 +12,14 @@ position: 121
   - 数组元素类型： `String` 或 `Object`
 
 如果数组元素类型是 `Object`， 其具有以下属性：
-  - src: `String` (文件的路径)
-  - ssr: `Boolean` (默认为 `true`) *如果值为 false，该文件只会在客户端被打包引入。*
+
+- src: `String` (文件的路径)
+- ssr: `Boolean` (默认为 `true`) _如果值为 false，该文件只会在客户端被打包引入。_
 
 > `plugins` 属性使得你可以轻易地为 Nuxt.js 配置使用 Vue.js 插件。
 
 例如 (`nuxt.config.js`)：
+
 ```js
 module.exports = {
   plugins: ['~plugins/vue-notifications']
@@ -25,6 +27,7 @@ module.exports = {
 ```
 
 然后, 我们需要创建 `plugins/vue-notifications.js` 文件：
+
 ```js
 import Vue from 'vue'
 import VueNotifications from 'vue-notifications'

@@ -1,5 +1,5 @@
 ---
-title: "API : La propriété generate"
+title: 'API : La propriété generate'
 description: Configure la génération de votre application web universelle vers une application web statique.
 menu: generate
 category: configuration
@@ -12,7 +12,8 @@ position: 110
 
 Quand vous lancez `nuxt generate` ou appelez `nuxt.generate()`, Nuxt.js utilisera la configuration définie dans la propriété `generate`.
 
-nuxt.config.js 
+nuxt.config.js
+
 ```js
 export default {
   generate: {
@@ -37,14 +38,12 @@ Configurer pour rendre l'inspection de [vue-devtools](https://github.com/vuejs/v
 
 Si vous l'avez déjà activé via `nuxt.config.js` ou autrement, devtools est activé indépendamment de l'indicateur.
 
-
 ## fallback
 
 - Type: `String` or `Boolean`
 - Par défaut: `'200.html'`
 
-Le chemin vers l'appel SPA. Ce fichier peut être utilisé lors de déploiements de sites générés vers un hébergement 
-statique. Il revient au `mode: 'spa'` lorsqu'un chemin n'est pas généré.
+Le chemin vers l'appel SPA. Ce fichier peut être utilisé lors de déploiements de sites générés vers un hébergement statique. Il revient au `mode: 'spa'` lorsqu'un chemin n'est pas généré.
 
 ## interval
 
@@ -82,11 +81,7 @@ Nous ajoutons les routes pour `/utilisateurs/:id` dans `nuxt.config.js` :
 ```js
 export default {
   generate: {
-    routes: [
-      '/utilisateurs/1',
-      '/utilisateurs/2',
-      '/utilisateurs/3'
-    ]
+    routes: ['/utilisateurs/1', '/utilisateurs/2', '/utilisateurs/3']
   }
 }
 ```
@@ -122,13 +117,12 @@ import axios from 'axios'
 
 export default {
   generate: {
-    routes () {
-      return axios.get('https://mon-api/utilisateurs')
-        .then((res) => {
-          return res.data.map((user) => {
-            return '/utilisateurs/' + user.id
-          })
+    routes() {
+      return axios.get('https://mon-api/utilisateurs').then(res => {
+        return res.data.map(user => {
+          return '/utilisateurs/' + user.id
         })
+      })
     }
   }
 }
@@ -143,10 +137,11 @@ import axios from 'axios'
 
 export default {
   generate: {
-    routes (callback) {
-      axios.get('https://mon-api/utilisateurs')
-        .then((res) => {
-          const routes = res.data.map((user) => {
+    routes(callback) {
+      axios
+        .get('https://mon-api/utilisateurs')
+        .then(res => {
+          const routes = res.data.map(user => {
             return '/utilisateurs/' + user.id
           })
           callback(null, routes)
@@ -168,16 +163,15 @@ import axios from 'axios'
 
 export default {
   generate: {
-    routes () {
-      return axios.get('https://mon-api/utilisateurs')
-        .then((res) => {
-          return res.data.map((user) => {
-            return {
-              route: '/utilisateurs/' + user.id,
-              payload: user
-            }
-          })
+    routes() {
+      return axios.get('https://mon-api/utilisateurs').then(res => {
+        return res.data.map(user => {
+          return {
+            route: '/utilisateurs/' + user.id,
+            payload: user
+          }
         })
+      })
     }
   }
 }
@@ -213,7 +207,8 @@ Exemple :
 
 Quand il est mis à `false`, les fichier HTML seront générés en accord avec les chemins de routes :
 
-nuxt.config.js 
+nuxt.config.js
+
 ```js
 export default {
   generate: {

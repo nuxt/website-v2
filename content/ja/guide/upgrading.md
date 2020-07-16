@@ -1,6 +1,6 @@
 ---
 title: アップグレード
-description: "Nuxt.js のアップグレードは即座にできますが、package.json をアップグレードするよりも複雑です。"
+description: 'Nuxt.js のアップグレードは即座にできますが、package.json をアップグレードするよりも複雑です。'
 category: prologue
 position: 4
 ---

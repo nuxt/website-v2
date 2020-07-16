@@ -1,5 +1,5 @@
 ---
-title: "API: fetch 方法"
+title: 'API: fetch 方法'
 description: fetch 方法用于在渲染页面前填充应用的状态树（store）数据， 与 asyncData 方法类似，不同的是它不会设置组件的数据。
 menu: fetch
 category: pages
@@ -23,20 +23,20 @@ position: 22
 </div>
 
 例如 `pages/index.vue`：
+
 ```html
 <template>
   <h1>Stars: {{ $store.state.stars }}</h1>
 </template>
 
 <script>
-export default {
-  fetch ({ store, params }) {
-    return axios.get('http://my-api/stars')
-    .then((res) => {
-      store.commit('setStars', res.data)
-    })
+  export default {
+    fetch({ store, params }) {
+      return axios.get('http://my-api/stars').then(res => {
+        store.commit('setStars', res.data)
+      })
+    }
   }
-}
 </script>
 ```
 
@@ -48,12 +48,12 @@ export default {
 </template>
 
 <script>
-export default {
-  async fetch ({ store, params }) {
-    let { data } = await axios.get('http://my-api/stars')
-    store.commit('setStars', data)
+  export default {
+    async fetch({ store, params }) {
+      let { data } = await axios.get('http://my-api/stars')
+      store.commit('setStars', data)
+    }
   }
-}
 </script>
 ```
 
@@ -63,11 +63,11 @@ export default {
 
 ```html
 <script>
-export default {
-  async fetch ({ store, params }) {
-    await store.dispatch('GET_STARS');
+  export default {
+    async fetch({ store, params }) {
+      await store.dispatch('GET_STARS')
+    }
   }
-}
 </script>
 ```
 
@@ -76,7 +76,7 @@ export default {
 ```js
 // ...
 export const actions = {
-  async GET_STARS ({ commit }) {
+  async GET_STARS({ commit }) {
     const { data } = await axios.get('http://my-api/stars')
     commit('SET_STARS', data)
   }

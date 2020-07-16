@@ -1,5 +1,5 @@
 ---
-title: "API: serverMiddleware 属性"
+title: 'API: serverMiddleware 属性'
 description: 定义服务器端渲染中间件。
 menu: serverMiddleware
 category: configuration
@@ -9,17 +9,17 @@ position: 127
 # 服务器端渲染中间件(serverMiddleware) 属性
 
 - 类型: `Array`
-    - Items: `String` 或 `Object` 或 `Function`
+  - Items: `String` 或 `Object` 或 `Function`
 
-Nuxt在内部创建一个[连接](https://github.com/senchalabs/connect)实例，所以我们可以将我们的中间件注册到它的堆栈，并有机会提供更多的路由，如API，而无需**外部服务器**。因为连接本身是一个中间件，所以注册的中间件既可以用于`nuxt start`，也可以用作具有编程用法的中间件，如[express-template](https://github.com/nuxt-community/express-template)。Nuxt [Modules](/guide/modules)还可以使用[this.addServerMiddleware()](/api/internals-module-container#addservermiddleware-middleware-)设置`serverMiddleware`。
+Nuxt 在内部创建一个[连接](https://github.com/senchalabs/connect)实例，所以我们可以将我们的中间件注册到它的堆栈，并有机会提供更多的路由，如 API，而无需**外部服务器**。因为连接本身是一个中间件，所以注册的中间件既可以用于`nuxt start`，也可以用作具有编程用法的中间件，如[express-template](https://github.com/nuxt-community/express-template)。Nuxt [Modules](/guide/modules)还可以使用[this.addServerMiddleware()](/api/internals-module-container#addservermiddleware-middleware-)设置`serverMiddleware`。
 
 ## 服务器端渲染中间件(serverMiddleware) vs 中间件(middleware)!
 
-不要将它与客户端或SSR中Vue在每条路由之前调用的[routes middleware](/guide/routing#middleware)混淆。`serverMiddleware`只是在vue-server-renderer**之前**在服务器端运行，可用于服务器特定的任务，如处理API请求或服务资产。
+不要将它与客户端或 SSR 中 Vue 在每条路由之前调用的[routes middleware](/guide/routing#middleware)混淆。`serverMiddleware`只是在 vue-server-renderer**之前**在服务器端运行，可用于服务器特定的任务，如处理 API 请求或服务资产。
 
 ## 用法
 
-如果中间件是`String`，Nuxt.js将尝试自动解析它。
+如果中间件是`String`，Nuxt.js 将尝试自动解析它。
 
 例如 (`nuxt.config.js`):
 
@@ -67,7 +67,5 @@ export default function (req, res, next) {
 Nuxt 配置 (`nuxt.config.js`):
 
 ```js
-serverMiddleware: [
-  '~/api/logger'
-]
+serverMiddleware: ['~/api/logger']
 ```

@@ -19,13 +19,13 @@ position: 2
 </template>
 
 <script lang="coffee">
-module.exports = data: ->
-  { name: 'World' }
+  module.exports = data: ->
+    { name: 'World' }
 </script>
 
 <style lang="sass">
-.red
-  color: red
+  .red
+    color: red
 </style>
 ```
 

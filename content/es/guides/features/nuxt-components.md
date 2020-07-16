@@ -8,10 +8,10 @@ csb_link_nuxt: https://codesandbox.io/embed/github/nuxt-academy/guides-examples/
 questions:
   - question: What component do you use to display your page components?
     answers:
-      - "<Nuxt>"
-      - "<Page>"
-      - "<Views>"
-    correctAnswer: "<Nuxt>"
+      - '<Nuxt>'
+      - '<Page>'
+      - '<Views>'
+    correctAnswer: '<Nuxt>'
   - question: The `<Nuxt>` component can be used in?
     answers:
       - components
@@ -20,29 +20,29 @@ questions:
     correctAnswer: layouts
   - question: Which component is used for displaying the children components in a nested route?
     answers:
-      - "<Nuxt>"
-      - "<NuxtChild>"
-      - "<Children>"
-    correctAnswer: "<NuxtChild>"
+      - '<Nuxt>'
+      - '<NuxtChild>'
+      - '<Children>'
+    correctAnswer: '<NuxtChild>'
   - question: Where do you insert the `<NuxtChild>` component?
     answers:
       - pages/child.vue
       - pages/parent.vue
       - layouts/parent.vue
     correctAnswer: pages/parent.vue
-  - question: "`keep-alive` can be used in"
+  - question: '`keep-alive` can be used in'
     answers:
-      - "<Nuxt> component only"
-      - "<Nuxt> and <NuxtChild> component"
-      - "<NuxtChild> component only"
-    correctAnswer: "<Nuxt> and <NuxtChild> component"
+      - '<Nuxt> component only'
+      - '<Nuxt> and <NuxtChild> component'
+      - '<NuxtChild> component only'
+    correctAnswer: '<Nuxt> and <NuxtChild> component'
   - question: What component do we use to link to internal pages?
     answers:
-      - "<NuxtLink>"
-      - "<RouterLink>"
-      - "<a>"
-    correctAnswer: "<NuxtLink>"
-  - question: "How do we link to the about page of our app using <NuxtLink>?"
+      - '<NuxtLink>'
+      - '<RouterLink>'
+      - '<a>'
+    correctAnswer: '<NuxtLink>'
+  - question: 'How do we link to the about page of our app using <NuxtLink>?'
     answers:
       - to="/about"
       - href="/about"
@@ -50,7 +50,7 @@ questions:
     correctAnswer: to="/about"
   - question: What key do you use to disable prefetching for certain pages?
     answers:
-      - no-prefetch 
+      - no-prefetch
       - :prefetch="false"
       - no-prefetch and :prefetch="false"
     correctAnswer: no-prefetch and :prefetch="false"
@@ -68,10 +68,10 @@ questions:
     correctAnswer: nuxt-link-exact-active
   - question: In Nuxt ≥ 2.9.0 which component do you use so that your component is only rendered on client side?
     answers:
-      - "<client-only>"
-      - "<no-ssr>"
-      - "<client>"
-    correctAnswer: "<client-only>"
+      - '<client-only>'
+      - '<no-ssr>'
+      - '<client>'
+    correctAnswer: '<client-only>'
 ---
 
 Nuxt.js comes with a few important components included out of the box, which will be helpful when building your application. The components are globally available, which means that you don't need to import them in order to use them.
@@ -92,7 +92,7 @@ The `<Nuxt>` component is the component you use to display your page components.
 </template>
 ```
 
-<base-alert> 
+<base-alert>
 
 The `<Nuxt>` component can only be used inside layouts
 
@@ -102,7 +102,7 @@ The `<Nuxt>` component can take the prop of `nuxt-child-key`. This prop will be 
 
 There are 2 ways to handle the internal `key` prop of `<RouterView>`.
 
-1) Use a `nuxtChildKey` prop on your `<Nuxt>` component
+1. Use a `nuxtChildKey` prop on your `<Nuxt>` component
 
 ```html{}[layouts/default.vue]
 <template>
@@ -112,13 +112,13 @@ There are 2 ways to handle the internal `key` prop of `<RouterView>`.
 </template>
 ```
 
-2) Add the `key` option in *page* components as `string` or `function`
+2. Add the `key` option in _page_ components as `string` or `function`
 
 ```js
 export default {
- key(route) {
-   return route.fullPath
- }
+  key(route) {
+    return route.fullPath
+  }
 }
 ```
 
@@ -138,7 +138,7 @@ Example:
 This file tree will generate these routes:
 
 ```js
-[
+;[
   {
     path: '/parent',
     component: '~/pages/parent.vue',
@@ -169,7 +169,7 @@ To display the `child.vue` component, you have to insert the `<NuxtChild>` co
 
 Both, the `<Nuxt>` component and the `<NuxtChild/>` component, accept `keep-alive` and `keep-alive-props.`
 
-🎓To learn more about keep-alive and keep-alive-props see the [vue docs](https://vuejs.org/v2/api/#keep-alive) 
+🎓To learn more about keep-alive and keep-alive-props see the [vue docs](https://vuejs.org/v2/api/#keep-alive)
 
 ```html{}[layouts/default.vue]
 <template>
@@ -195,9 +195,9 @@ Both, the `<Nuxt>` component and the `<NuxtChild/>` component, accept `keep-al
 
 <!-- will be converted into something like this -->
 <div>
-  <KeepAlive  :exclude="['modal']">
+  <KeepAlive :exclude="['modal']">
     <RouterView />
-  </KeepAlive >
+  </KeepAlive>
 </div>
 ```
 
@@ -235,7 +235,9 @@ The `<NuxtLink>` component should be used for all internal links. That means for
 <template>
   <div>
     <h1>Home page</h1>
-    <NuxtLink to="/about">About (internal link that belongs to the Nuxt App)</NuxtLink>
+    <NuxtLink to="/about"
+      >About (internal link that belongs to the Nuxt App)</NuxtLink
+    >
     <a href="https://nuxtjs.org">External Link to another page</a>
   </div>
 </template>
@@ -243,7 +245,7 @@ The `<NuxtLink>` component should be used for all internal links. That means for
 
 🎓If you want to know more about `<RouterLink>`, feel free to read the [Vue Router documentation](https://router.vuejs.org/api/#router-link) for more information.
 
-<base-alert type="info"> 
+<base-alert type="info">
 
 `<NuxtLink>` also comes with [smart prefetching](https://nuxtjs.org/api/components-nuxt-link/) out of the box.
 
@@ -282,15 +284,15 @@ Since Nuxt.js v2.10.0, if you have set `prefetchLinks` to `false` but you wa
 
 ## linkActiveClass
 
-The `linkActiveClass` works the same as the `vue-router` class for active links. If we want to show which links are active all you have to do is create some css for the class `nuxt-link-active` . 
+The `linkActiveClass` works the same as the `vue-router` class for active links. If we want to show which links are active all you have to do is create some css for the class `nuxt-link-active` .
 
 ```css
 .nuxt-link-active {
-  color:red;
+  color: red;
 }
 ```
 
-<base-alert> 
+<base-alert>
 
 This css can be added to the navigation component or for a specific page or layout or in your main.css file.
 
@@ -314,7 +316,7 @@ This option is given directly to the `vue-router` linkActiveClass. See the [vue-
 
 ## linkExactActiveClass
 
-The `linkExactActiveClass` works the same as the `vue-router` class for exact active links. If we want to show which links are active with an exact match all you have to do is create some css for the class `nuxt-link-exact-active` . 
+The `linkExactActiveClass` works the same as the `vue-router` class for exact active links. If we want to show which links are active with an exact match all you have to do is create some css for the class `nuxt-link-exact-active` .
 
 ```css
 .nuxt-link-exact-active {
@@ -352,7 +354,7 @@ The linkPrefetchedClass will allow you to add styles for all links that have bee
 export default {
   router: {
     linkPrefetchedClass: 'nuxt-link-prefetched'
-  },
+  }
 }
 ```
 
@@ -394,25 +396,23 @@ Use a slot as placeholder until `<client-only />` is mounted on client-side.
 
 ```html{}[pages/example.vue]
 <template>
-<div>
-  <sidebar />
-  <client-only>
-    <!-- this component will only be rendered on client-side -->
-    <comments />
+  <div>
+    <sidebar />
+    <client-only>
+      <!-- this component will only be rendered on client-side -->
+      <comments />
 
-    <!-- loading indicator, rendered on server-side -->
-     <comments-placeholder slot="placeholder" />
-  </client-only>
-</div>
+      <!-- loading indicator, rendered on server-side -->
+      <comments-placeholder slot="placeholder" />
+    </client-only>
+  </div>
 </template>
 ```
 
-<base-alert> 
+<base-alert>
 
 If you are using a version of Nuxt < v2.9.0, use `<no-ssr>` instead of `<client-only>`
 
 </base-alert>
-
-
 
 <quiz :questions="questions"></quiz>

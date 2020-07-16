@@ -1,5 +1,5 @@
 ---
-title: "transition Properties"
+title: 'transition Properties'
 description: Set the default properties of the page and layout transitions.
 menu: transition
 category: configuration

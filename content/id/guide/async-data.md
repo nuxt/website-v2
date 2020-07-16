@@ -1,8 +1,6 @@
 ---
 title: Data Async
-description: Anda mungkin ingin mengambil data dan me-rendernya di sisi-server. Nuxt.js
-  menambahkan metode `asyncData` untuk memungkinkan Anda menangani operasi async sebelum
-  menyetel data komponen.
+description: Anda mungkin ingin mengambil data dan me-rendernya di sisi-server. Nuxt.js menambahkan metode `asyncData` untuk memungkinkan Anda menangani operasi async sebelum menyetel data komponen.
 category: getting-started
 position: 106
 ---
@@ -40,11 +38,10 @@ Nuxt.js menawarkan berbagai cara untuk menggunakan `asyncData`. Pilih yang palin
 
 ```js
 export default {
-  asyncData ({ params }) {
-    return axios.get(`https://my-api/posts/${params.id}`)
-      .then((res) => {
-        return { title: res.data.title }
-      })
+  asyncData({ params }) {
+    return axios.get(`https://my-api/posts/${params.id}`).then(res => {
+      return { title: res.data.title }
+    })
   }
 }
 ```
@@ -53,7 +50,7 @@ export default {
 
 ```js
 export default {
-  async asyncData ({ params }) {
+  async asyncData({ params }) {
     const { data } = await axios.get(`https://my-api/posts/${params.id}`)
     return { title: data.title }
   }
@@ -64,11 +61,10 @@ export default {
 
 ```js
 export default {
-  asyncData ({ params }, callback) {
-    axios.get(`https://my-api/posts/${params.id}`)
-      .then((res) => {
-        callback(null, { title: res.data.title })
-      })
+  asyncData({ params }, callback) {
+    axios.get(`https://my-api/posts/${params.id}`).then(res => {
+      callback(null, { title: res.data.title })
+    })
   }
 }
 ```
@@ -99,12 +95,13 @@ Contoh dengan `Promise`:
 
 ```js
 export default {
-  asyncData ({ params, error }) {
-    return axios.get(`https://my-api/posts/${params.id}`)
-      .then((res) => {
+  asyncData({ params, error }) {
+    return axios
+      .get(`https://my-api/posts/${params.id}`)
+      .then(res => {
         return { title: res.data.title }
       })
-      .catch((e) => {
+      .catch(e => {
         error({ statusCode: 404, message: 'Post not found' })
       })
   }
@@ -115,12 +112,13 @@ Jika Anda menggunakan argumen `callback`, Anda dapat memanggil secara langsung d
 
 ```js
 export default {
-  asyncData ({ params }, callback) {
-    axios.get(`https://my-api/posts/${params.id}`)
-      .then((res) => {
+  asyncData({ params }, callback) {
+    axios
+      .get(`https://my-api/posts/${params.id}`)
+      .then(res => {
         callback(null, { title: res.data.title })
       })
-      .catch((e) => {
+      .catch(e => {
         callback({ statusCode: 404, message: 'Post not found' })
       })
   }

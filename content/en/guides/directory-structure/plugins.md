@@ -59,7 +59,7 @@ questions:
     answers:
       - $
       - _
-      - :
+      - ':'
     correctAnswer: $
   - question: To change the order of your plugins what property do you use?
     answers:
@@ -135,7 +135,7 @@ export default {
 ```
 
 <app-modal>
-  <code-sandbox  :src="csb_link_plugins_external"></code-sandbox>
+  <code-sandbox :src="csb_link_plugins_external"></code-sandbox>
 </app-modal>
 
 ## Vue Plugins

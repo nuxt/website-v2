@@ -182,7 +182,8 @@
         <a href="/favicon.ico" target="_blank" rel="noopener">favicon</a> or our
         <a href="/logos/nuxt-logos.sketch" target="_blank" rel="noopener">
           Sketch file
-</a>.
+        </a>
+        .
       </p>
     </div>
   </div>

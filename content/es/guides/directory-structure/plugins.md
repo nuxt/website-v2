@@ -59,7 +59,7 @@ questions:
     answers:
       - $
       - _
-      - :
+      - ':'
     correctAnswer: $
   - question: To change the order of your plugins what property do you use?
     answers:

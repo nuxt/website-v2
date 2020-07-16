@@ -71,7 +71,7 @@
     "lintold": "eslint --ext .js,.vue --ignore-path .gitignore --ignore-pattern modules/ --ignore-pattern plugins/ga.js .",
     "cy:open": "cypress open",
     "cy:run": "cypress run",
-    "test:e2e:run": "start-server-and-test generate http://localhost:3000 cy:run",
+    "test:e2e:run": "start-server-and-test serve http://localhost:3000 cy:run",
     "test:e2e:dev": "start-server-and-test dev http://localhost:3000 cy:open",
     "lint:eslint": "eslint --fix",
     "lint:markdownlint": "markdownlint",

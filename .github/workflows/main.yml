@@ -13,7 +13,7 @@ jobs:
         with:
           browser: chrome
           headless: true
-          build: npm run generate
+          build: npm run generate-for-github-actions
           start: npm run serve
           # quote the url to be safe against YML parsing surprises
           wait-on: 'http://localhost:3000'

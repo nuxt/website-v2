@@ -33,6 +33,7 @@
               href="https://github.com/nuxt/nuxt.js"
               variant="secondary"
               class="sm:mr-4 py-3 px-6 text-base"
+              data-cy="github-stars"
             >
               <GithubIcon slot="icon" class="inline-block h-6 -mt-1 mr-1" />
               {{ $config.nuxtStars }} github stars

@@ -21,8 +21,9 @@
               link.depth === 2
           }"
         >
-          <a
-            :href="`#${link.id}`"
+          <NuxtLink
+            :to="`#${link.id}`"
+            data-cy="toc"
             class="block text-sm scrollactive-item transition-transform ease-in-out duration-300 transform hover:translate-x-1"
             :class="{
               'py-2': link.depth === 2,
@@ -30,7 +31,7 @@
             }"
           >
             {{ link.text }}
-          </a>
+          </NuxtLink>
         </li>
       </scrollactive>
     </nav>

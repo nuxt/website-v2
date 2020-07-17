@@ -1,11 +1,11 @@
 describe('It checks to see if people can sign up for the newsletter', () => {
   beforeEach(() => {
-    cy.visit('/')
+    cy.visit(Cypress.config().baseUrl + '/')
     cy.fixture('newsletter-signup').as('user')
   })
   it('successfully fills out the form and submits it and checks there is a response', () => {
     cy.server()
-    cy.get('form[data-cy="newsletter"]').within(() => {
+    cy.get('form[data-cy="newsletter"]').within(function () {
       cy.get('[type="email"]')
         .type(this.user.email)
         .should('have.value', this.user.email)

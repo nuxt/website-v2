@@ -7,6 +7,8 @@ csb_link_plugins_client: https://codesandbox.io/embed/github/nuxt-academy/guides
 csb_link_plugins_external: https://codesandbox.io/embed/github/nuxt-academy/guides-examples/tree/master/04_directory_structure/12_plugins_external?fontsize=14&hidenavigation=1&theme=dark
 csb_link_plugins_custom: https://codesandbox.io/embed/github/nuxt-academy/guides-examples/tree/master/04_directory_structure/12_plugins_custom_plugin?fontsize=14&hidenavigation=1&theme=dark
 csb_link_plugins_vue: https://codesandbox.io/embed/github/nuxt-academy/guides-examples/tree/master/04_directory_structure/12_plugins_vue?fontsize=14&hidenavigation=1&theme=dark
+img: /guides/plugins.jpg
+imgAlt: modules-servermiddleware-plugins-in-nuxt-js
 questions:
   - question: The `plugins` directory contains your Javascript plugins that you want to run
     answers:
@@ -69,7 +71,7 @@ questions:
     correctAnswer: extendPlugins
 ---
 
-![modules-servermiddleware-plugins-in-nuxt-js](/guides/plugins.jpg)
+<app-modal :src="img" :alt="imgAlt"></app-modal>
 
 The `plugins` directory contains your Javascript plugins that you want to run before instantiating the root Vue.js Application. This is the place to add Vue plugins and to inject functions or constants. Every time you need to use `Vue.use()`, you should create a file in `plugins/` and add its path to `plugins` in `nuxt.config.js`.
 

@@ -5,6 +5,8 @@ position: 2
 category: concepts
 csb_link_context: https://codesandbox.io/embed/github/nuxt-academy/guides-examples/tree/master/02_concepts/02_context_helpers-context?fontsize=14&hidenavigation=1&theme=dark
 csb_link_helpers: https://codesandbox.io/embed/github/nuxt-academy/guides-examples/tree/master/02_concepts/02_context_helpers-helpers?fontsize=14&hidenavigation=1&theme=dark
+img: /guides/context.jpeg
+imgAlt: nuxt-js-context-keys
 questions:
   - question: What is the reason the context exists?
     answers:
@@ -44,7 +46,7 @@ questions:
     correctAnswer: server, client and static
 ---
 
-![nuxt-js-context-keys](/guides/context.jpeg)
+<app-modal :src="img" :alt="imgAlt"></app-modal>
 
 The `context` object is available in specific Nuxt functions like [asyncData](/guides/features/data-fetching#async-data), [plugins](/guides/directory-structure/plugins), [middleware](/guides/directory-structure/middleware) and [nuxtServerInit](http://localhost:3000/guides/directory-structure/store#the-nuxtserverinit-action). It provides _additional_ and often optional information about the current request to the application.
 

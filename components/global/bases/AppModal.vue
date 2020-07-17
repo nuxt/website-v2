@@ -1,12 +1,15 @@
 <template>
   <div>
-    <button
-      id="show-modal"
-      class="no-underline mt-4 font-medium text-sm px-4 py-2 shadow uppercase rounded hover:shadow-md sm:mr-4 py-3 px-6 text-base mb-4 primary bg-primary-base text-white hover:bg-primary-light"
-      @click="showModal = true"
-    >
-      {{ $t('codeSandbox.open') }}
-    </button>
+    <div id="show-modal" class="cursor-pointer" @click="showModal = true">
+      <img v-if="src" :src="src" :alt="alt" />
+      <button
+        v-else
+        class="no-underline mt-4 font-medium text-sm px-4 py-2 shadow uppercase rounded hover:shadow-md sm:mr-4 py-3 px-6 text-base mb-4 primary bg-primary-base text-white hover:bg-primary-light"
+      >
+        {{ $t('codeSandbox.open') }}
+      </button>
+    </div>
+
     <transition name="modal">
       <div v-if="showModal" class="modal-mask" keep-alive>
         <div class="modal-wrapper">
@@ -16,8 +19,9 @@
                 <XmarkCircleIcon class="svg" />
               </button>
             </div>
-            <div class="modal-body flex-1">
-              <slot> </slot>
+            <div class="modal-body flex-1" :class="{ 'overflow-scroll': src }">
+              <img v-if="src" :src="src" :alt="alt" />
+              <slot v-else></slot>
             </div>
           </div>
         </div>
@@ -32,6 +36,18 @@
   export default {
     components: {
       XmarkCircleIcon
+    },
+    props: {
+      src: {
+        type: String,
+        required: false,
+        default: ''
+      },
+      alt: {
+        type: String,
+        required: false,
+        default: ''
+      }
     },
     data() {
       return {

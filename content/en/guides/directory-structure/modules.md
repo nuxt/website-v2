@@ -4,6 +4,8 @@ description: Nuxt.js provides a higher-order module system that makes it possibl
 position: 9
 category: directory-structure
 csb_link: https://codesandbox.io/embed/github/nuxt-academy/guides-examples/tree/master/04_directory_structure/10_modules?fontsize=14&hidenavigation=1&theme=dark
+img: /guides/plugins.jpg
+imgAlt: modules-servermiddleware-plugins-in-nuxt-js
 questions:
   - question: When are modules called?
     answers:
@@ -64,7 +66,7 @@ questions:
     correctAnswer: true
 ---
 
-![modules-servermiddleware-plugins-in-nuxt-js](/guides/modules.jpg)
+<app-modal :src="img" :alt="imgAlt"></app-modal>
 
 While developing production-grade applications with Nuxt.js you might find that the framework's core functionality is not enough. Nuxt.js can be extended with configuration options and plugins, but maintaining these customizations across multiple projects is tedious, repetitive and time-consuming. On the other hand, supporting every project's needs out of the box would make Nuxt.js very complex and hard to use.
 

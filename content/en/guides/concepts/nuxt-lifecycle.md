@@ -3,6 +3,8 @@ title: Nuxt Lifecycle
 description: No matter which tool you use, you will always feel more confident when you understand how the tool works under the hood. The same applies to Nuxt.js.
 position: 5
 category: concepts
+img: /guides/nuxt-lifecycle.png
+imgAlt: understanding-nuxt-2-12-lifecycle-hooks
 questions:
   - question: When does the Nuxt.js lifecycle start?
     answers:
@@ -60,7 +62,7 @@ questions:
     correctAnswer: asyncData is blocking while fetch is not
 ---
 
-![understanding-nuxt-2-12-lifecycle-hooks](/guides/nuxt-lifecycle.png)
+<app-modal :src="img" :alt="imgAlt"></app-modal>
 
 No matter which tool you use, you will always feel more confident when you understand how the tool works under the hood. The same applies to Nuxt.js. The goal of this chapter is to give you a high-level overview of the different parts of the framework, their order of execution and how they work together.
 

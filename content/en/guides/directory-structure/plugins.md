@@ -236,7 +236,7 @@ export default {
   <code-sandbox  :src="csb_link_plugins_client"></code-sandbox>
 </app-modal>
 
-## Inject in \$root & context
+## Inject in `$root` & context
 
 Sometimes you want to make functions or values available across your app. You can inject those variables into Vue instances (client side), the context (server side) and even in the Vuex store. It is a convention to prefix those functions with a `$`.
 

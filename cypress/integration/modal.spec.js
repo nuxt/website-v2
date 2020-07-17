@@ -7,7 +7,6 @@ describe('It checks to see if people can sign up for the newsletter', () => {
     cy.get('[data-cy="modal-button"]').click({multiple:true, force:true})
     cy.get('[data-cy="modal-open"]')
       .should('be.visible')
-    cy.get('iframe').should('be.visible')
     cy.get('[data-cy="modal-close"]').click({multiple:true, force:true})
     cy.get('[data-cy="modal-button"]').should('be.visible')
   })

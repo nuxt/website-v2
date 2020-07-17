@@ -33,3 +33,7 @@ watchers: {
 ```
 
 To learn more about webpack watchoptions, see the [webpack documentation](https://webpack.js.org/configuration/watch/#watchoptions).
+
+### What's next
+
+➡️ Check out the [Internals Glossary book](/guides/internals-glossary/$nuxt)

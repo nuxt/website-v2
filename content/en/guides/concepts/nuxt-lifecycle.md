@@ -151,6 +151,8 @@ Same as for the _client_ part, everything is happening in the browser but only w
 - fetch (non-blocking)
 - beforeMount & mounted
 
----
+### What's next
+
+➡️ Check out the [Features book](/guides/features/rendering-modes)
 
 <quiz :questions="questions"></quiz>

@@ -262,3 +262,7 @@ node_modules .nuxt dist
 <app-modal>
   <code-sandbox  :src="csb_link"></code-sandbox>
 </app-modal>
+
+### What's next
+
+➡️ Check out the [configuration-glossary](/guides/configuration-glossary/configuration-build)

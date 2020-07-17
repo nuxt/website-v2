@@ -48,3 +48,7 @@ async function start() {
 
 start()
 ```
+
+### What's next
+
+➡️ Check out the [Components Glossary book](/guides/components-glossary/pages-fetch)

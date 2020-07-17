@@ -74,3 +74,7 @@ async validate({ app, params, $preview }) {
     return true
 }
 ```
+
+### What's next
+
+➡️ Check out the [Directory Structure book](/guides/directory-structure/nuxt)

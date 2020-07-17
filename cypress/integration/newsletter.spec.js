@@ -3,7 +3,7 @@ describe('It checks to see if people can sign up for the newsletter', () => {
     cy.visit('/')
     cy.fixture('newsletter-signup').as('user')
   })
-  it('successfully fills out the form and submits it and checks there is a response', function () {
+  it('successfully fills out the form and submits it and checks there is a response', () => {
     cy.server()
     cy.get('form[data-cy="newsletter"]').within(() => {
       cy.get('[type="email"]')

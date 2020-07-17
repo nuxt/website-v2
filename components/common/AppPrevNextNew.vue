@@ -2,6 +2,7 @@
   <div class="flex justify-between items-center">
     <NuxtLink
       v-if="prev"
+      data-cy="prev"
       :to="
         localePath({
           name: 'guides-book-slug',
@@ -16,6 +17,7 @@
     <span v-else>&nbsp;</span>
     <NuxtLink
       v-if="next"
+      data-cy="next"
       :to="
         localePath({
           name: 'guides-book-slug',

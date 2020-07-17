@@ -115,7 +115,7 @@ export default {
 }
 ```
 
-With [ES6](https://hacks.mozilla.org/2015/05/es6-in-depth-destructuring/) we can use this syntax to descructure our context object. We can pass in the objects we want to have access to and then we can use them in the code without using the word context.
+With [ES6](https://hacks.mozilla.org/2015/05/es6-in-depth-destructuring/) you can use this syntax to descructure your context object. You can pass in the objects you want to have access to and then you can use them in the code without using the word context.
 
 ```js{}[pages/posts/_id.vue]
 export default {

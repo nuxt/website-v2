@@ -56,16 +56,16 @@ export default {
 ### Inside the .nuxt folder:
 
 - The router.js file is the generated router file that Nuxt.js generates for you when you put `.vue` files inside the pages folder. You can use this file for debugging for when you want to look up which routes are generated for vue-router and find out the names of a specific route.
-- The router.scrollBehaviorjs which is our Router ScrollBehavior
-- The Components folder has all our Nuxt components such as NuxtChild and NuxtLink. It also contains the nuxt-build-indicator which is the page we see when our application is building and nuxt-loading which is our loading component that gets seen when we are waiting for our page to load. You will also find the nuxt-error page in here which contains the Nuxt default error page.
-- The mixins folder has the files needed for the Nuxt \$fetch method.
-- The views folder contains our app template and our server error page.
-- The app.js is our main application file.
-- The client.js file is our client file needed for everything that happens client side.
+- The router.scrollBehavior.js which is your Router ScrollBehavior
+- The Components folder has all your Nuxt components such as NuxtChild and NuxtLink. It also contains the nuxt-build-indicator which is the page we see when your application is building and nuxt-loading which is your loading component that gets seen when we are waiting for your page to load. You will also find the nuxt-error page in here which contains the Nuxt default error page.
+- The mixins folder has the files needed for the Nuxt `$fetch` method.
+- The views folder contains your app template and your server error page.
+- The app.js is your main application file.
+- The client.js file is your client file needed for everything that happens client side.
 - The empty file is intentionally left empty for noop aliases
 - The index.js file bootstraps your application.
 - The loading.html is the file that is used when the page is loading.
-- The middleware file is where our middleware is kept
+- The middleware file is where your middleware is kept
 - The server.js file is all the code that is ran on the server
 - the utilities contains the utilities that Nuxt needs for it to work.
 

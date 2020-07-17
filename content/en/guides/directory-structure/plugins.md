@@ -98,7 +98,7 @@ npm install @nuxtjs/axios
   </code-block>
 </code-group>
 
-You can configure for example the axios interceptors to react on possible errors from our API calls across the application. In this example we redirect the user to a custom error page called sorry when we get a 500 status error from our API.
+You can configure for example the axios interceptors to react on possible errors from your API calls across the application. In this example we redirect the user to a custom error page called sorry when we get a 500 status error from our API.
 
 ```js{}[plugins/axios.js]
 export default function ({ $axios, redirect }) {
@@ -142,7 +142,7 @@ export default {
 
 ## Vue Plugins
 
-If we want to use Vue plugins, like [v-tooltip](https://akryum.github.io/v-tooltip) to display tooltips in our application, we need to setup the plugin before launching the app.
+If we want to use Vue plugins, like [v-tooltip](https://akryum.github.io/v-tooltip) to display tooltips in your application, we need to setup the plugin before launching the app.
 
 First we need to install it
 

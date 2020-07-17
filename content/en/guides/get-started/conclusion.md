@@ -40,7 +40,7 @@ questions:
       - static
       - components
     correctAnswer: static
-  - question: In which directory do we put our styles?
+  - question: In which directory do you put your styles?
     answers:
       - styles
       - components

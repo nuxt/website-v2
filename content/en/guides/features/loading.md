@@ -170,7 +170,7 @@ Your component has to expose some of these methods:
 | fail(error) | Optional | Called when a route couldn't be loaded (failed to fetch data for example). |
 | increase(num) | Optional | Called during loading the route component, num is an Integer < 100. |
 
-We can create our custom component in `components/LoadingBar.vue`:
+You can create your custom component in `components/LoadingBar.vue`:
 
 ```html{}[components/LoadingBar.vue]
 <template>
@@ -211,7 +211,7 @@ We can create our custom component in `components/LoadingBar.vue`:
 </style>
 ```
 
-Then, we update our `nuxt.config.js` to tell Nuxt.js to use our component:
+Then, you update your `nuxt.config.js` to tell Nuxt.js to use your component:
 
 ```js{}[nuxt.config.js]
 export default {

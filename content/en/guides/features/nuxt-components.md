@@ -42,7 +42,7 @@ questions:
       - '<RouterLink>'
       - '<a>'
     correctAnswer: '<NuxtLink>'
-  - question: 'How do we link to the about page of our app using <NuxtLink>?'
+  - question: 'How do you link to the about page of your app using <NuxtLink>?'
     answers:
       - to="/about"
       - href="/about"

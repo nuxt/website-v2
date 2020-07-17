@@ -19,7 +19,7 @@ Running nuxt dev with the static target will improve the developer experience:
 
 - Remove req & res from context
 - Fallback to client-side rendering on 404, errors and redirects (see SPA fallback)
-- \$route.query will always be equal to {} on server-side rendering
+- `$route.query` will always be equal to {} on server-side rendering
 - process.static is true
 
 <base-alert type="info">

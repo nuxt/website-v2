@@ -229,7 +229,7 @@ For these two loaders, the default configuration is:
 
 Which means that every file below 1 KB will be inlined as base-64 data URL. Otherwise, the image/font will be copied in its corresponding folder (inside the `.nuxt` directory) with a name containing a version hash for better caching.
 
-When launching our application with `nuxt`, our template in `pages/index.vue`:
+When launching your application with `nuxt`, your template in `pages/index.vue`:
 
 ```html{}[pages/index.vue]
 <template>

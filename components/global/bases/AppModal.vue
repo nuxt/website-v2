@@ -43,7 +43,6 @@
 
 <script>
   import XmarkCircleIcon from '~/assets/icons/xmark-circle.svg?inline'
-
   export default {
     components: {
       XmarkCircleIcon

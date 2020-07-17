@@ -7,6 +7,7 @@
   },
   "extends": ["@nuxtjs", "eslint-config-prettier"],
   "rules": {
+    "no-console": "error",
     "vue/no-v-html": 0,
     "vue/max-attributes-per-line": 0,
     "vue/html-closing-bracket-spacing": 0,

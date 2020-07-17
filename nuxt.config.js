@@ -146,14 +146,14 @@ export default {
         file: 'id-ID.js',
         name: 'Indonesian',
         domain: 'https://id.nuxtjs.org'
-      },
-      {
-        code: 'es',
-        iso: 'es-ES',
-        file: 'es-ES.js',
-        name: 'Español',
-        domain: 'https://es.nuxtjs.org'
       }
+      // {
+      //   code: 'es',
+      //   iso: 'es-ES',
+      //   file: 'es-ES.js',
+      //   name: 'Español',
+      //   domain: 'https://es.nuxtjs.org'
+      // }
     ],
     vueI18n: {
       fallbackLocale: 'en'

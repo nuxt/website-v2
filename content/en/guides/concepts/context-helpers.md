@@ -159,7 +159,7 @@ export default {
 
 Besides the shortcuts in the context, there are also other tiny helpers present in your Nuxt.js application.
 
-## \$nuxt: The Nuxt.js helper
+## `$nuxt`: The Nuxt.js helper
 
 `$nuxt` is a helper designed to improve the user experience and to be an escape hatch in some situations. It is accessible via `this.$nuxt` in Vue components and via `window.$nuxt` otherwise on the client side.
 

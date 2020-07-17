@@ -1,21 +1,32 @@
 <template>
   <div>
-    <div id="show-modal" class="cursor-pointer" @click="showModal = true">
-      <img v-if="src" :src="src" :alt="alt" />
-      <button
-        v-else
-        class="no-underline mt-4 font-medium text-sm px-4 py-2 shadow uppercase rounded hover:shadow-md sm:mr-4 py-3 px-6 text-base mb-4 primary bg-primary-base text-white hover:bg-primary-light"
-      >
-        {{ $t('codeSandbox.open') }}
-      </button>
+    <div
+      v-if="src"
+      class="cursor-pointer"
+      data-cy="modal-image"
+      @click="showModal = true"
+    >
+      <img :src="src" :alt="alt" />
     </div>
+    <button
+      v-else
+      data-cy="modal-button"
+      class="no-underline mt-4 font-medium text-sm px-4 py-2 shadow uppercase rounded hover:shadow-md sm:mr-4 py-3 px-6 text-base mb-4 primary bg-primary-base text-white hover:bg-primary-light"
+      @click="showModal = true"
+    >
+      {{ $t('codeSandbox.open') }}
+    </button>
 
     <transition name="modal">
-      <div v-if="showModal" class="modal-mask" keep-alive>
+      <div v-if="showModal" class="modal-mask" keep-alive data-cy="modal-open">
         <div class="modal-wrapper">
           <div class="modal-container flex flex-col">
             <div class="w-full flex justify-end">
-              <button class="mb-4 w-auto" @click="showModal = false">
+              <button
+                class="mb-4 w-auto"
+                data-cy="modal-close"
+                @click="showModal = false"
+              >
                 <XmarkCircleIcon class="svg" />
               </button>
             </div>

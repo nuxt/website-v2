@@ -283,7 +283,7 @@ export default function (moduleOptions) {
 
       // 既存のローダーをカスタマイズする
       // 詳しくは Nuxt 内部のソースコードを参照:
-      // https://github.com/nuxt/nuxt.js/tree/dev/packages/builder/src/webpack/base.js
+      // https://github.com/nuxt/nuxt.js/blob/dev/packages/webpack/src/config/base.js
       const barLoader = config.module.rules.find(rule => rule.loader === 'bar-loader')
   })
 }

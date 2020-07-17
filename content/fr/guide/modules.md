@@ -285,7 +285,7 @@ export default function (moduleOptions) {
 
       // Personnalisez les chargements existants
       // Reportez-vous au code source des composants internes de Nuxt:
-      // https://github.com/nuxt/nuxt.js/tree/dev/packages/builder/src/webpack/base.js
+      // https://github.com/nuxt/nuxt.js/blob/dev/packages/webpack/src/config/base.js
       const barLoader = config.module.rules.find(rule => rule.loader === 'bar-loader')
   })
 }

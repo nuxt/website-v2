@@ -1,8 +1,13 @@
 describe('It checks to see if the modals works', () => {
   beforeEach(() => {
-    cy.visit(Cypress.config().baseUrl + '/guides/concepts/context-helpers')
+    cy.visit(Cypress.config().baseUrl + '/guides/get-started/installation')
   })
-
+  it('successfully opens, checks for iframe and closes the codeSandbox modal', () => {
+    cy.get('[data-cy="modal-button"]').click()
+    cy.get('[data-cy="modal-open"]')
+      .should('be.visible')
+    cy.get('[data-cy="modal-close"]').click()
+  })
 
   it.skip('successfully opens, checks for iframe and closes the codeSandbox modal', () => {
     cy.get('[data-cy="modal-button"]').first().click()

@@ -76,6 +76,7 @@
         <div class="text-center">
           <AppButton
             :to="localePath({ name: 'sponsor-nuxtjs' })"
+            data-cy="sponsors"
             class="py-3 px-6 text-base"
           >
             <OpenCollectiveIcon

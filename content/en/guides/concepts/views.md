@@ -88,7 +88,7 @@ You can define a default layout by adding a `default.vue` file inside the layo
 </template>
 ```
 
-➡️ Learn more about the [Nuxt component](http://localhost:3000/guides/features/nuxt-components) in the components chapter
+➡️ Learn more about the [Nuxt component](/guides/features/nuxt-components) in the components chapter
 
 ### Custom Layout
 

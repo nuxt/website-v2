@@ -16,8 +16,6 @@ Azure Static Web Apps にデプロイするために必要な設定が 2 つあ�
 build: "nuxt generate"
 ```
 
-Nuxt `2.13+` からは、 `build: "nuxt build && nuxt export"` を使ってください。
-
 2 つ目は、カスタム 404 ページや SPA フォールバックページをキャッチするために重要な routes.json ファイルを追加することです。
 
 `static/routes.json`

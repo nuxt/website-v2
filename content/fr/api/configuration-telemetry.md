@@ -26,7 +26,7 @@ We collect multiple events:
 - Command invoked (nuxt dev, nuxt build, etc)
 - Versions of Nuxt.js and Node.js
 - General machine informations (MacOS/Linux/Windows and if command is run within CI, ci name)
-- Duration of the Webpack build and average size of the application, as well as the generation stats (when using nuxt generate or nuxt export)
+- Duration of the Webpack build and average size of the application, as well as the generation stats (when using `nuxt generate`)
 - What are the public dependency of your project (Nuxt modules)
 
 The code is open source and available at https://github.com/nuxt/telemetry.

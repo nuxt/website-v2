@@ -10,11 +10,9 @@ position: 110
 
 > Configure the generation of your universal web application to a static web application.
 
-When launching `nuxt build && nuxt export`(>= v2.13) or `nuxt generate` (<= v2.12) or calling `nuxt.generate()`, Nuxt.js will use the configuration defined in the `generate` property.
+When launching `nuxt generate` or calling `nuxt.generate()`, Nuxt.js will use the configuration defined in the `generate` property.
 
-nuxt.config.js
-
-```js
+```js[nuxt.config.js]
 export default {
   generate: {
     ...
@@ -49,7 +47,7 @@ export default {
 - Type: `String`
 - Default: `'dist'`
 
-Directory name created when building the web application in static mode with `nuxt build && nuxt export`(>= v2.13) or `nuxt generate` (<= v2.12) or in SPA mode with `nuxt build`.
+Directory name created when building the web application in static mode with `nuxt generate` or in SPA mode with `nuxt build`.
 
 ## devtools
 
@@ -77,7 +75,7 @@ Taking this examples of structure:
 -----| index.vue
 ```
 
-By default, running `nuxt build && nuxt export`(>= v2.13) or `nuxt generate` (<= v2.12) a file will be created for each route.
+By default, running `nuxt generate` a file will be created for each route.
 
 ```bash
 -| dist/
@@ -169,15 +167,15 @@ Interval between two render cycles to avoid flooding a potential API with API ca
 
 <div class="Alert Alert-blue">
 
-As of Nuxt v2.13 there is a crawler installed that will now crawl your link tags and generate your routes when using the command `nuxt export` based on those links.
+As of Nuxt v2.13 there is a crawler installed that will crawl your link tags and generate your routes when running `nuxt generate`.
+
+If have unlinked pages (such as secret pages) and you would like these to also be generated then you can use the `generate.routes` property.
 
 </div>
 
 <div class="Alert Alert--orange">
 
-**Warning:** If you using Nuxt >= v2.13 and have pages that have no links such as secret pages and you would like these to also be generated then you can use the `generate.routes` property.
-
-**Warning:** dynamic routes are ignored by the `generate` command when using Nuxt <= v2.12
+Dynamic routes are ignored by the `generate` command when using `Nuxt <= v2.12`
 
 </div>
 
@@ -228,9 +226,7 @@ Great, but what if we have **dynamic params**?
 
 ### Function which returns a Promise
 
-`nuxt.config.js`
-
-```js
+```js[nuxt.config.js]
 import axios from 'axios'
 
 export default {
@@ -248,9 +244,7 @@ export default {
 
 ### Function with a callback
 
-`nuxt.config.js`
-
-```js
+```js[nuxt.config.js]
 import axios from 'axios'
 
 export default {
@@ -309,7 +303,7 @@ async asyncData ({ params, error, payload }) {
 - Type: `Boolean`
 - Default: `true`
 
-By default, running `nuxt build && nuxt export`(>= v2.13) or `nuxt generate`(<= v2.12) Nuxt.js will create a directory for each route & serve an `index.html` file.
+By default, running `nuxt generate` will create a directory for each route and an `index.html` file.
 
 Example:
 

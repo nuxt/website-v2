@@ -16,8 +16,6 @@ There are 2 things you need to configure in order to deploy your app to Azure st
 build: "nuxt generate"
 ```
 
-For Nuxt `2.13+`, use `build: "nuxt build && nuxt export"`
-
 The second one is to add a routes.json file which is important for catching custom 404 pages and spa fallback pages.
 
 `static/routes.json`

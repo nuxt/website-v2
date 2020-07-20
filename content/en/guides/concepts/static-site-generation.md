@@ -12,7 +12,7 @@ questions:
   - question: What command do you use to generate your static site?
     answers:
       - nuxt build
-      - nuxt export
+      - nuxt prerender
       - nuxt generate
     correctAnswer: nuxt generate
   - question: When is your API called?

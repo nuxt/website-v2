@@ -33,7 +33,7 @@ Nuxt Generate -> Local folder -> AWS S3 Bucket -> AWS Cloudfront CDN -> Browser
   [                         deploy.sh                            ]
 ```
 
-First, we'll generate the site with `nuxt build && nuxt export`(>= v2.13) or `nuxt generate`(<= v2.12). Then, we'll use [Gulp](https://gulpjs.com/) to publish the files to a S3 bucket and invalidate a CloudFront CDN.
+First, we'll generate the site with `nuxt generate`(<= v2.12). Then, we'll use [Gulp](https://gulpjs.com/) to publish the files to a S3 bucket and invalidate a CloudFront CDN.
 
 - [gulp](https://www.npmjs.com/package/gulp)
 - [gulp-awspublish](https://www.npmjs.com/package/gulp-awspublish)
@@ -50,7 +50,7 @@ Our deploy script needs these environment variables set:
 We'll have these files:
 
 ```
-deploy.sh       -  run `nuxt build && nuxt export` or `nuxt generate` and `gulp deploy`
+deploy.sh       -  run `nuxt generate` and `gulp deploy`
 gulpfile.js     -  `gulp deploy` code to push files to S3 and invalidate CloudFront
 ```
 

@@ -9,16 +9,6 @@
         class="pt-8 lg:overflow-y-auto lg:block lg:pl-0 lg:pr-8 sticky?lg:h-(screen-24)"
         :class="{ hidden: !showNav }"
       >
-        <p class="uppercase font-bold mb-6 text-xs">
-          <NuxtLink
-            to="/guide/release-notes"
-            active-class=""
-            exact-active-class=""
-          >
-            {{ $t('common.version') }}
-            <span class="text-nuxt-lightgreen">{{ $config.nuxtVersion }}</span>
-          </NuxtLink>
-        </p>
         <div v-for="(sublinks, group) in sortedLinks" :key="`links-${group}`">
           <component
             :is="$route.params.book === group ? `h3` : 'nuxt-link'"
@@ -41,15 +31,15 @@
             <ChevronRightIcon v-else class="w-4 h-4 mr-2" />
             <span>{{ $t(`content.guides.${group}`) }}</span>
           </component>
-          <ul v-if="$route.params.book === group" class="pb-8 pl-6">
+          <ul v-if="$route.params.book === group" class="pb-8 pl-2">
             <li
               v-for="(link, index) in sublinks"
               :key="index"
-              class="py-2 text-light-onSurfacePrimary dark:text-dark-onSurfacePrimary"
+              class="text-light-onSurfacePrimary dark:text-dark-onSurfacePrimary"
             >
               <NuxtLink
-                class="hover:text-nuxt-lightgreen dark:hover:text-nuxt-lightgreen transition-colors duration-300 ease-linear"
-                exact-active-class="text-nuxt-lightgreen"
+                class="p-2 pl-4 flex rounded hover:text-nuxt-lightgreen dark:hover:text-nuxt-lightgreen transition-colors duration-300 ease-linear"
+                exact-active-class="text-nuxt-lightgreen bg-green-100 dark:bg-green-800"
                 :to="toLink(group, link)"
               >
                 <template v-if="link.menu">
@@ -62,6 +52,17 @@
             </li>
           </ul>
         </div>
+        <p class="uppercase font-bold pb-6">
+          <NuxtLink
+            to="/guide/release-notes"
+            class="block bg-gray-100 dark:bg-dark-surface p-2 rounded border dark:border-gray-900 text-sm text-light-onSurfaceSecondary dark:text-dark-onSurfaceSecondary"
+            active-class=""
+            exact-active-class=""
+          >
+            {{ $t('common.version') }}
+            <span class="text-nuxt-lightgreen">{{ $config.nuxtVersion }}</span>
+          </NuxtLink>
+        </p>
       </nav>
     </div>
   </aside>

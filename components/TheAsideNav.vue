@@ -9,9 +9,10 @@
         class="pt-8 lg:overflow-y-auto lg:block lg:pl-0 lg:pr-8 sticky?lg:h-(screen-24)"
         :class="{ hidden: !showNav }"
       >
-        <p class="uppercase font-bold mb-6 text-xs">
+        <p class="uppercase font-bold mb-6">
           <NuxtLink
             to="/guide/release-notes"
+            class="text-sm"
             active-class=""
             exact-active-class=""
           >

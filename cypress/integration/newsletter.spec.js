@@ -1,6 +1,6 @@
 describe('It checks to see if people can sign up for the newsletter', () => {
   beforeEach(() => {
-    cy.visit(Cypress.config().baseUrl + '/')
+    cy.visit('/')
     cy.fixture('newsletter-signup').as('user')
   })
   it('successfully fills out the form and submits it and checks there is a response', () => {
@@ -9,7 +9,7 @@ describe('It checks to see if people can sign up for the newsletter', () => {
       cy.get('[type="email"]')
         .type(this.user.email)
         .should('have.value', this.user.email)
-      cy.route('POST', Cypress.config().baseUrl + '/', 'fixture:newsletter-signup/user').as('user')
+      cy.route('POST', '/', 'fixture:newsletter-signup/user').as('user')
       cy.get('[type="submit"]').click()
     })
     cy.get('form').next().should('contain', 'already registered')

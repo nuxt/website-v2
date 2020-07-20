@@ -23,6 +23,9 @@ sw.*
 
 .env
 
+# Optional eslint cache
+.eslintcache
+
 
 cypress/integration/examples
 cypress/videos

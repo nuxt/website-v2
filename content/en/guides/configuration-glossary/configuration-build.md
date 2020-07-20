@@ -39,7 +39,8 @@ export default {
 
 > Customize Babel configuration for JavaScript and Vue files. `.babelrc` is ignored by default.
 
-- Type: `Object` See `babel-loader` [options](https://github.com/babel/babel-loader#options) and `babel` [options](https://babeljs.io/docs/en/options)
+- Type: `Object`
+- See `babel-loader` [options](https://github.com/babel/babel-loader#options) and `babel` [options](https://babeljs.io/docs/en/options)
 - Default:
 
   ```js

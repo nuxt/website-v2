@@ -8,8 +8,6 @@
   CYPRESS_CACHE_FOLDER = "./node_modules/CypressBinary"
   # set TERM variable for terminal output
   TERM = "xterm"
-  NODE_OPTIONS = "--max_old_space_size=4096"
-
 
 [[plugins]]
   # local Cypress plugin will test our site after it is built

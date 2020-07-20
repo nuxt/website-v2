@@ -12,7 +12,7 @@ describe('The Home Page links', () => {
     cy.url().should('include', '/sponsor-nuxtjs')
     cy.visit(Cypress.config().baseUrl + '/sponsor-nuxtjs')
   })
-  it.only('checks to see if the try Nuxtjs button links to ', () => {
+  it.skip('checks to see if the try Nuxtjs button links to ', () => {
     cy.get('a[data-cy="why"]').click()
     .its('url').should('eq', 'https://codesandbox.io/s/github/nuxt/codesandbox-nuxt/tree/master/')
   })

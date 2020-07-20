@@ -1,25 +1,10 @@
-describe('It checks to see if the modals works', () => {
+describe('testing the modal with basic test', () => {
   beforeEach(() => {
-    cy.visit(Cypress.config().baseUrl + '/guides/concepts/context-helpers')
+    cy.visit(Cypress.config().baseUrl + '/')
   })
-  it('successfully opens, checks for iframe and closes the codeSandbox modal', () => {
-    cy.get('[data-cy="modal-button"]').first().click()
-  })
-
-  it.skip('successfully opens, checks for iframe and closes the codeSandbox modal', () => {
-    cy.get('[data-cy="modal-button"]').first().click()
-    cy.get('[data-cy="modal-open"]')
-      .should('be.visible')
-    cy.get('[data-cy="modal-close"]').first().click()
-  })
-
-  it.skip('successfully opens checks for image and closes the image modal', () => {
-    cy.get('[data-cy="modal-image"]').first().click()
-    cy.get('[data-cy="modal-open"]')
-      .should('be.visible').within(() => {
-        cy.get('img').should('be.visible')
-      })
-    cy.get('[data-cy="modal-close"]').first().click()
-    cy.get('[data-cy="modal-image"]').should('be.visible')
+  it('get started button links to guides', () => {
+    cy.get('a[data-cy="get-started"]').click()
+    cy.url().should('include', '/guides/get-started/installation')
+    cy.visit(Cypress.config().baseUrl + '/guides/get-started/installation')
   })
 })

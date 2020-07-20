@@ -165,19 +165,19 @@ Interval between two render cycles to avoid flooding a potential API with API ca
 
 - Type: `Array`
 
-<div class="Alert Alert-blue">
+<base-alert type="info">
 
 As of Nuxt v2.13 there is a crawler installed that will crawl your link tags and generate your routes when running `nuxt generate`.
 
 If have unlinked pages (such as secret pages) and you would like these to also be generated then you can use the `generate.routes` property.
 
-</div>
+</base-alert>
 
-<div class="Alert Alert--orange">
+<base-alert>
 
 Dynamic routes are ignored by the `generate` command when using `Nuxt <= v2.12`
 
-</div>
+</base-alert>
 
 Example:
 

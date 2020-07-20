@@ -64,13 +64,7 @@ questions:
     correctAnswer: true
 ---
 
-The `pages` directory contains your Application Views and Routes. Nuxt.js reads all the `.vue` files inside this directory and automatically creates the router configuration for you.
-
-<base-alert>
-
-This directory cannot be renamed without extra configuration.
-
-</base-alert>
+The `pages` directory contains your application views and routes. Nuxt.js reads all the `.vue` files inside this directory and automatically creates the router configuration for you.
 
 <base-alert type="info">
 
@@ -80,21 +74,21 @@ You can also create routes with .js files and .ts files
 
 Every Page component is a Vue component but Nuxt.js adds special attributes and functions to make the development of your universal application as easy as possible.
 
-```js
+```html{}[pages
 <template>
   <h1 class="red">Hello {{ name }}!</h1>
 </template>
 
 <script>
-export default {
-// page properties go here
-}
+  export default {
+    // page properties go here
+  }
 </script>
 
 <style>
-.red {
-  color: red;
-}
+  .red {
+    color: red;
+  }
 </style>
 ```
 
@@ -108,6 +102,7 @@ If you've defined a file named `_slug.vue` in your pages folder, you can access 
 <template>
   <h1>{{ this.slug }}</h1>
 </template>
+
 <script>
   export default {
     async asyncData({ params }) {
@@ -124,6 +119,7 @@ If you've defined a file named \_slug.vue inside a folder called \_book.vue you 
 <template>
   <h1>{{ this.book }} / {{ this.slug }}</h1>
 </template>
+
 <script>
   export default {
     async asyncData({ params }) {
@@ -135,25 +131,17 @@ If you've defined a file named \_slug.vue inside a folder called \_book.vue you 
 </script>
 ```
 
-## Ignoring pages
-
-If you want to ignore pages so that they are not included in the generated router.js file then you can ignore them by prefixing them with a `-`. This is great for debugging when for example you are not sure if a certain file is causing you a problem or not and saves you from having to delete the file or comment out all its contents. Remember when finished debugging to remove the `-`or else it will be ignored forever and therefore not exist in your build.
-
-For example: `pages/-about.vue`
-
-## Properties of a page component
+## Properties
 
 ### asyncData
 
 AsyncData is called every time before loading the component. It can be asynchronous and receives the context as an argument. The returned object will be merged with your data object.
 
 ```js{}[pages/index.vue]
-<script>
 export default {
   asyncData (context) {
     return { name: 'World' }
-  },
-</script>
+  }
 ```
 
 ➡️ See more on how asyncData works in our [Data Fetching](/guides/features/data-fetching#async-data) chapter
@@ -162,64 +150,71 @@ export default {
 
 Every time you need to get asynchronous data you can use fetch. Fetch is called on server-side when rendering the route, and on client-side when navigating.
 
-```js
+```html
 <script>
-export default {
-  data () {
-    return {
-      posts: []
+  export default {
+    data() {
+      return {
+        posts: []
+      }
+    },
+    async fetch() {
+      this.post = await fetch('https://api.nuxtjs.dev/posts').then(res =>
+        res.json()
+      )
     }
-  },
-  async fetch() {
-    this.post = await fetch("https://api.nuxtjs.dev/posts")
-      .then(res => res.json())
   }
-}
 </script>
 ```
 
-➡️ See more on how fetch works in our [Data Fetching](/guides/features/data-fetching) chapter
+<base-alert type="next">
+
+See more on how fetch works in our [Data Fetching](/guides/features/data-fetching) chapter
+
+</base-alert>
 
 ### head
 
 Set specific <meta> tags for the current page. Nuxt.js uses `vue-meta` to update the document head and meta attributes of your application.
 
 ```js{}[pages/index.vue]
-<script>
 export default {
-  head () {
+  head() {
     // Set Meta Tags for this Page
-  },
+  }
 }
-</script>
 ```
 
-➡️ See more in our [Meta Tags and SEO](/guides/features/meta-tags-seo) chapter
+<base-alert type="next">
+
+See more in our [Meta Tags and SEO](/guides/features/meta-tags-seo) chapter
+
+</base-alert>
 
 ### layout
 
 Specify a layout defined in the layouts directory.
 
 ```js{}[pages/index.vue]
-<script>
 export default {
   layout: 'blog'
 }
-</script>
 ```
 
-➡️ See more on layouts in our [Views](/guides/concepts/views#layouts) chapter
+<base-alert type="next">
+
+See more on layouts in our [Views](/guides/concepts/views#layouts) chapter.
+
+</base-alert>
 
 ### loading
 
 If set to false, prevents a page from automatically calling `this.$nuxt.$loading.finish()` as you enter it and `this.$nuxt.$loading.start()` as you leave it, allowing you to manually control the behavior, as [this example](https://nuxtjs.org/examples/custom-page-loading) shows.
 
 ```js{}[pages/index.vue]
-<script>
 export default {
   loading: false
 }
-</script>
 ```
 
 <base-alert type="info">
@@ -228,32 +223,36 @@ Only applies if loading is also set in nuxt.config.js.
 
 </base-alert>
 
-➡️ See more in our [Loading](/guides/features/loading) chapter
+<base-alert type="next">
+
+See more in our [Loading](/guides/features/loading) chapter.
+
+</base-alert>
 
 ### transition
 
 Defines a specific transition for the page.
 
 ```js{}[pages/index.vue]
-<script>
 export default {
   transition: 'fade'
 }
-</script>
 ```
 
-➡️ See more on transitions in our [Transitions](/guides/features/transitions) chapter
+<base-alert type="next">
+
+See more on transitions in our [Transitions](/guides/features/transitions) chapter
+
+</base-alert>
 
 ### scrollToTop
 
-The scrollToTop property lets you tell Nuxt.js to scroll to the top before rendering the page. By default, Nuxt.js scrolls to the top when you go to another page, but with child routes, Nuxt.js keeps the scroll position. If you want to tell Nuxt.js to scroll to the top when rendering your child route, set `scrollToTop` to `true`
+The `scrollToTop` property lets you tell Nuxt.js to scroll to the top before rendering the page. By default, Nuxt.js scrolls to the top when you go to another page, but with child routes, Nuxt.js keeps the scroll position. If you want to tell Nuxt.js to scroll to the top when rendering your child route, set `scrollToTop` to `true`
 
 ```js{}[pages/index.vue]
-<script>
 export default {
   scrollToTop: true
 }
-</script>
 ```
 
 Conversely, you can manually set `scrollToTop` to `false` on parent routes as well.
@@ -265,25 +264,25 @@ If you want to overwrite the default scroll behavior of Nuxt.js, take a look at 
 Defines middleware for this page. The middleware will be called before rendering the page.
 
 ```js{}[pages/index.vue]
-<script>
 export default {
   middleware: 'auth'
 }
-</script>
 ```
 
-➡️ See more on middleware in our [Middleware](/guides/directory-structure/middleware) chapter
+<base-alert type="next">
+
+See more on middleware in our [Middleware](/guides/directory-structure/middleware) chapter
+
+</base-alert>
 
 ### The watchQuery Property
 
 Use the `watchQuery` key to set up a watcher for query strings. If the defined strings change, all component methods (asyncData, fetch, validate, layout, ...) will be called. Watching is disabled by default to improve performance.
 
 ```js{}[pages/index.vue]
-<script>
 export default {
   watchQuery: ['page']
 }
-</script>
 ```
 
 <base-alert type="info">
@@ -293,11 +292,9 @@ If you want to set up a watcher for all query strings, set `watchQuery` to `tru
 </base-alert>
 
 ```js{}[pages/index.vue]
-<script>
 export default {
   watchQuery: true
 }
-</script>
 ```
 
 You can also use the function `watchQuery(newQuery, oldQuery)` to have more refined watchers.
@@ -312,10 +309,45 @@ export default {
 }
 ```
 
-➡️ See more on the watch query property in our [Data Fetching](/guides/features/data-fetching) chapter
+<base-alert type="next">
+
+See more on the watch query property in our [Data Fetching](/guides/features/data-fetching) chapter
+
+</base-alert>
 
 <app-modal>
-  <code-sandbox  :src="csb_link"></code-sandbox>
+  <code-sandbox :src="csb_link"></code-sandbox>
 </app-modal>
+
+## Ignoring pages
+
+If you want to ignore pages so that they are not included in the generated `router.js` file then you can ignore them by prefixing them with a `-`.
+
+For example, `pages/-about.vue` will be ignored.
+
+<base-alert type="next">
+
+Checkout the [ignore option](/guides/configuration-glossary/configuration-ignore) to learn more about it.
+
+</base-alert>
+
+## Configuration
+
+You can rename the `pages/` directory to something different by setting `dir.pages` option:
+
+```js{}[nuxt.config.js]
+export default {
+  dir: {
+    // Rename `pages` directory to `routes`
+    pages: 'routes'
+  }
+}
+```
+
+<base-alert type="next">
+
+Checkout the [dir option](/guides/configuration-glossary/configuration-dir) to learn more about it.
+
+</base-alert>
 
 <quiz :questions="questions"></quiz>

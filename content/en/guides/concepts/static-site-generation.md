@@ -56,7 +56,11 @@ Navigating between pages with [`<NuxtLink>`](/guides/features/nuxt-components#th
 
 Pages that have been excluded from generation, by using the `generate.exclude` property will fallback to being a single page application. These pages will therefore not exist in the CDN and will be rendered on client side in the browser once the user navigates to that page.
 
-➡️ To learn more about the [generate property](/guides/configuration-glossary/configuration-generate#exclude)
+<base-alert type="next">
+
+To learn more about the [generate property](/guides/configuration-glossary/configuration-generate#exclude)
+
+</base-alert>
 
 ### Updating your content
 

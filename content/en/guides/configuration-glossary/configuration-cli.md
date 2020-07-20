@@ -11,13 +11,13 @@ position: 3
 ## bannerColor
 
 - Type: `String`
-- Default: `green`
+  - Default: `'green'`
 
 Change the color of the 'Nuxt.js' title in the CLI banner.
 
-Available colors:
+**Available colors:**
 
-- `black`, `red`, `green`, `yellow`, `blue`, `magenta`, `cyan`, `white`, `gray`, `redBright`, `greenBright`, `yellowBright`, `blueBright`, `magentaBright`, `cyanBright`, `whiteBright`
+`black`, `red`, `green`, `yellow`, `blue`, `magenta`, `cyan`, `white`, `gray`, `redBright`, `greenBright`, `yellowBright`, `blueBright`, `magentaBright`, `cyanBright`, `whiteBright`
 
 ```js{}[nuxt.config.js]
 export default {

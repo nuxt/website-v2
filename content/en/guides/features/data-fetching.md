@@ -65,19 +65,19 @@ questions:
 
 In Nuxt.js we have 2 ways of getting data from an api. We can use the fetch method or the asyncData method.
 
-## The fetch Method
+## The fetch hook
 
-## Nuxt >= 2.12
+<base-alert type="info">
 
-Nuxt.js `v2.12` introduced a new hook called `fetch` which you can use in any of your Vue components.
+This hook is only available for Nuxt `2.12+`.
 
-In terms of Nuxt lifecycle hooks, fetch sits within Vue lifecycle after created hook. As we already know that, all Vue lifecycle hooks are called with their this context. The same applies to fetch hook as well.
+</base-alert>
 
-The Nuxt.js fetch hook is called after the component instance is created on the server-side. That makes `this` context available inside the `fetch`.
+The Nuxt.js `fetch` hook is called after the component instance is created on the server-side: `this` is available inside it.
 
 ```js
 export default {
-  fetch() {
+  async fetch() {
     console.log(this)
   }
 }
@@ -93,19 +93,48 @@ export default {
 
 Every time you need to get asynchronous data. `fetch` is called on server-side when rendering the route, and on client-side when navigating.
 
-It exposes `$fetchState` at the component level:
+It exposes `$fetchState` at the component level with the following properties:
 
-- `$fetchState.pending`: `Boolean`, allows you to display a placeholder when `fetch` is being called *on client-side*.
-- `$fetchState.error`: `null` or `Error`, allows you to display an error message
-- `$fetchState.timestamp`: `Integer`, is a timestamp of the last fetch, useful for caching with `keep-alive`
+- `pending` is a `Boolean`, allows you to display a placeholder when `fetch` is being called *on client-side*.
+- `error` is either `null` or `Error` and allows you to display an error message
+- `timestamp` is a timestamp of the last fetch, useful for [caching with `keep-alive`](#caching)
 
-If you want to call the `fetch` hook from your component methods or template use:
+You also have access to `this.$fetch()`, useful if you want to call the `fetch` hook in your component.
 
-```html
-<button @click="$fetch">Refresh</button>
+```html{}[components/NuxtMountains.vue]
+<template>
+  <p v-if="$fetchState.pending">Fetching mountains...</p>
+  <p v-else-if="$fetchState.error">An error occured :(</p>
+  <div v-else>
+    <h1>Nuxt Mountains</h1>
+    <ul v-for="mountain of mountains">
+      <li>{{ mountain.name }}</li>
+    </ul>
+    <button @click="$fetch">Refresh</button>
+  </div>
+</template>
+
+<script>
+  export default {
+    data() {
+      return {
+        mountains: []
+      }
+    },
+    async fetch() {
+      this.mountains = await fetch(
+        'https://api.nuxtjs.dev/mountains'
+      ).then(res => res.json())
+    }
+  }
+</script>
 ```
 
+<base-alert type="info">
+
 You can access the Nuxt [context](/guides/concepts/context-helpers) within the fetch hook using `this.$nuxt.context`.
+
+</base-alert>
 
 ### Options
 
@@ -116,20 +145,20 @@ You can access the Nuxt [context](/guides/concepts/context-helpers) within the
 When `fetchOnServer` is falsy (`false` or returns `false`), `fetch` will be called only on client-side and `$fetchState.pending` will return `true` when server-rendering the component.
 
 ```js
-<script>
 export default {
-  data () {
+  data() {
     return {
       posts: []
     }
   },
-  async fetch () {
-      this.posts = await fetch('https://api.nuxtjs.dev/posts')
-      .then(res => res.json())
+  async fetch() {
+    this.posts = await fetch('https://api.nuxtjs.dev/posts').then(res =>
+      res.json()
+    )
   },
+  // call fetch only on client-side
   fetchOnServer: false
 }
-</script>
 ```
 
 ### Listening to query string changes
@@ -169,29 +198,30 @@ Keeps only 10 page components in memory.
 
 Nuxt will directly fill  `this.$fetchState.timestamp`  (timestamp) of the last `fetch` call (ssr included). You can use this property combined with `activated` hook to add a 30 seconds cache to `fetch`:
 
-```js{}[pages/posts/_id.vue]
+```html{}[pages/posts/_id.vue]
 <template>
   ...
 </template>
 
 <script>
-export default {
-  data () {
-    return {
-      post: {}
+  export default {
+    data() {
+      return {
+        post: {}
+      }
+    },
+    activated() {
+      // Call fetch again if last fetch more than 30 sec ago
+      if (this.$fetchState.timestamp <= Date.now() - 30000) {
+        this.$fetch()
+      }
+    },
+    async fetch() {
+      this.posts = await fetch('https://api.nuxtjs.dev/posts').then(res =>
+        res.json()
+      )
     }
-  },
-  activated() {
-    // Call fetch again if last fetch more than 30 sec ago
-    if (this.$fetchState.timestamp <= (Date.now() - 30000)) {
-      this.$fetch()
-    }
-  },
-  async fetch () {
-      this.posts = await fetch('https://api.nuxtjs.dev/posts')
-      .then(res => res.json())
-  },
-}
+  }
 </script>
 ```
 
@@ -199,44 +229,35 @@ The navigation to the same page will not call `fetch` if last `fetch` call w
 
 ## Async Data
 
-Sometimes you want to fetch data and pre-render it on the server without using a store.
+<base-alert>
 
-`asyncData` is called every time before loading the page component. It will be called server-side once (on the first request to the Nuxt app) and client-side when navigating to further routes. This method receives [the context](/guides/concepts/context-helpers) as the first argument. You can use it to fetch some data and Nuxt.js will automatically merge the returned object with the component data.
+`asyncData` is only available for [pages](/guides/directory-structure/pages) and you don't have access to `this` inside the hook.
 
-```js
-export default {
-  asyncData(context) {
-    return { project: 'nuxt' }
-  }
-}
-```
+</base-alert>
 
-### Displaying the data
+The main difference with `fetch` is that you don't have to handle any pending state or error. Nuxt will wait for the `asyncData` hook to be finished before navigating to the next page or display the [error page](/guides/directory-structure/layouts#error-page))
 
-You can display the data inside your template like you're used to doing:
+This hook receives [the context](/guides/concepts/context-helpers) as first argument. You can use it to fetch some data and Nuxt.js will automatically merge the returned object with the component data.
 
-```html
+```html{}[pages/index.vue]
 <template>
   <h1>{{ project }}</h1>
 </template>
+
+<script>
+  export default {
+    async asyncData(context) {
+      return {
+        project: 'nuxt'
+      }
+    }
+  }
+</script>
 ```
 
-Nuxt.js offers you different ways to use `asyncData`. Choose the one you're most familiar with:
+In the upcoming examples, we are using [@nuxt/http](https://http.nuxtjs.org/) which we recommend for fetching data from an API.
 
-1. Returning a `Promise`. Nuxt.js will wait for the promise to be resolved before rendering the component.
-2. Using the [async/await](https://javascript.info/async-await) ([learn more about it](https://zeit.co/blog/async-and-await))
-
-<base-alert>
-
-You do NOT have access to the component instance through `this` inside `asyncData` because it is called before initialising the component.
-
-</base-alert>
-
-<base-alert type="info">
-
-In the upcoming examples, we are using our [http module](https://http.nuxtjs.org/) which we recommend you use for all your applications. You will need to install it first in order to use and also add it to your modules section of your nuxt config.
-
-</base-alert>
+First, we need install it:
 
 <code-group>
   <code-block label="Yarn" active>
@@ -255,49 +276,44 @@ npm install @nuxt/http
   </code-block>
 </code-group>
 
+Then, adding it to our `modules` section of `nuxt.config.js`:
+
 ```js{}[nuxt.config.js]
 export default {
   modules: ['@nuxt/http']
 }
 ```
 
-### Returning a Promise
+```html{}[pages/posts/_id.vue]
+<template>
+  <div>
+    <h1>{{ post.title }</h1>
+    <p>{{ post.description }}</p>
+  </div>
+</template>
 
-```js
-export default {
-  asyncData({ params, $http }) {
-    return $http
-      .$get(`https://api.nuxtjs.dev/posts/${params.id}`)
-      .then(data => {
-        return { title: data.title }
-      })
+<script>
+  export default {
+    async asyncData({ params, $http }) {
+      const post = await $http.$get(`https://api.nuxtjs.dev/posts/${params.id}`)
+      return { post }
+    }
   }
-}
-```
-
-### Using async/await
-
-```js
-export default {
-  async asyncData({ params, $http }) {
-    const { title } = await $http.$get(
-      `https://api.nuxtjs.dev/posts/${params.id}`
-    )
-    return { title }
-  }
-}
+</script>
 ```
 
 ### Listening to query changes
 
 The `asyncData` method is not called on query string changes by default. If you want to change this behavior, for example when building a pagination component, you can set up parameters that should be listened to with the `watchQuery` property of your page component.
 
-➡️ Learn more about the [watchQuery property](/api/pages-watchquery)
+<base-alert type="next">
 
-➡️ To see the list of available [keys in context](/guides/concepts/context-helpers)
+Learn more about the [watchQuery property](/api/pages-watchquery) and see the list of available [keys in context](/guides/concepts/context-helpers).
+
+</base-alert>
 
 <app-modal>
-  <code-sandbox  :src="csb_link"></code-sandbox>
+  <code-sandbox :src="csb_link"></code-sandbox>
 </app-modal>
 
 <quiz :questions="questions"></quiz>

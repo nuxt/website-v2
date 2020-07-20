@@ -81,7 +81,11 @@ When working with dynamic images you will need to use require
 <img :src="require(`~/assets/img/${image}.jpg`)" />
 ```
 
-➡️ Learn more about [webpack Assets](/guides/directory-structure/assets#webpack-assets)
+<base-alert type="next">
+
+Learn more about [webpack Assets](/guides/directory-structure/assets#webpack-assets)
+
+</base-alert>
 
 ## Styles:
 
@@ -154,7 +158,11 @@ You can use local fonts by adding them to your assets folder. Once they have bee
 }
 ```
 
-➡️ To add external fonts such as google fonts check out the [Meta Tags and SEO chapter](/guides/features/meta-tags-seo#external-resources)
+<base-alert type="next">
+
+To add external fonts such as google fonts check out the [Meta Tags and SEO chapter](/guides/features/meta-tags-seo#external-resources)
+
+</base-alert>
 
 ## Webpack Assets
 
@@ -269,7 +277,9 @@ We recommend using the `~` as an alias. `@` is still supported but will not work
 You can use the alias of `~~` or `@@` for the root directory.
 
 <base-alert type="info">
-Tip: On Spanish keyboard you can access ~ with (Option + ñ) on Mac
+
+Tip: On Spanish keyboard you can access `~` with (`Option` + `ñ`) on Mac OS
+
 </base-alert>
 
 <quiz :questions="questions"></quiz>

@@ -139,7 +139,11 @@ This part of the lifecycle is fully executed in the browser, no matter which Nux
 
 Same as for the _client_ part, everything is happening in the browser but only when navigating via `<NuxtLink>`. Furthermore, no page content is displayed until all _blocking_ tasks are fulfilled.
 
-➡️ Check out the component chapter to see more info on the [NuxtLink component](/guides/features/nuxt-components#the-nuxtlink-component)
+<base-alert type="info">
+
+Check out the component chapter to see more info on [`<NuxtLink>`](/guides/features/nuxt-components#the-nuxtlink-component)
+
+</base-alert>
 
 - middleware (blocking)
   - Global middleware
@@ -153,6 +157,10 @@ Same as for the _client_ part, everything is happening in the browser but only w
 
 ### What's next
 
-➡️ Check out the [Features book](/guides/features/rendering-modes)
+<base-alert type="next">
+
+Check out the [Features book](/guides/features/rendering-modes)
+
+</base-alert>
 
 <quiz :questions="questions"></quiz>

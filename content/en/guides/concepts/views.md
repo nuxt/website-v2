@@ -72,7 +72,11 @@ Every Page component is a Vue component but Nuxt.js adds special attributes and 
 
 There are many properties of the page component such as the head property in the example above.
 
-➡️ See the [Directory Structure book](/guides/directory-structure/nuxt) to learn more about all the properties can use on your page
+<base-alert type="next">
+
+See the [Directory Structure book](/guides/directory-structure/nuxt) to learn more about all the properties can use on your page
+
+</base-alert>
 
 ## Layouts
 
@@ -88,7 +92,11 @@ You can define a default layout by adding a `default.vue` file inside the layo
 </template>
 ```
 
-➡️ Learn more about the [Nuxt component](/guides/features/nuxt-components) in the components chapter
+<base-alert type="next">
+
+Learn more about the [Nuxt component](/guides/features/nuxt-components) in the components chapter
+
+</base-alert>
 
 ### Custom Layout
 
@@ -127,7 +135,7 @@ We then use the layout property with the value of 'blog' in the page where we wa
 
 <base-alert type="info">
 
-If you don't add a layout property to your page, eg `layout: 'blog'` then the default.vue layout will be used.
+If you don't add a layout property to your page, eg `layout: 'blog'` then the `default.vue` layout will be used.
 
 </base-alert>
 

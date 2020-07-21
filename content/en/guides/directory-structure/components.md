@@ -31,11 +31,13 @@ questions:
     correctAnswer:
 ---
 
-The components directory contains your Vue.js Components. Components are what makes up the different parts of your page and can be reused and imported into your pages, layouts and even other components.
+The components directory contains your Vue.js components. Components are what makes up the different parts of your page and can be reused and imported into your pages, layouts and even other components.
 
 ### Fetching Data
 
-When working with data inside components we cannot use asyncData as this only works in page components. To access data from an API in your components you can use the Nuxt fetch(). Using `$fetchState.pending` we can show a message when the data is waiting to be loaded and using `$fetchState.error` we can show an error message if there is an error fetching the data. When using fetch we must declare the data in the data property. This then gets filled with the data that comes from the fetch.
+To access asynchronous data from an API in your components you can use Nuxt [`fetch()` hook](http://localhost:3000/guides/features/data-fetching#the-fetch-method).
+
+Using `$fetchState.pending` we can show a message when the data is waiting to be loaded and using `$fetchState.error` we can show an error message if there is an error fetching the data. When using fetch we must declare the data in the data property. This then gets filled with the data that comes from the fetch.
 
 ```html{}[components/MountainsList.vue]
 <template>
@@ -65,13 +67,15 @@ When working with data inside components we cannot use asyncData as this only wo
 </script>
 ```
 
-➡️ See the chapter on [fetch()](/guides/features/data-fetching#the-fetch-method) for more details on how fetch works
+<base-alert type="next">
 
-## Components Module
+See the chapter on [fetch()](/guides/features/data-fetching#the-fetch-method) for more details on how fetch works
 
-With Nuxt.js you can now create your components and auto import them into your .vue files meaning there is no need to manually import them in the script section. Nuxt.js will scan and auto import these components for you and can be used in pages, layouts or even other components.
+</base-alert>
 
-If you are using Nuxt 2.13+ then all you need to do is set components to true in your nuxt.config file. The [components module](https://github.com/nuxt/components) is included by default but it is not activated by default.
+## Components Discovery
+
+Starting from `v2.13`, Nuxt can auto import your components when used in your templates, to activate this feature, set `components: true` in your configuration:
 
 ```js{}[nuxt.config.js]
 export default {
@@ -79,53 +83,23 @@ export default {
 }
 ```
 
-If you are suing Nuxt 2.10+ you need to first import the module
-
-<code-group>
-  <code-block label="Yarn" active>
-
-```bash
-yarn add -D @nuxt/components
-```
-
-  </code-block>
-  <code-block label="NPM">
-
-```bash
-npm install --save-dev @nuxt/components
-```
-
-  </code-block>
-</code-group>
-
-And then add the module to the build modules section of your nuxt.config.js
-
-```js{}[nuxt.config.js]
-export default {
-  buildModules: ['@nuxt/components']
-}
-```
-
 Once you create your components in the components directory they will then be available to be auto imported.
-
-`components directory`
 
 ```html
 components/ TheHeader.vue TheFooter.vue
 ```
 
-```html{}[layouts.default.vue]
+```html{}[layouts/default.vue]
 <template>
   <TheHeader />
   <Nuxt />
   <TheFooter />
 </template>
-<script></script>
 ```
 
 ### Dynamic Imports
 
-To dynamically import a component also known, as lazy loading a component, all you need to do is add the lazy prefix in your templates.
+To dynamically import a component also known, as lazy loading a component, all you need to do is add the `Lazy` prefix in your templates.
 
 ```html{}[layouts.default.vue]
 <template>
@@ -133,7 +107,6 @@ To dynamically import a component also known, as lazy loading a component, all y
   <Nuxt />
   <LazyTheFooter />
 </template>
-<script></script>
 ```
 
 Using the lazy prefix you can also dynamically import a component when an event is triggered.
@@ -217,4 +190,8 @@ And now in your template you can use the BaseButton instead of Button without ha
   <code-sandbox  :src="csb_link"></code-sandbox>
 </app-modal>
 
-➡️ To learn more about the [components module](/blog/improve-your-developer-experience-with-nuxt-components)
+<base-alert type="next">
+
+To learn more about the [components module](/blog/improve-your-developer-experience-with-nuxt-components)
+
+</base-alert>

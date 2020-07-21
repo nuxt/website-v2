@@ -8,7 +8,7 @@ position: 209
 
 Deploying to [Netlify](https://www.netlify.com) is a low friction option for getting a **statically generated** Nuxt.js site online quickly.
 
-The core of the process leverages the `nuxt build && nuxt export`(>= v2.13) or `nuxt generate`(<= v2.12) command during deployment to build a static version of your Nuxt.js app into a `dist` directory. The contents of this directory are then deployed to a production URL.
+The core of the process leverages the `nuxt generate`(<= v2.12) command during deployment to build a static version of your Nuxt.js app into a `dist` directory. The contents of this directory are then deployed to a production URL.
 
 <div class="Promo__Video">
   <a href="https://vueschool.io/lessons/how-to-deploy-nuxtjs-to-netlify?friend=nuxt" target="_blank">
@@ -58,6 +58,6 @@ If however you want to automatically apply headers and redirects of the SPA then
 
 > Optionally, you can add additional ENV variables via the _"Advanced"_ button. These can be helpful for swapping in alternative API credentials and so on. Netlify also provides a [default ENV variables](https://www.netlify.com/docs/build-settings/#build-environment-variables) which can be read by your Nuxt.js application at build time.
 
-Click _"Deploy site"_ to immediately trigger a deploy. Your Netlify site will be assigned a random URL and deployed using the `nuxt build && nuxt export`(>= v2.13) or `nuxt generate`(<= v2.12) command.
+Click _"Deploy site"_ to immediately trigger a deploy. Your Netlify site will be assigned a random URL and deployed using the `nuxt generate` command.
 
 Voilà! Your Nuxt.js application is now hosted on Netlify!

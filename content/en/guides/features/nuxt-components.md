@@ -94,7 +94,7 @@ The `<Nuxt>` component is the component you use to display your page components.
 
 <base-alert>
 
-The `<Nuxt>` component can only be used inside layouts
+The `<Nuxt>` component can only be used inside [layouts](/guides/concepts/views#layouts).
 
 </base-alert>
 

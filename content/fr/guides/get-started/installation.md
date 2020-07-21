@@ -61,8 +61,8 @@ Ouvrez le fichier package.json avec votre éditeur préféré et copiez collé l
   "scripts": {
     "dev": "nuxt",
     "build": "nuxt build",
-    "start": "nuxt start",
-    "export": "nuxt export"
+    "generate": "nuxt generate",
+    "start": "nuxt start"
   }
 }
 ```

@@ -142,15 +142,15 @@ export default function ({ store, redirect }) {
 }
 ```
 
-```js{}[pages/secret.vue]
+```html{}[pages/secret.vue]
 <template>
   <h1>Secret page</h1>
 </template>
 
 <script>
-export default {
-  middleware: 'authenticated'
-}
+  export default {
+    middleware: 'authenticated'
+  }
 </script>
 ```
 
@@ -162,20 +162,20 @@ export default {
 
 If you need to use a middleware only for a specific page, you can directly use a function for it (or an array of functions):
 
-```js{}[pages/secret.vue]
+```html{}[pages/secret.vue]
 <template>
   <h1>Secret page</h1>
 </template>
 
 <script>
-export default {
-  middleware ({ store, redirect }) {
-    // If the user is not authenticated
-    if (!store.state.authenticated) {
-      return redirect('/login')
+  export default {
+    middleware({ store, redirect }) {
+      // If the user is not authenticated
+      if (!store.state.authenticated) {
+        return redirect('/login')
+      }
     }
   }
-}
 </script>
 ```
 

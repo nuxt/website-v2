@@ -165,15 +165,15 @@ Interval between two render cycles to avoid flooding a potential API with API ca
 
 <base-alert type="info">
 
-As of Nuxt v2.13 there is a crawler installed that will now crawl your link tags and generate your routes when using the command `nuxt generate` based on those links.
+As of Nuxt v2.13 there is a crawler installed that will crawl your link tags and generate your routes when running `nuxt generate`.
+
+If have unlinked pages (such as secret pages) and you would like these to also be generated then you can use the `generate.routes` property.
 
 </base-alert>
 
 <base-alert>
 
-**Warning:** If you using Nuxt >= v2.13 and have pages that have no links such as secret pages and you would like these to also be generated then you can use the `generate.routes` property.
-
-**Warning:** dynamic routes are ignored by the `generate` command when using Nuxt <= v2.12
+Dynamic routes are ignored by the `generate` command when using `Nuxt <= v2.12`
 
 </base-alert>
 

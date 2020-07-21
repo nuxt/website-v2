@@ -24,14 +24,23 @@ It will create a `dist` folder with everything inside ready to be deployed on Gi
 
 ## Deploying to GitHub Pages for repository
 
+First of all, you want to make sure to use [static target](/guides/features/deployment-targets) since we are hosting on GitHub pages:
+
+```js[nuxt.config.js]
+export default {
+  target: 'static'
+}
+```
+
 If you are creating GitHub Pages for one specific repository, and you don't have any custom domain, the URL of the page will be in this format: `http://<username>.github.io/<repository-name>`.
 
 If you deployed `dist` folder without adding [router base](https://nuxtjs.org/api/configuration-router/#base), when you visit the deployed site you will find that the site is not working due to missing assets. This is because we assume that the website root will be `/`, but in this case it is `/<repository-name>`.
 
 To fix the issue we need to add [router base](https://nuxtjs.org/api/configuration-router/#base) configuration in `nuxt.config.js`:
 
-```js
+```js[nuxt.config.js]
 export default {
+  target: 'static',
   router: {
     base: '/<repository-name>/'
   }
@@ -39,47 +48,6 @@ export default {
 ```
 
 This way, all generated path asset will be prefixed with `/<repository-name>/`, and the next time you deploy the code to repository GitHub Pages, the site should be working properly.
-
-There is a downside adding `router.base` as the default setting in `nuxt.config.js` though, when you are running `npm run dev`, it won't be working properly since the base path changes. To fix this issue, we want to create a conditional for `router.base` whether to include `<repository-name>`:
-
-```js
-/* nuxt.config.js */
-// only add `router.base = '/<repository-name>/'` if `DEPLOY_ENV` is `GH_PAGES`
-const routerBase =
-  process.env.DEPLOY_ENV === 'GH_PAGES'
-    ? {
-        router: {
-          base: '/<repository-name>/'
-        }
-      }
-    : {}
-
-export default {
-  ...routerBase
-}
-```
-
-and now we just need to set `DEPLOY_ENV='GH_PAGES'` to build the site for GitHub Pages:
-
-For Nuxt >= v2.13
-
-```js
-/* package.json */
-"scripts": {
-  "build:gh-pages": "DEPLOY_ENV=GH_PAGES nuxt build",
-  "generate:gh-pages": "DEPLOY_ENV=GH_PAGES nuxt build && nuxt export"
-},
-```
-
-For Nuxt <= v2.12
-
-```js
-/* package.json */
-"scripts": {
-  "build:gh-pages": "DEPLOY_ENV=GH_PAGES nuxt build",
-  "generate:gh-pages": "DEPLOY_ENV=GH_PAGES nuxt generate"
-},
-```
 
 ## Command line deployment
 
@@ -93,26 +61,11 @@ npm install push-dir --save-dev
 
 Add a `deploy` command to your `package.json` with the branch as `gh-pages` for project repository OR `master` for user or organization site.
 
-For Nuxt >= v2.13
-
 ```js
 "scripts": {
   "dev": "nuxt",
-  "build": "nuxt build",
-  "start": "nuxt start",
-  "generate": "nuxt build && nuxt export",
-  "deploy": "push-dir --dir=dist --branch=gh-pages --cleanup"
-},
-```
-
-For Nuxt <= v2.12
-
-```js
-"scripts": {
-  "dev": "nuxt",
-  "build": "nuxt build",
-  "start": "nuxt start",
   "generate": "nuxt generate",
+  "start": "nuxt start",
   "deploy": "push-dir --dir=dist --branch=gh-pages --cleanup"
 },
 ```

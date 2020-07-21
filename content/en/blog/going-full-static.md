@@ -1,6 +1,6 @@
 ---
 title: 'Going Full Static'
-description: 'Long awaited features for Jamstack fans has been shipped in v2.13: full static build with nuxt export, improved smart prefetching, integrated crawler, faster re-deploy, built-in web server and new target option for config :zap:️'
+description: 'Long awaited features for Jamstack fans has been shipped in v2.13: full static export, improved smart prefetching, integrated crawler, faster re-deploy, built-in web server and new target option for config :zap:️'
 imgUrl: blog/going-full-static/main.png
 date: 2020-06-18
 authors:
@@ -16,18 +16,24 @@ tags:
 
 ## Too long to read
 
-1. Upgrade nuxt to `2.13.0`
+1. Upgrade nuxt to `2.14.0`
 2. Set `target: 'static'` in your `nuxt.config.js`
-3. Run `nuxt build && nuxt export` instead of `nuxt generate`
+3. Run `nuxt generate`
 4. That's it ✨
 
-_Bonus: you can run `nuxt serve` to run a local server serving your generated static application._
+_Bonus: you can run `nuxt start` to run a local server serving your generated static application._
 
 <video poster="https://res.cloudinary.com/nuxt/video/upload/v1588095794/nuxt-full-static_rnnbvm.jpg" loop playsinline controls>
   <source src="https://res.cloudinary.com/nuxt/video/upload/v1588095794/nuxt-full-static_rnnbvm.webm" type="video/webm" />
   <source src="https://res.cloudinary.com/nuxt/video/upload/v1592503417/nuxt-full-static_rnnbvm.mp4" type="video/mp4" />
   <source src="https://res.cloudinary.com/nuxt/video/upload/v1588095794/nuxt-full-static_rnnbvm.ogv" type="video/ogg" />
 </video>
+
+<p>
+
+Note: in this video we are using `nuxt export` which has been deprecated in favor of `nuxt generate`.
+
+</p>
 
 ## Table of Contents
 
@@ -36,11 +42,11 @@ _Bonus: you can run `nuxt serve` to run a local server serving your generated st
 - [History](#history)
 - [Current issues](#current-issues)
 - [New config option: `target`](#new-config-option-target)
-- [New command: `nuxt export`](#new-command-nuxt-export)
+- [Smarter `nuxt generate`](#smarter-nuxt-generate)
   - [Crazy fast static applications](#crazy-fast-static-applications)
   - [Crawler integrated](#crawler-integrated)
   - [Faster re-deploy](#faster-re-deploy)
-- [New command: `nuxt serve`](#new-command-nuxt-serve)
+- [Smarter `nuxt start`](#smarter-nuxt-start)
 - [Preview mode](#preview-mode)
 - [Commands](#commands)
 - [Notes](#notes)
@@ -83,19 +89,13 @@ Running `nuxt dev` with the static target will improve the developer experience:
 
 We are also exposing `process.target` for modules author to add logic depending on the user target.
 
-## New command: `nuxt export`
+## Smarter `nuxt generate`
 
-To avoid introducing a breaking change for `nuxt generate`, we are introducing a new command called `nuxt export`: export your Nuxt app to static HTML in a `dist/` directory.
-
-<base-alert>
-
-⚠️ You need to run `nuxt build` before calling `nuxt export`
-
-</base-alert>
+Now with `v2.14.0`, you can use `nuxt generate`, it will smartly know if it has to build or not.
 
 ### Crazy fast static applications
 
-`nuxt export` will pre-render all your pages to HTML and save a payload file in order to mock `asyncData` and `fetch` on client-side navigation, this means **no** **more HTTP calls to your API on client-side navigation.** By extracting the page payload to a js file, **it also reduces the HTML size** served as well as preloading it (from the <link> in the header) for optimal performance.
+`nuxt generate` with `target: 'static'` will pre-render all your pages to HTML and save a payload file in order to mock `asyncData` and `fetch` on client-side navigation, this means **no** **more HTTP calls to your API on client-side navigation.** By extracting the page payload to a js file, **it also reduces the HTML size** served as well as preloading it (from the <link> in the header) for optimal performance.
 
 We also improved the [smart prefetching](https://nuxtjs.org/blog/introducing-smart-prefetching) when doing full static, it will also fetch the payloads, making navigation instant 👀
 
@@ -111,9 +111,9 @@ To disable the crawler, set `generate.crawler: false` in your `nuxt.config.js`
 
 By separating `nuxt build` and `nuxt export`, we are opening a new range of improvements: pre-render your pages only if you content has changed, this means: no webpack build → faster re-deployments.
 
-## New command: `nuxt serve`
+## Smarter `nuxt start`
 
-Once you statically generated your Nuxt app into `dist/`, use `nuxt serve` to start a production HTTP server and serve your static app, supporting [SPA Fallback](/guide/routing#spa-fallback).
+Once you statically generated your Nuxt app into `dist/`, use `nuxt start` to start a production HTTP server and serve your static app, supporting [SPA Fallback](/guide/routing#spa-fallback).
 
 This command is perfect to locally test your static application before pushing to your favorite static hosting provider.
 
@@ -136,7 +136,7 @@ When the preview mode is activated, `asyncData` and `fetch` original methods wil
 
 ## Commands
 
-You can now run different commands depending of the `target`:
+Depending of the `target`, you can run these commands.
 
 - `server`
   - `nuxt dev`: Start the development server
@@ -144,15 +144,8 @@ You can now run different commands depending of the `target`:
   - `nuxt start`: Start the production server
 - `static`
   - `nuxt dev`: Start the development server (static aware)
-  - `nuxt build`: Bundle your Nuxt application for production (static aware)
-  - `nuxt export`: Export your application to static HTML in `dist/` directory
-  - `nuxt serve`: Serve your production application from `dist/`
-
-## Notes
-
-- We added `export` key in `nuxt.config.js` which is currently an alias of `generate`, it will take over for Nuxt 3
-- `nuxt generate` is being deprecated (but still working without any breaking change now) and will be removed for Nuxt 3
-- We added `export` hooks that are slightly different than `generate` hooks to improve module possibilities
+  - `nuxt generate`: Bundle your Nuxt application for production if needed (static aware) and export your application to static HTML in `dist/` directory
+  - `nuxt start`: Serve your production application from `dist/`
 
 ### What to do next
 

@@ -3,6 +3,7 @@
     <div class="flex">
       <div class="flex-shrink-0 self-start pt-1">
         <IconInfo v-if="type === 'info'" class="alert-icon" />
+        <IconNext v-else-if="type === 'next'" class="alert-next" />
         <IconAlert v-else class="alert-icon" />
       </div>
       <div class="ml-2 alert-content text-sm">
@@ -68,5 +69,26 @@
   }
   .dark-mode .alert-info .alert-content code {
     @apply bg-blue-800 !important;
+  }
+  .alert-next {
+    @apply bg-gray-100 border-gray-400;
+  }
+  .alert-next code {
+    @apply bg-gray-200 shadow-none;
+  }
+  .alert-next .alert-icon {
+    @apply text-gray-400;
+  }
+  .alert-next .alert-content {
+    @apply text-gray-700;
+  }
+  .dark-mode .alert-next {
+    @apply bg-gray-800 border-gray-700;
+  }
+  .dark-mode .alert-next .alert-content {
+    @apply text-gray-300 bg-gray-800 border-gray-700;
+  }
+  .dark-mode .alert-next .alert-content code {
+    @apply bg-gray-800 !important;
   }
 </style>

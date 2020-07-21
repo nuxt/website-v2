@@ -108,13 +108,13 @@ These keys are available only on the server-side.
 
 `req` ([_http.Request_](https://nodejs.org/api/http.html#http_class_http_incomingmessage))
 
-Request from the Node.js server. If Nuxt is used as a middleware, the request object might be different depending on the framework you're using.<br>**Not available via `nuxt build && nuxt export` or `nuxt generate`**.
+Request from the Node.js server. If Nuxt is used as a middleware, the request object might be different depending on the framework you're using.<br>**Not available with [static target](/guides/features/deployment-targets#static-hosting)**.
 
 ### Res
 
 `res` ([_http.Response_](https://nodejs.org/api/http.html#http_class_http_serverresponse))
 
-Response from the Node.js server. If Nuxt is used as a middleware, the res object might be different depending on the framework you're using.<br>**Not available via `nuxt build && nuxt export` or `nuxt generate`**.
+Response from the Node.js server. If Nuxt is used as a middleware, the res object might be different depending on the framework you're using.<br>**Not available with [static target](/guides/features/deployment-targets#static-hosting)**.
 
 ### beforeNuxtRender
 

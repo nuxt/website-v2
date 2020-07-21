@@ -15,7 +15,7 @@ npm install --save-dev node-sass sass-loader
 ```
 
 - Type: `Array`
-- Items: `string`
+  - Items: `string`
 
 ```js{}[nuxt.config.js]
 export default {

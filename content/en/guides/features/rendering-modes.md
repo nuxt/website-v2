@@ -31,4 +31,8 @@ export default {
 }
 ```
 
-➡️ [The mode property](/guides/configuration-glossary/configuration-mode)
+<base-alert type="next">
+
+[The mode property](/guides/configuration-glossary/configuration-mode)
+
+</base-alert>

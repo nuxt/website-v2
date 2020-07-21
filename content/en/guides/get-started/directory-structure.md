@@ -29,7 +29,11 @@ Creating directories with these names enables features in your Nuxt.js project.
 
 The `pages` directory contains your application's views and routes. As you've learned in the last chapter, Nuxt.js reads all the `.vue` files inside this directory and uses them to create the application router.
 
-➡️ Learn more about the [pages directory](/guides/directory-structure/pages)
+<base-alert type="next">
+
+Learn more about the [pages directory](/guides/directory-structure/pages)
+
+</base-alert>
 
 ### The components directory
 
@@ -37,25 +41,41 @@ The `components` directory is where you put all your Vue.js components which a
 
 With Nuxt.js you can create your components and auto import them into your .vue files meaning there is no need to manually import them in the script section. Nuxt.js will scan and auto import these for you once you have components set to true.
 
-➡️ Learn more about the [components directory](/guides/directory-structure/components)
+<base-alert type="next">
+
+Learn more about the [components directory](/guides/directory-structure/components)
+
+</base-alert>
 
 ### The assets directory
 
 The `assets` directory contains your uncompiled assets such as your styles, images, or fonts.
 
-➡️ Learn more about the [assets directory](/guides/directory-structure/assets)
+<base-alert type="next">
+
+Learn more about the [assets directory](/guides/directory-structure/assets)
+
+</base-alert>
 
 ### The static directory
 
 The `static` directory is directly mapped to the server root and contains files that have to keep their names (e.g. `robots.txt`) _or_ likely won't change (e.g. the favicon)
 
-➡️ Learn more about the [static directory](/guides/directory-structure/static)
+<base-alert type="next">
+
+Learn more about the [static directory](/guides/directory-structure/static)
+
+</base-alert>
 
 ### The nuxt.config.js file
 
 The `nuxt.config.js` file is the single point of configuration for Nuxt.js. If you want to add modules or override default settings, this is the place to apply the changes.
 
-➡️ Learn more about the [nuxt.config.js file](/guides/directory-structure/nuxt-config)
+<base-alert type="next">
+
+Learn more about the [nuxt.config.js file](/guides/directory-structure/nuxt-config)
+
+</base-alert>
 
 ### The package.json file
 
@@ -69,4 +89,8 @@ The `package.json` file contains all the dependencies and scripts for your app
 
 There are more helpful directories and files, including [content](/guides/directory-structure/content), [layouts](/guides/directory-structure/layouts), [middleware](/guides/directory-structure/middleware), [modules](/guides/directory-structure/modules), [plugins](/guides/directory-structure/plugins) and [store](/guides/directory-structure/store) . As they aren't necessary for small applications, they are not covered here.
 
-🎓 To learn about all directories in detail, feel free to read the the [Directory Structure book](/guides/directory-structure/nuxt).
+<base-alert type="next">
+
+To learn about all directories in detail, feel free to read the the [Directory Structure book](/guides/directory-structure/nuxt).
+
+</base-alert>

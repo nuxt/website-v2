@@ -138,7 +138,11 @@ To avoid any duplication when used in child components, please give a unique ide
 
 </base-alert>
 
-🎓 Learn more about the options available for `head`, in the [vue-meta documentation](https://vue-meta.nuxtjs.org/api/#metainfo-properties).
+<base-alert type="next">
+
+Learn more about the options available for `head`, in the [vue-meta documentation](https://vue-meta.nuxtjs.org/api/#metainfo-properties).
+
+</base-alert>
 
 ## External Resources
 
@@ -211,7 +215,11 @@ Adds prefetch and preload links for faster initial page load time.
 
 You may want to only disable this option if you have many pages and routes.
 
-➡️ [Resource Hints](https://nuxtjs.org/api/configuration-render#resourcehints)
+<base-alert type="next">
+
+[Resource Hints](/guides/configuration-glossary/configuration-render#resourcehints)
+
+</base-alert>
 
 <app-modal>
   <code-sandbox  :src="csb_link"></code-sandbox>

@@ -13,7 +13,7 @@ See [live demo](https://nuxt-new-fetch.surge.sh) and [code example](https://gith
 
 <base-alert>
 
-`fetch(context)` has been deprecated, instead you can use an [anonymous middleware](/api/pages-middleware#anonymous-middleware) in your page: `middleware(context)`
+`fetch(context)` has been deprecated, instead you can use an [anonymous middleware](/guides/components-glossary/pages-middleware#anonymous-middleware) in your page: `middleware(context)`
 
 </base-alert>
 
@@ -46,7 +46,7 @@ export default {
 }
 ```
 
-You can access the Nuxt [context](/api/context) within the fetch hook using `this.$nuxt.context`.
+You can access the Nuxt [context](/guides/internals-glossary/context) within the fetch hook using `this.$nuxt.context`.
 
 ### Options
 

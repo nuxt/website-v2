@@ -33,7 +33,7 @@ questions:
 
 By default, Nuxt.js is configured to cover most use cases. This default configuration can be overwritten with the nuxt.config.js file.
 
-# nuxt.config.js
+## nuxt.config.js
 
 ### build
 
@@ -50,7 +50,11 @@ export default {
 }
 ```
 
-➡️ See more on the  [build property](/api/configuration-build)
+<base-alert type="next">
+
+See more on the [build property](/guides/configuration-glossary/configuration-build)
+
+</base-alert>
 
 ### css
 
@@ -62,7 +66,11 @@ export default {
 }
 ```
 
-➡️ See more on the [css property](/api/configuration-css)
+<base-alert type="next">
+
+See more on the [css property](/guides/configuration-glossary/configuration-css')
+
+</base-alert>
 
 ### dev
 
@@ -74,7 +82,11 @@ export default {
 }
 ```
 
-➡️ See more on the [dev property](/api/configuration-dev)
+<base-alert type="next">
+
+See more on the [dev property](//guides/configuration-glossary/configuration-dev)
+
+</base-alert>
 
 ### env
 
@@ -88,7 +100,11 @@ export default {
 }
 ```
 
-➡️ See more on the [env property](/api/configuration-env)
+<base-alert type="next">
+
+See more on the [env property](/guides/configuration-glossary/configuration-env)
+
+</base-alert>
 
 ### generate
 
@@ -103,7 +119,11 @@ export default {
 }
 ```
 
-➡️ See more on the [generate property](/api/configuration-generate)
+<base-alert type="next">
+
+See more on the [generate property](/guides/configuration-glossary/configuration-generate)
+
+</base-alert>
 
 ### head
 
@@ -121,7 +141,11 @@ export default {
 
 This option lets you define all default meta tags for your application.
 
-➡️ See more on [head integration](/api/configuration-head)
+<base-alert type="next">
+
+See more on [head integration](/guides/configuration-glossary/configuration-head)
+
+</base-alert>
 
 ### loading
 
@@ -135,7 +159,11 @@ export default {
 }
 ```
 
-➡️ See more on [loading integration](/api/configuration-loading)
+<base-alert type="next">
+
+See more on [loading integration](/guides/configuration-glossary/configuration-loading)
+
+</base-alert>
 
 ### modules
 
@@ -147,7 +175,11 @@ export default {
 }
 ```
 
-➡️ See more on the [modules property](/api/configuration-modules)
+<base-alert type="next">
+
+See more on the [modules property](/guides/configuration-glossary/configuration-modules)
+
+</base-alert>
 
 ### plugins
 
@@ -159,7 +191,11 @@ export default {
 }
 ```
 
-➡️ See more on the [plugins property](/api/configuration-plugins)
+<base-alert type="next">
+
+See more on the [plugins property](/guides/configuration-glossary/configuration-plugins)
+
+</base-alert>
 
 ### router
 
@@ -173,7 +209,11 @@ export default {
 }
 ```
 
-➡️ See more on the [router property](/api/configuration-router)
+<base-alert type="next">
+
+See more on the [router property](/guides/configuration-glossary/configuration-router)
+
+</base-alert>
 
 ### server
 
@@ -193,7 +233,11 @@ export default {
 }
 ```
 
-➡️ See more on the [server property](/api/configuration-server)
+<base-alert type="next">
+
+See more on the [server property](/guides/configuration-glossary/configuration-server)
+
+</base-alert>
 
 ### srcDir
 
@@ -233,7 +277,11 @@ export default {
 }
 ```
 
-➡️ See more on the [dir property](/api/configuration-dir)
+<base-alert type="next">
+
+See more on the [dir property](/guides/configuration-glossary/configuration-dir)
+
+</base-alert>
 
 ### pageTransition
 
@@ -245,9 +293,13 @@ export default {
 }
 ```
 
-➡️ See more on the [transition property](/api/configuration-transition)
+<base-alert type="next">
 
-# Other configuration files
+See more on the [transition property](/guides/configuration-glossary/configuration-transition)
+
+</base-alert>
+
+## Other configuration files
 
 Besides the `nuxt.config.js` there might be other config files in your project root, such as [.eslintrc](https://eslint.org/), [prettier.config.json](https://prettier.io/) or [.gitignore](https://git-scm.com/docs/gitignore). These are used to configure other tools such as your linter, code formatter or your git repository and detached from the `nuxt.config.js`.
 
@@ -265,4 +317,8 @@ node_modules .nuxt dist
 
 ### What's next
 
-➡️ Check out the [configuration-glossary](/guides/configuration-glossary/configuration-build)
+<base-alert type="next">
+
+Check out the [configuration-glossary](/guides/configuration-glossary/configuration-build)
+
+</base-alert>

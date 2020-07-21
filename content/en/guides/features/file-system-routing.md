@@ -179,7 +179,11 @@ As of Nuxt >= v2.13 there is a crawler installed that will now crawl your link t
 
 </base-alert>
 
-➡️ [Generate dynamic routes](/guides/concepts/static-site-generation) for static sites
+<base-alert type="next">
+
+[Generate dynamic routes](/guides/concepts/static-site-generation) for static sites
+
+</base-alert>
 
 ### Locally Accessing Route Params
 
@@ -345,7 +349,11 @@ export default {
 
 The base URL of the app. For example, if the entire single page application is served under `/app/`, then base should use the value `'/app/'`.
 
-➡️ [Router Base Property](/guides/configuration-glossary/configuration-router#base)
+<base-alert type="next">
+
+[Router Base Property](/guides/configuration-glossary/configuration-router#base)
+
+</base-alert>
 
 ### extendRoutes
 
@@ -414,25 +422,41 @@ export default {
 }
 ```
 
-➡️ [extendRoutes Property](/guides/configuration-glossary/configuration-router#extendroutes)
+<base-alert type="next">
+
+[extendRoutes Property](/guides/configuration-glossary/configuration-router#extendroutes)
+
+</base-alert>
 
 ### fallback
 
 Controls whether the router should fallback to hash mode when the browser does not support history.pushState but mode is set to history.
 
-➡️ [fallback Property](/guides/configuration-glossary/configuration-router#fallback)
+<base-alert type="next">
+
+[fallback Property](/guides/configuration-glossary/configuration-router#fallback)
+
+</base-alert>
 
 ### mode
 
 Configure the router mode, it is not recommended to change it due to server-side rendering.
 
-➡️ [mode Property](/guides/configuration-glossary/configuration-router#mode)
+<base-alert type="next">
+
+[mode Property](/guides/configuration-glossary/configuration-router#mode)
+
+</base-alert>
 
 ### parseQuery / stringifyQuery
 
 Provide custom query string parse / stringify functions.
 
-➡️ [parseQuery / stringifyQuery Property](/guides/configuration-glossary/configuration-router#parsequery--stringifyquery)
+<base-alert type="next">
+
+[parseQuery / stringifyQuery Property](/guides/configuration-glossary/configuration-router#parsequery--stringifyquery)
+
+</base-alert>
 
 ### routeNameSplitter
 
@@ -450,9 +474,11 @@ export default {
 
 The `scrollBehavior` option lets you define a custom behavior for the scroll position between the routes. This method is called every time a page is rendered.
 
-🎓 To learn more about it, see [vue-router scrollBehavior documentation](https://router.vuejs.org/guide/advanced/scroll-behavior.html).
+<base-alert type="next">
 
-Available since:v2.9.0,
+To learn more about it, see [vue-router scrollBehavior documentation](https://router.vuejs.org/guide/advanced/scroll-behavior.html). </base-alert>
+
+Available since:v2.9.0:
 
 In Nuxt.js you can use a file to overwrite the router scrollBehavior. This file should be placed in a folder called app.
 
@@ -466,9 +492,17 @@ export default function (to, from, savedPosition) {
 }
 ```
 
-🎓[Nuxt.js default `router.scrollBehavior.js` file.](packages/vue-app/template/router.scrollBehavior.js)
+<base-alert type="next">
 
-➡️ [scrollBehavior Property](/guides/configuration-glossary/configuration-router#scrollbehavior)
+[Nuxt.js default `router.scrollBehavior.js` file.](packages/vue-app/template/router.scrollBehavior.js)
+
+</base-alert>
+
+<base-alert type="next">
+
+[scrollBehavior Property](/guides/configuration-glossary/configuration-router#scrollbehavior)
+
+</base-alert>
 
 ### trailingSlash
 
@@ -490,6 +524,10 @@ This option should not be set without preparation and has to be tested thoroughl
 
 </base-alert>
 
-➡️ [trailingSlash Property](/guides/configuration-glossary/configuration-router#trailingslash)
+<base-alert type="next">
+
+[trailingSlash Property](/guides/configuration-glossary/configuration-router#trailingslash)
+
+</base-alert>
 
 <quiz :questions="questions"></quiz>

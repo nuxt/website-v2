@@ -169,7 +169,11 @@ To display the `child.vue` component, you have to insert the `<NuxtChild>` co
 
 Both, the `<Nuxt>` component and the `<NuxtChild/>` component, accept `keep-alive` and `keep-alive-props.`
 
-🎓To learn more about keep-alive and keep-alive-props see the [vue docs](https://vuejs.org/v2/api/#keep-alive)
+<base-alert type="info">
+
+To learn more about keep-alive and keep-alive-props see the [vue docs](https://vuejs.org/v2/api/#keep-alive)
+
+</base-alert>
 
 ```html{}[layouts/default.vue]
 <template>
@@ -243,7 +247,11 @@ The `<NuxtLink>` component should be used for all internal links. That means for
 </template>
 ```
 
-🎓If you want to know more about `<RouterLink>`, feel free to read the [Vue Router documentation](https://router.vuejs.org/api/#router-link) for more information.
+<base-alert type="info">
+
+If you want to know more about `<RouterLink>`, feel free to read the [Vue Router documentation](https://router.vuejs.org/api/#router-link) for more information.
+
+</base-alert>
 
 <base-alert type="info">
 

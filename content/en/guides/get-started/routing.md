@@ -48,4 +48,8 @@ The `<NuxtLink>` component should be used for all internal links. That means for
   <code-sandbox  :src="csb_link"></code-sandbox>
 </app-modal>
 
-➡️ Learn more about the [NuxtLink component](/guides/features/nuxt-components#the-nuxtlink-component)
+<base-alert type="next">
+
+Learn more about the [NuxtLink component](/guides/features/nuxt-components#the-nuxtlink-component)
+
+</base-alert>

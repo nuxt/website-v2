@@ -74,7 +74,11 @@ Empower your NuxtJS application with `@nuxtjs/content` module where you can wr
 
 The content module is blazing fast when it comes to hot reloading in development due to not having to go through webpack when you make changes to your markdown files. You can also listen to the `content:update` event and create a plugin so that every time you update a file in your content directory it will dispatch a fetchCategories method for example.
 
-➡️ [See the content module docs for more details](https://content.nuxtjs.org/advanced#handling-hot-reload)
+<base-alert type="next">
+
+[See the content module docs for more details](https://content.nuxtjs.org/advanced#handling-hot-reload)
+
+</base-alert>
 
 ### Displaying content
 
@@ -88,7 +92,11 @@ You can use `<nuxt-content>` component directly in your template to display the 
 </template>
 ```
 
-➡️ See the [content module docs](https://content.nuxtjs.org/displaying#component) for more details
+<base-alert type="next">
+
+See the [content module docs](https://content.nuxtjs.org/displaying#component) for more details
+
+</base-alert>
 
 ### Styling your content
 
@@ -108,7 +116,11 @@ Depending on what you're using to design your app, you may need to write some st
 </style>
 ```
 
-➡️ See the [content module docs](https://content.nuxtjs.org/displaying#style) for more details
+<base-alert type="next">
+
+See the [content module docs](https://content.nuxtjs.org/displaying#style) for more details
+
+</base-alert>
 
 ### Handles Markdown, CSV, YAML, JSON(5)
 
@@ -121,7 +133,11 @@ description: Learning how to use @nuxt/content to create a blog
 ---
 ```
 
-➡️ See the [content module docs](https://content.nuxtjs.org/writing#markdown) for more details
+<base-alert type="next">
+
+See the [content module docs](https://content.nuxtjs.org/writing#markdown) for more details
+
+</base-alert>
 
 ### Vue components in Markdown
 
@@ -143,7 +159,11 @@ You can use Vue components directly in your markdown files. You will however nee
 </info-box>
 ```
 
-➡️ See the [content module docs](https://content.nuxtjs.org/writing#vue-components) for more details
+<base-alert type="next">
+
+See the [content module docs](https://content.nuxtjs.org/writing#vue-components) for more details
+
+</base-alert>
 
 ### Fully Searchable API
 
@@ -166,7 +186,11 @@ You can use `$content()` to list, filter and search your content easily.
 </script>
 ```
 
-➡️ See the [content module docs](https://content.nuxtjs.org/fetching#methods) for more details
+<base-alert type="next">
+
+See the [content module docs](https://content.nuxtjs.org/fetching#methods) for more details
+
+</base-alert>
 
 ### Previous and Next articles
 
@@ -194,7 +218,11 @@ async asyncData({ $content, params }) {
 <prev-next :prev="prev" :next="next" />
 ```
 
-➡️ See the [content module docs](https://content.nuxtjs.org/fetching#surroundslug-options) for more details
+<base-alert type="next">
+
+See the [content module docs](https://content.nuxtjs.org/fetching#surroundslug-options) for more details
+
+</base-alert>
 
 ### Full-text search
 
@@ -225,7 +253,11 @@ The content module comes with a full text search so you can easily search across
 </script>
 ```
 
-➡️ See the [content module docs](https://content.nuxtjs.org/fetching#searchfield-value) for more details
+<base-alert type="next">
+
+See the [content module docs](https://content.nuxtjs.org/fetching#searchfield-value) for more details
+
+</base-alert>
 
 ### Syntax highlighting
 
@@ -258,13 +290,21 @@ content: {
 }
 ```
 
-➡️ See the [content module docs](https://content.nuxtjs.org/writing#syntax-highlighting) for more details
+<base-alert type="next">
+
+See the [content module docs](https://content.nuxtjs.org/writing#syntax-highlighting) for more details
+
+</base-alert>
 
 ### Extend Markdown Parsing
 
 Originally markdown does not support highlighting lines inside codeblock nor filenames. The content module allows it with its own custom syntax. Line numbers are added to the pre tag in data-line attributes and the filename will be converted to a span with a filename class, so you can style it.
 
-➡️ See the [content module docs](https://content.nuxtjs.org/writing#codeblocks) for more details
+<base-alert type="next">
+
+See the [content module docs](https://content.nuxtjs.org/writing#codeblocks) for more details
+
+</base-alert>
 
 ### Table of contents generation
 
@@ -280,7 +320,11 @@ A toc(Table of Contents) array property will be injected into your document, lis
 </nav>
 ```
 
-➡️ See the [content module docs](https://content.nuxtjs.org/writing#table-of-contents) for more details
+<base-alert type="next">
+
+See the [content module docs](https://content.nuxtjs.org/writing#table-of-contents) for more details
+
+</base-alert>
 
 ### Powerful QueryBuilder API (MongoDB like)
 
@@ -288,19 +332,31 @@ The content module comes with a powerful QueryBuilder API similar to MongoDB whi
 
 `http://localhost:3000/_content/articles?only=title&only=description&limit=10`
 
-➡️ See the [content module docs](https://content.nuxtjs.org/fetching#api) for more details
+<base-alert type="next">
+
+See the [content module docs](https://content.nuxtjs.org/fetching#api) for more details
+
+</base-alert>
 
 ### Extend with hooks
 
 You can use hooks to extend the module so you can add data to a document before it is stored
 
-➡️ See the [content module docs](https://content.nuxtjs.org/advanced#hooks) for more details
+<base-alert type="next">
+
+See the [content module docs](https://content.nuxtjs.org/advanced#hooks) for more details
+
+</base-alert>
 
 ### Integration with @nuxtjs/feed
 
 In the case of articles, the content can be used to generate news feeds using [@nuxtjs/feed](https://www.npmjs.com/package/@nuxtjs/feed) module.
 
-➡️ See the [content module docs](https://content.nuxtjs.org/advanced#integration-with-nuxtjsfeed) for more details
+<base-alert type="next">
+
+See the [content module docs](https://content.nuxtjs.org/advanced#integration-with-nuxtjsfeed) for more details
+
+</base-alert>
 
 ### Support static site generation
 
@@ -312,8 +368,16 @@ If using Nuxt <2.13 and you need to specify the dynamic routes you can do so usi
 
 </base-alert>
 
-➡️ See the [content module docs](https://content.nuxtjs.org/advanced#programmatic-usage) for more details
+<base-alert type="next">
 
-➡️ To see the full [documentation for the content module](https://content.nuxtjs.org/)
+See the [content module docs](https://content.nuxtjs.org/advanced#programmatic-usage) for more details
+
+</base-alert>
+
+<base-alert type="next">
+
+To see the full [documentation for the content module](https://content.nuxtjs.org/)
+
+</base-alert>
 
 <quiz :questions="questions"></quiz>

@@ -77,4 +77,8 @@ async validate({ app, params, $preview }) {
 
 ### What's next
 
-➡️ Check out the [Directory Structure book](/guides/directory-structure/nuxt)
+<base-alert type="next">
+
+Check out the [Directory Structure book](/guides/directory-structure/nuxt)
+
+</base-alert>

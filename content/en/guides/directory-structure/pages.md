@@ -144,7 +144,11 @@ export default {
   }
 ```
 
-➡️ See more on how asyncData works in our [Data Fetching](/guides/features/data-fetching#async-data) chapter
+<base-alert type="next">
+
+See more on how asyncData works in our [Data Fetching](/guides/features/data-fetching#async-data) chapter
+
+</base-alert>
 
 ### fetch
 

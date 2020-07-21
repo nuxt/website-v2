@@ -17,15 +17,13 @@ Position: 11
 
 > Render a specific route with a given context.
 
-This method should be used mostly for [test purposes](/guide/development-tools#end-to-end-testing) as well with [`nuxt.renderAndGetWindow`](/api/nuxt-render-and-get-window).
+This method should be used mostly for test purposes as well as with [`nuxt.renderAndGetWindow`](/guides/internals-glossary/nuxt-render-and-get-window).
 
 <base-alert>
 
 `nuxt.renderRoute` should be executed after the build process in production mode.
 
 </base-alert>
-
-Example:
 
 ```js
 const { loadNuxt, build } = require('nuxt')
@@ -51,4 +49,8 @@ start()
 
 ### What's next
 
-➡️ Check out the [Components Glossary book](/guides/components-glossary/pages-fetch)
+<base-alert type="next">
+
+Check out the the [Components Glossary book](/guides/components-glossary/pages-fetch)
+
+</base-alert>

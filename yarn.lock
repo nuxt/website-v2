@@ -1081,7 +1081,7 @@
 
 "@nuxt/content@nuxt/content#dev":
   version "1.4.1"
-  resolved "https://codeload.github.com/nuxt/content/tar.gz/ab1cc213c34f02f3100ae0d52f47550596a39b04"
+  resolved "https://codeload.github.com/nuxt/content/tar.gz/3a3dc2317346b02c8c72411710bb1afdae1b8585"
   dependencies:
     "@lokidb/full-text-search" "^2.0.0-beta.9"
     "@lokidb/loki" "^2.0.0-beta.9"

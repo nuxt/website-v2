@@ -36,7 +36,7 @@ Creating a Nuxt.js project from scratch only requires one file and one directory
 
 In this example we will use the terminal to create the directories and files but feel free to create them using your editor if you prefer.
 
-### First step: Set up your project
+### Set up your project
 
 To get started create an empty directory with the name of your project and navigate into it:
 
@@ -73,7 +73,7 @@ Open the package.json file in your favorite code editor and fill it with this JS
 
 The `package.json` is like the ID card of your project. If you don't know what the `package.json` file is, we highly recommend you to have a quick read on the [NPM documentation](https://docs.npmjs.com/creating-a-package-json-file).
 
-### Second step: Install nuxt in your project
+### Install nuxt
 
 Once the `package.json` has been created, you need to add `nuxt` to your project via the NPM or Yarn command below:
 
@@ -102,7 +102,7 @@ A `yarn.lock` or `package-lock.json` is also created which ensures a consistent 
 
 </base-alert>
 
-### Third step: Create your first page
+### Create your first page
 
 Nuxt.js transforms every `*.vue` file inside the `pages` directory as a route for the application.
 
@@ -128,7 +128,7 @@ Open the `index.vue` file in your editor and add the following content:
 </template>
 ```
 
-### Final step: **Launch the project**
+### Start the project
 
 Run your project by typing the NPM command below in your terminal:
 
@@ -165,7 +165,13 @@ When launching Nuxt.js in development mode, it will listen for file changes in m
 
 </base-alert>
 
-### 🍄 Bonus step:
+<base-alert type="warning">
+
+When you run the dev command it will create .nuxt folder. This folder should be ignored from version control. You can ignore files by creating a .gitignore file at the root level and adding .nuxt.
+
+</base-alert>
+
+### Bonus step
 
 Create a page named `fun.vue` in the `pages` directory.
 

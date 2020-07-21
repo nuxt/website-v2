@@ -1,9 +1,9 @@
 ---
 title: 'The Context'
 description: The `context` provides additional objects/params from Nuxt not traditionally available to Vue components. The `context` is available in special nuxt lifecycle areas like `asyncData`, `plugins`, `middlewares`, `modules`, and `store/nuxtServerInit`.
-menu: context
+menu: The Context
 category: internals-glossary
-Position: 1
+position: 1
 ---
 
 The `context` provides additional objects/params from Nuxt to Vue components and is available in special nuxt lifecycle areas like [`asyncData`](/api), [`fetch`](/guides/features/data-fetching), [`plugins`](/guides/directory-structure/plugins), [`middleware`](/guides/directory-structure/middleware#router-middleware) and [`nuxtServerInit`](/guides/directory-structure/store#the-nuxtserverinit-action).
@@ -23,7 +23,8 @@ function (context) {
     isDev,
     isHMR,
     redirect,
-    error
+    error,
+    $config
   } = context
   // Server-side
   if (process.server) {
@@ -99,6 +100,12 @@ Use this method to redirect the user to another route, the status code is used o
 `error` (_Function_)
 
 Use this method to show the error page: `error(params)`. The `params` should have the properties `statusCode` and `message`.
+
+### \$config
+
+`$config` (_Object_)
+
+The actual [runtime config](/guide/runtime-config).
 
 ## Server-side keys
 

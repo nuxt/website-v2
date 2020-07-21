@@ -23,7 +23,8 @@ function (context) {
     isDev,
     isHMR,
     redirect,
-    error
+    error,
+    $config
   } = context
   // Server-side
   if (process.server) {
@@ -76,7 +77,7 @@ Alias of `route.query`.
 
 Environment variables set in `nuxt.config.js`, see [env api](/api/configuration-env).
 
-### IsDev
+### isDev
 
 `isDev` (_Boolean_)
 
@@ -99,6 +100,12 @@ Use this method to redirect the user to another route, the status code is used o
 `error` (_Function_)
 
 Use this method to show the error page: `error(params)`. The `params` should have the properties `statusCode` and `message`.
+
+### \$config
+
+`$config` (_Object_)
+
+The actual [runtime config](/guide/runtime-config).
 
 ## Server-side keys
 

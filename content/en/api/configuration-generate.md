@@ -20,6 +20,42 @@ export default {
 }
 ```
 
+## cache
+
+> Introduced in v2.14.0
+
+- Type: `Object` or `false`
+
+This option is used by `nuxt generate` with [static target](/guides/features/deployment-targets#static-hosting) to avoid re-building when no tracked file has been changed.
+
+Defaults:
+
+```js
+{
+  ignore: [
+    '.nuxt', // buildDir
+    'static', // dir.static
+    'dist', // generate.dir
+    'node_modules',
+    '.**/*',
+    '.*',
+    'README.md'
+  ]
+}
+```
+
+If you want to avoid re-building when changing a configuration file, just add it to the list by providing the `cache.ignore` option:
+
+```js{}[nuxt.config.js]
+export default {
+  generate: {
+    cache: {
+      ignore: ['renovate.json'] // ignore changes applied on this file
+    }
+  }
+}
+```
+
 ## concurrency
 
 - Type: `Number`

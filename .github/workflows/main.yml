@@ -14,6 +14,6 @@ jobs:
           browser: chrome
           headless: true
           build: npm run generate
-          start: npm run serve
+          start: npm run start
           # quote the url to be safe against YML parsing surprises
           wait-on: 'http://localhost:3000'

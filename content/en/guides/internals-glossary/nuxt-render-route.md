@@ -3,7 +3,7 @@ title: 'nuxt.renderRoute(route, context)'
 description: Render a specific route with a given context.
 menu: renderRoute
 category: internals-glossary
-Position: 11
+position: 11
 ---
 
 - Type: `Function`

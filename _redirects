@@ -7,5 +7,3 @@ https://www.nuxtjs.org/* https://nuxtjs.org/:splat 301!
 /guide/themes /themes 301!
 /api/components-no-ssr /api/components-client-only 301!
 /faq/google-analytics /faq/ga 301!
-
-/guide/release-notes /guides/release-notes 301

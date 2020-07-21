@@ -61,7 +61,7 @@ export default {
     'content:file:beforeInsert': item => {
       const stats = require('reading-time')(item.text)
 
-      if (item.slug === 'release-notes' && item.extension === '.md') {
+      if (item.slug === '' && item.extension === '.md') {
       }
 
       item.readingTime = stats

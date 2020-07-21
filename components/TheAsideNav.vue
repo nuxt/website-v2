@@ -11,7 +11,7 @@
       >
         <p class="uppercase font-bold mb-6">
           <NuxtLink
-            to="/guides/release-notes"
+            to="/guide/release-notes"
             class="text-sm"
             active-class=""
             exact-active-class=""

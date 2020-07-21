@@ -85,6 +85,10 @@ Choosing between different [Rendering modes](/guides/features/rendering-modes)
 
 </base-alert>
 
-⭐️ Did you like Nuxt.js so far? Don't forget to [star our project](https://github.com/nuxt/nuxt.js) on GitHub
+<base-alert type="star">
+
+Did you like Nuxt.js so far? Don't forget to [star our project](https://github.com/nuxt/nuxt.js) on GitHub
+
+</base-alert>
 
 <quiz :questions="questions"></quiz>

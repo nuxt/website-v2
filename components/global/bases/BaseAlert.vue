@@ -4,6 +4,7 @@
       <div class="flex-shrink-0 self-start pt-1">
         <IconInfo v-if="type === 'info'" class="alert-icon" />
         <IconNext v-else-if="type === 'next'" class="alert-next" />
+        <IconStar v-else-if="type === 'star'" class="alert-star" />
         <IconAlert v-else class="alert-icon" />
       </div>
       <div class="ml-2 alert-content text-sm">
@@ -28,6 +29,8 @@
   .alert p {
     @apply m-0 !important;
   }
+
+  /* Warning Icon */
   .alert-warning {
     @apply bg-orange-100 border-orange-400;
   }
@@ -49,6 +52,8 @@
   .dark-mode .alert-warning .alert-content code {
     @apply bg-yellow-800 !important;
   }
+
+  /* Info Icon */
   .alert-info {
     @apply bg-blue-100 border-blue-400;
   }
@@ -70,6 +75,8 @@
   .dark-mode .alert-info .alert-content code {
     @apply bg-blue-800 !important;
   }
+
+  /* Next Icon */
   .alert-next {
     @apply bg-gray-100 border-gray-400;
   }
@@ -90,5 +97,27 @@
   }
   .dark-mode .alert-next .alert-content code {
     @apply bg-gray-800 !important;
+  }
+  /* Star Icon */
+  .alert-star {
+    @apply bg-purple-100 border-purple-400;
+  }
+  .alert-star code {
+    @apply bg-purple-200 shadow-none;
+  }
+  .alert-star .alert-icon {
+    @apply text-purple-400;
+  }
+  .alert-star .alert-content {
+    @apply text-purple-700;
+  }
+  .dark-mode .alert-star {
+    @apply bg-purple-800 border-purple-700;
+  }
+  .dark-mode .alert-star .alert-content {
+    @apply text-gray-300 bg-purple-800 border-purple-700;
+  }
+  .dark-mode .alert-star .alert-content code {
+    @apply bg-purple-800 !important;
   }
 </style>

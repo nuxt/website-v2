@@ -198,7 +198,7 @@ module.exports = {
 }
 ```
 
-You can refer to the [configuration build](https://nuxtjs.org/api/configuration-build/#transpile) docs for more build options.
+You can refer to the [configuration build](/guides/configuration-glossary/configuration-build#transpile) docs for more build options.
 
 ## Client or server side only
 
@@ -304,7 +304,7 @@ export const actions = {
 
 ## The extendPlugins Property
 
-You may want to extend plugins or change the plugins order created by Nuxt.js. This function accepts an array of [plugin](/api/configuration-plugins) objects and should return an array of plugin objects.
+You may want to extend plugins or change the plugins order created by Nuxt.js. This function accepts an array of [plugin](/guides/configuration-glossary/configuration-plugins) objects and should return an array of plugin objects.
 
 Example of changing plugins order:
 

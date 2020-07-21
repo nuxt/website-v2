@@ -255,7 +255,7 @@ If you want to know more about `<RouterLink>`, feel free to read the [Vue Route
 
 <base-alert type="info">
 
-`<NuxtLink>` also comes with [smart prefetching](https://nuxtjs.org/api/components-nuxt-link/) out of the box.
+`<NuxtLink>` also comes with [smart prefetching](/guides/features/nuxt-components#the-nuxtlink-component) out of the box.
 
 </base-alert>
 

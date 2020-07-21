@@ -331,7 +331,7 @@ There are multiple ways to extend the routing with Nuxt:
 
 - [router-extras-module](https://github.com/nuxt-community/router-extras-module) to customize the route parameters in the page
 - component[@nuxtjs/router](https://github.com/nuxt-community/router-module) to overwrite the Nuxt router and write your own `router.js` file
-- Use the [router.extendRoutes](https://nuxtjs.org/api/configuration-router#extendroutes) property in your `nuxt.config.js`
+- Use the [router.extendRoutes](/guides/configuration-glossary/configuration-router#extendroutes) property in your `nuxt.config.js`
 
 ## The router Property
 

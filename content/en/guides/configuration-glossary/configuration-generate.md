@@ -157,7 +157,7 @@ Interval between two render cycles to avoid flooding a potential API with API ca
 ## minify
 
 - **Deprecated!**
-- Use [build.html.minify](/api/configuration-build#html-minify) instead
+- Use [build.html.minify](/guides/configuration-glossary/configuration-build#htmlminify) instead
 
 ## routes
 

@@ -9,7 +9,7 @@ category: components-glossary
 
 - **Type:** `Function` or `Async Function`
 
-`validate` is called every time before navigating to a new route. It will be called server-side once (on the first request to the Nuxt app) and client-side when navigating to further routes. This method takes the [`context`](/api/context) object as an argument.
+`validate` is called every time before navigating to a new route. It will be called server-side once (on the first request to the Nuxt app) and client-side when navigating to further routes. This method takes the [`context`](/guides/internals-glossary/context) object as an argument.
 
 ```js
 validate({ params, query, store }) {
@@ -47,7 +47,7 @@ export default {
 }
 ```
 
-You can also check some data in your [store](/guide/vuex-store) for example (filled by [`nuxtServerInit`](/guide/vuex-store#the-nuxtserverinit-action) before action):
+You can also check some data in your [store](/guides/directory-structure/store) for example (filled by [`nuxtServerInit`](/guides/directory-structure/store#the-nuxtserverinit-action) before action):
 
 ```js
 export default {

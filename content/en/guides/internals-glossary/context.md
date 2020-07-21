@@ -6,7 +6,7 @@ category: internals-glossary
 Position: 1
 ---
 
-The `context` provides additional objects/params from Nuxt to Vue components and is available in special nuxt lifecycle areas like [`asyncData`](/api), [`fetch`](/api/pages-fetch), [`plugins`](/guide/plugins), [`middleware`](/guide/routing#middleware) and [`nuxtServerInit`](/guide/vuex-store#the-nuxtserverinit-action).
+The `context` provides additional objects/params from Nuxt to Vue components and is available in special nuxt lifecycle areas like [`asyncData`](/api), [`fetch`](/guides/features/data-fetching), [`plugins`](/guides/directory-structure/plugins), [`middleware`](/guides/directory-structure/middleware#router-middleware) and [`nuxtServerInit`](/guides/directory-structure/store#the-nuxtserverinit-action).
 
 > _Note: "The Context" we refer to here is not to be confused with the `context` object available in [`Vuex Actions`](https://vuex.vuejs.org/guide/actions.html). The two are unrelated._
 
@@ -50,7 +50,7 @@ The root Vue instance options that includes all your plugins. For example, when 
 
 `store` ([_Vuex Store_](https://vuex.vuejs.org/api/#vuex-store-instance-properties))
 
-Vuex Store instance. **Available only if the [vuex store](/guide/vuex-store) is set**.
+Vuex Store instance. **Available only if the [vuex store](/guides/directory-structure/store) is set**.
 
 ### route
 
@@ -74,7 +74,7 @@ Alias of `route.query`.
 
 `env` (_Object_)
 
-Environment variables set in `nuxt.config.js`, see [env api](/api/configuration-env).
+Environment variables set in `nuxt.config.js`, see [env api](/guides/configuration-glossary/configuration-env).
 
 ### IsDev
 

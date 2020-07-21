@@ -25,4 +25,4 @@ By default, Nuxt.js scrolls to the top when you go to another page, but with chi
 
 Conversely, you can manually set `scrollToTop` to `false` on parent routes as well.
 
-If you want to overwrite the default scroll behavior of Nuxt.js, take a look at the [scrollBehavior option](/api/configuration-router#scrollbehavior).
+If you want to overwrite the default scroll behavior of Nuxt.js, take a look at the [scrollBehavior option](/guides/configuration-glossary/configuration-router#scrollbehavior).

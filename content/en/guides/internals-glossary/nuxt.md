@@ -6,7 +6,7 @@ category: internals-glossary
 Position: 9
 ---
 
-You might want to use your own server with your middleware and your API. That's why you can use Nuxt.js programmatically. You can see programmatic examples at [examples/programmatic](https://github.com/nuxt/nuxt.js/tree/dev/examples/programmatic/scripts).
+You might want to use your own server with your middleware and your API. That's why you can use Nuxt.js programmatically.
 
 ## Nuxt Constructor
 

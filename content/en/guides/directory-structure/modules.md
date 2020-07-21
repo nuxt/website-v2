@@ -252,7 +252,7 @@ nuxt.hook('listen', async (server, {host, port})) => {
 
 `this`: Context of modules. All modules will be called within context of the ModuleContainer instance.
 
-Please look into the [ModuleContainer](https://nuxtjs.org/api/internals-module-container) class docs for available methods.
+Please look into the [ModuleContainer](/guides/internals-glossary/internals-module-container) class docs for available methods.
 
 ### Run Tasks on Specific hooks
 
@@ -382,7 +382,7 @@ export default function asyncModule($http) {
 
 <base-alert type="info">
 
-There are way more hooks and possibilities for modules. Please read the [Nuxt Internals](https://nuxtjs.org/api/internals) to find out more about the nuxt-internal API.
+There are way more hooks and possibilities for modules. Please read the [Nuxt Internals](/guides/internals-glossary/internals) to find out more about the nuxt-internal API.
 
 </base-alert>
 

@@ -265,7 +265,7 @@ The `extend` method gets called twice - Once for the client bundle and the oth
 
 ### Customize chunks configuration
 
-You may want to tweak the [optimization configuration](https://nuxtjs.org/api/configuration-build#optimization) a bit, avoiding a rewrite of the default object.
+You may want to tweak the [optimization configuration](/guides/configuration-glossary/configuration-build#optimization) a bit, avoiding a rewrite of the default object.
 
 ```js{}[nuxt.config.js]
 export default {

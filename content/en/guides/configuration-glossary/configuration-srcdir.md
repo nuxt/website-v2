@@ -7,7 +7,7 @@ position: 28
 ---
 
 - Type: `String`
-- Default: [rootDir value](/api/configuration-rootdir)
+- Default: [rootDir value](/guides/configuration-glossary/configuration-rootdir)
 
 > Define the source directory of your Nuxt.js application
 

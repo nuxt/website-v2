@@ -37,7 +37,7 @@ export default {
 }
 ```
 
-The transition key in `nuxt.config.js` is used to set the default properties for the page transitions. To learn more about the available keys when the `transition` key is an object, see the [pages transition property](/api/pages-transition#object).
+The transition key in `nuxt.config.js` is used to set the default properties for the page transitions. To learn more about the available keys when the `transition` key is an object, see the [pages transition property](/guides/features/transitions).
 
 ## The layoutTransition Property
 

@@ -11,7 +11,7 @@ category: components-glossary
 
 By default, Nuxt.js uses its own component to show a progress bar between the routes.
 
-You can disable or customize it globally through the [Configuration's loading option](/api/configuration-loading), but also disable it for specific pages by setting the `loading` property to `false` :
+You can disable or customize it globally through the [Configuration's loading option](/guides/configuration-glossary/configuration-loading), but also disable it for specific pages by setting the `loading` property to `false` :
 
 ```html
 <template>

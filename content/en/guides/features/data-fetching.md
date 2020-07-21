@@ -308,7 +308,7 @@ The `asyncData` method is not called on query string changes by default. If 
 
 <base-alert type="next">
 
-Learn more about the [watchQuery property](/api/pages-watchquery) and see the list of available [keys in context](/guides/concepts/context-helpers).
+Learn more about the [watchQuery property](/guides/components-glossary/pages-watchquery) and see the list of available [keys in context](/guides/concepts/context-helpers).
 
 </base-alert>
 

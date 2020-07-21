@@ -17,7 +17,7 @@ The base URL of the app. For example, if the entire single page application is s
 
 This can be useful if you need to serve Nuxt as a different context root, from within a bigger Web site. Notice that you may, or may not set up a Front Proxy Web Server.
 
-If you want to have a redirect to `router.base`, you can do so [using a Hook, see _Redirect to router.base when not on root_](/api/configuration-hooks#redirect-to-router-base-when-not-on-root).
+If you want to have a redirect to `router.base`, you can do so [using a Hook, see _Redirect to router.base when not on root_](/guides/configuration-glossary/configuration-hooks#redirect-to-routerbase-when-not-on-root).
 
 ```js{}[nuxt.config.js]
 export default {
@@ -90,7 +90,7 @@ The schema of the route should respect the [vue-router](https://router.vuejs.org
 
 <base-alert>
 
-When adding routes that use [Named Views](/guide/routing#named-views), don't forget to add the corresponding `chunkNames` of named `components`.
+When adding routes that use Named Views, don't forget to add the corresponding `chunkNames` of named `components`.
 
 </base-alert>
 
@@ -129,7 +129,7 @@ Setting this to false essentially makes every router-link navigation a full page
 - Type: `String`
 - Default: `'nuxt-link-active'`
 
-Globally configure [`<nuxt-link>`](/api/components-nuxt-link) default active class.
+Globally configure [`<nuxt-link>`](/guides/features/nuxt-components#the-nuxtlink-component) default active class.
 
 ```js{}[nuxt.config.js]
 export default {
@@ -146,7 +146,7 @@ export default {
 - Type: `String`
 - Default: `'nuxt-link-exact-active'`
 
-Globally configure [`<nuxt-link>`](/api/components-nuxt-link) default exact active class.
+Globally configure [`<nuxt-link>`](/guides/features/nuxt-components#the-nuxtlink-component) default exact active class.
 
 ```js{}[nuxt.config.js]
 export default {
@@ -163,7 +163,7 @@ export default {
 - Type: `String`
 - Default: `false`
 
-Globally configure [`<nuxt-link>`](/api/components-nuxt-link) default prefetch class (feature disabled by default)
+Globally configure [`<nuxt-link>`](/guides/features/nuxt-components#the-nuxtlink-component) default prefetch class (feature disabled by default)
 
 ```js{}[nuxt.config.js]
 export default {
@@ -198,7 +198,7 @@ export default function (context) {
 }
 ```
 
-To learn more about the middleware, see the [middleware guide](/guide/routing#middleware).
+To learn more about the middleware, see the [middleware guide](/guides/directory-structure/middleware#router-middleware).
 
 ## mode
 

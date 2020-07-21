@@ -8,7 +8,7 @@ Position: 6
 
 - Source: **[core/module.js](https://github.com/nuxt/nuxt.js/blob/dev/packages/core/src/module.js)**
 
-All [modules](/guide/modules) will be called within context of `ModuleContainer` instance.
+All [modules](/guides/directory-structure/modules) will be called within context of `ModuleContainer` instance.
 
 ## Tapable plugins
 
@@ -20,7 +20,7 @@ nuxt.moduleContainer.plugin('ready', async moduleContainer => {
 })
 ```
 
-Inside [modules](/guide/modules) context we can use this instead:
+Inside [modules](/guides/directory-structure/modules) context we can use this instead:
 
 ```js
 this.plugin('ready', async moduleContainer => {
@@ -61,19 +61,19 @@ You can use `template.ssr: false` to disable plugin including in SSR bundle.
 
 ### addServerMiddleware (middleware)
 
-Pushes middleware into [options.serverMiddleware](/api/configuration-servermiddleware).
+Pushes middleware into [options.serverMiddleware](/guides/configuration-glossary/configuration-servermiddleware).
 
 ### extendBuild (fn)
 
-Allows easily extending webpack build config by chaining [options.build.extend](/api/configuration-build#extend) function.
+Allows easily extending webpack build config by chaining [options.build.extend](/guides/configuration-glossary/configuration-build#extend) function.
 
 ### extendRoutes (fn)
 
-Allows easily extending routes by chaining [options.build.extendRoutes](/api/configuration-router#extendroutes) function.
+Allows easily extending routes by chaining [options.build.extendRoutes](/guides/configuration-glossary/configuration-router#extendroutes) function.
 
 ### extendPlugins (fn)
 
-Allows easily extending plugins by chaining [options.extendPlugins](/api/configuration-extend-plugins) function.
+Allows easily extending plugins by chaining [options.extendPlugins](/guides/configuration-glossary/configuration-extend-plugins) function.
 
 ### addModule (moduleOpts, requireOnce)
 

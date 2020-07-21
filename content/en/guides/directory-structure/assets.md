@@ -251,7 +251,7 @@ Will be transformed into:
 <img src="/_nuxt/img/your_image.0c61159.png" />
 ```
 
-If you want to change the loader configurations, please use [build.extend](https://nuxtjs.org/api/configuration-build#extend).
+If you want to change the loader configurations, please use [build.extend](/guides/configuration-glossary/configuration-build#extend).
 
 <app-modal>
   <code-sandbox  :src="csb_link"></code-sandbox>

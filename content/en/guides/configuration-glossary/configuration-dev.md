@@ -11,12 +11,12 @@ position: 6
 
 > Define the development or production mode of Nuxt.js.
 
-This property is overwritten by [nuxt commands](/guide/commands):
+This property is overwritten by the nuxt commands:
 
 - `dev` is forced to `true` with `nuxt`
 - `dev` is forced to `false` with `nuxt build`, `nuxt start` and `nuxt generate`
 
-This property should be used when using [Nuxt.js programmatically](/api/nuxt):
+This property should be used when using [Nuxt.js programmatically](/guides/internals-glossary/nuxt):
 
 ```js{}[nuxt.config.js]
 export default {

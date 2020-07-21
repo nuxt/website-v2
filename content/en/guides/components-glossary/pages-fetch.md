@@ -9,8 +9,6 @@ category: components-glossary
 
 Nuxt.js `v2.12` introduces a new hook called `fetch` **in any of your Vue components**.
 
-See [live demo](https://nuxt-new-fetch.surge.sh) and [code example](https://github.com/nuxt/nuxt.js/tree/dev/examples/new-fetch).
-
 <base-alert>
 
 `fetch(context)` has been deprecated, instead you can use an [anonymous middleware](/guides/components-glossary/pages-middleware#anonymous-middleware) in your page: `middleware(context)`

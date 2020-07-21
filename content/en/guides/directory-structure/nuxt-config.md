@@ -68,7 +68,7 @@ export default {
 
 <base-alert type="next">
 
-See more on the [css property](/guides/configuration-glossary/configuration-css')
+See more on the [css property](/guides/configuration-glossary/configuration-css)
 
 </base-alert>
 
@@ -84,7 +84,7 @@ export default {
 
 <base-alert type="next">
 
-See more on the [dev property](//guides/configuration-glossary/configuration-dev)
+See more on the [dev property](/guides/configuration-glossary/configuration-dev)
 
 </base-alert>
 

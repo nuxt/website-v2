@@ -68,29 +68,227 @@ questions:
 
 By default, Nuxt.js is configured to cover most use cases. This default configuration can be overwritten with the nuxt.config.js file.
 
-## Asynchronous Configuration
+## The css Property
 
-Although it is better to use the normal configuration `export default {}` you can have an async configuration by exporting an async function that return the config object.
+Nuxt.js lets you define the CSS files/modules/libraries you want to set globally (included in every page).
+
+<base-alert>
+
+In case you want to use `sass` make sure that you have installed the `node-sass` and `sass-loader` packages.
+
+</base-alert>
+
+In `nuxt.config.js`, add the CSS resources:
 
 ```js{}[nuxt.config.js]
-import axios from 'axios'
-
-export default async () => {
-  const data = await axios.get('https://api.nuxtjs.dev/posts')
-  return {
-    head: {
-      title: data.title
-      //... rest of config
-    }
-  }
+export default {
+  css: [
+    // Load a Node.js module directly (here it's a Sass file)
+    'bulma',
+    // CSS file in the project
+    '~/assets/css/main.css',
+    // SCSS file in the project
+    '~/assets/css/main.scss'
+  ]
 }
 ```
 
 <base-alert>
 
-The axios-module cannot be used in `nuxt.config.js`. You will need to import axios and configure it again.
+Nuxt.js will automatically guess the file type by its extension and use the appropriate pre-processor loader for webpack. You will still need to install the required loader if you need to use them.
 
 </base-alert>
+
+<app-modal>
+  <code-sandbox  :src="csb_link_pre-processors"></code-sandbox>
+</app-modal>
+
+## Pre-processors
+
+Thanks to [Vue Loader](http://vue-loader.vuejs.org/en/configurations/pre-processors.html), you can use any kind of pre-processor for your  `<template>` or `<style>`: use the `lang` attribute.
+
+Example of our `pages/index.vue` using [Pug](https://github.com/pugjs/pug) and [Sass](http://sass-lang.com/):
+
+```html{}[pages/index.vue]
+<template lang="pug">
+  h1.red Hello {{ name }}!
+</template>
+
+<style lang="scss">
+  .red {
+    color: red;
+  }
+</style>
+```
+
+To use these pre-processors, we need to install their webpack loaders:
+
+<code-group>
+  <code-block label="Yarn" active>
+
+```bash
+yarn add -D pug pug-plain-loader
+yarn add -D node-sass sass-loader
+```
+
+  </code-block>
+  <code-block label="NPM">
+
+```bash
+npm install --save-dev pug pug-plain-loader
+npm install --save-dev node-sass sass-loader
+```
+
+  </code-block>
+</code-group>
+
+## JSX
+
+Nuxt.js uses [@nuxt/babel-preset-app](https://github.com/nuxt/nuxt.js/tree/dev/packages/babel-preset-app), which is based on the official [@vue/babel-preset-app](https://github.com/vuejs/vue-cli/tree/dev/packages/%40vue/babel-preset-app) for babel default configuration, so you can use JSX in your components.
+
+You can also use JSX in the `render` method of your components:
+
+```js
+<script>
+export default {
+  data () {
+    return { name: 'World' }
+  },
+  render (h) {
+    return <h1 class="red">{this.name}</h1>
+  }
+}
+</script>
+```
+
+Aliasing `createElement` to `h` is a common convention you’ll see in the Vue ecosystem but is actually optional for JSX since it [automatically injects](https://github.com/vuejs/babel-plugin-transform-vue-jsx#h-auto-injection) `const h = this.$createElement` in any method and getter (not functions or arrow functions) declared in ES2015 syntax that has JSX so you can drop the (h) parameter.
+
+You can learn more about how to use it in the [JSX section](https://vuejs.org/v2/guide/render-function.html#JSX) of the Vue.js documentation.
+
+## Ignoring files
+
+### .nuxtignore
+
+You can use a `.nuxtignore` file to let Nuxt.js ignore  `layout`, `page`, `store` and `middleware`  files in your project’s root directory (`rootDir`) during the build phase. The `.nuxtignore` file is subject to the same specification as  `.gitignore`  and  `.eslintignore` files, in which each line is a glob pattern indicating which files should be ignored.
+
+```markdown{}[.nuxtignore]
+# ignore layout foo.vue
+
+layouts/foo.vue
+
+# ignore layout files whose name ends with -ignore.vue
+
+layouts/\*-ignore.vue
+
+# ignore page bar.vue
+
+pages/bar.vue
+
+# ignore page inside ignore folder
+
+pages/ignore/\*.vue
+
+# ignore store baz.js
+
+store/baz.js
+
+# ignore store files match _.test._
+
+store/ignore/_.test._
+
+# ignore middleware files under foo folder except foo/bar.js
+
+middleware/foo/\*.js !middleware/foo/bar.js
+```
+
+### The ignorePrefix Property
+
+Any file in pages/, layout/, middleware/ or store/ will be ignored during the build if its filename starts with the prefix specified by ignorePrefix.
+
+By default all files which start with `-` will be ignored, such as `store/-foo.js` and `pages/-bar.vue`. This allows for co-locating tests, utilities, and components with their callers without themselves being converted into routes, stores, etc.
+
+### The ignore Property
+
+More customizable than ignorePrefix: all files matching glob patterns specified inside ignore will be ignored in building.
+
+```js{}[nuxt.config.js]
+export default {
+  ignore: 'pages/bar.vue'
+}
+```
+
+### ignoreOptions
+
+`nuxtignore` is using `node-ignore` under the hood, `ignoreOptions` can be configured as `options` of `node-ignore`.
+
+```js{}[nuxt.config.js]
+export default {
+  ignoreOptions: {
+    ignorecase: false
+  }
+}
+```
+
+## Extend webpack config
+
+You can extend nuxt's webpack configuration via the `extend` option in your `nuxt.config.js`. The `extend` option of the `build` property is a method that accepts two arguments. The first argument is the webpack `config` object exported from nuxt's webpack config. The second parameter is a context object with the following boolean properties: `{ isDev, isClient, isServer, loaders }`.
+
+```js{}[nuxt.config.js]
+export default {
+  build: {
+    extend(config, { isDev, isClient }) {
+      // ..
+      config.module.rules.push({
+        test: /\.(ttf|eot|svg|woff(2)?)(\?[a-z0-9=&.]+)?$/,
+        loader: 'file-loader'
+      })
+      // Sets webpack's mode to development if `isDev` is true.
+      if (isDev) {
+        config.mode = 'development'
+      }
+    }
+  }
+}
+```
+
+The `extend` method gets called twice - Once for the client bundle and the other for the server bundle.
+
+### Customize chunks configuration
+
+You may want to tweak the [optimization configuration](/guides/configuration-glossary/configuration-build#optimization) a bit, avoiding a rewrite of the default object.
+
+```js{}[nuxt.config.js]
+export default {
+  build: {
+    extend(config, { isClient }) {
+      if (isClient) {
+        config.optimization.splitChunks.maxSize = 200000
+      }
+    }
+  }
+}
+```
+
+### Execute ESLint on every webpack build in dev environment
+
+In order to be aware of code style errors, you may want to run [ESLint](https://github.com/webpack-contrib/eslint-loader) on every build in the dev environment.
+
+```js{}[nuxt.config.js]
+export default {
+  build: {
+    extend(config, { isDev, isClient }) {
+      if (isDev && isClient) {
+        config.module.rules.push({
+          enforce: 'pre',
+          test: /\.(js|vue)$/,
+          loader: 'eslint-loader',
+          exclude: /(node_modules)/
+        })
+      }
+    }
+  }
+}
+```
 
 ## Edit host and port
 
@@ -140,229 +338,29 @@ or create a script in your package.json
   <code-sandbox  :src="csb_link_host_port"></code-sandbox>
 </app-modal>
 
-## Pre-processors
+## Asynchronous Configuration
 
-Thanks to [Vue Loader](http://vue-loader.vuejs.org/en/configurations/pre-processors.html), you can use any kind of pre-processor for your  `<template>` or `<style>`: use the `lang` attribute.
-
-Example of our `pages/index.vue` using [Pug](https://github.com/pugjs/pug) and [Sass](http://sass-lang.com/):
-
-```html{}[pages/index.vue]
-<template lang="pug">
-  h1.red Hello {{ name }}!
-</template>
-
-<style lang="scss">
-  .red {
-    color: red;
-  }
-</style>
-```
-
-To use these pre-processors, we need to install their webpack loaders:
-
-<code-group>
-  <code-block label="Yarn" active>
-
-```bash
-yarn add -D pug pug-plain-loader
-yarn add -D node-sass sass-loader
-```
-
-  </code-block>
-  <code-block label="NPM">
-
-```bash
-npm install --save-dev pug pug-plain-loader
-npm install --save-dev node-sass sass-loader
-```
-
-  </code-block>
-</code-group>
-
-## The css Property
-
-Nuxt.js lets you define the CSS files/modules/libraries you want to set globally (included in every page).
-
-<base-alert>
-
-In case you want to use `sass` make sure that you have installed the `node-sass` and `sass-loader` packages.
-
-</base-alert>
-
-In `nuxt.config.js`, add the CSS resources:
+Although it is better to use the normal configuration `export default {}` you can have an async configuration by exporting an async function that return the config object.
 
 ```js{}[nuxt.config.js]
-export default {
-  css: [
-    // Load a Node.js module directly (here it's a Sass file)
-    'bulma',
-    // CSS file in the project
-    '~/assets/css/main.css',
-    // SCSS file in the project
-    '~/assets/css/main.scss'
-  ]
+import axios from 'axios'
+
+export default async () => {
+  const data = await axios.get('https://api.nuxtjs.dev/posts')
+  return {
+    head: {
+      title: data.title
+      //... rest of config
+    }
+  }
 }
 ```
 
 <base-alert>
 
-Nuxt.js will automatically guess the file type by its extension and use the appropriate pre-processor loader for webpack. You will still need to install the required loader if you need to use them.
+The axios-module cannot be used in `nuxt.config.js`. You will need to import axios and configure it again.
 
 </base-alert>
-
-<app-modal>
-  <code-sandbox  :src="csb_link_pre-processors"></code-sandbox>
-</app-modal>
-
-## JSX
-
-Nuxt.js uses [@nuxt/babel-preset-app](https://github.com/nuxt/nuxt.js/tree/dev/packages/babel-preset-app), which is based on the official [@vue/babel-preset-app](https://github.com/vuejs/vue-cli/tree/dev/packages/%40vue/babel-preset-app) for babel default configuration, so you can use JSX in your components.
-
-You can also use JSX in the `render` method of your components:
-
-```js
-<script>
-export default {
-  data () {
-    return { name: 'World' }
-  },
-  render (h) {
-    return <h1 class="red">{this.name}</h1>
-  }
-}
-</script>
-```
-
-Aliasing `createElement` to `h` is a common convention you’ll see in the Vue ecosystem but is actually optional for JSX since it [automatically injects](https://github.com/vuejs/babel-plugin-transform-vue-jsx#h-auto-injection) `const h = this.$createElement` in any method and getter (not functions or arrow functions) declared in ES2015 syntax that has JSX so you can drop the (h) parameter.
-
-You can learn more about how to use it in the [JSX section](https://vuejs.org/v2/guide/render-function.html#JSX) of the Vue.js documentation.
-
-## Extend webpack config
-
-You can extend nuxt's webpack configuration via the `extend` option in your `nuxt.config.js`. The `extend` option of the `build` property is a method that accepts two arguments. The first argument is the webpack `config` object exported from nuxt's webpack config. The second parameter is a context object with the following boolean properties: `{ isDev, isClient, isServer, loaders }`.
-
-```js{}[nuxt.config.js]
-export default {
-  build: {
-    extend(config, { isDev, isClient }) {
-      // ..
-      config.module.rules.push({
-        test: /\.(ttf|eot|svg|woff(2)?)(\?[a-z0-9=&.]+)?$/,
-        loader: 'file-loader'
-      })
-      // Sets webpack's mode to development if `isDev` is true.
-      if (isDev) {
-        config.mode = 'development'
-      }
-    }
-  }
-}
-```
-
-The `extend` method gets called twice - Once for the client bundle and the other for the server bundle.
-
-## Examples
-
-### Customize chunks configuration
-
-You may want to tweak the [optimization configuration](/guides/configuration-glossary/configuration-build#optimization) a bit, avoiding a rewrite of the default object.
-
-```js{}[nuxt.config.js]
-export default {
-  build: {
-    extend(config, { isClient }) {
-      if (isClient) {
-        config.optimization.splitChunks.maxSize = 200000
-      }
-    }
-  }
-}
-```
-
-### Execute ESLint on every webpack build in dev environment
-
-In order to be aware of code style errors, you may want to run [ESLint](https://github.com/webpack-contrib/eslint-loader) on every build in the dev environment.
-
-```js{}[nuxt.config.js]
-export default {
-  build: {
-    extend(config, { isDev, isClient }) {
-      if (isDev && isClient) {
-        config.module.rules.push({
-          enforce: 'pre',
-          test: /\.(js|vue)$/,
-          loader: 'eslint-loader',
-          exclude: /(node_modules)/
-        })
-      }
-    }
-  }
-}
-```
-
-## Ignoring files
-
-## .nuxtignore
-
-You can use a `.nuxtignore` file to let Nuxt.js ignore  `layout`, `page`, `store` and `middleware`  files in your project’s root directory (`rootDir`) during the build phase. The `.nuxtignore` file is subject to the same specification as  `.gitignore`  and  `.eslintignore` files, in which each line is a glob pattern indicating which files should be ignored.
-
-```markdown{}[.nuxtignore]
-# ignore layout foo.vue
-
-layouts/foo.vue
-
-# ignore layout files whose name ends with -ignore.vue
-
-layouts/\*-ignore.vue
-
-# ignore page bar.vue
-
-pages/bar.vue
-
-# ignore page inside ignore folder
-
-pages/ignore/\*.vue
-
-# ignore store baz.js
-
-store/baz.js
-
-# ignore store files match _.test._
-
-store/ignore/_.test._
-
-# ignore middleware files under foo folder except foo/bar.js
-
-middleware/foo/\*.js !middleware/foo/bar.js
-```
-
-## The ignorePrefix Property
-
-Any file in pages/, layout/, middleware/ or store/ will be ignored during the build if its filename starts with the prefix specified by ignorePrefix.
-
-By default all files which start with `-` will be ignored, such as `store/-foo.js` and `pages/-bar.vue`. This allows for co-locating tests, utilities, and components with their callers without themselves being converted into routes, stores, etc.
-
-## The ignore Property
-
-More customizable than ignorePrefix: all files matching glob patterns specified inside ignore will be ignored in building.
-
-```js{}[nuxt.config.js]
-export default {
-  ignore: 'pages/bar.vue'
-}
-```
-
-## ignoreOptions
-
-`nuxtignore` is using `node-ignore` under the hood, `ignoreOptions` can be configured as `options` of `node-ignore`.
-
-```js{}[nuxt.config.js]
-export default {
-  ignoreOptions: {
-    ignorecase: false
-  }
-}
-```
 
 ## Further configuration
 

@@ -287,8 +287,7 @@ To disable the prefetching on a specific link, you can use the `no-prefetch` pro
 
 To disable the prefetching on all links, set the `prefetchLinks` to `false`:
 
-```js
-// nuxt.config.js
+```js{}[nuxt.config.js]
 export default {
   router: {
     prefetchLinks: false
@@ -300,6 +299,33 @@ Since Nuxt.js v2.10.0, if you have set `prefetchLinks` to `false` but you want t
 
 ```html
 <nuxt-link to="/about" prefetch>About page pre-fetched</nuxt-link>
+```
+
+## prefetchPayloads
+
+> Added with v2.13.0, only available for [static target](/guides/features/deployment-targets#static-hosting).
+
+- Type: `Boolean`
+- Default: `true`
+
+When using `nuxt generate` with `target: 'static'`, Nuxt will generate a `payload.js` for each page.
+
+With this option enabled, Nuxt will automatically prefetch the payload of the linked page when the `<nuxt-link>` is visible in the viewport, making **instant navigation**.
+
+<base-alert type="info">
+
+This option depends of the [prefetchLinks](#prefetchlinks) option to be enabled.
+
+</base-alert>
+
+You can disable this behaviour by setting `prefetchPaylods` to `false`:
+
+```js{}[nuxt.config.js]
+export default {
+  router: {
+    prefetchPayloads: false
+  }
+}
 ```
 
 ## scrollBehavior

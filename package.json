@@ -102,5 +102,10 @@
   "bugs": {
     "url": "https://github.com/nuxt/nuxtjs.org/issues"
   },
-  "homepage": "https://github.com/nuxt/nuxtjs.org#readme"
+  "homepage": "https://github.com/nuxt/nuxtjs.org#readme",
+  "lint-staged": {
+    "*.{js, json, vue}": "eslint --cache --fix",
+    "*.{md}": "lint:markdownlint",
+    "*.{js,json,css,vue,md}": "prettier --write"
+  }
 }

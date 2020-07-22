@@ -73,11 +73,11 @@
     "eslint": "eslint --ext .js,.vue --ignore-path .gitignore --ignore-pattern modules/ --ignore-pattern plugins/ga.js .",
     "markdownlint": "markdownlint  \"*.md\"",
     "prettier": "prettier  \"**/*.{js,json,css,scss,vue,html,md}\"",
-    "check:prettier": "yarn prettier -- --list-different",
+    "check:prettier": "yarn prettier --list-different",
     "format:prettier": "yarn prettier --write --loglevel warn",
     "lint:eslint": "yarn eslint --fix",
     "lint:markdownlint": "yarn markdownlint",
-    "lint": "run-p lint"
+    "lint": "run-p lint:*"
   },
   "husky": {
     "hooks": {

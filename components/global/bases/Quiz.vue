@@ -52,9 +52,7 @@
     >
       Reset
     </button>
-    <div v-if="score !== null">
-{{ score }} / {{ questions.length }}
-</div>
+    <div v-if="score !== null"> {{ score }} / {{ questions.length }} </div>
   </div>
 </template>
 

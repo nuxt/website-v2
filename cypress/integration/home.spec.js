@@ -13,8 +13,13 @@ describe('The Home Page links', () => {
     cy.visit('/sponsor-nuxtjs')
   })
   it.skip('checks to see if the try Nuxtjs button links to ', () => {
-    cy.get('a[data-cy="why"]').click()
-    .its('url').should('eq', 'https://codesandbox.io/s/github/nuxt/codesandbox-nuxt/tree/master/')
+    cy.get('a[data-cy="why"]')
+      .click()
+      .its('url')
+      .should(
+        'eq',
+        'https://codesandbox.io/s/github/nuxt/codesandbox-nuxt/tree/master/'
+      )
   })
   it.skip('github stars links to the right page', () => {
     cy.get('a[data-cy="github-stars"]').click()

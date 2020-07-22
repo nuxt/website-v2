@@ -26,7 +26,7 @@
       <AppToc
         v-if="page.toc && page.toc.length"
         :toc="page.toc"
-        class="mb-8 hidden lg:block"
+        class="mb-8 block"
       />
     </AffixBlock>
   </div>

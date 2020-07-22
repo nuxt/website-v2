@@ -13,7 +13,7 @@
           />
           <h2
             class="xl:text-lg text-light-onSurfaceSecondary dark:text-dark-onSurfaceSecondary font-medium leading-relaxed mb-6"
-            v-html="$t('homepage.welcome.paragraph')"
+            v-html="$t('homepage.welcome.description')"
           />
           <div class="flex flex-col sm:block py-4">
             <AppButton

@@ -290,17 +290,18 @@ export default {
 }
 </script>
 
-<style>
+<style lang="scss">
 .sponsor {
   & img {
-    opacity: 0.75;
     filter: grayscale(100%);
+    opacity: 0.75;
     transition: all 0.5s;
   }
+
   &:hover {
     & img {
-      opacity: 1;
       filter: grayscale(0%);
+      opacity: 1;
     }
   }
 }

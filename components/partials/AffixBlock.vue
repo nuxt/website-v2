@@ -20,7 +20,7 @@ export default {}
 
 <style>
 .affix {
-  top: 6rem;
   height: calc(100vh - 6rem);
+  top: 6rem;
 }
 </style>

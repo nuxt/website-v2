@@ -137,34 +137,38 @@ export default {
 
 <style lang="scss" scoped>
 .header_mobile_aside {
-  top: theme('spacing.16');
-  @screen lg {
-    top: theme('spacing.24');
-  }
   bottom: theme('spacing.16');
+  top: theme('spacing.16');
   transform: translateX(calc(-100% - 1px));
-  transition-property: transform;
   transition-duration: 0.35s;
+  transition-property: transform;
   // transition-timing-function: cubic-bezier(0.23, 1, 0.32, 1);
   transition-timing-function: theme(
     'transitionTimingFunction.ease-in-out-material-sharp'
   );
+
+  @screen lg {
+    top: theme('spacing.24');
+  }
 }
 
 .header_mobile_aside--open {
-  transform: translateX(0px);
+  transform: translateX(0);
   transition-delay: 0s;
+
   & .header_mobile_aside_group {
-    transform: translateX(0px);
+    transform: translateX(0);
   }
 }
 
 .content-wrapper {
   margin-left: auto;
   padding-left: 1rem;
+
   @screen sm {
     max-width: calc(theme('screens.sm') / 2);
   }
+
   @screen md {
     max-width: calc(theme('screens.md') / 2);
   }
@@ -175,17 +179,17 @@ button {
 }
 
 .bookmark-button {
-  top: 1rem;
-  right: 0;
-  transform: translateX(100%);
   border-radius: 0 9999px 9999px 0;
   box-shadow: 4px 2px 4px rgba(0, 0, 0, 0.101562);
+  right: 0;
+  top: 1rem;
+  transform: translateX(100%);
 }
 
 .inner-button {
-  top: 1rem;
-  right: 1rem;
   border-radius: 100%;
   box-shadow: 4px 2px 4px rgba(0, 0, 0, 0.101562);
+  right: 1rem;
+  top: 1rem;
 }
 </style>

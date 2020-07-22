@@ -34,6 +34,7 @@ export default {
 .nui-support-nuxt {
   @apply bg-gray-200 p-4 flex flex-row w-full items-center mt-4;
 }
+
 @screen sm {
   .nui-support-nuxt {
     @apply bg-white flex-col w-40 mt-0;

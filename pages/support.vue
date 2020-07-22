@@ -178,11 +178,14 @@ export default {
 <style scoped>
 .btn {
   @apply inline-block border rounded border-nuxt-lightgreen text-nuxt-lightgreen py-2 px-4;
+
   &:hover {
     @apply text-white bg-nuxt-lightgreen;
   }
+
   &.btn-gray {
     @apply border-nuxt-gray text-nuxt-gray;
+
     &:hover {
       @apply bg-nuxt-gray text-white;
     }

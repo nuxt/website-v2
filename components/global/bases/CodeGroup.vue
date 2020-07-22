@@ -74,6 +74,7 @@ button {
 
 .highlight-underline {
   @apply bg-nuxt-lightgreen absolute;
+
   bottom: -2px;
   height: 2px;
   transition: left 150ms, width 150ms;

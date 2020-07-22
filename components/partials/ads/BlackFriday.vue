@@ -67,15 +67,19 @@ export default {
   background-repeat: no-repeat;
   background-size: cover;
 }
+
 .bg-deep-cove {
   background-color: #0d0751;
 }
+
 .pulse {
   animation: pulse 2s linear infinite;
 }
+
 .tada {
   animation: tada 3s linear infinite;
 }
+
 @keyframes pulse {
   from {
     transform: scale3d(1, 1, 1);
@@ -89,6 +93,7 @@ export default {
     transform: scale3d(1, 1, 1);
   }
 }
+
 @keyframes tada {
   from {
     transform: scale3d(1, 1, 1);

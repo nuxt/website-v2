@@ -423,19 +423,22 @@ export default {
 <style lang="scss" scoped>
 .company {
   .preview {
-    opacity: 0.5;
     filter: grayscale(100%);
+    opacity: 0.5;
     transition: all 250ms ease;
   }
+
   .original {
-    opacity: 0.5;
     filter: grayscale(100%);
+    opacity: 0.5;
     transition: all 250ms ease;
   }
+
   &:hover {
     .preview {
       opacity: 0;
     }
+
     .original {
       filter: grayscale(0%);
       opacity: 1;

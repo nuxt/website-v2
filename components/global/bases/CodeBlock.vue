@@ -23,6 +23,7 @@ export default {
 .code-block {
   display: none;
 }
+
 .code-block.active {
   display: block;
 }

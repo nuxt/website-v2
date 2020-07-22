@@ -63,56 +63,70 @@
 .cls-7 {
   fill: #fff;
 }
+
 .cls-2,
 .cls-4,
 .cls-5,
 .cls-7 {
   @apply stroke-nuxt-gray;
+
   /* stroke:#4550e5; */
   stroke-linejoin: round;
 }
+
 .cls-4 {
   fill: none;
 }
+
 .cls-4,
 .cls-5,
 .cls-7 {
   stroke-linecap: round;
 }
+
 .cls-5 {
   /* fill:#d6daff; */
   @apply fill-nuxt-green;
 }
+
 .cls-6 {
   /* fill:#d6daff; */
   @apply fill-nuxt-lightgreen;
 }
+
 @keyframes cloudLeft {
   0% {
     transform: translateX(-20px);
   }
+
   50% {
     transform: translateX(50%);
   }
+
   100% {
     transform: translateX(-20px);
   }
 }
+
 @keyframes cloudRight {
   0% {
     transform: translateX(0);
   }
+
   50% {
     transform: translateX(-50%);
   }
+
   100% {
     transform: translateX(0);
   }
 }
+
 .cls-2 {
-  position: absolute;
   animation: cloudLeft 25s infinite alternate linear;
+  position: absolute;
 }
+
 .cls-2-right {
   animation: cloudRight 20s infinite alternate linear;
 }

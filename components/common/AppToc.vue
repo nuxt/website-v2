@@ -51,9 +51,10 @@ export default {
 
 <style scoped>
 .affix {
-  top: 6rem;
   height: calc(100vh - 6rem);
+  top: 6rem;
 }
+
 li {
   list-style: none;
 }

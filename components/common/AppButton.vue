@@ -53,12 +53,15 @@ export default {
 <style lang="scss" scoped>
 .primary {
   @apply bg-primary-base text-white;
+
   &:hover {
     @apply bg-primary-light;
   }
 }
+
 .secondary {
   @apply bg-gray-200 text-nuxt-gray;
+
   &:hover {
     @apply bg-gray-300;
   }

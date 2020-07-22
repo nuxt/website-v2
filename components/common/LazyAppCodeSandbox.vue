@@ -29,7 +29,7 @@ export default {
 <style scoped>
 .codesandbox,
 .codesandbox iframe {
-  max-width: 1400px;
   height: 700px;
+  max-width: 1400px;
 }
 </style>

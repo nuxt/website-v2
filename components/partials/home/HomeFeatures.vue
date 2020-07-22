@@ -89,17 +89,18 @@ $grey: #606f7b;
       font-size: 1.35rem;
       font-weight: 700;
       margin: 0;
-      text-transform: uppercase;
       padding: 0;
       padding-bottom: 1.5rem;
+      text-transform: uppercase;
     }
+
     &__Description {
-      text-align: justify;
       color: $grey;
-      font-weight: 500;
-      margin: 0;
-      line-height: 1.7rem;
       font-size: 1rem;
+      font-weight: 500;
+      line-height: 1.7rem;
+      margin: 0;
+      text-align: justify;
     }
   }
 }

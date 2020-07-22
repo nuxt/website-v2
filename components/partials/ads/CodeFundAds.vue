@@ -44,34 +44,41 @@ export default {
 <style lang="scss">
 .CodeFund {
   @apply p-4 flex flex-col bg-gray-200 mt-4;
+
   @media (max-width: 1023px) {
     #cf {
-      width: 280px !important;
       margin: 1rem 0 !important;
+      width: 280px !important;
     }
+
     .cf-wrapper {
       height: 125px;
       position: relative;
     }
+
     .cf-img-wrapper {
-      float: left;
       display: block;
+      float: left;
     }
+
     .cf-text {
-      width: 155px;
       display: block;
       float: right;
       padding: 0.5rem 1rem;
       padding-right: 0;
+      width: 155px;
     }
+
     .cf-powered-by {
       @apply text-xs;
+
       display: block;
       float: right;
       text-align: right;
     }
   }
 }
+
 @screen lg {
   .CodeFund {
     @apply bg-white mt-0;

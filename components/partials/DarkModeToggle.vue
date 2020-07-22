@@ -94,6 +94,7 @@ button {
     transform: scaleY(0);
     // transform: translate3d(-100%, 10px, 0) rotate(-180deg) scale3d(0.5, 0.5, 0.5);
   }
+
   to {
     opacity: 1;
     transform: scaleY(1);
@@ -107,6 +108,7 @@ button {
     transform: scaleY(1);
     // transform: translate3d(0, 0, 0) rotate(0) scale3d(1, 1, 1);
   }
+
   to {
     opacity: 0;
     transform: scaleY(0);

@@ -229,27 +229,35 @@ export default {
 <style scoped>
 figure {
   @apply relative p-4 text-center text-gray-500 table w-full;
+
   &:hover {
     & .dimensions {
       @apply opacity-100;
+
       top: 10px;
     }
   }
+
   & img {
     @apply inline-block;
   }
+
   & figcaption {
     @apply pt-4;
   }
+
   & .dimensions {
     @apply font-normal absolute top-0 opacity-0;
+
     right: 20px;
-    transition-property: all;
     transition-duration: 0.3s;
+    transition-property: all;
   }
 }
+
 a {
   @apply text-nuxt-lightgreen font-normal;
+
   &:hover {
     @apply underline;
   }

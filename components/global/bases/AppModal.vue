@@ -87,30 +87,30 @@ export default {
 }
 
 .modal-mask {
-  position: fixed;
-  z-index: 9998;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.4);
   backdrop-filter: blur(18px);
+  background-color: rgba(0, 0, 0, 0.4);
+  height: 100%;
+  left: 0;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 9998;
 }
 
 .modal-container {
-  width: calc(100vw - 80px);
-  height: calc(100vh - 80px);
-  margin: 40px 40px;
-  padding: 20px 30px;
   background-color: #fff;
   border-radius: 8px;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.33);
+  height: calc(100vh - 80px);
+  margin: 40px;
+  padding: 20px 30px;
   transition: all 0.3s ease;
+  width: calc(100vw - 80px);
 }
 
 .modal-body {
-  margin: 0;
   display: flex;
+  margin: 0;
 }
 
 .modal-enter {

@@ -136,17 +136,19 @@ export default {
 <style lang="scss">
 .sponsor {
   & img {
-    opacity: 0.75;
     filter: grayscale(100%);
+    opacity: 0.75;
     transition: all 0.5s;
   }
+
   &:hover {
     & img {
-      opacity: 1;
       filter: grayscale(0%);
+      opacity: 1;
     }
   }
 }
+
 #sponsor-img {
   shape-outside: circle(49.5% at 90px 95px);
 }

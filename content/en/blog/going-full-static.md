@@ -49,7 +49,6 @@ Note: in this video we are using `nuxt export` which has been deprecated in favo
 - [Smarter `nuxt start`](#smarter-nuxt-start)
 - [Preview mode](#preview-mode)
 - [Commands](#commands)
-- [Notes](#notes)
   - [What to do next](#what-to-do-next)
 
 ## History
@@ -74,7 +73,7 @@ Note that it was possible to have full static support with [nuxt-payload-extract
 
 To improve the user experience as well as telling Nuxt that you want to export your application to static hosting, we are introducing a `target` option in your `nuxt.config.js`:
 
-```js
+```js{}[nuxt.config.js]
 export default {
   target: 'static' // default: 'server'
 }
@@ -121,8 +120,7 @@ This command is perfect to locally test your static application before pushing t
 
 We do support live preview out of the box to keep calling your API:
 
-```js
-// plugins/preview.client.js
+```js{}[plugins/preview.client.js]
 export default async function ({ query, enablePreview }) {
   if (query.preview) {
     enablePreview()

@@ -170,8 +170,7 @@ Nuxt allows **caching a certain number of pages** in the memory along with their
 
 For any of the above methods to work, we have to use the `keep-alive` prop in generic `<nuxt />` and `<nuxt-child`> components.
 
-```html
-<!-- layouts/default.vue -->
+```html{}[layouts/default.vue]
 <template>
   <div>
     <nuxt keep-alive />
@@ -183,8 +182,7 @@ In addition, we can pass `:keep-alive-props` to `<nuxt />` component to cache a 
 
 `:keep-alive-props` prop allow us to indicate the maximum number of pages that should be kept in the memory while we navigate elsewhere within the site.
 
-```html
-<!-- layouts/default.vue -->
+```html{}[layouts/default.vue]
 <nuxt keep-alive :keep-alive-props="{ max: 10 }" />
 ```
 

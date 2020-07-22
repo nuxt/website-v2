@@ -52,7 +52,7 @@ It injects a `$colorMode` helper with:
 
 You can work on an already created project or start a new one. For this example I have created a new project and added some dummy text to the index.vue file in the pages folder.
 
-```html
+```html{}[index.vue]
 <template>
   <h1>Testing color mode</h1>
 </template>
@@ -62,10 +62,22 @@ You can work on an already created project or start a new one. For this example 
 
 First of all you need to install the module as a dependency to your Nuxt.js project.
 
+<code-group>
+  <code-block label="Yarn" active>
+
 ```bash
-yarn add --dev @nuxtjs/color-mode
-# OR npm install --save-dev @nuxtjs/color-mode
+yarn add -D @nuxtjs/color-mode
 ```
+
+  </code-block>
+  <code-block label="NPM">
+
+```bash
+npm install --save-dev @nuxtjs/color-mode
+```
+
+  </code-block>
+</code-group>
 
 Then you need to add the module to the `buildModules` section of your nuxt.config.js file.
 
@@ -75,9 +87,7 @@ Then you need to add the module to the `buildModules` section of your nuxt.confi
 
 </base-alert>
 
-`nuxt.config.js`
-
-```javascript
+```javascript{}[nuxt.config.js]
 export default {
   buildModules: ['@nuxtjs/color-mode']
 }
@@ -95,9 +105,7 @@ If you using a version of Nuxt.js lower than 2.9.0 you will need to add it to th
 
 Now you need to add some styles to your mode classes. Let's add a `main.css` file in our assets folder. We will use CSS variables to set the root colour which will be light mode and then set the colours for dark and sepia mode. Then we can add some styles to our body and link tags.
 
-`assets/main.css`
-
-```css
+```css{}[assets/main.css]
 :root {
   --color: #243746;
   --color-primary: #158876;
@@ -137,9 +145,7 @@ a {
 
 In order to use this CSS file in our application we need to register it. We do this by adding a css property to our configuration file and adding the css file that we have just created.
 
-`nuxt.config.js`
-
-```js
+```js{}[nuxt.config.js]
 css: ['@/assets/main.css']
 ```
 
@@ -178,9 +184,7 @@ Obviously changing the mode in the dev tools is not what we want so let's create
 
 Let's create a component called `ColorModePicker` and we can add a list of colors. For now we can just print out the color from our v-for.
 
-`components/ColorModePicker.vue`
-
-```html
+```html{}[components/ColorModePicker.vue]
 <template>
   <div>
     <ul>
@@ -194,9 +198,7 @@ Let's create a component called `ColorModePicker` and we can add a list of color
 
 And in our data property let's return an array of colors for each mode.
 
-`components/ColorModePicker.vue`
-
-```html
+```html{}[components/ColorModePicker.vue]
 <script>
   export default {
     data() {
@@ -212,9 +214,7 @@ And in our data property let's return an array of colors for each mode.
 
 Let's import our component into our index.vue page so we can see what is happening.
 
-`pages/index.vue`
-
-```html
+```html{}[pages/index.vue]
 <template>
   <ColorModePicker />
 </template>
@@ -240,9 +240,7 @@ Then in our template we can add a click event that will make the `$colorMode.pre
 
 We can use our `$colorMode` helper that we get with the color-mode module. When the user clicks the `$colorMode.preference` will be set to the color coming from our data.
 
-`components/ColorModePicker.vue`
-
-```html
+```html{}[components/ColorModePicker.vue]
 <li
   v-for="color of colors"
   :key="color"
@@ -271,9 +269,7 @@ yarn add --dev @nuxtjs/svg
 
 Then we need to add it to your `nuxt.config.js` in the buildModules section which should already have the `@nuxtjs/color-mode` module.
 
-`nuxt.config.js`
-
-```js
+```js{}[nuxt.config.js]
 buildModules: ['@nuxtjs/svg', '@nuxtjs/color-mode']
 ```
 
@@ -281,9 +277,7 @@ buildModules: ['@nuxtjs/svg', '@nuxtjs/color-mode']
 
 We can now import these svg icons as components using the `?inline` query so that they are imported as inline svgs.
 
-`components/ColorModePicker.vue`
-
-```html
+```html{}[components/ColorModePicker.vue]
 <script>
   import IconSystem from '@/assets/icons/system.svg?inline'
   import IconLight from '@/assets/icons/light.svg?inline'
@@ -305,17 +299,13 @@ We can now import these svg icons as components using the `?inline` query so tha
 
 Now we can use a dynamic component which will check which icon to add depending on the colours in our data array. Lets replace the `{{color}}` text with this new component inside our `<li>`.
 
-`components/ColorModePicker.vue`
-
-```html
+```html{}[components/ColorModePicker.vue]
 <component :is="`icon-${color}`" />
 ```
 
 Let's move our click event from our `<li>` to our icon component.
 
-`components/ColorModePicker.vue`
-
-```html
+```html{}[components/ColorModePicker.vue]
 <component :is="`icon-${color}`" @click="$colorMode.preference = color" />
 ```
 
@@ -323,9 +313,7 @@ Let's move our click event from our `<li>` to our icon component.
 
 And let's add some styles so we can see our icons. We will use scoped styling and use the class feather. If you look into your svg files you will see that our svgs have the class of feather so we can use this class to style it. We will also add a preferred and selected class so we know which one has been selected and what is the preferred one.
 
-`components/ColorModePicker.vue`
-
-```html
+```html{}[components/ColorModePicker.vue]
 <style scoped>
   .feather {
     position: relative;
@@ -357,9 +345,7 @@ You won't see much difference right now except that the icons look a bit nicer b
 
 To do this we can create a method that will return the class we want. We can call our method `getClasses` and pass in the color as the parameter The two classes we want to return are preferred and selected. The preferred color should be equal to the `$colorMode.preference` and the selected color should be equal to the `$colorMode.value`. If the colorMode is unknown we can return an empty object.
 
-`components/ColorModePicker.vue`
-
-```js
+```js{}[components/ColorModePicker.vue]
 data () {
   return {
     colors: ['system', 'light', 'dark', 'sepia']
@@ -381,9 +367,7 @@ methods: {
 
 We can now add this class to our icon component. The class will call the getClasses method passing in the color we receive when we use the click event.
 
-`components/ColorModePicker.vue`
-
-```html
+```html{}[components/ColorModePicker.vue]
 <component
   :is="`icon-${color}`"
   @click="$colorMode.preference = color"
@@ -403,9 +387,7 @@ To avoid the flash, we have to guard any rendering path which depends on `$colo
 
 Let's create a ColorScheme component under our `<ul>` with a placeholder and a tag of `span`. Inside it we can add some text and display the `$colorMode.preference` which we receive from the color-mode module.
 
-`components/ColorModePicker.vue`
-
-```html
+```html{}[components/ColorModePicker.vue]
 <ColorScheme placeholder="..." tag="span">
   Color mode: <b>{{ $colorMode.preference }}</b>
 </ColorScheme>
@@ -419,9 +401,7 @@ You will now see in the browser that if you change the icon the text will appear
 
 We can improve this further by seeing when the preference is the system and adding another message that shows which value was detected.
 
-`components/ColorModePicker.vue`
-
-```html
+```html{}[components/ColorModePicker.vue]
 <ColorScheme placeholder="..." tag="span">
   Color mode: <b>{{ $colorMode.preference }}</b>
   <span v-if="$colorMode.preference === 'system'"
@@ -436,9 +416,7 @@ If you test it out in the browser you will see it's looking pretty good and we a
 
 We now just have to tidy up a few styles. Let's get rid of the dots from the `<ul>` and add some spacing and some style to our `<p>` tag.
 
-`components/ColorModePicker.vue`
-
-```css
+```css{}[components/ColorModePicker.vue]
 ul {
   list-style: none;
   padding: 0;
@@ -457,9 +435,7 @@ p {
 
 And in order to centre it we can wrap our ColorModePicker component in a div with the class of container.
 
-`pages/index.vue`
-
-```html
+```html{}[pages/index.vue]
 <div class="container">
   <ColorModePicker />
 </div>
@@ -467,9 +443,7 @@ And in order to centre it we can wrap our ColorModePicker component in a div wit
 
 And add the styles to the container class in our styles
 
-`pages/index.vue`
-
-```html
+```html{}[pages/index.vue]
 <style scoped>
   .container {
     text-align: center;

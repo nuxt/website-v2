@@ -61,8 +61,8 @@ To get started with content module we will first need to install the module usin
 yarn add @nuxt/content
 ```
 
-  </code-block>
-  <code-block label="NPM">
+</code-block>
+<code-block label="NPM">
 
 ```bash
 npm install @nuxt/content

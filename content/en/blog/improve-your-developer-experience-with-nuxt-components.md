@@ -76,9 +76,8 @@ It’s best if you setup this [sample project](https://github.com/Krutie/nuxt-co
 
 From Nuxt v2.13 onward, this module **will be available by default** when you create a new Nuxt project. However, you'll still need to activate it using `components: true` in `nuxt.config.js.`
 
-```js
+```js{}[nuxt.config.js]
 // For nuxt v2.13+
-// nuxt.config.js
 export default {
   components: true
 }
@@ -120,8 +119,7 @@ export default {
 
 Directory path as an object gets bit more interesting! **When path is given as an object, it becomes a required.**
 
-```js
-// nuxt.config.js
+```js{}[nuxt.config.js]
 export default {
   // Module options as an Array of Object
   components: [{ path: '~/components/ui-1/' }, { path: '~/components/ui-2/' }]
@@ -132,8 +130,7 @@ In addition to `path`, we can also define additional configuration to include, e
 
 For example, when components are imported using this module, their names are based on their filename. But you can `prefix` component names to preserve their filenames as they are and still be able to customise their component tags.
 
-```js
-// nuxt.config.js
+```js{}[nuxt.config.js]
 export default {
   // Module options as an Array of Object
   components: [
@@ -259,8 +256,7 @@ If you are using TypeScript, then `ts` & `tsx` extensions are supported by defau
 
 If additional extensions are required, you can specify additional extensions under Build Configuration in `nuxt.config.js`.
 
-```js
-// nuxt.config.js
+```js{}[nuxt.config.js]
 export default {
   /*
    ** Build configuration
@@ -331,9 +327,7 @@ It's important we highlight two similar features of Nuxt that ignore files just 
 - [.nuxtignore](https://nuxtjs.org/api/configuration-ignore/#-nuxtignore) also ignore files similar to `ignore` option, but `.nuxtignore` ignores files from `/pages`, `/layouts`, `/middleware` and `/store` . It's a dot-file that is defined in the project root. Read more about the [ignore property](https://nuxtjs.org/api/configuration-ignore/) on Nuxt docs.
 - [ignore](https://nuxtjs.org/api/configuration-ignore/#the-ignore-property) property, as well, let us define multiple glob-pattern to ignore matching files, like below.
 
-```js
-// nuxt.config.js
-
+```js{}[nuxt.config.js]
 export default {
   ignore: ['**/*.test.*']
 }
@@ -359,8 +353,7 @@ Components that aren't required immediately upon initial render - such as compon
 
 Lazy loading your components is super easy with this module. You can simply add `Lazy` prefix to the component tag when it's used in the template area.
 
-```html
-// pages/lazy-loading-example.vue
+```html{}[pages/lazy-loading-example.vue]
 <lazy-list v-else>
   <lazy-list-item v-for="(post, index) in posts" :key="`post-${index}`">
     {{ post.title }}
@@ -409,8 +402,7 @@ This way, components of this external library can take advantage of **automatic 
 
 And then you - as a user of this external library - can use `kru-components` as simple as a Nuxt module.
 
-```js
-// nuxt.config.js
+```js{}[nuxt.config.js]
 buildModules: [
  // Use Kru-components as Nuxt module
  "kru-components/src/nuxt",

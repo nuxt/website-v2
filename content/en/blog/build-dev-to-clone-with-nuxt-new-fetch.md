@@ -38,21 +38,22 @@ Here’s the high-level outline of how we will build our dev.to clone using `fet
 
 ## Table of Contents
 
-1. [DEV.TO API](#dev-to-api)
-2. [Setting up the Project](#setting-up-the-project)
-   1. [CSS Styles](#css-styles)
-   2. [UI Design](#ui-design)
-   3. [SVG icons](#svg-icons)
-   4. [Dependencies](#dependencies)
-3. [Developing the Application](#developing-the-application)
-   1. [URL structure](#url-structure)
-   2. [Caching requests with `keep-alive` and `activated` hook](#caching-requests-with-code-keep-alive-code-and-code-activated-code-hook)
-   3. [Using `fetch` in page components](#using-code-fetch-code-in-page-components)
-   4. [Reuse `fetch` with `this.$fetch()`](#reuse-code-fetch-code-with-code-this-fetch-code-)
-   5. [Applying placeholders with `$fetchState`](#applying-placeholders-with-code-fetchstate-code-)
-   6. [Using `fetch` in any other component 🔥](#using-code-fetch-code-in-any-other-component-)
-   7. [Error handling](#error-handling)
-4. [Conclusion](#conclusion)
+- [Table of Contents](#table-of-contents)
+- [DEV.TO API](#devto-api)
+- [Setting up the Project](#setting-up-the-project)
+  - [CSS Styles](#css-styles)
+  - [UI Design](#ui-design)
+  - [SVG icons](#svg-icons)
+  - [Dependencies](#dependencies)
+- [Developing the Application](#developing-the-application)
+  - [URL structure](#url-structure)
+  - [Caching requests with `keep-alive` and `activated` hook](#caching-requests-with-keep-alive-and-activated-hook)
+  - [Using `fetch` in page components](#using-fetch-in-page-components)
+  - [Reuse `fetch` with `this.$fetch()`](#reuse-fetch-with-thisfetch)
+  - [Applying placeholders with `$fetchState`](#applying-placeholders-with-fetchstate)
+  - [Using `fetch` in any other component 🔥](#using-fetch-in-any-other-component-)
+  - [Error handling](#error-handling)
+- [Conclusion](#conclusion)
 
 ## DEV.TO API
 
@@ -86,19 +87,45 @@ Let’s install necessary packages and discuss how we will build our app next.
 
 For styling we will use the most common CSS preprocessor Sass/SCSS and leverage Vue.js [Scoped CSS](https://vue-loader.vuejs.org/guide/scoped-css.html) feature, to keep our components styles incapsulated. To [use Sass/SCSS with Nuxt](/faq/pre-processors) run:
 
+<code-group>
+  <code-block label="Yarn" active>
+
+```bash
+yarn add sass sass-loader -D
 ```
-npm i -D sass sass-loader
+
+  </code-block>
+  <code-block label="NPM">
+
+```bash
+npm install sass sass-loader --save-dev
 ```
+
+  </code-block>
+</code-group>
 
 We also will use [@nuxtjs/style-resources](https://github.com/nuxt-community/style-resources-module) module that will help us to use our design tokens defined in SCSS variables in any Vue file without the necessity of using `@import` statements in each file.
 
+<code-group>
+  <code-block label="Yarn" active>
+
+```bash
+yarn add @nuxtjs/style-resources
 ```
-npm i -D @nuxtjs/style-resources
+
+  </code-block>
+  <code-block label="NPM">
+
+```bash
+npm install @nuxtjs/style-resources
 ```
+
+  </code-block>
+</code-group>
 
 Now tell Nuxt to use it by adding this code to `nuxt.config.js`
 
-```js
+```js{}[nuxt.config.js]
 buildModules: ['@nuxtjs/style-resources']
 ```
 
@@ -106,7 +133,7 @@ Read more about this module [here](https://github.com/nuxt-community/style-resou
 
 Let’s define our design tokens as SCSS variables, put them in `~/assets/styles/tokens.scss` and tell `@nuxtjs/style-resources` to load them by adding to `nuxt.config.js`
 
-```js
+```js{}[nuxt.config.js]
 styleResources: {
   scss: ['~/assets/styles/tokens.scss']
 }
@@ -126,13 +153,24 @@ I am not going to describe the styling aspect of this application in detail, but
 
 For SVG icons lets use [@nuxt/svg](https://github.com/nuxt-community/svg-module). This module allows us to import `.svg` files as inline SVG, while keeping SVG sources in single place and not polluting Vue template markup with loads of SVG code.
 
-```
-npm i -D @nuxtjs/svg
+<code-group>
+  <code-block label="Yarn" active>
+
+```bash
+yarn add @nuxtjs/svg -D
 ```
 
-`nuxt.config.js`
+  </code-block>
+  <code-block label="NPM">
 
-```js
+```bash
+npm install @nuxtjs/svg -D
+```
+
+  </code-block>
+</code-group>
+
+```js{}[nuxt.config.js]
 buildModules: ['@nuxtjs/svg', '@nuxtjs/style-resources']
 ```
 
@@ -145,27 +183,23 @@ To keep front-end app fast and simple we will use only two dependencies, both fr
 
 Let’s add them as Nuxt [plugins](https://nuxtjs.org/api/configuration-plugins#__layout), by creating two files.
 
-`vue-observe-visibility.client.js`:
-
-```js
+```js{}[vue-observe-visibility.client.js]
 import Vue from 'vue'
 import VueObserveVisibility from 'vue-observe-visibility'
 
 Vue.use(VueObserveVisibility)
 ```
 
-`vue-placeholders.js`:
-
-```js
+```js{}[vue-placeholders.js]
 import Vue from 'vue'
 import VueContentPlaceholders from 'vue-content-placeholders'
 
 Vue.use(VueContentPlaceholders)
 ```
 
-And add them to `nuxt.config.js`
+And add them to ``
 
-```js
+```js{}[nuxt.config.js]
 plugins: [
   '~/plugins/vue-placeholders.js',
   '~/plugins/vue-observe-visibility.client.js'
@@ -207,7 +241,7 @@ That’s all. Pretty simple, right?
 
 One of the coolest practical features of the new `fetch` is its ability to work with `keep-alive` directive to save `fetch` calls on pages you have already visited. Let’s apply this feature in `layouts/default.vue` layout like this.
 
-```html
+```html{}[layouts/default.vue]
 <template>
   <nuxt keep-alive />
 </template>
@@ -223,9 +257,7 @@ Let’s dive into the `fetch` feature itself.
 
 Currently as you can see from the [final result](https://dev-clone.nuxtjs.app/) we have 3 page components that basically reuse the same code — it’s the `index.vue`, `top.vue` and `t/_tag.vue` page components. They simply render a list of article preview cards.
 
-`index.vue`
-
-```html
+```html{}[index.vue]
 <template>
   <div class="page-wrapper">
     <div class="article-cards-wrapper">
@@ -265,7 +297,7 @@ Currently as you can see from the [final result](https://dev-clone.nuxtjs.app/) 
 
 Pay attention to this code block:
 
-```js
+```js{}[index.vue]
 async fetch() {
   const articles = await fetch(`https://dev.to/api/articles?tag=nuxt&state=rising&page=${this.currentPage}`).then((res) => res.json())
 
@@ -279,9 +311,7 @@ Also notice that the new `fetch` hook doesn’t serve just to dispatch Vuex stor
 
 Now let’s markup the `<article-card-block>` component which receives `article` prop and renders its data nicely.
 
-`ArticleCardBlock.vue`
-
-```html
+```html{}[ArticleCardBlock.vue]
 <template>
   <nuxt-link
     :to="{ name: 'username-article', params: { username: article.user.username, article: article.id } }"
@@ -353,9 +383,7 @@ It already should display a list of articles fetched from DEV.TO but it feels li
 
 To efficiently detect when to fetch the next page it’s better to use [Intersection Observer API](https://developer.mozilla.org/en-US/docs/Web/API/Intersection_Observer_API). For that we will use a previously installed Vue plugin called `vue-observe-visibility` which is basically a wrapper around this API and it will detect when an element is becoming visible or hidden on the page. This plugin provides us a possibility to use `v-observe-visibility` directive on any element, so let’s add it to last `<article-card-block>` component:
 
-`index.vue`
-
-```html
+```html{}[index.vue]
 <article-card-block
   v-for="(article, i) in articles"
   :key="article.id"
@@ -388,9 +416,7 @@ If you already applied code from the previous section and tried client-side navi
 
 Thanks to `$fetchState.pending` wisely provided by the `fetch` hook we can use this flag to display a placeholder when fetch is being called on client-side. `vue-content-placeholders` plugin will be used as a placeholder.
 
-`index.vue`
-
-```html
+```html{}[index.vue]
 <template>
   <div class="page-wrapper">
     <template v-if="$fetchState.pending">
@@ -434,7 +460,7 @@ This is probably the most interesting feature of the new `fetch` hook. **We can 
 
 To explore this great functionality let’s move to `_username/_article.vue` page component.
 
-```html
+```html{}[_username/_article.vue]
 <template>
   <div class="page-wrapper">
     <div class="article-content-wrapper">

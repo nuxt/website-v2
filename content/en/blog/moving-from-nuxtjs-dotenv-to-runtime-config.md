@@ -19,6 +19,7 @@ It's time to migrate from @nuxtjs/dotenv module to use our new runtime config wh
 - [Why we need webpack](#why-we-need-webpack)
 - [How environment variables work](#how-environment-variables-work)
 - [Introducing the Nuxt.js runtime config](#introducing-the-nuxtjs-runtime-config)
+  - [The new runtime config values are:](#the-new-runtime-config-values-are)
 - [Migrating to the Nuxt.js runtime config from @nuxtjs/dotenv](#migrating-to-the-nuxtjs-runtime-config-from-nuxtjsdotenv)
 - [Migrating to the Nuxt.js runtime config from the env property](#migrating-to-the-nuxtjs-runtime-config-from-the-env-property)
 - [The env property v runtime config](#the-env-property-v-runtime-config)
@@ -53,9 +54,7 @@ Values are read during build time and persisted in the webpack bundle. Therefore
 
 With Nuxt.js 2.13+ we have runtime config and built-in dotenv support providing better security and faster development! Two new options are added to your `nuxt.config.js` file which will allow passing runtime configuration which is then accessible using `$config` from the context. Despite the `env` option, runtime config is added to the Nuxt payload so there is no need to rebuild in order to update the runtime configuration when working in development or with Server-side rendering or single-page applications. Although for static sites you will still need to regenerate your site to see these changes.
 
-`nuxt.config.js`
-
-```js
+```js{}[nuxt.config.js]
 export default {
   publicRuntimeConfig: {},
   privateRuntimeConfig: {}
@@ -75,18 +74,14 @@ If you have the `@nuxtjs/dotenv` module installed then you can remove this modul
 
 If your `.env` file looks something like this:
 
-`.env`
-
-```
+```{}[.env]
 BASE_URL=https://nuxtjs.org
 API_SECRET=1234
 ```
 
 Then migrating it to the new runtime config would look something like:
 
-`nuxt.config.js`
-
-```js
+```js{}[nuxt.config.js]
 export default {
   publicRuntimeConfig: {
     baseURL: process.env.BASE_URL
@@ -99,9 +94,7 @@ export default {
 
 This can be simplified even further by using a default value instead of having to maintain the value in both the runtime config and the `.env` file when using non-sensitive values.
 
-`nuxt.config.js`
-
-```js
+```js{}[nuxt.config.js]
 export default {
   publicRuntimeConfig: {
     baseURL: process.env.BASE_URL || 'https://nuxtjs.org'
@@ -111,9 +104,7 @@ export default {
 
 Also this can be a better replacement for `.env.example` and the default values can point to staging keys/configs.
 
-`nuxt.config.js`
-
-```js
+```js{}[nuxt.config.js]
 export default {
   publicRuntimeConfig: {
     baseURL: 'https://dev.nuxtjs.org' || 'https://nuxtjs.org'
@@ -127,9 +118,7 @@ If you have your env variables stored in your nuxt.config then you can migrate t
 
 If your env variables in your nuxt.config look like this:
 
-`nuxt.config.js`
-
-```js
+```js{}[nuxt.config.js]
 export default {
   env: {
     BASE_URL: 'https://nuxtjs.org',
@@ -140,9 +129,7 @@ export default {
 
 Then migrating it to the new runtime config would look something like:
 
-`nuxt.config.js`
-
-```js
+```js{}[nuxt.config.js]
 export default {
   publicRuntimeConfig: {
     baseURL: 'https://nuxtjs.org'
@@ -163,22 +150,18 @@ You can still use the env property and it is still useful for env variables that
 
 Once you have stored your values in the public or private runtime config in your `nuxt.config` file you can then access these values anywhere by using the context in your pages, store, components and plugins by using `this.$config` or `context.$config instead.`
 
-`pages/index.vue`
-
-```js
+```html{}[pages/index.vue]
 <script>
-		asyncData ({ $config: { baseURL } }) {
-			const posts = await fetch(`${baseURL}/posts`)
+  asyncData ({ $config: { baseURL } }) {
+  	const posts = await fetch(`${baseURL}/posts`)
       .then(res => res.json())
-		}
+  }
 </script>
 ```
 
 And inside your templates you can access it directly using `{{ $config.* }}`
 
-`pages/index.vue`
-
-```html
+```html{}[pages/index.vue]
 <template>
   <p>Our Url is: {{ $config.baseURL}}</p>
 </template>
@@ -228,15 +211,11 @@ You can change this by using \$config instead
 
 Expand for run time config happens only if there is already a key.
 
-`.env`
-
-```
+```bash{}[.env]
 API_SECRET=1234
 ```
 
-`nuxt.config.js`
-
-```js
+```js{}[nuxt.config.js]
 export default {
   privateRuntimeConfig: {
     API_SECRET: ''
@@ -246,16 +225,12 @@ export default {
 
 Interpolation allows nesting env vars.
 
-`.env`
-
-```
+```bash{}[.env]
 BASE_URL=/api
 PUBLIC_URL=https://nuxtjs.org
 ```
 
-`nuxt.config.js`
-
-```js
+```js{}[nuxt.config.js]
 export default {
   privateRuntimeConfig: {
     baseURL: '${PUBLIC_URL}${BASE_URL}'

@@ -313,7 +313,7 @@
   }
   & > pre {
     & > .copy {
-      @apply hidden absolute right-0 bottom-0 shadow-lg px-3 py-1 text-white text-sm uppercase bg-gray-800 font-sans rounded-md bg-transparent border border-white tracking-wide font-semibold mr-3 mb-3;
+      @apply hidden absolute right-0 bottom-0 shadow-lg px-1 py-0 text-white text-xs uppercase bg-gray-800 font-sans rounded-md bg-transparent border border-white tracking-wide font-semibold mr-3 mb-3;
       &:hover {
         @apply bg-gray-700;
       }

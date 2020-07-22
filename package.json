@@ -82,7 +82,7 @@
   },
   "husky": {
     "hooks": {
-      "pre-commit": "cross-env PRE_COMMIT=true lint-staged -r"
+      "pre-commit": "cross-env PRE_COMMIT=true lint-staged"
     }
   },
   "repository": {

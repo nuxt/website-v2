@@ -69,44 +69,44 @@
 </template>
 
 <script>
-  import sortBy from 'lodash.sortby'
-  import ChevronDownIcon from '~/assets/icons/chevron-down.svg?inline'
-  import ChevronRightIcon from '~/assets/icons/chevron-right.svg?inline'
+import sortBy from 'lodash.sortby'
+import ChevronDownIcon from '~/assets/icons/chevron-down.svg?inline'
+import ChevronRightIcon from '~/assets/icons/chevron-right.svg?inline'
 
-  export default {
-    components: {
-      ChevronDownIcon,
-      ChevronRightIcon
-    },
-    props: {
-      links: {
-        type: Object,
-        default: () => []
-      }
-    },
-    data() {
-      return { current: 0, setInter: null, showNav: false }
-    },
-    computed: {
-      sortedLinks() {
-        const links = {}
-        sortBy(Object.keys(this.links), link => {
-          return Object.keys(this.$i18n.t('content.guides')).indexOf(link)
-        }).forEach(key => {
-          links[key] = this.links[key]
-        })
-        return links
-      }
-    },
-    methods: {
-      toLink(group, link) {
-        return this.localePath({
-          name: 'guides-book-slug',
-          params: { book: group, slug: link.slug }
-        })
-      }
+export default {
+  components: {
+    ChevronDownIcon,
+    ChevronRightIcon
+  },
+  props: {
+    links: {
+      type: Object,
+      default: () => []
+    }
+  },
+  data() {
+    return { current: 0, setInter: null, showNav: false }
+  },
+  computed: {
+    sortedLinks() {
+      const links = {}
+      sortBy(Object.keys(this.links), link => {
+        return Object.keys(this.$i18n.t('content.guides')).indexOf(link)
+      }).forEach(key => {
+        links[key] = this.links[key]
+      })
+      return links
+    }
+  },
+  methods: {
+    toLink(group, link) {
+      return this.localePath({
+        name: 'guides-book-slug',
+        params: { book: group, slug: link.slug }
+      })
     }
   }
+}
 </script>
 
 <style lang="scss" scoped></style>

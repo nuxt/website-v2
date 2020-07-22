@@ -86,27 +86,27 @@
 </template>
 
 <script>
-  export default {
-    props: {
-      post: {
-        type: Object,
-        required: true
-      }
+export default {
+  props: {
+    post: {
+      type: Object,
+      required: true
+    }
+  },
+  methods: {
+    formatDateByLocale(d) {
+      const currentLocale = this.$i18n.locale || 'en'
+      const options = { year: 'numeric', month: 'long', day: 'numeric' }
+      return new Date(d).toLocaleDateString(currentLocale, options)
     },
-    methods: {
-      formatDateByLocale(d) {
-        const currentLocale = this.$i18n.locale || 'en'
-        const options = { year: 'numeric', month: 'long', day: 'numeric' }
-        return new Date(d).toLocaleDateString(currentLocale, options)
-      },
-      whyNavigationDoesntWork() {
-        this.$router.push(
-          this.localePath({
-            name: 'blog-slug',
-            params: { slug: this.post.slug }
-          })
-        )
-      }
+    whyNavigationDoesntWork() {
+      this.$router.push(
+        this.localePath({
+          name: 'blog-slug',
+          params: { slug: this.post.slug }
+        })
+      )
     }
   }
+}
 </script>

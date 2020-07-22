@@ -78,26 +78,26 @@
 </template>
 
 <script>
-  export default {
-    props: {
-      docLink: {
-        type: String,
-        required: false,
-        default: ''
-      },
-      contributors: {
-        type: Array,
-        required: false,
-        default: () => []
-      }
+export default {
+  props: {
+    docLink: {
+      type: String,
+      required: false,
+      default: ''
     },
-    computed: {
-      baseLink() {
-        return '/' + this.$route.params.section
-      },
-      lastPathPart() {
-        return this.$route.path.replace(/\/$/, '').split('/')[2] || ''
-      }
+    contributors: {
+      type: Array,
+      required: false,
+      default: () => []
+    }
+  },
+  computed: {
+    baseLink() {
+      return '/' + this.$route.params.section
+    },
+    lastPathPart() {
+      return this.$route.path.replace(/\/$/, '').split('/')[2] || ''
     }
   }
+}
 </script>

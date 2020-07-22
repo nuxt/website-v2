@@ -83,109 +83,109 @@
 </template>
 
 <script>
-  import sortBy from 'lodash.sortby'
+import sortBy from 'lodash.sortby'
 
-  import ListIcon from '~/assets/images/list.svg?inline'
-  import TimesIcon from '~/assets/icons/times.svg?inline'
-  import ChevronDownIcon from '~/assets/icons/chevron-down.svg?inline'
-  import ChevronRightIcon from '~/assets/icons/chevron-right.svg?inline'
+import ListIcon from '~/assets/images/list.svg?inline'
+import TimesIcon from '~/assets/icons/times.svg?inline'
+import ChevronDownIcon from '~/assets/icons/chevron-down.svg?inline'
+import ChevronRightIcon from '~/assets/icons/chevron-right.svg?inline'
 
-  export default {
-    components: {
-      ListIcon,
-      TimesIcon,
-      ChevronDownIcon,
-      ChevronRightIcon
-    },
-    props: {
-      links: {
-        type: Object,
-        default: () => []
+export default {
+  components: {
+    ListIcon,
+    TimesIcon,
+    ChevronDownIcon,
+    ChevronRightIcon
+  },
+  props: {
+    links: {
+      type: Object,
+      default: () => []
+    }
+  },
+  data() {
+    return {
+      show: false
+    }
+  },
+  computed: {
+    sortedLinks() {
+      const links = {}
+      sortBy(Object.keys(this.links), link => {
+        return Object.keys(this.$i18n.t('content.guides')).indexOf(link)
+      }).forEach(key => {
+        links[key] = this.links[key]
+      })
+      return links
+    }
+  },
+  methods: {
+    clickOutsideHandler() {
+      if (this.show) {
+        this.show = false
       }
     },
-    data() {
-      return {
-        show: false
-      }
-    },
-    computed: {
-      sortedLinks() {
-        const links = {}
-        sortBy(Object.keys(this.links), link => {
-          return Object.keys(this.$i18n.t('content.guides')).indexOf(link)
-        }).forEach(key => {
-          links[key] = this.links[key]
-        })
-        return links
-      }
-    },
-    methods: {
-      clickOutsideHandler() {
-        if (this.show) {
-          this.show = false
-        }
-      },
-      toLink(group, link) {
-        return this.localePath({
-          name: 'guides-book-slug',
-          params: { book: group, slug: link.slug }
-        })
-      }
+    toLink(group, link) {
+      return this.localePath({
+        name: 'guides-book-slug',
+        params: { book: group, slug: link.slug }
+      })
     }
   }
+}
 </script>
 
 <style lang="scss" scoped>
-  .header_mobile_aside {
-    top: theme('spacing.16');
-    @screen lg {
-      top: theme('spacing.24');
-    }
-    bottom: theme('spacing.16');
-    transform: translateX(calc(-100% - 1px));
-    transition-property: transform;
-    transition-duration: 0.35s;
-    // transition-timing-function: cubic-bezier(0.23, 1, 0.32, 1);
-    transition-timing-function: theme(
-      'transitionTimingFunction.ease-in-out-material-sharp'
-    );
+.header_mobile_aside {
+  top: theme('spacing.16');
+  @screen lg {
+    top: theme('spacing.24');
   }
+  bottom: theme('spacing.16');
+  transform: translateX(calc(-100% - 1px));
+  transition-property: transform;
+  transition-duration: 0.35s;
+  // transition-timing-function: cubic-bezier(0.23, 1, 0.32, 1);
+  transition-timing-function: theme(
+    'transitionTimingFunction.ease-in-out-material-sharp'
+  );
+}
 
-  .header_mobile_aside--open {
+.header_mobile_aside--open {
+  transform: translateX(0px);
+  transition-delay: 0s;
+  & .header_mobile_aside_group {
     transform: translateX(0px);
-    transition-delay: 0s;
-    & .header_mobile_aside_group {
-      transform: translateX(0px);
-    }
   }
+}
 
-  .content-wrapper {
-    margin-left: auto;
-    padding-left: 1rem;
-    @screen sm {
-      max-width: calc(theme('screens.sm') / 2);
-    }
-    @screen md {
-      max-width: calc(theme('screens.md') / 2);
-    }
+.content-wrapper {
+  margin-left: auto;
+  padding-left: 1rem;
+  @screen sm {
+    max-width: calc(theme('screens.sm') / 2);
   }
+  @screen md {
+    max-width: calc(theme('screens.md') / 2);
+  }
+}
 
-  button {
-    outline: none;
-  }
+button {
+  outline: none;
+}
 
-  .bookmark-button {
-    top: 1rem;
-    right: 0;
-    transform: translateX(100%);
-    border-radius: 0 9999px 9999px 0;
-    box-shadow: 4px 2px 4px rgba(0, 0, 0, 0.101562);
-  }
+.bookmark-button {
+  top: 1rem;
+  right: 0;
+  transform: translateX(100%);
+  border-radius: 0 9999px 9999px 0;
+  box-shadow: 4px 2px 4px rgba(0, 0, 0, 0.101562);
+}
 
-  .inner-button {
-    top: 1rem;
-    right: 1rem;
-    border-radius: 100%;
-    box-shadow: 4px 2px 4px rgba(0, 0, 0, 0.101562);
-  }
+.inner-button {
+  top: 1rem;
+  right: 1rem;
+  border-radius: 100%;
+  box-shadow: 4px 2px 4px rgba(0, 0, 0, 0.101562);
+}
 </style>

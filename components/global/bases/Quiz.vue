@@ -52,64 +52,64 @@
     >
       Reset
     </button>
-    <div v-if="score !== null"> {{ score }} / {{ questions.length }} </div>
+    <div v-if="score !== null">{{ score }} / {{ questions.length }}</div>
   </div>
 </template>
 
 <script>
-  export default {
-    props: {
-      questions: {
-        type: Array,
-        required: true
-      }
-    },
-    data() {
-      return {
-        score: null,
-        answers: {},
-        showQuiz: false
-      }
-    },
-    computed: {
-      isSubmitted() {
-        const answers = Object.entries(this.answers) || []
+export default {
+  props: {
+    questions: {
+      type: Array,
+      required: true
+    }
+  },
+  data() {
+    return {
+      score: null,
+      answers: {},
+      showQuiz: false
+    }
+  },
+  computed: {
+    isSubmitted() {
+      const answers = Object.entries(this.answers) || []
 
-        return this.score !== null && answers.length === this.questions.length
-      },
-      buttonDisabled() {
-        const answers = Object.entries(this.answers) || []
-        return answers.length !== this.questions.length
-      }
+      return this.score !== null && answers.length === this.questions.length
     },
-    watch: {
-      $route(to, from) {
-        this.score = null
-        this.answers = {}
-      }
-    },
-    methods: {
-      calcScore() {
-        const answers = Object.entries(this.answers) || []
-        let correctAnswers = 0
+    buttonDisabled() {
+      const answers = Object.entries(this.answers) || []
+      return answers.length !== this.questions.length
+    }
+  },
+  watch: {
+    $route(to, from) {
+      this.score = null
+      this.answers = {}
+    }
+  },
+  methods: {
+    calcScore() {
+      const answers = Object.entries(this.answers) || []
+      let correctAnswers = 0
 
-        for (const [key, value] of answers) {
-          const question = this.shuffleQuestions[key]
-          if (value === question.correctAnswer) {
-            correctAnswers += 1
-          }
+      for (const [key, value] of answers) {
+        const question = this.shuffleQuestions[key]
+        if (value === question.correctAnswer) {
+          correctAnswers += 1
         }
-        return correctAnswers
-      },
-      showScore() {
-        this.score = this.calcScore()
-      },
-      resetScore() {
-        this.score = null
-        this.answers = {}
       }
+      return correctAnswers
+    },
+    showScore() {
+      this.score = this.calcScore()
+    },
+    resetScore() {
+      this.score = null
+      this.answers = {}
     }
   }
+}
 </script>
 
 <style scoped></style>

@@ -58,43 +58,43 @@
 </template>
 
 <script>
-  export default {
-    data() {
-      return {
-        email: '',
-        subscribedEmail: '',
-        pending: false,
-        subscribed: false,
-        error: null
+export default {
+  data() {
+    return {
+      email: '',
+      subscribedEmail: '',
+      pending: false,
+      subscribed: false,
+      error: null
+    }
+  },
+  methods: {
+    async subscribe() {
+      if (!this.email.trim()) {
+        return
       }
-    },
-    methods: {
-      async subscribe() {
-        if (!this.email.trim()) {
-          return
-        }
-        this.error = null
-        this.pending = true
-        try {
-          await new Promise(resolve => setTimeout(resolve, 400))
-          await this.$http.$post(`${process.env.NUXT_API}/newsletter`, {
-            email: this.email
-          })
-          this.subscribedEmail = this.email
-          this.subscribed = true
-          this.pending = false
-        } catch (err) {
-          this.pending = false
-          if (err.response) {
-            const { code } = await err.response.json()
-            if (code === 'member-exists') {
-              this.error = 'You are already registered.'
-              return
-            }
+      this.error = null
+      this.pending = true
+      try {
+        await new Promise(resolve => setTimeout(resolve, 400))
+        await this.$http.$post(`${process.env.NUXT_API}/newsletter`, {
+          email: this.email
+        })
+        this.subscribedEmail = this.email
+        this.subscribed = true
+        this.pending = false
+      } catch (err) {
+        this.pending = false
+        if (err.response) {
+          const { code } = await err.response.json()
+          if (code === 'member-exists') {
+            this.error = 'You are already registered.'
+            return
           }
-          this.error = 'Unknown error'
         }
+        this.error = 'Unknown error'
       }
     }
   }
+}
 </script>

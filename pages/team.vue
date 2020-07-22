@@ -108,156 +108,156 @@
 </template>
 
 <script>
-  import TwitterIcon from '~/assets/icons/twitter.svg?inline'
-  import GithubIcon from '~/assets/icons/github.svg?inline'
-  import WebsiteIcon from '~/assets/icons/link.svg?inline'
-  import TeamIllustration from '~/assets/illustrations/team.svg?inline'
+import TwitterIcon from '~/assets/icons/twitter.svg?inline'
+import GithubIcon from '~/assets/icons/github.svg?inline'
+import WebsiteIcon from '~/assets/icons/link.svg?inline'
+import TeamIllustration from '~/assets/illustrations/team.svg?inline'
 
-  export default {
-    components: {
-      TwitterIcon,
-      GithubIcon,
-      WebsiteIcon,
-      TeamIllustration
-    },
-    data() {
-      return {
-        core: [
-          {
-            name: 'Sébastien Chopin',
-            city: 'Bordeaux, France',
-            github: 'Atinux',
-            twitter: 'Atinux',
-            website: 'https://atinux.com',
-            work: {
-              role: 'Creator',
-              org: 'NuxtJS',
-              orgUrl: 'https://nuxtjs.org'
-            }
-          },
-          {
-            name: 'Alexandre Chopin',
-            city: 'Bordeaux, France',
-            github: 'alexchopin',
-            twitter: 'iamnuxt',
-            website: 'https://alexchopin.com',
-            work: {
-              role: 'Design',
-              org: 'NuxtJS',
-              orgUrl: 'https://nuxtjs.org'
-            }
-          },
-          {
-            name: 'Pooya Parsa',
-            alias: 'پویا پارسا',
-            city: 'Amsterdam, Netherlands',
-            github: 'pi0',
-            twitter: '_pi0_',
-            work: {
-              role: 'Architect',
-              org: 'NuxtJS',
-              orgUrl: 'https://nuxtjs.org'
-            }
-          },
-          {
-            name: 'Clark Du',
-            alias: '杜欣',
-            city: 'Dublin, Ireland',
-            github: 'clarkdo',
-            twitter: 'ClarkDu_',
-            work: {
-              role: 'Core Expert',
-              org: 'NuxtJS',
-              orgUrl: 'https://nuxtjs.org'
-            }
-          },
-          {
-            name: 'Alexander Lichter',
-            city: 'Dresden, Germany',
-            github: 'manniL',
-            twitter: 'TheAlexLichter',
-            website: 'https://blog.lichter.io',
-            work: {
-              role: 'Community',
-              org: 'NuxtJS',
-              orgUrl: 'https://nuxtjs.org'
-            }
-          },
-          {
-            name: 'Jonas Galvez',
-            city: 'Barretos, Brazil',
-            github: 'galvez',
-            twitter: 'anothergalvez',
-            website: 'https://hire.jonasgalvez.com.br',
-            work: {
-              role: 'Creator',
-              org: 'NuxtPress',
-              orgUrl: 'https://nuxt.press'
-            }
-          },
-          {
-            name: 'Dmitry Molotkov',
-            alias: 'Дзмітрый Малаткоў',
-            city: 'Gomel, Belarus',
-            github: 'aldarund',
-            twitter: 'aldarund',
-            work: {
-              role: 'Answer Machine',
-              org: 'NuxtJS',
-              orgUrl:
-                'https://stackoverflow.com/search?q=user%3A239354+%5Bnuxt.js%5D'
-            }
-          },
-          {
-            name: 'Kevin Marrec',
-            city: 'Rennes, France',
-            github: 'kevinmarrec',
-            twitter: 'K_Marrec',
-            website: 'https://marrec.io',
-            work: {
-              role: 'Creator',
-              org: 'Nuxt TS',
-              orgUrl: 'https://typescript.nuxtjs.org'
-            }
-          },
-          {
-            name: 'Pim',
-            city: 'The Netherlands',
-            github: 'pimlie',
-            work: {
-              role: 'Hacker',
-              org: 'NuxtJS',
-              orgUrl: 'https://nuxtjs.org'
-            }
+export default {
+  components: {
+    TwitterIcon,
+    GithubIcon,
+    WebsiteIcon,
+    TeamIllustration
+  },
+  data() {
+    return {
+      core: [
+        {
+          name: 'Sébastien Chopin',
+          city: 'Bordeaux, France',
+          github: 'Atinux',
+          twitter: 'Atinux',
+          website: 'https://atinux.com',
+          work: {
+            role: 'Creator',
+            org: 'NuxtJS',
+            orgUrl: 'https://nuxtjs.org'
           }
-        ]
-      }
-    },
-    head() {
-      const title = 'The NuxtJS Team'
-      const description =
-        'NuxtJS has a very active and engaged team that is constantly striving to push Nuxt forward.'
+        },
+        {
+          name: 'Alexandre Chopin',
+          city: 'Bordeaux, France',
+          github: 'alexchopin',
+          twitter: 'iamnuxt',
+          website: 'https://alexchopin.com',
+          work: {
+            role: 'Design',
+            org: 'NuxtJS',
+            orgUrl: 'https://nuxtjs.org'
+          }
+        },
+        {
+          name: 'Pooya Parsa',
+          alias: 'پویا پارسا',
+          city: 'Amsterdam, Netherlands',
+          github: 'pi0',
+          twitter: '_pi0_',
+          work: {
+            role: 'Architect',
+            org: 'NuxtJS',
+            orgUrl: 'https://nuxtjs.org'
+          }
+        },
+        {
+          name: 'Clark Du',
+          alias: '杜欣',
+          city: 'Dublin, Ireland',
+          github: 'clarkdo',
+          twitter: 'ClarkDu_',
+          work: {
+            role: 'Core Expert',
+            org: 'NuxtJS',
+            orgUrl: 'https://nuxtjs.org'
+          }
+        },
+        {
+          name: 'Alexander Lichter',
+          city: 'Dresden, Germany',
+          github: 'manniL',
+          twitter: 'TheAlexLichter',
+          website: 'https://blog.lichter.io',
+          work: {
+            role: 'Community',
+            org: 'NuxtJS',
+            orgUrl: 'https://nuxtjs.org'
+          }
+        },
+        {
+          name: 'Jonas Galvez',
+          city: 'Barretos, Brazil',
+          github: 'galvez',
+          twitter: 'anothergalvez',
+          website: 'https://hire.jonasgalvez.com.br',
+          work: {
+            role: 'Creator',
+            org: 'NuxtPress',
+            orgUrl: 'https://nuxt.press'
+          }
+        },
+        {
+          name: 'Dmitry Molotkov',
+          alias: 'Дзмітрый Малаткоў',
+          city: 'Gomel, Belarus',
+          github: 'aldarund',
+          twitter: 'aldarund',
+          work: {
+            role: 'Answer Machine',
+            org: 'NuxtJS',
+            orgUrl:
+              'https://stackoverflow.com/search?q=user%3A239354+%5Bnuxt.js%5D'
+          }
+        },
+        {
+          name: 'Kevin Marrec',
+          city: 'Rennes, France',
+          github: 'kevinmarrec',
+          twitter: 'K_Marrec',
+          website: 'https://marrec.io',
+          work: {
+            role: 'Creator',
+            org: 'Nuxt TS',
+            orgUrl: 'https://typescript.nuxtjs.org'
+          }
+        },
+        {
+          name: 'Pim',
+          city: 'The Netherlands',
+          github: 'pimlie',
+          work: {
+            role: 'Hacker',
+            org: 'NuxtJS',
+            orgUrl: 'https://nuxtjs.org'
+          }
+        }
+      ]
+    }
+  },
+  head() {
+    const title = 'The NuxtJS Team'
+    const description =
+      'NuxtJS has a very active and engaged team that is constantly striving to push Nuxt forward.'
 
-      return {
-        title,
-        meta: [
-          { hid: 'description', name: 'description', content: description },
-          // Open Graph
-          { hid: 'og:title', property: 'og:title', content: title },
-          {
-            hid: 'og:description',
-            property: 'og:description',
-            content: description
-          },
-          // Twitter Card
-          { hid: 'twitter:title', name: 'twitter:title', content: title },
-          {
-            hid: 'twitter:description',
-            name: 'twitter:description',
-            content: description
-          }
-        ]
-      }
+    return {
+      title,
+      meta: [
+        { hid: 'description', name: 'description', content: description },
+        // Open Graph
+        { hid: 'og:title', property: 'og:title', content: title },
+        {
+          hid: 'og:description',
+          property: 'og:description',
+          content: description
+        },
+        // Twitter Card
+        { hid: 'twitter:title', name: 'twitter:title', content: title },
+        {
+          hid: 'twitter:description',
+          name: 'twitter:description',
+          content: description
+        }
+      ]
     }
   }
+}
 </script>

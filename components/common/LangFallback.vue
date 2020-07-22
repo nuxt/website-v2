@@ -9,15 +9,15 @@
 </template>
 
 <script>
-  export default {
-    props: {
-      docLink: {
-        type: String,
-        default: ''
-      },
-      langFallback: {
-        type: Boolean
-      }
+export default {
+  props: {
+    docLink: {
+      type: String,
+      default: ''
+    },
+    langFallback: {
+      type: Boolean
     }
   }
+}
 </script>

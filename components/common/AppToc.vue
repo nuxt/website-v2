@@ -39,22 +39,22 @@
 </template>
 
 <script>
-  export default {
-    props: {
-      toc: {
-        type: Array,
-        required: true
-      }
+export default {
+  props: {
+    toc: {
+      type: Array,
+      required: true
     }
   }
+}
 </script>
 
 <style scoped>
-  .affix {
-    top: 6rem;
-    height: calc(100vh - 6rem);
-  }
-  li {
-    list-style: none;
-  }
+.affix {
+  top: 6rem;
+  height: calc(100vh - 6rem);
+}
+li {
+  list-style: none;
+}
 </style>

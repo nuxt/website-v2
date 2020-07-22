@@ -132,60 +132,60 @@
 </template>
 
 <script>
-  import AngleDoubleRightIcon from '~/assets/icons/angle-double-right.svg?inline'
-  import InboxInIcon from '~/assets/icons/inbox-in.svg?inline'
-  import CommentsIcon from '~/assets/icons/comments.svg?inline'
-  import TechnicalSupportIllustration from '~/assets/illustrations/technical-support.svg?inline'
-  import SupportIllustration from '~/assets/illustrations/support.svg?inline'
+import AngleDoubleRightIcon from '~/assets/icons/angle-double-right.svg?inline'
+import InboxInIcon from '~/assets/icons/inbox-in.svg?inline'
+import CommentsIcon from '~/assets/icons/comments.svg?inline'
+import TechnicalSupportIllustration from '~/assets/illustrations/technical-support.svg?inline'
+import SupportIllustration from '~/assets/illustrations/support.svg?inline'
 
-  export default {
-    components: {
-      SupportIllustration,
-      AngleDoubleRightIcon,
-      CommentsIcon,
-      InboxInIcon,
-      TechnicalSupportIllustration
-    },
-    head() {
-      const title = 'The NuxtJS Support'
-      const description =
-        'Our core team now offers official consulting services for your NuxtJS applications.'
+export default {
+  components: {
+    SupportIllustration,
+    AngleDoubleRightIcon,
+    CommentsIcon,
+    InboxInIcon,
+    TechnicalSupportIllustration
+  },
+  head() {
+    const title = 'The NuxtJS Support'
+    const description =
+      'Our core team now offers official consulting services for your NuxtJS applications.'
 
-      return {
-        title,
-        meta: [
-          { hid: 'description', name: 'description', content: description },
-          // Open Graph
-          { hid: 'og:title', property: 'og:title', content: title },
-          {
-            hid: 'og:description',
-            property: 'og:description',
-            content: description
-          },
-          // Twitter Card
-          { hid: 'twitter:title', name: 'twitter:title', content: title },
-          {
-            hid: 'twitter:description',
-            name: 'twitter:description',
-            content: description
-          }
-        ]
-      }
+    return {
+      title,
+      meta: [
+        { hid: 'description', name: 'description', content: description },
+        // Open Graph
+        { hid: 'og:title', property: 'og:title', content: title },
+        {
+          hid: 'og:description',
+          property: 'og:description',
+          content: description
+        },
+        // Twitter Card
+        { hid: 'twitter:title', name: 'twitter:title', content: title },
+        {
+          hid: 'twitter:description',
+          name: 'twitter:description',
+          content: description
+        }
+      ]
     }
   }
+}
 </script>
 
 <style scoped>
-  .btn {
-    @apply inline-block border rounded border-nuxt-lightgreen text-nuxt-lightgreen py-2 px-4;
+.btn {
+  @apply inline-block border rounded border-nuxt-lightgreen text-nuxt-lightgreen py-2 px-4;
+  &:hover {
+    @apply text-white bg-nuxt-lightgreen;
+  }
+  &.btn-gray {
+    @apply border-nuxt-gray text-nuxt-gray;
     &:hover {
-      @apply text-white bg-nuxt-lightgreen;
-    }
-    &.btn-gray {
-      @apply border-nuxt-gray text-nuxt-gray;
-      &:hover {
-        @apply bg-nuxt-gray text-white;
-      }
+      @apply bg-nuxt-gray text-white;
     }
   }
+}
 </style>

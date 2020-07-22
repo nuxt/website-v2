@@ -32,35 +32,35 @@
 </template>
 
 <script>
-  export default {
-    props: {
-      to: {
-        type: [String, Object],
-        default: null
-      },
-      href: {
-        type: String,
-        default: ''
-      },
-      variant: {
-        type: String,
-        default: 'primary'
-      }
+export default {
+  props: {
+    to: {
+      type: [String, Object],
+      default: null
+    },
+    href: {
+      type: String,
+      default: ''
+    },
+    variant: {
+      type: String,
+      default: 'primary'
     }
   }
+}
 </script>
 
 <style lang="scss" scoped>
-  .primary {
-    @apply bg-primary-base text-white;
-    &:hover {
-      @apply bg-primary-light;
-    }
+.primary {
+  @apply bg-primary-base text-white;
+  &:hover {
+    @apply bg-primary-light;
   }
-  .secondary {
-    @apply bg-gray-200 text-nuxt-gray;
-    &:hover {
-      @apply bg-gray-300;
-    }
+}
+.secondary {
+  @apply bg-gray-200 text-nuxt-gray;
+  &:hover {
+    @apply bg-gray-300;
   }
+}
 </style>

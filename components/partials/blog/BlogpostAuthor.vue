@@ -27,15 +27,15 @@
 </template>
 
 <script>
-  export default {
-    name: 'BlogpostAuthor',
-    props: {
-      author: {
-        type: Object,
-        required: true
-      }
+export default {
+  name: 'BlogpostAuthor',
+  props: {
+    author: {
+      type: Object,
+      required: true
     }
   }
+}
 </script>
 
 <style></style>

@@ -33,147 +33,147 @@
 </template>
 
 <script>
-  import Clipboard from 'clipboard'
+import Clipboard from 'clipboard'
 
-  export default {
-    async asyncData({ $content, params, store, error, app }) {
-      let path = `/${app.i18n.defaultLocale}/guides/${params.book}`
-      let page, prev, next, contributors, langFallback
+export default {
+  async asyncData({ $content, params, store, error, app }) {
+    let path = `/${app.i18n.defaultLocale}/guides/${params.book}`
+    let page, prev, next, contributors, langFallback
 
-      try {
-        page = await $content(path, params.slug).fetch()
-      } catch (err) {
-        if (!err.response || err.response.status !== 404) {
-          return error({
-            statusCode: 500,
-            message: app.i18n.t('common.an_error_occurred')
-          })
-        }
-
+    try {
+      page = await $content(path, params.slug).fetch()
+    } catch (err) {
+      if (!err.response || err.response.status !== 404) {
         return error({
-          statusCode: 404,
-          message: app.i18n.t('common.api_page_not_found')
+          statusCode: 500,
+          message: app.i18n.t('common.an_error_occurred')
         })
       }
 
-      if (
-        process.env.NODE_ENV !== 'production' &&
-        app.i18n.defaultLocale !== app.i18n.locale
-      ) {
-        try {
-          path = `/${app.i18n.locale}/guides/${params.book}`
-          page = await $content(path, params.slug).fetch()
-        } catch (err) {
-          langFallback = true
-          path = `/${app.i18n.defaultLocale}/guides/${params.book}`
-        }
-      }
-
-      try {
-        contributors = (
-          await fetch(
-            `https://contributors-api.onrender.com${path}/${params.slug}`
-          ).then(res => res.json())
-        ).map(({ author }) => ({ author }))
-      } catch (e) {}
-
-      try {
-        ;[prev, next] = await $content(
-          `/${app.i18n.defaultLocale}/guides/${params.book}`
-        )
-          .only(['title', 'slug', 'dir', 'menu'])
-          .sortBy('position')
-          .sortBy('title')
-          .sortBy('menu')
-          .surround(params.slug, { before: 1, after: 1 })
-          .fetch()
-      } catch (e) {}
-
-      // if (page && page.questions) {
-      //   page.questions = shuffle(page.questions.map(question => ({ ...question, answers: shuffle(question.answers) })))
-      // }
-
-      return {
-        path,
-        showModal: false,
-        langFallback,
-        section: params.section,
-        book: params.book,
-        page,
-        prev,
-        next,
-        contributors
-      }
-    },
-    computed: {
-      docLink() {
-        return `https://github.com/nuxt/nuxtjs.org/blob/master/content/${this.path}/${this.$route.params.slug}.md`
-      }
-    },
-    mounted() {
-      const blocks = document.getElementsByClassName('nuxt-content-highlight')
-      for (const block of blocks) {
-        const pre = block.getElementsByTagName('pre')[0]
-        const button = document.createElement('button')
-        button.className = 'copy'
-        button.textContent = 'Copy'
-        pre.appendChild(button)
-      }
-      const copyCode = new Clipboard('.copy', {
-        target(trigger) {
-          return trigger.previousElementSibling
-        }
+      return error({
+        statusCode: 404,
+        message: app.i18n.t('common.api_page_not_found')
       })
-      copyCode.on('success', function (event) {
-        event.clearSelection()
-        event.trigger.textContent = 'Copied!'
-        window.setTimeout(function () {
-          event.trigger.textContent = 'Copy'
-        }, 2000)
-      })
-    },
+    }
 
-    scrollToTop: true,
-    head() {
-      return {
-        title: this.page.title,
-        titleTemplate: '%s - NuxtJS',
-        meta: [
-          {
-            hid: 'description',
-            name: 'description',
-            content: this.page.description
-          },
-          // Open Graph
-          { hid: 'og:title', property: 'og:title', content: this.page.title },
-          {
-            hid: 'og:description',
-            property: 'og:description',
-            content: this.page.description
-          },
-          // Twitter Card
-          {
-            hid: 'twitter:title',
-            name: 'twitter:title',
-            content: this.page.title
-          },
-          {
-            hid: 'twitter:description',
-            name: 'twitter:description',
-            content: this.page.description
-          }
-        ]
+    if (
+      process.env.NODE_ENV !== 'production' &&
+      app.i18n.defaultLocale !== app.i18n.locale
+    ) {
+      try {
+        path = `/${app.i18n.locale}/guides/${params.book}`
+        page = await $content(path, params.slug).fetch()
+      } catch (err) {
+        langFallback = true
+        path = `/${app.i18n.defaultLocale}/guides/${params.book}`
       }
     }
+
+    try {
+      contributors = (
+        await fetch(
+          `https://contributors-api.onrender.com${path}/${params.slug}`
+        ).then(res => res.json())
+      ).map(({ author }) => ({ author }))
+    } catch (e) {}
+
+    try {
+      ;[prev, next] = await $content(
+        `/${app.i18n.defaultLocale}/guides/${params.book}`
+      )
+        .only(['title', 'slug', 'dir', 'menu'])
+        .sortBy('position')
+        .sortBy('title')
+        .sortBy('menu')
+        .surround(params.slug, { before: 1, after: 1 })
+        .fetch()
+    } catch (e) {}
+
+    // if (page && page.questions) {
+    //   page.questions = shuffle(page.questions.map(question => ({ ...question, answers: shuffle(question.answers) })))
+    // }
+
+    return {
+      path,
+      showModal: false,
+      langFallback,
+      section: params.section,
+      book: params.book,
+      page,
+      prev,
+      next,
+      contributors
+    }
+  },
+  computed: {
+    docLink() {
+      return `https://github.com/nuxt/nuxtjs.org/blob/master/content/${this.path}/${this.$route.params.slug}.md`
+    }
+  },
+  mounted() {
+    const blocks = document.getElementsByClassName('nuxt-content-highlight')
+    for (const block of blocks) {
+      const pre = block.getElementsByTagName('pre')[0]
+      const button = document.createElement('button')
+      button.className = 'copy'
+      button.textContent = 'Copy'
+      pre.appendChild(button)
+    }
+    const copyCode = new Clipboard('.copy', {
+      target(trigger) {
+        return trigger.previousElementSibling
+      }
+    })
+    copyCode.on('success', function (event) {
+      event.clearSelection()
+      event.trigger.textContent = 'Copied!'
+      window.setTimeout(function () {
+        event.trigger.textContent = 'Copy'
+      }, 2000)
+    })
+  },
+
+  scrollToTop: true,
+  head() {
+    return {
+      title: this.page.title,
+      titleTemplate: '%s - NuxtJS',
+      meta: [
+        {
+          hid: 'description',
+          name: 'description',
+          content: this.page.description
+        },
+        // Open Graph
+        { hid: 'og:title', property: 'og:title', content: this.page.title },
+        {
+          hid: 'og:description',
+          property: 'og:description',
+          content: this.page.description
+        },
+        // Twitter Card
+        {
+          hid: 'twitter:title',
+          name: 'twitter:title',
+          content: this.page.title
+        },
+        {
+          hid: 'twitter:description',
+          name: 'twitter:description',
+          content: this.page.description
+        }
+      ]
+    }
   }
+}
 </script>
 <style lang="scss" scoped>
-  article h1 {
-    @apply font-medium relative text-3xl table mb-8;
-    &::after {
-      content: ' ';
-      width: 80%;
-      @apply block border-2 border-nuxt-lightgreen mt-2 mb-1 rounded;
-    }
+article h1 {
+  @apply font-medium relative text-3xl table mb-8;
+  &::after {
+    content: ' ';
+    width: 80%;
+    @apply block border-2 border-nuxt-lightgreen mt-2 mb-1 rounded;
   }
+}
 </style>

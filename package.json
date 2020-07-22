@@ -70,7 +70,7 @@
     "cy:run": "cypress run",
     "test:e2e:run": "start-server-and-test start http://localhost:3000 cy:run",
     "test:e2e:dev": "start-server-and-test dev http://localhost:3000 cy:open",
-    "eslint": "eslint --ext .js,.vue --ignore-path .gitignore --ignore-pattern modules/ --ignore-pattern plugins/ga.js .",
+    "eslint": "eslint --ignore-path .gitignore --ignore-pattern modules/ --ignore-pattern plugins/ga.js --ext .js,.vue .",
     "markdownlint": "markdownlint  \"*.md\"",
     "prettier": "prettier  \"**/*.{js,json,css,scss,vue,html,md}\"",
     "check:prettier": "yarn prettier --list-different",

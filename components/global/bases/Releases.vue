@@ -21,39 +21,39 @@
 </template>
 
 <script>
-  const monthNames = [
-    'January',
-    'February',
-    'March',
-    'April',
-    'May',
-    'June',
-    'July',
-    'August',
-    'September',
-    'October',
-    'November',
-    'December'
-  ]
+const monthNames = [
+  'January',
+  'February',
+  'March',
+  'April',
+  'May',
+  'June',
+  'July',
+  'August',
+  'September',
+  'October',
+  'November',
+  'December'
+]
 
-  export default {
-    filters: {
-      dateFormat(date) {
-        date = new Date(date)
-        let s = date.getDate() + ' ' + monthNames[date.getMonth()]
-        if (date.getFullYear() < new Date().getFullYear()) {
-          s += ' ' + date.getFullYear()
-        }
-        return s
+export default {
+  filters: {
+    dateFormat(date) {
+      date = new Date(date)
+      let s = date.getDate() + ' ' + monthNames[date.getMonth()]
+      if (date.getFullYear() < new Date().getFullYear()) {
+        s += ' ' + date.getFullYear()
       }
-    },
-    async fetch() {
-      this.releases = await this.$http.$get('/_releases')
-    },
-    data() {
-      return {
-        releases: []
-      }
+      return s
+    }
+  },
+  async fetch() {
+    this.releases = await this.$http.$get('/_releases')
+  },
+  data() {
+    return {
+      releases: []
     }
   }
+}
 </script>

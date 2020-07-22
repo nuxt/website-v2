@@ -92,62 +92,62 @@
 </template>
 
 <script>
-  import OpenCollectiveIcon from '~/assets/icons/open-collective.svg?inline'
-  import SponsoringIllustration from '~/assets/illustrations/sponsoring.svg?inline'
+import OpenCollectiveIcon from '~/assets/icons/open-collective.svg?inline'
+import SponsoringIllustration from '~/assets/illustrations/sponsoring.svg?inline'
 
-  export default {
-    components: {
-      OpenCollectiveIcon,
-      SponsoringIllustration
-    },
-    data() {
-      return {
-        sponsors: {
-          platinum: [
-            {
-              name: 'Storyblok',
-              img: 'storyblok-logo.svg',
-              url: 'https://www.storyblok.com/?ref=nuxt',
-              class: 'h-24'
-            }
-          ],
-          gold: [
-            {
-              name: 'VueMastery',
-              img: 'vueMastery-brand.svg',
-              url: 'https://www.vuemastery.com/?ref=nuxt',
-              class: 'h-10'
-            }
-          ],
-          special: [
-            {
-              name: 'Google Chrome',
-              img: 'google-chrome.svg',
-              url: 'https://www.google.com/chrome/?ref=nuxt',
-              class: 'h-12'
-            }
-          ]
-        }
+export default {
+  components: {
+    OpenCollectiveIcon,
+    SponsoringIllustration
+  },
+  data() {
+    return {
+      sponsors: {
+        platinum: [
+          {
+            name: 'Storyblok',
+            img: 'storyblok-logo.svg',
+            url: 'https://www.storyblok.com/?ref=nuxt',
+            class: 'h-24'
+          }
+        ],
+        gold: [
+          {
+            name: 'VueMastery',
+            img: 'vueMastery-brand.svg',
+            url: 'https://www.vuemastery.com/?ref=nuxt',
+            class: 'h-10'
+          }
+        ],
+        special: [
+          {
+            name: 'Google Chrome',
+            img: 'google-chrome.svg',
+            url: 'https://www.google.com/chrome/?ref=nuxt',
+            class: 'h-12'
+          }
+        ]
       }
     }
   }
+}
 </script>
 
 <style lang="scss">
-  .sponsor {
+.sponsor {
+  & img {
+    opacity: 0.75;
+    filter: grayscale(100%);
+    transition: all 0.5s;
+  }
+  &:hover {
     & img {
-      opacity: 0.75;
-      filter: grayscale(100%);
-      transition: all 0.5s;
-    }
-    &:hover {
-      & img {
-        opacity: 1;
-        filter: grayscale(0%);
-      }
+      opacity: 1;
+      filter: grayscale(0%);
     }
   }
-  #sponsor-img {
-    shape-outside: circle(49.5% at 90px 95px);
-  }
+}
+#sponsor-img {
+  shape-outside: circle(49.5% at 90px 95px);
+}
 </style>

@@ -15,12 +15,12 @@
 </template>
 
 <script>
-  export default {}
+export default {}
 </script>
 
 <style>
-  .affix {
-    top: 6rem;
-    height: calc(100vh - 6rem);
-  }
+.affix {
+  top: 6rem;
+  height: calc(100vh - 6rem);
+}
 </style>

@@ -58,13 +58,13 @@
 </template>
 
 <script>
-  import MeteorIcon from '~/assets/icons/meteor.svg?inline'
-  import GithubIcon from '~/assets/icons/github.svg?inline'
+import MeteorIcon from '~/assets/icons/meteor.svg?inline'
+import GithubIcon from '~/assets/icons/github.svg?inline'
 
-  export default {
-    components: {
-      MeteorIcon,
-      GithubIcon
-    }
+export default {
+  components: {
+    MeteorIcon,
+    GithubIcon
   }
+}
 </script>

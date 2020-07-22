@@ -190,68 +190,68 @@
 </template>
 
 <script>
-  import DesignIllustration from '~/assets/illustrations/design.svg?inline'
+import DesignIllustration from '~/assets/illustrations/design.svg?inline'
 
-  export default {
-    transition: 'logos',
-    components: {
-      DesignIllustration
-    },
-    head() {
-      const title = 'Design Resources - NuxtJS'
-      const description =
-        'Download NuxtJS design resources (SVG, icons, emoji and favicon).'
+export default {
+  transition: 'logos',
+  components: {
+    DesignIllustration
+  },
+  head() {
+    const title = 'Design Resources - NuxtJS'
+    const description =
+      'Download NuxtJS design resources (SVG, icons, emoji and favicon).'
 
-      return {
-        title,
-        meta: [
-          { hid: 'description', name: 'description', content: description },
-          // Open Graph
-          { hid: 'og:title', property: 'og:title', content: title },
-          {
-            hid: 'og:description',
-            property: 'og:description',
-            content: description
-          },
-          // Twitter Card
-          { hid: 'twitter:title', name: 'twitter:title', content: title },
-          {
-            hid: 'twitter:description',
-            name: 'twitter:description',
-            content: description
-          }
-        ]
-      }
+    return {
+      title,
+      meta: [
+        { hid: 'description', name: 'description', content: description },
+        // Open Graph
+        { hid: 'og:title', property: 'og:title', content: title },
+        {
+          hid: 'og:description',
+          property: 'og:description',
+          content: description
+        },
+        // Twitter Card
+        { hid: 'twitter:title', name: 'twitter:title', content: title },
+        {
+          hid: 'twitter:description',
+          name: 'twitter:description',
+          content: description
+        }
+      ]
     }
   }
+}
 </script>
 
 <style scoped>
-  figure {
-    @apply relative p-4 text-center text-gray-500 table w-full;
-    &:hover {
-      & .dimensions {
-        @apply opacity-100;
-        top: 10px;
-      }
-    }
-    & img {
-      @apply inline-block;
-    }
-    & figcaption {
-      @apply pt-4;
-    }
+figure {
+  @apply relative p-4 text-center text-gray-500 table w-full;
+  &:hover {
     & .dimensions {
-      @apply font-normal absolute top-0 opacity-0;
-      right: 20px;
-      transition-property: all;
-      transition-duration: 0.3s;
+      @apply opacity-100;
+      top: 10px;
     }
   }
-  a {
-    @apply text-nuxt-lightgreen font-normal;
-    &:hover {
-      @apply underline;
-    }
+  & img {
+    @apply inline-block;
   }
+  & figcaption {
+    @apply pt-4;
+  }
+  & .dimensions {
+    @apply font-normal absolute top-0 opacity-0;
+    right: 20px;
+    transition-property: all;
+    transition-duration: 0.3s;
+  }
+}
+a {
+  @apply text-nuxt-lightgreen font-normal;
+  &:hover {
+    @apply underline;
+  }
+}
 </style>

@@ -63,106 +63,106 @@
 </template>
 
 <script>
-  import ShopIllustration from '~/assets/illustrations/shop.svg?inline'
+import ShopIllustration from '~/assets/illustrations/shop.svg?inline'
 
-  export default {
-    components: {
-      ShopIllustration
-    },
-    data() {
-      return {
-        products: [
-          {
-            name: 'Classic T-shirt White',
-            description:
-              'Unisex White T-shirt with Nuxt Mountains Logo embroidered.',
-            img: 'tshirt_white',
-            price: 999
-          },
-          {
-            name: 'Classic T-shirt Black Heather Blue',
-            description:
-              'Unisex Black Heather Blue T-shirt with Nuxt Mountains Logo embroidered.',
-            img: 'tshirt_blue',
-            url: '',
-            price: 999
-          },
-          {
-            name: 'NuxtJS Sweatshirt White',
-            description:
-              'Unisex White Sweatshirt with The NuxtJS Logo embroidered.',
-            img: 'sweat_white',
-            url: '',
-            price: 999
-          },
-          {
-            name: 'NuxtJS Sweatshirt Black Heather Blue',
-            description:
-              'Unisex Black Heather Blue Sweatshirt with The NuxtJS Logo embroidered.',
-            img: 'sweat_blue',
-            url: '',
-            price: 999
-          },
-          {
-            name: 'New Stickers Pack',
-            description:
-              '8 New Design stickers: 4 Mountains Logo Stickers and- 4 NuxtJS Logo Stickers.',
-            img: 'new_stickers',
-            url: '',
-            price: 999
-          },
-          {
-            name: 'Vintage Stickers Pack',
-            description:
-              '8 Vintage Design stickers: 4 Mountains Logo Stickers and 4 Are You Nuxt? Stickers.',
-            img: 'vintage_stickers',
-            url: '',
-            price: 999
-          }
-        ]
-      }
-      // },
-      // mounted () {
-      //   const jquery = document.createElement('script')
-      //   jquery.setAttribute('type', 'text/javascript')
-      //   jquery.setAttribute('src', '//ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js')
-      //   const script = document.createElement('script')
-      //   script.setAttribute('type', 'text/javascript')
-      //   script.setAttribute('src', '//cdn.snipcart.com/scripts/2.0/snipcart.js')
-      //   script.setAttribute('id', 'snipcart')
-      //   script.setAttribute('data-api-key', 'YzRlMjRiNmItNWJjNC00OWMxLWE1ODgtZmIyNzAwYmIyMmI5NjM3MDM3MTc0OTkxOTU5OTA0')
-      //   this.$refs.shop.appendChild(jquery)
-      //   this.$refs.shop.appendChild(script)
-    },
-    head() {
-      const title = 'The NuxtJS Shop'
-      const description =
-        'You want to support the NuxtJS project and show your love to the rest of the community? Here our products with the best quality ever!'
+export default {
+  components: {
+    ShopIllustration
+  },
+  data() {
+    return {
+      products: [
+        {
+          name: 'Classic T-shirt White',
+          description:
+            'Unisex White T-shirt with Nuxt Mountains Logo embroidered.',
+          img: 'tshirt_white',
+          price: 999
+        },
+        {
+          name: 'Classic T-shirt Black Heather Blue',
+          description:
+            'Unisex Black Heather Blue T-shirt with Nuxt Mountains Logo embroidered.',
+          img: 'tshirt_blue',
+          url: '',
+          price: 999
+        },
+        {
+          name: 'NuxtJS Sweatshirt White',
+          description:
+            'Unisex White Sweatshirt with The NuxtJS Logo embroidered.',
+          img: 'sweat_white',
+          url: '',
+          price: 999
+        },
+        {
+          name: 'NuxtJS Sweatshirt Black Heather Blue',
+          description:
+            'Unisex Black Heather Blue Sweatshirt with The NuxtJS Logo embroidered.',
+          img: 'sweat_blue',
+          url: '',
+          price: 999
+        },
+        {
+          name: 'New Stickers Pack',
+          description:
+            '8 New Design stickers: 4 Mountains Logo Stickers and- 4 NuxtJS Logo Stickers.',
+          img: 'new_stickers',
+          url: '',
+          price: 999
+        },
+        {
+          name: 'Vintage Stickers Pack',
+          description:
+            '8 Vintage Design stickers: 4 Mountains Logo Stickers and 4 Are You Nuxt? Stickers.',
+          img: 'vintage_stickers',
+          url: '',
+          price: 999
+        }
+      ]
+    }
+    // },
+    // mounted () {
+    //   const jquery = document.createElement('script')
+    //   jquery.setAttribute('type', 'text/javascript')
+    //   jquery.setAttribute('src', '//ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js')
+    //   const script = document.createElement('script')
+    //   script.setAttribute('type', 'text/javascript')
+    //   script.setAttribute('src', '//cdn.snipcart.com/scripts/2.0/snipcart.js')
+    //   script.setAttribute('id', 'snipcart')
+    //   script.setAttribute('data-api-key', 'YzRlMjRiNmItNWJjNC00OWMxLWE1ODgtZmIyNzAwYmIyMmI5NjM3MDM3MTc0OTkxOTU5OTA0')
+    //   this.$refs.shop.appendChild(jquery)
+    //   this.$refs.shop.appendChild(script)
+  },
+  head() {
+    const title = 'The NuxtJS Shop'
+    const description =
+      'You want to support the NuxtJS project and show your love to the rest of the community? Here our products with the best quality ever!'
 
-      return {
-        title,
-        meta: [
-          { hid: 'description', name: 'description', content: description },
-          // Open Graph
-          { hid: 'og:title', property: 'og:title', content: title },
-          {
-            hid: 'og:description',
-            property: 'og:description',
-            content: description
-          },
-          // Twitter Card
-          { hid: 'twitter:title', name: 'twitter:title', content: title },
-          {
-            hid: 'twitter:description',
-            name: 'twitter:description',
-            content: description
-          }
-        ]
-      }
+    return {
+      title,
+      meta: [
+        { hid: 'description', name: 'description', content: description },
+        // Open Graph
+        { hid: 'og:title', property: 'og:title', content: title },
+        {
+          hid: 'og:description',
+          property: 'og:description',
+          content: description
+        },
+        // Twitter Card
+        { hid: 'twitter:title', name: 'twitter:title', content: title },
+        {
+          hid: 'twitter:description',
+          name: 'twitter:description',
+          content: description
+        }
+      ]
     }
   }
+}
 </script>
 
 <style>
-  /*  @import url('https://cdn.snipcart.com/themes/2.0/base/snipcart.min.css'); */
+/*  @import url('https://cdn.snipcart.com/themes/2.0/base/snipcart.min.css'); */
 </style>

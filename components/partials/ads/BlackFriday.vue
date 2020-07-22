@@ -46,74 +46,74 @@
 </template>
 
 <script>
-  import TimesIcon from '~/assets/icons/times.svg?inline'
+import TimesIcon from '~/assets/icons/times.svg?inline'
 
-  export default {
-    components: {
-      TimesIcon
-    },
-    data() {
-      return {
-        isDisplayed: true
-      }
+export default {
+  components: {
+    TimesIcon
+  },
+  data() {
+    return {
+      isDisplayed: true
     }
   }
+}
 </script>
 
 <style>
-  .bg-blackfriday {
-    background-image: url('/img/blackfriday/background.png');
-    background-position: 50%;
-    background-repeat: no-repeat;
-    background-size: cover;
+.bg-blackfriday {
+  background-image: url('/img/blackfriday/background.png');
+  background-position: 50%;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.bg-deep-cove {
+  background-color: #0d0751;
+}
+.pulse {
+  animation: pulse 2s linear infinite;
+}
+.tada {
+  animation: tada 3s linear infinite;
+}
+@keyframes pulse {
+  from {
+    transform: scale3d(1, 1, 1);
   }
-  .bg-deep-cove {
-    background-color: #0d0751;
+
+  50% {
+    transform: scale3d(1.05, 1.05, 1.05);
   }
-  .pulse {
-    animation: pulse 2s linear infinite;
+
+  to {
+    transform: scale3d(1, 1, 1);
   }
-  .tada {
-    animation: tada 3s linear infinite;
+}
+@keyframes tada {
+  from {
+    transform: scale3d(1, 1, 1);
   }
-  @keyframes pulse {
-    from {
-      transform: scale3d(1, 1, 1);
-    }
 
-    50% {
-      transform: scale3d(1.05, 1.05, 1.05);
-    }
-
-    to {
-      transform: scale3d(1, 1, 1);
-    }
+  10%,
+  20% {
+    transform: scale3d(0.9, 0.9, 0.9) rotate3d(0, 0, 1, -3deg);
   }
-  @keyframes tada {
-    from {
-      transform: scale3d(1, 1, 1);
-    }
 
-    10%,
-    20% {
-      transform: scale3d(0.9, 0.9, 0.9) rotate3d(0, 0, 1, -3deg);
-    }
-
-    30%,
-    50%,
-    70%,
-    90% {
-      transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, 3deg);
-    }
-
-    40%,
-    60%,
-    80% {
-      transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, -3deg);
-    }
-
-    to {
-      transform: scale3d(1, 1, 1);
-    }
+  30%,
+  50%,
+  70%,
+  90% {
+    transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, 3deg);
   }
+
+  40%,
+  60%,
+  80% {
+    transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, -3deg);
+  }
+
+  to {
+    transform: scale3d(1, 1, 1);
+  }
+}
 </style>

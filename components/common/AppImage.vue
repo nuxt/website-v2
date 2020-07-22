@@ -70,78 +70,78 @@
 </template>
 
 <script>
-  import { mapState } from 'vuex'
+import { mapState } from 'vuex'
 
-  export default {
-    props: {
-      src: {
-        type: String,
-        default: null
-      },
-      alt: {
-        type: String,
-        default: null
-      },
-      ratio: {
-        type: String,
-        default: null
-      },
-      sizes: {
-        type: String,
-        default: null
+export default {
+  props: {
+    src: {
+      type: String,
+      default: null
+    },
+    alt: {
+      type: String,
+      default: null
+    },
+    ratio: {
+      type: String,
+      default: null
+    },
+    sizes: {
+      type: String,
+      default: null
+    }
+  },
+  data() {
+    return {
+      show: false,
+      loaded: false
+    }
+  },
+  computed: {
+    ...mapState({
+      host: state => state.host,
+      isDev: state => state.isDev,
+      isTest: state => state.isTest,
+      isProd: state => state.isProd
+    }),
+    intristicRatio() {
+      if (!this.ratio) {
+        return 0
+      } else {
+        const sizes = this.ratio.split(':')
+        const ratio = sizes[1] / sizes[0]
+        return ratio
       }
     },
-    data() {
+    intristicRatioStyle() {
       return {
-        show: false,
-        loaded: false
+        'padding-bottom': `${this.intristicRatio * 100}%`
       }
-    },
-    computed: {
-      ...mapState({
-        host: state => state.host,
-        isDev: state => state.isDev,
-        isTest: state => state.isTest,
-        isProd: state => state.isProd
-      }),
-      intristicRatio() {
-        if (!this.ratio) {
-          return 0
-        } else {
-          const sizes = this.ratio.split(':')
-          const ratio = sizes[1] / sizes[0]
-          return ratio
-        }
-      },
-      intristicRatioStyle() {
-        return {
-          'padding-bottom': `${this.intristicRatio * 100}%`
-        }
-      }
-    },
-    methods: {
-      lazyLoadImage(isVisible, entry) {
-        if (isVisible) {
-          this.show = true
-          this.$nextTick(() => {
-            const lazyImage = this.$refs.img
+    }
+  },
+  methods: {
+    lazyLoadImage(isVisible, entry) {
+      if (isVisible) {
+        this.show = true
+        this.$nextTick(() => {
+          const lazyImage = this.$refs.img
 
-            lazyImage.addEventListener('load', () => {
-              lazyImage.classList.add('lazy-loaded')
-              this.loaded = true
-            })
-            lazyImage.addEventListener('error', () => {
-              lazyImage.classList.add('lazy-load-error')
-            })
+          lazyImage.addEventListener('load', () => {
+            lazyImage.classList.add('lazy-loaded')
+            this.loaded = true
           })
-        }
+          lazyImage.addEventListener('error', () => {
+            lazyImage.classList.add('lazy-load-error')
+          })
+        })
       }
     }
   }
+}
 </script>
 
 <style lang="scss" scoped>
-  .lazy-loaded {
-    opacity: 1;
-  }
+.lazy-loaded {
+  opacity: 1;
+}
 </style>

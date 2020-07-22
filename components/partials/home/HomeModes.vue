@@ -45,13 +45,13 @@
 </template>
 
 <script>
-  import SnowIcon from '~/assets/icons/snow.svg?inline'
-  import FireIcon from '~/assets/icons/fire.svg?inline'
+import SnowIcon from '~/assets/icons/snow.svg?inline'
+import FireIcon from '~/assets/icons/fire.svg?inline'
 
-  export default {
-    components: {
-      SnowIcon,
-      FireIcon
-    }
+export default {
+  components: {
+    SnowIcon,
+    FireIcon
   }
+}
 </script>

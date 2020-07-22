@@ -66,73 +66,73 @@
 </template>
 
 <script>
-  import ThemesIllustration from '~/assets/illustrations/themes.svg?inline'
-  import PlayCircleIcon from '~/assets/icons/play-circle.svg?inline'
-  import MeteorIcon from '~/assets/icons/meteor.svg?inline'
+import ThemesIllustration from '~/assets/illustrations/themes.svg?inline'
+import PlayCircleIcon from '~/assets/icons/play-circle.svg?inline'
+import MeteorIcon from '~/assets/icons/meteor.svg?inline'
 
-  export default {
-    components: {
-      ThemesIllustration,
-      PlayCircleIcon,
-      MeteorIcon
-    },
-    data() {
-      return {
-        courses: [
-          {
-            title: 'Nuxt.js Fundamentals',
-            description:
-              'Learn the fundamentals of Nuxt.js in this course that we created together with the founders of Nuxt. The course covers what you need to know from scaffolding to deploying your first Nuxt.js application.',
-            link:
-              'https://vueschool.io/courses/nuxtjs-fundamentals?friend=nuxt&utm_source=Nuxtjs.org&utm_medium=Link&utm_content=Courses&utm_campaign=nuxtjs-fundamentals',
-            img: 'nuxt-fundamentals'
-          },
-          {
-            title: 'Async Data with Nuxt.js',
-            description:
-              'Learn how to manage asynchronous data and render your application server-side with Nuxt.js.',
-            link:
-              'https://vueschool.io/courses/async-data-with-nuxtjs?friend=nuxt&utm_source=Nuxtjs.org&utm_medium=Link&utm_content=Courses&utm_campaign=async-data',
-            img: 'async-data-with-nuxtjs'
-          },
-          {
-            title: 'Static Site Generation with Nuxt.js',
-            description:
-              'Learn how to generate static websites (pre-rendering) with Nuxt.js to improve both performance and SEO while eliminating hosting costs.',
-            link:
-              'https://vueschool.io/courses/static-site-generation-with-nuxtjs?friend=nuxt&utm_source=Nuxtjs.org&utm_medium=Link&utm_content=Courses&utm_campaign=static-site-generation',
-            img: 'static-site-generation-with-nuxtjs'
-          }
-        ]
-      }
-    },
-    head() {
-      const title = 'NuxtJS Video Courses'
-      const description =
-        'With the video courses below created by our partner VueSchool you can discover and learn more about the Nuxt.js Framework.'
+export default {
+  components: {
+    ThemesIllustration,
+    PlayCircleIcon,
+    MeteorIcon
+  },
+  data() {
+    return {
+      courses: [
+        {
+          title: 'Nuxt.js Fundamentals',
+          description:
+            'Learn the fundamentals of Nuxt.js in this course that we created together with the founders of Nuxt. The course covers what you need to know from scaffolding to deploying your first Nuxt.js application.',
+          link:
+            'https://vueschool.io/courses/nuxtjs-fundamentals?friend=nuxt&utm_source=Nuxtjs.org&utm_medium=Link&utm_content=Courses&utm_campaign=nuxtjs-fundamentals',
+          img: 'nuxt-fundamentals'
+        },
+        {
+          title: 'Async Data with Nuxt.js',
+          description:
+            'Learn how to manage asynchronous data and render your application server-side with Nuxt.js.',
+          link:
+            'https://vueschool.io/courses/async-data-with-nuxtjs?friend=nuxt&utm_source=Nuxtjs.org&utm_medium=Link&utm_content=Courses&utm_campaign=async-data',
+          img: 'async-data-with-nuxtjs'
+        },
+        {
+          title: 'Static Site Generation with Nuxt.js',
+          description:
+            'Learn how to generate static websites (pre-rendering) with Nuxt.js to improve both performance and SEO while eliminating hosting costs.',
+          link:
+            'https://vueschool.io/courses/static-site-generation-with-nuxtjs?friend=nuxt&utm_source=Nuxtjs.org&utm_medium=Link&utm_content=Courses&utm_campaign=static-site-generation',
+          img: 'static-site-generation-with-nuxtjs'
+        }
+      ]
+    }
+  },
+  head() {
+    const title = 'NuxtJS Video Courses'
+    const description =
+      'With the video courses below created by our partner VueSchool you can discover and learn more about the Nuxt.js Framework.'
 
-      return {
-        title,
-        meta: [
-          { hid: 'description', name: 'description', content: description },
-          // Open Graph
-          { hid: 'og:title', property: 'og:title', content: title },
-          {
-            hid: 'og:description',
-            property: 'og:description',
-            content: description
-          },
-          // Twitter Card
-          { hid: 'twitter:title', name: 'twitter:title', content: title },
-          {
-            hid: 'twitter:description',
-            name: 'twitter:description',
-            content: description
-          }
-        ]
-      }
+    return {
+      title,
+      meta: [
+        { hid: 'description', name: 'description', content: description },
+        // Open Graph
+        { hid: 'og:title', property: 'og:title', content: title },
+        {
+          hid: 'og:description',
+          property: 'og:description',
+          content: description
+        },
+        // Twitter Card
+        { hid: 'twitter:title', name: 'twitter:title', content: title },
+        {
+          hid: 'twitter:description',
+          name: 'twitter:description',
+          content: description
+        }
+      ]
     }
   }
+}
 </script>
 
 <style></style>

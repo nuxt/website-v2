@@ -27,17 +27,17 @@
 </template>
 
 <script>
-  export default {
-    data() {
-      return {
-        sponsors: [
-          {
-            name: 'Storyblok',
-            link: 'https://www.storyblok.com/?ref=nuxt',
-            img: 'storyblok-logo.svg'
-          }
-        ]
-      }
+export default {
+  data() {
+    return {
+      sponsors: [
+        {
+          name: 'Storyblok',
+          link: 'https://www.storyblok.com/?ref=nuxt',
+          img: 'storyblok-logo.svg'
+        }
+      ]
     }
   }
+}
 </script>

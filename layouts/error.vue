@@ -34,19 +34,19 @@
 </template>
 
 <script>
-  import MountainsGlobeIllustration from '~/components/animated-svg/montains-globe'
-  import LostImageIllustration from '~/assets/illustrations/404.svg?inline'
+import MountainsGlobeIllustration from '~/components/animated-svg/montains-globe'
+import LostImageIllustration from '~/assets/illustrations/404.svg?inline'
 
-  export default {
-    components: {
-      MountainsGlobeIllustration,
-      LostImageIllustration
-    },
-    props: {
-      error: {
-        type: Object,
-        required: true
-      }
+export default {
+  components: {
+    MountainsGlobeIllustration,
+    LostImageIllustration
+  },
+  props: {
+    error: {
+      type: Object,
+      required: true
     }
   }
+}
 </script>

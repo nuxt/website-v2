@@ -32,69 +32,69 @@
 </template>
 
 <script>
-  import DesignIllustration from '~/assets/illustrations/design.svg?inline'
+import DesignIllustration from '~/assets/illustrations/design.svg?inline'
 
-  export default {
-    components: {
-      DesignIllustration
-    },
-    async asyncData({ $content, app }) {
-      let posts = await $content(app.i18n.defaultLocale, 'blog')
-        .sortBy('date', 'desc')
-        .fetch()
+export default {
+  components: {
+    DesignIllustration
+  },
+  async asyncData({ $content, app }) {
+    let posts = await $content(app.i18n.defaultLocale, 'blog')
+      .sortBy('date', 'desc')
+      .fetch()
 
-      if (app.i18n.defaultLocale !== app.i18n.locale) {
-        try {
-          const newPosts = await $content(app.i18n.locale, 'blog')
-            .sortBy('date', 'desc')
-            .fetch()
+    if (app.i18n.defaultLocale !== app.i18n.locale) {
+      try {
+        const newPosts = await $content(app.i18n.locale, 'blog')
+          .sortBy('date', 'desc')
+          .fetch()
 
-          posts = posts.map(post => {
-            const newPost = newPosts.find(newPost => newPost.slug === post.slug)
+        posts = posts.map(post => {
+          const newPost = newPosts.find(newPost => newPost.slug === post.slug)
 
-            return newPost || post
-          })
-        } catch (err) {}
-      }
-      return {
-        posts
-      }
-    },
-    head() {
-      return {
-        title: this.$i18n.t('blog.title'),
-        meta: [
-          {
-            hid: 'description',
-            name: 'description',
-            content: this.$i18n.t('blog.description')
-          },
-          // Open Graph
-          {
-            hid: 'og:title',
-            property: 'og:title',
-            content: this.$i18n.t('blog.title')
-          },
-          {
-            hid: 'og:description',
-            property: 'og:description',
-            content: this.$i18n.t('blog.description')
-          },
-          // // Twitter Card
-          {
-            hid: 'twitter:title',
-            name: 'twitter:title',
-            content: this.$i18n.t('blog.title')
-          },
-          {
-            hid: 'twitter:description',
-            name: 'twitter:description',
-            content: this.$i18n.t('blog.description')
-          }
-        ]
-      }
+          return newPost || post
+        })
+      } catch (err) {}
+    }
+    return {
+      posts
+    }
+  },
+  head() {
+    return {
+      title: this.$i18n.t('blog.title'),
+      meta: [
+        {
+          hid: 'description',
+          name: 'description',
+          content: this.$i18n.t('blog.description')
+        },
+        // Open Graph
+        {
+          hid: 'og:title',
+          property: 'og:title',
+          content: this.$i18n.t('blog.title')
+        },
+        {
+          hid: 'og:description',
+          property: 'og:description',
+          content: this.$i18n.t('blog.description')
+        },
+        // // Twitter Card
+        {
+          hid: 'twitter:title',
+          name: 'twitter:title',
+          content: this.$i18n.t('blog.title')
+        },
+        {
+          hid: 'twitter:description',
+          name: 'twitter:description',
+          content: this.$i18n.t('blog.description')
+        }
+      ]
     }
   }
+}
 </script>
 
 <style></style>

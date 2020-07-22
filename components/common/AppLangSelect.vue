@@ -28,45 +28,45 @@
 </template>
 
 <script>
-  import CaretDownIcon from '~/assets/icons/caret-down.svg?inline'
+import CaretDownIcon from '~/assets/icons/caret-down.svg?inline'
 
-  const Modes = Object.freeze({
-    SLIM: 'slim',
-    NORMAL: 'normal'
-  })
+const Modes = Object.freeze({
+  SLIM: 'slim',
+  NORMAL: 'normal'
+})
 
-  export default {
-    components: {
-      CaretDownIcon
+export default {
+  components: {
+    CaretDownIcon
+  },
+  props: {
+    mode: {
+      type: String,
+      required: false,
+      default: Modes.NORMAL
     },
-    props: {
-      mode: {
-        type: String,
-        required: false,
-        default: Modes.NORMAL
-      },
-      label: {
-        type: String,
-        required: true
-      }
-    },
-    methods: {
-      onChange(event) {
-        const locale = this.$i18n.locales.find(
-          locale => locale.code === event.target.value
-        )
+    label: {
+      type: String,
+      required: true
+    }
+  },
+  methods: {
+    onChange(event) {
+      const locale = this.$i18n.locales.find(
+        locale => locale.code === event.target.value
+      )
 
-        window.location.href = locale.domain
-      },
-      getLocaleDescription(locale) {
-        switch (this.mode) {
-          case Modes.SLIM:
-            return locale.code.toLocaleUpperCase()
-          case Modes.NORMAL:
-          default:
-            return locale.name
-        }
+      window.location.href = locale.domain
+    },
+    getLocaleDescription(locale) {
+      switch (this.mode) {
+        case Modes.SLIM:
+          return locale.code.toLocaleUpperCase()
+        case Modes.NORMAL:
+        default:
+          return locale.name
       }
     }
   }
+}
 </script>

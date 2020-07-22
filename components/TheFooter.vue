@@ -87,34 +87,34 @@
 </template>
 
 <script>
-  import GlobeIcon from '~/assets/icons/globe.svg?inline'
-  import SmallNuxtLogo from '~/assets/images/logo-small.svg?inline'
+import GlobeIcon from '~/assets/icons/globe.svg?inline'
+import SmallNuxtLogo from '~/assets/images/logo-small.svg?inline'
 
-  export default {
-    components: {
-      GlobeIcon,
-      SmallNuxtLogo
-    },
-    data() {
-      return {
-        links: {
-          discover: [
-            { key: 'Design resources', to: '/design' },
-            { key: 'A worldwide team', to: '/team' },
-            { key: 'Blog', to: '/blog' }
-          ],
-          follow: [
-            { key: 'GitHub', href: 'https://github.com/nuxt/nuxt.js' },
-            { key: 'Twitter', href: 'https://twitter.com/nuxt_js' },
-            { key: 'Discord', href: 'https://discord.nuxtjs.org' }
-          ],
-          support: [
-            { key: 'Sponsor NuxtJS', to: this.localePath('/sponsor-nuxtjs') },
-            { key: 'The NuxtJS Shop', to: this.localePath('/shop') },
-            { key: 'NuxtJS Consulting', to: this.localePath('/support') }
-          ]
-        }
+export default {
+  components: {
+    GlobeIcon,
+    SmallNuxtLogo
+  },
+  data() {
+    return {
+      links: {
+        discover: [
+          { key: 'Design resources', to: '/design' },
+          { key: 'A worldwide team', to: '/team' },
+          { key: 'Blog', to: '/blog' }
+        ],
+        follow: [
+          { key: 'GitHub', href: 'https://github.com/nuxt/nuxt.js' },
+          { key: 'Twitter', href: 'https://twitter.com/nuxt_js' },
+          { key: 'Discord', href: 'https://discord.nuxtjs.org' }
+        ],
+        support: [
+          { key: 'Sponsor NuxtJS', to: this.localePath('/sponsor-nuxtjs') },
+          { key: 'The NuxtJS Shop', to: this.localePath('/shop') },
+          { key: 'NuxtJS Consulting', to: this.localePath('/support') }
+        ]
       }
     }
   }
+}
 </script>

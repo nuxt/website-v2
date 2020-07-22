@@ -30,20 +30,20 @@
 </template>
 
 <script>
-  import SearchIcon from '~/assets/icons/search.svg?inline'
+import SearchIcon from '~/assets/icons/search.svg?inline'
 
-  export default {
-    components: {
-      SearchIcon
-    },
-    props: [],
-    data() {
-      return {
-        showMobile: false
-      }
-    },
-    methods: {
-      //
+export default {
+  components: {
+    SearchIcon
+  },
+  props: [],
+  data() {
+    return {
+      showMobile: false
     }
+  },
+  methods: {
+    //
   }
+}
 </script>

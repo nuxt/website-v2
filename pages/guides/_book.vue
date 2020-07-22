@@ -13,39 +13,39 @@
 </template>
 
 <script>
-  import groupBy from 'lodash.groupby'
+import groupBy from 'lodash.groupby'
 
-  export default {
-    async asyncData({ $content, app, params, redirect }) {
-      let pages = []
+export default {
+  async asyncData({ $content, app, params, redirect }) {
+    let pages = []
 
-      try {
-        pages = await $content(app.i18n.defaultLocale, 'guides', { deep: true })
-          .only(['slug', 'title', 'menu', 'category', 'position'])
-          .sortBy('position')
-          .sortBy('title')
-          .sortBy('menu')
-          .fetch()
+    try {
+      pages = await $content(app.i18n.defaultLocale, 'guides', { deep: true })
+        .only(['slug', 'title', 'menu', 'category', 'position'])
+        .sortBy('position')
+        .sortBy('title')
+        .sortBy('menu')
+        .fetch()
 
-        // if (app.i18n.locale !== app.i18n.defaultLocale) {
-        //   const newPages = await $content(app.i18n.locale, 'guides', { deep: true })
-        //     .only(['slug', 'title', 'menu', 'category', 'position'])
-        //     .sortBy('position')
-        //     .sortBy('title')
-        //     .sortBy('menu')
-        //     .fetch()
+      // if (app.i18n.locale !== app.i18n.defaultLocale) {
+      //   const newPages = await $content(app.i18n.locale, 'guides', { deep: true })
+      //     .only(['slug', 'title', 'menu', 'category', 'position'])
+      //     .sortBy('position')
+      //     .sortBy('title')
+      //     .sortBy('menu')
+      //     .fetch()
 
-        //   pages = pages.map((page) => {
-        //     const newPage = newPages.find(newPage => newPage.slug === page.slug)
+      //   pages = pages.map((page) => {
+      //     const newPage = newPages.find(newPage => newPage.slug === page.slug)
 
-        //     return newPage || page
-        //   })
-        // }
-      } catch (e) {}
+      //     return newPage || page
+      //   })
+      // }
+    } catch (e) {}
 
-      return {
-        links: groupBy(pages, 'category')
-      }
+    return {
+      links: groupBy(pages, 'category')
     }
   }
+}
 </script>

@@ -14,22 +14,22 @@
 </template>
 
 <script>
-  import intersectingMixin from '~/mixins/intersecting.js'
-  export default {
-    mixins: [intersectingMixin],
-    props: {
-      src: {
-        type: String,
-        required: true
-      }
+import intersectingMixin from '~/mixins/intersecting.js'
+export default {
+  mixins: [intersectingMixin],
+  props: {
+    src: {
+      type: String,
+      required: true
     }
   }
+}
 </script>
 
 <style scoped>
-  .codesandbox,
-  .codesandbox iframe {
-    max-width: 1400px;
-    height: 700px;
-  }
+.codesandbox,
+.codesandbox iframe {
+  max-width: 1400px;
+  height: 700px;
+}
 </style>

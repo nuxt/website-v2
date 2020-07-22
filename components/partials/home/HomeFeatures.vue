@@ -79,28 +79,28 @@
 </template>
 
 <style lang="scss">
-  $grey_blue: #2f495e;
-  $light_green: #00c58e;
-  $grey: #606f7b;
+$grey_blue: #2f495e;
+$light_green: #00c58e;
+$grey: #606f7b;
 
-  .Home__Features {
-    &__Section {
-      &__Title {
-        font-size: 1.35rem;
-        font-weight: 700;
-        margin: 0;
-        text-transform: uppercase;
-        padding: 0;
-        padding-bottom: 1.5rem;
-      }
-      &__Description {
-        text-align: justify;
-        color: $grey;
-        font-weight: 500;
-        margin: 0;
-        line-height: 1.7rem;
-        font-size: 1rem;
-      }
+.Home__Features {
+  &__Section {
+    &__Title {
+      font-size: 1.35rem;
+      font-weight: 700;
+      margin: 0;
+      text-transform: uppercase;
+      padding: 0;
+      padding-bottom: 1.5rem;
+    }
+    &__Description {
+      text-align: justify;
+      color: $grey;
+      font-weight: 500;
+      margin: 0;
+      line-height: 1.7rem;
+      font-size: 1rem;
     }
   }
+}
 </style>

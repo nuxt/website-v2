@@ -44,40 +44,40 @@
 </template>
 
 <script>
-  export default {
-    props: {
-      prev: {
-        type: Object,
-        default: () => null
-      },
-      next: {
-        type: Object,
-        default: () => null
-      },
-      section: {
-        type: String,
-        default: ''
-      }
+export default {
+  props: {
+    prev: {
+      type: Object,
+      default: () => null
     },
-    computed: {
-      prevBook() {
-        if (!this.prev) {
-          return
-        }
-
-        const dirs = this.prev.dir.split('/').slice(-1)
-
-        return dirs[dirs.length - 1]
-      },
-      nextBook() {
-        if (!this.next) {
-          return
-        }
-
-        const dirs = this.next.dir.split('/')
-
-        return dirs[dirs.length - 1]
+    next: {
+      type: Object,
+      default: () => null
+    },
+    section: {
+      type: String,
+      default: ''
+    }
+  },
+  computed: {
+    prevBook() {
+      if (!this.prev) {
+        return
       }
+
+      const dirs = this.prev.dir.split('/').slice(-1)
+
+      return dirs[dirs.length - 1]
+    },
+    nextBook() {
+      if (!this.next) {
+        return
+      }
+
+      const dirs = this.next.dir.split('/')
+
+      return dirs[dirs.length - 1]
     }
   }
+}
 </script>

@@ -56,57 +56,57 @@
 </template>
 
 <script>
-  import sortBy from 'lodash.sortby'
+import sortBy from 'lodash.sortby'
 
-  export default {
-    props: {
-      links: {
-        type: Object,
-        default: () => {}
-      }
+export default {
+  props: {
+    links: {
+      type: Object,
+      default: () => {}
+    }
+  },
+  data() {
+    return {
+      current: 0,
+      setInter: null,
+      showNav: false,
+      section: this.$route.params.section
+    }
+  },
+  computed: {
+    visible() {
+      return this.$store.state.visibleAffix
     },
-    data() {
-      return {
-        current: 0,
-        setInter: null,
-        showNav: false,
-        section: this.$route.params.section
-      }
+    path() {
+      return this.$route.path.slice(-1) === '/'
+        ? this.$route.path.slice(0, -1)
+        : this.$route.path
     },
-    computed: {
-      visible() {
-        return this.$store.state.visibleAffix
-      },
-      path() {
-        return this.$route.path.slice(-1) === '/'
-          ? this.$route.path.slice(0, -1)
-          : this.$route.path
-      },
-      menu() {
-        return '/' + this.$route.params.section
-      },
-      sortedLinks() {
-        const links = {}
-        sortBy(Object.keys(this.links), link => {
-          return Object.keys(this.$i18n.t(`content.${this.section}`)).indexOf(
-            link
-          )
-        }).forEach(key => {
-          links[key] = this.links[key]
-        })
-        return links
-      }
+    menu() {
+      return '/' + this.$route.params.section
     },
-    methods: {
-      toLink(link) {
-        const slug = link.slug === 'index' ? undefined : link.slug
-        return this.localePath({
-          name: 'section-slug',
-          params: { section: this.section, slug }
-        })
-      }
+    sortedLinks() {
+      const links = {}
+      sortBy(Object.keys(this.links), link => {
+        return Object.keys(this.$i18n.t(`content.${this.section}`)).indexOf(
+          link
+        )
+      }).forEach(key => {
+        links[key] = this.links[key]
+      })
+      return links
+    }
+  },
+  methods: {
+    toLink(link) {
+      const slug = link.slug === 'index' ? undefined : link.slug
+      return this.localePath({
+        name: 'section-slug',
+        params: { section: this.section, slug }
+      })
     }
   }
+}
 </script>
 
 <style lang="scss" scoped></style>

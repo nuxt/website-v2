@@ -47,27 +47,27 @@
 </template>
 
 <script>
-  export default {
-    name: 'BlogpostItem',
-    props: {
-      post: {
-        type: Object,
-        required: true
-      }
-    },
-    computed: {
-      hasTags() {
-        return this.post.tags
-      }
-    },
-    methods: {
-      formatDateByLocale(d) {
-        const currentLocale = this.$i18n.locale || 'en'
-        const options = { year: 'numeric', month: 'long', day: 'numeric' }
-        return new Date(d).toLocaleDateString(currentLocale, options)
-      }
+export default {
+  name: 'BlogpostItem',
+  props: {
+    post: {
+      type: Object,
+      required: true
+    }
+  },
+  computed: {
+    hasTags() {
+      return this.post.tags
+    }
+  },
+  methods: {
+    formatDateByLocale(d) {
+      const currentLocale = this.$i18n.locale || 'en'
+      const options = { year: 'numeric', month: 'long', day: 'numeric' }
+      return new Date(d).toLocaleDateString(currentLocale, options)
     }
   }
+}
 </script>
 
 <style></style>

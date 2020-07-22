@@ -161,147 +161,147 @@
 </template>
 
 <script>
-  import OpenCollectiveIcon from '~/assets/icons/open-collective.svg?inline'
-  import BtcLogo from '~/assets/icons/btc.svg?inline'
-  import BchLogo from '~/assets/icons/bch.svg?inline'
-  import EthLogo from '~/assets/icons/eth.svg?inline'
-  import LtcLogo from '~/assets/icons/ltc.svg?inline'
-  import SponsorIllustration from '~/assets/illustrations/sponsor.svg?inline'
+import OpenCollectiveIcon from '~/assets/icons/open-collective.svg?inline'
+import BtcLogo from '~/assets/icons/btc.svg?inline'
+import BchLogo from '~/assets/icons/bch.svg?inline'
+import EthLogo from '~/assets/icons/eth.svg?inline'
+import LtcLogo from '~/assets/icons/ltc.svg?inline'
+import SponsorIllustration from '~/assets/illustrations/sponsor.svg?inline'
 
-  export default {
-    components: {
-      SponsorIllustration,
-      OpenCollectiveIcon,
-      BtcLogo,
-      BchLogo,
-      EthLogo,
-      LtcLogo
-    },
-    data() {
-      return {
-        sponsors: {
-          platinum: [
-            {
-              name: 'Storyblok',
-              img: 'storyblok-logo.svg',
-              url: 'https://www.storyblok.com/?ref=nuxt',
-              class: 'h-24'
-            }
-          ],
-          gold: [
-            {
-              name: 'VueMastery',
-              img: 'vueMastery-brand.svg',
-              url: 'https://www.vuemastery.com/?ref=nuxt',
-              class: 'h-10'
-            }
-          ],
-          silver: [
-            {
-              name: 'Sparheld',
-              img: 'sparheld.svg',
-              url: 'https://www.sparheld.de/?ref=nuxt',
-              class: 'h-8'
-            },
-            {
-              name: 'Icons8',
-              img: 'icons8.svg',
-              url: 'https://icons8.com/?ref=nuxt',
-              class: 'h-8'
-            },
-            {
-              name: 'FireStickHow',
-              img: 'fire-stick-how.png',
-              url: 'https://www.firestickhow.com/?ref=nuxt',
-              class: 'h-8'
-            },
-            {
-              name: 'MiniTool',
-              img: 'minitool.png',
-              url: 'https://www.minitool.com',
-              class: 'h-8'
-            }
-          ],
-          special: [
-            {
-              name: 'Google Chrome',
-              img: 'google-chrome.svg',
-              url: 'https://www.google.com/chrome/?ref=nuxt',
-              class: 'h-12'
-            }
-          ]
-        },
-        onetime: {
-          current: 'btc',
-          btc: {
-            title: 'Bitcoin Address',
-            address: '1DVJSFQzfVkLdW7drR7pRW2tWV1XDCv6gF',
-            img: '/img/wallet/btc.png'
-          },
-          bch: {
-            title: 'Bitcoin Cash Address',
-            address: 'qrm24z9xr9nvafeejt346waa9shk5mjagv0fgpedrt',
-            img: '/img/wallet/bch.png'
-          },
-          eth: {
-            title: 'Ethereum Address',
-            address: '0x6513bC2B1824d997699cF177591b6aa9cEE2d12A',
-            img: '/img/wallet/eth.png'
-          },
-          ltc: {
-            title: 'Litecoin Address',
-            address: 'MSoJB2AUZMss82HLk7fwggZhJDKxQ1HZAh',
-            img: '/img/wallet/ltc.png'
+export default {
+  components: {
+    SponsorIllustration,
+    OpenCollectiveIcon,
+    BtcLogo,
+    BchLogo,
+    EthLogo,
+    LtcLogo
+  },
+  data() {
+    return {
+      sponsors: {
+        platinum: [
+          {
+            name: 'Storyblok',
+            img: 'storyblok-logo.svg',
+            url: 'https://www.storyblok.com/?ref=nuxt',
+            class: 'h-24'
           }
-        }
-      }
-    },
-    computed: {
-      currentOnetime() {
-        return this.onetime.current ? this.onetime[this.onetime.current] : null
-      }
-    },
-    head() {
-      const title = 'Sponsor NuxtJS Development'
-      const description =
-        'You can support NuxtJS development via different methods and ensure regular updates to the framework.'
-
-      return {
-        title,
-        meta: [
-          { hid: 'description', name: 'description', content: description },
-          // Open Graph
-          { hid: 'og:title', property: 'og:title', content: title },
+        ],
+        gold: [
           {
-            hid: 'og:description',
-            property: 'og:description',
-            content: description
+            name: 'VueMastery',
+            img: 'vueMastery-brand.svg',
+            url: 'https://www.vuemastery.com/?ref=nuxt',
+            class: 'h-10'
+          }
+        ],
+        silver: [
+          {
+            name: 'Sparheld',
+            img: 'sparheld.svg',
+            url: 'https://www.sparheld.de/?ref=nuxt',
+            class: 'h-8'
           },
-          // Twitter Card
-          { hid: 'twitter:title', name: 'twitter:title', content: title },
           {
-            hid: 'twitter:description',
-            name: 'twitter:description',
-            content: description
+            name: 'Icons8',
+            img: 'icons8.svg',
+            url: 'https://icons8.com/?ref=nuxt',
+            class: 'h-8'
+          },
+          {
+            name: 'FireStickHow',
+            img: 'fire-stick-how.png',
+            url: 'https://www.firestickhow.com/?ref=nuxt',
+            class: 'h-8'
+          },
+          {
+            name: 'MiniTool',
+            img: 'minitool.png',
+            url: 'https://www.minitool.com',
+            class: 'h-8'
+          }
+        ],
+        special: [
+          {
+            name: 'Google Chrome',
+            img: 'google-chrome.svg',
+            url: 'https://www.google.com/chrome/?ref=nuxt',
+            class: 'h-12'
           }
         ]
+      },
+      onetime: {
+        current: 'btc',
+        btc: {
+          title: 'Bitcoin Address',
+          address: '1DVJSFQzfVkLdW7drR7pRW2tWV1XDCv6gF',
+          img: '/img/wallet/btc.png'
+        },
+        bch: {
+          title: 'Bitcoin Cash Address',
+          address: 'qrm24z9xr9nvafeejt346waa9shk5mjagv0fgpedrt',
+          img: '/img/wallet/bch.png'
+        },
+        eth: {
+          title: 'Ethereum Address',
+          address: '0x6513bC2B1824d997699cF177591b6aa9cEE2d12A',
+          img: '/img/wallet/eth.png'
+        },
+        ltc: {
+          title: 'Litecoin Address',
+          address: 'MSoJB2AUZMss82HLk7fwggZhJDKxQ1HZAh',
+          img: '/img/wallet/ltc.png'
+        }
       }
     }
+  },
+  computed: {
+    currentOnetime() {
+      return this.onetime.current ? this.onetime[this.onetime.current] : null
+    }
+  },
+  head() {
+    const title = 'Sponsor NuxtJS Development'
+    const description =
+      'You can support NuxtJS development via different methods and ensure regular updates to the framework.'
+
+    return {
+      title,
+      meta: [
+        { hid: 'description', name: 'description', content: description },
+        // Open Graph
+        { hid: 'og:title', property: 'og:title', content: title },
+        {
+          hid: 'og:description',
+          property: 'og:description',
+          content: description
+        },
+        // Twitter Card
+        { hid: 'twitter:title', name: 'twitter:title', content: title },
+        {
+          hid: 'twitter:description',
+          name: 'twitter:description',
+          content: description
+        }
+      ]
+    }
   }
+}
 </script>
 
 <style>
-  .sponsor {
+.sponsor {
+  & img {
+    opacity: 0.75;
+    filter: grayscale(100%);
+    transition: all 0.5s;
+  }
+  &:hover {
     & img {
-      opacity: 0.75;
-      filter: grayscale(100%);
-      transition: all 0.5s;
-    }
-    &:hover {
-      & img {
-        opacity: 1;
-        filter: grayscale(0%);
-      }
+      opacity: 1;
+      filter: grayscale(0%);
     }
   }
+}
 </style>

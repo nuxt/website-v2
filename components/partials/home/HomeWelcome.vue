@@ -11,10 +11,6 @@
             class="text-4xl xl:text-5xl text-light-onSurfacePrimary dark:text-dark-onSurfacePrimary font-medium tracking-normal leading-tight mb-6"
             v-html="$t('homepage.welcome.title')"
           />
-          <h3
-            class="xl:text-lg text-light-onSurfaceSecondary dark:text-dark-onSurfaceSecondary font-medium leading-relaxed mb-6"
-            v-html="$t('homepage.welcome.title')"
-          />
           <div class="flex flex-col sm:block py-4">
             <AppButton
               :to="{

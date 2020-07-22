@@ -81,7 +81,7 @@
         ;[prev, next] = await $content(
           `/${app.i18n.defaultLocale}/guides/${params.book}`
         )
-          .only(['title', 'slug', 'dir'])
+          .only(['title', 'slug', 'dir', 'menu'])
           .sortBy('position')
           .sortBy('title')
           .sortBy('menu')

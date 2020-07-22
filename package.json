@@ -102,8 +102,8 @@
   },
   "homepage": "https://github.com/nuxt/nuxtjs.org#readme",
   "lint-staged": {
-    "*.{js, json, vue}": "eslint --cache --fix",
-    "*.{md}": "markdownlint",
-    "*.{js,json,css,vue,md}": "prettier --write"
+    "*.{js, json, vue}": "yarn lint:eslint",
+    "*.{md}": "yarn lint:markdownlint",
+    "*.{js,json,css,vue,md}": "yarn format:prettier"
   }
 }

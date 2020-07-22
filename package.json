@@ -70,17 +70,14 @@
     "cy:run": "cypress run",
     "test:e2e:run": "start-server-and-test start http://localhost:3000 cy:run",
     "test:e2e:dev": "start-server-and-test dev http://localhost:3000 cy:open",
-    "lint:eslint": "eslint --fix",
-    "lint:markdownlint": "markdownlint",
-    "lint:prettier": "prettier --write --loglevel warn",
-    "lint:all:eslint": "yarn lint:eslint --ext .js,.vue --ignore-path .gitignore --ignore-pattern modules/ --ignore-pattern plugins/ga.js .",
-    "lint:all:markdownlint": "yarn lint:markdownlint \"content/*.md\" \"*.md\"",
-    "lint:all:prettier": "yarn lint:prettier \"**/*.{js,json,css,scss,vue,html,md}\"",
-    "lint": "run-s lint:all:*",
-    "prettier": "prettier --ignore-path .gitignore \"**/*.+(js|json|css|scss|vue|html|md)\"",
-    "format": "npm run prettier -- --write",
-    "check-format": "npm run prettier -- --list-different",
-    "validate": "npm run check-format && npm run lint"
+    "eslint": "eslint --ext .js,.vue --ignore-path .gitignore --ignore-pattern modules/ --ignore-pattern plugins/ga.js .",
+    "markdownlint": "markdownlint  \"*.md\"",
+    "prettier": "prettier  \"**/*.{js,json,css,scss,vue,html,md}\"",
+    "check:prettier": "yarn prettier -- --list-different",
+    "format:prettier": "yarn prettier --write --loglevel warn",
+    "lint:eslint": "yarn eslint --fix",
+    "lint:markdownlint": "yarn markdownlint",
+    "lint": "run-p lint"
   },
   "husky": {
     "hooks": {
@@ -105,7 +102,7 @@
   "homepage": "https://github.com/nuxt/nuxtjs.org#readme",
   "lint-staged": {
     "*.{js, json, vue}": "eslint --cache --fix",
-    "*.{md}": "lint:markdownlint",
+    "*.{md}": "markdownlint",
     "*.{js,json,css,vue,md}": "prettier --write"
   }
 }

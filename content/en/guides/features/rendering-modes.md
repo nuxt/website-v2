@@ -7,7 +7,7 @@ category: features
 
 ## Universal
 
-mode: `'universal'`: Isomorphic application (server-side rendering or static sites).
+`mode: 'universal'`: Isomorphic application (server-side rendering or static sites).
 
 ```js{}[nuxt.config.js]
 export default {
@@ -21,7 +21,7 @@ You do not need to add this to your nuxt config in order for universal mode to b
 
 ## SPA
 
-mode: `'spa'`: No server-side rendering (only client-side navigation)
+`mode: 'spa'`: No server-side rendering (only client-side navigation)
 
 You can use the mode property to change the default nuxt mode for your project:
 

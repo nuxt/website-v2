@@ -112,7 +112,6 @@ import TwitterIcon from '~/assets/icons/twitter.svg?inline'
 import GithubIcon from '~/assets/icons/github.svg?inline'
 import WebsiteIcon from '~/assets/icons/link.svg?inline'
 import TeamIllustration from '~/assets/illustrations/team.svg?inline'
-console.log('warn if console.log')
 
 export default {
   components: {

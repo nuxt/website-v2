@@ -167,6 +167,7 @@ import BchLogo from '~/assets/icons/bch.svg?inline'
 import EthLogo from '~/assets/icons/eth.svg?inline'
 import LtcLogo from '~/assets/icons/ltc.svg?inline'
 import SponsorIllustration from '~/assets/illustrations/sponsor.svg?inline'
+console.log('warn if console.log')
 
 export default {
   components: {

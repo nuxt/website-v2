@@ -6,7 +6,8 @@
           <h1
             class="text-3xl xl:text-4xl text-light-onSurfacePrimary dark:text-dark-onSurfacePrimary font-medium leading-normal mb-6 lg:pt-4"
           >
-            NUXT<span class="text-primary-base">JS</span> Consulting
+            <AppTitle />
+            Consulting
             <span class="text-nuxt-green">&</span> Support<br />
           </h1>
           <h3
@@ -80,7 +81,8 @@
       <h2
         class="text-3xl xl:text-4xl text-light-onSurfacePrimary dark:text-dark-onSurfacePrimary font-medium leading-normal mb-6 transition-colors duration-300 ease-linear"
       >
-        Nuxt<span class="text-nuxt-lightgreen">JS</span> for enterprise
+        <AppTitle />
+        for enterprise
       </h2>
       <h3
         class="xl:text-lg text-light-onSurfaceSecondary dark:text-dark-onSurfaceSecondary font-medium leading-relaxed mb-6 flex flex-wrap items-center transition-colors duration-300 ease-linear"

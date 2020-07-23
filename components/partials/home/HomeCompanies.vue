@@ -11,8 +11,7 @@
         >
           {{ $t('homepage.companies.title') }}
           <template v-slot:nuxt>
-            NUXT
-            <span class="text-nuxt-lightgreen">JS</span>
+            <AppTitle />
           </template>
         </i18n>
         <div class="flex flex-col lg:flex-row items-center justify-between">

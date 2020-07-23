@@ -11,8 +11,7 @@
         class="text-3xl font-medium text-light-onSurfacePrimary dark:text-dark-onSurfacePrimary mb-2 transition-colors duration-300 ease-linear"
       >
         <template v-slot:nuxt>
-          NUXT
-          <span class="text-nuxt-lightgreen">JS</span>
+          <AppTitle />
         </template>
       </i18n>
       <p

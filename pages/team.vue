@@ -6,8 +6,7 @@
           <h1
             class="text-3xl xl:text-4xl text-light-onSurfacePrimary dark:text-dark-onSurfacePrimary font-medium leading-normal mb-6 lg:pt-4 transition-colors duration-300 ease-linear"
           >
-            The NUXT
-            <span class="text-nuxt-lightgreen">JS</span>
+            <AppTitle />
             Team
             <br />
           </h1>

@@ -9,8 +9,7 @@
           class="text-3xl uppercase font-medium pt-10 pb-8 text-center"
         >
           <template v-slot:nuxt>
-            NUXT
-            <span class="text-nuxt-lightgreen">JS</span>
+            <AppTitle />
           </template>
         </i18n>
 

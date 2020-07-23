@@ -11,7 +11,7 @@ For static hosting (hosting where no server is needed) the target of static need
 
 ```js{}[nuxt.config.js]
 export default {
-  target: 'static'
+  target: 'static' // default: 'server'
 }
 ```
 
@@ -32,6 +32,6 @@ For server hosting the target of server is used which is the default value.
 
 ```js{}[nuxt.config.js]
 export default {
-  target: 'server' // default: 'server'
+  target: 'server'
 }
 ```

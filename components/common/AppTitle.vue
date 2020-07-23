@@ -1,3 +1,3 @@
 <template>
-  <span> NUXT<span class="text-nuxt-lightgreen">JS</span> </span>
+  <span> Nuxt<span class="text-nuxt-lightgreen">JS</span> </span>
 </template>

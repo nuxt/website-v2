@@ -4,10 +4,17 @@
       id="subscribe-to-newsletter"
       class="py-8 px-3 -mx-4 lg:mx-0 text-center rounded-t-lg"
     >
-      <h2
+      <!-- why title i18n -->
+      <i18n
+        path="homepage.newsletter.title"
+        tag="h2"
         class="text-3xl font-medium text-light-onSurfacePrimary dark:text-dark-onSurfacePrimary mb-2 transition-colors duration-300 ease-linear"
-        v-html="$t('homepage.newsletter.title')"
-      />
+      >
+        <template v-slot:nuxt>
+          NUXT
+          <span class="text-nuxt-lightgreen">JS</span>
+        </template>
+      </i18n>
       <p
         class="mb-6 text-light-onSurfaceSecondary dark:text-dark-onSurfaceSecondary transition-colors duration-300 ease-linear"
         v-html="$t('homepage.newsletter.description')"

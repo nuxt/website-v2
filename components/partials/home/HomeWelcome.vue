@@ -7,6 +7,7 @@
         <div
           class="w-full lg:w-1/2 xl:w-6/12 text-center lg:text-left py-4 sm:p-0"
         >
+          <!--welcome title i18n -->
           <i18n
             path="homepage.welcome.title"
             tag="h1"
@@ -19,7 +20,7 @@
               </span>
             </template>
           </i18n>
-
+          <!--welcome description i18n -->
           <i18n
             path="homepage.welcome.description"
             tag="h2"
@@ -64,6 +65,7 @@
             src="https://player.vimeo.com/video/311756540"
             class="mb-4"
           />
+          <!--welcome video i18n -->
           <i18n
             path="homepage.welcome.video"
             tag="p"

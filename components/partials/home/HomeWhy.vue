@@ -2,36 +2,59 @@
   <div class="bg-light-surface dark:bg-dark-surface">
     <div class="container mx-auto px-4 pb-12">
       <section class="rounded py-6 sm:p-6">
-        <h1
+        <!-- why title i18n -->
+        <i18n
+          path="homepage.why.title"
+          tag="h2"
           class="text-3xl uppercase font-medium pt-10 pb-8 text-center"
-          v-html="$t('homepage.why.title')"
-        />
+        >
+          <template v-slot:nuxt>
+            NUXT
+            <span class="text-nuxt-lightgreen">JS</span>
+          </template>
+        </i18n>
+
         <div class="flex flex-col lg:flex-row items-start justify-between">
           <div class="lg:w-1/3 px-4 py-8 lg:p-8 flex flex-col items-center">
             <ModularIllustration class="inline-block" />
             <h4 class="uppercase font-medium text-2xl py-8">
               {{ $t('homepage.why.modular.title') }}
             </h4>
-            <p
+            <!-- why modular description i18n -->
+            <i18n
+              path="homepage.why.modular.description"
+              tag="p"
               class="leading-loose text-light-onSurfaceSecondary dark:text-dark-onSurfaceSecondary"
-              v-html="$t('homepage.why.modular.description')"
-            />
+            >
+              <template v-slot:break>
+                <br />
+              </template>
+            </i18n>
           </div>
           <div class="lg:w-1/3 px-4 py-8 lg:p-8 flex flex-col items-center">
             <PerformantIllustration class="inline-block" />
             <h4 class="uppercase font-medium text-2xl py-8">
               {{ $t('homepage.why.performant.title') }}
             </h4>
-            <p
+
+            <!-- why modular description i18n -->
+            <i18n
+              path="homepage.why.performant.description"
+              tag="p"
               class="leading-loose text-light-onSurfaceSecondary dark:text-dark-onSurfaceSecondary"
-              v-html="$t('homepage.why.performant.description')"
-            />
+            >
+              <template v-slot:break>
+                <br />
+              </template>
+            </i18n>
           </div>
           <div class="lg:w-1/3 px-4 py-8 lg:p-8 flex flex-col items-center">
             <EnjoyableIllustration class="inline-block" />
             <h4 class="uppercase font-medium text-2xl py-8">
               {{ $t('homepage.why.enjoyable.title') }}
             </h4>
+
+            <!-- why enjoyable description i18n -->
             <i18n
               path="homepage.why.enjoyable.description"
               tag="p"

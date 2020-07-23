@@ -32,10 +32,16 @@
             <h4 class="uppercase font-medium text-2xl py-8">
               {{ $t('homepage.why.enjoyable.title') }}
             </h4>
-            <p
+            <i18n
+              path="homepage.why.enjoyable.description"
+              tag="p"
               class="leading-loose text-light-onSurfaceSecondary dark:text-dark-onSurfaceSecondary"
-              v-html="$t('homepage.why.enjoyable.description')"
-            />
+            >
+              <template v-slot:break>
+                💚
+                <br />
+              </template>
+            </i18n>
           </div>
         </div>
         <div class="text-center">

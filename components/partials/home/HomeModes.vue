@@ -2,10 +2,13 @@
   <div class="bg-light-surface dark:bg-dark-surface">
     <div class="container mx-auto px-4 pb-12">
       <section class="rounded py-6 sm:p-6">
-        <h1
-          class="text-3xl uppercase text-center pt-10 font-medium"
-          v-html="$t('homepage.modes.title')"
-        />
+        <h1 class="text-3xl uppercase text-center pt-10 font-medium">
+          NUXT
+          <span class="text-nuxt-lightgreen">
+            JS
+          </span>
+          {{ $t('homepage.modes.title') }}
+        </h1>
         <div class="flex flex-wrap">
           <div class="lg:w-1/2 p-4 lg:p-8">
             <FireIcon

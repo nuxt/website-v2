@@ -7,14 +7,31 @@
         <div
           class="w-full lg:w-1/2 xl:w-6/12 text-center lg:text-left py-4 sm:p-0"
         >
-          <h1
+          <i18n
+            path="homepage.welcome.title"
+            tag="h1"
             class="text-4xl xl:text-5xl text-light-onSurfacePrimary dark:text-dark-onSurfacePrimary font-medium tracking-normal leading-tight mb-6"
-            v-html="$t('homepage.welcome.title')"
-          />
-          <h2
+          >
+            <template v-slot:frameworkType>
+              <br />
+              <span class="text-nuxt-lightgreen">
+                {{ $t('homepage.welcome.frameworkType') }}
+              </span>
+            </template>
+          </i18n>
+
+          <i18n
+            path="homepage.welcome.description"
+            tag="h2"
             class="xl:text-lg text-light-onSurfaceSecondary dark:text-dark-onSurfaceSecondary font-medium leading-relaxed mb-6"
-            v-html="$t('homepage.welcome.description')"
-          />
+          >
+            <template v-slot:openSource>
+              <span title="Under MIT license">
+                {{ $t('homepage.welcome.openSource') }}
+              </span>
+            </template>
+          </i18n>
+
           <div class="flex flex-col sm:block py-4">
             <AppButton
               :to="{
@@ -47,10 +64,31 @@
             src="https://player.vimeo.com/video/311756540"
             class="mb-4"
           />
-          <p
+          <i18n
+            path="homepage.welcome.video"
+            tag="p"
             class="font-medium py-2 text-xs xl:text-sm text-center text-light-onSurfaceSecondary dark:text-dark-onSurfaceSecondary"
-            v-html="$t('homepage.welcome.video')"
-          />
+          >
+            {{ $t('homepage.welcome.video') }}
+            <template v-slot:company>
+              <a
+                href="https://www.vuemastery.com"
+                target="_blank"
+                rel="noopener"
+              >
+                Vue Mastery
+              </a>
+            </template>
+            <template v-slot:cheatSheet>
+              <a
+                href="https://www.vuemastery.com/nuxt-cheat-sheet/"
+                target="_blank"
+                rel="noopener"
+              >
+                {{ $t('homepage.welcome.cheatSheet') }}
+              </a>
+            </template>
+          </i18n>
         </figure>
       </div>
     </div>

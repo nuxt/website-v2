@@ -68,14 +68,14 @@ module.exports = {
         'Build your next Vue.js application with confidence using NuxtJS. An open source framework making web development simple and powerful.'
     },
     welcome: {
-      title:
-        'The Intuitive<br><span class="text-nuxt-lightgreen">Vue</span> Framework<br>',
+      title: 'The Intuitive {frameworkType} Framework',
+      frameworkType: 'Vue',
       description:
-        'Build your next Vue.js application with confidence using NuxtJS. An <span title="Under MIT license">open source</span> framework making web development simple and powerful.',
+        'Build your next Vue.js application with confidence using NuxtJS. An {openSource} framework making web development simple and powerful.',
+      openSource: 'open source',
       get_started: 'get started',
-
-      video:
-        'Video produced by <a href="https://www.vuemastery.com" target="_blank" rel="noopener">Vue Mastery</a>, download their free <a href="https://www.vuemastery.com/nuxt-cheat-sheet/" target="_blank" rel="noopener">Nuxt Cheat Sheet</a>.'
+      video: 'Video produced by {company}, download their free {cheatSheet}',
+      cheatSheet: 'Nuxt Cheat Sheet.'
     },
     why: {
       title: 'Why NUXT<span class="text-nuxt-lightgreen">JS</span>',
@@ -83,7 +83,7 @@ module.exports = {
       enjoyable: {
         title: 'Enjoyable',
         description:
-          'Our main focus is the Developer Experience. We love Nuxt.js and continuously improve the framework so you love it too! 💚<br>Expect appealing solutions, descriptive error messages, powerful defaults and detailed documentation. If questions or problems come up, our helpful community will help you out.'
+          'Our main focus is the Developer Experience. We love Nuxt.js and continuously improve the framework so you love it too! {break} Expect appealing solutions, descriptive error messages, powerful defaults and detailed documentation. If questions or problems come up, our helpful community will help you out.'
       },
       modular: {
         title: 'Modular',
@@ -97,10 +97,10 @@ module.exports = {
       }
     },
     companies: {
-      title: 'Who\'s using nuxt<span class= "text-nuxt-lightgreen" > JS</span>'
+      title: "Who's using"
     },
     modes: {
-      title: 'NUXT<span class="text-nuxt-lightgreen">JS</span> rendering',
+      title: 'rendering',
       ssr: {
         title: 'Server Side Rendered',
         description:

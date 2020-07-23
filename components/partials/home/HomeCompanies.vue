@@ -4,10 +4,10 @@
   >
     <div class="container mx-auto px-4 py-24">
       <section>
-        <h1
-          class="text-3xl font-medium uppercase text-center pb-8"
-          v-html="$t('homepage.companies.title')"
-        />
+        <h1 class="text-3xl font-medium uppercase text-center pb-8">
+          {{ $t('homepage.companies.title') }}
+          nuxt<span class="text-nuxt-lightgreen"> JS</span>
+        </h1>
         <div class="flex flex-col lg:flex-row items-center justify-between">
           <div
             v-for="(company, i) in langCompanies.slice(0, 5)"

@@ -258,11 +258,11 @@ export default {
             website: 'mayashavin.com'
           },
           {
-            name: 'Florent Patel',
-            city: 'Brisbane, Australia',
-            github: 'Krutie',
-            twitter: 'KrutiePatel',
-            website: 'https://krutiepatel.com'
+            name: 'Giraud Florent',
+            city: 'Montreal, Canada',
+            github: 'f3ltron',
+            twitter: 'giraud_florent',
+            website: 'https://florent.dev/'
           },
           {
             name: 'Alba Silvente',

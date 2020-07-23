@@ -32,7 +32,7 @@
             </h2>
             <ThemingIllustration
               class="text-light-onSurfacePrimary dark:text-dark-onSurfacePrimary inline-block w-auto h-40 sm:h-56 xl:h-64 transition-colors duration-300 ease-linear"
-            ></ThemingIllustration>
+            />
           </div>
         </NuxtLink>
         <NuxtLink :to="{ name: 'video-courses' }" class="w-full lg:w-1/2 p-4">
@@ -46,7 +46,7 @@
             </h2>
             <VideosIllustration
               class="text-light-onSurfacePrimary dark:text-dark-onSurfacePrimary inline-block w-auto h-40 sm:h-56 xl:h-64 transition-colors duration-300 ease-linear"
-            ></VideosIllustration>
+            />
           </div>
         </NuxtLink>
       </section>

@@ -8,7 +8,7 @@
     :style="[intristicRatioStyle]"
     class="overflow-hidden relative light:bg-light-surface dark:bg-dark-surface"
   >
-    <div></div>
+    <div />
     <template v-if="isTest || isDev">
       <img
         v-if="show"

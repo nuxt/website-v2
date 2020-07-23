@@ -78,7 +78,7 @@
     "lint:markdownlint": "markdownlint  \"*.md\"",
     "lint:stylelint": "stylelint \"**/*.{vue,scss}\"",
     "lint:prettier": "prettier  \"**/*.{js,json,css,scss,vue,html,md}\"",
-    "check:prettier": "yarn plint:rettier --list-different",
+    "check:prettier": "yarn lint:prettier --list-different",
     "format:prettier": "yarn lint:prettier --write --loglevel warn",
     "lint:all:eslint": "yarn lint:eslint --fix",
     "lint:all:markdownlint": "yarn lint:markdownlint",
@@ -107,8 +107,8 @@
   },
   "homepage": "https://github.com/nuxt/nuxtjs.org#readme",
   "lint-staged": {
-    "*.{js,vue}": "yarn lint:eslint",
-    "*.{md}": "yarn lint:markdownlint",
-    "*.{js,json,css,vue,md}": "yarn format:prettier"
+    "*.{js,vue}": "eslint --fix",
+    "*.{md}": "markdownlint",
+    "*.{js,json,css,vue,md}": "prettier --write"
   }
 }

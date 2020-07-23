@@ -32,7 +32,7 @@
             </div>
             <div class="modal-body flex-1" :class="{ 'overflow-scroll': src }">
               <img v-if="src" :src="src" :alt="alt" />
-              <slot v-else></slot>
+              <slot v-else />
             </div>
           </div>
         </div>

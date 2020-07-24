@@ -16,7 +16,7 @@ position: 104
 Если элемент типа объект, то параметры следующие:
 
 - src: `String` (путь к файлу)
-- lang: `String` ([используется пре-процессор](/guide/pages#using-pre-processors))
+- lang: `String` ([используется пре-процессор](/guide/configuration#using-pre-processors))
 
 В `nuxt.config.js` добавьте ресурсы CSS:
 

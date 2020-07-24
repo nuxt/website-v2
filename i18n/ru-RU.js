@@ -8,11 +8,11 @@ module.exports = {
     search: 'Поиск ("/" to focus)',
     version: 'Версия'
   },
-  iso: 'ru',
+  iso: 'en',
 
   links: {
-    download: 'Скачать',
-    live_edit: 'Живое редактирование'
+    download: 'Download',
+    live_edit: 'Live Edit'
   },
   header: {
     links: [
@@ -68,7 +68,7 @@ module.exports = {
         'Nuxt.js — это минималистичный фреймворк для создания приложений на Vue.js с серверным рендерингом, разделением кода, горячей заменой модулей, статической генерацией и другими крутыми штуками!'
     },
     welcome: {
-      title: 'The Intuitive{break}{frameworkType} Framework',
+      title: 'The Intuitive {break}{frameworkType} Framework',
       description:
         'Build your next Vue.js application with confidence using NuxtJS. An {openSource} framework making web development simple and powerful.',
       openSource: 'open source',
@@ -100,7 +100,7 @@ module.exports = {
       title: 'Кто использует {nuxt}'
     },
     modes: {
-      title: 'Рендеринг {nuxt}',
+      title: '{nuxt} Рендеринг',
       ssr: {
         title: 'Server Side Rendered',
         description:

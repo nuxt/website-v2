@@ -11,7 +11,7 @@ position: 123
 
 > Définissez l'espace de travail de l'application Nuxt.js.
 
-Cette propriété sera remplacée par les [commandes nuxt](/guide/commandes) si un argument leur est transmis. Par exemple, exécuter `nuxt ./My-app/` placera `rootDir` sur le chemin absolu de `./My-app/` à partir du répertoire courant de travail.
+Cette propriété sera remplacée par les [commandes nuxt](/guide/commands) si un argument leur est transmis. Par exemple, exécuter `nuxt ./My-app/` placera `rootDir` sur le chemin absolu de `./My-app/` à partir du répertoire courant de travail.
 
 De ce fait, il n'est normalement pas nécessaire de configurer cette option, sauf si vous utiliserez [Nuxt.js par programmation](/api/nuxt).
 

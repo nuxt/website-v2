@@ -17,7 +17,7 @@ position: 103
 
 Опция позволяет включить кешируемые компоненты для улучшения быстродействия.
 
-[Документация по cache](/api/configuration-cache)
+[Документация по cache](https://github.com/webpack-contrib/cache-loader#cache-loader)
 
 ### css
 

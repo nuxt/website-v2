@@ -79,6 +79,13 @@ module.exports = {
 
 Thats it!
 
+For an Azure App Service deployment, make sure you set the following two environment variables (application settings) in App Service &rsaquo; Settings &rsaquo; Configuration &rsaquo; Application settings.
+
+```
+HOST: '0.0.0.0'
+NODE_ENV: 'production'
+```
+
 ## How to set Node version on Web App in DevOps
 
 You can set the Node version on the server, via the App setting inside the "Deploy Azure Web Service" task in the release pipeline

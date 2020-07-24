@@ -19,12 +19,12 @@
 <script>
 import { mapState } from 'vuex'
 import Clipboard from 'clipboard'
-
 import ArrowLeftIcon from '~/assets/icons/arrow-left.svg?inline'
 
 export default {
   name: 'PageSlug',
   scrollToTop: true,
+
   components: {
     ArrowLeftIcon
   },
@@ -99,11 +99,15 @@ export default {
   },
   mounted() {
     const blocks = document.getElementsByClassName('nuxt-content-highlight')
+    const svg = `<svg fill="currentColor" viewBox="0 0 20 20">
+          <path d="M8 2a1 1 0 000 2h2a1 1 0 100-2H8z"></path>
+          <path d="M3 5a2 2 0 012-2 3 3 0 003 3h2a3 3 0 003-3 2 2 0 012 2v6h-4.586l1.293-1.293a1 1 0 00-1.414-1.414l-3 3a1 1 0 000 1.414l3 3a1 1 0 001.414-1.414L10.414 13H15v3a2 2 0 01-2 2H5a2 2 0 01-2-2V5zM15 11h2a1 1 0 110 2h-2v-2z"></path>
+        </svg>`
     for (const block of blocks) {
       const pre = block.getElementsByTagName('pre')[0]
       const button = document.createElement('button')
+      button.innerHTML += svg
       button.className = 'copy'
-      button.textContent = 'Copy'
       pre.appendChild(button)
     }
     const copyCode = new Clipboard('.copy', {
@@ -111,11 +115,15 @@ export default {
         return trigger.previousElementSibling
       }
     })
+
     copyCode.on('success', function (event) {
       event.clearSelection()
-      event.trigger.textContent = 'Copied!'
       window.setTimeout(function () {
-        event.trigger.textContent = 'Copy'
+        const svg = `<svg fill="currentColor" viewBox="0 0 20 20">
+          <path d="M8 2a1 1 0 000 2h2a1 1 0 100-2H8z"></path>
+          <path d="M3 5a2 2 0 012-2 3 3 0 003 3h2a3 3 0 003-3 2 2 0 012 2v6h-4.586l1.293-1.293a1 1 0 00-1.414-1.414l-3 3a1 1 0 000 1.414l3 3a1 1 0 001.414-1.414L10.414 13H15v3a2 2 0 01-2 2H5a2 2 0 01-2-2V5zM15 11h2a1 1 0 110 2h-2v-2z"></path>
+        </svg>`
+        event.trigger.innerHTML = svg
       }, 2000)
     })
   },

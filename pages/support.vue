@@ -15,7 +15,7 @@
           >
             Our
             <NuxtLink to="/team" class="text-nuxt-green underline">
-              core team
+              NuxtJS team
             </NuxtLink>
             now offers official consulting services for your NuxtJS
             applications.<br />
@@ -43,7 +43,7 @@
             </h3>
             <p class="mb-6">
               Get project audits, app deployments, custom development and
-              technical support from the NuxtJS core team.
+              technical support from the NuxtJS NuxtJS team.
             </p>
             <AppButton
               href="https://otechie.com/nuxt"
@@ -151,7 +151,7 @@ export default {
   head() {
     const title = 'The NuxtJS Support'
     const description =
-      'Our core team now offers official consulting services for your NuxtJS applications.'
+      'Our NuxtJS team now offers official consulting services for your NuxtJS applications.'
 
     return {
       title,

@@ -23,9 +23,13 @@
         />
 
         <TeamMembers :team="framework.team" :title="framework.title" />
-        <TeamMembers :team="nuxt.team" :title="nuxt.title" />
-        <TeamMembers :team="maintainers.team" :title="maintainers.title" />
-        <TeamMembers :team="ambassadors.team" :title="ambassadors.title" />
+        <LazyTeamMembers id="nuxtTeam" :team="nuxt.team" :title="nuxt.title" />
+        <LazyTeamMembers :team="maintainers.team" :title="maintainers.title" />
+        <LazyTeamMembers
+          id="ambassadors"
+          :team="ambassadors.team"
+          :title="ambassadors.title"
+        />
       </div>
     </div>
   </div>
@@ -165,7 +169,7 @@ export default {
         ]
       },
       framework: {
-        title: 'Framework',
+        title: 'Framework Team',
         team: [
           {
             name: 'Sébastien Chopin',

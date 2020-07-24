@@ -9,12 +9,27 @@
             <AppTitle />
             Blog
           </h1>
-          <h3
+
+          <!--blog description i18n -->
+          <i18n
+            path="blog.description"
+            tag="h3"
             class="xl:text-lg light:text-light-onSurfaceSecondary dark:text-dark-onSurfaceSecondary font-medium leading-relaxed mb-6"
           >
-            Discover articles from the core team and contributors about NuxtJS,
-            tips and tricks included!
-          </h3>
+            <template v-slot:nuxtTeam>
+              <NuxtLink class="text-nuxt-green underline" to="/team#nuxtTeam">
+                NuxtJS team
+              </NuxtLink>
+            </template>
+            <template v-slot:ambassadors>
+              <NuxtLink
+                class="text-nuxt-green underline"
+                to="/team#ambassadors"
+              >
+                {{ $t('blog.ambassadors') }}
+              </NuxtLink>
+            </template>
+          </i18n>
         </div>
         <DesignIllustration
           class="w-2/3 mx-auto lg:mx-0 lg:w-5/12 lg:-mt-8 text-light-elevatedSurface dark:text-dark-elevatedSurface"

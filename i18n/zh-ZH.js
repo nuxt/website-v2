@@ -126,7 +126,7 @@ module.exports = {
     newsletter: {
       title: '{nuxt} Newsletter',
       description:
-        'Get the latest Nuxt news to your inbox, curated by the core team and contributors.',
+        'Get the latest Nuxt news to your inbox, curated by the NuxtJS team.',
       form: {
         email: 'Email',
         subscribing: 'Subscribing...',
@@ -141,7 +141,8 @@ module.exports = {
   blog: {
     title: 'NuxtJS Blog',
     description:
-      'Discover articles from the core team and contributors about NuxtJS, tips and tricks included!',
+      'Discover articles from the {nuxtTeam} and {ambassadors} about NuxtJS, tips and tricks included!',
+    ambassadors: 'ambassadors',
     contribute: 'Caught a mistake or want to contribute to this blog post?'
   },
   guide: {

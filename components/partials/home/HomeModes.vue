@@ -6,7 +6,7 @@
         <i18n
           path="homepage.modes.title"
           tag="h2"
-          class="text-3xl uppercase text-center pt-10 font-medium"
+          class="text-3xl text-center pt-10 font-medium"
         >
           <template v-slot:nuxt>
             <AppTitle />

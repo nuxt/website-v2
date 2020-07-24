@@ -7,7 +7,7 @@
         <i18n
           path="homepage.companies.title"
           tag="h2"
-          class="text-3xl font-medium uppercase text-center pb-8"
+          class="text-3xl font-medium text-center pb-8"
         >
           {{ $t('homepage.companies.title') }}
           <template v-slot:nuxt>

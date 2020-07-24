@@ -4,10 +4,9 @@
   >
     <div class="container mx-auto px-4 py-12 text-centshadow-nuxter">
       <section class="px-4">
-        <h1
-          class="text-3xl uppercase mb-2 sm:mb-0 font-medium"
-          v-html="$t('homepage.sponsors.title')"
-        />
+        <h1 class="text-3xl uppercase mb-2 sm:mb-0 font-medium">
+          {{ $t('homepage.sponsors.title') }}
+        </h1>
         <SponsoringIllustration
           id="sponsor-img"
           class="inline-block float-right lg:ml-4"
@@ -15,7 +14,9 @@
         <div
           class="pt-6 pb-12 leading-loose text-left text-light-onSurfaceSecondary dark:text-dark-onSurfaceSecondary transition-colors duration-300 ease-linear"
         >
-          <p v-html="$t('homepage.sponsors.description')" />
+          <p>
+            {{ $t('homepage.sponsors.description') }}
+          </p>
         </div>
         <div
           v-for="(group, groupKey) in sponsors"

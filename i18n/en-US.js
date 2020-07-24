@@ -68,12 +68,12 @@ module.exports = {
         'Build your next Vue.js application with confidence using NuxtJS. An open source framework making web development simple and powerful.'
     },
     welcome: {
-      title: 'The Intuitive {frameworkType} Framework',
-      frameworkType: 'Vue',
+      title: 'The Intuitive {break}{frameworkType} Framework',
       description:
         'Build your next Vue.js application with confidence using NuxtJS. An {openSource} framework making web development simple and powerful.',
       openSource: 'open source',
       get_started: 'get started',
+      get_updates: 'Get NuxtJS updates to your inbox each month',
       video: 'Video produced by {company}, download their free {cheatSheet}',
       cheatSheet: 'Nuxt Cheat Sheet.'
     },
@@ -93,7 +93,7 @@ module.exports = {
       performant: {
         title: 'Performant',
         description:
-          'With Nuxt.js, your application will be optimized out of the box.We do our best to build performant applications by utilizing Vue.js and Node.js best practices.To squeeze every unnecessary bit out of your app Nuxt includes a bundle analyzer and lots of opportunities to fine-tune your app.'
+          'With Nuxt.js, your application will be optimized out of the box.We do our best to build performant applications by utilizing Vue.js and Node.js best practices. To squeeze every unnecessary bit out of your app Nuxt includes a bundle analyzer and lots of opportunities to fine-tune your app.'
       }
     },
     companies: {
@@ -114,7 +114,8 @@ module.exports = {
       ssg: {
         title: 'Statically Generated',
         description:
-          'Static Site Generation is a very hot topic right now (aka JAMStack). Instead of switching to another framework and spending time to get used to it, why not kill two birds with one stone? {break} Nuxt.js supports generating a static website based on your Vue application. It is the "best of both worlds" as you don\'t need a server but still have SEO benefits because Nuxt will pre-render all pages and include the necessary HTML. Also, you can deploy the resulting page easily to Netlify or GitHub pages.'
+          'Static Site Generation is a very hot topic right now (aka JAMStack). Instead of switching to another framework and spending time to get used to it, why not kill two birds with one stone? {proverbial} Nuxt.js supports generating a static website based on your Vue application. It is the "best of both worlds" as you don\'t need a server but still have SEO benefits because Nuxt will pre-render all pages and include the necessary HTML. Also, you can deploy the resulting page easily to Netlify or GitHub pages.',
+        proverbial: 'only proverbial'
       }
     },
     sponsors: {

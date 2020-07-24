@@ -67,22 +67,23 @@ module.exports = {
         "Nuxt.js fournit toutes les configurations nécessaires pour rendre vos développements d'application Vue.js agréable. Nuxt.js peut créer des Applications Universelles, Monopages ou Statiques Générées."
     },
     welcome: {
-      title:
-        'Le Framework Intuitif<br>basé sur <span class="text-nuxt-lightgreen">Vue</span><br>',
+      title: 'Le Framework Intuitif{break}basé sur {frameworkType}',
       description:
-        'Construisez votre prochaine application Vue.js en toute confiance avec NuxtJS. Un framework open source rendant le développement web simple et puissant.',
+        'Construisez votre prochaine application Vue.js en toute confiance avec NuxtJS. Un framework {openSource} rendant le développement web simple et puissant.',
+      openSource: 'open source',
       get_started: 'Commencer',
-
+      get_updates: 'Get NuxtJS updates to your inbox each month',
       video:
-        'Vidéo produite par <a href="https://www.vuemastery.com" target="_blank" rel="noopener">Vue Mastery</a>, téléchargez gratuitement <a href="https://www.vuemastery.com/nuxt-cheat-sheet/" target="_blank" rel="noopener">Nuxt Cheat Sheet</a>.'
+        'Vidéo produite par {company}, téléchargez gratuitement {cheatSheet}.',
+      cheatSheet: 'Nuxt Cheat Sheet.'
     },
     why: {
-      title: 'Pourquoi Nuxt<span class="text-nuxt-lightgreen">JS</span>',
+      title: 'Pourquoi {nuxt}',
       try_nuxtjs_online: 'Essayez NuxtJS Online',
       enjoyable: {
         title: 'Enjoyable',
         description:
-          "Notre principal objectif est l'expérience des développeurs. Nous aimons Nuxt.js et améliorons continuellement le framework pour que vous l'aimiez aussi! 💚 Attendez-vous à des solutions attrayantes, des messages d'erreur descriptifs, des paramètres par défaut puissants et une documentation détaillée. Si des questions ou des problèmes surviennent, notre communauté attentionnée vous aidera."
+          "Notre principal objectif est l'expérience des développeurs. Nous aimons Nuxt.js et améliorons continuellement le framework pour que vous l'aimiez aussi! {break} Attendez-vous à des solutions attrayantes, des messages d'erreur descriptifs, des paramètres par défaut puissants et une documentation détaillée. Si des questions ou des problèmes surviennent, notre communauté attentionnée vous aidera."
       },
       modular: {
         title: 'Modular',
@@ -96,14 +97,14 @@ module.exports = {
       }
     },
     companies: {
-      title: 'Qui utilise nuxt<span class="text-nuxt-lightgreen">JS</span>'
+      title: 'Qui utilise {nuxt}'
     },
     modes: {
-      title: 'Rendu NUXT<span class="text-nuxt-lightgreen">JS</span>',
+      title: 'Rendu {nuxt}',
       ssr: {
         title: 'Server Side Rendered',
         description:
-          'The most popular mode for Nuxt. With SSR, also called "universal" or "isomorphic" mode, a Node.js server will be used to deliver HTML based on your Vue components to the client instead of the pure javascript. Using SSR will lead to a large SEO boost, better UX and more opportunities (compared to a traditional Vue SPA).<br><br>Because implementing SSR on your own can be really tedious, Nuxt.js gives you full support out of the box and will take care of common pitfalls.'
+          'The most popular mode for Nuxt. With SSR, also called "universal" or "isomorphic" mode, a Node.js server will be used to deliver HTML based on your Vue components to the client instead of the pure javascript. Using SSR will lead to a large SEO boost, better UX and more opportunities (compared to a traditional Vue SPA).{break}Because implementing SSR on your own can be really tedious, Nuxt.js gives you full support out of the box and will take care of common pitfalls.'
       },
       spa: {
         title: 'Single Page Application (SPA)',
@@ -113,7 +114,8 @@ module.exports = {
       ssg: {
         title: 'Statically Generated',
         description:
-          'Static Site Generation is a very hot topic right now (aka JAMStack). Instead of switching to another framework and spending time to get used to it, why not kill two birds with one stone? <span style="color: #777">(only proverbial 🐦🐦)</span><br><br> Nuxt.js supports generating a static website based on your Vue application. It is the "best of both worlds" as you don\'t need a server but still have SEO benefits because Nuxt will pre-render all pages and include the necessary HTML. Also, you can deploy the resulting page easily to Netlify or GitHub pages.'
+          'Static Site Generation is a very hot topic right now (aka JAMStack). Instead of switching to another framework and spending time to get used to it, why not kill two birds with one stone? {proverbial} Nuxt.js supports generating a static website based on your Vue application. It is the "best of both worlds" as you don\'t need a server but still have SEO benefits because Nuxt will pre-render all pages and include the necessary HTML. Also, you can deploy the resulting page easily to Netlify or GitHub pages.',
+        proverbial: 'only proverbial'
       }
     },
     sponsors: {
@@ -123,7 +125,7 @@ module.exports = {
       become_a_sponsor: 'Devenir sponsor'
     },
     newsletter: {
-      title: 'Nuxt<span class="text-nuxt-lightgreen">JS</span> Newsletter',
+      title: '{nuxt} Newsletter',
       description:
         "Recevez les dernières nouvelles de Nuxt dans votre boîte de réception, organisée par l'équipe Nuxt et les contributeurs.",
       form: {

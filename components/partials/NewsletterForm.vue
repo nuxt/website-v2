@@ -16,8 +16,9 @@
       </i18n>
       <p
         class="mb-6 text-light-onSurfaceSecondary dark:text-dark-onSurfaceSecondary transition-colors duration-300 ease-linear"
-        v-html="$t('homepage.newsletter.description')"
-      />
+      >
+        {{ $t('homepage.newsletter.description') }}
+      </p>
       <ClientOnly>
         <form
           class="flex flex-row justify-center mb-2"

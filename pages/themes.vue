@@ -44,8 +44,12 @@
               <p
                 v-if="theme.discount"
                 class="text-sm italic text-nuxt-lightgreen"
-                v-html="theme.discount"
-              />
+              >
+                {{ theme.discount1 }}
+                <b class="whitespace-no-wrap">
+                  {{ theme.discount2 }}
+                </b>
+              </p>
               <AppButton
                 :href="theme.link"
                 rel="noopener sponsored"
@@ -80,8 +84,8 @@ export default {
           link:
             'https://www.creative-tim.com/product/nuxt-argon-dashboard-pro?partner=120213',
           img: 'nuxt-argon-dashboard-pro',
-          discount:
-            '-30% discount code: <b class="whitespace-no-wrap">30nuxt-exclusive</b>'
+          discount1: '-30% discount code:',
+          discount2: '30nuxt-exclusive'
         },
         {
           title: 'Nuxt Now UI Kit',

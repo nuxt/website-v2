@@ -67,22 +67,23 @@ module.exports = {
         'Nuxt.js はサーバーサイドレンダリングやコード分割、ホットリローディング、静的ファイル生成などを備えた Vue.js アプリケーションを構築するためのミニマルなフレームワークです！'
     },
     welcome: {
-      title:
-        '使いやすい<br><span class="text-nuxt-lightgreen">Vue</span> フレームワーク<br>',
+      title: '使いやすい{break}{frameworkType} フレームワーク',
       description:
-        'NuxtJS を使用し自信を持って次の Vue.js アプリケーションをビルドしましょう。ウェブ開発をシンプルかつ強力にする<span title="Under MIT license">オープンソース</span>フレームワークです。',
+        'NuxtJS を使用し自信を持って次の Vue.js アプリケーションをビルドしましょう。ウェブ開発をシンプルかつ強力にする{openSource}フレームワークです。',
+      openSource: 'オープンソース',
       get_started: 'はじめる',
-
+      get_updates: 'Get NuxtJS updates to your inbox each month',
       video:
-        '動画は <a href="https://www.vuemastery.com" target="_blank" rel="noopener">Vue Mastery</a> による提供で、彼らの <a href="https://www.vuemastery.com/nuxt-cheat-sheet/" target="_blank" rel="noopener">Nuxt チートシート</a>は無料でダウンロードできます。.'
+        '動画は {company} による提供で、彼らの {cheatSheet}は無料でダウンロードできます。.',
+      cheatSheet: 'Nuxt チートシート.'
     },
     why: {
-      title: 'なぜ NUXT<span class="text-nuxt-lightgreen">JS</span> なのか？',
+      title: 'なぜ {nuxt} なのか？',
       try_nuxtjs_online: 'Nuxt.js をオンラインで試す',
       enjoyable: {
         title: '楽しみ',
         description:
-          '私たちのメインフォーカスは開発者体験です。私たちは Nuxt.js が好きで、継続的にフレームワークの改善をしているため、あなたも好きになることでしょう！💚 魅力的な解決策や、説明的なエラーメッセージ、強力なデフォルト設定、詳細なドキュメントが待っています。もし質問や問題が発生した場合、私たちの有用なコミュニティが助けてくれるでしょう。'
+          '私たちのメインフォーカスは開発者体験です。私たちは Nuxt.js が好きで、継続的にフレームワークの改善をしているため、あなたも好きになることでしょう！{break} 魅力的な解決策や、説明的なエラーメッセージ、強力なデフォルト設定、詳細なドキュメントが待っています。もし質問や問題が発生した場合、私たちの有用なコミュニティが助けてくれるでしょう。'
       },
       modular: {
         title: 'モジュール',
@@ -96,15 +97,14 @@ module.exports = {
       }
     },
     companies: {
-      title:
-        'nuxt<span class="text-nuxt-lightgreen">JS</span> を使っている企業 '
+      title: '{nuxt} を使っている企業 '
     },
     modes: {
-      title: 'NUXT<span class="text-nuxt-lightgreen">JS</span> のレンダリング',
+      title: '{nuxt} のレンダリング',
       ssr: {
         title: 'サーバーサイドレンダリング',
         description:
-          'Nuxt で一番人気のモードです。サーバーサイドレンダリングでは「ユニバーサル」または「アイソモーフィック」モードと呼ばれ、Node.js サーバーではピュア JavaScript の代わりに Vue コンポーネントベースの HTML をクライアントに配信するために利用しています。サーバーサイドレンダリングを利用すると従来の Vue SPA と比較し SEO が大幅に向上し、UX がよくなり、より多くの機会が増えます。<br><br>サーバーサイドレンダリングを自分で実装するのは非常に面倒です。Nuxt.js はそのまま利用でき、よくある落とし穴を回避します。'
+          'Nuxt で一番人気のモードです。サーバーサイドレンダリングでは「ユニバーサル」または「アイソモーフィック」モードと呼ばれ、Node.js サーバーではピュア JavaScript の代わりに Vue コンポーネントベースの HTML をクライアントに配信するために利用しています。サーバーサイドレンダリングを利用すると従来の Vue SPA と比較し SEO が大幅に向上し、UX がよくなり、より多くの機会が増えます。{break}サーバーサイドレンダリングを自分で実装するのは非常に面倒です。Nuxt.js はそのまま利用でき、よくある落とし穴を回避します。'
       },
       spa: {
         title: 'シングルページアプリケーション（SPA）',
@@ -114,7 +114,8 @@ module.exports = {
       ssg: {
         title: '静的ファイルの生成',
         description:
-          '静的サイト生成は現在非常に注目されているトピックです（JAMStack として知られます）。別のフレームワークに切り替えて慣れるのに時間を費やす代わりに、なぜ一石二鳥ではいけないのでしょうか？<span style = "color：＃777">（ただのことわざ🐦🐦）</span> <br> <br>Nuxt.js はあなたの Vue アプリケーションに基づく静的ウェブサイトの生成をサポートします。Nuxt はすべてのページを事前にレンダリングしてインクルードするため、サーバーは必要ありませんが SEO の利点はあるという、いいとこ取りをしています。また、作成したページを Netlify または GitHub Pages に簡単に配置できます。'
+          '静的サイト生成は現在非常に注目されているトピックです（JAMStack として知られます）。別のフレームワークに切り替えて慣れるのに時間を費やす代わりに、なぜ一石二鳥ではいけないのでしょうか？{proverbial} Nuxt.js はあなたの Vue アプリケーションに基づく静的ウェブサイトの生成をサポートします。Nuxt はすべてのページを事前にレンダリングしてインクルードするため、サーバーは必要ありませんが SEO の利点はあるという、いいとこ取りをしています。また、作成したページを Netlify または GitHub Pages に簡単に配置できます。',
+        proverbial: 'ただのことわざ'
       }
     },
     sponsors: {
@@ -124,7 +125,7 @@ module.exports = {
       become_a_sponsor: 'スポンサーになる'
     },
     newsletter: {
-      title: 'Nuxt<span class="text-nuxt-lightgreen">JS</span> ニュースレター',
+      title: '{nuxt} ニュースレター',
       description:
         'コアチームとコントリビューターがキュレーションした最新の Nuxt のニュースをメールで受信できます。',
       form: {

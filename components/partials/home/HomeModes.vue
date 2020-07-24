@@ -45,8 +45,10 @@
               tag="p"
               class="leading-loose text-left text-light-onSurfaceSecondary dark:text-dark-onSurfaceSecondary"
             >
-              <template v-slot:break>
-                <span class="text-gray-600">(only proverbial 🐦🐦)</span>
+              <template v-slot:proverbial>
+                <span class="text-gray-600">
+                  ({{ $t('homepage.modes.ssg.proverbial') }} 🐦🐦)
+                </span>
                 <br /><br />
               </template>
             </i18n>

@@ -13,10 +13,12 @@
             tag="h1"
             class="text-4xl xl:text-5xl text-light-onSurfacePrimary dark:text-dark-onSurfacePrimary font-medium tracking-normal leading-tight mb-6"
           >
-            <template v-slot:frameworkType>
+            <template v-slot:break>
               <br />
+            </template>
+            <template v-slot:frameworkType>
               <span class="text-nuxt-lightgreen">
-                {{ $t('homepage.welcome.frameworkType') }}
+                Vue
               </span>
             </template>
           </i18n>
@@ -58,6 +60,16 @@
               <GithubIcon slot="icon" class="inline-block h-6 -mt-1 mr-1" />
               {{ $config.nuxtStars }} github stars
             </AppButton>
+          </div>
+          <div
+            class="flex flex-col sm:block text-light-onSurfaceSecondary dark:text-dark-onSurfaceSecondary"
+          >
+            <a
+              href="#subscribe-to-newsletter"
+              class="hover:text-light-onSurfacePrimary dark:hover:text-dark-onSurfacePrimary"
+            >
+              {{ $t('homepage.welcome.get_updates') }} 💌
+            </a>
           </div>
         </div>
         <figure class="hidden lg:block lg:w-5/12">

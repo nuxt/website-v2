@@ -67,22 +67,22 @@ module.exports = {
         'Construye tu siguiente aplicación de Vue.js con confianza usando NuxtJS. Un framework de código abierto que trabaja en conseguir que el desarrollo web sea simple y poderoso.'
     },
     welcome: {
-      title:
-        'The Intuitive<br><span class="text-nuxt-lightgreen">Vue</span> Framework<br>',
+      title: 'The Intuitive{break}{frameworkType}Framework',
       description:
-        'Build your next Vue.js application with confidence using NuxtJS. An <span title="Under MIT license">open source</span> framework making web development simple and powerful.',
+        'Build your next Vue.js application with confidence using NuxtJS. An {openSource} framework making web development simple and powerful.',
+      openSource: 'open source',
       get_started: 'get started',
-
-      video:
-        'Video produced by <a href="https://www.vuemastery.com" target="_blank" rel="noopener">Vue Mastery</a>, download their free <a href="https://www.vuemastery.com/nuxt-cheat-sheet/" target="_blank" rel="noopener">Nuxt Cheat Sheet</a>.'
+      get_updates: 'Get NuxtJS updates to your inbox each month',
+      video: 'Video produced by {company}, download their free {cheatSheet}.',
+      cheatSheet: 'Nuxt Cheat Sheet.'
     },
     why: {
-      title: 'Why NUXT<span class="text-nuxt-lightgreen">JS</span>',
+      title: 'Why {nuxt}',
       try_nuxtjs_online: 'Try NuxtJS Online',
       enjoyable: {
         title: 'Enjoyable',
         description:
-          'Our main focus is the Developer Experience. We love Nuxt.js and continuously improve the framework so you love it too! 💚<br>Expect appealing solutions, descriptive error messages, powerful defaults and detailed documentation. If questions or problems come up, our helpful community will help you out.'
+          'Our main focus is the Developer Experience. We love Nuxt.js and continuously improve the framework so you love it too! {break}Expect appealing solutions, descriptive error messages, powerful defaults and detailed documentation. If questions or problems come up, our helpful community will help you out.'
       },
       modular: {
         title: 'Modular',
@@ -92,18 +92,18 @@ module.exports = {
       performant: {
         title: 'Performant',
         description:
-          'With Nuxt.js, your application will be optimized out of the box.<br>We do our best to build performant applications by utilizing Vue.js and Node.js best practices.<br>To squeeze every unnecessary bit out of your app Nuxt includes a bundle analyzer and lots of opportunities to fine-tune your app.'
+          'With Nuxt.js, your application will be optimized out of the box.We do our best to build performant applications by utilizing Vue.js and Node.js best practices.To squeeze every unnecessary bit out of your app Nuxt includes a bundle analyzer and lots of opportunities to fine-tune your app.'
       }
     },
     companies: {
-      title: 'Who\'s using nuxt<span class= "text-nuxt-lightgreen" > JS</span>'
+      title: "Who's using {nuxt}"
     },
     modes: {
-      title: 'NUXT<span class="text-nuxt-lightgreen">JS</span> rendering',
+      title: '{nuxt} rendering',
       ssr: {
         title: 'Server Side Rendered',
         description:
-          'The most popular mode for Nuxt. With SSR, also called "universal" or "isomorphic" mode, a Node.js server will be used to deliver HTML based on your Vue components to the client instead of the pure javascript. Using SSR will lead to a large SEO boost, better UX and more opportunities (compared to a traditional Vue SPA).<br><br>Because implementing SSR on your own can be really tedious, Nuxt.js gives you full support out of the box and will take care of common pitfalls.'
+          'The most popular mode for Nuxt. With SSR, also called "universal" or "isomorphic" mode, a Node.js server will be used to deliver HTML based on your Vue components to the client instead of the pure javascript. Using SSR will lead to a large SEO boost, better UX and more opportunities (compared to a traditional Vue SPA).{break}Because implementing SSR on your own can be really tedious, Nuxt.js gives you full support out of the box and will take care of common pitfalls.'
       },
       spa: {
         title: 'Single Page Application (SPA)',
@@ -113,7 +113,8 @@ module.exports = {
       ssg: {
         title: 'Statically Generated',
         description:
-          'Static Site Generation is a very hot topic right now (aka JAMStack). Instead of switching to another framework and spending time to get used to it, why not kill two birds with one stone? <span style="color: #777">(only proverbial 🐦🐦)</span><br><br> Nuxt.js supports generating a static website based on your Vue application. It is the "best of both worlds" as you don\'t need a server but still have SEO benefits because Nuxt will pre-render all pages and include the necessary HTML. Also, you can deploy the resulting page easily to Netlify or GitHub pages.'
+          'Static Site Generation is a very hot topic right now (aka JAMStack). Instead of switching to another framework and spending time to get used to it, why not kill two birds with one stone? {proverbial} Nuxt.js supports generating a static website based on your Vue application. It is the "best of both worlds" as you don\'t need a server but still have SEO benefits because Nuxt will pre-render all pages and include the necessary HTML. Also, you can deploy the resulting page easily to Netlify or GitHub pages.',
+        proverbial: 'only proverbial'
       }
     },
     sponsors: {
@@ -123,7 +124,7 @@ module.exports = {
       become_a_sponsor: 'Become a sponsor'
     },
     newsletter: {
-      title: 'Nuxt<span class="text-nuxt-lightgreen">JS</span> Newsletter',
+      title: '{nuxt} Newsletter',
       description:
         'Recibe las últimas noticias de Nuxt en tu bandeja de entrada, organizado por el equipo de Nuxt y los contribuidores.',
       form: {

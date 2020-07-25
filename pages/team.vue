@@ -112,7 +112,7 @@ export default {
             city: 'Kiev, Ukraine',
             github: 'bdrtsky',
             twitter: 'sergeybedritsky',
-            website: 'https://debbie.codes',
+            website: 'https://sergeybedritsky.me/',
             work: {
               role: 'Lead Developer',
               org: 'NuxtJS',
@@ -124,7 +124,6 @@ export default {
             city: 'Bordeaux, France',
             github: 'R-mooon',
             twitter: 'RodrigodelaNoch',
-            website: 'http://r-moon.design/',
             work: {
               role: 'Creative Developer',
               org: 'NuxtJS',
@@ -135,7 +134,7 @@ export default {
             name: 'Sarah Moriceau',
             city: 'Bordeaux, France',
             github: 'sarahnuxtjs',
-            twitter: '@moriceau_sarah',
+            twitter: 'moriceau_sarah',
             work: {
               role: 'Web Designer',
               org: 'NuxtJS',
@@ -147,9 +146,8 @@ export default {
             city: 'Bordeaux, France',
             github: 'benjamincanac',
             twitter: 'benjamincanac',
-            website: 'benjamincanac.dev',
             work: {
-              role: 'Back-end developper',
+              role: 'Back-end developer',
               org: 'NuxtJS',
               orgUrl: 'https://nuxtjs.org'
             }
@@ -159,9 +157,9 @@ export default {
             city: 'Tehran, Iran',
             github: 'farnabaz',
             twitter: 'a_birang',
-            website: 'http://farnabaz.ir',
+            website: 'https://farnabaz.ir',
             work: {
-              role: 'Lead developper',
+              role: 'Lead developer',
               org: 'NuxtJS',
               orgUrl: 'https://nuxtjs.org'
             }
@@ -197,7 +195,8 @@ export default {
             alias: '杜欣',
             city: 'Dublin, Ireland',
             github: 'clarkdo',
-            twitter: 'ClarkDu_'
+            twitter: 'ClarkDu_',
+            website: 'https://clark.js.org/'
           }
         ]
       },
@@ -261,7 +260,7 @@ export default {
             city: 'Israel',
             github: 'mayashavin',
             twitter: 'MayaShavin',
-            website: 'mayashavin.com'
+            website: 'https://mayashavin.com'
           },
           {
             name: 'Giraud Florent',

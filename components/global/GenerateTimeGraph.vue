@@ -1,0 +1,54 @@
+<template>
+  <div class="mb-8">
+    <D3BarChart
+      :config="chart_config"
+      :datum="chart_data"
+      :title="chart_title"
+    ></D3BarChart>
+
+    <!-- value control -->
+    See the difference between Generate(cache) and Generate(build):
+    <select v-model="chart_config.values" class="border border-black">
+      <option v-for="d in ['cache', 'build']" :key="[d]" :value="[d]">
+        {{ d }}
+      </option>
+    </select>
+  </div>
+</template>
+
+<script>
+import { D3BarChart } from 'vue-d3-charts'
+
+export default {
+  components: {
+    D3BarChart
+  },
+  data() {
+    return {
+      chart_title: 'Generate time: Cache vs full webpack build (seconds)',
+      chart_data: [
+        // ...
+        { cache: 3, build: 9, site: 'Basic(vercel)' },
+        { cache: 5.6, build: 16.3, site: 'Basic(netlify)' },
+        { cache: 5.6, build: 30, site: 'storybook.nuxt.js.org(netlify)' },
+        { cache: 13, build: 41, site: 'content.nuxtjs.org(netlify)' },
+        { cache: 25, build: 114, site: 'nuxt.js.org(netlify)' }
+      ],
+
+      chart_config: {
+        key: 'site',
+        values: ['cache'],
+        orientation: 'horizontal',
+        color: {
+          keys: {
+            cache: 'blue',
+            build: 'red'
+          }
+        }
+      }
+    }
+  }
+}
+</script>
+
+<style lang="scss" scoped></style>

@@ -29,6 +29,7 @@
     "prismjs": "^1.20.0",
     "reading-time": "^1.2.0",
     "v-lazy-image": "^1.4.0",
+    "vue-d3-charts": "^0.2.8",
     "vue-observe-visibility": "^0.4.6",
     "vue-scrollactive": "^0.9.3",
     "vue-scrollto": "^2.18.1"
@@ -50,6 +51,7 @@
     "eslint-plugin-cypress": "^2.11.1",
     "globby": "^11.0.1",
     "husky": "^4.2.5",
+    "hygen": "^6.0.4",
     "lint-staged": ">=10",
     "markdownlint-cli": "^0.23.2",
     "netlify-plugin-cypress": "^1.3.11",
@@ -60,7 +62,8 @@
     "start-server-and-test": "^1.11.2",
     "stylelint": "^13.6.1",
     "stylelint-config-prettier": "^8.0.2",
-    "stylelint-config-standard": "^20.0.0"
+    "stylelint-config-standard": "^20.0.0",
+    "stylelint-scss": "^3.18.0"
   },
   "scripts": {
     "dev": "nuxt",
@@ -81,7 +84,8 @@
     "lint:all:eslint": "yarn lint:eslint --fix",
     "lint:all:markdownlint": "yarn lint:markdownlint",
     "lint:all:stylelint": "yarn lint:stylelint --fix",
-    "lint": "run-p lint:all:*"
+    "lint": "run-p lint:all:*",
+    "new": "hygen new"
   },
   "husky": {
     "hooks": {

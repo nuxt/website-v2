@@ -5,14 +5,6 @@
       :datum="chart_data"
       :title="chart_title"
     ></D3BarChart>
-
-    <!-- value control -->
-    See the difference between Generate(cache) and Generate(build):
-    <select v-model="chart_config.values" class="border border-black">
-      <option v-for="d in ['cache', 'build']" :key="[d]" :value="[d]">
-        {{ d }}
-      </option>
-    </select>
   </div>
 </template>
 
@@ -37,7 +29,7 @@ export default {
 
       chart_config: {
         key: 'site',
-        values: ['cache'],
+        values: ['cache', 'build'],
         orientation: 'horizontal',
         color: {
           keys: {

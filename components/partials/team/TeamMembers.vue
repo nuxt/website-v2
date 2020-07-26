@@ -27,13 +27,10 @@
                 ({{ profile.alias }})
               </span>
             </h2>
-            <div v-if="profile.work" class="text-gray-600 py-1">
-              {{ profile.work.role }}
-              <span v-if="profile.work.org" class="text-nuxt-lightgreen">
-                @
-                <a :href="profile.work.orgUrl" target="_blank" rel="noopener">
-                  {{ profile.work.org }}
-                </a>
+            <div v-if="profile.role" class="text-gray-600 py-1">
+              {{ profile.role }}
+              <span class="text-nuxt-lightgreen">
+                @NuxtJS
               </span>
             </div>
             <div class="text-sm py-1">

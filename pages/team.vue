@@ -53,11 +53,7 @@ export default {
             github: 'alexchopin',
             twitter: 'iamnuxt',
             website: 'https://alexchopin.com',
-            work: {
-              role: 'CEO',
-              org: 'NuxtJS',
-              orgUrl: 'https://nuxtjs.org'
-            }
+            role: 'CEO'
           },
           {
             name: 'Sébastien Chopin',
@@ -65,11 +61,7 @@ export default {
             github: 'Atinux',
             twitter: 'Atinux',
             website: 'https://atinux.com',
-            work: {
-              role: 'CTO',
-              org: 'NuxtJS',
-              orgUrl: 'https://nuxtjs.org'
-            }
+            role: 'CTO'
           },
 
           {
@@ -78,11 +70,7 @@ export default {
             city: 'Amsterdam, Netherlands',
             github: 'pi0',
             twitter: '_pi0_',
-            work: {
-              role: 'Head of Framework',
-              org: 'NuxtJS',
-              orgUrl: 'https://nuxtjs.org'
-            }
+            role: 'Head of Framework'
           },
           {
             name: "Debbie O'Brien",
@@ -90,22 +78,14 @@ export default {
             github: 'debs-obrien',
             twitter: 'debs_obrien',
             website: 'https://debbie.codes',
-            work: {
-              role: 'Head of Learning',
-              org: 'NuxtJS',
-              orgUrl: 'https://nuxtjs.org'
-            }
+            role: 'Head of Learning'
           },
           {
             name: 'Florent Delerue',
             city: 'Bordeaux, France',
             github: 'Flosciante',
             twitter: 'flosciante',
-            work: {
-              role: 'Chief Process Officer',
-              org: 'NuxtJS',
-              orgUrl: 'https://nuxtjs.org'
-            }
+            role: 'Chief Process Officer'
           },
           {
             name: 'Sergey Bedritsky',
@@ -113,44 +93,28 @@ export default {
             github: 'bdrtsky',
             twitter: 'sergeybedritsky',
             website: 'https://sergeybedritsky.me/',
-            work: {
-              role: 'Lead Developer',
-              org: 'NuxtJS',
-              orgUrl: 'https://nuxtjs.org'
-            }
+            role: 'Lead Developer'
           },
           {
             name: 'Vincent Rodriguez',
             city: 'Bordeaux, France',
             github: 'R-mooon',
             twitter: 'RodrigodelaNoch',
-            work: {
-              role: 'Creative Developer',
-              org: 'NuxtJS',
-              orgUrl: 'https://nuxtjs.org'
-            }
+            role: 'Creative Developer'
           },
           {
             name: 'Sarah Moriceau',
             city: 'Bordeaux, France',
             github: 'sarahnuxtjs',
             twitter: 'moriceau_sarah',
-            work: {
-              role: 'Web Designer',
-              org: 'NuxtJS',
-              orgUrl: 'https://nuxtjs.org'
-            }
+            role: 'Web Designer'
           },
           {
             name: 'Benjamin Canac',
             city: 'Bordeaux, France',
             github: 'benjamincanac',
             twitter: 'benjamincanac',
-            work: {
-              role: 'Back-end developer',
-              org: 'NuxtJS',
-              orgUrl: 'https://nuxtjs.org'
-            }
+            role: 'Back-end developer'
           },
           {
             name: 'Ahad Birang',
@@ -158,11 +122,7 @@ export default {
             github: 'farnabaz',
             twitter: 'a_birang',
             website: 'https://farnabaz.ir',
-            work: {
-              role: 'Lead developer',
-              org: 'NuxtJS',
-              orgUrl: 'https://nuxtjs.org'
-            }
+            role: 'Lead developer'
           }
         ]
       },

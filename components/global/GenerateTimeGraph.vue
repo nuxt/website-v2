@@ -1,9 +1,10 @@
 <template>
-  <div class="mb-8">
+  <div class="mb-8 relative">
     <D3BarChart
       :config="chart_config"
       :datum="chart_data"
       :title="chart_title"
+      class="relative"
     ></D3BarChart>
   </div>
 </template>
@@ -30,11 +31,11 @@ export default {
       chart_config: {
         key: 'site',
         values: ['cache', 'build'],
-        orientation: 'horizontal',
+        orientation: 'verticle',
         color: {
           keys: {
-            cache: 'blue',
-            build: 'red'
+            cache: '#108775',
+            build: '#2F495E'
           }
         }
       }
@@ -42,5 +43,3 @@ export default {
   }
 }
 </script>
-
-<style lang="scss" scoped></style>

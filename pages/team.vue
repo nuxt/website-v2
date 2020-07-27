@@ -190,7 +190,12 @@ export default {
             website: 'https://roe.dev',
             badges: ['maintainer']
           },
-
+          {
+            name: 'Ricardo Gobbo de Souza',
+            city: 'Sao Paulo, Brasil',
+            github: 'ricardogobbosouza',
+            badges: ['maintainer']
+          },
           {
             name: 'Krutie Patel',
             city: 'Brisbane, Australia',

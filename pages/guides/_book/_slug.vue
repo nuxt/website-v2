@@ -33,9 +33,10 @@
 </template>
 
 <script>
-import Clipboard from 'clipboard'
+import copyCodeBlock from '~/mixins/copyCodeBlock'
 
 export default {
+  mixins: [copyCodeBlock],
   async asyncData({ $content, params, store, error, app }) {
     let path = `/${app.i18n.defaultLocale}/guides/${params.book}`
     let page, prev, next, contributors, langFallback
@@ -110,30 +111,6 @@ export default {
       return `https://github.com/nuxt/nuxtjs.org/blob/master/content/${this.path}/${this.$route.params.slug}.md`
     }
   },
-  mounted() {
-    const blocks = document.getElementsByClassName('nuxt-content-highlight')
-    for (const block of blocks) {
-      const pre = block.getElementsByTagName('pre')[0]
-      const button = document.createElement('button')
-      button.textContent = 'Copy'
-      button.className = 'copy'
-      pre.appendChild(button)
-    }
-    const copyCode = new Clipboard('.copy', {
-      target(trigger) {
-        return trigger.previousElementSibling
-      }
-    })
-
-    copyCode.on('success', function (event) {
-      event.clearSelection()
-      event.trigger.textContent = 'Copied!'
-      window.setTimeout(function () {
-        event.trigger.textContent = 'Copy'
-      }, 2000)
-    })
-  },
-
   scrollToTop: true,
   head() {
     return {

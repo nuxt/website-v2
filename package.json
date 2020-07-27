@@ -23,7 +23,7 @@
     "micro": "^9.3.4",
     "node-fetch": "^2.6.0",
     "normalize.css": "^8.0.1",
-    "nuxt-edge": "^2.14.0-26582020.6ab65fbf",
+    "nuxt-edge": "^2.14.0-26597729.aebf0ffe",
     "nuxt-i18n": "^6.13.1",
     "nuxt-svg-loader": "^1.2.0",
     "prism-themes": "^1.4.0",

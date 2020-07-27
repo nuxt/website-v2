@@ -230,7 +230,7 @@ export default {
           },
           {
             name: 'Alba Silvente',
-            city: 'Amsterdam, Holland',
+            city: 'Amsterdam, The Netherlands',
             github: 'Dawntraoz',
             twitter: 'dawntraoz',
             website: 'https://www.dawntraoz.com/',

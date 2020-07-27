@@ -34,7 +34,7 @@
               {{ profile.city }}
             </div>
 
-            <div class="py-2">
+            <div class="pb-2">
               <a
                 :href="`https://github.com/${profile.github}`"
                 rel="noopener"

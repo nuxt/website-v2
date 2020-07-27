@@ -102,7 +102,7 @@ By default, nuxt ignores these directories so if any change happens inside them,
 - `README.md`
 - Hidden dotfiles (like `.npmrc`)
 
-You can add more patterns using `generate.cache.ignore` option in `nuxt.config`:
+You can add more patterns using [generate.cache.ignore](/guides/configuration-glossary/configuration-generate#cache) option in `nuxt.config`:
 
 ```js{}[nuxt.config.js]
 export default {
@@ -121,7 +121,7 @@ It is also possible to use a function for `ignore` option to override default ig
 
 ### Module Authors
 
-What if you are developing a nuxt module that is working with files that should not trigger a rebuild? The best example is for [@nuxt/content](https://content.nuxtjs.org/) module that reads markdown files from the repository. In this case, these files are used within a runtime module, which is the case when using `@nuxt/content`, the module itself can tell nuxt to ignore these files for you already so you don't have to do anything! Module authors can use the new `generate:cache:ignore` hook to do so:
+What if you are developing a nuxt module that is working with files that should not trigger a rebuild? The best example is for [@nuxt/content](https://content.nuxtjs.org) module that reads markdown files from the repository. In this case, these files are used within a runtime module, which is the case when using `@nuxt/content`, the module itself can tell nuxt to ignore these files for you already so you don't have to do anything! Module authors can use the new `generate:cache:ignore` hook to do so:
 
 ```js
 nuxt.hook('generate:cache:ignore', ignore => ignore.push('content'))

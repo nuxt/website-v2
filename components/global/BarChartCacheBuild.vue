@@ -7,22 +7,22 @@ export default {
     this.renderChart(
       {
         labels: [
-          'Basic(vercel)',
-          'Basic(netlify)',
-          'storybook.nuxt.js.org(netlify)',
-          'content.nuxtjs.org(netlify)',
-          'nuxt.js.org(netlify)'
+          '[vercel] Basic',
+          '[netlify] Basic',
+          '[netlify] strapi.nuxtjs.org',
+          '[netlify] content.nuxtjs.org',
+          '[netlify] nuxtjs.org'
         ],
         datasets: [
           {
-            label: 'Cache',
-            backgroundColor: '#108775',
-            data: [3, 5.6, 5.6, 13, 25]
-          },
-          {
             label: 'Build',
             backgroundColor: '#2F495E',
-            data: [9, 16.4, 30, 41, 114]
+            data: [9, 16.4, 34.3, 41, 114]
+          },
+          {
+            label: 'Cache',
+            backgroundColor: '#108775',
+            data: [3, 5.6, 7.2, 13, 25]
           }
         ]
       },

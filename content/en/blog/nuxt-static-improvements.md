@@ -36,11 +36,28 @@ With Nuxt.js version 2.13, the [full-static mode](/blog/going-full-static/) has 
 
 With v2.14, `nuxt generate` will **automagically skip webpack build step when no code has been changed** and use the previous build using cache. This will help to drastically improve static deployments time by avoiding unnecessary builds which is usually the most time-consuming part of generation process. Cache support is **platform-agnostic** and works on Netlify, Vercel, or any other CI/CD setup that is caching `node_modules`.
 
-## Generate time: cache vs full webpack build(seconds)
+<video poster="https://res.cloudinary.com/nuxt/video/upload/v1595852304/nuxt-smart-generate_pjaat1.jpg" loop="loop" plays-inline="true" controls="controls">
+  <source src="https://res.cloudinary.com/nuxt/video/upload/v1595852304/nuxt-smart-generate_pjaat1.webm" type="video/webm">
+  <source src="https://res.cloudinary.com/nuxt/video/upload/v1595852304/nuxt-smart-generate_pjaat1.mp4" type="video/mp4">
+  <source src="https://res.cloudinary.com/nuxt/video/upload/v1595852304/nuxt-smart-generate_pjaat1.ogv" type="video/ogg">
+</video>
+
+## Generate time: cache vs full webpack build
+
+See the comparison in seconds between two `nuxt generate`:
+
+- `Build` is when a webpack build is required
+- `Cache` is only when the content has changed (webpack build skipped)
 
 <bar-chart-cache-build></bar-chart-cache-build>
 
-[video] // Seb
+<base-alert type="next">
+
+The static site generation of our projects on content changes are now **~3.6x times** faster 🚀
+
+</base-alert>
+
+Projects link: [Basic](https://github.com/pi0/nuxt-static-demo), [Strapi Module Docs](https://github.com/nuxt-community/strapi-module/tree/master/docs), [Content Module Docs](https://github.com/nuxt/content/tree/master/docs) and [Nuxt Docs](https://github.com/nuxt/nuxtjs.org/tree/dev).
 
 ## Using in your projects
 
@@ -91,7 +108,7 @@ By default, nuxt ignores these directories so if any change happens inside them,
 - `README.md`
 - Hidden dotfiles (like `.npmrc`)
 
-You can add more patterns using `generate.cache.ignore` option in `nuxt.config`:
+You can add more patterns using [generate.cache.ignore](/guides/configuration-glossary/configuration-generate#cache) option in `nuxt.config`:
 
 ```js{}[nuxt.config.js]
 export default {
@@ -110,7 +127,7 @@ It is also possible to use a function for `ignore` option to override default ig
 
 ### Module Authors
 
-What if you are developing a nuxt module that is working with files that should not trigger a rebuild? The best example is for `[@nuxt/content](https://content.nuxtjs.org/)` module that reads markdown files from the repository. In this case, these files are used within a runtime module, which is the case when using `@nuxt/content`, the module itself can tell nuxt to ignore these files for you already so you don't have to do anything! Module authors can use the new `generate:cache:ignore` hook to do so:
+What if you are developing a nuxt module that is working with files that should not trigger a rebuild? The best example is for [@nuxt/content](https://content.nuxtjs.org) module that reads markdown files from the repository. In this case, these files are used within a runtime module, which is the case when using `@nuxt/content`, the module itself can tell nuxt to ignore these files for you already so you don't have to do anything! Module authors can use the new `generate:cache:ignore` hook to do so:
 
 ```js
 nuxt.hook('generate:cache:ignore', ignore => ignore.push('content'))
@@ -141,3 +158,10 @@ Static target:
 - `nuxt dev` = development server
 - `nuxt generate` = build if needed and statically export to `dist/`
 - `nuxt start` = serve the `dist/` directory like your static hosting would do (Netlify, Vercel, Surge, etc), great for testing before deploying
+
+## What to do next
+
+- Upgrade your project to [nuxt@2.14.0](https://github.com/nuxt/nuxt.js/releases/tag/v2.14.0)
+- Use `nuxt generate` instead of `nuxt export`
+- Use `nuxt start` instead of `nuxt serve`
+- Enjoy fast deployments 🤙

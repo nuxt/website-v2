@@ -1,10 +1,6 @@
 {
-  "extends": [
-    "@nuxtjs"
-  ],
-  "baseBranches": [
-    "master"
-  ],
+  "extends": ["@nuxtjs"],
+  "baseBranches": ["master"],
   "ignoreDeps": [],
   "lockFileMaintenance": {
     "enabled": true

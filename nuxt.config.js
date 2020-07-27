@@ -1,9 +1,6 @@
-const locale = process.env.NUXT_LOCALE || 'en'
-
 export default {
   target: 'static',
   ssr: true,
-  // modern: 'client',
   head: {
     meta: [
       { charset: 'utf-8' },
@@ -12,13 +9,16 @@ export default {
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
       { rel: 'preconnect', href: 'https://www.google-analytics.com' },
-      { rel: 'stylesheet', type: 'text/css', href: 'https://cdn.jsdelivr.net/docsearch.js/2/docsearch.min.css' }
-    ],
-    script: [
-      { src: 'https://cdn.jsdelivr.net/docsearch.js/2/docsearch.min.js', async: true, defer: true }
+      {
+        rel: 'stylesheet',
+        type: 'text/css',
+        href: 'https://cdn.jsdelivr.net/docsearch.js/2/docsearch.min.css'
+      }
     ],
     bodyAttrs: {
-      class: ['font-sans font-medium bg-light-surface dark:bg-dark-surface text-light-onSurfacePrimary dark:text-dark-onSurfacePrimary transition-colors duration-300 ease-linear']
+      class: [
+        'font-sans font-medium bg-light-surface dark:bg-dark-surface text-light-onSurfacePrimary dark:text-dark-onSurfacePrimary transition-colors duration-300 ease-linear'
+      ]
     }
   },
   buildModules: [
@@ -38,40 +38,131 @@ export default {
     '@nuxtjs/pwa'
   ],
   modules: [
-    ['~/modules/docs/', { port: 3001 }],
-    // https://http.nuxtjs.org
-    '@nuxt/http'
+    '~/modules/releases',
+    '@nuxt/http',
+    '@nuxt/content',
+    'nuxt-i18n',
+    'vue-scrollto/nuxt'
   ],
   // Auto import components, see https://github.com/nuxt/components
   components: true,
   colorMode: {
     preference: 'light' // disable system
   },
+  content: {
+    markdown: {
+      prism: {
+        theme: 'prism-themes/themes/prism-material-oceanic.css'
+      }
+    }
+  },
+  css: ['~/assets/css/main.scss'],
+  hooks: {
+    'content:file:beforeInsert': item => {
+      const stats = require('reading-time')(item.text)
+
+      if (item.slug === '' && item.extension === '.md') {
+      }
+
+      item.readingTime = stats
+    }
+  },
   plugins: [
-    '~/plugins/init.js',
+    '~/plugins/i18n',
     '~/plugins/directives',
     '~/plugins/intersection-observer.client.js',
     '~/plugins/vue-observe-visibility.client.js',
     '~/plugins/ga.client.js',
     '~/plugins/adblock.client.js',
-    '~/plugins/newsletter.client.js'
+    '~/plugins/newsletter.client.js',
+    '~/plugins/vue-scrollactive'
   ],
   env: {
     DEPLOY_PRIME_URL: process.env.DEPLOY_PRIME_URL || false,
     URL: process.env.URL || false,
-    DOC_SEARCH_API_KEY: process.env.DOC_SEARCH_API_KEY || 'ff80fbf046ce827f64f06e16f82f1401',
-    NUXT_API: process.env.NUXT_API || 'https://api.nuxtjs.com',
-    LOCALE: locale
+    DOC_SEARCH_API_KEY:
+      process.env.DOC_SEARCH_API_KEY || 'ff80fbf046ce827f64f06e16f82f1401',
+    NUXT_API: process.env.NUXT_API || 'https://api.nuxtjs.com'
   },
-  manifest: {
-    lang: locale
+  publicRuntimeConfig: {
+    nuxtLocale: process.env.NUXT_LOCALE || 'en',
+    nuxtVersion: '2.14.0',
+    nuxtStars: '28K+'
   },
   loading: { color: '#41B883' },
   generate: {
     fallback: '404.html', // for Netlify
-    interval: 50
+    routes: ['/']
   },
-  static: {
-    ignore: ['docs']
+  i18n: {
+    strategy: 'no_prefix',
+    locales: [
+      {
+        code: 'en',
+        iso: 'en-US',
+        file: 'en-US.js',
+        name: 'English',
+        domain: 'https://nuxtjs.org'
+      },
+      {
+        code: 'fr',
+        iso: 'fr-FR',
+        file: 'fr-FR.js',
+        name: 'Français',
+        domain: 'https://fr.nuxtjs.org'
+      },
+      {
+        code: 'zh',
+        iso: 'zh-ZH',
+        file: 'zh-ZH.js',
+        name: '简体中文',
+        domain: 'https://zh.nuxtjs.org'
+      },
+
+      {
+        code: 'ja',
+        iso: 'ja-JA',
+        file: 'ja-JA.js',
+        name: '日本語',
+        domain: 'https://jp.nuxtjs.org'
+      },
+      {
+        code: 'ko',
+        iso: 'ko-KO',
+        file: 'ko-KO.js',
+        name: '한국어',
+        domain: 'https://ko.nuxtjs.org'
+      },
+      {
+        code: 'ru',
+        iso: 'ru-RU',
+        file: 'ru-RU.js',
+        name: 'Русский',
+        domain: 'https://ru.nuxtjs.org'
+      },
+      {
+        code: 'id',
+        iso: 'id-ID',
+        file: 'id-ID.js',
+        name: 'Indonesian',
+        domain: 'https://id.nuxtjs.org'
+      }
+      // {
+      //   code: 'es',
+      //   iso: 'es-ES',
+      //   file: 'es-ES.js',
+      //   name: 'Español',
+      //   domain: 'https://es.nuxtjs.org'
+      // }
+    ],
+    vueI18n: {
+      fallbackLocale: 'en'
+    },
+    defaultLocale: 'en',
+    parsePages: false,
+    detectBrowserLanguage: false,
+    seo: false,
+    lazy: true,
+    langDir: 'i18n/'
   }
 }

@@ -13,7 +13,7 @@
       class="nui-search-input px-4 pl-10 rounded-full h-10 outline-none w-full font-medium transition-colors duration-300 ease-linear"
       type="text"
       :name="`search-${appearance}`"
-      :placeholder="$store.state.lang.text.search"
+      :placeholder="$t('header.search.placeholder')"
       @focus="focusHandler"
       @blur="blurHandler"
     />
@@ -23,15 +23,16 @@
       aria-label="Clear input"
       @click="handleCloseClick"
     >
-      <TimesIcon class="block h-5 fill-current transition-colors duration-300 ease-linear" />
+      <TimesIcon
+        class="block h-5 fill-current transition-colors duration-300 ease-linear"
+      />
     </button>
   </div>
 </template>
 
 <script>
-import SearchIcon from '@/assets/icons/search.svg?inline'
-import TimesIcon from '@/assets/icons/times.svg?inline'
-
+import SearchIcon from '~/assets/icons/search.svg?inline'
+import TimesIcon from '~/assets/icons/times.svg?inline'
 export default {
   components: {
     SearchIcon,
@@ -43,15 +44,27 @@ export default {
       default: 'default'
     }
   },
-  data () {
+  data() {
     return {
       q: '',
       focused: false,
       search: null
     }
   },
-  mounted () {
-    if (window.docsearch) {
+  mounted() {
+    // // Avoid loading the script twice
+    if (document.getElementById('_algolia_doc_search_')) {
+      return
+    }
+    const script = document.createElement('script')
+
+    script.setAttribute('type', 'text/javascript')
+    script.setAttribute(
+      'src',
+      '//cdn.jsdelivr.net/docsearch.js/2/docsearch.min.js'
+    )
+    script.setAttribute('id', '_algolia_doc_search_')
+    script.onload = () => {
       this.search = window.docsearch({
         apiKey: process.env.DOC_SEARCH_API_KEY,
         indexName: 'nuxtjs',
@@ -60,20 +73,16 @@ export default {
           openOnFocus: true,
           ariaLabel: true
         },
-        algoliaOptions: { facetFilters: [`tags:${this.$store.state.locale}`] },
+        algoliaOptions: { facetFilters: [`tags:${this.$i18n.locale}`] },
         debug: true // Set debug to true if you want to inspect the dropdown
       })
     }
-    // this.search.autocomplete.on('autocomplete:opened', (event) => {
-    //   console.log('OPENED')
-    // })
-    // this.search.autocomplete.on('autocomplete:closed', (event) => {
-    //   console.log('CLOSED')
-    // })
+    document.body.appendChild(script)
+
     if (this.appearance === 'mobile') {
       this.$refs['algolia-mobile'].focus()
     }
-    document.addEventListener('keypress', (e) => {
+    document.addEventListener('keypress', e => {
       if (e.keyCode === 47) {
         e.preventDefault()
         document.getElementById(`algolia-${this.appearance}`).focus()
@@ -81,27 +90,25 @@ export default {
     })
   },
   methods: {
-    resetInputValue () {
+    resetInputValue() {
       this.q = ''
-      this.search.autocomplete.autocomplete.setVal('')
+      this.search && this.search.autocomplete.autocomplete.setVal('')
     },
-    handleCloseClick () {
+    handleCloseClick() {
       this.resetInputValue()
-      this.search.autocomplete.autocomplete.close()
+      this.search && this.search.autocomplete.autocomplete.close()
       if (this.appearance === 'mobile') {
         this.$emit('close-search')
       } else {
         this.$refs[`algolia-${this.appearance}`].focus()
       }
     },
-    focusHandler () {
+    focusHandler() {
       this.focused = true
     },
-    blurHandler () {
+    blurHandler() {
       this.focused = false
-      if (this.search) {
-        this.search.autocomplete.autocomplete.close()
-      }
+      this.search && this.search.autocomplete.autocomplete.close()
     }
   }
 }
@@ -113,30 +120,38 @@ export default {
     background-color: theme('colors.gray.200') !important;
     color: theme('colors.nuxt.gray') !important;
   }
+
   .algolia-autocomplete .ds-dropdown-menu {
     @apply shadow-lg;
-    &:before {
-      border-color: theme('colors.gray.300');
+
+    &::before {
       background-color: theme('colors.light.elevatedSurface');
+      border-color: theme('colors.gray.300');
     }
+
     [class^='ds-dataset-'] {
       background-color: theme('colors.light.elevatedSurface');
       border-color: theme('colors.gray.300');
     }
+
     .algolia-docsearch-suggestion {
       background-color: theme('colors.light.elevatedSurface');
     }
+
     .algolia-docsearch-suggestion--category-header {
       & span {
         color: theme('colors.light.onSurfacePrimary');
       }
     }
+
     .algolia-docsearch-suggestion--title {
       color: theme('colors.light.onSurfacePrimary');
     }
+
     .algolia-docsearch-suggestion--subcategory-column {
       color: theme('colors.light.onSurfaceSecondary');
     }
+
     .algolia-docsearch-suggestion--text {
       color: theme('colors.light.onSurfacePrimary');
     }
@@ -148,35 +163,45 @@ export default {
     background-color: theme('colors.dark.surface') !important;
     color: theme('colors.dark.onSurfaceSecondary') !important;
   }
+
   .algolia-autocomplete .ds-dropdown-menu {
     @apply shadow-2xl;
-    &:before {
-      border-color: theme('colors.gray.900');
+
+    &::before {
       background-color: theme('colors.dark.elevatedSurface');
+      border-color: theme('colors.gray.900');
     }
+
     [class^='ds-dataset-'] {
       background-color: theme('colors.dark.elevatedSurface');
       border-color: theme('colors.gray.900');
     }
+
     .algolia-docsearch-suggestion {
       background-color: theme('colors.dark.elevatedSurface');
     }
+
     .algolia-docsearch-suggestion--category-header {
       border-color: #618092;
+
       & span {
         color: theme('colors.dark.onSurfacePrimary');
       }
     }
+
     .algolia-docsearch-suggestion--title {
       color: theme('colors.dark.onSurfacePrimary');
     }
+
     .algolia-docsearch-suggestion--subcategory-column {
       color: theme('colors.dark.onSurfaceSecondary');
     }
+
     .algolia-docsearch-suggestion--text {
       color: theme('colors.dark.onSurfacePrimary');
     }
-    .algolia-docsearch-suggestion--content:before {
+
+    .algolia-docsearch-suggestion--content::before {
       background: #618092;
     }
   }
@@ -184,7 +209,8 @@ export default {
 
 .algolia-wrapper .algolia-autocomplete .ds-dropdown-menu {
   @apply rounded;
-  [class^=ds-dataset-] {
+
+  [class^='ds-dataset-'] {
     @apply rounded;
   }
 }
@@ -194,33 +220,38 @@ export default {
 }
 
 .ds-dropdown-menu {
-  width: 100%;
   line-height: normal;
+  width: 100%;
 }
+
 .ds-dataset-0 {
   border-radius: 0;
 }
 
 .algolia-docsearch-suggestion--wrapper {
   padding-top: 0;
+
   & .algolia-docsearch-suggestion--subcategory-column {
-    height: 100%;
     color: #35495e;
+    height: 100%;
     padding: 10px 15px;
   }
+
   & .algolia-docsearch-suggestion--content {
     padding: 10px 15px;
+
     & .algolia-docsearch-suggestion--title {
       & .algolia-docsearch-suggestion--highlight {
-        color: theme('colors.primary.base');
         background-color: transparent;
+        color: theme('colors.primary.base');
       }
     }
+
     & .algolia-docsearch-suggestion--text {
       & .algolia-docsearch-suggestion--highlight {
-        color: theme('colors.primary.base');
         background-color: transparent;
         box-shadow: inset 0 -2px 0 0 theme('colors.primary.light');
+        color: theme('colors.primary.base');
       }
     }
   }
@@ -234,8 +265,8 @@ export default {
 
 .mobile {
   .ds-dropdown-menu {
-    width: 100% !important;
     min-width: 0 !important;
+    width: 100% !important;
   }
 }
 </style>

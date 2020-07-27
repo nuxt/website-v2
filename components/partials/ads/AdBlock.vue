@@ -2,7 +2,7 @@
   <div class="nui-support-nuxt">
     <div class="pr-4 sm:pr-0">
       <BlockedIcon
-        alt="Support NuxtJS"
+        alt="Support Nuxt.js"
         width="125"
         height="125"
         class="block mr-4"
@@ -10,7 +10,7 @@
     </div>
     <div>
       <p class="sm:text-sm m-0 text-nuxt-green font-bold">
-        NuxtJS needs you!
+        Nuxt.js needs you!
       </p>
       <p class="sm:text-xs p-0 m-0 text-gray-600 leading-normal">
         By whitelisting nuxtjs.org on your Ad-Blocker, you support our work and

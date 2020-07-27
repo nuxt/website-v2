@@ -32,7 +32,7 @@ The core mission at NuxtJS is to provide front-end developers with an open sourc
 
 ### The Pyrenees Mountains
 
-Sébastien and I discovered our passion for computers and web development deep within the Pyrenees Mountains (our heritage reflected in the NuxtJS logo if you haven’t noticed!). We taught ourselves how to code as kids and designed websites at night, weekends and during school holidays. We worked on our first external project together, creating a browser game website built with PHP, HTML, CSS and jQuery - this fortunately covered part of our college studies! We both had the entrepreneurial bug at this point.
+Sébastien and I discovered our passion for computers and web development deep within the Pyrenees Mountains (our heritage reflected in the Nuxt.js logo if you haven’t noticed!). We taught ourselves how to code as kids and designed websites at night, weekends and during school holidays. We worked on our first external project together, creating a browser game website built with PHP, HTML, CSS and jQuery - this fortunately covered part of our college studies! We both had the entrepreneurial bug at this point.
 
 ### The NuxtJS Company
 

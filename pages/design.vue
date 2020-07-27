@@ -11,9 +11,9 @@
           <h3
             class="xl:text-lg text-light-onSurfaceSecondary dark:text-dark-onSurfaceSecondary font-medium leading-relaxed mb-6"
           >
-            NuxtJS is an MIT licensed open source project and completely free to
+            Nuxt.js is an MIT licensed open source project and completely free to
             use.<br />
-            You can freely use our logos as long as you mention NuxtJS and link
+            You can freely use our logos as long as you mention Nuxt.js and link
             to nuxtjs.org.
           </h3>
         </div>
@@ -198,9 +198,9 @@ export default {
     DesignIllustration
   },
   head() {
-    const title = 'Design Resources - NuxtJS'
+    const title = 'Design Resources - Nuxt.js'
     const description =
-      'Download NuxtJS design resources (SVG, icons, emoji and favicon).'
+      'Download Nuxt.js design resources (SVG, icons, emoji and favicon).'
 
     return {
       title,

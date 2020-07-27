@@ -70,16 +70,16 @@ module.exports = {
     welcome: {
       title: 'The Intuitive {break}{frameworkType} Framework',
       description:
-        'Build your next Vue.js application with confidence using NuxtJS. An {openSource} framework making web development simple and powerful.',
+        'Build your next Vue.js application with confidence using Nuxt.js. An {openSource} framework making web development simple and powerful.',
       openSource: 'open source',
       get_started: 'начало работы',
-      get_updates: 'Get NuxtJS updates to your inbox each month',
+      get_updates: 'Get Nuxt.js updates to your inbox each month',
       video: 'Video produced by {company}, download their free {cheatSheet}',
       cheatSheet: 'Nuxt Cheat Sheet.'
     },
     why: {
       title: 'Почему {nuxt}',
-      try_nuxtjs_online: 'Попробуйте NuxtJS онлайн',
+      try_nuxtjs_online: 'Попробуйте Nuxt.js онлайн',
       enjoyable: {
         title: 'Приятный',
         description:
@@ -121,7 +121,7 @@ module.exports = {
     sponsors: {
       title: 'Спонсоры',
       description:
-        'NuxtJS - это проект с открытым исходным кодом, лицензированный MIT и полностью бесплатный для использования. Тем не менее, объем усилий, необходимых для поддержания и разработки новых функций для проекта, не является устойчивым без надлежащей финансовой поддержки. Если вы управляете бизнесом и используете Nuxt в продукте, приносящем доход, имеет смысл спонсировать разработку Nuxt: это гарантирует, что проект, на который опирается ваш продукт, остается здоровым и активно поддерживается. Это также может помочь вам разобраться в сообществе Vue/Nuxt и упростить привлечение разработчиков Vue/Nuxt. Если вы являетесь индивидуальным пользователем и наслаждались продуктивностью использования Nuxt, рассмотрите возможность пожертвования в знак признательности.',
+        'Nuxt.js - это проект с открытым исходным кодом, лицензированный MIT и полностью бесплатный для использования. Тем не менее, объем усилий, необходимых для поддержания и разработки новых функций для проекта, не является устойчивым без надлежащей финансовой поддержки. Если вы управляете бизнесом и используете Nuxt в продукте, приносящем доход, имеет смысл спонсировать разработку Nuxt: это гарантирует, что проект, на который опирается ваш продукт, остается здоровым и активно поддерживается. Это также может помочь вам разобраться в сообществе Vue/Nuxt и упростить привлечение разработчиков Vue/Nuxt. Если вы являетесь индивидуальным пользователем и наслаждались продуктивностью использования Nuxt, рассмотрите возможность пожертвования в знак признательности.',
       become_a_sponsor: 'Стань спонсором'
     },
     newsletter: {
@@ -140,9 +140,9 @@ module.exports = {
     }
   },
   blog: {
-    title: 'NuxtJS Blog',
+    title: 'Nuxt.js Blog',
     description:
-      'Discover articles from the {nuxtTeam} and {ambassadors} about NuxtJS, tips and tricks included!',
+      'Discover articles from the {nuxtTeam} and {ambassadors} about Nuxt.js, tips and tricks included!',
     ambassadors: 'ambassadors',
     contribute: 'Caught a mistake or want to contribute to this blog post?'
   },

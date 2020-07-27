@@ -1,6 +1,6 @@
 ---
 title: Intégration de Google Analytics
-description: Comment intégrer Google Analytics avec NuxtJS ?
+description: Comment intégrer Google Analytics avec Nuxt.js ?
 category: configuration
 position: 9
 ---

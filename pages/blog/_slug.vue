@@ -122,7 +122,7 @@ export default {
   head() {
     return {
       title: this.post.title,
-      titleTemplate: '%s - NuxtJS',
+      titleTemplate: '%s - Nuxt.js',
       meta: [
         {
           hid: 'description',
@@ -162,7 +162,7 @@ export default {
         {
           hid: 'twitter:image:',
           name: 'twitter:image:alt',
-          content: this.post.imgUrl ? 'Blog post image' : 'NuxtJS'
+          content: this.post.imgUrl ? 'Blog post image' : 'Nuxt.js'
         }
       ]
     }

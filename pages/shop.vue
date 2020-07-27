@@ -11,7 +11,7 @@
           <h3
             class="xl:text-lg text-light-onSurfaceSecondary dark:text-dark-onSurfaceSecondary font-medium leading-relaxed mb-6"
           >
-            You want to support the NuxtJS project and show your love to the
+            You want to support the Nuxt.js project and show your love to the
             rest of the community?<br />
             Here our products with the best quality ever!
           </h3>
@@ -88,17 +88,17 @@ export default {
           price: 999
         },
         {
-          name: 'NuxtJS Sweatshirt White',
+          name: 'Nuxt.js Sweatshirt White',
           description:
-            'Unisex White Sweatshirt with The NuxtJS Logo embroidered.',
+            'Unisex White Sweatshirt with The Nuxt.js Logo embroidered.',
           img: 'sweat_white',
           url: '',
           price: 999
         },
         {
-          name: 'NuxtJS Sweatshirt Black Heather Blue',
+          name: 'Nuxt.js Sweatshirt Black Heather Blue',
           description:
-            'Unisex Black Heather Blue Sweatshirt with The NuxtJS Logo embroidered.',
+            'Unisex Black Heather Blue Sweatshirt with The Nuxt.js Logo embroidered.',
           img: 'sweat_blue',
           url: '',
           price: 999
@@ -106,7 +106,7 @@ export default {
         {
           name: 'New Stickers Pack',
           description:
-            '8 New Design stickers: 4 Mountains Logo Stickers and- 4 NuxtJS Logo Stickers.',
+            '8 New Design stickers: 4 Mountains Logo Stickers and- 4 Nuxt.js Logo Stickers.',
           img: 'new_stickers',
           url: '',
           price: 999
@@ -135,9 +135,9 @@ export default {
     //   this.$refs.shop.appendChild(script)
   },
   head() {
-    const title = 'The NuxtJS Shop'
+    const title = 'The Nuxt.js Shop'
     const description =
-      'You want to support the NuxtJS project and show your love to the rest of the community? Here our products with the best quality ever!'
+      'You want to support the Nuxt.js project and show your love to the rest of the community? Here our products with the best quality ever!'
 
     return {
       title,

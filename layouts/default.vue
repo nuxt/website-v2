@@ -40,7 +40,7 @@ export default {
       // link,
       meta: [
         // Open Graph
-        { hid: 'og:site_name', property: 'og:site_name', content: 'NuxtJS' },
+        { hid: 'og:site_name', property: 'og:site_name', content: 'Nuxt.js' },
         {
           hid: 'og:title',
           property: 'og:title',
@@ -83,7 +83,7 @@ export default {
         {
           hid: 'twitter:image:alt',
           name: 'twitter:image:alt',
-          content: 'The NuxtJS Framework'
+          content: 'The Nuxt.js Framework'
         }
       ],
       ...i18nSeo

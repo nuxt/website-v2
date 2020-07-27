@@ -69,17 +69,17 @@ module.exports = {
     welcome: {
       title: 'Le Framework Intuitif{break}basé sur {frameworkType}',
       description:
-        'Construisez votre prochaine application Vue.js en toute confiance avec NuxtJS. Un framework {openSource} rendant le développement web simple et puissant.',
+        'Construisez votre prochaine application Vue.js en toute confiance avec Nuxt.js. Un framework {openSource} rendant le développement web simple et puissant.',
       openSource: 'open source',
       get_started: 'Commencer',
-      get_updates: 'Get NuxtJS updates to your inbox each month',
+      get_updates: 'Get Nuxt.js updates to your inbox each month',
       video:
         'Vidéo produite par {company}, téléchargez gratuitement {cheatSheet}.',
       cheatSheet: 'Nuxt Cheat Sheet.'
     },
     why: {
       title: 'Pourquoi {nuxt}',
-      try_nuxtjs_online: 'Essayez NuxtJS Online',
+      try_nuxtjs_online: 'Essayez Nuxt.js Online',
       enjoyable: {
         title: 'Enjoyable',
         description:
@@ -121,7 +121,7 @@ module.exports = {
     sponsors: {
       title: 'Sponsors',
       description:
-        'NuxtJS est un projet open source sous licence MIT entièrement gratuit. Cependant, les efforts nécessaires pour maintenir et développer de nouvelles fonctionnalités pour le projet ne sont pas durables sans un soutien financier adéquat. Si vous exploitez une entreprise et utilisez Nuxt dans un produit générateur de revenus, il est logique de parrainer le développement Nuxt: cela garantit que le projet sur lequel votre produit repose reste en bonne santé et activement entretenu. Cela peut également vous aider à mieux faire connaître votre entreprise dans la communauté Vue/Nuxt et à attirer plus facilement les développeurs Vue/Nuxt. Si vous êtes un utilisateur individuel et avez apprécié la productivité de l’utilisation de Nuxt, envisagez de faire un don en guise de remerciement.',
+        'Nuxt.js est un projet open source sous licence MIT entièrement gratuit. Cependant, les efforts nécessaires pour maintenir et développer de nouvelles fonctionnalités pour le projet ne sont pas durables sans un soutien financier adéquat. Si vous exploitez une entreprise et utilisez Nuxt dans un produit générateur de revenus, il est logique de parrainer le développement Nuxt: cela garantit que le projet sur lequel votre produit repose reste en bonne santé et activement entretenu. Cela peut également vous aider à mieux faire connaître votre entreprise dans la communauté Vue/Nuxt et à attirer plus facilement les développeurs Vue/Nuxt. Si vous êtes un utilisateur individuel et avez apprécié la productivité de l’utilisation de Nuxt, envisagez de faire un don en guise de remerciement.',
       become_a_sponsor: 'Devenir sponsor'
     },
     newsletter: {
@@ -140,9 +140,9 @@ module.exports = {
     }
   },
   blog: {
-    title: 'NuxtJS Blog',
+    title: 'Nuxt.js Blog',
     description:
-      'Discover articles from the {nuxtTeam} and {ambassadors} about NuxtJS, tips and tricks included!',
+      'Discover articles from the {nuxtTeam} and {ambassadors} about Nuxt.js, tips and tricks included!',
     ambassadors: 'ambassadors',
     contribute: 'Caught a mistake or want to contribute to this blog post?'
   },

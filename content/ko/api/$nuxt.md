@@ -1,5 +1,5 @@
 ---
-title: '$nuxt: NuxtJS 헬퍼'
+title: '$nuxt: Nuxt.js 헬퍼'
 description: $nuxt는 사용자 경험을 개선하기 위해 설계된 헬퍼입니다.
 menu: $nuxt
 category: utils

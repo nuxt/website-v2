@@ -17,7 +17,7 @@
             <NuxtLink to="/team" class="text-nuxt-green underline">
               NuxtJS team
             </NuxtLink>
-            now offers official consulting services for your NuxtJS
+            now offers official consulting services for your Nuxt.js
             applications.<br />
             We offer different services depending of your needs, from technical
             support to custom development. Expect a reply within one business
@@ -43,7 +43,7 @@
             </h3>
             <p class="mb-6">
               Get project audits, app deployments, custom development and
-              technical support from the NuxtJS NuxtJS team.
+              technical support from the Nuxt.js team.
             </p>
             <AppButton
               href="https://otechie.com/nuxt"
@@ -105,7 +105,7 @@
       <p
         class="text-light-onSurfacePrimary dark:text-dark-onSurfacePrimary mb-8 transition-colors duration-300 ease-linear"
       >
-        NuxtJS and the maintainers of thousands of other packages are working
+        Nuxt.js and the maintainers of thousands of other packages are working
         with Tidelift to deliver one enterprise subscription that covers all of
         the open source you use.<br />
         If you want the flexibility of open source and the confidence of
@@ -149,9 +149,9 @@ export default {
     TechnicalSupportIllustration
   },
   head() {
-    const title = 'The NuxtJS Support'
+    const title = 'The Nuxt.js Support'
     const description =
-      'Our NuxtJS team now offers official consulting services for your NuxtJS applications.'
+      'Our Nuxt.js team now offers official consulting services for your Nuxt.js applications.'
 
     return {
       title,

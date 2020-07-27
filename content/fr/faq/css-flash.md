@@ -1,6 +1,6 @@
 ---
 title: CSS Flash
-description: Pourquoi un flash CSS apparait avec NuxtJS ?
+description: Pourquoi un flash CSS apparait avec Nuxt.js ?
 menu: Why a CSS flash appears
 category: development
 position: 202

@@ -40,7 +40,7 @@ The [@nuxtjs/color-mode module](https://github.com/nuxt-community/color-mode-mod
 
 ## How does it work
 
-The `@nuxtjs/color-mode` adds a `.${color}-mode` class to the `<html>` tag. It works with any NuxtJS target, either static or server and universal or client-side rendering. It auto detects the system color-mode so that you don't have to manually change the colour.
+The `@nuxtjs/color-mode` adds a `.${color}-mode` class to the `<html>` tag. It works with any Nuxt.js target, either static or server and universal or client-side rendering. It auto detects the system color-mode so that you don't have to manually change the colour.
 
 It injects a `$colorMode` helper with:
 

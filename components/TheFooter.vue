@@ -109,9 +109,9 @@ export default {
           { key: 'Discord', href: 'https://discord.nuxtjs.org' }
         ],
         support: [
-          { key: 'Sponsor NuxtJS', to: this.localePath('/sponsor-nuxtjs') },
-          { key: 'The NuxtJS Shop', to: this.localePath('/shop') },
-          { key: 'NuxtJS Consulting', to: this.localePath('/support') }
+          { key: 'Sponsor Nuxt.js', to: this.localePath('/sponsor-nuxtjs') },
+          { key: 'The Nuxt.js Shop', to: this.localePath('/shop') },
+          { key: 'Nuxt.js Consulting', to: this.localePath('/support') }
         ]
       }
     }

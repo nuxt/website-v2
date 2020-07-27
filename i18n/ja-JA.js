@@ -69,10 +69,10 @@ module.exports = {
     welcome: {
       title: '使いやすい{break}{frameworkType} フレームワーク',
       description:
-        'NuxtJS を使用し自信を持って次の Vue.js アプリケーションをビルドしましょう。ウェブ開発をシンプルかつ強力にする{openSource}フレームワークです。',
+        'Nuxt.js を使用し自信を持って次の Vue.js アプリケーションをビルドしましょう。ウェブ開発をシンプルかつ強力にする{openSource}フレームワークです。',
       openSource: 'オープンソース',
       get_started: 'はじめる',
-      get_updates: 'Get NuxtJS updates to your inbox each month',
+      get_updates: 'Get Nuxt.js updates to your inbox each month',
       video:
         '動画は {company} による提供で、彼らの {cheatSheet}は無料でダウンロードできます。.',
       cheatSheet: 'Nuxt チートシート.'
@@ -140,9 +140,9 @@ module.exports = {
     }
   },
   blog: {
-    title: 'NuxtJS Blog',
+    title: 'Nuxt.js Blog',
     description:
-      'Discover articles from the {nuxtTeam} and {ambassadors} about NuxtJS, tips and tricks included!',
+      'Discover articles from the {nuxtTeam} and {ambassadors} about Nuxt.js, tips and tricks included!',
     ambassadors: 'ambassadors',
     contribute: 'Caught a mistake or want to contribute to this blog post?'
   },

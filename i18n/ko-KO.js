@@ -69,17 +69,17 @@ module.exports = {
     welcome: {
       title: '직관적인 {break}{frameworkType} 프레임워크',
       description:
-        'Build your next Vue.js application with confidence using NuxtJS. An {openSource} framework making web development simple and powerful.',
+        'Build your next Vue.js application with confidence using Nuxt.js. An {openSource} framework making web development simple and powerful.',
       openSource: 'open source',
       get_started: '시작하기',
-      get_updates: '매달 NuxtJS 업데이트 사항을 메일에서 확인하세요',
+      get_updates: '매달 Nuxt.js 업데이트 사항을 메일에서 확인하세요',
       video:
         '해당 비디오는 {company}가 제작하였고, {cheatSheet}에서 무료로 받으실 수 있습니다.',
       cheatSheet: 'Nuxt Cheat Sheet.'
     },
     why: {
       title: '왜 {nuxt} 일까요?',
-      try_nuxtjs_online: 'NuxtJS Online 시작하기',
+      try_nuxtjs_online: 'Nuxt.js Online 시작하기',
       enjoyable: {
         title: 'Enjoyable',
         description:
@@ -121,7 +121,7 @@ module.exports = {
     sponsors: {
       title: '스폰서',
       description:
-        'NuxtJS 는 MIT 라이센스 오픈 소스 프로젝트이며 완전 무료입니다. 그러나 적절한 재정적 지원 없이는 프로젝트의 새로운 기능을 유지하고 개발하는 데 필요한 노력이 지속되기가 힘듭니다. 비즈니스를 운영하고 수익 창출 제품에서 Nuxt를 사용하는 경우 Nuxt 개발을 후원해주시는 것이 이상적일 것입니다. 이는 여러분의 제품이 의존하고 있는 이 프로젝트가 원활하게 유지될 수 있게 합니다. 또한 Vue/Nuxt 커뮤니티에 노출되는 데 도움이되며 Vue/Nuxt 개발자를 더 쉽게 구하는데 도움이 됩니다. 개인 사용자이고 Nuxt를 사용하는 것으로 생산성을 높이셨다면, 감사의 표시로 기부에 대해 생각해주세요.',
+        'Nuxt.js 는 MIT 라이센스 오픈 소스 프로젝트이며 완전 무료입니다. 그러나 적절한 재정적 지원 없이는 프로젝트의 새로운 기능을 유지하고 개발하는 데 필요한 노력이 지속되기가 힘듭니다. 비즈니스를 운영하고 수익 창출 제품에서 Nuxt를 사용하는 경우 Nuxt 개발을 후원해주시는 것이 이상적일 것입니다. 이는 여러분의 제품이 의존하고 있는 이 프로젝트가 원활하게 유지될 수 있게 합니다. 또한 Vue/Nuxt 커뮤니티에 노출되는 데 도움이되며 Vue/Nuxt 개발자를 더 쉽게 구하는데 도움이 됩니다. 개인 사용자이고 Nuxt를 사용하는 것으로 생산성을 높이셨다면, 감사의 표시로 기부에 대해 생각해주세요.',
       become_a_sponsor: '스폰서되기'
     },
     newsletter: {
@@ -140,9 +140,9 @@ module.exports = {
     }
   },
   blog: {
-    title: 'NuxtJS Blog',
+    title: 'Nuxt.js Blog',
     description:
-      'Discover articles from the {nuxtTeam} and {ambassadors} about NuxtJS, tips and tricks included!',
+      'Discover articles from the {nuxtTeam} and {ambassadors} about Nuxt.js, tips and tricks included!',
     ambassadors: 'ambassadors',
     contribute: 'Caught a mistake or want to contribute to this blog post?'
   },

@@ -79,7 +79,7 @@ export default {
       themes: [
         {
           title: 'Nuxt Argon Dashboard PRO',
-          description: 'Premium Bootstrap 4 + NuxtJS Admin Template',
+          description: 'Premium Bootstrap 4 + Nuxt.js Admin Template',
           price: '99$',
           link:
             'https://www.creative-tim.com/product/nuxt-argon-dashboard-pro?partner=120213',
@@ -114,7 +114,7 @@ export default {
     }
   },
   head() {
-    const title = 'NuxtJS Themes'
+    const title = 'Nuxt.js Themes'
     const description =
       'With the themes below built by our partners from Creative Tim and Theme Forest you can see how a real world application is built, with Nuxt.js stack behind.'
 

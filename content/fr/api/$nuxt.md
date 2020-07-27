@@ -1,5 +1,5 @@
 ---
-title: "$nuxt: L'assistant NuxtJS"
+title: "$nuxt: L'assistant Nuxt.js"
 description: $nuxt est un assistant conçu pour améliorer l'expérience utilisateur.
 menu: $nuxt
 category: utils

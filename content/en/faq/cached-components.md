@@ -1,6 +1,6 @@
 ---
 title: How to cache Vue components?
-description: How to cache Vue components in NuxtJS?
+description: How to cache Vue components in Nuxt.js?
 menu: Using nginx as a proxy
 category: configuration
 position: 8

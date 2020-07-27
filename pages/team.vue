@@ -13,7 +13,7 @@
           <h3
             class="xl:text-lg text-light-onSurfaceSecondary dark:text-dark-onSurfaceSecondary font-medium leading-relaxed mb-6"
           >
-            The development of NuxtJS and its ecosystem is guided by an
+            The development of Nuxt.js and its ecosystem is guided by an
             international team. We have a very active and engaged team that is
             constantly striving to push Nuxt forward.
           </h3>
@@ -241,9 +241,9 @@ export default {
     }
   },
   head() {
-    const title = 'The NuxtJS Team'
+    const title = 'The Nuxt.js Team'
     const description =
-      'NuxtJS has a very active and engaged team that is constantly striving to push Nuxt forward.'
+      'Nuxt.js has a very active and engaged team that is constantly striving to push Nuxt forward.'
 
     return {
       title,

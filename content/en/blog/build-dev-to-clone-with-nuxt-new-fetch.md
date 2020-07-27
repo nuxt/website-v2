@@ -26,7 +26,7 @@ _Let’s build a blazing fast articles and tutorials app using Nuxt, Dev.to API,
   <a href="https://github.com/bdrtsky/nuxt-dev-to-clone" target="_blank" rel="noopener nofollow">Source</a>
 </p>
 
-This article is intended to demonstrate use cases and awesomeness of new NuxtJS `fetch` functionality [introduced in release v2.12](https://nuxtjs.org/api/pages-fetch#nuxt-gt-2-12), and show you how to apply its power in your own projects. For in-depth technical analysis and details of the new `fetch` you can check [Krutie Patel’s article](https://nuxtjs.org/blog/understanding-how-fetch-works-in-nuxt-2-12).
+This article is intended to demonstrate use cases and awesomeness of new Nuxt.js `fetch` functionality [introduced in release v2.12](https://nuxtjs.org/api/pages-fetch#nuxt-gt-2-12), and show you how to apply its power in your own projects. For in-depth technical analysis and details of the new `fetch` you can check [Krutie Patel’s article](https://nuxtjs.org/blog/understanding-how-fetch-works-in-nuxt-2-12).
 
 Here’s the high-level outline of how we will build our dev.to clone using `fetch` hook. We will:
 

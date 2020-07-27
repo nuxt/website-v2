@@ -1,5 +1,5 @@
 ---
-title: '$nuxt: NuxtJS のヘルパー'
+title: '$nuxt: Nuxt.js のヘルパー'
 description: '$nuxt はユーザーエクスペリエンスを向上させることを目的としたヘルパーです。'
 menu: $nuxt
 category: utils

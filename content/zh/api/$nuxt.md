@@ -1,5 +1,5 @@
 ---
-title: '$nuxt: NuxtJS 的优化帮手'
+title: '$nuxt: Nuxt.js 的优化帮手'
 description: $nuxt 是一个专注于改善用户用户体验的帮手。
 menu: $nuxt
 category: utils

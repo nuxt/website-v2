@@ -107,7 +107,7 @@ export default {
     }
   },
   head() {
-    const title = 'NuxtJS Video Courses'
+    const title = 'Nuxt.js Video Courses'
     const description =
       'With the video courses below created by our partner VueSchool you can discover and learn more about the Nuxt.js Framework.'
 

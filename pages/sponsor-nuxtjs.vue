@@ -11,12 +11,12 @@
           <h3
             class="xl:text-lg text-light-onSurfaceSecondary dark:text-dark-onSurfaceSecondary font-medium leading-relaxed mb-6"
           >
-            NuxtJS is an MIT licensed open source project and completely free to
+            Nuxt.js is an MIT licensed open source project and completely free to
             use.<br />
             However, the amount of effort needed to maintain and develop new
             features for the project is not sustainable without proper financial
             backing.<br />
-            You can support NuxtJS development via the following methods:
+            You can support Nuxt.js development via the following methods:
           </h3>
         </div>
         <SponsorIllustration
@@ -105,7 +105,7 @@
           class="text-light-onSurfaceSecondary dark:text-dark-onSurfaceSecondary mb-12"
         >
           Recurring pledges come with exclusive perks, e.g. having your name
-          listed in the NuxtJS GitHub repository, or have your company logo
+          listed in the Nuxt.js GitHub repository, or have your company logo
           placed on this website. Become a nuxter or sponsor via
           <a href="https://opencollective.com/nuxtjs">OpenCollective</a> (goes
           into a fund with transparent expense models supporting community
@@ -261,9 +261,9 @@ export default {
     }
   },
   head() {
-    const title = 'Sponsor NuxtJS Development'
+    const title = 'Sponsor Nuxt.js Development'
     const description =
-      'You can support NuxtJS development via different methods and ensure regular updates to the framework.'
+      'You can support Nuxt.js development via different methods and ensure regular updates to the framework.'
 
     return {
       title,

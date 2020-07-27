@@ -64,21 +64,21 @@ module.exports = {
     meta: {
       title: 'Nuxt.js - El Framework intuitivo de Vue',
       description:
-        'Construye tu siguiente aplicación de Vue.js con confianza usando NuxtJS. Un framework de código abierto que trabaja en conseguir que el desarrollo web sea simple y poderoso.'
+        'Construye tu siguiente aplicación de Vue.js con confianza usando Nuxt.js. Un framework de código abierto que trabaja en conseguir que el desarrollo web sea simple y poderoso.'
     },
     welcome: {
       title: 'The Intuitive{break}{frameworkType}Framework',
       description:
-        'Build your next Vue.js application with confidence using NuxtJS. An {openSource} framework making web development simple and powerful.',
+        'Build your next Vue.js application with confidence using Nuxt.js. An {openSource} framework making web development simple and powerful.',
       openSource: 'open source',
       get_started: 'get started',
-      get_updates: 'Get NuxtJS updates to your inbox each month',
+      get_updates: 'Get Nuxt.js updates to your inbox each month',
       video: 'Video produced by {company}, download their free {cheatSheet}.',
       cheatSheet: 'Nuxt Cheat Sheet.'
     },
     why: {
       title: 'Why {nuxt}',
-      try_nuxtjs_online: 'Try NuxtJS Online',
+      try_nuxtjs_online: 'Try Nuxt.js Online',
       enjoyable: {
         title: 'Enjoyable',
         description:
@@ -120,7 +120,7 @@ module.exports = {
     sponsors: {
       title: 'Sponsors',
       description:
-        'NuxtJS is an MIT licensed open source project and completely free to use. However, the amount of effort needed to maintain and develop new features for the project is not sustainable without proper financial backing. If you run a business and are using Nuxt in a revenue-generating product, it makes business sense to sponsor Nuxt development: it ensures the project that your product relies on stays healthy and actively maintained. It can also help your exposure in the Vue/Nuxt community and makes it easier to attract Vue/Nuxt developers. If you are an individual user and have enjoyed the productivity of using Nuxt, consider donating as a sign of appreciation.',
+        'Nuxt.js is an MIT licensed open source project and completely free to use. However, the amount of effort needed to maintain and develop new features for the project is not sustainable without proper financial backing. If you run a business and are using Nuxt in a revenue-generating product, it makes business sense to sponsor Nuxt development: it ensures the project that your product relies on stays healthy and actively maintained. It can also help your exposure in the Vue/Nuxt community and makes it easier to attract Vue/Nuxt developers. If you are an individual user and have enjoyed the productivity of using Nuxt, consider donating as a sign of appreciation.',
       become_a_sponsor: 'Become a sponsor'
     },
     newsletter: {
@@ -139,9 +139,9 @@ module.exports = {
     }
   },
   blog: {
-    title: 'NuxtJS Blog',
+    title: 'Nuxt.js Blog',
     description:
-      'Discover articles from the {nuxtTeam} and {ambassadors} about NuxtJS, tips and tricks included!',
+      'Discover articles from the {nuxtTeam} and {ambassadors} about Nuxt.js, tips and tricks included!',
     ambassadors: 'ambassadors',
     contribute: 'Caught a mistake or want to contribute to this blog post?'
   },

@@ -1,6 +1,6 @@
 ---
 title: Vue コンポーネントをキャッシュするには？
-description: NuxtJS で Vue コンポーネントをキャッシュするには？
+description: Nuxt.js で Vue コンポーネントをキャッシュするには？
 menu: Using nginx as a proxy
 category: configuration
 position: 8

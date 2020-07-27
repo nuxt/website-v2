@@ -1,6 +1,6 @@
 ---
 title: How to deploy on Google Cloud Run?
-description: How to deploy NuxtJS on Google Cloud Run?
+description: How to deploy Nuxt.js on Google Cloud Run?
 menu: Deploy on Google Cloud Run
 category: deployment
 position: 207

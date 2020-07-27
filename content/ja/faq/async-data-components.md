@@ -1,6 +1,6 @@
 ---
 title: コンポーネント内で非同期データを扱うには？
-description: NuxtJS コンポーネント内で非同期データを扱うには？
+description: Nuxt.js コンポーネント内で非同期データを扱うには？
 category: deployment
 position: 206
 ---

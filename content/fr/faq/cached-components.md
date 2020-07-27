@@ -1,6 +1,6 @@
 ---
 title: Mettre en cache les composants
-description: Comment mettre en cache des composants avec NuxtJS ?
+description: Comment mettre en cache des composants avec Nuxt.js ?
 menu: Using nginx as a proxy
 category: configuration
 position: 8

@@ -69,16 +69,16 @@ module.exports = {
     welcome: {
       title: 'The Intuitive {break}{frameworkType} Framework',
       description:
-        'Build your next Vue.js application with confidence using NuxtJS. An {openSource} framework making web development simple and powerful.',
+        'Build your next Vue.js application with confidence using Nuxt.js. An {openSource} framework making web development simple and powerful.',
       openSource: 'open source',
       get_started: '开始使用',
-      get_updates: 'Get NuxtJS updates to your inbox each month',
+      get_updates: 'Get Nuxt.js updates to your inbox each month',
       video: 'Video produced by {company}, download their free {cheatSheet}',
       cheatSheet: 'Nuxt Cheat Sheet.'
     },
     why: {
       title: '为什么选择 {nuxt}',
-      try_nuxtjs_online: '在线尝试 NuxtJS',
+      try_nuxtjs_online: '在线尝试 Nuxt.js',
       enjoyable: {
         title: 'Enjoyable',
         description:
@@ -120,7 +120,7 @@ module.exports = {
     sponsors: {
       title: '赞助商',
       description:
-        'NuxtJS 是 MIT 许可的开源项目，完全免费使用。但是，如果没有适当的资金支持，为项目维护和开发新功能所需的工作量将无法持续。如果您经营一家企业并在产生收入的产品中使用 Nuxt，则赞助Nuxt开发具有商业意义：它可以确保您的产品所依赖的项目保持健康并得到积极维护。 它还可以帮助您在 Vue/Nuxt 社区中曝光，并更容易吸引 Vue/Nuxt 开发人员。如果您是个人用户，并且享受使用 Nuxt 带来的生产力，请考虑捐赠作为一种感激之情。',
+        'Nuxt.js 是 MIT 许可的开源项目，完全免费使用。但是，如果没有适当的资金支持，为项目维护和开发新功能所需的工作量将无法持续。如果您经营一家企业并在产生收入的产品中使用 Nuxt，则赞助Nuxt开发具有商业意义：它可以确保您的产品所依赖的项目保持健康并得到积极维护。 它还可以帮助您在 Vue/Nuxt 社区中曝光，并更容易吸引 Vue/Nuxt 开发人员。如果您是个人用户，并且享受使用 Nuxt 带来的生产力，请考虑捐赠作为一种感激之情。',
       become_a_sponsor: '成为赞助商'
     },
     newsletter: {
@@ -139,9 +139,9 @@ module.exports = {
     }
   },
   blog: {
-    title: 'NuxtJS Blog',
+    title: 'Nuxt.js Blog',
     description:
-      'Discover articles from the {nuxtTeam} and {ambassadors} about NuxtJS, tips and tricks included!',
+      'Discover articles from the {nuxtTeam} and {ambassadors} about Nuxt.js, tips and tricks included!',
     ambassadors: 'ambassadors',
     contribute: 'Caught a mistake or want to contribute to this blog post?'
   },

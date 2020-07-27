@@ -40,14 +40,14 @@ yarn dev
 To change the locale, create a `.env` file with the locale you want to use. An example .env file has been provided which you can copy it's contents to your `.env` file and change the language to the one you want to see the site in.
 
 ```bash
-nuxtLocale=fr
+NUXT_LOCALE=fr
 ```
 
 or add the local in the command line.
 
 ```bash
 # start the documentation in french
-nuxtLocale=fr yarn dev
+NUXT_LOCALE=fr yarn dev
 ```
 
 <base-alert type="info">

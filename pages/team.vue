@@ -3,181 +3,248 @@
     <div class="container mx-auto px-4 pt-16 pb-12">
       <div class="flex flex-wrap justify-between mb-8">
         <div class="lg:w-6/12 lg:text-left text-center p-4 sm:p-0">
-          <h1 class="text-3xl xl:text-4xl text-light-onSurfacePrimary dark:text-dark-onSurfacePrimary font-medium leading-normal mb-6 lg:pt-4 transition-colors duration-300 ease-linear">
-            The NUXT<span class="text-nuxt-lightgreen">JS</span> Team<br>
+          <h1
+            class="text-3xl xl:text-4xl text-light-onSurfacePrimary dark:text-dark-onSurfacePrimary font-medium leading-normal mb-6 lg:pt-4 transition-colors duration-300 ease-linear"
+          >
+            <AppTitle />
+            Team
+            <br />
           </h1>
-          <h3 class="xl:text-lg text-light-onSurfaceSecondary dark:text-dark-onSurfaceSecondary font-medium leading-relaxed mb-6">
-            The development of NuxtJS and its ecosystem is guided by an international team. We have a very active and engaged team that is constantly striving to push Nuxt forward.
+          <h3
+            class="xl:text-lg text-light-onSurfaceSecondary dark:text-dark-onSurfaceSecondary font-medium leading-relaxed mb-6"
+          >
+            The development of NuxtJS and its ecosystem is guided by an
+            international team. We have a very active and engaged team that is
+            constantly striving to push Nuxt forward.
           </h3>
         </div>
-        <TeamIllustration class="w-2/3 mx-auto lg:mx-0 lg:w-5/12 lg:-mt-8 text-light-elevatedSurface dark:text-dark-elevatedSurface"/>
-      </div>
-      <div class="bg-light-surface dark:bg-dark-surface rounded p-8 transition-colors duration-300 ease-linear">
-        <h2 class="text-2xl xl:text-3xl text-center text-light-onSurfacePrimary dark:text-dark-onSurfacePrimary font-medium leading-normal mb-6 pt-4">
-          Active Core Team Members
-        </h2>
-        <div class="flex flex-wrap -mx-2 md:-mx-4">
-          <div v-for="profile of core" :key="profile.name" class="w-full md:w-1/2 lg:w-1/3 p-4">
-            <div class="rounded p-6">
-              <img class="h-32 w-32 rounded-full mx-auto" :src="`https://github.com/${profile.github}.png`">
-              <div class="text-center pt-4 text-light-onSurfacePrimary dark:text-dark-onSurfacePrimary transition-colors duration-300 ease-linear">
-                <h2 class="text-xl">
-                  {{ profile.name }} <span v-if="profile.alias" class="font-normal text-sm">({{ profile.alias }})</span>
-                </h2>
-                <div class="text-gray-600 py-1">
-                  {{ profile.work.role }} <span v-if="profile.work.org" class="text-nuxt-lightgreen">@<a :href="profile.work.orgUrl" target="_blank" rel="noopener">{{ profile.work.org }}</a></span>
-                </div>
-                <div class="text-sm py-1">
-                  {{ profile.city }}
-                </div>
-                <div class="py-2">
-                  <a :href="`https://github.com/${profile.github}`" rel="noopener" target="_blank" class="mx-1">
-                    <github-icon class="h-5 inline-block text-gray-700 hover:text-gray-900 cursor-pointer text-light-onSurfacePrimary dark:text-dark-onSurfacePrimary transition-colors duration-300 ease-linear" />
-                  </a>
-                  <a v-if="profile.twitter" :href="`https://twitter.com/${profile.twitter}`" rel="noopener" target="_blank" class="mx-1">
-                    <twitter-icon class="h-5 ml-1 inline-block text-blue-600 hover:text-blue-400" />
-                  </a>
-                  <a v-if="profile.website" :href="profile.website" rel="noopener" target="_blank" class="mx-1">
-                    <website-icon class="h-5 inline-block text-nuxt-green hover:text-nuxt-lightgreen" />
-                  </a>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
+        <TeamIllustration
+          class="w-2/3 mx-auto lg:mx-0 lg:w-5/12 lg:-mt-8 text-light-elevatedSurface dark:text-dark-elevatedSurface"
+        />
+
+        <TeamMembers :team="nuxtCompany.team" :title="nuxtCompany.title" />
+        <LazyTeamMembers
+          :team="nuxtCommunity.team"
+          :title="nuxtCommunity.title"
+        />
       </div>
     </div>
   </div>
 </template>
 
 <script>
-import TwitterIcon from '@/assets/icons/twitter.svg?inline'
-import GithubIcon from '@/assets/icons/github.svg?inline'
-import WebsiteIcon from '@/assets/icons/link.svg?inline'
-import TeamIllustration from '@/assets/illustrations/team.svg?inline'
+import TeamIllustration from '~/assets/illustrations/team.svg?inline'
 
 export default {
   components: {
-    TwitterIcon,
-    GithubIcon,
-    WebsiteIcon,
     TeamIllustration
   },
-  data () {
+  data() {
     return {
-      core: [
-        {
-          name: 'Sébastien Chopin',
-          city: 'Bordeaux, France',
-          github: 'Atinux',
-          twitter: 'Atinux',
-          website: 'https://atinux.com',
-          work: {
-            role: 'Creator',
-            org: 'NuxtJS',
-            orgUrl: 'https://nuxtjs.org'
+      nuxtCompany: {
+        title: 'NuxtJS Company',
+        team: [
+          {
+            name: 'Alexandre Chopin',
+            city: 'Bordeaux, France',
+            github: 'alexchopin',
+            twitter: 'iamnuxt',
+            website: 'https://alexchopin.com',
+            role: 'CEO',
+            badges: ['framework']
+          },
+          {
+            name: 'Sébastien Chopin',
+            city: 'Bordeaux, France',
+            github: 'Atinux',
+            twitter: 'Atinux',
+            website: 'https://atinux.com',
+            role: 'CTO',
+            badges: ['framework']
+          },
+          {
+            name: 'Pooya Parsa',
+            alias: 'پویا پارسا',
+            city: 'Amsterdam, Netherlands',
+            github: 'pi0',
+            twitter: '_pi0_',
+            role: 'Head of Framework',
+            badges: ['framework']
+          },
+          {
+            name: "Debbie O'Brien",
+            city: 'Palma de Mallorca, Spain',
+            github: 'debs-obrien',
+            twitter: 'debs_obrien',
+            website: 'https://debbie.codes',
+            role: 'Head of Learning',
+            badges: ['ambassador']
+          },
+          {
+            name: 'Florent Delerue',
+            city: 'Bordeaux, France',
+            github: 'Flosciante',
+            twitter: 'flosciante',
+            role: 'Chief Process Officer',
+            badges: []
+          },
+          {
+            name: 'Sergey Bedritsky',
+            city: 'Kiev, Ukraine',
+            github: 'bdrtsky',
+            twitter: 'sergeybedritsky',
+            website: 'https://sergeybedritsky.me/',
+            role: 'Lead Developer',
+            badges: []
+          },
+          {
+            name: 'Vincent Rodriguez',
+            city: 'Bordeaux, France',
+            github: 'R-mooon',
+            twitter: 'RodrigodelaNoch',
+            role: 'Creative Developer',
+            badges: []
+          },
+          {
+            name: 'Sarah Moriceau',
+            city: 'Bordeaux, France',
+            github: 'sarahnuxtjs',
+            twitter: 'moriceau_sarah',
+            role: 'Web Designer',
+            badges: []
+          },
+          {
+            name: 'Benjamin Canac',
+            city: 'Bordeaux, France',
+            github: 'benjamincanac',
+            twitter: 'benjamincanac',
+            role: 'Back-end developer',
+            badges: ['maintainer']
+          },
+          {
+            name: 'Ahad Birang',
+            city: 'Tehran, Iran',
+            github: 'farnabaz',
+            twitter: 'a_birang',
+            website: 'https://farnabaz.ir',
+            role: 'Lead developer',
+            badges: ['maintainer']
           }
-        },
-        {
-          name: 'Alexandre Chopin',
-          city: 'Bordeaux, France',
-          github: 'alexchopin',
-          twitter: 'iamnuxt',
-          website: 'https://alexchopin.com',
-          work: {
-            role: 'Design',
-            org: 'NuxtJS',
-            orgUrl: 'https://nuxtjs.org'
+        ]
+      },
+      nuxtCommunity: {
+        title: 'Nuxt.js Community',
+        team: [
+          {
+            name: 'Clark Du',
+            alias: '杜欣',
+            city: 'Dublin, Ireland',
+            github: 'clarkdo',
+            twitter: 'ClarkDu_',
+            website: 'https://clark.js.org/',
+            badges: ['framework']
+          },
+          {
+            name: 'Jonas Galvez',
+            city: 'Barretos, Brazil',
+            github: 'galvez',
+            twitter: 'anothergalvez',
+            website: 'https://hire.jonasgalvez.com.br',
+            badges: ['maintainer']
+          },
+          {
+            name: 'Dmitry Molotkov',
+            alias: 'Дзмітрый Малаткоў',
+            city: 'Gomel, Belarus',
+            github: 'aldarund',
+            twitter: 'aldarund',
+            badges: ['maintainer']
+          },
+          {
+            name: 'Kevin Marrec',
+            city: 'Rennes, France',
+            github: 'kevinmarrec',
+            twitter: 'K_Marrec',
+            website: 'https://marrec.io',
+            badges: ['maintainer']
+          },
+          {
+            name: 'Pim',
+            city: 'The Netherlands',
+            github: 'pimlie',
+            badges: ['maintainer']
+          },
+          {
+            name: 'Alexander Lichter',
+            city: 'Dresden, Germany',
+            github: 'manniL',
+            twitter: 'TheAlexLichter',
+            website: 'https://blog.lichter.io',
+            badges: ['maintainer']
+          },
+          {
+            name: 'Daniel Roe',
+            city: 'Durham, UK',
+            github: 'danielroe',
+            twitter: 'danielcroe',
+            website: 'https://roe.dev',
+            badges: ['maintainer']
+          },
+          {
+            name: 'Ricardo Gobbo de Souza',
+            city: 'São José dos Campos, São Paulo, Brasil',
+            github: 'ricardogobbosouza',
+            website: 'https://datalogix.com.br/',
+            badges: ['maintainer']
+          },
+          {
+            name: 'Krutie Patel',
+            city: 'Brisbane, Australia',
+            github: 'Krutie',
+            twitter: 'KrutiePatel',
+            website: 'https://krutiepatel.com',
+            badges: ['ambassador']
+          },
+          {
+            name: 'Josh Deltener',
+            city: 'North Dakota, USA',
+            github: 'hecktarzuli',
+            twitter: 'JoshDeltener',
+            website: 'https://deltener.com/',
+            badges: ['ambassador']
+          },
+          {
+            name: 'Maya Shavin',
+            city: 'Israel',
+            github: 'mayashavin',
+            twitter: 'MayaShavin',
+            website: 'https://mayashavin.com',
+            badges: ['ambassador']
+          },
+          {
+            name: 'Giraud Florent',
+            city: 'Montreal, Canada',
+            github: 'f3ltron',
+            twitter: 'giraud_florent',
+            website: 'https://florent.dev/',
+            badges: ['ambassador']
+          },
+          {
+            name: 'Alba Silvente',
+            city: 'Amsterdam, The Netherlands',
+            github: 'Dawntraoz',
+            twitter: 'dawntraoz',
+            website: 'https://www.dawntraoz.com/',
+            badges: ['ambassador']
           }
-        },
-        {
-          name: 'Pooya Parsa',
-          alias: 'پویا پارسا',
-          city: 'Amsterdam, Netherlands',
-          github: 'pi0',
-          twitter: '_pi0_',
-          work: {
-            role: 'Architect',
-            org: 'NuxtJS',
-            orgUrl: 'https://nuxtjs.org'
-          }
-        },
-        {
-          name: 'Clark Du',
-          alias: '杜欣',
-          city: 'Dublin, Ireland',
-          github: 'clarkdo',
-          twitter: 'ClarkDu_',
-          work: {
-            role: 'Core Expert',
-            org: 'NuxtJS',
-            orgUrl: 'https://nuxtjs.org'
-          }
-        },
-        {
-          name: 'Alexander Lichter',
-          city: 'Dresden, Germany',
-          github: 'manniL',
-          twitter: 'TheAlexLichter',
-          website: 'https://blog.lichter.io',
-          work: {
-            role: 'Community',
-            org: 'NuxtJS',
-            orgUrl: 'https://nuxtjs.org'
-          }
-        },
-        {
-          name: 'Jonas Galvez',
-          city: 'Barretos, Brazil',
-          github: 'galvez',
-          twitter: 'anothergalvez',
-          website: 'https://hire.jonasgalvez.com.br',
-          work: {
-            role: 'Creator',
-            org: 'NuxtPress',
-            orgUrl: 'https://nuxt.press'
-          }
-        },
-        {
-          name: 'Dmitry Molotkov',
-          alias: 'Дзмітрый Малаткоў',
-          city: 'Gomel, Belarus',
-          github: 'aldarund',
-          twitter: 'aldarund',
-          work: {
-            role: 'Answer Machine',
-            org: 'NuxtJS',
-            orgUrl: 'https://stackoverflow.com/search?q=user%3A239354+%5Bnuxt.js%5D'
-          }
-        },
-        {
-          name: 'Kevin Marrec',
-          city: 'Rennes, France',
-          github: 'kevinmarrec',
-          twitter: 'K_Marrec',
-          website: 'https://marrec.io',
-          work: {
-            role: 'Creator',
-            org: 'Nuxt TS',
-            orgUrl: 'https://typescript.nuxtjs.org'
-          }
-        },
-        {
-          name: 'Pim',
-          city: 'The Netherlands',
-          github: 'pimlie',
-          work: {
-            role: 'Hacker',
-            org: 'NuxtJS',
-            orgUrl: 'https://nuxtjs.org'
-          }
-        }
-      ]
+        ]
+      }
     }
   },
-  head () {
+  head() {
     const title = 'The NuxtJS Team'
-    const description = 'NuxtJS has a very active and engaged team that is constantly striving to push Nuxt forward.'
+    const description =
+      'NuxtJS has a very active and engaged team that is constantly striving to push Nuxt forward.'
 
     return {
       title,
@@ -185,10 +252,18 @@ export default {
         { hid: 'description', name: 'description', content: description },
         // Open Graph
         { hid: 'og:title', property: 'og:title', content: title },
-        { hid: 'og:description', property: 'og:description', content: description },
+        {
+          hid: 'og:description',
+          property: 'og:description',
+          content: description
+        },
         // Twitter Card
         { hid: 'twitter:title', name: 'twitter:title', content: title },
-        { hid: 'twitter:description', name: 'twitter:description', content: description }
+        {
+          hid: 'twitter:description',
+          name: 'twitter:description',
+          content: description
+        }
       ]
     }
   }

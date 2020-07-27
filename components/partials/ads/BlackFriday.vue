@@ -1,13 +1,43 @@
 <template>
   <AppContainer v-if="isDisplayed" class="mt-6 lg:-mt-1 xl:-mt-2">
     <div class="bg-deep-cove bg-blackfriday">
-      <TimesIcon class="fill-current text-gray-500 w-3 m-2 float-right cursor-pointer hover:text-gray-300" @click.native="isDisplayed = false"/>
-      <a href="https://vueschool.io/sales/blackfriday?friend=nuxt&utm_source=Nuxtjs.org&utm_medium=Link&utm_content=TopBanner&utm_campaign=Black%20Friday" target="_blank" rel="noopener sponsored" class="px-4 flex items-center justify-between py-3 max-w-160 md:py-2 md:mx-auto">
-        <img src="/img/blackfriday/percent.png" width="47px" alt="percent" class="w-8 md:w-12">
-        <img src="/img/blackfriday/vueschool_logo.svg" width="160px" alt="VueSchool" class="hidden lg:inline-block md:max-w-full">
-        <img src="/img/blackfriday/title.png" width="180px" alt="BLACK FRIDAY SALE" class="max-w-2xs md:max-w-full pulse">
-        <img src="/img/blackfriday/40off.png" width="113px" alt="40% off" class="w-24 md:w-28 tada">
-        <div class="hidden rounded-full bg-nuxt-lightgreen text-white text-sm font-medium py-2 px-4 lg:inline-block md:py-3 md:px-5">
+      <TimesIcon
+        class="fill-current text-gray-500 w-3 m-2 float-right cursor-pointer hover:text-gray-300"
+        @click.native="isDisplayed = false"
+      />
+      <a
+        href="https://vueschool.io/sales/blackfriday?friend=nuxt&utm_source=Nuxtjs.org&utm_medium=Link&utm_content=TopBanner&utm_campaign=Black%20Friday"
+        target="_blank"
+        rel="noopener sponsored"
+        class="px-4 flex items-center justify-between py-3 max-w-160 md:py-2 md:mx-auto"
+      >
+        <img
+          src="/img/blackfriday/percent.png"
+          width="47px"
+          alt="percent"
+          class="w-8 md:w-12"
+        />
+        <img
+          src="/img/blackfriday/vueschool_logo.svg"
+          width="160px"
+          alt="VueSchool"
+          class="hidden lg:inline-block md:max-w-full"
+        />
+        <img
+          src="/img/blackfriday/title.png"
+          width="180px"
+          alt="BLACK FRIDAY SALE"
+          class="max-w-2xs md:max-w-full pulse"
+        />
+        <img
+          src="/img/blackfriday/40off.png"
+          width="113px"
+          alt="40% off"
+          class="w-24 md:w-28 tada"
+        />
+        <div
+          class="hidden rounded-full bg-nuxt-lightgreen text-white text-sm font-medium py-2 px-4 lg:inline-block md:py-3 md:px-5"
+        >
           ENROLL NOW
         </div>
       </a>
@@ -16,13 +46,13 @@
 </template>
 
 <script>
-import TimesIcon from '@/assets/icons/times.svg?inline'
+import TimesIcon from '~/assets/icons/times.svg?inline'
 
 export default {
   components: {
     TimesIcon
   },
-  data () {
+  data() {
     return {
       isDisplayed: true
     }
@@ -37,15 +67,19 @@ export default {
   background-repeat: no-repeat;
   background-size: cover;
 }
+
 .bg-deep-cove {
   background-color: #0d0751;
 }
+
 .pulse {
   animation: pulse 2s linear infinite;
 }
+
 .tada {
   animation: tada 3s linear infinite;
 }
+
 @keyframes pulse {
   from {
     transform: scale3d(1, 1, 1);
@@ -59,6 +93,7 @@ export default {
     transform: scale3d(1, 1, 1);
   }
 }
+
 @keyframes tada {
   from {
     transform: scale3d(1, 1, 1);

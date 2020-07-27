@@ -20,3 +20,13 @@ newrelic_agent.log
 
 # @nuxtjs/pwa
 sw.*
+
+.env
+
+# Optional eslint cache
+.eslintcache
+
+
+cypress/integration/examples
+cypress/videos
+cypress/screenshots

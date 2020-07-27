@@ -51,7 +51,13 @@ See the comparison in seconds between two `nuxt generate`:
 
 <bar-chart-cache-build></bar-chart-cache-build>
 
-Our deployments with only content changes are **~3.6x times** faster 🚀
+<base-alert type="next">
+
+The static site generation of our projects on content changes are now **~3.6x times** faster 🚀
+
+</base-alert>
+
+Projects link: [Basic](https://github.com/pi0/nuxt-static-demo), [Strapi Module Docs](https://github.com/nuxt-community/strapi-module/tree/master/docs), [Content Module Docs](https://github.com/nuxt/content/tree/master/docs) and [Nuxt Docs](https://github.com/nuxt/nuxtjs.org/tree/dev).
 
 ## Using in your projects
 

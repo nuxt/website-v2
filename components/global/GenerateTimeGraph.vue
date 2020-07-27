@@ -1,10 +1,9 @@
 <template>
-  <div class="mb-8 relative">
+  <div>
     <D3BarChart
       :config="chart_config"
       :datum="chart_data"
       :title="chart_title"
-      class="relative"
     ></D3BarChart>
   </div>
 </template>
@@ -30,8 +29,24 @@ export default {
 
       chart_config: {
         key: 'site',
-        labelRotation: 90,
-
+        labelRotation: 45,
+        axis: {
+          yTitle: false,
+          xTitle: false,
+          yFormat: '.0f',
+          xFormat: '.0f',
+          yTicks: 10,
+          xTicks: 10
+        },
+        currentKey: false,
+        margin: {
+          top: 20,
+          right: 20,
+          bottom: 20,
+          left: 20
+        },
+        orientation: 'vertical',
+        tooltip: { label: true },
         values: ['cache', 'build'],
         color: {
           keys: {

@@ -1,7 +1,7 @@
 ---
 title: Nuxt Static Improvements
 description: With Nuxt.js version 2.13, the full-static mode has been introduced. In addition, a new command nuxt export was added to pre-render your pages without triggering a webpack build with the goal to separate the rendering and build process. The only issue was that most Nuxt.js users weren't able to unleash the full potential of the separation... until now.
-imgUrl: blog/nuxt-static-improvements/main.png
+imgUrl: blog/nuxt-static-improvements/main.jpg
 date: 2020-07-27
 authors:
   - name: Alexander Lichter
@@ -33,7 +33,7 @@ With Nuxt.js version 2.13, the [full-static mode](/blog/going-full-static/) has 
 
 With v2.14, `nuxt generate` will **automagically skip webpack build step when no code has been changed** and use the previous build using cache. This will help to drastically improve static deployments time by avoiding unnecessary builds which is usually the most time-consuming part of generation process. Cache support is **platform-agnostic** and works on Netlify, Vercel, or any other CI/CD setup that is caching `node_modules`.
 
-<generate-time-graph class="relative"></generate-time-graph>
+<generate-time-graph></generate-time-graph>
 
 [video] // Seb
 
@@ -58,7 +58,7 @@ npm update
   </code-block>
 </code-group>
 
-1. Ensure `target` is `static` inside your `nuxt.config`
+2. Ensure `target` is `static` inside your `nuxt.config`
 
 ```js{}[nuxt.config.js]
 export default {

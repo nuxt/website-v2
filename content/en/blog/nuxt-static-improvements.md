@@ -48,8 +48,8 @@ With v2.14, `nuxt generate` will **automagically skip webpack build step when no
 yarn upgrade nuxt
 ```
 
-</code-block>
-<code-block label="NPM">
+  </code-block>
+  <code-block label="NPM">
 
 ```bash
 npm update

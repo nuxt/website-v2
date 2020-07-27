@@ -152,3 +152,10 @@ Static target:
 - `nuxt dev` = development server
 - `nuxt generate` = build if needed and statically export to `dist/`
 - `nuxt start` = serve the `dist/` directory like your static hosting would do (Netlify, Vercel, Surge, etc), great for testing before deploying
+
+## What to do next
+
+- Upgrade your project to [nuxt@2.14.0](https://github.com/nuxt/nuxt.js/releases/tag/v2.14.0)
+- Use `nuxt generate` instead of `nuxt export`
+- Use `nuxt start` instead of `nuxt serve`
+- Enjoy fast deployments 🤙

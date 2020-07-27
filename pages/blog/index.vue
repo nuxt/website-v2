@@ -17,16 +17,19 @@
             class="xl:text-lg light:text-light-onSurfaceSecondary dark:text-dark-onSurfaceSecondary font-medium leading-relaxed mb-6"
           >
             <template v-slot:nuxtTeam>
-              <NuxtLink class="text-nuxt-green underline" to="/team#nuxtTeam">
+              <NuxtLink
+                class="text-nuxt-green underline"
+                to="/team#nuxtCompany"
+              >
                 NuxtJS team
               </NuxtLink>
             </template>
             <template v-slot:ambassadors>
               <NuxtLink
                 class="text-nuxt-green underline"
-                to="/team#ambassadors"
+                to="/team#nuxtCommunity"
               >
-                {{ $t('blog.ambassadors') }}
+                Nuxt.js Community
               </NuxtLink>
             </template>
           </i18n>

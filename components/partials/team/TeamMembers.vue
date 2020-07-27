@@ -29,13 +29,11 @@
             </h2>
             <div v-if="profile.role" class="text-gray-600 py-1">
               {{ profile.role }}
-              <span class="text-nuxt-lightgreen">
-                @NuxtJS
-              </span>
             </div>
             <div class="text-sm py-1">
               {{ profile.city }}
             </div>
+
             <div class="py-2">
               <a
                 :href="`https://github.com/${profile.github}`"
@@ -69,6 +67,17 @@
                   class="h-5 inline-block text-nuxt-green hover:text-nuxt-lightgreen"
                 />
               </a>
+            </div>
+            <div
+              class="flex flex-row flex-wrap justify-center light:text-light-onSurfaceSecondary dark:text-dark-onSurfaceSecondary"
+            >
+              <span
+                v-for="(badge, i) in profile.badges"
+                :key="i"
+                class="truncate uppercase tracking-wider font-medium text-ss px-2 py-1 rounded-full mr-2 mb-2 border border-light-border dark:border-dark-border transition-colors duration-300 ease-linear"
+              >
+                {{ badge }}
+              </span>
             </div>
           </div>
         </div>

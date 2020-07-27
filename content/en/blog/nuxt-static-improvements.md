@@ -5,8 +5,14 @@ imgUrl: blog/nuxt-static-improvements/main.png
 date: 2020-07-27
 authors:
   - name: Alexander Lichter
-    avatarUrl:
-    link:
+    avatarUrl: https://pbs.twimg.com/profile_images/952533217923432449/94yyoh67_400x400.jpg
+    link: https://twitter.com/TheAlexLichter
+  - name: Sébastien Chopin
+    avatarUrl: https://pbs.twimg.com/profile_images/1042510623962275840/1Iw_Mvud_400x400.jpg
+    link: https://twitter.com/atinux
+  - name: Pooya Parsa
+    avatarUrl: https://pbs.twimg.com/profile_images/1268227177612541952/9-fujxqt_400x400.jpg
+    link: https://twitter.com/TheAlexLichter
 tags:
   - static
 ---

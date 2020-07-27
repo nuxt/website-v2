@@ -30,8 +30,9 @@ export default {
 
       chart_config: {
         key: 'site',
+        labelRotation: 90,
+
         values: ['cache', 'build'],
-        orientation: 'verticle',
         color: {
           keys: {
             cache: '#108775',
@@ -43,3 +44,11 @@ export default {
   }
 }
 </script>
+<style>
+.chart__wrapper {
+  margin: 20px 0;
+}
+.chart__wrap--barchart {
+  position: relative !important;
+}
+</style>

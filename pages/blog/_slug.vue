@@ -17,16 +17,16 @@
 
 <script>
 import { mapState } from 'vuex'
-import Clipboard from 'clipboard'
 import ArrowLeftIcon from '~/assets/icons/arrow-left.svg?inline'
+import copyCodeBlock from '~/mixins/copyCodeBlock'
 
 export default {
   name: 'PageSlug',
   scrollToTop: true,
-
   components: {
     ArrowLeftIcon
   },
+  mixins: [copyCodeBlock],
   middleware({ params, redirect }) {
     if (params.slug === 'index') {
       redirect('/')
@@ -95,29 +95,6 @@ export default {
         return `https://res.cloudinary.com/nuxt/image/upload/w_1200,h_628,c_fill,f_auto/remote/nuxt-org/${this.post.imgUrl}`
       }
     }
-  },
-  mounted() {
-    const blocks = document.getElementsByClassName('nuxt-content-highlight')
-    for (const block of blocks) {
-      const pre = block.getElementsByTagName('pre')[0]
-      const button = document.createElement('button')
-      button.textContent = 'Copy'
-      button.className = 'copy'
-      pre.appendChild(button)
-    }
-    const copyCode = new Clipboard('.copy', {
-      target(trigger) {
-        return trigger.previousElementSibling
-      }
-    })
-
-    copyCode.on('success', function (event) {
-      event.clearSelection()
-      event.trigger.textContent = 'Copied!'
-      window.setTimeout(function () {
-        event.trigger.textContent = 'Copy'
-      }, 2000)
-    })
   },
   head() {
     return {

@@ -16,7 +16,7 @@ export default {
         datasets: [
           {
             label: 'Build',
-            backgroundColor: '#2F495E',
+            backgroundColor: '#2d3748',
             data: [9, 16.4, 34.3, 41, 114]
           },
           {

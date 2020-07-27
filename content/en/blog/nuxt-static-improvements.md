@@ -23,6 +23,7 @@ With Nuxt.js version 2.13, the [full-static mode](/blog/going-full-static/) has 
 
 - [Introduction](#introduction)
 - [Faster Static Deployments](#faster-static-deployments)
+- [Generate time: cache vs full webpack build(seconds)](#generate-time-cache-vs-full-webpack-buildseconds)
 - [Using in your projects](#using-in-your-projects)
   - [Excluding Files from Cache](#excluding-files-from-cache)
   - [Module Authors](#module-authors)
@@ -33,7 +34,9 @@ With Nuxt.js version 2.13, the [full-static mode](/blog/going-full-static/) has 
 
 With v2.14, `nuxt generate` will **automagically skip webpack build step when no code has been changed** and use the previous build using cache. This will help to drastically improve static deployments time by avoiding unnecessary builds which is usually the most time-consuming part of generation process. Cache support is **platform-agnostic** and works on Netlify, Vercel, or any other CI/CD setup that is caching `node_modules`.
 
-<generate-time-graph></generate-time-graph>
+## Generate time: cache vs full webpack build(seconds)
+
+<bar-chart-cache-build></bar-chart-cache-build>
 
 [video] // Seb
 

@@ -10,7 +10,10 @@
             .vue files based
           </h4>
           <p class="Home__Features__Section__Description">
-            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Labore nemo quasi quae amet blanditiis facere aliquid ducimus eum sunt aut magnam ipsam rem culpa ratione consectetur, recusandae vero odit illum?
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Labore
+            nemo quasi quae amet blanditiis facere aliquid ducimus eum sunt aut
+            magnam ipsam rem culpa ratione consectetur, recusandae vero odit
+            illum?
           </p>
         </div>
         <div class="Home__Features__Section">
@@ -18,7 +21,10 @@
             .vue files based
           </h4>
           <p class="Home__Features__Section__Description">
-            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Labore nemo quasi quae amet blanditiis facere aliquid ducimus eum sunt aut magnam ipsam rem culpa ratione consectetur, recusandae vero odit illum?
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Labore
+            nemo quasi quae amet blanditiis facere aliquid ducimus eum sunt aut
+            magnam ipsam rem culpa ratione consectetur, recusandae vero odit
+            illum?
           </p>
         </div>
         <div class="Home__Features__Section">
@@ -26,7 +32,10 @@
             .vue files based
           </h4>
           <p class="Home__Features__Section__Description">
-            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Labore nemo quasi quae amet blanditiis facere aliquid ducimus eum sunt aut magnam ipsam rem culpa ratione consectetur, recusandae vero odit illum?
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Labore
+            nemo quasi quae amet blanditiis facere aliquid ducimus eum sunt aut
+            magnam ipsam rem culpa ratione consectetur, recusandae vero odit
+            illum?
           </p>
         </div>
       </nui-row>
@@ -36,7 +45,10 @@
             .vue files based
           </h4>
           <p class="Home__Features__Section__Description">
-            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Labore nemo quasi quae amet blanditiis facere aliquid ducimus eum sunt aut magnam ipsam rem culpa ratione consectetur, recusandae vero odit illum?
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Labore
+            nemo quasi quae amet blanditiis facere aliquid ducimus eum sunt aut
+            magnam ipsam rem culpa ratione consectetur, recusandae vero odit
+            illum?
           </p>
         </div>
         <div class="Home__Features__Section">
@@ -44,7 +56,10 @@
             .vue files based
           </h4>
           <p class="Home__Features__Section__Description">
-            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Labore nemo quasi quae amet blanditiis facere aliquid ducimus eum sunt aut magnam ipsam rem culpa ratione consectetur, recusandae vero odit illum?
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Labore
+            nemo quasi quae amet blanditiis facere aliquid ducimus eum sunt aut
+            magnam ipsam rem culpa ratione consectetur, recusandae vero odit
+            illum?
           </p>
         </div>
         <div class="Home__Features__Section">
@@ -52,7 +67,10 @@
             .vue files based
           </h4>
           <p class="Home__Features__Section__Description">
-            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Labore nemo quasi quae amet blanditiis facere aliquid ducimus eum sunt aut magnam ipsam rem culpa ratione consectetur, recusandae vero odit illum?
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Labore
+            nemo quasi quae amet blanditiis facere aliquid ducimus eum sunt aut
+            magnam ipsam rem culpa ratione consectetur, recusandae vero odit
+            illum?
           </p>
         </div>
       </nui-row>
@@ -75,9 +93,9 @@ export default {
 </script>
 
 <style lang="scss">
-$grey_blue: #2F495E;
-$light_green: #00C58E;
-$grey: #606F7B;
+$grey_blue: #2f495e;
+$light_green: #00c58e;
+$grey: #606f7b;
 
 .Home__Features {
   color: $grey_blue;
@@ -89,17 +107,18 @@ $grey: #606F7B;
       font-size: 1.35rem;
       font-weight: 700;
       margin: 0;
-      text-transform: uppercase;
       padding: 0;
       padding-bottom: 1.5rem;
+      text-transform: uppercase;
     }
+
     &__Description {
-      text-align: justify;
       color: $grey;
-      font-weight: 500;
-      margin: 0;
-      line-height: 1.7rem;
       font-size: 1rem;
+      font-weight: 500;
+      line-height: 1.7rem;
+      margin: 0;
+      text-align: justify;
     }
   }
 }

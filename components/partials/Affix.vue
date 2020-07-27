@@ -1,4 +1,5 @@
 <template>
+<<<<<<< HEAD:components/partials/Affix.vue
 <<<<<<< HEAD
   <div class="affix fixed text-center hidden md:block overflow-y-scroll bottom-0 py-8 pl-4 w-40">
     <div class="h-auto pb-8">
@@ -32,6 +33,18 @@
         <div class="-m-4 lg:m-0 lg:w-full sm:w-2/3">
           <slot />
         </div>
+=======
+  <div
+    class="lg:inset-0 z-90 lg:-mb-0 lg:static lg:h-auto lg:overflow-y-visible lg:pt-0 lg:w-1/4 lg:block"
+  >
+    <div
+      class="lg:overflow-y-auto lg:scrolling-touch lg:h-auto lg:block lg:relative lg:sticky lg:top-24"
+    >
+      <div
+        class="flex flex-col sm:flex-row px-4 pt-8 justify-between lg:justify-start lg:flex-col lg:overflow-y-auto lg:pr-0 lg:pl-8 sticky?lg:h-(screen-24)"
+      >
+        <slot />
+>>>>>>> 26a70b2b (chore: add guides section (#407)):components/partials/AffixBlock.vue
       </div>
 >>>>>>> c7763d43 (New design with illustrations)
     </div>
@@ -40,20 +53,12 @@
 </template>
 
 <script>
-export default {
-  data () {
-    return {
-      sponsors: [
-        { name: 'Storyblok', link: 'https://www.storyblok.com/?ref=nuxt', img: 'storyblok-logo.svg' }
-      ]
-    }
-  }
-}
+export default {}
 </script>
 
 <style>
 .affix {
+  height: calc(100vh - 6rem);
   top: 6rem;
-  height: calc(100vh - 6rem)
 }
 </style>

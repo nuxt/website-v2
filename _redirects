@@ -1,0 +1,9 @@
+# Redirect default Netlify subdomain to primary domain
+https://nuxt.netlify.com/* https://nuxtjs.org/:splat 301!
+# Redirect www.nuxtjs.org to nuxtjs.org
+https://www.nuxtjs.org/* https://nuxtjs.org/:splat 301!
+# Redirect /logos to /design
+/logos /design 301!
+/guide/themes /themes 301!
+/api/components-no-ssr /api/components-client-only 301!
+/faq/google-analytics /faq/ga 301!

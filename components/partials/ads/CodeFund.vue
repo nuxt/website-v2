@@ -10,11 +10,18 @@ export default {
     }
   },
   mounted() {
+<<<<<<< HEAD:components/partials/ads/CodeFund.vue
     if (['en', 'fr'].indexOf(this.$store.state.locale) !== -1 && this.$refs.codefundads) {
+=======
+    if (['en', 'fr'].includes(this.$i18n.locale) && this.$refs.codefundads) {
+>>>>>>> 26a70b2b (chore: add guides section (#407)):components/partials/ads/CodeFundAds.vue
       window.addEventListener('codefund', this.cardbonFallback)
       const script = document.createElement('script')
       script.setAttribute('type', 'text/javascript')
-      script.setAttribute('src', '//codefund.io/scripts/7a55aa99-7866-418d-9720-8b1342303656/embed.js?template=vertical')
+      script.setAttribute(
+        'src',
+        '//codefund.io/scripts/7a55aa99-7866-418d-9720-8b1342303656/embed.js?template=vertical'
+      )
       script.setAttribute('id', '_codefund_ad_js')
       try {
         this.$refs.codefundads.appendChild(script)
@@ -40,6 +47,7 @@ export default {
 
 <style lang="scss">
 .CodeFund {
+<<<<<<< HEAD:components/partials/ads/CodeFund.vue
   @apply bg-white p-4 flex flex-col w-40;
   .cf-img-wrapper {
 
@@ -49,6 +57,47 @@ export default {
   }
   .cf-powered-by {
     @apply text-xs;
+=======
+  @apply p-4 flex flex-col bg-gray-200 mt-4;
+
+  @media (max-width: 1023px) {
+    #cf {
+      margin: 1rem 0 !important;
+      width: 280px !important;
+    }
+
+    .cf-wrapper {
+      height: 125px;
+      position: relative;
+    }
+
+    .cf-img-wrapper {
+      display: block;
+      float: left;
+    }
+
+    .cf-text {
+      display: block;
+      float: right;
+      padding: 0.5rem 1rem;
+      padding-right: 0;
+      width: 155px;
+    }
+
+    .cf-powered-by {
+      @apply text-xs;
+
+      display: block;
+      float: right;
+      text-align: right;
+    }
+  }
+}
+
+@screen lg {
+  .CodeFund {
+    @apply bg-white mt-0;
+>>>>>>> 26a70b2b (chore: add guides section (#407)):components/partials/ads/CodeFundAds.vue
   }
 }
 </style>

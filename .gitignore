@@ -38,4 +38,17 @@ docs
 
 # @nuxtjs/pwa
 sw.*
+<<<<<<< HEAD
 >>>>>>> dd0be05d (feat(pwa): Add PWA mode)
+=======
+
+.env
+
+# Optional eslint cache
+.eslintcache
+
+
+cypress/integration/examples
+cypress/videos
+cypress/screenshots
+>>>>>>> 26a70b2b (chore: add guides section (#407))

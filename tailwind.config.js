@@ -73,15 +73,42 @@ module.exports = {
     width: ['responsive', 'after'],
     borderWidth: ['responsive', 'after'],
     borderRadius: ['responsive', 'after'],
-    borderColor: ['responsive', 'hover', 'focus', 'dark', 'light', 'after', 'light:after', 'dark:after'],
-    backgroundColor: ['responsive', 'hover', 'focus', 'dark', 'light', 'dark:hover', 'light:hover'],
-    textColor: ['responsive', 'hover', 'focus', 'group-hover', 'dark', 'light', 'dark:hover', 'light:hover']
+    borderColor: [
+      'responsive',
+      'hover',
+      'focus',
+      'dark',
+      'light',
+      'after',
+      'light:after',
+      'dark:after'
+    ],
+    backgroundColor: [
+      'responsive',
+      'hover',
+      'focus',
+      'dark',
+      'light',
+      'dark:hover',
+      'light:hover'
+    ],
+    textColor: [
+      'responsive',
+      'hover',
+      'focus',
+      'group-hover',
+      'dark',
+      'light',
+      'dark:hover',
+      'light:hover'
+    ]
   },
   corePlugins: {
     container: false
   },
   plugins: [
     plugin(function ({ addVariant, theme, e, prefix, config }) {
+<<<<<<< HEAD
       // addVariant('dark', ({ modifySelectors, separator }) => {
       //   modifySelectors(({ className }) => {
       //     return `[data-theme='dark'] .${e(`dark${separator}${className}`)}`
@@ -94,6 +121,10 @@ module.exports = {
       // })
       const themeVariants = ['light', 'dark']
       themeVariants.forEach((mode) => {
+=======
+      const colorModeVariants = ['light', 'dark']
+      colorModeVariants.forEach(mode => {
+>>>>>>> 26a70b2b (chore: add guides section (#407))
         addVariant(mode, ({ modifySelectors, separator }) => {
           modifySelectors(({ className }) => {
             return `[data-theme='${mode}'] .${e(`${mode}${separator}${className}`)}`
@@ -101,7 +132,7 @@ module.exports = {
         })
       })
       const pseudoVariants = ['after', 'before']
-      pseudoVariants.forEach((pseudo) => {
+      pseudoVariants.forEach(pseudo => {
         addVariant(pseudo, ({ modifySelectors, separator }) => {
           modifySelectors(({ className }) => {
             return `.${e(`${pseudo}${separator}${className}`)}::${pseudo}`
@@ -109,22 +140,42 @@ module.exports = {
         })
       })
       // generate chained color mode and pseudo variants
+<<<<<<< HEAD
       themeVariants.forEach((mode) => {
         pseudoVariants.forEach((pseudo) => {
           addVariant(`${mode}:${pseudo}`, ({ modifySelectors, separator }) => {
             modifySelectors(({ className }) => {
               return `[data-theme='${mode}'] .${e(`${mode}${separator}${pseudo}${separator}${className}`)}::${pseudo}`
+=======
+      colorModeVariants.forEach(mode => {
+        pseudoVariants.forEach(pseudo => {
+          addVariant(`${mode}:${pseudo}`, ({ modifySelectors, separator }) => {
+            modifySelectors(({ className }) => {
+              return `.${mode}-mode .${e(
+                `${mode}${separator}${pseudo}${separator}${className}`
+              )}::${pseudo}`
+>>>>>>> 26a70b2b (chore: add guides section (#407))
             })
           })
         })
       })
       // states for color modes
       const states = ['hover']
+<<<<<<< HEAD
       themeVariants.forEach((mode) => {
         states.forEach((state) => {
           addVariant(`${mode}:${state}`, ({ modifySelectors, separator }) => {
             modifySelectors(({ className }) => {
               return `[data-theme='${mode}'] .${e(`${mode}${separator}${state}${separator}${className}`)}:${state}`
+=======
+      colorModeVariants.forEach(mode => {
+        states.forEach(state => {
+          addVariant(`${mode}:${state}`, ({ modifySelectors, separator }) => {
+            modifySelectors(({ className }) => {
+              return `.${mode}-mode .${e(
+                `${mode}${separator}${state}${separator}${className}`
+              )}:${state}`
+>>>>>>> 26a70b2b (chore: add guides section (#407))
             })
           })
         })

@@ -1,4 +1,10 @@
+<<<<<<< HEAD
 module.exports = {
+=======
+export default {
+  target: 'static',
+  ssr: true,
+>>>>>>> 26a70b2b (chore: add guides section (#407))
   head: {
     title: 'Nuxt.js - Universal Vue.js Applications',
     meta: [
@@ -29,10 +35,24 @@ module.exports = {
   modules: [
 =======
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
+<<<<<<< HEAD
       { rel: 'preconnect', href: 'https://www.google-analytics.com' }
     ],
     bodyAttrs: {
       class: ['font-sans font-medium bg-light-surface dark:bg-dark-surface text-light-onSurfacePrimary dark:text-dark-onSurfacePrimary transition-colors duration-300 ease-linear ']
+=======
+      { rel: 'preconnect', href: 'https://www.google-analytics.com' },
+      {
+        rel: 'stylesheet',
+        type: 'text/css',
+        href: 'https://cdn.jsdelivr.net/docsearch.js/2/docsearch.min.css'
+      }
+    ],
+    bodyAttrs: {
+      class: [
+        'font-sans font-medium bg-light-surface dark:bg-dark-surface text-light-onSurfacePrimary dark:text-dark-onSurfacePrimary transition-colors duration-300 ease-linear'
+      ]
+>>>>>>> 26a70b2b (chore: add guides section (#407))
     }
   },
   buildModules: [
@@ -69,6 +89,7 @@ module.exports = {
 >>>>>>> dd0be05d (feat(pwa): Add PWA mode)
   ],
 <<<<<<< HEAD
+<<<<<<< HEAD
   router: {
     routes: [
       { path: '/guide/:slug', component: 'pages/guide' }
@@ -98,16 +119,52 @@ module.exports = {
   build: {
     vendor: ['whatwg-fetch', 'marked', 'highlight.js']
 =======
+=======
+  modules: [
+    '~/modules/releases',
+    '@nuxt/http',
+    '@nuxt/content',
+    'nuxt-i18n',
+    'vue-scrollto/nuxt'
+  ],
+  // Auto import components, see https://github.com/nuxt/components
+  components: true,
+  colorMode: {
+    preference: 'light' // disable system
+  },
+  content: {
+    markdown: {
+      prism: {
+        theme: 'prism-themes/themes/prism-material-oceanic.css'
+      }
+    }
+  },
+  css: ['~/assets/css/main.scss'],
+  hooks: {
+    'content:file:beforeInsert': item => {
+      const stats = require('reading-time')(item.text)
+
+      if (item.slug === '' && item.extension === '.md') {
+      }
+
+      item.readingTime = stats
+    }
+  },
+  plugins: [
+    '~/plugins/i18n',
+>>>>>>> 26a70b2b (chore: add guides section (#407))
     '~/plugins/directives',
     '~/plugins/intersection-observer.client.js',
     '~/plugins/vue-observe-visibility.client.js',
     '~/plugins/ga.client.js',
     '~/plugins/adblock.client.js',
-    '~/plugins/newsletter.client.js'
+    '~/plugins/newsletter.client.js',
+    '~/plugins/vue-scrollactive'
   ],
   env: {
     DEPLOY_PRIME_URL: process.env.DEPLOY_PRIME_URL || false,
     URL: process.env.URL || false,
+<<<<<<< HEAD
     DOC_SEARCH_API_KEY: process.env.DOC_SEARCH_API_KEY || 'ff80fbf046ce827f64f06e16f82f1401',
     NUXT_API: process.env.NUXT_API || 'https://api.nuxtjs.com',
     LOCALE: locale
@@ -171,6 +228,92 @@ module.exports = {
   theme: {
     value: 'light'
 >>>>>>> 1b87907b (feat: dark mode (#303))
+=======
+    DOC_SEARCH_API_KEY:
+      process.env.DOC_SEARCH_API_KEY || 'ff80fbf046ce827f64f06e16f82f1401',
+    NUXT_API: process.env.NUXT_API || 'https://api.nuxtjs.com'
+  },
+  publicRuntimeConfig: {
+    nuxtLocale: process.env.NUXT_LOCALE || 'en',
+    nuxtVersion: '2.14.0',
+    nuxtStars: '28K+'
+  },
+  loading: { color: '#41B883' },
+  generate: {
+    fallback: '404.html', // for Netlify
+    routes: ['/']
+  },
+  i18n: {
+    strategy: 'no_prefix',
+    locales: [
+      {
+        code: 'en',
+        iso: 'en-US',
+        file: 'en-US.js',
+        name: 'English',
+        domain: 'https://nuxtjs.org'
+      },
+      {
+        code: 'fr',
+        iso: 'fr-FR',
+        file: 'fr-FR.js',
+        name: 'Français',
+        domain: 'https://fr.nuxtjs.org'
+      },
+      {
+        code: 'zh',
+        iso: 'zh-ZH',
+        file: 'zh-ZH.js',
+        name: '简体中文',
+        domain: 'https://zh.nuxtjs.org'
+      },
+
+      {
+        code: 'ja',
+        iso: 'ja-JA',
+        file: 'ja-JA.js',
+        name: '日本語',
+        domain: 'https://jp.nuxtjs.org'
+      },
+      {
+        code: 'ko',
+        iso: 'ko-KO',
+        file: 'ko-KO.js',
+        name: '한국어',
+        domain: 'https://ko.nuxtjs.org'
+      },
+      {
+        code: 'ru',
+        iso: 'ru-RU',
+        file: 'ru-RU.js',
+        name: 'Русский',
+        domain: 'https://ru.nuxtjs.org'
+      },
+      {
+        code: 'id',
+        iso: 'id-ID',
+        file: 'id-ID.js',
+        name: 'Indonesian',
+        domain: 'https://id.nuxtjs.org'
+      }
+      // {
+      //   code: 'es',
+      //   iso: 'es-ES',
+      //   file: 'es-ES.js',
+      //   name: 'Español',
+      //   domain: 'https://es.nuxtjs.org'
+      // }
+    ],
+    vueI18n: {
+      fallbackLocale: 'en'
+    },
+    defaultLocale: 'en',
+    parsePages: false,
+    detectBrowserLanguage: false,
+    seo: false,
+    lazy: true,
+    langDir: 'i18n/'
+>>>>>>> 26a70b2b (chore: add guides section (#407))
   }
 >>>>>>> f4d82e28 (guide content from component)
 }

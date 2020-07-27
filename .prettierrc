@@ -1,7 +1,14 @@
 {
+<<<<<<< HEAD
   "printWidth": 120,
   "semi": false,
   "singleQuote": true,
   "trailingComma": "none",
   "arrowParens": "avoid"
+=======
+  "arrowParens": "avoid",
+  "semi": false,
+  "singleQuote": true,
+  "trailingComma": "none"
+>>>>>>> 26a70b2b (chore: add guides section (#407))
 }

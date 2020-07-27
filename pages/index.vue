@@ -29,6 +29,7 @@
         </ul>
 =======
   <div>
+<<<<<<< HEAD
     <section class="Landscape">
 <<<<<<< HEAD
       <div class="Landscape__Content">
@@ -103,10 +104,18 @@
     <home-showcase/>
     <home-modes/> -->
 >>>>>>> cdec9baa (clean useless components)
+=======
+    <HomeWelcome />
+    <HomeWhy />
+    <HomeCompanies />
+    <HomeModes />
+    <HomeSponsors />
+>>>>>>> 26a70b2b (chore: add guides section (#407))
   </div>
 </template>
 
 <script>
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 import NuxtHeader from '~components/Header.vue'
@@ -141,9 +150,14 @@ export default {
 >>>>>>> cdec9baa (clean useless components)
   },
   head () {
+=======
+export default {
+  head() {
+>>>>>>> 26a70b2b (chore: add guides section (#407))
     return {
-      title: this.$store.state.lang.homepage.meta.title,
+      title: this.$i18n.t('homepage.meta.title'),
       meta: [
+<<<<<<< HEAD
         { name: 'description', hid: 'description', content: this.$store.state.lang.homepage.meta.description },
 <<<<<<< HEAD
         // Open Grapg
@@ -184,9 +198,35 @@ export default {
 =======
         { hid: 'og:title', property: 'og:title', content: this.$store.state.lang.homepage.meta.title },
         { hid: 'og:description', property: 'og:description', content: this.$store.state.lang.homepage.meta.description },
+=======
+        {
+          hid: 'description',
+          name: 'description',
+          content: this.$i18n.t('homepage.meta.description')
+        },
+        // Open Graph
+        {
+          hid: 'og:title',
+          property: 'og:title',
+          content: this.$i18n.t('homepage.meta.title')
+        },
+        {
+          hid: 'og:description',
+          property: 'og:description',
+          content: this.$i18n.t('homepage.meta.description')
+        },
+>>>>>>> 26a70b2b (chore: add guides section (#407))
         // Twitter Card
-        { hid: 'twitter:title', name: 'twitter:title', content: this.$store.state.lang.homepage.meta.title },
-        { hid: 'twitter:description', name: 'twitter:description', content: this.$store.state.lang.homepage.meta.description }
+        {
+          hid: 'twitter:title',
+          name: 'twitter:title',
+          content: this.$i18n.t('homepage.meta.title')
+        },
+        {
+          hid: 'twitter:description',
+          name: 'twitter:description',
+          content: this.$i18n.t('homepage.meta.description')
+        }
       ]
     }
   }

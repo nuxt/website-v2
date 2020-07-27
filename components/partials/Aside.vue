@@ -1,4 +1,5 @@
 <template>
+<<<<<<< HEAD:components/partials/Aside.vue
 <<<<<<< HEAD
 <<<<<<< HEAD
   <aside class="font-medium">
@@ -31,11 +32,37 @@
       <nav class="pt-8 lg:overflow-y-auto lg:block lg:pl-0 lg:pr-8 sticky?lg:h-(screen-24)" :class="{ hidden: !showNav }">
         <p class="uppercase font-bold pb-6">
           {{ $store.state.lang.text.version }} <span class="text-nuxt-lightgreen">{{ $store.state.docVersion }}</span>
+=======
+  <aside
+    class="opacity-transition block bg-gray-100 mt-8 -mx-4 lg:bg-transparent lg:mt-0 lg:mx-0 lg:inset-0 z-90 lg:mb-0 lg:static lg:h-auto lg:overflow-y-visible lg:pt-0 lg:w-1/4 lg:block"
+  >
+    <div
+      class="h-full overflow-y-auto scrolling-touch text-center lg:text-left lg:h-auto lg:block lg:relative lg:sticky lg:top-24"
+    >
+      <nav
+        class="pt-8 lg:overflow-y-auto lg:block lg:pl-0 lg:pr-8 sticky?lg:h-(screen-24)"
+        :class="{ hidden: !showNav }"
+      >
+        <p class="uppercase font-bold mb-6">
+          <NuxtLink
+            to="/guide/release-notes"
+            class="text-sm"
+            active-class=""
+            exact-active-class=""
+          >
+            {{ $t('common.version') }}
+            <span class="text-nuxt-lightgreen">{{ $config.nuxtVersion }}</span>
+          </NuxtLink>
+>>>>>>> 26a70b2b (chore: add guides section (#407)):components/TheAsideNav.vue
         </p>
-        <template v-for="(group, index) in list">
-          <h3 :key="`title-${index}`" class="uppercase font-medium text-light-onSurfaceSecondary dark:text-dark-onSurfaceSecondary pb-2 transition-colors duration-300 ease-linear">
-            {{ group.title }}
+        <div v-for="(sublinks, group) in sortedLinks" :key="`links-${group}`">
+          <h3
+            :key="`title-${group}`"
+            class="uppercase font-medium text-light-onSurfaceSecondary dark:text-dark-onSurfaceSecondary pb-2 transition-colors duration-300 ease-linear"
+          >
+            {{ $t(`content.${section}.${group}`) }}
           </h3>
+<<<<<<< HEAD:components/partials/Aside.vue
           <ul :key="`list-${index}`" class="pb-8">
             <li v-for="link in group.links" :key="link.to" class="py-2">
               <nuxt-link class="text-light-onSurfacePrimary dark:text-dark-onSurfacePrimary hover:text-nuxt-lightgreen transition-colors duration-300 ease-linear" :class="{'current-link': path === menu + link.to}" :to="menu + link.to" exact>
@@ -54,10 +81,38 @@
         </li>
       </ul>
     </template>
+=======
+          <ul class="pb-8">
+            <li
+              v-for="(link, index) in sublinks"
+              :key="index"
+              class="py-2 text-light-onSurfacePrimary dark:text-dark-onSurfacePrimary"
+            >
+              <NuxtLink
+                class="hover:text-nuxt-lightgreen dark:hover:text-nuxt-lightgreen transition-colors duration-300 ease-linear"
+                active-class
+                exact
+                exact-active-class="text-nuxt-lightgreen"
+                :to="toLink(link)"
+              >
+                <template v-if="link.menu">
+                  {{ link.menu }}
+                </template>
+                <template v-else>
+                  {{ link.title }}
+                </template>
+              </NuxtLink>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </div>
+>>>>>>> 26a70b2b (chore: add guides section (#407)):components/TheAsideNav.vue
   </aside>
 </template>
 
 <script>
+<<<<<<< HEAD:components/partials/Aside.vue
 import throttle from 'lodash/throttle'
 
 export default {
@@ -99,10 +154,50 @@ export default {
             })
           }
         }
-      })
-      return c
+=======
+import sortBy from 'lodash.sortby'
+
+export default {
+  props: {
+    links: {
+      type: Object,
+      default: () => {}
     }
   },
+  data() {
+    return {
+      current: 0,
+      setInter: null,
+      showNav: false,
+      section: this.$route.params.section
+    }
+  },
+  computed: {
+    visible() {
+      return this.$store.state.visibleAffix
+    },
+    path() {
+      return this.$route.path.slice(-1) === '/'
+        ? this.$route.path.slice(0, -1)
+        : this.$route.path
+    },
+    menu() {
+      return '/' + this.$route.params.section
+    },
+    sortedLinks() {
+      const links = {}
+      sortBy(Object.keys(this.links), link => {
+        return Object.keys(this.$i18n.t(`content.${this.section}`)).indexOf(
+          link
+        )
+      }).forEach(key => {
+        links[key] = this.links[key]
+>>>>>>> 26a70b2b (chore: add guides section (#407)):components/TheAsideNav.vue
+      })
+      return links
+    }
+  },
+<<<<<<< HEAD:components/partials/Aside.vue
   watch: {
     '$route.fullPath': 'hashChanged'
   },
@@ -146,14 +241,18 @@ export default {
             window.clearInterval(this.setInter)
           }
         }, 10)
+=======
+  methods: {
+    toLink(link) {
+      const slug = link.slug === 'index' ? undefined : link.slug
+      return this.localePath({
+        name: 'section-slug',
+        params: { section: this.section, slug }
+>>>>>>> 26a70b2b (chore: add guides section (#407)):components/TheAsideNav.vue
       })
     }
   }
 }
 </script>
 
-<style lang="scss" scoped>
-.current-link {
-  color: theme('colors.primary.base');
-}
-</style>
+<style lang="scss" scoped></style>

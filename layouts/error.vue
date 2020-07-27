@@ -22,6 +22,7 @@
   <div class="relative">
     <nui-container v-if="error.statusCode === 404" class="pt-20">
       <div class="flex flex-wrap items-center justify-between">
+<<<<<<< HEAD
         <h1 class="w-full text-3xl xl:text-4xl text-nuxt-gray text-center font-medium leading-normal -mb-6 z-10">
           {{ error.message }}
         </h1>
@@ -36,6 +37,29 @@
           {{ error.statusCode }}
         </h1>
         <h3 class="text-4xl text-nuxt-gray font-medium leading-relaxed mb-6">
+=======
+        <h1
+          class="w-full text-3xl xl:text-4xl light:text-light-onSurfacePrimary dark:text-dark-onSurfacePrimary text-center font-medium leading-normal -mb-6 z-10"
+        >
+          {{ error.message }}
+        </h1>
+        <div class="w-full lg:w-2/3 mx-auto">
+          <LostImageIllustration />
+        </div>
+      </div>
+    </AppContainer>
+    <AppContainer
+      v-else
+      class="flex flex-wrap items-center justify-between pt-20 lg:pt-0"
+    >
+      <div class="w-full lg:w-1/2 text-center lg:text-left pl-8">
+        <h1 class="text-6xl font-medium leading-normal text-nuxt-lightgreen">
+          {{ error.statusCode }}
+        </h1>
+        <h3
+          class="text-4xl light:text-light-onSurfacePrimary dark:text-dark-onSurfacePrimary font-medium leading-relaxed mb-6"
+        >
+>>>>>>> 26a70b2b (chore: add guides section (#407))
           {{ error.message }}
         </h3>
       </div>
@@ -50,6 +74,7 @@
 <script>
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import NuxtFooter from '~components/Footer.vue'
 =======
 import NuxtFooter from '@/components/partials/Footer.vue'
@@ -58,6 +83,10 @@ import NuxtFooter from '@/components/partials/Footer.vue'
 import mountainsGlobe from '@/components/svg/streamline/montains-globe'
 import lostImage from '@/components/svg/fogg/404'
 >>>>>>> 163e1225 (Use icons8 SVG Illustrations)
+=======
+import MountainsGlobeIllustration from '~/components/animated-svg/montains-globe'
+import LostImageIllustration from '~/assets/illustrations/404.svg?inline'
+>>>>>>> 26a70b2b (chore: add guides section (#407))
 
 export default {
   props: ['error'],

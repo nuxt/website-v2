@@ -37,25 +37,62 @@
     <div class="container mx-auto px-4 pt-16 pb-12">
       <div ref="shop" class="flex flex-wrap justify-between mb-8">
         <div class="lg:w-6/12 lg:text-left text-center p-4 sm:p-0">
-          <h1 class="text-3xl xl:text-4xl text-light-onSurfacePrimary dark:text-dark-onSurfacePrimary font-medium leading-normal mb-6 lg:pt-4">
-            The NUXT<span class="text-primary-base">JS</span> Shop<br>
+          <h1
+            class="text-3xl xl:text-4xl text-light-onSurfacePrimary dark:text-dark-onSurfacePrimary font-medium leading-normal mb-6 lg:pt-4"
+          >
+            The <AppTitle /> Shop<br />
           </h1>
-          <h3 class="xl:text-lg text-light-onSurfaceSecondary dark:text-dark-onSurfaceSecondary font-medium leading-relaxed mb-6">
-            You want to support the NuxtJS project and show your love to the rest of the community?<br/> Here our products with the best quality ever!
+          <h3
+            class="xl:text-lg text-light-onSurfaceSecondary dark:text-dark-onSurfaceSecondary font-medium leading-relaxed mb-6"
+          >
+            You want to support the NuxtJS project and show your love to the
+            rest of the community?<br />
+            Here our products with the best quality ever!
           </h3>
         </div>
+<<<<<<< HEAD
         <i-shop class="w-2/3 mx-auto lg:mx-0 lg:w-5/12 lg:-mt-8 text-light-elevatedSurface dark:text-dark-elevatedSurface"/>
+=======
+        <ShopIllustration
+          class="w-2/3 mx-auto lg:mx-0 lg:w-5/12 lg:-mt-8 text-light-elevatedSurface dark:text-dark-elevatedSurface"
+        />
+>>>>>>> 26a70b2b (chore: add guides section (#407))
       </div>
       <section class="flex flex-wrap items-stretch -mx-4">
-        <div v-for="(product, i) in products" :key="i" class="w-full lg:w-1/2 p-4">
-          <div class="block sm:flex w-full bg-light-surface dark:bg-dark-surface p-6 rounded transition-colors duration-300 ease-linear">
-            <img :src="'/shop/' + product.img + '.png'" :srcset="'/shop/' + product.img + '-2x.png 2x'" :alt="product.name" class="w-full sm:w-auto rounded border border-gray-300">
+        <div
+          v-for="(product, i) in products"
+          :key="i"
+          class="w-full lg:w-1/2 p-4"
+        >
+          <div
+            class="block sm:flex w-full bg-light-surface dark:bg-dark-surface p-6 rounded transition-colors duration-300 ease-linear"
+          >
+            <img
+              :src="'/shop/' + product.img + '.png'"
+              :srcset="'/shop/' + product.img + '-2x.png 2x'"
+              :alt="product.name"
+              class="w-full sm:w-auto rounded border border-gray-300"
+            />
             <div class="w-full px-6 py-2">
-              <h4 class="block w-full font-medium text-xl pb-4 text-light-onSurfacePrimary dark:text-dark-onSurfacePrimary transition-colors duration-300 ease-linear">
+              <h4
+                class="block w-full font-medium text-xl pb-4 text-light-onSurfacePrimary dark:text-dark-onSurfacePrimary transition-colors duration-300 ease-linear"
+              >
                 {{ product.name }}
               </h4>
+<<<<<<< HEAD
               <p class="mb-4 text-gray-600 leading-relaxed">{{ product.description }}</p>
               <nui-button href="#" rel="noopener sponsored" target="_blank" class="sm:mr-4 p-3 mt-3 text-sm text-left">
+=======
+              <p class="mb-4 text-gray-600 leading-relaxed">
+                {{ product.description }}
+              </p>
+              <AppButton
+                href="#"
+                rel="noopener sponsored"
+                target="_blank"
+                class="sm:mr-4 p-3 mt-3 text-sm text-left"
+              >
+>>>>>>> 26a70b2b (chore: add guides section (#407))
                 Coming soon
               </nui-button>
               <!-- <button class="snipcart-add-item inline-block bg-nuxt-lightgreen text-white font-medium text-sm px-4 py-2 shadow uppercase rounded hover:bg-nuxt-green hover:shadow-md sm:mr-4 p-3 mt-3 text-sm text-left" :data-item-id="i + 1" :data-item-name="product.name" :data-item-description="product.description" :data-item-image="'/shop/' + product.img + '.png'" :data-item-price="product.price" :data-item-url="{ name: 'shop' }">
@@ -70,7 +107,11 @@
 </template>
 
 <script>
+<<<<<<< HEAD
 import iShop from '@/components/svg/fogg/shop'
+=======
+import ShopIllustration from '~/assets/illustrations/shop.svg?inline'
+>>>>>>> 26a70b2b (chore: add guides section (#407))
 
 export default {
   components: {
@@ -82,53 +123,88 @@ export default {
       { hid: 'description', name: 'description', content: '' }
     ]
   },
-  data () {
+  data() {
     return {
       products: [
         {
           name: 'Classic T-shirt White',
+<<<<<<< HEAD
           description: 'Ce superbe t-shirt en coton bio, eleve en plein air sans pesticide, ogm, nourriture, eau.. Bref sans rien du tout vous avez bien compris!',
+=======
+          description:
+            'Unisex White T-shirt with Nuxt Mountains Logo embroidered.',
+>>>>>>> 26a70b2b (chore: add guides section (#407))
           img: 'tshirt_white',
           url: '',
           price: 29
         },
         {
+<<<<<<< HEAD
           name: 'Classic T-shirt Blue',
           description: 'Ce superbe t-shirt en coton bio, eleve en plein air sans pesticide, ogm, nourriture, eau.. Bref sans rien du tout vous avez bien compris!',
+=======
+          name: 'Classic T-shirt Black Heather Blue',
+          description:
+            'Unisex Black Heather Blue T-shirt with Nuxt Mountains Logo embroidered.',
+>>>>>>> 26a70b2b (chore: add guides section (#407))
           img: 'tshirt_blue',
           url: '',
           price: 29
         },
         {
           name: 'NuxtJS Sweatshirt White',
+<<<<<<< HEAD
           description: 'Ce superbe t-shirt en coton bio, eleve en plein air sans pesticide, ogm, nourriture, eau.. Bref sans rien du tout vous avez bien compris!',
+=======
+          description:
+            'Unisex White Sweatshirt with The NuxtJS Logo embroidered.',
+>>>>>>> 26a70b2b (chore: add guides section (#407))
           img: 'sweat_white',
           url: '',
           price: 49
         },
         {
+<<<<<<< HEAD
           name: 'NuxtJS Sweatshirt Blue',
           description: 'Ce superbe t-shirt en coton bio, eleve en plein air sans pesticide, ogm, nourriture, eau.. Bref sans rien du tout vous avez bien compris!',
+=======
+          name: 'NuxtJS Sweatshirt Black Heather Blue',
+          description:
+            'Unisex Black Heather Blue Sweatshirt with The NuxtJS Logo embroidered.',
+>>>>>>> 26a70b2b (chore: add guides section (#407))
           img: 'sweat_blue',
           url: '',
           price: 49
         },
         {
+<<<<<<< HEAD
           name: 'New Stickers',
           description: '8 New Design stickers: <br> - 4 Mountains Logo Stickers <br> - 4 NuxtJS Logo Stickers',
+=======
+          name: 'New Stickers Pack',
+          description:
+            '8 New Design stickers: 4 Mountains Logo Stickers and- 4 NuxtJS Logo Stickers.',
+>>>>>>> 26a70b2b (chore: add guides section (#407))
           img: 'new_stickers',
           url: '',
           price: 5
         },
         {
+<<<<<<< HEAD
           name: 'Vintage Stickers',
           description: '8 Vintage design stickers: <br> - 4 Mountains Logo Stickers <br> - 4 Are You Nuxt? Stickers',
+=======
+          name: 'Vintage Stickers Pack',
+          description:
+            '8 Vintage Design stickers: 4 Mountains Logo Stickers and 4 Are You Nuxt? Stickers.',
+>>>>>>> 26a70b2b (chore: add guides section (#407))
           img: 'vintage_stickers',
           url: '',
           price: 5
         }
       ]
     }
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
   // },
@@ -143,10 +219,25 @@ export default {
   //   script.setAttribute('data-api-key', 'YzRlMjRiNmItNWJjNC00OWMxLWE1ODgtZmIyNzAwYmIyMmI5NjM3MDM3MTc0OTkxOTU5OTA0')
   //   this.$refs.shop.appendChild(jquery)
   //   this.$refs.shop.appendChild(script)
+=======
+    // },
+    // mounted () {
+    //   const jquery = document.createElement('script')
+    //   jquery.setAttribute('type', 'text/javascript')
+    //   jquery.setAttribute('src', '//ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js')
+    //   const script = document.createElement('script')
+    //   script.setAttribute('type', 'text/javascript')
+    //   script.setAttribute('src', '//cdn.snipcart.com/scripts/2.0/snipcart.js')
+    //   script.setAttribute('id', 'snipcart')
+    //   script.setAttribute('data-api-key', 'YzRlMjRiNmItNWJjNC00OWMxLWE1ODgtZmIyNzAwYmIyMmI5NjM3MDM3MTc0OTkxOTU5OTA0')
+    //   this.$refs.shop.appendChild(jquery)
+    //   this.$refs.shop.appendChild(script)
+>>>>>>> 26a70b2b (chore: add guides section (#407))
   },
-  head () {
+  head() {
     const title = 'The NuxtJS Shop'
-    const description = 'You want to support the NuxtJS project and show your love to the rest of the community? Here our products with the best quality ever!'
+    const description =
+      'You want to support the NuxtJS project and show your love to the rest of the community? Here our products with the best quality ever!'
 
     return {
       title,
@@ -154,10 +245,18 @@ export default {
         { hid: 'description', name: 'description', content: description },
         // Open Graph
         { hid: 'og:title', property: 'og:title', content: title },
-        { hid: 'og:description', property: 'og:description', content: description },
+        {
+          hid: 'og:description',
+          property: 'og:description',
+          content: description
+        },
         // Twitter Card
         { hid: 'twitter:title', name: 'twitter:title', content: title },
-        { hid: 'twitter:description', name: 'twitter:description', content: description }
+        {
+          hid: 'twitter:description',
+          name: 'twitter:description',
+          content: description
+        }
       ]
     }
 >>>>>>> 419b6c38 (chore: improve meta and add sponsor)

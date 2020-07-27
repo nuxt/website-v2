@@ -38,6 +38,7 @@ const store = new Vuex.Store({
 export const mutations = {
 =======
 export const state = () => ({
+<<<<<<< HEAD
   host: process.env.DEPLOY_PRIME_URL || process.env.URL || 'http://localhost:3000',
   isProd: process.env.URL,
   isTest: process.env.DEPLOY_PRIME_URL,
@@ -52,12 +53,25 @@ export const state = () => ({
   lang: {},
   menu: {},
   adBlocked: false
+=======
+  host:
+    (isProd ? process.env.URL : process.env.DEPLOY_PRIME_URL) ||
+    'http://localhost:3000',
+  isProd,
+  isTest,
+  isDev: !isProd && !isTest,
+  filled: false,
+  visibleAffix: false,
+  adBlocked: false,
+  focusMode: false
+>>>>>>> 26a70b2b (chore: add guides section (#407))
 })
 
 export const mutations = {
   toggle(state, key) {
     state[key] = !state[key]
   },
+<<<<<<< HEAD
   setApiURI(state, apiURI) {
     state.apiURI = apiURI
   },
@@ -115,5 +129,12 @@ export const actions = {
     }
     commit('setFocusMode', false)
 >>>>>>> 1b87907b (feat: dark mode (#303))
+=======
+  setFilled(state) {
+    state.filled = true
+  },
+  setAdBlocked(state, value) {
+    state.adBlocked = value
+>>>>>>> 26a70b2b (chore: add guides section (#407))
   }
 }

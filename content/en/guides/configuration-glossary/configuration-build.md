@@ -35,6 +35,13 @@ export default {
 
 </base-alert>
 
+## corejs
+
+> As of Nuxt@2.14 Nuxt automatically detects the current version of `core-js` in your project, also you can specify which version you want to use.
+
+- Type: `number` | `string` (Valid values are `'auto'`, `2` and `3`)
+- Default: `'auto'`
+
 ## babel
 
 > Customize Babel configuration for JavaScript and Vue files. `.babelrc` is ignored by default.

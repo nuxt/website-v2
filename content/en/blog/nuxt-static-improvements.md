@@ -36,11 +36,22 @@ With Nuxt.js version 2.13, the [full-static mode](/blog/going-full-static/) has 
 
 With v2.14, `nuxt generate` will **automagically skip webpack build step when no code has been changed** and use the previous build using cache. This will help to drastically improve static deployments time by avoiding unnecessary builds which is usually the most time-consuming part of generation process. Cache support is **platform-agnostic** and works on Netlify, Vercel, or any other CI/CD setup that is caching `node_modules`.
 
-## Generate time: cache vs full webpack build(seconds)
+<video poster="https://res.cloudinary.com/nuxt/video/upload/v1595852304/nuxt-smart-generate_pjaat1.jpg" loop="loop" plays-inline="true" controls="controls">
+  <source src="https://res.cloudinary.com/nuxt/video/upload/v1595852304/nuxt-smart-generate_pjaat1.webm" type="video/webm">
+  <source src="https://res.cloudinary.com/nuxt/video/upload/v1595852304/nuxt-smart-generate_pjaat1.mp4" type="video/mp4">
+  <source src="https://res.cloudinary.com/nuxt/video/upload/v1595852304/nuxt-smart-generate_pjaat1.ogv" type="video/ogg">
+</video>
+
+## Generate time: cache vs full webpack build
+
+See the comparison in seconds between two `nuxt generate`:
+
+- `Build` is when a webpack build is required
+- `Cache` is only when the content has changed (webpack build skipped)
 
 <bar-chart-cache-build></bar-chart-cache-build>
 
-[video] // Seb
+Our deployments with only content changes are **~3.6x times** faster 🚀
 
 ## Using in your projects
 
@@ -110,7 +121,7 @@ It is also possible to use a function for `ignore` option to override default ig
 
 ### Module Authors
 
-What if you are developing a nuxt module that is working with files that should not trigger a rebuild? The best example is for `[@nuxt/content](https://content.nuxtjs.org/)` module that reads markdown files from the repository. In this case, these files are used within a runtime module, which is the case when using `@nuxt/content`, the module itself can tell nuxt to ignore these files for you already so you don't have to do anything! Module authors can use the new `generate:cache:ignore` hook to do so:
+What if you are developing a nuxt module that is working with files that should not trigger a rebuild? The best example is for [@nuxt/content](https://content.nuxtjs.org/) module that reads markdown files from the repository. In this case, these files are used within a runtime module, which is the case when using `@nuxt/content`, the module itself can tell nuxt to ignore these files for you already so you don't have to do anything! Module authors can use the new `generate:cache:ignore` hook to do so:
 
 ```js
 nuxt.hook('generate:cache:ignore', ignore => ignore.push('content'))

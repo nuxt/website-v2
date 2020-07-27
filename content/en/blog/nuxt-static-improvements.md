@@ -12,7 +12,7 @@ authors:
     link: https://twitter.com/atinux
   - name: Pooya Parsa
     avatarUrl: https://pbs.twimg.com/profile_images/1268227177612541952/9-fujxqt_400x400.jpg
-    link: https://twitter.com/TheAlexLichter
+    link: https://twitter.com/_pi0_
 tags:
   - static
 ---

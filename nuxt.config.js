@@ -4,7 +4,35 @@ export default {
   head: {
     meta: [
       { charset: 'utf-8' },
-      { name: 'viewport', content: 'width=device-width, initial-scale=1' }
+      { name: 'viewport', content: 'width=device-width, initial-scale=1' },
+      { hid: 'og:site_name', property: 'og:site_name', content: 'NuxtJS' },
+      { hid: 'og:type', property: 'og:type', content: 'website' },
+      { hid: 'twitter:site', name: 'twitter:site', content: '@nuxt_js' },
+      {
+        hid: 'twitter:card',
+        name: 'twitter:card',
+        content: 'summary_large_image'
+      },
+      {
+        hid: 'og:image',
+        property: 'og:image',
+        content: 'https://nuxtjs.org/nuxt-card.png'
+      },
+      {
+        hid: 'og:image:secure_url',
+        property: 'og:image:secure_url',
+        content: 'https://nuxtjs.org/nuxt-card.png'
+      },
+      {
+        hid: 'og:image:alt',
+        property: 'og:image:alt',
+        content: 'NuxtJS'
+      },
+      {
+        hid: 'twitter:image',
+        name: 'twitter:image',
+        content: 'https://nuxtjs.org/nuxt-card.png'
+      }
     ],
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },

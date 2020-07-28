@@ -37,7 +37,7 @@ export default {
 
 ## corejs
 
-> As of Nuxt@2.14 Nuxt automatically detects the current version of `core-js` in your project, also you can specify which version you want to use.
+> As of [Nuxt@2.14](https://github.com/nuxt/nuxt.js/releases/tag/v2.14.0) Nuxt automatically detects the current version of `core-js` in your project, also you can specify which version you want to use.
 
 - Type: `number` | `string` (Valid values are `'auto'`, `2` and `3`)
 - Default: `'auto'`
@@ -266,6 +266,14 @@ export default {
 ```
 
 To understand a bit more about the use of manifests, take a look at this [webpack documentation](https://webpack.js.org/guides/code-splitting/).
+
+
+<base-alert>
+
+Be careful when using non-hashed based filenames in production as most browsers will cache the asset and not detect the changes on first load.
+
+</base-alert>
+
 
 ## friendlyErrors
 

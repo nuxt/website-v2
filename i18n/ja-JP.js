@@ -8,7 +8,7 @@ module.exports = {
     search: '検索 ("/" でフォーカス)',
     version: 'バージョン'
   },
-  iso: 'ja',
+  iso: 'jp',
   links: {
     download: 'ダウンロード',
     live_edit: 'ライブ編集'

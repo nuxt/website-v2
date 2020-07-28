@@ -84,6 +84,7 @@ export default {
 <style>
 .svg {
   width: 20px;
+  color: black;
 }
 
 .modal-mask {

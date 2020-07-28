@@ -67,7 +67,7 @@ module.exports = {
         'Nuxt.js는 Vue.js 애플리케이션 개발을 즐겁게 하는 데 필요한 모든 구성을 사전 설정합니다. Nuxt.js는 범용, SPA 및 정적 생성 애플리케이션을 만들 수 있습니다.'
     },
     welcome: {
-      title: '직관적인 {frameworkType} 프레임워크',
+      title: '직관적인 {br} {frameworkType} 프레임워크',
       description:
         'Build your next Vue.js application with confidence using NuxtJS. An {openSource} framework making web development simple and powerful.',
       openSource: 'open source',

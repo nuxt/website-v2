@@ -227,7 +227,7 @@ It will ask you some questions (name, Nuxt options, UI framework, TypeScript, li
 
 ```bash
 cd <project-name>
-Yarn dev
+yarn dev
 ```
 
   </code-block>

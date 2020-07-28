@@ -13,11 +13,9 @@
             tag="h1"
             class="text-4xl xl:text-5xl text-light-onSurfacePrimary dark:text-dark-onSurfacePrimary font-medium tracking-normal leading-tight mb-6"
           >
-            <template v-slot:break>
-              <br />
-            </template>
             <template v-slot:frameworkType>
               <span class="text-nuxt-lightgreen">
+                <br />
                 Vue
               </span>
             </template>
@@ -83,24 +81,27 @@
             tag="p"
             class="font-medium py-2 text-xs xl:text-sm text-center text-light-onSurfaceSecondary dark:text-dark-onSurfaceSecondary"
           >
-            {{ $t('homepage.welcome.video') }}
             <template v-slot:company>
-              <a
-                href="https://www.vuemastery.com"
-                target="_blank"
-                rel="noopener"
-              >
-                Vue Mastery
-              </a>
+              <span>
+                <a
+                  href="https://www.vuemastery.com"
+                  target="_blank"
+                  rel="noopener"
+                >
+                  Vue Mastery
+                </a>
+              </span>
             </template>
             <template v-slot:cheatSheet>
-              <a
-                href="https://www.vuemastery.com/nuxt-cheat-sheet/"
-                target="_blank"
-                rel="noopener"
-              >
-                {{ $t('homepage.welcome.cheatSheet') }}
-              </a>
+              <span>
+                <a
+                  href="https://www.vuemastery.com/nuxt-cheat-sheet/"
+                  target="_blank"
+                  rel="noopener"
+                >
+                  {{ $t('homepage.welcome.cheatSheet') }}
+                </a>
+              </span>
             </template>
           </i18n>
         </figure>

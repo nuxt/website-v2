@@ -67,7 +67,7 @@ module.exports = {
         'Nuxt.js はサーバーサイドレンダリングやコード分割、ホットリローディング、静的ファイル生成などを備えた Vue.js アプリケーションを構築するためのミニマルなフレームワークです！'
     },
     welcome: {
-      title: '使いやすい{break}{frameworkType} フレームワーク',
+      title: '使いやすい {frameworkType} フレームワーク',
       description:
         'NuxtJS を使用し自信を持って次の Vue.js アプリケーションをビルドしましょう。ウェブ開発をシンプルかつ強力にする{openSource}フレームワークです。',
       openSource: 'オープンソース',

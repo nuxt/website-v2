@@ -18,6 +18,7 @@
             </template>
             <template v-slot:frameworkType>
               <span class="text-nuxt-lightgreen">
+                <br />
                 Vue
               </span>
             </template>

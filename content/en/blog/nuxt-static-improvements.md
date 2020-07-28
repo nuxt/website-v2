@@ -25,12 +25,13 @@ With Nuxt.js version 2.13, the [full-static mode](/blog/going-full-static/) has 
 
 - [Introduction](#introduction)
 - [Faster Static Deployments](#faster-static-deployments)
-- [Generate time: cache vs full webpack build(seconds)](#generate-time-cache-vs-full-webpack-buildseconds)
+- [Generate time: cache vs full webpack build](#generate-time-cache-vs-full-webpack-build)
 - [Using in your projects](#using-in-your-projects)
   - [Excluding Files from Cache](#excluding-files-from-cache)
   - [Module Authors](#module-authors)
 - [How it works](#how-it-works)
   - [Back to old school commands](#back-to-old-school-commands)
+- [What to do next](#what-to-do-next)
 
 ## Faster Static Deployments
 

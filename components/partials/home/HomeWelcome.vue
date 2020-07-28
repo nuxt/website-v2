@@ -13,6 +13,9 @@
             tag="h1"
             class="text-4xl xl:text-5xl text-light-onSurfacePrimary dark:text-dark-onSurfacePrimary font-medium tracking-normal leading-tight mb-6"
           >
+            <template v-slot:br>
+              <br />
+            </template>
             <template v-slot:frameworkType>
               <span class="text-nuxt-lightgreen">
                 <br />

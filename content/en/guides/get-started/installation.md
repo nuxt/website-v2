@@ -61,8 +61,8 @@ Open the package.json file in your favorite code editor and fill it with this JS
   "scripts": {
     "dev": "nuxt",
     "build": "nuxt build",
-    "generate": "nuxt generate"
-    "start": "nuxt start",
+    "generate": "nuxt generate",
+    "start": "nuxt start"
   }
 }
 ```

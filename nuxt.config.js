@@ -148,7 +148,7 @@ export default {
       },
 
       {
-        code: 'jp',
+        code: 'ja',
         iso: 'ja-JP',
         file: 'ja-JP.js',
         name: '日本語',

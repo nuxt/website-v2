@@ -22,12 +22,6 @@ Learn more about [Routing](/guides/features/file-system-routing)
 
 To navigate between pages of your app, you should use the [NuxtLink](/guides/features/nuxt-components#the-nuxtlink-component) component. This component is included with Nuxt.js and therefore you don't have to import it like you do with other components. It is similar to the HTML `<a>` tag, except that instead of using a `href="/about"` we use `to="/about"`. If you have used `vue-router` before, you can think of the `<NuxtLink>` as a replacement for `<RouterLink>`
 
-<base-alert type="info">
-
-Keep in mind, as you insert `<NuxtLink>` in your template, you may spell it out either as `<NuxtLink>` or `<nuxt-link>`
-
-</base-alert>
-
 A simple link to the `index.vue` page in your `pages` folder:
 
 ```html{}[pages/index.vue]
@@ -36,7 +30,7 @@ A simple link to the `index.vue` page in your `pages` folder:
 </template>
 ```
 
-The `<NuxtLink>` component should be used for all internal links. That means for all links to the pages within your site you should use `<NuxtLink>`. The `<a>` tag should be used for all external links. That means if you have links to other websites you should use the `<a>` tag for those.
+For all links to pages within your site, use `<NuxtLink>`. If you have links to other websites you should use the `<a>` tag. See below for an example:
 
 ```html{}[pages/index.vue]
 <template>
@@ -51,7 +45,7 @@ The `<NuxtLink>` component should be used for all internal links. That means for
 ```
 
 <app-modal>
-  <code-sandbox :src="csb_link" />
+  <code-sandbox :src="csb_link"></code-sandbox>
 </app-modal>
 
 <base-alert type="next">

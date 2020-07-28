@@ -199,14 +199,14 @@ Make sure you have npx installed (npx is shipped by default since NPM 5.2.0) or 
   <code-block label="Yarn" active>
 
 ```bash
-yarn create nuxt-app <project-name>
+yarn create-nuxt-app <project-name>
 ```
 
   </code-block>
   <code-block label="NPX">
 
 ```bash
-npx create nuxt-app <project-name>
+npx create-nuxt-app <project-name>
 ```
 
   </code-block>

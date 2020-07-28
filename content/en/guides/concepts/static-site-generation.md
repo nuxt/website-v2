@@ -38,7 +38,7 @@ With static site generation you can render your application during the build pha
 
 ### Generating your site
 
-When deploying your site in with [target:static](http://localhost:3000/guides/features/deployment-targets#static-hosting) all your `.vue` pages will be generated into HTML and JavaScript files. All calls to APIs will be made and cached in a folder called static inside your generated content so that no calls to your API need to be made on client side navigation.
+When deploying your site in with [target:static](/guides/features/deployment-targets#static-hosting) all your `.vue` pages will be generated into HTML and JavaScript files. All calls to APIs will be made and cached in a folder called static inside your generated content so that no calls to your API need to be made on client side navigation.
 
 ### Step 1: Browser to CDN
 

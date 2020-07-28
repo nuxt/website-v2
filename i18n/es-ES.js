@@ -67,7 +67,7 @@ module.exports = {
         'Construye tu siguiente aplicación de Vue.js con confianza usando NuxtJS. Un framework de código abierto que trabaja en conseguir que el desarrollo web sea simple y poderoso.'
     },
     welcome: {
-      title: 'The Intuitive{break}{frameworkType}Framework',
+      title: 'The Intuit {br} {frameworkType} Framework',
       description:
         'Build your next Vue.js application with confidence using NuxtJS. An {openSource} framework making web development simple and powerful.',
       openSource: 'open source',

@@ -67,7 +67,7 @@ module.exports = {
         "Nuxt.js fournit toutes les configurations nécessaires pour rendre vos développements d'application Vue.js agréable. Nuxt.js peut créer des Applications Universelles, Monopages ou Statiques Générées."
     },
     welcome: {
-      title: 'Le Framework Intuitif{break}basé sur {frameworkType}',
+      title: 'Le Framework Intuitif {br} basé sur {frameworkType}',
       description:
         'Construisez votre prochaine application Vue.js en toute confiance avec NuxtJS. Un framework {openSource} rendant le développement web simple et puissant.',
       openSource: 'open source',
@@ -75,7 +75,7 @@ module.exports = {
       get_updates: 'Get NuxtJS updates to your inbox each month',
       video:
         'Vidéo produite par {company}, téléchargez gratuitement {cheatSheet}.',
-      cheatSheet: 'Nuxt Cheat Sheet.'
+      cheatSheet: 'Nuxt Cheat Sheet'
     },
     why: {
       title: 'Pourquoi {nuxt}',

@@ -67,7 +67,7 @@ module.exports = {
         'Nuxt.js 是一个基于 Vue.js 的轻量级应用框架，可用来创建服务端渲染 (SSR) 应用，也可充当静态站点引擎生成静态站点应用，具有优雅的代码结构分层和热加载等特性。'
     },
     welcome: {
-      title: 'The Intuitive {break}{frameworkType} Framework',
+      title: 'The Intuitive {br} {frameworkType} Framework',
       description:
         'Build your next Vue.js application with confidence using NuxtJS. An {openSource} framework making web development simple and powerful.',
       openSource: 'open source',

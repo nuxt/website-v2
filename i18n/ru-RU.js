@@ -68,7 +68,7 @@ module.exports = {
         'Nuxt.js — это минималистичный фреймворк для создания приложений на Vue.js с серверным рендерингом, разделением кода, горячей заменой модулей, статической генерацией и другими крутыми штуками!'
     },
     welcome: {
-      title: 'The Intuitive {break}{frameworkType} Framework',
+      title: 'The Intuitive {br} {frameworkType} Framework',
       description:
         'Build your next Vue.js application with confidence using NuxtJS. An {openSource} framework making web development simple and powerful.',
       openSource: 'open source',

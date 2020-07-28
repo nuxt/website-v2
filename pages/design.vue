@@ -6,16 +6,17 @@
           <h1
             class="text-3xl xl:text-4xl text-light-onSurfacePrimary dark:text-dark-onSurfacePrimary font-medium leading-normal mb-6 lg:pt-4"
           >
-            <AppTitle /> Design
+            <AppTitle /> {{ $t('design.title') }}
           </h1>
-          <h3
+          <i18n
+            path="design.description"
+            tag="h3"
             class="xl:text-lg text-light-onSurfaceSecondary dark:text-dark-onSurfaceSecondary font-medium leading-relaxed mb-6"
           >
-            NuxtJS is an MIT licensed open source project and completely free to
-            use.<br />
-            You can freely use our logos as long as you mention NuxtJS and link
-            to nuxtjs.org.
-          </h3>
+            <template v-slot:break>
+              <br />
+            </template>
+          </i18n>
         </div>
         <DesignIllustration
           class="w-2/3 mx-auto lg:mx-0 lg:w-5/12 lg:-mt-8 text-light-elevatedSurface dark:text-dark-elevatedSurface"
@@ -175,16 +176,20 @@
           </section>
         </div>
       </div>
-      <p
+      <i18n
+        path="design.other_download_message"
+        tag="p"
         class="text-center mt-8 text-light-onSurfacePrimary dark:text-dark-onSurfacePrimary transition-colors duration-300 ease-linear"
       >
-        You can also download our
-        <a href="/favicon.ico" target="_blank" rel="noopener">favicon</a> or our
-        <a href="/logos/nuxt-logos.sketch" target="_blank" rel="noopener">
-          Sketch file
-        </a>
-        .
-      </p>
+        <template v-slot:favicon>
+          <a href="/favicon.ico" target="_blank" rel="noopener">favicon</a>
+        </template>
+        <template v-slot:sketch>
+          <a href="/logos/nuxt-logos.sketch" target="_blank" rel="noopener">
+            Sketch
+          </a>
+        </template>
+      </i18n>
     </div>
   </div>
 </template>

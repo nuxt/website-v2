@@ -1,10 +1,10 @@
 module.exports = {
   common: {
-    an_error_occurred: "Une erreur 'est produite",
+    an_error_occurred: "Une erreur s'est produite",
     api_page_not_found: 'La page API est introuvable',
     please_define_title: 'Merci de définir un titre',
     please_define_description: 'Merci de définir une description',
-    search: 'Rechercher ("/" to focus)',
+    search: 'Rechercher',
     version: 'Version'
   },
   iso: 'fr',
@@ -57,7 +57,7 @@ module.exports = {
       }
     ],
     search: {
-      placeholder: 'Rechercher ("/" to focus)'
+      placeholder: 'Rechercher'
     }
   },
   homepage: {
@@ -72,7 +72,8 @@ module.exports = {
         'Construisez votre prochaine application Vue.js en toute confiance avec NuxtJS. Un framework {openSource} rendant le développement web simple et puissant.',
       openSource: 'open source',
       get_started: 'Commencer',
-      get_updates: 'Get NuxtJS updates to your inbox each month',
+      get_updates:
+        'Recevez chaque mois les mises à jour de Nuxt dans votre boîte de réception',
       video:
         'Vidéo produite par {company}, téléchargez gratuitement {cheatSheet}.',
       cheatSheet: 'Nuxt Cheat Sheet'
@@ -81,12 +82,12 @@ module.exports = {
       title: 'Pourquoi {nuxt}',
       try_nuxtjs_online: 'Essayez NuxtJS Online',
       enjoyable: {
-        title: 'Enjoyable',
+        title: 'Agréable',
         description:
           "Notre principal objectif est l'expérience des développeurs. Nous aimons Nuxt.js et améliorons continuellement le framework pour que vous l'aimiez aussi! {break} Attendez-vous à des solutions attrayantes, des messages d'erreur descriptifs, des paramètres par défaut puissants et une documentation détaillée. Si des questions ou des problèmes surviennent, notre communauté attentionnée vous aidera."
       },
       modular: {
-        title: 'Modular',
+        title: 'Modulaire',
         description:
           "Nuxt repose sur une puissante architecture modulaire. Vous pouvez choisir parmi plus de 50 modules pour rendre votre développement plus rapide et plus facile. Il n'est pas nécessaire de réinventer la roue pour obtenir les avantages PWA, ajouter Google Analytics à votre page ou générer un plan du site."
       },
@@ -102,20 +103,20 @@ module.exports = {
     modes: {
       title: 'Rendu {nuxt}',
       ssr: {
-        title: 'Server Side Rendered',
+        title: 'Server Side Rendered (SSR)',
         description:
-          'The most popular mode for Nuxt. With SSR, also called "universal" or "isomorphic" mode, a Node.js server will be used to deliver HTML based on your Vue components to the client instead of the pure javascript. Using SSR will lead to a large SEO boost, better UX and more opportunities (compared to a traditional Vue SPA).{break}Because implementing SSR on your own can be really tedious, Nuxt.js gives you full support out of the box and will take care of common pitfalls.'
+          'Le mode le plus populaire pour Nuxt. Avec le rendu côté server (SSR), également appelé mode "universel" ou "isomorphe", un serveur Node.js sera utilisé pour fournir du HTML basé sur vos composants Vue au client au lieu du pur javascript. L\'utilisation du SSR entraînera une amélioration considérable de votre SEO, un meilleur UX et plus d\'opportunités (par rapport à une Vue SPA traditionnelle).{break}Parce que la mise en place du SSR par vous-même peut être vraiment fastidieuse, Nuxt.js vous offre un support complet et s\'occupera des pièges courants.'
       },
       spa: {
         title: 'Single Page Application (SPA)',
         description:
-          "Don't need SSR or Static Site Generation but still want to profit from the benefits that Nuxt provides? Are you slowly transitioning your app and want to start lightweight? Then the traditional SPA mode will likely be your choice. The outcome will be a typical Vue SPA as you know it but influenced by your Nuxt configuration and the framework itself."
+          "Vous n'avez pas besoin de SSR ou de génération de site statique mais vous souhaitez tout de même profiter des avantages offerts par Nuxt ? Vous commencez doucement la transition de votre application et vous souhaitez commencer léger ? Alors le mode SPA traditionnel est probablement le bon choix. Le résultat est une typique Vue SPA telle que vous la connaissez mais influencé par votre configuration Nuxt et le framework lui-même."
       },
       ssg: {
-        title: 'Statically Generated',
+        title: 'Static Site Generation (SSG)',
         description:
-          'Static Site Generation is a very hot topic right now (aka JAMStack). Instead of switching to another framework and spending time to get used to it, why not kill two birds with one stone? {proverbial} Nuxt.js supports generating a static website based on your Vue application. It is the "best of both worlds" as you don\'t need a server but still have SEO benefits because Nuxt will pre-render all pages and include the necessary HTML. Also, you can deploy the resulting page easily to Netlify or GitHub pages.',
-        proverbial: 'only proverbial'
+          "La génération de sites statiques est un sujet à la mode en ce moment (aka JAMStack). Au lieu de passer à un autre framework et de passer du temps à s'y habituer, pourquoi ne pas faire d'une pierre deux coups ? {proverbial} Nuxt.js prend en charge la génération d'un site statique basé sur votre application Vue. C'est le \"meilleur des deux mondes\" car vous n'avez pas besoin d'un serveur mais vous avez toujours des avantages SEO car Nuxt pré-rendra toutes les pages et inclura le HTML nécessaire. En outre, vous pouvez déployer facilement la page résultante sur des pages Netlify ou GitHub.",
+        proverbial: "comme le dit l'expression"
       }
     },
     sponsors: {
@@ -142,34 +143,36 @@ module.exports = {
   blog: {
     title: 'NuxtJS Blog',
     description:
-      'Discover articles from the {nuxtTeam} and {ambassadors} about NuxtJS, tips and tricks included!',
-    ambassadors: 'ambassadors',
-    contribute: 'Caught a mistake or want to contribute to this blog post?'
+      'Découvrez les articles de {nuxtTeam} et {ambassadors} à propos de NuxtJS ainsi que des astuces !',
+    ambassadors: 'ambassadeurs',
+    contribute:
+      'Vous avez commis une erreur ou souhaitez contribuer à cet article de blog ?'
   },
   guide: {
     release_notes: 'Notes de versions (en)',
-    toc_title: 'On this page'
+    toc_title: 'Sur cette page'
   },
   quiz: {
     title: 'Quiz'
   },
   tryNewDocs: {
-    msg1: 'Want to take a look at our new docs? Our ',
-    link: 'new docs',
-    msg2: 'are now in beta. Have fun!'
+    msg1: "Jetez un coup d'œil à notre ",
+    link: 'nouvelle documentation (beta)',
+    msg2: '. Have fun !'
   },
   contribute: {
-    title: 'Contributors',
+    title: 'Contributeurs',
     docs:
       'Vous avez vu une erreur ou vous souhaitez contribuer à la documentation ?',
-    blog: 'Caught a mistake or want to contribute to this blog post?',
+    blog:
+      'Vous avez commis une erreur ou souhaitez contribuer à cet article de blog ?',
     edit_on_github: 'Éditez cette page sur GitHub !',
     msg1:
-      'Contribution for this page is now closed. If you would like to contribute please check out our',
-    link: 'new docs'
+      'La contribution pour cette page est maintenant fermée. Si vous souhaitez contribuer, veuillez consulter notre',
+    link: 'nouvelle documentation'
   },
   codeSandbox: {
-    open: 'Open CodeSandbox'
+    open: 'Ouvrir CodeSandbox'
   },
   content: {
     guide: {
@@ -196,13 +199,13 @@ module.exports = {
       deployment: 'Déploiement'
     },
     guides: {
-      'get-started': 'Get Started',
+      'get-started': 'Commencer',
       concepts: 'Concepts',
-      features: 'Features',
-      'directory-structure': 'Directory Structure',
-      'configuration-glossary': 'Configuration Glossary',
-      'internals-glossary': 'Internals Glossary',
-      'components-glossary': 'Components Glossary'
+      features: 'Fonctionnalités',
+      'directory-structure': 'Structure',
+      'configuration-glossary': 'Configuration',
+      'internals-glossary': 'Internes',
+      'components-glossary': 'Composants'
     }
   }
 }

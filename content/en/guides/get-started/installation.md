@@ -83,3 +83,162 @@ Once the `package.json` has been created, add `nuxt` to your project via `npm` o
 ```bash
 yarn add nuxt
 ```
+
+  </code-block>
+  <code-block label="NPM">
+
+```bash
+npm install nuxt
+```
+
+  </code-block>
+</code-group>
+
+This command will add `nuxt` as a dependency to your project and it will add it to your `package.json` automatically. The `node_modules` directory will also be created which is where all your installed packages and their dependencies are stored.
+
+<base-alert type="info">
+
+A `yarn.lock` or `package-lock.json` is also created which ensures a consistent install and compatible dependencies of your packages installed in your project.
+
+</base-alert>
+
+### Create your first page
+
+Nuxt.js transforms every `*.vue` file inside the `pages` directory as a route for the application.
+
+Create the `pages` directory in your project:
+
+```bash
+mkdir pages
+```
+
+Then, create an `index.vue` file in the `pages` directory:
+
+```bash
+touch pages/index.vue
+```
+
+It is important that this page is called `index.vue` as this will be the default page Nuxt shows when the application opens. It is the home page and it must be called index.
+
+Open the `index.vue` file in your editor and add the following content:
+
+```html{}[pages/index.vue]
+<template>
+  <h1>Hello world!</h1>
+</template>
+```
+
+### Start the project
+
+Run your project by typing one of the following commands below in your terminal:
+
+<code-group>
+  <code-block label="Yarn" active>
+
+```bash
+yarn dev
+```
+
+  </code-block>
+  <code-block label="NPM">
+
+```bash
+npm run dev
+```
+
+  </code-block>
+</code-group>
+
+<base-alert type="info">
+
+We use the the dev command when running our application in development mode.
+
+</base-alert>
+
+The application is now running on **[http://localhost:3000](http://localhost:3000/).**
+
+Open it in your browser by clicking the link in your terminal and you should see the text "Hello World" we copied in the previous step.
+
+<base-alert type="info">
+
+When launching Nuxt.js in development mode, it will listen for file changes in most directories, so there is no need to restart the application when e.g. adding new pages
+
+</base-alert>
+
+<base-alert type="warning">
+
+When you run the dev command it will create .nuxt folder. This folder should be ignored from version control. You can ignore files by creating a .gitignore file at the root level and adding .nuxt.
+
+</base-alert>
+
+### Bonus step
+
+Create a page named `fun.vue` in the `pages` directory.
+
+Add a `<template></template>` and include a heading with a funny sentence inside.
+
+Then, go to your browser and see your new page on **[http://localhost:3000/fun](http://localhost:3000/fun).**
+
+<base-alert type="info">
+
+Create a directory name `more-fun` and put an `index.vue` file inside. This will give the same result as creating a `more-fun.vue` file
+
+</base-alert>
+
+<app-modal>
+  <code-sandbox  :src="csb_link"></code-sandbox>
+</app-modal>
+
+## Using create-nuxt-app
+
+To get started quickly you can use the [create-nuxt-app](https://github.com/nuxt/create-nuxt-app).
+
+Make sure you have npx installed (npx is shipped by default since NPM 5.2.0) or npm v6.1 or yarn.
+
+<code-group>
+  <code-block label="Yarn" active>
+
+```bash
+yarn create nuxt-app <project-name>
+```
+
+  </code-block>
+  <code-block label="NPX">
+
+```bash
+npx create-nuxt-app <project-name>
+```
+
+  </code-block>
+    <code-block label="NPM">
+
+```bash
+npm init nuxt-app <project-name>
+```
+
+  </code-block>
+
+</code-group>
+
+It will ask you some questions (name, Nuxt options, UI framework, TypeScript, linter, testing framework, etc.), when answered, it will install all the dependencies. The next step is to navigate to the project folder and launch it:
+
+<code-group>
+  <code-block label="Yarn" active>
+
+```bash
+cd <project-name>
+yarn dev
+```
+
+  </code-block>
+  <code-block label="NPM">
+
+```bash
+cd <project-name>
+npm run dev
+```
+
+  </code-block>
+</code-group>
+
+The application is now running on [http://localhost:3000](http://localhost:3000). Well done!

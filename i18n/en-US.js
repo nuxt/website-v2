@@ -8,7 +8,7 @@ module.exports = {
     search: 'Search ("/" to focus)',
     version: 'Version'
   },
-  iso: 'en',
+  iso: 'ja',
 
   links: {
     download: 'Download',

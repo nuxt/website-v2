@@ -18,29 +18,15 @@
 export default {
   head() {
     const i18nSeo = this.$nuxtI18nSeo()
-
-    // let canonical = `https://nuxtjs.org${this.$route.path}`
-    // if (this.$store.state.locale !== 'en') {
-    //   canonical = `https://${this.$store.state.locale}.nuxtjs.org${this.$route.path}`
-    // }
-    // const link = [
-    //   { rel: 'canonical', href: canonical },
-    //   { rel: 'alternate', hreflang: 'en', href: `https://nuxtjs.org${this.$route.path}` },
-    //   { rel: 'alternate', hreflang: 'zh', href: `https://zh.nuxtjs.org${this.$route.path}` },
-    //   { rel: 'alternate', hreflang: 'ru', href: `https://ru.nuxtjs.org${this.$route.path}` },
-    //   { rel: 'alternate', hreflang: 'ja', href: `https://ja.nuxtjs.org${this.$route.path}` },
-    //   { rel: 'alternate', hreflang: 'ko', href: `https://ko.nuxtjs.org${this.$route.path}` },
-    //   { rel: 'alternate', hreflang: 'fr', href: `https://fr.nuxtjs.org${this.$route.path}` },
-    //   { rel: 'alternate', hreflang: 'id', href: `https://id.nuxtjs.org${this.$route.path}` }
-    // ]
-    // link.forEach((l) => {
-    //   if (l.href.slice(-1) !== '/') {
-    //     l.href = l.href + '/'
-    //   }
-    // })
+    const { path } = this.$route
+    const pathWithSlash = path.endsWith('/') ? path : `${path}/`
+    let canonical = `https://nuxtjs.org${pathWithSlash}`
+    if (this.$i18n.locale !== 'en') {
+      canonical = `https://${this.$i18n.locale}.nuxtjs.org${pathWithSlash}`
+    }
     return {
-      // htmlAttrs: { lang: this.$store.state.locale },
-      // link,
+      htmlAttrs: i18nSeo.htmlAttrs,
+
       meta: [
         // Open Graph
         {
@@ -64,7 +50,48 @@ export default {
           content: this.$i18n.t('homepage.meta.description')
         }
       ],
-      ...i18nSeo
+      ...i18nSeo,
+
+      link: [
+        { rel: 'canonical', href: canonical },
+        {
+          rel: 'alternate',
+          hreflang: 'en',
+          href: `https://nuxtjs.org${pathWithSlash}`
+        },
+        {
+          rel: 'alternate',
+          hreflang: 'zh',
+          href: `https://zh.nuxtjs.org${pathWithSlash}`
+        },
+        {
+          rel: 'alternate',
+          hreflang: 'ru',
+          href: `https://ru.nuxtjs.org${pathWithSlash}`
+        },
+        {
+          rel: 'alternate',
+          hreflang: 'ja',
+          href: `https://ja.nuxtjs.org${pathWithSlash}`
+        },
+        {
+          rel: 'alternate',
+          hreflang: 'ko',
+          href: `https://ko.nuxtjs.org${pathWithSlash}`
+        },
+        {
+          rel: 'alternate',
+          hreflang: 'fr',
+          href: `https://fr.nuxtjs.org${pathWithSlash}`
+        },
+        {
+          rel: 'alternate',
+          hreflang: 'id',
+          href: `https://id.nuxtjs.org${pathWithSlash}`
+        },
+
+        ...i18nSeo.link
+      ]
     }
   }
 }

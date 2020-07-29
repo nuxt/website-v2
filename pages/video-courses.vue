@@ -6,13 +6,12 @@
           <h1
             class="text-3xl xl:text-4xl text-light-onSurfacePrimary dark:text-dark-onSurfacePrimary font-medium leading-normal mb-6 lg:pt-4"
           >
-            NUXT<span class="text-primary-base">JS</span> Video Courses<br />
+            <AppTitle /> {{ $t('video-courses.title') }}<br />
           </h1>
           <h3
             class="xl:text-lg text-light-onSurfaceSecondary dark:text-dark-onSurfaceSecondary font-medium leading-relaxed mb-8"
           >
-            With the video courses below created by our partner VueSchool you
-            can discover and learn more about the Nuxt.js Framework.
+            {{ $t('video-courses.description') }}
           </h3>
           <AppButton
             href="https://vueschool.io/?friend=nuxt&utm_source=Nuxtjs.org&utm_medium=Link&utm_content=HomeHero&utm_content=V1"
@@ -21,7 +20,7 @@
             class="sm:mr-4 py-3 px-6 text-base mb-4"
           >
             <MeteorIcon slot="icon" class="h-5 -mb-1 mr-1" />
-            Discover vueschool
+            {{ $t('video-courses.cta.discover') }}
           </AppButton>
         </div>
         <ThemesIllustration
@@ -49,7 +48,7 @@
                 class="sm:mr-4 p-3 mt-3 text-sm text-left"
               >
                 <PlayCircleIcon slot="icon" class="h-4 -mb-1 mr-1" />
-                START COURSE
+                {{ $t('video-courses.cta.start') }}
               </AppButton>
             </div>
             <img

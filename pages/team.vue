@@ -6,16 +6,12 @@
           <h1
             class="text-3xl xl:text-4xl text-light-onSurfacePrimary dark:text-dark-onSurfacePrimary font-medium leading-normal mb-6 lg:pt-4 transition-colors duration-300 ease-linear"
           >
-            <AppTitle />
-            Team
-            <br />
+            <AppTitle /> {{ $t('team.title') }}<br />
           </h1>
           <h3
             class="xl:text-lg text-light-onSurfaceSecondary dark:text-dark-onSurfaceSecondary font-medium leading-relaxed mb-6"
           >
-            The development of NuxtJS and its ecosystem is guided by an
-            international team. We have a very active and engaged team that is
-            constantly striving to push Nuxt forward.
+            {{ $t('team.description') }}
           </h3>
         </div>
         <TeamIllustration

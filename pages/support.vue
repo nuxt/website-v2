@@ -6,24 +6,22 @@
           <h1
             class="text-3xl xl:text-4xl text-light-onSurfacePrimary dark:text-dark-onSurfacePrimary font-medium leading-normal mb-6 lg:pt-4"
           >
-            <AppTitle />
-            Consulting
-            <span class="text-nuxt-green">&</span> Support<br />
+            <AppTitle /> {{ $t('support.title.pre') }} <span class="text-nuxt-green">&</span> {{ $t('support.title.post') }}<br />
           </h1>
-          <h3
+          <i18n
+            path="support.description"
+            tag="h3"
             class="xl:text-lg text-light-onSurfaceSecondary dark:text-dark-onSurfaceSecondary font-medium leading-relaxed mb-6"
           >
-            Our
-            <NuxtLink to="/team" class="text-nuxt-green underline">
-              NuxtJS team
-            </NuxtLink>
-            now offers official consulting services for your NuxtJS
-            applications.<br />
-            We offer different services depending of your needs, from technical
-            support to custom development. Expect a reply within one business
-            day, we can sign custom NDA and you can get a full refund if you are
-            not satisfied with our service.
-          </h3>
+            <template v-slot:break>
+              <br />
+            </template>
+            <template v-slot:team>
+              <NuxtLink to="/team" class="text-nuxt-green underline">
+                NuxtJS team
+              </NuxtLink>
+            </template>
+          </i18n>
         </div>
         <SupportIllustration
           class="w-2/3 mx-auto lg:mx-0 lg:w-5/12 lg:-mt-8 text-light-elevatedSurface dark:text-dark-elevatedSurface"
@@ -36,14 +34,13 @@
           >
             <TechnicalSupportIllustration class="float-right mb-4" />
             <h2 class="text-2xl font-medium mb-2">
-              Technical support
+              {{ $t('support.technical.title') }}
             </h2>
             <h3 class="text-nuxt-lightgreen font-medium text-2xl mb-4">
               $250 <span class="text-sm">/hr</span>
             </h3>
             <p class="mb-6">
-              Get project audits, app deployments, custom development and
-              technical support from the NuxtJS NuxtJS team.
+              {{ $t('support.technical.description') }}
             </p>
             <AppButton
               href="https://otechie.com/nuxt"
@@ -52,7 +49,7 @@
               class="sm:mr-4 py-3 px-6 text-base"
             >
               <CommentsIcon slot="icon" class="h-5 -mb-1 mr-1" />
-              Start chat
+              {{ $t('support.technical.start') }}
             </AppButton>
           </div>
         </section>
@@ -60,7 +57,7 @@
       <section
         class="text-center italic flex justify-center items-center flex-wrap mb-16"
       >
-        <span class="flex">We partnered with</span>
+        <span class="flex">{{ $t('support.technical.partner.pre') }}</span>
         <a
           href="https://otechie.com"
           rel="noopener"
@@ -73,21 +70,17 @@
             class="inline-block h-4 px-2"
           />
         </a>
-        <span class="flex">
-          to offer these services so we can focus on helping you as fast as
-          possible.
-        </span>
+        <span class="flex">{{ $t('support.technical.partner.post') }}</span>
       </section>
       <h2
         class="text-3xl xl:text-4xl text-light-onSurfacePrimary dark:text-dark-onSurfacePrimary font-medium leading-normal mb-6 transition-colors duration-300 ease-linear"
       >
-        <AppTitle />
-        for enterprise
+        <AppTitle /> {{ $t('support.entreprise.title') }}
       </h2>
       <h3
         class="xl:text-lg text-light-onSurfaceSecondary dark:text-dark-onSurfaceSecondary font-medium leading-relaxed mb-6 flex flex-wrap items-center transition-colors duration-300 ease-linear"
       >
-        <span class="flex">Available as part of the</span>
+        <span class="flex">{{ $t('support.entreprise.partner.pre') }}</span>
         <a
           href="https://tidelift.com"
           rel="noopener"
@@ -100,17 +93,17 @@
             class="inline-block px-2 h-5"
           />
         </a>
-        <span class="flex">subscription.</span>
+        <span class="flex">{{ $t('support.entreprise.partner.post') }}</span>
       </h3>
-      <p
+      <i18n
+        path="support.entreprise.description"
+        tag="p"
         class="text-light-onSurfacePrimary dark:text-dark-onSurfacePrimary mb-8 transition-colors duration-300 ease-linear"
       >
-        NuxtJS and the maintainers of thousands of other packages are working
-        with Tidelift to deliver one enterprise subscription that covers all of
-        the open source you use.<br />
-        If you want the flexibility of open source and the confidence of
-        commercial-grade software, this is for you.
-      </p>
+        <template v-slot:break>
+          <br />
+        </template>
+      </i18n>
       <AppButton
         href="https://tidelift.com/subscription/pkg/npm-nuxt?utm_source=nuxt&utm_medium=referral&utm_campaign=enterprise"
         rel="noopener"
@@ -118,7 +111,7 @@
         class="sm:mr-4 py-3 px-6 text-base"
       >
         <AngleDoubleRightIcon slot="icon" class="h-5 -mb-1 mr-1" />
-        Learn more
+        {{ $t('support.entreprise.learn_more') }}
       </AppButton>
       <AppButton
         href="https://tidelift.com/subscription/request-a-demo?utm_source=nuxt&utm_medium=referral&utm_campaign=enterprise"
@@ -127,7 +120,7 @@
         class="sm:mr-4 py-3 px-6 text-base"
       >
         <InboxInIcon slot="icon" class="h-5 -mb-1 mr-1" />
-        Request a demo
+        {{ $t('support.entreprise.request_a_demo') }}
       </AppButton>
     </div>
   </div>

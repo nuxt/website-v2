@@ -1,6 +1,7 @@
 <template>
   <footer class="z-10 relative pb-16 lg:pb-0 lg:block">
     <NewsletterForm />
+
     <div
       class="bg-light-elevatedSurface dark:bg-dark-elevatedSurface shadow-nuxt transition-colors duration-300 ease-linear"
     >

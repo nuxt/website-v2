@@ -6,15 +6,17 @@
           <h1
             class="text-3xl xl:text-4xl text-light-onSurfacePrimary dark:text-dark-onSurfacePrimary font-medium leading-normal mb-6 lg:pt-4"
           >
-            The <AppTitle /> Shop<br />
+            The <AppTitle /> {{ $t('shop.title') }}<br />
           </h1>
-          <h3
+          <i18n
+            path="shop.description"
+            tag="h3"
             class="xl:text-lg text-light-onSurfaceSecondary dark:text-dark-onSurfaceSecondary font-medium leading-relaxed mb-6"
           >
-            You want to support the NuxtJS project and show your love to the
-            rest of the community?<br />
-            Here our products with the best quality ever!
-          </h3>
+            <template v-slot:break>
+              <br />
+            </template>
+          </i18n>
         </div>
         <ShopIllustration
           class="w-2/3 mx-auto lg:mx-0 lg:w-5/12 lg:-mt-8 text-light-elevatedSurface dark:text-dark-elevatedSurface"

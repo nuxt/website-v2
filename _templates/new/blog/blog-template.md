@@ -13,12 +13,21 @@ tags:
   - tag3
 ---
 
+Thanks for contributing to the Nuxt Blog. Here is some example content to get you started. Feel free to use it or just delete it. Don't forget to modify the details in the yaml above to show your name etc. Your blog post will appear on the main page automatically so just make sure the date is correct or you won't see it as the top article. You can have more than one article and you can have more or less than 3 tags. Have fun.
+
 ## Example TOC
 
 - [Example TOC](#example-toc)
+- [Example image](#example-image)
 - [Example codeblock](#example-codeblock)
 - [Example code](#example-code)
 - [Example video](#example-video)
+
+## Example image
+
+Images are stored in the static folder under blog and in a folder with your filename.
+
+![My image alt tag](blog/going-dark-with-nuxtjs-color-mode/list-of-colors.png)
 
 ## Example codeblock
 

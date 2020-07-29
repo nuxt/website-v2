@@ -53,31 +53,22 @@ export default {
   },
   mounted() {
     // // Avoid loading the script twice
-    if (document.getElementById('_algolia_doc_search_')) {
-      return
-    }
-    const script = document.createElement('script')
+    if (!document.getElementById('_algolia_doc_search_')) {
+      const script = document.createElement('script')
 
-    script.setAttribute('type', 'text/javascript')
-    script.setAttribute(
-      'src',
-      '//cdn.jsdelivr.net/docsearch.js/2/docsearch.min.js'
-    )
-    script.setAttribute('id', '_algolia_doc_search_')
-    script.onload = () => {
-      this.search = window.docsearch({
-        apiKey: process.env.DOC_SEARCH_API_KEY,
-        indexName: 'nuxtjs',
-        inputSelector: `#algolia-${this.appearance}`,
-        autocompleteOptions: {
-          openOnFocus: true,
-          ariaLabel: true
-        },
-        algoliaOptions: { facetFilters: [`tags:${this.$i18n.locale}`] },
-        debug: true // Set debug to true if you want to inspect the dropdown
-      })
+      script.setAttribute('type', 'text/javascript')
+      script.setAttribute(
+        'src',
+        '//cdn.jsdelivr.net/docsearch.js/2/docsearch.min.js'
+      )
+      script.setAttribute('id', '_algolia_doc_search_')
+      script.onload = () => {
+        this.initDocsearch()
+      }
+      document.body.appendChild(script)
+    } else {
+      this.initDocsearch()
     }
-    document.body.appendChild(script)
 
     if (this.appearance === 'mobile') {
       this.$refs['algolia-mobile'].focus()
@@ -90,6 +81,19 @@ export default {
     })
   },
   methods: {
+    initDocsearch() {
+      this.search = window.docsearch({
+        apiKey: process.env.DOC_SEARCH_API_KEY,
+        indexName: 'nuxtjs',
+        inputSelector: `#algolia-${this.appearance}`,
+        autocompleteOptions: {
+          openOnFocus: true,
+          ariaLabel: true
+        },
+        algoliaOptions: { facetFilters: [`tags:${this.$i18n.locale}`] },
+        debug: true // Set debug to true if you want to inspect the dropdown
+      })
+    },
     resetInputValue() {
       this.q = ''
       this.search && this.search.autocomplete.autocomplete.setVal('')

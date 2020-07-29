@@ -65,7 +65,7 @@ questions:
     correctAnswer: True
 ---
 
-Congratulations you have now created your first Nuxt.js app and you may now consider yourself a Nuxter. But there is so much more to learn and so much more you can do with Nuxt.js. Here are a few recommendations.
+Congratulations! You have now created your first Nuxt.js app and you may now consider yourself a Nuxter, but there is so much more to learn and so much more you can do with Nuxt.js. Here are a few recommendations:
 
 <base-alert type="next">
 

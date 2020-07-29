@@ -70,8 +70,23 @@ export default {
     '@nuxt/http',
     '@nuxt/content',
     'nuxt-i18n',
-    'vue-scrollto/nuxt'
+    'vue-scrollto/nuxt',
+    '@nuxtjs/sitemap'
   ],
+
+  /**
+   * Sitemap Module Configuration
+   */
+  sitemap: {
+    hostname: 'https://nuxtjs.org',
+    // nuxt-i18n notation (advanced)
+    i18n: {
+      locales: ['en', 'fr', 'id', 'ru', 'ko', 'zh', 'ja'],
+      routesNameSeparator: '___'
+    },
+    exclude: []
+  },
+
   // Auto import components, see https://github.com/nuxt/components
   components: true,
   colorMode: {

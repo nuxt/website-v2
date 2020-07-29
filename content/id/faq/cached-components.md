@@ -1,7 +1,7 @@
 ---
 title: Komponen Caching
 description: Bagaimana cara men-cache sebuah komponen?
-menu: Using nginx as a proxy
+menu: Komponen Caching
 category: configuration
 position: 8
 ---

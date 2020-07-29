@@ -1,7 +1,7 @@
 ---
 title: Caching Components
 description: 如何使用 cache 组件？
-menu: Using nginx as a proxy
+menu: 如何使用 cache 组件？
 category: configuration
 position: 8
 ---

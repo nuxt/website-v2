@@ -144,7 +144,8 @@ module.exports = {
     title: 'Design',
     description:
       'NuxtJS is an MIT licensed open source project and completely free to use. {break} You can freely use our logos as long as you mention NuxtJS and link to nuxtjs.org.',
-    other_download_message: 'You can also download our {favicon} or our {sketch} file.'
+    other_download_message:
+      'You can also download our {favicon} or our {sketch} file.'
   },
   resources: {
     title: 'Resources',
@@ -194,7 +195,8 @@ module.exports = {
     },
     pledges: {
       title: 'Recurring Pledges',
-      description: 'Recurring pledges come with exclusive perks, e.g. having your name listed in the NuxtJS GitHub repository, or have your company logo placed on this website. Become a nuxter or sponsor via {opencollective} (goes into a fund with transparent expense models supporting community efforts and events).'
+      description:
+        'Recurring pledges come with exclusive perks, e.g. having your name listed in the NuxtJS GitHub repository, or have your company logo placed on this website. Become a nuxter or sponsor via {opencollective} (goes into a fund with transparent expense models supporting community efforts and events).'
     },
     become_a_sponsor: 'Become a sponsor'
   },
@@ -207,16 +209,19 @@ module.exports = {
       'Our {team} now offers official consulting services for your NuxtJS applications.{break} We offer different services depending of your needs, from technical support to custom development. Expect a reply within one business day, we can sign custom NDA and you can get a full refund if you are not satisfied with our service.',
     technical: {
       title: 'Technical support',
-      description: 'Get project audits, app deployments, custom development and technical support from the NuxtJS NuxtJS team.',
+      description:
+        'Get project audits, app deployments, custom development and technical support from the NuxtJS NuxtJS team.',
       start: 'Start chat',
       partner: {
         pre: 'We partnered with',
-        post: 'to offer these services so we can focus on helping you as fast as possible.'
+        post:
+          'to offer these services so we can focus on helping you as fast as possible.'
       }
     },
     entreprise: {
       title: 'for enterprise',
-      description: 'NuxtJS and the maintainers of thousands of other packages are working with Tidelift to deliver one enterprise subscription that covers all of the open source you use.{break} If you want the flexibility of open source and the confidence of commercial-grade software, this is for you.',
+      description:
+        'NuxtJS and the maintainers of thousands of other packages are working with Tidelift to deliver one enterprise subscription that covers all of the open source you use.{break} If you want the flexibility of open source and the confidence of commercial-grade software, this is for you.',
       partner: {
         pre: 'Available as part of the',
         post: 'subscription.'
@@ -292,5 +297,10 @@ module.exports = {
       'internals-glossary': 'Internes',
       'components-glossary': 'Composants'
     }
+  },
+  cookies: {
+    consent: 'We use Cookies for user analysis and on-page improvements!',
+    linkLabel: 'Learn about cookies',
+    button: 'Got it'
   }
 }

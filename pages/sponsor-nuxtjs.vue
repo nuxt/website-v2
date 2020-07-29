@@ -6,18 +6,17 @@
           <h1
             class="text-3xl xl:text-4xl text-light-onSurfacePrimary dark:text-dark-onSurfacePrimary font-medium leading-normal mb-6 lg:pt-4"
           >
-            Sponsor <AppTitle /> Development<br />
+            {{ $t('sponsor.title.pre') }} <AppTitle /> {{ $t('sponsor.title.post') }}<br />
           </h1>
-          <h3
+          <i18n
+            path="sponsor.description"
+            tag="h3"
             class="xl:text-lg text-light-onSurfaceSecondary dark:text-dark-onSurfaceSecondary font-medium leading-relaxed mb-6"
           >
-            NuxtJS is an MIT licensed open source project and completely free to
-            use.<br />
-            However, the amount of effort needed to maintain and develop new
-            features for the project is not sustainable without proper financial
-            backing.<br />
-            You can support NuxtJS development via the following methods:
-          </h3>
+            <template v-slot:break>
+              <br />
+            </template>
+          </i18n>
         </div>
         <SponsorIllustration
           class="w-2/3 mx-auto lg:mx-0 lg:w-5/12 lg:-mt-8 text-light-elevatedSurface dark:text-dark-elevatedSurface"
@@ -28,10 +27,10 @@
       >
         <div class="w-full lg:w-2/3 text-center lg:text-left">
           <h2 class="text-2xl uppercase pt-4 pb-6">
-            One-time donations
+            {{ $t('sponsor.donations.title') }}
           </h2>
           <p class="mb-8 text-gray-600">
-            We accept donations through these channels
+            {{ $t('sponsor.donations.description') }}
           </p>
           <div
             class="flex flex-wrap justify-center lg:justify-start items-end mb-8 text-light-onSurfacePrimary"
@@ -99,18 +98,17 @@
         <h2
           class="text-2xl text-light-onSurfacePrimary dark:text-dark-onSurfacePrimary font-medium uppercase pt-10 pb-8"
         >
-          Recurring Pledges
+          {{ $t('sponsor.pledges.title') }}
         </h2>
-        <p
+        <i18n
+          path="sponsor.pledges.description"
+          tag="p"
           class="text-light-onSurfaceSecondary dark:text-dark-onSurfaceSecondary mb-12"
         >
-          Recurring pledges come with exclusive perks, e.g. having your name
-          listed in the NuxtJS GitHub repository, or have your company logo
-          placed on this website. Become a nuxter or sponsor via
-          <a href="https://opencollective.com/nuxtjs">OpenCollective</a> (goes
-          into a fund with transparent expense models supporting community
-          efforts and events).
-        </p>
+          <template v-slot:opencollective>
+            <a href="https://opencollective.com/nuxtjs">OpenCollective</a>
+          </template>
+        </i18n>
         <div
           v-for="(group, groupKey) in sponsors"
           :key="groupKey"
@@ -151,7 +149,7 @@
               slot="icon"
               class="h-5 -mt-1 mr-1 inline-block"
             />
-            Become a sponsor
+            {{ $t('sponsor.become_a_sponsor') }}
           </AppButton>
         </div>
       </section>

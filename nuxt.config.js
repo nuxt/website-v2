@@ -149,10 +149,10 @@ export default {
 
       {
         code: 'ja',
-        iso: 'ja-JA',
-        file: 'ja-JA.js',
+        iso: 'ja-JP',
+        file: 'ja-JP.js',
         name: '日本語',
-        domain: 'https://jp.nuxtjs.org'
+        domain: 'https://ja.nuxtjs.org'
       },
       {
         code: 'ko',

@@ -68,7 +68,7 @@ module.exports = {
         'Nuxt.js adalah framework minimalis untuk membuat aplikasi Vue.js dengan server side rendering, hot-reloading, static generation, dan banyak lagi!'
     },
     welcome: {
-      title: 'The Intuitive{break}{frameworkType}Framework',
+      title: 'The Intuitive {br} {frameworkType} Framework',
       description:
         'Build your next Vue.js application with confidence using NuxtJS. An {openSource} framework making web development simple and powerful.',
       openSource: 'open source',
@@ -137,6 +137,91 @@ module.exports = {
           post: '💚'
         }
       }
+    }
+  },
+  design: {
+    title: 'Design',
+    description:
+      'NuxtJS is an MIT licensed open source project and completely free to use. {break} You can freely use our logos as long as you mention NuxtJS and link to nuxtjs.org.',
+    other_download_message: 'You can also download our {favicon} or our {sketch} file.'
+  },
+  resources: {
+    title: 'Resources',
+    description:
+      'Discover a panel of resources made by our partners. By using thoses affiliate resources links, you are helping us to maintain and develop the Open Source Framework.',
+    themes: {
+      title: 'Themes'
+    },
+    videos: {
+      title: 'Video Courses'
+    }
+  },
+  shop: {
+    title: 'Shop',
+    description:
+      'You want to support the NuxtJS project and show your love to the rest of the community?{break} Here our products with the best quality ever!'
+  },
+  team: {
+    title: 'Team',
+    description:
+      'The development of NuxtJS and its ecosystem is guided by an international team. We have a very active and engaged team that is constantly striving to push Nuxt forward.'
+  },
+  themes: {
+    title: 'Themes',
+    description:
+      'With the themes below built by our partners from Creative Tim and Theme Forest you can see how a real world application is built, with Nuxt.js stack behind.'
+  },
+  'video-courses': {
+    title: 'Video Courses',
+    description:
+      'With the video courses below created by our partner VueSchool you can discover and learn more about the Nuxt.js Framework.',
+    cta: {
+      discover: 'Discover vueschool',
+      start: 'START COURSE'
+    }
+  },
+  sponsor: {
+    title: {
+      pre: 'Sponsor',
+      post: 'Development'
+    },
+    description:
+      'NuxtJS is an MIT licensed open source project and completely free to use.{break} However, the amount of effort needed to maintain and develop new features for the project is not sustainable without proper financial backing.{break} You can support NuxtJS development via the following methods:',
+    donations: {
+      title: 'One-time donations',
+      description: 'We accept donations through these channels'
+    },
+    pledges: {
+      title: 'Recurring Pledges',
+      description: 'Recurring pledges come with exclusive perks, e.g. having your name listed in the NuxtJS GitHub repository, or have your company logo placed on this website. Become a nuxter or sponsor via {opencollective} (goes into a fund with transparent expense models supporting community efforts and events).'
+    },
+    become_a_sponsor: 'Become a sponsor'
+  },
+  support: {
+    title: {
+      pre: 'Consulting',
+      post: 'Support'
+    },
+    description:
+      'Our {team} now offers official consulting services for your NuxtJS applications.{break} We offer different services depending of your needs, from technical support to custom development. Expect a reply within one business day, we can sign custom NDA and you can get a full refund if you are not satisfied with our service.',
+    technical: {
+      title: 'Technical support',
+      description: 'Get project audits, app deployments, custom development and technical support from the NuxtJS NuxtJS team.',
+      start: 'Start chat',
+      partner: {
+        pre: 'We partnered with',
+        post: 'to offer these services so we can focus on helping you as fast as possible.'
+      }
+    },
+    entreprise: {
+      title: 'for enterprise',
+      description: 'NuxtJS and the maintainers of thousands of other packages are working with Tidelift to deliver one enterprise subscription that covers all of the open source you use.{break} If you want the flexibility of open source and the confidence of commercial-grade software, this is for you.',
+      partner: {
+        pre: 'Available as part of the',
+        post: 'subscription.'
+      },
+      learn_more: 'Learn more',
+      request_a_demo: 'Request a demo'
     }
   },
   blog: {

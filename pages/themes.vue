@@ -6,14 +6,12 @@
           <h1
             class="text-3xl xl:text-4xl text-light-onSurfacePrimary dark:text-dark-onSurfacePrimary font-medium leading-normal mb-6 lg:pt-4"
           >
-            NUXT<span class="text-primary-base">JS</span> Themes<br />
+            <AppTitle /> {{ $t('themes.title') }}<br />
           </h1>
           <h3
             class="xl:text-lg text-light-onSurfaceSecondary dark:text-dark-onSurfaceSecondary font-medium leading-relaxed mb-6"
           >
-            With the themes below built by our partners from Creative Tim and
-            Theme Forest you can see how a real world application is built, with
-            Nuxt.js stack behind.
+            {{ $t('themes.description') }}
           </h3>
         </div>
         <ThemesIllustration

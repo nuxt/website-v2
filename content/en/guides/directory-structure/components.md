@@ -35,7 +35,7 @@ The components directory contains your Vue.js components. Components are what ma
 
 ### Fetching Data
 
-To access asynchronous data from an API in your components you can use Nuxt [`fetch()` hook](http://localhost:3000/guides/features/data-fetching#the-fetch-method).
+To access asynchronous data from an API in your components you can use Nuxt [`fetch()` hook](/guides/features/data-fetching#the-fetch-method).
 
 Using `$fetchState.pending` we can show a message when the data is waiting to be loaded and using `$fetchState.error` we can show an error message if there is an error fetching the data. When using fetch we must declare the data in the data property. This then gets filled with the data that comes from the fetch.
 

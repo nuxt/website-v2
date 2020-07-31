@@ -1,6 +1,7 @@
 <template>
   <VueIfBot>
     <CookieConsent
+      data-cy="cookie-box"
       class="flex justify-center items-center text-light-onSurfaceSecondary dark:text-dark-onSurfaceSecondary border border-top border-light-border dark:border-dark-border xs:flex-col xs:pt-2 md:flex-row xs:text-center"
     >
       <template slot="message">

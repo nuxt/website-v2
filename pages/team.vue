@@ -190,6 +190,7 @@ export default {
             name: 'Ricardo Gobbo de Souza',
             city: 'São José dos Campos, São Paulo, Brasil',
             github: 'ricardogobbosouza',
+            twitter: '@gobbo_ricardo',
             website: 'https://datalogix.com.br/',
             badges: ['maintainer']
           },

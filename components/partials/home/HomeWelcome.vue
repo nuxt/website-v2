@@ -63,6 +63,7 @@
           </div>
           <div
             class="flex flex-col sm:block text-light-onSurfaceSecondary dark:text-dark-onSurfaceSecondary"
+            data-cy="newsletter-link"
           >
             <a
               href="#subscribe-to-newsletter"
@@ -72,7 +73,7 @@
             </a>
           </div>
         </div>
-        <figure class="hidden lg:block lg:w-5/12">
+        <figure class="hidden lg:block lg:w-5/12" data-cy="video">
           <AppMedia
             src="https://player.vimeo.com/video/311756540"
             class="mb-4"

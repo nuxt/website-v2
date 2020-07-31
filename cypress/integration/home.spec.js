@@ -3,26 +3,43 @@ describe('The Home Page links', () => {
     cy.visit('/')
   })
   it('checks to see if the get started button links to guides', () => {
-    cy.get('a[data-cy="get-started"]').click()
+    cy.get('a[data-cy="get-started"]')
+      .click()
     cy.url().should('include', '/guides/get-started/installation')
     cy.visit('/guides/get-started/installation')
   })
+
+  it('github stars links to the right page', () => {
+    cy.get('a[data-cy="github-stars"]')
+      .should('have.attr', 'href', 'https://github.com/nuxt/nuxt.js')
+      .click()
+  })
+
+  it('checks the newsletter message links to newsletter signup', () => {
+    cy.get('[data-cy="newsletter-link"]').within(() => {
+      cy.get('a').click()
+      cy.url().should('include', 'subscribe-to-newsletter')
+    })
+
+  })
+
+  it.only('checks the video is there', () => {
+    cy.get('[data-cy="video"]').within(() => {
+      cy.get('iframe').should('have.attr', 'src', 'https://player.vimeo.com/video/311756540')
+    })
+  })
+
+  it('checks to see if the try Nuxtjs button links to codesandbox', () => {
+    cy.get('a[data-cy="why"]')
+    .should('have.attr', 'href', 'https://template.nuxtjs.org')
+    .click()
+  })
+
   it('checks to see if the sponsor button links to the sponsor page', () => {
     cy.get('a[data-cy="sponsors"]').click()
     cy.url().should('include', '/sponsor-nuxtjs')
     cy.visit('/sponsor-nuxtjs')
   })
-  it.skip('checks to see if the try Nuxtjs button links to ', () => {
-    cy.get('a[data-cy="why"]')
-      .click()
-      .its('url')
-      .should(
-        'eq',
-        'https://codesandbox.io/s/github/nuxt/codesandbox-nuxt/tree/master/'
-      )
-  })
-  it.skip('github stars links to the right page', () => {
-    cy.get('a[data-cy="github-stars"]').click()
-    cy.url().should('eq', 'https://github.com/nuxt/nuxt.js')
-  })
+
+
 })

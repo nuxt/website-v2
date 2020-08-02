@@ -594,10 +594,14 @@ Then, when launching `nuxt build`, upload the content of `.nuxt/dist/client` dir
 - Default:
 
   ```js{}[nuxt.config.js]
-  {
-    layouts: false,
-    pages: true,
-    commons: true
+  export default {
+    build: {
+      splitChunks: {
+        layouts: false,
+        pages: true,
+        commons: true
+      }
+    }
   }
   ```
 

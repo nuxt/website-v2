@@ -73,16 +73,14 @@ export default {
             github: 'debs-obrien',
             twitter: 'debs_obrien',
             website: 'https://debbie.codes',
-            role: 'Head of Learning',
-            badges: ['ambassador']
+            role: 'Head of Learning'
           },
           {
             name: 'Florent Delerue',
             city: 'Bordeaux, France',
             github: 'Flosciante',
             twitter: 'flosciante',
-            role: 'Chief Process Officer',
-            badges: []
+            role: 'Chief Process Officer'
           },
           {
             name: 'Sergey Bedritsky',
@@ -90,32 +88,28 @@ export default {
             github: 'bdrtsky',
             twitter: 'sergeybedritsky',
             website: 'https://sergeybedritsky.me/',
-            role: 'Lead Developer',
-            badges: []
+            role: 'Lead Developer'
           },
           {
             name: 'Vincent Rodriguez',
             city: 'Bordeaux, France',
             github: 'R-mooon',
             twitter: 'RodrigodelaNoch',
-            role: 'Creative Developer',
-            badges: []
+            role: 'Creative Developer'
           },
           {
             name: 'Sarah Moriceau',
             city: 'Bordeaux, France',
             github: 'sarahnuxtjs',
             twitter: 'moriceau_sarah',
-            role: 'Web Designer',
-            badges: []
+            role: 'Web Designer'
           },
           {
             name: 'Benjamin Canac',
             city: 'Bordeaux, France',
             github: 'benjamincanac',
             twitter: 'benjamincanac',
-            role: 'Back-end developer',
-            badges: ['maintainer']
+            role: 'Back-end developer'
           },
           {
             name: 'Ahad Birang',
@@ -123,8 +117,7 @@ export default {
             github: 'farnabaz',
             twitter: 'a_birang',
             website: 'https://farnabaz.ir',
-            role: 'Lead developer',
-            badges: ['maintainer']
+            role: 'Lead developer'
           }
         ]
       },

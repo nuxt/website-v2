@@ -31,8 +31,6 @@ Cela nous permet de créer une propriété `baseUrl` qui sera égale à la valeu
 1. Via `process.env.baseUrl`.
 2. Via `context.env.baseUrl`, voir [context API](/api/context).
 
-If you define environment variables starting with `NUXT_ENV_` in the build phase (f.ex. `NUXT_ENV_COOL_WORD=freezing nuxt build`, they'll be automatically injected into the process environment. Be aware that they'll potentially take precedence over defined variables in your `nuxt.config.js` with the same name.
-
 ## process.env == {}
 
 Vous pouvez utiliser la propriété `env` pour donner un jeton public par exemple.

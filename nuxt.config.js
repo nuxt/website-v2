@@ -73,6 +73,21 @@ export default {
     'vue-scrollto/nuxt'
   ],
 
+  pwa: {
+    manifest: {
+      name: 'NuxtJS',
+      start_url: '/',
+      icons: [
+        {
+          src: '/icon.png',
+          type: 'image/png',
+          sizes: '512x512',
+          purpose: 'any maskable'
+        }
+      ]
+    }
+  },
+
   // Auto import components, see https://github.com/nuxt/components
   components: true,
   colorMode: {

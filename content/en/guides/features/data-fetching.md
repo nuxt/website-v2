@@ -65,6 +65,17 @@ questions:
 
 In Nuxt.js we have 2 ways of getting data from an api. We can use the fetch method or the asyncData method.
 
+<div>
+  <a href="https://vueschool.io/courses/async-data-with-nuxtjs?friend=nuxt" target="_blank" class="Promote">
+    <img src="/async-data-with-nuxtjs.png" srcset="/async-data-with-nuxtjs-2x.png 2x" alt="AsyncData by vueschool"/>
+    <div class="Promote__Content">
+      <h4 class="Promote__Content__Title">Async Data with Nuxt.js</h4>
+      <p class="Promote__Content__Description">Learn how to manage asynchronous data with Nuxt.js.</p>
+      <p class="Promote__Content__Signature">Video courses made by VueSchool to support Nuxt.js development.</p>
+    </div>
+  </a>
+</div>
+
 ## The fetch hook
 
 <base-alert type="info">

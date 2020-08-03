@@ -6,6 +6,17 @@ category: get-started
 csb_link: https://codesandbox.io/embed/github/nuxt-academy/guides-examples/tree/master/01_get_started/01_installation?fontsize=14&hidenavigation=1&theme=dark
 ---
 
+<div>
+  <a href="https://vueschool.io/courses/nuxtjs-fundamentals/?friend=nuxt" target="_blank" class="Promote">
+    <img src="/nuxt-fundamentals.png" srcset="/nuxt-fundamentals-2x.png 2x" alt="Nuxt Fundamentals by vueschool"/>
+    <div class="Promote__Content">
+      <h4 class="Promote__Content__Title">Nuxt.js Fundamentals</h4>
+      <p class="Promote__Content__Description">Learn how to get started quickly with Nuxt.js in videos.</p>
+      <p class="Promote__Content__Signature">Video courses made by VueSchool to support Nuxt.js developpement.</p>
+    </div>
+  </a>
+</div>
+
 ## Prerequisites
 
 Here, you will find information on setting up and running a Nuxt.js project in 4 steps.
@@ -15,6 +26,8 @@ Here, you will find information on setting up and running a Nuxt.js project in 4
 Another way to get started with Nuxt.js is to use [CodeSandbox](https://template.nuxtjs.org) which is a great way for quickly playing around with Nuxt.js and/or sharing your code with other people.
 
 </base-alert>
+
+
 
 ### Node
 

@@ -64,6 +64,10 @@ _This directory cannot be renamed without extra configuration._
 
 Using a store to manage the state is important for every big application. That's why Nuxt.js implements Vuex in its core.
 
+<base-alert type="star">
+ Watch a free lesson about <a href="https://vueschool.io/lessons/utilising-the-vuex-store-nuxtjs?friend=nuxt" target="_blank"><strong>Nuxt.js and Vuex</strong></a> on Vue School
+</base-alert>
+
 ## Activate the Store
 
 Nuxt.js will look for the `store` directory, if it exists, it will:

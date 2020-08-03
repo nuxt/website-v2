@@ -74,6 +74,10 @@ You can also create routes with .js files and .ts files
 
 Every Page component is a Vue component but Nuxt.js adds special attributes and functions to make the development of your universal application as easy as possible.
 
+<base-alert type="star">
+    Watch a free lesson about <a href="https://vueschool.io/lessons/nuxtjs-page-components?friend=nuxt" target="_blank"><strong>Nuxt.js Page Components</strong> on Vue School</a>
+</base-alert>
+
 ```html{}[pages
 <template>
   <h1 class="red">Hello {{ name }}!</h1>

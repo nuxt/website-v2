@@ -36,6 +36,17 @@ questions:
 
 With static site generation you can render your application during the build phase and deploy it to any static hosting services such as Netlify, Github pages, Vercel etc. This means that no server is needed in order to deploy your application.
 
+<div>
+  <a href="https://vueschool.io/courses/static-site-generation-with-nuxtjs?friend=nuxt" target="_blank" class="Promote">
+    <img src="/static-site-generation-with-nuxtjs.png" alt="Static Site Generation with Nuxt.js by vueschool"/>
+    <div class="Promote__Content">
+      <h4 class="Promote__Content__Title">Static Site Generation with Nuxt.js</h4>
+      <p class="Promote__Content__Description">Learn how to generate static websites (pre rendering) to improve both performance and SEO while eliminating hosting costs.</p>
+      <p class="Promote__Content__Signature">Video courses made by VueSchool to support Nuxt.js development.</p>
+    </div>
+  </a>
+</div>
+
 ### Generating your site
 
 When deploying your site in with [target:static](/guides/features/deployment-targets#static-hosting) all your `.vue` pages will be generated into HTML and JavaScript files. All calls to APIs will be made and cached in a folder called static inside your generated content so that no calls to your API need to be made on client side navigation.

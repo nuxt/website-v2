@@ -8,6 +8,10 @@ csb_link: https://codesandbox.io/embed/github/nuxt-academy/guides-examples/tree/
 
 The default Nuxt.js application structure is intended to provide a great starting point for both small and large applications. You are free to organize your application however you like and can create other directories as and when you need them.
 
+<base-alert type="star">
+ Watch a free lesson about  <a href="https://vueschool.io/lessons/guided-nuxtjs-project-tour?friend=nuxt" target="_blank"><strong>the Nuxt.js directory structure</strong></a> on Vue School
+</base-alert>
+
 Let's create the directories and files that do not exist in our project yet.
 
 ```bash

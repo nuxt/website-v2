@@ -1,31 +1,16 @@
-import Clipboard from 'clipboard'
+import Vue from 'vue'
+import AppCopyButton from '~/components/common/AppCopyButton'
 
 export default {
   mounted() {
-    window.onNuxtReady(() => {
-      setTimeout(() => {
-        const blocks = document.getElementsByClassName('nuxt-content-highlight')
-        for (const block of blocks) {
-          const pre = block.getElementsByTagName('pre')[0]
-          const button = document.createElement('button')
-          button.textContent = 'Copy'
-          button.className = 'copy'
-          pre.appendChild(button)
-        }
-        const copyCode = new Clipboard('.copy', {
-          target(trigger) {
-            return trigger.previousElementSibling
-          }
-        })
+    setTimeout(() => {
+      const blocks = document.getElementsByClassName('nuxt-content-highlight')
 
-        copyCode.on('success', function (event) {
-          event.clearSelection()
-          event.trigger.textContent = 'Copied!'
-          window.setTimeout(function () {
-            event.trigger.textContent = 'Copy'
-          }, 2000)
-        })
-      }, 100)
-    })
+      for (const block of blocks) {
+        const CopyButton = Vue.extend(AppCopyButton)
+        const component = new CopyButton().$mount()
+        block.appendChild(component.$el)
+      }
+    }, 250)
   }
 }

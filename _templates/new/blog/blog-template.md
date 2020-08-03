@@ -18,10 +18,15 @@ Thanks for contributing to the Nuxt Blog. Here is some example content to get yo
 ## Example TOC
 
 - [Example TOC](#example-toc)
+- [Nuxt/NuxtJS/Nuxt.js](#nuxtnuxtjsnuxtjs)
 - [Example image](#example-image)
 - [Example codeblock](#example-codeblock)
 - [Example code](#example-code)
 - [Example video](#example-video)
+
+## Nuxt/NuxtJS/Nuxt.js
+
+Nuxt.js is the open source framework and we use this to talk about anything that references the framework whereas we use NuxtJS to mention anything about the company such as the NuxtJS shop. Nuxt is used in general to mention Nuxt related things when it makes no sense to use Nuxt.js or NuxtJS for example when referencing commands, nuxt start, nuxt generate etc.
 
 ## Example image
 

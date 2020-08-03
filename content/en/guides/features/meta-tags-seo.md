@@ -154,7 +154,7 @@ You can also pass each resource an optional `body: true` to include the resour
 
 </base-alert>
 
-## Global Settings
+### Global Settings
 
 ```js{}[nuxt.config.js]
 export default {
@@ -174,7 +174,7 @@ export default {
 }
 ```
 
-## Local Settings
+### Local Settings
 
 ```html{}[pages/index.vue]
 <template>

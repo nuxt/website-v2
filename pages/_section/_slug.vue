@@ -104,7 +104,7 @@ export default {
     try {
       contributors = (
         await fetch(
-          `https://contributors-api.onrender.com${path}/${slug}`
+          `https://contributors-api.onrender.com/content${path}/${slug}`
         ).then(res => res.json())
       ).map(({ author }) => ({ author }))
     } catch (e) {}

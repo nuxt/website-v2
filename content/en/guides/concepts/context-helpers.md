@@ -67,7 +67,8 @@ function (context) { // Could be asyncData, nuxtServerInit, ...
     isDev,
     isHMR,
     redirect,
-    error
+    error,
+   $config
   } = context
 
   // Only available on the Server-side

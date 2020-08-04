@@ -6,7 +6,9 @@
           <h1
             class="text-3xl xl:text-4xl text-light-onSurfacePrimary dark:text-dark-onSurfacePrimary font-medium leading-normal mb-6 lg:pt-4"
           >
-            <AppTitle /> {{ $t('support.title.pre') }} <span class="text-nuxt-green">&</span> {{ $t('support.title.post') }}<br />
+            <AppTitle /> {{ $t('support.title.pre') }}
+            <span class="text-nuxt-green">&</span> {{ $t('support.title.post')
+            }}<br />
           </h1>
           <i18n
             path="support.description"
@@ -18,7 +20,7 @@
             </template>
             <template v-slot:team>
               <NuxtLink to="/team" class="text-nuxt-green underline">
-                NuxtJS team
+                NuxtJS ekibi
               </NuxtLink>
             </template>
           </i18n>
@@ -142,9 +144,9 @@ export default {
     TechnicalSupportIllustration
   },
   head() {
-    const title = 'The NuxtJS Support'
+    const title = 'NuxtJS Desteği'
     const description =
-      'Our NuxtJS team now offers official consulting services for your NuxtJS applications.'
+      'Ekibimiz NuxtJS uygulamalarınız için resmi bir danışmanlık desteği sunuyor.'
 
     return {
       title,

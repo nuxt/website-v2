@@ -77,10 +77,9 @@ This line is **required** if you are publishing module as an npm package. Nuxt i
 export default {
   modules: [
     // Simple usage
-    '~/modules/simple'[
+    '~/modules/simple',
       // Passing options directly
-      ('~/modules/simple', { token: '123' })
-    ]
+    ['~/modules/simple', { token: '123' }]
   ]
 }
 ```

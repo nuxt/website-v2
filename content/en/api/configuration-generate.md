@@ -190,7 +190,7 @@ _Note: Multiple services (e.g. Netlify) detect a `404.html` automatically. If yo
 - Type: `Number`
 - Default: `0`
 
-Interval between two render cycles to avoid flooding a potential API with API calls from the web application.
+Interval (in milliseconds) between two render cycles to avoid flooding a potential API with API calls from the web application.
 
 ## minify
 

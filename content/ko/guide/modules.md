@@ -76,10 +76,9 @@ npm 패키지로 모듈을 게시하는 경우 이는 **필수** 입니다. Nuxt
 export default {
   modules: [
     // Simple usage
-    '~/modules/simple'[
+    '~/modules/simple',
       // Passing options directly
-      ('~/modules/simple', { token: '123' })
-    ]
+    ['~/modules/simple', { token: '123' }]
   ]
 }
 ```

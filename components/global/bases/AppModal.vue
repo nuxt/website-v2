@@ -23,7 +23,7 @@
           <div class="modal-container flex flex-col">
             <div class="w-full flex justify-end">
               <button
-                class="mb-4 w-auto"
+                class="xs:m-2 mb-4 w-auto"
                 data-cy="modal-close"
                 @click="showModal = false"
               >
@@ -107,6 +107,15 @@ export default {
   padding: 20px 30px;
   transition: all 0.3s ease;
   width: calc(100vw - 80px);
+}
+@media (max-width: 678px) {
+  .modal-container {
+    border-radius: 0;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+  }
 }
 
 .modal-body {

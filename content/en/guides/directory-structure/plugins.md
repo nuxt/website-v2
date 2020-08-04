@@ -261,7 +261,7 @@ export default {
 }
 ```
 
-Now `$hello(msg)` can be used from `context`, via `this` in Vue instances and via `this` in store `actions`/`mutations`.
+Now `$hello` service can be accessed from `context` and `this` in pages, components, plugins, and store actions.
 
 ```js{}[example-component.vue]
 export default {
@@ -269,10 +269,10 @@ export default {
     this.$hello('mounted')
     // will console.log 'Hello mounted!'
   },
-  asyncData(context) {
-    context.$hello('asyncData')
+  asyncData({ app, $hello }) {
+    $hello('asyncData')
     // If using Nuxt <= 2.12, use 👇
-    context.app.$hello('asyncData')
+    app.$hello('asyncData')
   }
 }
 ```
@@ -281,13 +281,6 @@ export default {
 export const state = () => ({
   someValue: ''
 })
-
-export const mutations = {
-  changeSomeValue(state, newValue) {
-    this.$hello('store mutation')
-    state.someValue = newValue
-  }
-}
 
 export const actions = {
   setSomeValueToWhatever({ commit }) {

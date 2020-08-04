@@ -76,10 +76,9 @@ modules 中的 context, 请参考 [ModuleContainer](/api/internals-module-contai
 export default {
   modules: [
     // Simple usage
-    '~/modules/simple'[
-      // Passing options
-      ('~/modules/simple', { token: '123' })
-    ]
+    '~/modules/simple',
+      // Passing options directly
+    ['~/modules/simple', { token: '123' }]
   ]
 }
 ```

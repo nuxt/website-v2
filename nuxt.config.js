@@ -103,12 +103,10 @@ export default {
   css: ['~/assets/css/main.scss'],
   hooks: {
     'content:file:beforeInsert': item => {
-      const stats = require('reading-time')(item.text)
-
-      if (item.slug === '' && item.extension === '.md') {
+      if (item.extension === '.md') {
+        const stats = require('reading-time')(item.text)
+        item.readingTime = stats
       }
-
-      item.readingTime = stats
     }
   },
   plugins: [

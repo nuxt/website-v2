@@ -74,7 +74,7 @@ module.exports = {
       get_started: 'memulai',
       get_updates: 'Dapatkan pembaruan NuxtJS ke kotak masuk Anda setiap bulan',
       video: 'Video diproduksi oleh {company}, unduh gratis mereka {cheatSheet}',
-      cheatSheet: 'Contekan Nuxt.'
+      cheatSheet: 'Nuxt Cheat Sheet.'
     },
     why: {
       title: 'Mengapa {nuxt}',
@@ -87,10 +87,10 @@ module.exports = {
       modular: {
         title: 'Modular',
         description:
-          "Nuxt is based on a powerful modular architecture. You can choose from more than 50 modules to make your development faster and easier. You don't have to reinvent the wheel to get PWA benefits, add Google Analytics to your page or generate a sitemap."
+          "Nuxt didasarkan pada arsitektur modular yang kuat. Anda dapat memilih dari lebih dari 50 modul untuk membuat pengembangan Anda lebih cepat dan lebih mudah. Anda tidak harus menemukan kembali roda untuk mendapatkan manfaat PWA, menambahkan Google Analytics ke halaman Anda atau menghasilkan peta situs."
       },
       performant: {
-        title: 'Performant',
+        title: 'Kinerja',
         description:
           'Dengan Nuxt.js, aplikasi Anda akan dioptimalkan di luar kotak. Kami melakukan yang terbaik untuk membangun aplikasi berkinerja dengan memanfaatkan praktik terbaik Vue.js dan Node.js. Untuk menekan setiap bit yang tidak perlu dari aplikasi Anda Nuxt menyertakan penganalisa bundel dan banyak peluang untuk menyempurnakan aplikasi Anda.'
       }
@@ -128,7 +128,7 @@ module.exports = {
       description:
         'Dapatkan berita Nuxt terbaru ke kotak masuk Anda, dikuratori oleh tim NuxtJS.',
       form: {
-        email: 'Email',
+        email: 'Alamat Email',
         subscribing: 'Subscribing...',
         subscribe: 'Subscribe',
         subscribed_messages: {
@@ -188,11 +188,11 @@ module.exports = {
     description:
       'NuxtJS adalah proyek sumber terbuka berlisensi MIT dan sepenuhnya gratis untuk digunakan. {Break} Namun, jumlah upaya yang diperlukan untuk mempertahankan dan mengembangkan fitur baru untuk proyek ini tidak berkelanjutan tanpa dukungan keuangan yang tepat. {Break} Anda dapat mendukung pengembangan NuxtJS melalui metode berikut:',
     donations: {
-      title: 'One-time donasi',
+      title: 'Satu kali donasi',
       description: 'Kami menerima donasi melalui saluran ini'
     },
     pledges: {
-      title: 'Recurring Pledges',
+      title: 'Janji Berulang',
       description:
         'Janji berulang datang dengan tunjangan eksklusif, mis. memiliki nama Anda terdaftar di repositori NuxtJS GitHub, atau menempatkan logo perusahaan Anda di situs web ini. Menjadi nuxter atau sponsor melalui {opencollective} (masuk ke dana dengan model pengeluaran transparan yang mendukung upaya dan acara komunitas).'
     },

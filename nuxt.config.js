@@ -191,13 +191,13 @@ export default {
         name: 'Indonesian',
         domain: 'https://id.nuxtjs.org'
       },
-      {
-        code: 'tr',
-        iso: 'tr-TR',
-        file: 'tr-TR.js',
-        name: 'Türkçe',
-        domain: 'https://tr.nuxtjs.org'
-      }
+      //{
+       // code: 'tr',
+       // iso: 'tr-TR',
+       // file: 'tr-TR.js',
+       // name: 'Türkçe',
+       // domain: 'https://tr.nuxtjs.org'
+      // }
       // {
       //   code: 'es',
       //   iso: 'es-ES',

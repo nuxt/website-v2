@@ -1,14 +1,10 @@
 <template>
-  <div class="shadow-nuxt">
-    <div class="container mx-auto px-4 lg:flex pb-12">
-      <!-- <TheMobileAsideNavResources />
-      <TheAsideNavResources class="hidden lg:block" /> -->
-      <div
-        class="min-h-screen w-full lg:static lg:max-h-full lg:overflow-visible lg:w-3/4"
-      >
-        <div class="flex justify-between items-stretch">
-          <pre>{{ page }}</pre>
-        </div>
+  <div class="container mx-auto px-4 lg:flex pb-12">
+    <div
+      class="min-h-screen w-full lg:static lg:max-h-full lg:overflow-visible lg:w-3/4"
+    >
+      <div class="flex justify-between items-stretch">
+        <pre>{{ page }}</pre>
       </div>
     </div>
   </div>

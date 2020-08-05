@@ -8,6 +8,12 @@
       <nav
         class="pt-8 lg:overflow-y-auto lg:block lg:pl-0 lg:pr-8 sticky?lg:h-(screen-24)"
       >
+        <h2
+          class="text-xl xl:text-2xl text-light-onSurfacePrimary dark:text-dark-onSurfacePrimary font-medium leading-normal mb-6 lg:pt-4"
+        >
+          Categories
+        </h2>
+
         <ul class="pb-8">
           <li
             v-for="(link, index) in links"

@@ -201,7 +201,10 @@ It is also recommended to enable ESLint hot reloading mode via webpack. This way
           enforce: "pre",
           test: /\.(js|vue)$/,
           loader: "eslint-loader",
-          exclude: /(node_modules)/
+          exclude: /(node_modules)/,
+          options: {
+            cache: true
+          }
         })
       }
     }

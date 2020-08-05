@@ -1,25 +1,26 @@
 {
-  "title": "UI Framework",
+  "title": "apis",
+
   "categories": [
     {
-      "title": "tailwindCSS",
+      "title": "hasura",
       "description": "A utility-first CSS framework for rapidly building custom designs.",
       "logo": "https://stephenafamo.com/blog/wp-content/uploads/2019/07/Tailwind-CSS.jpg",
       "github": "https://github.com/tailwindlabs/tailwindcss",
       "author": "tailwindCSS",
       "label": "taiwlwindCSS",
       "link": "https://tailwindcss.com/",
-      "slug": "tailwind"
+      "slug": "api"
     },
     {
-      "title": "bootstap",
+      "title": "strapi",
       "description": "All about bootstrap",
       "logo": "",
       "github": "",
       "author": "",
       "label": "bootstrap",
-      "link": "bootstrap",
-      "slug": "bootstrap"
+      "link": "",
+      "slug": "api2"
     }
   ]
 }

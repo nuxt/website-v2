@@ -292,6 +292,10 @@ module.exports = {
       'configuration-glossary': 'Configuration Glossary',
       'internals-glossary': 'Internals Glossary',
       'components-glossary': 'Components Glossary'
+    },
+    resources: {
+      'ui-framework': 'UI Framework',
+      api: 'API'
     }
   },
   cookies: {

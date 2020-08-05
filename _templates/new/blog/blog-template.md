@@ -22,6 +22,7 @@ Thanks for contributing to the Nuxt Blog. Here is some example content to get yo
 - [Example image](#example-image)
 - [Example codeblock](#example-codeblock)
 - [Example code](#example-code)
+- [Base Alerts](#base-alerts)
 - [Example video](#example-video)
 
 ## Nuxt/NuxtJS/Nuxt.js
@@ -61,10 +62,24 @@ export default {
 }
 ```
 
+## Base Alerts
+
+<base-alert>
+
+alert default is warning
+
+</base-alert>
+
+<base-alert type="info">
+
+if you have some info to share
+
+</base-alert>
+
 ## Example video
 
-<video poster="https://res.cloudinary.com/nuxt/video/upload/v1588095794/nuxt-full-static_rnnbvm.jpg" loop playsinline controls>
-  <source src="https://res.cloudinary.com/nuxt/video/upload/v1588095794/nuxt-full-static_rnnbvm.webm" type="video/webm" />
-  <source src="https://res.cloudinary.com/nuxt/video/upload/v1592503417/nuxt-full-static_rnnbvm.mp4" type="video/mp4" />
-  <source src="https://res.cloudinary.com/nuxt/video/upload/v1588095794/nuxt-full-static_rnnbvm.ogv" type="video/ogg" />
+<video poster="https://res.cloudinary.com/nuxt/video/upload/v1595852304/nuxt-smart-generate_pjaat1.jpg" loop="loop" plays-inline="true" controls="controls">
+  <source src="https://res.cloudinary.com/nuxt/video/upload/v1595852304/nuxt-smart-generate_pjaat1.webm" type="video/webm">
+  <source src="https://res.cloudinary.com/nuxt/video/upload/v1595852304/nuxt-smart-generate_pjaat1.mp4" type="video/mp4">
+  <source src="https://res.cloudinary.com/nuxt/video/upload/v1595852304/nuxt-smart-generate_pjaat1.ogv" type="video/ogg">
 </video>

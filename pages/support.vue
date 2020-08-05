@@ -20,7 +20,7 @@
             </template>
             <template v-slot:team>
               <NuxtLink to="/team" class="text-nuxt-green underline">
-                NuxtJS ekibi
+                NuxtJS team
               </NuxtLink>
             </template>
           </i18n>
@@ -144,9 +144,9 @@ export default {
     TechnicalSupportIllustration
   },
   head() {
-    const title = 'NuxtJS Desteği'
+    const title = 'The NuxtJS Support'
     const description =
-      'Ekibimiz NuxtJS uygulamalarınız için resmi bir danışmanlık desteği sunuyor.'
+      'Our NuxtJS team now offers official consulting services for your NuxtJS applications.'
 
     return {
       title,

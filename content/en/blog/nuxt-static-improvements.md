@@ -58,7 +58,7 @@ The static site generation of our projects on content changes are now **~3.6x ti
 
 </base-alert>
 
-Project links: [Basic](https://github.com/pi0/nuxt-static-demo), [Strapi Module Docs](https://github.com/nuxt-community/strapi-module/tree/master/docs), [Content Module Docs](https://github.com/nuxt/content/tree/master/docs) and [Nuxt Docs](https://github.com/nuxt/nuxtjs.org/tree/dev).
+Project links: [Basic](https://github.com/pi0/nuxt-static-demo), [Strapi Module Docs](https://github.com/nuxt-community/strapi-module/tree/master/docs), [Content Module Docs](https://github.com/nuxt/content/tree/master/docs) and [Nuxt Docs](https://github.com/nuxt/nuxtjs.org).
 
 ## Using in your projects
 

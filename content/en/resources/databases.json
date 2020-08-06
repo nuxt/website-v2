@@ -16,7 +16,6 @@
         "Authentication support",
         "RESTful methods",
         "Adaptive SDK for API entities",
-        "Reference your Tailwind config in your app",
         "Handle errors with hooks"
       ],
       "install": "@nuxtjs/strapi",

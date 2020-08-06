@@ -1,59 +1,59 @@
 ---
-title: Installation
-description: Here, you will find information on setting up and running a Nuxt.js project in 4 steps.
+title: Instalasi
+description: Di sini, Anda akan menemukan informasi tentang menyiapkan dan menjalankan proyek Nuxt.js dalam 4 langkah.
 position: 1
 category: get-started
 csb_link: https://codesandbox.io/embed/github/nuxt-academy/guides-examples/tree/master/01_get_started/01_installation?fontsize=14&hidenavigation=1&theme=dark
 ---
 
-## Prerequisites
+## Persyaratan
 
-Here, you will find information on setting up and running a Nuxt.js project in 4 steps.
+Di sini, Anda akan menemukan informasi tentang menyiapkan dan menjalankan proyek Nuxt.js dalam 4 langkah.
 
 <base-alert type="info">
 
-Another way to get started with Nuxt.js is to use [CodeSandbox](https://template.nuxtjs.org) which is a great way for quickly playing around with Nuxt.js and/or sharing your code with other people.
+Cara lain untuk memulai dengan Nuxt.js adalah dengan menggunakan [CodeSandbox](https://template.nuxtjs.org) yang merupakan cara terbaik untuk bermain-main dengan cepat dengan Nuxt.js dan / atau berbagi kode Anda dengan orang lain.
 
 </base-alert>
 
 ### Node
 
-[node](https://nodejs.org/en/download/) - at least v8.9.0
+[node](https://nodejs.org/en/download/) - setidaknya v8.9.0
 
-_We recommend you have the latest version installed._
+_Kami menyarankan Anda menginstal versi terbaru._
 
 ### Text editor
 
-Use whatever you like, but we recommend [VSCode](https://code.visualstudio.com/).
+Gunakan apa pun yang Anda suka, tetapi kami menyarankan [VSCode](https://code.visualstudio.com/).
 
 ### Terminal
 
-Use whatever you like, but we recommend using VSCode's [integrated terminal](https://code.visualstudio.com/docs/editor/integrated-terminal).
+Gunakan apa pun yang Anda suka, tetapi kami merekomendasikan menggunakan [integrated terminal](https://code.visualstudio.com/docs/editor/integrated-terminal) VSCode.
 
-## Starting from scratch
+## Mulai dari awal
 
-Creating a Nuxt.js project from scratch only requires one file and one directory.
+Membuat proyek Nuxt.js dari awal hanya membutuhkan satu file dan satu direktori.
 
-In this particular example, we will use the terminal to create the directories and files, but feel free to create them using your editor of choice.
+Dalam contoh khusus ini, kami akan menggunakan terminal untuk membuat direktori dan file, tetapi jangan ragu untuk membuatnya menggunakan editor pilihan Anda.
 
-### Set up your project
+### Siapkan proyek Anda
 
-To get started, create an empty directory with the name of your project and navigate into it:
+Untuk memulai, buat direktori kosong dengan nama proyek Anda dan navigasikan ke dalamnya:
 
 ```bash
 mkdir <project-name>
 cd <project-name>
 ```
 
-_Replace `<project-name>` with the name of your project._
+Ganti `<project-name>` dengan nama proyek Anda._
 
-Then create a file named `package.json`:
+Kemudian buat file bernama `package.json`:
 
 ```bash
 touch package.json
 ```
 
-Open the package.json file in your favorite code editor and fill it with this JSON content:
+Buka file package.json di editor kode favorit Anda dan isi dengan konten JSON ini:
 
 ```json{}[package.json]
 {
@@ -67,15 +67,15 @@ Open the package.json file in your favorite code editor and fill it with this JS
 }
 ```
 
-`scripts` define Nuxt.js commands that will be launched with the command `npm run <command>`.
+`scripts` tentukan perintah Nuxt.js yang akan diluncurkan dengan perintah `npm run <command>`.
 
-#### **What is a package.json file?**
+#### **Apa itu file package.json?**
 
-The `package.json` is like the ID card of your project. If you don't know what the `package.json` file is, we highly recommend you to have a quick read on the [NPM documentation](https://docs.npmjs.com/creating-a-package-json-file).
+Ini `package.json` seperti kartu ID proyek Anda. Jika Anda tidak tahu apa `package.json` file tersebut, kami sangat menyarankan Anda untuk membaca sekilas [dokumentasi NPM](https://docs.npmjs.com/creating-a-package-json-file).
 
 ### Install nuxt
 
-Once the `package.json` has been created, add `nuxt` to your project via `npm` or `yarn` like so below:
+Setelah `package.json` dibuat, tambahkan `nuxt` ke proyek Anda melalui `npm` atau `yarn` seperti dibawah ini:
 
 <code-group>
   <code-block label="Yarn" active>
@@ -94,33 +94,33 @@ npm install nuxt
   </code-block>
 </code-group>
 
-This command will add `nuxt` as a dependency to your project and it will add it to your `package.json` automatically. The `node_modules` directory will also be created which is where all your installed packages and their dependencies are stored.
+Perintah ini akan ditambahkan `nuxt` sebagai ketergantungan pada proyek Anda dan akan ditambahkan ke `package.json` Anda secara otomatis. Direktori `node_modules` juga akan dibuat yang mana semua paket yang terinstal dan dependensi mereka disimpan.
 
 <base-alert type="info">
 
-A `yarn.lock` or `package-lock.json` is also created which ensures a consistent install and compatible dependencies of your packages installed in your project.
+File `yarn.lock` atau `package-lock.json` juga dibuat untuk memastikan penginstalan yang konsisten dan dependensi yang kompatibel dari paket yang diinstal di proyek Anda.
 
 </base-alert>
 
-### Create your first page
+### Buat halaman pertama Anda
 
-Nuxt.js transforms every `*.vue` file inside the `pages` directory as a route for the application.
+Nuxt.js mengubah setiap `*.vue` file di dalam direktori `pages` sebagai rute untuk aplikasi.
 
-Create the `pages` directory in your project:
+Buat direktori `pages` di proyek Anda:
 
 ```bash
 mkdir pages
 ```
 
-Then, create an `index.vue` file in the `pages` directory:
+Lalu buat file `index.vue` di dalam direktori `pages`:
 
 ```bash
 touch pages/index.vue
 ```
 
-It is important that this page is called `index.vue` as this will be the default page Nuxt shows when the application opens. It is the home page and it must be called index.
+Halaman ini penting untuk dipanggil `index.vue` karena ini akan menjadi halaman default yang ditampilkan Nuxt saat aplikasi dijalankan. Ini adalah beranda dan harus disebut indeks.
 
-Open the `index.vue` file in your editor and add the following content:
+Buka file `index.vue` di editor Anda dan tambahkan konten berikut:
 
 ```html{}[pages/index.vue]
 <template>
@@ -128,9 +128,9 @@ Open the `index.vue` file in your editor and add the following content:
 </template>
 ```
 
-### Start the project
+### Memulai proyeknya
 
-Run your project by typing one of the following commands below in your terminal:
+Jalankan proyek Anda dengan mengetik salah satu dari perintah berikut di bawah ini di terminal Anda:
 
 <code-group>
   <code-block label="Yarn" active>
@@ -151,37 +151,38 @@ npm run dev
 
 <base-alert type="info">
 
-We use the the dev command when running our application in development mode.
+Kami menggunakan perintah dev ketika menjalankan aplikasi kami dalam mode pengembangan.
 
 </base-alert>
 
-The application is now running on **[http://localhost:3000](http://localhost:3000/).**
+Aplikasi sekarang berjalan di **[http://localhost:3000](http://localhost:3000/).**
 
-Open it in your browser by clicking the link in your terminal and you should see the text "Hello World" we copied in the previous step.
+Buka di browser Anda dengan mengklik link di terminal Anda dan Anda akan melihat teks "Hello World" yang kami salin di langkah sebelumnya.
 
 <base-alert type="info">
 
-When launching Nuxt.js in development mode, it will listen for file changes in most directories, so there is no need to restart the application when e.g. adding new pages
+Saat meluncurkan Nuxt.js dalam mode pengembangan, ia akan mendengarkan perubahan file di sebagian besar direktori, jadi tidak perlu memulai ulang aplikasi saat misalnya menambahkan halaman baru.
 
 </base-alert>
 
 <base-alert type="warning">
 
-When you run the dev command it will create .nuxt folder. This folder should be ignored from version control. You can ignore files by creating a .gitignore file at the root level and adding .nuxt.
+Saat Anda menjalankan perintah dev, folder .nuxt akan dibuat. Folder ini harus
+diabaikan dari kontrol versi. Anda dapat mengabaikan file dengan membuat file .gitignore di tingkat root dan menambahkan .nuxt.
 
 </base-alert>
 
-### Bonus step
+### Langkah Bonus
 
-Create a page named `fun.vue` in the `pages` directory.
+Buat halaman bernama `fun.vue` di dalam direktori `pages`.
 
-Add a `<template></template>` and include a heading with a funny sentence inside.
+Tambahkan `<template></template>` dan sertakan judul dengan kalimat lucu di dalamnya.
 
-Then, go to your browser and see your new page on **[http://localhost:3000/fun](http://localhost:3000/fun).**
+Kemudian, buka browser Anda dan lihat halaman baru Anda di **[http://localhost:3000/fun](http://localhost:3000/fun).**
 
 <base-alert type="info">
 
-Create a directory name `more-fun` and put an `index.vue` file inside. This will give the same result as creating a `more-fun.vue` file
+Buat nama direktori `more-fun` dan letakan file `index.vue` di dalamnya. TIni akan memberikan hasil yang sama seperti membuat file `more-fun.vue`.
 
 </base-alert>
 
@@ -189,11 +190,11 @@ Create a directory name `more-fun` and put an `index.vue` file inside. This will
   <code-sandbox  :src="csb_link"></code-sandbox>
 </app-modal>
 
-## Using create-nuxt-app
+## Menggunakan create-nuxt-app
 
-To get started quickly you can use the [create-nuxt-app](https://github.com/nuxt/create-nuxt-app).
+Untuk memulai dengan cepat, Anda dapat menggunakan aplikasi [create-nuxt-app](https://github.com/nuxt/create-nuxt-app).
 
-Make sure you have npx installed (npx is shipped by default since NPM 5.2.0) or npm v6.1 or yarn.
+Pastikan Anda telah menginstal npx (npx dikirimkan secara default sejak NPM 5.2.0) atau npm v6.1 atau yarn.
 
 <code-group>
   <code-block label="Yarn" active>
@@ -220,7 +221,7 @@ npm init nuxt-app <project-name>
 
 </code-group>
 
-It will ask you some questions (name, Nuxt options, UI framework, TypeScript, linter, testing framework, etc.), when answered, it will install all the dependencies. The next step is to navigate to the project folder and launch it:
+Ini akan menanyakan beberapa pertanyaan (nama, opsi Nuxt, kerangka UI, TypeScript, linter, kerangka pengujian, dll.), Ketika dijawab, itu akan menginstal semua dependensi. Langkah selanjutnya adalah menavigasi ke folder proyek dan meluncurkannya:
 
 <code-group>
   <code-block label="Yarn" active>
@@ -241,4 +242,4 @@ npm run dev
   </code-block>
 </code-group>
 
-The application is now running on [http://localhost:3000](http://localhost:3000). Well done!
+Aplikasi sekarang berjalan di [http://localhost:3000](http://localhost:3000). Sudah selesai dilakukan dengan baik!

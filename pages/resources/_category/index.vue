@@ -15,9 +15,19 @@
           class="light:bg-light-surface dark:bg-dark-surface rounded p-4 sm:p-8 lg:p-4 light:hover:bg-gray-200 dark:hover:bg-gray-800 cursor-pointer transition-colors duration-300 ease-linear"
         >
           <NuxtLink :to="toLink(cat)">
-            <img :src="cat.logo" :alt="cat.title" />
-            <h3>{{ cat.title }}</h3>
-            <p>{{ cat.description }}</p>
+            <img :src="cat.logo" :alt="cat.title" class="pb-2" />
+            <h3 class="pb-2">
+              {{ cat.title }}
+            </h3>
+            <p class="pb-2">
+              {{ cat.description }}
+            </p>
+            <span
+              data-v-563be05c=""
+              class="truncate uppercase tracking-wider font-medium text-ss px-2 py-1 rounded-full mr-2 mb-2 border border-light-border dark:border-dark-border transition-colors duration-300 ease-linear"
+            >
+              {{ cat.author }}
+            </span>
           </NuxtLink>
         </div>
       </div>
@@ -44,23 +54,4 @@ export default {
 }
 </script>
 
-<style scoped>
-img {
-  max-width: 40px;
-  max-height: 40px;
-}
-.list-container {
-  flex-direction: column;
-  max-width: 100%;
-  flex: 1;
-  justify-content: center;
-  align-items: stretch;
-}
-
-.list-item {
-  flex-grow: 0;
-  flex-basis: 33.333333333333336%;
-  min-width: 0;
-  padding: 2%;
-}
-</style>
+<style scoped></style>

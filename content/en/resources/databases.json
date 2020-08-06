@@ -2,24 +2,26 @@
   "title": "Databases",
   "categories": [
     {
-      "title": "hasura",
-      "description": "A utility-first CSS framework for rapidly building custom designs.",
-      "logo": "https://stephenafamo.com/blog/wp-content/uploads/2019/07/Tailwind-CSS.jpg",
-      "github": "https://github.com/tailwindlabs/tailwindcss",
-      "author": "tailwindCSS",
-      "label": "taiwlwindCSS",
-      "link": "https://tailwindcss.com/",
-      "slug": "api"
-    },
-    {
       "title": "strapi",
-      "description": "All about bootstrap",
-      "logo": "",
-      "github": "",
-      "author": "",
-      "label": "bootstrap",
-      "link": "",
-      "slug": "api2"
+      "description": "Design APIs fast, manage content easily",
+      "logo": "https://strapi.nuxtjs.org/logo-light.svg",
+      "image": "https://strapi.nuxtjs.org/preview.png",
+      "github": "https://github.com/nuxt-community/strapi-module",
+      "author": "nuxt",
+      "label": "nuxt",
+      "link": "https://strapi.nuxtjs.org/",
+      "slug": "strapi",
+      "featured": true,
+      "features": [
+        "Authentication support",
+        "RESTful methods",
+        "Adaptive SDK for API entities",
+        "Reference your Tailwind config in your app",
+        "Handle errors with hooks"
+      ],
+      "install": "@nuxtjs/strapi",
+      "config": "modules: ['@nuxtjs/strapi']",
+      "docs": "https://strapi.nuxtjs.org/"
     }
   ]
 }

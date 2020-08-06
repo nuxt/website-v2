@@ -4,53 +4,24 @@
     {
       "title": "tailwindCSS",
       "description": "A utility-first CSS framework for rapidly building custom designs.",
-      "logo": "https://stephenafamo.com/blog/wp-content/uploads/2019/07/Tailwind-CSS.jpg",
+      "logo": "https://tailwindcss.nuxtjs.org/logo-light.svg",
+      "image": "https://tailwindcss.nuxtjs.org/preview.png",
       "github": "https://github.com/tailwindlabs/tailwindcss",
-      "author": "tailwindCSS",
-      "label": "taiwlwindCSS",
+      "author": "nuxt",
+      "label": "nuxt",
       "link": "https://tailwindcss.com/",
       "slug": "tailwind",
-      "featured": true
-    },
-    {
-      "title": "tailwindCSS",
-      "description": "A utility-first CSS framework for rapidly building custom designs.",
-      "logo": "https://stephenafamo.com/blog/wp-content/uploads/2019/07/Tailwind-CSS.jpg",
-      "github": "https://github.com/tailwindlabs/tailwindcss",
-      "author": "tailwindCSS",
-      "label": "taiwlwindCSS",
-      "link": "https://tailwindcss.com/",
-      "slug": "tailwind2"
-    },
-    {
-      "title": "tailwindCSS",
-      "description": "A utility-first CSS framework for rapidly building custom designs.",
-      "logo": "https://stephenafamo.com/blog/wp-content/uploads/2019/07/Tailwind-CSS.jpg",
-      "github": "https://github.com/tailwindlabs/tailwindcss",
-      "author": "tailwindCSS",
-      "label": "taiwlwindCSS",
-      "link": "https://tailwindcss.com/",
-      "slug": "tailwind3"
-    },
-    {
-      "title": "bootstap",
-      "description": "All about bootstrap",
-      "logo": "",
-      "github": "",
-      "author": "",
-      "label": "bootstrap",
-      "link": "bootstrap",
-      "slug": "bootstrap"
-    },
-    {
-      "title": "bootstap",
-      "description": "All about bootstrap",
-      "logo": "",
-      "github": "",
-      "author": "",
-      "label": "bootstrap",
-      "link": "bootstrap",
-      "slug": "bootstrap"
+      "featured": true,
+      "features": [
+        "Zero configuration to start",
+        "PurgeCSS included for minimal CSS",
+        "Use latest CSS features (Stage 1)",
+        "Reference your Tailwind config in your app",
+        "Extendable by Nuxt modules"
+      ],
+      "install": "--dev @nuxtjs/tailwindcss",
+      "config": "buildModules: ['@nuxtjs/tailwindcss']",
+      "docs": "https://tailwindcss.nuxtjs.org/"
     }
   ]
 }

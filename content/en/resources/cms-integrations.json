@@ -2,24 +2,26 @@
   "title": "CMS Integrations",
   "categories": [
     {
-      "title": "hasura",
-      "description": "A utility-first CSS framework for rapidly building custom designs.",
-      "logo": "https://stephenafamo.com/blog/wp-content/uploads/2019/07/Tailwind-CSS.jpg",
-      "github": "https://github.com/tailwindlabs/tailwindcss",
-      "author": "tailwindCSS",
-      "label": "taiwlwindCSS",
-      "link": "https://tailwindcss.com/",
-      "slug": "api"
-    },
-    {
-      "title": "strapi",
-      "description": "All about bootstrap",
-      "logo": "",
-      "github": "",
-      "author": "",
-      "label": "bootstrap",
-      "link": "",
-      "slug": "api2"
+      "title": "Content",
+      "description": "A Git-based Headless CMS",
+      "logo": "https://content.nuxtjs.org/logo-light.svg",
+      "image": "https://content.nuxtjs.org/preview.png",
+      "github": "https://github.com/nuxt/content",
+      "author": "nuxt",
+      "label": "nuxt",
+      "link": "https://content.nuxtjs.org/",
+      "slug": "content",
+      "featured": true,
+      "latest": true,
+      "features": [
+        "Blazing fast hot reload in development",
+        "Vue components in Markdown",
+        "Full-text search",
+        "Table of contents generation"
+      ],
+      "install": "--dev @nuxt/content",
+      "config": "modules: ['@nuxt/content']",
+      "docs": "https://content.nuxtjs.org/"
     }
   ]
 }

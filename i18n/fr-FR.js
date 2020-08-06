@@ -210,7 +210,7 @@ module.exports = {
     technical: {
       title: 'Technical support',
       description:
-        'Get project audits, app deployments, custom development and technical support from the NuxtJS NuxtJS team.',
+        'Get project audits, app deployments, custom development and technical support from the NuxtJS team.',
       start: 'Start chat',
       partner: {
         pre: 'We partnered with',

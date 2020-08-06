@@ -73,7 +73,8 @@ module.exports = {
       openSource: 'sumber terbuka',
       get_started: 'memulai',
       get_updates: 'Dapatkan pembaruan NuxtJS ke kotak masuk Anda setiap bulan',
-      video: 'Video diproduksi oleh {company}, unduh gratis mereka {cheatSheet}',
+      video:
+        'Video diproduksi oleh {company}, unduh gratis mereka {cheatSheet}',
       cheatSheet: 'Nuxt Cheat Sheet.'
     },
     why: {
@@ -87,7 +88,7 @@ module.exports = {
       modular: {
         title: 'Modular',
         description:
-          "Nuxt didasarkan pada arsitektur modular yang kuat. Anda dapat memilih dari lebih dari 50 modul untuk membuat pengembangan Anda lebih cepat dan lebih mudah. Anda tidak harus menemukan kembali roda untuk mendapatkan manfaat PWA, menambahkan Google Analytics ke halaman Anda atau menghasilkan peta situs."
+          'Nuxt didasarkan pada arsitektur modular yang kuat. Anda dapat memilih dari lebih dari 50 modul untuk membuat pengembangan Anda lebih cepat dan lebih mudah. Anda tidak harus menemukan kembali roda untuk mendapatkan manfaat PWA, menambahkan Google Analytics ke halaman Anda atau menghasilkan peta situs.'
       },
       performant: {
         title: 'Kinerja',
@@ -108,7 +109,7 @@ module.exports = {
       spa: {
         title: 'Single Page Application (SPA)',
         description:
-          "Tidak memerlukan SSR atau Pembuatan Situs Statis tetapi masih ingin mengambil untung dari manfaat yang diberikan Nuxt? Apakah Anda perlahan-lahan mentransisikan aplikasi Anda dan ingin memulai yang ringan? Maka mode SPA tradisional kemungkinan akan menjadi pilihan Anda. Hasilnya akan menjadi Vue SPA khas seperti yang Anda tahu tetapi dipengaruhi oleh konfigurasi Nuxt Anda dan kerangka itu sendiri."
+          'Tidak memerlukan SSR atau Pembuatan Situs Statis tetapi masih ingin mengambil untung dari manfaat yang diberikan Nuxt? Apakah Anda perlahan-lahan mentransisikan aplikasi Anda dan ingin memulai yang ringan? Maka mode SPA tradisional kemungkinan akan menjadi pilihan Anda. Hasilnya akan menjadi Vue SPA khas seperti yang Anda tahu tetapi dipengaruhi oleh konfigurasi Nuxt Anda dan kerangka itu sendiri.'
       },
       ssg: {
         title: 'Statically Generated',
@@ -208,7 +209,7 @@ module.exports = {
     technical: {
       title: 'Technical support',
       description:
-        'Dapatkan audit proyek, penerapan aplikasi, pengembangan kustom, dan dukungan teknis dari tim NuxtJS NuxtJS.',
+        'Dapatkan audit proyek, penerapan aplikasi, pengembangan kustom, dan dukungan teknis dari tim NuxtJS.',
       start: 'Memulai obrolan',
       partner: {
         pre: 'Kami bermitra dengan',
@@ -233,7 +234,8 @@ module.exports = {
     description:
       'Temukan artikel dari {nuxtTeam} dan {ambassadors} tentang NuxtJS, termasuk tip dan trik!',
     ambassadors: 'ambassadors',
-    contribute: 'Tertangkap kesalahan atau ingin berkontribusi pada posting blog ini?'
+    contribute:
+      'Tertangkap kesalahan atau ingin berkontribusi pada posting blog ini?'
   },
   guide: {
     release_notes: 'Catatan Rilis',
@@ -250,7 +252,8 @@ module.exports = {
   contribute: {
     title: 'Kontributor',
     docs: 'Jumpa kesalahan atau ingin berkontribusi pada dokumentasi ini?',
-    blog: 'Tertangkap kesalahan atau ingin berkontribusi pada posting blog ini?',
+    blog:
+      'Tertangkap kesalahan atau ingin berkontribusi pada posting blog ini?',
     edit_on_github: 'Sunting halaman ini di GitHub!',
     msg1:
       'Kontribusi untuk halaman ini sekarang ditutup. Jika Anda ingin berkontribusi, silakan periksa',
@@ -294,7 +297,8 @@ module.exports = {
     }
   },
   cookies: {
-    consent: 'Kami menggunakan Cookie untuk analisis pengguna dan peningkatan pada halaman!',
+    consent:
+      'Kami menggunakan Cookie untuk analisis pengguna dan peningkatan pada halaman!',
     linkLabel: 'Pelajari tentang cookie',
     button: 'Mengerti'
   }

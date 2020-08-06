@@ -1,13 +1,13 @@
 ---
-title: Upgrading
-description: Upgrading Nuxt.js is quick, but more involved than updating your package.json
+title: Upgrade
+description: Memutakhirkan Nuxt.js cepat, tetapi lebih melibatkan daripada memperbarui package.json Anda
 position: 5
 category: get-started
 ---
 
-> Upgrading Nuxt.js is quick, but more involved than updating your package.json
+> Memutakhirkan Nuxt.js cepat, tetapi lebih melibatkan daripada memperbarui package.json Anda
 
-If you are upgrading to Nuxt v2.14 and want to use static hosting then you will need to add [target:static](/guides/features/deployment-targets#static-hosting) to your nuxt.config.js file in order for the generate command to work properly.
+Jika Anda mengupgrade ke Nuxt v2.14 dan ingin menggunakan hosting statis maka Anda perlu menambahkan [target:static](/guides/features/deployment-targets#static-hosting) ke file nuxt.config.js agar perintah generate berfungsi dengan benar.
 
 ```js{}[nuxt.config.js]
 export default {
@@ -15,23 +15,23 @@ export default {
 }
 ```
 
-## Getting Started
+## Memulai
 
-1. Check the [release notes](/guide/release-notes) for the version you wish to upgrade to see if there are any additional instructions for that particular release.
-2. Update the version specified for the `nuxt` package in your `package.json` file.
+1. Periksa [catatan rilis](/guide/release-notes) untuk versi yang ingin Anda tingkatkan untuk melihat apakah ada instruksi tambahan untuk rilis tersebut.
+2. Perbarui versi yang ditentukan untuk paket `nuxt` di file `package.json`.
 
-After this step instructions vary depending upon whether you are using Yarn or NPM. _[Yarn](https://yarnpkg.com/en/docs/usage) is the preferred package manager for working with Nuxt as it is the development tool which tests have been written against._
+Setelah langkah ini, instruksi bervariasi tergantung pada apakah Anda menggunakan Yarn atau NPM.. _[Yarn](https://yarnpkg.com/en/docs/usage) adalah manajer paket yang lebih disukai untuk bekerja dengan Nuxt karena ini adalah alat pengembangan yang menjadi dasar pengujian._
 
 ## Yarn
 
-3. remove `yarn.lock` file
-4. remove `node_modules` directory
-5. Run the `yarn` command
-6. After installation has completed and you have run your tests consider upgrading other dependencies as well. The `yarn outdated` command can be used.
+1. hapus file `yarn.lock`
+2. hapus direktori `node_modules`
+3. Jalankan perintah `yarn`
+4. Setelah penginstalan selesai dan Anda telah menjalankan pengujian, pertimbangkan untuk mengupgrade dependensi lain juga. Jalankan perintah `yarn outdated` dapat digunakan.
 
 ## NPM
 
-3. remove `package-lock.json` file
-4. remove `node_modules` directory
-5. Run the `npm install` command
-6. After installation has completed and you have run your tests consider upgrading other dependencies as well. The `npm outdated` command can be used.
+1. hapus file `package-lock.json`
+2. hapus direktori `node_modules`
+3. Jalankan perintah `npm install`
+4. Setelah penginstalan selesai dan Anda telah menjalankan pengujian, pertimbangkan untuk mengupgrade dependensi lain juga. Jalankan perintah `npm outdated` dapat digunakan.

@@ -1,96 +1,96 @@
 ---
-title: Directory Structure
-description: The default Nuxt.js application structure is intended to provide a great starting point for both small and large applications. You are free to organize your application however you like and can create other directories as and when you need them.
+title: Struktur direktori
+description: Struktur aplikasi Nuxt.js default dimaksudkan untuk memberikan titik awal yang bagus untuk aplikasi kecil dan besar. Anda bebas untuk mengatur aplikasi Anda sesuka Anda dan dapat membuat direktori lain jika Anda membutuhkannya.
 position: 3
 category: get-started
 csb_link: https://codesandbox.io/embed/github/nuxt-academy/guides-examples/tree/master/01_get_started/03_directory_structure?fontsize=14&hidenavigation=1&theme=dark
 ---
 
-The default Nuxt.js application structure is intended to provide a great starting point for both small and large applications. You are free to organize your application however you like and can create other directories as and when you need them.
+Struktur aplikasi Nuxt.js default dimaksudkan untuk memberikan titik awal yang bagus untuk aplikasi kecil dan besar. Anda bebas untuk mengatur aplikasi Anda sesuka Anda dan dapat membuat direktori lain jika Anda membutuhkannya.
 
-Let's create the directories and files that do not exist in our project yet.
+Mari buat direktori dan file yang belum ada di proyek kita.
 
 ```bash
 mkdir components assets static
 touch nuxt.config.js
 ```
 
-These are the main directories and files that we use when building an Nuxt.js application. You will find an explanation of each of them below.
+Ini adalah direktori dan file utama yang kami gunakan saat membangun aplikasi Nuxt.js. Anda akan menemukan penjelasan masing-masing di bawah ini.
 
 <base-alert type="info">
 
-Creating directories with these names enables features in your Nuxt.js project.
+Membuat direktori dengan nama ini untuk mengaktifkan fitur dalam proyek Nuxt.js Anda.
 
 </base-alert>
 
-## Directories
+## Direktori
 
-### The pages directory
+### Direktori pages
 
-The `pages` directory contains your application's views and routes. As you've learned in the last chapter, Nuxt.js reads all the `.vue` files inside this directory and uses them to create the application router.
+Direktori `pages` berisi view dan rute aplikasi Anda. Seperti yang telah Anda pelajari di bab terakhir, Nuxt.js membaca semua file `.vue` di dalam direktori ini dan menggunakannya untuk membuat router aplikasi.
 
 <base-alert type="next">
 
-Learn more about the [pages directory](/guides/directory-structure/pages)
+Pelajari lebih lanjut tentang [direktori pages](/guides/directory-structure/pages)
 
 </base-alert>
 
-### The components directory
+### Direktori components
 
-The `components` directory is where you put all your Vue.js components which are then imported into your pages.
+Direktori `components` adalah tempat Anda meletakkan semua komponen Vue.js yang kemudian diimpor ke halaman Anda.
 
-With Nuxt.js you can create your components and auto import them into your .vue files meaning there is no need to manually import them in the script section. Nuxt.js will scan and auto import these for you once you have components set to true.
+Dengan Nuxt.js Anda dapat membuat komponen Anda dan mengimpornya secara otomatis ke file .vue Anda berarti tidak perlu mengimpornya secara manual di bagian skrip. Nuxt.js akan memindai dan mengimpor ini secara otomatis untuk Anda setelah Anda menyetel komponen ke true.
 
 <base-alert type="next">
 
-Learn more about the [components directory](/guides/directory-structure/components)
+Pelajari lebih lanjut tentang [direktori components](/guides/directory-structure/components)
 
 </base-alert>
 
-### The assets directory
+### Direktori assets
 
-The `assets` directory contains your uncompiled assets such as your styles, images, or fonts.
+Direktori `assets` berisi assets Anda yang tidak dikompilasi seperti styles, images, atau fonts Anda.
 
 <base-alert type="next">
 
-Learn more about the [assets directory](/guides/directory-structure/assets)
+Pelajari lebih lanjut tentang [direktori assets](/guides/directory-structure/assets)
 
 </base-alert>
 
-### The static directory
+### Direktori static
 
-The `static` directory is directly mapped to the server root and contains files that have to keep their names (e.g. `robots.txt`) _or_ likely won't change (e.g. the favicon)
+Direktori `static` secara langsung dipetakan ke root server dan berisi file yang harus tetap menggunakan namanya (mis. `robots.txt`) _atau_ kemungkinan besar tidak akan berubah (mis. favicon).
 
 <base-alert type="next">
 
-Learn more about the [static directory](/guides/directory-structure/static)
+Pelajari lebih lanjut tentang [direktori static](/guides/directory-structure/static)
 
 </base-alert>
 
-### The nuxt.config.js file
+### File nuxt.config.js
 
-The `nuxt.config.js` file is the single point of configuration for Nuxt.js. If you want to add modules or override default settings, this is the place to apply the changes.
+File `nuxt.config.js` adalah satu titik konfigurasi untuk Nuxt.js. Jika Anda ingin menambahkan modul atau mengganti pengaturan default, ini adalah tempat untuk menerapkan perubahan.
 
 <base-alert type="next">
 
-Learn more about the [nuxt.config.js file](/guides/directory-structure/nuxt-config)
+Pelajari lebih lanjut tentang [file nuxt.config.js](/guides/directory-structure/nuxt-config)
 
 </base-alert>
 
-### The package.json file
+### File package.json
 
-The `package.json` file contains all the dependencies and scripts for your application.
+File `package.json` berisi semua dependensi dan skrip untuk aplikasi Anda.
 
 <app-modal>
-  <code-sandbox  :src="csb_link"></code-sandbox>
+  <code-sandbox :src="csb_link"></code-sandbox>
 </app-modal>
 
-## More about the project structures
+## Lebih lanjut tentang struktur proyek
 
-There are more helpful directories and files, including [content](/guides/directory-structure/content), [layouts](/guides/directory-structure/layouts), [middleware](/guides/directory-structure/middleware), [modules](/guides/directory-structure/modules), [plugins](/guides/directory-structure/plugins) and [store](/guides/directory-structure/store) . As they aren't necessary for small applications, they are not covered here.
+Ada lebih banyak direktori dan file yang berguna, termasuk [content](/guides/directory-structure/content), [layouts](/guides/directory-structure/layouts), [middleware](/guides/directory-structure/middleware), [modules](/guides/directory-structure/modules), [plugins](/guides/directory-structure/plugins) dan [store](/guides/directory-structure/store). Karena tidak diperlukan untuk aplikasi kecil, mereka tidak dibahas di sini.
 
 <base-alert type="next">
 
-To learn about all directories in detail, feel free to read the the [Directory Structure book](/guides/directory-structure/nuxt).
+Untuk mempelajari tentang semua direktori secara mendetail, silakan baca [Dokumentasi Directory Structure](/guides/directory-structure/nuxt).
 
 </base-alert>

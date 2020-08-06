@@ -1,93 +1,93 @@
 ---
-title: Conclusion
-description: Congratulations you have now created your first Nuxt.js app and you may now consider yourself a Nuxter. But there is so much more to learn and so much more you can do with Nuxt.js. Here are a few recommendations.
+title: Kesimpulan
+description: Selamat Anda sekarang telah membuat aplikasi Nuxt.js pertama Anda dan sekarang Anda dapat menganggap diri Anda seorang Nuxter. Namun masih banyak lagi yang harus dipelajari dan banyak lagi yang dapat Anda lakukan dengan Nuxt.js. Berikut ini beberapa rekomendasi.
 position: 4
 category: get-started
 questions:
-  - question: What is the name of the directory you need to have for Nuxt.js to work?
+  - question: Apa nama direktori yang Anda perlukan agar Nuxt.js berfungsi?
     answers:
       - nuxt
       - pages
       - index
     correctAnswer: pages
-  - question: What is the name of your project ID file?
+  - question: Apa nama file ID proyek Anda?
     answers:
       - package.vue
       - package.json
       - package.js
     correctAnswer: package.json
-  - question: What is the command you type in the terminal to launch your Nuxt.js project?
+  - question: Apa perintah yang Anda ketik di terminal untuk meluncurkan proyek Nuxt.js Anda?
     answers:
       - npm dev
       - npm run dev
       - nuxt dev
     correctAnswer: npm run dev
-  - question: What is the address in the browser where you can see your page in development mode?
+  - question: Apa alamat di browser tempat Anda dapat melihat halaman Anda dalam mode pengembangan?
     answers:
       - http://localhost:3000/
       - http://localhost:3000/project-name:3000
       - http://localhost:3000/nuxt:3000/
     correctAnswer: http://localhost:3000/
-  - question: Where do you put your configuration in?
+  - question: Di mana Anda meletakkan konfigurasi Anda?
     answers:
       - nuxt.config.json
       - config.js
       - nuxt.config.js
     correctAnswer: nuxt.config.js
-  - question: Which directory is not suitable for `.vue` files?
+  - question: Direktori mana yang tidak cocok untuk file `.vue`?
     answers:
       - pages
       - static
       - components
     correctAnswer: static
-  - question: In which directory do you put your styles?
+  - question: Di direktori mana Anda meletakkan styles Anda?
     answers:
       - styles
       - components
       - assets
     correctAnswer: assets
-  - question: In which directory do we put a robots.txt or favicon?
+  - question: Di direktori mana kita meletakkan robots.txt atau favicon?
     answers:
       - assets
       - components
       - static
     correctAnswer: static
-  - question: What component do we use to navigate between pages?
+  - question: Komponen apa yang kami gunakan untuk menavigasi antar halaman?
     answers:
       - '<Nuxt>'
       - '<RouterLink>'
       - '<NuxtLink>'
     correctAnswer: '<NuxtLink>'
-  - question: '`<NuxtLink>` is used for internal links that belong to the Nuxt.js app?'
+  - question: '`<NuxtLink>` digunakan untuk tautan internal milik aplikasi Nuxt.js?'
     answers:
       - True
       - False
     correctAnswer: True
 ---
 
-Congratulations! You have now created your first Nuxt.js app and you may now consider yourself a Nuxter, but there is so much more to learn and so much more you can do with Nuxt.js. Here are a few recommendations:
+Selamat! Anda sekarang telah membuat aplikasi Nuxt.js pertama Anda dan sekarang Anda dapat menganggap diri Anda sebagai Nuxter, tetapi masih banyak yang harus dipelajari dan banyak lagi yang dapat Anda lakukan dengan Nuxt.js. Berikut beberapa rekomendasi:
 
 <base-alert type="next">
 
-Check out the [Concepts book](../concepts/views)
+Silakan lihat [Dokumentasi Concepts](../concepts/views)
 
 </base-alert>
 
 <base-alert type="next">
 
-Working with [asyncData](/guides/features/data-fetching#async-data)
+Berkerja dengan [asyncData](/guides/features/data-fetching#async-data)
 
 </base-alert>
 
 <base-alert type="next">
 
-Choosing between different [Rendering modes](/guides/features/rendering-modes)
+Memilih antara [Mode rendering](/guides/features/rendering-modes) yang berbeda
 
 </base-alert>
 
 <base-alert type="star">
 
-Did you like Nuxt.js so far? Don't forget to [star our project](https://github.com/nuxt/nuxt.js) on GitHub
+Apakah Anda sejauh ini menyukai Nuxt.js? Jangan lupa untuk [membintangi proyek kami](https://github.com/nuxt/nuxt.js) di GitHub.
 
 </base-alert>
 

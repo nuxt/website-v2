@@ -3,7 +3,7 @@
     <div
       class="min-h-screen w-full lg:static lg:max-h-full lg:overflow-visible lg:w-3/4"
     >
-      <div class="flex flex-col">
+      <a :href="resource.docs" class="flex flex-col">
         <img :src="resource.image" :alt="resource.title" />
         <h3
           class="mt-8 empty-after after:block after:border-2 after:rounded dark:after:border-dark-onSurfacePrimary light:after:border-light-onSurfacePrimary after:mt-2 after:mb-1 after:w-4/5 my-2 text-light-onSurfacePrimary dark:text-dark-onSurfacePrimary relative text-xl table transition-colors duration-300 ease-linear"
@@ -44,7 +44,7 @@
           </h3>
           <p>check out the docs for more info</p>
         </div>
-      </div>
+      </a>
     </div>
   </div>
 </template>

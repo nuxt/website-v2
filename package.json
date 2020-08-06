@@ -4,7 +4,7 @@
   "description": "Nuxt.js official website",
   "main": "index.js",
   "dependencies": {
-    "@nuxt/content": "^1.5.3",
+    "@nuxt/content": "^1.6.0",
     "@nuxt/http": "^0.5.10",
     "@nuxtjs/tailwindcss": "^2.1.1",
     "@snackbar/core": "^1.7.0",
@@ -25,7 +25,7 @@
     "node-fetch": "^2.6.0",
     "normalize.css": "^8.0.1",
     "nuxt-edge": "^2.14.0-26597729.aebf0ffe",
-    "nuxt-i18n": "^6.13.6",
+    "nuxt-i18n": "^6.13.7",
     "nuxt-svg-loader": "^1.2.0",
     "prism-themes": "^1.4.0",
     "prismjs": "^1.20.0",

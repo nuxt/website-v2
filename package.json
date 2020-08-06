@@ -28,7 +28,7 @@
     "nuxt-i18n": "^6.13.7",
     "nuxt-svg-loader": "^1.2.0",
     "prism-themes": "^1.4.0",
-    "prismjs": "^1.20.0",
+    "prismjs": "^1.21.0",
     "reading-time": "^1.2.0",
     "v-lazy-image": "^1.4.0",
     "vue-chartjs": "^3.5.0",

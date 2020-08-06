@@ -1,45 +1,45 @@
 ---
 title: Routing
-description: Most websites have more than just one page. For example a home page, about page, contact page etc. In order to show these pages we need a Router.
+description: Sebagian besar situs web memiliki lebih dari satu halaman. Misalnya halaman beranda, tentang halaman, halaman kontak dll. Untuk menampilkan halaman-halaman ini kita membutuhkan sebuah Router.
 position: 2
 category: get-started
 csb_link: https://codesandbox.io/embed/github/nuxt-academy/guides-examples/tree/master/01_get_started/02_routing?fontsize=14&hidenavigation=1&theme=dark
 ---
 
-## Automatic Routes
+## Route Otomatis
 
-Most websites will have more than one page (i.e. a home page, about page, contact page etc.). In order to show these pages, we need a Router. That's where `vue-router` comes in. When working with Vue application, you have to set up a configuration file (i.e. `router.js`) and add all your routes manually to it. Nuxt.js automatically generates the `vue-router` configuration for you, based on your provided Vue files inside the `pages` directory. That means you never have to write a router config again! Nuxt.js also gives you automatic code splitting for all your routes.
+Sebagian besar situs web akan memiliki lebih dari satu halaman (yaitu halaman rumah, tentang halaman, halaman kontak dll.). Untuk menampilkan halaman ini, kita membutuhkan Router. Di situlah `vue-router` masuk. Ketika bekerja dengan aplikasi Vue, Anda harus mengatur file konfigurasi (yaitu `router.js`) dan menambahkan semua rute Anda secara manual ke sana. Nuxt.js secara otomatis membuat konfigurasi `vue-router` untuk Anda, berdasarkan file Vue yang Anda sediakan di dalam direktori `pages`. Itu berarti Anda tidak perlu menulis konfigurasi router lagi! Nuxt.js juga memberi Anda pemisahan kode otomatis untuk semua rute Anda.
 
-In other words, all you have to do to have routing in your application is to create `.vue` files in the `pages` folder.
+Dengan kata lain, yang harus Anda lakukan untuk memiliki perutean di aplikasi Anda adalah membuat file `.vue` di folder `pages`.
 
 <base-alert type="next">
 
-Learn more about [Routing](/guides/features/file-system-routing)
+Pelajari lebih lanjut tentang [Routing](/guides/features/file-system-routing)
 
 </base-alert>
 
-## Navigation
+## Navigasi
 
-To navigate between pages of your app, you should use the [NuxtLink](/guides/features/nuxt-components#the-nuxtlink-component) component. This component is included with Nuxt.js and therefore you don't have to import it like you do with other components. It is similar to the HTML `<a>` tag, except that instead of using a `href="/about"` we use `to="/about"`. If you have used `vue-router` before, you can think of the `<NuxtLink>` as a replacement for `<RouterLink>`
+Untuk menavigasi antar halaman aplikasi Anda, Anda harus menggunakan komponen [NuxtLink](/guides/features/nuxt-components#the-nuxtlink-component). Komponen ini disertakan dengan Nuxt.js dan oleh karena itu Anda tidak perlu mengimpornya seperti yang Anda lakukan dengan komponen lain. Ini mirip dengan tag `<a>` HTML, kecuali bahwa alih-alih menggunakan yang `href="/about"` kita gunakan `to="/about"`. Jika Anda pernah menggunakan `vue-router` sebelumnya, Anda dapat menganggapnya `<NuxtLink>` sebagai pengganti `<RouterLink>`
 
-A simple link to the `index.vue` page in your `pages` folder:
+Tautan sederhana ke halaman `index.vue` di folder `pages` Anda:
 
 ```html{}[pages/index.vue]
 <template>
-  <NuxtLink to="/">Home page</NuxtLink>
+  <NuxtLink to="/">Halaman Beranda</NuxtLink>
 </template>
 ```
 
-For all links to pages within your site, use `<NuxtLink>`. If you have links to other websites you should use the `<a>` tag. See below for an example:
+Untuk semua link ke halaman dalam situs Anda, gunakan `<NuxtLink>`. Jika Anda memiliki tautan ke situs web lain, Anda harus menggunakan tag `<a>`. Lihat contoh di bawah:
 
 ```html{}[pages/index.vue]
 <template>
   <main>
-    <h1>Home page</h1>
+    <h1>Halaman Beranda</h1>
     <NuxtLink to="/about">
-      About (internal link that belongs to the Nuxt App)
+      Tentang (tautan internal milik Aplikasi Nuxt)
     </NuxtLink>
-    <a href="https://nuxtjs.org">External Link to another page</a>
+    <a href="https://nuxtjs.org">Tautan Eksternal ke halaman lain</a>
   </main>
 </template>
 ```
@@ -50,6 +50,6 @@ For all links to pages within your site, use `<NuxtLink>`. If you have links to 
 
 <base-alert type="next">
 
-Learn more about the [NuxtLink component](/guides/features/nuxt-components#the-nuxtlink-component).
+Pelajari lebih lanjut tentang [Komponen NuxtLink](/guides/features/nuxt-components#the-nuxtlink-component).
 
 </base-alert>

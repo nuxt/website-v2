@@ -15,7 +15,7 @@ mkdir components assets static
 touch nuxt.config.js
 ```
 
-These are the main directories and files that we use when building an Nuxt.js application. You will find an explanation of each of them below.
+These are the main directories and files that we use when building a Nuxt.js application. You will find an explanation of each of them below.
 
 <base-alert type="info">
 

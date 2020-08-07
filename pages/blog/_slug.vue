@@ -55,7 +55,7 @@ export default {
     try {
       contributors = (
         await fetch(
-          `https://contributors-api.onrender.com${path}/${slug}`
+          `https://contributors-api.onrender.com/content${path}/${slug}`
         ).then(res => res.json())
       ).map(({ author }) => ({ author }))
     } catch (e) {}
@@ -79,7 +79,7 @@ export default {
   },
   computed: {
     docLink() {
-      return `https://github.com/nuxt/nuxtjs.org/blob/master/content${this.path}.md`
+      return `https://github.com/nuxt/nuxtjs.org/blob/master/content${this.path}/${this.slug}.md`
     },
     ...mapState({
       host: state => state.host,

@@ -6,7 +6,9 @@
           <h1
             class="text-3xl xl:text-4xl text-light-onSurfacePrimary dark:text-dark-onSurfacePrimary font-medium leading-normal mb-6 lg:pt-4"
           >
-            <AppTitle /> {{ $t('support.title.pre') }} <span class="text-nuxt-green">&</span> {{ $t('support.title.post') }}<br />
+            <AppTitle /> {{ $t('support.title.pre') }}
+            <span class="text-nuxt-green">&</span> {{ $t('support.title.post')
+            }}<br />
           </h1>
           <i18n
             path="support.description"

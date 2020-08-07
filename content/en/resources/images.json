@@ -1,0 +1,30 @@
+{
+  "title": "Images",
+  "categories": [
+    {
+      "title": "cloudinary",
+      "description": "Optimize images and videos in your Nuxt.js application.",
+      "logo": "https://res.cloudinary.com/mayashavin/image/upload/q_auto,f_auto,w_200,h_32/v1596609791/nuxt-cld/2",
+      "image": "https://res.cloudinary.com/mayashavin/image/upload/q_auto,f_auto,h_640/v1596608425/nuxt-cld/nuxt_cloudinary_1",
+      "github": "https://github.com/nuxt-community/cloudinary-module",
+      "author": "Maya Shavin",
+      "label": "community",
+      "link": "https://cloudinary.nuxtjs.org/",
+      "slug": "cloudinary",
+      "latest": true,
+      "featured": true,
+      "features": [
+        "On-the-fly url generating for images and videos",
+        "On-the-fly size optimization per browser and device",
+        "Nuxt plugins support",
+        "Story discovery from nuxt modules",
+        "Nuxt components support",
+        "Storybook Generate",
+        "Hot reload support"
+      ],
+      "install": "@nuxtjs/cloudinary",
+      "config": "modules: [ '@nuxtjs/cloudinary']",
+      "docs": "https://cloudinary.nuxtjs.org/"
+    }
+  ]
+}

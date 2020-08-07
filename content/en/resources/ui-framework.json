@@ -2,9 +2,9 @@
   "title": "UI Framework",
   "categories": [
     {
-      "title": "tailwindCSS",
+      "title": "Tailwind CSS",
       "description": "A utility-first CSS framework for rapidly building custom designs.",
-      "logo": "https://tailwindcss.nuxtjs.org/logo-light.svg",
+      "logo": "https://tailwindcss.nuxtjs.org/icon.png",
       "image": "https://tailwindcss.nuxtjs.org/preview.png",
       "github": "https://github.com/tailwindlabs/tailwindcss",
       "author": "nuxt",

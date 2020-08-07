@@ -2,9 +2,9 @@
   "title": "Databases",
   "categories": [
     {
-      "title": "strapi",
+      "title": "Strapi",
       "description": "Design APIs fast, manage content easily",
-      "logo": "https://strapi.nuxtjs.org/logo-light.svg",
+      "logo": "https://strapi.nuxtjs.org/icon.png",
       "image": "https://strapi.nuxtjs.org/preview.png",
       "github": "https://github.com/nuxt-community/strapi-module",
       "author": "nuxt",

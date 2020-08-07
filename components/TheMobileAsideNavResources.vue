@@ -13,6 +13,18 @@
           name="list"
           class="header_mobile_aside_group"
         >
+          <li class="py-2">
+            <NuxtLink
+              class="block dark:text-dark-onSurfacePrimary hover:text-nuxt-lightgreen transition-colors duration-300 ease-linear"
+              active-class
+              exact
+              exact-active-class="text-nuxt-lightgreen"
+              to="/resources"
+              @click.native="show = false"
+            >
+              Featured
+            </NuxtLink>
+          </li>
           <li v-for="link in links" :key="link.title" class="py-2">
             <NuxtLink
               class="block dark:text-dark-onSurfacePrimary hover:text-nuxt-lightgreen transition-colors duration-300 ease-linear"

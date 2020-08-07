@@ -2,9 +2,9 @@
   "title": "Devtools",
   "categories": [
     {
-      "title": "storybook",
+      "title": "Storybook",
       "description": "Build bulletproof UI components faster",
-      "logo": "https://storybook.nuxtjs.org/logo-light.svg",
+      "logo": "https://storybook.nuxtjs.org/icon.png",
       "image": "https://storybook.nuxtjs.org/preview.png",
       "github": "https://github.com/nuxt-community/storybook",
       "author": "nuxt",

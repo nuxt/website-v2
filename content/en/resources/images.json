@@ -2,9 +2,9 @@
   "title": "Images",
   "categories": [
     {
-      "title": "cloudinary",
+      "title": "Cloudinary",
       "description": "Optimize images and videos in your Nuxt.js application.",
-      "logo": "https://res.cloudinary.com/mayashavin/image/upload/q_auto,f_auto,w_200,h_32/v1596609791/nuxt-cld/2",
+      "logo": "https://res.cloudinary.com/cloudinary/image/upload/c_scale,w_200/v1/logo/for_white_bg/cloudinary_icon_for_white_bg.png",
       "image": "https://res.cloudinary.com/mayashavin/image/upload/q_auto,f_auto,h_640/v1596608425/nuxt-cld/nuxt_cloudinary_1",
       "github": "https://github.com/nuxt-community/cloudinary-module",
       "author": "Maya Shavin",

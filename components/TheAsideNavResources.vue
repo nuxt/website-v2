@@ -9,12 +9,28 @@
         class="pt-8 lg:overflow-y-auto lg:block lg:pl-0 lg:pr-8 sticky?lg:h-(screen-24)"
       >
         <h2
-          class="text-xl xl:text-2xl text-light-onSurfacePrimary dark:text-dark-onSurfacePrimary font-medium leading-normal mb-6 lg:pt-4"
+          class="text-xl xl:text-2xl text-light-onSurfacePrimary dark:text-dark-onSurfacePrimary font-medium leading-normal mb-4 lg:pt-4"
         >
-          Categories
+          Modules
         </h2>
 
-        <ul class="pb-8">
+        <ul class="pb-2">
+          <li
+            class="py-2 text-light-onSurfacePrimary dark:text-dark-onSurfacePrimary"
+          >
+            <NuxtLink
+              class="hover:text-nuxt-lightgreen dark:hover:text-nuxt-lightgreen transition-colors duration-300 ease-linear"
+              active-class
+              exact
+              exact-active-class="text-nuxt-lightgreen"
+              to="/resources"
+            >
+              <template>
+                Featured
+              </template>
+            </NuxtLink>
+          </li>
+
           <li
             v-for="(link, index) in links"
             :key="index"

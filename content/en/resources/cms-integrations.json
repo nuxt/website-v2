@@ -4,10 +4,9 @@
     {
       "title": "Content",
       "description": "A Git-based Headless CMS",
-      "logo": "https://content.nuxtjs.org/logo-light.svg",
+      "logo": "https://content.nuxtjs.org/icon.png",
       "image": "https://content.nuxtjs.org/preview.png",
       "github": "https://github.com/nuxt/content",
-      "author": "nuxt company",
       "label": "nuxt company",
       "link": "https://content.nuxtjs.org/",
       "slug": "content",
@@ -21,7 +20,12 @@
       ],
       "install": "--dev @nuxt/content",
       "config": "modules: ['@nuxt/content']",
-      "docs": "https://content.nuxtjs.org/"
+      "docs": "https://content.nuxtjs.org/",
+      "author": {
+        "name": "Nuxt",
+        "link": "nuxt",
+        "avatarUrl": "http://nuxtjs.org/logos/nuxt.svg"
+      }
     }
   ]
 }

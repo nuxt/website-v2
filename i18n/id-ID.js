@@ -125,7 +125,7 @@ module.exports = {
       become_a_sponsor: 'Become a sponsor'
     },
     newsletter: {
-      title: '{nuxt} Newsletter',
+      title: 'Buletin {nuxt}',
       description:
         'Dapatkan berita Nuxt terbaru ke kotak masuk Anda, dikuratori oleh tim NuxtJS.',
       form: {
@@ -140,35 +140,35 @@ module.exports = {
     }
   },
   design: {
-    title: 'Design',
+    title: 'Disain',
     description:
       'NuxtJS adalah proyek open source berlisensi MIT dan sepenuhnya gratis untuk digunakan. {break} Anda dapat dengan bebas menggunakan logo kami selama Anda menyebutkan NuxtJS dan tautan ke nuxtjs.org.',
     other_download_message:
       'Anda juga dapat mengunduh file {favicon} atau {sketch} kami.'
   },
   resources: {
-    title: 'Resources',
+    title: 'Sumber Daya',
     description:
       'Temukan panel sumber daya yang dibuat oleh mitra kami. Dengan menggunakan tautan sumber daya afiliasi mereka, Anda membantu kami menjaga dan mengembangkan Kerangka Sumber Terbuka.',
     themes: {
-      title: 'Themes'
+      title: 'Tema'
     },
     videos: {
       title: 'Video Kursus'
     }
   },
   shop: {
-    title: 'Shop',
+    title: 'Toko',
     description:
       'Anda ingin mendukung proyek NuxtJS dan menunjukkan cinta Anda kepada seluruh komunitas? {Break} Ini produk kami dengan kualitas terbaik yang pernah ada!'
   },
   team: {
-    title: 'Team',
+    title: 'Tim',
     description:
       'Pengembangan NuxtJS dan ekosistemnya dipandu oleh tim internasional. Kami memiliki tim yang sangat aktif dan terlibat yang terus berupaya untuk mendorong Nuxt maju.'
   },
   themes: {
-    title: 'Themes',
+    title: 'Tema',
     description:
       'Dengan tema di bawah ini yang dibangun oleh mitra kami dari Tim Kreatif dan Hutan Tema Anda dapat melihat bagaimana aplikasi dunia nyata dibangun, dengan Nuxt.js menumpuk di belakang.'
   },
@@ -230,9 +230,9 @@ module.exports = {
     }
   },
   blog: {
-    title: 'NuxtJS Blog',
+    title: 'Blog NuxtJS',
     description:
-      'Temukan artikel dari {nuxtTeam} dan {ambassadors} tentang NuxtJS, termasuk tip dan trik!',
+      'Temukan artikel dari {nuxtTeam} dan {ambassadors} tentang NuxtJS, termasuk tips dan trik!',
     ambassadors: 'ambassadors',
     contribute:
       'Tertangkap kesalahan atau ingin berkontribusi pada posting blog ini?'
@@ -246,8 +246,8 @@ module.exports = {
   },
   tryNewDocs: {
     msg1: 'Ingin melihat dokumen baru kami? Kami ',
-    link: 'new docs',
-    msg2: 'sekarang dalam versi beta. Selamat bersenang-senang!'
+    link: 'dokumen baru',
+    msg2: ' sekarang dalam versi beta. Selamat bersenang-senang!'
   },
   contribute: {
     title: 'Kontributor',
@@ -256,8 +256,8 @@ module.exports = {
       'Tertangkap kesalahan atau ingin berkontribusi pada posting blog ini?',
     edit_on_github: 'Sunting halaman ini di GitHub!',
     msg1:
-      'Kontribusi untuk halaman ini sekarang ditutup. Jika Anda ingin berkontribusi, silakan periksa',
-    link: 'new docs'
+      'Kontribusi untuk halaman ini sekarang ditutup. Jika Anda ingin berkontribusi, silakan periksa ',
+    link: 'dokumen baru'
   },
   codeSandbox: {
     open: 'Buka CodeSandbox'

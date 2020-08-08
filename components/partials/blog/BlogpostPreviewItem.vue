@@ -1,19 +1,14 @@
 <template>
   <NuxtLink
-    tag="article"
     :to="localePath({ name: 'blog-slug', params: { slug: post.slug } })"
     class="light:bg-light-surface dark:bg-dark-surface flex flex-col-reverse lg:flex-row mb-8 rounded p-4 sm:p-8 lg:p-4 light:hover:bg-gray-200 dark:hover:bg-gray-800 cursor-pointer transition-colors duration-300 ease-linear"
-    @click.native="whyNavigationDoesntWork"
   >
     <div class="w-full lg:w-2/3 flex flex-col justify-between pr-4">
       <div class="mb-2">
-        <h2 class="mb-4 inline-block">
-          <NuxtLink
-            :to="localePath({ name: 'blog-slug', params: { slug: post.slug } })"
-            class="flex leading-tight light:hover:text-nuxt-lightgreen dark:hover:text-nuxt-lightgreen light:text-light-onSurfacePrimary dark:text-dark-onSurfacePrimary font-semibold text-2xl md:text-3xl transition-colors duration-300 ease-linear"
-          >
-            {{ post.title }}
-          </NuxtLink>
+        <h2
+          class="mb-4 inline-block leading-tight light:hover:text-nuxt-lightgreen dark:hover:text-nuxt-lightgreen light:text-light-onSurfacePrimary dark:text-dark-onSurfacePrimary font-semibold text-2xl md:text-3xl transition-colors duration-300 ease-linear"
+        >
+          {{ post.title }}
         </h2>
         <div class="mb-4">
           <p
@@ -98,14 +93,6 @@ export default {
       const currentLocale = this.$i18n.locale || 'en'
       const options = { year: 'numeric', month: 'long', day: 'numeric' }
       return new Date(d).toLocaleDateString(currentLocale, options)
-    },
-    whyNavigationDoesntWork() {
-      this.$router.push(
-        this.localePath({
-          name: 'blog-slug',
-          params: { slug: this.post.slug }
-        })
-      )
     }
   }
 }

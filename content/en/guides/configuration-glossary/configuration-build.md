@@ -196,10 +196,24 @@ export default {
 
 > Enables Common CSS Extraction using Vue Server Renderer [guidelines](https://ssr.vuejs.org/en/css.html).
 
-- Type: `Boolean`
+- Type: `Boolean` or `Object`
 - Default: `false`
 
 Using [`extract-css-chunks-webpack-plugin`](https://github.com/faceyspacey/extract-css-chunks-webpack-plugin/) under the hood, all your CSS will be extracted into separate files, usually one per component. This allows caching your CSS and JavaScript separately and is worth a try in case you have a lot of global or shared CSS.
+
+Example (`nuxt.config.js`):
+
+```js
+export default {
+  build: {
+    extractCSS: true,
+    // or
+    extractCSS: {
+      ignoreOrder: true
+    }
+  }
+}
+```
 
 <base-alert type="info">
 

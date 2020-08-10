@@ -179,7 +179,7 @@ The `$nuxt` helper provides a quick way to find out whether the internet connect
 
 ### Accessing the root instance
 
-Besides providing DX/UX features, the `$nuxt` helper also provides a shortcut to the root instance of you application from every other component. But that's not everything — you can also access the `$nuxt` helper through `window.$nuxt` which can be used as an escape hatch to gain access to module methods like `$axios` from outside your Vue components. Anyway, this should be used wisely and **only as last resort**.
+Besides providing DX/UX features, the `$nuxt` helper also provides a shortcut to the root instance of your application from every other component. But that's not everything — you can also access the `$nuxt` helper through `window.$nuxt` which can be used as an escape hatch to gain access to module methods like `$axios` from outside your Vue components. Anyway, this should be used wisely and **only as last resort**.
 
 ### Refreshing page data
 

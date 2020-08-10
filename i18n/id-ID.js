@@ -1,11 +1,10 @@
 module.exports = {
   common: {
-    an_error_occurred: 'An error occurred',
-    api_page_not_found: 'Halaman API tidak ditemukand',
-    please_define_title: 'Please define a title in the front matter',
-    please_define_description:
-      'Please define a description in the front matter',
-    search: 'Cari ("/" to focus)',
+    an_error_occurred: 'Terjadi kesalahan',
+    api_page_not_found: 'Halaman API tidak ditemukan',
+    please_define_title: 'Silakan tentukan judul di bagian depan',
+    please_define_description: 'Silakan tentukan deskripsi di bagian depan',
+    search: 'Cari ("/" untuk fokus)',
     version: 'Versi'
   },
   iso: 'id',
@@ -58,7 +57,7 @@ module.exports = {
       }
     ],
     search: {
-      placeholder: 'Search ("/" to focus)'
+      placeholder: 'Cari ("/" untuk fokus)'
     }
   },
   homepage: {
@@ -68,32 +67,33 @@ module.exports = {
         'Nuxt.js adalah framework minimalis untuk membuat aplikasi Vue.js dengan server side rendering, hot-reloading, static generation, dan banyak lagi!'
     },
     welcome: {
-      title: 'The Intuitive {br} {frameworkType} Framework',
+      title: 'Intuitif {br} {frameworkType} Framework',
       description:
-        'Build your next Vue.js application with confidence using NuxtJS. An {openSource} framework making web development simple and powerful.',
-      openSource: 'open source',
-      get_started: 'get started',
-      get_updates: 'Get NuxtJS updates to your inbox each month',
-      video: 'Video produced by {company}, download their free {cheatSheet}',
+        'Bangun aplikasi Vue.js Anda berikutnya dengan percaya diri menggunakan NuxtJS. Kerangka {openSource} membuat pengembangan web sederhana dan kuat.',
+      openSource: 'sumber terbuka',
+      get_started: 'memulai',
+      get_updates: 'Dapatkan pembaruan NuxtJS ke kotak masuk Anda setiap bulan',
+      video:
+        'Video diproduksi oleh {company}, unduh gratis mereka {cheatSheet}',
       cheatSheet: 'Nuxt Cheat Sheet.'
     },
     why: {
       title: 'Mengapa {nuxt}',
       try_nuxtjs_online: 'Coba NuxtJS Online',
       enjoyable: {
-        title: 'Enjoyable',
+        title: 'Menyenangkan',
         description:
-          'Our main focus is the Developer Experience. We love Nuxt.js and continuously improve the framework so you love it too! {break} Expect appealing solutions, descriptive error messages, powerful defaults and detailed documentation. If questions or problems come up, our helpful community will help you out.'
+          'Fokus utama kami adalah Pengalaman Pengembang. Kami menyukai Nuxt.js dan terus meningkatkan kerangka kerja sehingga Anda juga menyukainya! {break} Harapkan solusi yang menarik, pesan kesalahan deskriptif, standar kuat dan dokumentasi terperinci. Jika ada pertanyaan atau masalah, komunitas kami yang membantu akan membantu Anda.'
       },
       modular: {
         title: 'Modular',
         description:
-          "Nuxt is based on a powerful modular architecture. You can choose from more than 50 modules to make your development faster and easier. You don't have to reinvent the wheel to get PWA benefits, add Google Analytics to your page or generate a sitemap."
+          'Nuxt didasarkan pada arsitektur modular yang kuat. Anda dapat memilih dari lebih dari 50 modul untuk membuat pengembangan Anda lebih cepat dan lebih mudah. Anda tidak harus menemukan kembali roda untuk mendapatkan manfaat PWA, menambahkan Google Analytics ke halaman Anda atau menghasilkan peta situs.'
       },
       performant: {
-        title: 'Performant',
+        title: 'Kinerja',
         description:
-          'With Nuxt.js, your application will be optimized out of the box.We do our best to build performant applications by utilizing Vue.js and Node.js best practices. To squeeze every unnecessary bit out of your app Nuxt includes a bundle analyzer and lots of opportunities to fine-tune your app.'
+          'Dengan Nuxt.js, aplikasi Anda akan dioptimalkan di luar kotak. Kami melakukan yang terbaik untuk membangun aplikasi berkinerja dengan memanfaatkan praktik terbaik Vue.js dan Node.js. Untuk menekan setiap bit yang tidak perlu dari aplikasi Anda Nuxt menyertakan penganalisa bundel dan banyak peluang untuk menyempurnakan aplikasi Anda.'
       }
     },
     companies: {
@@ -104,17 +104,17 @@ module.exports = {
       ssr: {
         title: 'Server Side Rendered',
         description:
-          'The most popular mode for Nuxt. With SSR, also called "universal" or "isomorphic" mode, a Node.js server will be used to deliver HTML based on your Vue components to the client instead of the pure javascript. Using SSR will lead to a large SEO boost, better UX and more opportunities (compared to a traditional Vue SPA).{break}Because implementing SSR on your own can be really tedious, Nuxt.js gives you full support out of the box and will take care of common pitfalls.'
+          'Mode paling populer untuk Nuxt. Dengan SSR, juga disebut mode "universal" atau "isomorphic", server Node.js akan digunakan untuk mengirimkan HTML berdasarkan komponen Vue Anda ke klien alih-alih javascript murni. Menggunakan SSR akan mengarah pada peningkatan SEO yang besar, UX yang lebih baik, dan lebih banyak peluang (dibandingkan dengan Vue SPA tradisional). {Break} Karena menerapkan SSR sendiri bisa sangat membosankan, Nuxt.js memberi Anda dukungan penuh di luar kotak dan akan mengurus perangkap umum.'
       },
       spa: {
         title: 'Single Page Application (SPA)',
         description:
-          "Don't need SSR or Static Site Generation but still want to profit from the benefits that Nuxt provides? Are you slowly transitioning your app and want to start lightweight? Then the traditional SPA mode will likely be your choice. The outcome will be a typical Vue SPA as you know it but influenced by your Nuxt configuration and the framework itself."
+          'Tidak memerlukan SSR atau Pembuatan Situs Statis tetapi masih ingin mengambil untung dari manfaat yang diberikan Nuxt? Apakah Anda perlahan-lahan mentransisikan aplikasi Anda dan ingin memulai yang ringan? Maka mode SPA tradisional kemungkinan akan menjadi pilihan Anda. Hasilnya akan menjadi Vue SPA khas seperti yang Anda tahu tetapi dipengaruhi oleh konfigurasi Nuxt Anda dan kerangka itu sendiri.'
       },
       ssg: {
         title: 'Statically Generated',
         description:
-          'Static Site Generation is a very hot topic right now (aka JAMStack). Instead of switching to another framework and spending time to get used to it, why not kill two birds with one stone? {proverbial} Nuxt.js supports generating a static website based on your Vue application. It is the "best of both worlds" as you don\'t need a server but still have SEO benefits because Nuxt will pre-render all pages and include the necessary HTML. Also, you can deploy the resulting page easily to Netlify or GitHub pages.',
+          'Pembuatan Situs Statis adalah topik yang sangat panas saat ini (alias JAMStack). Alih-alih beralih ke kerangka kerja lain dan menghabiskan waktu untuk membiasakan diri, mengapa tidak membunuh dua burung dengan satu batu? {proverbial} Nuxt.js mendukung pembuatan situs web statis berdasarkan aplikasi Vue Anda. Ini adalah "yang terbaik dari kedua dunia" karena Anda tidak memerlukan server tetapi masih memiliki manfaat SEO karena Nuxt akan melakukan pra-render semua halaman dan menyertakan HTML yang diperlukan. Anda juga dapat menggunakan halaman yang dihasilkan dengan mudah ke halaman Netlify atau GitHub.',
         proverbial: 'only proverbial'
       }
     },
@@ -125,60 +125,60 @@ module.exports = {
       become_a_sponsor: 'Become a sponsor'
     },
     newsletter: {
-      title: '{nuxt} Newsletter',
+      title: 'Buletin {nuxt}',
       description:
-        'Get the latest Nuxt news to your inbox, curated by the NuxtJS team.',
+        'Dapatkan berita Nuxt terbaru ke kotak masuk Anda, dikuratori oleh tim NuxtJS.',
       form: {
-        email: 'Email',
+        email: 'Alamat Email',
         subscribing: 'Subscribing...',
         subscribe: 'Subscribe',
         subscribed_messages: {
-          pre: 'An email to confirm your subscription has been sent to',
+          pre: 'Email untuk mengonfirmasi langganan Anda telah dikirim',
           post: '💚'
         }
       }
     }
   },
   design: {
-    title: 'Design',
+    title: 'Disain',
     description:
-      'NuxtJS is an MIT licensed open source project and completely free to use. {break} You can freely use our logos as long as you mention NuxtJS and link to nuxtjs.org.',
+      'NuxtJS adalah proyek open source berlisensi MIT dan sepenuhnya gratis untuk digunakan. {break} Anda dapat dengan bebas menggunakan logo kami selama Anda menyebutkan NuxtJS dan tautan ke nuxtjs.org.',
     other_download_message:
-      'You can also download our {favicon} or our {sketch} file.'
+      'Anda juga dapat mengunduh file {favicon} atau {sketch} kami.'
   },
   resources: {
-    title: 'Resources',
+    title: 'Sumber Daya',
     description:
-      'Discover a panel of resources made by our partners. By using thoses affiliate resources links, you are helping us to maintain and develop the Open Source Framework.',
+      'Temukan panel sumber daya yang dibuat oleh mitra kami. Dengan menggunakan tautan sumber daya afiliasi mereka, Anda membantu kami menjaga dan mengembangkan Kerangka Sumber Terbuka.',
     themes: {
-      title: 'Themes'
+      title: 'Tema'
     },
     videos: {
-      title: 'Video Courses'
+      title: 'Video Kursus'
     }
   },
   shop: {
-    title: 'Shop',
+    title: 'Toko',
     description:
-      'You want to support the NuxtJS project and show your love to the rest of the community?{break} Here our products with the best quality ever!'
+      'Anda ingin mendukung proyek NuxtJS dan menunjukkan cinta Anda kepada seluruh komunitas? {Break} Ini produk kami dengan kualitas terbaik yang pernah ada!'
   },
   team: {
-    title: 'Team',
+    title: 'Tim',
     description:
-      'The development of NuxtJS and its ecosystem is guided by an international team. We have a very active and engaged team that is constantly striving to push Nuxt forward.'
+      'Pengembangan NuxtJS dan ekosistemnya dipandu oleh tim internasional. Kami memiliki tim yang sangat aktif dan terlibat yang terus berupaya untuk mendorong Nuxt maju.'
   },
   themes: {
-    title: 'Themes',
+    title: 'Tema',
     description:
-      'With the themes below built by our partners from Creative Tim and Theme Forest you can see how a real world application is built, with Nuxt.js stack behind.'
+      'Dengan tema di bawah ini yang dibangun oleh mitra kami dari Tim Kreatif dan Hutan Tema Anda dapat melihat bagaimana aplikasi dunia nyata dibangun, dengan Nuxt.js menumpuk di belakang.'
   },
   'video-courses': {
-    title: 'Video Courses',
+    title: 'Video Kursus',
     description:
-      'With the video courses below created by our partner VueSchool you can discover and learn more about the Nuxt.js Framework.',
+      'Dengan kursus video di bawah ini yang dibuat oleh mitra kami VueSchool Anda dapat menemukan dan mempelajari lebih lanjut tentang Kerangka Nuxt.js.',
     cta: {
       discover: 'Discover vueschool',
-      start: 'START COURSE'
+      start: 'MULAI KURSUS'
     }
   },
   sponsor: {
@@ -187,17 +187,17 @@ module.exports = {
       post: 'Development'
     },
     description:
-      'NuxtJS is an MIT licensed open source project and completely free to use.{break} However, the amount of effort needed to maintain and develop new features for the project is not sustainable without proper financial backing.{break} You can support NuxtJS development via the following methods:',
+      'NuxtJS adalah proyek sumber terbuka berlisensi MIT dan sepenuhnya gratis untuk digunakan. {Break} Namun, jumlah upaya yang diperlukan untuk mempertahankan dan mengembangkan fitur baru untuk proyek ini tidak berkelanjutan tanpa dukungan keuangan yang tepat. {Break} Anda dapat mendukung pengembangan NuxtJS melalui metode berikut:',
     donations: {
-      title: 'One-time donations',
-      description: 'We accept donations through these channels'
+      title: 'Satu kali donasi',
+      description: 'Kami menerima donasi melalui saluran ini'
     },
     pledges: {
-      title: 'Recurring Pledges',
+      title: 'Janji Berulang',
       description:
-        'Recurring pledges come with exclusive perks, e.g. having your name listed in the NuxtJS GitHub repository, or have your company logo placed on this website. Become a nuxter or sponsor via {opencollective} (goes into a fund with transparent expense models supporting community efforts and events).'
+        'Janji berulang datang dengan tunjangan eksklusif, mis. memiliki nama Anda terdaftar di repositori NuxtJS GitHub, atau menempatkan logo perusahaan Anda di situs web ini. Menjadi nuxter atau sponsor melalui {opencollective} (masuk ke dana dengan model pengeluaran transparan yang mendukung upaya dan acara komunitas).'
     },
-    become_a_sponsor: 'Become a sponsor'
+    become_a_sponsor: 'Menjadi sponsor'
   },
   support: {
     title: {
@@ -205,65 +205,67 @@ module.exports = {
       post: 'Support'
     },
     description:
-      'Our {team} now offers official consulting services for your NuxtJS applications.{break} We offer different services depending of your needs, from technical support to custom development. Expect a reply within one business day, we can sign custom NDA and you can get a full refund if you are not satisfied with our service.',
+      '{team} kami sekarang menawarkan layanan konsultasi resmi untuk aplikasi NuxtJS Anda. {Break} Kami menawarkan layanan berbeda tergantung kebutuhan Anda, dari dukungan teknis hingga pengembangan kustom. Berharap balasan dalam satu hari kerja, kami dapat menandatangani NDA khusus dan Anda bisa mendapatkan pengembalian dana penuh jika Anda tidak puas dengan layanan kami.',
     technical: {
       title: 'Technical support',
       description:
-        'Get project audits, app deployments, custom development and technical support from the NuxtJS NuxtJS team.',
-      start: 'Start chat',
+        'Dapatkan audit proyek, penerapan aplikasi, pengembangan kustom, dan dukungan teknis dari tim NuxtJS.',
+      start: 'Memulai obrolan',
       partner: {
-        pre: 'We partnered with',
+        pre: 'Kami bermitra dengan',
         post:
-          'to offer these services so we can focus on helping you as fast as possible.'
+          'untuk menawarkan layanan ini sehingga kami dapat fokus membantu Anda secepat mungkin.'
       }
     },
     entreprise: {
       title: 'for enterprise',
       description:
-        'NuxtJS and the maintainers of thousands of other packages are working with Tidelift to deliver one enterprise subscription that covers all of the open source you use.{break} If you want the flexibility of open source and the confidence of commercial-grade software, this is for you.',
+        'NuxtJS dan pengelola ribuan paket lainnya bekerja dengan Tidelift untuk memberikan satu langganan perusahaan yang mencakup semua sumber terbuka yang Anda gunakan. {Break} Jika Anda ingin fleksibilitas open source dan kepercayaan diri dari perangkat lunak kelas komersial, ini adalah untukmu.',
       partner: {
-        pre: 'Available as part of the',
+        pre: 'Tersedia sebagai bagian dari',
         post: 'subscription.'
       },
-      learn_more: 'Learn more',
-      request_a_demo: 'Request a demo'
+      learn_more: 'Berlajar lagi',
+      request_a_demo: 'Permintaan demo'
     }
   },
   blog: {
-    title: 'NuxtJS Blog',
+    title: 'Blog NuxtJS',
     description:
-      'Discover articles from the {nuxtTeam} and {ambassadors} about NuxtJS, tips and tricks included!',
+      'Temukan artikel dari {nuxtTeam} dan {ambassadors} tentang NuxtJS, termasuk tips dan trik!',
     ambassadors: 'ambassadors',
-    contribute: 'Caught a mistake or want to contribute to this blog post?'
+    contribute:
+      'Tertangkap kesalahan atau ingin berkontribusi pada posting blog ini?'
   },
   guide: {
-    release_notes: 'Release Notes',
-    toc_title: 'On this page'
+    release_notes: 'Catatan Rilis',
+    toc_title: 'Di halaman ini'
   },
   quiz: {
-    title: 'Quiz'
+    title: 'Kuis'
   },
   tryNewDocs: {
-    msg1: 'Want to take a look at our new docs? Our ',
-    link: 'new docs',
-    msg2: 'are now in beta. Have fun!'
+    msg1: 'Ingin melihat dokumen baru kami? Kami ',
+    link: 'dokumen baru',
+    msg2: ' sekarang dalam versi beta. Selamat bersenang-senang!'
   },
   contribute: {
-    title: 'Contributors',
+    title: 'Kontributor',
     docs: 'Jumpa kesalahan atau ingin berkontribusi pada dokumentasi ini?',
-    blog: 'Caught a mistake or want to contribute to this blog post?',
+    blog:
+      'Tertangkap kesalahan atau ingin berkontribusi pada posting blog ini?',
     edit_on_github: 'Sunting halaman ini di GitHub!',
     msg1:
-      'Contribution for this page is now closed. If you would like to contribute please check out our',
-    link: 'new docs'
+      'Kontribusi untuk halaman ini sekarang ditutup. Jika Anda ingin berkontribusi, silakan periksa ',
+    link: 'dokumen baru'
   },
   codeSandbox: {
-    open: 'Open CodeSandbox'
+    open: 'Buka CodeSandbox'
   },
   content: {
     guide: {
       prologue: 'Prologue',
-      'getting-started': 'Getting Started'
+      'getting-started': 'Memulai'
     },
     api: {
       essential: 'Essential',
@@ -295,8 +297,9 @@ module.exports = {
     }
   },
   cookies: {
-    consent: 'We use Cookies for user analysis and on-page improvements!',
-    linkLabel: 'Learn about cookies',
-    button: 'Got it'
+    consent:
+      'Kami menggunakan Cookie untuk analisis pengguna dan peningkatan pada halaman!',
+    linkLabel: 'Pelajari tentang cookie',
+    button: 'Mengerti'
   }
 }

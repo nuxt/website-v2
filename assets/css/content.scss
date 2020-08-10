@@ -395,7 +395,7 @@
   }
 
   & > .copy {
-    @apply hidden absolute right-0 bottom-0 shadow-lg px-1 py-0 text-white text-xs uppercase bg-gray-800 font-sans rounded-md bg-transparent border border-white tracking-wide font-semibold mr-3 mb-3;
+    @apply hidden absolute right-0 bottom-0 leading-none shadow-lg px-1 py-1 text-white bg-gray-800 text-sm uppercase rounded-md border border-white font-semibold mr-2 mb-2;
     &:hover {
       @apply bg-gray-700;
     }

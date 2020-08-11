@@ -148,7 +148,7 @@ You can still use the env property and it is still useful for env variables that
 
 ## Using your config values
 
-Once you have stored your values in the public or private runtime config in your `nuxt.config` file you can then access these values anywhere by using the context in your pages, store, components and plugins by using `this.$config` or `context.$config instead.`
+Once you have stored your values in the public or private runtime config in your `nuxt.config` file you can then access these values anywhere by using the context in your pages, store, components and plugins by using `this.$config` or `context.$config` instead.
 
 ```html{}[pages/index.vue]
 <script>

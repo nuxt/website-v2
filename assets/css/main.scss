@@ -1,1 +1,10 @@
 @import 'content';
+
+.resources-enter-active,
+.resources-leave-active {
+  transition: opacity 0.5s;
+}
+.resources-enter,
+.resources-leave-active {
+  opacity: 0;
+}

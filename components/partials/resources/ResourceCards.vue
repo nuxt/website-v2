@@ -24,7 +24,7 @@
           {{ item.title }}
         </h3>
         <p class="pb-2">
-          {{ item.description }}
+          {{ item.short_description }}
         </p>
       </NuxtLink>
     </div>

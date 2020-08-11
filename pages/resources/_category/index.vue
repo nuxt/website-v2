@@ -9,13 +9,15 @@
         {{ document.title }}
       </h1>
 
-      <ResourceCards :list="document.categories" />
+      <ResourceCards :list="document" />
     </div>
   </div>
 </template>
 
 <script>
 export default {
+  transition: 'resources',
+
   async asyncData({ $content, params, app }) {
     const document = await $content(
       app.i18n.locale + '/resources/' + params.category

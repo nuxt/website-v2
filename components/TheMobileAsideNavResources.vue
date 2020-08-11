@@ -27,14 +27,14 @@
           </li>
           <li v-for="link in links" :key="link.title" class="py-2">
             <NuxtLink
-              class="block dark:text-dark-onSurfacePrimary hover:text-nuxt-lightgreen transition-colors duration-300 ease-linear"
+              class="block dark:text-dark-onSurfacePrimary hover:text-nuxt-lightgreen transition-colors duration-300 ease-linear capitalize"
               active-class
               exact
               exact-active-class="text-nuxt-lightgreen"
               :to="toLink(link)"
               @click.native="show = false"
             >
-              {{ link.title }}
+              {{ link.category }}
             </NuxtLink>
           </li>
         </transition-group>

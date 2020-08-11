@@ -37,14 +37,14 @@
             class="py-2 text-light-onSurfacePrimary dark:text-dark-onSurfacePrimary"
           >
             <NuxtLink
-              class="hover:text-nuxt-lightgreen dark:hover:text-nuxt-lightgreen transition-colors duration-300 ease-linear"
+              class="hover:text-nuxt-lightgreen dark:hover:text-nuxt-lightgreen transition-colors duration-300 ease-linear capitalize"
               active-class
               exact
               exact-active-class="text-nuxt-lightgreen"
               :to="toLink(link)"
             >
               <template>
-                {{ link.title }}
+                {{ link.category }}
               </template>
             </NuxtLink>
           </li>
@@ -67,7 +67,7 @@ export default {
     toLink(link) {
       return this.localePath({
         name: 'resources-category',
-        params: { category: link.slug }
+        params: { category: link.category }
       })
     }
   }

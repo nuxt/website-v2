@@ -18,11 +18,12 @@ export default {
     let links = []
 
     try {
-      links = await $content(app.i18n.defaultLocale, 'resources')
-        .only(['categories', 'title', 'slug', 'link'])
+      links = await $content(app.i18n.defaultLocale, 'resources', {
+        deep: true
+      })
+        .only(['category', 'title', 'slug', 'link'])
         .fetch()
     } catch (e) {}
-
     return {
       links
     }

@@ -24,32 +24,33 @@
 </template>
 <script>
 export default {
+  transition: 'resources',
+
   async asyncData({ $content, params, app }) {
     let resources = []
 
     try {
-      resources = await $content(app.i18n.defaultLocale, 'resources').fetch()
+      resources = await $content(app.i18n.defaultLocale, 'resources', {
+        deep: true
+      }).fetch()
     } catch (e) {}
-    const featured = resources.flatMap(item => {
-      return item.categories
-        .filter(category => category.featured)
-        .map(category => ({
-          ...category,
-          category: item.slug
-        }))
-    })
-    const latest = resources.flatMap(item => {
-      return item.categories
-        .filter(category => category.latest)
-        .map(category => ({
-          ...category,
-          category: item.slug
-        }))
-    })
+    const featured = resources
+      .filter(category => category.featured)
+      .map(category => ({
+        ...category
+      }))
+    // const latest = resources.flatMap(item => {
+    //   return item.categories
+    //     .filter(category => category.latest)
+    //     .map(category => ({
+    //       ...category,
+    //       category: item.slug
+    //     }))
+    // })
 
     return {
-      featured,
-      latest
+      featured
+      // latest
     }
   },
   methods: {

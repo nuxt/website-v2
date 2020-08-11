@@ -7,7 +7,7 @@ csb_link_plugins_client: https://codesandbox.io/embed/github/nuxt-academy/guides
 csb_link_plugins_external: https://codesandbox.io/embed/github/nuxt-academy/guides-examples/tree/master/04_directory_structure/12_plugins_external?fontsize=14&hidenavigation=1&theme=dark
 csb_link_plugins_custom: https://codesandbox.io/embed/github/nuxt-academy/guides-examples/tree/master/04_directory_structure/12_plugins_custom_plugin?fontsize=14&hidenavigation=1&theme=dark
 csb_link_plugins_vue: https://codesandbox.io/embed/github/nuxt-academy/guides-examples/tree/master/04_directory_structure/12_plugins_vue?fontsize=14&hidenavigation=1&theme=dark
-img: /guides/plugins.jpg
+img: /guides/plugins.svg
 imgAlt: modules-servermiddleware-plugins-in-nuxt-js
 questions:
   - question: The `plugins` directory contains your Javascript plugins that you want to run

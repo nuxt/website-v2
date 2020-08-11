@@ -7,13 +7,13 @@
     <div
       class="mx-auto h-full light:bg-light-surface dark:bg-dark-surface transition-colors duration-300 ease-linear"
     >
-      <div class="content-wrapper h-full relative">
+      <div class="content-wrapper h-full relative overflow-y py-2">
         <transition-group
           tag="ul"
           name="list"
           class="header_mobile_aside_group"
         >
-          <li class="py-2">
+          <li key="featured" class="py-2">
             <NuxtLink
               class="block dark:text-dark-onSurfacePrimary hover:text-nuxt-lightgreen transition-colors duration-300 ease-linear"
               active-class
@@ -25,16 +25,21 @@
               Featured
             </NuxtLink>
           </li>
-          <li v-for="link in links" :key="link.title" class="py-2">
+          <li v-for="link in links" :key="link" class="py-2">
             <NuxtLink
               class="block dark:text-dark-onSurfacePrimary hover:text-nuxt-lightgreen transition-colors duration-300 ease-linear capitalize"
               active-class
               exact
               exact-active-class="text-nuxt-lightgreen"
-              :to="toLink(link)"
+              :to="
+                localePath({
+                  name: 'resources-category',
+                  params: { category: link }
+                })
+              "
               @click.native="show = false"
             >
-              {{ link.category }}
+              {{ link }}
             </NuxtLink>
           </li>
         </transition-group>
@@ -87,13 +92,6 @@ export default {
   },
 
   methods: {
-    toLink(link) {
-      return this.localePath({
-        name: 'resources-category',
-        params: { category: link.slug }
-      })
-    },
-
     clickOutsideHandler() {
       if (this.show) {
         this.show = false

@@ -41,10 +41,15 @@
               active-class
               exact
               exact-active-class="text-nuxt-lightgreen"
-              :to="toLink(link)"
+              :to="
+                localePath({
+                  name: 'resources-category',
+                  params: { category: link }
+                })
+              "
             >
               <template>
-                {{ link.category }}
+                {{ link }}
               </template>
             </NuxtLink>
           </li>
@@ -60,15 +65,6 @@ export default {
     links: {
       type: Array,
       default: () => []
-    }
-  },
-
-  methods: {
-    toLink(link) {
-      return this.localePath({
-        name: 'resources-category',
-        params: { category: link.category }
-      })
     }
   }
 }

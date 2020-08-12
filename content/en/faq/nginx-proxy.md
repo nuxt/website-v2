@@ -36,7 +36,7 @@ server {
 }
 ```
 
-# Using nginx with generated pages and a caching proxy as fallback:
+## Using nginx with generated pages and a caching proxy as fallback:
 
 If you have a high volume website with regularly changing content, you might want to benefit from Nuxt generate capabilities and [nginx caching](https://www.nginx.com/blog/nginx-caching-guide).
 
@@ -116,12 +116,11 @@ server {
         proxy_cache_lock            on;
         proxy_cache_use_stale error timeout http_500 http_502 http_503 http_504;
         proxy_cache_key             $uri$is_args$args;
-        proxy_cache_purge           PURGE from 127.0.0.1;
     }
 }
 ```
 
-# nginx configuration for Laravel Forge:
+## nginx configuration for Laravel Forge:
 
 Change `YOUR_WEBSITE_FOLDER` to your website folder and `YOUR_WEBSITE_DOMAIN` to your website URL. Laravel Forge will have filled out these values for you but be sure to double check.
 
@@ -178,7 +177,7 @@ server {
 include forge-conf/YOUR_WEBSITE_FOLDER/after/*;
 ```
 
-# Secure Laravel Forge with TLS:
+## Secure Laravel Forge with TLS:
 
 It's best to let Laravel Forge do the editing of the `nginx.conf` for you, by clicking on Sites -> YOUR_WEBSITE_DOMAIN (SERVER_NAME) and then click on SSL and install a certificate from one of the providers. Remember to activate the certificate. Your `nginx.conf` should now look something like this:
 

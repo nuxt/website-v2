@@ -35,7 +35,7 @@ server {
 }
 ```
 
-# Utiliser nginx avec des pages générées et un proxy de cache en solution de secours
+## Utiliser nginx avec des pages générées et un proxy de cache en solution de secours
 
 Si vous avez un site web très important avec du contenu changeant régulièrement, vous voudriez bénéficier des capacités de génération de Nuxt et de [nginx caching](https://www.nginx.com/blog/nginx-caching-guide).
 
@@ -115,12 +115,11 @@ server {
         proxy_cache_lock            on;
         proxy_cache_use_stale error timeout http_500 http_502 http_503 http_504;
         proxy_cache_key             $uri$is_args$args;
-        proxy_cache_purge           PURGE from 127.0.0.1;
     }
 }
 ```
 
-# Configuration nginx pour Laravel Forge
+## Configuration nginx pour Laravel Forge
 
 Changez `YOUR_WEBSITE_FOLDER` pour le dossier de votre site web et `YOUR_WEBSITE_DOMAIN` par l'URL de celui-ci. Laravel Forge va remplir ces valeurs pour vous, mais assurez-vous-en avec une double vérification.
 
@@ -177,7 +176,7 @@ server {
 include forge-conf/REPERTOIRE_DE_VOTRE_SITE_WEB/after/*;
 ```
 
-# Securisation de Laravel Forge avec TLS
+## Securisation de Laravel Forge avec TLS
 
 C'est mieux de laisser Laravel éditer le fichier `nginx.conf pour vous, en cliquant sur Sites -> DOMAINE_DE_VOTRE_SITE_WEB (NOM_DU_SERVEUR) puis cliquer sur SSL et installer un certificat de l'un des fournisseurs. Rappelez-vous d'activer le certificat. Votre fichier`nginx.conf` devrait maintenant ressembler à ça :
 

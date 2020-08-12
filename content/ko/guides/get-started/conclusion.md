@@ -34,7 +34,7 @@ questions:
       - config.js
       - nuxt.config.js
     correctAnswer: nuxt.config.js
-  - question: `.vue` 파일에 적합하지 않은 디렉터리는 무엇인가요?
+  - question: '`.vue` 파일에 적합하지 않은 디렉터리는 무엇인가요?'
     answers:
       - pages
       - static

@@ -6,7 +6,7 @@ category: deployment
 position: 213
 ---
 
-# 使用 nginx 作为反向代理
+## 使用 nginx 作为反向代理
 
 ```nginx
 map $sent_http_content_type $expires {
@@ -38,7 +38,7 @@ server {
 }
 ```
 
-# 将 nginx 与生成的页面和缓存代理一起使用
+## 将 nginx 与生成的页面和缓存代理一起使用
 
 如果您有一个定期更改内容的大量网站，您可能希望受益于 Nuxt 生成功能和[nginx 缓存](https://www.nginx.com/blog/nginx-caching-guide)。
 
@@ -118,12 +118,11 @@ server {
         proxy_cache_lock            on;
         proxy_cache_use_stale error timeout http_500 http_502 http_503 http_504;
         proxy_cache_key             $uri$is_args$args;
-        proxy_cache_purge           PURGE from 127.0.0.1;
     }
 }
 ```
 
-# Laravel Forge 的 nginx 配置
+## Laravel Forge 的 nginx 配置
 
 将 `YOUR_WEBSITE_FOLDER` 更改为您的网站文件夹，将 `YOUR_WEBSITE_DOMAIN` 更改为您的网站网址。 Laravel Forge 将为您填写这些，但一定要仔细检查。
 
@@ -180,7 +179,7 @@ server {
 include forge-conf/YOUR_WEBSITE_FOLDER/after/*;
 ```
 
-# 使用 TLS 配置 Laravel Forge
+## 使用 TLS 配置 Laravel Forge
 
 最好让 Laravel Forge 为您编辑 `nginx.conf` ，点击 Sites -> YOUR_WEBSITE_DOMAIN (SERVER_NAME)，然后点击 SSL 并从其中一个提供商安装证书，请记住激活证书，你的 `nginx.conf` 现在应该是这样的：
 

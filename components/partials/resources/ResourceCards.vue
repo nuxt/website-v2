@@ -20,7 +20,7 @@
         "
       >
         <img :src="item.logo" :alt="item.title" class="pb-2" />
-        <h3 class="pb-2">
+        <h3 class="pb-2 font-bold">
           {{ item.title }}
         </h3>
         <p class="pb-2">

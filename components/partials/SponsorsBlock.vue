@@ -11,6 +11,7 @@
       :href="sponsor.link"
       class="block lg:inline-block my-4 w-48 lg:w-full"
       rel="noopener sponsored"
+      target="_blank"
     >
       <img
         :src="`/img/sponsors/${$colorMode.value}/${sponsor.img}`"
@@ -35,6 +36,11 @@ export default {
           name: 'Storyblok',
           link: 'https://www.storyblok.com/?ref=nuxt',
           img: 'storyblok-logo.svg'
+        },
+        {
+          name: 'Moovweb',
+          link: 'https://www.moovweb.com/?ref=nuxt',
+          img: 'moovweb-logo.png'
         }
       ]
     }

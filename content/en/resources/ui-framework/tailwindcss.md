@@ -9,7 +9,6 @@ image: 'https://tailwindcss.nuxtjs.org/preview.png'
 github: 'https://github.com/nuxt-community/tailwindcss-module'
 docs: 'https://tailwindcss.nuxtjs.org/'
 slug: 'tailwindcss'
-latest: true
 featured: true
 features:
   - 'Zero configuration to start'

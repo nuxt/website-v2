@@ -8,11 +8,39 @@
       >
         Latest Resources
       </h1>
-      <p>imagine the Vue telemetry slider here</p>
-      <img
-        src="https://res.cloudinary.com/mayashavin/image/upload/q_auto,f_auto,h_640/v1596608425/nuxt-cld/nuxt_cloudinary_1"
-        alt=""
-      />
+
+      <carousel
+        :per-page="1"
+        :autoplay="true"
+        :loop="true"
+        :autoplay-timeout="7000"
+        :pagination-enabled="false"
+        :navigation-enabled="true"
+        :navigation-prev-label="next"
+        :navigation-next-label="prev"
+      >
+        <slide v-for="(item, index) in latest" :key="index">
+          <NuxtLink
+            :to="
+              localePath({
+                name: 'resources-category-slug',
+                params: Object.assign(
+                  {},
+                  {
+                    slug: item.slug,
+                    category: item.category
+                      ? item.category
+                      : $route.params.category
+                  }
+                )
+              })
+            "
+          >
+            <img :src="item.image" :alt="item.title" />
+          </NuxtLink>
+        </slide>
+      </carousel>
+
       <h2
         class="text-3xl xl:text-4xl text-light-onSurfacePrimary dark:text-dark-onSurfacePrimary font-medium leading-normal mb-6 lg:pt-4"
       >
@@ -39,18 +67,15 @@ export default {
       .map(category => ({
         ...category
       }))
-    // const latest = resources.flatMap(item => {
-    //   return item.categories
-    //     .filter(category => category.latest)
-    //     .map(category => ({
-    //       ...category,
-    //       category: item.slug
-    //     }))
-    // })
+    const latest = resources
+      .filter(category => category.latest)
+      .map(category => ({
+        ...category
+      }))
 
     return {
-      featured
-      // latest
+      featured,
+      latest
     }
   },
   methods: {
@@ -63,3 +88,9 @@ export default {
   }
 }
 </script>
+<style>
+.VueCarousel-navigation-button.VueCarousel-navigation-prev,
+.VueCarousel-navigation-button.VueCarousel-navigation-next {
+  color: #00c58e;
+}
+</style>

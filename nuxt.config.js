@@ -117,7 +117,8 @@ export default {
     '~/plugins/ga.client.js',
     '~/plugins/adblock.client.js',
     '~/plugins/newsletter.client.js',
-    '~/plugins/vue-scrollactive'
+    '~/plugins/vue-scrollactive',
+    '~/plugins/vue-carousel.client.js'
   ],
   env: {
     DEPLOY_PRIME_URL: process.env.DEPLOY_PRIME_URL || false,
@@ -188,13 +189,13 @@ export default {
         file: 'id-ID.js',
         name: 'Indonesian',
         domain: 'https://id.nuxtjs.org'
-      },
-      //{
-       // code: 'tr',
-       // iso: 'tr-TR',
-       // file: 'tr-TR.js',
-       // name: 'Türkçe',
-       // domain: 'https://tr.nuxtjs.org'
+      }
+      // {
+      // code: 'tr',
+      // iso: 'tr-TR',
+      // file: 'tr-TR.js',
+      // name: 'Türkçe',
+      // domain: 'https://tr.nuxtjs.org'
       // }
       // {
       //   code: 'es',

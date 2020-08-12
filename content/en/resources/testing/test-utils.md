@@ -9,7 +9,6 @@ image: 'https://test-utils.nuxtjs.org/preview.png'
 github: 'https://github.com/nuxt-community/module-test-utils'
 docs: 'https://test-utils.nuxtjs.org/'
 slug: 'test-utils'
-latest: true
 featured: true
 features:
   - 'Easy to setup tests'

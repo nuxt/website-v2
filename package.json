@@ -31,6 +31,7 @@
     "prismjs": "^1.21.0",
     "reading-time": "^1.2.0",
     "v-lazy-image": "^1.4.0",
+    "vue-carousel": "^0.18.0",
     "vue-chartjs": "^3.5.0",
     "vue-cookieconsent-component": "^1.2.0",
     "vue-if-bot": "^1.2.0",

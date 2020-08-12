@@ -9,7 +9,6 @@ image: 'https://pwa.nuxtjs.org/preview.png'
 github: 'https://github.com/nuxt-community/pwa-module'
 docs: 'https://pwa.nuxtjs.org/'
 slug: 'pwa'
-latest: true
 featured: true
 features:
   - 'Registers a service worker for offline caching'

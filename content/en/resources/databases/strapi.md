@@ -9,8 +9,8 @@ image: 'https://strapi.nuxtjs.org/preview.png'
 github: 'https://github.com/nuxt-community/strapi-module'
 docs: 'https://strapi.nuxtjs.org/'
 slug: 'strapi'
-latest: true
 featured: true
+latest: true
 features:
   - 'Authentication support'
   - 'RESTful methods'

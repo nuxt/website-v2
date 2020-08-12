@@ -9,7 +9,6 @@ image: 'https://sanity.nuxtjs.org/preview.png'
 github: 'https://github.com/nuxt-community/sanity-module'
 docs: 'https://sanity.nuxtjs.org/'
 slug: 'sanity'
-latest: true
 featured: true
 features:
   - 'Just bring your sanity.json - no additional configuration required'

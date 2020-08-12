@@ -9,7 +9,6 @@ image: 'https://auth.nuxtjs.org/preview.png'
 github: 'https://github.com/nuxt-community/auth-module'
 docs: 'https://auth.nuxtjs.org/'
 slug: 'content'
-latest: true
 featured: true
 features:
   - 'Zero Configuration'

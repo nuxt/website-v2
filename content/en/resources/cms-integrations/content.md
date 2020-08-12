@@ -9,7 +9,6 @@ image: 'https://content.nuxtjs.org/preview.png'
 github: 'https://github.com/nuxt/content'
 docs: 'https://content.nuxtjs.org/'
 slug: 'content'
-latest: true
 featured: true
 features:
   - 'Blazing fast hot reload in development'

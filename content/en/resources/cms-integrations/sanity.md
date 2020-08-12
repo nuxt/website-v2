@@ -16,10 +16,10 @@ features:
   - 'Ultra-lightweight Sanity client'
   - 'Zero-config image component'
   - 'Supports GROQ syntax highlighting'
-author:
-  name: Daniel Roe
-  avatarUrl: https://avatars1.githubusercontent.com/u/28706372?s=460&v=4
-  twitterHandler: danielcroe
+authors:
+  - name: Daniel Roe
+    avatarUrl: https://avatars1.githubusercontent.com/u/28706372?s=460&v=4
+    link: https://twitter.com/danielcroe
 ---
 
 <code-group>
@@ -47,7 +47,7 @@ export default {
 
 <docs-button :docs="docs"></docs-button>
 
-<base-author :author="author"></base-author>
+<authors :authors="authors"></authors>
 
 <div class="flex mt-4 space-x-2">
   <a href="https://npmjs.com/package/@nuxtjs/sanity" rel="nofollow"><img src="https://camo.githubusercontent.com/b54a5ddba1a78fec90822dcd4f3f6ccac5e93332/68747470733a2f2f696d672e736869656c64732e696f2f6e706d2f762f406e7578746a732f73616e6974792f6c61746573742e737667" alt="npm version" data-canonical-src="https://img.shields.io/npm/v/@nuxtjs/sanity/latest.svg" style="max-width:100%;"></a>

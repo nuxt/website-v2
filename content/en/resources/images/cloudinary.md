@@ -18,10 +18,10 @@ features:
   - 'On-the-fly size optimization per browser and device'
   - 'Fast loading speed with progressive images'
   - 'Auto-detect the optimized format per browser for images and videos'
-author:
-  name: Maya Shavin
-  avatarUrl: https://avatars0.githubusercontent.com/u/6650139?s=460&u=e23ded7ef787f5d834eca81e64a6200bc00d424a&v=4
-  twitterHandler: mayashavin
+authors:
+  - name: Maya Shavin
+    avatarUrl: https://avatars0.githubusercontent.com/u/6650139?s=460&u=e23ded7ef787f5d834eca81e64a6200bc00d424a&v=4
+    link: https://twitter.com/mayashavin
 ---
 
 <code-group>
@@ -49,9 +49,9 @@ export default {
 
 <docs-button :docs="docs"></docs-button>
 
-<base-author :author="author"></base-author>
+<authors :authors="authors"></authors>
 
-<div class="flex mt-4 space-x-2">
+<npm-buttons>
   <a href="https://npmjs.com/package/@nuxtjs/cloudinary" rel="nofollow" >      
     <img src="https://camo.githubusercontent.com/d6880af1973a5c5f0bed7caf2d1ddaf0e542aabd/68747470733a2f2f696d672e736869656c64732e696f2f6e706d2f762f406e7578746a732f636c6f7564696e6172792f6c61746573742e737667"
       alt="npm version"
@@ -65,4 +65,4 @@ export default {
       style="max-width: 100%;"
     />
   </a>
-</div>
+</npm-buttons>

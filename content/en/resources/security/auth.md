@@ -16,10 +16,10 @@ features:
   - 'Set up auth middleware'
   - 'Configure local scheme'
   - 'Customize Options'
-author:
-  name: Nuxt
-  avatarUrl: https://avatars1.githubusercontent.com/u/29566738?s=200&v=4
-  twitterHandler: nuxt_js
+authors:
+  - name: Nuxt
+    avatarUrl: https://avatars1.githubusercontent.com/u/29566738?s=200&v=4
+    link: https://twitter.com/nuxt_js
 ---
 
 <code-group>
@@ -47,13 +47,13 @@ export default {
 
 <docs-button :docs="docs"></docs-button>
 
-<base-author :author="author"></base-author>
+<authors :authors="authors"></authors>
 
-<div class="flex mt-4 space-x-2">
+<npm-buttons>
   <a href="https://npmjs.com/package/@nuxtjs/auth-next" rel="nofollow">
     <img alt="" src="https://camo.githubusercontent.com/014ae377646fe064209eda3b2b896bb593988530/68747470733a2f2f696d672e736869656c64732e696f2f6e706d2f762f406e7578746a732f617574682d6e6578742f6c61746573742e7376673f7374796c653d666c61742d737175617265" data-canonical-src="https://img.shields.io/npm/v/@nuxtjs/auth-next/latest.svg?style=flat-square" style="max-width:100%;">
   </a>
   <a href="https://npmjs.com/package/@nuxtjs/auth" rel="nofollow">
     <img alt="" src="https://camo.githubusercontent.com/3305edd8282f6f7ebdf4a85178dbd5ad048f33b0/68747470733a2f2f696d672e736869656c64732e696f2f6e706d2f64742f406e7578746a732f617574682d6e6578742e7376673f7374796c653d666c61742d737175617265" data-canonical-src="https://img.shields.io/npm/dt/@nuxtjs/auth-next.svg?style=flat-square" style="max-width:100%;">
 </a>
-</div>
+</npm-buttons>

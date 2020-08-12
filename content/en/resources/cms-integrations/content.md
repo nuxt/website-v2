@@ -16,10 +16,10 @@ features:
   - 'Vue components in Markdown'
   - 'Full-text search'
   - 'Table of contents generation'
-author:
-  name: Benjamin Canac
-  avatarUrl: https://avatars3.githubusercontent.com/u/739984?s=460&u=a263ce7469841c60ad76354f0779055b7e8365d5&v=4
-  twitterHandler: benjamincanac
+authors:
+  - name: Benjamin Canac
+    avatarUrl: https://avatars3.githubusercontent.com/u/739984?s=460&u=a263ce7469841c60ad76354f0779055b7e8365d5&v=4
+    link: https://twitter.com/benjamincanac
 ---
 
 <code-group>
@@ -47,7 +47,7 @@ export default {
 
 <docs-button :docs="docs"></docs-button>
 
-<base-author :author="author"></base-author>
+<authors :authors="authors"></authors>
 
 <div class="flex mt-4 space-x-2">
   <a href="https://npmjs.com/package/@nuxt/content" rel="nofollow"><img src="https://camo.githubusercontent.com/9f31c446e7bb41e006ece39a68147458f1be84f4/68747470733a2f2f696d672e736869656c64732e696f2f6e706d2f762f406e7578742f636f6e74656e742f6c61746573742e737667" alt="npm version" data-canonical-src="https://img.shields.io/npm/v/@nuxt/content/latest.svg" style="max-width:100%;"></a>

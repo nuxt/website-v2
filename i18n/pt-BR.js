@@ -237,7 +237,7 @@ module.exports = {
     contribute: 'Encontrou um erro ou deseja contribuir para esta postagem?'
   },
   guide: {
-    release_notes: 'Notas de Lançamentos',
+    release_notes: 'Notas de Versão',
     toc_title: 'Nesta página'
   },
   quiz: {
@@ -250,9 +250,9 @@ module.exports = {
   },
   contribute: {
     title: 'Contribuidores',
-    docs: 'Encontrou um erro ou deseja contribuir para esta esta documentação?',
+    docs: 'Encontrou um erro ou deseja contribuir para esta documentação?',
     blog: 'Encontrou um erro ou deseja contribuir para esta postagem?',
-    edit_on_github: 'Editar esta página no GitHub!',
+    edit_on_github: 'Edite esta página no GitHub!',
     msg1:
       'A contribuição para esta página está encerrada. Se você gostaria de contribuir, verifique nossa',
     link: 'nova documentação, por favor.'

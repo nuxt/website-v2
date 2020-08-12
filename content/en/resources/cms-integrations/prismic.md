@@ -1,6 +1,6 @@
 ---
 title: 'Prismic'
-short_description: 'Easily connect Prismic to Nuxt'
+short_description: 'Connect your Nuxt application to your content hosted on Prismic and setup features like Prismic previews.'
 long_description: 'Prismic is a Content Management System, a tool for editing online content. Also known as a headless CMS, an API CMS, a content platform, a tool that easily lets you manage your content.'
 category: cms-integrations
 position: 2

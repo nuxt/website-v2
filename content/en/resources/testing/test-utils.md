@@ -1,6 +1,6 @@
 ---
 title: 'Test Utils'
-short_description: "Now it's easy to create tests for projects/modules nuxt."
+short_description: 'Easily create tests for your nuxt.js applications and modules.'
 long_description:
 category: testing
 position: 81

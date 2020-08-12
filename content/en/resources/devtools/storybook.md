@@ -1,6 +1,6 @@
 ---
 title: 'Storybook'
-short_description: 'Build bulletproof UI components faster'
+short_description: 'Easily integrate Storybook in your Nuxt.js application to design, build, and organize your UI components in isolation.'
 long_description: 'Storybook is an open source tool for developing UI components in isolation. It makes building stunning UIs organized and efficient.'
 category: devtools
 position: 30

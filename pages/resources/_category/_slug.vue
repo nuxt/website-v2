@@ -8,9 +8,6 @@
           <img :src="resource.image" :alt="resource.title" />
         </a>
       </div>
-      <p v-if="resource.short_description">
-        {{ resource.short_description }}
-      </p>
       <div v-if="resource.long_description">
         <h3
           class="mt-8 empty-after after:block after:border-2 after:rounded dark:after:border-dark-onSurfacePrimary light:after:border-light-onSurfacePrimary after:mt-2 after:mb-1 after:w-4/5 my-2 text-light-onSurfacePrimary dark:text-dark-onSurfacePrimary relative text-xl table transition-colors duration-300 ease-linear"

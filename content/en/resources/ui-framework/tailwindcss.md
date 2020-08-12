@@ -1,7 +1,7 @@
 ---
 title: 'TailwindCSS'
-short_description: 'Build bulletproof UI components faster'
-long_description: 'Storybook is an open source tool for developing UI components in isolation. It makes building stunning UIs organized and efficient.'
+short_description: 'Add Tailwind CSS to your Nuxt application in seconds with PurgeCSS included for minimal CSS.'
+long_description: 'Tailwind CSS is a highly customizable, low-level CSS framework that gives you all of the building blocks you need to build bespoke designs without any annoying opinionated styles you have to fight to override.'
 category: ui-framework
 position: 30
 logo: 'https://tailwindcss.nuxtjs.org/icon.png'

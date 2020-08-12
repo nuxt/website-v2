@@ -1,7 +1,7 @@
 ---
 title: 'PWA'
-short_description: 'Supercharge Nuxt with a heavily tested, updated, zero-config and stable PWA solution!'
-long_description: 'Progressive Web Apps (PWA) are reliable, fast, and engaging, although there are many things that can take a PWA from a baseline to exemplary experience.'
+short_description: 'Easily build a Progressive Web App for your Nuxt.js application to improve your apps performance.'
+long_description: 'Progressive Web Apps are web applications that use progressive enhancements. Using service workers and a web app manifest, your web application becomes reliable and installable.'
 category: performance
 position: 61
 logo: 'https://pwa.nuxtjs.org/icon.png'
@@ -15,7 +15,7 @@ features:
   - 'Automatically generate manifest.json file'
   - 'Automatically adds SEO friendly meta data with manifest integration'
   - 'Automatically generates app icons with different sizes'
-author:
+authors:
   - name: Nuxt
     avatarUrl: https://avatars1.githubusercontent.com/u/29566738?s=200&v=4
     link: https://twitter.com/nuxt_js

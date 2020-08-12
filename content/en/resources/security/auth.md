@@ -1,7 +1,7 @@
 ---
 title: 'Auth'
-short_description: 'Zero-boilerplate authentication support for Nuxt.js!'
-long_description: 'Empower your NuxtJS application with @nuxt/content module: write in a content/ directory and fetch your Markdown, JSON, YAML, XML and CSV files through a MongoDB like API, acting as a Git-based Headless CMS.'
+short_description: 'Easily add authentication for your Nuxt.js application!'
+long_description: 'Zero-boilerplate authentication support for your Nuxt.js application with various possibilities to authenticate your users.'
 category: security
 position: 51
 logo: 'https://auth.nuxtjs.org/icon.png'

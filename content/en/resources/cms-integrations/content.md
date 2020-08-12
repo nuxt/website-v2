@@ -1,6 +1,6 @@
 ---
 title: 'Content'
-short_description: 'A Git-based Headless CMS'
+short_description: 'Use markdown, JSON, YAML, XML or CSV in your nuxt application to easily write content fetched using a MongoDB like API.'
 long_description: 'Empower your NuxtJS application with @nuxt/content module: write in a content/ directory and fetch your Markdown, JSON, YAML, XML and CSV files through a MongoDB like API, acting as a Git-based Headless CMS.'
 category: cms-integrations
 position: 1

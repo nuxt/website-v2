@@ -1,9 +1,9 @@
 ---
 title: 'Sanity'
-short_description: 'Sanity is the fastest, most flexible platform for delivering content to digital devices and products.'
+short_description: 'Access text, images, and other media with Nuxt.js and the Sanity headless CMS.'
 long_description: 'Sanity lets you treat content as structured data so you can flow it across APIs to power experiences wherever you might need them.'
 category: cms-integrations
-position: 2
+position: 3
 logo: 'https://sanity.nuxtjs.org/icon.png'
 image: 'https://sanity.nuxtjs.org/preview.png'
 github: 'https://github.com/nuxt-community/sanity-module'

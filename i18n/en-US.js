@@ -293,9 +293,16 @@ module.exports = {
       'internals-glossary': 'Internals Glossary',
       'components-glossary': 'Components Glossary'
     },
+
     resources: {
       'ui-framework': 'UI Framework',
-      api: 'API'
+      'cms-integrations': 'CMS Integrations',
+      security: 'security',
+      testing: 'Testing',
+      databases: 'Databases',
+      devtools: 'DevTools',
+      images: 'Images',
+      performance: 'Performance'
     }
   },
   cookies: {

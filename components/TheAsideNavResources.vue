@@ -15,14 +15,11 @@
         </h2>
 
         <ul class="pb-2">
-          <li
-            class="py-2 text-light-onSurfacePrimary dark:text-dark-onSurfacePrimary"
-          >
+          <li>
             <NuxtLink
-              class="hover:text-nuxt-lightgreen dark:hover:text-nuxt-lightgreen transition-colors duration-300 ease-linear"
-              active-class
               exact
-              exact-active-class="text-nuxt-lightgreen"
+              class="p-2 pl-4 flex rounded hover:text-nuxt-lightgreen dark:hover:text-nuxt-lightgreen transition-colors duration-300 ease-linear"
+              exact-active-class="text-nuxt-lightgreen bg-green-100 dark:bg-green-800"
               to="/resources"
             >
               <template>
@@ -31,16 +28,10 @@
             </NuxtLink>
           </li>
 
-          <li
-            v-for="(link, index) in links"
-            :key="index"
-            class="py-2 text-light-onSurfacePrimary dark:text-dark-onSurfacePrimary"
-          >
+          <li v-for="(link, index) in sortedLinks" :key="index">
             <NuxtLink
-              class="hover:text-nuxt-lightgreen dark:hover:text-nuxt-lightgreen transition-colors duration-300 ease-linear capitalize"
-              active-class
-              exact
-              exact-active-class="text-nuxt-lightgreen"
+              class="p-2 pl-4 flex rounded hover:text-nuxt-lightgreen dark:hover:text-nuxt-lightgreen transition-colors duration-300 ease-linear"
+              exact-active-class="text-nuxt-lightgreen bg-green-100 dark:bg-green-800"
               :to="
                 localePath({
                   name: 'resources-category',
@@ -49,7 +40,7 @@
               "
             >
               <template>
-                {{ link }}
+                {{ $t(`content.resources.${link}`) }}
               </template>
             </NuxtLink>
           </li>
@@ -60,11 +51,24 @@
 </template>
 
 <script>
+import sortBy from 'lodash.sortby'
+
 export default {
   props: {
     links: {
       type: Array,
       default: () => []
+    }
+  },
+  computed: {
+    sortedLinks() {
+      const links = {}
+      sortBy(Object.keys(this.links), link => {
+        return Object.keys(this.$i18n.t('content.resources')).indexOf(link)
+      }).forEach(key => {
+        links[key] = this.links[key]
+      })
+      return links
     }
   }
 }

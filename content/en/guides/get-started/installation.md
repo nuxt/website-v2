@@ -151,7 +151,7 @@ npm run dev
 
 <base-alert type="info">
 
-We use the the dev command when running our application in development mode.
+We use the dev command when running our application in development mode.
 
 </base-alert>
 
@@ -181,7 +181,7 @@ Then, go to your browser and see your new page on **[http://localhost:3000/fun](
 
 <base-alert type="info">
 
-Create a directory name `more-fun` and put an `index.vue` file inside. This will give the same result as creating a `more-fun.vue` file
+Create a directory named `more-fun` and put an `index.vue` file inside. This will give the same result as creating a `more-fun.vue` file
 
 </base-alert>
 

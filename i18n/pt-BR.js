@@ -8,7 +8,7 @@ module.exports = {
     search: 'Buscar ("/" para focar)',
     version: 'Versão'
   },
-  iso: 'pt',
+  iso: 'pt-BR',
 
   links: {
     download: 'Baixar',
@@ -17,13 +17,13 @@ module.exports = {
   header: {
     links: [
       {
-        name: 'Guides',
+        name: 'Guias',
         slug: 'guides',
         type: 'newDocs',
         routeName: 'guides-book-slug'
       },
       {
-        name: 'Guide',
+        name: 'Guia',
         slug: 'guide',
         type: 'dynamic',
         routeName: 'section-slug'
@@ -35,7 +35,7 @@ module.exports = {
         routeName: 'section-slug'
       },
       {
-        name: 'Examples',
+        name: 'Exemplos',
         slug: 'examples',
         type: 'dynamic',
         routeName: 'section-slug'
@@ -47,7 +47,7 @@ module.exports = {
         routeName: 'section-slug'
       },
       {
-        name: 'Resources',
+        name: 'Recursos',
         slug: 'resources',
         type: 'static'
       },
@@ -72,7 +72,7 @@ module.exports = {
       description:
         'Construa sua próxima aplicação Vue.js com confiança utilizando NuxtJS. Um framework de {openSource} que torna o desenvolvimento web simples e poderoso.',
       openSource: 'código aberto',
-      get_started: 'Para começar',
+      get_started: 'Começar',
       get_updates: 'Receba atualizações do NuxtJS no seu e-mail todos os meses',
       video: 'Video produzido por {company}, baixe a {cheatSheet} deles.',
       cheatSheet: 'folha grátis de dicas do Nuxt'

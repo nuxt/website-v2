@@ -6,7 +6,12 @@
           <h1
             class="text-3xl xl:text-4xl text-light-onSurfacePrimary dark:text-dark-onSurfacePrimary font-medium leading-normal mb-6 lg:pt-4"
           >
+<<<<<<< HEAD
             Sponsor <AppTitle /> Development<br />
+=======
+            {{ $t('sponsor.title.pre') }} <AppTitle />
+            {{ $t('sponsor.title.post') }}<br />
+>>>>>>> 467ddb0d (feat: add new sponsor moovweb (#506))
           </h1>
           <h3
             class="xl:text-lg text-light-onSurfaceSecondary dark:text-dark-onSurfaceSecondary font-medium leading-relaxed mb-6"
@@ -221,6 +226,12 @@ export default {
             img: 'storyblok-logo.svg',
             url: 'https://www.storyblok.com/?ref=nuxt',
             class: 'h-24'
+          },
+          {
+            name: 'Moovweb',
+            url: 'https://www.moovweb.com/?ref=nuxt',
+            img: 'moovweb-logo.png',
+            class: 'h-12'
           }
         ],
         gold: [

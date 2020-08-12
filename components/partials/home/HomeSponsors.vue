@@ -110,6 +110,12 @@ export default {
             img: 'storyblok-logo.svg',
             url: 'https://www.storyblok.com/?ref=nuxt',
             class: 'h-24'
+          },
+          {
+            name: 'Moovweb',
+            url: 'https://www.moovweb.com/?ref=nuxt',
+            img: 'moovweb-logo.png',
+            class: 'h-12'
           }
         ],
         gold: [

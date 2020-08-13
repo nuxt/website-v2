@@ -3,9 +3,7 @@
     <div class="container mx-auto px-4 lg:flex pb-12">
       <TheMobileAsideNav :links="links" />
       <TheAsideNav :links="links" class="hidden lg:block" />
-      <div
-        class="min-h-screen w-full lg:static lg:max-h-full lg:overflow-visible lg:w-3/4"
-      >
+      <div class="w-full lg:static lg:max-h-full lg:overflow-visible lg:w-3/4">
         <nuxt-child />
       </div>
     </div>

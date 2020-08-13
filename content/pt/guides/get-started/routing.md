@@ -14,7 +14,7 @@ Em outras palavras, tudo que você precisa fazer para ter o roteamento em sua ap
 
 <base-alert type="next">
 
-Descubra mais sobre [Roteamento](/guides/features/file-system-routing)
+Saiba mais sobre [Roteamento](/guides/features/file-system-routing)
 
 </base-alert>
 
@@ -50,6 +50,6 @@ Para todos os links para páginas do seu site, use `<NuxtLink>`. Se você tiver 
 
 <base-alert type="next">
 
-Descubra mais sobre o [componente NuxtLink](/guides/features/nuxt-components#the-nuxtlink-component).
+Saiba mais sobre o [componente NuxtLink](/guides/features/nuxt-components#the-nuxtlink-component).
 
 </base-alert>

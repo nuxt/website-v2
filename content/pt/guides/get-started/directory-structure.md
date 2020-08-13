@@ -31,7 +31,7 @@ O diretório `pages` contém as views e rotas de sua aplicação. Como você apr
 
 <base-alert type="next">
 
-Descubra mais sobre o [diretório pages](/guides/directory-structure/pages)
+Saiba mais sobre o [diretório pages](/guides/directory-structure/pages)
 
 </base-alert>
 
@@ -43,7 +43,7 @@ Com o Nuxt.js, você pode criar seus componentes e importá-los automaticamente 
 
 <base-alert type="next">
 
-Descubra mais sobre o [diretório components](/guides/directory-structure/components)
+Saiba mais sobre o [diretório components](/guides/directory-structure/components)
 
 </base-alert>
 
@@ -53,7 +53,7 @@ O diretório `assets` contém seus arquivos não compiláveis, como seus estilos
 
 <base-alert type="next">
 
-Descubra mais sobre o [diretório assets](/guides/directory-structure/assets)
+Saiba mais sobre o [diretório assets](/guides/directory-structure/assets)
 
 </base-alert>
 
@@ -63,7 +63,7 @@ O diretório `static` é mapeado diretamente para a raiz do servidor e contém a
 
 <base-alert type="next">
 
-Descubra mais sobre o [diretório static](/guides/directory-structure/static)
+Saiba mais sobre o [diretório static](/guides/directory-structure/static)
 
 </base-alert>
 
@@ -73,7 +73,7 @@ O arquivo `nuxt.config.js` é o único ponto de configuração do Nuxt.js. Se vo
 
 <base-alert type="next">
 
-Descubra mais sobre o [arquivo nuxt.config.js](/guides/directory-structure/nuxt-config)
+Saiba mais sobre o [arquivo nuxt.config.js](/guides/directory-structure/nuxt-config)
 
 </base-alert>
 

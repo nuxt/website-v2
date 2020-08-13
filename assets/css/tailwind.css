@@ -15,8 +15,8 @@
 /* purgecss start ignore */
 @supports (position: sticky) {
   @media (min-width: 1024px) {
-    .sticky\?lg\:h-\(screen-24\) {
-      height: calc(100vh - 6rem);
+    .sticky\?lg\:max-h-\(screen-24\) {
+      max-height: calc(100vh - 6rem);
     }
   }
 }

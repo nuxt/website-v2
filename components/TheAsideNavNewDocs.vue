@@ -6,7 +6,7 @@
       class="h-full overflow-y-auto scrolling-touch text-center lg:text-left lg:h-auto lg:block lg:relative lg:sticky lg:top-24"
     >
       <nav
-        class="pt-8 lg:overflow-y-auto lg:block lg:pl-0 lg:pr-8 sticky?lg:h-(screen-24)"
+        class="pt-8 lg:overflow-y-auto lg:block lg:pl-0 lg:pr-8 sticky?lg:max-h-(screen-24)"
         :class="{ hidden: !showNav }"
       >
         <div v-for="(sublinks, group) in sortedLinks" :key="`links-${group}`">

@@ -6,60 +6,60 @@ category: concepts
 img: /guides/nuxt-lifecycle.png
 imgAlt: understanding-nuxt-2-12-lifecycle-hooks
 questions:
-  - question: When does the Nuxt.js lifecycle start?
+  - question: Quando o ciclo de vida do Nuxt.js começa?
     answers:
-      - When the response will be sent to the client
-      - After the build phase
-      - When running nuxt dev
-    correctAnswer: After the build phase
-  - question: On which main factors does the content of the lifecycle depend?
+      - Quando a resposta for enviada ao cliente
+      - Após o build
+      - Ao executar o nuxt dev
+    correctAnswer: Após o build
+  - question: De quais fatores principais depende o conteúdo do ciclo de vida?
     answers:
-      - Which time and date we have when starting the server
-      - If server side rendering is enabled and if so, which type is used
-      - What type of OS the Nuxt.js application is running on
-    correctAnswer: If server side rendering is enabled and if so, which type is used
-  - question: When is nuxtServerInit called?
+      - Qual hora e data temos ao iniciar o servidor
+      - Se a renderização do lado do servidor estiver ativada e, se sim, qual tipo é usado
+      - Em que tipo de sistema operacional o aplicativo Nuxt.js está sendo executado
+    correctAnswer: Se a renderização do lado do servidor estiver ativada e, se sim, qual tipo é usado
+  - question: Quando o nuxtServerInit é chamado?
     answers:
-      - Server-side and client-side
-      - After the Vue hydration
-      - Only on the server side
-    correctAnswer: Only on the server side
-  - question: What are the three types of middleware?
+      - Do lado do servidor e do do cliente
+      - Após a Hidratação do Vue
+      - Apenas no lado do servidor
+    correctAnswer: Apenas no lado do servidor
+  - question: Quais são os três tipos de middleware?
     answers:
       - Global, Layout, Route
       - Global, Layout, Page
       - Global, Group, Route
     correctAnswer: Global, Layout, Route
-  - question: What step can only happen on the client side?
+  - question: Qual etapa só pode acontecer no lado do cliente?
     answers:
-      - Vue Hydration
-      - Middleware execution
-      - Calling the fetch function
-    correctAnswer: Vue Hydration
-  - question: Which step never happens on the client side?
+      - Hidratação do Vue
+      - Execução do middleware
+      - Chamando a função fetch
+    correctAnswer: Hidratação do Vue
+  - question: Qual etapa nunca acontece no lado do cliente?
     answers:
-      - Executing asyncData
-      - Executing serverMiddleware
-      - Executing fetch
-    correctAnswer: Executing serverMiddleware
-  - question: Which Vue methods are called on both, server and client side?
+      - Execução do asyncData
+      - Execução do serverMiddleware
+      - Execução do fetch
+    correctAnswer: Execução do serverMiddleware
+  - question: Quais métodos Vue são chamados tanto do lado do servidor quanto do cliente?
     answers:
-      - mounted and beforeMount
-      - beforeDestroy and destroyed
-      - created and beforeCreate
-    correctAnswer: created and beforeCreate
-  - question: What step does not happen after navigating via <NuxtLink>?
+      - mounted e beforeMount
+      - beforeDestroy e destroyed
+      - created e beforeCreate
+    correctAnswer: created e beforeCreate
+  - question: Qual etapa não acontece após navegar via <NuxtLink>?
     answers:
-      - Calling fetch
-      - Executing client-side Nuxt.js plugins
-      - Calling beforeCreate
-    correctAnswer: Executing client-side Nuxt.js plugins
-  - question: What is the special difference between asyncData and fetch after navigating via <NuxtLink>?
+      - Chamar o fetch
+      - Executar os plugins Nuxt.js do lado do cliente
+      - Chamar o beforeCreate
+    correctAnswer: Executar os plugins Nuxt.js do lado do cliente
+  - question: Qual é a diferença especial entre asyncData e fetch após navegar por <NuxtLink>?
     answers:
-      - asyncData is faster than fetch
-      - asyncData is called after fetch
-      - asyncData is blocking while fetch is not
-    correctAnswer: asyncData is blocking while fetch is not
+      - asyncData é mais rápido do que buscar
+      - asyncData é chamado após fetch
+      - asyncData bloqueia, enquanto o fetch não bloqueia
+    correctAnswer: asyncData bloqueia, enquanto o fetch não bloqueia
 ---
 
 <app-modal :src="img" :alt="imgAlt"></app-modal>

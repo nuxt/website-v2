@@ -81,7 +81,7 @@ export default {
 
 <base-alert>
 
-If you have created a new project with `create nuxt-app` you can choose to add the content module and therefore it will be installed for you.
+If you have created a new project with `create-nuxt-app` you can choose to add the content module and therefore it will be installed for you.
 
 </base-alert>
 
@@ -95,7 +95,7 @@ mkdir content
 
 <base-alert>
 
-If you have created your project with `create nuxt-app`, the `content/` directory will be already created.
+If you have created your project with `create-nuxt-app`, the `content/` directory will be already created.
 
 </base-alert>
 

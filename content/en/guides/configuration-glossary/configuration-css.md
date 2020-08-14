@@ -31,3 +31,21 @@ export default {
 ```
 
 Nuxt.js will automatically guess the file type by its extension and use the appropriate pre-processor loader for webpack. You will still need to install the required loader if you need to use them.
+
+### Style Extensions
+
+You can omit the file extension for CSS/SCSS/Postcss/Less/Stylus/... files listed in the css array in your nuxt config file.
+
+```js{}[nuxt.config.js]
+export default {
+  css: ['~/assets/css/main', '~/assets/css/animations']
+}
+```
+
+<base-alert>
+
+If you have two files with the same name eg. main.scss and main.css, and don't add an extension in the css array eg. `css:['~/assets/css/main']`, then the files will be loaded in a specific order, first the css file and then the scss file.
+
+</base-alert>
+
+Default order: `['css', 'pcss', 'postcss', 'styl', 'stylus', 'scss', 'sass', 'less']`

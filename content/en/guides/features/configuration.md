@@ -99,6 +99,24 @@ Nuxt.js will automatically guess the file type by its extension and use the appr
 
 </base-alert>
 
+### Style Extensions
+
+You can omit the file extension for CSS/SCSS/Postcss/Less/Stylus/... files listed in the css array in your nuxt config file.
+
+```js{}[nuxt.config.js]
+export default {
+  css: ['~/assets/css/main', '~/assets/css/animations']
+}
+```
+
+<base-alert>
+
+If you have two files with the same name eg. main.scss and main.css, and don't add an extension in the css array eg. `css:['~/assets/css/main']`, then the files will be loaded in a specific order, first the css file and then the scss file.
+
+</base-alert>
+
+Default order: `['css', 'pcss', 'postcss', 'styl', 'stylus', 'scss', 'sass', 'less']`
+
 <app-modal>
   <code-sandbox  :src="csb_link_pre-processors"></code-sandbox>
 </app-modal>
@@ -364,6 +382,10 @@ The axios-module cannot be used in `nuxt.config.js`. You will need to import axi
 
 ## Further configuration
 
-The `nuxt.config.js` has way more customization and configuration options! Check out all its keys in the glossary.
+<base-alert type="next">
+
+The `nuxt.config.js` has way more customization and configuration options! Check out all its keys in the [configuration glossary](/guides/configuration-glossary/configuration-build).
+
+</base-alert>
 
 <quiz :questions="questions"></quiz>

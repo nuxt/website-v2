@@ -44,7 +44,7 @@ export default {
 
 <base-alert>
 
-If you have two files with the same name eg. main.scss and main.css, and don't add an extension in the css array eg. `css:['~/assets/css/main']`, then the only one file will be loaded depending on the default order. In this case only the css file will be loaded and the scss file will be ignored.
+If you have two files with the same name eg. `main.scss` and `main.css`, and don't specify an extension in the css array entry, eg. `css: ['~/assets/css/main']`, then only one file will be loaded depending on the order of `styleExtensions`. In this case only the `css` file will be loaded and the `scss` file will be ignored because `css` comes first in the default `styleExtension` array.
 
 </base-alert>
 

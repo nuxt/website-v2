@@ -35,7 +35,7 @@ The [content module](https://content.nuxtjs.org) is a git files based headless C
   - [Styling our markdown content](#styling-our-markdown-content)
   - [Adding an icon to our headings anchor](#adding-an-icon-to-our-headings-anchor)
   - [Add a table of contents](#add-a-table-of-contents)
-  - [Use HTML into your markdown files](#use-html-into-your-markdown-files)
+  - [Use HTML in your markdown files](#use-html-in-your-markdown-files)
   - [Adding a Vue component](#adding-a-vue-component)
   - [Adding an Author component with props](#adding-an-author-component-with-props)
   - [Adding a code block to your post](#adding-a-code-block-to-your-post)
@@ -353,7 +353,7 @@ We can improve this further by using dynamic classes to style the heading classe
 :class="{ 'py-2': link.depth === 2, 'ml-2 pb-2': link.depth === 3 }"
 ```
 
-### Use HTML into your markdown files
+### Use HTML in your markdown files
 
 Sometimes we might want to add HTML to our markdown files. Let's add a div with some classes so it has a background color of blue with white text, some padding and a margin bottom.
 
@@ -636,7 +636,7 @@ We can now add our `<prev-next>` component to our slug page passing in the props
 </template>
 ```
 
-<base-alert>
+<base-alert type="info">
 
 As we have set `components: true` in our nuxt.config file we do not need to import this component in order to be able to use it.
 
@@ -646,13 +646,13 @@ As we have set `components: true` in our nuxt.config file we do not need to impo
 
 When querying data the Content module gives us access to the API so that we can query it directly to see what is being returned. We have access to the API in dev mode with the following url: [http://localhost:3000/\_content/](http://localhost:3000/_content/). In our example this will be empty as our articles are in a folder called articles therefore we need to use this url [http://localhost:3000/\_content/articles](http://localhost:3000/_content/articles) to see our list of articles.
 
-<base-alert>
+<base-alert type="info">
 
 We can see individual articles by adding the name of the slug [http://localhost:3000/\_content/articles/my-first-blog-post](http://localhost:3000/_content/articles/my-first-blog-post)
 
 </base-alert>
 
-<base-alert>
+<base-alert type="info">
 
 You can use a chrome extension such as [JSON Viewer Awesome](https://chrome.google.com/webstore/detail/json-viewer-awesome/iemadiahhbebdklepanmkjenfdebfpfe?hl=en) so you can better see your results.
 
@@ -672,7 +672,7 @@ We can now query our results directly in the url and see our results as a JSON w
 
 We can now create our blog index page to list out our blog posts. As we already have an index page created we just need to delete all the demo code inside this page.
 
-<base-alert>
+<base-alert type="info">
 
 In the [demo code](https://github.com/nuxt-company/demo-blog-nuxt-content) I used the main index page instead of creating an index file inside the blog folder because for this example I have no other pages but normally you might have a home page, contact page and then the blog page etc.
 
@@ -769,7 +769,7 @@ We then fetch all the details we want to show on this page. In the last example 
 </script>
 ```
 
-<base-alert>
+<base-alert type="info">
 
 You can use an array and pass in more than just 'body' to the `without()` method:
 
@@ -803,7 +803,7 @@ We can then use our data to print out a nice author page showing the author name
 </template>
 ```
 
-<base-alert>
+<base-alert type="info">
 
 Please note all styles have been removed from this example. You can either style the page yourself or copy the styles from the [demo code](https://github.com/nuxt-company/demo-blog-nuxt-content).
 
@@ -898,7 +898,7 @@ We can now use our `<AppSearchInput>` component by adding it anywhere on our pag
 <AppSearchInput />
 ```
 
-<base-alert>
+<base-alert type="info">
 
 See the [demo code](https://github.com/nuxt-company/demo-blog-nuxt-content) for improved styling of this page as well as the header component that was added which includes the search component and is therefore displayed on the author and index page.
 

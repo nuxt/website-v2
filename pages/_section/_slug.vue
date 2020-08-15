@@ -79,12 +79,6 @@ export default {
     try {
       page = await $content(path, slug).fetch()
     } catch (err) {
-      if (!err.response || err.response.status !== 404) {
-        return error({
-          statusCode: 500,
-          message: app.i18n.t('common.an_error_occurred')
-        })
-      }
       return error({
         statusCode: 404,
         message: app.i18n.t('common.api_page_not_found')

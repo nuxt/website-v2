@@ -1,5 +1,5 @@
 ---
-title: Struktur direktori
+title: Struktur Direktori
 description: Struktur aplikasi Nuxt.js default dimaksudkan untuk memberikan titik awal yang bagus untuk aplikasi kecil dan besar. Anda bebas untuk mengatur aplikasi Anda sesuka Anda dan dapat membuat direktori lain jika Anda membutuhkannya.
 position: 3
 category: get-started
@@ -27,7 +27,7 @@ Membuat direktori dengan nama ini untuk mengaktifkan fitur dalam proyek Nuxt.js 
 
 ### Direktori pages
 
-Direktori `pages` berisi view dan rute aplikasi Anda. Seperti yang telah Anda pelajari di bab terakhir, Nuxt.js membaca semua file `.vue` di dalam direktori ini dan menggunakannya untuk membuat router aplikasi.
+Direktori `pages` berisi tampilan dan rute aplikasi Anda. Seperti yang telah Anda pelajari di bab terakhir, Nuxt.js membaca semua file `.vue` di dalam direktori ini dan menggunakannya untuk membuat _router_ aplikasi.
 
 <base-alert type="next">
 
@@ -39,7 +39,7 @@ Pelajari lebih lanjut tentang [direktori pages](/guides/directory-structure/page
 
 Direktori `components` adalah tempat Anda meletakkan semua komponen Vue.js yang kemudian diimpor ke halaman Anda.
 
-Dengan Nuxt.js Anda dapat membuat komponen Anda dan mengimpornya secara otomatis ke file .vue Anda berarti tidak perlu mengimpornya secara manual di bagian skrip. Nuxt.js akan memindai dan mengimpor ini secara otomatis untuk Anda setelah Anda menyetel komponen ke true.
+Dengan Nuxt.js Anda dapat membuat komponen Anda dan mengimpornya secara otomatis ke file .vue Anda berarti tidak perlu mengimpornya secara manual di bagian _script_. Nuxt.js akan memindai dan mengimpor ini secara otomatis untuk Anda setelah Anda menyetel komponen ke _true_.
 
 <base-alert type="next">
 
@@ -49,7 +49,7 @@ Pelajari lebih lanjut tentang [direktori components](/guides/directory-structure
 
 ### Direktori assets
 
-Direktori `assets` berisi assets Anda yang tidak dikompilasi seperti styles, images, atau fonts Anda.
+Direktori `assets` berisi _assets_ Anda yang tidak dikompilasi seperti _styles_, _images_, atau _fonts_ Anda.
 
 <base-alert type="next">
 
@@ -59,7 +59,7 @@ Pelajari lebih lanjut tentang [direktori assets](/guides/directory-structure/ass
 
 ### Direktori static
 
-Direktori `static` secara langsung dipetakan ke root server dan berisi file yang harus tetap menggunakan namanya (mis. `robots.txt`) _atau_ kemungkinan besar tidak akan berubah (mis. favicon).
+Direktori `static` secara langsung dipetakan ke _root server_ dan berisi file yang harus tetap menggunakan namanya (mis. `robots.txt`) _atau_ kemungkinan besar tidak akan berubah (mis. favicon).
 
 <base-alert type="next">
 
@@ -79,7 +79,7 @@ Pelajari lebih lanjut tentang [file nuxt.config.js](/guides/directory-structure/
 
 ### File package.json
 
-File `package.json` berisi semua dependensi dan skrip untuk aplikasi Anda.
+File `package.json` berisi semua dependensi dan _script_ untuk aplikasi Anda.
 
 <app-modal>
   <code-sandbox :src="csb_link"></code-sandbox>

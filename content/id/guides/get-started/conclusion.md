@@ -1,6 +1,6 @@
 ---
 title: Kesimpulan
-description: Selamat Anda sekarang telah membuat aplikasi Nuxt.js pertama Anda dan sekarang Anda dapat menganggap diri Anda seorang Nuxter. Namun masih banyak lagi yang harus dipelajari dan banyak lagi yang dapat Anda lakukan dengan Nuxt.js. Berikut ini beberapa rekomendasi.
+description: Selamat Anda telah membuat aplikasi Nuxt.js pertama Anda dan sekarang Anda dapat menganggap diri Anda seorang Nuxter. Namun masih banyak lagi yang harus dipelajari dan banyak lagi yang dapat Anda lakukan dengan Nuxt.js. Berikut ini beberapa rekomendasi.
 position: 4
 category: get-started
 questions:
@@ -22,7 +22,7 @@ questions:
       - npm run dev
       - nuxt dev
     correctAnswer: npm run dev
-  - question: Apa alamat di browser tempat Anda dapat melihat halaman Anda dalam mode pengembangan?
+  - question: Apa alamat di _browser_ tempat Anda dapat melihat halaman Anda dalam mode pengembangan?
     answers:
       - http://localhost:3000/
       - http://localhost:3000/project-name:3000
@@ -52,7 +52,7 @@ questions:
       - components
       - static
     correctAnswer: static
-  - question: Komponen apa yang kami gunakan untuk menavigasi antar halaman?
+  - question: Komponen apa yang kita gunakan untuk menavigasi antar halaman?
     answers:
       - '<Nuxt>'
       - '<RouterLink>'

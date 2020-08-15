@@ -207,7 +207,7 @@ Nuxt will directly fill  `this.$fetchState.timestamp`  (timestamp) of the last
   export default {
     data() {
       return {
-        post: {}
+        posts: []
       }
     },
     activated() {

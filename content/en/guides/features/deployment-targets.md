@@ -11,19 +11,19 @@ For static hosting (hosting where no server is needed) the target of static need
 
 ```js{}[nuxt.config.js]
 export default {
-  target: 'static' // default: 'server'
+  target: 'static' // default is 'server'
 }
 ```
 
 Running nuxt dev with the static target will improve the developer experience:
 
-- Remove req & res from context
-- Fallback to client-side rendering on 404, errors and redirects (see SPA fallback)
-- `$route.query` will always be equal to {} on server-side rendering
-- process.static is true
+- Remove `req` & `res` from `context`
+- Fallback to client-side rendering on 404, errors and redirects [see SPA fallback](./guides/concepts/static-site-generation#spa-fallback)
+- `$route.query` will always be equal to `{}` on server-side rendering
+- `process.static` is true
 
 <base-alert type="info">
-We are also exposing process.target for module authors to add logic depending on the user target.
+We are also exposing `process.target` for module authors to add logic depending on the user target.
 </base-alert>
 
 ## Server Hosting

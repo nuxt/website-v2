@@ -291,6 +291,10 @@ export const actions = {
 }
 ```
 
+<base-alert>
+Don't use `Vue.use()`, `Vue.component()`, and globally, don't plug anything in Vue **inside** this function, dedicated to Nuxt injection. It will cause memory leak on server-side.
+</base-alert>
+
 <app-modal>
   <code-sandbox  :src="csb_link_plugins_custom"></code-sandbox>
 </app-modal>

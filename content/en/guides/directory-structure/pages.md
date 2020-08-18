@@ -163,7 +163,7 @@ Every time you need to get asynchronous data you can use fetch. Fetch is called 
       }
     },
     async fetch() {
-      this.post = await fetch('https://api.nuxtjs.dev/posts').then(res =>
+      this.posts = await fetch('https://api.nuxtjs.dev/posts').then(res =>
         res.json()
       )
     }

@@ -25,7 +25,7 @@
     "node-fetch": "^2.6.0",
     "normalize.css": "^8.0.1",
     "nuxt-edge": "^2.14.0-26597729.aebf0ffe",
-    "nuxt-i18n": "^6.13.9",
+    "nuxt-i18n": "^6.13.10",
     "nuxt-svg-loader": "^1.2.0",
     "prism-themes": "^1.4.0",
     "prismjs": "^1.21.0",

@@ -9030,10 +9030,10 @@ nuxt-edge@^2.14.0-26597729.aebf0ffe:
     "@nuxt/telemetry" "^1.2.2"
     "@nuxt/webpack-edge" "2.14.0-26597729.aebf0ffe"
 
-nuxt-i18n@^6.13.9:
-  version "6.13.9"
-  resolved "https://registry.yarnpkg.com/nuxt-i18n/-/nuxt-i18n-6.13.9.tgz#dd060a747c8d2c65e7de5119abf2f18ea2fd086b"
-  integrity sha512-ysoUyw2F4zBo/UZoK6pxFI1QS/j9NyPvpzyofoY+yKn3phr7XKaR/lZgLuHvZbxIN27f6gKyblCi34wTNjX0Jw==
+nuxt-i18n@^6.13.10:
+  version "6.13.10"
+  resolved "https://registry.yarnpkg.com/nuxt-i18n/-/nuxt-i18n-6.13.10.tgz#df0a7fc156dc0f34b9cb39442b0350d2f64532d7"
+  integrity sha512-k+pqpFpafBtB26mkaF3laOSyfQK5mk+UyxwHygalwIXeqtq27RTuxzk50rKMfGPEquOCjHVKSdJMhgxGcqxniw==
   dependencies:
     "@babel/parser" "^7.5.5"
     "@babel/traverse" "^7.5.5"

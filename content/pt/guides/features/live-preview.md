@@ -75,7 +75,7 @@ async validate({ app, params, $preview }) {
 }
 ```
 
-### O que mais
+### O que vem em seguida
 
 <base-alert type="next">
 

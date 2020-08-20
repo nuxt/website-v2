@@ -34,7 +34,7 @@ watchers: {
 
 Para saber mais sobre webpack watchoptions, consulte a [documentação do webpack](https://webpack.js.org/configuration/watch/#watchoptions).
 
-### O que mais
+### O que vem em seguida
 
 <base-alert type="next">
 

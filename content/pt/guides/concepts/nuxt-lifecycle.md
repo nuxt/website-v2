@@ -155,7 +155,7 @@ Confira o capítulo de componentes para ver mais informações sobre o [`<NuxtLi
 - fetch (não gera bloqueio)
 - beforeMount & mounted (métodos do ciclo de vida do Vue)
 
-### O que mais
+### O que vem em seguida
 
 <base-alert type="next">
 

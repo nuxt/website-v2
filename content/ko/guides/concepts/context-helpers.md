@@ -8,37 +8,37 @@ csb_link_helpers: https://codesandbox.io/embed/github/nuxt-academy/guides-exampl
 img: /guides/context.svg
 imgAlt: nuxt-js-context-keys
 questions:
-  - question: What is the reason the context exists?
+  - question: 컨텍스트가 존재하는 이유가 무엇인가요?
     answers:
-      - Server-side rendering
-      - Having global state
-      - Laziness
-    correctAnswer: Server-side rendering
-  - question: Which key is not in the context?
+      - 서버 사이드 렌더링
+      - 글로벌 state를 가지기
+      - 지연
+    correctAnswer: 서버 사이드 렌더링
+  - question: 컨텍스트에 있는 키가 아닌 것은?
     answers:
       - env
       - isDev
       - $store
     correctAnswer: $store
-  - question: Which context key is only available on the *server* side?
+  - question: '*서버* 사이드에서만 사용할 수 있는 컨텍스트 키는 무엇인가요?'
     answers:
       - from
       - app
       - req
     correctAnswer: req
-  - question: Which context key is only available on the *client* side?
+  - question: '*클라이언트* 사이드에서만 사용할 수 있는 컨텍스트 키는 무엇인가요?'
     answers:
       - from
       - res
       - app
     correctAnswer: from
-  - question: What can the `$nuxt` helper *not* do?
+  - question: `$nuxt` 헬퍼가 할 수 *없는* 것은 무엇인가요?
     answers:
-      - Displaying the version of Nuxt
-      - Providing info about the users internet connection status
-      - Accessing exposed module functions
-    correctAnswer: Displaying the version of Nuxt
-  - question: What are the names of the process helpers
+      - Nuxt 버전 표기하기
+      - 사용자의 인터넷 연결 상태 정보 제공하기
+      - 노출된 모듈 함수 접근하기
+    correctAnswer: Nuxt 버전 표기하기
+  - question: 프로세스 헬퍼의 이름들은 무엇일까요?
     answers:
       - global, client and server
       - server, client and static

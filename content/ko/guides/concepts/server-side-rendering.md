@@ -1,48 +1,48 @@
 ---
-title: Server Side Rendering
+title: 서버 사이드 렌더링
 description: 서버 사이드 렌더링(SSR)은 웹 페이지를 브라우저에서 렌더링하는 대신 서버에서 보여주도록 하는 애플리케이션 기능입니다.
 position: 3
 category: concepts
 questions:
-  - question: What kinda of server do you need for Server Side Rendering?
+  - question: 서버 사이드 렌더링을 위해 필요한 서버의 종료는 무엇인가요?
     answers:
-      - PHP server
-      - JavaScript server
-      - Node.js server
-    correctAnswer: Node.js server
-  - question: What do you use to extend and control the server?
+      - PHP 서버
+      - JavaScript 서버
+      - Node.js 서버
+    correctAnswer: Node.js 서버
+  - question: 서버를 확장하고 제어하기 위해 사용해야 하는 것은 무엇인가요?
     answers:
       - Middleware
       - ServerMiddleware
-      - It is not possible to control the server
+      - 서버를 제어할 수 없다
     correctAnswer: ServerMiddleware
-  - question: You can host a server side rendered application on a serverless hosting provider
+  - question: 서버없는 호스팅 제공자에서 서버 사이드 렌더링되는 애플리케이션을 사용할 수 있나요?
     answers:
-      - true
-      - false
-    correctAnswer: false
-  - question: Do we have access to  document on the server-side?
+      - 예
+      - 아니요
+    correctAnswer: 아니요
+  - question: 서버 사이드에서 document에 접근할 수 있나요?
     answers:
-      - yes, it is always available
-      - No, The object belongs to the browser and is not available on the server
-    correctAnswer: No, The object belongs to the browser and is not available on the server
-  - question: When does your page become interactive?
+      - 예, 항상 접근할 수 있습니다.yes, it is always available
+      - 아니요, 브라우저에 있는 객체이므로 서버에서 접근할 수 없습니다.
+    correctAnswer: 아니요, 브라우저에 있는 객체이므로 서버에서 접근할 수 없습니다.
+  - question: 페이지가 언제 유저의 액션에 반응하게 되나요?
     answers:
-      - When the browser receives the rendered HTML from the server
-      - When the Vue.js hydration kicks in
-      - When a browser sends the initial request
-    correctAnswer: When the Vue.js hydration kicks in
-  - question: Navigating between pages using <NuxtLink> is done
+      - 브라우저가 서버로부터 렌더링된 HTML를 받을 때
+      - Vue.js hydration이 시작될 때
+      - 브라우저가 초기 요청을 보낼 때
+    correctAnswer: Vue.js hydration이 시작될 때
+  - question: <NuxtLink>를 사용하는 페이지 간의 이동은 어디에서 수행되나요?
     answers:
-      - Client side
-      - Server side
-    correctAnswer: Client side
-  - question: What are the correct steps?
+      - 클라이언트 사이드
+      - 서버 사이드
+    correctAnswer: 클라이언트 사이드
+  - question: 올바른 순서는 무엇인가요?
     answers:
-      - browser → server, server → browser, browser → browser
-      - server → browser, browser → server, server → server
-      - browser → server, server → browser, browser → server
-    correctAnswer: browser → server, server → browser, browser → browser
+      - 브라우저 → 서버, 서버 → 브라우저, 브라우저 → 브라우저
+      - 서버 → 브라우저, 브라우저 → 서버, 서버 → 서버
+      - 브라우저 → 서버, 서버 → 브라우저, 브라우저 → 서버
+    correctAnswer: 브라우저 → 서버, 서버 → 브라우저, 브라우저 → 브라우저
 ---
 
 서버 사이드 렌더링(SSR)은 웹 페이지를 브라우저에서 렌더링하는 대신 서버에서 보여주도록 하는 애플리케이션 기능입니다. 서버 사이드는 완전히 렌더링 된 페이지를 클라이언트에 보냅니다; 클라이언트의 자바스크립트 번들이 전달되어 Vue.js 앱이 [hydrate](https://ssr.vuejs.org/guide/hydration.html)되도록 합니다.

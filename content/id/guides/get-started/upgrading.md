@@ -1,13 +1,13 @@
 ---
-title: Upgrade
-description: Memutakhirkan Nuxt.js cepat, tetapi lebih melibatkan daripada memperbarui package.json Anda
+title: Meningkatkan
+description: Meningkatkan Nuxt.js itu cepat, tetapi ini melibatkan lebih dari sekadar memperbarui package.json Anda.
 position: 5
 category: get-started
 ---
 
-> Memutakhirkan Nuxt.js cepat, tetapi lebih melibatkan daripada memperbarui package.json Anda
+> Meningkatkan Nuxt.js itu cepat, tetapi ini melibatkan lebih dari sekadar memperbarui package.json Anda.
 
-Jika Anda mengupgrade ke Nuxt v2.14 dan ingin menggunakan hosting statis maka Anda perlu menambahkan [target:static](/guides/features/deployment-targets#static-hosting) ke file nuxt.config.js agar perintah generate berfungsi dengan benar.
+Jika Anda meningkatkan ke Nuxt v2.14 dan ingin menggunakan _hosting_ statis, maka Anda perlu menambahkan [target:static](/guides/features/deployment-targets#static-hosting) ke file `nuxt.config.js` agar perintah _generate_ berfungsi dengan benar.
 
 ```js{}[nuxt.config.js]
 export default {
@@ -24,14 +24,14 @@ Setelah langkah ini, instruksi bervariasi tergantung pada apakah Anda menggunaka
 
 ## Yarn
 
-1. hapus file `yarn.lock`
-2. hapus direktori `node_modules`
+1. Hapus file `yarn.lock`
+2. Hapus direktori `node_modules`
 3. Jalankan perintah `yarn`
-4. Setelah penginstalan selesai dan Anda telah menjalankan pengujian, pertimbangkan untuk mengupgrade dependensi lain juga. Jalankan perintah `yarn outdated` dapat digunakan.
+4. Setelah penginstalan selesai dan Anda telah menjalankan pengujian, pertimbangkan untuk meningkatkan dependensi lain juga. Perintah `yarn outdated` dapat digunakan.
 
 ## NPM
 
-1. hapus file `package-lock.json`
-2. hapus direktori `node_modules`
+1. Hapus file `package-lock.json`
+2. Hapus direktori `node_modules`
 3. Jalankan perintah `npm install`
-4. Setelah penginstalan selesai dan Anda telah menjalankan pengujian, pertimbangkan untuk mengupgrade dependensi lain juga. Jalankan perintah `npm outdated` dapat digunakan.
+4. Setelah penginstalan selesai dan Anda telah menjalankan pengujian, pertimbangkan untuk meningkatkan dependensi lain juga. Perintah `npm outdated` dapat digunakan.

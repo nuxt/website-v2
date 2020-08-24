@@ -1,7 +1,7 @@
 <template>
   <div class="-mx-4 lg:mx-0 flex flex-col-reverse lg:flex-row">
     <div
-      class="lg:min-h-screen w-full py-8 px-4 lg:static lg:overflow-visible lg:max-h-full lg:w-3/4"
+      class="w-full py-8 px-4 lg:static lg:overflow-visible lg:max-h-full lg:w-3/4"
     >
       <LangFallback :doc-link="docLink" :lang-fallback="langFallback" />
 
@@ -79,12 +79,6 @@ export default {
     try {
       page = await $content(path, slug).fetch()
     } catch (err) {
-      if (!err.response || err.response.status !== 404) {
-        return error({
-          statusCode: 500,
-          message: app.i18n.t('common.an_error_occurred')
-        })
-      }
       return error({
         statusCode: 404,
         message: app.i18n.t('common.api_page_not_found')

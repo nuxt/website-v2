@@ -6,7 +6,8 @@
           <h1
             class="text-3xl xl:text-4xl text-light-onSurfacePrimary dark:text-dark-onSurfacePrimary font-medium leading-normal mb-6 lg:pt-4"
           >
-            {{ $t('sponsor.title.pre') }} <AppTitle /> {{ $t('sponsor.title.post') }}<br />
+            {{ $t('sponsor.title.pre') }} <AppTitle />
+            {{ $t('sponsor.title.post') }}<br />
           </h1>
           <i18n
             path="sponsor.description"
@@ -183,6 +184,12 @@ export default {
             img: 'storyblok-logo.svg',
             url: 'https://www.storyblok.com/?ref=nuxt',
             class: 'h-24'
+          },
+          {
+            name: 'Moovweb',
+            url: 'https://www.moovweb.com/?ref=nuxt',
+            img: 'moovweb-logo.png',
+            class: 'h-12'
           }
         ],
         gold: [

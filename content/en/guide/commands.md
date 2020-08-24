@@ -68,7 +68,9 @@ To launch Nuxt in development mode with hot reloading:
 
 ```bash
 nuxt
+
 // OR
+
 npm run dev
 ```
 
@@ -113,8 +115,8 @@ To generate our web application into static files:
 
 ```json
 "scripts": {
-    "generate": "nuxt generate"
-  }
+  "generate": "nuxt generate"
+}
 ```
 
 In your `nuxt.config` file you need to add the `target` property with the value of `static` `nuxt.config.js`. (For Nuxt >= 2.13:)

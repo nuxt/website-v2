@@ -34,47 +34,10 @@ $ npx create-nuxt-app <project-name>
 $ yarn create nuxt-app <project-name>
 ```
 
-いくつか質問されます:
-
-1. サーバーサイドのフレームワークを選択します:
-
-- None (Nuxt default server)
-- [Express](https://github.com/expressjs/express)
-- [Koa](https://github.com/koajs/koa)
-- [Hapi](https://github.com/hapijs/hapi)
-- [Feathers](https://github.com/feathersjs/feathers)
-- [Micro](https://github.com/zeit/micro)
-- [Fastify](https://github.com/fastify/fastify)
-- [Adonis](https://github.com/adonisjs/adonis-framework) (WIP)
-
-2. 好きな UI フレームワークを選択します:
-
-- None（後からでも追加できます）
-- [Bootstrap](https://github.com/bootstrap-vue/bootstrap-vue)
-- [Vuetify](https://github.com/vuetifyjs/vuetify)
-- [Bulma](https://github.com/jgthms/bulma)
-- [Tailwind](https://github.com/tailwindcss/tailwindcss)
-- [Element UI](https://github.com/ElemeFE/element)
-- [Ant Design Vue](https://github.com/vueComponent/ant-design-vue)
-- [Buefy](https://github.com/buefy/buefy)
-- [iView](https://github.com/iview/iview)
-- [Tachyons](https://github.com/tachyons-css/tachyons)
-- [Vuesax](https://github.com/lusaxweb/vuesax)
-
-3. 好きなテスティングフレームワークを選択します:
-
-- None (後からでも追加できます）
-- [Jest](https://github.com/facebook/jest)
-- [AVA](https://github.com/avajs/ava)
-
-4. [Nuxt のモードを選択します。(`Universal` または `SPA`)](https://ja.nuxtjs.org/guide#%E3%82%B7%E3%83%B3%E3%82%B0%E3%83%AB%E3%83%9A%E3%83%BC%E3%82%B8%E3%82%A2%E3%83%97%E3%83%AA%E3%82%B1%E3%83%BC%E3%82%B7%E3%83%A7%E3%83%B3-spa-)
-5. HTTP リクエストを簡単に行うために [axios module](https://github.com/nuxt-community/axios-module) を追加します。
-6. 保存時にコードをチェックするために [EsLint](https://eslint.org/) を追加します。
-7. 保存時にコードを整形するために [Prettier](https://prettier.io/) を追加します。
-
-回答が終わり次第、全ての依存関係がインストールされ、プロジェクトを開始する次のステップへ進めます:
+いくつか質問（名前、Nuxt オプション、UI フレームワーク、TypeScript、linter、テストフレームワークなど）に答えると選択した全ての依存関係がインストールされます。次のステップはプロジェクトフォルダに遷移し起動します:
 
 ```bash
+$ cd <project-name>
 $ npm run dev
 ```
 
@@ -90,7 +53,7 @@ Nuxt.js は `pages` ディレクトリ内のファイルの更新を監視しま
 
 ## スクラッチから始める
 
-Nuxt.js プロジェクトをスクラッチから作ることも簡単で、必要なのは _1 つのファイルと 1 つのディレクトリ_ だけです。まずは空のディレクトリを作りましょう:
+Nuxt.js プロジェクトをスクラッチから作ることも簡単で、必要なのは _1つのファイルと 1つのディレクトリ_ だけです。まずは空のディレクトリを作りましょう:
 
 ```bash
 $ mkdir <project-name>

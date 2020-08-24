@@ -122,7 +122,7 @@ export default {
   modules: [
     // Simple usage
     '~/modules/simple',
-      // Passing options directly
+    // Passing options directly
     ['~/modules/simple', { token: '123' }]
   ]
 }
@@ -444,18 +444,6 @@ Your module is a `buildModule` unless:
 If you are going to offer using `buildModules` please mention that this feature is only available since Nuxt v2.9. Older users should upgrade Nuxt or use the `modules` section.
 
 </base-alert>
-
-## The modulesDir Property
-
-The modulesDir property is used to set the modules directories for path resolving. For example: Webpack's resolveLoading, nodeExternals and postcss. The configuration path is relative to `options.rootDir` (default: process.cwd()).
-
-```js{}[nuxt.config.js]
-export default {
-  modulesDir: ['../../node_modules']
-}
-```
-
-Setting this field may be necessary if your project is organized as a Yarn workspace-styled mono-repository.
 
 <app-modal>
   <code-sandbox  :src="csb_link"></code-sandbox>

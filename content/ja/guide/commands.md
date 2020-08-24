@@ -9,12 +9,23 @@ position: 113
 
 ## コマンド一覧
 
+[target](/api/configuration-target) に応じて異なるコマンドを実行することができます。
+
+`server`
+
 | コマンド | 説明 |
 | --- | --- |
-| nuxt | 開発サーバーを [localhost:3000](http://localhost:3000) で起動します。このサーバーはホットリローディングします |
+| nuxt dev | 開発サーバーを [localhost:3000](http://localhost:3000) で起動します。このサーバーはホットリローディングします |
 | nuxt build | アプリケーションを Webpack でビルドし、JS と CSS をプロダクション向けにミニファイします |
 | nuxt start | プロダクションモードでサーバーを起動します（`nuxt build` 後に実行してください） |
-| nuxt generate | アプリケーションをビルドして、ルートごとに HTML ファイルを生成します（静的ファイルのホスティングに用います） |
+
+`static`
+
+| コマンド | 説明 |
+| --- | --- |
+| nuxt dev | 開発サーバーを [localhost:3000](http://localhost:3000) で起動します。このサーバーはホットリローディングします。 |
+| nuxt start | dist/ directory からプロダクションアプリケーションを提供します（Nuxt v2.13 以上） |
+| nuxt generate | アプリケーションをビルドして、ルートごとに HTML ファイルを生成します（Nuxt v2.12 以下で静的ファイルのホスティングに用います） |
 
 #### 引数
 
@@ -57,7 +68,9 @@ position: 113
 
 ```bash
 nuxt
+
 // または
+
 npm run dev
 ```
 
@@ -74,7 +87,7 @@ nuxt build
 nuxt start
 ```
 
-Nuxt.js を HTTPS モードで提供することを選択した場合、 [`https.createServer`](https://nodejs.org/api/https.html) に渡されるオプションと同じオプションを使って `nuxt.config.js` に `server.https`を設定することもできます。 `nuxt.config.js`に `server.socket` オプションを設定（または [CLI](https://ja.nuxtjs.org/guide/commands/#%E3%82%B3%E3%83%9E%E3%83%B3%E3%83%89%E4%B8%80%E8%A6%A7) の `-n` 引数を使用）すると、 Unix ソケットも利用できます。 [Unix ソケット](https://en.wikipedia.org/wiki/Berkeley_sockets)を利用する場合は、 `host` パラメータと `port` パラメータを設定しないでください。設定した場合、 `socket` パラメータは無視されます。
+Nuxt.js を HTTPS モードで提供することを選択した場合、[`https.createServer`](https://nodejs.org/api/https.html) に渡されるオプションと同じオプションを使って `nuxt.config.js` に `server.https`を設定することもできます。`nuxt.config.js`に `server.socket` オプションを設定（または [CLI](/guide/commands/#%E3%82%B3%E3%83%9E%E3%83%B3%E3%83%89%E4%B8%80%E8%A6%A7) の `-n` 引数を使用）すると、 Unix ソケットも利用できます。[Unix ソケット](https://ja.wikipedia.org/wiki/%E3%82%BD%E3%82%B1%E3%83%83%E3%83%88_(BSD))を利用する場合は、`host` パラメータと `port` パラメータを設定しないでください。設定した場合、 `socket` パラメータは無視されます。
 
 `package.json` では下記のように記述することが推奨されています:
 
@@ -94,17 +107,31 @@ Nuxt.js を HTTPS モードで提供することを選択した場合、 [`https
 
 メモ: `.npmignore` または `.gitignore` 内に `.nuxt` を書いておくと良いでしょう。
 
-### 静的に生成されたファイルのデプロイ
+### 静的に生成されたファイルのデプロイ（Pre-rendered）
 
 Nuxt.js を使用すると、どの静的ホスティングサービスでもウェブアプリケーションをホストすることができます。
 
-アプリケーションから静的ファイルを生成するには:
+ウェブアプリケーションから静的ファイルを生成するには:
+
+```json
+"scripts": {
+  "generate": "nuxt generate"
+}
+```
+
+`nuxt.config` ファイルに値が `static` の `target` プロパティを追加してください（Nuxt v2.13 以上の場合）。
+
+```js
+export default {
+  target: 'static'
+}
+```
 
 ```bash
 npm run generate
 ```
 
-静的なホスティングサイトにデプロイする準備が整ったものが全て入った `dist` フォルダが作成されます。
+Nuxt.js は静的なホスティングサイトにデプロイする準備が整ったものが全て入った `dist` フォルダを作成します。
 
 ページエラーが発生した際に 0 以外のステータスコードを返し、CI/CD によるデプロイまたはビルドを失敗させるには、 `--fail-on-error` 引数を使用することができます。
 
@@ -116,17 +143,27 @@ npm run generate --fail-on-error
 yarn generate --fail-on-error
 ```
 
-プロジェクトで [動的なルーティング](/guide/routing#dynamic-routes) を使っている場合は、Nuxt.js に動的なルーティングを生成させるために [generate 設定](/api/configuration-generate) に目を通してください。
+<div class="Alert Alert-blue">
+
+Nuxt v2.13 ではリンクタグをクロールしルートを生成するクローラがインストールされています。`nuxt build && nuxt export` コマンドを使った際にこれらのリンクタグに基づいてルートを生成します。 
+
+</div>
+
+<div class="Alert Alert--orange">
+
+**警告:** Nuxt v2.12 以下の場合、動的なルーティングは `generate` コマンドによって無視されます。[generate 設定](/api/configuration-generate#routes) を参照してください。
+
+</div>
 
 <div class="Alert">
 
-`nuxt generate` でウェブアプリケーションを生成するときは、[asyncData](/guide/async-data) に渡される [context](/api/context) と [fetch](/guide/vuex-store#the-fetch-method) は `req` 及び `res` を持たなくなります。
+`nuxt build && nuxt export` または `nuxt generate` でウェブアプリケーションを生成するときは、[asyncData](/guide/async-data) に渡される [context](/api/context) と [fetch](/guide/vuex-store#the-fetch-method) は `req` 及び `res` を持たなくなります。
 
 </div>
 
 ### シングルページアプリケーションデプロイ（SPA）
 
-`nuxt generate` は、すべてのページをプレレンダリングし、高い SEO とページロードスコアを持つという利点を持つ一方で、ビルド/生成時には SSR エンジンを必要とします。 コンテンツは*ビルド時*に生成されます。 たとえば、コンテンツが（少なくとも初回ロード時）ユーザ認証またはリアルタイム API に依存するようなアプリケーションでは使用できません。
+`nuxt build && nuxt export` または `nuxt generate` は、すべてのページをプレレンダリングし、高い SEO とページロードスコアを持つという利点を持つ一方で、ビルド/生成時には SSR エンジンを必要とします。 コンテンツは*ビルド時*に生成されます。 たとえば、コンテンツが（少なくとも初回ロード時）ユーザ認証またはリアルタイム API に依存するようなアプリケーションでは使用できません。
 
 SPA のアイデアは簡単です！ `mode: 'spa'` または `--spa` フラグを使用して SPA モードを有効にし、ビルドを実行すると、ビルド後に自動的に生成が開始されます。 この生成には、共通のメタとリソースリンクが含まれますが、ページコンテンツは含まれません。
 

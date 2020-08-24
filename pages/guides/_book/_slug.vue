@@ -53,7 +53,7 @@ export default {
 
       return error({
         statusCode: 404,
-        message: app.i18n.t('common.api_page_not_found')
+        message: app.i18n.t('common.page_not_found')
       })
     }
 

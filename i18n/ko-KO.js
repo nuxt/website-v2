@@ -1,7 +1,7 @@
 module.exports = {
   common: {
     an_error_occurred: '에러가 발생했습니다.',
-    api_page_not_found: 'API 페이지를 찾을 수 없습니다.',
+    page_not_found: '페이지를 찾을 수 없습니다.',
     please_define_title: 'front matter에 title을 정의해주세요.',
     please_define_description: 'front matter에 description을 정의해주세요.',
     search: '검색 ("/" to focus)',

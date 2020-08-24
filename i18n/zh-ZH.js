@@ -1,7 +1,7 @@
 module.exports = {
   common: {
     an_error_occurred: '文档API服务异常',
-    api_page_not_found: 'API页面不存在',
+    page_not_found: '页面不存在',
     please_define_title: '请在文档页头中指定标题(title)字段',
     please_define_description: '请在文档页头中指定描述(description)字段',
     search: '搜索 ("/" to focus)',

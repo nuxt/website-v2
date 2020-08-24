@@ -1,7 +1,7 @@
 module.exports = {
   common: {
     an_error_occurred: 'Terjadi kesalahan',
-    api_page_not_found: 'Halaman API tidak ditemukan',
+    page_not_found: 'Halaman tidak ditemukan',
     please_define_title: 'Silakan tentukan judul di bagian depan',
     please_define_description: 'Silakan tentukan deskripsi di bagian depan',
     search: 'Cari ("/" untuk fokus)',

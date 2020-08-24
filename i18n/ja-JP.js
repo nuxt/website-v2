@@ -1,7 +1,7 @@
 module.exports = {
   common: {
     an_error_occurred: 'エラーが発生しました',
-    api_page_not_found: 'API ページが見つかりません',
+    page_not_found: 'ページが見つかりません',
     please_define_title: 'Frontmatter 内の title を定義してください',
     please_define_description:
       'Frontmatter 内の description を定義してください',

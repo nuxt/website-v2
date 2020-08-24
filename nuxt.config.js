@@ -136,7 +136,7 @@ export default {
   loading: { color: '#41B883' },
   generate: {
     fallback: '404.html', // for Netlify
-    routes: ['/']
+    routes: ['/', '404']
   },
   i18n: {
     strategy: 'no_prefix',

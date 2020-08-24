@@ -191,7 +191,7 @@ See more on the [modules property](/guides/configuration-glossary/configuration
 
 </base-alert>
 
-## The modulesDir Property
+### modulesDir
 
 The modulesDir property is used to set the modules directories for path resolving. For example: Webpack's resolveLoading, nodeExternals and postcss. The configuration path is relative to `options.rootDir` (default: process.cwd()).
 

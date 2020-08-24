@@ -191,7 +191,7 @@ Saiba mais sobre a [propriedade modules](/guides/configuration-glossary/configur
 
 </base-alert>
 
-## A propriedade modulesDir
+### modulesDir
 
 A propriedade modulesDir é usada para definir os diretórios dos módulos para resolução de caminho. Por exemplo: resolveLoading do Webpack, nodeExternals e postcss. O caminho de configuração é relativo a `options.rootDir` (padrão: process.cwd()).
 

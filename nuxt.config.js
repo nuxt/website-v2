@@ -190,14 +190,14 @@ export default {
         file: 'id-ID.js',
         name: 'Indonesian',
         domain: 'https://id.nuxtjs.org'
+      },
+      {
+        code: 'pt',
+        iso: 'pt-BR',
+        file: 'pt-BR.js',
+        name: 'Português',
+        domain: 'https://pt.nuxtjs.org'
       }
-      // {
-      //   code: 'pt',
-      //   iso: 'pt-BR',
-      //   file: 'pt-BR.js',
-      //   name: 'Português',
-      //   domain: 'https://pt.nuxtjs.org'
-      // }
       // {
       // code: 'tr',
       // iso: 'tr-TR',

@@ -445,18 +445,6 @@ Se você sugerir utilizar o `buildModules`, por favor mencione que este recurso 
 
 </base-alert>
 
-## A propriedade modulesDir
-
-A propriedade modulesDir é usada para definir os diretórios dos módulos para resolução de caminho. Por exemplo: resolveLoading do Webpack, nodeExternals e postcss. O caminho de configuração é relativo a `options.rootDir` (padrão: process.cwd()).
-
-```js{}[nuxt.config.js]
-export default {
-  modulesDir: ['../../node_modules']
-}
-```
-
-A configuração deste campo pode ser necessária se o seu projeto for organizado como um mono-repositório no estilo de área de trabalho do Yarn.
-
 <app-modal>
   <code-sandbox  :src="csb_link"></code-sandbox>
 </app-modal>

@@ -191,6 +191,24 @@ Saiba mais sobre a [propriedade modules](/guides/configuration-glossary/configur
 
 </base-alert>
 
+### modulesDir
+
+A propriedade modulesDir é usada para definir os diretórios dos módulos para resolução de caminho. Por exemplo: resolveLoading do Webpack, nodeExternals e postcss. O caminho de configuração é relativo a `options.rootDir` (padrão: process.cwd()).
+
+```js{}[nuxt.config.js]
+export default {
+  modulesDir: ['../../node_modules']
+}
+```
+
+A configuração deste campo pode ser necessária se o seu projeto for organizado como um mono-repositório no estilo de área de trabalho do Yarn.
+
+<base-alert type="next">
+
+Saiba mais sobre a [propriedade modulesDir](/guides/configuration-glossary/configuration-modulesdir)
+
+</base-alert>
+
 ### plugins
 
 Esta opção permite definir plugins JavaScript que devem ser executados antes de instanciar o aplicativo raiz Vue.js.

@@ -191,6 +191,24 @@ See more on the [modules property](/guides/configuration-glossary/configuration
 
 </base-alert>
 
+### modulesDir
+
+The modulesDir property is used to set the modules directories for path resolving. For example: Webpack's resolveLoading, nodeExternals and postcss. The configuration path is relative to `options.rootDir` (default: process.cwd()).
+
+```js{}[nuxt.config.js]
+export default {
+  modulesDir: ['../../node_modules']
+}
+```
+
+Setting this field may be necessary if your project is organized as a Yarn workspace-styled mono-repository.
+
+<base-alert type="next">
+
+See more on the [modulesDir property](/guides/configuration-glossary/configuration-modulesdir)
+
+</base-alert>
+
 ### plugins
 
 This option lets you define JavaScript plugins that should be run before instantiating the root Vue.js application.

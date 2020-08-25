@@ -141,14 +141,20 @@ module.exports = {
     }
   },
   design: {
-    title: 'Design',
+    title: {
+      pre: '',
+      post: 'Design'
+    },
     description:
       'NuxtJS is an MIT licensed open source project and completely free to use. {break} You can freely use our logos as long as you mention NuxtJS and link to nuxtjs.org.',
     other_download_message:
       'You can also download our {favicon} or our {sketch} file.'
   },
   resources: {
-    title: 'Resources',
+    title: {
+      pre: '',
+      post: 'Resources'
+    },
     description:
       'Discover a panel of resources made by our partners. By using thoses affiliate resources links, you are helping us to maintain and develop the Open Source Framework.',
     themes: {
@@ -159,22 +165,36 @@ module.exports = {
     }
   },
   shop: {
-    title: 'Shop',
+    title: {
+      pre: 'The',
+      post: 'Shop'
+    },
     description:
-      'You want to support the NuxtJS project and show your love to the rest of the community?{break} Here our products with the best quality ever!'
+      'You want to support the NuxtJS project and show your love to the rest of the community?{break} Here our products with the best quality ever!',
+    button: 'Coming soon'
   },
   team: {
-    title: 'Team',
+    title: {
+      pre: '',
+      post: 'Team'
+    },
     description:
       'The development of NuxtJS and its ecosystem is guided by an international team. We have a very active and engaged team that is constantly striving to push Nuxt forward.'
   },
   themes: {
-    title: 'Themes',
+    title: {
+      pre: '',
+      post: 'Themes'
+    },
     description:
-      'With the themes below built by our partners from Creative Tim and Theme Forest you can see how a real world application is built, with Nuxt.js stack behind.'
+      'With the themes below built by our partners from Creative Tim and Theme Forest you can see how a real world application is built, with Nuxt.js stack behind.',
+    button: 'GET IT for'
   },
   'video-courses': {
-    title: 'Video Courses',
+    title: {
+      pre: '',
+      post: 'Video Courses'
+    },
     description:
       'With the video courses below created by our partner VueSchool you can discover and learn more about the Nuxt.js Framework.',
     cta: {

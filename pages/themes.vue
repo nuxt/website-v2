@@ -6,7 +6,8 @@
           <h1
             class="text-3xl xl:text-4xl text-light-onSurfacePrimary dark:text-dark-onSurfacePrimary font-medium leading-normal mb-6 lg:pt-4"
           >
-            <AppTitle /> {{ $t('themes.title') }}<br />
+            {{ $t('themes.title.pre') }} <AppTitle />
+            {{ $t('themes.title.post') }}<br />
           </h1>
           <h3
             class="xl:text-lg text-light-onSurfaceSecondary dark:text-dark-onSurfaceSecondary font-medium leading-relaxed mb-6"
@@ -55,7 +56,7 @@
                 class="sm:mr-4 p-3 mt-3 text-sm text-left"
               >
                 <!-- <nui-svg-shopping slot="icon" class="h-4 -mb-1 mr-1" /> -->
-                GET IT for {{ theme.price }}
+                {{ $t('themes.button') }} {{ theme.price }}
               </AppButton>
             </div>
           </div>
@@ -112,9 +113,12 @@ export default {
     }
   },
   head() {
-    const title = 'NuxtJS Themes'
-    const description =
-      'With the themes below built by our partners from Creative Tim and Theme Forest you can see how a real world application is built, with Nuxt.js stack behind.'
+    const title = (
+      this.$i18n.t('themes.title.pre') +
+      ' NuxtJS ' +
+      this.$i18n.t('themes.title.post')
+    ).trim()
+    const description = this.$i18n.t('themes.description')
 
     return {
       title,

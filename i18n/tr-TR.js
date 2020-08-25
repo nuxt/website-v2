@@ -141,14 +141,20 @@ module.exports = {
     }
   },
   design: {
-    title: 'Tasarım',
+    title: {
+      pre: '',
+      post: 'Tasarım'
+    },
     description:
       "NuxtJS, MIT lisansı açık kaynak bir projedir ve kullanması tamamen ücretsizdir. Burada gördüğünüz logolarımızı NuxtJS'yi ve nuxtjs.org'u belirttiğiniz takdirde istediğiniz gibi kullanabilirsiniz.",
     other_download_message:
       "Aynı zamanda isterseniz {favicon}'umuzu veya {sketch} dosyamızı indirebilirsiniz."
   },
   resources: {
-    title: 'Kaynaklar',
+    title: {
+      pre: '',
+      post: 'Kaynaklar'
+    },
     description:
       'Partnerimiz tarafından hazırlanan kaynaklara göz atın. Buradaki bağlantıları kullanarak bizlere  Açık Kaynak Sistem projemizi geliştirmemizde destek oluyorsunuz.',
     themes: {
@@ -159,22 +165,36 @@ module.exports = {
     }
   },
   shop: {
-    title: 'Mağaza',
+    title: {
+      pre: '',
+      post: 'Mağaza'
+    },
     description:
-      'NuxtJS projesine desteğinizi göstermek ve topluluğun geri kalanına sevginizi göstermek mi istiyorsunuz? Doğru yerdesiniz, buradan en kaliteli ürünlerimize ulaşabilirsiniz!'
+      'NuxtJS projesine desteğinizi göstermek ve topluluğun geri kalanına sevginizi göstermek mi istiyorsunuz? Doğru yerdesiniz, buradan en kaliteli ürünlerimize ulaşabilirsiniz!',
+    button: 'Coming soon'
   },
   team: {
-    title: 'Ekip',
+    title: {
+      pre: '',
+      post: 'Ekip'
+    },
     description:
       "NuxtJS ve ekosistemiminin gelişimi uluslararası bir ekip tarafından kılavuzlanmıştır. Nuxt'u iyileştirmek için sürekli çabalayan ve çalışan bir ekibe sahibiz."
   },
   themes: {
-    title: 'Temalar',
+    title: {
+      pre: '',
+      post: 'Temalar'
+    },
     description:
-      "Creative Tim ve Theme Forest'daki partnerlerimiz tarafından hazırlanan temalara göz atarak NuxtJS ile yapılmış bir uygulamanın gerçek kullanımda nasıl gözüktüğünü görebilirsiniz."
+      "Creative Tim ve Theme Forest'daki partnerlerimiz tarafından hazırlanan temalara göz atarak NuxtJS ile yapılmış bir uygulamanın gerçek kullanımda nasıl gözüktüğünü görebilirsiniz.",
+    button: 'GET IT for'
   },
   'video-courses': {
-    title: 'Video Kursları',
+    title: {
+      pre: '',
+      post: 'Video Kursları'
+    },
     description:
       'Aşağıdaki VueSchool tarafından hazırlanan video kurslarımız ile Nuxt.js sistemi hakkında daha fazla keşif yapabilir ve daha fazla bilgiye sahip olabilirsiniz.',
     cta: {

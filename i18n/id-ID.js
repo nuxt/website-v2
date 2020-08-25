@@ -130,8 +130,8 @@ module.exports = {
         'Dapatkan berita Nuxt terbaru ke kotak masuk Anda, dikuratori oleh tim NuxtJS.',
       form: {
         email: 'Alamat Email',
-        subscribing: 'Subscribing...',
-        subscribe: 'Subscribe',
+        subscribing: 'Berlangganan...',
+        subscribe: 'Langganan',
         subscribed_messages: {
           pre: 'Email untuk mengonfirmasi langganan Anda telah dikirim',
           post: '💚'
@@ -140,14 +140,20 @@ module.exports = {
     }
   },
   design: {
-    title: 'Disain',
+    title: {
+      pre: 'Disain',
+      post: ''
+    },
     description:
       'NuxtJS adalah proyek open source berlisensi MIT dan sepenuhnya gratis untuk digunakan. {break} Anda dapat dengan bebas menggunakan logo kami selama Anda menyebutkan NuxtJS dan tautan ke nuxtjs.org.',
     other_download_message:
       'Anda juga dapat mengunduh file {favicon} atau {sketch} kami.'
   },
   resources: {
-    title: 'Sumber Daya',
+    title: {
+      pre: 'Sumber Daya',
+      post: ''
+    },
     description:
       'Temukan panel sumber daya yang dibuat oleh mitra kami. Dengan menggunakan tautan sumber daya afiliasi mereka, Anda membantu kami menjaga dan mengembangkan Kerangka Sumber Terbuka.',
     themes: {
@@ -158,22 +164,36 @@ module.exports = {
     }
   },
   shop: {
-    title: 'Toko',
+    title: {
+      pre: 'Toko',
+      post: ''
+    },
     description:
-      'Anda ingin mendukung proyek NuxtJS dan menunjukkan cinta Anda kepada seluruh komunitas? {Break} Ini produk kami dengan kualitas terbaik yang pernah ada!'
+      'Anda ingin mendukung proyek NuxtJS dan menunjukkan cinta Anda kepada seluruh komunitas? {Break} Ini produk kami dengan kualitas terbaik yang pernah ada!',
+    button: 'Segera hadir'
   },
   team: {
-    title: 'Tim',
+    title: {
+      pre: 'Tim',
+      post: ''
+    },
     description:
       'Pengembangan NuxtJS dan ekosistemnya dipandu oleh tim internasional. Kami memiliki tim yang sangat aktif dan terlibat yang terus berupaya untuk mendorong Nuxt maju.'
   },
   themes: {
-    title: 'Tema',
+    title: {
+      pre: 'Tema',
+      post: ''
+    },
     description:
-      'Dengan tema di bawah ini yang dibangun oleh mitra kami dari Tim Kreatif dan Hutan Tema Anda dapat melihat bagaimana aplikasi dunia nyata dibangun, dengan Nuxt.js menumpuk di belakang.'
+      'Dengan tema di bawah ini yang dibangun oleh mitra kami dari Tim Kreatif dan Hutan Tema Anda dapat melihat bagaimana aplikasi dunia nyata dibangun, dengan Nuxt.js menumpuk di belakang.',
+    button: 'Dapatkan harga'
   },
   'video-courses': {
-    title: 'Video Kursus',
+    title: {
+      pre: 'Video Kursus',
+      post: ''
+    },
     description:
       'Dengan kursus video di bawah ini yang dibuat oleh mitra kami VueSchool Anda dapat menemukan dan mempelajari lebih lanjut tentang Kerangka Nuxt.js.',
     cta: {
@@ -201,8 +221,8 @@ module.exports = {
   },
   support: {
     title: {
-      pre: 'Consulting',
-      post: 'Support'
+      pre: 'Konsultasi',
+      post: 'Dukungan'
     },
     description:
       '{team} kami sekarang menawarkan layanan konsultasi resmi untuk aplikasi NuxtJS Anda. {Break} Kami menawarkan layanan berbeda tergantung kebutuhan Anda, dari dukungan teknis hingga pengembangan kustom. Berharap balasan dalam satu hari kerja, kami dapat menandatangani NDA khusus dan Anda bisa mendapatkan pengembalian dana penuh jika Anda tidak puas dengan layanan kami.',
@@ -218,7 +238,7 @@ module.exports = {
       }
     },
     entreprise: {
-      title: 'for enterprise',
+      title: 'untuk perusahaan',
       description:
         'NuxtJS dan pengelola ribuan paket lainnya bekerja dengan Tidelift untuk memberikan satu langganan perusahaan yang mencakup semua sumber terbuka yang Anda gunakan. {Break} Jika Anda ingin fleksibilitas open source dan kepercayaan diri dari perangkat lunak kelas komersial, ini adalah untukmu.',
       partner: {
@@ -287,13 +307,13 @@ module.exports = {
       deployment: 'Deployment'
     },
     guides: {
-      'get-started': 'Get Started',
-      concepts: 'Concepts',
-      features: 'Features',
-      'directory-structure': 'Directory Structure',
-      'configuration-glossary': 'Configuration Glossary',
-      'internals-glossary': 'Internals Glossary',
-      'components-glossary': 'Components Glossary'
+      'get-started': 'Memulai',
+      concepts: 'Konsep',
+      features: 'Fitur',
+      'directory-structure': 'Struktur Direktori',
+      'configuration-glossary': 'Konfigurasi Glossary',
+      'internals-glossary': 'Internal Glossary',
+      'components-glossary': 'Komponen Glossary'
     }
   },
   cookies: {

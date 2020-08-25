@@ -6,7 +6,8 @@
           <h1
             class="text-3xl xl:text-4xl text-light-onSurfacePrimary dark:text-dark-onSurfacePrimary font-medium leading-normal mb-6 lg:pt-4"
           >
-            <AppTitle /> {{ $t('resources.title') }}<br />
+            {{ $t('resources.title.pre') }} <AppTitle />
+            {{ $t('resources.title.post') }}<br />
           </h1>
           <h3
             class="xl:text-lg text-light-onSurfaceSecondary dark:text-dark-onSurfaceSecondary font-medium leading-relaxed mb-6"
@@ -64,9 +65,12 @@ export default {
     VideosIllustration
   },
   head() {
-    const title = 'NuxtJS Resources'
-    const description =
-      'Discover a panel of resources made by our partners. By using thoses affiliate resources links, you are helping us to maintain and develop the Open Source Framework.'
+    const title = (
+      this.$i18n.t('resources.title.pre') +
+      ' NuxtJS ' +
+      this.$i18n.t('resources.title.post')
+    ).trim()
+    const description = this.$i18n.t('resources.description')
 
     return {
       title,

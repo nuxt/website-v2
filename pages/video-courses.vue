@@ -6,7 +6,8 @@
           <h1
             class="text-3xl xl:text-4xl text-light-onSurfacePrimary dark:text-dark-onSurfacePrimary font-medium leading-normal mb-6 lg:pt-4"
           >
-            <AppTitle /> {{ $t('video-courses.title') }}<br />
+            {{ $t('video-courses.title.pre') }} <AppTitle />
+            {{ $t('video-courses.title.post') }}<br />
           </h1>
           <h3
             class="xl:text-lg text-light-onSurfaceSecondary dark:text-dark-onSurfaceSecondary font-medium leading-relaxed mb-8"
@@ -106,9 +107,12 @@ export default {
     }
   },
   head() {
-    const title = 'NuxtJS Video Courses'
-    const description =
-      'With the video courses below created by our partner VueSchool you can discover and learn more about the Nuxt.js Framework.'
+    const title = (
+      this.$i18n.t('video-courses.title.pre') +
+      ' NuxtJS ' +
+      this.$i18n.t('video-courses.title.post')
+    ).trim()
+    const description = this.$i18n.t('video-courses.description')
 
     return {
       title,

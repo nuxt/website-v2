@@ -140,14 +140,20 @@ module.exports = {
     }
   },
   design: {
-    title: 'Design',
+    title: {
+      pre: '',
+      post: 'Design'
+    },
     description:
       'NuxtJS é um projeto de código aberto de licença MIT e de uso totalmente gratuito. {break} Você pode utilizar nossos logotipos livremente, desde que mencione NuxtJS e faça um link para nuxtjs.org.',
     other_download_message:
       'Você também baixar nosso {favicon} ou nosso arquivo {sketch}.'
   },
   resources: {
-    title: 'Recursos',
+    title: {
+      pre: '',
+      post: 'Recursos'
+    },
     description:
       'Descubra um painel de recursos feito por nossos parceiros. Ao usar esses links de recursos afiliados, você está nos ajudando a manter e desenvolver o Open Source Framework.',
     themes: {
@@ -158,22 +164,36 @@ module.exports = {
     }
   },
   shop: {
-    title: 'Loja',
+    title: {
+      pre: 'Loja',
+      post: ''
+    },
     description:
-      'Quer apoiar o projeto NuxtJS e mostrar o seu amor ao resto da comunidade?{break} Aqui estão os nossos produtos de melhor qualidade!'
+      'Quer apoiar o projeto NuxtJS e mostrar o seu amor ao resto da comunidade?{break} Aqui estão os nossos produtos de melhor qualidade!',
+    button: 'Coming soon'
   },
   team: {
-    title: 'Time',
+    title: {
+      pre: '',
+      post: 'Time'
+    },
     description:
       'O desenvolvimento da NuxtJS e de seu ecossistema é orientado por uma equipe internacional. Temos uma equipe muito ativa e engajada que está constantemente se esforçando para levar a Nuxt adiante.'
   },
   themes: {
-    title: 'Temas',
+    title: {
+      pre: '',
+      post: 'Temas'
+    },
     description:
-      'Com os temas abaixo, desenvolvidos por nossos parceiros da Creative Tim e Theme Forest, você pode ver como um aplicativo do mundo real é construído, utilizando a stack Nuxt.js.'
+      'Com os temas abaixo, desenvolvidos por nossos parceiros da Creative Tim e Theme Forest, você pode ver como um aplicativo do mundo real é construído, utilizando a stack Nuxt.js.',
+    button: 'GET IT for'
   },
   'video-courses': {
-    title: 'Cursos em Vídeo',
+    title: {
+      pre: '',
+      post: 'Cursos em Vídeo'
+    },
     description:
       'Com os cursos em vídeo abaixo, criados por nosso parceiro VueSchool, você pode descobrir e aprender mais sobre o Framework Nuxt.js.',
     cta: {

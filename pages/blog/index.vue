@@ -79,35 +79,38 @@ export default {
     }
   },
   head() {
+    const title = this.$i18n.t('blog.title')
+    const description = this.$i18n.t('blog.description')
+
     return {
-      title: this.$i18n.t('blog.title'),
+      title,
       meta: [
         {
           hid: 'description',
           name: 'description',
-          content: this.$i18n.t('blog.description')
+          content: description
         },
         // Open Graph
         {
           hid: 'og:title',
           property: 'og:title',
-          content: this.$i18n.t('blog.title')
+          content: title
         },
         {
           hid: 'og:description',
           property: 'og:description',
-          content: this.$i18n.t('blog.description')
+          content: description
         },
         // // Twitter Card
         {
           hid: 'twitter:title',
           name: 'twitter:title',
-          content: this.$i18n.t('blog.title')
+          content: title
         },
         {
           hid: 'twitter:description',
           name: 'twitter:description',
-          content: this.$i18n.t('blog.description')
+          content: description
         }
       ]
     }

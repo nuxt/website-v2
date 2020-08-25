@@ -6,7 +6,8 @@
           <h1
             class="text-3xl xl:text-4xl text-light-onSurfacePrimary dark:text-dark-onSurfacePrimary font-medium leading-normal mb-6 lg:pt-4"
           >
-            <AppTitle /> {{ $t('design.title') }}
+            {{ $t('design.title.pre') }} <AppTitle />
+            {{ $t('design.title.post') }}<br />
           </h1>
           <i18n
             path="design.description"
@@ -203,7 +204,11 @@ export default {
     DesignIllustration
   },
   head() {
-    const title = 'Design Resources - NuxtJS'
+    const title = (
+      this.$i18n.t('design.title.pre') +
+      ' NuxtJS ' +
+      this.$i18n.t('design.title.post')
+    ).trim()
     const description =
       'Download NuxtJS design resources (SVG, icons, emoji and favicon).'
 

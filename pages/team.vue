@@ -6,7 +6,8 @@
           <h1
             class="text-3xl xl:text-4xl text-light-onSurfacePrimary dark:text-dark-onSurfacePrimary font-medium leading-normal mb-6 lg:pt-4 transition-colors duration-300 ease-linear"
           >
-            <AppTitle /> {{ $t('team.title') }}<br />
+            {{ $t('team.title.pre') }} <AppTitle /> {{ $t('team.title.post')
+            }}<br />
           </h1>
           <h3
             class="xl:text-lg text-light-onSurfaceSecondary dark:text-dark-onSurfaceSecondary font-medium leading-relaxed mb-6"
@@ -232,7 +233,11 @@ export default {
     }
   },
   head() {
-    const title = 'The NuxtJS Team'
+    const title = (
+      this.$i18n.t('team.title.pre') +
+      ' NuxtJS ' +
+      this.$i18n.t('team.title.post')
+    ).trim()
     const description =
       'NuxtJS has a very active and engaged team that is constantly striving to push Nuxt forward.'
 

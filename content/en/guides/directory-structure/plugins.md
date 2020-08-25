@@ -123,14 +123,14 @@ Then we can use it directly in your page components:
 
 ```js{}[pages/index.vue]
 <template>
-  <h1>{{ title }}</h1>
+  <h1>{{ post.title }}</h1>
 </template>
 
 <script>
 export default {
 	async asyncData ({ $axios, params }) {
-	    const  posts  = await $axios.$get(`https://api.nuxtjs.dev/posts/${params.id}`)
-	    return { posts }
+	    const  post  = await $axios.$get(`https://api.nuxtjs.dev/posts/${params.id}`)
+	    return { post }
 	  }
 }
 </script>
@@ -290,6 +290,10 @@ export const actions = {
   }
 }
 ```
+
+<base-alert>
+Don't use `Vue.use()`, `Vue.component()`, and globally, don't plug anything in Vue **inside** this function, dedicated to Nuxt injection. It will cause memory leak on server-side.
+</base-alert>
 
 <app-modal>
   <code-sandbox  :src="csb_link_plugins_custom"></code-sandbox>

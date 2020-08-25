@@ -62,9 +62,19 @@ This option lets you define the CSS files, modules, and libraries you want to in
 
 ```js{}[nuxt.config.js]
 export default {
-  css: ['~/assets/css/main.css']
+  css: ['~/assets/css/main.css', '~/assets/css/animations.scss']
 }
 ```
+
+You can omit the file extension for CSS/SCSS/Postcss/Less/Stylus/... files listed in the css array in your nuxt config file.
+
+```js{}[nuxt.config.js]
+export default {
+  css: ['~/assets/css/main', '~/assets/css/animations']
+}
+```
+
+By omitting the extension, if you have a css file and decide to change to use sass for example, you won't have to update your nuxt.config as it will use the new extension once the filename remains the same.
 
 <base-alert type="next">
 
@@ -178,6 +188,24 @@ export default {
 <base-alert type="next">
 
 See more on the [modules property](/guides/configuration-glossary/configuration-modules)
+
+</base-alert>
+
+### modulesDir
+
+The modulesDir property is used to set the modules directories for path resolving. For example: Webpack's resolveLoading, nodeExternals and postcss. The configuration path is relative to `options.rootDir` (default: process.cwd()).
+
+```js{}[nuxt.config.js]
+export default {
+  modulesDir: ['../../node_modules']
+}
+```
+
+Setting this field may be necessary if your project is organized as a Yarn workspace-styled mono-repository.
+
+<base-alert type="next">
+
+See more on the [modulesDir property](/guides/configuration-glossary/configuration-modulesdir)
 
 </base-alert>
 

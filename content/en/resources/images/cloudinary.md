@@ -4,8 +4,8 @@ short_description: 'Optimize images and videos in your Nuxt.js application'
 long_description: 'Cloudinary is a cloud-based SaaS that provides an end-to-end image and video management solution including uploads, storage, manipulations, optimizations and delivery. All your media resources are optimized and delivered through a fast CDN using industry best practices.'
 category: images
 position: 20
-logo: 'https://res.cloudinary.com/cloudinary/image/upload/c_scale,w_200/v1/logo/for_white_bg/cloudinary_icon_for_white_bg.png'
-image: 'https://res.cloudinary.com/mayashavin/image/upload/q_auto,f_auto,h_640/v1596608425/nuxt-cld/nuxt_cloudinary_1'
+logo: 'https://cloudinary.nuxtjs.org/icon.png'
+image: 'https://cloudinary.nuxtjs.org/preview.png'
 github: 'https://github.com/nuxt-community/cloudinary-module'
 docs: 'https://cloudinary.nuxtjs.org/'
 npmLink: 'https://npmjs.com/package/@nuxtjs/cloudinary'

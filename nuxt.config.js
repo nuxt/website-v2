@@ -135,7 +135,7 @@ export default {
   loading: { color: '#41B883' },
   generate: {
     fallback: '404.html', // for Netlify
-    routes: ['/']
+    routes: ['/', '404']
   },
   i18n: {
     strategy: 'no_prefix',
@@ -189,6 +189,13 @@ export default {
         file: 'id-ID.js',
         name: 'Indonesian',
         domain: 'https://id.nuxtjs.org'
+      },
+      {
+        code: 'pt',
+        iso: 'pt-BR',
+        file: 'pt-BR.js',
+        name: 'Português',
+        domain: 'https://pt.nuxtjs.org'
       }
       // {
       // code: 'tr',

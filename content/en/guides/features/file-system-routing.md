@@ -476,7 +476,9 @@ The `scrollBehavior` option lets you define a custom behavior for the scroll p
 
 <base-alert type="next">
 
-To learn more about it, see [vue-router scrollBehavior documentation](https://router.vuejs.org/guide/advanced/scroll-behavior.html). </base-alert>
+To learn more about it, see [vue-router scrollBehavior documentation](https://router.vuejs.org/guide/advanced/scroll-behavior.html).
+
+</base-alert>
 
 Available since:v2.9.0:
 

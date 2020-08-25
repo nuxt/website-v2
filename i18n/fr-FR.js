@@ -1,7 +1,7 @@
 module.exports = {
   common: {
     an_error_occurred: "Une erreur s'est produite",
-    api_page_not_found: 'La page API est introuvable',
+    page_not_found: 'La page est introuvable',
     please_define_title: 'Merci de définir un titre',
     please_define_description: 'Merci de définir une description',
     search: 'Rechercher',

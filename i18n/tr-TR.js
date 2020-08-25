@@ -1,7 +1,7 @@
 module.exports = {
   common: {
     an_error_occurred: 'Bir hata oluştu',
-    api_page_not_found: 'API sayfası bulunamadı',
+    page_not_found: 'sayfası bulunamadı',
     please_define_title: 'Please define a title in the front matter',
     please_define_description:
       'Please define a description in the front matter',

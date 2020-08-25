@@ -5,7 +5,7 @@
         <h1
           class="w-full text-3xl xl:text-4xl light:text-light-onSurfacePrimary dark:text-dark-onSurfacePrimary text-center font-medium leading-normal -mb-6 z-10"
         >
-          {{ error.message }}
+          {{ $t('common.page_not_found') }}
         </h1>
         <div class="w-full lg:w-2/3 mx-auto">
           <LostImageIllustration />

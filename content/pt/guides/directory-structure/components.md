@@ -45,7 +45,7 @@ Usando `$fetchState.pending` podemos mostrar uma mensagem quando os dados estão
     <p v-if="$fetchState.pending">Loading....</p>
     <p v-else-if="$fetchState.error">Erro ao buscar montanhas.</p>
     <ul v-else>
-      <li v-for="(mountain, index) in mountains" :key="index.id">
+      <li v-for="(mountain, index) in mountains" :key="index">
         {{ mountain.title }}
       </li>
     </ul>

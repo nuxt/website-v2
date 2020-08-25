@@ -4,7 +4,7 @@
   "description": "Nuxt.js official website",
   "main": "index.js",
   "dependencies": {
-    "@nuxt/content": "^1.6.1",
+    "@nuxt/content": "^1.7.0",
     "@nuxt/http": "^0.5.11",
     "@nuxtjs/tailwindcss": "^3.0.1",
     "@snackbar/core": "^1.7.0",

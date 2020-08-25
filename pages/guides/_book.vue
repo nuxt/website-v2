@@ -20,27 +20,38 @@ export default {
     let pages = []
 
     try {
-      pages = await $content(app.i18n.defaultLocale, 'guides', { deep: true })
-        .only(['slug', 'title', 'menu', 'category', 'position'])
-        .sortBy('position')
-        .sortBy('title')
-        .sortBy('menu')
-        .fetch()
+      if (app.i18n.locale === 'pt') {
+        pages = await $content(app.i18n.locale, 'guides', { deep: true })
+          .only(['slug', 'title', 'menu', 'category', 'position'])
+          .sortBy('position')
+          .sortBy('title')
+          .sortBy('menu')
+          .fetch()
 
-      // if (app.i18n.locale !== app.i18n.defaultLocale) {
-      //   const newPages = await $content(app.i18n.locale, 'guides', { deep: true })
-      //     .only(['slug', 'title', 'menu', 'category', 'position'])
-      //     .sortBy('position')
-      //     .sortBy('title')
-      //     .sortBy('menu')
-      //     .fetch()
+        if (app.i18n.locale !== app.i18n.defaultLocale) {
+          const newPages = await $content(app.i18n.locale, 'guides', {
+            deep: true
+          })
+            .only(['slug', 'title', 'menu', 'category', 'position'])
+            .sortBy('position')
+            .sortBy('title')
+            .sortBy('menu')
+            .fetch()
 
-      //   pages = pages.map((page) => {
-      //     const newPage = newPages.find(newPage => newPage.slug === page.slug)
+          pages = pages.map(page => {
+            const newPage = newPages.find(newPage => newPage.slug === page.slug)
 
-      //     return newPage || page
-      //   })
-      // }
+            return newPage || page
+          })
+        }
+      } else {
+        pages = await $content(app.i18n.defaultLocale, 'guides', { deep: true })
+          .only(['slug', 'title', 'menu', 'category', 'position'])
+          .sortBy('position')
+          .sortBy('title')
+          .sortBy('menu')
+          .fetch()
+      }
     } catch (e) {}
 
     return {

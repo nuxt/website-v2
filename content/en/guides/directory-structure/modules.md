@@ -130,9 +130,15 @@ export default {
 
 ```js{}[modules/example.js]
 export default function ExampleModule (moduleOptions) {
-  console.log(moduleOptions.token) // '123'
-  console.log(this.options.exampleMsg) // 'hello'
-	this.addPlugin(
+	console.log(moduleOptions.token) // '123'
+	console.log(this.options.exampleMsg) // 'hello'
+	this.addPlugin({
+		src: path.resolve(__dirname, '../plugins.js'),
+		fileName: 'simple-plugin.js',
+		options: {
+			interpolation: 'foo' // to replace template syntax <%= options.foo %>
+		}
+	});
 	this.nuxt.hook('ready', async (nuxt) => {
 		console.log('Nuxt is ready')
 	})

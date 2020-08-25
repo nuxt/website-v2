@@ -108,7 +108,7 @@ Você também tem acesso a `this.$fetch()`, útil se você deseja chamar o méto
   <div v-else>
     <h1>Montanhas Nuxt</h1>
     <ul v-for="mountain of mountains">
-      <li>{{ mountain.name }}</li>
+      <li>{{ mountain.title }}</li>
     </ul>
     <button @click="$fetch">Recarregar</button>
   </div>

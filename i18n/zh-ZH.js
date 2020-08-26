@@ -272,9 +272,9 @@ module.exports = {
     },
     title: '{nuxt} Blog',
     description:
-      'Discover articles from the {nuxtTeam} and {ambassadors} about NuxtJS, tips and tricks included!',
+      'Discover articles from the {nuxtTeam} and {nuxtCommunity} about NuxtJS, tips and tricks included!',
     nuxt_team: 'NuxtJS Team',
-    ambassadors: 'NuxtJS Community',
+    nuxt_community: 'NuxtJS Community',
     contribute: 'Caught a mistake or want to contribute to this blog post?'
   },
   guide: {

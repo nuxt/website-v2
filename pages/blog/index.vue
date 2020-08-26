@@ -28,12 +28,12 @@
                 {{ $t('blog.nuxt_team') }}
               </NuxtLink>
             </template>
-            <template v-slot:ambassadors>
+            <template v-slot:nuxtCommunity>
               <NuxtLink
                 class="text-nuxt-green underline"
                 to="/team#nuxtCommunity"
               >
-                {{ $t('blog.ambassadors') }}
+                {{ $t('blog.nuxt_community') }}
               </NuxtLink>
             </template>
           </i18n>

@@ -130,8 +130,8 @@ module.exports = {
         'Dapatkan berita Nuxt terbaru ke kotak masuk Anda, dikuratori oleh tim NuxtJS.',
       form: {
         email: 'Alamat Email',
-        subscribing: 'Subscribing...',
-        subscribe: 'Subscribe',
+        subscribing: 'Berlangganan...',
+        subscribe: 'Langganan',
         subscribed_messages: {
           pre: 'Email untuk mengonfirmasi langganan Anda telah dikirim',
           post: '💚'
@@ -140,14 +140,24 @@ module.exports = {
     }
   },
   design: {
-    title: 'Disain',
+    meta: {
+      title: 'Disain NuxtJS',
+      description:
+        'Unduh sumber daya desain NuxtJS (SVG, ikon, emoji, dan favicon).'
+    },
+    title: 'Disain {nuxt}',
     description:
       'NuxtJS adalah proyek open source berlisensi MIT dan sepenuhnya gratis untuk digunakan. {break} Anda dapat dengan bebas menggunakan logo kami selama Anda menyebutkan NuxtJS dan tautan ke nuxtjs.org.',
     other_download_message:
       'Anda juga dapat mengunduh file {favicon} atau {sketch} kami.'
   },
   resources: {
-    title: 'Sumber Daya',
+    meta: {
+      title: 'Sumber Daya NuxtJS',
+      description:
+        'Temukan panel sumber daya yang dibuat oleh mitra kami. Dengan menggunakan tautan sumber daya afiliasi itu, Anda membantu kami memelihara dan mengembangkan Kerangka Sumber Terbuka.'
+    },
+    title: 'Sumber Daya {nuxt}',
     description:
       'Temukan panel sumber daya yang dibuat oleh mitra kami. Dengan menggunakan tautan sumber daya afiliasi mereka, Anda membantu kami menjaga dan mengembangkan Kerangka Sumber Terbuka.',
     themes: {
@@ -158,22 +168,43 @@ module.exports = {
     }
   },
   shop: {
-    title: 'Toko',
+    meta: {
+      title: 'Toko NuxtJS',
+      description:
+        'Anda ingin mendukung proyek NuxtJS dan menunjukkan cinta Anda kepada seluruh komunitas? Berikut produk kami dengan kualitas terbaik yang pernah ada!'
+    },
+    title: 'Toko {nuxt}',
     description:
-      'Anda ingin mendukung proyek NuxtJS dan menunjukkan cinta Anda kepada seluruh komunitas? {Break} Ini produk kami dengan kualitas terbaik yang pernah ada!'
+      'Anda ingin mendukung proyek NuxtJS dan menunjukkan cinta Anda kepada seluruh komunitas? {Break} Ini produk kami dengan kualitas terbaik yang pernah ada!',
+    button: 'Segera hadir'
   },
   team: {
-    title: 'Tim',
+    meta: {
+      title: 'Tim NuxtJS',
+      description:
+        'NuxtJS memiliki tim yang sangat aktif dan terlibat yang terus berupaya untuk mendorong Nuxt maju.'
+    },
+    title: 'Tim {nuxt}',
     description:
       'Pengembangan NuxtJS dan ekosistemnya dipandu oleh tim internasional. Kami memiliki tim yang sangat aktif dan terlibat yang terus berupaya untuk mendorong Nuxt maju.'
   },
   themes: {
-    title: 'Tema',
+    meta: {
+      title: 'Tema NuxtJS',
+      description: ''
+    },
+    title: 'Tema {nuxt}',
     description:
-      'Dengan tema di bawah ini yang dibangun oleh mitra kami dari Tim Kreatif dan Hutan Tema Anda dapat melihat bagaimana aplikasi dunia nyata dibangun, dengan Nuxt.js menumpuk di belakang.'
+      'Dengan tema di bawah ini yang dibangun oleh mitra kami dari Tim Kreatif dan Hutan Tema Anda dapat melihat bagaimana aplikasi dunia nyata dibangun, dengan Nuxt.js menumpuk di belakang.',
+    button: 'Dapatkan harga'
   },
   'video-courses': {
-    title: 'Video Kursus',
+    meta: {
+      title: 'Video Kursus NuxtJS',
+      description:
+        'Dengan kursus video di bawah ini yang dibuat oleh mitra kami VueSchool, Anda dapat menemukan dan mempelajari lebih lanjut tentang Kerangka Nuxt.js.'
+    },
+    title: 'Video Kursus {nuxt}',
     description:
       'Dengan kursus video di bawah ini yang dibuat oleh mitra kami VueSchool Anda dapat menemukan dan mempelajari lebih lanjut tentang Kerangka Nuxt.js.',
     cta: {
@@ -182,10 +213,12 @@ module.exports = {
     }
   },
   sponsor: {
-    title: {
-      pre: 'Sponsor',
-      post: 'Development'
+    meta: {
+      title: 'Sponsor Pengembang NuxtJS',
+      description:
+        'Anda dapat mendukung pengembangan NuxtJS melalui metode yang berbeda dan memastikan pembaruan berkala pada kerangka kerja.'
     },
+    title: 'Sponsor Pengembang {nuxt}',
     description:
       'NuxtJS adalah proyek sumber terbuka berlisensi MIT dan sepenuhnya gratis untuk digunakan. {Break} Namun, jumlah upaya yang diperlukan untuk mempertahankan dan mengembangkan fitur baru untuk proyek ini tidak berkelanjutan tanpa dukungan keuangan yang tepat. {Break} Anda dapat mendukung pengembangan NuxtJS melalui metode berikut:',
     donations: {
@@ -200,10 +233,12 @@ module.exports = {
     become_a_sponsor: 'Menjadi sponsor'
   },
   support: {
-    title: {
-      pre: 'Consulting',
-      post: 'Support'
+    meta: {
+      title: 'Dukungan NuxtJS',
+      description:
+        'Tim NuxtJS kami sekarang menawarkan layanan konsultasi resmi untuk aplikasi NuxtJS Anda.'
     },
+    title: 'Konsultasi {nuxt} Dukungan',
     description:
       '{team} kami sekarang menawarkan layanan konsultasi resmi untuk aplikasi NuxtJS Anda. {Break} Kami menawarkan layanan berbeda tergantung kebutuhan Anda, dari dukungan teknis hingga pengembangan kustom. Berharap balasan dalam satu hari kerja, kami dapat menandatangani NDA khusus dan Anda bisa mendapatkan pengembalian dana penuh jika Anda tidak puas dengan layanan kami.',
     technical: {
@@ -218,7 +253,7 @@ module.exports = {
       }
     },
     entreprise: {
-      title: 'for enterprise',
+      title: 'untuk perusahaan',
       description:
         'NuxtJS dan pengelola ribuan paket lainnya bekerja dengan Tidelift untuk memberikan satu langganan perusahaan yang mencakup semua sumber terbuka yang Anda gunakan. {Break} Jika Anda ingin fleksibilitas open source dan kepercayaan diri dari perangkat lunak kelas komersial, ini adalah untukmu.',
       partner: {
@@ -230,10 +265,16 @@ module.exports = {
     }
   },
   blog: {
-    title: 'Blog NuxtJS',
+    meta: {
+      title: 'Blog NuxtJS',
+      description:
+        'Temukan artikel dari tim inti dan kontributor tentang NuxtJS, termasuk tip dan trik!'
+    },
+    title: 'Blog {nuxt}',
     description:
-      'Temukan artikel dari {nuxtTeam} dan {ambassadors} tentang NuxtJS, termasuk tips dan trik!',
-    ambassadors: 'ambassadors',
+      'Temukan artikel tentang NuxtJS dari {nuxtTeam} dan {nuxtCommunity} NuxtJS, termasuk tips dan trik!',
+    nuxt_team: 'Tim NuxtJS',
+    nuxt_community: 'Komunitas Nuxt.js',
     contribute:
       'Tertangkap kesalahan atau ingin berkontribusi pada posting blog ini?'
   },
@@ -287,13 +328,13 @@ module.exports = {
       deployment: 'Deployment'
     },
     guides: {
-      'get-started': 'Get Started',
-      concepts: 'Concepts',
-      features: 'Features',
-      'directory-structure': 'Directory Structure',
-      'configuration-glossary': 'Configuration Glossary',
-      'internals-glossary': 'Internals Glossary',
-      'components-glossary': 'Components Glossary'
+      'get-started': 'Memulai',
+      concepts: 'Konsep',
+      features: 'Fitur',
+      'directory-structure': 'Struktur Direktori',
+      'configuration-glossary': 'Konfigurasi Glossary',
+      'internals-glossary': 'Internal Glossary',
+      'components-glossary': 'Komponen Glossary'
     }
   },
   cookies: {

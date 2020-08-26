@@ -3,11 +3,16 @@
     <div class="container mx-auto px-4 pt-16">
       <div class="flex flex-wrap justify-between mb-8">
         <div class="lg:w-6/12 lg:text-left text-center p-4 sm:p-0">
-          <h1
+          <i18n
+            path="video-courses.title"
+            tag="h1"
             class="text-3xl xl:text-4xl text-light-onSurfacePrimary dark:text-dark-onSurfacePrimary font-medium leading-normal mb-6 lg:pt-4"
           >
-            <AppTitle /> {{ $t('video-courses.title') }}<br />
-          </h1>
+            {{ $t('video-courses.title') }}
+            <template v-slot:nuxt>
+              <AppTitle />
+            </template>
+          </i18n>
           <h3
             class="xl:text-lg text-light-onSurfaceSecondary dark:text-dark-onSurfaceSecondary font-medium leading-relaxed mb-8"
           >
@@ -106,9 +111,8 @@ export default {
     }
   },
   head() {
-    const title = 'NuxtJS Video Courses'
-    const description =
-      'With the video courses below created by our partner VueSchool you can discover and learn more about the Nuxt.js Framework.'
+    const title = this.$t('video-courses.meta.title')
+    const description = this.$t('video-courses.meta.description')
 
     return {
       title,

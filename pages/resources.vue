@@ -3,11 +3,16 @@
     <div class="container mx-auto px-4 pt-16">
       <div class="flex flex-wrap justify-between mb-8">
         <div class="lg:w-6/12 lg:text-left text-center p-4 sm:p-0">
-          <h1
+          <i18n
+            path="resources.title"
+            tag="h1"
             class="text-3xl xl:text-4xl text-light-onSurfacePrimary dark:text-dark-onSurfacePrimary font-medium leading-normal mb-6 lg:pt-4"
           >
-            <AppTitle /> {{ $t('resources.title') }}<br />
-          </h1>
+            {{ $t('resources.title') }}
+            <template v-slot:nuxt>
+              <AppTitle />
+            </template>
+          </i18n>
           <h3
             class="xl:text-lg text-light-onSurfaceSecondary dark:text-dark-onSurfaceSecondary font-medium leading-relaxed mb-6"
           >
@@ -64,9 +69,8 @@ export default {
     VideosIllustration
   },
   head() {
-    const title = 'NuxtJS Resources'
-    const description =
-      'Discover a panel of resources made by our partners. By using thoses affiliate resources links, you are helping us to maintain and develop the Open Source Framework.'
+    const title = this.$t('resources.meta.title')
+    const description = this.$t('resources.meta.description')
 
     return {
       title,

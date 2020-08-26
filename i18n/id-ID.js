@@ -143,7 +143,7 @@ module.exports = {
     meta: {
       title: 'Disain NuxtJS',
       description:
-        'Download NuxtJS design resources (SVG, icons, emoji and favicon).'
+        'Unduh sumber daya desain NuxtJS (SVG, ikon, emoji, dan favicon).'
     },
     title: 'Disain {nuxt}',
     description:
@@ -155,7 +155,7 @@ module.exports = {
     meta: {
       title: 'Sumber Daya NuxtJS',
       description:
-        'Discover a panel of resources made by our partners. By using thoses affiliate resources links, you are helping us to maintain and develop the Open Source Framework.'
+        'Temukan panel sumber daya yang dibuat oleh mitra kami. Dengan menggunakan tautan sumber daya afiliasi itu, Anda membantu kami memelihara dan mengembangkan Kerangka Sumber Terbuka.'
     },
     title: 'Sumber Daya {nuxt}',
     description:
@@ -171,7 +171,7 @@ module.exports = {
     meta: {
       title: 'Toko NuxtJS',
       description:
-        'You want to support the NuxtJS project and show your love to the rest of the community? Here our products with the best quality ever!'
+        'Anda ingin mendukung proyek NuxtJS dan menunjukkan cinta Anda kepada seluruh komunitas? Berikut produk kami dengan kualitas terbaik yang pernah ada!'
     },
     title: 'Toko {nuxt}',
     description:
@@ -182,7 +182,7 @@ module.exports = {
     meta: {
       title: 'Tim NuxtJS',
       description:
-        'NuxtJS has a very active and engaged team that is constantly striving to push Nuxt forward.'
+        'NuxtJS memiliki tim yang sangat aktif dan terlibat yang terus berupaya untuk mendorong Nuxt maju.'
     },
     title: 'Tim {nuxt}',
     description:
@@ -202,7 +202,7 @@ module.exports = {
     meta: {
       title: 'Video Kursus NuxtJS',
       description:
-        'With the video courses below created by our partner VueSchool you can discover and learn more about the Nuxt.js Framework.'
+        'Dengan kursus video di bawah ini yang dibuat oleh mitra kami VueSchool, Anda dapat menemukan dan mempelajari lebih lanjut tentang Kerangka Nuxt.js.'
     },
     title: 'Video Kursus {nuxt}',
     description:
@@ -214,11 +214,11 @@ module.exports = {
   },
   sponsor: {
     meta: {
-      title: 'Sponsor NuxtJS Development',
+      title: 'Sponsor Pengembang NuxtJS',
       description:
-        'You can support NuxtJS development via different methods and ensure regular updates to the framework.'
+        'Anda dapat mendukung pengembangan NuxtJS melalui metode yang berbeda dan memastikan pembaruan berkala pada kerangka kerja.'
     },
-    title: 'Sponsor {nuxt} Development',
+    title: 'Sponsor Pengembang {nuxt}',
     description:
       'NuxtJS adalah proyek sumber terbuka berlisensi MIT dan sepenuhnya gratis untuk digunakan. {Break} Namun, jumlah upaya yang diperlukan untuk mempertahankan dan mengembangkan fitur baru untuk proyek ini tidak berkelanjutan tanpa dukungan keuangan yang tepat. {Break} Anda dapat mendukung pengembangan NuxtJS melalui metode berikut:',
     donations: {
@@ -236,7 +236,7 @@ module.exports = {
     meta: {
       title: 'Dukungan NuxtJS',
       description:
-        'Our NuxtJS team now offers official consulting services for your NuxtJS applications.'
+        'Tim NuxtJS kami sekarang menawarkan layanan konsultasi resmi untuk aplikasi NuxtJS Anda.'
     },
     title: 'Konsultasi {nuxt} Dukungan',
     description:
@@ -268,7 +268,7 @@ module.exports = {
     meta: {
       title: 'Blog NuxtJS',
       description:
-        'Discover articles from the core team and contributors about NuxtJS, tips and tricks included!'
+        'Temukan artikel dari tim inti dan kontributor tentang NuxtJS, termasuk tip dan trik!'
     },
     title: 'Blog {nuxt}',
     description:

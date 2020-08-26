@@ -273,8 +273,8 @@ module.exports = {
     title: 'Blog {nuxt}',
     description:
       'Temukan artikel tentang NuxtJS dari {nuxtTeam} dan {nuxtCommunity} NuxtJS, termasuk tips dan trik!',
-    nuxt_team: 'Tim',
-    nuxt_community: 'Komunitas',
+    nuxt_team: 'Tim NuxtJS',
+    nuxt_community: 'Komunitas Nuxt.js',
     contribute:
       'Tertangkap kesalahan atau ingin berkontribusi pada posting blog ini?'
   },

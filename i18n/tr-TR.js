@@ -275,7 +275,7 @@ module.exports = {
     description:
       '{nuxtTeam} ve {nuxtCommunity} tarafından hazırlanan NuxtJS gönderilerini ve ipuçlarını keşfedin!',
     nuxt_team: 'NuxtJS Team',
-    nuxt_community: 'NuxtJS Community',
+    nuxt_community: 'Nuxt.js Community',
     contribute:
       'Hata yakaladınız veya bu gönderiye katkıda bulunmak mı istiyorsunuz?'
   },

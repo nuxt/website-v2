@@ -9,7 +9,7 @@ image: 'https://myResource.nuxtjs.org/preview.png'
 github: 'https://github.com/nuxt-community/myResource'
 docs: 'https://myResource.nuxtjs.org/'
 slug: ''
-latest: true
+latest: false
 featured: true
 features:
   - ''

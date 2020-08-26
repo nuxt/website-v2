@@ -80,7 +80,9 @@ export default {
 
     try {
       ;[prev, next] = await $content(
-        `/${app.i18n.defaultLocale}/guides/${params.book}`
+        ['pt'].includes(app.i18n.locale)
+          ? path
+          : `/${app.i18n.defaultLocale}/guides/${params.book}`
       )
         .only(['title', 'slug', 'dir', 'menu'])
         .sortBy('position')

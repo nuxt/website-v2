@@ -3,11 +3,16 @@
     <div class="container mx-auto px-4 pt-16 pb-12">
       <div class="flex flex-wrap justify-between mb-8">
         <div class="lg:w-6/12 lg:text-left text-center p-4 sm:p-0">
-          <h1
+          <i18n
+            path="team.title"
+            tag="h1"
             class="text-3xl xl:text-4xl text-light-onSurfacePrimary dark:text-dark-onSurfacePrimary font-medium leading-normal mb-6 lg:pt-4 transition-colors duration-300 ease-linear"
           >
-            <AppTitle /> {{ $t('team.title') }}<br />
-          </h1>
+            {{ $t('team.title') }}
+            <template v-slot:nuxt>
+              <AppTitle />
+            </template>
+          </i18n>
           <h3
             class="xl:text-lg text-light-onSurfaceSecondary dark:text-dark-onSurfaceSecondary font-medium leading-relaxed mb-6"
           >
@@ -232,9 +237,8 @@ export default {
     }
   },
   head() {
-    const title = 'The NuxtJS Team'
-    const description =
-      'NuxtJS has a very active and engaged team that is constantly striving to push Nuxt forward.'
+    const title = this.$t('team.meta.title')
+    const description = this.$t('team.meta.description')
 
     return {
       title,

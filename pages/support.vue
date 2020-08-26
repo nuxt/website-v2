@@ -3,13 +3,16 @@
     <div class="container mx-auto px-4 pt-16 pb-12">
       <div class="flex flex-wrap justify-between mb-4">
         <div class="lg:w-6/12 lg:text-left text-center p-4 sm:p-0">
-          <h1
+          <i18n
+            path="support.title"
+            tag="h1"
             class="text-3xl xl:text-4xl text-light-onSurfacePrimary dark:text-dark-onSurfacePrimary font-medium leading-normal mb-6 lg:pt-4"
           >
-            <AppTitle /> {{ $t('support.title.pre') }}
-            <span class="text-nuxt-green">&</span> {{ $t('support.title.post')
-            }}<br />
-          </h1>
+            {{ $t('support.title') }}
+            <template v-slot:nuxt>
+              <AppTitle />
+            </template>
+          </i18n>
           <i18n
             path="support.description"
             tag="h3"
@@ -144,9 +147,8 @@ export default {
     TechnicalSupportIllustration
   },
   head() {
-    const title = 'The NuxtJS Support'
-    const description =
-      'Our NuxtJS team now offers official consulting services for your NuxtJS applications.'
+    const title = this.$t('support.meta.title')
+    const description = this.$t('support.meta.description')
 
     return {
       title,

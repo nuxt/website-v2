@@ -3,12 +3,16 @@
     <div class="container mx-auto px-4 pt-16 pb-12">
       <div class="flex flex-wrap justify-between mb-8">
         <div class="lg:w-6/12 lg:text-left text-center p-4 sm:p-0">
-          <h1
+          <i18n
+            path="design.title"
+            tag="h1"
             class="text-3xl xl:text-4xl text-light-onSurfacePrimary dark:text-dark-onSurfacePrimary font-medium leading-normal mb-6 lg:pt-4"
           >
-            {{ $t('design.title.pre') }} <AppTitle />
-            {{ $t('design.title.post') }}<br />
-          </h1>
+            {{ $t('design.title') }}
+            <template v-slot:nuxt>
+              <AppTitle />
+            </template>
+          </i18n>
           <i18n
             path="design.description"
             tag="h3"
@@ -204,13 +208,8 @@ export default {
     DesignIllustration
   },
   head() {
-    const title = (
-      this.$i18n.t('design.title.pre') +
-      ' NuxtJS ' +
-      this.$i18n.t('design.title.post')
-    ).trim()
-    const description =
-      'Download NuxtJS design resources (SVG, icons, emoji and favicon).'
+    const title = this.$t('design.meta.title')
+    const description = this.$t('design.meta.description')
 
     return {
       title,

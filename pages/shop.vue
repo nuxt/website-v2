@@ -3,12 +3,16 @@
     <div class="container mx-auto px-4 pt-16 pb-12">
       <div ref="shop" class="flex flex-wrap justify-between mb-8">
         <div class="lg:w-6/12 lg:text-left text-center p-4 sm:p-0">
-          <h1
+          <i18n
+            path="shop.title"
+            tag="h1"
             class="text-3xl xl:text-4xl text-light-onSurfacePrimary dark:text-dark-onSurfacePrimary font-medium leading-normal mb-6 lg:pt-4"
           >
-            {{ $t('shop.title.pre') }} <AppTitle /> {{ $t('shop.title.post')
-            }}<br />
-          </h1>
+            {{ $t('shop.title') }}
+            <template v-slot:nuxt>
+              <AppTitle />
+            </template>
+          </i18n>
           <i18n
             path="shop.description"
             tag="h3"
@@ -138,12 +142,8 @@ export default {
   //   this.$refs.shop.appendChild(script)
   // },
   head() {
-    const title = (
-      this.$i18n.t('shop.title.pre') +
-      ' NuxtJS ' +
-      this.$i18n.t('shop.title.post')
-    ).trim()
-    const description = this.$i18n.t('shop.description')
+    const title = this.$t('shop.meta.title')
+    const description = this.$t('shop.meta.description')
 
     return {
       title,

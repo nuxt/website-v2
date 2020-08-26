@@ -3,12 +3,16 @@
     <div class="container mx-auto px-4 pt-16 pb-8">
       <div class="flex flex-wrap justify-between mb-8">
         <div class="lg:w-6/12 lg:text-left text-center p-4 sm:p-0">
-          <h1
+          <i18n
+            path="blog.title"
+            tag="h1"
             class="text-3xl xl:text-4xl text-light-onSurfacePrimary dark:text-dark-onSurfacePrimary font-medium leading-normal mb-6 lg:pt-4"
           >
-            <AppTitle />
-            Blog
-          </h1>
+            {{ $t('blog.title') }}
+            <template v-slot:nuxt>
+              <AppTitle />
+            </template>
+          </i18n>
 
           <!--blog description i18n -->
           <i18n
@@ -21,7 +25,7 @@
                 class="text-nuxt-green underline"
                 to="/team#nuxtCompany"
               >
-                NuxtJS team
+                {{ $t('blog.nuxt_team') }}
               </NuxtLink>
             </template>
             <template v-slot:ambassadors>
@@ -29,7 +33,7 @@
                 class="text-nuxt-green underline"
                 to="/team#nuxtCommunity"
               >
-                Nuxt.js Community
+                {{ $t('blog.ambassadors') }}
               </NuxtLink>
             </template>
           </i18n>
@@ -79,8 +83,8 @@ export default {
     }
   },
   head() {
-    const title = this.$i18n.t('blog.title')
-    const description = this.$i18n.t('blog.description')
+    const title = this.$i18n.t('blog.meta.title')
+    const description = this.$i18n.t('blog.meta.description')
 
     return {
       title,

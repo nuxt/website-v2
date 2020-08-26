@@ -3,11 +3,16 @@
     <div class="container mx-auto px-4 pt-16 pb-12">
       <div ref="shop" class="flex flex-wrap justify-between mb-8">
         <div class="lg:w-6/12 lg:text-left text-center p-4 sm:p-0">
-          <h1
+          <i18n
+            path="shop.title"
+            tag="h1"
             class="text-3xl xl:text-4xl text-light-onSurfacePrimary dark:text-dark-onSurfacePrimary font-medium leading-normal mb-6 lg:pt-4"
           >
-            The <AppTitle /> {{ $t('shop.title') }}<br />
-          </h1>
+            {{ $t('shop.title') }}
+            <template v-slot:nuxt>
+              <AppTitle />
+            </template>
+          </i18n>
           <i18n
             path="shop.description"
             tag="h3"
@@ -52,7 +57,7 @@
                 target="_blank"
                 class="sm:mr-4 p-3 mt-3 text-sm text-left"
               >
-                Coming soon
+                {{ $t('shop.button') }}
               </AppButton>
               <!-- <button class="snipcart-add-item inline-block bg-nuxt-lightgreen text-white font-medium text-sm px-4 py-2 shadow uppercase rounded hover:bg-nuxt-green hover:shadow-md sm:mr-4 p-3 mt-3 text-sm text-left" :data-item-id="i + 1" :data-item-name="product.name" :data-item-description="product.description" :data-item-image="'/shop/' + product.img + '.png'" :data-item-price="product.price" :data-item-url="{ name: 'shop' }">
               </button> -->
@@ -123,23 +128,22 @@ export default {
         }
       ]
     }
-    // },
-    // mounted () {
-    //   const jquery = document.createElement('script')
-    //   jquery.setAttribute('type', 'text/javascript')
-    //   jquery.setAttribute('src', '//ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js')
-    //   const script = document.createElement('script')
-    //   script.setAttribute('type', 'text/javascript')
-    //   script.setAttribute('src', '//cdn.snipcart.com/scripts/2.0/snipcart.js')
-    //   script.setAttribute('id', 'snipcart')
-    //   script.setAttribute('data-api-key', 'YzRlMjRiNmItNWJjNC00OWMxLWE1ODgtZmIyNzAwYmIyMmI5NjM3MDM3MTc0OTkxOTU5OTA0')
-    //   this.$refs.shop.appendChild(jquery)
-    //   this.$refs.shop.appendChild(script)
   },
+  // mounted () {
+  //   const jquery = document.createElement('script')
+  //   jquery.setAttribute('type', 'text/javascript')
+  //   jquery.setAttribute('src', '//ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js')
+  //   const script = document.createElement('script')
+  //   script.setAttribute('type', 'text/javascript')
+  //   script.setAttribute('src', '//cdn.snipcart.com/scripts/2.0/snipcart.js')
+  //   script.setAttribute('id', 'snipcart')
+  //   script.setAttribute('data-api-key', 'YzRlMjRiNmItNWJjNC00OWMxLWE1ODgtZmIyNzAwYmIyMmI5NjM3MDM3MTc0OTkxOTU5OTA0')
+  //   this.$refs.shop.appendChild(jquery)
+  //   this.$refs.shop.appendChild(script)
+  // },
   head() {
-    const title = 'The NuxtJS Shop'
-    const description =
-      'You want to support the NuxtJS project and show your love to the rest of the community? Here our products with the best quality ever!'
+    const title = this.$t('shop.meta.title')
+    const description = this.$t('shop.meta.description')
 
     return {
       title,

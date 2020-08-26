@@ -20,7 +20,11 @@ export default {
     let pages = []
 
     try {
-      pages = await $content(app.i18n.defaultLocale, 'guides', { deep: true })
+      const locale = ['pt'].includes(app.i18n.locale)
+        ? app.i18n.locale
+        : app.i18n.defaultLocale
+
+      pages = await $content(locale, 'guides', { deep: true })
         .only(['slug', 'title', 'menu', 'category', 'position'])
         .sortBy('position')
         .sortBy('title')

@@ -4,8 +4,8 @@ module.exports = {
     page_not_found: 'Página no encontrada',
     please_define_title: 'Por favor, añade un título',
     please_define_description: 'Por favor, añade una descripción',
-    search: 'Buscar ("/" to focus)',
-    version: 'Version'
+    search: 'Buscar ("/" recibir el foco)',
+    version: 'Versión'
   },
   iso: 'es',
 
@@ -16,14 +16,14 @@ module.exports = {
   header: {
     links: [
       {
-        name: 'Guides',
-        slug: 'guides',
+        name: 'Guías',
+        slug: 'guias',
         type: 'newDocs',
         routeName: 'guides-book-slug'
       },
       {
-        name: 'Guide',
-        slug: 'guide',
+        name: 'Guía',
+        slug: 'guia',
         type: 'dynamic',
         routeName: 'section-slug'
       },
@@ -35,7 +35,7 @@ module.exports = {
       },
       {
         name: 'Ejemplos',
-        slug: 'Ejemplos',
+        slug: 'ejemplos',
         type: 'dynamic',
         routeName: 'section-slug'
       },
@@ -46,8 +46,8 @@ module.exports = {
         routeName: 'section-slug'
       },
       {
-        name: 'Resources',
-        slug: 'resources',
+        name: 'Recursos',
+        slug: 'recursos',
         type: 'static'
       },
       {
@@ -57,22 +57,22 @@ module.exports = {
       }
     ],
     search: {
-      placeholder: 'Buscar ("/" to focus)'
+      placeholder: 'Buscar ("/" recibir el foco)'
     }
   },
   homepage: {
     meta: {
       title: 'Nuxt.js - El Framework intuitivo de Vue',
       description:
-        'Construye tu siguiente aplicación de Vue.js con confianza usando NuxtJS. Un framework de código abierto que trabaja en conseguir que el desarrollo web sea simple y poderoso.'
+        'Construye tu siguiente aplicación de Vue.js con confianza usando NuxtJS. Un framework de código abierto que trabaja para conseguir que el desarrollo web sea simple y poderoso.'
     },
     welcome: {
-      title: 'The Intuit {br} {frameworkType} Framework',
+      title: 'El Framework {br} {frameworkType} Intuitivo',
       description:
-        'Build your next Vue.js application with confidence using NuxtJS. An {openSource} framework making web development simple and powerful.',
-      openSource: 'open source',
-      get_started: 'get started',
-      get_updates: 'Get NuxtJS updates to your inbox each month',
+        'Construye tu siguiente aplicación de Vue.js con confianza usando NuxtJS. Un framework de {openSource} que trabaja para conseguir que el desarrollo web sea simple y poderoso.',
+      openSource: 'código abierto',
+      get_started: 'comenzar',
+      get_updates: 'Obtenga actualizaciones de NuxtJS cada mes en su bandeja de entrada',
       video: 'Video produced by {company}, download their free {cheatSheet}.',
       cheatSheet: 'Nuxt Cheat Sheet.'
     },

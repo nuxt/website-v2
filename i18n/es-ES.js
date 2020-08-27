@@ -328,7 +328,7 @@ module.exports = {
     guides: {
       'get-started': 'Comenzar',
       concepts: 'Conceptos',
-      features: 'Caracteristicas',
+      features: 'Características',
       'directory-structure': 'Estructura de directorios',
       'configuration-glossary': 'Glosario de configuración',
       'internals-glossary': 'Glosario de aspectos internos',

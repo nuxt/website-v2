@@ -6,7 +6,7 @@
       class="lg:overflow-y-auto lg:scrolling-touch lg:h-auto lg:block lg:relative lg:sticky lg:top-24"
     >
       <div
-        class="flex flex-col sm:flex-row px-4 pt-8 justify-between lg:justify-start lg:flex-col lg:overflow-y-auto lg:pr-0 lg:pl-8 sticky?lg:max-h-(screen-24)"
+        class="flex flex-col sm:flex-row px-4 pt-8 justify-between lg:justify-start lg:flex-col lg:overflow-y-auto overflow-x-hidden lg:pr-0 lg:pl-8 sticky?lg:max-h-(screen-24)"
       >
         <slot />
       </div>

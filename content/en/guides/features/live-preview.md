@@ -80,13 +80,6 @@ validate({ params, query }) {
 ### Passing data to enablePreview
 
 You can pass data to the `enablePreview` function. That data will then be available on the `$preview` context helper and on `this.$preview`.
-This can be useful if you need to fetch data differently in preview mode (e.g. making authenticated requests to fetch draft content).
-
-```js
-asyncData ({ $preview }) {
-  if ($preview) return { page: $preview }
-}
-```
 
 ### What's next
 

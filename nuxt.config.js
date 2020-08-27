@@ -197,7 +197,7 @@ export default {
         file: 'pt-BR.js',
         name: 'Português',
         domain: 'https://pt.nuxtjs.org'
-      }
+      },
       // {
       // code: 'tr',
       // iso: 'tr-TR',
@@ -205,13 +205,13 @@ export default {
       // name: 'Türkçe',
       // domain: 'https://tr.nuxtjs.org'
       // }
-      // {
-      //   code: 'es',
-      //   iso: 'es-ES',
-      //   file: 'es-ES.js',
-      //   name: 'Español',
-      //   domain: 'https://es.nuxtjs.org'
-      // }
+      {
+        code: 'es',
+        iso: 'es-ES',
+        file: 'es-ES.js',
+        name: 'Español',
+        domain: 'https://es.nuxtjs.org'
+      }
     ],
     vueI18n: {
       fallbackLocale: 'en'

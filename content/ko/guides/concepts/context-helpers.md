@@ -32,7 +32,7 @@ questions:
       - res
       - app
     correctAnswer: from
-  - question: `$nuxt` 헬퍼가 할 수 *없는* 것은 무엇인가요?
+  - question: '`$nuxt` 헬퍼가 할 수 *없는* 것은 무엇인가요?'
     answers:
       - Nuxt 버전 표기하기
       - 사용자의 인터넷 연결 상태 정보 제공하기

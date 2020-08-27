@@ -1,11 +1,11 @@
 module.exports = {
   common: {
     an_error_occurred: 'Ha ocurrido un error',
-    api_page_not_found: 'Página API no encontrada',
+    page_not_found: 'Página no encontrada',
     please_define_title: 'Por favor, añade un título',
     please_define_description: 'Por favor, añade una descripción',
-    search: 'Buscar ("/" to focus)',
-    version: 'Version'
+    search: 'Buscar ("/" recibir el foco)',
+    version: 'Versión'
   },
   iso: 'es',
 
@@ -16,14 +16,14 @@ module.exports = {
   header: {
     links: [
       {
-        name: 'Guides',
-        slug: 'guides',
+        name: 'Guías',
+        slug: 'guias',
         type: 'newDocs',
         routeName: 'guides-book-slug'
       },
       {
-        name: 'Guide',
-        slug: 'guide',
+        name: 'Guía',
+        slug: 'guia',
         type: 'dynamic',
         routeName: 'section-slug'
       },
@@ -35,7 +35,7 @@ module.exports = {
       },
       {
         name: 'Ejemplos',
-        slug: 'Ejemplos',
+        slug: 'ejemplos',
         type: 'dynamic',
         routeName: 'section-slug'
       },
@@ -46,8 +46,8 @@ module.exports = {
         routeName: 'section-slug'
       },
       {
-        name: 'Resources',
-        slug: 'resources',
+        name: 'Recursos',
+        slug: 'recursos',
         type: 'static'
       },
       {
@@ -57,22 +57,22 @@ module.exports = {
       }
     ],
     search: {
-      placeholder: 'Buscar ("/" to focus)'
+      placeholder: 'Buscar ("/" recibir el foco)'
     }
   },
   homepage: {
     meta: {
       title: 'Nuxt.js - El Framework intuitivo de Vue',
       description:
-        'Construye tu siguiente aplicación de Vue.js con confianza usando NuxtJS. Un framework de código abierto que trabaja en conseguir que el desarrollo web sea simple y poderoso.'
+        'Construye tu siguiente aplicación de Vue.js con confianza usando NuxtJS. Un framework de código abierto que trabaja para conseguir que el desarrollo web sea simple y poderoso.'
     },
     welcome: {
-      title: 'The Intuit {br} {frameworkType} Framework',
+      title: 'El Framework {br} {frameworkType} Intuitivo',
       description:
-        'Build your next Vue.js application with confidence using NuxtJS. An {openSource} framework making web development simple and powerful.',
-      openSource: 'open source',
-      get_started: 'get started',
-      get_updates: 'Get NuxtJS updates to your inbox each month',
+        'Construye tu siguiente aplicación de Vue.js con confianza usando NuxtJS. Un framework de {openSource} que trabaja para conseguir que el desarrollo web sea simple y poderoso.',
+      openSource: 'código abierto',
+      get_started: 'comenzar',
+      get_updates: 'Obtenga actualizaciones de NuxtJS cada mes en su bandeja de entrada',
       video: 'Video produced by {company}, download their free {cheatSheet}.',
       cheatSheet: 'Nuxt Cheat Sheet.'
     },
@@ -139,14 +139,24 @@ module.exports = {
     }
   },
   design: {
-    title: 'Design',
+    meta: {
+      title: 'NuxtJS Design',
+      description:
+        'Download NuxtJS design resources (SVG, icons, emoji and favicon).'
+    },
+    title: '{nuxt} Design',
     description:
       'NuxtJS is an MIT licensed open source project and completely free to use. {break} You can freely use our logos as long as you mention NuxtJS and link to nuxtjs.org.',
     other_download_message:
       'You can also download our {favicon} or our {sketch} file.'
   },
   resources: {
-    title: 'Resources',
+    meta: {
+      title: 'NuxtJS Resources',
+      description:
+        'Discover a panel of resources made by our partners. By using thoses affiliate resources links, you are helping us to maintain and develop the Open Source Framework.'
+    },
+    title: '{nuxt} Resources',
     description:
       'Discover a panel of resources made by our partners. By using thoses affiliate resources links, you are helping us to maintain and develop the Open Source Framework.',
     themes: {
@@ -157,22 +167,44 @@ module.exports = {
     }
   },
   shop: {
-    title: 'Shop',
+    meta: {
+      title: 'The NuxtJS Shop',
+      description:
+        'You want to support the NuxtJS project and show your love to the rest of the community? Here our products with the best quality ever!'
+    },
+    title: 'The {nuxt} Shop',
     description:
-      'You want to support the NuxtJS project and show your love to the rest of the community?{break} Here our products with the best quality ever!'
+      'You want to support the NuxtJS project and show your love to the rest of the community?{break} Here our products with the best quality ever!',
+    button: 'Coming soon'
   },
   team: {
-    title: 'Team',
+    meta: {
+      title: 'NuxtJS Team',
+      description:
+        'NuxtJS has a very active and engaged team that is constantly striving to push Nuxt forward.'
+    },
+    title: '{nuxt} Team',
     description:
       'The development of NuxtJS and its ecosystem is guided by an international team. We have a very active and engaged team that is constantly striving to push Nuxt forward.'
   },
   themes: {
-    title: 'Themes',
+    meta: {
+      title: 'NuxtJS Themes',
+      description:
+        'With the themes below built by our partners from Creative Tim and Theme Forest you can see how a real world application is built, with Nuxt.js stack behind.'
+    },
+    title: '{nuxt} Themes',
     description:
-      'With the themes below built by our partners from Creative Tim and Theme Forest you can see how a real world application is built, with Nuxt.js stack behind.'
+      'With the themes below built by our partners from Creative Tim and Theme Forest you can see how a real world application is built, with Nuxt.js stack behind.',
+    button: 'GET IT for'
   },
   'video-courses': {
-    title: 'Video Courses',
+    meta: {
+      title: 'NuxtJS Video Courses',
+      description:
+        'With the video courses below created by our partner VueSchool you can discover and learn more about the Nuxt.js Framework.'
+    },
+    title: '{nuxt} Video Courses',
     description:
       'With the video courses below created by our partner VueSchool you can discover and learn more about the Nuxt.js Framework.',
     cta: {
@@ -181,10 +213,12 @@ module.exports = {
     }
   },
   sponsor: {
-    title: {
-      pre: 'Sponsor',
-      post: 'Development'
+    meta: {
+      title: 'Sponsor NuxtJS Development',
+      description:
+        'You can support NuxtJS development via different methods and ensure regular updates to the framework.'
     },
+    title: 'Sponsor {nuxt} Development',
     description:
       'NuxtJS is an MIT licensed open source project and completely free to use.{break} However, the amount of effort needed to maintain and develop new features for the project is not sustainable without proper financial backing.{break} You can support NuxtJS development via the following methods:',
     donations: {
@@ -199,10 +233,12 @@ module.exports = {
     become_a_sponsor: 'Become a sponsor'
   },
   support: {
-    title: {
-      pre: 'Consulting',
-      post: 'Support'
+    meta: {
+      title: 'The NuxtJS Support',
+      description:
+        'Our NuxtJS team now offers official consulting services for your NuxtJS applications.'
     },
+    title: 'Consulting {nuxt} Support',
     description:
       'Our {team} now offers official consulting services for your NuxtJS applications.{break} We offer different services depending of your needs, from technical support to custom development. Expect a reply within one business day, we can sign custom NDA and you can get a full refund if you are not satisfied with our service.',
     technical: {
@@ -229,10 +265,16 @@ module.exports = {
     }
   },
   blog: {
-    title: 'NuxtJS Blog',
+    meta: {
+      title: 'NuxtJS Blog',
+      description:
+        'Discover articles from the NuxtJS team and NuxtJS Community about NuxtJS, tips and tricks included!'
+    },
+    title: '{nuxt} Blog',
     description:
-      'Discover articles from the {nuxtTeam} and {ambassadors} about NuxtJS, tips and tricks included!',
-    ambassadors: 'ambassadors',
+      'Discover articles from the {nuxtTeam} and {nuxtCommunity} about NuxtJS, tips and tricks included!',
+    nuxt_team: 'NuxtJS Team',
+    nuxt_community: 'Nuxt.js Community',
     contribute: 'Caught a mistake or want to contribute to this blog post?'
   },
   guide: {

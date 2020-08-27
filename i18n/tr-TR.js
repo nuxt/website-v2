@@ -1,7 +1,7 @@
 module.exports = {
   common: {
     an_error_occurred: 'Bir hata oluştu',
-    api_page_not_found: 'API sayfası bulunamadı',
+    page_not_found: 'sayfası bulunamadı',
     please_define_title: 'Please define a title in the front matter',
     please_define_description:
       'Please define a description in the front matter',
@@ -141,14 +141,24 @@ module.exports = {
     }
   },
   design: {
-    title: 'Tasarım',
+    meta: {
+      title: 'NuxtJS Tasarım',
+      description:
+        'Download NuxtJS design resources (SVG, icons, emoji and favicon).'
+    },
+    title: '{nuxt} Tasarım',
     description:
       "NuxtJS, MIT lisansı açık kaynak bir projedir ve kullanması tamamen ücretsizdir. Burada gördüğünüz logolarımızı NuxtJS'yi ve nuxtjs.org'u belirttiğiniz takdirde istediğiniz gibi kullanabilirsiniz.",
     other_download_message:
       "Aynı zamanda isterseniz {favicon}'umuzu veya {sketch} dosyamızı indirebilirsiniz."
   },
   resources: {
-    title: 'Kaynaklar',
+    meta: {
+      title: 'NuxtJS Kaynaklar',
+      description:
+        'Discover a panel of resources made by our partners. By using thoses affiliate resources links, you are helping us to maintain and develop the Open Source Framework.'
+    },
+    title: '{nuxt} Kaynaklar',
     description:
       'Partnerimiz tarafından hazırlanan kaynaklara göz atın. Buradaki bağlantıları kullanarak bizlere  Açık Kaynak Sistem projemizi geliştirmemizde destek oluyorsunuz.',
     themes: {
@@ -159,22 +169,44 @@ module.exports = {
     }
   },
   shop: {
-    title: 'Mağaza',
+    meta: {
+      title: 'NuxtJS Mağaza',
+      description:
+        'You want to support the NuxtJS project and show your love to the rest of the community? Here our products with the best quality ever!'
+    },
+    title: '{nuxt} Mağaza',
     description:
-      'NuxtJS projesine desteğinizi göstermek ve topluluğun geri kalanına sevginizi göstermek mi istiyorsunuz? Doğru yerdesiniz, buradan en kaliteli ürünlerimize ulaşabilirsiniz!'
+      'NuxtJS projesine desteğinizi göstermek ve topluluğun geri kalanına sevginizi göstermek mi istiyorsunuz? Doğru yerdesiniz, buradan en kaliteli ürünlerimize ulaşabilirsiniz!',
+    button: 'Coming soon'
   },
   team: {
-    title: 'Ekip',
+    meta: {
+      title: 'NuxtJS Ekip',
+      description:
+        'NuxtJS has a very active and engaged team that is constantly striving to push Nuxt forward.'
+    },
+    title: '{nuxt} Ekip',
     description:
       "NuxtJS ve ekosistemiminin gelişimi uluslararası bir ekip tarafından kılavuzlanmıştır. Nuxt'u iyileştirmek için sürekli çabalayan ve çalışan bir ekibe sahibiz."
   },
   themes: {
-    title: 'Temalar',
+    meta: {
+      title: 'NuxtJS Temalar',
+      description:
+        'With the themes below built by our partners from Creative Tim and Theme Forest you can see how a real world application is built, with Nuxt.js stack behind.'
+    },
+    title: '{nuxt} Temalar',
     description:
-      "Creative Tim ve Theme Forest'daki partnerlerimiz tarafından hazırlanan temalara göz atarak NuxtJS ile yapılmış bir uygulamanın gerçek kullanımda nasıl gözüktüğünü görebilirsiniz."
+      "Creative Tim ve Theme Forest'daki partnerlerimiz tarafından hazırlanan temalara göz atarak NuxtJS ile yapılmış bir uygulamanın gerçek kullanımda nasıl gözüktüğünü görebilirsiniz.",
+    button: 'GET IT for'
   },
   'video-courses': {
-    title: 'Video Kursları',
+    meta: {
+      title: 'NuxtJS Video Kursları',
+      description:
+        'With the video courses below created by our partner VueSchool you can discover and learn more about the Nuxt.js Framework.'
+    },
+    title: '{nuxt} Video Kursları',
     description:
       'Aşağıdaki VueSchool tarafından hazırlanan video kurslarımız ile Nuxt.js sistemi hakkında daha fazla keşif yapabilir ve daha fazla bilgiye sahip olabilirsiniz.',
     cta: {
@@ -183,10 +215,12 @@ module.exports = {
     }
   },
   sponsor: {
-    title: {
-      pre: '',
-      post: 'Gelişimine Destek Ol'
+    meta: {
+      title: 'Sponsor NuxtJS Development',
+      description:
+        'You can support NuxtJS development via different methods and ensure regular updates to the framework.'
     },
+    title: '{nuxt} Gelişimine Destek Ol',
     description:
       'NuxtJS, MIT lisanslı açık kaynak ve kullanması tamamen ücretsiz bir projedir. Yine de, bu proje ve bu proje için yeni özellikler yapmak için sarfedilen efor finansal destek olmadan mümkün olmayacaktır.{break}Aşağıdaki yöntemleri kullanarak NuxtJS gelişimine destek çıkabilirsiniz:',
     donations: {
@@ -201,10 +235,12 @@ module.exports = {
     become_a_sponsor: 'Sponsor ol'
   },
   support: {
-    title: {
-      pre: 'Danışmanlık',
-      post: 'Destek'
+    meta: {
+      title: 'NuxtJS Destek',
+      description:
+        'Our NuxtJS team now offers official consulting services for your NuxtJS applications.'
     },
+    title: 'Danışmanlık {nuxt} Destek',
     description:
       '{team}, NuxtJS uygulamalarınız için resmi bir danışmanlık desteği sunuyor. İhtiyacınıza göre teknik destekten, özel geliştirme aşamalarına kadar farklı servisler sağlıyoruz. Bir iş günü içerisinde cevap veriyor ve bu servisi beğenmemeniz durumunda bir NDA imzalayabilir ve paranızın tamamını size geri iletebiliriz.',
     technical: {
@@ -230,10 +266,16 @@ module.exports = {
     }
   },
   blog: {
-    title: 'NuxtJS Blog',
+    meta: {
+      title: 'NuxtJS Blog',
+      description:
+        'Discover articles from the NuxtJS team and NuxtJS Community about NuxtJS, tips and tricks included!'
+    },
+    title: '{nuxt} Blog',
     description:
-      '{nuxtTeam} ve {ambassadors} tarafından hazırlanan NuxtJS gönderilerini ve ipuçlarını keşfedin!',
-    ambassadors: 'büyükelçileri',
+      '{nuxtTeam} ve {nuxtCommunity} tarafından hazırlanan NuxtJS gönderilerini ve ipuçlarını keşfedin!',
+    nuxt_team: 'NuxtJS Team',
+    nuxt_community: 'Nuxt.js Community',
     contribute:
       'Hata yakaladınız veya bu gönderiye katkıda bulunmak mı istiyorsunuz?'
   },

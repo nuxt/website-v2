@@ -3,8 +3,6 @@
     <div
       class="w-full py-8 px-4 lg:static lg:overflow-visible lg:max-h-full lg:w-3/4"
     >
-      <LangFallback :doc-link="docLink" :lang-fallback="langFallback" />
-
       <article v-if="section === 'examples'">
         <h1
           class="text-light-onSurfacePrimary dark:text-dark-onSurfacePrimary transition-colors duration-300 ease-linear"
@@ -81,7 +79,7 @@ export default {
     } catch (err) {
       return error({
         statusCode: 404,
-        message: app.i18n.t('common.api_page_not_found')
+        message: app.i18n.t('common.page_not_found')
       })
     }
 

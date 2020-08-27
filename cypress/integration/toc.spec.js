@@ -4,6 +4,6 @@ describe('It checks to see if the toc at top of guides works ', () => {
   })
   it('checks the table of contents anchor', () => {
     cy.get('[data-cy="toc"]').first().click()
-    cy.url().should('contain', '#prerequisites')
+    cy.url().should('contain', '#')
   })
 })

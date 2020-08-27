@@ -170,7 +170,7 @@ export default {
           },
           {
             name: 'Alexander Lichter',
-            city: 'Dresden, Germany',
+            city: 'Leipzig, Germany',
             github: 'manniL',
             twitter: 'TheAlexLichter',
             website: 'https://blog.lichter.io',

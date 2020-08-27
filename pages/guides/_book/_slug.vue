@@ -58,8 +58,9 @@ export default {
     }
 
     if (
-      process.env.NODE_ENV !== 'production' &&
-      app.i18n.defaultLocale !== app.i18n.locale
+      app.i18n.locale !== app.i18n.defaultLocale &&
+      (['pt'].includes(app.i18n.locale) ||
+        process.env.NODE_ENV !== 'production')
     ) {
       try {
         path = `/${app.i18n.locale}/guides/${params.book}`
@@ -80,7 +81,9 @@ export default {
 
     try {
       ;[prev, next] = await $content(
-        `/${app.i18n.defaultLocale}/guides/${params.book}`
+        ['pt'].includes(app.i18n.locale)
+          ? path
+          : `/${app.i18n.defaultLocale}/guides/${params.book}`
       )
         .only(['title', 'slug', 'dir', 'menu'])
         .sortBy('position')

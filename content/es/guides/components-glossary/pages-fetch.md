@@ -11,7 +11,7 @@ Nuxt.js `v2.12` introduce un nuevo *hook* llamado `fetch`(traer) **en cualquiera
 
 <base-alert>
 
-`fetch(context)` ha quedado obsoleto, en su lugar puede utilizar un [middleware anónimo](/guides/components-glossary/pages-middleware#anonymous-middleware) en tu pagina: `middleware(context)`
+`fetch(context)` ha quedado obsoleto, en su lugar puede utilizar un [middleware anónimo](/guides/components-glossary/pages-middleware#anonymous-middleware) en vuestra pagina: `middleware(context)`
 
 </base-alert>
 

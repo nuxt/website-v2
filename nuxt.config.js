@@ -135,7 +135,7 @@ export default {
   },
   loading: { color: '#41B883' },
   generate: {
-    fallback: '404.html', // for Netlify
+    fallback: false,
     routes: ['/', '404']
   },
   i18n: {
@@ -198,6 +198,7 @@ export default {
         name: 'Português',
         domain: 'https://pt.nuxtjs.org'
       }
+      // please leave this commented out until subdomain is live
       // {
       // code: 'tr',
       // iso: 'tr-TR',
@@ -205,6 +206,7 @@ export default {
       // name: 'Türkçe',
       // domain: 'https://tr.nuxtjs.org'
       // }
+      // please leave this commented out until subdomain is live
       // {
       //   code: 'es',
       //   iso: 'es-ES',

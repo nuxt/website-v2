@@ -4,8 +4,8 @@ module.exports = {
     page_not_found: 'Página no encontrada',
     please_define_title: 'Por favor, añade un título',
     please_define_description: 'Por favor, añade una descripción',
-    search: 'Buscar ("/" to focus)',
-    version: 'Version'
+    search: 'Buscar ("/" recibir el foco)',
+    version: 'Versión'
   },
   iso: 'es',
 
@@ -16,14 +16,14 @@ module.exports = {
   header: {
     links: [
       {
-        name: 'Guides',
-        slug: 'guides',
+        name: 'Guías',
+        slug: 'guias',
         type: 'newDocs',
         routeName: 'guides-book-slug'
       },
       {
-        name: 'Guide',
-        slug: 'guide',
+        name: 'Guía',
+        slug: 'guia',
         type: 'dynamic',
         routeName: 'section-slug'
       },
@@ -35,7 +35,7 @@ module.exports = {
       },
       {
         name: 'Ejemplos',
-        slug: 'Ejemplos',
+        slug: 'ejemplos',
         type: 'dynamic',
         routeName: 'section-slug'
       },
@@ -46,8 +46,8 @@ module.exports = {
         routeName: 'section-slug'
       },
       {
-        name: 'Resources',
-        slug: 'resources',
+        name: 'Recursos',
+        slug: 'recursos',
         type: 'static'
       },
       {
@@ -57,71 +57,71 @@ module.exports = {
       }
     ],
     search: {
-      placeholder: 'Buscar ("/" to focus)'
+      placeholder: 'Buscar ("/" recibir el foco)'
     }
   },
   homepage: {
     meta: {
       title: 'Nuxt.js - El Framework intuitivo de Vue',
       description:
-        'Construye tu siguiente aplicación de Vue.js con confianza usando NuxtJS. Un framework de código abierto que trabaja en conseguir que el desarrollo web sea simple y poderoso.'
+        'Construye tu siguiente aplicación de Vue.js con confianza usando NuxtJS. Un framework de código abierto que trabaja para conseguir que el desarrollo web sea simple y poderoso.'
     },
     welcome: {
-      title: 'The Intuit {br} {frameworkType} Framework',
+      title: 'El Framework {br} {frameworkType} Intuitivo',
       description:
-        'Build your next Vue.js application with confidence using NuxtJS. An {openSource} framework making web development simple and powerful.',
-      openSource: 'open source',
-      get_started: 'get started',
-      get_updates: 'Get NuxtJS updates to your inbox each month',
+        'Construye tu siguiente aplicación de Vue.js con confianza usando NuxtJS. Un framework de {openSource} que trabaja para conseguir que el desarrollo web sea simple y poderoso.',
+      openSource: 'código abierto',
+      get_started: 'comenzar',
+      get_updates: 'Obtenga actualizaciones de NuxtJS cada mes en su bandeja de entrada',
       video: 'Video produced by {company}, download their free {cheatSheet}.',
       cheatSheet: 'Nuxt Cheat Sheet.'
     },
     why: {
-      title: 'Why {nuxt}',
-      try_nuxtjs_online: 'Try NuxtJS Online',
+      title: 'Por qué {nuxt}',
+      try_nuxtjs_online: 'Experimenta con NuxtJS Online',
       enjoyable: {
-        title: 'Enjoyable',
+        title: 'Agradable',
         description:
-          'Our main focus is the Developer Experience. We love Nuxt.js and continuously improve the framework so you love it too! {break}Expect appealing solutions, descriptive error messages, powerful defaults and detailed documentation. If questions or problems come up, our helpful community will help you out.'
+          'Nuestro enfoque principal es la experiencia del desarrollador. Nos encanta Nuxt.js y mejoramos continuamente, ¡así que a ti también te encanta! {break} Espere soluciones atractivas, mensajes de error descriptivos, poderosos valores predeterminados y documentación detallada. Si surgen preguntas o problemas, nuestra comunidad te ayudará.'
       },
       modular: {
         title: 'Modular',
         description:
-          "Nuxt is based on a powerful modular architecture. You can choose from more than 50 modules to make your development faster and easier. You don't have to reinvent the wheel to get PWA benefits, add Google Analytics to your page or generate a sitemap."
+          "Nuxt se basa en una potente arquitectura modular. Puede elegir entre más de 50 módulos para que su desarrollo sea más rápido y sencillo. No tiene que reinventar la rueda para obtener los beneficios de PWA, agregar Google Analytics a su página o generar un mapa del sitio."
       },
       performant: {
-        title: 'Performant',
+        title: 'Rendimiento',
         description:
-          'With Nuxt.js, your application will be optimized out of the box.We do our best to build performant applications by utilizing Vue.js and Node.js best practices.To squeeze every unnecessary bit out of your app Nuxt includes a bundle analyzer and lots of opportunities to fine-tune your app.'
+          'Con Nuxt.js, tu aplicación se optimizará desde el primer momento. Hacemos todo lo posible para crear aplicaciones de alto rendimiento utilizando las mejores prácticas de Vue.js y Node.js.Para exprimir cada bit innecesario de tu aplicación, Nuxt incluye un analizador de paquetes y muchas oportunidades para ajustar tu aplicación.'
       }
     },
     companies: {
-      title: "Who's using {nuxt}"
+      title: "Quién usa {nuxt}"
     },
     modes: {
       title: '{nuxt} rendering',
       ssr: {
         title: 'Server Side Rendered',
         description:
-          'The most popular mode for Nuxt. With SSR, also called "universal" or "isomorphic" mode, a Node.js server will be used to deliver HTML based on your Vue components to the client instead of the pure javascript. Using SSR will lead to a large SEO boost, better UX and more opportunities (compared to a traditional Vue SPA).{break}Because implementing SSR on your own can be really tedious, Nuxt.js gives you full support out of the box and will take care of common pitfalls.'
+          'El modo más popular para Nuxt. Con SSR, también llamado modo "universal" o "isomórfico", se utilizará un servidor Node.js para entregar HTML basado en tus componentes de Vue al cliente en lugar del javascript puro. El uso de SSR generará un gran impulso de SEO, una mejor UX y más oportunidades (en comparación con un Vue SPA tradicional). {Break} Debido a que implementar SSR por tu cuenta puede ser realmente tedioso, Nuxt.js le brinda soporte completo listo para usar y se encargará de los errores comunes.'
       },
       spa: {
         title: 'Single Page Application (SPA)',
         description:
-          "Don't need SSR or Static Site Generation but still want to profit from the benefits that Nuxt provides? Are you slowly transitioning your app and want to start lightweight? Then the traditional SPA mode will likely be your choice. The outcome will be a typical Vue SPA as you know it but influenced by your Nuxt configuration and the framework itself."
+          "¿No necesita SSR o generación de sitios estáticos pero quiere beneficiarse de los beneficios que ofrece Nuxt? ¿Estás realizando una transición lenta de tu aplicación y desea que sea ligera? Entonces el modo SPA tradicional probablemente será tu elección. El resultado será un Vue SPA típico como lo conoce, pero influenciado por tu configuración de Nuxt y el framework en sí."
       },
       ssg: {
         title: 'Statically Generated',
         description:
-          'Static Site Generation is a very hot topic right now (aka JAMStack). Instead of switching to another framework and spending time to get used to it, why not kill two birds with one stone? {proverbial} Nuxt.js supports generating a static website based on your Vue application. It is the "best of both worlds" as you don\'t need a server but still have SEO benefits because Nuxt will pre-render all pages and include the necessary HTML. Also, you can deploy the resulting page easily to Netlify or GitHub pages.',
-        proverbial: 'only proverbial'
+          'La generación de sitios estáticos es un tema muy candente en este momento (también conocido como JAMStack). En lugar de cambiar a otro framework y dedicar tiempo a acostumbrarse a él, ¿por qué no matar dos pájaros de un tiro? {proverbial} Nuxt.js admite la generación de un sitio web estático basado en tu aplicación Vue. Es "lo mejor de ambos mundos", ya que no necesitas un servidor, pero todavía tiene beneficios de SEO porque Nuxt pre-renderizará todas las páginas e incluirá el HTML necesario. Además, puede implementar la página resultante fácilmente en páginas de Netlify o GitHub.',
+        proverbial: 'sólo proverbial'
       }
     },
     sponsors: {
-      title: 'Sponsors',
+      title: 'Patrocinadores',
       description:
-        'NuxtJS is an MIT licensed open source project and completely free to use. However, the amount of effort needed to maintain and develop new features for the project is not sustainable without proper financial backing. If you run a business and are using Nuxt in a revenue-generating product, it makes business sense to sponsor Nuxt development: it ensures the project that your product relies on stays healthy and actively maintained. It can also help your exposure in the Vue/Nuxt community and makes it easier to attract Vue/Nuxt developers. If you are an individual user and have enjoyed the productivity of using Nuxt, consider donating as a sign of appreciation.',
-      become_a_sponsor: 'Become a sponsor'
+        'NuxtJS es un proyecto de código abierto con licencia del MIT y de uso completamente gratuito. Sin embargo, la cantidad de esfuerzo necesaria para mantener y desarrollar nuevas funciones para el proyecto no es sostenible sin el respaldo financiero adecuado. Si dirige un negocio y está utilizando Nuxt en un producto que genera ingresos, tiene sentido comercial patrocinar el desarrollo de Nuxt: asegura que el proyecto en el que se basa su producto se mantenga saludable y mantenido activamente. También puede ayudar a su exposición en la comunidad de Vue / Nuxt y facilita la atracción de desarrolladores de Vue / Nuxt. Si es un usuario individual y ha disfrutado de la productividad de usar Nuxt, considere donar como una señal de agradecimiento.',
+      become_a_sponsor: 'Conviértete en patrocinador'
     },
     newsletter: {
       title: '{nuxt} Newsletter',
@@ -139,105 +139,147 @@ module.exports = {
     }
   },
   design: {
-    title: 'Design',
+    meta: {
+      title: 'NuxtJS Design',
+      description:
+        'Descargue los recursos de diseño de NuxtJS (SVG, iconos, emoji y favicon)'
+    },
+    title: '{nuxt} Design',
     description:
-      'NuxtJS is an MIT licensed open source project and completely free to use. {break} You can freely use our logos as long as you mention NuxtJS and link to nuxtjs.org.',
+      'Nuxt JS es un proyecto de código abierto con licencia del MIT y de uso completamente gratuito. {break} Puede usar libremente nuestros logotipos siempre que mencione Nuxt JS y enlace a nuxtjs.org.',
     other_download_message:
-      'You can also download our {favicon} or our {sketch} file.'
+      'También puede descargar nuestro {favicon} o nuestro archivo {sketch}.'
   },
   resources: {
-    title: 'Resources',
+    meta: {
+      title: 'NuxtJS Recursos',
+      description:
+        'Descubra un panel de recursos elaborado por nuestros socios. Al utilizar estos enlaces de recursos para afiliados, nos ayuda a mantener y desarrollar el framework de código abierto.'
+    },
+    title: '{nuxt} Recursos',
     description:
-      'Discover a panel of resources made by our partners. By using thoses affiliate resources links, you are helping us to maintain and develop the Open Source Framework.',
+      'Descubra un panel de recursos elaborado por nuestros socios. Al utilizar estos enlaces de recursos para afiliados, nos ayuda a mantener y desarrollar el framework de código abierto.',
     themes: {
-      title: 'Themes'
+      title: 'Temas'
     },
     videos: {
-      title: 'Video Courses'
+      title: 'Video cursos'
     }
   },
   shop: {
-    title: 'Shop',
+    meta: {
+      title: 'La tienda NuxtJS',
+      description:
+        '¿Quieres apoyar el proyecto NuxtJS y mostrar tu amor al resto de la comunidad? ¡Aquí nuestros productos con la mejor calidad!'
+    },
+    title: 'La tienda {nuxt}',
     description:
-      'You want to support the NuxtJS project and show your love to the rest of the community?{break} Here our products with the best quality ever!'
+      '¿Quieres apoyar el proyecto NuxtJS y mostrar tu amor al resto de la comunidad? {Break} ¡Aquí nuestros productos con la mejor calidad!',
+    button: 'Próximamente'
   },
   team: {
-    title: 'Team',
+    meta: {
+      title: 'Equipo NuxtJS',
+      description:
+        'NuxtJS tiene un equipo muy activo y comprometido que se esfuerza constantemente por impulsar a Nuxt hacia adelante.'
+    },
+    title: 'Equipo de {nuxt}',
     description:
-      'The development of NuxtJS and its ecosystem is guided by an international team. We have a very active and engaged team that is constantly striving to push Nuxt forward.'
+      'El desarrollo de NuxtJS y su ecosistema está guiado por un equipo internacional. Contamos con un equipo muy activo y comprometido que se esfuerza constantemente por impulsar a Nuxt.'
   },
   themes: {
-    title: 'Themes',
+    meta: {
+      title: 'NuxtJS Temas',
+      description:
+        'Con los temas creados por nuestros socios de Creative Tim y Theme Forest, puede ver cómo se construye una aplicación del mundo real, con Nuxt.js.'
+    },
+    title: '{nuxt} Temas',
     description:
-      'With the themes below built by our partners from Creative Tim and Theme Forest you can see how a real world application is built, with Nuxt.js stack behind.'
+      'Con los temas creados por nuestros socios de Creative Tim y Theme Forest, puede ver cómo se construye una aplicación del mundo real, con Nuxt.js.',
+    button: 'OBTENERLO por'
   },
   'video-courses': {
-    title: 'Video Courses',
+    meta: {
+      title: 'NuxtJS Video Cursos',
+      description:
+        'Con los cursos en video creados por nuestro socio VueSchool, puede descubrir y aprender más sobre Nuxt.js.'
+    },
+    title: '{nuxt} Video Cursos',
     description:
-      'With the video courses below created by our partner VueSchool you can discover and learn more about the Nuxt.js Framework.',
+      'Con los cursos en video creados por nuestro socio VueSchool, puede descubrir y aprender más sobre Nuxt.js.',
     cta: {
-      discover: 'Discover vueschool',
-      start: 'START COURSE'
+      discover: 'Descubrir vueschool',
+      start: 'INICIAR CURSO'
     }
   },
   sponsor: {
-    title: {
-      pre: 'Sponsor',
-      post: 'Development'
+    meta: {
+      title: 'Patrocinar el desarrollo de NuxtJS',
+      description:
+        'Puede respaldar el desarrollo de NuxtJS a través de diferentes métodos y garantizar actualizaciones periódicas del framework.'
     },
+    title: 'Patrocinar el desarrollo de {nuxt}',
     description:
-      'NuxtJS is an MIT licensed open source project and completely free to use.{break} However, the amount of effort needed to maintain and develop new features for the project is not sustainable without proper financial backing.{break} You can support NuxtJS development via the following methods:',
+      'NuxtJS es un proyecto de código abierto con licencia del MIT y de uso completamente gratuito. {Break} Sin embargo, la cantidad de esfuerzo necesario para mantener y desarrollar nuevas funciones para el proyecto no es sostenible sin el respaldo financiero adecuado. {Break} Puede respaldar el desarrollo de NuxtJS a través de los siguientes métodos:',
     donations: {
-      title: 'One-time donations',
-      description: 'We accept donations through these channels'
+      title: 'Donaciones únicas',
+      description: 'Aceptamos donaciones a través de estos canales'
     },
     pledges: {
-      title: 'Recurring Pledges',
+      title: 'Compromisos recurrentes',
       description:
-        'Recurring pledges come with exclusive perks, e.g. having your name listed in the NuxtJS GitHub repository, or have your company logo placed on this website. Become a nuxter or sponsor via {opencollective} (goes into a fund with transparent expense models supporting community efforts and events).'
+        'El compromiso recurrente vienen con ventajas exclusivas, p. Ej. tener su nombre en el repositorio de NuxtJS GitHub, o colocar el logotipo de su empresa en este sitio web. Conviértase en nuxter o patrocinador a través de {opencollective} (entra en un fondo con modelos de gastos transparentes que respaldan los esfuerzos y eventos de la comunidad).'
     },
-    become_a_sponsor: 'Become a sponsor'
+    become_a_sponsor: 'Conviértete en patrocinador'
   },
   support: {
-    title: {
-      pre: 'Consulting',
-      post: 'Support'
-    },
-    description:
-      'Our {team} now offers official consulting services for your NuxtJS applications.{break} We offer different services depending of your needs, from technical support to custom development. Expect a reply within one business day, we can sign custom NDA and you can get a full refund if you are not satisfied with our service.',
-    technical: {
-      title: 'Technical support',
+    meta: {
+      title: 'El soporte de NuxtJS',
       description:
-        'Get project audits, app deployments, custom development and technical support from the NuxtJS team.',
-      start: 'Start chat',
+        'Nuestro equipo de NuxtJS ahora ofrece servicios de consultoría oficiales para sus aplicaciones NuxtJS.'
+    },
+    title: 'Asistencia de consultoría {nuxt}',
+    description:
+      'Nuestro {equipo} ahora ofrece servicios de consultoría oficial para sus aplicaciones NuxtJS. {Break} Ofrecemos diferentes servicios según sus necesidades, desde soporte técnico hasta desarrollo personalizado. Espere una respuesta dentro de un día hábil, podemos firmar un acuerdo de confidencialidad personalizado y puede obtener un reembolso completo si no está satisfecho con nuestro servicio.',
+    technical: {
+      title: 'Soporte técnico',
+      description:
+        'Obtenga auditorías de proyectos, implementaciones de aplicaciones, desarrollo personalizado y soporte técnico del equipo de NuxtJS.',
+      start: 'Comenzar chat',
       partner: {
-        pre: 'We partnered with',
+        pre: 'Nos asociamos',
         post:
-          'to offer these services so we can focus on helping you as fast as possible.'
+          'para ofrecer estos servicios y poder enfocarnos en ayudarlo lo más rápido posible.'
       }
     },
     entreprise: {
-      title: 'for enterprise',
+      title: 'para empresas',
       description:
-        'NuxtJS and the maintainers of thousands of other packages are working with Tidelift to deliver one enterprise subscription that covers all of the open source you use.{break} If you want the flexibility of open source and the confidence of commercial-grade software, this is for you.',
+        'NuxtJS y los responsables de mantenimiento de miles de otros paquetes están trabajando con Tidelift para ofrecer una suscripción empresarial que cubra todo el código abierto que utiliza. {Break} Si desea la flexibilidad del código abierto y la confianza del software de calidad comercial, esto es para ti.',
       partner: {
-        pre: 'Available as part of the',
-        post: 'subscription.'
+        pre: 'Disponible como parte de la',
+        post: 'suscripción.'
       },
-      learn_more: 'Learn more',
-      request_a_demo: 'Request a demo'
+      learn_more: 'Aprende más',
+      request_a_demo: 'Solicite una demostración'
     }
   },
   blog: {
-    title: 'NuxtJS Blog',
+    meta: {
+      title: 'NuxtJS Blog',
+      description:
+        'Descubra artículos del equipo de NuxtJS y de la comunidad de NuxtJS sobre NuxtJS, ¡se incluyen consejos y trucos!'
+    },
+    title: '{nuxt} Blog',
     description:
-      'Discover articles from the {nuxtTeam} and {ambassadors} about NuxtJS, tips and tricks included!',
-    ambassadors: 'ambassadors',
-    contribute: 'Caught a mistake or want to contribute to this blog post?'
+      'Descubra artículos de {nuxtTeam} y {nuxtCommunity} sobre NuxtJS, ¡con sugerencias y trucos incluidos!',
+    nuxt_team: 'NuxtJS Team',
+    nuxt_community: 'Comunidad Nuxt.js',
+    contribute: '¿Te has equivocado o quieres contribuir a esta publicación de blog?'
   },
   guide: {
     release_notes: 'Notas de publicación (en)',
-    toc_title: 'On this page'
+    toc_title: 'En esta página'
   },
   quiz: {
     title: 'Quiz'
@@ -248,7 +290,7 @@ module.exports = {
     msg2: 'están ahora en modo beta. Pásalo bien!'
   },
   contribute: {
-    title: 'Contributors',
+    title: 'Colaboradores',
     docs: '¿Has encontrado un error o quieres contribuir en la documentación?',
     blog: '¿Has encontrado un error o quieres contribuir en este artículo?',
     edit_on_github: 'Edita esta página en GitHub!',
@@ -284,18 +326,18 @@ module.exports = {
       deployment: 'Deployment'
     },
     guides: {
-      'get-started': 'Get Started',
-      concepts: 'Concepts',
-      features: 'Features',
-      'directory-structure': 'Directory Structure',
-      'configuration-glossary': 'Configuration Glossary',
-      'internals-glossary': 'Internals Glossary',
-      'components-glossary': 'Components Glossary'
+      'get-started': 'Comenzar',
+      concepts: 'Conceptos',
+      features: 'Características',
+      'directory-structure': 'Estructura de directorios',
+      'configuration-glossary': 'Glosario de configuración',
+      'internals-glossary': 'Glosario de aspectos internos',
+      'components-glossary': 'Glosario de componentes'
     }
   },
   cookies: {
-    consent: 'We use Cookies for user analysis and on-page improvements!',
-    linkLabel: 'Learn about cookies',
-    button: 'Got it'
+    consent: 'Usamos cookies para análisis de usuarios y mejoras en la página.',
+    linkLabel: 'Más información sobre las cookies',
+    button: 'Entendido'
   }
 }

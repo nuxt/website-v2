@@ -11,35 +11,38 @@
 <script>
 export default {
   head() {
+    const title = this.$i18n.t('homepage.meta.title')
+    const description = this.$i18n.t('homepage.meta.description')
+
     return {
-      title: this.$i18n.t('homepage.meta.title'),
+      title,
       meta: [
         {
           hid: 'description',
           name: 'description',
-          content: this.$i18n.t('homepage.meta.description')
+          content: description
         },
         // Open Graph
         {
           hid: 'og:title',
           property: 'og:title',
-          content: this.$i18n.t('homepage.meta.title')
+          content: title
         },
         {
           hid: 'og:description',
           property: 'og:description',
-          content: this.$i18n.t('homepage.meta.description')
+          content: description
         },
         // Twitter Card
         {
           hid: 'twitter:title',
           name: 'twitter:title',
-          content: this.$i18n.t('homepage.meta.title')
+          content: title
         },
         {
           hid: 'twitter:description',
           name: 'twitter:description',
-          content: this.$i18n.t('homepage.meta.description')
+          content: description
         }
       ]
     }

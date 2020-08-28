@@ -1,20 +1,20 @@
 ---
 title: 'nuxt.render(req, res)'
-description: You can use Nuxt.js as a middleware for your Node.js server.
+description: Puedes usar Nuxt.js como middleware para tu servidor Node.js.
 menu: render
 category: internals-glossary
 position: 10
 ---
 
-- Type: `Function`
-- Arguments:
+- Tipo: `Function`
+- Argumentos:
   1. [Request](https://nodejs.org/api/http.html#http_class_http_incomingmessage)
   2. [Response](https://nodejs.org/api/http.html#http_class_http_serverresponse)
-- Returns: `Promise`
+- Devuelve: `Promise`
 
-> You can use Nuxt.js as a middleware with `nuxt.render` for your node.js server.
+> Puedes usar Nuxt.js como middleware con `nuxt.render` para tu servidor de node.js.
 
-Example with [Express](https://github.com/expressjs/express):
+Ejemplo con [Express](https://github.com/expressjs/express):
 
 ```js
 const { loadNuxt, build } = require('nuxt')
@@ -24,19 +24,19 @@ const isDev = process.env.NODE_ENV !== 'production'
 const port = process.env.PORT || 3000
 
 async function start() {
-  // We get Nuxt instance
+  // Obtenemos la instancia de Nuxt
   const nuxt = await loadNuxt(isDev ? 'dev' : 'start')
 
-  // Render every route with Nuxt.js
+  // Renderizamos cada ruta con Nuxt.js
   app.use(nuxt.render)
 
-  // Build only in dev mode with hot-reloading
+  // Compila solo en modo dev con recarga en caliente
   if (isDev) {
     build(nuxt)
   }
-  // Listen the server
+  // Escucha el servidor
   app.listen(port, '0.0.0.0')
-  console.log('Server listening on `localhost:' + port + '`.')
+  console.log('Servidor escuchando en `localhost:' + port + '`.')
 }
 
 start()
@@ -44,6 +44,6 @@ start()
 
 <div class="Alert">
 
-It's recommended to call `nuxt.render` at the end of your middlewares since it will handle the rendering of your web application and won't call `next()`
+Se recomienda llamar a `nuxt.render` al final de sus middlewares ya que manejará la representación de su aplicación web y no llamará a` next () `
 
 </div>

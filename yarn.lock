@@ -1216,10 +1216,10 @@
     node-fetch "^2.6.0"
     web-streams-polyfill "^3.0.0"
 
-"@nuxt/integrations@^0.1.0":
-  version "0.1.0"
-  resolved "https://registry.yarnpkg.com/@nuxt/integrations/-/integrations-0.1.0.tgz#1f9a976a3ea3e18fd819f4794332c425c9866974"
-  integrity sha512-MwUM9mNHfT72yCQxrUBMA6okagcs9vM6CKbHmKkJmn9gV+GI+dZP1JK3WBoKb0DLVJUsuMMImd+bBiNK4zDCSg==
+"@nuxt/integrations@^0.2.0":
+  version "0.2.0"
+  resolved "https://registry.yarnpkg.com/@nuxt/integrations/-/integrations-0.2.0.tgz#2d780345b25b2c7210ce87925dfdda87cdfff15e"
+  integrity sha512-m427ZblLl5ydAjyRERvn7qaoVD5QzAkmwqHDkGCWcuP1QktClgEiF8CF7u53//vmVhq/KLLfLGKDXnDrbJX2DA==
 
 "@nuxt/loading-screen@^2.0.2":
   version "2.0.2"

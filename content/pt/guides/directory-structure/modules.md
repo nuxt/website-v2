@@ -129,11 +129,11 @@ export default {
 ```
 
 ```js{}[modules/example.js]
-export default function ExampleModule (opcoesDoModulo) {
+export default function ExampleModule(opcoesDoModulo) {
   console.log(opcoesDoModulo.token) // '123'
   console.log(this.options.exampleMsg) // 'Olá'
-  this.addPlugin(
-  this.nuxt.hook('ready', async (nuxt) => {
+
+  this.nuxt.hook('ready', async nuxt => {
     console.log('Nuxt is ready')
   })
 }

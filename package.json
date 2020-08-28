@@ -46,7 +46,7 @@
     "@nuxtjs/proxy": "^2.0.1",
     "@nuxtjs/pwa": "^3.0.2",
     "@nuxtjs/style-resources": "^1.0.0",
-    "@nuxtjs/svg": "^0.1.11",
+    "@nuxtjs/svg": "^0.1.12",
     "babel-eslint": "^10.1.0",
     "cross-env": "^7.0.2",
     "cypress": "5.0.0",

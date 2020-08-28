@@ -1,34 +1,34 @@
 ---
 title: 'nuxt.renderAndGetWindow(url, options)'
-description: Get the `window` from a given URL of a Nuxt.js Application.
+description: Obtener `window` de una URL determinada de una aplicación Nuxt.js.
 menu: renderAndGetWindow
 category: internals-glossary
 position: 12
 ---
 
-- Type: `Function`
-- Argument: `String`
-  1. `String`: URL to render
-  2. _Optional_, `Object`: options
-  - virtualConsole: `Boolean` (default: `true`)
-- Returns: `Promise`
-  - Returns: `window`
+- Tipo: `Function`
+- Argumento: `String`
+  1. `String`: URL para renderizar
+  2. _Optional_, `Object`: opciones
+  - virtualConsole: `Boolean` (por defecto: `true`)
+- Devulve: `Promise`
+  - Devuelve: `window`
 
-> Get the window from a given url of a Nuxt.js application.
+> Obtenga la ventana de una URL determinada de una aplicación Nuxt.js.
 
 <base-alert>
 
-This method is made for test purposes.
+Este método está hecho para propósitos de prueba.
 
 </base-alert>
 
-To use this function, you have to install `jsdom`:
+Para usar esta función debes instalar `jsdom`:
 
 ```bash
 npm install --save-dev jsdom
 ```
 
-Example:
+Ejemplo:
 
 ```js
 const { Nuxt, Builder } = require('nuxt')
@@ -39,7 +39,7 @@ config.dev = false
 const nuxt = new Nuxt(config)
 
 nuxt.renderAndGetWindow('http://localhost:3000').then(window => {
-  // Display the head `<title>`
+  // Muestra `<title>` en head
   console.log(window.document.title)
 })
 ```

@@ -1,27 +1,27 @@
 ---
 title: 'nuxt.renderRoute(route, context)'
-description: Render a specific route with a given context.
+description: Renderiza una ruta específica con un contexto dado.
 menu: renderRoute
 category: internals-glossary
 position: 11
 ---
 
-- Type: `Function`
-- Arguments:
-  1. `String` : route to render
-  2. _Optional_, `Object`, context given, available keys: `req` & `res`
-- Returns: `Promise`
+- Tipo: `Function`
+- Argumentos:
+  1. `String` : Ruta a renderizar
+  2. _Optional_, `Object`, contexto dado, llaves disponibles: `req` y `res`
+- Devuelve: `Promise`
   - `html`: `String`
-  - `error`: `null` or `Object`
-  - `redirected`: `false` or `Object`
+  - `error`: `null` o `Object`
+  - `redirected`: `false` o `Object`
 
-> Render a specific route with a given context.
+> Renderiza una ruta específica con un contexto dado.
 
-This method should be used mostly for test purposes as well as with [`nuxt.renderAndGetWindow`](/guides/internals-glossary/nuxt-render-and-get-window).
+Este método se debe utilizar principalmente con fines de prueba, así como con [`nuxt.renderAndGetWindow`](/guides/internals-glossary/nuxt-render-and-get-window).
 
 <base-alert>
 
-`nuxt.renderRoute` should be executed after the build process in production mode.
+`nuxt.renderRoute` debe ejecutarse después del proceso de construcción en modo de producción.
 
 </base-alert>
 
@@ -29,28 +29,28 @@ This method should be used mostly for test purposes as well as with [`nuxt.rende
 const { loadNuxt, build } = require('nuxt')
 
 async function start() {
-  // Get nuxt instance for start (production mode)
-  // Make sure to have run `nuxt build` before running this script
+  // Obtener la instancia de nuxt para iniciar (modo de producción)
+  // Asegúrese de haber ejecutado `nuxt build` antes de ejecutar este script
   const nuxt = await loadNuxt({ for: 'start' })
 
   const { html, error, redirected } = await nuxt.renderRoute('/')
 
-  // `html` will always be a string
+  // `html` siempre será un string
 
-  // `error` not null when the error layout is displayed, the error format is:
+  // `error` no es nulo cuando se muestra el diseño de error, el formato de error es:
   // { statusCode: 500, message: 'My error message' }
 
-  // `redirected` is not `false` when `redirect()` has been used in `asyncData()` or `fetch()`
+  // `redirected` no es `false` cuando `redirect()` ha sido usado en `asyncData()` o `fetch()`
   // { path: '/other-path', query: {}, status: 302 }
 }
 
 start()
 ```
 
-### What's next
+### Que sigue
 
 <base-alert type="next">
 
-Check out the the [Components Glossary book](/guides/components-glossary/pages-fetch)
+Consulte el [glosario de componentes](/guides/components-glossary/pages-fetch)
 
 </base-alert>

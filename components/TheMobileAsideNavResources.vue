@@ -13,33 +13,16 @@
           name="list"
           class="header_mobile_aside_group"
         >
-          <li key="featured" class="py-2">
-            <NuxtLink
-              class="block dark:text-dark-onSurfacePrimary hover:text-nuxt-lightgreen transition-colors duration-300 ease-linear"
-              active-class
-              exact
-              exact-active-class="text-nuxt-lightgreen"
-              to="/resources"
-              @click.native="show = false"
-            >
-              Featured
-            </NuxtLink>
-          </li>
-          <li v-for="link in links" :key="link" class="py-2">
+          <li v-for="category in categories" :key="category">
             <NuxtLink
               class="block dark:text-dark-onSurfacePrimary hover:text-nuxt-lightgreen transition-colors duration-300 ease-linear capitalize"
               active-class
               exact
               exact-active-class="text-nuxt-lightgreen"
-              :to="
-                localePath({
-                  name: 'resources-category',
-                  params: { category: link }
-                })
-              "
+              :to="`/resources/${category}`"
               @click.native="show = false"
             >
-              {{ link }}
+              {{ category[0].toUpperCase() + category.substr(1) }}
             </NuxtLink>
           </li>
         </transition-group>
@@ -80,7 +63,7 @@ export default {
     TimesIcon
   },
   props: {
-    links: {
+    categories: {
       type: Array,
       default: () => []
     }

@@ -11,37 +11,17 @@
         <h2
           class="text-xl xl:text-2xl text-light-onSurfacePrimary dark:text-dark-onSurfacePrimary font-medium leading-normal mb-4 lg:pt-4"
         >
-          Modules
+          Resourcs
         </h2>
 
         <ul class="pb-2">
-          <li>
-            <NuxtLink
-              exact
-              class="p-2 pl-4 flex rounded hover:text-nuxt-lightgreen dark:hover:text-nuxt-lightgreen transition-colors duration-300 ease-linear"
-              exact-active-class="text-nuxt-lightgreen bg-green-100 dark:bg-green-800"
-              to="/resources"
-            >
-              <template>
-                Featured
-              </template>
-            </NuxtLink>
-          </li>
-
-          <li v-for="(link, index) in sortedLinks" :key="index">
+          <li v-for="category in categories" :key="category">
             <NuxtLink
               class="p-2 pl-4 flex rounded hover:text-nuxt-lightgreen dark:hover:text-nuxt-lightgreen transition-colors duration-300 ease-linear"
               exact-active-class="text-nuxt-lightgreen bg-green-100 dark:bg-green-800"
-              :to="
-                localePath({
-                  name: 'resources-category',
-                  params: { category: link }
-                })
-              "
+              :to="`/resources/${category}`"
             >
-              <template>
-                {{ $t(`content.resources.${link}`) }}
-              </template>
+              {{ category[0].toUpperCase() + category.substr(1) }}
             </NuxtLink>
           </li>
         </ul>
@@ -51,24 +31,11 @@
 </template>
 
 <script>
-import sortBy from 'lodash.sortby'
-
 export default {
   props: {
-    links: {
+    categories: {
       type: Array,
       default: () => []
-    }
-  },
-  computed: {
-    sortedLinks() {
-      const links = {}
-      sortBy(Object.keys(this.links), link => {
-        return Object.keys(this.$i18n.t('content.resources')).indexOf(link)
-      }).forEach(key => {
-        links[key] = this.links[key]
-      })
-      return links
     }
   }
 }

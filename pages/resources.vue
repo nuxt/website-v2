@@ -1,8 +1,8 @@
 <template>
   <div class="shadow-nuxt">
     <div class="container mx-auto px-4 lg:flex pb-12">
-      <TheMobileAsideNavResources :links="categories" />
-      <TheAsideNavResources :links="categories" class="hidden lg:block" />
+      <TheMobileAsideNavResources :categories="categories" />
+      <TheAsideNavResources :categories="categories" class="hidden lg:block" />
       <div
         class="min-h-screen w-full lg:static lg:max-h-full lg:overflow-visible lg:w-3/4"
       >
@@ -13,20 +13,15 @@
 </template>
 
 <script>
-import groupBy from 'lodash.groupby'
+import uniq from 'lodash/uniq'
 
 export default {
   async asyncData({ $content, app, params }) {
-    let categories = []
-    try {
-      categories = await $content(app.i18n.defaultLocale, 'resources', {
-        deep: true
-      })
-        .only(['category'])
-        .fetch()
-    } catch (e) {}
+    const resources = (await import('@nuxt/modules/dist/resources.json')).default
+    const categories = uniq(['all'].concat(...resources.map(r => r.labels)))
+
     return {
-      categories: Object.keys(groupBy(categories, 'category'))
+      categories
     }
   }
 }

@@ -2,6 +2,10 @@ export default {
   target: 'static',
   ssr: true,
   head: {
+    htmlAttrs: {
+      lang: 'fa',
+      dir: 'rtl'
+    },
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
@@ -197,6 +201,13 @@ export default {
         file: 'pt-BR.js',
         name: 'Português',
         domain: 'https://pt.nuxtjs.org'
+      },
+      {
+        code: 'fa',
+        iso: 'fa-IR',
+        file: 'fa-IR.js',
+        name: 'Persian',
+        domain: 'https://fa.nuxtjs.org'
       }
       // please leave this commented out until subdomain is live
       // {

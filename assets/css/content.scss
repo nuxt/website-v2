@@ -212,12 +212,12 @@
   & h5,
   & h6 {
     & a {
-      margin-left: -1.5rem;
+      margin-right: -1.5rem;
     }
 
     & a,
     .icon-link {
-      @apply float-left;
+      @apply float-right;
 
       display: inline-block;
       height: 14px;
@@ -391,11 +391,11 @@
   @apply relative;
 
   & > .filename {
-    @apply absolute right-0 top-0 text-gray-400 font-light z-10 mr-2 mt-1 text-sm;
+    @apply absolute left-0 top-0 text-gray-400 font-light z-10 mr-2 mt-1 text-sm;
   }
 
   & > .copy {
-    @apply hidden absolute right-0 bottom-0 leading-none shadow-lg px-1 py-1 text-white bg-gray-800 text-sm uppercase rounded-md border border-white font-semibold mr-2 mb-2;
+    @apply hidden absolute left-0 bottom-0 leading-none shadow-lg px-1 py-1 text-white bg-gray-800 text-sm uppercase rounded-md border border-white font-semibold mr-2 mb-2;
     &:hover {
       @apply bg-gray-700;
     }

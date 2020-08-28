@@ -15,7 +15,7 @@
         :navigation-next-label="'>'"
       >
         <slide v-for="item in featured" :key="item.name">
-          <NuxtLink :to="`/resources/modules/${item.name}`">
+          <NuxtLink :to="`/integrations/${item.name}`">
             <img :src="item.image" :alt="item.name" />
           </NuxtLink>
         </slide>
@@ -24,36 +24,36 @@
       <h2
         class="text-3xl xl:text-4xl text-light-onSurfacePrimary dark:text-dark-onSurfacePrimary font-medium leading-normal mb-6 lg:pt-4"
       >
-        {{ category[0].toUpperCase() + category.substr(1) }} ({{ resources.length }})
+        {{ $integrations.formatCategory(category) }} ({{ integrations.length }})
       </h2>
-      <ResourceCards :list="resources" />
+      <ResourceCards :list="integrations" />
     </div>
   </div>
 </template>
 <script>
+
 export default {
   transition: 'resources',
-
   async asyncData({ $content, app, params }) {
-    let resources = (await import('@nuxt/modules/dist/resources.json')).default
+    let integrations = await app.$integrations.getIntegrations()
 
     const category = params.category || 'all'
 
     if (category !== 'all') {
-      resources = resources.filter(r => r.labels.includes(category))
+      integrations = integrations.filter(r => r.categories.includes(category))
     } else {
       // TODO: redirect to / for canonical
     }
 
     return {
       category,
-      resources
+      integrations
     }
   },
 
   computed: {
     featured() {
-      return this.resources.filter(r => r.image && r.features && r.features.length)
+      return this.integrations.filter(r => r.image && r.features && r.features.length)
     }
   }
 }

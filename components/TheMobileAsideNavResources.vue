@@ -19,10 +19,10 @@
               active-class
               exact
               exact-active-class="text-nuxt-lightgreen"
-              :to="`/resources/${category}`"
+              :to="`/integrations/cat/${category}`"
               @click.native="show = false"
             >
-              {{ category[0].toUpperCase() + category.substr(1) }}
+              {{ $integrations.formatCategory(category) }}
             </NuxtLink>
           </li>
         </transition-group>

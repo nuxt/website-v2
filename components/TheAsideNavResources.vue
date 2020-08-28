@@ -11,7 +11,7 @@
         <h2
           class="text-xl xl:text-2xl text-light-onSurfacePrimary dark:text-dark-onSurfacePrimary font-medium leading-normal mb-4 lg:pt-4"
         >
-          Resourcs
+          Integrations
         </h2>
 
         <ul class="pb-2">
@@ -19,9 +19,9 @@
             <NuxtLink
               class="p-2 pl-4 flex rounded hover:text-nuxt-lightgreen dark:hover:text-nuxt-lightgreen transition-colors duration-300 ease-linear"
               exact-active-class="text-nuxt-lightgreen bg-green-100 dark:bg-green-800"
-              :to="`/resources/${category}`"
+              :to="`/integrations/cat/${category}`"
             >
-              {{ category[0].toUpperCase() + category.substr(1) }}
+              {{ $integrations.formatCategory(category) }}
             </NuxtLink>
           </li>
         </ul>

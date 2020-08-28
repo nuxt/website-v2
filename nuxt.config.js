@@ -118,7 +118,8 @@ export default {
     '~/plugins/adblock.client.js',
     '~/plugins/newsletter.client.js',
     '~/plugins/vue-scrollactive',
-    '~/plugins/vue-carousel.client.js'
+    '~/plugins/vue-carousel.client.js',
+    '~/plugins/integrations.js'
   ],
   env: {
     DEPLOY_PRIME_URL: process.env.DEPLOY_PRIME_URL || false,

@@ -1216,6 +1216,11 @@
     node-fetch "^2.6.0"
     web-streams-polyfill "^3.0.0"
 
+"@nuxt/integrations@^0.1.0":
+  version "0.1.0"
+  resolved "https://registry.yarnpkg.com/@nuxt/integrations/-/integrations-0.1.0.tgz#1f9a976a3ea3e18fd819f4794332c425c9866974"
+  integrity sha512-MwUM9mNHfT72yCQxrUBMA6okagcs9vM6CKbHmKkJmn9gV+GI+dZP1JK3WBoKb0DLVJUsuMMImd+bBiNK4zDCSg==
+
 "@nuxt/loading-screen@^2.0.2":
   version "2.0.2"
   resolved "https://registry.yarnpkg.com/@nuxt/loading-screen/-/loading-screen-2.0.2.tgz#2082e813a93bb4efa42be05a6b448121b5f1cad8"
@@ -1226,11 +1231,6 @@
     get-port-please "^1.0.0"
     node-res "^5.0.1"
     serve-static "^1.14.1"
-
-"@nuxt/modules@^0.0.2":
-  version "0.0.2"
-  resolved "https://registry.yarnpkg.com/@nuxt/modules/-/modules-0.0.2.tgz#9c04cb4d0344584e925ee4c4a62b1acd2b96d9ed"
-  integrity sha512-25/cHl+3/qCfVFqYFWMKTQBbwOOwrwkDQgImaOaRC+Pm9vuNV7qHigU9JNhY1ygUGm/gVCDfmNAMKAGQUb6aHQ==
 
 "@nuxt/opencollective@^0.3.0":
   version "0.3.0"

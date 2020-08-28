@@ -338,7 +338,7 @@ module.exports = {
   },
   cookies: {
     consent: 'Usamos Cookies para análise do usuário e melhorias na página!',
-    linkLabel: 'Descibra mais sobre cookies',
+    linkLabel: 'Descubra mais sobre cookies',
     button: 'Entendi'
   }
 }

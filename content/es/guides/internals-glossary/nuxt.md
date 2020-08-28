@@ -1,39 +1,39 @@
 ---
-title: 'Using Nuxt.js Programmatically'
-description: You can use Nuxt.js programmatically to use it as a middleware giving you the freedom of creating your own server for rendering your web applications.
-menu: Using Nuxt Programmatically
+title: 'Usando Nuxt.js mediante programación'
+description: Puedes usar Nuxt.js mediante programación para usarlo como middleware, lo que le brinda la libertad de crear su propio servidor para representar sus aplicaciones web.
+menu: Usando Nuxt.js mediante programación
 category: internals-glossary
 position: 9
 ---
 
-You might want to use your own server with your middleware and your API. That's why you can use Nuxt.js programmatically.
+Es posible que desee utilizar su propio servidor con su middleware y su API. Es por eso que puede usar Nuxt.js mediante programación.
 
-## Nuxt Constructor
+## Constructor Nuxt
 
-To see the list of options to give to Nuxt.js, see the configuration section.
+Para ver la lista de opciones para dar a Nuxt.js, consulte la sección de configuración.
 
 ```js
 const { loadNuxt, build } = require('nuxt')
 
-// Check if we need to run Nuxt in development mode
+// Compruebe si necesitamos ejecutar Nuxt en modo de desarrollo
 const isDev = process.env.NODE_ENV !== 'production'
 
-// Get a ready to use Nuxt instance
+// Prepara una instancia de Nuxt lista para usar
 const nuxt = await loadNuxt(isDev ? 'dev' : 'start')
 
-// Enable live build & reloading on dev
+// Habilita la compilación y recarga en vivo en el desarrollador
 if (isDev) {
   build(nuxt)
 }
 
-// We can use `nuxt.render(req, res)` or `nuxt.renderRoute(route, context)`
+// Podemos usar `nuxt.render(req, res)` o `nuxt.renderRoute(route, context)`
 ```
 
-You can take a look at the [nuxt-express](https://github.com/nuxt/express) and [adonuxt](https://github.com/nuxt/adonuxt) starters to get started quickly.
+Puedes echar un vistazo a las guías de inico rapido de [nuxt-express](https://github.com/nuxt/express) y [adonuxt](https://github.com/nuxt/adonuxt).
 
-### Debug logs
+### Registros de depuración
 
-If you want to display Nuxt.js logs, you can add the following to the top of your file:
+Si desea mostrar los registros de Nuxt.js, puede agregar lo siguiente en la parte superior de su archivo:
 
 ```js
 process.env.DEBUG = 'nuxt:*'

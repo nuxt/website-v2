@@ -21,7 +21,7 @@
           {{ item.name }}
         </h3>
         <p class="pb-2">
-          {{ item.short_description }}
+          {{ item.description }}
         </p>
       </h3>
 </h1>

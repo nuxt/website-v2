@@ -1,7 +1,7 @@
 ---
 title: 'Properti layout'
 description: Setiap file (tingkat pertama) dalam direktori `layouts` akan membuat layout kustom yang dapat diakses dengan properti layout di komponen halaman.
-menu: Layout Property
+menu: Properti Layout
 category: components-glossary
 ---
 

@@ -13,18 +13,18 @@ position: 113
 
 `server`
 
-| コマンド   | 説明                                                                                                          |
-| ---------- | ------------------------------------------------------------------------------------------------------------- |
-| nuxt dev   | 開発サーバーを [localhost:3000](http://localhost:3000) で起動します。このサーバーはホットリローディングします |
-| nuxt build | アプリケーションを Webpack でビルドし、JS と CSS をプロダクション向けにミニファイします                       |
-| nuxt start | プロダクションモードでサーバーを起動します（`nuxt build` 後に実行してください）                               |
+| コマンド | 説明 |
+| --- | --- |
+| nuxt dev | 開発サーバーを [localhost:3000](http://localhost:3000) で起動します。このサーバーはホットリローディングします |
+| nuxt build | アプリケーションを Webpack でビルドし、JS と CSS をプロダクション向けにミニファイします |
+| nuxt start | プロダクションモードでサーバーを起動します（`nuxt build` 後に実行してください） |
 
 `static`
 
-| コマンド      | 説明                                                                                                                          |
-| ------------- | ----------------------------------------------------------------------------------------------------------------------------- |
-| nuxt dev      | 開発サーバーを [localhost:3000](http://localhost:3000) で起動します。このサーバーはホットリローディングします。               |
-| nuxt start    | dist/ directory からプロダクションアプリケーションを提供します（Nuxt v2.13 以上）                                             |
+| コマンド | 説明 |
+| --- | --- |
+| nuxt dev | 開発サーバーを [localhost:3000](http://localhost:3000) で起動します。このサーバーはホットリローディングします。 |
+| nuxt start | dist/ directory からプロダクションアプリケーションを提供します（Nuxt v2.13 以上） |
 | nuxt generate | アプリケーションをビルドして、ルートごとに HTML ファイルを生成します（Nuxt v2.12 以下で静的ファイルのホスティングに用います） |
 
 #### 引数
@@ -37,8 +37,8 @@ position: 113
 
 #### フック
 
-| フック           | 目的                                                               |
-| ---------------- | ------------------------------------------------------------------ |
+| フック | 目的 |
+| --- | --- |
 | `cli:buildError` | 開発モードでビルドエラーをキャプチャし、読み込み画面に表示します。 |
 
 #### package.json で使用する
@@ -87,7 +87,7 @@ nuxt build
 nuxt start
 ```
 
-Nuxt.js を HTTPS モードで提供することを選択した場合、[`https.createServer`](https://nodejs.org/api/https.html) に渡されるオプションと同じオプションを使って `nuxt.config.js` に `server.https`を設定することもできます。`nuxt.config.js`に `server.socket` オプションを設定（または [CLI](/guide/commands/#%E3%82%B3%E3%83%9E%E3%83%B3%E3%83%89%E4%B8%80%E8%A6%A7) の `-n` 引数を使用）すると、 Unix ソケットも利用できます。[Unix ソケット](<https://ja.wikipedia.org/wiki/%E3%82%BD%E3%82%B1%E3%83%83%E3%83%88_(BSD)>)を利用する場合は、`host` パラメータと `port` パラメータを設定しないでください。設定した場合、 `socket` パラメータは無視されます。
+Nuxt.js を HTTPS モードで提供することを選択した場合、[`https.createServer`](https://nodejs.org/api/https.html) に渡されるオプションと同じオプションを使って `nuxt.config.js` に `server.https`を設定することもできます。`nuxt.config.js`に `server.socket` オプションを設定（または [CLI](/guide/commands/#%E3%82%B3%E3%83%9E%E3%83%B3%E3%83%89%E4%B8%80%E8%A6%A7) の `-n` 引数を使用）すると、 Unix ソケットも利用できます。[Unix ソケット](https://ja.wikipedia.org/wiki/%E3%82%BD%E3%82%B1%E3%83%83%E3%83%88_(BSD))を利用する場合は、`host` パラメータと `port` パラメータを設定しないでください。設定した場合、 `socket` パラメータは無視されます。
 
 `package.json` では下記のように記述することが推奨されています:
 

@@ -14,7 +14,7 @@ O modo de pré-visualização atualizará automaticamente os dados da página, u
 Para ativar a visualização instantânea, você precisará adicionar o seguinte plugin:
 
 ```js{}[plugins/preview.client.js]
-export default async function ({ query, enablePreview }) {
+export default function ({ query, enablePreview }) {
   if (query.preview) {
     enablePreview()
   }
@@ -64,16 +64,22 @@ enablePreview deve ser testado localmente com yarn start e não yarn
 dev
 </base-alert>
 
-Para páginas que ainda não foram geradas, o fallback SPA ainda chamará a API antes de mostrar a página 404, pois essas páginas existem na API, mas ainda não foram re-geradas.
+### Pré-visualizando páginas que ainda não foram geradas
 
-Para páginas que não são geradas e não existem na API, por exemplo, conteúdo de rascunho em seu CMS que não está disponível publicamente, você precisará usar o hook validate:
+Para páginas que ainda não foram geradas, o fallback SPA ainda chamará a API antes de mostrar a página 404, pois essas páginas existem na API, mas ainda não foram geradas.
+
+Se você implementou o hook validate, você, provavelmente, precisará modificá-lo para que você não seja redirecionado à página 404 no modo de pré-visualização.
 
 ```js
-async validate({ app, params, $preview }) {
-  if ($preview) {
+validate({ params, query }) {
+  if (query.preview) {
     return true
 }
 ```
+
+### Passando dados ao enablePreview
+
+Você pode passar dados à função `enablePreview`. Esses dados estarão disponíveis no contexto como `$preview` e no `this.$preview`.
 
 ### O que vem em seguida
 

@@ -112,14 +112,13 @@
             Keywords
           </h3>
 
-          <NuxtLink
+          <span
             v-for="keyword in integration.keywords"
             :key="keyword"
-            :to="`/resources/${keyword}`"
             class="text-sm bg-gray-600 text-white py-1 mr-1 px-1 rounded align-middle mb-1 inline-block"
           >
             {{ keyword }}
-          </NuxtLink>
+          </span>
         </div>
       </div>
     </div>

@@ -136,7 +136,11 @@ export default {
   loading: { color: '#41B883' },
   generate: {
     fallback: false,
-    routes: ['/', '404']
+    routes: [
+      '/',
+      '404',
+      '/integrations/cat/all'
+    ]
   },
   i18n: {
     strategy: 'no_prefix',

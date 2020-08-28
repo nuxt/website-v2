@@ -1,5 +1,5 @@
 ---
-title: componentes
+title: components
 description: O diretório components contém seus componentes Vue.js. Os componentes são o que compõe as diferentes partes da sua página e podem ser reutilizados e importados para as suas páginas, layouts e até mesmo outros componentes.
 position: 3
 category: directory-structure

@@ -154,7 +154,7 @@ export default {
 
 <base-alert type="info">
 
-El código fuente del error por defecto esá [disponible en GitHub](https://github.com/nuxt/nuxt.js/blob/dev/packages/vue-app/template/components/nuxt-error.vue).
+El código fuente del error por defecto está [disponible en GitHub](https://github.com/nuxt/nuxt.js/blob/dev/packages/vue-app/template/components/nuxt-error.vue).
 
 </base-alert>
 

@@ -1,7 +1,7 @@
 <template>
   <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
     <div
-      v-for="(item, i) in list"
+      v-for="(item, i) in sortedList"
       :key="`${item.title}-${i}`"
       class="light:bg-light-surface dark:bg-dark-surface rounded p-4 sm:p-8 lg:p-4 light:hover:bg-gray-200 dark:hover:bg-gray-800 cursor-pointer transition-colors duration-300 ease-linear"
     >
@@ -41,8 +41,8 @@ export default {
   computed: {
     sortedList() {
       return [
-        ...this.list.items.filter(i => i.logo).sort(),
-        ...this.list.items.filter(i => !i.logo).sort()
+        ...this.list.filter(i => i.logo).sort(),
+        ...this.list.filter(i => !i.logo).sort()
       ]
     }
   }

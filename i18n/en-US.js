@@ -292,17 +292,6 @@ module.exports = {
       'configuration-glossary': 'Configuration Glossary',
       'internals-glossary': 'Internals Glossary',
       'components-glossary': 'Components Glossary'
-    },
-
-    resources: {
-      'ui-framework': 'UI Framework',
-      'cms-integrations': 'CMS Integrations',
-      security: 'security',
-      testing: 'Testing',
-      databases: 'Databases',
-      devtools: 'DevTools',
-      images: 'Images',
-      performance: 'Performance'
     }
   },
   cookies: {

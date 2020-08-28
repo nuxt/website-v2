@@ -28,12 +28,12 @@
           <h3 :class="sectionClasses">
             Links
           </h3>
-          <docs-button v-if="integration.github" :href="integration.github">
+          <this-docs-button v-if="integration.github" :href="integration.github">
             Github
-          </docs-button>
-          <docs-button v-if="integration.website && integration.website !== integration.github" :href="integration.website">
+          </this-docs-button>
+          <this-docs-button v-if="integration.website && integration.website !== integration.github" :href="integration.website">
             Documentation
-          </docs-button>
+          </this-docs-button>
         </div>
       </div>
 

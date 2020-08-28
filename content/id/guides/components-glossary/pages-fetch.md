@@ -1,7 +1,7 @@
 ---
 title: 'Metode fetch'
 description: Metode `fetch` digunakan untuk mengisi penyimpanan sebelum merender halaman, ini seperti metode `asyncData` kecuali ia tidak menyetel data komponen.
-menu: Fetch Method
+menu: Metode Fetch
 category: components-glossary
 ---
 

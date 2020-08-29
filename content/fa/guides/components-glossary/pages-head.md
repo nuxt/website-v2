@@ -1,15 +1,15 @@
 ---
-title: 'The head Method'
-description: Nuxt.js uses vue-meta to update the headers and HTML attributes of your application.
-menu: Head Method
+title: 'متد head'
+description: Nuxt.js از vue-meta برای بروزرسانی هدر و مولفه‌های HTML در اپلیکیشن شما استفاده می‌کند.
+menu: متد Head
 category: components-glossary
 ---
 
-> Nuxt.js uses [vue-meta](https://github.com/nuxt/vue-meta) to update the `headers` and `html attributes` of your application.
+> Nuxt.js از [vue-meta](https://github.com/nuxt/vue-meta) برای بروزرسانی هدر و مولفه‌های HTML در اپلیکیشن شما استفاده می‌کند.
 
-- **Type:** `Object` or `Function`
+- **نوع:** `Object` یا `Function`
 
-Use the `head` method to set the HTML Head tags for the current page.
+از متد `head` برای تنظیم تگ‌های Head در صفحه کنونی استفاده کنید.
 
 ```html
 <template>

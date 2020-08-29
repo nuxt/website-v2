@@ -1,17 +1,17 @@
 ---
-title: 'The key Property'
-description: Set the `key` property of internal `<router-view>` component
-menu: Key Property
+title: 'ویژگی key'
+description: جهت تنظیم ویژگی `key` در کامپوننت داخلی `<router-view>`
+menu: ویژگی Key
 category: components-glossary
 ---
 
-> Set the `key` property of internal `<router-view>` component
+> جهت تنظیم ویژگی `key` در کامپوننت داخلی `<router-view>`
 
-- **Type:** `String` or `Function`
+- **نوع:** `String` یا `Function`
 
-The `key` property is propagated into `<router-view>`, which is useful to make transitions inside a dynamic page and different route. Different keys result in rerendering of page components.
+ویژگی `key` در کامپوننت `<router-view>` جهت انتقال در داخل یک صفحه داینامیک و دیگر مسیرها استفاده می‌شود. `key`های متفاوت باعث رندر شدن کامپوننت صفحات می‌شوند.
 
-There are several ways to set the key. For more details, please refer to the `nuxtChildKey` prop in [the nuxt component](/guides/features/nuxt-components).
+راه‌های زیادی برای تنظیم ویژگی `key` وجود دارد. برای اطلاعات بیشتر به ویژگی `nuxtChildKey` در صفحه [کامپوننت Nuxt](/guides/features/nuxt-components) مراجعه کنید.
 
 ```js
 export default {

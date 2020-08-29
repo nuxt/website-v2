@@ -1,17 +1,17 @@
 ---
-title: 'The loading Property'
-description: The `loading` property gives you the option to disable the default loading progress bar on a specific page.
-menu: Loading Property
+title: 'ویژگی loading'
+description: ویژگی `loading` این امکان را می‌دهد تا نوار پیشرفت بارگزاری پیشفرض را در یک صفحه بخصوص غیرفعال کنید.
+menu: ویژگی Loading
 category: components-glossary
 ---
 
-> The loading property gives you the option to disable the default loading progress bar on a specific page.
+> ویژگی `loading` این امکان را می‌دهد تا نوار پیشرفت بارگزاری پیشفرض را در یک صفحه بخصوص غیرفعال کنید.
 
 - **Type:** `Boolean` (default: `true`)
 
-By default, Nuxt.js uses its own component to show a progress bar between the routes.
+Nuxt.js به صورت پیشفرض از کامپوننت خود برای نمایش نوار پیشرفت هنگام انتقال بین مسیرها استفاده می کند.
 
-You can disable or customize it globally through the [Configuration's loading option](/guides/configuration-glossary/configuration-loading), but also disable it for specific pages by setting the `loading` property to `false` :
+شما می‌توانید این نوار پیشرفت را به صورت کلی غیرفعال و یا از طریق [تنظیمات بارگیری](/guides/configuration-glossary/configuration-loading) سفارشی سازی کنید. همچنین می‌توانید این نوار پیشرفت را برای یک صفحه بخصوص از طریق تنظیم ویژگی `loading` به مقدار `false` غیرفعال کنید.
 
 ```html
 <template>

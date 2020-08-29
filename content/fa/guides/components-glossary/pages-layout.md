@@ -1,15 +1,15 @@
 ---
-title: 'The layout Property'
-description: Every file (first level) in the `layouts` directory will create a custom layout accessible with the layout property in the page component.
-menu: Layout Property
+title: 'ویژگی layout'
+description: هر فایل (در ریشه) پوشه `layouts` یک ساختار سفارشی قابل دسترس توسط ویژگی layout در کامپوننت صفحات ایجاد می‌کند.
+menu: ویژگی Layout
 category: components-glossary
 ---
 
-> Every file (first level) in the layouts directory will create a custom layout accessible with the layout property in the page component.
+> هر فایل (در ریشه) پوشه `layouts` یک ساختار سفارشی قابل دسترس توسط ویژگی layout در کامپوننت صفحات ایجاد می‌کند.
 
-- **Type:** `String` or `Function` (default: `'default'`)
+- **نوع:** `String` یا `Function` (به صورت پیشفرض `'default'`)
 
-Use the `layout` key in your pages components to define which layout to use:
+برای تنظیم ساختار (layout) مورد استفاده در صفحه از کلیدواژه `layout` در کامپوننت صفحه استفاده کنید:
 
 ```js
 export default {

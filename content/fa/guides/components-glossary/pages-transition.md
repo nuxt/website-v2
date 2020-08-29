@@ -1,15 +1,15 @@
 ---
-title: 'The page `transition` Property'
-description: Nuxt.js uses the `<transition>` component to let you create and apply amazing transitions/animations as you navigate between your pages.
-menu: Transition Property
+title: 'ویژگی transition صفحه'
+description: Nuxt.js از کامپوننت `<transition>` برای ایجاد و استفاده از انیمیشن‌های خارق‌العاده هنگام تغییر صفحات استفاده می‌کند.
+menu: ویژگی Transition
 category: components-glossary
 ---
 
-> Nuxt.js uses the [`<transition>`](https://vuejs.org/v2/guide/transitions.html#Transitioning-Single-Elements-Components) component to let you create amazing transitions/animations between your pages.
+> Nuxt.js از کامپوننت [`<transition>`](https://vuejs.org/v2/guide/transitions.html#Transitioning-Single-Elements-Components) برای ایجاد و استفاده از انیمیشن‌های خارق‌العاده هنگام تغییر صفحات استفاده می‌کند.
 
-- **Type:** `String` or `Object` or `Function`
+- **نوع:** `String` یا `Object` یا `Function`
 
-To define a custom transition for a specific route, simply add the `transition` key to the page component.
+برای تعریف یک انیمیشن انتقال سفارشی برای یک مسیر بخصوص تنها کافی است از کلید واژه `transition` در کامپوننت صفحه استفاده کنید.
 
 ```js
 export default {
@@ -24,7 +24,7 @@ export default {
 
 ## String
 
-If the `transition` key is set as a string, it will be used as the `transition.name`.
+اگر مقدار ویژگی `transition` برابر با یک رشته (string) باشد به عنوان نام انیمیشن انتقال (transition.name) استفاده خواهد شد.
 
 ```js
 export default {
@@ -32,7 +32,7 @@ export default {
 }
 ```
 
-Nuxt.js will use these settings to set the component as follows:
+Nuxt.js از این تنظیمات برای تنظیم کامپوننت به صورت زیر استفاده خواهد کرد:
 
 ```html
 <transition name="test"></transition>
@@ -40,7 +40,7 @@ Nuxt.js will use these settings to set the component as follows:
 
 ## Object
 
-If the `transition` key is set as an object:
+اگر مقدار ویژگی `transition` برابر با یک Object باشد:
 
 ```js
 export default {
@@ -51,29 +51,29 @@ export default {
 }
 ```
 
-Nuxt.js will use these settings to set the component as follows:
+Nuxt.js از این تنظیمات برای تنظیم کامپوننت به صورت زیر استفاده خواهد کرد:
 
 ```html
 <transition name="test" mode="out-in"></transition>
 ```
 
-The `transition` object can have the following properties:
+آبجکت `transition` می‌توانید ویژگی‌های زیر را داشته باشد:
 
-| key                | Type      | Default    | definition                                                                                                                                                                                                                 |
-| ------------------ | --------- | ---------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `name`             | `String`  | `"page"`   | The transition name applied on all the route transitions.                                                                                                                                                                  |
-| `mode`             | `String`  | `"out-in"` | The transition mode applied on all routes, see [Vue.js documentation](https://vuejs.org/v2/guide/transitions.html#Transition-Modes).                                                                                       |
-| `css`              | `Boolean` | `true`     | Whether to apply CSS transition classes. Defaults to `true`. If set to `false`, will only trigger JavaScript hooks registered via component events.                                                                        |
-| `duration`         | `Integer` | n/a        | The duration (in milliseconds) applied on the transition, see [Vue.js documentation](https://vuejs.org/v2/guide/transitions.html#Explicit-Transition-Durations).                                                           |
-| `type`             | `String`  | n/a        | Specify the type of transition events to wait for to determine transition end timing. Available values are `"transition"` and `"animation"`. By default, it will automatically detect the type that has a longer duration. |
-| `enterClass`       | `String`  | n/a        | The starting state of the transition class. See [Vue.js documentation](https://vuejs.org/v2/guide/transitions.html#Custom-Transition-Classes).                                                                             |
-| `enterToClass`     | `String`  | n/a        | The ending state for the transition. See [Vue.js documentation](https://vuejs.org/v2/guide/transitions.html#Custom-Transition-Classes).                                                                                    |
-| `enterActiveClass` | `String`  | n/a        | The class applied across the entire transition duration. See [Vue.js documentation](https://vuejs.org/v2/guide/transitions.html#Custom-Transition-Classes).                                                                |
-| `leaveClass`       | `String`  | n/a        | The starting state of the transition class. See [Vue.js documentation](https://vuejs.org/v2/guide/transitions.html#Custom-Transition-Classes).                                                                             |
-| `leaveToClass`     | `String`  | n/a        | The ending state for the transition. See [Vue.js documentation](https://vuejs.org/v2/guide/transitions.html#Custom-Transition-Classes).                                                                                    |
-| `leaveActiveClass` | `String`  | n/a        | The class applied across the entire transition duration. See [Vue.js documentation](https://vuejs.org/v2/guide/transitions.html#Custom-Transition-Classes).                                                                |
+| کلید               | نوع       | پیشفرض     | توضیخ                                                                                                                                                                             |
+| ------------------ | --------- | ---------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `name`             | `String`  | `"page"`   | نام انیمیشن انتقال اعمال شده به روی تمام مسیرها.                                                                                                                                  |
+| `mode`             | `String`  | `"out-in"` | نوع انیمیشن انتقال اعمال شده به روی تمام مسیر ها. برای اطلاعات بیشتر به [مستندات Vue.js](https://vuejs.org/v2/guide/transitions.html#Transition-Modes) مراجعه کنید.               |
+| `css`              | `Boolean` | `true`     | جهت تنظیم اینکه آیا کلاس‌های CSS نیز در انیمیشن انتقال اعمال شوند یا خیر. اگر برابر با `false` باشد تنها هوک‌های ثبت شده در ایونت‌‌های کامپوننت اجرا می‌شوند.                     |
+| `duration`         | `Integer` | n/a        | مدت زمان اجرای انیمیشن انتقال به میلی ثانیه. برای اطلاعات بیشتر به [مستندات Vue.js](https://vuejs.org/v2/guide/transitions.html#Explicit-Transition-Durations) مراجعه کنید.       |
+| `type`             | `String`  | n/a        | جهت تنظیم نوع واقعه (ایونت) برای اتمام انتقال. گزینه‌های قابل انتخاب `"transition"` و `"animation"` است. به صورت پیشفرض طولانی‌ترین حالت انتخاب می‌شود.                           |
+| `enterClass`       | `String`  | n/a        | حالت اولیه کلاس انتقال. برای اطلاعات بیشتر به [مستندات Vue.js](https://vuejs.org/v2/guide/transitions.html#Custom-Transition-Classes) مراجعه کنید.                                |
+| `enterToClass`     | `String`  | n/a        | حالت پایانی انتقال. برای اطلاعات بیشتر به [مستندات Vue.js](https://vuejs.org/v2/guide/transitions.html#Custom-Transition-Classes) مراجعه کنید.                                    |
+| `enterActiveClass` | `String`  | n/a        | کلاسی که در سراسر انتقال مورد استفاده قرار خواهد گرفت. برای اطلاعات بیشتر به [مستندات Vue.js](https://vuejs.org/v2/guide/transitions.html#Custom-Transition-Classes) مراجعه کنید. |
+| `leaveClass`       | `String`  | n/a        | حالت اولیه کلاس انتقال. برای اطلاعات بیشتر به [مستندات Vue.js](https://vuejs.org/v2/guide/transitions.html#Custom-Transition-Classes) مراجعه کنید.                                |
+| `leaveToClass`     | `String`  | n/a        | حالت پایانی انتقال. برای اطلاعات بیشتر به [مستندات Vue.js](https://vuejs.org/v2/guide/transitions.html#Custom-Transition-Classes) مراجعه کنید.                                    |
+| `leaveActiveClass` | `String`  | n/a        | کلاسی که در سراسر انتقال مورد استفاده قرار خواهد گرفت. برای اطلاعات بیشتر به [مستندات Vue.js](https://vuejs.org/v2/guide/transitions.html#Custom-Transition-Classes) مراجعه کنید. |
 
-You can also define methods in the page `transition` property, these are for the [JavaScript hooks](https://vuejs.org/v2/guide/transitions.html#JavaScript-Hooks):
+همچنین می‌توانید متدهایی در ویژگی `transition` صفحه تعریف کنید، این متدها برای [هوک‌های JavaScript](https://vuejs.org/v2/guide/transitions.html#JavaScript-Hooks) مورد استفاده قرار می‌گیرد:
 
 - `beforeEnter(el)`
 - `enter(el, done)`
@@ -94,11 +94,11 @@ export default {
 }
 ```
 
-_Note: it’s also a good idea to explicitly add `css: false` for JavaScript-only transitions so that Vue can skip the CSS detection. This also prevents CSS rules from accidentally interfering with the transition._
+**یادداشت:** توصیه می‌شود تا به صورت دستی مقدار `css: false` را برای انتقال‌هایی که فقط از JavaScript استفاده می‌کنند تعریف کنید. در این صورت Vue می‌تواند شناسایی CSS را نادیده بگیرد همچنین باعث می‌شود تا قوانین CSS به اشتباه مورد استفاده قرار نگیرند.
 
-### Transition Mode
+### حالت انتقال
 
-**The default transition mode for pages differs from the default mode in Vue.js**. The `transition` mode is by default set to `out-in`. If you want to run leaving and entering transitions simultaneously, you have to set the mode to the empty string `mode: ''`.
+**حالت پیشفرض انتقال برای صفحات از حالت پیشفرض در Vue.js متفاوت است.** حالت انتقال به صورت پیشفرض `out-in` است. اگر می‌خواهید انتقال‌های ورودی و خروجی را به صورت همزمان اجرا کنید باید مقدار `mode` را برابر یک استرینگ خالی (`''`) قرار دهید.
 
 ```js
 export default {
@@ -109,9 +109,9 @@ export default {
 }
 ```
 
-## Function
+## تابع
 
-If the `transition` key is set as a function:
+اگر مقدار `transition` برابر یک تابع باشد:
 
 ```js
 export default {
@@ -124,7 +124,7 @@ export default {
 }
 ```
 
-Transitions applied on navigation:
+انتقال‌ها به صورت زیر اعمال می‌شوند:
 
 - `/` to `/posts` => `slide-left`,
 - `/posts` to `/posts?page=3` => `slide-left`,

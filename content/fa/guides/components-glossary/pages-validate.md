@@ -1,15 +1,15 @@
 ---
-title: 'The validate Method'
-description: Nuxt.js lets you define a validator method inside your dynamic route component.
-menu: Validate Method
+title: 'متد validate'
+description: Nuxt.js به شما این امکان را می‌دهد تا یک متد اعتبارسنجی داخل مسیرهای داینامیک خود تغریف کنید.
+menu: متد Validate
 category: components-glossary
 ---
 
-> Nuxt.js lets you define a validator method inside your dynamic route component.
+> Nuxt.js به شما این امکان را می‌دهد تا یک متد اعتبارسنجی داخل مسیرهای داینامیک خود تغریف کنید.
 
-- **Type:** `Function` or `Async Function`
+- **نوع:** `Function` یا `Async Function`
 
-`validate` is called every time before navigating to a new route. It will be called server-side once (on the first request to the Nuxt app) and client-side when navigating to further routes. This method takes the [`context`](/guides/internals-glossary/context) object as an argument.
+متد `validate` هر بار قبل از انتقال به مسیر جدید فراخوانی می‌شود. این متد در سمت سرور فقط یکبار (زمانی که اولین درخواست به اپلیکیشن Nuxt شما می‌رسد) و در سمت کاربر زمانی که به مسیرهای بعدی مراجعه می‌شود فراخوانی می‌شود. این متد مقدار [`context`](/guides/internals-glossary/context) را به عنوان پارامتر دریافت می‌کند.
 
 ```js
 validate({ params, query, store }) {
@@ -26,7 +26,7 @@ async validate({ params, query, store }) {
 }
 ```
 
-You can also return promises:
+تابع شما میتواند یک promise را نیر برگرداند:
 
 ```js
 validate({ params, query, store }) {
@@ -34,9 +34,9 @@ validate({ params, query, store }) {
 }
 ```
 
-Nuxt.js lets you define a validator method inside your dynamic route component (In this example: `pages/users/_id.vue`).
+Nuxt.js به شما این اجازه را می‌دهد تا یک متد اعتبارسنجی داخل کامپوننت مسیر داینامیک خود تعریف کنید. (به عنوان مثال `pages/users/_id.vue`)
 
-If the validate method does not return `true`, Nuxt.js will automatically load the 404 error page.
+اگر متد مقدار `true` را برنگرداند Nuxt.js به صورت خودکار صحفه خطای ۴۰۴ را نمایش می‌دهد.
 
 ```js
 export default {
@@ -47,7 +47,7 @@ export default {
 }
 ```
 
-You can also check some data in your [store](/guides/directory-structure/store) for example (filled by [`nuxtServerInit`](/guides/directory-structure/store#the-nuxtserverinit-action) before action):
+همچنین می‌توانید به اطلاعات [store](/guides/directory-structure/store) خود دسترسی داشته باشید. (به عنوان مثال وقتی که این داده‌ها قبلا توسط [`nuxtServerInit`](/guides/directory-structure/store#the-nuxtserverinit-action) ایجاد شده باشند.)
 
 ```js
 export default {
@@ -58,7 +58,7 @@ export default {
 }
 ```
 
-You can also throw expected or unexpected errors during validate function execution:
+همچنین می‌توانید از خطاهای منتظره (expected) یا غیرمنتظره (unexpected) در متد اعتبارسنجی خود استفاده کنید:
 
 ```js
 export default {

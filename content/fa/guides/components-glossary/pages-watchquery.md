@@ -1,17 +1,17 @@
 ---
-title: 'The watchQuery Property'
-description: Watch query strings and execute component methods on change (asyncData, fetch, validate, layout, ...)
-menu: WatchQuery Property
+title: 'ویژگی watchQuery'
+description: بر رشته‌های پرس‌و‌جو (query strings) نظارت کنید و در صورت تغییر آن‌ها متدهای کامپوننت را اجرا کنید (asyncData, fetch(context), validate, layout, ...).
+menu: ویژگی watchQuery
 category: components-glossary
 ---
 
-> Watch query strings and execute component methods on change (asyncData, fetch(context), validate, layout, ...)
+> بر رشته‌های پرس‌و‌جو (query strings) نظارت کنید و در صورت تغییر آن‌ها متدهای کامپوننت را اجرا کنید (asyncData, fetch(context), validate, layout, ...).
 
-- **Type:** `Boolean` or `Array` or `Function` (default: `[]`)
+- **نوع:** `Boolean` یا `Array` یا `Function` (به صورت پیشفرض `[]`)
 
-Use the `watchQuery` key to set up a watcher for query strings. If the defined strings change, all component methods (asyncData, fetch(context), validate, layout, ...) will be called. Watching is disabled by default to improve performance.
+از ویژگی `watchQuer` جهت ایجاد یک نظاره‌گر (watcher) برای رشته‌های پرس‌و‌جو (query strings) استفاده کنید. اگر رشته تعریف شده تغییر کنید تمامی متدهای کامپوننت (asyncData, fetch(context), validate, layout, ...) فراخوانی می‌شوند. نظاره بر این پارامترها به صورت پیشفرض جهت بهینه کردن عملکرد اپلیکیشن غیرفعال شده است.
 
-If you want to set up a watcher for all query strings, set `watchQuery: true`.
+اگر می‌خواهید برای تمامی رشته‌های پرس‌و‌جو نظاره کنید، از `watchQuery: true` استفاده کنید.
 
 ```js
 export default {
@@ -19,7 +19,7 @@ export default {
 }
 ```
 
-You can also use the function `watchQuery(newQuery, oldQuery)` to have more refined watchers.
+همچنین می‌توانید از تابع `watchQuery(newQuery, oldQuery)` برای تعریف نظاره‌گرهای دقیق‌تر استفاده کنید.
 
 ```js
 export default {
@@ -33,6 +33,6 @@ export default {
 
 <base-alert>
 
-**Warning**: The new `fetch` hook introduced in 2.12 is not affected by `watchQuery`. For more information see [listening to query string changes](/guides/features/data-fetching#the-fetch-hook).
+**هشدار:** `watchQuery` بر روی متد جدید `fetch` که در نسخه ۲.۱۲ اضافه شده است تاثیری ندارد. برای اطلاعات بیشتر به [نظاره بر تغییرات رشته پرس‌و‌جو](/guides/features/data-fetching#the-fetch-hook) مراجعه کنید.
 
 </base-alert>

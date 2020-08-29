@@ -1,15 +1,15 @@
 ---
-title: 'The scrollToTop Property'
-description: The `scrollToTop` property lets you tell Nuxt.js to scroll to the top before rendering the page.
-menu: scrollToTop Property
+title: 'ویژگی scrollToTop'
+description: ویژگی `scrollToTop` به شما این امکان را می‌دهد تا به Nuxt.js دستور دهید تا قبل از رندر کردن صفحه به بالای صفحه اسکرول کند.
+menu: ویژگی scrollToTop
 category: components-glossary
 ---
 
-> The scrollToTop property lets you tell Nuxt.js to scroll to the top before rendering the page.
+> ویژگی `scrollToTop` به شما این امکان را می‌دهد تا به Nuxt.js دستور دهید تا قبل از رندر کردن صفحه به بالای صفحه اسکرول کند.
 
-- **Type:** `Boolean` (default: `false`)
+- **نوع:**: `Boolean` (به صورت پیشفرض `false`)
 
-By default, Nuxt.js scrolls to the top when you go to another page, but with children routes, Nuxt.js keeps the scroll position. If you want to tell Nuxt.js to scroll to the top when rendering your child route, set `scrollToTop` to `true`:
+به صورت پیشفرض Nuxt.js وقتی به صفحه دیگری انتقال پیدا می‌کنید شما را به بالای صفحه انتقال (اسکرول) می‌دهد. اما در مورد مسیرهای فرزند Nuxt.js موقعیت اسکرول را حفظ می‌کند. اگر می‌خواهید به Nuxt.js بگویید تا شما را به بالای صفحه منتقل کند، مقدار ویژگی `scrollToTop` را برابر با `true` قرار دهید:
 
 ```html
 <template>
@@ -23,6 +23,7 @@ By default, Nuxt.js scrolls to the top when you go to another page, but with chi
 </script>
 ```
 
-Conversely, you can manually set `scrollToTop` to `false` on parent routes as well.
+متقابلا می‌توانید به صورت دستی مقدار ویژگی `scrollToTop` را در مسیر‌های اصلی (مادر) برابر با `false` قرار دهید.
 
-If you want to overwrite the default scroll behavior of Nuxt.js, take a look at the [scrollBehavior option](/guides/configuration-glossary/configuration-router#scrollbehavior).
+If you want to overwrite the default scroll behavior of Nuxt.js, take a look at the
+اگر می‌خواهید رفتار پیشفرض Nuxt.js در مورد اسکرول کردن را تغییر دهید به [تنظیمات رفتار اسکرول](/guides/configuration-glossary/configuration-router#scrollbehavior) مراجعه کنید.

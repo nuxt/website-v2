@@ -1,18 +1,18 @@
 ---
-title: 'The middleware Property'
-description: Set the middleware for a specific page of the application.
-menu: Middleware Property
+title: 'ویژگی میان‌افزار'
+description: جهت تنظیم میان افزار برای یک صفحه بخصوص در اپلیکیشن.
+menu: ویژگی میان‌افزار
 category: components-glossary
 ---
 
-- Type: `String` or `Array` or `Function`
-  - Items: `String` or `Function`
+- **نوع:** `String` یا `Array` یا `Function`
+  - **آیتم‌ها**: `String` یا `Function`
 
-Set the middleware for a specific page of the application.
+جهت تنظیم میان افزار برای یک صفحه بخصوص در اپلیکیشن.
 
-## Named middleware
+## میان‌افزارهای با نام
 
-You can create named middleware by creating a file inside the `middleware/` directory, the file name will be the middleware name.
+می‌توانید با ایجاد یک فایل داخل پوشه `middleware/` یک میان‌افزار با نام ایجاد کنید. نام این فایل به عنوان نام میان‌افزار در نظر گرفته خواهد شد.
 
 ```js{[middleware/authenticated.js]}
 export default function ({ store, redirect }) {
@@ -35,9 +35,9 @@ export default function ({ store, redirect }) {
 </script>
 ```
 
-## Anonymous middleware
+## میان‌افزارهای بی‌نام
 
-If you need to use a middleware only for a specific page, you can directly use a function for it (or an array of functions):
+در صورتی که می‌خواهید از یک میان‌افزار فقط برای یک صفحه بخصوص استفاده کنید، می‌توانید این میان‌افزار را به عنوان یک تابع و یا آرایه‌ای از توابع تعریف و مستقیما استفاده کنید:
 
 ```html{[pages/secret.vue]}
 <template>

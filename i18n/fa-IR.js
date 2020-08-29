@@ -74,7 +74,7 @@ module.exports = {
       get_started: 'شروع کنید',
       get_updates: 'اخبار NuxtJS را هر ماه در ایمیل خود دریافت کنید',
       video:
-        'ویدیو ساخته شده توسط {video}، {cheatSheet} را به صورت رایگان دریافت کنید',
+        'ویدیو ساخته شده توسط {company}، {cheatSheet} را به صورت رایگان دریافت کنید',
       cheatSheet: 'کتابچه NuxtJS'
     },
     why: {

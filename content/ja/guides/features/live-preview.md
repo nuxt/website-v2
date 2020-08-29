@@ -65,7 +65,7 @@ enablePreview は yarn dev ではなく yarn start を用いてローカルで�
 
 ### まだ生成されていないページをプレビューする場合
 
-For pages that are not yet generated, SPA fallback will still call the API before showing the 404 page as these pages exist on the API but are not generated yet.
+まだ生成されていないページの場合、API 上に存在しますがまだ生成されていないため、SPA フォールバックは 404 ページを表示する前に API を呼び出すでしょう。
 
 もし validate フックを設定している場合、プレビューモードで 404 ページへリダイレクトしないように validate フックを修正する必要があるでしょう。
 

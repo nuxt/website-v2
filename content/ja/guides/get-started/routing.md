@@ -1,28 +1,28 @@
 ---
-title: Routing
-description: Most websites have more than just one page. For example a home page, about page, contact page etc. In order to show these pages we need a Router.
+title: 'ルーティング'
+description: '多くのウェブサイトでは単一のページではなく、複数ページを持っています。例えばホームページ、概要ページ、お問い合わせページなどです。これらのページを表示するにはルーターが必要です。'
 position: 2
 category: get-started
 csb_link: https://codesandbox.io/embed/github/nuxt-academy/guides-examples/tree/master/01_get_started/02_routing?fontsize=14&hidenavigation=1&theme=dark
 ---
 
-## Automatic Routes
+## 自動的に生成されるルート
 
-Most websites will have more than one page (i.e. a home page, about page, contact page etc.). In order to show these pages, we need a Router. That's where `vue-router` comes in. When working with the Vue application, you have to set up a configuration file (i.e. `router.js`) and add all your routes manually to it. Nuxt.js automatically generates the `vue-router` configuration for you, based on your provided Vue files inside the `pages` directory. That means you never have to write a router config again! Nuxt.js also gives you automatic code-splitting for all your routes.
+多くのウェブサイトでは単一のページではなく、複数ページ（例えばホームページ、概要ページ、お問い合わせページなど）を持ちます。これらのページを表示するにはルーターが必要です。そこで `vue-router` の出番です。Vue アプリケーションを使う際、設定ファイル（例えば `router.js`）を設定し、全てのルートを手動で追加しなければなりません。Nuxt.js では  `pages` ディレクトリにある Vue ファイルに基づいて `vue-router` の設定を自動的に生成します。つまり、ルーターの設定を書く必要はもうありません！Nuxt.js はまた全てのルートに対して自動でコード分割を行います。
 
-In other words, all you have to do to have routing in your application is to create `.vue` files in the `pages` folder.
+つまり、アプリケーションでルーティングを行うのに必要なことは `pages` フォルダに `.vue` ファイルを作成するだけです。
 
 <base-alert type="next">
 
-Learn more about [Routing](/guides/features/file-system-routing)
+詳細は[ルーティング](/guides/features/file-system-routing)を参照してください。
 
 </base-alert>
 
-## Navigation
+## ナビゲーション
 
-To navigate between pages of your app, you should use the [NuxtLink](/guides/features/nuxt-components#the-nuxtlink-component) component. This component is included with Nuxt.js and therefore you don't have to import it as you do with other components. It is similar to the HTML `<a>` tag, except that instead of using a `href="/about"` we use `to="/about"`. If you have used `vue-router` before, you can think of the `<NuxtLink>` as a replacement for `<RouterLink>`
+アプリケーションのページ間を遷移するには、[NuxtLink](/guides/features/nuxt-components#the-nuxtlink-component) コンポーネントを使います。このコンポーネントは Nuxt.js に含まれているため、他のコンポーネントのようにインポートする必要はありません。HTML `<a>` タグに似ていますが、`href="/about"` のかわりに `to="/about"` を使用します。もし以前に `vue-router` を使ったことがある場合は `<NuxtLink>` を `<RouterLink>` の変わりと考えることができます。
 
-A simple link to the `index.vue` page in your `pages` folder:
+`pages` フォルダーにある `index.vue` へのシンプルなリンク:
 
 ```html{}[pages/index.vue]
 <template>
@@ -30,7 +30,7 @@ A simple link to the `index.vue` page in your `pages` folder:
 </template>
 ```
 
-For all links to pages within your site, use `<NuxtLink>`. If you have links to other websites you should use the `<a>` tag. See below for an example:
+サイト内の全てのページへのリンクに `<NuxtLink>` を使ってください。他のウェブサイトへのリンクがある場合は `<a>` タグを使ってください。例は以下を参照してください:
 
 ```html{}[pages/index.vue]
 <template>
@@ -50,6 +50,6 @@ For all links to pages within your site, use `<NuxtLink>`. If you have links to 
 
 <base-alert type="next">
 
-Learn more about the [NuxtLink component](/guides/features/nuxt-components#the-nuxtlink-component).
+詳細は [NuxtLink コンポーネント](/guides/features/nuxt-components#the-nuxtlink-component)を参照してください。
 
 </base-alert>

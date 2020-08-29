@@ -17,21 +17,22 @@ category: components-glossary
 
 ### چه موقع از fetch استفاده کنیم؟
 
-Every time you need to get **asynchronous** data. `fetch` is called on server-side when rendering the route, and on client-side when navigating.
+هرگاه بخواهید داده‌هایی **غیرهمزمان** (asynchronous) متد `fetch` در سمت سرور هنگامی که مسیر در حال رندر و یا در سمت سرور وقتی که کاربر در حال هدایت است فراخوانی می‌شود.
 
 It exposes `$fetchState` at the component level:
+این متد از `$fetchState‍` استفاده می کند:
 
-- `$fetchState.pending`: `Boolean`, allows you to display a placeholder when `fetch` is being called _on client-side_.
-- `$fetchState.error`: `null` or `Error`, allows you to display an error message
-- `$fetchState.timestamp`: `Integer`, is a timestamp of the last fetch, useful for caching with `keep-alive`
+- `$fetchState.pending`: از نوع `Boolean`, می‌تواند برای نمایش یک placeholder استفاده شود وقتی که fecth در سمت کاربر در حال استفاده است
+- `$fetchState.error`: از نوع `null` یا `Error`, می‌تواند برای نمایش پیام خطا استفاده شود
+- `$fetchState.timestamp`: از نوع `Integer`, یک تایم‌استمپ از آخرین fetch است. می‌تواند برای استفاده در کش (cache) با استفاده از `keep-alive` مفید باشد
 
-If you want to call the `fetch` hook from your template use:
+اگر می‌خواهید هوک `fetch` را در قالب خود فراخوانی کنید:
 
 ```html
 <button @click="$fetch">Refresh</button>
 ```
 
-or component method:
+یا با استفاده از متد کامپوننت:
 
 ```javascript
 // from component methods in script section
@@ -44,16 +45,16 @@ export default {
 }
 ```
 
-You can access the Nuxt [context](/guides/internals-glossary/context) within the fetch hook using `this.$nuxt.context`.
+می‌توانید به [context](/guides/internals-glossary/context) فریم‌ورک Nuxt داخل هوک fetch با استفاده از `this.$nuxt.context` دسترسی داشته باشید.
 
-### Options
+### تنظیمات
 
-- `fetchOnServer`: `Boolean` or `Function` (default: `true`), call `fetch()` when server-rendering the page
-- `fetchDelay`: `Integer` (default: `200`), set the minimum executing time in milliseconds (to avoid quick flashes)
+- `fetchOnServer`: از نوع `Boolean` یا `Function` (به صورت پیشفرض `true`)، تنظیم جهت فراخوانی `fetch()` زمانی که صفحات در سمت سرور رندر می‌شوند
+- `fetchDelay`: از نوع `Integer` (به صورت پیشفرض `۲۰۰`)، جهت تنظیم حداقل زمان اجرا به میلی ثانیه
 
 <div class="Alert Alert--green">
   
-When `fetchOnServer` is falsy (`false` or returns `false`), `fetch` will be called only on client-side and `$fetchState.pending` will return `true` when server-rendering the component.
+زمانی که `fetchOnServer` مقدار `false` (یا تابعی که نتیجه آن مقدار `false` باشد) داشته باشد، تابع `fetch` تنها در سمت کاربر فراخوانی می‌شود و `$fetchState.pending` مقدار `true` را زمانی که صفحه در حال رندر در سمت سرور است را برخواهد گرداند.
 
 </div>
 

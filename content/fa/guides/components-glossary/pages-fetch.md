@@ -1,21 +1,21 @@
 ---
-title: 'The fetch Method'
-description: The `fetch` method is used to fill the store before rendering the page, it's like the `asyncData` method except it doesn't set the component data.
-menu: Fetch Method
+title: 'متد fetch'
+description: متد `fetch` برای بارگزاری اطلاعات در store قبل از رندر شدن صفحه استفاده می شود. عملکردی مشابه `asyncData` دارد با تفاوت اینکه داده‌های کامپوننت را تنظیم نمی‌کند.
+menu: متد fetch
 category: components-glossary
 ---
 
 ## Nuxt >= 2.12
 
-Nuxt.js `v2.12` introduces a new hook called `fetch` **in any of your Vue components**.
+نسخه `2.12` Nuxt.js هوک جدیدی به نام `fetch` را **در تمامی کامپوننت‌های Vue** در اختیار شما قرار می‌دهد.
 
 <base-alert>
 
-`fetch(context)` has been deprecated, instead you can use an [anonymous middleware](/guides/components-glossary/pages-middleware#anonymous-middleware) in your page: `middleware(context)`
+متد `fetch(context)` منسوح شده است، به جای آن میتوانید از یک [میان افزار](/guides/components-glossary/pages-middleware#anonymous-middleware) در صفحات خود استفاده کنید: `middleware(context)`
 
 </base-alert>
 
-### When to use fetch?
+### چه موقع از fetch استفاده کنیم؟
 
 Every time you need to get **asynchronous** data. `fetch` is called on server-side when rendering the route, and on client-side when navigating.
 

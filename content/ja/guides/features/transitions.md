@@ -1,6 +1,6 @@
 ---
 title: Transitions
-description: Nuxt.js uses the `<transition>` component to let you create amazing transitions/animations between your routes.
+description: Nuxt.js は `<transition>` コンポーネントを使って、ページ間を遷移する際のトランジション/アニメーションを行うことができます
 position: 10
 category: features
 csb_link: https://codesandbox.io/embed/github/nuxt-academy/guides-examples/tree/master/03_features/05_transitions?fontsize=14&hidenavigation=1&theme=dark

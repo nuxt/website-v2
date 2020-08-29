@@ -440,29 +440,29 @@ Mira [optimización para Webpack](https://webpack.js.org/configuration/optimizat
 
 ## optimizeCSS
 
-- Type: `Object` or `Boolean`
-- Default:
+- Tipo: `Object` o `Boolean`
+- Por defecto:
   - `false`
-  - `{}` when extractCSS is enabled
+  - `{}` cuando extractCSS está habilitado
 
-OptimizeCSSAssets plugin options.
+Opciones para plugin OptimizeCSSAssets.
 
-See [NMFR/optimize-css-assets-webpack-plugin](https://github.com/NMFR/optimize-css-assets-webpack-plugin).
+Mira [NMFR/optimize-css-assets-webpack-plugin](https://github.com/NMFR/optimize-css-assets-webpack-plugin).
 
 ## parallel
 
-- Type: `Boolean`
-- Default: `false`
+- Tipo: `Boolean`
+- Por defecto: `false`
 - ⚠️ Experimental
 
-> Enable [thread-loader](https://github.com/webpack-contrib/thread-loader#thread-loader) in webpack building
+> Habilita [thread-loader](https://github.com/webpack-contrib/thread-loader#thread-loader) en la construcción de webpack
 
 ## plugins
 
-> Add webpack plugins
+> Agrega complementos de webpack
 
-- Type: `Array`
-- Default: `[]`
+- Tipo: `Array`
+- Por defecto: `[]`
 
 ```js{}[nuxt.config.js]
 import webpack from 'webpack'
@@ -480,13 +480,13 @@ export default {
 
 ## postcss
 
-> Customize [PostCSS Loader](https://github.com/postcss/postcss-loader#usage) plugins.
+> Personaliza plugins de [PostCSS Loader](https://github.com/postcss/postcss-loader#usage).
 
-- Type: `Array` (legacy, will override defaults), `Object` (recommended), `Function` or `Boolean`
+- Tipo: `Array` (legado, anulará los valores por defecto), `Object` (recomendado), `Function` o `Boolean`
 
-  **Note:** Nuxt.js has applied [PostCSS Preset Env](https://github.com/csstools/postcss-preset-env). By default it enables [Stage 2 features](https://cssdb.org/) and [Autoprefixer](https://github.com/postcss/autoprefixer), you can use `build.postcss.preset` to configure it.
+  **Nota:** Nuxt.js ha aplicado [PostCSS Preset Env](https://github.com/csstools/postcss-preset-env). De forma predeterminada, habilita [Funciones de la etapa 2](https://cssdb.org/) y [Autoprefixer](https://github.com/postcss/autoprefixer), puede usar `build.postcss.preset` para configurarlo .
 
-- Default:
+- Por defecto:
 
   ```js{}[nuxt.config.js]
   {
@@ -494,7 +494,7 @@ export default {
       'postcss-import': {},
       'postcss-url': {},
       'postcss-preset-env': this.preset,
-      'cssnano': { preset: 'default' } // disabled in dev mode
+      'cssnano': { preset: 'default' } // deshabilitar en modo dev
     },
     order: 'presetEnvAndCssnanoLast',
     preset: {
@@ -503,16 +503,16 @@ export default {
   }
   ```
 
-Your custom plugin settings will be merged with the default plugins (unless you are using an `Array` instead of an `Object`).
+La configuración de su complemento personalizado se fusionará con los complementos predeterminados (a menos que esté usando un `Array` en lugar de un `Object`).
 
 ```js{}[nuxt.config.js]
 export default {
   build: {
     postcss: {
       plugins: {
-        // Disable `postcss-url`
+        // Deshabilita `postcss-url`
         'postcss-url': false,
-        // Add some plugins
+        // Agrega algunos complementos
         'postcss-nested': {},
         'postcss-responsive-type': {},
         'postcss-hexrgba': {}
@@ -527,18 +527,18 @@ export default {
 }
 ```
 
-If the postcss configuration is an `Object`, `order` can be used for defining the plugin order:
+Si la configuración de postcss es un `Object`, se puede usar `order` para definir el orden del complemento:
 
-- Type: `Array` (ordered plugin names), `String` (order preset name), `Function`
-- Default: `cssnanoLast` (put `cssnano` in last)
+- Tipo: `Array` (nombres de los complementos odernados), `String` (orden nombre preestablecido), `Function`
+- Por defecto: `cssnanoLast` (Pone a `cssnano` en la última posición)
 
 ```js{}[nuxt.config.js]
 export default {
   build: {
     postcss: {
-      // preset name
+      // nombre preestablecido
       order: 'cssnanoLast',
-      // ordered plugin names
+      // nombres de complementos ordenados
       order: ['postcss-import', 'postcss-preset-env', 'cssnano']
       // Function to calculate plugin order
       order: (names, presets) => presets.cssnanoLast(names)
@@ -547,11 +547,11 @@ export default {
 }
 ```
 
-### postcss plugins & nuxt-tailwindcss
+### complementos postcss & nuxt-tailwindcss
 
-If you want to apply postcss plugin (eg. postcss-pxtorem) on the nuxt-tailwindcss configuration, you have to change order and load first tailwindcss.
+Si desea aplicar el complemento postcss (por ejemplo, postcss-pxtorem) en la configuración de nuxt-tailwindcss, debe cambiar el orden y cargar primero tailwindcss.
 
-**This setup have no impact on the nuxt-purgecss.**
+**Esta configuración no tiene ningún impacto en nuxt-purgecss.**
 
 ```js{}[nuxt.config.js]
 import { join } from 'path'
@@ -573,17 +573,17 @@ export default {
 
 ## profile
 
-- Type: `Boolean`
-- Default: enabled by command line argument `--profile`
+- Tipo: `Boolean`
+- Por defecto: habilitado por el comando de la consola `--profile`
 
-> Enable the profiler in [WebpackBar](https://github.com/nuxt/webpackbar#profile)
+> Habilite el generador de perfiles en [WebpackBar](https://github.com/nuxt/webpackbar#profile)
 
 ## publicPath
 
-> Nuxt.js lets you upload your dist files to your CDN for maximum performances, simply set the `publicPath` to your CDN.
+> Nuxt.js le permite cargar sus archivos dist a su CDN para obtener el máximo rendimiento, simplemente configure el `publicPath` en su CDN.
 
-- Type: `String`
-- Default: `'/_nuxt/'`
+- Tipo: `String`
+- Por defecto: `'/_nuxt/'`
 
 ```js{}[nuxt.config.js]
 export default {
@@ -593,19 +593,19 @@ export default {
 }
 ```
 
-Then, when launching `nuxt build`, upload the content of `.nuxt/dist/client` directory to your CDN and voilà!
+Luego, cuando ejecutes `nuxt build`, sube el contenido del directorio `.nuxt / dist / client` a tu CDN y ¡listo!
 
 ## quiet
 
-> Suppresses most of the build output log
+> Suprime la mayor parte del registro de salida de la compilación
 
-- Type: `Boolean`
-- Default: Enabled when a `CI` or `test` environment is detected by [std-env](https://github.com/blindmedia/std-env)
+- Tipo: `Boolean`
+- Por defecto: Habilitado cuando [std-env](https://github.com/blindmedia/std-env) detecta un entorno "CI" o "prueba"
 
 ## splitChunks
 
-- Type: `Object`
-- Default:
+- Tipo: `Object`
+- Por defecto:
 
   ```js{}[nuxt.config.js]
   export default {
@@ -619,35 +619,35 @@ Then, when launching `nuxt build`, upload the content of `.nuxt/dist/client` dir
   }
   ```
 
-If split codes for `layout`, `pages` and `commons` (common libs: vue|vue-loader|vue-router|vuex...).
+Si se dividen los códigos para `layout`, `pages` y `commons` (librerias comunes: vue | vue-loader | vue-router | vuex ...).
 
 ## ssr
 
-> Creates special webpack bundle for SSR renderer.
+> Crea un paquete de webpack especial para el renderizador SSR.
 
-- Type: `Boolean`
-- Default: `true` for universal mode and `false` for spa mode
+- Tipo: `Boolean`
+- Por defecto: `true` para modo universal y `false` para modo spa
 
-This option is automatically set based on `mode` value if not provided.
+Esta opción se establece automáticamente en función del valor de `mode` si no se proporciona.
 
 ## styleResources
 
-- Type: `Object`
-- Default: `{}`
+- Tipo: `Object`
+- Por defecto: `{}`
 
 <base-alert>
 
-**Warning:** This property is deprecated. Please use the [style-resources-module](https://github.com/nuxt-community/style-resources-module/) instead for improved performance and better DX!
+**Advertencia:** Esta propiedad está obsoleta. En su lugar use por favor  [style-resources-module](https://github.com/nuxt-community/style-resources-module/) para mejorar rendimiento y un mejor DX!
 
 </base-alert>
 
-This is useful when you need to inject some variables and mixins in your pages without having to import them every time.
+Esto es útil cuando necesita inyectar algunas variables y mixins en sus páginas sin tener que importarlos cada vez.
 
-Nuxt.js uses https://github.com/yenshih/style-resources-loader to achieve this behaviour.
+Nuxt.js utiliza https://github.com/yenshih/style-resources-loader para lograr este comportamiento.
 
-You need to specify the patterns/path you want to include for the given pre-processors: `less`, `sass`, `scss` or `stylus`
+Debe especificar los patrones/ruta que desea incluir para los preprocesadores dados: `less`, `sass`, `scss` o `stylus`
 
-You cannot use path aliases here (`~` and `@`), you need to use relative or absolute paths.
+Aquí no se pueden usar alises de rutas como (`~` and `@`), necesitas usar rutas relativas o absolutas.
 
 ```js{}[nuxt.config.js]
 {
@@ -658,8 +658,8 @@ You cannot use path aliases here (`~` and `@`), you need to use relative or abso
       // sass: ...,
       // scss: ...
       options: {
-        // See https://github.com/yenshih/style-resources-loader#options
-        // Except `patterns` property
+        // Mira https://github.com/yenshih/style-resources-loader#options
+        // Excepto la propiedad `patterns`
       }
     }
   }
@@ -668,19 +668,19 @@ You cannot use path aliases here (`~` and `@`), you need to use relative or abso
 
 ## templates
 
-> Nuxt.js allows you provide your own templates which will be rendered based on Nuxt configuration. This feature is specially useful for using with [modules](/guides/directory-structure/modules).
+> Nuxt.js le permite proporcionar sus propias plantillas que se procesarán según la configuración de Nuxt. Esta función es especialmente útil para usar con [módulos](/guides/directory-structure/modules).
 
-- Type: `Array`
+- Tipo: `Array`
 
 ```js{}[nuxt.config.js]
 export default {
   build: {
     templates: [
       {
-        src: '~/modules/support/plugin.js', // `src` can be absolute or relative
-        dst: 'support.js', // `dst` is relative to project `.nuxt` dir
+        src: '~/modules/support/plugin.js', // `src` puede ser absoluta o relativa
+        dst: 'support.js', // `dst` es relativa al dir `.nuxt` del proyecto
         options: {
-          // Options are provided to template as `options` key
+          // Las opciones se proporcionan a la plantilla como clave `options`
           live_chat: false
         }
       }
@@ -689,12 +689,12 @@ export default {
 }
 ```
 
-Templates are rendered using [`lodash.template`](https://lodash.com/docs/#template) you can learn more about using them [here](https://github.com/learn-co-students/javascript-lodash-templates-v-000).
+Las plantillas se renderizan usando [`lodash.template`](https://lodash.com/docs/#template) puedes aprender más sobre su uso [aquí](https://github.com/learn-co-students/javascript-lodash-templates-v-000).
 
 ## terser
 
-- Type: `Object` or `Boolean`
-- Default:
+- Tipo: `Object` o `Boolean`
+- Por defecto:
 
 ```js{}[nuxt.config.js]
 {
@@ -712,20 +712,20 @@ Templates are rendered using [`lodash.template`](https://lodash.com/docs/#templa
 }
 ```
 
-Terser plugin options. Set to `false` to disable this plugin.
+Opciones del complemento Terser. Establecer en "false" para deshabilitar este complemento.
 
-`sourceMap` will be enabled when webpack `config.devtool` matches `source-?map`
+`sourceMap` estará habilitado cuando webpack `config.devtool` coincida con `source-?map`
 
-See [webpack-contrib/terser-webpack-plugin](https://github.com/webpack-contrib/terser-webpack-plugin).
+Mira [webpack-contrib/terser-webpack-plugin](https://github.com/webpack-contrib/terser-webpack-plugin).
 
 ## transpile
 
-- Type: `Array<String | RegExp | Function>`
-- Default: `[]`
+- Tipo: `Array<String | RegExp | Function>`
+- Por defecto: `[]`
 
-If you want to transpile specific dependencies with Babel, you can add them in `build.transpile`. Each item in transpile can be a package name, a string or regex object matching the dependency's file name.
+Si desea transpilar dependencias específicas con Babel, puede agregarlas en `build.transpile`. Cada elemento en transpile puede ser un nombre de paquete, una string o un objeto regex que coincida con el nombre del archivo de la dependencia.
 
-Starting with `v2.9.0`, you can also use a function to conditionally transpile, the function will receive a object (`{ isDev, isServer, isClient, isModern, isLegacy }`):
+Comenzando con `v2.9.0`, también puedes usar una función para transpilar condicionalmente, la función recibirá un objeto (` {isDev, isServer, isClient, isModern, isLegacy} `):
 
 ```js{}[nuxt.config.js]
 {
@@ -737,10 +737,10 @@ Starting with `v2.9.0`, you can also use a function to conditionally transpile, 
 
 ## vueLoader
 
-> Note: This config has been removed since Nuxt 2.0, please use [`build.loaders.vue`](#loaders)instead.
+> Nota: Esta configuración se ha eliminado desde Nuxt 2.0, por favor utilice [`build.loaders.vue`](#loaders) en su lugar.
 
-- Type: `Object`
-- Default:
+- Tipo: `Object`
+- Por defecto:
 
   ```js{}[nuxt.config.js]
   {
@@ -754,13 +754,13 @@ Starting with `v2.9.0`, you can also use a function to conditionally transpile, 
   }
   ```
 
-> Specify the [Vue Loader Options](https://vue-loader.vuejs.org/options.html).
+> Especifique las [Opciones de Vue Loader](https://vue-loader.vuejs.org/options.html).
 
 ## watch
 
-> You can provide your custom files to watch and regenerate after changes. This feature is specially useful for using with [modules](/guides/directory-structure/modules).
+> Puede proporcionar sus archivos personalizados para verlos y regenerarlos después de los cambios. Esta característica es especialmente útil para usar con [módulos](/guides/directory-structure/modules).
 
-- Type: `Array<String>`
+- Tipo: `Array<String>`
 
 ```js{}[nuxt.config.js]
 export default {
@@ -772,9 +772,9 @@ export default {
 
 ## followSymlinks
 
-> By default, the build process does not scan files inside symlinks. This boolean includes them, thus allowing usage of symlinks inside folders such as the "pages" folder, for example.
+> De forma predeterminada, el proceso de construcción no analiza archivos dentro de enlaces simbólicos. Este booleano los incluye, lo que permite el uso de enlaces simbólicos dentro de carpetas como la carpeta "pages", por ejemplo.
 
-- Type: `Boolean`
+- Tipo: `Boolean`
 
 ```js{}[nuxt.config.js]
 export default {

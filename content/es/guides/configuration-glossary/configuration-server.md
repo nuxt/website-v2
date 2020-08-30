@@ -1,30 +1,30 @@
 ---
-title: 'The server Property'
-description: Nuxt.js let you define the server connection variables for your application inside `nuxt.config.js`.
+title: 'La propiedad server'
+description: Nuxt.js le permite definir las variables de conexión del servidor para su aplicación dentro de `nuxt.config.js`.
 menu: server
 category: configuration-glossary
 position: 26
 ---
 
-- Type: `Object`
+- Tipo: `Object`
 
-> Nuxt.js let you define the server connection variables for your application inside `nuxt.config.js`.
+> Nuxt.js le permite definir las variables de conexión del servidor para su aplicación dentro de `nuxt.config.js`.
 
-## Basic example:
+## Ejemplo básico:
 
 ```js{}[nuxt.config.js]
 export default {
   server: {
-    port: 8000, // default: 3000
-    host: '0.0.0.0', // default: localhost,
+    port: 8000, // por defecto: 3000
+    host: '0.0.0.0', // por defecto: localhost,
     timing: false
   }
 }
 ```
 
-This lets you specify the [host and port](/guides/features/configuration#edit-host-and-port) for your Nuxt.js server instance.
+Esto le permite especificar el [host y puerto](/guides/features/configuration#edit-host-and-port) para su instancia de servidor Nuxt.js.
 
-## Example using HTTPS configuration
+## Ejemplo usando la configuración HTTPS
 
 ```js{}[nuxt.config.js]
 import path from 'path'
@@ -40,9 +40,9 @@ export default {
 }
 ```
 
-You can find additional information on creating server keys and certificates on `localhost` on [certificates for localhost](https://letsencrypt.org/docs/certificates-for-localhost/) article.
+Puede encontrar información adicional sobre la creación de claves de servidor y certificados en el artículo `localhost` en [certificados para localhost](https://letsencrypt.org/docs/certificates-for-localhost/).
 
-## Example using sockets configuration
+## Ejemplo de configuración de sockets
 
 ```js{}[nuxt.config.js]
 export default {
@@ -54,14 +54,14 @@ export default {
 
 ## timing
 
-- Type: `Object` or `Boolean`
-- Default: `false`
+- Tipo: `Object` o `Boolean`
+- Por defecto: `false`
 
-Enabling the `server.timing` option adds a middleware to measure the time elapsed during server-side rendering and adds it to the headers as 'Server-Timing'
+Habilitar la opción `server.timing` agrega un middleware para medir el tiempo transcurrido durante la renderización del lado del servidor y lo agrega a los encabezados como 'Server-Timing'
 
-### Example using timing configuration
+### Ejemplo usando configuración de timing
 
-`server.timing` can be an object for providing options. Currently, only `total` is supported (which directly tracks the whole time spent on server-side rendering)
+`server.timing` puede ser un objeto para proporcionar opciones. Actualmente, solo se admite `total` (que rastrea directamente todo el tiempo dedicado a la representación del lado del servidor)
 
 ```js{}[nuxt.config.js]
 export default {
@@ -73,33 +73,33 @@ export default {
 }
 ```
 
-### Using timing api
+### Usando la api de timing
 
-The `timing` api is also injected into the `response` on server-side when `server.time` is enabled.
+La api `timing` también se inyecta en la `response` en el lado del servidor cuando `server.time` está habilitado.
 
-#### Syntax
+#### Sintaxis
 
 ```js
 res.timing.start(name, description)
 res.timing.end(name)
 ```
 
-#### Example using timing in servermiddleware
+#### Ejemplo de uso de timing en servermiddleware
 
 ```js
 export default function (req, res, next) {
   res.timing.start('midd', 'Middleware timing description')
-  // server side operation..
+  // operación del lado del servidor..
   // ...
   res.timing.end('midd')
   next()
 }
 ```
 
-Then `server-timing` head will be included in response header like:
+Luego, el encabezado `server-timing` se incluirá en el encabezado de respuesta como:
 
 ```bash
 Server-Timing: midd;desc="Middleware timing description";dur=2.4
 ```
 
-Please refer to [Server-Timing MDN](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Server-Timing) for more details.
+Consulte [Server-Timing MDN](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Server-Timing) para obtener más detalles.

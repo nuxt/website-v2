@@ -1,20 +1,20 @@
 ---
-title: 'transition Properties'
-description: Set the default properties of the page and layout transitions.
-menu: transition
+title: 'Propiedades de transición'
+description: Establezca las propiedades predeterminadas de la página y las transiciones de diseño.
+menu: transición
 category: configuration-glossary
 position: 31
 ---
 
-## The pageTransition Property
+## La propiedad pageTransition
 
-> Nuxt v2.7.0 introduces key "pageTransition" in favor of the "transition" key to consolidate the naming with layout transition keys.
+> Nuxt v2.7.0 introduce la clave "pageTransition" a favor de la clave "transition" para consolidar el nombre con claves de transición de diseño.
 
-- Type: `String` or `Object`
+- Tipo: `String` o `Object`
 
-> Used to set the default properties of the page transitions.
+> Se utiliza para establecer las propiedades predeterminadas de las transiciones de página.
 
-Default:
+Por defecto:
 
 ```js
 {
@@ -26,7 +26,7 @@ Default:
 ```js{}[nuxt.config.js]
 export default {
   pageTransition: 'page'
-  // or
+  // o
   pageTransition: {
     name: 'page',
     mode: 'out-in',
@@ -37,15 +37,15 @@ export default {
 }
 ```
 
-The transition key in `nuxt.config.js` is used to set the default properties for the page transitions. To learn more about the available keys when the `transition` key is an object, see the [pages transition property](/guides/features/transitions).
+La clave de transición en `nuxt.config.js` se usa para establecer las propiedades predeterminadas para las transiciones de página. Para obtener más información sobre las claves disponibles cuando la clave `transition` es un objeto, consulte la [propiedad de transición de páginas](/guides/features/transitions).
 
-## The layoutTransition Property
+## La propiedad layoutTransition
 
-- Type: `String` or `Object`
+- Tipo: `String` o `Object`
 
-> Used to set the default properties of the layout transitions. The value provided in the `name` option is configured to work with the name provided in `layout` from your `layouts` folder.
+> Se utiliza para establecer las propiedades predeterminadas de las transiciones de diseño. El valor proporcionado en la opción `name` está configurado para trabajar con el nombre proporcionado en `layout` de la carpeta `layouts`.
 
-Default:
+Por defecto:
 
 ```js
 {
@@ -57,7 +57,7 @@ Default:
 ```js{}[nuxt.config.js]
 export default {
   layoutTransition: 'layout'
-  // or
+  // o
   layoutTransition: {
     name: 'layout',
     mode: 'out-in'

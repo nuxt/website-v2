@@ -92,7 +92,7 @@ export default {
 }
 ```
 
-上のように設定されると、コンポーネントには次のようにセットされます:
+上のように設定すると、コンポーネントには次のようにセットされます:
 
 ```html{}[pages/index.vue]
 <transition name="home"></transition>
@@ -126,7 +126,7 @@ export default {
 }
 ```
 
-上のように設定されると、コンポーネントは次のようにセットされます:
+上のように設定すると、コンポーネントは次のようにセットされます:
 
 ```html{}[pages/index.vue]
 <transition name="test" mode="out-in"></transition>

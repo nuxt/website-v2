@@ -1,16 +1,16 @@
 ---
-title: 'The generate Property'
-description: Configure the generation of your universal web application to a static web application.
+title: 'La propiedad generate'
+description: Configure la generación de su aplicación web universal a una aplicación web estática.
 menu: generate
 category: configuration-glossary
 position: 10
 ---
 
-- Type: `Object`
+- Tipo: `Object`
 
-> Configure the generation of your universal web application to a static web application.
+> Configure la generación de su aplicación web universal a una aplicación web estática.
 
-When calling `nuxt.generate()`, Nuxt.js will use the configuration defined in the `generate` property.
+Al llamar a `nuxt.generate ()`, Nuxt.js usará la configuración definida en la propiedad `generate`.
 
 ```js{}[nuxt.config.js]
 export default {
@@ -22,13 +22,13 @@ export default {
 
 ## cache
 
-> Introduced in v2.14.0
+> Introducido en la v2.14.0
 
-- Type: `Object` or `false`
+- Tipo: `Object` o `false`
 
-This option is used by `nuxt generate` with [static target](/guides/features/deployment-targets#static-hosting) to avoid re-building when no tracked file has been changed.
+Esta opción es utilizada por `nuxt generate` con [static target](/guides/features/deployment-targets#static-hosting) para evitar la reconstrucción cuando no se ha cambiado ningún archivo de seguimiento.
 
-Defaults:
+Valores predeterminados:
 
 ```js
 {
@@ -44,13 +44,13 @@ Defaults:
 }
 ```
 
-If you want to avoid re-building when changing a configuration file, just add it to the list by providing the `cache.ignore` option:
+Si desea evitar la reconstrucción al cambiar un archivo de configuración, simplemente agréguelo a la lista proporcionando la opción `cache.ignore`:
 
 ```js{}[nuxt.config.js]
 export default {
   generate: {
     cache: {
-      ignore: ['renovate.json'] // ignore changes applied on this file
+      ignore: ['renovate.json'] // ignorar los cambios aplicados en este archivo
     }
   }
 }
@@ -58,17 +58,17 @@ export default {
 
 ## concurrency
 
-- Type: `Number`
-- Default: `500`
+- Tipo: `Number`
+- Por defecto: `500`
 
-The generation of routes are concurrent, `generate.concurrency` specifies the amount of routes that run in one thread.
+La generación de rutas es concurrente, `generate.concurrency` especifica la cantidad de rutas que se ejecutan en un hilo.
 
 ## crawler
 
-- Type: `boolean`
-- Default: true
+- Tipo: `boolean`
+- Por defecto: true
 
-As of Nuxt >= v2.13 Nuxt.js comes with a crawler installed that will crawl your relative links and generate your dynamic links based on these links. If you want to disable this feature you can set the value to `false`
+A partir de Nuxt> = v2.13, Nuxt.js viene con un rastreador instalado que rastreará sus enlaces relativos y generará enlaces dinámicos basados en estos enlaces. Si desea deshabilitar esta función, puede establecer el valor en `false`
 
 ```js
 export default {
@@ -80,28 +80,28 @@ export default {
 
 ## dir
 
-- Type: `String`
-- Default: `'dist'`
+- Tipo: `String`
+- Por defecto: `'dist'`
 
-Directory name created when building the web application in static mode with `nuxt generate` or in SPA mode with `nuxt build`.
+Nombre de directorio creado al construir la aplicación web en modo estático con `nuxt generate` o en modo SPA con `nuxt build`.
 
 ## devtools
 
-- Type: `boolean`
-- Default: `false`
+- Tipo: `boolean`
+- Por defecto: `false`
 
-Configure whether to allow [vue-devtools](https://github.com/vuejs/vue-devtools) inspection.
+Configure si desea permitir la inspección de [vue-devtools](https://github.com/vuejs/vue-devtools).
 
-If you already activated through nuxt.config.js or otherwise, devtools enable regardless of the flag.
+Si ya lo activó a través de nuxt.config.js o de otra manera, devtools se habilita independientemente de la bandera.
 
 ## exclude
 
-- Type: `Array`
+- Tipo: `Array`
   - Items: `String` or `RegExp`
 
-It accepts an array of string or regular expressions and will prevent generation of routes matching them. The routes will still be accessible when `generate.fallback` is used.
+Acepta una matriz de strings o expresiones regulares y evitará la generación de rutas que las coincidan. Las rutas seguirán siendo accesibles cuando se use `generate.fallback`.
 
-Taking this examples of structure:
+Tomando estos ejemplos de estructura:
 
 ```bash
 -| pages/
@@ -111,7 +111,7 @@ Taking this examples of structure:
 -----| index.vue
 ```
 
-By default, running `nuxt generate` a file will be created for each route.
+De forma predeterminada, al ejecutar `nuxt generate` se creará un archivo para cada ruta.
 
 ```bash
 -| dist/
@@ -121,7 +121,7 @@ By default, running `nuxt generate` a file will be created for each route.
 -----| item.html
 ```
 
-When adding a regular expression which matches all routes with "ignore", it will prevent the generation of these routes.
+Al agregar una expresión regular que coincida con todas las rutas con "ignorar", evitará la generación de estas rutas.
 
 ```js{}[nuxt.config.js]
 export default {
@@ -138,7 +138,7 @@ export default {
 ---| index.html
 ```
 
-You can also exclude a specific route by giving a string:
+También puede excluir una ruta específica dando una string:
 
 ```js{}[nuxt.config.js]
 export default {
@@ -150,8 +150,8 @@ export default {
 
 ## fallback
 
-- Type: `String` or `Boolean`
-- Default: `200.html`
+- Tipo: `String` o `Boolean`
+- Por defecto: `200.html`
 
 ```js{}[nuxt.config.js]
 export default {
@@ -161,59 +161,59 @@ export default {
 }
 ```
 
-The path to the fallback HTML file. It should be set as the error page, so that also unknown routes are rendered via Nuxt. If unset or set to a falsy value, the name of the fallback HTML file will be `200.html`. If set to `true`, the filename will be `404.html`. If you provide a string as a value, it will be used instead.
+La ruta al archivo HTML de respaldo. Debe establecerse como página de error, de modo que también se representen las rutas desconocidas a través de Nuxt. Si no se establece o se establece en un valor falso, el nombre del archivo HTML de respaldo será `200.html`. Si se establece en `true`, el nombre del archivo será `404.html`. Si proporciona una cadena como valor, se utilizará en su lugar.
 
-When running a SPA it is more idiomatic to use a `200.html`, as it's the only file necessary as no other routes are generated.
+Cuando se ejecuta un SPA, es más idiomático usar un `200.html`, ya que es el único archivo necesario ya que no se generan otras rutas.
 
 ```{}[nuxt.config.js]
 fallback: false;
 ```
 
-If working with statically generated pages then it is recommended to use a `404.html` for error pages and for those covered by [excludes](https://nuxtjs.org/api/configuration-generate#exclude) (the files that you do not want generated as static pages).
+Si trabaja con páginas generadas estáticamente, se recomienda utilizar un `404.html` para las páginas de error y para aquellas cubiertas por [excludes](https://nuxtjs.org/api/configuration-generate#exclude) (los archivos que no desea que se generen como páginas estáticas).
 
 ```js{}[nuxt.config.js]
 fallback: true
 ```
 
-However, Nuxt allows you to configure any page you like so if you don't want to use the `200.html` or `404.html` you can add a string and then you just have to make sure you redirect to that page instead. This is of course not necessary and is best to redirect to `200.html`/`404.html`.
+Sin embargo, Nuxt le permite configurar cualquier página que desee, por lo que si no desea utilizar `200.html` o `404.html`, puede agregar una string y luego debe asegurarse de redirigir a esa página. en lugar. Por supuesto, esto no es necesario y es mejor redireccionarlo a `200.html`/`404.html`.
 
 ```js{}[nuxt.config.js]
 fallback: 'fallbackPage.html'
 ```
 
-_Note: Multiple services (e.g. Netlify) detect a `404.html` automatically. If you configure your webserver on your own, please consult it's documentation to find out how to set up an error page (and set it to the `404.html` file)_
+_Nota: Varios servicios (por ejemplo, Netlify) detectan un `404.html` automáticamente. Si configura su servidor web por su cuenta, consulte su documentación para averiguar cómo configurar una página de error (y configurarla en el archivo `404.html`)_
 
 ## interval
 
-- Type: `Number`
-- Default: `0`
+- Tipo: `Number`
+- Por defecto: `0`
 
-Interval between two render cycles to avoid flooding a potential API with API calls from the web application.
+Intervalo entre dos ciclos de renderizado para evitar inundar una API potencial con llamadas a API desde la aplicación web.
 
 ## minify
 
-- **Deprecated!**
-- Use [build.html.minify](/guides/configuration-glossary/configuration-build#htmlminify) instead
+- **Obsoleto!**
+- Use [build.html.minify](/guides/configuration-glossary/configuration-build#htmlminify) en su lugar
 
 ## routes
 
-- Type: `Array`
+- Tipo: `Array`
 
 <base-alert type="info">
 
-As of Nuxt v2.13 there is a crawler installed that will crawl your link tags and generate your routes when running `nuxt generate`.
+A partir de Nuxt v2.13, hay un rastreador instalado que rastreará las etiquetas de sus enlaces y generará sus rutas cuando ejecute `nuxt generate`.
 
-If have unlinked pages (such as secret pages) and you would like these to also be generated then you can use the `generate.routes` property.
+Si tiene páginas no vinculadas (como páginas secretas) y desea que también se generen, puede utilizar la propiedad `generate.routes`.
 
 </base-alert>
 
 <base-alert>
 
-Dynamic routes are ignored by the `generate` command when using `Nuxt <= v2.12`
+Las rutas dinámicas son ignoradas por el comando `generate` cuando se usa `Nuxt <= v2.12`
 
 </base-alert>
 
-Example:
+Ejemplo:
 
 ```bash
 -| pages/
@@ -222,11 +222,11 @@ Example:
 -----| _id.vue
 ```
 
-Only the route `/` will be generated by Nuxt.js.
+Solo la ruta `/` será generada por Nuxt.js.
 
-If you want Nuxt.js to generate routes with dynamic params, you need to set the `generate.routes` property to an array of dynamic routes.
+Si desea que Nuxt.js genere rutas con parámetros dinámicos, debe establecer la propiedad `generate.routes` en una matriz de rutas dinámicas.
 
-We add routes for `/users/:id`:
+Agregamos rutas para `/users/:id`:
 
 ```js{}[nuxt.config.js]
 export default {
@@ -236,7 +236,7 @@ export default {
 }
 ```
 
-Then when we launch `nuxt generate`:
+Luego, cuando lanzamos `nuxt generate`:
 
 ```bash
 [nuxt] Generating...
@@ -253,12 +253,12 @@ nuxt:generate HTML Files generated in 7.6s +6ms
 [nuxt] Generate done
 ```
 
-Great, but what if we have **dynamic params**?
+Genial, pero ¿y si tenemos **parámetros dinámicos**?
 
-1. Use a `Function` which returns a `Promise`.
-2. Use a `Function` with a `callback(err, params)`.
+1. Use una `Función` que devuelva una `Promesa`.
+2. Use una `Función` con un `callback(err, params)`.
 
-### Function which returns a Promise
+### Función que devuelve una Promesa
 
 ```js{}[nuxt.config.js]
 import axios from 'axios'
@@ -276,7 +276,7 @@ export default {
 }
 ```
 
-### Function with a callback
+### Función con un callback
 
 ```js{}[nuxt.config.js]
 import axios from 'axios'
@@ -298,9 +298,9 @@ export default {
 }
 ```
 
-### Speeding up dynamic route generation with `payload`
+### Acelerar la generación de rutas dinámicas con `payload`
 
-In the example above, we're using the `user.id` from the server to generate the routes but tossing out the rest of the data. Typically, we need to fetch it again from inside the `/users/_id.vue`. While we can do that, we'll probably need to set the `generate.interval` to something like `100` in order not to flood the server with calls. Because this will increase the run time of the generate script, it would be preferable to pass along the entire `user` object to the context in `_id.vue`. We do that by modifying the code above to this:
+En el ejemplo anterior, estamos usando el `user.id` del servidor para generar las rutas, pero desechando el resto de los datos. Por lo general, necesitamos recuperarlo desde dentro de `/users/_id.vue`. Si bien podemos hacer eso, probablemente necesitemos establecer el `generate.interval` en algo como `100` para no inundar el servidor con llamadas. Debido a que esto aumentará el tiempo de ejecución del script de generación, sería preferible pasar todo el objeto `user` al contexto en `_id.vue`. Lo hacemos modificando el código anterior a esto:
 
 ```js{}[nuxt.config.js]
 import axios from 'axios'
@@ -321,7 +321,7 @@ export default {
 }
 ```
 
-Now we can access the `payload` from `/users/_id.vue` like so:
+Ahora podemos acceder al `payload` desde `/users/_id.vue` así:
 
 ```js
 async asyncData ({ params, error, payload }) {
@@ -332,12 +332,12 @@ async asyncData ({ params, error, payload }) {
 
 ## subFolders
 
-- Type: `Boolean`
-- Default: `true`
+- Tipo: `Boolean`
+- Por defecto: `true`
 
-By default, when running `nuxt generate`, Nuxt.js will create a directory for each route & serve an `index.html` file.
+De forma predeterminada, cuando se ejecuta `nuxt generate`, Nuxt.js creará un directorio para cada ruta y proporcionará un archivo `index.html`.
 
-Example:
+Ejemplo:
 
 ```bash
 -| dist/
@@ -349,7 +349,7 @@ Example:
 -------| index.html
 ```
 
-When set to false, HTML files are generated according to the route path:
+Cuando se establece en falso, los archivos HTML se generan de acuerdo con la ruta de la ruta:
 
 ```js{}[nuxt.config.js]
 export default {

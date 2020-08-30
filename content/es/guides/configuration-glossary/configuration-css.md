@@ -1,40 +1,40 @@
 ---
-title: 'The css Property'
-description: Nuxt.js lets you define the CSS files/modules/libraries you want to set globally (included in every page).
+title: 'La propiedad css'
+description: Nuxt.js te permite definir los archivos/módulos/bibliotecas CSS que desea configurar globalmente (incluidos en cada página).
 menu: css
 category: configuration-glossary
 position: 4
 ---
 
-> Nuxt.js lets you define the CSS files/modules/libraries you want to set globally (included in every page).
+> Nuxt.js te permite definir los archivos/módulos/bibliotecas CSS que desea configurar globalmente (incluidos en cada página).
 
-In case you want to use `sass` make sure that you have installed `node-sass` and `sass-loader` packages. If you didn't just
+En caso de que desee utilizar `sass` asegúrese de haber instalado los paquetes `node-sass` y `sass-loader`. Si no solo
 
 ```sh
 npm install --save-dev node-sass sass-loader
 ```
 
-- Type: `Array`
+- Tipo: `Array`
   - Items: `string`
 
 ```js{}[nuxt.config.js]
 export default {
   css: [
-    // Load a Node.js module directly (here it's a Sass file)
+    // Cargue un módulo Node.js directamente (aquí es un archivo Sass)
     'bulma',
-    // CSS file in the project
+    // Archivo CSS en el proyecto
     '@/assets/css/main.css',
-    // SCSS file in the project
+    // Archivo SCSS en el proyecto
     '@/assets/css/main.scss'
   ]
 }
 ```
 
-Nuxt.js will automatically guess the file type by its extension and use the appropriate pre-processor loader for webpack. You will still need to install the required loader if you need to use them.
+Nuxt.js adivinará automáticamente el tipo de archivo por su extensión y usará el cargador de preprocesador apropiado para webpack. Aún necesitará instalar el cargador requerido si necesita usarlos.
 
-### Style Extensions
+### Extensiones de estilo
 
-You can omit the file extension for CSS/SCSS/Postcss/Less/Stylus/... files listed in the css array in your nuxt config file.
+Puede omitir la extensión de archivo para los archivos CSS/SCSS/Postcss/Less/Stylus/... enumerados en el array css en su archivo de configuración nuxt.
 
 ```js{}[nuxt.config.js]
 export default {
@@ -44,8 +44,8 @@ export default {
 
 <base-alert>
 
-If you have two files with the same name eg. `main.scss` and `main.css`, and don't specify an extension in the css array entry, eg. `css: ['~/assets/css/main']`, then only one file will be loaded depending on the order of `styleExtensions`. In this case only the `css` file will be loaded and the `scss` file will be ignored because `css` comes first in the default `styleExtension` array.
+Si tiene dos archivos con el mismo nombre, por ejemplo. `main.scss` y `main.css`, y no especifique una extensión en la entrada del array css, por ejemplo. `css: ['~/assets/css/main']`, entonces solo se cargará un archivo dependiendo del orden de `styleExtensions`. En este caso, solo se cargará el archivo `css` y se ignorará el archivo `scss` porque `css` es lo primero en el array `styleExtension` predeterminado.
 
 </base-alert>
 
-Default order: `['css', 'pcss', 'postcss', 'styl', 'stylus', 'scss', 'sass', 'less']`
+Orden predeterminado: `['css', 'pcss', 'postcss', 'styl', 'stylus', 'scss', 'sass', 'less']`

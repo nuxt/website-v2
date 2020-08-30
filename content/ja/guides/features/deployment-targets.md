@@ -11,7 +11,7 @@ category: features
 
 ```js{}[nuxt.config.js]
 export default {
-  target: 'static' // default is 'server'
+  target: 'static' // デフォルトは 'server'
 }
 ```
 

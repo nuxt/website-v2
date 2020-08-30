@@ -11,7 +11,7 @@ category: features
 
 ```js{}[nuxt.config.js]
 export default {
-  mode: 'universal' // default universal
+  mode: 'universal' // デフォルトは universal
 }
 ```
 
@@ -27,7 +27,7 @@ export default {
 
 ```js{}[nuxt.config.js]
 export default {
-  mode: 'spa' // default universal
+  mode: 'spa' // デフォルトは universal
 }
 ```
 

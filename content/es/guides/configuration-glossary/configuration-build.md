@@ -383,7 +383,7 @@ Configuración para el complemento [html-minifier](https://github.com/kangax/htm
 
 > Más detalles en las [opciones del file-loader](https://github.com/webpack-contrib/file-loader#options).
 
-### loaders.fontUrl and loaders.imgUrl
+### loaders.fontUrl y loaders.imgUrl
 
 > Más detalles en las [opciones del url-loader](https://github.com/webpack-contrib/url-loader#options).
 
@@ -403,7 +403,7 @@ Configuración para el complemento [html-minifier](https://github.com/kangax/htm
 
 > Puede pasar cualquier opción específica de Less al `less-loader` a través de `loaders.less`. Mira la [documentación de Less](http://lesscss.org/usage/#command-line-usage-options) para todas las opciones disponibles en dash-case.
 
-### loaders.sass and loaders.scss
+### loaders.sass y loaders.scss
 
 > Mira la [documentación de Node Sass](https://github.com/sass/node-sass/blob/master/README.md#options) para todas las opciones disponibles de Sass. Note: `loaders.sass` es para [Sass Indented Syntax](http://sass-lang.com/documentation/file.INDENTED_SYNTAX.html)
 
@@ -547,7 +547,7 @@ export default {
 }
 ```
 
-### complementos postcss & nuxt-tailwindcss
+### complementos postcss y nuxt-tailwindcss
 
 Si desea aplicar el complemento postcss (por ejemplo, postcss-pxtorem) en la configuración de nuxt-tailwindcss, debe cambiar el orden y cargar primero tailwindcss.
 

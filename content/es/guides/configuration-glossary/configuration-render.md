@@ -1,18 +1,18 @@
 ---
-title: 'The render Property'
-description: Nuxt.js lets you customize runtime options for rendering pages
+title: 'La propiedad render'
+description: Nuxt.js le permite personalizar las opciones de tiempo de ejecución para representar páginas
 menu: render
 category: configuration-glossary
 position: 22
 ---
 
-> Nuxt.js lets you customize runtime options for rendering pages
+> Nuxt.js le permite personalizar las opciones de tiempo de ejecución para representar páginas
 
 ## bundleRenderer
 
-- Type: `Object`
+- Tipo: `Object`
 
-> Use this option to customize vue SSR bundle renderer. This option is skipped for spa mode.
+> Utilice esta opción para personalizar el renderizador de paquetes vue SSR. Esta opción se omite para el modo spa.
 
 ```js{}[nuxt.config.js]
 export default {
@@ -28,18 +28,18 @@ export default {
 }
 ```
 
-Learn more about available options on [Vue SSR API Reference](https://ssr.vuejs.org/en/api.html#renderer-options). It is recommended to not use this option as Nuxt.js is already providing best SSR defaults and misconfiguration might lead to SSR problems.
+Obtenga más información sobre las opciones disponibles en [Vue SSR API Reference](https://ssr.vuejs.org/en/api.html#renderer-options). Se recomienda no utilizar esta opción, ya que Nuxt.js ya proporciona los mejores valores predeterminados de SSR y una configuración incorrecta puede provocar problemas de SSR.
 
 ## etag
 
-- Type: `Object`
-  - Default: `{ weak: true }`
+- Tipo: `Object`
+  - Por defecto: `{ weak: true }`
 
-To disable etag for pages set `etag: false`
+Para deshabilitar etag para las páginas, configure `etag: false`
 
-See [etag](https://www.npmjs.com/package/etag) docs for possible options.
+Consulte los documentos de [etag](https://www.npmjs.com/package/etag) para conocer las posibles opciones.
 
-You can use your own hash function by specifying `etag.hash`:
+Puede usar su propia función hash especificando `etag.hash`:
 
 ```js{}[nuxt.config.js]
 import { murmurHash128 } from 'murmurhash-native'
@@ -53,38 +53,38 @@ export default {
 }
 ```
 
-In this case we use [murmurhash-native](https://github.com/royaltm/node-murmurhash-native), which is faster for larger html body sizes. Note that the `weak` option is ignored, when specifying your own hash function.
+En este caso usamos [murmurhash-native](https://github.com/royaltm/node-murmurhash-native), que es más rápido para tamaños corporales html más grandes. Tenga en cuenta que la opción `weak` se ignora al especificar su propia función hash.
 
 ## compressor
 
-- Type `Object`
-  - Default: `{ threshold: 0 }`
+- Tipo `Object`
+  - Por defecto: `{ threshold: 0 }`
 
-When providing an object, the [compression](https://www.npmjs.com/package/compression) middleware will be used (with respective options).
+Al proporcionar un objeto, se utilizará el middleware [compression](https://www.npmjs.com/package/compression) (con las opciones respectivas).
 
-If you want to use your own compression middleware, you can reference it directly (f.ex. `otherComp({ myOptions: 'example' })`).
+Si desea utilizar su propio middleware de compresión, puede hacer referencia a él directamente (p. Ej., `otherComp ({ myOptions: 'example' })`).
 
-To disable compression, use `compressor: false`.
+Para deshabilitar la compresión, use `compressor: false`.
 
 ## fallback
 
-- Type `Object`
-  - Default: `{ dist: {}, static: { skipUnknown: true } }`
+- Tipo `Object`
+  - Por defecto: `{ dist: {}, static: { skipUnknown: true } }`
 
-> Options for [serve-placeholder](https://github.com/nuxt/serve-placeholder) middleware.
+> Opciones para el middleware [serve-placeholder](https://github.com/nuxt/serve-placeholder).
 
-If you want to disable one of them or both, you can pass a falsy value.
+Si desea deshabilitar uno de ellos o ambos, puede pasar un valor falso.
 
 ## http2
 
-- Type `Object`
-  - Default: `{ push: false, pushAssets: null }`
+- Tipo `Object`
+  - Por defecto: `{ push: false, pushAssets: null }`
 
-> Activate HTTP2 push headers.
+> Active los encabezados push HTTP2.
 
-You can control what links to push using `pushAssets` function.
+Puede controlar qué enlaces enviar mediante la función `pushAssets`.
 
-Example:
+Ejemplo:
 
 ```js
 pushAssets: (req, res, publicPath, preloadFiles) =>
@@ -93,94 +93,94 @@ pushAssets: (req, res, publicPath, preloadFiles) =>
     .map(f => `<${publicPath}${f.file}>; rel=preload; as=${f.asType}`)
 ```
 
-You can add your own assets to the array as well. Using `req` and `res` you can decide what links to push based on the request headers, for example using the cookie with application version.
+También puede agregar sus propios activos a la matriz. Usando `req` y `res` puede decidir qué enlaces enviar basándose en los encabezados de la solicitud, por ejemplo, usando la cookie con la versión de la aplicación.
 
-The assets will be joined together with `,` and passed as a single `Link` header.
+Los activos se unirán con `,` y se pasarán como un solo encabezado `Link`.
 
 ## injectScripts
 
-- Type: `Boolean`
-  - Default: `true`
+- Tipo: `Boolean`
+  - Por defecto: `true`
 
-> Adds the `<script>` for Nuxt bundles, set it to `false` to render pure HTML without JS (available with `2.8.0+`)
+> Agrega el `<script>` para los paquetes Nuxt, configúrelo en `false` para renderizar HTML puro sin JS (disponible con `2.8.0 +`)
 
 ## resourceHints
 
-- Type: `Boolean`
-  - Default: `true`
+- Tipo: `Boolean`
+  - Por defecto: `true`
 
-> Adds `prefetch` and `preload` links for faster initial page load time.
+> Agrega enlaces `prefetch` y `preload` para acelerar el tiempo de carga inicial de la página.
 
-You may want to only disable this option if you have many pages and routes.
+Es posible que solo desee deshabilitar esta opción si tiene muchas páginas y rutas.
 
 ## ssr
 
-- Type: `Boolean`
-  - Default: `true` on universal mode and `false` on spa mode
+- Tipo: `Boolean`
+  - Por defecto: `true` en modo universal y `false`  en modo spa
 
-> Enable SSR rendering
+> Habilitar la representación SSR
 
-This option is automatically set based on `mode` value if not provided. This can be useful to dynamically enable/disable SSR on runtime after image builds (with docker for example).
+Esta opción se establece automáticamente en función del valor de `modo` si no se proporciona. Esto puede ser útil para habilitar / deshabilitar SSR dinámicamente en tiempo de ejecución después de la construcción de la imagen (con Docker, por ejemplo).
 
 ## crossorigin
 
-- Type: `String`
-- Default: `undefined`
+- Tipo: `String`
+- Por defecto: `undefined`
 
-  Configure the `crossorigin` attribute on `<link rel="stylesheet">` and `<script>` tags in generated HTML.
+  Configure el atributo `crossorigin` en las etiquetas `<link rel = "stylesheet">` y `<script>` en el HTML generado.
 
-  More Info: [CORS settings attributes](https://developer.mozilla.org/en-US/docs/Web/HTML/CORS_settings_attributes)
+  Más información en: [CORS settings attributes](https://developer.mozilla.org/en-US/docs/Web/HTML/CORS_settings_attributes)
 
 ## ssrLog
 
-- Type: `Boolean` | `String`
-  - Default: `true` in dev mode and `false` in production
+- Tipo: `Boolean` | `String`
+  - Por defecto: `true` en modo de desarrollo y `false` en producción
 
-> Forward server-side logs to the browser for better debugging (only available in development)
+> Reenvíe los registros del lado del servidor al navegador para una mejor depuración (solo disponible en desarrollo)
 
-To collapse the logs, use `'collapsed'` value.
+Para contraer los registros, use el valor `'collapsed'`.
 
 ## static
 
-- Type: `Object`
-  - Default: `{}`
+- Tipo: `Object`
+  - Por defecto: `{}`
 
-> Configure the `static/` directory behaviour
+> Configure el comportamiento del directorio `static/`
 
-See [serve-static](https://www.npmjs.com/package/serve-static) docs for possible options.
+Consulte los documentos de [serve-static](https://www.npmjs.com/package/serve-static) para conocer las posibles opciones.
 
-Additional to them, we introduced a `prefix` option which defaults to `true`. It will add the router base to your static assets.
+Además de ellos, introdujimos una opción de `prefix` que por defecto es `true`. Agregará la base del enrutador a sus activos estáticos.
 
-**Example:**
+**Ejemplo:**
 
 - Assets: `favicon.ico`
-- Router base: `/t`
-- With `prefix: true` (default): `/t/favicon.ico`
-- With `prefix: false`: `/favicon.ico`
+- Base de enrutador: `/t`
+- Con `prefix: true` (por defecto): `/t/favicon.ico`
+- Con `prefix: false`: `/favicon.ico`
 
-**Caveats:**
+**Advertencias:**
 
-Some URL rewrites might not respect the prefix.
+Es posible que algunas reescrituras de URL no respeten el prefijo.
 
 ## dist
 
-- Type: `Object`
-  - Default: `{ maxAge: '1y', index: false }`
+- Tipo: `Object`
+  - Por defecto: `{ maxAge: '1y', index: false }`
 
-> Options used for serving distribution files. Only applicable in production.
+> Opciones utilizadas para entregar archivos de distribución. Solo aplicable en producción.
 
-See [serve-static](https://www.npmjs.com/package/serve-static) docs for possible options.
+Consulte los documentos de [serve-static](https://www.npmjs.com/package/serve-static) para conocer las posibles opciones.
 
 ## csp
 
-- Type: `Boolean` or `Object`
-  - Default: `false`
+- Tipo: `Boolean` o `Object`
+  - Por defecto: `false`
 
-> Use this to configure to load external resources of Content-Security-Policy
+> Use esto para configurar la carga de recursos externos de Content-Security-Policy
 
-Note that CSP hashes will not be added if `script-src` policy contains `'unsafe-inline'`. This is due to browser ignoring `'unsafe-inline'` if hashes are present. Set option `unsafeInlineCompatibility` to `true` if you want both hashes and `'unsafe-inline'` for CSPv1 compatibility.
+Tenga en cuenta que los hash de CSP no se agregarán si la política `script-src` contiene `'unsafe-inline'`. Esto se debe a que el navegador ignora `'unsafe-inline'` si hay hashes presentes. Establezca la opción `unsafeInlineCompatibility` en `true` si desea tanto hashes como `'unsafe-inline'` para compatibilidad con CSPv1.
 
-In order to add [`<meta http-equiv="Content-Security-Policy"/>`](https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP) with all the CSP policies you need to set `csp.addMeta` to `true`.
+Para agregar [`<meta http-equiv =" Content-Security-Policy "/>`](https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP) con todos los CSP políticas que necesita para establecer `csp.addMeta` en `true`.
 
 ```js{}[nuxt.config.js]
 export default {
@@ -189,7 +189,7 @@ export default {
   }
 }
 
-// OR
+// O
 
 export default {
   render: {
@@ -207,15 +207,15 @@ export default {
   }
 }
 
-// OR
+// O
 /*
-  The following example allows Google Analytics, LogRocket.io, and Sentry.io
-  for logging and analytic tracking.
+  El siguiente ejemplo permite a Google Analytics, LogRocket.io y Sentry.io
+  para registro y seguimiento analítico.
 
-  Review to this blog on Sentry.io
+  Revise este blog en Sentry.io
   https://blog.sentry.io/2018/09/04/how-sentry-captures-csp-violations
 
-  To learn what tracking link you should use.
+  Para saber qué enlace de seguimiento debe utilizar.
 */
 const PRIMARY_HOSTS = `loc.example-website.com`
 export default {

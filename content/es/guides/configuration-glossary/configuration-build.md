@@ -149,7 +149,7 @@ Si ya lo activó a través de nuxt.config.js o de otra manera, devtools se habil
 
 - Tipo: `Function`
 
-The extend is called twice, one time for the server bundle, and one time for the client bundle. The arguments of the method are:
+La extensión se llama dos veces, una vez para el paquete del servidor y una vez para el paquete del cliente. Los argumentos del método son:
 
 1. El objeto de configuración de Webpack,
 2. Un objeto con las siguientes llaves (todas son boolean excepto `loaders`): `isDev`, `isClient`, `isServer`, `loaders`.

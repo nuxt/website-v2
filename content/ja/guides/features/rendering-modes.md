@@ -7,7 +7,7 @@ category: features
 
 ## ユニバーサル
 
-`mode: 'universal'`: アイソモーフィックなアプリケーション (サーバーサイドレンダリング、または静的なサイト).
+`mode: 'universal'`: アイソモーフィックなアプリケーション (サーバーサイドレンダリング、または静的なサイト)
 
 ```js{}[nuxt.config.js]
 export default {
@@ -23,7 +23,7 @@ export default {
 
 `mode: 'spa'`: サーバーサイドレンダリングを行わない (クライアントでのナビゲーションのみ)
 
-`mode` プロパティを利用することで、あなたのプロジェクトのデフォルトの nuxt のモードを変更することができます。
+`mode` プロパティを利用することで、あなたのプロジェクトのデフォルトの nuxt のモードを変更することができます:
 
 ```js{}[nuxt.config.js]
 export default {

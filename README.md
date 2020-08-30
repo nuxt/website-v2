@@ -29,6 +29,12 @@ The markdown files are stored in the content folder.
 - You can then start translating your files.
 - Once finished push your changes and then create a pull request.
 
+## Contribute to Nuxtjs.org Persian translation
+
+If you are interested in contributing to the Persian translation of Nuxtjs.org please follow the issue below for further information on how the work is going on:
+
+[https://github.com/nuxt/nuxtjs.org/issues/555](https://github.com/nuxt/nuxtjs.org/issues/555)
+
 ## Development
 
 Start the dev server on [http://localhost:3000](http://localhost:3000)

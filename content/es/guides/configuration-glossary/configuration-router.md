@@ -1,23 +1,23 @@
 ---
-title: 'The router Property'
-description: The router property lets you customize Nuxt.js router.
+title: 'La propiedad router'
+description: La propiedad del enrutador le permite personalizar el enrutador Nuxt.js.
 menu: router
 category: configuration-glossary
 position: 24
 ---
 
-> The router property lets you customize Nuxt.js router ([vue-router](https://router.vuejs.org/en/)).
+> La propiedad del enrutador le permite personalizar el enrutador Nuxt.js ([vue-router](https://router.vuejs.org/en/)).
 
 ## base
 
-- Type: `String`
-- Default: `'/'`
+- Tipo: `String`
+- Por defecto: `'/'`
 
-The base URL of the app. For example, if the entire single page application is served under `/app/`, then base should use the value `'/app/'`.
+La URL base de la aplicación. Por ejemplo, si la aplicación completa de una sola página se sirve en `/app/`, entonces la base debe usar el valor `'/app/'`.
 
-This can be useful if you need to serve Nuxt as a different context root, from within a bigger Web site. Notice that you may, or may not set up a Front Proxy Web Server.
+Esto puede resultar útil si necesita servir Nuxt como una raíz de contexto diferente, desde un sitio web más grande. Tenga en cuenta que puede configurar o no un servidor web proxy frontal.
 
-If you want to have a redirect to `router.base`, you can do so [using a Hook, see _Redirect to router.base when not on root_](/guides/configuration-glossary/configuration-hooks#redirect-to-routerbase-when-not-on-root).
+Si desea tener una redirección a `router.base`, puede hacerlo [usando un Hook, consulte _Redirect to router.base when not in root _](/guides/configuration-glossary/configuration-hooks#redirect-to-routerbase-when-not-on-root).
 
 ```js{}[nuxt.config.js]
 export default {
@@ -29,18 +29,18 @@ export default {
 
 <div class="Alert Alert-blue">
 
-When `base` is set, Nuxt.js will also add in the document header `<base href="{{ router.base }}"/>`.
+Cuando se establece `base`, Nuxt.js también agregará en el encabezado del documento` <base href="{{router.base}}"/> `.
 
 </div>
 
-> This option is given directly to the vue-router [base](https://router.vuejs.org/api/#base).
+> Esta opción se proporciona directamente al vue-router [base](https://router.vuejs.org/api/#base).
 
 ## routeNameSplitter
 
-- Type: `String`
-- Default: `'-'`
+- Tipo: `String`
+- Por defecto: `'-'`
 
-You may want to change the separator between route names that Nuxt.js uses. You can do so via the `routeNameSplitter` option in your configuration file. Imagine we have the page file `pages/posts/_id.vue`. Nuxt will generate the route name programatically, in this case `posts-id`. Changing the `routeNameSplitter` config to `/` the name will therefore change to `posts/id`.
+Es posible que desee cambiar el separador entre los nombres de ruta que usa Nuxt.js. Puede hacerlo a través de la opción `routeNameSplitter` en su archivo de configuración. Imagina que tenemos el archivo de página `pages/posts/_id.vue`. Nuxt generará el nombre de la ruta mediante programación, en este caso, `posts-id`. Al cambiar la configuración de `routeNameSplitter` a `/`, el nombre cambiará a `posts/id`.
 
 ```js{}[nuxt.config.js]
 export default {
@@ -52,9 +52,9 @@ export default {
 
 ## extendRoutes
 
-- Type: `Function`
+- Tipo: `Function`
 
-You may want to extend the routes created by Nuxt.js. You can do so via the `extendRoutes` option.
+Es posible que desee ampliar las rutas creadas por Nuxt.js. Puede hacerlo a través de la opción `extendRoutes`.
 
 ```js{}[nuxt.config.js]
 export default {
@@ -70,27 +70,27 @@ export default {
 }
 ```
 
-If you want to sort your routes, you can use the `sortRoutes(routes)` function from `@nuxt/utils`:
+Si desea ordenar sus rutas, puede usar la función `sortRoutes(routes)` de `@nuxt/utils`:
 
 ```js{}[nuxt.config.js]
 import { sortRoutes } from '@nuxt/utils'
 export default {
   router: {
     extendRoutes(routes, resolve) {
-      // Add some routes here ...
+      // Agrega algunas rutas aquí ...
 
-      // and then sort them
+      // Y luego ordenalas
       sortRoutes(routes)
     }
   }
 }
 ```
 
-The schema of the route should respect the [vue-router](https://router.vuejs.org/en/) schema.
+El esquema de la ruta debe respetar el esquema [vue-router](https://router.vuejs.org/en/).
 
 <base-alert>
 
-When adding routes that use Named Views, don't forget to add the corresponding `chunkNames` of named `components`.
+Cuando agregue rutas que usen Vistas nombradas, no olvide agregar los `chunkNames` correspondientes de los `components` nombrados.
 
 </base-alert>
 
@@ -101,7 +101,7 @@ export default {
       routes.push({
         path: '/users/:id',
         components: {
-          default: resolve(__dirname, 'pages/users'), // or routes[index].component
+          default: resolve(__dirname, 'pages/users'), // o routes[index].component
           modal: resolve(__dirname, 'components/modal.vue')
         },
         chunkNames: {
@@ -115,21 +115,21 @@ export default {
 
 ## fallback
 
-- Type: `boolean`
-- Default: `false`
+- Tipo: `boolean`
+- Por defecto: `false`
 
-Controls whether the router should fallback to hash mode when the browser does not support history.pushState but mode is set to history.
+Controla si el enrutador debe volver al modo hash cuando el navegador no admite history.pushState pero el modo está configurado en history.
 
-Setting this to false essentially makes every router-link navigation a full page refresh in IE9. This is useful when the app is server-rendered and needs to work in IE9, because a hash mode URL does not work with SSR.
+Establecer esto en falso esencialmente hace que cada navegación de enlace de enrutador sea una actualización de página completa en IE9. Esto es útil cuando la aplicación está renderizada por el servidor y necesita funcionar en IE9, porque una URL en modo hash no funciona con SSR.
 
-> This option is given directly to the vue-router [fallback](https://router.vuejs.org/api/#fallback).
+> Esta opción se proporciona directamente al vue-router [fallback](https://router.vuejs.org/api/#fallback).
 
 ## linkActiveClass
 
-- Type: `String`
-- Default: `'nuxt-link-active'`
+- Tipo: `String`
+- Por defecto: `'nuxt-link-active'`
 
-Globally configure [`<nuxt-link>`](/guides/features/nuxt-components#the-nuxtlink-component) default active class.
+Configure globalmente [`<nuxt-link>`](/guides/features/nuxt-components#the-nuxtlink-component) clase activa predeterminada.
 
 ```js{}[nuxt.config.js]
 export default {
@@ -139,14 +139,14 @@ export default {
 }
 ```
 
-> This option is given directly to the vue-router [linkactiveclass](https://router.vuejs.org/api/#linkactiveclass).
+> Esta opción se proporciona directamente al vue-router [linkactiveclass](https://router.vuejs.org/api/#linkactiveclass).
 
 ## linkExactActiveClass
 
-- Type: `String`
-- Default: `'nuxt-link-exact-active'`
+- Tipo: `String`
+- Por defecto: `'nuxt-link-exact-active'`
 
-Globally configure [`<nuxt-link>`](/guides/features/nuxt-components#the-nuxtlink-component) default exact active class.
+Configure globalmente [`<nuxt-link>`](/guides/features/nuxt-components#the-nuxtlink-component) clase activa predeterminada.
 
 ```js{}[nuxt.config.js]
 export default {
@@ -156,14 +156,14 @@ export default {
 }
 ```
 
-> This option is given directly to the vue-router [linkexactactiveclass](https://router.vuejs.org/api/#linkexactactiveclass).
+> Esta opción se proporciona directamente al vue-router [linkexactactiveclass](https://router.vuejs.org/api/#linkexactactiveclass).
 
 ## linkPrefetchedClass
 
-- Type: `String`
-- Default: `false`
+- Tipo: `String`
+- Por defecto: `false`
 
-Globally configure [`<nuxt-link>`](/guides/features/nuxt-components#the-nuxtlink-component) default prefetch class (feature disabled by default)
+Configure globalmente [`<nuxt-link>`](/guides/features/nuxt-components#the-nuxtlink-component) clase de _prefetch_ predeterminada (característica deshabilitada de manera predeterminada)
 
 ```js{}[nuxt.config.js]
 export default {
@@ -175,15 +175,15 @@ export default {
 
 ## middleware
 
-- Type: `String` or `Array`
+- Tipo: `String` o `Array`
   - Items: `String`
 
-Set the default(s) middleware for every page of the application.
+Establezca el middleware predeterminado para cada página de la aplicación.
 
 ```js{}[nuxt.config.js]
 export default {
   router: {
-    // Run the middleware/user-agent.js on every page
+    // Ejecute el middleware / user-agent.js en cada página
     middleware: 'user-agent'
   }
 }
@@ -191,21 +191,21 @@ export default {
 
 ```js{}[middleware/user-agent.js]
 export default function (context) {
-  // Add the userAgent property in the context (available in `asyncData` and `fetch`)
+  // Agregue la propiedad userAgent en el contexto (disponible en `asyncData` y` fetch`)
   context.userAgent = process.server
     ? context.req.headers['user-agent']
     : navigator.userAgent
 }
 ```
 
-To learn more about the middleware, see the [middleware guide](/guides/directory-structure/middleware#router-middleware).
+Para obtener más información sobre el middleware, consulte la [guía de middleware](/guides/directory-structure/middleware#router-middleware).
 
 ## mode
 
-- Type: `String`
-- Default: `'history'`
+- Tipo: `String`
+- Por defecto: `'history'`
 
-Configure the router mode, this is not recommended to change it due to server-side rendering.
+Configure el modo de enrutador, no se recomienda cambiarlo debido a la representación del lado del servidor.
 
 ```js{}[nuxt.config.js]
 export default {
@@ -215,26 +215,26 @@ export default {
 }
 ```
 
-> This option is given directly to the vue-router [mode](https://router.vuejs.org/api/#mode).
+> Esta opción se da directamente al vue-router [mode](https://router.vuejs.org/api/#mode).
 
 ## parseQuery / stringifyQuery
 
-- Type: `Function`
+- Tipo: `Function`
 
-Provide custom query string parse / stringify functions. Overrides the default.
+Proporcione funciones personalizadas de análisis / procesamiento de cadenas de cadenas de consulta. Reemplaza el predeterminado.
 
-> This option is given directly to the vue-router [parseQuery / stringifyQuery](https://router.vuejs.org/api/#parsequery-stringifyquery).
+> Esta opción se da directamente al vue-router [parseQuery / stringifyQuery](https://router.vuejs.org/api/#parsequery-stringifyquery).
 
 ## prefetchLinks
 
-> Added with Nuxt v2.4.0
+> Añadido con Nuxt v2.4.0
 
-- Type: `Boolean`
-- Default: `true`
+- Tipo: `Boolean`
+- Por defecto: `true`
 
-Configure `<nuxt-link>` to prefetch the _code-splitted_ page when detected within the viewport. Requires [IntersectionObserver](https://developer.mozilla.org/en-US/docs/Web/API/Intersection_Observer_API) to be supported (see [CanIUse](https://caniuse.com/#feat=intersectionobserver)).
+Configure `<nuxt-link>` para obtener previamente la página _code-splitted_ cuando se detecte dentro de la ventana gráfica. Requiere que [IntersectionObserver](https://developer.mozilla.org/en-US/docs/Web/API/Intersection_Observer_API) sea compatible (consulte [CanIUse](https://caniuse.com/#feat=intersectionobserver)) .
 
-We recommend conditionally polyfilling this feature with a service like [Polyfill.io](https://polyfill.io):
+Recomendamos rellenar condicionalmente esta función con un servicio como [Polyfill.io](https://polyfill.io):
 
 ```js{}[nuxt.config.js]
 export default {
@@ -250,14 +250,14 @@ export default {
 }
 ```
 
-To disable the prefetching on a specific link, you can use the `no-prefetch` prop. Since Nuxt.js v2.10.0, you can also use the `prefetch` prop set to `false`:
+Para deshabilitar _prefetching_ en un enlace específico, puede usar la opción `no-prefetch`. Desde Nuxt.js v2.10.0, también puede usar el conjunto de accesorios `prefetch` en `false`:
 
 ```html
 <nuxt-link to="/about" no-prefetch>About page not pre-fetched</nuxt-link>
 <nuxt-link to="/about" :prefetch="false">About page not pre-fetched</nuxt-link>
 ```
 
-To disable the prefetching on all links, set the `prefetchLinks` to `false`:
+Para deshabilitar _prefetching_ en todos los enlaces, configure el `prefetchLinks` to `false`:
 
 ```js{}[nuxt.config.js]
 export default {
@@ -267,7 +267,7 @@ export default {
 }
 ```
 
-Since Nuxt.js v2.10.0, if you have set `prefetchLinks` to `false` but you want to prefetch a specific link, you can use the `prefetch` prop:
+Desde Nuxt.js v2.10.0, si ha establecido `prefetchLinks` en `false` pero desea obtener un enlace específico, puede usar la opción `prefetch`:
 
 ```html
 <nuxt-link to="/about" prefetch>About page pre-fetched</nuxt-link>
@@ -275,22 +275,22 @@ Since Nuxt.js v2.10.0, if you have set `prefetchLinks` to `false` but you want t
 
 ## prefetchPayloads
 
-> Added with v2.13.0, only available for [static target](/guides/features/deployment-targets#static-hosting).
+> Agregado con v2.13.0, solo disponible para [objetivos estáticos](/guides/features/deployment-targets#static-hosting).
 
-- Type: `Boolean`
-- Default: `true`
+- Tipo: `Boolean`
+- Por defecto: `true`
 
-When using `nuxt generate` with `target: 'static'`, Nuxt will generate a `payload.js` for each page.
+Al usar `nuxt generate` con `target: 'static'`, Nuxt generará un `payload.js` para cada página.
 
-With this option enabled, Nuxt will automatically prefetch the payload of the linked page when the `<nuxt-link>` is visible in the viewport, making **instant navigation**.
+Con esta opción habilitada, Nuxt buscará automáticamente la carga útil de la página vinculada cuando el `<nuxt-link>` esté visible en la ventana gráfica, haciendo **navegación instantánea**.
 
 <base-alert type="info">
 
-This option depends of the [prefetchLinks](#prefetchlinks) option to be enabled.
+Esta opción depende de la opción [prefetchLinks](#prefetchlinks) que se habilitará.
 
 </base-alert>
 
-You can disable this behaviour by setting `prefetchPaylods` to `false`:
+Puede deshabilitar este comportamiento configurando `prefetchPaylods` en `false`:
 
 ```js{}[nuxt.config.js]
 export default {
@@ -302,19 +302,19 @@ export default {
 
 ## scrollBehavior
 
-- Type: `Function`
+- Tipo: `Function`
 
-The `scrollBehavior` option lets you define a custom behavior for the scroll position between the routes. This method is called every time a page is rendered. To learn more about it, see [vue-router scrollBehavior documentation](https://router.vuejs.org/guide/advanced/scroll-behavior.html).
+La opción `scrollBehavior` te permite definir un comportamiento personalizado para la posición de desplazamiento entre las rutas. Este método se llama cada vez que se representa una página. Para obtener más información al respecto, consulte [documentación de comportamiento de desplazamiento del enrutador vue](https://router.vuejs.org/guide/advanced/scroll-behavior.html).
 
 <div class="Alert Alert-blue">
 
-Starting from v2.9.0, you can use a file to overwrite the router scrollBehavior, this file should be placed in `~/app/router.scrollBehavior.js` (note: filename is case-sensitive if running on Windows).
+A partir de v2.9.0, puede usar un archivo para sobrescribir el scrollBehavior del enrutador, este archivo debe colocarse en `~/app/router.scrollBehavior.js` (nota: el nombre del archivo distingue entre mayúsculas y minúsculas si se ejecuta en Windows).
 
 </div>
 
-You can see Nuxt default `router.scrollBehavior.js` file here: [packages/vue-app/template/router.scrollBehavior.js](https://github.com/nuxt/nuxt.js/blob/dev/packages/vue-app/template/router.scrollBehavior.js).
+Puede ver el archivo predeterminado `router.scrollBehavior.js` de Nuxt aquí: [packages/vue-app/template/router.scrollBehavior.js](https://github.com/nuxt/nuxt.js/blob/dev/packages/vue-app/template/router.scrollBehavior.js).
 
-Example of forcing the scroll position to the top for every routes:
+Ejemplo de forzar la posición de desplazamiento hacia la parte superior para cada ruta:
 
 `app/router.scrollBehavior.js`
 
@@ -326,10 +326,10 @@ export default function (to, from, savedPosition) {
 
 ## trailingSlash
 
-- Type: `Boolean` or `undefined`
-- Default: `undefined`
-- Available since: v2.10
+- Tipo: `Boolean` o `undefined`
+- Por defecto: `undefined`
+- Disponible desde: v2.10
 
-If this option is set to true, trailing slashes will be appended to every route. If set to false, they'll be removed.
+Si esta opción se establece en verdadera, se agregarán barras diagonales finales a cada ruta. Si se establece en falso, se eliminarán.
 
-**Attention**: This option should not be set without preparation and has to be tested thoroughly. When setting `router.trailingSlash` to something else than `undefined`, the opposite route will stop working. Thus 301 redirects should be in place and you _internal linking_ has to be adapted correctly. If you set `trailingSlash` to `true`, then only `example.com/abc/` will work but not `example.com/abc`. On false, it's vice-versa
+**Atención**: esta opción no debe configurarse sin preparación y debe probarse a fondo. Al configurar `router.trailingSlash` en algo diferente a `undefined`, la ruta opuesta dejará de funcionar. Por lo tanto, las redirecciones 301 deben estar en su lugar y su _internal linking_ debe adaptarse correctamente. Si establece `trailingSlash` en `true`, solo funcionará `example.com / abc /` pero no `example.com / abc`. En falso, es al revés

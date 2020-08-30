@@ -1,20 +1,20 @@
 ---
-title: 'The components Property'
-description: 'Nuxt.js 2.13+ can scan and auto import your components using @nuxt/components module'
+title: 'La propiedad components'
+description: 'Nuxt.js 2.13+ puede escanear e importar automáticamente sus componentes usando el módulo @nuxt/components'
 menu: components
 category: configuration-glossary
 position: 5
 ---
 
-> Nuxt.js 2.13+ can scan and auto import your components.
+> Nuxt.js 2.13+ puede escanear e importar automáticamente sus componentes.
 
-- Type: `Boolean` or `Object`
-- Default: `false`
+- Tipo: `Boolean` o `Object`
+- Por defecto: `false`
 
-When set to `true` or using an object, it will include the [nuxt/components](https://github.com/nuxt/components) dependencies and auto import your components (defined in `~/components`) when you use them in your templates.
+Cuando se establece en `true` o se usa un objeto, incluirá las dependencias de [nuxt/components](https://github.com/nuxt/components) e importará automáticamente sus componentes (definidos en "~/components") cuando los utilíces en tus templates.
 
 <base-alert type="info">
 
-Please refer to [nuxt/components](https://github.com/nuxt/components) repository for usage and options.
+Consulte el repositorio de [nuxt/components](https://github.com/nuxt/components) para conocer el uso y las opciones.
 
 </base-alert>

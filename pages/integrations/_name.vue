@@ -129,9 +129,9 @@
 export default {
   transition: 'resources',
 
-  async asyncData({ app, params }) {
-    const integrations = await app.$integrations.getIntegrations()
-    const integration = integrations.find(r => r.name === params.name)
+  async asyncData({ params, $content }) {
+    const integration = await $content('integrations', params.name).fetch()
+
     return { integration }
   },
 

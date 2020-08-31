@@ -107,6 +107,33 @@ export default {
         const stats = require('reading-time')(item.text)
         item.readingTime = stats
       }
+    },
+    'content:ready'($content) {
+      $content.database.addItems = (function(items, { key = 'name', prefix, extension = '.json' }) {
+        for (const item of items) {
+          if (!item[key]) {
+            continue
+          }
+
+          const path = `${prefix}/${item[key]}`
+
+          this.items.insert({
+            ...item,
+            dir: prefix,
+            path,
+            extension,
+            slug: item[key],
+            createdAt: new Date(item.createdAt),
+            updatedAt: new Date(item.updatedAt)
+          })
+        }
+        // Support listing & searching for $content('/prefix')
+        this.dirs.push('/integrations')
+      }).bind($content.database)
+
+      $content.database.addItems(require('@nuxt/integrations'), {
+        prefix: '/integrations'
+      })
     }
   },
   plugins: [

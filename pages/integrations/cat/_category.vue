@@ -34,16 +34,17 @@
 
 export default {
   transition: 'resources',
-  async asyncData({ $content, app, params }) {
-    let integrations = await app.$integrations.getIntegrations()
-
+  async asyncData({ $content, params }) {
     const category = params.category || 'all'
-
-    if (category !== 'all') {
-      integrations = integrations.filter(r => r.categories.includes(category))
-    } else {
-      // TODO: redirect to / for canonical
-    }
+    const query = category === 'all' ? {} : { categories: { $contains: category } }
+    const integrations = await $content('integrations').where(query).only([
+      'name',
+      'title',
+      'logo',
+      'image',
+      'category',
+      'description'
+    ]).fetch()
 
     return {
       category,
@@ -53,7 +54,7 @@ export default {
 
   computed: {
     featured() {
-      return this.integrations.filter(r => r.image && r.features && r.features.length)
+      return this.integrations.filter(r => r.image)
     }
   }
 }

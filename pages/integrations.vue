@@ -17,8 +17,11 @@ import uniq from 'lodash/uniq'
 
 export default {
   async asyncData({ $content, app, params }) {
-    const resources = (await import('@nuxt/integrations')).default
-    const categories = uniq(['all'].concat(...resources.map(r => r.categories)).sort())
+    const integrations = await $content('integrations').only([
+      'name',
+      'categories'
+    ]).fetch()
+    const categories = uniq(['all'].concat(...integrations.map(r => r.categories)).sort())
 
     return {
       categories

@@ -15,7 +15,7 @@ export default {
 }
 ```
 
-target を static にした状態で nuxt dev を実行すると、開発者の体験は向上するでしょう。
+target を static にした状態で nuxt dev を実行すると、開発者の体験は向上するでしょう:
 
 - `context` から `req` と `res` の削除
 - 404、エラー、リダイレクトのクライアントサイドレンダリングへのフォールバック [SPA フォールバック参照](./guides/concepts/static-site-generation#spa-fallback)

@@ -1,7 +1,12 @@
 <template>
   <div
     class="algolia-wrapper relative"
-    :class="[focused ? 'focused' : 'blurred', !q && 'blurred', appearance]"
+    :class="[
+      focused ? 'focused' : 'blurred',
+      !q && 'blurred',
+      isRtlLang && 'rtl',
+      appearance
+    ]"
   >
     <SearchIcon
       class="block absolute z-10 h-4 mt-3 ml-3 fill-current text-light-onSurfaceSecondary dark:text-dark-onSurfaceSecondary transition-colors duration-300 ease-linear"
@@ -48,10 +53,13 @@ export default {
     return {
       q: '',
       focused: false,
-      search: null
+      search: null,
+      isRtlLang: false
     }
   },
   mounted() {
+    if (document.dir === 'rtl') this.isRtlLang = true
+
     // // Avoid loading the script twice
     if (!document.getElementById('_algolia_doc_search_')) {
       const script = document.createElement('script')

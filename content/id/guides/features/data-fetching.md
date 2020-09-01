@@ -1,79 +1,79 @@
 ---
-title: Data Fetching
-description: In Nuxt.js we have 2 ways of getting data from an api. We can use the fetch method or the asyncData method.
+title: Pengambilan data
+description: Pada Nuxt.js Kami memiliki 2 cara untuk mendapatkan data dari sebuah antarmuka pemrograman aplikasi (_API_). Kami dapat menggunakan metode _fetch_ atau metode _asyncData_.
 position: 4
-category: features
+category: fitur
 csb_link: https://codesandbox.io/embed/github/nuxt-academy/guides-examples/tree/master/03_features/04_data_fetching?fontsize=14&hidenavigation=1&theme=dark
 questions:
-  - question: Where can you use the Nuxt.js fetch hook?
+  - question: Di mana Anda dapat menggunakan pengait _fetch_ pada Nuxt.js?
     answers:
-      - pages and components
-      - only in pages
-      - only in components
-    correctAnswer: pages and components
-  - question: You have access to this when you use the Nuxt.js fetch hook
+      - halaman dan komponen
+      - hanya di halaman
+      - hanya di komponen
+    correctAnswer: halaman dan komponen
+  - question: Anda memiliki akses ke `this` ketika menggunakan pengait _fetch_ Nuxt.js?
     answers:
       - true
       - false
     correctAnswer: true
-  - question: When is the Nuxt.js fetch hook is called?
+  - question: Kapan pengait _fetch_ Nuxt.js dipanggil?
     answers:
-      - after the component instance
-      - before the component instance
-      - during the component instance
-    correctAnswer: after the component instance
-  - question: Which allows you to display a placeholder when `fetch` is being called *on client-side?*
+      - setelah _instance_ komponen
+      - sebelum _instance_ komponen
+      - selama _instance_ komponen
+    correctAnswer: setelah _instance_ komponen
+  - question: Mana yang memperbolehkan anda untuk menampilkan _placeholder_ ketika `fetch` dipanggil *pada sisi klien*?
     answers:
       - $fetchState.timestamp
       - $fetchState.error
       - $fetchState.pending
     correctAnswer: $fetchState.pending
-  - question: How do you save fetch calls on pages you have already visited?
+  - question: Bagaimana Anda menyimpan pemanggilan _fetch_ pada halaman yang Anda pernah kunjungi?
     answers:
       - keep-alive
       - save-fetch
       - cache-fetch
     correctAnswer: keep-alive
-  - question: In the activated hook which property do you use to add a 30 second cache to fetch?
+  - question: Di pengait yang diaktifkan, properti mana yang Anda gunakan untuk menambahkan tembolok (_cache_) 30 detik yang akan diambil?
     answers:
       - $fetchState.pending
       - $fetchState.timestamp
       - $fetchState.cache
     correctAnswer: $fetchState.timestamp
-  - question: When is `asyncData` called?
+  - question: Kapan `asyncData` dipanggil?
     answers:
-      - after loading the page component
-      - during loading the page component
-      - before loading the page component
-    correctAnswer: before loading the page component
-  - question: You have access to `this` inside asyncData
+      - setelah memuat halaman komponen
+      - selama memuat halaman komponen
+      - sebelum memuat halaman komponen
+    correctAnswer: sebelum memuat halaman komponen
+  - question: Anda memiliki akses ke `this` di dalam `asyncData`?
     answers:
       - true
       - false
     correctAnswer: false
-  - question: With asyncData you can use the `context` parameter to access dynamic route data
+  - question: asyncData dapat menggunakan parameter `context` untuk mengakses data pada rute dinamis?
     answers:
       - true
       - false
     correctAnswer: true
-  - question: You have access to the error statusCode in asyncData
+  - question: Anda memiliki akses ke galat statusCode di asyncData?
     answers:
       - true
       - false
     correctAnswer: true
 ---
 
-In Nuxt.js we have 2 ways of getting data from an api. We can use the fetch method or the asyncData method.
+Pada Nuxt.js Kami memiliki 2 cara untuk mendapatkan data dari sebuah antarmuka pemrograman aplikasi (_API_). Kami dapat menggunakan metode _fetch_ atau metode _asyncData_.
 
 ## The fetch hook
 
 <base-alert type="info">
 
-This hook is only available for Nuxt `2.12+`.
+Pengait ini hanya tersedia untuk Nuxt versi `2.12+`.
 
 </base-alert>
 
-The Nuxt.js `fetch` hook is called after the component instance is created on the server-side: `this` is available inside it.
+Pengait `fetch` Nuxt.js dipanggil setelah _instance_ komponen dibuat pada sisi _server_: `this` juga tersedia di dalamnya.
 
 ```js
 export default {
@@ -85,32 +85,32 @@ export default {
 
 <base-alert>
 
-`fetch(context)` has been deprecated, instead you can use an [anonymous middleware](/guides/directory-structure/middleware#anonymous-middleware) in your page:  `middleware(context)`
+`fetch(context)` telah usang, namun Anda dapat menggunakan sebuah [_middleware_ anonim](/guides/directory-structure/middleware#anonymous-middleware) di halaman Anda:  `middleware(context)`
 
 </base-alert>
 
-### When to use fetch?
+### Kapan menggunakan _fetch_?
 
-Every time you need to get asynchronous data. `fetch` is called on server-side when rendering the route, and on client-side when navigating.
+Setiap kali Anda harus mengambil data asinkron, `fetch` dipanggil pada sisi server ketika me-_render_ rute dan pada sisi klien ketika menggunakan navigasi.
 
-It exposes `$fetchState` at the component level with the following properties:
+Hal tersebut mengekspos `$fetchState` pada tingkatan komponen dengan properti sebagai berikut ini:
 
-- `pending` is a `Boolean`, allows you to display a placeholder when `fetch` is being called *on client-side*.
-- `error` is either `null` or `Error` and allows you to display an error message
-- `timestamp` is a timestamp of the last fetch, useful for [caching with `keep-alive`](#caching)
+- `pending` merupakan sebuah `Boolean`, mengizinkan Anda untuk menampilkan _placeholder_ ketika `fetch` dipanggil _pada sisi klien_
+- `error` dapat berupa antara `null` atau `Error` dan mengizinkan Anda untuk menampilkan pesan kegalatan (_error_)
+- `timestamp` merupakan cap waktu dari terakhir kali pengambilan, berguna untuk [menembolok (_cache_) dengan `keep-alive`](#tembolok)
 
-You also have access to `this.$fetch()`, useful if you want to call the `fetch` hook in your component.
+Anda juga memiliki akses ke `this.$fetch()`, ini berguna jika Anda ingin memanggil _hook_ `fetch` di komponen Anda.
 
 ```html{}[components/NuxtMountains.vue]
 <template>
-  <p v-if="$fetchState.pending">Fetching mountains...</p>
-  <p v-else-if="$fetchState.error">An error occured :(</p>
+  <p v-if="$fetchState.pending">Mengambil gunung...</p>
+  <p v-else-if="$fetchState.error">Terjadi kegalatan :(</p>
   <div v-else>
-    <h1>Nuxt Mountains</h1>
+    <h1>Gunung selanjutnya</h1>
     <ul v-for="mountain of mountains">
       <li>{{ mountain.title }}</li>
     </ul>
-    <button @click="$fetch">Refresh</button>
+    <button @click="$fetch">Segarkan</button>
   </div>
 </template>
 
@@ -132,17 +132,17 @@ You also have access to `this.$fetch()`, useful if you want to call the `fetch`
 
 <base-alert type="info">
 
-You can access the Nuxt [context](/guides/concepts/context-helpers) within the fetch hook using `this.$nuxt.context`.
+Anda dapat mengakses [_context_](/guides/concepts/context-helpers) Nuxt di dalam pengait _fetch_ menggunakan `this.$nuxt.context`.
 
 </base-alert>
 
-### Options
+### Opsi
 
-`fetchOnServer`: `Boolean` or `Function` (default: `true`), call `fetch()` when server-rendering the page
+`fetchOnServer`: `Boolean` atau `Function` (nilai anggapan: `true`), memanggil `fetch()` ketika server me-_render_ halaman.
 
-`fetchDelay`: `Integer` (default: `200`), set the minimum executing time in milliseconds (to avoid quick flashes)
+`fetchDelay`: `Integer` (nilai anggapan: `200`), menetapkan waktu eksekusi minimal dalam milidetik (untuk menghindari eksekusi yang terlalu cepat)
 
-When `fetchOnServer` is falsy (`false` or returns `false`), `fetch` will be called only on client-side and `$fetchState.pending` will return `true` when server-rendering the component.
+Ketika `fetchOnServer` bernilai salah (`false` atau mengembalikan `false`), `fetch` akan dipanggil hanya pada sisi klien dan `$fetchState.pending` akan mengembalikan `true` ketika server me-_render_ komponen.
 
 ```js
 export default {
@@ -156,14 +156,14 @@ export default {
       res.json()
     )
   },
-  // call fetch only on client-side
+  // memanggil fetch hanya pada sisi klien
   fetchOnServer: false
 }
 ```
 
-### Listening to query string changes
+### Memperhatikan perubahan untaian kueri (_query string_)
 
-The `fetch` hook is not called on query string changes by default. To watch for query changes you can add a watcher on `$route.query` and call `$fetch`:
+Pada dasarnya, pengait `fetch` tidak dipanggil pada perubahan untaian kueri. Untuk melakukan _watch_ untuk perubahan kueri, Anda dapat menambahkan _watcher_ pada `$route.query` dan memanggil `$fetch`:
 
 ```js
 export default {
@@ -171,14 +171,14 @@ export default {
     '$route.query': '$fetch'
   },
   async fetch() {
-    // Called also on query changes
+    // juga dipanggil pada perubahan kueri
   }
 }
 ```
 
-### Caching
+### Tembolok
 
-You can use `keep-alive` directive in `<nuxt/>` and `<nuxt-child/>` component to save `fetch` calls on pages you already visited:
+Anda dapat menggunakan direktif `keep-alive` di komponen `<nuxt/>` dan `<nuxt-child/>` untuk menyimpan pemanggilan `fetch` pada halaman yang Anda telah kunjungi:
 
 ```html{}[layouts/default.vue]
 <template>
@@ -186,22 +186,20 @@ You can use `keep-alive` directive in `<nuxt/>` and `<nuxt-child/>` compon
 </template>
 ```
 
-You can also specify the [props](https://vuejs.org/v2/api/#keep-alive) passed to `<keep-alive>` by passing a prop `keep-alive-props` to the `<nuxt>`  component.
+Anda juga dapat melakukan spesifikasi pada [_props_](https://vuejs.org/v2/api/#keep-alive) yang dikirimkan ke `<keep-alive>` dengan mengirimkan `keep-alive-props` ke komponen `<nuxt>`.
 
 ```html{}[layouts/default.vue]
 <nuxt keep-alive :keep-alive-props="{ max: 10 }" />
 ```
 
-Keeps only 10 page components in memory.
+Menyimpan hanya 10 komponen halaman dalam memori.
 
-### Using `activated` hook
+### Menggunakan pengait `activated`
 
-Nuxt will directly fill  `this.$fetchState.timestamp`  (timestamp) of the last `fetch` call (ssr included). You can use this property combined with `activated` hook to add a 30 seconds cache to `fetch`:
+Nuxt akan secara langsung mengisi `this.$fetchState.timestamp` (cap waktu) dari terakhir kali `fetch` dipanggil (termasuk _render_ sisi server). Anda dapat menggunakan properti ini dikombinasikan dengan pengait `activated` untuk menambahkan tembolok selama 30 detik ke `fetch`:
 
 ```html{}[pages/posts/_id.vue]
-<template>
-  ...
-</template>
+<template> ... </template>
 
 <script>
   export default {
@@ -211,7 +209,7 @@ Nuxt will directly fill  `this.$fetchState.timestamp`  (timestamp) of the last
       }
     },
     activated() {
-      // Call fetch again if last fetch more than 30 sec ago
+      // Memanggil fetch lagi jika terakhir fetch dipanggil lebih dari 30 detik yang lalu
       if (this.$fetchState.timestamp <= Date.now() - 30000) {
         this.$fetch()
       }
@@ -225,19 +223,19 @@ Nuxt will directly fill  `this.$fetchState.timestamp`  (timestamp) of the last
 </script>
 ```
 
-The navigation to the same page will not call `fetch` if last `fetch` call was before 30 sec ago.
+Melakukan navigasi ke halaman yang sama tidak akan memanggil `fetch` kembali jika terakhir memanggil `fetch` masih kurang dari 30 detik yang lalu.
 
-## Async Data
+## Data Asinkron
 
 <base-alert>
 
-`asyncData` is only available for [pages](/guides/directory-structure/pages) and you don't have access to `this` inside the hook.
+`asyncData` hanya dapat digunakan pada [halaman (_pages_)](/guides/directory-structure/pages) dan Anda tidak memiliki akses ke `this` di dalam pengait tersebut.
 
 </base-alert>
 
-The main difference with `fetch` is that you don't have to handle any pending state or error. Nuxt will wait for the `asyncData` hook to be finished before navigating to the next page or display the [error page](/guides/directory-structure/layouts#error-page))
+Perbedaan utama antara `fetch` adalah Anda tidak perlu menangani status (_state_) yang tertunda atau galat. Nuxt akan menunggu pengait `asyncData` selesai sebelum menavigasi ke halaman selanjutnya atau menampilkan [halaman kegalatan](/guides/directory-structure/layouts#error-page))
 
-This hook receives [the context](/guides/concepts/context-helpers) as first argument. You can use it to fetch some data and Nuxt.js will automatically merge the returned object with the component data.
+Pengait menerima [konteks (_context_)](/guides/concepts/context-helpers) sebagai argumen pertama. Anda dapat menggunakan ini untuk menggambil beberapa data dan Nuxt.js akan secara otomatis mengabungkan objek yang dikembalikan dengan data pada komponen.
 
 ```html{}[pages/index.vue]
 <template>
@@ -255,9 +253,9 @@ This hook receives [the context](/guides/concepts/context-helpers) as first ar
 </script>
 ```
 
-In the upcoming examples, we are using [@nuxt/http](https://http.nuxtjs.org/) which we recommend for fetching data from an API.
+Pada contoh berikut ini, Kami menggunakan [@nuxt/http](https://http.nuxtjs.org/) yang mana Kami merekomendasikan untuk menggambil data dari antarmuka pemrograman aplikasi (_API_).
 
-First, we need install it:
+Pertama, kita perlu memasang paket ini:
 
 <code-group>
   <code-block label="Yarn" active>
@@ -276,7 +274,7 @@ npm install @nuxt/http
   </code-block>
 </code-group>
 
-Then, adding it to our `modules` section of `nuxt.config.js`:
+Lalu, tambahkan ini ke bagian `modules` dari `nuxt.config.js`:
 
 ```js{}[nuxt.config.js]
 export default {
@@ -302,13 +300,13 @@ export default {
 </script>
 ```
 
-### Listening to query changes
+### Memperhatikan perubahan pada kueri
 
-The `asyncData` method is not called on query string changes by default. If you want to change this behavior, for example when building a pagination component, you can set up parameters that should be listened to with the `watchQuery` property of your page component.
+Metode `asyncData` tidak dipanggil pada perubahan untaian kueri pada dasarnya. Jika Anda ingin mengubah sikap ini, contohnya ketika membangun sebuah komponen paginasi, Anda dapat menentukan parameter yang akan diperhatikan oleh properti `watchQuery` pada komponen halaman Anda.
 
 <base-alert type="next">
 
-Learn more about the [watchQuery property](/guides/components-glossary/pages-watchquery) and see the list of available [keys in context](/guides/concepts/context-helpers).
+Pelajari lebih lanjut mengenai [properti watchQuery](/guides/components-glossary/pages-watchquery) dan lihat daftar [kunci dari konteks](/guides/concepts/context-helpers) apa saja yang tersedia.
 
 </base-alert>
 

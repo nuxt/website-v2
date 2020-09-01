@@ -1,55 +1,55 @@
 ---
 title: assets
-description: The `assets` directory contains your un-compiled assets such as Stylus or Sass files, images, or fonts.
+description: Direktori `assets` berisikan aset Anda yang belum dikompilasi seperti berkas Stylus/Sass, gambar atau fon.
 position: 2
 category: directory-structure
 csb_link: https://codesandbox.io/embed/github/nuxt-academy/guides-examples/tree/master/04_directory_structure/02_assets?fontsize=14&hidenavigation=1&theme=dark
 videoScript:
   - assets-video.md
 questions:
-  - question: Which directory contains your un-compiled assets such as Stylus or Sass files, images, or fonts?
+  - question: Direktori mana yang berisi aset Anda yang belum dikompilasi seperti berkas Stylus/Sass, gambar, atau fon?
     answers:
       - static
       - assets
       - pages
     correctAnswer: assets
-  - question: What do you use if you need to reference your  assets directory inside your vue templates?
+  - question: Apa yang Anda gunakan jika Anda perlu mereferensikan direktori aset Anda di dalam templat vue?
     answers:
-      - '/assets/your_image.png'
-      - '@assets/your_image.png'
-      - '@/assets/your_image.png'
-    correctAnswer: '@/assets/your_image.png'
-  - question: What do you use if you need to reference your  assets directory inside your css files?
+      - '/assets/gambar_anda.png'
+      - '@assets/gambar_anda.png'
+      - '@/assets/gambar_anda.png'
+    correctAnswer: '@/assets/gambar_anda.png'
+  - question: Apa yang Anda gunakan jika Anda perlu mereferensikan direktori aset Anda di dalam berkas css?
     answers:
       - url("@assets/banner.svg")
       - url("assets/banner.svg")
       - url("@/assets/banner.svg")
     correctAnswer: url("@assets/banner.svg")
-  - question: Where do you import your global css stylesheets?
+  - question: Di mana Anda mengimpor _stylesheet_ css global Anda?
     answers:
-      - in your index.vue file
-      - in the nuxt.config.js file
-      - in the default layout file
-    correctAnswer: in the nuxt.config.js file
-  - question: Under which property do you import a global font?
+      - di dalam berkas index.vue Anda
+      - di dalam berkas nuxt.config.js
+      - di dalam berkas layout default
+    correctAnswer: di dalam berkas nuxt.config.js
+  - question: Di properti mana Anda mengimpor fon global?
     answers:
       - font
       - head
       - css
     correctAnswer: head
-  - question: Which loader lets you inline a file as base-64 data URL?
+  - question: Pemuat _(loader)_ mana yang memungkinkan Anda untuk menyisipkan berkas secara _inline_ sebagai URL data _base-64_?
     answers:
       - file-loader
       - url-loader
       - image-loader
     correctAnswer: url-loader
-  - question: What is the aliases for the source directory?
+  - question: Apa alias untuk direktori sumber?
     answers:
       - '@'
       - '@@'
       - '^'
     correctAnswer: '@'
-  - question: What is the aliases for the root directory?
+  - question: Apa alias untuk direktori root?
     answers:
       - '@'
       - '@@'
@@ -57,48 +57,48 @@ questions:
     correctAnswer: '@@'
 ---
 
-The `assets` directory contains your un-compiled assets such as Stylus or Sass files, images, or fonts.
+Direktori `assets` berisi aset Anda yang belum terkompilasi seperti berkas Stylus/Sass, gambar atau font.
 
-## Images:
+## Gambar:
 
-Inside your `vue` templates, if you need to link to your `assets` directory use `~/assets/your_image.png` with a slash before assets.
+Di dalam _tag_ templat `vue` Anda, jika Anda perlu menautkan ke direktori `assets` maka gunakan `~/assets/gambar_anda.png` dengan garis miring sebelum `assets`.
 
 ```html
 <template>
-  <img src="~/assets/your_image.png" />
+  <img src="~/assets/gambar_anda.png" />
 </template>
 ```
 
-Inside your `css` files, if you need to reference your  `assets`  directory, use `~assets/your_image.png`(without a slash)
+Di dalam berkas `css` Anda, jika Anda perlu mereferensikan direktori `assets`, gunakan `~assets/gambar_anda.png` (tanpa garis miring sebelum `assets`)
 
 ```css
 background: url('~assets/banner.svg');
 ```
 
-When working with dynamic images you will need to use require
+Ketika bekerja dengan gambar dinamis, Anda perlu menggunakan _require_
 
 ```html
-<img :src="require(`~/assets/img/${image}.jpg`)" />
+<img :src="require(`~/assets/img/${gambar}.jpg`)" />
 ```
 
 <base-alert type="next">
 
-Learn more about [webpack Assets](/guides/directory-structure/assets#webpack-assets)
+Pelajari lebih lanjut tentang [Aset Webpack](/guides/directory-structure/assets#webpack-assets)
 
 </base-alert>
 
-## Styles:
+## Gaya:
 
-Nuxt.js lets you define the CSS files/modules/libraries you want to set globally (included in every page). In the nuxt.config you can easily add your styles using the CSS Property.
+Nuxt.js memungkinkan Anda menentukan berkas/modul/_libraries_ CSS yang ingin Anda atur secara global (disertakan di setiap halaman). Di nuxt.config Anda dapat dengan mudah menambahkan _style_ Anda menggunakan _CSS Property_.
 
 ```js{}[nuxt.config.js]
 export default {
   css: [
-    // Load a Node.js module directly (here it's a Sass file)
+    // Memuat modul Node.js secara langsung (di sini merupakan berkas Sass)
     'bulma',
-    // CSS file in the project
+    // Berkas CSS di dalam proyek
     '~/assets/css/main.css',
-    // SCSS file in the project
+    // Berkas SCSS di dalam proyek
     '~/assets/css/main.scss'
   ]
 }
@@ -106,7 +106,7 @@ export default {
 
 <base-alert type="info">
 
-In case you want to use `sass` make sure that you have installed `node-sass` and `sass-loader` packages.
+Jika Anda ingin menggunakan `sass` pastikan Anda telah memasang _package_ untuk `node-sass` dan `sass-loader`.
 
 </base-alert>
 
@@ -127,11 +127,11 @@ npm install --save-dev node-sass sass-loader
   </code-block>
 </code-group>
 
-Nuxt.js will automatically guess the file type by its extension and use the appropriate pre-processor loader for webpack. You will still need to install the required loader if you need to use them.
+Nuxt.js secara otomatis akan menebak jenis file dengan ekstensinya dan menggunakan pemuat pra-prosesor yang sesuai untuk webpack. Anda masih perlu memasang pemuat yang diperlukan jika Anda perlu menggunakannya.
 
-## Fonts:
+## Fon:
 
-You can use local fonts by adding them to your assets folder. Once they have been added you can then access them though your css using the @font-face.
+Anda dapat menggunakan fon lokal dengan menambahkannya ke folder aset Anda. Setelah ditambahkan, Anda dapat mengaksesnya melalui css menggunakan @font-face.
 
 ```
 -| assets
@@ -160,19 +160,19 @@ You can use local fonts by adding them to your assets folder. Once they have bee
 
 <base-alert type="next">
 
-To add external fonts such as google fonts check out the [Meta Tags and SEO chapter](/guides/features/meta-tags-seo#external-resources)
+Untuk menambahkan fon eksternal seperti fon google, lihat [bab Tag Meta dan SEO](/guides/features/meta-tags-seo#external-resources)
 
 </base-alert>
 
-## Webpack Assets
+## Aset Webpack
 
-By default, Nuxt uses webpack's vue-loader, file-loader and url-loader to serve your assets. You can also use the static directory for assets that should not run through webpack
+Secara setelan standar, Nuxt menggunakan vue-loader, file-loader, dan url-loader webpack untuk melayani aset Anda. Anda juga dapat menggunakan direktori statis untuk aset yang tidak boleh dijalankan melalui webpack
 
 ## Webpack
 
-[vue-loader](http://vue-loader.vuejs.org/) automatically processes your style and template files with `css-loader` and the Vue template compiler out of the box. In this compilation process, all asset URLs such as `<img src="...">`, `background: url(...)` and CSS `@import` are resolved as module dependencies.
+[vue-loader](http://vue-loader.vuejs.org/) secara otomatis memproses berkas gaya dan templat Anda dengan `css-loader` dan kompilator templat Vue tanpa perlu setelan tambahan apapun. Dalam proses kompilasi ini, semua URL aset seperti `<img src ="...">`, `background: url(...)` dan CSS `@import` terurai sebagai dependensi modul.
 
-For example, we have this file tree:
+Sebagai contoh, terdapat struktur berkas seperti ini:
 
 ```
 -| assets/
@@ -181,37 +181,37 @@ For example, we have this file tree:
 ----| index.vue
 ```
 
-If you use `url('~assets/image.png')` in your CSS, it will be translated  into  `require('~/assets/image.png')`.
+Jika Anda menggunakan `url('~assets/gambar.png')` di CSS Anda, ini akan diterjemahkan menjadi `require('~/assets/gambar.png')`.
 
 <base-alert>
 
-The `~/` alias won't be resolved correctly in your CSS files. You must use `~assets` (**without a slash**) in `url` CSS references, i.e. `background: url("~assets/banner.svg")`
+Alias `~/` tidak akan diterjemahkan dengan benar di file CSS Anda. Anda harus menggunakan `~assets` (**tanpa garis miring**) di referensi CSS `url`, yaitu `background: url("~assets/banner.svg")`
 
 </base-alert>
 
-If you reference that image in your `pages/index.vue`:
+Jika Anda mereferensikan gambar itu di `pages/index.vue` maka:
 
 ```html{}[pages/index.vue]
 <template>
-  <img src="~/assets/image.png" />
+  <img src="~/assets/gambar.png" />
 </template>
 ```
 
-It will be compiled into:
+Ini akan dikompilasi menjadi:
 
 ```js
-createElement('img', { attrs: { src: require('~/assets/image.png') } })
+createElement('img', { attrs: { src: require('~/assets/gambar.png') } })
 ```
 
-Because `.png` is not a JavaScript file, Nuxt.js configures webpack to use [file-loader](https://github.com/webpack/file-loader) and [url-loader](https://github.com/webpack/url-loader) to handle them for you.
+Karena `.png` bukan file JavaScript, Nuxt.js mengatur konfigurasi webpack agar menggunakan [file-loader](https://github.com/webpack/file-loader) dan [url-loader](https://github.com/webpack/url-loader) sebagai pemuat untuk Anda.
 
-The benefits of these loaders are:
+Manfaat dari pemuat-pemuat ini adalah:
 
-`file-loader` lets you designate where to copy and place the asset file, and how to name it using version hashes for better caching. In production, you will benefit from long-term caching by default!
+`file-loader` memungkinkan Anda menentukan tempat untuk menyalin dan menempatkan berkas aset, dan cara menamainya menggunakan _version hashes_ untuk penyimpanan cache yang lebih baik. Dalam mode produksi, Anda akan mendapatkan keuntungan dari cache jangka panjang sebagai setelan standar!
 
-`url-loader` allows you to conditionally inline a file as base-64 data URL if they are smaller than a given threshold. This can reduce the number of HTTP requests for trivial files. If the file is larger than the threshold, it automatically falls back to file-loader.
+`url-loader` memungkinkan Anda untuk menyisipkan berkas secara _inline_ sebagai URL data _base-64_ dengan syarat jika lebih kecil dari ambang batas yang ditentukan. Ini dapat mengurangi jumlah permintaan HTTP untuk berkas yang sepele. Jika berkas lebih besar dari ambang batas, maka secara otomatis akan kembali ke file-loader.
 
-For these two loaders, the default configuration is:
+Untuk kedua pemuat ini, setelan standarnya adalah:
 
 ```js
 // https://github.com/nuxt/nuxt.js/blob/dev/packages/webpack/src/config/base.js#L297-L316
@@ -235,50 +235,50 @@ For these two loaders, the default configuration is:
 ]
 ```
 
-Which means that every file below 1 KB will be inlined as base-64 data URL. Otherwise, the image/font will be copied in its corresponding folder (inside the `.nuxt` directory) with a name containing a version hash for better caching.
+Artinya, setiap berkas di bawah 1 KB akan disisipkan sebagai URL data _base-64_. Jika tidak, gambar/fon akan disalin di folder yang sesuai (di dalam direktori `.nuxt`) dengan nama yang berisi hash versi untuk penyimpanan cache yang lebih baik.
 
-When launching your application with `nuxt`, your template in `pages/index.vue`:
+Saat meluncurkan aplikasi Anda dengan `nuxt`, templat Anda di `pages/index.vue`:
 
 ```html{}[pages/index.vue]
 <template>
-  <img src="@/assets/your_image.png" />
+  <img src="@/assets/gambar_anda.png" />
 </template>
 ```
 
-Will be transformed into:
+Akan diubah menjadi:
 
 ```html
-<img src="/_nuxt/img/your_image.0c61159.png" />
+<img src="/_nuxt/img/gambar_anda.0c61159.png" />
 ```
 
-If you want to change the loader configurations, please use [build.extend](/guides/configuration-glossary/configuration-build#extend).
+Jika Anda ingin mengubah konfigurasi pada pemuat tersebut, gunakan [build.extend](/guides/configuration-glossary/configuration-build#extend).
 
 <app-modal>
   <code-sandbox  :src="csb_link"></code-sandbox>
 </app-modal>
 
-## Aliases
+## Alias
 
-By default the source directory (srcDir) and the root directory (rootDir) are the same. You can use the alias of `~` for the source directory. Instead of writing relative paths like `../assets/your_image.png` you can use `~/assets/your_image.png`.
+Pada setelan standar, direktori sumber (srcDir) dan direktori _root_ (rootDir) adalah sama. Anda dapat menggunakan alias `~` untuk direktori sumber. Daripada menulis jalur relatif seperti `../assets/gambar_anda.png`, Anda bisa menggunakan` ~/assets/gambar_anda.png`.
 
-Both will achieve the same results.
+Keduanya akan mencapai hasil yang sama.
 
 ```html{}[components/Avatar.vue]
 <template>
   <div>
-    <img src="../assets/your_image.png" />
-    <img src="~/assets/your_image.png" />
+    <img src="../assets/gambar_anda.png" />
+    <img src="~/assets/gambar_anda.png" />
   </div>
 </template>
 ```
 
-We recommend using the `~` as an alias. `@` is still supported but will not work in all cases such as with background images in your css.
+Direkomendasikan untuk penggunaan `~` sebagai alias. `@` masih didukung tetapi tidak akan berfungsi di semua kasus seperti dengan gambar latar belakang di css Anda.
 
-You can use the alias of `~~` or `@@` for the root directory.
+Anda dapat menggunakan alias `~~` atau `@@` untuk direktori _root_.
 
 <base-alert type="info">
 
-Tip: On Spanish keyboard you can access `~` with (`Option` + `ñ`) on Mac OS
+Tip: Pada papan ketik Spanyol, Anda dapat mengakses `~` dengan (`Option` +` ñ`) di Mac OS
 
 </base-alert>
 

@@ -131,7 +131,7 @@ Nuxt.js secara otomatis akan menebak jenis file dengan ekstensinya dan menggunak
 
 ## Fon:
 
-Anda dapat menggunakan fon lokal dengan menambahkannya ke folder aset Anda. Setelah ditambahkan, Anda dapat mengaksesnya melalui css menggunakan @font-face.
+Anda dapat menggunakan fon lokal dengan menambahkannya ke _folder_ aset Anda. Setelah ditambahkan, Anda dapat mengaksesnya melalui css menggunakan @font-face.
 
 ```
 -| assets
@@ -207,7 +207,7 @@ Karena `.png` bukan file JavaScript, Nuxt.js mengatur konfigurasi webpack agar m
 
 Manfaat dari pemuat-pemuat ini adalah:
 
-`file-loader` memungkinkan Anda menentukan tempat untuk menyalin dan menempatkan berkas aset, dan cara menamainya menggunakan _version hashes_ untuk penyimpanan cache yang lebih baik. Dalam mode produksi, Anda akan mendapatkan keuntungan dari cache jangka panjang sebagai setelan standar!
+`file-loader` memungkinkan Anda menentukan tempat untuk menyalin dan menempatkan berkas aset, dan cara menamainya menggunakan _version hashes_ untuk penyimpanan tembolok _(cache)_ yang lebih baik. Dalam mode produksi, Anda akan mendapatkan keuntungan dari tembolok jangka panjang sebagai setelan standar!
 
 `url-loader` memungkinkan Anda untuk menyisipkan berkas secara _inline_ sebagai URL data _base-64_ dengan syarat jika lebih kecil dari ambang batas yang ditentukan. Ini dapat mengurangi jumlah permintaan HTTP untuk berkas yang sepele. Jika berkas lebih besar dari ambang batas, maka secara otomatis akan kembali ke file-loader.
 
@@ -235,7 +235,7 @@ Untuk kedua pemuat ini, setelan standarnya adalah:
 ]
 ```
 
-Artinya, setiap berkas di bawah 1 KB akan disisipkan sebagai URL data _base-64_. Jika tidak, gambar/fon akan disalin di folder yang sesuai (di dalam direktori `.nuxt`) dengan nama yang berisi hash versi untuk penyimpanan cache yang lebih baik.
+Artinya, setiap berkas di bawah 1 KB akan disisipkan sebagai URL data _base-64_. Jika tidak, gambar/fon akan disalin di _folder_ yang sesuai (di dalam direktori `.nuxt`) dengan nama yang berisi hash versi untuk penyimpanan tembolok yang lebih baik.
 
 Saat meluncurkan aplikasi Anda dengan `nuxt`, templat Anda di `pages/index.vue`:
 

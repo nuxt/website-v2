@@ -48,31 +48,31 @@ questions:
     correctAnswer: exclude
 ---
 
-The `dist` folder, short for _distribution_ folder. It is dynamically generated when using the `nuxt generate` commands and includes the generated production ready HTML files and assets that are necessary to deploy and run your statically generated Nuxt.js application.
+Direktori `dist`, merupakan kependekan dari direktori distribusi (_distribution_). Direktori tersebut secara dinamik terbuat ketika perintah `nuxt generate` dijalankan dan berisikan berkas-berkas HTML dan aset yang sudah siap produksi. Berkas-berkas ini sangat dibutuhkan untuk proses penggelaran (_deployment_) dan menjalankan aplikasi Nuxt.js secara statis.
 
-### Deploying
+### Menggelar (_Deploying_)
 
-This is the folder you need to **upload for static hosting** as it contains your generated production ready HTML files and assets
+Ini merupakan direktori yang dibutuhkan **untuk mengunggah ke _hosting_ statis** karena direktori ini berisikan berkas-berkas HTML dan aset-aset yang sudah siap produksi.
 
 <base-alert>
 
-The `dist` directory should not be committed to your version control system and should be ignored through your `.gitignore` as it will be generated automatically every time you run `nuxt generate`.
+Direktori `dist` seharusnya tidak disertakan dalam sistem pengontrolan versi (_git_) dan harus diabaikan dalam berkas `.gitignore` karena direktori tersebut akan terbuat secara otomatis setiap kali `nuxt generate` dijalankan.
 
 </base-alert>
 
-### The dir property
+### Properti direktori
 
-The dist folder is named dist by default but can be configured in your nuxt.config file.
+Direktori dist dinamakan dist secara otomatis tetapi dapat dikonfigurasi melalui berkas nuxt.config anda.
 
 ```js{}[nuxt.config.js]
 generate: {
-  dir: 'my-site'
+  dir: 'site-saya'
 }
 ```
 
 <base-alert>
 
-If you do change your dist folder then you will need to add that to your version control so that git will ignore it.
+Jika anda mengganti nama dari direktori dist anda, maka anda harus menambahkan nama direktori tersebut kedalam sistem pengontrolan versi (_git_) anda, sehingga git dapat mengabaikan direktori tersebut.
 
 </base-alert>
 

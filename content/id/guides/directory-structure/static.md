@@ -1,74 +1,74 @@
 ---
 title: static
-description: The `static` directory is directly mapped to the server root () and contains files that likely won't be changed. All included files will be automatically served by Nuxt and are accessible through your project root URL.
+description: Direktori `static` langsung dipetakan ke dasar (_root_) server dan mengandung berkas-berkas yang kemungkinan besar tidak diubah-ubah. Berkas-berkas yang berada dalam direktori akan secara otomatis dijalnkan oleh Nuxt dan dapat diakses melalui URL dasar proyek anda.
 position: 12
 category: directory-structure
 csb_link: https://codesandbox.io/embed/github/nuxt-academy/guides-examples/tree/master/04_directory_structure/13_static?fontsize=14&hidenavigation=1&theme=dark
 questions:
-  - question: In which directory should you put your files that likely won't be changed such as your favicon or robots.txt?
+  - question: Pada direktori apa anda harus menaruh berkas yang kemungkinan besar tidak anda ubah, seperti favicon atau robots.txt?
     answers:
       - assets
       - static
       - src
     correctAnswer: static
-  - question: This directory can be easily renamed without any configuration
+  - question: Direktori ini dapat dengan mudah diganti nama tanpa konfigurasi tambahan
     answers:
       - true
       - false
     correctAnswer:
-  - question: Where should you put your images if you want webpack to bundle them?
+  - question: Dimana anda seharusnya menaruh foto jika anda mau webpack untuk melakukan proses bundle untuk foto-foto tersebut?
     answers:
       - static
       - assets
       - src
     correctAnswer: assets
-  - question: Anything in the static directory is relative to the root directory
+  - question: Apapun yang berada pada direktori static relatif terhadap direktori root
     answers:
       - true
       - false
     correctAnswer: true
-  - question: You can configure the behaviour of the static directory in the nuxt.config.js
+  - question: Anda dapat melakukan konfigurasi untuk tingkah laku direktori static dalam berkas nuxt.config.js
     answers:
       - true
       - false
     correctAnswer: true
 ---
 
-The `static` directory is directly mapped to the server root () and contains files that likely won't be changed. All included files will be automatically served by Nuxt and are accessible through your project root URL.
+Direktori `static` langsung dipetakan ke dasar (_root_) server dan mengandung berkas-berkas yang kemungkinan besar tidak diubah-ubah. Berkas-berkas yang berada dalam direktori akan secara otomatis dijalnkan oleh Nuxt dan dapat diakses melalui URL dasar proyek anda.
 
-`/static/robots.txt` will be available at `http://localhost:3000/robots.txt`
+`/static/robots.txt` akan tersedia di `http://localhost:3000/robots.txt`
 
-`/static/favicon.ico` will be available at  `localhost:3000/favicon.ico`
+`/static/favicon.ico` akan tersedia di  `localhost:3000/favicon.ico`
 
-This option is helpful for files like `robots.txt`, `sitemap.xml` or `CNAME` (which is important for GitHub Pages deployment).
+Opsi ini berguna untuk berkas-berkas seperti `robots.txt`, `sitemap.xml` or `CNAME` (penting untuk penggelaran (_deployment_) Github Pages).
 
 <base-alert>
 
-_This directory cannot be renamed without extra configuration._
+_Direktori ini tidak dapat berganti nama tanpa konfigurasi tambahan._
 
 </base-alert>
 
-## Static Assets
+## Aset Statis
 
-If you don't want to use Webpack assets from the `assets` directory, you can add the images to the static directory.
+Jika anda tidak mau menggunakan aset Webpack dari direktori `assets`, anda dapat menambahkan foto ke dalam direktori `static`.
 
-In your code, you can then reference these files relative to the root (`/`):
+Dalam kode anda, anda dapat mereferensikan berkas-berkas ini relatif ke dasar (_root_) proyek anda (`/`):
 
 ```html
-<!-- Static image from static directory -->
-<img src="/my-image.png" />
+<!-- Foto statis berasal dari direktori static -->
+<img src="/foto-saya.png" />
 
-<!-- webpacked image from assets directory -->
-<img src="@/assets/my-image-2.png" />
+<!-- Foto menggunakan webpack  berasal dari direktori assets -->
+<img src="@/assets/foto-saya-2.png" />
 ```
 
-## Static Directory Config
+## Konfigurasi direktori Static
 
-Should you need to you can configure the `static/` directory behaviour in the `nuxt.config.js` file.
+Jika dibutuhkan, anda dapat melakukan konfigurasi untuk direktori `static/` dalam berkas `nuxt.config.js`.
 
-### Static asset Prefix
+### Awalan aset statis
 
-If you deploy Nuxt.js to a subfolder, e.g. `/blog/`, the router base will be added to the static asset path by default. If you want to disable this behavior, you can set `static.prefix` to false in the `nuxt.config.js`.
+Jika anda menggelar (_deploy_) Nuxt.js ke dalam sub-direktori, misalnya `/blog/`, _router base_ akan menambahkan jalur tersebut secara otomatis. Jika anda ingin mematikan fitur tingkah ini, anda dapat menetapkan `static.prefix` menjadi _false_ dalam berkas `nuxt.config.js`
 
 ```js
 export default {
@@ -78,9 +78,9 @@ export default {
 }
 ```
 
-Default: `/blog/my-image.png`
+Default: `/blog/foto-saya.png`
 
-With `static.prefix` disabled: `/my-image.png`
+With `static.prefix` disabled: `/foto-saya.png`
 
 <app-modal>
   <code-sandbox  :src="csb_link"></code-sandbox>

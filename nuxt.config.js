@@ -201,7 +201,7 @@ export default {
         file: 'pt-BR.js',
         name: 'Português',
         domain: 'https://pt.nuxtjs.org'
-      }
+      },
       // please leave this commented out until subdomain is live
       // {
       //   code: 'fa',
@@ -219,13 +219,13 @@ export default {
       // domain: 'https://tr.nuxtjs.org'
       // }
       // please leave this commented out until subdomain is live
-      // {
-      //   code: 'es',
-      //   iso: 'es-ES',
-      //   file: 'es-ES.js',
-      //   name: 'Español',
-      //   domain: 'https://es.nuxtjs.org'
-      // }
+      {
+        code: 'es',
+        iso: 'es-ES',
+        file: 'es-ES.js',
+        name: 'Español',
+        domain: 'https://es.nuxtjs.org'
+      }
     ],
     vueI18n: {
       fallbackLocale: 'en'

@@ -1,46 +1,46 @@
 ---
 title: dist
-description: The `dist` folder, short for *distribution* folder. It is dynamically generated when using the `nuxt generate` commands and includes the generated production ready HTML files and assets that are necessary to deploy and run your statically generated Nuxt.js application.
+description: Direktori `dist`, merupakan kependekan dari direktori distribusi (_distribution_). Direktori tersebut secara dinamik dihasilkan ketika perintah `nuxt generate` dijalankan dan berisikan berkas-berkas HTML dan aset yang sudah siap produksi. Berkas-berkas ini sangat dibutuhkan untuk proses penggelaran (_deployment_) dan menjalankan aplikasi Nuxt.js secara statis.
 position: 5
 category: directory-structure
 csb_link: https://codesandbox.io/embed/github/nuxt-academy/guides-examples/tree/master/04_directory_structure/05_dist?fontsize=14&hidenavigation=1&theme=dark
 questions:
-  - question: What what commands do you generate the dist folder?
+  - question: Perintah apa yang dapat dijalankan untuk menghasilkan dist folder?
     answers:
       - nuxt build
       - nuxt start
       - nuxt generate
     correctAnswer: nuxt generate
-  - question: This is the folder you need to use to upload to your static site hosting
+  - question: Ini merupakan direktori yang anda butuhkan untuk mengunggah ke hosting statis anda
     answers:
       - true
       - false
     correctAnswer: true
-  - question: What property do you use to change the name of the dist folder?
+  - question: Properti apa yang dapat anda gunakan untuk mengganti nama dari direktori dist?
     answers:
       - dist
       - dir
       - buildDir
     correctAnswer: dir
-  - question: What property do you use so that you don't have all your generated pages in a folder?
+  - question: Properti apa yang anda dapat gunakan agar halaman-halaman yang dihasilkan secara otomatis tidak berada dalam direktori?
     answers:
       - 'folders: false'
       - 'subFolders: false'
       - 'pages: true'
     correctAnswer: 'subFolders: false'
-  - question: What is the Nuxt.js default value for the fallback property?
+  - question: Nilai anggapan dari Nuxt.js ketika properti fallback tidak ditetapkan?
     answers:
       - "'200.html'"
       - "'404.html'"
       - 'false'
     correctAnswer: "'200.html'"
-  - question: When working with statically generated pages it is recommended to use which file for the error pages?
+  - question: Ketika bekerja dengan halaman-halaman statis berkas mana yang direkomendasikan untuk menjadi halaman error?
     answers:
       - "'200.html'"
       - "'404.html'"
       - false
     correctAnswer: "'404.html'"
-  - question: Which property can you use to ignore certain files so that they are not statically generated?
+  - question: Properti apa yang dapat anda gunakan untuk mengecualikan berkas agar berkas tersebut tidak dihasilkan menjadi halaman statis?
     answers:
       - ignore
       - exclude
@@ -48,7 +48,7 @@ questions:
     correctAnswer: exclude
 ---
 
-Direktori `dist`, merupakan kependekan dari direktori distribusi (_distribution_). Direktori tersebut secara dinamik terbuat ketika perintah `nuxt generate` dijalankan dan berisikan berkas-berkas HTML dan aset yang sudah siap produksi. Berkas-berkas ini sangat dibutuhkan untuk proses penggelaran (_deployment_) dan menjalankan aplikasi Nuxt.js secara statis.
+Direktori `dist`, merupakan kependekan dari direktori distribusi (_distribution_). Direktori tersebut secara dinamik dihasilkan ketika perintah `nuxt generate` dijalankan dan berisikan berkas-berkas HTML dan aset yang sudah siap produksi. Berkas-berkas ini sangat dibutuhkan untuk proses penggelaran (_deployment_) dan menjalankan aplikasi Nuxt.js secara statis.
 
 ### Menggelar (_Deploying_)
 
@@ -56,7 +56,7 @@ Ini merupakan direktori yang dibutuhkan **untuk mengunggah ke _hosting_ statis**
 
 <base-alert>
 
-Direktori `dist` seharusnya tidak disertakan dalam sistem pengontrolan versi (_git_) dan harus diabaikan dalam berkas `.gitignore` karena direktori tersebut akan terbuat secara otomatis setiap kali `nuxt generate` dijalankan.
+Direktori `dist` seharusnya tidak disertakan dalam sistem pengontrolan versi (_git_) dan harus diabaikan dalam berkas `.gitignore` karena direktori tersebut akan dihasilkan secara otomatis setiap kali `nuxt generate` dijalankan.
 
 </base-alert>
 
@@ -76,9 +76,9 @@ Jika anda mengganti nama dari direktori dist anda, maka anda harus menambahkan n
 
 </base-alert>
 
-### The subFolders Property
+### Properti subDirektori
 
-Nuxt.js puts all your generated pages inside a folder by default, however you can change this if you wanted to by modifying the nuxt.config and changing the subFolders to be false.
+Nuxt.js menaruh semua berkas halaman anda yang dibuat secara otomatis kedalam direktori, namun anda dapat mengubah ini jika anda mau, dengan cara, mengubah berkas nuxt.config dan menuliskan properti subFolders menjadi _false_.
 
 ```js{}[nuxt.config.js]
 generate: {
@@ -86,17 +86,17 @@ generate: {
 }
 ```
 
-### The fallback Property
+### Properti _fallback_
 
-When deploying your site you will need to make sure the fallback html path is set correctly. It should be set as the error page so that unknown routes are rendered via Nuxt. If it is unset Nuxt.js will use the default value which is 200.html.
+Ketika menggelar (_deploying_) situs anda, anda harus memastikan jalur html _fallback_ ditetapkan dengan benar. Jalur _fallback_ harus ditetapkan sebagai halaman _error_, sehingga halaman yang tidak diketahui dapat di-_render_ melalui Nuxt. Jika tidak ditetapkan maka Nuxt.js akan menggunakan nilai anggapan yang merupakan 200.html.
 
-When running a single page application it makes more sense to use 200.html as it is the only file necessary as no other routes are generated.
+Ketika menjalankan aplikasi _Single-Page_, memang masuk akal menggunakan 200.html karena itu merupakan satu-satunya berkas yang dibutuhkan, tidak ada halaman lain yang dihasilkan.
 
-When working with statically generated pages it is recommended to use a 404.html for error pages.
+Ketika bekerja dengan halaman yang dihasilkan secara statis maka direkomendasikan untuk menggunakan 404.html sebagai halaman _error_.
 
 <base-alert>
 
-Depending on where you are hosting your site, you way have to use 200.html or 404.html. Please check with your hosting provider. Netlify, for example uses 404.html.
+Tergantung dimana anda menggelar situs anda, anda mungkin membutuhkan halaman 200.html atau 404.html. Mohon memeriksa _provider hosting_ anda. Sebagai contoh, Netlify menggunakan 404.html.
 
 </base-alert>
 
@@ -108,9 +108,9 @@ export default {
 }
 ```
 
-### The excludes property
+### Properti pengecualian (_excludes_)
 
-You can exclude pages from being generated by using the generate excludes property. Instead of being generated as a static page it will fallback to be a single page application page and will only be rendered on the client side.
+Anda dapat mengecualikan halaman agar tidak dihasilkan secara otomatis dengan menggunakan properti _generate excludes_. Sebagai gantinya, halaman yang tidak dihasilkan menjadi halaman statis akan menjadi aplikasi _Single-Page_ dan hanya akan di-_render_ pada sisi klien (_client side_).
 
 ```js{}[nuxt.config.js]
 generate: {
@@ -120,7 +120,7 @@ generate: {
 
 <base-alert type="info">
 
-You can also use a regex expression here to exclude pages starting or ending with a particular word
+Anda juga dapat menggunakan _regex expression_ disini untuk mengecualikan halaman-halaman yang dari atau berakhir dengan kata tertentu.
 
 </base-alert>
 

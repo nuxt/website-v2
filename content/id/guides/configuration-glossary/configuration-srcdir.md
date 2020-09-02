@@ -27,7 +27,7 @@ export default {
   }
 ```
 
-bekerja dengan struktur folder berikut (perhatikan bahwa nuxt.config terdaftar di direktori app)
+bekerja dengan struktur _folder_ berikut (perhatikan bahwa nuxt.config terdaftar di direktori app)
 
 ```bash
 -| app/
@@ -47,7 +47,7 @@ bekerja dengan struktur folder berikut (perhatikan bahwa nuxt.config terdaftar d
 
 Contoh 2:
 
-Selain contoh 1, Anda juga dapat memindahkan nuxt.config ke folder src Anda. Dalam hal ini, Anda hanya perlu menetapkan klien sebagai rootDir dan Anda dapat mengosongkan srcDir:
+Selain contoh 1, Anda juga dapat memindahkan nuxt.config ke _folder_ src Anda. Dalam hal ini, Anda hanya perlu menetapkan klien sebagai rootDir dan Anda dapat mengosongkan srcDir:
 
 Prerequisites:
 
@@ -63,7 +63,7 @@ export default {
   }
 ```
 
-bekerja dengan struktur folder berikut (perhatikan bahwa nuxt.config terdaftar di direktori client)
+bekerja dengan struktur _folder_ berikut (perhatikan bahwa nuxt.config terdaftar di direktori client)
 
 ```bash
 -| app/

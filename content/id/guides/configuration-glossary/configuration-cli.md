@@ -1,12 +1,12 @@
 ---
-title: 'Properti cli'
-description: Nuxt.js memungkinkan Anda menyesuaikan konfigurasi CLI.
+title: 'Properti Antarmuka Baris Perintah (CLI)'
+description: Nuxt.js memungkinkan Anda menyesuaikan konfigurasi Antarmuka Baris Perintah(CLI).
 menu: cli
 category: configuration-glossary
 position: 3
 ---
 
-> Nuxt.js memungkinkan Anda menyesuaikan konfigurasi CLI.
+> Nuxt.js memungkinkan Anda menyesuaikan konfigurasi Antarmuka Baris Perintah (CLI).
 
 ## bannerColor
 

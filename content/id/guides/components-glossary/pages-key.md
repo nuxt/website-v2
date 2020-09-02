@@ -1,7 +1,7 @@
 ---
 title: 'Properti key'
 description: Setel properti `key` dari komponen `<router-view>` internal
-menu: Key Property
+menu: Properti Key
 category: components-glossary
 ---
 

@@ -7,7 +7,7 @@ csb_link: https://codesandbox.io/embed/github/nuxt-academy/guides-examples/tree/
 videoScript:
   - assets-video.md
 questions:
-  - question: Cuál directorio contien los archivos sin compilar, Stylus o Sass, imágenes, o fuentes?
+  - question: Qué directorios contienen los archivos sin compilar, Stylus o Sass, imágenes, o fuentes?
     answers:
       - static
       - assets
@@ -29,7 +29,7 @@ questions:
     answers:
       - En tu archivo index.vue
       - En el archivo nuxt.config.js
-      - El el archivo de `layout` defecto
+      - En el archivo de `layout` por defecto
     correctAnswer: En el archivo nuxt.config.js
   - question: Qué propiedad css se usa para importar fuentes globales?
     answers:

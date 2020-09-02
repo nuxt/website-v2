@@ -16,7 +16,7 @@ questions:
       - cierto
       - falso
     correctAnswer: falso
-  - question: Dónde deberías poner las imágenes, si quieres que Webpack se encargue the hacer el bundle?
+  - question: Dónde deberías poner las imágenes, si quieres que Webpack se encargue de hacer el bundle?
     answers:
       - static
       - assets

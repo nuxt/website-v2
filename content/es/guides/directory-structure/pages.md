@@ -5,7 +5,7 @@ position: 10
 category: directory-structure
 csb_link: https://codesandbox.io/embed/github/nuxt-academy/guides-examples/tree/master/04_directory_structure/11_pages?fontsize=14&hidenavigation=1&theme=dark
 questions:
-  - question: ¿En cual directorio puedes poner un componente de página?
+  - question: ¿En cuál directorio puedes poner un componente de página?
     answers:
       - views
       - pages
@@ -33,7 +33,7 @@ questions:
       - meta
       - metaTags
     correctAnswer: head
-  - question: Cuál propiedad se usa para añadir un layout diferente a una página?
+  - question: ¿Cuál propiedad se usa para añadir un layout diferente a una página?
     answers:
       - layouts
       - page
@@ -51,13 +51,13 @@ questions:
       - "middleware: 'auth'"
       - "import auth from 'middleware/auth.js'"
     correctAnswer: "middleware: 'auth'"
-  - question: ¿Que propiedad se usa para configurar un visualizador (watcher), para los `query strings`?
+  - question: ¿Qué propiedad se usa para configurar un visualizador (watcher), para los `query strings`?
     answers:
       - watcher
       - queryWatcher
       - watchQuery
     correctAnswer: watchQuery
-  - question: Visualizar (watching) está desabilitado por defecto.
+  - question: Visualizar (watching) está deshabilitado por defecto.
     answers:
       - cierto
       - falso
@@ -253,7 +253,7 @@ Conoce más sobre transiciones en el capítulo de [Transiciones](/guides/feature
 
 ### scrollToTop
 
-La propiedad de `scrollToTop` te permite decirle a Nuxt.js que se desplpaze hacia el tope de la página antes de que se muestre. Nuxt.js desplaza la página hacia el tope por defecto, pero en rutas internas, Nuxt.js mantiene la posición de desplazamiento (scroll position). Si deseas que Nuxt se desplaze al tope cuando muestre las rutas internas, configura `scrollToTop` a cierto (`true`).
+La propiedad de `scrollToTop` te permite decirle a Nuxt.js que se desplace hacia el tope de la página antes de que se muestre. Nuxt.js desplaza la página hacia el tope por defecto, pero en rutas internas, Nuxt.js mantiene la posición de desplazamiento (scroll position). Si deseas que Nuxt se desplaze al tope cuando muestre las rutas internas, configura `scrollToTop` a cierto (`true`).
 
 ```js{}[pages/index.vue]
 export default {
@@ -303,7 +303,7 @@ export default {
 }
 ```
 
-También puedes usar la función de `watchQuery(newQuery, oldQuery)` para tener ovservadores más específicos.
+También puedes usar la función de `watchQuery(newQuery, oldQuery)` para tener observadores más específicos.
 
 ```js{}[pages/index.vue]
 export default {

@@ -45,7 +45,7 @@ El directorio `.nuxt` no deberia ser añadido en tu sistema de control de versi�
 
 ### La propiedad de buildDir
 
-Por defecto, muchas herramientas web, asumen que `.nuxt` es un directorio escondido, esto se debe a que el nombre del archivo comiensa con un punto. Tu puedes usar la opción del _buildDir_ para prevenir eso. Si llegas a cambiar el nomrbe, recuerda añadir el nombre nuevo al archivo `.gitignore`
+Por defecto, muchas herramientas web, asumen que `.nuxt` es un directorio escondido, esto se debe a que el nombre del archivo comienza con un punto. Tu puedes usar la opción del _buildDir_ para prevenir eso. Si llegas a cambiar el nombre, recuerda añadir el nombre nuevo al archivo `.gitignore`
 
 ```js{}[nuxt.config.js]
 export default {

@@ -11,7 +11,7 @@ position: 3
 ## bannerColor
 
 - Tipe: `String`
-- Default: `'green'`
+- Nilai Anggapan: `'green'`
 
 Ubah warna judul 'Nuxt.js' di spanduk CLI.
 

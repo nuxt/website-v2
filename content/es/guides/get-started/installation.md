@@ -181,7 +181,7 @@ Después, ve al navegador y mira tu nueva página en **[http://localhost:3000/fu
 
 <base-alert type="info">
 
-Crea un directorio llamado `more-fun` y añáde un archivo `index.vue` dentro. Esto dará el mismo resultado que crear un archivo `more-fun.vue`.
+Crea un directorio llamado `more-fun` y añade un archivo `index.vue` dentro. Esto dará el mismo resultado que crear un archivo `more-fun.vue`.
 
 </base-alert>
 

@@ -1,11 +1,11 @@
 ---
 title: static
-description: Direktori `static` langsung dipetakan ke dasar (_root_) server dan mengandung berkas-berkas yang kemungkinan besar tidak diubah-ubah. Berkas-berkas yang berada dalam direktori akan secara otomatis dijalnkan oleh Nuxt dan dapat diakses melalui pranala (_URL_) dasar proyek anda.
+description: Direktori `static` langsung dipetakan ke dasar (_root_) server dan mengandung berkas-berkas yang kemungkinan besar tidak diubah-ubah. Berkas-berkas yang berada dalam direktori akan secara otomatis dijalnkan oleh Nuxt dan dapat diakses melalui pranala (_URL_) dasar proyek Anda.
 position: 12
 category: directory-structure
 csb_link: https://codesandbox.io/embed/github/nuxt-academy/guides-examples/tree/master/04_directory_structure/13_static?fontsize=14&hidenavigation=1&theme=dark
 questions:
-  - question: Pada direktori apa anda harus menaruh berkas yang kemungkinan besar tidak anda ubah, seperti favicon atau robots.txt?
+  - question: Pada direktori apa Anda harus menaruh berkas yang kemungkinan besar tidak Anda ubah, seperti favicon atau robots.txt?
     answers:
       - assets
       - static
@@ -16,7 +16,7 @@ questions:
       - true
       - false
     correctAnswer:
-  - question: Dimana anda seharusnya menaruh foto jika anda mau webpack untuk melakukan proses bundle untuk foto-foto tersebut?
+  - question: Dimana Anda seharusnya menaruh foto jika Anda mau webpack untuk melakukan proses bundle untuk foto-foto tersebut?
     answers:
       - static
       - assets
@@ -34,7 +34,7 @@ questions:
     correctAnswer: true
 ---
 
-Direktori `static` langsung dipetakan ke dasar (_root_) server dan mengandung berkas-berkas yang kemungkinan besar tidak diubah-ubah. Berkas-berkas yang berada dalam direktori akan secara otomatis dijalnkan oleh Nuxt dan dapat diakses melalui pranala (_URL_) dasar proyek anda.
+Direktori `static` langsung dipetakan ke dasar (_root_) server dan mengandung berkas-berkas yang kemungkinan besar tidak diubah-ubah. Berkas-berkas yang berada dalam direktori akan secara otomatis dijalnkan oleh Nuxt dan dapat diakses melalui pranala (_URL_) dasar proyek Anda.
 
 `/static/robots.txt` akan tersedia di `http://localhost:3000/robots.txt`
 
@@ -50,9 +50,9 @@ _Direktori ini tidak dapat berganti nama tanpa konfigurasi tambahan._
 
 ## Aset Statis
 
-Jika anda tidak mau menggunakan aset Webpack dari direktori `assets`, anda dapat menambahkan foto ke dalam direktori `static`.
+Jika Anda tidak mau menggunakan aset Webpack dari direktori `assets`, Anda dapat menambahkan foto ke dalam direktori `static`.
 
-Dalam kode anda, anda dapat mereferensikan berkas-berkas ini relatif ke dasar (_root_) proyek anda (`/`):
+Dalam kode Anda, Anda dapat mereferensikan berkas-berkas ini relatif ke dasar (_root_) proyek Anda (`/`):
 
 ```html
 <!-- Foto statis berasal dari direktori static -->
@@ -64,11 +64,11 @@ Dalam kode anda, anda dapat mereferensikan berkas-berkas ini relatif ke dasar (_
 
 ## Konfigurasi direktori Static
 
-Jika dibutuhkan, anda dapat melakukan konfigurasi untuk direktori `static/` dalam berkas `nuxt.config.js`.
+Jika dibutuhkan, Anda dapat melakukan konfigurasi untuk direktori `static/` dalam berkas `nuxt.config.js`.
 
 ### Awalan aset statis
 
-Jika anda menggelar (_deploy_) Nuxt.js ke dalam sub-direktori, misalnya `/blog/`, _router base_ akan menambahkan jalur tersebut secara otomatis. Jika anda ingin mematikan fitur tingkah ini, anda dapat menetapkan `static.prefix` menjadi _false_ dalam berkas `nuxt.config.js`
+Jika Anda menggelar (_deploy_) Nuxt.js ke dalam sub-direktori, misalnya `/blog/`, _router base_ akan menambahkan jalur tersebut secara otomatis. Jika Anda ingin mematikan fitur tingkah ini, Anda dapat menetapkan `static.prefix` menjadi _false_ dalam berkas `nuxt.config.js`
 
 ```js
 export default {

@@ -81,7 +81,7 @@ Trabajar con [asyncData](/guides/features/data-fetching#async-data)
 
 <base-alert type="next">
 
-Eligiendo entre diferentes [modos de Renderización](/guides/features/rendering-modes)
+Eligiendo entre diferentes [modos de Renderizado](/guides/features/rendering-modes)
 
 </base-alert>
 

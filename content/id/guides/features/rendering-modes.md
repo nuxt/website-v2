@@ -11,23 +11,23 @@ category: features
 
 ```js{}[nuxt.config.js]
 export default {
-  mode: 'universal' // default universal
+  mode: 'universal' // nilai bawaan nya adalah universal
 }
 ```
 
 <base-alert type="info">
-Anda tidak harus menambahkan ini pada konfigurasi nuxt anda untuk menerapkan mode universal, karena mode universal sudah diterapkan sebagai mode default.
+Anda tidak harus menambahkan ini pada konfigurasi nuxt anda untuk menerapkan mode universal, karena mode universal sudah diterapkan sebagai mode bawaan.
 </base-alert>
 
 ## SPA
 
-`mode: 'spa'`: Tidak di-_render_ di sisi _server_ (hanya di-_render_ ketika navigasi pada sisi klien)
+`mode: 'spa'`: Tidak di-_render_ di sisi _server_ (hanya di-_render_ ketika terjadi navigasi pada sisi klien)
 
-Anda bisa menggunakan properti `mode` untuk mengubah mode default nuxt untuk proyek anda:
+Anda bisa menggunakan properti `mode` untuk mengubah mode bawaan nuxt untuk proyek anda:
 
 ```js{}[nuxt.config.js]
 export default {
-  mode: 'spa' // default universal
+  mode: 'spa' // nilai bawaan nya adalah universal
 }
 ```
 

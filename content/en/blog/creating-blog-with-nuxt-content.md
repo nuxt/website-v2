@@ -127,13 +127,13 @@ In markdown we create a `<h1>` title by using `#`. Make sure you leave a space b
 
 ### Displaying your content
 
-To display our content in our page, we can use a [dynamic page](/guide/routing#dynamic-routes) by prefixing the page with an underscore(`_`). By creating a page component named `_slug.vue` inside our blog folder, we are able to use the `params.slug` variable provides by vue router to get the name of each article.
+To display our content in our page, we can use a [dynamic page](/guide/routing#dynamic-routes) by prefixing the page with an underscore(`_`). By creating a page component named `_slug.vue` inside our blog folder, we are able to use the `params.slug` variable provided by vue router to get the name of each article.
 
 ```bash
 touch pages/blog/_slug.vue
 ```
 
-Then we can use `asyncData` in our page component to fetch our article content before the page has been rendered. We can access to our content through the context by using the variable `$content`. As we want to fetch a dynamic page we also need to know which article to fetch with `params.slug` which is available to us through [the context](/api/context).
+Then we can use `asyncData` in our page component to fetch our article content before the page has been rendered. We can have access to our content through the context by using the variable `$content`. As we want to fetch a dynamic page we also need to know which article to fetch with `params.slug` which is available to us through [the context](/api/context).
 
 ```html{}[pages/blog/_slug.vue]
 <script>
@@ -278,7 +278,7 @@ If we inspect this page we can see that everything written inside our markdown i
 All other tags that come from our YAML front matter can be styled as normal either using [TailwindCSS](https://tailwindcss.com/) or adding css in the style tag.
 
 <base-alert>
-Scoped styles will not work with nuxt-content so if adding then in the style
+Scoped styles will not work with nuxt-content so if adding them in the style
 tag you shouldn't use scoped. You can add the styles here or as a global style
 in your css folder.
 </base-alert>
@@ -432,7 +432,7 @@ Here we create a div the author image, a title of Author and a dynamic name and 
 ```html{}[components/global/Author.vue]
 <template>
   <div>
-    <img :src="author.img" />
+    <img :src="author.image" />
     <div>
       <h4>Author</h4>
       <p>{{ author.name }}</p>
@@ -680,7 +680,7 @@ In the [demo code](https://github.com/nuxt-company/demo-blog-nuxt-content) I use
 
 Passing in `$content` and `params` to the context in our `asyncData` function we then use a const of articles to await our returned content by passing into `$content` the arguments of articles, as that is the folder where our articles are and our slug from params. We can then use `only()` to get our title, description, img, slug and author as we tested from our API this will give us exactly what we need. We can use `sortBy()` to sort by the createdAt date and then we chain our `fetch()` to the end and return our articles.
 
-```html{}[pages/blog/index.vue]
+```html{}[pages/index.vue]
 <script>
   export default {
     async asyncData({ $content, params }) {
@@ -697,7 +697,7 @@ Passing in `$content` and `params` to the context in our `asyncData` function we
 </script>
 ```
 
-Our articles are now available to us just like any data property so we can use it in our template using a `v-for` to loop over all the articles and print out the article title and author name, the description the date it was updated and the image using the `<NuxtLink>` component to link to the slug of the article.
+Our articles are now available to us just like any data property so we can use it in our template using a `v-for` to loop over all the articles and print out the article title and author name, the description, the date it was updated and the image using the `<NuxtLink>` component to link to the slug of the article.
 
 ```html{}[pages/index.vue]
 <template>
@@ -721,7 +721,7 @@ Our articles are now available to us just like any data property so we can use i
 
 ### Using the where query to create an Author page
 
-With the content module we can also filter out results using the where query. We could have an author page that shows the author details and all posts by that author.
+With the content module we can also filter our results using the where query. We could have an author page that shows the author details and all posts by that author.
 
 ```bash
 touch pages/blog/author/_author.vue

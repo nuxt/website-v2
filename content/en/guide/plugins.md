@@ -119,7 +119,7 @@ export default {
     this.$hello('mounted')
     // will console.log 'Hello mounted!'
   },
-  asyncData ({ $hello ) {
+  asyncData ({ $hello }) {
     $hello('asyncData')
   }
 }

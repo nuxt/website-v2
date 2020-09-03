@@ -64,24 +64,24 @@ questions:
     correctAnswer: true
 ---
 
-The `pages` directory contains your application views and routes. Nuxt.js reads all the `.vue` files inside this directory and automatically creates the router configuration for you.
+Direktori `pages` berisikan semua halaman dan jalur aplikasi Anda. Nuxt.js membaca semua berkas `.vue` dalam direktori ini dan secara otomatis membuat konfigurasi jalur (_router_) untuk Anda.
 
 <base-alert type="info">
 
-You can also create routes with .js files and .ts files
+Anda juga dapat membuat jalur (_routes_) dengan berkas .js dan berkas .ts.
 
 </base-alert>
 
-Every Page component is a Vue component but Nuxt.js adds special attributes and functions to make the development of your universal application as easy as possible.
+Setiap komponen halaman (_Page component_) merupakan komponen Vue, tetapi Nuxt.js menambahkan atribut dan fungsi-fungsi khusus yang dapat membantu Anda dalam pengembangan aplikasi _universal_ Anda semudah mungkin.
 
 ```html{}[pages
 <template>
-  <h1 class="red">Hello {{ name }}!</h1>
+  <h1 class="red">Halo {{ nama }}!</h1>
 </template>
 
 <script>
   export default {
-    // page properties go here
+    // properti halaman berada disini
   }
 </script>
 
@@ -92,11 +92,11 @@ Every Page component is a Vue component but Nuxt.js adds special attributes and 
 </style>
 ```
 
-## Dynamic Pages
+## Halaman-halaman dinamis
 
-Dynamic pages can be created when you don't know the name of the page due to it coming from an API or you don't want to have to create the same page over and over again. To create a dynamic page you need to add an underscore before the .vue file name or before the the name of the directory, if you want the directory to be dynamic. You can name the file or directory anything you want but you must prefix it with an underscore.
+Halaman-halaman dinamis dapat dibuat ketika Anda tidak tahu nama halaman tersebut karena nama halaman tersebut datang dari antarmuka pemrograman aplikasi (API) atau Anda tidak ingin membuat halaman yang sama secara berulang. Untuk membuat halaman dinamis, Anda dapat menambahkan simbol garis bawah (_underscore_) sebelum nama berkas .vue Anda atau sebelum nama direktori Anda jika Anda ingin direktori Anda menjadi dinamis. Anda dapat memberi nama berkas atau direktori Anda dengan apapun yang Anda inginkan, tetapi Anda harus memberi awalan nama tersebut dengan garis bawah (_underscore_).
 
-If you've defined a file named `_slug.vue` in your pages folder, you can access the value using the context with params.slug
+Jika Anda memberi nama salah satu berkas `_slug.vue` dalam direktori `pages` Anda, Anda dapat mengakses nilai tersebut menggunakan konteks (_context_) dengan `params.slug`
 
 ```html{}[pages/_slug.vue]
 <template>
@@ -106,14 +106,14 @@ If you've defined a file named `_slug.vue` in your pages folder, you can access 
 <script>
   export default {
     async asyncData({ params }) {
-      const slug = params.slug // When calling /abc the slug will be "abc"
+      const slug = params.slug // Ketika memanggil /abc maka slug akan menjadi "abc"
       return { slug }
     }
   }
 </script>
 ```
 
-If you've defined a file named \_slug.vue inside a folder called \_book.vue you can access the value using the context with params.slug and params.book
+Jika Anda memberi nama sebuah berkas bernama \_slug.vue di dalam direktori \_book.vue, Anda dapat mengakses nilai tersebut menggunakan konteks (_context_) dengan `params.slug` dan `params.book`
 
 ```html{}[pages/_book/_slug.vue]
 <template>
@@ -131,11 +131,11 @@ If you've defined a file named \_slug.vue inside a folder called \_book.vue you 
 </script>
 ```
 
-## Properties
+## Properti
 
 ### asyncData
 
-AsyncData is called every time before loading the component. It can be asynchronous and receives the context as an argument. The returned object will be merged with your data object.
+AsyncData dipanggil setiap kali sebelum pemuatan (_loading_) komponen terjadi. Properti ini dapat menjadi _asynchronous_ dan menerima konteks (_context_) menjadi argumen. Objek yang dikembalikan akan digabung (_merged_) dengan objek data Anda.
 
 ```js{}[pages/index.vue]
 export default {
@@ -146,7 +146,7 @@ export default {
 
 <base-alert type="next">
 
-See more on how asyncData works in our [Data Fetching](/guides/features/data-fetching#async-data) chapter
+Lihat informasi lebih lanjut mengenai bagaimana asyncData bekerja, pada bab [Data Fetching](/guides/features/data-fetching#async-data)
 
 </base-alert>
 

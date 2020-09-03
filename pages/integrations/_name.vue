@@ -74,11 +74,11 @@
             <a
               v-for="type in ['v', 'dm', 'types']"
               :key="type"
-              :href="`https://npmjs.com/package/${integration.npm.name}`"
+              :href="`https://npmjs.com/package/${integration.npm}`"
               target="_blank"
             >
               <img
-                :src="`https://flat.badgen.net/npm/${type}/${integration.npm.name}`"
+                :src="`https://flat.badgen.net/npm/${type}/${integration.npm}`"
                 :alt="'npm ' + type"
                 class="mb-2"
               />

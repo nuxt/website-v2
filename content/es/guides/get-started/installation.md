@@ -1,6 +1,6 @@
 ---
 title: Instalación
-description: Aquí, encontrarás información sobre cómo configurar y arrancar un proyecto de Nuxt.js en 4 pasos.
+description: Aquí encontrarás información sobre cómo configurar y ejecutar un proyecto de Nuxt.js en 4 pasos.
 position: 1
 category: get-started
 csb_link: https://codesandbox.io/embed/github/nuxt-academy/guides-examples/tree/master/01_get_started/01_installation?fontsize=14&hidenavigation=1&theme=dark
@@ -8,11 +8,11 @@ csb_link: https://codesandbox.io/embed/github/nuxt-academy/guides-examples/tree/
 
 ## Prerrequisitos
 
-Aquí, encontrarás información sobre cómo configurar y arrancar un proyecto de Nuxt.js en 4 pasos.
+Aquí encontrarás información sobre cómo configurar y ejecutar un proyecto de Nuxt.js en 4 pasos.
 
 <base-alert type="info">
 
-Otra forma de empezar con Nuxt.js es usando [CodeSandbox](https://template.nuxtjs.org), que es una genial manera de iniciarse rápidamente con Nuxt.js y/o compartir tu código con más gente.
+Otra forma de empezar con Nuxt.js es usando [CodeSandbox](https://template.nuxtjs.org), una buena manera de juguetear rápidamente con Nuxt.js y/o compartir tu código con más gente.
 
 </base-alert>
 
@@ -20,34 +20,34 @@ Otra forma de empezar con Nuxt.js es usando [CodeSandbox](https://template.nuxtj
 
 [node](https://nodejs.org/en/download/) - al menos v8.9.0
 
-_Recomendamos que tengas la última versión instalada._
+_Te recomendamos que tengas la última versión instalada._
 
 ### Editor de texto
 
-Usa el que más te guste, pero te recomendamos [VSCode](https://code.visualstudio.com/).
+Puedes usar el que prefieras, pero te recomendamos [VSCode](https://code.visualstudio.com/).
 
 ### Terminal
 
-Puedes usar la que prefieras, pero recomendamos la [terminal integrada](https://code.visualstudio.com/docs/editor/integrated-terminal) de VSCode.
+Puedes usar el que prefieras, pero te recomendamos usar el [terminal integrado](https://code.visualstudio.com/docs/editor/integrated-terminal) de VSCode.
 
-## Empezar desde cero
+## Empezando desde cero
 
-Crear un proyecto de Nuxt.js desde cero sólo requiere un único archivo y un único directorio.
+Crear un proyecto Nuxt.js desde cero sólo requiere un archivo y un directorio.
 
-En este ejemplo concreto, usaremos la terminal para crear los directorios y los ficheros, pero puedes crearlos usando tu editor de texto preferido.
+En este ejemplo concreto, usaremos el terminal para crear los directorios y archivos, pero puedes crearlos usando tu editor de texto preferido.
 
 ### Configura tu proyecto
 
-Para empezar, crea un directorio vacío con el nombre de tu proyecto y colócate dentro de él:
+Para empezar, crea un directorio vacío con el nombre de tu proyecto y accede a él:
 
 ```bash
 mkdir <project-name>
 cd <project-name>
 ```
 
-_Sustituye `<project-name>` por el nombre de tu proyecto._
+_Reemplaza `<project-name>` con el nombre de tu proyecto._
 
-Después, crea un fichero llamado `package.json`:
+Después, crea un archivo llamado `package.json`:
 
 ```bash
 touch package.json
@@ -67,15 +67,15 @@ Abre el archivo package.json en tu editor de código favorito y rellénalo con e
 }
 ```
 
-Los `scripts` definen los comandos de Nuxt.js que serán lanzados a través del comando `npm run <command>`.
+Los `scripts` definen los comandos de Nuxt.js que serán lanzados con el comando `npm run <command>`.
 
 #### **¿Qué es un archivo package.json?**
 
-El `package.json` es como la tarjeta de identificación de tu proyecto. Si no sabes qué es el archivo `package.json`, te recomendamos encarecidamente que le dediques una lectura rápida a la [documentación de NPM](https://docs.npmjs.com/creating-a-package-json-file).
+El `package.json` es como la tarjeta de identificación de tu proyecto. Si no sabes qué es el archivo `package.json`, te recomendamos que leas la [documentación de NPM](https://docs.npmjs.com/creating-a-package-json-file).
 
 ### Instalar nuxt
 
-Una vez que el `package.json` ha sido creado, añade `nuxt` a tu proyecto vía `npm` o `yarn` como se muestra abajo:
+Una vez creado el `package.json`, añade `nuxt` a tu proyecto vía `npm` o `yarn` como se muestra abajo:
 
 <code-group>
   <code-block label="Yarn" active>
@@ -94,11 +94,11 @@ npm install nuxt
   </code-block>
 </code-group>
 
-Este comando añadirá `nuxt` como dependencia a tu proyecto y lo registrará en tu `package.json` automáticamente. El directorio `node_modules` también será creado, en el cual se almacenarán todos los paquetes instalados y sus correspondientes dependencias.
+Este comando añadirá `nuxt` como dependencia a tu proyecto y lo añadirá a tu `package.json` automáticamente. También se creará el directorio `node_modules`, en el cual se almacenarán todos los paquetes instalados y sus correspondientes dependencias.
 
 <base-alert type="info">
 
-Un `yarn.lock` o un `package-lock.json` también es creado, el cual asegura una instalación consistente y compatibilidad entre las dependencias de los paquetes instalados en tu proyecto.
+También se crea un `yarn.lock` o `package-lock.json`, el cual asegura una instalación consistente y compatibilidad entre las dependencias de los paquetes instalados en tu proyecto.
 
 </base-alert>
 
@@ -112,7 +112,7 @@ Crea el directorio `pages` en tu proyecto:
 mkdir pages
 ```
 
-Tras ello, crea un fichero `index.vue` en la carpeta `pages`:
+Después, crea un archivo `index.vue` en el directorio `pages`:
 
 ```bash
 touch pages/index.vue
@@ -130,7 +130,7 @@ Abre el archivo `index.vue` en tu editor y añade el siguiente contenido:
 
 ### Inicia el proyecto
 
-Arranca tu proyecto tecleando uno de los siguientes comandos en tu terminal:
+Ejecuta tu proyecto tecleando uno de los siguientes comandos en tu terminal:
 
 <code-group>
   <code-block label="Yarn" active>
@@ -151,23 +151,23 @@ npm run dev
 
 <base-alert type="info">
 
-Usaremos el comando dev para arrancar nuestra aplicación en modo desarrollo.
+Usamos el comando dev cuando ejecutamos nuestra aplicación en modo desarrollo.
 
 </base-alert>
 
-La aplicación está funcionando ahora en **[http://localhost:3000](http://localhost:3000/).**
+La aplicación se está ejecutando ahora en **[http://localhost:3000](http://localhost:3000/).**
 
-Abre tu navegador haciendo click en el enlace de tu terminal y deberías ver el texto "Hello World!" que copiamos en el paso anterior.
+Ábrela en tu navegador haciendo clic en el enlace de tu terminal y deberías ver el texto "Hello World!" que copiamos en el paso anterior.
 
 <base-alert type="info">
 
-Al lanzar Nuxt.js en modo desarrollo, estará pendiente de las modificaciones en los archivos en la mayoría de los directorios. De esta manera no será necesario reiniciar la aplicación cuando, por ejemplo, añadamos nuevas páginas.
+Al lanzar Nuxt.js en modo desarrollo, estará pendiente de las modificaciones en los archivos de la mayoría de los directorios. De esta manera, no será necesario reiniciar la aplicación cuando, por ejemplo, añadamos nuevas páginas.
 
 </base-alert>
 
 <base-alert type="warning">
 
-Al usar el comando dev se creará un directorio .nuxt. Esta carpeta debería ser ignorada por el controlador de versiones. Puedes ignorar archivos creando un .gitignore en el directorio raíz y añadiéndole .nuxt.
+Al ejecutar el comando dev se creará un directorio .nuxt. Esta carpeta debería ser ignorada por el control de versiones. Puedes ignorar archivos creando un .gitignore en el directorio raíz y añadiendo .nuxt.
 
 </base-alert>
 
@@ -181,7 +181,7 @@ Después, ve al navegador y mira tu nueva página en **[http://localhost:3000/fu
 
 <base-alert type="info">
 
-Crea una carpeta llamada `more-fun` y añádele un archivo `index.vue`. Esto dará el mismo resultado que si crearas un fichero `more-fun.vue`.
+Crea un directorio llamado `more-fun` y añade un archivo `index.vue` dentro. Esto dará el mismo resultado que crear un archivo `more-fun.vue`.
 
 </base-alert>
 
@@ -189,7 +189,7 @@ Crea una carpeta llamada `more-fun` y añádele un archivo `index.vue`. Esto dar
   <code-sandbox  :src="csb_link"></code-sandbox>
 </app-modal>
 
-## Usar create-nuxt-app
+## Usando create-nuxt-app
 
 Para empezar rápidamente puedes usar el [create-nuxt-app](https://github.com/nuxt/create-nuxt-app).
 
@@ -220,7 +220,7 @@ npm init nuxt-app <project-name>
 
 </code-group>
 
-Te hará algunas preguntas (nombre, opciones de Nuxt, UI framework, TypeScript, linter, testing framework, etc). Cuando las hayas respondido, instalará todas las dependencias. El siguiente paso es ubicarnos en la carpeta del proyecto y arrancarlo:
+Te hará algunas preguntas (nombre, opciones de Nuxt, UI framework, TypeScript, linter, testing framework, etc). Cuando las hayas respondido, instalará todas las dependencias. El siguiente paso es navegar a la carpeta del proyecto y arrancarlo:
 
 <code-group>
   <code-block label="Yarn" active>
@@ -241,4 +241,4 @@ npm run dev
   </code-block>
 </code-group>
 
-La aplicación funciona ahora en [http://localhost:3000](http://localhost:3000). ¡Bien hecho!
+La aplicación se está ejecutando ahora en [http://localhost:3000](http://localhost:3000). ¡Bien hecho!

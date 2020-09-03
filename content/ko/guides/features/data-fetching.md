@@ -5,62 +5,62 @@ position: 4
 category: features
 csb_link: https://codesandbox.io/embed/github/nuxt-academy/guides-examples/tree/master/03_features/04_data_fetching?fontsize=14&hidenavigation=1&theme=dark
 questions:
-  - question: Where can you use the Nuxt.js fetch hook?
+  - question: Nuxt.js fetch 훅은 어디에서 사용할 수 있나요?
     answers:
-      - pages and components
-      - only in pages
-      - only in components
-    correctAnswer: pages and components
-  - question: You have access to this when you use the Nuxt.js fetch hook
+      - 페이지와 컴포넌트
+      - 오직 페이지내에서
+      - 오직 컴포넌트내에서
+    correctAnswer: 페이지와 컴포넌트
+  - question: Nuxt.js 가져 오기 후크를 사용하면 this에 접근 할 수 있습니다.
     answers:
-      - true
-      - false
-    correctAnswer: true
-  - question: When is the Nuxt.js fetch hook is called?
+      - 예
+      - 아니오
+    correctAnswer: 예
+  - question: Nuxt.js fetch 훅은 언제 호출되나요?
     answers:
-      - after the component instance
-      - before the component instance
-      - during the component instance
-    correctAnswer: after the component instance
-  - question: Which allows you to display a placeholder when `fetch` is being called *on client-side?*
+      - 컴포넌트 인스턴스 생성 이후
+      - 컴포넌트 인스턴스 생성 이전
+      - 컴포넌트 인스턴스 생성 중에
+    correctAnswer: 컴포넌트 인스턴스 생성 이후
+  - question: '*클라이언트 사이드* 에서 `fetch` 가 호출 될 때 placeholder를 표시 할 수 있는 것은 무엇인가요?'
     answers:
       - $fetchState.timestamp
       - $fetchState.error
       - $fetchState.pending
     correctAnswer: $fetchState.pending
-  - question: How do you save fetch calls on pages you have already visited?
+  - question: 이미 방문한 페이지에 대한 fetch 호출을 어떻게 저장하나요?
     answers:
       - keep-alive
       - save-fetch
       - cache-fetch
     correctAnswer: keep-alive
-  - question: In the activated hook which property do you use to add a 30 second cache to fetch?
+  - question: activated 훅에서 가져올 30초 캐시를 추가하기 위해 사용하는 속성은 무엇인가요?
     answers:
       - $fetchState.pending
       - $fetchState.timestamp
       - $fetchState.cache
     correctAnswer: $fetchState.timestamp
-  - question: When is `asyncData` called?
+  - question: '`asyncData`는 언제 호출되나요?'
     answers:
-      - after loading the page component
-      - during loading the page component
-      - before loading the page component
-    correctAnswer: before loading the page component
-  - question: You have access to `this` inside asyncData
+      - 페이지 컴포넌트 로드 이후
+      - 페이지 컴포넌트 로드 중에
+      - 페이지 컴포넌트 로드 이전
+    correctAnswer: 페이지 컴포넌트 로드 이전
+  - question: asyncData 내에서 `this`에 접근 할 수 있습니다.
     answers:
-      - true
-      - false
-    correctAnswer: false
-  - question: With asyncData you can use the `context` parameter to access dynamic route data
+      - 예
+      - 아니오
+    correctAnswer: 아니오
+  - question: asyncData를 사용하면 `context` 매개 변수를 사용하여 동적 라우트 데이터에 접근 할 수 있습니다.
     answers:
-      - true
-      - false
-    correctAnswer: true
-  - question: You have access to the error statusCode in asyncData
+      - 예
+      - 아니오
+    correctAnswer: 예
+  - question: asyncData의 오류 statusCode에 접근 할 수 있습니다.
     answers:
-      - true
-      - false
-    correctAnswer: true
+      - 예
+      - 아니오
+    correctAnswer: 예
 ---
 
 Nuxt.js에는 API에서 데이터를 가져오는 두 가지 방법이 있습니다. fetch 메소드 또는 asyncData 메소드를 사용할 수 있습니다.
@@ -156,7 +156,7 @@ export default {
       res.json()
     )
   },
-  // call fetch only on client-side
+  // 클라이언트 사이드에서만 fetch를 호출합니다.
   fetchOnServer: false
 }
 ```
@@ -196,7 +196,7 @@ export default {
 
 ### `activated` hook 사용
 
-Nuxt는 마지막 `fetch` 호출 (ssr 포함)의 `this.$fetchState.timestamp` (timestamp)를 직접 채 웁니다. 이 속성을 `activated` 훅과 결합하여 `fetch`에 30초 캐시를 추가할 수 있습니다.
+Nuxt는 마지막 `fetch` 호출 (ssr 포함)의 `this.$fetchState.timestamp` (timestamp)를 직접 채울 것입니다. 이 속성을 `activated` 훅과 결합하여 `fetch`에 30초 캐시를 추가할 수 있습니다.
 
 ```html{}[pages/posts/_id.vue]
 <template> ... </template>

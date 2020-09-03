@@ -22,7 +22,7 @@ Aprende más sobre [Enrutamiento](/guides/features/file-system-routing)
 
 Para ir de una página a otra en tu aplicación, debes usar el componente [NuxtLink](/guides/features/nuxt-components#the-nuxtlink-component). Este componente está incluído en Nuxt.js y por lo tanto no tienes que importarlo como haces con otros componentes. Es similar a la etiqueta `<a>` de HTML, excepto que en lugar de usar un `href="/about"` usamos `to="/about"`. Si has usado antes `vue-router`, puedes ver `<NuxtLink>` como un sustituto de `<RouterLink>`.
 
-Un simple enlace a la página `index.vue` en tu carpeta `pages`:
+Un simple enlace a la página `index.vue` de tu carpeta `pages`:
 
 ```html{}[pages/index.vue]
 <template>

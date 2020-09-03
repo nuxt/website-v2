@@ -11,7 +11,7 @@ category: features
 
 ```js{}[nuxt.config.js]
 export default {
-  mode: 'universal' // nilai bawaan nya adalah universal
+  mode: 'universal' // nilai bawaannya adalah universal
 }
 ```
 
@@ -27,7 +27,7 @@ Anda bisa menggunakan properti `mode` untuk mengubah mode bawaan nuxt untuk proy
 
 ```js{}[nuxt.config.js]
 export default {
-  mode: 'spa' // nilai bawaan nya adalah universal
+  mode: 'spa' // nilai bawaannya adalah universal
 }
 ```
 

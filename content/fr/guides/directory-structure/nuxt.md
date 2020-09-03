@@ -1,6 +1,6 @@
 ---
 title: .nuxt
-description: Le répertoire `.nuxt` est le répértoire de build. Il est dynamiquement généré et caché du système de fichier par défaut. À l'interieur du répértoire vous pouvez trouver des fichiers générés automatiquement en utilisans la commande `nuxt dev` ou bien vos artefacts de construction lorsque vous utilisez `nuxt build`.
+description: Le répertoire `.nuxt` est le répértoire de build. Il est dynamiquement généré et caché du système de fichier par défaut. À l'interieur du répértoire vous pouvez trouver des fichiers générés automatiquement en utilisant la commande `nuxt dev` ou bien vos artefacts de construction lorsque vous utilisez `nuxt build`.
 position: 1
 category: directory-structure
 questions:

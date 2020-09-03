@@ -21,7 +21,7 @@
             <h3
               class="font-bold uppercase text-light-onSurfacePrimary dark:text-dark-onSurfacePrimary text-lg pb-4 transition-colors duration-300 ease-linear"
             >
-              {{ title }}
+              {{ $t(`footer.links.${title}.title`) }}
             </h3>
             <ul
               class="text-light-onSurfaceSecondary dark:text-dark-onSurfaceSecondary transition-colors duration-300 ease-linear"
@@ -100,9 +100,9 @@ export default {
     return {
       links: {
         discover: [
-          { key: 'Design resources', to: '/design' },
-          { key: 'A worldwide team', to: '/team' },
-          { key: 'Blog', to: '/blog' }
+          { key: this.$t('footer.links.discover.design'), to: '/design' },
+          { key: this.$t('footer.links.discover.team'), to: '/team' },
+          { key: this.$t('footer.links.discover.blog'), to: '/blog' }
         ],
         follow: [
           { key: 'GitHub', href: 'https://github.com/nuxt/nuxt.js' },
@@ -110,9 +110,18 @@ export default {
           { key: 'Discord', href: 'https://discord.nuxtjs.org' }
         ],
         support: [
-          { key: 'Sponsor NuxtJS', to: this.localePath('/sponsor-nuxtjs') },
-          { key: 'The NuxtJS Shop', to: this.localePath('/shop') },
-          { key: 'NuxtJS Consulting', to: this.localePath('/support') }
+          {
+            key: this.$t('footer.links.support.sponsorNuxt'),
+            to: this.localePath('/sponsor-nuxtjs')
+          },
+          {
+            key: this.$t('footer.links.support.shop'),
+            to: this.localePath('/shop')
+          },
+          {
+            key: this.$t('footer.links.support.consulting'),
+            to: this.localePath('/support')
+          }
         ]
       }
     }

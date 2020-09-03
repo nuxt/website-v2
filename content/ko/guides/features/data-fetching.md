@@ -11,7 +11,7 @@ questions:
       - 오직 페이지내에서
       - 오직 컴포넌트내에서
     correctAnswer: 페이지와 컴포넌트
-  - question: Nuxt.js 가져 오기 후크를 사용하면 this에 접근 할 수 있습니다.
+  - question: Nuxt.js fetch 훅을 사용하면 this에 접근 할 수 있습니다.
     answers:
       - 예
       - 아니오

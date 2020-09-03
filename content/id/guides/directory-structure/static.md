@@ -1,6 +1,6 @@
 ---
 title: static
-description: Direktori `static` langsung dipetakan ke dasar (_root_) server dan mengandung berkas-berkas yang kemungkinan besar tidak diubah-ubah. Berkas-berkas yang berada dalam direktori akan secara otomatis dijalnkan oleh Nuxt dan dapat diakses melalui URL dasar proyek anda.
+description: Direktori `static` langsung dipetakan ke dasar (_root_) server dan mengandung berkas-berkas yang kemungkinan besar tidak diubah-ubah. Berkas-berkas yang berada dalam direktori akan secara otomatis dijalnkan oleh Nuxt dan dapat diakses melalui pranala (_URL_) dasar proyek anda.
 position: 12
 category: directory-structure
 csb_link: https://codesandbox.io/embed/github/nuxt-academy/guides-examples/tree/master/04_directory_structure/13_static?fontsize=14&hidenavigation=1&theme=dark
@@ -34,7 +34,7 @@ questions:
     correctAnswer: true
 ---
 
-Direktori `static` langsung dipetakan ke dasar (_root_) server dan mengandung berkas-berkas yang kemungkinan besar tidak diubah-ubah. Berkas-berkas yang berada dalam direktori akan secara otomatis dijalnkan oleh Nuxt dan dapat diakses melalui URL dasar proyek anda.
+Direktori `static` langsung dipetakan ke dasar (_root_) server dan mengandung berkas-berkas yang kemungkinan besar tidak diubah-ubah. Berkas-berkas yang berada dalam direktori akan secara otomatis dijalnkan oleh Nuxt dan dapat diakses melalui pranala (_URL_) dasar proyek anda.
 
 `/static/robots.txt` akan tersedia di `http://localhost:3000/robots.txt`
 
@@ -78,9 +78,9 @@ export default {
 }
 ```
 
-Default: `/blog/foto-saya.png`
+Nilai Anggapan (_default_): `/blog/foto-saya.png`
 
-With `static.prefix` disabled: `/foto-saya.png`
+Dengan `static.prefix` dimatikan: `/foto-saya.png`
 
 <app-modal>
   <code-sandbox  :src="csb_link"></code-sandbox>

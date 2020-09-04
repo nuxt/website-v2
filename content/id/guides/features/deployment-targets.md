@@ -1,34 +1,34 @@
 ---
-title: Deployment Targets
-description: Deployment Targets
+title: Target Penggelaran (Deploy)
+description: Target Penggelaran (Deploy)
 position: 2
 category: features
 ---
 
-## Static Hosting
+## Hosting Statis
 
-For static hosting (hosting where no server is needed) the target of static needs to be added to your nuxt.config file.
+Untuk _hosting_ statis (_hosting_ tanpa pe-_render_-an di sisi server), anda perlu menambahkan properti `target` dengan nilai `static` pada berkas nuxt.config.
 
 ```js{}[nuxt.config.js]
 export default {
-  target: 'static' // default is 'server'
+  target: 'static' // nilai bawaannya adalah 'server'
 }
 ```
 
-Running nuxt dev with the static target will improve the developer experience:
+Menjalankan perintah `nuxt dev` dengan properti `target` bernilai `static` akan meningkatkan pengalaman pengembang seperti:
 
-- Remove `req` & `res` from `context`
-- Fallback to client-side rendering on 404, errors and redirects [see SPA fallback](./guides/concepts/static-site-generation#spa-fallback)
-- `$route.query` will always be equal to `{}` on server-side rendering
-- `process.static` is true
+- Menghapus `req` dan `res` dari `context`
+- _Fallback_ ke pe-_render_-an di sisi klien dalam kasus 404, galat, dan _redirect_ [lihat _fallback_ SPA](./guides/concepts/static-site-generation#spa-fallback)
+- `$route.query` akan selalu bernilai `{}` untuk pe-_render_-an di sisi server.
+- `process.static` bernilai `true`
 
 <base-alert type="info">
-We are also exposing `process.target` for module authors to add logic depending on the user target.
+Kami juga mengekspos `process.target`, ini memungkinkan para pembuat modul untuk menambahkan logika tambahan berdasarkan target pengguna.
 </base-alert>
 
 ## Server Hosting
 
-For server hosting the target of server is used which is the default value.
+Untuk _hosting_ server, properti `target` harus bernilai `server` (ini merupakan nilai bawaan properti `target`)
 
 ```js{}[nuxt.config.js]
 export default {

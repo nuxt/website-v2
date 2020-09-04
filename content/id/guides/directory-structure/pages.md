@@ -150,9 +150,9 @@ Lihat informasi lebih lanjut mengenai bagaimana asyncData bekerja, pada bab [Dat
 
 </base-alert>
 
-### fetch
+### _fetch_ (pengambilan)
 
-Every time you need to get asynchronous data you can use fetch. Fetch is called on server-side when rendering the route, and on client-side when navigating.
+Setiap kali anda ingin mendapatkan data _asynchronous_ anda dapat menggunakan fungsi _fetch_. _Fetch_ dipanggil pada _server-side_ ketika me-_render_ jalur (_route_), dan pada _client-side_ ketika bernavigasi.
 
 ```html
 <script>
@@ -173,29 +173,29 @@ Every time you need to get asynchronous data you can use fetch. Fetch is called 
 
 <base-alert type="next">
 
-See more on how fetch works in our [Data Fetching](/guides/features/data-fetching) chapter
+Lihat lebih lanjut bagaimana _fetch_ bekerja pada bab [Data Fetching](/guides/features/data-fetching)
 
 </base-alert>
 
-### head
+### _head_ (kepala)
 
-Set specific <meta> tags for the current page. Nuxt.js uses `vue-meta` to update the document head and meta attributes of your application.
+Menetapkan label <meta> yang spesifik untuk halaman sekarang, Nuxt.js menggunakan `vue-meta` untuk memperbarui dokumen _head_ dan atribut-atribut meta pada aplikasi Anda.
 
 ```js{}[pages/index.vue]
 export default {
   head() {
-    // Set Meta Tags for this Page
+    // Tetapkan _Meta Tags_ untuk halaman ini
   }
 }
 ```
 
 <base-alert type="next">
 
-See more in our [Meta Tags and SEO](/guides/features/meta-tags-seo) chapter
+Lihat lebih lanjut pada bab [Meta Tags and SEO](/guides/features/meta-tags-seo)
 
 </base-alert>
 
-### layout
+### _layout_ (penampilan)
 
 Specify a layout defined in the layouts directory.
 

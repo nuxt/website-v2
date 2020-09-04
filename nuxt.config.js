@@ -2,6 +2,10 @@ export default {
   target: 'static',
   ssr: true,
   head: {
+    htmlAttrs: {
+      lang: process.env.NUXT_LOCALE,
+      dir: ['fa', 'ar', 'he'].includes(process.env.NUXT_LOCALE) ? 'rtl' : 'ltr'
+    },
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
@@ -131,7 +135,7 @@ export default {
   publicRuntimeConfig: {
     nuxtLocale: process.env.NUXT_LOCALE || 'en',
     nuxtVersion: '2.14.0',
-    nuxtStars: '28K+'
+    nuxtStars: '29K+'
   },
   loading: { color: '#41B883' },
   generate: {
@@ -198,6 +202,14 @@ export default {
         name: 'Português',
         domain: 'https://pt.nuxtjs.org'
       }
+      // please leave this commented out until subdomain is live
+      // {
+      //   code: 'fa',
+      //   iso: 'fa-IR',
+      //   file: 'fa-IR.js',
+      //   name: 'Persian',
+      //   domain: 'https://fa.nuxtjs.org'
+      // }
       // please leave this commented out until subdomain is live
       // {
       // code: 'tr',

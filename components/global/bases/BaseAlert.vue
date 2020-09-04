@@ -25,7 +25,7 @@ export default {
 }
 </script>
 
-<style>
+<style scoped>
 .alert p {
   @apply m-0 !important;
 }

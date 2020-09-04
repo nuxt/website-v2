@@ -72,7 +72,8 @@ module.exports = {
         'Construye tu siguiente aplicación de Vue.js con confianza usando NuxtJS. Un framework de {openSource} que trabaja para conseguir que el desarrollo web sea simple y poderoso.',
       openSource: 'código abierto',
       get_started: 'comenzar',
-      get_updates: 'Obtenga actualizaciones de NuxtJS cada mes en su bandeja de entrada',
+      get_updates:
+        'Obtenga actualizaciones de NuxtJS cada mes en su bandeja de entrada',
       video: 'Video produced by {company}, download their free {cheatSheet}.',
       cheatSheet: 'Nuxt Cheat Sheet.'
     },
@@ -87,7 +88,7 @@ module.exports = {
       modular: {
         title: 'Modular',
         description:
-          "Nuxt se basa en una potente arquitectura modular. Puede elegir entre más de 50 módulos para que su desarrollo sea más rápido y sencillo. No tiene que reinventar la rueda para obtener los beneficios de PWA, agregar Google Analytics a su página o generar un mapa del sitio."
+          'Nuxt se basa en una potente arquitectura modular. Puede elegir entre más de 50 módulos para que su desarrollo sea más rápido y sencillo. No tiene que reinventar la rueda para obtener los beneficios de PWA, agregar Google Analytics a su página o generar un mapa del sitio.'
       },
       performant: {
         title: 'Rendimiento',
@@ -96,7 +97,7 @@ module.exports = {
       }
     },
     companies: {
-      title: "Quién usa {nuxt}"
+      title: 'Quién usa {nuxt}'
     },
     modes: {
       title: '{nuxt} rendering',
@@ -108,7 +109,7 @@ module.exports = {
       spa: {
         title: 'Single Page Application (SPA)',
         description:
-          "¿No necesita SSR o generación de sitios estáticos pero quiere beneficiarse de los beneficios que ofrece Nuxt? ¿Estás realizando una transición lenta de tu aplicación y desea que sea ligera? Entonces el modo SPA tradicional probablemente será tu elección. El resultado será un Vue SPA típico como lo conoce, pero influenciado por tu configuración de Nuxt y el framework en sí."
+          '¿No necesita SSR o generación de sitios estáticos pero quiere beneficiarse de los beneficios que ofrece Nuxt? ¿Estás realizando una transición lenta de tu aplicación y desea que sea ligera? Entonces el modo SPA tradicional probablemente será tu elección. El resultado será un Vue SPA típico como lo conoce, pero influenciado por tu configuración de Nuxt y el framework en sí.'
       },
       ssg: {
         title: 'Statically Generated',
@@ -275,7 +276,8 @@ module.exports = {
       'Descubra artículos de {nuxtTeam} y {nuxtCommunity} sobre NuxtJS, ¡con sugerencias y trucos incluidos!',
     nuxt_team: 'NuxtJS Team',
     nuxt_community: 'Comunidad Nuxt.js',
-    contribute: '¿Te has equivocado o quieres contribuir a esta publicación de blog?'
+    contribute:
+      '¿Te has equivocado o quieres contribuir a esta publicación de blog?'
   },
   guide: {
     release_notes: 'Notas de publicación (en)',
@@ -333,6 +335,25 @@ module.exports = {
       'configuration-glossary': 'Glosario de configuración',
       'internals-glossary': 'Glosario de aspectos internos',
       'components-glossary': 'Glosario de componentes'
+    }
+  },
+  footer: {
+    links: {
+      discover: {
+        title: 'Discover',
+        design: 'Design resources',
+        team: 'A worldwide team',
+        blog: 'Blog'
+      },
+      follow: {
+        title: 'Follow'
+      },
+      support: {
+        title: 'Support',
+        sponsorNuxt: 'Sponsor NuxtJS',
+        shop: 'The NuxtJS Shop',
+        consulting: 'NuxtJS Consulting'
+      }
     }
   },
   cookies: {

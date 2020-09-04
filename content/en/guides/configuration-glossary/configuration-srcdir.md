@@ -11,7 +11,7 @@ position: 28
 
 > Define the source directory of your Nuxt.js application
 
-If a relative path is specified it will be relative to the rootDir
+If a relative path is specified it will be relative to the `rootDir`.
 
 Example 1: Prerequisites:
 
@@ -47,7 +47,7 @@ works with the following folder structure (note that nuxt.config is listed in th
 
 Example 2:
 
-Instead of example 1 you can also move the nuxt.config into your src folder. In this case you only need to specify client as the rootDir and you can leave srcDir empty:
+Instead of example 1 you can also move the nuxt.config into your `src` folder. In this case you only need to specify client as the `rootDir` and you can leave `srcDir` empty:
 
 Prerequisites:
 

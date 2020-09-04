@@ -69,7 +69,7 @@ module.exports = {
     welcome: {
       title: '직관적인 {br} {frameworkType} 프레임워크',
       description:
-        'NuxtJS를 사용하여 신뢰 있는 Vue.js 애플리케이션을 구축하세요. 웹 개발을 간단하고 강력하게 만드는 오픈 소스 프레임 워크입니다.',
+        'NuxtJS를 사용하여 신뢰 있는 Vue.js 애플리케이션을 구축하세요. 웹 개발을 간단하고 강력하게 만드는 오픈 소스 프레임워크입니다.',
       openSource: 'open source',
       get_started: '시작하기',
       get_updates: '매달 NuxtJS 업데이트 사항을 메일에서 확인하세요',

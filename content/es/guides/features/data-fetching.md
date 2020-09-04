@@ -1,6 +1,6 @@
 ---
-title: Data Fetching
-description: In Nuxt.js we have 2 ways of getting data from an api. We can use the fetch method or the asyncData method.
+title: Obtener Datos
+description: En In Nuxt.js tenemos 2 maneras de obtener datos de una api. Podemos usar el método fetch o el método asyncData.
 position: 4
 category: features
 csb_link: https://codesandbox.io/embed/github/nuxt-academy/guides-examples/tree/master/03_features/04_data_fetching?fontsize=14&hidenavigation=1&theme=dark
@@ -63,17 +63,17 @@ questions:
     correctAnswer: true
 ---
 
-In Nuxt.js we have 2 ways of getting data from an api. We can use the fetch method or the asyncData method.
+En In Nuxt.js tenemos 2 maneras de obtener datos de una api. Podemos usar el método fetch o el método asyncData.
 
-## The fetch hook
+## El hook fetch
 
 <base-alert type="info">
 
-This hook is only available for Nuxt `2.12+`.
+Este hook está disponible solo para Nuxt `2.12+`.
 
 </base-alert>
 
-The Nuxt.js `fetch` hook is called after the component instance is created on the server-side: `this` is available inside it.
+El hook `fetch` de Nuxt.js es llamado después que la instancia del componente es creada en el servidor: `this` esta disponible dentro.
 
 ```js
 export default {
@@ -85,21 +85,21 @@ export default {
 
 <base-alert>
 
-`fetch(context)` has been deprecated, instead you can use an [anonymous middleware](/guides/directory-structure/middleware#anonymous-middleware) in your page:  `middleware(context)`
+`fetch(context)` ha sido deprecado, en lugar puedes usar un [middleware anonimo](/guides/directory-structure/middleware#anonymous-middleware) en tu página: `middleware(context)`
 
 </base-alert>
 
-### When to use fetch?
+### ¿Cuando usar fetch?
 
-Every time you need to get asynchronous data. `fetch` is called on server-side when rendering the route, and on client-side when navigating.
+Cada vez que necesites obtener datos asincrónicos. 'fetch' se llama en el lado del servidor al renderizar la ruta y en el lado del cliente al navegar.
 
-It exposes `$fetchState` at the component level with the following properties:
+Este expone '\$fetchState' en el nivel de componente con las siguientes propiedades:
 
-- `pending` is a `Boolean`, allows you to display a placeholder when `fetch` is being called *on client-side*.
-- `error` is either `null` or `Error` and allows you to display an error message
-- `timestamp` is a timestamp of the last fetch, useful for [caching with `keep-alive`](#caching)
+- 'pending' es un 'Boolean', le permite mostrar un marcador de posición cuando 'fetch' es llamado _en el lado del cliente_.
+- 'error' es 'null' o 'Error' y te permite mostrar un mensaje de error
+- 'timestamp' es un timestamp de la última llamada fetch, útil para [caching con 'keep-alive'](#caching)
 
-You also have access to `this.$fetch()`, useful if you want to call the `fetch` hook in your component.
+También tienes acceso a `this.$fetch()`, de gran ayuda si quieres llamar al hook `fetch`in tu componente.
 
 ```html{}[components/NuxtMountains.vue]
 <template>
@@ -132,17 +132,17 @@ You also have access to `this.$fetch()`, useful if you want to call the `fetch`
 
 <base-alert type="info">
 
-You can access the Nuxt [context](/guides/concepts/context-helpers) within the fetch hook using `this.$nuxt.context`.
+Puedes acceder a Nuxt [context](/guides/concepts/context-helpers) dentro del hook fetch usando `this.$nuxt.context`.
 
 </base-alert>
 
-### Options
+### Opciones
 
-`fetchOnServer`: `Boolean` or `Function` (default: `true`), call `fetch()` when server-rendering the page
+`fetchOnServer`: `Boolean` or `Function` (default: `true`), llama a `fetch()` cuando se renderiza la página en el servidor.
 
-`fetchDelay`: `Integer` (default: `200`), set the minimum executing time in milliseconds (to avoid quick flashes)
+`fetchDelay`: `Integer` (default: `200`), establece el tiempo mínimo de ejecución en milisegundos (para evitar parpadeos rápidos)
 
-When `fetchOnServer` is falsy (`false` or returns `false`), `fetch` will be called only on client-side and `$fetchState.pending` will return `true` when server-rendering the component.
+Cuando `fetchOnServer` es falso (`false` o devuelve `false`), `fetch` se llamará sólo en el lado del cliente y `$fetchState.pending` devolverá `true` al renderizar el componente en el servidor.
 
 ```js
 export default {
@@ -161,9 +161,9 @@ export default {
 }
 ```
 
-### Listening to query string changes
+### Escuchando cambios en query string
 
-The `fetch` hook is not called on query string changes by default. To watch for query changes you can add a watcher on `$route.query` and call `$fetch`:
+El hook `fetch` no se llama en los cambios de query string por defecto. Para observar los de la query, puedes agregar un observador en `$route.query` y llamar a `$fetch`:
 
 ```js
 export default {
@@ -178,7 +178,7 @@ export default {
 
 ### Caching
 
-You can use `keep-alive` directive in `<nuxt/>` and `<nuxt-child/>` component to save `fetch` calls on pages you already visited:
+Puedes usar la directiva `keep-alive` en los componentes `<nuxt/>` y `<nuxt-child/>` para guardar llamadas `fetch` en páginas que ya has visitado:
 
 ```html{}[layouts/default.vue]
 <template>
@@ -186,17 +186,17 @@ You can use `keep-alive` directive in `<nuxt/>` and `<nuxt-child/>` compon
 </template>
 ```
 
-You can also specify the [props](https://vuejs.org/v2/api/#keep-alive) passed to `<keep-alive>` by passing a prop `keep-alive-props` to the `<nuxt>`  component.
+Puedes también especificar las [propiedades](https://vuejs.org/v2/api/#keep-alive) pasadas a `<keep-alive>` pasando una propiedad `keep-alive-props` al componente `<nuxt>`.
 
 ```html{}[layouts/default.vue]
 <nuxt keep-alive :keep-alive-props="{ max: 10 }" />
 ```
 
-Keeps only 10 page components in memory.
+Mantiene solo 10 paginas de componentes en memoria.
 
-### Using `activated` hook
+### Usando el hook `activated` hook
 
-Nuxt will directly fill  `this.$fetchState.timestamp`  (timestamp) of the last `fetch` call (ssr included). You can use this property combined with `activated` hook to add a 30 seconds cache to `fetch`:
+Nuxt directamente va a llenar `this.$fetchState.timestamp`  (timestamp) de la ultima llamada `fetch` (ssr incluido). Puedes usar esta propiedad combinada con el hook `activated` para agregar 30 segundos de cache a `fetch`:
 
 ```html{}[pages/posts/_id.vue]
 <template> ... </template>
@@ -223,19 +223,19 @@ Nuxt will directly fill  `this.$fetchState.timestamp`  (timestamp) of the last
 </script>
 ```
 
-The navigation to the same page will not call `fetch` if last `fetch` call was before 30 sec ago.
+La navegación a la misma page no llamara a `fetch` si la última llamada `fetch` fue hace 30 segundos.
 
 ## Async Data
 
 <base-alert>
 
-`asyncData` is only available for [pages](/guides/directory-structure/pages) and you don't have access to `this` inside the hook.
+`asyncData` solamente está disponible para [paginas](/guides/directory-structure/pages) y no tienes acceso a `this` dentro de este hook.
 
 </base-alert>
 
-The main difference with `fetch` is that you don't have to handle any pending state or error. Nuxt will wait for the `asyncData` hook to be finished before navigating to the next page or display the [error page](/guides/directory-structure/layouts#error-page))
+La principal diferencia con `fetch` es que no tienes que manejar ningún estado pendiendo o de error. Nuxt va a esperar por el hook `asyncData` para ser terminado antes de navegar a la página siguiente o mostrar la [pagina de error](/guides/directory-structure/layouts#error-page))
 
-This hook receives [the context](/guides/concepts/context-helpers) as first argument. You can use it to fetch some data and Nuxt.js will automatically merge the returned object with the component data.
+Este hook recibe [el contexto](/guides/concepts/context-helpers) como primer argumento. Puedes usarlo para obtener algunos datos y Nuxt.js automáticamente combinara el objeto devuelto con los datos del componente.
 
 ```html{}[pages/index.vue]
 <template>
@@ -253,9 +253,9 @@ This hook receives [the context](/guides/concepts/context-helpers) as first ar
 </script>
 ```
 
-In the upcoming examples, we are using [@nuxt/http](https://http.nuxtjs.org/) which we recommend for fetching data from an API.
+En los próximos ejemplos, estamos usando [@nuxt/http](https://http.nuxtjs.org/) el cual recomendamos para obtener datos de una API.
 
-First, we need install it:
+Primero, necesitamos instalarlo:
 
 <code-group>
   <code-block label="Yarn" active>
@@ -274,7 +274,7 @@ npm install @nuxt/http
   </code-block>
 </code-group>
 
-Then, adding it to our `modules` section of `nuxt.config.js`:
+Despues, añadirlo a nuestra section `modules` de nuestro archivo `nuxt.config.js`:
 
 ```js{}[nuxt.config.js]
 export default {
@@ -300,13 +300,13 @@ export default {
 </script>
 ```
 
-### Listening to query changes
+### Escuchando cambios query string
 
-The `asyncData` method is not called on query string changes by default. If you want to change this behavior, for example when building a pagination component, you can set up parameters that should be listened to with the `watchQuery` property of your page component.
+El método `asyncData` no es llamado en cambios de query por defecto. Si quieres cambiar este comportamiento, por ejemplo cuando estás construyendo un componente de paginación, puedes establecer parámetros que deben ser escuchados con la propiedad `watchQuery` de la página de tu componente.
 
 <base-alert type="next">
 
-Learn more about the [watchQuery property](/guides/components-glossary/pages-watchquery) and see the list of available [keys in context](/guides/concepts/context-helpers).
+Lee mas acerca de la [propiedad watchQuery](/guides/components-glossary/pages-watchquery) y mira la lista de [llaves en contexto](/guides/concepts/context-helpers) disponibles.
 
 </base-alert>
 

@@ -113,7 +113,7 @@ Se você definiu um arquivo chamado `_slug.vue` na pasta pages, você pode acess
 </script>
 ```
 
-Se você definiu um arquivo chamado \_slug.vue dentro de uma pasta chamada \_book.vue, você pode acessar o valor usando o contexto com params.slug e params.book.
+Se você definiu um arquivo chamado \_slug.vue dentro de uma pasta chamada \_book, você pode acessar o valor usando o contexto com params.slug e params.book.
 
 ```html{}[pages/_book/_slug.vue]
 <template>

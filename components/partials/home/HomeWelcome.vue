@@ -75,7 +75,7 @@
         </div>
         <figure class="hidden lg:block lg:w-5/12" data-cy="video">
           <AppMedia
-            src="https://player.vimeo.com/video/311756540"
+            :src="videoUrl"
             class="mb-4"
           />
           <!--welcome video i18n -->
@@ -121,6 +121,16 @@ export default {
   components: {
     MeteorIcon,
     GithubIcon
+  },
+  data() {
+    return {
+      videoUrl: 'https://player.vimeo.com/video/311756540'
+    }
+  },
+  mounted() {
+    if (this.$i18n.locale === 'id') {
+      this.videoUrl = 'https://www.youtube.com/embed/7ITypVi-qRY'
+    }
   }
 }
 </script>

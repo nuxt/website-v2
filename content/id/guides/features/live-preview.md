@@ -1,17 +1,17 @@
 ---
-title: Preview Mode
-description: Live Preview for target static with the preview mode
+title: Mode Pratinjau
+description: Gunakan mode pratinjau untuk melakukan pratinjau secara _live_ website dengan target statis
 category: features
 position: 12
 ---
 
-With Nuxt.js and full static you can now use live preview out of the box which will call your API or your CMS so you can see the changes live before deploying.
+Dengan Nuxt.js dan target statis penuh, anda bisa menggunakan fitur bawaan yaitu pratinjau secara _live_, ini akan memanggil API atau CMS anda sehingga anda bisa melihat perubahan apapun yang terjadi secara _live_ sebelum melakukan penggelaran (deploying).
 
-<base-alert> Only available when using [target:static](/guides/features/deployment-targets#static-hosting) </base-alert>
+<base-alert> Hanya bisa digunakan jika properti [`target` bernilai `static`](/guides/features/deployment-targets#static-hosting) </base-alert>
 
-The preview mode will automatically refresh the page data as it uses `$nuxt.refresh` under the hood and therefore calls nuxtServerInit, asyncData and fetch on the client side.
+Mode pratinjau ini akan secara otomatis menyegarkan data pada halaman anda karena fitur ini menggunakan `$nuxt.refresh` di balik layar. Fungsi ini memanggil fungsi `nuxtServerInit`, `asyncData`, dan `fetch` di sisi klien.
 
-In order to activate live preview you will need to add the following plugin:
+Untuk mengaktifkan fitur pratinjau secara _live_, anda perlu menambahkan _plugin_ berikut:
 
 ```js{}[plugins/preview.client.js]
 export default function ({ query, enablePreview }) {
@@ -22,8 +22,7 @@ export default function ({ query, enablePreview }) {
 ```
 
 <base-alert>
-EnablePreview is only available in the context object of plugins. Previews are handled client-side and
-thus the plugin should be run on the client: preview.client.js
+Fungsi enablePreview hanya tersedia di dalam objek context milik plugin. Dikarenakan penanganan pratinjau hanya bisa dilakukan di sisi klien, maka plugin-nya pun harus dijalankan di sisi klien: preview.client.js
 </base-alert>
 
 ```js{}[nuxt.config.js]
@@ -32,7 +31,7 @@ export default {
 }
 ```
 
-Once you have added the plugin you can now generate your site and serve it.
+Setelah anda menambahkan _plugin_ tersebut, anda bisa menjalankan perintah _generate_ website lalu menyajikannya (_serve_).
 
 <code-group>
 <code-block label="npx" active>
@@ -53,22 +52,21 @@ yarn start
   </code-block>
 </code-group>
 
-Then you can then see your preview page by adding the query param to the end of the page you want to see once:
+Lalu anda bisa melihat halaman pratinjau anda dengan menambahkan parameter kueri di akhir halaman yang ingin anda lihat sekali:
 
 ```js
 ?preview=true
 ```
 
 <base-alert>
-enablePreview should be tested locally with yarn start and not yarn
-dev
+Fungsi enablePreview sebaiknya dites secara lokal dengan menggunakan perintah yarn start dan bukan yarn dev
 </base-alert>
 
-### Previewing pages that are not yet generated
+### Melakukan pratinjau terhadap halaman yang belum ter-generate
 
-For pages that are not yet generated, SPA fallback will still call the API before showing the 404 page as these pages exist on the API but are not generated yet.
+Untuk halaman - halaman yang belum ter-_generate_, _fallback SPA_ akan tetap memanggil _API_ sebelum menampilkan halaman 404. Hal ini dikarenakan halaman - halaman tersebut pada dasarnya ada pada _API_ hanya saja belum ter-_generate_.
 
-If you have set a validate hook, you will probably need to modify it so that it doesn't redirect to the 404 page in preview mode.
+Jika anda perlu memasang pengait `validate`, anda mungkin perlu memodifikasinya agar pengait tidak melakukan _redirect_ ke halaman 404 dalam mode pratinjau.
 
 ```js
 validate({ params, query }) {
@@ -77,14 +75,14 @@ validate({ params, query }) {
 }
 ```
 
-### Passing data to enablePreview
+### Mengoper data ke fungsi enablePreview
 
-You can pass data to the `enablePreview` function. That data will then be available on the `$preview` context helper and on `this.$preview`.
+Anda bisa mengoper data ke fungsi `enablePreview`. Data tersebut kemudian akan tersedia dalam _context helper_ `$preview` dan dalam `this.$preview`.
 
-### What's next
+### Apa selanjutnya?
 
 <base-alert type="next">
 
-Check out the [Directory Structure book](/guides/directory-structure/nuxt)
+Baca lebih lanjut [buku struktur direktori](/guides/directory-structure/nuxt)
 
 </base-alert>

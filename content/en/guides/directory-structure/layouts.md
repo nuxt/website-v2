@@ -82,11 +82,29 @@ All you need in your layout is three lines of code which will render the page co
 </template>
 ```
 
-<base-alert type="info">
+You can add more components here such as Navigation, Header, Footer etc. You will need to import them and then add them to the template.
 
-You can add more components here such as Navigation, Header, Footer etc. You will need to import them as well as add them to your template.
+```html{}[layouts/default.vue]
+<template>
+  <div>
+    <Navbar/>
+    <Nuxt/>
+    <Footer/>
+  </div>
+</template>
 
-</base-alert>
+<script>
+  import Navbar from '~/components/navbar.vue'
+  import Footer from '~/components/footer.vue'
+
+  export default {
+    components: {
+      Navbar,
+      Footer,
+    }
+  }
+</script>
+```
 
 ## Custom Layout
 

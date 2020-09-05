@@ -86,9 +86,9 @@ You can add more components here such as Navigation, Header, Footer etc.
 
 ```html{}[layouts/default.vue]
 <template>
-  <Navbar />
+  <TheHeader />
   <Nuxt />
-  <footer />
+  <TheFooter />
 </template>
 ```
 

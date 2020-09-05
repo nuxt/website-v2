@@ -340,6 +340,25 @@ module.exports = {
       'components-glossary': 'Composants'
     }
   },
+  footer: {
+    links: {
+      discover: {
+        title: 'Discover',
+        design: 'Design resources',
+        team: 'A worldwide team',
+        blog: 'Blog'
+      },
+      follow: {
+        title: 'Follow'
+      },
+      support: {
+        title: 'Support',
+        sponsorNuxt: 'Sponsor NuxtJS',
+        shop: 'The NuxtJS Shop',
+        consulting: 'NuxtJS Consulting'
+      }
+    }
+  },
   cookies: {
     consent: 'Nous utilisons des cookies pour l\'analyse des utilisateurs et les améliorations sur la page!',
     linkLabel: 'En savoir plus sur les cookies',

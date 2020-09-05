@@ -1,34 +1,34 @@
 ---
-title: Meta Tags and SEO
-description: Nuxt.js lets you define all default `<meta>` tags for your application inside the nuxt.config.js file using the head property. This is very useful for adding a default title and description tag for SEO purposes or for setting the viewport or adding the favicon.
+title: Tag Meta and SEO
+description: Nuxt.js memungkinkan anda untuk mendefinisikan semua tag `<meta>` bawaan untuk aplikasi anda di dalam berkas nuxt.config.js dengan menggunakan properti `head`. Ini sangat berguna untuk menambahkan tag `title` dan `description` bawaan untuk tujuan SEO atau untuk menyetel viewport atau untuk menambahkan favicon.
 position: 6
 category: features
 csb_link: https://codesandbox.io/embed/github/nuxt-academy/guides-examples/tree/master/03_features/06_meta_tags_seo?fontsize=14&hidenavigation=1&theme=dark
 questions:
-  - question: Where do you set the title and meta descriptions globally?
+  - question: Di mana anda bisa menyetel tag title dan meta secara global?
     answers:
-      - in the page component
-      - in the nuxt.config.js
-      - in the package.json
-    correctAnswer: in the nuxt.config.js
-  - question: Where do you set the title and meta descriptions locally?
+      - di dalam komponen page
+      - di dalam berkas nuxt.config.js
+      - di dalam berkas package.json
+    correctAnswer: di dalam berkas nuxt.config.js
+  - question: Di mana anda menyetel tag title dan meta secara lokal?
     answers:
-      - in the page component
-      - in the nuxt.config.js
-      - in the seo component
-    correctAnswer: in the page component
-  - question: In pages, to get access to your data in your title or meta description you use the
+      - di dalam komponen page
+      - di dalam berkas nuxt.config.js
+      - di dalam komponen seo
+    correctAnswer: di dalam komponen page
+  - question: Di dalam halaman, untuk bisa mengakses data tag title atau meta description anda menggunakan...
     answers:
-      - meta function
-      - head function
-      - seo function
-    correctAnswer: head function
-  - question: You can load external resources only in the nuxt.config.js
+      - fungsi meta
+      - fungsi head
+      - fungsi seo
+    correctAnswer: fungsi head
+  - question: Anda hanya bisa memuat sumber daya eksternal melalui berkas nuxt.config.js
     answers:
-      - true
-      - false
-    correctAnswer: false
-  - question: To include scripts before the closing body tag use
+      - benar
+      - salah
+    correctAnswer: salah
+  - question: Untuk menambahkan skrip sebelum penutup tag body kita menggunakan...
     answers:
       - 'body: true'
       - 'body: false'
@@ -36,27 +36,27 @@ questions:
     correctAnswer: 'body: true'
 ---
 
-Nuxt.js gives you 3 different ways to add meta data to your application:
+Nuxt.js memberikan anda 3 cara berbeda untuk menambahkan data meta ke aplikasi anda:
 
-1. Globally using the nuxt.config.js
-2. Locally using the head as an object
-3. Locally using the head as a function so that you have access to data and computed properties.
+1. Secara global menggunakan berkas `nuxt.config.js`.
+2. Secara lokal menggunakan properti `head` sebagai objek.
+3. Secara lokal menggunakan properti `head` sebagai fungsi yang memungkinkan anda untuk mengakses data dan properti - properti _computed_.
 
-### Global Settings
+### Pengaturan Global
 
-Nuxt.js lets you define all default `<meta>` tags for your application inside the nuxt.config.js file using the head property. This is very useful for adding a default title and description tag for SEO purposes or for setting the viewport or adding the favicon.
+Nuxt.js memungkinkan anda untuk mendefinisikan semua _tag_ `<meta>` bawaan untuk aplikasi anda di dalam berkas `nuxt.config.js` dengan menggunakan properti `head`. Ini sangat berguna untuk menambahkan _tag_ `title` dan `description` bawaan untuk tujuan SEO atau untuk menyetel _viewport_ atau untuk menambahkan _favicon_.
 
 ```js{}[nuxt.config.js]
 export default {
   head: {
-    title: 'my website title',
+    title: 'Judul website saya',
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
       {
         hid: 'description',
         name: 'description',
-        content: 'my website description'
+        content: 'Deskripsi untuk website saya'
       }
     ],
     link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }]
@@ -66,24 +66,24 @@ export default {
 
 <base-alert type="info">
 
-This will give you the same title and description on every page
+Hal ini akan membuat semua halaman anda memiliki judul dan deskripsi yang sama
 
 </base-alert>
 
-### Local Settings
+### Pengaturan Lokal
 
-You can also add titles and meta for each page using the `head` method inside your script tag on every page.
+Anda juga bisa menambahkan judul dan meta untuk setiap halaman menggunakan _method_ `head` di dalam _tag script_ pada setiap komponen _page_ anda.
 
 ```js{}[pages/index.vue]
 <script>
 export default {
   head: {
-    title: 'Home page',
+    title: 'Ini halaman beranda',
     meta: [
       {
         hid: 'description',
         name: 'description',
-        content: 'Home page description'
+        content: 'Deskripsi untuk halaman beranda'
       }
     ],
   }
@@ -93,7 +93,7 @@ export default {
 
 <base-alert type="info">
 
-Use `head` as an object to set a title and description only for the home page
+Contoh di atas menggunakan `head` sebagai objek untuk menyetel judul dan deskripsi untuk halaman beranda saja
 
 </base-alert>
 
@@ -105,7 +105,7 @@ Use `head` as an object to set a title and description only for the home page
   export default {
     data() {
       return {
-        title: 'Home page'
+        title: 'Halaman beranda'
       }
     },
     head() {
@@ -115,7 +115,7 @@ Use `head` as an object to set a title and description only for the home page
           {
             hid: 'description',
             name: 'description',
-            content: 'Home page description'
+            content: 'Deskripsi untuk halaman beranda'
           }
         ]
       }
@@ -126,35 +126,35 @@ Use `head` as an object to set a title and description only for the home page
 
 <base-alert type="info">
 
-Use `head` as a function to set a title and description only for the home page. By using a function you have access to data and computed properties
+Contoh di atas menggunakan `head` sebagai fungsi untuk menyetel judul dan deskripsi hanya untuk halaman beranda saja. Dengan menggunakan `head` sebagai fungsi, anda bisa mengakses data dan properti - properti _computed_
 
 </base-alert>
 
-Nuxt.js uses [vue-meta](https://vue-meta.nuxtjs.org/) to update the document head and meta attributes of your application.
+Nuxt.js menggunakan [vue-meta](https://vue-meta.nuxtjs.org/) untuk memperbarui atribut _head_ dan _meta_ dari dokumen di dalam aplikasi anda.
 
 <base-alert>
 
-To avoid any duplication when used in child components, please give a unique identifier with the `hid` key to the meta description. This way `vue-meta` will know that it has to overwrite the default tag.
+Untuk menghindari duplikasi ketika menggunakan komponen anak, tolong berikan _identifier_ unik dengan _key_ `hid` ke dalam deskripsi _meta_. Dengan begini `vue-meta` akan mengetahui kapan harus menimpa _tag_ bawaannya.
 
 </base-alert>
 
 <base-alert type="next">
 
-Learn more about the options available for `head`, in the [vue-meta documentation](https://vue-meta.nuxtjs.org/api/#metainfo-properties).
+Pelajari lebih lanjut tentang opsi - opsi yang tersedia untuk `head` di [dokumentasi vue-meta](https://vue-meta.nuxtjs.org/api/#metainfo-properties).
 
 </base-alert>
 
-## External Resources
+## Sumber Daya Eksternal
 
-You can include external resources such as scripts and fonts by adding them globally to the `nuxt.config.js` or locally in the `head` object or function.
+Anda bisa memasukkan sumber daya eksternal seperti skrip dan fon dengan cara menambahkannya secara global ke dalam berkas `nuxt.config.js` atau secara lokal di dalam objek atau fungsi `head`.
 
 <base-alert type="info">
 
-You can also pass each resource an optional `body: true` to include the resource before the closing `</body>` tag.
+Anda juga bisa memasukkan _key_ opsional `body: true` untuk memasukkan sumber daya sebelum penutup _tag_ `</body>`.
 
 </base-alert>
 
-### Global Settings
+### Pengaturan Global
 
 ```js{}[nuxt.config.js]
 export default {
@@ -174,7 +174,7 @@ export default {
 }
 ```
 
-### Local Settings
+### Pengaturan Lokal
 
 ```html{}[pages/index.vue]
 <template>
@@ -209,15 +209,15 @@ export default {
 </style>
 ```
 
-## Resource Hints
+## Petunjuk Sumber Daya
 
-Adds prefetch and preload links for faster initial page load time.
+Menambahkan fungsionalitas _prefetch_ dan _preload_ tautan untuk mempercepat waktu pemuatan website.
 
-You may want to only disable this option if you have many pages and routes.
+Anda mungkin ingin menonaktifkan opsi ini jika anda memiliki banyak halaman dan rute.
 
 <base-alert type="next">
 
-[Resource Hints](/guides/configuration-glossary/configuration-render#resourcehints)
+[Petunjuk Sumber Daya](/guides/configuration-glossary/configuration-render#resourcehints)
 
 </base-alert>
 

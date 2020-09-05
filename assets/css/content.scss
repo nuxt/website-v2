@@ -246,7 +246,7 @@
       content: ' ';
       width: 80%;
 
-      @apply block border-2 border-nuxt-green mt-2 mb-1 rounded;
+      @apply block border-2 border-nuxt-green mt-2 mb-1 rounded border-solid;
     }
 
     & code {
@@ -265,7 +265,7 @@
       content: ' ';
       width: 80%;
 
-      @apply block border-2 border-gray-600 mt-2 mb-1 rounded;
+      @apply block border-2 border-gray-600 mt-2 mb-1 rounded border-solid;
     }
 
     & code {

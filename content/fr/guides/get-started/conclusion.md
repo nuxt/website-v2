@@ -58,7 +58,7 @@ questions:
       - '<RouterLink>'
       - '<NuxtLink>'
     correctAnswer: '<NuxtLink>'
-  - question: '`<NuxtLink>` est utilisé pour les liens internes appartenant à l'application Nuxt.js?'
+  - question: "`<NuxtLink>` est utilisé pour les liens internes appartenant à l'application Nuxt.js?"
     answers:
       - True
       - False

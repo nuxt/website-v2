@@ -5,7 +5,7 @@ category: features
 position: 12
 ---
 
-Dengan Nuxt.js dan target statis penuh, Anda bisa menggunakan fitur bawaan yaitu pratinjau secara _live_, ini akan memanggil API atau CMS Anda sehingga Anda bisa melihat perubahan apapun yang terjadi secara _live_ sebelum melakukan penggelaran (deploying).
+Dengan Nuxt.js dan target statis penuh, Anda bisa menggunakan fitur bawaan yaitu pratinjau secara _live_, ini akan memanggil API atau CMS Anda sehingga Anda bisa melihat perubahan apapun yang terjadi secara _live_ sebelum melakukan penggelaran (_deploying_).
 
 <base-alert> Hanya bisa digunakan jika properti [`target` bernilai `static`](/guides/features/deployment-targets#static-hosting) </base-alert>
 
@@ -64,7 +64,7 @@ Fungsi enablePreview sebaiknya dites secara lokal dengan menggunakan perintah ya
 
 ### Melakukan pratinjau terhadap halaman yang belum ter-generate
 
-Untuk halaman - halaman yang belum ter-_generate_, _fallback SPA_ akan tetap memanggil _API_ sebelum menampilkan halaman 404. Hal ini dikarenakan halaman - halaman tersebut pada dasarnya ada pada _API_ hanya saja belum ter-_generate_.
+Untuk halaman-halaman yang belum ter-_generate_, _fallback SPA_ akan tetap memanggil _API_ sebelum menampilkan halaman 404. Hal ini dikarenakan halaman-halaman tersebut pada dasarnya ada pada _API_ hanya saja belum ter-_generate_.
 
 Jika Anda perlu memasang pengait `validate`, Anda mungkin perlu memodifikasinya agar pengait tidak melakukan _redirect_ ke halaman 404 dalam mode pratinjau.
 

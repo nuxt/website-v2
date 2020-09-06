@@ -1,5 +1,5 @@
 ---
-title: Transitions
+title: トランジション
 description: Nuxt.js は `<transition>` コンポーネントを使って、ページ間を遷移する際のトランジション/アニメーションを行うことができます
 position: 10
 category: features
@@ -104,7 +104,7 @@ export default {
 
 </base-alert>
 
-トランジションのための新しいクラスを作るには以下のようにします。
+これで、あとはトランジションのための新しいクラスを作るだけです。
 
 ```html{}[pages/index.vue]
 <styles>
@@ -132,7 +132,7 @@ export default {
 <transition name="test" mode="out-in"></transition>
 ```
 
-`transition` オブジェクトは name, mode, css, duration などの多くのプロパティを持つことができます。詳細は vue のドキュメントを参照してください。
+`transition` オブジェクトは name、 mode、 css、 duration などの多くのプロパティを持つことができます。詳細は vue のドキュメントを参照してください。
 
 ページ内の `transition` プロパティで関数を定義することもできます。 詳細は vue のドキュメントの[JavaScript フック](https://jp.vuejs.org/v2/guide/transitions.html#JavaScript-%E3%83%95%E3%83%83%E3%82%AF) を参照してください。
 
@@ -150,7 +150,7 @@ export default {
 
 <base-alert>
 
-デフォルトのトランジションモードは Vue.js とは異なります。 `transition` モードはデフォルトで `out-in` に設定されています。 leaving と entering トランジションを同時に実行したい場合、 モードプロパティに空文字列をセットする必要があります `mode: ''`。
+デフォルトのトランジションモードは Vue.js とは異なります。 `transition` モードはデフォルトで `out-in` に設定されています。 leaving と entering トランジションを同時に実行したい場合、 モードプロパティに空文字列をセット( `mode: ''` )する必要があります 。
 
 </base-alert>
 
@@ -180,7 +180,7 @@ export default {
 
 トランジションは各ページ遷移時に次のように適用されます:
 
-`/` から `/posts`=> `slide-left`,`/posts` から `/posts?page=3` => `slide-left`,`/posts?page=3` から `/posts?page=2`=> `slide-right`.
+`/` から `/posts`=> `slide-left`、`/posts` から `/posts?page=3` => `slide-left`、`/posts?page=3` から `/posts?page=2`=> `slide-right`
 
 ## グローバルな設定
 
@@ -207,7 +207,7 @@ export default {
 }
 ```
 
-## Configuration Settings
+## 構成設定
 
 ## layoutTransition プロパティ
 

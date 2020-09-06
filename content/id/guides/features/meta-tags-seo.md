@@ -1,23 +1,23 @@
 ---
 title: Tag Meta and SEO
-description: Nuxt.js memungkinkan anda untuk mendefinisikan semua tag `<meta>` bawaan untuk aplikasi anda di dalam berkas nuxt.config.js dengan menggunakan properti `head`. Ini sangat berguna untuk menambahkan tag `title` dan `description` bawaan untuk tujuan SEO atau untuk menyetel viewport atau untuk menambahkan favicon.
+description: Nuxt.js memungkinkan Anda untuk mendefinisikan semua tag `<meta>` bawaan untuk aplikasi Anda di dalam berkas nuxt.config.js dengan menggunakan properti `head`. Ini sangat berguna untuk menambahkan tag `title` dan `description` bawaan untuk tujuan SEO atau untuk menyetel viewport atau untuk menambahkan favicon.
 position: 6
 category: features
 csb_link: https://codesandbox.io/embed/github/nuxt-academy/guides-examples/tree/master/03_features/06_meta_tags_seo?fontsize=14&hidenavigation=1&theme=dark
 questions:
-  - question: Di mana anda bisa menyetel tag title dan meta secara global?
+  - question: Di mana Anda bisa menyetel tag title dan meta secara global?
     answers:
       - di dalam komponen page
       - di dalam berkas nuxt.config.js
       - di dalam berkas package.json
     correctAnswer: di dalam berkas nuxt.config.js
-  - question: Di mana anda menyetel tag title dan meta secara lokal?
+  - question: Di mana Anda menyetel tag title dan meta secara lokal?
     answers:
       - di dalam komponen page
       - di dalam berkas nuxt.config.js
       - di dalam komponen seo
     correctAnswer: di dalam komponen page
-  - question: Di dalam halaman, untuk bisa mengakses data tag title atau meta description anda menggunakan...
+  - question: Di dalam halaman, untuk bisa mengakses data tag title atau meta description Anda menggunakan...
     answers:
       - fungsi meta
       - fungsi head
@@ -36,15 +36,15 @@ questions:
     correctAnswer: 'body: true'
 ---
 
-Nuxt.js memberikan anda 3 cara berbeda untuk menambahkan data meta ke aplikasi anda:
+Nuxt.js memberikan Anda 3 cara berbeda untuk menambahkan data meta ke aplikasi Anda:
 
 1. Secara global menggunakan berkas `nuxt.config.js`.
 2. Secara lokal menggunakan properti `head` sebagai objek.
-3. Secara lokal menggunakan properti `head` sebagai fungsi yang memungkinkan anda untuk mengakses data dan properti-properti _computed_.
+3. Secara lokal menggunakan properti `head` sebagai fungsi yang memungkinkan Anda untuk mengakses data dan properti-properti _computed_.
 
 ### Pengaturan Global
 
-Nuxt.js memungkinkan anda untuk mendefinisikan semua _tag_ `<meta>` bawaan untuk aplikasi anda di dalam berkas `nuxt.config.js` dengan menggunakan properti `head`. Ini sangat berguna untuk menambahkan _tag_ `title` dan `description` bawaan untuk tujuan SEO atau untuk menyetel _viewport_ atau untuk menambahkan _favicon_.
+Nuxt.js memungkinkan Anda untuk mendefinisikan semua _tag_ `<meta>` bawaan untuk aplikasi Anda di dalam berkas `nuxt.config.js` dengan menggunakan properti `head`. Ini sangat berguna untuk menambahkan _tag_ `title` dan `description` bawaan untuk tujuan SEO atau untuk menyetel _viewport_ atau untuk menambahkan _favicon_.
 
 ```js{}[nuxt.config.js]
 export default {
@@ -66,13 +66,13 @@ export default {
 
 <base-alert type="info">
 
-Hal ini akan membuat semua halaman anda memiliki judul dan deskripsi yang sama
+Hal ini akan membuat semua halaman Anda memiliki judul dan deskripsi yang sama
 
 </base-alert>
 
 ### Pengaturan Lokal
 
-Anda juga bisa menambahkan judul dan meta untuk setiap halaman menggunakan _method_ `head` di dalam _tag script_ pada setiap komponen _page_ anda.
+Anda juga bisa menambahkan judul dan meta untuk setiap halaman menggunakan _method_ `head` di dalam _tag script_ pada setiap komponen _page_ Anda.
 
 ```js{}[pages/index.vue]
 <script>
@@ -126,11 +126,11 @@ Contoh di atas menggunakan `head` sebagai objek untuk menyetel judul dan deskrip
 
 <base-alert type="info">
 
-Contoh di atas menggunakan `head` sebagai fungsi untuk menyetel judul dan deskripsi hanya untuk halaman beranda saja. Dengan menggunakan `head` sebagai fungsi, anda bisa mengakses data dan properti-properti _computed_
+Contoh di atas menggunakan `head` sebagai fungsi untuk menyetel judul dan deskripsi hanya untuk halaman beranda saja. Dengan menggunakan `head` sebagai fungsi, Anda bisa mengakses data dan properti-properti _computed_
 
 </base-alert>
 
-Nuxt.js menggunakan [vue-meta](https://vue-meta.nuxtjs.org/) untuk memperbarui atribut _head_ dan _meta_ dari dokumen di dalam aplikasi anda.
+Nuxt.js menggunakan [vue-meta](https://vue-meta.nuxtjs.org/) untuk memperbarui atribut _head_ dan _meta_ dari dokumen di dalam aplikasi Anda.
 
 <base-alert>
 
@@ -213,7 +213,7 @@ export default {
 
 Menambahkan fungsionalitas _prefetch_ dan _preload_ tautan untuk mempercepat waktu pemuatan website.
 
-Anda mungkin ingin menonaktifkan opsi ini jika anda memiliki banyak halaman dan rute.
+Anda mungkin ingin menonaktifkan opsi ini jika Anda memiliki banyak halaman dan rute.
 
 <base-alert type="next">
 

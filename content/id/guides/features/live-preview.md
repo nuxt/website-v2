@@ -5,13 +5,13 @@ category: features
 position: 12
 ---
 
-Dengan Nuxt.js dan target statis penuh, anda bisa menggunakan fitur bawaan yaitu pratinjau secara _live_, ini akan memanggil API atau CMS anda sehingga anda bisa melihat perubahan apapun yang terjadi secara _live_ sebelum melakukan penggelaran (deploying).
+Dengan Nuxt.js dan target statis penuh, Anda bisa menggunakan fitur bawaan yaitu pratinjau secara _live_, ini akan memanggil API atau CMS Anda sehingga Anda bisa melihat perubahan apapun yang terjadi secara _live_ sebelum melakukan penggelaran (deploying).
 
 <base-alert> Hanya bisa digunakan jika properti [`target` bernilai `static`](/guides/features/deployment-targets#static-hosting) </base-alert>
 
-Mode pratinjau ini akan secara otomatis menyegarkan data pada halaman anda karena fitur ini menggunakan `$nuxt.refresh` di balik layar. Fungsi ini memanggil fungsi `nuxtServerInit`, `asyncData`, dan `fetch` di sisi klien.
+Mode pratinjau ini akan secara otomatis menyegarkan data pada halaman Anda karena fitur ini menggunakan `$nuxt.refresh` di balik layar. Fungsi ini memanggil fungsi `nuxtServerInit`, `asyncData`, dan `fetch` di sisi klien.
 
-Untuk mengaktifkan fitur pratinjau secara _live_, anda perlu menambahkan _plugin_ berikut:
+Untuk mengaktifkan fitur pratinjau secara _live_, Anda perlu menambahkan _plugin_ berikut:
 
 ```js{}[plugins/preview.client.js]
 export default function ({ query, enablePreview }) {
@@ -31,7 +31,7 @@ export default {
 }
 ```
 
-Setelah anda menambahkan _plugin_ tersebut, anda bisa menjalankan perintah _generate_ website lalu menyajikannya (_serve_).
+Setelah Anda menambahkan _plugin_ tersebut, Anda bisa menjalankan perintah _generate_ website lalu menyajikannya (_serve_).
 
 <code-group>
 <code-block label="npx" active>
@@ -52,7 +52,7 @@ yarn start
   </code-block>
 </code-group>
 
-Lalu anda bisa melihat halaman pratinjau anda dengan menambahkan parameter kueri di akhir halaman yang ingin anda lihat sekali:
+Lalu Anda bisa melihat halaman pratinjau Anda dengan menambahkan parameter kueri di akhir halaman yang ingin Anda lihat sekali:
 
 ```js
 ?preview=true
@@ -66,7 +66,7 @@ Fungsi enablePreview sebaiknya dites secara lokal dengan menggunakan perintah ya
 
 Untuk halaman - halaman yang belum ter-_generate_, _fallback SPA_ akan tetap memanggil _API_ sebelum menampilkan halaman 404. Hal ini dikarenakan halaman - halaman tersebut pada dasarnya ada pada _API_ hanya saja belum ter-_generate_.
 
-Jika anda perlu memasang pengait `validate`, anda mungkin perlu memodifikasinya agar pengait tidak melakukan _redirect_ ke halaman 404 dalam mode pratinjau.
+Jika Anda perlu memasang pengait `validate`, Anda mungkin perlu memodifikasinya agar pengait tidak melakukan _redirect_ ke halaman 404 dalam mode pratinjau.
 
 ```js
 validate({ params, query }) {

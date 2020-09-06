@@ -123,6 +123,12 @@ export default {
     GithubIcon
   },
   computed: {
+    /**
+     * This was done because the vimeo.com site has been blocked in Indonesia.
+     * So, the video url is redirected to the youtube.com service.
+     *
+     * https://github.com/nuxt/nuxtjs.org/pull/661
+     */
     videoUrl() {
       return this.$i18n.locale === 'id'
         ? 'https://www.youtube.com/embed/7ITypVi-qRY'

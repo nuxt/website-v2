@@ -1,63 +1,63 @@
 ---
 title: pages
-description: The `pages` directory contains your Application Views and Routes. Nuxt.js reads all the `.vue` files inside this directory and automatically creates the  router configuration for you.
+description: Direktori `pages` berisikan semua halaman dan jalur aplikasi Anda. Nuxt.js membaca semua berkas `.vue` dalam direktori ini dan secara otomatis membuat konfigurasi jalur (_router_) untuk Anda.
 position: 10
 category: directory-structure
 csb_link: https://codesandbox.io/embed/github/nuxt-academy/guides-examples/tree/master/04_directory_structure/11_pages?fontsize=14&hidenavigation=1&theme=dark
 questions:
-  - question: In which directory do you put your page components?
+  - question: Pada direktori apa Anda menaruh komponen-komponen halaman Anda?
     answers:
       - views
       - pages
       - vues
     correctAnswer: pages
-  - question: To create routes you need to manually configure a router.js file
+  - question: Untuk membuat _routes_, Anda dibutuhkan secara manual untuk melakukan konfigurasi pada berkas router.js
     answers:
       - true
       - false
-    correctAnswer:
-  - question: You can create routes with .js files and .ts files
+    correctAnswer: false
+  - question: Anda dapat membuat jalur (_routes_) dengan berkas .js dan berkas .ts
     answers:
       - true
       - false
     correctAnswer: true
-  - question: When is asyncData called?
+  - question: Kapan _asyncData_ dipanggil?
     answers:
-      - before loading the component
-      - while loading the component
-      - after loading the component
-    correctAnswer: before loading the component
-  - question: In what property do you add your meta tags?
+      - sebelum _loading_ komponen
+      - ketika _loading_ komponent
+      - setelah _loading_ komponen
+    correctAnswer: sebelum _loading_ komponen
+  - question: Pada properti apa Anda dapat menambahkan _meta tags_ Anda?
     answers:
       - head
       - meta
       - metaTags
     correctAnswer: head
-  - question: Which property do you use to add a different layout to your page?
+  - question: Properti yang mana yang dapat Anda gunakan untuk menambahkan tata letak (_layout_) tampilan yang berbeda untuk halaman Anda?
     answers:
       - layouts
       - page
       - layout
     correctAnswer: layout
-  - question: How do you set the scrollToTop property if you want to tell Nuxt.js to scroll to the top when rendering your child route?
+  - question: Bagaimana Anda menetapkan properti _scrollToTop_ jika Anda ingin memberi perintah pada Nuxt.js untuk melakukan pengguliran ke atas ketika melakukan _render_ pada jalur anak (_child route_)?
     answers:
       - "scrollToTop: 'scroll'"
       - 'scrollToTop: true'
       - "scroll: 'top'"
     correctAnswer: 'scrollToTop: true'
-  - question: How do you add the middleware/auth.js to your page?
+  - question: Bagaimana Anda menambahkan middleware/auth.js pada halaman Anda?
     answers:
       - 'middleware: true'
       - "middleware: 'auth'"
       - "import auth from 'middleware/auth.js'"
     correctAnswer: "middleware: 'auth'"
-  - question: To set up a watcher for query strings what property do you use?
+  - question: Untuk menetapkan pengintai (_watcher_) untuk _query strings_, properti apa yang dapat Anda gunakan?
     answers:
       - watcher
       - queryWatcher
       - watchQuery
     correctAnswer: watchQuery
-  - question: Watching is disabled by default.
+  - question: Pengintaian (_watching_) dimatikan secara bawaan.
     answers:
       - true
       - false
@@ -191,13 +191,13 @@ export default {
 
 <base-alert type="next">
 
-Lihat lebih lanjut pada bab [Meta Tags and SEO](/guides/features/meta-tags-seo)
+Lihat lebih lanjut pada bab [Meta Tags dan SEO](/guides/features/meta-tags-seo).
 
 </base-alert>
 
 ### _layout_ (penampilan)
 
-Specify a layout defined in the layouts directory.
+Tentukan penampilan pada direktori _layouts_
 
 ```js{}[pages/index.vue]
 export default {
@@ -207,13 +207,13 @@ export default {
 
 <base-alert type="next">
 
-See more on layouts in our [Views](/guides/concepts/views#layouts) chapter.
+Lihat lebih lanjut mengenai _layouts_ pada bab [Views](/guides/concepts/views#layouts).
 
 </base-alert>
 
-### loading
+### _loading_ (memuat)
 
-If set to false, prevents a page from automatically calling `this.$nuxt.$loading.finish()` as you enter it and `this.$nuxt.$loading.start()` as you leave it, allowing you to manually control the behavior, as [this example](https://nuxtjs.org/examples/custom-page-loading) shows.
+Jika ditetapkan menjadi _false_, menghindari halaman melakukan panggilan otomatis kepada fungsi `this.$nuxt.$loading.finish()` ketika Anda masuk dan `this.$nuxt.$loading.start()` ketika Anda meninggalkannya, membiarkan Anda mengontrol secara manual tingkah lakunya, seperti pada [contoh ini](https://nuxtjs.org/examples/custom-page-loading) memperlihatkan.
 
 ```js{}[pages/index.vue]
 export default {
@@ -223,19 +223,19 @@ export default {
 
 <base-alert type="info">
 
-Only applies if loading is also set in nuxt.config.js.
+Hanya berlaku jika pemuatan (_loading_) juga ditetapkan pada nuxt.config.js.
 
 </base-alert>
 
 <base-alert type="next">
 
-See more in our [Loading](/guides/features/loading) chapter.
+Lihat lebih lanjut pada bab [Loading](/guides/features/loading).
 
 </base-alert>
 
-### transition
+### _transition_ (transisi)
 
-Defines a specific transition for the page.
+Menetapkan transisi secara spesifik untuk halaman tertentu.
 
 ```js{}[pages/index.vue]
 export default {
@@ -245,13 +245,13 @@ export default {
 
 <base-alert type="next">
 
-See more on transitions in our [Transitions](/guides/features/transitions) chapter
+Lihat lebih lanjut pada bab [Transitions](/guides/features/transitions).
 
 </base-alert>
 
-### scrollToTop
+### _scrollToTop_ (gulir ke atas)
 
-The `scrollToTop` property lets you tell Nuxt.js to scroll to the top before rendering the page. By default, Nuxt.js scrolls to the top when you go to another page, but with child routes, Nuxt.js keeps the scroll position. If you want to tell Nuxt.js to scroll to the top when rendering your child route, set `scrollToTop` to `true`
+Properti `scrollToTop` membiarkan Anda untuk memberi perintah pada Nuxt.js untuk melakukan pengguliran ke atas sebelum halaman di-_render_. Secara bawaan, Nuxt.js melakukan pengguliran ke atas ketika Anda mengganti ke halaman lain, tetapi jalur anak-anak (_child routes_), Nuxt.js mempertahankan posisi pengguliran. Jika Anda ingin memberi perintah pada Nuxt.js untuk melakukan pengguliran ke atas ketika melakukan _render_ jalur anak-anak Anda, tetapkan `scrollToTop` menjadi `true`.
 
 ```js{}[pages/index.vue]
 export default {
@@ -259,13 +259,13 @@ export default {
 }
 ```
 
-Conversely, you can manually set `scrollToTop` to `false` on parent routes as well.
+Sebaliknya, Anda juga dapat secara manual menetapkan `scrollToTop` menjadi `false` pada jalur induk (_parent routes_).
 
-If you want to overwrite the default scroll behavior of Nuxt.js, take a look at the [scrollBehavior option](/guides/configuration-glossary/configuration-router#scrollbehavior).
+Jika Anda ingin menimpa tingkah pengguliran secara bawaan dari Nuxt.js, silahkan melihat pada [opsi tingkah pengguliran (_scrollBehaviour Option_)](/guides/configuration-glossary/configuration-router#scrollbehavior).
 
-### middleware
+### _middleware_
 
-Defines middleware for this page. The middleware will be called before rendering the page.
+Menetapkan _middleware_ untuk halaman ini. _Middleware_ tersebut akan dipanggil sebelum melakukan _render_ pada halaman.
 
 ```js{}[pages/index.vue]
 export default {
@@ -275,13 +275,13 @@ export default {
 
 <base-alert type="next">
 
-See more on middleware in our [Middleware](/guides/directory-structure/middleware) chapter
+Lihat lebih lanjut pada bab [Middleware](/guides/directory-structure/middleware).
 
 </base-alert>
 
-### The watchQuery Property
+### Properti _watchQuery_
 
-Use the `watchQuery` key to set up a watcher for query strings. If the defined strings change, all component methods (asyncData, fetch, validate, layout, ...) will be called. Watching is disabled by default to improve performance.
+Gunakan kunci `watchQuery` untuk menetapkan pengintai (_watcher_) untuk _query strings_. Jika _strings_ berubah, maka semua fungsi (_methods_) komponen (_asyncData_, _fetch_, _validate_, _layout_, ...) akan dipanggil. Pengintaian dimatikan secara bawaan untuk meningkatkan performa.
 
 ```js{}[pages/index.vue]
 export default {
@@ -291,7 +291,7 @@ export default {
 
 <base-alert type="info">
 
-If you want to set up a watcher for all query strings, set `watchQuery` to `true`.
+Jika anda ingin menetapkan pengintai (_watcher_) untuk semua _query strings_, tetapkan `watchQuery` menjadi `true`.
 
 </base-alert>
 
@@ -301,13 +301,13 @@ export default {
 }
 ```
 
-You can also use the function `watchQuery(newQuery, oldQuery)` to have more refined watchers.
+Anda juga dapat menggunakan fungsi `watchQuery(newQuery, oldQuery)` untuk mendapat pengamat yang lebih baik.
 
 ```js{}[pages/index.vue]
 export default {
   watchQuery(newQuery, oldQuery) {
-    // Only execute component methods if the old query string contained `bar`
-    // and the new query string contains `foo`
+    // Hanya eksekusi metode pada komponen jika _old query string_ mengandung 'bar'
+    // dan _new query string_ mengandung 'foo'
     return newQuery.foo && oldQuery.bar
   }
 }
@@ -315,7 +315,7 @@ export default {
 
 <base-alert type="next">
 
-See more on the watch query property in our [Data Fetching](/guides/features/data-fetching) chapter
+Lihat lebih lanjut mengenai properti _watch query_ pada bab [Pengambilan data (_Data Fetching_)](/guides/features/data-fetching).
 
 </base-alert>
 
@@ -323,26 +323,26 @@ See more on the watch query property in our [Data Fetching](/guides/features/dat
   <code-sandbox :src="csb_link"></code-sandbox>
 </app-modal>
 
-## Ignoring pages
+## Mengabaikan Halaman
 
-If you want to ignore pages so that they are not included in the generated `router.js` file then you can ignore them by prefixing them with a `-`.
+Jika Anda ingin mengabaikan halaman-halaman agar mereka tidak dimasukkan dalam berkas `router.js` yang dihasilkan secara otomatis, maka anda dapat mengabaikan mereka dengan memberi awalan (_prefixing_) dengan `-`.
 
-For example, `pages/-about.vue` will be ignored.
+Sebagai contoh, `pages/-about.vue` akan diabaikan.
 
 <base-alert type="next">
 
-Checkout the [ignore option](/guides/configuration-glossary/configuration-ignore) to learn more about it.
+Lihat [opsi pengabaian (_ignore option_)](/guides/configuration-glossary/configuration-ignore) untuk mempelajari lebih lanjut.
 
 </base-alert>
 
-## Configuration
+## Konfigurasi
 
-You can rename the `pages/` directory to something different by setting `dir.pages` option:
+Anda dapat mengganti nama direktori `pages/` menjadi yang lain dengan opsi pengaturan `dir.pages`:
 
 ```js{}[nuxt.config.js]
 export default {
   dir: {
-    // Rename `pages` directory to `routes`
+    // Mengganti nama direktori `pages` menjadi `routes`
     pages: 'routes'
   }
 }
@@ -350,7 +350,7 @@ export default {
 
 <base-alert type="next">
 
-Checkout the [dir option](/guides/configuration-glossary/configuration-dir) to learn more about it.
+Lihat [_dir option_](/guides/configuration-glossary/configuration-dir) untuk mempelajari lebih lanjut.
 
 </base-alert>
 

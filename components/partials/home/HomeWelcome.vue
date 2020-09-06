@@ -122,14 +122,11 @@ export default {
     MeteorIcon,
     GithubIcon
   },
-  data() {
-    return {
-      videoUrl: 'https://player.vimeo.com/video/311756540'
-    }
-  },
-  mounted() {
-    if (this.$i18n.locale === 'id') {
-      this.videoUrl = 'https://www.youtube.com/embed/7ITypVi-qRY'
+  computed: {
+    videoUrl() {
+      return this.$i18n.locale === 'id'
+        ? 'https://www.youtube.com/embed/7ITypVi-qRY'
+        : 'https://player.vimeo.com/video/311756540'
     }
   }
 }

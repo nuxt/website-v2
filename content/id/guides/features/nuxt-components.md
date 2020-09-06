@@ -1,72 +1,72 @@
 ---
-title: Nuxt Components
-description: Nuxt.js comes with a few important components included out of the box, which will be helpful when building your application.
+title: Komponen-Komponen Nuxt
+description: Nuxt.js memiliki beberapa komponen penting bawaan. Komponen-komponen ini akan sangat membantu Anda dalam membangun aplikasi.
 position: 9
 category: features
 csb_link_nuxt_link: https://codesandbox.io/embed/github/nuxt-academy/guides-examples/tree/master/03_features/09_components_nuxt-link?fontsize=14&hidenavigation=1&theme=dark
 csb_link_nuxt: https://codesandbox.io/embed/github/nuxt-academy/guides-examples/tree/master/03_features/09_components_nuxt?fontsize=14&hidenavigation=1&theme=dark
 questions:
-  - question: What component do you use to display your page components?
+  - question: Komponen apa yang Anda gunakan untuk menampilkan komponen page?
     answers:
       - '<Nuxt>'
       - '<Page>'
       - '<Views>'
     correctAnswer: '<Nuxt>'
-  - question: The `<Nuxt>` component can be used in?
+  - question: Komponen `<Nuxt>` dapat digunakan di berkas ...
     answers:
       - components
       - pages
       - layouts
     correctAnswer: layouts
-  - question: Which component is used for displaying the children components in a nested route?
+  - question: Komponen mana yang digunakan untuk menampilkan komponen-komponen anak dalam rute bersarang?
     answers:
       - '<Nuxt>'
       - '<NuxtChild>'
       - '<Children>'
     correctAnswer: '<NuxtChild>'
-  - question: Where do you insert the `<NuxtChild>` component?
+  - question: Di mana Anda bisa memasukkan komponen `<NuxtChild>`?
     answers:
       - pages/child.vue
       - pages/parent.vue
       - layouts/parent.vue
     correctAnswer: pages/parent.vue
-  - question: '`keep-alive` can be used in'
+  - question: '`keep-alive` dapat digunakan di ...'
     answers:
-      - '<Nuxt> component only'
-      - '<Nuxt> and <NuxtChild> component'
-      - '<NuxtChild> component only'
-    correctAnswer: '<Nuxt> and <NuxtChild> component'
-  - question: What component do we use to link to internal pages?
+      - 'Hanya di komponen <Nuxt>'
+      - 'Di komponen <Nuxt> dan <NuxtChild>'
+      - 'Hanya di komponen <NuxtChild>'
+    correctAnswer: 'Di komponen <Nuxt> dan <NuxtChild>'
+  - question: Komponen apa yang kita gunakan untuk menautkan halaman-halaman internal?
     answers:
       - '<NuxtLink>'
       - '<RouterLink>'
       - '<a>'
     correctAnswer: '<NuxtLink>'
-  - question: 'How do you link to the about page of your app using <NuxtLink>?'
+  - question: 'Bagaimana cara menggunakan <NuxtLink> untuk menautkan  halaman tentang kami di aplikasi Anda?'
     answers:
-      - to="/about"
-      - href="/about"
-      - link="/about"
-    correctAnswer: to="/about"
-  - question: What key do you use to disable prefetching for certain pages?
+      - <NuxtLink to="/tentang-kami" />
+      - <NuxtLink href="/tentang-kami" />
+      - <NuxtLink link="/tentang-kami" />
+    correctAnswer: <NuxtLink to="/tentang-kami" />
+  - question: Key apa yang Anda gunakan untuk menonaktifkan fitur prefetching untuk halaman-halaman tertentu?
     answers:
       - no-prefetch
       - :prefetch="false"
-      - no-prefetch and :prefetch="false"
-    correctAnswer: no-prefetch and :prefetch="false"
-  - question: What is the default class you can use to add styles for active links
+      - no-prefetch dan :prefetch="false"
+    correctAnswer: no-prefetch dan :prefetch="false"
+  - question: Apa kelas bawaan yang bisa Anda gunakan untuk menambahkan style untuk tautan-tautang yang aktif?
     answers:
       - nuxt-link-active
       - link-active
       - router-link-active
     correctAnswer: nuxt-link-active
-  - question: What is the default class you can use to add styles for exact active links
+  - question: Apa kelas bawaan yang bisa Anda gunakan untuk menambahkan style untuk tautan-tautan aktif tertentu?
     answers:
       - nuxt-link-exact-active
       - link-exact-active
       - nuxt-exact-active-link
     correctAnswer: nuxt-link-exact-active
-  - question: In Nuxt ≥ 2.9.0 which component do you use so that your component is only rendered on client side?
+  - question: Dalam Nuxt versi 2.9.0 ke atas, komponen mana yang Anda gunakan untuk membungkus komponen lain agar komponen yang terbungkus hanya di-render di sisi klien?
     answers:
       - '<client-only>'
       - '<no-ssr>'
@@ -74,35 +74,35 @@ questions:
     correctAnswer: '<client-only>'
 ---
 
-Nuxt.js comes with a few important components included out of the box, which will be helpful when building your application. The components are globally available, which means that you don't need to import them in order to use them.
+Nuxt.js memiliki beberapa komponen penting bawaan. Komponen-komponen ini akan sangat membantu Anda dalam membangun aplikasi. Komponen-komponen ini tersedia secara global, yang berarti Anda tidak perlu meng-_import_-nya sebelum menggunakannya.
 
-In the following paragraphs, each of the included components is explained.
+Paragraf-paragraf berikut ini berisi penjelasan untuk setiap komponen tersebut.
 
-## The Nuxt Component
+## Komponen Nuxt
 
-The `<Nuxt>` component is the component you use to display your page components. Basically, this component gets replaced by what is inside your page components depending on the page that is being shown. Therefore it is important that you add the `<Nuxt>` component to your layouts.
+Komponen `<Nuxt>` adalah komponen yang Anda gunakan untuk menampilkan komponen-komponen _page_ Anda. Sederhananya, komponen ini akan ditimpa oleh apapun yang ada di dalam komponen _page_ Anda tergantung pada halaman mana yang sedang ditampilkan. Maka dari itu, Anda harus menambahkan komponen `<Nuxt>` ke dalam berkas _layout_ Anda.
 
 ```html{}[layouts/default.vue]
 <template>
   <div>
-    <div>My nav bar</div>
+    <div>Bar navigasi saya</div>
     <Nuxt />
-    <div>My footer</div>
+    <div>Footer saya</div>
   </div>
 </template>
 ```
 
 <base-alert>
 
-The `<Nuxt>` component can only be used inside [layouts](/guides/concepts/views#layouts).
+Komponen `<Nuxt>` hanya dapat digunakan di dalam berkas-berkas [_layout_](/guides/concepts/views#layouts).
 
 </base-alert>
 
-The `<Nuxt>` component can take the prop of `nuxt-child-key`. This prop will be passed to `<RouterView>` so that your transitions will work correctly inside dynamic pages.
+Komponen `<Nuxt>` dapat menerima _prop_ `nuxt-child-key`. _Prop_ ini akan dioper ke `<RouterView>` agar transisi Anda dapat berjalan dengan sesuai dalam halaman-halaman dinamis.
 
-There are 2 ways to handle the internal `key` prop of `<RouterView>`.
+Terdapat 2 cara untuk menangani _prop_ `key` internal dari `<RouterView>`.
 
-1. Use a `nuxtChildKey` prop on your `<Nuxt>` component
+1. Gunakan `nuxtChildKey` _prop_ pada komponen `<Nuxt>` Anda.
 
 ```html{}[layouts/default.vue]
 <template>
@@ -112,7 +112,7 @@ There are 2 ways to handle the internal `key` prop of `<RouterView>`.
 </template>
 ```
 
-2. Add the `key` option in _page_ components as `string` or `function`
+2. Tambahkan opsi `key` ke dalam komponen-komponen _page_ sebagai _string_ atau fungsi.
 
 ```js
 export default {
@@ -122,11 +122,11 @@ export default {
 }
 ```
 
-## The NuxtChild Component
+## Komponen NuxtChild
 
-This component is used for displaying the children components in a nested route.
+Komponen ini digunakan untuk menampilkan komponen-komponen anak dalam rute bersarang.
 
-Example:
+Contoh:
 
 ```
 -| pages/
@@ -135,7 +135,7 @@ Example:
 ---| parent.vue
 ```
 
-This file tree will generate these routes:
+Struktur berkas seperti ini akan menghasilkan rute seperti berikut:
 
 ```js
 ;[
@@ -154,12 +154,12 @@ This file tree will generate these routes:
 ]
 ```
 
-To display the `child.vue` component, you have to insert the `<NuxtChild>` component inside `pages/parent.vue`:
+Untuk menampilkan komponen `child.vue`, Anda harus menambahkan komponen `<NuxtChild>` ke dalam `pages/parent.vue` seperti berikut:
 
 ```html{}[pages/parent.vue]
 <template>
   <div>
-    <h1>I am the parent view</h1>
+    <h1>Ini view parent</h1>
     <NuxtChild :foobar="123" />
   </div>
 </template>
@@ -167,11 +167,11 @@ To display the `child.vue` component, you have to insert the `<NuxtChild>` co
 
 ## keep-alive
 
-Both, the `<Nuxt>` component and the `<NuxtChild/>` component, accept `keep-alive` and `keep-alive-props.`
+Komponen `<Nuxt>` dan `<NuxtChild/>` dapat menerima _props_ `keep-alive` dan `keep-alive-props`.
 
 <base-alert type="info">
 
-To learn more about keep-alive and keep-alive-props see the [vue docs](https://vuejs.org/v2/api/#keep-alive)
+Untuk mempelajari lebih lanjut tentang keep-alive dan keep-alive-props, lihat [dokumentasi Vue.js](https://vuejs.org/v2/api/#keep-alive)
 
 </base-alert>
 
@@ -182,7 +182,7 @@ To learn more about keep-alive and keep-alive-props see the [vue docs](https://v
   </div>
 </template>
 
-<!-- will be converted into something like this -->
+<!-- Akan diubah menjadi seperti ini -->
 <div>
   <KeepAlive :exclude="['modal']">
     <RouterView />
@@ -197,7 +197,7 @@ To learn more about keep-alive and keep-alive-props see the [vue docs](https://v
   </div>
 </template>
 
-<!-- will be converted into something like this -->
+<!-- Akan diubah menjadi seperti ini -->
 <div>
   <KeepAlive :exclude="['modal']">
     <RouterView />
@@ -205,7 +205,7 @@ To learn more about keep-alive and keep-alive-props see the [vue docs](https://v
 </div>
 ```
 
-`<NuxtChild>` components can also receive properties like a regular Vue component.
+Komponen `<NuxtChild>` juga dapat menerima properti layaknya komponen Vue biasa.
 
 ```html
 <template>
@@ -215,17 +215,17 @@ To learn more about keep-alive and keep-alive-props see the [vue docs](https://v
 </template>
 ```
 
-To see an example, take a look at the [nested-routes example](https://nuxtjs.org/examples/nested-routes).
+Untuk melihat contoh, kunjugi [contoh nested-routes](https://nuxtjs.org/examples/nested-routes).
 
 <app-modal>
   <code-sandbox  :src="csb_link_nuxt"></code-sandbox>
 </app-modal>
 
-## The NuxtLink Component
+## Komponen NuxtLink
 
-To navigate between pages of your app, you should use the  `<NuxtLink>` component. This component is included with Nuxt.js and therefore you don't have to import it like you do with other components. It is similar to the HTML `<a>` tag except that instead of using a `href="/about"` you use `to="/about"`. If you've used `vue-router` before, you can think of `<NuxtLink>` as a replacement of `<RouterLink>`
+Untuk navigasi antar halaman dalam aplikasi Anda, anda sebaiknya menggunakan komponen `<NuxtLink>`. Komponen ini merupakan komponen bawaan Nuxt.js sehingga Anda tidak perlu meng-_import_-nya terlebih dahulu layaknya komponen-komponen lainnya. Komponen ini mirip dengan _tag_ `<a>` HTML, hanya saja Anda menggunakan `to="/tetang-kami"` dan bukannya `href="/tentang-kami"`. Jika Anda pernah menggunakan `vue-router` sebelumnya, Anda bisa menganggap `<NuxtLink>` sebagai pengganti `<RouterLink>`.
 
-A simple link to the `index.vue` page in your `pages` folder:
+Tautan sederhana ke komponen `index.vue` di dalam folder `pages` Anda:
 
 ```html
 <template>
@@ -233,48 +233,53 @@ A simple link to the `index.vue` page in your `pages` folder:
 </template>
 ```
 
-The `<NuxtLink>` component should be used for all internal links. That means for all links to the pages within your site you should use `<NuxtLink>`. The `<a>` tag should be used for all external links. That means if you have links to other websites you should use the `<a>` tag for those.
+Komponen `<NuxtLink>` sebaiknya digunakan untuk semua tautan internal. Ini berarti Anda sebaiknya menggunakan `<NuxtLink>` untuk setiap tautan yang mengarah pada halaman di _website_ Anda. _Tag_ `<a>` sebaiknya hanya digunakan untuk tautan-tautan yang mengarah ke halaman eksternal. Ini berarti Anda sebaiknya menggunakan _tag_ `<a>` untuk tautan yang mengarah ke _website_ lain.
 
 ```html
 <template>
   <div>
-    <h1>Home page</h1>
-    <NuxtLink to="/about"
-      >About (internal link that belongs to the Nuxt App)</NuxtLink
-    >
-    <a href="https://nuxtjs.org">External Link to another page</a>
+    <h1>Halaman beranda</h1>
+    <NuxtLink to="/about">
+      Tentang kami (tautan internal ke sebuah halaman di website Anda)
+    </NuxtLink>
+
+    <a href="https://nuxtjs.org">
+      Tautan eksternal yang mengarah ke website lain
+    </a>
   </div>
 </template>
 ```
 
 <base-alert type="info">
 
-If you want to know more about `<RouterLink>`, feel free to read the [Vue Router documentation](https://router.vuejs.org/api/#router-link) for more information.
+Jika Anda ingin mempelajari lebih lanjut tentang `<RouterLink>`, silakan baca [dokumentasi Vue Router](https://router.vuejs.org/api/#router-link).
 
 </base-alert>
 
 <base-alert type="info">
 
-`<NuxtLink>` also comes with [smart prefetching](/guides/features/nuxt-components#the-nuxtlink-component) out of the box.
+`<NuxtLink>` juga memiliki fitur [_smart prefetching_](/guides/features/nuxt-components#the-nuxtlink-component) bawaan.
 
 </base-alert>
 
 ## prefetchLinks
 
-Nuxt.js automatically includes smart prefetching. That means it detects when a link is visible, either in the viewport or when scrolling and prefetches the JavaScript for those pages so that they are ready when the user clicks the link. Nuxt.js only loads the resources when the browser isn't busy and skips prefetching if your connection is offline or if you only have 2g connection.
+Nuxt.js memiliki fitur _smart prefetching_ bawaan. Ini berarti Nuxt.js dapat mendeteksi ketika sebuah tautan nampak pada pengguna, baik di dalam _viewport_ ataupun ketika menggulir layar (_scrolling_). Jika tautan nampak, Nuxt.js akan melakukan _prefetch_ skrip JavaScript untuk halaman-halaman tersebut agar halaman langsung siap diakses ketika pengguna mengeklik tautan tersebut. Nuxt.js hanya memuat sumber daya ketika _browser_ sedang tidak sibuk dan melewatkan _prefetching_ jika koneksi sedang _offline_ atau jika Anda hanya memiliki konektivitas 2G.
 
-### Disable prefetching for specific links
+### Menonaktifkan prefetching untuk tautan-tautan tertentu
 
-However sometimes you may want to disable prefetching on some links if your page has a lot of JavaScript or you have a lot of different pages that would be prefetched or you have a lot of third party scripts that need to be loaded. To disable the prefetching on a specific link, you can use the `no-prefetch` prop. Since Nuxt.js v2.10.0, you can also use the `prefetch` prop set to `false`
+Dalam sebagian kasus, Anda mungkin ingin menonaktifkan fitur _prefetching_ untuk tautan-tautan tertentu yang mengandung banyak JavaScript atau Anda memiliki banyak halaman yang harus di-_prefetch_ atau Anda memiliki banyak pustaka pihak ketiga yang harus dimuat. Untuk menonaktifkan _prefetching_ untuk tautan-tautan tertentu, Anda bisa menggunakan _prop_ `no-prefetch`.
+
+Sejak Nuxtjs versi 2.10.0, Anda juga bisa menyetel _prop_ `prefetch` agar bernilai `false`.
 
 ```html
 <NuxtLink to="/about" no-prefetch>About page not pre-fetched</NuxtLink>
 <NuxtLink to="/about" :prefetch="false">About page not pre-fetched</NuxtLink>
 ```
 
-### Disable prefetching globally
+### Menonaktifkan prefetching secara global
 
-To disable the prefetching on all links, set the `prefetchLinks` to `false`:
+Untuk menonaktifkan _prefetching_ untuk semua tautan, setel nilai properti `prefetchLinks` ke `false` di dalam berkas `nuxt.config.js` Anda:
 
 ```js{}[nuxt.config.js]
 export default {
@@ -284,7 +289,7 @@ export default {
 }
 ```
 
-Since Nuxt.js v2.10.0, if you have set `prefetchLinks` to `false` but you want to prefetch a specific link, you can use the `prefetch` prop:
+Sejak Nuxt.js versi 2.10.0, jika Anda sudah menyetel nilai `prefetchLinks` ke `false` tetapi Anda ingin mengaktifkan _prefetch_ untuk tautan-tautan tertentu, Anda bisa menggunakan _prop_ `prefetch` untuk tautan tersebut:
 
 ```html
 <NuxtLink to="/about" prefetch>About page pre-fetched</NuxtLink>
@@ -292,7 +297,7 @@ Since Nuxt.js v2.10.0, if you have set `prefetchLinks` to `false` but you wa
 
 ## linkActiveClass
 
-The `linkActiveClass` works the same as the `vue-router` class for active links. If we want to show which links are active all you have to do is create some css for the class `nuxt-link-active` .
+Cara kerja `linkActiveClass` sama dengan kelas `vue-router` untuk tautan-tautan aktif. Jika Anda ingin menampilkan tautan-tautan mana yang sedang aktif, Anda cukup membuat sebuah CSS untuk kelas `nuxt-link-active`.
 
 ```css
 .nuxt-link-active {
@@ -302,29 +307,29 @@ The `linkActiveClass` works the same as the `vue-router` class for active links.
 
 <base-alert>
 
-This css can be added to the navigation component or for a specific page or layout or in your main.css file.
+CSS ini dapat ditambahkan ke komponen navigasi atau untuk halaman / layout tertentu atau di dalam berkas main.css Anda.
 
 </base-alert>
 
-If you want to you can also configure the class name to be something else. You con do this by modifying the `linkActiveClass` in the router property in your `nuxt.config.js` file.
+Jika Anda mau, Anda juga bisa mengubah nama kelasnya. Anda bisa melakukan ini dengan cara memodifikasi nilai `linkActiveClass` di dalam properti _router_ dalam berkas `nuxt.config.js` Anda.
 
 ```js
 export default {
   router: {
-    linkActiveClass: 'my-custom-active-link'
+    linkActiveClass: 'nama-kelas-yang-baru'
   }
 }
 ```
 
 <base-alert type="info">
 
-This option is given directly to the `vue-router` linkActiveClass. See the [vue-router docs](https://router.vuejs.org/api/#active-class) for more info.
+Opsi ini dioper langsung ke `linkActiveClass` milik `vue-router`. Lihat [dokumentasi vue-router](https://router.vuejs.org/api/#active-class) untuk informasi lebih lanjut.
 
 </base-alert>
 
 ## linkExactActiveClass
 
-The `linkExactActiveClass` works the same as the `vue-router` class for exact active links. If we want to show which links are active with an exact match all you have to do is create some css for the class `nuxt-link-exact-active` .
+Cara kerja `linkExactActiveClass` sama dengan kelas `vue-router` untuk tautan-tautan aktif eksak. Jika Anda ingin menampilkan tautan-tautan mana yang sedang aktif dengan pencocokan persis, Anda hanya perlu membuat CSS untuk kelas `nuxt-link-exact-active`.
 
 ```css
 .nuxt-link-exact-active {
@@ -334,11 +339,11 @@ The `linkExactActiveClass` works the same as the `vue-router` class for exact ac
 
 <base-alert type="info">
 
-This css can be added to the navigation component or for a specific page or layout or in your main.css file.
+CSS ini dapat ditambahkan ke komponen navigasi atau untuk halaman / _layout_ tertentu atau di dalam berkas main.css Anda.
 
 </base-alert>
 
-If you want to you can also configure the class name to be something else. You con do this by modifying the `linkActiveClass` in the router property in your `nuxt.config.js` file.
+Jika Anda mau, Anda juga bisa mengubah nama kelasnya. Anda bisa melakukan ini dengan cara memodifikasi nilai `linkExactActiveClass` di dalam properti _router_ dalam berkas `nuxt.config.js` Anda.
 
 ```js{}[nuxt.config.js]
 export default {
@@ -350,13 +355,13 @@ export default {
 
 <base-alert type="info">
 
-This option is given directly to the `vue-router` linkExactActiveClass. See the [vue-router](https://router.vuejs.org/api/#active-class) [docs](https://router.vuejs.org/api/#exact-active-class) for more info
+Opsi ini dioper langsung ke `linkExactActiveClass` milik `vue-router`. Lihat [dokumentasi vue-router](https://router.vuejs.org/api/#active-class) untuk informasi lebih lanjut.
 
 </base-alert>
 
 ## linkPrefetchedClass
 
-The linkPrefetchedClass will allow you to add styles for all links that have been prefetched. This is great for testing which links are being prefetched after modifying the default behaviour. The linkPrefetchedClass is disabled by default. If you want to enable it you need to add it to the router property in your `nuxt-config.js` file.
+`linkPrefetchedClass` memungkinkan Anda untuk menambahkan _style_ untuk semua tautan yang telah di-_prefetch_. Hal ini berguna untuk mengetes tautan mana yang sedang di-_prefetch_ setelah memodifikasi perilaku bawaannya. Secara bawaan,`linkPrefetchedClass` tidaklah aktif. Jika Anda ingin mengaktifkannya, Anda harus menambahkannya ke properti `router` dalam berkas `nuxt.config.js` Anda.
 
 ```js{}[nuxt.config.js]
 export default {
@@ -366,7 +371,7 @@ export default {
 }
 ```
 
-Then you can add the styles for that class.
+Lalu Anda bisa menambahkan _style_ untuk kelas tersebut.
 
 ```css
 .nuxt-link-prefetched {
@@ -376,7 +381,7 @@ Then you can add the styles for that class.
 
 <base-alert type="info">
 
-In this example we have used the class `nuxt-link-prefetched` but you can name it anything you like
+Di contoh ini kami menggunakan nama kelas `nuxt-link-prefetched`. Anda bisa menggunakan nama lain jika Anda suka.
 
 </base-alert>
 
@@ -384,33 +389,33 @@ In this example we have used the class `nuxt-link-prefetched` but you can name i
   <code-sandbox  :src="csb_link_nuxt_link"></code-sandbox>
 </app-modal>
 
-## The client-only Component
+## Komponen client-only
 
-This component is used to purposely render a component only on client-side. To import a component only on the client, register the component in a client-side only plugin.
+Komponen ini digunakan untuk secara sengaja me-_render_ komponen hanya pada sisi klien. Untuk meng-_import_ komponen hanya di sisi klien, daftarkan komponen di dalam sebuah _plugin_ yang hanya akan dijalankan di sisi klien.
 
 ```html{}[pages/example.vue]
 <template>
   <div>
     <sidebar />
     <client-only placeholder="Loading...">
-      <!-- this component will only be rendered on client-side -->
+      <!-- Komponen ini hanya akan di-render di sisi klien -->
       <comments />
     </client-only>
   </div>
 </template>
 ```
 
-Use a slot as placeholder until `<client-only />` is mounted on client-side.
+Gunakan _slot_ sebagai _placeholder_ sampai komponen `<client-only />` terpasang (_mounted_) di sisi klien.
 
 ```html{}[pages/example.vue]
 <template>
   <div>
     <sidebar />
     <client-only>
-      <!-- this component will only be rendered on client-side -->
+      <!-- Komponen ini hanya akan di-render di sisi klien -->
       <comments />
 
-      <!-- loading indicator, rendered on server-side -->
+      <!-- Indikator sedang memuat, di-render di sisi server -->
       <comments-placeholder slot="placeholder" />
     </client-only>
   </div>
@@ -419,7 +424,7 @@ Use a slot as placeholder until `<client-only />` is mounted on client-side.
 
 <base-alert>
 
-If you are using a version of Nuxt < v2.9.0, use `<no-ssr>` instead of `<client-only>`
+Jika Anda menggunakan Nuxt versi di bawah 2.9.0, gunakan `<no-ssr>` sebagai pengganti `<client-only>`.
 
 </base-alert>
 

@@ -1,96 +1,96 @@
 ---
-title: Directory Structure
-description: The default Nuxt.js application structure is intended to provide a great starting point for both small and large applications. You are free to organize your application however you like and can create other directories as and when you need them.
+title: "ディレクトリ構成"
+description: "デフォルトの Nuxt.js のアプリケーション構造は小規模なものから大規模なものまで両方のアプリケーションにとって素晴らしい出発点を提供することを目的としています。アプリケーションは自由に構成でき、必要に応じて他のディレクトリを作成することができます。"
 position: 3
 category: get-started
 csb_link: https://codesandbox.io/embed/github/nuxt-academy/guides-examples/tree/master/01_get_started/03_directory_structure?fontsize=14&hidenavigation=1&theme=dark
 ---
 
-The default Nuxt.js application structure is intended to provide a great starting point for both small and large applications. You are free to organize your application however you like and can create other directories as and when you need them.
+デフォルトの Nuxt.js のアプリケーション構造は小規模なものから大規模なものまで両方のアプリケーションにとって素晴らしい出発点を提供することを目的としています。アプリケーションは自由に構成でき、必要に応じて他のディレクトリを作成することができます。
 
-Let's create the directories and files that do not exist in our project yet.
+プロジェクトにまだ存在しないディレクトリとファイルを作成してみましょう。
 
 ```bash
 mkdir components assets static
 touch nuxt.config.js
 ```
 
-These are the main directories and files that we use when building a Nuxt.js application. You will find an explanation of each of them below.
+これらは Nuxt.js アプリケーションを構築する際に使用する主なディレクトリとファイルです。それぞれについての説明は後述します。
 
 <base-alert type="info">
 
-Creating directories with these names enables features in your Nuxt.js project.
+これらの名前のディレクトリを作成することで、Nuxt.js プロジェクトの機能を利用できるようになります。
 
 </base-alert>
 
-## Directories
+## ディレクトリ
 
-### The pages directory
+### pages ディレクトリ
 
-The `pages` directory contains your application's views and routes. As you've learned in the last chapter, Nuxt.js reads all the `.vue` files inside this directory and uses them to create the application router.
+`pages` ディレクトリにはアプリケーションのビューとルートが含まれています。前の章で学んだように、Nuxt.js はこのディレクトリ内の `.vue` ファイルをすべて読み込み、アプリケーションのルーターを作成します。
 
 <base-alert type="next">
 
-Learn more about the [pages directory](/guides/directory-structure/pages)
+[pages ディレクトリ](/guides/directory-structure/pages)についてより理解する
 
 </base-alert>
 
-### The components directory
+### components ディレクトリ
 
-The `components` directory is where you put all your Vue.js components which are then imported into your pages.
+`components`ディレクトリにはページにインポートするすべての Vue.js のコンポーネントファイルを入れます。
 
-With Nuxt.js you can create your components and auto import them into your .vue files meaning there is no need to manually import them in the script section. Nuxt.js will scan and auto import these for you once you have components set to true.
+Nuxt.js を使用すると、作成したコンポーネントを .vue ファイルに自動でインポートすることができます。コンポーネントを true に設定すると、Nuxt.js がスキャンして自動でインポートしてくれます。
 
 <base-alert type="next">
 
-Learn more about the [components directory](/guides/directory-structure/components)
+[components ディレクトリ](/guides/directory-structure/components)についてより理解する
 
 </base-alert>
 
-### The assets directory
+### assets ディレクトリ
 
-The `assets` directory contains your uncompiled assets such as your styles, images, or fonts.
+`assets` ディレクトリにはスタイルや画像、フォントなどコンパイルされていないアセットを入れます。
 
 <base-alert type="next">
 
-Learn more about the [assets directory](/guides/directory-structure/assets)
+[assets ディレクトリ](/guides/directory-structure/assets)についてより理解する
 
 </base-alert>
 
-### The static directory
+### static ディレクトリ
 
-The `static` directory is directly mapped to the server root and contains files that have to keep their names (e.g. `robots.txt`) _or_ likely won't change (e.g. the favicon)
+`static` ディレクトリは直接サーバのルートに配置され、名前を保持しなければいけないファイル（例えば `robots.txt`）_もしくは_変更されない可能性の高いファイルが含まれています（例えば、favicon など）。
 
 <base-alert type="next">
 
-Learn more about the [static directory](/guides/directory-structure/static)
+[static ディレクトリ](/guides/directory-structure/static)についてより理解する
 
 </base-alert>
 
-### The nuxt.config.js file
+### nuxt.config.js ファイル
 
-The `nuxt.config.js` file is the single point of configuration for Nuxt.js. If you want to add modules or override default settings, this is the place to apply the changes.
+`nuxt.config.js` ファイルは Nuxt.js の設定を行う唯一の場所です。モジュールの追加やデフォルトの設定を上書きしたい場合にここで変更を適用します。
 
 <base-alert type="next">
 
-Learn more about the [nuxt.config.js file](/guides/directory-structure/nuxt-config)
+[nuxt.config.js ファイル](/guides/directory-structure/nuxt-config)についてより理解する
 
 </base-alert>
 
-### The package.json file
+### package.json ファイル
 
-The `package.json` file contains all the dependencies and scripts for your application.
+`package.json` ファイルには、アプリケーションのすべての依存関係とスクリプトが含まれています。
 
 <app-modal>
   <code-sandbox  :src="csb_link"></code-sandbox>
 </app-modal>
 
-## More about the project structures
+## プロジェクト構成についての詳細
 
-There are more helpful directories and files, including [content](/guides/directory-structure/content), [layouts](/guides/directory-structure/layouts), [middleware](/guides/directory-structure/middleware), [modules](/guides/directory-structure/modules), [plugins](/guides/directory-structure/plugins) and [store](/guides/directory-structure/store) . As they aren't necessary for small applications, they are not covered here.
+[content](/guides/directory-structure/content)、[layouts](/guides/directory-structure/layouts)、[middleware](/guides/directory-structure/middleware)、[modules](/guides/directory-structure/modules)、[plugins](/guides/directory-structure/plugins) そして [store](/guides/directory-structure/store) など、さらに役立つディレクトリやファイルがあります。これらは小規模なアプリケーションには必要ないのでここでは説明しません。
 
 <base-alert type="next">
 
-To learn about all directories in detail, feel free to read the the [Directory Structure book](/guides/directory-structure/nuxt).
+すべてのディレクトリについての詳細は[ディレクトリ構造のドキュメント](/guides/directory-structure/nuxt)を参照してください。
 
 </base-alert>

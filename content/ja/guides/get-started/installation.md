@@ -1,59 +1,59 @@
 ---
-title: Installation
-description: Here, you will find information on setting up and running a Nuxt.js project in 4 steps.
+title: インストール
+description: "ここでは、Nuxt.js プロジェクトの設定と実行について 4 ステップで紹介します。"
 position: 1
 category: get-started
 csb_link: https://codesandbox.io/embed/github/nuxt-academy/guides-examples/tree/master/01_get_started/01_installation?fontsize=14&hidenavigation=1&theme=dark
 ---
 
-## Prerequisites
+## 前提条件
 
-Here, you will find information on setting up and running a Nuxt.js project in 4 steps.
+ここでは、Nuxt.js プロジェクトの設定と実行について 4 ステップで紹介します。
 
 <base-alert type="info">
 
-Another way to get started with Nuxt.js is to use [CodeSandbox](https://template.nuxtjs.org) which is a great way for quickly playing around with Nuxt.js and/or sharing your code with other people.
+Nuxt.js を始める別の方法は [CodeSandbox](https://template.nuxtjs.org) を使うことです。CodeSandbox は Nuxt.js を素早く試したり、自分のコードを他の人にシェアしたりするのに最適な方法です。
 
 </base-alert>
 
 ### Node
 
-[node](https://nodejs.org/en/download/) - at least v8.9.0
+[node](https://nodejs.org/en/download/) - 少なくとも v8.9.0 を使ってください。
 
-_We recommend you have the latest version installed._
+_最新のバージョンをインストールすることをおすすめします。_
 
-### Text editor
+### テキストエディタ
 
-Use whatever you like, but we recommend [VSCode](https://code.visualstudio.com/).
+お好みのエディタで構いませんが、[VSCode](https://code.visualstudio.com/) をおすすめします。
 
-### Terminal
+### ターミナル
 
-Use whatever you like, but we recommend using VSCode's [integrated terminal](https://code.visualstudio.com/docs/editor/integrated-terminal).
+お好みのターミナルで構いませんが、VSCode に[統合されたターミナル](https://code.visualstudio.com/docs/editor/integrated-terminal)をおすすめします。
 
-## Starting from scratch
+## スクラッチで始める
 
-Creating a Nuxt.js project from scratch only requires one file and one directory.
+1 つのファイルと 1 つのディレクトリを用意するだけで Nuxt.js プロジェクトをスクラッチで作れます。
 
-In this particular example, we will use the terminal to create the directories and files, but feel free to create them using your editor of choice.
+今回の例では、ターミナルを使ってディレクトリとファイルを作成しますが、お好みのエディタで作成して構いません。
 
-### Set up your project
+### プロジェクトのセットアップ
 
-To get started, create an empty directory with the name of your project and navigate into it:
+始めるにはプロジェクトの名前をつけた空のディレクトリを作成し、作成したディレクトリに移動します:
 
 ```bash
 mkdir <project-name>
 cd <project-name>
 ```
 
-_Replace `<project-name>` with the name of your project._
+_`<project-name>` はご自身のプロジェクト名に置き換えてください。_
 
-Then create a file named `package.json`:
+そして、`package.json` という名前のファイルを作成します:
 
 ```bash
 touch package.json
 ```
 
-Open the package.json file in your favorite code editor and fill it with this JSON content:
+package.json ファイルをお好みのエディタで開き、以下の JSON の内容を入力します:
 
 ```json{}[package.json]
 {
@@ -67,15 +67,15 @@ Open the package.json file in your favorite code editor and fill it with this JS
 }
 ```
 
-`scripts` define Nuxt.js commands that will be launched with the command `npm run <command>`.
+`scripts` に `npm run <command>` コマンドで起動される Nuxt.js コマンドを定義します。
 
-#### **What is a package.json file?**
+#### **package.json ファイルとは？**
 
-The `package.json` is like the ID card of your project. If you don't know what the `package.json` file is, we highly recommend you to have a quick read on the [NPM documentation](https://docs.npmjs.com/creating-a-package-json-file).
+`package.json` はプロジェクトにおける ID カードのようなものです。もし `package.json` ファイルがどんなものかご存知ない場合は [NPM のドキュメント](https://docs.npmjs.com/creating-a-package-json-file)を一読することをおすすめします。
 
-### Install nuxt
+### nuxt のインストール
 
-Once the `package.json` has been created, add `nuxt` to your project via `npm` or `yarn` like so below:
+`package.json` を作成後、以下のように `npm` または `yarn` 経由で `nuxt` を追加します:
 
 <code-group>
   <code-block label="Yarn" active>
@@ -94,33 +94,33 @@ npm install nuxt
   </code-block>
 </code-group>
 
-This command will add `nuxt` as a dependency to your project and it will add it to your `package.json` automatically. The `node_modules` directory will also be created which is where all your installed packages and their dependencies are stored.
+このコマンドは `nuxt` を依存関係としてプロジェクトに追加します。`package.json` にも自動的に追加します。また、`node_modules` ディレクトリが作成され、インストールしたパッケージと依存関係が保存されます。
 
 <base-alert type="info">
 
-A `yarn.lock` or `package-lock.json` is also created which ensures a consistent install and compatible dependencies of your packages installed in your project.
+`yarn.lock` または `package-lock.json` も作成され、プロジェクトにインストールされたパッケージの一貫したインストールと互換性のある依存関係を保証します。
 
 </base-alert>
 
-### Create your first page
+### 最初のページを作成
 
-Nuxt.js transforms every `*.vue` file inside the `pages` directory as a route for the application.
+Nuxt.js は `pages` ディレクトリ内にある全ての `*.vue` ファイルをアプリケーションのルートとして変換します。
 
-Create the `pages` directory in your project:
+プロジェクトに `pages` ディレクトリを作成します:
 
 ```bash
 mkdir pages
 ```
 
-Then, create an `index.vue` file in the `pages` directory:
+そして、`pages` ディレクトリ内に `index.vue` ファイルを作成します:
 
 ```bash
 touch pages/index.vue
 ```
 
-It is important that this page is called `index.vue` as this will be the default page Nuxt shows when the application opens. It is the home page and it must be called index.
+このページを `index.vue` と名づけることが重要です。これはアプリケーションが開いた際に Nuxt がデフォルトで表示するページになります。これがホームページであり、index と名づけなればなりません。
 
-Open the `index.vue` file in your editor and add the following content:
+`index.vue` ファイルをエディタで開き、次の内容を追加します:
 
 ```html{}[pages/index.vue]
 <template>
@@ -128,9 +128,9 @@ Open the `index.vue` file in your editor and add the following content:
 </template>
 ```
 
-### Start the project
+### プロジェクトの開始
 
-Run your project by typing one of the following commands below in your terminal:
+ターミナルで以下のコマンドのどちらかを入力してプロジェクトを実行します:
 
 <code-group>
   <code-block label="Yarn" active>
@@ -151,37 +151,37 @@ npm run dev
 
 <base-alert type="info">
 
-We use the dev command when running our application in development mode.
+アプリケーションを開発モードで起動する場合は、dev コマンドを使用します。
 
 </base-alert>
 
-The application is now running on **[http://localhost:3000](http://localhost:3000/).**
+今、アプリケーションは **[http://localhost:3000](http://localhost:3000/)** で実行されています。
 
-Open it in your browser by clicking the link in your terminal and you should see the text "Hello World" we copied in the previous step.
+ターミナルのリンクをクリックしてブラウザを開くと、前のステップでコピーした「Hello World」のテキストが表示されます。
 
 <base-alert type="info">
 
-When launching Nuxt.js in development mode, it will listen for file changes in most directories, so there is no need to restart the application when e.g. adding new pages
+Nuxt.js を開発モードで起動すると、ほとんどのディレクトリでファイルの変更をリッスンするので、新しいページを追加する際などにアプリケーションを再起動する必要はありません。
 
 </base-alert>
 
 <base-alert type="warning">
 
-When you run the dev command it will create .nuxt folder. This folder should be ignored from version control. You can ignore files by creating a .gitignore file at the root level and adding .nuxt.
+dev コマンドを実行すると、.nuxt フォルダが作成されます。このフォルダはバージョン管理の ignore 対象にしてください。ルートレベルで .gitignore ファイルを作成し、.nuxt を追加することで .nuxt フォルダ内にあるファイルを無視することができます。
 
 </base-alert>
 
-### Bonus step
+### ボーナスステップ
 
-Create a page named `fun.vue` in the `pages` directory.
+`pages` ディレクトリに `fun.vue` という名前のページを作成しましょう。
 
-Add a `<template></template>` and include a heading with a funny sentence inside.
+`<template></template>` を追加し、タグ内におもしろい文章を入れた見出しを入れます。
 
-Then, go to your browser and see your new page on **[http://localhost:3000/fun](http://localhost:3000/fun).**
+そして、ブラウザで新しいページ **[http://localhost:3000/fun](http://localhost:3000/fun)** にアクセスします。
 
 <base-alert type="info">
 
-Create a directory named `more-fun` and put an `index.vue` file inside. This will give the same result as creating a `more-fun.vue` file
+`more-fun` という名前のディレクトリを作成し、その中に `index.vue` ファイルを入れます。これで、`more-fun.vue` ファイルを作成したのと同じ結果が得られます。
 
 </base-alert>
 
@@ -189,11 +189,11 @@ Create a directory named `more-fun` and put an `index.vue` file inside. This wil
   <code-sandbox  :src="csb_link"></code-sandbox>
 </app-modal>
 
-## Using create-nuxt-app
+## create-nuxt-app を使う
 
-To get started quickly you can use the [create-nuxt-app](https://github.com/nuxt/create-nuxt-app).
+すぐ始めるには、[create-nuxt-app](https://github.com/nuxt/create-nuxt-app) を使うことができます。
 
-Make sure you have npx installed (npx is shipped by default since NPM 5.2.0) or npm v6.1 or yarn.
+npx（npx は NPM 5.2.0 以降だとデフォルトで同梱されています）か、v6.1 の npm か yarn がインストールされていることを確認してください。
 
 <code-group>
   <code-block label="Yarn" active>
@@ -220,7 +220,7 @@ npm init nuxt-app <project-name>
 
 </code-group>
 
-It will ask you some questions (name, Nuxt options, UI framework, TypeScript, linter, testing framework, etc.), when answered, it will install all the dependencies. The next step is to navigate to the project folder and launch it:
+いくつかの質問（名前、Nuxt オプション、UI フレームワーク、TypeScript、linter、テストフレームワークなど）に答えると、すべての依存関係をインストールします。次のステップは、プロジェクトフォルダに移動して起動します:
 
 <code-group>
   <code-block label="Yarn" active>
@@ -241,4 +241,4 @@ npm run dev
   </code-block>
 </code-group>
 
-The application is now running on [http://localhost:3000](http://localhost:3000). Well done!
+アプリケーションは [http://localhost:3000](http://localhost:3000) で実行されています。おつかれさまでした！

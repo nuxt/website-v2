@@ -40,7 +40,7 @@ Nuxt.js memberikan anda 3 cara berbeda untuk menambahkan data meta ke aplikasi a
 
 1. Secara global menggunakan berkas `nuxt.config.js`.
 2. Secara lokal menggunakan properti `head` sebagai objek.
-3. Secara lokal menggunakan properti `head` sebagai fungsi yang memungkinkan anda untuk mengakses data dan properti - properti _computed_.
+3. Secara lokal menggunakan properti `head` sebagai fungsi yang memungkinkan anda untuk mengakses data dan properti-properti _computed_.
 
 ### Pengaturan Global
 
@@ -126,7 +126,7 @@ Contoh di atas menggunakan `head` sebagai objek untuk menyetel judul dan deskrip
 
 <base-alert type="info">
 
-Contoh di atas menggunakan `head` sebagai fungsi untuk menyetel judul dan deskripsi hanya untuk halaman beranda saja. Dengan menggunakan `head` sebagai fungsi, anda bisa mengakses data dan properti - properti _computed_
+Contoh di atas menggunakan `head` sebagai fungsi untuk menyetel judul dan deskripsi hanya untuk halaman beranda saja. Dengan menggunakan `head` sebagai fungsi, anda bisa mengakses data dan properti-properti _computed_
 
 </base-alert>
 
@@ -140,7 +140,7 @@ Untuk menghindari duplikasi ketika menggunakan komponen anak, tolong berikan _id
 
 <base-alert type="next">
 
-Pelajari lebih lanjut tentang opsi - opsi yang tersedia untuk `head` di [dokumentasi vue-meta](https://vue-meta.nuxtjs.org/api/#metainfo-properties).
+Pelajari lebih lanjut tentang opsi-opsi yang tersedia untuk `head` di [dokumentasi vue-meta](https://vue-meta.nuxtjs.org/api/#metainfo-properties).
 
 </base-alert>
 

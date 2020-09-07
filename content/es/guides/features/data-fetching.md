@@ -63,7 +63,7 @@ questions:
     correctAnswer: true
 ---
 
-En In Nuxt.js tenemos 2 maneras de obtener datos de una api. Podemos usar el método fetch o el método asyncData.
+En Nuxt.js tenemos 2 maneras de obtener datos de una api. Podemos usar el método fetch o el método asyncData.
 
 ## El hook fetch
 

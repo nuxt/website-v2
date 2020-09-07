@@ -1,6 +1,6 @@
 ---
 title: plugins
-description: The `plugins` directory contains your Javascript plugins that you want to run before instantiating the root Vue.js Application.
+description: Direktori `plugins` mengandung _plugins_ Javascript Anda yang ingin Anda jalankan sebelum memulai aplikasi Vue.js.
 position: 11
 category: directory-structure
 csb_link_plugins_client: https://codesandbox.io/embed/github/nuxt-academy/guides-examples/tree/master/04_directory_structure/12_plugins_client?fontsize=14&hidenavigation=1&theme=dark
@@ -10,60 +10,60 @@ csb_link_plugins_vue: https://codesandbox.io/embed/github/nuxt-academy/guides-ex
 img: /guides/plugins.svg
 imgAlt: modules-servermiddleware-plugins-in-nuxt-js
 questions:
-  - question: The `plugins` directory contains your Javascript plugins that you want to run
+  - question: Direktori `plugins` mengandung _plugins_ Javascript Anda yang Anda ingin jalankan
     answers:
-      - before instantiating the root Vue.js Application
-      - while instantiating the root Vue.js Application
-      - after instantiating the root Vue.js Application
-    correctAnswer: before instantiating the root Vue.js Application
-  - question: The Vue.js hooks beforeCreate and created are called
+      - sebelum memulai aplikasi Vue.js
+      - ketika memulai aplikasi Vue.js
+      - setelah memulai aplikasi Vue.js
+    correctAnswer: sebelum memulai aplikasi Vue.js
+  - question: __Hooks__ Vue.js _beforeCreate_ dan _created_ dipanggil pada
     answers:
-      - only from client side
-      - only from server side
-      - from both client side and server side
-    correctAnswer: from both client side and server side
-  - question: Every time you want to use use Vue.use() you should create a file in which directory?
+      - hanya dari sisi _client_
+      - hanya dari sisi _server_
+      - dari keduanya, sisi _client_ dan sisi _server_
+    correctAnswer: dari keduanya, sisi _client_ dan sisi _server_
+  - question: Setiap kali Anda ingin menggunakan Vue.use(), Anda harus membuat berkas pada direktori apa?
     answers:
       - vue
       - plugins
       - vuePlugins
     correctAnswer: plugins
-  - question: Where do you add the plugin so it is imported to your main application?
+  - question: Dimanakah Anda menambahkan _plugin_ agar dapat diimpor ke dalam aplikasi utama Anda?
     answers:
-      - in your layouts page
-      - in the nuxt.config.js file
-      - you don't have to, it is automatically imported
-    correctAnswer: in the nuxt.config.js file
-  - question: Some plugins might work only in the browser?
+      - pada halaman _layouts_
+      - pada berkas nuxt.config.js
+      - tidak dibutuhkan, secara otomatis diimpor
+    correctAnswer: pada berkas nuxt.config.js
+  - question: Beberapa _plugin_ hanya dapat bekerja pada _browser_?
     answers:
       - true
       - false
     correctAnswer: true
-  - question: What extension can you apply if you want your plugin to only run on the server?
+  - question: _Extension_ apa yang dapat Anda gunakan jika Anda ingin _plugin_ Anda hanya dijalankan pada _server_?
     answers:
       - .serverside.js
       - .ssr.js
       - .server.js
     correctAnswer: .server.js
-  - question: What two modes can you use for your plugins?
+  - question: 2 Mode yang Anda dapat gunakan untuk _plugins_ Anda.
     answers:
-      - server and client
-      - ssr and client
-      - server-side and client-side
-    correctAnswer: server and client
-  - question: What do you do to make functions or values available across your app?
+      - server dan client
+      - ssr dan client
+      - server-side dan client-side
+    correctAnswer: server dan client
+  - question: Apa yang Anda lakukan untuk membuat fungsi atau nilai-nilai tersedia pada seluruh aplikasi Anda?
     answers:
-      - create a plugin
-      - use the inject method
-      - create a module
-    correctAnswer: use the inject method
-  - question: As a convention what should you prefix your inject functions with?
+      - membuat _plugin_
+      - menggunakan metode injeksi
+      - membuat modul
+    correctAnswer: menggunakan metode injeksi
+  - question: Berdasarkan kesepakatan, apa yang harus Anda berikan pada awalan fungsi injeksi Anda
     answers:
       - $
       - _
       - ':'
     correctAnswer: $
-  - question: To change the order of your plugins what property do you use?
+  - question: Untuk mengubah urutan dari _plugins_ Anda, properti apa yang dapat Anda gunakan?
     answers:
       - orderPlugins
       - extendPlugins

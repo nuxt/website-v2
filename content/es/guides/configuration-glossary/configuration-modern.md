@@ -11,14 +11,14 @@ position: 18
 - Tipo: `String` o `Boolean`
   - Por defecto: false
   - Valores posibles:
-    - `'client'`: Sirve tanto el script de paquete moderno `<script type="module">` como legacy `<script nomodule>`, además de ofrecer un `<link rel="modulepreload">` para el paquete moderno. Los navegadores que entiendan el tipo `module`, cargarán el paquete moderno, mientras que navegadores más antiguos usarán el legacy (transpiled).
-    - `'server'` or `true`: El servidor Node.js comprobará la versión del navegador a partir del user agent, y servirá el paquete moderno o legacy correspondiente.
-    - `false`: Deshabilitar build moderno.
+    - `'client'`: Sirve tanto el script de paquete moderno `<script type="module">` como _legacy_ `<script nomodule>`, además de ofrecer un `<link rel="modulepreload">` para el paquete moderno. Los navegadores que entiendan el tipo `module`, cargarán el paquete moderno, mientras que navegadores más antiguos usarán el _legacy_ (_transpiled_).
+    - `'server'` or `true`: El servidor Node.js comprobará la versión del navegador a partir del user agent, y servirá el paquete moderno o _legacy_ correspondiente.
+    - `false`: Deshabilitar el _build_ moderno.
 
 Las dos versiones de paquetes son:
 
 1. Paquete moderno: orientado a navegadores modernos que soportan módulos ES.
-1. Paquete legacy: orientado a navegadores más antiguos, basado en config de babel (compatible con IE9 por defecto).
+1. Paquete _legacy_: orientado a navegadores más antiguos, basado en config de babel (compatible con IE9 por defecto).
 
 **Info:**
 
@@ -35,7 +35,7 @@ Las dos versiones de paquetes son:
 
 **Nota sobre _nuxt generate_:** La propiedad `modern` también funciona con el comando `nuxt generate`, pero en este caso, sólo se admite la opción `client`, y ésta será seleccionada automáticamente al ejecutar el comando `nuxt generate --modern` sin especificar ningún valor.
 
-- Nuxt detectará automáticamente `modern` build en `nuxt start` cuando `modern` no esté definido, modo auto-detectado es:
+- Nuxt detectará automáticamente el _build_ `modern` en `nuxt start` cuando `modern` no esté definido, modo auto-detectado es:
 
 | Modo      | Modo moderno |
 | --------- | :---------: |

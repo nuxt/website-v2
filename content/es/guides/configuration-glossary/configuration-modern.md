@@ -45,4 +45,4 @@ Las dos versiones de paquetes son:
 - El modo moderno para `nuxt generate` sólo puede ser `client`
 - Utiliza [`render.crossorigin`](/guides/configuration-glossary/configuration-render#crossorigin) para definir el atributo `crossorigin` en `<link>` y `<script>`
 
-> Por favor, visita el [excelente post de Phillip Walton](https://philipwalton.com/articles/deploying-es2015-code-in-production-today/) para más información sobre builds modernos.
+> Por favor, visita este [excelente post de Phillip Walton](https://philipwalton.com/articles/deploying-es2015-code-in-production-today/) para más información sobre _builds_ modernos.

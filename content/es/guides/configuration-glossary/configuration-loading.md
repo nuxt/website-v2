@@ -52,7 +52,7 @@ Lista de propiedades para personalizar la barra de progreso.
 | `color` | String | `'black'` | Color CSS de la barra |
 | `failedColor` | String | `'red'` | Color CSS de la barra cuando se produjo un error durante el renderizado de la ruta (si `data` o `fetch` dieron error, por ejemplo). |
 | `height` | String | `'2px'` | Altura de la barra (se usa en la propiedad `style` de la barra) |
-| `throttle` | Number | `200` | En ms, indica la espera antes de mostrar la barra. Útil para prevenir el parpadeo de la barra. |
+| `throttle` | Number | `200` | En ms, indica la espera antes de mostrar la barra. Útil para prevenir el parpadeo de la misma. |
 | `duration` | Number | `5000` | En ms, indica la duración máxima de la barra. Nuxt.js supone que la ruta será renderizada antes de 5 segundos. |
 | `continuous` | Boolean | `false` | Seguir animando la barra cuando la carga tarda más de `duration`. |
 | `css` | Boolean | `true` | Poner a false para eliminar los estilos por defecto de la barra (y añadir los tuyos propios). |

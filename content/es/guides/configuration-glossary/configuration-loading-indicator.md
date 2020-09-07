@@ -1,12 +1,12 @@
 ---
 title: 'La propiedad loading indicator'
-description: ¡Muestra un indicador de carga chulo mientras se carga la SPA!
+description: ¡Muestra un indicador de carga atractivo mientras se carga la SPA!
 menu: loadingIndicator
 category: configuration-glossary
 position: 16
 ---
 
-> ¡Muestra un indicador de carga chulo mientras se carga la SPA!
+> ¡Muestra un indicador de carga atractivo mientras se carga la SPA!
 
 Al ejecutar Nuxt.js en modo SPA, no existe contenido del lado del servidor en la carga de la primera página. Por lo tanto, en vez de mostrar una página en blanco mientras se carga la página, podemos mostrar un _spinner_.
 

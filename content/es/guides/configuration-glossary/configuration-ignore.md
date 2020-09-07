@@ -8,7 +8,7 @@ position: 14
 
 ## .nuxtignore
 
-Puedes usar un fichero `.nuxtignore` para permitir que Nuxt.js ignore ficheros `layout`, `page`, `store` y `middleware` en el directorio raíz de tu proyecto (`rootDir`) durante la fase _build_. El fichero `.nuxtignore` sigue la misma especificación que `.gitignore` y `.eslintignore`, según la cual cada línea es un patrón glob, que indica qué ficheros deberían ser ignorados.
+Puedes usar un fichero `.nuxtignore` para permitir que Nuxt.js ignore archivos `layout`, `page`, `store` y `middleware` dentro del directorio raíz de tu proyecto (`rootDir`) durante la fase _build_. El fichero `.nuxtignore` sigue la misma especificación que `.gitignore` y `.eslintignore`, según la cual cada línea es un patrón _glob_, que indica qué ficheros deberían ser ignorados.
 
 Por ejemplo:
 
@@ -40,7 +40,7 @@ middleware/foo/*.js
 - Tipo: `String`
 - Por defecto: `'-'`
 
-> Cualquier fichero en pages/, layouts/, middleware/ o store/ será ignorado durante la fase build si su nombre empieza con el prefijo especificado por `ignorePrefix`.
+> Cualquier fichero en pages/, layouts/, middleware/ o store/ será ignorado durante la fase _build_ si su nombre empieza con el prefijo especificado por `ignorePrefix`.
 
 Por defecto, todos los ficheros que empiecen por `-` serán ignorados, como por ejemplo `store/-foo.js` y `pages/-bar.vue`. Esto habilita tests de co-localización, utilidades, y componentes con sus callers, sin que ellos mismos sean convertidos a routes, stores, etc.
 
@@ -49,11 +49,11 @@ Por defecto, todos los ficheros que empiecen por `-` serán ignorados, como por 
 - Tipo: `Array`
 - Por defecto: `['**/*.test.*']`
 
-> Más personalizable que `ignorePrefix`: todos los ficheros que coincidan con los patrones glob definidos en `ignore` serán ignorados en la fase build.
+> Más personalizable que `ignorePrefix`: todos los ficheros que coincidan con los patrones _glob_ definidos en `ignore` serán ignorados en la fase _build_.
 
 ## ignoreOptions
 
-`nuxtignore` usa `node-ignore` bajo el capó, `ignoreOptions` puede ser configurado como `options` de `node-ignore`.
+`nuxtignore` usa `node-ignore` por debajo, `ignoreOptions` puede ser configurado como `options` de `node-ignore`.
 
 ```js{}[nuxt.config.js]
 export default {

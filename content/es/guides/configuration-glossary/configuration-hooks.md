@@ -45,9 +45,9 @@ Internamente, se usan dos puntos (:) para nombrar los _hooks_ (p.e., `build:done
 
 Imaginemos que quieres servir páginas como `/portal` en lugar de `/`.
 
-Quizá éste sea un caso extremo, y además el sentido del `router.base` de _nuxt.config.js_ es para cuando un servidor web sirve Nuxt fuera de la ruta del dominio.
+Quizá éste sea un caso extremo, además el propósito del `router.base` en el _nuxt.config.js_ sirve cuando un servidor web usa Nuxt fuera de la ruta principal del dominio.
 
-Pero en desarrollo local, _localhost_, cuando router.base no es /, devuelve un 404. Para evitar esto, puedes definir un _hook_.
+Pero en desarrollo local, al acceder a _localhost_, cuando router.base no es /, devolverá un 404. Para evitar esto, puedes definir un _hook_.
 
 Puede que una redirección no sea lo mejor para un sitio en producción, pero esto te ayudará a aprovechar los _hooks_.
 
@@ -144,4 +144,4 @@ Luego, crea unos cuantos archivos:
      }
    ```
 
-Después, cuando un compañero navegue sin querer a `/`, Nuxt redireccionará automáticamente a `/portal`
+Después, cuando un compañero de desarrollo navegue sin querer a `/`, Nuxt redireccionará automáticamente a `/portal`.

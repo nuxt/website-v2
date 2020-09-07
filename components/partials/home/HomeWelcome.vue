@@ -75,7 +75,7 @@
         </div>
         <figure class="hidden lg:block lg:w-5/12" data-cy="video">
           <AppMedia
-            src="https://player.vimeo.com/video/311756540"
+            :src="videoUrl"
             class="mb-4"
           />
           <!--welcome video i18n -->
@@ -121,6 +121,19 @@ export default {
   components: {
     MeteorIcon,
     GithubIcon
+  },
+  computed: {
+    /**
+     * This was done because the vimeo.com site has been blocked in Indonesia.
+     * So, the video url is redirected to the youtube.com service.
+     *
+     * https://github.com/nuxt/nuxtjs.org/pull/661
+     */
+    videoUrl() {
+      return this.$i18n.locale === 'id'
+        ? 'https://www.youtube.com/embed/7ITypVi-qRY'
+        : 'https://player.vimeo.com/video/311756540'
+    }
   }
 }
 </script>

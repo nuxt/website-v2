@@ -65,10 +65,8 @@ export default function (req, res, next) {
 ```
 
 ```js{}[nuxt.config.js]
-export default: {
-  serverMiddleware: [
-     '~/api/logger'
-  ]
+export default {
+  serverMiddleware: ['~/middleware/api/logger']
 }
 ```
 

@@ -73,13 +73,13 @@ questions:
 
 <app-modal :src="img" :alt="imgAlt"></app-modal>
 
-The `plugins` directory contains your Javascript plugins that you want to run before instantiating the root Vue.js Application. This is the place to add Vue plugins and to inject functions or constants. Every time you need to use `Vue.use()`, you should create a file in `plugins/` and add its path to `plugins` in `nuxt.config.js`.
+Direktori `plugins` mengandung _plugins_ Javascript Anda yang ingin Anda jalankan sebelum memulai aplikasi Vue.js. Lokasi ini merupakan tempat untuk menambahkan _plugins_ Vue dan untuk memasukkan fungsi-fungsi atau konstanta-konstanta (_constants_). Setiap kali Anda membutuhkan penggunaan `Vue.use()`, Anda harus membuat berkas dalam direktori `plugins/` dan menambahkan jalur ke `plugins` dalam `nuxt.config.js`.
 
-## External Packages
+## _External Packages_ (Paket-paket luar)
 
-You may want to use external packages/modules in your application (one great example is [axios](https://axios.nuxtjs.org/)) for making HTTP requests for both server and client.
+Anda mungkin ingin menggunakan paket/modul dari luar ke dalam aplikasi (salah satu contoh terbaik [axios](https://axios.nuxtjs.org/)) untuk membuat HTTP _requests_ untuk _server_ dan _client_.
 
-First, install it via NPM or Yarn.
+Pertama-tama, _install_ paket (_package_) menggunakan NPM atau Yarn.
 
 <code-group>
   <code-block label="Yarn" active>
@@ -98,19 +98,19 @@ npm install @nuxtjs/axios
   </code-block>
 </code-group>
 
-You can configure for example the axios interceptors to react on possible errors from your API calls across the application. In this example we redirect the user to a custom error page called sorry when we get a 500 status error from our API.
+Sebagai contoh, Anda dapat melakukan konfigurasi untuk axios _interceptors_ yang dapat bereaksi terhadap kemungkinan _error_ yang terjadi, dari panggil API Anda dalam aplikasi. Dalam contoh ini, kami melakukan pengalihan jalur (_redirect_) pada _user_ menuju halaman _custom error_ yang memberi informasi maaf, ketika kami mendapatkan _status error_ 500 dari API kami.
 
 ```js{}[plugins/axios.js]
 export default function ({ $axios, redirect }) {
   $axios.onError(error => {
     if (error.response.status === 500) {
-      redirect('/sorry')
+      redirect('/maaf')
     }
   })
 }
 ```
 
-Last but not least, add the module and the newly created plugin to the project configuration.
+Terakhir, tambahkan modul dan _plugin_ yang baru saja dibuat, ke dalam konfigurasi proyek.
 
 ```js{}[nuxt.config.js]
 module.exports = {
@@ -119,7 +119,7 @@ module.exports = {
 }
 ```
 
-Then we can use it directly in your page components:
+Lalu kita dapat menggunakannya langsung dari komponen halaman:
 
 ```js{}[pages/index.vue]
 <template>
@@ -140,11 +140,11 @@ export default {
   <code-sandbox :src="csb_link_plugins_external"></code-sandbox>
 </app-modal>
 
-## Vue Plugins
+## Vue _Plugins_
 
-If we want to use Vue plugins, like [v-tooltip](https://akryum.github.io/v-tooltip) to display tooltips in your application, we need to setup the plugin before launching the app.
+Jika kita ingin menggunakan Vue _plugins_, seperti [v-tooltip](https://akryum.github.io/v-tooltip) untuk menampilkan _tooltips_ dalam aplikasi Anda, kita dibutuhkan untuk melakukan penetapan _plugin_ tersebut sebelum meluncurkan aplikasi.
 
-First we need to install it
+Pertama kita harus _install_ _plugin_ tersebut
 
 <code-group>
   <code-block label="Yarn" active>
@@ -163,7 +163,7 @@ npm install v-tooltip
   </code-block>
 </code-group>
 
-The we create the file `plugins/vue-tooltip.js`
+Lalu kita membuat berkas `plugins/vue-tooltip.js`
 
 ```js{}[plugins/vue-tooltip.js]
 import Vue from 'vue'
@@ -176,9 +176,9 @@ Vue.use(VTooltip)
   <code-sandbox  :src="csb_link_plugins_vue"></code-sandbox>
 </app-modal>
 
-## The plugins Property
+## Properti _plugins_
 
-Then we add the file path inside the `plugins` key of our `nuxt.config.js`. The plugins property lets you add vue.js plugins easily to your main application. All the paths defined in the `plugins` property will be imported before initializing the main application.
+Lalu kita menambahkan jalur menuju berkas tersebut ke dalam kunci `plugins` dari `nuxt.config.js`. Properti _plugins_ dapat membiarkan Anda menambahkan _plugins_ Vue.js secara mudah untuk aplikasi utama Anda. Semua jalur yang ditentukan dalam properti `plugins` akan diimpor sebelum menginisialisasi aplikasi utama.
 
 ```js{}[nuxt.config.js]
 export default {
@@ -186,9 +186,9 @@ export default {
 }
 ```
 
-### ES6 Plugins
+### _Plugins_ ES6
 
-If the plugin is located in `node_modules` and exports an ES6 module, you may need to add it to the `transpile` build option:
+Jika _plugin_ terletak di `node_modules` dan diekspor melalui modul ES6, Anda mungkin dibutuhkan untuk menambahkannya ke dalam opsi _build_, `transpile`:
 
 ```js{}[nuxt.config.js]
 module.exports = {
@@ -198,36 +198,36 @@ module.exports = {
 }
 ```
 
-You can refer to the [configuration build](/guides/configuration-glossary/configuration-build#transpile) docs for more build options.
+Anda dapat mengacu pada dokumentasi [_configuration build_](/guides/configuration-glossary/configuration-build#transpile) untuk mengetahui lebih lanjut mengenai opsi-opsi yang ada.
 
-## Client or server side only
+## _Client or server side only_ (Hanya _client_ atau sisi _server_)
 
-Some plugins might work only in the browser because they lack SSR support.
+Beberapa _plugins_ mungkin hanya dapat bekerja pada _browser_ karena mereka kurang pendukungan untuk SSR.
 
-### Name conventional plugin
+### Penamaan konvensional _plugin_
 
-If a plugin is assumed to be run only on client or server side,  `.client.js`  or `.server.js` can be applied as an extension of the plugin file. The file will be automatically included only on the respective (client or server) side.
+Jika _plugin_ diasumsikan hanya bekerja pada _client_ ato sisi _server_, `.client.js` atau `.server.js` dapat diterapkan menjadi _extension_ dari berkas _plugin_ tersebut. Berkas tersebut akan secara otomatis dimasukkan hanya pada sisi (_client_ atau _server_) yang bersangkutan.
 
 ```js{}[nuxt.config.js]
 export default {
   plugins: [
-    '~/plugins/foo.client.js', // only in client side
-    '~/plugins/bar.server.js', // only in server side
-    '~/plugins/baz.js' // both client & server
+    '~/plugins/foo.client.js', // hanya pada sisi client
+    '~/plugins/bar.server.js', // hanya pada sisi server
+    '~/plugins/baz.js' // keduanya, client & server
   ]
 }
 ```
 
-### Object syntax
+### Sintaksis obyek
 
-You can also use the object syntax with the `mode` property (`'client'`  or `'server'`) in `plugins`.
+Anda juga dapat menggunakan sintaksis obyek dengan properti `mode` (`'client'` atau `'server'`) dalam `plugins`.
 
 ```js{}[nuxt.config.js]
 export default {
   plugins: [
     { src: '~/plugins/both-sides.js' },
-    { src: '~/plugins/client-only.js', mode: 'client' }, // only on client side
-    { src: '~/plugins/server-only.js', mode: 'server' } // only on server side
+    { src: '~/plugins/client-only.js', mode: 'client' }, // Hanya pada sisi client
+    { src: '~/plugins/server-only.js', mode: 'server' } // Hanya pada sisi server
   ]
 }
 ```
@@ -236,21 +236,21 @@ export default {
   <code-sandbox  :src="csb_link_plugins_client"></code-sandbox>
 </app-modal>
 
-## Inject in `$root` & context
+## Menginjeksi ke dalam `$root` & context
 
-Sometimes you want to make functions or values available across your app. You can inject those variables into Vue instances (client side), the context (server side) and even in the Vuex store. It is a convention to prefix those functions with a `$`.
+Terkadang Anda butuh untuk membuat fungsi-fungsi atau nilai-nilai yang dapat digunakan pada seluruh aplikasi Anda. Anda dapat menginjeksi nilai-nilai tersebut ke dalam _Vue instances_ (sisi _client_), _context_ (sisi _server_) dan bahkan dalam Vuex store. Merupakan sebuah kesepakatan untuk memberi awalan pada fungsi-fungsi tersebut dengan `$`.
 
-Nuxt.js provides you with an `inject(key, value)` method to do this easily. Inject is given as the second parameter when exporting a function. The `$` will be prepended automatically to the key.
-
+Nuxt.js menyediakan Anda dengan metode `inject(key, value)`
+untuk melakukan ini secara mudah. _Inject_ diberikan dengan _parameter_ kedua ketika melakukan ekspor pada fungsi tersebut. `$` akan ditambahkan secara otomatis kepada key.
 <base-alert type="info">
 
-It is important to know that in any Vue [instance lifecycle](https://vuejs.org/v2/guide/instance.html#Lifecycle-Diagram), only  `beforeCreate` and `created` hooks are called both, from client-side and server-side. All other hooks are called only from the client-side.
+Penting untuk diketahui bahwa dalam Vue [_instance lifecycle_](https://vuejs.org/v2/guide/instance.html#Lifecycle-Diagram), hanya  `beforeCreate` dan `created` *hooks* dipanggil secara pada kedua sisi, dari _client-side_ dan _server-side_. _Hooks_ yang lain hanya dipanggil pada _client-side_.
 
 </base-alert>
 
 ```js{}[plugins/hello.js]
 export default ({ app }, inject) => {
-  // Inject $hello(msg) in Vue, context and store.
+  // Menginjeksi $hello(msg) ke dalam Vue, context dan store.
   inject('hello', msg => console.log(`Hello ${msg}!`))
 }
 ```
@@ -261,17 +261,17 @@ export default {
 }
 ```
 
-Now `$hello` service can be accessed from `context` and `this` in pages, components, plugins, and store actions.
+Sekarang servis `$hello` dapat diakses dari `context` dan `this` di dalam halaman, komponen, _plugin_, dan aksi pada store.
 
 ```js{}[example-component.vue]
 export default {
   mounted() {
     this.$hello('mounted')
-    // will console.log 'Hello mounted!'
+    // akan melakukan console.log 'Hello mounted!'
   },
   asyncData({ app, $hello }) {
     $hello('asyncData')
-    // If using Nuxt <= 2.12, use 👇
+    // Jika menggunakan Nuxt <= 2.12, gunakan 👇
     app.$hello('asyncData')
   }
 }
@@ -292,43 +292,43 @@ export const actions = {
 ```
 
 <base-alert>
-Don't use `Vue.use()`, `Vue.component()`, and globally, don't plug anything in Vue **inside** this function, dedicated to Nuxt injection. It will cause memory leak on server-side.
+Jangan menggunakan `Vue.use()`, `Vue.component()`, dan secara global, jangan memasukkan apapun ke dalam fungsi Vue ini, hanya dikhususkan untuk injeksi Nuxt. Melakukannya dapat menyebabkan _memory leak_ pada sisi _server_.
 </base-alert>
 
 <app-modal>
   <code-sandbox  :src="csb_link_plugins_custom"></code-sandbox>
 </app-modal>
 
-## The extendPlugins Property
+## Properti _extendPlugins_
 
-You may want to extend plugins or change the plugins order created by Nuxt.js. This function accepts an array of [plugin](/guides/configuration-glossary/configuration-plugins) objects and should return an array of plugin objects.
+Anda mungkin ingin memperluas _plugins_ atau mengubah urutan _plugins_ yang dihasilkan oleh Nuxt.js. Fungsi ini menerima array dari obyek [_plugin_](/guides/configuration-glossary/configuration-plugins) dan harus membalikan (_return_) plugin dalam bentuk obyek dalam array.
 
-Example of changing plugins order:
+Contoh pengubahan urutan _plugins_:
 
 ```js{}[nuxt.config.js]
 export default {
   extendPlugins(plugins) {
     const pluginIndex = plugins.findIndex(
-      ({ src }) => src === '~/plugins/shouldBeFirst.js'
+      ({ src }) => src === '~/plugins/harusPertama.js'
     )
-    const shouldBeFirstPlugin = plugins[pluginIndex]
+    const harusPertama = plugins[pluginIndex]
 
     plugins.splice(pluginIndex, 1)
-    plugins.unshift(shouldBeFirstPlugin)
+    plugins.unshift(harusPertama)
 
     return plugins
   }
 }
 ```
 
-### Global mixins
+### _Global mixins_
 
-Global mixins can be easily added with Nuxt plugins but can cause trouble and memory leaks when not handled correctly. Whenever you add a global mixin to your application, you should use a flag to avoid registering it multiple times:
+_Global mixins_ daoat ditambahkan secara mudah dengan Nuxt _plugins_, tetapi dapat menyebabkan masalah dan _memory leaks_ ketika tidak ditangani dengan baik. Kapanpun Anda menambahkan _global mixin_ ke dalam aplikasi Anda, Anda diharuskan untuk menggunakan _flag_ untuk menghindari melakukan pendaftarannya secara berulang kali:
 
 ```js{}[plugins/my-mixin-plugin.js]
 if (!Vue.__my_mixin__) {
 	Vue.__my__mixin__ = true
-  Vue.mixin({ ... }) // Set up your mixin then
+  Vue.mixin({ ... }) // Tetapkan mixin Anda lalu
 }
 ```
 

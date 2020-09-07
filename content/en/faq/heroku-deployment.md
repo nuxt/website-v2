@@ -3,7 +3,7 @@ title: How to deploy on Heroku?
 description: How to deploy Nuxt.js on Heroku?
 menu: Deploy on Heroku
 category: deployment
-position: 208
+position: 209
 ---
 
 We recommend you read the [Heroku documentation for Node.js](https://devcenter.heroku.com/articles/nodejs-support).

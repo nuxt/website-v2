@@ -3,7 +3,7 @@ title: How to deploy on GitHub Pages?
 description: How to deploy Nuxt.js app on GitHub Pages?
 menu: Deploy on Github
 category: deployment
-position: 205
+position: 206
 ---
 
 Nuxt.js gives you the possibility to host your web application on any static hosting like [GitHub Pages](https://pages.github.com/) for example.

@@ -1,65 +1,65 @@
 ---
-title: Transitions
-description: Nuxt.js uses the `<transition>` component to let you create amazing transitions/animations between your routes.
+title: Transisi
+description: Nuxt.js menggunakan komponen `<transition>` untuk memungkinkan Anda membuat transisi/animasi antar rute yang menakjubkan.
 position: 10
 category: features
 csb_link: https://codesandbox.io/embed/github/nuxt-academy/guides-examples/tree/master/03_features/05_transitions?fontsize=14&hidenavigation=1&theme=dark
 questions:
-  - question: To define a custom transition for a specific route what key do you add to your page?
+  - question: Key apa yang perlu ditambahkan ke komponen page Anda untuk mendefinisikan transisi buatan sendiri untuk rute tertentu?
     answers:
       - pageTransition
       - transition
       - layoutTransition
     correctAnswer: transition
-  - question: What is the default transition mode in Nuxt.js?
+  - question: Apakah mode transisi bawaan Nuxt.js?
     answers:
       - in-out
       - out-in
       - none
     correctAnswer: out-in
-  - question: What is the default transition name for transitions on pages?
+  - question: Apakah nama kelas transisi bawaan untuk transisi antar halaman?
     answers:
       - .page
       - .pages
       - .page-transition
     correctAnswer: .page
-  - question: Where is the best place to add your CSS transition classes so you have global transitions on all routes?
+  - question: Di manakah tempat terbaik untuk menambahkan CSS untuk kelas transisi Anda secara global untuk semua rute?
     answers:
       - index.vue
-      - A global css file
+      - Berkas CSS global
       - layouts/default.vue
-    correctAnswer: A global css file
-  - question: In which array in the nuxt.config.js file do you add your global stylesheet?
+    correctAnswer: Berkas CSS global
+  - question: Di array mana di dalam berkas nuxt.config.js Anda bisa menambahkan stylesheet global Anda?
     answers:
       - 'css: []'
       - 'styles: []'
       - 'transitions: []'
     correctAnswer: 'css: []'
-  - question: What is the default css class for layout transitions?
+  - question: Apa kelas CSS bawaan untuk transisi antar layout?
     answers:
       - layout
       - layout-transition
       - transition
     correctAnswer: layout
-  - question: In the nuxt.config.js file what is the property you use to configure the default settings for layout transitions?
+  - question: Di dalam berkas nuxt.config.js, properti apa yang Anda gunakan untuk menyetel pengaturan bawaan untuk transisi antar layout?
     answers:
       - layout
       - layoutTransition
       - layoutTransitions
     correctAnswer: layoutTransition
-  - question: If you change the default layout to be called 'my-layout' what class do you use to create the css transitions?
+  - question: Jika Anda mengubah nama kelas transisi bawaan menjadi 'ini-layout', kelas apa yang Anda gunakan untuk membuat CSS transisi?
     answers:
       - layout
-      - my-layout
-      - myLayout
-    correctAnswer: my-layout
-  - question: In the nuxt.config.js file what is the property you use to configure the default settings for page transitions?
+      - ini-layout
+      - iniLayout
+    correctAnswer: ini-layout
+  - question: Di dalam berkas nuxt.config.js, properti apa yang Anda gunakan untuk menyetel pengaturan bawaan untuk transisi antar halaman?
     answers:
       - page
       - pageTransition
       - layoutTransition
     correctAnswer: pageTransition
-  - question: Where do you modify the default settings for your page transitions?
+  - question: Di mana Anda dapat memodifikasi pengaturan bawaan untuk transisi antar halaman?
     answers:
       - main.css
       - pages.vue
@@ -67,24 +67,24 @@ questions:
     correctAnswer: nuxt.config.js
 ---
 
-Nuxt.js uses the [transition component](http://vuejs.org/v2/guide/transitions.html#Transitioning-Single-Elements-Components) to let you create amazing transitions/animations between your routes.
+Nuxt.js menggunakan [komponen `transition`](http://vuejs.org/v2/guide/transitions.html#Transitioning-Single-Elements-Components) untuk memungkinkan Anda membuat transisi/animasi antar rute yang menakjubkan.
 
-To define a custom transition for a specific route add the `transition` key to the page component.
+Untuk mendefinisikan transisi buatan Anda sendiri untuk rute tertentu, tambahkan _key_ `transition` ke dalam komponen _page_ tersebut.
 
 ```js{}[pages/index.vue]
 export default {
-  // Can be a String
+  // Bisa berupa string
   transition: ''
-  // Or an Object
+  // Atau berupa objek
   transition: {}
-  // or a Function
+  // Atau berupa fungsi
   transition (to, from) {}
 }
 ```
 
 ## String
 
-If the `transition` key is set as a string, it will be used as the `transition.name`.
+Jika _key_ `transition` disetel sebagai _string_, nilainya akan digunakan sebagai nilai `transition.name`.
 
 ```js{}[pages/index.vue]
 export default {
@@ -92,7 +92,7 @@ export default {
 }
 ```
 
-Nuxt.js will use these settings to set the component as follows:
+Nuxt.js akan menggunakan pengaturan ini untuk menyetel komponen transisi sebagai berikut:
 
 ```html{}[pages/index.vue]
 <transition name="home"></transition>
@@ -100,11 +100,11 @@ Nuxt.js will use these settings to set the component as follows:
 
 <base-alert>
 
-This is automatically done for you and you do not need to add the `<transition>` component to your pages or layouts.
+Hal ini secara otomatis dilakukan untuk Anda dan Anda tidak perlu menambahkan komponen `<transition>` secara manual ke dalam komponen _page_ atau _layout_ Anda.
 
 </base-alert>
 
-Now all you have to do is create the new class for your transitions.
+Sekarang Anda hanya perlu membuat _styling_ baru untuk kelas transisi Anda.
 
 ```html{}[pages/index.vue]
 <styles>
@@ -113,9 +113,9 @@ Now all you have to do is create the new class for your transitions.
 </styles>
 ```
 
-## Object
+## Objek
 
-If the `transition` key is set as an object:
+Jika nilai key `transition` disetel sebagai objek:
 
 ```js{}[pages/index.vue]
 export default {
@@ -126,15 +126,15 @@ export default {
 }
 ```
 
-Nuxt.js will use these settings to set the component as follows:
+Nuxt.js akan menggunakan pengaturan ini untuk menyetel komponen `transition` sebagai berikut:
 
 ```html{}[pages/index.vue]
 <transition name="test" mode="out-in"></transition>
 ```
 
-The `transition` object can have many properties such as name, mode, css, duration and many more. Please see the vue docs for more info.
+Objek `transition` dapat memiliki banyak properti seperti _name_, _mode_, css, _duration_, dan lain-lain. Lihat dokumentasi Vue untuk informasi lebih lanjut.
 
-You can also define methods in the page `transition` property, for more information on the [JavaScript hooks](https://vuejs.org/v2/guide/transitions.html#JavaScript-Hooks) see the vue docs.
+Anda juga dapat mendefinisikan _method_ di dalam properti `transition` antar _page_. Untuk informasi lebih lanjut tentang [pengait-pengait JavaScript](https://vuejs.org/v2/guide/transitions.html#JavaScript-Hooks), kunjungi dokumentasi Vue.
 
 ```js
 export default {
@@ -146,11 +146,11 @@ export default {
 }
 ```
 
-### Transition Mode
+### Mode Transisi
 
 <base-alert>
 
-The default transition mode for pages differs from the default mode in Vue.js. The `transition` mode is by default set to `out-in`. If you want to run leaving and entering transitions simultaneously, you have to set the mode to the empty string `mode: ''`.
+Mode transisi antar halaman bawaan Nuxt.js berbeda dengan mode bawaan milik Vue. Dalam Nuxt.js, nilai bawaan mode `transition` adalah `out-in`. Jika Anda ingin menjalankan animasi saat masuk dan keluar transisi secara bersamaan, Anda harus menyetel modenya menjadi _string_ kosong: `mode: ''`.
 
 </base-alert>
 
@@ -163,9 +163,9 @@ export default {
 }
 ```
 
-## Function
+## Fungsi
 
-If the `transition` key is set as a function:
+Jika _key_ `transition` disetel sebagai fungsi:
 
 ```js{}[pages/index.vue]
 export default {
@@ -178,15 +178,17 @@ export default {
 }
 ```
 
-Transitions applied on navigation:
+Transisi yang akan diterapkan pada masing-masing navigasi:
 
-`/` to `/posts` => `slide-left`,`/posts` to `/posts?page=3` => `slide-left`,`/posts?page=3` to `/posts?page=2` => `slide-right`.
+- `/` ke `/posts` akan menerapkan `slide-left`
+- `/posts` ke `/posts?page=3` akan menerapkan `slide-left`
+- `/posts?page=3` ke `/posts?page=2` akan menerapkan `slide-right`.
 
-## Global Settings
+## Pengaturan Global
 
-The Nuxt.js default transition name is `"page"`. To add a fade transition to every page of your application, all you need is a CSS file that is shared across all your routes.
+Nama kelas transisi bawaan Nuxt.js adalah `"page"`. Untuk menambahkan transisi _fade_ untuk setiap halaman di aplikasi Anda, Anda hanya perlu menambahkan _style_-nya ke dalam sebuah berkas CSS yang tersedia secara global untuk semua rute Anda.
 
-Our global css in `assets/main.css`:
+Misal, berkas global CSS kita adalah `assets/main.css`:
 
 ```css{}[assets/main.css]
 .page-enter-active,
@@ -199,7 +201,7 @@ Our global css in `assets/main.css`:
 }
 ```
 
-Then we add its path to the `css` array in our `nuxt.config.js` file:
+Lalu kita hanya perlu menambahkan jalan (_path_) dari berkas tersebut ke dalam _array_ `css` di dalam berkas `nuxt.config.js` kita:
 
 ```js{}[nuxt.config.js]
 export default {
@@ -207,13 +209,13 @@ export default {
 }
 ```
 
-## Configuration Settings
+## Pengaturan Lebih Lanjut
 
-## The layoutTransition Property
+## Properti layoutTransition
 
-The layout transition is used to set the default properties of the layout transitions.
+`layoutTransition` digunakan untuk menyetel properti bawaan untuk transisi-transisi antar _layout_.
 
-The default settings for layout transitions are:
+Pengaturan bawaan untuk transisi antar _layout_ adalah sebagai berikut:
 
 ```js
 {
@@ -231,33 +233,33 @@ The default settings for layout transitions are:
 }
 ```
 
-If you want to change the default settings for your layout transitions you can do so in the nuxt.config.js file.
+Jika Anda ingin mengubah pengaturan bawaan untuk transisi antar _layout_ tersebut, Anda bisa melakukannya melalui berkas `nuxt.config.js` Anda.
 
 ```js{}[nuxt.config.js]
 export default {
-  layoutTransition: 'my-layouts'
-  // or
+  layoutTransition: 'layout-saya'
+  // atau
   layoutTransition: {
-    name: 'my-layouts',
+    name: 'layout-saya',
     mode: 'out-in'
   }
 }
 ```
 
 ```css{}[assets/main.css]
-.my-layouts-enter-active,
-.my-layouts-leave-active {
+.layout-saya-enter-active,
+.layout-saya-leave-active {
   transition: opacity 0.5s;
 }
-.my-layouts-enter,
-.my-layouts-leave-active {
+.layout-saya-enter,
+.layout-saya-leave-active {
   opacity: 0;
 }
 ```
 
-## The pageTransition Property
+## Properti pageTransition
 
-The default settings for page transitions are:
+Pengaturan bawaan untuk transisi antar halaman adalah:
 
 ```js
 {
@@ -266,31 +268,31 @@ The default settings for page transitions are:
 }
 ```
 
-Should you wish to modify the default settings you can do so in the nuxt.config.js
+Jika Anda ingin memodifikasinya, Anda bisa melakukannya melalui berkas `nuxt.config.js` Anda.
 
 ```js{}[nuxt.config.js]
 export default {
-  pageTransition: 'my-page'
-  // or
+  pageTransition: 'page-saya'
+  // atau
   pageTransition: {
-    name: 'my-page',
+    name: 'page-saya',
     mode: 'out-in',
     beforeEnter (el) {
-      console.log('Before enter...');
+      console.log('Ini animasi sebelum masuk...');
     }
   }
 }
 ```
 
-If you do modify the page Transition name you will also have to rename the css class.
+Jika Anda sudah memodifikasi nama kelas transisi antar halaman tersebut, jangan lupa untuk mengubah nama kelasnya di berkas CSS yang bersangkutan.
 
 ```css{}[assets/main.css]
-.my-page-enter-active,
-.my-page-leave-active {
+.page-saya-enter-active,
+.page-saya-leave-active {
   transition: opacity 0.5s;
 }
-.my-page-enter,
-.my-page-leave-to {
+.page-saya-enter,
+.page-saya-leave-to {
   opacity: 0;
 }
 ```

@@ -8,7 +8,7 @@ position: 16
 
 > ¡Muestra un indicador de carga chulo mientras se carga la SPA!
 
-Al ejecutar Nuxt.js en modo SPA, no existe contenido del lado del servidor en la carga de la primera página. Por lo tanto, en vez de mostrar una página en blanco mientras se carga la página, podemos mostrar un spinner.
+Al ejecutar Nuxt.js en modo SPA, no existe contenido del lado del servidor en la carga de la primera página. Por lo tanto, en vez de mostrar una página en blanco mientras se carga la página, podemos mostrar un _spinner_.
 
 Esta propiedad puede ser de 3 tipos diferentes: `string` o `false` o `object`. Si se recibe una cadena, ésta es convertida a objeto.
 
@@ -24,7 +24,7 @@ loadingIndicator: {
 
 ## Indicadores integrados
 
-Estos indicadores son importados del increíble proyecto [Spinkit](http://tobiasahlin.com/spinkit). Puedes usar su demo para previsualizar spinners.
+Estos indicadores son importados del increíble proyecto [Spinkit](http://tobiasahlin.com/spinkit). Puedes usar su demo para previsualizar _spinners_.
 
 - circle
 - cube-grid

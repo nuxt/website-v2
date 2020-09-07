@@ -29,15 +29,15 @@ export default {
 }
 ```
 
-Internamente, se usan dos puntos (:) para nombrar los hooks (p.e., `build:done`). Para facilitar la configuración, puedes estructurarlos como un objeto jerárquico al usar `nuxt.config.js` (tal y como se muestra arriba) para definir tus propios hooks. Visita los [aspectos internos de Nuxt](/guides/internals-glossary/internals) para información más detallada sobre cómo funcionan.
+Internamente, se usan dos puntos (:) para nombrar los _hooks_ (p.e., `build:done`). Para facilitar la configuración, puedes estructurarlos como un objeto jerárquico al usar `nuxt.config.js` (tal y como se muestra arriba) para definir tus propios _hooks_. Visita los [aspectos internos de Nuxt](/guides/internals-glossary/internals) para información más detallada sobre cómo funcionan.
 
-## Lista de hooks
+## Lista de _hooks_
 
-- [Hooks de Nuxt](/guides/internals-glossary/internals-renderer#hooks)
-- [Hooks de Renderer](/guides/internals-glossary/internals-renderer#hooks)
-- [Hooks de ModulesContainer](/guides/internals-glossary/internals-module-container#hooks)
-- [Hooks de Builder](/guides/internals-glossary/internals-builder#hooks)
-- [Hooks de Generator](/guides/internals-glossary/internals-generator#hooks)
+- [_Hooks_ de Nuxt](/guides/internals-glossary/internals-renderer#hooks)
+- [_Hooks_ de Renderer](/guides/internals-glossary/internals-renderer#hooks)
+- [_Hooks_s de ModulesContainer](/guides/internals-glossary/internals-module-container#hooks)
+- [_Hooks_s de Builder](/guides/internals-glossary/internals-builder#hooks)
+- [_Hooks_s de Generator](/guides/internals-glossary/internals-generator#hooks)
 
 ## Ejemplos
 
@@ -47,9 +47,9 @@ Imaginemos que quieres servir páginas como `/portal` en lugar de `/`.
 
 Quizá éste sea un caso extremo, y además el sentido del `router.base` de _nuxt.config.js_ es para cuando un servidor web sirve Nuxt fuera de la ruta del dominio.
 
-Pero en desarrollo local, _localhost_, cuando router.base no es /, devuelve un 404. Para evitar esto, puedes definir un Hook.
+Pero en desarrollo local, _localhost_, cuando router.base no es /, devuelve un 404. Para evitar esto, puedes definir un _hook_.
 
-Puede que una redirección no sea lo mejor para un sitio en producción, pero esto te ayudará a aprovechar los Hooks.
+Puede que una redirección no sea lo mejor para un sitio en producción, pero esto te ayudará a aprovechar los _hooks_.
 
 Para empezar, puedes [cambiar `router.base`](/guides/configuration-glossary/configuration-router#base); Actualiza tu `nuxt.config.js`:
 
@@ -65,7 +65,7 @@ export default {
 
 Luego, crea unos cuantos archivos:
 
-1. `hooks/index.js`, módulo Hooks
+1. `hooks/index.js`, módulo _hooks_
 
    ```js{}[hooks/index.js]
    import render from './render'
@@ -75,7 +75,7 @@ Luego, crea unos cuantos archivos:
    })
    ```
 
-1. `hooks/render.js`, Hook Render
+1. `hooks/render.js`, _hook_ Render
 
    ```js{}[hooks/render.js]
    import redirectRootToPortal from './route-redirect-portal'

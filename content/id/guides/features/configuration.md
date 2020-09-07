@@ -95,7 +95,7 @@ export default {
 
 <base-alert>
 
-Nuxt.js akan secara otomatis menebak berkas berdasarkan jenis ekstensi berkas dan menggunakan pemuat _pre-processor_ yang pantas untuk _webpack_. Anda masih harus memasang pemuat yang dibutuhkan jika Anda akan menggunakan mereka.
+Nuxt.js akan secara otomatis menebak berkas berdasarkan jenis ekstensi berkas dan menggunakan pemuat _pre-processor_ yang pantas untuk webpack. Anda masih harus memasang pemuat yang dibutuhkan jika Anda akan menggunakan mereka.
 
 </base-alert>
 
@@ -247,7 +247,7 @@ export default {
 
 ## Memperpanjang Konfigurasi Webpack
 
-Anda dapat memperpanjang konfigurasi Webpack pada Nuxt.js melalui opsi `extend` pada berkas `nuxt.config.js`. Opsi `extend` pada properti `build` adalah sebuah metode yang menerima dua argumen. Argumen pertama adalah sebuah objek `config` Webpack yang diekspor dari konfigurasi Webpack pada Nuxt.js. Argumen kedua adalah sebuah objek konteks dengan properti _boolean_ sebagai berikut ini: `{ isDev, isClient, isServer, loaders }`.
+Anda dapat memperpanjang konfigurasi webpack pada Nuxt.js melalui opsi `extend` pada berkas `nuxt.config.js`. Opsi `extend` pada properti `build` adalah sebuah metode yang menerima dua argumen. Argumen pertama adalah sebuah objek `config` webpack yang diekspor dari konfigurasi webpack pada Nuxt.js. Argumen kedua adalah sebuah objek konteks dengan properti _boolean_ sebagai berikut ini: `{ isDev, isClient, isServer, loaders }`.
 
 ```js{}[nuxt.config.js]
 export default {

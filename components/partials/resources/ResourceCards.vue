@@ -8,14 +8,14 @@
       <NuxtLink :to="`/integrations/${item.name}`">
         <img v-if="item.logo" :src="item.logo" :alt="item.name" class="pb-2" />
         <img
-          v-else-if="`/icons/${item.name}`"
-          :src="`/icons/${item.name}.png`"
+          v-else-if="item.icon"
+          :src="`https://cdn.jsdelivr.net/gh/nuxt/integrations@master/icons/${item.icon}`"
           :alt="item.name"
           class="pb-2"
         />
-        <p v-else class="pb-2" style="font-size: 2em">
-🧩
-</p>
+        <div v-else class="pb-2" style="font-size: 2em">
+          <i>🧩</i>
+        </div>
         <h3 class="pb-2 font-bold">
           {{ item.name }}
         </h3>

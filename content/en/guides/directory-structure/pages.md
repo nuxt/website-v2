@@ -113,7 +113,7 @@ If you've defined a file named `_slug.vue` in your pages folder, you can access 
 </script>
 ```
 
-If you've defined a file named \_slug.vue inside a folder called \_book.vue you can access the value using the context with params.slug and params.book
+If you've defined a file named \_slug.vue inside a folder called \_book you can access the value using the context with params.slug and params.book
 
 ```html{}[pages/_book/_slug.vue]
 <template>
@@ -163,7 +163,7 @@ Every time you need to get asynchronous data you can use fetch. Fetch is called 
       }
     },
     async fetch() {
-      this.post = await fetch('https://api.nuxtjs.dev/posts').then(res =>
+      this.posts = await fetch('https://api.nuxtjs.dev/posts').then(res =>
         res.json()
       )
     }

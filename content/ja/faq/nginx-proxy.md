@@ -36,7 +36,7 @@ server {
 }
 ```
 
-# nginx を生成されたページに使い、フォールバックとしてのキャッシングプロキシに使う:
+## nginx を生成されたページに使い、フォールバックとしてのキャッシングプロキシに使う:
 
 もし、あなたが頻繁に更新するコンテンツがある大容量のウェブサイトを持っているとき、 Nuxt の生成機能と [nginx キャッシング](https://www.nginx.com/blog/nginx-caching-guide) の恩恵が必要となるでしょう。
 
@@ -116,12 +116,11 @@ server {
         proxy_cache_lock            on;
         proxy_cache_use_stale error timeout http_500 http_502 http_503 http_504;
         proxy_cache_key             $uri$is_args$args;
-        proxy_cache_purge           PURGE from 127.0.0.1;
     }
 }
 ```
 
-# Laravel Forge 用の nginx の設定:
+## Laravel Forge 用の nginx の設定:
 
 `YOUR_WEBSITE_FOLDER` をウェブサイトのフォルダ名に、`YOUR_WEBSITE_DOMAIN` をウェブサイトの URL に変更してください。Laravel Forge はこれらの値を補完しますが、ダブルチェックを行ってください。
 
@@ -178,7 +177,7 @@ server {
 include forge-conf/YOUR_WEBSITE_FOLDER/after/*;
 ```
 
-# TLS で Laravel Forge を保護する:
+## TLS で Laravel Forge を保護する:
 
 Laravel Forge に `nginx.conf` の編集を許可するには、Sites -> ウェブサイトドメイン（サーバー名）をクリック 、SSL をクリックしてプロバイダの 1 つから証明書をインストールします。証明書を有効にすることを忘れないでください。`nginx.conf` は以下のようになります:
 

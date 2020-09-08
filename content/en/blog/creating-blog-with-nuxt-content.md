@@ -35,7 +35,7 @@ The [content module](https://content.nuxtjs.org) is a git files based headless C
   - [Styling our markdown content](#styling-our-markdown-content)
   - [Adding an icon to our headings anchor](#adding-an-icon-to-our-headings-anchor)
   - [Add a table of contents](#add-a-table-of-contents)
-  - [Use HTML into your markdown files](#use-html-into-your-markdown-files)
+  - [Use HTML in your markdown files](#use-html-in-your-markdown-files)
   - [Adding a Vue component](#adding-a-vue-component)
   - [Adding an Author component with props](#adding-an-author-component-with-props)
   - [Adding a code block to your post](#adding-a-code-block-to-your-post)
@@ -81,7 +81,7 @@ export default {
 
 <base-alert>
 
-If you have created a new project with `create nuxt-app` you can choose to add the content module and therefore it will be installed for you.
+If you have created a new project with `create-nuxt-app` you can choose to add the content module and therefore it will be installed for you.
 
 </base-alert>
 
@@ -95,7 +95,7 @@ mkdir content
 
 <base-alert>
 
-If you have created your project with `create nuxt-app`, the `content/` directory will be already created.
+If you have created your project with `create-nuxt-app`, the `content/` directory will be already created.
 
 </base-alert>
 
@@ -127,13 +127,13 @@ In markdown we create a `<h1>` title by using `#`. Make sure you leave a space b
 
 ### Displaying your content
 
-To display our content in our page, we can use a [dynamic page](/guide/routing#dynamic-routes) by prefixing the page with an underscore(`_`). By creating a page component named `_slug.vue` inside our blog folder, we are able to use the `params.slug` variable provides by vue router to get the name of each article.
+To display our content in our page, we can use a [dynamic page](/guide/routing#dynamic-routes) by prefixing the page with an underscore(`_`). By creating a page component named `_slug.vue` inside our blog folder, we are able to use the `params.slug` variable provided by vue router to get the name of each article.
 
 ```bash
 touch pages/blog/_slug.vue
 ```
 
-Then we can use `asyncData` in our page component to fetch our article content before the page has been rendered. We can access to our content through the context by using the variable `$content`. As we want to fetch a dynamic page we also need to know which article to fetch with `params.slug` which is available to us through [the context](/api/context).
+Then we can use `asyncData` in our page component to fetch our article content before the page has been rendered. We can have access to our content through the context by using the variable `$content`. As we want to fetch a dynamic page we also need to know which article to fetch with `params.slug` which is available to us through [the context](/api/context).
 
 ```html{}[pages/blog/_slug.vue]
 <script>
@@ -278,7 +278,7 @@ If we inspect this page we can see that everything written inside our markdown i
 All other tags that come from our YAML front matter can be styled as normal either using [TailwindCSS](https://tailwindcss.com/) or adding css in the style tag.
 
 <base-alert>
-Scoped styles will not work with nuxt-content so if adding then in the style
+Scoped styles will not work with nuxt-content so if adding them in the style
 tag you shouldn't use scoped. You can add the styles here or as a global style
 in your css folder.
 </base-alert>
@@ -353,7 +353,7 @@ We can improve this further by using dynamic classes to style the heading classe
 :class="{ 'py-2': link.depth === 2, 'ml-2 pb-2': link.depth === 3 }"
 ```
 
-### Use HTML into your markdown files
+### Use HTML in your markdown files
 
 Sometimes we might want to add HTML to our markdown files. Let's add a div with some classes so it has a background color of blue with white text, some padding and a margin bottom.
 
@@ -432,7 +432,7 @@ Here we create a div the author image, a title of Author and a dynamic name and 
 ```html{}[components/global/Author.vue]
 <template>
   <div>
-    <img :src="author.img" />
+    <img :src="author.image" />
     <div>
       <h4>Author</h4>
       <p>{{ author.name }}</p>
@@ -636,7 +636,7 @@ We can now add our `<prev-next>` component to our slug page passing in the props
 </template>
 ```
 
-<base-alert>
+<base-alert type="info">
 
 As we have set `components: true` in our nuxt.config file we do not need to import this component in order to be able to use it.
 
@@ -646,13 +646,13 @@ As we have set `components: true` in our nuxt.config file we do not need to impo
 
 When querying data the Content module gives us access to the API so that we can query it directly to see what is being returned. We have access to the API in dev mode with the following url: [http://localhost:3000/\_content/](http://localhost:3000/_content/). In our example this will be empty as our articles are in a folder called articles therefore we need to use this url [http://localhost:3000/\_content/articles](http://localhost:3000/_content/articles) to see our list of articles.
 
-<base-alert>
+<base-alert type="info">
 
 We can see individual articles by adding the name of the slug [http://localhost:3000/\_content/articles/my-first-blog-post](http://localhost:3000/_content/articles/my-first-blog-post)
 
 </base-alert>
 
-<base-alert>
+<base-alert type="info">
 
 You can use a chrome extension such as [JSON Viewer Awesome](https://chrome.google.com/webstore/detail/json-viewer-awesome/iemadiahhbebdklepanmkjenfdebfpfe?hl=en) so you can better see your results.
 
@@ -672,7 +672,7 @@ We can now query our results directly in the url and see our results as a JSON w
 
 We can now create our blog index page to list out our blog posts. As we already have an index page created we just need to delete all the demo code inside this page.
 
-<base-alert>
+<base-alert type="info">
 
 In the [demo code](https://github.com/nuxt-company/demo-blog-nuxt-content) I used the main index page instead of creating an index file inside the blog folder because for this example I have no other pages but normally you might have a home page, contact page and then the blog page etc.
 
@@ -680,7 +680,7 @@ In the [demo code](https://github.com/nuxt-company/demo-blog-nuxt-content) I use
 
 Passing in `$content` and `params` to the context in our `asyncData` function we then use a const of articles to await our returned content by passing into `$content` the arguments of articles, as that is the folder where our articles are and our slug from params. We can then use `only()` to get our title, description, img, slug and author as we tested from our API this will give us exactly what we need. We can use `sortBy()` to sort by the createdAt date and then we chain our `fetch()` to the end and return our articles.
 
-```html{}[pages/blog/index.vue]
+```html{}[pages/index.vue]
 <script>
   export default {
     async asyncData({ $content, params }) {
@@ -697,7 +697,7 @@ Passing in `$content` and `params` to the context in our `asyncData` function we
 </script>
 ```
 
-Our articles are now available to us just like any data property so we can use it in our template using a `v-for` to loop over all the articles and print out the article title and author name, the description the date it was updated and the image using the `<NuxtLink>` component to link to the slug of the article.
+Our articles are now available to us just like any data property so we can use it in our template using a `v-for` to loop over all the articles and print out the article title and author name, the description, the date it was updated and the image using the `<NuxtLink>` component to link to the slug of the article.
 
 ```html{}[pages/index.vue]
 <template>
@@ -721,7 +721,7 @@ Our articles are now available to us just like any data property so we can use i
 
 ### Using the where query to create an Author page
 
-With the content module we can also filter out results using the where query. We could have an author page that shows the author details and all posts by that author.
+With the content module we can also filter our results using the where query. We could have an author page that shows the author details and all posts by that author.
 
 ```bash
 touch pages/blog/author/_author.vue
@@ -769,7 +769,7 @@ We then fetch all the details we want to show on this page. In the last example 
 </script>
 ```
 
-<base-alert>
+<base-alert type="info">
 
 You can use an array and pass in more than just 'body' to the `without()` method:
 
@@ -803,7 +803,7 @@ We can then use our data to print out a nice author page showing the author name
 </template>
 ```
 
-<base-alert>
+<base-alert type="info">
 
 Please note all styles have been removed from this example. You can either style the page yourself or copy the styles from the [demo code](https://github.com/nuxt-company/demo-blog-nuxt-content).
 
@@ -898,7 +898,7 @@ We can now use our `<AppSearchInput>` component by adding it anywhere on our pag
 <AppSearchInput />
 ```
 
-<base-alert>
+<base-alert type="info">
 
 See the [demo code](https://github.com/nuxt-company/demo-blog-nuxt-content) for improved styling of this page as well as the header component that was added which includes the search component and is therefore displayed on the author and index page.
 

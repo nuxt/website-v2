@@ -108,7 +108,7 @@ You also have access to `this.$fetch()`, useful if you want to call the `fetch`
   <div v-else>
     <h1>Nuxt Mountains</h1>
     <ul v-for="mountain of mountains">
-      <li>{{ mountain.name }}</li>
+      <li>{{ mountain.title }}</li>
     </ul>
     <button @click="$fetch">Refresh</button>
   </div>
@@ -207,7 +207,7 @@ Nuxt will directly fill  `this.$fetchState.timestamp`  (timestamp) of the last
   export default {
     data() {
       return {
-        post: {}
+        posts: []
       }
     },
     activated() {

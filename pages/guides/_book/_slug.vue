@@ -53,13 +53,14 @@ export default {
 
       return error({
         statusCode: 404,
-        message: app.i18n.t('common.api_page_not_found')
+        message: app.i18n.t('common.page_not_found')
       })
     }
 
     if (
-      process.env.NODE_ENV !== 'production' &&
-      app.i18n.defaultLocale !== app.i18n.locale
+      app.i18n.locale !== app.i18n.defaultLocale &&
+      (['pt'].includes(app.i18n.locale) ||
+        process.env.NODE_ENV !== 'production')
     ) {
       try {
         path = `/${app.i18n.locale}/guides/${params.book}`
@@ -73,14 +74,16 @@ export default {
     try {
       contributors = (
         await fetch(
-          `https://contributors-api.onrender.com${path}/${params.slug}`
+          `https://contributors-api.onrender.com/content${path}/${params.slug}`
         ).then(res => res.json())
       ).map(({ author }) => ({ author }))
     } catch (e) {}
 
     try {
       ;[prev, next] = await $content(
-        `/${app.i18n.defaultLocale}/guides/${params.book}`
+        ['pt'].includes(app.i18n.locale)
+          ? path
+          : `/${app.i18n.defaultLocale}/guides/${params.book}`
       )
         .only(['title', 'slug', 'dir', 'menu'])
         .sortBy('position')

@@ -14,7 +14,7 @@ position: 23
 
 Gunakan metode `head` untuk mengatur tag HTML Head untuk halaman saat ini.
 
-Your component data are available with `this` in the `head` method, you can use set custom meta tags with the page data. Data komponen Anda tersedia dengan `this` pada metode `head`, Anda dapat menggunakan set kustom meta tag dengan data halaman.
+Data komponen Anda tersedia dengan `this` pada metode `head`, Anda dapat menggunakan set kustom meta tag dengan data halaman.
 
 ```html
 <template>

@@ -82,9 +82,19 @@ All you need in your layout is three lines of code which will render the page co
 </template>
 ```
 
+You can add more components here such as Navigation, Header, Footer etc.
+
+```html{}[layouts/default.vue]
+<template>
+  <TheHeader />
+  <Nuxt />
+  <TheFooter />
+</template>
+```
+
 <base-alert type="info">
 
-You can add more components here such as Navigation, Header, Footer etc. You will need to import them as well as add them to your template.
+If you have [components set to true](/guides/directory-structure/components) then there is no need to add any import statements for your components.
 
 </base-alert>
 

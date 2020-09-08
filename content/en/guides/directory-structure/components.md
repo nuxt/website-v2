@@ -4,6 +4,8 @@ description: The components directory contains your Vue.js Components. Component
 position: 3
 category: directory-structure
 csb_link: https://codesandbox.io/embed/github/nuxt-academy/guides-examples/tree/master/04_directory_structure/03_components?fontsize=14&hidenavigation=1&theme=dark
+img: /guides/components.png
+imgAlt: nuxt components module
 questions:
   - question:
     answers:
@@ -45,7 +47,7 @@ Using `$fetchState.pending` we can show a message when the data is waiting to be
     <p v-if="$fetchState.pending">Loading....</p>
     <p v-else-if="$fetchState.error">Error while fetching mountains</p>
     <ul v-else>
-      <li v-for="(mountain, index) in mountains" :key="index.id">
+      <li v-for="(mountain, index) in mountains" :key="index">
         {{ mountain.title }}
       </li>
     </ul>
@@ -75,6 +77,8 @@ See the chapter on [fetch()](/guides/features/data-fetching#the-fetch-method) fo
 
 ## Components Discovery
 
+<app-modal :src="img" :alt="imgAlt"></app-modal>
+
 Starting from `v2.13`, Nuxt can auto import your components when used in your templates, to activate this feature, set `components: true` in your configuration:
 
 ```js{}[nuxt.config.js]
@@ -85,8 +89,10 @@ export default {
 
 Once you create your components in the components directory they will then be available to be auto imported.
 
-```html
-components/ TheHeader.vue TheFooter.vue
+```bash
+components/
+  TheHeader.vue
+  TheFooter.vue
 ```
 
 ```html{}[layouts/default.vue]

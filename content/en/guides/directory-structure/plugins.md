@@ -7,7 +7,7 @@ csb_link_plugins_client: https://codesandbox.io/embed/github/nuxt-academy/guides
 csb_link_plugins_external: https://codesandbox.io/embed/github/nuxt-academy/guides-examples/tree/master/04_directory_structure/12_plugins_external?fontsize=14&hidenavigation=1&theme=dark
 csb_link_plugins_custom: https://codesandbox.io/embed/github/nuxt-academy/guides-examples/tree/master/04_directory_structure/12_plugins_custom_plugin?fontsize=14&hidenavigation=1&theme=dark
 csb_link_plugins_vue: https://codesandbox.io/embed/github/nuxt-academy/guides-examples/tree/master/04_directory_structure/12_plugins_vue?fontsize=14&hidenavigation=1&theme=dark
-img: /guides/plugins.jpg
+img: /guides/plugins.svg
 imgAlt: modules-servermiddleware-plugins-in-nuxt-js
 questions:
   - question: The `plugins` directory contains your Javascript plugins that you want to run
@@ -123,14 +123,14 @@ Then we can use it directly in your page components:
 
 ```js{}[pages/index.vue]
 <template>
-  <h1>{{ title }}</h1>
+  <h1>{{ post.title }}</h1>
 </template>
 
 <script>
 export default {
 	async asyncData ({ $axios, params }) {
-	    const  posts  = await $axios.$get(`https://api.nuxtjs.dev/posts/${params.id}`)
-	    return { posts }
+	    const  post  = await $axios.$get(`https://api.nuxtjs.dev/posts/${params.id}`)
+	    return { post }
 	  }
 }
 </script>
@@ -163,9 +163,9 @@ npm install v-tooltip
   </code-block>
 </code-group>
 
-The we create the file `plugins/vue-notifications.js`
+The we create the file `plugins/vue-tooltip.js`
 
-```js{}[plugins/vue-notifications.js]
+```js{}[plugins/vue-tooltip.js]
 import Vue from 'vue'
 import VTooltip from 'v-tooltip'
 
@@ -261,7 +261,7 @@ export default {
 }
 ```
 
-Now `$hello(msg)` can be used from `context`, via `this` in Vue instances and via `this` in store `actions`/`mutations`.
+Now `$hello` service can be accessed from `context` and `this` in pages, components, plugins, and store actions.
 
 ```js{}[example-component.vue]
 export default {
@@ -269,10 +269,10 @@ export default {
     this.$hello('mounted')
     // will console.log 'Hello mounted!'
   },
-  asyncData(context) {
-    context.$hello('asyncData')
+  asyncData({ app, $hello }) {
+    $hello('asyncData')
     // If using Nuxt <= 2.12, use 👇
-    context.app.$hello('asyncData')
+    app.$hello('asyncData')
   }
 }
 ```
@@ -282,13 +282,6 @@ export const state = () => ({
   someValue: ''
 })
 
-export const mutations = {
-  changeSomeValue(state, newValue) {
-    this.$hello('store mutation')
-    state.someValue = newValue
-  }
-}
-
 export const actions = {
   setSomeValueToWhatever({ commit }) {
     this.$hello('store action')
@@ -297,6 +290,10 @@ export const actions = {
   }
 }
 ```
+
+<base-alert>
+Don't use `Vue.use()`, `Vue.component()`, and globally, don't plug anything in Vue **inside** this function, dedicated to Nuxt injection. It will cause memory leak on server-side.
+</base-alert>
 
 <app-modal>
   <code-sandbox  :src="csb_link_plugins_custom"></code-sandbox>

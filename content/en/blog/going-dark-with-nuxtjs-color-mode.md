@@ -133,7 +133,7 @@ Now you need to add some styles to your mode classes. Let's add a `main.css` fil
 
 body {
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen,
-    Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-seriff;
+    Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
   background-color: var(--bg);
   color: var(--color);
   transition: background-color 0.3s;

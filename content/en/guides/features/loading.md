@@ -235,7 +235,7 @@ export default {
 
 ## Built-in indicators
 
-These indicators are imported from awesome [Spinkit](http://tobiasahlin.com/spinkit) project. You can check out its demo page to preview the spinners. In order to use one of these spinners all you have to do is add it's name to to the name property. No need to import or install anything. Here is a list of built in indicators you can use.
+These indicators are imported from awesome [Spinkit](http://tobiasahlin.com/spinkit) project. You can check out its demo page to preview the spinners. In order to use one of these spinners all you have to do is add it's name to the name property. No need to import or install anything. Here is a list of built in indicators you can use.
 
 - circle
 - cube-grid

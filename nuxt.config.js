@@ -2,6 +2,10 @@ export default {
   target: 'static',
   ssr: true,
   head: {
+    htmlAttrs: {
+      lang: process.env.NUXT_LOCALE,
+      dir: ['fa', 'ar', 'he'].includes(process.env.NUXT_LOCALE) ? 'rtl' : 'ltr'
+    },
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
@@ -73,6 +77,21 @@ export default {
     'vue-scrollto/nuxt'
   ],
 
+  pwa: {
+    manifest: {
+      name: 'NuxtJS',
+      start_url: '/',
+      icons: [
+        {
+          src: '/icon.png',
+          type: 'image/png',
+          sizes: '512x512',
+          purpose: 'any maskable'
+        }
+      ]
+    }
+  },
+
   // Auto import components, see https://github.com/nuxt/components
   components: true,
   colorMode: {
@@ -116,12 +135,12 @@ export default {
   publicRuntimeConfig: {
     nuxtLocale: process.env.NUXT_LOCALE || 'en',
     nuxtVersion: '2.14.0',
-    nuxtStars: '28K+'
+    nuxtStars: '29K+'
   },
   loading: { color: '#41B883' },
   generate: {
-    fallback: '404.html', // for Netlify
-    routes: ['/']
+    fallback: false,
+    routes: ['/', '404']
   },
   i18n: {
     strategy: 'no_prefix',
@@ -175,7 +194,31 @@ export default {
         file: 'id-ID.js',
         name: 'Indonesian',
         domain: 'https://id.nuxtjs.org'
+      },
+      {
+        code: 'pt',
+        iso: 'pt-BR',
+        file: 'pt-BR.js',
+        name: 'Português',
+        domain: 'https://pt.nuxtjs.org'
       }
+      // please leave this commented out until subdomain is live
+      // {
+      //   code: 'fa',
+      //   iso: 'fa-IR',
+      //   file: 'fa-IR.js',
+      //   name: 'Persian',
+      //   domain: 'https://fa.nuxtjs.org'
+      // }
+      // please leave this commented out until subdomain is live
+      // {
+      // code: 'tr',
+      // iso: 'tr-TR',
+      // file: 'tr-TR.js',
+      // name: 'Türkçe',
+      // domain: 'https://tr.nuxtjs.org'
+      // }
+      // please leave this commented out until subdomain is live
       // {
       //   code: 'es',
       //   iso: 'es-ES',

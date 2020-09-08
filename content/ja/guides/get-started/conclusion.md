@@ -1,93 +1,93 @@
 ---
-title: Conclusion
-description: Congratulations you have now created your first Nuxt.js app and you may now consider yourself a Nuxter. But there is so much more to learn and so much more you can do with Nuxt.js. Here are a few recommendations.
+title: "おわりに"
+description: "おめでとうございます！最初の Nuxt.js アプリケーションを作成し、これで Nuxter になったと思うかもしれません。しかし、Nuxt.js で学ぶことやできることはまだまだたくさんあります。いくつかおすすめのページを紹介します"
 position: 4
 category: get-started
 questions:
-  - question: What is the name of the directory you need to have for Nuxt.js to work?
+  - question: "Nuxt.js を動かすために必要なディレクトリ名は？"
     answers:
       - nuxt
       - pages
       - index
     correctAnswer: pages
-  - question: What is the name of your project ID file?
+  - question: "プロジェクト ID のファイル名は？"
     answers:
       - package.vue
       - package.json
       - package.js
     correctAnswer: package.json
-  - question: What is the command you type in the terminal to launch your Nuxt.js project?
+  - question:"Nuxt.js プロジェクトを起動するためにターミナルに入力するコマンドは？"
     answers:
       - npm dev
       - npm run dev
       - nuxt dev
     correctAnswer: npm run dev
-  - question: What is the address in the browser where you can see your page in development mode?
+  - question: "開発モードで表示するページのブラウザ上のアドレスは？"
     answers:
       - http://localhost:3000/
       - http://localhost:3000/project-name:3000
       - http://localhost:3000/nuxt:3000/
     correctAnswer: http://localhost:3000/
-  - question: Where do you put your configuration in?
+  - question: "設定を行うファイルは？"
     answers:
       - nuxt.config.json
       - config.js
       - nuxt.config.js
     correctAnswer: nuxt.config.js
-  - question: Which directory is not suitable for `.vue` files?
+  - question: "`.vue` ファイルに適していないディレクトリは？"
     answers:
       - pages
       - static
       - components
     correctAnswer: static
-  - question: In which directory do you put your styles?
+  - question: "どのディレクトリにスタイルを配置しますか？"
     answers:
       - styles
       - components
       - assets
     correctAnswer: assets
-  - question: In which directory do we put a robots.txt or favicon?
+  - question: "どのディレクトリに robots.txt や favicon を配置しますか？"
     answers:
       - assets
       - components
       - static
     correctAnswer: static
-  - question: What component do we use to navigate between pages?
+  - question: "ページ間の移動にはどのコンポーネントを使いますか？"
     answers:
       - '<Nuxt>'
       - '<RouterLink>'
       - '<NuxtLink>'
     correctAnswer: '<NuxtLink>'
-  - question: '`<NuxtLink>` is used for internal links that belong to the Nuxt.js app?'
+  - question: '`<NuxtLink>` は Nuxt.js アプリケーションに属する内部リンクに使われますか？'
     answers:
       - True
       - False
     correctAnswer: True
 ---
 
-Congratulations! You have now created your first Nuxt.js app and you may now consider yourself a Nuxter, but there is so much more to learn and so much more you can do with Nuxt.js. Here are a few recommendations:
+おめでとうございます！最初の Nuxt.js アプリケーションを作成し、これで Nuxter になったと思うかもしれません。しかし、Nuxt.js で学ぶことやできることはまだまだたくさんあります。いくつかおすすめのページを紹介します:
 
 <base-alert type="next">
 
-Check out the [Concepts book](../concepts/views)
+[Concepts book](../concepts/views) を確認
 
 </base-alert>
 
 <base-alert type="next">
 
-Working with [asyncData](/guides/features/data-fetching#async-data)
+[asyncData](/guides/features/data-fetching#async-data) の操作
 
 </base-alert>
 
 <base-alert type="next">
 
-Choosing between different [Rendering modes](/guides/features/rendering-modes)
+異なる[レンダリングモード](/guides/features/rendering-modes)の選択
 
 </base-alert>
 
 <base-alert type="star">
 
-Did you like Nuxt.js so far? Don't forget to [star our project](https://github.com/nuxt/nuxt.js) on GitHub
+Nuxt.js は気に入りましたか？ GitHub で[私たちのプロジェクトにスターをつける](https://github.com/nuxt/nuxt.js)ことを忘れないでください。
 
 </base-alert>
 

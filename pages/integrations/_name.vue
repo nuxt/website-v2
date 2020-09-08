@@ -1,48 +1,57 @@
 <template>
   <div class="mx-auto px-4 pb-12">
-    <div class="w-full">
-      <div v-if="integration.image">
-        <a :href="integration.docs" target="_blank" class="flex flex-col">
-          <img :src="integration.image" :alt="integration.title" />
-        </a>
-      </div>
-    </div>
-
     <div class="container lg:flex">
-      <div class="w-3/4">
+      <div class="lg:w-3/4 lg:mr-2">
+        <ResourceHero :integration="integration" />
         <div>
-          <h3 :class="sectionClasses">
-            <span class="text-green-500">Nuxt</span> + <span class="text-blue-600">{{ integration.name }}</span>
-          </h3>
-          <p>{{ description }}</p>
+          <h2 :class="sectionClasses" class="capitalize">
+            {{ integration.name }}
+          </h2>
+          <p>
+            {{ description }}
+          </p>
         </div>
 
         <div v-if="integration.features">
-          <h3 :class="sectionClasses">
-            Features
-          </h3>
-          <base-list v-if="integration.features" :items="integration.features" />
+          <h3 :class="sectionClasses">Features</h3>
+          <base-list
+            v-if="integration.features"
+            :items="integration.features"
+          />
         </div>
 
         <div>
-          <h3 :class="sectionClasses">
-            Links
-          </h3>
-          <this-docs-button v-if="integration.github" :href="integration.github">
+          <h3 :class="sectionClasses">Links</h3>
+          <this-docs-button
+            v-if="integration.github"
+            :href="integration.github"
+          >
             Github
           </this-docs-button>
-          <this-docs-button v-if="integration.website && integration.website !== integration.github" :href="integration.website">
+          <this-docs-button
+            v-if="
+              integration.website && integration.website !== integration.github
+            "
+            :href="integration.website"
+          >
             Documentation
+          </this-docs-button>
+          <!-- TODO add learn more link to repo and then change here -->
+          <this-docs-button
+            v-if="
+              integration.website && integration.website !== integration.github
+            "
+            :href="integration.website"
+          >
+            Learn More
           </this-docs-button>
         </div>
       </div>
 
-      <div class="w-1/4">
+      <div class="lg:w-1/4 lg:ml-2">
         <div class="mt-8">
           <!-- Categories -->
-          <h3 :class="sectionClasses">
-            Categories
-          </h3>
+          <h3 :class="sectionClasses">Categories</h3>
           <NuxtLink
             v-for="category in integration.categories"
             :key="category"
@@ -53,12 +62,15 @@
           </NuxtLink>
 
           <!-- Stats -->
-          <h3 :class="sectionClasses">
-            Stats
-          </h3>
+          <h3 :class="sectionClasses">Stats</h3>
           <template v-if="integration.repo">
             <a
-              v-for="type in ['stars', 'last-commit', 'contributors', 'dependents-repo']"
+              v-for="type in [
+                'stars',
+                'last-commit',
+                'contributors',
+                'dependents-repo'
+              ]"
               :key="type"
               :href="`https://github.com/${integration.repo}`"
               target="_blank"
@@ -85,32 +97,37 @@
             </a>
           </template>
           <!-- Maintainers -->
-          <template v-if="integration.maintainers && integration.maintainers.length">
-            <h3 :class="sectionClasses">
-              Maintainers
-            </h3>
+          <template
+            v-if="integration.maintainers && integration.maintainers.length"
+          >
+            <h3 :class="sectionClasses">Maintainers</h3>
             <div class="flex">
-              <div v-for="(maintainer, index) in integration.maintainers" :key="index">
-              <a
-                target="_blank"
-                :href="maintainer.github ? `https://github.com/${maintainer.github}` : ''"
+              <div
+                v-for="(maintainer, index) in integration.maintainers"
+                :key="index"
               >
-                <img
-                  v-if="maintainer.avatar"
-                  :src="maintainer.avatar"
-                  :alt="maintainer.name"
-                  class="rounded mr-1 mb-1"
-                  width="48px"
-                  height="48px"
-                />
-              </a>
-            </div>
+                <a
+                  target="_blank"
+                  :href="
+                    maintainer.github
+                      ? `https://github.com/${maintainer.github}`
+                      : ''
+                  "
+                >
+                  <img
+                    v-if="maintainer.avatar"
+                    :src="maintainer.avatar"
+                    :alt="maintainer.name"
+                    class="rounded mr-1 mb-1"
+                    width="48px"
+                    height="48px"
+                  />
+                </a>
+              </div>
             </div>
           </template>
           <!-- Keywords -->
-          <h3 :class="sectionClasses">
-            Keywords
-          </h3>
+          <h3 :class="sectionClasses">Keywords</h3>
 
           <span
             v-for="keyword in integration.keywords"

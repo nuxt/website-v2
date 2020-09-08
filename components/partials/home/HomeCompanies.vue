@@ -393,6 +393,12 @@ export default {
             class: 'h-10'
           },
           {
+            name: 'PLAID',
+            img: 'plaid.svg',
+            url: 'https://plaid.co.jp',
+            class: 'h-10'
+          },
+          {
             name: 'ZEN Architects',
             img: 'zenarchitects.svg',
             url: 'https://app.zenadvisor.io/docs',

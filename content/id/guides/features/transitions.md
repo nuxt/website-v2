@@ -246,6 +246,8 @@ export default {
 }
 ```
 
+Jika Anda sudah memodifikasi nama kelas transisi antar halaman tersebut, jangan lupa untuk mengubah nama kelasnya di berkas CSS yang bersangkutan.
+
 ```css{}[assets/main.css]
 .layout-saya-enter-active,
 .layout-saya-leave-active {

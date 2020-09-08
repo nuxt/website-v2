@@ -6,6 +6,12 @@ category: configuration-glossary
 position: 17
 ---
 
+<base-alert type="warning">
+
+deprecated. Please use `ssr: false` instead of `mode: spa`
+
+</base-alert>
+
 - Type: `string`
   - Default: `universal`
   - Possible values:

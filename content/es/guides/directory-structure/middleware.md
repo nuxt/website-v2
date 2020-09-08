@@ -48,18 +48,18 @@ questions:
       - router.middleware
       - routes.middleware
     correctAnswer: router.middleware
-  - question: Es posible añadir varios middleware a una página o layout?
+  - question: ¿Es posible añadir varios middleware a una página o layout?
     answers:
       - cierto
       - falso
     correctAnswer: cierto
-  - question: Cómo puedes añadir este middleware a tu página (`middleware/authenticated.js`)?
+  - question: ¿Cómo puedes añadir este middleware a tu página (`middleware/authenticated.js`)?
     answers:
       - 'middleware: authenticated'
       - 'middleware: true'
       - "middleware: 'authenticated'"
     correctAnswer: "middleware: 'authenticated'"
-  - question: Cómo puedes usar middleware anónimo, sólo para una página específica?
+  - question: ¿Cómo puedes usar middleware anónimo, sólo para una página específica?
     answers:
       - creando un middleware con nombre y grabándolo en el directorio de middleware
       - creando una función de middleware en el componente de página

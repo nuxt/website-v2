@@ -16,7 +16,7 @@ questions:
       - default.vue
       - defaultLayout.vue
     correctAnswer: default.vue
-  - question: Qué componentes tienes que incluir en todos los layouts?
+  - question: ¿Qué componentes tienes que incluir en todos los layouts?
     answers:
       - <Nuxt />
       - <NuxtLink />
@@ -33,19 +33,19 @@ questions:
       - layouts
       - page
     correctAnswer: layouts
-  - question: Cómo puedes hacer que una página use un layout de blog?
+  - question: ¿Cómo puedes hacer que una página use un layout de blog?
     answers:
       - "layout: 'blog'"
       - "name: 'blog'"
       - 'blog: true'
     correctAnswer: "layout: 'blog'"
-  - question: En cuál directorio se añade una página de error?
+  - question: ¿En cuál directorio se añade una página de error?
     answers:
       - pages
       - layouts
       - errors
     correctAnswer: layouts
-  - question: Deberías añadir el componente de `<Nuxt>` a la página de error?
+  - question: ¿Deberías añadir el componente de `<Nuxt>` a la página de error?
     answers:
       - cierto
       - falso
@@ -55,7 +55,7 @@ questions:
       - cierto
       - falso
     correctAnswer: cierto
-  - question: La página de error se muestra cuando un error ocurre cuando el servidor esta rendering?
+  - question: ¿La página de error se muestra cuando un error ocurre cuando el servidor esta rendering?
     answers:
       - cierto
       - falso

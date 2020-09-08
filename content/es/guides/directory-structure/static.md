@@ -5,7 +5,7 @@ position: 12
 category: directory-structure
 csb_link: https://codesandbox.io/embed/github/nuxt-academy/guides-examples/tree/master/04_directory_structure/13_static?fontsize=14&hidenavigation=1&theme=dark
 questions:
-  - question: En que directorio deberias poner archivos que no serán modificados, archivos como el favicon o robots.txt?
+  - question: ¿En qué directorio deberías poner archivos que no serán modificados, archivos como el favicon o robots.txt?
     answers:
       - assets
       - static
@@ -16,7 +16,7 @@ questions:
       - cierto
       - falso
     correctAnswer: falso
-  - question: Dónde deberías poner las imágenes, si quieres que Webpack se encargue de hacer el bundle?
+  - question: ¿Dónde deberías poner las imágenes, si quieres que Webpack se encargue de hacer el bundle?
     answers:
       - static
       - assets

@@ -7,49 +7,49 @@ csb_link: https://codesandbox.io/embed/github/nuxt-academy/guides-examples/tree/
 videoScript:
   - assets-video.md
 questions:
-  - question: Qué directorios contienen los archivos sin compilar, Stylus o Sass, imágenes, o fuentes?
+  - question: ¿Qué directorios contienen los archivos sin compilar, Stylus o Sass, imágenes, o fuentes?
     answers:
       - static
       - assets
       - pages
     correctAnswer: assets
-  - question: Cómo puedes referenciar el directorio de recursos (`assets`) dentro de los Vue templates?
+  - question: ¿Cómo puedes referenciar el directorio de recursos (`assets`) dentro de los Vue templates?
     answers:
       - '/assets/tu_imagen.png'
       - '@assets/tu_imagen.png'
       - '@/assets/tu_imagen.png'
     correctAnswer: '@/assets/tu_imagen.png'
-  - question: Cómo puedes referenciar el directorio de recursos dentro (`assets`) de archivos CSS?
+  - question: ¿Cómo puedes referenciar el directorio de recursos dentro (`assets`) de archivos CSS?
     answers:
       - url("@assets/banner.svg")
       - url("assets/banner.svg")
       - url("@/assets/banner.svg")
     correctAnswer: url("@assets/banner.svg")
-  - question: Dónde se incluyen estilos css globales?
+  - question: ¿Dónde se incluyen estilos css globales?
     answers:
       - En tu archivo index.vue
       - En el archivo nuxt.config.js
       - En el archivo de `layout` por defecto
     correctAnswer: En el archivo nuxt.config.js
-  - question: Qué propiedad css se usa para importar fuentes globales?
+  - question: ¿Qué propiedad css se usa para importar fuentes globales?
     answers:
       - font
       - head
       - css
     correctAnswer: head
-  - question: Cuál loader te permite añadir un archivo como base-64 data URL?
+  - question: ¿Cuál loader te permite añadir un archivo como base-64 data URL?
     answers:
       - file-loader
       - url-loader
       - image-loader
     correctAnswer: url-loader
-  - question: Cuáles son los aliases para el directorio del source (srcDir)?
+  - question: ¿Cuáles son los aliases para el directorio del source (srcDir)?
     answers:
       - '@'
       - '@@'
       - '^'
     correctAnswer: '@'
-  - question: Cuáles son los aliases para el directorio del root (rootDir)?
+  - question: ¿Cuáles son los aliases para el directorio del root (rootDir)?
     answers:
       - '@'
       - '@@'

@@ -4,25 +4,25 @@ description: El directorio de `.nuxt` se le llama *el directorio de construcció
 position: 1
 category: directory-structure
 questions:
-  - question: Qué comando generan el directorio .nuxt?
+  - question: ¿Qué comando generan el directorio .nuxt?
     answers:
       - nuxt start
       - nuxt generate
       - nuxt build or nuxt dev
     correctAnswer: nuxt build or nuxt dev
-  - question: Qué propiedad usas para renombrar el archivo nuxt?
+  - question: ¿Qué propiedad usas para renombrar el archivo nuxt?
     answers:
       - dir
       - build
       - buildDir
     correctAnswer: buildDir
-  - question: En que archivo puedes encontrar las rutas generadas?
+  - question: ¿En que archivo puedes encontrar las rutas generadas?
     answers:
       - pages.js
       - router.js
       - views.js
     correctAnswer: router.js
-  - question: Que puedes encontrar en el directorio de componentes?
+  - question: ¿Que puedes encontrar en el directorio de componentes?
     answers:
       - nuxt components
       - custom components

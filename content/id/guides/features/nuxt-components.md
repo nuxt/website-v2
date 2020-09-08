@@ -102,7 +102,7 @@ Komponen `<Nuxt>` dapat menerima _prop_ `nuxt-child-key`. _Prop_ ini akan dioper
 
 Terdapat 2 cara untuk menangani _prop_ `key` internal dari `<RouterView>`.
 
-1. Gunakan `nuxtChildKey` _prop_ pada komponen `<Nuxt>` Anda.
+1. Gunakan _prop_ `nuxt-child-key` pada komponen `<Nuxt>` Anda.
 
 ```html{}[layouts/default.vue]
 <template>
@@ -167,7 +167,7 @@ Untuk menampilkan komponen `child.vue`, Anda harus menambahkan komponen `<NuxtCh
 
 ## keep-alive
 
-Komponen `<Nuxt>` dan `<NuxtChild/>` dapat menerima _props_ `keep-alive` dan `keep-alive-props`.
+Komponen `<Nuxt>` dan `<NuxtChild/>` dapat menerima _prop_ `keep-alive` dan `keep-alive-props`.
 
 <base-alert type="info">
 
@@ -215,7 +215,7 @@ Komponen `<NuxtChild>` juga dapat menerima properti layaknya komponen Vue biasa.
 </template>
 ```
 
-Untuk melihat contoh, kunjugi [contoh nested-routes](https://nuxtjs.org/examples/nested-routes).
+Untuk melihat contoh, kunjungi [contoh rute bersarang](https://nuxtjs.org/examples/nested-routes).
 
 <app-modal>
   <code-sandbox  :src="csb_link_nuxt"></code-sandbox>
@@ -270,7 +270,7 @@ Nuxt.js memiliki fitur _smart prefetching_ bawaan. Ini berarti Nuxt.js dapat men
 
 Dalam sebagian kasus, Anda mungkin ingin menonaktifkan fitur _prefetching_ untuk tautan-tautan tertentu yang mengandung banyak JavaScript atau Anda memiliki banyak halaman yang harus di-_prefetch_ atau Anda memiliki banyak pustaka pihak ketiga yang harus dimuat. Untuk menonaktifkan _prefetching_ untuk tautan-tautan tertentu, Anda bisa menggunakan _prop_ `no-prefetch`.
 
-Sejak Nuxtjs versi 2.10.0, Anda juga bisa menyetel _prop_ `prefetch` agar bernilai `false`.
+Sejak Nuxt.js versi 2.10.0, Anda juga bisa menyetel _prop_ `prefetch` agar bernilai `false`.
 
 ```html
 <NuxtLink to="/about" no-prefetch>About page not pre-fetched</NuxtLink>
@@ -297,7 +297,7 @@ Sejak Nuxt.js versi 2.10.0, jika Anda sudah menyetel nilai `prefetchLinks` ke `f
 
 ## linkActiveClass
 
-Cara kerja `linkActiveClass` sama dengan kelas `vue-router` untuk tautan-tautan aktif. Jika Anda ingin menampilkan tautan-tautan mana yang sedang aktif, Anda cukup membuat sebuah CSS untuk kelas `nuxt-link-active`.
+Cara kerja `linkActiveClass` sama dengan kelas `vue-router` untuk tautan-tautan aktif. Jika Anda ingin menampilkan tautan-tautan mana yang sedang aktif, Anda cukup membuat sebuah _styling_ untuk kelas `nuxt-link-active`.
 
 ```css
 .nuxt-link-active {
@@ -329,7 +329,7 @@ Opsi ini dioper langsung ke `linkActiveClass` milik `vue-router`. Lihat [dokumen
 
 ## linkExactActiveClass
 
-Cara kerja `linkExactActiveClass` sama dengan kelas `vue-router` untuk tautan-tautan aktif eksak. Jika Anda ingin menampilkan tautan-tautan mana yang sedang aktif dengan pencocokan persis, Anda hanya perlu membuat CSS untuk kelas `nuxt-link-exact-active`.
+Cara kerja `linkExactActiveClass` sama dengan kelas `vue-router` untuk tautan-tautan aktif eksak. Jika Anda ingin menampilkan tautan-tautan mana yang sedang aktif dengan pencocokan persis, Anda hanya perlu membuat _styling_ untuk kelas `nuxt-link-exact-active`.
 
 ```css
 .nuxt-link-exact-active {
@@ -348,7 +348,7 @@ Jika Anda mau, Anda juga bisa mengubah nama kelasnya. Anda bisa melakukan ini de
 ```js{}[nuxt.config.js]
 export default {
   router: {
-    linkExactActiveClass: 'my-custom-exact-active-link'
+    linkExactActiveClass: 'nama-kelas-yang-baru'
   }
 }
 ```

@@ -31,13 +31,12 @@
             <li
               v-for="(link, index) in sublinks"
               :key="index"
-              class="py-2 text-light-onSurfacePrimary dark:text-dark-onSurfacePrimary"
+              class="text-light-onSurfacePrimary dark:text-dark-onSurfacePrimary"
             >
               <NuxtLink
-                class="hover:text-nuxt-lightgreen dark:hover:text-nuxt-lightgreen transition-colors duration-300 ease-linear"
-                active-class
-                exact
-                exact-active-class="text-nuxt-lightgreen"
+                class="p-2 pl-4 flex rounded hover:text-nuxt-lightgreen dark:hover:text-nuxt-lightgreen transition-colors duration-300 ease-linear"
+                exact-active-class="text-nuxt-lightgreen bg-green-100 dark:bg-green-800 dark:text-white"
+                active-class="text-nuxt-lightgreen dark:text-white"
                 :to="toLink(link)"
               >
                 <template v-if="link.menu">

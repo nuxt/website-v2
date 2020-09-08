@@ -39,7 +39,7 @@
             >
               <NuxtLink
                 class="p-2 pl-4 flex rounded hover:text-nuxt-lightgreen dark:hover:text-nuxt-lightgreen transition-colors duration-300 ease-linear"
-                exact-active-class="text-nuxt-lightgreen bg-green-100 dark:bg-green-800"
+                exact-active-class="text-nuxt-lightgreen bg-green-100 dark:bg-green-800 dark:text-white"
                 :to="toLink(group, link)"
               >
                 <template v-if="link.menu">

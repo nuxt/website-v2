@@ -37,7 +37,7 @@ deprecated `mode: 'spa'` please use `ssr: false`.
 
 </base-alert>
 
-With Single Page Applications there is no server-side rendering, only client-side rendering. Client side rendering means rendering the content in the browser using JavaScript. Instead of getting all of the content from the HTML we just get a basic HTML document with a JavaScript file that will then render the rest of the site using the browser. To deploy a single page application set the ssr to `false` and then use the `build` command to build your application.
+With Single Page Applications there is no server-side rendering, only client-side rendering. Client side rendering means rendering the content in the browser using JavaScript. Instead of getting all of the content from the HTML we just get a basic HTML document with a JavaScript file that will then render the rest of the site using the browser. To deploy a single page application set ssr to `false` and then use the `build` command to build your application.
 
 ```js{}[nuxt.config.js]
 export default {

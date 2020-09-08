@@ -391,6 +391,12 @@ export default {
             img: 'rere.svg',
             url: 'https://www.rere.jp',
             class: 'h-10'
+          },
+          {
+            name: 'ZEN Architects',
+            img: 'zenarchitects.svg',
+            url: 'https://app.zenadvisor.io/docs',
+            class: 'h-10'
           }
         ],
         ko: [],

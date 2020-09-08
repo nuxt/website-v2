@@ -48,7 +48,7 @@ questions:
     correctAnswer: exclude
 ---
 
-El directorio de `dist` es una abreviación de directorio de _distribución_. Se genera dinámicamente cuando ejecutas el comando `nuxt generate` e incluye los archivos generados y optimizados para producción, necesarios para publicar y correr tu aplicación de Nuxt estática.
+El directorio de `dist` es una abreviación de directorio de _distribución_. Se genera dinámicamente cuando ejecutas el comando `nuxt generate` e incluye los archivos generados y optimizados para producción, necesarios para publicar y correr tu aplicación Nuxt generada estáticamente.
 
 ### Publicando
 

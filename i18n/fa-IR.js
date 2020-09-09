@@ -333,6 +333,25 @@ module.exports = {
       'components-glossary': 'واژه‌نامه کامپوننت‌ها'
     }
   },
+  footer: {
+    links: {
+      discover: {
+        title: 'Discover',
+        design: 'Design resources',
+        team: 'A worldwide team',
+        blog: 'Blog'
+      },
+      follow: {
+        title: 'Follow'
+      },
+      support: {
+        title: 'Support',
+        sponsorNuxt: 'Sponsor NuxtJS',
+        shop: 'The NuxtJS Shop',
+        consulting: 'NuxtJS Consulting'
+      }
+    }
+  },
   cookies: {
     consent:
       'ما از کوکی‌ها برای آمارگیری و ایجاد تجربه‌کاربری بهتر استفاده می کنیم.',

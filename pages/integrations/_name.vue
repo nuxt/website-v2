@@ -42,13 +42,28 @@
             Documentation
           </AppButton>
           <AppButton
-            v-if="integration.externalLink"
-            :href="integration.externalLink"
+            v-if="integration.external_link"
+            :href="integration.external_link"
             class="sm:mr-4 py-2 px-2 text-base"
           >
             <ExternalLinkIcon slot="icon" class="inline-block h-6 -mt-1 mr-1" />
             Learn More
           </AppButton>
+        </div>
+        <div>
+          <NuxtLink
+            v-if="prev"
+            :to="{ name: 'integrations-slug', params: { slug: prev.slug } }"
+          >
+            {{ prev.title }}
+          </NuxtLink>
+
+          <NuxtLink
+            v-if="next"
+            :to="{ name: 'integrations-slug', params: { slug: next.slug } }"
+          >
+            {{ next.title }}
+          </NuxtLink>
         </div>
       </div>
 
@@ -162,7 +177,12 @@ export default {
   async asyncData({ params, $content }) {
     const integration = await $content('integrations', params.name).fetch()
 
-    return { integration }
+    const [prev, next] = await $content('integrations')
+      .only(['name', 'slug'])
+      .sortBy('createdAt', 'asc')
+      .surround(params.slug)
+      .fetch()
+    return { integration, prev, next }
   },
 
   computed: {

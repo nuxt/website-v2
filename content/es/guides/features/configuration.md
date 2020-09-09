@@ -1,6 +1,6 @@
 ---
-title: Configuration
-description: By default, Nuxt.js is configured to cover most use cases. This default configuration can be overwritten with the nuxt.config.js file.
+title: Configuración
+description: Por defecto, Nuxt.js es configurado para cubrir la mayoria de los casos de uso. Esta configuración predeterminada se puede sobreescribir con el archivo nuxt.config.js.
 position: 7
 category: features
 csb_link_host_port: https://codesandbox.io/embed/github/nuxt-academy/guides-examples/tree/master/03_features/07_configuration_host_port?fontsize=14&hidenavigation=1&theme=dark
@@ -66,19 +66,19 @@ questions:
     correctAnswer: -about.vue
 ---
 
-By default, Nuxt.js is configured to cover most use cases. This default configuration can be overwritten with the nuxt.config.js file.
+Por defecto, Nuxt.js es configurado para cubrir la mayoria de los casos de uso. Esta configuración predeterminada se puede sobreescribir con el archivo nuxt.config.js.
 
-## The css Property
+## La propiedad css
 
-Nuxt.js lets you define the CSS files/modules/libraries you want to set globally (included in every page).
+Nuxt.js te permite definir el CSS globalmente en files/modules/libraries (Incluido en cada página).
 
 <base-alert>
 
-In case you want to use `sass` make sure that you have installed the `node-sass` and `sass-loader` packages.
+En caso que quieras usar `sass` asegurate que tienes instalado los paquetes `node-sass` y `sass-loader`.
 
 </base-alert>
 
-In `nuxt.config.js`, add the CSS resources:
+En `nuxt.config.js`, agrega los recursos CSS:
 
 ```js{}[nuxt.config.js]
 export default {
@@ -95,13 +95,13 @@ export default {
 
 <base-alert>
 
-Nuxt.js will automatically guess the file type by its extension and use the appropriate pre-processor loader for webpack. You will still need to install the required loader if you need to use them.
+Nuxt.js automáticamente adivinará el tipo de archivo por su extensión y utilizará el preprocesador loader adecuado para webpack. Todavía necesitarás instalar el loader necesario si necesitas usarlos.
 
 </base-alert>
 
-### Style Extensions
+### Extension de estilos
 
-You can omit the file extension for CSS/SCSS/Postcss/Less/Stylus/... files listed in the css array in your nuxt config file.
+Puedes omitir la extensión de archivo para archivos CSS/SCSS/Postcss/Less/Stylus/... listados en el array css en tu archivo de configuración nuxt.
 
 ```js{}[nuxt.config.js]
 export default {
@@ -111,21 +111,21 @@ export default {
 
 <base-alert>
 
-If you have two files with the same name eg. `main.scss` and `main.css`, and don't specify an extension in the css array entry, eg. `css: ['~/assets/css/main']`, then only one file will be loaded depending on the order of `styleExtensions`. In this case only the `css` file will be loaded and the `scss` file will be ignored because `css` comes first in the default `styleExtension` array.
+Si tienes dos archivos con el mismo nombre, por ejemplo: `main.scss` y `main.css`, y no especificas una extensión en la entrada array css, ejemplo: `css: ['~/assets/css/main']`, entonces solo se cargará un archivo dependiendo del orden de `styleExtensions`. En este caso solo el archivo `css` sera cargado y el archivo `scss` sera ignorado por que el archivo `css` viene primero en el array predeterminado `styleExtension`.
 
 </base-alert>
 
-Default order: `['css', 'pcss', 'postcss', 'styl', 'stylus', 'scss', 'sass', 'less']`
+Orden predeterminado: `['css', 'pcss', 'postcss', 'styl', 'stylus', 'scss', 'sass', 'less']`
 
 <app-modal>
   <code-sandbox  :src="csb_link_pre-processors"></code-sandbox>
 </app-modal>
 
-## Pre-processors
+## Preprocesadores
 
-Thanks to [Vue Loader](http://vue-loader.vuejs.org/en/configurations/pre-processors.html), you can use any kind of pre-processor for your  `<template>` or `<style>`: use the `lang` attribute.
+Gracias a [Vue Loader](http://vue-loader.vuejs.org/en/configurations/pre-processors.html), puedes usar cualquier tipo de preprocesadores para tu `<template>` o `<style>`: usa el atributo `lang`.
 
-Example of our `pages/index.vue` using [Pug](https://github.com/pugjs/pug) and [Sass](http://sass-lang.com/):
+Ejemplo de nuestro `pages/index.vue` usando [Pug](https://github.com/pugjs/pug) y [Sass](http://sass-lang.com/):
 
 ```html{}[pages/index.vue]
 <template lang="pug"> h1.red Hello {{ name }}! </template>
@@ -137,7 +137,7 @@ Example of our `pages/index.vue` using [Pug](https://github.com/pugjs/pug) an
 </style>
 ```
 
-To use these pre-processors, we need to install their webpack loaders:
+Para usar estos preprocesadores, necesitamos instalar sus webpack loaders:
 
 <code-group>
   <code-block label="Yarn" active>
@@ -160,9 +160,9 @@ npm install --save-dev node-sass sass-loader
 
 ## JSX
 
-Nuxt.js uses [@nuxt/babel-preset-app](https://github.com/nuxt/nuxt.js/tree/dev/packages/babel-preset-app), which is based on the official [@vue/babel-preset-app](https://github.com/vuejs/vue-cli/tree/dev/packages/%40vue/babel-preset-app) for babel default configuration, so you can use JSX in your components.
+Nuxt.js utiliza [@nuxt/babel-preset-app](https://github.com/nuxt/nuxt.js/tree/dev/packages/babel-preset-app), que está basado en el paquete oficial [@vue/babel-preset-app](https://github.com/vuejs/vue-cli/tree/dev/packages/%40vue/babel-preset-app) para la configuración predeterminada de babel, por lo que puedes usar JSX en tus componentes.
 
-You can also use JSX in the `render` method of your components:
+También puedes usar JSX en el método `render` de tus componentes:
 
 ```js
 <script>
@@ -177,55 +177,55 @@ export default {
 </script>
 ```
 
-Aliasing `createElement` to `h` is a common convention you’ll see in the Vue ecosystem but is actually optional for JSX since it [automatically injects](https://github.com/vuejs/babel-plugin-transform-vue-jsx#h-auto-injection) `const h = this.$createElement` in any method and getter (not functions or arrow functions) declared in ES2015 syntax that has JSX so you can drop the (h) parameter.
+Definir un alias `createElement` a `h` es una convención común que verás en el ecosistema Vue pero en realidad para JSX ya que [automáticamente inyecta](https://github.com/vuejs/babel-plugin-transform-vue-jsx#h-auto-injection) `const h = this.$createElement` en cualquier método y getter (no funciones o funciones arrow) declarado en la sintaxis ES2015 que tiene JSX, por lo tanto puedes borrar el parámetro (h).
 
-You can learn more about how to use it in the [JSX section](https://vuejs.org/v2/guide/render-function.html#JSX) of the Vue.js documentation.
+Puedes aprender más acerca de como usarlo en la [sección JSX](https://vuejs.org/v2/guide/render-function.html#JSX) de la documentación de Vue.js.
 
-## Ignoring files
+## Ignorando archivos
 
 ### .nuxtignore
 
-You can use a `.nuxtignore` file to let Nuxt.js ignore  `layout`, `page`, `store` and `middleware`  files in your project’s root directory (`rootDir`) during the build phase. The `.nuxtignore` file is subject to the same specification as  `.gitignore`  and  `.eslintignore` files, in which each line is a glob pattern indicating which files should be ignored.
+Puedes usar un archivo `.nuxtignore` para permitir que Nuxt.js ignore los archivos `layout`, `page`, `store` y `middleware` en el directorio raíz del proyecto (`rootDir`) durante la fase de compilación. El archivo `.nuxtignore` esta sujeto a la misma especificación que los archivos `.gitignore`  y  `.eslintignore`, en los que cada línea es un patrón global indicando qué archivos deben ignorarse.
 
 ```markdown{}[.nuxtignore]
 # ignore layout foo.vue
 
 layouts/foo.vue
 
-# ignore layout files whose name ends with -ignore.vue
+# ignorar archivos layout cuyo nombre termina con -ignore.vue
 
 layouts/\*-ignore.vue
 
-# ignore page bar.vue
+# ignorar pagina bar.vue
 
 pages/bar.vue
 
-# ignore page inside ignore folder
+# ignorar página dentro de carpeta ignore
 
 pages/ignore/\*.vue
 
-# ignore store baz.js
+# ignorar store baz.js
 
 store/baz.js
 
-# ignore store files match _.test._
+# ignorar archivos store que coincidan con _.test._
 
 store/ignore/_.test._
 
-# ignore middleware files under foo folder except foo/bar.js
+# ignorar archivos middleware debajo de la carpeta foo excepto foo/bar.js
 
 middleware/foo/\*.js !middleware/foo/bar.js
 ```
 
-### The ignorePrefix Property
+### La propiedad ignorePrefix
 
-Any file in pages/, layout/, middleware/ or store/ will be ignored during the build if its filename starts with the prefix specified by ignorePrefix.
+Cualquier archivo en pages/, layout/, middleware/ o store/ sera ignorado durante la compilación si su nombre de archivo empieza con el prefijo especificado por ignorePrefix.
 
-By default all files which start with `-` will be ignored, such as `store/-foo.js` and `pages/-bar.vue`. This allows for co-locating tests, utilities, and components with their callers without themselves being converted into routes, stores, etc.
+Por defecto todos los archivos que empiezan con `-` serán ignorados, como `store/-foo.js` y `pages/-bar.vue`. Esto permite la co-localización de textos, utilidades y componentes con sus callers sin convertirse en routes, stores, etc.
 
-### The ignore Property
+### La propiedad ignore
 
-More customizable than ignorePrefix: all files matching glob patterns specified inside ignore will be ignored in building.
+Mas personalizable que ignorePrefix: todos los archivos que coincidan con los patrones globales especificados dentro de ignore serán omitidos durante el proceso de compilación.
 
 ```js{}[nuxt.config.js]
 export default {
@@ -235,7 +235,7 @@ export default {
 
 ### ignoreOptions
 
-`nuxtignore` is using `node-ignore` under the hood, `ignoreOptions` can be configured as `options` of `node-ignore`.
+`nuxtignore` esta usando por debajo `node-ignore`, `ignoreOptions` puede ser configurado como `options` de `node-ignore`.
 
 ```js{}[nuxt.config.js]
 export default {
@@ -247,7 +247,7 @@ export default {
 
 ## Extend webpack config
 
-You can extend nuxt's webpack configuration via the `extend` option in your `nuxt.config.js`. The `extend` option of the `build` property is a method that accepts two arguments. The first argument is the webpack `config` object exported from nuxt's webpack config. The second parameter is a context object with the following boolean properties: `{ isDev, isClient, isServer, loaders }`.
+Puedes extender la configuración de webpack a través de la opción `extend` en tu archivo `nuxt.config.js`. La opción `extend` de la propiedad `build` es un método que acepta dos argumentos. El primer argumento es el objeto `config` de webpack exportado por la configuración webpack de nuxt. El segundo parámetro un objeto de contexto con las siguientes propiedades booleanas: `{ isDev, isClient, isServer, loaders }`.
 
 ```js{}[nuxt.config.js]
 export default {
@@ -267,11 +267,11 @@ export default {
 }
 ```
 
-The `extend` method gets called twice - Once for the client bundle and the other for the server bundle.
+El método `extend` es llamado dos veces - Una vez para el bundle del cliente y otra para el bundle del servidor.
 
-### Customize chunks configuration
+### Personalizar la configuración de chunks
 
-You may want to tweak the [optimization configuration](/guides/configuration-glossary/configuration-build#optimization) a bit, avoiding a rewrite of the default object.
+Es posible que quieras ajustar un poco la [configuración de optimización](/guides/configuration-glossary/configuration-build#optimization), evitando una sobreescritura del objeto por defecto.
 
 ```js{}[nuxt.config.js]
 export default {
@@ -285,9 +285,9 @@ export default {
 }
 ```
 
-### Execute ESLint on every webpack build in dev environment
+### Ejecuta ESLint en cada compilación de webpack en el ambiente dev
 
-In order to be aware of code style errors, you may want to run [ESLint](https://github.com/webpack-contrib/eslint-loader) on every build in the dev environment.
+Para tener en cuenta los errores de estilo de códigos, es posible que quieras ejecutar [ESLint](https://github.com/webpack-contrib/eslint-loader) en cada compilación en el ambiente dev.
 
 ```js{}[nuxt.config.js]
 export default {
@@ -306,11 +306,11 @@ export default {
 }
 ```
 
-## Edit host and port
+## Editar host y port
 
-By default, the Nuxt.js development server host is `localhost`  which is only accessible from within the host machine. In order to view your app on another device you need to modify the host. You can modify the host in your nuxt.config.js file.
+Por defecto, el host del servidor de desarrollo es `localhost` el cual es solo accesible desde dentro del equipo host. Para ver la aplicación en otro dispositivo, debes modificar el host. Puedes modificarlo en tu archivo nuxt.config.js.
 
-Host `'0.0.0.0'`  is designated to tell Nuxt.js to resolve a host address, which is accessible to connections *outside* of the host machine (e.g. LAN). If the host is assigned the string value of `'0'` (not 0, which is falsy), or `'0.0.0.0'` your local IP address will be assigned to your Nuxt.js application.
+Host `'0.0.0.0'`  es designado para indicar a Nuxt.js que resuelva una dirección host, que es accesible a conexiones *fuera* de el equipo host (por ejemplo: LAN). Si el host es asignado con la cadena de valor `'0'` (no 0, que es falso), o `'0.0.0.0'` tu dirección de IP sera asignada a tu aplicación Nuxt.js.
 
 ```js{}[nuxt.config.js]
 export default {
@@ -320,7 +320,7 @@ export default {
 }
 ```
 
-You can also change the port number from the default port of 3000.
+Tambien puedes cambiar el número de puerto del puerto predeterminado 3000.
 
 ```js{}[nuxt.config.js]
 export default {
@@ -332,17 +332,17 @@ export default {
 
 <base-alert type="info">
 
-If the port is assigned the string value of `'0'` (not 0, which is falsy) a random port number will be assigned to your Nuxt.js application.
+Si el puerto es asignado con la cadena con valor `'0'` (no 0, que es falso) un número de puerto aleatorio será asignado a tu aplicación Nuxt.js.
 
 </base-alert>
 
-Although you can modify this in the nuxt.config.js file it is not advised to as it might cause you issues when hosting your site. It is much better to modify the host and port direct in the dev command.
+Aunque puedes modificar esto en el archivo nuxt.config.js, no se recomienda, ya que podría causar problemas al alojar tu sitio. Es mucho mejor modificar el host y el puerto directamente en la línea de comando.
 
 ```bash
 HOST=0 PORT=8000 npm run dev
 ```
 
-or create a script in your package.json
+o crear un script en tu package.json
 
 ```json
 "scripts": {
@@ -354,9 +354,9 @@ or create a script in your package.json
   <code-sandbox  :src="csb_link_host_port"></code-sandbox>
 </app-modal>
 
-## Asynchronous Configuration
+## Configuración asincrónica
 
-Although it is better to use the normal configuration `export default {}` you can have an async configuration by exporting an async function that return the config object.
+Aunque es mejor utilizar la configuración normal `export default {}` puedes tener una configuración asincrónica exportando una function async que retorna el objeto config.
 
 ```js{}[nuxt.config.js]
 import axios from 'axios'
@@ -374,15 +374,15 @@ export default async () => {
 
 <base-alert>
 
-The axios-module cannot be used in `nuxt.config.js`. You will need to import axios and configure it again.
+El módulo axios no puede ser usado en `nuxt.config.js`. Necesitarás importar axios y configurarlo nuevamente.
 
 </base-alert>
 
-## Further configuration
+## Configuración adicional
 
 <base-alert type="next">
 
-The `nuxt.config.js` has way more customization and configuration options! Check out all its keys in the [configuration glossary](/guides/configuration-glossary/configuration-build).
+El archivo `nuxt.config.js` tiene muchas más opciones de personalización y configuración! Echa un vistazo a todas sus keys en el [glosario de configuración](/guides/configuration-glossary/configuration-build).
 
 </base-alert>
 

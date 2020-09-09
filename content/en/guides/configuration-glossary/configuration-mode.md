@@ -8,7 +8,7 @@ position: 17
 
 <base-alert type="warning">
 
-deprecated. Please use `ssr: false` instead of `mode: spa`
+Deprecated: please use `ssr: false` instead of `mode: spa`
 
 </base-alert>
 

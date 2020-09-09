@@ -21,30 +21,34 @@
         </div>
 
         <div>
+          <!-- Links -->
           <h3 :class="sectionClasses">Links</h3>
-          <this-docs-button
+          <AppButton
             v-if="integration.github"
             :href="integration.github"
+            class="sm:mr-4 py-2 px-2 text-base"
           >
+            <GithubIcon slot="icon" class="inline-block h-6 -mt-1 mr-1" />
             Github
-          </this-docs-button>
-          <this-docs-button
+          </AppButton>
+          <AppButton
             v-if="
               integration.website && integration.website !== integration.github
             "
             :href="integration.website"
+            class="sm:mr-4 py-2 px-2 text-base"
           >
+            <BooksIcon slot="icon" class="inline-block h-6 -mt-1 mr-1" />
             Documentation
-          </this-docs-button>
-          <!-- TODO add learn more link to repo and then change here -->
-          <this-docs-button
-            v-if="
-              integration.website && integration.website !== integration.github
-            "
-            :href="integration.website"
+          </AppButton>
+          <AppButton
+            v-if="integration.externalLink"
+            :href="integration.externalLink"
+            class="sm:mr-4 py-2 px-2 text-base"
           >
+            <ExternalLinkIcon slot="icon" class="inline-block h-6 -mt-1 mr-1" />
             Learn More
-          </this-docs-button>
+          </AppButton>
         </div>
       </div>
 
@@ -143,8 +147,17 @@
 </template>
 
 <script>
+import GithubIcon from '~/assets/icons/github.svg?inline'
+import BooksIcon from '~/assets/icons/books.svg?inline'
+import ExternalLinkIcon from '~/assets/icons/external-link.svg?inline'
+
 export default {
   transition: 'resources',
+  components: {
+    GithubIcon,
+    BooksIcon,
+    ExternalLinkIcon
+  },
 
   async asyncData({ params, $content }) {
     const integration = await $content('integrations', params.name).fetch()

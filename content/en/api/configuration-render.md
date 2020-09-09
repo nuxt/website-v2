@@ -180,11 +180,15 @@ See [serve-static](https://www.npmjs.com/package/serve-static) docs for possible
 
 > Use this to configure Content-Security-Policy to load external resources
 
-Note that these CSP settings are only effective when using Nuxt server to serve your SSR application.
+Note that these CSP settings are only effective when using Nuxt server to serve your SSR application. The Policies defined under `csp.policies` are added to the response `Content-Security-Policy` HTTP header.
 
-Note that CSP hashes will not be added if `script-src` policy contains `'unsafe-inline'`. This is due to browser ignoring `'unsafe-inline'` if hashes are present. Set option `unsafeInlineCompatibility` to `true` if you want both hashes and `'unsafe-inline'` for CSPv1 compatibility.
+In order to add [`<meta http-equiv="Content-Security-Policy"/>`](https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP) to the `<head>` you need to set `csp.addMeta` to `true`. Please note that this feature is independent of the `csp.policies` configuration:
+- it only adds a `script-src` type policy, and
+- the `script-src` policy only contains the hashes of the inline `<script>` tags.
 
-In order to add [`<meta http-equiv="Content-Security-Policy"/>`](https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP) with all the CSP policies you need to set `csp.addMeta` to `true`. Please note that this feature is independent from the `csp.policies` configuration, and only adds a `script-src` type policy, and only includes the calculated hashes of the generated inline `<script>` tags. The `csp.policies` are **only** added to the response HTTP headers when served using the Nuxt server.
+When `csp.addMeta` is set to `true`, the complete set of the defined policies are still added to the HTTP response header.
+
+Note that CSP hashes will not be added as `<meta>` if `script-src` policy contains `'unsafe-inline'`. This is due to browser ignoring `'unsafe-inline'` if hashes are present. Set option `unsafeInlineCompatibility` to `true` if you want both hashes and `'unsafe-inline'` for CSPv1 compatibility. In that case the `<meta>` tag will still only contain the hashes of the inline `<script>` tags, and the policies defined under `csp.policies` will be used in the `Content-Security-Policy` HTTP response header.
 
 
 Example (`nuxt.config.js`)

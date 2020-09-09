@@ -7,7 +7,7 @@ category: features
 
 ## Static Hosting
 
-With static hosting, hosting where no server is needed or when not using serverMiddleware, you can choose to either host a single page application or a multiple page application, also known as static sties. With static hosting no server is needed, meaning your SPA or static site can be hosted on any serverless hosting or CDN for free.
+With static hosting, hosting where no server is needed or when not using serverMiddleware, you can choose to either host a single page application or a multiple page application, also known as static sites. With static hosting no server is needed, meaning your SPA or static site can be hosted on any serverless hosting or CDN for free.
 
 ### SPA
 

@@ -1,5 +1,5 @@
 ---
-title: Tag Meta and SEO
+title: Tag Meta dan SEO
 description: Nuxt.js memungkinkan Anda untuk mendefinisikan semua tag `<meta>` bawaan untuk aplikasi Anda di dalam berkas nuxt.config.js dengan menggunakan properti `head`. Ini sangat berguna untuk menambahkan tag `title` dan `description` bawaan untuk tujuan SEO atau untuk menyetel viewport atau untuk menambahkan favicon.
 position: 6
 category: features
@@ -49,7 +49,7 @@ Nuxt.js memungkinkan Anda untuk mendefinisikan semua _tag_ `<meta>` bawaan untuk
 ```js{}[nuxt.config.js]
 export default {
   head: {
-    title: 'Judul website saya',
+    title: 'Judul situs web saya',
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
@@ -178,7 +178,7 @@ export default {
 
 ```html{}[pages/index.vue]
 <template>
-  <h1>About page with jQuery and Roboto font</h1>
+  <h1>Halaman tentang kami menggunakan jQuery dan fon Roboto</h1>
 </template>
 
 <script>

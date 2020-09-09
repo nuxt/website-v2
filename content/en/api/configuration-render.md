@@ -180,6 +180,8 @@ See [serve-static](https://www.npmjs.com/package/serve-static) docs for possible
 
 > Use this to configure Content-Security-Policy to load external resources
 
+Note that these CSP settings are only effective when using Nuxt server to serve your SSR application.
+
 Note that CSP hashes will not be added if `script-src` policy contains `'unsafe-inline'`. This is due to browser ignoring `'unsafe-inline'` if hashes are present. Set option `unsafeInlineCompatibility` to `true` if you want both hashes and `'unsafe-inline'` for CSPv1 compatibility.
 
 In order to add [`<meta http-equiv="Content-Security-Policy"/>`](https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP) with all the CSP policies you need to set `csp.addMeta` to `true`. Please note that this feature is independent from the `csp.policies` configuration, and only adds a `script-src` type policy, and only includes the calculated hashes of the generated inline `<script>` tags. The `csp.policies` are **only** added to the response HTTP headers when served using the Nuxt server.

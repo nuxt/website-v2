@@ -23,9 +23,9 @@ Crear directorios con estos nombres habilita funcionalidades en tu proyecto Nuxt
 
 </base-alert>
 
-## Directories
+## Directorios
 
-### The pages directory
+### El directorio pages
 
 El directorio `pages` contiene las vistas y las rutas de tu aplicación. Como ya aprendiste en el capítulo anterior, Nuxt.js lee todos los archivos `.vue` que se encuentren dentro de este directorio y los usa para crear las rutas de la aplicación.
 
@@ -35,9 +35,9 @@ Aprende más sobre el [directorio pages](/guides/directory-structure/pages)
 
 </base-alert>
 
-### The components directory
+### El directorio components
 
-El directorio `components` es usado para ubicar todos tus componentes de Vue.js, los cuales son importados en las páginas posteriormente.
+El directorio `components` es donde pones todos tus componentes de Vue.js que luego son importados a tus páginas.
 
 Con Nuxt.js, puedes crear tus componentes e importarlos automáticamente dentro de tus archivos .vue sin necesidad de referenciarlos manualmente en la sección script. Nuxt.js los escaneará e importará por ti de forma automática siempre que hayas configurado la propiedad components a true en el archivo de configuración nuxt.config.js.
 
@@ -47,9 +47,9 @@ Aprende más sobre el [directorio components](/guides/directory-structure/compon
 
 </base-alert>
 
-### The assets directory
+### El directorio assets
 
-El directorio `assets` contiene tus recursos tales como estilos, imágenes o fuentes sin compilar.
+El directorio `assets` contiene tus recursos sin compilar, como estilos, imágenes o fuentes.
 
 <base-alert type="next">
 
@@ -57,7 +57,7 @@ Aprende más sobre el [directorio assets](/guides/directory-structure/assets)
 
 </base-alert>
 
-### The static directory
+### El directorio static
 
 El directorio `static` se mapea directamente al servidor raíz y contiene archivos cuyos nombres deben mantenerse (p.ej. `robots.txt`) o probablemente no cambiarán (p.ej. el favicon).
 
@@ -67,27 +67,27 @@ Aprende más sobre el [directorio static](/guides/directory-structure/static)
 
 </base-alert>
 
-### The nuxt.config.js file
+### El archivo nuxt.config.js
 
 El archivo `nuxt.config.js` es el único punto de configuración de Nuxt.js. Si quieres añadir módulos o sobreescribir la configuración por defecto, es aquí donde debes aplicar los cambios.
 
 <base-alert type="next">
 
-Aprende más sobre el [fichero nuxt.config.js](/guides/directory-structure/nuxt-config)
+Aprende más sobre el [archivo nuxt.config.js](/guides/directory-structure/nuxt-config)
 
 </base-alert>
 
-### The package.json file
+### El archivo  package.json
 
-El fichero `package.json` contiene todas las dependencias y scripts de tu aplicación.
+El archivo `package.json` contiene todas las dependencias y scripts de tu aplicación.
 
 <app-modal>
-  <code-sandbox  :src="csb_link"></code-sandbox>
+  <code-sandbox :src="csb_link"></code-sandbox>
 </app-modal>
 
-## More about the project structures
+## Más sobre las estructuras del proyecto
 
-Existen más directorios y archivos de gran ayuda como [content](/guides/directory-structure/content), [layouts](/guides/directory-structure/layouts), [middleware](/guides/directory-structure/middleware), [modules](/guides/directory-structure/modules), [plugins](/guides/directory-structure/plugins) y [store](/guides/directory-structure/store) pero al no ser necesarios para desarrollar pequeñas aplicaciones no los tratamos aquí.
+Existen más directorios y archivos de gran ayuda como [content](/guides/directory-structure/content), [layouts](/guides/directory-structure/layouts), [middleware](/guides/directory-structure/middleware), [modules](/guides/directory-structure/modules), [plugins](/guides/directory-structure/plugins) y [store](/guides/directory-structure/store). Pero al no ser necesarios para desarrollar pequeñas aplicaciones no los tratamos aquí.
 
 <base-alert type="next">
 

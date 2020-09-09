@@ -178,7 +178,7 @@ See [serve-static](https://www.npmjs.com/package/serve-static) docs for possible
 - Type: `Boolean` or `Object`
   - Default: `false`
 
-> Use this to configure to load external resources of Content-Security-Policy
+> Use this to configure Content-Security-Policy to load external resources
 
 Note that CSP hashes will not be added if `script-src` policy contains `'unsafe-inline'`. This is due to browser ignoring `'unsafe-inline'` if hashes are present. Set option `unsafeInlineCompatibility` to `true` if you want both hashes and `'unsafe-inline'` for CSPv1 compatibility.
 

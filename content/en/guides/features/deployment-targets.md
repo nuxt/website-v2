@@ -11,7 +11,7 @@ With static hosting, hosting where no server is needed or when not using serverM
 
 ### SPA
 
-Single page applications are pages that are rendered only on the client side without the need of a server. To deploy a single page application set [ssr to `false`](/guides/features/rendering-modes#spa) and then use the `build` command to build your application.
+Single page applications are pages that are rendered only on the client side without the need of a server. To deploy without server-side-rendering support (single page only) set [ssr to `false`](/guides/features/rendering-modes#spa) and then use the `generate` command to build your application.
 
 ```js{}[nuxt.config.js]
 export default {

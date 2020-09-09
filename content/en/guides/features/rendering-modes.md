@@ -33,7 +33,7 @@ You do not need to add this to your nuxt config in order for universal mode to b
 
 <base-alert type="warning">
 
-deprecated `mode: 'spa'` please use `ssr: false`.
+Deprecated: please use `ssr: false` instead of `mode: spa`
 
 </base-alert>
 

@@ -62,7 +62,9 @@
       <section
         class="text-center italic flex justify-center items-center flex-wrap mb-16"
       >
-        <span class="flex">{{ $t('support.technical.partner.pre') }}</span>
+        <span class="flex">
+          {{ $t('support.technical.partner.pre') }}
+        </span>
         <a
           href="https://otechie.com"
           rel="noopener"
@@ -75,7 +77,9 @@
             class="inline-block h-4 px-2"
           />
         </a>
-        <span class="flex">{{ $t('support.technical.partner.post') }}</span>
+        <span class="flex">
+          {{ $t('support.technical.partner.post') }}
+        </span>
       </section>
       <h2
         class="text-3xl xl:text-4xl text-light-onSurfacePrimary dark:text-dark-onSurfacePrimary font-medium leading-normal mb-6 transition-colors duration-300 ease-linear"
@@ -85,7 +89,9 @@
       <h3
         class="xl:text-lg text-light-onSurfaceSecondary dark:text-dark-onSurfaceSecondary font-medium leading-relaxed mb-6 flex flex-wrap items-center transition-colors duration-300 ease-linear"
       >
-        <span class="flex">{{ $t('support.entreprise.partner.pre') }}</span>
+        <span class="flex">
+          {{ $t('support.entreprise.partner.pre') }}
+        </span>
         <a
           href="https://tidelift.com"
           rel="noopener"

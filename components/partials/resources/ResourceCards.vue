@@ -5,27 +5,24 @@
       :key="`${item.title}-${i}`"
       class="light:bg-light-surface dark:bg-dark-surface rounded p-4 sm:p-8 lg:p-4 light:hover:bg-gray-200 dark:hover:bg-gray-800 cursor-pointer transition-colors duration-300 ease-linear"
     >
-      <NuxtLink
-        :to="`/integrations/${item.name}`"
-      >
+      <NuxtLink :to="`/integrations/${item.name}`">
+        <img v-if="item.logo" :src="item.logo" :alt="item.name" class="pb-2" />
         <img
-          v-if="item.logo"
-          :src="item.logo"
+          v-else-if="item.icon"
+          :src="`https://cdn.jsdelivr.net/gh/nuxt/integrations@master/icons/${item.icon}`"
           :alt="item.name"
           class="pb-2"
         />
-        <p v-else class="pb-2" style="font-size: 2em">
-          🧩
-        </p>
+        <div v-else class="pb-2" style="font-size: 2em">
+          <i>🧩</i>
+        </div>
         <h3 class="pb-2 font-bold">
           {{ item.name }}
         </h3>
         <p class="pb-2">
           {{ item.description }}
         </p>
-      </h3>
-</h1>
-</NuxtLink>
+      </NuxtLink>
     </div>
   </div>
 </template>

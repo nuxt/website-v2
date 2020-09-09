@@ -17,6 +17,15 @@ module.exports = {
     'vue/html-self-closing': 'off',
 
     // Prettier has an indent already set so this conflicts with it
-    'vue/html-indent': 'off'
+    'vue/html-indent': 'off',
+
+    'vue/singleline-html-element-content-newline': [
+      'off',
+      {
+        ignoreWhenNoAttributes: true,
+        ignoreWhenEmpty: true,
+        ignores: ['pre', 'textarea', 'h3', 'span', 'a']
+      }
+    ]
   }
 }

@@ -31,20 +31,24 @@
   </div>
 </template>
 <script>
-
 export default {
   transition: 'resources',
   async asyncData({ $content, params }) {
     const category = params.category || 'all'
-    const query = category === 'all' ? {} : { categories: { $contains: category } }
-    const integrations = await $content('integrations').where(query).only([
-      'name',
-      'title',
-      'logo',
-      'image',
-      'category',
-      'description'
-    ]).fetch()
+    const query =
+      category === 'all' ? {} : { categories: { $contains: category } }
+    const integrations = await $content('integrations')
+      .where(query)
+      .only([
+        'name',
+        'title',
+        'logo',
+        'icon',
+        'image',
+        'category',
+        'description'
+      ])
+      .fetch()
 
     return {
       category,

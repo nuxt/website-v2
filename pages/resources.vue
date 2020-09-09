@@ -24,7 +24,10 @@
         />
       </div>
       <section class="flex flex-wrap -mx-4">
-        <NuxtLink :to="{ name: 'integrations' }" class="block w-full lg:w-1/2 p-4">
+        <NuxtLink
+          :to="{ name: 'integrations' }"
+          class="block w-full lg:w-1/2 p-4"
+        >
           <div
             class="block bg-light-surface dark:bg-dark-surface hover:bg-gray-200 rounded p-8 text-center transition-colors duration-300 ease-linear"
           >

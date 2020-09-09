@@ -1,5 +1,5 @@
 <template>
-  <div class="w-full">
+  <div class="w-full hero">
     <div class="flex justify-between">
       <img
         :src="`/logos/nuxt-icon-${$colorMode.value}.png`"
@@ -76,6 +76,6 @@ export default {
 <style scoped>
 img {
   width: 50px;
-  height: auto;
+  height: 100%;
 }
 </style>

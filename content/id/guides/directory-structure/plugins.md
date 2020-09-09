@@ -198,7 +198,7 @@ module.exports = {
 }
 ```
 
-Anda dapat mengacu pada dokumentasi [_configuration build_](/guides/configuration-glossary/configuration-build#transpile) untuk mengetahui lebih lanjut mengenai opsi-opsi yang ada.
+Anda dapat mengacu pada dokumentasi [configuration build](/guides/configuration-glossary/configuration-build#transpile) untuk mengetahui lebih lanjut mengenai opsi-opsi yang ada.
 
 ## _Client or server side only_ (Hanya _client_ atau sisi _server_)
 
@@ -244,7 +244,7 @@ Nuxt.js menyediakan Anda dengan metode `inject(key, value)`
 untuk melakukan ini secara mudah. _Inject_ diberikan dengan _parameter_ kedua ketika melakukan ekspor pada fungsi tersebut. `$` akan ditambahkan secara otomatis kepada key.
 <base-alert type="info">
 
-Penting untuk diketahui bahwa dalam Vue [_instance lifecycle_](https://vuejs.org/v2/guide/instance.html#Lifecycle-Diagram), hanya  `beforeCreate` dan `created` *hooks* dipanggil secara pada kedua sisi, dari _client-side_ dan _server-side_. _Hooks_ yang lain hanya dipanggil pada _client-side_.
+Penting untuk diketahui bahwa dalam Vue [instance lifecycle](https://vuejs.org/v2/guide/instance.html#Lifecycle-Diagram), hanya  `beforeCreate` dan `created` *hooks* dipanggil secara pada kedua sisi, dari _client-side_ dan _server-side_. _Hooks_ yang lain hanya dipanggil pada _client-side_.
 
 </base-alert>
 
@@ -301,7 +301,7 @@ Jangan menggunakan `Vue.use()`, `Vue.component()`, dan secara global, jangan mem
 
 ## Properti _extendPlugins_
 
-Anda mungkin ingin memperluas _plugins_ atau mengubah urutan _plugins_ yang dihasilkan oleh Nuxt.js. Fungsi ini menerima array dari obyek [_plugin_](/guides/configuration-glossary/configuration-plugins) dan harus membalikan (_return_) plugin dalam bentuk obyek dalam array.
+Anda mungkin ingin memperluas _plugins_ atau mengubah urutan _plugins_ yang dihasilkan oleh Nuxt.js. Fungsi ini menerima array dari obyek [plugin](/guides/configuration-glossary/configuration-plugins) dan harus membalikan (_return_) plugin dalam bentuk obyek dalam array.
 
 Contoh pengubahan urutan _plugins_:
 

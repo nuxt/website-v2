@@ -1,81 +1,81 @@
 ---
 title: store
-description: The `store` directory contains your Vuex Store files. The Vuex Store comes with Nuxt.js out of the box but is disabled by default. Creating an `index.js`  file in this directory enables the store.
+description: Direktori `store` mengandung berkas Vuex Store Anda. Vuex Store sudah termasuk dalam Nuxt.js, tetapi dimatikan secara bawaan. Membuat berkas `index.js` dalam direktori ini akan menyalakan store tersebut.
 position: 13
 category: directory-structure
 csb_link: https://codesandbox.io/embed/github/nuxt-academy/guides-examples/tree/master/04_directory_structure/14_store?fontsize=14&hidenavigation=1&theme=dark
 questions:
-  - question: How do you enable the store?
+  - question: Bagaimana cara Anda menyalakan store?
     answers:
-      - It is enabled by default
-      - create a js file in the store folder
-      - 'add store: true to your nuxt.config.js file'
-    correctAnswer: create an js file in the store folder
-  - question: Every .js file in the store directory is transformed to a
+      - Sudah dinyalakan secara bawaan
+      - membuat berkas js dalam direktori store
+      - 'add store: true dalam berkas nuxt.config.js'
+    correctAnswer: membuat berkas js dalam direktori store
+  - question: Setiap berkas .js dalam direktori store, diubah menjadi
     answers:
       - plugin
       - module
       - function
     correctAnswer: module
-  - question: In the store you should export the state as
+  - question: Di dalam store, Anda harus ekspor state sebagai
     answers:
-      - a function
-      - an object
-      - a string
-    correctAnswer: a function
-  - question: In the store you should export the mutations and actions as
+      - function
+      - object
+      - string
+    correctAnswer: function
+  - question: Di dalam store, Anda harus ekspor mutations dan actions sebagai
     answers:
-      - a function
-      - an object
-      - a string
-    correctAnswer: an object
-  - question: You can add plugins to the store
+      - function
+      - object
+      - string
+    correctAnswer: object
+  - question: Anda dapat menambahkan plugin-plugin ke dalam store
     answers:
       - true
       - false
     correctAnswer: true
-  - question: The fetch method is used to fill the store
+  - question: Metode fetch digunakan untuk mengisi store
     answers:
-      - before rendering the page
-      - while rendering the page
-      - after rendering the page
-    correctAnswer: before rendering the page
-  - question: What can you use when you have some data on the server that you want to give directly to the client side?
+      - sebelum _rendering_ halaman
+      - ketika _rendering_ halaman
+      - sesudah _rendering_ halaman
+    correctAnswer: sebelum _rendering_ halaman
+  - question: Apa yang dapat Anda gunakan ketika Anda mempunyai data pada server yang ingin Anda berikan langsung ke sisi client?
     answers:
       - nuxtServerInit
       - fetch
       - asyncData
     correctAnswer: nuxtServerInit
-  - question: In asynData the context is given to the nuxtServerInit as the
+  - question: Dalam asyncData, context diberikan ke nuxtServerInit sebagai
     answers:
-      - first argument
-      - second argument
-      - third argument
-    correctAnswer: second argument
+      - argumen pertama
+      - argumen kedua
+      - argumen ketiga
+    correctAnswer: argumen kedua
 ---
 
-The `store` directory contains your [Vuex Store](http://vuex.vuejs.org/en/) files. The Vuex Store comes with Nuxt.js out of the box but is disabled by default. Creating an  `index.js`  file in this directory enables the store.
+Direktori `store` mengandung berkas [Vuex Store](http://vuex.vuejs.org/en/) Anda. Vuex Store sudah termasuk dalam Nuxt.js, tetapi dimatikan secara bawaan. Membuat berkas `index.js` dalam direktori ini akan menyalakan store tersebut.
 
 <base-alert>
 
-_This directory cannot be renamed without extra configuration._
+_Direktori ini tidak bisa dinamakan ulang tanpa konfigurasi ekstra._
 
 </base-alert>
 
-Using a store to manage the state is important for every big application. That's why Nuxt.js implements Vuex in its core.
+Menggunakan store untuk mengelola keadaan (_state_) sangat penting untuk setiap aplikasi besar. Itulah mengapa Nuxt.js mengimplementasikan Vuex pada dasarnya.
 
-## Activate the Store
+## Mengaktifkan Store
 
-Nuxt.js will look for the `store` directory, if it exists, it will:
+Nuxt.js akan melihat direktori `store`, jika ada, maka:
 
-1. Import Vuex
-2. Add the `store` option to the root Vue instance.
+1. Impor Vuex
+2. Menambahkan opsi `store` pada dasar Vue _instance_.
 
-## Modules
+## Modul-modul
 
-Every `.js` file inside the `store` directory is transformed as a [namespaced module](http://vuex.vuejs.org/en/modules.html) (`index` being the root module). Your `state` value should always be a `function` to avoid unwanted *shared* state on the server side.
+Setiap berkas `.js` dalam direktori `store`, berubah menjadi [namespaced module](http://vuex.vuejs.org/en/modules.html) (`index` menjadi modul dasar). Nilai `state` Anda harus selalu menjadi `function` untuk menghindari ketidakinginan _shared_ _state_ pada sisi server.
 
-To get started, export the state as a function, and the mutations and actions as objects.
+Untuk permulaan, ekspor state menjadi function, dan mutations dan actions menjadi obyek.
 
 ```js{}[store/index.js]
 export const state = () => ({
@@ -89,7 +89,7 @@ export const mutations = {
 }
 ```
 
-Then, you can have a `store/todos.js` file:
+Lalu, Anda dapat memiliki berkas `store/todos.js`:
 
 ```js{}[store/todos.js]
 export const state = () => ({
@@ -112,7 +112,7 @@ export const mutations = {
 }
 ```
 
-The store will be created as such:
+Store akan dihasilkan menjadi seperti:
 
 ```js
 new Vuex.Store({
@@ -149,7 +149,7 @@ new Vuex.Store({
 })
 ```
 
-And in your `pages/todos.vue`, using the `todos` module:
+Dan pada `pages/todos.vue` Anda, menggunakan modul `todos`:
 
 ```js{}[pages/todos.vue]
 <template>
@@ -190,9 +190,9 @@ export default {
 </style>
 ```
 
-The module method also works for top-level definitions without implementing a sub-directory in the store directory
+Metode modul juga bekerja pada definisi _top-level_ tanpa pengimplementasian sub-direktori pada direktori store
 
-Example for state: you create a file `store/state.js` and add the following
+Contoh state: anda dapat membuat berkas `store/state.js` dan menambahkan sebagai berikut
 
 ```js
 export default () => ({
@@ -200,7 +200,7 @@ export default () => ({
 })
 ```
 
-And the corresponding mutations can be in the file  `store/mutations.js`
+Dan mutations yang sesuai dapat berada pada berkas `store/mutations.js`
 
 ```js{}[store/mutations.js]
 export default {
@@ -210,9 +210,9 @@ export default {
 }
 ```
 
-## Plugins in the Store
+## Plugin dalam Store
 
-You can add additional plugins to the store by putting them into the `store/index.js` file:
+Anda dapat menambahkan plugin tambahan pada store dengan menaruh plugin-plugin tersebut ke dalam berkas `store/index.js`:
 
 ```js{}[store/index.js]
 import myPlugin from 'myPlugin'
@@ -230,13 +230,13 @@ export const mutations = {
 }
 ```
 
-More information about the plugins: [Vuex documentation](https://vuex.vuejs.org/en/plugins.html).
+Informasi lebih lanjut mengenai plugin: [Vuex documentation](https://vuex.vuejs.org/en/plugins.html).
 
-## The nuxtServerInit Action
+## nuxtServerInit Action
 
-If the action `nuxtServerInit` is defined in the store and the mode is `universal`, Nuxt.js will call it with the context (only from the server-side). It's useful when we have some data on the server we want to give directly to the client-side.
+Jika action dari `nuxtServerInit` ditentukan dalam store dan modenya merupakan `universal`, Nuxt.js akan memanggilnya dengan context (hanya dari sisi server). Ini akan menjadi berguna ketika kita mempunyai beberapa data pada server yang ingin kita bagikan langsung ke sisi client.
 
-For example, let's say we have sessions on the server-side and we can access the connected user through `req.session.user`. To give the authenticated user to our store, we update our `store/index.js` to the following:
+Sebagai contoh, jika kita mempunyai beberapa sesi pada sisi server dan kita ingin mengakses user yang terkoneksi melalui `req.session.user`. Untuk memberi user yang sudah terotentikasi ke dalam store kita, kita memperbarui `store/index.js` kita sebagai berikut:
 
 ```js{}[store/index.js]
 actions: {
@@ -250,17 +250,17 @@ actions: {
 
 <base-alert>
 
-Only the primary module (in store/index.js) will receive this action. You'll need to chain your module actions from there.
+Hanya modul utama (dalam store/index.js) yang akan menerima action ini. Anda dibutuhkan untuk menyambungkan modul actions dari sana.
 
 </base-alert>
 
-The [context](/guides/concepts/context-helpers) is given to `nuxtServerInit` as the 2nd argument in the `asyncData` method.
+[Context](/guides/concepts/context-helpers) diberikan kepada `nuxtServerInit` menjadi argumen kedua dalam metode `asyncData`.
 
-If `nuxt generate` is ran, `nuxtServerInit` will be executed for every dynamic route generated.
+Jika `nuxt generate` dijalankan, `nuxtServerInit` akan dieksekusi pada setiap jalur dinamis yang dihasilkan.
 
 <base-alert type="info">
 
-Asynchronous nuxtServerInit actions must return a Promise or leverage async/await to allow the nuxt server to wait on them.
+Action Asynchronous nuxtServerInit harus membalikkan (_return_) Promise atau async/await agar server nuxt diizinkan untuk menunggu mereka.
 
 </base-alert>
 
@@ -272,9 +272,9 @@ actions: {
 }
 ```
 
-## Vuex Strict Mode
+## Vuex Mode Strict
 
-Strict mode is enabled by default on dev mode and turned off in production mode. To disable strict mode in dev, follow the below example in `store/index.js`:
+Mode strict dinyalakan secara bawaan pada mode dev dan dimatikan ketika mode menjadi production. Untuk mematikan mode strict ketika dev, ikuti cara dibawah ini sebagai contoh dalam `store/index.js`:
 
 ```js
 export const strict = false

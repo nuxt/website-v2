@@ -261,7 +261,7 @@ export default {
 
 Sebaliknya, Anda juga dapat secara manual menetapkan `scrollToTop` menjadi `false` pada jalur induk (_parent routes_).
 
-Jika Anda ingin menimpa tingkah pengguliran secara bawaan dari Nuxt.js, silahkan melihat pada [opsi tingkah pengguliran (_scrollBehaviour Option_)](/guides/configuration-glossary/configuration-router#scrollbehavior).
+Jika Anda ingin menimpa tingkah pengguliran secara bawaan dari Nuxt.js, silahkan melihat pada [scrollBehaviour Option](/guides/configuration-glossary/configuration-router#scrollbehavior).
 
 ### _middleware_
 
@@ -315,7 +315,7 @@ export default {
 
 <base-alert type="next">
 
-Lihat lebih lanjut mengenai properti _watch query_ pada bab [Pengambilan data (_Data Fetching_)](/guides/features/data-fetching).
+Lihat lebih lanjut mengenai properti _watch query_ pada bab [Data Fetching](/guides/features/data-fetching).
 
 </base-alert>
 
@@ -331,7 +331,7 @@ Sebagai contoh, `pages/-about.vue` akan diabaikan.
 
 <base-alert type="next">
 
-Lihat [opsi pengabaian (_ignore option_)](/guides/configuration-glossary/configuration-ignore) untuk mempelajari lebih lanjut.
+Lihat [ignore option](/guides/configuration-glossary/configuration-ignore) untuk mempelajari lebih lanjut.
 
 </base-alert>
 
@@ -350,7 +350,7 @@ export default {
 
 <base-alert type="next">
 
-Lihat [_dir option_](/guides/configuration-glossary/configuration-dir) untuk mempelajari lebih lanjut.
+Lihat [dir option](/guides/configuration-glossary/configuration-dir) untuk mempelajari lebih lanjut.
 
 </base-alert>
 

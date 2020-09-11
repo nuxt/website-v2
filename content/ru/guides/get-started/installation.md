@@ -1,5 +1,5 @@
 ---
-title: Installation
+title: Установка
 description: Here, you will find information on setting up and running a Nuxt.js project in 4 steps.
 position: 1
 category: get-started

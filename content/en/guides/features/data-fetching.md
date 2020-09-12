@@ -63,43 +63,42 @@ questions:
     correctAnswer: true
 ---
 
-In Nuxt.js we have 2 ways of getting data from an api. We can use the fetch method or the asyncData method.
+Nuxt.js supports traditional Vue patterns for loading data in your client-side app, such as fetching data in a component's `mounted()` hook. Universal apps, however, need to use Nuxt.js-specific hooks to be able to render data during server-side rendering. This allows your page to render with all of its required data present.
+
+Nuxt has two hooks for asynchronous data loading:
+
+* The `fetch` hook (Nuxt 2.12+). This hook can be placed on any component, and provides shortcuts for rendering loading states (during client-side rendering) and errors.
+
+* The `asyncData` hook. This hook can only be placed on _page_ components. Unlike `fetch`, this hook does not display a loading placeholder during client-side rendering: instead, this hook blocks route navigation until it is resolved, displaying a page error if it fails.
+
+<base-alert>
+
+In versions of Nuxt before 2.12, the `fetch` hook worked much like `asyncData` does today. This functionality is still supported today for backwards-compatibility: if a `context` argument is accepted in your `fetch()`, it will be considered a "legacy" fetch hook. This functionality is deprecated, and should be replaced with either `asyncData(context)` or an [anonymous middleware](/guides/directory-structure/middleware#anonymous-middleware) using `middleware(context)`.
+
+</base-alert>
+
+These hooks can be used with *any data fetching library* you choose. We recommend using [@nuxt/http](https://http.nuxtjs.org/) or [@nuxt/axios](https://axios.nuxtjs.org/) for making requests to HTTP APIs. More information about these libraries, such as guides for configuring authentication headers, can be found in their respective documentation.
 
 ## The fetch hook
 
 <base-alert type="info">
 
-This hook is only available for Nuxt `2.12+`.
+This hook is only available for Nuxt 2.12 and later.
 
 </base-alert>
 
-The Nuxt.js `fetch` hook is called after the component instance is created on the server-side: `this` is available inside it.
+`fetch` is a hook called during server-side rendering after the component instance is created, and on the client when navigating. The fetch hook should return a promise (whether explicitly, or imlpicitly using `async/await`) that will be resolved:
 
-```js
-export default {
-  async fetch() {
-    console.log(this)
-  }
-}
-```
-
-<base-alert>
-
-`fetch(context)` has been deprecated, instead you can use an [anonymous middleware](/guides/directory-structure/middleware#anonymous-middleware) in your page:  `middleware(context)`
-
-</base-alert>
-
-### When to use fetch?
-
-Every time you need to get asynchronous data. `fetch` is called on server-side when rendering the route, and on client-side when navigating.
+* On the server before the initial page is rendered
+* On the client some time after the component is mounted
 
 It exposes `$fetchState` at the component level with the following properties:
 
-- `pending` is a `Boolean`, allows you to display a placeholder when `fetch` is being called *on client-side*.
-- `error` is either `null` or `Error` and allows you to display an error message
+- `pending` is a `Boolean` that allows you to display a placeholder when `fetch` is being called *on client-side*.
+- `error` is either `null` or an `Error` thrown by the fetch hook
 - `timestamp` is a timestamp of the last fetch, useful for [caching with `keep-alive`](#caching)
 
-You also have access to `this.$fetch()`, useful if you want to call the `fetch` hook in your component.
+In addition to fetch being called by Nuxt, you can manually call fetch in your component (to e.g. reload its async data) by calling `this.$fetch()`.
 
 ```html{}[components/NuxtMountains.vue]
 <template>
@@ -235,54 +234,7 @@ The navigation to the same page will not call `fetch` if last `fetch` call w
 
 </base-alert>
 
-The main difference with `fetch` is that you don't have to handle any pending state or error. Nuxt will wait for the `asyncData` hook to be finished before navigating to the next page or display the [error page](/guides/directory-structure/layouts#error-page))
-
-This hook receives [the context](/guides/concepts/context-helpers) as first argument. You can use it to fetch some data and Nuxt.js will automatically merge the returned object with the component data.
-
-```html{}[pages/index.vue]
-<template>
-  <h1>{{ project }}</h1>
-</template>
-
-<script>
-  export default {
-    async asyncData(context) {
-      return {
-        project: 'nuxt'
-      }
-    }
-  }
-</script>
-```
-
-In the upcoming examples, we are using [@nuxt/http](https://http.nuxtjs.org/) which we recommend for fetching data from an API.
-
-First, we need install it:
-
-<code-group>
-  <code-block label="Yarn" active>
-
-```bash
-yarn add @nuxt/http
-```
-
-  </code-block>
-  <code-block label="NPM">
-
-```bash
-npm install @nuxt/http
-```
-
-  </code-block>
-</code-group>
-
-Then, adding it to our `modules` section of `nuxt.config.js`:
-
-```js{}[nuxt.config.js]
-export default {
-  modules: ['@nuxt/http']
-}
-```
+`asyncData` is another hook for universal data fetching. Unlike `fetch`, which requires you to set properties on the component instance (or dispatch Vuex actions) to save your async state, `asyncData` simply merges its return value into your component's local state. Here's an example using the [@nuxt/http](https://http.nuxtjs.org/) library:
 
 ```html{}[pages/posts/_id.vue]
 <template>
@@ -301,6 +253,12 @@ export default {
   }
 </script>
 ```
+
+Unlike `fetch`, the promise returned by the `asyncData` hook is resolved *during route transition*. This means that no "loading placeholder" is visible during client-side transitions (although the [loading bar](https://nuxtjs.org/guides/features/loading/) can be used to indicate a loading state to the user). Nuxt will instead wait for the `asyncData` hook to be finished before navigating to the next page or display the [error page](/guides/directory-structure/layouts#error-page)).
+
+This hook can only be used for page-level components. Unlike `fetch`, `asyncData` cannot access the component instance (`this`). Instead, it receives [the context](/guides/concepts/context-helpers) as its argument. You can use it to fetch some data and Nuxt.js will automatically merge the returned object with the component data.
+
+In the upcoming examples, we are using [@nuxt/http](https://http.nuxtjs.org/) which we recommend for fetching data from an API.
 
 ### Listening to query changes
 

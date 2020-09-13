@@ -1,6 +1,6 @@
 ---
 title: Componentes de Nuxt
-description: Nuxt.js posee una serie de componentes importantes ya integrados que te serán de utilidad para construir tu aplicación. 
+description: Nuxt.js posee una serie de componentes importantes integrados que resultarán de mucha utilidad para construir tu aplicación. 
 position: 9
 category: features
 csb_link_nuxt_link: https://codesandbox.io/embed/github/nuxt-academy/guides-examples/tree/master/03_features/09_components_nuxt-link?fontsize=14&hidenavigation=1&theme=dark
@@ -94,7 +94,7 @@ El componente `<Nuxt>` se utiliza para desplegar los componentes de tu página. 
 
 <base-alert>
 
-The `<Nuxt>` component can only be used inside [layouts](/guides/concepts/views#layouts).
+El componente `<Nuxt>` solamente se puede utilizar dentro de [layouts](/guides/concepts/views#layouts).
 
 </base-alert>
 
@@ -215,7 +215,7 @@ Al igual que cualquier componente normal de Vue, los componentes `<NuxtChild>` t
 </template>
 ```
 
-Si deseas ver un ejemplo, consulta aquí: [nested-routes ejemplo](https://nuxtjs.org/examples/nested-routes).
+Si deseas ver un ejemplo, consulta aquí: [ejemplo nested-routes](https://nuxtjs.org/examples/nested-routes).
 
 <app-modal>
   <code-sandbox  :src="csb_link_nuxt"></code-sandbox>
@@ -265,7 +265,7 @@ Nuxt.js incluye smart prefetching de forma automática. Esto significa que detec
 
 ### Desactivar el prefetching de hipervínculos específicos
 
-Sin embargo, existirán situaciones en las cuales querrás desactivar el prefetching de algunos hipervínculos si tu página tiene mucho JavaScript, si tienes muchas páginas diferentes en las cuales se realizaría el prefetching o si tienes que cargar múltiples scripts de terceros. Para desactivar el prefetching en un hipervínculo en particular puedes utilizar la prop `no-prefetch`. A partir de Nuxt.js v2.10.0, puedes fijar la prop `prefetch` en `false`
+Sin embargo, en ciertas circunstancias es probable que desees desactivar el prefetching de algunos hipervínculos, si tu página tiene mucho JavaScript, si tienes muchas páginas diferentes en las cuales se realizaría el prefetching o si tienes que cargar múltiples scripts de terceros. Para desactivar el prefetching en un hipervínculo en particular puedes utilizar la prop `no-prefetch`. A partir de Nuxt.js v2.10.0, puedes fijar la prop `prefetch` en `false`
 
 ```html
 <NuxtLink to="/about" no-prefetch>Página About sin prefetching</NuxtLink>
@@ -292,7 +292,7 @@ A partir de Nuxt.js v2.10.0, si has fijado `prefetchLinks` en `false` pero d
 
 ## linkActiveClass
 
-The `linkActiveClass` works the same as the `vue-router` class for active links. If we want to show which links are active all you have to do is create some css for the class `nuxt-link-active` .
+`linkActiveClass` funciona igual que la clase `vue-router` para vínculos activos. Si deseas mostrar cuáles hipervínculos están activos, lo único que tienes que hacer es crear algo de css para la clase `nuxt-link-active` .
 
 ```css
 .nuxt-link-active {
@@ -302,11 +302,11 @@ The `linkActiveClass` works the same as the `vue-router` class for active links.
 
 <base-alert>
 
-This css can be added to the navigation component or for a specific page or layout or in your main.css file.
+Este css se puede agregar al componente de navegación o a una página o layout en particular o a tu archivo main.css .
 
 </base-alert>
 
-If you want to you can also configure the class name to be something else. You con do this by modifying the `linkActiveClass` in the router property in your `nuxt.config.js` file.
+Si deseas, también puedes configurar para que el nombre de la clase sea distinto. Puedes hacerlo modificando la `linkActiveClass` en la propiedad router de tu archivo `nuxt.config.js`.
 
 ```js
 export default {
@@ -318,13 +318,13 @@ export default {
 
 <base-alert type="info">
 
-This option is given directly to the `vue-router` linkActiveClass. See the [vue-router docs](https://router.vuejs.org/api/#active-class) for more info.
+Esta opción se le da directamente a la linkActiveClass de `vue-router` . Consulta [vue-router docs](https://router.vuejs.org/api/#active-class) para obtener mayor información al respecto.
 
 </base-alert>
 
 ## linkExactActiveClass
 
-The `linkExactActiveClass` works the same as the `vue-router` class for exact active links. If we want to show which links are active with an exact match all you have to do is create some css for the class `nuxt-link-exact-active` .
+`linkExactActiveClass` funciona igual que la clase `vue-router` en hipervínculos activos exactos. Si deseamos mostrar de forma precisa los hipervínculos que se encuentran activos, lo único que debes hacer es agregar algo de css a la clase `nuxt-link-exact-active` .
 
 ```css
 .nuxt-link-exact-active {
@@ -334,11 +334,11 @@ The `linkExactActiveClass` works the same as the `vue-router` class for exact ac
 
 <base-alert type="info">
 
-This css can be added to the navigation component or for a specific page or layout or in your main.css file.
+Puedes agregar este código en css al componente de navegación, a alguna página o layout en particular, o a tu archivo main.css .
 
 </base-alert>
 
-If you want to you can also configure the class name to be something else. You con do this by modifying the `linkActiveClass` in the router property in your `nuxt.config.js` file.
+Si lo deseas, también puedes colocar un nombre de clase distinto. Puedes lograrlo modificando la `linkActiveClass` en la propiedad router de tu archivo `nuxt.config.js`.
 
 ```js{}[nuxt.config.js]
 export default {
@@ -350,13 +350,12 @@ export default {
 
 <base-alert type="info">
 
-This option is given directly to the `vue-router` linkExactActiveClass. See the [vue-router](https://router.vuejs.org/api/#active-class) [docs](https://router.vuejs.org/api/#exact-active-class) for more info
-
+Esta opción se le da directamente a la linkExactActiveClass de `vue-router`. Consulta [vue-router](https://router.vuejs.org/api/#active-class) [docs](https://router.vuejs.org/api/#exact-active-class) para obtener mayor información al respecto
 </base-alert>
 
 ## linkPrefetchedClass
 
-The linkPrefetchedClass will allow you to add styles for all links that have been prefetched. This is great for testing which links are being prefetched after modifying the default behaviour. The linkPrefetchedClass is disabled by default. If you want to enable it you need to add it to the router property in your `nuxt-config.js` file.
+linkPrefetchedClass permite añadir estilos a todos los hipervínculos a que se les haya realizado prefetching. Esto resulta fabuloso para probar a cuáles hipervínculos se les ha realizado prefetching luego de haber modificado su comportamiento por defecto. Por defecto linkPrefetchedClass viene desactivada. Si deseas activarla necesitas agregarla a la propiedad router de tu archivo `nuxt-config.js`.
 
 ```js{}[nuxt.config.js]
 export default {
@@ -366,7 +365,7 @@ export default {
 }
 ```
 
-Then you can add the styles for that class.
+Y luego puedes agregar los estilos para esa clase.
 
 ```css
 .nuxt-link-prefetched {
@@ -376,7 +375,7 @@ Then you can add the styles for that class.
 
 <base-alert type="info">
 
-In this example we have used the class `nuxt-link-prefetched` but you can name it anything you like
+En este ejemplo hemos usado `nuxt-link-prefetched` como nombre de la clase, pero puedes utilizar cualquier nombre que te plazca.
 
 </base-alert>
 
@@ -384,33 +383,33 @@ In this example we have used the class `nuxt-link-prefetched` but you can name i
   <code-sandbox  :src="csb_link_nuxt_link"></code-sandbox>
 </app-modal>
 
-## The client-only Component
+## El componente client-only
 
-This component is used to purposely render a component only on client-side. To import a component only on the client, register the component in a client-side only plugin.
+Este componente se usa para desplegar un componente del lado del cliente únicamente. Para importar un componente solamente del lado del cliente, registra el componente en un plugin que funcione únicamente en el cliente.
 
 ```html{}[pages/example.vue]
 <template>
   <div>
     <sidebar />
     <client-only placeholder="Loading...">
-      <!-- this component will only be rendered on client-side -->
+      <!-- este componente se va a desplegar solamente en el cliente -->
       <comments />
     </client-only>
   </div>
 </template>
 ```
 
-Use a slot as placeholder until `<client-only />` is mounted on client-side.
+Deje un espacio reservado (placeholder) hasta que `<client-only />` quede montado en el cliente.
 
 ```html{}[pages/example.vue]
 <template>
   <div>
     <sidebar />
     <client-only>
-      <!-- this component will only be rendered on client-side -->
+      <!-- este componente se va a desplegar solamente en el cliente -->
       <comments />
 
-      <!-- loading indicator, rendered on server-side -->
+      <!-- indicador de carga, se despliega en el servidor -->
       <comments-placeholder slot="placeholder" />
     </client-only>
   </div>
@@ -419,7 +418,7 @@ Use a slot as placeholder until `<client-only />` is mounted on client-side.
 
 <base-alert>
 
-If you are using a version of Nuxt < v2.9.0, use `<no-ssr>` instead of `<client-only>`
+Si estás usando una versión de Nuxt < v2.9.0, utiliza `<no-ssr>` en lugar de `<client-only>`
 
 </base-alert>
 

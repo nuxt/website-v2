@@ -1,8 +1,8 @@
 ---
-title: Componentes de Nuxt
-description: Nuxt.js posee una serie de componentes importantes integrados que resultarán de mucha utilidad para construir tu aplicación. 
-position: 9
-category: features
+título: Componentes de Nuxt
+descripción: Nuxt.js posee una serie de componentes importantes integrados que resultarán de mucha utilidad para construir tu aplicación. 
+posición: 9
+categoría: features
 csb_link_nuxt_link: https://codesandbox.io/embed/github/nuxt-academy/guides-examples/tree/master/03_features/09_components_nuxt-link?fontsize=14&hidenavigation=1&theme=dark
 csb_link_nuxt: https://codesandbox.io/embed/github/nuxt-academy/guides-examples/tree/master/03_features/09_components_nuxt?fontsize=14&hidenavigation=1&theme=dark
 questions:
@@ -265,7 +265,7 @@ Nuxt.js incluye smart prefetching de forma automática. Esto significa que detec
 
 ### Desactivar el prefetching de hipervínculos específicos
 
-Sin embargo, en ciertas circunstancias es probable que desees desactivar el prefetching de algunos hipervínculos, si tu página tiene mucho JavaScript, si tienes muchas páginas diferentes en las cuales se realizaría el prefetching o si tienes que cargar múltiples scripts de terceros. Para desactivar el prefetching en un hipervínculo en particular puedes utilizar la prop `no-prefetch`. A partir de Nuxt.js v2.10.0, puedes fijar la prop `prefetch` en `false`
+Sin embargo, en ciertas circunstancias es probable que desees desactivar el prefetching de algunos hipervínculos, por ejemplo, si tu página tiene mucho JavaScript, si tienes muchas páginas diferentes en las cuales se realizaría el prefetching o si tienes que cargar múltiples scripts de terceros. Para desactivar el prefetching en un hipervínculo en particular puedes utilizar la prop `no-prefetch`. A partir de Nuxt.js v2.10.0, puedes fijar la prop `prefetch` en `false`
 
 ```html
 <NuxtLink to="/about" no-prefetch>Página About sin prefetching</NuxtLink>
@@ -284,7 +284,7 @@ export default {
 }
 ```
 
-A partir de Nuxt.js v2.10.0, si has fijado `prefetchLinks` en `false` pero deseas hacer prefetching a un link en particular, puedes utilizar la prop `prefetch`.
+A partir de Nuxt.js v2.10.0, si has fijado el valor de `prefetchLinks` en `false` (falso) pero deseas hacer prefetching a un link en particular, puedes utilizar la prop `prefetch`.
 
 ```html
 <NuxtLink to="/about" prefetch>Página About con prefetching</NuxtLink>
@@ -302,7 +302,7 @@ A partir de Nuxt.js v2.10.0, si has fijado `prefetchLinks` en `false` pero d
 
 <base-alert>
 
-Este css se puede agregar al componente de navegación o a una página o layout en particular o a tu archivo main.css .
+Este código en css se puede agregar ya sea al componente de navegación, a una página o layout en particular, o a tu archivo main.css .
 
 </base-alert>
 
@@ -318,7 +318,7 @@ export default {
 
 <base-alert type="info">
 
-Esta opción se le da directamente a la linkActiveClass de `vue-router` . Consulta [vue-router docs](https://router.vuejs.org/api/#active-class) para obtener mayor información al respecto.
+Esta opción se le da directamente a la linkActiveClass de `vue-router` . Consulta en [docs vue-router](https://router.vuejs.org/api/#active-class) para obtener mayor información al respecto.
 
 </base-alert>
 
@@ -375,7 +375,7 @@ Y luego puedes agregar los estilos para esa clase.
 
 <base-alert type="info">
 
-En este ejemplo hemos usado `nuxt-link-prefetched` como nombre de la clase, pero puedes utilizar cualquier nombre que te plazca.
+En este ejemplo hemos usado `nuxt-link-prefetched` como nombre de la clase, pero puedes utilizar cualquier nombre de tu preferencia.
 
 </base-alert>
 

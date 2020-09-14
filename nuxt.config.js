@@ -109,7 +109,10 @@ export default {
       }
     },
     'content:ready'($content) {
-      $content.database.addItems = (function(items, { key = 'name', prefix, extension = '.json' }) {
+      $content.database.addItems = function (
+        items,
+        { key = 'name', prefix, extension = '.json' }
+      ) {
         for (const item of items) {
           if (!item[key]) {
             continue
@@ -129,7 +132,7 @@ export default {
         }
         // Support listing & searching for $content('/prefix')
         this.dirs.push('/integrations')
-      }).bind($content.database)
+      }.bind($content.database)
 
       $content.database.addItems(require('@nuxt/integrations'), {
         prefix: '/integrations'
@@ -163,11 +166,7 @@ export default {
   loading: { color: '#41B883' },
   generate: {
     fallback: false,
-    routes: [
-      '/',
-      '404',
-      '/integrations/cat/all'
-    ]
+    routes: ['/', '404']
   },
   i18n: {
     strategy: 'no_prefix',

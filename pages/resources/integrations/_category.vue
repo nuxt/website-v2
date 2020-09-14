@@ -1,7 +1,6 @@
 <template>
   <div class="shadow-nuxt">
     <div class="container mx-auto px-4 lg:flex pb-12">
-      <TheMobileAsideNavResources :categories="categories" />
       <TheAsideNavResources :categories="categories" class="hidden lg:block" />
       <div
         class="min-h-screen w-full lg:static lg:max-h-full lg:overflow-visible lg:w-3/4"
@@ -11,8 +10,15 @@
             class="min-h-screen w-full lg:static lg:max-h-full lg:overflow-visible"
           >
             <h2
-              class="text-3xl xl:text-4xl text-light-onSurfacePrimary dark:text-dark-onSurfacePrimary font-light leading-normal mb-6 pt-4"
+              class="text-2xl xl:text-4xl text-light-onSurfacePrimary dark:text-dark-onSurfacePrimary font-light leading-normal mb-6 pt-4"
             >
+              <nuxt-link
+to="/resources/integrations"
+class="lg:hidden"
+>
+Integrations
+</nuxt-link>
+              <span class="lg:hidden"> / </span>
               {{ $integrations.formatCategory($route.params.category) }}
               <div
                 class="float-right text-lg font-semibold bg-nuxt-lightgreen rounded-full py-1 px-4 mt-2 xl:mt-4"

@@ -74,7 +74,7 @@
           <NuxtLink
             v-for="category in integration.categories"
             :key="category"
-            :to="`/integrations/cat/${category}`"
+            :to="`/integrations/${category}`"
             class="text-sm bg-gray-600 text-white py-1 mr-1 px-1 rounded align-middle mb-1 inline-block"
           >
             {{ category }}

@@ -1,5 +1,5 @@
 ---
-title: Routing
+title: Маршрутизация
 description: Most websites have more than just one page. For example a home page, about page, contact page etc. In order to show these pages we need a Router.
 position: 2
 category: get-started

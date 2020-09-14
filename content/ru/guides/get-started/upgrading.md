@@ -1,5 +1,5 @@
 ---
-title: Upgrading
+title: Обновление
 description: Upgrading Nuxt.js is quick, but more involved than updating your package.json
 position: 5
 category: get-started

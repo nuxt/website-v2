@@ -179,7 +179,6 @@ export default {
 
     const [prev, next] = await $content('integrations')
       .only(['name', 'slug'])
-      .sortBy('createdAt', 'asc')
       .surround(params.slug)
       .fetch()
     return { integration, prev, next }

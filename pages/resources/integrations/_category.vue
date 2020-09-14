@@ -11,11 +11,14 @@
             class="min-h-screen w-full lg:static lg:max-h-full lg:overflow-visible"
           >
             <h2
-              class="text-3xl xl:text-4xl text-light-onSurfacePrimary dark:text-dark-onSurfacePrimary font-medium leading-normal mb-6 lg:pt-4"
+              class="text-3xl xl:text-4xl text-light-onSurfacePrimary dark:text-dark-onSurfacePrimary font-light leading-normal mb-6 pt-4"
             >
-              {{ $integrations.formatCategory($route.params.category) }} ({{
-                integrations.length
-              }})
+              {{ $integrations.formatCategory($route.params.category) }}
+              <div
+                class="float-right text-lg font-semibold bg-nuxt-lightgreen rounded-full py-1 px-4 mt-2 xl:mt-4"
+              >
+                {{ integrations.length }}
+              </div>
             </h2>
             <ResourceCards :list="integrations" />
           </div>
@@ -46,7 +49,7 @@ export default {
         'logo',
         'icon',
         'image',
-        'category',
+        'categories',
         'description'
       ])
       .fetch()

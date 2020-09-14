@@ -1,25 +1,34 @@
 <template>
-  <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+  <div
+    class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4"
+  >
     <div
       v-for="(item, i) in sortedList"
       :key="`${item.title}-${i}`"
-      class="light:bg-light-surface dark:bg-dark-surface rounded p-4 sm:p-8 lg:p-4 light:hover:bg-gray-200 dark:hover:bg-gray-800 cursor-pointer transition-colors duration-300 ease-linear"
+      class="light:bg-light-surface text-center dark:bg-dark-surface rounded p-6 light:hover:bg-gray-200 dark:hover:bg-gray-800 cursor-pointer transition-colors duration-300 ease-linear"
     >
       <NuxtLink :to="`/with/${item.name}`">
-        <img v-if="item.logo" :src="item.logo" :alt="item.name" class="pb-2" />
+        <img
+          v-if="item.logo"
+          :src="item.logo"
+          :alt="item.name"
+          class="inline-block h-20"
+        />
         <img
           v-else-if="item.icon"
           :src="`https://cdn.jsdelivr.net/gh/nuxt/integrations@master/icons/${item.icon}`"
           :alt="item.name"
-          class="pb-2"
+          class="inline-block h-20"
         />
-        <div v-else class="pb-2" style="font-size: 2em">
-          <i>🧩</i>
-        </div>
-        <h3 class="pb-2 font-bold">
+        <img
+          v-else
+          :src="`/img/resources/${$route.params.category}.svg`"
+          class="inline-block h-20"
+        />
+        <h3 class="text-xl font-semibold py-2">
           {{ item.name }}
         </h3>
-        <p class="pb-2">
+        <p class="text-md text-gray-600">
           {{ item.description }}
         </p>
       </NuxtLink>
@@ -45,9 +54,3 @@ export default {
   }
 }
 </script>
-
-<style scoped>
-img {
-  max-height: 50px;
-}
-</style>

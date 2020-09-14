@@ -39,7 +39,7 @@
           </i18n>
         </div>
         <DesignIllustration
-          class="w-2/3 mx-auto lg:mx-0 lg:w-5/12 lg:-mt-8 text-light-elevatedSurface dark:text-dark-elevatedSurface"
+          class="w-2/3 mx-auto lg:mx-0 lg:w-1/3 lg:-mt-8 text-light-elevatedSurface dark:text-dark-elevatedSurface"
         />
       </div>
       <section>
@@ -54,7 +54,7 @@
 </template>
 
 <script>
-import DesignIllustration from '~/assets/illustrations/design.svg?inline'
+import DesignIllustration from '~/assets/illustrations/campfire.svg?inline'
 
 export default {
   components: {

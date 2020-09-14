@@ -19,7 +19,7 @@
               active-class
               exact
               exact-active-class="text-nuxt-lightgreen"
-              :to="`/integrations/cat/${category}`"
+              :to="`/resources/integrations/${category}`"
               @click.native="show = false"
             >
               {{ $integrations.formatCategory(category) }}

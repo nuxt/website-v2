@@ -20,10 +20,10 @@
           </h3>
         </div>
         <ThemesIllustration
-          class="w-2/3 mx-auto lg:mx-0 lg:w-5/12 lg:-mt-8 text-light-elevatedSurface dark:text-dark-elevatedSurface"
+          class="w-2/3 mx-auto lg:mx-0 lg:w-4/12 lg:-mt-8 text-light-elevatedSurface dark:text-dark-elevatedSurface"
         />
       </div>
-      <section class="flex flex-wrap items-stretch -mx-4">
+      <section class="flex flex-wrap items-stretch -mx-4 pb-8">
         <div v-for="theme in themes" :key="theme.title" class="w-full p-4">
           <div
             class="block sm:flex w-full h-full items-start bg-light-surface dark:bg-dark-surface rounded transition-colors duration-300 ease-linear"
@@ -71,7 +71,7 @@
 </template>
 
 <script>
-import ThemesIllustration from '~/assets/illustrations/themes.svg?inline'
+import ThemesIllustration from '~/assets/illustrations/theming.svg?inline'
 
 export default {
   components: {

@@ -28,11 +28,11 @@
             {{ $t('video-courses.cta.discover') }}
           </AppButton>
         </div>
-        <ThemesIllustration
-          class="w-2/3 mx-auto lg:mx-0 lg:w-5/12 lg:-mt-8 text-light-elevatedSurface dark:text-dark-elevatedSurface"
+        <VideosIllustration
+          class="w-2/3 mx-auto lg:mx-0 lg:w-4/12 lg:-mt-8 text-light-elevatedSurface dark:text-dark-elevatedSurface"
         />
       </div>
-      <section class="flex flex-wrap items-stretch -mx-4">
+      <section class="flex flex-wrap items-stretch -mx-4 pb-8">
         <div v-for="course in courses" :key="course.title" class="w-full p-4">
           <div
             class="block sm:flex w-full h-full items-center pr-6 bg-light-surface hover:bg-gray-200 dark:bg-dark-surface rounded transition-colors duration-300 ease-linear"
@@ -70,13 +70,13 @@
 </template>
 
 <script>
-import ThemesIllustration from '~/assets/illustrations/themes.svg?inline'
+import VideosIllustration from '~/assets/illustrations/videos.svg?inline'
 import PlayCircleIcon from '~/assets/icons/play-circle.svg?inline'
 import MeteorIcon from '~/assets/icons/meteor.svg?inline'
 
 export default {
   components: {
-    ThemesIllustration,
+    VideosIllustration,
     PlayCircleIcon,
     MeteorIcon
   },

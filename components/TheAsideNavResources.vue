@@ -19,7 +19,7 @@
             <NuxtLink
               class="p-2 pl-4 flex rounded hover:text-nuxt-lightgreen dark:hover:text-nuxt-lightgreen transition-colors duration-300 ease-linear"
               exact-active-class="text-nuxt-lightgreen bg-green-100 dark:bg-green-800"
-              :to="`/integrations/cat/${category}`"
+              :to="`/resources/integrations/${category}`"
             >
               {{ $integrations.formatCategory(category) }}
             </NuxtLink>

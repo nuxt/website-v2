@@ -6,7 +6,7 @@
   "dependencies": {
     "@nuxt/content": "^1.7.0",
     "@nuxt/http": "^0.5.11",
-    "@nuxt/integrations": "^0.3.0",
+    "@nuxt/integrations": "^0.4.0",
     "@nuxtjs/tailwindcss": "^3.0.2",
     "@snackbar/core": "^1.7.0",
     "add": "^2.0.6",

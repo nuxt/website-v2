@@ -24,18 +24,18 @@ export default {
 ```
 
 <base-alert type="info">
+
 You do not need to add this to your nuxt config in order for universal mode to be applied as the default mode is universal.
+
 </base-alert>
 
 ## SPA
 
-`mode: 'spa'`: No server-side rendering, only client-side rendering.
-
-With Single Page Applications there is no server-side rendering, only client-side rendering. Client side rendering means rendering the content in the browser using JavaScript. Instead of getting all of the content from the HTML we just get a basic HTML document with a JavaScript file that will then render the rest of the site using the browser.
+With Single Page Applications there is no server-side rendering, only client-side rendering. Client side rendering means rendering the content in the browser using JavaScript. Instead of getting all of the content from the HTML we just get a basic HTML document with a JavaScript file that will then render the rest of the site using the browser. To [deploy a single page application](/guides/features/deployment-targets#spa) set ssr to `false` and then use the `build` command to build your application.
 
 ```js{}[nuxt.config.js]
 export default {
-  mode: 'spa'
+  ssr: false
 }
 ```
 

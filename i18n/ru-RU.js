@@ -75,7 +75,7 @@ module.exports = {
       get_started: 'начало работы',
       get_updates: 'Get NuxtJS updates to your inbox each month',
       video: 'Video produced by {company}, download their free {cheatSheet}',
-      cheatSheet: 'Nuxt Cheat Sheet.'
+      cheatSheet: 'Шпаргалка Nuxt.'
     },
     why: {
       title: 'Почему {nuxt}',

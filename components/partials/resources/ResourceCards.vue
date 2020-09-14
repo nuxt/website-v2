@@ -12,13 +12,13 @@
           v-if="item.logo"
           :src="item.logo"
           :alt="item.name"
-          class="inline-block h-20"
+          class="inline-block h-16 my-2"
         />
         <img
           v-else-if="item.icon"
           :src="`https://cdn.jsdelivr.net/gh/nuxt/integrations@master/icons/${item.icon}`"
           :alt="item.name"
-          class="inline-block h-20"
+          class="inline-block h-16 my-2"
         />
         <img
           v-else

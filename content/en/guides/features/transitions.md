@@ -129,7 +129,7 @@ export default {
 Nuxt.js will use these settings to set the component as follows:
 
 ```html{}[pages/index.vue]
-<transition name="test" mode="out-in"></transition>
+<transition name="home" mode="out-in"></transition>
 ```
 
 The `transition` object can have many properties such as name, mode, css, duration and many more. Please see the vue docs for more info.

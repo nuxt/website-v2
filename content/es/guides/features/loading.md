@@ -1,6 +1,6 @@
 ---
-title: Loading
-description: Out of the box, Nuxt.js gives you its own loading progress bar component that's shown between routes. You can customize it, disable it or even create your own loading component.
+title: Cargando
+description: De fábrica, Nuxt.js te ofrece su propio componente de barra de progreso de carga que se muestra entre rutas. Puedes personalizarlo, desactivarlo o incluso crear tu propio componente de carga.
 position: 8
 category: features
 csb_link: https://codesandbox.io/embed/github/nuxt-academy/guides-examples/tree/master/03_features/08_loading?fontsize=14&hidenavigation=1&theme=dark
@@ -66,13 +66,13 @@ questions:
     correctAnswer: 'name: circle'
 ---
 
-Out of the box, Nuxt.js gives you its own loading progress bar component that's shown between routes. You can customize it, disable it or even create your own loading component.
+De fábrica, Nuxt.js te ofrece su propio componente de barra de progreso de carga que se muestra entre rutas. Puedes personalizarlo, desactivarlo o incluso crear tu propio componente de carga.
 
-## Customising the Progress Bar
+## Personalizando la barra de progreso
 
-Among other properties, the color, size, duration and direction of the progress bar can be customized to suit your application's needs. This is done by updating the `loading` property of the `nuxt.config.js` with the corresponding properties.
+Entre otras propiedades, el color, tamaño, duracion y dirección de la barra de progreso pueden ser personalizadas para adaptarse a las necesidades de tu aplicación. Esto es logrado actualizando la propiedad `loading` del archivo `nuxt.config.js` con las propiedades correspondientes.
 
-For example, to set a blue progress bar with a height of 5px, we update the `nuxt.config.js` to the following:
+Por ejemplo, para establecer una barra de progreso azul con una altura de 5px, actualizamos `nuxt.config.js` a lo siguiente:
 
 ```js
 export default {
@@ -83,22 +83,22 @@ export default {
 }
 ```
 
-List of properties to customize the progress bar.
+Lista de propiedades para personalizar la barra de progreso.
 
-| Key         | Type    | Default | Description                                                                                                                       |     |
-| ----------- | ------- | ------- | --------------------------------------------------------------------------------------------------------------------------------- | --- |
-| color       | String  | 'black' | CSS color of the progress bar                                                                                                     |     |
-| failedColor | String  | 'red'   | CSS color of the progress bar when an error appended while rendering the route (if data or fetch sent back an error for example). |     |
-| height      | String  | '2px'   | Height of the progress bar (used in the style property of the progress bar)                                                       |     |
-| throttle    | Number  | 200     | In ms, wait for the specified time before displaying the progress bar. Useful for preventing the bar from flashing.               |     |
-| duration    | Number  | 5000    | In ms, the maximum duration of the progress bar, Nuxt.js assumes that the route will be rendered before 5 seconds.                |     |
-| continuous  | Boolean | false   | Keep animating progress bar when loading takes longer than duration.                                                              |     |
-| css         | Boolean | true    | Set to false to remove default progress bar styles (and add your own).                                                            |     |
-| rtl         | Boolean | false   | Set the direction of the progress bar from right to left.                                                                         |     |
+| Llave       | Tipo    | Valor predeterminado | Descripción                                                                                                                                 |     |
+| ----------- | ------- | -------------------- | ------------------------------------------------------------------------------------------------------------------------------------------- | --- |
+| color       | String  | 'black'              | Color CSS de la barra de progreso                                                                                                           |     |
+| failedColor | String  | 'red'                | Color CSS de la barra de progreso cuando se agrega un error mientras se renderiza la ruta (Si data o fetch devuelven un error por ejemplo). |     |
+| height      | String  | '2px'                | Altura de la barra de progreso (Usado en la propiedad style de la barra de progreso)                                                        |     |
+| throttle    | Number  | 200                  | En ms, espera el tiempo especificado antes de mostrar la barra de progreso. Util para prevenir que la barra parpadee.                       |     |
+| duration    | Number  | 5000                 | En ms, la duración máxima de la barra de progreso, Nuxt.js asume que la ruta será renderizada antes de 5 segundos.                          |     |
+| continuous  | Boolean | false                | Sigue animando la barra de progreso cuando la carga tome más tiempo que la duración.                                                        |     |
+| css         | Boolean | true                 | Establecer en falso para eliminar los estilos por defecto de la barra de progreso (Y añadir los propios).                                   |     |
+| rtl         | Boolean | false                | Establecer la dirección de la barra de progreso de derecha a izquierda.                                                                     |     |
 
-## Disable the Progress Bar
+## Desactivar la barra de progreso
 
-If you don't want to display the progress bar between the routes add `loading: false` in your `nuxt.config.js` file:
+Si no deseas mostrar la barra de progreso entre rutas agrega `loading: false` en tu archivo `nuxt.config.js`:
 
 ```js{}[nuxt.config.js]
 export default {
@@ -106,7 +106,7 @@ export default {
 }
 ```
 
-The loading property gives you the option to disable the default loading progress bar on a specific page.
+La propiedad loading te ofrece la opción de deshabilitar la barra de progreso de carga predeterminada en una página específica.
 
 ```html{}[pages/index.vue]
 <template>
@@ -120,11 +120,11 @@ The loading property gives you the option to disable the default loading progres
 </script>
 ```
 
-## Programmatically starting the loading bar
+## Iniciando la barra de carga programáticamente
 
-The loading bar can also be programmatically started in your components by calling `this.$nuxt.$loading.start()` to start the loading bar and `this.$nuxt.$loading.finish()` to finish it.
+la barra de carga también se puede iniciar programáticamente en tus componentes llamando `this.$nuxt.$loading.start()` para iniciar la barra de carga y para finalizar la `this.$nuxt.$loading.finish()`.
 
-During your page component's mounting process, the `$loading` property may not be immediately available to access. To work around this, if you want to start the loader in the `mounted` method, make sure to wrap your `$loading` method calls inside `this.$nextTick` as shown below.
+Durante el proceso de montaje del componente de tu página, la propiedad `$loading` puede no estar disponible inmediatamente para acceder a ella. Para evitar esto, si deseas iniciar el cargador en el método `mounted`, asegúrate de envolver tu las llamadas al método `$loading` dentro de `this.$nextTick` como se muestra debajo.
 
 ```js
 export default {
@@ -137,13 +137,13 @@ export default {
 }
 ```
 
-## Internals of the Progress Bar
+## Internos de la barra de progreso
 
-Unfortunately, it is not possible for the Loading component to know in advance how long loading a new page will take. Therefore, it is not possible to accurately animate the progress bar to 100% of the loading time.
+Desafortunadamente, no es posible que el componente Loading sepa de antemano cuánto tiempo tardará la carga de una nueva página. Por lo tanto, no es posible animar con precisión la barra de progreso al 100% del tiempo de carga.
 
-Nuxt's loading component partially solves this by letting you set the `duration`, this should be set to an estimate of how long the loading process will take. Unless you use a custom loading component, the progress bar will always move from 0% to 100% in `duration` time (regardless of actual progression). When the loading takes longer than `duration` time, the progress bar will stay at 100% until the loading finishes.
+El componente de carga de Nuxt resuelve parcialmente esto al permitirte establecer la `duration`, este debe ser establecido en una estimación de cuando tiempo tardará el proceso de carga. A menos que uses un componente de carga personalizado, la barra de progreso siempre se moverá de 0% a 100% en tiempo `duration` (Independientemente de la progresión actual). Cuando la carga tarda más que el tiempo de `duration`, la barra de progreso permanecerá en 100% hasta que finalice la carga.
 
-You can change the default behaviour by setting `continuous` to true, then after reaching 100% the progress bar will start shrinking back to 0% again in `duration` time. When the loading is still not finished after reaching 0% it will start growing from 0% to 100% again, this repeats until the loading finishes.
+Puedes cambiar el comportamiento predeterminado cambiando `continuous` a true, después de alcanzar 100% la barra de progreso comenzará a reducirse al 0% de nuevo en el tiempo especificado en `duration`. Cuando la carga aun no este terminada después de alcanzar el 0% comenzará a crecer de 0% a 100% de nuevo. Esto se repite hasta que finalice la carga.
 
 ```js
 export default {
@@ -153,24 +153,24 @@ export default {
 }
 ```
 
-_Example of a continuous progress bar:_
+_Ejemplo de una barra de progreso continua:_
 
 ![https://nuxtjs.org/api-continuous-loading.gif](https://nuxtjs.org/api-continuous-loading.gif)
 
-## Using a Custom Loading Component
+## Usando un componente de carga personalizado
 
-You can also create your own component that Nuxt.js will call instead of the default loading progress bar component. To do so, you need to give a path to your component in the `loading` option. Then, your component will be called directly by Nuxt.js.
+También puedes crear tu propio componente que Nuxt.js llamara en lugar del componente de carga por defecto. Para ello, debes proveer una ruta a tu componente en la opción `loading`. Entonces, tu componente será llamado directamente por Nuxt.js.
 
-Your component has to expose some of these methods:
+Tu componente tiene que exponer algunos de estos métodos:
 
-| Method        | Required | Description                                                                              |
-| ------------- | -------- | ---------------------------------------------------------------------------------------- |
-| start()       | Required | Called when a route changes, this is where you display your component.                   |
-| finish()      | Required | Called when a route is loaded (and data fetched), this is where you hide your component. |
-| fail(error)   | Optional | Called when a route couldn't be loaded (failed to fetch data for example).               |
-| increase(num) | Optional | Called during loading the route component, num is an Integer < 100.                      |
+| Método        | Requerido | Descripción                                                                                  |
+| ------------- | --------- | -------------------------------------------------------------------------------------------- |
+| start()       | Requerido | Llamado cuando una ruta cambia, aquí es donde tú muestras tu componente.                     |
+| finish()      | Requerido | Llamado cuando una ruta es cargada (y datos obtenidos), aquí es donde ocultas tu componente. |
+| fail(error)   | Opcional  | Llamado cuando una ruta no pudo ser cargada (por ejemplo no pudo obtener datos).             |
+| increase(num) | Opcional  | Llamado durante la carga del componente de ruta, num es un entero < 100.                     |
 
-You can create your custom component in `components/LoadingBar.vue`:
+Puedes crear tu componente personalizado en `components/LoadingBar.vue`:
 
 ```html{}[components/LoadingBar.vue]
 <template>
@@ -211,7 +211,7 @@ You can create your custom component in `components/LoadingBar.vue`:
 </style>
 ```
 
-Then, you update your `nuxt.config.js` to tell Nuxt.js to use your component:
+Luego, actualizas tu `nuxt.config.js` para decirle a Nuxt.js que use tu componente:
 
 ```js{}[nuxt.config.js]
 export default {
@@ -219,9 +219,9 @@ export default {
 }
 ```
 
-## The loading indicator Property
+## La propiedad loading indicator
 
-When running Nuxt.js in SPA mode, there is no content from the server side on the first page load. So, instead of showing a blank page while the page loads, Nuxt.js gives you a spinner which you can customize to add your own colors or background and even change the the indicator.
+Al ejecutar Nuxt.js en modo SPA, no hay contenido del lado del servidor en la primera carga de página. Por lo tanto, en lugar de mostrar una página en blanco mientras la página se carga, Nuxt.js te da un spinner que puedes personalizar para agregar tus propios colores o fondos e incluso cambiar el indicador.
 
 ```js{}[nuxt.config.js]
 export default {
@@ -233,9 +233,9 @@ export default {
 }
 ```
 
-## Built-in indicators
+## Indicadores incorporados
 
-These indicators are imported from awesome [Spinkit](http://tobiasahlin.com/spinkit) project. You can check out its demo page to preview the spinners. In order to use one of these spinners all you have to do is add it's name to the name property. No need to import or install anything. Here is a list of built in indicators you can use.
+Estos indicadores son importados del asombroso proyecto [Spinkit](http://tobiasahlin.com/spinkit). Puedes consultar su página de demostración para obtener una vista previa de los. Con el fin de utilizar uno de estos spinners, todo lo que tienes que hacer agregar su nombre a la propiedad name. No hay necesidad de importar o instalar nada. Aquí hay una lista de indicadores incorporados que puedes utilizar.
 
 - circle
 - cube-grid
@@ -249,13 +249,13 @@ These indicators are imported from awesome [Spinkit](http://tobiasahlin.com/spi
 - three-bounce
 - wandering-cubes
 
-Built-in indicators support `color` and `background` options.
+Los indicadores incorporados admiten las opciones `color` y `background`.
 
-## Custom indicators
+## Indicadores personalizados
 
-If you need your own special indicator, a String value or Name key can also be a path to a html template of indicator source code! All of the options are passed to the template, too.
+Si necesitas tu propio indicador especial, un valor de cadena o una llave Nombre también puede ser una ruta a una plantilla HTML del código fuente del indicador! Todas las opciones también se pasan a la plantilla.
 
-Nuxt's built-in [source code](https://github.com/nuxt/nuxt.js/tree/dev/packages/vue-app/template/views/loading) is also available if you need a base!
+El [código fuente](https://github.com/nuxt/nuxt.js/tree/dev/packages/vue-app/template/views/loading) de incorporados esta tambien disponible si necesitas una base!
 
 <app-modal>
   <code-sandbox  :src="csb_link"></code-sandbox>

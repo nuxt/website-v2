@@ -190,7 +190,7 @@ export default {
 </style>
 ```
 
-The module method also works for top-level definitions without implementing a sub-directory in the store directory
+The module method also works for top-level definitions without implementing a sub-directory in the store directory.
 
 Example for state: you create a file `store/state.js` and add the following
 
@@ -250,7 +250,7 @@ actions: {
 
 <base-alert>
 
-Only the primary module (in store/index.js) will receive this action. You'll need to chain your module actions from there.
+Only the primary module (in `store/index.js`) will receive this action. You'll need to chain your module actions from there.
 
 </base-alert>
 

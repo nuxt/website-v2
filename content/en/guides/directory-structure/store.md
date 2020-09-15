@@ -192,7 +192,7 @@ export default {
 
 The module method also works for top-level definitions without implementing a sub-directory in the store directory.
 
-Example for state: you create a file `store/state.js` and add the following
+Example for state: you create a file `store/state.js` and add the following.
 
 ```js
 export default () => ({
@@ -260,7 +260,7 @@ If `nuxt generate` is ran, `nuxtServerInit` will be executed for every dynam
 
 <base-alert type="info">
 
-Asynchronous nuxtServerInit actions must return a Promise or leverage async/await to allow the nuxt server to wait on them.
+Asynchronous `nuxtServerInit` actions must return a Promise or leverage async/await to allow the nuxt server to wait on them.
 
 </base-alert>
 

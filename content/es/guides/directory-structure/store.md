@@ -31,8 +31,8 @@ questions:
     correctAnswer: an object
   - question: Puedes agregar complementos al _store_
     answers:
-      - Verdadero
-      - Falso
+      - cierto
+      - falso
     correctAnswer: Verdadero
   - question: El método _fetch_ se usa para llenar el _store_
     answers:
@@ -58,7 +58,7 @@ El directorio `store` contiene tus archivos del [Vuex Store](http://vuex.vuej
 
 <base-alert>
 
-_No se puede cambiar el nombre de este directorio sin una configuración adicional._
+_Este directorio no puede ser renombrado sin configuraciones adicionales._
 
 </base-alert>
 
@@ -73,7 +73,7 @@ Nuxt.js buscará el directorio `store`, si existe, hará lo suigiente:
 
 ## Módulos
 
-Cada archivo `.js` dentro del directorio `store` es transformado como un [módulo de espacio de nombres](http://vuex.vuejs.org/en/modules.html) (siendo `index` el módulo de raíz). El valor de tu `state` siempre debe ser una función para evitar un estado _compartido_ no deseado en el lado del servidor.
+Cada archivo `.js` dentro del directorio `store` es transformado como un [módulo de espacio de nombres](http://vuex.vuejs.org/en/modules.html) (siendo `index` el módulo raíz). El valor de tu `state` siempre debe ser una función para evitar un estado _compartido_ no deseado en el lado del servidor.
 
 Para empezar, exporta el estado como una función, y las mutaciones y acciones como objetos.
 
@@ -212,7 +212,7 @@ export default {
 
 ## Plugins en el Store
 
-Puedes agregar plugins adicionales al _store_ poniéndolos en el `store/index.js`:
+Puedes agregar plugins adicionales al _store_ poniéndolos en el archivo `store/index.js`:
 
 ```js{}[store/index.js]
 import myPlugin from 'myPlugin'
@@ -230,11 +230,11 @@ export const mutations = {
 }
 ```
 
-Más información sobre los _plugins_: [Vuex documentation](https://vuex.vuejs.org/en/plugins.html).
+Más información sobre los plugins: [Vuex documentation](https://vuex.vuejs.org/en/plugins.html).
 
 ## La acción nuxtServerInit
 
-Si la acción `nuxtServerInit` está definida en el _store_ y el modo es` universal`, Nuxt.js lo llamará con el contexto (solo desde el lado del servidor). Es útil cuando tenemos algunos datos en el servidor que queremos dar directamente al lado del cliente.
+Si la acción `nuxtServerInit` está definida en el _store_ y el modo es `universal`, Nuxt.js lo llamará con el contexto (solo desde el lado del servidor). Es útil cuando tenemos algunos datos en el servidor que queremos dar directamente al lado del cliente.
 
 Por ejemplo, digamos que tenemos sesiones en el lado del servidor y podemos acceder al usuario conectado a través de `req.session.user`. Para dar el usuario autenticado a nuestro _store_, actualizamos nuestro `store/index.js` a lo siguiente:
 

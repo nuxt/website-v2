@@ -92,6 +92,6 @@ touch nuxt.config.js
 
 <base-alert type="next">
 
-Чтобы детально изучить директории, почитайте [книгу о структуре директорий](/guides/directory-structure/nuxt).
+Чтобы детально изучить директории, прочтите [раздел о структуре директорий](/guides/directory-structure/nuxt).
 
 </base-alert>

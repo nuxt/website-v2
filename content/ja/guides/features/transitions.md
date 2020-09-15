@@ -1,6 +1,6 @@
 ---
-title: Transitions
-description: Nuxt.js uses the `<transition>` component to let you create amazing transitions/animations between your routes.
+title: トランジション
+description: Nuxt.js は `<transition>` コンポーネントを使って、ページ間を遷移する際のトランジション/アニメーションを行うことができます
 position: 10
 category: features
 csb_link: https://codesandbox.io/embed/github/nuxt-academy/guides-examples/tree/master/03_features/05_transitions?fontsize=14&hidenavigation=1&theme=dark
@@ -67,24 +67,24 @@ questions:
     correctAnswer: nuxt.config.js
 ---
 
-Nuxt.js uses the [transition component](http://vuejs.org/v2/guide/transitions.html#Transitioning-Single-Elements-Components) to let you create amazing transitions/animations between your routes.
+Nuxt.js は [transition コンポーネント](https://jp.vuejs.org/v2/guide/transitions.html#%E5%8D%98%E4%B8%80%E8%A6%81%E7%B4%A0-%E3%82%B3%E3%83%B3%E3%83%9D%E3%83%BC%E3%83%8D%E3%83%B3%E3%83%88%E3%81%AE%E3%83%88%E3%83%A9%E3%83%B3%E3%82%B8%E3%82%B7%E3%83%A7%E3%83%B3) を使って、ページ間を遷移する際のトランジション/アニメーションを行うことができます。
 
-To define a custom transition for a specific route add the `transition` key to the page component.
+特定のルートに対してカスタムトランジションを設定するには、ページコンポーネントに `transition` キーを追加してください。
 
 ```js{}[pages/index.vue]
 export default {
-  // Can be a String
+  // 文字列を指定できます
   transition: ''
-  // Or an Object
+  // またはオブジェクト
   transition: {}
-  // or a Function
+  // または関数
   transition (to, from) {}
 }
 ```
 
-## String
+## 文字列
 
-If the `transition` key is set as a string, it will be used as the `transition.name`.
+`transition` キーに文字列がセットされたときは `transition.name` として用いられます。
 
 ```js{}[pages/index.vue]
 export default {
@@ -92,7 +92,7 @@ export default {
 }
 ```
 
-Nuxt.js will use these settings to set the component as follows:
+上のように設定すると、コンポーネントには次のようにセットされます:
 
 ```html{}[pages/index.vue]
 <transition name="home"></transition>
@@ -100,11 +100,11 @@ Nuxt.js will use these settings to set the component as follows:
 
 <base-alert>
 
-This is automatically done for you and you do not need to add the `<transition>` component to your pages or layouts.
+これは自動的に行われるため、ページやレイアウトに `<transition>` コンポーネントを追加する必要はありません。
 
 </base-alert>
 
-Now all you have to do is create the new class for your transitions.
+これで、あとはトランジションのための新しいクラスを作るだけです。
 
 ```html{}[pages/index.vue]
 <styles>
@@ -113,9 +113,9 @@ Now all you have to do is create the new class for your transitions.
 </styles>
 ```
 
-## Object
+## オブジェクト
 
-If the `transition` key is set as an object:
+`transition` キーにオブジェクトがセットされたとき:
 
 ```js{}[pages/index.vue]
 export default {
@@ -126,15 +126,15 @@ export default {
 }
 ```
 
-Nuxt.js will use these settings to set the component as follows:
+上のように設定すると、コンポーネントは次のようにセットされます:
 
 ```html{}[pages/index.vue]
-<transition name="home" mode="out-in"></transition>
+<transition name="test" mode="out-in"></transition>
 ```
 
-The `transition` object can have many properties such as name, mode, css, duration and many more. Please see the vue docs for more info.
+`transition` オブジェクトは name、 mode、 css、 duration などの多くのプロパティを持つことができます。詳細は vue のドキュメントを参照してください。
 
-You can also define methods in the page `transition` property, for more information on the [JavaScript hooks](https://vuejs.org/v2/guide/transitions.html#JavaScript-Hooks) see the vue docs.
+ページ内の `transition` プロパティで関数を定義することもできます。 詳細は vue のドキュメントの[JavaScript フック](https://jp.vuejs.org/v2/guide/transitions.html#JavaScript-%E3%83%95%E3%83%83%E3%82%AF) を参照してください。
 
 ```js
 export default {
@@ -146,11 +146,11 @@ export default {
 }
 ```
 
-### Transition Mode
+### トランジションモード
 
 <base-alert>
 
-The default transition mode for pages differs from the default mode in Vue.js. The `transition` mode is by default set to `out-in`. If you want to run leaving and entering transitions simultaneously, you have to set the mode to the empty string `mode: ''`.
+デフォルトのトランジションモードは Vue.js とは異なります。 `transition` モードはデフォルトで `out-in` に設定されています。 leaving と entering トランジションを同時に実行したい場合、 モードプロパティに空文字列をセット( `mode: ''` )する必要があります 。
 
 </base-alert>
 
@@ -163,9 +163,9 @@ export default {
 }
 ```
 
-## Function
+## 関数
 
-If the `transition` key is set as a function:
+`transition` キーに関数がセットされたとき:
 
 ```js{}[pages/index.vue]
 export default {
@@ -178,15 +178,15 @@ export default {
 }
 ```
 
-Transitions applied on navigation:
+トランジションは各ページ遷移時に次のように適用されます:
 
-`/` to `/posts` => `slide-left`,`/posts` to `/posts?page=3` => `slide-left`,`/posts?page=3` to `/posts?page=2` => `slide-right`.
+`/` から `/posts`=> `slide-left`、`/posts` から `/posts?page=3` => `slide-left`、`/posts?page=3` から `/posts?page=2`=> `slide-right`
 
-## Global Settings
+## グローバルな設定
 
-The Nuxt.js default transition name is `"page"`. To add a fade transition to every page of your application, all you need is a CSS file that is shared across all your routes.
+Nuxt.js のデフォルトのトランジション名は `"page"` です。 アプリケーションのすべてのページでフェードさせるトランジションを追加するには、ルーティング全体に適用されている CSS ファイルが必要です。
 
-Our global css in `assets/main.css`:
+`assets/main.css` 内にグローバルな CSS を書きます:
 
 ```css{}[assets/main.css]
 .page-enter-active,
@@ -199,7 +199,7 @@ Our global css in `assets/main.css`:
 }
 ```
 
-Then we add its path to the `css` array in our `nuxt.config.js` file:
+`nuxt.config.js` ファイルの `css`配列に CSS ファイルのパスを追加します:
 
 ```js{}[nuxt.config.js]
 export default {
@@ -207,13 +207,13 @@ export default {
 }
 ```
 
-## Configuration Settings
+## 構成設定
 
-## The layoutTransition Property
+## layoutTransition プロパティ
 
-The layout transition is used to set the default properties of the layout transitions.
+レイアウトトランジションのデフォルト設定を指定するために使われます。
 
-The default settings for layout transitions are:
+デフォルトの設定は以下の通りです:
 
 ```js
 {
@@ -231,12 +231,12 @@ The default settings for layout transitions are:
 }
 ```
 
-If you want to change the default settings for your layout transitions you can do so in the nuxt.config.js file.
+デフォルトの設定を変更したい場合、nuxt.config.js ファイルに以下のように記述してください。
 
 ```js{}[nuxt.config.js]
 export default {
   layoutTransition: 'my-layouts'
-  // or
+  // または
   layoutTransition: {
     name: 'my-layouts',
     mode: 'out-in'
@@ -255,9 +255,9 @@ export default {
 }
 ```
 
-## The pageTransition Property
+## pageTransition プロパティ
 
-The default settings for page transitions are:
+デフォルトの設定は以下の通りです:
 
 ```js
 {
@@ -266,12 +266,12 @@ The default settings for page transitions are:
 }
 ```
 
-Should you wish to modify the default settings you can do so in the nuxt.config.js
+デフォルトの設定を変更したい場合、nuxt.config.js ファイルに以下のように記述してください。
 
 ```js{}[nuxt.config.js]
 export default {
   pageTransition: 'my-page'
-  // or
+  // または
   pageTransition: {
     name: 'my-page',
     mode: 'out-in',
@@ -282,7 +282,7 @@ export default {
 }
 ```
 
-If you do modify the page Transition name you will also have to rename the css class.
+ページトランジションの名前を変更したい場合、css のクラス名も変更する必要があります。
 
 ```css{}[assets/main.css]
 .my-page-enter-active,

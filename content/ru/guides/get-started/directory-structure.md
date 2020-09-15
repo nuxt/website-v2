@@ -1,96 +1,97 @@
 ---
-title: Directory Structure
-description: The default Nuxt.js application structure is intended to provide a great starting point for both small and large applications. You are free to organize your application however you like and can create other directories as and when you need them.
+title: Структура директорий
+description: Стандартная структура Nuxt.js приложения призвана стать хорошей отправной точкой для больших и малых проектов. Тем не менее, вы можете создать нужную вам структуру директорий.
 position: 3
 category: get-started
 csb_link: https://codesandbox.io/embed/github/nuxt-academy/guides-examples/tree/master/01_get_started/03_directory_structure?fontsize=14&hidenavigation=1&theme=dark
 ---
 
-The default Nuxt.js application structure is intended to provide a great starting point for both small and large applications. You are free to organize your application however you like and can create other directories as and when you need them.
+Стандартная структура Nuxt.js приложения призвана стать хорошей отправной точкой для больших и малых проектов. Тем не менее, вы можете создать нужную вам структуру директорий.
 
-Let's create the directories and files that do not exist in our project yet.
+Давайте создадим директории и файлы, если их еще нет
 
 ```bash
 mkdir components assets static
 touch nuxt.config.js
 ```
 
-These are the main directories and files that we use when building a Nuxt.js application. You will find an explanation of each of them below.
+Это основные директории и файлы, которые нужны для создания Nuxt.js приложения. Вы найдете информацию по каждой из них ниже.
 
 <base-alert type="info">
 
-Creating directories with these names enables features in your Nuxt.js project.
+Создание директорий с этими именами включает функции в вашем Nuxt.js проекте.
 
 </base-alert>
 
-## Directories
+## Директории
 
-### The pages directory
+### Директория `pages`
 
-The `pages` directory contains your application's views and routes. As you've learned in the last chapter, Nuxt.js reads all the `.vue` files inside this directory and uses them to create the application router.
+Директория `pages` включает маршруты вашего приложения и их оформление. Фреймворк читает все ваши `.vue` файлы внутри директории и настраивает маршрутизацию приложения.
 
 <base-alert type="next">
 
-Learn more about the [pages directory](/guides/directory-structure/pages)
+[Подробнее о страницах](/guides/directory-structure/pages)
 
 </base-alert>
 
-### The components directory
+### Директория `components`
 
-The `components` directory is where you put all your Vue.js components which are then imported into your pages.
 
-With Nuxt.js you can create your components and auto import them into your .vue files meaning there is no need to manually import them in the script section. Nuxt.js will scan and auto import these for you once you have components set to true.
+Директория `components` включает ваши Vue.js компоненты, которые вы будете импортировать в компоненты страниц.
+
+С Nuxt.js вы можете создать ваши компоненты и автоматически их импортировать в ваши .vue файлы не указывая при этом явно импорт этих компонентов в секции script. Nuxt.js будет сканировать и импортировать ваши компоненты автоматически, если в файле конфигурации установлено `components: true`.
 
 <base-alert type="next">
 
-Learn more about the [components directory](/guides/directory-structure/components)
+[Подробнее о компонентах](/guides/directory-structure/components)
 
 </base-alert>
 
-### The assets directory
+### Директория `assets`
 
-The `assets` directory contains your uncompiled assets such as your styles, images, or fonts.
+Директория `assets` включает ваши нескомпилированные ресурсы, такие как Stylus или Sass файлы, изображения, или шрифты.
 
 <base-alert type="next">
 
-Learn more about the [assets directory](/guides/directory-structure/assets)
+[Подробнее о ресурсах](/guides/directory-structure/assets)
 
 </base-alert>
 
-### The static directory
+### Директория `static`
 
-The `static` directory is directly mapped to the server root and contains files that have to keep their names (e.g. `robots.txt`) _or_ likely won't change (e.g. the favicon)
+Директория `static` напрямую сопоставлена с корнем сервера (`/static/robots.txt` будет доступен на `http://localhost:3000/robots.txt`) и включает файлы, которые не будут изменяться (например, иконка приложения)
 
 <base-alert type="next">
 
-Learn more about the [static directory](/guides/directory-structure/static)
+[Подробнее о директории static](/guides/directory-structure/static)
 
 </base-alert>
 
-### The nuxt.config.js file
+### Файл nuxt.config.js
 
-The `nuxt.config.js` file is the single point of configuration for Nuxt.js. If you want to add modules or override default settings, this is the place to apply the changes.
+Файл `nuxt.config.js` включает ваши настройки Nuxt.js. Если вам нужно добавить модули или изменить настройки по умолчанию, то это место, где это можно сделать.
 
 <base-alert type="next">
 
-Learn more about the [nuxt.config.js file](/guides/directory-structure/nuxt-config)
+[Подробнее о `nuxt.config.js`](/guides/directory-structure/nuxt-config)
 
 </base-alert>
 
-### The package.json file
+### Файл package.json
 
-The `package.json` file contains all the dependencies and scripts for your application.
+Файл `package.json` включает зависимости и скрипты вашего приложения.
 
 <app-modal>
   <code-sandbox  :src="csb_link"></code-sandbox>
 </app-modal>
 
-## More about the project structures
+## Больше о структуре проекта
 
-There are more helpful directories and files, including [content](/guides/directory-structure/content), [layouts](/guides/directory-structure/layouts), [middleware](/guides/directory-structure/middleware), [modules](/guides/directory-structure/modules), [plugins](/guides/directory-structure/plugins) and [store](/guides/directory-structure/store) . As they aren't necessary for small applications, they are not covered here.
+Существуют еще полезные директории , включая [content](/guides/directory-structure/content), [layouts](/guides/directory-structure/layouts), [middleware](/guides/directory-structure/middleware), [modules](/guides/directory-structure/modules), [plugins](/guides/directory-structure/plugins) и [store](/guides/directory-structure/store). Они не нужны для небольших приложений и здесь мы их не рассматриваем.
 
 <base-alert type="next">
 
-To learn about all directories in detail, feel free to read the the [Directory Structure book](/guides/directory-structure/nuxt).
+Чтобы детально изучить директории, прочтите [раздел о структуре директорий](/guides/directory-structure/nuxt).
 
 </base-alert>

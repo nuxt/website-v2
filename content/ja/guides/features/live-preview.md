@@ -9,7 +9,7 @@ Nuxt.js と フルスタティックモジュールを使うことで、API や 
 
 <base-alert>[target:static](/guides/features/deployment-targets#static-hosting) を利用しているときのみ使用可能です</base-alert>
 
-内部では　`$nuxt.refresh` を使っており、クライアントサイドで nuxtServerInit や asyncData、fetch を呼び出しているため、プレビューモードでは自動的にページのデータが更新されます。
+内部では `$nuxt.refresh` を使っており、クライアントサイドで nuxtServerInit や asyncData、fetch を呼び出しているため、プレビューモードでは自動的にページのデータが更新されます。
 
 ライブプレビューを有効化するためには、次のプラグインを追加する必要があります:
 
@@ -22,8 +22,8 @@ export default function ({ query, enablePreview }) {
 ```
 
 <base-alert>
-EnablePreview はプラグインの context オブジェクトでのみ利用可能です。 プレビューはクライアントサイドで処理されるため、
-プラグインはクライアントでのみ実行される必要があります: preview.client.js
+EnablePreview はプラグインの context オブジェクトでのみ利用可能です。プレビューはクライアントサイドで処理されるため、
+プラグイン(今回の例では preview.client.js)はクライアントでのみ実行される必要があります。
 </base-alert>
 
 ```js{}[nuxt.config.js]
@@ -65,7 +65,7 @@ enablePreview は yarn dev ではなく yarn start を用いてローカルで�
 
 ### まだ生成されていないページをプレビューする場合
 
-まだ生成されていないページの場合、API 上に存在しますがまだ生成されていないため、SPA フォールバックは 404 ページを表示する前に API を呼び出すでしょう。
+まだ生成されていないページは API 上に存在しますが静的なページとして生成されてはいないため、SPA フォールバックは 404 ページを表示する前に API を呼び出します。
 
 もし validate フックを設定している場合、プレビューモードで 404 ページへリダイレクトしないように validate フックを修正する必要があるでしょう。
 
@@ -80,10 +80,10 @@ validate({ params, query }) {
 
 `enablePreview` 関数にデータを渡すことができます。 そのデータは `$preview` コンテキストヘルパーと `this.$preview` で利用できます。
 
-### What's next
+### このあとは
 
 <base-alert type="next">
 
-[Directory Structure book](/guides/directory-structure/nuxt) を見てみましょう。
+[ディレクトリ構成のドキュメント](/guides/directory-structure/nuxt) を見てみましょう。
 
 </base-alert>

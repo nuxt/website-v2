@@ -1,17 +1,17 @@
 ---
-title: Preview Mode
-description: Live Preview for target static with the preview mode
+title: Modo de vista previa
+description: Vista previa en vivo para target estáticos con modo vista previa
 category: features
 position: 12
 ---
 
-With Nuxt.js and full static you can now use live preview out of the box which will call your API or your CMS so you can see the changes live before deploying.
+Con Nuxt.js y full static ahora puedes usar el modo vista previa en vivo que llamará a tu API o tu CMS para que puedas ver los cambios en vivo antes del deploy.
 
-<base-alert> Only available when using [target:static](/guides/features/deployment-targets#static-hosting) </base-alert>
+<base-alert> Solo disponible usando [target:static](/guides/features/deployment-targets#static-hosting) </base-alert>
 
-The preview mode will automatically refresh the page data as it uses `$nuxt.refresh` under the hood and therefore calls nuxtServerInit, asyncData and fetch on the client side.
+El modo de vista previa actualizará automáticamente la página los datos de la página, ya que utiliza `$nuxt.refresh` debajo y por lo tanto llama a nuxtServerInit, asyncData y fetch en el lado del cliente.
 
-In order to activate live preview you will need to add the following plugin:
+A fin de activar el modo vista previa en vivo tienes que añadir el siguiente plugin:
 
 ```js{}[plugins/preview.client.js]
 export default function ({ query, enablePreview }) {
@@ -22,8 +22,7 @@ export default function ({ query, enablePreview }) {
 ```
 
 <base-alert>
-EnablePreview is only available in the context object of plugins. Previews are handled client-side and
-thus the plugin should be run on the client: preview.client.js
+EnablePreview solo está disponible en el objeto de contexto de plugins. Las vistas previas se manejan del lado del cliente y por lo tanto, el plugin tiene que correr en el cliente: preview.client.js
 </base-alert>
 
 ```js{}[nuxt.config.js]
@@ -32,7 +31,7 @@ export default {
 }
 ```
 
-Once you have added the plugin you can now generate your site and serve it.
+Una vez que hayas agregado el plugin, ahora puedes generar tu sitio y servirlo.
 
 <code-group>
 <code-block label="npx" active>
@@ -53,22 +52,22 @@ yarn start
   </code-block>
 </code-group>
 
-Then you can then see your preview page by adding the query param to the end of the page you want to see once:
+Luego puedes ver la pagina de vista previa agregando el parámetro query al final de la página que deseas ver:
 
 ```js
 ?preview=true
 ```
 
 <base-alert>
-enablePreview should be tested locally with yarn start and not yarn
+enablePreview debe ser probado localmente con yarn start y no yarn
 dev
 </base-alert>
 
-### Previewing pages that are not yet generated
+### Previsualización de páginas que aún no se han generado
 
-For pages that are not yet generated, SPA fallback will still call the API before showing the 404 page as these pages exist on the API but are not generated yet.
+Para las páginas que aún no se han generado, la SPA fallback seguirá llamando a la API antes de mostrar la página 404, ya que estas páginas existen en la API pero no se han generado todavía.
 
-If you have set a validate hook, you will probably need to modify it so that it doesn't redirect to the 404 page in preview mode.
+Si has establecido un hook de validación, probablemente necesitarás modificarlo para que no redirija a la página 404 en modo vista previa.
 
 ```js
 validate({ params, query }) {
@@ -77,14 +76,14 @@ validate({ params, query }) {
 }
 ```
 
-### Passing data to enablePreview
+### Pasar datos a enablePreview
 
-You can pass data to the `enablePreview` function. That data will then be available on the `$preview` context helper and on `this.$preview`.
+Puedes pasar datos a la función `enablePreview`. Esos datos estarán disponibles en el context helper `$preview` y en `this.$preview`.
 
-### What's next
+### Que sigue?
 
 <base-alert type="next">
 
-Check out the [Directory Structure book](/guides/directory-structure/nuxt)
+Echa un vistazo al [Libro de la estructura del directorio](/guides/directory-structure/nuxt)
 
 </base-alert>

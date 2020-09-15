@@ -1,6 +1,6 @@
 ---
 title: Структура директорий
-description: Стандартная структура Nuxt.js приложения призвана стать хорошей отправной точкой для больших и малых проектов. Разумеется, вы можете создать нужную вам структуру.
+description: Стандартная структура Nuxt.js приложения призвана стать хорошей отправной точкой для больших и малых проектов. Тем не менее, вы можете создать нужную вам структуру директорий.
 position: 3
 category: get-started
 csb_link: https://codesandbox.io/embed/github/nuxt-academy/guides-examples/tree/master/01_get_started/03_directory_structure?fontsize=14&hidenavigation=1&theme=dark

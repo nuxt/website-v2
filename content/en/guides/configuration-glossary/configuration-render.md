@@ -180,7 +180,7 @@ See [serve-static](https://www.npmjs.com/package/serve-static) docs for possible
 
 **Prerequisites:**
 
-These CSP settings are only effective when using Nuxt server to serve your SSR application. The Policies defined under `csp.policies` are added to the response `Content-Security-Policy` HTTP header.
+These CSP settings are only effective when using Nuxt with `target: 'server'` to serve your SSR application. The Policies defined under `csp.policies` are added to the response `Content-Security-Policy` HTTP header.
 
 **Updating settings:**
 

@@ -59,5 +59,6 @@ export default {
       }
       return `https://cdn.jsdelivr.net/gh/nuxt/integrations@master/icons/${icon}`
     }
+  }
 }
 </script>

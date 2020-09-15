@@ -47,6 +47,7 @@ The [content module](https://content.nuxtjs.org) is a git files based headless C
 - [Live editing our content](#live-editing-our-content)
 - [Generating our content](#generating-our-content)
 - [Conclusion](#conclusion)
+- [Furter Reading](#furter-reading)
 
 ## Getting started
 
@@ -925,3 +926,7 @@ With nuxt generate if only our content changes it means the `nuxt generate` comm
 ## Conclusion
 
 Working with content is great fun and there is so much more you can do and build. Don't forget to showcase your work to use on our discord channel named **showcase** so we can see the cool things you have created and perhaps even feature them in our NuxtLetter. Not signed up yet? Well now is a great time to [sign up](https://nuxtjs.org/#subscribe-to-newsletter) as we keep releasing more new content and features for Nuxt.js. Enjoy :)
+
+## Furter Reading
+
+For more info on how to add a sitemap to your blog check out this article: [Adding a Sitemap Using Nuxt Content](https://redfern.dev/articles/adding-a-sitemap-using-nuxt-content/) by [Gareth Redfern](https://twitter.com/garethredfern)

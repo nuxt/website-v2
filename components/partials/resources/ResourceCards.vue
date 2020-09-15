@@ -16,7 +16,7 @@
         />
         <img
           v-else-if="item.icon"
-          :src="`https://cdn.jsdelivr.net/gh/nuxt/integrations@master/icons/${item.icon}`"
+          :src="iconUrl(item.icon)"
           :alt="item.name"
           class="inline-block h-16 my-2"
         />
@@ -51,6 +51,13 @@ export default {
         ...this.list.filter(i => !i.logo).sort()
       ]
     }
-  }
+  },
+  methods: {
+    iconUrl(icon) {
+      if (/^https?:\/\//.test(icon)) {
+        return icon
+      }
+      return `https://cdn.jsdelivr.net/gh/nuxt/integrations@master/icons/${icon}`
+    }
 }
 </script>

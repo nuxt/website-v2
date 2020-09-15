@@ -19,7 +19,6 @@
             :items="integration.features"
           />
         </div>
-
         <div>
           <!-- Links -->
           <h3 :class="sectionClasses">Links</h3>
@@ -41,15 +40,55 @@
             <BooksIcon slot="icon" class="inline-block h-6 -mt-1 mr-1" />
             Documentation
           </AppButton>
-          <AppButton
-            v-if="integration.external_link"
-            :href="integration.external_link"
-            class="sm:mr-4 py-2 px-2 text-base"
-          >
-            <ExternalLinkIcon slot="icon" class="inline-block h-6 -mt-1 mr-1" />
-            Learn More
-          </AppButton>
         </div>
+        <div>
+          <h3 :class="sectionClasses">Resources</h3>
+
+          <div>
+            <AppButton
+              v-if="integration.demo"
+              :href="integration.demo"
+              class="sm:mr-4 py-2 px-2 text-base"
+            >
+              <DemoIcon slot="icon" class="inline-block h-6 -mt-1 mr-1" />
+              Demo
+            </AppButton>
+            <AppButton
+              v-if="integration.learn_more"
+              :href="integration.learn_more"
+              class="sm:mr-4 py-2 px-2 text-base"
+            >
+              <ExternalLinkIcon
+                slot="icon"
+                class="inline-block h-6 -mt-1 mr-1"
+              />
+              Learn More
+            </AppButton>
+          </div>
+          <div v-if="integration.video">
+            <h3 :class="sectionClasses">Video</h3>
+            <video loop="loop" plays-inline="true" controls="controls">
+              <source :src="integration.video" type="video/mp4" />
+            </video>
+          </div>
+          <div v-if="integration.aticles">
+            <h3 :class="sectionClasses">Articles</h3>
+            <ul>
+              <li v-for="(i, article) in integration.articles" :key="i">
+                <NuxtLink :to="article.link">{{ article.title }}</NuxtLink>
+                <ul>
+                  <li
+                    v-for="(index, author) in article.authors"
+                    :key="`author-${index}`"
+                  >
+                    <author :author="author" />
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+        </div>
+
         <div>
           <NuxtLink
             v-if="prev"
@@ -165,13 +204,15 @@
 import GithubIcon from '~/assets/icons/github.svg?inline'
 import BooksIcon from '~/assets/icons/books.svg?inline'
 import ExternalLinkIcon from '~/assets/icons/external-link.svg?inline'
+import DemoIcon from '~/assets/icons/desktop-computer.svg?inline'
 
 export default {
   transition: 'resources',
   components: {
     GithubIcon,
     BooksIcon,
-    ExternalLinkIcon
+    ExternalLinkIcon,
+    DemoIcon
   },
 
   async asyncData({ params, $content }) {

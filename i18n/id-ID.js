@@ -121,19 +121,19 @@ module.exports = {
     sponsors: {
       title: 'Menjadi Sponsor',
       description:
-        'NuxtJS adalah proyek open source berlisensi MIT dan sepenuhnya gratis untuk digunakan. Namun, jumlah upaya yang diperlukan untuk mempertahankan dan mengembangkan fitur-fitur baru untuk proyek ini tidak berkelanjutan tanpa dukungan keuangan yang tepat. Jika Anda menjalankan bisnis dan menggunakan Nuxt dalam produk yang menghasilkan pendapatan, masuk akal bagi bisnis untuk mensponsori pengembangan Nuxt: memastikan proyek yang diandalkan produk Anda tetap sehat dan dipelihara secara aktif. Ini juga dapat membantu pemaparan Anda di komunitas Vue/Nuxt dan membuatnya lebih mudah untuk menarik pengembang Vue/Nuxt. Jika Anda adalah pengguna individu dan telah menikmati produktivitas menggunakan Nuxt, pertimbangkan untuk memberi donasi sebagai tanda penghargaan.',
-      become_a_sponsor: 'Become a sponsor'
+        'NuxtJS adalah proyek sumber terbuka berlisensi MIT dan sepenuhnya gratis untuk digunakan. Namun, jumlah upaya yang diperlukan untuk mempertahankan dan mengembangkan fitur-fitur baru untuk proyek ini tidak berkelanjutan tanpa dukungan keuangan yang tepat. Jika Anda menjalankan bisnis dan menggunakan Nuxt dalam produk yang menghasilkan pendapatan, masuk akal bagi bisnis untuk mensponsori pengembangan Nuxt: memastikan proyek yang diandalkan produk Anda tetap sehat dan dipelihara secara aktif. Ini juga dapat membantu pemaparan Anda di komunitas Vue/Nuxt dan membuatnya lebih mudah untuk menarik pengembang Vue/Nuxt. Jika Anda adalah pengguna individu dan telah menikmati produktivitas menggunakan Nuxt, pertimbangkan untuk memberi donasi sebagai tanda penghargaan.',
+      become_a_sponsor: 'Menjadi sponsor'
     },
     newsletter: {
       title: 'Buletin {nuxt}',
       description:
         'Dapatkan berita Nuxt terbaru ke kotak masuk Anda, dikuratori oleh tim NuxtJS.',
       form: {
-        email: 'Alamat Email',
+        email: 'Alamat Surel',
         subscribing: 'Berlangganan...',
         subscribe: 'Langganan',
         subscribed_messages: {
-          pre: 'Email untuk mengonfirmasi langganan Anda telah dikirim',
+          pre: 'Pesan untuk mengonfirmasi langganan Anda telah dikirim',
           post: '💚'
         }
       }
@@ -242,7 +242,7 @@ module.exports = {
     description:
       '{team} kami sekarang menawarkan layanan konsultasi resmi untuk aplikasi NuxtJS Anda. {Break} Kami menawarkan layanan berbeda tergantung kebutuhan Anda, dari dukungan teknis hingga pengembangan kustom. Berharap balasan dalam satu hari kerja, kami dapat menandatangani NDA khusus dan Anda bisa mendapatkan pengembalian dana penuh jika Anda tidak puas dengan layanan kami.',
     technical: {
-      title: 'Technical support',
+      title: 'Dukungan teknis',
       description:
         'Dapatkan audit proyek, penerapan aplikasi, pengembangan kustom, dan dukungan teknis dari tim NuxtJS.',
       start: 'Memulai obrolan',
@@ -332,9 +332,28 @@ module.exports = {
       concepts: 'Konsep',
       features: 'Fitur',
       'directory-structure': 'Struktur Direktori',
-      'configuration-glossary': 'Konfigurasi Glossary',
-      'internals-glossary': 'Internal Glossary',
-      'components-glossary': 'Komponen Glossary'
+      'configuration-glossary': 'Konfigurasi Glosarium',
+      'internals-glossary': 'Internal Glosarium',
+      'components-glossary': 'Komponen Glosarium'
+    }
+  },
+  footer: {
+    links: {
+      discover: {
+        title: 'Menemukan',
+        design: 'Sumber daya desain',
+        team: 'Tim sedunia',
+        blog: 'Blog'
+      },
+      follow: {
+        title: 'Ikuti'
+      },
+      support: {
+        title: 'Dukungan',
+        sponsorNuxt: 'Sponsor NuxtJS',
+        shop: 'Toko NuxtJS',
+        consulting: 'Konsultasi NuxtJS'
+      }
     }
   },
   cookies: {

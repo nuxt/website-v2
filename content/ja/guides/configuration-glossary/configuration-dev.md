@@ -1,22 +1,22 @@
 ---
-title: 'The dev Property'
-description: Define the development or production mode.
+title: 'dev プロパティ'
+description: '開発モードかプロダクションモードかを指定します'
 menu: dev
 category: configuration-glossary
 position: 6
 ---
 
-- Type: `Boolean`
-- Default: `true`
+- 型: `Boolean`
+- デフォルト: `true`
 
-> Define the development or production mode of Nuxt.js.
+> 開発モードかプロダクションモードかを指定します。
 
-This property is overwritten by the nuxt commands:
+このプロパティは nuxt コマンドによって上書きされます:
 
-- `dev` is forced to `true` with `nuxt`
-- `dev` is forced to `false` with `nuxt build`, `nuxt start` and `nuxt generate`
+- `nuxt` コマンドを使う場合は `dev` は強制的に `true` になります
+- `nuxt build`、`nuxt start` そして `nuxt generate` を使う場合は `dev` は強制的に `false` になります
 
-This property should be used when using [Nuxt.js programmatically](/guides/internals-glossary/nuxt):
+このプロパティは [Nuxt.js をプログラムで使う](/guides/internals-glossary/nuxt)ときに設定します:
 
 ```js{}[nuxt.config.js]
 export default {
@@ -29,17 +29,17 @@ const { Nuxt, Builder } = require('nuxt')
 const app = require('express')()
 const port = process.env.PORT || 3000
 
-// We instantiate Nuxt.js with the options
+// オプションを使って Nuxt.js をインスタンス化する
 const config = require('./nuxt.config.js')
 const nuxt = new Nuxt(config)
 app.use(nuxt.render)
 
-// Build only in dev mode
+// 開発モードのときのみビルドする
 if (config.dev) {
   new Builder(nuxt).build()
 }
 
-// Listen the server
+// サーバーを Listen する
 app.listen(port, '0.0.0.0').then(() => {
   console.log(`Server is listening on port: ${port}`)
 })

@@ -12,12 +12,9 @@
             <h2
               class="text-2xl xl:text-4xl text-light-onSurfacePrimary dark:text-dark-onSurfacePrimary font-light leading-normal mb-6 pt-4"
             >
-              <nuxt-link
-to="/resources/integrations"
-class="lg:hidden"
->
-Integrations
-</nuxt-link>
+              <nuxt-link to="/resources/integrations" class="lg:hidden">
+                Integrations
+              </nuxt-link>
               <span class="lg:hidden"> / </span>
               {{ $integrations.formatCategory($route.params.category) }}
               <div

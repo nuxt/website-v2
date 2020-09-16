@@ -4,6 +4,8 @@ description: O diretório components contém seus componentes Vue.js. Os compone
 position: 3
 category: directory-structure
 csb_link: https://codesandbox.io/embed/github/nuxt-academy/guides-examples/tree/master/04_directory_structure/03_components?fontsize=14&hidenavigation=1&theme=dark
+img: /guides/components.png
+imgAlt: nuxt components module
 questions:
   - question:
     answers:
@@ -74,6 +76,8 @@ Veja o capítulo sobre [fetch()](/guides/features/data-fetching#the-fetch-method
 </base-alert>
 
 ## Descoberta de componentes
+
+<app-modal :src="img" :alt="imgAlt"></app-modal>
 
 A partir de `v2.13`, Nuxt pode importar automaticamente seus componentes quando usados ​​em seus templates, para ativar este recurso, defina`components: true` em sua configuração:
 

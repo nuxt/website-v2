@@ -1,23 +1,23 @@
 module.exports = {
   common: {
-    an_error_occurred: 'An error occurred',
-    page_not_found: 'Page not found',
+    an_error_occurred: 'Произошла ошибка',
+    page_not_found: 'Страница не найдена',
     please_define_title: 'Please define a title in the front matter',
     please_define_description:
       'Please define a description in the front matter',
-    search: 'Поиск ("/" to focus)',
+    search: 'Поиск ("/" - фокус)',
     version: 'Версия'
   },
   iso: 'ru',
 
   links: {
-    download: 'Download',
-    live_edit: 'Live Edit'
+    download: 'Скачать',
+    live_edit: 'Пробовать вживую'
   },
   header: {
     links: [
       {
-        name: 'Guides',
+        name: 'Руководства',
         slug: 'guides',
         type: 'newDocs',
         routeName: 'guides-book-slug'
@@ -35,7 +35,7 @@ module.exports = {
         routeName: 'section-slug'
       },
       {
-        name: 'Examples',
+        name: 'Примеры',
         slug: 'examples',
         type: 'dynamic',
         routeName: 'section-slug'
@@ -47,18 +47,18 @@ module.exports = {
         routeName: 'section-slug'
       },
       {
-        name: 'Resources',
+        name: 'Ресурсы',
         slug: 'resources',
         type: 'static'
       },
       {
-        name: 'Blog',
+        name: 'Блог',
         slug: 'blog',
         type: 'static'
       }
     ],
     search: {
-      placeholder: 'Search ("/" to focus)'
+      placeholder: 'Поиск ("/" - фокус)'
     }
   },
   homepage: {
@@ -68,13 +68,13 @@ module.exports = {
         'Nuxt.js — это минималистичный фреймворк для создания приложений на Vue.js с серверным рендерингом, разделением кода, горячей заменой модулей, статической генерацией и другими крутыми штуками!'
     },
     welcome: {
-      title: 'The Intuitive {br} {frameworkType} Framework',
+      title: 'Интуитивно понятный {br} {frameworkType} фреймворк',
       description:
-        'Build your next Vue.js application with confidence using NuxtJS. An {openSource} framework making web development simple and powerful.',
-      openSource: 'open source',
+        'Постройте ваше следующее Vue.js приложение с простотой и уверенностью, используя NuxtJS. {openSource} фреймворк который делает разработку простой и мощной.',
+      openSource: 'Open source',
       get_started: 'начало работы',
-      get_updates: 'Get NuxtJS updates to your inbox each month',
-      video: 'Video produced by {company}, download their free {cheatSheet}',
+      get_updates: 'Получайте новости о NuxtJS на почту каждый месяц.',
+      video: 'Видео создано команией {company}, скачайте их шпаргалку {cheatSheet}',
       cheatSheet: 'Шпаргалка Nuxt.'
     },
     why: {

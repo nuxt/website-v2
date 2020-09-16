@@ -95,7 +95,7 @@ Learn more about the different context keys in our [Internals Glossary](/guides/
 
 ### Using page parameters for your API query
 
-The context directly exposes possible dynamic parameters of the route via `context.params`. In the following example, we call an API via the `nuxt/http` module using a dynamic page parameter as part of the URL. Modules, like the [nuxt/http](https://http.nuxtjs.org/) module, can expose own functions which are then available through the [context.app](http://context.app) object.
+The context directly exposes possible dynamic parameters of the route via `context.params`. In the following example, we call an API via the `nuxt/http` module using a dynamic page parameter as part of the URL. Modules, like the [nuxt/http](https://http.nuxtjs.org/) module, can expose own functions which are then available through the `context.app` object.
 
 Also, we wrap the API call in a `try/catch` statement to handle potential errors. With the `context.error` function, we can directly show Nuxt's error page and pass in the occurred error.
 
@@ -134,7 +134,7 @@ export default {
 }
 ```
 
-Want to use query parameters instead? You then use [context.query.id](http://context.query.id) then.
+Want to use query parameters instead? You then use `context.query.id` then.
 
 ### Redirecting users & accessing the store
 

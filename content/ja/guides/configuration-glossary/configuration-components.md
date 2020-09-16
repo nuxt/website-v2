@@ -1,20 +1,20 @@
 ---
-title: 'The components Property'
-description: 'Nuxt.js 2.13+ can scan and auto import your components using @nuxt/components module'
+title: 'components プロパティ'
+description: 'Nuxt.js v2.13 以上では @nuxt/components モジュールを使ってコンポーネントのスキャンと自動インポートができます'
 menu: components
 category: configuration-glossary
 position: 5
 ---
 
-> Nuxt.js 2.13+ can scan and auto import your components.
+> Nuxt.js v2.13 以上ではコンポーネントのスキャンと自動インポートができます。
 
-- Type: `Boolean` or `Object`
-- Default: `false`
+- 型: `Boolean` または `Object`
+- デフォルト: `false`
 
-When set to `true` or using an object, it will include the [nuxt/components](https://github.com/nuxt/components) dependencies and auto import your components (defined in `~/components`) when you use them in your templates.
+`true` を設定するかオブジェクトを使うと、テンプレートでコンポーネントを使用する際に [nuxt/components](https://github.com/nuxt/components) モジュールを使って（`~/components` で定義された）コンポーネントを自動的にインポートします。
 
 <base-alert type="info">
 
-Please refer to [nuxt/components](https://github.com/nuxt/components) repository for usage and options.
+使い方とオプションについては [nuxt/components](https://github.com/nuxt/components) レポジトリを参照してください。
 
 </base-alert>

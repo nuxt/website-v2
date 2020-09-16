@@ -7,7 +7,7 @@
       :key="`${item.title}-${i}`"
       class="light:bg-light-surface text-center dark:bg-dark-surface rounded p-6 light:hover:bg-gray-200 dark:hover:bg-gray-800 cursor-pointer transition-colors duration-300 ease-linear"
     >
-      <NuxtLink :to="`/with/${item.name}`">
+      <NuxtLink :to="`/resources/integrations/with/${item.name}`">
         <img
           v-if="item.logo"
           :src="item.logo"
@@ -28,6 +28,13 @@
         <h3 class="text-xl font-semibold py-2">
           {{ item.name }}
         </h3>
+        <span
+          v-for="label in item.labels"
+          :key="label"
+          class="text-xs bg-gray-600 text-white py-1 mr-1 px-1 rounded align-middle mb-1 inline-block"
+        >
+          {{ label }} {{ item.type }}
+        </span>
         <p class="text-md text-gray-600">
           {{ item.description }}
         </p>

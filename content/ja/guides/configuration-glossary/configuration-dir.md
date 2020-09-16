@@ -1,13 +1,13 @@
 ---
-title: 'The dir Property'
-description: Define the custom directories for your Nuxt.js application
+title: 'dir プロパティ'
+description: 'カスタムディレクトリを定義します'
 menu: dir
 category: configuration-glossary
 position: 7
 ---
 
-- Type: `Object`
-- Default:
+- 型: `Object`
+- デフォルト:
 
 ```js
 {
@@ -21,7 +21,7 @@ position: 7
 }
 ```
 
-> Define the custom directories for your Nuxt.js application
+> カスタムディレクトリを定義します
 
 ```js{}[nuxt.config.js]
 export default {

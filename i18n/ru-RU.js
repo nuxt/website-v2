@@ -104,17 +104,17 @@ module.exports = {
       ssr: {
         title: 'Server Side Rendered',
         description:
-          'The most popular mode for Nuxt. With SSR, also called "universal" or "isomorphic" mode, a Node.js server will be used to deliver HTML based on your Vue components to the client instead of the pure javascript. Using SSR will lead to a large SEO boost, better UX and more opportunities (compared to a traditional Vue SPA).{break}Because implementing SSR on your own can be really tedious, Nuxt.js gives you full support out of the box and will take care of common pitfalls.'
+          'Наиболее популярный режим в Nuxt. В режиме SSR, также именуемом "универсальный" или "изоморфный", сервер Node.js будет рендерить HTML перед отправкой на клиент на основе ваших Vue компонентов, вместо отрисовки на чистом javascript. Использование режима SSR улучшает работу с SEO, UX и даёт множество других возможностей (в сравнении с традиционным SPA клиентом на Vue). Самостоятельная реализация рендеринга на сервере может стать утомительной задачей, поэтому Nuxt.js предоставляет её полную поддержку из коробки и обходит многие подводные камни.'
       },
       spa: {
         title: 'Single Page Application (SPA)',
         description:
-          "Don't need SSR or Static Site Generation but still want to profit from the benefits that Nuxt provides? Are you slowly transitioning your app and want to start lightweight? Then the traditional SPA mode will likely be your choice. The outcome will be a typical Vue SPA as you know it but influenced by your Nuxt configuration and the framework itself."
+          "Не нужен SSR или статическая генерация, но все же хотите пользоваться удобством разработки с Nuxt? Вы переводите свое приложение на Nuxt и хотите начать с малого? Тогда SPA будет для вас лучшим выбором. На выходе вы получите обычное Vue SPA, но с использованием возможностей Nuxt."
       },
       ssg: {
         title: 'Statically Generated',
         description:
-          'Static Site Generation is a very hot topic right now (aka JAMStack). Instead of switching to another framework and spending time to get used to it, why not kill two birds with one stone? {proverbial} Nuxt.js supports generating a static website based on your Vue application. It is the "best of both worlds" as you don\'t need a server but still have SEO benefits because Nuxt will pre-render all pages and include the necessary HTML. Also, you can deploy the resulting page easily to Netlify or GitHub pages.',
+          'Генерация статических сайтов (JAMStack) - очень горячая тема на сегодняшний день. Вместо того, чтобы сменить фреймворк и потратить время на его изучение, почему не убить двух зайцев одновременно? (как гласит поговорка о 🐇🐇). Nuxt.js позволяет сгенерировать статический сайт на основании вашего Vue-приложения. Получаем идеальное сочетание: вам больше не нужен сервер, однако будет работать SEO, так как Nuxt создаст все необходимые страницы заранее. Также, вы сможете без проблем опубликовать ваш проект на Netlify или GitHub pages.',
         proverbial: 'only proverbial'
       }
     },
@@ -125,15 +125,15 @@ module.exports = {
       become_a_sponsor: 'Стань спонсором'
     },
     newsletter: {
-      title: '{nuxt} Newsletter',
+      title: '{nuxt} Рассылка',
       description:
-        'Get the latest Nuxt news to your inbox, curated by the NuxtJS team.',
+        'Получай последние, отобранные командой NuxtJS новости на почту.',
       form: {
         email: 'Email',
-        subscribing: 'Subscribing...',
-        subscribe: 'Subscribe',
+        subscribing: 'Подписываюсь...',
+        subscribe: 'Подписаться',
         subscribed_messages: {
-          pre: 'An email to confirm your subscription has been sent to',
+          pre: 'Письмо для подтверждения подписки было отправлено на',
           post: '💚'
         }
       }
@@ -141,15 +141,15 @@ module.exports = {
   },
   design: {
     meta: {
-      title: 'NuxtJS Design',
+      title: 'NuxtJS Дизайн',
       description:
-        'Download NuxtJS design resources (SVG, icons, emoji and favicon).'
+        'Скачайте дизайнерские файлы NuxtJS (SVG, иконки, emoji и favicon).'
     },
-    title: '{nuxt} Design',
+    title: '{nuxt} Дизайн',
     description:
-      'NuxtJS is an MIT licensed open source project and completely free to use. {break} You can freely use our logos as long as you mention NuxtJS and link to nuxtjs.org.',
+      'NuxtJS - это проект с открытым исходным кодом, лицензированный MIT и полностью бесплатный для использования. {break} Вы можете свободно использоваться наши логотипы пока они ссылаются на nuxtjs.org.',
     other_download_message:
-      'You can also download our {favicon} or our {sketch} file.'
+      'Вы также можете скачать {favicon} или {sketch} файл.'
   },
   resources: {
     meta: {
@@ -356,8 +356,8 @@ module.exports = {
     }
   },
   cookies: {
-    consent: 'We use Cookies for user analysis and on-page improvements!',
-    linkLabel: 'Learn about cookies',
-    button: 'Got it'
+    consent: 'Мы используем файлы Cookies для аналитики!',
+    linkLabel: 'Узнать больше о Cookies',
+    button: 'Понятно'
   }
 }

@@ -1,59 +1,59 @@
 ---
 title: Установка
-description: Here, you will find information on setting up and running a Nuxt.js project in 4 steps.
+description: Здесь вы найдете информацию по настройки и запуску Nuxt.js проекта за 4 шага.
 position: 1
 category: get-started
 csb_link: https://codesandbox.io/embed/github/nuxt-academy/guides-examples/tree/master/01_get_started/01_installation?fontsize=14&hidenavigation=1&theme=dark
 ---
 
-## Prerequisites
+## Необходимые условия
 
-Here, you will find information on setting up and running a Nuxt.js project in 4 steps.
+Здесь вы найдете информацию по настройки и запуску Nuxt.js проекта за 4 шага.
 
 <base-alert type="info">
 
-Another way to get started with Nuxt.js is to use [CodeSandbox](https://template.nuxtjs.org) which is a great way for quickly playing around with Nuxt.js and/or sharing your code with other people.
+Другой способ начать работать с Nuxt.js - это использовать [CodeSandbox](https://template.nuxtjs.org), это отличный вариант, чтобы поигать с Nuxt.js и/или поделиться вашим кодом с другими.
 
 </base-alert>
 
 ### Node
 
-[node](https://nodejs.org/en/download/) - at least v8.9.0
+[node](https://nodejs.org/en/download/) - не ниже v8.9.0
 
-_We recommend you have the latest version installed._
+_Мы рекомендуем использовать последнюю доступную версию._
 
-### Text editor
+### Редактор кода
 
-Use whatever you like, but we recommend [VSCode](https://code.visualstudio.com/).
+Используйте тот, который вам нравится, но мы рекомендуем [VSCode](https://code.visualstudio.com/).
 
-### Terminal
+### Терминал
 
-Use whatever you like, but we recommend using VSCode's [integrated terminal](https://code.visualstudio.com/docs/editor/integrated-terminal).
+Используйте тот, который вам нравится, но мы рекомендуем интегрированный в VSCode [терминал](https://code.visualstudio.com/docs/editor/integrated-terminal).
 
-## Starting from scratch
+## Настройка с нуля
 
-Creating a Nuxt.js project from scratch only requires one file and one directory.
+Для создания Nuxt.js проекта с нуля требуется только один файл и одна директория.
 
-In this particular example, we will use the terminal to create the directories and files, but feel free to create them using your editor of choice.
+В этом примере мы будем использовать терминал для создания директорий и файлов, но вы можете создавать их как вам удобно.
 
-### Set up your project
+### Настройка проекта
 
-To get started, create an empty directory with the name of your project and navigate into it:
+Для начала создайте пустую директорию с именем проекта и перейдите в нее:
 
 ```bash
 mkdir <project-name>
 cd <project-name>
 ```
 
-_Replace `<project-name>` with the name of your project._
+_Замените `<project-name>` на имя вашего проекта._
 
-Then create a file named `package.json`:
+Затем создайте файл с именем `package.json`:
 
 ```bash
 touch package.json
 ```
 
-Open the package.json file in your favorite code editor and fill it with this JSON content:
+Откройте файл package.json в вашем редакторе и вставьте такой JSON:
 
 ```json{}[package.json]
 {
@@ -67,15 +67,15 @@ Open the package.json file in your favorite code editor and fill it with this JS
 }
 ```
 
-`scripts` define Nuxt.js commands that will be launched with the command `npm run <command>`.
+В секции `scripts` указаны Nuxt.js команды, которые будут запущены при выполнении `npm run <имя_команды>`.
 
-#### **What is a package.json file?**
+#### **Что такое файл package.json?**
 
-The `package.json` is like the ID card of your project. If you don't know what the `package.json` file is, we highly recommend you to have a quick read on the [NPM documentation](https://docs.npmjs.com/creating-a-package-json-file).
+`package.json` это как паспорт вашего проекта. Если вы хотите больше узнать о файле `package.json`, то мы рекомендуем почитать [документацию NPM](https://docs.npmjs.com/creating-a-package-json-file).
 
-### Install nuxt
+### Установка nuxt
 
-Once the `package.json` has been created, add `nuxt` to your project via `npm` or `yarn` like so below:
+После создания файла `package.json`добавьте `nuxt` в ваш проект используя `npm` или `yarn`:
 
 <code-group>
   <code-block label="Yarn" active>
@@ -94,11 +94,11 @@ npm install nuxt
   </code-block>
 </code-group>
 
-This command will add `nuxt` as a dependency to your project and it will add it to your `package.json` automatically. The `node_modules` directory will also be created which is where all your installed packages and their dependencies are stored.
+Эта команда добавит `nuxt` как зависимость вашего проекта и обновит файл `package.json` автоматически. Директория `node_modules` также будет создана, в ней будут храниться установленные пакеты и их зависимости.
 
 <base-alert type="info">
 
-A `yarn.lock` or `package-lock.json` is also created which ensures a consistent install and compatible dependencies of your packages installed in your project.
+`yarn.lock` или `package-lock.json` также буду созданы для обеспечения совместимости зависимостей вашего проекта.
 
 </base-alert>
 

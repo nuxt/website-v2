@@ -201,15 +201,15 @@ export default {
         file: 'pt-BR.js',
         name: 'Português',
         domain: 'https://pt.nuxtjs.org'
-      }
+      },
       // please leave this commented out until subdomain is live
-      // {
-      //   code: 'fa',
-      //   iso: 'fa-IR',
-      //   file: 'fa-IR.js',
-      //   name: 'Persian',
-      //   domain: 'https://fa.nuxtjs.org'
-      // }
+      {
+        code: 'fa',
+        iso: 'fa-IR',
+        file: 'fa-IR.js',
+        name: 'Persian',
+        domain: 'https://fa.nuxtjs.org'
+      }
       // please leave this commented out until subdomain is live
       // {
       // code: 'tr',

@@ -28,6 +28,13 @@
         <h3 class="text-xl font-semibold py-2">
           {{ item.name }}
         </h3>
+        <span
+          v-for="label in item.labels"
+          :key="label"
+          class="text-xs bg-gray-600 text-white py-1 mr-1 px-1 rounded align-middle mb-1 inline-block"
+        >
+          {{ label }} {{ item.type }}
+        </span>
         <p class="text-md text-gray-600">
           {{ item.description }}
         </p>

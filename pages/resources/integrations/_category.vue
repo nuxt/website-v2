@@ -49,11 +49,12 @@ export default {
       .only([
         'name',
         'title',
-        'logo',
         'icon',
         'image',
         'categories',
-        'description'
+        'description',
+        'labels',
+        'type'
       ])
       .fetch()
 

@@ -81,7 +81,7 @@ export default {
 
 <base-alert>
 
-Full static works only with `mode: 'universal'` (which is the default mode) and `target: 'static'`. Please note that full static is not available when using `mode: 'spa'`
+Full static works only with `mode: 'universal'` (which is the default mode) and `target: 'static'`. Please note that full static is not available when using `mode: 'spa'` or `ssr: 'false'`
 
 </base-alert>
 

@@ -148,7 +148,7 @@ module.exports = {
     },
     title: '{nuxt} Conception',
     description:
-      'NuxtJS est un projet open source sous licence MIT et totalement gratuit d\'utilisation. {break} Vous pouvez utiliser librement nos logos tant que vous mentionnez NuxtJS ainsi qu\'un lien vers nuxtjs.org.',
+      "NuxtJS est un projet open source sous licence MIT et totalement gratuit d'utilisation. {break} Vous pouvez utiliser librement nos logos tant que vous mentionnez NuxtJS ainsi qu'un lien vers nuxtjs.org.",
     other_download_message:
       'Vous pouvez également télécharger notre {favicon} ou notre fichier {sketch}.'
   },
@@ -156,11 +156,11 @@ module.exports = {
     meta: {
       title: 'Ressources NuxtJS',
       description:
-        'Découvrez un panel de ressources réalisées par nos partenaires. En utilisant ces liens de ressources d\'affiliation, vous nous aidez à maintenir et développer le Framework Open Source.'
+        "Découvrez un panel de ressources réalisées par nos partenaires. En utilisant ces liens de ressources d'affiliation, vous nous aidez à maintenir et développer le Framework Open Source."
     },
     title: '{nuxt} Ressources',
     description:
-      'Découvrez un panel de ressources réalisées par nos partenaires. En utilisant ces liens de ressources d\'affiliation, vous nous aidez à maintenir et développer le Framework Open Source.',
+      "Découvrez un panel de ressources réalisées par nos partenaires. En utilisant ces liens de ressources d'affiliation, vous nous aidez à maintenir et développer le Framework Open Source.",
     themes: {
       title: 'Thèmes'
     },
@@ -181,13 +181,13 @@ module.exports = {
   },
   team: {
     meta: {
-      title: 'L\'équipe NuxtJS',
+      title: "L'équipe NuxtJS",
       description:
-        'NuxtJS a une équipe très active et engagée qui s\'efforce constamment de faire avancer Nuxt.'
+        "NuxtJS a une équipe très active et engagée qui s'efforce constamment de faire avancer Nuxt."
     },
-    title: 'L\'équipe {nuxt}',
+    title: "L'équipe {nuxt}",
     description:
-      'Le développement de NuxtJS et de son écosystème est guidé par une équipe internationale. Nous avons une équipe très active et engagée qui s\'efforce constamment de faire avancer Nuxt.'
+      "Le développement de NuxtJS et de son écosystème est guidé par une équipe internationale. Nous avons une équipe très active et engagée qui s'efforce constamment de faire avancer Nuxt."
   },
   themes: {
     meta: {
@@ -222,7 +222,7 @@ module.exports = {
     },
     title: 'Sponsor de développement {nuxt}',
     description:
-      'NuxtJS est un projet open source sous licence MIT et totalement gratuit d\'utilisation.{break} Cependant, les efforts nécessaires pour maintenir et développer de nouvelles fonctionnalités pour le projet ne sont pas durables sans un soutien financier approprié.{break} Vous pouvez soutenir le développement NuxtJS via les méthodes suivantes:',
+      "NuxtJS est un projet open source sous licence MIT et totalement gratuit d'utilisation.{break} Cependant, les efforts nécessaires pour maintenir et développer de nouvelles fonctionnalités pour le projet ne sont pas durables sans un soutien financier approprié.{break} Vous pouvez soutenir le développement NuxtJS via les méthodes suivantes:",
     donations: {
       title: 'Dons uniques',
       description: 'Nous acceptons les dons via ces canaux'
@@ -230,7 +230,7 @@ module.exports = {
     pledges: {
       title: 'Engagements récurrents',
       description:
-        'Les promesses récurrentes s\'accompagnent d\'avantages exclusifs, par exemple avoir votre nom répertorié dans le référentiel NuxtJS GitHub, ou placer le logo de votre entreprise sur ce site Web. Devenez un nuxter ou un sponsor via {opencollective} (entre dans un fonds avec des modèles de dépenses transparents soutenant les efforts et les événements de la communauté).'
+        "Les promesses récurrentes s'accompagnent d'avantages exclusifs, par exemple avoir votre nom répertorié dans le référentiel NuxtJS GitHub, ou placer le logo de votre entreprise sur ce site Web. Devenez un nuxter ou un sponsor via {opencollective} (entre dans un fonds avec des modèles de dépenses transparents soutenant les efforts et les événements de la communauté)."
     },
     become_a_sponsor: 'Devenez un sponsor'
   },
@@ -242,11 +242,11 @@ module.exports = {
     },
     title: 'Conseil du support {nuxt}',
     description:
-      'Notre équipe {nuxt} propose désormais des services de conseil officiels pour vos applications NuxtJS.{break} Nous proposons différents services en fonction de vos besoins, du support technique au développement sur mesure. Attendez-vous à une réponse dans un délai d\'un jour ouvrable, nous pouvons signer une NDA personnalisée et vous pouvez obtenir un remboursement complet si vous n\'êtes pas satisfait de notre service.',
+      "Notre équipe {nuxt} propose désormais des services de conseil officiels pour vos applications NuxtJS.{break} Nous proposons différents services en fonction de vos besoins, du support technique au développement sur mesure. Attendez-vous à une réponse dans un délai d'un jour ouvrable, nous pouvons signer une NDA personnalisée et vous pouvez obtenir un remboursement complet si vous n'êtes pas satisfait de notre service.",
     technical: {
       title: 'Le support technique',
       description:
-        'Obtenez des audits de projet, des déploiements d\'applications, un développement personnalisé et un support technique de la part de l\'équipe NuxtJS.',
+        "Obtenez des audits de projet, des déploiements d'applications, un développement personnalisé et un support technique de la part de l'équipe NuxtJS.",
       start: 'Démarrer le chat',
       partner: {
         pre: 'Nous nous sommes associés',
@@ -257,10 +257,10 @@ module.exports = {
     entreprise: {
       title: 'pour entreprise',
       description:
-        'NuxtJS et les mainteneurs de milliers d\'autres packages travaillent avec Tidelift pour proposer un abonnement d\'entreprise qui couvre l\'ensemble de l\'open source que vous utilisez.{break} Si vous voulez la flexibilité de l\'open source et la confiance des logiciels de qualité commerciale, c\'est pour vous.',
+        "NuxtJS et les mainteneurs de milliers d'autres packages travaillent avec Tidelift pour proposer un abonnement d'entreprise qui couvre l'ensemble de l'open source que vous utilisez.{break} Si vous voulez la flexibilité de l'open source et la confiance des logiciels de qualité commerciale, c'est pour vous.",
       partner: {
         pre: 'Disponible dans le cadre de',
-        post: 'l\'abonnement.'
+        post: "l'abonnement."
       },
       learn_more: 'En savoir plus',
       request_a_demo: 'Demander une démonstration'
@@ -270,7 +270,7 @@ module.exports = {
     meta: {
       title: 'Blog NuxtJS',
       description:
-        'Découvrez les articles de l\'équipe et de la communauté NuxtJS, conseils et astuces inclus!'
+        "Découvrez les articles de l'équipe et de la communauté NuxtJS, conseils et astuces inclus!"
     },
     title: 'Blog {nuxt}',
     description:
@@ -340,8 +340,28 @@ module.exports = {
       'components-glossary': 'Composants'
     }
   },
+  footer: {
+    links: {
+      discover: {
+        title: 'Discover',
+        design: 'Design resources',
+        team: 'A worldwide team',
+        blog: 'Blog'
+      },
+      follow: {
+        title: 'Follow'
+      },
+      support: {
+        title: 'Support',
+        sponsorNuxt: 'Sponsor NuxtJS',
+        shop: 'The NuxtJS Shop',
+        consulting: 'NuxtJS Consulting'
+      }
+    }
+  },
   cookies: {
-    consent: 'Nous utilisons des cookies pour l\'analyse des utilisateurs et les améliorations sur la page!',
+    consent:
+      "Nous utilisons des cookies pour l'analyse des utilisateurs et les améliorations sur la page!",
     linkLabel: 'En savoir plus sur les cookies',
     button: 'Accepter'
   }

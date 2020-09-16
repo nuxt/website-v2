@@ -115,11 +115,11 @@ Now `$hello(msg)` can be used from `context`, via `this` in Vue instances and vi
 
 ```js
 export default {
-  mounted () {
+  mounted() {
     this.$hello('mounted')
     // will console.log 'Hello mounted!'
   },
-  asyncData ({ $hello ) {
+  asyncData({ $hello }) {
     $hello('asyncData')
   }
 }

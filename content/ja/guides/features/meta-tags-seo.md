@@ -209,15 +209,15 @@ export default {
 </style>
 ```
 
-## Resource Hints
+## リソースヒント
 
-初期ページの読み込み時間をより早くするために、prefetch と preload のリンクを追加しました。
+初期ページの読み込み時間をより早くするために、プリフェッチ と プリロード のリンクを追加しました。
 
 多くのページとルートがある場合にのみ、このオプションを無効にすると良いでしょう。
 
 <base-alert type="next">
 
-[Resource Hints](/guides/configuration-glossary/configuration-render#resourcehints)
+[リソースヒント](/guides/configuration-glossary/configuration-render#resourcehints)
 
 </base-alert>
 

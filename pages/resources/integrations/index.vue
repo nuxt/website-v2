@@ -4,12 +4,10 @@
       <div class="flex flex-wrap justify-between mb-8">
         <div class="lg:w-6/12 lg:text-left text-center p-4 sm:p-0">
           <i18n
-            path="resources.title"
+            path="resources.integrations.title"
             tag="h1"
             class="text-3xl xl:text-4xl text-light-onSurfacePrimary dark:text-dark-onSurfacePrimary font-medium leading-normal mb-6 lg:pt-4"
           >
-            <!-- {{ $t('resources.title') }} -->
-            Integrations
             <template v-slot:nuxt>
               <AppTitle />
             </template>
@@ -17,7 +15,7 @@
           <h3
             class="xl:text-lg text-light-onSurfaceSecondary dark:text-dark-onSurfaceSecondary font-medium leading-relaxed mb-6"
           >
-            {{ $t('resources.description') }}
+            {{ $t('resources.integrations.description') }}
           </h3>
         </div>
         <IntegrationsIllustration

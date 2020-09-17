@@ -165,6 +165,11 @@ module.exports = {
     },
     videos: {
       title: 'Video Courses'
+    },
+    integrations: {
+      title: '{nuxt} Integrations',
+      description:
+        'Nuxt.js gives you a wide variety of modules and integrations that you can easily plug into your application. From dev tools to ecommerce, performance to analytics and so much more. Checkout out our official modules, community modules and external modules and integrations complete with details and links to help you choose the right module or integration for your project.'
     }
   },
   shop: {

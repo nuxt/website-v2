@@ -1,6 +1,6 @@
 ---
 title: Установка
-description: Здесь вы найдете информацию по настройки и запуску Nuxt.js проекта за 4 шага.
+description: Здесь вы найдете информацию по настройке и запуску Nuxt.js проекта за 4 шага.
 position: 1
 category: get-started
 csb_link: https://codesandbox.io/embed/github/nuxt-academy/guides-examples/tree/master/01_get_started/01_installation?fontsize=14&hidenavigation=1&theme=dark

@@ -102,17 +102,17 @@ module.exports = {
     modes: {
       title: '{nuxt} Рендеринг',
       ssr: {
-        title: 'Server Side Rendered',
+        title: 'Рендеринг на сервере (SSR)',
         description:
           'Наиболее популярный режим в Nuxt. В режиме SSR, также именуемом "универсальный" или "изоморфный", сервер Node.js будет рендерить HTML перед отправкой на клиент на основе ваших Vue компонентов, вместо отрисовки на чистом javascript. Использование режима SSR улучшает работу с SEO, UX и даёт множество других возможностей (в сравнении с традиционным SPA клиентом на Vue). Самостоятельная реализация рендеринга на сервере может стать утомительной задачей, поэтому Nuxt.js предоставляет её полную поддержку из коробки и обходит многие подводные камни.'
       },
       spa: {
-        title: 'Single Page Application (SPA)',
+        title: 'Одностраничное приложение (SPA)',
         description:
           "Не нужен SSR или статическая генерация, но все же хотите пользоваться удобством разработки с Nuxt? Вы переводите свое приложение на Nuxt и хотите начать с малого? Тогда SPA будет для вас лучшим выбором. На выходе вы получите обычное Vue SPA, но с использованием возможностей Nuxt."
       },
       ssg: {
-        title: 'Statically Generated',
+        title: 'Статическая генерация',
         description:
           'Генерация статических сайтов (JAMStack) - очень горячая тема на сегодняшний день. Вместо того, чтобы сменить фреймворк и потратить время на его изучение, почему не убить двух зайцев одновременно? (как гласит поговорка о 🐇🐇). Nuxt.js позволяет сгенерировать статический сайт на основании вашего Vue-приложения. Получаем идеальное сочетание: вам больше не нужен сервер, однако будет работать SEO, так как Nuxt создаст все необходимые страницы заранее. Также, вы сможете без проблем опубликовать ваш проект на Netlify или GitHub pages.',
         proverbial: 'only proverbial'
@@ -153,154 +153,154 @@ module.exports = {
   },
   resources: {
     meta: {
-      title: 'NuxtJS Resources',
+      title: 'Ресурсы NuxtJS',
       description:
-        'Discover a panel of resources made by our partners. By using thoses affiliate resources links, you are helping us to maintain and develop the Open Source Framework.'
+        'Ознакомьтесь с набором ресурсов сделанных нашими партнерами. Используя эти партнерские ссылки, вы поддерживаете разработку и сопровождение этого фреймворка с открытым исходным кодом.'
     },
     title: '{nuxt} Resources',
     description:
-      'Discover a panel of resources made by our partners. By using thoses affiliate resources links, you are helping us to maintain and develop the Open Source Framework.',
+      'Ознакомьтесь с набором ресурсов сделанных нашими партнерами. Используя эти партнерские ссылки, вы поддерживаете разработку и сопровождение этого фреймворка с открытым исходным кодом',
     themes: {
-      title: 'Themes'
+      title: 'Темы'
     },
     videos: {
-      title: 'Video Courses'
+      title: 'Видео курсы'
     }
   },
   shop: {
     meta: {
-      title: 'The NuxtJS Shop',
+      title: 'Магазин NuxtJS',
       description:
-        'You want to support the NuxtJS project and show your love to the rest of the community? Here our products with the best quality ever!'
+        'Хотите поддержать проект NuxtJS и выразить благодарность его сообществу? Вот наши продукты наилучшего качества!'
     },
-    title: 'The {nuxt} Shop',
+    title: 'Магазин {nuxt}',
     description:
-      'You want to support the NuxtJS project and show your love to the rest of the community?{break} Here our products with the best quality ever!',
-    button: 'Coming soon'
+      'Хотите поддержать проект NuxtJS и выразить благодарность его сообществу?{break} Вот наши продукты наилучшего качества!',
+    button: 'Ожидается'
   },
   team: {
     meta: {
-      title: 'NuxtJS Team',
+      title: 'Команда NuxtJS',
       description:
-        'NuxtJS has a very active and engaged team that is constantly striving to push Nuxt forward.'
+        'У проекта NuxtJS есть очень активная и сплоченная команда которая постоянно стремится развивать его дальше.'
     },
-    title: '{nuxt} Team',
+    title: 'Команда {nuxt}',
     description:
-      'The development of NuxtJS and its ecosystem is guided by an international team. We have a very active and engaged team that is constantly striving to push Nuxt forward.'
+      'Команда разработки NuxtJS и его экосистемы основана на международной команде. У проекта NuxtJS есть очень активная и сплоченная команда которая постоянно стремится развивать его дальше.'
   },
   themes: {
     meta: {
-      title: 'NuxtJS Themes',
+      title: 'Темы NuxtJS',
       description:
-        'With the themes below built by our partners from Creative Tim and Theme Forest you can see how a real world application is built, with Nuxt.js stack behind.'
+        'Со следующими темами оформления разработанными нашими партнерами из Creative Tim и Theme Forest, вы можете увидеть как строится настоящее приложение основанное на Nuxt.js.'
     },
     title: '{nuxt} Themes',
     description:
-      'With the themes below built by our partners from Creative Tim and Theme Forest you can see how a real world application is built, with Nuxt.js stack behind.',
-    button: 'GET IT for'
+      'Со следующими темами оформления разработанными нашими партнерами из Creative Tim и Theme Forest, вы можете увидеть как строится настоящее приложение основанное на Nuxt.js.',
+    button: 'КУПИТЬ за'
   },
   'video-courses': {
     meta: {
-      title: 'NuxtJS Video Courses',
+      title: 'Видео курсы NuxtJS',
       description:
-        'With the video courses below created by our partner VueSchool you can discover and learn more about the Nuxt.js Framework.'
+        'Со следующими видео курсами созданными нашим партнером VueSchool, вы можете изучить больше о фреймворке Nuxt.js.'
     },
-    title: '{nuxt} Video Courses',
+    title: 'Видео курсы {nuxt}',
     description:
-      'With the video courses below created by our partner VueSchool you can discover and learn more about the Nuxt.js Framework.',
+      'Со следующими видео курсами созданными нашим партнером VueSchool, вы можете изучить больше о фреймворке Nuxt.js.',
     cta: {
-      discover: 'Discover vueschool',
-      start: 'START COURSE'
+      discover: 'Изучить vueschool',
+      start: 'НАЧАТЬ КУРС'
     }
   },
   sponsor: {
     meta: {
-      title: 'Sponsor NuxtJS Development',
+      title: 'Спонсировать разработку NuxtJS',
       description:
-        'You can support NuxtJS development via different methods and ensure regular updates to the framework.'
+        'Вы можете поддержать разработку NuxtJS разными способами чтобы обеспечить регулярные обновления фреймворка.'
     },
-    title: 'Sponsor {nuxt} Development',
+    title: 'Спонсировать разработку {nuxt}',
     description:
-      'NuxtJS is an MIT licensed open source project and completely free to use.{break} However, the amount of effort needed to maintain and develop new features for the project is not sustainable without proper financial backing.{break} You can support NuxtJS development via the following methods:',
+      'NuxtJS - это проект с открытым исходным кодом, лицензированный MIT и полностью бесплатный для использования.{break} Тем не менее, объем затрат необходимый для поддержания и разработки новых функций, не полностью покрывается нашим финансированием. {break} Вы можете поддержать разработку NuxtJS следующими способами:',
     donations: {
-      title: 'One-time donations',
-      description: 'We accept donations through these channels'
+      title: 'Одноразовые пожертвования',
+      description: 'Мы принимаем донаты на такими способами'
     },
     pledges: {
-      title: 'Recurring Pledges',
+      title: 'Периодические пожертвования',
       description:
-        'Recurring pledges come with exclusive perks, e.g. having your name listed in the NuxtJS GitHub repository, or have your company logo placed on this website. Become a nuxter or sponsor via {opencollective} (goes into a fund with transparent expense models supporting community efforts and events).'
+        'Периодические пожертвования дают взамен эксклюзивные привелегии, например вывод вашего имени в репозитории NuxtJS на GitHub, или вывод логотипа вашей компании на этом сайте. Станьте спонсором через {opencollective} (средства идут в фонд с прозрачными моделями расходов которые поддерживают сообщество и события).'
     },
-    become_a_sponsor: 'Become a sponsor'
+    become_a_sponsor: 'Стать спонсором'
   },
   support: {
     meta: {
-      title: 'The NuxtJS Support',
+      title: 'Поддержка NuxtJS',
       description:
-        'Our NuxtJS team now offers official consulting services for your NuxtJS applications.'
+        'Наша команда NuxtJS предлагает официальный консалтинг для ваших NuxtJS проектов.'
     },
-    title: 'Consulting {nuxt} Support',
+    title: 'Консалтинг поддержка {nuxt}',
     description:
-      'Our {team} now offers official consulting services for your NuxtJS applications.{break} We offer different services depending of your needs, from technical support to custom development. Expect a reply within one business day, we can sign custom NDA and you can get a full refund if you are not satisfied with our service.',
+      'Наша {team} предлагает официальный консалтинг для ваших NuxtJS проектов.{break} Мы предлагаем разные услуги в зависимости от ваших потребностей: от техподдержки до разработки новых решений. Ожидайте ответа в течении одного рабочего дня. Мы можем подписать NDA и вы получите полный возврат среств если наши услуги будут неудовлетворительными.',
     technical: {
-      title: 'Technical support',
+      title: 'Техподдержка',
       description:
-        'Get project audits, app deployments, custom development and technical support from the NuxtJS team.',
-      start: 'Start chat',
+        'Получите аудиты, развертывание, разработку и поддержку вашего проекта от команды NuxtJS.',
+      start: 'Начать чат (англ.)',
       partner: {
-        pre: 'We partnered with',
+        pre: 'Мы договорились с',
         post:
-          'to offer these services so we can focus on helping you as fast as possible.'
+          'чтобы иметь возможность предоставлять эти услуги как можно быстрее.'
       }
     },
     entreprise: {
-      title: 'for enterprise',
+      title: 'для корпораций',
       description:
-        'NuxtJS and the maintainers of thousands of other packages are working with Tidelift to deliver one enterprise subscription that covers all of the open source you use.{break} If you want the flexibility of open source and the confidence of commercial-grade software, this is for you.',
+        'NuxtJS и разработчики тысяч других пакетов работают с Tidelift чтобы предоставить одну корпоративную подписку которая покрывает все открытое ПО которым вы пользуетесь.{break} Если вы хотите гибкость открытого ПО и надежность коммерческого ПО, это для вас.',
       partner: {
-        pre: 'Available as part of the',
-        post: 'subscription.'
+        pre: 'Доступно как часть',
+        post: 'подписки.'
       },
-      learn_more: 'Learn more',
-      request_a_demo: 'Request a demo'
+      learn_more: 'Узнать больше',
+      request_a_demo: 'Запросить демо'
     }
   },
   blog: {
     meta: {
-      title: 'NuxtJS Blog',
+      title: 'Блог NuxtJS',
       description:
-        'Discover articles from the NuxtJS team and NuxtJS Community about NuxtJS, tips and tricks included!'
+        'Изучите статьи от команды и сообщества NuxtJS, включая подсказки и фокусы!'
     },
-    title: '{nuxt} Blog',
+    title: 'Блог {nuxt}',
     description:
-      'Discover articles from the {nuxtTeam} and {nuxtCommunity} about NuxtJS, tips and tricks included!',
-    nuxt_team: 'NuxtJS Team',
-    nuxt_community: 'Nuxt.js Community',
-    contribute: 'Caught a mistake or want to contribute to this blog post?'
+      'Изучите статьи от {nuxtTeam} и {nuxtCommunity} NuxtJS, включая подсказки и фокусы!',
+    nuxt_team: 'команды',
+    nuxt_community: 'сообщества',
+    contribute: 'Нашли ошибку или хотите внести исправление в эту страницу блога?'
   },
   guide: {
     release_notes: 'Замечания о релизе',
-    toc_title: 'On this page'
+    toc_title: 'Содержание'
   },
   quiz: {
-    title: 'Quiz'
+    title: 'Опрос'
   },
   tryNewDocs: {
-    msg1: 'Want to take a look at our new docs? Our ',
-    link: 'new docs',
-    msg2: 'are now in beta. Have fun!'
+    msg1: 'Хотите взглянуть на нашу новую документацию? Наша ',
+    link: 'новая документация',
+    msg2: 'в бета-версии. Развлекайтесь!'
   },
   contribute: {
-    title: 'Contributors',
+    title: 'Помощники',
     docs: 'Обнаружили ошибку или хотите внести свой вклад в документацию?',
-    blog: 'Caught a mistake or want to contribute to this blog post?',
+    blog: 'Обнаружили ошибку или хотите внести свой вклад в страницу блога?',
     edit_on_github: 'Отредактировать эту страницу на GitHub!',
     msg1:
-      'Contribution for this page is now closed. If you would like to contribute please check out our',
-    link: 'new docs'
+      'Изменения на этой странице заблокированы. Если хотите что-то изменить, взгляните на нашу',
+    link: 'новую документацию'
   },
   codeSandbox: {
-    open: 'Open CodeSandbox'
+    open: 'Открыть CodeSandbox'
   },
   content: {
     guide: {
@@ -308,50 +308,50 @@ module.exports = {
       'getting-started': 'Getting Started'
     },
     api: {
-      essential: 'Essential',
-      pages: 'Pages',
-      components: 'Components',
-      utils: 'Utils',
-      configuration: 'Configuration',
-      programmatically: 'Programmatically',
-      internals: 'Internals'
+      essential: 'Основы',
+      pages: 'Страницы',
+      components: 'Компоненты',
+      utils: 'Утилиты',
+      configuration: 'Конфигурация',
+      programmatically: 'Программно',
+      internals: 'Внутренности'
     },
     examples: {
-      essentials: 'Essentials',
-      customization: 'Customization',
-      advanced: 'Advanced'
+      essentials: 'Основы',
+      customization: 'Персонализация',
+      advanced: 'Продвинутые'
     },
     faq: {
-      configuration: 'Configuration',
-      development: 'Development',
-      deployment: 'Deployment'
+      configuration: 'Конфигурация',
+      development: 'Разработка',
+      deployment: 'Развертывание'
     },
     guides: {
-      'get-started': 'Get Started',
-      concepts: 'Concepts',
-      features: 'Features',
-      'directory-structure': 'Directory Structure',
-      'configuration-glossary': 'Configuration Glossary',
-      'internals-glossary': 'Internals Glossary',
-      'components-glossary': 'Components Glossary'
+      'get-started': 'Начало',
+      concepts: 'Концепции',
+      features: 'Функции',
+      'directory-structure': 'Структура директорий',
+      'configuration-glossary': 'Конфигурация',
+      'internals-glossary': 'Внутренности',
+      'components-glossary': 'Компоненты'
     }
   },
   footer: {
     links: {
       discover: {
-        title: 'Discover',
-        design: 'Design resources',
-        team: 'A worldwide team',
-        blog: 'Blog'
+        title: 'Изучить',
+        design: 'Дизайнерские ресурсы',
+        team: 'Международная команда',
+        blog: 'Блог'
       },
       follow: {
-        title: 'Follow'
+        title: 'Следить'
       },
       support: {
-        title: 'Support',
-        sponsorNuxt: 'Sponsor NuxtJS',
-        shop: 'The NuxtJS Shop',
-        consulting: 'NuxtJS Consulting'
+        title: 'Поддержка',
+        sponsorNuxt: 'Спонсорство NuxtJS',
+        shop: 'Магазин NuxtJS',
+        consulting: 'Консалтинг NuxtJS'
       }
     }
   },

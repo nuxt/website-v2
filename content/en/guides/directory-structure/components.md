@@ -97,9 +97,11 @@ components/
 
 ```html{}[layouts/default.vue]
 <template>
-  <TheHeader />
-  <Nuxt />
-  <TheFooter />
+  <div>
+    <TheHeader />
+    <Nuxt />
+    <TheFooter />
+  </div>
 </template>
 ```
 
@@ -107,11 +109,13 @@ components/
 
 To dynamically import a component also known, as lazy loading a component, all you need to do is add the `Lazy` prefix in your templates.
 
-```html{}[layouts.default.vue]
+```html{}[layouts/default.vue]
 <template>
-  <TheHeader />
-  <Nuxt />
-  <LazyTheFooter />
+  <div>
+    <TheHeader />
+    <Nuxt />
+    <LazyTheFooter />
+  </div>
 </template>
 ```
 

@@ -82,7 +82,7 @@ Use the [NuxtLink component](/guides/features/nuxt-components#the-nuxtlink-comp
 
 ```html
 <template>
-  <nuxt-link to="/">Home page</nuxt-link>
+  <NuxtLink to="/">Home page</NuxtLink>
 </template>
 ```
 

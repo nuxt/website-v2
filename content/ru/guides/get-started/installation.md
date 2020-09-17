@@ -53,7 +53,7 @@ _Замените `<project-name>` на имя вашего проекта._
 touch package.json
 ```
 
-Откройте файл package.json в вашем редакторе и вставьте такой JSON:
+Откройте файл package.json в вашем редакторе и вставьте такой JSON код:
 
 ```json{}[package.json]
 {

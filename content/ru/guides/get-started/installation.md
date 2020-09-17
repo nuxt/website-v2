@@ -8,7 +8,7 @@ csb_link: https://codesandbox.io/embed/github/nuxt-academy/guides-examples/tree/
 
 ## Необходимые условия
 
-Здесь вы найдете информацию по настройки и запуску Nuxt.js проекта за 4 шага.
+Здесь вы найдете информацию по настройке и запуску Nuxt.js проекта за 4 шага.
 
 <base-alert type="info">
 

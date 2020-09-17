@@ -89,8 +89,10 @@ export default {
 
 Depois de criar seus componentes no diretório de components, eles estarão disponíveis para serem importados automaticamente.
 
-```html
-components/ TheHeader.vue TheFooter.vue
+```bash
+components/
+  TheHeader.vue
+  TheFooter.vue
 ```
 
 ```html{}[layouts/default.vue]

@@ -127,7 +127,7 @@ module.exports = {
     newsletter: {
       title: '{nuxt} Рассылка',
       description:
-        'Получай последние, отобранные командой NuxtJS новости на почту.',
+        'Получай на почту последние новости, отобранные командой NuxtJS.',
       form: {
         email: 'Email',
         subscribing: 'Подписываем...',

@@ -130,7 +130,7 @@ module.exports = {
         'Получай последние, отобранные командой NuxtJS новости на почту.',
       form: {
         email: 'Email',
-        subscribing: 'Подписываюсь...',
+        subscribing: 'Подписываем...',
         subscribe: 'Подписаться',
         subscribed_messages: {
           pre: 'Письмо для подтверждения подписки было отправлено на',

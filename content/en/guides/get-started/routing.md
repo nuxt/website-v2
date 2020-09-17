@@ -20,25 +20,25 @@ Learn more about [Routing](/guides/features/file-system-routing)
 
 ## Navigation
 
-To navigate between pages of your app, you should use the [NuxtLink](/guides/features/nuxt-components#the-nuxtlink-component) component. This component is included with Nuxt.js and therefore you don't have to import it as you do with other components. It is similar to the HTML `<a>` tag, except that instead of using a `href="/about"` we use `to="/about"`. If you have used `vue-router` before, you can think of the `<NuxtLink>` as a replacement for `<RouterLink>`
+To navigate between pages of your app, you should use the [NuxtLink](/guides/features/nuxt-components#the-nuxtlink-component) component. This component is included with Nuxt.js and therefore you don't have to import it as you do with other components. It is similar to the HTML `<a>` tag, except that instead of using a `href="/about"` we use `to="/about"`. If you have used `vue-router` before, you can think of the `<nuxt-link>` as a replacement for `<RouterLink>`
 
 A simple link to the `index.vue` page in your `pages` folder:
 
 ```html{}[pages/index.vue]
 <template>
-  <NuxtLink to="/">Home page</NuxtLink>
+  <nuxt-link to="/">Home page</nuxt-link>
 </template>
 ```
 
-For all links to pages within your site, use `<NuxtLink>`. If you have links to other websites you should use the `<a>` tag. See below for an example:
+For all links to pages within your site, use `<nuxt-link>`. If you have links to other websites you should use the `<a>` tag. See below for an example:
 
 ```html{}[pages/index.vue]
 <template>
   <main>
     <h1>Home page</h1>
-    <NuxtLink to="/about">
+    <nuxt-link to="/about">
       About (internal link that belongs to the Nuxt App)
-    </NuxtLink>
+    </nuxt-link>
     <a href="https://nuxtjs.org">External Link to another page</a>
   </main>
 </template>

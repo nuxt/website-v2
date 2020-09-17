@@ -95,8 +95,6 @@ Quand le navigateur envoie la requête initiale, cela va atterir sur le serveur 
 
 ### Étape 2: Du serveur au navigateur
 
-The browser receives the rendered page from the server with the generated HTML. The content is displayed and the Vue.js hydration kicks in, making it reactive. After this process, the page is interactive.
-
 Le navigateur reçoit la page avec le HTML généré depuis le serveur. Le contenu est affiché et l'hydratation de Vue.js entre en scène, rendant le tout réactif. Après ce processus, la page est intéractive.
 
 ### Étape 3: Du navigateur au navigateur

@@ -98,7 +98,7 @@ npm install nuxt
 
 <base-alert type="info">
 
-`yarn.lock` или `package-lock.json` также буду созданы для обеспечения совместимости зависимостей вашего проекта.
+`yarn.lock` или `package-lock.json` также будут созданы для обеспечения совместимости зависимостей вашего проекта.
 
 </base-alert>
 

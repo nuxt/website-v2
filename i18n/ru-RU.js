@@ -276,7 +276,7 @@ module.exports = {
       'Изучите статьи от {nuxtTeam} и {nuxtCommunity} NuxtJS, включая подсказки и хитрости!',
     nuxt_team: 'команды',
     nuxt_community: 'сообщества',
-    contribute: 'Нашли ошибку или хотите внести исправление в эту страницу блога?'
+    contribute: 'Нашли ошибку или хотите дополнить этот пост?'
   },
   guide: {
     release_notes: 'Замечания о релизе',

@@ -273,7 +273,7 @@ module.exports = {
     },
     title: 'Блог {nuxt}',
     description:
-      'Изучите статьи от {nuxtTeam} и {nuxtCommunity} NuxtJS, включая подсказки и фокусы!',
+      'Изучите статьи от {nuxtTeam} и {nuxtCommunity} NuxtJS, включая подсказки и хитрости!',
     nuxt_team: 'команды',
     nuxt_community: 'сообщества',
     contribute: 'Нашли ошибку или хотите внести исправление в эту страницу блога?'

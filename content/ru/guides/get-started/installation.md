@@ -12,7 +12,7 @@ csb_link: https://codesandbox.io/embed/github/nuxt-academy/guides-examples/tree/
 
 <base-alert type="info">
 
-Другой способ начать работать с Nuxt.js - это использовать [CodeSandbox](https://template.nuxtjs.org), это отличный вариант, чтобы поигать с Nuxt.js и/или поделиться вашим кодом с другими.
+Другой способ начать работать с Nuxt.js - это использовать [CodeSandbox](https://template.nuxtjs.org). Это отличный вариант, чтобы поиграть с Nuxt.js и/или поделиться вашим кодом с другими.
 
 </base-alert>
 

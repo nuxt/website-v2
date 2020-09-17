@@ -72,8 +72,8 @@ export default {
     }
   },
   head() {
-    const title = this.$t('resources.meta.title')
-    const description = this.$t('resources.meta.description')
+    const title = this.$t('resources.integrations.meta.title')
+    const description = this.$t('resources.integrations.meta.description')
 
     return {
       title,

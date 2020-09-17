@@ -155,11 +155,11 @@ module.exports = {
     meta: {
       title: 'NuxtJS Resources',
       description:
-        'Discover a panel of resources made by our partners. By using thoses affiliate resources links, you are helping us to maintain and develop the Open Source Framework.'
+        'Discover a panel of resources including integrations, which includes a variety of modules and integrations for you to enhance your application, as well as video courses and themes from our external partners. '
     },
     title: '{nuxt} Resources',
     description:
-      'Discover a panel of resources made by our partners. By using thoses affiliate resources links, you are helping us to maintain and develop the Open Source Framework.',
+      'Discover a panel of resources including integrations, which includes a variety of modules and integrations for you to enhance your application, as well as video courses and themes from our external partners. ',
     themes: {
       title: 'Themes'
     },
@@ -167,6 +167,11 @@ module.exports = {
       title: 'Video Courses'
     },
     integrations: {
+      meta: {
+        title: 'NuxtJS Integrations',
+        description:
+          'Nuxt.js gives you a wide variety of modules and integrations that you can easily plug into your application. From dev tools to ecommerce, performance to analytics and so much more. Checkout out our official modules, community modules and external modules and integrations complete with details and links to help you choose the right module or integration for your project.'
+      },
       title: '{nuxt} Integrations',
       description:
         'Nuxt.js gives you a wide variety of modules and integrations that you can easily plug into your application. From dev tools to ecommerce, performance to analytics and so much more. Checkout out our official modules, community modules and external modules and integrations complete with details and links to help you choose the right module or integration for your project.'

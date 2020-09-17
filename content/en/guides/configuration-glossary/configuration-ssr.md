@@ -18,3 +18,9 @@ export default {
   ssr: false // for SPA's
 }
 ```
+
+<base-alert type="next">
+
+Previously, `mode` was used to disable or enable server-side rendering. Here is the [`mode` documentation](/guides/configuration-glossary/configuration-mode).
+
+</base-alert>

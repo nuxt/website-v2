@@ -1,12 +1,12 @@
 ---
 title: content
-description: Potencia tu aplicación Nuxt.js con el módulo `@nuxtjs/content` donde puedes escribir en un directorio `content/` y traer tus archivos Markdown, JSON, YAML y CSV a través de una API tipo MongoDB, actuando como **Headless CMS basado en Git**.
+description: Potencia tu aplicación Nuxt.js con el módulo `@nuxtjs/content` donde puedes escribir en un directorio `content/` y extraer tus archivos Markdown, JSON, YAML y CSV a través de una API tipo MongoDB, actuando como **CMS _Headless_ basado en Git**.
 position: 4
 category: directory-structure
 img: /guides/nuxt-content.svg
 imgAlt: nuxt content module
 questions:
-  - question: ¿Cuál es el nombre de directorio predeterminado del directorio donde agregas tus archivos de markdown?
+  - question: ¿Cuál es el nombre por defecto del directorio donde agregas tus archivos de markdown?
     answers:
       - markdown
       - content
@@ -34,7 +34,7 @@ questions:
       - cierto
       - falso
     correctAnswer: cierto
-  - question: ¿Cuál utilizas para listar, filtrar y buscar tu contenido?
+  - question: ¿Cuál opción utilizas para listar, filtrar y buscar tu contenido?
     answers:
       - $nuxt-content()
       - $content()
@@ -70,17 +70,17 @@ questions:
     correctAnswer: cierto
 ---
 
-Potencia tu aplicación Nuxt.js con el módulo `@nuxtjs/content` donde puedes escribir en un directorio `content/` y traer tus archivos Markdown, JSON, YAML y CSV a través de una API tipo MongoDB, actuando como **Headless CMS basado en Git**.
+Potencia tu aplicación Nuxt.js con el módulo `@nuxtjs/content` donde puedes escribir en un directorio `content/` y extraer tus archivos Markdown, JSON, YAML y CSV a través de una API tipo MongoDB, actuando como **CMS _Headless_ basado en Git**.
 
 <app-modal :src="img" :alt="imgAlt"></app-modal>
 
-### Recarga en caliente en desarrollo
+### _Hot Reload_ en desarrollo
 
-El módulo de contenido es increíblemente rápido cuando se trata de recarga en caliente en desarrollo debido a que no tiene que pasar por el paquete web cuando realiza cambios en tus archivos markdown. También puedes escuchar el evento `content:update` y crear un _plugin_ para que cada vez que actualice un archivo en su directorio de contenido, envíe un método fetchCategories, por ejemplo.
+El módulo de contenido es increíblemente rápido cuando se trata de _hot reload_ en desarrollo debido a que no tiene que pasar por el paquete web cuando realiza cambios en tus archivos markdown. También puedes escuchar el evento `content:update` y crear un _plugin_ para que cada vez que actualice un archivo en tu directorio de contenido, envíe un método fetchCategories, por ejemplo.
 
 <base-alert type="next">
 
-[Consulta la documentación del módulo de contenido para más detalles](https://content.nuxtjs.org/advanced#handling-hot-reload)
+Consulta la [documentación del módulo de contenido](https://content.nuxtjs.org/advanced#handling-hot-reload) para más detalles.
 
 </base-alert>
 
@@ -98,15 +98,15 @@ Puedes usar el componente `<nuxt-content>` directamente en tu plantilla para mos
 
 <base-alert type="next">
 
-Consulta la [documentación del módulo content](https://content.nuxtjs.org/displaying#component) para más detalles
+Consulta la [documentación del módulo content](https://content.nuxtjs.org/displaying#component) para más detalles.
 
 </base-alert>
 
-### Dando estilos a tu contenido
+### Estilando tu contenido
 
 Dependiendo de lo que estés usando para diseñar tu aplicación, es posible que debas escribir algún estilo para mostrar correctamente el markdown.
 
-El componente `<nuxt-content>` agregará automáticamente una clase `.nuxt-content`, puedes usarla para personalizar tus estilos.
+El componente `<nuxt-content>` agregará automáticamente la clase `.nuxt-content`, puedes usarla para personalizar tus estilos.
 
 ```html
 <style>
@@ -122,13 +122,13 @@ El componente `<nuxt-content>` agregará automáticamente una clase `.nuxt-conte
 
 <base-alert type="next">
 
-Consulta la [documentación del módulo content](https://content.nuxtjs.org/displaying#style) para más detalles
+Consulta la [documentación del módulo content](https://content.nuxtjs.org/displaying#style) para más detalles.
 
 </base-alert>
 
 ### Maneja Markdown, CSV, YAML, JSON(5)
 
-Este módulo convierte tus archivos .md en una estructura de árbol JSON AST, almacenada en una variable body. Puedes agregar un bloque de front matter YAML a tus archivos markdown o un archivo .yaml que se inyectará en el documento. También puedes agregar un archivo json/json5 que también se puede inyectar en el documento. Y puedes usar un archivo .csv donde las filas se asignarán a la variable body.
+Este módulo convierte tus archivos `.md` en una estructura de árbol JSON AST, almacenada en una variable `body`. Puedes agregar un bloque de front matter YAML a tus archivos markdown o un archivo `.yaml` que se inyectará en el documento. También puedes agregar un archivo json/json5 que también se puede inyectar en el mismo. Puedes usar también un archivo `.csv` donde las filas se asignarán a la variable `body`.
 
 ```md
 ---
@@ -139,13 +139,13 @@ description: Aprendiendo como usar @nuxt/content para crear un blog
 
 <base-alert type="next">
 
-Consulta la [documentación del módulo content](https://content.nuxtjs.org/writing#markdown) para más detalles
+Consulta la [documentación del módulo content](https://content.nuxtjs.org/writing#markdown) para más detalles.
 
 </base-alert>
 
 ### Componentes de Vue en Markdown
 
-Puedes usar componentes de Vue directamente en tus archivos markdown. Sin embargo, deberás utilizar tus componentes con notación kebab y no podrás usar etiquetas que se autocierren.
+Puedes usar componentes de Vue directamente en tus archivos markdown. Sin embargo, deberás utilizar tus componentes con notación _kebab_ y no podrás usar etiquetas que se autocierren.
 
 ```html{}[components/global/InfoBox.vue]
 <template>
@@ -165,7 +165,7 @@ Puedes usar componentes de Vue directamente en tus archivos markdown. Sin embarg
 
 <base-alert type="next">
 
-Consulta la [documentación del módulo content](https://content.nuxtjs.org/writing#vue-components) para más detalles
+Consulta la [documentación del módulo content](https://content.nuxtjs.org/writing#vue-components) para más detalles.
 
 </base-alert>
 
@@ -192,7 +192,7 @@ Puedes utilizar `$content()` para listar, filtrar y buscar tu contenido fácilme
 
 <base-alert type="next">
 
-Consulta la [documentación del módulo content](https://content.nuxtjs.org/fetching#methods) para más detalles
+Consulta la [documentación del módulo content](https://content.nuxtjs.org/fetching#methods) para más detalles.
 
 </base-alert>
 
@@ -224,13 +224,13 @@ async asyncData({ $content, params }) {
 
 <base-alert type="next">
 
-Consulta la [documentación del módulo content](https://content.nuxtjs.org/fetching#surroundslug-options) para más detalles
+Consulta la [documentación del módulo content](https://content.nuxtjs.org/fetching#surroundslug-options) para más detalles.
 
 </base-alert>
 
 ### Búsqueda de texto completo
 
-El módulo _content_ viene con una búsqueda de texto completo para que puedas buscar fácilmente en tus archivos markdown sin tener que instalar nada.
+El módulo _content_ viene con una búsqueda de texto completo para que puedas buscar fácilmente en tus archivos markdown sin tener que instalar nada adicional.
 
 ```html{}[components/AppSearchInput.vue]
 <script>
@@ -259,7 +259,7 @@ El módulo _content_ viene con una búsqueda de texto completo para que puedas b
 
 <base-alert type="next">
 
-Consulta la [documentación del módulo content](https://content.nuxtjs.org/fetching#searchfield-value) para más detalles
+Consulta la [documentación del módulo content](https://content.nuxtjs.org/fetching#searchfield-value) para más detalles.
 
 </base-alert>
 
@@ -296,7 +296,7 @@ content: {
 
 <base-alert type="next">
 
-Consulta la [documentación del módulo content](https://content.nuxtjs.org/writing#syntax-highlighting) para más detalles
+Consulta la [documentación del módulo content](https://content.nuxtjs.org/writing#syntax-highlighting) para más detalles.
 
 </base-alert>
 
@@ -306,7 +306,7 @@ Originalmente, Markdown no soporta el resaltado líneas dentro de bloques de có
 
 <base-alert type="next">
 
-Consulta la [documentación del módulo content](https://content.nuxtjs.org/writing#codeblocks) para más detalles
+Consulta la [documentación del módulo content](https://content.nuxtjs.org/writing#codeblocks) para más detalles.
 
 </base-alert>
 
@@ -326,7 +326,7 @@ Se inyectará una propiedad _array_ `toc` (tabla de contenido) en tu documento, 
 
 <base-alert type="next">
 
-Consulta la [documentación del módulo content](https://content.nuxtjs.org/writing#table-of-contents) para más detalles
+Consulta la [documentación del módulo content](https://content.nuxtjs.org/writing#table-of-contents) para más detalles.
 
 </base-alert>
 
@@ -338,7 +338,7 @@ El módulo de contenido viene con una poderosa API QueryBuilder similar a MongoD
 
 <base-alert type="next">
 
-Consulta la [documentación del módulo content](https://content.nuxtjs.org/fetching#api) para más detalles
+Consulta la [documentación del módulo content](https://content.nuxtjs.org/fetching#api) para más detalles.
 
 </base-alert>
 
@@ -348,7 +348,7 @@ Puede utilizar _hooks_ para ampliar el módulo de modo que puedes agregar datos 
 
 <base-alert type="next">
 
-Consulta la [documentación del módulo content](https://content.nuxtjs.org/advanced#hooks) para más detalles
+Consulta la [documentación del módulo content](https://content.nuxtjs.org/advanced#hooks) para más detalles.
 
 </base-alert>
 
@@ -358,7 +358,7 @@ En el caso de los artículos, el contenido se puede utilizar para generar fuente
 
 <base-alert type="next">
 
-Consulta la [documentación del módulo content](https://content.nuxtjs.org/advanced#integration-with-nuxtjsfeed) para más detalles
+Consulta la [documentación del módulo content](https://content.nuxtjs.org/advanced#integration-with-nuxtjsfeed) para más detalles.
 
 </base-alert>
 
@@ -374,7 +374,7 @@ Si usas Nuxt <2.13 y necesitas especificar las rutas dinámicas, puedes hacerlo 
 
 <base-alert type="next">
 
-Consulta la [documentación del módulo content](https://content.nuxtjs.org/advanced#programmatic-usage) para más detalles
+Consulta la [documentación del módulo content](https://content.nuxtjs.org/advanced#programmatic-usage) para más detalles.
 
 </base-alert>
 

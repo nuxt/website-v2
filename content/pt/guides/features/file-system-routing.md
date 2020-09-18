@@ -236,7 +236,7 @@ router: {
 
 ## Rotas Aninhadas Dinâmicas
 
-Este cenário não deve acontecer com frequência, mas com o Nuxt.js é possível ter filhos dinâmicos dentro de pais dinâmicos.
+Este não é um cenário muito comum, mas com o Nuxt.js é possível ter filhos dinâmicos dentro de pais dinâmicos.
 
 Esta árvore de arquivos:
 

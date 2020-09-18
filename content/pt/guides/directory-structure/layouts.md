@@ -82,10 +82,18 @@ Tudo que você precisa em seu layout são três linhas de código que irão rend
 </template>
 ```
 
+Você pode adicionar mais componentes aqui, como navegação, cabeçalho, rodapé, etc.
+
+```html{}[layouts/default.vue]
+<template>
+  <TheHeader />
+  <Nuxt />
+  <TheFooter />
+</template>
+```
+
 <base-alert type="info">
-
-Você pode adicionar mais componentes aqui, como navegação, cabeçalho, rodapé, etc. Você precisará importá-los e também adicioná-los ao seu template.
-
+Se você [definiu components como verdadeiro](/guides/directory-structure/components), então não é necessário importar manualmente os seus componentes.
 </base-alert>
 
 ## Layout Personalizado

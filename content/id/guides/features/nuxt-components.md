@@ -42,31 +42,31 @@ questions:
       - '<RouterLink>'
       - '<a>'
     correctAnswer: '<NuxtLink>'
-  - question: 'Bagaimana cara menggunakan <NuxtLink> untuk menautkan  halaman tentang kami di aplikasi Anda?'
+  - question: 'Bagaimana cara menggunakan <NuxtLink> untuk menautkan halaman tentang kami di aplikasi Anda?'
     answers:
       - <NuxtLink to="/tentang-kami" />
       - <NuxtLink href="/tentang-kami" />
       - <NuxtLink link="/tentang-kami" />
     correctAnswer: <NuxtLink to="/tentang-kami" />
-  - question: Key apa yang Anda gunakan untuk menonaktifkan fitur prefetching untuk halaman-halaman tertentu?
+  - question: _Key_ apa yang Anda gunakan untuk menonaktifkan fitur _prefetching_ untuk halaman-halaman tertentu?
     answers:
       - no-prefetch
       - :prefetch="false"
       - no-prefetch dan :prefetch="false"
     correctAnswer: no-prefetch dan :prefetch="false"
-  - question: Apa kelas bawaan yang bisa Anda gunakan untuk menambahkan style untuk tautan-tautang yang aktif?
+  - question: Apa kelas bawaan yang bisa Anda gunakan untuk menambahkan _style_ untuk tautan-tautang yang aktif?
     answers:
       - nuxt-link-active
       - link-active
       - router-link-active
     correctAnswer: nuxt-link-active
-  - question: Apa kelas bawaan yang bisa Anda gunakan untuk menambahkan style untuk tautan-tautan aktif tertentu?
+  - question: Apa kelas bawaan yang bisa Anda gunakan untuk menambahkan _style_ untuk tautan-tautan aktif tertentu?
     answers:
       - nuxt-link-exact-active
       - link-exact-active
       - nuxt-exact-active-link
     correctAnswer: nuxt-link-exact-active
-  - question: Dalam Nuxt versi 2.9.0 ke atas, komponen mana yang Anda gunakan untuk membungkus komponen lain agar komponen yang terbungkus hanya di-render di sisi klien?
+  - question: Dalam Nuxt versi 2.9.0 ke atas, komponen mana yang Anda gunakan untuk membungkus komponen lain agar komponen yang terbungkus hanya di-_render_ di sisi klien?
     answers:
       - '<client-only>'
       - '<no-ssr>'
@@ -74,7 +74,7 @@ questions:
     correctAnswer: '<client-only>'
 ---
 
-Nuxt.js memiliki beberapa komponen penting bawaan. Komponen-komponen ini akan sangat membantu Anda dalam membangun aplikasi. Komponen-komponen ini tersedia secara global, yang berarti Anda tidak perlu meng-_import_-nya sebelum menggunakannya.
+Nuxt.js memiliki beberapa komponen penting bawaan. Komponen-komponen ini akan sangat membantu Anda dalam membangun aplikasi. Komponen-komponen ini tersedia secara global, yang berarti Anda tidak perlu mengimpornya sebelum menggunakannya.
 
 Paragraf-paragraf berikut ini berisi penjelasan untuk setiap komponen tersebut.
 
@@ -223,7 +223,7 @@ Untuk melihat contoh, kunjungi [contoh rute bersarang](https://nuxtjs.org/exampl
 
 ## Komponen NuxtLink
 
-Untuk navigasi antar halaman dalam aplikasi Anda, anda sebaiknya menggunakan komponen `<NuxtLink>`. Komponen ini merupakan komponen bawaan Nuxt.js sehingga Anda tidak perlu meng-_import_-nya terlebih dahulu layaknya komponen-komponen lainnya. Komponen ini mirip dengan _tag_ `<a>` HTML, hanya saja Anda menggunakan `to="/tetang-kami"` dan bukannya `href="/tentang-kami"`. Jika Anda pernah menggunakan `vue-router` sebelumnya, Anda bisa menganggap `<NuxtLink>` sebagai pengganti `<RouterLink>`.
+Untuk navigasi antar halaman dalam aplikasi Anda, Anda sebaiknya menggunakan komponen `<NuxtLink>`. Komponen ini merupakan komponen bawaan Nuxt.js sehingga Anda tidak perlu mengimpornya terlebih dahulu layaknya komponen-komponen lainnya. Komponen ini mirip dengan _tag_ `<a>` HTML, hanya saja Anda menggunakan `to="/tetang-kami"` dan bukannya `href="/tentang-kami"`. Jika Anda pernah menggunakan `vue-router` sebelumnya, Anda bisa menganggap `<NuxtLink>` sebagai pengganti `<RouterLink>`.
 
 Tautan sederhana ke komponen `index.vue` di dalam folder `pages` Anda:
 
@@ -233,18 +233,18 @@ Tautan sederhana ke komponen `index.vue` di dalam folder `pages` Anda:
 </template>
 ```
 
-Komponen `<NuxtLink>` sebaiknya digunakan untuk semua tautan internal. Ini berarti Anda sebaiknya menggunakan `<NuxtLink>` untuk setiap tautan yang mengarah pada halaman di _website_ Anda. _Tag_ `<a>` sebaiknya hanya digunakan untuk tautan-tautan yang mengarah ke halaman eksternal. Ini berarti Anda sebaiknya menggunakan _tag_ `<a>` untuk tautan yang mengarah ke _website_ lain.
+Komponen `<NuxtLink>` sebaiknya digunakan untuk semua tautan internal. Ini berarti Anda sebaiknya menggunakan `<NuxtLink>` untuk setiap tautan yang mengarah pada halaman di situs web Anda. _Tag_ `<a>` sebaiknya hanya digunakan untuk tautan-tautan yang mengarah ke halaman eksternal. Ini berarti Anda sebaiknya menggunakan _tag_ `<a>` untuk tautan yang mengarah ke situs web lain.
 
 ```html
 <template>
   <div>
     <h1>Halaman beranda</h1>
     <NuxtLink to="/about">
-      Tentang kami (tautan internal ke sebuah halaman di website Anda)
+      Tentang kami (tautan internal ke sebuah halaman di situs web Anda)
     </NuxtLink>
 
     <a href="https://nuxtjs.org">
-      Tautan eksternal yang mengarah ke website lain
+      Tautan eksternal yang mengarah ke situs web lain
     </a>
   </div>
 </template>
@@ -348,7 +348,7 @@ Jika Anda mau, Anda juga bisa mengubah nama kelasnya. Anda bisa melakukan ini de
 ```js{}[nuxt.config.js]
 export default {
   router: {
-    linkExactActiveClass: 'nama-kelas-yang-baru'
+    linkExactActiveClass: 'nama-kelas-tautan-aktif-eksak-yang-baru'
   }
 }
 ```
@@ -391,7 +391,7 @@ Di contoh ini kami menggunakan nama kelas `nuxt-link-prefetched`. Anda bisa meng
 
 ## Komponen client-only
 
-Komponen ini digunakan untuk secara sengaja me-_render_ komponen hanya pada sisi klien. Untuk meng-_import_ komponen hanya di sisi klien, daftarkan komponen di dalam sebuah _plugin_ yang hanya akan dijalankan di sisi klien.
+Komponen ini digunakan untuk secara sengaja me-_render_ komponen hanya pada sisi klien. Untuk mengimpor komponen hanya di sisi klien, daftarkan komponen di dalam sebuah _plugin_ yang hanya akan dijalankan di sisi klien.
 
 ```html{}[pages/example.vue]
 <template>

@@ -8,7 +8,7 @@
           {{ $t('common.page_not_found') }}
         </h1>
         <div class="w-full lg:w-2/3 mx-auto">
-          <LostImageIllustration />
+          <LostImageIllustration class="w-full" />
         </div>
       </div>
     </AppContainer>

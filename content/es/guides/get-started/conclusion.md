@@ -1,6 +1,6 @@
 ---
 title: Conclusión
-description: Enhorabuena, ya has creado tu primera aplicación Nuxt.js y puedes considerarte un Nuxter. Pero aún hay mucho más por aprender y muchísimo más que puedes hacer con Nuxt.js. Aquí hay algunas recomendaciones.
+description: Enhorabuena, ya has creado tu primera aplicación Nuxt.js y puedes considerarte un Nuxter. Pero aún hay mucho más por aprender y muchísimo más que puedes hacer con Nuxt.js. Aquí tienes algunas recomendaciones.
 position: 4
 category: get-started
 questions:
@@ -10,43 +10,43 @@ questions:
       - pages
       - index
     correctAnswer: pages
-  - question: ¿Cuál el nombre del archivo ID de tu proyecto?
+  - question: ¿Cuál es el nombre del archivo ID de tu proyecto?
     answers:
       - package.vue
       - package.json
       - package.js
     correctAnswer: package.json
-  - question: ¿Cuál es el comando que usas en la terminal para ejecutar tu proyecto Nuxt.js?
+  - question: ¿Cuál es el comando que tecleas en el terminal para ejecutar tu proyecto Nuxt.js?
     answers:
       - npm dev
       - npm run dev
       - nuxt dev
     correctAnswer: npm run dev
-  - question: ¿En qué dirección del navegador puedes ver tu página en el modo de desarrollo?
+  - question: ¿En qué dirección del navegador puedes ver tu página en modo desarrollo?
     answers:
       - http://localhost:3000/
       - http://localhost:3000/project-name:3000
       - http://localhost:3000/nuxt:3000/
     correctAnswer: http://localhost:3000/
-  - question: ¿En cuál pones tu configuración?
+  - question: ¿Dónde pones tu configuración?
     answers:
       - nuxt.config.json
       - config.js
       - nuxt.config.js
     correctAnswer: nuxt.config.js
-  - question: ¿Qué directorio no es el ideal para archivos `.vue`?
+  - question: ¿Qué directorio no es adecuado para archivos `.vue`?
     answers:
       - pages
       - static
       - components
     correctAnswer: static
-  - question: ¿En qué directorio colocas tus estilos?
+  - question: ¿En qué directorio pones tus estilos?
     answers:
       - styles
       - components
       - assets
     correctAnswer: assets
-  - question: ¿En qué directorio ponemos un archivo robots.txt o el favicon?
+  - question: ¿En qué directorio ponemos un archivo robots.txt o favicon?
     answers:
       - assets
       - components
@@ -58,18 +58,18 @@ questions:
       - '<RouterLink>'
       - '<NuxtLink>'
     correctAnswer: '<NuxtLink>'
-  - question: ¿Debe usarse `<NuxtLink>` para enlaces internos de la aplicación Nuxt.js?
+  - question: ¿Se utiliza `<NuxtLink>` para los enlaces internos que pertenecen a la aplicación Nuxt.js?
     answers:
       - True
       - False
     correctAnswer: True
 ---
 
-¡Enhorabuena! Ya has creado tu primera aplicación Nuxt.js y puedes considerarte un Nuxter, pero aún hay mucho más por aprender y muchísimo más que puedes hacer con Nuxt.js. Aquí hay algunas recomendaciones:
+¡Enhorabuena! Ya has creado tu primera aplicación Nuxt.js y puedes considerarte un Nuxter, pero aún hay mucho más por aprender y muchísimo más que puedes hacer con Nuxt.js. Aquí tienes algunas recomendaciones:
 
 <base-alert type="next">
 
-Revisar el [Concepts book](../concepts/views)
+Echa un vistazo al [libro de Conceptos](../concepts/views)
 
 </base-alert>
 
@@ -81,14 +81,13 @@ Trabajar con [asyncData](/guides/features/data-fetching#async-data)
 
 <base-alert type="next">
 
-Elegir entre los diferentes [modos de Renderizado](/guides/features/rendering-modes)
+Eligiendo entre diferentes [modos de Renderizado](/guides/features/rendering-modes)
 
 </base-alert>
 
 <base-alert type="star">
 
-¿Realmente te gusta Nuxt.js? No olvides [darle una estrella a nuestro proyecto](https://github.com/nuxt/nuxt.js) en GitHub
-Did you like Nuxt.js so far? Don't forget to [star our project](https://github.com/nuxt/nuxt.js) on GitHub
+¿Te ha gustado Nuxt.js? No te olvides de [darle una estrella a nuestro proyecto](https://github.com/nuxt/nuxt.js) en GitHub
 
 </base-alert>
 

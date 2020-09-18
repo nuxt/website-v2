@@ -82,7 +82,7 @@ Use the [NuxtLink component](/guides/features/nuxt-components#the-nuxtlink-comp
 
 ```html
 <template>
-  <nuxt-link to="/">Home page</nuxt-link>
+  <NuxtLink to="/">Home page</NuxtLink>
 </template>
 ```
 
@@ -236,7 +236,7 @@ router: {
 
 ## Dynamic Nested Routes
 
-This scenario should not often happen, but it is possible with Nuxt.js to have dynamic children inside dynamic parents.
+This is not a common scenario, but it is possible with Nuxt.js to have dynamic children inside dynamic parents.
 
 This file tree:
 

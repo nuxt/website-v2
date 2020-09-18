@@ -89,15 +89,19 @@ export default {
 
 Once you create your components in the components directory they will then be available to be auto imported.
 
-```html
-components/ TheHeader.vue TheFooter.vue
+```bash
+components/
+  TheHeader.vue
+  TheFooter.vue
 ```
 
 ```html{}[layouts/default.vue]
 <template>
-  <TheHeader />
-  <Nuxt />
-  <TheFooter />
+  <div>
+    <TheHeader />
+    <Nuxt />
+    <TheFooter />
+  </div>
 </template>
 ```
 
@@ -105,11 +109,13 @@ components/ TheHeader.vue TheFooter.vue
 
 To dynamically import a component also known, as lazy loading a component, all you need to do is add the `Lazy` prefix in your templates.
 
-```html{}[layouts.default.vue]
+```html{}[layouts/default.vue]
 <template>
-  <TheHeader />
-  <Nuxt />
-  <LazyTheFooter />
+  <div>
+    <TheHeader />
+    <Nuxt />
+    <LazyTheFooter />
+  </div>
 </template>
 ```
 

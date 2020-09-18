@@ -25,7 +25,7 @@ As Nuxt.js also works as a static site generator you can therefore generate your
 
 <base-alert type="info">
 
-Dynamic routes are also generated thanks to the [Nuxt Cralwer](/guides/configuration-glossary/configuration-generate#crawler)
+Dynamic routes are also generated thanks to the [Nuxt Crawler](/guides/configuration-glossary/configuration-generate#crawler)
 
 </base-alert>
 

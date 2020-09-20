@@ -1,93 +1,93 @@
 ---
 title: Заключение
-description: Congratulations you have now created your first Nuxt.js app and you may now consider yourself a Nuxter. But there is so much more to learn and so much more you can do with Nuxt.js. Here are a few recommendations.
+description: Поздравляем! Вы создали Ваше первое приложение на Nuxt.js и теперь можете смело называть себя Nuxter. Но Вам еще предстоит многому научиться и научиться пользоваться всеми возможностями Nuxt.js. У нас есть несколько рекомендаций для Вашего последующего обучения.
 position: 4
 category: get-started
 questions:
-  - question: What is the name of the directory you need to have for Nuxt.js to work?
+  - question: Как называется директория, обязательная для работы Nuxt.js?
     answers:
       - nuxt
       - pages
       - index
     correctAnswer: pages
-  - question: What is the name of your project ID file?
+  - question: Как называется файл c описанием вашего проекта?
     answers:
       - package.vue
       - package.json
       - package.js
     correctAnswer: package.json
-  - question: What is the command you type in the terminal to launch your Nuxt.js project?
+  - question: Какую команду необходимо ввести в терминале, что бы запустить проект Nuxt.js?
     answers:
       - npm dev
       - npm run dev
       - nuxt dev
     correctAnswer: npm run dev
-  - question: What is the address in the browser where you can see your page in development mode?
+  - question: Какой адрес у стартовой страницы Вашего Nuxt.js приложения, при запуске в режиме development?
     answers:
       - http://localhost:3000/
       - http://localhost:3000/project-name:3000
       - http://localhost:3000/nuxt:3000/
     correctAnswer: http://localhost:3000/
-  - question: Where do you put your configuration in?
+  - question: В каком файле можно изменять конфигурацию Nuxt.js?
     answers:
       - nuxt.config.json
       - config.js
       - nuxt.config.js
     correctAnswer: nuxt.config.js
-  - question: Which directory is not suitable for `.vue` files?
+  - question: Какая дериктория не подходит для размещения файлов с расширением `.vue`?
     answers:
       - pages
       - static
       - components
     correctAnswer: static
-  - question: In which directory do you put your styles?
+  - question: В какой дериктории Вы будете размещать файлы с Вашими стилями?
     answers:
       - styles
       - components
       - assets
     correctAnswer: assets
-  - question: In which directory do we put a robots.txt or favicon?
+  - question: В какой дериктории размещается robots.txt или favicon?
     answers:
       - assets
       - components
       - static
     correctAnswer: static
-  - question: What component do we use to navigate between pages?
+  - question: Какой компонент используется для навигации между страницами?
     answers:
       - '<Nuxt>'
       - '<RouterLink>'
       - '<NuxtLink>'
     correctAnswer: '<NuxtLink>'
-  - question: '`<NuxtLink>` is used for internal links that belong to the Nuxt.js app?'
+  - question: '`<NuxtLink>` используется для внутренних ссылок, которые принадлежат приложению Nuxt.js?'
     answers:
-      - True
-      - False
-    correctAnswer: True
+      - Да
+      - Нет
+    correctAnswer: Да
 ---
 
-Congratulations! You have now created your first Nuxt.js app and you may now consider yourself a Nuxter, but there is so much more to learn and so much more you can do with Nuxt.js. Here are a few recommendations:
+Поздравляем! Вы создали Ваше первое приложение на Nuxt.js и теперь можете смело называть себя Nuxter. Но Вам еще предстоит многому научиться и научиться пользоваться всеми возможностями Nuxt.js. У нас есть несколько рекомендаций для Вашего последующего обучения.:
 
 <base-alert type="next">
 
-Check out the [Concepts book](../concepts/views)
+Для прочтения [Concepts book](../concepts/views)
 
 </base-alert>
 
 <base-alert type="next">
 
-Working with [asyncData](/guides/features/data-fetching#async-data)
+Ознакомьтесь с [asyncData](/guides/features/data-fetching#async-data)
 
 </base-alert>
 
 <base-alert type="next">
 
-Choosing between different [Rendering modes](/guides/features/rendering-modes)
+Выбираем между [Режимами рендеринга](/guides/features/rendering-modes)
 
 </base-alert>
 
 <base-alert type="star">
 
-Did you like Nuxt.js so far? Don't forget to [star our project](https://github.com/nuxt/nuxt.js) on GitHub
+Нравится Nuxt.js? Не забудьте [поставить звезду проекту](https://github.com/nuxt/nuxt.js) на GitHub
 
 </base-alert>
 

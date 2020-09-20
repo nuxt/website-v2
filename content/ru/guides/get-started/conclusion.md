@@ -16,7 +16,7 @@ questions:
       - package.json
       - package.js
     correctAnswer: package.json
-  - question: Какую команду необходимо ввести в терминале, что бы запустить проект Nuxt.js?
+  - question: Какую команду необходимо ввести в терминале, чтобы запустить проект Nuxt.js?
     answers:
       - npm dev
       - npm run dev

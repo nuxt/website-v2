@@ -385,7 +385,7 @@ En este ejemplo hemos usado `nuxt-link-prefetched` como nombre de la clase, pero
 
 ## El componente client-only
 
-Este componente se usa para desplegar un componente del lado del cliente únicamente. Para importar un componente solamente del lado del cliente, registra el componente en un plugin que funcione únicamente en el cliente.
+Este componente se usa para desplegar un componente del lado del cliente únicamente. Para importar un componente, registra el componente en un *plugin* que funcione únicamente del lado del cliente.
 
 ```html{}[pages/example.vue]
 <template>

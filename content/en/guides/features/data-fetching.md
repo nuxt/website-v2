@@ -105,8 +105,8 @@ In addition to fetch being called by Nuxt, you can manually call fetch in your c
   <p v-else-if="$fetchState.error">An error occured :(</p>
   <div v-else>
     <h1>Nuxt Mountains</h1>
-    <ul v-for="mountain of mountains">
-      <li>{{ mountain.title }}</li>
+    <ul>
+      <li v-for="mountain of mountains">{{ mountain.title }}</li>
     </ul>
     <button @click="$fetch">Refresh</button>
   </div>

@@ -75,7 +75,7 @@ questions:
 
 <base-alert type="next">
 
-Ознакомьтесь с [asyncData](/guides/features/data-fetching#async-data)
+Работаем с [asyncData](/guides/features/data-fetching#async-data)
 
 </base-alert>
 

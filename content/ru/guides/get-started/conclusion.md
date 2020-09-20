@@ -69,7 +69,7 @@ questions:
 
 <base-alert type="next">
 
-Для прочтения [Concepts book](../concepts/views)
+Ознакомтесь с [Concepts book](/guides/concepts/views)
 
 </base-alert>
 

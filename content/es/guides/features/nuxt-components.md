@@ -42,25 +42,25 @@ questions:
       - '<RouterLink>'
       - '<a>'
     correctAnswer: '<NuxtLink>'
-  - question: '¿De qué manera se puede establecer un vínculo con la página about de tu aplicación mediante <NuxtLink>?'
+  - question: '¿De qué manera se puede establecer un vínculo con la página *about* de tu aplicación mediante <NuxtLink>?'
     answers:
       - to="/about"
       - href="/about"
       - link="/about"
     correctAnswer: to="/about"
-  - question: ¿Qué código se puede utilizar para deshabilitar el prefetching en determinadas páginas?
+  - question: ¿Qué código se puede utilizar para deshabilitar el *prefetching* en determinadas páginas?
     answers:
       - no-prefetch
       - :prefetch="false"
       - no-prefetch and :prefetch="false"
     correctAnswer: no-prefetch and :prefetch="false"
-  - question: ¿Qué clase se utiliza por defecto para agregar estilos a hipervínculos activos?
+  - question: ¿Qué clase se utiliza por defecto para agregar estilos a links activos?
     answers:
       - nuxt-link-active
       - link-active
       - router-link-active
     correctAnswer: nuxt-link-active
-  - question: ¿Qué clase se utiliza por defecto para agregar estilos a hipervínculos activos exactos? 
+  - question: ¿Qué clase se utiliza por defecto para agregar estilos a links activos exactos? 
     answers:
       - nuxt-link-exact-active
       - link-exact-active
@@ -80,7 +80,7 @@ A continuación se explican cada uno de los componentes que vienen incluidos.
 
 ## El componente Nuxt
 
-El componente `<Nuxt>` se utiliza para desplegar los componentes de tu página. Básicamente, este componente se reemplaza por lo que está dentro de los componentes de tu página, dependiendo de la página que se esté mostrando. Por este motivo es importante que agregues el componente `<Nuxt>` a tus layouts.
+El componente `<Nuxt>` se utiliza para desplegar los componentes de tu página. Básicamente, este componente se reemplaza por lo que está dentro de los mismos, dependiendo de la página que se esté mostrando. Por este motivo es importante que agregues el componente `<Nuxt>` a tus layouts.
 
 ```html{}[layouts/default.vue]
 <template>
@@ -98,11 +98,11 @@ El componente `<Nuxt>` solamente se puede utilizar dentro de [layouts](/guides/c
 
 </base-alert>
 
-El componente `<Nuxt>` puede tomar la prop de `nuxt-child-key`. Esta prop se pasa a `<RouterView>` para que tus transiciones funcionen correctamente dentro de páginas dinámicas.  
+El componente `<Nuxt>` puede tomar la propiedad de `nuxt-child-key`. Esta propiedad se pasa a `<RouterView>` para que tus transiciones funcionen correctamente dentro de páginas dinámicas.  
 
-Existen 2 maneras de manejar la prop interna `key` de `<RouterView>`.
+Existen 2 maneras de manejar la propiedad interna `key` de `<RouterView>`.
 
-1. Mediante una prop `nuxtChildKey` en tu componente `<Nuxt>` 
+1. Mediante una propiedad `nuxtChildKey` en tu componente `<Nuxt>` 
 
 ```html{}[layouts/default.vue]
 <template>
@@ -171,7 +171,7 @@ Tanto el componente `<Nuxt>` como el componente `<NuxtChild/>` aceptan `keep-al
 
 <base-alert type="info">
 
-Para aprender más sobre keep-alive y keep-alive-props, consultar [vue docs](https://vuejs.org/v2/api/#keep-alive)
+Para aprender más sobre `keep-alive` y `keep-alive-props`, consultar [vue docs](https://vuejs.org/v2/api/#keep-alive)
 
 </base-alert>
 
@@ -233,7 +233,7 @@ Hipervínculo sencillo hacia la página `index.vue` de tu directorio `pages`:
 </template>
 ```
 
-El componente `<NuxtLink>` se debe utilizar para todos los hipervínculos internos. Esto significa que debes utilizar `<NuxtLink>` para todos los hipervínculos que dirigen hacia las páginas de tu sitio. La etiqueta `<a>` se debe utilizar para todos los hipervínculos externos. Ello significa que si tienes hipervínculos que dirigen hacia otros sitios web, debes utilizar la etiqueta `<a>`.
+El componente `<NuxtLink>` se debe utilizar para todos los links internos. Esto significa que debes utilizar `<NuxtLink>` para todos los links que dirigen hacia las páginas de tu sitio. La etiqueta `<a>` se debe utilizar para todos los links externos. Ello significa que si tienes links que dirigen hacia otros sitios web, debes utilizar la etiqueta `<a>`.
 
 ```html
 <template>
@@ -255,26 +255,26 @@ Para aprender más sobre `<RouterLink>`, consulta la [Documentación sobre Vue 
 
 <base-alert type="info">
 
-`<NuxtLink>` posee [smart prefetching](/guides/features/nuxt-components#the-nuxtlink-component) integrado.
+`<NuxtLink>` posee [*smart prefetching*](/guides/features/nuxt-components#the-nuxtlink-component) integrado.
 
 </base-alert>
 
 ## prefetchLinks
 
-Nuxt.js incluye smart prefetching de forma automática. Esto significa que detecta cuando un hipervínculo es visible, ya sea en el viewport o al desplazarse y realiza el prefetching en el JavaScript para todas aquellas páginas, para que estén listas cuando el usuario da clic al hipervínculo. Nuxt.js solamente carga los recursos cuando el navegador no se encuentra ocupado y no realiza el prefetching si tu conexión está offline(fuera de línea) o si solamente tienes conexión 2g.
+Nuxt.js incluye *smart prefetching* de forma automática. Esto significa que detecta cuando un hipervínculo es visible, ya sea en el viewport o al desplazarse y realiza el *prefetching* en el JavaScript para todas aquellas páginas, para que estén listas cuando el usuario da clic al hipervínculo. Nuxt.js solamente carga los recursos cuando el navegador no se encuentra ocupado y no realiza el *prefetching* si tu conexión está offline(fuera de línea) o si solamente tienes conexión 2g.
 
-### Desactivar el prefetching de hipervínculos específicos
+### Desactivar el *prefetching* de links específicos
 
-Sin embargo, en ciertas circunstancias es probable que desees desactivar el prefetching de algunos hipervínculos, por ejemplo, si tu página tiene mucho JavaScript, si tienes muchas páginas diferentes en las cuales se realizaría el prefetching o si tienes que cargar múltiples scripts de terceros. Para desactivar el prefetching en un hipervínculo en particular puedes utilizar la prop `no-prefetch`. A partir de Nuxt.js v2.10.0, puedes fijar la prop `prefetch` en `false`
+Sin embargo, en ciertas circunstancias es probable que desees desactivar el *prefetching* de algunos links, por ejemplo, si tu página tiene mucho JavaScript, si tienes muchas páginas diferentes en las cuales se realizaría el *prefetching* o si tienes que cargar múltiples scripts de terceros. Para desactivar el *prefetching* en un hipervínculo en particular puedes utilizar la propiedad `no-prefetch`. A partir de Nuxt.js v2.10.0, puedes fijar la propiedad `prefetch` en `false`
 
 ```html
 <NuxtLink to="/about" no-prefetch>Página About sin prefetching</NuxtLink>
 <NuxtLink to="/about" :prefetch="false">Página About sin prefetching</NuxtLink>
 ```
 
-### Desactivar el prefetching globalmente
+### Desactivar el *prefetching* globalmente
 
-Para desactivar el prefetching en todos los hipervínculos, fija los `prefetchLinks` en `false`:
+Para desactivar el *prefetching* en todos los links, fija los `prefetchLinks` en `false`:
 
 ```js{}[nuxt.config.js]
 export default {
@@ -284,7 +284,7 @@ export default {
 }
 ```
 
-A partir de Nuxt.js v2.10.0, si has fijado el valor de `prefetchLinks` en `false` (falso) pero deseas hacer prefetching a un link en particular, puedes utilizar la prop `prefetch`.
+A partir de Nuxt.js v2.10.0, si has fijado el valor de `prefetchLinks` en `false` (falso) pero deseas hacer *prefetching* a un link en particular, puedes utilizar la propiedad `prefetch`.
 
 ```html
 <NuxtLink to="/about" prefetch>Página About con prefetching</NuxtLink>
@@ -292,7 +292,7 @@ A partir de Nuxt.js v2.10.0, si has fijado el valor de `prefetchLinks` en `fa
 
 ## linkActiveClass
 
-`linkActiveClass` funciona igual que la clase `vue-router` para vínculos activos. Si deseas mostrar cuáles hipervínculos están activos, lo único que tienes que hacer es crear algo de css para la clase `nuxt-link-active` .
+`linkActiveClass` funciona igual que la clase `vue-router` para vínculos activos. Si deseas mostrar cuáles links están activos, lo único que tienes que hacer es crear algo de css para la clase `nuxt-link-active` .
 
 ```css
 .nuxt-link-active {
@@ -302,7 +302,7 @@ A partir de Nuxt.js v2.10.0, si has fijado el valor de `prefetchLinks` en `fa
 
 <base-alert>
 
-Este código en css se puede agregar ya sea al componente de navegación, a una página o layout en particular, o a tu archivo main.css .
+Este código css se puede agregar ya sea al componente de navegación, a una página/layout en particular, o a tu archivo main.css .
 
 </base-alert>
 
@@ -324,7 +324,7 @@ Esta opción se le da directamente a la linkActiveClass de `vue-router` . Consul
 
 ## linkExactActiveClass
 
-`linkExactActiveClass` funciona igual que la clase `vue-router` en hipervínculos activos exactos. Si deseamos mostrar de forma precisa los hipervínculos que se encuentran activos, lo único que debes hacer es agregar algo de css a la clase `nuxt-link-exact-active` .
+`linkExactActiveClass` funciona igual que la clase `vue-router` en links activos exactos. Si deseamos mostrar de forma precisa los links que se encuentran activos, lo único que debes hacer es agregar algo de css a la clase `nuxt-link-exact-active` .
 
 ```css
 .nuxt-link-exact-active {
@@ -355,7 +355,7 @@ Esta opción se le da directamente a la linkExactActiveClass de `vue-router`. Co
 
 ## linkPrefetchedClass
 
-linkPrefetchedClass permite añadir estilos a todos los hipervínculos a que se les haya realizado prefetching. Esto resulta fabuloso para probar a cuáles hipervínculos se les ha realizado prefetching luego de haber modificado su comportamiento por defecto. Por defecto linkPrefetchedClass viene desactivada. Si deseas activarla necesitas agregarla a la propiedad router de tu archivo `nuxt-config.js`.
+La opción `linkPrefetchedClass` permite añadir estilos a todos los links a que se les haya realizado *prefetching*. Esto resulta fabuloso para probar a cuáles links se les ha realizado *prefetching* luego de haber modificado su comportamiento por defecto. Por defecto la opción `linkPrefetchedClass` viene desactivada. Si deseas activarla necesitas agregarla a la propiedad router de tu archivo `nuxt-config.js`.
 
 ```js{}[nuxt.config.js]
 export default {

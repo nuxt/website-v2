@@ -23,7 +23,7 @@
           <div class="modal-container flex flex-col">
             <div class="w-full flex justify-end">
               <button
-                class="xs:m-2 mb-4 w-auto"
+                class="sm:m-2 mb-4 w-auto"
                 data-cy="modal-close"
                 @click="showModal = false"
               >

@@ -1,72 +1,72 @@
 ---
-title: Nuxt Components
-description: Nuxt.js comes with a few important components included out of the box, which will be helpful when building your application.
-position: 9
-category: features
+título: Componentes de Nuxt
+descripción: Nuxt.js posee una serie de componentes importantes integrados que resultarán de mucha utilidad para construir tu aplicación. 
+posición: 9
+categoría: features
 csb_link_nuxt_link: https://codesandbox.io/embed/github/nuxt-academy/guides-examples/tree/master/03_features/09_components_nuxt-link?fontsize=14&hidenavigation=1&theme=dark
 csb_link_nuxt: https://codesandbox.io/embed/github/nuxt-academy/guides-examples/tree/master/03_features/09_components_nuxt?fontsize=14&hidenavigation=1&theme=dark
 questions:
-  - question: What component do you use to display your page components?
+  - question: ¿Qué componente se utiliza para desplegar los componentes de tu página? 
     answers:
       - '<Nuxt>'
       - '<Page>'
       - '<Views>'
     correctAnswer: '<Nuxt>'
-  - question: The `<Nuxt>` component can be used in?
+  - question: ¿Dónde se puede utilizar el componente `<Nuxt>`?
     answers:
-      - components
-      - pages
+      - componentes
+      - páginas
       - layouts
     correctAnswer: layouts
-  - question: Which component is used for displaying the children components in a nested route?
+  - question: ¿Qué componente se utiliza para desplegar los componentes 'hijos' de una ruta anidada?
     answers:
       - '<Nuxt>'
       - '<NuxtChild>'
       - '<Children>'
     correctAnswer: '<NuxtChild>'
-  - question: Where do you insert the `<NuxtChild>` component?
+  - question: ¿Dónde se debe insertar el componente `<NuxtChild>`?
     answers:
       - pages/child.vue
       - pages/parent.vue
       - layouts/parent.vue
     correctAnswer: pages/parent.vue
-  - question: '`keep-alive` can be used in'
+  - question: '`keep-alive` se puede utilizar en'
     answers:
-      - '<Nuxt> component only'
-      - '<Nuxt> and <NuxtChild> component'
-      - '<NuxtChild> component only'
+      - 'El componente <Nuxt> solamente'
+      - 'El componente <Nuxt> y <NuxtChild>'
+      - 'El componente <NuxtChild> solamente'
     correctAnswer: '<Nuxt> and <NuxtChild> component'
-  - question: What component do we use to link to internal pages?
+  - question: ¿Qué componente se utiliza para vincular con páginas internas?
     answers:
       - '<NuxtLink>'
       - '<RouterLink>'
       - '<a>'
     correctAnswer: '<NuxtLink>'
-  - question: 'How do you link to the about page of your app using <NuxtLink>?'
+  - question: '¿De qué manera se puede establecer un vínculo con la página *about* de tu aplicación mediante <NuxtLink>?'
     answers:
       - to="/about"
       - href="/about"
       - link="/about"
     correctAnswer: to="/about"
-  - question: What key do you use to disable prefetching for certain pages?
+  - question: ¿Qué código se puede utilizar para deshabilitar el *prefetching* en determinadas páginas?
     answers:
       - no-prefetch
       - :prefetch="false"
       - no-prefetch and :prefetch="false"
     correctAnswer: no-prefetch and :prefetch="false"
-  - question: What is the default class you can use to add styles for active links
+  - question: ¿Qué clase se utiliza por defecto para agregar estilos a links activos?
     answers:
       - nuxt-link-active
       - link-active
       - router-link-active
     correctAnswer: nuxt-link-active
-  - question: What is the default class you can use to add styles for exact active links
+  - question: ¿Qué clase se utiliza por defecto para agregar estilos a links activos exactos? 
     answers:
       - nuxt-link-exact-active
       - link-exact-active
       - nuxt-exact-active-link
     correctAnswer: nuxt-link-exact-active
-  - question: In Nuxt ≥ 2.9.0 which component do you use so that your component is only rendered on client side?
+  - question: En Nuxt ≥ 2.9.0 ¿qué componente se utiliza para que tu componente se despliegue solamente en el cliente?
     answers:
       - '<client-only>'
       - '<no-ssr>'
@@ -74,13 +74,13 @@ questions:
     correctAnswer: '<client-only>'
 ---
 
-Nuxt.js comes with a few important components included out of the box, which will be helpful when building your application. The components are globally available, which means that you don't need to import them in order to use them.
+Nuxt.js posee una serie de componentes importantes ya integrados que te serán de utilidad para construir tu aplicación. Los componentes están disponibles globalmente, lo cual significa que no necesitas importarlos para poder utilizarlos.
 
-In the following paragraphs, each of the included components is explained.
+A continuación se explican cada uno de los componentes que vienen incluidos. 
 
-## The Nuxt Component
+## El componente Nuxt
 
-The `<Nuxt>` component is the component you use to display your page components. Basically, this component gets replaced by what is inside your page components depending on the page that is being shown. Therefore it is important that you add the `<Nuxt>` component to your layouts.
+El componente `<Nuxt>` se utiliza para desplegar los componentes de tu página. Básicamente, este componente se reemplaza por lo que está dentro de los mismos, dependiendo de la página que se esté mostrando. Por este motivo es importante que agregues el componente `<Nuxt>` a tus layouts.
 
 ```html{}[layouts/default.vue]
 <template>
@@ -94,15 +94,15 @@ The `<Nuxt>` component is the component you use to display your page components.
 
 <base-alert>
 
-The `<Nuxt>` component can only be used inside [layouts](/guides/concepts/views#layouts).
+El componente `<Nuxt>` solamente se puede utilizar dentro de [layouts](/guides/concepts/views#layouts).
 
 </base-alert>
 
-The `<Nuxt>` component can take the prop of `nuxt-child-key`. This prop will be passed to `<RouterView>` so that your transitions will work correctly inside dynamic pages.
+El componente `<Nuxt>` puede tomar la propiedad de `nuxt-child-key`. Esta propiedad se pasa a `<RouterView>` para que tus transiciones funcionen correctamente dentro de páginas dinámicas.  
 
-There are 2 ways to handle the internal `key` prop of `<RouterView>`.
+Existen 2 maneras de manejar la propiedad interna `key` de `<RouterView>`.
 
-1. Use a `nuxtChildKey` prop on your `<Nuxt>` component
+1. Mediante una propiedad `nuxtChildKey` en tu componente `<Nuxt>` 
 
 ```html{}[layouts/default.vue]
 <template>
@@ -112,7 +112,7 @@ There are 2 ways to handle the internal `key` prop of `<RouterView>`.
 </template>
 ```
 
-2. Add the `key` option in _page_ components as `string` or `function`
+2. Agregando la opción `key` en _page_ components como `string` o como `function`
 
 ```js
 export default {
@@ -122,11 +122,11 @@ export default {
 }
 ```
 
-## The NuxtChild Component
+## El componente NuxtChild 
 
-This component is used for displaying the children components in a nested route.
+Este componente se utiliza para desplegar los componentes hijos en rutas anidadas. 
 
-Example:
+Ejemplo:
 
 ```
 -| pages/
@@ -135,7 +135,7 @@ Example:
 ---| parent.vue
 ```
 
-This file tree will generate these routes:
+Este archivo va a generar las siguientes rutas:
 
 ```js
 ;[
@@ -154,12 +154,12 @@ This file tree will generate these routes:
 ]
 ```
 
-To display the `child.vue` component, you have to insert the `<NuxtChild>` component inside `pages/parent.vue`:
+Para desplegar el componente `child.vue`, debes insertar el componente `<NuxtChild>` dentro de `pages/parent.vue`:
 
 ```html{}[pages/parent.vue]
 <template>
   <div>
-    <h1>I am the parent view</h1>
+    <h1>Soy la vista padre </h1>
     <NuxtChild :foobar="123" />
   </div>
 </template>
@@ -167,11 +167,11 @@ To display the `child.vue` component, you have to insert the `<NuxtChild>` co
 
 ## keep-alive
 
-Both, the `<Nuxt>` component and the `<NuxtChild/>` component, accept `keep-alive` and `keep-alive-props.`
+Tanto el componente `<Nuxt>` como el componente `<NuxtChild/>` aceptan `keep-alive` y `keep-alive-props.`
 
 <base-alert type="info">
 
-To learn more about keep-alive and keep-alive-props see the [vue docs](https://vuejs.org/v2/api/#keep-alive)
+Para aprender más sobre `keep-alive` y `keep-alive-props`, consultar [vue docs](https://vuejs.org/v2/api/#keep-alive)
 
 </base-alert>
 
@@ -182,7 +182,7 @@ To learn more about keep-alive and keep-alive-props see the [vue docs](https://v
   </div>
 </template>
 
-<!-- will be converted into something like this -->
+<!-- se convertirá en algo similar a esto -->
 <div>
   <KeepAlive :exclude="['modal']">
     <RouterView />
@@ -197,7 +197,7 @@ To learn more about keep-alive and keep-alive-props see the [vue docs](https://v
   </div>
 </template>
 
-<!-- will be converted into something like this -->
+<!-- se convertirá en algo similar a esto -->
 <div>
   <KeepAlive :exclude="['modal']">
     <RouterView />
@@ -205,7 +205,7 @@ To learn more about keep-alive and keep-alive-props see the [vue docs](https://v
 </div>
 ```
 
-`<NuxtChild>` components can also receive properties like a regular Vue component.
+Al igual que cualquier componente normal de Vue, los componentes `<NuxtChild>` también pueden recibir propiedades.
 
 ```html
 <template>
@@ -215,17 +215,17 @@ To learn more about keep-alive and keep-alive-props see the [vue docs](https://v
 </template>
 ```
 
-To see an example, take a look at the [nested-routes example](https://nuxtjs.org/examples/nested-routes).
+Si deseas ver un ejemplo, consulta aquí: [ejemplo nested-routes](https://nuxtjs.org/examples/nested-routes).
 
 <app-modal>
   <code-sandbox  :src="csb_link_nuxt"></code-sandbox>
 </app-modal>
 
-## The NuxtLink Component
+## El Componente NuxtLink
 
-To navigate between pages of your app, you should use the  `<NuxtLink>` component. This component is included with Nuxt.js and therefore you don't have to import it like you do with other components. It is similar to the HTML `<a>` tag except that instead of using a `href="/about"` you use `to="/about"`. If you've used `vue-router` before, you can think of `<NuxtLink>` as a replacement of `<RouterLink>`
+Puedes utilizar el componente `<NuxtLink>` para navegar por las páginas de tu aplicación. Este componente viene incluido en Nuxt.js, por lo tanto no es necesario que lo importes, como haces con otros componentes. Es similar a la etiqueta de HTML `<a>`, excepto que en lugar de utilizar un `href="/about"` tienes que usar `to="/about"`. Si ya has utilizado `vue-router` antes, puedes asumir que `<NuxtLink>` reemplaza a `<RouterLink>`
 
-A simple link to the `index.vue` page in your `pages` folder:
+Hipervínculo sencillo hacia la página `index.vue` de tu directorio `pages`:
 
 ```html
 <template>
@@ -233,48 +233,48 @@ A simple link to the `index.vue` page in your `pages` folder:
 </template>
 ```
 
-The `<NuxtLink>` component should be used for all internal links. That means for all links to the pages within your site you should use `<NuxtLink>`. The `<a>` tag should be used for all external links. That means if you have links to other websites you should use the `<a>` tag for those.
+El componente `<NuxtLink>` se debe utilizar para todos los links internos. Esto significa que debes utilizar `<NuxtLink>` para todos los links que dirigen hacia las páginas de tu sitio. La etiqueta `<a>` se debe utilizar para todos los links externos. Ello significa que si tienes links que dirigen hacia otros sitios web, debes utilizar la etiqueta `<a>`.
 
 ```html
 <template>
   <div>
     <h1>Home page</h1>
     <NuxtLink to="/about"
-      >About (internal link that belongs to the Nuxt App)</NuxtLink
+      >About (hipervínculo interno que pertenece a la aplicación de Nuxt)</NuxtLink
     >
-    <a href="https://nuxtjs.org">External Link to another page</a>
+    <a href="https://nuxtjs.org">Hipervínculo externo hacia otra página</a>
   </div>
 </template>
 ```
 
 <base-alert type="info">
 
-If you want to know more about `<RouterLink>`, feel free to read the [Vue Router documentation](https://router.vuejs.org/api/#router-link) for more information.
+Para aprender más sobre `<RouterLink>`, consulta la [Documentación sobre Vue Router](https://router.vuejs.org/api/#router-link) para obtener mayor información.
 
 </base-alert>
 
 <base-alert type="info">
-
-`<NuxtLink>` also comes with [smart prefetching](/guides/features/nuxt-components#the-nuxtlink-component) out of the box.
+  
+`<NuxtLink>` posee [*smart prefetching*](/guides/features/nuxt-components#the-nuxtlink-component) integrado.
 
 </base-alert>
 
 ## prefetchLinks
 
-Nuxt.js automatically includes smart prefetching. That means it detects when a link is visible, either in the viewport or when scrolling and prefetches the JavaScript for those pages so that they are ready when the user clicks the link. Nuxt.js only loads the resources when the browser isn't busy and skips prefetching if your connection is offline or if you only have 2g connection.
+Nuxt.js incluye *smart prefetching* de forma automática. Esto significa que detecta cuando un hipervínculo es visible, ya sea en el viewport o al desplazarse y realiza el *prefetching* en el JavaScript para todas aquellas páginas, para que estén listas cuando el usuario da clic al hipervínculo. Nuxt.js solamente carga los recursos cuando el navegador no se encuentra ocupado y no realiza el *prefetching* si tu conexión está offline(fuera de línea) o si solamente tienes conexión 2g.
 
-### Disable prefetching for specific links
+### Desactivar el *prefetching* de links específicos
 
-However sometimes you may want to disable prefetching on some links if your page has a lot of JavaScript or you have a lot of different pages that would be prefetched or you have a lot of third party scripts that need to be loaded. To disable the prefetching on a specific link, you can use the `no-prefetch` prop. Since Nuxt.js v2.10.0, you can also use the `prefetch` prop set to `false`
+Sin embargo, en ciertas circunstancias es probable que desees desactivar el *prefetching* de algunos links, por ejemplo, si tu página tiene mucho JavaScript, si tienes muchas páginas diferentes en las cuales se realizaría el *prefetching* o si tienes que cargar múltiples scripts de terceros. Para desactivar el *prefetching* en un hipervínculo en particular puedes utilizar la propiedad `no-prefetch`. A partir de Nuxt.js v2.10.0, puedes fijar la propiedad `prefetch` en `false`
 
 ```html
-<NuxtLink to="/about" no-prefetch>About page not pre-fetched</NuxtLink>
-<NuxtLink to="/about" :prefetch="false">About page not pre-fetched</NuxtLink>
+<NuxtLink to="/about" no-prefetch>Página About sin prefetching</NuxtLink>
+<NuxtLink to="/about" :prefetch="false">Página About sin prefetching</NuxtLink>
 ```
 
-### Disable prefetching globally
+### Desactivar el *prefetching* globalmente
 
-To disable the prefetching on all links, set the `prefetchLinks` to `false`:
+Para desactivar el *prefetching* en todos los links, fija los `prefetchLinks` en `false`:
 
 ```js{}[nuxt.config.js]
 export default {
@@ -284,15 +284,15 @@ export default {
 }
 ```
 
-Since Nuxt.js v2.10.0, if you have set `prefetchLinks` to `false` but you want to prefetch a specific link, you can use the `prefetch` prop:
+A partir de Nuxt.js v2.10.0, si has fijado el valor de `prefetchLinks` en `false` (falso) pero deseas hacer *prefetching* a un link en particular, puedes utilizar la propiedad `prefetch`.
 
 ```html
-<NuxtLink to="/about" prefetch>About page pre-fetched</NuxtLink>
+<NuxtLink to="/about" prefetch>Página About con prefetching</NuxtLink>
 ```
 
 ## linkActiveClass
 
-The `linkActiveClass` works the same as the `vue-router` class for active links. If we want to show which links are active all you have to do is create some css for the class `nuxt-link-active` .
+`linkActiveClass` funciona igual que la clase `vue-router` para vínculos activos. Si deseas mostrar cuáles links están activos, lo único que tienes que hacer es crear algo de css para la clase `nuxt-link-active` .
 
 ```css
 .nuxt-link-active {
@@ -302,11 +302,11 @@ The `linkActiveClass` works the same as the `vue-router` class for active links.
 
 <base-alert>
 
-This css can be added to the navigation component or for a specific page or layout or in your main.css file.
+Este código css se puede agregar ya sea al componente de navegación, a una página/layout en particular, o a tu archivo main.css .
 
 </base-alert>
 
-If you want to you can also configure the class name to be something else. You con do this by modifying the `linkActiveClass` in the router property in your `nuxt.config.js` file.
+Si deseas, también puedes configurar para que el nombre de la clase sea distinto. Puedes hacerlo modificando la `linkActiveClass` en la propiedad router de tu archivo `nuxt.config.js`.
 
 ```js
 export default {
@@ -318,13 +318,13 @@ export default {
 
 <base-alert type="info">
 
-This option is given directly to the `vue-router` linkActiveClass. See the [vue-router docs](https://router.vuejs.org/api/#active-class) for more info.
+Esta opción se le da directamente a la linkActiveClass de `vue-router` . Consulta en [docs vue-router](https://router.vuejs.org/api/#active-class) para obtener mayor información al respecto.
 
 </base-alert>
 
 ## linkExactActiveClass
 
-The `linkExactActiveClass` works the same as the `vue-router` class for exact active links. If we want to show which links are active with an exact match all you have to do is create some css for the class `nuxt-link-exact-active` .
+`linkExactActiveClass` funciona igual que la clase `vue-router` en links activos exactos. Si deseamos mostrar de forma precisa los links que se encuentran activos, lo único que debes hacer es agregar algo de css a la clase `nuxt-link-exact-active` .
 
 ```css
 .nuxt-link-exact-active {
@@ -334,11 +334,11 @@ The `linkExactActiveClass` works the same as the `vue-router` class for exact ac
 
 <base-alert type="info">
 
-This css can be added to the navigation component or for a specific page or layout or in your main.css file.
+Puedes agregar este código en css al componente de navegación, a alguna página o layout en particular, o a tu archivo main.css .
 
 </base-alert>
 
-If you want to you can also configure the class name to be something else. You con do this by modifying the `linkActiveClass` in the router property in your `nuxt.config.js` file.
+Si lo deseas, también puedes colocar un nombre de clase distinto. Puedes lograrlo modificando la `linkActiveClass` en la propiedad router de tu archivo `nuxt.config.js`.
 
 ```js{}[nuxt.config.js]
 export default {
@@ -350,13 +350,13 @@ export default {
 
 <base-alert type="info">
 
-This option is given directly to the `vue-router` linkExactActiveClass. See the [vue-router](https://router.vuejs.org/api/#active-class) [docs](https://router.vuejs.org/api/#exact-active-class) for more info
+Esta opción se le da directamente a la linkExactActiveClass de `vue-router`. Consulta [vue-router](https://router.vuejs.org/api/#active-class) [docs](https://router.vuejs.org/api/#exact-active-class) para obtener mayor información al respecto
 
 </base-alert>
 
 ## linkPrefetchedClass
 
-The linkPrefetchedClass will allow you to add styles for all links that have been prefetched. This is great for testing which links are being prefetched after modifying the default behaviour. The linkPrefetchedClass is disabled by default. If you want to enable it you need to add it to the router property in your `nuxt-config.js` file.
+La opción `linkPrefetchedClass` permite añadir estilos a todos los links a que se les haya realizado *prefetching*. Esto resulta fabuloso para probar a cuáles links se les ha realizado *prefetching* luego de haber modificado su comportamiento por defecto. Por defecto la opción `linkPrefetchedClass` viene desactivada. Si deseas activarla necesitas agregarla a la propiedad router de tu archivo `nuxt-config.js`.
 
 ```js{}[nuxt.config.js]
 export default {
@@ -366,7 +366,7 @@ export default {
 }
 ```
 
-Then you can add the styles for that class.
+Y luego puedes agregar los estilos para esa clase.
 
 ```css
 .nuxt-link-prefetched {
@@ -376,7 +376,7 @@ Then you can add the styles for that class.
 
 <base-alert type="info">
 
-In this example we have used the class `nuxt-link-prefetched` but you can name it anything you like
+En este ejemplo hemos usado `nuxt-link-prefetched` como nombre de la clase, pero puedes utilizar cualquier nombre de tu preferencia.
 
 </base-alert>
 
@@ -384,33 +384,33 @@ In this example we have used the class `nuxt-link-prefetched` but you can name i
   <code-sandbox  :src="csb_link_nuxt_link"></code-sandbox>
 </app-modal>
 
-## The client-only Component
+## El componente client-only
 
-This component is used to purposely render a component only on client-side. To import a component only on the client, register the component in a client-side only plugin.
+Este componente se usa para desplegar un componente del lado del cliente únicamente. Para importar un componente, registra el componente en un *plugin* que funcione únicamente del lado del cliente.
 
 ```html{}[pages/example.vue]
 <template>
   <div>
     <sidebar />
     <client-only placeholder="Loading...">
-      <!-- this component will only be rendered on client-side -->
+      <!-- este componente se va a desplegar solamente en el cliente -->
       <comments />
     </client-only>
   </div>
 </template>
 ```
 
-Use a slot as placeholder until `<client-only />` is mounted on client-side.
+Deje un espacio reservado (placeholder) hasta que `<client-only />` quede montado en el cliente.
 
 ```html{}[pages/example.vue]
 <template>
   <div>
     <sidebar />
     <client-only>
-      <!-- this component will only be rendered on client-side -->
+      <!-- este componente se va a desplegar solamente en el cliente -->
       <comments />
 
-      <!-- loading indicator, rendered on server-side -->
+      <!-- indicador de carga, se despliega en el servidor -->
       <comments-placeholder slot="placeholder" />
     </client-only>
   </div>
@@ -419,7 +419,7 @@ Use a slot as placeholder until `<client-only />` is mounted on client-side.
 
 <base-alert>
 
-If you are using a version of Nuxt < v2.9.0, use `<no-ssr>` instead of `<client-only>`
+Si estás usando una versión de Nuxt < v2.9.0, utiliza `<no-ssr>` en lugar de `<client-only>`
 
 </base-alert>
 

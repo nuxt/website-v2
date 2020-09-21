@@ -1,7 +1,7 @@
 ---
 title: 'The ssr Property'
 description: Change default nuxt ssr value
-menu: mode
+menu: ssr
 category: configuration-glossary
 position: 28.1
 ---

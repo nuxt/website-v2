@@ -46,50 +46,41 @@ export default {
 }
 
 .Carbon {
-  @apply p-4 flex flex-col ml-auto mt-4;
-
-  max-width: 100%;
+  @apply p-4 flex flex-col ml-auto mt-4 max-w-full;
 
   @screen sm {
-    max-width: 320px;
+    @apply max-w-xs;
   }
 
   @screen lg {
     @apply mt-0 mx-auto;
-
     max-width: 160px;
   }
 
   #carbonads span {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
+    @apply flex flex-col justify-between;
 
     .carbon-wrap {
-      display: flex;
+      @apply flex flex-col;
       flex: 1;
-      flex-direction: column;
 
-      @screen xs {
-        flex-direction: row;
+      @media (min-width: 320px) {
+        @apply flex-row;
       }
 
       @screen lg {
-        flex-direction: column;
+        @apply flex-col;
       }
 
       .carbon-img {
-        align-items: flex-start;
-        display: flex;
-        justify-content: center;
-        margin-bottom: 1rem;
+        @apply flex items-start justify-center mb-4;
 
-        @screen xs {
-          margin-bottom: 0;
+        @media (min-width: 320px) {
+          @apply mb-0;
         }
 
         @screen lg {
-          margin-bottom: 1rem;
+          @apply mb-4;
         }
       }
 
@@ -100,12 +91,12 @@ export default {
           @apply no-underline;
         }
 
-        @screen xs {
-          margin-left: 1rem;
+        @media (min-width: 320px) {
+          @apply ml-4;
         }
 
         @screen lg {
-          margin-left: 0;
+          @apply ml-0;
         }
       }
     }
@@ -120,25 +111,6 @@ export default {
 
     &:hover {
       @apply no-underline text-gray-500;
-    }
-  }
-
-  @media (max-width: 1023px) {
-    // margin: 1rem 0;
-    & .carbon-img {
-      // float: left;
-      display: block;
-    }
-
-    & .carbon-text {
-      display: block;
-      width: 150px;
-    }
-
-    & .carbon-poweredby {
-      display: block;
-      // float: right;
-      text-align: right;
     }
   }
 }

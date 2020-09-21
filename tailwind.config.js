@@ -3,10 +3,6 @@ const defaultTheme = require('tailwindcss/defaultTheme')
 
 module.exports = {
   theme: {
-    screens: {
-      xs: '320px',
-      ...defaultTheme.screens
-    },
     extend: {
       fontFamily: {
         sans: [
@@ -109,9 +105,6 @@ module.exports = {
       'dark:hover',
       'light:hover'
     ]
-  },
-  corePlugins: {
-    container: false
   },
   plugins: [
     plugin(function ({ addVariant, theme, e, prefix, config }) {

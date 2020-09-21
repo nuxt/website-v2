@@ -2,7 +2,7 @@
   <VueIfBot>
     <CookieConsent
       data-cy="cookie-box"
-      class="flex justify-center items-center text-light-onSurfaceSecondary dark:text-dark-onSurfaceSecondary border border-top border-light-border dark:border-dark-border xs:flex-col xs:pt-2 md:flex-row xs:text-center"
+      class="flex justify-center items-center text-light-onSurfaceSecondary dark:text-dark-onSurfaceSecondary border border-top border-light-border dark:border-dark-border flex-col pt-2 px-2 md:pt-0 md:px-0 md:flex-row text-center"
     >
       <template slot="message">
         <p>

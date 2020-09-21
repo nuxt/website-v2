@@ -1,59 +1,59 @@
 ---
-title: Installation
-description: Here, you will find information on setting up and running a Nuxt.js project in 4 steps.
+title: Установка
+description: Здесь вы найдете информацию по настройке и запуску Nuxt.js проекта за 4 шага.
 position: 1
 category: get-started
 csb_link: https://codesandbox.io/embed/github/nuxt-academy/guides-examples/tree/master/01_get_started/01_installation?fontsize=14&hidenavigation=1&theme=dark
 ---
 
-## Prerequisites
+## Необходимые условия
 
-Here, you will find information on setting up and running a Nuxt.js project in 4 steps.
+Здесь вы найдете информацию по настройке и запуску Nuxt.js проекта за 4 шага.
 
 <base-alert type="info">
 
-Another way to get started with Nuxt.js is to use [CodeSandbox](https://template.nuxtjs.org) which is a great way for quickly playing around with Nuxt.js and/or sharing your code with other people.
+Другой способ начать работать с Nuxt.js - это использовать [CodeSandbox](https://template.nuxtjs.org). Это отличный вариант, чтобы поиграть с Nuxt.js и/или поделиться вашим кодом с другими.
 
 </base-alert>
 
 ### Node
 
-[node](https://nodejs.org/en/download/) - at least v8.9.0
+[node](https://nodejs.org/en/download/) - не ниже v8.9.0
 
-_We recommend you have the latest version installed._
+_Мы рекомендуем использовать последнюю доступную версию._
 
-### Text editor
+### Редактор кода
 
-Use whatever you like, but we recommend [VSCode](https://code.visualstudio.com/).
+Используйте тот, который вам нравится, но мы рекомендуем [VSCode](https://code.visualstudio.com/).
 
-### Terminal
+### Терминал
 
-Use whatever you like, but we recommend using VSCode's [integrated terminal](https://code.visualstudio.com/docs/editor/integrated-terminal).
+Используйте тот, который вам нравится, но мы рекомендуем интегрированный в VSCode [терминал](https://code.visualstudio.com/docs/editor/integrated-terminal).
 
-## Starting from scratch
+## Настройка с нуля
 
-Creating a Nuxt.js project from scratch only requires one file and one directory.
+Для создания Nuxt.js проекта с нуля требуется только один файл и одна директория.
 
-In this particular example, we will use the terminal to create the directories and files, but feel free to create them using your editor of choice.
+В этом примере мы будем использовать терминал для создания директорий и файлов, но вы можете создавать их как вам удобно.
 
-### Set up your project
+### Настройка проекта
 
-To get started, create an empty directory with the name of your project and navigate into it:
+Для начала создайте пустую директорию с именем проекта и перейдите в нее:
 
 ```bash
 mkdir <project-name>
 cd <project-name>
 ```
 
-_Replace `<project-name>` with the name of your project._
+_Замените `<project-name>` на имя вашего проекта._
 
-Then create a file named `package.json`:
+Затем создайте файл с именем `package.json`:
 
 ```bash
 touch package.json
 ```
 
-Open the package.json file in your favorite code editor and fill it with this JSON content:
+Откройте файл package.json в вашем редакторе и вставьте такой JSON код:
 
 ```json{}[package.json]
 {
@@ -67,15 +67,15 @@ Open the package.json file in your favorite code editor and fill it with this JS
 }
 ```
 
-`scripts` define Nuxt.js commands that will be launched with the command `npm run <command>`.
+В секции `scripts` указаны Nuxt.js команды, которые будут запущены при выполнении `npm run <имя_команды>`.
 
-#### **What is a package.json file?**
+#### **Что такое файл package.json?**
 
-The `package.json` is like the ID card of your project. If you don't know what the `package.json` file is, we highly recommend you to have a quick read on the [NPM documentation](https://docs.npmjs.com/creating-a-package-json-file).
+`package.json` это как паспорт вашего проекта. Если вы хотите больше узнать о файле `package.json`, то мы рекомендуем почитать [документацию NPM](https://docs.npmjs.com/creating-a-package-json-file).
 
-### Install nuxt
+### Установка nuxt
 
-Once the `package.json` has been created, add `nuxt` to your project via `npm` or `yarn` like so below:
+После создания файла `package.json` добавьте `nuxt` в ваш проект используя `npm` или `yarn`:
 
 <code-group>
   <code-block label="Yarn" active>
@@ -94,43 +94,43 @@ npm install nuxt
   </code-block>
 </code-group>
 
-This command will add `nuxt` as a dependency to your project and it will add it to your `package.json` automatically. The `node_modules` directory will also be created which is where all your installed packages and their dependencies are stored.
+Эта команда добавит `nuxt` как зависимость вашего проекта и обновит файл `package.json` автоматически. Директория `node_modules` также будет создана, в ней будут храниться установленные пакеты и их зависимости.
 
 <base-alert type="info">
 
-A `yarn.lock` or `package-lock.json` is also created which ensures a consistent install and compatible dependencies of your packages installed in your project.
+`yarn.lock` или `package-lock.json` также будут созданы для обеспечения совместимости зависимостей вашего проекта.
 
 </base-alert>
 
-### Create your first page
+### Создайте вашу первую страницу
 
-Nuxt.js transforms every `*.vue` file inside the `pages` directory as a route for the application.
+Nuxt.js преобразует каждый файл `*.vue` внутри директории `pages` в маршрут приложения.
 
-Create the `pages` directory in your project:
+Создайте директорию `pages` в вашем проекте:
 
 ```bash
 mkdir pages
 ```
 
-Then, create an `index.vue` file in the `pages` directory:
+Затем создайте файл `index.vue` в директории `pages`:
 
 ```bash
 touch pages/index.vue
 ```
 
-It is important that this page is called `index.vue` as this will be the default page Nuxt shows when the application opens. It is the home page and it must be called index.
+Важно, чтобы страница называлась именно `index.vue`, т.к. это страница, которая будет показываться при открытии приложения. Это главная страница, потому должна называться index.
 
-Open the `index.vue` file in your editor and add the following content:
+Откройте файл `index.vue` в вашем редакторе и добавьте следующее содержимое:
 
 ```html{}[pages/index.vue]
 <template>
-  <h1>Hello world!</h1>
+  <h1>Привет мир!</h1>
 </template>
 ```
 
-### Start the project
+### Начало проекта
 
-Run your project by typing one of the following commands below in your terminal:
+Запустите ваш проект, выполнив одну из команд ниже в вашем терминале:
 
 <code-group>
   <code-block label="Yarn" active>
@@ -151,37 +151,37 @@ npm run dev
 
 <base-alert type="info">
 
-We use the dev command when running our application in development mode.
+Мы используем команду dev когда нам нужно запустить приложение в режиме разработки.
 
 </base-alert>
 
-The application is now running on **[http://localhost:3000](http://localhost:3000/).**
+Теперь приложение запущено по адресу **[http://localhost:3000](http://localhost:3000/).**
 
-Open it in your browser by clicking the link in your terminal and you should see the text "Hello World" we copied in the previous step.
+Откройте ваше приложение нажав на ссылку в терминале и вы увидите текст "Привет мир!", который мы добавили на предыдущем шаге.
 
 <base-alert type="info">
 
-When launching Nuxt.js in development mode, it will listen for file changes in most directories, so there is no need to restart the application when e.g. adding new pages
+Когда мы запускаем Nuxt.js в режиме разработки, изменения большинства директорий будут отслеживаться, поэтому нам не нужно перезапускать проект, например, после добавления новой страницы.
 
 </base-alert>
 
 <base-alert type="warning">
 
-When you run the dev command it will create .nuxt folder. This folder should be ignored from version control. You can ignore files by creating a .gitignore file at the root level and adding .nuxt.
+После выполнения команды dev будет создана директорния .nuxt. Эта директория должна игнорироваться системой контроля версий(git). Вы можете задать какие файлы нужно игнорировать, создав файл .gitignore в корне вашего проекта и добавив туда .nuxt.
 
 </base-alert>
 
-### Bonus step
+### Бонусный шаг
 
-Create a page named `fun.vue` in the `pages` directory.
+Создайте страницу с именем `fun.vue` в директории `pages`.
 
-Add a `<template></template>` and include a heading with a funny sentence inside.
+Добавьте `<template></template>` с забавным заголовком внутри.
 
-Then, go to your browser and see your new page on **[http://localhost:3000/fun](http://localhost:3000/fun).**
+Откройте страницу **[http://localhost:3000/fun](http://localhost:3000/fun).**
 
 <base-alert type="info">
 
-Create a directory named `more-fun` and put an `index.vue` file inside. This will give the same result as creating a `more-fun.vue` file
+Создайте директорию с именем `more-fun` и добавьте в нее файл `index.vue`. Это даст такой же результат, если бы мы создали файл `more-fun.vue`
 
 </base-alert>
 
@@ -189,11 +189,11 @@ Create a directory named `more-fun` and put an `index.vue` file inside. This wil
   <code-sandbox  :src="csb_link"></code-sandbox>
 </app-modal>
 
-## Using create-nuxt-app
+## С использованием create-nuxt-app
 
-To get started quickly you can use the [create-nuxt-app](https://github.com/nuxt/create-nuxt-app).
+Для быстрого старта вы можете использовать [create-nuxt-app](https://github.com/nuxt/create-nuxt-app).
 
-Make sure you have npx installed (npx is shipped by default since NPM 5.2.0) or npm v6.1 or yarn.
+Убедитесь, что у вас установлен npx (npx встроен по умолчанию начиная с NPM 5.2.0) или npm v6.1 или yarn.
 
 <code-group>
   <code-block label="Yarn" active>
@@ -220,7 +220,7 @@ npm init nuxt-app <project-name>
 
 </code-group>
 
-It will ask you some questions (name, Nuxt options, UI framework, TypeScript, linter, testing framework, etc.), when answered, it will install all the dependencies. The next step is to navigate to the project folder and launch it:
+Вам зададут несколько вопросов (имя проекта, настройки Nuxt, UI фреймворк, TypeScript, linter, фреймворк тестов, и т.д.), когда ответите , будут установлены все зависимости. Следующий шаг - перейти в директорию проекта и запустить его:
 
 <code-group>
   <code-block label="Yarn" active>
@@ -241,4 +241,4 @@ npm run dev
   </code-block>
 </code-group>
 
-The application is now running on [http://localhost:3000](http://localhost:3000). Well done!
+Теперь приложение запущено по адресу [http://localhost:3000](http://localhost:3000). Отлично сработано!

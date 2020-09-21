@@ -265,7 +265,7 @@ See the [content module docs](https://content.nuxtjs.org/fetching#searchfield-va
 
 ### Syntax highlighting
 
-This module automatically wraps codeblocks and applies [PrismJS](https://prismjs.com/) classes. You can also add a different prismJS theme or disable it altogether.
+This module automatically wraps codeblocks and applies [PrismJS](https://prismjs.com/) classes. You can also add a different PrismJS theme or disable it altogether.
 
 <code-group>
   <code-block label="Yarn" active>
@@ -302,7 +302,7 @@ See the [content module docs](https://content.nuxtjs.org/writing#syntax-highligh
 
 ### Extend Markdown Parsing
 
-Originally markdown does not support highlighting lines inside codeblock nor filenames. The content module allows it with its own custom syntax. Line numbers are added to the pre tag in data-line attributes and the filename will be converted to a span with a filename class, so you can style it.
+Originally markdown does not support highlighting lines inside codeblock nor filenames. The content module allows it with its own custom syntax. Line numbers are added to the `pre` tag in data-line attributes and the filename will be converted to a `span` with a `filename` class, so you can style it.
 
 <base-alert type="next">
 
@@ -332,7 +332,7 @@ See the [content module docs](https://content.nuxtjs.org/writing#table-of-conten
 
 ### Powerful QueryBuilder API (MongoDB like)
 
-The content module comes with a powerful QueryBuilder API similar to MongoDB which allows you to easily see the JSON of each directory at `http://localhost:3000/_content/` . The endpoint is accessible on GET and POST request, so you can use query params.
+The content module comes with a powerful QueryBuilder API similar to MongoDB which allows you to easily see the JSON of each directory at `http://localhost:3000/_content/`. The endpoint is accessible on GET and POST request, so you can use query params.
 
 `http://localhost:3000/_content/articles?only=title&only=description&limit=10`
 
@@ -344,7 +344,7 @@ See the [content module docs](https://content.nuxtjs.org/fetching#api) for more 
 
 ### Extend with hooks
 
-You can use hooks to extend the module so you can add data to a document before it is stored
+You can use hooks to extend the module so you can add data to a document before it is stored.
 
 <base-alert type="next">
 
@@ -364,7 +364,7 @@ See the [content module docs](https://content.nuxtjs.org/advanced#integration-wi
 
 ### Support static site generation
 
-The content module works with static site generation using the `nuxt generate.` All routes will be automatically generated thanks to the nuxt crawler feature.
+The content module works with static site generation using the `nuxt generate`. All routes will be automatically generated thanks to the nuxt crawler feature.
 
 <base-alert>
 

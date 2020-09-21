@@ -75,7 +75,7 @@ touch package.json
 
 ### Установка nuxt
 
-После создания файла `package.json`добавьте `nuxt` в ваш проект используя `npm` или `yarn`:
+После создания файла `package.json` добавьте `nuxt` в ваш проект используя `npm` или `yarn`:
 
 <code-group>
   <code-block label="Yarn" active>

@@ -102,35 +102,35 @@ npm install nuxt
 
 </base-alert>
 
-### Create your first page
+### Создайте вашу первую страницу
 
-Nuxt.js transforms every `*.vue` file inside the `pages` directory as a route for the application.
+Nuxt.js преобразует каждый файл `*.vue` внутри директории `pages` в маршрут приложения.
 
-Create the `pages` directory in your project:
+Создайте директорию `pages` в вашем проекте:
 
 ```bash
 mkdir pages
 ```
 
-Then, create an `index.vue` file in the `pages` directory:
+Затем создайте файл `index.vue` в директории `pages`:
 
 ```bash
 touch pages/index.vue
 ```
 
-It is important that this page is called `index.vue` as this will be the default page Nuxt shows when the application opens. It is the home page and it must be called index.
+Важно, чтобы страница называлась именно `index.vue`, т.к. это страница, которая будет показываться при открытии приложения. Это главная страница и должна называться index.
 
-Open the `index.vue` file in your editor and add the following content:
+Откройте файл `index.vue` в вашем редакторе и добавьте следующее содержание:
 
 ```html{}[pages/index.vue]
 <template>
-  <h1>Hello world!</h1>
+  <h1>Привет мир!</h1>
 </template>
 ```
 
-### Start the project
+### Начало проекта
 
-Run your project by typing one of the following commands below in your terminal:
+Запустите ваш проект, выполнив одну из команд ниже в вашем терминале:
 
 <code-group>
   <code-block label="Yarn" active>
@@ -151,37 +151,37 @@ npm run dev
 
 <base-alert type="info">
 
-We use the dev command when running our application in development mode.
+Мы используем команду dev когда нам нужно запустить наше приложение в режиме разработки.
 
 </base-alert>
 
-The application is now running on **[http://localhost:3000](http://localhost:3000/).**
+Теперь приложение запущено по адресу **[http://localhost:3000](http://localhost:3000/).**
 
-Open it in your browser by clicking the link in your terminal and you should see the text "Hello World" we copied in the previous step.
+Откройте ваше приложение нажав на ссылку в терминале и вы увидите текст "Привет мир!", который мы добавили на предыдущем шаге.
 
 <base-alert type="info">
 
-When launching Nuxt.js in development mode, it will listen for file changes in most directories, so there is no need to restart the application when e.g. adding new pages
+Когда мы запускаем Nuxt.js в режиме разработки, изменения большинства директорий будут отслеживаться, поэтому нам не нужно перезапускать проект, например, после добавления новой страницы.
 
 </base-alert>
 
 <base-alert type="warning">
 
-When you run the dev command it will create .nuxt folder. This folder should be ignored from version control. You can ignore files by creating a .gitignore file at the root level and adding .nuxt.
+После выполнения команды dev будет создана директорния .nuxt. Эта директория должна игнорироваться системой контроля версий(git). Вы можете задать какие файлы нужно игнорировать, создав файл .gitignore в корне вашего проекта и добавив туда .nuxt.
 
 </base-alert>
 
-### Bonus step
+### Бонусный шаг
 
-Create a page named `fun.vue` in the `pages` directory.
+Создайте страницу с именем `fun.vue` в директории `pages`.
 
-Add a `<template></template>` and include a heading with a funny sentence inside.
+Добавьте `<template></template>` с забавным заголовком внутри.
 
-Then, go to your browser and see your new page on **[http://localhost:3000/fun](http://localhost:3000/fun).**
+Откройте страницу **[http://localhost:3000/fun](http://localhost:3000/fun).**
 
 <base-alert type="info">
 
-Create a directory named `more-fun` and put an `index.vue` file inside. This will give the same result as creating a `more-fun.vue` file
+Создайте директорию с именем `more-fun` и добавьте в нее файл `index.vue`. Это даст такой же результат, если бы мы создали файл `more-fun.vue`
 
 </base-alert>
 
@@ -189,11 +189,11 @@ Create a directory named `more-fun` and put an `index.vue` file inside. This wil
   <code-sandbox  :src="csb_link"></code-sandbox>
 </app-modal>
 
-## Using create-nuxt-app
+## С использованием create-nuxt-app
 
-To get started quickly you can use the [create-nuxt-app](https://github.com/nuxt/create-nuxt-app).
+Для быстрого старта вы можете использовать [create-nuxt-app](https://github.com/nuxt/create-nuxt-app).
 
-Make sure you have npx installed (npx is shipped by default since NPM 5.2.0) or npm v6.1 or yarn.
+Убедитесь, что у вас установлен npx (npx встроен по умолчанию начиная с NPM 5.2.0) или npm v6.1 или yarn.
 
 <code-group>
   <code-block label="Yarn" active>
@@ -220,7 +220,7 @@ npm init nuxt-app <project-name>
 
 </code-group>
 
-It will ask you some questions (name, Nuxt options, UI framework, TypeScript, linter, testing framework, etc.), when answered, it will install all the dependencies. The next step is to navigate to the project folder and launch it:
+Вам зададут несколько вопросов (имя проекта, настройки Nuxt, UI фреймворк, TypeScript, linter, фреймворк тестов, и т.д.), когда ответите , будут установлены все зависимости. Следующий шаг - перейти в директорию проекта и запустить его:
 
 <code-group>
   <code-block label="Yarn" active>
@@ -241,4 +241,4 @@ npm run dev
   </code-block>
 </code-group>
 
-The application is now running on [http://localhost:3000](http://localhost:3000). Well done!
+Теперь приложение запущено по адресу [http://localhost:3000](http://localhost:3000). Отлично сработано!

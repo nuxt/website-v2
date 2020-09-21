@@ -254,7 +254,7 @@ Para aprender más sobre `<RouterLink>`, consulta la [Documentación sobre Vue 
 </base-alert>
 
 <base-alert type="info">
-
+  
 `<NuxtLink>` posee [*smart prefetching*](/guides/features/nuxt-components#the-nuxtlink-component) integrado.
 
 </base-alert>
@@ -351,6 +351,7 @@ export default {
 <base-alert type="info">
 
 Esta opción se le da directamente a la linkExactActiveClass de `vue-router`. Consulta [vue-router](https://router.vuejs.org/api/#active-class) [docs](https://router.vuejs.org/api/#exact-active-class) para obtener mayor información al respecto
+
 </base-alert>
 
 ## linkPrefetchedClass

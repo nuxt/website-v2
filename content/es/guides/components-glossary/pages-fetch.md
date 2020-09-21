@@ -7,7 +7,7 @@ category: components-glossary
 
 ## Nuxt >= 2.12
 
-Nuxt.js `v2.12` introduce un nuevo *hook* llamado `fetch`(traer) **en cualquiera de tus componentes de Vue**.
+Nuxt.js `v2.12` introduce un nuevo _hook_ llamado `fetch`(traer) **en cualquiera de tus componentes de Vue**.
 
 <base-alert>
 
@@ -21,7 +21,7 @@ Cada vez que necesite obtener datos **asincrónicos**. `fetch` se llama en el la
 
 Expone `$fetchState` a nivel de componente:
 
-- `$fetchState.pending`: `Boolean`, permite mostrar un *placeholder* cuando se llama a `fetch` _en el lado del cliente_.
+- `$fetchState.pending`: `Boolean`, permite mostrar un _placeholder_ cuando se llama a `fetch` _en el lado del cliente_.
 - `$fetchState.error`: `null` o `Error`, permite mostrar un mensaje de error
 - `$fetchState.timestamp`: `Integer`, es una marca de tiempo de la última recuperación, útil para almacenar en caché con `keep-alive`
 

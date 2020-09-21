@@ -1,0 +1,20 @@
+name: Sync upstream
+
+on:
+  schedule:
+    - cron: '0 0 * * 0' #every on Sunday
+  jobs:
+    sync_upstram:
+      runs-on: ubuntu-latest
+      steps:
+        - uses: actions/checkout@v2
+        - name: Merge upstream
+          run: |
+            echo 'add and fetch'
+            git remote add upstream ${UPSTREAM_REPOSITORY}
+            git fetch upstream
+            echo 'rebase and push'
+            git rebase upstream/master
+            git push origin master
+          env:
+            UPSTREAM_REPOSITORY: https://github.com/nuxt/nuxtjs.org.git

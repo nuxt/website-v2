@@ -1,12 +1,12 @@
 ---
-título: Componentes de Nuxt
-descripción: Nuxt.js posee una serie de componentes importantes integrados que resultarán de mucha utilidad para construir tu aplicación. 
-posición: 9
-categoría: features
+title: Componentes de Nuxt
+description: Nuxt.js posee una serie de componentes importantes integrados que resultarán de mucha utilidad para construir tu aplicación.
+position: 9
+category: features
 csb_link_nuxt_link: https://codesandbox.io/embed/github/nuxt-academy/guides-examples/tree/master/03_features/09_components_nuxt-link?fontsize=14&hidenavigation=1&theme=dark
 csb_link_nuxt: https://codesandbox.io/embed/github/nuxt-academy/guides-examples/tree/master/03_features/09_components_nuxt?fontsize=14&hidenavigation=1&theme=dark
 questions:
-  - question: ¿Qué componente se utiliza para desplegar los componentes de tu página? 
+  - question: ¿Qué componente se utiliza para desplegar los componentes de tu página?
     answers:
       - '<Nuxt>'
       - '<Page>'
@@ -60,7 +60,7 @@ questions:
       - link-active
       - router-link-active
     correctAnswer: nuxt-link-active
-  - question: ¿Qué clase se utiliza por defecto para agregar estilos a links activos exactos? 
+  - question: ¿Qué clase se utiliza por defecto para agregar estilos a links activos exactos?
     answers:
       - nuxt-link-exact-active
       - link-exact-active
@@ -76,7 +76,7 @@ questions:
 
 Nuxt.js posee una serie de componentes importantes ya integrados que te serán de utilidad para construir tu aplicación. Los componentes están disponibles globalmente, lo cual significa que no necesitas importarlos para poder utilizarlos.
 
-A continuación se explican cada uno de los componentes que vienen incluidos. 
+A continuación se explican cada uno de los componentes que vienen incluidos.
 
 ## El componente Nuxt
 
@@ -98,11 +98,11 @@ El componente `<Nuxt>` solamente se puede utilizar dentro de [layouts](/guides/c
 
 </base-alert>
 
-El componente `<Nuxt>` puede tomar la propiedad de `nuxt-child-key`. Esta propiedad se pasa a `<RouterView>` para que tus transiciones funcionen correctamente dentro de páginas dinámicas.  
+El componente `<Nuxt>` puede tomar la propiedad de `nuxt-child-key`. Esta propiedad se pasa a `<RouterView>` para que tus transiciones funcionen correctamente dentro de páginas dinámicas.
 
 Existen 2 maneras de manejar la propiedad interna `key` de `<RouterView>`.
 
-1. Mediante una propiedad `nuxtChildKey` en tu componente `<Nuxt>` 
+1. Mediante una propiedad `nuxtChildKey` en tu componente `<Nuxt>`
 
 ```html{}[layouts/default.vue]
 <template>
@@ -122,9 +122,9 @@ export default {
 }
 ```
 
-## El componente NuxtChild 
+## El componente NuxtChild
 
-Este componente se utiliza para desplegar los componentes hijos en rutas anidadas. 
+Este componente se utiliza para desplegar los componentes hijos en rutas anidadas.
 
 Ejemplo:
 
@@ -159,7 +159,7 @@ Para desplegar el componente `child.vue`, debes insertar el componente `<NuxtC
 ```html{}[pages/parent.vue]
 <template>
   <div>
-    <h1>Soy la vista padre </h1>
+    <h1>Soy la vista padre</h1>
     <NuxtChild :foobar="123" />
   </div>
 </template>
@@ -240,7 +240,8 @@ El componente `<NuxtLink>` se debe utilizar para todos los links internos. Esto 
   <div>
     <h1>Home page</h1>
     <NuxtLink to="/about"
-      >About (hipervínculo interno que pertenece a la aplicación de Nuxt)</NuxtLink
+      >About (hipervínculo interno que pertenece a la aplicación de
+      Nuxt)</NuxtLink
     >
     <a href="https://nuxtjs.org">Hipervínculo externo hacia otra página</a>
   </div>
@@ -261,20 +262,20 @@ Para aprender más sobre `<RouterLink>`, consulta la [Documentación sobre Vue 
 
 ## prefetchLinks
 
-Nuxt.js incluye *smart prefetching* de forma automática. Esto significa que detecta cuando un hipervínculo es visible, ya sea en el viewport o al desplazarse y realiza el *prefetching* en el JavaScript para todas aquellas páginas, para que estén listas cuando el usuario da clic al hipervínculo. Nuxt.js solamente carga los recursos cuando el navegador no se encuentra ocupado y no realiza el *prefetching* si tu conexión está offline(fuera de línea) o si solamente tienes conexión 2g.
+Nuxt.js incluye _smart prefetching_ de forma automática. Esto significa que detecta cuando un hipervínculo es visible, ya sea en el viewport o al desplazarse y realiza el _prefetching_ en el JavaScript para todas aquellas páginas, para que estén listas cuando el usuario da clic al hipervínculo. Nuxt.js solamente carga los recursos cuando el navegador no se encuentra ocupado y no realiza el _prefetching_ si tu conexión está offline(fuera de línea) o si solamente tienes conexión 2g.
 
-### Desactivar el *prefetching* de links específicos
+### Desactivar el _prefetching_ de links específicos
 
-Sin embargo, en ciertas circunstancias es probable que desees desactivar el *prefetching* de algunos links, por ejemplo, si tu página tiene mucho JavaScript, si tienes muchas páginas diferentes en las cuales se realizaría el *prefetching* o si tienes que cargar múltiples scripts de terceros. Para desactivar el *prefetching* en un hipervínculo en particular puedes utilizar la propiedad `no-prefetch`. A partir de Nuxt.js v2.10.0, puedes fijar la propiedad `prefetch` en `false`
+Sin embargo, en ciertas circunstancias es probable que desees desactivar el _prefetching_ de algunos links, por ejemplo, si tu página tiene mucho JavaScript, si tienes muchas páginas diferentes en las cuales se realizaría el _prefetching_ o si tienes que cargar múltiples scripts de terceros. Para desactivar el _prefetching_ en un hipervínculo en particular puedes utilizar la propiedad `no-prefetch`. A partir de Nuxt.js v2.10.0, puedes fijar la propiedad `prefetch` en `false`
 
 ```html
 <NuxtLink to="/about" no-prefetch>Página About sin prefetching</NuxtLink>
 <NuxtLink to="/about" :prefetch="false">Página About sin prefetching</NuxtLink>
 ```
 
-### Desactivar el *prefetching* globalmente
+### Desactivar el _prefetching_ globalmente
 
-Para desactivar el *prefetching* en todos los links, fija los `prefetchLinks` en `false`:
+Para desactivar el _prefetching_ en todos los links, fija los `prefetchLinks` en `false`:
 
 ```js{}[nuxt.config.js]
 export default {
@@ -284,7 +285,7 @@ export default {
 }
 ```
 
-A partir de Nuxt.js v2.10.0, si has fijado el valor de `prefetchLinks` en `false` (falso) pero deseas hacer *prefetching* a un link en particular, puedes utilizar la propiedad `prefetch`.
+A partir de Nuxt.js v2.10.0, si has fijado el valor de `prefetchLinks` en `false` (falso) pero deseas hacer _prefetching_ a un link en particular, puedes utilizar la propiedad `prefetch`.
 
 ```html
 <NuxtLink to="/about" prefetch>Página About con prefetching</NuxtLink>
@@ -356,7 +357,7 @@ Esta opción se le da directamente a la linkExactActiveClass de `vue-router`. Co
 
 ## linkPrefetchedClass
 
-La opción `linkPrefetchedClass` permite añadir estilos a todos los links a que se les haya realizado *prefetching*. Esto resulta fabuloso para probar a cuáles links se les ha realizado *prefetching* luego de haber modificado su comportamiento por defecto. Por defecto la opción `linkPrefetchedClass` viene desactivada. Si deseas activarla necesitas agregarla a la propiedad router de tu archivo `nuxt-config.js`.
+La opción `linkPrefetchedClass` permite añadir estilos a todos los links a que se les haya realizado _prefetching_. Esto resulta fabuloso para probar a cuáles links se les ha realizado _prefetching_ luego de haber modificado su comportamiento por defecto. Por defecto la opción `linkPrefetchedClass` viene desactivada. Si deseas activarla necesitas agregarla a la propiedad router de tu archivo `nuxt-config.js`.
 
 ```js{}[nuxt.config.js]
 export default {
@@ -386,7 +387,7 @@ En este ejemplo hemos usado `nuxt-link-prefetched` como nombre de la clase, pero
 
 ## El componente client-only
 
-Este componente se usa para desplegar un componente del lado del cliente únicamente. Para importar un componente, registra el componente en un *plugin* que funcione únicamente del lado del cliente.
+Este componente se usa para desplegar un componente del lado del cliente únicamente. Para importar un componente, registra el componente en un _plugin_ que funcione únicamente del lado del cliente.
 
 ```html{}[pages/example.vue]
 <template>

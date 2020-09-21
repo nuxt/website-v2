@@ -20,7 +20,7 @@ export default {
     let pages = []
 
     try {
-      const locale = ['pt'].includes(app.i18n.locale)
+      const locale = ['pt', 'es'].includes(app.i18n.locale)
         ? app.i18n.locale
         : app.i18n.defaultLocale
 

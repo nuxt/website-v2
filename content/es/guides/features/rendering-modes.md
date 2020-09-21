@@ -2,7 +2,7 @@
 title: Modos de Renderizado
 description: Modos de Renderizado
 position: 1
-category: Características
+category: features
 ---
 
 ## Universal

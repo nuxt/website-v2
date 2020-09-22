@@ -1,0 +1,173 @@
+---
+title: layouts
+description: Layouts adalah bagian yang sangatlah membantu ketika kamu ingin mengubah tampilan dan nuansa pada aplikasi Nuxt.js kamu, baik memasukkan _sidebar_ maupun memiliki layout berbeda untuk perangkat mobile dan desktop.
+position: 7
+category: directory-structure
+csb_link: https://codesandbox.io/embed/github/nuxt-academy/guides-examples/tree/master/04_directory_structure/07_layouts?fontsize=14&hidenavigation=1&theme=dark
+questions:
+  - question: Kamu dapat dengan mudahnya mengubah nama direktori layouts tanpa konfigurasi khusus.
+    answers:
+      - benar
+      - salah
+    correctAnswer: salah
+  - question: Apa nama halaman tata letak default?
+    answers:
+      - layout.vue
+      - default.vue
+      - defaultLayout.vue
+    correctAnswer: default.vue
+  - question: Komponen apa saja yang harus ada pada seluruh layout?
+    answers:
+      - <Nuxt />
+      - <NuxtLink />
+      - <RouterView />
+    correctAnswer: <Nuxt />
+  - question: Kamu dapat menambah komponen lain ke dalam layout kamu
+    answers:
+      - benar
+      - salah
+    correctAnswer: benar
+  - question: Untuk menambah sebuah layout kustom, kamu perlu membuat sebuah file `.vue` dan ke folder manakah file itu akan ditempatkan?
+    answers:
+      - layout
+      - layouts
+      - page
+    correctAnswer: layouts
+  - question: Bagaimana caranya kamu memberitahukan sebuah halaman untuk menerapkan blog layout?
+    answers:
+      - "layout: 'blog'"
+      - "name: 'blog'"
+      - 'blog: true'
+    correctAnswer: "layout: 'blog'"
+  - question: Pada direktori manakah halaman error seharusnya ditambahkan?
+    answers:
+      - pages
+      - layouts
+      - errors
+    correctAnswer: layouts
+  - question: Kamu perlu menambahkan komponen `<Nuxt>` pada halaman error?
+    answers:
+      - benar
+      - salah
+    correctAnswer: salah
+  - question: Kamu dapat menggunakan custom layout untuk halaman error
+    answers:
+      - benar
+      - salah
+    correctAnswer: benar
+  - question: Halaman error ditampilkan ketika terjadi kesalahan pada saat rendering di sisi server (server side rendering)?
+    answers:
+      - benar
+      - salah
+    correctAnswer: salah
+---
+
+ayouts adalah bagian yang sangatlah membantu ketika kamu ingin mengubah tampilan dan nuansa pada aplikasi Nuxt.js kamu, baik memasukkan _sidebar_ maupun memiliki layout berbeda untuk perangkat mobile dan desktop.
+
+<base-alert>
+
+_Direktori ini tidak dapat diubah namanya tanpa konfigurasi khusus._
+
+</base-alert>
+
+## Default Layout
+
+Kamu dapat memperluas file layout utama dengan menambahkan file `layouts/default.vue`. Layout tersebut akan diterapkan pada seluruh halaman yang tidak memiliki layout khusus. Pastikan penggunaan komponen `<Nuxt>` ketika pembuatan layout untuk benar-benar menyertakan page component.
+
+Semua yang kamu butuhkan pada layout adalah tiga baris kode berikut yang akan me-render page component.
+
+```html{}[layouts/default.vue]
+<template>
+  <Nuxt />
+</template>
+```
+
+Kamu dapat menambahkan komponen-komponen lainnya seperti Navigation, Header, Footer, dan lain-lain.
+
+```html{}[layouts/default.vue]
+<template>
+  <TheHeader />
+  <Nuxt />
+  <TheFooter />
+</template>
+```
+
+<base-alert type="info">
+
+Jika kamu memiliki ["components set to true"](/guides/directory-structure/components), maka tidak perlu lagi menambahkan pernyataan-pernyataan import pada komponen-komponen tersebut.
+
+</base-alert>
+
+## Layout Kustom
+
+Seluruh file (_top-level_) pada direktori `layouts` akan membuat layout kustom yang dapat diakses dengan properti `layout` dalam page components.
+
+Sebagai contoh, kita ingin membuat sebuah layout blog dan menyimpannya sebagai `layouts/blog.vue`:
+
+```html{}[layouts/blog.vue]
+<template>
+  <div>
+    <div>My blog navigation bar here</div>
+    <Nuxt />
+  </div>
+</template>
+```
+
+Kemudian kamu perlu memberitahukan halaman-halaman untuk menggunakan layout kustom tersebut.
+
+```js{}[pages/posts.vue]
+<script>
+export default {
+  layout: 'blog',
+  // OR
+  layout (context) {
+    return 'blog'
+  }
+}
+</script>
+```
+
+<app-modal>
+  <code-sandbox  :src="csb_link"></code-sandbox>
+</app-modal>
+
+## Halaman error
+
+Halaman error merupakan sebuah *page component* yang ditampilkan setiap kali terjadinya kesalahan (yang tidak dilempar ke sisi server).
+
+<base-alert>
+
+
+Meskipun file ini ditempatkan di folder `layouts`, file ini harus diperlakukan sebagai sebuah halaman.
+
+</base-alert>
+
+Seperti diberitahukan di atas, layout ini spesial dan
+janganlah menyertakan `<Nuxt>` di dalam templatenya. Kamu harus melihat layout ini sebagai sebuah komponen yang  ditampilkan ketika terjadi kesalahan (`404`, `500`, dll.). Seperti halnya komponen-komponen halaman lainnya, kamu dapat menggunakan layout kustom untuk halaman error seperti biasanya.
+
+Kamu dapat melakukan kustomisasi pada halaman error dengan menambahkan file `layouts/error.vue`:
+
+```js{}[layouts/error.vue]
+<template>
+  <div class="container">
+    <h1 v-if="error.statusCode === 404">Halaman tidak ditemukan</h1>
+    <h1 v-else>Terjadi Kesalahan</h1>
+    <NuxtLink to="/">Beranda</NuxtLink>
+  </div>
+</template>
+
+<script>
+export default {
+  props: ['error'],
+  layout: 'blog' // kamu dapat menetapkan sebuah layout kustom untuk halaman error
+}
+</script>
+```
+
+<base-alert type="info">
+
+Kode untuk halaman error (default) [tersedia pada GitHub](https://github.com/nuxt/nuxt.js/blob/dev/packages/vue-app/template/components/nuxt-error.vue).
+
+</base-alert>
+
+<quiz :questions="questions"></quiz>

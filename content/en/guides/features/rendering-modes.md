@@ -1,17 +1,13 @@
 ---
-title: Rendering Modes
-description: Rendering Modes
+title: Rendering
+description: Rendering
 position: 1
 category: features
 ---
 
-## Universal
+## Server Side Rendered Sites and Static Sites
 
-`mode: 'universal'`: Isomorphic application (server-side rendering or static sites).
-
-The universal mode is used for both server-side rendering and static sites.
-
-Static sites are very similar to server-side rendered applications with the main difference being that static sites are rendered at build time, therefore no server is needed. Navigating from one page to another is done on the client-side.
+Static sites are very similar to server-side rendered applications with the main difference being that static sites are rendered at build time, therefore no server is needed. Navigating from one page to another is then on the client-side.
 
 Server-side rendered sites are rendered on the server each time the user requests a page, therefore a server is needed to be able to serve the page on each request.
 
@@ -19,13 +15,13 @@ See [deployment targets](/guides/features/deployment-targets) for more info on s
 
 ```js{}[nuxt.config.js]
 export default {
-  mode: 'universal' // default universal
+  ssr: true // default value
 }
 ```
 
 <base-alert type="info">
 
-You do not need to add this to your nuxt config in order for universal mode to be applied as the default mode is universal.
+You do not need to add this to your nuxt config in order for ssr true to be applied as the default value is true.
 
 </base-alert>
 

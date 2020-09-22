@@ -1,11 +1,11 @@
 ---
 title: layouts
-description: Layouts adalah bagian yang sangatlah membantu ketika kamu ingin mengubah tampilan dan nuansa pada aplikasi Nuxt.js kamu, baik memasukkan _sidebar_ maupun memiliki layout berbeda untuk perangkat mobile dan desktop.
+description: Layouts adalah bagian yang sangatlah membantu ketika anda ingin mengubah tampilan dan nuansa pada aplikasi Nuxt.js anda, baik memasukkan _sidebar_ maupun memiliki layout berbeda untuk perangkat mobile dan desktop.
 position: 7
 category: directory-structure
 csb_link: https://codesandbox.io/embed/github/nuxt-academy/guides-examples/tree/master/04_directory_structure/07_layouts?fontsize=14&hidenavigation=1&theme=dark
 questions:
-  - question: Kamu dapat dengan mudahnya mengubah nama direktori layouts tanpa konfigurasi khusus.
+  - question: Anda dapat dengan mudahnya mengubah nama direktori layouts tanpa konfigurasi khusus.
     answers:
       - benar
       - salah
@@ -22,18 +22,18 @@ questions:
       - <NuxtLink />
       - <RouterView />
     correctAnswer: <Nuxt />
-  - question: Kamu dapat menambah komponen lain ke dalam layout kamu
+  - question: Anda dapat menambah komponen lain ke dalam layout anda
     answers:
       - benar
       - salah
     correctAnswer: benar
-  - question: Untuk menambah sebuah layout kustom, kamu perlu membuat sebuah file `.vue` dan ke folder manakah file itu akan ditempatkan?
+  - question: Untuk menambah sebuah layout kustom, anda perlu membuat sebuah file `.vue` dan ke folder manakah file itu akan ditempatkan?
     answers:
       - layout
       - layouts
       - page
     correctAnswer: layouts
-  - question: Bagaimana caranya kamu memberitahukan sebuah halaman untuk menerapkan blog layout?
+  - question: Bagaimana caranya anda memberitahukan sebuah halaman untuk menerapkan blog layout?
     answers:
       - "layout: 'blog'"
       - "name: 'blog'"
@@ -45,12 +45,12 @@ questions:
       - layouts
       - errors
     correctAnswer: layouts
-  - question: Kamu perlu menambahkan komponen `<Nuxt>` pada halaman error?
+  - question: Anda perlu menambahkan komponen `<Nuxt>` pada halaman error?
     answers:
       - benar
       - salah
     correctAnswer: salah
-  - question: Kamu dapat menggunakan custom layout untuk halaman error
+  - question: Anda dapat menggunakan custom layout untuk halaman error
     answers:
       - benar
       - salah
@@ -62,7 +62,7 @@ questions:
     correctAnswer: salah
 ---
 
-ayouts adalah bagian yang sangatlah membantu ketika kamu ingin mengubah tampilan dan nuansa pada aplikasi Nuxt.js kamu, baik memasukkan _sidebar_ maupun memiliki layout berbeda untuk perangkat mobile dan desktop.
+Layouts adalah bagian yang sangatlah membantu ketika anda ingin mengubah tampilan dan nuansa pada aplikasi Nuxt.js anda, baik memasukkan _sidebar_ maupun memiliki layout berbeda untuk perangkat mobile dan desktop.
 
 <base-alert>
 
@@ -72,9 +72,9 @@ _Direktori ini tidak dapat diubah namanya tanpa konfigurasi khusus._
 
 ## Default Layout
 
-Kamu dapat memperluas file layout utama dengan menambahkan file `layouts/default.vue`. Layout tersebut akan diterapkan pada seluruh halaman yang tidak memiliki layout khusus. Pastikan penggunaan komponen `<Nuxt>` ketika pembuatan layout untuk benar-benar menyertakan page component.
+Anda dapat memperluas file layout utama dengan menambahkan file `layouts/default.vue`. Layout tersebut akan diterapkan pada seluruh halaman yang tidak memiliki layout khusus. Pastikan penggunaan komponen `<Nuxt>` ketika pembuatan layout untuk benar-benar menyertakan page component.
 
-Semua yang kamu butuhkan pada layout adalah tiga baris kode berikut yang akan me-render page component.
+Semua yang anda butuhkan pada layout adalah tiga baris kode berikut yang akan me-render page component.
 
 ```html{}[layouts/default.vue]
 <template>
@@ -82,7 +82,7 @@ Semua yang kamu butuhkan pada layout adalah tiga baris kode berikut yang akan me
 </template>
 ```
 
-Kamu dapat menambahkan komponen-komponen lainnya seperti Navigation, Header, Footer, dan lain-lain.
+Anda dapat menambahkan komponen-komponen lainnya seperti Navigation, Header, Footer, dan lain-lain.
 
 ```html{}[layouts/default.vue]
 <template>
@@ -94,7 +94,7 @@ Kamu dapat menambahkan komponen-komponen lainnya seperti Navigation, Header, Foo
 
 <base-alert type="info">
 
-Jika kamu memiliki ["components set to true"](/guides/directory-structure/components), maka tidak perlu lagi menambahkan pernyataan-pernyataan import pada komponen-komponen tersebut.
+Jika anda memiliki ["components set to true"](/guides/directory-structure/components), maka tidak perlu lagi menambahkan pernyataan-pernyataan import pada komponen-komponen tersebut.
 
 </base-alert>
 
@@ -113,7 +113,7 @@ Sebagai contoh, kita ingin membuat sebuah layout blog dan menyimpannya sebagai 
 </template>
 ```
 
-Kemudian kamu perlu memberitahukan halaman-halaman untuk menggunakan layout kustom tersebut.
+Kemudian anda perlu memberitahukan halaman-halaman untuk menggunakan layout kustom tersebut.
 
 ```js{}[pages/posts.vue]
 <script>
@@ -143,9 +143,9 @@ Meskipun file ini ditempatkan di folder `layouts`, file ini harus diperlakukan s
 </base-alert>
 
 Seperti diberitahukan di atas, layout ini spesial dan
-janganlah menyertakan `<Nuxt>` di dalam templatenya. Kamu harus melihat layout ini sebagai sebuah komponen yang  ditampilkan ketika terjadi kesalahan (`404`, `500`, dll.). Seperti halnya komponen-komponen halaman lainnya, kamu dapat menggunakan layout kustom untuk halaman error seperti biasanya.
+janganlah menyertakan `<Nuxt>` di dalam templatenya. Anda harus melihat layout ini sebagai sebuah komponen yang  ditampilkan ketika terjadi kesalahan (`404`, `500`, dll.). Seperti halnya komponen-komponen halaman lainnya, anda dapat menggunakan layout kustom untuk halaman error seperti biasanya.
 
-Kamu dapat melakukan kustomisasi pada halaman error dengan menambahkan file `layouts/error.vue`:
+Anda dapat melakukan kustomisasi pada halaman error dengan menambahkan file `layouts/error.vue`:
 
 ```js{}[layouts/error.vue]
 <template>
@@ -159,7 +159,7 @@ Kamu dapat melakukan kustomisasi pada halaman error dengan menambahkan file `la
 <script>
 export default {
   props: ['error'],
-  layout: 'blog' // kamu dapat menetapkan sebuah layout kustom untuk halaman error
+  layout: 'blog' // anda dapat menetapkan sebuah layout kustom untuk halaman error
 }
 </script>
 ```

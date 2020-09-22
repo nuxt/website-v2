@@ -75,7 +75,7 @@ export default {
 }
 ```
 
-Al omitir la extensión, si tiene un archivo css y decides cambiar para usar sass, por ejemplo, no es necesario el `nuxt.config` ya que usará la nueva extensión una vez que el nombre del archivo siga siendo el mismo.
+Al omitir la extensión, si tiene un archivo css y decides cambiar para usar sass, por ejemplo, no es necesario actualizar el `nuxt.config` ya que usará la nueva extensión una vez que el nombre del archivo siga siendo el mismo.
 
 <base-alert type="next">
 

@@ -81,6 +81,10 @@ Learn more about the [nuxt.config.js file](/guides/directory-structure/nuxt-conf
 
 The `package.json` file contains all the dependencies and scripts for your application.
 
+### Example
+
+Basic project with pages, components, assets and static directory as well as the nuxt.config and package.json files.
+
 <app-modal>
   <code-sandbox  :src="csb_link"></code-sandbox>
 </app-modal>

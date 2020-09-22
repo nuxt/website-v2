@@ -7,7 +7,7 @@
       :src="src"
       title="CodeSandbox editor"
       sandbox="allow-modals allow-forms allow-popups allow-scripts allow-same-origin"
-      class="w-full overflow-hidden"
+      class="w-full h-full overflow-hidden"
     />
     <span v-else>Loading Nuxt Sandbox...</span>
   </div>

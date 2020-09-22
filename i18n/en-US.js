@@ -333,7 +333,8 @@ module.exports = {
       'directory-structure': 'Directory Structure',
       'configuration-glossary': 'Configuration Glossary',
       'internals-glossary': 'Internals Glossary',
-      'components-glossary': 'Components Glossary'
+      'components-glossary': 'Components Glossary',
+      examples: 'Examples'
     }
   },
   footer: {

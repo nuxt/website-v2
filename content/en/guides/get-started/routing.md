@@ -44,12 +44,16 @@ For all links to pages within your site, use `<NuxtLink>`. If you have links to 
 </template>
 ```
 
+## Example
+
+Basic example of routing between pages using the `<NuxtLink>` component.
+
 <app-modal>
   <code-sandbox :src="csb_link"></code-sandbox>
 </app-modal>
 
 <base-alert type="next">
 
-Learn more about the [NuxtLink component](/guides/features/nuxt-components#the-nuxtlink-component).
+Learn more about the [`<NuxtLink>`](/guides/features/nuxt-components#the-nuxtlink-component)component.
 
 </base-alert>

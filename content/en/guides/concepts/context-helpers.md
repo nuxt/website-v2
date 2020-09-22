@@ -48,6 +48,8 @@ questions:
 
 <app-modal :src="img" :alt="imgAlt"></app-modal>
 
+## Context
+
 The `context` object is available in specific Nuxt functions like [asyncData](/guides/features/data-fetching#async-data), [plugins](/guides/directory-structure/plugins), [middleware](/guides/directory-structure/middleware) and [nuxtServerInit](/guides/directory-structure/store#the-nuxtserverinit-action). It provides _additional_ and often optional information about the current request to the application.
 
 First and foremost, the context is used to provide access to other parts of the Nuxt.js application, e.g. the Vuex store or the underlying `connect` instance. Thus, we have the `req` and `res` objects in the context available on the server side and `store` always available. But with time, the context was extended with many other helpful variables and shortcuts. Now we have access to HMR functionalities in `development` mode, the current `route`, page `params` and `query`, as well as the option to access environment variables through the context. Furthermore, module functions and helpers can be exposed through the context to be available on both - the client and the server side.
@@ -91,8 +93,6 @@ The _context_ we refer to here is not to be confused with the `context` object
 
 Learn more about the different context keys in our [Internals Glossary](/guides/internals-glossary/context)
 
-## Examples
-
 ### Using page parameters for your API query
 
 The context directly exposes possible dynamic parameters of the route via `context.params`. In the following example, we call an API via the `nuxt/http` module using a dynamic page parameter as part of the URL. Modules, like the [nuxt/http](https://http.nuxtjs.org/) module, can expose own functions which are then available through the [context.app](http://context.app) object.
@@ -134,7 +134,7 @@ export default {
 }
 ```
 
-Want to use query parameters instead? You then use [context.query.id](http://context.query.id) then.
+Want to use query parameters instead? You then use [context.query.id](http://context.query.id).
 
 ### Redirecting users & accessing the store
 
@@ -151,6 +151,12 @@ export default {
   }
 }
 ```
+
+### Example
+
+In this example we use asyncData passing in the `params`, `$http` and `error` into the context so we can return a post from our API based on the the id of the page. See the `posts/_id` page which is a dynamic page that prints out the title and description coming from the API based on the id of the params.
+
+We also use middleware passing in the store and redirect into context so we can check to see if our user is authenticated and if not redirect them to the the home page. To see how the authentication works you will need to change `authenticated` to false in the `store/index.js` file.
 
 <app-modal>
   <code-sandbox  :src="csb_link_context"></code-sandbox>
@@ -209,7 +215,7 @@ You can do so, by using `this.$nuxt.refresh()`!
 </script>
 ```
 
-### Controlling the loading bar
+#### Controlling the loading bar
 
 With `$nuxt`, you can also control Nuxt's loading bar programmatically via `this.$nuxt.$loading`.
 
@@ -255,6 +261,10 @@ Nuxt.js injects three boolean values into the global `process` object which will
 ```
 
 In the example, `renderedOn` will evaluate to `'server'` when using server-side rendering and a user accesses the page directly. When the user would navigate to the page from another part of the application, e.g. by click on a `<NuxtLink>`, it will evaluate to client.
+
+## Example
+
+In this example we use the `$nuxt.isOnline` and `$nuxt.isOffline` helper as a connection checker to tell the user if they are online or offline. We use `asyncData` to return the time in seconds along with the process helpers, `renderedOn` , to print a message telling us if we are rendered on the server or client. We then show a button which when clicked calls a method that refreshes the number of seconds using `$nuxt.refresh()`. We also show the `onNuxtReady` helper to print a message to the console when Nuxt.js is ready and mounted.
 
 <app-modal>
   <code-sandbox  :src="csb_link_helpers"></code-sandbox>

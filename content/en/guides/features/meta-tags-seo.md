@@ -221,6 +221,12 @@ You may want to only disable this option if you have many pages and routes.
 
 </base-alert>
 
+## Example
+
+In this example we show how to use the head method to add a title and meta data to an individual page as an object in the index page and a function in the fun page.
+
+We also show how to add the head property to your nuxt.config with a `title` and `titleTemplate` so that you don't have to repeat the website name across every page for example. We also show how to add meta data such as `charset` and `description` as well as adding an external stylesheet which will then be available in the head tag on all pages of your website.
+
 <app-modal>
   <code-sandbox  :src="csb_link"></code-sandbox>
 </app-modal>

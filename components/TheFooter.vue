@@ -77,7 +77,7 @@
               label="Select language"
             >
               <template v-slot:icon>
-                <GlobeIcon />
+                <AppIcon name="globe" />
               </template>
             </AppLangSelect>
           </div>
@@ -88,12 +88,10 @@
 </template>
 
 <script>
-import GlobeIcon from '~/assets/icons/globe.svg?inline'
 import SmallNuxtLogo from '~/assets/images/logo-small.svg?inline'
 
 export default {
   components: {
-    GlobeIcon,
     SmallNuxtLogo
   },
   data() {

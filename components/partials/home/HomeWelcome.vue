@@ -17,9 +17,7 @@
               <br />
             </template>
             <template v-slot:frameworkType>
-              <span class="text-nuxt-lightgreen">
-                Vue
-              </span>
+              <span class="text-nuxt-lightgreen"> Vue </span>
             </template>
           </i18n>
           <!--welcome description i18n -->
@@ -48,7 +46,7 @@
               data-cy="get-started"
               class="sm:mr-4 py-3 px-6 text-base mb-4"
             >
-              <MeteorIcon slot="icon" class="h-5 -mb-1 mr-1" />
+              <AppIcon slot="icon" name="meteor" class="h-5 -mb-1 mr-1" />
               {{ $t('homepage.welcome.get_started') }}
             </AppButton>
             <AppButton
@@ -57,7 +55,11 @@
               class="sm:mr-4 py-3 px-6 text-base"
               data-cy="github-stars"
             >
-              <GithubIcon slot="icon" class="inline-block h-6 -mt-1 mr-1" />
+              <AppIcon
+                slot="icon"
+                name="github"
+                class="inline-block h-6 -mt-1 mr-1"
+              />
               {{ $config.nuxtStars }} github stars
             </AppButton>
           </div>
@@ -74,10 +76,7 @@
           </div>
         </div>
         <figure class="hidden lg:block lg:w-5/12" data-cy="video">
-          <AppMedia
-            :src="videoUrl"
-            class="mb-4"
-          />
+          <AppMedia :src="videoUrl" class="mb-4" />
           <!--welcome video i18n -->
           <i18n
             path="homepage.welcome.video"
@@ -114,14 +113,7 @@
 </template>
 
 <script>
-import MeteorIcon from '~/assets/icons/meteor.svg?inline'
-import GithubIcon from '~/assets/icons/github.svg?inline'
-
 export default {
-  components: {
-    MeteorIcon,
-    GithubIcon
-  },
   computed: {
     /**
      * This was done because the vimeo.com site has been blocked in Indonesia.

@@ -39,7 +39,8 @@
           class="inner-button sm:hidden absolute h-10 w-10 flex items-center justify-center text-nuxt-gray bg-gray-200 dark:bg-dark-elevatedSurface dark:text-dark-onSurfaceSecondary transition-colors duration-300 ease-linear"
           @click="show = false"
         >
-          <TimesIcon
+          <AppIcon
+            name="times"
             class="block h-5 fill-current transition-colors duration-300 ease-linear"
           />
         </button>
@@ -53,8 +54,9 @@
           v-if="!show"
           class="block text-nuxt-gray dark:text-dark-onSurfaceSecondary stroke-current transition-colors duration-300 ease-linear"
         />
-        <TimesIcon
+        <AppIcon
           v-else
+          name="times"
           class="block h-5 fill-current transition-colors duration-300 ease-linear"
         />
       </button>
@@ -66,12 +68,10 @@
 import sortBy from 'lodash.sortby'
 
 import ListIcon from '~/assets/images/list.svg?inline'
-import TimesIcon from '~/assets/icons/times.svg?inline'
 
 export default {
   components: {
-    ListIcon,
-    TimesIcon
+    ListIcon
   },
   props: {
     links: {

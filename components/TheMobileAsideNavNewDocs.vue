@@ -30,11 +30,12 @@
                 'font-bold': $route.params.book === group
               }"
             >
-              <ChevronDownIcon
+              <AppIcon
                 v-if="$route.params.book === group"
+                name="chevronDown"
                 class="w-4 h-4 mr-2"
               />
-              <ChevronRightIcon v-else class="w-4 h-4 mr-2" />
+              <AppIcon v-else name="chevronRight" class="w-4 h-4 mr-2" />
               <span>{{ $t(`content.guides.${group}`) }}</span>
             </component>
             <ul
@@ -59,7 +60,8 @@
           class="inner-button sm:hidden absolute h-10 w-10 flex items-center justify-center text-nuxt-gray bg-gray-200 dark:bg-dark-elevatedSurface dark:text-dark-onSurfaceSecondary transition-colors duration-300 ease-linear"
           @click="show = false"
         >
-          <TimesIcon
+          <AppIcon
+            name="times"
             class="block h-5 fill-current transition-colors duration-300 ease-linear"
           />
         </button>
@@ -73,8 +75,9 @@
           v-if="!show"
           class="block text-nuxt-gray dark:text-dark-onSurfaceSecondary stroke-current transition-colors duration-300 ease-linear"
         />
-        <TimesIcon
+        <AppIcon
           v-else
+          name="times"
           class="block h-5 fill-current transition-colors duration-300 ease-linear"
         />
       </button>
@@ -86,16 +89,10 @@
 import sortBy from 'lodash.sortby'
 
 import ListIcon from '~/assets/images/list.svg?inline'
-import TimesIcon from '~/assets/icons/times.svg?inline'
-import ChevronDownIcon from '~/assets/icons/chevron-down.svg?inline'
-import ChevronRightIcon from '~/assets/icons/chevron-right.svg?inline'
 
 export default {
   components: {
-    ListIcon,
-    TimesIcon,
-    ChevronDownIcon,
-    ChevronRightIcon
+    ListIcon
   },
   props: {
     links: {

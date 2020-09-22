@@ -6,7 +6,7 @@
       aria-label="Search"
       @click="showMobile = true"
     >
-      <SearchIcon class="block h-5 fill-current" />
+      <AppIcon name="search" class="block h-5 fill-current" />
     </button>
     <AlgoliaSearchInput
       class="hidden md:inline-block align-middle"
@@ -30,12 +30,7 @@
 </template>
 
 <script>
-import SearchIcon from '~/assets/icons/search.svg?inline'
-
 export default {
-  components: {
-    SearchIcon
-  },
   props: [],
   data() {
     return {

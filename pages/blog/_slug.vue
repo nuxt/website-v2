@@ -5,7 +5,7 @@
         :to="localePath({ name: 'blog' })"
         class="inline-flex items-center dark:hover:text-nuxt-lightgreen light:hover:text-nuxt-lightgreen dark:text-dark-onSurfaceSecondary light:text-light-onSurfaceSecondary"
       >
-        <ArrowLeftIcon class="h-5 mr-2" />back to blog list
+        <AppIcon name="arrowLeft" class="h-5 mr-2" />back to blog list
       </NuxtLink>
 
       <BlogpostItem :post="post" />
@@ -17,15 +17,11 @@
 
 <script>
 import { mapState } from 'vuex'
-import ArrowLeftIcon from '~/assets/icons/arrow-left.svg?inline'
 import copyCodeBlock from '~/mixins/copyCodeBlock'
 
 export default {
   name: 'PageSlug',
   scrollToTop: true,
-  components: {
-    ArrowLeftIcon
-  },
   mixins: [copyCodeBlock],
   middleware({ params, redirect }) {
     if (params.slug === 'index') {

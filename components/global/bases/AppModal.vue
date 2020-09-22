@@ -27,7 +27,7 @@
                 data-cy="modal-close"
                 @click="showModal = false"
               >
-                <XmarkCircleIcon class="svg" />
+                <AppIcon name="xmarkCircle" class="svg" />
               </button>
             </div>
             <div class="modal-body flex-1" :class="{ 'overflow-scroll': src }">
@@ -42,11 +42,7 @@
 </template>
 
 <script>
-import XmarkCircleIcon from '~/assets/icons/xmark-circle.svg?inline'
 export default {
-  components: {
-    XmarkCircleIcon
-  },
   props: {
     src: {
       type: String,

@@ -52,7 +52,7 @@
                 target="_blank"
                 class="sm:mr-4 p-3 mt-3 text-sm text-left"
               >
-                <PlayCircleIcon slot="icon" class="h-4 -mb-1 mr-1" />
+                <AppIcon slot="icon" name="playCircle" class="h-4 -mb-1 mr-1" />
                 {{ $t('video-courses.cta.start') }}
               </AppButton>
             </div>
@@ -71,14 +71,10 @@
 
 <script>
 import ThemesIllustration from '~/assets/illustrations/themes.svg?inline'
-import PlayCircleIcon from '~/assets/icons/play-circle.svg?inline'
-import MeteorIcon from '~/assets/icons/meteor.svg?inline'
 
 export default {
   components: {
-    ThemesIllustration,
-    PlayCircleIcon,
-    MeteorIcon
+    ThemesIllustration
   },
   data() {
     return {

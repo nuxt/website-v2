@@ -57,7 +57,7 @@
               :class="{ 'bg-gray-300': onetime.current === 'btc' }"
               @click.prevent="onetime.current = 'btc'"
             >
-              <BtcLogo class="mr-3" /> BTC
+              <AppIcon name="btc" class="mr-3" /> BTC
             </a>
             <a
               href="#bch"
@@ -65,7 +65,7 @@
               :class="{ 'bg-gray-300': onetime.current === 'bch' }"
               @click.prevent="onetime.current = 'bch'"
             >
-              <BchLogo class="mr-3" /> BCH
+              <AppIcon name="bch" class="mr-3" /> BCH
             </a>
             <a
               href="#eth"
@@ -73,7 +73,7 @@
               :class="{ 'bg-gray-300': onetime.current === 'eth' }"
               @click.prevent="onetime.current = 'eth'"
             >
-              <EthLogo class="mr-3" /> ETH
+              <AppIcon name="eth" class="mr-3" /> ETH
             </a>
             <a
               href="#ltc"
@@ -81,7 +81,7 @@
               :class="{ 'bg-gray-300': onetime.current === 'ltc' }"
               @click.prevent="onetime.current = 'ltc'"
             >
-              <LtcLogo class="mr-3" /> LTC
+              <AppIcon name="ltc" class="mr-3" /> LTC
             </a>
           </div>
         </div>
@@ -150,8 +150,9 @@
             href="https://opencollective.com/nuxtjs"
             class="py-3 px-6 text-base"
           >
-            <OpenCollectiveIcon
+            <AppIcon
               slot="icon"
+              name="openCollective"
               class="h-5 -mt-1 mr-1 inline-block"
             />
             {{ $t('sponsor.become_a_sponsor') }}
@@ -163,21 +164,11 @@
 </template>
 
 <script>
-import OpenCollectiveIcon from '~/assets/icons/open-collective.svg?inline'
-import BtcLogo from '~/assets/icons/btc.svg?inline'
-import BchLogo from '~/assets/icons/bch.svg?inline'
-import EthLogo from '~/assets/icons/eth.svg?inline'
-import LtcLogo from '~/assets/icons/ltc.svg?inline'
 import SponsorIllustration from '~/assets/illustrations/sponsor.svg?inline'
 
 export default {
   components: {
-    SponsorIllustration,
-    OpenCollectiveIcon,
-    BtcLogo,
-    BchLogo,
-    EthLogo,
-    LtcLogo
+    SponsorIllustration
   },
   data() {
     return {

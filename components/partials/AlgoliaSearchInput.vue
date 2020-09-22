@@ -3,7 +3,8 @@
     class="algolia-wrapper relative"
     :class="[focused ? 'focused' : 'blurred', !q && 'blurred', appearance]"
   >
-    <SearchIcon
+    <AppIcon
+      name="search"
       class="block absolute z-10 h-4 mt-3 ml-3 fill-current text-light-onSurfaceSecondary dark:text-dark-onSurfaceSecondary transition-colors duration-300 ease-linear"
     />
     <input
@@ -23,7 +24,8 @@
       aria-label="Clear input"
       @click="handleCloseClick"
     >
-      <TimesIcon
+      <AppIcon
+        name="times"
         class="block h-5 fill-current transition-colors duration-300 ease-linear"
       />
     </button>
@@ -31,13 +33,7 @@
 </template>
 
 <script>
-import SearchIcon from '~/assets/icons/search.svg?inline'
-import TimesIcon from '~/assets/icons/times.svg?inline'
 export default {
-  components: {
-    SearchIcon,
-    TimesIcon
-  },
   props: {
     appearance: {
       type: String,

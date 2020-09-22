@@ -14,7 +14,8 @@
         </i18n>
         <div class="flex flex-wrap">
           <div class="lg:w-1/2 p-4 lg:p-8">
-            <FireIcon
+            <AppIcon
+              name="fire"
               class="text-nuxt-green dark:text-nuxt-lightgreen mx-auto my-8 w-32"
             />
             <h4 class="text-center uppercase text-2xl pt-8 pb-4 font-medium">
@@ -34,7 +35,7 @@
             </i18n>
           </div>
           <div class="lg:w-1/2 p-4 lg:p-8">
-            <SnowIcon class="mx-auto my-8 w-32" />
+            <AppIcon name="snow" class="mx-auto my-8 w-32" />
             <h4 class="text-center uppercase text-2xl pt-8 pb-4 font-medium">
               {{ $t('homepage.modes.ssg.title') }}
             </h4>
@@ -68,15 +69,3 @@
     </div>
   </div>
 </template>
-
-<script>
-import SnowIcon from '~/assets/icons/snow.svg?inline'
-import FireIcon from '~/assets/icons/fire.svg?inline'
-
-export default {
-  components: {
-    SnowIcon,
-    FireIcon
-  }
-}
-</script>

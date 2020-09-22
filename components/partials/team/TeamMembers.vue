@@ -41,7 +41,8 @@
                 target="_blank"
                 class="mx-1"
               >
-                <github-icon
+                <AppIcon
+                  name="github"
                   class="h-5 inline-block text-gray-700 hover:text-gray-900 cursor-pointer text-light-onSurfacePrimary dark:text-dark-onSurfacePrimary transition-colors duration-300 ease-linear"
                 />
               </a>
@@ -52,7 +53,8 @@
                 target="_blank"
                 class="mx-1"
               >
-                <twitter-icon
+                <AppIcon
+                  name="twitter"
                   class="h-5 ml-1 inline-block text-blue-600 hover:text-blue-400"
                 />
               </a>
@@ -63,7 +65,8 @@
                 target="_blank"
                 class="mx-1"
               >
-                <website-icon
+                <AppIcon
+                  name="website"
                   class="h-5 inline-block text-nuxt-green hover:text-nuxt-lightgreen"
                 />
               </a>
@@ -87,15 +90,7 @@
 </template>
 
 <script>
-import TwitterIcon from '~/assets/icons/twitter.svg?inline'
-import GithubIcon from '~/assets/icons/github.svg?inline'
-import WebsiteIcon from '~/assets/icons/link.svg?inline'
 export default {
-  components: {
-    TwitterIcon,
-    GithubIcon,
-    WebsiteIcon
-  },
   props: {
     team: {
       type: Array,

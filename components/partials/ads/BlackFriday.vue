@@ -1,7 +1,8 @@
 <template>
   <AppContainer v-if="isDisplayed" class="mt-6 lg:-mt-1 xl:-mt-2">
     <div class="bg-deep-cove bg-blackfriday">
-      <TimesIcon
+      <AppIcon
+        name="times"
         class="fill-current text-gray-500 w-3 m-2 float-right cursor-pointer hover:text-gray-300"
         @click.native="isDisplayed = false"
       />
@@ -46,12 +47,7 @@
 </template>
 
 <script>
-import TimesIcon from '~/assets/icons/times.svg?inline'
-
 export default {
-  components: {
-    TimesIcon
-  },
   data() {
     return {
       isDisplayed: true

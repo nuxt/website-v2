@@ -6,15 +6,18 @@
     <span
       class="relative mr-2 overflow-hidden inline-block w-5 h-5 flex items-center justify-center"
     >
-      <MoonIcon
+      <AppIcon
+        name="moon"
         class="w-5 h-5 absolute"
         :class="$colorMode.preference === 'dark' ? 'show' : 'hide'"
       />
-      <SystemIcon
+      <AppIcon
+        name="system"
         class="w-5 h-5 absolute"
         :class="$colorMode.preference === 'system' ? 'show' : 'hide'"
       />
-      <SunIcon
+      <AppIcon
+        name="sun"
         class="w-5 h-5 absolute"
         :class="$colorMode.preference === 'light' ? 'show' : 'hide'"
       />
@@ -46,16 +49,7 @@
 </template>
 
 <script>
-import SunIcon from '~/assets/icons/sun.svg?inline'
-import MoonIcon from '~/assets/icons/moon.svg?inline'
-import SystemIcon from '~/assets/icons/system.svg?inline'
-
 export default {
-  components: {
-    SunIcon,
-    MoonIcon,
-    SystemIcon
-  },
   props: [],
   data() {
     return {

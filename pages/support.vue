@@ -53,7 +53,7 @@
               target="_blank"
               class="sm:mr-4 py-3 px-6 text-base"
             >
-              <CommentsIcon slot="icon" class="h-5 -mb-1 mr-1" />
+              <AppIcon slot="icon" name="comments" class="h-5 -mb-1 mr-1" />
               {{ $t('support.technical.start') }}
             </AppButton>
           </div>
@@ -115,7 +115,7 @@
         target="_blank"
         class="sm:mr-4 py-3 px-6 text-base"
       >
-        <AngleDoubleRightIcon slot="icon" class="h-5 -mb-1 mr-1" />
+        <AppIcon slot="icon" name="angleDoubleRight" class="h-5 -mb-1 mr-1" />
         {{ $t('support.entreprise.learn_more') }}
       </AppButton>
       <AppButton
@@ -124,7 +124,7 @@
         target="_blank"
         class="sm:mr-4 py-3 px-6 text-base"
       >
-        <InboxInIcon slot="icon" class="h-5 -mb-1 mr-1" />
+        <AppIcon slot="icon" name="inboxIn" class="h-5 -mb-1 mr-1" />
         {{ $t('support.entreprise.request_a_demo') }}
       </AppButton>
     </div>
@@ -132,18 +132,12 @@
 </template>
 
 <script>
-import AngleDoubleRightIcon from '~/assets/icons/angle-double-right.svg?inline'
-import InboxInIcon from '~/assets/icons/inbox-in.svg?inline'
-import CommentsIcon from '~/assets/icons/comments.svg?inline'
 import TechnicalSupportIllustration from '~/assets/illustrations/technical-support.svg?inline'
 import SupportIllustration from '~/assets/illustrations/support.svg?inline'
 
 export default {
   components: {
     SupportIllustration,
-    AngleDoubleRightIcon,
-    CommentsIcon,
-    InboxInIcon,
     TechnicalSupportIllustration
   },
   head() {

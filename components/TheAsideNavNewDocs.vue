@@ -24,11 +24,12 @@
               'font-bold': $route.params.book === group
             }"
           >
-            <ChevronDownIcon
+            <AppIcon
               v-if="$route.params.book === group"
+              name="chevronDown"
               class="w-4 h-4 mr-2"
             />
-            <ChevronRightIcon v-else class="w-4 h-4 mr-2" />
+            <AppIcon v-else name="chevronRight" class="w-4 h-4 mr-2" />
             <span>{{ $t(`content.guides.${group}`) }}</span>
           </component>
           <ul v-if="$route.params.book === group" class="pb-8 pl-2">
@@ -70,14 +71,8 @@
 
 <script>
 import sortBy from 'lodash.sortby'
-import ChevronDownIcon from '~/assets/icons/chevron-down.svg?inline'
-import ChevronRightIcon from '~/assets/icons/chevron-right.svg?inline'
 
 export default {
-  components: {
-    ChevronDownIcon,
-    ChevronRightIcon
-  },
   props: {
     links: {
       type: Object,

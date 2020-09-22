@@ -141,11 +141,11 @@ module.exports = {
   },
   design: {
     meta: {
-      title: 'Disain NuxtJS',
+      title: 'Desain NuxtJS',
       description:
         'Unduh sumber daya desain NuxtJS (SVG, ikon, emoji, dan favicon).'
     },
-    title: 'Disain {nuxt}',
+    title: 'Desain {nuxt}',
     description:
       'NuxtJS adalah proyek open source berlisensi MIT dan sepenuhnya gratis untuk digunakan. {break} Anda dapat dengan bebas menggunakan logo kami selama Anda menyebutkan NuxtJS dan tautan ke nuxtjs.org.',
     other_download_message:

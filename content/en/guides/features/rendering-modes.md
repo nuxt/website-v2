@@ -21,7 +21,7 @@ export default {
 
 <base-alert type="info">
 
-You do not need to add this to your nuxt config in order for ssr true to be applied as the default value is true.
+You do not need to add ssr: true to your nuxt config in order to enable server-side-rendering as it is enabled by default.
 
 </base-alert>
 

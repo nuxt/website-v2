@@ -102,7 +102,7 @@ Aprende más sobre [dev property](/guides/configuration-glossary/configuration-
 
 ### env
 
-Esta opción te permite definir variables de entorno que están disponibles tanto para el cliente como para el servidor.
+Esta opción te permite definir variables de entorno que estarán disponibles tanto para el cliente como para el servidor.
 
 ```js{}[nuxt.config.js]
 export default {

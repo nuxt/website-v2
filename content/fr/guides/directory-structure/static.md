@@ -5,33 +5,33 @@ position: 12
 category: directory-structure
 csb_link: https://codesandbox.io/embed/github/nuxt-academy/guides-examples/tree/master/04_directory_structure/13_static?fontsize=14&hidenavigation=1&theme=dark
 questions:
-  - question: In which directory should you put your files that likely won't be changed such as your favicon or robots.txt?
+  - question: Dans quel répertoire devez-vous placer vos fichiers qui ne seront probablement pas modifiés comme par exemple la favicon ou le robots.txt ?
     answers:
       - assets
       - static
       - src
     correctAnswer: static
-  - question: This directory can be easily renamed without any configuration
+  - question: Ce répertoire peut être facilement renommé sans aucune configuration
     answers:
-      - true
-      - false
-    correctAnswer:
-  - question: Where should you put your images if you want webpack to bundle them?
+      - vrai
+      - faux
+    correctAnswer: faux
+  - question: Où devez-vous mettre vos images si vous voulez que webpack les rassemble ?
     answers:
       - static
       - assets
       - src
     correctAnswer: assets
-  - question: Anything in the static directory is relative to the root directory
+  - question: Tout ce qui se trouve dans le répertoire `static` est relatif au répertoire racine
     answers:
-      - true
-      - false
-    correctAnswer: true
-  - question: You can configure the behaviour of the static directory in the nuxt.config.js
+      - vrai
+      - faux
+    correctAnswer: vrai
+  - question: Vous pouvez configurer le comportement du répertoire `static` dans le fichier nuxt.config.js
     answers:
-      - true
-      - false
-    correctAnswer: true
+      - vrai
+      - faux
+    correctAnswer: vrai
 ---
 
 Le répertoire `static` est directement relié à la racine du serveur () et contient des fichiers qui ne seront probablement pas modifiés. Tous les fichiers inclus sont automatiquement servis par Nuxt et accessibles via l'URL racine de votre projet.
@@ -68,7 +68,6 @@ Si vous en avez besoin, vous pouvez configurer le comportement du répertoire `s
 
 ### Préfixe des ressources statique
 
-If you deploy Nuxt.js to a subfolder, e.g. `/blog/`, the router base will be added to the static asset path by default. If you want to disable this behavior, you can set `static.prefix` to false in the `nuxt.config.js`.
 Si vous déployez Nuxt.js dans un sous-dossier, par exemple `/blog/`, la base du routeur sera ajoutée par défaut au chemin de la ressource statique. Si vous voulez désactiver ce comportement, vous pouvez mettre `static.prefix` à `false` dans le `nuxt.config.js`.
 
 ```js

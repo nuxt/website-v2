@@ -374,13 +374,21 @@ If using Nuxt <2.13 and you need to specify the dynamic routes you can do so usi
 
 <base-alert type="next">
 
-See the [content module docs](https://content.nuxtjs.org/advanced#programmatic-usage) for more details
+See the [content module docs](https://content.nuxtjs.org/advanced#programmatic-usage) for more details on programmatic usage
+
+</base-alert>
+
+### What's next
+
+<base-alert type="next">
+
+Check out our tutorial on [How to Create a Blog with Nuxt Content](/blog/creating-blog-with-nuxt-content)
 
 </base-alert>
 
 <base-alert type="next">
 
-To see the full [documentation for the content module](https://content.nuxtjs.org/)
+Check out the [content module docs](https://content.nuxtjs.org/) for more advanced usage and examples
 
 </base-alert>
 

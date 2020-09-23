@@ -59,7 +59,7 @@ questions:
 
 The `assets` directory contains your un-compiled assets such as Stylus or Sass files, images, or fonts.
 
-## Images:
+## Images
 
 Inside your `vue` templates, if you need to link to your `assets` directory use `~/assets/your_image.png` with a slash before assets.
 
@@ -81,13 +81,21 @@ When working with dynamic images you will need to use require
 <img :src="require(`~/assets/img/${image}.jpg`)" />
 ```
 
+### Example
+
+In this example we show how to add an svg to the `<img>` tag from the assets folder. We also show how to add a background image.
+
+<app-modal>
+  <code-sandbox  :src="csb_link"></code-sandbox>
+</app-modal>
+
 <base-alert type="next">
 
 Learn more about [webpack Assets](/guides/directory-structure/assets#webpack-assets)
 
 </base-alert>
 
-## Styles:
+## Styles
 
 Nuxt.js lets you define the CSS files/modules/libraries you want to set globally (included in every page). In the nuxt.config you can easily add your styles using the CSS Property.
 
@@ -104,11 +112,17 @@ export default {
 }
 ```
 
-<base-alert type="info">
+### Example
+
+In this example we show how to add a css file to your project so it is globally available by adding it to the `css` property in the `nuxt.config` file.
+
+<app-modal>
+  <code-sandbox  :src="csb_link"></code-sandbox>
+</app-modal>
+
+### Sass
 
 In case you want to use `sass` make sure that you have installed `node-sass` and `sass-loader` packages.
-
-</base-alert>
 
 <code-group>
   <code-block label="Yarn" active>
@@ -129,7 +143,7 @@ npm install --save-dev node-sass sass-loader
 
 Nuxt.js will automatically guess the file type by its extension and use the appropriate pre-processor loader for webpack. You will still need to install the required loader if you need to use them.
 
-## Fonts:
+## Fonts
 
 You can use local fonts by adding them to your assets folder. Once they have been added you can then access them though your css using the @font-face.
 
@@ -157,6 +171,14 @@ You can use local fonts by adding them to your assets folder. Once they have bee
   src: url('~assets/fonts/DMSans-Bold.ttf') format('truetype');
 }
 ```
+
+### Example
+
+In this example we show how to reference the DMSans fonts from the assets folder using the `@font-face` rule in the `main.css` file.
+
+<app-modal>
+  <code-sandbox  :src="csb_link"></code-sandbox>
+</app-modal>
 
 <base-alert type="next">
 
@@ -241,7 +263,7 @@ When launching your application with `nuxt`, your template in `pages/index.vue
 
 ```html{}[pages/index.vue]
 <template>
-  <img src="@/assets/your_image.png" />
+  <img src="~/assets/your_image.png" />
 </template>
 ```
 
@@ -252,10 +274,6 @@ Will be transformed into:
 ```
 
 If you want to change the loader configurations, please use [build.extend](/guides/configuration-glossary/configuration-build#extend).
-
-<app-modal>
-  <code-sandbox  :src="csb_link"></code-sandbox>
-</app-modal>
 
 ## Aliases
 

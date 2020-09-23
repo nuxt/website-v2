@@ -209,7 +209,7 @@ export default {
 
 ## Configuration Settings
 
-## The layoutTransition Property
+### The layoutTransition Property
 
 The layout transition is used to set the default properties of the layout transitions.
 
@@ -255,7 +255,7 @@ export default {
 }
 ```
 
-## The pageTransition Property
+### The pageTransition Property
 
 The default settings for page transitions are:
 
@@ -294,6 +294,10 @@ If you do modify the page Transition name you will also have to rename the css c
   opacity: 0;
 }
 ```
+
+### Example
+
+In this example we show the home page with a bounce transition and the fun pages with a slide-bottom transition. These transitions can be seen in the main.css file which also has the classes for the default page and layout transitions which are applied to pages that do not have the transition property set.
 
 <app-modal>
   <code-sandbox  :src="csb_link"></code-sandbox>

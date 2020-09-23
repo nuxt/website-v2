@@ -1,5 +1,5 @@
 ---
-title: Nuxt Child Component
+title: NuxtChild Component
 description: How to use the Nuxt Child component to create parent and child pages.
 position: 39
 category: examples
@@ -12,7 +12,7 @@ We then have a parent folder which contains an `index.vue` page with some text t
 
 <base-alert type="next">
 
-Learn more in the Features book in the [Nuxt Components](/guides/features/loading) chapter.
+Learn more in the Features book in the [Nuxt Components](/guides/features/nuxt-components#the-nuxtchild-component) chapter.
 
 </base-alert>
 

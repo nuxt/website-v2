@@ -288,13 +288,23 @@ export default {
 }
 ```
 
-Since Nuxt.js v2.10.0, if you have set `prefetchLinks` to `false` but you want to prefetch a specific link, you can use the `prefetch` prop:
+Since Nuxt.js v2.10.0, if you have to set `prefetchLinks` to `false` but you want to prefetch a specific link, you can use the `prefetch` prop:
 
 ```html
 <NuxtLink to="/about" prefetch>About page pre-fetched</NuxtLink>
 ```
 
-## linkActiveClass
+### Example
+
+This example shows how to add a `no-prefetch` to the `<NuxtLink>` so that the No Prefetch page will not be pre fetched. This can be seen in the `<Navigation>` component.
+
+<app-modal>
+  <code-sandbox  :src="csb_link_nuxt_link"></code-sandbox>
+</app-modal>
+
+## Link Classes
+
+### linkActiveClass
 
 The `linkActiveClass` works the same as the `vue-router` class for active links. If we want to show which links are active all you have to do is create some css for the class `nuxt-link-active` .
 
@@ -326,7 +336,7 @@ This option is given directly to the `vue-router` linkActiveClass. See the [vue-
 
 </base-alert>
 
-## linkExactActiveClass
+### linkExactActiveClass
 
 The `linkExactActiveClass` works the same as the `vue-router` class for exact active links. If we want to show which links are active with an exact match all you have to do is create some css for the class `nuxt-link-exact-active` .
 
@@ -358,7 +368,7 @@ This option is given directly to the `vue-router` linkExactActiveClass. See the 
 
 </base-alert>
 
-## linkPrefetchedClass
+### linkPrefetchedClass
 
 The linkPrefetchedClass will allow you to add styles for all links that have been prefetched. This is great for testing which links are being prefetched after modifying the default behaviour. The linkPrefetchedClass is disabled by default. If you want to enable it you need to add it to the router property in your `nuxt-config.js` file.
 
@@ -378,11 +388,11 @@ Then you can add the styles for that class.
 }
 ```
 
-<base-alert type="info">
+### Example
 
-In this example we have used the class `nuxt-link-prefetched` but you can name it anything you like
+This example shows you how to change the name of the `linkActiveClass`, `linkExactActiveClass` and `linkPrefecthedClass` which you can see in the `router` property in the `nuxt.config` file. You will also see how to add a custom class name instead of the default one.
 
-</base-alert>
+We then add styles for these classes in the `main.css` file. We add a bold weight to the active class and the primary color to the exact active class. We also add an underline to all the prefetched link which means the No prefetch page will never have an underline as it is never prefetched. In this example we have called the class `nuxt-link-prefetched` but you can name it anything you like.
 
 <app-modal>
   <code-sandbox  :src="csb_link_nuxt_link"></code-sandbox>

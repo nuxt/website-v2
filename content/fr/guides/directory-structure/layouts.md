@@ -1,15 +1,15 @@
 ---
 title: layouts
-description: Layouts are a great help when you want to change the look and feel of your Nuxt.js app. Whether you want to include a sidebar or have distinct layouts for mobile and desktop.
+description: Les `layouts` sont d'une grande aide lorsque vous souhaitez modifier l'aspect et la présentation de votre application Nuxt.js. Vous pouvez inclure une barre latérale ou avoir des pages différentes entre une version mobile et web.
 position: 7
 category: directory-structure
 csb_link: https://codesandbox.io/embed/github/nuxt-academy/guides-examples/tree/master/04_directory_structure/07_layouts?fontsize=14&hidenavigation=1&theme=dark
 questions:
-  - question: You can easily rename the layouts directory without any configuration
+  - question: Vous pouvez facilement renommer le répertoire `layout` sans aucune configuration
     answers:
-      - true
-      - false
-    correctAnswer: false
+      - vrai
+      - faux
+    correctAnswer: faux
   - question: Comment s'appelle la page de layout par défaut ?
     answers:
       - layout.vue
@@ -24,57 +24,57 @@ questions:
     correctAnswer: <Nuxt />
   - question: Vous pouvez ajouter tout autre élément à votre layout
     answers:
-      - true
-      - false
-    correctAnswer: true
-  - question: To add a custom layout you create a `.vue` file and add it to what folder?
+      - vrai
+      - faux
+    correctAnswer: vrai
+  - question: Pour ajouter un `layout` personnalisé, vous créez un fichier `.vue` et vous l'ajoutez à quel dossier ?
     answers:
       - layout
       - layouts
       - page
     correctAnswer: layouts
-  - question: How do you tell the a page to use the blog layout?
+  - question: Comment dire à une page d'utiliser le `layout` du blog ?
     answers:
       - "layout: 'blog'"
       - "name: 'blog'"
       - 'blog: true'
     correctAnswer: "layout: 'blog'"
-  - question: In which directory do you add an error page?
+  - question: Dans quel répertoire ajoutez-vous une page d'erreur ?
     answers:
       - pages
       - layouts
       - errors
     correctAnswer: layouts
-  - question: You should add the `<Nuxt>` component to the error page?
+  - question: Vous devez ajouter le composant `<Nuxt>` à la page d'erreur ?
     answers:
-      - true
-      - false
-    correctAnswer: false
-  - question: You can set a custom layout for your error page
+      - vrai
+      - faux
+    correctAnswer: faux
+  - question: Vous pouvez définir un `layout` personnalisé pour votre page d'erreur
     answers:
-      - true
-      - false
-    correctAnswer: true
-  - question: The error page is displayed when an error occurs while server side rendering?
+      - vrai
+      - faux
+    correctAnswer: vrai
+  - question: La page d'erreur est affichée lorsqu'une erreur se produit lors du rendu côté serveur (SSR) ?
     answers:
-      - true
-      - false
-    correctAnswer: false
+      - vrai
+      - faux
+    correctAnswer: faux
 ---
 
-Layouts are a great help when you want to change the look and feel of your Nuxt.js app. Whether you want to include a sidebar or have distinct layouts for mobile and desktop.
+Les `layouts` sont d'une grande aide lorsque vous souhaitez modifier l'aspect et la présentation de votre application Nuxt.js. Vous pouvez inclure une barre latérale ou avoir des pages différentes entre une version mobile et web.
 
 <base-alert>
 
-_This directory cannot be renamed without extra configuration._
+_Ce répertoire ne peut pas être renommé sans configuration supplémentaire._
 
 </base-alert>
 
-## Default Layout
+## Layout par défaut
 
-You can extend the main layout by adding a `layouts/default.vue` file. It will be used for all pages that don't have a layout specified. Make sure to add the `<Nuxt>` component when creating a layout to actually include the page component.
+Vous pouvez étendre la présentation principale en ajoutant un fichier `layout/default.vue`. Il sera utilisé pour toutes les pages qui n'ont pas de `layout` défini. Assurez-vous d'ajouter le composant `<Nuxt>` lors de la création d'un `layout` pour inclure le composant de la page.
 
-All you need in your layout is three lines of code which will render the page component.
+Tout ce dont vous avez besoin dans votre layout, c'est de trois lignes de code qui rendront le composant de la page.
 
 ```html{}[layouts/default.vue]
 <template>
@@ -82,7 +82,7 @@ All you need in your layout is three lines of code which will render the page co
 </template>
 ```
 
-You can add more components here such as Navigation, Header, Footer etc.
+Vous pouvez ajouter ici d'autres éléments tels que : Navigation, Header, Footer etc.
 
 ```html{}[layouts/default.vue]
 <template>
@@ -94,26 +94,26 @@ You can add more components here such as Navigation, Header, Footer etc.
 
 <base-alert type="info">
 
-If you have [components set to true](/guides/directory-structure/components) then there is no need to add any import statements for your components.
+Si vos [composants sont réglés sur true](/guides/directory-structure/components) alors il n'est pas nécessaire de déclarer l'importation pour vos composants.
 
 </base-alert>
 
-## Custom Layout
+## Layout personnalisé
 
-Every file (_top-level_) in the `layouts` directory will create a custom layout accessible with the `layout` property in the page components.
+Tous les fichiers du répertoire `layouts` créeront un `layout` personnalisée accessible avec la propriété `layout` dans les composants de la page.
 
 Let's say we want to create a blog layout and save it to `layouts/blog.vue`:
 
 ```html{}[layouts/blog.vue]
 <template>
   <div>
-    <div>My blog navigation bar here</div>
+    <div>La barre de navigation de mon blog ici</div>
     <Nuxt />
   </div>
 </template>
 ```
 
-Then you have to tell the pages to use your custom layout
+Ensuite, vous devez indiquer aux pages d'utiliser votre layout personnalisé
 
 ```js{}[pages/posts.vue]
 <script>
@@ -128,29 +128,29 @@ export default {
 ```
 
 <app-modal>
-  <code-sandbox  :src="csb_link"></code-sandbox>
+  <code-sandbox :src="csb_link"></code-sandbox>
 </app-modal>
 
-## Error Page
+## Page d'erreur
 
-The error page is a *page component* which is always displayed when an error occurs (that is not thrown on the server-side).
+La page d'erreur est un composant (_page component_) qui est toujours affiché lorsqu'une erreur se produit (qui ne s'est pas lancée du côté du serveur).
 
 <base-alert>
 
-Though this file is placed in the `layouts` folder, it should be treated as a page.
+Bien que ce fichier soit placé dans le répertoire `layouts`, il doit être traité comme une page.
 
 </base-alert>
 
-As mentioned above, this layout is special and you should not include `<Nuxt>` inside its template. You must see this layout as a component displayed when an error occurs (`404`, `500`, etc.). Similar to other page components, you can set a custom layout for the error page as well in the usual way.
+Comme mentionné ci-dessus, ce `layout` est spéciale et vous ne devez pas inclure `<Nuxt>` dans son modèle. Vous devez voir ce `layout` comme un composant affiché lorsqu'une erreur se produit (`404`, `500`, etc.). Comme pour les autres composants de la page, vous pouvez également définir un `layout` personnalisé pour la page d'erreur de la manière habituelle.
 
-You can customize the error page by adding a `layouts/error.vue` file:
+Vous pouvez personnaliser la page d'erreur en ajoutant un fichier `layouts/error.vue` :
 
 ```js{}[layouts/error.vue]
 <template>
   <div class="container">
-    <h1 v-if="error.statusCode === 404">Page not found</h1>
-    <h1 v-else>An error occurred</h1>
-    <NuxtLink to="/">Home page</NuxtLink>
+    <h1 v-if="error.statusCode === 404">Page non trouvée</h1>
+    <h1 v-else>Une erreur est survenue</h1>
+    <NuxtLink to="/">Page d'accueil</NuxtLink>
   </div>
 </template>
 
@@ -164,7 +164,7 @@ export default {
 
 <base-alert type="info">
 
-The default error page source code is [available on GitHub](https://github.com/nuxt/nuxt.js/blob/dev/packages/vue-app/template/components/nuxt-error.vue).
+Le code source de la page d'erreur par défaut est [disponible sur GitHub](https://github.com/nuxt/nuxt.js/blob/dev/packages/vue-app/template/components/nuxt-error.vue).
 
 </base-alert>
 

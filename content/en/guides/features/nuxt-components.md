@@ -165,6 +165,16 @@ To display the `child.vue` component, you have to insert the `<NuxtChild>` co
 </template>
 ```
 
+### Example
+
+In this example we show a parent page which you see as `parent.vue` that contains the Child links as well as the `<NuxtChild>` component. Everything on this page will be seen on both the parent and child pages.
+
+We then have a parent folder which contains an `index.vue` page with some text that will be replaced when the child links are clicked as they are only visible on the parent route. The parent folder also contains the two child pages that when clicked will show the parent view with the child view below it and the route path which shows the parent route with the child page after it.
+
+<app-modal>
+  <code-sandbox  :src="csb_link_nuxt"></code-sandbox>
+</app-modal>
+
 ## keep-alive
 
 Both, the `<Nuxt>` component and the `<NuxtChild/>` component, accept `keep-alive` and `keep-alive-props.`
@@ -214,12 +224,6 @@ To learn more about keep-alive and keep-alive-props see the [vue docs](https://v
   </div>
 </template>
 ```
-
-To see an example, take a look at the [nested-routes example](https://nuxtjs.org/examples/nested-routes).
-
-<app-modal>
-  <code-sandbox  :src="csb_link_nuxt"></code-sandbox>
-</app-modal>
 
 ## The NuxtLink Component
 

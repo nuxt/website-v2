@@ -117,10 +117,6 @@ If you have two files with the same name eg. `main.scss` and `main.css`, and don
 
 Default order: `['css', 'pcss', 'postcss', 'styl', 'stylus', 'scss', 'sass', 'less']`
 
-<app-modal>
-  <code-sandbox  :src="csb_link_pre-processors"></code-sandbox>
-</app-modal>
-
 ## Pre-processors
 
 Thanks to [Vue Loader](http://vue-loader.vuejs.org/en/configurations/pre-processors.html), you can use any kind of pre-processor for your  `<template>` or `<style>`: use the `lang` attribute.
@@ -128,9 +124,7 @@ Thanks to [Vue Loader](http://vue-loader.vuejs.org/en/configurations/pre-proces
 Example of our `pages/index.vue` using [Pug](https://github.com/pugjs/pug) and [Sass](http://sass-lang.com/):
 
 ```html{}[pages/index.vue]
-<template lang="pug">
-  h1.red Hello {{ name }}!
-</template>
+<template lang="pug"> h1.red Hello {{ name }}! </template>
 
 <style lang="scss">
   .red {
@@ -159,6 +153,16 @@ npm install --save-dev node-sass sass-loader
 
   </code-block>
 </code-group>
+
+### Example
+
+In this example we show how to use pug as a templating language. The `package.json` will show the dependencies needed so you can use Pug and the `pre-processors.vue` file will show you how it is used.
+
+The package.json file also shows which dependencies are needed for Sass and the `pre-processors.vue` page show sass being used in the style tag using a variable for a color. We use the style resources module to make the variables available in all components. You can see this module is added as a dependency in the package.json file and registered in the `nuxt.config` file along with a styleResources property so you can add the variables.scss file. We also show how the `main.scss` file is globally added. The `.scss` files are located in the assets folder.
+
+<app-modal>
+  <code-sandbox  :src="csb_link_pre-processors"></code-sandbox>
+</app-modal>
 
 ## JSX
 
@@ -351,6 +355,10 @@ or create a script in your package.json
   "dev:host": "nuxt --hostname '0' --port 8000"
 }
 ```
+
+### Example
+
+This example shows you how to use the host and port so you can set up a script to run your project in dev mode on a specific host and port. This will use your ip address as opposed to localhost meaning you can then open it on your mobile/tablet and easily test how it looks using a real environment making debugging so much easier. Take a look at the package.json to see the script and once you run it you will see in the terminal on what port and host your site is listening on.
 
 <app-modal>
   <code-sandbox  :src="csb_link_host_port"></code-sandbox>

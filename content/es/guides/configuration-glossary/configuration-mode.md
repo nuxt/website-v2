@@ -14,8 +14,20 @@ position: 17
 
 > Puedes utilizar esta opción para cambiar el modo de nuxt por defecto de tu proyecto usando `nuxt.config.js`
 
+<base-alert type="warning">
+
+Obsoleta: por favor, utiliza `ssr: false` en lugar de `mode: spa`
+
+</base-alert>
+
 <base-alert type="next">
 
-Para aprender más sobre la opción `mode`, échale un vistazo a la [sección modos de renderizado](https://nuxtjs.org/guides/features/rendering-modes).
+Para aprender más sobre la opción `ssr`, échale un vistazo a la [sección propiedad ssr](/guides/configuration-glossary/configuration-ssr).
+
+</base-alert>
+
+<base-alert type="next">
+
+Para aprender más sobre la opción `mode`, échale un vistazo a la [sección modos de renderizado](/guides/features/rendering-modes).
 
 </base-alert>

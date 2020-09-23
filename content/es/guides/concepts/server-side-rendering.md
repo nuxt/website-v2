@@ -91,7 +91,7 @@ mounted{
 Cuando un navegador envía la solicitud inicial, esta alcanzará al servidor interno de Node.js. Nuxt.js generará el HTML y lo enviará de vuelta al navegador con los resultados de las funciones ejecutadas, por ejemplo, `asyncData`, `nuxtServerInit` o `fetch`. Las funciones de hook también se ejecutan.
 ### Step 2: Server to Browser
 
-The browser receives the rendered page El navegador recibe la página renderizada del servidor con el HTML generado. El contenido se muestra y la hidratación del Vue.js se activa, haciéndolo reactivo. Después de este proceso, la página es interactiva.d HTML.
+El navegador recibe la página renderizada del servidor con el HTML generado. El contenido se muestra y la hidratación del Vue.js se activa, haciéndolo reactivo. Después de este proceso, la página es interactiva.d HTML.
 
 ### Step 3: Navegador a Navegador
 

@@ -21,7 +21,7 @@ export default {
 
 ### Static Sites
 
-As Nuxt.js also works as a static site generator you can therefore generate your application as a static site. Statically render your Nuxt.js application and get all of benefits of a universal app without a server. The nuxt `generate` command will generate a completely static version of your website. It will generate HTML for every one of your routes and put it inside of its own file in the `dist` folder. Basically any file that is placed inside the pages folder will be generated as a static html page. This improves performance as well as SEO and better offline support.
+As Nuxt.js also works as a static site generator you can therefore generate your application as a static site. Statically render your Nuxt.js application and get all of the benefits of a universal app without a server. The nuxt `generate` command will generate a completely static version of your website. It will generate HTML for every one of your routes and put it inside of its own file in the `dist` folder. Basically any file that is placed inside the pages folder will be generated as a static html page. This improves performance as well as SEO and better offline support.
 
 <base-alert type="info">
 
@@ -54,7 +54,7 @@ We are also exposing `process.target` for module authors to add logic depending 
 
 Server Hosting is hosting that requires a server and is intended for SSR applications or applications that are using [serverMiddleware](/guides/configuration-glossary/configuration-servermiddleware). Server-side rendering otherwise known as SSR means that your page is rendered on the server when it is requested by the user. When the user opens your page in a browser the browser sends a request to the server requesting that page. The page is rendered on the server and sent back to the browser with all its content.
 
-For server hosting the target of server is used, which is the default value. With SSR you use the `build` command to build you application.
+For server hosting the target of server is used, which is the default value. With SSR you use the `build` command to build your application.
 
 ```js{}[nuxt.config.js]
 export default {

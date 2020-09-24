@@ -68,15 +68,15 @@ questions:
 
 <app-modal :src="img" :alt="imgAlt"></app-modal>
 
-While developing production-grade applications with Nuxt.js you might find that the framework's core functionality is not enough. Nuxt.js can be extended with configuration options and plugins, but maintaining these customizations across multiple projects is tedious, repetitive and time-consuming. On the other hand, supporting every project's needs out of the box would make Nuxt.js very complex and hard to use.
+Al desarrollar aplicaciones de nivel de producción con Nuxt.js, es posible que la funcionalidad principal del framework no sea suficiente. Nuxt.js se puede ampliar con opciones de configuración y plugins, pero mantener estas personalizaciones en varios proyectos es tedioso, repetitivo y requiere mucho tiempo. Por otro lado, respaldar las necesidades de cada proyecto desde el núcleo de Nuxt.js haría que este fuera muy complejo y difícil de usar.
 
-This is one of the reasons why Nuxt.js provides a higher-order module system that makes it possible to extend the core. Modules are functions that are called sequentially when booting Nuxt.js. The framework waits for each module to finish before continuing. In this way, modules can customize almost any aspect of your project. Thanks to Nuxt.js' modular design (based on webpack's [Tapable](https://github.com/webpack/tapable)), modules can easily register hooks for certain entry points like the builder initialization. Modules can also override templates, configure webpack loaders, add CSS libraries, and perform many other useful tasks.
+Esta es una de las razones por las que Nuxt.js proporciona un sistema de módulos de orden superior que permite ampliar el núcleo. Los módulos son funciones que se llaman secuencialmente al arrancar Nuxt.js. Luego espera a que finalice cada módulo antes de continuar. De esta forma, los módulos pueden personalizar casi cualquier aspecto de su proyecto. Gracias al diseño modular de Nuxt.js (basado en [Tapable](https://github.com/webpack/tapable) webpack), los módulos pueden registrar fácilmente hooks para ciertos puntos de entrada como la inicialización del constructor. Los módulos también pueden sobrescribir plantillas, configurar cargadores de webpacks, agregar bibliotecas CSS y realizar muchas otras tareas útiles.
 
 Lo mejor de todo es que los módulos Nuxt.js se pueden incorporar en paquetes npm. Esto hace posible la reutilización entre proyectos y compartir con la comunidad, lo que ayuda a crear un ecosistema de complementos de alta calidad.
 
-## The modules Property
+## La propiedad modules
 
-Modules are Nuxt.js extensions which can extend the framework's core functionality and add endless integrations. Once you have installed the modules you can then add them to your nuxt.config.js file under the modules property.
+Los módulos permiten extender las funcionalidades del núcleo de Nuxt.js e incluir nuevas integraciones. Una vez instalados los módulos, debes agregarlos al fichero nuxt.config.js dentro de la propiedad modules.
 
 ```js{}[nuxt.config.js]
 export default {
@@ -98,23 +98,23 @@ export default {
 
 <base-alert type="info">
 
-Module developers usually provide additionally needed steps and details for usage.
+Los desarrolladores de módulos suelen proporcionar pasos y detalles adicionales necesarios para su uso.
 
 </base-alert>
 
-Nuxt.js tries to resolve each item in the modules array using node require path (in the `node_modules`) and then will resolved from the project `srcDir` if `@` alias is used.
+Nuxt.js trata de encontrar cada elemento en la propiedad modules buscando en `node_modules` y luego en el `srcDir` del proyecto si se usó un alias (`@`).
 
 <base-alert>
 
-Modules are executed sequentially so the order is important.
+Los módulos se ejecutan secuencialmente, por lo que el orden es importante.
 
 </base-alert>
 
-Modules should export a function to enhance build/runtime and optionally return a promise until their job is finished. Note that they are imported at runtime so they should be already transpiled if using modern ES6 features.
+Los módulos deben exportar una función para mejorar la compilación / tiempo de ejecución y, opcionalmente, devolver un Promise hasta que finalice su trabajo. Ten en cuenta que los módulos se importan en tiempo de ejecución, por lo que ya deberían haber sido transpilados si se utilizan las funciones modernas de ES6.
 
-## Write your own Module
+## Escribe tu propio Módulo
 
-Modules are functions. They can be packaged as npm modules or directly included in your project source code.
+Los módulos son funciones. Se pueden empaquetar como módulos npm o incluirse directamente en el código fuente del proyecto.
 
 ```js{}[nuxt.config.js]
 export default {
@@ -144,11 +144,11 @@ module.exports.meta = require('./package.json')
 
 ## 1) ModuleOptions
 
-`moduleOptions`: This is the object passed using the `modules` array by the user. We can use it to customize it's behavior.
+`moduleOptions`: Este es el objeto que el usuario pasa usando el array `modules`. Podemos usarlo para personalizar su comportamiento.
 
-### Top level options
+### Opciones de primer nivel
 
-Sometimes it is more convenient if we can use top level options while registering modules in `nuxt.config.js`. This allows us to combine multiple option sources.
+A veces es más conveniente si podemos usar opciones de nivel superior mientras registramos módulos en `nuxt.config.js`. Esto nos permite combinar opciones de múltiples fuentes.
 
 ```js{}[nuxt.config.js]
 export default {

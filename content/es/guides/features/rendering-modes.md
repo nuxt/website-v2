@@ -5,11 +5,7 @@ position: 1
 category: features
 ---
 
-## Universal
-
-`mode: 'universal'`: Aplicación isomórfica (Renderizado server-side o archivos estáticos).
-
-El modo universal se utiliza para el renderizado server-side y para archivos estáticos.
+## Sitios con renderizado server-side y sitios estáticos
 
 Los sitios estáticos son muy similares a las aplicaciones con renderizado server-side, siendo la mayor diferencia que los sitios estáticos se renderizan en tiempo de construcción, por lo que no se necesita un servidor. La navegación entre páginas se realiza en el lado del cliente.
 
@@ -19,13 +15,13 @@ Ver [destinos de despliegue](/guides/features/deployment-targets) para más info
 
 ```js{}[nuxt.config.js]
 export default {
-  mode: 'universal' // universal por defecto
+  ssr: true // valor por defecto
 }
 ```
 
 <base-alert type="info">
 
-No necesitas agregar esto a tu carpeta de configuración nuxt para que el modo universal sea aplicado, ya que el modo por defecto es universal.
+No necesitas agregar `ssr: true` esto a tu configuración nuxt para activar el renderizado server-side, ya que está habilitado por defecto.
 
 </base-alert>
 

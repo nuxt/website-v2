@@ -7,7 +7,7 @@ csb_link: https://codesandbox.io/embed/github/nuxt-academy/guides-examples/tree/
 img: /guides/plugins.jpg
 imgAlt: modules-servermiddleware-plugins-in-nuxt-js
 questions:
-  - question: ¿Cúando se llaman los módulos?
+  - question: ¿Cuándo se llaman los módulos?
     answers:
       - antes de que Nuxt.js inicie
       - mientras Nuxt.js se ejecuta
@@ -29,41 +29,41 @@ questions:
       - verdadero
       - falso
     correctAnswer: verdadero
-  - question: Where should you add your modules that are only required during development and build time?
+  - question: ¿Dónde se deben agregar los módulos que solo se requieren durante el desarrollo y el tiempo de compilación?
     answers:
       - modules
       - build
       - buildModules
     correctAnswer: buildModules
-  - question: What exactly are modules?
+  - question: ¿Qué son los módulos exactamente?
     answers:
       - arrays
-      - functions
+      - funciones
       - plugins
-    correctAnswer: functions
-  - question: What do we use when we want to do things only on specific conditions and not just during Nuxt.js initialization?
+    correctAnswer: funciones
+  - question: ¿Qué usamos cuando queremos hacer cosas solo en condiciones específicas y no solo durante la inicialización de Nuxt.js?
     answers:
       - plugins
       - hooks
       - asyncData
     correctAnswer: hooks
-  - question: Modules can
+  - question: Los módulos pueden
     answers:
-      - only be used as npm packages
-      - can only be directly included in your project source code
-      - both
-    correctAnswer: both
-  - question: Which line is required if you are publishing your module as an npm package?
+      - solo ser usados como paquetes npm
+      - solo ser incluidos en el código fuente del proyecto
+      - ambos
+    correctAnswer: ambos
+  - question: ¿Qué línea es necesaria si vas a publicar tu módulo como un paquete npm?
     answers:
       - module.exports
       - module.exports.meta
       - module.exports.module
     correctAnswer: module.exports.meta
-  - question: You can tell Nuxt.js to load modules with optional parameters as options
+  - question: Puedes decirle a Nuxt.js que cargue módulos con parámetros opcionales como opciones
     answers:
-      - true
-      - false
-    correctAnswer: true
+      - verdadero
+      - falso
+    correctAnswer: verdadero
 ---
 
 <app-modal :src="img" :alt="imgAlt"></app-modal>

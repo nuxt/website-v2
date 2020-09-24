@@ -164,7 +164,7 @@ export default {
 
 ## 2) this.options
 
-`this.options`: You can directly access the Nuxt.js options using this reference. This is the content of the user's `nuxt.config.js` with all default options assigned to it. It can be used for shared options between modules.
+`this.options`: Puedes acceder directamente a las optiones de  Nuxt.js usando esta referencia. Este es el contenido del  `nuxt.config.js` del usuario con las opciones por defecto asignadas. Puede ser usado para compartir opciones entre módulos.
 
 ```js{}[module.js]
 export default function (moduleOptions) {
@@ -175,9 +175,9 @@ export default function (moduleOptions) {
 }
 ```
 
-### Add a CSS Library
+### Agregar una biblioteca CSS
 
-If your module will provide a CSS library, make sure to perform a check if the user already included the library to avoid duplicates, and add an option to disable the CSS library in the module.
+Si tu módulo contiene una bibloteca CSS, asegúrate de comprobar si el usuario ya la agregó por su cuenta para evitar duplicados, y agrega una opción para desactivar la inclusión de la biblioteca CSS en el módulo.
 
 ```js{}[module.js]
 export default function (moduleOptions) {
@@ -188,9 +188,9 @@ export default function (moduleOptions) {
 }
 ```
 
-### Emit assets
+### Emitir assets
 
-We can register webpack plugins to emit assets during build.
+Podemos registrar plugins webpack para emitir assets durante la construcción.
 
 ```js{}[module.js]
 export default function (moduleOptions) {
@@ -215,9 +215,9 @@ export default function (moduleOptions) {
 
 ## 3) this.nuxt
 
-`this.nuxt`: This is a reference to the current Nuxt.js instance. We can register hooks on certain life cycle events.
+`this.nuxt`: Referencia a la instancia actual de Nuxt.js. Podemos registrar hooks en los diferentes eventos del ciclo de vida.
 
-- **Ready** : Nuxt is ready to work (ModuleContainer and Renderer ready).
+- **Ready** : Nuxt está listo para trabajar (ModuleContainer y Renderer listos).
 
 ```js
 nuxt.hook('ready', async nuxt => {
@@ -225,7 +225,7 @@ nuxt.hook('ready', async nuxt => {
 })
 ```
 
-- **Error**: An unhandled error when calling hooks.
+- **Error**: Un error que no han sido manejado al invocar hooks.
 
 ```js
 nuxt.hook('error', async error => {
@@ -233,7 +233,7 @@ nuxt.hook('error', async error => {
 })
 ```
 
-- **Close**: Nuxt instance is gracefully closing.
+- **Close**: La instancia de Nuxt se está cerrando correctamente.
 
 ```js
 nuxt.hook('close', async nuxt => {
@@ -241,7 +241,7 @@ nuxt.hook('close', async nuxt => {
 })
 ```
 
-- **Listen**: Nuxt internal server starts listening. (Using nuxt start or nuxt dev)
+- **Listen**: El servidor interno de Nuxt ha comenzado a escuchar. (Usando nuxt start o nuxt dev)
 
 ```js
 nuxt.hook('listen', async (server, {host, port})) => {
@@ -249,9 +249,9 @@ nuxt.hook('listen', async (server, {host, port})) => {
 })
 ```
 
-`this`: Context of modules. All modules will be called within context of the ModuleContainer instance.
+`this`: Contexto de los módulos. Todos los módulos en el contexto de la instancia de ModuleContainer.
 
-Please look into the [ModuleContainer](/guides/internals-glossary/internals-module-container) class docs for available methods.
+Mira la documentación de la clases [ModuleContainer](/guides/internals-glossary/internals-module-container) para ver los métodos disponibles.
 
 ### Ejecutar tareas en hooks específicos
 

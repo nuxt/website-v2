@@ -199,9 +199,7 @@ Keeps only 10 page components in memory.
 Nuxt will directly fill  `this.$fetchState.timestamp`  (timestamp) of the last `fetch` call (ssr included). You can use this property combined with `activated` hook to add a 30 seconds cache to `fetch`:
 
 ```html{}[pages/posts/_id.vue]
-<template>
-  ...
-</template>
+<template> ... </template>
 
 <script>
   export default {
@@ -235,7 +233,7 @@ The navigation to the same page will not call `fetch` if last `fetch` call w
 
 </base-alert>
 
-The main difference with `fetch` is that you don't have to handle any pending state or error. Nuxt will wait for the `asyncData` hook to be finished before navigating to the next page or display the [error page](/guides/directory-structure/layouts#error-page))
+The main difference with `fetch` is that you don't have to handle any pending state or error. Nuxt will wait for the `asyncData` hook to be finished before navigating to the next page or display the [error page](/guides/directory-structure/layouts#error-page)
 
 This hook receives [the context](/guides/concepts/context-helpers) as first argument. You can use it to fetch some data and Nuxt.js will automatically merge the returned object with the component data.
 

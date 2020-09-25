@@ -37,15 +37,9 @@ questions:
     correctAnswer: css
   - question: You can use JSX in your Nuxt.js application?
     answers:
-      - True
-      - False
-    correctAnswer: True
-  - question: In the nuxt.config.js what property do you use to add global CSS files?
-    answers:
-      - styles
-      - css
-      - global-css
-    correctAnswer: css
+      - true
+      - false
+    correctAnswer: true
   - question: In the nuxt.config.js what property do you use to extend the webpack config?
     answers:
       - webpack.extend
@@ -128,9 +122,7 @@ Thanks to [Vue Loader](http://vue-loader.vuejs.org/en/configurations/pre-proces
 Example of our `pages/index.vue` using [Pug](https://github.com/pugjs/pug) and [Sass](http://sass-lang.com/):
 
 ```html{}[pages/index.vue]
-<template lang="pug">
-  h1.red Hello {{ name }}!
-</template>
+<template lang="pug"> h1.red Hello {{ name }}! </template>
 
 <style lang="scss">
   .red {
@@ -358,7 +350,7 @@ or create a script in your package.json
 
 ## Asynchronous Configuration
 
-Although it is better to use the normal configuration `export default {}` you can have an async configuration by exporting an async function that return the config object.
+Although it is better to use the normal configuration `export default {}` you can have an async configuration by exporting an async function that returns the config object.
 
 ```js{}[nuxt.config.js]
 import axios from 'axios'

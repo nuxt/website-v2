@@ -138,7 +138,7 @@ export default {
 このファイルの木構造から次のルーティングが生成されます:
 
 ```js
-;[
+[
   {
     path: '/parent',
     component: '~/pages/parent.vue',

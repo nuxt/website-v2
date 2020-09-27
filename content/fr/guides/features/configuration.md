@@ -263,7 +263,7 @@ export default {
 
 La méthode `extend` est appelée deux fois, une fois pour le bundle du client et une fois pour celui du serveur.
 
-### Personnaliser la configuration des morceaux
+### Personnaliser la configuration des fragments
 
 Vous souhaiteriez peut-être customiser un peu la [configuration d'optimisation](/guides/configuration-glossary/configuration-build#optimization), en évitant de ré-écrire l'objet par défaut.
 

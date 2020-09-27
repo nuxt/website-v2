@@ -211,7 +211,7 @@ export default {
 
 ## The layoutTransition Property
 
-The layout transition is used to set the default properties of the layout transitions.
+`layoutTransition` is used to set the default properties of the layout transitions.
 
 The default settings for layout transitions are:
 

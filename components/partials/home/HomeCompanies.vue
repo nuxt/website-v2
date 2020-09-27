@@ -200,12 +200,6 @@ export default {
             class: 'h-10'
           },
           {
-            name: 'Amplitude',
-            img: 'amplitude.svg',
-            url: 'https://amplitude.com',
-            class: 'h-10'
-          },
-          {
             name: 'Ecosia',
             img: 'ecosia.svg',
             url: 'https://www.ecosia.org',

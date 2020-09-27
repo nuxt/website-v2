@@ -71,7 +71,7 @@ Ouvrez le fichier package.json avec votre éditeur préféré et ajoutez ce cont
 
 #### **À quoi sert le fichier package.json ?**
 
-Le fichier `package.json` est comme la carte d'identité de votre projet. Si vous ne savez pas ce qu'est le fichier `package.json`, nous vous recommandons grandement de lire la [documentation de NPM](https://docs.npmjs.com/creating-a-package-json-file).
+Le fichier `package.json` est comme une carte d'identité pour votre projet. Si vous ne savez pas ce qu'est le fichier `package.json`, nous vous recommandons grandement de lire dans la [documentation de NPM](https://docs.npmjs.com/creating-a-package-json-file).
 
 ### Deuxième étape : installer nuxt
 
@@ -98,7 +98,7 @@ Cette commande va ajouter `nuxt` comme une dépendance du projet et va automatiq
 
 <base-alert type="info">
 
-Un fichier `yarn.lock` ou `package-lock.json` est aussi créé. ce qui assure une consistance et une compatibilité dans les dépendances installées de votre projet.
+Un fichier `yarn.lock` ou `package-lock.json` est aussi créé, ce qui assure une consistance et une compatibilité dans les dépendances installées par votre projet.
 
 </base-alert>
 
@@ -161,7 +161,7 @@ Ouvrez-la dans votre navigateur en cliquant sur le lien dans votre terminal et v
 
 <base-alert type="info">
 
-Une fois Nuxt.js lancé en mode développement, il écoutera les changements de fichiers dans la plupart des dossiers, il n'est donc pas nécessaire de redémarrer l'application quand vous éditez ou ajoutez une page.
+Une fois Nuxt.js lancé en mode développement, il écoutera les changements de fichiers dans la plupart des répertoires, il n'est pas nécessaire de redémarrer l'application quand vous éditez ou ajoutez une page.
 
 </base-alert>
 

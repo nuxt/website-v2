@@ -15,7 +15,7 @@ answers:
 - nuxt prerender
 - nuxt generate
 correctAnswer: nuxt generate
-- question: Cuando es llamada tu API ?
+- question: Cuándo es llamada tu API ?
 answers:
 - Cada vez que navegas a la página con el contenido del API
 - Cuando generas tu sitio

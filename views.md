@@ -95,7 +95,7 @@ Puedes definir un diseño por defecto añadiendo un archivo `default.vue` en la 
 
 <base-alert type="next">
 
-Aprende mas sobre [Nuxt component](/guides/features/nuxt-components) en el capítulo componentes.
+Aprende más sobre [Nuxt component](/guides/features/nuxt-components) en el capítulo componentes.
 
 </base-alert>
 

@@ -5,29 +5,33 @@ position: 1
 category: features
 ---
 
-## Universal
+## Sitios con renderizado server-side y sitios estáticos
 
-`mode: 'universal'`: Aplicación isomórfica (Renderizado server-side o archivos estaticos).
+Los sitios estáticos son muy similares a las aplicaciones con renderizado server-side, siendo la mayor diferencia que los sitios estáticos se renderizan en tiempo de construcción, por lo que no se necesita un servidor. La navegación entre páginas se realiza en el lado del cliente.
+
+Los sitios con renderizado server-side se renderizan en el servidor cada vez que el usuario solicita una página, por lo que se necesita un servidor para poder servir la página con cada petición.
+
+Ver [destinos de despliegue](/guides/features/deployment-targets) para más información acerca de alojamiento estático y en servidor.
 
 ```js{}[nuxt.config.js]
 export default {
-  mode: 'universal' // default universal
+  ssr: true // valor por defecto
 }
 ```
 
 <base-alert type="info">
-No necesitas agregar esto a tu carpeta de configuración nuxt para que el modo universal sea aplicado, ya que el modo por default es universal.
+
+No necesitas agregar `ssr: true` esto a tu configuración nuxt para activar el renderizado server-side, ya que está habilitado por defecto.
+
 </base-alert>
 
 ## SPA
 
-`mode: 'spa'`: No server-side renderizado (solo navegación client-side)
-
-Puedes usar la propiedad mode para cambiar el modo default de nuxt para tu proyecto:
+Con Single Page Applications (aplicaciones de página única) no hay renderizado en el lado del servidor, solo en el lado del cliente. El renderizado en el lado del cliente significa renderizar el contenido en el navegador mediante JavaScript. En lugar de obtener todo el contenido del HTML, solo obtenemos un documento HTML básico con un archivo Javascript que renderizará el resto del sitio usando el navegador. para [desplegar una SPA](/guides/features/deployment-targets#spa) marca `ssr` como `false` y utiliza el comando `build` para construir tu aplicación.
 
 ```js{}[nuxt.config.js]
 export default {
-  mode: 'spa' // default universal
+  ssr: false
 }
 ```
 

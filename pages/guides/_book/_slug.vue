@@ -147,7 +147,6 @@ export default {
     }
   }
 }
-// test comment bla bla bla
 </script>
 <style lang="scss" scoped>
 article h1 {

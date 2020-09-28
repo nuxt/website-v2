@@ -21,7 +21,7 @@ questions:
       - Cuando generas el sitio
       - Cuando generas el sitio y cada vez que navegues a la página del contenido de la API 
     correctAnswer: Cuando generas el sitio
-  - question: ¿Qué páginas vuelven al modo de aplicación de página única? 
+  - question: ¿Qué páginas vuelven al modo de aplicación de página única (SPA, single page aplication)?
     answers:
       - La página de error
       - Las páginas que queden excluidas de la generación mediante la propiedad `generate.excludes`

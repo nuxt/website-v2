@@ -121,9 +121,9 @@ export default {
   exampleMsg: 'hello',
   modules: [
     // Simple usage
-    '~/modules/simple',
+    '~/modules/example',
     // Passing options directly
-    ['~/modules/simple', { token: '123' }]
+    ['~/modules/example', { token: '123' }]
   ]
 }
 ```

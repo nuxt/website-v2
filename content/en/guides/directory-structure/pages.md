@@ -142,6 +142,7 @@ export default {
   asyncData (context) {
     return { name: 'World' }
   }
+}
 ```
 
 <base-alert type="next">

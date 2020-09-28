@@ -52,7 +52,7 @@
     "cypress": "5.2.0",
     "eslint": "^7.10.0",
     "eslint-config-prettier": "^6.12.0",
-    "eslint-plugin-cypress": "^2.11.1",
+    "eslint-plugin-cypress": "^2.11.2",
     "globby": "^11.0.1",
     "husky": "^4.3.0",
     "hygen": "^6.0.4",

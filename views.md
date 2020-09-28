@@ -29,7 +29,7 @@ answers:
 - "layout: 'default'"
 - "blog: 'blog'"
 correctAnswer: "layout: 'blog'"
-- question: Donde pones tu archivo error.vue para crear una página de error personalizada ?
+- question: Dónde pones tu archivo error.vue para crear una página de error personalizada ?
 answers:
 - en la carpeta pages 
 - en la carpeta errors 

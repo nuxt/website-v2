@@ -4,7 +4,7 @@
   "description": "Nuxt.js official website",
   "main": "index.js",
   "dependencies": {
-    "@nuxt/http": "^0.5.12",
+    "@nuxt/http": "^0.5.13",
     "@nuxt/integrations": "^0.5.0-c88682",
     "@nuxt/content": "^1.9.0",
     "@nuxtjs/tailwindcss": "^3.1.0",
@@ -52,8 +52,8 @@
     "babel-eslint": "^10.1.0",
     "cross-env": "^7.0.2",
     "cypress": "5.2.0",
-    "eslint": "^7.9.0",
-    "eslint-config-prettier": "^6.11.0",
+    "eslint": "^7.10.0",
+    "eslint-config-prettier": "^6.12.0",
     "eslint-plugin-cypress": "^2.11.1",
     "globby": "^11.0.1",
     "husky": "^4.3.0",
@@ -66,7 +66,7 @@
     "prettier": "^2.1.2",
     "sass-loader": "^10.0.2",
     "start-server-and-test": "^1.11.4",
-    "stylelint": "^13.7.1",
+    "stylelint": "^13.7.2",
     "stylelint-config-prettier": "^8.0.2",
     "stylelint-config-standard": "^20.0.0",
     "stylelint-scss": "^3.18.0"

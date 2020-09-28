@@ -27,7 +27,7 @@ answers:
 - Las páginas excluidas del proceso de generación con generate.excludes 
 - Todas páginas en navegación
 correctAnswer: Las páginas excluidas del proceso de generación con generate.excludes
-- question: Como actualizas el contenido de tu sitio ?
+- question: Cómo actualizas el contenido de tu sitio ?
 answers:
 - Es actualizado automáticamente
 - Es necesario regenerar el sitio

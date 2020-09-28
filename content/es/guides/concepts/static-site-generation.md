@@ -17,7 +17,7 @@ questions:
     correctAnswer: nuxt generate
   - question: ¿En qué momentos se llama a la API?
     answers:
-      - Cada vez que navegas hacia la página del el contenido de la API
+      - Cada vez que navegas hacia la página del contenido de la API
       - Cuando generas el sitio
       - Cuando generas el sitio y cada vez que navegues a la página del contenido de la API 
     correctAnswer: Cuando generas el sitio

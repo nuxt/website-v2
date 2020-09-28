@@ -69,7 +69,6 @@ Con el fin de obtener nuevo contenido desde tu API solo es necesario regenerar t
 
 ### Modo de vista previa
 
-Modo de vista previa llamará a tu API o tu CMS para que veas los cambios antes de desplegar. Ver el [preview mode](/guides/features/live-preview) on how to enable this feature.
+Modo de vista previa llamará a tu API o tu CMS para que veas los cambios antes de desplegar. Ver el [preview mode](/guides/features/live-preview) sobre como activar esta funcionalidad.
 
 <quiz :questions="questions"></quiz>
-

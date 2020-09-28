@@ -5,7 +5,7 @@ position: 1
 category: concepts
 csb_link: https://codesandbox.io/embed/github/nuxt-academy/guides-examples/tree/master/02_concepts/01_views?fontsize=14&hidenavigation=1&theme=dark
 questions:
-- question: Cual es el orden de composición de una vista Nuxt (de arriba a abajo) ?
+- question: Cuál es el orden de composición de una vista Nuxt (de arriba a abajo) ?
 answers:
 - Layout → Page → Document
 - Page → Layout → Document
@@ -221,4 +221,3 @@ En vez de añadir JavaScript y CSS en el `app.html` es recomendable que usar el 
 </base-alert>
 
 <quiz :questions="questions"></quiz>
-

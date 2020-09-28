@@ -11,7 +11,7 @@ Static sites are very similar to server-side rendered applications with the main
 
 Server-side rendered sites are rendered on the server each time the user requests a page, therefore a server is needed to be able to serve the page on each request.
 
-See [deployment targets](/guides/features/deployment-targets) for more info on static and server hosting
+See [deployment targets](/guides/features/deployment-targets) for more info on static and server hosting.
 
 ```js{}[nuxt.config.js]
 export default {

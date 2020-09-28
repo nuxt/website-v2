@@ -277,7 +277,7 @@ export default {
 }
 ```
 
-Project structure example with your Nuxt.js application in the `source` directory.
+Project structure example with your Nuxt.js application in the `client` directory.
 
 ```bash
 **-| app/

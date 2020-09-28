@@ -23,7 +23,7 @@ answers:
 - añadir un .vue archivo a la carpeta de layouts 
 - añadir un .vue archivo a la carpeta de components 
 correctAnswer: añadir un .vue archivo a la carpeta de layouts 
-- question: Como activas tu diseño personalizado llamado 'blog' en tu página ?
+- question: Cómo activas tu diseño personalizado llamado 'blog' en tu página ?
 answers:
 - "layout: 'blog'"
 - "layout: 'default'"

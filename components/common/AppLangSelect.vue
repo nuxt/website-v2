@@ -17,6 +17,7 @@
             v-for="(locale, i) in $i18n.locales"
             :key="i"
             :value="locale.code"
+            class="dark:text-dark-surface"
           >
             {{ getLocaleDescription(locale) }}
           </option>

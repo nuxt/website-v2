@@ -45,7 +45,7 @@ Composición de una vista en Nuxt.js
 
 ## Páginas
 
-Cada página es un componente Vue, pero Nuxt.js añade algunos atributos y funciones adicionales para hacer el desarrollo de tu aplicación lo mas fácil posible.
+Cada página es un componente Vue, pero Nuxt.js añade algunos atributos y funciones adicionales para hacer el desarrollo de tu aplicación lo más fácil posible.
 
 ```html{}[pages/index.vue]
 <template>

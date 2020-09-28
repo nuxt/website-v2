@@ -261,7 +261,7 @@ Para aprender más sobre `<RouterLink>`, consulta la [Documentación sobre Vue 
 
 ## prefetchLinks
 
-Nuxt.js incluye *smart prefetching* de forma automática. Esto significa que detecta cuando un hipervínculo es visible, ya sea en el viewport o al desplazarse y realiza el *prefetching* en el JavaScript para todas aquellas páginas, para que estén listas cuando el usuario da clic al hipervínculo. Nuxt.js solamente carga los recursos cuando el navegador no se encuentra ocupado y no realiza el *prefetching* si tu conexión está offline(fuera de línea) o si solamente tienes conexión 2g.
+Nuxt.js incluye *smart prefetching* (precarga inteligente) de forma automática. Esto significa que detecta cuando un hipervínculo es visible, ya sea en el viewport o al desplazarse y realiza el *prefetching* en el JavaScript para todas aquellas páginas, para que estén listas cuando el usuario da clic al hipervínculo. Nuxt.js solamente carga los recursos cuando el navegador no se encuentra ocupado y no realiza el *prefetching* si tu conexión está offline(fuera de línea) o si solamente tienes conexión 2g.
 
 ### Desactivar el *prefetching* de links específicos
 

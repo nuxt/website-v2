@@ -11,7 +11,7 @@ answers:
 - Page → Layout → Document
 - Document → Layout → Page
 correctAnswer: Document → Layout → Page
-- question: Como es llamado el diseño (layout) por defecto ?
+- question: Cómo es llamado el diseño (layout) por defecto ?
 answers:
 - default.vue
 - layout.vue

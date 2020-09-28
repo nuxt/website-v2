@@ -17,7 +17,7 @@ answers:
 - layout.vue
 - defaultLayout.vue
 correctAnswer: default.vue
-- question: Como crear un diseño(layout) personalizado ?
+- question: Cómo crear un diseño(layout) personalizado ?
 answers:
 - añadir un .vue archivo a la carpeta de pages 
 - añadir un .vue archivo a la carpeta de layouts 

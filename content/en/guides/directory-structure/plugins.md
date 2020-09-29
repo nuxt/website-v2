@@ -136,6 +136,14 @@ export default {
 </script>
 ```
 
+### Example
+
+In this example we show how to use a plugin with an external package using axios. In the `package.json` file you can see that `@nuxtjs/axios` has been installed. This is then added to the `modules` property of our `nuxt.config` file. You will also see we have registered our plugin which is located in the plugin folder and is called `axios.js`
+
+Our plugin is a function that passes in `$axios` and redirect to the context. This intercepts the `$axios` call using the `onError()` function and if there is an error with the response status of '404' we redirect the user to the no-posts page.
+
+In the `external-plugins.vue` file we have created a link to a page with a post id that doesn't exist in our API. Therefore the interceptor will be called instead of us going to the `posts/_id.vue` page. If there is no error then the route will work as normal and our data will be fetched using `$axios`.
+
 <app-modal>
   <code-sandbox :src="csb_link_plugins_external"></code-sandbox>
 </app-modal>
@@ -172,11 +180,7 @@ import VTooltip from 'v-tooltip'
 Vue.use(VTooltip)
 ```
 
-<app-modal>
-  <code-sandbox  :src="csb_link_plugins_vue"></code-sandbox>
-</app-modal>
-
-## The plugins Property
+### The plugins Property
 
 Then we add the file path inside the `plugins` key of our `nuxt.config.js`. The plugins property lets you add vue.js plugins easily to your main application. All the paths defined in the `plugins` property will be imported before initializing the main application.
 
@@ -199,6 +203,16 @@ module.exports = {
 ```
 
 You can refer to the [configuration build](/guides/configuration-glossary/configuration-build#transpile) docs for more build options.
+
+### Example
+
+In this example we show how to add a vue plugin to your application. In the plugins folder you will find a `vue-toolitp.js` file which will import Vue and the tooltip and then tell Vue to use it. You will see in the `package.json` file that the v-tooltip package has been installed. In our nuxt.config file we add our plugin to the plugins property as well as the css file that we want to use for the tooltip. This is a reduced version of the css file that this plugin provides you with.
+
+In our `vue-plugins.vue` page we have a have a button where we pass in the v-tooltip directive with a message that comes from our data property and we add to it the value of top-center so it is positioned at the top.
+
+<app-modal>
+  <code-sandbox  :src="csb_link_plugins_vue"></code-sandbox>
+</app-modal>
 
 ## Client or server side only
 
@@ -231,6 +245,10 @@ export default {
   ]
 }
 ```
+
+### Example
+
+In this example we register a plugin so that it is only available on the client side. In the plugins folder we have a file called `client-only.js` which uses the `window.alert()` function to send an alert message. You will see this message before the page is initialized which is how plugins work. As we do not have access to the window property on server side we must register this plugin only on the client. You can see in the nuxt.config.js file that we register the plugin with `.client.js` as its extension.
 
 <app-modal>
   <code-sandbox  :src="csb_link_plugins_client"></code-sandbox>

@@ -70,7 +70,7 @@ _This directory cannot be renamed without extra configuration._
 
 </base-alert>
 
-## Default Layout
+### Default Layout
 
 You can extend the main layout by adding a `layouts/default.vue` file. It will be used for all pages that don't have a layout specified. Make sure to add the `<Nuxt>` component when creating a layout to actually include the page component.
 
@@ -100,7 +100,7 @@ If you have [components set to true](/guides/directory-structure/components) the
 
 </base-alert>
 
-## Custom Layout
+### Custom Layout
 
 Every file (_top-level_) in the `layouts` directory will create a custom layout accessible with the `layout` property in the page components.
 
@@ -128,6 +128,10 @@ export default {
 }
 </script>
 ```
+
+### Example
+
+This example shows 3 different layouts. The home page layout, the login layout and the profile page layout, which can be seen when a user logs in. For this example you can use any credentials to login and you will be redirected to the profile page. Check out the layout folder to see the different layouts and the pages to see the `layout` property in use. Any pages that do not have a `layout` property will use the default layout.
 
 <app-modal>
   <code-sandbox  :src="csb_link"></code-sandbox>

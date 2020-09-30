@@ -3,6 +3,7 @@
 [![Gitpod Ready-to-Code](https://img.shields.io/badge/Gitpod-Ready--to--Code-blue?logo=gitpod)](https://gitpod.io/#https://github.com/nuxt/nuxtjs.org)
 
 Universal Vue.js Application built with [Nuxt.js](https://github.com/nuxt/nuxt.js).
+This is the best application you can get with the latest technology so consider contributing this website
 
 ## Setup
 

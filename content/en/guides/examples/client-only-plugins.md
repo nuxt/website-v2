@@ -1,6 +1,6 @@
 ---
 title: Client Only Plugins
-description: In this example we show how to use a plugin with an external package - axios
+description: In this example we show how to use a plugin so that it is only available on the client side
 position: 64
 category: examples
 csb_link: https://codesandbox.io/embed/github/nuxt-academy/guides-examples/tree/master/04_directory_structure/12_plugins_client
@@ -10,7 +10,7 @@ In this example we register a plugin so that it is only available on the client 
 
 <base-alert type="next">
 
-Learn more in the Directory Structure book in the [plugins](/guides/directory-structure/plugins#external-packages#client-or-server-side-only) chapter.
+Learn more in the Directory Structure book in the [plugins](/guides/directory-structure/plugins#client-or-server-side-only) chapter.
 
 </base-alert>
 

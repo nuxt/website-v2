@@ -210,6 +210,20 @@ export default {
 }
 ```
 
+### Example
+
+In the first example we show how the store works using a todo app. In the store folder we have a `todos.js` file. This shows our list of todos as well as mutations to add and remove items from the list as well as toggle the state of the todo.
+
+In our `store.vue` file in the pages folder we use an input which calls the `addTodo()` method on enter. This method commits the value to the store which adds our new todo to the list. We show the new todo on the page using the `todos()` computed property which gives us access to our todos list from the store.
+
+Checking the check box will activate the `toggle()` method which changes the state of the todo and shows that the todo is done.
+
+Clicking the remove button will call the `removeTodo()` method which will remove the todo from the store and therefore remove it from our list and it will no longer be visible on the page.
+
+<app-modal>
+  <code-sandbox  :src="csb_link"></code-sandbox>
+</app-modal>
+
 ## Plugins in the Store
 
 You can add additional plugins to the store by putting them into the `store/index.js` file:
@@ -279,9 +293,5 @@ Strict mode is enabled by default on dev mode and turned off in production mode.
 ```js
 export const strict = false
 ```
-
-<app-modal>
-  <code-sandbox  :src="csb_link"></code-sandbox>
-</app-modal>
 
 <quiz :questions="questions"></quiz>

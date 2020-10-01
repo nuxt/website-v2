@@ -327,6 +327,16 @@ See more on the [transition property](/guides/configuration-glossary/configura
 
 </base-alert>
 
+### Example
+
+In the first example we show how to use the env property in our nuxt.config file to add the URL of our API so that we can then easily make calls to it without having to use the URL on our page. In the `nuxt-config.vue` page we use pass in `$axios` and `env` into our `asyncData()` function so that we can access it from our context. We can then use `env.apiUrl` to access our API and add to it the path we want to retrieve. We can then print our returned value in the template.
+
+As we are using axios in this example you can see that it has been installed which you can see in our `package.json` and it has been added to the modules property of our `nuxt.config.js` file so we can use it throughout our application.
+
+<app-modal>
+  <code-sandbox  :src="csb_link"></code-sandbox>
+</app-modal>
+
 ## Other configuration files
 
 Besides the `nuxt.config.js` there might be other config files in your project root, such as [.eslintrc](https://eslint.org/), [prettier.config.json](https://prettier.io/) or [.gitignore](https://git-scm.com/docs/gitignore). These are used to configure other tools such as your linter, code formatter or your git repository and detached from the `nuxt.config.js`.
@@ -338,10 +348,6 @@ In your .gitignore file you will need to add the following so that they are igno
 ```markdown{}[.gitignore]
 node_modules .nuxt dist
 ```
-
-<app-modal>
-  <code-sandbox  :src="csb_link"></code-sandbox>
-</app-modal>
 
 ### What's next
 

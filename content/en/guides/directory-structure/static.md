@@ -59,8 +59,16 @@ In your code, you can then reference these files relative to the root (`/`):
 <img src="/my-image.png" />
 
 <!-- webpacked image from assets directory -->
-<img src="@/assets/my-image-2.png" />
+<img src="'~/assets/my-image-2.png" />
 ```
+
+### Example
+
+In the first example you can see how to show an image from the static folder which you can see in the static.vue page. You can then compare this to the image coming from the assets folder which you can see in the default.vue page in the layouts folder.
+
+<app-modal>
+  <code-sandbox  :src="csb_link"></code-sandbox>
+</app-modal>
 
 ## Static Directory Config
 
@@ -81,9 +89,5 @@ export default {
 Default: `/blog/my-image.png`
 
 With `static.prefix` disabled: `/my-image.png`
-
-<app-modal>
-  <code-sandbox  :src="csb_link"></code-sandbox>
-</app-modal>
 
 <quiz :questions="questions"></quiz>

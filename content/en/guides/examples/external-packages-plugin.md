@@ -6,7 +6,7 @@ category: examples
 csb_link: https://codesandbox.io/embed/github/nuxt-academy/guides-examples/tree/master/04_directory_structure/12_plugins_external
 ---
 
-In this example we show how to use a plugin with an external package - axios. In the `package.json` file you can see that `@nuxtjs/axios` has been installed. This is then added to the `modules` property of our `nuxt.config` file. You will also see we have registered our plugin which is located in the plugin folder and is called `axios.js`
+In this example we show how to use a plugin with an external package - axios. In the `package.json` file you can see that `@nuxtjs/axios` has been installed. This is then added to the `modules` property of our `nuxt.config.js` file. You will also see we have registered our plugin which is located in the plugin folder and is called `axios.js`
 
 Our plugin is a function that passes in `$axios` and redirect to the context. This intercepts the `$axios` call using the `onError()` function and if there is an error with the response status of '404' we redirect the user to the no-posts page.
 

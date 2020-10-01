@@ -28,7 +28,7 @@ Untuk menggunakan *function* ini, Anda harus menginstal `jsdom`:
 npm install --save-dev jsdom
 ```
 
-Example:
+Contoh:
 
 ```js
 const { Nuxt, Builder } = require('nuxt')

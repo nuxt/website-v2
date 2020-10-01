@@ -30,4 +30,4 @@ Alias `createElement` menjadi `h` adalah konvensi umum yang akan Anda lihat di e
 
 </div>
 
-Anda dapat mempelajari lebih lanjut tentang cara menggunakannya di [JSX section](https://vuejs.org/v2/guide/render-function.html#JSX) dari dokumentasi Vue.js.
+Anda dapat mempelajari lebih lanjut tentang cara menggunakannya di [Bagian JSX](https://vuejs.org/v2/guide/render-function.html#JSX) dari dokumentasi Vue.js.

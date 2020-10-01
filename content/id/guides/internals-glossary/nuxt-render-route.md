@@ -8,7 +8,7 @@ position: 11
 
 - Tipe: `Function`
 - Argumen:
-  1. `String` : route to render
+  1. `String` : rute untuk dirender
   2. _Optional_, `Object`, konteks yang diberikan, kunci yang tersedia: `req` & `res`
 - Kembalian: `Promise`
   - `html`: `String`
@@ -50,6 +50,6 @@ start()
 
 <base-alert type="next">
 
-Lihat [Components Glossary book](/guides/components-glossary/pages-fetch)
+Lihat [buku Komponen Glosarium](/guides/components-glossary/pages-fetch)
 
 </base-alert>

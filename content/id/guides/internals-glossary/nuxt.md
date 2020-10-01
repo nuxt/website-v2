@@ -31,9 +31,9 @@ if (isDev) {
 
 Anda dapat melihatnya di [nuxt-express](https://github.com/nuxt/express) dan [adonuxt](https://github.com/nuxt/adonuxt) untuk pemula agar memulai dengan cepat.  
 
-### Log Debug
+### Catatan Debug
 
-Jika Anda ingin menampilkan log Nuxt.js, Anda dapat menambahkan yang berikut ini ke bagian atas file Anda:
+Jika Anda ingin menampilkan log Nuxt.js, Anda dapat menambahkan yang berikut ini ke bagian atas berkas Anda:
 
 ```js
 process.env.DEBUG = 'nuxt:*'

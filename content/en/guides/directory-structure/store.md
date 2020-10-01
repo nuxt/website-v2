@@ -66,7 +66,7 @@ Using a store to manage the state is important for every big application. That's
 
 ## Activate the Store
 
-Nuxt.js will look for the `store` directory, if it exists, it will:
+Nuxt.js will look for the `store` directory. If it exists and contains a non-hidden file except for `README.md`, it will:
 
 1. Import Vuex
 2. Add the `store` option to the root Vue instance.

@@ -415,9 +415,9 @@ An other advantage of the YAML properties is that we can make them available to 
 ```yaml{}[content/articles/my-first-blog-post.md]
 ---
 author:
-name: Benjamin
-bio: All about Benjamin
-image: https://images.unsplash.com/.....
+  name: Benjamin
+  bio: All about Benjamin
+  image: https://images.unsplash.com/.....
 ---
 
 ```

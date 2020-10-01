@@ -35,7 +35,7 @@ If you are interested in contributing to the Persian translation of Nuxtjs.org p
 
 [https://github.com/nuxt/nuxtjs.org/issues/555](https://github.com/nuxt/nuxtjs.org/issues/555)
 
-## Development
+## Process Of Development
 
 Start the dev server on [http://localhost:3000](http://localhost:3000)
 

@@ -34,7 +34,7 @@ async function start() {
   if (isDev) {
     build(nuxt)
   }
-  // Listen the server
+  // Dengarkan server
   app.listen(port, '0.0.0.0')
   console.log('Server listening on `localhost:' + port + '`.')
 }

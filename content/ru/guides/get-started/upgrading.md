@@ -7,7 +7,7 @@ category: get-started
 
 > Обновление Nuxt.js выполняется быстро, но требует больше усилий, чем обновление вашего package.json
 
-Если вы хотите использовать статический хостинг при обновлении Nuxt v2.14 - вам понадобится добавить [target:static](/guides/features/deployment-targets#static-hosting) в ваш nuxt.config.js, для корректной работы команды `generate`.
+Если вы хотите использовать статический хостинг при обновлении Nuxt v2.14 - вам понадобится добавить [target:static](/guides/features/deployment-targets#static-hosting) в ваш nuxt.config.js для корректной работы команды `generate`.
 
 ```js{}[nuxt.config.js]
 export default {

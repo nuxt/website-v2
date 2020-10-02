@@ -22,7 +22,7 @@ questions:
       - npm run dev
       - nuxt dev
     correctAnswer: npm run dev
-  - question: Какой адрес у стартовой страницы Вашего Nuxt.js приложения при запуске в режиме development?
+  - question: Какой адрес у стартовой страницы вашего Nuxt.js приложения при запуске в режиме development?
     answers:
       - http://localhost:3000/
       - http://localhost:3000/project-name:3000

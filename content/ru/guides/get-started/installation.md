@@ -193,7 +193,7 @@ npm run dev
 
 Для быстрого старта вы можете использовать [create-nuxt-app](https://github.com/nuxt/create-nuxt-app).
 
-Убедитесь, что у вас установлен npx (npx встроен по умолчанию начиная с NPM 5.2.0) или npm v6.1 или yarn.
+Убедитесь, что у вас установлен `npx` (`npx` встроен по умолчанию начиная с npm 5.2.0) или `npm v6.1` или `yarn`.
 
 <code-group>
   <code-block label="Yarn" active>

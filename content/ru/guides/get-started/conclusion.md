@@ -40,7 +40,7 @@ questions:
       - static
       - components
     correctAnswer: static
-  - question: В какой дериктории Вы будете размещать файлы с Вашими стилями?
+  - question: В какой директории вы будете размещать файлы с Вашими стилями?
     answers:
       - styles
       - components

@@ -44,6 +44,6 @@ start()
 
 <div class="Alert">
 
-Direkomendasikan untuk memanggil `nuxt.render` di akhir middleware Anda, karena ini akan menangani rendering aplikasi web Anda dan tidak akan memanggil `next()`
+Direkomendasikan untuk memanggil `nuxt.render` di akhir middleware Anda, karena ini akan menangani _rendering_ aplikasi web Anda dan tidak akan memanggil `next()`
 
 </div>

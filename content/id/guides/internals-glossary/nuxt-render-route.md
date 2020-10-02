@@ -21,7 +21,7 @@ position: 11
 
 <base-alert>
 
-`nuxt.renderRoute` harus dijalankan setelah proses build dalam mode produksi.
+`nuxt.renderRoute` harus dijalankan setelah proses _build_ dalam mode produksi.
 
 </base-alert>
 

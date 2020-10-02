@@ -34,7 +34,7 @@ questions:
       - config.js
       - nuxt.config.js
     correctAnswer: nuxt.config.js
-  - question: Какая дериктория не подходит для размещения файлов с расширением `.vue`?
+  - question: Какая директория не подходит для размещения файлов с расширением `.vue`?
     answers:
       - pages
       - static

@@ -23,7 +23,7 @@ The markdown files are stored in the content folder.
 ### When working on a new language you will need to:
 
 - Create a new branch
-- Create the 18n locale file in the i18n folder by copying the en version and modifying it to the new language.
+- Create the 18n local file in the i18n folder by copying the en version and modifying it to the new language.
 - Add your language to the nuxt.config file in the i18n property by copying the en version and modifying it to the new language
 - In the content directory create a folder for your language using your countries locale and then copy the `en/guides` folder into it.
 - You can then start translating your files.

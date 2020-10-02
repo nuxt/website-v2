@@ -88,7 +88,7 @@ touch nuxt.config.js
 
 ## Больше о структуре проекта
 
-Существуют еще полезные директории , включая [content](/guides/directory-structure/content), [layouts](/guides/directory-structure/layouts), [middleware](/guides/directory-structure/middleware), [modules](/guides/directory-structure/modules), [plugins](/guides/directory-structure/plugins) и [store](/guides/directory-structure/store). Они не нужны для небольших приложений и здесь мы их не рассматриваем.
+Существуют другие полезные директории: [content](/guides/directory-structure/content), [layouts](/guides/directory-structure/layouts), [middleware](/guides/directory-structure/middleware), [modules](/guides/directory-structure/modules), [plugins](/guides/directory-structure/plugins) и [store](/guides/directory-structure/store). Они не нужны для небольших приложений и здесь мы их не рассматриваем.
 
 <base-alert type="next">
 

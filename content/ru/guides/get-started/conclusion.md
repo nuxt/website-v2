@@ -46,7 +46,7 @@ questions:
       - components
       - assets
     correctAnswer: assets
-  - question: В какой дериктории размещается robots.txt или favicon?
+  - question: В какой директории размещается robots.txt или favicon?
     answers:
       - assets
       - components

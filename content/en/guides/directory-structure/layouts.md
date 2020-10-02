@@ -131,7 +131,17 @@ export default {
 
 ### Example
 
-This example shows 3 different layouts. The home page layout, the login layout and the profile page layout, which can be seen when a user logs in. For this example you can use any credentials to login and you will be redirected to the profile page. Check out the layout folder to see the different layouts and the pages to see the `layout` property in use. Any pages that do not have a `layout` property will use the default layout.
+This example uses 3 layouts:
+
+- default.vue used in the home page
+
+- auth.vue used in the /login page
+
+- profile.vue used in the /profile page when logged in
+
+They are stored in the layouts/ directory and used in the corresponding pages with the `layout` property.
+
+If no layout property is defined, it will fallback to the default layout.
 
 <app-modal>
   <code-sandbox  :src="csb_link"></code-sandbox>

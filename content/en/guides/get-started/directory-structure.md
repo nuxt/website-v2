@@ -83,7 +83,13 @@ The `package.json` file contains all the dependencies and scripts for your app
 
 ### Example
 
-Basic project with pages, components, assets and static directory as well as the nuxt.config and package.json files.
+Basic project with **pages**, **components**, **assets** and **static** directory as well as the **nuxt.config.js** and **package.json** files.
+
+- The **assets** folder contains an svg and a css file.
+- The **components** folder contains a navigation component.
+- The **pages** folder contains pages at root level as well as inside a folder.
+- The **static** folder contains a favicon.
+- The **nuxt.config.js** file has the `components` property set to true for activating components so that you can use components without having to write import statements. You can also see how to add the css file globally to your application with the `css` property.
 
 <app-modal>
   <code-sandbox  :src="csb_link"></code-sandbox>

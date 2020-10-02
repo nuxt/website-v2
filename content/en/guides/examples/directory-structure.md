@@ -6,13 +6,13 @@ category: examples
 csb_link: https://codesandbox.io/embed/github/nuxt-academy/guides-examples/tree/master/01_get_started/03_directory_structure?
 ---
 
-Basic project with pages, components, assets and static directory as well as the nuxt.config and package.json files.
+Basic project with **pages**, **components**, **assets** and **static** directory as well as the **nuxt.config.js** and **package.json** files.
 
-- The assets folder contains an svg and a css file.
-- The components folder contains a navigation component.
-- The pages folder contains pages at root level as well as inside a folder.
-- The static folder contains a favicon.
-- The nuxt config has components set to true for activating components so that you can use components without having to write import statements as well as how to add the css file globally to your application.
+- The **assets** folder contains an svg and a css file.
+- The **components** folder contains a navigation component.
+- The **pages** folder contains pages at root level as well as inside a folder.
+- The **static** folder contains a favicon.
+- The **nuxt.config.js** file has the `components` property set to true for activating components so that you can use components without having to write import statements. You can also see how to add the css file globally to your application with the `css` property.
 
 <base-alert type="next">
 

@@ -187,7 +187,7 @@ Create a directory named `more-fun` and put an `index.vue` file inside. This wil
 
 ### Example
 
-Example project with basic install including 2 ways of creating a page component, one at root level and one inside a folder.
+Example project with basic install including two ways of creating a page component, one at root level and one inside a folder.
 
 <app-modal>
   <code-sandbox  :src="csb_link"></code-sandbox>

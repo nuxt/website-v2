@@ -222,7 +222,7 @@ The default settings for layout transitions are:
 }
 ```
 
-```js{}[assets/main.css]
+```css{}[assets/main.css]
 .layout-enter-active, .layout-leave-active {
   transition: opacity .5s
 }

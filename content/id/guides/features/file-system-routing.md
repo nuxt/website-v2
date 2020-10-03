@@ -27,7 +27,7 @@ questions:
       - True
       - False
     correctAnswer: False
-  - question: How do you access the route params for a dynamic page such as users/_id.vue?
+  - question: Bagaimana Anda menakses rute paramater untuk halaman dinamis seperti users/_id.vue?
     answers:
       - $route.params.id
       - $route.id

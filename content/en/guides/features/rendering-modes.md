@@ -11,7 +11,7 @@ Static sites are very similar to server-side rendered applications with the main
 
 Server-side rendered sites are rendered on the server each time the user requests a page, therefore a server is needed to be able to serve the page on each request.
 
-See [deployment targets](/guides/features/deployment-targets) for more info on static and server hosting
+See [deployment targets](/guides/features/deployment-targets) for more info on static and server hosting.
 
 ```js{}[nuxt.config.js]
 export default {
@@ -21,7 +21,7 @@ export default {
 
 <base-alert type="info">
 
-You do not need to add this to your nuxt config in order for ssr true to be applied as the default value is true.
+You do not need to add `ssr: true` to your nuxt config in order to enable server-side-rendering as it is enabled by default.
 
 </base-alert>
 

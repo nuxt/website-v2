@@ -26,7 +26,7 @@ async validate({ params, query, store }) {
 }
 ```
 
-Anda juga dapat mengembalikan izin:
+Anda juga dapat mengembalikan _fungsi_:
 
 ```js
 validate({ params, query, store }) {

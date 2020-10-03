@@ -13,16 +13,16 @@ category: komponen-glosarium
 
 ```js
 validate({ params, query, store }) {
-  return true // if the params are valid
-  return false // will stop Nuxt.js to render the route and display the error page
+  return true // jika parameternya benar
+  return false // akan menghentikan Nuxt.js untuk membuat rute dan menampilkan halaman kesalahan
 }
 ```
 
 ```js
 async validate({ params, query, store }) {
-  // await operations
-  return true // if the params are valid
-  return false // will stop Nuxt.js to render the route and display the error page
+  // menunggu pengerjaan
+  return true // jika parameternya benar
+  return false // akan menghentikan Nuxt.js untuk membuat rute dan menampilkan halaman kesalahan
 }
 ```
 
@@ -41,7 +41,7 @@ Jika metode validasi tidak mengembalikan `true`, Nuxt.js akan secara otomatis me
 ```js
 export default {
   validate({ params }) {
-    // Must be a number
+    // Harus berupa angka
     return /^\d+$/.test(params.id)
   }
 }
@@ -52,7 +52,7 @@ Anda juga dapat memeriksa beberapa data di berkas [store](/guides/directory-stru
 ```js
 export default {
   validate({ params, store }) {
-    // Check if `params.id` is an existing category
+    // Periksa apakah `params.id` adalah kategori yang ada
     return store.state.categories.some(category => category.id === params.id)
   }
 }
@@ -63,7 +63,7 @@ Anda juga dapat menampilkan galat yang diharapkan atau tidak terduga selama ekse
 ```js
 export default {
   async validate({ params, store }) {
-    // Throws a 500 internal server error with custom message
+    // Melempar kesalahan server internal 500 dengan pesan khusus
     throw new Error('Under Construction!')
   }
 }

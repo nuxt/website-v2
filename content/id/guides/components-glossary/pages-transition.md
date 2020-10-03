@@ -13,11 +13,11 @@ Untuk menentukan transisi kustom untuk rute tertentu, cukup tambahkan kunci `tra
 
 ```js
 export default {
-  // Can be a String
+  // Bisa jadi string
   transition: ''
-  // Or an Object
+  // atau sebuah obyek
   transition: {}
-  // or a Function
+  // atau sebuah fungsi
   transition (to, from) {}
 }
 ```

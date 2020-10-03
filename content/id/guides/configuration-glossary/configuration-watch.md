@@ -1,6 +1,6 @@
 ---
 title: 'Properti watch'
-description: Properti watch memperbolehkan Anda untuk mengamati berkas kustom untuk memulai peladen kembali.
+description: Properti watch memperbolehkan Anda untuk mengamati berkas kustom untuk memulai ulang peladen.
 menu: watch
 category: configuration-glossary
 position: 33
@@ -9,7 +9,7 @@ position: 33
 - Tipe: `Object`
 - Nilai Anggapan: `[]`
 
-> Properti watch memperbolehkan Anda untuk mengamati berkas kustom untuk memulai peladen kembali.
+> Properti watch memperbolehkan Anda untuk mengamati berkas kustom untuk memulai ulang peladen.
 
 ```js
 watch: ['~/custom/*.js']

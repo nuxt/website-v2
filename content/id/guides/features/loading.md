@@ -1,64 +1,64 @@
 ---
-title: Loading
-description: Out of the box, Nuxt.js gives you its own loading progress bar component that's shown between routes. You can customize it, disable it or even create your own loading component.
+title: Pemuat
+description: Hal yang di luar kotak, Nuxt.js memberikan Anda proses pemuat komponen sendiri yang ditampilkan diantara rute. Anda dapat melakukan kustomisasi, menonaktifkan atau bahkan membuat proses pemuat milik Anda sendiri.
 position: 8
 category: features
 csb_link: https://codesandbox.io/embed/github/nuxt-academy/guides-examples/tree/master/03_features/08_loading?fontsize=14&hidenavigation=1&theme=dark
 questions:
-  - question: In order for the Nuxt.js loading progress bar to work what do you have to do?
+  - question: Untuk membuat proses pemuat Nuxt.js bekerja, apa yang Anda perlu lakukan?
     answers:
-      - Nothing, it just works
-      - set loading to true in the nuxt.config.js file
-      - create a loading component
-    correctAnswer: Nothing, it just works
-  - question: Where can you modify the styles for the default progress bar?
+      - Tidak ada, itu langsung bekerja
+      - Mengatur proses pemuat menjadi true pada nuxt.config.js
+      - Membuat komponen pemuat
+    correctAnswer: Tidak ada, itu langsung bekerja
+  - question: Dimana Anda dapat melakukan modifikasi gaya untuk proses pemuat bawaan?
     answers:
-      - layout component
-      - page component
+      - komponen layout
+      - komponen page
       - nuxt.config.js
-    correctAnswer: layout component
-  - question: In which property do you set the styles for the progress bar in the nuxt.config.js file?
+    correctAnswer: komponen layout
+  - question: Pada properti mana anda dapat mengatur gaya untuk proses pemuat di nuxt.config.js?
     answers:
       - progress
       - loading
       - loadingBar
     correctAnswer: loading
-  - question: What do you add in the nuxt.config.js file to disable loading?
+  - question: Apa yang Anda tambahkan pada nuxt.config.js untuk menonaktifkan pemuat?
     answers:
       - 'loadingBar: false'
       - "loading: 'none'"
       - 'loading: false'
     correctAnswer: 'loading: false'
-  - question: You can disable the loading on specific pages?
+  - question: Anda dapat menonaktifkan pemuat pada halaman tertentu?
     answers:
       - true
       - false
     correctAnswer: true
-  - question: What do you use to programmatically start the loading bar?
+  - question: Apa yang Anda gunakan untuk memulai batang pemuat secara terprogram?
     answers:
       - $nuxt.loading.start()
       - $nuxt.loading()
       - $loading.start()
     correctAnswer: $nuxt.loading.start()
-  - question: Which property do you use to make your progress bar continuous for when the loading takes longer than the duration?
+  - question: Bagian properti mana yang Anda gunakan untuk membuat batang proses secara terus-menerus ketika pemuat mengambil waktu yang lama dari yang diprediksi?
     answers:
       - "duration: 'continuous'"
       - "loading: 'continuous'"
       - 'continuous: true'
     correctAnswer: 'continuous: true'
-  - question: Which two methods are required when creating a custom loading component?
+  - question: Mana dua metode yang dibutuhkan ketika membuat komponen pemuat secara kustom?
     answers:
-      - start() and fail()
-      - start() and finish()
-      - loading() and finish()
-    correctAnswer: start() and finish()
-  - question: Once you have created your new loading.vue component how do you use it?
+      - start() dan fail()
+      - start() dan finish()
+      - loading() dan finish()
+    correctAnswer: start() dan finish()
+  - question: Ketika Anda telah membuat komponen loading.vue, bagaimana Anda menggunakan itu?
     answers:
-      - import it into the layouts page
-      - add it in the nuxt.config.js under the loading property
-      - add it to the nuxt.config.js under the plugins property
-    correctAnswer: add it in the nuxt.config.js under the loading property
-  - question: To add a circle spinner when Nuxt.js is in SPA mode what do you add to the loading property?
+      - diimpor ke halaman layout
+      - menambahkan di nuxt.config.js dibawah properti pemuat
+      - menambahkan di nuxt.config.js dibawah properti _plugins_
+    correctAnswer: menambahkan di nuxt.config.js dibawah properti pemuat
+  - question: Untuk menambahkan pemuat lingkaran berputar ketika Nuxt.js di metode SPA, apa yang Anda tambahkan ke properti pemuat?
     answers:
       - 'circle: true'
       - 'spinner: circle'
@@ -66,13 +66,13 @@ questions:
     correctAnswer: 'name: circle'
 ---
 
-Out of the box, Nuxt.js gives you its own loading progress bar component that's shown between routes. You can customize it, disable it or even create your own loading component.
+Hal yang di luar kotak, Nuxt.js memberikan Anda proses pemuat komponen sendiri yang ditampilkan diantara rute. Anda dapat melakukan kustomisasi, menonaktifkan atau bahkan membuat proses pemuat milik Anda sendiri.
 
-## Customising the Progress Bar
+## Melakukan kustomisasi batang proses
 
-Among other properties, the color, size, duration and direction of the progress bar can be customized to suit your application's needs. This is done by updating the `loading` property of the `nuxt.config.js` with the corresponding properties.
+Diantara properti lainnya, warna, ukuran, durasi, dan arah dari batang proses dapat dikustomisasi untuk menyesuaikan aplikasi Anda. Ini dilakukan dengan melakukan update properti `loading` dari `nuxt.config.js` sesuai dengan properti,
 
-For example, to set a blue progress bar with a height of 5px, we update the `nuxt.config.js` to the following:
+Contohnya, untuk mengatur sebuah batang proses berwarna biru dengan tinggi 5px, kita perbarui `nuxt.config.js` seperti berikut ini:
 
 ```js
 export default {
@@ -83,22 +83,22 @@ export default {
 }
 ```
 
-List of properties to customize the progress bar.
+Daftar properti untuk melakukan kustomisasi batang proses.
 
-| Key         | Type    | Default | Description                                                                                                                       |     |
-| ----------- | ------- | ------- | --------------------------------------------------------------------------------------------------------------------------------- | --- |
-| color       | String  | 'black' | CSS color of the progress bar                                                                                                     |     |
-| failedColor | String  | 'red'   | CSS color of the progress bar when an error appended while rendering the route (if data or fetch sent back an error for example). |     |
-| height      | String  | '2px'   | Height of the progress bar (used in the style property of the progress bar)                                                       |     |
-| throttle    | Number  | 200     | In ms, wait for the specified time before displaying the progress bar. Useful for preventing the bar from flashing.               |     |
-| duration    | Number  | 5000    | In ms, the maximum duration of the progress bar, Nuxt.js assumes that the route will be rendered before 5 seconds.                |     |
-| continuous  | Boolean | false   | Keep animating progress bar when loading takes longer than duration.                                                              |     |
-| css         | Boolean | true    | Set to false to remove default progress bar styles (and add your own).                                                            |     |
-| rtl         | Boolean | false   | Set the direction of the progress bar from right to left.                                                                         |     |
+| Key         | Tipe    | Nilai anggapan | Deskripsi                                                                                                                   |     |
+| ----------- | ------- | -------------- | --------------------------------------------------------------------------------------------------------------------------- | --- |
+| color       | String  | 'black'        | Warna CSS untuk batang proses                                                                                               |     |
+| failedColor | String  | 'red'          | Warna CSS dari batang proses ketika terjadi sebuah kegalatan ketika me-_render_ (jika data atau `fetch` mengirimkan error). |     |
+| height      | String  | '2px'          | Tinggi dari batang proses (digunakan pada properti gaya dari batang proses).                                                |     |
+| throttle    | Number  | 200            | Dalam milidetik, tunggu pada waktu tertentu untuk menampilkan batang proses. Berguna untuk mencegah batang dari _flashing_. |     |
+| duration    | Number  | 5000           | Dalam milidetik, durasi maksimal dari batang proses, Nuxt.js mengasumsikan bahwa rute akan di-_render_ sebelum 5 detik.     |     |
+| continuous  | Boolean | false          | Tetap menjalankan animasi batang proses ketika memuat lebih lama dari yang diharapkan.                                      |     |
+| css         | Boolean | true           | Atur ke `false` untuk menghapus gaya dari batang proses bawaan (dan tambahkan milik Anda sendiri).                          |     |
+| rtl         | Boolean | false          | Atur arah dari batang proses dari kanan ke kiri.                                                                            |     |
 
-## Disable the Progress Bar
+## Menonaktifkan Batang Proses
 
-If you don't want to display the progress bar between the routes add `loading: false` in your `nuxt.config.js` file:
+Jika Anda tidak ingin menampilkan batang proses diantara rute, tambahkan `loading: false` di nuxt.config.js:
 
 ```js{}[nuxt.config.js]
 export default {
@@ -106,7 +106,7 @@ export default {
 }
 ```
 
-The loading property gives you the option to disable the default loading progress bar on a specific page.
+Properti pemuat memberikan Anda opsi untuk menonaktifkan batang proses bawaan pada halaman tertentu.
 
 ```html{}[pages/index.vue]
 <template>
@@ -120,11 +120,11 @@ The loading property gives you the option to disable the default loading progres
 </script>
 ```
 
-## Programmatically starting the loading bar
+## Memulai batang proses secara terprogram
 
-The loading bar can also be programmatically started in your components by calling `this.$nuxt.$loading.start()` to start the loading bar and `this.$nuxt.$loading.finish()` to finish it.
+Batang pemuat juga dapat secara terprogram dimulai di komponen dengan memanggil `this.$nuxt.$loading.start()` untuk memulainya dan `this.$nuxt.$loading.finish()` untuk menyelesaikannya.
 
-During your page component's mounting process, the `$loading` property may not be immediately available to access. To work around this, if you want to start the loader in the `mounted` method, make sure to wrap your `$loading` method calls inside `this.$nextTick` as shown below.
+Selama proses _mounting_ pada halaman komponen, properti `$loading` tidak tersedia secara langsung untuk diakses. Solusinya, jika Anda ingin memulai pemuat pada metode `mounted`, pastikan untuk membungkus `$loading` di dalam `this.$nextTick` seperti dibawah ini.
 
 ```js
 export default {
@@ -137,13 +137,13 @@ export default {
 }
 ```
 
-## Internals of the Progress Bar
+## Bagian internal dari batang proses
 
-Unfortunately, it is not possible for the Loading component to know in advance how long loading a new page will take. Therefore, it is not possible to accurately animate the progress bar to 100% of the loading time.
+Sayangnya tidak memungkinkan bagi komponen pemuat untuk mengetahui seberapa lama halaman akan memuat (kontennya). Untuk itu, hal ini tidak memungkinkan untuk secara akurat memberikan animasi pada batang proses menuju ke 100% ketika loading.
 
-Nuxt's loading component partially solves this by letting you set the `duration`, this should be set to an estimate of how long the loading process will take. Unless you use a custom loading component, the progress bar will always move from 0% to 100% in `duration` time (regardless of actual progression). When the loading takes longer than `duration` time, the progress bar will stay at 100% until the loading finishes.
+Komponen pemuat Nuxt.js secara parsial menyelesaikan masalah ini dengan mengizinkan Anda mengatur `duration`, ini bisa diatur berdasarkan perkiraan waktu halaman dimuat. Kecuali Anda menggunakan komponen pemuat kustom, batang proses ini akan selalu bergerak dari 0% sampai 100% dalam `duration` yang telah diatur. Ketika pemuat mengambil waktu lebih lama ketika memuat lebih dari waktu `duration`, batang proses akan tetap pada 100% sampai halaman selesai termuat.
 
-You can change the default behaviour by setting `continuous` to true, then after reaching 100% the progress bar will start shrinking back to 0% again in `duration` time. When the loading is still not finished after reaching 0% it will start growing from 0% to 100% again, this repeats until the loading finishes.
+Anda dapat mengubah sikap bawaan dengan mengatur `continuous` ke `true`, kemudian setelah menyentuh 100%, batang proses akan mulai bergerah ke 0% lagi pada waktu `duration` yang telah diatur. Ketika pemuat belum selesai setelah menyentuh 0%, ini akan mulai bergerak dari 0% ke 100% lagi, ini akan terulang sampai memuat selesai.
 
 ```js
 export default {
@@ -153,29 +153,29 @@ export default {
 }
 ```
 
-_Example of a continuous progress bar:_
+_Contoh dari batang proses secara berkelanjutan:_
 
 ![https://nuxtjs.org/api-continuous-loading.gif](https://nuxtjs.org/api-continuous-loading.gif)
 
-## Using a Custom Loading Component
+## Menggunakan komponen pemuat kustom
 
-You can also create your own component that Nuxt.js will call instead of the default loading progress bar component. To do so, you need to give a path to your component in the `loading` option. Then, your component will be called directly by Nuxt.js.
+Anda juga dapat membuat komponen kustom Anda sendiri yang akan dipanggil dari pada batang pemuat bawaan Nuxt.js. Untuk melakukan hal ini, Anda perlu memberikan jalan ke komponen Anda di opsi `loading`. Kemudian, komponen Anda akan dipanggil secara langsung oleh Nuxt.js.
 
-Your component has to expose some of these methods:
+Komponen Anda harus membuka beberapa metode ini:
 
-| Method        | Required | Description                                                                              |
-| ------------- | -------- | ---------------------------------------------------------------------------------------- |
-| start()       | Required | Called when a route changes, this is where you display your component.                   |
-| finish()      | Required | Called when a route is loaded (and data fetched), this is where you hide your component. |
-| fail(error)   | Optional | Called when a route couldn't be loaded (failed to fetch data for example).               |
-| increase(num) | Optional | Called during loading the route component, num is an Integer < 100.                      |
+| Metode        | Diperlukan | Deskripsi                                                                                      |
+| ------------- | ---------- | ---------------------------------------------------------------------------------------------- |
+| start()       | Diperlukan | Dipanggil ketika rute berganti, ini berada dimana Anda menampilkan komponen                    |
+| finish()      | Diperlukan | Dipanggil ketika rute dimuat dan data diambil, ini berada dimana Anda menyembunyikan komponen. |
+| fail(error)   | Opsional   | Dipanggil ketika rute tidak bisa dimuat dan data gagal diambil.                                |
+| increase(num) | Opsional   | Dipanggil ketika memuat komponen rute, _num_ adalah _Integer_ < 100.                           |
 
-You can create your custom component in `components/LoadingBar.vue`:
+Anda dapat membuat komponen kustom di `components/LoadingBar.vue`:
 
 ```html{}[components/LoadingBar.vue]
 <template>
   <div v-if="loading" class="loading-page">
-    <p>Loading...</p>
+    <p>Memuat...</p>
   </div>
 </template>
 
@@ -211,7 +211,7 @@ You can create your custom component in `components/LoadingBar.vue`:
 </style>
 ```
 
-Then, you update your `nuxt.config.js` to tell Nuxt.js to use your component:
+Lalu, Anda memperbarui `nuxt.config.js` unutk memberitahu Nuxt.js untuk menggunakan komponen Anda:
 
 ```js{}[nuxt.config.js]
 export default {
@@ -219,9 +219,9 @@ export default {
 }
 ```
 
-## The loading indicator Property
+## Properti indikator pemuat
 
-When running Nuxt.js in SPA mode, there is no content from the server side on the first page load. So, instead of showing a blank page while the page loads, Nuxt.js gives you a spinner which you can customize to add your own colors or background and even change the the indicator.
+Ketika menjalankan Nuxt.js pada mode SPA, tidak ada konten dari _server_ pada pertama kali halaman dimuat. Jadi, daripada menampilkan halaman kosong ketika halaman dimuat, Nuxt.js memberikan Anda pemutar (_spinner_) yang dapat Anda kustom unutk menambahkan warna atau latar belakang dan bahkan mengganti indikator.
 
 ```js{}[nuxt.config.js]
 export default {
@@ -233,29 +233,29 @@ export default {
 }
 ```
 
-## Built-in indicators
+## Indikator bawaan
 
-These indicators are imported from awesome [Spinkit](http://tobiasahlin.com/spinkit) project. You can check out its demo page to preview the spinners. In order to use one of these spinners all you have to do is add it's name to the name property. No need to import or install anything. Here is a list of built in indicators you can use.
+Indikator ini diimpor dari projek [Spinkit](http://tobiasahlin.com/spinkit). Anda dapat mengecek halaman contoh untuk melihat pemutarnya (_spinner_). Unutk dapat menggunakan satu dari pemutar itu, Anda perlu melakukan penambahan nama pemutar ke nama properti. Tidak perlu melakukan impor atau memasang apapun. Ini daftar indikator bawaan yang bisa digunakan.
 
-- circle
-- cube-grid
-- fading-circle
-- folding-cube
-- chasing-dots
-- nuxt
-- pulse
-- rectangle-bounce
-- rotating-plane
-- three-bounce
-- wandering-cubes
+- _circle_
+- _cube-grid_
+- _fading-circle_
+- _folding-cube_
+- _chasing-dots_
+- _nuxt_
+- _pulse_
+- _rectangle-bounce_
+- _rotating-plane_
+- _three-bounce_
+- _wandering-cubes_
 
-Built-in indicators support `color` and `background` options.
+Indikator bawaan mendukung opsi `color` dan `background`.
 
-## Custom indicators
+## Indikator kustom
 
-If you need your own special indicator, a String value or Name key can also be a path to a html template of indicator source code! All of the options are passed to the template, too.
+Jika Anda perlu indikator spesial Anda sendiri, sebuah nilai untaian atau nama kunci juga menjadi jalur ke _template_ HTML dari kode sumber dari indikator. Semua opsi yang ada juga dikirim ke _template_.
 
-Nuxt's built-in [source code](https://github.com/nuxt/nuxt.js/tree/dev/packages/vue-app/template/views/loading) is also available if you need a base!
+[Kode sumber](https://github.com/nuxt/nuxt.js/tree/dev/packages/vue-app/template/views/loading) bawaan Nuxt.js juga tersedia jika Anda membutuhkannya.
 
 <app-modal>
   <code-sandbox  :src="csb_link"></code-sandbox>

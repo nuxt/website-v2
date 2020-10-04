@@ -184,7 +184,7 @@ export default {
 </template>
 ```
 
-また、`<nuxt>` コンポーネントへ `keep-alive-props` prop を渡すことで、`<keep-alive>` に渡す [props](https://vuejs.org/v2/api/#keep-alive) を指定することもできます。
+また、`<nuxt>` コンポーネントへ `keep-alive-props` prop を渡すことで、`<keep-alive>` に渡す [props](https://jp.vuejs.org/v2/api/index.html#keep-alive) を指定することもできます。
 
 ```html{}[layouts/default.vue]
 <nuxt keep-alive :keep-alive-props="{ max: 10 }" />

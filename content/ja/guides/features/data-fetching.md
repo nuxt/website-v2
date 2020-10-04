@@ -105,8 +105,8 @@ Nuxt が呼び出す fetch に加え、`this.$fetch()` を使うことでコン�
   <p v-else-if="$fetchState.error">An error occured :(</p>
   <div v-else>
     <h1>Nuxt Mountains</h1>
-    <ul v-for="mountain of mountains">
-      <li>{{ mountain.title }}</li>
+    <ul>
+      <li v-for="mountain of mountains">{{ mountain.title }}</li>
     </ul>
     <button @click="$fetch">Refresh</button>
   </div>

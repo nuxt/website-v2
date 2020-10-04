@@ -79,9 +79,9 @@ export default {
 }
 ```
 
-<base-alert>
+<base-alert type="warning">
 
-Full static works only with `mode: 'universal'` (which is the default mode) and `target: 'static'`. Please note that full static is not available when using `mode: 'spa'`
+Full static doesn't work with `ssr: 'false'` (which is the same as the deprecated `mode: 'spa'`) as this is used for client-side rendering only (Single Page Applications).
 
 </base-alert>
 

@@ -1,6 +1,6 @@
 {
   "extends": ["@nuxtjs"],
-  "baseBranches": ["master"],
+  "baseBranches": ["master", "feat/resources-external"],
   "ignoreDeps": [],
   "lockFileMaintenance": {
     "enabled": true

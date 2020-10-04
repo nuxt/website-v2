@@ -1,0 +1,22 @@
+---
+title: 'Свойство key'
+description: Задание свойства `key` для внутреннего `<router-view>` компонента
+menu: Свойство Key
+category: components-glossary
+---
+
+> Задание свойства `key` для внутреннего `<router-view>` компонента
+
+- **Тип:** `String` или `Function`
+
+Свойство `key` передается в `<router-view>`, который используется для создания переходов внутри динамической страницы и различных роутов. Использование разных ключей приводит к перерисовке компонентов страницы.
+
+Есть несколько путей для задания key. Для большей информации, обратитесь к свойсту `nuxtChildKey` в [nuxt component](/guides/features/nuxt-components)
+
+```js
+export default {
+  key(route) {
+    return route.fullPath
+  }
+}
+```

@@ -72,7 +72,7 @@ Nuxt は非同期なデータを読み込むために 2 つのフックを提供
 
 <base-alert>
 
-Nuxt 2.12 未満においては、`fetch` フックは今日の `asyncData` と非常によく似た働きをします。この機能は後方互換性のためまだサポートされています: もし `fetch()` が `context` オブジェクトを受け取っているなら、それは "レガシー" な fetch フックだと考えられます。この機能は非推奨なので、`asyncData(context)` や [無名ミドルウェア](/guides/directory-structure/middleware#anonymous-middleware) を `middleware(context)` で使用してください。
+Nuxt 2.12 未満においては、`fetch` フックは今日の `asyncData` と非常によく似た働きをします。この機能は後方互換性のためまだサポートされています: もし `fetch()` が `context` オブジェクトを受け取っているなら、それは 「レガシー」 な fetch フックだと考えられます。この機能は非推奨なので、`asyncData(context)` や `middleware(context)` を使用した[無名ミドルウェア](/guides/directory-structure/middleware#無名ミドルウェア) に置き換えてください。
 
 </base-alert>
 

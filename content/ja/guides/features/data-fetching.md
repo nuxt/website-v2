@@ -194,7 +194,7 @@ export default {
 
 ### `activated`  フックを使う
 
-(SSR も含む)最後に `fetch` を呼び出したときのタイムスタンプを `this.$fetchState.timestamp` から取得することができます。このプロパティを `activated` フックと組み合わせることで、`fetch` に 30 秒のキャッシュを追加することができます:
+最後に `fetch` を呼び出したときのタイムスタンプを `this.$fetchState.timestamp` から取得することができます(SSR も含む)。このプロパティを `activated` フックと組み合わせることで、`fetch` に 30 秒のキャッシュを追加することができます:
 
 ```html{}[pages/posts/_id.vue]
 <template> ... </template>

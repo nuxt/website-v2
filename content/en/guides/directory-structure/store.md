@@ -66,10 +66,10 @@ Using a store to manage the state is important for every big application. That's
 
 ## Activate the Store
 
-Nuxt.js will look for the `store` directory, if it exists, it will:
+Nuxt.js will look for the `store` directory. If it contains a file, that isn't a hidden file or a `README.md` file, then the store will be activated. This means that Nuxt will:
 
-1. Import Vuex
-2. Add the `store` option to the root Vue instance.
+1. Import Vuex,
+2. Add the `store` option to the root Vue instance.
 
 ## Modules
 
@@ -190,9 +190,9 @@ export default {
 </style>
 ```
 
-The module method also works for top-level definitions without implementing a sub-directory in the store directory
+The module method also works for top-level definitions without implementing a sub-directory in the store directory.
 
-Example for state: you create a file `store/state.js` and add the following
+Example for state: you create a file `store/state.js` and add the following.
 
 ```js
 export default () => ({
@@ -250,7 +250,7 @@ actions: {
 
 <base-alert>
 
-Only the primary module (in store/index.js) will receive this action. You'll need to chain your module actions from there.
+Only the primary module (in `store/index.js`) will receive this action. You'll need to chain your module actions from there.
 
 </base-alert>
 
@@ -260,7 +260,7 @@ If `nuxt generate` is ran, `nuxtServerInit` will be executed for every dynam
 
 <base-alert type="info">
 
-Asynchronous nuxtServerInit actions must return a Promise or leverage async/await to allow the nuxt server to wait on them.
+Asynchronous `nuxtServerInit` actions must return a Promise or leverage async/await to allow the nuxt server to wait on them.
 
 </base-alert>
 

@@ -59,7 +59,7 @@ export default {
 
     if (
       app.i18n.locale !== app.i18n.defaultLocale &&
-      (['pt'].includes(app.i18n.locale) ||
+      (['pt', 'es'].includes(app.i18n.locale) ||
         process.env.NODE_ENV !== 'production')
     ) {
       try {
@@ -81,7 +81,7 @@ export default {
 
     try {
       ;[prev, next] = await $content(
-        ['pt'].includes(app.i18n.locale)
+        ['pt', 'es'].includes(app.i18n.locale)
           ? path
           : `/${app.i18n.defaultLocale}/guides/${params.book}`
       )
@@ -111,7 +111,7 @@ export default {
   },
   computed: {
     docLink() {
-      return `https://github.com/nuxt/nuxtjs.org/blob/master/content/${this.path}/${this.$route.params.slug}.md`
+      return `https://github.com/nuxt/nuxtjs.org/blob/master/content${this.path}/${this.$route.params.slug}.md`
     }
   },
   scrollToTop: true,

@@ -47,6 +47,7 @@ The [content module](https://content.nuxtjs.org) is a git files based headless C
 - [Live editing our content](#live-editing-our-content)
 - [Generating our content](#generating-our-content)
 - [Conclusion](#conclusion)
+- [Further Reading](#further-reading)
 
 ## Getting started
 
@@ -247,13 +248,24 @@ We now have a title, description, img and alt variable that we can access to by 
   <article>
     <h1>{{ article.title }}</h1>
     <p>{{ article.description }}</p>
-    <img :src="article.img" :alt="article.alt" />
+    <img
+      :src="article.image"
+      :alt="article.alt"
+    />
     <p>Article last updated: {{ formatDate(article.updatedAt) }}</p>
 
     <nuxt-content :document="article" />
   </article>
 </template>
 ```
+
+<base-alert>
+
+In order to render images included in the YAML of the article we either need to place them in the static folder or use the syntax: `` :src="require(`~/assets/images/${article.image}`)" ``.
+
+Images included in the article content should always be placed **in the static folder** as @nuxt/content is independent of Webpack. The static folder doesn't go through webpack whereas the assets folder does.
+
+</base-alert>
 
 ### Styling our markdown content
 
@@ -277,11 +289,9 @@ If we inspect this page we can see that everything written inside our markdown i
 
 All other tags that come from our YAML front matter can be styled as normal either using [TailwindCSS](https://tailwindcss.com/) or adding css in the style tag.
 
-<base-alert>
-Scoped styles will not work with nuxt-content so if adding them in the style
-tag you shouldn't use scoped. You can add the styles here or as a global style
-in your css folder.
-</base-alert>
+To use scoped styles with the nuxt-content class you need to use a deep selector: `/deep/`, `::v-deep` or `>>>`
+
+All other tags that come from our YAML front matter can be styled as normal either using [TailwindCSS](https://tailwindcss.com/) or adding css in the style tag.
 
 Our markdown tags are converted into the correct tags which means we now have two `<h1>` tags. We should now remove the one from our markdown file.
 
@@ -414,9 +424,9 @@ An other advantage of the YAML properties is that we can make them available to 
 ```yaml{}[content/articles/my-first-blog-post.md]
 ---
 author:
-name: Benjamin
-bio: All about Benjamin
-image: https://images.unsplash.com/.....
+  name: Benjamin
+  bio: All about Benjamin
+  image: https://images.unsplash.com/.....
 ---
 
 ```
@@ -925,3 +935,7 @@ With nuxt generate if only our content changes it means the `nuxt generate` comm
 ## Conclusion
 
 Working with content is great fun and there is so much more you can do and build. Don't forget to showcase your work to use on our discord channel named **showcase** so we can see the cool things you have created and perhaps even feature them in our NuxtLetter. Not signed up yet? Well now is a great time to [sign up](https://nuxtjs.org/#subscribe-to-newsletter) as we keep releasing more new content and features for Nuxt.js. Enjoy :)
+
+## Further Reading
+
+For more info on how to add a sitemap to your blog check out this article: [Adding a Sitemap Using Nuxt Content](https://redfern.dev/articles/adding-a-sitemap-using-nuxt-content/) by [Gareth Redfern](https://twitter.com/garethredfern)

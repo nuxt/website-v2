@@ -200,12 +200,6 @@ export default {
             class: 'h-10'
           },
           {
-            name: 'Amplitude',
-            img: 'amplitude.svg',
-            url: 'https://amplitude.com',
-            class: 'h-10'
-          },
-          {
             name: 'Ecosia',
             img: 'ecosia.svg',
             url: 'https://www.ecosia.org',
@@ -390,6 +384,18 @@ export default {
             name: 'ReRe',
             img: 'rere.svg',
             url: 'https://www.rere.jp',
+            class: 'h-10'
+          },
+          {
+            name: 'PLAID',
+            img: 'plaid.svg',
+            url: 'https://plaid.co.jp',
+            class: 'h-10'
+          },
+          {
+            name: 'ZEN Architects',
+            img: 'zenarchitects.svg',
+            url: 'https://app.zenadvisor.io/docs',
             class: 'h-10'
           }
         ],

@@ -3,7 +3,7 @@ title: How to deploy on Dokku?
 description: How to deploy a Nuxt.js application on Dokku?
 menu: Deploy on Dokku
 category: deployment
-position: 204
+position: 205
 ---
 
 We recommend to read [Dokku documentation for the setup](http://dokku.viewdocs.io/dokku/getting-started/installation/) and [Deploying a Node.js Application on Digital Ocean using Dokku](http://jakeklassen.com/post/deploying-a-node-app-on-digital-ocean-using-dokku/).

@@ -278,11 +278,7 @@ If we inspect this page we can see that everything written inside our markdown i
 
 All other tags that come from our YAML front matter can be styled as normal either using [TailwindCSS](https://tailwindcss.com/) or adding css in the style tag.
 
-<base-alert>
-Scoped styles will not work with nuxt-content so if adding them in the style
-tag you shouldn't use scoped. You can add the styles here or as a global style
-in your css folder.
-</base-alert>
+To use scoped styles with the nuxt-content class you need to use a deep selector: `/deep/`, `::v-deep` or `>>>`
 
 Our markdown tags are converted into the correct tags which means we now have two `<h1>` tags. We should now remove the one from our markdown file.
 

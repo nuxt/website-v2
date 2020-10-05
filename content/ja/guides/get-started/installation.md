@@ -18,7 +18,7 @@ Nuxt.js を始める別の方法は [CodeSandbox](https://template.nuxtjs.org) �
 
 ### Node
 
-[node](https://nodejs.org/en/download/) - 少なくとも v8.9.0 を使ってください。
+[node](https://nodejs.org/en/download/) - v8.9.0 以上を使ってください。
 
 _最新のバージョンをインストールすることをおすすめします。_
 

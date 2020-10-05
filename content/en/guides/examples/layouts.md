@@ -8,11 +8,9 @@ csb_link: https://codesandbox.io/embed/github/nuxt-academy/guides-examples/tree/
 
 This example uses 3 layouts:
 
-- default.vue used in the home page
-
-- auth.vue used in the /login page
-
-- profile.vue used in the /profile page when logged in
+- `layouts/default.vue` used in the home page
+- `layouts/auth.vue` used in the /login page
+- `layouts/profile.vue` used in the /profile page when logged in
 
 They are stored in the layouts/ directory and used in the corresponding pages with the `layout` property.
 
@@ -20,13 +18,7 @@ If no layout property is defined, it will fallback to the default layout.
 
 <base-alert type="next">
 
-Learn more in the Concepts book in the [Views](/guides/concepts/views) chapter.
-
-</base-alert>
-
-<base-alert type="next">
-
-Learn more in the Directory Structure book in the [Layouts](/guides/directory-structure/layouts) chapter.
+Learn more in the Concepts book in the [Views](/guides/concepts/views) chapter or in the Directory Structure book in the [Layouts](/guides/directory-structure/layouts) chapter.
 
 </base-alert>
 

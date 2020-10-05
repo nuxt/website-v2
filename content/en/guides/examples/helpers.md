@@ -6,13 +6,9 @@ category: examples
 csb_link: https://codesandbox.io/embed/github/nuxt-academy/guides-examples/tree/master/02_concepts/02_context_helpers-helpers?
 ---
 
-In this example we use:
-
-- the `$nuxt.isOnline` and `$nuxt.isOffline` helper as a connection checker to tell the user if they are online or offline.
-- `asyncData` to return the time in seconds along with
-- the process helpers, `renderedOn` , to print a message telling us if we are rendered on the server or client.
-- a button which when clicked calls a method that refreshes the number of seconds using `$nuxt.refresh()`.
-- the `onNuxtReady` helper to print a message to the console when Nuxt.js is ready and mounted.
+- `$nuxt.isOnline` and `$nuxt.isOffline` to tell the user if they are online or offline.
+- `renderedOn` , to print a message telling us if the page is rendered on the server or client.
+- `$nuxt.refresh()` refreshes data without refreshing the page .
 
 <base-alert type="next">
 

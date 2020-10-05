@@ -6,7 +6,7 @@ category: examples
 csb_link: https://codesandbox.io/embed/github/nuxt-academy/guides-examples/tree/master/01_get_started/01_installation?
 ---
 
-Example project with basic install including two ways of creating a page component, one at root level and one inside a folder.
+Creating a page in Nuxt, `pages/index.vue`.
 
 <base-alert type="next">
 

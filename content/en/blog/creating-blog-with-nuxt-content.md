@@ -248,13 +248,24 @@ We now have a title, description, img and alt variable that we can access to by 
   <article>
     <h1>{{ article.title }}</h1>
     <p>{{ article.description }}</p>
-    <img :src="article.img" :alt="article.alt" />
+    <img
+      :src="article.image"
+      :alt="article.alt"
+    />
     <p>Article last updated: {{ formatDate(article.updatedAt) }}</p>
 
     <nuxt-content :document="article" />
   </article>
 </template>
 ```
+
+<base-alert>
+
+In order to render images included in the YAML of the article we either need to place them in the static folder or use the syntax: `` :src="require(`~/assets/images/${article.image}`)" ``.
+
+Images included in the article content should always be placed **in the static folder** as @nuxt/content is independent of Webpack. The static folder doesn't go through webpack whereas the assets folder does.
+
+</base-alert>
 
 ### Styling our markdown content
 
@@ -279,6 +290,8 @@ If we inspect this page we can see that everything written inside our markdown i
 All other tags that come from our YAML front matter can be styled as normal either using [TailwindCSS](https://tailwindcss.com/) or adding css in the style tag.
 
 To use scoped styles with the nuxt-content class you need to use a deep selector: `/deep/`, `::v-deep` or `>>>`
+
+All other tags that come from our YAML front matter can be styled as normal either using [TailwindCSS](https://tailwindcss.com/) or adding css in the style tag.
 
 Our markdown tags are converted into the correct tags which means we now have two `<h1>` tags. We should now remove the one from our markdown file.
 

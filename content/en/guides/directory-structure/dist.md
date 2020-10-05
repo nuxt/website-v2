@@ -96,7 +96,7 @@ When working with statically generated pages it is recommended to use a 404.html
 
 <base-alert>
 
-Depending on where you are hosting your site, you way have to use 200.html or 404.html. Please check with your hosting provider. Netlify, for example uses 404.html.
+Depending on where you are hosting your site, you may have to use 200.html or 404.html. Please check with your hosting provider. Netlify, for example uses 404.html.
 
 </base-alert>
 

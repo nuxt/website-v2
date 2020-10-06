@@ -1,40 +1,40 @@
 ---
-title: 'The fetch Method'
-description: The `fetch` method is used to fill the store before rendering the page, it's like the `asyncData` method except it doesn't set the component data.
-menu: Fetch Method
+title: 'fetch メソッド'
+description: '`fetch` メソッドは、ページがレンダリングされる前に、データをストアに入れるために使われます。コンポーネントのデータをセットしないという点を除いては `asyncData`メソッドとよく似ています。'
+menu: fetch メソッド
 category: components-glossary
 ---
 
 ## Nuxt >= 2.12
 
-Nuxt.js `v2.12` introduces a new hook called `fetch` **in any of your Vue components**.
+Nuxt.js `v2.12` では、**どの Vue コンポーネントにも** `fetch` という新しいフックが導入されています。
 
 <base-alert>
 
-`fetch(context)` has been deprecated, instead you can use an [anonymous middleware](/guides/components-glossary/pages-middleware#anonymous-middleware) in your page: `middleware(context)`
+`fetch(context)` メソッドは非推奨となりましたが、代わりに [無名ミドルウェア](/guides/components-glossary/pages-middleware#無名ミドルウェア) をページコンポーネント内の `middleware(context)` で使うことできます。
 
 </base-alert>
 
-### When to use fetch?
+### fetch を使うタイミングは？
 
-Every time you need to get **asynchronous** data. `fetch` is called on server-side when rendering the route, and on client-side when navigating.
+データを **非同期で** 取得するニーズが発生したときにはいつでも使って構いません。`fetch` メソッドはサーバーサイドではルートをレンダリングするときに呼び出され、クライアントサイドでは遷移するときに呼び出されます。
 
-It exposes `$fetchState` at the component level:
+コンポーネントレベルで `$fetchState` を公開します:
 
-- `$fetchState.pending`: `Boolean`, allows you to display a placeholder when `fetch` is being called _on client-side_.
-- `$fetchState.error`: `null` or `Error`, allows you to display an error message
-- `$fetchState.timestamp`: `Integer`, is a timestamp of the last fetch, useful for caching with `keep-alive`
+- `$fetchState.pending`: `Boolean`。`fetch` が _クライアントサイドで_ 呼び出されているときにプレースホルダーを表示する用途などで使うことができます。
+- `$fetchState.error`: `null` または `Error`。エラーメッセージを表示する用途で使うことができます。
+- `$fetchState.timestamp`: `Integer`。最後に fetch したタイムスタンプです。`keep-alive` を用いたキャッシングに便利です。
 
-If you want to call the `fetch` hook from your template use:
+テンプレートから `fetch` フックを呼び出すには、下記のように `$fetch()` を使います:
 
 ```html
 <button @click="$fetch">Refresh</button>
 ```
 
-or component method:
+コンポーネントメソッドでは下記のとおりです:
 
 ```javascript
-// from component methods in script section
+// スクリプトセクションのコンポーネントメソッドより
 export default {
   methods: {
     refresh() {
@@ -44,16 +44,16 @@ export default {
 }
 ```
 
-You can access the Nuxt [context](/guides/internals-glossary/context) within the fetch hook using `this.$nuxt.context`.
+fetch フック内では `this.$nuxt.context` を使用して、Nuxt [context](/guides/internals-glossary/context) にアクセスできます。
 
-### Options
+### オプション
 
-- `fetchOnServer`: `Boolean` or `Function` (default: `true`), call `fetch()` when server-rendering the page
-- `fetchDelay`: `Integer` (default: `200`), set the minimum executing time in milliseconds (to avoid quick flashes)
+- `fetchOnServer`: `Boolean` または `Function`（デフォルト: `true`）。サーバーがページをレンダリングする際に `fetch()` を呼び出します。
+- `fetchDelay`: `Integer`（デフォルト: `200`）。最小実行時間をミリ秒単位で設定します（過剰実行を防ぐため）。
 
 <div class="Alert Alert--green">
-  
-When `fetchOnServer` is falsy (`false` or returns `false`), `fetch` will be called only on client-side and `$fetchState.pending` will return `true` when server-rendering the component.
+
+`fetchOnServer` がファルシー（`false` または `false` を返す）な場合、`fetch` はクライアントサイドでのみ呼び出され、サーバーでコンポーネントをレンダリングする際には `$fetchState.pending` は `true` を返します。
 
 </div>
 

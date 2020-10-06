@@ -6,16 +6,16 @@ category: examples
 csb_link: https://codesandbox.io/embed/github/nuxt-academy/guides-examples/tree/master/04_directory_structure/05_dist
 ---
 
-In this example we show you how you can customize the `generate` property for when you are generating a static site.
+`nuxt.config.js` for static site generation shows
 
-- Change the name of the dist folder using the `dir` property
-- Set `subFolders` to false.
-- The `fallback` property is very useful so that unknown routes are rendered.
-- The `excludes` property allows you to exclude pages from static generation which means they will fallback to SPA and only be rendered on the client side which can be useful for admin pages or dynamic pages that you don't want generated statically.
+- `target` is set to `static`.
+- the `generate` property:
+  - `dir` property to change the name of the `dist` folder
+  - `subFolders` set to false to not have sub folders
+  - `fallback` property set to true so that unknown routes are rendered.
+  - `excludes` property to exclude pages from static generation.
 
-Check out the `nuxt.config.js` file for an example of how to use the generate property and don't forget to make sure `target` is set to `static` for static site generation.
-
-Check out the dist folder in this example which has been named my-dist to see the files that have been generated. You will notice how the admin file has been excluded and is not in the my-dist folder.
+`my-dist` folder to see an example of a generated `dist` folder
 
 <base-alert type="next">
 

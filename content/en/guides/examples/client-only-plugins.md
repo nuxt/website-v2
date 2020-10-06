@@ -6,7 +6,8 @@ category: examples
 csb_link: https://codesandbox.io/embed/github/nuxt-academy/guides-examples/tree/master/04_directory_structure/12_plugins_client
 ---
 
-In this example we register a plugin so that it is only available on the client side. In the plugins folder we have a file called `client-only.js` which uses the `window.alert()` function to send an alert message. You will see this message before the page is initialized which is how plugins work. As we do not have access to the window property on server side we must register this plugin only on the client. You can see in the nuxt.config.js file that we register the plugin with `.client.js` as its extension.
+- `plugins/client-only.client.js` uses the `window.alert()` function which is not available on server side.
+- `nuxt.config.js` contains the `plugins` property to register the plugin on client side thanks to the `.client.js` extension.
 
 <base-alert type="next">
 

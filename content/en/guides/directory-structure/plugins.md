@@ -22,7 +22,7 @@ questions:
       - only from server side
       - from both client side and server side
     correctAnswer: from both client side and server side
-  - question: Every time you want to use use Vue.use() you should create a file in which directory?
+  - question: Every time you want to use Vue.use() you should create a file in which directory?
     answers:
       - vue
       - plugins

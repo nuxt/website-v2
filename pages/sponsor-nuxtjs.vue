@@ -276,6 +276,12 @@ export default {
             img: 'minitool.png',
             url: 'https://www.minitool.com',
             class: 'h-8'
+          },
+          {
+            name: 'VPS Server',
+            img: 'vps-server.png',
+            url: 'https://www.vpsserver.com/',
+            class: 'h-8'
           }
 >>>>>>> 26a70b2b (chore: add guides section (#407))
         ],

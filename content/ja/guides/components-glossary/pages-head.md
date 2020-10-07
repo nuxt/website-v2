@@ -1,15 +1,15 @@
 ---
-title: 'The head Method'
-description: Nuxt.js uses vue-meta to update the headers and HTML attributes of your application.
-menu: Head Method
+title: 'head メソッド'
+description: Nuxt.js はアプリケーションの headers 及び html attributes を更新するために vue-meta を使います。
+menu: head メソッド
 category: components-glossary
 ---
 
-> Nuxt.js uses [vue-meta](https://github.com/nuxt/vue-meta) to update the `headers` and `html attributes` of your application.
+> Nuxt.js はアプリケーションの `headers` 及び `html attributes` を更新するために [vue-meta](https://github.com/nuxt/vue-meta) を使います。
 
-- **Type:** `Object` or `Function`
+- **型:** `Object` または `Function`
 
-Use the `head` method to set the HTML Head tags for the current page.
+現在のページの HTML の head タグを設定するために `head` メソッドを使います。
 
 ```html
 <template>
@@ -27,7 +27,7 @@ Use the `head` method to set the HTML Head tags for the current page.
       return {
         title: this.title,
         meta: [
-          // hid is used as unique identifier. Do not use `vmid` for it as it will not work
+          // `hid` は一意の識別子として使用されます。 `vmid` は動作しないので使わないでください。
           {
             hid: 'description',
             name: 'description',

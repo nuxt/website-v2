@@ -6,9 +6,11 @@ category: examples
 csb_link: https://codesandbox.io/embed/github/nuxt-academy/guides-examples/tree/master/04_directory_structure/11_pages
 ---
 
-- `pages\_slug.vue` shows data coming from the route params.
-- `pages\mountains.vue` fetches our mountains from our API.
-- `pages\_continent\_mountain.vue` shows the detail page for each mountain in each continent.
+`pages\_slug.vue` shows data coming from the route params.
+
+`pages\index.vue` fetches our mountains from our API.
+
+`pages\_continent\_mountain.vue` shows the detail page for each mountain in each continent.
 
 <base-alert type="next">
 

@@ -6,7 +6,7 @@ category: examples
 csb_link: https://codesandbox.io/embed/github/nuxt-academy/guides-examples/tree/master/01_get_started/02_routing?
 ---
 
-Routing between pages using the [`<NuxtLink>`](/guides/features/nuxt-components#the-nuxtlink-component) component.
+`pages/index.vue` and `pages/fun.vue` shows routing between pages using the [`<NuxtLink>`](/guides/features/nuxt-components#the-nuxtlink-component) component.
 
 <base-alert type="next">
 

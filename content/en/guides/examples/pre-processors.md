@@ -6,14 +6,15 @@ category: examples
 csb_link: https://codesandbox.io/embed/github/nuxt-academy/guides-examples/tree/master/03_features/07_configuration_pre-processors
 ---
 
-- `pages/pre-processors.vue`:
-  - uses pug as a template language
-  - uses sass for styling
-- `nuxt.config.js` :
-  - registers the style resources module
-  - contains a `styleResources` property to add `assets/variables.scss`
-  - contains a `css property` to add `assets/main.scss`
-- `package.json` shows the dependencies needed
+`pages/pre-processors.vue` uses pug as a template language and sass for styling.
+
+`nuxt.config.js` :
+
+- registers the style resources module.
+- contains a `styleResources` property to add `assets/variables.scss`.
+- contains a `css property` to add `assets/main.scss`.
+
+`package.json` shows the dependencies needed.
 
 <base-alert type="next">
 

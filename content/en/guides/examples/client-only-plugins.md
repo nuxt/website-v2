@@ -6,8 +6,9 @@ category: examples
 csb_link: https://codesandbox.io/embed/github/nuxt-academy/guides-examples/tree/master/04_directory_structure/12_plugins_client
 ---
 
-- `plugins/client-only.client.js` uses the `window.alert()` function which is not available on server side.
-- `nuxt.config.js` contains the `plugins` property to register the plugin on client side thanks to the `.client.js` extension.
+`plugins/client-only.client.js` uses the `window.alert()` function which is not available on server side.
+
+`nuxt.config.js` contains the `plugins` property to register the plugin on client side thanks to the `.client` extension.
 
 <base-alert type="next">
 

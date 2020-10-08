@@ -6,9 +6,11 @@ category: examples
 csb_link: https://codesandbox.io/embed/github/nuxt-academy/guides-examples/tree/master/03_features/09_components_nuxt-link
 ---
 
-- `nuxt.config.js` shows the `router` property for changing the name of the `linkActiveClass`, `linkExactActiveClass` and `linkPrefecthedClass`.
-- `main.css` add styles for `nuxt-link-active`, `nuxt-link-exact-active` and `nuxt-link-prefetched`
-- `components/navigation.vue` adds `no-prefetch` to the `<NuxtLink>` for the No Prefetch page.
+`nuxt.config.js` shows the `router` property for changing the name of the `linkActiveClass`, `linkExactActiveClass` and `linkPrefecthedClass`.
+
+`main.css` add styles for `nuxt-link-active`, `nuxt-link-exact-active` and `nuxt-link-prefetched`
+
+`components/navigation.vue` adds `no-prefetch` to the `<NuxtLink>` for the No Prefetch page.
 
 <base-alert type="next">
 

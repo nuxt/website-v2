@@ -6,12 +6,17 @@ category: examples
 csb_link: https://codesandbox.io/embed/github/nuxt-academy/guides-examples/tree/master/04_directory_structure/12_plugins_external
 ---
 
-- `plugins/axios.js` intercepts the `$axios` call using the `onError()` function.
-- `pages/external-plugins.vue` uses `$axios` to fetch our data from an API.
-- `pages/posts/_id.vue` uses `$axios` to fetch our data from an API with the id coming from route params.
-- `pages/no-posts.vue` is the page that is called when there is an error.
-- `nuxt.config.js` contains the `module` property and `plugin` property to register our module and plugin.
-- `package.json` shows our module `@nuxtjs/axios` has been installed.
+`plugins/axios.js` intercepts the `$axios` call using the `onError()` function.
+
+`pages/index.vue` uses `$axios` to fetch our data from an API.
+
+`pages/posts/_id.vue` uses `$axios` to fetch our data from an API with the id coming from route params.
+
+`pages/no-posts.vue` is the page that is called when there is an error.
+
+`nuxt.config.js` contains the `module` property and `plugin` property to register our module and plugin.
+
+`package.json` shows our module `@nuxtjs/axios` has been installed.
 
 <base-alert type="next">
 

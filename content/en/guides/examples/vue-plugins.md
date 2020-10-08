@@ -6,10 +6,13 @@ category: examples
 csb_link: https://codesandbox.io/embed/github/nuxt-academy/guides-examples/tree/master/04_directory_structure/12_plugins_vue
 ---
 
-- `plugins/vue-toolitp.js` registers our plugin so we can use it.
-- `pages/vue-plugins.vue` imports our tooltip and tells Vue to use.
-- `nuxt.config.js` contains the `plugins` property to register our plugin and the `css` property to add our tooltip css.
-- `package.json` show our tooltip package has been installed.
+`plugins/vue-toolitp.js` registers our plugin so we can use it.
+
+`pages/index.vue` imports our tooltip and tells Vue to use.
+
+`nuxt.config.js` contains the `plugins` property to register our plugin and the `css` property to add our tooltip css.
+
+`package.json` show our tooltip package has been installed.
 
 <base-alert type="next">
 

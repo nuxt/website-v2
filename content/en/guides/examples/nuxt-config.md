@@ -6,9 +6,14 @@ category: examples
 csb_link: https://codesandbox.io/embed/github/nuxt-academy/guides-examples/tree/master/04_directory_structure/15_nuxt-config
 ---
 
-In the first example we show how to use the env property in our `nuxt.config.js` file to add the URL of our API so that we can then easily make calls to it without having to use the URL on our page. In the `nuxt-config.vue` page we use pass in `$axios` and `env` into our `asyncData()` function so that we can access it from our context. We can then use `env.apiUrl` to access our API and add to it the path we want to retrieve. We can then print our returned value in the template.
+`nuxt.config.js` contains :
 
-As we are using axios in this example you can see that it has been installed which you can see in our `package.json` and it has been added to the modules property of our `nuxt.config.js` file so we can use it throughout our application.
+- the `env` property to add the URL of our API.
+- the `modules` property to register our `@nuxtjs/axios` module.
+
+`pages/nuxt-config.vue` - uses `$axios` to fetch our data and `env.apiUrl` to retrieve our API URL.
+
+`package.json` - shows `@nuxtjs/axios` has been installed.
 
 <base-alert type="next">
 

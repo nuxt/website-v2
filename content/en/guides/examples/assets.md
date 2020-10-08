@@ -6,11 +6,14 @@ category: examples
 csb_link: https://codesandbox.io/embed/github/nuxt-academy/guides-examples/tree/master/04_directory_structure/02_assets
 ---
 
-- `pages/assets.vue` shows:
-  - how to add an svg to the `<img>` tag from the assets folder.
-  - how to add a background image.
-- `nuxt.config.js` contains the `css` property for globally adding a css file
-- `assets/main.css` shows how to reference the DMSans fonts from the assets folder using the `@font-face` rule
+`pages/index.vue` shows:
+
+- how to add an svg to the `<img>` tag from the assets folder.
+- how to add a background image.
+
+`nuxt.config.js` contains the `css` property for globally adding a css file.
+
+`assets/main.css` shows how to reference the DMSans fonts from the assets folder using the `@font-face` rule.
 
 <base-alert type="next">
 

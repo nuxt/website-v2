@@ -6,16 +6,22 @@ category: examples
 csb_link: https://codesandbox.io/embed/github/nuxt-academy/guides-examples/tree/master/04_directory_structure/10_modules
 ---
 
-- Local Module:
-  - `modules/nuxt-api/plugin.js` shows how the function `nuxtApi` works.
-  - `modules/nuxt-api/index.js` adds our plugin so we can use it.
-- External Module (normally an npm package):
-  - `myModule/lib/plugin.js` shows how the functions `nuxtHello` and `nuxtApiExternal` work.
-  - `myModule/lib/moudle.js` exports the module and adds the plugin.
-- `pages/modules.vue` uses:
-  - `app.nuxtHello` to print a hello message.
-  - `$app.$nuxtApi` and `$app.$nuxtApiExternal` to call our API.
-- `nuxt.config.js` registers our modules using the `buildModules` and `modules` property.
+Local Module:
+
+- `modules/nuxt-api/plugin.js` shows how the function `nuxtApi` works.
+- `modules/nuxt-api/index.js` adds our plugin so we can use it.
+
+External Module (normally an npm package):
+
+- `myModule/lib/plugin.js` shows how the functions `nuxtHello` and `nuxtApiExternal` work.
+- `myModule/lib/moudle.js` exports the module and adds the plugin.
+
+`pages/index.vue` uses:
+
+- `app.nuxtHello` to print a hello message.
+- `$app.$nuxtApi` and `$app.$nuxtApiExternal` to call our API.
+
+`nuxt.config.js` registers our modules using the `buildModules` and `modules` property.
 
 <base-alert type="next">
 

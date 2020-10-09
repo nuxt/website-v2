@@ -522,7 +522,7 @@ export default {
 
 <base-alert>
 
-Cette option doit être changée avec une certaine préparation et une sequence de tests conséquents. Lorsque l'on définit `router.trailingSlash` a quelque chose d'autre que la valeur par défaut (`undefined`), la route opposée cessera de fonctionner. Il doit donc y avoir des redirections 301 et vos _liens internes_ doivent s'adapteur eux aussi. Si vous passez `trailingSlash` à `true`, alors seulement `example.com/abc/` vont marcher mais pas `example.com/abc`. Dans le cas d'un `false`, c'est l'inverse.
+Cette option doit être changée avec une certaine préparation et une sequence de tests conséquents. Lorsque l'on définit `router.trailingSlash` a quelque chose d'autre que la valeur par défaut (`undefined`), la route opposée cessera de fonctionner. Il doit donc y avoir des redirections 301 et vos _liens internes_ doivent s'adapter eux aussi. Si vous passez `trailingSlash` à `true`, alors seulement `example.com/abc/` vont marcher mais pas `example.com/abc`. Dans le cas d'un `false`, c'est l'inverse.
 
 </base-alert>
 

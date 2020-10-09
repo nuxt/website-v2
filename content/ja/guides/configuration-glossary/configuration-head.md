@@ -1,14 +1,14 @@
 ---
-title: 'The head Property'
-description: Nuxt.js let you define all default meta for your application inside nuxt.config.js.
+title: 'head プロパティ'
+description: 'Nuxt.js ではアプリケーションのデフォルトメタを全て `nuxt.config.js` 内で定義することができます'
 menu: head
 category: configuration-glossary
 position: 12
 ---
 
-> Nuxt.js let you define all default meta for your application inside `nuxt.config.js`, use the same `head` property
+> Nuxt.js ではアプリケーションのデフォルトメタを全て `head` プロパティを使って `nuxt.config.js` 内で定義することができます
 
-- Type: `Object` or `Function`
+- 型: `Object` または `Function`
 
 ```js{}[nuxt.config.js]
 export default {
@@ -18,19 +18,19 @@ export default {
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
 
-      // hid is used as unique identifier. Do not use `vmid` for it as it will not work
+      // `hid` は一意の識別子として使用されます。`vmid` は動作しないので使わないでください
       { hid: 'description', name: 'description', content: 'Meta description' }
     ]
   }
 }
 ```
 
-To know the list of options you can give to `head`, take a look at [vue-meta documentation](https://vue-meta.nuxtjs.org/api/#metainfo-properties).
+`head` に指定できるオプションリストについては [vue-meta のドキュメント](https://vue-meta.nuxtjs.org/api/#metainfo-properties)を参照してください。
 
-You can also use `head` as a function in your components to access the component data through `this` ([read more](/guides/components-glossary/pages-head)).
+コンポーネントの関数として `head` を使用して `this` を介してコンポーネントデータにアクセスすることもできます（[詳細はこちら](/guides/components-glossary/pages-head)）。
 
 <base-alert type="info">
 
-<b>Info:</b> To avoid duplicated meta tags when used in child component, set up a unique identifier with the `hid` key for your meta elements ([read more](https://vue-meta.nuxtjs.org/api/#tagidkeyname)).
+<b>情報:</b> 子コンポーネントを使用した際にメタタグの重複を避けるために、meta 要素に `hid` キーで一意な識別子を設定してください（[詳細はこちら](https://vue-meta.nuxtjs.org/api/#tagidkeyname)）。
 
 </base-alert>

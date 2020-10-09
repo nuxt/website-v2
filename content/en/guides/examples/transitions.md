@@ -12,7 +12,7 @@ csb_link: https://codesandbox.io/embed/github/nuxt-academy/guides-examples/tree/
 
 <base-alert type="next">
 
-Learn more in the Features book in the [Nuxt Components](/guides/features/nuxt-components#the-nuxtchild-component) chapter.
+Learn more in the Features book in the [Transitions](/guides/features/transitions) chapter.
 
 </base-alert>
 

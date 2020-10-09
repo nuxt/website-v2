@@ -223,11 +223,13 @@ The default settings for layout transitions are:
 ```
 
 ```css{}[assets/main.css]
-.layout-enter-active, .layout-leave-active {
-  transition: opacity .5s
+.layout-enter-active,
+.layout-leave-active {
+  transition: opacity 0.5s;
 }
-.layout-enter, .layout-leave-active {
-  opacity: 0
+.layout-enter,
+.layout-leave-active {
+  opacity: 0;
 }
 ```
 
@@ -297,7 +299,9 @@ If you do modify the page Transition name you will also have to rename the css c
 
 ### Example
 
-In this example we show the home page with a bounce transition and the fun pages with a slide-bottom transition. These transitions can be seen in the main.css file which also has the classes for the default page and layout transitions which are applied to pages that do not have the transition property set.
+`pages/home.vue` shows the `transition` property with a bounce transition and `pages/fun.vue` with a slide-bottom transition.
+
+`assets/main.css` has the classes for the bounce and slide-bottom transition as well as the default page and layout transitions which are applied to pages that do not have the transition property set.
 
 <app-modal>
   <code-sandbox  :src="csb_link"></code-sandbox>

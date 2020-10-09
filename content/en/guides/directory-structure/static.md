@@ -64,7 +64,9 @@ In your code, you can then reference these files relative to the root (`/`):
 
 ### Example
 
-In the first example you can see how to show an image from the static folder which you can see in the static.vue page. You can then compare this to the image coming from the assets folder which you can see in the default.vue page in the layouts folder.
+`pages/static.vue` shows an image from the static folder
+
+`layouts/default.vue` shows an image from the assets folder.
 
 <app-modal>
   <code-sandbox  :src="csb_link"></code-sandbox>

@@ -154,9 +154,9 @@ export default {
 
 ### Example
 
-In this example we use asyncData passing in the `params`, `$http` and `error` into the context so we can return a post from our API based on the the id of the page. See the `posts/_id` page which is a dynamic page that prints out the title and description coming from the API based on the id of the params.
+`pages/posts/_id` is a dynamic page that prints out the title and description coming from the API based on the id of the params. If no post exists we catch the error and return the error message.
 
-We also use middleware passing in the store and redirect into context so we can check to see if our user is authenticated and if not redirect them to the the home page. To see how the authentication works you will need to change `authenticated` to false in the `store/index.js` file.
+`pages/admin.vue` uses `middleware` and the `store`, to check if our user is authenticated and if not we redirect them to the the home page.
 
 <app-modal>
   <code-sandbox  :src="csb_link_context"></code-sandbox>
@@ -264,11 +264,11 @@ In the example, `renderedOn` will evaluate to `'server'` when using server-side 
 
 ## Example
 
-In this example we use `asyncData` passing in the `params`, `$http` and `error` so that we can access them from the context and return a post from our API based on the the id of the page. See the **posts/\_id** page which is a dynamic page that prints out the title and description coming from the API based on the id of the params.
+`pages/index.vue` shows:
 
-The error link in the navigation links to a post that doesn't exist. In the **posts/\_id** file you will see how we catch the error and return the error message which will show us the default error message when a page is not found.
-
-The admin page uses a `middleware()` function passing in the `store` and `redirect` so that we can access them from our context. We use the store to check if our user is authenticated and if not we redirect them to the the home page. To see how the authentication works see the **store/index.js** file. This is a basic example of authentication and you will never be able to access this page unless you set the authenticated value in the store to true.
+- `$nuxt.isOnline` and `$nuxt.isOffline` - tells the user if they are online or offline.
+- `renderedOn` - prints a message telling us if the page is rendered on the server or client.
+- `$nuxt.refresh()` - refreshes data without refreshing the page .
 
 <app-modal>
   <code-sandbox  :src="csb_link_helpers"></code-sandbox>

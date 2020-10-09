@@ -167,9 +167,11 @@ To display the `child.vue` component, you have to insert the `<NuxtChild>` co
 
 ### Example
 
-In this example we show a parent page which you see as `parent.vue` that contains the Child links as well as the `<NuxtChild>` component. Everything on this page will be seen on both the parent and child pages.
+`pages/parent.vue` contains the `<NuxtChild>` component. Everything on this page will be seen on both the parent and child pages.
 
-We then have a parent folder which contains an `index.vue` page with some text that will be replaced when the child links are clicked as they are only visible on the parent route. The parent folder also contains the two child pages that when clicked will show the parent view with the child view below it and the route path which shows the parent route with the child page after it.
+`pages/parent/index.vue` contains text that will be replaced when the child links are clicked.
+
+`pages/parent/child.vue` and `pages/parent/child2.vue` will be rendered as parent/child and parent/child2.
 
 <app-modal>
   <code-sandbox  :src="csb_link_nuxt"></code-sandbox>
@@ -296,7 +298,7 @@ Since Nuxt.js v2.10.0, if you have to set `prefetchLinks` to `false` but you
 
 ### Example
 
-This example shows how to add a `no-prefetch` to the `<NuxtLink>` so that the No Prefetch page will not be pre fetched. This can be seen in the `<Navigation>` component.
+`components/navigation.vue` adds `no-prefetch` to the `<NuxtLink>` for the No Prefetch page.
 
 <app-modal>
   <code-sandbox  :src="csb_link_nuxt_link"></code-sandbox>
@@ -390,9 +392,9 @@ Then you can add the styles for that class.
 
 ### Example
 
-This example shows you how to change the name of the `linkActiveClass`, `linkExactActiveClass` and `linkPrefecthedClass` which you can see in the `router` property in the `nuxt.config` file. You will also see how to add a custom class name instead of the default one.
+`nuxt.config.js` shows the `router` property for changing the name of the `linkActiveClass`, `linkExactActiveClass` and `linkPrefecthedClass`.
 
-We then add styles for these classes in the `main.css` file. We add a bold weight to the active class and the primary color to the exact active class. We also add an underline to all the prefetched link which means the No prefetch page will never have an underline as it is never prefetched. In this example we have called the class `nuxt-link-prefetched` but you can name it anything you like.
+`main.css` add styles for `nuxt-link-active`, `nuxt-link-exact-active` and `nuxt-link-prefetched`
 
 <app-modal>
   <code-sandbox  :src="csb_link_nuxt_link"></code-sandbox>

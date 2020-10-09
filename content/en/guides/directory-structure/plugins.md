@@ -138,11 +138,17 @@ export default {
 
 ### Example
 
-In this example we show how to use a plugin with an external package using axios. In the `package.json` file you can see that `@nuxtjs/axios` has been installed. This is then added to the `modules` property of our `nuxt.config` file. You will also see we have registered our plugin which is located in the plugin folder and is called `axios.js`
+`plugins/axios.js` intercepts the `$axios` call using the `onError()` function.
 
-Our plugin is a function that passes in `$axios` and redirect to the context. This intercepts the `$axios` call using the `onError()` function and if there is an error with the response status of '404' we redirect the user to the no-posts page.
+`pages/index.vue` uses `$axios` to fetch our data from an API.
 
-In the `external-plugins.vue` file we have created a link to a page with a post id that doesn't exist in our API. Therefore the interceptor will be called instead of us going to the `posts/_id.vue` page. If there is no error then the route will work as normal and our data will be fetched using `$axios`.
+`pages/posts/_id.vue` uses `$axios` to fetch our data from an API with the id coming from route params.
+
+`pages/no-posts.vue` is the page that is called when there is an error.
+
+`nuxt.config.js` contains the `module` property and `plugin` property to register our module and plugin.
+
+`package.json` shows our module `@nuxtjs/axios` has been installed.
 
 <app-modal>
   <code-sandbox :src="csb_link_plugins_external"></code-sandbox>
@@ -206,9 +212,13 @@ You can refer to the [configuration build](/guides/configuration-glossary/confi
 
 ### Example
 
-In this example we show how to add a vue plugin to your application. In the plugins folder you will find a `vue-toolitp.js` file which will import Vue and the tooltip and then tell Vue to use it. You will see in the `package.json` file that the v-tooltip package has been installed. In our nuxt.config file we add our plugin to the plugins property as well as the css file that we want to use for the tooltip. This is a reduced version of the css file that this plugin provides you with.
+`plugins/vue-toolitp.js` registers our plugin so we can use it.
 
-In our `vue-plugins.vue` page we have a have a button where we pass in the v-tooltip directive with a message that comes from our data property and we add to it the value of top-center so it is positioned at the top.
+`pages/index.vue` imports our tooltip and tells Vue to use.
+
+`nuxt.config.js` contains the `plugins` property to register our plugin and the `css` property to add our tooltip css.
+
+`package.json` show our tooltip package has been installed.
 
 <app-modal>
   <code-sandbox  :src="csb_link_plugins_vue"></code-sandbox>
@@ -248,7 +258,9 @@ export default {
 
 ### Example
 
-In this example we register a plugin so that it is only available on the client side. In the plugins folder we have a file called `client-only.js` which uses the `window.alert()` function to send an alert message. You will see this message before the page is initialized which is how plugins work. As we do not have access to the window property on server side we must register this plugin only on the client. You can see in the nuxt.config.js file that we register the plugin with `.client.js` as its extension.
+`plugins/client-only.client.js` uses the `window.alert()` function which is not available on server side.
+
+`nuxt.config.js` contains the `plugins` property to register the plugin on client side thanks to the `.client` extension.
 
 <app-modal>
   <code-sandbox  :src="csb_link_plugins_client"></code-sandbox>
@@ -317,13 +329,20 @@ Don't use `Vue.use()`, `Vue.component()`, and globally, don't plug anything in V
 
 ### Example
 
-In the first example we show how to create a simple plugin that logs a message to the console using the `inject()` method which you can see in `plugins/hello.js`. We can then use this plugin by first registering it in the plugins property in the `nuxt.config` file. In our `hello-plugin.vue` page we first use a the `mounted()` function to log to the console our hello plugin with the value of mounted which shows how simple it is to use.
+`plugins/hello.js` - logs a message to the console with a dynamic message.
 
-We then show another example using the store. In our store we have a `changeHelloValue()` function which allows us to store new values of the hello message. Then in our `hello-plugin.vue` page we use a `method()` to change the value and commit the new value to the store. We then call this method from our input when the user presses enter. Every time a user enters some text in the input it will be shown below the input as well as saved to the store. Then in the console a new message will be logged with 'Hello' followed by the text the user entered in the text field.
+`store/index.js` - stores our dynamic message from our input.
 
-In the second example we show how to use a plugin to store the url of your API so you can easily make calls to your API to retrieve data without having to add it's URL each time. In the `plugins/nuxt-api.js` we use a function that awaits a fetch call to our API followed by a dynamic path returning the value in JSON format. We then use the `inject()` method to make this function available throughout our app.
+`pages/hello-plugin.vue` uses the hello plugin to:
 
-We can see this in use in the `api-plugin.vue` page where we use asyncData passing in app to our context so we can then access our plugin through `app` followed by the name of our plugin and passing in the the path which in this case is 'posts'. We then return this value and can use it in our template to print out a list of posts.
+- log a message to the console on mounted.
+- log a message to the console containing the value from our input.
+
+`plugins/nuxt-api.js` - fetches data from our API.
+
+`pages/api-plugin.vue` - uses our plugin to fetch and show the data from our API.
+
+`nuxt.config.js` - registers our plugins using the `plugins` property.
 
 <app-modal>
   <code-sandbox  :src="csb_link_plugins_custom"></code-sandbox>

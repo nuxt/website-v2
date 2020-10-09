@@ -127,7 +127,13 @@ export default {
 
 ### Example
 
-In this example we use the router middleware to set a class before we enter the route. In the store we have a `class.js` file which sets a class to the body. In the middleware folder, in the `class.js` file, we commit the name of the route to our `setClass` function from the store. We can then add a style for these routes which you can see in the Navigation component where we change the font size for the route with the name of `router-middleware`. The middleware is activated in the `nuxt.config` file using the `router` property.
+`store/class.js` sets a class to the body.
+
+`middleware/class.js` uses router middleware to set a class before we enter the route.
+
+`components/Navigation.vue` changes the font size for the route with the name of `router-middleware`.
+
+`nuxt.config.js` contains the `router` property to activate the middleware.
 
 <app-modal>
   <code-sandbox  :src="csb_link_router"></code-sandbox>
@@ -160,11 +166,13 @@ export default function ({ store, redirect }) {
 
 ### Example
 
-In this example we use named middleware which gets called before we enter the route. In the `named-middleware.vue` file we have a middleware property with the value of 'auth'. When a user tries to access the Named Middleware route it will first activate the `auth.js` file located in the middleware folder. This file checks to see if the user is authenticated and if they aren't it redirects them to the auth page.
+`pages/named-middleware.vue` contains a `middleware` property with the value of `auth` which is called before a user enters the route.
 
-The `auth.vue` page contains a simple example which uses the store to authenticate the user. The `auth.js` file located in the store simply sets the the user and password values. When the form is filled in the login button is activated and when clicked calls the `login()` method which commits the user and password values to the store and sends you to the Named Middleware page using `$router.push`.
+`middleware/auth.js` checks to see if the user is authenticated and if they aren't it redirects them to the auth page.
 
-The logout button located in the `named-middleware.vue` page calls a `logout()` method which resets the user and password values and sends you back to the home page.
+`pages/auth.vue` uses the store to authenticate the user.
+
+`store/auth.js` sets the the user and password values and redirects the user.
 
 <app-modal>
   <code-sandbox  :src="csb_link_named"></code-sandbox>
@@ -193,7 +201,9 @@ If you need to use a middleware only for a specific page, you can directly use a
 
 ### Example
 
-In this example we use anonymous middleware to show how many visits a page has received. In the `anonymous-middleware.vue` file there is a middleware function which uses the store to call the increment mutation. This page also displays the page visits from the store. The store contains an `analytics.js` file which sets the `pageVisits` to 0 and increments the visits every time the increment function is called. Every time we visit the Anonymous Middleware page you will see the visits increment.
+`pages/anonymous-middleware.vue` contains a middleware function which uses the store to call the increment mutation with results from the store displayed on the page.
+
+`store/analytics.js` sets the `pageVisits` to 0 and increments the visits every time the increment function is called.
 
 <app-modal>
   <code-sandbox  :src="csb_link_anonymous"></code-sandbox>

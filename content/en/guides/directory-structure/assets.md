@@ -83,7 +83,10 @@ When working with dynamic images you will need to use require
 
 ### Example
 
-In this example we show how to add an svg to the `<img>` tag from the assets folder. We also show how to add a background image.
+`pages/index.vue` shows:
+
+- how to add an svg to the `<img>` tag from the assets folder.
+- how to add a background image.
 
 <app-modal>
   <code-sandbox  :src="csb_link"></code-sandbox>
@@ -114,7 +117,7 @@ export default {
 
 ### Example
 
-In this example we show how to add a css file to your project so it is globally available by adding it to the `css` property in the `nuxt.config` file.
+`nuxt.config.js` contains the `css` property for globally adding a css file.
 
 <app-modal>
   <code-sandbox  :src="csb_link"></code-sandbox>
@@ -174,7 +177,7 @@ You can use local fonts by adding them to your assets folder. Once they have bee
 
 ### Example
 
-In this example we show how to reference the DMSans fonts from the assets folder using the `@font-face` rule in the `main.css` file.
+`assets/main.css` shows how to reference the DMSans fonts from the assets folder using the `@font-face` rule.
 
 <app-modal>
   <code-sandbox  :src="csb_link"></code-sandbox>

@@ -46,7 +46,7 @@ For all links to pages within your site, use `<NuxtLink>`. If you have links to 
 
 ## Example
 
-Basic example of routing between pages using the `<NuxtLink>` component.
+`pages/index.vue` and `pages/fun.vue` shows routing between pages using the [`<NuxtLink>`](/guides/features/nuxt-components#the-nuxtlink-component) component.
 
 <app-modal>
   <code-sandbox :src="csb_link"></code-sandbox>

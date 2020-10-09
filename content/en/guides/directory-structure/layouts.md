@@ -133,11 +133,9 @@ export default {
 
 This example uses 3 layouts:
 
-- default.vue used in the home page
-
-- auth.vue used in the /login page
-
-- profile.vue used in the /profile page when logged in
+- `layouts/default.vue` used in the home page
+- `layouts/auth.vue` used in the /login page
+- `layouts/profile.vue` used in the /profile page when logged in
 
 They are stored in the layouts/ directory and used in the corresponding pages with the `layout` property.
 

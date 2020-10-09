@@ -26,7 +26,7 @@ On the "Add repository branch" page, select your repository and the branch you w
 
 On the "Configure build settings" page, click the `Edit` button under the "Build and test settings". Change the following:
 
-1. Set the **build** commands to `npm run build && npm run export`.
+1. Set the **build** commands to `npm run generate`.
 2. Set the `baseDirectory` location to be `dist`.
 
 The settings should look like this once you are done editing them:

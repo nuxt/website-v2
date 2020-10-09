@@ -39,7 +39,7 @@ touch nuxt.config.js
 
 `components`ディレクトリにはページにインポートするすべての Vue.js のコンポーネントファイルを入れます。
 
-Nuxt.js を使用すると、作成したコンポーネントを .vue ファイルに自動でインポートすることができます。コンポーネントを true に設定すると、Nuxt.js がスキャンして自動でインポートしてくれます。
+Nuxt.js を使用すると、作成したコンポーネントを .vue ファイルに自動でインポートすることができます。（訳注: nuxt.config.js 内の）components を true に設定すると、Nuxt.js がスキャンして自動でインポートしてくれます。
 
 <base-alert type="next">
 

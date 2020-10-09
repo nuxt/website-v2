@@ -165,8 +165,8 @@ The path to the fallback HTML file. It should be set as the error page, so that 
 
 When running a SPA it is more idiomatic to use a `200.html`, as it's the only file necessary as no other routes are generated.
 
-```{}[nuxt.config.js]
-fallback: false;
+```js{}[nuxt.config.js]
+fallback: false
 ```
 
 If working with statically generated pages then it is recommended to use a `404.html` for error pages and for those covered by [excludes](https://nuxtjs.org/api/configuration-generate#exclude) (the files that you do not want generated as static pages).

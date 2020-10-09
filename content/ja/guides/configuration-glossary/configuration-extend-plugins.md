@@ -1,19 +1,19 @@
 ---
-title: 'The extendPlugins Property'
-description: The extendPlugins property lets you customize Nuxt.js plugins.
+title: 'extendPlugins プロパティ'
+description: 'extendPlugins プロパティで Nuxt.js プラグインのカスタマイズができます。'
 menu: extendPlugins
 category: configuration-glossary
 position: 9
 ---
 
-> The extendPlugins property lets you customize Nuxt.js plugins ([options.plugins](/guides/configuration-glossary/configuration-plugins)).
+> extendPlugins プロパティで Nuxt.js プラグインのカスタマイズができます。（[options.plugins](/guides/configuration-glossary/configuration-plugins)）。
 
-- Type: `Function`
-- Default: `undefined`
+- 型: `Function`
+- デフォルト: `undefined`
 
-You may want to extend plugins or change plugins order created by Nuxt.js. This function accepts an array of [plugin](/guides/configuration-glossary/configuration-plugins) objects and should return array of plugin objects.
+プラグインを拡張したり、Nuxt.js で作成したプラグインの順序を変更したい場合があるでしょう。この関数は [プラグイン](/guides/configuration-glossary/configuration-plugins) オブジェクトの配列を受け取り、プラグインオブジェクトの配列を返します。
 
-Example of changing plugins order:
+プラグインの順序を変更する例:
 
 ```js{}[nuxt.config.js]
 export default {

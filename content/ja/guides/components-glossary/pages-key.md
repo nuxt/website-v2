@@ -1,17 +1,17 @@
 ---
-title: 'The key Property'
-description: Set the `key` property of internal `<router-view>` component
-menu: Key Property
+title: 'key プロパティ'
+description: 内部の `<router-view>` コンポーネントに `key` プロパティを設定します
+menu: Key プロパティ
 category: components-glossary
 ---
 
-> Set the `key` property of internal `<router-view>` component
+> 内部の `<router-view>` コンポーネントに `key` プロパティを設定します。
 
-- **Type:** `String` or `Function`
+- **型:** `String` または `Function`
 
-The `key` property is propagated into `<router-view>`, which is useful to make transitions inside a dynamic page and different route. Different keys result in rerendering of page components.
+`key` プロパティは `<router-view>` に渡され、動的ページでのルートトランジションに使われます。key が異なる場合はページコンポーネントが再レンダリングされます。
 
-There are several ways to set the key. For more details, please refer to the `nuxtChildKey` prop in [the nuxt component](/guides/features/nuxt-components).
+key を設定する方法は他にもあります。詳細については [nuxt コンポーネント](/guides/features/nuxt-components)の `nuxtChildKey` プロパティを参照してください。
 
 ```js
 export default {

@@ -11,7 +11,7 @@ Nuxt.js `v2.12` から、**すべての Vue コンポーネントに対して** 
 
 <base-alert>
 
-`fetch(context)` メソッドは非推奨となりましたが、代わりに [無名ミドルウェア](/guides/components-glossary/pages-middleware#無名ミドルウェア) をページコンポーネント内の `middleware(context)` で使うことできます。
+`fetch(context)` メソッドは非推奨となりましたが、代わりに[無名ミドルウェア](/guides/components-glossary/pages-middleware#無名ミドルウェア)をページコンポーネント内の `middleware(context)` で使うことできます。
 
 </base-alert>
 

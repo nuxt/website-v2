@@ -7,7 +7,7 @@ category: components-glossary
 
 ## Nuxt >= 2.12
 
-Nuxt.js `v2.12` では、**どの Vue コンポーネントにも** `fetch` という新しいフックが導入されています。
+Nuxt.js `v2.12` から、**すべての Vue コンポーネントに対して** `fetch` という新しいフックが導入されています。
 
 <base-alert>
 

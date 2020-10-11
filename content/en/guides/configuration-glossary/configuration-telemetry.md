@@ -6,8 +6,6 @@ category: configuration-glossary
 position: 30
 ---
 
-## The telemetry Property
-
 > Nuxt v2.13.0 introduces Nuxt Telemetry to collect anonymous telemetry data about general usage. This helps us to accurately gauge Nuxt feature usage and customization across all our users.
 
 - Type: `Boolean`

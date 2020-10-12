@@ -77,7 +77,7 @@ Alias of `route.query`.
 
 Environment variables set in `nuxt.config.js`, see [env api](/guides/configuration-glossary/configuration-env).
 
-### IsDev
+### isDev
 
 `isDev` (_Boolean_)
 
@@ -101,7 +101,7 @@ Use this method to redirect the user to another route, the status code is used o
 
 Use this method to show the error page: `error(params)`. The `params` should have the properties `statusCode` and `message`.
 
-### $config
+### \$config
 
 `$config` (_Object_)
 

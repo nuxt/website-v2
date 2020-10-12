@@ -1,5 +1,5 @@
 ---
-title: La propriété d'indication de chargement
+title: La propriété loading indicator
 description: Affiche des indications de chargement originaux lorsque la page SPA est en train de charger !
 menu: loadingIndicator
 category: configuration-glossary

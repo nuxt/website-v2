@@ -1,34 +1,34 @@
 ---
 title: Conclusion
-description: Félicitations, vous avez maintenant créé votre première application Nuxt.js et vous pouvez maintenant vous considérer comme un Nuxter. Mais il y a tellement plus à apprendre et tellement plus que vous pouvez faire avec Nuxt.js. Voici quelques recommandations.
+description: Félicitations, nous avons maintenant créé notre première application Nuxt.js et nous pouvons maintenant nous considérer comme un Nuxter. Mais il y a tellement plus à apprendre et tellement plus que nous pouvons faire avec Nuxt.js. Voici quelques recommandations.
 position: 4
 category: get-started
 questions:
-  - question: Quel est le nom du répertoire dont vous avez besoin pour que Nuxt.js fonctionne ?
+  - question: Quel est le nom du répertoire dont nous avons besoin pour que Nuxt.js fonctionne ?
     answers:
       - nuxt
       - pages
       - index
     correctAnswer: pages
-  - question: Quel est le nom de votre fichier ID de projet ?
+  - question: Quel est le nom de notre fichier ID de projet ?
     answers:
       - package.vue
       - package.json
       - package.js
     correctAnswer: package.json
-  - question: Quelle est la commande que vous tapez dans le terminal pour lancer votre projet Nuxt.js ?
+  - question: Quelle est la commande que nous devons taper dans le terminal pour lancer notre projet Nuxt.js ?
     answers:
       - npm dev
       - npm run dev
       - nuxt dev
     correctAnswer: npm run dev
-  - question: Quelle est l'adresse dans le navigateur où vous pouvez voir votre page en mode développement ?
+  - question: Quelle est l'adresse dans le navigateur où nous pouvons voir notre page en mode développement ?
     answers:
       - http://localhost:3000/
       - http://localhost:3000/project-name:3000
       - http://localhost:3000/nuxt:3000/
     correctAnswer: http://localhost:3000/
-  - question: Où mettez-vous votre configuration ?
+  - question: Où mettons-nous notre configuration ?
     answers:
       - nuxt.config.json
       - config.js
@@ -40,7 +40,7 @@ questions:
       - static
       - components
     correctAnswer: static
-  - question: Dans quel répertoire mettez-vous vos styles ?
+  - question: Dans quel répertoire mettons-nous les styles ?
     answers:
       - styles
       - components
@@ -65,7 +65,7 @@ questions:
     correctAnswer: True
 ---
 
-Félicitations ! Vous avez créé votre première application Nuxt.js et vous pouvez maintenant vous considérer comme un Nuxter, mais il y a tellement plus à apprendre et tellement plus à faire avec Nuxt.js. Voici quelques pistes :
+Félicitations, nous avons maintenant créé notre première application Nuxt.js et nous pouvons maintenant nous considérer comme un Nuxter. Mais il y a tellement plus à apprendre et tellement plus que nous pouvons faire avec Nuxt.js. Voici quelques recommandations.
 
 <base-alert type="next">
 

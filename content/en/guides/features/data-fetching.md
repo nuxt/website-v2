@@ -236,7 +236,7 @@ The navigation to the same page will not call `fetch` if last `fetch` call w
 ```html{}[pages/posts/_id.vue]
 <template>
   <div>
-    <h1>{{ post.title }</h1>
+    <h1>{{ post.title }}</h1>
     <p>{{ post.description }}</p>
   </div>
 </template>

@@ -306,7 +306,7 @@ This css can be added to the navigation component or for a specific page or layo
 
 </base-alert>
 
-If you want to you can also configure the class name to be something else. You con do this by modifying the `linkActiveClass` in the router property in your `nuxt.config.js` file.
+If you want to you can also configure the class name to be something else. You can do this by modifying the `linkActiveClass` in the router property in your `nuxt.config.js` file.
 
 ```js
 export default {

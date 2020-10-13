@@ -476,8 +476,14 @@ Then in our script tag we can add our props of author which is an object and set
 To use the component we will need to add it to our markdown and pass in our props.
 
 ```markdown{}[content/articles/my-first-blog-post.md]
-<author :author="author" />
+<author :author="author"></author>
 ```
+
+<base-alert>
+
+You cannot use self closing tags in markdown, for instance, `<author :author="author" />` won't work.
+
+</base-alert>
 
 Putting the component here means we will have to repeat it for every article. In this case it would be better to add it directly to the slug page. We will need to change the author prop to `article.author`.
 

@@ -248,13 +248,24 @@ We now have a title, description, img and alt variable that we can access to by 
   <article>
     <h1>{{ article.title }}</h1>
     <p>{{ article.description }}</p>
-    <img :src="article.img" :alt="article.alt" />
+    <img
+      :src="article.image"
+      :alt="article.alt"
+    />
     <p>Article last updated: {{ formatDate(article.updatedAt) }}</p>
 
     <nuxt-content :document="article" />
   </article>
 </template>
 ```
+
+<base-alert>
+
+In order to render images included in the YAML of the article we either need to place them in the static folder or use the syntax: `` :src="require(`~/assets/images/${article.image}`)" ``.
+
+Images included in the article content should always be placed **in the static folder** as @nuxt/content is independent of Webpack. The static folder doesn't go through webpack whereas the assets folder does.
+
+</base-alert>
 
 ### Styling our markdown content
 
@@ -278,11 +289,9 @@ If we inspect this page we can see that everything written inside our markdown i
 
 All other tags that come from our YAML front matter can be styled as normal either using [TailwindCSS](https://tailwindcss.com/) or adding css in the style tag.
 
-<base-alert>
-Scoped styles will not work with nuxt-content so if adding them in the style
-tag you shouldn't use scoped. You can add the styles here or as a global style
-in your css folder.
-</base-alert>
+To use scoped styles with the nuxt-content class you need to use a deep selector: `/deep/`, `::v-deep` or `>>>`
+
+All other tags that come from our YAML front matter can be styled as normal either using [TailwindCSS](https://tailwindcss.com/) or adding css in the style tag.
 
 Our markdown tags are converted into the correct tags which means we now have two `<h1>` tags. We should now remove the one from our markdown file.
 
@@ -467,8 +476,14 @@ Then in our script tag we can add our props of author which is an object and set
 To use the component we will need to add it to our markdown and pass in our props.
 
 ```markdown{}[content/articles/my-first-blog-post.md]
-<author :author="author" />
+<author :author="author"></author>
 ```
+
+<base-alert>
+
+You cannot use self closing tags in markdown, for instance, `<author :author="author" />` won't work.
+
+</base-alert>
 
 Putting the component here means we will have to repeat it for every article. In this case it would be better to add it directly to the slug page. We will need to change the author prop to `article.author`.
 

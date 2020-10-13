@@ -77,7 +77,7 @@ Alias of `route.query`.
 
 Environment variables set in `nuxt.config.js`, see [env api](/guides/configuration-glossary/configuration-env).
 
-### IsDev
+### isDev
 
 `isDev` (_Boolean_)
 

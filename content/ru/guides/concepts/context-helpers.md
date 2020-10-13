@@ -1,5 +1,5 @@
 ---
-title: Context and Helpers
+title: Контекст и Хелперы
 description: The context provides *additional* and often optional information about the current request to the application.
 position: 2
 category: concepts

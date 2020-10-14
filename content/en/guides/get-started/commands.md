@@ -59,7 +59,7 @@ You can run different commands depending on the [target](/guides/features/deploy
 
 ### target: `server` (default value)
 
-- **nuxt dev** - Launch a development server on localhost:3000 with hot-reloading.
+- **nuxt dev** - Launch a development server on `http://localhost:3000` with hot-reloading.
 - **nuxt build** - Build your application with webpack and minify the JS & CSS (for production).
 - **nuxt start** - Start the production server (after running `nuxt build`). Use it for Node.js hosting like Heroku, Digital Ocean, etc.
 

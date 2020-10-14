@@ -8,7 +8,63 @@ csb_link: https://codesandbox.io/embed/github/nuxt-academy/guides-examples/tree/
 
 ## Prerequisites
 
-Here, you will find information on setting up and running a Nuxt.js project in 4 steps.
+- [node](https://nodejs.org/en/download/) - at least v8.9.0 _We recommend you have the latest version installed._
+- Text editor: Use whatever you like, but we recommend [VSCode](https://code.visualstudio.com/).
+- Use whatever you like, but we recommend using VSCode's [integrated terminal](https://code.visualstudio.com/docs/editor/integrated-terminal).
+
+## Using create-nuxt-app
+
+To get started quickly you can use the [create-nuxt-app](https://github.com/nuxt/create-nuxt-app).
+
+Make sure you have npx installed (npx is shipped by default since NPM 5.2.0) or npm v6.1 or yarn.
+
+<code-group>
+  <code-block label="Yarn" active>
+
+```bash
+yarn create nuxt-app <project-name>
+```
+
+  </code-block>
+  <code-block label="NPX">
+
+```bash
+npx create-nuxt-app <project-name>
+```
+
+  </code-block>
+    <code-block label="NPM">
+
+```bash
+npm init nuxt-app <project-name>
+```
+
+  </code-block>
+
+</code-group>
+
+It will ask you some questions (name, Nuxt options, UI framework, TypeScript, linter, testing framework, etc.), when answered, it will install all the dependencies. The next step is to navigate to the project folder and launch it:
+
+<code-group>
+  <code-block label="Yarn" active>
+
+```bash
+cd <project-name>
+yarn dev
+```
+
+  </code-block>
+  <code-block label="NPM">
+
+```bash
+cd <project-name>
+npm run dev
+```
+
+  </code-block>
+</code-group>
+
+The application is now running on [http://localhost:3000](http://localhost:3000). Well done!
 
 <base-alert type="info">
 
@@ -16,21 +72,7 @@ Another way to get started with Nuxt.js is to use [CodeSandbox](https://template
 
 </base-alert>
 
-### Node
-
-[node](https://nodejs.org/en/download/) - at least v8.9.0
-
-_We recommend you have the latest version installed._
-
-### Text editor
-
-Use whatever you like, but we recommend [VSCode](https://code.visualstudio.com/).
-
-### Terminal
-
-Use whatever you like, but we recommend using VSCode's [integrated terminal](https://code.visualstudio.com/docs/editor/integrated-terminal).
-
-## Starting from scratch
+## Manual Installation
 
 Creating a Nuxt.js project from scratch only requires one file and one directory.
 
@@ -188,57 +230,3 @@ Create a directory named `more-fun` and put an `index.vue` file inside. This wil
 <app-modal>
   <code-sandbox  :src="csb_link"></code-sandbox>
 </app-modal>
-
-## Using create-nuxt-app
-
-To get started quickly you can use the [create-nuxt-app](https://github.com/nuxt/create-nuxt-app).
-
-Make sure you have npx installed (npx is shipped by default since NPM 5.2.0) or npm v6.1 or yarn.
-
-<code-group>
-  <code-block label="Yarn" active>
-
-```bash
-yarn create nuxt-app <project-name>
-```
-
-  </code-block>
-  <code-block label="NPX">
-
-```bash
-npx create-nuxt-app <project-name>
-```
-
-  </code-block>
-    <code-block label="NPM">
-
-```bash
-npm init nuxt-app <project-name>
-```
-
-  </code-block>
-
-</code-group>
-
-It will ask you some questions (name, Nuxt options, UI framework, TypeScript, linter, testing framework, etc.), when answered, it will install all the dependencies. The next step is to navigate to the project folder and launch it:
-
-<code-group>
-  <code-block label="Yarn" active>
-
-```bash
-cd <project-name>
-yarn dev
-```
-
-  </code-block>
-  <code-block label="NPM">
-
-```bash
-cd <project-name>
-npm run dev
-```
-
-  </code-block>
-</code-group>
-
-The application is now running on [http://localhost:3000](http://localhost:3000). Well done!

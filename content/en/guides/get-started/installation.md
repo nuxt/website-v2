@@ -8,7 +8,7 @@ csb_link: https://codesandbox.io/embed/github/nuxt-academy/guides-examples/tree/
 
 ## Prerequisites
 
-- [node](https://nodejs.org/en/download/) - at least v8.9.0 _We recommend you have the latest version installed._
+- [node](https://nodejs.org) - at least v10.13 _We recommend you have the latest version installed._
 - A text editor, we recommend [VSCode](https://code.visualstudio.com/) with the [Vetur](https://marketplace.visualstudio.com/items?itemName=octref.vetur) extension.
 - A terminal, we recommend using VSCode's [integrated terminal](https://code.visualstudio.com/docs/editor/integrated-terminal).
 

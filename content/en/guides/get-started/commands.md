@@ -65,7 +65,7 @@ You can run different commands depending on the [target](/guides/features/deploy
 
 ### target: `static`
 
-- **nuxt dev** - Launch a development server on localhost:3000 with hot-reloading.
+- **nuxt dev** - Launch a development server on `http://localhost:3000` with hot-reloading.
 - **nuxt generate** - Build the application (if needed), generate every route as a HTML file and statically export to `/dist` (used for static hosting).
 - **nuxt start** - serve the dist/ directory like your static hosting would do (Netlify, Vercel, Surge, etc), great for testing before deploying.
 

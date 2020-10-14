@@ -226,13 +226,21 @@ export default {
           {
             name: 'MiniTool',
             img: 'minitool.png',
-            url: 'https://www.minitool.com',
+            url: 'https://www.minitool.com?ref=nuxt',
             class: 'h-8'
           },
           {
             name: 'VPS Server',
             img: 'vps-server.png',
-            url: 'https://www.vpsserver.com/',
+            url: 'https://www.vpsserver.com/?ref=nuxt',
+            class: 'h-8'
+          }
+        ],
+        bronze: [
+          {
+            name: 'SendCloud',
+            img: 'sendcloud.svg',
+            url: 'https://www.sendcloud.com/?ref=nuxt',
             class: 'h-8'
           }
         ],

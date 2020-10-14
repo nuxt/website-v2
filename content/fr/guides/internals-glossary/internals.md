@@ -1,7 +1,7 @@
 ---
-title: 'Introduction aux modules Nuxt'
+title: Introduction aux modules Nuxt
 description: Mieux comprendre les modules internes de Nuxt
-menu: Nuxt Modules
+menu: Introduction aux modules Nuxt
 category: internals-glossary
 position: 3
 ---
@@ -82,7 +82,6 @@ class SomeClass {
 ```
 
 Les classes sont _plugables_ donc elles doivent être enregistré en tant que plugin sur le conteneur principal `nuxt` pour avoir plus de hooks.
-
 
 ```js
 class FooClass {

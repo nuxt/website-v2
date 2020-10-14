@@ -1,7 +1,7 @@
 ---
 title: 'nuxt.renderRoute(route, context)'
 description: Rendu d'une route spécifique avec un contexte donné.
-menu: renderRoute
+menu: nuxt.renderRoute
 category: internals-glossary
 position: 11
 ---

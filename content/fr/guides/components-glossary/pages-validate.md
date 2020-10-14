@@ -1,7 +1,7 @@
 ---
-title: 'La méthode validate'
+title: La méthode validate
 description: Nuxt.js vous permet de définir une méthode de validation à l'intérieur de votre composant de routes dynamiques.
-menu: Validate Method
+menu: La méthode validate
 category: components-glossary
 ---
 

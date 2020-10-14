@@ -1,7 +1,7 @@
 ---
-title: 'La méthode fetch'
+title: La méthode fetch
 description: La méthode fetch est utilisé pour remplir le store avant de render la page, c'est similaire à `asyncData` sauf que cela ne remplit pas le `data` du composant.
-menu: Fetch Method
+menu: La méthode fetch
 category: components-glossary
 ---
 

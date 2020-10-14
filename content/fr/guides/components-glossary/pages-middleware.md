@@ -1,7 +1,7 @@
 ---
-title: 'La propriété middleware'
+title: La propriété middleware
 description: Définit le middleware pour une page spécifique de l'application.
-menu: Middleware Property
+menu: La propriété middleware
 category: components-glossary
 ---
 

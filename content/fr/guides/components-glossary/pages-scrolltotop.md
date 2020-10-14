@@ -1,7 +1,7 @@
 ---
-title: 'La propriété scrollToTop'
+title: La propriété scrollToTop
 description: La propriété scrollToTop indique à Nuxt.js qu'il faut défiler tout en haut de la page avant de la render.
-menu: scrollToTop Property
+menu: La propriété scrollToTop
 category: components-glossary
 ---
 

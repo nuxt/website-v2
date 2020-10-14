@@ -1,7 +1,7 @@
 ---
 title: 'nuxt.render(req, res)'
 description: Vous pouvez utiliser Nuxt.js comme middleware pour votre serveur Node.js.
-menu: render
+menu: nuxt.render
 category: internals-glossary
 position: 10
 ---

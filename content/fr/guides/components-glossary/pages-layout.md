@@ -1,7 +1,7 @@
 ---
-title: 'La propriété layout'
+title: La propriété layout
 description: Chaque fichier (du premier niveau) dans le répertoire des `layouts` créera un layout customisé accessible depuis la propriété `layout` dans le composant page.
-menu: Layout Property
+menu: La propriété layout
 category: components-glossary
 ---
 

@@ -1,7 +1,7 @@
 ---
-title: 'Utilisee Nuxt.js par programmation'
+title: Utiliser Nuxt.js programmatiquement
 description: Vous pouvez utiliser Nuxt.js par programmation pour l'utiliser comme un middleware vous donnant la liberté de créer votre propre serveur pour le rendu de vos applications web.
-menu: Using Nuxt Programmatically
+menu: Utiliser Nuxt.js programmatiquement
 category: internals-glossary
 position: 9
 ---

@@ -1,7 +1,7 @@
 ---
-title: 'La classe ModuleContainer'
-description: La classe ModuleContainer de Nuxt 
-menu: Module Container
+title: Le ModuleContainer
+description: La classe ModuleContainer de Nuxt
+menu: Le ModuleContainer
 category: internals-glossary
 position: 6
 ---
@@ -28,8 +28,8 @@ this.plugin('ready', async moduleContainer => {
 })
 ```
 
-| Plugin | Arguments | Quand |
-| --- | --- | --- |
+| Plugin  | Arguments       | Quand                                                      |
+| ------- | --------------- | ---------------------------------------------------------- |
 | `ready` | moduleContainer | Tous les modules dans `nuxt.config.js` ont été initialisés |
 
 ## Méthodes
@@ -91,7 +91,7 @@ Est un raccourci pour `addModule(moduleOpts, true)`
 
 Nous pouvons enregistrer des hooks sur certains événements du cycle de vie.
 
-| Hook | Arguments | Quand |
-| --- | --- | --- |
+| Hook             | Arguments                  | Quand                                                                                                     |
+| ---------------- | -------------------------- | --------------------------------------------------------------------------------------------------------- |
 | `modules:before` | (moduleContainer, options) | Appelé avant la création de la classe ModuleContainer, utile pour surcharger les méthodes et les options. |
-| `modules:done` | (moduleContainer) | Appelé lorsque tous les modules ont été chargés. |
+| `modules:done`   | (moduleContainer)          | Appelé lorsque tous les modules ont été chargés.                                                          |

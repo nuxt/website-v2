@@ -1,7 +1,7 @@
 ---
-title: 'La propriété `transition` de la page'
+title: La propriété `transition` de la page
 description: Nuxt.js utilise le composant `<transition>` pour nous permettre de créer et appliquer de superbes transitions/animations lors de la navigation entre les pages.
-menu: Transition Property
+menu: La propriété transition
 category: components-glossary
 ---
 

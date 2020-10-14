@@ -1,5 +1,5 @@
 ---
-title: Composants
+title: components
 description: Le répertoire des composants contient les composants Vue.js. Les composants sont les éléments qui constituent les différentes parties d'une page et peuvent être réutilisés et importés dans les pages, layouts ou même d'autres composants.
 position: 3
 category: directory-structure

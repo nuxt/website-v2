@@ -1,7 +1,7 @@
 ---
-title: 'La classe Nuxt'
+title: La classe Nuxt
 description: Nuxt Core Class
-menu: Nuxt Class
+menu: La classe Nuxt
 category: internals-glossary
 position: 4
 ---
@@ -20,9 +20,9 @@ nuxt.hook('ready', async nuxt => {
 })
 ```
 
-| Plugin | Arguments | Quand |
-| --- | --- | --- |
-| `ready` | (nuxt) |  Nuxt est prêt à travailler (`ModuleContainer` et `Renderer` prêt). |
-| `error` | (error) | Une erreur non gérée lors de l'appel de hooks. |
-| `close` | (nuxt) | La dernière instance se termine en douceur. |
+| Plugin   | Arguments              | Quand                                                                                  |
+| -------- | ---------------------- | -------------------------------------------------------------------------------------- |
+| `ready`  | (nuxt)                 | Nuxt est prêt à travailler (`ModuleContainer` et `Renderer` prêt).                     |
+| `error`  | (error)                | Une erreur non gérée lors de l'appel de hooks.                                         |
+| `close`  | (nuxt)                 | La dernière instance se termine en douceur.                                            |
 | `listen` | (server, {host, port}) | Le serveur Nuxt **interne** commence à écouter. (Utilisez `nuxt start` ou `nuxt dev`). |

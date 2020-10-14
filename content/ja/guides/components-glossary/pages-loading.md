@@ -13,7 +13,7 @@ category: components-glossary
 
 You can disable or customize it globally through the , but also disable it for specific pages by setting the `loading` property to `false` :
 
-[loading オプションの設定](/guides/configuration-glossary/configuration-loading) でグローバルで無効にしたりカスタマイズすることもできますし、特定のページについて `loading` プロパティを `false` に設定することで無効にすることもできます:
+[loading オプションの設定](/guides/configuration-glossary/configuration-loading) でグローバルに無効化やカスタマイズできるだけでなく、特定のページに対しても `loading` プロパティを `false` に設定することで無効化できます:
 
 ```html
 <template>

@@ -216,7 +216,7 @@ When generating your web application with `nuxt generate`, [the context](/guides
 
 ### Single Page Application Deployment (SPA)
 
-When ssr is set to false in our `nuxt.config.js` file (`ssr: false`) and we run the `build`/`generate` command, Nuxt will generate our dist folder with all generated routes. These html files common meta and resource links, but not page content. The content is generated in the browser, on the client side.
+When `ssr` is set to `false` in our `nuxt.config.js` file (`ssr: false`) and we run the `build`/`generate` command, Nuxt will generate our dist folder with all generated routes. These HTML files common meta and resource links, but not page content. The content is generated in the browser, on the client side.
 
 That means, we can't use SPA'S for applications where content depends on user authentication or a real time API (at least for the first load).
 

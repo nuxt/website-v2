@@ -55,7 +55,7 @@ npm run dev
 
 ## List of Commands
 
-You can run different commands depending on the [target](/guides/features/deployment-targets) :
+You can run different commands depending on the [target](/guides/features/deployment-targets):
 
 ### target: `server` (default value)
 

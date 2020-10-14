@@ -9,8 +9,8 @@ csb_link: https://codesandbox.io/embed/github/nuxt-academy/guides-examples/tree/
 ## Prerequisites
 
 - [node](https://nodejs.org) - at least v10.13 _We recommend you have the latest version installed._
-- A text editor, we recommend [VSCode](https://code.visualstudio.com/) with the [Vetur](https://marketplace.visualstudio.com/items?itemName=octref.vetur) extension.
-- A terminal, we recommend using VSCode's [integrated terminal](https://code.visualstudio.com/docs/editor/integrated-terminal).
+- A text editor, we recommend [VSCode](https://code.visualstudio.com/) with the [Vetur](https://marketplace.visualstudio.com/items?itemName=octref.vetur) extension or [WebStorm](https://www.jetbrains.com/webstorm/)
+- A terminal, we recommend using VSCode's [integrated terminal](https://code.visualstudio.com/docs/editor/integrated-terminal) or [Webstorm terminal](https://www.jetbrains.com/help/webstorm/terminal-emulator.html).
 
 ## Using create-nuxt-app
 

@@ -1452,10 +1452,10 @@
     consola "^2.11.3"
     http-proxy-middleware "^1.0.4"
 
-"@nuxtjs/pwa@^3.2.1":
-  version "3.2.1"
-  resolved "https://registry.yarnpkg.com/@nuxtjs/pwa/-/pwa-3.2.1.tgz#4ec0a254482c829e3f4403cc66d3dc575124ffa5"
-  integrity sha512-4tRwZee6n8zzLELjdg3Wq4zMny0hTN8JbIb0rPv6ikmU3DEo8NLVzkv9Hmm/EoHYWNdIyKOh11xrHrAYOLkDcA==
+"@nuxtjs/pwa@^3.2.2":
+  version "3.2.2"
+  resolved "https://registry.yarnpkg.com/@nuxtjs/pwa/-/pwa-3.2.2.tgz#e03c632e30f3df287a842d67323d945f36b97440"
+  integrity sha512-B+2VKwmaw40Wyds0hOKuN9R8ODHg7de8B7uQbzaZpLNuCinfKioQOk8jjaLDKRf4sndNG4AYI90Et4M+MRQetQ==
   dependencies:
     defu "^3.1.0"
     execa "^4.0.3"
@@ -8402,10 +8402,10 @@ nuxt-edge@^2.14.0-26597729.aebf0ffe:
     "@nuxt/telemetry" "^1.2.2"
     "@nuxt/webpack-edge" "2.14.0-26597729.aebf0ffe"
 
-nuxt-i18n@^6.15.1:
-  version "6.15.1"
-  resolved "https://registry.yarnpkg.com/nuxt-i18n/-/nuxt-i18n-6.15.1.tgz#01bccd4fe2181a0611d43392dd66e60341c04457"
-  integrity sha512-LWKfr1B6JWhXYEpM5iHXJ2kyXMyH7RiHLbAHTVWV6PoRFwHgaFAPC9juq6Uis/SLxKwojP2QOmwfZYep8Uk+Dw==
+nuxt-i18n@^6.15.3:
+  version "6.15.3"
+  resolved "https://registry.yarnpkg.com/nuxt-i18n/-/nuxt-i18n-6.15.3.tgz#75ac1c158325be92f5637b0bb1ccd9655e7f5902"
+  integrity sha512-BpR2G4exBTsxmD41oo+JsQJsJknU5F/M/+R5QD45OScqfOjgTGCJPXznydwaNd7eWvhyu5e/PcszK+cDuQ+x/Q==
   dependencies:
     "@babel/parser" "^7.5.5"
     "@babel/traverse" "^7.5.5"

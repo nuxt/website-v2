@@ -113,12 +113,6 @@ npm run start
   </code-block>
 </code-group>
 
-<base-alert type="info">
-
-use PORT=4000 nuxt start when using pwa module
-
-</base-alert>
-
 ### Static Deployment (Pre-rendered)
 
 Nuxt.js gives you the ability to host your web application on any static hosting.

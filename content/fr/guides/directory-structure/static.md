@@ -34,41 +34,42 @@ questions:
     correctAnswer: vrai
 ---
 
-The `static` directory is directly mapped to the server root and contains files that likely won't be changed. All included files will be automatically served by Nuxt and are accessible through your project root URL.
+Le répertoire `static` est directement mappé à la racine du serveur et contient des fichiers qui ne seront probablement pas modifiés au cours du temps. Tous les fichiers inclus seront automatiquement servis par Nuxt et sont accessibles via l'URL racine de votre projet.
 
-`/static/robots.txt` will be available at `http://localhost:3000/robots.txt`
+`/static/robots.txt` sera disponible sur` http://localhost:3000/robots.txt`
 
-`/static/favicon.ico` will be available at  `http://localhost:3000/favicon.ico`
+`/static/favicon.ico` sera disponible sur` http://localhost:3000/favicon.ico`
 
-This option is helpful for files like `robots.txt`, `sitemap.xml` or `CNAME` (which is important for GitHub Pages deployment).
+Cette option est utile pour les fichiers tels que `robots.txt`,` sitemap.xml` ou `CNAME` (qui est important pour le déploiement des pages GitHub par exemple).
 
 <base-alert>
 
-_This directory cannot be renamed without extra configuration._
+_Ce répertoire ne peut pas être renommé sans configuration supplémentaire ._
 
 </base-alert>
 
 ## Static Assets
 
-If you don't want to use Webpack assets from the `assets` directory, you can add the images to the static directory.
+Si vous ne souhaitez pas utiliser les assets Webpack du répertoire ʻassets`, vous pouvez ajouter les images au répertoire static.
 
-In your code, you can then reference these files relative to the root (`/`):
+Dans votre code, vous pouvez ensuite référencer ces fichiers par rapport à la racine (`/`):
 
 ```html
-<!-- Static image from static directory -->
+<!-- Static image depuis le répertoire static -->
 <img src="/my-image.png" />
 
-<!-- webpacked image from assets directory -->
+<!-- image traité par webpack depuis le répertoire assets -->
 <img src="@/assets/my-image-2.png" />
 ```
 
-## Static Directory Config
+## Configuration Du Répertoire Static
 
-Should you need to you can configure the `static/` directory behaviour in the `nuxt.config.js` file.
+Si vous en avez besoin, vous pouvez configurer le comportement du répertoire `static/` dans le fichier `nuxt.config.js`.
 
-### Static asset Prefix
+### Prefix ressources Statique
 
-If you deploy Nuxt.js to a subfolder, e.g. `/blog/`, the router base will be added to the static asset path by default. If you want to disable this behavior, you can set `static.prefix` to false in the `nuxt.config.js`.
+Si vous déployez Nuxt.js dans un sous-dossier, par exemple `/blog/`, la base du routeur sera ajoutée par défaut au chemin statique par défaut. Si vous souhaitez désactiver ce comportement, vous pouvez définir `static.prefix` sur false dans`nuxt.config.js`.
+
 
 ```js
 export default {
@@ -78,9 +79,9 @@ export default {
 }
 ```
 
-Default: `/blog/my-image.png`
+Defaut: `/blog/my-image.png`
 
-With `static.prefix` disabled: `/my-image.png`
+avec `static.prefix` désactivé: `/my-image.png`
 
 <app-modal>
   <code-sandbox  :src="csb_link"></code-sandbox>

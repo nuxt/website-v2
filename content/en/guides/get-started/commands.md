@@ -3,7 +3,6 @@ title: Commands and Deployment
 description: Nuxt.js comes with a set of useful commands, both for development and production purpose.
 position: 4
 category: get-started
-csb_link: https://codesandbox.io/embed/github/nuxt-academy/guides-examples/tree/master/01_get_started/02_routing?fontsize=14&hidenavigation=1&theme=dark
 ---
 
 Nuxt.js comes with a set of useful commands, both for development and production purpose.

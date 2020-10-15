@@ -86,7 +86,7 @@ npm run build
   </code-block>
 </code-group>
 
-Nuxt.js will create a `.dist` folder with everything inside ready to be deployed on your server hosting.
+Nuxt.js will create a `.nuxt` folder with everything inside ready to be deployed on your server hosting.
 
 <base-alert type="info">
 

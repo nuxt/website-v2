@@ -16,7 +16,7 @@ position: 28.1
 
 ```js{}[nuxt.config.js]
 export default {
-  ssr: false // only client side rendering
+  ssr: false // Disable Server Side rendering
 }
 ```
 

@@ -8,7 +8,7 @@ questions:
     answers:
       - nuxt start
       - nuxt generate
-      - nuxt build or nuxt dev
+      - nuxt build atau nuxt dev
     correctAnswer: nuxt build or nuxt dev
   - question: Properti apa yang Anda gunakan untuk mengganti nama folder nuxt?
     answers:

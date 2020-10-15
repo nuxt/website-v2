@@ -43,7 +43,9 @@ npm init nuxt-app <project-name>
 
 </code-group>
 
-It will ask you some questions (name, Nuxt options, UI framework, TypeScript, linter, testing framework, etc.), when answered, it will install all the dependencies. The next step is to navigate to the project folder and launch it:
+It will ask you some questions (name, Nuxt options, UI framework, TypeScript, linter, testing framework, etc. To find out more about all the options see the [Create Nuxt app](https://github.com/nuxt/create-nuxt-app/blob/master/README.md).
+
+Once all questions are answered, it will install all the dependencies. The next step is to navigate to the project folder and launch it:
 
 <code-group>
   <code-block label="Yarn" active>

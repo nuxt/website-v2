@@ -7,15 +7,16 @@ position: 28.1
 ---
 
 - Type: `boolean`
-  - Default: `true`
-  - Possible values:
-    - `false`: No server-side rendering (only client-side rendering)
+- Default: `true`
+- Possible values:
+  - `true`: Server-side rendering enabled
+  - `false`: No server-side rendering (only client-side rendering)
 
-> You need to set this option when working with single page applications
+> You can set this option when you require client side rendering only
 
 ```js{}[nuxt.config.js]
 export default {
-  ssr: false // for SPA's
+  ssr: false // only client side rendering
 }
 ```
 

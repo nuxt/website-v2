@@ -391,7 +391,7 @@ Configuration du plugin [html-minifier](https://github.com/kangax/html-minifier)
 
 ### loaders.sass and loaders.scss
 
-> Voir la documentation [Node Sass](https://github.com/sass/node-sass/blob/master/README.md#options) pour toutes les options Sass disponibles. Remarque: `loaders.sass` est pour la [syntaxe indentée Sass](http://sass-lang.com/documentation/file.INDENTED_SYNTAX.html)
+> Voir la documentation [Sass](https://github.com/sass/dart-sass#javascript-api) pour toutes les options Sass disponibles. Remarque: `loaders.sass` est pour la [syntaxe indentée Sass](http://sass-lang.com/documentation/file.INDENTED_SYNTAX.html)
 
 ### loaders.vueStyle
 

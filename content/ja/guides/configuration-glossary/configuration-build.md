@@ -403,7 +403,7 @@ manifest の使い方をより理解するためにこの [webpack ドキュメ�
 
 ### loaders.sass と loaders.scss
 
-> 利用可能な Sass のオプションについては [Node Sass のドキュメント](https://github.com/sass/node-sass/blob/master/README.md#options)を参照してください。注意: `loaders.sass` は [Sass Indented Syntax](http://sass-lang.com/documentation/file.INDENTED_SYNTAX.html) 用です。
+> 利用可能な Sass のオプションについては [Sass のドキュメント](https://github.com/sass/dart-sass#javascript-api)を参照してください。注意: `loaders.sass` は [Sass Indented Syntax](http://sass-lang.com/documentation/file.INDENTED_SYNTAX.html) 用です。
 
 ### loaders.vueStyle
 

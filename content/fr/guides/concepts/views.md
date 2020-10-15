@@ -1,6 +1,6 @@
 ---
 title: Vues
-description: La section des vues décrit tout ce que vous devez savoir pour configurer votre data et de potentielles vues pour une route spécifique dans votre application Nuxt.js. Les vues se composent du template d'une app, son layout et la page actuelle.
+description: La section des vues décrit tout ce que nous devons savoir pour configurer votre data et de potentielles vues pour une route spécifique dans votre application Nuxt.js. Les vues se composent du template d'une app, son layout et la page actuelle.
 position: 1
 category: concepts
 csb_link: https://codesandbox.io/embed/github/nuxt-academy/guides-examples/tree/master/02_concepts/01_views?fontsize=14&hidenavigation=1&theme=dark
@@ -23,7 +23,7 @@ questions:
       - ajouter un fichier .vue dans le dossier layouts
       - ajouter un fichier .vue dans le dossier components
     correctAnswer: ajouter un fichier .vue dans le dossier layouts
-  - question: Commment activez-vous votre layout custom nommé 'blog' sur votre page?
+  - question: Commment activons-nous le layout custom nommé 'blog' sur votre page?
     answers:
       - "layout: 'blog'"
       - "layout: 'default'"
@@ -37,7 +37,7 @@ questions:
     correctAnswer: dans le dossier layouts
 ---
 
-La section des vues décrit tout ce que vous avez besoin de savoir pour configurer la data et les vues pour une route spécifique dans votre application Nuxt.js. Les vues se composent d'un template, d'un layout et de la page actuelle. En plus de cela, vous pouvez définir des méta tags personnalisés pour la section `head` de chaque page. Ces derniers sont imporant pour le SEO (référencement naturel).
+La section des vues décrit tout ce que nous avons besoin de savoir pour configurer la data et les vues pour une route spécifique dans notre application Nuxt.js. Les vues se composent d'un template, d'un layout et de la page actuelle. En plus de cela, nous pouvons définir des méta tags personnalisés pour la section `head` de chaque page. Ces derniers sont imporant pour le SEO (référencement naturel).
 
 ![Composition d'une vue dans Nuxt.js](/guides/views.png)
 
@@ -45,7 +45,7 @@ Composition d'une vue dans Nuxt.js
 
 ## Pages
 
-Chaque composant Page est un composant Vue mais Nuxt.js ajoute un attribut spécial et des fonctions pour rendre le développement de votre application aussi facile que possible.
+Chaque composant Page est un composant Vue mais Nuxt.js ajoute un attribut spécial et des fonctions pour rendre le développement de notre application aussi facile que possible.
 
 ```html{}[pages/index.vue]
 <template>
@@ -74,17 +74,17 @@ Il y a beaucoup de propriétés possibles sur un composant Page comme le `head` 
 
 <base-alert type="next">
 
-Se référer à [la documentation sur la structure des répertoires](/guides/directory-structure/nuxt) pour en apprendre davantage sur les propriétés que vous pouvez utiliser sur votre page
+Se référer à [la documentation sur la structure des répertoires](/guides/directory-structure/nuxt) pour en apprendre davantage sur les propriétés que nous pouvons utiliser sur notre page.
 
 </base-alert>
 
 ## Layouts
 
-Les layouts sont un moyen efficace quand vous voulez changer l'apparence et le feeling de votre app Nuxt.js. Pour par exemple, inclure une sidebar ou avoir des layouts bien distincts entre une vue mobile et bureau.
+Les layouts sont un moyen efficace quand nous voulons changer l'apparence et le feeling de notre app Nuxt.js. Pour par exemple, inclure une sidebar ou avoir des layouts bien distincts entre une vue mobile et bureau.
 
 ### Layout par défaut
 
-Vous pouvez définir un layout par défaut en ajoutant un fichier `default.vue` dans le répertoire des `layouts`. Ceci sera utilisé pour toutes les pages qui n'ont pas de layout déjà spécifié. La seule chose qu'il sera nécessaire d'inclure dans le layout est le composant `<Nuxt />` qui s'occupera de render le composant page.
+Nous pouvons définir un layout par défaut en ajoutant un fichier `default.vue` dans le répertoire des `layouts`. Ceci sera utilisé pour toutes les pages qui n'ont pas de layout déjà spécifié. La seule chose qu'il sera nécessaire d'inclure dans le layout est le composant `<Nuxt />` qui s'occupera de render le composant page.
 
 ```html{}[layouts/default.vue]
 <template>
@@ -100,7 +100,7 @@ Se référer au [composant Nuxt](/guides/features/nuxt-components) dans le chapi
 
 ### Layout personnalisé
 
-Vous pouvez créer des layouts personnalisés en ajoutant un fichier `.vue` dans le répertoire des `layouts`. Pour utiliser ce layout personnalisé, vous aurez besoin de specifier la propriété `layout` dans le composant page dans lequel vous voulez utiliser ce layout. La value sera le nom du layout personnalisé que vous aurez créé.
+Nous pouvons créer des layouts personnalisés en ajoutant un fichier `.vue` dans le répertoire des `layouts`. Pour utiliser ce layout personnalisé, nous aurons besoin de specifier la propriété `layout` dans le composant page dans lequel nous voulons utiliser ce layout. La value sera le nom du layout personnalisé que nous aurons créé.
 
 Pour créer un layout de blog, ajoutez un fichier `blog.vue` au répertoire `layouts`:
 
@@ -115,15 +115,15 @@ Pour créer un layout de blog, ajoutez un fichier `blog.vue` au répertoire `lay
 
 <base-alert>
 
-Faites bien attention à ajouter le composant `<Nuxt />` lorsque vous crééz le composant pour y inclure le contenu de la page.
+Il faut faire bien attention à ajouter le composant `<Nuxt />` lorsque nous créons le composant pour y inclure le contenu de la page.
 
 </base-alert>
 
-Par la suite, il suffit d'attribuer la valeur `blog` à la propriété `layout` dans la page où vous souhaitez que le layout soit utilisé.
+Par la suite, il suffit d'attribuer la valeur `blog` à la propriété `layout` dans la page où nous souhaitons que le layout soit utilisé.
 
 ```html{}[pages/posts.vue]
 <template>
-  <!-- Votre template -->
+  <!-- notre template -->
 </template>
 <script>
   export default {
@@ -135,7 +135,7 @@ Par la suite, il suffit d'attribuer la valeur `blog` à la propriété `layout` 
 
 <base-alert type="info">
 
-Si vous ne spécifiez par la propriété `layout` sur votre page (ex: `layout: 'blog'`) alors le layout `default.vue` sera utilisé.
+Si on ne spécifie par la propriété `layout` sur notre page (ex: `layout: 'blog'`) alors le layout `default.vue` sera utilisé.
 
 </base-alert>
 
@@ -153,9 +153,9 @@ Même si ce fichier sera placé dans le répertoire `layouts`, il devra être co
 
 </base-alert>
 
-Comme dit ci-dessus, ce layout est spécial car il ne devra pas contenir de composant `<Nuxt />` dans son `template`. Ce layout devra être vu comme un composant affiché lorsque des erreurs surviennent (`404`, `500`, etc.). Comme pour les autres composants page, vous pouvez appliquer un layout personnalisé pour la page erreur.
+Comme dit ci-dessus, ce layout est spécial car il ne devra pas contenir de composant `<Nuxt />` dans son `template`. Ce layout devra être vu comme un composant affiché lorsque des erreurs surviennent (`404`, `500`, etc.). Comme pour les autres composants page, Nous pouvons appliquer un layout personnalisé pour la page erreur.
 
-Vous pouvez personnaliser la page erreur en ajoutant un fichier `layouts/error.vue`:
+Nous pouvons personnaliser la page erreur en ajoutant un fichier `layouts/error.vue`:
 
 ```html{}[layouts/error.vue]
 <template>
@@ -169,14 +169,14 @@ Vous pouvez personnaliser la page erreur en ajoutant un fichier `layouts/error.v
 <script>
   export default {
     props: ['error'],
-    layout: 'error' // vous pouvez definir un layout personnalisé pour la page erreur
+    layout: 'error' // nous pouvons definir un layout personnalisé pour la page erreur
   }
 </script>
 ```
 
 ## Document: App.html
 
-Le template `app` est utilisé pour créer le cadre HTML pour le document de votre application Nuxt.js, ce dernier s'occupera d'injecter le contenu ainsi que les variables pour le `head` ainsi que le `body`. Ce fichier est automatiquement créé pour vous et a rarement besoin d'être modifié. Vous pouvez customiser le template HTML `app` utilisé par Nuxt.js pour inclure des scripts ou des classes CSS conditionnelles en créant un fichier `app.html` dans le répertoire source de votre projet, qui par défaut, n'est autre que la racine de votre projet.
+Le template `app` est utilisé pour créer le cadre HTML pour le document de notre application Nuxt.js, ce dernier s'occupera d'injecter le contenu ainsi que les variables pour le `head` ainsi que le `body`. Ce fichier est automatiquement créé pour nous et a rarement besoin d'être modifié. Nous pouvons customiser le template HTML `app` utilisé par Nuxt.js pour inclure des scripts ou des classes CSS conditionnelles en créant un fichier `app.html` dans le répertoire source de notre projet, qui par défaut, n'est autre que la racine de votre projet.
 
 Le template par défaut utilisé par Nuxt.js est:
 
@@ -209,7 +209,7 @@ Un cas d'usage de personnalisation du template app serait d'ajouter des classes 
 
 <base-alert type="info">
 
-Même si vous pouvez ajouter du JavaScript et des fichiers CSS dans `app.html`, il est plutôt recommandé d'utiliser `nuxt.config.js` pour cet usage !
+Même si nous pouvons ajouter du JavaScript et des fichiers CSS dans `app.html`, il est plutôt recommandé d'utiliser `nuxt.config.js` pour cet usage !
 
 </base-alert>
 

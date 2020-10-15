@@ -1,6 +1,6 @@
 ---
 title: Installation
-description: Vous pourrez découvrir ci-dessous comment créer un projet Nuxt.js fonctionnel en 4 étapes.
+description: Nous pouvons découvrir ci-dessous comment créer un projet Nuxt.js fonctionnel en 4 étapes.
 position: 1
 category: get-started
 csb_link: https://codesandbox.io/embed/github/nuxt-academy/guides-examples/tree/master/01_get_started/01_installation?fontsize=14&hidenavigation=1&theme=dark
@@ -8,11 +8,11 @@ csb_link: https://codesandbox.io/embed/github/nuxt-academy/guides-examples/tree/
 
 ## Prérequis
 
-Vous pourrez découvrir ci-dessous comment créer un projet Nuxt.js fonctionnel en 4 étapes.
+Nous pouvons découvrir ci-dessous comment créer un projet Nuxt.js fonctionnel en 4 étapes.
 
 <base-alert type="info">
 
-Pour commencer avec Nuxt.js, vous pouvez également utiliser [CodeSandbox](https://template.nuxtjs.org) qui est une très bonne manière de tester Nuxt.js rapidement et/ou de partager votre code avec d'autres personnes.
+Pour commencer avec Nuxt.js, nous pouvons également utiliser [CodeSandbox](https://template.nuxtjs.org) qui est une très bonne manière de tester Nuxt.js rapidement et/ou de partager votre code avec d'autres personnes.
 
 </base-alert>
 
@@ -24,17 +24,17 @@ _Nous recommandons d'avoir la dernière version installée._
 
 ### Éditeur de texte
 
-Utilisez celui que vous préférez, mais nous recommandons [VSCode](https://code.visualstudio.com/).
+On peut utiliser celui que l'on préfère, mais nous recommandons [VSCode](https://code.visualstudio.com/).
 
 ### Terminal
 
-Utilisez celui que vous préférez, mais nous recommandons le [terminal de VSCode](https://code.visualstudio.com/docs/editor/integrated-terminal).
+On peut utiliser celui que l'on préfère, mais nous recommandons le [terminal de VSCode](https://code.visualstudio.com/docs/editor/integrated-terminal).
 
 ## Commencer de zéro
 
 Créer un projet Nuxt.js de zéro demande seulement un dossier et un fichier.
 
-Dans cet exemple, nous allons utiliser le terminal pour créer les dossiers et fichiers mais vous pouvez utiliser votre éditeur pour les créer.
+Dans cet exemple, nous allons utiliser le terminal pour créer les dossiers et fichiers mais nous pouvons utiliser votre éditeur pour les créer.
 
 ### Première étape : configurer votre projet
 
@@ -181,7 +181,7 @@ On peut ensuite aller sur le navigateur et regarder la nouvelle page sur **[http
 
 <base-alert type="info">
 
-Si vous créez un dossier nommé `more-fun` et ajoutez un fichier `index.vue` à l'intérieur, cela donnera le même résultat que de créer un fichier `more-fun.vue`.
+Si nous créons un dossier nommé `more-fun` et ajoutons un fichier `index.vue` à l'intérieur, cela donnera le même résultat que de créer un fichier `more-fun.vue`.
 
 </base-alert>
 

@@ -1,6 +1,6 @@
 ---
 title: Cycle de vie de Nuxt
-description: Peu importe l'outil que vous utilisez, vous serez davantage en confiance lorsque vous serez capable de comprendre comment il marche dans les détails. Il en est de même pour Nuxt.js.
+description: Peu importe l'outil que nous utilisons, nous serons davantage en confiance lorsque nous serons capable de comprendre comment il marche dans les détails. Il en est de même pour Nuxt.js.
 position: 5
 category: concepts
 img: /guides/nuxt-lifecycle.png
@@ -50,9 +50,9 @@ questions:
     correctAnswer: created et beforeCreate
   - question: Quelle étape n'a pas lieu après avoir navigué avec un <NuxtLink> ?
     answers:
-      - Appeller fetch
+      - Appeler fetch
       - Exécuter des plugins clients de Nuxt.js
-      - Appeller beforeCreate
+      - Appeler beforeCreate
     correctAnswer: Exécuter des plugins clients de Nuxt.js
   - question: Quelle est la différence entre asyncData et fetch après avoir navigué via un <NuxtLink> ?
     answers:
@@ -64,9 +64,9 @@ questions:
 
 <app-modal :src="img" :alt="imgAlt"></app-modal>
 
-Peu importe l'outil que vous utilisez, vous serez davantage en confiance lorsque vous serez capable de comprendre comment il marche dans les détails. Il en est de même pour Nuxt.js. Le but de ce chapitre est de vous donner une vue d'ensemble des différentes parties du framework, leur ordre d'exécution ainsi que la façon dont ils intéragissent entre eux.
+Peu importe l'outil que nous utilisons, nous serons davantage en confiance lorsque nous serons capable de comprendre comment il marche dans les détails. Il en est de même pour Nuxt.js. Le but de ce chapitre est de nous donner une vue d'ensemble des différentes parties du framework, leur ordre d'exécution ainsi que la façon dont ils intéragissent entre eux.
 
-Le cycle de vie de Nuxt.js décrit les différentes étapes qui ont lieu après la phase de build, une fois que votre application a été empaquetée, découpée et minifée. Ce qu'il se passe après cette phase dépend de si vous avez activé le rendu côté serveur ou pas. Si c'est le cas, il faut ensuite regarder le type de rendu serveur que vous avez choisi:
+Le cycle de vie de Nuxt.js décrit les différentes étapes qui ont lieu après la phase de build, une fois que notre application a été bundlée, chunkée et minifiée. Ce qu'il se passe après cette phase dépend de si nous avons activé le rendu côté serveur ou pas. Si c'est le cas, il faut ensuite regarder le type de rendu serveur que nous avons choisi:
 
 Rendu dynamique côté serveur (SSR) (`nuxt start`)
 
@@ -76,11 +76,11 @@ or Génération statique de site (SSG) (`nuxt generate`).
 
 ### Serveur
 
-Pour le SSR, les étapes suivantes seront exécutées pour chaque requête sur votre app
+Pour le SSR, les étapes suivantes seront exécutées pour chaque requête sur notre app
 
 - Le serveur démarre (`nuxt start`)
 
-Lorsque vous utilisez la génération statique de votre site, les étapes qui ont lieu sur le serveur ne seront exécutées que lors de la phase de build et une fois pour chaque page générée.
+Lorsque nous utilisons la génération statique de notre site, les étapes qui ont lieu sur le serveur ne seront exécutées que lors de la phase de build et une fois pour chaque page générée.
 
 - Le processus de génération commence (`nuxt generate`)
 
@@ -117,7 +117,7 @@ Lorsque vous utilisez la génération statique de votre site, les étapes qui on
 
 ### Client
 
-Cette partie du cycle est entièrement exécutée dans le navigateur, peu importe le mode que vous avez choisi pour Nuxt.js.
+Cette partie du cycle est entièrement exécutée dans le navigateur, peu importe le mode que nous avons choisi pour Nuxt.js.
 
 - Reçoit le HTML
 - Charge les ressources (ex. Javascript)
@@ -137,11 +137,11 @@ Cette partie du cycle est entièrement exécutée dans le navigateur, peu import
 
 ### Naviguer en utilisant le composant NuxtLink
 
-De la même facon que pour la partie _client_, tout se passe dans le navigateur mais seulement lors d'une navigation avec `<NuxtLink>`. De plus, aucun contenu n'est affiché sur la page tant qu'il reste des tâches _bloquantes_.
+De la même façon que pour la partie _client_, tout se passe dans le navigateur mais seulement lors d'une navigation avec `<NuxtLink>`. De plus, aucun contenu n'est affiché sur la page tant qu'il reste des tâches _bloquantes_.
 
 <base-alert type="info">
 
-Se référer au chapitre sur les composants pour plus d'informations sur [`<NuxtLink>`](/guides/features/nuxt-components#the-nuxtlink-component)
+Se référer au chapitre sur les composants pour plus d'informations sur [`<NuxtLink>`](/guides/features/nuxt-components#the-nuxtlink-component).
 
 </base-alert>
 
@@ -159,7 +159,7 @@ Se référer au chapitre sur les composants pour plus d'informations sur [`<Nuxt
 
 <base-alert type="next">
 
-Plus d'informations dans le [recueil sur les features](/guides/features/rendering-modes)
+Plus d'informations dans le [recueil sur les features](/guides/features/rendering-modes).
 
 </base-alert>
 

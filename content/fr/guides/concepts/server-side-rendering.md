@@ -4,29 +4,29 @@ description: Le rendu côté serveur (SSR), est la capacité qu'une application 
 position: 3
 category: concepts
 questions:
-  - question: De quel type de serveur avez-vous besoin pour faire du rendu côté serveur ?
+  - question: De quel type de serveur avons-nous besoin pour faire du rendu côté serveur ?
     answers:
       - un serveur PHP
       - un serveur JavaScript
       - un serveur Node.js
     correctAnswer: un serveur Node.js
-  - question: Qu'utilisez-vous pour contrôler et étendre les possibilités du serveur ?
+  - question: Qu'utilisons-nous pour contrôler et étendre les possibilités du serveur ?
     answers:
       - Middleware
       - ServerMiddleware
       - Il n'est pas possible de contrôler le serveur
     correctAnswer: ServerMiddleware
-  - question: Pouvez-vous héberger une application avec un rendu côté serveur sur une plateforme d'hébergement serverless ?
+  - question: Pouvons-nous héberger une application avec un rendu côté serveur sur une plateforme d'hébergement serverless ?
     answers:
-      - true
-      - false
-    correctAnswer: false
+      - vrai
+      - faux
+    correctAnswer: faux
   - question: Avons-nous accès au document côté serveur ?
     answers:
       - Oui, il est toujours disponible
       - Non, l'objet appartient au navigateur et il n'est pas disponible sur le serveur
     correctAnswer: Non, l'objet appartient au navigateur et il n'est pas disponible sur le serveur
-  - question: Quand votre page devient interactive ?
+  - question: Quand notre page devient interactive ?
     answers:
       - Quand le navigateur reçoit la page HTML générée depuis le serveur
       - Quand l'hydratation de Vue.js est effective
@@ -45,17 +45,17 @@ questions:
     correctAnswer: navigateur → serveur, serveur → navigateur, navigateur → navigateur
 ---
 
-Le rendu côté serveur (SSR), est la capacité qu'une application a à générer une page web sur le serveur au lieu de la générer dans le navigateur. Le rendu côté serveur renvoie une page complète au client; le JavaScript côté client prend ensuite le relais et permet à Vue.js d'[hydrater](https://ssr.vuejs.org/guide/hydration.html) votre application.
+Le rendu côté serveur (SSR), est la capacité qu'une application a à générer une page web sur le serveur au lieu de la générer dans le navigateur. Le rendu côté serveur renvoie une page complète au client; le JavaScript côté client prend ensuite le relais et permet à Vue.js d'[hydrater](https://ssr.vuejs.org/guide/hydration.html) notre application.
 
 ## Serveur Node.js requis
 
-Un environnement JavaScript est requis pour render votre page web.
+Un environnement JavaScript est requis pour render notre page web.
 
-Un serveur Node.js a besoin d'être configuré pour exécuter votre application Vue.js.
+Un serveur Node.js a besoin d'être configuré pour exécuter notre application Vue.js.
 
-## Contrôlez et étendez les possibilités de votre serveur
+## Contrôler et étendre les possibilités de notre serveur
 
-Vous pouvez étendre les possibilités de votre serveur avec `serverMiddleware` et contrôler les routes avec `middleware`.
+Nous pouvons étendre les possibilités de notre serveur avec `serverMiddleware` et contrôler les routes avec `middleware`.
 
 ```js{}[middleware/api/logger.js]
 export default function (req, res, next) {
@@ -72,11 +72,11 @@ export default {
 
 <!--todo did not get what is written below, so I rather comment it out
 en: If your server middleware consists of a list of functions mapped to paths:
-fr: Si votre middleware de serveur est constitué d'une liste de fonctions correspondant à des chemins: -->
+fr: Si notre middleware de serveur est constitué d'une liste de fonctions correspondant à des chemins: -->
 
 ## Différence entre serveur et navigateur
 
-Comme vous êtes dans un environnement Node.js vous avez accès aux objets Node.js tels que `req` et `res`. Vous n'avez pas accès aux objets `window` ou `document` vu qu'ils appartiennent au navigateur. Vous pouvez cependant utiliser `window` ou `document` en les utilisant dans les hooks `beforeMount` ou `mounted`.
+Comme nous sommes dans un environnement Node.js nous avons accès aux objets Node.js tels que `req` et `res`. Nous n'avez pas accès aux objets `window` ou `document` vu qu'ils appartiennent au navigateur. Nous pouvons cependant utiliser `window` ou `document` en les utilisant dans les hooks `beforeMount` ou `mounted`.
 
 ```js
 beforeMount{
@@ -99,6 +99,6 @@ Le navigateur reçoit la page avec le HTML généré depuis le serveur. Le conte
 
 ### Étape 3: Du navigateur au navigateur
 
-Naviguer entre les pages à l'aide de [`<NuxtLink>`](/guides/features/nuxt-components#the-nuxtlink-component) est fait du côté client afin que vous n'ayez pas besoin de faire une requête au serveur, sauf si vous faites un rafraîchissement manuel de votre navigateur.
+Naviguer entre les pages à l'aide de [`<NuxtLink>`](/guides/features/nuxt-components#the-nuxtlink-component) est fait du côté client afin que nous n'ayons pas besoin de faire une requête au serveur, sauf si nous faisons un rafraîchissement manuel de notre navigateur.
 
 <quiz :questions="questions"></quiz>

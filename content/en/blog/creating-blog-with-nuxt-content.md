@@ -248,10 +248,7 @@ We now have a title, description, img and alt variable that we can access to by 
   <article>
     <h1>{{ article.title }}</h1>
     <p>{{ article.description }}</p>
-    <img
-      :src="article.image"
-      :alt="article.alt"
-    />
+    <img :src="article.image" :alt="article.alt" />
     <p>Article last updated: {{ formatDate(article.updatedAt) }}</p>
 
     <nuxt-content :document="article" />
@@ -944,4 +941,8 @@ Working with content is great fun and there is so much more you can do and build
 
 ## Further Reading
 
-For more info on how to add a sitemap to your blog check out this article: [Adding a Sitemap Using Nuxt Content](https://redfern.dev/articles/adding-a-sitemap-using-nuxt-content/) by [Gareth Redfern](https://twitter.com/garethredfern)
+For more info on how to improve your blog check out these articles by by [Gareth Redfern](https://twitter.com/garethredfern):
+
+- [Adding a Sitemap Using Nuxt Content](https://redfern.dev/articles/adding-a-sitemap-using-nuxt-content/)
+- [Adding Social Media & SEO Meta Data Using Nuxt Content](https://redfern.dev/articles/adding-social-media-seo-meta-data-using-nuxt-content)
+- [Adding Pagination With Nuxt Content](https://redfern.dev/articles/adding-pagination-nuxt-content-blog)

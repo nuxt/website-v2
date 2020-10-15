@@ -8,7 +8,7 @@ position: 16
 
 > Show fancy loading indicator while page is loading!
 
-When running Nuxt.js with `ssr` set to `false`, there is no content from the server side on the first page load. So, instead of showing a blank page while the page loads, we may show a spinner.
+Without Server Side Rendering (when `ssr` option is `false`), there is no content from the server side on the first page load. So, instead of showing a blank page while the page loads, we may show a spinner.
 
 This property can have 3 different types: `string` or `false` or `object`. If a string value is provided it is converted to object style.
 

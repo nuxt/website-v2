@@ -24,7 +24,7 @@ Then, you can launch your commands via `yarn <command>` or `npm run <command>` (
 
 ## Development Environment
 
-To launch Nuxt in development mode with hot module replacement:
+To launch Nuxt in development mode with [hot module replacement](https://webpack.js.org/concepts/hot-module-replacement/) on `http://localhost:3000`:
 
 <code-group>
 
@@ -51,15 +51,15 @@ You can run different commands depending on the [target](/guides/features/deploy
 
 ### target: `server` (default value)
 
-- **nuxt dev** - Launch a development server on `http://localhost:3000` with hot-reloading.
+- **nuxt dev** - Launch the development server.
 - **nuxt build** - Build and optimize your application with webpack for production.
 - **nuxt start** - Start the production server (after running `nuxt build`). Use it for Node.js hosting like Heroku, Digital Ocean, etc.
 
 ### target: `static`
 
-- **nuxt dev** - Launch a development server on `http://localhost:3000` with hot-reloading.
-- **nuxt generate** - Build the application (if needed), generate every route as a HTML file and statically export to `/dist` (used for static hosting).
-- **nuxt start** - serve the dist/ directory like your static hosting would do (Netlify, Vercel, Surge, etc), great for testing before deploying.
+- **nuxt dev** - Launch the development server.
+- **nuxt generate** - Build the application (if needed), generate every route as a HTML file and statically export to `dist/` directory (used for static hosting).
+- **nuxt start** - serve the `dist/` directory like your static hosting would do (Netlify, Vercel, Surge, etc), great for testing before deploying.
 
 ## Production Deployment
 
@@ -86,7 +86,7 @@ npm run build
   </code-block>
 </code-group>
 
-Nuxt.js will create a `.nuxt` folder with everything inside ready to be deployed on your server hosting.
+Nuxt.js will create a `.nuxt` directory with everything inside ready to be deployed on your server hosting.
 
 <base-alert type="info">
 
@@ -148,7 +148,7 @@ npm run generate
   </code-block>
 </code-group>
 
-Nuxt.js will create a `dist` folder with everything inside ready to be deployed on a static hosting service.
+Nuxt.js will create a `dist/` directory with everything inside ready to be deployed on a static hosting service.
 
 As of Nuxt v2.13 there is a crawler installed that will now crawl your link tags and generate your routes when using the command `nuxt generate` based on those links.
 

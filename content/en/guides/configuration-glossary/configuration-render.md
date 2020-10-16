@@ -121,7 +121,7 @@ You may want to only disable this option if you have many pages and routes.
 
 > Enable SSR rendering
 
-This option is automatically set based on `target` value if not provided. This can be useful to dynamically enable/disable SSR on runtime after image builds (with docker for example).
+This option is automatically set based on global `ssr` value if not provided. This can be useful to dynamically enable/disable SSR on runtime after image builds (with docker for example).
 
 ## crossorigin
 

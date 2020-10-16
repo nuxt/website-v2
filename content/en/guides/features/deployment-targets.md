@@ -7,9 +7,7 @@ category: features
 
 ## Static Hosting
 
-With static hosting, hosting where no server is needed, you can host your site on any serverless hosting or CDN for free.
-
-As Nuxt.js also works as a static site generator you can therefore generate your application as a static site. Statically render your Nuxt.js application and get all of the benefits of a universal app without a server. The nuxt `generate` command will generate a completely static version of your website. It will generate HTML for every one of your routes and put it inside of its own file in the `dist` folder. Basically any file that is placed inside the pages folder will be generated as a static html page. This improves performance as well as SEO and better offline support.
+Nuxt.js also works as a static site generator. Statically render your Nuxt.js application and get all of the benefits of a universal app without a server. The `nuxt generate` command will generate a static version of your website. It will generate HTML for every one of your routes and put it inside of its own file in the `dist/` directory. This improves performance as well as SEO and better offline support.
 
 <base-alert type="info">
 

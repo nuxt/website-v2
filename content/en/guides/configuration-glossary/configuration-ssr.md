@@ -12,7 +12,7 @@ position: 28.1
   - `true`: Server-side rendering enabled
   - `false`: No server-side rendering (only client-side rendering)
 
-> You can set this option when you require client side rendering only
+> You can set this option to `false` when you want **only client side rendering**
 
 ```js{}[nuxt.config.js]
 export default {

@@ -1,11 +1,11 @@
 ---
 title: Transitions
-description: Nuxt.js utilise le composant `<transition>` pour permettre de créer de superbes transitions/animations entre vos routes.
+description: Nuxt.js utilise le composant `<transition>` pour permettre de créer de superbes transitions/animations entre nos routes.
 position: 10
 category: features
 csb_link: https://codesandbox.io/embed/github/nuxt-academy/guides-examples/tree/master/03_features/05_transitions?fontsize=14&hidenavigation=1&theme=dark
 questions:
-  - question: Pour définir une transition personnalisée pour une route spécifique, quel est la propriété qu'il faut ajouter à votre page ?
+  - question: Pour définir une transition personnalisée pour une route spécifique, quel est la propriété qu'il faut ajouter à notre page ?
     answers:
       - pageTransition
       - transition
@@ -23,7 +23,7 @@ questions:
       - .pages
       - .page-transition
     correctAnswer: .page
-  - question: Quel est le meilleur endroit pour ajouter vos classes de transition CSS afin que vous ayez des transitions globales sur toutes vos routes ?
+  - question: Quel est le meilleur endroit pour ajouter nos classes de transition CSS afin que nous ayons des transitions globales sur toutes nos routes ?
     answers:
       - index.vue
       - un fichier CSS global
@@ -67,7 +67,7 @@ questions:
     correctAnswer: nuxt.config.js
 ---
 
-Nuxt.js utilise le composant [`<transition>`](http://vuejs.org/v2/guide/transitions.html#Transitioning-Single-Elements-Components) pour permettre de créer de superbes transitions/animations entre vos routes.
+Nuxt.js utilise le composant [`<transition>`](http://vuejs.org/v2/guide/transitions.html#Transitioning-Single-Elements-Components) pour permettre de créer de superbes transitions/animations entre nos routes.
 
 Pour définir une transition personnalisée pour une route spécifique, il faut ajouter la propriété `transition` au composant page.
 
@@ -75,7 +75,7 @@ Pour définir une transition personnalisée pour une route spécifique, il faut 
 export default {
   // peut être une chaîne de caractères
   transition: ''
-  // ou un Objet
+  // ou un objet
   transition: {}
   // ou une fonction
   transition (to, from) {}
@@ -184,7 +184,7 @@ Voici ce que cela va générer comme transitions:
 
 ## Paramètres globaux
 
-Le nom de la transition par défaut de Nuxt.js est `"page"`. Pour ajouter une transition d'estompage à chaque page de votre application, nous avons seulement besoin d'un fichier CSS qui est partagé entre toutes les routes.
+Le nom de la transition par défaut de Nuxt.js est `"page"`. Pour ajouter une transition d'estompage à chaque page de notre application, nous avons seulement besoin d'un fichier CSS qui est partagé entre toutes les routes.
 
 Notre fichier global CSS `assets/main.css`:
 
@@ -211,7 +211,7 @@ export default {
 
 ## La propriété layoutTransition
 
-`layoutTransition` est utilisé pour définir les propriétés par défaut pour les transitions du layout.
+`layoutTransition` est utilisée pour définir les propriétés par défaut pour les transitions du layout.
 
 Les paramètres par défaut sont:
 

@@ -1,6 +1,6 @@
 ---
 title: Chargement
-description: Nuxt.js fournit sa propre barre de chargement lors de la navigation entre les routes. Vous pouvez la personnaliser, la désactiver ou même créer la votre.
+description: Nuxt.js fournit sa propre barre de chargement lors de la navigation entre les routes. Nous pouvons la personnaliser, la désactiver ou même créer la notre.
 position: 8
 category: features
 csb_link: https://codesandbox.io/embed/github/nuxt-academy/guides-examples/tree/master/03_features/08_loading?fontsize=14&hidenavigation=1&theme=dark
@@ -31,9 +31,9 @@ questions:
     correctAnswer: 'loading: false'
   - question: On peut désactiver la barre de progression sur des pages spécifiques
     answers:
-      - true
-      - false
-    correctAnswer: true
+      - vrai
+      - faux
+    correctAnswer: vrai
   - question: Qu'utilise-t-on pour démarrer la barre de progression de manière programmatique ?
     answers:
       - $nuxt.loading.start()
@@ -54,11 +54,11 @@ questions:
     correctAnswer: start() and finish()
   - question: Lorsque nous avons créé notre propre composant `loading.vue`, comment l'utilise-t-on ?
     answers:
-      - importons le dans la page des layouts
-      - ajoutons le dans le fichier `nuxt.config.js` dans la propriété `loading`
-      - ajoutons le dans le fichier `nuxt.config.js` dans la propriété `plugins`
+      - importons-le dans la page des layouts
+      - ajoutons-le dans le fichier `nuxt.config.js` dans la propriété `loading`
+      - ajoutons-le dans le fichier `nuxt.config.js` dans la propriété `plugins`
     correctAnswer: ajoutons le dans le fichier `nuxt.config.js` dans la propriété `loading`
-  - question: Pour ajouter un tourniquet lorsque votre application Nuxt.js est en mode SPA, que faut-il ajouter à la propriété `loading` ?
+  - question: Pour ajouter un tourniquet lorsque notre application Nuxt.js est en mode SPA, que faut-il ajouter à la propriété `loading` ?
     answers:
       - 'circle: true'
       - 'spinner: circle'
@@ -66,11 +66,11 @@ questions:
     correctAnswer: 'name: circle'
 ---
 
-Nuxt.js fournit sa propre barre de chargement lors de la navigation entre les routes. Vous pouvez la personnaliser, la désactiver ou même créer la votre.
+Nuxt.js fournit sa propre barre de chargement lors de la navigation entre les routes. Nous pouvons la personnaliser, la désactiver ou même créer la notre.
 
 ## Personnaliser la barre de progression
 
-Parmi les propriétés que vous pouvez modifier, on peut lister la couleur, la taille, la durée et la direction de la barre de progression, cela afin de correspondre aux besoins de votre application. Cela peut être fait en mettant à jour la propriété `loading` du fichier `nuxt.config.js` avec les propriétés correspondantes (`color`, `size`, `duration`, `direction`).
+Parmi les propriétés que nous pouvons modifier, on peut lister la couleur, la taille, la durée et la direction de la barre de progression, cela afin de correspondre aux besoins de notre application. Cela peut être fait en mettant à jour la propriété `loading` du fichier `nuxt.config.js` avec les propriétés correspondantes (`color`, `size`, `duration`, `direction`).
 
 Par exemple, pour définir une barre de progression bleue d'une hauteur de 5 pixels, nous pouvons mettre à jour le fichier `nuxt.config.js` avec:
 
@@ -83,7 +83,7 @@ export default {
 }
 ```
 
-Voici la liste des propriétés que vous pouvez utiliser pour personnaliser la barre de progression.
+Voici la liste des propriétés que nous pouvons utiliser pour personnaliser la barre de progression.
 
 | Propriété   | Type    | Défaut  | Description                                                                                                                     |
 | ----------- | ------- | ------- | ------------------------------------------------------------------------------------------------------------------------------- |
@@ -98,7 +98,7 @@ Voici la liste des propriétés que vous pouvez utiliser pour personnaliser la b
 
 ## Désactiver la barre de progression
 
-Si vous ne voulez pas afficher la barre de progression entre les routes, il suffit d'ajouter `loading: false` à votre fichier `nuxt.config.js`:
+Si nous ne voulons pas afficher la barre de progression entre les routes, il suffit d'ajouter `loading: false` à notre fichier `nuxt.config.js`:
 
 ```js{}[nuxt.config.js]
 export default {
@@ -106,7 +106,7 @@ export default {
 }
 ```
 
-La propriété `loading` vous donne l'option de désactiver la barre de progression sur une page spécifique.
+La propriété `loading` nous donne l'option de désactiver la barre de progression sur une page spécifique.
 
 ```html{}[pages/index.vue]
 <template>
@@ -122,9 +122,9 @@ La propriété `loading` vous donne l'option de désactiver la barre de progress
 
 ## Lancer la barre de progression de manière programmatique
 
-La barre de progression peut aussi être lancée de manière programmatique dans vos composants en appelant `this.$nuxt.$loading.start()` pour lancer le chargement et `this.$nuxt.$loading.finish()` pour le finir.
+La barre de progression peut aussi être lancée de manière programmatique dans nos composants en appelant `this.$nuxt.$loading.start()` pour lancer le chargement et `this.$nuxt.$loading.finish()` pour le finir.
 
-Durant le process de montage de votre composant page, la propriété `$loading` peut ne pas être immédiatement accessible. Pour remédier à cette problématique et vous permettre de commencer la progression dans la méthode `mounted`, enroulez votre méthode `$loading` dans un `this.$nextTick` comme montré ci-dessous:
+Durant le process de montage du composant page, la propriété `$loading` peut ne pas être immédiatement accessible. Pour remédier à cette problématique et nous permettre de commencer la progression dans la méthode `mounted`, il faut enrouler notre méthode `$loading` dans un `this.$nextTick` comme montré ci-dessous:
 
 ```js
 export default {
@@ -141,9 +141,9 @@ export default {
 
 Malheureusement, il n'est pas possible pour le composant de chargement de connaître en avance le temps que va mettre une page pour charger. Ainsi, il n'est pas possible d'animer la barre de progression de manière adéquate pour correspondre au temps de chargement.
 
-Le composant de chargement de Nuxt.js résout ce problème en vous laissant la possibilité de définir une durée (`duration`), vous permettant de définir une estimation de la durée de chargement que cela devrait prendre. À moins que vous n'utilisiez un composant de chargement personnalisé, la barre de progression ira toujours de 0 à 100% de la durée (`duration`), peu importe la progression actuelle. Lorsque le chargement réel prend plus de temps que la durée définie, la barre de progression va rester à 100% jusqu'à ce que le chargement soit fini.
+Le composant de chargement de Nuxt.js résout ce problème en nous laissant la possibilité de définir une durée (`duration`), nous permettant de définir une estimation de la durée de chargement que cela devrait prendre. À moins que nous n'utilisions un composant de chargement personnalisé, la barre de progression ira toujours de 0 à 100% de la durée (`duration`), peu importe la progression actuelle. Lorsque le chargement réel prend plus de temps que la durée définie, la barre de progression va rester à 100% jusqu'à ce que le chargement soit fini.
 
-Vous pouvez changer le comportement par défaut en passant la propriété `continuous` à `true`. Ainsi, la barre de progression reviendra à 0% de nouveau, après avoir atteint les 100%. L'animation va se répéter (de 0 à 100%) jusqu'à ce que le chargement ne soit fini.
+Nous pouvons changer le comportement par défaut en passant la propriété `continuous` à `true`. Ainsi, la barre de progression reviendra à 0% de nouveau, après avoir atteint les 100%. L'animation va se répéter (de 0 à 100%) jusqu'à ce que le chargement ne soit fini.
 
 ```js
 export default {
@@ -159,18 +159,18 @@ _Exemple d'une barre de progression continue:_
 
 ## Utiliser un composant de chargement personnalisé
 
-Vous pouvez aussi créer votre propre composant que Nuxt.js se chargera d'appeler au lieu d'utiliser celui par défaut. Pour ce faire, vous aurez besoin de spécifier le chemin de votre composant dans l'option `loading`.
+Nous pouvons aussi créer notre propre composant que Nuxt.js se chargera d'appeler au lieu d'utiliser celui par défaut. Pour ce faire, nous aurons besoin de spécifier le chemin de du composant dans l'option `loading`.
 
-Votre composant devra fournir certaines des méthodes suivantes:
+Notre composant devra fournir certaines des méthodes suivantes:
 
-| Méthode       | Requis    | Description                                                                                                       |
-| ------------- | --------- | ----------------------------------------------------------------------------------------------------------------- |
-| start()       | Requis    | Appelé lors d'un changement de route, c'est à ce moment là que vous affichez votre composant.                     |
-| finish()      | Requis    | Appelé lorsqu'une route est chargée (et la data collectée), c'est à ce moment là que vous cachez votre composant. |
-| fail(error)   | Optionnel | Appelé lorsqu'une de vos routes n'a pas pu être chargée (ex: le chargement de la data a échoué)                   |
-| increase(num) | Optionnel | Appelé durant le chargement du composant de la route, `num` est un `Integer` < 100.                               |
+| Méthode       | Requis    | Description                                                                                                        |
+| ------------- | --------- | ------------------------------------------------------------------------------------------------------------------ |
+| start()       | Requis    | Appelé lors d'un changement de route, c'est à ce moment là que nous affichons notre composant.                     |
+| finish()      | Requis    | Appelé lorsqu'une route est chargée (et la data collectée), c'est à ce moment là que nous cachons notre composant. |
+| fail(error)   | Optionnel | Appelé lorsqu'une de nos routes n'a pas pu être chargée (ex: le chargement de la data a échoué)                    |
+| increase(num) | Optionnel | Appelé durant le chargement du composant de la route, `num` est un `Integer` < 100.                                |
 
-Vous pouvez créer votre composant personnalisé dans `components/LoadingBar.vue`:
+Nous pouvons créer notre composant personnalisé dans `components/LoadingBar.vue`:
 
 ```html{}[components/LoadingBar.vue]
 <template>
@@ -211,7 +211,7 @@ Vous pouvez créer votre composant personnalisé dans `components/LoadingBar.vue
 </style>
 ```
 
-Ensuite, mettez à jour votre fichier `nuxt.config.js` pour dire à Nuxt.js d'utiliser votre composant:
+Ensuite, il faut mettre à jour le fichier `nuxt.config.js` pour dire à Nuxt.js d'utiliser notre composant:
 
 ```js{}[nuxt.config.js]
 export default {
@@ -221,7 +221,7 @@ export default {
 
 ## La propriété du tourniquet de chargement
 
-Lorsque nous utilisons Nuxt.js en mode SPA, il n'y a pas de contenu provenant du serveur lors du premier chargement de la page. Ainsi, au lieu d'afficher une page vide pendant que la page charge, Nuxt.js vous permet d'utiliser un tourniquet que vous pouvez personnaliser afin d'ajouter vos propres couleurs, votre background et même changer le tourniquet lui même.
+Lorsque nous utilisons Nuxt.js en mode SPA, il n'y a pas de contenu provenant du serveur lors du premier chargement de la page. Ainsi, au lieu d'afficher une page vide pendant que la page charge, Nuxt.js nous permet d'utiliser un tourniquet que nous pouvons personnaliser afin d'ajouter nos propres couleurs, notre background et même changer le tourniquet lui même.
 
 ```js{}[nuxt.config.js]
 export default {
@@ -235,7 +235,7 @@ export default {
 
 ## Tourniquets intégrés
 
-Ces tourniquets sont importés depuis le projet génial qu'est [Spinkit](http://tobiasahlin.com/spinkit). Vous pouvez regarder la page de démonstration pour avoir un aperçu des tourniquets disponibles. Afin d'utiliser l'un des tourniquets, tout ce que avez à faire est d'ajouter son nom à la propriété `name`. Pas besoin d'importer ou d'installer quoi que ce soit. Voici la liste de tous les tourniquets intégrés que vous pouvez utiliser:
+Ces tourniquets sont importés depuis le projet génial qu'est [Spinkit](http://tobiasahlin.com/spinkit). Nous pouvons regarder la page de démonstration pour avoir un aperçu des tourniquets disponibles. Afin d'utiliser l'un des tourniquets, tout ce nous avons à faire est d'ajouter son nom à la propriété `name`. Pas besoin d'importer ou d'installer quoi que ce soit. Voici la liste de tous les tourniquets intégrés que nous pouvons utiliser:
 
 - circle
 - cube-grid
@@ -253,9 +253,9 @@ Les tourniquets intégrés supportent les options `color` et `background`.
 
 ## Tourniquets personnalisés
 
-Si vous souhaitez avoir votre propre tourniquet, une chaîne de caractères ou un nom peuvent aussi être un chemin vers un template de tourniquet. Toutes les options seront aussi passées au template.
+Si nous souhaitons avoir notre propre tourniquet, une chaîne de caractères ou un nom peuvent aussi être un chemin vers un template de tourniquet. Toutes les options seront ainsi passées au template.
 
-Si vous voulez vous inspirer du tourniquet de base de Nuxt.js, vous pouvez retrouver cela [ici](https://github.com/nuxt/nuxt.js/tree/dev/packages/vue-app/template/views/loading) !
+Si nous voulons nous inspirer du tourniquet de base de Nuxt.js, nous pouvons retrouver le code [ici](https://github.com/nuxt/nuxt.js/tree/dev/packages/vue-app/template/views/loading) !
 
 <app-modal>
   <code-sandbox :src="csb_link"></code-sandbox>

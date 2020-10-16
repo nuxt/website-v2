@@ -7,13 +7,13 @@ category: features
 
 ## Universel
 
-`mode: 'universal'`: Application isomorphique (rendu côté serveur ou sites statiques).
+`mode: 'universal'`: Application isomorphique (rendu côté serveur ou génération de site statique).
 
 Le mode universel est utilisé pour le rendu côté serveur ainsi que pour les sites statiques.
 
 Les sites statiques sont très similaires aux applications générées côté-serveur avec pour différence principale que les sites statiques sont générés lors du build, ce qui fait qu'il n'y a pas besoin de serveur par la suite. La navigation d'une page à une autre se fait côté client.
 
-Si vous utilisez le mode de render côté serveur (SSR), le site va requêter le serveur à chaque fois que le user veut accéder à une page, il y aura donc besoin d'un serveur pour générer la page et ce pour chaque requête.
+Si nous utilisons le mode de render côté serveur (SSR), le site va requêter le serveur à chaque fois que le user veut accéder à une page, il y aura donc besoin d'un serveur pour générer la page et ce pour chaque requête.
 
 Se référer aux [cibles de déploiement](/guides/features/deployment-targets) pour plus d'informations sur l'hébergement en mode statique et serveur.
 
@@ -25,7 +25,7 @@ export default {
 
 <base-alert type="info">
 
-Vous n'avez pas besoin d'ajouter cela à votre configuration nuxt afin d'être en mode universel car c'est déjà le mode par défaut.
+Nous n'avons pas besoin d'ajouter cela à notre configuration nuxt afin d'être en mode universel car c'est déjà le mode par défaut.
 
 </base-alert>
 
@@ -43,6 +43,6 @@ export default {
 
 <base-alert type="next">
 
-Plus d'informations sur la [propriété mode](/guides/configuration-glossary/configuration-mode)
+Plus d'informations sur la [propriété mode](/guides/configuration-glossary/configuration-mode).
 
 </base-alert>

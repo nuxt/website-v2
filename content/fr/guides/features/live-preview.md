@@ -64,9 +64,9 @@ Nous pouvons maintenant voir la page de prévisualisation en ajoutant une query 
 
 ### Prévisualiser les pages qui ne sont pas encore générées
 
-Pour les pages qui ne sont pas encore générées, la solution de rechange de la SPA va continuer de s'occuper de faire un appel à l'API avant de montrer une page 404 vu que ces pages existent sur l'APi mais ne sont pas encore générées.
+Pour les pages qui ne sont pas encore générées, la solution de rechange de la SPA va continuer de s'occuper de faire un appel à l'API avant de montrer une page 404 vu que ces pages existent sur l'API mais ne sont pas encore générées.
 
-Si nous avons configuré un crochet de validation, on aura sans doute besoin de le modifier afin d'accommoder le fait qu'il ne redirige plus vers une 404 en mode de prévisualisation.
+Si nous avons configuré un crochet de validation (webhook), on aura sans doute besoin de le modifier afin d'accommoder le fait qu'il ne redirige plus vers une 404 en mode de prévisualisation.
 
 ```js
 validate({ params, query }) {
@@ -83,6 +83,6 @@ On peut passer de la data à la fonction `enablePreview`. La data sera ainsi dis
 
 <base-alert type="next">
 
-Veuillez-vous référer au [document sur la structure des répertoires](/guides/directory-structure/nuxt)
+Se référer au [document sur la structure des répertoires](/guides/directory-structure/nuxt).
 
 </base-alert>

@@ -1,6 +1,6 @@
 ---
 title: Balises meta et référencement SEO
-description: Nuxt.js vous permet de définir les balises `<meta>` par défaut pour votre application dans le fichier nuxt.config.js en utilisant la propriété head. Cela permet d'ajouter un titre et une description par défaut pour le référencement ou bien définir la fenêtre d'affichage ou ajouter la favicon.
+description: Nuxt.js nous permet de définir les balises `<meta>` par défaut pour notre application dans le fichier nuxt.config.js en utilisant la propriété head. Cela permet d'ajouter un titre et une description par défaut pour le référencement ou bien définir la fenêtre d'affichage ou ajouter la favicon.
 position: 6
 category: features
 csb_link: https://codesandbox.io/embed/github/nuxt-academy/guides-examples/tree/master/03_features/06_meta_tags_seo?fontsize=14&hidenavigation=1&theme=dark
@@ -17,18 +17,18 @@ questions:
       - dans le fichier nuxt.config.js
       - dans le composant SEO
     correctAnswer: dans le composant de la page
-  - question: Dans les pages, pour avoir accès aux données dans votre titre ou méta description, vous utilisez la
+  - question: Dans les pages, pour avoir accès aux données dans votre titre ou méta description, nous utilisons la
     answers:
       - fonction meta
       - fonction head
       - fonction SEO
     correctAnswer: fonction head
-  - question: Vous pouvez charger des ressources externes uniquement dans le fichier nuxt.config.js
+  - question: Nous pouvons charger des ressources externes uniquement dans le fichier nuxt.config.js
     answers:
       - vrai
       - faux
     correctAnswer: faux
-  - question: Pour inclure des scripts avant la fermeture de la balise body vous utilisez
+  - question: Pour inclure des scripts avant la fermeture de la balise body nous utilisons
     answers:
       - 'body: true'
       - 'body: false'
@@ -36,15 +36,15 @@ questions:
     correctAnswer: 'body: true'
 ---
 
-Nuxt.js vous propose trois façons différentes d'ajouter des métadonnées à votre application :
+Nuxt.js nous propose trois façons différentes d'ajouter des métadonnées à l'application :
 
 1. Utiliser globalement le fichier nuxt.config.js
 2. Utiliser localement la propriété `head` comme un objet
-3. Utiliser localement la propriété `head` comme une fonction pour que vous ayez accès aux données et aux propriétés calculées.
+3. Utiliser localement la propriété `head` comme une fonction pour que nous ayons accès aux données et aux propriétés calculées.
 
-### Global Settings
+### Paramètres globaux
 
-Nuxt.js vous permet de définir les balises `<meta>` par défaut pour votre application dans le fichier nuxt.config.js en utilisant la propriété head. Cela permet d'ajouter un titre et une description par défaut pour le référencement ou bien définir la fenêtre d'affichage ou ajouter la favicon.
+Nuxt.js nous permet de définir les balises `<meta>` par défaut pour notre application dans le fichier `nuxt.config.js` en utilisant la propriété head. Cela permet d'ajouter un titre et une description par défaut pour le référencement ou bien définir la fenêtre d'affichage ou ajouter la favicon.
 
 ```js{}[nuxt.config.js]
 export default {
@@ -66,13 +66,13 @@ export default {
 
 <base-alert type="info">
 
-Cela vous donnera le même titre et la même description sur chaque page
+Cela nous donnera le même titre et la même description sur chaque page.
 
 </base-alert>
 
 ### Configuration locale
 
-Vous pouvez également ajouter des titres et des meta pour chaque page en utilisant la propriété `head` à l'intérieur de votre balise de script sur chaque page.
+Nous pouvons également ajouter des titres et des meta pour chaque page en utilisant la propriété `head` à l'intérieur de notre balise de script sur chaque page.
 
 ```js{}[pages/index.vue]
 <script>
@@ -93,7 +93,7 @@ export default {
 
 <base-alert type="info">
 
-Utilisez `head` comme objet pour définir un titre et une description uniquement pour la page d'accueil
+Utiliser `head` comme objet pour définir un titre et une description uniquement pour la page d'accueil.
 
 </base-alert>
 
@@ -126,11 +126,11 @@ Utilisez `head` comme objet pour définir un titre et une description uniquement
 
 <base-alert type="info">
 
-Utilisez `head` comme une fonction pour définir un titre et une description uniquement pour la page d'accueil. En utilisant une fonction, vous avez accès aux données (`data`) et aux propriétés calculées (`computed`).
+Utiliser `head` comme une fonction pour définir un titre et une description uniquement pour la page d'accueil. En utilisant une fonction, nous avons accès aux données (`data`) et aux propriétés calculées (`computed`).
 
 </base-alert>
 
-Nuxt.js utilise [vue-meta](https://vue-meta.nuxtjs.org/) pour mettre à jour l'en-tête et les méta data de votre application.
+Nuxt.js utilise [vue-meta](https://vue-meta.nuxtjs.org/) pour mettre à jour l'en-tête et les méta data de notre application.
 
 <base-alert>
 
@@ -140,17 +140,17 @@ Pour éviter toute duplication lors de l'utilisation de composants enfants, veui
 
 <base-alert type="next">
 
-Pour en savoir plus sur les options disponibles pour la propriété `head`, consultez la documentation [vue-meta] (https://vue-meta.nuxtjs.org/api/#metainfo-properties).
+Pour en savoir plus sur les options disponibles pour la propriété `head`, on peut consulter la documentation de [vue-meta](https://vue-meta.nuxtjs.org/api/#metainfo-properties).
 
 </base-alert>
 
 ## Ressources externes
 
-Vous pouvez inclure des ressources externes telles que des scripts et des polices de caractères en les ajoutant globalement au fichier `nuxt.config.js` ou localement dans l'objet ou la fonction `head`.
+Nous pouvons inclure des ressources externes telles que des scripts et des polices de caractères en les ajoutant globalement au fichier `nuxt.config.js` ou localement dans l'objet ou la fonction `head`.
 
 <base-alert type="info">
 
-Vous pouvez également passer à chaque ressource un `body : true` optionnel afin d'inclure la ressource avant la balise de fermeture `</body>`.
+Nous pouvons également passer à chaque ressource un `body : true` optionnel afin d'inclure la ressource avant la balise de fermeture `</body>`.
 
 </base-alert>
 
@@ -213,11 +213,11 @@ export default {
 
 Ajoutez des liens de `prefetch` et de `preload` pour accélérer le temps de chargement de la page initiale.
 
-Vous voudrez peut-être désactiver cette option que si vous avez beaucoup de pages et de routes.
+Nous voudrons peut-être désactiver cette option si nous avons beaucoup de pages et de routes.
 
 <base-alert type="next">
 
-[Conseils pour les ressources](/guides/configuration-glossary/configuration-render#resourcehints)
+[Conseils pour les ressources](/guides/configuration-glossary/configuration-render#resourcehints).
 
 </base-alert>
 

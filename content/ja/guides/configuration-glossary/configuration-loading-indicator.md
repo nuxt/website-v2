@@ -1,18 +1,18 @@
 ---
-title: 'The loading indicator Property'
-description: Show fancy loading indicator while SPA page is loading!
+title: 'loading indicator プロパティ'
+description: 'SPA のページ読み込み中に素敵なローディングインジケータを表示します！'
 menu: loadingIndicator
 category: configuration-glossary
 position: 16
 ---
 
-> Show fancy loading indicator while SPA page is loading!
+> SPA のページ読み込み中に素敵なローディングインジケータを表示します！
 
-When running Nuxt.js in SPA mode, there is no content from the server side on the first page load. So, instead of showing a blank page while the page loads, we may show a spinner.
+Nuxt.js を SPA モードで実行した場合、最初のページ読み込み時にはサーバーサイドからのコンテンツがありません。そのためページ読み込み中に空白のページのかわりにスピナーを表示することができます。
 
-This property can have 3 different types: `string` or `false` or `object`. If a string value is provided it is converted to object style.
+このプロパティには `string`、`false`、`object` の 3 つの異なる型を指定できます。文字列が指定された場合はオブジェクトスタイルに変換されます。
 
-Default value is:
+デフォルト値:
 
 ```js
 loadingIndicator: {
@@ -22,9 +22,9 @@ loadingIndicator: {
 }
 ```
 
-## Built-in indicators
+## 内蔵されているインジケータ
 
-These indicators are imported from the awesome [Spinkit](http://tobiasahlin.com/spinkit) project. You can use its demo page to preview spinners.
+これらのインジケータは素晴らしい [Spinkit](http://tobiasahlin.com/spinkit) プロジェクトからインポートされています。Spinkit のデモページを使ってスピナーをプレビューできます。
 
 - circle
 - cube-grid
@@ -38,10 +38,10 @@ These indicators are imported from the awesome [Spinkit](http://tobiasahlin.com/
 - three-bounce
 - wandering-cubes
 
-Built-in indicators support `color` and `background` options.
+内臓インジケータは `color` と `background` オプションをサポートしています。
 
-## Custom indicators
+## 独自のインジケータ
 
-If you need your own special indicator, a String value or Name key can also be a path to an html template of indicator source code! All of the options are passed to the template, too.
+独自の特別なインジケータが必要な場合は文字列または Name キーをインジケータのソースコードの html テンプレートへのパスにすることもできます。すべてのオプションもテンプレートに渡されます。
 
-Nuxt's built-in [source code](https://github.com/nuxt/nuxt.js/tree/dev/packages/vue-app/template/views/loading) is also available if you need a base!
+もしベースが必要な場合は[ソースコード](https://github.com/nuxt/nuxt.js/tree/dev/packages/vue-app/template/views/loading)も利用できます！

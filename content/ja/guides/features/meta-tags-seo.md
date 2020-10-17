@@ -1,6 +1,6 @@
 ---
 title: メタタグと SEO
-description: Nuxt.js では、nuxt.config.js 内の head プロパティを利用することで、アプリケーションにおけるデフォルトの `<meta>` タグをすべて定義することができます。SEO のためのデフォルトのタイトルと description タグの追加や、ビューポートのセット、ファビコンの追加が簡単にできます。
+description: Nuxt.js では、nuxt.config.js 内の head プロパティを利用することで、アプリケーションにおけるデフォルトの `<meta>` タグをすべて定義することができます。SEO のためのデフォルトの title と description タグの追加や、ビューポートのセット、ファビコンの追加が簡単にできます。
 position: 6
 category: features
 csb_link: https://codesandbox.io/embed/github/nuxt-academy/guides-examples/tree/master/03_features/06_meta_tags_seo?fontsize=14&hidenavigation=1&theme=dark
@@ -44,7 +44,7 @@ Nuxt.js はアプリケーションにメタデータを追加するために 3 
 
 ### グローバルな設定
 
-Nuxt.js では、nuxt.config.js 内の head プロパティを利用することで、アプリケーションにおけるデフォルトの `<meta>` タグをすべて定義することができます。SEO のためのデフォルトのタイトルと description タグの追加や、ビューポートのセット、ファビコンの追加が簡単にできます。
+Nuxt.js では、nuxt.config.js 内の head プロパティを利用することで、アプリケーションにおけるデフォルトの `<meta>` タグをすべて定義することができます。SEO のためのデフォルトの title と description タグの追加や、ビューポートのセット、ファビコンの追加が簡単にできます。
 
 ```js{}[nuxt.config.js]
 export default {
@@ -66,7 +66,7 @@ export default {
 
 <base-alert type="info">
 
-この設定により、すべてのページで共通のタイトルと description が設定されます。
+この設定により、すべてのページで共通のタイトルと説明が設定されます。
 
 </base-alert>
 
@@ -93,7 +93,7 @@ export default {
 
 <base-alert type="info">
 
-`head` をオブジェクトとして使用して、home page のみにタイトルと description を設定する例。
+`head` をオブジェクトとして使用して、ホームページのみに title と description を設定する例。
 
 </base-alert>
 
@@ -126,21 +126,21 @@ export default {
 
 <base-alert type="info">
 
-`head` を関数として使用して、home page のみにタイトルと description を設定する例。関数を使用することで data と computed プロパティにアクセスすることができます。
+`head` を関数として使用して、ホームページのみに title と description を設定する例。関数を使用することで data と computed プロパティにアクセスすることができます。
 
 </base-alert>
 
-Nuxt.js はアプリケーションの document head とメタ要素を更新するために、 [vue-meta](https://vue-meta.nuxtjs.org/) を利用しています。
+Nuxt.js はアプリケーションの document head とメタ要素を更新するために、[vue-meta](https://vue-meta.nuxtjs.org/) を利用しています。
 
 <base-alert>
 
-子コンポーネントを使用したときの重複を避けるために、`hid` キーを利用してメタデータに 一意な識別子を与えてください。 こうすることで`vue-meta` は、デフォルトのタグを上書きすべきということを知ることができます。
+子コンポーネントを使用したときにメタタグの重複を避けるために、`hid` キーを利用してメタデータに一意な識別子を与えてください。こうすることで`vue-meta` は、デフォルトのタグを上書きすべきということを知ることができます。
 
 </base-alert>
 
 <base-alert type="next">
 
-`head` の利用可能なプロパティについての詳細は、 [vue-meta のドキュメント](https://vue-meta.nuxtjs.org/api/#metainfo-properties)を参照してください。
+`head` の利用可能なプロパティについての詳細は、[vue-meta のドキュメント](https://vue-meta.nuxtjs.org/api/#metainfo-properties)を参照してください。
 
 </base-alert>
 
@@ -211,7 +211,7 @@ export default {
 
 ## リソースヒント
 
-初期ページの読み込み時間をより早くするために、プリフェッチ と プリロード のリンクを追加しました。
+初期ページの読み込み時間をより早くするために、プリフェッチとプリロードのリンクを追加しました。
 
 多くのページとルートがある場合にのみ、このオプションを無効にすると良いでしょう。
 

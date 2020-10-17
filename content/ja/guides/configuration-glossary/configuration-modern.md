@@ -1,28 +1,28 @@
 ---
-title: 'The modern Property'
-description: Build and server a modern bundle
+title: 'modern プロパティ'
+description: 'モダンなバンドルのビルドとデプロイ'
 menu: modern
 category: configuration-glossary
 position: 18
 ---
 
-> This feature is inspired by [vue-cli modern mode](https://cli.vuejs.org/guide/browser-compatibility.html#modern-mode)
+> この機能は [vue-cli の modern mode](https://cli.vuejs.org/guide/browser-compatibility.html#modern-mode) にインスパイアされています
 
-- Type: `String` or `Boolean`
-  - Default: false
-  - Possible values:
-    - `'client'`: Serve both, the modern bundle `<script type="module">` and the legacy bundle `<script nomodule>` scripts, also provide a `<link rel="modulepreload">` for the modern bundle. Every browser that understands the `module` type will load the modern bundle while older browsers fall back to the legacy (transpiled) one.
-    - `'server'` or `true`: The Node.js server will check browser version based on the user agent and serve the corresponding modern or legacy bundle.
-    - `false`: Disable modern build
+- 型: `String` または `Boolean`
+  - デフォルト: false
+  - 設定できる値:
+    - `'client'`: モダンバンドル `<script type="module">` とレガシーバンドル`<script nomodule>` スクリプトの両方を提供し、モダンバンドル用の `<link rel="modulepreload">` も提供します。`module` タイプを理解するすべてのブラウザではモダンバンドルをロードしますが、古いブラウザではレガシー（トランスパイルされた）バンドルにフォールバックします。
+    - `'server'` または `true`: Node.js サーバーは、ユーザーエージェントに基づいてブラウザのバージョンをチェックし、対応するモダンバンドルまたはレガシーバンドルを提供します。
+    - `false`: モダンビルドを無効にします
 
-The two versions of bundles are:
+2 つのバージョンのバンドルについて:
 
-1. Modern bundle: targeting modern browsers that support ES modules
-1. Legacy bundle: targeting older browsers based on babel config (IE9 compatible by default).
+1. モダンバンドル: ES modules をサポートするモダンなブラウザを対象にしています。
+1. レガシーバンドル: babel config（デフォルトでは IE9 互換）をベースにした古いブラウザを対象にしています。
 
-**Info:**
+**情報:**
 
-- Use command option `[--modern | -m]=[mode]` to build/start modern bundles:
+- モダンバンドルでビルド/スタートするにはコマンドオプション `[--modern | -m]=[mode]` を使ってください:
 
 ```json{}[package.json]
 {
@@ -33,16 +33,16 @@ The two versions of bundles are:
 }
 ```
 
-**Note about _nuxt generate_:** The `modern` property also works with the `nuxt generate` command, but in this case only the `client` option is honored and will be selected automatically when launching the `nuxt generate --modern` command without providing any values.
+**nuxt generate に関する注意\_:** `modern` プロパティは `nuxt generate` コマンドでも動作しますが、この場合は `client` オプションだけが優先され `nuxt generate --modern` コマンドを値なしで実行した際に自動的に選択されます。
 
-- Nuxt will automatically detect `modern` build in `nuxt start` when `modern` is not specified, auto-detected mode is:
+- `modern` が指定されていない場合、Nuxt は `nuxt start` の `modern` ビルドを自動的に検出します。自動検出モードは次のとおりです:
 
-| Mode      | Modern Mode |
-| --------- | :---------: |
-| universal |   server    |
-| spa       |   client    |
+| モード    | モダンモード |
+| --------- | :----------: |
+| universal |    server    |
+| spa       |    client    |
 
-- Modern mode for `nuxt generate` can only be `client`
-- Use [`render.crossorigin`](/guides/configuration-glossary/configuration-render#crossorigin) to set `crossorigin` attribute in `<link>` and `<script>`
+- `nuxt generate` のモダンモードは `client` のみになります。
+- [`render.crossorigin`](/guides/configuration-glossary/configuration-render#クロスオリジン) を使って `<link>` と `<script>` タグに `crossorigin` 属性を設定します。
 
-> Please refer [Phillip Walton's excellent post](https://philipwalton.com/articles/deploying-es2015-code-in-production-today/) for more knowledge regarding modern builds.
+> モダンビルドについての詳細は [Phillip Walton さんの素晴らしい投稿](https://philipwalton.com/articles/deploying-es2015-code-in-production-today/)を参照してください。

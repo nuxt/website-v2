@@ -1,33 +1,33 @@
 ---
-title: 'The mode Property'
-description: Change default nuxt mode
+title: 'mode プロパティ'
+description: 'デフォルトの nuxt の mode を変更します'
 menu: mode
 category: configuration-glossary
 position: 17
 ---
 
-- Type: `string`
-  - Default: `universal`
-  - Possible values:
-    - `'spa'`: No server-side rendering (only client-side navigation)
-    - `'universal'`: Isomorphic application (server-side rendering + client-side navigation)
+- 型: `string`
+  - デフォルト: `universal`
+  - 設定できる値:
+    - `'spa'`: サーバーサイドレンダリングを行いません（クライアントでの遷移のみ）
+    - `'universal'`: アイソモーフィックなアプリケーション（サーバーサイドレンダリングに加え、クライアントでの遷移を行う）になります
 
-> You can use this option to change default nuxt mode for your project using `nuxt.config.js`
+> `nuxt.config.js` でこのオプション使うとデフォルトの nuxt の mode を変更できます。
 
 <base-alert type="warning">
 
-Deprecated: please use `ssr: false` instead of `mode: spa`
+非推奨: `mode: spa` のかわりに `ssr: false` を使ってください
 
 </base-alert>
 
 <base-alert type="next">
 
-To learn more about the `ssr` option, checkout the [ssr property](/guides/configuration-glossary/configuration-ssr).
+`ssr` オプションについての詳細は [ssr プロパティ](/guides/configuration-glossary/configuration-ssr)を参照してください。
 
 </base-alert>
 
 <base-alert type="next">
 
-To learn more about the `mode` option, checkout the [rendering modes section](/guides/features/rendering-modes).
+`mode` オプションについての詳細は[レンダリングモードのドキュメント](/guides/features/rendering-modes)を参照してください。
 
 </base-alert>

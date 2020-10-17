@@ -11,7 +11,6 @@ git clone https://github.com/nuxt/nuxtjs.org.git
 cd nuxtjs.org/
 yarn
 ```
-
 ## Content and Translations
 
 The markdown files are stored in the content folder.

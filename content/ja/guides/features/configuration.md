@@ -177,7 +177,7 @@ export default {
 </script>
 ```
 
-`createElement` を `h` にエイリアスすることは、Vue のエコシステムで見られる共通の慣例です。しかしその慣例は JSX では任意です。なぜなら ES2015 の構文で宣言された (関数またはアロー関数ではない) JSX で書かれた任意のメソッドやゲッターには `const h = this.$createElement` が[自動的にインジェクト](https://github.com/vuejs/babel-plugin-transform-vue-jsx#h-auto-injection) されるためです。よって(h)パラメータは削除することができます。
+`createElement` を `h` にエイリアスすることは、Vue のエコシステムで見られる共通の慣例です。しかしその慣例は JSX では任意です。なぜなら ES2015 の構文で宣言された（関数またはアロー関数ではない）JSX で書かれた任意のメソッドやゲッターには `const h = this.$createElement` が[自動的にインジェクト](https://github.com/vuejs/babel-plugin-transform-vue-jsx#h-auto-injection) されるためです。よって(h)パラメータは削除することができます。
 
 JSX の使い方をより深く理解するには Vue.js ドキュメントの [JSX のセクション](https://vuejs.org/v2/guide/render-function.html#JSX)を参照してください。
 
@@ -308,9 +308,9 @@ export default {
 
 ## ホストとポート番号を編集する
 
-デフォルトでは、Nuxt.js の開発サーバーのホストは `localhost` (ホストマシン内からのみアクセス可能) です。アプリケーションを他のデバイスで確認するにはホストを修正する必要があります。nuxt.config.js ファイルでホストを修正することができます。
+デフォルトでは、Nuxt.js の開発サーバーのホストは `localhost`（ホストマシン内からのみアクセス可能）です。アプリケーションを他のデバイスで確認するにはホストを修正する必要があります。nuxt.config.js ファイルでホストを修正することができます。
 
-ホストの `'0.0.0.0'` は、ホストマシンの _外部_ からの接続 (例えば LAN) でもアクセスが可能なホストアドレスを解決するように Nuxt.js に指示します。ホストに `'0'` (0 ではありません) や `'0.0.0.0'` という文字列が指定された場合、ローカル IP アドレスが Nuxt.js に割り振られます。
+ホストの `'0.0.0.0'` は、ホストマシンの _外部_ からの接続（例えば LAN）でもアクセスが可能なホストアドレスを解決するように Nuxt.js に指示します。ホストに `'0'`（0 ではありません）や `'0.0.0.0'` という文字列が指定された場合、ローカル IP アドレスが Nuxt.js に割り振られます。
 
 ```js{}[nuxt.config.js]
 export default {
@@ -332,7 +332,7 @@ export default {
 
 <base-alert type="info">
 
-ポート番号に `'0'` (0 ではありません) という文字列の値が指定された場合、ランダムなポートが Nuxt.js アプリケーションに割り振られます。
+ポート番号に `'0'`（0 ではなく falsy）という文字列の値が指定された場合、ランダムなポートが Nuxt.js アプリケーションに割り振られます。
 
 </base-alert>
 
@@ -382,7 +382,7 @@ export default async () => {
 
 <base-alert type="next">
 
-`nuxt.config.js` には、カスタマイズや設定オプションがたくさんあります！[設定の用語集](/guides/configuration-glossary/configuration-build)ですべてのキーを確認しましょう。
+`nuxt.config.js` には、カスタマイズや設定オプションがたくさんあります！[build の設定](/guides/configuration-glossary/configuration-build)ですべてのキーを確認しましょう。
 
 </base-alert>
 

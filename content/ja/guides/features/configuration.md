@@ -70,7 +70,7 @@ Nuxt.js ではデフォルトの設定でほとんどのユースケースをカ
 
 ## css プロパティ
 
-グローバルに(すべてのページで)適用したい CSS ファイル/モジュール/ライブラリを設定できます。
+グローバルに（すべてのページで）適用したい CSS ファイル/モジュール/ライブラリを設定できます。
 
 <base-alert>
 
@@ -83,7 +83,7 @@ Nuxt.js ではデフォルトの設定でほとんどのユースケースをカ
 ```js{}[nuxt.config.js]
 export default {
   css: [
-    // Node.js モジュールを直接ロードする (ここでは Sass ファイル)
+    // Node.js モジュールを直接ロードする（ここでは Sass ファイル）
     'bulma',
     // プロジェクト内の CSS ファイル
     '~/assets/css/main.css',
@@ -185,7 +185,7 @@ JSX の使い方をより深く理解するには Vue.js ドキュメントの [
 
 ### .nuxtignore
 
-`.nuxtignore` を使用することで、ビルド時にプロジェクトルート (`rootDir`) にある `layout`、`page`、`store` そして `middleware` のファイルを Nuxt.js に無視させることができます。`.nuxtignore` ファイルは `.gitignore` や `.eslintignore` と同じ仕様に従います。各行はどのファイルを無視するかを示す glob パターンです。
+`.nuxtignore` を使用することで、ビルド時にプロジェクトルート（`rootDir`）にある `layout`、`page`、`store` そして `middleware` のファイルを Nuxt.js に無視させることができます。`.nuxtignore` ファイルは `.gitignore` や `.eslintignore` と同じ仕様に従います。各行はどのファイルを無視するかを示す glob パターンです。
 
 ```markdown{}[.nuxtignore]
 # foo.vue レイアウトを無視する

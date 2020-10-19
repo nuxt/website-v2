@@ -6,8 +6,8 @@ category: configuration-glossary
 position: 32
 ---
 
-- Type: `Object`
-- Default: `{ silent: !isDev, performance: isDev }`
+- Type : `Object`
+- Par défaut : `{ silent: !isDev, performance: isDev }`
 
 > La propriété vue.config fournit un pont de configuration direct pour le `Vue.config`
 

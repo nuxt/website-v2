@@ -6,22 +6,22 @@ category: configuration-glossary
 position: 34
 ---
 
-- Type: `Object`
-- Default: `{}`
+- Type : `Object`
+- Par défaut : `{}`
 
-> La propriété watchers vous permet d'écraser la configuration de watchers dans votre nuxt.config.js.
+> La propriété `watchers` permet d'écraser la configuration des watchers dans le fichier nuxt.config.js.
 
 ## chokidar
 
-- Type: `Object`
-- Default: `{}`
+- Type : `Object`
+- Par défaut : `{}`
 
 Pour en savoir plus sur les options de chokidar, voir l'[API chokidar](https://github.com/paulmillr/chokidar#api).
 
 ## webpack
 
-- Type: `Object`
-- Default:
+- Type : `Object`
+- Par défaut :
 
 ```js
 watchers: {

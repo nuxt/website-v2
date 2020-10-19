@@ -138,7 +138,7 @@ export default {
 このファイルの木構造から次のルーティングが生成されます:
 
 ```js
-[
+;[
   {
     path: '/parent',
     component: '~/pages/parent.vue',
@@ -223,7 +223,7 @@ keep-alive と keep-alive-props についてより詳しく知るためには [v
 
 ## NuxtLink コンポーネント
 
-アプリケーションでページ間をナビゲーションするためには、`<NuxtLink>` コンポーネントを使うべきです。このコンポーネントは Nuxt.js に同封されているので、他のコンポーネントのようにインポートする必要はありません。これは HTML の `<a>` タグと似ていますが、`href="/about"` の代わりに `to="/about"` を使います。もし `vue-router` を使っているなら、`<RouterLink>` の代わりに `<NuxtLink>` を使うことを検討すると良いでしょう。
+アプリケーションでページ間を遷移するためには、`<NuxtLink>` コンポーネントを使うべきです。このコンポーネントは Nuxt.js に含まれているので、他のコンポーネントのようにインポートする必要はありません。これは HTML の `<a>` タグと似ていますが、`href="/about"` の代わりに `to="/about"` を使います。もし以前 `vue-router` を使ったことがあるなら、`<RouterLink>` の代わりが `<NuxtLink>` だと考えることができます。
 
 `pages` フォルダの `index.vue` へのシンプルなリンク:
 
@@ -292,7 +292,7 @@ Nuxt.js v2.10.0 からは、`prefetchLinks` を `false` に設定した上で特
 
 ## linkActiveClass
 
-`linkActiveClass` は、アクティブなリンクのための `vue-router` の CSS クラスと同じように機能します。どのリンクがアクティブかを表示したい場合は、`nuxt-link-active` クラスに css を追加することで実現できます。
+`linkActiveClass` は、アクティブなリンクのための `vue-router` の CSS クラスと同じように機能します。どのリンクがアクティブかを表示したい場合は、`nuxt-link-active` クラスを持つ css を作成することで実現できます。
 
 ```css
 .nuxt-link-active {
@@ -302,7 +302,7 @@ Nuxt.js v2.10.0 からは、`prefetchLinks` を `false` に設定した上で特
 
 <base-alert>
 
-この css は、ナビゲーションコンポーネント、適用したい特定のページ、レイアウトコンポーネント、main.css ファイルのいずれかに追加してください。
+この css は、ナビゲーションコンポーネント、適用したい特定のページ、レイアウトコンポーネント、main.css ファイルのいずれかに追加できます。
 
 </base-alert>
 
@@ -324,7 +324,7 @@ export default {
 
 ## linkExactActiveClass
 
-`linkExactActiveClass` は、正確なアクティブなリンクのための `vue-router` の CSS クラスと同じように機能します。どのリンクが正確なマッチでアクティブかを表示したい場合は、`nuxt-link-exact-active` クラスに css を追加することで実現できます。
+`linkExactActiveClass` は、正確なアクティブなリンクのための `vue-router` の CSS クラスと同じように機能します。どのリンクがアクティブか完全に一致させて表示したい場合は、`nuxt-link-exact-active` クラスを css に追加することで実現できます。
 
 ```css
 .nuxt-link-exact-active {
@@ -334,7 +334,7 @@ export default {
 
 <base-alert type="info">
 
-この css は、ナビゲーションコンポーネント、適用したい特定のページ、レイアウトコンポーネント、main.css ファイルのいずれかに追加してください。
+この css は、ナビゲーションコンポーネント、適用したい特定のページ、レイアウトコンポーネント、main.css ファイルのいずれかに追加できます。
 
 </base-alert>
 
@@ -356,7 +356,7 @@ export default {
 
 ## linkPrefetchedClass
 
-プリフェッチしたリンクすべてにスタイルを追加することができます。これはデフォルトの挙動を変更した後に、どのリンクでプリフェッチが行われているかをテストする際に役立ちます。linkPrefetchedClass はデフォルトでは無効になっています。有効にしたい場合、 `nuxt.config.js` ファイルの router プロパティにそれを追加する必要があります。
+プリフェッチしたリンクすべてにスタイルを追加することができます。これはデフォルトの挙動を変更した後に、どのリンクでプリフェッチが行われているかをテストする際に役立ちます。linkPrefetchedClass はデフォルトでは無効になっています。有効にしたい場合、 `nuxt.config.js` ファイルの router プロパティに `linkPrefetchedClass` を追加する必要があります。
 
 ```js{}[nuxt.config.js]
 export default {

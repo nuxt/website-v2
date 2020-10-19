@@ -282,6 +282,12 @@ export default {
             img: 'vps-server.png',
             url: 'https://www.vpsserver.com/?ref=nuxt',
             class: 'h-8'
+          },
+          {
+            name: 'fine VPN',
+            img: 'finevpn.png',
+            url: 'https://en.finevpn.org/',
+            class: 'h-8'
           }
         ],
         bronze: [

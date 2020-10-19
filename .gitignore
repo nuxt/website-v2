@@ -30,3 +30,5 @@ sw.*
 cypress/integration/examples
 cypress/videos
 cypress/screenshots
+
+foo

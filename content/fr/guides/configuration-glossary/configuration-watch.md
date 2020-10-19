@@ -6,8 +6,8 @@ category: configuration-glossary
 position: 33
 ---
 
-- Type: `Object`
-- Default: `[]`
+- Type : `Object`
+- Par défaut : `[]`
 
 > La propriété watch vous permet de surveiller des fichiers personnalisés pour le redémarrage du serveur.
 

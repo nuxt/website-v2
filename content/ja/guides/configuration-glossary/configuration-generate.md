@@ -61,7 +61,7 @@ export default {
 - 型: `Number`
 - デフォルト: `500`
 
-ルート生成は並行で行われ、`generate.concurrency` は 1 スレッドで実行されるルートの量を指定します。
+ルート生成は並行で行われ、`generate.concurrency` は 1 スレッドで実行されるルートの数を指定します。
 
 ## crawler
 

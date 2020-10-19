@@ -17,7 +17,7 @@ position: 50
 
 例:
 
-`layouts/default.vue`:
+`layouts/default.vue`:2
 
 ```html
 <template>

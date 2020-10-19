@@ -197,6 +197,14 @@ Interval (in milliseconds) between two render cycles to avoid flooding a potenti
 - **Deprecated!**
 - Use [build.html.minify](/api/configuration-build#html-minify) instead
 
+## nonRootPageExtension
+
+- Type: `String`
+
+With `subFolders` set to `false`, allows setting the extension of generated non-root pages. For example, setting `generate.nonRootPageExtension` to `''` will generate the pages' files without any extension.
+
+If not set, all the files will be generated with a `.html` extension.
+
 ## routes
 
 - Type: `Array`

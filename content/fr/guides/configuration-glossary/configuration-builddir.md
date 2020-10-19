@@ -1,15 +1,15 @@
 ---
 title: 'La Propriété buildDir'
-description: Définie le répertoire dist pour votre application Nuxt.js
+description: Définie le répertoire dist pour notre application Nuxt.js
 menu: buildDir
 category: configuration-glossary
 position: 2
 ---
 
-- Type: `String`
-- Default: `.nuxt`
+- Type : `String`
+- Par défaut : `.nuxt`
 
-> Définie le répertoire dist pour votre application Nuxt.js
+> Définie le répertoire dist pour notre application Nuxt.js
 
 ```js{}[nuxt.config.js]
 export default {

@@ -16,7 +16,7 @@ module.exports = {
   header: {
     links: [
       {
-        name: 'Panduan',
+        name: 'Panduan\'s',
         slug: 'guides',
         type: 'newDocs',
         routeName: 'guides-book-slug'

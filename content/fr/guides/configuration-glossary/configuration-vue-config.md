@@ -11,7 +11,7 @@ position: 32
 
 > La propriété vue.config fournit un pont de configuration direct pour le `Vue.config`
 
-**Example**
+**Exemple**
 
 ```js{}[nuxt.config.js]
 export default {

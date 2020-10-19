@@ -1,13 +1,13 @@
 ---
 title: 'La Propriété dir'
-description: Définie les répertoires personnalisés pour votre application Nuxt.js
+description: Définie les répertoires personnalisés pour notre application Nuxt.js
 menu: dir
 category: configuration-glossary
 position: 7
 ---
 
-- Type: `Object`
-- Default:
+- Type : `Object`
+- Par défaut :
 
 ```js
 {
@@ -21,7 +21,7 @@ position: 7
 }
 ```
 
-> Définie les répertoires personnalisés pour votre application Nuxt.js
+> Définie les répertoires personnalisés pour notre application Nuxt.js
 
 ```js{}[nuxt.config.js]
 export default {

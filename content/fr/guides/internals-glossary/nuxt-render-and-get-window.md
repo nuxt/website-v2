@@ -6,13 +6,13 @@ category: internals-glossary
 position: 12
 ---
 
-- Type: `Function`
-- Argument: `String`
-  1. `String`: URL to render
-  2. _Optional_, `Object`: options
-  - virtualConsole: `Boolean` (default: `true`)
-- Returns: `Promise`
-  - Returns: `window`
+- Type : `Function`
+- Argument : `String`
+  1. `String` : URL à afficher
+  2. _Optional_, `Object` : options
+  - virtualConsole: `Boolean` (par défaut : `true`)
+- Renvois : `Promise`
+  - Renvois : `window`
 
 > Récupère la `window` d'une URL donnée de l'application Nuxt.js.
 
@@ -28,7 +28,7 @@ Pour utiliser cette fonction, vous devez installer `jsdom` :
 npm install --save-dev jsdom
 ```
 
-Example:
+Exemple :
 
 ```js
 const { Nuxt, Builder } = require('nuxt')

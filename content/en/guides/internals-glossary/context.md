@@ -103,7 +103,16 @@ redirect({ name: 'slug', params: { slug: mySlug } })
 redirect('https://vuejs.org')
 ```
 
-See the [Vue Router docs](https://github.com/vuejs/vue-router/blob/64d60c01920405f0b93e00a401c73868b08ee6e5/types/router.d.ts#L161-L169) more info on the Location property
+See the [Vue Router docs](https://github.com/vuejs/vue-router/blob/64d60c01920405f0b93e00a401c73868b08ee6e5/types/router.d.ts#L161-L169) more info on the Location property.
+
+
+<alert type="warning">
+
+It's not possible to use `redirect` or `error` in [client-side Nuxt plugin](/guides/directory-structure/plugins#client-or-server-side-only) due to hydration errors (client content would be different from what it'd expect from the server).
+
+A valid workaround would be using `window.onNuxtReady(() => { window.$nuxt.$router.push('/your-route') })`
+
+</alert>
 
 ### error
 

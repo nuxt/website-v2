@@ -95,13 +95,32 @@ Boolean to let you know if the method/middleware is called from webpack hot modu
 
 Use this method to redirect the user to another route, the status code is used on the server-side, defaults to `302`. `redirect([status,] path [, query])`.
 
+Examples:
+
+```js{}[]
+redirect(302, '/login')
+redirect({ name: 'slug', params: { slug: mySlug } })
+redirect('https://vuejs.org')
+```
+
+See the [Vue Router docs](https://github.com/vuejs/vue-router/blob/64d60c01920405f0b93e00a401c73868b08ee6e5/types/router.d.ts#L161-L169) more info on the Location property.
+
+
+<base-alert type="info">
+
+It's not possible to use `redirect` or `error` in [client-side Nuxt plugin](/guides/directory-structure/plugins#client-or-server-side-only) due to hydration errors (client content would be different from what it'd expect from the server).
+
+A valid workaround would be using `window.onNuxtReady(() => { window.$nuxt.$router.push('/your-route') })`
+
+</base-alert>
+
 ### error
 
 `error` (_Function_)
 
 Use this method to show the error page: `error(params)`. The `params` should have the properties `statusCode` and `message`.
 
-### $config
+### `$config`
 
 `$config` (_Object_)
 

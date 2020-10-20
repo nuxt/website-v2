@@ -126,6 +126,8 @@ You can also use a regex expression here to exclude pages starting or ending wit
 
 ### Example
 
+<example-intro></example-intro>
+
 `nuxt.config.js` for static site generation shows
 
 - `target` is set to `static`.

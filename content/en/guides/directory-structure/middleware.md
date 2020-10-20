@@ -127,6 +127,8 @@ export default {
 
 ### Example
 
+<example-intro></example-intro>
+
 `store/class.js` sets a class to the body.
 
 `middleware/class.js` uses router middleware to set a class before we enter the route.
@@ -166,6 +168,8 @@ export default function ({ store, redirect }) {
 
 ### Example
 
+<example-intro></example-intro>
+
 `pages/named-middleware.vue` contains a `middleware` property with the value of `auth` which is called before a user enters the route.
 
 `middleware/auth.js` checks to see if the user is authenticated and if they aren't it redirects them to the auth page.
@@ -200,6 +204,8 @@ If you need to use a middleware only for a specific page, you can directly use a
 ```
 
 ### Example
+
+<example-intro></example-intro>
 
 `pages/anonymous-middleware.vue` contains a middleware function which uses the store to call the increment mutation with results from the store displayed on the page.
 

@@ -329,6 +329,8 @@ See more on the [transition property](/guides/configuration-glossary/configura
 
 ### Example
 
+<example-intro></example-intro>
+
 `nuxt.config.js` contains :
 
 - the `env` property to add the URL of our API.

@@ -269,6 +269,8 @@ Learn more about the [watchQuery property](/guides/components-glossary/pages-wa
 
 ## Example
 
+<example-intro></example-intro>
+
 `pages/posts/index.vue` uses `asyncData` and the `$http` module to fetch our list of posts from our API.
 
 `pages/posts/_id.vue` and `components/BlogPosts.vue` use the `fetch` method to fetch data from our API using:

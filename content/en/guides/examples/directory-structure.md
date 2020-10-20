@@ -6,6 +6,8 @@ category: examples
 csb_link: https://codesandbox.io/embed/github/nuxt-academy/guides-examples/tree/master/01_get_started/03_directory_structure?
 ---
 
+<example-intro></example-intro>
+
 - The `assets` folder contains an svg and a css file.
 - The `components` folder contains a navigation component.
 - The `pages` folder contains pages at root level as well as inside a folder.

@@ -71,6 +71,8 @@ Using `$fetchState.pending` we can show a message when the data is waiting to be
 
 ### Example
 
+<example-intro></example-intro>
+
 `components/MountainsList.vue` uses fetch to fetch data from an API and uses:
 
 - `$fetchState.pending` to show a loading message when waiting for the data to load.
@@ -208,6 +210,8 @@ And now in your template you can use the BaseButton instead of Button without ha
 ```
 
 ### Example
+
+<example-intro></example-intro>
 
 `pages/index.vue` shows how to lazy load a component by prefixing it with the world lazy.
 

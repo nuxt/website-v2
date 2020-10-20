@@ -83,6 +83,8 @@ The `package.json` file contains all the dependencies and scripts for your app
 
 ### Example
 
+<example-intro></example-intro>
+
 - The `assets` folder contains an svg and a css file.
 - The `components` folder contains a navigation component.
 - The `pages` folder contains pages at root level as well as inside a folder.

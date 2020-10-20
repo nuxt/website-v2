@@ -447,6 +447,8 @@ If you are going to offer using `buildModules` please mention that this featur
 
 ## Example
 
+<example-intro></example-intro>
+
 Local Module:
 
 - `modules/nuxt-api/plugin.js` shows how the function `nuxtApi` works.

@@ -64,6 +64,8 @@ In your code, you can then reference these files relative to the root (`/`):
 
 ### Example
 
+<example-intro></example-intro>
+
 `pages/static.vue` shows an image from the static folder
 
 `layouts/default.vue` shows an image from the assets folder.

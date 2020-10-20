@@ -6,6 +6,8 @@ category: examples
 csb_link: https://codesandbox.io/embed/github/nuxt-academy/guides-examples/tree/master/04_directory_structure/05_dist
 ---
 
+<example-intro></example-intro>
+
 `nuxt.config.js` for static site generation shows
 
 - `target` is set to `static`.

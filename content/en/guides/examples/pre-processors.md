@@ -6,6 +6,8 @@ category: examples
 csb_link: https://codesandbox.io/embed/github/nuxt-academy/guides-examples/tree/master/03_features/07_configuration_pre-processors
 ---
 
+<example-intro></example-intro>
+
 `pages/pre-processors.vue` uses pug as a template language and sass for styling.
 
 `nuxt.config.js` :

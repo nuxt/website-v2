@@ -6,6 +6,8 @@ category: examples
 csb_link: https://codesandbox.io/embed/github/nuxt-academy/guides-examples/tree/master/03_features/04_data_fetching?
 ---
 
+<example-intro></example-intro>
+
 `pages/posts/index.vue` uses `asyncData` and the `$http` module to fetch our list of posts from our API.
 
 `pages/posts/_id.vue` and `components/BlogPosts.vue` use the `fetch` method to fetch data from our API using:

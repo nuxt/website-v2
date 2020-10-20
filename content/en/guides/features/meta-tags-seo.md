@@ -223,6 +223,8 @@ You may want to only disable this option if you have many pages and routes.
 
 ## Example
 
+<example-intro></example-intro>
+
 `nuxt.config.js` uses the `head` property to show a `title`, `titleTemplate`, `charset` and `description` as well as adding an external stylesheet.
 
 `pages/index.vue` uses the head property as an object.

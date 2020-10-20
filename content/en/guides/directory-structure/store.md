@@ -212,6 +212,8 @@ export default {
 
 ### Example
 
+<example-intro></example-intro>
+
 In the first example we show how the store works using a todo app. In the store folder we have a `todos.js` file. This shows our list of todos as well as mutations to add and remove items from the list as well as toggle the state of the todo.
 
 In our `store.vue` file in the pages folder we use an input which calls the `addTodo()` method on enter. This method commits the value to the store which adds our new todo to the list. We show the new todo on the page using the `todos()` computed property which gives us access to our todos list from the store.

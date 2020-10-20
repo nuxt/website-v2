@@ -6,6 +6,8 @@ category: examples
 csb_link: https://codesandbox.io/embed/github/nuxt-academy/guides-examples/tree/master/04_directory_structure/12_plugins_vue
 ---
 
+<example-intro></example-intro>
+
 `plugins/vue-toolitp.js` registers our plugin so we can use it.
 
 `pages/index.vue` imports our tooltip and tells Vue to use.

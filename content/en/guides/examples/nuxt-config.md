@@ -6,6 +6,8 @@ category: examples
 csb_link: https://codesandbox.io/embed/github/nuxt-academy/guides-examples/tree/master/04_directory_structure/15_nuxt-config
 ---
 
+<example-intro></example-intro>
+
 `nuxt.config.js` contains :
 
 - the `env` property to add the URL of our API.

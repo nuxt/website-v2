@@ -6,6 +6,8 @@ category: examples
 csb_link: https://codesandbox.io/embed/github/nuxt-academy/guides-examples/tree/master/01_get_started/01_installation?
 ---
 
+<example-intro></example-intro>
+
 `pages/index.vue` - Hello World
 
 <base-alert type="next">

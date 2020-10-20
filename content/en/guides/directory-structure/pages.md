@@ -133,6 +133,8 @@ If you've defined a file named \_slug.vue inside a folder called \_book you can 
 
 ### Example
 
+<example-intro></example-intro>
+
 `pages\_slug.vue` shows data coming from the route params.
 
 `pages\index.vue` fetches our mountains from our API.

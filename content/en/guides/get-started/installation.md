@@ -231,6 +231,8 @@ Create a directory named `more-fun` and put an `index.vue` file inside. This wil
 
 ### Example
 
+<example-intro></example-intro>
+
 `pages/index.vue` - Hello World
 
 <app-modal>

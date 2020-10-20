@@ -6,6 +6,8 @@ category: examples
 csb_link: https://codesandbox.io/embed/github/nuxt-academy/guides-examples/tree/master/02_concepts/02_context_helpers-helpers?
 ---
 
+<example-intro></example-intro>
+
 `pages/index.vue` shows:
 
 - `$nuxt.isOnline` and `$nuxt.isOffline` - tells the user if they are online or offline.

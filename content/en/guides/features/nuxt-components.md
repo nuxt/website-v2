@@ -167,6 +167,8 @@ To display the `child.vue` component, you have to insert the `<NuxtChild>` co
 
 ### Example
 
+<example-intro></example-intro>
+
 `pages/parent.vue` contains the `<NuxtChild>` component. Everything on this page will be seen on both the parent and child pages.
 
 `pages/parent/index.vue` contains text that will be replaced when the child links are clicked.
@@ -298,6 +300,8 @@ Since Nuxt.js v2.10.0, if you have to set `prefetchLinks` to `false` but you
 
 ### Example
 
+<example-intro></example-intro>
+
 `components/navigation.vue` adds `no-prefetch` to the `<NuxtLink>` for the No Prefetch page.
 
 <app-modal>
@@ -391,6 +395,8 @@ Then you can add the styles for that class.
 ```
 
 ### Example
+
+<example-intro></example-intro>
 
 `nuxt.config.js` shows the `router` property for changing the name of the `linkActiveClass`, `linkExactActiveClass` and `linkPrefecthedClass`.
 

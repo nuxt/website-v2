@@ -6,6 +6,8 @@ category: examples
 csb_link: https://codesandbox.io/embed/github/nuxt-academy/guides-examples/tree/master/03_features/08_loading
 ---
 
+<example-intro></example-intro>
+
 `components/LoadingBar.vue` shows a custom loading spinner to use instead of the default loading bar.
 
 `nuxt.config.js` contains the:

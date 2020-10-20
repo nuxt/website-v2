@@ -6,6 +6,8 @@ category: examples
 csb_link: https://codesandbox.io/embed/github/nuxt-academy/guides-examples/tree/master/03_features/07_configuration_host_port
 ---
 
+<example-intro></example-intro>
+
 `package.json` shows a script to run your project in dev mode on a specific host and port.
 
 <base-alert type="next">

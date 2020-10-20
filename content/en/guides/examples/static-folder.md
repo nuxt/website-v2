@@ -6,6 +6,8 @@ category: examples
 csb_link: https://codesandbox.io/embed/github/nuxt-academy/guides-examples/tree/master/04_directory_structure/13_static
 ---
 
+<example-intro></example-intro>
+
 `pages/static.vue` shows an image from the static folder
 
 `layouts/default.vue` shows an image from the assets folder.

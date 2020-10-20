@@ -6,6 +6,8 @@ category: examples
 csb_link: https://codesandbox.io/embed/github/nuxt-academy/guides-examples/tree/master/03_features/09_components_nuxt
 ---
 
+<example-intro></example-intro>
+
 `pages/parent.vue` contains the `<NuxtChild>` component. Everything on this page will be seen on both the parent and child pages.
 
 `pages/parent/index.vue` contains text that will be replaced when the child links are clicked.

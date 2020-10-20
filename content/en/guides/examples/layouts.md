@@ -6,11 +6,11 @@ category: examples
 csb_link: https://codesandbox.io/embed/github/nuxt-academy/guides-examples/tree/master/04_directory_structure/07_layouts
 ---
 
-This example uses 3 layouts:
+<example-intro></example-intro>
 
-- `layouts/default.vue` used in the home page
-- `layouts/auth.vue` used in the /login page
-- `layouts/profile.vue` used in the /profile page when logged in
+- `layouts/default.vue` is used in the home page
+- `layouts/auth.vue` is used in the /login page
+- `layouts/profile.vue` is used in the /profile page when logged in
 
 They are stored in the layouts/ directory and used in the corresponding pages with the `layout` property.
 

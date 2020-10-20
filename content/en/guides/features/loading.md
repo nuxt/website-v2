@@ -259,6 +259,8 @@ Nuxt's built-in [source code](https://github.com/nuxt/nuxt.js/tree/dev/packages
 
 ## Example
 
+<example-intro></example-intro>
+
 `components/LoadingBar.vue` shows a custom loading spinner to use instead of the default loading bar.
 
 `nuxt.config.js` contains the:

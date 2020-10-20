@@ -83,6 +83,8 @@ When working with dynamic images you will need to use require
 
 ### Example
 
+<example-intro></example-intro>
+
 `pages/index.vue` shows:
 
 - how to add an svg to the `<img>` tag from the assets folder.
@@ -116,6 +118,8 @@ export default {
 ```
 
 ### Example
+
+<example-intro></example-intro>
 
 `nuxt.config.js` contains the `css` property for globally adding a css file.
 
@@ -176,6 +180,8 @@ You can use local fonts by adding them to your assets folder. Once they have bee
 ```
 
 ### Example
+
+<example-intro></example-intro>
 
 `assets/main.css` shows how to reference the DMSans fonts from the assets folder using the `@font-face` rule.
 

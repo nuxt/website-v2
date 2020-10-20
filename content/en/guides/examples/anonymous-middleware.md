@@ -6,6 +6,8 @@ category: examples
 csb_link: https://codesandbox.io/embed/github/nuxt-academy/guides-examples/tree/master/04_directory_structure/09_middleware_anonymous
 ---
 
+<example-intro></example-intro>
+
 `pages/anonymous-middleware.vue` contains a middleware function which uses the store to call the increment mutation with results from the store displayed on the page.
 
 `store/analytics.js` sets the `pageVisits` to 0 and increments the visits every time the increment function is called.

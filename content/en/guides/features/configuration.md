@@ -156,6 +156,8 @@ npm install --save-dev node-sass sass-loader
 
 ### Example
 
+<example-intro></example-intro>
+
 `pages/pre-processors.vue` uses pug as a template language and sass for styling.
 
 `nuxt.config.js` :
@@ -363,6 +365,8 @@ or create a script in your package.json
 ```
 
 ### Example
+
+<example-intro></example-intro>
 
 `package.json` shows a script to run your project in dev mode on a specific host and port.
 

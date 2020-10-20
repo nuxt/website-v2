@@ -6,6 +6,8 @@ category: examples
 csb_link: https://codesandbox.io/embed/github/nuxt-academy/guides-examples/tree/master/04_directory_structure/11_pages
 ---
 
+<example-intro></example-intro>
+
 `pages\_slug.vue` shows data coming from the route params.
 
 `pages\index.vue` fetches our mountains from our API.

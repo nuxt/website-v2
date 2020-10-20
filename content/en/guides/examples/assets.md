@@ -6,6 +6,8 @@ category: examples
 csb_link: https://codesandbox.io/embed/github/nuxt-academy/guides-examples/tree/master/04_directory_structure/02_assets
 ---
 
+<example-intro></example-intro>
+
 `pages/index.vue` shows:
 
 - how to add an svg to the `<img>` tag from the assets folder.

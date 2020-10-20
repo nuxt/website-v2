@@ -6,6 +6,8 @@ category: examples
 csb_link: https://codesandbox.io/embed/github/nuxt-academy/guides-examples/tree/master/04_directory_structure/10_modules
 ---
 
+<example-intro></example-intro>
+
 Local Module:
 
 - `modules/nuxt-api/plugin.js` shows how the function `nuxtApi` works.

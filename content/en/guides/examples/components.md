@@ -6,6 +6,8 @@ category: examples
 csb_link: https://codesandbox.io/embed/github/nuxt-academy/guides-examples/tree/master/04_directory_structure/03_components
 ---
 
+<example-intro></example-intro>
+
 `components/MountainsList.vue` uses fetch to fetch data from an API and uses:
 
 - `$fetchState.pending` to show a loading message when waiting for the data to load.

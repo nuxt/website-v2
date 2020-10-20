@@ -138,6 +138,8 @@ export default {
 
 ### Example
 
+<example-intro></example-intro>
+
 `plugins/axios.js` intercepts the `$axios` call using the `onError()` function.
 
 `pages/index.vue` uses `$axios` to fetch our data from an API.
@@ -212,6 +214,8 @@ You can refer to the [configuration build](/guides/configuration-glossary/confi
 
 ### Example
 
+<example-intro></example-intro>
+
 `plugins/vue-toolitp.js` registers our plugin so we can use it.
 
 `pages/index.vue` imports our tooltip and tells Vue to use.
@@ -257,6 +261,8 @@ export default {
 ```
 
 ### Example
+
+<example-intro></example-intro>
 
 `plugins/client-only.client.js` uses the `window.alert()` function which is not available on server side.
 
@@ -328,6 +334,8 @@ Don't use `Vue.use()`, `Vue.component()`, and globally, don't plug anything in V
 </base-alert>
 
 ### Example
+
+<example-intro></example-intro>
 
 `plugins/hello.js` - logs a message to the console with a dynamic message.
 

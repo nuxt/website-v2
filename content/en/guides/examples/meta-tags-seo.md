@@ -6,6 +6,8 @@ category: examples
 csb_link: https://codesandbox.io/embed/github/nuxt-academy/guides-examples/tree/master/03_features/06_meta_tags_seo?
 ---
 
+<example-intro></example-intro>
+
 `nuxt.config.js` uses the `head` property to show a `title`, `titleTemplate`, `charset` and `description` as well as adding an external stylesheet.
 
 `pages/index.vue` uses the head property as an object.

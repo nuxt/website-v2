@@ -6,6 +6,8 @@ category: examples
 csb_link: https://codesandbox.io/embed/github/nuxt-academy/guides-examples/tree/master/04_directory_structure/12_plugins_custom_plugin
 ---
 
+<example-intro></example-intro>
+
 `plugins/hello.js` - logs a message to the console with a dynamic message.
 
 `store/index.js` - stores our dynamic message from our input.

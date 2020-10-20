@@ -6,6 +6,8 @@ category: examples
 csb_link: https://codesandbox.io/embed/github/nuxt-academy/guides-examples/tree/master/04_directory_structure/09_middleware_router
 ---
 
+<example-intro></example-intro>
+
 `store/class.js` sets a class to the body.
 
 `middleware/class.js` uses router middleware to set a class before we enter the route.

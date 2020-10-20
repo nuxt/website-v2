@@ -6,6 +6,8 @@ category: examples
 csb_link: https://codesandbox.io/embed/github/nuxt-academy/guides-examples/tree/master/04_directory_structure/12_plugins_external
 ---
 
+<example-intro></example-intro>
+
 `plugins/axios.js` intercepts the `$axios` call using the `onError()` function.
 
 `pages/index.vue` uses `$axios` to fetch our data from an API.

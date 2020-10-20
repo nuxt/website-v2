@@ -41,6 +41,16 @@ Then we can use it directly in our page components:
   }
 </script>
 ```
+__NOTE__: If you get an "__Cannot use import statement outside a module__" error, you may need to add your package to the build > transpile option in nuxt.config.js for webpack loader to make your plugin available.
+```js
+  build: {
+    /*
+     ** You can extend webpack config here
+     */
+    transpile: ['your-plugin-name'],
+  },
+```
+
 
 ## Vue Plugins
 

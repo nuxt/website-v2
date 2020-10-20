@@ -152,6 +152,12 @@ export default {
 }
 ```
 
+<base-alert type="next">
+
+Check out the Internals Glossary book for more examples of the [redirect method](/guides/internals-glossary/context#redirect)
+
+</base-alert>
+
 <app-modal>
   <code-sandbox  :src="csb_link_context"></code-sandbox>
 </app-modal>

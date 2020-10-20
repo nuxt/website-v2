@@ -66,7 +66,7 @@ export default {
 }
 ```
 
-You can omit the file extension for CSS/SCSS/Postcss/Less/Stylus/... files listed in the css array in your nuxt config file.
+You can omit the file extension for CSS, SCSS, Postcss, Less, Stylus, ... files listed in the css array in your nuxt config file.
 
 ```js{}[nuxt.config.js]
 export default {

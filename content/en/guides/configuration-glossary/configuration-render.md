@@ -12,7 +12,7 @@ position: 22
 
 - Type: `Object`
 
-> Use this option to customize vue SSR bundle renderer. This option is skipped for spa mode.
+> Use this option to customize vue SSR bundle renderer. This option is skipped if `ssr: false`.
 
 ```js{}[nuxt.config.js]
 export default {
@@ -116,11 +116,12 @@ You may want to only disable this option if you have many pages and routes.
 ## ssr
 
 - Type: `Boolean`
-  - Default: `true` on universal mode and `false` on spa mode
+  - Default: `true`
+  - `false` only client side rendering
 
 > Enable SSR rendering
 
-This option is automatically set based on `mode` value if not provided. This can be useful to dynamically enable/disable SSR on runtime after image builds (with docker for example).
+This option is automatically set based on global `ssr` value if not provided. This can be useful to dynamically enable/disable SSR on runtime after image builds (with docker for example).
 
 ## crossorigin
 
@@ -189,13 +190,13 @@ These settings are read by the Nuxt server directly from `nuxt.config.js`. This 
 **HTML meta tag:**
 
 In order to add [`<meta http-equiv="Content-Security-Policy"/>`](https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP) to the `<head>` you need to set `csp.addMeta` to `true`. Please note that this feature is independent of the `csp.policies` configuration:
+
 - it only adds a `script-src` type policy, and
 - the `script-src` policy only contains the hashes of the inline `<script>` tags.
 
 When `csp.addMeta` is set to `true`, the complete set of the defined policies are still added to the HTTP response header.
 
 Note that CSP hashes will not be added as `<meta>` if `script-src` policy contains `'unsafe-inline'`. This is due to browser ignoring `'unsafe-inline'` if hashes are present. Set option `unsafeInlineCompatibility` to `true` if you want both hashes and `'unsafe-inline'` for CSPv1 compatibility. In that case the `<meta>` tag will still only contain the hashes of the inline `<script>` tags, and the policies defined under `csp.policies` will be used in the `Content-Security-Policy` HTTP response header.
-
 
 ```js{}[nuxt.config.js]
 export default {

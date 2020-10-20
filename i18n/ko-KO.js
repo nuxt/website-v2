@@ -106,11 +106,6 @@ module.exports = {
         description:
           '가장 Nuxt에서 인기있는 모드입니다. "범용(universal)" 혹은 "동형(isomorphic)" 모드라고도 불리는 SSR로, Node.js 서버는 순수 자바스크립트 대신 Vue 컴포넌트에 기반한 HTML을 클라이언트에 전달합니다. SSR로 기존 Vue SPA와 비교했을 때 SEO는 크게 개선될 수 있고, 더 나은 UX 뿐 아니라 더 많은 혜택을 얻을 수 있습니다. {break} 여러분이 직접 SSR을 구현하는 것은 매우 귀찮은 작업일 수 있기 때문에, Nuxt.js는 바로 여기에 대한 모든 지원을 제공하며 일반적인 위험요소들을 처리할 것입니다.'
       },
-      spa: {
-        title: '싱글 페이지 애플리케이션 (SPA)',
-        description:
-          'SSR이나 정적 사이트 생성은 필요하지 않지만, Nuxt가 제공하는 기능들로 혜택을 얻길 원하시나요? 여러분의 앱을 천천히 전환(Transition)하고 계시지만 가볍게 시작하고 싶으신가요? 그렇다면 기존의 SPA 모드가 당신의 선택일 수 있습니다. 여러분이 아시는 일반적인 Vue SPA와 같지만 Nuxt configuration과 프레임워크 자체로 같은 결과를 얻으실 수 있습니다.'
-      },
       ssg: {
         title: '정적 사이트 생성',
         description:

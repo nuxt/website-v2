@@ -144,7 +144,7 @@ import axios from 'axios'
 
 export default {
 	async asyncData ({ params }) {
-	  const  post  = await axios.$get(`https://api.nuxtjs.dev/posts/${params.id}`)
+	  const  post  = await axios.get(`https://api.nuxtjs.dev/posts/${params.id}`)
 	  return { post }
 	}
 }
@@ -160,7 +160,7 @@ If you get an _Cannot use import statement outside a module_ error, you may need
 ```js{}[nuxt.config.js]
 build: {
   // You can extend webpack config here
-  transpile: ['your-plugin-name'],
+  transpile: ['npm-package-name'],
 },
 ```
 

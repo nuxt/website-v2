@@ -42,6 +42,17 @@ Then we can use it directly in our page components:
 </script>
 ```
 
+**NOTE**: If you get an "**Cannot use import statement outside a module**" error, you may need to add your package to the build > transpile option in nuxt.config.js for webpack loader to make your plugin available.
+
+```js
+  build: {
+    /*
+     ** You can extend webpack config here
+     */
+    transpile: ['your-plugin-name'],
+  },
+```
+
 ## Vue Plugins
 
 If we want to use Vue plugins, like [v-tooltip](https://akryum.github.io/v-tooltip) to display tooltips in our application, we need to setup the plugin before launching the app. First we install the plugin
@@ -115,11 +126,11 @@ Now `$hello(msg)` can be used from `context`, via `this` in Vue instances and vi
 
 ```js
 export default {
-  mounted () {
+  mounted() {
     this.$hello('mounted')
     // will console.log 'Hello mounted!'
   },
-  asyncData ({ $hello }) {
+  asyncData({ $hello }) {
     $hello('asyncData')
   }
 }

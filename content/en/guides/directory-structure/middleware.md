@@ -31,7 +31,7 @@ questions:
       - client side on first request and client side when navigating
       - server side on first request and client side when navigating
     correctAnswer: server side on first request and client side when navigating
-  - question: In SPA mode when is middleware called?
+  - question: When SSR is set to false when is middleware called?
     answers:
       - server side on first request and server side when navigating
       - client side on first request and client side when navigating
@@ -83,7 +83,7 @@ export default function (context) {
 }
 ```
 
-In universal mode, middlewares will be called once on server-side (on the first request to the Nuxt app, e.g. when directly accessing the app or refreshing the page) and on the client-side when navigating to further routes. In SPA mode, middlewares will be called on the client-side in both situations.
+In universal mode, middlewares will be called once on server-side (on the first request to the Nuxt app, e.g. when directly accessing the app or refreshing the page) and on the client-side when navigating to further routes. With `ssr: false`, middlewares will be called on the client-side in both situations.
 
 The middleware will be executed in series in this order:
 

@@ -54,16 +54,6 @@
             </i18n>
           </div>
         </div>
-        <div class="px-4 lg:p-8">
-          <h4 class="uppercase text-2xl pt-8 pb-4 font-medium">
-            {{ $t('homepage.modes.spa.title') }}
-          </h4>
-          <p
-            class="leading-loose text-left text-light-onSurfaceSecondary dark:text-dark-onSurfaceSecondary"
-          >
-            {{ $t('homepage.modes.spa.description') }}
-          </p>
-        </div>
       </section>
     </div>
   </div>

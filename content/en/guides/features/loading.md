@@ -58,7 +58,7 @@ questions:
       - add it in the nuxt.config.js under the loading property
       - add it to the nuxt.config.js under the plugins property
     correctAnswer: add it in the nuxt.config.js under the loading property
-  - question: To add a circle spinner when Nuxt.js is in SPA mode what do you add to the loading property?
+  - question: To add a circle spinner when Nuxt.js is using ssr:false what do you add to the loading property?
     answers:
       - 'circle: true'
       - 'spinner: circle'

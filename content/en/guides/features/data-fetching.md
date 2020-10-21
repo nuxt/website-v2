@@ -102,7 +102,7 @@ In addition to fetch being called by Nuxt, you can manually call fetch in your c
 ```html{}[components/NuxtMountains.vue]
 <template>
   <p v-if="$fetchState.pending">Fetching mountains...</p>
-  <p v-else-if="$fetchState.error">An error occured :(</p>
+  <p v-else-if="$fetchState.error">An error occurred :(</p>
   <div v-else>
     <h1>Nuxt Mountains</h1>
     <ul>
@@ -236,7 +236,7 @@ The navigation to the same page will not call `fetch` if last `fetch` call w
 ```html{}[pages/posts/_id.vue]
 <template>
   <div>
-    <h1>{{ post.title }</h1>
+    <h1>{{ post.title }}</h1>
     <p>{{ post.description }}</p>
   </div>
 </template>

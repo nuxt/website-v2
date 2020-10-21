@@ -81,7 +81,7 @@ class SomeClass {
 }
 ```
 
-Classes are _plugable_ so they should register a plugin on main `nuxt` container to register more hooks.
+Classes are _pluggable_ so they should register a plugin on main `nuxt` container to register more hooks.
 
 ```js
 class FooClass {

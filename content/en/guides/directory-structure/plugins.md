@@ -129,11 +129,39 @@ Then we can use it directly in your page components:
 <script>
 export default {
 	async asyncData ({ $axios, params }) {
-	    const  post  = await $axios.$get(`https://api.nuxtjs.dev/posts/${params.id}`)
-	    return { post }
-	  }
+	  const  post  = await $axios.$get(`https://api.nuxtjs.dev/posts/${params.id}`)
+	  return { post }
+	}
 }
 </script>
+```
+
+Another way to use `axios` without installing the module is by importing `axios` direct in the `<script>` tag.
+
+```js{}[pages/index.vue]
+<script>
+import axios from 'axios'
+
+export default {
+	async asyncData ({ params }) {
+	  const  post  = await axios.$get(`https://api.nuxtjs.dev/posts/${params.id}`)
+	  return { post }
+	}
+}
+</script>
+```
+
+<base-alert type="info">
+
+If you get an _Cannot use import statement outside a module_ error, you may need to add your package to the `build` > `transpile` option in `nuxt.config.js` for webpack loader to make your plugin available.
+
+</base-alert>
+
+```js{}[nuxt.config.js]
+build: {
+  // You can extend webpack config here
+  transpile: ['your-plugin-name'],
+},
 ```
 
 <app-modal>
@@ -323,7 +351,7 @@ export default {
 }
 ```
 
-### Global mixins
+## Global mixins
 
 Global mixins can be easily added with Nuxt plugins but can cause trouble and memory leaks when not handled correctly. Whenever you add a global mixin to your application, you should use a flag to avoid registering it multiple times:
 

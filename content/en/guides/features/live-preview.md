@@ -53,7 +53,7 @@ yarn start
   </code-block>
 </code-group>
 
-Then you can then see your preview page by adding the query param to the end of the page you want to see once:
+Then you can see your preview page by adding the query param to the end of the page you want to see once:
 
 ```js
 ?preview=true

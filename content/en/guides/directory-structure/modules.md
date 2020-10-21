@@ -66,6 +66,19 @@ questions:
     correctAnswer: true
 ---
 
+## Exploring Nuxt Modules
+
+Discover our [list of modules](<(https://modules.nuxtjs.org)>) to supercharge your Nuxt project, created by the Nuxt team and community.
+
+- 145+ Modules
+- 89+ Maintainers
+
+<base-alert type="next">
+
+Check out [modules.nuxtjs.org](https://modules.nuxtjs.org)
+
+</base-alert>
+
 <app-modal :src="img" :alt="imgAlt"></app-modal>
 
 While developing production-grade applications with Nuxt.js you might find that the framework's core functionality is not enough. Nuxt.js can be extended with configuration options and plugins, but maintaining these customizations across multiple projects is tedious, repetitive and time-consuming. On the other hand, supporting every project's needs out of the box would make Nuxt.js very complex and hard to use.
@@ -129,13 +142,13 @@ export default {
 ```
 
 ```js{}[modules/example.js]
-export default function ExampleModule (moduleOptions) {
-	console.log(moduleOptions.token) // '123'
-	console.log(this.options.exampleMsg) // 'hello'
+export default function ExampleModule(moduleOptions) {
+  console.log(moduleOptions.token) // '123'
+  console.log(this.options.exampleMsg) // 'hello'
 
-	this.nuxt.hook('ready', async (nuxt) => {
-		console.log('Nuxt is ready')
-	})
+  this.nuxt.hook('ready', async nuxt => {
+    console.log('Nuxt is ready')
+  })
 }
 
 // REQUIRED if publishing the module as npm package

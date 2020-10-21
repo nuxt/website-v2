@@ -71,7 +71,6 @@ questions:
 Discover our [list of modules](<(https://modules.nuxtjs.org)>) to supercharge your Nuxt project, created by the Nuxt team and community.
 
 - 145+ Modules
-- 8.4M+ downloads in the last 30 days
 - 89+ Maintainers
 
 <base-alert type="next">

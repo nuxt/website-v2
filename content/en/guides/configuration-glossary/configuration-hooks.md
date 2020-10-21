@@ -29,7 +29,7 @@ export default {
 }
 ```
 
-Internally, hooks follow a naming pattern using colons (e.g., `build:done`). For ease of configuration, you can structure them as an hierarchical object when using `nuxt.config.js` (as exemplifed above) to set your own hooks. See [Nuxt Internals](/guides/internals-glossary/internals) for more detailed information on how they work.
+Internally, hooks follow a naming pattern using colons (e.g., `build:done`). For ease of configuration, you can structure them as an hierarchical object when using `nuxt.config.js` (as exemplified above) to set your own hooks. See [Nuxt Internals](/guides/internals-glossary/internals) for more detailed information on how they work.
 
 ## List of hooks
 
@@ -108,9 +108,9 @@ Then, create a few files;
    import parseurl from 'parseurl'
 
    /**
-    * Connect middleware to handle redirecting to desired Web Applicatin Context Root.
+    * Connect middleware to handle redirecting to desired Web Application Context Root.
     *
-    * Notice that Nuxt docs lacks explaning how to use hooks.
+    * Notice that Nuxt docs lacks explaining how to use hooks.
     * This is a sample router to help explain.
     *
     * See nice implementation for inspiration:

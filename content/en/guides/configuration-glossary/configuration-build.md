@@ -281,13 +281,11 @@ export default {
 
 To understand a bit more about the use of manifests, take a look at this [webpack documentation](https://webpack.js.org/guides/code-splitting/).
 
-
 <base-alert>
 
 Be careful when using non-hashed based filenames in production as most browsers will cache the asset and not detect the changes on first load.
 
 </base-alert>
-
 
 ## friendlyErrors
 

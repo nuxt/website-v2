@@ -12,9 +12,9 @@ csb_link: https://codesandbox.io/embed/github/nuxt-academy/guides-examples/tree/
 - `layouts/auth.vue` is used in the /login page
 - `layouts/profile.vue` is used in the /profile page when logged in
 
-They are stored in the layouts/ directory and used in the corresponding pages with the `layout` property.
+They are stored in the `layouts/` directory and used in the corresponding pages with the `layout` property.
 
-If no layout property is defined, it will fallback to the default layout.
+If no `layout` property is defined, it will fallback to the default layout.
 
 <base-alert type="next">
 

@@ -1,6 +1,6 @@
 ---
 title: インストール
-description: 'ここでは、Nuxt.js プロジェクトの設定と実行について 4 ステップで紹介します。'
+description: "ここでは、Nuxt.js プロジェクトの設定と実行について 4 ステップで紹介します。"
 position: 1
 category: get-started
 csb_link: https://codesandbox.io/embed/github/nuxt-academy/guides-examples/tree/master/01_get_started/01_installation?fontsize=14&hidenavigation=1&theme=dark

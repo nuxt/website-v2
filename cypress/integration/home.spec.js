@@ -12,7 +12,6 @@ describe('The Home Page links', () => {
   it('github stars links to the right page', () => {
     cy.get('a[data-cy="github-stars"]')
       .should('have.attr', 'href', 'https://github.com/nuxt/nuxt.js')
-      .click()
   })
 
   it('checks the newsletter message links to newsletter signup', () => {
@@ -23,7 +22,7 @@ describe('The Home Page links', () => {
 
   })
 
-  it.only('checks the video is there', () => {
+  it('checks the video is there', () => {
     cy.get('[data-cy="video"]').within(() => {
       cy.get('iframe').should('have.attr', 'src', 'https://player.vimeo.com/video/311756540')
     })
@@ -32,7 +31,6 @@ describe('The Home Page links', () => {
   it('checks to see if the try Nuxtjs button links to codesandbox', () => {
     cy.get('a[data-cy="why"]')
     .should('have.attr', 'href', 'https://template.nuxtjs.org')
-    .click()
   })
 
   it('checks to see if the sponsor button links to the sponsor page', () => {

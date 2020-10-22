@@ -58,7 +58,7 @@ questions:
       - add it in the nuxt.config.js under the loading property
       - add it to the nuxt.config.js under the plugins property
     correctAnswer: add it in the nuxt.config.js under the loading property
-  - question: To add a circle spinner when Nuxt.js is in SPA mode what do you add to the loading property?
+  - question: To add a circle spinner when Nuxt.js is using ssr:false what do you add to the loading property?
     answers:
       - 'circle: true'
       - 'spinner: circle'
@@ -85,16 +85,16 @@ export default {
 
 List of properties to customize the progress bar.
 
-| Key         | Type    | Default | Description                                                                                                                        |
-| ----------- | ------- | ------- | ---------------------------------------------------------------------------------------------------------------------------------- |
-| color       | String  | 'black' | CSS color of the progress bar                                                                                                      |
-| failedColor | String  | 'red'   | CSS color of the progress bar when an error happended while rendering the route (if data or fetch sent back an error for example). |
-| height      | String  | '2px'   | Height of the progress bar (used in the style property of the progress bar)                                                        |
-| throttle    | Number  | 200     | In ms, wait for the specified time before displaying the progress bar. Useful for preventing the bar from flashing.                |
-| duration    | Number  | 5000    | In ms, the maximum duration of the progress bar, Nuxt.js assumes that the route will be rendered before 5 seconds.                 |
-| continuous  | Boolean | false   | Keep animating progress bar when loading takes longer than duration.                                                               |
-| css         | Boolean | true    | Set to false to remove default progress bar styles (and add your own).                                                             |
-| rtl         | Boolean | false   | Set the direction of the progress bar from right to left.                                                                          |
+| Key         | Type    | Default | Description                                                                                                                       |     |
+| ----------- | ------- | ------- | --------------------------------------------------------------------------------------------------------------------------------- | --- |
+| color       | String  | 'black' | CSS color of the progress bar                                                                                                     |     |
+| failedColor | String  | 'red'   | CSS color of the progress bar when an error appended while rendering the route (if data or fetch sent back an error for example). |     |
+| height      | String  | '2px'   | Height of the progress bar (used in the style property of the progress bar)                                                       |     |
+| throttle    | Number  | 200     | In ms, wait for the specified time before displaying the progress bar. Useful for preventing the bar from flashing.               |     |
+| duration    | Number  | 5000    | In ms, the maximum duration of the progress bar, Nuxt.js assumes that the route will be rendered before 5 seconds.                |     |
+| continuous  | Boolean | false   | Keep animating progress bar when loading takes longer than duration.                                                              |     |
+| css         | Boolean | true    | Set to false to remove default progress bar styles (and add your own).                                                            |     |
+| rtl         | Boolean | false   | Set the direction of the progress bar from right to left.                                                                         |     |
 
 ## Disable the Progress Bar
 

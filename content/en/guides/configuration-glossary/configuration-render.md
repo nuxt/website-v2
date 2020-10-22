@@ -12,7 +12,7 @@ position: 22
 
 - Type: `Object`
 
-> Use this option to customize vue SSR bundle renderer. This option is skipped for spa mode.
+> Use this option to customize vue SSR bundle renderer. This option is skipped if `ssr: false`.
 
 ```js{}[nuxt.config.js]
 export default {
@@ -116,11 +116,12 @@ You may want to only disable this option if you have many pages and routes.
 ## ssr
 
 - Type: `Boolean`
-  - Default: `true` on universal mode and `false` on spa mode
+  - Default: `true`
+  - `false` only client side rendering
 
 > Enable SSR rendering
 
-This option is automatically set based on `mode` value if not provided. This can be useful to dynamically enable/disable SSR on runtime after image builds (with docker for example).
+This option is automatically set based on global `ssr` value if not provided. This can be useful to dynamically enable/disable SSR on runtime after image builds (with docker for example).
 
 ## crossorigin
 

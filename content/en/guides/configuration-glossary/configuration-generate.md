@@ -83,7 +83,7 @@ export default {
 - Type: `String`
 - Default: `'dist'`
 
-Directory name created when building the web application in static mode with `nuxt generate` or in SPA mode with `nuxt build`.
+Directory name created when building web applications using the `nuxt generate` command.
 
 ## devtools
 
@@ -163,10 +163,8 @@ export default {
 
 The path to the fallback HTML file. It should be set as the error page, so that also unknown routes are rendered via Nuxt. If unset or set to a falsy value, the name of the fallback HTML file will be `200.html`. If set to `true`, the filename will be `404.html`. If you provide a string as a value, it will be used instead.
 
-When running a SPA it is more idiomatic to use a `200.html`, as it's the only file necessary as no other routes are generated.
-
-```js{}[nuxt.config.js]
-fallback: false
+```{}[nuxt.config.js]
+fallback: false;
 ```
 
 If working with statically generated pages then it is recommended to use a `404.html` for error pages and for those covered by [excludes](https://nuxtjs.org/api/configuration-generate#exclude) (the files that you do not want generated as static pages).

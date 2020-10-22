@@ -24,7 +24,7 @@ questions:
       - req
       - res
       - context
-    correctAnswer: context
+    correctAnswer:
   - question: In universal mode when is middleware called?
     answers:
       - server side on first request and server side when navigating

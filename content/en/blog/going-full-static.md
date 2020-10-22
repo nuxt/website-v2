@@ -77,7 +77,7 @@ To improve the user experience as well as telling Nuxt that you want to export y
 export default {
   target: 'static' // default is 'server'
 }
-```
+``` 
 
 <base-alert type="warning">
 

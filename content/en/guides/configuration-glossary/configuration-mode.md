@@ -14,11 +14,13 @@ position: 17
 
 > You can use this option to change default nuxt mode for your project using `nuxt.config.js`
 
+
 <base-alert type="warning">
 
 Deprecated: please use `ssr: false` instead of `mode: spa`
 
 </base-alert>
+
 
 <base-alert type="next">
 

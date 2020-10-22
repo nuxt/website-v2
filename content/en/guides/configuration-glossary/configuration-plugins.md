@@ -52,6 +52,6 @@ import 'ant-design-vue/dist/antd.css' // Per Ant Design's docs
 Vue.use(Antd)
 ```
 
-Note that the css was [imported as per Ant Design Documentation](https://www.antdv.com/docs/vue/getting-started/#3.-Use-antd's-Components).
+Note that the css was [imported as per Ant Design Documentation](https://vue.ant.design/docs/vue/getting-started/#3.-Use-antd's-Components 'External tip relevant to building plugins')
 
 All the paths defined in the `plugins` property will be **imported** before initializing the main application.

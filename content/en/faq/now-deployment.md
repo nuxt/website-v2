@@ -58,3 +58,4 @@ To avoid 404 for Service Workers, make sure to include `sw` to your routes setti
 ```
 
 You can learn more and see examples on https://github.com/nuxt/vercel-builder
+

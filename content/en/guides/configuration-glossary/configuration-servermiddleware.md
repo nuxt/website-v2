@@ -75,18 +75,17 @@ export default function (req, res, next) {
 ```js{}[nuxt.config.js]
 serverMiddleware: ['~/api/logger']
 ```
-
 ## Custom API endpoint
 
 A server middleware can also extend Express. This allows the creation of REST endpoints.
 
 ```js{}[api/rest.js]
-const bodyParser = require('body-parser')
-const app = require('express')()
+const bodyParser = require("body-parser")
+const app = require("express")()
 
 app.use(bodyParser.json())
-app.all('/getJSON', (req, res) => {
-  res.json({ data: 'data' })
+app.all("/getJSON", (req, res) => {
+  res.json({ data: "data" })
 })
 
 module.exports = app

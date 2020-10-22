@@ -8,9 +8,9 @@ csb_link: https://codesandbox.io/embed/github/nuxt-academy/guides-examples/tree/
 
 <example-intro></example-intro>
 
-`pages/posts/_id` is a dynamic page that prints out the title and description coming from the API based on the id of the params. If no post exists we catch the error and return the error message.
+`pages/posts/_id.vue` is a dynamic page that prints the title and description from the API response based on the `id` parameter. If no post exists we catch the error show the error page.
 
-`pages/admin.vue` uses `middleware` and the `store`, to check if our user is authenticated and if not we redirect them to the the home page.
+`pages/admin.vue` uses `middleware` and the `store`, to check if the user is authenticated, if not we redirect to the the home page.
 
 <base-alert type="next">
 

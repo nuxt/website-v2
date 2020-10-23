@@ -68,7 +68,7 @@ questions:
 
 ## Exploring Nuxt Modules
 
-Discover our [list of modules](<(https://modules.nuxtjs.org)>) to supercharge your Nuxt project, created by the Nuxt team and community.
+Discover our [list of modules](https://modules.nuxtjs.org) to supercharge your Nuxt project, created by the Nuxt team and community.
 
 - 145+ Modules
 - 89+ Maintainers

@@ -10,10 +10,10 @@ position: 104
 
 > 在 Nuxtjs 里配置全局的 CSS 文件、模块、库。 (每个页面都会被引入)
 
-如果要使用 `sass` 就必须要安装 `node-sass`和`sass-loader` 。
+如果要使用 `sass` 就必须要安装 `sass`和`sass-loader` 。
 
 ```sh
-npm install --save-dev node-sass sass-loader
+npm install --save-dev sass sass-loader fibers
 ```
 
 在 `nuxt.conf.js`中，添加要使用的 CSS 资源：

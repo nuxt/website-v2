@@ -10,10 +10,10 @@ position: 104
 
 > Nuxt.js memungkinkan Anda menentukan file/modules/libraries CSS yang ingin Anda atur secara global (disertakan pada setiap halaman).
 
-Jika Anda ingin menggunakan `sass` pastikan Anda telah menginstal paket `node-sass` dan `sass-loader`. Jika belum, instal saja:
+Jika Anda ingin menggunakan `sass` pastikan Anda telah menginstal paket `sass` dan `sass-loader`. Jika belum, instal saja:
 
 ```sh
-npm install --save-dev node-sass sass-loader
+npm install --save-dev sass sass-loader fibers
 ```
 
 - Type: `Array`

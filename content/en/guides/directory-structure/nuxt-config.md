@@ -98,24 +98,6 @@ See more on the [dev property](/guides/configuration-glossary/configuration-dev
 
 </base-alert>
 
-### env
-
-This option lets you define environment variables that are available to both client and server.
-
-```js{}[nuxt.config.js]
-export default {
-  env: {
-    baseUrl: process.env.BASE_URL || baseUrl
-  }
-}
-```
-
-<base-alert type="next">
-
-See more on the [env property](/guides/configuration-glossary/configuration-env)
-
-</base-alert>
-
 ### generate
 
 This option lets you set up parameter values for every dynamic route in your application that will be transformed into HTML files by Nuxt.js.

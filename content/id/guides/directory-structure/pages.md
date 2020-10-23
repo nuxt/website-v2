@@ -261,7 +261,7 @@ export default {
 
 Sebaliknya, Anda juga dapat secara manual menetapkan `scrollToTop` menjadi `false` pada jalur induk (_parent routes_).
 
-Jika Anda ingin menimpa tingkah pengguliran secara bawaan dari Nuxt.js, silahkan melihat pada [scrollBehaviour Option](/guides/configuration-glossary/configuration-router#scrollbehavior).
+Jika Anda ingin menimpa tingkah pengguliran secara bawaan dari Nuxt.js, silahkan melihat pada [scrollBehavior Option](/guides/configuration-glossary/configuration-router#scrollbehavior).
 
 ### _middleware_
 

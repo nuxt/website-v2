@@ -146,7 +146,7 @@ To collapse the logs, use `'collapsed'` value.
 - Type: `Object`
   - Default: `{}`
 
-> Configure the `static/` directory behaviour
+> Configure the `static/` directory behavior
 
 See [serve-static](https://www.npmjs.com/package/serve-static) docs for possible options.
 

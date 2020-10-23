@@ -290,7 +290,7 @@ This option depends of the [prefetchLinks](#prefetchlinks) option to be enabled.
 
 </base-alert>
 
-You can disable this behaviour by setting `prefetchPaylods` to `false`:
+You can disable this behavior by setting `prefetchPaylods` to `false`:
 
 ```js{}[nuxt.config.js]
 export default {

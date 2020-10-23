@@ -64,7 +64,7 @@ In this article, we'll learn about `@nuxt/components` by example. I have setup a
 ----| MagicButton/
 ```
 
-We will implement `@nuxt/components` on these components followed by a detailed look at module options to customise the default behaviour. Later in the article, we will also take a look at **lazy-loading** and **auto-importing 3rd-party library** components.
+We will implement `@nuxt/components` on these components followed by a detailed look at module options to customize the default behavior. Later in the article, we will also take a look at **lazy-loading** and **auto-importing 3rd-party library** components.
 
 It’s best if you setup this [sample project](https://github.com/Krutie/nuxt-components-demo) locally to tryout options that may interest you.
 

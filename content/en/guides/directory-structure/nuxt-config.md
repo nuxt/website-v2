@@ -333,10 +333,10 @@ See more on the [transition property](/guides/configuration-glossary/configura
 
 `nuxt.config.js` contains :
 
-- the `env` property to add the URL of our API.
+- the `publicRuntimeConfig` property to add the URL of our API.
 - the `modules` property to register our `@nuxtjs/axios` module.
 
-`pages/nuxt-config.vue` - uses `$axios` to fetch our data and `env.apiUrl` to retrieve our API URL.
+`pages/nuxt-config.vue` - uses `$axios` to fetch our data and `$config: { baseURL }` to retrieve our API URL.
 
 `package.json` - shows `@nuxtjs/axios` has been installed.
 

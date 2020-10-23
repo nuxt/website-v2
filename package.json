@@ -61,7 +61,7 @@
     "node-sass": "^4.14.1",
     "npm-run-all": "^4.1.5",
     "prettier": "^2.1.2",
-    "sass-loader": "^10.0.3",
+    "sass-loader": "^10.0.4",
     "start-server-and-test": "^1.11.5",
     "stylelint": "^13.7.2",
     "stylelint-config-prettier": "^8.0.2",

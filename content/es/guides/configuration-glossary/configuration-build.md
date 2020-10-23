@@ -99,7 +99,7 @@ export default {
           [
             preset,
             {
-              buildTarget: isServer ? 'server' : 'client',
+              targets: isServer ? ... :  ...,
               ...options
             }
           ],
@@ -281,13 +281,11 @@ export default {
 
 Para entender mejor como funciona el uso de manifests, echa un vistazo a la [documentación de webpack](https://webpack.js.org/guides/code-splitting/).
 
-
 <base-alert>
 
 Tenga cuidado al usar nombres de archivo no basados en hash en producción, ya que la mayoría de los navegadores almacenarán en caché el activo y no detectarán los cambios en la primera carga.
 
 </base-alert>
-
 
 ## friendlyErrors
 
@@ -637,7 +635,7 @@ Esta opción se establece automáticamente en función del valor de `mode` si no
 
 <base-alert>
 
-**Advertencia:** Esta propiedad está obsoleta. En su lugar use por favor  [style-resources-module](https://github.com/nuxt-community/style-resources-module/) para mejorar rendimiento y un mejor DX!
+**Advertencia:** Esta propiedad está obsoleta. En su lugar use por favor [style-resources-module](https://github.com/nuxt-community/style-resources-module/) para mejorar rendimiento y un mejor DX!
 
 </base-alert>
 
@@ -725,7 +723,7 @@ Mira [webpack-contrib/terser-webpack-plugin](https://github.com/webpack-contrib/
 
 Si desea transpilar dependencias específicas con Babel, puede agregarlas en `build.transpile`. Cada elemento en transpile puede ser un nombre de paquete, una string o un objeto regex que coincida con el nombre del archivo de la dependencia.
 
-Comenzando con `v2.9.0`, también puedes usar una función para transpilar condicionalmente, la función recibirá un objeto (` {isDev, isServer, isClient, isModern, isLegacy} `):
+Comenzando con `v2.9.0`, también puedes usar una función para transpilar condicionalmente, la función recibirá un objeto (`{isDev, isServer, isClient, isModern, isLegacy}`):
 
 ```js{}[nuxt.config.js]
 {

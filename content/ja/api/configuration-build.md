@@ -93,7 +93,7 @@ export default {
           [
             preset,
             {
-              buildTarget: isServer ? 'server' : 'client',
+              targets: isServer ? ... :  ...,
               ...options
             }
           ],

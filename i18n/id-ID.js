@@ -16,13 +16,13 @@ module.exports = {
   header: {
     links: [
       {
-        name: 'Guides',
+        name: 'Panduan\'s',
         slug: 'guides',
         type: 'newDocs',
         routeName: 'guides-book-slug'
       },
       {
-        name: 'Guide',
+        name: 'Panduan',
         slug: 'guide',
         type: 'dynamic',
         routeName: 'section-slug'
@@ -34,7 +34,7 @@ module.exports = {
         routeName: 'section-slug'
       },
       {
-        name: 'Examples',
+        name: 'Contoh',
         slug: 'examples',
         type: 'dynamic',
         routeName: 'section-slug'
@@ -46,7 +46,7 @@ module.exports = {
         routeName: 'section-slug'
       },
       {
-        name: 'Resources',
+        name: 'Sumber Daya',
         slug: 'resources',
         type: 'static'
       },
@@ -106,13 +106,8 @@ module.exports = {
         description:
           'Mode paling populer untuk Nuxt. Dengan SSR, juga disebut mode "universal" atau "isomorphic", server Node.js akan digunakan untuk mengirimkan HTML berdasarkan komponen Vue Anda ke klien alih-alih javascript murni. Menggunakan SSR akan mengarah pada peningkatan SEO yang besar, UX yang lebih baik, dan lebih banyak peluang (dibandingkan dengan Vue SPA tradisional). {Break} Karena menerapkan SSR sendiri bisa sangat membosankan, Nuxt.js memberi Anda dukungan penuh di luar kotak dan akan mengurus perangkap umum.'
       },
-      spa: {
-        title: 'Single Page Application (SPA)',
-        description:
-          'Tidak memerlukan SSR atau Pembuatan Situs Statis tetapi masih ingin mengambil untung dari manfaat yang diberikan Nuxt? Apakah Anda perlahan-lahan mentransisikan aplikasi Anda dan ingin memulai yang ringan? Maka mode SPA tradisional kemungkinan akan menjadi pilihan Anda. Hasilnya akan menjadi Vue SPA khas seperti yang Anda tahu tetapi dipengaruhi oleh konfigurasi Nuxt Anda dan kerangka itu sendiri.'
-      },
       ssg: {
-        title: 'Statically Generated',
+        title: 'Generate Secara Statis',
         description:
           'Pembuatan Situs Statis adalah topik yang sangat panas saat ini (alias JAMStack). Alih-alih beralih ke kerangka kerja lain dan menghabiskan waktu untuk membiasakan diri, mengapa tidak membunuh dua burung dengan satu batu? {proverbial} Nuxt.js mendukung pembuatan situs web statis berdasarkan aplikasi Vue Anda. Ini adalah "yang terbaik dari kedua dunia" karena Anda tidak memerlukan server tetapi masih memiliki manfaat SEO karena Nuxt akan melakukan pra-render semua halaman dan menyertakan HTML yang diperlukan. Anda juga dapat menggunakan halaman yang dihasilkan dengan mudah ke halaman Netlify atau GitHub.',
         proverbial: 'only proverbial'
@@ -286,9 +281,9 @@ module.exports = {
     title: 'Kuis'
   },
   tryNewDocs: {
-    msg1: 'Ingin melihat dokumen baru kami? Kami ',
+    msg1: 'Ingin melihat dokumen baru kami? ',
     link: 'dokumen baru',
-    msg2: ' sekarang dalam versi beta. Selamat bersenang-senang!'
+    msg2: ' kami sekarang dalam versi beta. Selamat bersenang-senang!'
   },
   contribute: {
     title: 'Kontributor',
@@ -305,25 +300,25 @@ module.exports = {
   },
   content: {
     guide: {
-      prologue: 'Prologue',
+      prologue: 'Prolog',
       'getting-started': 'Memulai'
     },
     api: {
-      essential: 'Essential',
-      pages: 'Pages',
-      components: 'Components',
-      utils: 'Utils',
-      configuration: 'Configuration',
-      programmatically: 'Programmatically',
-      internals: 'Internals'
+      essential: 'Penting',
+      pages: 'Halaman',
+      components: 'Komponen',
+      utils: 'Utilitas',
+      configuration: 'Konfigurasi',
+      programmatically: 'Secara Terprogram',
+      internals: 'Internal'
     },
     examples: {
-      essentials: 'Essentials',
-      customization: 'Customization',
-      advanced: 'Advanced'
+      essentials: 'Penting',
+      customization: 'Kustomisasi',
+      advanced: 'Lanjutan'
     },
     faq: {
-      configuration: 'Configuration',
+      configuration: 'Konfigurasi',
       development: 'Development',
       deployment: 'Deployment'
     },

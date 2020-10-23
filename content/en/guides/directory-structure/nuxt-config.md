@@ -84,7 +84,7 @@ See more on the [css property](/guides/configuration-glossary/configuration-css
 
 ### dev
 
-This option lets you define the `development` or `production` mode of Nuxt.js (important when you use Nuxt.js programatically)
+This option lets you define the `development` or `production` mode of Nuxt.js (important when you use Nuxt.js programmatically)
 
 ```js{}[nuxt.config.js]
 export default {

@@ -46,7 +46,7 @@ questions:
       - fetch
       - asyncData
     correctAnswer: nuxtServerInit
-  - question: In asynData the context is given to the nuxtServerInit as the
+  - question: In asyncData the context is given to the nuxtServerInit as the
     answers:
       - first argument
       - second argument

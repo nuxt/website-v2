@@ -296,6 +296,9 @@ module.exports = {
       'Bu sayfa için şu anda katkıda bulunamazsınız. Eğer katkıda bulunmak istiyorsanız',
     link: 'buraya tıklayın.'
   },
+  example: {
+    intro: 'In this example:'
+  },
   codeSandbox: {
     open: "CodeSandbox'ı Aç"
   },

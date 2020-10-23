@@ -294,6 +294,9 @@ module.exports = {
       'A contribuição para esta página está encerrada. Se você gostaria de contribuir, verifique nossa',
     link: 'nova documentação, por favor.'
   },
+  example: {
+    intro: 'In this example:'
+  },
   codeSandbox: {
     open: 'Abrir no CodeSandbox'
   },

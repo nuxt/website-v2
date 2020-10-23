@@ -291,6 +291,9 @@ module.exports = {
     msg1: 'مشارکت در این صفحه بسته شده است. اگر می‌‌خواهید مشارکت کنید',
     link: 'مستندات جدید'
   },
+  example: {
+    intro: 'In this example:'
+  },
   codeSandbox: {
     open: 'باز کردن CodeSandbox'
   },

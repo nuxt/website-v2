@@ -295,6 +295,9 @@ module.exports = {
       'Изменения на этой странице заблокированы. Если хотите что-то изменить, взгляните на нашу',
     link: 'новую документацию'
   },
+  example: {
+    intro: 'In this example:'
+  },
   codeSandbox: {
     open: 'Открыть CodeSandbox'
   },

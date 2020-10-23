@@ -295,8 +295,11 @@ module.exports = {
       'La contribución en esta página está cerrada. Si quieres contribuir, por favor, revisa nuestra',
     link: 'nueva documentación'
   },
+  example: {
+    intro: 'En esta ejemplo:'
+  },
   codeSandbox: {
-    open: 'Abrir CodeSandbox'
+    open: 'Ver Ejemplo'
   },
   content: {
     guide: {

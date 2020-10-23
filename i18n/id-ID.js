@@ -16,7 +16,7 @@ module.exports = {
   header: {
     links: [
       {
-        name: 'Panduan\'s',
+        name: "Panduan's",
         slug: 'guides',
         type: 'newDocs',
         routeName: 'guides-book-slug'
@@ -294,6 +294,9 @@ module.exports = {
     msg1:
       'Kontribusi untuk halaman ini sekarang ditutup. Jika Anda ingin berkontribusi, silakan periksa ',
     link: 'dokumen baru'
+  },
+  example: {
+    intro: 'In this example:'
   },
   codeSandbox: {
     open: 'Buka CodeSandbox'

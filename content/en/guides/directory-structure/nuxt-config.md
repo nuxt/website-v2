@@ -225,6 +225,61 @@ See more on the [plugins property](/guides/configuration-glossary/configuration
 
 </base-alert>
 
+### RuntimeConfig
+
+#### **privateRuntimeConfig**
+
+```js{}[nuxt.config.js]
+export default {
+  privateRuntimeConfig: {
+    apiSecret: process.env.API_SECRET
+  }
+}
+```
+
+#### **publicRuntimeConfig**
+
+```js{}[nuxt.config.js]
+export default {
+  publicRuntimeConfig: {
+    baseURL: process.env.BASE_URL || 'https://nuxtjs.org'
+  }
+}
+```
+
+#### **Using your config values**
+
+You can then access these values anywhere by using the context in your pages, store, components and plugins by using this.$config or context.$config.
+
+```html{}[pages/index.vue]
+<script>
+  asyncData ({ $config: { baseURL } }) {
+    const posts = await fetch(`${baseURL}/posts`)
+      .then(res => res.json())
+  }
+</script>
+```
+
+Inside your templates you can access your runtimeConfigs directly using {{ $config.* }}
+
+```html{}[pages/index.vue]
+<template>
+  <p>Our Url is: {{ $config.baseURL}}</p>
+</template>
+```
+
+<base-alert type="next">
+
+See more on the [runtimeConfig](/guides/configuration-glossary/configuration-runtime-config)
+
+</base-alert>
+
+<base-alert type="next">
+
+See our blog post on [Moving from @nuxtjs/dotenv to runtime config](/blog/moving-from-nuxtjs-dotenv-to-runtime-config)
+
+</base-alert>
+
 ### router
 
 With the `router` option you can overwrite the default Nuxt.js configuration of Vue Router.

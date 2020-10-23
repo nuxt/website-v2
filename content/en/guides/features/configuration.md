@@ -74,7 +74,7 @@ Nuxt.js lets you define the CSS files/modules/libraries you want to set globally
 
 <base-alert>
 
-In case you want to use `sass` make sure that you have installed the `node-sass` and `sass-loader` packages.
+In case you want to use `sass` make sure that you have installed the `sass` and `sass-loader` packages.
 
 </base-alert>
 
@@ -146,7 +146,7 @@ To use these pre-processors, we need to install their webpack loaders:
 
 ```bash
 yarn add -D pug pug-plain-loader
-yarn add -D node-sass sass-loader
+yarn add -D sass sass-loader fibers
 ```
 
   </code-block>
@@ -154,7 +154,7 @@ yarn add -D node-sass sass-loader
 
 ```bash
 npm install --save-dev pug pug-plain-loader
-npm install --save-dev node-sass sass-loader
+npm install --save-dev sass sass-loader fibers
 ```
 
   </code-block>

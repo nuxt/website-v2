@@ -106,7 +106,7 @@ export default {
 
 <base-alert type="info">
 
-Caso você queira usar `sass`, certifique-se de ter instalado os pacotes `node-sass` e `sass-loader`.
+Caso você queira usar `sass`, certifique-se de ter instalado os pacotes `sass` e `sass-loader`.
 
 </base-alert>
 
@@ -114,14 +114,14 @@ Caso você queira usar `sass`, certifique-se de ter instalado os pacotes `node-s
   <code-block label="Yarn" active>
 
 ```bash
-yarn add -D node-sass sass-loader
+yarn add -D sass sass-loader fibers
 ```
 
   </code-block>
   <code-block label="NPM">
 
 ```bash
-npm install --save-dev node-sass sass-loader
+npm install --save-dev sass sass-loader fibers
 ```
 
   </code-block>

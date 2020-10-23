@@ -32,5 +32,5 @@ position: 2
 이런 프리프로세서를 사용하기 위해서는 Webpack 로더들을 설치해야 합니다.
 
 ```bash
-npm install --save-dev pug@2.0.0-beta6 pug-loader coffeescript coffee-loader node-sass sass-loader
+npm install --save-dev pug@2.0.0-beta6 pug-loader coffeescript coffee-loader sass sass-loader
 ```

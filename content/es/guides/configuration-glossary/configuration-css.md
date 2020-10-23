@@ -8,10 +8,10 @@ position: 4
 
 > Nuxt.js te permite definir los archivos/módulos/bibliotecas CSS que desea configurar globalmente (incluidos en cada página).
 
-En caso de que desee utilizar `sass` asegúrese de haber instalado los paquetes `node-sass` y `sass-loader`. Si no solo
+En caso de que desee utilizar `sass` asegúrese de haber instalado los paquetes `sass` y `sass-loader`. Si no solo
 
 ```sh
-npm install --save-dev node-sass sass-loader
+npm install --save-dev sass sass-loader fibers
 ```
 
 - Tipo: `Array`

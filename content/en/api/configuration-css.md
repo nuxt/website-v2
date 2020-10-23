@@ -8,10 +8,10 @@ position: 104
 
 > Nuxt.js lets you define the CSS files/modules/libraries you want to set globally (included in every page).
 
-In case you want to use `sass` make sure that you have installed `node-sass` and `sass-loader` packages. If you didn't just
+In case you want to use `sass` make sure that you have installed `sass` and `sass-loader` packages. If you didn't just
 
 ```sh
-npm install --save-dev node-sass sass-loader
+npm install --save-dev sass sass-loader fibers
 ```
 
 - Type: `Array`

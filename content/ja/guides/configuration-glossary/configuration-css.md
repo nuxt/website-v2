@@ -8,10 +8,10 @@ position: 4
 
 > Nuxt.js ではグローバルに適用したい（すべてのページにインクルードしたい）CSS ファイル/モジュール/ライブラリを設定できます。
 
-`sass` を利用したい場合は `node-sass` および `sass-loader` パッケージをインストールしてください。もしインストールしていない場合は以下のようにインストールしてください。
+`sass` を利用したい場合は `sass` および `sass-loader` パッケージをインストールしてください。もしインストールしていない場合は以下のようにインストールしてください。
 
 ```sh
-npm install --save-dev node-sass sass-loader
+npm install --save-dev sass sass-loader fibers
 ```
 
 - 型: `Array`

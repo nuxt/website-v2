@@ -74,7 +74,7 @@ O Nuxt.js permite estabelecer os arquivos/módulos/bibliotecas CSS que você des
 
 <base-alert>
 
-Caso queira usar `sass`, certifique-se de ter instalado os pacotes `node-sass` e `sass-loader`.
+Caso queira usar `sass`, certifique-se de ter instalado os pacotes `sass` e `sass-loader`.
 
 </base-alert>
 
@@ -128,7 +128,7 @@ Para usar esses pré-processadores, precisamos instalar seus loaders de webpack:
 
 ```bash
 yarn add -D pug pug-plain-loader
-yarn add -D node-sass sass-loader
+yarn add -D sass sass-loader fibers
 ```
 
   </code-block>
@@ -136,7 +136,7 @@ yarn add -D node-sass sass-loader
 
 ```bash
 npm install --save-dev pug pug-plain-loader
-npm install --save-dev node-sass sass-loader
+npm install --save-dev sass sass-loader fibers
 ```
 
   </code-block>

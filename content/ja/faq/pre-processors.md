@@ -33,5 +33,5 @@ npm install --save-dev pug pug-plain-loader
 ```
 
 ```bash
-npm install --save-dev node-sass sass-loader
+npm install --save-dev sass sass-loader fibers
 ```

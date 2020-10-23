@@ -68,7 +68,7 @@ Nuxt.js를 사용하면 전역으로 설정하려는 CSS 파일/모듈/라이브
 
 <base-alert>
 
-`sass`를 사용하려면 `node-sass` 및 `sass-loader` 패키지를 설치했는지 확인하세요.
+`sass`를 사용하려면 `sass` 및 `sass-loader` 패키지를 설치했는지 확인하세요.
 
 </base-alert>
 
@@ -138,7 +138,7 @@ export default {
 
 ```bash
 yarn add -D pug pug-plain-loader
-yarn add -D node-sass sass-loader
+yarn add -D sass sass-loader fibers
 ```
 
   </code-block>
@@ -146,7 +146,7 @@ yarn add -D node-sass sass-loader
 
 ```bash
 npm install --save-dev pug pug-plain-loader
-npm install --save-dev node-sass sass-loader
+npm install --save-dev sass sass-loader fibers
 ```
 
   </code-block>

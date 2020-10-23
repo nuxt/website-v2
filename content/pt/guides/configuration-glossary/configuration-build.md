@@ -403,7 +403,7 @@ Configuração para o plugin [html-minifier](https://github.com/kangax/html-mini
 
 ### loaders.sass e loaders.scss
 
-> Veja a [documentação do Node Sass](https://github.com/sass/node-sass/blob/master/README.md#options) para todas as opções Sass disponíveis. Nota: `loaders.sass` é para [Sintaxe Indentada do Sass](http://sass-lang.com/documentation/file.INDENTED_SYNTAX.html)
+> Veja a [documentação do Sass](https://github.com/sass/dart-sass#javascript-api) para todas as opções Sass disponíveis. Nota: `loaders.sass` é para [Sintaxe Indentada do Sass](http://sass-lang.com/documentation/file.INDENTED_SYNTAX.html)
 
 ### loaders.vueStyle
 

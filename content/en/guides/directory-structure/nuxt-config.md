@@ -231,7 +231,7 @@ export default {
 
 #### **Using your config values**
 
-You can then access these values anywhere by using the context in your pages, store, components and plugins by using this.$config or context.$config.
+You can then access these values anywhere by using the context in your pages, store, components and plugins by using `this.$config` or `context.$config`.
 
 ```html{}[pages/index.vue]
 <script>
@@ -242,7 +242,7 @@ You can then access these values anywhere by using the context in your pages, st
 </script>
 ```
 
-Inside your templates you can access your runtimeConfigs directly using {{ $config.* }}
+Inside your templates you can access your runtimeConfigs directly using `{{ $config.* }}`
 
 ```html{}[pages/index.vue]
 <template>

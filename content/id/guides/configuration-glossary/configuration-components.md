@@ -11,7 +11,7 @@ position: 5
 - Tipe: `Boolean` atau `Object`
 - Nilai Anggapan: `false`
 
-Saat disetel ke `true` atau menggunakan objek, ini akan menyertakan dependensi [nuxt/components](https://github.com/nuxt/components) dan otomatis mengimpor komponen Anda (ditentukan dalam `~/components`) saat Anda menggunakannya di template Anda.
+Saat disetel ke `true` atau menggunakan objek, ini akan menyertakan dependensi [nuxt/components](https://github.com/nuxt/components) dan otomatis mengimpor komponen Anda (ditentukan dalam `~/components`) saat Anda menggunakannya di templat Anda.
 
 <base-alert type="info">
 

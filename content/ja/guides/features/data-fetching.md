@@ -67,13 +67,12 @@ Nuxt.js はコンポーネントの `mounted()` フックでデータを取得�
 
 Nuxt は非同期なデータを読み込むために 2 つのフックを提供しています:
 
-- `fetch` フック (Nuxt 2.12+)。 どのコンポーネントにでも配置することができ、(クライアントサイドレンダリング中の) 読み込み状態やエラーをレンダリングするショートカットを提供します。
-
+- `fetch` フック (Nuxt 2.12 以降)。 どのコンポーネントにでも配置することができ、(クライアントサイドレンダリング中の) 読み込み状態やエラーをレンダリングするショートカットを提供します。
 - `asyncData` フック。 _ページ_ コンポーネントにのみ配置することができます。 `fetch` と異なり、クライアントサイドレンダリング中にローディングプレースホルダーを示しません: そのかわり、ルートナビゲーションが解決されるまでそれをブロックし、失敗するとエラーページを表示します。
 
 <base-alert>
 
-Nuxt 2.12 未満においては、`fetch` フックは今日の `asyncData` と非常によく似た働きをします。この機能は後方互換性のためまだサポートされています: もし `fetch()` が `context` オブジェクトを受け取っているなら、それは "レガシー" な fetch フックだと考えられます。この機能は非推奨なので、`asyncData(context)` や [無名ミドルウェア](/guides/directory-structure/middleware#anonymous-middleware) を `middleware(context)` で使用してください。
+Nuxt 2.12 未満においては、`fetch` フックは今日の `asyncData` と非常によく似た働きをします。この機能は後方互換性のためまだサポートされています: もし `fetch()` が `context` オブジェクトを受け取っているなら、それは 「レガシー」 な fetch フックだと考えられます。この機能は非推奨なので、`asyncData(context)` や `middleware(context)` を使用した[無名ミドルウェア](/guides/directory-structure/middleware#無名ミドルウェア) に置き換えてください。
 
 </base-alert>
 
@@ -87,7 +86,7 @@ Nuxt 2.12 未満においては、`fetch` フックは今日の `asyncData` と�
 
 </base-alert>
 
-`fetch` はサーバーサイドレンダリングではコンポーネントのインスタンスが作成されたとき、クライアントサイドでは遷移するときに呼び出されるフックです。fetch フックは解決されるプロミスを(明示的に、または `async/await` を使って暗黙的に)返却するべきです:
+`fetch` はサーバーサイドレンダリングではコンポーネントのインスタンスが作成されたとき、クライアントサイドでは遷移するときに呼び出されるフックです。fetch フックは解決される promise を(明示的に、または `async/await` を使って暗黙的に)返却するべきです:
 
 - 初期ページがレンダリングされる前のサーバー
 - コンポーネントがマウントされた後のクライアント
@@ -106,8 +105,8 @@ Nuxt が呼び出す fetch に加え、`this.$fetch()` を使うことでコン�
   <p v-else-if="$fetchState.error">An error occured :(</p>
   <div v-else>
     <h1>Nuxt Mountains</h1>
-    <ul v-for="mountain of mountains">
-      <li>{{ mountain.title }}</li>
+    <ul>
+      <li v-for="mountain of mountains">{{ mountain.title }}</li>
     </ul>
     <button @click="$fetch">Refresh</button>
   </div>
@@ -185,7 +184,7 @@ export default {
 </template>
 ```
 
-また、`<nuxt>` コンポーネントへ `keep-alive-props` prop を渡すことで、`<keep-alive>` に渡す [props](https://vuejs.org/v2/api/#keep-alive) を指定することもできます。
+また、`<nuxt>` コンポーネントへ `keep-alive-props` prop を渡すことで、`<keep-alive>` に渡す [props](https://jp.vuejs.org/v2/api/index.html#keep-alive) を指定することもできます。
 
 ```html{}[layouts/default.vue]
 <nuxt keep-alive :keep-alive-props="{ max: 10 }" />
@@ -195,7 +194,7 @@ export default {
 
 ### `activated`  フックを使う
 
-(SSR も含む)最後に `fetch` を呼び出したときのタイムスタンプを `this.$fetchState.timestamp` から取得することができます。このプロパティを `activated` フックと組み合わせることで、`fetch` に 30 秒のキャッシュを追加することができます:
+最後に `fetch` を呼び出したときのタイムスタンプを `this.$fetchState.timestamp` から取得することができます(SSR も含む)。このプロパティを `activated` フックと組み合わせることで、`fetch` に 30 秒のキャッシュを追加することができます:
 
 ```html{}[pages/posts/_id.vue]
 <template> ... </template>
@@ -252,7 +251,7 @@ export default {
 </script>
 ```
 
-`fetch` と異なり、`asyncData` フックから返却されるプロミスは*ルートの遷移の間に*解決されます。つまり、"loading placeholder" はクライアントサイドの遷移で表示されないということです(ただし読み込み中の状態をユーザーに示すために [ローディングバー](https://nuxtjs.org/guides/features/loading/) を使うことができます)。Nuxt は代わりに `asyncData` フックの終了を待ってから、次のページへ移動したり[エラーページ](/guides/directory-structure/layouts#error-page)を表示したりします。
+`fetch` と異なり、`asyncData` フックから返却される promise は*ルートの遷移の間に*解決されます。つまり、"loading placeholder" はクライアントサイドの遷移で表示されないということです(ただし読み込み中の状態をユーザーに示すために [ローディングバー](https://nuxtjs.org/guides/features/loading/) を使うことができます)。Nuxt は代わりに `asyncData` フックの終了を待ってから、次のページへ移動したり[エラーページ](/guides/directory-structure/layouts#error-page)を表示したりします。
 
 このフックはページレベルのコンポーネントのためだけに使うことができます。`fetch` と異なり、`asyncData` はコンポーネントインスタンス (`this`) にアクセスすることはできません。そのかわりに、[context](/guides/concepts/context-helpers) を引数として受け取ります。`asyncData` をデータの取得のために使うことができ、Nuxt.js は自動で返却されたオブジェクトをコンポーネントのデータとマージします。
 

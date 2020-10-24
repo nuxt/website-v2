@@ -5,7 +5,7 @@ category: configuration
 position: 3
 ---
 
-Nuxt.js menggunakan [@nuxt/babel-preset-app](https://github.com/nuxt/nuxt.js/tree/dev/packages/babel-preset-app), yang mana didasarkan *official* dari [@vue/babel-preset-app](https://github.com/vuejs/vue-cli/tree/dev/packages/%40vue/babel-preset-app) untuk konfigurasi babel secara default, sehingga Anda dapat menggunakan JSX di komponen.
+Nuxt.js menggunakan [@nuxt/babel-preset-app](https://github.com/nuxt/nuxt.js/tree/dev/packages/babel-preset-app), yang mana didasarkan *official* dari [@vue/babel-preset-app](https://github.com/vuejs/vue-cli/tree/dev/packages/%40vue/babel-preset-app) untuk konfigurasi babel secara *default*, sehingga Anda dapat menggunakan JSX di komponen.
 
 
 

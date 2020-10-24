@@ -36,5 +36,5 @@ position: 2
 记得安装这些预处理器对应的 npm 依赖包和 Webpack 加载器:
 
 ```bash
-npm install --save-dev pug@2.0.3 pug-plain-loader coffeescript coffee-loader node-sass sass-loader
+npm install --save-dev pug@2.0.3 pug-plain-loader coffeescript coffee-loader sass sass-loader fibers
 ```

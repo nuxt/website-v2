@@ -88,7 +88,7 @@ Nuxt.js は設定をしなくても自動的にコード分割を行います。
 
 ## ルーティングの基礎
 
-下記のような木構造のとき:
+下記のような木構造のとき：
 
 ```
 pages/
@@ -98,7 +98,7 @@ pages/
 --| index.vue
 ```
 
-自動的に以下が生成されます:
+自動的に以下が生成されます：
 
 ```js
 router: {
@@ -124,9 +124,9 @@ router: {
 
 ## 動的なルーティング
 
-ユーザーやブログ記事の一覧を API から取得する場合など、ルートの名前を決定することができない場合があります。私たちはこれを動的なルーティングと呼びます。動的なルーティングを生成するには、 .vue ファイル名またはディレクトリ名の前にアンダースコアを付ける必要があります。ファイルやディレクトリには好きな名前をつけることができますが、アンダースコアのプレフィックスを必ず付ける必要があります。
+ユーザーやブログ記事の一覧を API から取得する場合など、ルートの名前を決定することができない場合があります。私たちはこれを動的なルーティングと呼びます。動的なルーティングを生成するには、.vue ファイル名またはディレクトリ名の前にアンダースコアを付ける必要があります。ファイルやディレクトリには好きな名前をつけることができますが、アンダースコアのプレフィックスを必ず付ける必要があります。
 
-下記のような木構造のとき:
+下記のような木構造のとき：
 
 ```
 pages/
@@ -138,7 +138,7 @@ pages/
 --| index.vue
 ```
 
-自動的に以下が生成されます:
+自動的に以下が生成されます：
 
 ```js
 router: {
@@ -187,7 +187,7 @@ Nuxt >= v2.13 ではクローラーがインストールされており、リン
 
 ### ルートパラメーターへのローカルアクセス
 
-ローカルページやコンポーネント内の現在のルートパラメータは、`this.$route.params.{parameterName}` を参照することでアクセスすることができます。例えば、動的なユーザーページ (`users\_id.vue`) があり、ユーザーまたはプロセス情報を読み込むために `id` パラメーターにアクセスしたい場合、次のような変数にアクセスできます: `this.$route.params.id`.。
+ローカルページやコンポーネント内の現在のルートパラメータは、`this.$route.params.{parameterName}` を参照することでアクセスすることができます。例えば、動的なユーザーページ （`users\_id.vue`） があり、ユーザーまたはプロセス情報を読み込むために `id` パラメーターにアクセスしたい場合、次のような変数にアクセスできます: `this.$route.params.id`.。
 
 ## ネストされたルート
 
@@ -195,11 +195,11 @@ Nuxt.js は vue-router の子ルートを使ってルートをネストさせる
 
 <base-alert>
 
-親コンポーネント (`.vue` ファイル)内に [NuxtChild  コンポーネント](/guides/features/nuxt-components#the-nuxtchild-component)を含めることを忘れないでください。
+親コンポーネント （`.vue` ファイル）内に [NuxtChild  コンポーネント](/guides/features/nuxt-components#the-nuxtchild-component)を含めることを忘れないでください。
 
 </base-alert>
 
-下記のような木構造のとき:
+下記のような木構造のとき：
 
 ```
 pages/
@@ -209,7 +209,7 @@ pages/
 --| users.vue
 ```
 
-自動的に以下が生成されます:
+自動的に以下が生成されます：
 
 ```js
 router: {
@@ -238,7 +238,7 @@ router: {
 
 あまり頻繁に使う場面はありませんが、Nuxt.js は動的な親ルーティングの中に動的な子ルーティングを持つことが可能です。
 
-下記のような木構造のとき:
+下記のような木構造のとき：
 
 ```
 pages/
@@ -252,7 +252,7 @@ pages/
 --| index.vue
 ```
 
-自動的に以下が生成されます:
+自動的に以下が生成されます：
 
 ```js
 router: {
@@ -297,7 +297,7 @@ router: {
 
 もし URL 構造の深さが不明な場合は、ネストされたパスに動的にマッチさせる `_.vue` ファイルを使うことができます。これは*より詳細な*リクエストにマッチしなかったリクエストをハンドリングします。
 
-下記のような木構造のとき:
+下記のような木構造のとき：
 
 ```
 pages/
@@ -308,7 +308,7 @@ pages/
 --| index.vue
 ```
 
-次のようにリクエストをハンドリングします:
+次のようにリクエストをハンドリングします：
 
 ```
 / -> index.vue
@@ -327,7 +327,7 @@ pages/
 
 ## ルーターの拡張
 
-Nuxt のルーティングを拡張する方法はいくつかあります:
+Nuxt のルーティングを拡張する方法はいくつかあります：
 
 - [router-extras-module](https://github.com/nuxt-community/router-extras-module) を使ってページのルートパラメータをカスタマイズする
 - [@nuxtjs/router](https://github.com/nuxt-community/router-module) を使い、独自の `router.js` で Nuxt router を上書きする
@@ -345,7 +345,7 @@ export default {
 }
 ```
 
-### Base:
+### Base：
 
 アプリケーションのベース URL です。例えばシングルページアプリケーション全体を `/app/` 配下で配信したい場合、base に `/app/` を設定します。
 
@@ -359,7 +359,7 @@ export default {
 
 Nuxt.js によって生成されるルーティングを拡張したい場合があるでしょう。それは `extendRoutes` オプションで実現できます。
 
-独自のルートを追加する例:
+独自のルートを追加する例：
 
 ```js{}[nuxt.config.js]
 export default {
@@ -375,7 +375,7 @@ export default {
 }
 ```
 
-ルートをソートしたい場合、`@nuxt/utils` の `sortRoutes(routes)` 関数を使うことができます:
+ルートをソートしたい場合、`@nuxt/utils` の `sortRoutes(routes)` 関数を使うことができます：
 
 ```js{}[nuxt.config.js]
 import { sortRoutes } from '@nuxt/utils'
@@ -480,13 +480,13 @@ export default {
 
 </base-alert>
 
-v2.9.0 以降で利用可能:
+v2.9.0 以降で利用可能：
 
 ファイルを利用してルーターの scrollBehavior を上書きすることができます。このファイルは app フォルダに配置する必要があります。
 
 `~/app/router.scrollBehavior.js`.
 
-すべてのルートに置いて強制的にトップまでスクロールさせる例:
+すべてのルートに置いて強制的にトップまでスクロールさせる例：
 
 ```js{}[app/router.scrollBehavior.js]
 export default function (to, from, savedPosition) {
@@ -496,7 +496,7 @@ export default function (to, from, savedPosition) {
 
 <base-alert type="next">
 
-[Nuxt.js のデフォルトの `router.scrollBehavior.js`  ファイル](https://github.com/nuxt/nuxt.js/blob/dev/packages/vue-app/template/router.scrollBehavior.js)
+[Nuxt.js のデフォルトの `router.scrollBehavior.js` ファイル](https://github.com/nuxt/nuxt.js/blob/dev/packages/vue-app/template/router.scrollBehavior.js)
 
 </base-alert>
 
@@ -508,7 +508,7 @@ export default function (to, from, savedPosition) {
 
 ### trailingSlash
 
-v2.10 以降で利用可能:
+v2.10 以降で利用可能：
 
 このオプションを true に設定した場合、すべてのルートの末尾にスラッシュが追加されます。false に設定した場合、それらは取り除かれます。
 
@@ -522,7 +522,7 @@ export default {
 
 <base-alert>
 
-このオプションを準備なしに設定しないでください。徹底的にテストする必要があります。`router.trailingSlash` に `undefined` (デフォルトの値) 以外の値を設定した場合、どちらかのルートは機能しなくなります。したがって、301 リダイレクトは適切に行われ、*内部リンク*は正しく適応される必要があります。`trailingSlash` を true に設定する場合、`example.com/abc/` のみが機能し、`example.com/abc` は機能しません。false に設定する場合はその逆になります。
+このオプションを準備なしに設定しないでください。徹底的にテストする必要があります。`router.trailingSlash` に `undefined` （デフォルトの値）以外の値を設定した場合、どちらかのルートは機能しなくなります。したがって、301 リダイレクトは適切に行われ、*内部リンク*は正しく適応される必要があります。`trailingSlash` を true に設定する場合、`example.com/abc/` のみが機能し、`example.com/abc` は機能しません。false に設定する場合はその逆になります。
 
 </base-alert>
 

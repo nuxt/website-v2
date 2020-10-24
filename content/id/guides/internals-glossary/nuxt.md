@@ -1,12 +1,12 @@
 ---
 title: 'Menggunakan Nuxt.js Secara Terprogram'
-description: Anda dapat menggunakan Nuxt.js secara terprogram untuk menggunakannya sebagai middleware yang memberi Anda kebebasan untuk membuat server sendiri untuk merender aplikasi web Anda.
+description: Anda dapat menggunakan Nuxt.js secara terprogram untuk menggunakannya sebagai _middleware_ yang memberi Anda kebebasan untuk membuat server sendiri untuk merender aplikasi web Anda.
 menu: Using Nuxt Programmatically
 category: internals-glossary
 position: 9
 ---
 
-Anda mungkin ingin menggunakan server Anda sendiri dengan middleware dan API Anda. Itulah mengapa Anda dapat menggunakan Nuxt.js secara terprogram.
+Anda mungkin ingin menggunakan server Anda sendiri dengan _middleware_ dan API Anda. Itulah mengapa Anda dapat menggunakan Nuxt.js secara terprogram.
 
 ## Nuxt Konstrukor
 

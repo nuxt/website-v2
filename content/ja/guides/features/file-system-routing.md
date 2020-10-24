@@ -76,7 +76,7 @@ Nuxt.js は設定をしなくても自動的にコード分割を行います。
 
 <base-alert type="info">
 
-ページ間を遷移するためには [NuxtLink コンポーネント](/guides/features/nuxt-components#the-nuxtlink-component) を使ってください。
+ページ間を遷移するためには [NuxtLink コンポーネント](/guides/features/nuxt-components#NuxtLink-コンポーネント) を使ってください。
 
 </base-alert>
 
@@ -175,7 +175,7 @@ router: {
 
 <base-alert type="info">
 
-Nuxt >= 2.13 ではクローラーがインストールされており、リンクタグをクロールしてそれらのリンクに基づいた動的なルートを生成します。しかしシークレットページのようなリンクが存在しないページがある場合、それらの動的なルートは手動で生成する必要があります。
+Nuxt >= v2.13 ではクローラーがインストールされており、リンクタグをクロールしてそれらのリンクに基づいた動的なルートを生成します。しかしシークレットページのようなリンクが存在しないページがある場合、それらの動的なルートは手動で生成する必要があります。
 
 </base-alert>
 
@@ -329,9 +329,9 @@ pages/
 
 Nuxt のルーティングを拡張する方法はいくつかあります:
 
-- [router-extras-module](https://github.com/nuxt-community/router-extras-module)  はページのルートパラメーターをカスタマイズできます
-- [@nuxtjs/router](https://github.com/nuxt-community/router-module) は独自の `router.js` を使って Nuxt router を上書きすることができます
-- [router.extendRoutes](/guides/configuration-glossary/configuration-router#extendroutes)  プロパティを `nuxt.config.js` で使います
+- [router-extras-module](https://github.com/nuxt-community/router-extras-module) を使ってページのルートパラメータをカスタマイズする
+- [@nuxtjs/router](https://github.com/nuxt-community/router-module) を使い、独自の `router.js` で Nuxt router を上書きする
+- `nuxt.config.js` 内で [router.extendRoutes](/guides/configuration-glossary/configuration-router#extendroutes)  プロパティを使う
 
 ## router プロパティ
 
@@ -476,7 +476,7 @@ export default {
 
 <base-alert type="next">
 
-詳細は  [vue-router のスクロールの振る舞いのドキュメント](https://router.vuejs.org/ja/guide/advanced/scroll-behavior.html)を参照してください。
+詳細は [vue-router のスクロールの振る舞いのドキュメント](https://router.vuejs.org/ja/guide/advanced/scroll-behavior.html)を参照してください。
 
 </base-alert>
 

@@ -1,32 +1,32 @@
 ---
-title: 'API: The plugins Property'
-description: 'Use vue.js plugins with the plugins option of Nuxt.js.'
+title: 'API: plugins プロパティ'
+description: 'Nuxt.js の plugins オプションで vue.js プラグインを使用します。'
 menu: plugins
 category: configuration-glossary
 position: 21
 ---
 
-**Note**: Since Nuxt.js 2.4, `mode` has been introduced as option of `plugins` to specify plugin type, possible value are: `client` or `server`. `ssr: false` will be adapted to `mode: 'client'` and deprecated in next major release.
+**Note**: Nuxt.js 2.4 以降、プラグインのタイプを指定するために `plugins` のオプションとして `mode` が導入されました。指定可能な値は `client` または `server` です。`ssr: false` は `mode: 'client'` に改良され次のメジャーリリースで非推奨になります。
 
-- Type: `Array`
-  - Items: `String` or `Object`
+- 型: `Array`
+  - 要素: `String` または `Object`
 
-If the item is an object, the properties are:
+要素がオブジェクトの場合、プロパティは次のとおりです:
 
-- src: `String` (path of the file)
-- mode: `String` (can be `client` or `server`) _If defined, the file will be included only on the respective (client or server) side._
+- src: `String`（ファイルパス）
+- mode: `String`（`client` または `server`） _もし定義されている場合はファイルはそれぞれの（クライアントまたはサーバー）側にのみ含まれます。_
 
-**Note**: Old version
+**Note**: 古いバージョン
 
-- Type: `Array`
-  - Items: `String` or `Object`
+- 型: `Array`
+  - 要素: `String` または `Object`
 
-If the item is an object, the properties are:
+要素がオブジェクトの場合、プロパティは次のとおりです:
 
-- src: `String` (path of the file)
-- ssr: `Boolean` (default to `true`) _If false, the file will be included only on the client-side._
+- src: `String`（ファイルパス）
+- ssr: `Boolean`（デフォルトは `true`） _もし false の場合はクライアントサイドでのみファイルがインクルードされます_
 
-> The plugins property lets you add vue.js plugins easily to your main application.
+> plugins プロパティを使うと Vue.js プラグインをメインアプリケーションに簡単に追加できます。
 
 ```js{}[nuxt.config.js]
 export default {
@@ -52,6 +52,6 @@ import 'ant-design-vue/dist/antd.css' // Per Ant Design's docs
 Vue.use(Antd)
 ```
 
-Note that the css was [imported as per Ant Design Documentation](https://vue.ant.design/docs/vue/getting-started/#3.-Use-antd's-Components 'External tip relevant to building plugins')
+css は [Ant Design ドキュメントに従ってインポートされている](https://vue.ant.design/docs/vue/getting-started/#3.-Use-antd's-Components 'External tip relevant to building plugins')ことに注意してください。
 
-All the paths defined in the `plugins` property will be **imported** before initializing the main application.
+`plugins` プロパティに定義されたパスはすべてメインアプリケーションが初期化される前に**インポート**されます。

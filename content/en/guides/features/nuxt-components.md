@@ -306,7 +306,7 @@ This css can be added to the navigation component or for a specific page or layo
 
 </base-alert>
 
-If you want to you can also configure the class name to be something else. You con do this by modifying the `linkActiveClass` in the router property in your `nuxt.config.js` file.
+If you want to you can also configure the class name to be something else. You can do this by modifying the `linkActiveClass` in the router property in your `nuxt.config.js` file.
 
 ```js
 export default {
@@ -356,7 +356,7 @@ This option is given directly to the `vue-router` linkExactActiveClass. See the 
 
 ## linkPrefetchedClass
 
-The linkPrefetchedClass will allow you to add styles for all links that have been prefetched. This is great for testing which links are being prefetched after modifying the default behaviour. The linkPrefetchedClass is disabled by default. If you want to enable it you need to add it to the router property in your `nuxt-config.js` file.
+The linkPrefetchedClass will allow you to add styles for all links that have been prefetched. This is great for testing which links are being prefetched after modifying the default behavior. The linkPrefetchedClass is disabled by default. If you want to enable it you need to add it to the router property in your `nuxt-config.js` file.
 
 ```js{}[nuxt.config.js]
 export default {

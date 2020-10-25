@@ -99,7 +99,7 @@ export default {
           [
             preset,
             {
-              buildTarget: isServer ? 'server' : 'client',
+              targets: isServer ? ... :  ...,
               ...options
             }
           ],
@@ -281,13 +281,11 @@ export default {
 
 To understand a bit more about the use of manifests, take a look at this [webpack documentation](https://webpack.js.org/guides/code-splitting/).
 
-
 <base-alert>
 
 Be careful when using non-hashed based filenames in production as most browsers will cache the asset and not detect the changes on first load.
 
 </base-alert>
-
 
 ## friendlyErrors
 
@@ -405,7 +403,7 @@ Configuration for the [html-minifier](https://github.com/kangax/html-minifier) p
 
 ### loaders.sass and loaders.scss
 
-> See the [Node Sass documentation](https://github.com/sass/node-sass/blob/master/README.md#options) for all available Sass options. Note: `loaders.sass` is for [Sass Indented Syntax](http://sass-lang.com/documentation/file.INDENTED_SYNTAX.html)
+> See the [Sass documentation](https://github.com/sass/dart-sass#javascript-api) for all available Sass options. Note: `loaders.sass` is for [Sass Indented Syntax](http://sass-lang.com/documentation/file.INDENTED_SYNTAX.html)
 
 ### loaders.vueStyle
 

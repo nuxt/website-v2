@@ -209,7 +209,10 @@ See more on the [plugins property](/guides/configuration-glossary/configuration
 
 ### runtimeConfig
 
-#### `publicRuntimeConfig` is available using `$config` in both server and client.
+#### `publicRuntimeConfig`
+
+- should hold all env variables that are public as these will be exposed on the frontend. This could include a reference to your public URL for example.
+- is available using `$config` in both server and client.
 
 ```js{}[nuxt.config.js]
 export default {
@@ -219,7 +222,10 @@ export default {
 }
 ```
 
-#### `privateRuntimeConfig` is only available on server using same `$config` (it overrides publicRuntimeConfig)
+#### `privateRuntimeConfig`
+
+- should hold all env variables that are private and that should not be exposed on the frontend. This could include a reference to your API secret tokens for example.
+- is only available on server using same `$config` (it overrides publicRuntimeConfig)
 
 ```js{}[nuxt.config.js]
 export default {

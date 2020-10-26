@@ -207,19 +207,9 @@ See more on the [plugins property](/guides/configuration-glossary/configuration
 
 </base-alert>
 
-### RuntimeConfig
+### runtimeConfig
 
-#### **privateRuntimeConfig**
-
-```js{}[nuxt.config.js]
-export default {
-  privateRuntimeConfig: {
-    apiSecret: process.env.API_SECRET
-  }
-}
-```
-
-#### **publicRuntimeConfig**
+#### `publicRuntimeConfig` is available using `$config` in both server and client.
 
 ```js{}[nuxt.config.js]
 export default {
@@ -229,7 +219,17 @@ export default {
 }
 ```
 
-#### **Using your config values**
+#### `privateRuntimeConfig` is only available on server using same `$config` (it overrides publicRuntimeConfig)
+
+```js{}[nuxt.config.js]
+export default {
+  privateRuntimeConfig: {
+    apiSecret: process.env.API_SECRET
+  }
+}
+```
+
+#### **Using your config values:**
 
 You can then access these values anywhere by using the context in your pages, store, components and plugins by using `this.$config` or `context.$config`.
 
@@ -242,7 +242,7 @@ You can then access these values anywhere by using the context in your pages, st
 </script>
 ```
 
-Inside your templates you can access your runtimeConfigs directly using `{{ $config.* }}`
+Inside your templates you can access your runtimeConfigs directly using `$config.*`
 
 ```html{}[pages/index.vue]
 <template>

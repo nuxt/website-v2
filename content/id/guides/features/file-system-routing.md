@@ -187,7 +187,7 @@ Pada Nuxt >= v2.13, terdapat _crawler_ yang terpasang dan akan melakukan _crawl_
 
 ### Mengakses parameter _Route_ secara Lokal
 
-Anda dapat mengakses parameter rute saat ini didalam halaman atau komponen dengan mengambil referensi `this.$route.params.{parameterName}`. Contohnya, jika Anda memiliki halaman pengguna dinamis (`users\_id.vue`) dan ingin mengakses parameter `id` untuk memuat informasi pengguna, Anda bisa melakukan akses dengan kode seperti berikut ini `this.$route.params.id`.
+Anda dapat mengakses parameter rute saat ini didalam halaman atau komponen dengan mengambil referensi `this.$route.params.{parameterName}`. Contohnya, jika Anda memiliki halaman pengguna dinamis (`users/_id.vue`) dan ingin mengakses parameter `id` untuk memuat informasi pengguna, Anda bisa melakukan akses dengan kode seperti berikut ini `this.$route.params.id`.
 
 ## Rute Bersarang (_Nested_)
 

@@ -187,7 +187,7 @@ A partir do Nuxt >= v2.13, há um rastreador (crawler) instalado que rastreará 
 
 ### Acessando localmente Parâmetros de Rota
 
-Você pode acessar os parâmetros da rota atual em sua página ou componente local referenciando `this.$route.params.{parameterName}`. Por exemplo, se você tem uma página dinâmica de usuários (`users\_id.vue`) e deseja acessar o parâmetro `id` para carregar as informações do usuário ou do processo, você pode acessar a variável assim: `this.$route.params.id`.
+Você pode acessar os parâmetros da rota atual em sua página ou componente local referenciando `this.$route.params.{parameterName}`. Por exemplo, se você tem uma página dinâmica de usuários (`users/_id.vue`) e deseja acessar o parâmetro `id` para carregar as informações do usuário ou do processo, você pode acessar a variável assim: `this.$route.params.id`.
 
 ## Rotas Aninhadas
 

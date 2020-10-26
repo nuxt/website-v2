@@ -187,7 +187,7 @@ A partir de Nuxt >= v2.13 hay un rastreador instalado que ahora rastreará tus e
 
 ### Acceso local a los parámetros de ruta
 
-Puedes acceder a los parámetros de ruta dentro de su página o componente haciendo referencia a `this.$route.params.{parameterName}`. Por ejemplo, Si tuvieras una página de usuarios dinámica (`users\_id.vue`) y quisieras acceder al parámetro `id` para cargar el usuario o procesar información, podrias acceder a la variable de la siguiente manera: `this.$route.params.id`.
+Puedes acceder a los parámetros de ruta dentro de su página o componente haciendo referencia a `this.$route.params.{parameterName}`. Por ejemplo, Si tuvieras una página de usuarios dinámica (`users/_id.vue`) y quisieras acceder al parámetro `id` para cargar el usuario o procesar información, podrias acceder a la variable de la siguiente manera: `this.$route.params.id`.
 
 ## Rutas anidadas
 

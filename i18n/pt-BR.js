@@ -106,11 +106,6 @@ module.exports = {
         description:
           'O modo mais popular para Nuxt. Com o SSR, também conhecido de modo "universal" ou "isomórfico", um servidor Node.js será utilizado para entregar ao cliente o HTML com base em seus componentes Vue, em vez de javascript puro. Usar SSR levará a um grande impulso no SEO, melhor UX e mais oportunidades (em comparação com uma SPA Vue tradicional). {break} Como implementar SSR por conta própria pode ser bem chato, o Nuxt.js oferece suporte completo pronto para uso e cuidará de erros comuns.'
       },
-      spa: {
-        title: 'Aplicação de Página Única (SPA)',
-        description:
-          'Não precisa de SSR ou Geração de Site Estático, mas ainda quer tirar proveito dos benefícios que o Nuxt oferece? Você está tomando cuidado a transição de seu aplicativo e quer começar devagar? Então, o modo tradicional de SPA provavelmente será sua escolha. O resultado será uma SPA Vue comum, como você conhece, porém influenciada pela configuração do Nuxt e pelo próprio framework.'
-      },
       ssg: {
         title: 'Gerado Estaticamente',
         description:

@@ -105,16 +105,6 @@ export default {
     }
   },
   css: ['~/assets/css/main.scss'],
-  hooks: {
-    'content:file:beforeInsert': item => {
-      const stats = require('reading-time')(item.text)
-
-      if (item.slug === '' && item.extension === '.md') {
-      }
-
-      item.readingTime = stats
-    }
-  },
   plugins: [
     '~/plugins/i18n',
     '~/plugins/directives',
@@ -235,5 +225,21 @@ export default {
     seo: false,
     lazy: true,
     langDir: 'i18n/'
+  },
+  hooks: {
+    'render:route' (url, result, context) {
+      result.html = result.html.replace(/ defer>/g, ' defer async>')
+    },
+    'generate:page': page => {
+      page.html = page.html.replace(/ defer>/g, ' defer async>')
+    },
+    'content:file:beforeInsert': item => {
+      const stats = require('reading-time')(item.text)
+
+      if (item.slug === '' && item.extension === '.md') {
+      }
+
+      item.readingTime = stats
+    }
   }
 }

@@ -109,14 +109,14 @@ export default {
         `https://api.nuxtjs.dev/posts/${id}`
       )
       return { post }
-    } catch (error) {
-      context.error(error) // Show the nuxt error page with the thrown error
+    } catch (e) {
+      context.error(e) // Show the nuxt error page with the thrown error
     }
   }
 }
 ```
 
-With [ES6](https://hacks.mozilla.org/2015/05/es6-in-depth-destructuring/) you can use this syntax to descructure your context object. You can pass in the objects you want to have access to and then you can use them in the code without using the word context.
+With [ES6](https://hacks.mozilla.org/2015/05/es6-in-depth-destructuring/) you can use this syntax to destructure your context object. You can pass in the objects you want to have access to and then you can use them in the code without using the word context.
 
 ```js{}[pages/posts/_id.vue]
 export default {
@@ -127,8 +127,8 @@ export default {
       // Using the nuxtjs/http module here exposed via context.app
       const post = await $http.$get(`https://api.nuxtjs.dev/posts/${id}`)
       return { post }
-    } catch (error) {
-      error(error) // Show the nuxt error page with the thrown error
+    } catch (e) {
+      error(e) // Show the nuxt error page with the thrown error
     }
   }
 }
@@ -151,6 +151,12 @@ export default {
   }
 }
 ```
+
+<base-alert type="next">
+
+Check out the Internals Glossary book for more examples of the [redirect method](/guides/internals-glossary/context#redirect)
+
+</base-alert>
 
 <app-modal>
   <code-sandbox  :src="csb_link_context"></code-sandbox>

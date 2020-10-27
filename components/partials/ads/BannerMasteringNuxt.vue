@@ -1,8 +1,8 @@
 <template>
   <a
     href="https://masteringnuxt.com"
-    target="_blank"
     rel="noreferrer"
+    target="_blank"
     class="banner-mn h-20 fixed top-0 left-0 right-0 z-30 flex justify-between items-center px-3 md:px-5 lg:px-10"
   >
     <div class="flex-shrink-0">

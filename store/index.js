@@ -12,7 +12,7 @@ export const state = () => ({
   visibleAffix: false,
   adBlocked: false,
   focusMode: false,
-  masteringNuxtBanner: true
+  masteringNuxtBanner: false
 })
 
 export const mutations = {

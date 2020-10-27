@@ -241,7 +241,7 @@ export default {
             badges: ['ambassador']
           },
           {
-            name: 'Gift',
+            name: 'Gift Egwuenu',
             city: 'Amsterdam, The Netherlands',
             github: 'lauragift21',
             twitter: 'lauragift_',

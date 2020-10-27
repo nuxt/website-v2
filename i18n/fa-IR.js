@@ -292,7 +292,7 @@ module.exports = {
     link: 'مستندات جدید'
   },
   example: {
-    intro: 'In this example:'
+    intro: 'در این مثال:'
   },
   codeSandbox: {
     open: 'باز کردن CodeSandbox'

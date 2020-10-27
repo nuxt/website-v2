@@ -25,6 +25,7 @@
 >>>>>>> 26a70b2b (chore: add guides section (#407))
       </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
       <i-themes class="w-2/3 mx-auto lg:mx-0 lg:w-5/12 lg:-mt-8"/>
     </div>
     <section class="flex flex-wrap items-stretch -mx-4">
@@ -62,6 +63,9 @@
   </nui-container>
 =======
       <section class="flex flex-wrap items-stretch -mx-4">
+=======
+      <section class="flex flex-wrap items-stretch -mx-4 pb-8">
+>>>>>>> f2b090e2 (add more themes)
         <div v-for="theme in themes" :key="theme.title" class="w-full p-4">
           <div
             class="block sm:flex w-full h-full items-start bg-light-surface dark:bg-dark-surface rounded transition-colors duration-300 ease-linear"
@@ -150,7 +154,7 @@ export default {
       themes: [
         {
           title: 'Nuxt Argon Dashboard PRO',
-          description: 'Premium Bootstrap 4 + NuxtJS Admin Template',
+          description: 'Premium Bootstrap 4 + NuxtJS Admin Template.',
           price: '99$',
           link:
             'https://www.creative-tim.com/product/nuxt-argon-dashboard-pro?partner=120213',
@@ -164,7 +168,7 @@ export default {
         },
         {
           title: 'Nuxt Now UI Kit',
-          description: 'Premium Bootstrap Nuxt.js UI Kit',
+          description: 'Premium Bootstrap Nuxt.js UI Kit.',
           price: '89$',
           link:
             'https://www.creative-tim.com/product/nuxt-now-ui-kit-pro?partner=120213',
@@ -172,7 +176,7 @@ export default {
         },
         {
           title: 'Nuxt Black Dashboard PRO',
-          description: 'Premium Bootstrap 4 Nuxt.js Admin Template',
+          description: 'Premium Bootstrap 4 Nuxt.js Admin Template.',
           price: '79$',
           link:
             'https://www.creative-tim.com/product/nuxt-black-dashboard-pro?partner=120213',
@@ -180,10 +184,45 @@ export default {
         },
         {
           title: 'Nuxt Scutum Dashboard',
-          description: 'Professional Material Design UIkit Admin Template',
+          description: 'Professional Material Design UIkit Admin Template.',
           price: '26$',
           link: 'https://1.envato.market/scutum-nuxt',
           img: 'nuxt-scutum-dashboard'
+        },
+        {
+          title: 'Luma Nuxt',
+          description: 'A beautifully crafted user interface with Nuxt.js for modern Education Platforms.',
+          price: '27$',
+          link: 'https://1.envato.market/luma',
+          img: 'luma-nuxt'
+        },
+        {
+          title: 'Multikart',
+          description: 'Responsive Nuxtjs eCommerce Template.',
+          price: '28$',
+          link: 'https://1.envato.market/multikart',
+          img: 'multikart'
+        },
+        {
+          title: 'Sofbox',
+          description: 'Software landing page template.',
+          price: '22$',
+          link: 'https://1.envato.market/sofbox',
+          img: 'sofbox'
+        },
+        {
+          title: 'Veluxi',
+          description: 'Modern template collection to present your startup & your companies the way they truly deserve.',
+          price: '15$',
+          link: 'https://1.envato.market/veluxi',
+          img: 'veluxi'
+        },
+        {
+          title: 'Bolster',
+          description: 'Nuxt.js eCommerce Template.',
+          price: '25$',
+          link: 'https://1.envato.market/bolster',
+          img: 'bolster'
         }
       ]
     }

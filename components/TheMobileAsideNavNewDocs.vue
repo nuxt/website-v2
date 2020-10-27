@@ -2,7 +2,7 @@
   <div
     v-click-outside="clickOutsideHandler"
     class="header_mobile_aside shadow-nuxt block lg:hidden fixed left-0 z-20 w-full sm:w-1/2"
-    :class="{ 'header_mobile_aside--open': show }"
+    :class="{ 'header_mobile_aside--open': show, 'mt-20': masteringNuxtBanner }"
   >
     <div
       class="mx-auto h-full light:bg-light-surface dark:bg-dark-surface transition-colors duration-300 ease-linear"
@@ -117,6 +117,9 @@ export default {
         links[key] = this.links[key]
       })
       return links
+    },
+    masteringNuxtBanner() {
+      return this.$store.state.masteringNuxtBanner
     }
   },
   methods: {

@@ -11,7 +11,8 @@ export const state = () => ({
   filled: false,
   visibleAffix: false,
   adBlocked: false,
-  focusMode: false
+  focusMode: false,
+  masteringNuxtBanner: true
 })
 
 export const mutations = {
@@ -23,5 +24,8 @@ export const mutations = {
   },
   setAdBlocked(state, value) {
     state.adBlocked = value
+  },
+  setMasteringNuxtBanner(state, value) {
+    state.masteringNuxtBanner = value
   }
 }

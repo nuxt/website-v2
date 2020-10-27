@@ -231,6 +231,22 @@ export default {
             twitter: 'dawntraoz',
             website: 'https://www.dawntraoz.com/',
             badges: ['ambassador']
+          },
+          {
+            name: 'Tim Benniks',
+            city: 'Paris, France',
+            github: 'timbenniks',
+            twitter: 'timbenniks',
+            website: 'https://timbenniks.dev/',
+            badges: ['ambassador']
+          },
+          {
+            name: 'Gift',
+            city: 'Amsterdam, The Netherlands',
+            github: 'lauragift21',
+            twitter: 'lauragift_',
+            website: 'https://www.giftegwuenu.com/',
+            badges: ['ambassador']
           }
         ]
       }

@@ -74,7 +74,7 @@ Nuxt.js mengizinkan Anda untuk mendefinisikan berkas/modul/pustaka yang ingin An
 
 <base-alert>
 
-Seandainya Anda ingin menggunakan `sass`, pastikan Anda telah memasang paket (_packages_) `node-sass` dan `sass-loader`.
+Seandainya Anda ingin menggunakan `sass`, pastikan Anda telah memasang paket (_packages_) `sass` dan `sass-loader`.
 
 </base-alert>
 
@@ -144,7 +144,7 @@ Untuk menggunakan _pre-processors_ ini, kita perlu memasang beberapa pemuat Webp
 
 ```bash
 yarn add -D pug pug-plain-loader
-yarn add -D node-sass sass-loader
+yarn add -D sass sass-loader fibers
 ```
 
   </code-block>
@@ -152,7 +152,7 @@ yarn add -D node-sass sass-loader
 
 ```bash
 npm install --save-dev pug pug-plain-loader
-npm install --save-dev node-sass sass-loader
+npm install --save-dev sass sass-loader fibers
 ```
 
   </code-block>

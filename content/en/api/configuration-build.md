@@ -100,7 +100,7 @@ export default {
           [
             preset,
             {
-              buildTarget: isServer ? 'server' : 'client',
+              targets: isServer ? ... :  ...,
               ...options
             }
           ],
@@ -402,7 +402,7 @@ Configuration for the [html-minifier](https://github.com/kangax/html-minifier) p
 
 ### loaders.sass and loaders.scss
 
-> See the [Node Sass documentation](https://github.com/sass/node-sass/blob/master/README.md#options) for all available Sass options. Note: `loaders.sass` is for [Sass Indented Syntax](http://sass-lang.com/documentation/file.INDENTED_SYNTAX.html)
+> See the [Sass documentation](https://github.com/sass/dart-sass#javascript-api) for all available Sass options. Note: `loaders.sass` is for [Sass Indented Syntax](http://sass-lang.com/documentation/file.INDENTED_SYNTAX.html)
 
 ### loaders.vueStyle
 
@@ -646,7 +646,7 @@ This option is automatically set based on `mode` value if not provided.
 
 This is useful when you need to inject some variables and mixins in your pages without having to import them every time.
 
-Nuxt.js uses https://github.com/yenshih/style-resources-loader to achieve this behaviour.
+Nuxt.js uses https://github.com/yenshih/style-resources-loader to achieve this behavior.
 
 You need to specify the patterns/path you want to include for the given pre-processors: `less`, `sass`, `scss` or `stylus`
 

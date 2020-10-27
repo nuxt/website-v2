@@ -331,7 +331,7 @@ export default {
 
 ### loaders.sass and loaders.scss
 
-> 查看 [Node Sass 文档](https://github.com/sass/node-sass/blob/master/README.md#options) 来获取更多配置信息。 Note: `loaders.sass` is for [Sass Indented Syntax](http://sass-lang.com/documentation/file.INDENTED_SYNTAX.html)
+> 查看 [Sass 文档](https://github.com/sass/dart-sass#javascript-api) 来获取更多配置信息。 Note: `loaders.sass` is for [Sass Indented Syntax](http://sass-lang.com/documentation/file.INDENTED_SYNTAX.html)
 
 > 注意：`loaders.sass`用于[Sass 缩进](http://sass-lang.com/documentation/file.INDENTED_SYNTAX.html)
 
@@ -559,7 +559,7 @@ $ yarn add @nuxtjs/style-resources
 
 根据需要安装：
 
-- SASS: `$ yarn add sass-loader node-sass`
+- SASS: `$ yarn add sass sass-loader fibers`
 - LESS: `$ yarn add less-loader less`
 - Stylus: `$ yarn add stylus-loader stylus`
 

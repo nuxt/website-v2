@@ -106,7 +106,7 @@ export default {
 
 <base-alert type="info">
 
-Jika Anda ingin menggunakan `sass` pastikan Anda telah memasang _package_ untuk `node-sass` dan `sass-loader`.
+Jika Anda ingin menggunakan `sass` pastikan Anda telah memasang _package_ untuk `sass` dan `sass-loader`.
 
 </base-alert>
 
@@ -114,14 +114,14 @@ Jika Anda ingin menggunakan `sass` pastikan Anda telah memasang _package_ untuk 
   <code-block label="Yarn" active>
 
 ```bash
-yarn add -D node-sass sass-loader
+yarn add -D sass sass-loader fibers
 ```
 
   </code-block>
   <code-block label="NPM">
 
 ```bash
-npm install --save-dev node-sass sass-loader
+npm install --save-dev sass sass-loader fibers
 ```
 
   </code-block>

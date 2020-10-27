@@ -27,7 +27,7 @@ questions:
       - true
       - false
     correctAnswer: true
-  - question: You can configure the behaviour of the static directory in the nuxt.config.js
+  - question: You can configure the behavior of the static directory in the nuxt.config.js
     answers:
       - true
       - false
@@ -64,7 +64,7 @@ In your code, you can then reference these files relative to the root (`/`):
 
 ## Static Directory Config
 
-Should you need to you can configure the `static/` directory behaviour in the `nuxt.config.js` file.
+Should you need to you can configure the `static/` directory behavior in the `nuxt.config.js` file.
 
 ### Static asset Prefix
 

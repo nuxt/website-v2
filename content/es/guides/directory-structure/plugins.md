@@ -136,6 +136,34 @@ export default {
 </script>
 ```
 
+Otra manera de usar `axios` sin el modulo es importando `axios` directamente en la etiqueta `<script>`.
+
+```js{}[pages/index.vue]
+<script>
+import axios from 'axios'
+
+export default {
+	async asyncData ({ params }) {
+	  const { data: post }  = await axios.get(`https://api.nuxtjs.dev/posts/${params.id}`)
+	  return { post }
+	}
+}
+</script>
+```
+
+<base-alert type="info">
+
+Si obtienes un error de _Cannot use import statement outside a module_, usted debe agregar tu paquete en la opcion `build` > `transpile` en `nuxt.config.js` para que el loader de webpack haga tu plugin disponible.
+
+</base-alert>
+
+```js{}[nuxt.config.js]
+build: {
+  // You can extend webpack config here
+  transpile: ['npm-package-name'],
+},
+```
+
 <app-modal>
   <code-sandbox :src="csb_link_plugins_external"></code-sandbox>
 </app-modal>

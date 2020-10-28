@@ -67,7 +67,7 @@ export default {
 }
 ```
 
-No es necesario colocar la extensión para los archivos CSS/SCSS/Postcss/Less/Stylus/... enumerados en el arreglo css en el archivo `nuxt.config`.
+No es necesario colocar la extensión para los archivos CSS, SCSS, Postcss, Less, Stylus, ... enumerados en el arreglo css en el archivo `nuxt.config`.
 
 ```js{}[nuxt.config.js]
 export default {

@@ -65,7 +65,7 @@ position: 22
 <script>
   export default {
     async fetch({ store, params }) {
-      await store.dispatch('GET_STARS')
+      await store.dispatch('SET_STARS')
     }
   }
 </script>
@@ -76,7 +76,7 @@ position: 22
 ```js
 // ...
 export const actions = {
-  async GET_STARS({ commit }) {
+  async SET_STARS({ commit }) {
     const { data } = await axios.get('http://my-api/stars')
     commit('SET_STARS', data)
   }

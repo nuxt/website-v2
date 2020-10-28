@@ -13,10 +13,10 @@
     </div>
     <div class="flex items-center md:pl-12 md:pr-10 lg:p-0">
       <div
-        class="text-white uppercase font-medium text-sm text-center md:text-left md:text-xl"
+        class="ml-3 md:ml-0 text-white uppercase font-medium text-sm text-left md:text-xl"
       >
         <span> Learn Nuxt.js </span>
-        <span class="mx-3 lg:mx-5"> &bull; </span>
+        <span class="mx-2 md:mx-3 lg:mx-5"> &bull; </span>
         <span> Advanced Course </span>
         <span class="hidden mx-4 lg:inline"> &bull; </span>
         <span>
@@ -25,7 +25,7 @@
       </div>
       <div class="hidden flex-shrink-0 md:block">
         <div
-          class="banner-mn-button flex items-center px-4 py-3 rounded-lg ml-10"
+          class="banner-mn-button flex items-center px-4 py-2 rounded-lg ml-10"
         >
           <span class="text-white font-bold text-xl mr-2 whitespace-no-wrap">
             SIGN UP

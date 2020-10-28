@@ -109,8 +109,8 @@ export default {
         `https://api.nuxtjs.dev/posts/${id}`
       )
       return { post }
-    } catch (error) {
-      context.error(error) // Tampilkan halaman nuxt error dengan kesalahan yang dilemparkan
+    } catch (e) {
+      context.error(e) // Tampilkan halaman nuxt error dengan kesalahan yang dilemparkan
     }
   }
 }
@@ -127,8 +127,8 @@ export default {
       // Menggunakan modul nuxtjs/http di sini diekspos melalui context.app
       const post = await $http.$get(`https://api.nuxtjs.dev/posts/${id}`)
       return { post }
-    } catch (error) {
-      error(error) // Tampilkan halaman nuxt error dengan kesalahan yang dilemparkan
+    } catch (e) {
+      error(e) // Tampilkan halaman nuxt error dengan kesalahan yang dilemparkan
     }
   }
 }
@@ -223,6 +223,7 @@ export default {
   }
 }
 ```
+
 Baca lebih lanjut di bab fitur loading yang sesuai
 
 ## Helper onNuxtReady

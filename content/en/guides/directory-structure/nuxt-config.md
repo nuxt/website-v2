@@ -161,6 +161,12 @@ Inside your templates you can access your runtimeConfigs directly using `$config
 </template>
 ```
 
+<base-alert type="warn">
+
+You can expose server/private tokens if using `$config` in fetch/asyncData or directly inside your template.
+
+</base-alert>
+
 <base-alert type="next">
 
 See more on the [runtimeConfig](/guides/configuration-glossary/configuration-runtime-config)

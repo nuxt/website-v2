@@ -109,8 +109,8 @@ export default {
         `https://api.nuxtjs.dev/posts/${id}`
       )
       return { post }
-    } catch (error) {
-      context.error(error) // Mostra a página de erro do nuxt com o erro lançado
+    } catch (e) {
+      context.error(e) // Mostra a página de erro do nuxt com o erro lançado
     }
   }
 }
@@ -127,8 +127,8 @@ export default {
       // Utilizando o módulo nuxtjs/http que foi exposto via context.app
       const post = await $http.$get(`https://api.nuxtjs.dev/posts/${id}`)
       return { post }
-    } catch (error) {
-      error(error) // Mostra a página de erro do nuxt com o erro lançado
+    } catch (e) {
+      error(e) // Mostra a página de erro do nuxt com o erro lançado
     }
   }
 }

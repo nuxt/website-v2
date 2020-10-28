@@ -1,8 +1,13 @@
 <template>
   <div>
-    <TheHeader />
+    <BannerMasteringNuxt v-if="masteringNuxtBanner" />
+    <TheHeader
+      :class="masteringNuxtBanner ? 'top-20' : 'top-0'"
+      v-bind="{ masteringNuxtBanner }"
+    />
     <main
-      class="lg:block relative pt-16 lg:pt-24 bg-light-elevatedSurface dark:bg-dark-elevatedSurface transition-colors duration-300 ease-linear"
+      class="lg:block relative bg-light-elevatedSurface dark:bg-dark-elevatedSurface transition-colors duration-300 ease-linear"
+      :class="masteringNuxtBanner ? 'pt-36 lg:pt-44' : 'pt-16 lg:pt-24'"
     >
       <Nuxt />
     </main>
@@ -16,6 +21,17 @@
 
 <script>
 export default {
+  computed: {
+    masteringNuxtBanner() {
+      return this.$store.state.masteringNuxtBanner
+    }
+  },
+  mounted() {
+    this.$store.commit(
+      'setMasteringNuxtBanner',
+      !localStorage.getItem('MN_BANNER_CLOSED')
+    )
+  },
   head() {
     const i18nSeo = this.$nuxtI18nSeo()
     const { path } = this.$route

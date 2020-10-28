@@ -1,6 +1,6 @@
 <template>
   <header
-    class="fixed top-0 left-0 right-0 z-30 bg-light-elevatedSurface dark:bg-dark-elevatedSurface border-b border-light-border dark:border-dark-border lg:border-0 h-16 lg:h-24 transition-colors duration-300 ease-linear"
+    class="fixed left-0 right-0 z-30 bg-light-elevatedSurface dark:bg-dark-elevatedSurface border-b border-light-border dark:border-dark-border lg:border-0 transition-colors duration-300 ease-linear h-16 lg:h-24"
   >
     <div
       class="container relative mx-auto px-4 flex items-center lg:py-6 h-full"
@@ -12,8 +12,8 @@
         @click.native.right.stop.prevent="$router.push('/design')"
       >
         <h1 class="m-0 h-0 w-0 overflow-hidden">
-          NUXTJS
-        </h1>
+NUXTJS
+</h1>
         <NuxtLogo
           class="h-6 lg:h-8 text-light-onSurfacePrimary dark:text-dark-onSurfacePrimary transition-colors duration-300 ease-linear"
         />
@@ -89,6 +89,11 @@ import NuxtLogo from '~/assets/images/logo.svg?inline'
 export default {
   components: {
     NuxtLogo
+  },
+  computed: {
+    masteringNuxtBanner() {
+      return this.$store.state.masteringNuxtBanner
+    }
   }
 }
 </script>

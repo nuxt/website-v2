@@ -3,7 +3,8 @@
     class="opacity-transition block bg-gray-100 mt-8 -mx-4 lg:bg-transparent lg:mt-0 lg:mx-0 lg:inset-0 z-90 lg:mb-0 lg:static lg:h-auto lg:overflow-y-visible lg:pt-0 lg:w-1/4 lg:block"
   >
     <div
-      class="h-full overflow-y-auto scrolling-touch text-center lg:text-left lg:h-auto lg:block lg:relative lg:sticky lg:top-24"
+      class="h-full overflow-y-auto scrolling-touch text-center lg:text-left lg:h-auto lg:block lg:relative lg:sticky"
+      :class="masteringNuxtBanner ? 'lg:top-44' : 'lg:top-24'"
     >
       <nav
         class="pt-8 lg:overflow-y-auto lg:block lg:pl-0 lg:pr-8 sticky?lg:max-h-(screen-24)"
@@ -96,6 +97,9 @@ export default {
         links[key] = this.links[key]
       })
       return links
+    },
+    masteringNuxtBanner() {
+      return this.$store.state.masteringNuxtBanner
     }
   },
   methods: {
@@ -108,5 +112,3 @@ export default {
   }
 }
 </script>
-
-<style lang="scss" scoped></style>

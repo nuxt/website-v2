@@ -55,7 +55,9 @@ module.exports = {
         'inset-nuxt': 'inset 0px 0px 8px rgba(0, 0, 0, 0.101562)'
       },
       inset: {
-        24: '6rem'
+        20: '5rem',
+        24: '6rem',
+        44: '11rem'
       },
       maxWidth: {
         '1/4': '25%',
@@ -67,6 +69,10 @@ module.exports = {
         'ease-out-material': 'cubic-bezier(0, 0, 0.2, 1)',
         'ease-in-out-material': 'cubic-bezier(0.4, 0, 0.2, 1)',
         'ease-in-out-material-sharp': 'cubic-bezier(0.4, 0, 0.6, 1)'
+      },
+      spacing: {
+        36: '9rem',
+        44: '11rem'
       }
     }
   },

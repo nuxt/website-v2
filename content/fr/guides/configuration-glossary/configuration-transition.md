@@ -43,7 +43,7 @@ La clé de transition dans `nuxt.config.js` est utilisée pour définir les prop
 
 - Type: `String` ou `Object`
 
-> Utilisé pour définir les propriétés par défaut des transitions de la mise en page. La valeur fournie dans l'option `name` est configurée pour fonctionner avec le nom fourni dans `layout` de votre répertoire `layouts`.
+> Utilisé pour définir les propriétés par défaut des transitions de la mise en page. La valeur fournie dans l'option `name` est configurée pour fonctionner avec le nom fourni dans `layout` de notre répertoire `layouts`.
 
 Par défaut :
 

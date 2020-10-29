@@ -237,7 +237,7 @@ Pour ces deux loaders, la configuration par défaut est la suivante:
 
 Ce qui veut dire que n'importe quel fichier en dessous de 1 Ko sera mis sur une seule ligne de data URL encodé en base-64. Autrement, l'image/police de caractères sera copiée dans le répertoire correspondant (à l'intérieur du répertoire `.nuxt`) avec un nom comprenant le hash d'une version pour une meilleure mise en cache.
 
-Lorsque on lancera l'application `nuxt` avec un template tel que `pages/index.vue`:
+Lorsqu'on lancera l'application `nuxt` avec un template tel que `pages/index.vue`:
 
 ```html{}[pages/index.vue]
 <template>

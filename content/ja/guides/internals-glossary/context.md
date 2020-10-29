@@ -1,18 +1,18 @@
 ---
-title: 'The Context'
-description: The `context` provides additional objects/params from Nuxt not traditionally available to Vue components. The `context` is available in special nuxt lifecycle areas like `asyncData`, `plugins`, `middlewares`, `modules`, and `store/nuxtServerInit`.
-menu: The Context
+title: 'コンテキスト'
+description: context は、Nuxt から Vue コンポーネントに追加のオブジェクト/パラメータを提供し、asyncData, fetch, plugins, middleware, nuxtServerInit のような特別な Nuxt ライフサイクル内で使用できます。
+menu: コンテキスト
 category: internals-glossary
 position: 1
 ---
 
-The `context` provides additional objects/params from Nuxt to Vue components and is available in special nuxt lifecycle areas like [`asyncData`](/api), [`fetch`](/guides/features/data-fetching), [`plugins`](/guides/directory-structure/plugins), [`middleware`](/guides/directory-structure/middleware#router-middleware) and [`nuxtServerInit`](/guides/directory-structure/store#the-nuxtserverinit-action).
+`context` は、Nuxt から Vue コンポーネントに追加のオブジェクト/パラメータを提供し、[`asyncData`](/api), [`fetch`](/guides/features/data-fetching), [`plugins`](/guides/directory-structure/plugins), [`middleware`](/guides/directory-structure/middleware#router-middleware), [`nuxtServerInit`](/guides/directory-structure/store#the-nuxtserverinit-action) のような特別な Nuxt ライフサイクル内で使用できます。
 
-> _Note: "The Context" we refer to here is not to be confused with the `context` object available in [`Vuex Actions`](https://vuex.vuejs.org/guide/actions.html). The two are unrelated._
+> 注: ここで言う「コンテキスト」と、 [`Vuex のアクション`](https://vuex.vuejs.org/ja/guide/actions.html) の中で使用できる `context` オブジェクトを混同しないでください。2 つは無関係です。
 
 ```js
 function (context) {
-  // Universal keys
+  // ユニバーサルなキー
   const {
     app,
     store,
@@ -26,76 +26,76 @@ function (context) {
     error,
     $config
   } = context
-  // Server-side
+  // サーバーサイド
   if (process.server) {
     const { req, res, beforeNuxtRender } = context
   }
-  // Client-side
+  // クライアントサイド
   if (process.client) {
     const { from, nuxtState } = context
   }
 }
 ```
 
-## Universal keys
+## ユニバーサルなキー
 
-These keys are available both on client-side and server-side.
+これらのキーは、クライアントサイドとサーバーサイドの両方で使用できます。
 
 ### app
 
 `app` (_NuxtAppOptions_)
 
-The root Vue instance options that includes all your plugins. For example, when using `i18n`, you can get access to `$i18n` through `context.app.i18n`.
+すべてのプラグインを含むルート Vue インスタンスのオプション。たとえば `i18n` を使用している場合は `context.app.i18n` で `$i18n` にアクセスできます。
 
 ### store
 
-`store` ([_Vuex Store_](https://vuex.vuejs.org/api/#vuex-store-instance-properties))
+`store` ([_Vuex Store_](https://vuex.vuejs.org/ja/api/#vuex-store-%E3%82%A4%E3%83%B3%E3%82%B9%E3%82%BF%E3%83%B3%E3%82%B9%E3%83%97%E3%83%AD%E3%83%91%E3%83%86%E3%82%A3))
 
-Vuex Store instance. **Available only if the [vuex store](/guides/directory-structure/store) is set**.
+Vuex の Store インスタンス。**[Vuex ストア](/guide/vuex-store) が設定されている場合のみ使用できます**。
 
 ### route
 
-`route` ([_Vue Router Route_](https://router.vuejs.org/api/#the-route-object))
+`route` ([_Vue Router Route_](https://router.vuejs.org/ja/api/#%E3%83%AB%E3%83%BC%E3%83%88%E3%82%AA%E3%83%96%E3%82%B8%E3%82%A7%E3%82%AF%E3%83%88))
 
-Vue Router route instance.
+Vue Router の route インスタンス。
 
 ### params
 
 `params` (_Object_)
 
-Alias of `route.params`.
+`route.params` のエイリアス。
 
 ### query
 
 `query` (_Object_)
 
-Alias of `route.query`.
+`route.query` のエイリアス。
 
 ### env
 
 `env` (_Object_)
 
-Environment variables set in `nuxt.config.js`, see [env api](/guides/configuration-glossary/configuration-env).
+`nuxt.config.js` で設定された環境変数。[env api](/guides/configuration-glossary/configuration-env) を参照してください。
 
 ### isDev
 
 `isDev` (_Boolean_)
 
-Boolean to let you know if you're in dev mode, can be useful for caching some data in production.
+開発モードであるかどうかを示すブール値で、本番環境で一部のデータをキャッシュするのに役立ちます。
 
 ### isHMR
 
 `isHMR` (_Boolean_)
 
-Boolean to let you know if the method/middleware is called from webpack hot module replacement (_true only on client-side in dev mode_).
+メソッド/ミドルウェアが webpack の hot module replacement から呼び出されたかどうかを示すブール値（開発モードのクライアントサイドでのみ true）。
 
 ### redirect
 
 `redirect` (_Function_)
 
-Use this method to redirect the user to another route, the status code is used on the server-side, defaults to `302`. `redirect([status,] path [, query])`.
+ユーザーを別のルートにリダイレクトするには、このメソッドを使用してください。ステータスコードはサーバーサイドで使用され、デフォルトは `302` です。 `redirect([status,] path [, query])`。
 
-Examples:
+例:
 
 ```js{}[]
 redirect(302, '/login')
@@ -103,14 +103,14 @@ redirect({ name: 'slug', params: { slug: mySlug } })
 redirect('https://vuejs.org')
 ```
 
-See the [Vue Router docs](https://github.com/vuejs/vue-router/blob/64d60c01920405f0b93e00a401c73868b08ee6e5/types/router.d.ts#L161-L169) more info on the Location property.
+Location プロパティの詳細については、[Vue Router のドキュメント](https://github.com/vuejs/vue-router/blob/64d60c01920405f0b93e00a401c73868b08ee6e5/types/router.d.ts#L161-L169)を参照してください。
 
 
 <base-alert type="info">
 
-It's not possible to use `redirect` or `error` in [client-side Nuxt plugin](/guides/directory-structure/plugins#client-or-server-side-only) due to hydration errors (client content would be different from what it'd expect from the server).
+ハイドレーションエラー（クライアントの内容が、サーバーが返すものと異なってしまう）のため、[クライアントサイド限定の Nuxt プラグイン](/guides/directory-structure/plugins#client-or-server-side-only) の中では `redirect` や `error` を使用することはできません。
 
-A valid workaround would be using `window.onNuxtReady(() => { window.$nuxt.$router.push('/your-route') })`
+有効な回避策は、 `window.onNuxtReady(() => { window.$nuxt.$router.push('/your-route') })` を使用することです。
 
 </base-alert>
 
@@ -118,48 +118,49 @@ A valid workaround would be using `window.onNuxtReady(() => { window.$nuxt.$rout
 
 `error` (_Function_)
 
-Use this method to show the error page: `error(params)`. The `params` should have the properties `statusCode` and `message`.
+エラーページを表示するには、このメソッドを使用してください。 例: `error(params)`。 `params` には `statusCode` と `message` プロパティが必要です。
 
 ### `$config`
 
 `$config` (_Object_)
 
-The actual [runtime config](/guide/runtime-config).
+実際の [ランタイム設定](/guide/runtime-config)。
 
-## Server-side keys
+## サーバーサイドのキー
 
-These keys are available only on the server-side.
+これらのキーはサーバーサイドでのみ使用できます。
 
 ### req
 
 `req` ([_http.Request_](https://nodejs.org/api/http.html#http_class_http_incomingmessage))
 
-Request from the Node.js server. If Nuxt is used as a middleware, the request object might be different depending on the framework you're using.<br>**Not available via `nuxt generate`**.
+Node.js サーバーからのリクエスト。Nuxt がミドルウェアとして使われる場合、リクエストオブジェクトは使用しているフレームワークによって異なる可能性があります。<br>**`nuxt generate` では使用できません**。
 
 ### Res
 
 `res` ([_http.Response_](https://nodejs.org/api/http.html#http_class_http_serverresponse))
 
-Response from the Node.js server. If Nuxt is used as a middleware, the res object might be different depending on the framework you're using.<br>**Not available via `nuxt generate`**.
+Node.js サーバーからのレスポンス。Nuxt がミドルウェアとして使われる場合、レスポンスオブジェクトは使用しているフレームワークによって異なる可能性があります。<br>**`nuxt generate` では使用できません**。
 
 ### beforeNuxtRender
 
 `beforeNuxtRender(fn)` (_Function_)
 
-Use this method to update `__NUXT__` variable rendered on client-side, the `fn` (can be asynchronous) is called with `{ Components, nuxtState }`, see [example](https://github.com/nuxt/nuxt.js/blob/cf6b0df45f678c5ac35535d49710c606ab34787d/test/fixtures/basic/pages/special-state.vue).
+クライアントサイドでレンダリングされた `__NUXT__` 変数を更新するには、このメソッドを使用してください。`fn`（非同期にもできます）は `{ Components, nuxtState }` で呼び出されます。[例](https://github.com/nuxt/nuxt.js/blob/cf6b0df45f678c5ac35535d49710c606ab34787d/test/fixtures/basic/pages/special-state.vue) を参照してください。
 
-## Client-side keys
+## クライアントサイドのキー
 
-These keys are available only on client-side.
+これらのキーはクライアントサイドでのみ使用できます。
+
 
 ### from
 
-`from` ([_Vue Router Route_](https://router.vuejs.org/api/#the-route-object))
+`from` ([_Vue Router Route_](https://router.vuejs.org/ja/api/#%E3%83%AB%E3%83%BC%E3%83%88%E3%82%AA%E3%83%96%E3%82%B8%E3%82%A7%E3%82%AF%E3%83%88))
 
-The route navigated from.
+遷移元の route。
 
 ### nuxtState
 
 `nuxtState` _(Object)_
 
-Nuxt state, useful for plugins which uses `beforeNuxtRender` to get the nuxt state on client-side before hydration. **Available only in `universal` mode**.
+Nuxt の状態。ハイドレーション前のクライアントサイドで Nuxt の状態を取得するために `beforeNuxtRender` を使うプラグインに便利です。**`universal` モードでのみ使用できます**。

@@ -192,7 +192,7 @@ export default {
 
 La méthode des modules fonctionne également pour les définitions de haut niveau sans implémenter un sous-répertoire dans le répertoire `store`.
 
-Exemple pour l'état `state`: nous créons un fichier `store/state.js` et nous ajoutons ce qui suit.
+Exemple pour l'état `state` : nous créons un fichier `store/state.js` et nous ajoutons ce qui suit.
 
 ```js
 export default () => ({

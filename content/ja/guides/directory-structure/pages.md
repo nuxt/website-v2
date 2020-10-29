@@ -1,6 +1,6 @@
 ---
 title: pages
-description: The `pages` directory contains your Application Views and Routes. Nuxt.js reads all the `.vue` files inside this directory and automatically creates the  router configuration for you.
+description: この `pages` ディレクトリには、アプリケーションのビューとルートが格納されています。 Nuxt.js はこのディレクトリ内のすべての `.vue` ファイルを読み込んで、ルーターの設定を自動的に作成します。
 position: 10
 category: directory-structure
 csb_link: https://codesandbox.io/embed/github/nuxt-academy/guides-examples/tree/master/04_directory_structure/11_pages?fontsize=14&hidenavigation=1&theme=dark
@@ -64,15 +64,15 @@ questions:
     correctAnswer: true
 ---
 
-The `pages` directory contains your application views and routes. Nuxt.js reads all the `.vue` files inside this directory and automatically creates the router configuration for you.
+`pages` ディレクトリには、アプリケーションのビューとルートが格納されています。Nuxt.js はこのディレクトリ内のすべての `.vue` ファイルを読み込んで、ルーターの設定を自動的に作成します。
 
 <base-alert type="info">
 
-You can also create routes with .js files and .ts files
+.js ファイルや .ts ファイルを使ってルートを作成できます。
 
 </base-alert>
 
-Every Page component is a Vue component but Nuxt.js adds special attributes and functions to make the development of your universal application as easy as possible.
+すべてのページコンポーネントは Vue コンポーネントですが、Nuxt.js は特殊な属性や機能を追加し、ユニバーサルアプリケーションの開発をできるだけ簡単にします。
 
 ```html{}[pages
 <template>
@@ -92,11 +92,11 @@ Every Page component is a Vue component but Nuxt.js adds special attributes and 
 </style>
 ```
 
-## Dynamic Pages
+## 動的なページ
 
-Dynamic pages can be created when you don't know the name of the page due to it coming from an API or you don't want to have to create the same page over and over again. To create a dynamic page you need to add an underscore before the .vue file name or before the the name of the directory, if you want the directory to be dynamic. You can name the file or directory anything you want but you must prefix it with an underscore.
+動的なページは、 API からの出力でページ名がわからない場合や、同じページを何度も作成したくないときに作成します。動的なページを作成するには、 .vue ファイル名の前にアンダースコアを追加します。ディレクトリを動的にしたい場合はディレクトリ名の前にアンダースコアを追加します。ファイル名やディレクトリ名は自由に指定できますが、名前の前にアンダースコアを付けてる必要があります。
 
-If you've defined a file named `_slug.vue` in your pages folder, you can access the value using the context with params.slug
+例えば、ページフォルダ内に `_slug.vue` というファイルがある場合、 `context` の `params.slug` で値にアクセスできます。
 
 ```html{}[pages/_slug.vue]
 <template>
@@ -106,14 +106,14 @@ If you've defined a file named `_slug.vue` in your pages folder, you can access 
 <script>
   export default {
     async asyncData({ params }) {
-      const slug = params.slug // When calling /abc the slug will be "abc"
+      const slug = params.slug // "/abc" パスにアクセスすると、slug は "abc" になります。
       return { slug }
     }
   }
 </script>
 ```
 
-If you've defined a file named \_slug.vue inside a folder called \_book you can access the value using the context with params.slug and params.book
+`\_book` フォルダー内に `\_slug.vue` ファイルを作成した場合は、`context` の `params.slug` および `params.book` で値にアクセスできます。
 
 ```html{}[pages/_book/_slug.vue]
 <template>
@@ -131,11 +131,12 @@ If you've defined a file named \_slug.vue inside a folder called \_book you can 
 </script>
 ```
 
-## Properties
+## プロパティ
 
-### asyncData
+### asyncData メソッド
 
-AsyncData is called every time before loading the component. It can be asynchronous and receives the context as an argument. The returned object will be merged with your data object.
+`asyncData` はコンポーネントをロードする前に毎回呼び出されます。これは非同期にすることができ、引数として `context` を受け取ります。
+asyncData の結果は data とマージされます。
 
 ```js{}[pages/index.vue]
 export default {
@@ -147,13 +148,13 @@ export default {
 
 <base-alert type="next">
 
-See more on how asyncData works in our [Data Fetching](/guides/features/data-fetching#async-data) chapter
+`asyncData` の詳細は [データの取得](/guides/features/data-fetching#async-data) ページを参照してください。
 
 </base-alert>
 
-### fetch
+### fetch メソッド
 
-Every time you need to get asynchronous data you can use fetch. Fetch is called on server-side when rendering the route, and on client-side when navigating.
+非同期データの取得には `fetch` が使えます。`fetch` はサーバーサイドでルートをレンダリングするときに呼び出され、クライアントサイドでは遷移するときに呼び出されます。
 
 ```html
 <script>
@@ -174,31 +175,31 @@ Every time you need to get asynchronous data you can use fetch. Fetch is called 
 
 <base-alert type="next">
 
-See more on how fetch works in our [Data Fetching](/guides/features/data-fetching) chapter
+`fetch` の詳細は [データの取得](/guides/features/data-fetching) ページを参照してください。
 
 </base-alert>
 
-### head
+### head メソッド
 
-Set specific <meta> tags for the current page. Nuxt.js uses `vue-meta` to update the document head and meta attributes of your application.
+現在のページの特定の `<meta>` タグを設定します。Nuxt.js は `vue-meta` を使用してアプリケーションのドキュメントヘッドとメタ属性を更新します。
 
 ```js{}[pages/index.vue]
 export default {
   head() {
-    // Set Meta Tags for this Page
+    // このページの meta タグを設定する
   }
 }
 ```
 
 <base-alert type="next">
 
-See more in our [Meta Tags and SEO](/guides/features/meta-tags-seo) chapter
+詳細は [メタタグと SEO](/guides/features/meta-tags-seo) ページを参照してください。
 
 </base-alert>
 
-### layout
+### layout プロパティ
 
-Specify a layout defined in the layouts directory.
+layouts ディレクトリで定義されているレイアウトを指定します。
 
 ```js{}[pages/index.vue]
 export default {
@@ -208,13 +209,13 @@ export default {
 
 <base-alert type="next">
 
-See more on layouts in our [Views](/guides/concepts/views#layouts) chapter.
+レイアウトの詳細は [レイアウトのドキュメント](/guides/concepts/views#layouts) を参照してください。
 
 </base-alert>
 
-### loading
+### loading プロパティ
 
-If set to false, prevents a page from automatically calling `this.$nuxt.$loading.finish()` as you enter it and `this.$nuxt.$loading.start()` as you leave it, allowing you to manually control the behavior, as [this example](https://nuxtjs.org/examples/custom-page-loading) shows.
+`loading` を false に設定すると、ページに入るときに `this.$nuxt.$loading.finish()` が自動的に呼び出されるのを防ぎ、ページを離れるときに `this.$nuxt.$loading.start()` が自動的に呼び出されるのを防ぎます。
 
 ```js{}[pages/index.vue]
 export default {
@@ -224,19 +225,19 @@ export default {
 
 <base-alert type="info">
 
-Only applies if loading is also set in nuxt.config.js.
+nuxt.config.js で`loading`が設定されている場合のみ適用されます。
 
 </base-alert>
 
 <base-alert type="next">
 
-See more in our [Loading](/guides/features/loading) chapter.
+詳細は [ローディング](/guides/features/loading) ページを参照してください。
 
 </base-alert>
 
-### transition
+### transition プロパティ
 
-Defines a specific transition for the page.
+このページにカスタムトランジションを設定します。
 
 ```js{}[pages/index.vue]
 export default {
@@ -246,13 +247,15 @@ export default {
 
 <base-alert type="next">
 
-See more on transitions in our [Transitions](/guides/features/transitions) chapter
+詳細は [トランジション](/guides/features/transitions) ページを参照してください。
 
 </base-alert>
 
-### scrollToTop
+### scrollToTop プロパティ
 
-The `scrollToTop` property lets you tell Nuxt.js to scroll to the top before rendering the page. By default, Nuxt.js scrolls to the top when you go to another page, but with child routes, Nuxt.js keeps the scroll position. If you want to tell Nuxt.js to scroll to the top when rendering your child route, set `scrollToTop` to `true`
+`scrollToTop` は、ページをレンダリングする前に Nuxt.js に一番上にスクロールするように指示できます。
+デフォルトでは別ページに移動すると一番上にスクロールしますが、子ルートの場合はスクロール位置を維持します。
+子ルートをレンダリングする際に Nuxt.js に一番上までスクロールするように指示したい場合は、`scrollToTop` を `true` に設定します。
 
 ```js{}[pages/index.vue]
 export default {
@@ -260,13 +263,13 @@ export default {
 }
 ```
 
-Conversely, you can manually set `scrollToTop` to `false` on parent routes as well.
+逆に、親ルートでも `scrollToTop` を手動で `false` に設定することができます。
 
-If you want to overwrite the default scroll behavior of Nuxt.js, take a look at the [scrollBehavior option](/guides/configuration-glossary/configuration-router#scrollbehavior).
+スクロールについて Nuxt.js のデフォルトの挙動を上書きしたいときは、 [ scrollBehavior オプション](/guides/configuration-glossary/configuration-router#scrollbehavior) を参照してください。
 
-### middleware
+### middleware プロパティ
 
-Defines middleware for this page. The middleware will be called before rendering the page.
+このページのためのミドルウェアを定義します。このミドルウェアは、ページをレンダリングする前に呼び出されます。
 
 ```js{}[pages/index.vue]
 export default {
@@ -276,13 +279,13 @@ export default {
 
 <base-alert type="next">
 
-See more on middleware in our [Middleware](/guides/directory-structure/middleware) chapter
+詳細は [ミドルウェア](/guides/directory-structure/middleware) を参照してください。
 
 </base-alert>
 
-### The watchQuery Property
+### watchQuery プロパティ
 
-Use the `watchQuery` key to set up a watcher for query strings. If the defined strings change, all component methods (asyncData, fetch, validate, layout, ...) will be called. Watching is disabled by default to improve performance.
+`watchQuery` キーを設定し、監視するクエリ文字列を設定します。定義した文字列が変更されると、すべてのコンポーネントメソッド (asyncData, fetch, validate, layout, ...) が呼ばれます。パフォーマンス向上のため、監視はデフォルトで無効になっています。
 
 ```js{}[pages/index.vue]
 export default {
@@ -292,7 +295,7 @@ export default {
 
 <base-alert type="info">
 
-If you want to set up a watcher for all query strings, set `watchQuery` to `true`.
+すべてのクエリ文字列に対して監視を設定したい場合は、watchQuery：true を設定してください。
 
 </base-alert>
 
@@ -302,13 +305,13 @@ export default {
 }
 ```
 
-You can also use the function `watchQuery(newQuery, oldQuery)` to have more refined watchers.
+より洗練された監視のために、`watchQuery(newQuery, oldQuery)` 関数を使用することもできます。
 
 ```js{}[pages/index.vue]
 export default {
   watchQuery(newQuery, oldQuery) {
-    // Only execute component methods if the old query string contained `bar`
-    // and the new query string contains `foo`
+    // 古いクエリ文字列に `bar` が含まれ、新しいクエリ文字列に `foo` が含まれている場合のみ、
+    // コンポーネントメソッドを実行します
     return newQuery.foo && oldQuery.bar
   }
 }
@@ -316,7 +319,7 @@ export default {
 
 <base-alert type="next">
 
-See more on the watch query property in our [Data Fetching](/guides/features/data-fetching) chapter
+詳細は [データの取得](/guides/features/data-fetching) ページを参照してください。
 
 </base-alert>
 
@@ -324,26 +327,26 @@ See more on the watch query property in our [Data Fetching](/guides/features/dat
   <code-sandbox :src="csb_link"></code-sandbox>
 </app-modal>
 
-## Ignoring pages
+## ページを無視する
 
-If you want to ignore pages so that they are not included in the generated `router.js` file then you can ignore them by prefixing them with a `-`.
+ページを無視したい場合は、ファイルの先頭に `-` を付けると `router.js` ファイルに含まれなくなります。
 
-For example, `pages/-about.vue` will be ignored.
+例えば、 `pages/-about.vue`は無視されます。
 
 <base-alert type="next">
 
-Checkout the [ignore option](/guides/configuration-glossary/configuration-ignore) to learn more about it.
+詳細は [ignore オプション](/guides/configuration-glossary/configuration-ignore) ページを参照してください。
 
 </base-alert>
 
-## Configuration
+## 設定
 
-You can rename the `pages/` directory to something different by setting `dir.pages` option:
+`dir.pages` オプションを設定すると、`pages/` ディレクトリの名前を別の名前に変更できます。
 
 ```js{}[nuxt.config.js]
 export default {
   dir: {
-    // Rename `pages` directory to `routes`
+    // `pages` ディレクトリの名前を `routes` に変更します。
     pages: 'routes'
   }
 }
@@ -351,7 +354,7 @@ export default {
 
 <base-alert type="next">
 
-Checkout the [dir option](/guides/configuration-glossary/configuration-dir) to learn more about it.
+詳細は [dir オプション](/guides/configuration-glossary/configuration-dir)ページを参照してください。
 
 </base-alert>
 

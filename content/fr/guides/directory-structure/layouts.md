@@ -27,7 +27,7 @@ questions:
       - vrai
       - faux
     correctAnswer: vrai
-  - question: Pour ajouter un `layout` personnalisé, vous créez un fichier `.vue` et vous l'ajoutez à quel dossier ?
+  - question: Pour ajouter un `layout` personnalisé, nous créons un fichier `.vue` et vous l'ajoutez à quel répertoire ?
     answers:
       - layout
       - layouts

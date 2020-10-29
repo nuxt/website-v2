@@ -94,9 +94,9 @@ Chaque composant de Page est un composant Vue mais Nuxt.js ajoute des attributs 
 
 ## Pages dynamiques
 
-Les pages dynamiques peuvent être créées lorsque vous ne connaissez pas le nom de la page parce qu'il provient d'une API ou que vous ne voulez pas avoir à créer la même page encore et encore. Pour créer une page dynamique, vous devez ajouter un underscore (_) avant le nom du fichier .vue ou avant le nom du répertoire, si vous souhaitez que le répertoire soit dynamique. Vous pouvez nommer le fichier ou le répertoire comme vous le souhaitez, mais vous devez le faire précéder d'un underscore .
+Les pages dynamiques peuvent être créées lorsque vous ne connaissez pas le nom de la page parce qu'il provient d'une API ou que vous ne voulez pas avoir à créer la même page encore et encore. Pour créer une page dynamique, vous devez ajouter un underscore (\_) avant le nom du fichier .vue ou avant le nom du répertoire, si vous souhaitez que le répertoire soit dynamique. Vous pouvez nommer le fichier ou le répertoire comme vous le souhaitez, mais vous devez le faire précéder d'un underscore .
 
-Si vous avez défini un fichier nommé `_slug.vue` dans votre dossier pages, vous pouvez accéder à la valeur en utilisant le contexte avec params.slug
+Si nous avons défini un fichier nommé `_slug.vue` dans notre répertoire `pages`, nous pouvons accéder à la valeur en utilisant le contexte avec `params.slug`
 
 ```html{}[pages/_slug.vue]
 <template>
@@ -113,7 +113,7 @@ Si vous avez défini un fichier nommé `_slug.vue` dans votre dossier pages, vou
 </script>
 ```
 
-Si vous avez défini un fichier nommé \_slug.vue dans un dossier appelé \_book, vous pouvez accéder à la valeur en utilisant le contexte avec params.slug et params.book
+Si nous avons défini un fichier nommé `\_slug.vue` dans un répertoire appelé `\_book`, nous pouvons accéder à la valeur en utilisant le contexte avec `params.slug` et `params.book`
 
 ```html{}[pages/_book/_slug.vue]
 <template>

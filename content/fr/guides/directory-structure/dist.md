@@ -1,28 +1,28 @@
 ---
 title: dist
-description: Le répertoire `dist`, abrévation de *distribution*, est généré dynamiquement lors de l'utilisation de la commande `nuxt generate` et contient les fichiers HTML prêts pour la production ainsi que les ressources nécessaires au déploiement et à l'exécution de votre application Nuxt.js.
+description: Le répertoire `dist`, abréviation de *distribution*, est généré dynamiquement lors de l'utilisation de la commande `nuxt generate` et contient les fichiers HTML prêts pour la production ainsi que les ressources nécessaires au déploiement et à l'exécution de votre application Nuxt.js.
 position: 5
 category: directory-structure
 csb_link: https://codesandbox.io/embed/github/nuxt-academy/guides-examples/tree/master/04_directory_structure/05_dist?fontsize=14&hidenavigation=1&theme=dark
 questions:
-  - question: Quelle est la commande permettant de générer le dossier dist ?
+  - question: Quelle est la commande permettant de générer le répertoire `dist` ?
     answers:
       - nuxt build
       - nuxt start
       - nuxt generate
     correctAnswer: nuxt generate
-  - question: C'est le dossier que vous devez charger pour votre hébergement de site statique
+  - question: C'est le répertoire que vous devez charger pour votre hébergement de site statique
     answers:
       - vrai
       - faux
     correctAnswer: vrai
-  - question: Quelle est la propriété à modifier pour changer le dossier dist ?
+  - question: Quelle est la propriété à modifier pour changer le répertoire `dist` ?
     answers:
       - dist
       - dir
       - buildDir
     correctAnswer: dir
-  - question: Quelle est la propriété à utiliser pour ne pas avoir toutes vos pages générées dans un dossier ?
+  - question: Quelle est la propriété à utiliser pour ne pas avoir toutes vos pages générées dans un répertoire ?
     answers:
       - 'folders: false'
       - 'subFolders: false'
@@ -48,21 +48,21 @@ questions:
     correctAnswer: exclude
 ---
 
-Le répertoire `dist`, abrévation de _distribution_, est généré dynamiquement lors de l'utilisation de la commande `nuxt generate` et contient les fichiers HTML prêts pour la production ainsi que les ressources nécessaires au déploiement et à l'exécution de votre application Nuxt.js.
+Le répertoire `dist`, abréviation de _distribution_, est généré dynamiquement lors de l'utilisation de la commande `nuxt generate` et contient les fichiers HTML prêts pour la production ainsi que les ressources nécessaires au déploiement et à l'exécution de votre application Nuxt.js.
 
 ### Déploiement
 
-C'est le dossier que vous devez **télécharger pour l'hébergement statique** car il contient vos fichiers HTML prêts à la production et vos ressources
+C'est le répertoire que vous devez **télécharger pour l'hébergement statique** car il contient vos fichiers HTML prêts à la production et vos ressources
 
 <base-alert>
 
-Le dossier `dist` ne doit pas être livré à votre système de contrôle de version et doit être ignoré par votre `.gitignore` car il sera généré automatiquement à chaque fois que vous lancez la commande `nuxt generate`.
+Le répertoire `dist` ne doit pas être livré à votre système de contrôle de version et doit être ignoré par votre `.gitignore` car il sera généré automatiquement à chaque fois que vous lancez la commande `nuxt generate`.
 
 </base-alert>
 
 ### La propriété 'dir'
 
-Le dossier dist est nommé dist par défaut mais peut être configuré dans votre fichier nuxt.config.
+Le répertoire dist est nommé dist par défaut mais peut être configuré dans votre fichier nuxt.config.
 
 ```js{}[nuxt.config.js]
 generate: {
@@ -72,13 +72,13 @@ generate: {
 
 <base-alert>
 
-Si vous changez votre dossier dist, vous devrez l'ajouter à votre contrôle de version pour que git l'ignore.
+Si vous changez votre répertoire dist, vous devrez l'ajouter à votre contrôle de version pour que git l'ignore.
 
 </base-alert>
 
 ### La propriété subFolders
 
-Nuxt.js place par défaut toutes vos pages générées dans un dossier, cependant vous pouvez changer cela si vous le souhaitez en modifiant le fichier nuxt.config et en changeant la propriété des sous-dossiers pour qu'elles soient "false".
+Nuxt.js place par défaut toutes nos pages générées dans un répertoire, cependant nous pouvons changer cela si on le souhaite en modifiant le fichier `nuxt.config.js` et en changeant la propriété des sous-répertoires pour qu'ils soient `false`.
 
 ```js{}[nuxt.config.js]
 generate: {
@@ -90,7 +90,7 @@ generate: {
 
 Lors du déploiement de votre site, vous devrez vous assurer que le chemin html de repli est correctement défini. Il doit être défini comme page d'erreur afin que les routes inconnues soient rendues via Nuxt. S'il n'est pas défini, Nuxt.js utilisera la valeur par défaut qui est la page 200.html.
 
-Lors de l'exécution d'une application à page unique, il est plus logique d'utiliser 200.html car c'est le seul fichier nécessaire puisqu'aucune autre route n'est générée.
+Lors de l'exécution d'une application à page unique, il est plus logique d'utiliser 200.html car c'est le seul fichier nécessaire puisque aucune autre route n'est générée.
 
 Lorsque vous travaillez avec des pages générées statiquement, il est recommandé d'utiliser un fichier 404.html pour les pages d'erreur.
 

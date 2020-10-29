@@ -27,7 +27,7 @@ export default {
   }
 ```
 
-fonctionne avec la structure de dossiers suivante (notez que nuxt.config est listé dans le répertoire app)
+fonctionne avec la structure de répertoires suivante (notez que nuxt.config est listé dans le répertoire app)
 
 ```bash
 -| app/
@@ -47,7 +47,7 @@ fonctionne avec la structure de dossiers suivante (notez que nuxt.config est lis
 
 Exemple 2:
 
-Au lieu de l'exemple 1, vous pouvez également déplacer le fichier nuxt.config dans votre dossier `src`. Dans ce cas, il vous suffit de spécifier le client comme `rootDir` et vous pouvez laisser `srcDir` vide :
+Au lieu de l'exemple 1, vous pouvez également déplacer le fichier nuxt.config dans notre répertoire `src`. Dans ce cas, il vous suffit de spécifier le client comme `rootDir` et vous pouvez laisser `srcDir` vide :
 
 Prérequis:
 
@@ -63,8 +63,7 @@ export default {
   }
 ```
 
-fonctionne avec la structure de dossiers suivante (notez que nuxt.config est listé dans le répertoire client)
-
+fonctionne avec la structure de répertoires suivante (notez que `nuxt.config.js` est listé dans le répertoire client)
 
 ```bash
 -| app/

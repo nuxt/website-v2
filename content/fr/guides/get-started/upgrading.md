@@ -25,13 +25,13 @@ Après cette étape, les instructions varient en fonction de notre gestionnaire 
 ## Yarn
 
 3. Supprimer le fichier `yarn.lock`
-4. Supprimer le dossier `node_modules`
+4. Supprimer le répertoire `node_modules`
 5. Lancer la commande `yarn`
 6. Une fois l'installation terminée et les tests exécutés, nous devrions également envisager de mettre à jour d'autres dépendances. La commande `yarn outdated` peut être utilisée.
 
 ## NPM
 
 3. Supprimer le fichier `package-lock.json`
-4. Supprimer le dossier `node_modules`
+4. Supprimer le répertoire `node_modules`
 5. Lancer la commande `npm install`
 6. Une fois l'installation terminée et les tests exécutés, nous devrions également envisager de mettre à jour d'autres dépendances. La commande `npm outdated` peut être utilisée.

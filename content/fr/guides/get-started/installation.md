@@ -32,13 +32,13 @@ On peut utiliser celui que l'on préfère, mais nous recommandons le [terminal d
 
 ## Commencer de zéro
 
-Créer un projet Nuxt.js de zéro demande seulement un dossier et un fichier.
+Créer un projet Nuxt.js de zéro demande seulement un répertoire et un fichier.
 
-Dans cet exemple, nous allons utiliser le terminal pour créer les dossiers et fichiers mais nous pouvons utiliser votre éditeur pour les créer.
+Dans cet exemple, nous allons utiliser le terminal pour créer les répertoires et fichiers mais nous pouvons utiliser votre éditeur pour les créer.
 
 ### Première étape : configurer votre projet
 
-Pour commencer, il faut créer un dossier vide avec le nom du projet et naviguer à l'intérieur de celui-ci :
+Pour commencer, il faut créer un répertoire vide avec le nom du projet et naviguer à l'intérieur de celui-ci :
 
 ```bash
 mkdir <nom-du-projet>
@@ -94,7 +94,7 @@ npm install nuxt
   </code-block>
 </code-group>
 
-Cette commande va ajouter `nuxt` comme une dépendance du projet et va automatiquement l'ajouter à notre `package.json`. Le dossier `node_modules` va aussi être créé, c'est l'endroit où sont installés tous les packages et leurs dépendances.
+Cette commande va ajouter `nuxt` comme une dépendance du projet et va automatiquement l'ajouter à notre `package.json`. Le répertoire `node_modules` va aussi être créé, c'est l'endroit où sont installés tous les packages et leurs dépendances.
 
 <base-alert type="info">
 
@@ -104,15 +104,15 @@ Un fichier `yarn.lock` ou `package-lock.json` est aussi créé, ce qui assure un
 
 ### Troisième étape : créer notre première page
 
-Nuxt.js transforme tous les fichiers `*.vue` dans le dossier `pages` comme une route pour l'application.
+Nuxt.js transforme tous les fichiers `*.vue` dans le répertoire `pages` comme une route pour l'application.
 
-Créer le dossier `pages` dans notre projet :
+Créer le répertoire `pages` dans notre projet :
 
 ```bash
 mkdir pages
 ```
 
-Puis, créer un fichier `index.vue` dans le dossier `pages` :
+Puis, créer un fichier `index.vue` dans le répertoire `pages` :
 
 ```bash
 touch pages/index.vue
@@ -167,13 +167,13 @@ Une fois Nuxt.js lancé en mode développement, il écoutera les changements de 
 
 <base-alert type="warning">
 
-Lorsqu'on lance la commande `dev`, un dossier `.nuxt` est créé. Ce dossier devrait être ignoré par Git (ou tout autre système de gestion de versions). On peut faire ceci en créant un fichier `.gitignore` à la racine de votre projet et en y ajoutant `.nuxt`.
+Lorsque on lance la commande `dev`, un répertoire `.nuxt` est créé. Ce répertoire devrait être ignoré par Git (ou tout autre système de gestion de versions). On peut faire ceci en créant un fichier `.gitignore` à la racine de votre projet et en y ajoutant `.nuxt`.
 
 </base-alert>
 
 ### Étape bonus
 
-Créer une page nommée `fun.vue` dans le dossier `pages`.
+Créer une page nommée `fun.vue` dans le répertoire `pages`.
 
 Ajouter un `<template></template>` et insérer un titre avec une phrase drôle à l'intérieur.
 
@@ -181,7 +181,7 @@ On peut ensuite aller sur le navigateur et regarder la nouvelle page sur **[http
 
 <base-alert type="info">
 
-Si nous créons un dossier nommé `more-fun` et ajoutons un fichier `index.vue` à l'intérieur, cela donnera le même résultat que de créer un fichier `more-fun.vue`.
+Si nous créons un répertoire nommé `more-fun` et ajoutons un fichier `index.vue` à l'intérieur, cela donnera le même résultat que de créer un fichier `more-fun.vue`.
 
 </base-alert>
 
@@ -220,7 +220,7 @@ npm init nuxt-app <project-name>
 
 </code-group>
 
-Quelques questions nous seront posées (nom, options Nuxt, framework UI, TypeScript, linter, framework de test, etc.), quand on y aura répondu, toutes les dépendances seront installées. La prochaine étape est de naviguer dans le dossier et de démarrer notre application:
+Quelques questions nous seront posées (nom, options Nuxt, framework UI, TypeScript, linter, framework de test, etc.), quand on y aura répondu, toutes les dépendances seront installées. La prochaine étape est de naviguer dans le répertoire et de démarrer notre application:
 
 <code-group>
   <code-block label="Yarn" active>

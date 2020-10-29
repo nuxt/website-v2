@@ -81,16 +81,16 @@ Les modules sont des extensions Nuxt.js qui peuvent personnaliser le fonctionnem
 ```js{}[nuxt.config.js]
 export default {
   modules: [
-    // En utilisant le nom du package
+    // en utilisant le nom du package
     '@nuxtjs/axios',
 
-    // De manière relative par rapport au dossier source du projet (srcDir)
+    // de manière relative par rapport au répertoire source du projet (srcDir)
     '~/modules/awesome.js',
 
-    // On peut lui passer des options
+    // on peut lui passer des options
     ['@nuxtjs/google-analytics', { ua: 'X1234567' }],
 
-    // Ou le définir directement
+    // ou le définir directement
     function () {}
   ]
 }

@@ -8,9 +8,9 @@ questions:
   - question: Comment activer le store ?
     answers:
       - Il est activé par défaut
-      - créer un fichier js dans le dossier store
+      - créer un fichier js dans le répertoire store
       - ajouter `store:true` au fichier nuxt.config.js
-    correctAnswer: créer un fichier js dans le dossier store
+    correctAnswer: créer un fichier js dans le répertoire store
   - question: Chaque fichier .js dans le répertoire store est transformé en un
     answers:
       - plugin
@@ -73,7 +73,7 @@ Nuxt.js recherchera le répertoire `store`, s'il existe, il fera :
 
 ## Modules
 
-Chaque fichier `.js` dans le répertoire `store` est transformé en [namespaced module](http://vuex.vuejs.org/en/modules.html) (`index` étant le module racine). L'état `state` doit toujours être une fonction pour éviter les états *partagés* non désirés du côté du serveur.
+Chaque fichier `.js` dans le répertoire `store` est transformé en [namespaced module](http://vuex.vuejs.org/en/modules.html) (`index` étant le module racine). L'état `state` doit toujours être une fonction pour éviter les états _partagés_ non désirés du côté du serveur.
 
 Pour commencer, exportez l'état `state` en tant que fonction, et les mutations et actions en tant qu'objets.
 
@@ -190,9 +190,9 @@ export default {
 </style>
 ```
 
-La méthode des modules fonctionne également pour les définitions de haut niveau sans implémenter un sous-répertoire dans le dossier store.
+La méthode des modules fonctionne également pour les définitions de haut niveau sans implémenter un sous-répertoire dans le répertoire `store`.
 
-Exemple pour l'état `state` : vous créez un fichier `store/state.js` et vous ajoutez ce qui suit.
+Exemple pour l'état `state`: nous créons un fichier `store/state.js` et nous ajoutons ce qui suit.
 
 ```js
 export default () => ({

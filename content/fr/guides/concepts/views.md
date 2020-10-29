@@ -19,10 +19,10 @@ questions:
     correctAnswer: default.vue
   - question: Comment créer un layout custom?
     answers:
-      - ajouter un fichier .vue dans le dossier pages
-      - ajouter un fichier .vue dans le dossier layouts
-      - ajouter un fichier .vue dans le dossier components
-    correctAnswer: ajouter un fichier .vue dans le dossier layouts
+      - ajouter un fichier .vue dans le répertoire pages
+      - ajouter un fichier .vue dans le répertoire layouts
+      - ajouter un fichier .vue dans le répertoire components
+    correctAnswer: ajouter un fichier .vue dans le répertoire layouts
   - question: Commment activons-nous le layout custom nommé 'blog' sur votre page?
     answers:
       - "layout: 'blog'"
@@ -31,10 +31,10 @@ questions:
     correctAnswer: "layout: 'blog'"
   - question: Où doit se situer le fichier error.vue qui crée une page d'erreur personnalisée?
     answers:
-      - dans le dossier pages
-      - dans le dossier errors
-      - dans le dossier layouts
-    correctAnswer: dans le dossier layouts
+      - dans le répertoire pages
+      - dans le répertoire errors
+      - dans le répertoire layouts
+    correctAnswer: dans le répertoire layouts
 ---
 
 La section des vues décrit tout ce que nous avons besoin de savoir pour configurer la data et les vues pour une route spécifique dans notre application Nuxt.js. Les vues se composent d'un template, d'un layout et de la page actuelle. En plus de cela, nous pouvons définir des méta tags personnalisés pour la section `head` de chaque page. Ces derniers sont imporant pour le SEO (référencement naturel).

@@ -1,6 +1,6 @@
 ---
 title: components
-description: Le répertoire des composants contient les composants Vue.js. Les composants sont les éléments qui constituent les différentes parties d'une page et peuvent être réutilisés et importés dans les pages, layouts ou même d'autres composants.
+description: Le répertoire des composants contient les composants Vue.js. Les composants sont les éléments qui constituent les différentes parties d'une page et peuvent être réutilisés et importés dans des pages, layouts ou même d'autres composants.
 position: 3
 category: directory-structure
 csb_link: https://codesandbox.io/embed/github/nuxt-academy/guides-examples/tree/master/04_directory_structure/03_components?fontsize=14&hidenavigation=1&theme=dark
@@ -33,7 +33,7 @@ questions:
     correctAnswer:
 ---
 
-Le répertoire des composants contient les composants Vue.js. Les composants sont les éléments qui constituent les différentes parties d'une page et peuvent être réutilisés et importés dans les pages, layouts ou même d'autres composants.
+Le répertoire des composants contient les composants Vue.js. Les composants sont les éléments qui constituent les différentes parties d'une page et peuvent être réutilisés et importés dans des pages, layouts ou même d'autres composants.
 
 ### Récupérer de la data
 
@@ -73,7 +73,7 @@ En utilisant `$fetchState.pending`, on peut afficher un message pendant le charg
 
 <base-alert type="next">
 
-Se référer au chapire sur [fetch()](/guides/features/data-fetching#the-fetch-method) pour avoir davantage d'informations sur son fonctionnement.
+Se référer au chapitre sur [fetch()](/guides/features/data-fetching#the-fetch-method) pour avoir davantage d'informations sur son fonctionnement.
 
 </base-alert>
 

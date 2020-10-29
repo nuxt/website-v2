@@ -18,7 +18,7 @@ export default {
     // en utilisant le nom du package
     '@nuxtjs/axios',
 
-    // de manière relative par rapport au dossier source du projet (srcDir)
+    // de manière relative par rapport au répertoire source du projet (srcDir)
     '~/modules/awesome.js',
 
     // on peut lui passer des options

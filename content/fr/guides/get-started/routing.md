@@ -14,7 +14,7 @@ Lorsque nous travaillons avec Vue, nous devons configurer un fichier de configur
 
 Cela signifie que nous n'avons plus jamais besoin d'écrire une configuration de routeur ! Nuxt.js nous offre également le découpage dynamique de code pour toutes nos routes.
 
-En d'autres termes, tout ce que nous avons à faire pour avoir un routage dans notre application est de créer des fichiers `.vue` dans le dossier `pages`.
+En d'autres termes, tout ce que nous avons à faire pour avoir un routage dans notre application est de créer des fichiers `.vue` dans le répertoire `pages`.
 
 <base-alert type="next">
 
@@ -28,7 +28,7 @@ Pour naviguer entre les pages de notre application, nous devons utiliser le comp
 
 Il est similaire à la balise HTML `<a>`, mais à la place d'utiliser un attribut `href="/about"`, nous utilisons `to="/about"`. Si nous avons déjà utilisé `vue-router`, nous pouvons comparer `<NuxtLink>` au composant `<RouterLink>`.
 
-Voici un exemple de l'utilisation du composant `NuxtLink` avec un lien vers la page `index.vue` dans le dossier `pages` :
+Voici un exemple de l'utilisation du composant `NuxtLink` avec un lien vers la page `index.vue` dans le répertoire `pages` :
 
 ```html{}[pages/index.vue]
 <template>

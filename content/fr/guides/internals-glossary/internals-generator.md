@@ -15,7 +15,7 @@ position: 8
 | Hook                    | Arguments                    | Quand                                                                                                                                                    |
 | ----------------------- | ---------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | `generate:before`       | (generator, generateOptions) | Hook avant la génération de la page                                                                                                                      |
-| `generate:distRemoved`  | (generator)                  | Hook sur le dossier de destination nettoyé                                                                                                               |
+| `generate:distRemoved`  | (generator)                  | Hook sur le répertoire de destination nettoyé                                                                                                            |
 | `generate:distCopied`   | (generator)                  | Hook sur la copie des fichiers statiques et du build                                                                                                     |
 | `generate:route`        | ({ route, setPayload })      | Hook avant de générer la page, utile pour la charge utile dynamique, voir [#7422](https://github.com/nuxt/nuxt.js/pull/7422), disponible pour Nuxt 2.13+ |
 | `generate:page`         | ({ route, path, html })      | Hook pour permettre à l'utilisateur de mettre à jour le chemin et l'html après la génération                                                             |

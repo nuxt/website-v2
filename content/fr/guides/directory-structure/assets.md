@@ -15,10 +15,10 @@ questions:
     correctAnswer: assets
   - question: Lorsque l'on est dans un template vue, qu'utilise t-on pour avoir accès au répertoire de ressources ?
     answers:
-      - '/assets/votre_image.png'
-      - '@assets/votre_image.png'
-      - '@/assets/votre_image.png'
-    correctAnswer: '@/assets/votre_image.png'
+      - '/assets/notre_image.png'
+      - '@assets/notre_image.png'
+      - '@/assets/notre_image.png'
+    correctAnswer: '@/assets/notre_image.png'
   - question: Lorsque l'on est dans un fichier CSS, qu'utilise t-on pour avoir accès au répertoire de ressources ?
     answers:
       - url("@assets/banniere.svg")
@@ -61,21 +61,21 @@ Le répertoire `assets` contient les ressources comme des fichiers Stylus, du SA
 
 ## Images:
 
-À l'intérieur de vos templates `vue`, si vous avez besoin de faire un lien vers votre répertoire `assets` (ressources), utilisez `~/assets/votre_image.png` (avec un slash avant les `assets`)
+À l'intérieur de nos templates `vue`, si nous avons besoin de faire un lien vers notre répertoire `assets` (ressources), il faut utiliser `~/assets/notre_image.png` (avec un slash avant les `assets`).
 
 ```html
 <template>
-  <img src="~/assets/votre_image.png" />
+  <img src="~/assets/notre_image.png" />
 </template>
 ```
 
-À l'intérieur de vos fichiers `CSS`, si vous avez besoin de faire un lien vers votre répertoire `assets` (ressources), utilisez `~/assets/banniere.svg` (sans le slash).
+À l'intérieur de nos fichiers `CSS`, si nous avons besoin de faire un lien vers notre répertoire `assets` (ressources), il faut utiliser `~/assets/banniere.svg` (sans le slash).
 
 ```css
 background: url('~assets/banniere.svg');
 ```
 
-Si l'on travaille avec des images dynamiques, on aura besoin d'utiliser `require`
+Si l'on travaille avec des images dynamiques, on aura besoin d'utiliser `require`.
 
 ```html
 <img :src="require(`~/assets/img/${image}.jpg`)" />
@@ -89,18 +89,16 @@ Voir les [ressources webpack](/guides/directory-structure/assets#webpack-assets)
 
 ## Styles:
 
-Nuxt.js lets you define the CSS files/modules/libraries you want to set globally (included in every page). In the nuxt.config you can easily add your styles using the CSS Property.
-
-Nuxt.js vous permet de définir les fichiers/modules/librairies CSS que vous souhaitez utiliser de manière globale (dans chaque page). Dans le fichier de config `nuxt.config.js`, on peut spécifier cela grâce à la propriété `css`:
+Nuxt.js nous permet de définir les fichiers/modules/librairies CSS que nous souhaitons utiliser de manière globale (dans chaque page). Dans le fichier de config `nuxt.config.js`, on peut spécifier cela grâce à la propriété `css`:
 
 ```js{}[nuxt.config.js]
 export default {
   css: [
-    // Charge un module Node.js directemnt (ici un fichier SASS)
+    // charge un module Node.js directement (ici un fichier SASS)
     'bulma',
-    // Un fichier CSS dans le projet
+    // un fichier CSS dans le projet
     '~/assets/css/main.css',
-    // Un fichier SCSS dans le projet
+    // un fichier SCSS dans le projet
     '~/assets/css/main.scss'
   ]
 }
@@ -129,7 +127,7 @@ npm install --save-dev node-sass sass-loader
   </code-block>
 </code-group>
 
-Nuxt.js va automatiquement deviner le type de fichier grâce à son extension et utiliser le loader webpack approprié pour le pré-processeur. Vous aurez cependant besoin d'installer le loader requis si vous avez besoin de l'utiliser.
+Nuxt.js va automatiquement deviner le type de fichier grâce à son extension et utiliser le loader webpack approprié pour le pré-processeur. Nous aurons cependant besoin d'installer le loader requis si nous avons besoin de l'utiliser.
 
 ## Fonts:
 
@@ -162,7 +160,7 @@ On peut utiliser des polices de caractères locales en les ajoutant dans le rép
 
 <base-alert type="next">
 
-Pour ajouter des polices de caractères externes telles que des Google Fonts, veuillez vous référer le chapitre sur le [SEO et les méta tags](/guides/features/meta-tags-seo#external-resources).
+Pour ajouter des polices de caractères externes telles que des Google Fonts, se référer le chapitre sur le [SEO et les méta tags](/guides/features/meta-tags-seo#external-resources).
 
 </base-alert>
 
@@ -205,7 +203,7 @@ Ce sera compilé en:
 createElement('img', { attrs: { src: require('~/assets/image.png') } })
 ```
 
-Parceque `.png` n'est pas un fichier JavaScript, Nuxt.js s'occupe tout seul de demander à Webpack d'utiliser [file-loader](https://github.com/webpack/file-loader) et [url-loader](https://github.com/webpack/url-loader) pour s'occuper de ce format.
+Parce que `.png` n'est pas un fichier JavaScript, Nuxt.js s'occupe tout seul de demander à Webpack d'utiliser [file-loader](https://github.com/webpack/file-loader) et [url-loader](https://github.com/webpack/url-loader) pour s'occuper de ce format.
 
 Les bénéfices de ces loaders sont les suivants:
 
@@ -239,18 +237,18 @@ Pour ces deux loaders, la configuration par défaut est la suivante:
 
 Ce qui veut dire que n'importe quel fichier en dessous de 1 Ko sera mis sur une seule ligne de data URL encodé en base-64. Autrement, l'image/police de caractères sera copiée dans le répertoire correspondant (à l'intérieur du répertoire `.nuxt`) avec un nom comprenant le hash d'une version pour une meilleure mise en cache.
 
-Lorsqu'on lancera l'application avec un `nuxt`, avec un template tel que `pages/index.vue`:
+Lorsque on lancera l'application `nuxt` avec un template tel que `pages/index.vue`:
 
 ```html{}[pages/index.vue]
 <template>
-  <img src="@/assets/votre_image.png" />
+  <img src="@/assets/notre_image.png" />
 </template>
 ```
 
-Sera transformé en:
+Cela sera transformé en:
 
 ```html
-<img src="/_nuxt/img/votre_image.0c61159.png" />
+<img src="/_nuxt/img/notre_image.0c61159.png" />
 ```
 
 Si on souhaite changer la configuration d'un des loaders, on trouvera plus de détails à la page de [`build.extend`](/guides/configuration-glossary/configuration-build#extend).
@@ -261,20 +259,20 @@ Si on souhaite changer la configuration d'un des loaders, on trouvera plus de d�
 
 ## Les Alias
 
-Par défaut le répertoire des sources (`srcDir`) et le répertoire racine (`rootDir`) sont les mêmes. On peut utiliser l'alias `~` pour le répertoire des sources. Au lieu d'écrire des chemins relatifs tels que `../assets/votre_image.png`, on peut écrire `~/assets/votre_image.png` à la place.
+Par défaut le répertoire des sources (`srcDir`) et le répertoire racine (`rootDir`) sont les mêmes. On peut utiliser l'alias `~` pour le répertoire des sources. Au lieu d'écrire des chemins relatifs tels que `../assets/notre_image.png`, on peut écrire `~/assets/notre_image.png` à la place.
 
 Les deux donneront le même résultat.
 
 ```html{}[components/Avatar.vue]
 <template>
   <div>
-    <img src="../assets/votre_image.png" />
-    <img src="~/assets/votre_image.png" />
+    <img src="../assets/notre_image.png" />
+    <img src="~/assets/notre_image.png" />
   </div>
 </template>
 ```
 
-Nous recoomendons l'usage de `~` en tant qu'alias. `@` est toujours supporé mais il ne marchera pas dans certains cas tel que les images de background dans votre CSS.
+Nous recommandons l'usage de `~` en tant qu'alias. `@` est toujours supporté mais il ne marchera pas dans certains cas tel que les images de background dans le CSS.
 
 On peut utiliser `~~` ou `@@` pour le répertoire racine.
 

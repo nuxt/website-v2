@@ -18,31 +18,29 @@ module.exports = {
     links: [
       {
         name: 'Docs',
-        slug: 'guides',
-        type: 'newDocs',
-        routeName: 'guides-book-slug'
+        icon: 'books',
+        slug: 'guides/get-started/installation'
       },
       {
         name: 'Resources',
-        slug: 'resources',
-        type: 'static'
+        icon: 'resources',
+        slug: 'resources'
       },
       {
         name: 'Examples',
-        slug: 'examples',
-        type: 'static'
+        icon: 'code',
+        slug: 'examples'
       },
       {
         name: 'Blog',
-        slug: 'blog',
-        type: 'static'
+        icon: 'blog',
+        slug: 'blog'
       },
       {
         name: 'Video Courses',
+        icon: 'video',
         href:
-          'https://masteringnuxt.com?friend=nuxt&utm_source=Nuxtjs.org&utm_medium=Link&utm_content=Navbar&utm_content=prelaunch',
-        type: 'external',
-        routeName: 'section-slug'
+          'https://masteringnuxt.com?friend=nuxt&utm_source=Nuxtjs.org&utm_medium=Link&utm_content=Navbar&utm_content=prelaunch'
       }
     ],
     search: {

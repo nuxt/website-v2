@@ -213,9 +213,7 @@ Nuxt will directly fill `this.$fetchState.timestamp` (timestamp) of the last `fe
 `pages/posts/_id.vue`
 
 ```html
-<template>
-  ...
-</template>
+<template> ... </template>
 
 <script>
   export default {

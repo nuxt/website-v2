@@ -13,18 +13,18 @@ You can now run different commands depending on the [target](/api/configuration-
 
 `server`
 
-| Command | Description |
-| --- | --- |
-| nuxt dev | Launch a development server on localhost:3000 with hot-reloading. |
+| Command    | Description                                                                   |
+| ---------- | ----------------------------------------------------------------------------- |
+| nuxt dev   | Launch a development server on localhost:3000 with hot-reloading.             |
 | nuxt build | Build your application with webpack and minify the JS & CSS (for production). |
-| nuxt start | Start the server in production mode (after running `nuxt build`). |
+| nuxt start | Start the server in production mode (after running `nuxt build`).             |
 
 `static`
 
-| Command | Description |
-| --- | --- |
-| nuxt dev | Launch a development server on localhost:3000 with hot-reloading. |
-| nuxt start | Serve your production application from dist/ directory (Nuxt >= v2.13). |
+| Command       | Description                                                                              |
+| ------------- | ---------------------------------------------------------------------------------------- |
+| nuxt dev      | Launch a development server on localhost:3000 with hot-reloading.                        |
+| nuxt start    | Serve your production application from dist/ directory (Nuxt >= v2.13).                  |
 | nuxt generate | Build the application and generate every route as a HTML file (used for static hosting). |
 
 #### Arguments
@@ -37,8 +37,8 @@ You can use `--help` with any command to get detailed usage. Common arguments ar
 
 #### Hooks
 
-| Hook | Objective |
-| --- | --- |
+| Hook             | Objective                                                            |
+| ---------------- | -------------------------------------------------------------------- |
 | `cli:buildError` | Captures build errors in dev mode and display them on loading screen |
 
 #### Using in package.json

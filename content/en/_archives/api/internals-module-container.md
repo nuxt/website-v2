@@ -28,8 +28,8 @@ this.plugin('ready', async moduleContainer => {
 })
 ```
 
-| Plugin | Arguments | When |
-| --- | --- | --- |
+| Plugin  | Arguments       | When                                                 |
+| ------- | --------------- | ---------------------------------------------------- |
 | `ready` | moduleContainer | All modules in `nuxt.config.js` has been initialized |
 
 ## Methods
@@ -91,7 +91,7 @@ Is a shortcut for `addModule(moduleOpts, true)`
 
 We can register hooks on certain life cycle events.
 
-| Hook | Arguments | When |
-| --- | --- | --- |
+| Hook             | Arguments                  | When                                                                                  |
+| ---------------- | -------------------------- | ------------------------------------------------------------------------------------- |
 | `modules:before` | (moduleContainer, options) | Called before creating ModuleContainer class, useful to overload methods and options. |
-| `modules:done` | (moduleContainer) | Called when all modules have been loaded. |
+| `modules:done`   | (moduleContainer)          | Called when all modules have been loaded.                                             |

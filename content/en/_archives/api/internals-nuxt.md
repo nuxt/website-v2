@@ -20,9 +20,9 @@ nuxt.hook('ready', async nuxt => {
 })
 ```
 
-| Plugin | Arguments | When |
-| --- | --- | --- |
-| `ready` | (nuxt) | Nuxt is ready to work (`ModuleContainer` and `Renderer` ready). |
-| `error` | (error) | An unhandled error when calling hooks. |
-| `close` | (nuxt) | Nuxt instance is gracefully closing. |
+| Plugin   | Arguments              | When                                                                           |
+| -------- | ---------------------- | ------------------------------------------------------------------------------ |
+| `ready`  | (nuxt)                 | Nuxt is ready to work (`ModuleContainer` and `Renderer` ready).                |
+| `error`  | (error)                | An unhandled error when calling hooks.                                         |
+| `close`  | (nuxt)                 | Nuxt instance is gracefully closing.                                           |
 | `listen` | (server, {host, port}) | Nuxt **internal** server starts listening. (Using `nuxt start` or `nuxt dev`). |

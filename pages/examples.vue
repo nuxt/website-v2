@@ -14,17 +14,17 @@
 import groupBy from 'lodash.groupby'
 
 export default {
-  async asyncData({ $content, app, params }) {
+  async asyncData({ $content, app }) {
     let pages = []
 
     try {
-      pages = await $content(app.i18n.defaultLocale, params.section)
+      pages = await $content(app.i18n.defaultLocale, 'examples')
         .only(['slug', 'title', 'position', 'menu', 'category'])
         .sortBy('position')
         .fetch()
 
       if (app.i18n.locale !== app.i18n.defaultLocale) {
-        const newPages = await $content(app.i18n.locale, params.section)
+        const newPages = await $content(app.i18n.locale, 'examples')
           .only(['slug', 'title', 'position', 'menu', 'category'])
           .sortBy('position')
           .fetch()

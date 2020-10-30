@@ -69,7 +69,7 @@ export default {
       current: 0,
       setInter: null,
       showNav: false,
-      section: this.$route.params.section
+      section: 'examples'
     }
   },
   computed: {
@@ -82,7 +82,7 @@ export default {
         : this.$route.path
     },
     menu() {
-      return '/' + this.$route.params.section
+      return '/examples'
     },
     sortedLinks() {
       const links = {}
@@ -98,10 +98,9 @@ export default {
   },
   methods: {
     toLink(link) {
-      const slug = link.slug === 'index' ? undefined : link.slug
       return this.localePath({
-        name: 'section-slug',
-        params: { section: this.section, slug }
+        name: 'examples-slug',
+        params: { slug: link.slug }
       })
     }
   }

@@ -29,7 +29,12 @@ NUXTJS
             <NuxtLink
               v-if="!link.href"
               class="block font-medium uppercase hover:no-underline light:hover:text-nuxt-lightgreen dark:hover:text-nuxt-lightgreen text-light-onSurfacePrimary dark:text-dark-onSurfacePrimary transition-colors duration-300 ease-linear"
-              :to="localePath({ name: link.slug })"
+              :to="
+                localePath({
+                  name: link.slug,
+                  params: { book: 'get-started', slug: 'installation' }
+                })
+              "
             >
               {{ link.name }}
             </NuxtLink>

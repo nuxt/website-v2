@@ -12,8 +12,8 @@
         @click.native.right.stop.prevent="$router.push('/design')"
       >
         <h1 class="m-0 h-0 w-0 overflow-hidden">
-          NUXTJS
-        </h1>
+NUXTJS
+</h1>
         <NuxtLogo
           class="h-6 lg:h-8 text-light-onSurfacePrimary dark:text-dark-onSurfacePrimary transition-colors duration-300 ease-linear"
         />
@@ -41,11 +41,6 @@
               "
             >
               {{ link.name }}
-              <span
-                class="bg-green-200 dark:text-black text-ss align-top px-1 rounded-sm lowercase"
-              >
-                beta
-              </span>
             </NuxtLink>
             <NuxtLink
               v-if="link.type === 'dynamic'"
@@ -70,9 +65,15 @@
               v-else-if="link.type === 'external'"
               :key="link.href"
               :href="link.href"
+              target="_blank"
               class="block font-medium uppercase hover:no-underline hover:text-nuxt-lightgreen text-light-onSurfacePrimary dark:text-dark-onSurfacePrimary transition-colors duration-300 ease-linear"
             >
               {{ link.name }}
+              <span
+                class="bg-orange-500 text-white dark:text-black text-ss align-top px-1 rounded-sm lowercase"
+              >
+                new
+              </span>
             </a>
           </li>
         </ul>

@@ -19,7 +19,7 @@ module.exports = {
       {
         name: 'Docs',
         icon: 'books',
-        slug: 'guides/get-started/installation'
+        slug: 'guides-book-slug'
       },
       {
         name: 'Resources',

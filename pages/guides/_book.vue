@@ -29,8 +29,8 @@ export default {
         .sortBy('position')
         .sortBy('title')
         .sortBy('menu')
+        .where({ position: { $gte: 0 } })
         .fetch()
-
       // if (app.i18n.locale !== app.i18n.defaultLocale) {
       //   const newPages = await $content(app.i18n.locale, 'guides', { deep: true })
       //     .only(['slug', 'title', 'menu', 'category', 'position'])

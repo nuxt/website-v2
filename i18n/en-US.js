@@ -17,34 +17,10 @@ module.exports = {
   header: {
     links: [
       {
-        name: 'Guides',
+        name: 'Docs',
         slug: 'guides',
         type: 'newDocs',
         routeName: 'guides-book-slug'
-      },
-      {
-        name: 'Guide',
-        slug: 'guide',
-        type: 'dynamic',
-        routeName: 'section-slug'
-      },
-      {
-        name: 'API',
-        slug: 'api',
-        type: 'dynamic',
-        routeName: 'section-slug'
-      },
-      {
-        name: 'Examples',
-        slug: 'examples',
-        type: 'dynamic',
-        routeName: 'section-slug'
-      },
-      {
-        name: 'FAQ',
-        slug: 'faq',
-        type: 'dynamic',
-        routeName: 'section-slug'
       },
       {
         name: 'Resources',
@@ -52,9 +28,21 @@ module.exports = {
         type: 'static'
       },
       {
+        name: 'Examples',
+        slug: 'examples',
+        type: 'static'
+      },
+      {
         name: 'Blog',
         slug: 'blog',
         type: 'static'
+      },
+      {
+        name: 'Video Courses',
+        href:
+          'https://masteringnuxt.com?friend=nuxt&utm_source=Nuxtjs.org&utm_medium=Link&utm_content=Navbar&utm_content=prelaunch',
+        type: 'external',
+        routeName: 'section-slug'
       }
     ],
     search: {

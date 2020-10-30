@@ -10,9 +10,7 @@ Thanks to [Vue Loader](http://vue-loader.vuejs.org/en/configurations/pre-process
 Example of our `pages/index.vue` using [Pug](https://github.com/pugjs/pug) and [Sass](http://sass-lang.com/):
 
 ```html
-<template lang="pug">
-  h1.red Hello World!
-</template>
+<template lang="pug"> h1.red Hello World! </template>
 
 <style lang="sass">
   .red

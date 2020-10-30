@@ -110,8 +110,7 @@ export default {
     toLink(link) {
       const slug = link.slug === 'index' ? undefined : link.slug
       return this.localePath({
-        name: 'section-slug',
-        params: { section: this.$route.params.section, slug }
+        params: { section: 'examples', slug }
       })
     },
     clickOutsideHandler() {

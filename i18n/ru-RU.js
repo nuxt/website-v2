@@ -321,21 +321,25 @@ module.exports = {
   footer: {
     links: {
       discover: {
-        title: 'Изучить',
-        design: 'Дизайнерские ресурсы',
-        team: 'Международная команда',
-        blog: 'Блог'
+        title: 'Discover',
+        shop: 'Our Goodies Store',
+        consulting: 'Training & consultancy',
+        sponsorNuxt: 'Sponsoring & donations',
       },
-      follow: {
-        title: 'Следить'
+      about: {
+        title: 'About',
+        team: 'Our team',
+        design: 'Design kit',
+        contact: 'Contact us'
       },
       support: {
-        title: 'Поддержка',
-        sponsorNuxt: 'Спонсорство NuxtJS',
-        shop: 'Магазин NuxtJS',
-        consulting: 'Консалтинг NuxtJS'
+        title: 'Support',
+        faq: 'FAQ',
+        discord: 'Chat with us',
+        contributionGuide: 'Contribution guide'
       }
     }
+
   },
   cookies: {
     consent: 'Мы используем файлы Cookies для аналитики!',

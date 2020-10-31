@@ -317,19 +317,22 @@ module.exports = {
   footer: {
     links: {
       discover: {
-        title: 'بیشتر',
-        design: 'منابع طراحی',
-        team: 'تیم',
-        blog: 'وبلاگ'
+        title: 'Discover',
+        shop: 'Our Goodies Store',
+        consulting: 'Training & consultancy',
+        sponsorNuxt: 'Sponsoring & donations',
       },
-      follow: {
-        title: 'شبکه‌های اجتماعی'
+      about: {
+        title: 'About',
+        team: 'Our team',
+        design: 'Design kit',
+        contact: 'Contact us'
       },
       support: {
-        title: 'پشتیبانی',
-        sponsorNuxt: 'اسپانسر',
-        shop: 'فروشگاه Nuxt',
-        consulting: 'مشاوره و پشتیبانی'
+        title: 'Support',
+        faq: 'FAQ',
+        discord: 'Chat with us',
+        contributionGuide: 'Contribution guide'
       }
     }
   },

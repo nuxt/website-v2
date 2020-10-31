@@ -3,6 +3,7 @@ title: 'ویژگی key'
 description: جهت تنظیم ویژگی `key` در کامپوننت داخلی `<router-view>`
 menu: ویژگی Key
 category: components-glossary
+position: 0
 ---
 
 > جهت تنظیم ویژگی `key` در کامپوننت داخلی `<router-view>`

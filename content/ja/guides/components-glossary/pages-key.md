@@ -3,6 +3,7 @@ title: 'key プロパティ'
 description: 内部の `<router-view>` コンポーネントに `key` プロパティを設定します
 menu: Key プロパティ
 category: components-glossary
+position: 0
 ---
 
 > 内部の `<router-view>` コンポーネントに `key` プロパティを設定します。

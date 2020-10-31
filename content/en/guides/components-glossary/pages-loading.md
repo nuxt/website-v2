@@ -3,6 +3,7 @@ title: 'The loading Property'
 description: The `loading` property gives you the option to disable the default loading progress bar on a specific page.
 menu: Loading Property
 category: components-glossary
+position: 0
 ---
 
 > The loading property gives you the option to disable the default loading progress bar on a specific page.

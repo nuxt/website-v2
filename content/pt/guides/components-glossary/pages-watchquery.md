@@ -3,6 +3,7 @@ title: 'A propriedade watchQuery'
 description: Observe as strings de consulta e execute métodos de componente a cada alteração (asyncData, fetch, validate, layout, ...)
 menu: WatchQuery Property
 category: components-glossary
+position: 0
 ---
 
 > Observe as strings de consulta e execute métodos de componente a cada alteração (asyncData, fetch(contexto), validate, layout, ...)

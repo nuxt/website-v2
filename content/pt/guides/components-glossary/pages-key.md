@@ -3,6 +3,7 @@ title: 'A propriedade key'
 description: Defina a propriedade `key` do componente interno `<router-view>`
 menu: Key Property
 category: components-glossary
+position: 0
 ---
 
 > Defina a propriedade `key` do componente interno `<router-view>`

@@ -1,9 +1,30 @@
-# Redirect default Netlify subdomain to primary domain
+# [NETLIFY] Redirect default Netlify subdomain to primary domain
 https://nuxt.netlify.com/* https://nuxtjs.org/:splat 301!
-# Redirect www.nuxtjs.org to nuxtjs.org
+# [SUBDOMAIN] Redirect www.nuxtjs.org to nuxtjs.org
 https://www.nuxtjs.org/* https://nuxtjs.org/:splat 301!
-# Redirect /logos to /design
+# [LEGACY] Redirect URLs (FROM, TO, 301!)
 /logos /design 301!
+# [LEGACY] Redirect GUIDE URLs
+/guide /guides/??? 301!
+/guide/assets /guides/directory-structure/assets 301!
+/guide/async-data /guides/release-notes 301!
+/guide/commands /guides/release-notes 301!
+/guide/configuration /guides/release-notes 301!
+/guide/contribution-guide /guides/release-notes 301!
+/guide/development-tools /guides/release-notes 301!
+/guide/directory-structure /guides/release-notes 301!
+/guide/installation /guides/release-notes 301!
+/guide/modules /guides/release-notes 301!
+/guide/plugins /guides/release-notes 301!
+/guide/release-notes /guides/release-notes 301!
+/guide/routing /guides/release-notes 301!
+/guide/runtime-config /guides/release-notes 301!
 /guide/themes /themes 301!
+/guide/typescript /guides/release-notes 301!
+/guide/upgrading /guides/release-notes 301!
+/guide/views /guides/release-notes 301!
+/guide/vuex-store /guides/release-notes 301!
+# [LEGACY] Redirect API URLs
 /api/components-no-ssr /api/components-client-only 301!
+# [LEGACY] Redirect FAQ URLs
 /faq/google-analytics /faq/ga 301!

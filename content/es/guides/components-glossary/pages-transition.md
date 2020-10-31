@@ -3,6 +3,7 @@ title: 'Propiedad de "Transición entre paginas"'
 description: Nuxt.js usa el componente `<transition>` para crear y aplicar increíbles transiciones/animaciones mientras navega entre sus páginas.
 menu: Propiedad Transición entre paginas
 category: components-glossary
+position: 0
 ---
 
 > Nuxt.js usa el componente [`<transition>`](https://vuejs.org/v2/guide/transitions.html#Transitioning-Single-Elements-Components) para crear y aplicar increíbles transiciones y animaciones mientras navega entre sus páginas.

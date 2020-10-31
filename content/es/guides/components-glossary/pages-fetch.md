@@ -3,6 +3,7 @@ title: 'El método Fetch'
 description: El método `fetch` se usa para llenar la `store` antes de renderizar la página, es como el método` asyncData` excepto que no establece los datos del componente.
 menu: Método Fetch
 category: components-glossary
+position: 0
 ---
 
 ## Nuxt >= 2.12

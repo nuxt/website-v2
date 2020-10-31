@@ -3,6 +3,7 @@ title: 'The key Property'
 description: Set the `key` property of internal `<router-view>` component
 menu: Key Property
 category: components-glossary
+position: 0
 ---
 
 > Set the `key` property of internal `<router-view>` component

@@ -3,6 +3,7 @@ title: 'La propiedad watchQuery'
 description: Observar los query strings y ejecutar métodos del componente cuando cambien (asyncData, fetch, validate, layout, ...)
 menu: Propiedad WatchQuery
 category: components-glossary
+position: 0
 ---
 
 > Observar los query strings y ejecutar métodos del componente cuando cambien (asyncData, fetch(context), validate, layout, ...)

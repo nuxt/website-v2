@@ -3,6 +3,7 @@ title: 'The layout Property'
 description: Cada archivo (primer nivel) en la carpeta `layouts` creará un layout personalizado accesible con la propiedad layout en el componente de página.
 menu: Propiedad Layout
 category: components-glossary
+position: 0
 ---
 
 > Cada archivo (primer nivel) en la carpeta `layouts` creará un layout personalizado accesible con la propiedad layout en el componente de página.

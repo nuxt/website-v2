@@ -3,6 +3,7 @@ title: 'Properti middleware'
 description: Atur middleware untuk halaman aplikasi tertentu.
 menu: Properti Middleware
 category: components-glossary
+position: 0
 ---
 
 - Type: `String` or `Array` or `Function`

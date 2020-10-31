@@ -3,6 +3,7 @@ title: 'fetch メソッド'
 description: '`fetch` メソッドは、ページがレンダリングされる前に、データをストアに入れるために使われます。コンポーネントのデータをセットしないという点を除いては `asyncData`メソッドとよく似ています。'
 menu: fetch メソッド
 category: components-glossary
+position: 0
 ---
 
 ## Nuxt >= 2.12

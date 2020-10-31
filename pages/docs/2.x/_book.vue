@@ -19,7 +19,7 @@ export default {
   async asyncData({ $content, app, params, redirect }) {
     let pages = []
     if (!params.book) {
-      return redirect('/guides/get-started/installation')
+      return redirect('/docs/2.x/get-started/installation')
     }
     try {
       const locale = ['pt', 'es'].includes(app.i18n.locale)

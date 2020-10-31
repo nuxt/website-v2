@@ -18,7 +18,7 @@ module.exports = {
       {
         name: 'Docs',
         icon: 'books',
-        slug: 'guides-book-slug'
+        slug: 'docs-2.x-book-slug'
       },
       {
         name: 'Resources',

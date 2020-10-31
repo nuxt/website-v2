@@ -77,12 +77,15 @@ export default {
     links: {
       type: Object,
       default: () => []
+    },
+    section: {
+      type: String,
+      required: true
     }
   },
   data() {
     return {
-      show: false,
-      section: this.$route.params.section
+      show: false
     }
   },
   computed: {
@@ -90,9 +93,6 @@ export default {
       return this.$route.path.slice(-1) === '/'
         ? this.$route.path.slice(0, -1)
         : this.$route.path
-    },
-    locale() {
-      return '/' + this.$route.params.section
     },
     sortedLinks() {
       const links = {}
@@ -108,9 +108,9 @@ export default {
   },
   methods: {
     toLink(link) {
-      const slug = link.slug === 'index' ? undefined : link.slug
       return this.localePath({
-        params: { section: 'examples', slug }
+        name: this.section + '-slug',
+        params: { slug: link.slug }
       })
     },
     clickOutsideHandler() {

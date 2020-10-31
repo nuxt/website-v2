@@ -28,3 +28,7 @@ https://www.nuxtjs.org/* https://nuxtjs.org/:splat 301!
 /api/components-no-ssr /api/components-client-only 301!
 # [LEGACY] Redirect FAQ URLs
 /faq/google-analytics /faq/ga 301!
+# Redirect api to new guides
+/api /guides/configuration-glossary/configuration-build
+# Redirect guide to new guides
+/guide /guides/get-started/installation

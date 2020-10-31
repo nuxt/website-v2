@@ -1,8 +1,8 @@
 <template>
   <div class="shadow-nuxt">
     <div class="container mx-auto px-4 lg:flex pb-12">
-      <TheMobileAsideNav :links="links" section="examples"/>
-      <TheAsideNav :links="links" section="examples" class="hidden lg:block" />
+      <TheMobileAsideNav :links="links" section="faq"/>
+      <TheAsideNav :links="links" section="faq" class="hidden lg:block" />
       <div class="w-full lg:static lg:max-h-full lg:overflow-visible lg:w-3/4">
         <nuxt-child />
       </div>
@@ -18,13 +18,13 @@ export default {
     let pages = []
 
     try {
-      pages = await $content(app.i18n.defaultLocale, 'examples')
+      pages = await $content(app.i18n.defaultLocale, 'faq')
         .only(['slug', 'title', 'position', 'menu', 'category'])
         .sortBy('position')
         .fetch()
 
       if (app.i18n.locale !== app.i18n.defaultLocale) {
-        const newPages = await $content(app.i18n.locale, 'examples')
+        const newPages = await $content(app.i18n.locale, 'faq')
           .only(['slug', 'title', 'position', 'menu', 'category'])
           .sortBy('position')
           .fetch()

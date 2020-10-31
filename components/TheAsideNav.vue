@@ -62,14 +62,17 @@ export default {
     links: {
       type: Object,
       default: () => {}
+    },
+    section: {
+      type: String,
+      required: true
     }
   },
   data() {
     return {
       current: 0,
       setInter: null,
-      showNav: false,
-      section: 'examples'
+      showNav: false
     }
   },
   computed: {
@@ -80,9 +83,6 @@ export default {
       return this.$route.path.slice(-1) === '/'
         ? this.$route.path.slice(0, -1)
         : this.$route.path
-    },
-    menu() {
-      return '/examples'
     },
     sortedLinks() {
       const links = {}
@@ -99,7 +99,7 @@ export default {
   methods: {
     toLink(link) {
       return this.localePath({
-        name: 'examples-slug',
+        name: this.section + '-slug',
         params: { slug: link.slug }
       })
     }

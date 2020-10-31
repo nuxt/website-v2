@@ -19,7 +19,7 @@ module.exports = {
       {
         name: 'Rehberler',
         icon: 'books',
-        slug: 'guides-book-slug'
+        slug: 'docs-2.x-book-slug'
       },
       {
         name: 'Kaynaklar',

@@ -59,15 +59,10 @@
           </div>
           <div class="flex-1 text-center hidden sm:block">
             <a
-              class="block"
-              href="/"
-              @click.prevent="$router.push('/')"
-              @click.right.stop.prevent="$router.push('/design')"
-            >
-              <h1 class="m-0 h-0 w-0 overflow-hidden">NUXTJS</h1>
-              <SmallNuxtLogo
-                class="inline-block h-6 lg:h-auto text-light-onSurfacePrimary dark:text-dark-onSurfacePrimary transition-colors duration-300 ease-linear"
-              />
+              class="inline-block"
+              href="https://url.netlify.com/B1Mh093Iv"
+              target="_blank">
+              <img src="https://www.netlify.com/img/global/badges/netlify-color-bg.svg" class="h-10" alt="Deploys by Netlify" />
             </a>
           </div>
           <div class="flex-1 text-right">
@@ -100,26 +95,44 @@ export default {
     return {
       links: {
         discover: [
-          { key: this.$t('footer.links.discover.design'), to: '/design' },
-          { key: this.$t('footer.links.discover.team'), to: '/team' },
-          { key: this.$t('footer.links.discover.blog'), to: '/blog' }
+          {
+            key: this.$t('footer.links.about.team'),
+            to: this.localePath('/team')
+          },
+          {
+            key: this.$t('footer.links.about.design'),
+            to: this.localePath('/design')
+          },
+          {
+            key: this.$t('footer.links.about.contact'),
+            href: 'https://twitter.com/nuxt_js'
+          }
         ],
-        follow: [
-          { key: 'GitHub', href: 'https://github.com/nuxt/nuxt.js' },
-          { key: 'Twitter', href: 'https://twitter.com/nuxt_js' },
-          { key: 'Discord', href: 'https://discord.nuxtjs.org' }
+        about: [
+          {
+            key: this.$t('footer.links.support.faq'),
+            to: this.localePath('/faq')
+          },
+          {
+            key: this.$t('footer.links.support.discord'),
+            href: 'https://discord.nuxtjs.org'
+          },
+          {
+            key: this.$t('footer.links.support.contributionGuide'),
+            href: 'https://github.com/nuxt/nuxtjs.org/blob/master/content/en/_archives/guide/contribution-guide.md'
+          }
         ],
         support: [
           {
-            key: this.$t('footer.links.support.sponsorNuxt'),
-            to: this.localePath('/sponsor-nuxtjs')
-          },
-          {
-            key: this.$t('footer.links.support.shop'),
+            key: this.$t('footer.links.discover.shop'),
             to: this.localePath('/shop')
           },
           {
-            key: this.$t('footer.links.support.consulting'),
+            key: this.$t('footer.links.discover.sponsorNuxt'),
+            to: this.localePath('/sponsor-nuxtjs')
+          },
+          {
+            key: this.$t('footer.links.discover.consulting'),
             to: this.localePath('/support')
           }
         ]

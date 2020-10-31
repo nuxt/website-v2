@@ -321,19 +321,22 @@ module.exports = {
   footer: {
     links: {
       discover: {
-        title: 'Descrubrir',
-        design: 'Recursos de Diseño',
-        team: 'Un Equipo Mundial',
-        blog: 'Blog'
+        title: 'Discover',
+        shop: 'Our Goodies Store',
+        consulting: 'Training & consultancy',
+        sponsorNuxt: 'Sponsoring & donations',
       },
-      follow: {
-        title: 'Seguir'
+      about: {
+        title: 'About',
+        team: 'Our team',
+        design: 'Design kit',
+        contact: 'Contact us'
       },
       support: {
-        title: 'soporte de NuxtJS',
-        sponsorNuxt: 'Patrocinar NuxtJS',
-        shop: 'La tienda de NuxtJS',
-        consulting: 'Consultoría de NuxtJS'
+        title: 'Support',
+        faq: 'FAQ',
+        discord: 'Chat with us',
+        contributionGuide: 'Contribution guide'
       }
     }
   },

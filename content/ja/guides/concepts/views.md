@@ -1,51 +1,51 @@
 ---
-title: Views
-description: The Views section describes all you need to know to configure data and views for a specific route in your Nuxt.js Application. Views consist of an app template, a layout, and the actual page.
+title: ビュー
+description: Views セクションでは、Nuxt.js アプリケーション内の特定のルートのデータとビューを設定するために必要なことを全て説明しています。 ビューは、アプリテンプレート、レイアウト、ページで構成されています。
 position: 1
 category: concepts
 csb_link: https://codesandbox.io/embed/github/nuxt-academy/guides-examples/tree/master/02_concepts/01_views?fontsize=14&hidenavigation=1&theme=dark
 questions:
-  - question: What is the composition order of a Nuxt view (top-down)?
+  - question: Nuxt ビューの構成順序は？ (上から)?
     answers:
-      - Layout → Page → Document
-      - Page → Layout → Document
-      - Document → Layout → Page
-    correctAnswer: Document → Layout → Page
-  - question: What is the default layout called?
+      - レイアウト → ページ → ドキュメント
+      - ページ → レイアウト → ドキュメント
+      - ドキュメント → レイアウト → ページ
+    correctAnswer: ドキュメント → レイアウト → ページ
+  - question: デフォルトのレイアウトは何と呼ばれていますか？
     answers:
       - default.vue
       - layout.vue
       - defaultLayout.vue
     correctAnswer: default.vue
-  - question: How do you create a custom layout?
+  - question: カスタムレイアウトの作成方法は？
     answers:
-      - add a .vue file to the pages folder
-      - add a .vue file to the layouts folder
-      - add a .vue file to the components folder
-    correctAnswer: add a .vue file to the layouts folder
-  - question: How do you activate your custom layout called 'blog' on your page?
+      - pages フォルダに .vue ファイルを追加する
+      - layouts フォルダに .vue ファイルを追加する
+      - components フォルダに .vue ファイルを追加する
+    correctAnswer: layouts フォルダに .vue ファイルを追加する
+  - question: ページで「ブログ」というカスタムレイアウトを有効にするには？
     answers:
       - "layout: 'blog'"
       - "layout: 'default'"
       - "blog: 'blog'"
     correctAnswer: "layout: 'blog'"
-  - question: Where do you put your error.vue file that creates a customized error page
+  - question: カスタマイズされたエラーページを作成する error.vue ファイルはどこに置きますか？
     answers:
-      - in the pages folder
-      - in the errors folder
-      - in the layouts folder
-    correctAnswer: in the layouts folder
+      - pages フォルダ
+      - errors フォルダ
+      - layouts フォルダ
+    correctAnswer: layouts フォルダ
 ---
 
-The Views section describes all you need to know to configure data and views for a specific route in your Nuxt.js Application. Views consist of an app template, a layout, and the actual page. In addition, you can define custom meta tags for the head section of each page which are important for SEO (Search Engine Optimization).
+Views セクションでは、Nuxt.js アプリケーション内の特定のルートのデータとビューを設定するために必要なことを全て説明しています。ビューは、アプリテンプレート、レイアウト、ページで構成されています。加えて、各ページのヘッド部に SEO (Search Engine Optimization)に重要なカスタムメタタグを定義することができます。
 
 ![Composition of a View in Nuxt.js](/guides/views.png)
 
-Composition of a View in Nuxt.js
+Nuxt.js でのビューの構成
 
-## Pages
+## ページ
 
-Every Page component is a Vue component but Nuxt.js adds special attributes and functions to make the development of your application as easy as possible.
+すべてのページコンポーネントは Vue コンポーネントですが、Nuxt.js はアプリケーションの開発を可能な限り容易にするための特殊な属性や機能が追加されています。
 
 ```html{}[pages/index.vue]
 <template>
@@ -55,7 +55,7 @@ Every Page component is a Vue component but Nuxt.js adds special attributes and 
 <script>
   export default {
     head() {
-      // Set Meta Tags for this Page
+      // このページ向けにメタタグを設定します
     }
     // ...
   }
@@ -68,23 +68,23 @@ Every Page component is a Vue component but Nuxt.js adds special attributes and 
 </style>
 ```
 
-## Properties of a page component
+## ページコンポーネントのプロパティ
 
-There are many properties of the page component such as the head property in the example above.
+上の例の head プロパティのように、ページコンポーネントには多くのプロパティがあります。
 
 <base-alert type="next">
 
-See the [Directory Structure book](/guides/directory-structure/nuxt) to learn more about all the properties can use on your page
+ページで使用できるすべてのプロパティの詳細については、[Directory Structure book](/guides/directory-structure/nuxt) 参照してください。
 
 </base-alert>
 
-## Layouts
+## レイアウト
 
-Layouts are a great help when you want to change the look and feel of your Nuxt.js app. For example you want to include a sidebar or have distinct layouts for mobile and desktop.
+サイドバーを含めたり、モバイルとデスクトップに異なるレイアウトを使用したりするなど Nuxt.js アプリの外観を変更したい場合にレイアウトは非常に役立ちます。
 
-### Default Layout
+### デフォルトレイアウト
 
-You can define a default layout by adding a `default.vue` file inside the layouts directory. This will be used for all pages that don't have a layout specified. The only thing you need to include in the layout is the `<Nuxt />` component which renders the page component.
+layouts ディレクトリに `default.vue`  ファイルを追加することでデフォルトレイアウトを定義することができます。これは特定のレイアウトを持たないすべてのページで使用されます。レイアウトに含める必要があるのは、ページコンポーネントをレンダリングする `<Nuxt />` コンポーネントだけです。
 
 ```html{}[layouts/default.vue]
 <template>
@@ -94,15 +94,15 @@ You can define a default layout by adding a `default.vue` file inside the layo
 
 <base-alert type="next">
 
-Learn more about the [Nuxt component](/guides/features/nuxt-components) in the components chapter
+詳細はコンポーネントの章の [Nuxt component](/guides/features/nuxt-components) を参照してください。
 
 </base-alert>
 
-### Custom Layout
+### カスタムレイアウト
 
-You can create custom layouts by adding a `.vue` file to the layouts directory. In order to use the custom layout you need to set the `layout` property in the page component where you want to use that layout. The value will be the name of the custom layout that you have created.
+layouts ディレクトリに `.vue` ファイルを追加することで、カスタムレイアウトを作成できます。カスタムレイアウトを使用するには、そのレイアウトを使用したいページコンポーネントで `layout` プロパティを設定する必要があります。値は作成したカスタムレイアウトの名前になります。
 
-To create a blog layout add a `blog.vue` file to your layouts directory `layouts/blog.vue`:
+blog レイアウトを作成するには、`blog.vue` ファイルを layouts ディレクトリ `layouts/blog.vue` に追加します。:
 
 ```html{}[layouts/blog.vue]
 <template>
@@ -115,27 +115,27 @@ To create a blog layout add a `blog.vue` file to your layouts directory `layouts
 
 <base-alert>
 
-Make sure to add the `<Nuxt/>` component when creating a layout to actually include the page component.
+実際にページコンポーネントを含めるレイアウトを作成するときは、必ず `<Nuxt />`コンポーネントを追加してください。
 
 </base-alert>
 
-We then use the layout property with the value of 'blog' in the page where we want that layout to be used.
+次に、そのレイアウトを使用したいページで 'blog' の値を持つ layout プロパティを使用します。
 
 ```html{}[pages/posts.vue]
 <template>
-  <!-- Your template -->
+  <!-- テンプレート -->
 </template>
 <script>
   export default {
     layout: 'blog'
-    // page component definitions
+    // ページコンポーネントの定義
   }
 </script>
 ```
 
 <base-alert type="info">
 
-If you don't add a layout property to your page, eg `layout: 'blog'` then the `default.vue` layout will be used.
+ページに `layout: 'blog'` のような layout プロパティを追加しない場合、`default.vue` レイアウトが使用されます。
 
 </base-alert>
 
@@ -143,19 +143,19 @@ If you don't add a layout property to your page, eg `layout: 'blog'` then the `d
   <code-sandbox  :src="csb_link"></code-sandbox>
 </app-modal>
 
-### Error Page
+### エラーページ
 
-The error page is a *page component* which is always displayed when an error occurs (that does not happen while server-side rendering).
+エラーページは、エラーが発生したときに常に表示される _ページコンポーネント_ です（サーバーサイドレンダリングでは発生しません）。
 
 <base-alert>
 
-Although this file is placed in the `layouts` folder, it should be treated as a page.
+このファイルは `layouts` フォルダーに配置されますが、ページとして扱う必要があります。
 
 </base-alert>
 
-As mentioned above, this layout is special, since you should not include the `<Nuxt/>`  component inside its template. You must see this layout as a component displayed when an error occurs (`404`, `500`, etc.). Similar to other page components, you can set a custom layout for the error page as well in the usual way.
+上記のように、このレイアウトは特別です。なぜなら、テンプレート内に `<Nuxt />`コンポーネントを含めるべきではないからです。このレイアウトは、エラー(`404`, `500` など)が発生したときに表示されるコンポーネントとしてみなさなければなりません。他のページコンポーネントと同様に、エラーページにも通常の方法でカスタムレイアウトを設定することができます。
 
-You can customize the error page by adding a `layouts/error.vue` file:
+`layouts/error.vue` ファイルを追加することでエラーページをカスタマイズすることができます。:
 
 ```html{}[layouts/error.vue]
 <template>
@@ -169,16 +169,16 @@ You can customize the error page by adding a `layouts/error.vue` file:
 <script>
   export default {
     props: ['error'],
-    layout: 'error' // you can set a custom layout for the error page
+    layout: 'error' // エラーページ用のカスタムレイアウトを指定できます
   }
 </script>
 ```
 
-## Document: App.html
+## ドキュメント: App.html
 
-The app template is used to create the actual HTML frame of your document for your Nuxt.js application which injects the content as well as variables for the head and body. This file is created automatically for you and in general rarely needs to be modified. You can customize the HTML app template used by Nuxt.js to include scripts or conditional CSS classes by creating an `app.html` file in the source directory of your project which by default is the root directory.
+アプリテンプレートは、Nuxt.js アプリケーションのドキュメントの実際の HTML フレームを作成するために使用され、コンテンツだけでなく、ヘッドとボディに変数も注入します。このファイルは自動的に作成されるので、通常はほとんど変更する必要はありません。プロジェクトのソースディレクトリ（デフォルトではルートディレクトリ）に `app.html` ファイルを作成することで、スクリプトや条件付き CSS クラスを含むように Nuxt.js が使用する HTML アプリテンプレートをカスタマイズすることができます。
 
-The default template used by Nuxt.js is:
+Nuxt.js で使用されるデフォルトのテンプレートは次のとおりです。:
 
 ```html{}[app.html]
 <!DOCTYPE html>
@@ -192,7 +192,7 @@ The default template used by Nuxt.js is:
 </html>
 ```
 
-One use case of using a custom app template is to add conditional CSS classes for IE:
+カスタムアプリテンプレートを使うユースケースの一つとして、IE 用の条件付き CSS クラスを追加することが挙げられます。:
 
 ```html{}[app.html]
 <!DOCTYPE html>
@@ -209,7 +209,7 @@ One use case of using a custom app template is to add conditional CSS classes fo
 
 <base-alert type="info">
 
-While you can add JavaScript and CSS files in the `app.html`, it is recommended to use the `nuxt.config.js` for these tasks instead!
+JavaScript や CSS ファイルを `app.html` に追加することもできますが、代わりに `nuxt.config.js` を使用することをお勧めします!
 
 </base-alert>
 

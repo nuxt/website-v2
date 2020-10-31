@@ -14,7 +14,7 @@
             :is="$route.params.book === group ? `h3` : 'nuxt-link'"
             :key="`title-${group}`"
             :to="{
-              name: 'guides-book-slug',
+              name: 'docs-2.x-book-slug',
               params: { book: group, slug: sublinks[0].slug }
             }"
             class="flex items-center uppercase font-medium text-light-onSurfaceSecondary dark:text-dark-onSurfaceSecondary pb-2 transition-colors duration-300 ease-linear"
@@ -101,7 +101,7 @@ export default {
   methods: {
     toLink(group, link) {
       return this.localePath({
-        name: 'guides-book-slug',
+        name: 'docs-2.x-book-slug',
         params: { book: group, slug: link.slug }
       })
     }

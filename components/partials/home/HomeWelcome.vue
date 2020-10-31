@@ -38,7 +38,7 @@
           <div class="flex flex-col sm:block py-4">
             <AppButton
               :to="{
-                name: 'guides-book-slug',
+                name: 'docs-2.x-book-slug',
                 params: {
                   book: 'get-started',
                   slug: 'installation'

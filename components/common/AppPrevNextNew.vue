@@ -5,7 +5,7 @@
       data-cy="prev"
       :to="
         localePath({
-          name: 'guides-book-slug',
+          name: 'docs-2.x-book-slug',
           params: { book: prevBook, slug: prev.slug }
         })
       "
@@ -25,7 +25,7 @@
       data-cy="next"
       :to="
         localePath({
-          name: 'guides-book-slug',
+          name: 'docs-2.x-book-slug',
           params: { book: nextBook, slug: next.slug }
         })
       "

@@ -88,7 +88,3 @@ https://www.nuxtjs.org/* https://nuxtjs.org/:splat 301!
 /api/pages-watchquery /docs/2.x/components-glossary/pages-watchquery 301!
 # [LEGACY] Redirect FAQ URLs
 /faq/google-analytics /faq/ga 301!
-# Redirect api to new guides
-/api /guides/configuration-glossary/configuration-build
-# Redirect guide to new guides
-/guide /guides/get-started/installation

@@ -3,6 +3,7 @@ title: 'متد fetch'
 description: متد `fetch` برای بارگزاری اطلاعات در store قبل از رندر شدن صفحه استفاده می شود. عملکردی مشابه `asyncData` دارد با تفاوت اینکه داده‌های کامپوننت را تنظیم نمی‌کند.
 menu: متد fetch
 category: components-glossary
+position: 0
 ---
 
 ## Nuxt >= 2.12

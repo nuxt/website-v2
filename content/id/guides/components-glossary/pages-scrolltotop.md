@@ -3,6 +3,7 @@ title: 'Properti scrollToTop'
 description: Properti `scrollToTop` memungkinkan Anda memberi tahu Nuxt.js untuk menggulir ke atas sebelum merender halaman.
 menu: Properti scrollToTop
 category: components-glossary
+position: 0
 ---
 
 > Properti scrollToTop memungkinkan Anda memberi tahu Nuxt.js untuk menggulir ke atas sebelum merender halaman.

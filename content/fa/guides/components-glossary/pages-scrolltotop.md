@@ -3,6 +3,7 @@ title: 'ویژگی scrollToTop'
 description: ویژگی `scrollToTop` به شما این امکان را می‌دهد تا به Nuxt.js دستور دهید تا قبل از رندر کردن صفحه به بالای صفحه اسکرول کند.
 menu: ویژگی scrollToTop
 category: components-glossary
+position: 0
 ---
 
 > ویژگی `scrollToTop` به شما این امکان را می‌دهد تا به Nuxt.js دستور دهید تا قبل از رندر کردن صفحه به بالای صفحه اسکرول کند.

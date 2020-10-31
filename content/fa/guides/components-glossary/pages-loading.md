@@ -3,6 +3,7 @@ title: 'ویژگی loading'
 description: ویژگی `loading` این امکان را می‌دهد تا نوار پیشرفت بارگزاری پیشفرض را در یک صفحه بخصوص غیرفعال کنید.
 menu: ویژگی Loading
 category: components-glossary
+position: 0
 ---
 
 > ویژگی `loading` این امکان را می‌دهد تا نوار پیشرفت بارگزاری پیشفرض را در یک صفحه بخصوص غیرفعال کنید.

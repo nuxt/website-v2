@@ -19,7 +19,7 @@ module.exports = {
       {
         name: 'Docs',
         icon: 'books',
-        slug: 'guides-book-slug'
+        slug: 'docs-2.x-book-slug'
       },
       {
         name: 'Recursos',
@@ -320,19 +320,22 @@ module.exports = {
   footer: {
     links: {
       discover: {
-        title: 'Descobrir',
-        design: 'Recursos de Design',
-        team: 'Um time global',
-        blog: 'Blog'
+        title: 'Discover',
+        shop: 'Our Goodies Store',
+        consulting: 'Training & consultancy',
+        sponsorNuxt: 'Sponsoring & donations',
       },
-      follow: {
-        title: 'Seguir'
+      about: {
+        title: 'About',
+        team: 'Our team',
+        design: 'Design kit',
+        contact: 'Contact us'
       },
       support: {
-        title: 'Suporte',
-        sponsorNuxt: 'Patrocine o NuxtJS',
-        shop: 'A Loja do NuxtJS',
-        consulting: 'Assessoria e Suporte NuxtJS'
+        title: 'Support',
+        faq: 'FAQ',
+        discord: 'Chat with us',
+        contributionGuide: 'Contribution guide'
       }
     }
   },

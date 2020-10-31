@@ -19,7 +19,7 @@ module.exports = {
       {
         name: 'Rehberler',
         icon: 'books',
-        slug: 'guides-book-slug'
+        slug: 'docs-2.x-book-slug'
       },
       {
         name: 'Kaynaklar',
@@ -323,20 +323,24 @@ module.exports = {
     links: {
       discover: {
         title: 'Discover',
-        design: 'Design resources',
-        team: 'A worldwide team',
-        blog: 'Blog'
+        shop: 'Our Goodies Store',
+        consulting: 'Training & consultancy',
+        sponsorNuxt: 'Sponsoring & donations',
       },
-      follow: {
-        title: 'Follow'
+      about: {
+        title: 'About',
+        team: 'Our team',
+        design: 'Design kit',
+        contact: 'Contact us'
       },
       support: {
         title: 'Support',
-        sponsorNuxt: 'Sponsor NuxtJS',
-        shop: 'The NuxtJS Shop',
-        consulting: 'NuxtJS Consulting'
+        faq: 'FAQ',
+        discord: 'Chat with us',
+        contributionGuide: 'Contribution guide'
       }
     }
+
   },
   cookies: {
     consent:

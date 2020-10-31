@@ -3,6 +3,7 @@ title: loading プロパティ
 description: '`loading` プロパティは特定のページに対してデフォルトの loading プログレスバーを無効にするオプションを提供します。'
 menu: loading プロパティ
 category: components-glossary
+position: 0
 ---
 
 > loading プロパティは特定のページに対してデフォルトの loading プログレスバーを無効にするオプションを提供します。

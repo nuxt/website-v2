@@ -18,7 +18,7 @@ module.exports = {
       {
         name: 'Panduan',
         icon: 'books',
-        slug: 'guides-book-slug'
+        slug: 'docs-2.x-book-slug'
       },
       {
         name: 'Sumber Daya',
@@ -321,21 +321,25 @@ module.exports = {
   footer: {
     links: {
       discover: {
-        title: 'Menemukan',
-        design: 'Sumber daya desain',
-        team: 'Tim sedunia',
-        blog: 'Blog'
+        title: 'Discover',
+        shop: 'Our Goodies Store',
+        consulting: 'Training & consultancy',
+        sponsorNuxt: 'Sponsoring & donations',
       },
-      follow: {
-        title: 'Ikuti'
+      about: {
+        title: 'About',
+        team: 'Our team',
+        design: 'Design kit',
+        contact: 'Contact us'
       },
       support: {
-        title: 'Dukungan',
-        sponsorNuxt: 'Sponsor NuxtJS',
-        shop: 'Toko NuxtJS',
-        consulting: 'Konsultasi NuxtJS'
+        title: 'Support',
+        faq: 'FAQ',
+        discord: 'Chat with us',
+        contributionGuide: 'Contribution guide'
       }
     }
+
   },
   cookies: {
     consent:

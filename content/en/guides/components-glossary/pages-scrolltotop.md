@@ -3,6 +3,7 @@ title: 'The scrollToTop Property'
 description: The `scrollToTop` property lets you tell Nuxt.js to scroll to the top before rendering the page.
 menu: scrollToTop Property
 category: components-glossary
+position: 0
 ---
 
 > The scrollToTop property lets you tell Nuxt.js to scroll to the top before rendering the page.

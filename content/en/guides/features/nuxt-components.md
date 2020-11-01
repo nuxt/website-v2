@@ -419,7 +419,7 @@ Use a slot as placeholder until `<client-only />` is mounted on client-side.
 
 <base-alert  type="info">
 
-Sometimes in server rendered pages $refs inside clientonly might not be ready even with $nextTick, the trick might be to call nextTick couple of times:
+Sometimes in server rendered pages `$refs` inside `<client-only>` might not be ready even with `$nextTick`, the trick might be to call `$nextTick couple of times:
 ```js{}[page.vue]
 mounted(){
   this.initClientOnlyComp()
@@ -431,7 +431,7 @@ methods: {
         .... 
         } 
       else if (count > 0) 
-        this.tryAddTimeLine(count - 1);
+        this.initClientOnlyComp(count - 1);
     }
   }
 }

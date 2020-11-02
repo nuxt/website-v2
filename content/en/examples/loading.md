@@ -1,7 +1,7 @@
 ---
 title: Loading
 description: Create a custom loading component, modify the default loader as well as the spinner for spas
-position: 38
+position: 8
 category: essentials
 csb_link: https://codesandbox.io/embed/github/nuxt-academy/guides-examples/tree/master/03_features/08_loading
 ---

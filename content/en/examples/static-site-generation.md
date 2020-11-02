@@ -1,7 +1,7 @@
 ---
 title: Static site Generation
 description: Use the generate property for customizations for when deploying static sites
-position: 55
+position: 14
 category: essentials
 csb_link: https://codesandbox.io/embed/github/nuxt-academy/guides-examples/tree/master/04_directory_structure/05_dist
 ---

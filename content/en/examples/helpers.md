@@ -1,7 +1,7 @@
 ---
 title: The $nuxt Helpers
 description: Using the $nuxt helpers with $nuxt.isOnline, renderedOn, refresh(), onNuxtReady
-position: 23
+position: 52
 category: advanced
 csb_link: https://codesandbox.io/embed/github/nuxt-academy/guides-examples/tree/master/02_concepts/02_context_helpers-helpers?
 ---

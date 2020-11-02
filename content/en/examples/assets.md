@@ -1,7 +1,7 @@
 ---
 title: Assets
 description: Use the assets folder to add css, images and fonts to your application
-position: 52
+position: 12
 category: essentials
 csb_link: https://codesandbox.io/embed/github/nuxt-academy/guides-examples/tree/master/04_directory_structure/02_assets
 ---

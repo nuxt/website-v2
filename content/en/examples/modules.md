@@ -1,7 +1,7 @@
 ---
 title: Modules
 description: Internal and external modules to fetch data from an API
-position: 60
+position: 31
 category: modules
 csb_link: https://codesandbox.io/embed/github/nuxt-academy/guides-examples/tree/master/04_directory_structure/10_modules
 ---

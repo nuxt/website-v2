@@ -1,7 +1,7 @@
 ---
 title: Custom Plugins
 description: In this example we show how you how you can create your own plugin
-position: 65
+position: 44
 category: plugins
 csb_link: https://codesandbox.io/embed/github/nuxt-academy/guides-examples/tree/master/04_directory_structure/12_plugins_custom_plugin
 ---

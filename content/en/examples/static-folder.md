@@ -1,7 +1,7 @@
 ---
 title: Static Folder
 description: In this example you can see how to show an image from the static folder
-position: 66
+position: 16
 category: essentials
 csb_link: https://codesandbox.io/embed/github/nuxt-academy/guides-examples/tree/master/04_directory_structure/13_static
 ---

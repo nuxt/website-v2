@@ -1,7 +1,7 @@
 ---
 title: Transitions
 description: Adding default and custom transitions to your pages and layouts
-position: 41
+position: 11
 category: essentials
 csb_link: https://codesandbox.io/embed/github/nuxt-academy/guides-examples/tree/master/03_features/05_transitions?
 ---

@@ -1,7 +1,7 @@
 ---
 title: NuxtLink Classes
 description: Change the default NuxtLink classes and style the active and exact active classes as well as disable prefetch for a specific link
-position: 40
+position: 10
 category: essentials
 csb_link: https://codesandbox.io/embed/github/nuxt-academy/guides-examples/tree/master/03_features/09_components_nuxt-link
 ---

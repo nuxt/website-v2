@@ -1,7 +1,7 @@
 ---
 title: Host and Port
 description: How to use the host and port so you can set up a script to run the dev mode on a specific host and port to see your dev changes on your mobile
-position: 37
+position: 53
 category: advanced
 csb_link: https://codesandbox.io/embed/github/nuxt-academy/guides-examples/tree/master/03_features/07_configuration_host_port
 ---

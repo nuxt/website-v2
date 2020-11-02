@@ -1,8 +1,8 @@
 ---
 title: The Context
 description: Using the context with asyncData to retrieve data from an API and middleware to check authentication using the store.
-position: 22
-category: essentials
+position: 51
+category: advanced
 csb_link: https://codesandbox.io/embed/github/nuxt-academy/guides-examples/tree/master/02_concepts/02_context_helpers-context?fontsize=14&hidenavigation=1&theme=dark
 ---
 

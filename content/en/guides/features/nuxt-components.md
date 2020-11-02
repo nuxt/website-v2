@@ -94,7 +94,7 @@ The `<Nuxt>` component is the component you use to display your page components.
 
 <base-alert>
 
-The `<Nuxt>` component can only be used inside [layouts](/guides/concepts/views#layouts).
+The `<Nuxt>` component can only be used inside [layouts](/docs/2.x/concepts/views#layouts).
 
 </base-alert>
 
@@ -255,7 +255,7 @@ If you want to know more about `<RouterLink>`, feel free to read the [Vue Route
 
 <base-alert type="info">
 
-`<NuxtLink>` also comes with [smart prefetching](/guides/features/nuxt-components#the-nuxtlink-component) out of the box.
+`<NuxtLink>` also comes with [smart prefetching](/docs/2.x/features/nuxt-components#the-nuxtlink-component) out of the box.
 
 </base-alert>
 
@@ -419,7 +419,8 @@ Use a slot as placeholder until `<client-only />` is mounted on client-side.
 
 <base-alert  type="info">
 
-Sometimes in server rendered pages `$refs` inside `<client-only>` might not be ready even with `$nextTick`, the trick might be to call `$nextTick couple of times:
+Sometimes in server rendered pages `$refs` inside `<client-only>` might not be ready even with `$nextTick`, the trick might be to call `\$nextTick couple of times:
+
 ```js{}[page.vue]
 mounted(){
   this.initClientOnlyComp()
@@ -428,16 +429,16 @@ methods: {
   initClientOnlyComp(count) {
     this.$nextTick(() => {
       if (this.$refs.myComp) {
-        .... 
-        } 
-      else if (count > 0) 
+        ....
+        }
+      else if (count > 0)
         this.initClientOnlyComp(count - 1);
     }
   }
 }
 ```
-</base-alert>
 
+</base-alert>
 
 <base-alert>
 

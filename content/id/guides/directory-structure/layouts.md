@@ -94,7 +94,7 @@ Anda dapat menambahkan komponen-komponen lainnya seperti Navigation, Header, Foo
 
 <base-alert type="info">
 
-Jika Anda memiliki [komponen-komponen yang nilainya di-*set* *true*](/guides/directory-structure/components), maka tidak perlu lagi menambahkan pernyataan-pernyataan import pada komponen-komponen tersebut.
+Jika Anda memiliki [komponen-komponen yang nilainya di-_set_ _true_](/docs/2.x/directory-structure/components), maka tidak perlu lagi menambahkan pernyataan-pernyataan import pada komponen-komponen tersebut.
 
 </base-alert>
 
@@ -137,13 +137,12 @@ Halaman galat merupakan sebuah *page component* yang ditampilkan setiap kali t
 
 <base-alert>
 
-
 Meskipun berkas ini ditempatkan di folder `layouts`, berkas ini harus diperlakukan sebagai sebuah halaman.
 
 </base-alert>
 
 Seperti diberitahukan di atas, layout ini spesial dan
-janganlah menyertakan `<Nuxt>` di dalam templatenya. Anda harus melihat layout ini sebagai sebuah komponen yang  ditampilkan ketika terjadi kesalahan (`404`, `500`, dll.). Seperti halnya komponen-komponen halaman lainnya, Anda dapat menggunakan layout kustom untuk halaman galat seperti biasanya.
+janganlah menyertakan `<Nuxt>` di dalam templatenya. Anda harus melihat layout ini sebagai sebuah komponen yang ditampilkan ketika terjadi kesalahan (`404`, `500`, dll.). Seperti halnya komponen-komponen halaman lainnya, Anda dapat menggunakan layout kustom untuk halaman galat seperti biasanya.
 
 Anda dapat melakukan kustomisasi pada halaman galat dengan menambahkan berkas `layouts/galat.vue`:
 

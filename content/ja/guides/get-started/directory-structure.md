@@ -1,6 +1,6 @@
 ---
-title: "ディレクトリ構成"
-description: "デフォルトの Nuxt.js のアプリケーション構造は小規模なものから大規模なものまで両方のアプリケーションにとって素晴らしい出発点を提供することを目的としています。アプリケーションは自由に構成でき、必要に応じて他のディレクトリを作成することができます。"
+title: 'ディレクトリ構成'
+description: 'デフォルトの Nuxt.js のアプリケーション構造は小規模なものから大規模なものまで両方のアプリケーションにとって素晴らしい出発点を提供することを目的としています。アプリケーションは自由に構成でき、必要に応じて他のディレクトリを作成することができます。'
 position: 3
 category: get-started
 csb_link: https://codesandbox.io/embed/github/nuxt-academy/guides-examples/tree/master/01_get_started/03_directory_structure?fontsize=14&hidenavigation=1&theme=dark
@@ -27,11 +27,11 @@ touch nuxt.config.js
 
 ### pages ディレクトリ
 
-`pages` ディレクトリにはアプリケーションのビューとルートが含まれています。前の章で学んだように、Nuxt.js はこのディレクトリ内の `.vue` ファイルをすべて読み込み、アプリケーションのルーターを作成します。
+`pages`  ディレクトリにはアプリケーションのビューとルートが含まれています。前の章で学んだように、Nuxt.js はこのディレクトリ内の `.vue` ファイルをすべて読み込み、アプリケーションのルーターを作成します。
 
 <base-alert type="next">
 
-[pages ディレクトリ](/guides/directory-structure/pages)についてより理解する
+[pages ディレクトリ](/docs/2.x/directory-structure/pages)についてより理解する
 
 </base-alert>
 
@@ -43,43 +43,43 @@ Nuxt.js を使用すると、作成したコンポーネントを .vue ファイ
 
 <base-alert type="next">
 
-[components ディレクトリ](/guides/directory-structure/components)についてより理解する
+[components ディレクトリ](/docs/2.x/directory-structure/components)についてより理解する
 
 </base-alert>
 
 ### assets ディレクトリ
 
-`assets` ディレクトリにはスタイルや画像、フォントなどコンパイルされていないアセットを入れます。
+`assets`  ディレクトリにはスタイルや画像、フォントなどコンパイルされていないアセットを入れます。
 
 <base-alert type="next">
 
-[assets ディレクトリ](/guides/directory-structure/assets)についてより理解する
+[assets ディレクトリ](/docs/2.x/directory-structure/assets)についてより理解する
 
 </base-alert>
 
 ### static ディレクトリ
 
-`static` ディレクトリは直接サーバのルートに配置され、名前を保持しなければいけないファイル（例えば `robots.txt`）_もしくは_変更されない可能性の高いファイルが含まれています（例えば、favicon など）。
+`static`  ディレクトリは直接サーバのルートに配置され、名前を保持しなければいけないファイル（例えば `robots.txt`）*もしくは*変更されない可能性の高いファイルが含まれています（例えば、favicon など）。
 
 <base-alert type="next">
 
-[static ディレクトリ](/guides/directory-structure/static)についてより理解する
+[static ディレクトリ](/docs/2.x/directory-structure/static)についてより理解する
 
 </base-alert>
 
 ### nuxt.config.js ファイル
 
-`nuxt.config.js` ファイルは Nuxt.js の設定を行う唯一の場所です。モジュールの追加やデフォルトの設定を上書きしたい場合にここで変更を適用します。
+`nuxt.config.js`  ファイルは Nuxt.js の設定を行う唯一の場所です。モジュールの追加やデフォルトの設定を上書きしたい場合にここで変更を適用します。
 
 <base-alert type="next">
 
-[nuxt.config.js ファイル](/guides/directory-structure/nuxt-config)についてより理解する
+[nuxt.config.js ファイル](/docs/2.x/directory-structure/nuxt-config)についてより理解する
 
 </base-alert>
 
 ### package.json ファイル
 
-`package.json` ファイルには、アプリケーションのすべての依存関係とスクリプトが含まれています。
+`package.json`  ファイルには、アプリケーションのすべての依存関係とスクリプトが含まれています。
 
 <app-modal>
   <code-sandbox  :src="csb_link"></code-sandbox>
@@ -87,10 +87,10 @@ Nuxt.js を使用すると、作成したコンポーネントを .vue ファイ
 
 ## プロジェクト構成についての詳細
 
-[content](/guides/directory-structure/content)、[layouts](/guides/directory-structure/layouts)、[middleware](/guides/directory-structure/middleware)、[modules](/guides/directory-structure/modules)、[plugins](/guides/directory-structure/plugins) そして [store](/guides/directory-structure/store) など、さらに役立つディレクトリやファイルがあります。これらは小規模なアプリケーションには必要ないのでここでは説明しません。
+[content](/docs/2.x/directory-structure/content)、[layouts](/docs/2.x/directory-structure/layouts)、[middleware](/docs/2.x/directory-structure/middleware)、[modules](/docs/2.x/directory-structure/modules)、[plugins](/docs/2.x/directory-structure/plugins) そして [store](/docs/2.x/directory-structure/store) など、さらに役立つディレクトリやファイルがあります。これらは小規模なアプリケーションには必要ないのでここでは説明しません。
 
 <base-alert type="next">
 
-すべてのディレクトリについての詳細は[ディレクトリ構造のドキュメント](/guides/directory-structure/nuxt)を参照してください。
+すべてのディレクトリについての詳細は[ディレクトリ構造のドキュメント](/docs/2.x/directory-structure/nuxt)を参照してください。
 
 </base-alert>

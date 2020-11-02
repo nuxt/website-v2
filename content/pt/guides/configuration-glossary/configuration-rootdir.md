@@ -13,7 +13,7 @@ position: 23
 
 Esta propriedade será substituída pelos comandos nuxt (nuxt start, nuxt build etc) se um argumento for passado para eles. Por exemplo, executando `nuxt ./meu-app/` definirá o `rootDir` para o caminho absoluto de `./meu-app/` do diretório atual/de trabalho.
 
-Por causa disso, normalmente não é necessário configurar esta opção, a menos que você use [Nuxt.js programaticamente](/guides/internals-glossary/nuxt).
+Por causa disso, normalmente não é necessário configurar esta opção, a menos que você use [Nuxt.js programaticamente](/docs/2.x/internals-glossary/nuxt).
 
 <base-alert type="info">
 

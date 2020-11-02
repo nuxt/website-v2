@@ -48,7 +48,7 @@ questions:
 
 <app-modal :src="img" :alt="imgAlt"></app-modal>
 
-`context` 객체는 [asyncData](/guides/features/data-fetching#async-data), [plugins](/guides/directory-structure/plugins), [middleware](/guides/directory-structure/middleware) 그리고 [nuxtServerInit](/guides/directory-structure/store#the-nuxtserverinit-action)와 같은 특정한 Nuxt 함수에서 활용할 수 있습니다. 컨텍스트는 애플리케이션에 요청하는 _추가_ 및 선택적인 정보를 제공합니다.
+`context` 객체는 [asyncData](/docs/2.x/features/data-fetching#async-data), [plugins](/docs/2.x/directory-structure/plugins), [middleware](/docs/2.x/directory-structure/middleware) 그리고 [nuxtServerInit](/docs/2.x/directory-structure/store#the-nuxtserverinit-action)와 같은 특정한 Nuxt 함수에서 활용할 수 있습니다. 컨텍스트는 애플리케이션에 요청하는 _추가_ 및 선택적인 정보를 제공합니다.
 
 가장 먼저 컨텍스트는 Nuxt.js 애플리케이션의 다른 부분(e.g. the Vuex store 또는 기본 `connect` 인스턴스)에 대한 엑세스를 제공하기 위해 사용됩니다. 그러므로 서버 사이드에서 사용 가능한 컨텍스트에는 `req` 와 `res` 객체있고, 언제나 사용할 수 있는 `store`가 있습니다. 그러나 시간이 갈수록 다른 유용한 변수와 약어로 컨텍스트가 확장되었습니다. 지금은 `development` 모드에 있는 HMR 기능, 현재 `route`, 페이지 `params`와 `query` 뿐만 아니라 컨텍스트를 통해 환경 변수에 접근하는 옵션도 액세스할 수 있습니다. 더 나아가 모듈 함수와 헬퍼는 컨텍스트를 통해 클라이언트와 서버 측 모두에서 사용할 수 있도록 노출됩니다.
 
@@ -89,7 +89,7 @@ function (context) { // asyncData, nuxtServerInit 등이 될 수 있습니다
 
 </base-alert>
 
-[Internals Glossary](/guides/internals-glossary/context)에 있는 다른 컨텍스트 키에 대해 더 알아보기
+[Internals Glossary](/docs/2.x/internals-glossary/context)에 있는 다른 컨텍스트 키에 대해 더 알아보기
 
 ## 예시
 

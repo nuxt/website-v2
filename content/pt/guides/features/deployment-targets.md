@@ -17,7 +17,7 @@ export default {
 
 ### SPA
 
-Aplicações de página única são páginas que são renderizadas apenas no lado do cliente, sem a necessidade de um servidor. Para fazer o deploy de uma SPA, defina o [modo para `spa`](/guides/features/rendering-modes#spa) e então rode o comando `build` para buildar a sua aplicação.
+Aplicações de página única são páginas que são renderizadas apenas no lado do cliente, sem a necessidade de um servidor. Para fazer o deploy de uma SPA, defina o [modo para `spa`](/docs/2.x/features/rendering-modes#spa) e então rode o comando `build` para buildar a sua aplicação.
 
 ```js{}[nuxt.config.js]
 export default {

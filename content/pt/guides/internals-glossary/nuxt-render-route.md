@@ -17,7 +17,7 @@ position: 11
 
 > Renderize uma rota específica com um determinado contexto.
 
-Este método deve ser usado principalmente para fins de teste, bem como com [`nuxt.renderAndGetWindow`](/guides/internals-glossary/nuxt-render-and-get-window).
+Este método deve ser usado principalmente para fins de teste, bem como com [`nuxt.renderAndGetWindow`](/docs/2.x/internals-glossary/nuxt-render-and-get-window).
 
 <base-alert>
 
@@ -51,6 +51,6 @@ start()
 
 <base-alert type="next">
 
-Confira o [livro Glossário de Componentes](/guides/components-glossary/pages-fetch)
+Confira o [livro Glossário de Componentes](/docs/2.x/components-glossary/pages-fetch)
 
 </base-alert>

@@ -76,7 +76,7 @@ Nuxt.js memberikan Anda pemisahan kode secara otomatis untuk rute. tidak ada kon
 
 <base-alert type="info">
 
-Gunakan [komponen NuxtLink](/guides/features/nuxt-components#the-nuxtlink-component) untuk melakukan navigasi antara halaman.
+Gunakan [komponen NuxtLink](/docs/2.x/features/nuxt-components#the-nuxtlink-component) untuk melakukan navigasi antara halaman.
 
 </base-alert>
 
@@ -181,7 +181,7 @@ Pada Nuxt >= v2.13, terdapat _crawler_ yang terpasang dan akan melakukan _crawl_
 
 <base-alert type="next">
 
-[Pembuat situs statis](/guides/concepts/static-site-generation) untuk situs statis.
+[Pembuat situs statis](/docs/2.x/concepts/static-site-generation) untuk situs statis.
 
 </base-alert>
 
@@ -195,7 +195,7 @@ Nuxt.js mengizinkan Anda untuk membuat rute bersarang dengan menggunakan rute an
 
 <base-alert>
 
-Jangan lupa untuk memasukkan [komponen NuxtChild](/guides/features/nuxt-components#the-nuxtchild-component) di dalam komponen induk (`.vue` file).
+Jangan lupa untuk memasukkan [komponen NuxtChild](/docs/2.x/features/nuxt-components#the-nuxtchild-component) di dalam komponen induk (`.vue` file).
 
 </base-alert>
 
@@ -331,7 +331,7 @@ Ada beberapa cara untuk memperpanjang rute pada Nuxt:
 
 - [router-extras-module](https://github.com/nuxt-community/router-extras-module) untuk melakukan kustomisasi parameter rute di dalam halaman
 - Komponen [@nuxtjs/router](https://github.com/nuxt-community/router-module) untuk menimpa _router_ Nuxt dan menuliskan berkas `router.js` milik anda sendiri
-- Gunakan properti [router.extendRoutes](/guides/configuration-glossary/configuration-router#extendroutes) di `nuxt.config.js`
+- Gunakan properti [router.extendRoutes](/docs/2.x/configuration-glossary/configuration-router#extendroutes) di `nuxt.config.js`
 
 ## Properti _router_
 
@@ -351,7 +351,7 @@ Dasar _URL_ dari aplikasi. Contohnya jika keseluruhan aplikasi halaman tunggal d
 
 <base-alert type="next">
 
-[Properti dasar rute](/guides/configuration-glossary/configuration-router#base)
+[Properti dasar rute](/docs/2.x/configuration-glossary/configuration-router#base)
 
 </base-alert>
 
@@ -424,7 +424,7 @@ export default {
 
 <base-alert type="next">
 
-[Properti extendRoutes](/guides/configuration-glossary/configuration-router#extendroutes)
+[Properti extendRoutes](/docs/2.x/configuration-glossary/configuration-router#extendroutes)
 
 </base-alert>
 
@@ -434,7 +434,7 @@ Anda dapat mengontrol apakah _router_ harus kembali ke mode _hash_ ketika peramb
 
 <base-alert type="next">
 
-[Properti fallback](/guides/configuration-glossary/configuration-router#fallback)
+[Properti fallback](/docs/2.x/configuration-glossary/configuration-router#fallback)
 
 </base-alert>
 
@@ -444,7 +444,7 @@ Lakukan konfigurasi pada _router_, namun ini tidak direkomendasikan untuk mengga
 
 <base-alert type="next">
 
-[Properti pada mode](/guides/configuration-glossary/configuration-router#mode)
+[Properti pada mode](/docs/2.x/configuration-glossary/configuration-router#mode)
 
 </base-alert>
 
@@ -454,7 +454,7 @@ Memberikan kustom untaian kueri / fungsi stringify.
 
 <base-alert type="next">
 
-[Properti parseQuery / stringifyQuery](/guides/configuration-glossary/configuration-router#parsequery--stringifyquery)
+[Properti parseQuery / stringifyQuery](/docs/2.x/configuration-glossary/configuration-router#parsequery--stringifyquery)
 
 </base-alert>
 
@@ -502,7 +502,7 @@ export default function (to, from, savedPosition) {
 
 <base-alert type="next">
 
-[Properti scrollBehavior](/guides/configuration-glossary/configuration-router#scrollbehavior)
+[Properti scrollBehavior](/docs/2.x/configuration-glossary/configuration-router#scrollbehavior)
 
 </base-alert>
 
@@ -528,7 +528,7 @@ Opsi ini seharusnya tidak diatur tanpa persiapan dan harus dicoba sepenuhnya. Ke
 
 <base-alert type="next">
 
-[Properti trailingSlash](/guides/configuration-glossary/configuration-router#trailingslash)
+[Properti trailingSlash](/docs/2.x/configuration-glossary/configuration-router#trailingslash)
 
 </base-alert>
 

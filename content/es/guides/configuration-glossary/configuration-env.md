@@ -27,7 +27,7 @@ Esto te permite crear una propiedad `baseUrl` que será igual a la variable de e
 Entonces, puedo acceder a mi variable `baseUrl` de 2 maneras:
 
 1. A través de `process.env.baseUrl`.
-2. A través de `context.env.baseUrl`, consulta [la API de contexto](/guides/internals-glossary/context).
+2. A través de `context.env.baseUrl`, consulta [la API de contexto](/docs/2.x/internals-glossary/context).
 
 Puedes utilizar la propiedad `env` para dar un token público, por ejemplo.
 
@@ -67,4 +67,4 @@ if ('testing123' == 'testing123')
 
 ## serverMiddleware
 
-Como [serverMiddleware](/guides/configuration-glossary/configuration-servermiddleware) está desacoplado de la construcción principal de Nuxt, las variables `env` definidas en `nuxt.config.js` no están disponibles ahí.
+Como [serverMiddleware](/docs/2.x/configuration-glossary/configuration-servermiddleware) está desacoplado de la construcción principal de Nuxt, las variables `env` definidas en `nuxt.config.js` no están disponibles ahí.

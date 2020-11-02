@@ -31,7 +31,7 @@ Direktori `pages` berisi tampilan dan rute aplikasi Anda. Seperti yang telah And
 
 <base-alert type="next">
 
-Pelajari lebih lanjut tentang [direktori pages](/guides/directory-structure/pages)
+Pelajari lebih lanjut tentang [direktori pages](/docs/2.x/directory-structure/pages)
 
 </base-alert>
 
@@ -43,7 +43,7 @@ Dengan Nuxt.js Anda dapat membuat komponen Anda dan mengimpornya secara otomatis
 
 <base-alert type="next">
 
-Pelajari lebih lanjut tentang [direktori components](/guides/directory-structure/components)
+Pelajari lebih lanjut tentang [direktori components](/docs/2.x/directory-structure/components)
 
 </base-alert>
 
@@ -53,7 +53,7 @@ Direktori `assets` berisi _assets_ Anda yang tidak dikompilasi seperti _styles_,
 
 <base-alert type="next">
 
-Pelajari lebih lanjut tentang [direktori assets](/guides/directory-structure/assets)
+Pelajari lebih lanjut tentang [direktori assets](/docs/2.x/directory-structure/assets)
 
 </base-alert>
 
@@ -63,7 +63,7 @@ Direktori `static` secara langsung dipetakan ke _root server_ dan berisi file ya
 
 <base-alert type="next">
 
-Pelajari lebih lanjut tentang [direktori static](/guides/directory-structure/static)
+Pelajari lebih lanjut tentang [direktori static](/docs/2.x/directory-structure/static)
 
 </base-alert>
 
@@ -73,7 +73,7 @@ File `nuxt.config.js` adalah satu titik konfigurasi untuk Nuxt.js. Jika Anda ing
 
 <base-alert type="next">
 
-Pelajari lebih lanjut tentang [file nuxt.config.js](/guides/directory-structure/nuxt-config)
+Pelajari lebih lanjut tentang [file nuxt.config.js](/docs/2.x/directory-structure/nuxt-config)
 
 </base-alert>
 
@@ -87,10 +87,10 @@ File `package.json` berisi semua dependensi dan _script_ untuk aplikasi Anda.
 
 ## Lebih lanjut tentang struktur proyek
 
-Ada lebih banyak direktori dan file yang berguna, termasuk [content](/guides/directory-structure/content), [layouts](/guides/directory-structure/layouts), [middleware](/guides/directory-structure/middleware), [modules](/guides/directory-structure/modules), [plugins](/guides/directory-structure/plugins) dan [store](/guides/directory-structure/store). Karena tidak diperlukan untuk aplikasi kecil, mereka tidak dibahas di sini.
+Ada lebih banyak direktori dan file yang berguna, termasuk [content](/docs/2.x/directory-structure/content), [layouts](/docs/2.x/directory-structure/layouts), [middleware](/docs/2.x/directory-structure/middleware), [modules](/docs/2.x/directory-structure/modules), [plugins](/docs/2.x/directory-structure/plugins) dan [store](/docs/2.x/directory-structure/store). Karena tidak diperlukan untuk aplikasi kecil, mereka tidak dibahas di sini.
 
 <base-alert type="next">
 
-Untuk mempelajari tentang semua direktori secara mendetail, silakan baca [Dokumentasi Directory Structure](/guides/directory-structure/nuxt).
+Untuk mempelajari tentang semua direktori secara mendetail, silakan baca [Dokumentasi Directory Structure](/docs/2.x/directory-structure/nuxt).
 
 </base-alert>

@@ -147,7 +147,7 @@ Sama seperti bagian untuk _client_, semuanya terjadi di browser tetapi hanya saa
 
 <base-alert type="info">
 
-Lihat bab komponen untuk melihat info lebih lanjut [`<NuxtLink>`](/guides/features/nuxt-components#the-nuxtlink-component)
+Lihat bab komponen untuk melihat info lebih lanjut [`<NuxtLink>`](/docs/2.x/features/nuxt-components#the-nuxtlink-component)
 
 </base-alert>
 
@@ -165,7 +165,7 @@ Lihat bab komponen untuk melihat info lebih lanjut [`<NuxtLink>`](/guides/featur
 
 <base-alert type="next">
 
-Lihat di [Features book](/guides/features/rendering-modes)
+Lihat di [Features book](/docs/2.x/features/rendering-modes)
 
 </base-alert>
 

@@ -16,7 +16,7 @@ position: 6
 - `nuxt` コマンドを使う場合は `dev` は強制的に `true` になります
 - `nuxt build`、`nuxt start` そして `nuxt generate` を使う場合は `dev` は強制的に `false` になります
 
-このプロパティは [Nuxt.js をプログラムで使う](/guides/internals-glossary/nuxt)ときに設定します:
+このプロパティは [Nuxt.js をプログラムで使う](/docs/2.x/internals-glossary/nuxt)ときに設定します:
 
 ```js{}[nuxt.config.js]
 export default {

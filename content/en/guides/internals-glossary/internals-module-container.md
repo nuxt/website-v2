@@ -8,7 +8,7 @@ position: 6
 
 - Source: **[core/module.js](https://github.com/nuxt/nuxt.js/blob/dev/packages/core/src/module.js)**
 
-All [modules](/guides/directory-structure/modules) will be called within context of `ModuleContainer` instance.
+All [modules](/docs/2.x/directory-structure/modules) will be called within context of `ModuleContainer` instance.
 
 ## Tapable plugins
 
@@ -20,7 +20,7 @@ nuxt.moduleContainer.plugin('ready', async moduleContainer => {
 })
 ```
 
-Inside [modules](/guides/directory-structure/modules) context we can use this instead:
+Inside [modules](/docs/2.x/directory-structure/modules) context we can use this instead:
 
 ```js
 this.plugin('ready', async moduleContainer => {
@@ -28,8 +28,8 @@ this.plugin('ready', async moduleContainer => {
 })
 ```
 
-| Plugin | Arguments | When |
-| --- | --- | --- |
+| Plugin  | Arguments       | When                                                 |
+| ------- | --------------- | ---------------------------------------------------- |
 | `ready` | moduleContainer | All modules in `nuxt.config.js` has been initialized |
 
 ## Methods
@@ -61,19 +61,19 @@ You can use `template.ssr: false` to disable plugin including in SSR bundle.
 
 ### addServerMiddleware (middleware)
 
-Pushes middleware into [options.serverMiddleware](/guides/configuration-glossary/configuration-servermiddleware).
+Pushes middleware into [options.serverMiddleware](/docs/2.x/configuration-glossary/configuration-servermiddleware).
 
 ### extendBuild (fn)
 
-Allows easily extending webpack build config by chaining [options.build.extend](/guides/configuration-glossary/configuration-build#extend) function.
+Allows easily extending webpack build config by chaining [options.build.extend](/docs/2.x/configuration-glossary/configuration-build#extend) function.
 
 ### extendRoutes (fn)
 
-Allows easily extending routes by chaining [options.build.extendRoutes](/guides/configuration-glossary/configuration-router#extendroutes) function.
+Allows easily extending routes by chaining [options.build.extendRoutes](/docs/2.x/configuration-glossary/configuration-router#extendroutes) function.
 
 ### extendPlugins (fn)
 
-Allows easily extending plugins by chaining [options.extendPlugins](/guides/configuration-glossary/configuration-extend-plugins) function.
+Allows easily extending plugins by chaining [options.extendPlugins](/docs/2.x/configuration-glossary/configuration-extend-plugins) function.
 
 ### addModule (moduleOpts, requireOnce)
 
@@ -91,7 +91,7 @@ Is a shortcut for `addModule(moduleOpts, true)`
 
 We can register hooks on certain life cycle events.
 
-| Hook | Arguments | When |
-| --- | --- | --- |
+| Hook             | Arguments                  | When                                                                                  |
+| ---------------- | -------------------------- | ------------------------------------------------------------------------------------- |
 | `modules:before` | (moduleContainer, options) | Called before creating ModuleContainer class, useful to overload methods and options. |
-| `modules:done` | (moduleContainer) | Called when all modules have been loaded. |
+| `modules:done`   | (moduleContainer)          | Called when all modules have been loaded.                                             |

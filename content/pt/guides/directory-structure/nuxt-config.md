@@ -52,7 +52,7 @@ export default {
 
 <base-alert type="next">
 
-Saiba mais sobre a [propriedade build](/guides/configuration-glossary/configuration-build)
+Saiba mais sobre a [propriedade build](/docs/2.x/configuration-glossary/configuration-build)
 
 </base-alert>
 
@@ -78,7 +78,7 @@ Ao omitir a extensão, se você tiver um arquivo css e decidir mudar para usar s
 
 <base-alert type="next">
 
-Saiba mais sobre a [propriedade css](/guides/configuration-glossary/configuration-css)
+Saiba mais sobre a [propriedade css](/docs/2.x/configuration-glossary/configuration-css)
 
 </base-alert>
 
@@ -94,7 +94,7 @@ export default {
 
 <base-alert type="next">
 
-Saiba mais sobre a [propriedade dev](/guides/configuration-glossary/configuration-dev)
+Saiba mais sobre a [propriedade dev](/docs/2.x/configuration-glossary/configuration-dev)
 
 </base-alert>
 
@@ -112,7 +112,7 @@ export default {
 
 <base-alert type="next">
 
-Saiba mais sobre a [propriedade env](/guides/configuration-glossary/configuration-env)
+Saiba mais sobre a [propriedade env](/docs/2.x/configuration-glossary/configuration-env)
 
 </base-alert>
 
@@ -131,7 +131,7 @@ export default {
 
 <base-alert type="next">
 
-Saiba mais sobre a [propriedade generate](/guides/configuration-glossary/configuration-generate)
+Saiba mais sobre a [propriedade generate](/docs/2.x/configuration-glossary/configuration-generate)
 
 </base-alert>
 
@@ -153,7 +153,7 @@ Esta opção permite definir todas as metatags padrão para sua aplicação.
 
 <base-alert type="next">
 
-Saiba mais em [integração da head](/guides/configuration-glossary/configuration-head)
+Saiba mais em [integração da head](/docs/2.x/configuration-glossary/configuration-head)
 
 </base-alert>
 
@@ -171,7 +171,7 @@ export default {
 
 <base-alert type="next">
 
-Saiba mais em [integração do loading](/guides/configuration-glossary/configuration-loading)
+Saiba mais em [integração do loading](/docs/2.x/configuration-glossary/configuration-loading)
 
 </base-alert>
 
@@ -187,7 +187,7 @@ export default {
 
 <base-alert type="next">
 
-Saiba mais sobre a [propriedade modules](/guides/configuration-glossary/configuration-modules)
+Saiba mais sobre a [propriedade modules](/docs/2.x/configuration-glossary/configuration-modules)
 
 </base-alert>
 
@@ -205,7 +205,7 @@ A configuração deste campo pode ser necessária se o seu projeto for organizad
 
 <base-alert type="next">
 
-Saiba mais sobre a [propriedade modulesDir](/guides/configuration-glossary/configuration-modulesdir)
+Saiba mais sobre a [propriedade modulesDir](/docs/2.x/configuration-glossary/configuration-modulesdir)
 
 </base-alert>
 
@@ -221,7 +221,7 @@ export default {
 
 <base-alert type="next">
 
-Saiba mais sobre a [propriedade plugins](/guides/configuration-glossary/configuration-plugins)
+Saiba mais sobre a [propriedade plugins](/docs/2.x/configuration-glossary/configuration-plugins)
 
 </base-alert>
 
@@ -239,7 +239,7 @@ export default {
 
 <base-alert type="next">
 
-Saiba mais sobre a [propriedade router](/guides/configuration-glossary/configuration-router)
+Saiba mais sobre a [propriedade router](/docs/2.x/configuration-glossary/configuration-router)
 
 </base-alert>
 
@@ -263,7 +263,7 @@ export default {
 
 <base-alert type="next">
 
-Saiba mais sobre a [propriedade server](/guides/configuration-glossary/configuration-server)
+Saiba mais sobre a [propriedade server](/docs/2.x/configuration-glossary/configuration-server)
 
 </base-alert>
 
@@ -307,7 +307,7 @@ export default {
 
 <base-alert type="next">
 
-Saiba mais na [propriedade dir](/guides/configuration-glossary/configuration-dir)
+Saiba mais na [propriedade dir](/docs/2.x/configuration-glossary/configuration-dir)
 
 </base-alert>
 
@@ -323,7 +323,7 @@ export default {
 
 <base-alert type="next">
 
-Saiba mais sobre a [propriedade transition](/guides/configuration-glossary/configuration-transition)
+Saiba mais sobre a [propriedade transition](/docs/2.x/configuration-glossary/configuration-transition)
 
 </base-alert>
 
@@ -347,6 +347,6 @@ node_modules .nuxt dist
 
 <base-alert type="next">
 
-Confira o [glossário de configurações](/guides/configuration-glossary/configuration-build)
+Confira o [glossário de configurações](/docs/2.x/configuration-glossary/configuration-build)
 
 </base-alert>

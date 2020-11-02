@@ -10,7 +10,7 @@ position: 0
 
 - **نوع:** `Function` یا `Async Function`
 
-متد `validate` هر بار قبل از انتقال به مسیر جدید فراخوانی می‌شود. این متد در سمت سرور فقط یکبار (زمانی که اولین درخواست به اپلیکیشن Nuxt شما می‌رسد) و در سمت کاربر زمانی که به مسیرهای بعدی مراجعه می‌شود فراخوانی می‌شود. این متد مقدار [`context`](/guides/internals-glossary/context) را به عنوان پارامتر دریافت می‌کند.
+متد `validate` هر بار قبل از انتقال به مسیر جدید فراخوانی می‌شود. این متد در سمت سرور فقط یکبار (زمانی که اولین درخواست به اپلیکیشن Nuxt شما می‌رسد) و در سمت کاربر زمانی که به مسیرهای بعدی مراجعه می‌شود فراخوانی می‌شود. این متد مقدار [`context`](/docs/2.x/internals-glossary/context) را به عنوان پارامتر دریافت می‌کند.
 
 ```js
 validate({ params, query, store }) {
@@ -48,7 +48,7 @@ export default {
 }
 ```
 
-همچنین می‌توانید به اطلاعات [store](/guides/directory-structure/store) خود دسترسی داشته باشید. (به عنوان مثال وقتی که این داده‌ها قبلا توسط [`nuxtServerInit`](/guides/directory-structure/store#the-nuxtserverinit-action) ایجاد شده باشند.)
+همچنین می‌توانید به اطلاعات [store](/docs/2.x/directory-structure/store) خود دسترسی داشته باشید. (به عنوان مثال وقتی که این داده‌ها قبلا توسط [`nuxtServerInit`](/docs/2.x/directory-structure/store#the-nuxtserverinit-action) ایجاد شده باشند.)
 
 ```js
 export default {

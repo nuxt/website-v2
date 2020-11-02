@@ -217,7 +217,7 @@ You may want to only disable this option if you have many pages and routes.
 
 <base-alert type="next">
 
-[Resource Hints](/guides/configuration-glossary/configuration-render#resourcehints)
+[Resource Hints](/docs/2.x/configuration-glossary/configuration-render#resourcehints)
 
 </base-alert>
 

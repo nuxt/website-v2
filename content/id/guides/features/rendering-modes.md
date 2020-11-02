@@ -33,6 +33,6 @@ export default {
 
 <base-alert type="next">
 
-[Properti mode](/guides/configuration-glossary/configuration-mode)
+[Properti mode](/docs/2.x/configuration-glossary/configuration-mode)
 
 </base-alert>

@@ -8,11 +8,9 @@ position: 0
 
 > Nuxt.js te permite definir un método de validación dentro del componente de ruta dinámico.
 
-
-
 - **Tipo:** `Function` or `Async Function`
 
-Se llama a `validate` cada vez que se navega a una nueva ruta. Se llamará del lado del servidor una vez (en la primera solicitud a la aplicación Nuxt) y del lado del cliente cuando se navegue a otras rutas. Este método toma el objeto [`context`](/guides/internals-glossary/context) como argumento.
+Se llama a `validate` cada vez que se navega a una nueva ruta. Se llamará del lado del servidor una vez (en la primera solicitud a la aplicación Nuxt) y del lado del cliente cuando se navegue a otras rutas. Este método toma el objeto [`context`](/docs/2.x/internals-glossary/context) como argumento.
 
 ```js
 validate({ params, query, store }) {
@@ -37,7 +35,7 @@ validate({ params, query, store }) {
 }
 ```
 
-Nuxt.js le permite definir un método de validación dentro de las rutas dinámicas de tu componente  (en este ejemplo: `pages / users / _id.vue`).
+Nuxt.js le permite definir un método de validación dentro de las rutas dinámicas de tu componente (en este ejemplo: `pages / users / _id.vue`).
 
 Si el método de validación no devuelve `true`, Nuxt.js cargará automáticamente la página de error 404.
 
@@ -50,7 +48,7 @@ export default {
 }
 ```
 
-También puede verificar algunos datos en su [store](/guides/directory-structure/store) por ejemplo (cargado en [`nuxtServerInit`] (/guides/directory-structure/store#the-nuxtserverinit-action) antes de la acción) :
+También puede verificar algunos datos en su [store](/docs/2.x/directory-structure/store) por ejemplo (cargado en [`nuxtServerInit`] (/docs/2.x/directory-structure/store#the-nuxtserverinit-action) antes de la acción) :
 
 ```js
 export default {

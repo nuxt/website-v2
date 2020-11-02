@@ -43,6 +43,6 @@ position: 18
 | spa       |    client    |
 
 - `nuxt generate` のモダンモードは `client` のみになります。
-- [`render.crossorigin`](/guides/configuration-glossary/configuration-render#クロスオリジン) を使って `<link>` と `<script>` タグに `crossorigin` 属性を設定します。
+- [`render.crossorigin`](/docs/2.x/configuration-glossary/configuration-render#クロスオリジン) を使って `<link>` と `<script>` タグに `crossorigin` 属性を設定します。
 
 > モダンビルドについての詳細は [Phillip Walton さんの素晴らしい投稿](https://philipwalton.com/articles/deploying-es2015-code-in-production-today/)を参照してください。

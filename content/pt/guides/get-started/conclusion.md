@@ -75,13 +75,13 @@ Check out the [livro de Conceitos](../concepts/views)
 
 <base-alert type="next">
 
-Working with [asyncData](/guides/features/data-fetching#async-data)
+Working with [asyncData](/docs/2.x/features/data-fetching#async-data)
 
 </base-alert>
 
 <base-alert type="next">
 
-Escolher entre diferentes [modos de Renderização](/guides/features/rendering-modes)
+Escolher entre diferentes [modos de Renderização](/docs/2.x/features/rendering-modes)
 
 </base-alert>
 

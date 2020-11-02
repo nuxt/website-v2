@@ -26,7 +26,7 @@ export default {
 
 - Type: `Object` or `false`
 
-This option is used by `nuxt generate` with [static target](/guides/features/deployment-targets#static-hosting) to avoid re-building when no tracked file has been changed.
+This option is used by `nuxt generate` with [static target](/docs/2.x/features/deployment-targets#static-hosting) to avoid re-building when no tracked file has been changed.
 
 Defaults:
 

@@ -14,13 +14,13 @@ csb_link: https://codesandbox.io/embed/github/nuxt-academy/guides-examples/tree/
 
 <base-alert type="next">
 
-詳細は[ルーティング](/guides/features/file-system-routing)を参照してください。
+詳細は[ルーティング](/docs/2.x/features/file-system-routing)を参照してください。
 
 </base-alert>
 
 ## ナビゲーション
 
-アプリケーションのページ間を遷移するには、[NuxtLink](/guides/features/nuxt-components#the-nuxtlink-component) コンポーネントを使います。このコンポーネントは Nuxt.js に含まれているため、他のコンポーネントのようにインポートする必要はありません。HTML `<a>` タグに似ていますが、`href="/about"` のかわりに `to="/about"` を使用します。もし以前に `vue-router` を使ったことがある場合は `<NuxtLink>` を `<RouterLink>` の変わりと考えることができます。
+アプリケーションのページ間を遷移するには、[NuxtLink](/docs/2.x/features/nuxt-components#the-nuxtlink-component) コンポーネントを使います。このコンポーネントは Nuxt.js に含まれているため、他のコンポーネントのようにインポートする必要はありません。HTML `<a>` タグに似ていますが、`href="/about"` のかわりに `to="/about"` を使用します。もし以前に `vue-router` を使ったことがある場合は `<NuxtLink>` を `<RouterLink>` の変わりと考えることができます。
 
 `pages` フォルダーにある `index.vue` へのシンプルなリンク:
 
@@ -50,6 +50,6 @@ csb_link: https://codesandbox.io/embed/github/nuxt-academy/guides-examples/tree/
 
 <base-alert type="next">
 
-詳細は [NuxtLink コンポーネント](/guides/features/nuxt-components#the-nuxtlink-component)を参照してください。
+詳細は [NuxtLink コンポーネント](/docs/2.x/features/nuxt-components#the-nuxtlink-component)を参照してください。
 
 </base-alert>

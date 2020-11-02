@@ -16,4 +16,4 @@ Targets de despliegue para Nuxt >= v2.13:
 
 > Puedes usar esta opción para cambiar el target por defecto de Nuxt en tu proyecto, usando `nuxt.config.js`.
 
-Para saber más sobre la opción target, visita la [sección de targets de despliegue](/guides/features/deployment-targets).
+Para saber más sobre la opción target, visita la [sección de targets de despliegue](/docs/2.x/features/deployment-targets).

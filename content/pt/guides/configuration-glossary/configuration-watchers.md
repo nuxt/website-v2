@@ -38,6 +38,6 @@ Para saber mais sobre webpack watchoptions, consulte a [documentação do webpac
 
 <base-alert type="next">
 
-Check out the [livro glossários de internals](/guides/internals-glossary/$nuxt)
+Check out the [livro glossários de internals](/docs/2.x/internals-glossary/$nuxt)
 
 </base-alert>

@@ -26,7 +26,7 @@ export default {
 
 - 型: `Object` または `false`
 
-このオプションは追跡したファイルが変更されていない場合にリビルドを避けるために`nuxt generate` の[静的ホスティング](/guides/features/deployment-targets#静的ホスティング)で使われます。
+このオプションは追跡したファイルが変更されていない場合にリビルドを避けるために`nuxt generate` の[静的ホスティング](/docs/2.x/features/deployment-targets#静的ホスティング)で使われます。
 
 デフォルト:
 
@@ -193,7 +193,7 @@ _注意: 複数のサービス（例えば Netlify）では、`404.html` を自�
 ## minify
 
 - **非推奨です！**
-- 代わりに [build.html.minify](/guides/configuration-glossary/configuration-build#htmlminify) を使ってください
+- 代わりに [build.html.minify](/docs/2.x/configuration-glossary/configuration-build#htmlminify) を使ってください
 
 ## routes
 

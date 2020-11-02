@@ -146,7 +146,7 @@ export default {
 
 <base-alert type="next">
 
-Lihat informasi lebih lanjut mengenai bagaimana asyncData bekerja, pada bab [Data Fetching](/guides/features/data-fetching#async-data)
+Lihat informasi lebih lanjut mengenai bagaimana asyncData bekerja, pada bab [Data Fetching](/docs/2.x/features/data-fetching#async-data)
 
 </base-alert>
 
@@ -173,7 +173,7 @@ Setiap kali anda ingin mendapatkan data _asynchronous_ anda dapat menggunakan fu
 
 <base-alert type="next">
 
-Lihat lebih lanjut bagaimana _fetch_ bekerja pada bab [Data Fetching](/guides/features/data-fetching)
+Lihat lebih lanjut bagaimana _fetch_ bekerja pada bab [Data Fetching](/docs/2.x/features/data-fetching)
 
 </base-alert>
 
@@ -191,7 +191,7 @@ export default {
 
 <base-alert type="next">
 
-Lihat lebih lanjut pada bab [Meta Tags dan SEO](/guides/features/meta-tags-seo).
+Lihat lebih lanjut pada bab [Meta Tags dan SEO](/docs/2.x/features/meta-tags-seo).
 
 </base-alert>
 
@@ -207,7 +207,7 @@ export default {
 
 <base-alert type="next">
 
-Lihat lebih lanjut mengenai _layouts_ pada bab [Views](/guides/concepts/views#layouts).
+Lihat lebih lanjut mengenai _layouts_ pada bab [Views](/docs/2.x/concepts/views#layouts).
 
 </base-alert>
 
@@ -229,7 +229,7 @@ Hanya berlaku jika pemuatan (_loading_) juga ditetapkan pada nuxt.config.js.
 
 <base-alert type="next">
 
-Lihat lebih lanjut pada bab [Loading](/guides/features/loading).
+Lihat lebih lanjut pada bab [Loading](/docs/2.x/features/loading).
 
 </base-alert>
 
@@ -245,7 +245,7 @@ export default {
 
 <base-alert type="next">
 
-Lihat lebih lanjut pada bab [Transitions](/guides/features/transitions).
+Lihat lebih lanjut pada bab [Transitions](/docs/2.x/features/transitions).
 
 </base-alert>
 
@@ -261,7 +261,7 @@ export default {
 
 Sebaliknya, Anda juga dapat secara manual menetapkan `scrollToTop` menjadi `false` pada jalur induk (_parent routes_).
 
-Jika Anda ingin menimpa tingkah pengguliran secara bawaan dari Nuxt.js, silahkan melihat pada [scrollBehavior Option](/guides/configuration-glossary/configuration-router#scrollbehavior).
+Jika Anda ingin menimpa tingkah pengguliran secara bawaan dari Nuxt.js, silahkan melihat pada [scrollBehavior Option](/docs/2.x/configuration-glossary/configuration-router#scrollbehavior).
 
 ### _middleware_
 
@@ -275,7 +275,7 @@ export default {
 
 <base-alert type="next">
 
-Lihat lebih lanjut pada bab [Middleware](/guides/directory-structure/middleware).
+Lihat lebih lanjut pada bab [Middleware](/docs/2.x/directory-structure/middleware).
 
 </base-alert>
 
@@ -315,7 +315,7 @@ export default {
 
 <base-alert type="next">
 
-Lihat lebih lanjut mengenai properti _watch query_ pada bab [Data Fetching](/guides/features/data-fetching).
+Lihat lebih lanjut mengenai properti _watch query_ pada bab [Data Fetching](/docs/2.x/features/data-fetching).
 
 </base-alert>
 
@@ -331,7 +331,7 @@ Sebagai contoh, `pages/-about.vue` akan diabaikan.
 
 <base-alert type="next">
 
-Lihat [ignore option](/guides/configuration-glossary/configuration-ignore) untuk mempelajari lebih lanjut.
+Lihat [ignore option](/docs/2.x/configuration-glossary/configuration-ignore) untuk mempelajari lebih lanjut.
 
 </base-alert>
 
@@ -350,7 +350,7 @@ export default {
 
 <base-alert type="next">
 
-Lihat [dir option](/guides/configuration-glossary/configuration-dir) untuk mempelajari lebih lanjut.
+Lihat [dir option](/docs/2.x/configuration-glossary/configuration-dir) untuk mempelajari lebih lanjut.
 
 </base-alert>
 

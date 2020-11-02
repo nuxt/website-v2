@@ -99,6 +99,6 @@ Browser menerima halaman yang dirender dari server dengan HTML yang dihasilkan. 
 
 ### Langkah 3: Browser ke Browser
 
-Navigasi antar halaman dengan [`<NuxtLink>`](/guides/features/nuxt-components#the-nuxtlink-component) dilakukan di sisi klien sehingga Anda tidak memuat server lagi kecuali Anda menyegarkan ulang browser.
+Navigasi antar halaman dengan [`<NuxtLink>`](/docs/2.x/features/nuxt-components#the-nuxtlink-component) dilakukan di sisi klien sehingga Anda tidak memuat server lagi kecuali Anda menyegarkan ulang browser.
 
 <quiz :questions="questions"></quiz>

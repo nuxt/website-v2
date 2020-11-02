@@ -85,7 +85,7 @@ export default {
 
 <base-alert>
 
-`fetch(context)` telah usang, namun Anda dapat menggunakan sebuah [_middleware_ anonim](/guides/directory-structure/middleware#anonymous-middleware) di halaman Anda:  `middleware(context)`
+`fetch(context)` telah usang, namun Anda dapat menggunakan sebuah [_middleware_ anonim](/docs/2.x/directory-structure/middleware#anonymous-middleware) di halaman Anda:  `middleware(context)`
 
 </base-alert>
 
@@ -132,7 +132,7 @@ Anda juga memiliki akses ke `this.$fetch()`, ini berguna jika Anda ingin memangg
 
 <base-alert type="info">
 
-Anda dapat mengakses [_context_](/guides/concepts/context-helpers) Nuxt di dalam pengait _fetch_ menggunakan `this.$nuxt.context`.
+Anda dapat mengakses [_context_](/docs/2.x/concepts/context-helpers) Nuxt di dalam pengait _fetch_ menggunakan `this.$nuxt.context`.
 
 </base-alert>
 
@@ -229,13 +229,13 @@ Melakukan navigasi ke halaman yang sama tidak akan memanggil `fetch` kembali jik
 
 <base-alert>
 
-`asyncData` hanya dapat digunakan pada [halaman (_pages_)](/guides/directory-structure/pages) dan Anda tidak memiliki akses ke `this` di dalam pengait tersebut.
+`asyncData` hanya dapat digunakan pada [halaman (_pages_)](/docs/2.x/directory-structure/pages) dan Anda tidak memiliki akses ke `this` di dalam pengait tersebut.
 
 </base-alert>
 
-Perbedaan utama antara `fetch` adalah Anda tidak perlu menangani status (_state_) yang tertunda atau galat. Nuxt akan menunggu pengait `asyncData` selesai sebelum menavigasi ke halaman selanjutnya atau menampilkan [halaman kegalatan](/guides/directory-structure/layouts#error-page))
+Perbedaan utama antara `fetch` adalah Anda tidak perlu menangani status (_state_) yang tertunda atau galat. Nuxt akan menunggu pengait `asyncData` selesai sebelum menavigasi ke halaman selanjutnya atau menampilkan [halaman kegalatan](/docs/2.x/directory-structure/layouts#error-page))
 
-Pengait menerima [konteks (_context_)](/guides/concepts/context-helpers) sebagai argumen pertama. Anda dapat menggunakan ini untuk menggambil beberapa data dan Nuxt.js akan secara otomatis mengabungkan objek yang dikembalikan dengan data pada komponen.
+Pengait menerima [konteks (_context_)](/docs/2.x/concepts/context-helpers) sebagai argumen pertama. Anda dapat menggunakan ini untuk menggambil beberapa data dan Nuxt.js akan secara otomatis mengabungkan objek yang dikembalikan dengan data pada komponen.
 
 ```html{}[pages/index.vue]
 <template>
@@ -306,7 +306,7 @@ Metode `asyncData` tidak dipanggil pada perubahan untaian kueri pada dasarnya. J
 
 <base-alert type="next">
 
-Pelajari lebih lanjut mengenai [properti watchQuery](/guides/components-glossary/pages-watchquery) dan lihat daftar [kunci dari konteks](/guides/concepts/context-helpers) apa saja yang tersedia.
+Pelajari lebih lanjut mengenai [properti watchQuery](/docs/2.x/components-glossary/pages-watchquery) dan lihat daftar [kunci dari konteks](/docs/2.x/concepts/context-helpers) apa saja yang tersedia.
 
 </base-alert>
 

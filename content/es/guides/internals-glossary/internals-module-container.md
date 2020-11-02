@@ -8,7 +8,7 @@ position: 6
 
 - Source: **[core/module.js](https://github.com/nuxt/nuxt.js/blob/dev/packages/core/src/module.js)**
 
-Todos los [módulos](/guides/directory-structure/modules) serán llamados en el contexto de la instancia `ModuleContainer`.
+Todos los [módulos](/docs/2.x/directory-structure/modules) serán llamados en el contexto de la instancia `ModuleContainer`.
 
 ## Plugins Tapables
 
@@ -20,7 +20,7 @@ nuxt.moduleContainer.plugin('ready', async moduleContainer => {
 })
 ```
 
-Dentro del contexto de [modulos](/guides/directory-structure/modules) podemos usar esto en su lugar:
+Dentro del contexto de [modulos](/docs/2.x/directory-structure/modules) podemos usar esto en su lugar:
 
 ```js
 this.plugin('ready', async moduleContainer => {
@@ -61,19 +61,19 @@ Puedes usar `template.ssr: false` para deshabilitar el plugin incluido en en el 
 
 ### addServerMiddleware (middleware)
 
-Inserta middleware en [options.serverMiddleware](/guides/configuration-glossary/configuration-servermiddleware).
+Inserta middleware en [options.serverMiddleware](/docs/2.x/configuration-glossary/configuration-servermiddleware).
 
 ### extendBuild (fn)
 
-Permite extender fácilmente webpack build config mediante la función de encadenamiento [options.build.extend](/guides/configuration-glossary/configuration-build#extend).
+Permite extender fácilmente webpack build config mediante la función de encadenamiento [options.build.extend](/docs/2.x/configuration-glossary/configuration-build#extend).
 
 ### extendRoutes (fn)
 
-Permite extender fácilmente rutas mediante la función de encadenamiento [options.build.extendRoutes](/guides/configuration-glossary/configuration-router#extendroutes).
+Permite extender fácilmente rutas mediante la función de encadenamiento [options.build.extendRoutes](/docs/2.x/configuration-glossary/configuration-router#extendroutes).
 
 ### extendPlugins (fn)
 
-Permite extender fácilmente plugins mediante la función de encadenamiento [options.extendPlugins](/guides/configuration-glossary/configuration-extend-plugins).
+Permite extender fácilmente plugins mediante la función de encadenamiento [options.extendPlugins](/docs/2.x/configuration-glossary/configuration-extend-plugins).
 
 ### addModule (moduleOpts, requireOnce)
 

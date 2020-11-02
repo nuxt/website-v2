@@ -217,7 +217,7 @@ Es posible que quieras solo deshabilitar esta opción si tienes muchas paginas y
 
 <base-alert type="next">
 
-[Resource Hints](/guides/configuration-glossary/configuration-render#resourcehints)
+[Resource Hints](/docs/2.x/configuration-glossary/configuration-render#resourcehints)
 
 </base-alert>
 

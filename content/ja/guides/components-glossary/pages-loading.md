@@ -12,7 +12,7 @@ position: 0
 
 デフォルトでは、Nuxt.js はルート間の遷移の際に自身で持っているコンポーネントでプログレスバーを表示します。
 
-[loading オプションの設定](/guides/configuration-glossary/configuration-loading) でグローバルに無効化やカスタマイズできるだけでなく、特定のページに対しても `loading` プロパティを `false` に設定することで無効化できます:
+[loading オプションの設定](/docs/2.x/configuration-glossary/configuration-loading) でグローバルに無効化やカスタマイズできるだけでなく、特定のページに対しても `loading` プロパティを `false` に設定することで無効化できます:
 
 ```html
 <template>

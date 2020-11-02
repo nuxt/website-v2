@@ -37,7 +37,7 @@ El directorio de componentes contiene los componentes de Vue.js. Los componentes
 
 ### Recuperación de Datos
 
-Para accessar data asincrónica desde un API en los componentes, puedes usar Nuxt [`fetch()` hook](/guides/features/data-fetching#the-fetch-method).
+Para accessar data asincrónica desde un API en los componentes, puedes usar Nuxt [`fetch()` hook](/docs/2.x/features/data-fetching#the-fetch-method).
 
 puedes mostrar un mensaje cuando la información está por cargar. Y usando `$fetchState.error` puedes mostrar un mensaje de error si hay algun error cuando la data es llamada. Cuando usas fetch, tienes que declarar la data en la propiedad de `data`. Esto se popula con la data que viene del `fetch`.
 
@@ -73,7 +73,7 @@ puedes mostrar un mensaje cuando la información está por cargar. Y usando `$fe
 
 <base-alert type="next">
 
-Verifica el capítulo de [fetch()](/guides/features/data-fetching#the-fetch-method) para más detalles.
+Verifica el capítulo de [fetch()](/docs/2.x/features/data-fetching#the-fetch-method) para más detalles.
 
 </base-alert>
 

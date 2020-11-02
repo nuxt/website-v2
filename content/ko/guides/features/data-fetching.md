@@ -85,7 +85,7 @@ export default {
 
 <base-alert>
 
-`fetch(context)` 더 이상 사용되지 않는 대신 페이지 내의: `middleware(context)` 에서 [anonymous middleware](/guides/directory-structure/middleware#anonymous-middleware) 를 사용할 수 있습니다.
+`fetch(context)` 더 이상 사용되지 않는 대신 페이지 내의: `middleware(context)` 에서 [anonymous middleware](/docs/2.x/directory-structure/middleware#anonymous-middleware) 를 사용할 수 있습니다.
 
 </base-alert>
 
@@ -132,7 +132,7 @@ export default {
 
 <base-alert type="info">
 
-`this.$nuxt.context`를 사용하여 fetch 훅 내에서 Nuxt [context](/guides/concepts/context-helpers) 에 접근 할 수 있습니다.
+`this.$nuxt.context`를 사용하여 fetch 훅 내에서 Nuxt [context](/docs/2.x/concepts/context-helpers) 에 접근 할 수 있습니다.
 
 </base-alert>
 
@@ -229,13 +229,13 @@ Nuxt는 마지막 `fetch` 호출 (ssr 포함)의 `this.$fetchState.timestamp` (t
 
 <base-alert>
 
-`asyncData`는 [pages](/guides/directory-structure/pages) 에서만 사용할 수 있으며 훅 내에서 `this`에 접근 할 수 없습니다.
+`asyncData`는 [pages](/docs/2.x/directory-structure/pages) 에서만 사용할 수 있으며 훅 내에서 `this`에 접근 할 수 없습니다.
 
 </base-alert>
 
-`fetch` 의 주요 차이점은 보류 상태 또는 오류를 처리 할 필요가 없다는 것입니다. Nuxt는 다음 페이지로 이동하거나 [error page](/guides/directory-structure/layouts#error-page)를 표시하기 전에 asyncData 훅이 완료되기를 기다립니다.
+`fetch` 의 주요 차이점은 보류 상태 또는 오류를 처리 할 필요가 없다는 것입니다. Nuxt는 다음 페이지로 이동하거나 [error page](/docs/2.x/directory-structure/layouts#error-page)를 표시하기 전에 asyncData 훅이 완료되기를 기다립니다.
 
-이 훅은 [context](/guides/concepts/context-helpers)를 첫 번째 인자로 받습니다. 이를 사용하여 일부 데이터를 가져올 수 있으며 Nuxt.js는 반환 된 오브젝트를 컴포넌트 데이터와 자동으로 병합합니다.
+이 훅은 [context](/docs/2.x/concepts/context-helpers)를 첫 번째 인자로 받습니다. 이를 사용하여 일부 데이터를 가져올 수 있으며 Nuxt.js는 반환 된 오브젝트를 컴포넌트 데이터와 자동으로 병합합니다.
 
 ```html{}[pages/index.vue]
 <template>
@@ -306,7 +306,7 @@ export default {
 
 <base-alert type="next">
 
-[watchQuery property](/guides/components-glossary/pages-watchquery)에 대해 자세히 알아보고 [context](/guides/concepts/context-helpers) 내의 사용 가능한 키 목록을 확인.
+[watchQuery property](/docs/2.x/components-glossary/pages-watchquery)에 대해 자세히 알아보고 [context](/docs/2.x/concepts/context-helpers) 내의 사용 가능한 키 목록을 확인.
 
 </base-alert>
 

@@ -129,13 +129,13 @@ export default {
 ```
 
 ```js{}[modules/example.js]
-export default function ExampleModule (moduleOptions) {
-	console.log(moduleOptions.token) // '123'
-	console.log(this.options.exampleMsg) // 'hello'
+export default function ExampleModule(moduleOptions) {
+  console.log(moduleOptions.token) // '123'
+  console.log(this.options.exampleMsg) // 'hello'
 
-	this.nuxt.hook('ready', async (nuxt) => {
-		console.log('Nuxt is ready')
-	})
+  this.nuxt.hook('ready', async nuxt => {
+    console.log('Nuxt is ready')
+  })
 }
 
 // REQUIRED if publishing the module as npm package
@@ -164,7 +164,7 @@ export default {
 
 ## 2) this.options
 
-`this.options`: Puedes acceder directamente a las optiones de  Nuxt.js usando esta referencia. Este es el contenido del  `nuxt.config.js` del usuario con las opciones por defecto asignadas. Puede ser usado para compartir opciones entre módulos.
+`this.options`: Puedes acceder directamente a las optiones de Nuxt.js usando esta referencia. Este es el contenido del  `nuxt.config.js` del usuario con las opciones por defecto asignadas. Puede ser usado para compartir opciones entre módulos.
 
 ```js{}[module.js]
 export default function (moduleOptions) {
@@ -251,7 +251,7 @@ nuxt.hook('listen', async (server, {host, port})) => {
 
 `this`: Contexto de los módulos. Todos los módulos en el contexto de la instancia de ModuleContainer.
 
-Mira la documentación de la clases [ModuleContainer](/guides/internals-glossary/internals-module-container) para ver los métodos disponibles.
+Mira la documentación de la clases [ModuleContainer](/docs/2.x/internals-glossary/internals-module-container) para ver los métodos disponibles.
 
 ### Ejecutar tareas en hooks específicos
 
@@ -330,7 +330,7 @@ export default function nuxtBootstrapVue(moduleOptions) {
 }
 ```
 
-### Registra cargadores personalizados de  webpack 
+### Registra cargadores personalizados de webpack
 
 Podemos hacer los mismo como  `build.extend`  en  `nuxt.config.js`  utilizando  `this.extendBuild`.
 
@@ -381,7 +381,7 @@ export default function asyncModule($http) {
 
 <base-alert type="info">
 
-Hay muchos mas hooks y posibilidades para los módulos. Consula [Interioridades de Nuxt](/guides/internals-glossary/internals) para conocer más de la API nuxt-internal.
+Hay muchos mas hooks y posibilidades para los módulos. Consula [Interioridades de Nuxt](/docs/2.x/internals-glossary/internals) para conocer más de la API nuxt-internal.
 
 </base-alert>
 
@@ -436,12 +436,12 @@ Tu módulo es un `buildModule` a menos que:
 
 - Provee un serverMiddleware
 - Tiene que registrar un Node.js runtime hook (Como sentry)
-- Está afectado el comportamiento de  vue-renderer o usando un hook de los namespaces `server:` o `vue-renderer:` 
+- Está afectado el comportamiento de vue-renderer o usando un hook de los namespaces `server:` o `vue-renderer:`
 - Cualquier cosa fuera del alcance de webpack (Hint: plugins y plantillas que son compiladas y en el alcance de webpack)
 
 <base-alert> 
 
-Si vas a ofrecer el uso de  `buildModules` menciona que esto solo está disponible a partir de Nuxt v2.9. Los usuarios de versiones anteriores de  Nuxt deben actualizarlo o utilizar la sección `modules`.
+Si vas a ofrecer el uso de  `buildModules` menciona que esto solo está disponible a partir de Nuxt v2.9. Los usuarios de versiones anteriores de Nuxt deben actualizarlo o utilizar la sección `modules`.
 
 </base-alert>
 

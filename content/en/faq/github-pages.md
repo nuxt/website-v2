@@ -24,7 +24,7 @@ It will create a `dist` folder with everything inside ready to be deployed on Gi
 
 ## Deploying to GitHub Pages for repository
 
-First of all, you want to make sure to use [static target](/guides/features/deployment-targets) since we are hosting on GitHub pages:
+First of all, you want to make sure to use [static target](/docs/2.x/features/deployment-targets) since we are hosting on GitHub pages:
 
 ```js[nuxt.config.js]
 export default {

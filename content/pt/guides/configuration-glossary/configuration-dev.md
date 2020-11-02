@@ -16,7 +16,7 @@ Esta propriedade é substituída pelos comandos nuxt:
 - `dev` é forçado a `true` com `nuxt`
 - `dev` é forçado a `false` com `nuxt build`, `nuxt start` e `nuxt generate`
 
-Esta propriedade deve ser utilizada ao usar [Nuxt.js programaticamente](/guides/internals-glossary/nuxt):
+Esta propriedade deve ser utilizada ao usar [Nuxt.js programaticamente](/docs/2.x/internals-glossary/nuxt):
 
 ```js{}[nuxt.config.js]
 export default {

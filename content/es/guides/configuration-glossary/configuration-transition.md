@@ -37,7 +37,7 @@ export default {
 }
 ```
 
-La clave de transición en `nuxt.config.js` se usa para establecer las propiedades predeterminadas para las transiciones de página. Para obtener más información sobre las claves disponibles cuando la clave `transition` es un objeto, consulte la [propiedad de transición de páginas](/guides/features/transitions).
+La clave de transición en `nuxt.config.js` se usa para establecer las propiedades predeterminadas para las transiciones de página. Para obtener más información sobre las claves disponibles cuando la clave `transition` es un objeto, consulte la [propiedad de transición de páginas](/docs/2.x/features/transitions).
 
 ## La propiedad layoutTransition
 

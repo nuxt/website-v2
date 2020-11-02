@@ -146,7 +146,7 @@ export default {
 
 <base-alert type="next">
 
-Veja mais sobre como asyncData funciona em nosso capítulo [Requisição de dados](/guides/features/data-fetching#async-data)
+Veja mais sobre como asyncData funciona em nosso capítulo [Requisição de dados](/docs/2.x/features/data-fetching#async-data)
 
 </base-alert>
 
@@ -173,7 +173,7 @@ Sempre que você precisar obter dados assíncronos, poderá usar fetch. Fetch é
 
 <base-alert type="next">
 
-Veja mais sobre como fetch funciona em nosso capítulo [Requisição de dados](/guides/features/data-fetching)
+Veja mais sobre como fetch funciona em nosso capítulo [Requisição de dados](/docs/2.x/features/data-fetching)
 
 </base-alert>
 
@@ -191,7 +191,7 @@ export default {
 
 <base-alert type="next">
 
-Veja mais em nosso capítulo [Meta Tags e SEO](/guides/features/meta-tags-seo)
+Veja mais em nosso capítulo [Meta Tags e SEO](/docs/2.x/features/meta-tags-seo)
 
 </base-alert>
 
@@ -207,7 +207,7 @@ export default {
 
 <base-alert type="next">
 
-Veja mais sobre layouts em nosso capítulo [Views](/guides/concepts/views#layouts)
+Veja mais sobre layouts em nosso capítulo [Views](/docs/2.x/concepts/views#layouts)
 
 </base-alert>
 
@@ -229,7 +229,7 @@ Aplica-se apenas se o loading também estiver definido em nuxt.config.js.
 
 <base-alert type="next">
 
-Veja mais em nosso capítulo [Loading](/guides/features/loading).
+Veja mais em nosso capítulo [Loading](/docs/2.x/features/loading).
 
 </base-alert>
 
@@ -245,7 +245,7 @@ export default {
 
 <base-alert type="next">
 
-Veja mais em nosso capítulo [Transitions](/guides/features/transitions).
+Veja mais em nosso capítulo [Transitions](/docs/2.x/features/transitions).
 
 </base-alert>
 
@@ -261,7 +261,7 @@ export default {
 
 Por outro lado, você pode definir manualmente `scrollToTop` como `false` nas rotas principais também.
 
-Se você deseja sobrescrever o comportamento de rolagem padrão do Nuxt.js, dê uma olhada na [opção scrollBehavior](/guides/configuration-glossary/configuration-router#scrollbehavior).
+Se você deseja sobrescrever o comportamento de rolagem padrão do Nuxt.js, dê uma olhada na [opção scrollBehavior](/docs/2.x/configuration-glossary/configuration-router#scrollbehavior).
 
 ### middleware
 
@@ -275,7 +275,7 @@ export default {
 
 <base-alert type="next">
 
-Veja mais sobre middleware em nosso capítulo [Middleware](/guides/directory-structure/middleware).
+Veja mais sobre middleware em nosso capítulo [Middleware](/docs/2.x/directory-structure/middleware).
 
 </base-alert>
 
@@ -315,7 +315,7 @@ export default {
 
 <base-alert type="next">
 
-Veja mais sobre a propriedade watchQuery em nosso capítulo [Requisiçao de dados](/guides/features/data-fetching)
+Veja mais sobre a propriedade watchQuery em nosso capítulo [Requisiçao de dados](/docs/2.x/features/data-fetching)
 
 </base-alert>
 
@@ -331,7 +331,7 @@ Por exemplo, `pages/-about.vue` será ignorado.
 
 <base-alert type="next">
 
-Confira a [opção ignore](/guides/configuration-glossary/configuration-ignore) para aprender mais sobre isso.
+Confira a [opção ignore](/docs/2.x/configuration-glossary/configuration-ignore) para aprender mais sobre isso.
 
 </base-alert>
 
@@ -350,7 +350,7 @@ export default {
 
 <base-alert type="next">
 
-Confira a [opção dir](/guides/configuration-glossary/configuration-dir) para aprender mais sobre isso.
+Confira a [opção dir](/docs/2.x/configuration-glossary/configuration-dir) para aprender mais sobre isso.
 
 </base-alert>
 

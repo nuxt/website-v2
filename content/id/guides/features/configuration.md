@@ -271,7 +271,7 @@ Metode `extend` dipanggil dua kali, pertama untuk membundel klien dan selebihnya
 
 ### Mengkustomisasi konfigurasi _Chunks_
 
-Anda mungkin ingin mengubah [konfigurasi optimasi](/guides/configuration-glossary/configuration-build#optimization) sedikit untuk menghindari penulisan ulang dari objek bawaan.
+Anda mungkin ingin mengubah [konfigurasi optimasi](/docs/2.x/configuration-glossary/configuration-build#optimization) sedikit untuk menghindari penulisan ulang dari objek bawaan.
 
 ```js{}[nuxt.config.js]
 export default {
@@ -382,7 +382,7 @@ _Axios-module_ tidak dapat digunakan di `nuxt.config.js`. Anda harus melakukan _
 
 <base-alert type="next">
 
-`Nuxt.config.js` memiliki lebih banyak opsi penyesuaian dan konfigurasi! Lihat semua kuncinya di [glosarium konfigurasi](/guides/configuration-glossary/configuration-build).
+`Nuxt.config.js` memiliki lebih banyak opsi penyesuaian dan konfigurasi! Lihat semua kuncinya di [glosarium konfigurasi](/docs/2.x/configuration-glossary/configuration-build).
 
 </base-alert>
 

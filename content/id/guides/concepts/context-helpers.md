@@ -48,7 +48,7 @@ questions:
 
 <app-modal :src="img" :alt="imgAlt"></app-modal>
 
-Objek `context` tersedia dalam fungsi Nuxt tertentu seperti [asyncData](/guides/features/data-fetching#async-data), [plugins](/guides/directory-structure/plugins), [middleware](/guides/directory-structure/middleware) dan [nuxtServerInit](/guides/directory-structure/store#the-nuxtserverinit-action). Ini memberikan _additional_ dan seringkali informasi opsional tentang permintaan saat ini ke aplikasi.
+Objek `context` tersedia dalam fungsi Nuxt tertentu seperti [asyncData](/docs/2.x/features/data-fetching#async-data), [plugins](/docs/2.x/directory-structure/plugins), [middleware](/docs/2.x/directory-structure/middleware) dan [nuxtServerInit](/docs/2.x/directory-structure/store#the-nuxtserverinit-action). Ini memberikan _additional_ dan seringkali informasi opsional tentang permintaan saat ini ke aplikasi.
 
 Pertama dan terpenting, context digunakan untuk menyediakan akses ke bagian lain dari aplikasi Nuxt.js, mis. penyimpanan Vuex atau instance `connect` yang mendasarinya. Jadi, kami memiliki objek `req` dan `res` dalam context yang tersedia di sisi server dan `store` selalu tersedia. Namun seiring waktu, contextnya diperluas dengan banyak variabel dan pintasan bermanfaat lainnya. Sekarang kita memiliki akses ke fungsionalitas HMR dalam mode `development`, `route` saat ini, halaman `params` dan `query`, serta opsi untuk mengakses variabel lingkungan melalui context. Selanjutnya, fungsi modul dan pembantu dapat diekspos melalui context untuk tersedia di kedua sisi - sisi klien dan server.
 
@@ -89,7 +89,7 @@ _Context_ yang kami rujuk di sini tidak sama dengan objek `context` yang tersedi
 
 </base-alert>
 
-Pelajari lebih lanjut tentang kunci context yang berbeda di [Internals Glossary](/guides/internals-glossary/context) kami.
+Pelajari lebih lanjut tentang kunci context yang berbeda di [Internals Glossary](/docs/2.x/internals-glossary/context) kami.
 
 ## Contoh
 

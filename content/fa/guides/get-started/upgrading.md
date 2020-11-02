@@ -7,7 +7,7 @@ category: get-started
 
 > در چند مرحله ساده، می‌توانید نسخه Nuxt.js خود را ارتقا دهید.
 
-اگر درحال به روزرسانی Nuxt به نسخه 2.14 هستید و می‌خواهید از ویژگی static hosting استفاده کنید. شما نیاز خواهید داشت تا [target:static](/guides/features/deployment-targets#static-hosting) را به فایل nuxt.config.js اضافه کنید تا بتوانید بدون مشکل از دستور generate استفاده کنید.
+اگر درحال به روزرسانی Nuxt به نسخه 2.14 هستید و می‌خواهید از ویژگی static hosting استفاده کنید. شما نیاز خواهید داشت تا [target:static](/docs/2.x/features/deployment-targets#static-hosting) را به فایل nuxt.config.js اضافه کنید تا بتوانید بدون مشکل از دستور generate استفاده کنید.
 
 ```js{}[nuxt.config.js]
 export default {

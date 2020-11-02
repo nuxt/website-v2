@@ -97,6 +97,6 @@ El navegador recibe la página renderizada del servidor con el HTML generado. El
 
 ### Paso 3: Navegador a navegador
 
-La navegación entre páginas con [`<NuxtLink>`](/guides/features/nuxt-components#the-nuxtlink-component) e realiza en el lado del cliente para que no vuelva a acceder al servidor a menos que refresque el navegador.
+La navegación entre páginas con [`<NuxtLink>`](/docs/2.x/features/nuxt-components#the-nuxtlink-component) e realiza en el lado del cliente para que no vuelva a acceder al servidor a menos que refresque el navegador.
 
 <quiz :questions="questions"></quiz>

@@ -12,7 +12,7 @@ position: 0
 
 De forma predeterminada, Nuxt.js usa su propio componente para mostrar una barra de progreso de carga entre las rutas.
 
-Puedes deshabilitarlo o personalizarlo globalmente a través de la [opción de loading de la configuración](/guides/configuration-glossary/configuration-loading), pero también puedes deshabilitarlo para páginas específicas estableciendo la propiedad `loading` en` false`:
+Puedes deshabilitarlo o personalizarlo globalmente a través de la [opción de loading de la configuración](/docs/2.x/configuration-glossary/configuration-loading), pero también puedes deshabilitarlo para páginas específicas estableciendo la propiedad `loading` en` false`:
 
 ```html
 <template>

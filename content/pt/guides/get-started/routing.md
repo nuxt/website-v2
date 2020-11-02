@@ -14,13 +14,13 @@ Em outras palavras, tudo que você precisa fazer para ter o roteamento em sua ap
 
 <base-alert type="next">
 
-Saiba mais sobre [Roteamento](/guides/features/file-system-routing)
+Saiba mais sobre [Roteamento](/docs/2.x/features/file-system-routing)
 
 </base-alert>
 
 ## Navegação
 
-Para navegar entre as páginas da sua aplicação, você deve utilizar o componente [NuxtLink](/guides/features/nuxt-components#the-nuxtlink-component). Este componente está incluído com o Nuxt.js e, portanto, você não precisará importá-lo como faz com outros componentes. É semelhante à tag HTML `<a>`, exceto que em vez de usar um `href="/about"`, usamos `to="/about"`. Se você já usou o `vue-router` antes, pode pensar no `<NuxtLink>` como um substituto para o `<RouterLink>`.
+Para navegar entre as páginas da sua aplicação, você deve utilizar o componente [NuxtLink](/docs/2.x/features/nuxt-components#the-nuxtlink-component). Este componente está incluído com o Nuxt.js e, portanto, você não precisará importá-lo como faz com outros componentes. É semelhante à tag HTML `<a>`, exceto que em vez de usar um `href="/about"`, usamos `to="/about"`. Se você já usou o `vue-router` antes, pode pensar no `<NuxtLink>` como um substituto para o `<RouterLink>`.
 
 Um link simples para a página `index.vue` em sua pasta `pages`:
 
@@ -50,6 +50,6 @@ Para todos os links para páginas do seu site, use `<NuxtLink>`. Se você tiver 
 
 <base-alert type="next">
 
-Saiba mais sobre o [componente NuxtLink](/guides/features/nuxt-components#the-nuxtlink-component).
+Saiba mais sobre o [componente NuxtLink](/docs/2.x/features/nuxt-components#the-nuxtlink-component).
 
 </base-alert>

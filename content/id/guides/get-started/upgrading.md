@@ -7,7 +7,7 @@ category: get-started
 
 > Meningkatkan Nuxt.js itu cepat, tetapi ini melibatkan lebih dari sekadar memperbarui package.json Anda.
 
-Jika Anda meningkatkan ke Nuxt v2.14 dan ingin menggunakan _hosting_ statis, maka Anda perlu menambahkan [target:static](/guides/features/deployment-targets#static-hosting) ke file `nuxt.config.js` agar perintah _generate_ berfungsi dengan benar.
+Jika Anda meningkatkan ke Nuxt v2.14 dan ingin menggunakan _hosting_ statis, maka Anda perlu menambahkan [target:static](/docs/2.x/features/deployment-targets#static-hosting) ke file `nuxt.config.js` agar perintah _generate_ berfungsi dengan benar.
 
 ```js{}[nuxt.config.js]
 export default {

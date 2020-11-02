@@ -81,7 +81,7 @@ questions:
 
 <base-alert type="next">
 
-انتخاب بین روش های مختلف خروجی گرفتن [Rendering modes](/guides/features/rendering-modes)
+انتخاب بین روش های مختلف خروجی گرفتن [Rendering modes](/docs/2.x/features/rendering-modes)
 
 </base-alert>
 

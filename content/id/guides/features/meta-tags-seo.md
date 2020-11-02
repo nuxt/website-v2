@@ -217,7 +217,7 @@ Anda mungkin ingin menonaktifkan opsi ini jika Anda memiliki banyak halaman dan 
 
 <base-alert type="next">
 
-[Petunjuk Sumber Daya](/guides/configuration-glossary/configuration-render#resourcehints)
+[Petunjuk Sumber Daya](/docs/2.x/configuration-glossary/configuration-render#resourcehints)
 
 </base-alert>
 

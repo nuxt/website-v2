@@ -34,6 +34,6 @@ export default {
 
 <base-alert>
 
-**Aviso**: O novo hook `fetch`, introduzido em 2.12, não é afetado por `watchQuery`. Para obter mais informações, consulte [ouvindo as alterações da string de consulta](/guides/features/data-fetching#the-fetch-hook).
+**Aviso**: O novo hook `fetch`, introduzido em 2.12, não é afetado por `watchQuery`. Para obter mais informações, consulte [ouvindo as alterações da string de consulta](/docs/2.x/features/data-fetching#the-fetch-hook).
 
 </base-alert>

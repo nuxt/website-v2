@@ -8,7 +8,7 @@ position: 3
 
 O Nuxt.js tem uma arquitetura totalmente modular que permite aos desenvolvedores estender qualquer parte do seu núcleo usando uma API flexível.
 
-Por favor, consulte o [Guia de Módulos](/guides/directory-structure/modules) para obter informações mais detalhadas se estiver interessado em desenvolver o seu próprio módulo.
+Por favor, consulte o [Guia de Módulos](/docs/2.x/directory-structure/modules) para obter informações mais detalhadas se estiver interessado em desenvolver o seu próprio módulo.
 
 Esta seção ajuda a familiarizar-se com os elementos internos do Nuxt e pode ser usada como uma referência para entendê-lo melhor ao escrever seus próprios módulos.
 
@@ -18,17 +18,17 @@ Essas classes são o coração do Nuxt e devem existir tanto no tempo de execuç
 
 #### Nuxt
 
-- [A classe `Nuxt`](/guides/internals-glossary/nuxt)
+- [A classe `Nuxt`](/docs/2.x/internals-glossary/nuxt)
 - Fonte: [core/nuxt.js](https://github.com/nuxt/nuxt.js/blob/dev/packages/core/src/nuxt.js)
 
 #### Renderer
 
-- [A classe `Renderer`](/guides/internals-glossary/internals-renderer)
+- [A classe `Renderer`](/docs/2.x/internals-glossary/internals-renderer)
 - Fonte: [vue-renderer/renderer.js](https://github.com/nuxt/nuxt.js/blob/dev/packages/vue-renderer/src/renderer.js)
 
 #### ModuleContainer
 
-- [A classe `ModuleContainer`](/guides/internals-glossary/internals-module-container)
+- [A classe `ModuleContainer`](/docs/2.x/internals-glossary/internals-module-container)
 - Fonte: [core/module.js](https://github.com/nuxt/nuxt.js/blob/dev/packages/core/src/module.js)
 
 ### Construção
@@ -37,12 +37,12 @@ Essas classes são necessárias apenas para o modo de construção ou desenvolvi
 
 #### Builder
 
-- [A classe `Builder`](/guides/internals-glossary/internals-builder)
+- [A classe `Builder`](/docs/2.x/internals-glossary/internals-builder)
 - Fonte: [builder/builder.js](https://github.com/nuxt/nuxt.js/blob/dev/packages/builder/src/builder.js)
 
 #### Generator
 
-- [A classe `Generator`](/guides/internals-glossary/internals-generator)
+- [A classe `Generator`](/docs/2.x/internals-glossary/internals-generator)
 - Fonte: [generator/generator.js](https://github.com/nuxt/nuxt.js/blob/dev/packages/generator/src/generator.js)
 
 ### Comuns

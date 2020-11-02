@@ -37,7 +37,7 @@ export default {
 }
 ```
 
-_Key_ `transition` pada `nuxt.config.js` digunakan untuk menetapkan nilai anggapan dari transisi halaman. Anda dapat mempelajari lebih lanjut tentang _key_ yang tersedia pada saat _key_ `transition` merupakan sebuah objek pada halaman [pages transition property](/guides/features/transitions).
+_Key_ `transition` pada `nuxt.config.js` digunakan untuk menetapkan nilai anggapan dari transisi halaman. Anda dapat mempelajari lebih lanjut tentang _key_ yang tersedia pada saat _key_ `transition` merupakan sebuah objek pada halaman [pages transition property](/docs/2.x/features/transitions).
 
 ## Porperti layoutTransition
 

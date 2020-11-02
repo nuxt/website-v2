@@ -96,7 +96,7 @@ You can add more components here such as Navigation, Header, Footer etc.
 
 <base-alert type="info">
 
-If you have [components set to true](/guides/directory-structure/components) then there is no need to add any import statements for your components.
+If you have [components set to true](/docs/2.x/directory-structure/components) then there is no need to add any import statements for your components.
 
 </base-alert>
 

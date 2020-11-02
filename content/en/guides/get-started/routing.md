@@ -14,13 +14,13 @@ In other words, all you have to do to have routing in your application is to cre
 
 <base-alert type="next">
 
-Learn more about [Routing](/guides/features/file-system-routing)
+Learn more about [Routing](/docs/2.x/features/file-system-routing)
 
 </base-alert>
 
 ## Navigation
 
-To navigate between pages of your app, you should use the [NuxtLink](/guides/features/nuxt-components#the-nuxtlink-component) component. This component is included with Nuxt.js and therefore you don't have to import it as you do with other components. It is similar to the HTML `<a>` tag, except that instead of using a `href="/about"` we use `to="/about"`. If you have used `vue-router` before, you can think of the `<NuxtLink>` as a replacement for `<RouterLink>`
+To navigate between pages of your app, you should use the [NuxtLink](/docs/2.x/features/nuxt-components#the-nuxtlink-component) component. This component is included with Nuxt.js and therefore you don't have to import it as you do with other components. It is similar to the HTML `<a>` tag, except that instead of using a `href="/about"` we use `to="/about"`. If you have used `vue-router` before, you can think of the `<NuxtLink>` as a replacement for `<RouterLink>`
 
 A simple link to the `index.vue` page in your `pages` folder:
 
@@ -50,6 +50,6 @@ For all links to pages within your site, use `<NuxtLink>`. If you have links to 
 
 <base-alert type="next">
 
-Learn more about the [NuxtLink component](/guides/features/nuxt-components#the-nuxtlink-component).
+Learn more about the [NuxtLink component](/docs/2.x/features/nuxt-components#the-nuxtlink-component).
 
 </base-alert>

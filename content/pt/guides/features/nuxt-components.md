@@ -94,7 +94,7 @@ O componente `<Nuxt>` é o componente que você usa para exibir os componentes d
 
 <base-alert>
 
-O componente `<Nuxt>` só pode ser usado dentro de [layouts](/guides/concepts/views#layouts).
+O componente `<Nuxt>` só pode ser usado dentro de [layouts](/docs/2.x/concepts/views#layouts).
 
 </base-alert>
 
@@ -255,7 +255,7 @@ Se você quiser saber mais sobre `<RouterLink>`, sinta-se à vontade para ler a 
 
 <base-alert type="info">
 
-`<NuxtLink>` também vem com [prefetching inteligente](/guides/features/nuxt-components#the-nuxtlink-component) ativado.
+`<NuxtLink>` também vem com [prefetching inteligente](/docs/2.x/features/nuxt-components#the-nuxtlink-component) ativado.
 
 </base-alert>
 

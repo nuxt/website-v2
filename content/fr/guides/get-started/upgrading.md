@@ -7,7 +7,7 @@ category: get-started
 
 > La mise à jour de Nuxt.js est rapide, mais plus complexe que celle de votre package.json
 
-Si vous effectuez une mise à niveau vers Nuxt v2.14 et que vous souhaitez utiliser un hébergement statique, vous devrez ajouter [target:static](/guides/features/deployment-targets#static-hosting) dans votre fichier nuxt.config.js pour que la commande `generate` fonctionne correctement.
+Si vous effectuez une mise à niveau vers Nuxt v2.14 et que vous souhaitez utiliser un hébergement statique, vous devrez ajouter [target:static](/docs/2.x/features/deployment-targets#static-hosting) dans votre fichier nuxt.config.js pour que la commande `generate` fonctionne correctement.
 
 ```js{}[nuxt.config.js]
 export default {

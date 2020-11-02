@@ -75,13 +75,13 @@ Consulter le [guide des concepts](../concepts/views)
 
 <base-alert type="next">
 
-Travailler avec [asyncData](/guides/features/data-fetching#async-data)
+Travailler avec [asyncData](/docs/2.x/features/data-fetching#async-data)
 
 </base-alert>
 
 <base-alert type="next">
 
-Choisir entre les différents [modes de rendu](/guides/features/rendering-modes)
+Choisir entre les différents [modes de rendu](/docs/2.x/features/rendering-modes)
 
 </base-alert>
 

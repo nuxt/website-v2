@@ -83,7 +83,7 @@ Si deseas trabajar con imágenes dinámicas, tienes que usar `require`.
 
 <base-alert type="next">
 
-Conoce más sobre [webpack Assets](/guides/directory-structure/assets#webpack-assets)
+Conoce más sobre [webpack Assets](/docs/2.x/directory-structure/assets#webpack-assets)
 
 </base-alert>
 
@@ -161,7 +161,7 @@ Puedes usar las fuentes locales si las añades dentro del directorio de `assets`
 
 <base-alert type="next">
 
-Aprende cómo añadir fuentes externas (como las fuentes de Google Fonts), en el [capítulo de Meta Tags y SEO](/guides/features/meta-tags-seo#external-resources)
+Aprende cómo añadir fuentes externas (como las fuentes de Google Fonts), en el [capítulo de Meta Tags y SEO](/docs/2.x/features/meta-tags-seo#external-resources)
 
 </base-alert>
 
@@ -252,7 +252,7 @@ Será transformado en:
 <img src="/_nuxt/img/tu_imagen.0c61159.png" />
 ```
 
-Si quieres cambiar las configuraciones del loader, puedes usar [build.extend](/guides/configuration-glossary/configuration-build#extend)
+Si quieres cambiar las configuraciones del loader, puedes usar [build.extend](/docs/2.x/configuration-glossary/configuration-build#extend)
 
 <app-modal>
   <code-sandbox  :src="csb_link"></code-sandbox>

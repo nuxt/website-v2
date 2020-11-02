@@ -37,7 +37,7 @@ O diretório components contém seus componentes Vue.js. Os componentes são o q
 
 ### Requisitando Dados
 
-Para acessar dados assíncronos de uma API em seus componentes, você pode usar o [ método `fetch()`](/guides/features/data-fetching#the-fetch-method) do Nuxt.
+Para acessar dados assíncronos de uma API em seus componentes, você pode usar o [ método `fetch()`](/docs/2.x/features/data-fetching#the-fetch-method) do Nuxt.
 
 Usando `$fetchState.pending` podemos mostrar uma mensagem quando os dados estão esperando para serem carregados e usando`$fetchState.error` podemos mostrar uma mensagem de erro se houver um erro ao buscar os dados. Ao usar fetch, devemos declarar os dados na propriedade data. Em seguida, ele é preenchido com os dados que vêm da busca.
 
@@ -71,7 +71,7 @@ Usando `$fetchState.pending` podemos mostrar uma mensagem quando os dados estão
 
 <base-alert type="next">
 
-Veja o capítulo sobre [fetch()](/guides/features/data-fetching#the-fetch-method) para mais detalhes sobre como esse método funciona
+Veja o capítulo sobre [fetch()](/docs/2.x/features/data-fetching#the-fetch-method) para mais detalhes sobre como esse método funciona
 
 </base-alert>
 

@@ -14,13 +14,13 @@ Dengan kata lain, yang harus Anda lakukan untuk memiliki perutean di aplikasi An
 
 <base-alert type="next">
 
-Pelajari lebih lanjut tentang [Routing](/guides/features/file-system-routing)
+Pelajari lebih lanjut tentang [Routing](/docs/2.x/features/file-system-routing)
 
 </base-alert>
 
 ## Navigasi
 
-Untuk menavigasi antar halaman aplikasi Anda, Anda harus menggunakan komponen [NuxtLink](/guides/features/nuxt-components#the-nuxtlink-component). Komponen ini disertakan dengan Nuxt.js dan oleh karena itu Anda tidak perlu mengimpornya seperti yang Anda lakukan dengan komponen lain. Ini mirip dengan tag `<a>` HTML, kecuali bahwa alih-alih menggunakan yang `href="/about"` kita gunakan `to="/about"`. Jika Anda pernah menggunakan `vue-router` sebelumnya, Anda dapat menganggapnya `<NuxtLink>` sebagai pengganti `<RouterLink>`
+Untuk menavigasi antar halaman aplikasi Anda, Anda harus menggunakan komponen [NuxtLink](/docs/2.x/features/nuxt-components#the-nuxtlink-component). Komponen ini disertakan dengan Nuxt.js dan oleh karena itu Anda tidak perlu mengimpornya seperti yang Anda lakukan dengan komponen lain. Ini mirip dengan tag `<a>` HTML, kecuali bahwa alih-alih menggunakan yang `href="/about"` kita gunakan `to="/about"`. Jika Anda pernah menggunakan `vue-router` sebelumnya, Anda dapat menganggapnya `<NuxtLink>` sebagai pengganti `<RouterLink>`
 
 Tautan sederhana ke halaman `index.vue` di folder `pages` Anda:
 
@@ -50,6 +50,6 @@ Untuk semua link ke halaman dalam situs Anda, gunakan `<NuxtLink>`. Jika Anda me
 
 <base-alert type="next">
 
-Pelajari lebih lanjut tentang [Komponen NuxtLink](/guides/features/nuxt-components#the-nuxtlink-component).
+Pelajari lebih lanjut tentang [Komponen NuxtLink](/docs/2.x/features/nuxt-components#the-nuxtlink-component).
 
 </base-alert>

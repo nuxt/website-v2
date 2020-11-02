@@ -26,4 +26,4 @@ Por padrão, o Nuxt.js rola para o topo quando você vai para outra página, mas
 
 Por outro lado, você pode definir manualmente `scrollToTop` como `false` nas rotas principais também.
 
-Se você deseja sobrescrever o comportamento de rolagem padrão do Nuxt.js, dê uma olhada na [opção scrollBehavior](/guides/configuration-glossary/configuration-router#scrollbehavior).
+Se você deseja sobrescrever o comportamento de rolagem padrão do Nuxt.js, dê uma olhada na [opção scrollBehavior](/docs/2.x/configuration-glossary/configuration-router#scrollbehavior).

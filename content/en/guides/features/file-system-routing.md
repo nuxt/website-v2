@@ -76,7 +76,7 @@ Nuxt.js gives you automatic code splitting for your routes, no configuration is 
 
 <base-alert type="info">
 
-Use the [NuxtLink component](/guides/features/nuxt-components#the-nuxtlink-component) to navigate between pages
+Use the [NuxtLink component](/docs/2.x/features/nuxt-components#the-nuxtlink-component) to navigate between pages
 
 </base-alert>
 
@@ -181,7 +181,7 @@ As of Nuxt >= v2.13 there is a crawler installed that will now crawl your link t
 
 <base-alert type="next">
 
-[Generate dynamic routes](/guides/concepts/static-site-generation) for static sites
+[Generate dynamic routes](/docs/2.x/concepts/static-site-generation) for static sites
 
 </base-alert>
 
@@ -195,7 +195,7 @@ Nuxt.js lets you create nested routes by using the children routes of vue-router
 
 <base-alert>
 
-Don't forget to include the [NuxtChild component](/guides/features/nuxt-components#the-nuxtchild-component) inside the parent component (`.vue` file).
+Don't forget to include the [NuxtChild component](/docs/2.x/features/nuxt-components#the-nuxtchild-component) inside the parent component (`.vue` file).
 
 </base-alert>
 
@@ -331,7 +331,7 @@ There are multiple ways to extend the routing with Nuxt:
 
 - [router-extras-module](https://github.com/nuxt-community/router-extras-module) to customize the route parameters in the page
 - component[@nuxtjs/router](https://github.com/nuxt-community/router-module) to overwrite the Nuxt router and write your own `router.js` file
-- Use the [router.extendRoutes](/guides/configuration-glossary/configuration-router#extendroutes) property in your `nuxt.config.js`
+- Use the [router.extendRoutes](/docs/2.x/configuration-glossary/configuration-router#extendroutes) property in your `nuxt.config.js`
 
 ## The router Property
 
@@ -351,7 +351,7 @@ The base URL of the app. For example, if the entire single page application is s
 
 <base-alert type="next">
 
-[Router Base Property](/guides/configuration-glossary/configuration-router#base)
+[Router Base Property](/docs/2.x/configuration-glossary/configuration-router#base)
 
 </base-alert>
 
@@ -424,7 +424,7 @@ export default {
 
 <base-alert type="next">
 
-[extendRoutes Property](/guides/configuration-glossary/configuration-router#extendroutes)
+[extendRoutes Property](/docs/2.x/configuration-glossary/configuration-router#extendroutes)
 
 </base-alert>
 
@@ -434,7 +434,7 @@ Controls whether the router should fallback to hash mode when the browser does n
 
 <base-alert type="next">
 
-[fallback Property](/guides/configuration-glossary/configuration-router#fallback)
+[fallback Property](/docs/2.x/configuration-glossary/configuration-router#fallback)
 
 </base-alert>
 
@@ -444,7 +444,7 @@ Configure the router mode, it is not recommended to change it due to server-side
 
 <base-alert type="next">
 
-[mode Property](/guides/configuration-glossary/configuration-router#mode)
+[mode Property](/docs/2.x/configuration-glossary/configuration-router#mode)
 
 </base-alert>
 
@@ -454,7 +454,7 @@ Provide custom query string parse / stringify functions.
 
 <base-alert type="next">
 
-[parseQuery / stringifyQuery Property](/guides/configuration-glossary/configuration-router#parsequery--stringifyquery)
+[parseQuery / stringifyQuery Property](/docs/2.x/configuration-glossary/configuration-router#parsequery--stringifyquery)
 
 </base-alert>
 
@@ -502,7 +502,7 @@ export default function (to, from, savedPosition) {
 
 <base-alert type="next">
 
-[scrollBehavior Property](/guides/configuration-glossary/configuration-router#scrollbehavior)
+[scrollBehavior Property](/docs/2.x/configuration-glossary/configuration-router#scrollbehavior)
 
 </base-alert>
 
@@ -528,7 +528,7 @@ This option should not be set without preparation and has to be tested thoroughl
 
 <base-alert type="next">
 
-[trailingSlash Property](/guides/configuration-glossary/configuration-router#trailingslash)
+[trailingSlash Property](/docs/2.x/configuration-glossary/configuration-router#trailingslash)
 
 </base-alert>
 

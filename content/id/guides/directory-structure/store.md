@@ -254,7 +254,7 @@ Hanya modul utama (dalam store/index.js) yang akan menerima action ini. Anda dib
 
 </base-alert>
 
-[Context](/guides/concepts/context-helpers) diberikan kepada `nuxtServerInit` menjadi argumen kedua dalam metode `asyncData`.
+[Context](/docs/2.x/concepts/context-helpers) diberikan kepada `nuxtServerInit` menjadi argumen kedua dalam metode `asyncData`.
 
 Jika `nuxt generate` dijalankan, `nuxtServerInit` akan dieksekusi pada setiap jalur dinamis yang dihasilkan.
 

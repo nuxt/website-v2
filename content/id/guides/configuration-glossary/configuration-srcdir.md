@@ -7,7 +7,7 @@ position: 28
 ---
 
 - Tipe: `String`
-- Nilai Anggapan: [nilai rootDir](/guides/configuration-glossary/configuration-rootdir)
+- Nilai Anggapan: [nilai rootDir](/docs/2.x/configuration-glossary/configuration-rootdir)
 
 > Tentukan direktori sumber aplikasi Nuxt.js Anda
 

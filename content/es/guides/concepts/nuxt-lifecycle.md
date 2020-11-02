@@ -141,7 +141,7 @@ Igual que para la parte _cliente_, todo ocurre en el navegador pero sólo cuando
 
 <base-alert type="info">
 
-Revisa el capítulo sobre componente para ver más info de [`<NuxtLink>`](/guides/features/nuxt-components#the-nuxtlink-component)
+Revisa el capítulo sobre componente para ver más info de [`<NuxtLink>`](/docs/2.x/features/nuxt-components#the-nuxtlink-component)
 
 </base-alert>
 
@@ -159,7 +159,7 @@ Revisa el capítulo sobre componente para ver más info de [`<NuxtLink>`](/guide
 
 <base-alert type="next">
 
-Héchale un vistazo a [libro de Características](/guides/features/rendering-modes)
+Héchale un vistazo a [libro de Características](/docs/2.x/features/rendering-modes)
 
 </base-alert>
 

@@ -75,13 +75,13 @@ Silakan lihat [Dokumentasi Concepts](../concepts/views)
 
 <base-alert type="next">
 
-Berkerja dengan [asyncData](/guides/features/data-fetching#async-data)
+Berkerja dengan [asyncData](/docs/2.x/features/data-fetching#async-data)
 
 </base-alert>
 
 <base-alert type="next">
 
-Memilih antara [Mode rendering](/guides/features/rendering-modes) yang berbeda
+Memilih antara [Mode rendering](/docs/2.x/features/rendering-modes) yang berbeda
 
 </base-alert>
 

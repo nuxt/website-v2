@@ -52,7 +52,7 @@ export default {
 
 <base-alert type="next">
 
-See more on the [build property](/guides/configuration-glossary/configuration-build)
+See more on the [build property](/docs/2.x/configuration-glossary/configuration-build)
 
 </base-alert>
 
@@ -78,7 +78,7 @@ By omitting the extension, if you have a css file and decide to change to use sa
 
 <base-alert type="next">
 
-See more on the [css property](/guides/configuration-glossary/configuration-css)
+See more on the [css property](/docs/2.x/configuration-glossary/configuration-css)
 
 </base-alert>
 
@@ -94,7 +94,7 @@ export default {
 
 <base-alert type="next">
 
-See more on the [dev property](/guides/configuration-glossary/configuration-dev)
+See more on the [dev property](/docs/2.x/configuration-glossary/configuration-dev)
 
 </base-alert>
 
@@ -169,7 +169,7 @@ Your private config could be exposed if you use `$config` outside of a server-on
 
 <base-alert type="next">
 
-See more on the [runtimeConfig](/guides/configuration-glossary/configuration-runtime-config)
+See more on the [runtimeConfig](/docs/2.x/configuration-glossary/configuration-runtime-config)
 
 </base-alert>
 
@@ -181,7 +181,7 @@ See our blog post on [Moving from @nuxtjs/dotenv to runtime config](/blog/moving
 
 <base-alert type="next">
 
-See more on the [env property](/guides/configuration-glossary/configuration-env)
+See more on the [env property](/docs/2.x/configuration-glossary/configuration-env)
 
 </base-alert>
 
@@ -200,7 +200,7 @@ export default {
 
 <base-alert type="next">
 
-See more on the [generate property](/guides/configuration-glossary/configuration-generate)
+See more on the [generate property](/docs/2.x/configuration-glossary/configuration-generate)
 
 </base-alert>
 
@@ -222,7 +222,7 @@ This option lets you define all default meta tags for your application.
 
 <base-alert type="next">
 
-See more on [head integration](/guides/configuration-glossary/configuration-head)
+See more on [head integration](/docs/2.x/configuration-glossary/configuration-head)
 
 </base-alert>
 
@@ -240,7 +240,7 @@ export default {
 
 <base-alert type="next">
 
-See more on [loading integration](/guides/configuration-glossary/configuration-loading)
+See more on [loading integration](/docs/2.x/configuration-glossary/configuration-loading)
 
 </base-alert>
 
@@ -256,7 +256,7 @@ export default {
 
 <base-alert type="next">
 
-See more on the [modules property](/guides/configuration-glossary/configuration-modules)
+See more on the [modules property](/docs/2.x/configuration-glossary/configuration-modules)
 
 </base-alert>
 
@@ -274,7 +274,7 @@ Setting this field may be necessary if your project is organized as a Yarn works
 
 <base-alert type="next">
 
-See more on the [modulesDir property](/guides/configuration-glossary/configuration-modulesdir)
+See more on the [modulesDir property](/docs/2.x/configuration-glossary/configuration-modulesdir)
 
 </base-alert>
 
@@ -290,7 +290,7 @@ export default {
 
 <base-alert type="next">
 
-See more on the [plugins property](/guides/configuration-glossary/configuration-plugins)
+See more on the [plugins property](/docs/2.x/configuration-glossary/configuration-plugins)
 
 </base-alert>
 
@@ -308,7 +308,7 @@ export default {
 
 <base-alert type="next">
 
-See more on the [router property](/guides/configuration-glossary/configuration-router)
+See more on the [router property](/docs/2.x/configuration-glossary/configuration-router)
 
 </base-alert>
 
@@ -332,7 +332,7 @@ export default {
 
 <base-alert type="next">
 
-See more on the [server property](/guides/configuration-glossary/configuration-server)
+See more on the [server property](/docs/2.x/configuration-glossary/configuration-server)
 
 </base-alert>
 
@@ -376,7 +376,7 @@ export default {
 
 <base-alert type="next">
 
-See more on the [dir property](/guides/configuration-glossary/configuration-dir)
+See more on the [dir property](/docs/2.x/configuration-glossary/configuration-dir)
 
 </base-alert>
 
@@ -392,7 +392,7 @@ export default {
 
 <base-alert type="next">
 
-See more on the [transition property](/guides/configuration-glossary/configuration-transition)
+See more on the [transition property](/docs/2.x/configuration-glossary/configuration-transition)
 
 </base-alert>
 
@@ -416,6 +416,6 @@ node_modules .nuxt dist
 
 <base-alert type="next">
 
-Check out the [configuration-glossary](/guides/configuration-glossary/configuration-build)
+Check out the [configuration-glossary](/docs/2.x/configuration-glossary/configuration-build)
 
 </base-alert>

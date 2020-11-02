@@ -99,6 +99,6 @@ mounted{
 
 ### Step 3: 브라우저에서 브라우저로
 
-[`<NuxtLink>`](/guides/features/nuxt-components#the-nuxtlink-component)를 사용하는 페이지 간의 이동은 클라이언트 사이드에서 이루어지므로 브라우저를 새로고침하지 않는한 서버에 다시 연결되지 않습니다.
+[`<NuxtLink>`](/docs/2.x/features/nuxt-components#the-nuxtlink-component)를 사용하는 페이지 간의 이동은 클라이언트 사이드에서 이루어지므로 브라우저를 새로고침하지 않는한 서버에 다시 연결되지 않습니다.
 
 <quiz :questions="questions"></quiz>

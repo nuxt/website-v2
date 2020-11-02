@@ -6,7 +6,7 @@ category: internals-glossary
 position: 1
 ---
 
-El `contexto` proporciona objetos / parámetros adicionales de Nuxt a componentes de Vue y está disponible en áreas especiales del ciclo de vida de nuxt como [`asyncData`](/api), [`fetch`](/guides/features/data-fetching), [`plugins`](/guides/directory-structure/plugins), [`middleware`](/guides/directory-structure/middleware#router-middleware) and [`nuxtServerInit`](/guides/directory-structure/store#the-nuxtserverinit-action).
+El `contexto` proporciona objetos / parámetros adicionales de Nuxt a componentes de Vue y está disponible en áreas especiales del ciclo de vida de nuxt como [`asyncData`](/api), [`fetch`](/docs/2.x/features/data-fetching), [`plugins`](/docs/2.x/directory-structure/plugins), [`middleware`](/docs/2.x/directory-structure/middleware#router-middleware) and [`nuxtServerInit`](/docs/2.x/directory-structure/store#the-nuxtserverinit-action).
 
 > _Nota: "El contexto" al que nos referimos aquí no debe confundirse con el objeto `context` disponible en [`Vuex Actions`](https://vuex.vuejs.org/guide/actions.html). Los dos no están relacionados._
 
@@ -51,7 +51,7 @@ Las opciones de la instancia raíz de Vue que incluye todos sus complementos. Po
 
 `store` ([_Vuex Store_](https://vuex.vuejs.org/api/#vuex-store-instance-properties))
 
-Instancia de Vuex Store. **Solamente disponible si [vuex store](/guides/directory-structure/store) está definido**.
+Instancia de Vuex Store. **Solamente disponible si [vuex store](/docs/2.x/directory-structure/store) está definido**.
 
 ### route
 
@@ -75,7 +75,7 @@ Alias de `route.query`.
 
 `env` (_Object_)
 
-Variables de entorno definidas en `nuxt.config.js`, mira [env api](/guides/configuration-glossary/configuration-env).
+Variables de entorno definidas en `nuxt.config.js`, mira [env api](/docs/2.x/configuration-glossary/configuration-env).
 
 ### IsDev
 

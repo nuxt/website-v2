@@ -48,7 +48,7 @@ questions:
 
 <app-modal :src="img" :alt="imgAlt"></app-modal>
 
-O objeto `context` está disponível em funções específicas do Nuxt, como [asyncData](/guides/features/data-fetching#async-data), [plugins](/guides/directory-structure/plugins), [middleware](/guides/directory-structure/middleware) e [nuxtServerInit](/guides/directory-structure/store#the-nuxtserverinit-action). Ele fornece informações _adicionais_ e frequentemente opcionais sobre a request atual à aplicação.
+O objeto `context` está disponível em funções específicas do Nuxt, como [asyncData](/docs/2.x/features/data-fetching#async-data), [plugins](/docs/2.x/directory-structure/plugins), [middleware](/docs/2.x/directory-structure/middleware) e [nuxtServerInit](/docs/2.x/directory-structure/store#the-nuxtserverinit-action). Ele fornece informações _adicionais_ e frequentemente opcionais sobre a request atual à aplicação.
 
 Em primeiro lugar, o contexto é usado para fornecer acesso a outras partes da aplicação Nuxt.js, por exemplo, a store do Vuex ou a instância `connect` subjacente. Assim, temos os objetos `req` e `res` no contexto disponíveis no lado do servidor e a `store` sempre disponível. Mas com o tempo, o contexto foi estendido com muitas outras variáveis ​​e atalhos úteis. Agora temos acesso às funcionalidades do HMR em modo `development`, a `route` atual, os `params` e `query` da página, bem como a opção de acessar variáveis ​​de ambiente através do contexto. Além disso, funções de módulo e helpers podem ser expostos por meio do contexto para estarem disponíveis em ambos - lado do cliente e do servidor.
 
@@ -89,7 +89,7 @@ O _context_ ao qual nos referimos aqui não deve ser confundido com o objeto `co
 
 </base-alert>
 
-Saiba mais sobre as diferentes propriedades de contexto em nosso [Glossário de Internals](/guides/internals-glossary/context)
+Saiba mais sobre as diferentes propriedades de contexto em nosso [Glossário de Internals](/docs/2.x/internals-glossary/context)
 
 ## Exemplos
 

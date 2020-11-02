@@ -28,6 +28,8 @@
         :toc="page.toc"
         class="mb-8 block"
       />
+      <SponsorsBlock />
+      <AdsBlock :key="$route.params.slug" />
     </AffixBlock>
   </div>
 </template>

@@ -40,11 +40,11 @@
 
 <script>
 export default {
-  async asyncData({ $content, params, store, error, app }) {
+  async asyncData({ $content, $contributors, params, store, error, app }) {
     const slug = params.slug || 'hello-world'
 
     let path = `/${app.i18n.defaultLocale}/examples`
-    let page, prev, next, contributors, langFallback
+    let page, prev, next, langFallback
 
     try {
       page = await $content(path, slug).fetch()
@@ -65,13 +65,7 @@ export default {
       }
     }
 
-    try {
-      contributors = (
-        await fetch(
-          `https://contributors-api.onrender.com/content${path}/${slug}`
-        ).then(res => res.json())
-      ).map(({ author }) => ({ author }))
-    } catch (e) {}
+    const contributors = await $contributors(`/content${path}/${slug}`)
 
     try {
       ;[prev, next] = await $content(path)

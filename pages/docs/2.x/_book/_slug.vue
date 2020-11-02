@@ -39,9 +39,9 @@ import copyCodeBlock from '~/mixins/copyCodeBlock'
 
 export default {
   mixins: [copyCodeBlock],
-  async asyncData({ $content, params, store, error, app }) {
+  async asyncData({ $content, $contributors, params, store, error, app }) {
     let path = `/${app.i18n.defaultLocale}/guides/${params.book}`
-    let page, prev, next, contributors, langFallback
+    let page, prev, next, langFallback
 
     try {
       page = await $content(path, params.slug).fetch()
@@ -73,13 +73,7 @@ export default {
       }
     }
 
-    try {
-      contributors = (
-        await fetch(
-          `https://contributors-api.onrender.com/content${path}/${params.slug}`
-        ).then(res => res.json())
-      ).map(({ author }) => ({ author }))
-    } catch (e) {}
+    const contributors = await $contributors(`/content${path}/${params.slug}`)
 
     try {
       ;[prev, next] = await $content(

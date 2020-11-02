@@ -113,7 +113,8 @@ export default {
     '~/plugins/ga.client.js',
     '~/plugins/adblock.client.js',
     '~/plugins/newsletter.client.js',
-    '~/plugins/vue-scrollactive'
+    '~/plugins/vue-scrollactive',
+    '~/plugins/contributors'
   ],
   env: {
     DEPLOY_PRIME_URL: process.env.DEPLOY_PRIME_URL || false,
@@ -227,7 +228,7 @@ export default {
     langDir: 'i18n/'
   },
   hooks: {
-    'render:route' (url, result, context) {
+    'render:route'(url, result, context) {
       result.html = result.html.replace(/ defer>/g, ' defer async>')
     },
     'generate:page': page => {

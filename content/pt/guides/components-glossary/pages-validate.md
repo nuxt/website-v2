@@ -3,6 +3,7 @@ title: 'O método validate'
 description: Nuxt.js permite definir um método validador dentro de seu componente de rota dinâmica.
 menu: Validate Method
 category: components-glossary
+position: 0
 ---
 
 > Nuxt.js permite definir um método validador dentro de seu componente de rota dinâmica.

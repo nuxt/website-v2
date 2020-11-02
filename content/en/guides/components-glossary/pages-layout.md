@@ -3,6 +3,7 @@ title: 'The layout Property'
 description: Every file (first level) in the `layouts` directory will create a custom layout accessible with the layout property in the page component.
 menu: Layout Property
 category: components-glossary
+position: 0
 ---
 
 > Every file (first level) in the layouts directory will create a custom layout accessible with the layout property in the page component.

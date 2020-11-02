@@ -3,6 +3,7 @@ title: 'Properti loading'
 description: Properti `loading` memberi Anda opsi untuk menonaktifkan bilah loading secara default pada halaman tertentu.
 menu: Properti Loading
 category: components-glossary
+position: 0
 ---
 
 > Properti loading memberi Anda opsi untuk menonaktifkan bilah loading secara default pada halaman tertentu.

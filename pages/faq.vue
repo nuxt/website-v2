@@ -1,8 +1,8 @@
 <template>
   <div class="shadow-nuxt">
     <div class="container mx-auto px-4 lg:flex pb-12">
-      <TheMobileAsideNav :links="links" />
-      <TheAsideNav :links="links" class="hidden lg:block" />
+      <TheMobileAsideNav :links="links" section="faq"/>
+      <TheAsideNav :links="links" section="faq" class="hidden lg:block" />
       <div class="w-full lg:static lg:max-h-full lg:overflow-visible lg:w-3/4">
         <nuxt-child />
       </div>
@@ -14,17 +14,17 @@
 import groupBy from 'lodash.groupby'
 
 export default {
-  async asyncData({ $content, app, params }) {
+  async asyncData({ $content, app }) {
     let pages = []
 
     try {
-      pages = await $content(app.i18n.defaultLocale, params.section)
+      pages = await $content(app.i18n.defaultLocale, 'faq')
         .only(['slug', 'title', 'position', 'menu', 'category'])
         .sortBy('position')
         .fetch()
 
       if (app.i18n.locale !== app.i18n.defaultLocale) {
-        const newPages = await $content(app.i18n.locale, params.section)
+        const newPages = await $content(app.i18n.locale, 'faq')
           .only(['slug', 'title', 'position', 'menu', 'category'])
           .sortBy('position')
           .fetch()

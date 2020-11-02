@@ -3,6 +3,7 @@ title: 'A propriedade scrollToTop'
 description: A propriedade `scrollToTop` permite que você diga ao Nuxt.js para rolar para o topo antes de renderizar a página.
 menu: scrollToTop Property
 category: components-glossary
+position: 0
 ---
 
 > A propriedade `scrollToTop` permite que você diga ao Nuxt.js para rolar para o topo antes de renderizar a página.

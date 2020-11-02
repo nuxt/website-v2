@@ -18,7 +18,9 @@ import groupBy from 'lodash.groupby'
 export default {
   async asyncData({ $content, app, params, redirect }) {
     let pages = []
-
+    if (!params.book) {
+      return redirect('/docs/2.x/get-started/installation')
+    }
     try {
       const locale = ['pt', 'es'].includes(app.i18n.locale)
         ? app.i18n.locale
@@ -29,8 +31,8 @@ export default {
         .sortBy('position')
         .sortBy('title')
         .sortBy('menu')
+        .where({ position: { $gte: 0 } })
         .fetch()
-
       // if (app.i18n.locale !== app.i18n.defaultLocale) {
       //   const newPages = await $content(app.i18n.locale, 'guides', { deep: true })
       //     .only(['slug', 'title', 'menu', 'category', 'position'])

@@ -16,44 +16,30 @@ module.exports = {
   header: {
     links: [
       {
-        name: 'Guides',
-        slug: 'guides',
-        type: 'newDocs',
-        routeName: 'guides-book-slug'
-      },
-      {
-        name: 'Guide',
-        slug: 'guide',
-        type: 'dynamic',
-        routeName: 'section-slug'
-      },
-      {
-        name: 'API',
-        slug: 'api',
-        type: 'dynamic',
-        routeName: 'section-slug'
-      },
-      {
-        name: 'Exemples',
-        slug: 'examples',
-        type: 'dynamic',
-        routeName: 'section-slug'
-      },
-      {
-        name: 'FAQ',
-        slug: 'faq',
-        type: 'dynamic',
-        routeName: 'section-slug'
+        name: 'Docs',
+        icon: 'books',
+        slug: 'docs-2.x-book-slug'
       },
       {
         name: 'Ressources',
-        slug: 'resources',
-        type: 'static'
+        icon: 'resources',
+        slug: 'resources'
+      },
+      {
+        name: 'Exemples',
+        icon: 'code',
+        slug: 'examples'
       },
       {
         name: 'Blog',
-        slug: 'blog',
-        type: 'static'
+        icon: 'blog',
+        slug: 'blog'
+      },
+      {
+        name: 'Cours Video',
+        icon: 'video',
+        href:
+          'https://masteringnuxt.com?friend=nuxt&utm_source=Nuxtjs.org&utm_medium=Link&utm_content=Navbar&utm_content=prelaunch'
       }
     ],
     search: {
@@ -339,18 +325,21 @@ module.exports = {
     links: {
       discover: {
         title: 'Discover',
-        design: 'Design resources',
-        team: 'A worldwide team',
-        blog: 'Blog'
+        shop: 'Our Goodies Store',
+        consulting: 'Training & consultancy',
+        sponsorNuxt: 'Sponsoring & donations',
       },
-      follow: {
-        title: 'Follow'
+      about: {
+        title: 'About',
+        team: 'Our team',
+        design: 'Design kit',
+        contact: 'Contact us'
       },
       support: {
         title: 'Support',
-        sponsorNuxt: 'Sponsor NuxtJS',
-        shop: 'The NuxtJS Shop',
-        consulting: 'NuxtJS Consulting'
+        faq: 'FAQ',
+        discord: 'Chat with us',
+        contributionGuide: 'Contribution guide'
       }
     }
   },

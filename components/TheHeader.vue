@@ -12,8 +12,8 @@
         @click.native.right.stop.prevent="$router.push('/design')"
       >
         <h1 class="m-0 h-0 w-0 overflow-hidden">
-          NUXTJS
-        </h1>
+NUXTJS
+</h1>
         <NuxtLogo
           class="h-6 lg:h-8 text-light-onSurfacePrimary dark:text-dark-onSurfacePrimary transition-colors duration-300 ease-linear"
         />
@@ -27,52 +27,30 @@
             class="xl:px-4 lg:py-0 lg:px-2 py-2"
           >
             <NuxtLink
-              v-if="link.type === 'newDocs'"
+              v-if="!link.href"
               class="block font-medium uppercase hover:no-underline light:hover:text-nuxt-lightgreen dark:hover:text-nuxt-lightgreen text-light-onSurfacePrimary dark:text-dark-onSurfacePrimary transition-colors duration-300 ease-linear"
               :to="
                 localePath({
-                  name: link.routeName,
-                  params: {
-                    section: 'guides',
-                    book: 'get-started',
-                    slug: 'installation'
-                  }
+                  name: link.slug,
+                  params: { book: 'get-started', slug: 'installation' }
                 })
               "
-            >
-              {{ link.name }}
-              <span
-                class="bg-green-200 dark:text-black text-ss align-top px-1 rounded-sm lowercase"
-              >
-                beta
-              </span>
-            </NuxtLink>
-            <NuxtLink
-              v-if="link.type === 'dynamic'"
-              class="block font-medium uppercase hover:no-underline light:hover:text-nuxt-lightgreen dark:hover:text-nuxt-lightgreen text-light-onSurfacePrimary dark:text-dark-onSurfacePrimary transition-colors duration-300 ease-linear"
-              :to="
-                localePath({
-                  name: link.routeName,
-                  params: { section: link.slug }
-                })
-              "
-            >
-              {{ link.name }}
-            </NuxtLink>
-            <NuxtLink
-              v-else-if="link.type === 'static'"
-              class="block font-medium uppercase hover:no-underline light:hover:text-nuxt-lightgreen dark:hover:text-nuxt-lightgreen text-light-onSurfacePrimary dark:text-dark-onSurfacePrimary transition-colors duration-300 ease-linear"
-              :to="localePath({ name: link.slug })"
             >
               {{ link.name }}
             </NuxtLink>
             <a
-              v-else-if="link.type === 'external'"
+              v-else
               :key="link.href"
               :href="link.href"
+              target="_blank"
               class="block font-medium uppercase hover:no-underline hover:text-nuxt-lightgreen text-light-onSurfacePrimary dark:text-dark-onSurfacePrimary transition-colors duration-300 ease-linear"
             >
               {{ link.name }}
+              <span
+                class="bg-orange-500 text-white dark:text-black text-ss align-top px-1 rounded-sm lowercase"
+              >
+                new
+              </span>
             </a>
           </li>
         </ul>

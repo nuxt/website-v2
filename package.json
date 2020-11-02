@@ -36,7 +36,7 @@
     "vue-if-bot": "^1.2.0",
     "vue-observe-visibility": "^0.4.6",
     "vue-scrollactive": "^0.9.3",
-    "vue-scrollto": "^2.19.1"
+    "vue-scrollto": "^2.20.0"
   },
   "devDependencies": {
     "@nuxtjs/color-mode": "^2.0.0",
@@ -51,7 +51,7 @@
     "cross-env": "^7.0.2",
     "cypress": "5.5.0",
     "eslint": "^7.12.1",
-    "eslint-config-prettier": "^6.14.0",
+    "eslint-config-prettier": "^6.15.0",
     "eslint-plugin-cypress": "^2.11.2",
     "fibers": "^5.0.0",
     "globby": "^11.0.1",
@@ -61,7 +61,7 @@
     "markdownlint-cli": "^0.24.0",
     "npm-run-all": "^4.1.5",
     "prettier": "^2.1.2",
-    "sass": "^1.27.0",
+    "sass": "^1.27.1",
     "sass-loader": "^10.0.4",
     "start-server-and-test": "^1.11.5",
     "stylelint": "^13.7.2",

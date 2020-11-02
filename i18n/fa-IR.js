@@ -17,43 +17,29 @@ module.exports = {
     links: [
       {
         name: 'راهنمایی‌ها',
-        slug: 'guides',
-        type: 'newDocs',
-        routeName: 'guides-book-slug'
-      },
-      {
-        name: 'راهنما',
-        slug: 'guide',
-        type: 'dynamic',
-        routeName: 'section-slug'
-      },
-      {
-        name: 'API',
-        slug: 'api',
-        type: 'dynamic',
-        routeName: 'section-slug'
-      },
-      {
-        name: 'نمونه‌ها',
-        slug: 'examples',
-        type: 'dynamic',
-        routeName: 'section-slug'
-      },
-      {
-        name: 'سوالات متداول',
-        slug: 'faq',
-        type: 'dynamic',
-        routeName: 'section-slug'
+        icon: 'books',
+        slug: 'docs-2.x-book-slug'
       },
       {
         name: 'منابع',
-        slug: 'resources',
-        type: 'static'
+        icon: 'resources',
+        slug: 'resources'
+      },
+      {
+        name: 'نمونه‌ها',
+        icon: 'code',
+        slug: 'examples'
       },
       {
         name: 'بلاگ',
-        slug: 'blog',
-        type: 'static'
+        icon: 'blog',
+        slug: 'blog'
+      },
+      {
+        name: 'Video Courses',
+        icon: 'video',
+        href:
+          'https://masteringnuxt.com?friend=nuxt&utm_source=Nuxtjs.org&utm_medium=Link&utm_content=Navbar&utm_content=prelaunch'
       }
     ],
     search: {
@@ -331,19 +317,22 @@ module.exports = {
   footer: {
     links: {
       discover: {
-        title: 'بیشتر',
-        design: 'منابع طراحی',
-        team: 'تیم',
-        blog: 'وبلاگ'
+        title: 'Discover',
+        shop: 'Our Goodies Store',
+        consulting: 'Training & consultancy',
+        sponsorNuxt: 'Sponsoring & donations',
       },
-      follow: {
-        title: 'شبکه‌های اجتماعی'
+      about: {
+        title: 'About',
+        team: 'Our team',
+        design: 'Design kit',
+        contact: 'Contact us'
       },
       support: {
-        title: 'پشتیبانی',
-        sponsorNuxt: 'اسپانسر',
-        shop: 'فروشگاه Nuxt',
-        consulting: 'مشاوره و پشتیبانی'
+        title: 'Support',
+        faq: 'FAQ',
+        discord: 'Chat with us',
+        contributionGuide: 'Contribution guide'
       }
     }
   },

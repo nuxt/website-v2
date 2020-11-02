@@ -4,7 +4,9 @@
       class="w-full py-8 px-4 lg:static lg:overflow-visible lg:max-h-full lg:w-3/4"
     >
       <article>
-        <h1 class="text-light-onSurfacePrimary dark:text-dark-onSurfacePrimary transition-colors duration-300 ease-linear">
+        <h1
+          class="text-light-onSurfacePrimary dark:text-dark-onSurfacePrimary transition-colors duration-300 ease-linear"
+        >
           {{ page.title }}
         </h1>
         <AppResponsiveVideo v-if="page.youtube" :src="page.youtube" />
@@ -21,11 +23,11 @@
 
 <script>
 export default {
-  async asyncData({ $content, params, store, error, app }) {
+  async asyncData({ $content, $contributors, params, store, error, app }) {
     const slug = params.slug || 'external-resources'
 
     let path = `/${app.i18n.defaultLocale}/faq`
-    let page, prev, next, contributors, langFallback
+    let page, prev, next, langFallback
 
     try {
       page = await $content(path, slug).fetch()
@@ -46,13 +48,7 @@ export default {
       }
     }
 
-    try {
-      contributors = (
-        await fetch(
-          `https://contributors-api.onrender.com/content${path}/${slug}`
-        ).then(res => res.json())
-      ).map(({ author }) => ({ author }))
-    } catch (e) {}
+    const contributors = await $contributors(`/content${path}/${slug}`)
 
     try {
       ;[prev, next] = await $content(path)

@@ -233,7 +233,7 @@ Melakukan navigasi ke halaman yang sama tidak akan memanggil `fetch` kembali jik
 
 </base-alert>
 
-Perbedaan utama antara `fetch` adalah Anda tidak perlu menangani status (_state_) yang tertunda atau galat. Nuxt akan menunggu pengait `asyncData` selesai sebelum menavigasi ke halaman selanjutnya atau menampilkan [halaman kegalatan](<(/docs/2.x/directory-structure/layouts#error-page)>)
+Perbedaan utama antara `fetch` adalah Anda tidak perlu menangani status (_state_) yang tertunda atau galat. Nuxt akan menunggu pengait `asyncData` selesai sebelum menavigasi ke halaman selanjutnya atau menampilkan [halaman kegalatan](/docs/2.x/directory-structure/layouts#error-page)>)
 
 Pengait menerima [konteks (_context_)](/docs/2.x/concepts/context-helpers) sebagai argumen pertama. Anda dapat menggunakan ini untuk menggambil beberapa data dan Nuxt.js akan secara otomatis mengabungkan objek yang dikembalikan dengan data pada komponen.
 

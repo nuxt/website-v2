@@ -88,7 +88,7 @@ Full static doesn't work with `ssr: 'false'` (which is the same as the deprecate
 Running `nuxt dev` with the static target will improve the developer experience:
 
 - Remove `req` & `res` from context
-- Fallback to client-side rendering on 404, errors and redirects (see [SPA fallback](<(/docs/2.x/concepts/static-site-generation#spa-fallback)>)
+- Fallback to client-side rendering on 404, errors and redirects (see [SPA fallback](/docs/2.x/concepts/static-site-generation#spa-fallback)>)
 - `$route.query` will always be equal to `{}` on server-side rendering
 - `process.static` is `true`
 
@@ -108,7 +108,7 @@ We also improved the [smart prefetching](/blog/introducing-smart-prefetching) wh
 
 On top of that, it also has a crawler inside, detecting every relative link and generating it:
 
-If you want to exclude a bunch of routes, use the [generate.exclude](/docs/2.x/configuration-glossary/configuration-generate#exclude). You can keep using [generate.route(/docs/2.x/2.x/configuration-glossary/configuration-generate#routes) to add extra routes that the crawler could not detect.
+If you want to exclude a bunch of routes, use the [generate.exclude](/docs/2.x/configuration-glossary/configuration-generate#exclude). You can keep using [generate.routes](/docs/2.x/configuration-glossary/configuration-generate#routes) to add extra routes that the crawler could not detect.
 
 To disable the crawler, set `generate.crawler: false` in your `nuxt.config.js`
 

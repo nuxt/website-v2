@@ -233,7 +233,7 @@ La navegación a la misma page no llamara a `fetch` si la última llamada `fetch
 
 </base-alert>
 
-La principal diferencia con `fetch` es que no tienes que manejar ningún estado pendiendo o de error. Nuxt va a esperar por el hook `asyncData` para ser terminado antes de navegar a la página siguiente o mostrar la [pagina de error](<(/docs/2.x/directory-structure/layouts#error-page)>)
+La principal diferencia con `fetch` es que no tienes que manejar ningún estado pendiendo o de error. Nuxt va a esperar por el hook `asyncData` para ser terminado antes de navegar a la página siguiente o mostrar la [pagina de error](/docs/2.x/directory-structure/layouts#error-page)>)
 
 Este hook recibe [el contexto](/docs/2.x/concepts/context-helpers) como primer argumento. Puedes usarlo para obtener algunos datos y Nuxt.js automáticamente combinara el objeto devuelto con los datos del componente.
 

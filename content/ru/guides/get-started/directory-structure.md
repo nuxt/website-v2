@@ -31,12 +31,11 @@ touch nuxt.config.js
 
 <base-alert type="next">
 
-[Подробнее о страницах](/guides/directory-structure/pages)
+[Подробнее о страницах](/docs/2.x/directory-structure/pages)
 
 </base-alert>
 
 ### Директория `components`
-
 
 Директория `components` включает ваши Vue.js компоненты, которые вы будете импортировать в компоненты страниц.
 
@@ -44,7 +43,7 @@ touch nuxt.config.js
 
 <base-alert type="next">
 
-[Подробнее о компонентах](/guides/directory-structure/components)
+[Подробнее о компонентах](/docs/2.x/directory-structure/components)
 
 </base-alert>
 
@@ -54,7 +53,7 @@ touch nuxt.config.js
 
 <base-alert type="next">
 
-[Подробнее о ресурсах](/guides/directory-structure/assets)
+[Подробнее о ресурсах](/docs/2.x/directory-structure/assets)
 
 </base-alert>
 
@@ -64,7 +63,7 @@ touch nuxt.config.js
 
 <base-alert type="next">
 
-[Подробнее о директории static](/guides/directory-structure/static)
+[Подробнее о директории static](/docs/2.x/directory-structure/static)
 
 </base-alert>
 
@@ -74,7 +73,7 @@ touch nuxt.config.js
 
 <base-alert type="next">
 
-[Подробнее о `nuxt.config.js`](/guides/directory-structure/nuxt-config)
+[Подробнее о `nuxt.config.js`](/docs/2.x/directory-structure/nuxt-config)
 
 </base-alert>
 
@@ -88,10 +87,10 @@ touch nuxt.config.js
 
 ## Больше о структуре проекта
 
-Существуют другие полезные директории: [content](/guides/directory-structure/content), [layouts](/guides/directory-structure/layouts), [middleware](/guides/directory-structure/middleware), [modules](/guides/directory-structure/modules), [plugins](/guides/directory-structure/plugins) и [store](/guides/directory-structure/store). Они не нужны для небольших приложений и здесь мы их не рассматриваем.
+Существуют другие полезные директории: [content](/docs/2.x/directory-structure/content), [layouts](/docs/2.x/directory-structure/layouts), [middleware](/docs/2.x/directory-structure/middleware), [modules](/docs/2.x/directory-structure/modules), [plugins](/docs/2.x/directory-structure/plugins) и [store](/docs/2.x/directory-structure/store). Они не нужны для небольших приложений и здесь мы их не рассматриваем.
 
 <base-alert type="next">
 
-Чтобы детально изучить директории, прочтите [раздел о структуре директорий](/guides/directory-structure/nuxt).
+Чтобы детально изучить директории, прочтите [раздел о структуре директорий](/docs/2.x/directory-structure/nuxt).
 
 </base-alert>

@@ -17,44 +17,30 @@ module.exports = {
   header: {
     links: [
       {
-        name: 'Guias',
-        slug: 'guides',
-        type: 'newDocs',
-        routeName: 'guides-book-slug'
-      },
-      {
-        name: 'Guia',
-        slug: 'guide',
-        type: 'dynamic',
-        routeName: 'section-slug'
-      },
-      {
-        name: 'API',
-        slug: 'api',
-        type: 'dynamic',
-        routeName: 'section-slug'
-      },
-      {
-        name: 'Exemplos',
-        slug: 'examples',
-        type: 'dynamic',
-        routeName: 'section-slug'
-      },
-      {
-        name: 'FAQ',
-        slug: 'faq',
-        type: 'dynamic',
-        routeName: 'section-slug'
+        name: 'Docs',
+        icon: 'books',
+        slug: 'docs-2.x-book-slug'
       },
       {
         name: 'Recursos',
-        slug: 'resources',
-        type: 'static'
+        icon: 'resources',
+        slug: 'resources'
+      },
+      {
+        name: 'Exemplos',
+        icon: 'code',
+        slug: 'examples'
       },
       {
         name: 'Blog',
-        slug: 'blog',
-        type: 'static'
+        icon: 'blog',
+        slug: 'blog'
+      },
+      {
+        name: 'Video Courses',
+        icon: 'video',
+        href:
+          'https://masteringnuxt.com?friend=nuxt&utm_source=Nuxtjs.org&utm_medium=Link&utm_content=Navbar&utm_content=prelaunch'
       }
     ],
     search: {
@@ -337,19 +323,22 @@ module.exports = {
   footer: {
     links: {
       discover: {
-        title: 'Descobrir',
-        design: 'Recursos de Design',
-        team: 'Um time global',
-        blog: 'Blog'
+        title: 'Discover',
+        shop: 'Our Goodies Store',
+        consulting: 'Training & consultancy',
+        sponsorNuxt: 'Sponsoring & donations'
       },
-      follow: {
-        title: 'Seguir'
+      about: {
+        title: 'About',
+        team: 'Our team',
+        design: 'Design kit',
+        contact: 'Contact us'
       },
       support: {
-        title: 'Suporte',
-        sponsorNuxt: 'Patrocine o NuxtJS',
-        shop: 'A Loja do NuxtJS',
-        consulting: 'Assessoria e Suporte NuxtJS'
+        title: 'Support',
+        faq: 'FAQ',
+        discord: 'Chat with us',
+        contributionGuide: 'Contribution guide'
       }
     }
   },

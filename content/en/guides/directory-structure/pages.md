@@ -160,7 +160,7 @@ export default {
 
 <base-alert type="next">
 
-See more on how asyncData works in our [Data Fetching](/guides/features/data-fetching#async-data) chapter
+See more on how asyncData works in our [Data Fetching](/docs/2.x/features/data-fetching#async-data) chapter
 
 </base-alert>
 
@@ -187,7 +187,7 @@ Every time you need to get asynchronous data you can use fetch. Fetch is called 
 
 <base-alert type="next">
 
-See more on how fetch works in our [Data Fetching](/guides/features/data-fetching) chapter
+See more on how fetch works in our [Data Fetching](/docs/2.x/features/data-fetching) chapter
 
 </base-alert>
 
@@ -205,7 +205,7 @@ export default {
 
 <base-alert type="next">
 
-See more in our [Meta Tags and SEO](/guides/features/meta-tags-seo) chapter
+See more in our [Meta Tags and SEO](/docs/2.x/features/meta-tags-seo) chapter
 
 </base-alert>
 
@@ -221,7 +221,7 @@ export default {
 
 <base-alert type="next">
 
-See more on layouts in our [Views](/guides/concepts/views#layouts) chapter.
+See more on layouts in our [Views](/docs/2.x/concepts/views#layouts) chapter.
 
 </base-alert>
 
@@ -243,7 +243,7 @@ Only applies if loading is also set in nuxt.config.js.
 
 <base-alert type="next">
 
-See more in our [Loading](/guides/features/loading) chapter.
+See more in our [Loading](/docs/2.x/features/loading) chapter.
 
 </base-alert>
 
@@ -259,7 +259,7 @@ export default {
 
 <base-alert type="next">
 
-See more on transitions in our [Transitions](/guides/features/transitions) chapter
+See more on transitions in our [Transitions](/docs/2.x/features/transitions) chapter
 
 </base-alert>
 
@@ -275,7 +275,7 @@ export default {
 
 Conversely, you can manually set `scrollToTop` to `false` on parent routes as well.
 
-If you want to overwrite the default scroll behavior of Nuxt.js, take a look at the [scrollBehavior option](/guides/configuration-glossary/configuration-router#scrollbehavior).
+If you want to overwrite the default scroll behavior of Nuxt.js, take a look at the [scrollBehavior option](/docs/2.x/configuration-glossary/configuration-router#scrollbehavior).
 
 ### middleware
 
@@ -289,7 +289,7 @@ export default {
 
 <base-alert type="next">
 
-See more on middleware in our [Middleware](/guides/directory-structure/middleware) chapter
+See more on middleware in our [Middleware](/docs/2.x/directory-structure/middleware) chapter
 
 </base-alert>
 
@@ -329,7 +329,7 @@ export default {
 
 <base-alert type="next">
 
-See more on the watch query property in our [Data Fetching](/guides/features/data-fetching) chapter
+See more on the watch query property in our [Data Fetching](/docs/2.x/features/data-fetching) chapter
 
 </base-alert>
 
@@ -341,7 +341,7 @@ For example, `pages/-about.vue` will be ignored.
 
 <base-alert type="next">
 
-Checkout the [ignore option](/guides/configuration-glossary/configuration-ignore) to learn more about it.
+Checkout the [ignore option](/docs/2.x/configuration-glossary/configuration-ignore) to learn more about it.
 
 </base-alert>
 
@@ -360,7 +360,7 @@ export default {
 
 <base-alert type="next">
 
-Checkout the [dir option](/guides/configuration-glossary/configuration-dir) to learn more about it.
+Checkout the [dir option](/docs/2.x/configuration-glossary/configuration-dir) to learn more about it.
 
 </base-alert>
 

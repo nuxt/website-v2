@@ -3,6 +3,7 @@ title: 'O método head'
 description: Nuxt.js usa vue-meta para atualizar as headers e atributos HTML da sua aplicação.
 menu: Head Method
 category: components-glossary
+position: 0
 ---
 
 > Nuxt.js usa [vue-meta](https://github.com/nuxt/vue-meta) para atualizar as `headers` e `atributos html` da sua aplicação.

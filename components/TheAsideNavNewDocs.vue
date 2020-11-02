@@ -14,7 +14,7 @@
             :is="$route.params.book === group ? `h3` : 'nuxt-link'"
             :key="`title-${group}`"
             :to="{
-              name: 'guides-book-slug',
+              name: 'docs-2.x-book-slug',
               params: { book: group, slug: sublinks[0].slug }
             }"
             class="flex items-center uppercase font-medium text-light-onSurfaceSecondary dark:text-dark-onSurfaceSecondary pb-2 transition-colors duration-300 ease-linear"
@@ -54,7 +54,7 @@
         </div>
         <p class="uppercase font-bold pb-6">
           <NuxtLink
-            to="/guide/release-notes"
+            to="/guides/release-notes"
             class="block bg-gray-100 dark:bg-dark-surface p-2 rounded border dark:border-gray-900 text-sm text-light-onSurfaceSecondary dark:text-dark-onSurfaceSecondary"
             active-class=""
             exact-active-class=""
@@ -101,7 +101,7 @@ export default {
   methods: {
     toLink(group, link) {
       return this.localePath({
-        name: 'guides-book-slug',
+        name: 'docs-2.x-book-slug',
         params: { book: group, slug: link.slug }
       })
     }

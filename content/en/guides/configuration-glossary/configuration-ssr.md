@@ -22,6 +22,6 @@ export default {
 
 <base-alert type="next">
 
-Previously, `mode` was used to disable or enable server-side rendering. Here is the [`mode` documentation](/guides/configuration-glossary/configuration-mode).
+Previously, `mode` was used to disable or enable server-side rendering. Here is the [`mode` documentation](/docs/2.x/configuration-glossary/configuration-mode).
 
 </base-alert>

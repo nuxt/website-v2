@@ -47,7 +47,7 @@ npm run dev
 
 ## List of Commands
 
-You can run different commands depending on the [target](/guides/features/deployment-targets):
+You can run different commands depending on the [target](/docs/2.x/features/deployment-targets):
 
 ### target: `server` (default value)
 
@@ -148,13 +148,13 @@ As of Nuxt v2.13 there is a crawler installed that will now crawl your link tags
 
 <base-alert>
 
-**Warning:** dynamic routes are ignored by the `generate` command when using Nuxt <= v2.12: [API Configuration generate](/guides/configuration-glossary/configuration-generate)
+**Warning:** dynamic routes are ignored by the `generate` command when using Nuxt <= v2.12: [API Configuration generate](/docs/2.x/configuration-glossary/configuration-generate)
 
 </base-alert>
 
 <base-alert type="info">
 
-When generating your web application with `nuxt generate`, [the context](/guides/internals-glossary/context) given to [asyncData](/guides/features/data-fetching#async-data) and [fetch](/guides/features/data-fetching#the-fetch-hook) will not have `req` and `res`.
+When generating your web application with `nuxt generate`, [the context](/docs/2.x/internals-glossary/context) given to [asyncData](/docs/2.x/features/data-fetching#async-data) and [fetch](/docs/2.x/features/data-fetching#the-fetch-hook) will not have `req` and `res`.
 
 </base-alert>
 

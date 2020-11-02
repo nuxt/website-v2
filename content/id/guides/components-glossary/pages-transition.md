@@ -3,6 +3,7 @@ title: 'Properti `transisi` halaman'
 description: Nuxt.js menggunakan komponen `<transisi>` untuk memungkinkan Anda membuat dan menerapkan transisi / animasi yang menakjubkan saat Anda menavigasi di antara halaman Anda.
 menu: Properti Transisi
 category: komponen-glosarium
+position: 0
 ---
 
 > Nuxt.js menggunakan komponen [`<transition>`] (https://vuejs.org/v2/guide/transitions.html#Transitioning-Single-Elements-Components) untuk memungkinkan Anda membuat transisi/animasi luar biasa di antara laman Anda.

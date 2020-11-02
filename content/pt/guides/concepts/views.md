@@ -39,7 +39,7 @@ questions:
 
 A seção Views descreve tudo que você precisa saber para configurar os dados e as views para uma rota específica na sua aplicação Nuxt.js. As views consistem de um app template, um layout e a página. Além disso, você pode definir meta tags personalizadas para a seção head de cada página, que são importantes para SEO (Search Engine Optimization).
 
-![Composição de uma View no Nuxt.js](/guides/views.png)
+![Composição de uma View no Nuxt.js](/docs/2.x/views.png)
 
 Composição de uma View no Nuxt.js
 
@@ -74,7 +74,7 @@ Existem muitas propriedades do componente de página, como a propriedade head no
 
 <base-alert type="next">
 
-Veja o [livro de Estrutura de Diretórios](/guides/directory-structure/nuxt) para saber mais sobre todas as propriedades que você pode usar em sua página
+Veja o [livro de Estrutura de Diretórios](/docs/2.x/directory-structure/nuxt) para saber mais sobre todas as propriedades que você pode usar em sua página
 
 </base-alert>
 
@@ -94,7 +94,7 @@ Você pode definir um layout padrão adicionando um arquivo `default.vue` dentro
 
 <base-alert type="next">
 
-Saiba mais sobre o [componente Nuxt](/guides/features/nuxt-components) on capítulo de componentes
+Saiba mais sobre o [componente Nuxt](/docs/2.x/features/nuxt-components) on capítulo de componentes
 
 </base-alert>
 

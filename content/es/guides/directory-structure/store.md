@@ -254,7 +254,7 @@ Solo el módulo principal (en `store/index.js`) recibirá esta acción. Deberá 
 
 </base-alert>
 
-El [contexto](/guides/concepts/context-helpers) es dado a `nuxtServerInit` como el segundo argumento al método `asyncData`.
+El [contexto](/docs/2.x/concepts/context-helpers) es dado a `nuxtServerInit` como el segundo argumento al método `asyncData`.
 
 Si se ejecuta `nuxt generate`, `nuxtServerInit` se ejecutará para cada ruta dinámica generada.
 

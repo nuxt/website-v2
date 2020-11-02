@@ -10,7 +10,7 @@ position: 0
 
 - **Tipo:** `Function` ou `Async Function`
 
-`validate` é sempre chamado antes de navegar para uma nova rota. Será chamado do lado do servidor uma vez (na primeira requisição da aplicação Nuxt) e do lado do cliente ao navegar para outras rotas. Este método usa o objeto [`contexto`](/guides/internals-glossary/context) como argumento.
+`validate` é sempre chamado antes de navegar para uma nova rota. Será chamado do lado do servidor uma vez (na primeira requisição da aplicação Nuxt) e do lado do cliente ao navegar para outras rotas. Este método usa o objeto [`contexto`](/docs/2.x/internals-glossary/context) como argumento.
 
 ```js
 validate({ params, query, store }) {
@@ -48,7 +48,7 @@ export default {
 }
 ```
 
-Você também pode verificar alguns dados em sua [store](/guides/directory-structure/store), por exemplo (preenchido pelo [`nuxtServerInit`](/guides/directory-structure/store#the-nuxtserverinit-action) antes da action):
+Você também pode verificar alguns dados em sua [store](/docs/2.x/directory-structure/store), por exemplo (preenchido pelo [`nuxtServerInit`](/docs/2.x/directory-structure/store#the-nuxtserverinit-action) antes da action):
 
 ```js
 export default {

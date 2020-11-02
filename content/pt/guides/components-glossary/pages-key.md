@@ -12,7 +12,7 @@ position: 0
 
 A propriedade `key` é propagada para `<router-view>`, o que é útil para fazer transições dentro de uma página dinâmica e uma rota diferente. Chaves diferentes resultam na re-renderização dos componentes da página.
 
-Existem várias maneiras de definir a key. Para obter mais detalhes, consulte a prop `nuxtChildKey` no [componente nuxt](/guides/features/nuxt-components).
+Existem várias maneiras de definir a key. Para obter mais detalhes, consulte a prop `nuxtChildKey` no [componente nuxt](/docs/2.x/features/nuxt-components).
 
 ```js
 export default {

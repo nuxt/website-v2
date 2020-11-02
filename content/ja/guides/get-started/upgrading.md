@@ -1,13 +1,13 @@
 ---
 title: アップグレード
-description: "Nuxt.js のアップグレードは一瞬ですが、package.json のアップデートより複雑です"
+description: 'Nuxt.js のアップグレードは一瞬ですが、package.json のアップデートより複雑です'
 position: 5
 category: get-started
 ---
 
 > Nuxt.js のアップグレードは一瞬ですが、package.json のアップデートより複雑です
 
-Nuxt v2.14 にアップグレードしてスタティックホスティングを使用したい場合、generate コマンドを正しく動作させるために nuxt.config.js ファイルに [target:static](/guides/features/deployment-targets#static-hosting) を追加する必要があります。
+Nuxt v2.14 にアップグレードしてスタティックホスティングを使用したい場合、generate コマンドを正しく動作させるために nuxt.config.js ファイルに [target:static](/docs/2.x/features/deployment-targets#static-hosting) を追加する必要があります。
 
 ```js{}[nuxt.config.js]
 export default {

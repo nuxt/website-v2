@@ -12,7 +12,7 @@ position: 0
 
 Properti `key` disebarkan ke dalam `<router-view>` yang berguna untuk membuat transisi di dalam halaman dinamis dan rute berbeda. Kunci yang berbeda menyebabkan perenderan ulang komponen halaman.
 
-Ada beberapa cara untuk menyetel kuncinya. Untuk lebih jelasnya, silakan merujuk ke `nuxtChildKey` prop di [komponen nuxt](/guides/features/nuxt-components).
+Ada beberapa cara untuk menyetel kuncinya. Untuk lebih jelasnya, silakan merujuk ke `nuxtChildKey` prop di [komponen nuxt](/docs/2.x/features/nuxt-components).
 
 ```js
 export default {

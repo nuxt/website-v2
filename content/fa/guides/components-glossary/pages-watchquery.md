@@ -34,6 +34,6 @@ export default {
 
 <base-alert>
 
-**هشدار:** `watchQuery` بر روی متد جدید `fetch` که در نسخه ۲.۱۲ اضافه شده است تاثیری ندارد. برای اطلاعات بیشتر به [نظاره بر تغییرات رشته پرس‌و‌جو](/guides/features/data-fetching#the-fetch-hook) مراجعه کنید.
+**هشدار:** `watchQuery` بر روی متد جدید `fetch` که در نسخه ۲.۱۲ اضافه شده است تاثیری ندارد. برای اطلاعات بیشتر به [نظاره بر تغییرات رشته پرس‌و‌جو](/docs/2.x/features/data-fetching#the-fetch-hook) مراجعه کنید.
 
 </base-alert>

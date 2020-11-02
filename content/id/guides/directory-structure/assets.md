@@ -83,7 +83,7 @@ Ketika bekerja dengan gambar dinamis, Anda perlu menggunakan _require_
 
 <base-alert type="next">
 
-Pelajari lebih lanjut tentang [Aset Webpack](/guides/directory-structure/assets#webpack-assets)
+Pelajari lebih lanjut tentang [Aset Webpack](/docs/2.x/directory-structure/assets#webpack-assets)
 
 </base-alert>
 
@@ -160,7 +160,7 @@ Anda dapat menggunakan fon lokal dengan menambahkannya ke _folder_ aset Anda. Se
 
 <base-alert type="next">
 
-Untuk menambahkan fon eksternal seperti fon google, lihat [bab Tag Meta dan SEO](/guides/features/meta-tags-seo#external-resources)
+Untuk menambahkan fon eksternal seperti fon google, lihat [bab Tag Meta dan SEO](/docs/2.x/features/meta-tags-seo#external-resources)
 
 </base-alert>
 
@@ -251,7 +251,7 @@ Akan diubah menjadi:
 <img src="/_nuxt/img/gambar_anda.0c61159.png" />
 ```
 
-Jika Anda ingin mengubah konfigurasi pada pemuat tersebut, gunakan [build.extend](/guides/configuration-glossary/configuration-build#extend).
+Jika Anda ingin mengubah konfigurasi pada pemuat tersebut, gunakan [build.extend](/docs/2.x/configuration-glossary/configuration-build#extend).
 
 <app-modal>
   <code-sandbox  :src="csb_link"></code-sandbox>

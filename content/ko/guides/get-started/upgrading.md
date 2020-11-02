@@ -7,7 +7,7 @@ category: get-started
 
 > Nuxt.js를 업그레이드하는 것은 빠르지만 package.json를 업데이트하는 것보다 복잡합니다.
 
-Nuxt v2.14로 업그레이드하고 있고 정적 호스팅을 사용하길 원한다면 generate 명령이 제대로 동작하도록 nuxt.config.js 파일에 [target:static](/guides/features/deployment-targets#static-hosting)를 추가해야 합니다.
+Nuxt v2.14로 업그레이드하고 있고 정적 호스팅을 사용하길 원한다면 generate 명령이 제대로 동작하도록 nuxt.config.js 파일에 [target:static](/docs/2.x/features/deployment-targets#static-hosting)를 추가해야 합니다.
 
 ```js{}[nuxt.config.js]
 export default {

@@ -53,7 +53,7 @@ export default {
 
 <base-alert type="next">
 
-Aprende más sobre [build property](/guides/configuration-glossary/configuration-build)
+Aprende más sobre [build property](/docs/2.x/configuration-glossary/configuration-build)
 
 </base-alert>
 
@@ -79,7 +79,7 @@ Al omitir la extensión, si tiene un archivo css y decides cambiar para usar sas
 
 <base-alert type="next">
 
-Aprende más sobre [css property](/guides/configuration-glossary/configuration-css)
+Aprende más sobre [css property](/docs/2.x/configuration-glossary/configuration-css)
 
 </base-alert>
 
@@ -96,7 +96,7 @@ export default {
 
 <base-alert type="next">
 
-Aprende más sobre [dev property](/guides/configuration-glossary/configuration-dev)
+Aprende más sobre [dev property](/docs/2.x/configuration-glossary/configuration-dev)
 
 </base-alert>
 
@@ -114,7 +114,7 @@ export default {
 
 <base-alert type="next">
 
-Aprende más sobre [env property](/guides/configuration-glossary/configuration-env)
+Aprende más sobre [env property](/docs/2.x/configuration-glossary/configuration-env)
 
 </base-alert>
 
@@ -133,7 +133,7 @@ export default {
 
 <base-alert type="next">
 
-Aprende más sobre [generate property](/guides/configuration-glossary/configuration-generate)
+Aprende más sobre [generate property](/docs/2.x/configuration-glossary/configuration-generate)
 
 </base-alert>
 
@@ -155,7 +155,7 @@ export default {
 
 <base-alert type="next">
 
-Aprende más en [head integration](/guides/configuration-glossary/configuration-head)
+Aprende más en [head integration](/docs/2.x/configuration-glossary/configuration-head)
 
 </base-alert>
 
@@ -173,7 +173,7 @@ export default {
 
 <base-alert type="next">
 
-Aprende más en [loading integration](/guides/configuration-glossary/configuration-loading)
+Aprende más en [loading integration](/docs/2.x/configuration-glossary/configuration-loading)
 
 </base-alert>
 
@@ -189,7 +189,7 @@ export default {
 
 <base-alert type="next">
 
-Aprende más sobre [modules property](/guides/configuration-glossary/configuration-modules)
+Aprende más sobre [modules property](/docs/2.x/configuration-glossary/configuration-modules)
 
 </base-alert>
 
@@ -209,7 +209,7 @@ Es posible que sea necesario configurar este campo si tu proyecto está organiza
 
 <base-alert type="next">
 
-Aprende más sobre [modulesDir property](/guides/configuration-glossary/configuration-modulesdir)
+Aprende más sobre [modulesDir property](/docs/2.x/configuration-glossary/configuration-modulesdir)
 
 </base-alert>
 
@@ -225,7 +225,7 @@ export default {
 
 <base-alert type="next">
 
-Aprende más sobre [plugins property](/guides/configuration-glossary/configuration-plugins)
+Aprende más sobre [plugins property](/docs/2.x/configuration-glossary/configuration-plugins)
 
 </base-alert>
 
@@ -243,7 +243,7 @@ export default {
 
 <base-alert type="next">
 
-Aprende más sobre [router property](/guides/configuration-glossary/configuration-router)
+Aprende más sobre [router property](/docs/2.x/configuration-glossary/configuration-router)
 
 </base-alert>
 
@@ -267,7 +267,7 @@ export default {
 
 <base-alert type="next">
 
-Aprende más sobre [server property](/guides/configuration-glossary/configuration-server)
+Aprende más sobre [server property](/docs/2.x/configuration-glossary/configuration-server)
 
 </base-alert>
 
@@ -311,7 +311,7 @@ export default {
 
 <base-alert type="next">
 
-Aprende más en [dir property](/guides/configuration-glossary/configuration-dir)
+Aprende más en [dir property](/docs/2.x/configuration-glossary/configuration-dir)
 
 </base-alert>
 
@@ -327,7 +327,7 @@ export default {
 
 <base-alert type="next">
 
-Aprende más sobre [transition property](/guides/configuration-glossary/configuration-transition)
+Aprende más sobre [transition property](/docs/2.x/configuration-glossary/configuration-transition)
 
 </base-alert>
 
@@ -358,6 +358,6 @@ dist
 
 <base-alert type="next">
 
-Revisa también esta configuración [configuration-glossary](/guides/configuration-glossary/configuration-build)
+Revisa también esta configuración [configuration-glossary](/docs/2.x/configuration-glossary/configuration-build)
 
 </base-alert>

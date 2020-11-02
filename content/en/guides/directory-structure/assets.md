@@ -83,7 +83,7 @@ When working with dynamic images you will need to use require
 
 <base-alert type="next">
 
-Learn more about [webpack Assets](/guides/directory-structure/assets#webpack-assets)
+Learn more about [webpack Assets](/docs/2.x/directory-structure/assets#webpack-assets)
 
 </base-alert>
 
@@ -160,7 +160,7 @@ You can use local fonts by adding them to your assets folder. Once they have bee
 
 <base-alert type="next">
 
-To add external fonts such as google fonts check out the [Meta Tags and SEO chapter](/guides/features/meta-tags-seo#external-resources)
+To add external fonts such as google fonts check out the [Meta Tags and SEO chapter](/docs/2.x/features/meta-tags-seo#external-resources)
 
 </base-alert>
 
@@ -251,7 +251,7 @@ Will be transformed into:
 <img src="/_nuxt/img/your_image.0c61159.png" />
 ```
 
-If you want to change the loader configurations, please use [build.extend](/guides/configuration-glossary/configuration-build#extend).
+If you want to change the loader configurations, please use [build.extend](/docs/2.x/configuration-glossary/configuration-build#extend).
 
 <app-modal>
   <code-sandbox  :src="csb_link"></code-sandbox>

@@ -86,5 +86,18 @@ https://www.nuxtjs.org/* https://nuxtjs.org/:splat 301!
 /api/pages-transition /docs/2.x/components-glossary/pages-transition 301!
 /api/pages-validate /docs/2.x/components-glossary/pages-validate 301!
 /api/pages-watchquery /docs/2.x/components-glossary/pages-watchquery 301!
+/examples/asnyc-data/
+/examples/custom-loading
+/examples/custom-routes
+/examples/global/css
+/examples/hello-world
+/examples/layouts
+/examples/middleware
+/examples/nested-routes
+/examples/routes-transitions
+/examples/seo-html-head
+/examples/plugins
+
+
 # [LEGACY] Redirect FAQ URLs
 /faq/google-analytics /faq/ga 301!

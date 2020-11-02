@@ -44,16 +44,6 @@ For all links to pages within your site, use `<NuxtLink>`. If you have links to 
 </template>
 ```
 
-## Example
-
-<example-intro></example-intro>
-
-`pages/index.vue` and `pages/fun.vue` shows routing between pages using the [`<NuxtLink>`](/guides/features/nuxt-components#the-nuxtlink-component) component.
-
-<app-modal>
-  <code-sandbox :src="csb_link"></code-sandbox>
-</app-modal>
-
 <base-alert type="next">
 
 Learn more about the [NuxtLink component](/docs/2.x/features/nuxt-components#the-nuxtlink-component).

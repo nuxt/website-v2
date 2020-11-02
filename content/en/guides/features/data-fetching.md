@@ -267,20 +267,4 @@ Learn more about the [watchQuery property](/docs/2.x/components-glossary/pages-
 
 </base-alert>
 
-## Example
-
-<example-intro></example-intro>
-
-`pages/posts/index.vue` uses `asyncData` and the `$http` module to fetch our list of posts from our API.
-
-`pages/posts/_id.vue` and `components/BlogPosts.vue` use the `fetch` method to fetch data from our API using:
-
-- `$fetchState.pending` to show a loading text when the data is loading
-- `$fetchState.error` to show an error message when we can't retrieve the posts.
-- `$fetch` to fetch the data again when clicked.
-
-<app-modal>
-  <code-sandbox :src="csb_link"></code-sandbox>
-</app-modal>
-
 <quiz :questions="questions"></quiz>

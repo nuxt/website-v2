@@ -129,22 +129,6 @@ export default {
 </script>
 ```
 
-### Example
-
-<example-intro></example-intro>
-
-- `layouts/default.vue` is used in the home page
-- `layouts/auth.vue` is used in the /login page
-- `layouts/profile.vue` is used in the /profile page when logged in
-
-They are stored in the layouts/ directory and used in the corresponding pages with the `layout` property.
-
-If no layout property is defined, it will fallback to the default layout.
-
-<app-modal>
-  <code-sandbox  :src="csb_link"></code-sandbox>
-</app-modal>
-
 ## Error Page
 
 The error page is a *page component* which is always displayed when an error occurs (that is not thrown on the server-side).

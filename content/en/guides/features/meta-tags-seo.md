@@ -221,18 +221,4 @@ You may want to only disable this option if you have many pages and routes.
 
 </base-alert>
 
-## Example
-
-<example-intro></example-intro>
-
-`nuxt.config.js` uses the `head` property to show a `title`, `titleTemplate`, `charset` and `description` as well as adding an external stylesheet.
-
-`pages/index.vue` uses the head property as an object.
-
-`pages/fun.vue` uses the head property as a function with dynamic data.
-
-<app-modal>
-  <code-sandbox  :src="csb_link"></code-sandbox>
-</app-modal>
-
 <quiz :questions="questions"></quiz>

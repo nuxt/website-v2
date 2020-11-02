@@ -125,22 +125,6 @@ export default {
 }
 ```
 
-### Example
-
-<example-intro></example-intro>
-
-`store/class.js` sets a class to the body.
-
-`middleware/class.js` uses router middleware to set a class before we enter the route.
-
-`components/Navigation.vue` changes the font size for the route with the name of `router-middleware`.
-
-`nuxt.config.js` contains the `router` property to activate the middleware.
-
-<app-modal>
-  <code-sandbox  :src="csb_link_router"></code-sandbox>
-</app-modal>
-
 ## Named middleware
 
 You can create named middleware by creating a file inside the  `middleware/` directory, the file name will be the middleware name.
@@ -166,22 +150,6 @@ export default function ({ store, redirect }) {
 </script>
 ```
 
-### Example
-
-<example-intro></example-intro>
-
-`pages/named-middleware.vue` contains a `middleware` property with the value of `auth` which is called before a user enters the route.
-
-`middleware/auth.js` checks to see if the user is authenticated and if they aren't it redirects them to the auth page.
-
-`pages/auth.vue` uses the store to authenticate the user.
-
-`store/auth.js` sets the the user and password values and redirects the user.
-
-<app-modal>
-  <code-sandbox  :src="csb_link_named"></code-sandbox>
-</app-modal>
-
 ## Anonymous middleware
 
 If you need to use a middleware only for a specific page, you can directly use a function for it (or an array of functions):
@@ -202,17 +170,5 @@ If you need to use a middleware only for a specific page, you can directly use a
   }
 </script>
 ```
-
-### Example
-
-<example-intro></example-intro>
-
-`pages/anonymous-middleware.vue` contains a middleware function which uses the store to call the increment mutation with results from the store displayed on the page.
-
-`store/analytics.js` sets the `pageVisits` to 0 and increments the visits every time the increment function is called.
-
-<app-modal>
-  <code-sandbox  :src="csb_link_anonymous"></code-sandbox>
-</app-modal>
 
 <quiz :questions="questions"></quiz>

@@ -156,18 +156,6 @@ Check out the Internals Glossary book for more examples of the [redirect method]
 
 </base-alert>
 
-### Example
-
-<example-intro></example-intro>
-
-`pages/posts/_id` is a dynamic page that prints out the title and description coming from the API based on the id of the params. If no post exists we catch the error and return the error message.
-
-`pages/admin.vue` uses `middleware` and the `store`, to check if our user is authenticated and if not we redirect them to the the home page.
-
-<app-modal>
-  <code-sandbox  :src="csb_link_context"></code-sandbox>
-</app-modal>
-
 ## Helpers
 
 Besides the shortcuts in the context, there are also other tiny helpers present in your Nuxt.js application.
@@ -267,19 +255,5 @@ Nuxt.js injects three boolean values into the global `process` object which will
 ```
 
 In the example, `renderedOn` will evaluate to `'server'` when using server-side rendering and a user accesses the page directly. When the user would navigate to the page from another part of the application, e.g. by click on a `<NuxtLink>`, it will evaluate to client.
-
-## Example
-
-<example-intro></example-intro>
-
-`pages/index.vue` shows:
-
-- `$nuxt.isOnline` and `$nuxt.isOffline` - tells the user if they are online or offline.
-- `renderedOn` - prints a message telling us if the page is rendered on the server or client.
-- `$nuxt.refresh()` - refreshes data without refreshing the page .
-
-<app-modal>
-  <code-sandbox  :src="csb_link_helpers"></code-sandbox>
-</app-modal>
 
 <quiz :questions="questions"></quiz>

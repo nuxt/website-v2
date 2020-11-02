@@ -81,22 +81,6 @@ Learn more about the [nuxt.config.js file](/docs/2.x/directory-structure/nuxt-co
 
 The `package.json` file contains all the dependencies and scripts for your application.
 
-### Example
-
-<example-intro></example-intro>
-
-- The `assets` folder contains an svg and a css file.
-- The `components` folder contains a navigation component.
-- The `pages` folder contains pages at root level as well as inside a folder.
-- The `static` folder contains a favicon.
-- The `nuxt.config.js` file shows:
-  - `components` property set to true so that you can use components without having to write import statements.
-  - `css` property to globally add css to your application
-
-<app-modal>
-  <code-sandbox  :src="csb_link"></code-sandbox>
-</app-modal>
-
 ## More about the project structures
 
 There are more helpful directories and files, including [content](/docs/2.x/directory-structure/content), [layouts](/docs/2.x/directory-structure/layouts), [middleware](/docs/2.x/directory-structure/middleware), [modules](/docs/2.x/directory-structure/modules), [plugins](/docs/2.x/directory-structure/plugins) and [store](/docs/2.x/directory-structure/store) . As they aren't necessary for small applications, they are not covered here.

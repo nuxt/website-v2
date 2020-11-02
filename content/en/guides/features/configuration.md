@@ -154,24 +154,6 @@ npm install --save-dev sass sass-loader fibers
   </code-block>
 </code-group>
 
-### Example
-
-<example-intro></example-intro>
-
-`pages/pre-processors.vue` uses pug as a template language and sass for styling.
-
-`nuxt.config.js` :
-
-- registers the style resources module.
-- contains a `styleResources` property to add `assets/variables.scss`.
-- contains a `css property` to add `assets/main.scss`.
-
-`package.json` shows the dependencies needed.
-
-<app-modal>
-  <code-sandbox  :src="csb_link_pre-processors"></code-sandbox>
-</app-modal>
-
 ## JSX
 
 Nuxt.js uses [@nuxt/babel-preset-app](https://github.com/nuxt/nuxt.js/tree/dev/packages/babel-preset-app), which is based on the official [@vue/babel-preset-app](https://github.com/vuejs/vue-cli/tree/dev/packages/%40vue/babel-preset-app) for babel default configuration, so you can use JSX in your components.
@@ -363,16 +345,6 @@ or create a script in your package.json
   "dev:host": "nuxt --hostname '0' --port 8000"
 }
 ```
-
-### Example
-
-<example-intro></example-intro>
-
-`package.json` shows a script to run your project in dev mode on a specific host and port.
-
-<app-modal>
-  <code-sandbox  :src="csb_link_host_port"></code-sandbox>
-</app-modal>
 
 ## Asynchronous Configuration
 

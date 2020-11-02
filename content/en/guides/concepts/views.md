@@ -139,16 +139,6 @@ If you don't add a layout property to your page, eg `layout: 'blog'` then the `d
 
 </base-alert>
 
-### Example
-
-<example-intro></example-intro>
-
-We show a fun layout where the fun routes have the navigation component at the bottom of the page whereas the home page has the navigation at the top.
-
-<app-modal>
-  <code-sandbox  :src="csb_link"></code-sandbox>
-</app-modal>
-
 ## Error Page
 
 The error page is a *page component* which is always displayed when an error occurs (that does not happen while server-side rendering).

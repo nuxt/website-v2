@@ -131,19 +131,6 @@ If you've defined a file named \_slug.vue inside a folder called \_book you can 
 </script>
 ```
 
-### Example
-
-<example-intro></example-intro>
-
-`pages\_slug.vue` shows data coming from the route params.
-
-`pages\index.vue` fetches our mountains from our API.
-
-`pages\_continent\_mountain.vue` shows the detail page for each mountain in each continent.
-<app-modal>
-<code-sandbox :src="csb_link"></code-sandbox>
-</app-modal>
-
 ## Properties
 
 ### asyncData

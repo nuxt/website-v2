@@ -396,23 +396,6 @@ See more on the [transition property](/docs/2.x/configuration-glossary/configu
 
 </base-alert>
 
-### Example
-
-<example-intro></example-intro>
-
-`nuxt.config.js` contains :
-
-- the `publicRuntimeConfig` property to add the URL of our API.
-- the `modules` property to register our `@nuxtjs/axios` module.
-
-`pages/index.vue` - uses `$axios` to fetch our data and `$config` to retrieve our API URL.
-
-`package.json` - shows `@nuxtjs/axios` has been installed.
-
-<app-modal>
-  <code-sandbox  :src="csb_link"></code-sandbox>
-</app-modal>
-
 ## Other configuration files
 
 Besides the `nuxt.config.js` there might be other config files in your project root, such as [.eslintrc](https://eslint.org/), [prettier.config.json](https://prettier.io/) or [.gitignore](https://git-scm.com/docs/gitignore). These are used to configure other tools such as your linter, code formatter or your git repository and detached from the `nuxt.config.js`.

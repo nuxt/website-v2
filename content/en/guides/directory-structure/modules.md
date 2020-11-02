@@ -458,29 +458,4 @@ If you are going to offer using `buildModules` please mention that this featur
 
 </base-alert>
 
-## Example
-
-<example-intro></example-intro>
-
-Local Module:
-
-- `modules/nuxt-api/plugin.js` shows how the function `nuxtApi` works.
-- `modules/nuxt-api/index.js` adds our plugin so we can use it.
-
-External Module (normally an npm package):
-
-- `myModule/lib/plugin.js` shows how the functions `nuxtHello` and `nuxtApiExternal` work.
-- `myModule/lib/moudle.js` exports the module and adds the plugin.
-
-`pages/index.vue` uses:
-
-- `app.nuxtHello` to print a hello message.
-- `$app.$nuxtApi` and `$app.$nuxtApiExternal` to call our API.
-
-`nuxt.config.js` registers our modules using the `buildModules` and `modules` property.
-
-<app-modal>
-  <code-sandbox  :src="csb_link"></code-sandbox>
-</app-modal>
-
 <quiz :questions="questions"></quiz>

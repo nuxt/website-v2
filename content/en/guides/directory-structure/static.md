@@ -62,18 +62,6 @@ In your code, you can then reference these files relative to the root (`/`):
 <img src="'~/assets/my-image-2.png" />
 ```
 
-### Example
-
-<example-intro></example-intro>
-
-`pages/static.vue` shows an image from the static folder
-
-`layouts/default.vue` shows an image from the assets folder.
-
-<app-modal>
-  <code-sandbox  :src="csb_link"></code-sandbox>
-</app-modal>
-
 ## Static Directory Config
 
 Should you need to you can configure the `static/` directory behavior in the `nuxt.config.js` file.

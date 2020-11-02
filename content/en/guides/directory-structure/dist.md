@@ -124,23 +124,4 @@ You can also use a regex expression here to exclude pages starting or ending wit
 
 </base-alert>
 
-### Example
-
-<example-intro></example-intro>
-
-`nuxt.config.js` for static site generation shows
-
-- `target` is set to `static`.
-- the `generate` property:
-  - `dir` property to change the name of the `dist` folder
-  - `subFolders` set to false to not have sub folders
-  - `fallback` property set to true so that unknown routes are rendered.
-  - `excludes` property to exclude pages from static generation.
-
-`my-dist` folder to see an example of a generated `dist` folder
-
-<app-modal>
-  <code-sandbox  :src="csb_link"></code-sandbox>
-</app-modal>
-
 <quiz :questions="questions"></quiz>

@@ -164,25 +164,6 @@ build: {
 },
 ```
 
-### Example
-
-<example-intro></example-intro>
-
-`plugins/axios.js` intercepts the `$axios` call using the `onError()` function.
-
-`pages/index.vue` uses `$axios` to fetch our data from an API.
-
-`pages/posts/_id.vue` uses `$axios` to fetch our data from an API with the id coming from route params.
-
-`pages/no-posts.vue` is the page that is called when there is an error.
-
-`nuxt.config.js` contains the `module` property and `plugin` property to register our module and plugin.
-
-`package.json` shows our module `@nuxtjs/axios` has been installed.
-<app-modal>
-<code-sandbox :src="csb_link_plugins_external"></code-sandbox>
-</app-modal>
-
 ## Vue Plugins
 
 If we want to use Vue plugins, like [v-tooltip](https://akryum.github.io/v-tooltip) to display tooltips in your application, we need to setup the plugin before launching the app.
@@ -239,22 +220,6 @@ module.exports = {
 
 You can refer to the [configuration build](/docs/2.x/configuration-glossary/configuration-build#transpile) docs for more build options.
 
-### Example
-
-<example-intro></example-intro>
-
-`plugins/vue-toolitp.js` registers our plugin so we can use it.
-
-`pages/index.vue` imports our tooltip and tells Vue to use.
-
-`nuxt.config.js` contains the `plugins` property to register our plugin and the `css` property to add our tooltip css.
-
-`package.json` show our tooltip package has been installed.
-
-<app-modal>
-  <code-sandbox  :src="csb_link_plugins_vue"></code-sandbox>
-</app-modal>
-
 ## Client or server side only
 
 Some plugins might work only in the browser because they lack SSR support.
@@ -286,18 +251,6 @@ export default {
   ]
 }
 ```
-
-### Example
-
-<example-intro></example-intro>
-
-`plugins/client-only.client.js` uses the `window.alert()` function which is not available on server side.
-
-`nuxt.config.js` contains the `plugins` property to register the plugin on client side thanks to the `.client` extension.
-
-<app-modal>
-  <code-sandbox  :src="csb_link_plugins_client"></code-sandbox>
-</app-modal>
 
 ## Inject in `$root` & context
 
@@ -359,29 +312,6 @@ export const actions = {
 Don't use `Vue.use()`, `Vue.component()`, and globally, don't plug anything in Vue **inside** this function, dedicated to Nuxt injection. It will cause memory leak on server-side.
 
 </base-alert>
-
-### Example
-
-<example-intro></example-intro>
-
-`plugins/hello.js` - logs a message to the console with a dynamic message.
-
-`store/index.js` - stores our dynamic message from our input.
-
-`pages/hello-plugin.vue` uses the hello plugin to:
-
-- log a message to the console on mounted.
-- log a message to the console containing the value from our input.
-
-`plugins/nuxt-api.js` - fetches data from our API.
-
-`pages/api-plugin.vue` - uses our plugin to fetch and show the data from our API.
-
-`nuxt.config.js` - registers our plugins using the `plugins` property.
-
-<app-modal>
-  <code-sandbox  :src="csb_link_plugins_custom"></code-sandbox>
-</app-modal>
 
 ## The extendPlugins Property
 

@@ -69,19 +69,6 @@ Using `$fetchState.pending` we can show a message when the data is waiting to be
 </script>
 ```
 
-### Example
-
-<example-intro></example-intro>
-
-`components/MountainsList.vue` uses fetch to fetch data from an API and uses:
-
-- `$fetchState.pending` to show a loading message when waiting for the data to load.
-- `$fetchState.error` to show an error message if the component does not load.
-
-<app-modal>
-  <code-sandbox  :src="csb_link"></code-sandbox>
-</app-modal>
-
 <base-alert type="next">
 
 See the chapter on [fetch()](/docs/2.x/features/data-fetching#the-fetch-method) for more details on how fetch works
@@ -208,20 +195,6 @@ And now in your template you can use the BaseButton instead of Button without ha
 ```html{}[pages/index.vue]
 <BaseButton />
 ```
-
-### Example
-
-<example-intro></example-intro>
-
-`pages/index.vue` shows how to lazy load a component by prefixing it with the world lazy.
-
-`nuxt.config.js` shows `components: true` for auto importing components.
-
-<app-modal>
-  <code-sandbox  :src="csb_link"></code-sandbox>
-</app-modal>
-
-<base-alert type="next">
 
 To learn more about the [components module](/blog/improve-your-developer-experience-with-nuxt-components)
 

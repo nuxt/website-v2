@@ -165,20 +165,6 @@ To display the `child.vue` component, you have to insert the `<NuxtChild>` co
 </template>
 ```
 
-### Example
-
-<example-intro></example-intro>
-
-`pages/parent.vue` contains the `<NuxtChild>` component. Everything on this page will be seen on both the parent and child pages.
-
-`pages/parent/index.vue` contains text that will be replaced when the child links are clicked.
-
-`pages/parent/child.vue` and `pages/parent/child2.vue` will be rendered as parent/child and parent/child2.
-
-<app-modal>
-  <code-sandbox  :src="csb_link_nuxt"></code-sandbox>
-</app-modal>
-
 ## keep-alive
 
 Both, the `<Nuxt>` component and the `<NuxtChild/>` component, accept `keep-alive` and `keep-alive-props.`
@@ -298,16 +284,6 @@ Since Nuxt.js v2.10.0, if you have to set `prefetchLinks` to `false` but you
 <NuxtLink to="/about" prefetch>About page pre-fetched</NuxtLink>
 ```
 
-### Example
-
-<example-intro></example-intro>
-
-`components/navigation.vue` adds `no-prefetch` to the `<NuxtLink>` for the No Prefetch page.
-
-<app-modal>
-  <code-sandbox  :src="csb_link_nuxt_link"></code-sandbox>
-</app-modal>
-
 ## Link Classes
 
 ### linkActiveClass
@@ -393,18 +369,6 @@ Then you can add the styles for that class.
   color: orangeRed;
 }
 ```
-
-### Example
-
-<example-intro></example-intro>
-
-`nuxt.config.js` shows the `router` property for changing the name of the `linkActiveClass`, `linkExactActiveClass` and `linkPrefecthedClass`.
-
-`main.css` add styles for `nuxt-link-active`, `nuxt-link-exact-active` and `nuxt-link-prefetched`
-
-<app-modal>
-  <code-sandbox  :src="csb_link_nuxt_link"></code-sandbox>
-</app-modal>
 
 ## The client-only Component
 

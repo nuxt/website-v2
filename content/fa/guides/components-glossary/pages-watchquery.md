@@ -3,6 +3,7 @@ title: 'ویژگی watchQuery'
 description: بر رشته‌های پرس‌و‌جو (query strings) نظارت کنید و در صورت تغییر آن‌ها متدهای کامپوننت را اجرا کنید (asyncData, fetch(context), validate, layout, ...).
 menu: ویژگی watchQuery
 category: components-glossary
+position: 0
 ---
 
 > بر رشته‌های پرس‌و‌جو (query strings) نظارت کنید و در صورت تغییر آن‌ها متدهای کامپوننت را اجرا کنید (asyncData, fetch(context), validate, layout, ...).

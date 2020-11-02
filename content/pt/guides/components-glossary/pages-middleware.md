@@ -3,6 +3,7 @@ title: 'A propriedade middleware'
 description: Defina o middleware para uma página específica da aplicação.
 menu: Middleware Property
 category: components-glossary
+position: 0
 ---
 
 - Tipo: `String` ou `Array` ou `Function`

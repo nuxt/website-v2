@@ -3,7 +3,7 @@
     <div
       class="w-full py-8 px-4 lg:static lg:overflow-visible lg:max-h-full lg:w-3/4"
     >
-      <article v-if="section === 'examples'">
+      <article>
         <h1
           class="text-light-onSurfacePrimary dark:text-dark-onSurfacePrimary transition-colors duration-300 ease-linear"
         >
@@ -30,28 +30,6 @@
           </AppButton>
         </div>
       </article>
-      <article v-else>
-        <BaseAlert type="info">
-          {{ $t('tryNewDocs.msg1') }}
-          <NuxtLink
-            class="text-nuxt-lightgreen"
-            to="/guides/get-started/installation"
-          >
-            {{ $t('tryNewDocs.link') }}
-          </NuxtLink>
-          {{ $t('tryNewDocs.msg2') }}
-        </BaseAlert>
-        <h1
-          class="text-light-onSurfacePrimary dark:text-dark-onSurfacePrimary transition-colors duration-300 ease-linear"
-        >
-          {{ page.title }}
-        </h1>
-        <AppResponsiveVideo v-if="page.youtube" :src="page.youtube" />
-        <nuxt-content :document="page" />
-        <template v-if="!$route.path.startsWith('/guide/release-notes')">
-          <AppContribute :doc-link="docLink" :contributors="contributors" />
-        </template>
-      </article>
     </div>
     <AffixBlock>
       <SponsorsBlock />
@@ -63,15 +41,9 @@
 <script>
 export default {
   async asyncData({ $content, params, store, error, app }) {
-    const defaultSlugs = {
-      guide: 'index',
-      api: 'index',
-      examples: 'hello-world',
-      faq: 'external-resources'
-    }
-    const slug = params.slug || defaultSlugs[params.section]
+    const slug = params.slug || 'hello-world'
 
-    let path = `/${app.i18n.defaultLocale}/${params.section}`
+    let path = `/${app.i18n.defaultLocale}/examples`
     let page, prev, next, contributors, langFallback
 
     try {
@@ -85,11 +57,11 @@ export default {
 
     if (app.i18n.defaultLocale !== app.i18n.locale) {
       try {
-        path = `/${app.i18n.locale}/${params.section}`
+        path = `/${app.i18n.locale}/examples`
         page = await $content(path, slug).fetch()
       } catch (err) {
         langFallback = true
-        path = `/${app.i18n.defaultLocale}/${params.section}`
+        path = `/${app.i18n.defaultLocale}/examples`
       }
     }
 

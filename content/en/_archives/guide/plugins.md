@@ -41,7 +41,9 @@ Then we can use it directly in our page components:
   }
 </script>
 ```
-__NOTE__: If you get an "__Cannot use import statement outside a module__" error, you may need to add your package to the build > transpile option in nuxt.config.js for webpack loader to make your plugin available.
+
+**NOTE**: If you get an "**Cannot use import statement outside a module**" error, you may need to add your package to the build > transpile option in nuxt.config.js for webpack loader to make your plugin available.
+
 ```js
   build: {
     /*
@@ -50,7 +52,6 @@ __NOTE__: If you get an "__Cannot use import statement outside a module__" error
     transpile: ['your-plugin-name'],
   },
 ```
-
 
 ## Vue Plugins
 
@@ -125,11 +126,11 @@ Now `$hello(msg)` can be used from `context`, via `this` in Vue instances and vi
 
 ```js
 export default {
-  mounted () {
+  mounted() {
     this.$hello('mounted')
     // will console.log 'Hello mounted!'
   },
-  asyncData ({ $hello }) {
+  asyncData({ $hello }) {
     $hello('asyncData')
   }
 }

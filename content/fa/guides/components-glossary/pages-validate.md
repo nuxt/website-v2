@@ -3,6 +3,7 @@ title: 'متد validate'
 description: Nuxt.js به شما این امکان را می‌دهد تا یک متد اعتبارسنجی داخل مسیرهای داینامیک خود تغریف کنید.
 menu: متد Validate
 category: components-glossary
+position: 0
 ---
 
 > Nuxt.js به شما این امکان را می‌دهد تا یک متد اعتبارسنجی داخل مسیرهای داینامیک خود تغریف کنید.

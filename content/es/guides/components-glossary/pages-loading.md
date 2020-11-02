@@ -3,6 +3,7 @@ title: 'La propiedad Loading'
 description: La propiedad `loading` te da la opción de deshabilitar la barra de progreso de carga predeterminada en una página específica.
 menu: Propiedad Loading
 category: components-glossary
+position: 0
 ---
 
 > La propiedad loading te da la opción de deshabilitar la barra de progreso de carga predeterminada en una página específica.

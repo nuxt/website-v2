@@ -78,7 +78,7 @@ export default {
   modules: [
     // Simple usage
     '~/modules/simple',
-      // Passing options directly
+    // Passing options directly
     ['~/modules/simple', { token: '123' }]
   ]
 }

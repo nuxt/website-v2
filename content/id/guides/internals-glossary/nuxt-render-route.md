@@ -50,6 +50,6 @@ start()
 
 <base-alert type="next">
 
-Lihat [buku Komponen Glosarium]((/docs/2.x/components-glossary/pages-fetch)
+Lihat [buku Komponen Glosarium](/docs/2.x/components-glossary/pages-fetch)
 
 </base-alert>

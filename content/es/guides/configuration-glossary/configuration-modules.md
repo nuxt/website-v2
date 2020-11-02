@@ -36,7 +36,7 @@ Nuxt.js trata de resolver cada elemento del array modules usando la ruta requeri
 
 Los módulos deben exportar una función para mejorar nuxt build/runtime y, opcionalmente, devolver una promesa hasta que su trabajo haya terminado. Ten en cuenta que son necesarios en tiempo de ejecución (runtime), por lo que deberían estar ya transpuestos si dependen de las modernas características de ES6.
 
-Por favor échale un vistazo a la [Guía de módulos]((/docs/2.x/directory-structure/modules) para más información sobre como trabajan o si te apetece desarrollar tu propio módulo. Además, hemos proporcionado una sección [Modules](https://github.com/nuxt-community/awesome-nuxt#modules) oficial enumerando docenas de módulos listos para usar hechos por la Comunidad de Nuxt.
+Por favor échale un vistazo a la [Guía de módulos](/docs/2.x/directory-structure/modules) para más información sobre como trabajan o si te apetece desarrollar tu propio módulo. Además, hemos proporcionado una sección [Modules](https://github.com/nuxt-community/awesome-nuxt#modules) oficial enumerando docenas de módulos listos para usar hechos por la Comunidad de Nuxt.
 
 ## `buildModules`
 

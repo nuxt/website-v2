@@ -11,7 +11,7 @@ position: 9
 - Tipe: `Function`
 - Nilai Anggapan: `undefined`
 
-Anda mungkin ingin memperpanjang _plugin_ atau mengubah urutan _plugin_ yang dibuat oleh Nuxt.js. Fungsi ini menerima larik objek [_plugin_]((/docs/2.x/configuration-glossary/configuration-plugins) dan harus mengembalikan larik objek _plugin_.
+Anda mungkin ingin memperpanjang _plugin_ atau mengubah urutan _plugin_ yang dibuat oleh Nuxt.js. Fungsi ini menerima larik objek [_plugin_](/docs/2.x/configuration-glossary/configuration-plugins) dan harus mengembalikan larik objek _plugin_.
 
 Contoh mengubah urutan _plugin_ :
 

@@ -394,7 +394,7 @@ export default function asyncModule($http) {
 
 <base-alert type="info">
 
-There are way more hooks and possibilities for modules. Please read the [Nuxt Internals]((/docs/2.x/internals-glossary/internals) to find out more about the nuxt-internal API.
+There are way more hooks and possibilities for modules. Please read the [Nuxt Internals](/docs/2.x/internals-glossary/internals) to find out more about the nuxt-internal API.
 
 </base-alert>
 

@@ -255,7 +255,7 @@ Se você quiser saber mais sobre `<RouterLink>`, sinta-se à vontade para ler a 
 
 <base-alert type="info">
 
-`<NuxtLink>` também vem com [prefetching inteligente]((/docs/2.x/features/nuxt-components#the-nuxtlink-component) ativado.
+`<NuxtLink>` também vem com [prefetching inteligente](/docs/2.x/features/nuxt-components#the-nuxtlink-component) ativado.
 
 </base-alert>
 

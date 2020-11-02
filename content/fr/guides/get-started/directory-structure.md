@@ -31,7 +31,7 @@ Le répertoire `pages` contient les vues et les routes de votre application. C
 
 <base-alert type="next">
 
-En savoir plus sur le [répertoire pages]((/docs/2.x/directory-structure/pages)
+En savoir plus sur le [répertoire pages](/docs/2.x/directory-structure/pages)
 
 </base-alert>
 
@@ -43,7 +43,7 @@ Avec Nuxt.js, vous pouvez créer vos composants et les importer automatiquement 
 
 <base-alert type="next">
 
-En savoir plus sur le [répertoire des composants]((/docs/2.x/directory-structure/components)
+En savoir plus sur le [répertoire des composants](/docs/2.x/directory-structure/components)
 
 </base-alert>
 
@@ -53,7 +53,7 @@ Le répertoire `assets` contient vos fichiers non compilés tels que vos styles,
 
 <base-alert type="next">
 
-En savoir plus sur le [répertoire assets]((/docs/2.x/directory-structure/assets)
+En savoir plus sur le [répertoire assets](/docs/2.x/directory-structure/assets)
 
 </base-alert>
 
@@ -63,7 +63,7 @@ Le répertoire `static` est directement servi à la racine du serveur et contien
 
 <base-alert type="next">
 
-En savoir plus sur le [répertoire static]((/docs/2.x/directory-structure/static)
+En savoir plus sur le [répertoire static](/docs/2.x/directory-structure/static)
 
 </base-alert>
 
@@ -73,7 +73,7 @@ Le fichier `nuxt.config.js` est le point unique de configuration pour Nuxt.js. S
 
 <base-alert type="next">
 
-En savoir plus sur le [fichier nuxt.config.js]((/docs/2.x/directory-structure/nuxt-config)
+En savoir plus sur le [fichier nuxt.config.js](/docs/2.x/directory-structure/nuxt-config)
 
 </base-alert>
 
@@ -87,10 +87,10 @@ Le fichier `package.json` contient toutes les dépendances et scripts de votre a
 
 ## En savoir plus sur la structure du projet
 
-Il existe d'autres répertoires et fichiers utiles, comme [content]((/docs/2.x/directory-structure/content), [layout(/docs/2.x/2.x/directory-structure/layouts), [middlew(/docs/2.x/s/2.x/directory-structure/middleware), [mo(/docs/2.x/ocs/2.x/directory-structure/modules), [(/docs/2.x//docs/2.x/directory-structure/plugins) (/docs/2.x/](/docs/2.x/directory-structure/store). Comme ils ne sont pas nécessaires pour les petites applications, ils ne sont pas traités ici.
+Il existe d'autres répertoires et fichiers utiles, comme [content](/docs/2.x/directory-structure/content), [layout(/docs/2.x/2.x/directory-structure/layouts), [middlew(/docs/2.x/s/2.x/directory-structure/middleware), [mo(/docs/2.x/ocs/2.x/directory-structure/modules), [(/docs/2.x//docs/2.x/directory-structure/plugins) (/docs/2.x/](/docs/2.x/directory-structure/store). Comme ils ne sont pas nécessaires pour les petites applications, ils ne sont pas traités ici.
 
 <base-alert type="next">
 
-Pour en savoir plus sur tous les répertoires en détail, n'hésitez pas à lire le [guide sur la structure des répertoires]((/docs/2.x/directory-structure/nuxt).
+Pour en savoir plus sur tous les répertoires en détail, n'hésitez pas à lire le [guide sur la structure des répertoires](/docs/2.x/directory-structure/nuxt).
 
 </base-alert>

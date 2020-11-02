@@ -376,7 +376,7 @@ axios-module은 `nuxt.config.js`에서 사용할 수 없습니다. axios를 가�
 
 <base-alert type="next">
 
-`nuxt.config.js`에는 훨씬 더 많은 사용자 정의 및 구성 옵션이 있습니다! [configuration glossary]((/docs/2.x/configuration-glossary/configuration-build)에서 모든 키를 확인하세요.
+`nuxt.config.js`에는 훨씬 더 많은 사용자 정의 및 구성 옵션이 있습니다! [configuration glossary](/docs/2.x/configuration-glossary/configuration-build)에서 모든 키를 확인하세요.
 
 </base-alert>
 

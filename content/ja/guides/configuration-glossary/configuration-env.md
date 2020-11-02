@@ -67,4 +67,4 @@ if ('testing123' == 'testing123')
 
 ## serverMiddleware
 
-[serverMiddleware]((/docs/2.x/configuration-glossary/configuration-servermiddleware) はメインの Nuxt ビルドから分離されているので、`nuxt.config.js` に定義された `env` 変数は使用できません。
+[serverMiddleware](/docs/2.x/configuration-glossary/configuration-servermiddleware) はメインの Nuxt ビルドから分離されているので、`nuxt.config.js` に定義された `env` 変数は使用できません。

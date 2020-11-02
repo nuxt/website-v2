@@ -382,7 +382,7 @@ _Axios-module_ tidak dapat digunakan di `nuxt.config.js`. Anda harus melakukan _
 
 <base-alert type="next">
 
-`Nuxt.config.js` memiliki lebih banyak opsi penyesuaian dan konfigurasi! Lihat semua kuncinya di [glosarium konfigurasi]((/docs/2.x/configuration-glossary/configuration-build).
+`Nuxt.config.js` memiliki lebih banyak opsi penyesuaian dan konfigurasi! Lihat semua kuncinya di [glosarium konfigurasi](/docs/2.x/configuration-glossary/configuration-build).
 
 </base-alert>
 

@@ -74,7 +74,7 @@ Nuxt.js에서의 뷰 구성
 
 <base-alert type="next">
 
-페이지에서 사용할 수 있는 모든 속성에 대해 더 알아보고 싶다면 [Directory Structure book]((/docs/2.x/directory-structure/nuxt)을 살펴보세요
+페이지에서 사용할 수 있는 모든 속성에 대해 더 알아보고 싶다면 [Directory Structure book](/docs/2.x/directory-structure/nuxt)을 살펴보세요
 
 </base-alert>
 
@@ -94,7 +94,7 @@ Nuxt.js 앱이 어떻게 보이는지 변경하고 싶을 때 유용합니다. �
 
 <base-alert type="next">
 
-컴포넌트 챕터에 있는 [Nuxt component]((/docs/2.x/features/nuxt-components) 에 대해 더 알아보기
+컴포넌트 챕터에 있는 [Nuxt component](/docs/2.x/features/nuxt-components) 에 대해 더 알아보기
 
 </base-alert>
 

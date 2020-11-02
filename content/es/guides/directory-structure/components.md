@@ -73,7 +73,7 @@ puedes mostrar un mensaje cuando la información está por cargar. Y usando `$fe
 
 <base-alert type="next">
 
-Verifica el capítulo de [fetch()]((/docs/2.x/features/data-fetching#the-fetch-method) para más detalles.
+Verifica el capítulo de [fetch()](/docs/2.x/features/data-fetching#the-fetch-method) para más detalles.
 
 </base-alert>
 

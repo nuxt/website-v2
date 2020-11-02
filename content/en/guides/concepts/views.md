@@ -74,7 +74,7 @@ There are many properties of the page component such as the head property in the
 
 <base-alert type="next">
 
-See the [Directory Structure book]((/docs/2.x/directory-structure/nuxt) to learn more about all the properties can use on your page
+See the [Directory Structure book](/docs/2.x/directory-structure/nuxt) to learn more about all the properties can use on your page
 
 </base-alert>
 
@@ -94,7 +94,7 @@ You can define a default layout by adding a `default.vue` file inside the layo
 
 <base-alert type="next">
 
-Learn more about the [Nuxt component]((/docs/2.x/features/nuxt-components) in the components chapter
+Learn more about the [Nuxt component](/docs/2.x/features/nuxt-components) in the components chapter
 
 </base-alert>
 

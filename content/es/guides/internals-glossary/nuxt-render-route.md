@@ -51,6 +51,6 @@ start()
 
 <base-alert type="next">
 
-Consulte el [glosario de componentes]((/docs/2.x/components-glossary/pages-fetch)
+Consulte el [glosario de componentes](/docs/2.x/components-glossary/pages-fetch)
 
 </base-alert>

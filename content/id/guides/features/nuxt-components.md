@@ -258,7 +258,7 @@ Jika Anda ingin mempelajari lebih lanjut tentang `<RouterLink>`, silakan baca [d
 
 <base-alert type="info">
 
-`<NuxtLink>` juga memiliki fitur [_smart prefetching_]((/docs/2.x/features/nuxt-components#the-nuxtlink-component) bawaan.
+`<NuxtLink>` juga memiliki fitur [_smart prefetching_](/docs/2.x/features/nuxt-components#the-nuxtlink-component) bawaan.
 
 </base-alert>
 

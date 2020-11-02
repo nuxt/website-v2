@@ -46,7 +46,7 @@ export default {
 }
 ```
 
-می‌توانید به [context]((/docs/2.x/internals-glossary/context) فریم‌ورک Nuxt داخل هوک fetch با استفاده از `this.$nuxt.context` دسترسی داشته باشید.
+می‌توانید به [context](/docs/2.x/internals-glossary/context) فریم‌ورک Nuxt داخل هوک fetch با استفاده از `this.$nuxt.context` دسترسی داشته باشید.
 
 ### تنظیمات
 

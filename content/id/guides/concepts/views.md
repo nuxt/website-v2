@@ -74,7 +74,7 @@ Ada banyak properti dari komponen halaman seperti properti head pada contoh di a
 
 <base-alert type="next">
 
-See the [Directory Structure book]((/docs/2.x/directory-structure/nuxt) to learn more about all the properties can use on your page
+See the [Directory Structure book](/docs/2.x/directory-structure/nuxt) to learn more about all the properties can use on your page
 
 </base-alert>
 
@@ -94,7 +94,7 @@ Anda dapat mendefinisikan layout default dengan menambahkan file `default.vue` d
 
 <base-alert type="next">
 
-Pelajari lebih lanjut tentang [Komponen Nuxt]((/docs/2.x/features/nuxt-components) di bab komponen.
+Pelajari lebih lanjut tentang [Komponen Nuxt](/docs/2.x/features/nuxt-components) di bab komponen.
 
 </base-alert>
 

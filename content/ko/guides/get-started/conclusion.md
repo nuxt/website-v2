@@ -81,7 +81,7 @@ questions:
 
 <base-alert type="next">
 
-다른 [Rendering modes]((/docs/2.x/features/rendering-modes) 중 선택하기
+다른 [Rendering modes](/docs/2.x/features/rendering-modes) 중 선택하기
 
 </base-alert>
 

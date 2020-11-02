@@ -43,7 +43,7 @@ Con Nuxt.js, puedes crear tus componentes e importarlos automáticamente dentro 
 
 <base-alert type="next">
 
-Aprende más sobre el [directorio components]((/docs/2.x/directory-structure/components)
+Aprende más sobre el [directorio components](/docs/2.x/directory-structure/components)
 
 </base-alert>
 
@@ -53,7 +53,7 @@ El directorio `assets` contiene tus recursos sin compilar, como estilos, imág
 
 <base-alert type="next">
 
-Aprende más sobre el [directorio assets]((/docs/2.x/directory-structure/assets)
+Aprende más sobre el [directorio assets](/docs/2.x/directory-structure/assets)
 
 </base-alert>
 
@@ -63,7 +63,7 @@ El directorio `static` se mapea directamente al servidor raíz y contiene archi
 
 <base-alert type="next">
 
-Aprende más sobre el [directorio static]((/docs/2.x/directory-structure/static)
+Aprende más sobre el [directorio static](/docs/2.x/directory-structure/static)
 
 </base-alert>
 
@@ -73,7 +73,7 @@ El archivo `nuxt.config.js` es el único punto de configuración de Nuxt.js. S
 
 <base-alert type="next">
 
-Aprende más sobre el [archivo nuxt.config.js]((/docs/2.x/directory-structure/nuxt-config)
+Aprende más sobre el [archivo nuxt.config.js](/docs/2.x/directory-structure/nuxt-config)
 
 </base-alert>
 
@@ -87,10 +87,10 @@ El archivo `package.json` contiene todas las dependencias y scripts de tu aplic
 
 ## Más sobre las estructuras del proyecto
 
-Existen más directorios y archivos de gran ayuda como [content]((/docs/2.x/directory-structure/content), [layout(/docs/2.x/2.x/directory-structure/layouts), [middlew(/docs/2.x/s/2.x/directory-structure/middleware), [mo(/docs/2.x/ocs/2.x/directory-structure/modules), [(/docs/2.x//docs/2.x/directory-structure/plugins)(/docs/2.x/](/docs/2.x/directory-structure/store). Pero al no ser necesarios para desarrollar pequeñas aplicaciones no los tratamos aquí.
+Existen más directorios y archivos de gran ayuda como [content](/docs/2.x/directory-structure/content), [layout(/docs/2.x/2.x/directory-structure/layouts), [middlew(/docs/2.x/s/2.x/directory-structure/middleware), [mo(/docs/2.x/ocs/2.x/directory-structure/modules), [(/docs/2.x//docs/2.x/directory-structure/plugins)(/docs/2.x/](/docs/2.x/directory-structure/store). Pero al no ser necesarios para desarrollar pequeñas aplicaciones no los tratamos aquí.
 
 <base-alert type="next">
 
-Para aprender en detalle sobre todos los directorios, puedes leer el [libro Directory Structure]((/docs/2.x/directory-structure/nuxt).
+Para aprender en detalle sobre todos los directorios, puedes leer el [libro Directory Structure](/docs/2.x/directory-structure/nuxt).
 
 </base-alert>

@@ -45,7 +45,7 @@ export default {
 }
 ```
 
-fetch フック内では `this.$nuxt.context` を使用して、Nuxt [context]((/docs/2.x/internals-glossary/context) にアクセスできます。
+fetch フック内では `this.$nuxt.context` を使用して、Nuxt [context](/docs/2.x/internals-glossary/context) にアクセスできます。
 
 ### オプション
 

@@ -129,7 +129,7 @@ Establecer esto en falso esencialmente hace que cada navegación de enlace de en
 - Tipo: `String`
 - Por defecto: `'nuxt-link-active'`
 
-Configure globalmente [`<nuxt-link>`]((/docs/2.x/features/nuxt-components#the-nuxtlink-component) clase activa predeterminada.
+Configure globalmente [`<nuxt-link>`](/docs/2.x/features/nuxt-components#the-nuxtlink-component) clase activa predeterminada.
 
 ```js{}[nuxt.config.js]
 export default {
@@ -146,7 +146,7 @@ export default {
 - Tipo: `String`
 - Por defecto: `'nuxt-link-exact-active'`
 
-Configure globalmente [`<nuxt-link>`]((/docs/2.x/features/nuxt-components#the-nuxtlink-component) clase activa predeterminada.
+Configure globalmente [`<nuxt-link>`](/docs/2.x/features/nuxt-components#the-nuxtlink-component) clase activa predeterminada.
 
 ```js{}[nuxt.config.js]
 export default {
@@ -163,7 +163,7 @@ export default {
 - Tipo: `String`
 - Por defecto: `false`
 
-Configure globalmente [`<nuxt-link>`]((/docs/2.x/features/nuxt-components#the-nuxtlink-component) clase de _prefetch_ predeterminada (característica deshabilitada de manera predeterminada)
+Configure globalmente [`<nuxt-link>`](/docs/2.x/features/nuxt-components#the-nuxtlink-component) clase de _prefetch_ predeterminada (característica deshabilitada de manera predeterminada)
 
 ```js{}[nuxt.config.js]
 export default {
@@ -198,7 +198,7 @@ export default function (context) {
 }
 ```
 
-Para obtener más información sobre el middleware, consulte la [guía de middleware]((/docs/2.x/directory-structure/middleware#router-middleware).
+Para obtener más información sobre el middleware, consulte la [guía de middleware](/docs/2.x/directory-structure/middleware#router-middleware).
 
 ## mode
 
@@ -275,7 +275,7 @@ Desde Nuxt.js v2.10.0, si ha establecido `prefetchLinks` en `false` pero desea o
 
 ## prefetchPayloads
 
-> Agregado con v2.13.0, solo disponible para [objetivos estáticos]((/docs/2.x/features/deployment-targets#static-hosting).
+> Agregado con v2.13.0, solo disponible para [objetivos estáticos](/docs/2.x/features/deployment-targets#static-hosting).
 
 - Tipo: `Boolean`
 - Por defecto: `true`

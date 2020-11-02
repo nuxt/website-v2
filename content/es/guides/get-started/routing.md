@@ -20,7 +20,7 @@ Aprende más sobre [Enrutamiento](/docs/2.x/features/file-system-routing)
 
 ## Navegación
 
-Para ir de una página a otra en tu aplicación, debes usar el componente [NuxtLink]((/docs/2.x/features/nuxt-components#the-nuxtlink-component). Este componente está incluído en Nuxt.js y por lo tanto no tienes que importarlo como haces con otros componentes. Es similar a la etiqueta `<a>` de HTML, excepto que en lugar de usar un `href="/about"` usamos `to="/about"`. Si has usado antes `vue-router`, puedes ver `<NuxtLink>` como un sustituto de `<RouterLink>`.
+Para ir de una página a otra en tu aplicación, debes usar el componente [NuxtLink](/docs/2.x/features/nuxt-components#the-nuxtlink-component). Este componente está incluído en Nuxt.js y por lo tanto no tienes que importarlo como haces con otros componentes. Es similar a la etiqueta `<a>` de HTML, excepto que en lugar de usar un `href="/about"` usamos `to="/about"`. Si has usado antes `vue-router`, puedes ver `<NuxtLink>` como un sustituto de `<RouterLink>`.
 
 Un simple enlace a la página `index.vue` de tu carpeta `pages`:
 
@@ -50,6 +50,6 @@ Para todos los enlaces internos a las páginas de tu sitio web, usa `<NuxtLink>`
 
 <base-alert type="next">
 
-Aprende más sobre el [componente NuxtLink]((/docs/2.x/features/nuxt-components#the-nuxtlink-component).
+Aprende más sobre el [componente NuxtLink](/docs/2.x/features/nuxt-components#the-nuxtlink-component).
 
 </base-alert>

@@ -191,7 +191,7 @@ Interval in milliseconds between two render cycles to avoid flooding a potential
 ## minify
 
 - **Deprecated!**
-- Use [build.html.minify]((/docs/2.x/configuration-glossary/configuration-build#htmlminify) instead
+- Use [build.html.minify](/docs/2.x/configuration-glossary/configuration-build#htmlminify) instead
 
 ## routes
 

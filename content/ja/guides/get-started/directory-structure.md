@@ -43,7 +43,7 @@ Nuxt.js を使用すると、作成したコンポーネントを .vue ファイ
 
 <base-alert type="next">
 
-[components ディレクトリ]((/docs/2.x/directory-structure/components)についてより理解する
+[components ディレクトリ](/docs/2.x/directory-structure/components)についてより理解する
 
 </base-alert>
 
@@ -53,7 +53,7 @@ Nuxt.js を使用すると、作成したコンポーネントを .vue ファイ
 
 <base-alert type="next">
 
-[assets ディレクトリ]((/docs/2.x/directory-structure/assets)についてより理解する
+[assets ディレクトリ](/docs/2.x/directory-structure/assets)についてより理解する
 
 </base-alert>
 
@@ -63,7 +63,7 @@ Nuxt.js を使用すると、作成したコンポーネントを .vue ファイ
 
 <base-alert type="next">
 
-[static ディレクトリ]((/docs/2.x/directory-structure/static)についてより理解する
+[static ディレクトリ](/docs/2.x/directory-structure/static)についてより理解する
 
 </base-alert>
 
@@ -73,7 +73,7 @@ Nuxt.js を使用すると、作成したコンポーネントを .vue ファイ
 
 <base-alert type="next">
 
-[nuxt.config.js ファイル]((/docs/2.x/directory-structure/nuxt-config)についてより理解する
+[nuxt.config.js ファイル](/docs/2.x/directory-structure/nuxt-config)についてより理解する
 
 </base-alert>
 
@@ -87,10 +87,10 @@ Nuxt.js を使用すると、作成したコンポーネントを .vue ファイ
 
 ## プロジェクト構成についての詳細
 
-[content]((/docs/2.x/directory-structure/content)、[layout(/docs/2.x/2.x/directory-structure/layouts)、[middlew(/docs/2.x/s/2.x/directory-structure/middleware)、[mo(/docs/2.x/ocs/2.x/directory-structure/modules)、[(/docs/2.x//docs/2.x/directory-structure/plugins) そ(/docs/2.x/](/docs/2.x/directory-structure/store) など、さらに役立つディレクトリやファイルがあります。これらは小規模なアプリケーションには必要ないのでここでは説明しません。
+[content](/docs/2.x/directory-structure/content)、[layout(/docs/2.x/2.x/directory-structure/layouts)、[middlew(/docs/2.x/s/2.x/directory-structure/middleware)、[mo(/docs/2.x/ocs/2.x/directory-structure/modules)、[(/docs/2.x//docs/2.x/directory-structure/plugins) そ(/docs/2.x/](/docs/2.x/directory-structure/store) など、さらに役立つディレクトリやファイルがあります。これらは小規模なアプリケーションには必要ないのでここでは説明しません。
 
 <base-alert type="next">
 
-すべてのディレクトリについての詳細は[ディレクトリ構造のドキュメント]((/docs/2.x/directory-structure/nuxt)を参照してください。
+すべてのディレクトリについての詳細は[ディレクトリ構造のドキュメント](/docs/2.x/directory-structure/nuxt)を参照してください。
 
 </base-alert>

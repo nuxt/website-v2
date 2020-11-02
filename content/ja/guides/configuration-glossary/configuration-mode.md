@@ -28,6 +28,6 @@ position: 17
 
 <base-alert type="next">
 
-`mode` オプションについての詳細は[レンダリングモードのドキュメント]((/docs/2.x/features/rendering-modes)を参照してください。
+`mode` オプションについての詳細は[レンダリングモードのドキュメント](/docs/2.x/features/rendering-modes)を参照してください。
 
 </base-alert>

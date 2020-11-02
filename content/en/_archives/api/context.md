@@ -121,7 +121,7 @@ Request from the Node.js server. If Nuxt is used as a middleware, the request ob
 
 `res` ([_http.Response_](https://nodejs.org/api/http.html#http_class_http_serverresponse))
 
-Response from the Node.js server. If Nuxt is used as a middleware, the res object might be different depending on the framework you're using.<br>**Not available with [static target]((/docs/2.x/features/deployment-targets#static-hosting)**.
+Response from the Node.js server. If Nuxt is used as a middleware, the res object might be different depending on the framework you're using.<br>**Not available with [static target](/docs/2.x/features/deployment-targets#static-hosting)**.
 
 ### beforeNuxtRender
 

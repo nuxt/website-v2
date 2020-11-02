@@ -48,7 +48,7 @@ export default {
 }
 ```
 
-También puede verificar algunos datos en su [store]((/docs/2.x/directory-structure/store) por ejemplo (cargado en [`nuxtServerInit`(/docs/2.x/2.x/directory-structure/store#the-nuxtserverinit-action) antes de la acción) :
+También puede verificar algunos datos en su [store](/docs/2.x/directory-structure/store) por ejemplo (cargado en [`nuxtServerInit`(/docs/2.x/2.x/directory-structure/store#the-nuxtserverinit-action) antes de la acción) :
 
 ```js
 export default {

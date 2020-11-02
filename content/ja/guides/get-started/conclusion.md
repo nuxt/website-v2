@@ -81,7 +81,7 @@ questions:
 
 <base-alert type="next">
 
-異なる[レンダリングモード]((/docs/2.x/features/rendering-modes)の選択
+異なる[レンダリングモード](/docs/2.x/features/rendering-modes)の選択
 
 </base-alert>
 

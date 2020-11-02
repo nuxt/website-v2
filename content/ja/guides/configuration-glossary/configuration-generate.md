@@ -193,7 +193,7 @@ _注意: 複数のサービス（例えば Netlify）では、`404.html` を自�
 ## minify
 
 - **非推奨です！**
-- 代わりに [build.html.minify]((/docs/2.x/configuration-glossary/configuration-build#htmlminify) を使ってください
+- 代わりに [build.html.minify](/docs/2.x/configuration-glossary/configuration-build#htmlminify) を使ってください
 
 ## routes
 

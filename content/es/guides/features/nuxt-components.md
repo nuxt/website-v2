@@ -256,7 +256,7 @@ Para aprender más sobre `<RouterLink>`, consulta la [Documentación sobre Vue 
 
 <base-alert type="info">
   
-`<NuxtLink>` posee [*smart prefetching*]((/docs/2.x/features/nuxt-components#the-nuxtlink-component) integrado.
+`<NuxtLink>` posee [*smart prefetching*](/docs/2.x/features/nuxt-components#the-nuxtlink-component) integrado.
 
 </base-alert>
 

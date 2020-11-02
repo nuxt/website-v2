@@ -129,7 +129,7 @@ Setting this to false essentially makes every router-link navigation a full page
 - Type: `String`
 - Default: `'nuxt-link-active'`
 
-Globally configure [`<nuxt-link>`]((/docs/2.x/features/nuxt-components#the-nuxtlink-component) default active class.
+Globally configure [`<nuxt-link>`](/docs/2.x/features/nuxt-components#the-nuxtlink-component) default active class.
 
 ```js{}[nuxt.config.js]
 export default {
@@ -146,7 +146,7 @@ export default {
 - Type: `String`
 - Default: `'nuxt-link-exact-active'`
 
-Globally configure [`<nuxt-link>`]((/docs/2.x/features/nuxt-components#the-nuxtlink-component) default exact active class.
+Globally configure [`<nuxt-link>`](/docs/2.x/features/nuxt-components#the-nuxtlink-component) default exact active class.
 
 ```js{}[nuxt.config.js]
 export default {
@@ -163,7 +163,7 @@ export default {
 - Type: `String`
 - Default: `false`
 
-Globally configure [`<nuxt-link>`]((/docs/2.x/features/nuxt-components#the-nuxtlink-component) default prefetch class (feature disabled by default)
+Globally configure [`<nuxt-link>`](/docs/2.x/features/nuxt-components#the-nuxtlink-component) default prefetch class (feature disabled by default)
 
 ```js{}[nuxt.config.js]
 export default {
@@ -198,7 +198,7 @@ export default function (context) {
 }
 ```
 
-To learn more about the middleware, see the [middleware guide]((/docs/2.x/directory-structure/middleware#router-middleware).
+To learn more about the middleware, see the [middleware guide](/docs/2.x/directory-structure/middleware#router-middleware).
 
 ## mode
 
@@ -275,7 +275,7 @@ Since Nuxt.js v2.10.0, if you have set `prefetchLinks` to `false` but you want t
 
 ## prefetchPayloads
 
-> Added with v2.13.0, only available for [static target]((/docs/2.x/features/deployment-targets#static-hosting).
+> Added with v2.13.0, only available for [static target](/docs/2.x/features/deployment-targets#static-hosting).
 
 - Type: `Boolean`
 - Default: `true`

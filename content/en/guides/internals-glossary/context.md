@@ -51,7 +51,7 @@ The root Vue instance options that includes all your plugins. For example, when 
 
 `store` ([_Vuex Store_](https://vuex.vuejs.org/api/#vuex-store-instance-properties))
 
-Vuex Store instance. **Available only if the [vuex store]((/docs/2.x/directory-structure/store) is set**.
+Vuex Store instance. **Available only if the [vuex store](/docs/2.x/directory-structure/store) is set**.
 
 ### route
 
@@ -75,7 +75,7 @@ Alias of `route.query`.
 
 `env` (_Object_)
 
-Environment variables set in `nuxt.config.js`, see [env api]((/docs/2.x/configuration-glossary/configuration-env).
+Environment variables set in `nuxt.config.js`, see [env api](/docs/2.x/configuration-glossary/configuration-env).
 
 ### isDev
 
@@ -107,7 +107,7 @@ See the [Vue Router docs](https://github.com/vuejs/vue-router/blob/64d60c0192040
 
 <base-alert type="info">
 
-It's not possible to use `redirect` or `error` in [client-side Nuxt plugin]((/docs/2.x/directory-structure/plugins#client-or-server-side-only) due to hydration errors (client content would be different from what it'd expect from the server).
+It's not possible to use `redirect` or `error` in [client-side Nuxt plugin](/docs/2.x/directory-structure/plugins#client-or-server-side-only) due to hydration errors (client content would be different from what it'd expect from the server).
 
 A valid workaround would be using `window.onNuxtReady(() => { window.$nuxt.$router.push('/your-route') })`
 

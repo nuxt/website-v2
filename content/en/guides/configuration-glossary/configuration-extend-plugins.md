@@ -11,7 +11,7 @@ position: 9
 - Type: `Function`
 - Default: `undefined`
 
-You may want to extend plugins or change plugins order created by Nuxt.js. This function accepts an array of [plugin]((/docs/2.x/configuration-glossary/configuration-plugins) objects and should return array of plugin objects.
+You may want to extend plugins or change plugins order created by Nuxt.js. This function accepts an array of [plugin](/docs/2.x/configuration-glossary/configuration-plugins) objects and should return array of plugin objects.
 
 Example of changing plugins order:
 

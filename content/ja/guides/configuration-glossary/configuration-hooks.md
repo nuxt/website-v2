@@ -29,15 +29,15 @@ export default {
 }
 ```
 
-内部的には、フックはコロン（例えば `build:done`）を使った命名パターンに従います。設定を簡単にするため、上記の例のように独自のフックを `nuxt.config.js` に設定すると、それらを階層オブジェクトとして構造化できます。仕組みの詳細については [Nuxt の内部]((/docs/2.x/internals-glossary/internals)を参照してください。
+内部的には、フックはコロン（例えば `build:done`）を使った命名パターンに従います。設定を簡単にするため、上記の例のように独自のフックを `nuxt.config.js` に設定すると、それらを階層オブジェクトとして構造化できます。仕組みの詳細については [Nuxt の内部](/docs/2.x/internals-glossary/internals)を参照してください。
 
 ## フックのリスト
 
-- [Nuxt フック]((/docs/2.x/internals-glossary/internals-renderer#フック)
-- [Renderer フック]((/docs/2.x/internals-glossary/internals-renderer#フック)
-- [ModulesContainer フック]((/docs/2.x/internals-glossary/internals-module-container#フック)
-- [Builder フック]((/docs/2.x/internals-glossary/internals-builder#フック)
-- [Generator フック]((/docs/2.x/internals-glossary/internals-generator#フック)
+- [Nuxt フック](/docs/2.x/internals-glossary/internals-renderer#フック)
+- [Renderer フック](/docs/2.x/internals-glossary/internals-renderer#フック)
+- [ModulesContainer フック](/docs/2.x/internals-glossary/internals-module-container#フック)
+- [Builder フック](/docs/2.x/internals-glossary/internals-builder#フック)
+- [Generator フック](/docs/2.x/internals-glossary/internals-generator#フック)
 
 ## 例
 
@@ -51,7 +51,7 @@ export default {
 
 リダイレクトはプロダクション用の Web サイトでは最適なユースケースではないかもしれませんがフックを活用するのに役立ちます。
 
-まずはじめに、[`router.base` を変更できます]((/docs/2.x/configuration-glossary/configuration-router#base)。`nuxt.config.js` を更新してみましょう:
+まずはじめに、[`router.base` を変更できます](/docs/2.x/configuration-glossary/configuration-router#base)。`nuxt.config.js` を更新してみましょう:
 
 ```js{}[nuxt.config.js]
 import hooks from './hooks'

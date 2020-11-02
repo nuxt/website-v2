@@ -51,7 +51,7 @@ As opções da instância raiz do Vue que incluem todos os seus plugins. Por exe
 
 `store` ([_Store do Vuex_](https://vuex.vuejs.org/api/#vuex-store-instance-properties))
 
-Instância da Store do Vuex. **Disponível apenas se a [store do vuex]((/docs/2.x/directory-structure/store) estiver definido**.
+Instância da Store do Vuex. **Disponível apenas se a [store do vuex](/docs/2.x/directory-structure/store) estiver definido**.
 
 ### route
 
@@ -75,7 +75,7 @@ Alias do `route.query`.
 
 `env` (_Object_)
 
-Variáveis ​​de ambiente definidas em `nuxt.config.js`, consulte a [api env]((/docs/2.x/configuration-glossary/configuration-env).
+Variáveis ​​de ambiente definidas em `nuxt.config.js`, consulte a [api env](/docs/2.x/configuration-glossary/configuration-env).
 
 ### IsDev
 

@@ -18,17 +18,17 @@ Estas clases son el corazón de Nuxt y deberían existir tanto en tiempo de ejec
 
 #### Nuxt
 
-- [Clase `Nuxt`]((/docs/2.x/internals-glossary/nuxt)
+- [Clase `Nuxt`](/docs/2.x/internals-glossary/nuxt)
 - Fuente: [core/nuxt.js](https://github.com/nuxt/nuxt.js/blob/dev/packages/core/src/nuxt.js)
 
 #### Renderer
 
-- [Clase `Renderer`]((/docs/2.x/internals-glossary/internals-renderer)
+- [Clase `Renderer`](/docs/2.x/internals-glossary/internals-renderer)
 - Fuente: [vue-renderer/renderer.js](https://github.com/nuxt/nuxt.js/blob/dev/packages/vue-renderer/src/renderer.js)
 
 #### ModuleContainer
 
-- [Clase `ModuleContainer`]((/docs/2.x/internals-glossary/internals-module-container)
+- [Clase `ModuleContainer`](/docs/2.x/internals-glossary/internals-module-container)
 - Fuente: [core/module.js](https://github.com/nuxt/nuxt.js/blob/dev/packages/core/src/module.js)
 
 ### Build
@@ -37,12 +37,12 @@ Estas clases solo son necesarias para el modo de construcción o desarrollo.
 
 #### Builder
 
-- [Clase `Builder`]((/docs/2.x/internals-glossary/internals-builder)
+- [Clase `Builder`](/docs/2.x/internals-glossary/internals-builder)
 - Fuente: [builder/builder.js](https://github.com/nuxt/nuxt.js/blob/dev/packages/builder/src/builder.js)
 
 #### Generator
 
-- [Clase `Generator`]((/docs/2.x/internals-glossary/internals-generator)
+- [Clase `Generator`](/docs/2.x/internals-glossary/internals-generator)
 - Fuente: [generator/generator.js](https://github.com/nuxt/nuxt.js/blob/dev/packages/generator/src/generator.js)
 
 ### Common

@@ -48,7 +48,7 @@ export default {
 }
 ```
 
-Anda juga dapat memeriksa beberapa data di berkas [store]((/docs/2.x/directory-structure/store) misalnya (diisi oleh [`nuxtServerInit(/docs/2.x/2.x/directory-structure/store#the-nuxtserverinit-action) Sebelum tindakan):
+Anda juga dapat memeriksa beberapa data di berkas [store](/docs/2.x/directory-structure/store) misalnya (diisi oleh [`nuxtServerInit(/docs/2.x/2.x/directory-structure/store#the-nuxtserverinit-action) Sebelum tindakan):
 
 ```js
 export default {

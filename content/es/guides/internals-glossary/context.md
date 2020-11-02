@@ -51,7 +51,7 @@ Las opciones de la instancia raíz de Vue que incluye todos sus complementos. Po
 
 `store` ([_Vuex Store_](https://vuex.vuejs.org/api/#vuex-store-instance-properties))
 
-Instancia de Vuex Store. **Solamente disponible si [vuex store]((/docs/2.x/directory-structure/store) está definido**.
+Instancia de Vuex Store. **Solamente disponible si [vuex store](/docs/2.x/directory-structure/store) está definido**.
 
 ### route
 
@@ -75,7 +75,7 @@ Alias de `route.query`.
 
 `env` (_Object_)
 
-Variables de entorno definidas en `nuxt.config.js`, mira [env api]((/docs/2.x/configuration-glossary/configuration-env).
+Variables de entorno definidas en `nuxt.config.js`, mira [env api](/docs/2.x/configuration-glossary/configuration-env).
 
 ### IsDev
 

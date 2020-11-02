@@ -74,7 +74,7 @@ Hay muchas propiedades del componente página como el head en el ejemplo anterio
 
 <base-alert type="next">
 
-Consulta [Estructura de Directorios]((/docs/2.x/directory-structure/nuxt) para ver todas las propiedades que puedes usar en tu página
+Consulta [Estructura de Directorios](/docs/2.x/directory-structure/nuxt) para ver todas las propiedades que puedes usar en tu página
 
 </base-alert>
 
@@ -94,7 +94,7 @@ Puedes definir un diseño agregando un fichero `default.vue` dentro de la carp
 
 <base-alert type="next">
 
-Lee más sobre el [componente Nuxt]((/docs/2.x/features/nuxt-components) en el capítulo componentes
+Lee más sobre el [componente Nuxt](/docs/2.x/features/nuxt-components) en el capítulo componentes
 
 </base-alert>
 

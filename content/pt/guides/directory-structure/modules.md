@@ -381,7 +381,7 @@ export default function moduloAsync($http) {
 
 <base-alert type="info">
 
-Existem muito mais hooks e possibilidades para módulos. Por favor, Leia sobre os [Internals do Nuxt]((/docs/2.x/internals-glossary/internals) para saber mais sobre a API nuxt-internal.
+Existem muito mais hooks e possibilidades para módulos. Por favor, Leia sobre os [Internals do Nuxt](/docs/2.x/internals-glossary/internals) para saber mais sobre a API nuxt-internal.
 
 </base-alert>
 

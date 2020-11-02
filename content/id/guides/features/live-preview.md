@@ -83,6 +83,6 @@ Anda bisa mengoper data ke fungsi `enablePreview`. Data tersebut kemudian akan t
 
 <base-alert type="next">
 
-Baca lebih lanjut [buku struktur direktori]((/docs/2.x/directory-structure/nuxt)
+Baca lebih lanjut [buku struktur direktori](/docs/2.x/directory-structure/nuxt)
 
 </base-alert>

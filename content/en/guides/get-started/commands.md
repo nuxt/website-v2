@@ -148,13 +148,13 @@ As of Nuxt v2.13 there is a crawler installed that will now crawl your link tags
 
 <base-alert>
 
-**Warning:** dynamic routes are ignored by the `generate` command when using Nuxt <= v2.12: [API Configuration generate]((/docs/2.x/configuration-glossary/configuration-generate)
+**Warning:** dynamic routes are ignored by the `generate` command when using Nuxt <= v2.12: [API Configuration generate](/docs/2.x/configuration-glossary/configuration-generate)
 
 </base-alert>
 
 <base-alert type="info">
 
-When generating your web application with `nuxt generate`, [the context]((/docs/2.x/internals-glossary/context) given to [asyncDat(/docs/2.x/2.x/features/data-fetching#async-data) and [fe(/docs/2.x/s/2.x/features/data-fetching#the-fetch-hook) will not have `req` and `res`.
+When generating your web application with `nuxt generate`, [the context](/docs/2.x/internals-glossary/context) given to [asyncDat(/docs/2.x/2.x/features/data-fetching#async-data) and [fe(/docs/2.x/s/2.x/features/data-fetching#the-fetch-hook) will not have `req` and `res`.
 
 </base-alert>
 

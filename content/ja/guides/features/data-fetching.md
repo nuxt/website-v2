@@ -130,7 +130,7 @@ Nuxt が呼び出す fetch に加え、`this.$fetch()` を使うことでコン�
 
 <base-alert type="info">
 
-fetch フック内では `this.$nuxt.context` を使うことで、Nuxt [context]((/docs/2.x/concepts/context-helpers) にアクセスできます。
+fetch フック内では `this.$nuxt.context` を使うことで、Nuxt [context](/docs/2.x/concepts/context-helpers) にアクセスできます。
 
 </base-alert>
 
@@ -227,7 +227,7 @@ export default {
 
 <base-alert>
 
-`asyncData` は [pages]((/docs/2.x/directory-structure/pages) でのみ使用可能で、このフック内では `this` にアクセスすることはできません。
+`asyncData` は [pages](/docs/2.x/directory-structure/pages) でのみ使用可能で、このフック内では `this` にアクセスすることはできません。
 
 </base-alert>
 
@@ -251,9 +251,9 @@ export default {
 </script>
 ```
 
-`fetch` と異なり、`asyncData` フックから返却される promise は*ルートの遷移の間に*解決されます。つまり、"loading placeholder" はクライアントサイドの遷移で表示されないということです(ただし読み込み中の状態をユーザーに示すために [ローディングバー](https://nuxtjs.org/guides/features/loading/) を使うことができます)。Nuxt は代わりに `asyncData` フックの終了を待ってから、次のページへ移動したり[エラーページ]((/docs/2.x/directory-structure/layouts#error-page)を表示したりします。
+`fetch` と異なり、`asyncData` フックから返却される promise は*ルートの遷移の間に*解決されます。つまり、"loading placeholder" はクライアントサイドの遷移で表示されないということです(ただし読み込み中の状態をユーザーに示すために [ローディングバー](https://nuxtjs.org/guides/features/loading/) を使うことができます)。Nuxt は代わりに `asyncData` フックの終了を待ってから、次のページへ移動したり[エラーページ](/docs/2.x/directory-structure/layouts#error-page)を表示したりします。
 
-このフックはページレベルのコンポーネントのためだけに使うことができます。`fetch` と異なり、`asyncData` はコンポーネントインスタンス (`this`) にアクセスすることはできません。そのかわりに、[context]((/docs/2.x/concepts/context-helpers) を引数として受け取ります。`asyncData` をデータの取得のために使うことができ、Nuxt.js は自動で返却されたオブジェクトをコンポーネントのデータとマージします。
+このフックはページレベルのコンポーネントのためだけに使うことができます。`fetch` と異なり、`asyncData` はコンポーネントインスタンス (`this`) にアクセスすることはできません。そのかわりに、[context](/docs/2.x/concepts/context-helpers) を引数として受け取ります。`asyncData` をデータの取得のために使うことができ、Nuxt.js は自動で返却されたオブジェクトをコンポーネントのデータとマージします。
 
 今後の例では、API からのデータの取得におすすめの [@nuxt/http](https://http.nuxtjs.org/) を使用します。
 
@@ -263,7 +263,7 @@ export default {
 
 <base-alert type="next">
 
-[watchQuery プロパティ]((/docs/2.x/components-glossary/pages-watchquery)についてより学び、利用可能な [context 内のキ(/docs/2.x/2.x/concepts/context-helpers)のリストを見てみましょう。
+[watchQuery プロパティ](/docs/2.x/components-glossary/pages-watchquery)についてより学び、利用可能な [context 内のキ(/docs/2.x/2.x/concepts/context-helpers)のリストを見てみましょう。
 
 </base-alert>
 

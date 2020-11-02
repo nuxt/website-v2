@@ -123,6 +123,20 @@ export default {
             twitter: 'a_birang',
             website: 'https://farnabaz.ir',
             role: 'Lead developer'
+          },
+          {
+            name: 'Jeremy Riera',
+            city: 'Bordeaux, France',
+            github: 'JeremmNuxt',
+            twitter: 'K_Jeremy_',
+            role: 'Growth Hacker'
+          },
+          {
+            name: 'Sylvain Marroufin',
+            city: 'Bordeaux, France',
+            github: 'smarroufin',
+            twitter: 'smarroufin',
+            role: 'JS developer'
           }
         ]
       },

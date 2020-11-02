@@ -3,7 +3,7 @@ title: Nuxt Lifecycle
 description: Apa pun alat yang Anda gunakan, Anda akan selalu merasa lebih percaya diri saat memahami cara kerja alat di balik terpal. Hal yang sama berlaku untuk Nuxt.js.
 position: 5
 category: concepts
-img: /guides/nuxt-lifecycle.svg
+img: /docs/2.x/nuxt-lifecycle.svg
 imgAlt: understanding-nuxt-2-12-lifecycle-hooks
 questions:
   - question: Kapan Nuxt.js lifecycle dimulai?

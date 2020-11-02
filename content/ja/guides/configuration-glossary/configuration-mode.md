@@ -22,12 +22,12 @@ position: 17
 
 <base-alert type="next">
 
-`ssr` オプションについての詳細は [ssr プロパティ](/guides/configuration-glossary/configuration-ssr)を参照してください。
+`ssr` オプションについての詳細は [ssr プロパティ](/docs/2.x/configuration-glossary/configuration-ssr)を参照してください。
 
 </base-alert>
 
 <base-alert type="next">
 
-`mode` オプションについての詳細は[レンダリングモードのドキュメント](/guides/features/rendering-modes)を参照してください。
+`mode` オプションについての詳細は[レンダリングモードのドキュメント](/docs/2.x/features/rendering-modes)を参照してください。
 
 </base-alert>

@@ -76,7 +76,7 @@ Nuxt.js は設定をしなくても自動的にコード分割を行います。
 
 <base-alert type="info">
 
-ページ間を遷移するためには [NuxtLink コンポーネント](/guides/features/nuxt-components#NuxtLink-コンポーネント) を使ってください。
+ページ間を遷移するためには [NuxtLink コンポーネント](/docs/2.x/features/nuxt-components#NuxtLink-コンポーネント) を使ってください。
 
 </base-alert>
 
@@ -181,7 +181,7 @@ Nuxt >= v2.13 ではクローラーがインストールされており、リン
 
 <base-alert type="next">
 
-静的なサイトのために [動的なルーティングを生成する](/guides/concepts/static-site-generation)
+静的なサイトのために [動的なルーティングを生成する](/docs/2.x/concepts/static-site-generation)
 
 </base-alert>
 
@@ -195,7 +195,7 @@ Nuxt.js は vue-router の子ルートを使ってルートをネストさせる
 
 <base-alert>
 
-親コンポーネント （`.vue` ファイル）内に [NuxtChild  コンポーネント](/guides/features/nuxt-components#the-nuxtchild-component)を含めることを忘れないでください。
+親コンポーネント （`.vue` ファイル）内に [NuxtChild  コンポーネント](/docs/2.x/features/nuxt-components#the-nuxtchild-component)を含めることを忘れないでください。
 
 </base-alert>
 
@@ -331,7 +331,7 @@ Nuxt のルーティングを拡張する方法はいくつかあります：
 
 - [router-extras-module](https://github.com/nuxt-community/router-extras-module) を使ってページのルートパラメータをカスタマイズする
 - [@nuxtjs/router](https://github.com/nuxt-community/router-module) を使い、独自の `router.js` で Nuxt router を上書きする
-- `nuxt.config.js` 内で [router.extendRoutes](/guides/configuration-glossary/configuration-router#extendroutes)  プロパティを使う
+- `nuxt.config.js` 内で [router.extendRoutes](/docs/2.x/configuration-glossary/configuration-router#extendroutes)  プロパティを使う
 
 ## router プロパティ
 
@@ -351,7 +351,7 @@ export default {
 
 <base-alert type="next">
 
-[Router Base プロパティ](/guides/configuration-glossary/configuration-router#base)
+[Router Base プロパティ](/docs/2.x/configuration-glossary/configuration-router#base)
 
 </base-alert>
 
@@ -424,7 +424,7 @@ export default {
 
 <base-alert type="next">
 
-[extendRoutes プロパティ](/guides/configuration-glossary/configuration-router#extendroutes)
+[extendRoutes プロパティ](/docs/2.x/configuration-glossary/configuration-router#extendroutes)
 
 </base-alert>
 
@@ -434,7 +434,7 @@ history.pushState をサポートしていないブラウザにおいて、モ�
 
 <base-alert type="next">
 
-[fallback プロパティ](/guides/configuration-glossary/configuration-router#fallback)
+[fallback プロパティ](/docs/2.x/configuration-glossary/configuration-router#fallback)
 
 </base-alert>
 
@@ -444,7 +444,7 @@ history.pushState をサポートしていないブラウザにおいて、モ�
 
 <base-alert type="next">
 
-[mode プロパティ](/guides/configuration-glossary/configuration-router#mode)
+[mode プロパティ](/docs/2.x/configuration-glossary/configuration-router#mode)
 
 </base-alert>
 
@@ -454,7 +454,7 @@ history.pushState をサポートしていないブラウザにおいて、モ�
 
 <base-alert type="next">
 
-[parseQuery / stringifyQuery プロパティ](/guides/configuration-glossary/configuration-router#parsequery--stringifyquery)
+[parseQuery / stringifyQuery プロパティ](/docs/2.x/configuration-glossary/configuration-router#parsequery--stringifyquery)
 
 </base-alert>
 
@@ -502,7 +502,7 @@ export default function (to, from, savedPosition) {
 
 <base-alert type="next">
 
-[scrollBehavior プロパティ](/guides/configuration-glossary/configuration-router#scrollbehavior)
+[scrollBehavior プロパティ](/docs/2.x/configuration-glossary/configuration-router#scrollbehavior)
 
 </base-alert>
 
@@ -528,7 +528,7 @@ export default {
 
 <base-alert type="next">
 
-[trailingSlash プロパティ](/guides/configuration-glossary/configuration-router#trailingslash)
+[trailingSlash プロパティ](/docs/2.x/configuration-glossary/configuration-router#trailingslash)
 
 </base-alert>
 

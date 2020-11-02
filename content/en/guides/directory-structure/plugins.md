@@ -226,7 +226,7 @@ module.exports = {
 }
 ```
 
-You can refer to the [configuration build](/guides/configuration-glossary/configuration-build#transpile) docs for more build options.
+You can refer to the [configuration build](/docs/2.x/configuration-glossary/configuration-build#transpile) docs for more build options.
 
 ## Client or server side only
 
@@ -331,7 +331,7 @@ Don't use `Vue.use()`, `Vue.component()`, and globally, don't plug anything in V
 
 ## The extendPlugins Property
 
-You may want to extend plugins or change the plugins order created by Nuxt.js. This function accepts an array of [plugin](/guides/configuration-glossary/configuration-plugins) objects and should return an array of plugin objects.
+You may want to extend plugins or change the plugins order created by Nuxt.js. This function accepts an array of [plugin](/docs/2.x/configuration-glossary/configuration-plugins) objects and should return an array of plugin objects.
 
 Example of changing plugins order:
 

@@ -226,7 +226,7 @@ module.exports = {
 }
 ```
 
-Puedes referirte a los documentos de [configuration build](/guides/configuration-glossary/configuration-build#transpile) para más opciones.
+Puedes referirte a los documentos de [configuration build](/docs/2.x/configuration-glossary/configuration-build#transpile) para más opciones.
 
 ## Lado del cliente o server
 
@@ -330,7 +330,7 @@ Esto causaría pérdida de memoria en el lado del servidor.
 
 ## La propiedad de extendPlugins
 
-Puedes extender los plugins on incluso cambiar el orden en el que los plugins se crean en Nuxt.js. Esta función recibe un arreglo de objetos de [plugin](/guides/configuration-glossary/configuration-plugins) y debe retornar un arreglo de objetos de plugins.
+Puedes extender los plugins on incluso cambiar el orden en el que los plugins se crean en Nuxt.js. Esta función recibe un arreglo de objetos de [plugin](/docs/2.x/configuration-glossary/configuration-plugins) y debe retornar un arreglo de objetos de plugins.
 
 Ejemplo de cómo se cambia el orden de plugins:
 

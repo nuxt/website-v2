@@ -303,7 +303,7 @@ Since Nuxt.js v2.10.0, if you have set `prefetchLinks` to `false` but you want t
 
 ## prefetchPayloads
 
-> Added with v2.13.0, only available for [static target](/guides/features/deployment-targets#static-hosting).
+> Added with v2.13.0, only available for [static target](/docs/2.x/features/deployment-targets#static-hosting).
 
 - Type: `Boolean`
 - Default: `true`

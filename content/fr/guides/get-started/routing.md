@@ -18,13 +18,13 @@ En d'autres termes, tout ce que nous avons à faire pour avoir un routage dans n
 
 <base-alert type="next">
 
-En savoir plus sur le [Routage](/guides/features/file-system-routing)
+En savoir plus sur le [Routage](/docs/2.x/features/file-system-routing)
 
 </base-alert>
 
 ## Navigation
 
-Pour naviguer entre les pages de notre application, nous devons utiliser le composant [NuxtLink](/guides/features/nuxt-components#the-nuxtlink-component). Ce composant est inclus avec Nuxt.js et nous n'avons donc pas à l'importer comme on le fait avec d'autres composants.
+Pour naviguer entre les pages de notre application, nous devons utiliser le composant [NuxtLink](/docs/2.x/features/nuxt-components#the-nuxtlink-component). Ce composant est inclus avec Nuxt.js et nous n'avons donc pas à l'importer comme on le fait avec d'autres composants.
 
 Il est similaire à la balise HTML `<a>`, mais à la place d'utiliser un attribut `href="/about"`, nous utilisons `to="/about"`. Si nous avons déjà utilisé `vue-router`, nous pouvons comparer `<NuxtLink>` au composant `<RouterLink>`.
 
@@ -56,6 +56,6 @@ Pour tous liens vers des pages de notre site, il faut utiliser `<NuxtLink>`. Si 
 
 <base-alert type="next">
 
-En savoir plus sur le [composant NuxtLink](/guides/features/nuxt-components#the-nuxtlink-component).
+En savoir plus sur le [composant NuxtLink](/docs/2.x/features/nuxt-components#the-nuxtlink-component).
 
 </base-alert>

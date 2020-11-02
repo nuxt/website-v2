@@ -37,9 +37,9 @@ questions:
     correctAnswer: en la carpeta layouts
 ---
 
-La sección Vistas describe todo lo que necesitas saber para configurar los datos y las vistas para una ruta específica en tu aplicación Nuxt.js. Las vistas consisten de una plantilla de aplicación, un layout, y la página como tal. Además, puedes definir metadatos específicos para el `<head>` de cada pagina  los cuales son importantes para el  SEO (Optimización para Motores de Búsqueda).
+La sección Vistas describe todo lo que necesitas saber para configurar los datos y las vistas para una ruta específica en tu aplicación Nuxt.js. Las vistas consisten de una plantilla de aplicación, un layout, y la página como tal. Además, puedes definir metadatos específicos para el `<head>` de cada pagina los cuales son importantes para el SEO (Optimización para Motores de Búsqueda).
 
-![Composición de una vista en Nuxt.js](/guides/views.png)
+![Composición de una vista en Nuxt.js](/docs/2.x/views.png)
 
 Composición de una vista en Nuxt.js
 
@@ -74,7 +74,7 @@ Hay muchas propiedades del componente página como el head en el ejemplo anterio
 
 <base-alert type="next">
 
-Consulta [Estructura de Directorios](/guides/directory-structure/nuxt) para ver todas las propiedades que puedes usar en tu página
+Consulta [Estructura de Directorios](/docs/2.x/directory-structure/nuxt) para ver todas las propiedades que puedes usar en tu página
 
 </base-alert>
 
@@ -94,7 +94,7 @@ Puedes definir un diseño agregando un fichero `default.vue` dentro de la carp
 
 <base-alert type="next">
 
-Lee más sobre el  [componente Nuxt](/guides/features/nuxt-components) en el capítulo componentes
+Lee más sobre el [componente Nuxt](/docs/2.x/features/nuxt-components) en el capítulo componentes
 
 </base-alert>
 
@@ -178,7 +178,7 @@ Para personalizar la página de error, define el fichero `layouts/error.vue`:
 
 La plantilla app se usa para crear el marco HTML del documento para tu aplicación Nuxt.js, el cual inyecta contenido y variables para el encabezado y cuerpo del documento. Este fichero se crea automáticamente y rara vez necesita ser modificado. Puedes personalizar la plantilla HTML utilizada por Nuxt.js para incluir scripts o clases CSS de forma condicional, creado el fichero `app.html` en la carpeta source del proyecto que por defecto es la raíz del mismo.
 
-La plantilla por defecto usada por  Nuxt.js is es:
+La plantilla por defecto usada por Nuxt.js is es:
 
 ```html{}[app.html]
 <!DOCTYPE html>
@@ -209,7 +209,7 @@ Un caso de uso de usar una plantilla de aplicación personalizada es agregar cla
 
 <base-alert type="info">
 
-Es posible agregar ficheros JavaScript y CSS en `app.html`,  pero es recomendado utilizar `nuxt.config.js` para esto
+Es posible agregar ficheros JavaScript y CSS en `app.html`, pero es recomendado utilizar `nuxt.config.js` para esto
 
 </base-alert>
 

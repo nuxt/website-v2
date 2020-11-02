@@ -11,7 +11,7 @@ position: 27
 
 Nuxt crea internamente una instancia de [connect](https://github.com/senchalabs/connect) a la que puede agregar su propio middleware personalizado. Esto nos permite registrar rutas adicionales (típicamente rutas `/ api`) **sin necesidad de un servidor externo**.
 
-Debido a que connect en sí mismo es un middleware, el middleware registrado funcionará con `nuxt start` y también cuando se use como middleware con usos programáticos como [express-template](https://github.com/nuxt-community/express-template). [Módulos](/guide/modules) de Nuxt también pueden proporcionar un `serverMiddleware` usando [this.addServerMiddleware()](/guides/internals-glossary/internals-module-container#addedervermiddleware-middleware)
+Debido a que connect en sí mismo es un middleware, el middleware registrado funcionará con `nuxt start` y también cuando se use como middleware con usos programáticos como [express-template](https://github.com/nuxt-community/express-template). [Módulos](/guide/modules) de Nuxt también pueden proporcionar un `serverMiddleware` usando [this.addServerMiddleware()](/docs/2.x/internals-glossary/internals-module-container#addedervermiddleware-middleware)
 
 Adicionalmente a ellos, introdujimos una opción de `prefix` que por defecto es `true`. Agregará la base del enrutador a los middlewares de su servidor.
 

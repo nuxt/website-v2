@@ -1,11 +1,19 @@
 ---
 title: Hello World
-description: Hello World example with Nuxt.js
-github: hello-world
-youtube: https://www.youtube.com/embed/kmf-p-pTi40
-livedemo: https://hello-world.nuxtjs.org
-liveedit: https://gomix.com/#!/project/nuxt-hello-world
-documentation: /guide/installation#starting-from-scratch
-category: essentials
+description: Example project with basic install including two ways of creating a page component.
 position: 1
+category: essentials
+csb_link: https://codesandbox.io/embed/github/nuxt-academy/guides-examples/tree/master/01_get_started/01_installation?
 ---
+
+<example-intro></example-intro>
+
+`pages/index.vue` - Hello World
+
+<base-alert type="next">
+
+Learn more in the Get Started book in the [Installation](/guides/get-started/installation) chapter.
+
+</base-alert>
+
+<code-sandbox :src="csb_link"></code-sandbox>

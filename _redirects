@@ -86,17 +86,17 @@ https://www.nuxtjs.org/* https://nuxtjs.org/:splat 301!
 /api/pages-transition /docs/2.x/components-glossary/pages-transition 301!
 /api/pages-validate /docs/2.x/components-glossary/pages-validate 301!
 /api/pages-watchquery /docs/2.x/components-glossary/pages-watchquery 301!
-/examples/asnyc-data/
-/examples/custom-loading
-/examples/custom-routes
-/examples/global/css
-/examples/hello-world
-/examples/layouts
-/examples/middleware
-/examples/nested-routes
-/examples/routes-transitions
-/examples/seo-html-head
-/examples/plugins
+/examples/asnyc-data/ examples/data-fetching 301!
+/examples/custom-page-loading /examples/loading 301!
+/examples/custom-loading /examples/loading 301!
+/examples/custom-routes /examples/routes 301!
+/examples/global/css /examples/pre-processors 301!
+/examples/middleware /examples/named-middleware 301!
+/examples/nested-routes /examples/nuxt-child 301!
+/examples/named-views /examples/nuxt-child 301!
+/examples/routes-transitions /examples/transitions 301!
+/examples/plugins /examples/external-packages-plugins 301!
+/examples/auth-external-jwt /faq/auth-external-jwt 301!
 
 
 # [LEGACY] Redirect FAQ URLs

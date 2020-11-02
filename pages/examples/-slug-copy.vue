@@ -1,101 +1,90 @@
 <template>
   <div class="-mx-4 lg:mx-0 flex flex-col-reverse lg:flex-row">
     <div
-      class="lg:min-h-screen lg:w-4/4 w-full py-8 px-4 lg:static lg:overflow-visible lg:max-h-full"
+      class="w-full py-8 px-4 lg:static lg:overflow-visible lg:max-h-full lg:w-3/4"
     >
-      <LangFallback :doc-link="docLink" :lang-fallback="langFallback" />
-
       <article>
         <h1
           class="text-light-onSurfacePrimary dark:text-dark-onSurfacePrimary transition-colors duration-300 ease-linear"
         >
           {{ page.title }}
         </h1>
-        <nuxt-content :document="page" />
-
-        <LazyAppPrevNextNew
-          :prev="prev"
-          :next="next"
-          section="examples"
-          class="mt-4"
-        />
-        <AppContribute :doc-link="docLink" :contributors="contributors" />
+        <p class="mb-6">
+          {{ page.description }}
+        </p>
+        <!-- <LazyAppCodeSandbox v-if="codeSandBoxLink" :src="codeSandBoxLink" /> -->
+        <div>
+          <AppButton
+            :href="liveEditLink"
+            variant="primary"
+            class="sm:mr-4 py-3 px-6 text-base mb-4"
+          >
+            {{ $t('links.live_edit') }}
+          </AppButton>
+          <AppButton
+            :href="downloadLink"
+            variant="primary"
+            class="sm:mr-4 py-3 px-6 text-base mb-4"
+          >
+            {{ $t('links.download') }}
+          </AppButton>
+        </div>
       </article>
     </div>
+    <AffixBlock>
+      <SponsorsBlock />
+      <AdsBlock :key="$route.params.slug" />
+    </AffixBlock>
   </div>
 </template>
 
 <script>
-import copyCodeBlock from '~/mixins/copyCodeBlock'
-
 export default {
-  mixins: [copyCodeBlock],
   async asyncData({ $content, params, store, error, app }) {
-    let path = `/${app.i18n.defaultLocale}/examples/`
+    const slug = params.slug || 'hello-world'
+
+    let path = `/${app.i18n.defaultLocale}/examples`
     let page, prev, next, contributors, langFallback
 
     try {
-      page = await $content(path, params.slug).fetch()
+      page = await $content(path, slug).fetch()
     } catch (err) {
-      if (!err.response || err.response.status !== 404) {
-        return error({
-          statusCode: 500,
-          message: app.i18n.t('common.an_error_occurred')
-        })
-      }
-
       return error({
         statusCode: 404,
         message: app.i18n.t('common.page_not_found')
       })
     }
 
-    if (
-      app.i18n.locale !== app.i18n.defaultLocale &&
-      (['pt', 'es'].includes(app.i18n.locale) ||
-        process.env.NODE_ENV !== 'production')
-    ) {
+    if (app.i18n.defaultLocale !== app.i18n.locale) {
       try {
-        path = `/${app.i18n.locale}/examples/`
-        page = await $content(path, params.slug).fetch()
+        path = `/${app.i18n.locale}/examples`
+        page = await $content(path, slug).fetch()
       } catch (err) {
         langFallback = true
-        path = `/${app.i18n.defaultLocale}/examples/`
+        path = `/${app.i18n.defaultLocale}/examples`
       }
     }
 
     try {
       contributors = (
         await fetch(
-          `https://contributors-api.onrender.com/content${path}/${params.slug}`
+          `https://contributors-api.onrender.com/content${path}/${slug}`
         ).then(res => res.json())
       ).map(({ author }) => ({ author }))
     } catch (e) {}
 
     try {
-      ;[prev, next] = await $content(
-        ['pt', 'es'].includes(app.i18n.locale)
-          ? path
-          : `/${app.i18n.defaultLocale}/examples/`
-      )
-        .only(['title', 'slug', 'dir', 'menu'])
+      ;[prev, next] = await $content(path)
+        .only(['title', 'slug', 'dir'])
         .sortBy('position')
-        .sortBy('title')
-        .sortBy('menu')
-        .surround(params.slug, { before: 1, after: 1 })
+        .surround(slug, { before: 1, after: 1 })
         .fetch()
     } catch (e) {}
 
-    // if (page && page.questions) {
-    //   page.questions = shuffle(page.questions.map(question => ({ ...question, answers: shuffle(question.answers) })))
-    // }
-
     return {
-      path,
-      showModal: false,
       langFallback,
+      path,
       section: params.section,
-      book: params.book,
       page,
       prev,
       next,
@@ -104,7 +93,25 @@ export default {
   },
   computed: {
     docLink() {
-      return `https://github.com/nuxt/nuxtjs.org/blob/master/content${this.path}/${this.$route.params.slug}.md`
+      return `https://github.com/nuxt/nuxtjs.org/blob/master/content${this.path}.md`
+    },
+    codeSandBox() {
+      return 'https://codesandbox.io'
+    },
+    codeSandBoxLink() {
+      if (!this.page.github) {
+        return ''
+      }
+      return `${this.codeSandBox}/embed/github/nuxt/nuxt.js/tree/dev/examples/${this.page.github}?autoresize=1&view=editor`
+    },
+    liveEditLink() {
+      return `${this.codeSandBox}/s/github/nuxt/nuxt.js/tree/dev/examples/${this.page.github}?from-embed`
+    },
+    downloadLink() {
+      return (
+        'https://minhaskamal.github.io/DownGit/#/home?url=https://github.com/nuxt/nuxt.js/tree/dev/examples/' +
+        this.page.github
+      )
     }
   },
   scrollToTop: true,
@@ -141,6 +148,7 @@ export default {
   }
 }
 </script>
+
 <style lang="scss" scoped>
 article h1 {
   @apply font-medium relative text-3xl table mb-8;

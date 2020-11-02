@@ -302,6 +302,9 @@ module.exports = {
     },
     examples: {
       essentials: 'Essentials',
+      middleware: 'Middleware',
+      modules: 'Modules',
+      plugins: 'Plugins',
       customization: 'Customization',
       advanced: 'Advanced'
     },

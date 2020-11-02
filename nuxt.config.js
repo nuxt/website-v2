@@ -79,16 +79,7 @@ export default {
 
   pwa: {
     manifest: {
-      name: 'NuxtJS',
-      start_url: '/',
-      icons: [
-        {
-          src: '/icon.png',
-          type: 'image/png',
-          sizes: '512x512',
-          purpose: 'any maskable'
-        }
-      ]
+      name: 'NuxtJS'
     }
   },
 

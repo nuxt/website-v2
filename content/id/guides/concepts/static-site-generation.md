@@ -50,7 +50,7 @@ CDN akan mengirimkan HTML, JavaScript, dan assets statis yang telah dibuat dan m
 
 ### Langkah 3: Browser ke Browser
 
-Navigasi di antara halaman dengan [`<NuxtLink>`](/docs/2.x/x/features/nuxt-components#the-nuxtlink-component) dilakukan di sisi klien sehingga Anda tidak memuat CDN lagi dan semua panggilan API akan dimuat dari folder statis yang sudah di-cache bahkan jika Anda melakukan refresh pada browser.
+Navigasi di antara halaman dengan [`<NuxtLink>`]((/docs/2.x/features/nuxt-components#the-nuxtlink-component) dilakukan di sisi klien sehingga Anda tidak memuat CDN lagi dan semua panggilan API akan dimuat dari folder statis yang sudah di-cache bahkan jika Anda melakukan refresh pada browser.
 
 ### Penganti SPA
 
@@ -58,7 +58,7 @@ Halaman yang telah dikecualikan dari pembuatan, dengan menggunakan properti `gen
 
 <base-alert type="next">
 
-Untuk mempelajari lebih lanjut tentang [properti generate](/docs/2.x/x/configuration-glossary/configuration-generate#exclude)
+Untuk mempelajari lebih lanjut tentang [properti generate]((/docs/2.x/configuration-glossary/configuration-generate#exclude)
 
 </base-alert>
 
@@ -68,6 +68,6 @@ Untuk mendapatkan konten baru ke situs Anda dari API, Anda perlu membuat kembali
 
 ### Mode preview
 
-Mode Pratinjau akan memanggil API atau CMS Anda sehingga Anda dapat melihat perubahan secara langsung sebelum menerapkan. Lihat [mode preview](/docs/2.x/x/features/live-preview) tentang cara mengaktifkan fitur ini.
+Mode Pratinjau akan memanggil API atau CMS Anda sehingga Anda dapat melihat perubahan secara langsung sebelum menerapkan. Lihat [mode preview]((/docs/2.x/features/live-preview) tentang cara mengaktifkan fitur ini.
 
 <quiz :questions="questions"></quiz>

@@ -89,7 +89,7 @@ function (context) { // asyncData, nuxtServerInit 등이 될 수 있습니다
 
 </base-alert>
 
-[Internals Glossary](/docs/2.x/x/internals-glossary/context)에 있는 다른 컨텍스트 키에 대해 더 알아보기
+[Internals Glossary]((/docs/2.x/internals-glossary/context)에 있는 다른 컨텍스트 키에 대해 더 알아보기
 
 ## 예시
 

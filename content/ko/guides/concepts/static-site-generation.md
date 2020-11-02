@@ -50,7 +50,7 @@ CDN은 이미 생성된 HTML, 자바스크립트, static 에셋을 보내고 이
 
 ### Step 3: 브라우저에서 브라우저로
 
-[`<NuxtLink>`](/docs/2.x/x/features/nuxt-components#the-nuxtlink-component)를 사용하는 페이지 간의 이동은 클라이언트 사이드에서 수행되므로 CDN에 다시 연결하지 않습니다. 브라우저를 새로고침하지 않는 이상 모든 API 호출은 이미 캐시된 static 폴더에서 불러와집니다.
+[`<NuxtLink>`]((/docs/2.x/features/nuxt-components#the-nuxtlink-component)를 사용하는 페이지 간의 이동은 클라이언트 사이드에서 수행되므로 CDN에 다시 연결하지 않습니다. 브라우저를 새로고침하지 않는 이상 모든 API 호출은 이미 캐시된 static 폴더에서 불러와집니다.
 
 ### SPA Fallback
 
@@ -58,7 +58,7 @@ CDN은 이미 생성된 HTML, 자바스크립트, static 에셋을 보내고 이
 
 <base-alert type="next">
 
-[generate property](/docs/2.x/x/configuration-glossary/configuration-generate#exclude)에 대해 더 알아보기
+[generate property]((/docs/2.x/configuration-glossary/configuration-generate#exclude)에 대해 더 알아보기
 
 </base-alert>
 
@@ -68,6 +68,6 @@ API로부터 받아온 새로운 컨텐츠를 사이트에 가져오기 위해�
 
 ### 프리뷰 모드
 
-프리뷰 모드는 API이나 CMS를 호출하므로 표시되기 전에 변경사항을 실시간으로 볼 수 있습니다. 이 기능을 활성화하는 방법은 [preview mode](/docs/2.x/x/features/live-preview)를 참조하세요.
+프리뷰 모드는 API이나 CMS를 호출하므로 표시되기 전에 변경사항을 실시간으로 볼 수 있습니다. 이 기능을 활성화하는 방법은 [preview mode]((/docs/2.x/features/live-preview)를 참조하세요.
 
 <quiz :questions="questions"></quiz>

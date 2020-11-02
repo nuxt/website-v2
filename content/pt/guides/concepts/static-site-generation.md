@@ -50,7 +50,7 @@ O CDN enviará o HTML, JavaScript e arquivos estáticos já gerados, de volta ao
 
 ### Etapa 3: Navegador para Navegador
 
-A navegação entre as páginas com [`<NuxtLink>`](/docs/2.x/x/features/nuxt-components#the-nuxtlink-component) é feita no lado do cliente para que você não acesse o CDN novamente e todas as chamadas API serão carregadas da pasta static já armazenada em cache, mesmo se você for atualizar o navegador.
+A navegação entre as páginas com [`<NuxtLink>`]((/docs/2.x/features/nuxt-components#the-nuxtlink-component) é feita no lado do cliente para que você não acesse o CDN novamente e todas as chamadas API serão carregadas da pasta static já armazenada em cache, mesmo se você for atualizar o navegador.
 
 ### Contingência para SPA
 
@@ -58,7 +58,7 @@ As páginas que foram excluídas da geração estática, usando a propriedade `g
 
 <base-alert type="next">
 
-Saiba mais sobre a [propriedade generate](/docs/2.x/x/configuration-glossary/configuration-generate#exclude)
+Saiba mais sobre a [propriedade generate]((/docs/2.x/configuration-glossary/configuration-generate#exclude)
 
 </base-alert>
 
@@ -68,6 +68,6 @@ Para obter novos conteúdos para seu site, a partir de sua API, você precisará
 
 ### Modo de Pré-visualização
 
-O modo de Pré-visualização chamará sua API ou CMS para que você possa ver as alteraçoes antes de fazer o deploy. Consulte o [modo de pré-visualização](/docs/2.x/x/features/live-preview) para saber como habilitar esse recurso.
+O modo de Pré-visualização chamará sua API ou CMS para que você possa ver as alteraçoes antes de fazer o deploy. Consulte o [modo de pré-visualização]((/docs/2.x/features/live-preview) para saber como habilitar esse recurso.
 
 <quiz :questions="questions"></quiz>

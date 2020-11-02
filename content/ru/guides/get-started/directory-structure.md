@@ -43,7 +43,7 @@ touch nuxt.config.js
 
 <base-alert type="next">
 
-[Подробнее о компонентах](/docs/2.x/x/directory-structure/components)
+[Подробнее о компонентах]((/docs/2.x/directory-structure/components)
 
 </base-alert>
 
@@ -53,7 +53,7 @@ touch nuxt.config.js
 
 <base-alert type="next">
 
-[Подробнее о ресурсах](/docs/2.x/x/directory-structure/assets)
+[Подробнее о ресурсах]((/docs/2.x/directory-structure/assets)
 
 </base-alert>
 
@@ -63,7 +63,7 @@ touch nuxt.config.js
 
 <base-alert type="next">
 
-[Подробнее о директории static](/docs/2.x/x/directory-structure/static)
+[Подробнее о директории static]((/docs/2.x/directory-structure/static)
 
 </base-alert>
 
@@ -73,7 +73,7 @@ touch nuxt.config.js
 
 <base-alert type="next">
 
-[Подробнее о `nuxt.config.js`](/docs/2.x/x/directory-structure/nuxt-config)
+[Подробнее о `nuxt.config.js`]((/docs/2.x/directory-structure/nuxt-config)
 
 </base-alert>
 
@@ -87,10 +87,10 @@ touch nuxt.config.js
 
 ## Больше о структуре проекта
 
-Существуют другие полезные директории: [content](/docs/2.x/x/directory-structure/content), [layout(/docs/2.x/2.x/directory-structure/layouts), [middlew(/docs/2.x/s/2.x/directory-structure/middleware), [mo(/docs/2.x/ocs/2.x/directory-structure/modules), [(/docs/2.x//docs/2.x/directory-structure/plugins)(/docs/2.x/](/docs/2.x/directory-structure/store). Они не нужны для небольших приложений и здесь мы их не рассматриваем.
+Существуют другие полезные директории: [content]((/docs/2.x/directory-structure/content), [layout(/docs/2.x/2.x/directory-structure/layouts), [middlew(/docs/2.x/s/2.x/directory-structure/middleware), [mo(/docs/2.x/ocs/2.x/directory-structure/modules), [(/docs/2.x//docs/2.x/directory-structure/plugins)(/docs/2.x/](/docs/2.x/directory-structure/store). Они не нужны для небольших приложений и здесь мы их не рассматриваем.
 
 <base-alert type="next">
 
-Чтобы детально изучить директории, прочтите [раздел о структуре директорий](/docs/2.x/x/directory-structure/nuxt).
+Чтобы детально изучить директории, прочтите [раздел о структуре директорий]((/docs/2.x/directory-structure/nuxt).
 
 </base-alert>

@@ -159,7 +159,7 @@ Revisa el capítulo sobre componente para ver más info de [`<NuxtLink>`](/docs/
 
 <base-alert type="next">
 
-Héchale un vistazo a [libro de Características](/docs/2.x/x/features/rendering-modes)
+Héchale un vistazo a [libro de Características]((/docs/2.x/features/rendering-modes)
 
 </base-alert>
 

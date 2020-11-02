@@ -49,7 +49,7 @@ export default {
 }
 ```
 
-Anda dapat mengakses Nuxt [context](/docs/2.x/x/internals-glossary/context) di dalam fetch hook menggunakan `this.$nuxt.context`.
+Anda dapat mengakses Nuxt [context]((/docs/2.x/internals-glossary/context) di dalam fetch hook menggunakan `this.$nuxt.context`.
 
 ### Pilihan
 

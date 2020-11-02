@@ -28,6 +28,6 @@ Para aprender más sobre la opción `ssr`, échale un vistazo a la [sección pro
 
 <base-alert type="next">
 
-Para aprender más sobre la opción `mode`, échale un vistazo a la [sección modos de renderizado](/docs/2.x/x/features/rendering-modes).
+Para aprender más sobre la opción `mode`, échale un vistazo a la [sección modos de renderizado]((/docs/2.x/features/rendering-modes).
 
 </base-alert>

@@ -81,7 +81,7 @@ Working with [asyncData](/docs/2.x/features/data-fetching#async-data)
 
 <base-alert type="next">
 
-Escolher entre diferentes [modos de Renderização](/docs/2.x/x/features/rendering-modes)
+Escolher entre diferentes [modos de Renderização]((/docs/2.x/features/rendering-modes)
 
 </base-alert>
 

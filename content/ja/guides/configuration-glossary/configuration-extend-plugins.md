@@ -11,7 +11,7 @@ position: 9
 - 型: `Function`
 - デフォルト: `undefined`
 
-プラグインを拡張したり、Nuxt.js で作成したプラグインの順序を変更したい場合があるでしょう。この関数は [プラグイン](/docs/2.x/x/configuration-glossary/configuration-plugins) オブジェクトの配列を受け取り、プラグインオブジェクトの配列を返します。
+プラグインを拡張したり、Nuxt.js で作成したプラグインの順序を変更したい場合があるでしょう。この関数は [プラグイン]((/docs/2.x/configuration-glossary/configuration-plugins) オブジェクトの配列を受け取り、プラグインオブジェクトの配列を返します。
 
 プラグインの順序を変更する例:
 

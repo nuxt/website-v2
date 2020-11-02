@@ -85,6 +85,6 @@ You can pass data to the `enablePreview` function. That data will then be availa
 
 <base-alert type="next">
 
-Check out the [Directory Structure book](/docs/2.x/x/directory-structure/nuxt)
+Check out the [Directory Structure book]((/docs/2.x/directory-structure/nuxt)
 
 </base-alert>

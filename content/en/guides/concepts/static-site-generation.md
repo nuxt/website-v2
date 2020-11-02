@@ -50,7 +50,7 @@ The CDN will send the already generated HTML, JavaScript and static assets and s
 
 ### Step 3: Browser to Browser
 
-Navigating between pages with [`<NuxtLink>`](/docs/2.x/x/features/nuxt-components#the-nuxtlink-component) is done on the client side so you don't hit the CDN again and all API calls will be loaded from the already cached static folder even if you hard refresh the browser.
+Navigating between pages with [`<NuxtLink>`]((/docs/2.x/features/nuxt-components#the-nuxtlink-component) is done on the client side so you don't hit the CDN again and all API calls will be loaded from the already cached static folder even if you hard refresh the browser.
 
 ### SPA Fallback
 
@@ -58,7 +58,7 @@ Pages that have been excluded from generation, by using the `generate.exclude` p
 
 <base-alert type="next">
 
-To learn more about the [generate property](/docs/2.x/x/configuration-glossary/configuration-generate#exclude)
+To learn more about the [generate property]((/docs/2.x/configuration-glossary/configuration-generate#exclude)
 
 </base-alert>
 
@@ -68,6 +68,6 @@ In order to get new content to your site from your API you will need to regenera
 
 ### Preview Mode
 
-The Preview mode will call your API or your CMS so you can see the changes live before deploying. See the [preview mode](/docs/2.x/x/features/live-preview) on how to enable this feature.
+The Preview mode will call your API or your CMS so you can see the changes live before deploying. See the [preview mode]((/docs/2.x/features/live-preview) on how to enable this feature.
 
 <quiz :questions="questions"></quiz>

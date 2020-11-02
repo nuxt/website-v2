@@ -84,6 +84,6 @@ validate({ params, query }) {
 
 <base-alert type="next">
 
-[ディレクトリ構成のドキュメント](/docs/2.x/x/directory-structure/nuxt) を見てみましょう。
+[ディレクトリ構成のドキュメント]((/docs/2.x/directory-structure/nuxt) を見てみましょう。
 
 </base-alert>

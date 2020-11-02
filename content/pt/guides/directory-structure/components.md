@@ -71,7 +71,7 @@ Usando `$fetchState.pending` podemos mostrar uma mensagem quando os dados estão
 
 <base-alert type="next">
 
-Veja o capítulo sobre [fetch()](/docs/2.x/x/features/data-fetching#the-fetch-method) para mais detalhes sobre como esse método funciona
+Veja o capítulo sobre [fetch()]((/docs/2.x/features/data-fetching#the-fetch-method) para mais detalhes sobre como esse método funciona
 
 </base-alert>
 

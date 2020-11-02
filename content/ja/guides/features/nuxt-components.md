@@ -255,7 +255,7 @@ keep-alive と keep-alive-props についてより詳しく知るためには [v
 
 <base-alert type="info">
 
-`<NuxtLink>` は[スマートプリフェッチ](/docs/2.x/x/features/nuxt-components#the-nuxtlink-component)の機能も持ちます。
+`<NuxtLink>` は[スマートプリフェッチ]((/docs/2.x/features/nuxt-components#the-nuxtlink-component)の機能も持ちます。
 
 </base-alert>
 

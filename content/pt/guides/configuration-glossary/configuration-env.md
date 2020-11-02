@@ -67,4 +67,4 @@ if ('testing123' == 'testing123')
 
 ## serverMiddleware
 
-Como o [serverMiddleware](/docs/2.x/x/configuration-glossary/configuration-servermiddleware) é desacoplado do build principal do Nuxt, as variáveis ​​`env` definidas em `nuxt.config.js` não estão disponíveis lá.
+Como o [serverMiddleware]((/docs/2.x/configuration-glossary/configuration-servermiddleware) é desacoplado do build principal do Nuxt, as variáveis ​​`env` definidas em `nuxt.config.js` não estão disponíveis lá.

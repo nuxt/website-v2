@@ -20,7 +20,7 @@ csb_link: https://codesandbox.io/embed/github/nuxt-academy/guides-examples/tree/
 
 ## 이동
 
-앱 페이지 사이를 이동하려면 [NuxtLink](/docs/2.x/x/features/nuxt-components#the-nuxtlink-component) 컴포넌트를 사용해야 합니다. 이 컴포넌트는 Nuxt.js에 포함되어 있으므로 다른 컴포넌트처럼 임포트할 필요가 없습니다. HTML `<a>` 태그와 비슷하지만 `href="/about"`을 대신 `to="/about"`을 사용합니다. 이전에 `vue-router`를 사용해 본 적이 있다면 `<NuxtLink>`를 `<RouterLink>`를 대신한다고 생각할 수 있습니다.
+앱 페이지 사이를 이동하려면 [NuxtLink]((/docs/2.x/features/nuxt-components#the-nuxtlink-component) 컴포넌트를 사용해야 합니다. 이 컴포넌트는 Nuxt.js에 포함되어 있으므로 다른 컴포넌트처럼 임포트할 필요가 없습니다. HTML `<a>` 태그와 비슷하지만 `href="/about"`을 대신 `to="/about"`을 사용합니다. 이전에 `vue-router`를 사용해 본 적이 있다면 `<NuxtLink>`를 `<RouterLink>`를 대신한다고 생각할 수 있습니다.
 
 `pages` 폴더의 `index.vue` 페이지로 가는 간단한 링크:
 
@@ -48,6 +48,6 @@ csb_link: https://codesandbox.io/embed/github/nuxt-academy/guides-examples/tree/
 
 <base-alert type="next">
 
-[NuxtLink component](/docs/2.x/x/features/nuxt-components#the-nuxtlink-component)에 대해 더 알아보기
+[NuxtLink component]((/docs/2.x/features/nuxt-components#the-nuxtlink-component)에 대해 더 알아보기
 
 </base-alert>

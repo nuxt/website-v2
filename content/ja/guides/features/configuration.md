@@ -382,7 +382,7 @@ export default async () => {
 
 <base-alert type="next">
 
-`nuxt.config.js` には、カスタマイズや設定オプションがたくさんあります！[build の設定](/docs/2.x/x/configuration-glossary/configuration-build)ですべてのキーを確認しましょう。
+`nuxt.config.js` には、カスタマイズや設定オプションがたくさんあります！[build の設定]((/docs/2.x/configuration-glossary/configuration-build)ですべてのキーを確認しましょう。
 
 </base-alert>
 

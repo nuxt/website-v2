@@ -193,7 +193,7 @@ Intervalo entre dos ciclos de renderizado para evitar inundar una API potencial 
 ## minify
 
 - **Obsoleto!**
-- Use [build.html.minify](/docs/2.x/x/configuration-glossary/configuration-build#htmlminify) en su lugar
+- Use [build.html.minify]((/docs/2.x/configuration-glossary/configuration-build#htmlminify) en su lugar
 
 ## routes
 

@@ -37,6 +37,6 @@ export default {
 
 <base-alert type="next">
 
-[The ssr property](/docs/2.x/x/configuration-glossary/configuration-ssr)
+[The ssr property]((/docs/2.x/configuration-glossary/configuration-ssr)
 
 </base-alert>

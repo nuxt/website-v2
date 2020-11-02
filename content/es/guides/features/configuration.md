@@ -382,7 +382,7 @@ El módulo axios no puede ser usado en `nuxt.config.js`. Necesitarás importar a
 
 <base-alert type="next">
 
-El archivo `nuxt.config.js` tiene muchas más opciones de personalización y configuración! Echa un vistazo a todas sus keys en el [glosario de configuración](/docs/2.x/x/configuration-glossary/configuration-build).
+El archivo `nuxt.config.js` tiene muchas más opciones de personalización y configuración! Echa un vistazo a todas sus keys en el [glosario de configuración]((/docs/2.x/configuration-glossary/configuration-build).
 
 </base-alert>
 

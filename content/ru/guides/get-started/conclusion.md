@@ -75,13 +75,13 @@ questions:
 
 <base-alert type="next">
 
-Работаем с [asyncData](/docs/2.x/x/features/data-fetching#async-data)
+Работаем с [asyncData]((/docs/2.x/features/data-fetching#async-data)
 
 </base-alert>
 
 <base-alert type="next">
 
-Выбираем между [Режимами рендеринга](/docs/2.x/x/features/rendering-modes)
+Выбираем между [Режимами рендеринга]((/docs/2.x/features/rendering-modes)
 
 </base-alert>
 

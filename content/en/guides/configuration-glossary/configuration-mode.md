@@ -28,6 +28,6 @@ To learn more about the `ssr` option, checkout the [ssr property](/docs/2.x/conf
 
 <base-alert type="next">
 
-To learn more about the `mode` option, checkout the [rendering modes section](/docs/2.x/x/features/rendering-modes).
+To learn more about the `mode` option, checkout the [rendering modes section]((/docs/2.x/features/rendering-modes).
 
 </base-alert>

@@ -41,6 +41,6 @@ export default {
 
 <base-alert type="next">
 
-[A propriedade mode](/docs/2.x/x/configuration-glossary/configuration-mode)
+[A propriedade mode]((/docs/2.x/configuration-glossary/configuration-mode)
 
 </base-alert>

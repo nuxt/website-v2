@@ -71,7 +71,7 @@ El directorio de `middleware` contiene el middleware de la aplicación. El middl
 
 El middleware compartido debería estar localizado en el directorio de `middleware/`. El nombre del archivo será el nombre del middleware (`middleware/auth.js` será `auth` middleware). También puedes definir middleware específico para una página usando una función directa, lee más sobre esto en [anonymous middleware](/docs/2.x/components-glossary/pages-middleware#anonymous-middleware).
 
-Un middleware recibe [el context](/docs/2.x/x/internals-glossary/context) como primer argumento.
+Un middleware recibe [el context]((/docs/2.x/internals-glossary/context) como primer argumento.
 
 ```js{}[middleware/user-agent.js]
 export default function (context) {

@@ -666,7 +666,7 @@ You cannot use path aliases here (`~` and `@`), you need to use relative or abso
 
 ## templates
 
-> Nuxt.js allows you provide your own templates which will be rendered based on Nuxt configuration. This feature is specially useful for using with [modules](/docs/2.x/x/directory-structure/modules).
+> Nuxt.js allows you provide your own templates which will be rendered based on Nuxt configuration. This feature is specially useful for using with [modules]((/docs/2.x/directory-structure/modules).
 
 - Type: `Array`
 
@@ -756,7 +756,7 @@ Starting with `v2.9.0`, you can also use a function to conditionally transpile, 
 
 ## watch
 
-> You can provide your custom files to watch and regenerate after changes. This feature is specially useful for using with [modules](/docs/2.x/x/directory-structure/modules).
+> You can provide your custom files to watch and regenerate after changes. This feature is specially useful for using with [modules]((/docs/2.x/directory-structure/modules).
 
 - Type: `Array<String>`
 

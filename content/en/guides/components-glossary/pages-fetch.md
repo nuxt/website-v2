@@ -45,7 +45,7 @@ export default {
 }
 ```
 
-You can access the Nuxt [context](/docs/2.x/x/internals-glossary/context) within the fetch hook using `this.$nuxt.context`.
+You can access the Nuxt [context]((/docs/2.x/internals-glossary/context) within the fetch hook using `this.$nuxt.context`.
 
 ### Options
 

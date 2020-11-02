@@ -89,7 +89,7 @@ El _contexto_ al que nos referimos aquí no debe confundirse con el objeto `cont
 
 </base-alert>
 
-Aprende más sobre las diferentes claves del contexto in nuestro [Glosario Interno](/docs/2.x/x/internals-glossary/context)
+Aprende más sobre las diferentes claves del contexto in nuestro [Glosario Interno]((/docs/2.x/internals-glossary/context)
 
 ## Ejemplos
 

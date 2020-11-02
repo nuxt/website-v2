@@ -330,7 +330,7 @@ Esto causaría pérdida de memoria en el lado del servidor.
 
 ## La propiedad de extendPlugins
 
-Puedes extender los plugins on incluso cambiar el orden en el que los plugins se crean en Nuxt.js. Esta función recibe un arreglo de objetos de [plugin](/docs/2.x/x/configuration-glossary/configuration-plugins) y debe retornar un arreglo de objetos de plugins.
+Puedes extender los plugins on incluso cambiar el orden en el que los plugins se crean en Nuxt.js. Esta función recibe un arreglo de objetos de [plugin]((/docs/2.x/configuration-glossary/configuration-plugins) y debe retornar un arreglo de objetos de plugins.
 
 Ejemplo de cómo se cambia el orden de plugins:
 

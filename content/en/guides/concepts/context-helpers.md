@@ -89,7 +89,7 @@ The _context_ we refer to here is not to be confused with the `context` object
 
 </base-alert>
 
-Learn more about the different context keys in our [Internals Glossary](/docs/2.x/x/internals-glossary/context)
+Learn more about the different context keys in our [Internals Glossary]((/docs/2.x/internals-glossary/context)
 
 ## Examples
 
@@ -154,7 +154,7 @@ export default {
 
 <base-alert type="next">
 
-Check out the Internals Glossary book for more examples of the [redirect method](/docs/2.x/x/internals-glossary/context#redirect)
+Check out the Internals Glossary book for more examples of the [redirect method]((/docs/2.x/internals-glossary/context#redirect)
 
 </base-alert>
 

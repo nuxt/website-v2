@@ -132,7 +132,7 @@ También tienes acceso a `this.$fetch()`, de gran ayuda si quieres llamar al hoo
 
 <base-alert type="info">
 
-Puedes acceder a Nuxt [context](/docs/2.x/x/concepts/context-helpers) dentro del hook fetch usando `this.$nuxt.context`.
+Puedes acceder a Nuxt [context]((/docs/2.x/concepts/context-helpers) dentro del hook fetch usando `this.$nuxt.context`.
 
 </base-alert>
 
@@ -229,13 +229,13 @@ La navegación a la misma page no llamara a `fetch` si la última llamada `fetch
 
 <base-alert>
 
-`asyncData` solamente está disponible para [paginas](/docs/2.x/x/directory-structure/pages) y no tienes acceso a `this` dentro de este hook.
+`asyncData` solamente está disponible para [paginas]((/docs/2.x/directory-structure/pages) y no tienes acceso a `this` dentro de este hook.
 
 </base-alert>
 
-La principal diferencia con `fetch` es que no tienes que manejar ningún estado pendiendo o de error. Nuxt va a esperar por el hook `asyncData` para ser terminado antes de navegar a la página siguiente o mostrar la [pagina de error](/docs/2.x/x/directory-structure/layouts#error-page))
+La principal diferencia con `fetch` es que no tienes que manejar ningún estado pendiendo o de error. Nuxt va a esperar por el hook `asyncData` para ser terminado antes de navegar a la página siguiente o mostrar la [pagina de error](<(/docs/2.x/directory-structure/layouts#error-page)>)
 
-Este hook recibe [el contexto](/docs/2.x/x/concepts/context-helpers) como primer argumento. Puedes usarlo para obtener algunos datos y Nuxt.js automáticamente combinara el objeto devuelto con los datos del componente.
+Este hook recibe [el contexto]((/docs/2.x/concepts/context-helpers) como primer argumento. Puedes usarlo para obtener algunos datos y Nuxt.js automáticamente combinara el objeto devuelto con los datos del componente.
 
 ```html{}[pages/index.vue]
 <template>
@@ -306,7 +306,7 @@ El método `asyncData` no es llamado en cambios de query por defecto. Si quiere
 
 <base-alert type="next">
 
-Lee mas acerca de la [propiedad watchQuery](/docs/2.x/x/components-glossary/pages-watchquery) y mira la lista de [llaves en context(/docs/2.x/2.x/concepts/context-helpers) disponibles.
+Lee mas acerca de la [propiedad watchQuery]((/docs/2.x/components-glossary/pages-watchquery) y mira la lista de [llaves en context(/docs/2.x/2.x/concepts/context-helpers) disponibles.
 
 </base-alert>
 

@@ -45,7 +45,7 @@ export default {
 }
 ```
 
-Puede acceder el [contexto](/docs/2.x/x/internals-glossary/context) de Nuxt dentro del hook de recuperación usando `this.$nuxt.context`.
+Puede acceder el [contexto]((/docs/2.x/internals-glossary/context) de Nuxt dentro del hook de recuperación usando `this.$nuxt.context`.
 
 ### Options
 

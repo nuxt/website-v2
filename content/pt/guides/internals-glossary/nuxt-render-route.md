@@ -51,6 +51,6 @@ start()
 
 <base-alert type="next">
 
-Confira o [livro Glossário de Componentes](/docs/2.x/x/components-glossary/pages-fetch)
+Confira o [livro Glossário de Componentes]((/docs/2.x/components-glossary/pages-fetch)
 
 </base-alert>

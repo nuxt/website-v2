@@ -33,9 +33,10 @@ export default {
   async asyncData({ $content, params, store, error, app }) {
     let path = `/${app.i18n.defaultLocale}/examples/`
     let page, prev, next, contributors, langFallback
+    const slug = params.slug || 'hello-world'
 
     try {
-      page = await $content(path, params.slug).fetch()
+      page = await $content(path, slug).fetch()
     } catch (err) {
       if (!err.response || err.response.status !== 404) {
         return error({

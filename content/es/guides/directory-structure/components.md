@@ -4,7 +4,7 @@ description: El directorio de componentes contiene los componentes de Vue.js. Lo
 position: 3
 category: directory-structure
 csb_link: https://codesandbox.io/embed/github/nuxt-academy/guides-examples/tree/master/04_directory_structure/03_components?fontsize=14&hidenavigation=1&theme=dark
-img: /guides/components.png
+img: /docs/2.x/components.png
 imgAlt: nuxt components module
 questions:
   - question:

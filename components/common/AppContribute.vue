@@ -27,22 +27,6 @@
           </span>
         </a>
       </div>
-      <BaseAlert
-        v-if="
-          !$route.path.startsWith('/guides') && !$route.path.startsWith('/blog')
-        "
-        type="warning"
-        class="my-4"
-      >
-        {{ $t('contribute.msg1') }}
-        <NuxtLink
-          class="text-nuxt-lightgreen"
-          to="/guides/get-started/installation"
-        >
-          {{ $t('contribute.link') }}
-        </NuxtLink>
-        {{ $t('tryNewDocs.msg2') }}
-      </BaseAlert>
       <p
         v-if="docLink && $route.params.book"
         class="text-light-onSurfaceSecondary dark:text-dark-onSurfaceSecondary pt-1 mb-8 transition-colors duration-300 ease-linear"

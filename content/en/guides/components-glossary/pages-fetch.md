@@ -12,7 +12,7 @@ Nuxt.js `v2.12` introduces a new hook called `fetch` **in any of your Vue compon
 
 <base-alert>
 
-`fetch(context)` has been deprecated, instead you can use an [anonymous middleware](/guides/components-glossary/pages-middleware#anonymous-middleware) in your page: `middleware(context)`
+`fetch(context)` has been deprecated, instead you can use an [anonymous middleware](/docs/2.x/components-glossary/pages-middleware#anonymous-middleware) in your page: `middleware(context)`
 
 </base-alert>
 
@@ -45,7 +45,7 @@ export default {
 }
 ```
 
-You can access the Nuxt [context](/guides/internals-glossary/context) within the fetch hook using `this.$nuxt.context`.
+You can access the Nuxt [context](/docs/2.x/internals-glossary/context) within the fetch hook using `this.$nuxt.context`.
 
 ### Options
 

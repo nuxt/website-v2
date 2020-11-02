@@ -76,7 +76,7 @@ Nuxt.js oferece code splitting automático para suas rotas, nenhuma configuraç�
 
 <base-alert type="info">
 
-Use o [componente NuxtLink](/guides/features/nuxt-components#the-nuxtlink-component) para navegar entre páginas
+Use o [componente NuxtLink](/docs/2.x/features/nuxt-components#the-nuxtlink-component) para navegar entre páginas
 
 </base-alert>
 
@@ -181,7 +181,7 @@ A partir do Nuxt >= v2.13, há um rastreador (crawler) instalado que rastreará 
 
 <base-alert type="next">
 
-[Gerar rotas dinâmicas](/guides/concepts/static-site-generation) para sites estáticos
+[Gerar rotas dinâmicas](/docs/2.x/concepts/static-site-generation) para sites estáticos
 
 </base-alert>
 
@@ -195,7 +195,7 @@ O Nuxt.js permite criar rotas aninhadas usando as rotas filhas do vue-router. Pa
 
 <base-alert>
 
-Não esqueça de incluir o [componente NuxtChild](/guides/features/nuxt-components#the-nuxtchild-component) dentro do componente pai (arquivo `.vue`).
+Não esqueça de incluir o [componente NuxtChild](/docs/2.x/features/nuxt-components#the-nuxtchild-component) dentro do componente pai (arquivo `.vue`).
 
 </base-alert>
 
@@ -331,7 +331,7 @@ Existem várias maneiras de estender o router com Nuxt:
 
 - [router-extras-module](https://github.com/nuxt-community/router-extras-module) personalizar os parâmetros da rota na página
 - componente [@nuxtjs/router](https://github.com/nuxt-community/router-module) para sobrescrever o router do Nuxt e escrever seu próprio arquivo `router.js`
-- Usar a propriedade [router.extendRoutes](/guides/configuration-glossary/configuration-router#extendroutes) no seu `nuxt.config.js`
+- Usar a propriedade [router.extendRoutes](/docs/2.x/configuration-glossary/configuration-router#extendroutes) no seu `nuxt.config.js`
 
 ## A Propriedade router
 
@@ -351,7 +351,7 @@ O URL base da aplicação. Por exemplo, se todo a aplicação de página única 
 
 <base-alert type="next">
 
-[Propriedade Base do Router](/guides/configuration-glossary/configuration-router#base)
+[Propriedade Base do Router](/docs/2.x/configuration-glossary/configuration-router#base)
 
 </base-alert>
 
@@ -424,7 +424,7 @@ export default {
 
 <base-alert type="next">
 
-[A propriedade extendRoutes](/guides/configuration-glossary/configuration-router#extendroutes)
+[A propriedade extendRoutes](/docs/2.x/configuration-glossary/configuration-router#extendroutes)
 
 </base-alert>
 
@@ -434,7 +434,7 @@ Controla se o roteador deve retornar ao modo hash quando o navegador não oferec
 
 <base-alert type="next">
 
-[A Propriedade fallback](/guides/configuration-glossary/configuration-router#fallback)
+[A Propriedade fallback](/docs/2.x/configuration-glossary/configuration-router#fallback)
 
 </base-alert>
 
@@ -444,7 +444,7 @@ Configure o mode do router, não é recomendado alterá-lo devido à renderizaç
 
 <base-alert type="next">
 
-[A Propriedade mode](/guides/configuration-glossary/configuration-router#mode)
+[A Propriedade mode](/docs/2.x/configuration-glossary/configuration-router#mode)
 
 </base-alert>
 
@@ -454,7 +454,7 @@ Fornece funções personalizadas para fazer o parse / stringify a consulta.
 
 <base-alert type="next">
 
-[As propriedades parseQuery / stringifyQuery](/guides/configuration-glossary/configuration-router#parsequery--stringifyquery)
+[As propriedades parseQuery / stringifyQuery](/docs/2.x/configuration-glossary/configuration-router#parsequery--stringifyquery)
 
 </base-alert>
 
@@ -500,7 +500,7 @@ export default function (to, from, savedPosition) {
 
 <base-alert type="next">
 
-[A propriedade scrollBehavior](/guides/configuration-glossary/configuration-router#scrollbehavior)
+[A propriedade scrollBehavior](/docs/2.x/configuration-glossary/configuration-router#scrollbehavior)
 
 </base-alert>
 
@@ -526,7 +526,7 @@ Esta opção não deve ser definida sem preparação e deve ser testada exaustiv
 
 <base-alert type="next">
 
-[A Propriedade trailingSlash](/guides/configuration-glossary/configuration-router#trailingslash)
+[A Propriedade trailingSlash](/docs/2.x/configuration-glossary/configuration-router#trailingslash)
 
 </base-alert>
 

@@ -75,13 +75,13 @@ Check out the [Concepts book](../concepts/views)
 
 <base-alert type="next">
 
-Working with [asyncData](/guides/features/data-fetching#async-data)
+Working with [asyncData](/docs/2.x/features/data-fetching#async-data)
 
 </base-alert>
 
 <base-alert type="next">
 
-Choosing between different [Rendering modes](/guides/features/rendering-modes)
+Choosing between different [Rendering modes](/docs/2.x/features/rendering-modes)
 
 </base-alert>
 

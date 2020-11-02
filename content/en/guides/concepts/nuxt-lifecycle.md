@@ -141,7 +141,7 @@ Same as for the _client_ part, everything is happening in the browser but only w
 
 <base-alert type="info">
 
-Check out the component chapter to see more info on [`<NuxtLink>`](/guides/features/nuxt-components#the-nuxtlink-component)
+Check out the component chapter to see more info on [`<NuxtLink>`](/docs/2.x/features/nuxt-components#the-nuxtlink-component)
 
 </base-alert>
 
@@ -159,7 +159,7 @@ Check out the component chapter to see more info on [`<NuxtLink>`](/guides/featu
 
 <base-alert type="next">
 
-Check out the [Features book](/guides/features/rendering-modes)
+Check out the [Features book](/docs/2.x/features/rendering-modes)
 
 </base-alert>
 

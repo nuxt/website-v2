@@ -26,4 +26,4 @@ Secara default, Nuxt.js menggulir ke atas saat Anda pergi ke halaman lain, tetap
 
 Sebaliknya, Anda juga dapat menyetel `scrollToTop` ke nilai `false` secara manual pada route induk.
 
-Jika Anda ingin menimpa perilaku scroll default Nuxt.js, lihat file [opsi scrollBehavior](/guides/configuration-glossary/configuration-router#scrollbehavior).
+Jika Anda ingin menimpa perilaku scroll default Nuxt.js, lihat file [opsi scrollBehavior](/docs/2.x/configuration-glossary/configuration-router#scrollbehavior).

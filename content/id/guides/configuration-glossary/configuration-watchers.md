@@ -38,6 +38,6 @@ Anda dapat mempelajari lebih lanjut tentang watchoptions milik webpack melalui [
 
 <base-alert type="next">
 
-Anda dapat membaca [buku glosarium internal](/guides/internals-glossary/$nuxt)
+Anda dapat membaca [buku glosarium internal](/docs/2.x/internals-glossary/$nuxt)
 
 </base-alert>

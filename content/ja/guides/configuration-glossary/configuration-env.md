@@ -27,7 +27,7 @@ export default {
 そして `baseUrl` 変数にアクセスするには 2 つの方法があります:
 
 1. `process.env.baseUrl` 経由でアクセスする。
-2. `context.env.baseUrl` 経由でアクセスする。詳細は [context API](/guides/internals-glossary/context) を参照してください。
+2. `context.env.baseUrl` 経由でアクセスする。詳細は [context API](/docs/2.x/internals-glossary/context) を参照してください。
 
 例えば `env` プロパティを使って公開トークンを付与できます。
 
@@ -67,4 +67,4 @@ if ('testing123' == 'testing123')
 
 ## serverMiddleware
 
-[serverMiddleware](/guides/configuration-glossary/configuration-servermiddleware) はメインの Nuxt ビルドから分離されているので、`nuxt.config.js` に定義された `env` 変数は使用できません。
+[serverMiddleware](/docs/2.x/configuration-glossary/configuration-servermiddleware) はメインの Nuxt ビルドから分離されているので、`nuxt.config.js` に定義された `env` 変数は使用できません。

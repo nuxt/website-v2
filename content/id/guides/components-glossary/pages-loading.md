@@ -12,7 +12,7 @@ position: 0
 
 Secara default, Nuxt.js menggunakan komponennya sendiri untuk menampilkan bilah kemajuan di antara rute.
 
-Anda dapat menonaktifkan atau menyesuaikannya secara global melalui [Opsi konfigurasi loading](/guides/configuration-glossary/configuration-loading), tetapi Anda juga bisa menonaktifkannya untuk halaman tertentu dengan menyetel properti `loading` dengan nilai `false`:
+Anda dapat menonaktifkan atau menyesuaikannya secara global melalui [Opsi konfigurasi loading](/docs/2.x/configuration-glossary/configuration-loading), tetapi Anda juga bisa menonaktifkannya untuk halaman tertentu dengan menyetel properti `loading` dengan nilai `false`:
 
 ```html
 <template>

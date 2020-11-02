@@ -26,4 +26,4 @@ De forma predeterminada, Nuxt.js se desplaza hacia la parte superior cuando va a
 
 Por el contrario, también puedes configurar manualmente `scrollToTop` en` false` en las rutas principales.
 
-Si deseas sobrescribir el comportamiento de desplazamiento predeterminado de Nuxt.js, revisa la [opción scrollBehavior](/guides/configuration-glossary/configuration-router#scrollbehavior).
+Si deseas sobrescribir el comportamiento de desplazamiento predeterminado de Nuxt.js, revisa la [opción scrollBehavior](/docs/2.x/configuration-glossary/configuration-router#scrollbehavior).

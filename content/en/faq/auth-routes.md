@@ -5,7 +5,7 @@ github: auth-routes
 csb_link: https://codesandbox.io/s/github/nuxt/nuxt.js/tree/dev/examples/auth-routes?fontsize=14&hidenavigation=1&theme=dark
 livedemo: https://nuxt-auth-routes.gomix.me
 liveedit: https://gomix.com/#!/project/nuxt-auth-routes
-category: developement
+category: development
 position: 302
 ---
 

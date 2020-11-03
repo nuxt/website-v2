@@ -4,7 +4,6 @@ description: Cada archivo (primer nivel) en la carpeta `layouts` creará un layo
 menu: Propiedad Layout
 category: components-glossary
 position: 0
-position: 0
 ---
 
 > Cada archivo (primer nivel) en la carpeta `layouts` creará un layout personalizado accesible con la propiedad layout en el componente de página.

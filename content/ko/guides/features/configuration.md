@@ -68,7 +68,7 @@ Nuxt.js를 사용하면 전역으로 설정하려는 CSS 파일/모듈/라이브
 
 <base-alert>
 
-`sass`를 사용하려면 `node-sass` 및 `sass-loader` 패키지를 설치했는지 확인하세요.
+`sass`를 사용하려면 `sass` 및 `sass-loader` 패키지를 설치했는지 확인하세요.
 
 </base-alert>
 
@@ -138,7 +138,7 @@ export default {
 
 ```bash
 yarn add -D pug pug-plain-loader
-yarn add -D node-sass sass-loader
+yarn add -D sass sass-loader fibers
 ```
 
   </code-block>
@@ -146,7 +146,7 @@ yarn add -D node-sass sass-loader
 
 ```bash
 npm install --save-dev pug pug-plain-loader
-npm install --save-dev node-sass sass-loader
+npm install --save-dev sass sass-loader fibers
 ```
 
   </code-block>
@@ -265,7 +265,7 @@ export default {
 
 ### 청크 설정 커스터마이징
 
-기본 객체를 다시 작성하지 않도록 [optimization configuration](/guides/configuration-glossary/configuration-build#optimization)을 조금 변경할 수 있습니다.
+기본 객체를 다시 작성하지 않도록 [optimization configuration](/docs/2.x/configuration-glossary/configuration-build#optimization)을 조금 변경할 수 있습니다.
 
 ```js{}[nuxt.config.js]
 export default {
@@ -376,7 +376,7 @@ axios-module은 `nuxt.config.js`에서 사용할 수 없습니다. axios를 가�
 
 <base-alert type="next">
 
-`nuxt.config.js`에는 훨씬 더 많은 사용자 정의 및 구성 옵션이 있습니다! [configuration glossary](/guides/configuration-glossary/configuration-build)에서 모든 키를 확인하세요.
+`nuxt.config.js`에는 훨씬 더 많은 사용자 정의 및 구성 옵션이 있습니다! [configuration glossary](/docs/2.x/configuration-glossary/configuration-build)에서 모든 키를 확인하세요.
 
 </base-alert>
 

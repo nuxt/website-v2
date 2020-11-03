@@ -74,7 +74,7 @@ Nuxt.js lets you define the CSS files/modules/libraries you want to set globally
 
 <base-alert>
 
-In case you want to use `sass` make sure that you have installed the `node-sass` and `sass-loader` packages.
+In case you want to use `sass` make sure that you have installed the `sass` and `sass-loader` packages.
 
 </base-alert>
 
@@ -128,9 +128,7 @@ Thanks to [Vue Loader](http://vue-loader.vuejs.org/en/configurations/pre-proces
 Example of our `pages/index.vue` using [Pug](https://github.com/pugjs/pug) and [Sass](http://sass-lang.com/):
 
 ```html{}[pages/index.vue]
-<template lang="pug">
-  h1.red Hello {{ name }}!
-</template>
+<template lang="pug"> h1.red Hello {{ name }}! </template>
 
 <style lang="scss">
   .red {
@@ -146,7 +144,7 @@ To use these pre-processors, we need to install their webpack loaders:
 
 ```bash
 yarn add -D pug pug-plain-loader
-yarn add -D node-sass sass-loader
+yarn add -D sass sass-loader fibers
 ```
 
   </code-block>
@@ -154,7 +152,7 @@ yarn add -D node-sass sass-loader
 
 ```bash
 npm install --save-dev pug pug-plain-loader
-npm install --save-dev node-sass sass-loader
+npm install --save-dev sass sass-loader fibers
 ```
 
   </code-block>
@@ -273,7 +271,7 @@ The `extend` method gets called twice - Once for the client bundle and the oth
 
 ### Customize chunks configuration
 
-You may want to tweak the [optimization configuration](/guides/configuration-glossary/configuration-build#optimization) a bit, avoiding a rewrite of the default object.
+You may want to tweak the [optimization configuration](/docs/2.x/configuration-glossary/configuration-build#optimization) a bit, avoiding a rewrite of the default object.
 
 ```js{}[nuxt.config.js]
 export default {
@@ -384,7 +382,7 @@ The axios-module cannot be used in `nuxt.config.js`. You will need to import axi
 
 <base-alert type="next">
 
-The `nuxt.config.js` has way more customization and configuration options! Check out all its keys in the [configuration glossary](/guides/configuration-glossary/configuration-build).
+The `nuxt.config.js` has way more customization and configuration options! Check out all its keys in the [configuration glossary](/docs/2.x/configuration-glossary/configuration-build).
 
 </base-alert>
 

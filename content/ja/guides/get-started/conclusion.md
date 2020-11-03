@@ -75,13 +75,13 @@ questions:
 
 <base-alert type="next">
 
-[asyncData](/guides/features/data-fetching#async-data) の操作
+[asyncData](/docs/2.x/features/data-fetching#async-data) の操作
 
 </base-alert>
 
 <base-alert type="next">
 
-異なる[レンダリングモード](/guides/features/rendering-modes)の選択
+異なる[レンダリングモード](/docs/2.x/features/rendering-modes)の選択
 
 </base-alert>
 

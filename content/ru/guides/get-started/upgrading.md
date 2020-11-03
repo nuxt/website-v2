@@ -7,7 +7,7 @@ category: get-started
 
 > Обновление Nuxt.js выполняется быстро, но требует больше усилий, чем обновление вашего package.json
 
-Если вы хотите использовать статический хостинг при обновлении Nuxt v2.14 - вам понадобится добавить [target:static](/guides/features/deployment-targets#static-hosting) в ваш nuxt.config.js для корректной работы команды `generate`.
+Если вы хотите использовать статический хостинг при обновлении Nuxt v2.14 - вам понадобится добавить [target:static](/docs/2.x/features/deployment-targets#static-hosting) в ваш nuxt.config.js для корректной работы команды `generate`.
 
 ```js{}[nuxt.config.js]
 export default {
@@ -24,9 +24,9 @@ export default {
 
 ## Yarn
 
-3. удалите файл `yarn.lock` 
-4. удалите папку `node_modules` 
-5. выполните команду `yarn` 
+3. удалите файл `yarn.lock`
+4. удалите папку `node_modules`
+5. выполните команду `yarn`
 6. После того как установка завершилась и вы прогнали все ваши тесты - рассмотрите возможность обновления и других зависимостей. Для этого можно использовать команду `yarn outdated`.
 
 ## NPM

@@ -79,16 +79,7 @@ export default {
 
   pwa: {
     manifest: {
-      name: 'NuxtJS',
-      start_url: '/',
-      icons: [
-        {
-          src: '/icon.png',
-          type: 'image/png',
-          sizes: '512x512',
-          purpose: 'any maskable'
-        }
-      ]
+      name: 'NuxtJS'
     }
   },
 
@@ -105,16 +96,6 @@ export default {
     }
   },
   css: ['~/assets/css/main.scss'],
-  hooks: {
-    'content:file:beforeInsert': item => {
-      const stats = require('reading-time')(item.text)
-
-      if (item.slug === '' && item.extension === '.md') {
-      }
-
-      item.readingTime = stats
-    }
-  },
   plugins: [
     '~/plugins/i18n',
     '~/plugins/directives',
@@ -123,7 +104,8 @@ export default {
     '~/plugins/ga.client.js',
     '~/plugins/adblock.client.js',
     '~/plugins/newsletter.client.js',
-    '~/plugins/vue-scrollactive'
+    '~/plugins/vue-scrollactive',
+    '~/plugins/contributors'
   ],
   env: {
     DEPLOY_PRIME_URL: process.env.DEPLOY_PRIME_URL || false,
@@ -235,5 +217,21 @@ export default {
     seo: false,
     lazy: true,
     langDir: 'i18n/'
+  },
+  hooks: {
+    'render:route'(url, result, context) {
+      result.html = result.html.replace(/ defer>/g, ' defer async>')
+    },
+    'generate:page': page => {
+      page.html = page.html.replace(/ defer>/g, ' defer async>')
+    },
+    'content:file:beforeInsert': item => {
+      const stats = require('reading-time')(item.text)
+
+      if (item.slug === '' && item.extension === '.md') {
+      }
+
+      item.readingTime = stats
+    }
   }
 }

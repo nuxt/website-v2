@@ -27,7 +27,7 @@ export default {
 
 Para saber a lista de opções que você pode dar ao `head`, dê uma olhada na [documentação do vue-meta](https://vue-meta.nuxtjs.org/api/#metainfo-properties).
 
-Você também pode usar o `head` como uma função em seus componentes para acessar os dados do componente através de `this` ([leia mais](/guides/components-glossary/pages-head)).
+Você também pode usar o `head` como uma função em seus componentes para acessar os dados do componente através de `this` ([leia mais](/docs/2.x/components-glossary/pages-head)).
 
 <base-alert type="info">
 

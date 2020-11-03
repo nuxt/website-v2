@@ -3,6 +3,7 @@ title: 'The fetch Method'
 description: The `fetch` method is used to fill the store before rendering the page, it's like the `asyncData` method except it doesn't set the component data.
 menu: Fetch Method
 category: components-glossary
+position: 0
 ---
 
 ## Nuxt >= 2.12
@@ -11,7 +12,7 @@ Nuxt.js `v2.12` introduces a new hook called `fetch` **in any of your Vue compon
 
 <base-alert>
 
-`fetch(context)` has been deprecated, instead you can use an [anonymous middleware](/guides/components-glossary/pages-middleware#anonymous-middleware) in your page: `middleware(context)`
+`fetch(context)` has been deprecated, instead you can use an [anonymous middleware](/docs/2.x/components-glossary/pages-middleware#anonymous-middleware) in your page: `middleware(context)`
 
 </base-alert>
 
@@ -44,7 +45,7 @@ export default {
 }
 ```
 
-You can access the Nuxt [context](/guides/internals-glossary/context) within the fetch hook using `this.$nuxt.context`.
+You can access the Nuxt [context](/docs/2.x/internals-glossary/context) within the fetch hook using `this.$nuxt.context`.
 
 ### Options
 

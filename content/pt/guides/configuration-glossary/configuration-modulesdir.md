@@ -9,7 +9,7 @@ position: 20
 - Tipo: `Array`
 - Padrão: `['node_modules']`
 
-> Usado para definir os diretórios dos módulos para resolução de caminhos, por exemplo: `resolveLoading`, `nodeExternals` e `postcss` do Webpack. O caminho de configuração é relativo a [options.rootDir](/guides/configuration-glossary/configuration-rootdir) (padrão: `process.cwd()`).
+> Usado para definir os diretórios dos módulos para resolução de caminhos, por exemplo: `resolveLoading`, `nodeExternals` e `postcss` do Webpack. O caminho de configuração é relativo a [options.rootDir](/docs/2.x/configuration-glossary/configuration-rootdir) (padrão: `process.cwd()`).
 
 ```js{}[nuxt.config.js]
 export default {

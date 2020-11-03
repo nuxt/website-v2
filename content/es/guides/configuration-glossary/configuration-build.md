@@ -156,7 +156,7 @@ La extensión se llama dos veces, una vez para el paquete del servidor y una vez
 
 <base-alert>
 
-**Advertencia:** Las llaves proporcionadas `isClient` e `isServer` son independientes de las llaves disponibles en [`context`](/guides/internals-glossary/context). **No** están obsoletas. No utilice `process.client` ni `process.server` aquí ya que son `undefined` a esté punto.
+**Advertencia:** Las llaves proporcionadas `isClient` e `isServer` son independientes de las llaves disponibles en [`context`](/docs/2.x/internals-glossary/context). **No** están obsoletas. No utilice `process.client` ni `process.server` aquí ya que son `undefined` a esté punto.
 
 </base-alert>
 
@@ -403,7 +403,7 @@ Configuración para el complemento [html-minifier](https://github.com/kangax/htm
 
 ### loaders.sass y loaders.scss
 
-> Mira la [documentación de Node Sass](https://github.com/sass/node-sass/blob/master/README.md#options) para todas las opciones disponibles de Sass. Note: `loaders.sass` es para [Sass Indented Syntax](http://sass-lang.com/documentation/file.INDENTED_SYNTAX.html)
+> Mira la [documentación de Sass](https://github.com/sass/dart-sass#javascript-api) para todas las opciones disponibles de Sass. Note: `loaders.sass` es para [Sass Indented Syntax](http://sass-lang.com/documentation/file.INDENTED_SYNTAX.html)
 
 ### loaders.vueStyle
 
@@ -666,7 +666,7 @@ Aquí no se pueden usar alises de rutas como (`~` and `@`), necesitas usar rutas
 
 ## templates
 
-> Nuxt.js le permite proporcionar sus propias plantillas que se procesarán según la configuración de Nuxt. Esta función es especialmente útil para usar con [módulos](/guides/directory-structure/modules).
+> Nuxt.js le permite proporcionar sus propias plantillas que se procesarán según la configuración de Nuxt. Esta función es especialmente útil para usar con [módulos](/docs/2.x/directory-structure/modules).
 
 - Tipo: `Array`
 
@@ -756,7 +756,7 @@ Comenzando con `v2.9.0`, también puedes usar una función para transpilar condi
 
 ## watch
 
-> Puede proporcionar sus archivos personalizados para verlos y regenerarlos después de los cambios. Esta característica es especialmente útil para usar con [módulos](/guides/directory-structure/modules).
+> Puede proporcionar sus archivos personalizados para verlos y regenerarlos después de los cambios. Esta característica es especialmente útil para usar con [módulos](/docs/2.x/directory-structure/modules).
 
 - Tipo: `Array<String>`
 

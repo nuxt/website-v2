@@ -3,6 +3,7 @@ title: 'متد fetch'
 description: متد `fetch` برای بارگزاری اطلاعات در store قبل از رندر شدن صفحه استفاده می شود. عملکردی مشابه `asyncData` دارد با تفاوت اینکه داده‌های کامپوننت را تنظیم نمی‌کند.
 menu: متد fetch
 category: components-glossary
+position: 0
 ---
 
 ## Nuxt >= 2.12
@@ -11,7 +12,7 @@ category: components-glossary
 
 <base-alert>
 
-متد `fetch(context)` منسوح شده است، به جای آن میتوانید از یک [میان افزار](/guides/components-glossary/pages-middleware#anonymous-middleware) در صفحات خود استفاده کنید: `middleware(context)`
+متد `fetch(context)` منسوح شده است، به جای آن میتوانید از یک [میان افزار](/docs/2.x/components-glossary/pages-middleware#anonymous-middleware) در صفحات خود استفاده کنید: `middleware(context)`
 
 </base-alert>
 
@@ -45,7 +46,7 @@ export default {
 }
 ```
 
-می‌توانید به [context](/guides/internals-glossary/context) فریم‌ورک Nuxt داخل هوک fetch با استفاده از `this.$nuxt.context` دسترسی داشته باشید.
+می‌توانید به [context](/docs/2.x/internals-glossary/context) فریم‌ورک Nuxt داخل هوک fetch با استفاده از `this.$nuxt.context` دسترسی داشته باشید.
 
 ### تنظیمات
 

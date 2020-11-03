@@ -3,6 +3,7 @@ title: 'ویژگی watchQuery'
 description: بر رشته‌های پرس‌و‌جو (query strings) نظارت کنید و در صورت تغییر آن‌ها متدهای کامپوننت را اجرا کنید (asyncData, fetch(context), validate, layout, ...).
 menu: ویژگی watchQuery
 category: components-glossary
+position: 0
 ---
 
 > بر رشته‌های پرس‌و‌جو (query strings) نظارت کنید و در صورت تغییر آن‌ها متدهای کامپوننت را اجرا کنید (asyncData, fetch(context), validate, layout, ...).
@@ -33,6 +34,6 @@ export default {
 
 <base-alert>
 
-**هشدار:** `watchQuery` بر روی متد جدید `fetch` که در نسخه ۲.۱۲ اضافه شده است تاثیری ندارد. برای اطلاعات بیشتر به [نظاره بر تغییرات رشته پرس‌و‌جو](/guides/features/data-fetching#the-fetch-hook) مراجعه کنید.
+**هشدار:** `watchQuery` بر روی متد جدید `fetch` که در نسخه ۲.۱۲ اضافه شده است تاثیری ندارد. برای اطلاعات بیشتر به [نظاره بر تغییرات رشته پرس‌و‌جو](/docs/2.x/features/data-fetching#the-fetch-hook) مراجعه کنید.
 
 </base-alert>

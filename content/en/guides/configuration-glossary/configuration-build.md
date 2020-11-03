@@ -156,7 +156,7 @@ The extend is called twice, one time for the server bundle, and one time for the
 
 <base-alert>
 
-**Warning:** The `isClient` and `isServer` keys provided in are separate from the keys available in [`context`](/guides/internals-glossary/context). They are **not** deprecated. Do not use `process.client` and `process.server` here as they are `undefined` at this point.
+**Warning:** The `isClient` and `isServer` keys provided in are separate from the keys available in [`context`](/docs/2.x/internals-glossary/context). They are **not** deprecated. Do not use `process.client` and `process.server` here as they are `undefined` at this point.
 
 </base-alert>
 
@@ -403,7 +403,7 @@ Configuration for the [html-minifier](https://github.com/kangax/html-minifier) p
 
 ### loaders.sass and loaders.scss
 
-> See the [Node Sass documentation](https://github.com/sass/node-sass/blob/master/README.md#options) for all available Sass options. Note: `loaders.sass` is for [Sass Indented Syntax](http://sass-lang.com/documentation/file.INDENTED_SYNTAX.html)
+> See the [Sass documentation](https://github.com/sass/dart-sass#javascript-api) for all available Sass options. Note: `loaders.sass` is for [Sass Indented Syntax](http://sass-lang.com/documentation/file.INDENTED_SYNTAX.html)
 
 ### loaders.vueStyle
 
@@ -666,7 +666,7 @@ You cannot use path aliases here (`~` and `@`), you need to use relative or abso
 
 ## templates
 
-> Nuxt.js allows you provide your own templates which will be rendered based on Nuxt configuration. This feature is specially useful for using with [modules](/guides/directory-structure/modules).
+> Nuxt.js allows you provide your own templates which will be rendered based on Nuxt configuration. This feature is specially useful for using with [modules](/docs/2.x/directory-structure/modules).
 
 - Type: `Array`
 
@@ -756,7 +756,7 @@ Starting with `v2.9.0`, you can also use a function to conditionally transpile, 
 
 ## watch
 
-> You can provide your custom files to watch and regenerate after changes. This feature is specially useful for using with [modules](/guides/directory-structure/modules).
+> You can provide your custom files to watch and regenerate after changes. This feature is specially useful for using with [modules](/docs/2.x/directory-structure/modules).
 
 - Type: `Array<String>`
 

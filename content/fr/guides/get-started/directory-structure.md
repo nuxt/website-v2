@@ -27,11 +27,11 @@ La création de répertoires avec ces noms active les fonctionnalités de votre 
 
 ### Le répertoire pages
 
-Le répertoire `pages` contient les vues et les routes de votre application. Comme vous l'avez appris dans [l'étape précédente](/guides/get-started/routing), Nuxt.js lit tous les fichiers `.vue` dans ce répertoire et les utilise pour créer le routeur de l'application.
+Le répertoire `pages` contient les vues et les routes de votre application. Comme vous l'avez appris dans [l'étape précédente](/docs/2.x/get-started/routing), Nuxt.js lit tous les fichiers `.vue` dans ce répertoire et les utilise pour créer le routeur de l'application.
 
 <base-alert type="next">
 
-En savoir plus sur le [répertoire pages](/guides/directory-structure/pages)
+En savoir plus sur le [répertoire pages](/docs/2.x/directory-structure/pages)
 
 </base-alert>
 
@@ -43,7 +43,7 @@ Avec Nuxt.js, vous pouvez créer vos composants et les importer automatiquement 
 
 <base-alert type="next">
 
-En savoir plus sur le [répertoire des composants](/guides/directory-structure/components)
+En savoir plus sur le [répertoire des composants](/docs/2.x/directory-structure/components)
 
 </base-alert>
 
@@ -53,7 +53,7 @@ Le répertoire `assets` contient vos fichiers non compilés tels que vos styles,
 
 <base-alert type="next">
 
-En savoir plus sur le [répertoire assets](/guides/directory-structure/assets)
+En savoir plus sur le [répertoire assets](/docs/2.x/directory-structure/assets)
 
 </base-alert>
 
@@ -63,7 +63,7 @@ Le répertoire `static` est directement servi à la racine du serveur et contien
 
 <base-alert type="next">
 
-En savoir plus sur le [répertoire static](/guides/directory-structure/static)
+En savoir plus sur le [répertoire static](/docs/2.x/directory-structure/static)
 
 </base-alert>
 
@@ -73,7 +73,7 @@ Le fichier `nuxt.config.js` est le point unique de configuration pour Nuxt.js. S
 
 <base-alert type="next">
 
-En savoir plus sur le [fichier nuxt.config.js](/guides/directory-structure/nuxt-config)
+En savoir plus sur le [fichier nuxt.config.js](/docs/2.x/directory-structure/nuxt-config)
 
 </base-alert>
 
@@ -87,10 +87,10 @@ Le fichier `package.json` contient toutes les dépendances et scripts de votre a
 
 ## En savoir plus sur la structure du projet
 
-Il existe d'autres répertoires et fichiers utiles, comme [content](/guides/directory-structure/content), [layouts](/guides/directory-structure/layouts), [middleware](/guides/directory-structure/middleware), [modules](/guides/directory-structure/modules), [plugins](/guides/directory-structure/plugins) et [store](/guides/directory-structure/store). Comme ils ne sont pas nécessaires pour les petites applications, ils ne sont pas traités ici.
+Il existe d'autres répertoires et fichiers utiles, comme [content](/docs/2.x/directory-structure/content), [layouts](/docs/2.x/directory-structure/layouts), [middleware](/docs/2.x/directory-structure/middleware), [modules](/docs/2.x/directory-structure/modules), [plugins](/docs/2.x/directory-structure/plugins) et [store](/docs/2.x/directory-structure/store). Comme ils ne sont pas nécessaires pour les petites applications, ils ne sont pas traités ici.
 
 <base-alert type="next">
 
-Pour en savoir plus sur tous les répertoires en détail, n'hésitez pas à lire le [guide sur la structure des répertoires](/guides/directory-structure/nuxt).
+Pour en savoir plus sur tous les répertoires en détail, n'hésitez pas à lire le [guide sur la structure des répertoires](/docs/2.x/directory-structure/nuxt).
 
 </base-alert>

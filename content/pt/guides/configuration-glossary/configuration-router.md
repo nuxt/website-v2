@@ -17,7 +17,7 @@ A URL base da aplicação. Por exemplo, se todo a aplicação de página única 
 
 Isso pode ser útil se você precisar servir o Nuxt com uma raiz de contexto diferente, em um site maior. Observe que você pode ou não configurar um Servidor Web Proxy Frontal.
 
-Se você quiser ter um redirecionamento para `router.base`, você pode fazer isso [usando um hook. Consulte _Redirecionar para router.base quando não estiver em root_](/guides/configuration-glossary/configuration-hooks#redirect-to-routerbase-when-not-on-root).
+Se você quiser ter um redirecionamento para `router.base`, você pode fazer isso [usando um hook. Consulte _Redirecionar para router.base quando não estiver em root_](/docs/2.x/configuration-glossary/configuration-hooks#redirect-to-routerbase-when-not-on-root).
 
 ```js{}[nuxt.config.js]
 export Padrão {
@@ -129,7 +129,7 @@ Definir isso como falso, essencialmente, torna cada navegação do router-link u
 - Tipo: `String`
 - Padrão: `'nuxt-link-active'`
 
-Configure globalmente a classe active padrão [`<nuxt-link>`](/guides/features/nuxt-components#the-nuxtlink-component).
+Configure globalmente a classe active padrão [`<nuxt-link>`](/docs/2.x/features/nuxt-components#the-nuxtlink-component).
 
 ```js{}[nuxt.config.js]
 export Padrão {
@@ -146,7 +146,7 @@ export Padrão {
 - Tipo: `String`
 - Padrão: `'nuxt-link-exact-active'`
 
-Configure globalmente a classe exact ative padrão do [`<nuxt-link>`](/guides/features/nuxt-components#the-nuxtlink-component).
+Configure globalmente a classe exact ative padrão do [`<nuxt-link>`](/docs/2.x/features/nuxt-components#the-nuxtlink-component).
 
 ```js{}[nuxt.config.js]
 export Padrão {
@@ -163,7 +163,7 @@ export Padrão {
 - Tipo: `String`
 - Padrão: `false`
 
-Configure globalmente a classe prefetch padrão do [`<nuxt-link>`](/guides/features/nuxt-components#the-nuxtlink-component) (recurso desabilitado por padrão).
+Configure globalmente a classe prefetch padrão do [`<nuxt-link>`](/docs/2.x/features/nuxt-components#the-nuxtlink-component) (recurso desabilitado por padrão).
 
 ```js{}[nuxt.config.js]
 export Padrão {
@@ -198,7 +198,7 @@ export Padrão function (context) {
 }
 ```
 
-Para saber mais sobre o middleware, consulte o [guia de middleware](/guides/directory-structure/middleware#router-middleware).
+Para saber mais sobre o middleware, consulte o [guia de middleware](/docs/2.x/directory-structure/middleware#router-middleware).
 
 ## mode
 
@@ -282,7 +282,7 @@ Desde o Nuxt.js v2.10.0, se você definiu `prefetchLinks` como `false`, mas dese
 
 ## prefetchPayloads
 
-> Adicionado com v2.13.0, disponível apenas para [target static](/guides/features/deployment-targets#static-hosting).
+> Adicionado com v2.13.0, disponível apenas para [target static](/docs/2.x/features/deployment-targets#static-hosting).
 
 - Tipo: `Boolean`
 - Padrão: `true`

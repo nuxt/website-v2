@@ -3,6 +3,7 @@ title: 'O método fetch'
 description: O método `fetch` é usado para popular a store antes de renderizar a página. É como o método `asyncData`, exceto que não define os dados do componente.
 menu: Fetch Method
 category: components-glossary
+position: 0
 ---
 
 ## Nuxt >= 2.12
@@ -11,7 +12,7 @@ Nuxt.js `v2.12` introduz um novo hook chamado `fetch` **em qualquer um dos seus 
 
 <base-alert>
 
-`fetch(contexto)` tornou-se obsoleto, em vez disso você pode usar um [middleware anônimo](/guides/components-glossary/pages-middleware#anonymous-middleware) em sua página: `middleware(contexto)`
+`fetch(contexto)` tornou-se obsoleto, em vez disso você pode usar um [middleware anônimo](/docs/2.x/components-glossary/pages-middleware#anonymous-middleware) em sua página: `middleware(contexto)`
 
 </base-alert>
 
@@ -44,7 +45,7 @@ export default {
 }
 ```
 
-Você pode acessar o [contexto](/guides/internals-glossary/context) do Nuxt dentro do hook fetch usando `this.$nuxt.context`.
+Você pode acessar o [contexto](/docs/2.x/internals-glossary/context) do Nuxt dentro do hook fetch usando `this.$nuxt.context`.
 
 ### Opções
 

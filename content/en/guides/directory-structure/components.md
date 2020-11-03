@@ -4,7 +4,7 @@ description: The components directory contains your Vue.js Components. Component
 position: 3
 category: directory-structure
 csb_link: https://codesandbox.io/embed/github/nuxt-academy/guides-examples/tree/master/04_directory_structure/03_components?fontsize=14&hidenavigation=1&theme=dark
-img: /guides/components.png
+img: /docs/2.x/components.png
 imgAlt: nuxt components module
 questions:
   - question:
@@ -37,7 +37,7 @@ The components directory contains your Vue.js components. Components are what ma
 
 ### Fetching Data
 
-To access asynchronous data from an API in your components you can use Nuxt [`fetch()` hook](/guides/features/data-fetching#the-fetch-method).
+To access asynchronous data from an API in your components you can use Nuxt [`fetch()` hook](/docs/2.x/features/data-fetching#the-fetch-method).
 
 Using `$fetchState.pending` we can show a message when the data is waiting to be loaded and using `$fetchState.error` we can show an error message if there is an error fetching the data. When using fetch we must declare the data in the data property. This then gets filled with the data that comes from the fetch.
 
@@ -71,7 +71,7 @@ Using `$fetchState.pending` we can show a message when the data is waiting to be
 
 <base-alert type="next">
 
-See the chapter on [fetch()](/guides/features/data-fetching#the-fetch-method) for more details on how fetch works
+See the chapter on [fetch()](/docs/2.x/features/data-fetching#the-fetch-method) for more details on how fetch works
 
 </base-alert>
 

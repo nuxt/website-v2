@@ -27,19 +27,17 @@
         </h3>
       </div>
       <div class="hidden lg:block lg:w-5/12 xl:w-4/12">
-        <MountainsGlobeIllustration />
+        <IllustrationMountainsGlobe/>
       </div>
     </AppContainer>
   </div>
 </template>
 
 <script>
-import MountainsGlobeIllustration from '~/components/animated-svg/montains-globe'
 import LostImageIllustration from '~/assets/illustrations/404.svg?inline'
 
 export default {
   components: {
-    MountainsGlobeIllustration,
     LostImageIllustration
   },
   props: {

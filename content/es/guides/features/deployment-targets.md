@@ -11,7 +11,7 @@ Con alojamiento estático, alojamiento donde no se necesita un servidor o donde 
 
 ### SPA
 
-Las SPAs son páginas que se renderizan solo en el lado del cliente sin necesidad de un servidor. Para desplegar sin soporte a renderizado server-side (solo SPA) configura [ssr a `false`](/guides/features/rendering-modes#spa) y usa el comando `build` para construir tu aplicación.
+Las SPAs son páginas que se renderizan solo en el lado del cliente sin necesidad de un servidor. Para desplegar sin soporte a renderizado server-side (solo SPA) configura [ssr a `false`](/docs/2.x/features/rendering-modes#spa) y usa el comando `build` para construir tu aplicación.
 
 ```js{}[nuxt.config.js]
 export default {
@@ -25,7 +25,7 @@ Como Nuxt.js también funciona como un generador de sitios estáticos, puedes ge
 
 <base-alert type="info">
 
-Las rutas dinámicas también se generan gracias al [Nuxt Crawler](/guides/configuration-glossary/configuration-generate#crawler)
+Las rutas dinámicas también se generan gracias al [Nuxt Crawler](/docs/2.x/configuration-glossary/configuration-generate#crawler)
 
 </base-alert>
   
@@ -52,7 +52,7 @@ Tambien estamos exponiendo `process.target`para que los autores de módulos pued
 
 ## Alojamiento en servidor
 
-El alojamiento en servidor es un alojamiento que necesita un servidor y que está destinado a aplicaciones con SSR o aplicaciones que usan [serverMiddleware](/guides/configuration-glossary/configuration-servermiddleware). El renderizado en el lado del servidor, también conocido como SSR (Server-Side Rendering) significa que tu página se renderiza en el servidor cuando la solicita el usuario. Cuando el usuario abre tu página en un navegador, el navegador envía una petición al servidor solicitando esa página. La página se renderizará en el servidor y se enviará de vuelta al navegador con todo su contenido.
+El alojamiento en servidor es un alojamiento que necesita un servidor y que está destinado a aplicaciones con SSR o aplicaciones que usan [serverMiddleware](/docs/2.x/configuration-glossary/configuration-servermiddleware). El renderizado en el lado del servidor, también conocido como SSR (Server-Side Rendering) significa que tu página se renderiza en el servidor cuando la solicita el usuario. Cuando el usuario abre tu página en un navegador, el navegador envía una petición al servidor solicitando esa página. La página se renderizará en el servidor y se enviará de vuelta al navegador con todo su contenido.
 
 Para el alojamiento en servidor se utiliza el `target` `server`, que es el valor por defecto. Con SSR se utiliza el comando `build` para construir la aplicación.
 

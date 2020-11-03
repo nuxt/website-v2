@@ -217,7 +217,7 @@ export default {
 
 <base-alert type="next">
 
-[リソースヒント](/guides/configuration-glossary/configuration-render#resourcehints)
+[リソースヒント](/docs/2.x/configuration-glossary/configuration-render#resourcehints)
 
 </base-alert>
 

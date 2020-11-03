@@ -156,7 +156,7 @@ A extensão é chamada duas vezes, uma vez para o pacote do servidor e uma vez p
 
 <base-alert>
 
-**Aviso:** As propriedades `isClient` e `isServer` são separadas das propriedades disponíveis no [`contexto`](/guides/internals-glossary/context). Elas **não** estão obsoletos. Não use `process.client` e `process.server` aqui, pois serão `undefined`.
+**Aviso:** As propriedades `isClient` e `isServer` são separadas das propriedades disponíveis no [`contexto`](/docs/2.x/internals-glossary/context). Elas **não** estão obsoletos. Não use `process.client` e `process.server` aqui, pois serão `undefined`.
 
 </base-alert>
 
@@ -403,7 +403,7 @@ Configuração para o plugin [html-minifier](https://github.com/kangax/html-mini
 
 ### loaders.sass e loaders.scss
 
-> Veja a [documentação do Node Sass](https://github.com/sass/node-sass/blob/master/README.md#options) para todas as opções Sass disponíveis. Nota: `loaders.sass` é para [Sintaxe Indentada do Sass](http://sass-lang.com/documentation/file.INDENTED_SYNTAX.html)
+> Veja a [documentação do Sass](https://github.com/sass/dart-sass#javascript-api) para todas as opções Sass disponíveis. Nota: `loaders.sass` é para [Sintaxe Indentada do Sass](http://sass-lang.com/documentation/file.INDENTED_SYNTAX.html)
 
 ### loaders.vueStyle
 
@@ -666,7 +666,7 @@ Você não pode usar aliases de caminho aqui (`~` e `@`). Você precisa usar cam
 
 ## templates
 
-> O Nuxt.js permite que você forneça seus próprios templates que serão renderizados com base na configuração do Nuxt. Este recurso é especialmente útil para usar com [módulos](/guides/directory-structure/modules).
+> O Nuxt.js permite que você forneça seus próprios templates que serão renderizados com base na configuração do Nuxt. Este recurso é especialmente útil para usar com [módulos](/docs/2.x/directory-structure/modules).
 
 - Tipo: `Array`
 
@@ -756,7 +756,7 @@ A partir da versão `v2.9.0`, você também pode usar uma função para transpil
 
 ## watch
 
-> Você pode fornecer seus arquivos personalizados para observar e regenerar após as alterações. Este recurso é especialmente útil para usar com [módulos](/guides/directory-structure/modules).
+> Você pode fornecer seus arquivos personalizados para observar e regenerar após as alterações. Este recurso é especialmente útil para usar com [módulos](/docs/2.x/directory-structure/modules).
 
 - Tipo: `Array<String>`
 

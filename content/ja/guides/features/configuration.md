@@ -271,7 +271,7 @@ export default {
 
 ### チャンク設定をカスタマイズする
 
-デフォルトのオブジェクトを書き換えずに [最適化構成](/guides/configuration-glossary/configuration-build#optimization) を微調整することができます。
+デフォルトのオブジェクトを書き換えずに [最適化構成](/docs/2.x/configuration-glossary/configuration-build#optimization) を微調整することができます。
 
 ```js{}[nuxt.config.js]
 export default {
@@ -382,7 +382,7 @@ export default async () => {
 
 <base-alert type="next">
 
-`nuxt.config.js` には、カスタマイズや設定オプションがたくさんあります！[build の設定](/guides/configuration-glossary/configuration-build)ですべてのキーを確認しましょう。
+`nuxt.config.js` には、カスタマイズや設定オプションがたくさんあります！[build の設定](/docs/2.x/configuration-glossary/configuration-build)ですべてのキーを確認しましょう。
 
 </base-alert>
 

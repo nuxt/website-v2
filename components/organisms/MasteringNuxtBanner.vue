@@ -7,7 +7,7 @@
         <p><span class="font-bold"> LEARN NUXT.JS</span> - Register today for an Exclusive Offer.</p>
         <div class="flex items-center">
           <a
-            href="https://masteringnuxt.com?friend=nuxt&utm_source=Nuxtjs.org&utm_medium=Link&utm_content=Navbar&utm_content=prelaunch"
+            href="https://masteringnuxt.com/?utm_source=nuxt&utm_medium=link&utm_campaign=pre_launch"
             target="_blank"
             rel="noopener"
             class="bg-orange-500 hover:bg-nuxt-lightgreen text-white no-underline inline-block font-medium text-xs px-3 py-1 shadow uppercase rounded hover:shadow-md"

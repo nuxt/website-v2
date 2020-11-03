@@ -326,7 +326,7 @@ module.exports = {
         sponsorNuxt: 'Sponsoring & donations',
       },
       about: {
-        title: 'About',
+        title: 'Help',
         team: 'Our team',
         design: 'Design kit',
         contact: 'Contact us'

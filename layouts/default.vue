@@ -7,7 +7,7 @@
     >
       <Nuxt />
     </main>
-    <TheFooter />
+    <TheFooterCondensed />
     <TheMobileBottomNav />
     <TheCookieBox
       class="w-full fixed bottom-0 left-0 z-40 bg-light-elevatedSurface dark:bg-dark-elevatedSurface"

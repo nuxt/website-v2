@@ -2,7 +2,7 @@
   <footer
     class="bg-light-surface dark:bg-dark-surface shadow-nuxt transition-colors duration-300 ease-linear"
   >
-    <div class="container mx-auto px-6 lg:pt-8">
+    <div class="container mx-auto px-6 pt-6 lg:pt-8">
       <div class="pb-6 xl:grid xl:grid-cols-2 xl:gap-24">
         <div
           class="grid grid-cols-2 gap-6 sm:grid-cols-3 md:gap-16 lg:gap-48 xl:gap-4"

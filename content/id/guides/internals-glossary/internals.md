@@ -6,11 +6,9 @@ category: internals-glossary
 position: 3
 ---
 
-Nuxt.js memiliki arsitektur yang sepenuhnya modular yang membuka kesempatan bagi pengembang
-untuk memperluas bagian apapun dari Nuxt Core menggunakan sebuah API yang fleksibel.
+Nuxt.js memiliki arsitektur yang sepenuhnya modular yang membuka kesempatan bagi pengembang untuk memperluas bagian apapun dari Nuxt Core menggunakan sebuah API yang fleksibel.
 
-Anda dapat membaca [Panduan Modul](/guides/directory-structure/modules) untuk mempelajari lebih
-lanjut apabila Anda tertarik untuk mengembangkan modul Anda sendiri.
+Anda dapat membaca [Panduan Modul](/guides/directory-structure/modules) untuk mempelajari lebih lanjut apabila Anda tertarik untuk mengembangkan modul Anda sendiri.
 
 Dokumen ini membantu Anda untuk akrab dengan internal Nuxt dan dapat digunakan
 sebagai acuan ketika Anda mengemabngkan modul Anda sendiri.

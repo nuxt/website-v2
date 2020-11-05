@@ -246,7 +246,7 @@ export default {
 
 <base-alert type="next">
 
-詳細は[トランジション](/guides/features/transitions)ページを参照してください。
+詳細は[トランジション](/docs/2.x/features/transitions)ページを参照してください。
 
 </base-alert>
 
@@ -278,7 +278,7 @@ export default {
 
 <base-alert type="next">
 
-詳細は[ミドルウェア](/guides/directory-structure/middleware)を参照してください。
+詳細は[ミドルウェア](/docs/2.x/directory-structure/middleware)を参照してください。
 
 </base-alert>
 

@@ -113,7 +113,7 @@ questions:
 </script>
 ```
 
-`\_book` フォルダー内に `\_slug.vue` ファイルを作成した場合は、`context` の `params.slug` および `params.book` で値にアクセスできます。
+`/_book` フォルダー内に `/_slug.vue` ファイルを作成した場合は、`context` の `params.slug` および `params.book` で値にアクセスできます。
 
 ```html{}[pages/_book/_slug.vue]
 <template>

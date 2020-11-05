@@ -10,13 +10,11 @@ Nuxt.js memiliki arsitektur yang sepenuhnya modular yang membuka kesempatan bagi
 
 Anda dapat membaca [Panduan Modul](/guides/directory-structure/modules) untuk mempelajari lebih lanjut apabila Anda tertarik untuk mengembangkan modul Anda sendiri.
 
-Dokumen ini membantu Anda untuk akrab dengan internal Nuxt dan dapat digunakan
-sebagai acuan ketika Anda mengemabngkan modul Anda sendiri.
+Dokumen ini membantu Anda untuk akrab dengan internal Nuxt dan dapat digunakan sebagai acuan ketika Anda mengemabngkan modul Anda sendiri.
 
 ### Core
 
-Kelas-kelas berikut merupakan kelas utama dalam Nuxt dan tersedia baik
-pada saat waktu eksekusi maupun pada saat kode program dibangun.
+Kelas-kelas berikut merupakan kelas utama dalam Nuxt dan tersedia baik pada saat waktu eksekusi maupun pada saat kode program dibangun.
 
 #### Nuxt
 
@@ -35,8 +33,7 @@ pada saat waktu eksekusi maupun pada saat kode program dibangun.
 
 ### Build
 
-Kelas-kelas berikut hanya dibutuhkan pada saat pengembangan atau
-pada saat kode program dibangun.
+Kelas-kelas berikut hanya dibutuhkan pada saat pengembangan atau pada saat kode program dibangun.
 
 #### Builder
 
@@ -60,7 +57,7 @@ pada saat kode program dibangun.
 
 ## Pengemasan dan Penggunaan
 
-Nuxt mengekspor seluruh kelas secara umum. Untuk mengimpor kelas-kelas tersebut:
+Nuxt mengekspor seluruh kelas secara umum untuk mengimpor kelas-kelas tersebut:
 
 ```js
 import { Nuxt, Builder, Utils } from 'nuxt'
@@ -68,7 +65,7 @@ import { Nuxt, Builder, Utils } from 'nuxt'
 
 ## Pola-pola Umum
 
-Seluruh kelas Nuxt memiliki sebuah acuan pada objek dan konfigurasi `nuxt`, sehingga kita selalu mempunyai API yang konsisten pada seluruh kelas untuk mengakses `options` dan `nuxt`.
+Seluruh kelas Nuxt memiliki sebuah acuan pada objek dan konfigurasi `nuxt`, sehingga Anda selalu mempunyai API yang konsisten pada seluruh kelas untuk mengakses `options` dan `nuxt`.
 
 ```js
 class SebuahKelas {
@@ -84,8 +81,7 @@ class SebuahKelas {
 }
 ```
 
-Kelas merupakan hal yang _pluggable_ sehingga kelas harus mendaftarkan sebuah _plugin_ pada objek
-`nuxt` utama supaya dapat menambahkan _hooks_ tambahan.
+Kelas merupakan hal yang _pluggable_ sehingga kelas harus mendaftarkan sebuah _plugin_ pada objek `nuxt` utama supaya dapat menambahkan _hooks_ tambahan.
 
 ```js
 class KelasFoo {

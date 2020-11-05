@@ -174,7 +174,7 @@ export default {
 
 <base-alert type="next">
 
-`fetch` の詳細は [データの取得](/guides/features/data-fetching) ページを参照してください。
+`fetch` の詳細は[データの取得](/guides/features/data-fetching)ページを参照してください。
 
 </base-alert>
 

@@ -1,6 +1,6 @@
 ---
 title: 'Kelas Builder'
-description: Kelas `Builder` Nuxt
+description: Kelas Builder Nuxt
 menu: Builder
 category: internals-glossary
 position: 7
@@ -10,7 +10,7 @@ position: 7
 
 ## Hooks
 
-Kita dapat mendaftakan _hooks_ pada siklus hidup Nuxt tertentu.
+Kita dapat mendaftarkan _hooks_ pada siklus hidup Nuxt tertentu.
 
 ```js
 // Tambahkan hook ketika kode selesai dibuat

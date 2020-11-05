@@ -330,7 +330,7 @@ export default {
 
 ページを無視したい場合は、ファイルの先頭に `-` を付けると `router.js` ファイルに含まれなくなります。
 
-例えば、 `pages/-about.vue`は無視されます。
+例えば、`pages/-about.vue` は無視されます。
 
 <base-alert type="next">
 

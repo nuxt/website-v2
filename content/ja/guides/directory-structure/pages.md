@@ -135,8 +135,7 @@ questions:
 
 ### asyncData メソッド
 
-`asyncData` はコンポーネントをロードする前に毎回呼び出されます。これは非同期にすることができ、引数として `context` を受け取ります。
-asyncData の結果は data とマージされます。
+`asyncData` はコンポーネントをロードする前に毎回呼び出されます。これは非同期にすることができ、引数として `context` を受け取ります。asyncData の結果は data とマージされます。
 
 ```js{}[pages/index.vue]
 export default {

@@ -208,7 +208,7 @@ export default {
 
 <base-alert type="next">
 
-レイアウトの詳細は [レイアウトのドキュメント](/guides/concepts/views#layouts) を参照してください。
+レイアウトの詳細は[レイアウトのドキュメント](/guides/concepts/views#layouts)を参照してください。
 
 </base-alert>
 

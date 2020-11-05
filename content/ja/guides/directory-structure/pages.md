@@ -295,7 +295,7 @@ export default {
 
 <base-alert type="info">
 
-すべてのクエリ文字列に対して監視を設定したい場合は、watchQuery：true を設定してください。
+すべてのクエリ文字列に対して監視を設定したい場合は、`watchQuery: true` を設定してください。
 
 </base-alert>
 

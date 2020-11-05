@@ -180,7 +180,7 @@ export default {
 
 ### head メソッド
 
-現在のページの特定の `<meta>` タグを設定します。Nuxt.js は `vue-meta` を使用してアプリケーションのドキュメントヘッドとメタ属性を更新します。
+現在のページに特定の `<meta>` タグを設定します。Nuxt.js は `vue-meta` を使用してアプリケーションのドキュメントヘッドとメタ属性を更新します。
 
 ```js{}[pages/index.vue]
 export default {

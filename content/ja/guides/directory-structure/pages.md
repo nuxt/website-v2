@@ -148,7 +148,7 @@ export default {
 
 <base-alert type="next">
 
-`asyncData` の詳細は [データの取得](/guides/features/data-fetching#async-data) ページを参照してください。
+`asyncData` の詳細は[データの取得](/guides/features/data-fetching#async-data)ページを参照してください。
 
 </base-alert>
 

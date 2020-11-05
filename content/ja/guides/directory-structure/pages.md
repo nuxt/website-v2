@@ -285,7 +285,7 @@ export default {
 
 ### watchQuery プロパティ
 
-`watchQuery` キーを設定し、監視するクエリ文字列を設定します。定義した文字列が変更されると、すべてのコンポーネントメソッド (asyncData, fetch, validate, layout, ...) が呼ばれます。パフォーマンス向上のため、監視はデフォルトで無効になっています。
+`watchQuery` キーを設定し、監視するクエリ文字列を設定します。定義した文字列が変更されると、すべてのコンポーネントメソッド（asyncData、fetch、validate、layout、...）が呼ばれます。パフォーマンス向上のため、監視はデフォルトで無効になっています。
 
 ```js{}[pages/index.vue]
 export default {

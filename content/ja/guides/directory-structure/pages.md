@@ -1,6 +1,6 @@
 ---
 title: pages
-description: この `pages` ディレクトリには、アプリケーションのビューとルートが格納されています。 Nuxt.js はこのディレクトリ内のすべての `.vue` ファイルを読み込んで、ルーターの設定を自動的に作成します。
+description: この `pages` ディレクトリには、アプリケーションのビューとルートが格納されています。Nuxt.js はこのディレクトリ内のすべての `.vue` ファイルを読み込んで、ルーターの設定を自動的に作成します。
 position: 10
 category: directory-structure
 csb_link: https://codesandbox.io/embed/github/nuxt-academy/guides-examples/tree/master/04_directory_structure/11_pages?fontsize=14&hidenavigation=1&theme=dark

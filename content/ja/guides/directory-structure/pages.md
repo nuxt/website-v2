@@ -192,7 +192,7 @@ export default {
 
 <base-alert type="next">
 
-詳細は[メタタグと SEO](/guides/features/meta-tags-seo) ページを参照してください。
+詳細は[メタタグと SEO](/guides/features/meta-tags-seo)ページを参照してください。
 
 </base-alert>
 
@@ -224,13 +224,13 @@ export default {
 
 <base-alert type="info">
 
-nuxt.config.js で`loading`が設定されている場合のみ適用されます。
+nuxt.config.js で `loading` が設定されている場合のみ適用されます。
 
 </base-alert>
 
 <base-alert type="next">
 
-詳細は [ローディング](/guides/features/loading) ページを参照してください。
+詳細は[ローディング](/guides/features/loading)ページを参照してください。
 
 </base-alert>
 
@@ -246,7 +246,7 @@ export default {
 
 <base-alert type="next">
 
-詳細は [トランジション](/guides/features/transitions) ページを参照してください。
+詳細は[トランジション](/guides/features/transitions)ページを参照してください。
 
 </base-alert>
 
@@ -278,7 +278,7 @@ export default {
 
 <base-alert type="next">
 
-詳細は [ミドルウェア](/guides/directory-structure/middleware) を参照してください。
+詳細は[ミドルウェア](/guides/directory-structure/middleware)を参照してください。
 
 </base-alert>
 
@@ -318,7 +318,7 @@ export default {
 
 <base-alert type="next">
 
-詳細は [データの取得](/guides/features/data-fetching) ページを参照してください。
+詳細は[データの取得](/guides/features/data-fetching)ページを参照してください。
 
 </base-alert>
 
@@ -330,11 +330,11 @@ export default {
 
 ページを無視したい場合は、ファイルの先頭に `-` を付けると `router.js` ファイルに含まれなくなります。
 
-例えば、 `pages/-about.vue`は無視されます。
+例えば、`pages/-about.vue` は無視されます。
 
 <base-alert type="next">
 
-詳細は [ignore オプション](/guides/configuration-glossary/configuration-ignore)ページを参照してください。
+詳細は[ignore オプション](/guides/configuration-glossary/configuration-ignore)ページを参照してください。
 
 </base-alert>
 
@@ -353,7 +353,7 @@ export default {
 
 <base-alert type="next">
 
-詳細は [dir オプション](/guides/configuration-glossary/configuration-dir)ページを参照してください。
+詳細は[dir オプション](/guides/configuration-glossary/configuration-dir)ページを参照してください。
 
 </base-alert>
 

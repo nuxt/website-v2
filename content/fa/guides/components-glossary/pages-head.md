@@ -3,6 +3,7 @@ title: 'متد head'
 description: Nuxt.js از vue-meta برای بروزرسانی هدر و مولفه‌های HTML در اپلیکیشن شما استفاده می‌کند.
 menu: متد Head
 category: components-glossary
+position: 0
 ---
 
 > Nuxt.js از [vue-meta](https://github.com/nuxt/vue-meta) برای بروزرسانی هدر و مولفه‌های HTML در اپلیکیشن شما استفاده می‌کند.

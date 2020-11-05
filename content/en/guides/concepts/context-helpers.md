@@ -5,7 +5,7 @@ position: 2
 category: concepts
 csb_link_context: https://codesandbox.io/embed/github/nuxt-academy/guides-examples/tree/master/02_concepts/02_context_helpers-context?fontsize=14&hidenavigation=1&theme=dark
 csb_link_helpers: https://codesandbox.io/embed/github/nuxt-academy/guides-examples/tree/master/02_concepts/02_context_helpers-helpers?fontsize=14&hidenavigation=1&theme=dark
-img: /guides/context.svg
+img: /docs/2.x/context.svg
 imgAlt: nuxt-js-context-keys
 questions:
   - question: What is the reason the context exists?
@@ -48,7 +48,7 @@ questions:
 
 <app-modal :src="img" :alt="imgAlt"></app-modal>
 
-The `context` object is available in specific Nuxt functions like [asyncData](/guides/features/data-fetching#async-data), [plugins](/guides/directory-structure/plugins), [middleware](/guides/directory-structure/middleware) and [nuxtServerInit](/guides/directory-structure/store#the-nuxtserverinit-action). It provides _additional_ and often optional information about the current request to the application.
+The `context` object is available in specific Nuxt functions like [asyncData](/docs/2.x/features/data-fetching#async-data), [plugins](/docs/2.x/directory-structure/plugins), [middleware](/docs/2.x/directory-structure/middleware) and [nuxtServerInit](/docs/2.x/directory-structure/store#the-nuxtserverinit-action). It provides _additional_ and often optional information about the current request to the application.
 
 First and foremost, the context is used to provide access to other parts of the Nuxt.js application, e.g. the Vuex store or the underlying `connect` instance. Thus, we have the `req` and `res` objects in the context available on the server side and `store` always available. But with time, the context was extended with many other helpful variables and shortcuts. Now we have access to HMR functionalities in `development` mode, the current `route`, page `params` and `query`, as well as the option to access environment variables through the context. Furthermore, module functions and helpers can be exposed through the context to be available on both - the client and the server side.
 
@@ -89,7 +89,7 @@ The _context_ we refer to here is not to be confused with the `context` object
 
 </base-alert>
 
-Learn more about the different context keys in our [Internals Glossary](/guides/internals-glossary/context)
+Learn more about the different context keys in our [Internals Glossary](/docs/2.x/internals-glossary/context)
 
 ## Examples
 
@@ -109,8 +109,8 @@ export default {
         `https://api.nuxtjs.dev/posts/${id}`
       )
       return { post }
-    } catch (error) {
-      context.error(error) // Show the nuxt error page with the thrown error
+    } catch (e) {
+      context.error(e) // Show the nuxt error page with the thrown error
     }
   }
 }
@@ -127,8 +127,8 @@ export default {
       // Using the nuxtjs/http module here exposed via context.app
       const post = await $http.$get(`https://api.nuxtjs.dev/posts/${id}`)
       return { post }
-    } catch (error) {
-      error(error) // Show the nuxt error page with the thrown error
+    } catch (e) {
+      error(e) // Show the nuxt error page with the thrown error
     }
   }
 }
@@ -154,7 +154,7 @@ export default {
 
 <base-alert type="next">
 
-Check out the Internals Glossary book for more examples of the [redirect method](/guides/internals-glossary/context#redirect)
+Check out the Internals Glossary book for more examples of the [redirect method](/docs/2.x/internals-glossary/context#redirect)
 
 </base-alert>
 

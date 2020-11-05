@@ -11,7 +11,7 @@ Nuxt.js also works as a static site generator. Statically render your Nuxt.js ap
 
 <base-alert type="info">
 
-Dynamic routes are also generated thanks to the [Nuxt Crawler](/guides/configuration-glossary/configuration-generate#crawler)
+Dynamic routes are also generated thanks to the [Nuxt Crawler](/docs/2.x/configuration-glossary/configuration-generate#crawler)
 
 </base-alert>
 
@@ -26,7 +26,7 @@ export default {
 **Running nuxt dev with the static target will improve the developer experience:**
 
 - Remove `req` & `res` from `context`
-- Fallback to client-side rendering on 404, errors and redirects [see SPA fallback](/guides/concepts/static-site-generation#spa-fallback)
+- Fallback to client-side rendering on 404, errors and redirects [see SPA fallback](/docs/2.x/concepts/static-site-generation#spa-fallback)
 - `$route.query` will always be equal to `{}` on server-side rendering
 - `process.static` is true
 
@@ -38,7 +38,7 @@ We are also exposing `process.target` for module authors to add logic depending 
 
 ## Server Hosting
 
-Server Hosting is hosting that requires a server and is intended for SSR applications or applications that are using [serverMiddleware](/guides/configuration-glossary/configuration-servermiddleware). Server-side rendering otherwise known as SSR means that your page is rendered on the server when it is requested by the user. When the user opens your page in a browser the browser sends a request to the server requesting that page. The page is rendered on the server and sent back to the browser with all its content.
+Server Hosting is hosting that requires a server and is intended for SSR applications or applications that are using [serverMiddleware](/docs/2.x/configuration-glossary/configuration-servermiddleware). Server-side rendering otherwise known as SSR means that your page is rendered on the server when it is requested by the user. When the user opens your page in a browser the browser sends a request to the server requesting that page. The page is rendered on the server and sent back to the browser with all its content.
 
 For server hosting the target of server is used, which is the default value. With SSR you use the `build` command to build your application.
 

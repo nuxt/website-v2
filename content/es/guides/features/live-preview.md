@@ -7,7 +7,7 @@ position: 12
 
 Con Nuxt.js y full static ahora puedes usar el modo vista previa en vivo que llamará a tu API o tu CMS para que puedas ver los cambios en vivo antes del deploy.
 
-<base-alert> Solo disponible usando [target:static](/guides/features/deployment-targets#static-hosting) </base-alert>
+<base-alert> Solo disponible usando [target:static](/docs/2.x/features/deployment-targets#static-hosting) </base-alert>
 
 El modo de vista previa actualizará automáticamente la página los datos de la página, ya que utiliza `$nuxt.refresh` debajo y por lo tanto llama a nuxtServerInit, asyncData y fetch en el lado del cliente.
 
@@ -84,6 +84,6 @@ Puedes pasar datos a la función `enablePreview`. Esos datos estarán disponible
 
 <base-alert type="next">
 
-Echa un vistazo al [Libro de la estructura del directorio](/guides/directory-structure/nuxt)
+Echa un vistazo al [Libro de la estructura del directorio](/docs/2.x/directory-structure/nuxt)
 
 </base-alert>

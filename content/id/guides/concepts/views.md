@@ -39,7 +39,7 @@ questions:
 
 Bagian Tampilan menjelaskan semua yang perlu Anda ketahui untuk mengonfigurasi data dan tampilan untuk rute tertentu di Aplikasi Nuxt.js Anda. Tampilan terdiri dari templat aplikasi, layout, dan halaman yang sebenarnya. Selain itu, Anda dapat menentukan tag meta kustom untuk bagian kepala setiap halaman yang penting untuk SEO (Search Engine Optimization).
 
-![Composition of a View in Nuxt.js](/guides/views.png)
+![Composition of a View in Nuxt.js](/docs/2.x/views.png)
 
 Komposisi Tampilan di Nuxt.js
 
@@ -74,7 +74,7 @@ Ada banyak properti dari komponen halaman seperti properti head pada contoh di a
 
 <base-alert type="next">
 
-See the [Directory Structure book](/guides/directory-structure/nuxt) to learn more about all the properties can use on your page
+See the [Directory Structure book](/docs/2.x/directory-structure/nuxt) to learn more about all the properties can use on your page
 
 </base-alert>
 
@@ -94,7 +94,7 @@ Anda dapat mendefinisikan layout default dengan menambahkan file `default.vue` d
 
 <base-alert type="next">
 
-Pelajari lebih lanjut tentang [Komponen Nuxt](/guides/features/nuxt-components) di bab komponen.
+Pelajari lebih lanjut tentang [Komponen Nuxt](/docs/2.x/features/nuxt-components) di bab komponen.
 
 </base-alert>
 
@@ -145,7 +145,7 @@ Jika Anda tidak menambahkan properti layout ke halaman Anda, misalnya `layout: '
 
 ### Halaman Eror
 
-Halaman eror adalah *komponen halaman* yang selalu ditampilkan saat terjadi eror (yang tidak terjadi saat rendering sisi server).
+Halaman eror adalah _komponen halaman_ yang selalu ditampilkan saat terjadi eror (yang tidak terjadi saat rendering sisi server).
 
 <base-alert>
 

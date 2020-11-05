@@ -335,7 +335,7 @@ export default {
 
 <base-alert type="next">
 
-詳細は [ignore オプション](/guides/configuration-glossary/configuration-ignore) ページを参照してください。
+詳細は [ignore オプション](/guides/configuration-glossary/configuration-ignore)ページを参照してください。
 
 </base-alert>
 

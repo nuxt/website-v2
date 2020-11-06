@@ -5,7 +5,7 @@ const logger = consola.withTag('crawler')
 
 const excludedExtensions = process.env.EXCLUDE
   ? process.env.EXCLUDE.split(',')
-  : ['svg', 'png', 'jpg', 'sketch', 'ico']
+  : ['svg', 'png', 'jpg', 'sketch', 'ico', 'gif']
 const crawlExternal = !!process.env.CRAWL_EXTERNAL || false
 
 let baseURL = process.env.BASE_URL || 'https://nuxtjs.org'
@@ -52,8 +52,7 @@ function queue(path, referrer) {
     return crawler.queue({
       uri: url,
       method: 'GET',
-      maxConnections: 1,
-      rateLimit: 200
+      rateLimit: 2000
     })
   crawler.queue(url)
 }

@@ -6,8 +6,9 @@
 # the repo (unless a later match takes precedence)
 *                   @Flosciante
 
-# Content
+# Cypress & Content
 /content/**         @debs-obrien
+/cypress/**         @debs-obrien
 
 # Main content
 /content/en/**      @nuxt/framework

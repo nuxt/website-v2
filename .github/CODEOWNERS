@@ -4,12 +4,15 @@
 # Global owners will be requested for review when someone opens a pull request
 # These owners will be the default owners for everything in
 # the repo (unless a later match takes precedence)
-*                @debs-obrien
+*                   @Flosciante
+
+# Content
+/content/**         @debs-obrien
 
 # Main content
-/content/en/**     @nuxt/framework
+/content/en/**      @nuxt/framework
 
 # Translations
-/content/ja/**     @inouetakuya @aytdm
-/content/id/**     @febrihidayan
+/content/ja/**      @inouetakuya @aytdm
+/content/id/**      @febrihidayan
 

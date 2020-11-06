@@ -1,0 +1,31 @@
+name: End-to-end tests
+on:
+  deployment_status
+
+jobs:
+  check-links:
+    if: github.event.deployment_status.state == 'success'
+    runs-on: ubuntu-18.04
+    steps:
+      - uses: actions/checkout@v2
+
+      - uses: actions/setup-node@v2-beta
+        with:
+          node-version: '14'
+
+      - uses: actions/cache@v2
+        id: cache
+        with:
+          path: node_modules
+          key: ${{ hashFiles('yarn.lock') }}
+          restore-keys: ${{ runner.os }}-yarn
+
+      - name: Install dependencies
+        if: steps.cache.outputs.cache-hit != 'true'
+        run: yarn install --frozen-lockfile
+
+      - name: Crawl site
+        run: node -r esm scripts/crawl.js
+        env:
+          BASE_URL: ${{ github.event.deployment_status.target_url }}
+          # CRAWL_EXTERNAL: true

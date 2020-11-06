@@ -10,20 +10,20 @@
       <div v-if="contributors.length">
         <a
           v-for="contributor of contributors"
-          :key="contributor.author"
-          :href="`https://github.com/${contributor.author}`"
+          :key="contributor.login"
+          :href="`https://github.com/${contributor.login}`"
           rel="noopener"
           target="_blank"
           class="text-light-onSurfacePrimary dark:text-dark-onSurfacePrimary bg-light-surfaceElevated light:hover:bg-gray-300 dark:bg-dark-elevatedSurface dark:hover:bg-dark-surface rounded overflow-hidden inline-flex mb-2 mr-2 border border-light-border dark:border-dark-border transition-colors duration-300 ease-linear"
         >
           <img
-            :alt="contributor.author"
-            :srcset="`https://github.com/${contributor.author}.png?size=32 1x, https://github.com/${contributor.author}.png?size=64 2x`"
-            :src="`https://github.com/${contributor.author}.png?size=32`"
+            :alt="contributor.name"
+            :srcset="`https://github.com/${contributor.login}.png?size=32 1x, https://github.com/${contributor.login}.png?size=64 2x`"
+            :src="`https://github.com/${contributor.login}.png?size=32`"
             class="h-8"
           />
           <span class="inline-block px-2 leading-loose">
-            {{ contributor.author }}
+            {{ contributor.name }}
           </span>
         </a>
       </div>

@@ -12,7 +12,11 @@ csb_link: https://codesandbox.io/embed/github/nuxt-academy/guides-examples/tree/
 
 - `$nuxt.isOnline` and `$nuxt.isOffline` - tells the user if they are online or offline.
 - `renderedOn` - prints a message telling us if the page is rendered on the server or client.
-- `$nuxt.refresh()` - refreshes data without refreshing the page .
+- `$nuxt.refresh()` - refreshes data without refreshing the page.
+
+`plugins/nuxt-ready.client.js` shows:
+
+- `window.onNuxtReady` - logs a message to the console when Nuxt is reday.
 
 <base-alert type="next">
 

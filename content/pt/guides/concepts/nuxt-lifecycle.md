@@ -3,7 +3,7 @@ title: Ciclo de Vida do Nuxt
 description: Não importa qual ferramenta você use, você sempre se sentirá mais confiante ao compreender como a ferramenta funciona por debaixo dos panos. O mesmo se aplica ao Nuxt.js.
 position: 5
 category: concepts
-img: /guides/nuxt-lifecycle.svg
+img: /docs/2.x/nuxt-lifecycle.svg
 imgAlt: understanding-nuxt-2-12-lifecycle-hooks
 questions:
   - question: Quando o ciclo de vida do Nuxt.js começa?

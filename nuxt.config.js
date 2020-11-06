@@ -79,16 +79,7 @@ export default {
 
   pwa: {
     manifest: {
-      name: 'NuxtJS',
-      start_url: '/',
-      icons: [
-        {
-          src: '/icon.png',
-          type: 'image/png',
-          sizes: '512x512',
-          purpose: 'any maskable'
-        }
-      ]
+      name: 'NuxtJS'
     }
   },
 
@@ -113,7 +104,8 @@ export default {
     '~/plugins/ga.client.js',
     '~/plugins/adblock.client.js',
     '~/plugins/newsletter.client.js',
-    '~/plugins/vue-scrollactive'
+    '~/plugins/vue-scrollactive',
+    '~/plugins/contributors'
   ],
   env: {
     DEPLOY_PRIME_URL: process.env.DEPLOY_PRIME_URL || false,

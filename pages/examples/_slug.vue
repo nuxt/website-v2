@@ -26,14 +26,12 @@
 </template>
 
 <script>
-import copyCodeBlock from '~/mixins/copyCodeBlock'
-
 export default {
-  mixins: [copyCodeBlock],
-  async asyncData({ $content, params, store, error, app }) {
-    let path = `/${app.i18n.defaultLocale}/examples/`
-    let page, prev, next, contributors, langFallback
+  async asyncData({ $content, $contributors, params, store, error, app }) {
     const slug = params.slug || 'hello-world'
+
+    let path = `/${app.i18n.defaultLocale}/examples`
+    let page, prev, next, langFallback
 
     try {
       page = await $content(path, slug).fetch()
@@ -65,13 +63,7 @@ export default {
       }
     }
 
-    try {
-      contributors = (
-        await fetch(
-          `https://contributors-api.onrender.com/content${path}/${params.slug}`
-        ).then(res => res.json())
-      ).map(({ author }) => ({ author }))
-    } catch (e) {}
+    const contributors = await $contributors(`/content${path}/${slug}`)
 
     try {
       ;[prev, next] = await $content(
@@ -86,10 +78,6 @@ export default {
         .surround(params.slug, { before: 1, after: 1 })
         .fetch()
     } catch (e) {}
-
-    // if (page && page.questions) {
-    //   page.questions = shuffle(page.questions.map(question => ({ ...question, answers: shuffle(question.answers) })))
-    // }
 
     return {
       path,

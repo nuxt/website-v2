@@ -1,21 +1,21 @@
 ---
-title: 'RuntimeConfig properties'
-description: RuntimeConfig allows passing dynamic config and environment variables to the nuxt context
+title: 'RuntimeConfig プロパティ'
+description: 'RuntimeConfig を使うと、動的な設定や環境変数を nuxt コンテキストに渡すことができます。'
 menu: runtimeConfig
 category: configuration-glossary
 position: 25
 ---
 
-Runtime config allows passing dynamic config and environment variables to the nuxt context. For more information of usage, please see [runtime config guide](/guide/runtime-config)
+RuntimeConfig を使うと、動的な設定や環境変数を nuxt コンテキストに渡すことができます。より詳細な使い方については [runtime config のドキュメント](/docs/2.x/directory-structure/nuxt-config#runtimeconfig)を参照してください。
 
 ## `publicRuntimeConfig`
 
-- Type: `Object`
+- 型: `Object`
 
-Value of this object is **accessible from both client and server** using `$config`.
+このオブジェクトの値は `$config` を使って**クライアントとサーバー両方からアクセスできます**。
 
 ## `privateRuntimeConfig`
 
-- Type: `Object`
+- 型: `Object`
 
-Value of this object is accessible from **server only** using `$config`. Overrides `publicRuntimeConfig` for server.
+このオブジェクトの値は `$config` を使って**サーバーからのみ**アクセスできます。サーバー用の `publicRuntimeConfig` を上書きします。

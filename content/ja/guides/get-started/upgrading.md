@@ -1,7 +1,7 @@
 ---
 title: アップグレード
 description: 'Nuxt.js のアップグレードは一瞬ですが、package.json のアップデートより複雑です'
-position: 5
+position: 6
 category: get-started
 ---
 

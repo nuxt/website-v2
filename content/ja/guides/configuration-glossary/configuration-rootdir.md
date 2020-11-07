@@ -1,20 +1,20 @@
 ---
-title: 'The rootDir Property'
-description: Define the workspace of Nuxt.js application
+title: 'rootDir プロパティ'
+description: 'Nuxt.js アプリケーションのワークスペースを指定します'
 menu: rootDir
 category: configuration-glossary
 position: 23
 ---
 
-- Type: `String`
-- Default: `process.cwd()`
+- 型: `String`
+- デフォルト: `process.cwd()`
 
-> Define the workspace directory of your Nuxt.js application.
+> Nuxt.js アプリケーションのワークスペースを指定します。
 
-This property will be overwritten by the nuxt commands(nuxt start, nuxt build etc) if an argument is passed to them. Eg running `nuxt ./my-app/` will set the `rootDir` to the absolute path of `./my-app/` from the current/working directory.
+nuxt commands（nuxt start、nuxt build など）に引数が渡された場合、このプロパティは上書きされます。例えば `nuxt ./my-app/` を実行すると `rootDir` は カレント/ワーキングディレクトリである `./my-app/` の絶対パスが設定されます。
 
-Because of that its normally not needed to configure this option unless you will use [Nuxt.js programmatically](/docs/2.x/internals-glossary/nuxt).
+[Nuxt.js をプログラムで使用](/docs/2.x/internals-glossary/nuxt)しない限り、このオプションを指定する必要はありません。
 
-<base-alert type="info"> Both `rootDir` as the package root containing the `node_modules` directory need to be within the same directory tree to be able to <NuxtLink to="https://nodejs.org/api/modules.html#modules_all_together">resolve dependencies.</NuxtLink> See the <NuxtLink to="/guides/configuration-glossary/configuration-srcdir">`srcDir` option</NuxtLink> for examples of directory structure when that is not the case.
+<base-alert type="info"> <NuxtLink to="https://nodejs.org/api/modules.html#modules_all_together">依存関係を解決</NuxtLink>するためには、`node_modules` ディレクトリを含むパッケージルートと `rootDir` が同じディレクトリツリー内にある必要があります。そうでない場合のディレクトリ構造の例については、<NuxtLink to="/guides/configuration-glossary/configuration-srcdir">`srcDir` オプション</NuxtLink>を参照してください。
 
 </base-alert>

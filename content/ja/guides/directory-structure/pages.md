@@ -353,7 +353,7 @@ export default {
 
 <base-alert type="next">
 
-詳細は[dir オプション](/guides/configuration-glossary/configuration-dir)ページを参照してください。
+詳細は [dir オプション](/guides/configuration-glossary/configuration-dir)ページを参照してください。
 
 </base-alert>
 

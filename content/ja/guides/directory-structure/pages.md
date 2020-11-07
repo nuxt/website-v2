@@ -192,7 +192,7 @@ export default {
 
 <base-alert type="next">
 
-詳細は[メタタグと SEO](/guides/features/meta-tags-seo)ページを参照してください。
+詳細は[メタタグと SEO](/guides/features/meta-tags-seo) ページを参照してください。
 
 </base-alert>
 

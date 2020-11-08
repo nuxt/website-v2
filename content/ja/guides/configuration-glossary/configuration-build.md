@@ -156,7 +156,7 @@ extend メソッドは一度はサーバーのバンドルのため、一度は�
 
 <base-alert>
 
-**警告:** 提供される `isClient` と `isServer` は [`context`](/guides/internals-glossary/context) で利用可能なキーとは別物です。これらのキーは非推奨では**ありません**。ここでは、`process.client` および `process.server` は `undefined` となるため使用しないでください。
+**警告:** 提供される `isClient` と `isServer` は [`context`](/docs/2.x/internals-glossary/context) で利用可能なキーとは別物です。これらのキーは非推奨では**ありません**。ここでは、`process.client` および `process.server` は `undefined` となるため使用しないでください。
 
 </base-alert>
 
@@ -666,7 +666,7 @@ Nuxt.js はこの動作を実現するために https://github.com/yenshih/style
 
 ## templates
 
-> Nuxt.js では設定に基づいてレンダリングされる独自のテンプレートを提供できます。この機能は[モジュール](/guides/directory-structure/modules)を使う場合にとりわけ便利です。
+> Nuxt.js では設定に基づいてレンダリングされる独自のテンプレートを提供できます。この機能は[モジュール](/docs/2.x/directory-structure/modules)を使う場合にとりわけ便利です。
 
 - 型: `Array`
 
@@ -756,7 +756,7 @@ Terser プラグインのオプションです。`false` を設定するとこ�
 
 ## watch
 
-> 監視や変更後に再生成を行うカスタムファイルを提供することができます。この機能は[モジュール](/guides/directory-structure/modules)を使用する場合にとりわけ便利です。
+> 監視や変更後に再生成を行うカスタムファイルを提供することができます。この機能は[モジュール](/docs/2.x/directory-structure/modules)を使用する場合にとりわけ便利です。
 
 - 型: `Array<String>`
 

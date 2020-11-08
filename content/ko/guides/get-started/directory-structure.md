@@ -31,7 +31,7 @@ Nuxt.js 애플리케이션을 구현할 때 사용하는 메인 디렉터리와 
 
 <base-alert type="next">
 
-[pages directory](/guides/directory-structure/pages)에 대해 더 알아보기
+[pages directory](/docs/2.x/directory-structure/pages)에 대해 더 알아보기
 
 </base-alert>
 
@@ -43,7 +43,7 @@ Nuxt.js를 사용하면 컴포넌트를 생성하고 .vue 파일에 자동으로
 
 <base-alert type="next">
 
-[components directory](/guides/directory-structure/components)에 대해 더 알아보기
+[components directory](/docs/2.x/directory-structure/components)에 대해 더 알아보기
 
 </base-alert>
 
@@ -53,7 +53,7 @@ Nuxt.js를 사용하면 컴포넌트를 생성하고 .vue 파일에 자동으로
 
 <base-alert type="next">
 
-[assets directory](/guides/directory-structure/assets)에 대해 더 알아보기
+[assets directory](/docs/2.x/directory-structure/assets)에 대해 더 알아보기
 
 </base-alert>
 
@@ -63,7 +63,7 @@ Nuxt.js를 사용하면 컴포넌트를 생성하고 .vue 파일에 자동으로
 
 <base-alert type="next">
 
-[static directory](/guides/directory-structure/static)에 대해 더 알아보기
+[static directory](/docs/2.x/directory-structure/static)에 대해 더 알아보기
 
 </base-alert>
 
@@ -73,7 +73,7 @@ Nuxt.js를 사용하면 컴포넌트를 생성하고 .vue 파일에 자동으로
 
 <base-alert type="next">
 
-[nuxt.config.js file](/guides/directory-structure/nuxt-config)에 대해 더 알아보기
+[nuxt.config.js file](/docs/2.x/directory-structure/nuxt-config)에 대해 더 알아보기
 
 </base-alert>
 
@@ -87,10 +87,10 @@ Nuxt.js를 사용하면 컴포넌트를 생성하고 .vue 파일에 자동으로
 
 ## 프로젝트 구조에 대해 더 알아보기
 
-[content](/guides/directory-structure/content), [layouts](/guides/directory-structure/layouts), [middleware](/guides/directory-structure/middleware), [modules](/guides/directory-structure/modules), [plugins](/guides/directory-structure/plugins) 그리고 [store](/guides/directory-structure/store)을 포함하여 더 유용한 디렉터리 및 파일이 있습니다. 소규모 애플리케이션에는 필요하지 않기에 여기에는 다루지 않습니다.
+[content](/docs/2.x/directory-structure/content), [layouts](/docs/2.x/directory-structure/layouts), [middleware](/docs/2.x/directory-structure/middleware), [modules](/docs/2.x/directory-structure/modules), [plugins](/docs/2.x/directory-structure/plugins) 그리고 [store](/docs/2.x/directory-structure/store)을 포함하여 더 유용한 디렉터리 및 파일이 있습니다. 소규모 애플리케이션에는 필요하지 않기에 여기에는 다루지 않습니다.
 
 <base-alert type="next">
 
-모든 디렉터리에 대해 자세히 알아보고 싶으면 [Directory Structure book](/guides/directory-structure/nuxt)를 읽어보세요.
+모든 디렉터리에 대해 자세히 알아보고 싶으면 [Directory Structure book](/docs/2.x/directory-structure/nuxt)를 읽어보세요.
 
 </base-alert>

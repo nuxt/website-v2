@@ -76,7 +76,7 @@ Nuxt.js는 라우트를 위한 자동 코드 분할을 제공하며 설정이 �
 
 <base-alert type="info">
 
-페이지간 이동하기 위해서 [NuxtLink component](/guides/features/nuxt-components#the-nuxtlink-component)를 사용하세요
+페이지간 이동하기 위해서 [NuxtLink component](/docs/2.x/features/nuxt-components#the-nuxtlink-component)를 사용하세요
 
 </base-alert>
 
@@ -181,7 +181,7 @@ Nuxt >= v2.13 부터는 링크 태그를 크롤링하고 해당 링크를 기반
 
 <base-alert type="next">
 
-정적 사이트를 위해서는 [정적 사이트 생성](/guides/concepts/static-site-generation) 을 확인하세요
+정적 사이트를 위해서는 [정적 사이트 생성](/docs/2.x/concepts/static-site-generation) 을 확인하세요
 
 </base-alert>
 
@@ -195,7 +195,7 @@ Nuxt.js를 사용하면 vue-router의 하위 라우트를 사용하여 중첩된
 
 <base-alert>
 
-상위 컴포넌트 (`.vue` file) 내에 [NuxtChild component](/guides/features/nuxt-components#the-nuxtchild-component) 포함하는 것을 잊지마세요.
+상위 컴포넌트 (`.vue` file) 내에 [NuxtChild component](/docs/2.x/features/nuxt-components#the-nuxtchild-component) 포함하는 것을 잊지마세요.
 
 </base-alert>
 
@@ -331,7 +331,7 @@ Nuxt로 라우팅을 확장하는 방법에는 여러 가지가 있습니다:
 
 - 페이지에서 라우트 매개 변수를 맞춤 설정하기 위한 [router-extras-module](https://github.com/nuxt-community/router-extras-module)
 - [@nuxtjs/router](https://github.com/nuxt-community/router-module) 를 사용하여 Nuxt 라우터를 덮어 쓰고 자신의 router.js 파일을 작성합니다.
-- `nuxt.config.js` 에서 [router.extendRoutes](/guides/configuration-glossary/configuration-router#extendroutes) 프로퍼티를 사용합니다.
+- `nuxt.config.js` 에서 [router.extendRoutes](/docs/2.x/configuration-glossary/configuration-router#extendroutes) 프로퍼티를 사용합니다.
 
 ## router 프로퍼티
 
@@ -351,7 +351,7 @@ export default {
 
 <base-alert type="next">
 
-[Router Base Property에 대해 더 알아보기](/guides/configuration-glossary/configuration-router#base)
+[Router Base Property에 대해 더 알아보기](/docs/2.x/configuration-glossary/configuration-router#base)
 
 </base-alert>
 
@@ -424,7 +424,7 @@ export default {
 
 <base-alert type="next">
 
-[extendRoutes Property에 대해 더 알아보기](/guides/configuration-glossary/configuration-router#extendroutes)
+[extendRoutes Property에 대해 더 알아보기](/docs/2.x/configuration-glossary/configuration-router#extendroutes)
 
 </base-alert>
 
@@ -434,7 +434,7 @@ export default {
 
 <base-alert type="next">
 
-[fallback Property에 대해 더 알아보기](/guides/configuration-glossary/configuration-router#fallback)
+[fallback Property에 대해 더 알아보기](/docs/2.x/configuration-glossary/configuration-router#fallback)
 
 </base-alert>
 
@@ -444,7 +444,7 @@ export default {
 
 <base-alert type="next">
 
-[mode Property에 대해 더 알아보기](/guides/configuration-glossary/configuration-router#mode)
+[mode Property에 대해 더 알아보기](/docs/2.x/configuration-glossary/configuration-router#mode)
 
 </base-alert>
 
@@ -454,7 +454,7 @@ export default {
 
 <base-alert type="next">
 
-[parseQuery / stringifyQuery Property에 대해 더 알아보기](/guides/configuration-glossary/configuration-router#parsequery--stringifyquery)
+[parseQuery / stringifyQuery Property에 대해 더 알아보기](/docs/2.x/configuration-glossary/configuration-router#parsequery--stringifyquery)
 
 </base-alert>
 
@@ -502,7 +502,7 @@ export default function (to, from, savedPosition) {
 
 <base-alert type="next">
 
-[scrollBehavior Property에 대해 더 알아보기](/guides/configuration-glossary/configuration-router#scrollbehavior)
+[scrollBehavior Property에 대해 더 알아보기](/docs/2.x/configuration-glossary/configuration-router#scrollbehavior)
 
 </base-alert>
 
@@ -528,7 +528,7 @@ export default {
 
 <base-alert type="next">
 
-[trailingSlash Property에 대해 더 알아보기](/guides/configuration-glossary/configuration-router#trailingslash)
+[trailingSlash Property에 대해 더 알아보기](/docs/2.x/configuration-glossary/configuration-router#trailingslash)
 
 </base-alert>
 

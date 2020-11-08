@@ -7,7 +7,7 @@ position: 12
 
 Dengan Nuxt.js dan target statis penuh, Anda bisa menggunakan fitur bawaan yaitu pratinjau secara _live_, ini akan memanggil API atau CMS Anda sehingga Anda bisa melihat perubahan apapun yang terjadi secara _live_ sebelum melakukan penggelaran (_deploying_).
 
-<base-alert> Hanya bisa digunakan jika properti [`target` bernilai `static`](/guides/features/deployment-targets#static-hosting) </base-alert>
+<base-alert> Hanya bisa digunakan jika properti [`target` bernilai `static`](/docs/2.x/features/deployment-targets#static-hosting) </base-alert>
 
 Mode pratinjau ini akan secara otomatis menyegarkan data pada halaman Anda karena fitur ini menggunakan `$nuxt.refresh` di balik layar. Fungsi ini memanggil fungsi `nuxtServerInit`, `asyncData`, dan `fetch` di sisi klien.
 
@@ -83,6 +83,6 @@ Anda bisa mengoper data ke fungsi `enablePreview`. Data tersebut kemudian akan t
 
 <base-alert type="next">
 
-Baca lebih lanjut [buku struktur direktori](/guides/directory-structure/nuxt)
+Baca lebih lanjut [buku struktur direktori](/docs/2.x/directory-structure/nuxt)
 
 </base-alert>

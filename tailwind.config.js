@@ -52,6 +52,7 @@ module.exports = {
       }),
       boxShadow: {
         nuxt: '0px 0px 8px rgba(0, 0, 0, 0.101562)',
+        reverse: '0 -2px 4px 0 rgba(0, 0, 0, 0.05)',
         'inset-nuxt': 'inset 0px 0px 8px rgba(0, 0, 0, 0.101562)'
       },
       inset: {

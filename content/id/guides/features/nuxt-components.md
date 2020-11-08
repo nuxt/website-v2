@@ -94,7 +94,7 @@ Komponen `<Nuxt>` adalah komponen yang Anda gunakan untuk menampilkan komponen-k
 
 <base-alert>
 
-Komponen `<Nuxt>` hanya dapat digunakan di dalam berkas-berkas [_layout_](/guides/concepts/views#layouts).
+Komponen `<Nuxt>` hanya dapat digunakan di dalam berkas-berkas [_layout_](/docs/2.x/concepts/views#layouts).
 
 </base-alert>
 
@@ -258,7 +258,7 @@ Jika Anda ingin mempelajari lebih lanjut tentang `<RouterLink>`, silakan baca [d
 
 <base-alert type="info">
 
-`<NuxtLink>` juga memiliki fitur [_smart prefetching_](/guides/features/nuxt-components#the-nuxtlink-component) bawaan.
+`<NuxtLink>` juga memiliki fitur [_smart prefetching_](/docs/2.x/features/nuxt-components#the-nuxtlink-component) bawaan.
 
 </base-alert>
 

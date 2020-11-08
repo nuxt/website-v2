@@ -37,7 +37,7 @@ export default {
 }
 ```
 
-A propriedade transition em `nuxt.config.js` é usada para definir as propriedades padrão para as transições de página. Para saber mais sobre as opções disponíveis quando a propriedade `transition` é um objeto, consulte a [propriedade de transição de páginas](/guides/features/transitions).
+A propriedade transition em `nuxt.config.js` é usada para definir as propriedades padrão para as transições de página. Para saber mais sobre as opções disponíveis quando a propriedade `transition` é um objeto, consulte a [propriedade de transição de páginas](/docs/2.x/features/transitions).
 
 ## A propriedade layoutTransition
 

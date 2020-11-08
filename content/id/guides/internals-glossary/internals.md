@@ -76,7 +76,7 @@ class SebuahKelas {
   }
 
   sebuahFungsi() {
-    // Kita memiliki akses terhadap `this.nuxt` dan `this.options`
+    // Anda memiliki akses terhadap `this.nuxt` dan `this.options`
   }
 }
 ```
@@ -95,7 +95,7 @@ class KelasFoo {
 }
 ```
 
-Sehingga, kita dapat menambahkan _hook_ pada modul `foo` dengan cara:
+Sehingga, Anda dapat menambahkan _hook_ pada modul `foo` dengan cara:
 
 ```js
 nuxt.hook('foo', foo => {

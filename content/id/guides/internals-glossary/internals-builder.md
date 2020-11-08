@@ -10,7 +10,7 @@ position: 7
 
 ## Hooks
 
-Kita dapat mendaftarkan _hooks_ pada siklus hidup Nuxt tertentu.
+Anda dapat mendaftarkan _hooks_ pada siklus hidup Nuxt tertentu.
 
 ```js
 // Tambahkan hook ketika kode selesai dibuat

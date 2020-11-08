@@ -1,7 +1,7 @@
 ---
 title: 'おわりに'
 description: 'おめでとうございます！最初の Nuxt.js アプリケーションを作成し、これで Nuxter になったと思うかもしれません。しかし、Nuxt.js で学ぶことやできることはまだまだたくさんあります。いくつかおすすめのページを紹介します'
-position: 4
+position: 5
 category: get-started
 questions:
   - question: 'Nuxt.js を動かすために必要なディレクトリ名は？'

@@ -1,0 +1,21 @@
+name: Sync upstream
+
+on: push
+jobs:
+  sync_upstream:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          ref: 'master'
+      - name: add upstream
+        run: |
+          git remote add upstream https://github.com/nuxt/nuxtjs.org.git
+      - name: pull upstream
+        run: |
+          git config pull.rebase false
+          git pull upstream master
+      - name: push
+        run: |
+          git push origin master
+ 

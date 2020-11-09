@@ -134,7 +134,7 @@ export default {
 }
 ```
 
-이 대신 쿼리 파라미터를 사용하고 싶으신가요? 그러면 [context.query.id](http://context.query.id)를 를 사용할 수 있습니다.
+이 대신 쿼리 파라미터를 사용하고 싶으신가요? 그러면 [context.query.id](/docs/2.x/internals-glossary/context#query)를 를 사용할 수 있습니다.
 
 ### 사용자 리다이렉션 & 스토어 접근
 

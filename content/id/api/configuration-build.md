@@ -277,7 +277,7 @@ module.exports = {
 }
 ```
 
-Template dirender menggunakan [`lodash.template`](https://lodash.com/docs/#template). Anda dapat mempelajari lebih lanjut tentang cara menggunakannya [di sini](https://github.com/learn-co-students/javascript-lodash-templates-v-000) .
+Template dirender menggunakan [`lodash.template`](https://lodash.com/docs/#template). Anda dapat mempelajari lebih lanjut tentang cara menggunakannya [di sini](https://github.com/learn-co-students/javascript-lodash-templates-lab-v-000) .
 
 ## vendor
 

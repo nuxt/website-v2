@@ -685,7 +685,7 @@ export default {
 }
 ```
 
-Les modèles sont rendues à l'aide de [`lodash.template`](https://lodash.com/docs/#template), vous pouvez en savoir plus sur leur utilisation [ici](https://github.com/learn-co-students/javascript-lodash-templates-v-000).
+Les modèles sont rendues à l'aide de [`lodash.template`](https://lodash.com/docs/#template), vous pouvez en savoir plus sur leur utilisation [ici](https://github.com/learn-co-students/javascript-lodash-templates-lab-v-000).
 
 ## terser
 

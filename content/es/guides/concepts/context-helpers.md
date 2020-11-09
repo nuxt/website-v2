@@ -132,7 +132,7 @@ export default {
 }
 ```
 
-Le gustaría usar parámetros query en su lugar? Entonces vea [context.query.id](http://context.query.id)
+Le gustaría usar parámetros query en su lugar? Entonces vea [context.query.id](/docs/2.x/internals-glossary/context#query)
 
 ### Redireccionando usuarios & accediendo al store
 

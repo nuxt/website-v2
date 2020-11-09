@@ -134,7 +134,7 @@ export default {
 }
 ```
 
-Quer usar parâmetros de consulta em vez disso? Você pode utilizar o [context.query.id](http://context.query.id).
+Quer usar parâmetros de consulta em vez disso? Você pode utilizar o [context.query.id](/docs/2.x/internals-glossary/context#query).
 
 ### Redirecionando usuários e acessando a store
 

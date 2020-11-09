@@ -1,44 +1,44 @@
 ---
-title: Views
-description: The Views section describes all you need to know to configure data and views for a specific route in your Nuxt.js Application. Views consist of an app template, a layout, and the actual page.
+title: Представление(Views)
+description: В разделе &laquo;Представление&raquo; описано все, что необходимо знать, чтобы настроить данные и представления для определенного маршрута в вашем приложении Nuxt.js. Представление(Views) состоит из шаблона приложения(template), макета(layout) и самой страницы.
 position: 1
 category: concepts
 csb_link: https://codesandbox.io/embed/github/nuxt-academy/guides-examples/tree/master/02_concepts/01_views?fontsize=14&hidenavigation=1&theme=dark
 questions:
-  - question: What is the composition order of a Nuxt view (top-down)?
+  - question: Как организована структура Nuxt(сверху-вниз)?
     answers:
-      - Layout → Page → Document
-      - Page → Layout → Document
-      - Document → Layout → Page
-    correctAnswer: Document → Layout → Page
-  - question: What is the default layout called?
+      - Макет(Layout) → Страница(Page) → Документ(Document)
+      - Страница(Page) → Макет(Layout) → Документ(Document)
+      - Документ(Document) → Макет(Layout) → Страница(Page)
+    correctAnswer: Документ(Document) → Макет(Layout) → Страница(Page)
+  - question: Какое имя должен иметь макет по умолчанию?
     answers:
       - default.vue
       - layout.vue
       - defaultLayout.vue
     correctAnswer: default.vue
-  - question: How do you create a custom layout?
+  - question: Как создать пользовательский макет?
     answers:
-      - add a .vue file to the pages folder
-      - add a .vue file to the layouts folder
-      - add a .vue file to the components folder
-    correctAnswer: add a .vue file to the layouts folder
-  - question: How do you activate your custom layout called 'blog' on your page?
+      - Добавить .vue файл в папку pages
+      - Добавить .vue файл в папку layouts
+      - Добавить .vue файл в папку components
+    correctAnswer: Добавить .vue файл в папку layouts
+  - question: Как подключить пользовательский макет &laquo;blog&raquo; на вашей странице?
     answers:
       - "layout: 'blog'"
       - "layout: 'default'"
       - "blog: 'blog'"
     correctAnswer: "layout: 'blog'"
-  - question: Where do you put your error.vue file that creates a customized error page
+  - question: В какой папке разместить error.vue файл, чтобы создать собственную страницу ошибок?
     answers:
-      - in the pages folder
-      - in the errors folder
-      - in the layouts folder
-    correctAnswer: in the layouts folder
+      - В папке pages
+      - В папке errors
+      - В папке layouts
+    correctAnswer: В папке layouts
 ---
 
 В разделе &laquo;Представление&raquo; описано все, что необходимо знать, чтобы настроить данные и представления для определенного маршрута в вашем приложении Nuxt.js.
-Представление(Views) состоит из шаблона приложения(template), макета(layout) и самой страницы. Кроме того, вы можете настроить мета-теги(meta) каждой страницы, которые важны для SEO(поисковая оптимизация).
+Представление(Views) состоит из шаблона приложения(template), макета(layout) и самой страницы(pages). Кроме того, вы можете настроить мета-теги(meta) каждой страницы, которые важны для SEO(поисковая оптимизация).
 
 ![Composition of a View in Nuxt.js](/docs/2.x/views.png)
 
@@ -69,7 +69,7 @@ questions:
 </style>
 ```
 
-## Свойства компонентов страницы
+## Свойства компонента страницы
 
 У компонента страницы существует много свойств, таких как head, как в примере выше.
 

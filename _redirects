@@ -7,8 +7,8 @@ https://www.nuxtjs.org/* https://nuxtjs.org/:splat 301!
 /guides/* /docs/2.x/:splat 301!
 # [LEGACY] Redirect GUIDE URLs
 /guide/themes /themes 301!
-/guide/typescript /docs/2.x 301!
-/guide/contribution-guide /docs/2.x 301!
+/guide/typescript https://typescript.nuxtjs.org/ 301!
+/guide/contribution-guide https://github.com/nuxt/nuxtjs.org/blob/master/content/en/_archives/guide/contribution-guide.md 301!
 /guide /docs/2.x/concepts/nuxt-lifecycle 301!
 /guide/assets /docs/2.x/directory-structure/assets 301!
 /guide/async-data /docs/2.x/features/data-fetching#async-data 301!
@@ -24,7 +24,7 @@ https://www.nuxtjs.org/* https://nuxtjs.org/:splat 301!
 /guide/runtime-config /docs/2.x/configuration-glossary/configuration-runtime-config 301!
 /guide/upgrading /docs/2.x/get-started/upgrading 301!
 /guide/views /docs/2.x/concepts/views 301!
-/guide/vuex-store /docs/2.x/directory-structure/stores 301!
+/guide/vuex-store /docs/2.x/directory-structure/store 301!
 # [LEGACY] Redirect API URLs
 /api/components-no-ssr /api/components-client-only 301!
 /api/$nuxt /docs/2.x/internals-glossary/$nuxt 301!
@@ -72,7 +72,7 @@ https://www.nuxtjs.org/* https://nuxtjs.org/:splat 301!
 /api/internals-module-container /docs/2.x/internals-glossary/internals-module-container 301!
 /api/internals-nuxt /docs/2.x/internals-glossary/internals-nuxt 301!
 /api/internals /docs/2.x/internals-glossary/internals 301!
-/api/nuxt-render-and-get-window /docs/2.x/internals-glossary/muxt-render-and-get-window 301!
+/api/nuxt-render-and-get-window /docs/2.x/internals-glossary/nuxt-render-and-get-window 301!
 /api/nuxt-render-route /docs/2.x/internals-glossary/nuxt-render-route 301!
 /api/nuxt-render /docs/2.x/internals-glossary/nuxt-render 301!
 /api/nuxt /docs/2.x/internals-glossary/nuxt 301!

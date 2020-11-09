@@ -134,7 +134,7 @@ export default {
 }
 ```
 
-Ingin menggunakan parameter query Anda? kemudian Anda menggunakan [context.query.id](http://context.query.id) then.
+Ingin menggunakan parameter query Anda? kemudian Anda menggunakan [context.query.id](/docs/2.x/internals-glossary/context#query) then.
 
 ### Redirecting user & mengakses store
 

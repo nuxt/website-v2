@@ -1,57 +1,56 @@
 <template>
-  <button
-    class="relative overflow-hidden px-4 flex items-center bg-gray-200 dark:bg-dark-surface dark:text-dark-onSurfaceSecondary rounded-full h-10 outline-none text-light-onSurfacePrimary dark:text-dark-onSurfacePrimary transition-colors duration-300 ease-linear"
-    @click="setCurrentTheme"
+  <div
+    class="inline-block border bg-light-elevatedSurface text-light-onSurfacePrimary dark:bg-dark-elevatedSurface dark:text-light-elevatedSurface rounded px-2 text-md font-medium outline-none hover:border-primary-base"
   >
-    <span
-      class="relative mr-2 overflow-hidden inline-block w-5 h-5 flex items-center justify-center"
-    >
-      <MoonIcon
-        class="w-5 h-5 absolute"
-        :class="$colorMode.preference === 'dark' ? 'show' : 'hide'"
-      />
-      <SystemIcon
-        class="w-5 h-5 absolute"
-        :class="$colorMode.preference === 'system' ? 'show' : 'hide'"
-      />
-      <SunIcon
-        class="w-5 h-5 absolute"
-        :class="$colorMode.preference === 'light' ? 'show' : 'hide'"
-      />
-    </span>
-    <transition name="from-bottom-to-bottom" mode="out-in">
-      <span
-        v-if="$colorMode.preference === 'dark'"
-        key="dark"
-        class="inline-block font-medium mr-1"
-      >
-        Dark
-      </span>
-      <span
-        v-if="$colorMode.preference === 'system'"
-        key="system"
-        class="inline-block font-medium mr-1"
-      >
-        System
-      </span>
-      <span
-        v-else-if="$colorMode.preference === 'light'"
-        key="light"
-        class="inline-block font-medium mr-1"
-      >
-        Light
-      </span>
-    </transition>
-  </button>
+    <div class="flex items-center content-center px-2">
+      <div class="-mr-4">
+        <span
+          class="relative mr-2 overflow-hidden inline-block w-5 h-5 flex items-center justify-center"
+        >
+          <MoonIcon
+            class="w-4 h-4 absolute"
+            :class="$colorMode.preference === 'dark' ? 'show' : 'hide'"
+          />
+          <SystemIcon
+            class="w-4 h-4 absolute"
+            :class="$colorMode.preference === 'system' ? 'show' : 'hide'"
+          />
+          <SunIcon
+            class="w-4 h-4 absolute"
+            :class="$colorMode.preference === 'light' ? 'show' : 'hide'"
+          />
+        </span>
+      </div>
+      <template>
+        <select
+          v-model="mode"
+          class="bg-transparent cursor-pointer font-medium h-10 appearance-none focus:outline-none pl-4 pr-8 z-10"
+          aria-label="ColorMode"
+        >
+          <option
+            v-for="mode in options"
+            :key="mode"
+            :value="mode"
+            class="dark:text-dark-surface capitalize"
+          >
+            {{ mode }}
+          </option>
+        </select>
+        <CaretDownIcon class="-ml-4" />
+      </template>
+    </div>
+  </div>
 </template>
 
 <script>
+import CaretDownIcon from '~/assets/icons/caret-down.svg?inline'
 import SunIcon from '~/assets/icons/sun.svg?inline'
 import MoonIcon from '~/assets/icons/moon.svg?inline'
 import SystemIcon from '~/assets/icons/system.svg?inline'
 
 export default {
   components: {
+    CaretDownIcon,
     SunIcon,
     MoonIcon,
     SystemIcon
@@ -59,17 +58,25 @@ export default {
   props: [],
   data() {
     return {
-      //
+      options: ['system', 'light', 'dark'],
+      icons: {
+        system: 'SystemIcon',
+        light: 'SunIcon',
+        dark: 'MoonIcon'
+      }
     }
   },
-  methods: {
-    setCurrentTheme() {
-      this.$colorMode.preference =
-        this.$colorMode.preference === 'system'
-          ? 'light'
-          : this.$colorMode.preference === 'light'
-          ? 'dark'
-          : 'system'
+  computed: {
+    icon () {
+      return this.icons[this.mode]
+    },
+    mode: {
+      get () {
+        return this.$colorMode.preference
+      },
+      set (value) {
+        this.$colorMode.preference = value
+      }
     }
   }
 }

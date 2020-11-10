@@ -248,7 +248,7 @@ We now have a title, description, img and alt variable that we can access to by 
   <article>
     <h1>{{ article.title }}</h1>
     <p>{{ article.description }}</p>
-    <img :src="article.image" :alt="article.alt" />
+    <img :src="article.img" :alt="article.alt" />
     <p>Article last updated: {{ formatDate(article.updatedAt) }}</p>
 
     <nuxt-content :document="article" />
@@ -258,7 +258,7 @@ We now have a title, description, img and alt variable that we can access to by 
 
 <base-alert>
 
-In order to render images included in the YAML of the article we either need to place them in the static folder or use the syntax: `` :src="require(`~/assets/images/${article.image}`)" ``.
+In order to render images included in the YAML of the article we either need to place them in the static folder or use the syntax: `` :src="require(`~/assets/images/${article.img}`)" ``.
 
 Images included in the article content should always be placed **in the static folder** as @nuxt/content is independent of Webpack. The static folder doesn't go through webpack whereas the assets folder does.
 

@@ -307,6 +307,7 @@ export default {
 ```
 
 ### Inspect webpack configuration
+
 For complex projects and debugging it's sometimes useful to check what the final webpack configuration will look like. Luckily you can run `nuxt webpack` command from withing your project to output the configuration. Checkout this PR [#7029](https://github.com/nuxt/nuxt.js/pull/7029) for more details.
 
 ## Edit host and port

@@ -1,7 +1,7 @@
 ---
 title: Client Only Plugins
 description: In this example we show how to use a plugin so that it is only available on the client side
-position: 42
+position: 402
 category: plugins
 csb_link: https://codesandbox.io/embed/github/nuxt-academy/guides-examples/tree/master/04_directory_structure/12_plugins_client
 ---

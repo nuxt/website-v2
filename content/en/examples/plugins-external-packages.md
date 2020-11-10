@@ -1,7 +1,7 @@
 ---
 title: External Packages Plugin
 description: In this example we show how to use a plugin with an external package - axios
-position: 43
+position: 403
 category: plugins
 csb_link: https://codesandbox.io/embed/github/nuxt-academy/guides-examples/tree/master/04_directory_structure/12_plugins_external
 ---

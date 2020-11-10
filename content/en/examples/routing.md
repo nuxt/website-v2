@@ -1,8 +1,8 @@
 ---
 title: Routing
 description: Basic example with routing.
-position: 2
-category: essentials
+position: 102
+category: routing
 csb_link: https://codesandbox.io/embed/github/nuxt-academy/guides-examples/tree/master/01_get_started/02_routing?
 ---
 

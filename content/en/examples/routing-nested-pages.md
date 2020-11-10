@@ -1,8 +1,8 @@
 ---
-title: NuxtChild Component
+title: Nested Pages
 description: How to use the Nuxt Child component to create parent and child pages.
-position: 9
-category: essentials
+position: 105
+category: routing
 csb_link: https://codesandbox.io/embed/github/nuxt-academy/guides-examples/tree/master/03_features/09_components_nuxt
 ---
 

@@ -1,5 +1,5 @@
 ---
-title: Assets
+title: webpack Assets
 description: Use the assets folder to add css, images and fonts to your application
 position: 12
 category: essentials

@@ -1,7 +1,7 @@
 ---
 title: Vue Plugins
 description: In this example we show how to add a vue plugin to your application
-position: 41
+position: 401
 category: plugins
 csb_link: https://codesandbox.io/embed/github/nuxt-academy/guides-examples/tree/master/04_directory_structure/12_plugins_vue
 ---

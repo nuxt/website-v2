@@ -1,7 +1,7 @@
 ---
-title: Store
+title: Vuex Store
 description: In the first example we show how the store works using a todo app
-position: 17
+position: 7
 category: essentials
 csb_link: https://codesandbox.io/embed/github/nuxt-academy/guides-examples/tree/master/04_directory_structure/14_store
 ---

@@ -1,8 +1,8 @@
 ---
 title: Dynamic Pages
 description: Using dynamic pages to fetch data from an API and populate those pages
-position: 15
-category: essentials
+position: 104
+category: routing
 csb_link: https://codesandbox.io/embed/github/nuxt-academy/guides-examples/tree/master/04_directory_structure/11_pages
 ---
 

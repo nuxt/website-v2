@@ -1,8 +1,8 @@
 ---
-title: nuxt.config
+title: Axios usage
 description: In the first example we show how to use the env property in our `nuxt.config.js` file to add the URL of our API so that we can then easily make calls to it without having to use the URL on our page
-position: 18
-category: essentials
+position: 503
+category: modules
 csb_link: https://codesandbox.io/embed/github/nuxt-academy/guides-examples/tree/master/04_directory_structure/15_nuxt-config
 ---
 

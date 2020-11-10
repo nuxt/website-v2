@@ -1,7 +1,7 @@
 ---
 title: Data Fetching
 description: In this example we use asyncData and fetch to show you the differences between both methods.
-position: 5
+position: 2
 category: essentials
 csb_link: https://codesandbox.io/embed/github/nuxt-academy/guides-examples/tree/master/03_features/04_data_fetching?
 ---

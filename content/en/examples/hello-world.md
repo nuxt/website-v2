@@ -1,8 +1,8 @@
 ---
 title: Hello World
 description: Example project with basic install including two ways of creating a page component.
-position: 1
-category: essentials
+position: 101
+category: routing
 csb_link: https://codesandbox.io/embed/github/nuxt-academy/guides-examples/tree/master/01_get_started/01_installation?
 ---
 

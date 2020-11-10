@@ -302,9 +302,11 @@ module.exports = {
     },
     examples: {
       essentials: 'Essentials',
+      routing: 'Routing',
+      transitions: 'Transitions',
       middleware: 'Middleware',
-      modules: 'Modules',
       plugins: 'Plugins',
+      modules: 'Modules',
       customization: 'Customization',
       advanced: 'Advanced'
     },

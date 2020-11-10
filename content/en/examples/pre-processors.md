@@ -1,7 +1,7 @@
 ---
 title: Pre-processors
 description: Configuration your application to use pug and sass with style resources to easily add variables to all components.
-position: 7
+position: 4
 category: essentials
 csb_link: https://codesandbox.io/embed/github/nuxt-academy/guides-examples/tree/master/03_features/07_configuration_pre-processors
 ---

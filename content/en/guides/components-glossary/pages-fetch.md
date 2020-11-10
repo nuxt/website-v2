@@ -1,6 +1,6 @@
 ---
 title: 'The Fetch Hook'
-description: The `fetch` method is used to fill the store before rendering the page, it's like the `asyncData` method except it doesn't set the component data.
+description: The `fetch` hook is for fetching data asynchronously. It is called on server-side when rendering the route, and on client-side when navigating.
 menu: Fetch Hook
 category: components-glossary
 position: 0

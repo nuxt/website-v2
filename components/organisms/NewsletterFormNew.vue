@@ -4,7 +4,7 @@
     <i18n
       path="homepage.newsletter.title"
       tag="h2"
-      class="text-2xl text-left font-medium text-light-onSurfacePrimary dark:text-dark-onSurfacePrimary mb-2 transition-colors duration-300 ease-linear"
+      class="text-2xl font-medium text-light-onSurfacePrimary dark:text-dark-onSurfacePrimary mb-2 transition-colors duration-300 ease-linear"
     >
       <template v-slot:nuxt>
         <AppTitle />

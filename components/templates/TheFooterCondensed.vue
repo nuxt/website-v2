@@ -37,7 +37,7 @@
             </ul>
           </nav>
         </div>
-        <div class="mt-8 xl:mt-0 xl:ml-32">
+        <div class="flex justify-center text-center xl:text-left mt-8 xl:mt-0 xl:ml-32">
           <NewsletterFormNew />
         </div>
       </div>

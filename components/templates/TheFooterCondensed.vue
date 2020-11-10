@@ -37,8 +37,25 @@
             </ul>
           </nav>
         </div>
-        <div class="flex justify-center text-center xl:text-left mt-8 xl:mt-0 xl:ml-32">
+        <div
+          class="flex flex-col xl:mt-0 xl:ml-32 mt-8 items-center text-center xl:text-left"
+        >
           <NewsletterFormNew />
+          <div
+            class="flex items-center xl:items-start xl:w-full mt-3 space-x-4 text-light-onSurfaceSecondary dark:text-dark-onSurfaceSecondary"
+          >
+            <a href="https://github.com/nuxt/nuxt.js" target="_blank">
+              <GithubIcon class="h-6 w-6" />
+            </a>
+            <a href="https://twitter.com/nuxt_js" target="_blank">
+              <TwitterIcon class="h-6 w-6" />
+            </a>
+            <a href="https://discord.com/invite/ps2h6QT" target="_blank">
+              <DiscordIcon class="h-6 w-6" />
+            </a>
+            <YoutubeIcon class="h-6 w-6" />
+            <InstagramIcon class="h-6 w-6" />
+          </div>
         </div>
       </div>
       <div
@@ -75,10 +92,20 @@
 
 <script>
 import GlobeIcon from '~/assets/icons/globe.svg?inline'
+import GithubIcon from '~/assets/icons/githubFooter.svg?inline'
+import DiscordIcon from '~/assets/icons/discord.svg?inline'
+import TwitterIcon from '~/assets/icons/twitterFooter.svg?inline'
+import YoutubeIcon from '~/assets/icons/youtube.svg?inline'
+import InstagramIcon from '~/assets/icons/instagram.svg?inline'
 
 export default {
   components: {
-    GlobeIcon
+    GlobeIcon,
+    GithubIcon,
+    DiscordIcon,
+    TwitterIcon,
+    YoutubeIcon,
+    InstagramIcon
   },
   data() {
     return {

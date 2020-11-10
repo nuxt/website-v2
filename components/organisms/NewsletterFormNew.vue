@@ -1,5 +1,5 @@
 <template>
-  <section id="subscribe-to-newsletter" class="rounded-t-lg">
+  <section id="subscribe-to-newsletter" class="rounded-t-lg xl:w-full">
     <!-- why title i18n -->
     <i18n
       path="homepage.newsletter.title"
@@ -10,14 +10,23 @@
         <AppTitle />
       </template>
     </i18n>
-    <p
-      class="mb-6 text-left text-light-onSurfaceSecondary dark:text-dark-onSurfaceSecondary transition-colors duration-300 ease-linear"
-    >
-      {{ $t('homepage.newsletter.description') }}
-    </p>
     <ClientOnly>
-      <form class="flex" data-cy="newsletter" @submit.prevent="subscribe">
-        <div class="w-56 md:w-5/12 xl:w-full">
+      <div class="flex justify-end">
+        <p v-if="error" class="text-red-600 -m-2">
+          {{ error }}
+        </p>
+        <p v-if="subscribed" class="text-nuxt-green py-1">
+          {{ $t('homepage.newsletter.form.subscribed_messages.pre') }}
+          {{ subscribedEmail }}
+          {{ $t('homepage.newsletter.form.subscribed_messages.post') }}
+        </p>
+      </div>
+      <form
+        class="flex justify-center xl:justify-start pt-3"
+        data-cy="newsletter"
+        @submit.prevent="subscribe"
+      >
+        <div class="w-56 md:w-64 xl:w-full">
           <label for="news-email" class="hidden">
             {{ $t('homepage.newsletter.form.email') }}
           </label>
@@ -43,14 +52,6 @@
           :class="[pending ? 'bg-nuxt-green' : '']"
         />
       </form>
-      <p v-if="subscribed" class="text-nuxt-green py-1">
-        {{ $t('homepage.newsletter.form.subscribed_messages.pre') }}
-        {{ subscribedEmail }}
-        {{ $t('homepage.newsletter.form.subscribed_messages.post') }}
-      </p>
-      <p v-if="error" class="text-red-600 py-1">
-        {{ error }}
-      </p>
     </ClientOnly>
   </section>
 </template>

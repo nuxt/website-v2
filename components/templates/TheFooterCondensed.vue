@@ -42,22 +42,19 @@
         </div>
       </div>
       <div
-        class="container mx-auto flex flex-row items-center content-center justify-between py-4 mb-16 lg:mb-0"
+        class="container mx-auto flex flex-row items-center content-center justify-between py-6 mb-16 lg:mb-0 border-t border-gray-200"
       >
         <div class="flex-1 flex">
           <DarkModeToggle />
         </div>
-        <div class="flex-1 text-center hidden sm:block">
+        <div class="flex-1 text-center text-sm hidden sm:block">
+          © 2020 <b>NuxtJS</b>. All rights reserved.
           <a
             class="inline-block"
             href="https://url.netlify.com/B1Mh093Iv"
             target="_blank"
           >
-            <img
-              src="https://www.netlify.com/img/global/badges/netlify-color-bg.svg"
-              class="h-10"
-              alt="Deploys by Netlify"
-            />
+            Deployed on <b>Netlify</b>.
           </a>
         </div>
         <div class="flex-1 text-right">

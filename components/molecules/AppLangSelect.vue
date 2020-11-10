@@ -1,8 +1,8 @@
 <template>
   <div
-    class="nui-select text-nuxt-gray bg-gray-200 dark:bg-dark-surface dark:text-dark-onSurfaceSecondary inline-block rounded-full transition-colors duration-300 ease-linear"
+    class="inline-block border bg-light-elevatedSurface text-light-onSurfacePrimary dark:bg-dark-elevatedSurface dark:text-light-elevatedSurface rounded px-2 text-md font-medium outline-none hover:border-primary-base"
   >
-    <div class="flex items-center content-center px-4">
+    <div class="flex items-center content-center px-2">
       <div class="-mr-4">
         <slot name="icon" />
       </div>

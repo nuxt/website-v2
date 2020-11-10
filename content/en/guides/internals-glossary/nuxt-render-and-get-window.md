@@ -31,7 +31,7 @@ npm install --save-dev jsdom
 Example:
 
 ```js
-const { Nuxt, Builder } = require('nuxt')
+const { Nuxt } = require('nuxt')
 
 const config = require('./nuxt.config.js')
 config.dev = false

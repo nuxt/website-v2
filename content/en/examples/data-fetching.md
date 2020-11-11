@@ -8,9 +8,9 @@ csb_link: https://codesandbox.io/embed/github/nuxt-academy/guides-examples/tree/
 
 <example-intro></example-intro>
 
-`pages/posts/index.vue` uses `asyncData` and the `$http` module to fetch our list of posts from our API.
+`pages/asyncdata/index.vue` and `pages/posts/_id` uses the `asyncData hook` and the `$http` module to fetch our list of posts from our API.
 
-`pages/posts/_id.vue` and `components/BlogPosts.vue` use the `fetch` method to fetch data from our API using:
+`pages/fetch/index.vue` imports `components/BlogPosts.vue` which uses the `fetch hook` and the `$http` module to fetch our data using:
 
 - `$fetchState.pending` to show a loading text when the data is loading
 - `$fetchState.error` to show an error message when we can't retrieve the posts.

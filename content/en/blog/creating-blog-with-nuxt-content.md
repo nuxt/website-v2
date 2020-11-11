@@ -248,7 +248,7 @@ We now have a title, description, img and alt variable that we can access to by 
   <article>
     <h1>{{ article.title }}</h1>
     <p>{{ article.description }}</p>
-    <img :src="article.image" :alt="article.alt" />
+    <img :src="article.img" :alt="article.alt" />
     <p>Article last updated: {{ formatDate(article.updatedAt) }}</p>
 
     <nuxt-content :document="article" />
@@ -258,7 +258,7 @@ We now have a title, description, img and alt variable that we can access to by 
 
 <base-alert>
 
-In order to render images included in the YAML of the article we either need to place them in the static folder or use the syntax: `` :src="require(`~/assets/images/${article.image}`)" ``.
+In order to render images included in the YAML of the article we either need to place them in the static folder or use the syntax: `` :src="require(`~/assets/images/${article.img}`)" ``.
 
 Images included in the article content should always be placed **in the static folder** as @nuxt/content is independent of Webpack. The static folder doesn't go through webpack whereas the assets folder does.
 
@@ -287,8 +287,6 @@ If we inspect this page we can see that everything written inside our markdown i
 All other tags that come from our YAML front matter can be styled as normal either using [TailwindCSS](https://tailwindcss.com/) or adding css in the style tag.
 
 To use scoped styles with the nuxt-content class you need to use a deep selector: `/deep/`, `::v-deep` or `>>>`
-
-All other tags that come from our YAML front matter can be styled as normal either using [TailwindCSS](https://tailwindcss.com/) or adding css in the style tag.
 
 Our markdown tags are converted into the correct tags which means we now have two `<h1>` tags. We should now remove the one from our markdown file.
 
@@ -503,7 +501,7 @@ We can now move this component out of the global folder and into the components 
 
 ### Adding a code block to your post
 
-With the content module we can style our code blocks withª the automatic inclusion of [prismJS](https://prismjs.com/). That means we can write our code block using the correct markdown syntax and our code block will display with styling depending on the language.
+With the content module we can style our code blocks with the automatic inclusion of [prismJS](https://prismjs.com/). That means we can write our code block using the correct markdown syntax and our code block will display with styling depending on the language.
 
 ```js
 export default {

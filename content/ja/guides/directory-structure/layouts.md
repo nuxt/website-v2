@@ -1,6 +1,6 @@
 ---
-title: layouts
-description: Layouts are a great help when you want to change the look and feel of your Nuxt.js app. Whether you want to include a sidebar or have distinct layouts for mobile and desktop.
+title: レイアウト
+description: レイアウトは Nuxt.js アプリのルック&フィールを変えるとき、とても役に立ちます. サイドバーを含めるか、モバイルとデスクトップのための明確なレイアウトを持つかどうかです.
 position: 7
 category: directory-structure
 csb_link: https://codesandbox.io/embed/github/nuxt-academy/guides-examples/tree/master/04_directory_structure/07_layouts?fontsize=14&hidenavigation=1&theme=dark
@@ -62,19 +62,19 @@ questions:
     correctAnswer: false
 ---
 
-Layouts are a great help when you want to change the look and feel of your Nuxt.js app. Whether you want to include a sidebar or have distinct layouts for mobile and desktop.
+レイアウトは Nuxt.js アプリのルック&フィールを変えるとき、とても役に立ちます. サイドバーを含めるか、モバイルとデスクトップのための明確なレイアウトを持つかどうかです.
 
 <base-alert>
 
-_This directory cannot be renamed without extra configuration._
+_このディレクトリは追加の設定なしに名前を変更できないです_
 
 </base-alert>
 
-## Default Layout
+## デフォルトレイアウト
 
-You can extend the main layout by adding a `layouts/default.vue` file. It will be used for all pages that don't have a layout specified. Make sure to add the `<Nuxt>` component when creating a layout to actually include the page component.
+`layouts/default.vue` ファイルを追加することでメインレイアウトを継承できます. これはレイアウトが指定されていない全てのページで使用されます。レイアウトを作成するとき `<Nuxt>` コンポーネントを追加して、実際にページコンポーネントを含めるようにしてください。
 
-All you need in your layout is three lines of code which will render the page component.
+レイアウトに必要なのは、ページコンポーネントをレンダリングするための3行のコードだけです。
 
 ```html{}[layouts/default.vue]
 <template>
@@ -82,7 +82,7 @@ All you need in your layout is three lines of code which will render the page co
 </template>
 ```
 
-You can add more components here such as Navigation, Header, Footer etc.
+ナビゲーションやヘッダー、フッターのようなコンポーネントもここに追加できます.
 
 ```html{}[layouts/default.vue]
 <template>
@@ -96,15 +96,17 @@ You can add more components here such as Navigation, Header, Footer etc.
 
 <base-alert type="info">
 
-If you have [components set to true](/docs/2.x/directory-structure/components) then there is no need to add any import statements for your components.
+もし [components プロパティを true に設定](/docs/2.x/directory-structure/components)していたら、コンポーネントを追加するために import 文は必要ないです.
 
 </base-alert>
 
-## Custom Layout
+## カスタムレイアウト
 
-Every file (_top-level_) in the `layouts` directory will create a custom layout accessible with the `layout` property in the page components.
+Every file (_top-level_) in the `layouts` directory will create a custom layout accessible with the `layout` property in the page components.
 
-Let's say we want to create a blog layout and save it to `layouts/blog.vue`:
+`layout` ディレクトリの全てのファイル(_トップレベル_)は、ページコンポーネントの `layout` プロパティで使えるカスタムレイアウトが作られる.
+
+ブログレイアウトを作成して `layouts/blog.vue` に保存しましょう.
 
 ```html{}[layouts/blog.vue]
 <template>
@@ -115,7 +117,7 @@ Let's say we want to create a blog layout and save it to `layouts/blog.vue`:
 </template>
 ```
 
-Then you have to tell the pages to use your custom layout
+その後、カスタムレイアウトを使用するためにページに教えなければなりません。
 
 ```js{}[pages/posts.vue]
 <script>
@@ -133,19 +135,21 @@ export default {
   <code-sandbox  :src="csb_link"></code-sandbox>
 </app-modal>
 
-## Error Page
+## エラーページ
 
-The error page is a *page component* which is always displayed when an error occurs (that is not thrown on the server-side).
+The error page is a *page component* which is always displayed when an error occurs (that is not thrown on the server-side).
+
+エラーページはエラーが発生したときいつも表示される *ページコンポーネント*　です.(サーバーサイドで発生したものではない)
 
 <base-alert>
 
-Though this file is placed in the `layouts` folder, it should be treated as a page.
+このファイルは `layout` フォルダに置かれるが、ページとして扱われるべきです.
 
 </base-alert>
 
-As mentioned above, this layout is special and you should not include `<Nuxt>` inside its template. You must see this layout as a component displayed when an error occurs (`404`, `500`, etc.). Similar to other page components, you can set a custom layout for the error page as well in the usual way.
+上述したように、このレイアウトは特殊でテンプレートの中に `<Nuxt>` を含めるべきではありません。このレイアウトは、エラーが発生したときに表示されるコンポーネントとして表示されなければなりません (`404`, `500` など)。他のページコンポーネントと同様に、エラーページにも通常の方法でカスタムレイアウトを設定することができます。
 
-You can customize the error page by adding a `layouts/error.vue` file:
+`layouts/error.vue` ファイルを追加することで、エラーページをカスタマイズできます:
 
 ```js{}[layouts/error.vue]
 <template>
@@ -166,7 +170,7 @@ export default {
 
 <base-alert type="info">
 
-The default error page source code is [available on GitHub](https://github.com/nuxt/nuxt.js/blob/dev/packages/vue-app/template/components/nuxt-error.vue).
+デフォルトのエラーページのソースコードは [GitHub で手に入ります](https://github.com/nuxt/nuxt.js/blob/dev/packages/vue-app/template/components/nuxt-error.vue).
 
 </base-alert>
 

@@ -17,7 +17,7 @@ export default {
 
 ## Memulai
 
-1. Periksa [catatan rilis](/guide/release-notes) untuk versi yang ingin Anda tingkatkan untuk melihat apakah ada instruksi tambahan untuk rilis tersebut.
+1. Periksa [catatan rilis](/docs/release-notes) untuk versi yang ingin Anda tingkatkan untuk melihat apakah ada instruksi tambahan untuk rilis tersebut.
 2. Perbarui versi yang ditentukan untuk paket `nuxt` di file `package.json`.
 
 Setelah langkah ini, instruksi bervariasi tergantung pada apakah Anda menggunakan Yarn atau NPM.. _[Yarn](https://yarnpkg.com/en/docs/usage) adalah manajer paket yang lebih disukai untuk bekerja dengan Nuxt karena ini adalah alat pengembangan yang menjadi dasar pengujian._

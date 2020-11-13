@@ -26,9 +26,9 @@ Cette commande crée un répertoire `dist` contenant l'intégralité de l'applic
 
 Si vous avez créer un système GitHub Pages pour un dépôt spécifique et que vous n'avez pas de domaine personnalisé, l'URL de la page sera de au format suivant `http://<utilisateur>.github.io/<nom-du-depot>`.
 
-Si vous déployez le dossier `dist` sans ajouter une [base du router](https://nuxtjs.org/api/configuration-router/#base), quand vous visiterez le site déployé, les ressources de celui-ci seront indisponibles. Cela est du au fait que la base du site est `/` alors que dans le cas de GitHub Pages cette base est `/<repository-name>`.
+Si vous déployez le dossier `dist` sans ajouter une [base du router](/docs/2.x/configuration-glossary/configuration-router#base), quand vous visiterez le site déployé, les ressources de celui-ci seront indisponibles. Cela est du au fait que la base du site est `/` alors que dans le cas de GitHub Pages cette base est `/<repository-name>`.
 
-Pour régler ce problème nous devons ajouter la configuration d'une [base au router](https://nuxtjs.org/api/configuration-router/#base) dans `nuxt.config.js` :
+Pour régler ce problème nous devons ajouter la configuration d'une [base au router](/docs/2.x/configuration-glossary/configuration-router#base) dans `nuxt.config.js` :
 
 ```js
 export default {

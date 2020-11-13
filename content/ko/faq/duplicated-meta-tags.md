@@ -7,7 +7,7 @@ position: 104
 
 # 메타태그가 중복된 경우에는?
 
-이것은 [vue-meta](https://github.com/nuxt/vue-meta)의 "특징" 입니다. [head 요소 문서](/guide/views#html-head)를 참고해 주세요.
+이것은 [vue-meta](https://github.com/nuxt/vue-meta)의 "특징" 입니다. [head 요소 문서](/docs/2.x/concepts/views#html-head)를 참고해 주세요.
 
 > 컴포넌트에서 vue-meta 를 사용할 때, 중복을 피하기 위해서는 유일한 식별자를 hid 키에 붙여서 사용합니다. 자세한 내용은 [vue-meta 테그 리스트](https://vue-meta.nuxtjs.org/api/#tagidkeyname)를 참고해주세요.
 
@@ -47,4 +47,4 @@ export default {
 }
 ```
 
-페이지의 `head` 프로퍼티의 자세한 사용 방법에 대해서는 [HTML head 정보 문서](/guide/views#html-head)를 참고해 주세요.
+페이지의 `head` 프로퍼티의 자세한 사용 방법에 대해서는 [HTML head 정보 문서](/docs/2.x/concepts/views#html-head)를 참고해 주세요.

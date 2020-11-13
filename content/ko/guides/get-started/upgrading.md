@@ -17,7 +17,7 @@ export default {
 
 ## 시작하기
 
-1. 특정 릴리즈에 대해 추가적인 지시사항이 있는지 확인하기 위해 업그레이드하려는 버전의 [release notes](/guide/release-notes)를 확인하세요.
+1. 특정 릴리즈에 대해 추가적인 지시사항이 있는지 확인하기 위해 업그레이드하려는 버전의 [release notes](/docs/release-notes)를 확인하세요.
 2. `package.json` 파일에 있는 `nuxt` 패키지에 지정된 버전을 업데이트하세요.
 
 이 단계 이후에 해야 하는 일은 Yarn을 사용하는지 NPM을 사용하는지에 따라 다릅니다. _[Yarn](https://yarnpkg.com/en/docs/usage)은 테스트가 작성된 개발 도구이기 때문에 Nuxt를 작업할 때 선호되는 패키지 관리자입니다._

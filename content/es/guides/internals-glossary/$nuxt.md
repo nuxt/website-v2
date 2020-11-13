@@ -6,7 +6,7 @@ position: 2
 ---
 
 `$nuxt` es un ayudante diseñado para mejorar la experiencia del usuario.
-Para más información sobre el ayudante de Nuxt.js mira el [capítulo de contexto y ayudantes en el libro conceptos](https://nuxtjs.org/guides/concepts/context-helpers#nuxt-the-nuxtjs-helper)
+Para más información sobre el ayudante de Nuxt.js mira el [capítulo de contexto y ayudantes en el libro conceptos](/docs/2.x/concepts/context-helpers#nuxt-the-nuxtjs-helper)
 
 ## Comprobador de conexión
 

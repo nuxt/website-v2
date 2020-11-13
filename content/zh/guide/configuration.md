@@ -11,7 +11,7 @@ position: 103
 
 Nuxt.js 允许你在自动生成的 `vendor.bundle.js` 文件中添加一些模块，以减少应用 bundle 的体积。如果你的应用依赖第三方模块，这个配置项是十分实用的。
 
-[关于 build 配置项的详细文档](/api/configuration-build)
+[关于 build 配置项的详细文档](/docs/2.x/configuration-glossary/configuration-build)
 
 ### css
 
@@ -53,13 +53,13 @@ Nuxt.js 允许你在自动生成的 `vendor.bundle.js` 文件中添加一些模�
 
 该配置项允许您将 Nuxt 模块添加到项目中。
 
-[关于 `modules` 配置项的详细文档](/api/configuration-modules)
+[关于 `modules` 配置项的详细文档](/docs/2.x/configuration-glossary/configuration-modules)
 
 ### modulesDir
 
 该配置项允许您定义`Nuxt.js`应用程序的`node_modules`文件夹。
 
-[关于 `modulesDir` 配置项的详细文档](/api/configuration-modulesdir)
+[关于 `modulesDir` 配置项的详细文档](/docs/2.x/configuration-glossary/configuration-modulesdir)
 
 ### plugins
 

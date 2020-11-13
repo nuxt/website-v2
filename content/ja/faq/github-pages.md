@@ -18,7 +18,7 @@ GitHub Pages のホスティングにデプロイするもの全てが入った 
 
 <div class="Alert Alert--nuxt-green">
 
-<b>情報:</b> GitHub Pages にカスタムドメインを利用し `CNAME` ファイルを置くのであれば、CNAME ファイルは `static` ディレクトリに置くことをお勧めします。 より詳しい情報は[こちら](/guide/assets#static)を参照してください。
+<b>情報:</b> GitHub Pages にカスタムドメインを利用し `CNAME` ファイルを置くのであれば、CNAME ファイルは `static` ディレクトリに置くことをお勧めします。 より詳しい情報は[こちら](/docs/2.x/directory-structure/static)を参照してください。
 
 </div>
 
@@ -26,9 +26,9 @@ GitHub Pages のホスティングにデプロイするもの全てが入った 
 
 ある特定のリポジトリに GitHub Pages を作成しており、カスタムドメインをお持ちでない場合、ページの URL はこの形式になります: `https://<username>.github.io/<repository-name>`。
 
-もし、[router プロパティの base](https://nuxtjs.org/api/configuration-router/#base) を追加せずに `dist` フォルダをデプロイし、デプロイしたサイトにアクセスした場合、アセットが見つからないため、サイトが機能していないことが分かるはずです。 これは、ウェブサイトのルートが `/` となることを想定したためです。しかし実際には、GitHub Pages にデプロイした場合、`/<repository-name>` となります。
+もし、[router プロパティの base](/docs/2.x/configuration-glossary/configuration-router#base) を追加せずに `dist` フォルダをデプロイし、デプロイしたサイトにアクセスした場合、アセットが見つからないため、サイトが機能していないことが分かるはずです。 これは、ウェブサイトのルートが `/` となることを想定したためです。しかし実際には、GitHub Pages にデプロイした場合、`/<repository-name>` となります。
 
-この問題を解決するためには、`nuxt.config.js` に [router base](https://nuxtjs.org/api/configuration-router/#base) の設定を追加する必要があります:
+この問題を解決するためには、`nuxt.config.js` に [router base](/docs/2.x/configuration-glossary/configuration-router#base) の設定を追加する必要があります:
 
 ```js
 export default {

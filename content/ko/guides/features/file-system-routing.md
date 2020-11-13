@@ -399,7 +399,7 @@ export default {
 
 <base-alert>
 
-[Named Views](https://nuxtjs.org/guide/routing#named-views) 를 사용하는 라우트를 추가 할 때, 지정 된 `components` 에 `chunkNames`를 추가하는 것을 잊지마세요.
+[Named Views](/docs/2.x/features/file-system-routing#named-views) 를 사용하는 라우트를 추가 할 때, 지정 된 `components` 에 `chunkNames`를 추가하는 것을 잊지마세요.
 
 </base-alert>
 

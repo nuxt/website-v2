@@ -27,4 +27,4 @@ export default {
 
 > Note: You might not need jQuery in a Vue-based app.
 
-With Nuxt, you can also control plugins execution context: if they are meant to be run on the `client` or in the `server` builds (or differentiating `dev` and `prod` builds) within [`build.extend`](/api/configuration-build#extend), where you can manually pass webpack plugins too.
+With Nuxt, you can also control plugins execution context: if they are meant to be run on the `client` or in the `server` builds (or differentiating `dev` and `prod` builds) within [`build.extend`](/docs/2.x/configuration-glossary/configuration-build#extend), where you can manually pass webpack plugins too.

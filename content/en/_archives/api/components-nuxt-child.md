@@ -6,7 +6,7 @@ category: components
 position: 42
 ---
 
-> This component is used for displaying the children components in a [nested route](/guide/routing#nested-routes).
+> This component is used for displaying the children components in a [nested route](/docs/2.x/features/file-system-routing#nested-routes).
 
 Example:
 

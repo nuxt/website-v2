@@ -204,7 +204,7 @@ export const mutations = {
 
 > fetch 方法会在渲染页面前被调用，作用是填充状态树 (store) 数据，与 asyncData 方法类似，不同的是它不会设置组件的数据。
 
-关于 `fetch` 方法的更多信息，请参考 [页面 fetch 方法 API](/api/pages-fetch)。
+关于 `fetch` 方法的更多信息，请参考 [页面 fetch 方法 API](/docs/2.x/components-glossary/pages-fetch)。
 
 ## nuxtServerInit 方法
 
@@ -224,7 +224,7 @@ actions: {
 
 > 如果你使用*状态树模块化*的模式，只有主模块（即 `store/index.js`）适用设置该方法（其他模块设置了也不会被调用）。
 
-这时[context](/api/context)被赋予`nuxtServerInit`作为第二个参数，它与`asyncData`或`fetch`方法相同。
+这时[context](/docs/2.x/internals-glossary/context)被赋予`nuxtServerInit`作为第二个参数，它与`asyncData`或`fetch`方法相同。
 
 `nuxtServerInit` 方法接收的上下文对象和 `fetch` 的一样，但不包括 `context.redirect()` 和 `context.error()`。
 

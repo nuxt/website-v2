@@ -16,6 +16,6 @@ position: 17
 
 <base-alert type="next">
 
-Para saber mais sobre a opção `mode`, verifique a [seção de modos de renderização](https://nuxtjs.org/guides/features/rendering-modes).
+Para saber mais sobre a opção `mode`, verifique a [seção de modos de renderização](/docs/2.x/features/rendering-modes).
 
 </base-alert>

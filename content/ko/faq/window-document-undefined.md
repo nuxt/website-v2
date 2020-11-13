@@ -19,9 +19,9 @@ if (process.client) {
 }
 ```
 
-<!-- Don't forget to add your library in the [vendor bundle](/api/configuration-build#build-vendor) in your `nuxt.config.js`: -->
+<!-- Don't forget to add your library in the [vendor bundle](/docs/2.x/configuration-glossary/configuration-build#build-vendor) in your `nuxt.config.js`: -->
 
-`nuxt.config.js` 파일에 해당 라이브러리를 [vendor bundle](/api/configuration-build#vendor) 에 추가하는 것을 잊지 말기 바랍니다.
+`nuxt.config.js` 파일에 해당 라이브러리를 [vendor bundle](/docs/2.x/configuration-glossary/configuration-build#vendor) 에 추가하는 것을 잊지 말기 바랍니다.
 
 ```js
 build: {

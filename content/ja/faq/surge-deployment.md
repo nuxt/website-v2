@@ -30,7 +30,7 @@ surge dist/
 
 これで完了です。:)
 
-[動的なルーティング](/guide/routing#dynamic-routes)を行っているプロジェクトがある場合は、Nuxt.js に動的なルーティングをどう生成するか伝えるために [`generate` 設定](/api/configuration-generate)を参照してください。
+[動的なルーティング](/docs/2.x/directory-structure/pages#dynamic-pages)を行っているプロジェクトがある場合は、Nuxt.js に動的なルーティングをどう生成するか伝えるために [`generate` 設定](/api/configuration-generate)を参照してください。
 
 <div class="Alert">
 

@@ -105,7 +105,6 @@ redirect('https://vuejs.org')
 
 Location プロパティの詳細については、[Vue Router のドキュメント](https://github.com/vuejs/vue-router/blob/64d60c01920405f0b93e00a401c73868b08ee6e5/types/router.d.ts#L161-L169)を参照してください。
 
-
 <base-alert type="info">
 
 ハイドレーションエラー（クライアントの内容が、サーバーが返すものと異なってしまう）のため、[クライアントサイド限定の Nuxt プラグイン](/docs/2.x/directory-structure/plugins#client-or-server-side-only)の中では `redirect` や `error` を使用することはできません。
@@ -124,7 +123,7 @@ Location プロパティの詳細については、[Vue Router のドキュメ�
 
 `$config`（_Object_）
 
-実際の[ランタイム設定](/guide/runtime-config)。
+実際の[ランタイム設定](/docs/2.x/configuration-glossary/configuration-runtime-config)。
 
 ## サーバーサイドのキー
 
@@ -151,7 +150,6 @@ Node.js サーバーからのレスポンス。Nuxt がミドルウェアとし�
 ## クライアントサイドのキー
 
 これらのキーはクライアントサイドでのみ使用できます。
-
 
 ### from
 

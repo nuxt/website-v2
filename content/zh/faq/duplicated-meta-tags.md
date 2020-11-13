@@ -7,7 +7,7 @@ position: 104
 
 # 为什么 Nuxt.js 应用会出现重复的 Meta 标签？
 
-这是 [vue-meta](https://github.com/nuxt/vue-meta) 组件的一个特性， 具体请参考 [HTML 头部设置指引](/guide/views#html-头部)。
+这是 [vue-meta](https://github.com/nuxt/vue-meta) 组件的一个特性， 具体请参考 [HTML 头部设置指引](/docs/2.x/concepts/views#html-头部)。
 
 > 为了避免子组件中的 meta 标签不能正确覆盖父组件中相同的标签而产生重复的现象，建议利用 `hid` 键为 meta 标签配一个唯一的标识编号。请阅读[关于 `vue-meta` 的更多信息](https://vue-meta.nuxtjs.org/api/#tagidkeyname)。
 
@@ -47,4 +47,4 @@ export default {
 }
 ```
 
-想了解更多关于页面组件的 `head` 属性配置，请参考 [HTML 头部设置指引](/guide/views#html-头部)。
+想了解更多关于页面组件的 `head` 属性配置，请参考 [HTML 头部设置指引](/docs/2.x/concepts/views#html-头部)。

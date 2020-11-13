@@ -64,7 +64,7 @@ export default {
 }
 ```
 
-More information [here](https://nuxtjs.org/api/configuration-server/).
+More information [here](/docs/2.x/configuration-glossary/configuration-server).
 
 Or, add this to your package.json file:
 

@@ -77,7 +77,7 @@ module.exports = {
 }
 ```
 
-您可以参考 [构建配置](/api/configuration-build/#transpile) 文档来获取更多构建选项。
+您可以参考 [构建配置](/docs/2.x/configuration-glossary/configuration-build/#transpile) 文档来获取更多构建选项。
 
 ## 注入 \$root 和 context
 

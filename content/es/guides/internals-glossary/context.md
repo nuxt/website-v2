@@ -105,7 +105,7 @@ Utilice este método para mostrar la página de error: `error(params)`. Los `par
 
 `$config` (_Object_)
 
-La actual [configuración de tiempo de ejecución](/guide/runtime-config).
+La actual [configuración de tiempo de ejecución](/docs/2.x/configuration-glossary/configuration-runtime-config).
 
 ## Claves del lado del servidor
 

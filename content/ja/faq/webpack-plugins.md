@@ -27,4 +27,4 @@ export default {
 
 > 注意: Vue ベースのアプリでは jQuery は必要ない場合があります。
 
-Nuxt を使用すると、プラグインの実行コンテキストを制御することもできます。`client` ビルドまたは `server` ビルド（または `dev` ビルドと `prod` ビルドの区別）で実行する場合は、[`build.extend`](/api/configuration-build#extend)で webpack プラグインも手動で渡すことができます。
+Nuxt を使用すると、プラグインの実行コンテキストを制御することもできます。`client` ビルドまたは `server` ビルド（または `dev` ビルドと `prod` ビルドの区別）で実行する場合は、[`build.extend`](/docs/2.x/configuration-glossary/configuration-build#extend)で webpack プラグインも手動で渡すことができます。

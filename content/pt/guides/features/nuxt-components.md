@@ -215,7 +215,7 @@ Os componentes `<NuxtChild>` também podem receber propriedades como um componen
 </template>
 ```
 
-Para ver um exemplo, dê uma olhada no [exemplo de rotas aninhadas](https://nuxtjs.org/examples/nested-routes).
+Para ver um exemplo, dê uma olhada no [exemplo de rotas aninhadas](/examples/nested-routes).
 
 <app-modal>
   <code-sandbox  :src="csb_link_nuxt"></code-sandbox>

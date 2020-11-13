@@ -29,7 +29,7 @@ surge dist/
 
 Tadaaa :)
 
-Si vous avez un projet avec des [routes dynamiques](/guide/routing#routes-dynamiques), consultez la [configuration de `generate`](/api/configuration-generate) afin d'expliquer à Nuxt.js comment générer ces routes dynamiques.
+Si vous avez un projet avec des [routes dynamiques](/docs/2.x/directory-structure/pages#dynamic-pages), consultez la [configuration de `generate`](/api/configuration-generate) afin d'expliquer à Nuxt.js comment générer ces routes dynamiques.
 
 <div class="Alert">
 

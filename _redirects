@@ -19,7 +19,8 @@ https://www.nuxtjs.org/* https://nuxtjs.org/:splat 301!
 /guide/installation /docs/2.x/get-started/installation 301!
 /guide/modules /docs/2.x/directory-structure/modules 301!
 /guide/plugins /docs/2.x/directory-structure/plugins 301!
-/guide/release-notes /docs/2.x/release-notes 301!
+/guide/release-notes /docs/release-notes 301!
+/docs/2.x/release-notes /docs/release-notes 301!
 /guide/routing /docs/2.x/get-started/routing 301!
 /guide/runtime-config /docs/2.x/configuration-glossary/configuration-runtime-config 301!
 /guide/upgrading /docs/2.x/get-started/upgrading 301!
@@ -46,6 +47,7 @@ https://www.nuxtjs.org/* https://nuxtjs.org/:splat 301!
 /api/configuration-head /docs/2.x/configuration-glossary/configuration-head 301!
 /api/configuration-hooks /docs/2.x/configuration-glossary/configuration-hooks 301!
 /api/configuration-ignore /docs/2.x/configuration-glossary/configuration-ignore 301!
+/api/configuration-loading /docs/2.x/configuration-glossary/configuration-loading 301!
 /api/configuration-loading-indicator /docs/2.x/configuration-glossary/configuration-loading-indicator 301!
 /api/configuration-mode /docs/2.x/configuration-glossary/configuration-mode 301!
 /api/configuration-modern /docs/2.x/configuration-glossary/configuration-modern 301!
@@ -66,7 +68,7 @@ https://www.nuxtjs.org/* https://nuxtjs.org/:splat 301!
 /api/configuration-watch /docs/2.x/configuration-glossary/configuration-watch 301!
 /api/configuration-watchers /docs/2.x/configuration-glossary/configuration-watchers 301!
 /api/context /docs/2.x/internals-glossary/context 301!
-/api /docs/2.x/features/data-fetching#async-data 301!
+/api /docs/2.x/internals-glossary/context 301!
 /api/internals-builder /docs/2.x/internals-glossary/internals-builder 301!
 /api/internals-generator /docs/2.x/internals-glossary/internals-generator 301!
 /api/internals-module-container /docs/2.x/internals-glossary/internals-module-container 301!

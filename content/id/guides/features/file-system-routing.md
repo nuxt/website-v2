@@ -399,7 +399,7 @@ Skema dari rute harus mengikuti [vue-router](https://router.vuejs.org/en/)
 
 <base-alert>
 
-Ketika menambahkan rute yang menggunakan [_Views_ yang dinamai](https://nuxtjs.org/guide/routing#named-views), jangan lupa menambahkan `chunkNames` dari `components` yang dinamai.
+Ketika menambahkan rute yang menggunakan [_Views_ yang dinamai](/docs/2.x/features/file-system-routings), jangan lupa menambahkan `chunkNames` dari `components` yang dinamai.
 
 </base-alert>
 

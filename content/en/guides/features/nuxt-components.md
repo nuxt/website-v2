@@ -215,7 +215,7 @@ To learn more about keep-alive and keep-alive-props see the [vue docs](https://v
 </template>
 ```
 
-To see an example, take a look at the [nested-routes example](https://nuxtjs.org/examples/nested-routes).
+To see an example, take a look at the [nested-routes example](/examples/nested-routes).
 
 <app-modal>
   <code-sandbox  :src="csb_link_nuxt"></code-sandbox>

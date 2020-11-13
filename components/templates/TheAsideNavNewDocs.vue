@@ -54,7 +54,7 @@
         </div>
         <p class="uppercase font-bold pb-6">
           <NuxtLink
-            to="/docs/2.x/release-notes"
+            to="/docs/release-notes"
             class="block bg-gray-100 dark:bg-dark-surface p-2 rounded border dark:border-gray-900 text-sm text-light-onSurfaceSecondary dark:text-dark-onSurfaceSecondary"
             active-class=""
             exact-active-class=""

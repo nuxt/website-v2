@@ -212,7 +212,7 @@ Now we finally can start developing our DEV.TO clone powered by Nuxt and [new fe
 
 ### URL structure
 
-Let’s imitate DEV.TO URL structure for our simple app. Our [pages](docs/2.x/concepts/views#pages) folder should look like this:
+Let’s imitate DEV.TO URL structure for our simple app. Our [pages](/docs/2.x/concepts/views#pages) folder should look like this:
 
 ```
 ├── index.vue

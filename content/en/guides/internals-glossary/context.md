@@ -6,7 +6,7 @@ category: internals-glossary
 position: 1
 ---
 
-The `context` provides additional objects/params from Nuxt to Vue components and is available in special nuxt lifecycle areas like [`asyncData`](/api), [`fetch`](/docs/2.x/features/data-fetching), [`plugins`](/docs/2.x/directory-structure/plugins), [`middleware`](/docs/2.x/directory-structure/middleware#router-middleware) and [`nuxtServerInit`](/docs/2.x/directory-structure/store#the-nuxtserverinit-action).
+The `context` provides additional objects/params from Nuxt to Vue components and is available in special nuxt lifecycle areas like [`asyncData`](/docs/2.x/features/data-fetching#async-data), [`fetch`](/docs/2.x/features/data-fetching), [`plugins`](/docs/2.x/directory-structure/plugins), [`middleware`](/docs/2.x/directory-structure/middleware#router-middleware) and [`nuxtServerInit`](/docs/2.x/directory-structure/store#the-nuxtserverinit-action).
 
 > _Note: "The Context" we refer to here is not to be confused with the `context` object available in [`Vuex Actions`](https://vuex.vuejs.org/guide/actions.html). The two are unrelated._
 
@@ -123,7 +123,7 @@ Use this method to show the error page: `error(params)`. The `params` should hav
 
 `$config` (_Object_)
 
-The actual [runtime config](/guide/runtime-config).
+The actual [runtime config](/docs/2.x/configuration-glossary/configuration-runtime-config).
 
 ## Server-side keys
 

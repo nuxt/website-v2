@@ -103,11 +103,11 @@ npm run generate
 
 这个命令会创建一个 `dist` 文件夹，所有静态化后的资源文件均在其中。
 
-如果你的项目需要用到[动态路由](/docs/2.x/features/file-system-routing#动态路由)，请移步 [generate 配置 API](/api/configuration-generate) 了解如何让 Nuxt.js 生成此类动态路由的静态文件。
+如果你的项目需要用到[动态路由](/docs/2.x/features/file-system-routing#动态路由)，请移步 [generate 配置 API](/docs/2.x/configuration-glossary/configuration-generate) 了解如何让 Nuxt.js 生成此类动态路由的静态文件。
 
 <div class="Alert">
 
-注意：使用 `nuxt generate` 静态化应用的时候, 传给 [asyncData()](/guide/async-data#asyncdata-方法) 和 [fetch()](/guide/vuex-store#fetch-方法) 方法的[上下文对象](/api#上下文对象) 不会包含 `req` 和 `res` 两个属性。
+注意：使用 `nuxt generate` 静态化应用的时候, 传给 [asyncData()](/docs/2.x/features/data-fetching#async-data) 和 [fetch()](/docs/2.x/directory-structure/store) 方法的[上下文对象](/docs/2.x/internals-glossary/context) 不会包含 `req` 和 `res` 两个属性。
 
 </div>
 

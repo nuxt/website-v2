@@ -18,7 +18,7 @@ Cette commande crée un répertoire `dist` contenant l'intégralité de l'applic
 
 <div class="Alert Alert--nuxt-green">
 
-<b>Info :</b> si vous utilisez un nom de domaine personnalisé pour GitHub Pages à l'aide d'un fichier `CNAME`, il est recommandé de placer ce fichier dans le répertoire `static`. [Plus d'informations](/guide/assets#static) à ce propos.
+<b>Info :</b> si vous utilisez un nom de domaine personnalisé pour GitHub Pages à l'aide d'un fichier `CNAME`, il est recommandé de placer ce fichier dans le répertoire `static`. [Plus d'informations](/docs/2.x/directory-structure/assets) à ce propos.
 
 </div>
 

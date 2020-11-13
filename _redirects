@@ -25,7 +25,7 @@ https://www.nuxtjs.org/* https://nuxtjs.org/:splat 301!
 /guide/runtime-config /docs/2.x/configuration-glossary/configuration-runtime-config 301!
 /guide/upgrading /docs/2.x/get-started/upgrading 301!
 /guide/views /docs/2.x/concepts/views 301!
-/guide/vuex-store /docs/2.x/directory-structure/stores 301!
+/guide/vuex-store /docs/2.x/directory-structure/store 301!
 # [LEGACY] Redirect API URLs
 /api/components-no-ssr /api/components-client-only 301!
 /api/$nuxt /docs/2.x/internals-glossary/$nuxt 301!

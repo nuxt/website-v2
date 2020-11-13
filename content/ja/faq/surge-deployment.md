@@ -30,10 +30,10 @@ surge dist/
 
 これで完了です。:)
 
-[動的なルーティング](/guide/routing#dynamic-routes)を行っているプロジェクトがある場合は、Nuxt.js に動的なルーティングをどう生成するか伝えるために [`generate` 設定](/api/configuration-generate)を参照してください。
+[動的なルーティング](/docs/2.x/directory-structure/pages#dynamic-pages)を行っているプロジェクトがある場合は、Nuxt.js に動的なルーティングをどう生成するか伝えるために [`generate` 設定](/docs/2.x/configuration-glossary/configuration-generate)を参照してください。
 
 <div class="Alert">
 
-`nuxt generate` でウェブアプリケーションを生成時、[asyncData](/guide/async-data#the-data-method) と [`fetch`](/guide/vuex-store#the-fetch-method) に渡される[コンテキスト](/api)は `req` 及び `res` をもちません。
+`nuxt generate` でウェブアプリケーションを生成時、[asyncData](/docs/2.x/features/data-fetching#async-data) と [`fetch`](/docs/2.x/directory-structure/store#the-fetch-method) に渡される[コンテキスト](/docs/2.x/internals-glossary/context)は `req` 及び `res` をもちません。
 
 </div>

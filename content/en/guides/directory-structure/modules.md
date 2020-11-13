@@ -268,7 +268,7 @@ Please look into the [ModuleContainer](/docs/2.x/internals-glossary/internals-m
 
 ### Run Tasks on Specific hooks
 
-Your module may need to do things only on specific conditions and not just during Nuxt.js initialization. We can use the powerful Nuxt.js hooks to do tasks on specific events (based on [Hable](https://github.com/jsless/hable)). Nuxt.js will wait for your function if it returns a Promise or is defined as `async`.
+Your module may need to do things only on specific conditions and not just during Nuxt.js initialization. We can use the powerful Nuxt.js hooks to do tasks on specific events (based on [Hookable](https://github.com/nuxt-contrib/hookable)). Nuxt.js will wait for your function if it returns a Promise or is defined as `async`.
 
 Here are some basic examples:
 

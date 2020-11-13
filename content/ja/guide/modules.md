@@ -291,7 +291,7 @@ export default function (moduleOptions) {
 
 ## 特定のフックでタスクを実行する
 
-単に Nuxt の初期化処理時だけではなく、特定の条件下でのみ、モジュールにある処理を実行させたいこともあるでしょう。Nuxt.js システムの強力なフックを使用して特定のイベントでタスクを実行できます（[Hable](https://github.com/jsless/hable) をベースにしています）。Nuxt は関数が Promise を返すか、`async` として定義されている場合その関数を待機します。
+単に Nuxt の初期化処理時だけではなく、特定の条件下でのみ、モジュールにある処理を実行させたいこともあるでしょう。Nuxt.js システムの強力なフックを使用して特定のイベントでタスクを実行できます（[Hookable](https://github.com/nuxt-contrib/hookable) をベースにしています）。Nuxt は関数が Promise を返すか、`async` として定義されている場合その関数を待機します。
 
 以下が基本的な例です。
 

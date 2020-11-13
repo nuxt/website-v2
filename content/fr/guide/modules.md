@@ -293,7 +293,7 @@ export default function (moduleOptions) {
 
 ## Exécuter des tâches sur des écouteurs spécifiques
 
-Votre module peut avoir besoin de faire des choses uniquement dans certaines conditions spécifiques et pas seulement lors de l'initialisation de Nuxt. Nous pouvons utiliser le puissant système d'écouteurs de Nuxt.js pour effectuer des tâches sur des événements spécifiques (basés sur [Hable](https://github.com/jsless/hable)). Nuxt attendra votre fonction si elle retourne une promesse ou est définie en tant que `async`.
+Votre module peut avoir besoin de faire des choses uniquement dans certaines conditions spécifiques et pas seulement lors de l'initialisation de Nuxt. Nous pouvons utiliser le puissant système d'écouteurs de Nuxt.js pour effectuer des tâches sur des événements spécifiques (basés sur [Hookable](https://github.com/nuxt-contrib/hookable)). Nuxt attendra votre fonction si elle retourne une promesse ou est définie en tant que `async`.
 
 Voici quelques exemples de base :
 

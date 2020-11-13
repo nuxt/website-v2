@@ -1,3 +1,5 @@
+import webpack from 'webpack'
+
 export default {
   target: 'static',
   ssr: true,
@@ -54,15 +56,16 @@ export default {
     }
   },
   buildModules: [
-    '@nuxtjs/eslint-module',
+    // https://github.com/nuxt-community/eslint-module
+    // Disabled, waiting for https://github.com/nuxt-community/eslint-module/pull/46 to be released
+    // '@nuxtjs/eslint-module',
     // https://github.com/nuxt-community/color-mode-module
     '@nuxtjs/color-mode',
     // https://github.com/nuxt-community/netlify-files-module
     '@nuxtjs/netlify-files',
     // https://github.com/nuxt-community/style-resources-module
     '@nuxtjs/style-resources',
-    // https://github.com/Developmint/nuxt-svg-loader/
-    // 'nuxt-svg-loader',
+    // https://github.com/nuxt-community/svg-module
     '@nuxtjs/svg',
     // https://github.com/Atinux/nuxt-tailwindcss/
     '@nuxtjs/tailwindcss',
@@ -218,13 +221,15 @@ export default {
     lazy: true,
     langDir: 'i18n/'
   },
+  build: {
+    plugins: [
+      new webpack.IgnorePlugin({
+        resourceRegExp: /^\.\/locale$/,
+        contextRegExp: /moment$/
+      })
+    ]
+  },
   hooks: {
-    'render:route'(url, result, context) {
-      result.html = result.html.replace(/ defer>/g, ' defer async>')
-    },
-    'generate:page': page => {
-      page.html = page.html.replace(/ defer>/g, ' defer async>')
-    },
     'content:file:beforeInsert': item => {
       const stats = require('reading-time')(item.text)
 

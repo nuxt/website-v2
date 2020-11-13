@@ -5,7 +5,7 @@ category: development
 position: 104
 ---
 
-これは [vue-meta](https://github.com/nuxt/vue-meta) の "特徴" です。[head 要素のドキュメント](/guide/views#html-%E3%81%AE-head-%E6%83%85%E5%A0%B1) を参照してください。
+これは [vue-meta](https://github.com/nuxt/vue-meta) の "特徴" です。[head 要素のドキュメント](/docs/2.x/concepts/views#html-%E3%81%AE-head-%E6%83%85%E5%A0%B1) を参照してください。
 
 <div class="Alert">
 
@@ -49,4 +49,4 @@ export default {
 }
 ```
 
-ページ内の `head` プロパティの使い方をより深く理解するには [HTML の head 情報のドキュメント](/guide/views#html-%E3%81%AE-head-%E6%83%85%E5%A0%B1) を参照してください。
+ページ内の `head` プロパティの使い方をより深く理解するには [HTML の head 情報のドキュメント](/docs/2.x/concepts/views#html-%E3%81%AE-head-%E6%83%85%E5%A0%B1) を参照してください。

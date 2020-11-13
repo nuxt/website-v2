@@ -215,7 +215,7 @@ Al igual que cualquier componente normal de Vue, los componentes `<NuxtChild>` t
 </template>
 ```
 
-Si deseas ver un ejemplo, consulta aquí: [ejemplo nested-routes](https://nuxtjs.org/examples/nested-routes).
+Si deseas ver un ejemplo, consulta aquí: [ejemplo nested-routes](/examples/nested-routes).
 
 <app-modal>
   <code-sandbox  :src="csb_link_nuxt"></code-sandbox>

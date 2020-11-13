@@ -3,15 +3,14 @@ title: Internal Module
 description: Internal and external modules to fetch data from an API
 position: 501
 category: modules
-csb_link: https://codesandbox.io/embed/github/nuxt-academy/guides-examples/tree/master/04_directory_structure/10_modules
+csb_link: https://codesandbox.io/embed/github/nuxt-academy/guides-examples/tree/master/04_directory_structure/10_modules-internal?fontsize=14&hidenavigation=1&module=%2Fmodules%2FgetUrl%2Findex.js&theme=dark
 ---
 
 <example-intro></example-intro>
 
-- `modules/nuxt-api/plugin.js` shows how the function `nuxtApi` works.
-- `modules/nuxt-api/index.js` adds our plugin so we can use it.
-- `pages/index.vue` uses `$app.$nuxtApi` to call our API.
-- `nuxt.config.js` registers our modules using the `buildModules` property.
+- `modules/getUrl/index.js` adds a public URL from ngrok to the Nuxt CLI when in dev mode.
+- `pages/index.vue` shows the public URL from ngrok.
+- `nuxt.config.js` registers our module using the `buildModules` property.
 
 <base-alert type="next">
 

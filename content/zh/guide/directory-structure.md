@@ -73,7 +73,7 @@ _若无额外配置，该目录不能被重命名。_
 
 _若无额外配置，该目录不能被重命名。_
 
-[关于 store 的更多信息](/guide/vuex-store)
+[关于 store 的更多信息](/docs/2.x/directory-structure/store)
 
 ### nuxt.config.js 文件
 
@@ -81,7 +81,7 @@ _若无额外配置，该目录不能被重命名。_
 
 _若无额外配置，该文件不能被重命名。_
 
-[关于 nuxt.config.js 的更多信息](/guide/configuration)
+[关于 nuxt.config.js 的更多信息](/docs/2.x/directory-structure/nuxt-config)
 
 ### package.json 文件
 
@@ -91,10 +91,10 @@ _该文件不能被重命名。_
 
 ## 别名
 
-| 别名         | 目录                                  |
-| ------------ | ------------------------------------- |
-| `~` 或 `@`   | [srcDir](/api/configuration-srcdir)   |
-| `~~` 或 `@@` | [rootDir](/api/configuration-rootdir) |
+| 别名         | 目录                                                              |
+| ------------ | ----------------------------------------------------------------- |
+| `~` 或 `@`   | [srcDir](/docs/2.x/configuration-glossary/configuration-srcdir)   |
+| `~~` 或 `@@` | [rootDir](/docs/2.x/configuration-glossary/configuration-rootdir) |
 
 默认情况下，`srcDir` 和 `rootDir` 相同。
 

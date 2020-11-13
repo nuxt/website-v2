@@ -29,19 +29,19 @@ Nuxt.js 允许你在自动生成的 `vendor.bundle.js` 文件中添加一些模�
 
 该配置项用于定义应用客户端和服务端的环境变量。
 
-[关于 env 配置项的详细文档](/api/configuration-env)
+[关于 env 配置项的详细文档](/docs/2.x/configuration-glossary/configuration-env)
 
 ### generate
 
 该配置项用于定义每个动态路由的参数，Nuxt.js 依据这些路由配置生成对应目录结构的静态文件。
 
-[关于 generate 配置项的详细文档](/api/configuration-generate)
+[关于 generate 配置项的详细文档](/docs/2.x/configuration-glossary/configuration-generate)
 
 ### head
 
 该配置项用于配置应用默认的 meta 标签。
 
-[关于 head 配置项的详细文档](/api/configuration-head)
+[关于 head 配置项的详细文档](/docs/2.x/configuration-glossary/configuration-head)
 
 ### loading
 

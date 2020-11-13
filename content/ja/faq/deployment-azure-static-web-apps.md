@@ -96,7 +96,7 @@ Azure App Service の Static App が想定できることはいくつかあり�
 
 \_id.vue のような動的なページを扱う場合は、これらのルートを nuxt.config.js の generate プロパティに追加する必要があります。
 
-[動的なルーティングを扱う方法のドキュメントを参照してください。](https://ja.nuxtjs.org/api/configuration-generate/#routes)
+[動的なルーティングを扱う方法のドキュメントを参照してください。](/docs/2.x/configuration-glossary#routes)
 
 <div class="Alert">
 Nuxt 2.13+ を使用しているのであれば、すべての動的ページをサイトリンクからクロールするクローラーが組み込まれているので、このことを心配する必要はありません。
@@ -110,4 +110,4 @@ Nuxt 2.13+ を使用しているのであれば、すべての動的ページを
 
 いくつかのページを生成せずにシングルページアプリケーションとして動作させたい場合は、nuxt.config ファイルの中の generate.excludes プロパティを使用して、可能になります。
 
-[SPA フォールバックに関するドキュメントを参照してください。](https://ja.nuxtjs.org/api/configuration-generate#exclude)
+[SPA フォールバックに関するドキュメントを参照してください。](/docs/2.x/configuration-glossary#exclude)

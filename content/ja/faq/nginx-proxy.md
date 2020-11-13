@@ -42,7 +42,7 @@ server {
 
 以下は設定例です。次のことを忘れないでください:
 
-- ルートフォルダは [generate.dir の設定](/api/configuration-generate#dir)と同じにするべきです
+- ルートフォルダは [generate.dir の設定](/docs/2.x/configuration-glossary/configuration-generate#dir)と同じにするべきです
 - （キャッシュのために）Nuxt によって設定された expire ヘッダは外されます
 - Nuxt と nginx ともに追加のヘッダを設定することができますが、どちらか 1 つを選ぶことをお勧めします（もし迷ったら、nginx を選んでください）
 - もしあなたのサイト大部分が静的な場合、`proxy_cache_path inactive` と `proxy_cache_valid` の値を増加させます

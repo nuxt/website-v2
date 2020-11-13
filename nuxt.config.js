@@ -1,6 +1,11 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 module.exports = {
 =======
+=======
+import webpack from 'webpack'
+
+>>>>>>> 32390dfa (fix: missing URLs and release-notes)
 export default {
   target: 'static',
   ssr: true,
@@ -56,17 +61,26 @@ export default {
     }
   },
   buildModules: [
+<<<<<<< HEAD
     '@nuxtjs/eslint-module',
     ['~/modules/docs/', { port: 3001 }],
     '~/modules/crawler/',
     '~/modules/static/',
     '~/modules/components/',
     '~/modules/theme/',
+=======
+    // https://github.com/nuxt-community/eslint-module
+    // Disabled, waiting for https://github.com/nuxt-community/eslint-module/pull/46 to be released
+    // '@nuxtjs/eslint-module',
+    // https://github.com/nuxt-community/color-mode-module
+    '@nuxtjs/color-mode',
+>>>>>>> 32390dfa (fix: missing URLs and release-notes)
     // https://github.com/nuxt-community/netlify-files-module
     '@nuxtjs/netlify-files',
     // https://github.com/nuxt-community/style-resources-module
 >>>>>>> 1b87907b (feat: dark mode (#303))
     '@nuxtjs/style-resources',
+<<<<<<< HEAD
 <<<<<<< HEAD
     'nuxt-svg-loader'
     // ['~/modules/sentry', {
@@ -84,6 +98,12 @@ export default {
 >>>>>>> b4c06c90 (Merge branch 'master' of https://github.com/nuxt/nuxtjs.org)
 =======
     'nuxt-payload-extractor',
+=======
+    // https://github.com/nuxt-community/svg-module
+    '@nuxtjs/svg',
+    // https://github.com/Atinux/nuxt-tailwindcss/
+    '@nuxtjs/tailwindcss',
+>>>>>>> 32390dfa (fix: missing URLs and release-notes)
     // https://pwa.nuxtjs.org
     '@nuxtjs/pwa'
 >>>>>>> dd0be05d (feat(pwa): Add PWA mode)
@@ -313,7 +333,28 @@ export default {
     seo: false,
     lazy: true,
     langDir: 'i18n/'
+<<<<<<< HEAD
 >>>>>>> 26a70b2b (chore: add guides section (#407))
+=======
+  },
+  build: {
+    plugins: [
+      new webpack.IgnorePlugin({
+        resourceRegExp: /^\.\/locale$/,
+        contextRegExp: /moment$/
+      })
+    ]
+  },
+  hooks: {
+    'content:file:beforeInsert': item => {
+      const stats = require('reading-time')(item.text)
+
+      if (item.slug === '' && item.extension === '.md') {
+      }
+
+      item.readingTime = stats
+    }
+>>>>>>> 32390dfa (fix: missing URLs and release-notes)
   }
 >>>>>>> f4d82e28 (guide content from component)
 }

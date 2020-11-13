@@ -248,6 +248,7 @@
     semver "^5.5.0"
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 "@babel/core@^7.9.0":
   version "7.9.0"
   resolved "https://registry.yarnpkg.com/@babel/core/-/core-7.9.0.tgz#ac977b538b77e132ff706f3b8a4dbad09c03c56e"
@@ -266,6 +267,12 @@
   version "7.10.5"
   resolved "https://registry.yarnpkg.com/@babel/core/-/core-7.10.5.tgz#1f15e2cca8ad9a1d78a38ddba612f5e7cdbbd330"
   integrity sha512-O34LQooYVDXPl7QWCdW9p4NR+QlzOr7xShPPJz8GsuCU3/8ua/wqTr7gmnxXv+WBESiGU/G5s16i6tUvHkNb+w==
+=======
+"@babel/core@>=7.9.0", "@babel/core@^7.12.3":
+  version "7.12.3"
+  resolved "https://registry.yarnpkg.com/@babel/core/-/core-7.12.3.tgz#1b436884e1e3bff6fb1328dc02b208759de92ad8"
+  integrity sha512-0qXcZYKZp3/6N2jKYVxZv0aNCsxTSVCiK72DTiTYZAu7sjg73W0/aynWjMbiGd87EQL4WyA8reiJVh92AVla9g==
+>>>>>>> 32390dfa (fix: missing URLs and release-notes)
   dependencies:
     "@babel/code-frame" "^7.10.4"
     "@babel/generator" "^7.10.5"
@@ -880,10 +887,17 @@
     "@babel/helper-explode-assignable-expression" "^7.10.4"
     "@babel/types" "^7.10.4"
 
+<<<<<<< HEAD
 "@babel/helper-compilation-targets@^7.10.4":
   version "7.10.4"
   resolved "https://registry.yarnpkg.com/@babel/helper-compilation-targets/-/helper-compilation-targets-7.10.4.tgz#804ae8e3f04376607cc791b9d47d540276332bd2"
   integrity sha512-a3rYhlsGV0UHNDvrtOXBg8/OpfV0OKTkxKPzIplS1zpx7CygDcWWxckxZeDd3gzPzC4kUT0A4nVFDK0wGMh4MQ==
+=======
+"@babel/helper-compilation-targets@^7.12.1", "@babel/helper-compilation-targets@^7.12.5":
+  version "7.12.5"
+  resolved "https://registry.yarnpkg.com/@babel/helper-compilation-targets/-/helper-compilation-targets-7.12.5.tgz#cb470c76198db6a24e9dbc8987275631e5d29831"
+  integrity sha512-+qH6NrscMolUlzOYngSBMIOQpKUGPPsc61Bu5W10mg84LxZ7cmvnBHzARKbDoFxVvqqAbj6Tg6N7bSrWSPXMyw==
+>>>>>>> 32390dfa (fix: missing URLs and release-notes)
   dependencies:
     "@babel/compat-data" "^7.10.4"
     browserslist "^4.12.0"
@@ -1539,6 +1553,7 @@
     "@babel/helper-remap-async-to-generator" "^7.8.3"
     "@babel/plugin-syntax-async-generators" "^7.8.0"
 
+<<<<<<< HEAD
 "@babel/plugin-proposal-class-properties@^7.8.3":
   version "7.8.3"
   resolved "https://registry.yarnpkg.com/@babel/plugin-proposal-class-properties/-/plugin-proposal-class-properties-7.8.3.tgz#5e06654af5cd04b608915aada9b2a6788004464e"
@@ -1553,6 +1568,12 @@
   version "7.10.5"
   resolved "https://registry.yarnpkg.com/@babel/plugin-proposal-async-generator-functions/-/plugin-proposal-async-generator-functions-7.10.5.tgz#3491cabf2f7c179ab820606cec27fed15e0e8558"
   integrity sha512-cNMCVezQbrRGvXJwm9fu/1sJj9bHdGAgKodZdLqOQIpfoH3raqmRPBM17+lh7CzhiKRRBrGtZL9WcjxSoGYUSg==
+=======
+"@babel/plugin-proposal-class-properties@^7.12.1":
+  version "7.12.1"
+  resolved "https://registry.yarnpkg.com/@babel/plugin-proposal-class-properties/-/plugin-proposal-class-properties-7.12.1.tgz#a082ff541f2a29a4821065b8add9346c0c16e5de"
+  integrity sha512-cKp3dlQsFsEs5CWKnN7BnSHOd0EOW8EKpEjkoz1pO2E5KzIDNV9Ros1b0CnmbVgAGXJubOYVBOGCT1OmJwOI7w==
+>>>>>>> 32390dfa (fix: missing URLs and release-notes)
   dependencies:
     "@babel/helper-plugin-utils" "^7.10.4"
     "@babel/helper-remap-async-to-generator" "^7.10.4"
@@ -1577,6 +1598,7 @@
     "@babel/helper-plugin-utils" "^7.8.3"
     "@babel/plugin-syntax-decorators" "^7.8.3"
 
+<<<<<<< HEAD
 "@babel/plugin-proposal-dynamic-import@^7.8.3":
   version "7.8.3"
   resolved "https://registry.yarnpkg.com/@babel/plugin-proposal-dynamic-import/-/plugin-proposal-dynamic-import-7.8.3.tgz#38c4fe555744826e97e2ae930b0fb4cc07e66054"
@@ -1645,6 +1667,12 @@
   version "7.10.5"
   resolved "https://registry.yarnpkg.com/@babel/plugin-proposal-decorators/-/plugin-proposal-decorators-7.10.5.tgz#42898bba478bc4b1ae242a703a953a7ad350ffb4"
   integrity sha512-Sc5TAQSZuLzgY0664mMDn24Vw2P8g/VhyLyGPaWiHahhgLqeZvcGeyBZOrJW0oSKIK2mvQ22a1ENXBIQLhrEiQ==
+=======
+"@babel/plugin-proposal-decorators@^7.12.1":
+  version "7.12.1"
+  resolved "https://registry.yarnpkg.com/@babel/plugin-proposal-decorators/-/plugin-proposal-decorators-7.12.1.tgz#59271439fed4145456c41067450543aee332d15f"
+  integrity sha512-knNIuusychgYN8fGJHONL0RbFxLGawhXOJNLBk75TniTsZZeA+wdkDuv6wp4lGwzQEKjZi6/WYtnb3udNPmQmQ==
+>>>>>>> 32390dfa (fix: missing URLs and release-notes)
   dependencies:
     "@babel/helper-create-class-features-plugin" "^7.10.5"
     "@babel/helper-plugin-utils" "^7.10.4"
@@ -4676,6 +4704,7 @@
   dependencies:
     "@types/node" "*"
 
+<<<<<<< HEAD
 "@types/crawler@^1.2.2":
   version "1.2.2"
   resolved "https://registry.npmjs.org/@types/crawler/-/crawler-1.2.2.tgz"
@@ -4685,6 +4714,12 @@
   version "0.6.4"
   resolved "https://registry.yarnpkg.com/@jimp/bmp/-/bmp-0.6.4.tgz#0f4b94486e979d82c83e1e87cd00b756afb26e49"
   integrity sha512-dhKM7Cjw4XoOefx3/we2+vWyTP6hQPpM7mEsziGjtsrK2f/e3/+hhHbEsQNgO9BOA1FPJRXAOiYHts9IlMH1mg==
+=======
+"@babel/plugin-transform-runtime@^7.12.1":
+  version "7.12.1"
+  resolved "https://registry.yarnpkg.com/@babel/plugin-transform-runtime/-/plugin-transform-runtime-7.12.1.tgz#04b792057eb460389ff6a4198e377614ea1e7ba5"
+  integrity sha512-Ac/H6G9FEIkS2tXsZjL4RAdS3L3WHxci0usAnz7laPWUmFiGtj7tIASChqKZMHTSQTQY6xDbOq+V1/vIq3QrWg==
+>>>>>>> 32390dfa (fix: missing URLs and release-notes)
   dependencies:
     "@jimp/utils" "^0.6.4"
     bmp-js "^0.1.0"
@@ -4766,10 +4801,17 @@
     "@jimp/utils" "^0.6.4"
     core-js "^2.5.7"
 
+<<<<<<< HEAD
 "@jimp/plugin-cover@^0.6.4":
   version "0.6.4"
   resolved "https://registry.yarnpkg.com/@jimp/plugin-cover/-/plugin-cover-0.6.4.tgz#1d341438552ffc673c2e8b68b4419b9aaf844657"
   integrity sha512-z6eafPonj3LJY8cTEfRkXmOfCDi1+f0tbYaNvmiu+OrWJ3Ojw2hMt+BVVvJ8pKe1dWIFkCjxOjyjZWj1gEkaLw==
+=======
+"@babel/preset-env@^7.12.1":
+  version "7.12.1"
+  resolved "https://registry.yarnpkg.com/@babel/preset-env/-/preset-env-7.12.1.tgz#9c7e5ca82a19efc865384bb4989148d2ee5d7ac2"
+  integrity sha512-H8kxXmtPaAGT7TyBvSSkoSTUK6RHh61So05SyEbpmr0MCZrsNYn7mGMzzeYoOUCdHzww61k8XBft2TaES+xPLg==
+>>>>>>> 32390dfa (fix: missing URLs and release-notes)
   dependencies:
     "@jimp/utils" "^0.6.4"
     core-js "^2.5.7"
@@ -4782,10 +4824,17 @@
     "@jimp/utils" "^0.6.4"
     core-js "^2.5.7"
 
+<<<<<<< HEAD
 "@jimp/plugin-displace@^0.6.4":
   version "0.6.4"
   resolved "https://registry.yarnpkg.com/@jimp/plugin-displace/-/plugin-displace-0.6.4.tgz#7d641e402aade5d13d8eea93dc94fac39027da97"
   integrity sha512-MEvtBXOAio/3iGJkKBrTtFs3Q38ez2Wy/wTD0Ruas+L8fjJR7l4mDgV+zjRr57CqB5mpY+L48VEoa2/gNXh9cg==
+=======
+"@babel/runtime@^7.12.5", "@babel/runtime@^7.8.4":
+  version "7.12.5"
+  resolved "https://registry.yarnpkg.com/@babel/runtime/-/runtime-7.12.5.tgz#410e7e487441e1b360c29be715d870d9b985882e"
+  integrity sha512-plcc+hbExy3McchJCEQG3knOsuh3HH+Prx1P6cLIkET/0dLuQDEnrT+s27Axgc9bqfsmNUNHfscgMUdBpC9xfg==
+>>>>>>> 32390dfa (fix: missing URLs and release-notes)
   dependencies:
     "@jimp/utils" "^0.6.4"
     core-js "^2.5.7"
@@ -5011,6 +5060,7 @@
     serialize-javascript "^1.6.1"
     upath "^1.1.0"
 
+<<<<<<< HEAD
 "@nuxt/cli-edge@2.4.0-25783204.eef2af35":
   version "2.4.0-25783204.eef2af35"
   resolved "https://registry.yarnpkg.com/@nuxt/cli-edge/-/cli-edge-2.4.0-25783204.eef2af35.tgz#4ad181c0a14745ff90bd8a1745fe5d30246bf108"
@@ -5073,12 +5123,69 @@
     boxen "^4.2.0"
     chalk "^3.0.0"
     consola "^2.11.3"
+=======
+"@nuxt/babel-preset-app-edge@2.14.8-26753787.80571bc0":
+  version "2.14.8-26753787.80571bc0"
+  resolved "https://registry.yarnpkg.com/@nuxt/babel-preset-app-edge/-/babel-preset-app-edge-2.14.8-26753787.80571bc0.tgz#3be29df9fb8fc3b950e3b6ee6b2c171cbbb46205"
+  integrity sha512-dCRWq4izxyPLCex+jcuCwDbgglMExYiJE5DnMm4IhZXO+qnZR4H9Ki6CZ1Jz/nTK8eNU/Dp/vkwZueA1VE9ACw==
+  dependencies:
+    "@babel/core" "^7.12.3"
+    "@babel/helper-compilation-targets" "^7.12.5"
+    "@babel/plugin-proposal-class-properties" "^7.12.1"
+    "@babel/plugin-proposal-decorators" "^7.12.1"
+    "@babel/plugin-proposal-nullish-coalescing-operator" "^7.12.1"
+    "@babel/plugin-proposal-optional-chaining" "^7.12.1"
+    "@babel/plugin-transform-runtime" "^7.12.1"
+    "@babel/preset-env" "^7.12.1"
+    "@babel/runtime" "^7.12.5"
+    "@vue/babel-preset-jsx" "^1.2.4"
+    core-js "^2.6.5"
+
+"@nuxt/builder-edge@2.14.8-26753787.80571bc0":
+  version "2.14.8-26753787.80571bc0"
+  resolved "https://registry.yarnpkg.com/@nuxt/builder-edge/-/builder-edge-2.14.8-26753787.80571bc0.tgz#e32896e81c8f60f5bac68c60074d8434d7be3ce2"
+  integrity sha512-cbhP8LgGRrFz93nBrK+AmDYeFJH+xn6I2rReR8CWxuZbrrxtIGPdrsiothN1tM48CmY3rZYprmmvSUWgPTr2Vg==
+  dependencies:
+    "@nuxt/devalue" "^1.2.4"
+    "@nuxt/utils-edge" "2.14.8-26753787.80571bc0"
+    "@nuxt/vue-app-edge" "2.14.8-26753787.80571bc0"
+    "@nuxt/webpack-edge" "2.14.8-26753787.80571bc0"
+    chalk "^3.0.0"
+    chokidar "^3.4.3"
+    consola "^2.15.0"
+    fs-extra "^8.1.0"
+    glob "^7.1.6"
+    hash-sum "^2.0.0"
+    ignore "^5.1.8"
+    lodash "^4.17.20"
+    pify "^4.0.1"
+    semver "^7.3.2"
+    serialize-javascript "^5.0.1"
+    upath "^2.0.1"
+
+"@nuxt/cli-edge@2.14.8-26753787.80571bc0":
+  version "2.14.8-26753787.80571bc0"
+  resolved "https://registry.yarnpkg.com/@nuxt/cli-edge/-/cli-edge-2.14.8-26753787.80571bc0.tgz#7a08e4a65d85e4ce206dc1dd8d392eae03951870"
+  integrity sha512-uuhHrNfD95epsHt9Hw3RWfT0kLmRG1iWlDcKWa69/Hm5Iu83iDqxvdigLhNEz5s+GzEUHFILzxIkfgnvH6Cw9A==
+  dependencies:
+    "@nuxt/config-edge" "2.14.8-26753787.80571bc0"
+    "@nuxt/static" "^1.0.0"
+    "@nuxt/utils-edge" "2.14.8-26753787.80571bc0"
+    boxen "^4.2.0"
+    chalk "^3.0.0"
+    compression "^1.7.4"
+    connect "^3.7.0"
+    consola "^2.15.0"
+    crc "^3.8.0"
+    destr "^1.0.1"
+>>>>>>> 32390dfa (fix: missing URLs and release-notes)
     esm "^3.2.25"
     execa "^3.4.0"
     exit "^0.1.2"
     fs-extra "^8.1.0"
     hable "^3.0.0"
     minimist "^1.2.5"
+<<<<<<< HEAD
     opener "1.5.1"
     pretty-bytes "^5.3.0"
 >>>>>>> 61b90c66 (feat: Add /blog section (#307))
@@ -5090,11 +5197,25 @@
   version "2.4.0-25783204.eef2af35"
   resolved "https://registry.yarnpkg.com/@nuxt/config-edge/-/config-edge-2.4.0-25783204.eef2af35.tgz#8035518252d2be44d470a8aa5d64848818c70980"
   integrity sha512-Ec8ULkNIaRXaVEg6Jb+6k6tzyB+oLGVKM+CNogR3K+0+OTg1rRn8GEj6c2Z6bAcBeMzoOZpKs9BhSRt1EnTg+Q==
+=======
+    opener "1.5.2"
+    pretty-bytes "^5.4.1"
+    serve-static "^1.14.1"
+    std-env "^2.2.1"
+    upath "^2.0.1"
+    wrap-ansi "^6.2.0"
+
+"@nuxt/components@^1.1.1":
+  version "1.1.1"
+  resolved "https://registry.yarnpkg.com/@nuxt/components/-/components-1.1.1.tgz#f59832053f11801cc3d220de951f8167e3d31acc"
+  integrity sha512-Cw3QznmGjdT42xcpdID7jb/jvOeTo7gBX4en+nUJs3/O53O8lr9Xcc8XUzyu/MJVrvTy5sjUeuugfwy8AW84OQ==
+>>>>>>> 32390dfa (fix: missing URLs and release-notes)
   dependencies:
     "@nuxt/utils-edge" "2.4.0-25783204.eef2af35"
     consola "^2.3.2"
     std-env "^2.2.1"
 
+<<<<<<< HEAD
 "@nuxt/core-edge@2.4.0-25783204.eef2af35":
   version "2.4.0-25783204.eef2af35"
   resolved "https://registry.yarnpkg.com/@nuxt/core-edge/-/core-edge-2.4.0-25783204.eef2af35.tgz#8117635059e481abace8fb171f36d9a340ea64af"
@@ -5123,15 +5244,26 @@
   version "2.14.0-26597729.aebf0ffe"
   resolved "https://registry.yarnpkg.com/@nuxt/config-edge/-/config-edge-2.14.0-26597729.aebf0ffe.tgz#0fa962cce0c5d4a2a1dd1838106eb327518b1728"
   integrity sha512-ygKTdC1GR94moGB0K6coOQ94R9L8wm7w+7u251frt9vBhZl/UFQSe0rlVd2NI/0UVJWLAyIeibGLm4ll2re8Zg==
+=======
+"@nuxt/config-edge@2.14.8-26753787.80571bc0":
+  version "2.14.8-26753787.80571bc0"
+  resolved "https://registry.yarnpkg.com/@nuxt/config-edge/-/config-edge-2.14.8-26753787.80571bc0.tgz#40f522646c1999bd861ca737563d89723fb9a47b"
+  integrity sha512-6C0BEXZ+3SLlPzXSuj40muLeTKmo+gF+hryhOCDj4lRh8m7TiXl1DYhCkXeKnWfCoP+YZHKz4wSgtCFAEY4NoQ==
+>>>>>>> 32390dfa (fix: missing URLs and release-notes)
   dependencies:
-    "@nuxt/utils-edge" "2.14.0-26597729.aebf0ffe"
-    consola "^2.14.0"
+    "@nuxt/utils-edge" "2.14.8-26753787.80571bc0"
+    consola "^2.15.0"
     create-require "^1.0.2"
     defu "^2.0.4"
-    destr "^1.0.0"
+    destr "^1.0.1"
     dotenv "^8.2.0"
 >>>>>>> 26a70b2b (chore: add guides section (#407))
     esm "^3.2.25"
+<<<<<<< HEAD
+=======
+    jiti "^0.1.12"
+    rc9 "^1.1.0"
+>>>>>>> 32390dfa (fix: missing URLs and release-notes)
     std-env "^2.2.1"
 
 <<<<<<< HEAD
@@ -5183,19 +5315,27 @@
     ws "^7.3.1"
     xml2js "^0.4.23"
 
-"@nuxt/core-edge@2.14.0-26597729.aebf0ffe":
-  version "2.14.0-26597729.aebf0ffe"
-  resolved "https://registry.yarnpkg.com/@nuxt/core-edge/-/core-edge-2.14.0-26597729.aebf0ffe.tgz#0d915f7511d093c2a5ffc69efbedbec56280552d"
-  integrity sha512-c6HsU1L/AX5d52Y6c8IuLDXvL+g9DGb4YIfiLfBcJhWT7fMdbEf7tYTxyTY6eB4RgneWfOfvy5mjnDV305YSiA==
+"@nuxt/core-edge@2.14.8-26753787.80571bc0":
+  version "2.14.8-26753787.80571bc0"
+  resolved "https://registry.yarnpkg.com/@nuxt/core-edge/-/core-edge-2.14.8-26753787.80571bc0.tgz#c38cf30922d52c4dcbccf915610e6b288c6144c9"
+  integrity sha512-oehyp8mw4zEmckaEp+bqAUcPyvlGkTY/l3rX56mg6IBKrDiiOXAfdeCuB8+0X/Vzp3ZeyFQ9vVpQldcWFAGP6g==
   dependencies:
-    "@nuxt/config-edge" "2.14.0-26597729.aebf0ffe"
+    "@nuxt/config-edge" "2.14.8-26753787.80571bc0"
     "@nuxt/devalue" "^1.2.4"
+<<<<<<< HEAD
     "@nuxt/server-edge" "2.14.0-26597729.aebf0ffe"
     "@nuxt/utils-edge" "2.14.0-26597729.aebf0ffe"
     "@nuxt/vue-renderer-edge" "2.14.0-26597729.aebf0ffe"
     consola "^2.14.0"
 >>>>>>> 26a70b2b (chore: add guides section (#407))
     debug "^4.1.1"
+=======
+    "@nuxt/server-edge" "2.14.8-26753787.80571bc0"
+    "@nuxt/utils-edge" "2.14.8-26753787.80571bc0"
+    "@nuxt/vue-renderer-edge" "2.14.8-26753787.80571bc0"
+    consola "^2.15.0"
+    debug "^4.2.0"
+>>>>>>> 32390dfa (fix: missing URLs and release-notes)
     esm "^3.2.25"
     fs-extra "^8.1.0"
     hable "^3.0.0"
@@ -5220,6 +5360,7 @@
     error-stack-parser "^2.0.0"
     string-width "^2.0.0"
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -5264,6 +5405,19 @@
 >>>>>>> 61b90c66 (feat: Add /blog section (#307))
     fs-extra "^8.1.0"
     html-minifier "^4.0.0"
+=======
+"@nuxt/generator-edge@2.14.8-26753787.80571bc0":
+  version "2.14.8-26753787.80571bc0"
+  resolved "https://registry.yarnpkg.com/@nuxt/generator-edge/-/generator-edge-2.14.8-26753787.80571bc0.tgz#9b7e85be98580ab4074787322737915862720fcf"
+  integrity sha512-JF2esxU5+yHycK0FBBVStPlGrYiCvB2St5rPYO5zim0MAgDNPqJhZEXqXj2F/yiCiDeSNHxpVNqYZg0JO0jx6Q==
+  dependencies:
+    "@nuxt/utils-edge" "2.14.8-26753787.80571bc0"
+    chalk "^3.0.0"
+    consola "^2.15.0"
+    fs-extra "^8.1.0"
+    html-minifier "^4.0.0"
+    node-html-parser "^1.4.9"
+>>>>>>> 32390dfa (fix: missing URLs and release-notes)
 
 <<<<<<< HEAD
 "@nuxt/http@^0.3.9":
@@ -5302,10 +5456,17 @@
     serve-static "^1.14.1"
 >>>>>>> 1b87907b (feat: dark mode (#303))
 
+<<<<<<< HEAD
 "@nuxt/opencollective@^0.2.1":
   version "0.2.1"
   resolved "https://registry.yarnpkg.com/@nuxt/opencollective/-/opencollective-0.2.1.tgz#8290f1220072637e575c3935733719a78ad2d056"
   integrity sha512-NP2VSUKRFGutbhWeKgIU0MnY4fmpH8UWxxwTJNPurCQ5BeWhOxp+Gp5ltO39P/Et/J2GYGb3+ALNqZJ+5cGBBw==
+=======
+"@nuxt/opencollective@^0.3.2":
+  version "0.3.2"
+  resolved "https://registry.yarnpkg.com/@nuxt/opencollective/-/opencollective-0.3.2.tgz#83cb70cdb2bac5fad6f8c93529e7b11187d49c02"
+  integrity sha512-XG7rUdXG9fcafu9KTDIYjJSkRO38EwjlKYIb5TQ/0WDbiTUTtUtgncMscKOYzfsY86kGs05pAuMOR+3Fi0aN3A==
+>>>>>>> 32390dfa (fix: missing URLs and release-notes)
   dependencies:
     chalk "^2.4.1"
     consola "^2.3.0"
@@ -5349,21 +5510,31 @@
     consola "^2.10.1"
     node-fetch "^2.6.0"
 
-"@nuxt/server-edge@2.14.0-26597729.aebf0ffe":
-  version "2.14.0-26597729.aebf0ffe"
-  resolved "https://registry.yarnpkg.com/@nuxt/server-edge/-/server-edge-2.14.0-26597729.aebf0ffe.tgz#af3f3897ed3f2212236d83184078764eca522717"
-  integrity sha512-M31vt7IPU9iDO4GtNUBUaRyaTxdsE/DThaRviuL0SS8iRq4R8UZRb7IvRmJLRy/X8pfyG0eilj2NVv0WTTMtjw==
+"@nuxt/server-edge@2.14.8-26753787.80571bc0":
+  version "2.14.8-26753787.80571bc0"
+  resolved "https://registry.yarnpkg.com/@nuxt/server-edge/-/server-edge-2.14.8-26753787.80571bc0.tgz#5e39b225413d0991124299bf998d0996abe865ea"
+  integrity sha512-1W1KgIv4qsA3su9XdrhyfFJQ5KVdok0TwHM4JpPFQbGVm+/ixiPo5iZA7bk2tBp593Y0V2yctXB+vBXWg9+i6A==
   dependencies:
+<<<<<<< HEAD
     "@nuxt/config-edge" "2.14.0-26597729.aebf0ffe"
     "@nuxt/utils-edge" "2.14.0-26597729.aebf0ffe"
     "@nuxt/vue-renderer-edge" "2.14.0-26597729.aebf0ffe"
 >>>>>>> 26a70b2b (chore: add guides section (#407))
+=======
+    "@nuxt/config-edge" "2.14.8-26753787.80571bc0"
+    "@nuxt/utils-edge" "2.14.8-26753787.80571bc0"
+    "@nuxt/vue-renderer-edge" "2.14.8-26753787.80571bc0"
+>>>>>>> 32390dfa (fix: missing URLs and release-notes)
     "@nuxtjs/youch" "^4.2.3"
     chalk "^3.0.0"
     compression "^1.7.4"
     connect "^3.7.0"
+<<<<<<< HEAD
     consola "^2.11.3"
 >>>>>>> 61b90c66 (feat: Add /blog section (#307))
+=======
+    consola "^2.15.0"
+>>>>>>> 32390dfa (fix: missing URLs and release-notes)
     etag "^1.8.1"
     fresh "^0.5.2"
     fs-extra "^7.0.1"
@@ -5413,11 +5584,18 @@
     destr "^1.0.0"
     globby "^11.0.1"
 
+<<<<<<< HEAD
 "@nuxt/telemetry@^1.2.2":
   version "1.2.2"
   resolved "https://registry.yarnpkg.com/@nuxt/telemetry/-/telemetry-1.2.2.tgz#b086c73491c8891cca604694ffc08cc6a443ebff"
   integrity sha512-AAtOe8l/1Qevn6xJNoahU53k93fli+YzFz0dKWxpQbbOatSqMoIEI4iC1Nz+IBCzQgfib5OjIrd8IeO43g0dLQ==
 >>>>>>> 26a70b2b (chore: add guides section (#407))
+=======
+"@nuxt/telemetry@^1.2.3":
+  version "1.2.3"
+  resolved "https://registry.yarnpkg.com/@nuxt/telemetry/-/telemetry-1.2.3.tgz#bf841ecba44352117d627c1a213f038acc2ff05e"
+  integrity sha512-Y79IXGNQrvuZ8/yiCOGqA5urkuhbkQ42cTA7tAGA3NHWja1lX0Rj4ZyFY0psZRvyShYd5kW3OEUp5oLln/wW/Q==
+>>>>>>> 32390dfa (fix: missing URLs and release-notes)
   dependencies:
     ci-info "^2.0.0"
 <<<<<<< HEAD
@@ -5453,6 +5631,7 @@
     vue-template-compiler "^2.5.21"
     vuex "^3.0.1"
 
+<<<<<<< HEAD
 "@nuxt/vue-renderer-edge@2.4.0-25783204.eef2af35":
   version "2.4.0-25783204.eef2af35"
   resolved "https://registry.yarnpkg.com/@nuxt/vue-renderer-edge/-/vue-renderer-edge-2.4.0-25783204.eef2af35.tgz#305623b81b5b5d03fa8b197bbc49cab3d94c9900"
@@ -5528,13 +5707,34 @@
   resolved "https://registry.yarnpkg.com/@nuxt/vue-app-edge/-/vue-app-edge-2.14.0-26597729.aebf0ffe.tgz#ec7cfca4bbace6bed9a7839a86397e09081f6a23"
   integrity sha512-BlMk2/rICswuHmMSnWnIj9vPggk9CKfT+c8sSz9BgujGmvxIZQcE0sDRtpL9XbrNZLLQVu1f/PAAVfqA8VykwA==
 >>>>>>> 26a70b2b (chore: add guides section (#407))
+=======
+"@nuxt/utils-edge@2.14.8-26753787.80571bc0":
+  version "2.14.8-26753787.80571bc0"
+  resolved "https://registry.yarnpkg.com/@nuxt/utils-edge/-/utils-edge-2.14.8-26753787.80571bc0.tgz#a32647d7af5dec5a0da160088ac4cd60d4171299"
+  integrity sha512-c+oTpu+SHu9HVokzCccQ05FP5+dc34GG03KWXjVAQWxSqbor+IFZRe9jDZXo1s15mshvFeli07M8FzKqYr35Dw==
   dependencies:
-    node-fetch "^2.6.0"
-    unfetch "^4.1.0"
-    vue "^2.6.11"
+    consola "^2.15.0"
+    fs-extra "^8.1.0"
+    hash-sum "^2.0.0"
+    proper-lockfile "^4.1.1"
+    semver "^7.3.2"
+    serialize-javascript "^5.0.1"
+    signal-exit "^3.0.3"
+    ua-parser-js "^0.7.22"
+
+"@nuxt/vue-app-edge@2.14.8-26753787.80571bc0":
+  version "2.14.8-26753787.80571bc0"
+  resolved "https://registry.yarnpkg.com/@nuxt/vue-app-edge/-/vue-app-edge-2.14.8-26753787.80571bc0.tgz#5cce344f4ed4c108c2ecf0b6d018673516f6e0ac"
+  integrity sha512-4g8GZ4CmVqDXXrDnhyKgZqKa31C7Q/5wXjT7rNeIUcBhTC9ivzvoxtiyuGGx0XNzzBgqzqOMHlh/4uA4voFtaA==
+>>>>>>> 32390dfa (fix: missing URLs and release-notes)
+  dependencies:
+    node-fetch "^2.6.1"
+    unfetch "^4.2.0"
+    vue "^2.6.12"
     vue-client-only "^2.0.0"
     vue-meta "^2.3.3"
     vue-no-ssr "^1.1.1"
+<<<<<<< HEAD
     vue-router "^3.2.0"
     vue-template-compiler "^2.6.11"
     vuex "^3.1.3"
@@ -5608,29 +5808,68 @@
   version "2.14.0-26597729.aebf0ffe"
   resolved "https://registry.yarnpkg.com/@nuxt/webpack-edge/-/webpack-edge-2.14.0-26597729.aebf0ffe.tgz#8a313ffc25dee1a68fda08eab324ce0fc078578e"
   integrity sha512-su9LGAII2LIVUN9u48Dqow0V8UWq9ivFnfziFDWrL7KXvnFvFNGfV5jwPR9jmmZevCBhtsBkYVwcmtkQsGUF5A==
+=======
+    vue-router "3.4.8"
+    vue-template-compiler "^2.6.12"
+    vuex "^3.5.1"
+
+"@nuxt/vue-renderer-edge@2.14.8-26753787.80571bc0":
+  version "2.14.8-26753787.80571bc0"
+  resolved "https://registry.yarnpkg.com/@nuxt/vue-renderer-edge/-/vue-renderer-edge-2.14.8-26753787.80571bc0.tgz#e025d27bfddf9ca6c54f662f1c6483afe8d50347"
+  integrity sha512-I4OOQb4UFXEEYcoNk+NJcWKA00IoA0oL9EpeGWAzsnzFjYNh49ca91+QUibKtJr/VKMlpEQrjpHKhmFBLHS6wg==
   dependencies:
-    "@babel/core" "^7.10.5"
-    "@nuxt/babel-preset-app-edge" "2.14.0-26597729.aebf0ffe"
+    "@nuxt/devalue" "^1.2.4"
+    "@nuxt/utils-edge" "2.14.8-26753787.80571bc0"
+    consola "^2.15.0"
+    fs-extra "^8.1.0"
+    lru-cache "^5.1.1"
+    vue "^2.6.12"
+    vue-meta "^2.4.0"
+    vue-server-renderer "^2.6.12"
+
+"@nuxt/webpack-edge@2.14.8-26753787.80571bc0":
+  version "2.14.8-26753787.80571bc0"
+  resolved "https://registry.yarnpkg.com/@nuxt/webpack-edge/-/webpack-edge-2.14.8-26753787.80571bc0.tgz#0c33e35c6488f727d100357cbe22c3a1406d8e64"
+  integrity sha512-Tg5w1KpQZhHzRAJvn6Fky941xXaAKDjgax29pHLyY1O9XeZpq3SUfAUnMzvDZJAcw9onx5hCImhW/Wpkuwl7ng==
+>>>>>>> 32390dfa (fix: missing URLs and release-notes)
+  dependencies:
+    "@babel/core" "^7.12.3"
+    "@nuxt/babel-preset-app-edge" "2.14.8-26753787.80571bc0"
     "@nuxt/friendly-errors-webpack-plugin" "^2.5.0"
-    "@nuxt/utils-edge" "2.14.0-26597729.aebf0ffe"
+    "@nuxt/utils-edge" "2.14.8-26753787.80571bc0"
     babel-loader "^8.1.0"
     cache-loader "^4.1.0"
+<<<<<<< HEAD
     caniuse-lite "^1.0.30001107"
 >>>>>>> 26a70b2b (chore: add guides section (#407))
     chalk "^3.0.0"
     consola "^2.11.3"
     css-loader "^3.4.2"
+=======
+    caniuse-lite "^1.0.30001157"
+    chalk "^3.0.0"
+    consola "^2.15.0"
+    create-require "^1.0.2"
+    css-loader "^3.6.0"
+>>>>>>> 32390dfa (fix: missing URLs and release-notes)
     cssnano "^4.1.10"
     eventsource-polyfill "^0.9.6"
-    extract-css-chunks-webpack-plugin "^4.7.5"
+    extract-css-chunks-webpack-plugin "^4.8.0"
     file-loader "^4.3.0"
     glob "^7.1.6"
 >>>>>>> 61b90c66 (feat: Add /blog section (#307))
     hard-source-webpack-plugin "^0.13.1"
+<<<<<<< HEAD
     hash-sum "^1.0.2"
     html-webpack-plugin "^3.2.0"
     memory-fs "^0.4.1"
     optimize-css-assets-webpack-plugin "^5.0.1"
+=======
+    hash-sum "^2.0.0"
+    html-webpack-plugin "^4.5.0"
+    memory-fs "^0.4.1"
+    optimize-css-assets-webpack-plugin "^5.0.4"
+>>>>>>> 32390dfa (fix: missing URLs and release-notes)
     pify "^4.0.1"
 <<<<<<< HEAD
     postcss "^7.0.8"
@@ -5660,8 +5899,9 @@
     style-resources-loader "^1.3.3"
     terser-webpack-plugin "^2.3.5"
     thread-loader "^2.1.3"
-    time-fix-plugin "^2.0.6"
+    time-fix-plugin "^2.0.7"
     url-loader "^2.3.0"
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
     vue-loader "^15.9.1"
@@ -5684,6 +5924,14 @@
     webpackbar "^3.1.4"
 =======
     webpack-node-externals "^2.5.0"
+=======
+    vue-loader "^15.9.5"
+    webpack "^4.44.2"
+    webpack-bundle-analyzer "^3.9.0"
+    webpack-dev-middleware "^3.7.2"
+    webpack-hot-middleware "^2.25.0"
+    webpack-node-externals "^2.5.2"
+>>>>>>> 32390dfa (fix: missing URLs and release-notes)
     webpackbar "^4.0.0"
 
 "@nuxtjs/color-mode@^1.0.0":
@@ -7181,6 +7429,7 @@ acorn@^7.0.0, acorn@^7.1.1:
   integrity sha512-add7dgA5ppRPxCFJoAGfMDi7PIBXq1RtGo7BhbLaxwrXPOmw8gq48Y9ozT01hUKy9byMjlR20EJhu5zlkErEkg==
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 acorn@^7.1.0:
   version "7.1.0"
   resolved "https://registry.yarnpkg.com/acorn/-/acorn-7.1.0.tgz#949d36f2c292535da602283586c2477c57eb2d6c"
@@ -7203,6 +7452,8 @@ agent-base@6:
     debug "4"
 
 >>>>>>> 26a70b2b (chore: add guides section (#407))
+=======
+>>>>>>> 32390dfa (fix: missing URLs and release-notes)
 aggregate-error@^3.0.0:
   version "3.1.0"
   resolved "https://registry.npmjs.org/aggregate-error/-/aggregate-error-3.1.0.tgz"
@@ -7480,6 +7731,7 @@ arch@^2.1.1:
   resolved "https://registry.npmjs.org/arch/-/arch-2.2.0.tgz"
   integrity sha512-Of/R0wqp83cgHozfIYLbBMnej79U/SVGOOyuB3VVFv1NRM/PSFMK12x9KVtiYzJqmnU5WR2qp0Z5rHb7sWGnFQ==
 
+<<<<<<< HEAD
 are-we-there-yet@~1.1.2:
   version "1.1.5"
   resolved "https://registry.npmjs.org/are-we-there-yet/-/are-we-there-yet-1.1.5.tgz"
@@ -7500,6 +7752,12 @@ arg@^5.0.0:
   version "5.0.0"
   resolved "https://registry.npmjs.org/arg/-/arg-5.0.0.tgz"
   integrity sha512-4P8Zm2H+BRS+c/xX1LrHw0qKpEhdlZjLCgWy+d78T9vqa2Z2SiD2wMrYuWIAFy5IZUD7nnNXroRttz+0RzlrzQ==
+=======
+arg@^4.1.3:
+  version "4.1.3"
+  resolved "https://registry.yarnpkg.com/arg/-/arg-4.1.3.tgz#269fc7ad5b8e42cb63c896d5666017261c144089"
+  integrity sha512-58S9QDqG0Xx27YwPSt9fJxivjYl432YCwfDMfZ+71RAqUrZef7LrKQZ3LHLOwCS4FLNBplP533Zx895SeOCHvA==
+>>>>>>> 32390dfa (fix: missing URLs and release-notes)
 
 argparse@^1.0.7:
   version "1.0.10"
@@ -9491,6 +9749,7 @@ caniuse-api@^3.0.0:
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 caniuse-lite@^1.0.0, caniuse-lite@^1.0.30000844, caniuse-lite@^1.0.30000981, caniuse-lite@^1.0.30001109, caniuse-lite@^1.0.30001243, caniuse-lite@^1.0.30001248:
   version "1.0.30001248"
   resolved "https://registry.npmjs.org/caniuse-lite/-/caniuse-lite-1.0.30001248.tgz"
@@ -9505,6 +9764,17 @@ caniuse-lite@^1.0.0, caniuse-lite@^1.0.30000981, caniuse-lite@^1.0.30001093, can
   version "1.0.30001107"
   resolved "https://registry.yarnpkg.com/caniuse-lite/-/caniuse-lite-1.0.30001107.tgz#809360df7a5b3458f627aa46b0f6ed6d5239da9a"
   integrity sha512-86rCH+G8onCmdN4VZzJet5uPELII59cUzDphko3thQFgAQG1RNa+sVLDoALIhRYmflo5iSIzWY3vu1XTWtNMQQ==
+=======
+caniuse-lite@^1.0.0, caniuse-lite@^1.0.30000981, caniuse-lite@^1.0.30001109, caniuse-lite@^1.0.30001154:
+  version "1.0.30001156"
+  resolved "https://registry.yarnpkg.com/caniuse-lite/-/caniuse-lite-1.0.30001156.tgz#75c20937b6012fe2b02ab58b30d475bf0718de97"
+  integrity sha512-z7qztybA2eFZTB6Z3yvaQBIoJpQtsewRD74adw2UbRWwsRq3jIPvgrQGawBMbfafekQaD21FWuXNcywtTDGGCw==
+>>>>>>> 32390dfa (fix: missing URLs and release-notes)
+
+caniuse-lite@^1.0.30001157:
+  version "1.0.30001157"
+  resolved "https://registry.yarnpkg.com/caniuse-lite/-/caniuse-lite-1.0.30001157.tgz#2d11aaeb239b340bc1aa730eca18a37fdb07a9ab"
+  integrity sha512-gOerH9Wz2IRZ2ZPdMfBvyOi3cjaz4O4dgNwPGzx8EhqAs4+2IL/O+fJsbt+znSigujoZG8bVcIAUM/I/E5K3MA==
 
 capital-case@^1.0.3:
   version "1.0.3"
@@ -10147,6 +10417,7 @@ cliui@^6.0.0:
     strip-ansi "^6.0.0"
     wrap-ansi "^6.2.0"
 
+<<<<<<< HEAD
 >>>>>>> 61b90c66 (feat: Add /blog section (#307))
 clone-deep@^0.2.4:
   version "0.2.4"
@@ -10167,6 +10438,8 @@ clone-deep@^2.0.1:
   integrity sha512-SZegPTKjCgpQH63E+eN6mVEEPdQBOUzjyJm5Pora4lrwWRFS8I0QAxV/KD6vV/i0WuijHZWQC1fMsPEdxfdVCQ==
 >>>>>>> 5e315c38 (app: Support ad blockers, upgrade Nuxt)
 =======
+=======
+>>>>>>> 32390dfa (fix: missing URLs and release-notes)
 clone-regexp@^2.1.0:
   version "2.2.0"
   resolved "https://registry.yarnpkg.com/clone-regexp/-/clone-regexp-2.2.0.tgz#7d65e00885cd8796405c35a737e7a86b7429e36f"
@@ -10597,6 +10870,7 @@ connect@^3.6.6:
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 consola@^2.10.0, consola@^2.15.0, consola@^2.15.3, consola@^2.6.0:
   version "2.15.3"
   resolved "https://registry.npmjs.org/consola/-/consola-2.15.3.tgz"
@@ -10636,6 +10910,12 @@ consola@^2.10.0, consola@^2.10.1, consola@^2.11.3, consola@^2.12.2, consola@^2.1
   resolved "https://registry.yarnpkg.com/consola/-/consola-2.14.0.tgz#162ee903b6c9c4de25077d93f34ab902ebcb4dac"
   integrity sha512-A2j1x4u8d6SIVikhZROfpFJxQZie+cZOfQMyI/tu2+hWXe8iAv7R6FW6s6x04/7zBCst94lPddztot/d6GJiuQ==
 >>>>>>> 26a70b2b (chore: add guides section (#407))
+=======
+consola@^2.10.0, consola@^2.11.3, consola@^2.12.2, consola@^2.14.0, consola@^2.15.0, consola@^2.4.0, consola@^2.6.0, consola@^2.9.0:
+  version "2.15.0"
+  resolved "https://registry.yarnpkg.com/consola/-/consola-2.15.0.tgz#40fc4eefa4d2f8ef2e2806147f056ea207fcc0e9"
+  integrity sha512-vlcSGgdYS26mPf7qNi+dCisbhiyDnrN1zaRbw3CSuc2wGOMEGGPsp46PdRG5gqXwgtJfjxDkxRNAgRPr1B77vQ==
+>>>>>>> 32390dfa (fix: missing URLs and release-notes)
 
 console-browserify@^1.1.0:
   version "1.2.0"
@@ -10746,8 +11026,12 @@ content-disposition@0.5.3, content-disposition@~0.5.2:
   dependencies:
     safe-buffer "5.1.2"
 
+<<<<<<< HEAD
 content-type@1.0.4, content-type@^1.0.4, content-type@~1.0.4:
 >>>>>>> 26a70b2b (chore: add guides section (#407))
+=======
+content-type@~1.0.4:
+>>>>>>> 32390dfa (fix: missing URLs and release-notes)
   version "1.0.4"
   resolved "https://registry.yarnpkg.com/content-type/-/content-type-1.0.4.tgz#e138cc75e040c727b1966fe5e5f8c9aee256fe3b"
   integrity sha512-hIP3EEPs8tB9AT1L+NUqtwOAps4mk2Zob89MWXMHjHWg9milF/j4osnnQLXBCBFBk/tvIG/tUc9mOUJiPBhPXA==
@@ -10779,8 +11063,12 @@ cookie@^0.3.1:
   integrity sha1-5+Ch+e9DtMi6klxcWpboBtFoc7s=
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 cookie@^0.4.0, cookie@^0.4.1:
+=======
+cookie@^0.4.0:
+>>>>>>> 32390dfa (fix: missing URLs and release-notes)
   version "0.4.1"
   resolved "https://registry.yarnpkg.com/cookie/-/cookie-0.4.1.tgz#afd713fe26ebd21ba95ceb61f9a8116e50a537d1"
   integrity sha512-ZwrFkGJxUR3EIoXtO+yVE69Eb7KlixbaeAWfBQB9vVsNn/o+Yw69gBWSSDK825hQNdN+wF8zELf3dFNl/kxkUA==
@@ -12009,6 +12297,7 @@ defu@^2.0.4:
   integrity sha512-G9pEH1UUMxShy6syWk01VQSRVs3CDWtlxtZu7A+NyqjxaCA4gSlWAKDBx6QiUEKezqS8+DUlXLI14Fp05Hmpwg==
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 527d15bb (docs: add images color-mode blog (#363))
 =======
 >>>>>>> 26a70b2b (chore: add guides section (#407))
@@ -12036,6 +12325,13 @@ des.js@^1.0.0:
   resolved "https://registry.npmjs.org/des.js/-/des.js-1.0.1.tgz"
   integrity sha512-Q0I4pfFrv2VPd34/vfLrFOoRmlYj3OV50i7fskps1jZWK1kApMWWT9G6RRUeYedLcBDIhnSDaUvJMb3AhUlaEA==
 =======
+=======
+defu@^3.1.0:
+  version "3.1.0"
+  resolved "https://registry.yarnpkg.com/defu/-/defu-3.1.0.tgz#a6b5104cacc06aa1efa01923becddbedd32505e8"
+  integrity sha512-pc7vS4wbYFtsRL+OaLHKD72VcpOz9eYgzZeoLz9pCs+R8htyPdZnD1CxKP9ttZuT90CLPYFTSaTyc3/7v4gG9A==
+
+>>>>>>> 32390dfa (fix: missing URLs and release-notes)
 delayed-stream@~1.0.0:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/delayed-stream/-/delayed-stream-1.0.0.tgz#df3ae199acadfb7d440aaae0b29e2272b24ec619"
@@ -12046,6 +12342,7 @@ delegate@^3.1.2:
   resolved "https://registry.yarnpkg.com/delegate/-/delegate-3.2.0.tgz#b66b71c3158522e8ab5744f720d8ca0c2af59166"
   integrity sha512-IofjkYBZaZivn0V8nnsMJGBr4jVLxHDheKSW88PyxS5QC4Vo9ZbZVvhzlSxY87fVq3STR6r+4cGepyHkcWOQSw==
 
+<<<<<<< HEAD
 delegates@^1.0.0:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/delegates/-/delegates-1.0.0.tgz#84c6e159b81904fdca59a0ef44cd870d31250f9a"
@@ -12061,6 +12358,9 @@ depd@1.1.1:
 
 depd@^1.1.2, depd@~1.1.2:
 >>>>>>> 26a70b2b (chore: add guides section (#407))
+=======
+depd@~1.1.2:
+>>>>>>> 32390dfa (fix: missing URLs and release-notes)
   version "1.1.2"
   resolved "https://registry.yarnpkg.com/depd/-/depd-1.1.2.tgz#9bcd52e14c097763e749b274c4346ed2e560b5a9"
   integrity sha1-m81S4UwJd2PnSbJ0xDRu0uVgtak=
@@ -12086,6 +12386,7 @@ des.js@^1.0.0:
     minimalistic-assert "^1.0.0"
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 destr@^1.0.0, destr@^1.0.1, destr@^1.1.0:
   version "1.1.0"
   resolved "https://registry.npmjs.org/destr/-/destr-1.1.0.tgz"
@@ -12096,6 +12397,12 @@ destr@^0.1.4:
   resolved "https://registry.yarnpkg.com/destr/-/destr-0.1.4.tgz#5ade43c2c02ffa7ad80e4d1516db309158d03d90"
   integrity sha512-jGvlTgd/uZHtImTF8idU1FGu0Sg2/KBRp17HdsZ9dgZSkjt6lJRp/YW1gzHb1iEk0yJ4RrSQ3ujxbswa0gmwzQ==
 >>>>>>> 527d15bb (docs: add images color-mode blog (#363))
+=======
+destr@^1.0.0, destr@^1.0.1:
+  version "1.0.1"
+  resolved "https://registry.yarnpkg.com/destr/-/destr-1.0.1.tgz#d13db7f9d9c9ca4fcf24e86343d601217136ddc3"
+  integrity sha512-LnEdINrd1ydSqRiAGjMBVrG/G8hNruwE+fEKlkJA14MGPEoI9T7zJDwGpkMTyXT2ASE0ycnN2SYn4k6Q7j7lHg==
+>>>>>>> 32390dfa (fix: missing URLs and release-notes)
 
 destroy@^1.0.4, destroy@~1.0.4:
   version "1.0.4"
@@ -13932,6 +14239,7 @@ extglob@^2.0.4:
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 extract-css-chunks-webpack-plugin@^4.9.0:
   version "4.9.0"
   resolved "https://registry.npmjs.org/extract-css-chunks-webpack-plugin/-/extract-css-chunks-webpack-plugin-4.9.0.tgz"
@@ -13948,6 +14256,12 @@ extract-css-chunks-webpack-plugin@^4.7.5:
   resolved "https://registry.yarnpkg.com/extract-css-chunks-webpack-plugin/-/extract-css-chunks-webpack-plugin-4.7.5.tgz#d85ebf0aaf3366f942502eced275711d72bd4ba9"
   integrity sha512-7XlPj/OW+vpIdMcm1H/mo5hgJubMKXlWF5Pgq9F/db39b19A+XlRWppyAZHNaJChC8kJKQl5n8PbfwouIl9AJQ==
 >>>>>>> 527d15bb (docs: add images color-mode blog (#363))
+=======
+extract-css-chunks-webpack-plugin@^4.8.0:
+  version "4.8.0"
+  resolved "https://registry.yarnpkg.com/extract-css-chunks-webpack-plugin/-/extract-css-chunks-webpack-plugin-4.8.0.tgz#4a9cf9888a07abf4a86e9305f784cf12d46425c5"
+  integrity sha512-dt0W0oouL0xjS51xkJQGc7ezNOl/ax3y8x/3EqYvoiGotYyTTFskt257r1yV3gExm4wqs1q95tOJ5vyQwhi2MA==
+>>>>>>> 32390dfa (fix: missing URLs and release-notes)
   dependencies:
     loader-utils "^2.0.0"
     normalize-url "1.9.1"
@@ -14509,6 +14823,7 @@ follow-redirects@^1.0.0:
   resolved "https://registry.yarnpkg.com/follow-redirects/-/follow-redirects-1.12.1.tgz#de54a6205311b93d60398ebc01cf7015682312b6"
   integrity sha512-tmRv0AVuR7ZyouUHLeNSiO6pqulF7dYa3s19c6t+wz9LD69/uSzdMxJ2S91nTI9U3rt/IldxpzMOFejp6f0hjg==
 
+<<<<<<< HEAD
 >>>>>>> 61b90c66 (feat: Add /blog section (#307))
 for-in@^0.1.3:
   version "0.1.8"
@@ -14516,6 +14831,8 @@ for-in@^0.1.3:
   integrity sha1-2Hc5COMSVhCZUrH9ubP6hn0ndeE=
 >>>>>>> 5e315c38 (app: Support ad blockers, upgrade Nuxt)
 
+=======
+>>>>>>> 32390dfa (fix: missing URLs and release-notes)
 for-in@^1.0.2:
   version "1.0.2"
 <<<<<<< HEAD
@@ -14553,6 +14870,7 @@ form-data@~2.3.2:
   resolved "https://registry.yarnpkg.com/for-in/-/for-in-1.0.2.tgz#81068d295a8142ec0ac726c6e2200c30fb6d5e80"
   integrity sha1-gQaNKVqBQuwKxybG4iAMMPttXoA=
 
+<<<<<<< HEAD
 for-own@^0.1.3:
   version "0.1.5"
   resolved "https://registry.yarnpkg.com/for-own/-/for-own-0.1.5.tgz#5265c681a4f294dabbf17c9509b6763aa84510ce"
@@ -14566,6 +14884,12 @@ for-own@^1.0.0:
   integrity sha1-xjMy9BXO3EsE2/5wz4NklMU8tEs=
   dependencies:
     for-in "^1.0.1"
+=======
+foreach@^2.0.5:
+  version "2.0.5"
+  resolved "https://registry.yarnpkg.com/foreach/-/foreach-2.0.5.tgz#0bee005018aeb260d0a3af3ae658dd0136ec1b99"
+  integrity sha1-C+4AUBiusmDQo6865ljdATbsG5k=
+>>>>>>> 32390dfa (fix: missing URLs and release-notes)
 
 forever-agent@~0.6.1:
   version "0.6.1"
@@ -14962,6 +15286,7 @@ get-port-please@^1.0.0:
   dependencies:
     fs-memo "^1.0.0"
 
+<<<<<<< HEAD
 >>>>>>> 26a70b2b (chore: add guides section (#407))
 get-port@^5.1.1:
   version "5.1.1"
@@ -14984,6 +15309,8 @@ get-stream@^3.0.0:
   integrity sha1-jpQ9E1jcN1VQVOy+LtsFqhdO3hQ=
 
 =======
+=======
+>>>>>>> 32390dfa (fix: missing URLs and release-notes)
 get-stdin@^6.0.0:
   version "6.0.0"
   resolved "https://registry.yarnpkg.com/get-stdin/-/get-stdin-6.0.0.tgz#9e09bf712b360ab9225e812048f71fde9c89657b"
@@ -16007,11 +16334,18 @@ html-webpack-plugin@^4.5.1:
   resolved "https://registry.yarnpkg.com/html-void-elements/-/html-void-elements-1.0.5.tgz#ce9159494e86d95e45795b166c2021c2cfca4483"
   integrity sha512-uE/TxKuyNIcx44cIWnjr/rfIATDH7ZaOMmstu0CwhFG1Dunhlp4OC6/NMbhiwoq5BpW0ubi303qnEk/PZj614w==
 
+<<<<<<< HEAD
 html-webpack-plugin@^4.3.0:
   version "4.3.0"
   resolved "https://registry.yarnpkg.com/html-webpack-plugin/-/html-webpack-plugin-4.3.0.tgz#53bf8f6d696c4637d5b656d3d9863d89ce8174fd"
   integrity sha512-C0fzKN8yQoVLTelcJxZfJCE+aAvQiY2VUf3UuKrR4a9k5UMWYOtpDLsaXwATbcVCnI05hUS7L9ULQHWLZhyi3w==
 >>>>>>> 26a70b2b (chore: add guides section (#407))
+=======
+html-webpack-plugin@^4.5.0:
+  version "4.5.0"
+  resolved "https://registry.yarnpkg.com/html-webpack-plugin/-/html-webpack-plugin-4.5.0.tgz#625097650886b97ea5dae331c320e3238f6c121c"
+  integrity sha512-MouoXEYSjTzCrjIxWwg8gxL5fE2X2WZJLmBYXlaJhQUH5K/b5OrqmV7T4dB7iu0xkmJ6JlUuV6fFVtnqbPopZw==
+>>>>>>> 32390dfa (fix: missing URLs and release-notes)
   dependencies:
     "@types/html-minifier-terser" "^5.0.0"
     "@types/tapable" "^1.0.5"
@@ -16024,10 +16358,14 @@ html-webpack-plugin@^4.3.0:
     util.promisify "1.0.0"
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 htmlparser2@^3.9.1:
 =======
 htmlparser2@^3.10.0, htmlparser2@^3.3.0, htmlparser2@^3.9.2:
 >>>>>>> 26a70b2b (chore: add guides section (#407))
+=======
+htmlparser2@^3.10.0, htmlparser2@^3.3.0:
+>>>>>>> 32390dfa (fix: missing URLs and release-notes)
   version "3.10.1"
   resolved "https://registry.npmjs.org/htmlparser2/-/htmlparser2-3.10.1.tgz"
   integrity sha512-IgieNijUMbkDovyoKObU1DUhm1iwNYE/fuifEoEHfd1oZKZDaONBSkal7Y01shxsM49R4XaMdGez3WnF9UfiCQ==
@@ -16086,6 +16424,7 @@ htmlparser2@^3.10.0, htmlparser2@^3.9.2:
     readable-stream "^3.1.1"
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 htmlparser2@^6.1.0:
   version "6.1.0"
   resolved "https://registry.npmjs.org/htmlparser2/-/htmlparser2-6.1.0.tgz"
@@ -16137,6 +16476,12 @@ http-errors@1.7.3, http-errors@~1.7.2:
   version "1.7.3"
   resolved "https://registry.npmjs.org/http-errors/-/http-errors-1.7.3.tgz"
   integrity sha512-ZTTX0MWrsQ2ZAhA1cejAwDLycFsd7I7nVtnkT3Ol0aqodaKW+0CTZDQ1uBv5whptCnc8e8HeRRJxRs0kmm/Qfw==
+=======
+http-errors@1.7.2:
+  version "1.7.2"
+  resolved "https://registry.yarnpkg.com/http-errors/-/http-errors-1.7.2.tgz#4f5029cf13239f31036e5b2e55292bcfbcc85c8f"
+  integrity sha512-uUQBt3H/cSIVfch6i1EuPNy/YsRSOUBXTVfZ+yR7Zjez3qjBz6i9+i4zjNaoqcoFVI4lQJ5plg63TvGfRSDCRg==
+>>>>>>> 32390dfa (fix: missing URLs and release-notes)
   dependencies:
     depd "~1.1.2"
     inherits "2.0.4"
@@ -16313,6 +16658,7 @@ hygen@^6.0.4:
     inflection "^1.12.0"
     yargs-parser "^18.1.3"
 
+<<<<<<< HEAD
 iconv-lite@0.4.19:
   version "0.4.19"
   resolved "https://registry.yarnpkg.com/iconv-lite/-/iconv-lite-0.4.19.tgz#f7468f60135f5e5dad3399c0a81be9a1603a082b"
@@ -16322,6 +16668,8 @@ iconv-lite@0.4.19:
 <<<<<<< HEAD
 iconv-lite@^0.4.24, iconv-lite@^0.4.8:
 =======
+=======
+>>>>>>> 32390dfa (fix: missing URLs and release-notes)
 iconv-lite@0.4.24, iconv-lite@^0.4.24:
 >>>>>>> 5873216b (replace krutie article image (#335))
   version "0.4.24"
@@ -16936,6 +17284,7 @@ is-binary-path@~2.1.0:
   dependencies:
     binary-extensions "^2.0.0"
 
+<<<<<<< HEAD
 is-boolean-object@^1.1.0:
   version "1.1.1"
   resolved "https://registry.npmjs.org/is-boolean-object/-/is-boolean-object-1.1.1.tgz"
@@ -16945,6 +17294,9 @@ is-buffer@^1.1.5, is-buffer@~1.1.1:
 =======
 is-buffer@^1.0.2, is-buffer@^1.1.5, is-buffer@~1.1.1:
 >>>>>>> ec9e24c5 (perf: start using nuxt-svg-loader)
+=======
+is-buffer@^1.1.5:
+>>>>>>> 32390dfa (fix: missing URLs and release-notes)
   version "1.1.6"
   resolved "https://registry.yarnpkg.com/is-buffer/-/is-buffer-1.1.6.tgz#efaa2ea9daa0d7ab2ea13a97b2b8ad51fefbe8be"
   integrity sha512-NcdALwpXkTm5Zvvbk7owOUSvVvBKDgKP5/ewfXEznmQFfs4ZRmanOeKBTjRVjka3QFoN6XJ+9F3USqfHqTaU5w==
@@ -17419,8 +17771,12 @@ is-plain-obj@^2.0.0:
   resolved "https://registry.yarnpkg.com/is-plain-obj/-/is-plain-obj-2.1.0.tgz#45e42e37fccf1f40da8e5f76ee21515840c09287"
   integrity sha512-YWnfyRwxL/+SsrWYfOpUtz5b3YD+nyfkHvjbcanzk8zgyO4ASD67uVMRt8k5bM4lLMDnXfriRhOpemw+NfT1eA==
 
+<<<<<<< HEAD
 is-plain-object@^2.0.1, is-plain-object@^2.0.3, is-plain-object@^2.0.4:
 >>>>>>> 26a70b2b (chore: add guides section (#407))
+=======
+is-plain-object@^2.0.3, is-plain-object@^2.0.4:
+>>>>>>> 32390dfa (fix: missing URLs and release-notes)
   version "2.0.4"
 <<<<<<< HEAD
   resolved "https://registry.npmjs.org/is-plain-object/-/is-plain-object-2.0.4.tgz"
@@ -17532,8 +17888,12 @@ is-ssh@^1.3.0:
   dependencies:
     protocols "^1.1.0"
 
+<<<<<<< HEAD
 is-stream@1.1.0, is-stream@^1.1.0:
 >>>>>>> 527d15bb (docs: add images color-mode blog (#363))
+=======
+is-stream@^1.1.0:
+>>>>>>> 32390dfa (fix: missing URLs and release-notes)
   version "1.1.0"
   resolved "https://registry.yarnpkg.com/is-stream/-/is-stream-1.1.0.tgz#12d4a3dd4e68e0b79ceb8dbc84173ae80d91ca44"
   integrity sha1-EtSj3U5o4Lec6428hBc66A2RykQ=
@@ -17797,12 +18157,27 @@ jest-worker@^25.4.0:
   integrity sha512-/dsSmUkIy5EBGfv/IjjqmFxrNAUpBERfGs1oHROyD7yxjG/w+t0GOJDX8O1k32ySmd7+a5IhnJU2qQFcJ4n1vw==
 >>>>>>> 26a70b2b (chore: add guides section (#407))
   dependencies:
+<<<<<<< HEAD
     "@babel/polyfill" "^7.0.0"
     "@jimp/custom" "^0.6.4"
     "@jimp/plugins" "^0.6.4"
     "@jimp/types" "^0.6.4"
     core-js "^2.5.7"
 =======
+=======
+    merge-stream "^2.0.0"
+    supports-color "^7.0.0"
+
+jimp-compact@^0.16.1:
+  version "0.16.1"
+  resolved "https://registry.yarnpkg.com/jimp-compact/-/jimp-compact-0.16.1.tgz#9582aea06548a2c1e04dd148d7c3ab92075aefa3"
+  integrity sha512-dZ6Ra7u1G8c4Letq/B5EzAxj4tLFHL+cGtdpR+PVm4yzPDj+lCk+AbivWt1eOM+ikzkowtyV7qSqX6qr3t71Ww==
+
+jiti@^0.1.11, jiti@^0.1.12:
+  version "0.1.12"
+  resolved "https://registry.yarnpkg.com/jiti/-/jiti-0.1.12.tgz#ffe4a09266d739b77721170fb73115c50b680330"
+  integrity sha512-rWtqsaABBGNzTzfQkfP7DUvE9KGEIQUd6s0nITw5rDW1L9OwwtBQ5dz9hMq4YrMZqrSJr8ArrMvZ1mV1/7S3Fg==
+>>>>>>> 32390dfa (fix: missing URLs and release-notes)
 
 jimp-compact@^0.8.0:
   version "0.8.5"
@@ -17810,6 +18185,7 @@ jimp-compact@^0.8.0:
   integrity sha512-BkpiX6jZyDVLU+CleO/6yF8SFHnyZXiElPryNjZx58AK1vy+bqSFvhKeFS680TISSr8IWqHlIAwDMMA0DTQkMw==
 >>>>>>> 61b90c66 (feat: Add /blog section (#307))
 
+<<<<<<< HEAD
 joycon@^2.1.2:
   version "2.2.3"
   resolved "https://registry.yarnpkg.com/joycon/-/joycon-2.2.3.tgz#eeb1169850710c39ab60d8d4a00e50b0b61be581"
@@ -17841,6 +18217,8 @@ js-levenshtein@^1.1.3:
   resolved "https://registry.yarnpkg.com/js-base64/-/js-base64-2.6.3.tgz#7afdb9b57aa7717e15d370b66e8f36a9cb835dc3"
   integrity sha512-fiUvdfCaAXoQTHdKMgTvg6IkecXDcVz6V5rlftUTclF9IKBjMizvSdQaCl/z/6TApDeby5NL+axYou3i0mu1Pg==
 
+=======
+>>>>>>> 32390dfa (fix: missing URLs and release-notes)
 js-cookie@^2.2.1:
   version "2.2.1"
   resolved "https://registry.yarnpkg.com/js-cookie/-/js-cookie-2.2.1.tgz#69e106dc5d5806894562902aa5baec3744e9b2b8"
@@ -17853,6 +18231,7 @@ js-cookie@^2.2.1:
   integrity sha512-RdJUflcE3cUzKiMqQgsCu06FPu9UdIJO0beYbPhHN4k6apgJtifcoCtT9bcxOpYBtpD2kCM6Sbzg4CausW/PKQ==
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 js-yaml@^3.12.0, js-yaml@^3.9.0:
   version "3.12.1"
   resolved "https://registry.yarnpkg.com/js-yaml/-/js-yaml-3.12.1.tgz#295c8632a18a23e054cf5c9d3cecafe678167600"
@@ -17860,6 +18239,9 @@ js-yaml@^3.12.0, js-yaml@^3.9.0:
 >>>>>>> 5e315c38 (app: Support ad blockers, upgrade Nuxt)
 =======
 js-yaml@3.14.0, js-yaml@^3.11.0, js-yaml@^3.12.0, js-yaml@^3.13.1:
+=======
+js-yaml@3.14.0, js-yaml@^3.11.0, js-yaml@^3.13.1:
+>>>>>>> 32390dfa (fix: missing URLs and release-notes)
   version "3.14.0"
   resolved "https://registry.yarnpkg.com/js-yaml/-/js-yaml-3.14.0.tgz#a7a34170f26a21bb162424d8adacb4113a69e482"
   integrity sha512-/4IbIeHcD9VMHFqDR/gQ7EdZdLimOvW2DdcxFjdyyZ9NsbS+ccrXqVWDtab/lRl5AlUqmpBx8EhPaWR+OtY17A==
@@ -18072,6 +18454,7 @@ jsprim@^1.2.2:
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 jstransformer@1.0.0:
   version "1.0.0"
   resolved "https://registry.npmjs.org/jstransformer/-/jstransformer-1.0.0.tgz"
@@ -18253,6 +18636,12 @@ koa-morgan@^1.0.1:
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/koa-morgan/-/koa-morgan-1.0.1.tgz#08052e0ce0d839d3c43178b90a5bb3424bef1f99"
   integrity sha1-CAUuDODYOdPEMXi5CluzQkvvH5k=
+=======
+kind-of@^3.0.2, kind-of@^3.0.3, kind-of@^3.2.0:
+  version "3.2.2"
+  resolved "https://registry.yarnpkg.com/kind-of/-/kind-of-3.2.2.tgz#31ea21a734bab9bbb0f32466d893aea51e4a3c64"
+  integrity sha1-MeohpzS6ubuw8yRm2JOupR5KPGQ=
+>>>>>>> 32390dfa (fix: missing URLs and release-notes)
   dependencies:
     morgan "^1.6.1"
 
@@ -18380,6 +18769,7 @@ lazy-ass@1.6.0:
   resolved "https://registry.yarnpkg.com/lazy-ass/-/lazy-ass-1.6.0.tgz#7999655e8646c17f089fdd187d150d3324d54513"
   integrity sha1-eZllXoZGwX8In90YfRUNMyTVRRM=
 
+<<<<<<< HEAD
 >>>>>>> 26a70b2b (chore: add guides section (#407))
 lazy-cache@^0.2.3:
   version "0.2.7"
@@ -18396,6 +18786,12 @@ lcid@^1.0.0:
   resolved "https://registry.yarnpkg.com/lcid/-/lcid-1.0.0.tgz#308accafa0bc483a3867b4b6f2b9506251d1b835"
   integrity sha1-MIrMr6C8SDo4Z7S28rlQYlHRuDU=
 >>>>>>> 5e315c38 (app: Support ad blockers, upgrade Nuxt)
+=======
+levn@^0.4.1:
+  version "0.4.1"
+  resolved "https://registry.yarnpkg.com/levn/-/levn-0.4.1.tgz#ae4562c007473b932a6200d403268dd2fffc6ade"
+  integrity sha512-+bT2uH4E5LGE7h/n3evcS/sQlJXCpIp6ym8OWJ5eV6+67Dsql/LaaT7qJBAt2rzfoa/5QBGBhxDix1dMt2kQKQ==
+>>>>>>> 32390dfa (fix: missing URLs and release-notes)
   dependencies:
     prelude-ls "^1.2.1"
     type-check "~0.4.0"
@@ -19787,15 +20183,6 @@ meow@^7.0.1:
     type-fest "^0.13.1"
     yargs-parser "^18.1.3"
 
-merge-deep@^3.0.2:
-  version "3.0.2"
-  resolved "https://registry.yarnpkg.com/merge-deep/-/merge-deep-3.0.2.tgz#f39fa100a4f1bd34ff29f7d2bf4508fbb8d83ad2"
-  integrity sha512-T7qC8kg4Zoti1cFd8Cr0M+qaZfOwjlPDEdZIIPPB2JZctjaPM4fX+i7HOId69tAti2fvO6X5ldfYUONDODsrkA==
-  dependencies:
-    arr-union "^3.1.0"
-    clone-deep "^0.2.4"
-    kind-of "^3.0.2"
-
 merge-descriptors@1.0.1:
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/merge-descriptors/-/merge-descriptors-1.0.1.tgz#b00aaa556dd8b44568150ec9d1b953f3f90cbb61"
@@ -19853,6 +20240,7 @@ methods@~1.1.0, methods@~1.1.2:
   integrity sha1-VSmk1nZUE07cxSZmVoNbD4Ua/O4=
 >>>>>>> 5e315c38 (app: Support ad blockers, upgrade Nuxt)
 
+<<<<<<< HEAD
 micromark-extension-gfm-strikethrough@~0.6.5:
   version "0.6.5"
   resolved "https://registry.npmjs.org/micromark-extension-gfm-strikethrough/-/micromark-extension-gfm-strikethrough-0.6.5.tgz"
@@ -19864,6 +20252,12 @@ micromark-extension-gfm-table@~0.4.0:
   version "0.4.3"
   resolved "https://registry.npmjs.org/micromark-extension-gfm-table/-/micromark-extension-gfm-table-0.4.3.tgz"
   integrity sha512-hVGvESPq0fk6ALWtomcwmgLvH8ZSVpcPjzi0AjPclB9FsVRgMtGZkUcpE0zgjOCFAznKepF4z3hX8z6e3HODdA==
+=======
+micromark-extension-footnote@^0.3.0:
+  version "0.3.1"
+  resolved "https://registry.yarnpkg.com/micromark-extension-footnote/-/micromark-extension-footnote-0.3.1.tgz#0ae2fe50a517a292e3dec8cbbc41fe1d5b0785ad"
+  integrity sha512-Xl/4niqJKGuD+9cv0yUAbz6lhCJDLx6We7WW9b+YrqKURasdw4tN3HIKgT3UwVFOzdC6khd5vwZjMtDaMuFuBw==
+>>>>>>> 32390dfa (fix: missing URLs and release-notes)
   dependencies:
     micromark "~2.11.0"
 
@@ -20284,6 +20678,7 @@ mixin-deep@^1.2.0:
     is-extendable "^1.0.1"
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 mkdirp-classic@^0.5.2, mkdirp-classic@^0.5.3:
   version "0.5.3"
   resolved "https://registry.npmjs.org/mkdirp-classic/-/mkdirp-classic-0.5.3.tgz"
@@ -20352,6 +20747,9 @@ mousetrap@^1.6.5:
 =======
 "mkdirp@>=0.5 0", mkdirp@^0.5.0, mkdirp@^0.5.1, mkdirp@^0.5.3, mkdirp@^0.5.4, mkdirp@~0.5.1:
 >>>>>>> 26a70b2b (chore: add guides section (#407))
+=======
+mkdirp@^0.5.0, mkdirp@^0.5.1, mkdirp@^0.5.3, mkdirp@^0.5.4, mkdirp@~0.5.1:
+>>>>>>> 32390dfa (fix: missing URLs and release-notes)
   version "0.5.5"
   resolved "https://registry.yarnpkg.com/mkdirp/-/mkdirp-0.5.5.tgz#d91cefd62d1436ca0f41620e251288d420099def"
   integrity sha512-NKmAlESf6jMGym1++R0Ra7wvhV+wFW63FaSOFPwRahvea0gMUcGUhVeAg/0BC0wiv9ih5NYPB1Wn1UEI1/L+xQ==
@@ -20666,6 +21064,7 @@ node-fetch@2.6.1, node-fetch@^2.6.1:
   resolved "https://registry.npmjs.org/node-fetch/-/node-fetch-2.6.1.tgz"
   integrity sha512-V4aYg89jEoVRxRb2fJdAg8FHvI7cEyYdVAh94HH0UIK8oJxUfkjlDQN9RbMx+bEjP7+ggMiFRprSti032Oipxw==
 
+<<<<<<< HEAD
 node-forge@^0.10.0:
   version "0.10.0"
   resolved "https://registry.npmjs.org/node-forge/-/node-forge-0.10.0.tgz"
@@ -20675,6 +21074,12 @@ node-html-parser@^4.1.3:
   version "4.1.3"
   resolved "https://registry.npmjs.org/node-html-parser/-/node-html-parser-4.1.3.tgz"
   integrity sha512-jWFd9TBxDJ0hXkvPKxiWXy4R87ZoIjYj5P2twbef3q/E4vJyFt8TTRQ68ssHYW5Aozwth4SWHOPT6yfDd/gzQQ==
+=======
+node-html-parser@^1.4.9:
+  version "1.4.9"
+  resolved "https://registry.yarnpkg.com/node-html-parser/-/node-html-parser-1.4.9.tgz#3c8f6cac46479fae5800725edb532e9ae8fd816c"
+  integrity sha512-UVcirFD1Bn0O+TSmloHeHqZZCxHjvtIeGdVdGMhyZ8/PWlEiZaZ5iJzR189yKZr8p0FXN58BUeC7RHRkf/KYGw==
+>>>>>>> 32390dfa (fix: missing URLs and release-notes)
   dependencies:
     css-select "^4.1.3"
     he "1.2.0"
@@ -21250,6 +21655,7 @@ oauth-sign@~0.9.0:
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 nuxt-edge@latest:
   version "2.4.0-25783204.eef2af35"
   resolved "https://registry.yarnpkg.com/nuxt-edge/-/nuxt-edge-2.4.0-25783204.eef2af35.tgz#669bbbb4674f67523aca9f3df03a2e55a1ec1ba3"
@@ -21282,17 +21688,23 @@ nuxt-edge@^2.14.0-26597729.aebf0ffe:
   version "2.14.0-26597729.aebf0ffe"
   resolved "https://registry.yarnpkg.com/nuxt-edge/-/nuxt-edge-2.14.0-26597729.aebf0ffe.tgz#8455e1333d6d6e448cbed4189969612d1b1e5665"
   integrity sha512-MrMcxRbCFNRnd12+Xt99cByAmZQwCqAc0pppwMl7lVGws/KrNlxdGlJc4jbt8b+vWTbI2dkkQORn3iFOLGi5/A==
+=======
+nuxt-edge@^2.14.8-26753787.80571bc0:
+  version "2.14.8-26753787.80571bc0"
+  resolved "https://registry.yarnpkg.com/nuxt-edge/-/nuxt-edge-2.14.8-26753787.80571bc0.tgz#58c95a6ed8407fba47d04c941364910e5149a90f"
+  integrity sha512-OXCa6rR9n8ChyEPi393+B/xSeiNfb/kYbr+qizuv8YTiYtev7PpomodtblTzEQiPwtooN53gSIA2bGYLp1oXxg==
+>>>>>>> 32390dfa (fix: missing URLs and release-notes)
   dependencies:
-    "@nuxt/builder-edge" "2.14.0-26597729.aebf0ffe"
-    "@nuxt/cli-edge" "2.14.0-26597729.aebf0ffe"
-    "@nuxt/components" "^1.0.7"
-    "@nuxt/core-edge" "2.14.0-26597729.aebf0ffe"
-    "@nuxt/generator-edge" "2.14.0-26597729.aebf0ffe"
+    "@nuxt/builder-edge" "2.14.8-26753787.80571bc0"
+    "@nuxt/cli-edge" "2.14.8-26753787.80571bc0"
+    "@nuxt/components" "^1.1.1"
+    "@nuxt/core-edge" "2.14.8-26753787.80571bc0"
+    "@nuxt/generator-edge" "2.14.8-26753787.80571bc0"
     "@nuxt/loading-screen" "^2.0.2"
-    "@nuxt/opencollective" "^0.3.0"
+    "@nuxt/opencollective" "^0.3.2"
     "@nuxt/static" "^1.0.0"
-    "@nuxt/telemetry" "^1.2.2"
-    "@nuxt/webpack-edge" "2.14.0-26597729.aebf0ffe"
+    "@nuxt/telemetry" "^1.2.3"
+    "@nuxt/webpack-edge" "2.14.8-26753787.80571bc0"
 
 nuxt-i18n@^6.13.1:
   version "6.13.1"
@@ -21309,6 +21721,7 @@ nuxt-i18n@^6.13.1:
     vue-i18n "^8.18.1"
 >>>>>>> 26a70b2b (chore: add guides section (#407))
 
+<<<<<<< HEAD
 nuxt-svg-loader@^1.2.0:
   version "1.2.0"
   resolved "https://registry.yarnpkg.com/nuxt-svg-loader/-/nuxt-svg-loader-1.2.0.tgz#1f2448d5170168b12c4275cd7774a79eee0132ae"
@@ -21333,6 +21746,8 @@ nuxt@^2.11.0:
     "@nuxt/webpack" "2.12.2"
 
 >>>>>>> 61b90c66 (feat: Add /blog section (#307))
+=======
+>>>>>>> 32390dfa (fix: missing URLs and release-notes)
 oauth-sign@~0.9.0:
   version "0.9.0"
   resolved "https://registry.yarnpkg.com/oauth-sign/-/oauth-sign-0.9.0.tgz#47a7b016baa68b5fa0ecf3dee08a85c679ac6455"
@@ -21629,6 +22044,7 @@ opencollective-postinstall@^2.0.2:
   resolved "https://registry.yarnpkg.com/opencollective-postinstall/-/opencollective-postinstall-2.0.3.tgz#7a0fff978f6dbfa4d006238fbac98ed4198c3259"
   integrity sha512-8AV/sCtuzUeTo8gQK5qDZzARrulB3egtLzFgteqB2tcT4Mw7B8Kt7JcDHmltjz6FOAHsvTevk70gZEbhM4ZS9Q==
 
+<<<<<<< HEAD
 opener@1.5.1, opener@^1.5.1:
 >>>>>>> 26a70b2b (chore: add guides section (#407))
   version "1.5.1"
@@ -21647,6 +22063,17 @@ optimize-css-assets-webpack-plugin@^5.0.3:
   resolved "https://registry.yarnpkg.com/optimize-css-assets-webpack-plugin/-/optimize-css-assets-webpack-plugin-5.0.3.tgz#e2f1d4d94ad8c0af8967ebd7cf138dcb1ef14572"
   integrity sha512-q9fbvCRS6EYtUKKSwI87qm2IxlyJK5b4dygW1rKUBT6mMDhdG5e5bZT63v6tnJR9F9FB/H5a0HTmtw+laUBxKA==
 >>>>>>> 1b87907b (feat: dark mode (#303))
+=======
+opener@1.5.2, opener@^1.5.1:
+  version "1.5.2"
+  resolved "https://registry.yarnpkg.com/opener/-/opener-1.5.2.tgz#5d37e1f35077b9dcac4301372271afdeb2a13598"
+  integrity sha512-ur5UIdyw5Y7yEj9wLzhqXiy6GZ3Mwx0yGI+5sMn2r0N0v3cKJvUmFH5yPP+WXh9e0xfyzyJX95D8l088DNFj7A==
+
+optimize-css-assets-webpack-plugin@^5.0.4:
+  version "5.0.4"
+  resolved "https://registry.yarnpkg.com/optimize-css-assets-webpack-plugin/-/optimize-css-assets-webpack-plugin-5.0.4.tgz#85883c6528aaa02e30bbad9908c92926bb52dc90"
+  integrity sha512-wqd6FdI2a5/FdoiCNNkEvLeA//lHHfG24Ln2Xm2qqdIk4aOlsR18jwpyOihqQ8849W3qu2DX8fOYxpvTMj+93A==
+>>>>>>> 32390dfa (fix: missing URLs and release-notes)
   dependencies:
     cssnano "^4.1.10"
     last-call-webpack-plugin "^3.0.0"
@@ -23990,6 +24417,7 @@ postcss@^6.0.9:
     supports-color "^5.4.0"
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 postcss@^7.0.0, postcss@^7.0.1, postcss@^7.0.11, postcss@^7.0.14, postcss@^7.0.16, postcss@^7.0.17, postcss@^7.0.18, postcss@^7.0.2, postcss@^7.0.21, postcss@^7.0.23, postcss@^7.0.27, postcss@^7.0.5, postcss@^7.0.6:
   version "7.0.27"
   resolved "https://registry.yarnpkg.com/postcss/-/postcss-7.0.27.tgz#cc67cdc6b0daa375105b7c424a85567345fc54d9"
@@ -24023,6 +24451,12 @@ posthtml@^0.11.3:
     posthtml-parser "^0.3.3"
     posthtml-render "^1.1.0"
 >>>>>>> ec9e24c5 (perf: start using nuxt-svg-loader)
+=======
+prelude-ls@^1.2.1:
+  version "1.2.1"
+  resolved "https://registry.yarnpkg.com/prelude-ls/-/prelude-ls-1.2.1.tgz#debc6489d7a6e6b0e7611888cec880337d316396"
+  integrity sha512-vkcDPrRZo1QZLbn5RLGPpg/WmIQ65qoWWhcGKf/b5eplkkarX0m9z8ppCat4mlOqUsWpyNuYgO3VRyrYHSzX5g==
+>>>>>>> 32390dfa (fix: missing URLs and release-notes)
 
 prelude-ls@~1.1.2:
   version "1.1.2"
@@ -24057,11 +24491,18 @@ prettier@^2.0.5:
   resolved "https://registry.yarnpkg.com/prettier/-/prettier-2.0.5.tgz#d6d56282455243f2f92cc1716692c08aa31522d4"
   integrity sha512-7PtVymN48hGcO4fGjybyBSIWDsLU4H4XlvOHfq91pz9kkGlonzwTfYkaIEwiRg/dAJF9YlbsduBAgtYLi+8cFg==
 
+<<<<<<< HEAD
 pretty-bytes@5.3.0, pretty-bytes@^5.3.0:
   version "5.3.0"
   resolved "https://registry.yarnpkg.com/pretty-bytes/-/pretty-bytes-5.3.0.tgz#f2849e27db79fb4d6cfe24764fc4134f165989f2"
   integrity sha512-hjGrh+P926p4R4WbaB6OckyRtO0F0/lQBiT+0gnxjV+5kjPBrfVBFCsCLbMqVQeydvIoouYTCmmEURiH3R1Bdg==
 >>>>>>> 26a70b2b (chore: add guides section (#407))
+=======
+pretty-bytes@^5.4.1:
+  version "5.4.1"
+  resolved "https://registry.yarnpkg.com/pretty-bytes/-/pretty-bytes-5.4.1.tgz#cd89f79bbcef21e3d21eb0da68ffe93f803e884b"
+  integrity sha512-s1Iam6Gwz3JI5Hweaz4GoCD1WUNUIyzePFy5+Js2hjwGVt2Z79wNN+ZKOZ2vB6C+Xs6njyB84Z1IthQg8d9LxA==
+>>>>>>> 32390dfa (fix: missing URLs and release-notes)
 
 pretty-error@^2.0.2:
   version "2.1.1"
@@ -24663,6 +25104,7 @@ range-parser@^1.2.1, range-parser@~1.2.1:
   resolved "https://registry.npmjs.org/range-parser/-/range-parser-1.2.1.tgz"
   integrity sha512-Hrgsx+orqoygnmhFbKaHE6c296J+HTAQXoxEF6gNupROmmGJRoyzfG3ccAveqCBrwr/2yxQ5BVd/GTl5agOwSg==
 
+<<<<<<< HEAD
 rc9@^1.2.0:
   version "1.2.0"
   resolved "https://registry.npmjs.org/rc9/-/rc9-1.2.0.tgz"
@@ -24688,6 +25130,12 @@ raw-body@^2.3.3:
   version "2.4.1"
   resolved "https://registry.yarnpkg.com/raw-body/-/raw-body-2.4.1.tgz#30ac82f98bb5ae8c152e67149dac8d55153b168c"
   integrity sha512-9WmIKF6mkvA0SLmA2Knm9+qj89e+j1zqgyn8aXGd7+nAduPoqgI9lO57SAZNn/Byzo5P7JhXTyg9PzaJbH73bA==
+=======
+raw-body@2.4.0:
+  version "2.4.0"
+  resolved "https://registry.yarnpkg.com/raw-body/-/raw-body-2.4.0.tgz#a1ce6fb9c9bc356ca52e89256ab59059e13d0332"
+  integrity sha512-4Oz8DUIwdvoa5qMJelxipzi/iJIi40O5cGV1wNYp5hvZP8ZN0T+jiNkL0QepXs+EsQ9XJ8ipEDoiH70ySUJP3Q==
+>>>>>>> 32390dfa (fix: missing URLs and release-notes)
   dependencies:
     bytes "3.1.0"
     http-errors "1.7.3"
@@ -24717,8 +25165,20 @@ raw-body@2.3.3:
     flat "^5.0.0"
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 rc@^1.0.1, rc@^1.1.6:
 =======
+=======
+rc9@^1.1.0:
+  version "1.1.0"
+  resolved "https://registry.yarnpkg.com/rc9/-/rc9-1.1.0.tgz#0176e8d32c358e96fa8c8d31036c3a0de3da8e9f"
+  integrity sha512-YXmv+7QWbRDCMroz0YYGcFbo2hslal7KHZO6JUIuOlmyV0YPjqzqPTWnonO44iyvJhoz5sQrmyA9PdOlih6QpA==
+  dependencies:
+    defu "^2.0.4"
+    destr "^1.0.0"
+    flat "^5.0.0"
+
+>>>>>>> 32390dfa (fix: missing URLs and release-notes)
 rc@~1.2.7:
 >>>>>>> 26a70b2b (chore: add guides section (#407))
   version "1.2.8"
@@ -26369,13 +26829,20 @@ serialize-javascript@^4.0.0:
     randombytes "^2.1.0"
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 serialize-javascript@^5.0.1:
   version "5.0.1"
   resolved "https://registry.npmjs.org/serialize-javascript/-/serialize-javascript-5.0.1.tgz"
+=======
+serialize-javascript@^5.0.1:
+  version "5.0.1"
+  resolved "https://registry.yarnpkg.com/serialize-javascript/-/serialize-javascript-5.0.1.tgz#7886ec848049a462467a97d3d918ebb2aaf934f4"
+>>>>>>> 32390dfa (fix: missing URLs and release-notes)
   integrity sha512-SaaNal9imEO737H2c05Og0/8LUXG7EnsZyMa8MzkmuHoELfT6txuj0cMqRj6zfPKnmQ1yasR4PCJc8x+M4JSPA==
   dependencies:
     randombytes "^2.1.0"
 
+<<<<<<< HEAD
 serialize-javascript@^6.0.0:
   version "6.0.0"
   resolved "https://registry.npmjs.org/serialize-javascript/-/serialize-javascript-6.0.0.tgz"
@@ -26402,6 +26869,8 @@ serve-index-75lb@^2.0.1:
     parseurl "~1.3.2"
 >>>>>>> 26a70b2b (chore: add guides section (#407))
 
+=======
+>>>>>>> 32390dfa (fix: missing URLs and release-notes)
 serve-placeholder@^1.2.2:
   version "1.2.2"
   resolved "https://registry.yarnpkg.com/serve-placeholder/-/serve-placeholder-1.2.2.tgz#034960945b5950f873b2be4e4ea3a4653b9e33e5"
@@ -26496,6 +26965,7 @@ setimmediate@^1.0.4:
   integrity sha1-KQy7Iy4waULX1+qbg3Mqt4VvgoU=
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 setprototypeof@1.0.3:
   version "1.0.3"
@@ -26508,6 +26978,8 @@ setprototypeof@1.1.0:
   integrity sha512-BvE/TwpZX4FXExxOxZyRGQQv651MSwmWKZGqvmPcRIjDqWub67kTKuIMx43cZZrS/cBBzwBcNDWoFxt2XEFIpQ==
 
 >>>>>>> 26a70b2b (chore: add guides section (#407))
+=======
+>>>>>>> 32390dfa (fix: missing URLs and release-notes)
 setprototypeof@1.1.1:
   version "1.1.1"
   resolved "https://registry.npmjs.org/setprototypeof/-/setprototypeof-1.1.1.tgz"
@@ -26539,6 +27011,7 @@ sha.js@^2.4.0, sha.js@^2.4.8:
     inherits "^2.0.1"
     safe-buffer "^5.0.1"
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 shallow-clone@^3.0.0:
@@ -26583,6 +27056,8 @@ sharp@^0.28.3:
 
 =======
 >>>>>>> 26a70b2b (chore: add guides section (#407))
+=======
+>>>>>>> 32390dfa (fix: missing URLs and release-notes)
 shebang-command@^1.2.0:
   version "1.2.0"
 <<<<<<< HEAD
@@ -27173,6 +27648,7 @@ static-extend@^0.1.1:
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 "statuses@>= 1.5.0 < 2", statuses@~1.5.0:
   version "1.5.0"
   resolved "https://registry.npmjs.org/statuses/-/statuses-1.5.0.tgz"
@@ -27187,6 +27663,9 @@ std-env@^2.2.1, std-env@^2.3.0:
 =======
 "statuses@>= 1.3.1 < 2", "statuses@>= 1.4.0 < 2", "statuses@>= 1.5.0 < 2", statuses@^1.0.0, statuses@^1.5.0, statuses@~1.5.0:
 >>>>>>> 26a70b2b (chore: add guides section (#407))
+=======
+"statuses@>= 1.5.0 < 2", statuses@~1.5.0:
+>>>>>>> 32390dfa (fix: missing URLs and release-notes)
   version "1.5.0"
   resolved "https://registry.yarnpkg.com/statuses/-/statuses-1.5.0.tgz#161c7dac177659fd9811f43771fa99381478628c"
   integrity sha1-Fhx9rBd2Wf2YEfQ3cfqZOBR4Yow=
@@ -27892,6 +28371,7 @@ svg-tags@^1.0.0:
   resolved "https://registry.npmjs.org/svg-tags/-/svg-tags-1.0.0.tgz"
   integrity sha1-WPcc7jvVGbWdSyqEO2x95krAR2Q=
 
+<<<<<<< HEAD
 svgo@^1.0.0:
 <<<<<<< HEAD
   version "1.3.2"
@@ -27919,6 +28399,16 @@ svgo@^1.0.0, svgo@^1.1.1:
   integrity sha512-GBkJbnTuFpM4jFbiERHDWhZc/S/kpHToqmZag3aEBjPYK44JAN2QBjvrGIxLOoCyMZjuFQIfTO2eJd8uwLY/9g==
 >>>>>>> 5e315c38 (app: Support ad blockers, upgrade Nuxt)
 =======
+=======
+svg-to-vue@^0.7.0:
+  version "0.7.0"
+  resolved "https://registry.yarnpkg.com/svg-to-vue/-/svg-to-vue-0.7.0.tgz#ec86deb1742be38319462e36703af1dfa2f9fad9"
+  integrity sha512-Tg2nMmf3BQorYCAjxbtTkYyWPVSeox5AZUFvfy4MoWK/5tuQlnA/h3LAlTjV3sEvOC5FtUNovRSj3p784l4KOA==
+  dependencies:
+    svgo "^1.3.2"
+
+svgo@^1.0.0, svgo@^1.3.2:
+>>>>>>> 32390dfa (fix: missing URLs and release-notes)
   version "1.3.2"
   resolved "https://registry.yarnpkg.com/svgo/-/svgo-1.3.2.tgz#b6dc511c063346c9e415b81e43401145b96d4167"
   integrity sha512-yhy/sQYxR5BkC98CY7o31VGsg014AKLEPxdfhora76l36hD9Rdy5NZA/Ocn6yayNPgSamYdtX2rFJdcv07AYVw==
@@ -28820,6 +29310,7 @@ typedarray@^0.0.6:
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 typescript@^4.3.5:
   version "4.3.5"
   resolved "https://registry.npmjs.org/typescript/-/typescript-4.3.5.tgz"
@@ -28959,6 +29450,12 @@ ua-parser-js@^0.7.19:
   version "0.7.19"
   resolved "https://registry.yarnpkg.com/ua-parser-js/-/ua-parser-js-0.7.19.tgz#94151be4c0a7fb1d001af7022fdaca4642659e4b"
   integrity sha512-T3PVJ6uz8i0HzPxOF9SWzWAlfN/DavlpQqepn22xgve/5QecC+XMCAtmUNnY7C9StehaV6exjUCI801lOI7QlQ==
+=======
+ua-parser-js@^0.7.22:
+  version "0.7.22"
+  resolved "https://registry.yarnpkg.com/ua-parser-js/-/ua-parser-js-0.7.22.tgz#960df60a5f911ea8f1c818f3747b99c6e177eae3"
+  integrity sha512-YUxzMjJ5T71w6a8WWVcMGM6YWOTX27rCoIQgLXiWaxqXSx9D7DNjiGWn1aJIRSQ5qr0xuhra77bSIh6voR/46Q==
+>>>>>>> 32390dfa (fix: missing URLs and release-notes)
 
 uglify-js@3.4.x:
   version "3.4.9"
@@ -28995,10 +29492,17 @@ uglify-js@^3.5.1:
   integrity sha512-Esj5HG5WAyrLIdYU74Z3JdG2PxdIusvj6IWHMtlyESxc7kcDz7zYlYjpnSokn1UbpV0d/QX9fan7gkCNd/9BQA==
 >>>>>>> 26a70b2b (chore: add guides section (#407))
 
+<<<<<<< HEAD
 unfetch@^4.1.0:
   version "4.1.0"
   resolved "https://registry.yarnpkg.com/unfetch/-/unfetch-4.1.0.tgz#6ec2dd0de887e58a4dee83a050ded80ffc4137db"
   integrity sha512-crP/n3eAPUJxZXM9T80/yv0YhkTEx2K1D3h7D1AJM6fzsWZrxdyRuLN0JH/dkZh1LNH8LxCnBzoPFCPbb2iGpg==
+=======
+unfetch@^4.2.0:
+  version "4.2.0"
+  resolved "https://registry.yarnpkg.com/unfetch/-/unfetch-4.2.0.tgz#7e21b0ef7d363d8d9af0fb929a5555f6ef97a3be"
+  integrity sha512-F9p7yYCn6cIW9El1zi0HI6vqpeIvBsr3dSuRO6Xuppb1u5rXpCPmMvLSyECLhybr9isec8Ohl0hPekMVrEinDA==
+>>>>>>> 32390dfa (fix: missing URLs and release-notes)
 
 <<<<<<< HEAD
 >>>>>>> 61b90c66 (feat: Add /blog section (#307))
@@ -29414,12 +29918,17 @@ untildify@4.0.0:
   integrity sha512-KK8xQ1mkzZeg9inewmFVDNkg3l5LUhoq9kN6iWYB/CC9YMG8HA+c1Q8HwDe6dEX7kErrEVNVBO3fWsVq5iDgtw==
 >>>>>>> 26a70b2b (chore: add guides section (#407))
 
+<<<<<<< HEAD
 upath@^1.1.1, upath@^1.2.0:
 >>>>>>> 61b90c66 (feat: Add /blog section (#307))
+=======
+upath@^1.1.1:
+>>>>>>> 32390dfa (fix: missing URLs and release-notes)
   version "1.2.0"
   resolved "https://registry.npmjs.org/upath/-/upath-1.2.0.tgz"
   integrity sha512-aZwGpamFO61g3OlfT7OQCHqhGnW43ieH9WZeP7QxN/G/jS4jfqUkZxoryvJgVPEcrl5NL/ggHsSmLMHuH64Lhg==
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 upath@^2.0.1:
@@ -29461,6 +29970,13 @@ update-notifier@^2.5.0:
 
 upper-case@^1.1.1:
 =======
+=======
+upath@^2.0.1:
+  version "2.0.1"
+  resolved "https://registry.yarnpkg.com/upath/-/upath-2.0.1.tgz#50c73dea68d6f6b990f51d279ce6081665d61a8b"
+  integrity sha512-1uEe95xksV1O0CYKXo8vQvN1JEbtJp7lb7C5U9HMsIp6IVwntkH/oNUzyVNQSd4S1sYk2FpSSW44FqMc8qee5w==
+
+>>>>>>> 32390dfa (fix: missing URLs and release-notes)
 upper-case-first@^1.1.0, upper-case-first@^1.1.2:
   version "1.1.2"
   resolved "https://registry.yarnpkg.com/upper-case-first/-/upper-case-first-1.1.2.tgz#5d79bedcff14419518fd2edb0a0507c9b6859115"
@@ -29655,6 +30171,7 @@ uuid@^3.3.2:
   integrity sha512-HjSDRw6gZE5JMggctHBcjVak08+KEVhSIiDzFnT9S9aegmp85S/bReBVTb4QTFaRNptJ9kuYaNhnbNEOkbKb/A==
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 v-tooltip@^2.1.3:
   version "2.1.3"
   resolved "https://registry.npmjs.org/v-tooltip/-/v-tooltip-2.1.3.tgz"
@@ -29686,6 +30203,8 @@ v-lazy-image@^1.2.2:
   resolved "https://registry.yarnpkg.com/v-lazy-image/-/v-lazy-image-1.2.2.tgz#1ae4f333b26c9fb4e090d88bbc9d95b640e8a139"
   integrity sha512-xbbnQvgc4YILToaTU+6AuMqnl3yixK9Jvd+SbT634MaEBlAN1j4bTDujceoXWk2zDFg2tG2e6cEdXuWAygs/0g==
 =======
+=======
+>>>>>>> 32390dfa (fix: missing URLs and release-notes)
 v8-compile-cache@^2.0.3, v8-compile-cache@^2.1.1:
   version "2.1.1"
   resolved "https://registry.yarnpkg.com/v8-compile-cache/-/v8-compile-cache-2.1.1.tgz#54bc3cdd43317bca91e35dcaf305b1a7237de745"
@@ -30013,11 +30532,18 @@ vue-i18n@^8.18.1:
   resolved "https://registry.yarnpkg.com/vue-i18n/-/vue-i18n-8.19.0.tgz#4326ade6cba7e18b22030ac1a14c59864b6dfc43"
   integrity sha512-jXPsvkmDMkwhjGQEDF6BgGsmJQLjIO1CXJQ1RjZRnU80kzRG+/+277ADFTulAPQSb0hUlrsp4VzEPdeO7lKcRA==
 
+<<<<<<< HEAD
 vue-loader@^15.9.3:
   version "15.9.3"
   resolved "https://registry.yarnpkg.com/vue-loader/-/vue-loader-15.9.3.tgz#0de35d9e555d3ed53969516cac5ce25531299dda"
   integrity sha512-Y67VnGGgVLH5Voostx8JBZgPQTlDQeOVBLOEsjc2cXbCYBKexSKEpOA56x0YZofoDOTszrLnIShyOX1p9uCEHA==
 >>>>>>> 26a70b2b (chore: add guides section (#407))
+=======
+vue-loader@^15.9.5:
+  version "15.9.5"
+  resolved "https://registry.yarnpkg.com/vue-loader/-/vue-loader-15.9.5.tgz#7a960dc420a3439deaacdda038fdcdbf7c432706"
+  integrity sha512-oeMOs2b5o5gRqkxfds10bCx6JeXYTwivRgbb8hzOrcThD2z1+GqEKE3EX9A2SGbsYDf4rXwRg6D5n1w0jO5SwA==
+>>>>>>> 32390dfa (fix: missing URLs and release-notes)
   dependencies:
     "@vue/component-compiler-utils" "^3.1.0"
 =======
@@ -30110,6 +30636,7 @@ vue-observe-visibility@^0.4.6:
   integrity sha512-xo0CEVdkjSjhJoDdLSvoZoQrw/H2BlzB5jrCBKGZNXN2zdZgMuZ9BKrxXDjNP2AxlcCoKc8OahI3F3r3JGLv2Q==
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 vue-router@^3.1.6:
   version "3.1.6"
   resolved "https://registry.yarnpkg.com/vue-router/-/vue-router-3.1.6.tgz#45f5a3a3843e31702c061dd829393554e4328f89"
@@ -30129,6 +30656,13 @@ vue-server-renderer@^2.5.21:
   integrity sha512-bAkOYZ5DnmQKv3RboNbmCB4LReF2tIE20EgUeWrz/87aVkpMihf3FVK+8DT45nyN4k9iSQOhsyem49fq++cF8w==
 >>>>>>> 5e315c38 (app: Support ad blockers, upgrade Nuxt)
 =======
+=======
+vue-router@3.4.8:
+  version "3.4.8"
+  resolved "https://registry.yarnpkg.com/vue-router/-/vue-router-3.4.8.tgz#2c06261d35d8075893470352d42d70b6287b8194"
+  integrity sha512-3BsR84AqarcmweXjItxw3jwQsiYNssYg090yi4rlzTnCJxmHtkyCvhNz9Z7qRSOkmiV485KkUCReTp5AjNY4wg==
+
+>>>>>>> 32390dfa (fix: missing URLs and release-notes)
 vue-scrollactive@^0.9.3:
   version "0.9.3"
   resolved "https://registry.yarnpkg.com/vue-scrollactive/-/vue-scrollactive-0.9.3.tgz#c191c6d90f6f2e572b27d9e0ab17bf8fd6da2bcd"
@@ -30143,11 +30677,18 @@ vue-scrollto@^2.18.1:
   dependencies:
     bezier-easing "2.1.0"
 
+<<<<<<< HEAD
 vue-server-renderer@^2.6.11:
   version "2.6.11"
   resolved "https://registry.yarnpkg.com/vue-server-renderer/-/vue-server-renderer-2.6.11.tgz#be8c9abc6aacc309828a755c021a05fc474b4bc3"
   integrity sha512-V3faFJHr2KYfdSIalL+JjinZSHYUhlrvJ9pzCIjjwSh77+pkrsXpK4PucdPcng57+N77pd1LrKqwbqjQdktU1A==
 >>>>>>> 26a70b2b (chore: add guides section (#407))
+=======
+vue-server-renderer@^2.6.12:
+  version "2.6.12"
+  resolved "https://registry.yarnpkg.com/vue-server-renderer/-/vue-server-renderer-2.6.12.tgz#a8cb9c49439ef205293cb41c35d0d2b0541653a5"
+  integrity sha512-3LODaOsnQx7iMFTBLjki8xSyOxhCtbZ+nQie0wWY4iOVeEtTg1a3YQAjd82WvKxrWHHTshjvLb7OXMc2/dYuxw==
+>>>>>>> 32390dfa (fix: missing URLs and release-notes)
   dependencies:
     chalk "^1.1.3"
     hash-sum "^1.0.2"
@@ -30174,6 +30715,7 @@ vue-style-loader@^4.1.0:
     loader-utils "^1.0.2"
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 vue-template-compiler@^2.6.14:
   version "2.6.14"
   resolved "https://registry.yarnpkg.com/vue-template-compiler/-/vue-template-compiler-2.6.14.tgz#a2f0e7d985670d42c9c9ee0d044fed7690f4f763"
@@ -30184,6 +30726,20 @@ vue-template-compiler@^2.5.21:
   resolved "https://registry.yarnpkg.com/vue-template-compiler/-/vue-template-compiler-2.5.21.tgz#a57ceb903177e8f643560a8d639a0f8db647054a"
   integrity sha512-Vmk5Cv7UcmI99B9nXJEkaK262IQNnHp5rJYo+EwYpe2epTAXqcVyExhV6pk8jTkxQK2vRc8v8KmZBAwdmUZvvw==
 >>>>>>> 5e315c38 (app: Support ad blockers, upgrade Nuxt)
+=======
+vue-svg-loader@^0.16.0:
+  version "0.16.0"
+  resolved "https://registry.yarnpkg.com/vue-svg-loader/-/vue-svg-loader-0.16.0.tgz#adccbdc9aca90132bde9c9d96cd49f74efecd345"
+  integrity sha512-2RtFXlTCYWm8YAEO2qAOZ2SuIF2NvLutB5muc3KDYoZq5ZeCHf8ggzSan3ksbbca7CJ/Aw57ZnDF4B7W/AkGtw==
+  dependencies:
+    loader-utils "^1.2.3"
+    svg-to-vue "^0.7.0"
+
+vue-template-compiler@^2.6.12:
+  version "2.6.12"
+  resolved "https://registry.yarnpkg.com/vue-template-compiler/-/vue-template-compiler-2.6.12.tgz#947ed7196744c8a5285ebe1233fe960437fcc57e"
+  integrity sha512-OzzZ52zS41YUbkCBfdXShQTe69j1gQDZ9HIX8miuC9C3rBCk9wIRjLiZZLrmX9V+Ftq/YEyv1JaVr5Y/hNtByg==
+>>>>>>> 32390dfa (fix: missing URLs and release-notes)
   dependencies:
     de-indent "^1.0.2"
     he "^1.1.0"
@@ -30194,10 +30750,17 @@ vue-template-es2015-compiler@^1.9.0, vue-template-es2015-compiler@^1.9.1:
   resolved "https://registry.npmjs.org/vue-template-es2015-compiler/-/vue-template-es2015-compiler-1.9.1.tgz"
   integrity sha512-4gDntzrifFnCEvyoO8PqyJDmguXgVPxKiIxrBKjIowvL9l+N66196+72XVYR8BBf1Uv1Fgt3bGevJ+sEmxfZzw==
 
+<<<<<<< HEAD
 vue@^2.6.14:
   version "2.6.14"
   resolved "https://registry.npmjs.org/vue/-/vue-2.6.14.tgz"
   integrity sha512-x2284lgYvjOMj3Za7kqzRcUSxBboHqtgRE2zlos1qWaOye5yUmHn42LB1250NJBLRwEcdrB0JRwyPTEPhfQjiQ==
+=======
+vue@^2.5.16, vue@^2.5.2, vue@^2.6.12:
+  version "2.6.12"
+  resolved "https://registry.yarnpkg.com/vue/-/vue-2.6.12.tgz#f5ebd4fa6bd2869403e29a896aed4904456c9123"
+  integrity sha512-uhmLFETqPPNyuLLbsKz6ioJ4q7AZHzD8ZVFNATNyICSZouqP2Sz0rotWQC8UNBF6VGSCs5abnKJoStA6JbCbfg==
+>>>>>>> 32390dfa (fix: missing URLs and release-notes)
 
 <<<<<<< HEAD
 vuex@^3.6.2:
@@ -30294,6 +30857,7 @@ web-namespaces@^1.0.0, web-namespaces@^1.1.2:
   resolved "https://registry.yarnpkg.com/web-namespaces/-/web-namespaces-1.1.4.tgz#bc98a3de60dadd7faefc403d1076d529f5e030ec"
   integrity sha512-wYxSGajtmoP4WxfejAPIr4l0fVh+jeMXZb08wNc0tMg6xsfZXj3cECqIK0G7ZAqUq0PP8WlMDtaOGVBTAWztNw==
 
+<<<<<<< HEAD
 web-streams-polyfill@^2.1.1:
   version "2.1.1"
   resolved "https://registry.yarnpkg.com/web-streams-polyfill/-/web-streams-polyfill-2.1.1.tgz#2c82b6193849ccb9efaa267772c28260ef68d6d2"
@@ -30327,6 +30891,17 @@ webpack-bundle-analyzer@^3.8.0:
   resolved "https://registry.yarnpkg.com/webpack-bundle-analyzer/-/webpack-bundle-analyzer-3.8.0.tgz#ce6b3f908daf069fd1f7266f692cbb3bded9ba16"
   integrity sha512-PODQhAYVEourCcOuU+NiYI7WdR8QyELZGgPvB1y2tjbUpbmcQOt5Q7jEK+ttd5se0KSBKD9SXHCEozS++Wllmw==
 >>>>>>> 527d15bb (docs: add images color-mode blog (#363))
+=======
+web-streams-polyfill@^3.0.0:
+  version "3.0.0"
+  resolved "https://registry.yarnpkg.com/web-streams-polyfill/-/web-streams-polyfill-3.0.0.tgz#c8bcb1e2ec1820088ca201674486a0f1feae848b"
+  integrity sha512-tcZlIJ+VBxuDXdRFF3PCZTJ3yUISGklG4hkl3CDGOlZ8XwpN90L5YsJNoSPH72wZ4nbsatE/OfIaxfM3p+6W7w==
+
+webpack-bundle-analyzer@^3.9.0:
+  version "3.9.0"
+  resolved "https://registry.yarnpkg.com/webpack-bundle-analyzer/-/webpack-bundle-analyzer-3.9.0.tgz#f6f94db108fb574e415ad313de41a2707d33ef3c"
+  integrity sha512-Ob8amZfCm3rMB1ScjQVlbYYUEJyEjdEtQ92jqiFUYt5VkEeO2v5UMbv49P/gnmCZm3A6yaFQzCBvpZqN4MUsdA==
+>>>>>>> 32390dfa (fix: missing URLs and release-notes)
   dependencies:
     acorn "^7.1.1"
     acorn-walk "^7.1.1"
@@ -30453,10 +31028,17 @@ webpack-log@^2.0.0:
     ansi-colors "^3.0.0"
     uuid "^3.3.2"
 
+<<<<<<< HEAD
 webpack-node-externals@^2.5.0:
   version "2.5.0"
   resolved "https://registry.yarnpkg.com/webpack-node-externals/-/webpack-node-externals-2.5.0.tgz#8d50f3289c71bc2b921a8da228e0b652acc503f1"
   integrity sha512-g7/Z7Q/gsP8GkJkKZuJggn6RSb5PvxW1YD5vvmRZIxaSxAzkqjfL5n9CslVmNYlSqBVCyiqFgOqVS2IOObCSRg==
+=======
+webpack-node-externals@^2.5.2:
+  version "2.5.2"
+  resolved "https://registry.yarnpkg.com/webpack-node-externals/-/webpack-node-externals-2.5.2.tgz#178e017a24fec6015bc9e672c77958a6afac861d"
+  integrity sha512-aHdl/y2N7PW2Sx7K+r3AxpJO+aDMcYzMQd60Qxefq3+EwhewSbTBqNumOsCE1JsCUNoyfGj5465N0sSf6hc/5w==
+>>>>>>> 32390dfa (fix: missing URLs and release-notes)
 
 webpack-sources@^1.0.1, webpack-sources@^1.1.0, webpack-sources@^1.3.0:
   version "1.3.0"
@@ -30467,6 +31049,7 @@ webpack-sources@^1.0.1, webpack-sources@^1.1.0, webpack-sources@^1.3.0:
     source-list-map "^2.0.0"
     source-map "~0.6.1"
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -30491,6 +31074,12 @@ webpack@^4.44.0:
   resolved "https://registry.yarnpkg.com/webpack/-/webpack-4.44.0.tgz#3b08f88a89470175f036f4a9496b8a0428668802"
   integrity sha512-wAuJxK123sqAw31SpkPiPW3iKHgFUiKvO7E7UZjtdExcsRe3fgav4mvoMM7vvpjLHVoJ6a0Mtp2fzkoA13e0Zw==
 >>>>>>> 26a70b2b (chore: add guides section (#407))
+=======
+webpack@^4.44.2:
+  version "4.44.2"
+  resolved "https://registry.yarnpkg.com/webpack/-/webpack-4.44.2.tgz#6bfe2b0af055c8b2d1e90ed2cd9363f841266b72"
+  integrity sha512-6KJVGlCxYdISyurpQ0IPTklv+DULv05rs2hseIXer6D7KrUicRDLFb4IUM1S6LUAKypPM/nSiVSuv8jHu1m3/Q==
+>>>>>>> 32390dfa (fix: missing URLs and release-notes)
   dependencies:
     "@webassemblyjs/ast" "1.9.0"
     "@webassemblyjs/helper-module-context" "1.9.0"

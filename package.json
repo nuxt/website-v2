@@ -109,6 +109,7 @@
     "@nuxtjs/pwa": "^3.0.0-beta.20",
     "@nuxtjs/tailwindcss": "1.3.3",
     "@snackbar/core": "^1.7.0",
+<<<<<<< HEAD
     "cookie": "^0.4.0",
     "defu": "^1.0.0",
     "degit": "^2.8.0",
@@ -154,6 +155,21 @@
     "reading-time": "^1.2.0",
     "v-lazy-image": "^1.4.0",
     "vue-chartjs": "^3.5.0",
+=======
+    "chart.js": "^2.9.4",
+    "clipboard": "^2.0.6",
+    "intersection-observer": "^0.11.0",
+    "lodash.groupby": "^4.6.0",
+    "lodash.sortby": "^4.7.0",
+    "node-fetch": "^2.6.1",
+    "nuxt-edge": "^2.14.0-26597729.aebf0ffe",
+    "nuxt-i18n": "^6.15.4",
+    "prism-themes": "^1.5.0",
+    "reading-time": "^1.2.0",
+    "vue-chartjs": "^3.5.1",
+    "vue-cookieconsent-component": "^1.2.0",
+    "vue-if-bot": "^1.2.0",
+>>>>>>> 32390dfa (fix: missing URLs and release-notes)
     "vue-observe-visibility": "^0.4.6",
     "vue-scrollactive": "^0.9.3",
     "vue-scrollto": "^2.18.1"

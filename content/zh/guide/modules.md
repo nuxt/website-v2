@@ -76,15 +76,21 @@ modules 中的 context, 请参考 [ModuleContainer](/api/internals-module-contai
 export default {
   modules: [
     // Simple usage
+<<<<<<< HEAD
     '~/modules/simple'[
       // Passing options
       ('~/modules/simple', { token: '123' })
     ]
+=======
+    '~/modules/simple',
+    // Passing options directly
+    ['~/modules/simple', { token: '123' }]
+>>>>>>> 32390dfa (fix: missing URLs and release-notes)
   ]
 }
 ```
 
-然后，我们告诉 Nuxt 为项目加载一些特定模块，并将可选参数作为选项。 请参考 [模块配置](/api/configuration-modules) 文档来查看更多!
+然后，我们告诉 Nuxt 为项目加载一些特定模块，并将可选参数作为选项。 请参考 [模块配置](/docs/2.x/configuration-glossary/configuration-modules) 文档来查看更多!
 
 ## 异步模块
 

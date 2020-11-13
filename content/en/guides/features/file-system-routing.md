@@ -399,7 +399,7 @@ The schema of the route should respect the [vue-router](https://router.vuejs.or
 
 <base-alert>
 
-When adding routes that use [Named Views](https://nuxtjs.org/guide/routing#named-views), don't forget to add the corresponding `chunkNames` of named `components`.
+When adding routes that use [Named Views](/docs/2.x/features/file-system-routing#nested-routes), don't forget to add the corresponding `chunkNames` of named `components`.
 
 </base-alert>
 

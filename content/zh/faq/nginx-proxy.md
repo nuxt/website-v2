@@ -44,7 +44,7 @@ server {
 
 以下是示例配置。 请记住：
 
-- 根文件夹 应与 [配置 generate.dir](/api/configuration-generate#dir) 设置相同
+- 根文件夹 应与 [配置 generate.dir](/docs/2.x/configuration-glossary#dir) 设置相同
 - 由 Nuxt 设置的过期标头被剥离 (由于缓存)
 - Nuxt 和 nginx 都可以设置额外的标题，建议选择一个(如果有疑问，请选择 nginx)
 - 如果您的站点大部分是静态的，请增加 `proxy_cache_path inactive` 和 `proxy_cache_valid` 数值

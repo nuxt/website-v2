@@ -2,6 +2,7 @@
   <div>
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     <navbar></navbar>
     <div :class="{'App--hidden': visible}">
 =======
@@ -12,6 +13,9 @@
       <nuxt/>
     </div>
 =======
+=======
+    <!-- <MasteringNuxtBanner /> -->
+>>>>>>> b69ba638 (fix: hide banner)
     <TheHeader />
     <main
       class="lg:block relative pt-16 lg:pt-24 bg-light-elevatedSurface dark:bg-dark-elevatedSurface transition-colors duration-300 ease-linear"

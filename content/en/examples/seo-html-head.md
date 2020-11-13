@@ -2,7 +2,7 @@
 title: SEO HTML Head
 description: In this example we use the head property to show how to get good SEO.
 position: 3
-category: essentials
+category: miscellaneous
 csb_link: https://codesandbox.io/embed/github/nuxt-academy/guides-examples/tree/master/03_features/06_meta_tags_seo?
 ---
 

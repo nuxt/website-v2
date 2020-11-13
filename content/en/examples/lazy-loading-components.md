@@ -2,7 +2,7 @@
 title: Lazy Loading Components
 description: Use fetch in your components to fetch data from an API as well as auto importing and lazy loading components
 position: 6
-category: essentials
+category: miscellaneous
 csb_link: https://codesandbox.io/embed/github/nuxt-academy/guides-examples/tree/master/04_directory_structure/03_components
 ---
 

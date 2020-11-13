@@ -301,9 +301,11 @@ module.exports = {
       internals: 'Internals'
     },
     examples: {
-      essentials: 'Essentials',
       routing: 'Routing',
+      dataFetching: 'Data Fetching',
+      assetManagement: 'Asset Management',
       transitions: 'Transitions',
+      miscellaneous: 'Miscellaneous',
       middleware: 'Middleware',
       plugins: 'Plugins',
       modules: 'Modules',

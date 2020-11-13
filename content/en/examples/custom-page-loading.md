@@ -2,7 +2,7 @@
 title: Customize Nuxt Loading
 description: Create a custom loading component, modify the default loader as well as the spinner for spas
 position: 5
-category: essentials
+category: miscellaneous
 csb_link: https://codesandbox.io/embed/github/nuxt-academy/guides-examples/tree/master/03_features/08_loading
 ---
 

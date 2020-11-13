@@ -97,7 +97,8 @@ https://www.nuxtjs.org/* https://nuxtjs.org/:splat 301!
 /examples/routes-transitions /examples/transitions 301!
 /examples/plugins /examples/external-packages-plugins 301!
 /examples/auth-external-jwt /faq/auth-external-jwt 301!
-
+/examples/testing /faq/testing 301!
+/examples/i18n https://i18n.nuxtjs.org/ 301!
 
 # [LEGACY] Redirect FAQ URLs
 /faq/google-analytics /faq/ga 301!

@@ -8,11 +8,6 @@ csb_link: https://codesandbox.io/embed/github/nuxt-academy/guides-examples/tree/
 
 <example-intro></example-intro>
 
-Local Module:
-
-- `modules/nuxt-api/plugin.js` shows how the function `nuxtApi` works.
-- `modules/nuxt-api/index.js` adds our plugin so we can use it.
-
 External Module (normally an npm package):
 
 - `myModule/lib/plugin.js` shows how the functions `nuxtHello` and `nuxtApiExternal` work.

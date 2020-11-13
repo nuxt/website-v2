@@ -1,7 +1,7 @@
 ---
 title: Layouts
 description: Using layouts to show different ways to structure your page
-position: 4
+position: 1
 category: essentials
 csb_link: https://codesandbox.io/embed/github/nuxt-academy/guides-examples/tree/master/04_directory_structure/07_layouts
 ---

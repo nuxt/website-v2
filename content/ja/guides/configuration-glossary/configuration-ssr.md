@@ -1,27 +1,27 @@
 ---
-title: 'The ssr Property'
-description: Change default nuxt ssr value
+title: 'ssr プロパティ'
+description: 'nuxt ssr のデフォルト値を変更します'
 menu: ssr
 category: configuration-glossary
 position: 28.1
 ---
 
-- Type: `boolean`
-- Default: `true`
-- Possible values:
-  - `true`: Server-side rendering enabled
-  - `false`: No server-side rendering (only client-side rendering)
+- 型: `boolean`
+- デフォルト: `true`
+- 設定できる値:
+  - `true`: サーバーサイドレンダリングが有効になります
+  - `false`: サーバーサイドレンダリングを行いません（クライアント側のレンダリングのみとなります）
 
-> You can set this option to `false` when you want **only client side rendering**
+> **クライアント側のレンダリングのみ行いたい場合**にオプションを `false` に設定できます
 
 ```js{}[nuxt.config.js]
 export default {
-  ssr: false // Disable Server Side rendering
+  ssr: false // サーバーサイドレンダリングを無効化
 }
 ```
 
 <base-alert type="next">
 
-Previously, `mode` was used to disable or enable server-side rendering. Here is the [`mode` documentation](/docs/2.x/configuration-glossary/configuration-mode).
+以前はサーバーサイドレンダリングを有効にするか無効にするかの設定に `mode` プロパティが使われていました。[`mode` のドキュメントはこちら](/docs/2.x/configuration-glossary/configuration-mode)です。
 
 </base-alert>

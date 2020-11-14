@@ -18,19 +18,32 @@ For detailed instructions consult the [Moovweb XDN Nuxt.js documentation](https:
 
 2. Install the XDN CLI
 
+<code-group>
+  <code-block label="Yarn" active>
+
+```bash
+yarn add -g @xdn/cli
+```
+
+  </code-block>
+  <code-block label="NPM">
+
 ```bash
 npm i -g @xdn/cli
 ```
 
+  </code-block>
+
+</code-group>
+
 ## Configure your project
 
-3. Make sure your `nuxt.config.js` set for Universal rendering and add the `@xdn/nuxt` module:
+3. Make sure [server side rendering is enabled](/docs/2.x/configuration-glossary/configuration-ssr) and in your `nuxt.config.js` add the `@xdn/nuxt` module:
 
 ```js
 // nuxt.config.js
 
 module.exports = {
-  mode: 'universal',
   modules: ['@xdn/nuxt/module']
 }
 ```
@@ -54,7 +67,6 @@ xdn deploy
 ## Optimize your project's performance
 
 - (Optional) To optimize the performance of server side rendering in Nuxt.js, Moovweb recommends moving most your modules into `buildModules` as described in the [modules vs buildModules section](https://developer.moovweb.com/guides/nuxt#section_modules_vs_buildmodules) of the XDN Nuxt.js guide.
-
 - (Optional) The XDN automatically supports Nuxt.js's built-in routing scheme. However you can and should optimize the performance by customizing the routing, caching, and prefetching via CDN-as-JavaScript as shown in the [Routing section](https://developer.moovweb.com/guides/nuxt#section_routing) of the XDN Nuxt.js guide.
 
 ## Get help

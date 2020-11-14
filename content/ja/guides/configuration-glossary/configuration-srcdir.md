@@ -1,19 +1,19 @@
 ---
-title: 'The srcDir Property'
-description: Define the source directory of your Nuxt.js application
+title: 'srcDir プロパティ'
+description: 'Nuxt.js アプリケーションのソースディレクトリを設定します。'
 menu: srcDir
 category: configuration-glossary
 position: 28
 ---
 
-- Type: `String`
-- Default: [rootDir value](/docs/2.x/configuration-glossary/configuration-rootdir)
+- 型: `String`
+- デフォルト: [rootDir の値](/docs/2.x/configuration-glossary/configuration-rootdir)
 
-> Define the source directory of your Nuxt.js application
+> Nuxt.js アプリケーションのソースディレクトリを設定します。
 
-If a relative path is specified it will be relative to the `rootDir`.
+相対パスを指定すると、`rootDir` からの相対パスになります。
 
-Example 1: Prerequisites:
+例 1: 前提条件:
 
 ```js{}[nuxt.config.js]
 export default {
@@ -27,7 +27,7 @@ export default {
   }
 ```
 
-works with the following folder structure (note that nuxt.config is listed in the app directory)
+次のフォルダ構成で動作します（nuxt.config は app ディレクトリにあることに注意してください）。
 
 ```bash
 -| app/
@@ -45,25 +45,25 @@ works with the following folder structure (note that nuxt.config is listed in th
 ------| store/
 ```
 
-Example 2:
+例 2:
 
-Instead of example 1 you can also move the nuxt.config into your `src` folder. In this case you only need to specify client as the `rootDir` and you can leave `srcDir` empty:
+例 1 の代わりに nuxt.config を `src` フォルダに移動することもできます。この場合 client を `rootDir` として指定するだけでよく、`srcDir` は空にできます:
 
-Prerequisites:
+前提条件:
 
 ```js{}[nuxt.config.js]
 export default {
-  srcDir: '' // or just remove it
+  srcDir: '' // または単に削除
 }
 ```
 
 ```js{}[package.json]
   "script": {
-    "dev": "yarn nuxt client" // this sets client as the rootDir
+    "dev": "yarn nuxt client" // client を rootDir として設定
   }
 ```
 
-works with the following folder structure (note that nuxt.config is listed in the client directory)
+次のフォルダ構成で動作します（nuxt.config は client ディレクトリにあることに注意してください）。
 
 ```bash
 -| app/

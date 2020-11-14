@@ -1,27 +1,27 @@
 ---
-title: 'The watchers Property'
-description: The watchers property lets you overwrite watchers configuration.
+title: 'watchers プロパティ'
+description: 'watchers プロパティは watcher の設定を上書きできます。'
 menu: watchers
 category: configuration-glossary
 position: 34
 ---
 
-- Type: `Object`
-- Default: `{}`
+- 型: `Object`
+- デフォルト: `{}`
 
-> The watchers property lets you overwrite watchers configuration in your nuxt.config.js.
+> nuxt.config.js の watchers プロパティは watcher の設定を上書きできます。
 
 ## chokidar
 
-- Type: `Object`
-- Default: `{}`
+- 型: `Object`
+- デフォルト: `{}`
 
-To learn more about chokidar options, see the [chokidar API](https://github.com/paulmillr/chokidar#api).
+chokidar オプションの詳細は [chokidar API](https://github.com/paulmillr/chokidar#api) を参照してください。
 
 ## webpack
 
-- Type: `Object`
-- Default:
+- 型: `Object`
+- デフォルト:
 
 ```js
 watchers: {
@@ -32,12 +32,12 @@ watchers: {
 }
 ```
 
-To learn more about webpack watchoptions, see the [webpack documentation](https://webpack.js.org/configuration/watch/#watchoptions).
+webpack の watchoptions の詳細は [webpack のドキュメント](https://webpack.js.org/configuration/watch/#watchoptions)を参照してください。
 
-### What's next
+### このあとは
 
 <base-alert type="next">
 
-Check out the [Internals Glossary book](/docs/2.x/internals-glossary/$nuxt)
+[Internals Glossary のドキュメント](/docs/2.x/internals-glossary/$nuxt)を参照してください。
 
 </base-alert>

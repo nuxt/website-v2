@@ -327,7 +327,7 @@ Mixins globais podem ser facilmente adicionados com plugins do Nuxt, mas podem c
 
 ```js{}[plugins/meu-mixin-plugin.js]
 if (!Vue.__meu_mixin__) {
-  Vue.__meu__mixin__ = true
+  Vue.__meu_mixin__ = true
   Vue.mixin({ ... }) // Então, configure seu mixin
 }
 ```

@@ -17,7 +17,7 @@ export default {
 
 ## Para Começar
 
-1. Verifique as [notas de versão](/guide/release-notes), da versão que deseja atualizar para ver se há instruções adicionais para essa versão específica.
+1. Verifique as [notas de versão](/docs/release-notes), da versão que deseja atualizar para ver se há instruções adicionais para essa versão específica.
 2. Atualize a versão especificada para o pacote `nuxt` em seu arquivo `package.json`.
 
 Após esta etapa, as instruções variam dependendo se você está usando Yarn ou NPM. _[Yarn](https://yarnpkg.com/en/docs/usage) é o gerenciador de pacotes recomendado para trabalhar com o Nuxt, pois é a ferramenta de desenvolvimento em que os testes foram escritos._

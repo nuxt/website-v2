@@ -11,7 +11,7 @@ position: 27
 
 O Nuxt cria internamente uma instância do [connect](https://github.com/senchalabs/connect) à qual você pode adicionar seu próprio middleware personalizado. Isso nos permite registrar rotas adicionais (normalmente rotas `/api`) **sem a necessidade de um servidor externo**.
 
-Como o próprio connect é um middleware, o middleware registrado funcionará com `nuxt start` e também quando usado como um middleware com usos programáticos como [express-template](https://github.com/nuxt-community/express-template). Os [Módulos](/guide/modules) Nuxt também pode fornecer `serverMiddleware` usando [this.addServerMiddleware()](/docs/2.x/internals-glossary/internals-module-container#addservermiddleware-middleware).
+Como o próprio connect é um middleware, o middleware registrado funcionará com `nuxt start` e também quando usado como um middleware com usos programáticos como [express-template](https://github.com/nuxt-community/express-template). Os [Módulos](/docs/2.x/directory-structure/modules) Nuxt também pode fornecer `serverMiddleware` usando [this.addServerMiddleware()](/docs/2.x/internals-glossary/internals-module-container#addservermiddleware-middleware).
 
 Além deles, introduzimos uma opção `prefix` cujo padrão é `true`. Ele adicionará a base do roteador aos middlewares do seu servidor.
 
@@ -24,7 +24,7 @@ Além deles, introduzimos uma opção `prefix` cujo padrão é `true`. Ele adici
 
 ## serverMiddleware vs middleware!
 
-Não confunda com [rotas de middleware](/guide/routing#middleware) que são chamados pelo Vue antes de cada rota no lado do cliente ou SSR. O middleware listado na propriedade `serverMiddleware` roda no lado do servidor **antes do** `vue-server-renderer` e pode ser usado para tarefas específicas do servidor, como lidar com requisições de API ou servir assets.
+Não confunda com [rotas de middleware](/docs/2.x/features/file-system-routing#middleware) que são chamados pelo Vue antes de cada rota no lado do cliente ou SSR. O middleware listado na propriedade `serverMiddleware` roda no lado do servidor **antes do** `vue-server-renderer` e pode ser usado para tarefas específicas do servidor, como lidar com requisições de API ou servir assets.
 
 ## Uso
 

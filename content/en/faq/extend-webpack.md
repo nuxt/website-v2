@@ -31,7 +31,7 @@ The `extend` method gets called twice - Once for the client bundle and the other
 
 #### Customize chunks configuration
 
-You may want to tweak a bit [optimization configuration](/api/configuration-build#optimization), avoiding to rewrite default object.
+You may want to tweak a bit [optimization configuration](/docs/2.x/configuration-glossary/configuration-build#optimization), avoiding to rewrite default object.
 
 ```js
 export default {

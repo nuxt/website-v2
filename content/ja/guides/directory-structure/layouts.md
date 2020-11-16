@@ -62,7 +62,7 @@ questions:
     correctAnswer: false
 ---
 
-レイアウトは Nuxt.js アプリのルック&フィールを変えるとき、とても役に立ちます. サイドバーを含めるか、モバイルとデスクトップのための明確なレイアウトを持つかどうかです.
+レイアウトは Nuxt.js アプリのルック&フィールを変えるとき、とても役に立ちます。 サイドバーを含めるか、モバイルとデスクトップのための明確なレイアウトを持つかどうかです
 
 <base-alert>
 
@@ -82,7 +82,7 @@ _このディレクトリは追加の設定なしに名前を変更できませ�
 </template>
 ```
 
-ナビゲーションやヘッダー、フッターのようなコンポーネントもここに追加できます.
+ナビゲーションやヘッダー、フッターのようなコンポーネントもここに追加できます。
 
 ```html{}[layouts/default.vue]
 <template>
@@ -96,7 +96,7 @@ _このディレクトリは追加の設定なしに名前を変更できませ�
 
 <base-alert type="info">
 
-もし [components プロパティを true に設定](/docs/2.x/directory-structure/components)していたら、コンポーネントを追加するために import 文は必要ないです.
+もし [components プロパティを true に設定](/docs/2.x/directory-structure/components)していたら、コンポーネントを追加するために import 文は必要ないです。
 
 </base-alert>
 
@@ -104,9 +104,9 @@ _このディレクトリは追加の設定なしに名前を変更できませ�
 
 Every file (_top-level_) in the `layouts` directory will create a custom layout accessible with the `layout` property in the page components.
 
-`layout` ディレクトリの全てのファイル(_トップレベル_)は、ページコンポーネントの `layout` プロパティで使えるカスタムレイアウトが作られる.
+`layout` ディレクトリの全てのファイル(_トップレベル_)は、ページコンポーネントの `layout` プロパティで使えるカスタムレイアウトが作られる。
 
-ブログレイアウトを作成して `layouts/blog.vue` に保存しましょう.
+ブログレイアウトを作成して `layouts/blog.vue` に保存しましょう。
 
 ```html{}[layouts/blog.vue]
 <template>
@@ -170,7 +170,7 @@ export default {
 
 <base-alert type="info">
 
-デフォルトのエラーページのソースコードは [GitHub で参照できます](https://github.com/nuxt/nuxt.js/blob/dev/packages/vue-app/template/components/nuxt-error.vue).
+デフォルトのエラーページのソースコードは [GitHub で参照できます。](https://github.com/nuxt/nuxt.js/blob/dev/packages/vue-app/template/components/nuxt-error.vue)
 
 </base-alert>
 

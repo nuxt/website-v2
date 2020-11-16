@@ -327,7 +327,7 @@ _Global mixins_ daoat ditambahkan secara mudah dengan Nuxt _plugins_, tetapi dap
 
 ```js{}[plugins/my-mixin-plugin.js]
 if (!Vue.__my_mixin__) {
-	Vue.__my__mixin__ = true
+  Vue.__my_mixin__ = true
   Vue.mixin({ ... }) // Tetapkan mixin Anda lalu
 }
 ```

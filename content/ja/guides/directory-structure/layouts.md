@@ -121,7 +121,7 @@ _このディレクトリは追加の設定なしに名前を変更できませ�
 <script>
 export default {
   layout: 'blog',
-  // OR
+  // または
   layout (context) {
     return 'blog'
   }

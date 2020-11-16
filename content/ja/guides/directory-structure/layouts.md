@@ -102,8 +102,6 @@ _このディレクトリは追加の設定なしに名前を変更できませ�
 
 ## カスタムレイアウト
 
-Every file (_top-level_) in the `layouts` directory will create a custom layout accessible with the `layout` property in the page components.
-
 `layout` ディレクトリの全てのファイル(_トップレベル_)は、ページコンポーネントの `layout` プロパティで使えるカスタムレイアウトが作られる。
 
 ブログレイアウトを作成して `layouts/blog.vue` に保存しましょう。
@@ -136,8 +134,6 @@ export default {
 </app-modal>
 
 ## エラーページ
-
-The error page is a *page component* which is always displayed when an error occurs (that is not thrown on the server-side).
 
 エラーページはエラーが発生したときいつも表示される *ページコンポーネント* です（サーバーサイドで発生したエラーではない）。
 

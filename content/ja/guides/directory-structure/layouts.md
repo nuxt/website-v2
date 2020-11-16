@@ -170,7 +170,7 @@ export default {
 
 <base-alert type="info">
 
-デフォルトのエラーページのソースコードは [GitHub で手に入ります](https://github.com/nuxt/nuxt.js/blob/dev/packages/vue-app/template/components/nuxt-error.vue).
+デフォルトのエラーページのソースコードは [GitHub で参照できます](https://github.com/nuxt/nuxt.js/blob/dev/packages/vue-app/template/components/nuxt-error.vue).
 
 </base-alert>
 

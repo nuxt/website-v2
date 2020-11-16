@@ -357,7 +357,7 @@ Global mixins can be easily added with Nuxt plugins but can cause trouble and me
 
 ```js{}[plugins/my-mixin-plugin.js]
 if (!Vue.__my_mixin__) {
-	Vue.__my__mixin__ = true
+  Vue.__my_mixin__ = true
   Vue.mixin({ ... }) // Set up your mixin then
 }
 ```

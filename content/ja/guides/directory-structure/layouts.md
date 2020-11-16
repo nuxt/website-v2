@@ -159,7 +159,7 @@ export default {
 <script>
 export default {
   props: ['error'],
-  layout: 'blog' // you can set a custom layout for the error page
+  layout: 'blog' // エラーページ用のカスタムレイアウトを設定できます
 }
 </script>
 ```

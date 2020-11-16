@@ -143,7 +143,7 @@ The error page is a *page component* which is always displayed when an error occ
 
 <base-alert>
 
-このファイルは `layout` フォルダに置かれるが、ページとして扱われるべきです.
+このファイルは `layout` フォルダに置かれますが、ページとして扱われるべきです。
 
 </base-alert>
 

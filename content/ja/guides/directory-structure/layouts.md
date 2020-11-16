@@ -139,7 +139,7 @@ export default {
 
 The error page is a *page component* which is always displayed when an error occurs (that is not thrown on the server-side).
 
-エラーページはエラーが発生したときいつも表示される *ページコンポーネント*　です.(サーバーサイドで発生したものではない)
+エラーページはエラーが発生したときいつも表示される *ページコンポーネント* です（サーバーサイドで発生したエラーではない）。
 
 <base-alert>
 

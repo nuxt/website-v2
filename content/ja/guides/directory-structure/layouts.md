@@ -1,6 +1,6 @@
 ---
 title: レイアウト
-description: レイアウトは Nuxt.js アプリのルック&フィールを変えるとき、とても役に立ちます. サイドバーを含めるか、モバイルとデスクトップのための明確なレイアウトを持つかどうかです.
+description: レイアウトは Nuxt.js アプリのルック&フィールを変えるとき、とても役に立ちます。サイドバーを含めるか、モバイルとデスクトップのための明確なレイアウトを持つかどうかです。
 position: 7
 category: directory-structure
 csb_link: https://codesandbox.io/embed/github/nuxt-academy/guides-examples/tree/master/04_directory_structure/07_layouts?fontsize=14&hidenavigation=1&theme=dark

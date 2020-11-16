@@ -10,11 +10,11 @@ csb_link: https://codesandbox.io/embed/github/nuxt-academy/guides-examples/tree/
 
 La plupart des sites Web possèdent plus d'une page (comme une page d'accueil, une page à propos, une page de contact, etc.). Pour afficher ces pages, nous avons besoin d'un routeur. C'est là qu'intervient `vue-router`.
 
-Lorsque vous travaillez avec Vue, vous devez configurer un fichier de configuration (comme `router.js`) et y ajouter manuellement toutes vos routes. Nuxt.js génère automatiquement la configuration `vue-router` pour vous, en fonction des fichiers Vue fournis dans le répertoire `pages`.
+Lorsque nous travaillons avec Vue, nous devons configurer un fichier de configuration (comme `router.js`) et y ajouter manuellement toutes nos routes. Nuxt.js génère automatiquement la configuration `vue-router` pour nous, en fonction des fichiers Vue fournis dans le répertoire `pages`.
 
-Cela signifie que vous n'aurez plus jamais besoin d'écrire une configuration de routeur ! Nuxt.js vous offre également le découpage dynamique de code pour toutes vos routes.
+Cela signifie que nous n'avons plus jamais besoin d'écrire une configuration de routeur ! Nuxt.js nous offre également le découpage dynamique de code pour toutes nos routes.
 
-En d'autres termes, tout ce que vous avez à faire pour avoir un routage dans votre application est de créer des fichiers `.vue` dans le dossier `pages`.
+En d'autres termes, tout ce que nous avons à faire pour avoir un routage dans notre application est de créer des fichiers `.vue` dans le répertoire `pages`.
 
 <base-alert type="next">
 
@@ -24,11 +24,11 @@ En savoir plus sur le [Routage](/docs/2.x/features/file-system-routing)
 
 ## Navigation
 
-Pour naviguer entre les pages de votre application, vous devez utiliser le composant [NuxtLink](/docs/2.x/features/nuxt-components#the-nuxtlink-component). Ce composant est inclus avec Nuxt.js et vous n'avez donc pas à l'importer comme vous le faites avec d'autres composants.
+Pour naviguer entre les pages de notre application, nous devons utiliser le composant [NuxtLink](/docs/2.x/features/nuxt-components#the-nuxtlink-component). Ce composant est inclus avec Nuxt.js et nous n'avons donc pas à l'importer comme on le fait avec d'autres composants.
 
-Il est similaire à la balise HTML `<a>`, mais à la place d'utiliser un attribut `href="/about"`, nous utilisons `to="/about"`. Si vous avez déjà utilisé `vue-router`, vous pouvez comparer `<NuxtLink>` au composant `<RouterLink>`.
+Il est similaire à la balise HTML `<a>`, mais à la place d'utiliser un attribut `href="/about"`, nous utilisons `to="/about"`. Si nous avons déjà utilisé `vue-router`, nous pouvons comparer `<NuxtLink>` au composant `<RouterLink>`.
 
-Voici un exemple de l'utilisation du composant `NuxtLink` avec un lien vers la page `index.vue` dans votre dossier `pages` :
+Voici un exemple de l'utilisation du composant `NuxtLink` avec un lien vers la page `index.vue` dans le répertoire `pages` :
 
 ```html{}[pages/index.vue]
 <template>
@@ -36,7 +36,7 @@ Voici un exemple de l'utilisation du composant `NuxtLink` avec un lien vers la p
 </template>
 ```
 
-Pour tous liens vers des pages de votre site, utilisez `<NuxtLink>`. Si vous avez des liens vers d'autres sites Web, vous devez utiliser la balise `<a>` comme ci-dessous :
+Pour tous liens vers des pages de notre site, il faut utiliser `<NuxtLink>`. Si nous avons des liens vers d'autres sites Web, nous devons utiliser la balise `<a>` comme ci-dessous :
 
 ```html{}[pages/index.vue]
 <template>

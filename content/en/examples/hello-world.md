@@ -3,12 +3,12 @@ title: Hello World
 description: Example project with basic install including two ways of creating a page component.
 position: 101
 category: routing
-csb_link: https://codesandbox.io/embed/github/nuxt-academy/guides-examples/tree/master/01_get_started/01_installation?
+csb_link: https://codesandbox.io/embed/github/nuxt-academy/examples/tree/master/routing/hello-world
 ---
 
 <example-intro></example-intro>
 
-`pages/index.vue` - Hello World
+`pages/index.vue` and `pages/about.vue` - Show how Nuxt server renders the page on first load or on hard refresh and renders the page on client side when navigating using the `<NuxtLink>` component.
 
 <base-alert type="next">
 

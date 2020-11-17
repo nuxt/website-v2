@@ -3,20 +3,22 @@ title: Active Link Classes
 description: Change the default NuxtLink classes and style the active and exact active classes as well as disable prefetch for a specific link
 position: 103
 category: routing
-csb_link: https://codesandbox.io/embed/github/nuxt-academy/guides-examples/tree/master/03_features/09_components_nuxt-link
+csb_link: https://codesandbox.io/embed/github/nuxt-academy/examples/tree/master/routing/active-link-classes
 ---
 
 <example-intro></example-intro>
 
-`nuxt.config.js` shows the `router` property for changing the name of the `linkActiveClass`, `linkExactActiveClass` and `linkPrefecthedClass`.
-
-`main.css` add styles for `nuxt-link-active`, `nuxt-link-exact-active` and `nuxt-link-prefetched`
-
-`components/navigation.vue` adds `no-prefetch` to the `<NuxtLink>` for the No Prefetch page.
+`layouts/default.vue` shows the styles for `nuxt-link-active` and `nuxt-link-exact-active`.
 
 <base-alert type="next">
 
-Learn more in the Features book in the [Nuxt Components](/docs/2.x/features/nuxt-components#link-classes) chapter.
+Learn more about [vue routers](https://router.vuejs.org/api/#exact-active-class) active and exact active classes.
+
+</base-alert>
+
+<base-alert type="next">
+
+Learn more about active classes in the Features book in the [Nuxt Components](/docs/2.x/features/nuxt-components#link-classes) chapter.
 
 </base-alert>
 

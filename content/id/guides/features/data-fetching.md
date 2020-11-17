@@ -2,7 +2,7 @@
 title: Pengambilan data
 description: Pada Nuxt.js Kami memiliki 2 cara untuk mendapatkan data dari sebuah antarmuka pemrograman aplikasi (_API_). Kami dapat menggunakan metode _fetch_ atau metode _asyncData_.
 position: 4
-category: fitur
+category: features
 csb_link: https://codesandbox.io/embed/github/nuxt-academy/guides-examples/tree/master/03_features/04_data_fetching?fontsize=14&hidenavigation=1&theme=dark
 questions:
   - question: Di mana Anda dapat menggunakan pengait _fetch_ pada Nuxt.js?

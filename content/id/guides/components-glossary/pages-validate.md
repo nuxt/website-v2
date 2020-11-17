@@ -2,7 +2,7 @@
 title: 'Metode Validasi'
 description: Nuxt.js memungkinkan Anda menentukan metode validator di dalam komponen rute dinamis Anda.
 menu: Metode Validasi
-category: komponen-glosarium
+category: components-glossary
 position: 0
 ---
 

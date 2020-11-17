@@ -61,7 +61,7 @@ export default {
 
     if (
       app.i18n.locale !== app.i18n.defaultLocale &&
-      (['pt', 'es'].includes(app.i18n.locale) ||
+      (['pt', 'es', 'ja', 'id', 'fr'].includes(app.i18n.locale) ||
         process.env.NODE_ENV !== 'production')
     ) {
       try {
@@ -77,7 +77,7 @@ export default {
 
     try {
       ;[prev, next] = await $content(
-        ['pt', 'es'].includes(app.i18n.locale)
+        ['pt', 'es', 'ja', 'id', 'fr'].includes(app.i18n.locale)
           ? path
           : `/${app.i18n.defaultLocale}/guides/${params.book}`
       )

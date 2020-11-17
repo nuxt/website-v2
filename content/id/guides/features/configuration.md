@@ -2,7 +2,7 @@
 title: Konfigurasi
 description: Secara bawaan, Nuxt.js dikonfigurasi untuk mencakup sebagian besar kasus penggunaan. Konfigurasi bawaan ini dapat ditimpa dengan berkas nuxt.config.js.
 position: 7
-category: fitur
+category: features
 csb_link_host_port: https://codesandbox.io/embed/github/nuxt-academy/guides-examples/tree/master/03_features/07_configuration_host_port?fontsize=14&hidenavigation=1&theme=dark
 csb_link_pre-processors: https://codesandbox.io/embed/github/nuxt-academy/guides-examples/tree/master/03_features/07_configuration_pre-processors?fontsize=14&hidenavigation=1&theme=dark
 questions:

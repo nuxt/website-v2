@@ -2,7 +2,7 @@
 title: 'nuxt.render(req, res)'
 description: Anda dapat menggunakan Nuxt.js sebagai middleware untuk server Node.js Anda.
 menu: render
-category: internal-glosarium
+category: internals-glossary
 position: 10
 ---
 

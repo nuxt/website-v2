@@ -10,8 +10,8 @@ csb_link: https://codesandbox.io/embed/github/nuxt-academy/examples/tree/master/
 
 `pages/index.vue` shows:
 
-- how to add an image to the `<img>` tag from the assets folder.
-- how to add a background image from the assets folder using css.
+- how to add an image from the assets folder.
+- how to add a background image from the assets folder using CSS.
 - how to add dynamic images from the assets folder using the data property.
 
 `nuxt.config.js` contains the `css` property for globally adding a css file.

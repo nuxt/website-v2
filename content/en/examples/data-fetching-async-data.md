@@ -1,6 +1,6 @@
 ---
 title: asyncData Hook
-description: In this example we use asyncData and fetch to show you the differences between both methods.
+description: In this example we use asyncData to fetch our data from our API.
 position: 1
 category: dataFetching
 csb_link: https://codesandbox.io/embed/github/nuxt-academy/examples/tree/master/data-fetching/async-data-hook
@@ -8,9 +8,7 @@ csb_link: https://codesandbox.io/embed/github/nuxt-academy/examples/tree/master/
 
 <example-intro></example-intro>
 
-- `pages/index.vue` and `pages/posts/_id` uses the `asyncData` hook and the `$http` module to fetch our list of posts from our API.
-- `nuxt.config.js` shows how to register the `$http` module
-- `package.json` shows that the `$http` module is installed
+`pages/index.vue` and `pages/posts/_id` use the `asyncData` hook and the `$http` module to fetch our list of mountains from our API.
 
 <base-alert type="next">
 

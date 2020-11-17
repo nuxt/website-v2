@@ -8,7 +8,7 @@ csb_link: https://codesandbox.io/embed/github/nuxt-academy/examples/tree/master/
 
 <example-intro></example-intro>
 
-`pages/index.vue` and `pages/about.vue` - Show how Nuxt server renders the page on first load or on hard refresh and renders the page on client side when navigating using the `<NuxtLink>` component.
+`pages/index.vue` and `pages/about.vue` show how Nuxt server renders the page on first load or on hard refresh and renders the page on client side when navigating using the `<NuxtLink>` component.
 
 <base-alert type="next">
 

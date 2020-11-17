@@ -1,22 +1,28 @@
 ---
-title: Fetch Hook
-description: In this example we use asyncData and fetch to show you the differences between both methods.
+title: fetch Hook
+description: In this example we use the fetch hook to fetch data from components and from pages
 position: 2
 category: dataFetching
-csb_link: https://codesandbox.io/embed/github/nuxt-academy/guides-examples/tree/master/03_features/04_data_fetchin-fetch-hook?fontsize=14&hidenavigation=1&theme=dark
+csb_link: https://codesandbox.io/embed/github/nuxt-academy/examples/tree/master/data-fetching/fetch-hook
 ---
 
 <example-intro></example-intro>
 
-`pages/index.vue` imports `components/BlogPosts.vue` which uses the `fetch hook` and the `$http` module to fetch our data at component level while `pages/posts/_id` fetches the data at page level. Both use:
+`pages/index.vue` imports `components/Mountains.vue` which uses the `fetch` hook and the `$http` module to fetch our data at component level while `pages/mountains/_slug` fetches the data at page level and include:
 
-- `$fetchState.pending` to show a loading text when the data is loading
-- `$fetchState.error` to show an error message when we can't retrieve the posts.
+- `$fetchState.pending` to show a loading text when the data is loading.
+- `$fetchState.error` to show an error message when we can't retrieve the data.
 - `$fetch` to fetch the data again when clicked.
 
 <base-alert type="next">
 
-Learn more in the Features book in the [Data Fetching](/docs/2.x/features/data-fetching) chapter.
+Learn more about the [http module](https://http.nuxtjs.org/).
+
+</base-alert>
+
+<base-alert type="next">
+
+Learn more about the fetch hook in the Features book in the [Data Fetching](/docs/2.x/features/data-fetching) chapter.
 
 </base-alert>
 

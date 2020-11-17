@@ -1,20 +1,20 @@
 ---
-title: 'transition Properties'
-description: Set the default properties of the page and layout transitions.
+title: 'transition プロパティ'
+description: 'ページトランジションとレイアウトトランジションのデフォルトプロパティを設定します。'
 menu: transition
 category: configuration-glossary
 position: 31
 ---
 
-## The pageTransition Property
+## pageTransition プロパティ
 
-> Nuxt v2.7.0 introduces key "pageTransition" in favor of the "transition" key to consolidate the naming with layout transition keys.
+> Nuxt v2.7.0 では「transition」キーに代わり「pageTransition」キーが導入され、名前が layout transition キーに統合されています。
 
-- Type: `String` or `Object`
+- 型: `String` または `Object`
 
-> Used to set the default properties of the page transitions.
+> ページトランジションのデフォルトプロパティを設定するために使われます。
 
-Default:
+デフォルト:
 
 ```js
 {
@@ -26,7 +26,7 @@ Default:
 ```js{}[nuxt.config.js]
 export default {
   pageTransition: 'page'
-  // or
+  // または
   pageTransition: {
     name: 'page',
     mode: 'out-in',
@@ -37,15 +37,15 @@ export default {
 }
 ```
 
-The transition key in `nuxt.config.js` is used to set the default properties for the page transitions. To learn more about the available keys when the `transition` key is an object, see the [pages transition property](/docs/2.x/features/transitions).
+`nuxt.config.js` 内の transition キーはページトランジションのデフォルトプロパティを指定するために使われます。`transition` キーがオブジェクトのときに利用可能なキーの詳細については[ページトランジションのプロパティ](/docs/2.x/features/transitions)を参照してください。
 
-## The layoutTransition Property
+## layoutTransition プロパティ
 
-- Type: `String` or `Object`
+- 型: `String` または `Object`
 
-> Used to set the default properties of the layout transitions. The value provided in the `name` option is configured to work with the name provided in `layout` from your `layouts` folder.
+> レイアウトトランジションのデフォルトプロパティを設定するために使われます。`name` オプションで指定された値は `layouts` フォルダーの `layout` で指定された名前で動くように設定されています。
 
-Default:
+デフォルト:
 
 ```js
 {
@@ -57,7 +57,7 @@ Default:
 ```js{}[nuxt.config.js]
 export default {
   layoutTransition: 'layout'
-  // or
+  // または
   layoutTransition: {
     name: 'layout',
     mode: 'out-in'

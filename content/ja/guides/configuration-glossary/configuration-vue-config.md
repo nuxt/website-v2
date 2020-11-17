@@ -1,17 +1,17 @@
 ---
-title: 'The vue.config Property'
-description: A config object for Vue.config
+title: 'vue.config プロパティ'
+description: 'Vue.config の構成オブジェクト'
 menu: vue.config
 category: configuration-glossary
 position: 32
 ---
 
-- Type: `Object`
-- Default: `{ silent: !isDev, performance: isDev }`
+- 型: `Object`
+- デフォルト: `{ silent: !isDev, performance: isDev }`
 
-> The vue.config property provides a direct configuration bridge for the `Vue.config`
+> vue.config プロパティは `Vue.config` 用に直接設定できる橋渡しを提供します。
 
-**Example**
+**例**
 
 ```js{}[nuxt.config.js]
 export default {
@@ -24,13 +24,13 @@ export default {
 }
 ```
 
-This configuration will lead to the following Vue.config:
+この設定により次の Vue.config が作成されます:
 
 ```js
 Vue.config.productionTip // true
 Vue.config.devtools // false
-Vue.config.silent // !isDev [default value]
-Vue.config.performance // isDev [default value]
+Vue.config.silent // !isDev（デフォルト値）
+Vue.config.performance // isDev（デフォルト値）
 ```
 
-To learn more about the `Vue.config` API, check out the [official Vue documentation](https://vuejs.org/v2/api/#Global-Config)
+`Vue.config` API の詳細については[公式の Vue のドキュメント](https://jp.vuejs.org/v2/api/index.html#%E3%82%B0%E3%83%AD%E3%83%BC%E3%83%90%E3%83%AB%E8%A8%AD%E5%AE%9A)を参照してください。

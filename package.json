@@ -51,7 +51,7 @@
     "sass": "^1.29.0",
     "sass-loader": "^10.1.0",
     "start-server-and-test": "^1.11.5",
-    "stylelint": "^13.7.2",
+    "stylelint": "^13.8.0",
     "stylelint-config-prettier": "^8.0.2",
     "stylelint-config-standard": "^20.0.0",
     "stylelint-scss": "^3.18.0"

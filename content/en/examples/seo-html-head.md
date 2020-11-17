@@ -16,7 +16,7 @@ csb_link: https://codesandbox.io/embed/github/nuxt-academy/guides-examples/tree/
 
 <base-alert type="next">
 
-Learn more in the Features book in the [Meta Tags and SEO](/guides/features/meta-tags-seo) chapter.
+Learn more in the Features book in the [Meta Tags and SEO](/docs/2.x/features/meta-tags-seo) chapter.
 
 </base-alert>
 

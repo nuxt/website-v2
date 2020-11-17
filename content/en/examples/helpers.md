@@ -20,7 +20,7 @@ csb_link: https://codesandbox.io/embed/github/nuxt-academy/guides-examples/tree/
 
 <base-alert type="next">
 
-Learn more in the Concepts book in the [Context and Helpers](/guides/concepts/context-helpers#helpers) chapter.
+Learn more in the Concepts book in the [Context and Helpers](/docs/2.x/concepts/context-helpers#helpers) chapter.
 
 </base-alert>
 

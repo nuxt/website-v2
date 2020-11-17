@@ -25,7 +25,7 @@ csb_link: https://codesandbox.io/embed/github/nuxt-academy/guides-examples/tree/
 
 <base-alert type="next">
 
-Learn more in the Directory Structure book in the [plugins](/guides/directory-structure/plugins#inject-in-root--context) chapter.
+Learn more in the Directory Structure book in the [plugins](/docs/2.x/directory-structure/plugins#inject-in-root--context) chapter.
 
 </base-alert>
 

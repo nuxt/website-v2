@@ -12,7 +12,7 @@ csb_link: https://codesandbox.io/embed/github/nuxt-academy/guides-examples/tree/
 
 <base-alert type="next">
 
-Learn more in the Features book in the [Data Fetching](/guides/features/data-fetching) chapter.
+Learn more in the Features book in the [Data Fetching](/docs/2.x/features/data-fetching) chapter.
 
 </base-alert>
 

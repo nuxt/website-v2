@@ -3,14 +3,14 @@ title: Pre-processors
 description: Configuration your application to use pug and sass with style resources to easily add variables to all components.
 position: 2
 category: assetManagement
-csb_link: https://codesandbox.io/embed/github/nuxt-academy/guides-examples/tree/master/03_features/07_configuration_pre-processors
+csb_link: https://codesandbox.io/embed/github/nuxt-academy/examples/tree/master/asset-management/pre-processors
 ---
 
 <example-intro></example-intro>
 
-`pages/pre-processors.vue` uses pug as a template language and sass for styling.
+`pages/index.vue` uses pug as a template language and sass for styling.
 
-`nuxt.config.js` :
+`nuxt.config.js`:
 
 - registers the style resources module.
 - contains a `styleResources` property to add `assets/variables.scss`.
@@ -20,7 +20,7 @@ csb_link: https://codesandbox.io/embed/github/nuxt-academy/guides-examples/tree/
 
 <base-alert type="next">
 
-Learn more in the Features book in the [Configuration](/guides/features/configuration#pre-processors) chapter.
+Learn more in the Features book in the [Configuration](/docs/2.x/features/configuration#pre-processors) chapter.
 
 </base-alert>
 

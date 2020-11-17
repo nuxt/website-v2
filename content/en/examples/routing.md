@@ -8,11 +8,11 @@ csb_link: https://codesandbox.io/embed/github/nuxt-academy/guides-examples/tree/
 
 <example-intro></example-intro>
 
-`pages/index.vue` and `pages/fun.vue` shows routing between pages using the [`<NuxtLink>`](/guides/features/nuxt-components#the-nuxtlink-component) component.
+`pages/index.vue` and `pages/fun.vue` shows routing between pages using the [`<NuxtLink>`](/docs/2.x/features/nuxt-components#the-nuxtlink-component) component.
 
 <base-alert type="next">
 
-Learn more in the Get Started book in the [Routing](/guides/get-started/routing) chapter.
+Learn more in the Get Started book in the [Routing](/docs/2.x/get-started/routing) chapter.
 
 </base-alert>
 

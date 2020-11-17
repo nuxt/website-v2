@@ -18,7 +18,7 @@ If no `layout` property is defined, it will fallback to the default layout.
 
 <base-alert type="next">
 
-Learn more in the Concepts book in the [Views](/guides/concepts/views) chapter or in the Directory Structure book in the [Layouts](/guides/directory-structure/layouts) chapter.
+Learn more in the Concepts book in the [Views](/docs/2.x/concepts/views) chapter or in the Directory Structure book in the [Layouts](/docs/2.x/directory-structure/layouts) chapter.
 
 </base-alert>
 

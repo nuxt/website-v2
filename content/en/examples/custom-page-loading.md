@@ -17,7 +17,7 @@ csb_link: https://codesandbox.io/embed/github/nuxt-academy/guides-examples/tree/
 
 <base-alert type="next">
 
-Learn more in the Features book in the [Loading](/guides/features/loading) chapter.
+Learn more in the Features book in the [Loading](/docs/2.x/features/loading) chapter.
 
 </base-alert>
 

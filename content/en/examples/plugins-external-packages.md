@@ -22,7 +22,7 @@ csb_link: https://codesandbox.io/embed/github/nuxt-academy/guides-examples/tree/
 
 <base-alert type="next">
 
-Learn more in the Directory Structure book in the [plugins](/guides/directory-structure/plugins#external-packages) chapter.
+Learn more in the Directory Structure book in the [plugins](/docs/2.x/directory-structure/plugins#external-packages) chapter.
 
 </base-alert>
 

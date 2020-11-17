@@ -18,7 +18,7 @@ csb_link: https://codesandbox.io/embed/github/nuxt-academy/guides-examples/tree/
 
 <base-alert type="next">
 
-Learn more in the Directory Structure book in the [middleware](/guides/directory-structure/middleware#named-middleware) chapter.
+Learn more in the Directory Structure book in the [middleware](/docs/2.x/directory-structure/middleware#named-middleware) chapter.
 
 </base-alert>
 

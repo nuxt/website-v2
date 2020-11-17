@@ -1,19 +1,19 @@
 ---
-title: 'The target Property'
-description: Change default nuxt target
+title: 'target プロパティ'
+description: 'デフォルトの nuxt target を変更します。'
 menu: target
 category: configuration-glossary
 position: 29
 ---
 
-Deployment targets for Nuxt >= v2.13:
+Nuxt v2.13 以上でのデプロイターゲット:
 
-- Type: `string`
-  - Default: `server`
-  - Possible values:
-    - `'server'`: For server side rendering
-    - `'static'`: For static sites
+- 型: `string`
+  - デフォルト: `server`
+  - 設定できる値:
+    - `'server'`: サーバーサイドレンダリング用
+    - `'static'`: 静的サイト用
 
-> You can use this option to change default nuxt target for your project using `nuxt.config.js`
+> `nuxt.config.js` でこのオプションを使ってプロジェクトのデフォルトの nuxt target を変更します。
 
-To learn more about the target option check out the [deployment targets section](/docs/2.x/features/deployment-targets).
+target オプションの詳細については[デプロイターゲットのドキュメント](/docs/2.x/features/deployment-targets)を参照してください。

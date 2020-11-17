@@ -1,15 +1,15 @@
 ---
-title: Commands and Deployment
-description: Nuxt.js comes with a set of useful commands, both for development and production purpose.
+title: 'コマンドと開発'
+description: 'Nuxt.js は開発と運用両方に役立つ一連のコマンドを用意しています。'
 position: 4
 category: get-started
 ---
 
-Nuxt.js comes with a set of useful commands, both for development and production purpose.
+Nuxt.js は開発と運用両方に役立つ一連のコマンドを用意しています。
 
-## Using in package.json
+## package.json を使う
 
-You should put these commands in the `package.json`:
+これらのコマンドは `package.json` に記述する必要があります:
 
 ```json
 "scripts": {
@@ -20,11 +20,11 @@ You should put these commands in the `package.json`:
 }
 ```
 
-Then, you can launch your commands via `yarn <command>` or `npm run <command>` (example: `yarn dev` / `npm run dev`).
+次に `yarn <command>` または `npm run <command>` を介してコマンドを起動できます（例: `yarn dev` / `npm run dev`）。
 
-## Development Environment
+## 開発環境
 
-To launch Nuxt in development mode with [hot module replacement](https://webpack.js.org/concepts/hot-module-replacement/) on `http://localhost:3000`:
+`http://localhost:3000` で [hot module replacement](https://webpack.js.org/concepts/hot-module-replacement/) のついた開発モードで Nuxt を起動するには:
 
 <code-group>
 
@@ -45,29 +45,29 @@ npm run dev
   </code-block>
 </code-group>
 
-## List of Commands
+## コマンド一覧
 
-You can run different commands depending on the [target](/docs/2.x/features/deployment-targets):
+[ターゲット](/docs/2.x/features/deployment-targets)に応じて異なるコマンドを実行できます:
 
-### target: `server` (default value)
+### target: `server`（デフォルト値）
 
-- **nuxt dev** - Launch the development server.
-- **nuxt build** - Build and optimize your application with webpack for production.
-- **nuxt start** - Start the production server (after running `nuxt build`). Use it for Node.js hosting like Heroku, Digital Ocean, etc.
+- **nuxt dev** - 開発サーバーを起動します。
+- **nuxt build** - 本番用の webpack を使用してアプリケーションをビルドおよび最適化します。
+- **nuxt start** - （`nuxt build` を実行した後に）本番サーバーを起動します。Heroku や Digital Ocean などの Node.js ホスティングに使用します。
 
 ### target: `static`
 
-- **nuxt dev** - Launch the development server.
-- **nuxt generate** - Build the application (if needed), generate every route as a HTML file and statically export to `dist/` directory (used for static hosting).
-- **nuxt start** - serve the `dist/` directory like your static hosting would do (Netlify, Vercel, Surge, etc), great for testing before deploying.
+- **nuxt dev** - 開発サーバーを起動します。
+- **nuxt generate** - （必要に応じて）アプリケーションをビルドし、すべてのルートを HTML ファイルとして生成し、`dist/` ディレクトリに静的にエクスポートします（静的ホスティングに使用されます）。
+- **nuxt start** - 静的ホスティング（Netlify、Vercel、Surge など）と同じように `dist/` ディレクトリを提供します。デプロイ前のテストに最適です。
 
-## Production Deployment
+## プロダクション開発
 
-Nuxt.js lets you choose between Server or Static deployments.
+Nuxt.js では、サーバーデプロイと静的デプロイのどちらかを選択することができます。
 
-### Server Deployment
+### サーバー開発
 
-To deploy a SSR application we use `target: server`, where server is the default value.
+SSR アプリケーションをデプロイするためにデフォルト値である `target: server` を使います。
 
 <code-group>
   <code-block label="Yarn" active>
@@ -86,15 +86,15 @@ npm run build
   </code-block>
 </code-group>
 
-Nuxt.js will create a `.nuxt` directory with everything inside ready to be deployed on your server hosting.
+Nuxt.js はすべてのものが含まれる `.nuxt` ディレクトリを作成するので、ホスティングしているサーバーにデプロイする準備ができています。
 
 <base-alert type="info">
 
-we recommend putting `.nuxt` in `.npmignore` or `.gitignore`.
+`.npmignore` または `.gitignore` に `.nuxt` を入れることをおすすめします。
 
 </base-alert>
 
-Once your application is built you can use the `start` command to see a production version of your application.
+一度アプリケーションがビルドされると、`start` コマンドを使ってアプリケーションの本番バージョンを確認することができます。
 
 <code-group>
   <code-block label="Yarn" active>
@@ -113,11 +113,11 @@ npm run start
   </code-block>
 </code-group>
 
-### Static Deployment (Pre-rendered)
+### 静的デプロイ（プリレンダリング）
 
-Nuxt.js gives you the ability to host your web application on any static hosting.
+Nuxt.js を使うと、どんな静的なホスティング上でもウェブアプリケーションをホストすることができます。
 
-To deploy a static generated site make sure you have `target: static` in your `nuxt.config.js`.(For Nuxt >= 2.13:)
+静的に生成されたサイトをデプロイするには、`nuxt.config.js` に `target：static` を指定していることを確認してください（Nuxt v2.13 以上）。
 
 ```js{}[nuxt.config.js]
 export default {
@@ -142,25 +142,25 @@ npm run generate
   </code-block>
 </code-group>
 
-Nuxt.js will create a `dist/` directory with everything inside ready to be deployed on a static hosting service.
+Nuxt.js はすべてのものが含まれる `dist/` ディレクトリを作成するので、静的なホスティングサービスにデプロイする準備ができています。
 
-As of Nuxt v2.13 there is a crawler installed that will now crawl your link tags and generate your routes when using the command `nuxt generate` based on those links.
+Nuxt v2.13 ではリンクタグをクロールするクローラーがインストールされているので、`nuxt generate` コマンドを使う際それらのリンクに基づいてルートを生成します。
 
 <base-alert>
 
-**Warning:** dynamic routes are ignored by the `generate` command when using Nuxt <= v2.12: [API Configuration generate](/docs/2.x/configuration-glossary/configuration-generate)
+**警告:** Nuxt v2.12 以下を使う場合、動的ルートは `generate` コマンドによって無視されます: [generate プロパティのドキュメント](/docs/2.x/configuration-glossary/configuration-generate)
 
 </base-alert>
 
 <base-alert type="info">
 
-When generating your web application with `nuxt generate`, [the context](/docs/2.x/internals-glossary/context) given to [asyncData](/docs/2.x/features/data-fetching#async-data) and [fetch](/docs/2.x/features/data-fetching#the-fetch-hook) will not have `req` and `res`.
+`nuxt generate` を使ってウェブアプリケーションを生成する場合、[asyncData](/docs/2.x/features/data-fetching#async-data) と [fetch](/docs/2.x/features/data-fetching#fetch-フック) に与えられる [context](/docs/2.x/internals-glossary/context) は `req` と `res` を持ちません。
 
 </base-alert>
 
-#### **Fail on Error**
+#### **エラー時の失敗（Fail on Error）**
 
-To return a non-zero status code when a page error is encountered and let the CI/CD fail the deployment or build, you can use the `--fail-on-error` argument.
+ページエラーが発生した際にゼロ以外のステータスコードを返し、CI/CD のデプロイまたはビルドに失敗するようにするには `--fail-on-error` 引数を使えます。
 
 <code-group>
   <code-block label="Yarn" active>
@@ -180,11 +180,11 @@ npm run generate --fail-on-error
 
 </code-group>
 
-## What's next?
+## このあとは
 
 <base-alert type="next">
 
-Read our [FAQ](/faq) to find examples for deployments to popular hosts.
+[FAQ](/faq) で人気のホストへのデプロイ例を参照してください。
 
 </base-alert>
 

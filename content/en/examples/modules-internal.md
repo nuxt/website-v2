@@ -1,14 +1,14 @@
 ---
-title: Internal Module
-description: Internal and external modules to fetch data from an API
+title: Local Module
+description: Local Module for setting up a tunnel using ngrok
 position: 501
 category: modules
-csb_link: https://codesandbox.io/embed/github/nuxt-academy/guides-examples/tree/master/04_directory_structure/10_modules-internal?fontsize=14&hidenavigation=1&module=%2Fmodules%2FgetUrl%2Findex.js&theme=dark
+csb_link: https://codesandbox.io/embed/github/nuxt-academy/examples/tree/master/modules/local-module
 ---
 
 <example-intro></example-intro>
 
-- `modules/getUrl/index.js` adds a public URL from ngrok to the Nuxt CLI when in dev mode.
+- `modules/ngrok/index.js` adds a public URL from ngrok to the Nuxt CLI when in dev mode.
 - `pages/index.vue` shows the public URL from ngrok.
 - `nuxt.config.js` registers our module using the `buildModules` property.
 

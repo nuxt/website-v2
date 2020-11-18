@@ -3,7 +3,7 @@ title: External Packages Plugin
 description: In this example we show how to use a plugin with an external package - axios
 position: 403
 category: plugins
-csb_link: https://codesandbox.io/embed/github/nuxt-academy/guides-examples/tree/master/04_directory_structure/12_plugins_external
+csb_link: https://codesandbox.io/embed/github/nuxt-academy/examples/tree/master/plugins/external-packages-plugin
 ---
 
 <example-intro></example-intro>
@@ -12,9 +12,9 @@ csb_link: https://codesandbox.io/embed/github/nuxt-academy/guides-examples/tree/
 
 `pages/index.vue` uses `$axios` to fetch our data from an API.
 
-`pages/posts/_id.vue` uses `$axios` to fetch our data from an API with the id coming from route params.
+`pages/mountains/_slug.vue` uses `$axios` to fetch our data from an API with the id coming from route params.
 
-`pages/no-posts.vue` is the page that is called when there is an error.
+`pages/404.vue` is the page that is called when there is an error.
 
 `nuxt.config.js` contains the `module` property and `plugin` property to register our module and plugin.
 

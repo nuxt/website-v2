@@ -3,7 +3,7 @@ title: Custom Plugins
 description: In this example we show how you how you can create your own plugin
 position: 404
 category: plugins
-csb_link: https://codesandbox.io/embed/github/nuxt-academy/guides-examples/tree/master/04_directory_structure/12_plugins_custom_plugin
+csb_link: https://codesandbox.io/embed/github/nuxt-academy/examples/tree/master/plugins/custom-plugins
 ---
 
 <example-intro></example-intro>
@@ -12,7 +12,7 @@ csb_link: https://codesandbox.io/embed/github/nuxt-academy/guides-examples/tree/
 
 `store/index.js` - stores our dynamic message from our input.
 
-`pages/hello-plugin.vue` uses the hello plugin to:
+`pages/index.vue` uses the hello plugin to:
 
 - log a message to the console on mounted.
 - log a message to the console containing the value from our input.

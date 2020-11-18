@@ -3,7 +3,7 @@ title: Named Middleware
 description: Using named middleware to authenticate a user using the store and allow them to visit a page once authenticated
 position: 602
 category: middleware
-csb_link: https://codesandbox.io/embed/github/nuxt-academy/guides-examples/tree/master/04_directory_structure/09_middleware_named
+csb_link: https://codesandbox.io/embed/github/nuxt-academy/examples/tree/master/middleware/named-middleware
 ---
 
 <example-intro></example-intro>

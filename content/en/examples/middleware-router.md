@@ -3,7 +3,7 @@ title: Router Middleware
 description: Using router middleware to set a class to the body so we can then style differently depending on the route
 position: 601
 category: middleware
-csb_link: https://codesandbox.io/embed/github/nuxt-academy/guides-examples/tree/master/04_directory_structure/09_middleware_router
+csb_link: https://codesandbox.io/embed/github/nuxt-academy/examples/tree/master/middleware/router-middleware
 ---
 
 <example-intro></example-intro>

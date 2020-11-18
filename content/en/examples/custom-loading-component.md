@@ -1,19 +1,18 @@
 ---
-title: Customize Nuxt Loading
+title: Custom Loading Component
 description: Create a custom loading component, modify the default loader as well as the spinner for spas
-position: 5
-category: miscellaneous
-csb_link: https://codesandbox.io/embed/github/nuxt-academy/guides-examples/tree/master/03_features/08_loading
+position: 3
+category: loading
+csb_link: https://codesandbox.io/embed/github/nuxt-academy/examples/tree/master/miscellaneous/custom-loading-component
 ---
 
 <example-intro></example-intro>
 
 `components/LoadingBar.vue` shows a custom loading spinner to use instead of the default loading bar.
 
-`nuxt.config.js` contains the:
+`nuxt.config.js` contains the `loading` property which imports the loading component
 
-- `loading` property to import the loading component or modify the default loader
-- `loadingIndicator` property to modify the spinner for Single Page applications
+`pages/loading.vue` programmatically starts the loader so we force the page to take 2 seconds to load
 
 <base-alert type="next">
 

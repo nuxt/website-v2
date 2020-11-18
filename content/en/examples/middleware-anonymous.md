@@ -3,7 +3,7 @@ title: Anonymous Middleware
 description: Using anonymous middleware to show the analytics of how many times a user visits a page.
 position: 603
 category: middleware
-csb_link: https://codesandbox.io/embed/github/nuxt-academy/guides-examples/tree/master/04_directory_structure/09_middleware_anonymous
+csb_link: https://codesandbox.io/embed/github/nuxt-academy/examples/tree/master/middleware/anonymous-middleware
 ---
 
 <example-intro></example-intro>

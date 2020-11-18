@@ -115,7 +115,7 @@ Module developers usually provide additionally needed steps and details for usag
 
 </base-alert>
 
-Nuxt.js tries to resolve each item in the modules array using node require path (in the `node_modules`) and then will resolved from the project `srcDir` if `@` alias is used.
+Nuxt.js tries to resolve each item in the modules array using node require path (in the `node_modules`) and then will resolve from the project `srcDir` if `@` alias is used.
 
 <base-alert>
 

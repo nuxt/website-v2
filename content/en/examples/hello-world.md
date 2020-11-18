@@ -1,6 +1,6 @@
 ---
 title: Hello World
-description: Example project with basic install including two ways of creating a page component.
+description: Routing with NuxtLink component showing page rendered on server side and on client side
 position: 101
 category: routing
 csb_link: https://codesandbox.io/embed/github/nuxt-academy/examples/tree/master/routing/hello-world

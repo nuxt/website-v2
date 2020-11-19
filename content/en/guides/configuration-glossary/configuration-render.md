@@ -97,6 +97,13 @@ You can add your own assets to the array as well. Using `req` and `res` you can 
 
 The assets will be joined together with `,` and passed as a single `Link` header.
 
+## asyncScripts
+
+- Type: `Boolean`
+  - Default: `false`
+
+> Adds an `async` attribute to `<script>` tags for Nuxt bundles, enabling them to be fetched in parallel to parsing (available with `2.14.8+`). [More information](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/script).
+
 ## injectScripts
 
 - Type: `Boolean`

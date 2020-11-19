@@ -255,7 +255,7 @@ Mira la documentación de la clases [ModuleContainer](/docs/2.x/internals-gloss
 
 ### Ejecutar tareas en hooks específicos
 
-Es posible que tu módulo deba hacer cosas solo en condiciones específicas y no solo durante la inicialización de Nuxt.js. Podemos usar los poderosos hooks de Nuxt.js para realizar tareas en eventos específicos (basados en [Hable](https://github.com/jsless/hable)). Nuxt.js esperará a que la función termine si esta devuelve un Promise o si está definida como `async`.
+Es posible que tu módulo deba hacer cosas solo en condiciones específicas y no solo durante la inicialización de Nuxt.js. Podemos usar los poderosos hooks de Nuxt.js para realizar tareas en eventos específicos (basados en [Hookable](https://github.com/nuxt-contrib/hookable)). Nuxt.js esperará a que la función termine si esta devuelve un Promise o si está definida como `async`.
 
 Algunos ejemplos básicos:
 

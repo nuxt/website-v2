@@ -246,7 +246,7 @@ export default {
 
 🚫 Don't store secret keys or sensitive values in your nuxt.config or `.env` unless is gitignored
 
-✅ Use default values for runtimeConfig such as process.env.baseURL || 'https://nuxt.js.org'
+✅ Use default values for runtimeConfig such as process.env.baseURL || 'https://nuxtjs.org'
 
 ✅ Store secret keys correctly using your hosting platform such as on Heroku or Netlify etc
 

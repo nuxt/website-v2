@@ -1,27 +1,27 @@
 ---
-title: 'The build Property'
-description: Nuxt.js lets you customize the webpack configuration for building your web application as you want.
+title: 'Properti  Build'
+description: Nuxt.js mengizinkan Anda untuk mengkustomisasi Webpack untuk membangun aplikasi web seperti yang Anda mau.
 menu: build
 category: configuration-glossary
 position: 1
 ---
 
-> Nuxt.js lets you customize the webpack configuration for building your web application as you want.
+> Nuxt.js mengizinkan Anda untuk mengkustomisasi Webpack untuk membangun aplikasi web seperti yang Anda mau.
 
 ## analyze
 
-> Nuxt.js use [webpack-bundle-analyzer](https://github.com/webpack-contrib/webpack-bundle-analyzer) to let you visualize your bundles and how to optimize them.
+> Nuxt.js menggunakan [webpack-bundle-analyzer](https://github.com/webpack-contrib/webpack-bundle-analyzer) untuk mengizinkan Anda menvisualisasikan pembungkus (_bundle_) Anda dan mengoptimisasi mereka.
 
-- Type: `Boolean` or `Object`
-- Default: `false`
+- Tipe: `Boolean` atau `Object`
+- Nilai bawaan: `false`
 
-If an object, see available properties [here](https://github.com/webpack-contrib/webpack-bundle-analyzer#options-for-plugin).
+Jika sebuah objek, lihat properti yang tersedia [di sini](https://github.com/webpack-contrib/webpack-bundle-analyzer#options-for-plugin).
 
 ```js{}[nuxt.config.js]
 export default {
   build: {
     analyze: true,
-    // or
+    // atau
     analyze: {
       analyzerMode: 'static'
     }
@@ -31,24 +31,24 @@ export default {
 
 <base-alert type="info">
 
-**Info:** you can use the command `yarn nuxt build --analyze` or `yarn nuxt build -a` to build your application and launch the bundle analyzer on [http://localhost:8888](http://localhost:8888). If you are not using `yarn` you can run the command with `npx`.
+**Info:** Anda dapat menggunakan perintah `yarn nuxt build --analyze` atau `yarn nuxt build -a` untuk membangun aplikasi Anda dan meluncurkan _bundle analyzer_ pada [http://localhost:8888](http://localhost:8888). Jika Anda tidak menggunakan `yarn` Anda dapat menggunakan perintah `npx`.
 
 </base-alert>
 
 ## corejs
 
-> As of [Nuxt@2.14](https://github.com/nuxt/nuxt.js/releases/tag/v2.14.0) Nuxt automatically detects the current version of `core-js` in your project, also you can specify which version you want to use.
+> Pada [Nuxt@2.14](https://github.com/nuxt/nuxt.js/releases/tag/v2.14.0) secara otomatis mendeteksi versi saat ini dari `core-js` pada projek, juga Anda dapat menentukan versi mana yang akan digunakan.
 
-- Type: `number` | `string` (Valid values are `'auto'`, `2` and `3`)
-- Default: `'auto'`
+- Tipe: `number` | `string` (nilai yang valid adalah `'auto'`, `2` dan `3`)
+- Nilai bawaan: `'auto'`
 
 ## babel
 
-> Customize Babel configuration for JavaScript and Vue files. `.babelrc` is ignored by default.
+> Melakukan konfigurasi Babel untuk berkas Javascript dan Vue. `.babelrc` akan diabaikan pada bawaannya.
 
-- Type: `Object`
-- See `babel-loader` [options](https://github.com/babel/babel-loader#options) and `babel` [options](https://babeljs.io/docs/en/options)
-- Default:
+- Tipe: `Object`
+- Lihat [opsi](https://github.com/babel/babel-loader#options) `babel-loader` dan [opsi](https://babeljs.io/docs/en/options) `babel`
+- Nilai bawaan:
 
   ```js
   {
@@ -58,37 +58,37 @@ export default {
   }
   ```
 
-The default targets of [@nuxt/babel-preset-app](https://github.com/nuxt/nuxt.js/blob/dev/packages/babel-preset-app/src/index.js) are `ie: '9'` in the `client` build, and `node: 'current'` in the `server` build.
+Target bawaan dari [@nuxt/babel-preset-app](https://github.com/nuxt/nuxt.js/blob/dev/packages/babel-preset-app/src/index.js) adalah `ie: '9'` di `client` _build_, dan `node: 'current'` di `server` _build_.
 
 ### presets
 
-- Type: `Function`
-- Argument:
+- Tipe: `Function`
+- Argumen:
   1. `Object`: { isServer: true | false }
   2. `Array`:
-     - preset name `@nuxt/babel-preset-app`
-     - [`options`](https://github.com/nuxt/nuxt.js/tree/dev/packages/babel-preset-app#options) of `@nuxt/babel-preset-app`
+     - nama preset `@nuxt/babel-preset-app`
+     - [`opsi`](https://github.com/nuxt/nuxt.js/tree/dev/packages/babel-preset-app#options) dari `@nuxt/babel-preset-app`
 
-**Note**: The presets configured in `build.babel.presets` will be applied to both, the client and the server build. The target will be set by Nuxt accordingly (client/server). If you want configure the preset differently for the client or the server build, please use `presets` as a function:
+**Catatan**: Preset yang dikonfigurasi di `build.babel.presets` akan diterapkan ke keduanya klien dan _server_. Target akan diatur oleh Nuxt selayaknya. Jika Anda ingin mengkonfigurasikan preset secara berbeda untuk klien atau _server_, mohon gunakan `presets` sebagai fungsi:
 
-> We **highly recommend** to use the default preset instead of below customization
+> Kami **sangat merekomendasikan** untuk menggunakan preset bawaan daripada kustomisasi dibawah ini.
 
 ```js
 export default {
   build: {
     babel: {
       presets({ isServer }, [ preset, options ]) {
-        // change options directly
+        // mengganti opsi secara langsung
         options.targets = isServer ? ... :  ...
         options.corejs = ...
-        // return nothing
+        // tidak mengembalikan apapun
       }
     }
   }
 }
 ```
 
-Or override default value by returning whole presets list:
+Atau merubah secara nilai bawaan dengan mengembalikan preset keseluruhan:
 
 ```js
 export default {
@@ -104,7 +104,7 @@ export default {
             }
           ],
           [
-            // Other presets
+            // Preset lainnya
           ]
         ]
       }
@@ -113,50 +113,50 @@ export default {
 }
 ```
 
-## cache
+## tembolok (cache)
 
-- Type: `Boolean`
-- Default: `false`
-- ⚠️ Experimental
+- Tipe: `Boolean`
+- Nilai bawaan: `false`
+- ⚠️ Ekperimen
 
-> Enable cache of [terser-webpack-plugin](https://github.com/webpack-contrib/terser-webpack-plugin#options) and [cache-loader](https://github.com/webpack-contrib/cache-loader#cache-loader)
+> Mengaktifkan tembolok dari [terser-webpack-plugin](https://github.com/webpack-contrib/terser-webpack-plugin#options) dan [cache-loader](https://github.com/webpack-contrib/cache-loader#cache-loader)
 
 ## cssSourceMap
 
-- Type: `boolean`
-- Default: `true` for dev and `false` for production.
+- Tipe: `boolean`
+- Nilai bawaan: `true` untuk mode _dev_ dan `false` untuk mode _production_.
 
-> Enables CSS Source Map support
+> Mengaktifkan dukungan CSS Source Map
 
 ## devMiddleware
 
-- Type: `Object`
+- Tipe: `Object`
 
-See [webpack-dev-middleware](https://github.com/webpack/webpack-dev-middleware) for available options.
+Lihat [webpack-dev-middleware](https://github.com/webpack/webpack-dev-middleware) untuk opsi yang tersedia.
 
 ## devtools
 
-- Type: `boolean`
-- Default: `false`
+- Tipe: `boolean`
+- Nilai bawaan: `false`
 
-Configure whether to allow [vue-devtools](https://github.com/vuejs/vue-devtools) inspection.
+Mengkonfigurasi apakah mengizinkan inspeksi menggunakan [vue-devtools](https://github.com/vuejs/vue-devtools)
 
-If you already activated through nuxt.config.js or otherwise, devtools enable regardless of the flag.
+Jika Anda sudah mengaktifkan melalui `nuxt.config.js` atau sebaliknya, _devtools_ dapat aktif tanpa melihat _flag_.
 
-## extend
+## memperpanjang (extend)
 
-> Extend the webpack configuration manually for the client & server bundles.
+> Memperpanjang konfigurasi webpack secara manual untuk pembungkus klien dan _server_
 
-- Type: `Function`
+- Tipe: `Function`
 
-The extend is called twice, one time for the server bundle, and one time for the client bundle. The arguments of the method are:
+_Extend_ dipanggil dua kali, pertama untuk pembungkus _server_ dan satu kali untuk pembungkus klien. Argumen dari metode adalah:
 
-1. The Webpack config object,
-2. An object with the following keys (all boolean except `loaders`): `isDev`, `isClient`, `isServer`, `loaders`.
+1. Konfigurasi objek _webpack_,
+2. Sebuah objek dengan kunci seperti berikut (semua _boolean_ kecuali `loaders`): `isDev`, `isClient`, `isServer`, `loaders`.
 
 <base-alert>
 
-**Warning:** The `isClient` and `isServer` keys provided in are separate from the keys available in [`context`](/docs/2.x/internals-glossary/context). They are **not** deprecated. Do not use `process.client` and `process.server` here as they are `undefined` at this point.
+**Peringatan:** kunci `isClient` dan `isServer` yang diberikan dipisahkan dari kunci yang tersedia di [`context`](/docs/2.x/internals-glossary/context). Mereka tidak terdepresiasi. Jangan menggunakan `process.client` dan `process.server` di sini berhubung mereka adalah `undefined`.
 
 </base-alert>
 
@@ -164,7 +164,7 @@ The extend is called twice, one time for the server bundle, and one time for the
 export default {
   build: {
     extend(config, { isClient }) {
-      // Extend only webpack config for client-bundle
+      // Memperpanjang konfigurasi webpack untuk client-bundle
       if (isClient) {
         config.devtool = 'source-map'
       }
@@ -173,17 +173,17 @@ export default {
 }
 ```
 
-If you want to see more about our default webpack configuration, take a look at our [webpack directory](https://github.com/nuxt/nuxt.js/tree/dev/packages/webpack/src/config).
+Jika Anda ingin melihat lebih tentang konfigurasi bawaan webpack kami, lihat [direktori webpack](https://github.com/nuxt/nuxt.js/tree/dev/packages/webpack/src/config).
 
 ### loaders in extend
 
-`loaders` has the same object structure as [build.loaders](#loaders), so you can change the options of loaders inside `extend`.
+`loaders` memiliki struktur objek yang sama seperti [build.loaders](#loaders), jadi Anda bisa mengubah opsi pemuat di dalam `extend`.
 
 ```js{}[nuxt.config.js]
 export default {
   build: {
     extend(config, { isClient, loaders: { vue } }) {
-      // Extend only webpack config for client-bundle
+      // Memperpanjang konfigurasi webpack untuk client-bundle
       if (isClient) {
         vue.transformAssetUrls.video = ['src', 'poster']
       }
@@ -194,20 +194,20 @@ export default {
 
 ## extractCSS
 
-> Enables Common CSS Extraction using Vue Server Renderer [guidelines](https://ssr.vuejs.org/en/css.html).
+> Mengaktifkan ekstraksi CSS yang umum menggunakan [paduan](https://ssr.vuejs.org/en/css.html) Vue Server Renderer.
 
-- Type: `Boolean` or `Object`
-- Default: `false`
+- Tipe: `Boolean` Atau `Object`
+- Nilai bawaan: `false`
 
-Using [`extract-css-chunks-webpack-plugin`](https://github.com/faceyspacey/extract-css-chunks-webpack-plugin/) under the hood, all your CSS will be extracted into separate files, usually one per component. This allows caching your CSS and JavaScript separately and is worth a try in case you have a lot of global or shared CSS.
+Menggunakan [`extract-css-chunks-webpack-plugin`](https://github.com/faceyspacey/extract-css-chunks-webpack-plugin/) di bawahnya, semua CSS Anda akan diekstrak ke berkas yang terpisah, biasanya satu komponen. Ini mengizinkan untuk meng-_cache_ CSS dan Javascript secara terpisah dan menarik untuk dicoba ketika Anda memiliki banyak global CSS atau CSS yang terbagi.
 
-Example (`nuxt.config.js`):
+Contoh (`nuxt.config.js`):
 
 ```js
 export default {
   build: {
     extractCSS: true,
-    // or
+    // atau
     extractCSS: {
       ignoreOrder: true
     }
@@ -217,15 +217,15 @@ export default {
 
 <base-alert type="info">
 
-**Note:** There was a bug prior to Vue 2.5.18 that removed critical CSS imports when using this options.
+**Catatan:** Terdapat _bug_ pada Vue 2.5.18 yang menghapus impor CSS yang penting ketika menggunakan opsi ini.
 
 </base-alert>
 
-You may want to extract all your CSS to a single file. There is a workaround for this:
+Anda mungkin ingin mengekstrak semua CSS pada satu berkas. Terdapat solusi untuk ini:
 
 <base-alert>
 
-It is not recommended extracting everything into a single file. Extracting into multiple css files is better for caching and preload isolation. It can also improve page performance by downloading and resolving only those resources that are needed.
+Ini tidak direkomendasikan untuk mengekstrak semuanya ke satu berkas. Mengekstrak ke banyak berkas CSS lebih baik untuk meng-_cache_ dan mengisolasi _preload_. Ini dapat meningkatkan performa halaman dengan mengunduh dan menyelesaikan sumber daya yang dibutuhkan.
 
 </base-alert>
 
@@ -251,10 +251,10 @@ export default {
 
 ## filenames
 
-> Customize bundle filenames.
+> Mengkustomisasi pembungkus filenames
 
-- Type: `Object`
-- Default:
+- Tipe: `Object`
+- Nilai bawaan:
 
   ```js
   {
@@ -267,7 +267,7 @@ export default {
   }
   ```
 
-This example changes fancy chunk names to numerical ids:
+Ini adalah contoh perubahan nama _chunk_ ke id numeric:
 
 ```js{}[nuxt.config.js]
 export default {
@@ -279,39 +279,39 @@ export default {
 }
 ```
 
-To understand a bit more about the use of manifests, take a look at this [webpack documentation](https://webpack.js.org/guides/code-splitting/).
+Untuk memahami lebih lanjut tentang penggunaan manifest ini, lihat [dokumentasi webpack](https://webpack.js.org/guides/code-splitting/).
 
 <base-alert>
 
-Be careful when using non-hashed based filenames in production as most browsers will cache the asset and not detect the changes on first load.
+Berhati-hati ketika menggunakan _filenames_ berbasis _non-hashed_ pada mode produksi mengingat kebanyakan _browser_ akan meng-_cache_ aset dan tidak akan mendeteksi perubahan pada pemuat pertama.
 
 </base-alert>
 
 ## friendlyErrors
 
-- Type: `Boolean`
-- Default: `true` (Overlay enabled)
+- Tipe: `Boolean`
+- Nilai bawaan: `true` (_Overlay_ diaktifkan)
 
-Enables or disables the overlay provided by [FriendlyErrorsWebpackPlugin](https://github.com/nuxt/friendly-errors-webpack-plugin)
+Mengaktifkan atau menonaktifkan _overlay_ yang diberikan oleh [FriendlyErrorsWebpackPlugin](https://github.com/nuxt/friendly-errors-webpack-plugin)
 
 ## hardSource
 
-- Type: `Boolean`
-- Default: `false`
-- ⚠️ Experimental
+- Tipe: `Boolean`
+- Nilai bawaan: `false`
+- ⚠️ Eksperimen
 
-Enables the [HardSourceWebpackPlugin](https://github.com/mzgoddard/hard-source-webpack-plugin) for improved caching
+Mengaktifkan [HardSourceWebpackPlugin](https://github.com/mzgoddard/hard-source-webpack-plugin) untuk meningkatkan tembolok.
 
 ## hotMiddleware
 
-- Type: `Object`
+- Tipe: `Object`
 
-See [webpack-hot-middleware](https://github.com/glenjamin/webpack-hot-middleware) for available options.
+Lihat [webpack-hot-middleware](https://github.com/glenjamin/webpack-hot-middleware) untuk opsi yang ada
 
 ## html.minify
 
-- Type: `Object`
-- Default:
+- Tipe: `Object`
+- Nilai bawaan:
 
 ```js
 {
@@ -327,25 +327,25 @@ See [webpack-hot-middleware](https://github.com/glenjamin/webpack-hot-middleware
 }
 ```
 
-**Attention:** If you make changes to `html.minify`, they won't be merged with the defaults!
+**Perhatian**: Jika Anda membuat perubahan ke `html.minify`, mereka tidak akan digabungkan dengan nilai bawaan.
 
-Configuration for the [html-minifier](https://github.com/kangax/html-minifier) plugin used to minify HTML files created during the build process (will be applied for _all modes_).
+Menkonfigurasikan _plugin_ [html-minifier](https://github.com/kangax/html-minifier) untuk digunakan mengecilkan berkas HTML yang dibuat ketika proses pembangunan (akan diaplikasikan untuk _all modes_).
 
-## indicator
+## indikator
 
-> Display build indicator for hot module replacement in development (available in `v2.8.0+`)
+> Menampilkan indikator pembangunan untuk _hot module replacement_ pada pengembangan (tersedia di `v2.8.0+`)
 
-- Type: `Boolean`
-- Default: `true`
+- Tipe: `Boolean`
+- Nilai bawaan: `true`
 
 ![nuxt-build-indicator](https://user-images.githubusercontent.com/5158436/58500509-93ba0f80-8197-11e9-8524-e115c6d32571.gif)
 
-## loaders
+## pemuat (loaders)
 
-> Customize options of Nuxt.js integrated webpack loaders.
+> Mengkustomisasi opsi Nuxt.js yang terintegrasi dengan pemuat _webpack_
 
-- Type: `Object`
-- Default:
+- Tipe: `Object`
+- Nilai bawaan:
 
 ```js
 {
@@ -375,44 +375,44 @@ Configuration for the [html-minifier](https://github.com/kangax/html-minifier) p
 }
 ```
 
-> Note: In addition to specifying the configurations in `nuxt.config.js`, it can also be modified by [build.extend](#extend)
+> Catatan: untuk melakukan spesifikasi konfigurasi di `nuxt.config.js`, ini juga bisa dimodifikasi dengan [build.extend](#extend)
 
 ### loaders.file
 
-> More details are in [file-loader options](https://github.com/webpack-contrib/file-loader#options).
+> Untuk lebih lengkap [opsi file-loader](https://github.com/webpack-contrib/file-loader#options).
 
-### loaders.fontUrl and loaders.imgUrl
+### loaders.fontUrl dan loaders.imgUrl
 
-> More details are in [url-loader options](https://github.com/webpack-contrib/url-loader#options).
+> Untuk lebih lengkap [opsi url-loader](https://github.com/webpack-contrib/url-loader#options).
 
 ### loaders.pugPlain
 
-> More details are in [pug-plain-loader](https://github.com/yyx990803/pug-plain-loader) or [Pug compiler options](https://pugjs.org/api/reference.html#options).
+> Untuk lebih lengkap [pug-plain-loader](https://github.com/yyx990803/pug-plain-loader) atau [Pug compiler options](https://pugjs.org/api/reference.html#options).
 
 ### loaders.vue
 
-> More details are in [vue-loader options](https://vue-loader.vuejs.org/options.html).
+> Untuk lebih lengkap [opsi vue-loader](https://vue-loader.vuejs.org/options.html).
 
-### loaders.css and loaders.cssModules
+### loaders.css dan loaders.cssModules
 
-> More details are in [css-loader options](https://github.com/webpack-contrib/css-loader#options). Note: cssModules is loader options for usage of [CSS Modules](https://vue-loader.vuejs.org/guide/css-modules.html#css-modules)
+> Untuk lebih lengkap [opsi css-loader](https://github.com/webpack-contrib/css-loader#options). Catatan: cssModule adalah pemuat untuk kegunaan [CSS Modules](https://vue-loader.vuejs.org/guide/css-modules.html#css-modules)
 
 ### loaders.less
 
-> You can pass any Less specific options to the `less-loader` via `loaders.less`. See the [Less documentation](http://lesscss.org/usage/#command-line-usage-options) for all available options in dash-case.
+> Anda dapat melewatkan opsi _Less_ apapun ke `less-loader` melalui `loaders.less`. Lihat [dokumentasi Less](http://lesscss.org/usage/#command-line-usage-options) untuk semua opsi yang ada di dash-case.
 
-### loaders.sass and loaders.scss
+### loaders.sass dan loaders.scss
 
-> See the [Sass documentation](https://github.com/sass/dart-sass#javascript-api) for all available Sass options. Note: `loaders.sass` is for [Sass Indented Syntax](http://sass-lang.com/documentation/file.INDENTED_SYNTAX.html)
+> Lihat [dokumentasi Sass](https://github.com/sass/dart-sass#javascript-api) untuk semua opsi yang ada. Catatan: `loaders.sass` digunakan untuk [Sass Indented Syntax](http://sass-lang.com/documentation/file.INDENTED_SYNTAX.html)
 
 ### loaders.vueStyle
 
-> More details are in [vue-style-loader options](https://github.com/vuejs/vue-style-loader#options).
+> Untuk lebih lengkap [opsi vue-style-loader](https://github.com/vuejs/vue-style-loader#options).
 
-## optimization
+## optimisasi
 
-- Type: `Object`
-- Default:
+- Tipe: `Object`
+- Nilai bawaan:
 
   ```js
   {
@@ -430,37 +430,37 @@ Configuration for the [html-minifier](https://github.com/kangax/html-minifier) p
   }
   ```
 
-The default value of `splitChunks.name` is `true` in `dev` or `analyze` mode.
+Nilai bawaan dari `splitChunks.name` adalah `true` pada mode `dev` atau `analyze`.
 
-You can set `minimizer` to a customized Array of plugins or set `minimize` to `false` to disable all minimizers. (`minimize` is being disabled for development by default)
+Anda dapat mengatur `minimizer` menjadi _plugins Array_ yang terkustom atau mengatur `minimize` ke `false` untuk menonaktifkan semua `minimizers`. (`minimize` secara bawaan akan di nonaktifkan pada mode `dev`.)
 
-See [Webpack Optimization](https://webpack.js.org/configuration/optimization).
+Lihat [Webpack Optimization](https://webpack.js.org/configuration/optimization).
 
 ## optimizeCSS
 
-- Type: `Object` or `Boolean`
-- Default:
+- Tipe: `Object` or `Boolean`
+- Nilai bawaan:
   - `false`
-  - `{}` when extractCSS is enabled
+  - `{}` ketika extractCSS diaktifkan
 
-OptimizeCSSAssets plugin options.
+Opsi OptimizeCSSAssets _plugin_.
 
-See [NMFR/optimize-css-assets-webpack-plugin](https://github.com/NMFR/optimize-css-assets-webpack-plugin).
+Lihat [NMFR/optimize-css-assets-webpack-plugin](https://github.com/NMFR/optimize-css-assets-webpack-plugin).
 
 ## parallel
 
-- Type: `Boolean`
-- Default: `false`
+- Tipe: `Boolean`
+- Nilai bawaan: `false`
 - ⚠️ Experimental
 
-> Enable [thread-loader](https://github.com/webpack-contrib/thread-loader#thread-loader) in webpack building
+> Aktifkan [thread-loader](https://github.com/webpack-contrib/thread-loader#thread-loader) di dalam pembangunan _webpack_
 
 ## plugins
 
-> Add webpack plugins
+> Tambahkan _plugin webpack_
 
-- Type: `Array`
-- Default: `[]`
+- Tipe: `Array`
+- Nilai bawaan: `[]`
 
 ```js{}[nuxt.config.js]
 import webpack from 'webpack'
@@ -478,13 +478,13 @@ export default {
 
 ## postcss
 
-> Customize [PostCSS Loader](https://github.com/postcss/postcss-loader#usage) plugins.
+> Mengkustomisasi _plugin_ [PostCSS Loader](https://github.com/postcss/postcss-loader#usage).
 
-- Type: `Array` (legacy, will override defaults), `Object` (recommended), `Function` or `Boolean`
+- Tipe: `Array` (versi lama, akan ditimpa secara bawaannya), `Object` (direkomendasikan), `Function` atau `Boolean`
 
-  **Note:** Nuxt.js has applied [PostCSS Preset Env](https://github.com/csstools/postcss-preset-env). By default it enables [Stage 2 features](https://cssdb.org/) and [Autoprefixer](https://github.com/postcss/autoprefixer), you can use `build.postcss.preset` to configure it.
+  **Catatan**: Nuxt.js telah mengaplikasikan [PostCSS Preset Env](https://github.com/csstools/postcss-preset-env). Secara bawaan, ini mengaktifkan [fitur Stage 2](https://cssdb.org/) dan [Autoprefixer](https://github.com/postcss/autoprefixer), Anda dapat menggunakan `build.postcss.preset` untuk mengkonfigurasikan hal ini.
 
-- Default:
+- Nilai bawaan:
 
   ```js{}[nuxt.config.js]
   {
@@ -492,7 +492,7 @@ export default {
       'postcss-import': {},
       'postcss-url': {},
       'postcss-preset-env': this.preset,
-      'cssnano': { preset: 'default' } // disabled in dev mode
+      'cssnano': { preset: 'default' } // nonaktif di mode pengembangan
     },
     order: 'presetEnvAndCssnanoLast',
     preset: {
@@ -501,16 +501,16 @@ export default {
   }
   ```
 
-Your custom plugin settings will be merged with the default plugins (unless you are using an `Array` instead of an `Object`).
+Pengaturan _Plugin_ kustom Anda akan digabungkan dengan _plugin_ bawaan (kecuali Anda menggunakan `Array` daripada `Object`).
 
 ```js{}[nuxt.config.js]
 export default {
   build: {
     postcss: {
       plugins: {
-        // Disable `postcss-url`
+        // Nonaktifkan `postcss-url`
         'postcss-url': false,
-        // Add some plugins
+        // tambahkan beberapa plugin
         'postcss-nested': {},
         'postcss-responsive-type': {},
         'postcss-hexrgba': {}
@@ -525,31 +525,31 @@ export default {
 }
 ```
 
-If the postcss configuration is an `Object`, `order` can be used for defining the plugin order:
+Jika konfigurasi postcss adalah `Object`, `order` bisa digunakan untuk mendefinisikan urutan _plugin_:
 
-- Type: `Array` (ordered plugin names), `String` (order preset name), `Function`
-- Default: `cssnanoLast` (put `cssnano` in last)
+- Tipe: `Array` (urutkan nama _plugin_), `String` (urutkan nama preset), `Function`
+- Nilai bawaan: `cssnanoLast` (taruh`cssnano` dibagian akhir)
 
 ```js{}[nuxt.config.js]
 export default {
   build: {
     postcss: {
-      // preset name
+      // nama preset
       order: 'cssnanoLast',
-      // ordered plugin names
+      // urutkan nama plugin
       order: ['postcss-import', 'postcss-preset-env', 'cssnano']
-      // Function to calculate plugin order
+      // Fungsi untuk mengkalkulasi urutan plugin
       order: (names, presets) => presets.cssnanoLast(names)
     }
   }
 }
 ```
 
-### postcss plugins & nuxt-tailwindcss
+### _plugin_ postcss & nuxt-tailwindcss
 
-If you want to apply postcss plugin (eg. postcss-pxtorem) on the nuxt-tailwindcss configuration, you have to change order and load first tailwindcss.
+Jika Anda ingin menerapkan postcss (contoh: postcss-pxtorem) pada konfigurasi nuxt-tailwindcss, Anda harus mengubah urutan dan pemuat pertama ke tailwindcss.
 
-**This setup have no impact on the nuxt-purgecss.**
+**Pengaturan ini tidak memiliki dampak ke nuxt-purgecss**
 
 ```js{}[nuxt.config.js]
 import { join } from 'path'
@@ -569,19 +569,19 @@ export default {
 }
 ```
 
-## profile
+## profil
 
-- Type: `Boolean`
-- Default: enabled by command line argument `--profile`
+- Tipe: `Boolean`
+- Nilai bawaan: diaktifkan oleh argumen pada _command line_ `--profile`
 
-> Enable the profiler in [WebpackBar](https://github.com/nuxt/webpackbar#profile)
+> Aktifkan _profiler_ di [WebpackBar](https://github.com/nuxt/webpackbar#profile)
 
 ## publicPath
 
-> Nuxt.js lets you upload your dist files to your CDN for maximum performances, simply set the `publicPath` to your CDN.
+> Nuxt.js mengizinkan Anda mengunggah berkas _dist_ ke CDN untuk performa yang maksimal, simplenya hanya dengan mengatur `publicPath` ke CDN.
 
-- Type: `String`
-- Default: `'/_nuxt/'`
+- Tipe: `String`
+- Nilai bawaan: `'/_nuxt/'`
 
 ```js{}[nuxt.config.js]
 export default {
@@ -591,19 +591,19 @@ export default {
 }
 ```
 
-Then, when launching `nuxt build`, upload the content of `.nuxt/dist/client` directory to your CDN and voilà!
+Kemudian, ketika meluncurkan `nuxt build`, unggah konten dari direktori `.nuxt/dist/client` ke CDN dan voilà!
 
 ## quiet
 
-> Suppresses most of the build output log
+> Melewatkan sebagian besar dari keluaran _log_
 
-- Type: `Boolean`
-- Default: Enabled when a `CI` or `test` environment is detected by [std-env](https://github.com/blindmedia/std-env)
+- Tipe: `Boolean`
+- Nilai bawaan: Aktifkan ketika sebuah lingkungan `CI` atau `test` terdeteksi oleh [std-env](https://github.com/blindmedia/std-env)
 
 ## splitChunks
 
-- Type: `Object`
-- Default:
+- Tipe: `Object`
+- Nilai bawaan:
 
   ```js{}[nuxt.config.js]
   export default {
@@ -617,35 +617,35 @@ Then, when launching `nuxt build`, upload the content of `.nuxt/dist/client` dir
   }
   ```
 
-If split codes for `layout`, `pages` and `commons` (common libs: vue|vue-loader|vue-router|vuex...).
+Jika memisahkan kode untuk `layout`, `pages` dan `commons` (pustaka umum: vue|vue-loader|vue-router|vuex...).
 
 ## ssr
 
-> Creates special webpack bundle for SSR renderer.
+> Membuat pembungkus webpack khusus untuk perender SSR.
 
-- Type: `Boolean`
-- Default: `true` for universal mode and `false` for spa mode
+- Tipe: `Boolean`
+- Nilai bawaan: `true` untuk mode universal dan `false` untuk mode spa.
 
-This option is automatically set based on `mode` value if not provided.
+Opsi ini secara otomatis mengatur berdasarkan `mode` jika tidak disediakan.
 
 ## styleResources
 
-- Type: `Object`
-- Default: `{}`
+- Tipe: `Object`
+- Nilai bawaan: `{}`
 
 <base-alert>
 
-**Warning:** This property is deprecated. Please use the [style-resources-module](https://github.com/nuxt-community/style-resources-module/) instead for improved performance and better DX!
+**Catatan**: Properti ini tidak digunakan. Mohon gunakan [style-resources-module](https://github.com/nuxt-community/style-resources-module/) saja untuk meningkatkan performa dan lebih baik.
 
 </base-alert>
 
-This is useful when you need to inject some variables and mixins in your pages without having to import them every time.
+Hal ini berguna ketika Anda perlu menginjeksi beberapa variabel dan _mixins_ di halaman tanpa harus mengimpor setiap waktu.
 
-Nuxt.js uses https://github.com/yenshih/style-resources-loader to achieve this behaviour.
+Nuxt.js menggunakan https://github.com/yenshih/style-resources-loader untuk mencapai sikap ini.
 
-You need to specify the patterns/path you want to include for the given pre-processors: `less`, `sass`, `scss` or `stylus`
+Anda pelu menspesifikasi jalur/_pattern_ yang Anda mau untuk memasukkan pre-processors yang diberikan: `less`, `sass`, `scss` or `stylus`
 
-You cannot use path aliases here (`~` and `@`), you need to use relative or absolute paths.
+Anda tidak dapat menggunakan alias disini (`~` and `@`), Anda pelu menggunakan jalur relatif atau absolut.
 
 ```js{}[nuxt.config.js]
 {
@@ -656,8 +656,8 @@ You cannot use path aliases here (`~` and `@`), you need to use relative or abso
       // sass: ...,
       // scss: ...
       options: {
-        // See https://github.com/yenshih/style-resources-loader#options
-        // Except `patterns` property
+        // lihat https://github.com/yenshih/style-resources-loader#options
+        // kecuali properti `patterns`
       }
     }
   }
@@ -666,19 +666,19 @@ You cannot use path aliases here (`~` and `@`), you need to use relative or abso
 
 ## templates
 
-> Nuxt.js allows you provide your own templates which will be rendered based on Nuxt configuration. This feature is specially useful for using with [modules](/docs/2.x/directory-structure/modules).
+> Nuxt.js mengizinkan Anda memberikan _templates_ Anda sendiri yang akan di-_render_ berdasarkan konfigurasi Nuxt. Fitur ini berguna untuk menggunakan [modules](/docs/2.x/directory-structure/modules).
 
-- Type: `Array`
+- Tipe: `Array`
 
 ```js{}[nuxt.config.js]
 export default {
   build: {
     templates: [
       {
-        src: '~/modules/support/plugin.js', // `src` can be absolute or relative
-        dst: 'support.js', // `dst` is relative to project `.nuxt` dir
+        src: '~/modules/support/plugin.js', // `src` bisa absolut atau relatif
+        dst: 'support.js', // `dst` relatif ke projek `.nuxt` dir
         options: {
-          // Options are provided to template as `options` key
+          // Opsi diberikan sebagai kunci `options`
           live_chat: false
         }
       }
@@ -687,12 +687,12 @@ export default {
 }
 ```
 
-Templates are rendered using [`lodash.template`](https://lodash.com/docs/#template) you can learn more about using them [here](https://github.com/learn-co-students/javascript-lodash-templates-v-000).
+Templates di-_render_ menggunakan [`lodash.template`](https://lodash.com/docs/#template). Anda dapat mempelajari tentang ini [disini](https://github.com/learn-co-students/javascript-lodash-templates-v-000).
 
 ## terser
 
-- Type: `Object` or `Boolean`
-- Default:
+- Tipe: `Object` atau `Boolean`
+- Nilai bawaan:
 
 ```js{}[nuxt.config.js]
 {
@@ -710,20 +710,20 @@ Templates are rendered using [`lodash.template`](https://lodash.com/docs/#templa
 }
 ```
 
-Terser plugin options. Set to `false` to disable this plugin.
+Opsi _plugin terser_ diatur ke `false` untuk menonaktifkan _plugin_.
 
-`sourceMap` will be enabled when webpack `config.devtool` matches `source-?map`
+`sourceMap` akan diaktifkan ketika webpack `config.devtool` sesuai `source-?map`
 
-See [webpack-contrib/terser-webpack-plugin](https://github.com/webpack-contrib/terser-webpack-plugin).
+Lihat [webpack-contrib/terser-webpack-plugin](https://github.com/webpack-contrib/terser-webpack-plugin).
 
 ## transpile
 
-- Type: `Array<String | RegExp | Function>`
-- Default: `[]`
+- Tipe: `Array<String | RegExp | Function>`
+- Nilai bawaan: `[]`
 
-If you want to transpile specific dependencies with Babel, you can add them in `build.transpile`. Each item in transpile can be a package name, a string or regex object matching the dependency's file name.
+Jika Anda ingin men-_transpile_ dependensi khusus dengan Babel, Anda dapat menambahkan mereka di `build.transpile`. Setiap benda di _transpile_ bisa menjadi nama paket, sebuah _string_ atau objek _regex_ yang sama dengan nama berkas dependensi.
 
-Starting with `v2.9.0`, you can also use a function to conditionally transpile, the function will receive a object (`{ isDev, isServer, isClient, isModern, isLegacy }`):
+Dimulai dari `v2.9.0`, Anda dapat menggunakan fungsi untuk _transpile_, fungsi akan menerima objek (`{ isDev, isServer, isClient, isModern, isLegacy }`):
 
 ```js{}[nuxt.config.js]
 {
@@ -735,10 +735,10 @@ Starting with `v2.9.0`, you can also use a function to conditionally transpile, 
 
 ## vueLoader
 
-> Note: This config has been removed since Nuxt 2.0, please use [`build.loaders.vue`](#loaders)instead.
+> Catatan: konfigurasi ini telah dihilangkan sejak Nuxt 2.0, tologn gunakan [`build.loaders.vue`](#loaders) saja.
 
-- Type: `Object`
-- Default:
+- Tipe: `Object`
+- Nilai bawaan:
 
   ```js{}[nuxt.config.js]
   {
@@ -752,13 +752,13 @@ Starting with `v2.9.0`, you can also use a function to conditionally transpile, 
   }
   ```
 
-> Specify the [Vue Loader Options](https://vue-loader.vuejs.org/options.html).
+> Spesifikasikan [opsi pemuat Vue](https://vue-loader.vuejs.org/options.html).
 
 ## watch
 
-> You can provide your custom files to watch and regenerate after changes. This feature is specially useful for using with [modules](/docs/2.x/directory-structure/modules).
+> Anda dapat menyediakan kustom berkas untuk melakukan _watch_ dan regenerasi setelah perubahan. Fitur ini secara spesial berguna untuk menggunakan [modules](/docs/2.x/directory-structure/modules).
 
-- Type: `Array<String>`
+- Tipe: `Array<String>`
 
 ```js{}[nuxt.config.js]
 export default {
@@ -770,9 +770,9 @@ export default {
 
 ## followSymlinks
 
-> By default, the build process does not scan files inside symlinks. This boolean includes them, thus allowing usage of symlinks inside folders such as the "pages" folder, for example.
+> Secara bawaan, proses pembangunan tidak memindai berkas di dalam _symlinks_. _Boolean_ ini termasuk mereka, jadi mengizinkan penggunaan _symlinks_ di dalam direktori-direktori seperti "pages" direktori
 
-- Type: `Boolean`
+- Tipe: `Boolean`
 
 ```js{}[nuxt.config.js]
 export default {

@@ -1,6 +1,6 @@
 ---
 title: components
-description: The components directory contains your Vue.js Components. Components are what makes up the different parts of your page and can be reused and imported into your pages, layouts and even other components.
+description: Direktori `components` berisi komponen Vue.js Anda. Komponen adalah apa yang biasanya membentuk berbagai bagian pada halaman Anda dan dapat digunakan kembali serta diimpor ke halaman, tata letak, dan bahkan komponen lainnya.
 position: 3
 category: directory-structure
 csb_link: https://codesandbox.io/embed/github/nuxt-academy/guides-examples/tree/master/04_directory_structure/03_components?fontsize=14&hidenavigation=1&theme=dark
@@ -33,19 +33,19 @@ questions:
     correctAnswer:
 ---
 
-The components directory contains your Vue.js components. Components are what makes up the different parts of your page and can be reused and imported into your pages, layouts and even other components.
+Direktori `components` berisi komponen Vue.js Anda. Komponen adalah apa yang biasanya membentuk berbagai bagian pada halaman Anda dan dapat digunakan kembali serta diimpor ke halaman, tata letak, dan bahkan komponen lainnya.
 
-### Fetching Data
+### Pengambilan Data (_Fetching Data_)
 
-To access asynchronous data from an API in your components you can use Nuxt [`fetch()` hook](/docs/2.x/features/data-fetching#the-fetch-method).
+Untuk mengakses data asynchronous dari API di komponen Anda, Anda dapat menggunakan Nuxt [`fetch()` hook](/docs/2.x/features/data-fetching#the-fetch-method).
 
-Using `$fetchState.pending` we can show a message when the data is waiting to be loaded and using `$fetchState.error` we can show an error message if there is an error fetching the data. When using fetch we must declare the data in the data property. This then gets filled with the data that comes from the fetch.
+Dengan menggunakan `$ fetchState.pending` kita dapat menampilkan pesan ketika data sedang menunggu untuk dimuat dan dengan menggunakan` $ fetchState.error` kita dapat menampilkan pesan kesalahan jika ada kesalahan saat proses pengambilan data. Saat menggunakan fetch, kita harus mendeklarasikan data pada properti data. Ini kemudian diisi dengan data yang berasal dari pengambilan.
 
 ```html{}[components/MountainsList.vue]
 <template>
   <div>
-    <p v-if="$fetchState.pending">Loading....</p>
-    <p v-else-if="$fetchState.error">Error while fetching mountains</p>
+    <p v-if="$fetchState.pending">Mengambil gunung...</p>
+    <p v-else-if="$fetchState.error">Terjadi galat saat mengambil gunung</p>
     <ul v-else>
       <li v-for="(mountain, index) in mountains" :key="index">
         {{ mountain.title }}
@@ -71,15 +71,15 @@ Using `$fetchState.pending` we can show a message when the data is waiting to be
 
 <base-alert type="next">
 
-See the chapter on [fetch()](/docs/2.x/features/data-fetching#the-fetch-method) for more details on how fetch works
+Lihat bab [fetch()](/docs/2.x/features/data-fetching#the-fetch-method) untuk detail lebih lanjut tentang cara kerja pengambilan
 
 </base-alert>
 
-## Components Discovery
+## Menemukan Komponen
 
 <app-modal :src="img" :alt="imgAlt"></app-modal>
 
-Starting from `v2.13`, Nuxt can auto import your components when used in your templates, to activate this feature, set `components: true` in your configuration:
+Mulai dari `v2.13`, Nuxt dapat mengimpor komponen Anda secara otomatis saat digunakan di template Anda, untuk mengaktifkan fitur ini, setel `components: true` dalam konfigurasi Anda:
 
 ```js{}[nuxt.config.js]
 export default {
@@ -87,7 +87,7 @@ export default {
 }
 ```
 
-Once you create your components in the components directory they will then be available to be auto imported.
+Setelah Anda membuat komponen di dalam direktori `components`, mereka akan tersedia untuk diimpor secara otomatis.
 
 ```bash
 components/
@@ -105,9 +105,9 @@ components/
 </template>
 ```
 
-### Dynamic Imports
+### Impor Dinamis
 
-To dynamically import a component also known, as lazy loading a component, all you need to do is add the `Lazy` prefix in your templates.
+Untuk mengimpor komponen secara dinamis yang juga dikenal sebagai _lazy loading_ sebuah komponen, yang perlu Anda lakukan hanyalah menambahkan awalan `Lazy` di template Anda.
 
 ```html{}[layouts/default.vue]
 <template>
@@ -119,14 +119,14 @@ To dynamically import a component also known, as lazy loading a component, all y
 </template>
 ```
 
-Using the lazy prefix you can also dynamically import a component when an event is triggered.
+Dengan menggunakan awalan _Lazy_, Anda juga dapat mengimpor komponen secara dinamis saat sebuah peristiwa dipicu.
 
 ```html{}[pages/index.vue]
 <template>
   <div>
-    <h1>Mountains</h1>
+    <h1>Daftar Gunung</h1>
     <LazyMountainsList v-if="show" />
-    <button v-if="!show" @click="showList">Show List</button>
+    <button v-if="!show" @click="showList">Munculkan List</button>
   </div>
 </template>
 
@@ -146,9 +146,9 @@ Using the lazy prefix you can also dynamically import a component when an event 
 </script>
 ```
 
-### Nested Directories
+### Direktori Bersarang (_Nested Directories_)
 
-If you have components in nested directories such as:
+Jika Anda memiliki komponen dalam direktori bersarang seperti:
 
 ```bash
 components/
@@ -156,13 +156,13 @@ components/
     Button.vue
 ```
 
-The component name will be based on its own filename. Therefore the component will be:
+Nama komponen akan didasarkan pada nama berkasnya sendiri. Oleh karena itu komponennya adalah:
 
 ```html
 <button />
 ```
 
-We recommend you use the directory name in the filename for clarity
+Kami menyarankan Anda menggunakan nama direktori di nama berkas untuk kejelasan
 
 ```bash
 components/
@@ -170,7 +170,7 @@ components/
     BaseButton.vue
 ```
 
-However if you want to keep the filename as Button.vue then you can use the prefix option in the nuxt config to add a prefix to all components in a specific folder.
+Namun jika Anda ingin mempertahankan nama berkas sebagai Tombol.vue maka Anda dapat menggunakan opsi prefiks di konfigurasi nuxt untuk menambahkan prefiks ke semua komponen di folder tertentu.
 
 ```bash
 components/
@@ -190,7 +190,7 @@ components: {
 }
 ```
 
-And now in your template you can use the BaseButton instead of Button without having to make changes to the name of your `Button.vue` file.
+Dan sekarang dalam template Anda, Anda dapat menggunakan BaseButton sebagai ganti Button tanpa harus mengubah nama berkas `Button.vue` Anda.
 
 ```html{}[pages/index.vue]
 <BaseButton />
@@ -202,6 +202,6 @@ And now in your template you can use the BaseButton instead of Button without ha
 
 <base-alert type="next">
 
-To learn more about the [components module](/blog/improve-your-developer-experience-with-nuxt-components)
+Untuk mempelajari lebih lanjut tentang [komponen modul](/blog/improve-your-developer-experience-with-nuxt-components)
 
 </base-alert>

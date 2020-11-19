@@ -23,7 +23,7 @@ position: 102
 
 资源目录 `assets` 用于组织未编译的静态资源如 `LESS`、`SASS` 或 `JavaScript`。
 
-[关于 assets 目录的更多信息](/guide/assets)
+[关于 assets 目录的更多信息](/docs/2.x/directory-structure/static)
 
 ### 组件目录
 
@@ -35,13 +35,13 @@ position: 102
 
 _若无额外配置，该目录不能被重命名。_
 
-[关于布局的更多信息](/guide/views#布局)
+[关于布局的更多信息](/docs/2.x/concepts/views#布局)
 
 ### 中间件目录
 
 `middleware` 目录用于存放应用的中间件。
 
-[关于中间件的更多信息](/guide/routing#中间件)
+[关于中间件的更多信息](/docs/2.x/features/file-system-routing)
 
 ### 页面目录
 
@@ -49,7 +49,7 @@ _若无额外配置，该目录不能被重命名。_
 
 _若无额外配置，该目录不能被重命名。_
 
-[关于页面的更多信息](/guide/views)
+[关于页面的更多信息](/docs/2.x/concepts/views)
 
 ### 插件目录
 
@@ -65,7 +65,7 @@ _若无额外配置，该目录不能被重命名。_
 
 _若无额外配置，该目录不能被重命名。_
 
-[关于静态文件的更多信息](/guide/assets#静态文件)
+[关于静态文件的更多信息](/docs/2.x/directory-structure/static)
 
 ### Store 目录
 
@@ -73,7 +73,7 @@ _若无额外配置，该目录不能被重命名。_
 
 _若无额外配置，该目录不能被重命名。_
 
-[关于 store 的更多信息](/guide/vuex-store)
+[关于 store 的更多信息](/docs/2.x/directory-structure/store)
 
 ### nuxt.config.js 文件
 
@@ -81,7 +81,7 @@ _若无额外配置，该目录不能被重命名。_
 
 _若无额外配置，该文件不能被重命名。_
 
-[关于 nuxt.config.js 的更多信息](/guide/configuration)
+[关于 nuxt.config.js 的更多信息](/docs/2.x/directory-structure/nuxt-config)
 
 ### package.json 文件
 
@@ -91,10 +91,10 @@ _该文件不能被重命名。_
 
 ## 别名
 
-| 别名         | 目录                                  |
-| ------------ | ------------------------------------- |
-| `~` 或 `@`   | [srcDir](/api/configuration-srcdir)   |
-| `~~` 或 `@@` | [rootDir](/api/configuration-rootdir) |
+| 别名         | 目录                                                              |
+| ------------ | ----------------------------------------------------------------- |
+| `~` 或 `@`   | [srcDir](/docs/2.x/configuration-glossary/configuration-srcdir)   |
+| `~~` 或 `@@` | [rootDir](/docs/2.x/configuration-glossary/configuration-rootdir) |
 
 默认情况下，`srcDir` 和 `rootDir` 相同。
 

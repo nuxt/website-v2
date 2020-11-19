@@ -38,7 +38,7 @@ Netlify ダッシュボードの _"New site from Git"_ ボタンを押下しま�
 
 シングルページアプリケーションの場合、Netlify は再読み込み時にデフォルトで _"404 not found"_ にリダイレクトする問題があります。生成されないページについては、SPA モードにフォールバックし、そのリンクを更新または共有すると、Netlify の 404 ページが表示されます。なぜならシングルページアプリケーションなので実際には生成されたページが存在しないからです。更新すると url のページが実際に存在しないため 404 になります。404.html にリダイレクトすることにより、Nuxt は SPA フォールバックでページを正しくリロードします。
 
-これを修正する最も簡単な方法は、`nuxt.config` に [generate property](https://nuxtjs.org/api/configuration-generate#fallback) を追加し、`fallback: true` を設定することです。
+これを修正する最も簡単な方法は、`nuxt.config` に [generate property](/docs/2.x/configuration-glossary/configuration-generate#fallback) を追加し、`fallback: true` を設定することです。
 
 ```js
 export default {

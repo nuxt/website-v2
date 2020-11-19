@@ -6,7 +6,7 @@ category: internals-glossary
 position: 1
 ---
 
-O `contexto` fornece objetos/parâmetros adicionais do Nuxt que não estão, tradicionalmente, disponíveis para os componentes Vue. O `contexto` está disponível em áreas especiais do ciclo de vida do nuxt como [`asyncData`](/api), [`fetch`](/docs/2.x/features/data-fetching), [`plugins`](/docs/2.x/directory-structure/plugins), [`middleware`](/docs/2.x/directory-structure/middleware#router-middleware) e [`nuxtServerInit`](/docs/2.x/directory-structure/store#the-nuxtserverinit-action)
+O `contexto` fornece objetos/parâmetros adicionais do Nuxt que não estão, tradicionalmente, disponíveis para os componentes Vue. O `contexto` está disponível em áreas especiais do ciclo de vida do nuxt como [`asyncData`](/docs/2.x/features/data-fetching#async-data), [`fetch`](/docs/2.x/features/data-fetching), [`plugins`](/docs/2.x/directory-structure/plugins), [`middleware`](/docs/2.x/directory-structure/middleware#router-middleware) e [`nuxtServerInit`](/docs/2.x/directory-structure/store#the-nuxtserverinit-action)
 
 > _Nota: "O Contexto" ao qual nos referimos aqui não deve ser confundido com o objeto de `contexto` disponível nas [`Actions do Vuex`](https://vuex.vuejs.org/guide/actions.html). Os dois não estão relacionados._
 
@@ -105,7 +105,7 @@ Use este método para mostrar a página de erro: `error(params)`. Os `params` de
 
 `$config` (_Object_)
 
-Essa é a [configuração do tempo de execução (runtime config)](/guide/runtime-config).
+Essa é a [configuração do tempo de execução (runtime config)](/docs/2.x/configuration-glossary/configuration-runtime-config).
 
 ## Propriedades do lado do servidor
 

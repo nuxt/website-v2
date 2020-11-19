@@ -305,6 +305,7 @@ module.exports = {
       dataFetching: 'Data Fetching',
       assetManagement: 'Asset Management',
       transitions: 'Transitions',
+      seo: 'SEO',
       loading: 'Loading',
       miscellaneous: 'Miscellaneous',
       middleware: 'Middleware',

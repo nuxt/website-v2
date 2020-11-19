@@ -21,14 +21,14 @@ module.exports = {
         slug: 'docs-2.x-book-slug'
       },
       {
-        name: 'Sumber Daya',
-        icon: 'resources',
-        slug: 'resources'
-      },
-      {
         name: 'Contoh',
         icon: 'code',
         slug: 'examples'
+      },
+      {
+        name: 'FAQ',
+        icon: 'resources',
+        slug: 'faq'
       },
       {
         name: 'Blog',
@@ -337,7 +337,7 @@ module.exports = {
       },
       support: {
         title: 'Support',
-        faq: 'FAQ',
+        resources: 'Sumber Daya',
         discord: 'Chat with us',
         contributionGuide: 'Contribution guide'
       }

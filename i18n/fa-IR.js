@@ -21,14 +21,14 @@ module.exports = {
         slug: 'docs-2.x-book-slug'
       },
       {
-        name: 'منابع',
-        icon: 'resources',
-        slug: 'resources'
-      },
-      {
         name: 'نمونه‌ها',
         icon: 'code',
         slug: 'examples'
+      },
+      {
+        name: 'FAQ',
+        icon: 'resources',
+        slug: 'faq'
       },
       {
         name: 'بلاگ',
@@ -333,7 +333,7 @@ module.exports = {
       },
       support: {
         title: 'Support',
-        faq: 'FAQ',
+        resources: 'منابع',
         discord: 'Chat with us',
         contributionGuide: 'Contribution guide'
       }

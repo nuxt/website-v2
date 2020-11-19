@@ -22,14 +22,14 @@ module.exports = {
         slug: 'docs-2.x-book-slug'
       },
       {
-        name: 'Kaynaklar',
-        icon: 'resources',
-        slug: 'resources'
-      },
-      {
         name: 'Örnekler',
         icon: 'code',
         slug: 'examples'
+      },
+      {
+        name: 'FAQ',
+        icon: 'resources',
+        slug: 'faq'
       },
       {
         name: 'Blog',
@@ -338,7 +338,7 @@ module.exports = {
       },
       support: {
         title: 'Support',
-        faq: 'FAQ',
+        resources: 'Kaynaklar',
         discord: 'Chat with us',
         contributionGuide: 'Contribution guide'
       }

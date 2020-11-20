@@ -16,8 +16,9 @@
               >
                 {{ page.title }}
               </h1>
-              <AppResponsiveVideo v-if="page.youtube" :src="page.youtube" />
-              <nuxt-content :document="page" />
+              <div class="nuxt-content">
+                <ReleaseNotes />
+              </div>
             </article>
           </div>
           <AffixBlock>
@@ -35,12 +36,10 @@ import groupBy from 'lodash.groupby'
 
 export default {
   async asyncData({ $content, params, store, error, app }) {
-    const path = `/en/guides/release-notes`
-    let page
     let pages = []
 
     try {
-      const locale = ['pt', 'es'].includes(app.i18n.locale)
+      const locale = ['pt', 'es', 'ja', 'id', 'fr'].includes(app.i18n.locale)
         ? app.i18n.locale
         : app.i18n.defaultLocale
 
@@ -53,18 +52,11 @@ export default {
         .fetch()
     } catch (e) {}
 
-    try {
-      page = await $content(path).fetch()
-    } catch (err) {
-      return error({
-        statusCode: 404,
-        message: app.i18n.t('common.page_not_found')
-      })
-    }
-
     return {
-      path,
-      page,
+      page: {
+        title: 'Release Notes',
+        description: 'Nuxt.js release notes.'
+      },
       links: groupBy(pages, 'category')
     }
   },
@@ -125,3 +117,16 @@ export default {
   }
 }
 </script>
+
+<style lang="scss" scoped>
+article h1 {
+  @apply font-medium relative text-3xl table mb-4;
+
+  &::after {
+    content: ' ';
+    width: 80%;
+
+    @apply block border-2 border-nuxt-lightgreen mt-2 mb-1 rounded;
+  }
+}
+</style>

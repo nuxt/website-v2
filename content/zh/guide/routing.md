@@ -116,7 +116,7 @@ router: {
 
 <div class="Alert Alert--orange">
 
-<b>警告：</b>`generate` 命令会忽略动态路由: [API Configuration generate](/api/configuration-generate#routes)
+<b>警告：</b>`generate` 命令会忽略动态路由: [API Configuration generate](/docs/2.x/configuration-glossary/configuration-generate)
 
 </div>
 
@@ -271,7 +271,7 @@ pages/
 | `/about/careers`         | `_.vue`            |
 | `/about/careers/chicago` | `_.vue`            |
 
-**Note:** 处理 404 页面，现在符合`_.vue`页面的逻辑。 [有关 404 重定向的更多信息，请点击此处](/guide/async-data#handling-errors).
+**Note:** 处理 404 页面，现在符合`_.vue`页面的逻辑。 [有关 404 重定向的更多信息，请点击此处](/docs/2.x/features/data-fetching#async-data).
 
 ### 命名视图
 

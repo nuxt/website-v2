@@ -91,8 +91,6 @@ The _context_ we refer to here is not to be confused with the `context` object
 
 Learn more about the different context keys in our [Internals Glossary](/docs/2.x/internals-glossary/context)
 
-## Examples
-
 ### Using page parameters for your API query
 
 The context directly exposes possible dynamic parameters of the route via `context.params`. In the following example, we call an API via the `nuxt/http` module using a dynamic page parameter as part of the URL. Modules, like the [nuxt/http](https://http.nuxtjs.org/) module, can expose own functions which are then available through the [context.app](http://context.app) object.
@@ -134,7 +132,7 @@ export default {
 }
 ```
 
-Want to use query parameters instead? You then use [context.query.id](http://context.query.id) then.
+Want to use query parameters instead? You then use [context.query.id](/docs/2.x/internals-glossary/context#query) then.
 
 ### Redirecting users & accessing the store
 
@@ -157,10 +155,6 @@ export default {
 Check out the Internals Glossary book for more examples of the [redirect method](/docs/2.x/internals-glossary/context#redirect)
 
 </base-alert>
-
-<app-modal>
-  <code-sandbox  :src="csb_link_context"></code-sandbox>
-</app-modal>
 
 ## Helpers
 
@@ -215,7 +209,7 @@ You can do so, by using `this.$nuxt.refresh()`!
 </script>
 ```
 
-### Controlling the loading bar
+#### Controlling the loading bar
 
 With `$nuxt`, you can also control Nuxt's loading bar programmatically via `this.$nuxt.$loading`.
 
@@ -261,9 +255,5 @@ Nuxt.js injects three boolean values into the global `process` object which will
 ```
 
 In the example, `renderedOn` will evaluate to `'server'` when using server-side rendering and a user accesses the page directly. When the user would navigate to the page from another part of the application, e.g. by click on a `<NuxtLink>`, it will evaluate to client.
-
-<app-modal>
-  <code-sandbox  :src="csb_link_helpers"></code-sandbox>
-</app-modal>
 
 <quiz :questions="questions"></quiz>

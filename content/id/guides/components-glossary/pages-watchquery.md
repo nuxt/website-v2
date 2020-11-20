@@ -2,7 +2,7 @@
 title: 'Properti watchQuery'
 description: Perhatikan kueri string dan jalankan metode komponen pada perubahan (asyncData, fetch, validate, layout, ...)
 menu: Properti watchQuery
-category: komponen-glosarium
+category: components-glossary
 position: 0
 ---
 

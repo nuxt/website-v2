@@ -139,11 +139,7 @@ If you don't add a layout property to your page, eg `layout: 'blog'` then the `d
 
 </base-alert>
 
-<app-modal>
-  <code-sandbox  :src="csb_link"></code-sandbox>
-</app-modal>
-
-### Error Page
+## Error Page
 
 The error page is a *page component* which is always displayed when an error occurs (that does not happen while server-side rendering).
 

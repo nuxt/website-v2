@@ -215,12 +215,6 @@ To learn more about keep-alive and keep-alive-props see the [vue docs](https://v
 </template>
 ```
 
-To see an example, take a look at the [nested-routes example](https://nuxtjs.org/examples/nested-routes).
-
-<app-modal>
-  <code-sandbox  :src="csb_link_nuxt"></code-sandbox>
-</app-modal>
-
 ## The NuxtLink Component
 
 To navigate between pages of your app, you should use the  `<NuxtLink>` component. This component is included with Nuxt.js and therefore you don't have to import it like you do with other components. It is similar to the HTML `<a>` tag except that instead of using a `href="/about"` you use `to="/about"`. If you've used `vue-router` before, you can think of `<NuxtLink>` as a replacement of `<RouterLink>`
@@ -284,13 +278,15 @@ export default {
 }
 ```
 
-Since Nuxt.js v2.10.0, if you have set `prefetchLinks` to `false` but you want to prefetch a specific link, you can use the `prefetch` prop:
+Since Nuxt.js v2.10.0, if you have to set `prefetchLinks` to `false` but you want to prefetch a specific link, you can use the `prefetch` prop:
 
 ```html
 <NuxtLink to="/about" prefetch>About page pre-fetched</NuxtLink>
 ```
 
-## linkActiveClass
+## Link Classes
+
+### linkActiveClass
 
 The `linkActiveClass` works the same as the `vue-router` class for active links. If we want to show which links are active all you have to do is create some css for the class `nuxt-link-active` .
 
@@ -322,7 +318,7 @@ This option is given directly to the `vue-router` linkActiveClass. See the [vue-
 
 </base-alert>
 
-## linkExactActiveClass
+### linkExactActiveClass
 
 The `linkExactActiveClass` works the same as the `vue-router` class for exact active links. If we want to show which links are active with an exact match all you have to do is create some css for the class `nuxt-link-exact-active` .
 
@@ -354,7 +350,7 @@ This option is given directly to the `vue-router` linkExactActiveClass. See the 
 
 </base-alert>
 
-## linkPrefetchedClass
+### linkPrefetchedClass
 
 The linkPrefetchedClass will allow you to add styles for all links that have been prefetched. This is great for testing which links are being prefetched after modifying the default behavior. The linkPrefetchedClass is disabled by default. If you want to enable it you need to add it to the router property in your `nuxt-config.js` file.
 
@@ -373,16 +369,6 @@ Then you can add the styles for that class.
   color: orangeRed;
 }
 ```
-
-<base-alert type="info">
-
-In this example we have used the class `nuxt-link-prefetched` but you can name it anything you like
-
-</base-alert>
-
-<app-modal>
-  <code-sandbox  :src="csb_link_nuxt_link"></code-sandbox>
-</app-modal>
 
 ## The client-only Component
 

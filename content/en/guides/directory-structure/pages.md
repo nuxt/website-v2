@@ -320,10 +320,6 @@ See more on the watch query property in our [Data Fetching](/docs/2.x/features/d
 
 </base-alert>
 
-<app-modal>
-  <code-sandbox :src="csb_link"></code-sandbox>
-</app-modal>
-
 ## Ignoring pages
 
 If you want to ignore pages so that they are not included in the generated `router.js` file then you can ignore them by prefixing them with a `-`.

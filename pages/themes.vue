@@ -115,7 +115,8 @@ export default {
         },
         {
           title: 'Luma Nuxt',
-          description: 'A beautifully crafted user interface with Nuxt.js for modern Education Platforms.',
+          description:
+            'A beautifully crafted user interface with Nuxt.js for modern Education Platforms.',
           price: '27$',
           link: 'https://1.envato.market/luma',
           img: 'luma-nuxt'
@@ -136,7 +137,8 @@ export default {
         },
         {
           title: 'Veluxi',
-          description: 'Modern template collection to present your startup & your companies the way they truly deserve.',
+          description:
+            'Modern template collection to present your startup & your companies the way they truly deserve.',
           price: '15$',
           link: 'https://1.envato.market/veluxi',
           img: 'veluxi'

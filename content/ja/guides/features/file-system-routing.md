@@ -399,7 +399,7 @@ export default {
 
 <base-alert>
 
-[名前付きビュー](https://ja.nuxtjs.org/guide/routing#名前付きビュー) を使うルートを追加する場合、対応する名前付き `components` の `chunkNames` を追加することを忘れないでください。
+[名前付きビュー](https://ja.nuxtjs.org/docs/2.x/features/file-system-routing#名前付きビュー) を使うルートを追加する場合、対応する名前付き `components` の `chunkNames` を追加することを忘れないでください。
 
 </base-alert>
 

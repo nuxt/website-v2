@@ -399,7 +399,7 @@ El esquema de la ruta debe respetar el esquema del [vue-router](https://router.v
 
 <base-alert>
 
-Al añadir rutas que utilizan [Vistas con nombre](https://nuxtjs.org/guide/routing#named-views), no olvides agregar el correspondiente `chunkNames` de los `components` nombrados.
+Al añadir rutas que utilizan [Vistas con nombre](https://nuxtjs.org/docs/2.x/features/file-system-routing#named-views), no olvides agregar el correspondiente `chunkNames` de los `components` nombrados.
 
 </base-alert>
 

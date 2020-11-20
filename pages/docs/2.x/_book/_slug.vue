@@ -39,6 +39,7 @@ import copyCodeBlock from '~/mixins/copyCodeBlock'
 
 export default {
   mixins: [copyCodeBlock],
+  scrollToTop: true,
   async asyncData({ $content, $contributors, params, store, error, app }) {
     let path = `/${app.i18n.defaultLocale}/guides/${params.book}`
     let page, prev, next, langFallback
@@ -105,12 +106,6 @@ export default {
       contributors
     }
   },
-  computed: {
-    docLink() {
-      return `https://github.com/nuxt/nuxtjs.org/blob/master/content${this.path}/${this.$route.params.slug}.md`
-    }
-  },
-  scrollToTop: true,
   head() {
     return {
       title: this.page.title,
@@ -140,6 +135,11 @@ export default {
           content: this.page.description
         }
       ]
+    }
+  },
+  computed: {
+    docLink() {
+      return `https://github.com/nuxt/nuxtjs.org/blob/master/content${this.path}/${this.$route.params.slug}.md`
     }
   }
 }

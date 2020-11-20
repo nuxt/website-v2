@@ -76,7 +76,7 @@
               :options="$i18n.locales"
               label="Select language"
             >
-              <template v-slot:icon>
+              <template #icon>
                 <GlobeIcon />
               </template>
             </AppLangSelect>
@@ -113,8 +113,8 @@ export default {
         ],
         about: [
           {
-            key: this.$t('footer.links.support.faq'),
-            to: this.localePath('/faq')
+            key: this.$t('footer.links.support.resources'),
+            to: this.localePath('/resources')
           },
           {
             key: this.$t('footer.links.support.discord'),

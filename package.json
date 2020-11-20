@@ -36,7 +36,7 @@
     "@nuxtjs/style-resources": "^1.0.0",
     "@nuxtjs/svg": "^0.1.12",
     "@types/crawler": "^1.2.0",
-    "@types/fs-extra": "^9.0.3",
+    "@types/fs-extra": "^9.0.4",
     "babel-eslint": "^10.1.0",
     "crawler": "^1.2.2",
     "cross-env": "^7.0.2",

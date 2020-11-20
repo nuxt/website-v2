@@ -1,17 +1,17 @@
-name: End-to-end tests
+name: Deployment tests
 on:
-  deployment_status
+  repository_dispatch:
+    types: [check_links]
 
 jobs:
   check-links:
-    if: github.event.deployment_status.state == 'success'
     runs-on: ubuntu-18.04
     steps:
       - uses: actions/checkout@v2
 
       - uses: actions/setup-node@v2-beta
         with:
-          node-version: '14'
+          node-version: "14"
 
       - uses: actions/cache@v2
         id: cache
@@ -27,5 +27,11 @@ jobs:
       - name: Crawl site
         run: node -r esm scripts/crawl.js
         env:
-          BASE_URL: ${{ github.event.deployment_status.target_url }}
-          # CRAWL_EXTERNAL: true
+          BASE_URL: ${{ github.event.client_payload.deploy_url }}
+
+      - name: Set status
+        if: always()
+        run: ./.github/bin/update-status.sh ${{ job.status }} check-links 'Finished checking links'
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
+          GITHUB_SHA: ${{ github.event.client_payload.commit_ref }}

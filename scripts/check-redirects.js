@@ -12,7 +12,9 @@ const redirects = fs
   .split('\n')
   .filter(redirect => redirect && !redirect.startsWith('#'))
   .filter(redirect => redirect.startsWith('/'))
-  .map(redirect => 'https://nuxtjs.org' + redirect.split(' ')[1])
+  .map(redirect => redirect.split(' ')[1])
+  .filter(redirect => redirect.startsWith('/'))
+  .map(redirect => 'https://nuxtjs.org' + redirect)
 
 const crawler = new Crawler({
   maxConnections: 100,

@@ -17,9 +17,7 @@
               <br />
             </template>
             <template v-slot:frameworkType>
-              <span class="text-nuxt-lightgreen">
-                Vue
-              </span>
+              <span class="text-nuxt-lightgreen"> Vue </span>
             </template>
           </i18n>
           <!--welcome description i18n -->
@@ -74,10 +72,7 @@
           </div>
         </div>
         <figure class="hidden lg:block lg:w-5/12" data-cy="video">
-          <AppMedia
-            :src="videoUrl"
-            class="mb-4"
-          />
+          <AppMedia :src="videoUrl" class="mb-4" />
           <!--welcome video i18n -->
           <i18n
             path="homepage.welcome.video"

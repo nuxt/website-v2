@@ -7,8 +7,8 @@
       <div class="flex items-start justify-between">
         <div class="w-1/3 p-8 text-center">
           <h4 class="Home__Features__Section__Title">
-            .vue files based
-          </h4>
+.vue files based
+</h4>
           <p class="Home__Features__Section__Description">
             Lorem ipsum dolor sit, amet consectetur adipisicing elit. Labore
             nemo quasi quae amet blanditiis facere aliquid ducimus eum sunt aut
@@ -18,8 +18,8 @@
         </div>
         <div class="w-1/3 p-8 text-center">
           <h4 class="Home__Features__Section__Title">
-            .vue files based
-          </h4>
+.vue files based
+</h4>
           <p class="Home__Features__Section__Description">
             Lorem ipsum dolor sit, amet consectetur adipisicing elit. Labore
             nemo quasi quae amet blanditiis facere aliquid ducimus eum sunt aut
@@ -29,8 +29,8 @@
         </div>
         <div class="w-1/3 p-8 text-center">
           <h4 class="Home__Features__Section__Title">
-            .vue files based
-          </h4>
+.vue files based
+</h4>
           <p class="Home__Features__Section__Description">
             Lorem ipsum dolor sit, amet consectetur adipisicing elit. Labore
             nemo quasi quae amet blanditiis facere aliquid ducimus eum sunt aut
@@ -42,8 +42,8 @@
       <div class="flex items-start justify-between">
         <div class="w-1/3 p-8 text-center">
           <h4 class="Home__Features__Section__Title">
-            .vue files based
-          </h4>
+.vue files based
+</h4>
           <p class="Home__Features__Section__Description">
             Lorem ipsum dolor sit, amet consectetur adipisicing elit. Labore
             nemo quasi quae amet blanditiis facere aliquid ducimus eum sunt aut
@@ -53,8 +53,8 @@
         </div>
         <div class="w-1/3 p-8 text-center">
           <h4 class="Home__Features__Section__Title">
-            .vue files based
-          </h4>
+.vue files based
+</h4>
           <p class="Home__Features__Section__Description">
             Lorem ipsum dolor sit, amet consectetur adipisicing elit. Labore
             nemo quasi quae amet blanditiis facere aliquid ducimus eum sunt aut
@@ -64,8 +64,8 @@
         </div>
         <div class="w-1/3 p-8 text-center">
           <h4 class="Home__Features__Section__Title">
-            .vue files based
-          </h4>
+.vue files based
+</h4>
           <p class="Home__Features__Section__Description">
             Lorem ipsum dolor sit, amet consectetur adipisicing elit. Labore
             nemo quasi quae amet blanditiis facere aliquid ducimus eum sunt aut

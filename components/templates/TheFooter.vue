@@ -61,8 +61,13 @@
             <a
               class="inline-block"
               href="https://url.netlify.com/B1Mh093Iv"
-              target="_blank">
-              <img src="https://www.netlify.com/img/global/badges/netlify-color-bg.svg" class="h-10" alt="Deploys by Netlify" />
+              target="_blank"
+            >
+              <img
+                src="https://www.netlify.com/img/global/badges/netlify-color-bg.svg"
+                class="h-10"
+                alt="Deploys by Netlify"
+              />
             </a>
           </div>
           <div class="flex-1 text-right">
@@ -84,12 +89,10 @@
 
 <script>
 import GlobeIcon from '~/assets/icons/globe.svg?inline'
-import SmallNuxtLogo from '~/assets/images/logo-small.svg?inline'
 
 export default {
   components: {
-    GlobeIcon,
-    SmallNuxtLogo
+    GlobeIcon
   },
   data() {
     return {
@@ -119,7 +122,8 @@ export default {
           },
           {
             key: this.$t('footer.links.support.contributionGuide'),
-            href: 'https://github.com/nuxt/nuxtjs.org/blob/master/content/en/_archives/guide/contribution-guide.md'
+            href:
+              'https://github.com/nuxt/nuxtjs.org/blob/master/content/en/_archives/guide/contribution-guide.md'
           }
         ],
         support: [

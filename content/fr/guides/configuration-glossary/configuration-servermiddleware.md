@@ -13,9 +13,7 @@ Nuxt crée en interne une instance [connect](https://github.com/senchalabs/conne
 
 Parce que Connect itself est un middleware, les middleware enregistrés fonctionneront avec `nuxt start` et aussi lorsqu'il est utilisé comme un middleware avec des usages programmatiques comme [express-template](https://github.com/nuxt-community/express-template). Les [Modules](/guide/modules) nuxt peuvent également fournir `serverMiddleware` en utilisant [this.addServerMiddleware()](/guides/internals-glossary/internals-module-container#addservermiddleware-middleware)
 
-
 En plus, nous avons introduit une option `prefix` dont la valeur par défaut est `true`. Elle ajoutera la base du routeur aux middlewares de votre serveur.
-
 
 **Exemple:**
 
@@ -40,7 +38,7 @@ export default {
     // Inscrira redirect-ssl dans les package npm
     'redirect-ssl',
 
-    // Inscrira le fichier index du répertoire api pour gérer /api/* 
+    // Inscrira le fichier index du répertoire api pour gérer /api/*
     { path: '/api', handler: '~/api/index.js' },
 
     // Nous pouvons également créer des instances personnalisées

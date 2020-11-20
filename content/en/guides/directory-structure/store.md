@@ -280,8 +280,4 @@ Strict mode is enabled by default on dev mode and turned off in production mode.
 export const strict = false
 ```
 
-<app-modal>
-  <code-sandbox  :src="csb_link"></code-sandbox>
-</app-modal>
-
 <quiz :questions="questions"></quiz>

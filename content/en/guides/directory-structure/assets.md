@@ -59,7 +59,7 @@ questions:
 
 The `assets` directory contains your un-compiled assets such as Stylus or Sass files, images, or fonts.
 
-## Images:
+## Images
 
 Inside your `vue` templates, if you need to link to your `assets` directory use `~/assets/your_image.png` with a slash before assets.
 
@@ -87,7 +87,7 @@ Learn more about [webpack Assets](/docs/2.x/directory-structure/assets#webpack-a
 
 </base-alert>
 
-## Styles:
+## Styles
 
 Nuxt.js lets you define the CSS files/modules/libraries you want to set globally (included in every page). In the nuxt.config you can easily add your styles using the CSS Property.
 
@@ -104,11 +104,9 @@ export default {
 }
 ```
 
-<base-alert type="info">
+### Sass
 
 In case you want to use `sass` make sure that you have installed `sass` and `sass-loader` packages.
-
-</base-alert>
 
 <code-group>
   <code-block label="Yarn" active>
@@ -129,7 +127,7 @@ npm install --save-dev sass sass-loader fibers
 
 Nuxt.js will automatically guess the file type by its extension and use the appropriate pre-processor loader for webpack. You will still need to install the required loader if you need to use them.
 
-## Fonts:
+## Fonts
 
 You can use local fonts by adding them to your assets folder. Once they have been added you can then access them though your css using the @font-face.
 
@@ -241,7 +239,7 @@ When launching your application with `nuxt`, your template in `pages/index.vue
 
 ```html{}[pages/index.vue]
 <template>
-  <img src="@/assets/your_image.png" />
+  <img src="~/assets/your_image.png" />
 </template>
 ```
 
@@ -252,10 +250,6 @@ Will be transformed into:
 ```
 
 If you want to change the loader configurations, please use [build.extend](/docs/2.x/configuration-glossary/configuration-build#extend).
-
-<app-modal>
-  <code-sandbox  :src="csb_link"></code-sandbox>
-</app-modal>
 
 ## Aliases
 

@@ -1,7 +1,8 @@
 <template>
   <header
     class="sticky top-0 left-0 right-0 z-30 bg-light-elevatedSurface dark:bg-dark-elevatedSurface h-16 lg:h-24 transition-colors duration-300 ease-linear"
-    :class="{ shadow: !onTop, 'shadow-reverse': onTop }"  >
+    :class="{ shadow: !onTop, 'shadow-reverse': onTop }"
+  >
     <div
       class="container relative mx-auto px-4 flex items-center lg:py-6 h-full"
     >

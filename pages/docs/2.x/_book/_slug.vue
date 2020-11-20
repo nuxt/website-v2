@@ -1,7 +1,7 @@
 <template>
   <div class="-mx-4 lg:mx-0 flex flex-col-reverse lg:flex-row">
     <div
-      class="lg:min-h-screen w-full py-8 px-4 lg:static lg:overflow-visible lg:max-h-full lg:w-3/4"
+      class="lg:min-h-screen lg:w-3/4 w-full py-8 px-4 lg:static lg:overflow-visible lg:max-h-full"
     >
       <LangFallback :doc-link="docLink" :lang-fallback="langFallback" />
 
@@ -22,7 +22,7 @@
         <AppContribute :doc-link="docLink" :contributors="contributors" />
       </article>
     </div>
-    <AffixBlock>
+    <AffixBlock v-if="$route.params.book !== 'examples'">
       <AppToc
         v-if="page.toc && page.toc.length"
         :toc="page.toc"

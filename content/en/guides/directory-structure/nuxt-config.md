@@ -408,10 +408,6 @@ In your .gitignore file you will need to add the following so that they are igno
 node_modules .nuxt dist
 ```
 
-<app-modal>
-  <code-sandbox  :src="csb_link"></code-sandbox>
-</app-modal>
-
 ### What's next
 
 <base-alert type="next">

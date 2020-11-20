@@ -18,7 +18,7 @@ export default {
   transition: ''
   // un Objeto
   transition: {}
-  // o una Función 
+  // o una Función
   transition (to, from) {}
 }
 ```
@@ -60,19 +60,19 @@ Nuxt.js usará esta configuracion para el componente de la siguiente manera:
 
 El objeto `transition` puede tener las siguientes propiedades:
 
-| key | Tipo | Default | definición |
-| --- | --- | --- | --- |
-| `name` | `String` | `"page"` | El Nombre de la transición se  aplica a todas las transiciones de ruta. |
-| `mode` | `String` | `"out-in"` | El Modo de transición se aplica a todas las rutas, consulta la [documentación de Vue.js](https://vuejs.org/v2/guide/transitions.html#Transition-Modes). |
-| `css` | `Boolean` | `true` | Si aplica clases de transición tienes que usar CSS. El valor predeterminado es `true`. Si se establece en `false`, solo activará los enlaces de JavaScript registrados a través de eventos de componentes. |
-| `duration` | `Integer` | n/a | La Duración (en milisegundos) aplicada en la transición, consulta la [documentación de Vue.js](https://vuejs.org/v2/guide/transitions.html#Explicit-Transition-Durations). |
-| `type` | `String` | n/a | Especifica el tipo de eventos de transición a esperar para determinar el tiempo de finalización de la transición. Los valores disponibles son `transition` y `animation`. De forma predeterminada, detectará automáticamente el tipo que tiene una mayor duración. |
-| `enterClass` | `String` | n/a | El estado inicial de la clase de transición. Consulte la [documentación de Vue.js](https://vuejs.org/v2/guide/transitions.html#Custom-Transition-Classes). |
-| `enterToClass` | `String` | n/a | El estado final de la transición. Ver [documentación de Vue.js](https://vuejs.org/v2/guide/transitions.html#Custom-Transition-Classes). |
-| `enterActiveClass` | `String` | n/a | La clase aplicada durante toda la duración de la transición. Ver [documentación de Vue.js](https://vuejs.org/v2/guide/transitions.html#Custom-Transition-Classes). |
-| `leaveClass` | `String` | n/a | El estado inicial de la clase de transición. Consulte la [documentación de Vue.js](https://vuejs.org/v2/guide/transitions.html#Custom-Transition-Classes). |
-| `leaveToClass` | `String` | n/a | El estado final de la transición. Ver [documentación de Vue.js](https://vuejs.org/v2/guide/transitions.html#Custom-Transition-Classes). |
-| `leaveActiveClass` | `String` | n/a | La clase aplicada durante toda la duración de la transición. Ver [documentación de Vue.js](https://vuejs.org/v2/guide/transitions.html#Custom-Transition-Classes). |
+| key                | Tipo      | Default    | definición                                                                                                                                                                                                                                                         |
+| ------------------ | --------- | ---------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| `name`             | `String`  | `"page"`   | El Nombre de la transición se aplica a todas las transiciones de ruta.                                                                                                                                                                                             |
+| `mode`             | `String`  | `"out-in"` | El Modo de transición se aplica a todas las rutas, consulta la [documentación de Vue.js](https://vuejs.org/v2/guide/transitions.html#Transition-Modes).                                                                                                            |
+| `css`              | `Boolean` | `true`     | Si aplica clases de transición tienes que usar CSS. El valor predeterminado es `true`. Si se establece en `false`, solo activará los enlaces de JavaScript registrados a través de eventos de componentes.                                                         |
+| `duration`         | `Integer` | n/a        | La Duración (en milisegundos) aplicada en la transición, consulta la [documentación de Vue.js](https://vuejs.org/v2/guide/transitions.html#Explicit-Transition-Durations).                                                                                         |
+| `type`             | `String`  | n/a        | Especifica el tipo de eventos de transición a esperar para determinar el tiempo de finalización de la transición. Los valores disponibles son `transition` y `animation`. De forma predeterminada, detectará automáticamente el tipo que tiene una mayor duración. |
+| `enterClass`       | `String`  | n/a        | El estado inicial de la clase de transición. Consulte la [documentación de Vue.js](https://vuejs.org/v2/guide/transitions.html#Custom-Transition-Classes).                                                                                                         |
+| `enterToClass`     | `String`  | n/a        | El estado final de la transición. Ver [documentación de Vue.js](https://vuejs.org/v2/guide/transitions.html#Custom-Transition-Classes).                                                                                                                            |
+| `enterActiveClass` | `String`  | n/a        | La clase aplicada durante toda la duración de la transición. Ver [documentación de Vue.js](https://vuejs.org/v2/guide/transitions.html#Custom-Transition-Classes).                                                                                                 |
+| `leaveClass`       | `String`  | n/a        | El estado inicial de la clase de transición. Consulte la [documentación de Vue.js](https://vuejs.org/v2/guide/transitions.html#Custom-Transition-Classes).                                                                                                         |
+| `leaveToClass`     | `String`  | n/a        | El estado final de la transición. Ver [documentación de Vue.js](https://vuejs.org/v2/guide/transitions.html#Custom-Transition-Classes).                                                                                                                            |
+| `leaveActiveClass` | `String`  | n/a        | La clase aplicada durante toda la duración de la transición. Ver [documentación de Vue.js](https://vuejs.org/v2/guide/transitions.html#Custom-Transition-Classes).                                                                                                 |
 
 También puedes definir métodos en la propiedad `transition` de la página , estos son para los [hooks de JavaScript](https://vuejs.org/v2/guide/transitions.html#JavaScript-Hooks):
 

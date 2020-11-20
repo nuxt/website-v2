@@ -1,7 +1,7 @@
 <template>
   <div class="shadow-nuxt">
     <div class="container mx-auto px-4 lg:flex pb-12">
-      <TheMobileAsideNav :links="links" section="examples"/>
+      <TheMobileAsideNav :links="links" section="examples" />
       <TheAsideNav :links="links" section="examples" class="hidden lg:block" />
       <div class="w-full lg:static lg:max-h-full lg:overflow-visible lg:w-3/4">
         <nuxt-child />

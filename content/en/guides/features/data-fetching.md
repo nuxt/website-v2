@@ -267,8 +267,4 @@ Learn more about the [watchQuery property](/docs/2.x/components-glossary/pages-
 
 </base-alert>
 
-<app-modal>
-  <code-sandbox :src="csb_link"></code-sandbox>
-</app-modal>
-
 <quiz :questions="questions"></quiz>

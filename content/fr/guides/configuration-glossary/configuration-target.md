@@ -14,6 +14,6 @@ Cibles de déploiement pour Nuxt >= v2.13 :
     - `'server'`: Pour le rendu côté serveur (SSR)
     - `'static'`: Pour les sites statiques
 
-> Vous pouvez utiliser cette option pour changer la cible de déploiement par défaut  pour votre projet nuxt en utilisant `nuxt.config.js`
+> Vous pouvez utiliser cette option pour changer la cible de déploiement par défaut pour votre projet nuxt en utilisant `nuxt.config.js`
 
 Pour en savoir plus sur l'option `target`, consultez la [section sur les cibles de déploiement](/guides/features/deployment-targets).

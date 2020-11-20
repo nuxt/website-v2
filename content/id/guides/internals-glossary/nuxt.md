@@ -29,7 +29,7 @@ if (isDev) {
 // Kita bisa menggunakan `nuxt.render (req, res)` atau `nuxt.renderRoute (route, context)`
 ```
 
-Anda dapat melihatnya di [nuxt-express](https://github.com/nuxt/express) dan [adonuxt](https://github.com/nuxt/adonuxt) untuk pemula agar memulai dengan cepat.  
+Anda dapat melihatnya di [nuxt-express](https://github.com/nuxt/express) dan [adonuxt](https://github.com/nuxt/adonuxt) untuk pemula agar memulai dengan cepat.
 
 ### Catatan _Debug_
 

@@ -117,10 +117,6 @@ If you have two files with the same name eg. `main.scss` and `main.css`, and don
 
 Default order: `['css', 'pcss', 'postcss', 'styl', 'stylus', 'scss', 'sass', 'less']`
 
-<app-modal>
-  <code-sandbox  :src="csb_link_pre-processors"></code-sandbox>
-</app-modal>
-
 ## Pre-processors
 
 Thanks to [Vue Loader](http://vue-loader.vuejs.org/en/configurations/pre-processors.html), you can use any kind of pre-processor for your  `<template>` or `<style>`: use the `lang` attribute.
@@ -349,10 +345,6 @@ or create a script in your package.json
   "dev:host": "nuxt --hostname '0' --port 8000"
 }
 ```
-
-<app-modal>
-  <code-sandbox  :src="csb_link_host_port"></code-sandbox>
-</app-modal>
 
 ## Asynchronous Configuration
 

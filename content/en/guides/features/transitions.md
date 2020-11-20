@@ -209,7 +209,7 @@ export default {
 
 ## Configuration Settings
 
-## The layoutTransition Property
+### The layoutTransition Property
 
 The layout transition is used to set the default properties of the layout transitions.
 
@@ -223,11 +223,13 @@ The default settings for layout transitions are:
 ```
 
 ```css{}[assets/main.css]
-.layout-enter-active, .layout-leave-active {
-  transition: opacity .5s
+.layout-enter-active,
+.layout-leave-active {
+  transition: opacity 0.5s;
 }
-.layout-enter, .layout-leave-active {
-  opacity: 0
+.layout-enter,
+.layout-leave-active {
+  opacity: 0;
 }
 ```
 
@@ -255,7 +257,7 @@ export default {
 }
 ```
 
-## The pageTransition Property
+### The pageTransition Property
 
 The default settings for page transitions are:
 
@@ -294,9 +296,5 @@ If you do modify the page Transition name you will also have to rename the css c
   opacity: 0;
 }
 ```
-
-<app-modal>
-  <code-sandbox  :src="csb_link"></code-sandbox>
-</app-modal>
 
 <quiz :questions="questions"></quiz>

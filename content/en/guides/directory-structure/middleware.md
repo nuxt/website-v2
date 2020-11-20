@@ -125,10 +125,6 @@ export default {
 }
 ```
 
-<app-modal>
-  <code-sandbox  :src="csb_link_router"></code-sandbox>
-</app-modal>
-
 ## Named middleware
 
 You can create named middleware by creating a file inside the  `middleware/` directory, the file name will be the middleware name.
@@ -154,10 +150,6 @@ export default function ({ store, redirect }) {
 </script>
 ```
 
-<app-modal>
-  <code-sandbox  :src="csb_link_named"></code-sandbox>
-</app-modal>
-
 ## Anonymous middleware
 
 If you need to use a middleware only for a specific page, you can directly use a function for it (or an array of functions):
@@ -178,9 +170,5 @@ If you need to use a middleware only for a specific page, you can directly use a
   }
 </script>
 ```
-
-<app-modal>
-  <code-sandbox  :src="csb_link_anonymous"></code-sandbox>
-</app-modal>
 
 <quiz :questions="questions"></quiz>

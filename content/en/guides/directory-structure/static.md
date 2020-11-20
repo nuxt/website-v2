@@ -59,7 +59,7 @@ In your code, you can then reference these files relative to the root (`/`):
 <img src="/my-image.png" />
 
 <!-- webpacked image from assets directory -->
-<img src="@/assets/my-image-2.png" />
+<img src="'~/assets/my-image-2.png" />
 ```
 
 ## Static Directory Config
@@ -81,9 +81,5 @@ export default {
 Default: `/blog/my-image.png`
 
 With `static.prefix` disabled: `/my-image.png`
-
-<app-modal>
-  <code-sandbox  :src="csb_link"></code-sandbox>
-</app-modal>
 
 <quiz :questions="questions"></quiz>

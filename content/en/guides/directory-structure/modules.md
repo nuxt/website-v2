@@ -458,8 +458,4 @@ If you are going to offer using `buildModules` please mention that this featur
 
 </base-alert>
 
-<app-modal>
-  <code-sandbox  :src="csb_link"></code-sandbox>
-</app-modal>
-
 <quiz :questions="questions"></quiz>

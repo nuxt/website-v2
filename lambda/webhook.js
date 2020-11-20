@@ -1,5 +1,5 @@
-import fetch from 'node-fetch'
-import jwt from 'jsonwebtoken'
+const fetch = require('node-fetch')
+const jwt = require('jsonwebtoken')
 
 exports.handler = async function ({ body, headers }) {
   const signature = headers['X-Webhook-Signature']

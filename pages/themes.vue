@@ -9,7 +9,7 @@
             class="text-3xl xl:text-4xl text-light-onSurfacePrimary dark:text-dark-onSurfacePrimary font-medium leading-normal mb-6 lg:pt-4"
           >
             {{ $t('themes.title') }}
-            <template v-slot:nuxt>
+            <template #nuxt>
               <AppTitle />
             </template>
           </i18n>

@@ -228,7 +228,3 @@ Then, go to your browser and see your new page on **[http://localhost:3000/fun](
 Create a directory named `more-fun` and put an `index.vue` file inside. This will give the same result as creating a `more-fun.vue` file
 
 </base-alert>
-
-<app-modal>
-  <code-sandbox  :src="csb_link"></code-sandbox>
-</app-modal>

@@ -164,10 +164,6 @@ build: {
 },
 ```
 
-<app-modal>
-  <code-sandbox :src="csb_link_plugins_external"></code-sandbox>
-</app-modal>
-
 ## Vue Plugins
 
 If we want to use Vue plugins, like [v-tooltip](https://akryum.github.io/v-tooltip) to display tooltips in your application, we need to setup the plugin before launching the app.
@@ -200,11 +196,7 @@ import VTooltip from 'v-tooltip'
 Vue.use(VTooltip)
 ```
 
-<app-modal>
-  <code-sandbox  :src="csb_link_plugins_vue"></code-sandbox>
-</app-modal>
-
-## The plugins Property
+### The plugins Property
 
 Then we add the file path inside the `plugins` key of our `nuxt.config.js`. The plugins property lets you add vue.js plugins easily to your main application. All the paths defined in the `plugins` property will be imported before initializing the main application.
 
@@ -259,10 +251,6 @@ export default {
   ]
 }
 ```
-
-<app-modal>
-  <code-sandbox  :src="csb_link_plugins_client"></code-sandbox>
-</app-modal>
 
 ## Inject in `$root` & context
 
@@ -324,10 +312,6 @@ export const actions = {
 Don't use `Vue.use()`, `Vue.component()`, and globally, don't plug anything in Vue **inside** this function, dedicated to Nuxt injection. It will cause memory leak on server-side.
 
 </base-alert>
-
-<app-modal>
-  <code-sandbox  :src="csb_link_plugins_custom"></code-sandbox>
-</app-modal>
 
 ## The extendPlugins Property
 

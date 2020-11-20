@@ -27,6 +27,7 @@
 
 <script>
 export default {
+  scrollToTop: true,
   async asyncData({ $content, $contributors, params, store, error, app }) {
     const slug = params.slug || 'hello-world'
 
@@ -91,12 +92,6 @@ export default {
       contributors
     }
   },
-  computed: {
-    docLink() {
-      return `https://github.com/nuxt/nuxtjs.org/blob/master/content${this.path}/${this.$route.params.slug}.md`
-    }
-  },
-  scrollToTop: true,
   head() {
     return {
       title: this.page.title,
@@ -126,6 +121,11 @@ export default {
           content: this.page.description
         }
       ]
+    }
+  },
+  computed: {
+    docLink() {
+      return `https://github.com/nuxt/nuxtjs.org/blob/master/content${this.path}/${this.$route.params.slug}.md`
     }
   }
 }

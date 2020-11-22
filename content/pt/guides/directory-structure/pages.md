@@ -213,7 +213,7 @@ Veja mais sobre layouts em nosso capítulo [Views](/docs/2.x/concepts/views#layo
 
 ### loading
 
-Se definido como falso, evita que uma página chame, automaticamente, `this.$nuxt.$loading.finish()`, quando você entra nela, e `this.$nuxt.$loading.start()`, quando você a deixa, permitindo que você controle manualmente o comportamento, como mostra [este exemplo](https://nuxtjs.org/examples/custom-page-loading).
+Se definido como falso, evita que uma página chame, automaticamente, `this.$nuxt.$loading.finish()`, quando você entra nela, e `this.$nuxt.$loading.start()`, quando você a deixa, permitindo que você controle manualmente o comportamento, como mostra [este exemplo](/examples/custom-loading-component).
 
 ```js{}[pages/index.vue]
 export default {

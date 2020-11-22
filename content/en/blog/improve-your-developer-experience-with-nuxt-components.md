@@ -324,7 +324,7 @@ Ignore option excludes components with specified locations and extensions from s
 
 It's important we highlight two similar features of Nuxt that ignore files just like our `ignore` option.
 
-- [.nuxtignore](/docs/2.x/configuration-glossary/configuration-ignore#-nuxtignore) also ignore files similar to `ignore` option, but `.nuxtignore` ignores files from `/pages`, `/layouts`, `/middleware` and `/store` . It's a dot-file that is defined in the project root. Read more about the [ignore property](docs/2.x/configuration-glossary/configuration-ignore) on Nuxt docs.
+- [.nuxtignore](/docs/2.x/configuration-glossary/configuration-ignore#-nuxtignore) also ignore files similar to `ignore` option, but `.nuxtignore` ignores files from `/pages`, `/layouts`, `/middleware` and `/store` . It's a dot-file that is defined in the project root. Read more about the [ignore property](/docs/2.x/configuration-glossary/configuration-ignore) on Nuxt docs.
 - [ignore](/docs/2.x/configuration-glossary/configuration-ignore#the-ignore-property) property, as well, let us define multiple glob-pattern to ignore matching files, like below.
 
 ```js{}[nuxt.config.js]

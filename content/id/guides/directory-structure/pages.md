@@ -213,7 +213,7 @@ Lihat lebih lanjut mengenai _layouts_ pada bab [Views](/docs/2.x/concepts/views#
 
 ### _loading_ (memuat)
 
-Jika ditetapkan menjadi _false_, menghindari halaman melakukan panggilan otomatis kepada fungsi `this.$nuxt.$loading.finish()` ketika Anda masuk dan `this.$nuxt.$loading.start()` ketika Anda meninggalkannya, membiarkan Anda mengontrol secara manual tingkah lakunya, seperti pada [contoh ini](https://nuxtjs.org/examples/custom-page-loading) memperlihatkan.
+Jika ditetapkan menjadi _false_, menghindari halaman melakukan panggilan otomatis kepada fungsi `this.$nuxt.$loading.finish()` ketika Anda masuk dan `this.$nuxt.$loading.start()` ketika Anda meninggalkannya, membiarkan Anda mengontrol secara manual tingkah lakunya, seperti pada [contoh ini](/examples/custom-loading-component) memperlihatkan.
 
 ```js{}[pages/index.vue]
 export default {

@@ -196,12 +196,6 @@ And now in your template you can use the BaseButton instead of Button without ha
 <BaseButton />
 ```
 
-<app-modal>
-  <code-sandbox  :src="csb_link"></code-sandbox>
-</app-modal>
-
-<base-alert type="next">
-
 To learn more about the [components module](/blog/improve-your-developer-experience-with-nuxt-components)
 
 </base-alert>

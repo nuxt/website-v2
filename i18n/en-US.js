@@ -22,14 +22,14 @@ module.exports = {
         slug: 'docs-2.x-book-slug'
       },
       {
-        name: 'Resources',
-        icon: 'resources',
-        slug: 'resources'
-      },
-      {
         name: 'Examples',
         icon: 'code',
         slug: 'examples'
+      },
+      {
+        name: 'FAQ',
+        icon: 'resources',
+        slug: 'faq'
       },
       {
         name: 'Blog',
@@ -280,8 +280,11 @@ module.exports = {
       'Contribution for this page is now closed. If you would like to contribute please check out our',
     link: 'new docs'
   },
+  example: {
+    intro: 'In this example:'
+  },
   codeSandbox: {
-    open: 'Open CodeSandbox'
+    open: 'See Example'
   },
   content: {
     guide: {
@@ -298,7 +301,16 @@ module.exports = {
       internals: 'Internals'
     },
     examples: {
-      essentials: 'Essentials',
+      routing: 'Routing',
+      dataFetching: 'Data Fetching',
+      assetManagement: 'Asset Management',
+      transitions: 'Transitions',
+      seo: 'SEO',
+      loading: 'Loading',
+      miscellaneous: 'Miscellaneous',
+      middleware: 'Middleware',
+      plugins: 'Plugins',
+      modules: 'Modules',
       customization: 'Customization',
       advanced: 'Advanced'
     },
@@ -314,7 +326,8 @@ module.exports = {
       'directory-structure': 'Directory Structure',
       'configuration-glossary': 'Configuration Glossary',
       'internals-glossary': 'Internals Glossary',
-      'components-glossary': 'Components Glossary'
+      'components-glossary': 'Components Glossary',
+      examples: 'Examples'
     }
   },
   footer: {
@@ -323,7 +336,7 @@ module.exports = {
         title: 'Discover',
         shop: 'Our Goodies Store',
         consulting: 'Training & consultancy',
-        sponsorNuxt: 'Sponsoring & donations',
+        sponsorNuxt: 'Sponsoring & donations'
       },
       about: {
         title: 'Help',
@@ -333,7 +346,7 @@ module.exports = {
       },
       support: {
         title: 'Support',
-        faq: 'FAQ',
+        resources: 'Resources',
         discord: 'Chat with us',
         contributionGuide: 'Contribution guide'
       }

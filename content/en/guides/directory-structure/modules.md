@@ -115,7 +115,7 @@ Module developers usually provide additionally needed steps and details for usag
 
 </base-alert>
 
-Nuxt.js tries to resolve each item in the modules array using node require path (in the `node_modules`) and then will resolved from the project `srcDir` if `@` alias is used.
+Nuxt.js tries to resolve each item in the modules array using node require path (in the `node_modules`) and then will resolve from the project `srcDir` if `@` alias is used.
 
 <base-alert>
 
@@ -268,7 +268,7 @@ Please look into the [ModuleContainer](/docs/2.x/internals-glossary/internals-m
 
 ### Run Tasks on Specific hooks
 
-Your module may need to do things only on specific conditions and not just during Nuxt.js initialization. We can use the powerful Nuxt.js hooks to do tasks on specific events (based on [Hable](https://github.com/jsless/hable)). Nuxt.js will wait for your function if it returns a Promise or is defined as `async`.
+Your module may need to do things only on specific conditions and not just during Nuxt.js initialization. We can use the powerful Nuxt.js hooks to do tasks on specific events (based on [Hookable](https://github.com/nuxt-contrib/hookable)). Nuxt.js will wait for your function if it returns a Promise or is defined as `async`.
 
 Here are some basic examples:
 
@@ -457,9 +457,5 @@ Your module is a `buildModule` unless:
 If you are going to offer using `buildModules` please mention that this feature is only available since Nuxt v2.9. Older users should upgrade Nuxt or use the `modules` section.
 
 </base-alert>
-
-<app-modal>
-  <code-sandbox  :src="csb_link"></code-sandbox>
-</app-modal>
 
 <quiz :questions="questions"></quiz>

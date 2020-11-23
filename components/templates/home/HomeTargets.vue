@@ -7,8 +7,8 @@
       <div class="flex items-end lg:items-center justify-between">
         <div class="Home__Modes__Section">
           <h4 class="Home__Modes__Section__Title">
-            Server
-          </h4>
+Server
+</h4>
           <p class="Home__Modes__Section__Description">
             Heroku, Digital Ocean, OVH...
           </p>
@@ -17,8 +17,8 @@
       <div>
         <div class="Home__Modes__Section">
           <h4 class="Home__Modes__Section__Title">
-            Serverless
-          </h4>
+Serverless
+</h4>
           <p class="Home__Modes__Section__Description">
             Zeit, Amazon Lambda, Google Cloud Function, Azure...
           </p>
@@ -27,8 +27,8 @@
       <div>
         <div class="Home__Modes__Section">
           <h4 class="Home__Modes__Section__Title">
-            Static (JAM Stack ready)
-          </h4>
+Static (JAM Stack ready)
+</h4>
           <p class="Home__Modes__Section__Description">
             Netlify, GitHub Pages, Surge...
           </p>

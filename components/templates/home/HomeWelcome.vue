@@ -13,13 +13,11 @@
             tag="h1"
             class="text-4xl xl:text-5xl text-light-onSurfacePrimary dark:text-dark-onSurfacePrimary font-medium tracking-normal leading-tight mb-6"
           >
-            <template v-slot:br>
+            <template #br>
               <br />
             </template>
-            <template v-slot:frameworkType>
-              <span class="text-nuxt-lightgreen">
-                Vue
-              </span>
+            <template #frameworkType>
+              <span class="text-nuxt-lightgreen"> Vue </span>
             </template>
           </i18n>
           <!--welcome description i18n -->
@@ -28,7 +26,7 @@
             tag="h2"
             class="xl:text-lg text-light-onSurfaceSecondary dark:text-dark-onSurfaceSecondary font-medium leading-relaxed mb-6"
           >
-            <template v-slot:openSource>
+            <template #openSource>
               <span title="Under MIT license">
                 {{ $t('homepage.welcome.openSource') }}
               </span>
@@ -74,17 +72,14 @@
           </div>
         </div>
         <figure class="hidden lg:block lg:w-5/12" data-cy="video">
-          <AppMedia
-            :src="videoUrl"
-            class="mb-4"
-          />
+          <AppMedia :src="videoUrl" class="mb-4" />
           <!--welcome video i18n -->
           <i18n
             path="homepage.welcome.video"
             tag="p"
             class="font-medium py-2 text-xs xl:text-sm text-center text-light-onSurfaceSecondary dark:text-dark-onSurfaceSecondary"
           >
-            <template v-slot:company>
+            <template #company>
               <span>
                 <a
                   href="https://www.vuemastery.com"
@@ -95,7 +90,7 @@
                 </a>
               </span>
             </template>
-            <template v-slot:cheatSheet>
+            <template #cheatSheet>
               <span>
                 <a
                   href="https://www.vuemastery.com/nuxt-cheat-sheet/"

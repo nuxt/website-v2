@@ -22,14 +22,14 @@ module.exports = {
         slug: 'docs-2.x-book-slug'
       },
       {
-        name: 'Kaynaklar',
-        icon: 'resources',
-        slug: 'resources'
-      },
-      {
         name: 'Örnekler',
         icon: 'code',
         slug: 'examples'
+      },
+      {
+        name: 'FAQ',
+        icon: 'resources',
+        slug: 'faq'
       },
       {
         name: 'Blog',
@@ -282,6 +282,9 @@ module.exports = {
       'Bu sayfa için şu anda katkıda bulunamazsınız. Eğer katkıda bulunmak istiyorsanız',
     link: 'buraya tıklayın.'
   },
+  example: {
+    intro: 'In this example:'
+  },
   codeSandbox: {
     open: "CodeSandbox'ı Aç"
   },
@@ -325,7 +328,7 @@ module.exports = {
         title: 'Discover',
         shop: 'Our Goodies Store',
         consulting: 'Training & consultancy',
-        sponsorNuxt: 'Sponsoring & donations',
+        sponsorNuxt: 'Sponsoring & donations'
       },
       about: {
         title: 'About',
@@ -335,12 +338,11 @@ module.exports = {
       },
       support: {
         title: 'Support',
-        faq: 'FAQ',
+        resources: 'Kaynaklar',
         discord: 'Chat with us',
         contributionGuide: 'Contribution guide'
       }
     }
-
   },
   cookies: {
     consent:

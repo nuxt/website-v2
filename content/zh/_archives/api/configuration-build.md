@@ -603,7 +603,7 @@ export default {
 }
 ```
 
-使用[`lodash.template`](https://lodash.com/docs/#template)呈现模板，您可以了解有关使用它们的更多信息[here](https://github.com/learn-co-students/javascript-lodash-templates-v-000)。
+使用[`lodash.template`](https://lodash.com/docs/#template)呈现模板，您可以了解有关使用它们的更多信息[here](https://github.com/learn-co-students/javascript-lodash-templates-lab-v-000)。
 
 ## transpile
 

@@ -27,7 +27,7 @@
         </h3>
       </div>
       <div class="hidden lg:block lg:w-5/12 xl:w-4/12">
-        <IllustrationMountainsGlobe/>
+        <IllustrationMountainsGlobe />
       </div>
     </AppContainer>
   </div>

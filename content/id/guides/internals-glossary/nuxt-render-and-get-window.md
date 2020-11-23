@@ -18,11 +18,11 @@ position: 12
 
 <base-alert>
 
-*Method* ini dibuat untuk tujuan pengujian.
+_Method_ ini dibuat untuk tujuan pengujian.
 
 </base-alert>
 
-Untuk menggunakan *function* ini, Anda harus menginstal `jsdom`:
+Untuk menggunakan _function_ ini, Anda harus menginstal `jsdom`:
 
 ```bash
 npm install --save-dev jsdom

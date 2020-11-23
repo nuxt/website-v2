@@ -687,7 +687,7 @@ export default {
 }
 ```
 
-テンプレートは [`lodash.template`](https://lodash.com/docs/#template) を使ってレンダリングされます。[こちら](https://github.com/learn-co-students/javascript-lodash-templates-v-000)でより詳細な使い方を知ることができます。
+テンプレートは [`lodash.template`](https://lodash.com/docs/#template) を使ってレンダリングされます。[こちら](https://github.com/learn-co-students/javascript-lodash-templates-lab-v-000)でより詳細な使い方を知ることができます。
 
 ## terser
 

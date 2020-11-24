@@ -160,7 +160,7 @@ export default function ({ store, redirect }) {
 <script>
   export default {
     middleware({ store, redirect }) {
-      // ユーザーが認証されていない場合
+      // ユーザが認証されていない場合
       if (!store.state.authenticated) {
         return redirect('/login')
       }

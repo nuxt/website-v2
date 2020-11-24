@@ -23,7 +23,7 @@ The [content module](https://content.nuxtjs.org) is a git files based headless C
 
 <p align="center">
   <a href="https://blog-with-nuxt-content.netlify.app/" target="_blank" rel="noopener nofollow">View demo</a> /
-  <a href="https://github.com/nuxt-company/demo-blog-nuxt-content" target="_blank" rel="noopener nofollow">Source code</a>
+  <a href="https://github.com/nuxt-academy/demo-blog-nuxt-content" target="_blank" rel="noopener nofollow">Source code</a>
 </p>
 
 - [Getting started](#getting-started)
@@ -449,7 +449,7 @@ Here we create a div the author image, a title of Author and a dynamic name and 
 
 <base-alert>
 
-Styles have been removed from these examples, feel free to add the styles yourself or copy the styles from the [demo code](https://github.com/nuxt-company/demo-blog-nuxt-content).
+Styles have been removed from these examples, feel free to add the styles yourself or copy the styles from the [demo code](https://github.com/nuxt-academy/demo-blog-nuxt-content).
 
 </base-alert>
 
@@ -685,7 +685,7 @@ We can now create our blog index page to list out our blog posts. As we already 
 
 <base-alert type="info">
 
-In the [demo code](https://github.com/nuxt-company/demo-blog-nuxt-content) I used the main index page instead of creating an index file inside the blog folder because for this example I have no other pages but normally you might have a home page, contact page and then the blog page etc.
+In the [demo code](https://github.com/nuxt-academy/demo-blog-nuxt-content) I used the main index page instead of creating an index file inside the blog folder because for this example I have no other pages but normally you might have a home page, contact page and then the blog page etc.
 
 </base-alert>
 
@@ -816,7 +816,7 @@ We can then use our data to print out a nice author page showing the author name
 
 <base-alert type="info">
 
-Please note all styles have been removed from this example. You can either style the page yourself or copy the styles from the [demo code](https://github.com/nuxt-company/demo-blog-nuxt-content).
+Please note all styles have been removed from this example. You can either style the page yourself or copy the styles from the [demo code](https://github.com/nuxt-academy/demo-blog-nuxt-content).
 
 </base-alert>
 
@@ -911,7 +911,7 @@ We can now use our `<AppSearchInput>` component by adding it anywhere on our pag
 
 <base-alert type="info">
 
-See the [demo code](https://github.com/nuxt-company/demo-blog-nuxt-content) for improved styling of this page as well as the header component that was added which includes the search component and is therefore displayed on the author and index page.
+See the [demo code](https://github.com/nuxt-academy/demo-blog-nuxt-content) for improved styling of this page as well as the header component that was added which includes the search component and is therefore displayed on the author and index page.
 
 </base-alert>
 

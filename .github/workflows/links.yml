@@ -7,8 +7,21 @@ on:
     branches:
       - master
 
+
 jobs:
   check-links:
+    strategy:
+      matrix:
+        sites:
+          - "nuxt"
+          - "nuxtjs-es"
+          - "nuxtjs-fr"
+          - "nuxtjs-id"
+          - "nuxtjs-ja"
+          - "nuxtjs-ko"
+          - "nuxtjs-pt"
+          - "nuxtjs-ru"
+          - "nuxtjs-zh"
     runs-on: ubuntu-18.04
     steps:
       - uses: actions/checkout@v2
@@ -32,7 +45,7 @@ jobs:
         uses: jakepartusch/wait-for-netlify-action@v1.2
         id: waitForPreview
         with:
-          site_name: nuxt
+          site_name: ${{ matrix.site }}
           max_timeout: 600
 
       - name: Crawl site

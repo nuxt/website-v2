@@ -1,6 +1,7 @@
 import Crawler from 'crawler'
 import consola from 'consola'
-import core from '@actions/core'
+
+const core = require('@actions/core')
 
 const logger = consola.withTag('crawler')
 
@@ -67,10 +68,8 @@ crawler = new Crawler({
 
     if (error || ![200, 301, 302].includes(statusCode)) {
       logger.error('Error crawling', uri, `(status ${statusCode})`)
-      core.error('Error crawling', uri, `(status ${statusCode})`)
       if (referrers[uri]) {
         logger.info(`${uri} referred by`, referrers[uri])
-        core.info('Error crawling', uri, `(status ${statusCode})`)
       }
       erroredUrls.push(uri)
       return done()
@@ -78,7 +77,6 @@ crawler = new Crawler({
 
     if (!$) {
       logger.error('Could not parse', uri)
-      core.error('Could not parse', uri)
       return done()
     }
 

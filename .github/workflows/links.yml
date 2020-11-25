@@ -14,14 +14,14 @@ jobs:
       matrix:
         sites:
           - "nuxt"
+          - "nuxt-id"
+          - "nuxt-ja"
+          - "nuxt-ko"
+          - "nuxt-ru"
+          - "nuxt-zh"
           - "nuxtjs-es"
           - "nuxtjs-fr"
-          - "nuxtjs-id"
-          - "nuxtjs-ja"
-          - "nuxtjs-ko"
           - "nuxtjs-pt"
-          - "nuxtjs-ru"
-          - "nuxtjs-zh"
     runs-on: ubuntu-18.04
     steps:
       - uses: actions/checkout@v2

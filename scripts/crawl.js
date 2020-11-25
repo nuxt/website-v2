@@ -1,5 +1,6 @@
 import Crawler from 'crawler'
 import consola from 'consola'
+import core from '@actions/core'
 
 const logger = consola.withTag('crawler')
 
@@ -66,13 +67,18 @@ crawler = new Crawler({
 
     if (error || ![200, 301, 302].includes(statusCode)) {
       logger.error('Error crawling', uri, `(status ${statusCode})`)
-      if (referrers[uri]) logger.info(`${uri} referred by`, referrers[uri])
+      core.error('Error crawling', uri, `(status ${statusCode})`)
+      if (referrers[uri]) {
+        logger.info(`${uri} referred by`, referrers[uri])
+        core.info('Error crawling', uri, `(status ${statusCode})`)
+      }
       erroredUrls.push(uri)
       return done()
     }
 
     if (!$) {
       logger.error('Could not parse', uri)
+      core.error('Could not parse', uri)
       return done()
     }
 
@@ -86,10 +92,12 @@ crawler = new Crawler({
       logger.log('')
       logger.info(`Checked \`${urls.size}\` pages.`)
       // Tasks to run at the end.
-      if (erroredUrls.length)
-        throw new Error(
-          `\n\nErrors found when crawling ${erroredUrls.join(', ')}.`
-        )
+      if (erroredUrls.length) {
+        const message = `Errors found when crawling ${erroredUrls.join(', ')}.`
+
+        core.setFailed(message)
+        throw new Error(`\n\n${message}`)
+      }
     }
     done()
   }

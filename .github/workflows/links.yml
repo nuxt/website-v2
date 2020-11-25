@@ -12,7 +12,7 @@ jobs:
   check-links:
     strategy:
       matrix:
-        sites:
+        site:
           - "nuxt"
           - "nuxt-id"
           - "nuxt-ja"

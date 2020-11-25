@@ -8,16 +8,6 @@ on:
       - master
 
 jobs:
-  pending-link-check:
-    runs-on: ubuntu-18.04
-    steps:
-      - name: Checkout
-        uses: actions/checkout@v2
-      - name: Set status to pending
-        run: ./.github/bin/update-status.sh pending check-links 'Waiting for deployment'
-        env:
-          GITHUB_TOKEN: ${{ github.token }}
-
   check-links:
     runs-on: ubuntu-18.04
     steps:
@@ -43,15 +33,9 @@ jobs:
         id: waitForPreview
         with:
           site_name: nuxt
+          max_timeout: 600
 
       - name: Crawl site
         run: node -r esm scripts/crawl.js
         env:
           BASE_URL: ${{ steps.waitForPreview.outputs.url }}
-
-      - name: Set status
-        if: always()
-        run: ./.github/bin/update-status.sh ${{ job.status }} check-links 'Finished checking links'
-        env:
-          GITHUB_TOKEN: ${{ github.token }}
-          GITHUB_SHA: ${{ github.event.client_payload.commit_ref }}

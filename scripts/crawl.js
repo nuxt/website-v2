@@ -67,7 +67,9 @@ crawler = new Crawler({
     const { statusCode } = res.request.response
 
     if (error || ![200, 301, 302].includes(statusCode)) {
-      logger.error('Error crawling', uri, `(status ${statusCode})`)
+      const message = `Error crawling ${uri} (status ${statusCode})`
+      core.setFailed(message)
+      logger.error(message)
       if (referrers[uri]) {
         logger.info(`${uri} referred by`, referrers[uri])
       }
@@ -93,7 +95,6 @@ crawler = new Crawler({
       if (erroredUrls.length) {
         const message = `Errors found when crawling ${erroredUrls.join(', ')}.`
 
-        core.setFailed(message)
         throw new Error(`\n\n${message}`)
       }
     }

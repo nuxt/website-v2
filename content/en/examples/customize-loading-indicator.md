@@ -1,6 +1,6 @@
 ---
-title: Personalizar el indicador de carga de Nuxt
-description: Personalizar el indicador de carga de Nuxt para cuando ssr se establezca en falso
+title: Customize Nuxt Loading Indicator
+description: Customize the Nuxt Loading Indicator for when ssr is set to false
 position: 2
 category: loading
 csb_link: https://codesandbox.io/embed/github/nuxt-academy/examples/tree/master/loading/customize-loading-indicator?fontsize=14&hidenavigation=1&module=%2Fnuxt.config.js&theme=dark&view=editor
@@ -8,14 +8,14 @@ csb_link: https://codesandbox.io/embed/github/nuxt-academy/examples/tree/master/
 
 <example-intro></example-intro>
 
-`nuxt.config.js` contiene:
+`nuxt.config.js` contains:
 
-- `ssr: false` por lo que solo tenemos renderizado del lado del cliente
-- `loadingIndicator` propiedad para modificar el indicador de carga predeterminado
+- `ssr: false` so we only have client side rendering
+- `loadingIndicator` property to modify the default spinner
 
 <base-alert type="next">
 
-Obtenga más información en el libro Funciones en el capítulo [carga](/docs/2.x/features/loading).
+Learn more in the Features book in the [Loading](/docs/2.x/features/loading) chapter.
 
 </base-alert>
 

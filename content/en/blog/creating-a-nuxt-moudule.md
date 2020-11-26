@@ -1,7 +1,7 @@
 ---
 title: Creating a Nuxt Module
 description: Let's create a module that uses ngrok to get a Public URL that you can share while working in Development.
-imgUrl: /blog/creating-nuxt-module/main.png
+imgUrl: blog/creating-nuxt-module/main.png
 date: 2020-11-25
 authors:
   - name: "Debbie O'Brien"
@@ -19,7 +19,15 @@ Have you ever been working on something and ran into a bug or just needed to get
 
 Let's create a module that uses [ngrok](https://www.npmjs.com/package/ngrok) so that you get a public URL which can be seen in the Nuxt CLI when you run the dev command.
 
-This module has already been created and deployed and you can use it without creating it yourself by installing the //todo add link - @nuxtjs/ngrok module](). However if you are interested in seeing how it was created or want to create your own module then continue reading.
+<!-- <video poster="https://res.cloudinary.com/nuxt/video/upload/v1588091670/demo-blog-content_shk6kw.jpg" loop="loop" plays-inline="true" controls="controls">
+  <source src="https://res.cloudinary.com/nuxt/video/upload/v1588091670/demo-blog-content_shk6kw.webm" type="video/webm">
+  <source src="https://res.cloudinary.com/nuxt/video/upload/v1592314331/demo-blog-content_shk6kw.mp4" type="video/mp4">
+  <source src="https://res.cloudinary.com/nuxt/video/upload/v1588091670/demo-blog-content_shk6kw.ogv" type="video/ogg">
+</video> -->
+
+//todo - create video of it working
+
+This module has already been created and deployed and you can use it without creating it yourself by installing the @nuxtjs/ngrok module](//todo add link ). You can also jump straight into the code by checking out our [ CodeSandbox Demo](/examples/modules-internal). However if you are interested in seeing how it was created or want to create your own module then continue reading.
 
 ## Table of Contents
 
@@ -198,7 +206,7 @@ Don't forget to make sure your `.env`file has been added to your `.gitignore`.
 
 </base-alert>
 
-We can now set a const of `options` equal to the options from the ngrok property of our `nuxt.config.js` or equal to an empty object incase we don't define any options. We also add a const of `token` equal to the `NGROK_TOKEN` from our `.env` file or `options.authtoken` which is the same as `nuxt.options.ngrok.authtoken`, incase this value was defined directly in our `ngrok` property in the our `nuxt.config.js`.
+We can now set a const of `options` equal to the options from the ngrok property of our `nuxt.config.js` or equal to an empty object incase we don't define any options. We also add a const of `authtoken` equal to the `NGROK_TOKEN` from our `.env` file or `options.authtoken` which is the same as `nuxt.options.ngrok.authtoken`, incase this value was defined directly in our `ngrok` property in the our `nuxt.config.js`.
 
 We can then await the ngrok authtoken passing in the token value.
 
@@ -210,7 +218,7 @@ export default function () {
 
   // Read ngrok property defined in nuxt.config.js
   const options = nuxt.options.ngrok || {}
-  const token = process.env.NGROK_TOKEN || options.authtoken
+  const authtoken = process.env.NGROK_TOKEN || options.authtoken
 
   // [...]
 }
@@ -231,7 +239,9 @@ export default function () {
   // https://nuxtjs.org/docs/2.x/internals-glossary/internals-nuxt#hooks
   nuxt.hook('listen', async function (server, { port }) {
 
-    await ngrok.authtoken(token)
+    if(options.authtoken){
+      await ngrok.authtoken(options.authtoken)
+    }
 
     url = await ngrok.connect(port)
 
@@ -260,7 +270,9 @@ export default function () {
   // https://nuxtjs.org/docs/2.x/internals-glossary/internals-nuxt#hooks
   nuxt.hook('listen', async function (server, { port }) {
 
-    await ngrok.authtoken(token)
+    if(options.authtoken){
+      await ngrok.authtoken(options.authtoken)
+    }
 
     url = await ngrok.connect(port)
 
@@ -377,12 +389,15 @@ export default function () {
 
   // Read ngrok property defined in nuxt.config.js
   const options = nuxt.options.ngrok || {}
-  const token = process.env.NGROK_TOKEN || options.authtoken
+  const authtoken = process.env.NGROK_TOKEN
 
   // https://nuxtjs.org/docs/2.x/internals-glossary/internals-nuxt#hooks
   nuxt.hook('listen', async function (server, { port }) {
 
-    await ngrok.authtoken(token)
+    if(options.authtoken){
+      await ngrok.authtoken(options.authtoken)
+    }
+
 
     url = await ngrok.connect(port)
 
@@ -410,14 +425,8 @@ We have just created our local module which we can use in our project. This some
 
 ## Further exploration
 
-Check out our published ngrok module //TODO ADD LINK
+Check our our [CodeSandbox example](/examples/modules-internal) for this module
+
+Check out our published [ngrok module]() //TODO ADD LINK
 
 Check out our list of [Nuxt modules](https://modules.nuxtjs.org/).
-
-//todo - create video of it working
-
-<video poster="https://res.cloudinary.com/nuxt/video/upload/v1595852304/nuxt-smart-generate_pjaat1.jpg" loop="loop" plays-inline="true" controls="controls">
-  <source src="https://res.cloudinary.com/nuxt/video/upload/v1595852304/nuxt-smart-generate_pjaat1.webm" type="video/webm">
-  <source src="https://res.cloudinary.com/nuxt/video/upload/v1595852304/nuxt-smart-generate_pjaat1.mp4" type="video/mp4">
-  <source src="https://res.cloudinary.com/nuxt/video/upload/v1595852304/nuxt-smart-generate_pjaat1.ogv" type="video/ogg">
-</video>

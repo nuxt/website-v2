@@ -2,7 +2,7 @@
 title: Creating a Nuxt Module
 description: Modules are functions that are called sequentially when booting Nuxt. The framework waits for each module to finish before continuing. In this way, modules can customize almost any aspect of your project. Let's create a module that uses ngrok to get a Public URL that you can share while working in Development.
 imgUrl: blog/creating-nuxt-module/main.png
-date: 2020-11-25
+date: 2020-11-27
 authors:
   - name: "Debbie O'Brien"
     avatarUrl: https://pbs.twimg.com/profile_images/1252900852156772352/JLIVJ-TC_400x400.jpg
@@ -27,7 +27,7 @@ Let's create a module that uses [ngrok](https://www.npmjs.com/package/ngrok) so 
 
 //todo - create video of it working
 
-This module has already been created and deployed and you can use it without creating it yourself by installing the [@nuxtjs/ngrok module](https://ngrok.nuxtjs.org). You can also jump straight into the code by checking out our [ CodeSandbox Demo](/examples/modules-internal). However if you are interested in seeing how it was created or want to create your own module then continue reading.
+This module has already been created and deployed and you can use it without creating it yourself by installing the [@nuxtjs/ngrok module](https://ngrok.nuxtjs.org). You can also jump straight into the code by checking out our [CodeSandbox Demo](/examples/modules-internal). However if you are interested in seeing how it was created or want to create your own module then continue reading.
 
 - [How does it work?](#how-does-it-work)
 - [Let's get started](#lets-get-started)

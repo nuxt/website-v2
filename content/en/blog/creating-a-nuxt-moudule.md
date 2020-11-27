@@ -15,7 +15,7 @@ tags:
 
 Modules are functions that are called sequentially when booting Nuxt. The framework waits for each module to finish before continuing. In this way, modules can customize almost any aspect of your project. Nuxt modules can be incorporated into npm packages. This makes them easy to reuse across projects and to share with the community.
 
-Have you ever been working on something and ran into a bug or just needed to get approval from someone. There are a few options to achieve this such as deploying your application or creating a codeSandbox. But another option is to share your localhost so that as you make changes live in dev mode it can be seen by anyone who has the link, no matter where they are. We can use [ngrok](https://www.npmjs.com/package/ngrok) to achieve this.
+Have you ever been working on something and ran into a bug or just needed to get approval from someone. There are a few options to achieve this such as deploying your application or creating a [CodeSandbox](https://codesandbox.io). But another option is to share your localhost so that as you make changes live in dev mode, it can be seen by anyone who has the link, no matter where they are. We can use [ngrok](https://www.npmjs.com/package/ngrok) to achieve this.
 
 Let's create a module that uses [ngrok](https://www.npmjs.com/package/ngrok) so that you get a public URL which can be seen in the Nuxt CLI when you run the dev command.
 

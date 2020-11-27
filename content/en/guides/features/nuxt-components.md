@@ -247,15 +247,15 @@ If you want to know more about `<RouterLink>`, feel free to read the [Vue Route
 
 </base-alert>
 
-<base-alert type="info">
-
-`<NuxtLink>` also comes with [smart prefetching](/docs/2.x/features/nuxt-components#the-nuxtlink-component) out of the box.
-
-</base-alert>
-
 ## prefetchLinks
 
 Nuxt.js automatically includes smart prefetching. That means it detects when a link is visible, either in the viewport or when scrolling and prefetches the JavaScript for those pages so that they are ready when the user clicks the link. Nuxt.js only loads the resources when the browser isn't busy and skips prefetching if your connection is offline or if you only have 2g connection.
+
+<base-alert type="info">
+
+Check out this article to learn more about [smart prefetching](/blog/introducing-smart-prefetching).
+
+</base-alert>
 
 ### Disable prefetching for specific links
 

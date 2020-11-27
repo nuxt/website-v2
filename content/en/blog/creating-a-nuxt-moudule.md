@@ -29,14 +29,11 @@ Let's create a module that uses [ngrok](https://www.npmjs.com/package/ngrok) so 
 
 This module has already been created and deployed and you can use it without creating it yourself by installing the @nuxtjs/ngrok module](//todo add link ). You can also jump straight into the code by checking out our [ CodeSandbox Demo](/examples/modules-internal). However if you are interested in seeing how it was created or want to create your own module then continue reading.
 
-## Table of Contents
-
-- [Table of Contents](#table-of-contents)
 - [How does it work?](#how-does-it-work)
 - [Let's get started](#lets-get-started)
 - [Creating our module](#creating-our-module)
 - [Investigating nuxt.options](#investigating-nuxtoptions)
-- [Start ngrok when the Nuxt server is listening](#start-ngrok-when-the-nuxt-server-is-listening)
+- [Start the ngrok tunnel when the Nuxt server is listening](#start-the-ngrok-tunnel-when-the-nuxt-server-is-listening)
 - [Adding an authtoken](#adding-an-authtoken)
 - [ngrok in action](#ngrok-in-action)
 - [Add our URL to the Nuxt CLI](#add-our-url-to-the-nuxt-cli)
@@ -141,7 +138,7 @@ import ngrok from 'ngrok'
 export default function () {
   const { nuxt } = this
 
-  // Don't start ngrok in dev
+  // Don't start ngrok in production
   if (nuxt.options.dev === false) {
     return
   }
@@ -150,9 +147,9 @@ export default function () {
 }
 ```
 
-## Start ngrok when the Nuxt server is listening
+## Start the ngrok tunnel when the Nuxt server is listening
 
-We want to start ngrok when the nuxt sever is listening. To do that we need a way to hook into Nuxt and listen for a port so we can connect. That's where Nuxt hooks come in. [Nuxt hooks](/docs/2.x/internals-glossary/internals-nuxt) are listeners to Nuxt events. We will use the `nuxt.hook()` passing in the value of `listen` followed by an async function. In this function we need to pass in the server, followed by the port.
+We want to start the ngrok tunnel when the nuxt sever is listening. To do that we need a way to hook into Nuxt and listen for a port so we can connect. That's where Nuxt hooks come in. [Nuxt hooks](/docs/2.x/internals-glossary/internals-nuxt) are listeners to Nuxt events. We will use the `nuxt.hook()` passing in the value of `listen` followed by an async function. In this function we need to pass in the server, followed by the port.
 
 ```js{}[modules/ngrok/index.js]
 import ngrok from 'ngrok'
@@ -382,7 +379,7 @@ import chalk from 'chalk'
 export default function () {
   const { nuxt } = this
 
-  // Don't start ngrok in dev
+  // Don't start ngrok in production
   if (nuxt.options.dev === false) {
     return
   }

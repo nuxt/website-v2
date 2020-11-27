@@ -19,13 +19,11 @@ Have you ever been working on something and ran into a bug or just needed to get
 
 Let's create a module that uses [ngrok](https://www.npmjs.com/package/ngrok) so that you get a public URL which can be seen in the Nuxt CLI when you run the dev command.
 
-<!-- <video poster="https://res.cloudinary.com/nuxt/video/upload/v1588091670/demo-blog-content_shk6kw.jpg" loop="loop" plays-inline="true" controls="controls">
-  <source src="https://res.cloudinary.com/nuxt/video/upload/v1588091670/demo-blog-content_shk6kw.webm" type="video/webm">
-  <source src="https://res.cloudinary.com/nuxt/video/upload/v1592314331/demo-blog-content_shk6kw.mp4" type="video/mp4">
-  <source src="https://res.cloudinary.com/nuxt/video/upload/v1588091670/demo-blog-content_shk6kw.ogv" type="video/ogg">
-</video> -->
-
-//todo - create video of it working
+<video poster="https://res.cloudinary.com/nuxt/video/upload/v1588091670/ngrok-blog_jqc1di.jpg" loop="loop" plays-inline="true" controls="controls">
+  <source src="https://res.cloudinary.com/nuxt/video/upload/v1588091670/ngrok-blog_jqc1di.webm" type="video/webm">
+  <source src="https://res.cloudinary.com/nuxt/video/upload/v1592314331/ngrok-blog_jqc1di.mp4" type="video/mp4">
+  <source src="https://res.cloudinary.com/nuxt/video/upload/v1588091670/ngrok-blog_jqc1di.ogv" type="video/ogg">
+</video>
 
 This module has already been created and deployed and you can use it without creating it yourself by installing the [@nuxtjs/ngrok module](https://ngrok.nuxtjs.org). You can also jump straight into the code by checking out our [CodeSandbox Demo](/examples/modules-internal). However if you are interested in seeing how it was created or want to create your own module then continue reading.
 
@@ -418,12 +416,12 @@ export default function () {
 
 We have just created our local module which we can use in our project. This sometimes is enough but sometimes we want to share our module across projects or even better, with the Nuxt Community. To do this we need to create our module using a module template and publish it to NPM.
 
-//TODO ADD LINK Link to template ? As of today we are working on improving this template to make it more user friendly. All modules are creating using typescript and should contain tests, docs and an example.
+As of today we are working on improving this template to make it more user friendly. All modules are created using typescript and should contain tests, docs and an example.
 
 ## Further exploration
 
-Check our our [CodeSandbox example](/examples/modules-internal) for this module
+Check our our [CodeSandbox example](/examples/modules-internal) for this module.
 
-Check out our published [ngrok module](https://ngrok.nuxtjs.org/)
+Check out our published [ngrok module](https://ngrok.nuxtjs.org/).
 
 Check out our list of [Nuxt modules](https://modules.nuxtjs.org/).

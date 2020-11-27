@@ -107,10 +107,10 @@ This is automatically done for you and you do not need to add the `<transition>`
 Now all you have to do is create the new class for your transitions.
 
 ```html{}[pages/index.vue]
-<styles>
+<style>
   .home-enter-active, .home-leave-active { transition: opacity .5s; }
   .home-enter, .home-leave-active { opacity: 0; }
-</styles>
+</style>
 ```
 
 ## Object

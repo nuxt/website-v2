@@ -27,7 +27,7 @@ Let's create a module that uses [ngrok](https://www.npmjs.com/package/ngrok) so 
 
 //todo - create video of it working
 
-This module has already been created and deployed and you can use it without creating it yourself by installing the @nuxtjs/ngrok module](//todo add link ). You can also jump straight into the code by checking out our [ CodeSandbox Demo](/examples/modules-internal). However if you are interested in seeing how it was created or want to create your own module then continue reading.
+This module has already been created and deployed and you can use it without creating it yourself by installing the [@nuxtjs/ngrok module](https://ngrok.nuxtjs.org). You can also jump straight into the code by checking out our [ CodeSandbox Demo](/examples/modules-internal). However if you are interested in seeing how it was created or want to create your own module then continue reading.
 
 - [How does it work?](#how-does-it-work)
 - [Let's get started](#lets-get-started)
@@ -365,7 +365,7 @@ export default function () {
   // [...]
 
   nuxt.hook('close', function () {
-    url && ngrok.disconnect(url)
+    url && ngrok.disconnect()
   })
 }
 ```
@@ -409,7 +409,7 @@ export default function () {
   })
 
   nuxt.hook('close', function () {
-    url && ngrok.disconnect(url)
+    url && ngrok.disconnect()
   })
 }
 ```
@@ -424,6 +424,6 @@ We have just created our local module which we can use in our project. This some
 
 Check our our [CodeSandbox example](/examples/modules-internal) for this module
 
-Check out our published [ngrok module]() //TODO ADD LINK
+Check out our published [ngrok module](https://ngrok.nuxtjs.org/)
 
 Check out our list of [Nuxt modules](https://modules.nuxtjs.org/).

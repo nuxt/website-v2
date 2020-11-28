@@ -7,16 +7,6 @@ on:
     branches:
       - master
 jobs:
-  pending-link-check:
-    runs-on: ubuntu-18.04
-    steps:
-      - name: Checkout
-        uses: actions/checkout@v2
-      - name: Set status to pending
-        run: ./.github/bin/update-status.sh pending check-links 'Waiting for deployment'
-        env:
-          GITHUB_TOKEN: ${{ github.token }}
-
   cypress-run:
     runs-on: ubuntu-16.04
     steps:

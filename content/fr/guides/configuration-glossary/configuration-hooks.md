@@ -29,15 +29,15 @@ export default {
 }
 ```
 
-Le fonctionnement des hooks suit un modèle de nommage avec des `:` (ex: `build:done`). Pour des raisons de simplicité de configuration, on peut les structurer de manière hiérarchique pour ses propres hooks en utilisant un objet (cf. code juste au dessus). Se référencer au [fonctionnement interne de Nuxt.js](/guides/internals-glossary/internals) pour davantage d'informations.
+Le fonctionnement des hooks suit un modèle de nommage avec des `:` (ex: `build:done`). Pour des raisons de simplicité de configuration, on peut les structurer de manière hiérarchique pour ses propres hooks en utilisant un objet (cf. code juste au dessus). Se référencer au [fonctionnement interne de Nuxt.js](/docs/2.x/internals-glossary/internals) pour davantage d'informations.
 
 ## Liste des hooks
 
-- [Nuxt hooks](/guides/internals-glossary/internals-nuxt#hooks)
-- [Renderer hooks](/guides/internals-glossary/internals-renderer#hooks)
-- [ModulesContainer hooks](/guides/internals-glossary/internals-module-container#hooks)
-- [Builder hooks](/guides/internals-glossary/internals-builder#hooks)
-- [Generator hooks](/guides/internals-glossary/internals-generator#hooks)
+- [Nuxt hooks](/docs/2.x/internals-glossary/internals-nuxt#hooks)
+- [Renderer hooks](/docs/2.x/internals-glossary/internals-renderer#hooks)
+- [ModulesContainer hooks](/docs/2.x/internals-glossary/internals-module-container#hooks)
+- [Builder hooks](/docs/2.x/internals-glossary/internals-builder#hooks)
+- [Generator hooks](/docs/2.x/internals-glossary/internals-generator#hooks)
 
 ## Exemples
 

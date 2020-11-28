@@ -282,7 +282,7 @@ We can now access this in our Vue template using `$config`and if we wrap it in a
 
 ```html{}[modules/ngrok/index.js]
 <template>
-  <p>URL from ngrok: <a :href="$config.url">{{ $config.url }}</a></p>
+  <p>URL from ngrok: <a :href="$config.ngrok.url">{{ $config.ngrok.url }}</a></p>
 </template>
 ```
 

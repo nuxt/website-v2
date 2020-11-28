@@ -41,7 +41,7 @@ Les sites statiques fonctionnent avec le mode [universel](https://nuxtjs.org/gui
 **Utiliser la commande `nuxt dev` avec `static` comme cible de déploiement peut améliorer l'expérience développeur.**
 
 - Enlève `req` & `res` du `context`
-- Solution de secours sur le rendu côté client dans le cas d'une 404, d'erreurs et de redirections [voir les solutions de secours d'une SPA](./guides/concepts/static-site-generation#spa-fallback)
+- Solution de secours sur le rendu côté client dans le cas d'une 404, d'erreurs et de redirections [voir les solutions de secours d'une SPA](/guides/concepts/static-site-generation#spa-fallback)
 - `$route.query` sera toujours égal à `{}` sur le render côté serveur
 - `process.static` est vrai
 

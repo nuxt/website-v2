@@ -18,7 +18,7 @@ export default {
 Menjalankan perintah `nuxt dev` dengan properti `target` bernilai `static` akan meningkatkan pengalaman pengembang seperti:
 
 - Menghapus `req` dan `res` dari `context`
-- _Fallback_ ke pe-_render_-an di sisi klien dalam kasus 404, galat, dan _redirect_ [lihat _fallback_ SPA](./guides/concepts/static-site-generation#spa-fallback)
+- _Fallback_ ke pe-_render_-an di sisi klien dalam kasus 404, galat, dan _redirect_ [lihat _fallback_ SPA](/guides/concepts/static-site-generation#spa-fallback)
 - `$route.query` akan selalu bernilai `{}` untuk pe-_render_-an di sisi server.
 - `process.static` bernilai `true`
 

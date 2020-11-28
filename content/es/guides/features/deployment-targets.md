@@ -40,7 +40,7 @@ export default {
 **Ejecutando nuxt dev con el destino estático va a mejorar la experiencia de desarrollo:**
 
 - Elimina `req` & `res` de `context`
-- Retrocede al renderizado en cliente cuando hay un 404, errores y redirecciones [ver SPA fallback](./guides/concepts/static-site-generation#spa-fallback)
+- Retrocede al renderizado en cliente cuando hay un 404, errores y redirecciones [ver SPA fallback](/guides/concepts/static-site-generation#spa-fallback)
 - `$route.query` siempre será igual a `{}` en el renderizado server-side
 - `process.static` es `true`
 

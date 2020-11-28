@@ -494,7 +494,7 @@ export default function (to, from, savedPosition) {
 
 <base-alert type="next">
 
-[O arquivo `router.scrollBehavior.js` padrão do Nuxt.js.](packages/vue-app/template/router.scrollBehavior.js)
+[O arquivo `router.scrollBehavior.js` padrão do Nuxt.js.](https://github.com/nuxt/nuxt.js/blob/dev/packages/vue-app/template/router.scrollBehavior.js)
 
 </base-alert>
 

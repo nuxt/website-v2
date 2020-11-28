@@ -4,6 +4,8 @@ import consola from 'consola'
 import Crawler from 'crawler'
 import fs from 'fs-extra'
 
+const core = require('@actions/core')
+
 const logger = consola.withTag('redirect-tester')
 
 const redirects = fs
@@ -13,7 +15,7 @@ const redirects = fs
   .filter(redirect => redirect && !redirect.startsWith('#'))
   .filter(redirect => redirect.startsWith('/'))
   .map(redirect => redirect.split(' ')[1])
-  .filter(redirect => redirect.startsWith('/'))
+  .filter(redirect => redirect.startsWith('/') && !redirect.includes('/:'))
   .map(redirect => 'https://nuxtjs.org' + redirect)
 
 const crawler = new Crawler({
@@ -23,7 +25,9 @@ const crawler = new Crawler({
     const { statusCode } = res.request.response
 
     if (error || ![200, 301, 302].includes(statusCode)) {
-      logger.error('Error crawling', uri, `(status ${statusCode})`)
+      const message = `Error crawling ${uri} (status ${statusCode})`
+      logger.error(message)
+      core.setFailed(message)
       return done()
     }
 

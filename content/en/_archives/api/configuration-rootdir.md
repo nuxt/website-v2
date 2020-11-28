@@ -16,6 +16,9 @@ This property will be overwritten by [nuxt commands](/guide/commands) if an argu
 Because of that its normally not needed to configure this option unless you will use [Nuxt.js programmatically](/api/nuxt).
 
 <div class="Alert Alert--blue">
+
 Both `rootDir` as the package root containing the `node_modules` directory need to be within the same directory tree to be able to [resolve dependencies](https://nodejs.org/api/modules.html#modules_all_together).
+
 See the [`srcDir` option](/api/configuration-srcdir) for examples of directory structure when thats not the case
+
 </div>

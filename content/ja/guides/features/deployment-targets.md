@@ -18,7 +18,7 @@ export default {
 target を static にした状態で nuxt dev を実行すると、開発者の体験は向上するでしょう:
 
 - `context` から `req` と `res` を削除します
-- クライアントサイドレンダリングの 404、エラー、リダイレクトをフォールバックします [SPA フォールバックを参照](./guides/concepts/static-site-generation#spa-fallback)
+- クライアントサイドレンダリングの 404、エラー、リダイレクトをフォールバックします [SPA フォールバックを参照](/guides/concepts/static-site-generation#spa-fallback)
 - サーバーサイドレンダリングでは常に `$route.query` と `{}` は等しくなります
 - `process.static` は true になります
 

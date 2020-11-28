@@ -17,6 +17,6 @@ Because of that its normally not needed to configure this option unless you will
 
 <base-alert type="info">
 
-Both `rootDir` as the package root containing the `node_modules` directory need to be within the same directory tree to be able to [resolve dependencies](https://nodejs.org/api/modules.html#modules_all_together). See the <NuxtLink to="/docs/2.x/configuration-glossary/configuration-srcdir">`srcDir` option</NuxtLink> for examples of directory structure when that is not the case.
+Both `rootDir` as the package root containing the `node_modules` directory need to be within the same directory tree to be able to [resolve dependencies](https://nodejs.org/api/modules.html#modules_all_together). See the [`srcDir` option](/docs/2.x/configuration-glossary/configuration-srcdir) for examples of directory structure when that is not the case.
 
 </base-alert>

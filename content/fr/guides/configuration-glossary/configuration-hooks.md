@@ -33,7 +33,7 @@ Le fonctionnement des hooks suit un modèle de nommage avec des `:` (ex: `build:
 
 ## Liste des hooks
 
-- [Nuxt hooks](/guides/internals-glossary/internals-renderer#hooks)
+- [Nuxt hooks](/guides/internals-glossary/internals-nuxt#hooks)
 - [Renderer hooks](/guides/internals-glossary/internals-renderer#hooks)
 - [ModulesContainer hooks](/guides/internals-glossary/internals-module-container#hooks)
 - [Builder hooks](/guides/internals-glossary/internals-builder#hooks)

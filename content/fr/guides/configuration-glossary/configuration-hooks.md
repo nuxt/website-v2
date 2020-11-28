@@ -51,7 +51,7 @@ Ceci dit, lorsque l'on est en développement, aller sur _localhost_, lorsque `ro
 
 La redirection n'est peut-être pas le meilleur cas d'usage pour une application Web en production, mais cela permettra de pratiquer les hooks.
 
-Pour commencer, on peut changer le [`router.base`](/guides/configuration-glossary/configuration-router#base) dans le fichier `nuxt.config.js`:
+Pour commencer, on peut changer le [`router.base`](/docs/2.x/configuration-glossary/configuration-router#base) dans le fichier `nuxt.config.js`:
 
 ```js{}[nuxt.config.js]
 import hooks from './hooks'

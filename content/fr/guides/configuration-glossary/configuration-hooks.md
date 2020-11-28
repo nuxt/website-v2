@@ -8,7 +8,7 @@ position: 13
 
 - Type: `Object`
 
-> Les hooks sont des [écouteurs aux évènements de Nuxt.js](/guides/internals-glossary/internals) qui sont généralement utilisés dans les modules de Nuxt, mais aussi disponibles dans le fichier `nuxt.config.js`.
+> Les hooks sont des [écouteurs aux évènements de Nuxt.js](/docs/2.x/internals-glossary/internals) qui sont généralement utilisés dans les modules de Nuxt, mais aussi disponibles dans le fichier `nuxt.config.js`.
 
 ```js{}[nuxt.config.js]
 import fs from 'fs'

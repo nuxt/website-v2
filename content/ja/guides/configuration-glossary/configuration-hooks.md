@@ -33,7 +33,7 @@ export default {
 
 ## フックのリスト
 
-- [Nuxt フック](/docs/2.x/internals-glossary/internals-renderer#フック)
+- [Nuxt フック](/docs/2.x/internals-glossary/internals-nuxt#フック)
 - [Renderer フック](/docs/2.x/internals-glossary/internals-renderer#フック)
 - [ModulesContainer フック](/docs/2.x/internals-glossary/internals-module-container#フック)
 - [Builder フック](/docs/2.x/internals-glossary/internals-builder#フック)

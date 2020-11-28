@@ -33,7 +33,7 @@ Internally, hooks follow a naming pattern using colons (e.g., `build:done`). For
 
 ## List of hooks
 
-- [Nuxt hooks](/docs/2.x/internals-glossary/internals-renderer#hooks)
+- [Nuxt hooks](/docs/2.x/internals-glossary/internals-nuxt#hooks)
 - [Renderer hooks](/docs/2.x/internals-glossary/internals-renderer#hooks)
 - [ModulesContainer hooks](/docs/2.x/internals-glossary/internals-module-container#hooks)
 - [Builder hooks](/docs/2.x/internals-glossary/internals-builder#hooks)

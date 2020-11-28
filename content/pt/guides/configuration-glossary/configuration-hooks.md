@@ -33,7 +33,7 @@ Internamente, os hooks seguem um padrão de nomenclatura usando dois pontos (por
 
 ## Lista de hooks
 
-- [Hooks do Nuxt](/docs/2.x/internals-glossary/internals-renderer#hooks)
+- [Hooks do Nuxt](/docs/2.x/internals-glossary/internals-nuxt#hooks)
 - [Hooks do Renderer](/docs/2.x/internals-glossary/internals-renderer#hooks)
 - [Hooks do ModulesContainer](/docs/2.x/internals-glossary/internals-module-container#hooks)
 - [Hooks do Builder](/docs/2.x/internals-glossary/internals-builder#hooks)

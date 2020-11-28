@@ -215,7 +215,7 @@ Conoce mas en nuestro capítulo de [Vistas](/docs/2.x/concepts/views#layouts).
 
 ### loading
 
-Si esta propiedad tiene un valor de `false`, previene la página de ejecutar `this.$nuxt.$loading.finish()` automáticamente cuando entras a ella y `this.$nuxt.$loading.start()` cuando te vas. Esto te permite controlar el comportamiento de la página manualmente, como se muestra en [este ejemplo](https://nuxtjs.org/examples/custom-page-loading).
+Si esta propiedad tiene un valor de `false`, previene la página de ejecutar `this.$nuxt.$loading.finish()` automáticamente cuando entras a ella y `this.$nuxt.$loading.start()` cuando te vas. Esto te permite controlar el comportamiento de la página manualmente, como se muestra en [este ejemplo](/examples/custom-loading-component).
 
 ```js{}[pages/index.vue]
 export default {

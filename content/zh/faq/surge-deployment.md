@@ -32,7 +32,7 @@ surge dist/
 
 搞定 :)
 
-如果你的项目有[动态路由](/docs/2.x/features/file-system-routing#动态路由)，请参考 [generate 配置文档](docs/2.x/configuration-glossary/) 告诉 Nuxt.js 如何静态化这些动态路由。
+如果你的项目有[动态路由](/docs/2.x/features/file-system-routing#动态路由)，请参考 [generate 配置文档](/docs/2.x/configuration-glossary/) 告诉 Nuxt.js 如何静态化这些动态路由。
 
 <div class="Alert">
 

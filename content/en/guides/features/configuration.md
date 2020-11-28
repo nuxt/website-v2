@@ -117,10 +117,6 @@ If you have two files with the same name eg. `main.scss` and `main.css`, and don
 
 Default order: `['css', 'pcss', 'postcss', 'styl', 'stylus', 'scss', 'sass', 'less']`
 
-<app-modal>
-  <code-sandbox  :src="csb_link_pre-processors"></code-sandbox>
-</app-modal>
-
 ## Pre-processors
 
 Thanks to [Vue Loader](http://vue-loader.vuejs.org/en/configurations/pre-processors.html), you can use any kind of pre-processor for your  `<template>` or `<style>`: use the `lang` attribute.
@@ -306,6 +302,10 @@ export default {
 }
 ```
 
+### Inspect webpack configuration
+
+For complex projects and debugging it's sometimes useful to check what the final webpack configuration will look like. Luckily you can run `nuxt webpack` command from withing your project to output the configuration. Checkout this PR [#7029](https://github.com/nuxt/nuxt.js/pull/7029) for more details.
+
 ## Edit host and port
 
 By default, the Nuxt.js development server host is `localhost`  which is only accessible from within the host machine. In order to view your app on another device you need to modify the host. You can modify the host in your nuxt.config.js file.
@@ -349,10 +349,6 @@ or create a script in your package.json
   "dev:host": "nuxt --hostname '0' --port 8000"
 }
 ```
-
-<app-modal>
-  <code-sandbox  :src="csb_link_host_port"></code-sandbox>
-</app-modal>
 
 ## Asynchronous Configuration
 

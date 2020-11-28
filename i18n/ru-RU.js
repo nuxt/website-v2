@@ -22,14 +22,14 @@ module.exports = {
         slug: 'docs-2.x-book-slug'
       },
       {
-        name: 'Ресурсы',
-        icon: 'resources',
-        slug: 'resources'
-      },
-      {
         name: 'Примеры',
         icon: 'code',
         slug: 'examples'
+      },
+      {
+        name: 'FAQ',
+        icon: 'resources',
+        slug: 'faq'
       },
       {
         name: 'Блог',
@@ -281,6 +281,9 @@ module.exports = {
       'Изменения на этой странице заблокированы. Если хотите что-то изменить, взгляните на нашу',
     link: 'новую документацию'
   },
+  example: {
+    intro: 'In this example:'
+  },
   codeSandbox: {
     open: 'Открыть CodeSandbox'
   },
@@ -324,7 +327,7 @@ module.exports = {
         title: 'Discover',
         shop: 'Our Goodies Store',
         consulting: 'Training & consultancy',
-        sponsorNuxt: 'Sponsoring & donations',
+        sponsorNuxt: 'Sponsoring & donations'
       },
       about: {
         title: 'About',
@@ -334,12 +337,11 @@ module.exports = {
       },
       support: {
         title: 'Support',
-        faq: 'FAQ',
+        resources: 'Resources',
         discord: 'Chat with us',
         contributionGuide: 'Contribution guide'
       }
     }
-
   },
   cookies: {
     consent: 'Мы используем файлы Cookies для аналитики!',

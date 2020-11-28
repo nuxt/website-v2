@@ -21,14 +21,14 @@ module.exports = {
         slug: 'docs-2.x-book-slug'
       },
       {
-        name: 'منابع',
-        icon: 'resources',
-        slug: 'resources'
-      },
-      {
         name: 'نمونه‌ها',
         icon: 'code',
         slug: 'examples'
+      },
+      {
+        name: 'FAQ',
+        icon: 'resources',
+        slug: 'faq'
       },
       {
         name: 'بلاگ',
@@ -277,6 +277,9 @@ module.exports = {
     msg1: 'مشارکت در این صفحه بسته شده است. اگر می‌‌خواهید مشارکت کنید',
     link: 'مستندات جدید'
   },
+  example: {
+    intro: 'در این مثال:'
+  },
   codeSandbox: {
     open: 'باز کردن CodeSandbox'
   },
@@ -320,7 +323,7 @@ module.exports = {
         title: 'Discover',
         shop: 'Our Goodies Store',
         consulting: 'Training & consultancy',
-        sponsorNuxt: 'Sponsoring & donations',
+        sponsorNuxt: 'Sponsoring & donations'
       },
       about: {
         title: 'About',
@@ -330,7 +333,7 @@ module.exports = {
       },
       support: {
         title: 'Support',
-        faq: 'FAQ',
+        resources: 'منابع',
         discord: 'Chat with us',
         contributionGuide: 'Contribution guide'
       }

@@ -21,14 +21,14 @@ module.exports = {
         slug: 'docs-2.x-book-slug'
       },
       {
-        name: 'Recursos',
-        icon: 'resources',
-        slug: 'resources'
-      },
-      {
         name: 'Ejemplos',
         icon: 'code',
         slug: 'examples'
+      },
+      {
+        name: 'FAQ',
+        icon: 'resources',
+        slug: 'faq'
       },
       {
         name: 'Blog',
@@ -281,8 +281,11 @@ module.exports = {
       'La contribución en esta página está cerrada. Si quieres contribuir, por favor, revisa nuestra',
     link: 'nueva documentación'
   },
+  example: {
+    intro: 'En esta ejemplo:'
+  },
   codeSandbox: {
-    open: 'Abrir CodeSandbox'
+    open: 'Ver Ejemplo'
   },
   content: {
     guide: {
@@ -324,7 +327,7 @@ module.exports = {
         title: 'Discover',
         shop: 'Our Goodies Store',
         consulting: 'Training & consultancy',
-        sponsorNuxt: 'Sponsoring & donations',
+        sponsorNuxt: 'Sponsoring & donations'
       },
       about: {
         title: 'About',
@@ -334,7 +337,7 @@ module.exports = {
       },
       support: {
         title: 'Support',
-        faq: 'FAQ',
+        resources: 'Resources',
         discord: 'Chat with us',
         contributionGuide: 'Contribution guide'
       }

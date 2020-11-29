@@ -1,30 +1,30 @@
 ---
-title: 'The server Property'
-description: Nuxt.js let you define the server connection variables for your application inside `nuxt.config.js`.
+title: 'server プロパティ'
+description: 'Nuxt.js ではアプリケーションのサーバー接続用の変数を `nuxt.config.js` 内に定義できます。'
 menu: server
 category: configuration-glossary
 position: 26
 ---
 
-- Type: `Object`
+- 型: `Object`
 
-> Nuxt.js let you define the server connection variables for your application inside `nuxt.config.js`.
+> Nuxt.js では、アプリケーションのサーバー接続用の変数を `nuxt.config.js` 内に定義できます。
 
-## Basic example:
+## 基本的な例:
 
 ```js{}[nuxt.config.js]
 export default {
   server: {
-    port: 8000, // default: 3000
-    host: '0.0.0.0', // default: localhost,
+    port: 8000, // デフォルト: 3000
+    host: '0.0.0.0', // デフォルト: localhost,
     timing: false
   }
 }
 ```
 
-This lets you specify the [host and port](/docs/2.x/features/configuration#edit-host-and-port) for your Nuxt.js server instance.
+これで Nuxt.js のサーバーインスタンスの [host と port](/docs/2.x/features/configuration#ホストとポートを編集する) を指定できます。
 
-## Example using HTTPS configuration
+## HTTPS 設定を用いる例
 
 ```js{}[nuxt.config.js]
 import path from 'path'
@@ -40,9 +40,9 @@ export default {
 }
 ```
 
-You can find additional information on creating server keys and certificates on `localhost` on [certificates for localhost](https://letsencrypt.org/docs/certificates-for-localhost/) article.
+サーバーの鍵と証明書を `localhost` 上で作成する方法については [certificates for localhost](https://letsencrypt.org/docs/certificates-for-localhost/) の記事を参照してください。
 
-## Example using sockets configuration
+## sockets 設定を用いる例
 
 ```js{}[nuxt.config.js]
 export default {
@@ -54,14 +54,14 @@ export default {
 
 ## timing
 
-- Type: `Object` or `Boolean`
-- Default: `false`
+- 型: `Object` または `Boolean`
+- デフォルト: `false`
 
-Enabling the `server.timing` option adds a middleware to measure the time elapsed during server-side rendering and adds it to the headers as 'Server-Timing'
+`server.timing` オプションを有効にすると、サーバーサイドレンダリング中に経過した時間を計測するミドルウェアが追加され、'Server-Timing' としてヘッダーに追加されます。
 
-### Example using timing configuration
+### timing 設定用いる例
 
-`server.timing` can be an object for providing options. Currently, only `total` is supported (which directly tracks the whole time spent on server-side rendering)
+`server.timing` はオプションを提供するためのオブジェクトです。現在、`total` のみがサポートされています（これはサーバーサイドレンダリングで費やした全ての時間を直接追跡します）。
 
 ```js{}[nuxt.config.js]
 export default {
@@ -73,33 +73,33 @@ export default {
 }
 ```
 
-### Using timing api
+### timing api を使う
 
-The `timing` api is also injected into the `response` on server-side when `server.time` is enabled.
+`timing` api は `server.time` が有効な場合にサーバーサイドの `response` にも注入されます。
 
-#### Syntax
+#### 構文
 
 ```js
 res.timing.start(name, description)
 res.timing.end(name)
 ```
 
-#### Example using timing in servermiddleware
+#### サーバーミドルウェアで timing を用いる例
 
 ```js
 export default function (req, res, next) {
   res.timing.start('midd', 'Middleware timing description')
-  // server side operation..
+  // サーバーサイドの処理..
   // ...
   res.timing.end('midd')
   next()
 }
 ```
 
-Then `server-timing` head will be included in response header like:
+そして `server-timing` は以下のようにレスポンスヘッダーに含まれます:
 
 ```bash
 Server-Timing: midd;desc="Middleware timing description";dur=2.4
 ```
 
-Please refer to [Server-Timing MDN](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Server-Timing) for more details.
+詳細は [MDN の Server-Timing](https://developer.mozilla.org/ja/docs/Web/HTTP/Headers/Server-Timing) を参照してください。

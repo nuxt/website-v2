@@ -1,6 +1,6 @@
 ---
 title: インストール
-description: "ここでは、Nuxt.js プロジェクトの設定と実行について 4 ステップで紹介します。"
+description: 'ここでは、Nuxt.js プロジェクトの設定と実行について 4 ステップで紹介します。'
 position: 1
 category: get-started
 csb_link: https://codesandbox.io/embed/github/nuxt-academy/guides-examples/tree/master/01_get_started/01_installation?fontsize=14&hidenavigation=1&theme=dark
@@ -8,27 +8,71 @@ csb_link: https://codesandbox.io/embed/github/nuxt-academy/guides-examples/tree/
 
 ## 前提条件
 
-ここでは、Nuxt.js プロジェクトの設定と実行について 4 ステップで紹介します。
+- [node](https://nodejs.org) - v10.13 以上 _最新の LTS バージョンのインストールをおすすめします。_
+- テキストエディタは [Vetur](https://marketplace.visualstudio.com/items?itemName=octref.vetur) 拡張機能をインストールした [VSCode](https://code.visualstudio.com/) か [WebStorm](https://www.jetbrains.com/webstorm/) をおすすめします。
+- ターミナルは VSCode の[統合ターミナル](https://code.visualstudio.com/docs/editor/integrated-terminal)または [Webstorm ターミナル](https://www.jetbrains.com/help/webstorm/terminal-emulator.html)を使うことをおすすめします。
+
+## create-nuxt-app を使う
+
+すぐ始めるには、[create-nuxt-app](https://github.com/nuxt/create-nuxt-app) を使うことができます。
+
+npx（npx は NPM 5.2.0 以降だとデフォルトで同梱されています）か、v6.1 の npm か yarn がインストールされていることを確認してください。
+
+<code-group>
+  <code-block label="Yarn" active>
+
+```bash
+yarn create nuxt-app <project-name>
+```
+
+  </code-block>
+  <code-block label="NPX">
+
+```bash
+npx create-nuxt-app <project-name>
+```
+
+  </code-block>
+    <code-block label="NPM">
+
+```bash
+npm init nuxt-app <project-name>
+```
+
+  </code-block>
+
+</code-group>
+
+いくつかの質問（名前、Nuxt オプション、UI フレームワーク、TypeScript、linter、テストフレームワークなど）されます。すべてのオプションをみるには [Create Nuxt app](https://github.com/nuxt/create-nuxt-app/blob/master/README.md) を参照してください。
+
+一度すべての質問に答えると、すべての依存関係をインストールします。次のステップは、プロジェクトフォルダに移動して起動します:
+
+<code-group>
+  <code-block label="Yarn" active>
+
+```bash
+cd <project-name>
+yarn dev
+```
+
+  </code-block>
+  <code-block label="NPM">
+
+```bash
+cd <project-name>
+npm run dev
+```
+
+  </code-block>
+</code-group>
+
+アプリケーションは [http://localhost:3000](http://localhost:3000) で実行されています。おつかれさまでした！
 
 <base-alert type="info">
 
 Nuxt.js を始める別の方法は [CodeSandbox](https://template.nuxtjs.org) を使うことです。CodeSandbox は Nuxt.js を素早く試したり、自分のコードを他の人にシェアしたりするのに最適な方法です。
 
 </base-alert>
-
-### Node
-
-[node](https://nodejs.org/en/download/) - v8.9.0 以上を使ってください。
-
-_最新のバージョンをインストールすることをおすすめします。_
-
-### テキストエディタ
-
-お好みのエディタで構いませんが、[VSCode](https://code.visualstudio.com/) をおすすめします。
-
-### ターミナル
-
-お好みのターミナルで構いませんが、VSCode に[統合されたターミナル](https://code.visualstudio.com/docs/editor/integrated-terminal)をおすすめします。
 
 ## スクラッチで始める
 
@@ -53,7 +97,7 @@ _`<project-name>` はご自身のプロジェクト名に置き換えてくだ�
 touch package.json
 ```
 
-package.json ファイルをお好みのエディタで開き、以下の JSON の内容を入力します:
+`package.json` ファイルをお好みのエディタで開き、以下の JSON の内容を入力します:
 
 ```json{}[package.json]
 {
@@ -184,61 +228,3 @@ dev コマンドを実行すると、.nuxt フォルダが作成されます。�
 `more-fun` という名前のディレクトリを作成し、その中に `index.vue` ファイルを入れます。これで、`more-fun.vue` ファイルを作成したのと同じ結果が得られます。
 
 </base-alert>
-
-<app-modal>
-  <code-sandbox  :src="csb_link"></code-sandbox>
-</app-modal>
-
-## create-nuxt-app を使う
-
-すぐ始めるには、[create-nuxt-app](https://github.com/nuxt/create-nuxt-app) を使うことができます。
-
-npx（npx は NPM 5.2.0 以降だとデフォルトで同梱されています）か、v6.1 の npm か yarn がインストールされていることを確認してください。
-
-<code-group>
-  <code-block label="Yarn" active>
-
-```bash
-yarn create nuxt-app <project-name>
-```
-
-  </code-block>
-  <code-block label="NPX">
-
-```bash
-npx create-nuxt-app <project-name>
-```
-
-  </code-block>
-    <code-block label="NPM">
-
-```bash
-npm init nuxt-app <project-name>
-```
-
-  </code-block>
-
-</code-group>
-
-いくつかの質問（名前、Nuxt オプション、UI フレームワーク、TypeScript、linter、テストフレームワークなど）に答えると、すべての依存関係をインストールします。次のステップは、プロジェクトフォルダに移動して起動します:
-
-<code-group>
-  <code-block label="Yarn" active>
-
-```bash
-cd <project-name>
-yarn dev
-```
-
-  </code-block>
-  <code-block label="NPM">
-
-```bash
-cd <project-name>
-npm run dev
-```
-
-  </code-block>
-</code-group>
-
-アプリケーションは [http://localhost:3000](http://localhost:3000) で実行されています。おつかれさまでした！

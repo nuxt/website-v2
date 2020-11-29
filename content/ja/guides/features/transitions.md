@@ -107,10 +107,10 @@ export default {
 これで、あとはトランジションのための新しいクラスを作るだけです。
 
 ```html{}[pages/index.vue]
-<styles>
+<style>
   .home-enter-active, .home-leave-active { transition: opacity .5s; }
   .home-enter, .home-leave-active { opacity: 0; }
-</styles>
+</style>
 ```
 
 ## オブジェクト

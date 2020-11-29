@@ -1,99 +1,100 @@
 ---
-title: middleware
-description: The `middleware` directory contains your application middleware. Middleware lets you define custom functions that can be run before rendering either a page or a group of pages (layout).
+title: ミドルウェア
+description: `middleware` ディレクトリには、アプリケーションミドルウェアが含まれています。ミドルウェアを使用すると、ページまたはページのグループ（レイアウト）をレンダリングする前に実行できる、カスタム関数を定義できます。
 position: 8
 category: directory-structure
 csb_link_anonymous: https://codesandbox.io/embed/github/nuxt-academy/guides-examples/tree/master/04_directory_structure/09_middleware_anonymous?fontsize=14&hidenavigation=1&theme=dark
 csb_link_named: https://codesandbox.io/embed/github/nuxt-academy/guides-examples/tree/master/04_directory_structure/09_middleware_named?fontsize=14&hidenavigation=1&theme=dark
 csb_link_router: https://codesandbox.io/embed/github/nuxt-academy/guides-examples/tree/master/04_directory_structure/09_middleware_router?fontsize=14&hidenavigation=1&theme=dark
 questions:
-  - question: Middleware lets you define functions that run
+  - question: ミドルウェアを使用すると実行する関数を定義できます
     answers:
-      - before rendering a page
-      - while rendering a page
-      - after rendering a page
-    correctAnswer: before rendering a page
-  - question: In which directory do you put shared middleware?
+      - ページをレンダリングする前
+      - ページのレンダリング中
+      - ページをレンダリングした後
+    correctAnswer: ページをレンダリングする前
+  - question: 共有ミドルウェアはどのディレクトリに置きますか？
     answers:
       - middleware
       - shared-middleware
       - shared
     correctAnswer: middleware
-  - question: What argument does middleware receive as the first argument?
+  - question: ミドルウェアは最初の引数としてどのような引数を受け取りますか？
     answers:
       - req
       - res
       - context
     correctAnswer:
-  - question: In universal mode when is middleware called?
+  - question: ユニバーサルモードでは、ミドルウェアはいつ呼び出されますか？
     answers:
-      - server side on first request and server side when navigating
-      - client side on first request and client side when navigating
-      - server side on first request and client side when navigating
-    correctAnswer: server side on first request and client side when navigating
-  - question: When SSR is set to false when is middleware called?
+      - 最初のリクエストではサーバ側、ナビゲートする時はサーバ側
+      - 最初のリクエストではクライアント側、ナビゲートする時もクライアント側
+      - 最初のリクエストではサーバ側、ナビゲートする時はクライアント側
+    correctAnswer: 最初のリクエストではサーバ側、ナビゲートする時はクライアント側
+  - question: ミドルウェアが呼び出されるときに SSR が false に設定されている場合は？
     answers:
-      - server side on first request and server side when navigating
-      - client side on first request and client side when navigating
-      - server side on first request and client side when navigating
-    correctAnswer: client side on first request and client side when navigating
-  - question: Middleware is executed in what order?
+      - 最初のリクエストではサーバ側、ナビゲートする時はサーバ側
+      - 最初のリクエストではクライアント側、ナビゲートする時もクライアント側
+      - 最初のリクエストではサーバ側、ナビゲートする時はクライアント側
+    correctAnswer: 最初のリクエストではクライアント側、ナビゲートする時もクライアント側
+  - question: ミドルウェアはどの順序で実行されますか？
     answers:
-      - matched pages ⇒  matched layouts ⇒ nuxt.config.js
-      - nuxt.config.js ⇒ matched layouts ⇒ matched pages
-      - matched layouts ⇒ matched pages ⇒ nuxt.config.js
-    correctAnswer: nuxt.config.js ⇒ matched layouts ⇒ matched pages
-  - question: What key do we use to add your middleware to every route?
+      - マッチしたページ ⇒  マッチしたレイアウト ⇒ nuxt.config.js
+      - nuxt.config.js ⇒ マッチしたレイアウト ⇒ マッチしたページ
+      - マッチしたレイアウト ⇒ マッチしたページ ⇒ nuxt.config.js
+    correctAnswer: nuxt.config.js ⇒ マッチしたレイアウト ⇒ マッチしたページ
+  - question: ミドルウェアをすべてのルートに追加するためにはどのキーを使用しますか？
     answers:
       - middleware.router
       - router.middleware
       - routes.middleware
     correctAnswer: router.middleware
-  - question: You can add multiple middleware to a specific page or layout?
+  - question: 特定のページ、またはレイアウトに複数のミドルウェアを追加できますか？
     answers:
-      - true
-      - false
-    correctAnswer: true
-  - question: How do you add this named middleware (`middleware/authenticated.js`) to your page?
+      - 正
+      - 偽
+    correctAnswer: 正
+  - question: この名前付きミドルウェア（`middleware/authenticated.js`）をどのようにページに追加しますか？
     answers:
       - 'middleware: authenticated'
       - 'middleware: true'
       - "middleware: 'authenticated'"
     correctAnswer: "middleware: 'authenticated'"
-  - question: How do you use anonymous middleware, middleware only for a specific page?
+  - question: 匿名のミドルウェア、特定のページのみのミドルウェアをどのように使用しますか？
     answers:
-      - create a named middleware and save it in the middleware directory
-      - create a `middleware` function for it in the page component
-      - add a _.vue file to the middleware directory
-    correctAnswer: create a `middleware` function for it in the page component
+      - 名前付きミドルウェアを作成し、ミドルウェアディレクトリに保存する
+      - ページコンポーネントのための `middleware` 関数を作成する
+      - ミドルウェアディレクトリに_.vueファイルを追加する
+    correctAnswer: ページコンポーネントのための `middleware` 関数を作成する
 ---
 
-The `middleware` directory contains your application middleware. Middleware lets you define custom functions that can be run before rendering either a page or a group of pages (layout).
+`middleware` ディレクトリには、アプリケーションミドルウェアが含まれています。ミドルウェアを使用すると、ページまたはページのグループ（レイアウト）をレンダリングする前に実行できる、カスタム関数を定義できます。
 
-Shared middleware should be placed in the  `middleware/`  directory. The filename will be the name of the middleware (`middleware/auth.js` will be the `auth` middleware). You can also define page-specific middleware by using a function directly, see [anonymous middleware](/docs/2.x/components-glossary/pages-middleware#anonymous-middleware).
+共有ミドルウェアは、`middleware/` ディレクトリに配置する必要があります。ファイル名はミドルウェアの名前になります（`middleware/auth.js` は `auth` ミドルウェアになります）。関数を直接使用して、ページ固有のミドルウェアを定義することもできます。
+[匿名のミドルウェア](/docs/2.x/components-glossary/pages-middleware#anonymous-middleware)を参照してください。
 
-A middleware receives [the context](/docs/2.x/internals-glossary/context) as the first argument.
+ミドルウェアは最初の引数として[コンテキスト](/docs/2.x/internals-glossary/context)を受け取ります。
 
 ```js{}[middleware/user-agent.js]
 export default function (context) {
-  // Add the userAgent property to the context
+  // userAgentプロパティをコンテキストに追加します
   context.userAgent = process.server
     ? context.req.headers['user-agent']
     : navigator.userAgent
 }
 ```
 
-In universal mode, middlewares will be called once on server-side (on the first request to the Nuxt app, e.g. when directly accessing the app or refreshing the page) and on the client-side when navigating to further routes. With `ssr: false`, middlewares will be called on the client-side in both situations.
+ユニバーサルモードでは、ミドルウェアはサーバ側（Nuxt アプリへの最初のリクエスト時、たとえばアプリに直接アクセスするときやページを更新するとき）で一度呼び出され、クライアント側でさらにルートに移動するときに呼び出されます。`ssr：false` を使用すると、どちらの状況でもクライアント側でミドルウェアが呼び出されます。
 
-The middleware will be executed in series in this order:
+ミドルウェアは以下の順序で連続して実行されます:
 
-1. `nuxt.config.js` (in the order within the file)
-2. Matched layouts
-3. Matched pages
+1. `nuxt.config.js` （ファイル内の順序）
+2. マッチしたレイアウト
+3. マッチしたページ
 
-## Router Middleware
+## ルーターミドルウェア
 
-A middleware can be asynchronous. To do this return a  `Promise` or use async/await.
+ミドルウェアは非同期にすることができます。これを行うには `Promise` を返すか、async/awaitを使用します。
 
 ```js{}[middleware/stats.js]
 import http from 'http'
@@ -105,7 +106,7 @@ export default function ({ route }) {
 }
 ```
 
-Then, in your `nuxt.config.js`, use the `router.middleware` key.
+次に、`nuxt.config.js` で、`router.middleware` キーを使用します。
 
 ```js{}[nuxt.config.js]
 export default {
@@ -115,9 +116,9 @@ export default {
 }
 ```
 
-Now the `stats` middleware will be called for every route change.
+これで、ルートが変更されるたびに `stats` ミドルウェアが呼び出されます。
 
-You can add your middleware (even multiple) to a specific layout or page as well.
+ミドルウェア（複数でも）を特定のレイアウト、またはページに追加することもできます。
 
 ```js{}[pages/index.vue / layouts/default.vue]
 export default {
@@ -125,13 +126,13 @@ export default {
 }
 ```
 
-## Named middleware
+## 名前付きミドルウェア
 
-You can create named middleware by creating a file inside the  `middleware/` directory, the file name will be the middleware name.
+`middleware/` ディレクトリ内にファイルを作成することで、名前付きミドルウェアを作成できます。ファイル名はミドルウェア名になります。
 
 ```js{}[middleware/authenticated.js]
 export default function ({ store, redirect }) {
-  // If the user is not authenticated
+  // ユーザーが認証されていない場合
   if (!store.state.authenticated) {
     return redirect('/login')
   }
@@ -150,9 +151,9 @@ export default function ({ store, redirect }) {
 </script>
 ```
 
-## Anonymous middleware
+## 匿名のミドルウェア
 
-If you need to use a middleware only for a specific page, you can directly use a function for it (or an array of functions):
+特定のページにのみミドルウェアを使用する必要がある場合は、そのミドルウェアの関数（または関数の配列）を直接使用できます:
 
 ```html{}[pages/secret.vue]
 <template>
@@ -162,7 +163,7 @@ If you need to use a middleware only for a specific page, you can directly use a
 <script>
   export default {
     middleware({ store, redirect }) {
-      // If the user is not authenticated
+      // ユーザーが認証されていない場合
       if (!store.state.authenticated) {
         return redirect('/login')
       }

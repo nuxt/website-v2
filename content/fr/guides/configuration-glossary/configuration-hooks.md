@@ -8,7 +8,7 @@ position: 13
 
 - Type: `Object`
 
-> Les hooks sont des [écouteurs aux évènements de Nuxt.js](/guides/internals-glossary/internals) qui sont généralement utilisés dans les modules de Nuxt, mais aussi disponibles dans le fichier `nuxt.config.js`.
+> Les hooks sont des [écouteurs aux évènements de Nuxt.js](/docs/2.x/internals-glossary/internals) qui sont généralement utilisés dans les modules de Nuxt, mais aussi disponibles dans le fichier `nuxt.config.js`.
 
 ```js{}[nuxt.config.js]
 import fs from 'fs'
@@ -29,15 +29,15 @@ export default {
 }
 ```
 
-Le fonctionnement des hooks suit un modèle de nommage avec des `:` (ex: `build:done`). Pour des raisons de simplicité de configuration, on peut les structurer de manière hiérarchique pour ses propres hooks en utilisant un objet (cf. code juste au dessus). Se référencer au [fonctionnement interne de Nuxt.js](/guides/internals-glossary/internals) pour davantage d'informations.
+Le fonctionnement des hooks suit un modèle de nommage avec des `:` (ex: `build:done`). Pour des raisons de simplicité de configuration, on peut les structurer de manière hiérarchique pour ses propres hooks en utilisant un objet (cf. code juste au dessus). Se référencer au [fonctionnement interne de Nuxt.js](/docs/2.x/internals-glossary/internals) pour davantage d'informations.
 
 ## Liste des hooks
 
-- [Nuxt hooks](/guides/internals-glossary/internals-renderer#hooks)
-- [Renderer hooks](/guides/internals-glossary/internals-renderer#hooks)
-- [ModulesContainer hooks](/guides/internals-glossary/internals-module-container#hooks)
-- [Builder hooks](/guides/internals-glossary/internals-builder#hooks)
-- [Generator hooks](/guides/internals-glossary/internals-generator#hooks)
+- [Nuxt hooks](/docs/2.x/internals-glossary/internals-nuxt#hooks)
+- [Renderer hooks](/docs/2.x/internals-glossary/internals-renderer#hooks)
+- [ModulesContainer hooks](/docs/2.x/internals-glossary/internals-module-container#hooks)
+- [Builder hooks](/docs/2.x/internals-glossary/internals-builder#hooks)
+- [Generator hooks](/docs/2.x/internals-glossary/internals-generator#hooks)
 
 ## Exemples
 
@@ -51,7 +51,7 @@ Ceci dit, lorsque l'on est en développement, aller sur _localhost_, lorsque `ro
 
 La redirection n'est peut-être pas le meilleur cas d'usage pour une application Web en production, mais cela permettra de pratiquer les hooks.
 
-Pour commencer, on peut changer le [`router.base`](/guides/configuration-glossary/configuration-router#base) dans le fichier `nuxt.config.js`:
+Pour commencer, on peut changer le [`router.base`](/docs/2.x/configuration-glossary/configuration-router#base) dans le fichier `nuxt.config.js`:
 
 ```js{}[nuxt.config.js]
 import hooks from './hooks'

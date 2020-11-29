@@ -214,7 +214,7 @@ See more on layouts in our [Views](/docs/2.x/concepts/views#layouts) chapter.
 
 ### loading
 
-If set to false, prevents a page from automatically calling `this.$nuxt.$loading.finish()` as you enter it and `this.$nuxt.$loading.start()` as you leave it, allowing you to manually control the behavior, as [this example](https://nuxtjs.org/examples/custom-page-loading) shows.
+If set to false, prevents a page from automatically calling `this.$nuxt.$loading.finish()` as you enter it and `this.$nuxt.$loading.start()` as you leave it, allowing you to manually control the behavior, as [this example](/examples/custom-loading-component) shows.
 
 ```js{}[pages/index.vue]
 export default {

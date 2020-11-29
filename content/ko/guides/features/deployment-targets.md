@@ -18,7 +18,7 @@ export default {
 target static과 함께 nuxt dev를 실행하면 개발자 경험이 향상됩니다.
 
 - `context` 객체인 `req` & `res` 객체는 제거됩니다.
-- 404, 오류 및 리디렉션등은 클라이언트 사이드 렌더링으로 대체됩니다. [SPA fallback 자세히 보기](./guides/concepts/static-site-generation#spa-fallback)
+- 404, 오류 및 리디렉션등은 클라이언트 사이드 렌더링으로 대체됩니다. [SPA fallback 자세히 보기](/guides/concepts/static-site-generation#spa-fallback)
 - `$route.query` 는 서버 사이드 렌더링에서는 항상 `{}` 와 같습니다.
 - `process.static` 은 항상 true 입니다.
 

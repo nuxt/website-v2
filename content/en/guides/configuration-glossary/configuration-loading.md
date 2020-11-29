@@ -46,9 +46,8 @@ export default {
 ```
 
 List of properties to customize the progress bar.
-
 | Key | Type | Default | Description |
-| --- | --- | --- | --- |
+| ------------- | ------- | --------- | ------------------------------------------------------------------------------------------------------------------------------------- |
 | `color` | String | `'black'` | CSS color of the progress bar |
 | `failedColor` | String | `'red'` | CSS color of the progress bar when an error appended while rendering the route (if `data` or `fetch` sent back an error for example). |
 | `height` | String | `'2px'` | Height of the progress bar (used in the `style` property of the progress bar) |
@@ -64,12 +63,12 @@ List of properties to customize the progress bar.
 
 **Your component has to expose some of these methods:**
 
-| Method | Required | Description |
-| --- | --- | --- |
-| `start()` | Required | Called when a route changes, this is where you display your component. |
-| `finish()` | Required | Called when a route is loaded (and data fetched), this is where you hide your component. |
-| `fail(error)` | _Optional_ | Called when a route couldn't be loaded (failed to fetch data for example). |
-| `increase(num)` | _Optional_ | Called during loading the route component, `num` is an Integer < 100. |
+| Method          | Required   | Description                                                                              |
+| --------------- | ---------- | ---------------------------------------------------------------------------------------- |
+| `start()`       | Required   | Called when a route changes, this is where you display your component.                   |
+| `finish()`      | Required   | Called when a route is loaded (and data fetched), this is where you hide your component. |
+| `fail(error)`   | _Optional_ | Called when a route couldn't be loaded (failed to fetch data for example).               |
+| `increase(num)` | _Optional_ | Called during loading the route component, `num` is an Integer < 100.                    |
 
 ```html{}[components/loading.vue]
 <template lang="html">

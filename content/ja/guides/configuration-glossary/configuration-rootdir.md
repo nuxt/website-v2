@@ -17,6 +17,6 @@ nuxt commands（nuxt start、nuxt build など）に引数が渡された場合�
 
 <base-alert type="info">
 
-[依存関係を解決](https://nodejs.org/api/modules.html#modules_all_together)するためには、`node_modules` ディレクトリを含むパッケージルートと `rootDir` が同じディレクトリツリー内にある必要があります。そうでない場合のディレクトリ構造の例については、<NuxtLink to="/guides/configuration-glossary/configuration-srcdir">`srcDir` オプション</NuxtLink>を参照してください。
+<a href="https://nodejs.org/api/modules.html#modules_all_together">依存関係を解決</a>するためには、`node_modules` ディレクトリを含むパッケージルートと `rootDir` が同じディレクトリツリー内にある必要があります。そうでない場合のディレクトリ構造の例については、[`srcDir` オプション](/docs/2.x/configuration-glossary/configuration-srcdir)を参照してください。
 
 </base-alert>

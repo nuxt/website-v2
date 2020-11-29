@@ -70,7 +70,7 @@ questions:
 
 `middleware` ディレクトリには、アプリケーションミドルウェアが含まれています。ミドルウェアを使用すると、ページまたはページのグループ（レイアウト）をレンダリングする前に実行できる、カスタム関数を定義できます。
 
-共有ミドルウェアは、 `middleware/` ディレクトリに配置する必要があります。ファイル名はミドルウェアの名前になります（ `middleware/auth.js` は  `auth` ミドルウェアになります）。関数を直接使用して、ページ固有のミドルウェアを定義することもできます。
+共有ミドルウェアは、`middleware/` ディレクトリに配置する必要があります。ファイル名はミドルウェアの名前になります（`middleware/auth.js` は `auth` ミドルウェアになります）。関数を直接使用して、ページ固有のミドルウェアを定義することもできます。
 [匿名のミドルウェア](/docs/2.x/components-glossary/pages-middleware#anonymous-middleware)を参照してください。
 
 ミドルウェアは最初の引数として[コンテキスト](/docs/2.x/internals-glossary/context)を受け取ります。
@@ -105,7 +105,7 @@ export default function ({ route }) {
 }
 ```
 
-次に、 `nuxt.config.js` で、`router.middleware` キーを使用します。
+次に、`nuxt.config.js` で、`router.middleware` キーを使用します。
 
 ```js{}[nuxt.config.js]
 export default {

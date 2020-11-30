@@ -32,7 +32,7 @@
     "@nuxtjs/eslint-module": "^3.0.1",
     "@nuxtjs/netlify-files": "^1.2.0",
     "@nuxtjs/proxy": "^2.0.1",
-    "@nuxtjs/pwa": "^3.3.0",
+    "@nuxtjs/pwa": "^3.3.1",
     "@nuxtjs/style-resources": "^1.0.0",
     "@nuxtjs/svg": "^0.1.12",
     "@types/crawler": "^1.2.0",

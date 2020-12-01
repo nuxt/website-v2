@@ -119,7 +119,7 @@ export default {
   },
   publicRuntimeConfig: {
     nuxtLocale: process.env.NUXT_LOCALE || 'en',
-    nuxtVersion: '2.14.7',
+    nuxtVersion: '2.14.8',
     nuxtStars: '32K+'
   },
   loading: { color: '#41B883' },

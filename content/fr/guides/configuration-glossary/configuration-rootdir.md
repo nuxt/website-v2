@@ -15,7 +15,7 @@ Cette propriété sera écrasée par les commandes Nuxt (`nuxt start`, `nuxt bui
 
 Exemple: lancer `nuxt ./my-app/` va définir `rootDir` au chemin absolu `./my-app/` à partir du répertoire courant.
 
-À cause de cela, il n'est normalement pas nécessaire de configurer cette option à moins que l'on souhaite utiliser [Nuxt.js de manière programmatique](/guides/internals-glossary/nuxt).
+À cause de cela, il n'est normalement pas nécessaire de configurer cette option à moins que l'on souhaite utiliser [Nuxt.js de manière programmatique](/docs/2.x/internals-glossary/nuxt).
 
 <base-alert type="info">
 

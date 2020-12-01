@@ -46,7 +46,7 @@ When a browser sends the initial request, it will hit the CDN.
 
 ### Step 2: CDN to Browser
 
-The CDN will send the already generated HTML, JavaScript and static assets and send it back to the browser. The content is displayed and the Vue.js hydration kicks in, making it reactive. After this process, the page is interactive.
+The CDN will send the already generated HTML, JavaScript and static assets back to the browser. The content is displayed and the Vue.js hydration kicks in, making it reactive. After this process, the page is interactive.
 
 ### Step 3: Browser to Browser
 

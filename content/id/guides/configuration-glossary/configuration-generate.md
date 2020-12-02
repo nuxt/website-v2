@@ -1,16 +1,16 @@
 ---
-title: 'The generate Property'
-description: Configure the generation of your universal web application to a static web application.
+title: 'Properti Generate'
+description: Konfigurasikan pengenerasi dari aplikasi web universal Anda ke web statis.
 menu: generate
 category: configuration-glossary
 position: 10
 ---
 
-- Type: `Object`
+- Tipe: `Object`
 
-> Configure the generation of your universal web application to a static web application.
+> Konfigurasikan pengenerasi dari aplikasi web universal Anda ke web statis.
 
-When calling `nuxt.generate()`, Nuxt.js will use the configuration defined in the `generate` property.
+Ketika memanggil `nuxt.generate()`, Nuxt.js akan menggunakan konfigurasi yang didefinisikan di properti `generate`
 
 ```js{}[nuxt.config.js]
 export default {
@@ -22,13 +22,13 @@ export default {
 
 ## cache
 
-> Introduced in v2.14.0
+> Memperkenalkan di v2.14.0
 
-- Type: `Object` or `false`
+- Tipe: `Object` atau `false`
 
-This option is used by `nuxt generate` with [static target](/docs/2.x/features/deployment-targets#static-hosting) to avoid re-building when no tracked file has been changed.
+Opsi ini digunakan oleh `nuxt generate` dengan [target statis](/docs/2.x/features/deployment-targets#static-hosting) untuk menghindari pembangunan ulang ketika berkas yang pantau tidak ada perubahan.
 
-Defaults:
+Nilai bawaan:
 
 ```js
 {
@@ -44,13 +44,13 @@ Defaults:
 }
 ```
 
-If you want to avoid re-building when changing a configuration file, just add it to the list by providing the `cache.ignore` option:
+Jika Anda ingin menghindari pembangunan ulang aplikasi ketika merubah konfigurasi berkas, tambahkan saja itu ke daftar opsi `cache.ignore`:
 
 ```js{}[nuxt.config.js]
 export default {
   generate: {
     cache: {
-      ignore: ['renovate.json'] // ignore changes applied on this file
+      ignore: ['renovate.json'] // abaikan perubahan yang diterapkan di berkas ini
     }
   }
 }
@@ -58,17 +58,17 @@ export default {
 
 ## concurrency
 
-- Type: `Number`
-- Default: `500`
+- Tipe: `Number`
+- Nilai bawaan: `500`
 
-The generation of routes are concurrent, `generate.concurrency` specifies the amount of routes that run in one thread.
+Pengenerasi rute adalah terjadi bersama-sama, `generate.concurrency` menspesifikasikan jumlah rute yang berlajan dalam satu urutan.
 
 ## crawler
 
-- Type: `boolean`
-- Default: true
+- Tipe: `boolean`
+- Nilai bawaan: true
 
-As of Nuxt >= v2.13 Nuxt.js comes with a crawler installed that will crawl your relative links and generate your dynamic links based on these links. If you want to disable this feature you can set the value to `false`
+Pada Nuxt >= v2.13, Nuxt.js datang dengan _crawler_ yang terpasang yang akan meng-_crawl_ tautan relatif Anda dan mengenerasi tautan dinamis berdasarkan tautan ini. Jika Anda ingin menonaktifkan fitur ini, Anda dapat mengatur nilai ke `false`.
 
 ```js
 export default {
@@ -80,28 +80,28 @@ export default {
 
 ## dir
 
-- Type: `String`
-- Default: `'dist'`
+- Tipe: `String`
+- Nilai bawaan: `'dist'`
 
-Directory name created when building web applications using the `nuxt generate` command.
+Nama direktori yang dibuat ketika membangun aplikasi web menggunakan perintah `nuxt generate`.
 
 ## devtools
 
-- Type: `boolean`
-- Default: `false`
+- Tipe: `boolean`
+- Nilai bawaan: `false`
 
-Configure whether to allow [vue-devtools](https://github.com/vuejs/vue-devtools) inspection.
+Mengkonfigurasi apakah mengizinkan inspeksi [vue-devtools](https://github.com/vuejs/vue-devtools).
 
-If you already activated through nuxt.config.js or otherwise, devtools enable regardless of the flag.
+Jika Anda telah mengaktifkan melalui nuxt.config.js atau sebaliknya, devtools diaktifkan apapun benderanya.
 
 ## exclude
 
 - Type: `Array`
   - Items: `String` or `RegExp`
 
-It accepts an array of string or regular expressions and will prevent generation of routes matching them. The routes will still be accessible when `generate.fallback` is used.
+Ini menerima `array of string` atau `regex` dan akan menghindarkan dari pengenerasian rute yang sama dengan mereka. Rute akan masih bisa diakses ketika `generate.fallback` digunakan.
 
-Taking this examples of structure:
+Ambil contoh struktur ini:
 
 ```bash
 -| pages/
@@ -111,7 +111,7 @@ Taking this examples of structure:
 -----| index.vue
 ```
 
-By default, running `nuxt generate` a file will be created for each route.
+Secara bawaan, dengan menjalankan `nuxt generate` maka sebuak berkas akan dibuat untuk setiap rute.
 
 ```bash
 -| dist/
@@ -121,7 +121,7 @@ By default, running `nuxt generate` a file will be created for each route.
 -----| item.html
 ```
 
-When adding a regular expression which matches all routes with "ignore", it will prevent the generation of these routes.
+Ketika menambahkan `regex` yang sesuai dengan semua rute dengan "ignore", ini akan menghindarkan dari pengenerasian rute tersebut.
 
 ```js{}[nuxt.config.js]
 export default {
@@ -138,7 +138,7 @@ export default {
 ---| index.html
 ```
 
-You can also exclude a specific route by giving a string:
+Anda juga dapat mengecualikan rute yang spesifik dengan memberikan sebuah _string_:
 
 ```js{}[nuxt.config.js]
 export default {
@@ -150,8 +150,8 @@ export default {
 
 ## fallback
 
-- Type: `String` or `Boolean`
-- Default: `200.html`
+- Tipe: `String` atau `Boolean`
+- Nilai bawaan: `200.html`
 
 ```js{}[nuxt.config.js]
 export default {
@@ -161,57 +161,57 @@ export default {
 }
 ```
 
-The path to the fallback HTML file. It should be set as the error page, so that also unknown routes are rendered via Nuxt. If unset or set to a falsy value, the name of the fallback HTML file will be `200.html`. If set to `true`, the filename will be `404.html`. If you provide a string as a value, it will be used instead.
+Jalur ke berkas _fallback_ HTML. Ini seharusnya diatur sebagai halaman kegalatan, jadi ini juga tidak diketahui rute yang ter-_render_ melalui Nuxt. Jika tidak diatur atau diatur ke nilai yang salah, nama dari berkas _fallback_ HTML akan `200.html`. Jika diatur ke `true`, nama berkas akan menjadi `404.html`. Jika Anda memberikan _string_ sebagai nilai, ini akan digunakan.
 
 ```{}[nuxt.config.js]
 fallback: false;
 ```
 
-If working with statically generated pages then it is recommended to use a `404.html` for error pages and for those covered by [excludes](https://nuxtjs.org/api/configuration-generate#exclude) (the files that you do not want generated as static pages).
+Bila Anda bekerja dengan halaman yang digenereasikan secara statis, maka direkomendasikan untuk menggunakan halaman `404.html` sebagai halaman kegalatan dan untuk yang ditutup oleh [pengecualian (exclude)](https://nuxtjs.org/api/configuration-generate#exclude) (Berkas yang Anda tidak ingin digenerasi menjadi halaman statis.)
 
 ```js{}[nuxt.config.js]
 fallback: true
 ```
 
-However, Nuxt allows you to configure any page you like so if you don't want to use the `200.html` or `404.html` you can add a string and then you just have to make sure you redirect to that page instead. This is of course not necessary and is best to redirect to `200.html`/`404.html`.
+Bagaimanapun, Nuxt mengizinkan Anda untuk mengkonfigurasi halaman apapun yang Anda suka, jadi jika Anda tidak ingin menggunakan halaman `200.html` atau `404.html` Anda dapat menambah sebuah _string_ dan kemudian tinggal memastikan bila akan dialihkan ke halaman tersebut. Ini tentunya tidak terlalu penting dan yang terbaik adalah mengalihkan ke `200.html`/`404.html`.
 
 ```js{}[nuxt.config.js]
 fallback: 'fallbackPage.html'
 ```
 
-_Note: Multiple services (e.g. Netlify) detect a `404.html` automatically. If you configure your webserver on your own, please consult it's documentation to find out how to set up an error page (and set it to the `404.html` file)_
+_Catatan: Banyak layanan (contoh: Netlify) mendeteksi sebuah halaman `404.html` secara otomatis. Jika Anda melakukan konfigurasi pada \_web server_, tolong lihat pada dokumentasi untuk mencari tahu bagaimana cara mengatur halaman kegalatan dan mengubahnya ke `404.html`.\_
 
 ## interval
 
-- Type: `Number`
-- Default: `0`
+- Tipe: `Number`
+- Nilai bawaan: `0`
 
-Interval in milliseconds between two render cycles to avoid flooding a potential API with calls from the web application.
+Interval dalam milidetik diantara dua siklus _render_ untuk mengindari banyaknya potensi pemanggilan API dari aplikasi website.
 
 ## minify
 
-- **Deprecated!**
-- Use [build.html.minify](/docs/2.x/configuration-glossary/configuration-build#htmlminify) instead
+- **Terdepresiasi!**
+- Gunakan [build.html.minify](/docs/2.x/configuration-glossary/configuration-build#htmlminify) saja
 
 ## routes
 
-- Type: `Array`
+- Tipe: `Array`
 
 <base-alert type="info">
 
-As of Nuxt v2.13 there is a crawler installed that will crawl your link tags and generate your routes when running `nuxt generate`.
+Seperti pada Nuxt v2.12, ada _crawler_ yang terpasang dan akan meng-_crawl_ tag dari tautan Anda dan akan mengenerasi rute ketika menjalankan `nuxt generate`.
 
-If have unlinked pages (such as secret pages) and you would like these to also be generated then you can use the `generate.routes` property.
+Jika memiliki halaman yang tidak terhubung (seperti halaman rahasia) dan Anda akan juga ingin digenerasi maka Anda dapat menggunakan properti `generate.routes`.
 
 </base-alert>
 
 <base-alert>
 
-Dynamic routes are ignored by the `generate` command when using `Nuxt <= v2.12`
+Rute dinamis diabaikan oleh komando `generate` ketika menggunakan Nuxt <= v2.12.
 
 </base-alert>
 
-Example:
+Contoh:
 
 ```bash
 -| pages/
@@ -220,11 +220,11 @@ Example:
 -----| _id.vue
 ```
 
-Only the route `/` will be generated by Nuxt.js.
+Hanya rute `/` yang akan digenerasi oleh Nuxt.js.
 
-If you want Nuxt.js to generate routes with dynamic params, you need to set the `generate.routes` property to an array of dynamic routes.
+Jika Anda ingin Nuxt.js mengenerasi rute dengan parameter dinamis, Anda perlu mengatur `generate.routes` ke _Array_ dari rute dinamis.
 
-We add routes for `/users/:id`:
+Kita menambahkan rute untuk `/users/:id`:
 
 ```js{}[nuxt.config.js]
 export default {
@@ -234,7 +234,7 @@ export default {
 }
 ```
 
-Then when we launch `nuxt generate`:
+Maka ketika kita meluncurkan `nuxt generate`:
 
 ```bash
 [nuxt] Generating...
@@ -251,12 +251,12 @@ nuxt:generate HTML Files generated in 7.6s +6ms
 [nuxt] Generate done
 ```
 
-Great, but what if we have **dynamic params**?
+Bagus!, tapi bagaimana bila kita memiliki **parameter dinamis**?
 
-1. Use a `Function` which returns a `Promise`.
-2. Use a `Function` with a `callback(err, params)`.
+1. Menggunakan sebuah `Function` yang akan mengembalikan `Promise`.
+2. Menggunakan sebuah `Function` dengan `callback(err, params)`.
 
-### Function which returns a Promise
+### Fungsi yang mengembalikan Promise
 
 ```js{}[nuxt.config.js]
 import axios from 'axios'
@@ -274,7 +274,7 @@ export default {
 }
 ```
 
-### Function with a callback
+### callback Fungsi dengan Callback
 
 ```js{}[nuxt.config.js]
 import axios from 'axios'
@@ -296,9 +296,9 @@ export default {
 }
 ```
 
-### Speeding up dynamic route generation with `payload`
+### Mempercepat pengenerasian rute dinamis dengan `payload`
 
-In the example above, we're using the `user.id` from the server to generate the routes but tossing out the rest of the data. Typically, we need to fetch it again from inside the `/users/_id.vue`. While we can do that, we'll probably need to set the `generate.interval` to something like `100` in order not to flood the server with calls. Because this will increase the run time of the generate script, it would be preferable to pass along the entire `user` object to the context in `_id.vue`. We do that by modifying the code above to this:
+Pada contoh diatas, Kita menggunakan `user.id` dari peladen untuk mengenerasi rute namun melemparkan seluruh data. Biasanya kita perlu mmengambil data lagi dari `/users/_id.vue`. Selama bisa melakukan hal itu, kita mungkin akan perlu mengatur `generate.interval` ke angka seperti `100` untuk tidak membanjiri peladen dengan panggilan. Karena ini akan meningkatkan waktu berjalannya pengenerasian _script_, ini akan lebih dianjurkan untuk melewatkan seluruh objek `user` ke konteks di `_id.vue`. Kita melakukan itu dengan memodifikasi kode diatas menjadi seperti ini:
 
 ```js{}[nuxt.config.js]
 import axios from 'axios'
@@ -319,7 +319,7 @@ export default {
 }
 ```
 
-Now we can access the `payload` from `/users/_id.vue` like so:
+Sekarang kita dapat mengakses `payload` dari `/users/_id.vue` seperti ini:
 
 ```js
 async asyncData ({ params, error, payload }) {
@@ -330,12 +330,14 @@ async asyncData ({ params, error, payload }) {
 
 ## subFolders
 
-- Type: `Boolean`
-- Default: `true`
+- Tipe: `Boolean`
+- Nilai bawaan: `true`
 
 By default, when running `nuxt generate`, Nuxt.js will create a directory for each route & serve an `index.html` file.
 
-Example:
+Secara default, ketika menjalankan `nuxt.generate`, Nuxt akan membuat sebuah direktori untuk setiap rute dan menyajikan berkas `index.html` di dalamnya.
+
+Contoh:
 
 ```bash
 -| dist/
@@ -347,7 +349,7 @@ Example:
 -------| index.html
 ```
 
-When set to false, HTML files are generated according to the route path:
+Ketika diatur ke `false`, berkas HTML akan digenerasi sesuai dengan alur rute:
 
 ```js{}[nuxt.config.js]
 export default {

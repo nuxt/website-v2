@@ -56,11 +56,9 @@ _このディレクトリは追加の設定をせずに名前を変更するこ�
 
 ```html
 <!--static ディレクトリからの static 画像-->
-
 <img src="/my-image.png" />
 
 <!--assets ディレクトリからの webpack された 画像-->
-
 <img src="@/assets/my-image-2.png" />
 ```
 

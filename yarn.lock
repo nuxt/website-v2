@@ -1462,10 +1462,10 @@
     url-loader "^4.1.0"
     vue-svg-loader "^0.16.0"
 
-"@nuxtjs/tailwindcss@^3.3.0":
-  version "3.3.0"
-  resolved "https://registry.yarnpkg.com/@nuxtjs/tailwindcss/-/tailwindcss-3.3.0.tgz#50f2652ca4e70a08ece51495629d13777d7bd476"
-  integrity sha512-qnYP2gb5TM702QmYvQdMYtaFHlCerlvDiSBW5x8IDxj1l/hZH5p5JC54WMTDRvL6pSa2ap+2+GJ//IDuOWpBsQ==
+"@nuxtjs/tailwindcss@^3.3.1":
+  version "3.3.1"
+  resolved "https://registry.yarnpkg.com/@nuxtjs/tailwindcss/-/tailwindcss-3.3.1.tgz#a347929b97a3e08da1f841316f757c7cf0a9e956"
+  integrity sha512-ukAbmC7+3fRUJzlY7+lLRHLss9NvJARLI4TbzZMEl9EunN8j6ESYY6gXlMYGVUfaIqzSd1tjRL7wCi2QvxWXVw==
   dependencies:
     clear-module "^4.1.1"
     consola "^2.15.0"

@@ -60,6 +60,36 @@ export default {
           loader: 'eslint-loader',
           exclude: /(node_modules)/
         })
+
+  }
+}
+```
+
+#### For those using upgrading eslint-module from v2 to v3
+
+Please note: you need to upgrade the loader with `eslint-webpack-plugin` with you upgrade from v2 to v3.
+
+Also, you may choose to use `.eslintrc.js` to set your plugin options apart from `nuxt.config.js` for cleaner format.
+
+Reference for options setting:
+
+- https://github.com/webpack-contrib/eslint-webpack-plugin
+
+Default options are set here:
+
+- https://github.com/nuxt-community/eslint-module/blob/5b5e6f521c9e918f38911ec027ec22e33fd8e53b/lib/module.js
+
+```js
+export default {
+  build: {
+    extend(config, { isDev, isClient }) {
+      // Run ESLint on save
+      if (ctx.isDev && ctx.isClient) {
+        const options = {
+          exclude: ['node_modules']
+        }
+        const EslintPlugin = require('eslint-webpack-plugin')
+        config.plugins.push(new EslintPlugin(options))
       }
     }
   }

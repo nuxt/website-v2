@@ -1,23 +1,23 @@
 ---
-title: 'The middleware Property'
-description: Set the middleware for a specific page of the application.
-menu: Middleware Property
+title: 'Middleware プロパティ'
+description: アプリケーションの特定のページのミドルウェアを設定します。
+menu: Middleware プロパティ
 category: components-glossary
 position: 0
 ---
 
-- Type: `String` or `Array` or `Function`
-  - Items: `String` or `Function`
+- **型:** `String` または `Array` または `Function`
+  - **要素:** `String` または `Function`
 
-Set the middleware for a specific page of the application.
+アプリケーションの特定のページのミドルウェアを設定します。
 
-## Named middleware
+## 名前付きミドルウェア
 
-You can create named middleware by creating a file inside the `middleware/` directory, the file name will be the middleware name.
+`middleware/` ディレクトリ内にファイルを作成することで名前付きミドルウェアを作成できます。ファイル名がミドルウェア名になります。
 
 ```js{}[middleware/authenticated.js]
 export default function ({ store, redirect }) {
-  // If the user is not authenticated
+  // ユーザーが認証されていない場合
   if (!store.state.authenticated) {
     return redirect('/login')
   }
@@ -36,9 +36,9 @@ export default function ({ store, redirect }) {
 </script>
 ```
 
-## Anonymous middleware
+## 無名ミドルウェア
 
-If you need to use a middleware only for a specific page, you can directly use a function for it (or an array of functions):
+特定のページにだけミドルウェアを使用する必要がある場合は、関数（もしくは関数の配列）を直接使用できます:
 
 ```html{}[pages/secret.vue]
 <template>
@@ -48,7 +48,7 @@ If you need to use a middleware only for a specific page, you can directly use a
 <script>
   export default {
     middleware({ store, redirect }) {
-      // If the user is not authenticated
+      // ユーザーが認証されていない場合
       if (!store.state.authenticated) {
         return redirect('/login')
       }

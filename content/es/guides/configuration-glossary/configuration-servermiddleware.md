@@ -11,7 +11,7 @@ position: 27
 
 Nuxt crea internamente una instancia de [connect](https://github.com/senchalabs/connect) a la que puede agregar su propio middleware personalizado. Esto nos permite registrar rutas adicionales (típicamente rutas `/ api`) **sin necesidad de un servidor externo**.
 
-Debido a que connect en sí mismo es un middleware, el middleware registrado funcionará con `nuxt start` y también cuando se use como middleware con usos programáticos como [express-template](https://github.com/nuxt-community/express-template). [Módulos](/guide/modules) de Nuxt también pueden proporcionar un `serverMiddleware` usando [this.addServerMiddleware()](/docs/2.x/internals-glossary/internals-module-container#addedervermiddleware-middleware)
+Debido a que connect en sí mismo es un middleware, el middleware registrado funcionará con `nuxt start` y también cuando se use como middleware con usos programáticos como [express-template](https://github.com/nuxt-community/express-template). [Módulos](/docs/2.x/directory-structure/modules) de Nuxt también pueden proporcionar un `serverMiddleware` usando [this.addServerMiddleware()](/docs/2.x/internals-glossary/internals-module-container#addedervermiddleware-middleware)
 
 Adicionalmente a ellos, introdujimos una opción de `prefix` que por defecto es `true`. Agregará la base del enrutador a los middlewares de su servidor.
 
@@ -24,7 +24,7 @@ Adicionalmente a ellos, introdujimos una opción de `prefix` que por defecto es 
 
 ## serverMiddleware vs middleware!
 
-No lo confunda con el [middleware de rutas](/guide/routing#middleware) que son llamados antes de cada ruta por Vue en el lado del cliente o SSR. El middleware enumerado en la propiedad `serverMiddleware` se ejecuta en el lado del servidor **antes de** `vue-server-renderer` y se puede usar para tareas específicas del servidor, como manejar solicitudes de API o servir activos.
+No lo confunda con el [middleware de rutas](/docs/2.x/directory-structure/middleware) que son llamados antes de cada ruta por Vue en el lado del cliente o SSR. El middleware enumerado en la propiedad `serverMiddleware` se ejecuta en el lado del servidor **antes de** `vue-server-renderer` y se puede usar para tareas específicas del servidor, como manejar solicitudes de API o servir activos.
 
 ## Uso
 

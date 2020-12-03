@@ -215,7 +215,7 @@ Komponen `<NuxtChild>` juga dapat menerima properti layaknya komponen Vue biasa.
 </template>
 ```
 
-Untuk melihat contoh, kunjungi [contoh rute bersarang](https://nuxtjs.org/examples/nested-routes).
+Untuk melihat contoh, kunjungi [contoh rute bersarang](/examples/nested-routes).
 
 <app-modal>
   <code-sandbox  :src="csb_link_nuxt"></code-sandbox>

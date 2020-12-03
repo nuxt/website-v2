@@ -7,8 +7,8 @@ https://www.nuxtjs.org/* https://nuxtjs.org/:splat 301!
 /guides/* /docs/2.x/:splat 301!
 # [LEGACY] Redirect GUIDE URLs
 /guide/themes /themes 301!
-/guide/typescript /docs/2.x 301!
-/guide/contribution-guide /docs/2.x 301!
+/guide/typescript https://typescript.nuxtjs.org/ 301!
+/guide/contribution-guide https://github.com/nuxt/nuxtjs.org/blob/master/content/en/_archives/guide/contribution-guide.md 301!
 /guide /docs/2.x/concepts/nuxt-lifecycle 301!
 /guide/assets /docs/2.x/directory-structure/assets 301!
 /guide/async-data /docs/2.x/features/data-fetching#async-data 301!
@@ -19,12 +19,13 @@ https://www.nuxtjs.org/* https://nuxtjs.org/:splat 301!
 /guide/installation /docs/2.x/get-started/installation 301!
 /guide/modules /docs/2.x/directory-structure/modules 301!
 /guide/plugins /docs/2.x/directory-structure/plugins 301!
-/guide/release-notes /docs/2.x/release-notes 301!
+/guide/release-notes /docs/release-notes 301!
+/docs/2.x/release-notes /docs/release-notes 301!
 /guide/routing /docs/2.x/get-started/routing 301!
 /guide/runtime-config /docs/2.x/configuration-glossary/configuration-runtime-config 301!
 /guide/upgrading /docs/2.x/get-started/upgrading 301!
 /guide/views /docs/2.x/concepts/views 301!
-/guide/vuex-store /docs/2.x/directory-structure/stores 301!
+/guide/vuex-store /docs/2.x/directory-structure/store 301!
 # [LEGACY] Redirect API URLs
 /api/components-no-ssr /api/components-client-only 301!
 /api/$nuxt /docs/2.x/internals-glossary/$nuxt 301!
@@ -46,6 +47,7 @@ https://www.nuxtjs.org/* https://nuxtjs.org/:splat 301!
 /api/configuration-head /docs/2.x/configuration-glossary/configuration-head 301!
 /api/configuration-hooks /docs/2.x/configuration-glossary/configuration-hooks 301!
 /api/configuration-ignore /docs/2.x/configuration-glossary/configuration-ignore 301!
+/api/configuration-loading /docs/2.x/configuration-glossary/configuration-loading 301!
 /api/configuration-loading-indicator /docs/2.x/configuration-glossary/configuration-loading-indicator 301!
 /api/configuration-mode /docs/2.x/configuration-glossary/configuration-mode 301!
 /api/configuration-modern /docs/2.x/configuration-glossary/configuration-modern 301!
@@ -66,13 +68,13 @@ https://www.nuxtjs.org/* https://nuxtjs.org/:splat 301!
 /api/configuration-watch /docs/2.x/configuration-glossary/configuration-watch 301!
 /api/configuration-watchers /docs/2.x/configuration-glossary/configuration-watchers 301!
 /api/context /docs/2.x/internals-glossary/context 301!
-/api /docs/2.x/features/data-fetching#async-data 301!
+/api /docs/2.x/internals-glossary/context 301!
 /api/internals-builder /docs/2.x/internals-glossary/internals-builder 301!
 /api/internals-generator /docs/2.x/internals-glossary/internals-generator 301!
 /api/internals-module-container /docs/2.x/internals-glossary/internals-module-container 301!
 /api/internals-nuxt /docs/2.x/internals-glossary/internals-nuxt 301!
 /api/internals /docs/2.x/internals-glossary/internals 301!
-/api/nuxt-render-and-get-window /docs/2.x/internals-glossary/muxt-render-and-get-window 301!
+/api/nuxt-render-and-get-window /docs/2.x/internals-glossary/nuxt-render-and-get-window 301!
 /api/nuxt-render-route /docs/2.x/internals-glossary/nuxt-render-route 301!
 /api/nuxt-render /docs/2.x/internals-glossary/nuxt-render 301!
 /api/nuxt /docs/2.x/internals-glossary/nuxt 301!
@@ -86,5 +88,18 @@ https://www.nuxtjs.org/* https://nuxtjs.org/:splat 301!
 /api/pages-transition /docs/2.x/components-glossary/pages-transition 301!
 /api/pages-validate /docs/2.x/components-glossary/pages-validate 301!
 /api/pages-watchquery /docs/2.x/components-glossary/pages-watchquery 301!
+/examples/custom-loading /examples/custom-loading-component 301!
+/examples/custom-routes /examples/routing-dynamic-pages 301!
+/examples/global/css /examples/pre-processors 301!
+/examples/middleware /examples/middleware-named 301!
+/examples/nested-routes /examples/routing-nested-pages 301!
+/examples/named-views /examples/routing-nested-pages 301!
+/examples/routes-transitions /examples/transitions 301!
+/examples/plugins /examples/plugins-external-packages 301!
+/examples/auth-external-jwt /faq/auth-external-jwt 301!
+/examples/testing /faq 301!
+/examples/async-data /examples/data-fetching-async-data 301!
+/examples/i18n https://i18n.nuxtjs.org/ 301!
+
 # [LEGACY] Redirect FAQ URLs
 /faq/google-analytics /faq/ga 301!

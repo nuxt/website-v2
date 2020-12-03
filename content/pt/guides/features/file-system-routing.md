@@ -399,7 +399,7 @@ O schema deve respeitar o schema do [vue-router](https://router.vuejs.org/en/).
 
 <base-alert>
 
-Ao adicionar rotas que usam [Views Nomeadas](https://nuxtjs.org/guide/routing#named-views), não se esqueça de adicionar os `chunkNames` correspondentes dos `componentes` nomeados.
+Ao adicionar rotas que usam [Views Nomeadas](https://nuxtjs.org/docs/2.x/features/file-system-routing#named-views), não se esqueça de adicionar os `chunkNames` correspondentes dos `componentes` nomeados.
 
 </base-alert>
 
@@ -494,7 +494,7 @@ export default function (to, from, savedPosition) {
 
 <base-alert type="next">
 
-[O arquivo `router.scrollBehavior.js` padrão do Nuxt.js.](packages/vue-app/template/router.scrollBehavior.js)
+[O arquivo `router.scrollBehavior.js` padrão do Nuxt.js.](https://github.com/nuxt/nuxt.js/blob/dev/packages/vue-app/template/router.scrollBehavior.js)
 
 </base-alert>
 

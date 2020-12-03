@@ -32,7 +32,7 @@ Como o Nuxt.js também funciona como um gerador de site estático, você pode, p
 
 <base-alert type="info">
 
-Sites estátios trabalham no [modo universal](https://nuxtjs.org/guides/features/rendering-modes#universal), que é o modo padrão definido.
+Sites estátios trabalham no [modo universal](/docs/2.x/features/rendering-modes#universal), que é o modo padrão definido.
 
 </base-alert>
 
@@ -65,6 +65,6 @@ export default {
 
 <base-alert type="info">
 
-Sites estátios trabalham no [modo universal](https://nuxtjs.org/guides/features/rendering-modes#universal), que é o modo padrão definido.
+Sites estátios trabalham no [modo universal](/docs/2.x/features/rendering-modes#universal), que é o modo padrão definido.
 
 </base-alert>

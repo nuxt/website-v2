@@ -169,7 +169,7 @@ Cuando se ejecuta un SPA, es más idiomático usar un `200.html`, ya que es el �
 fallback: false;
 ```
 
-Si trabaja con páginas generadas estáticamente, se recomienda utilizar un `404.html` para las páginas de error y para aquellas cubiertas por [excludes](https://nuxtjs.org/api/configuration-generate#exclude) (los archivos que no desea que se generen como páginas estáticas).
+Si trabaja con páginas generadas estáticamente, se recomienda utilizar un `404.html` para las páginas de error y para aquellas cubiertas por [excludes](/docs/2.x/configuration-glossary/#exclude) (los archivos que no desea que se generen como páginas estáticas).
 
 ```js{}[nuxt.config.js]
 fallback: true

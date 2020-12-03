@@ -21,14 +21,14 @@ module.exports = {
         slug: 'docs-2.x-book-slug'
       },
       {
-        name: 'Sumber Daya',
-        icon: 'resources',
-        slug: 'resources'
-      },
-      {
         name: 'Contoh',
         icon: 'code',
         slug: 'examples'
+      },
+      {
+        name: 'FAQ',
+        icon: 'resources',
+        slug: 'faq'
       },
       {
         name: 'Blog',
@@ -281,6 +281,9 @@ module.exports = {
       'Kontribusi untuk halaman ini sekarang ditutup. Jika Anda ingin berkontribusi, silakan periksa ',
     link: 'dokumen baru'
   },
+  example: {
+    intro: 'In this example:'
+  },
   codeSandbox: {
     open: 'Buka CodeSandbox'
   },
@@ -324,7 +327,7 @@ module.exports = {
         title: 'Discover',
         shop: 'Our Goodies Store',
         consulting: 'Training & consultancy',
-        sponsorNuxt: 'Sponsoring & donations',
+        sponsorNuxt: 'Sponsoring & donations'
       },
       about: {
         title: 'About',
@@ -334,12 +337,11 @@ module.exports = {
       },
       support: {
         title: 'Support',
-        faq: 'FAQ',
+        resources: 'Sumber Daya',
         discord: 'Chat with us',
         contributionGuide: 'Contribution guide'
       }
     }
-
   },
   cookies: {
     consent:

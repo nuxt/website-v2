@@ -1,7 +1,7 @@
 <template>
   <div class="-mx-4 lg:mx-0 flex flex-col-reverse lg:flex-row">
     <div
-      class="lg:min-h-screen w-full py-8 px-4 lg:static lg:overflow-visible lg:max-h-full lg:w-3/4"
+      class="lg:min-h-screen lg:w-3/4 w-full py-8 px-4 lg:static lg:overflow-visible lg:max-h-full"
     >
       <LangFallback :doc-link="docLink" :lang-fallback="langFallback" />
 
@@ -22,7 +22,7 @@
         <AppContribute :doc-link="docLink" :contributors="contributors" />
       </article>
     </div>
-    <AffixBlock>
+    <AffixBlock v-if="$route.params.book !== 'examples'">
       <AppToc
         v-if="page.toc && page.toc.length"
         :toc="page.toc"
@@ -39,6 +39,7 @@ import copyCodeBlock from '~/mixins/copyCodeBlock'
 
 export default {
   mixins: [copyCodeBlock],
+  scrollToTop: true,
   async asyncData({ $content, $contributors, params, store, error, app }) {
     let path = `/${app.i18n.defaultLocale}/guides/${params.book}`
     let page, prev, next, langFallback
@@ -61,7 +62,7 @@ export default {
 
     if (
       app.i18n.locale !== app.i18n.defaultLocale &&
-      (['pt', 'es'].includes(app.i18n.locale) ||
+      (['pt', 'es', 'ja', 'id', 'fr'].includes(app.i18n.locale) ||
         process.env.NODE_ENV !== 'production')
     ) {
       try {
@@ -77,7 +78,7 @@ export default {
 
     try {
       ;[prev, next] = await $content(
-        ['pt', 'es'].includes(app.i18n.locale)
+        ['pt', 'es', 'ja', 'id', 'fr'].includes(app.i18n.locale)
           ? path
           : `/${app.i18n.defaultLocale}/guides/${params.book}`
       )
@@ -105,12 +106,6 @@ export default {
       contributors
     }
   },
-  computed: {
-    docLink() {
-      return `https://github.com/nuxt/nuxtjs.org/blob/master/content${this.path}/${this.$route.params.slug}.md`
-    }
-  },
-  scrollToTop: true,
   head() {
     return {
       title: this.page.title,
@@ -140,6 +135,11 @@ export default {
           content: this.page.description
         }
       ]
+    }
+  },
+  computed: {
+    docLink() {
+      return `https://github.com/nuxt/nuxtjs.org/blob/master/content${this.path}/${this.$route.params.slug}.md`
     }
   }
 }

@@ -18,7 +18,7 @@ Kelas-kelas berikut merupakan kelas utama dalam Nuxt dan tersedia baik pada saat
 
 #### Nuxt
 
-- [Kelas `Nuxt`](/guides/internals-glossary/nuxt)
+- [Kelas `Nuxt`](/guides/internals-glossary/internals-nuxt)
 - Sumber: [core/nuxt.js](https://github.com/nuxt/nuxt.js/blob/dev/packages/core/src/nuxt.js)
 
 #### Renderer

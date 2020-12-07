@@ -83,7 +83,7 @@ Ao trabalhar com imagens dinâmicas, você precisará usar require.
 
 <base-alert type="next">
 
-Saiba mais sobre [assets webpack](/guides/directory-structure/assets#webpack-assets)
+Saiba mais sobre [assets webpack](/docs/2.x/directory-structure/assets#webpack-assets)
 
 </base-alert>
 
@@ -106,7 +106,7 @@ export default {
 
 <base-alert type="info">
 
-Caso você queira usar `sass`, certifique-se de ter instalado os pacotes `node-sass` e `sass-loader`.
+Caso você queira usar `sass`, certifique-se de ter instalado os pacotes `sass` e `sass-loader`.
 
 </base-alert>
 
@@ -114,14 +114,14 @@ Caso você queira usar `sass`, certifique-se de ter instalado os pacotes `node-s
   <code-block label="Yarn" active>
 
 ```bash
-yarn add -D node-sass sass-loader
+yarn add -D sass sass-loader fibers
 ```
 
   </code-block>
   <code-block label="NPM">
 
 ```bash
-npm install --save-dev node-sass sass-loader
+npm install --save-dev sass sass-loader fibers
 ```
 
   </code-block>
@@ -160,7 +160,7 @@ Você pode usar fontes locais adicionando-as à sua pasta assets. Depois de adic
 
 <base-alert type="next">
 
-Para adicionar fontes externas, como google fonts, confira o [capítulo Meta Tags e SEO](/guides/features/meta-tags-seo#external-resources)
+Para adicionar fontes externas, como google fonts, confira o [capítulo Meta Tags e SEO](/docs/2.x/features/meta-tags-seo#external-resources)
 
 </base-alert>
 
@@ -251,7 +251,7 @@ Será transformado em:
 <img src="/_nuxt/img/your_image.0c61159.png" />
 ```
 
-Se você deseja alterar as configurações do loader, use [build.extend](/guides/configuration-glossary/configuration-build#extend).
+Se você deseja alterar as configurações do loader, use [build.extend](/docs/2.x/configuration-glossary/configuration-build#extend).
 
 <app-modal>
   <code-sandbox  :src="csb_link"></code-sandbox>

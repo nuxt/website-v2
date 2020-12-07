@@ -16,7 +16,7 @@ Esta propiedad es sobreescrita por los comandos nuxt:
 - `dev` es forzado a `true` con `nuxt`
 - `dev` es forzado a `false` con `nuxt build`, `nuxt start` y `nuxt generate`
 
-Esta propiedad debería usarse al emplear [Nuxt.js programáticamente](/guides/internals-glossary/nuxt):
+Esta propiedad debería usarse al emplear [Nuxt.js programáticamente](/docs/2.x/internals-glossary/nuxt):
 
 ```js{}[nuxt.config.js]
 export default {

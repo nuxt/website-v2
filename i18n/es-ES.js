@@ -16,44 +16,30 @@ module.exports = {
   header: {
     links: [
       {
-        name: 'Guías',
-        slug: 'guias',
-        type: 'newDocs',
-        routeName: 'guides-book-slug'
-      },
-      {
-        name: 'Guía',
-        slug: 'guia',
-        type: 'dynamic',
-        routeName: 'section-slug'
-      },
-      {
-        name: 'API',
-        slug: 'api',
-        type: 'dynamic',
-        routeName: 'section-slug'
+        name: 'Docs',
+        icon: 'books',
+        slug: 'docs-2.x-book-slug'
       },
       {
         name: 'Ejemplos',
-        slug: 'ejemplos',
-        type: 'dynamic',
-        routeName: 'section-slug'
+        icon: 'code',
+        slug: 'examples'
       },
       {
         name: 'FAQ',
-        slug: 'faq',
-        type: 'dynamic',
-        routeName: 'section-slug'
-      },
-      {
-        name: 'Recursos',
-        slug: 'recursos',
-        type: 'static'
+        icon: 'resources',
+        slug: 'faq'
       },
       {
         name: 'Blog',
-        slug: 'blog',
-        type: 'static'
+        icon: 'blog',
+        slug: 'blog'
+      },
+      {
+        name: 'Video Courses',
+        icon: 'video',
+        href:
+          'https://masteringnuxt.com?friend=nuxt&utm_source=Nuxtjs.org&utm_medium=Link&utm_content=Navbar&utm_content=prelaunch'
       }
     ],
     search: {
@@ -72,7 +58,8 @@ module.exports = {
         'Construye tu siguiente aplicación de Vue.js con confianza usando NuxtJS. Un framework de {openSource} que trabaja para conseguir que el desarrollo web sea simple y poderoso.',
       openSource: 'código abierto',
       get_started: 'comenzar',
-      get_updates: 'Obtenga actualizaciones de NuxtJS cada mes en su bandeja de entrada',
+      get_updates:
+        'Obtenga actualizaciones de NuxtJS cada mes en su bandeja de entrada',
       video: 'Video produced by {company}, download their free {cheatSheet}.',
       cheatSheet: 'Nuxt Cheat Sheet.'
     },
@@ -87,7 +74,7 @@ module.exports = {
       modular: {
         title: 'Modular',
         description:
-          "Nuxt se basa en una potente arquitectura modular. Puede elegir entre más de 50 módulos para que su desarrollo sea más rápido y sencillo. No tiene que reinventar la rueda para obtener los beneficios de PWA, agregar Google Analytics a su página o generar un mapa del sitio."
+          'Nuxt se basa en una potente arquitectura modular. Puede elegir entre más de 50 módulos para que su desarrollo sea más rápido y sencillo. No tiene que reinventar la rueda para obtener los beneficios de PWA, agregar Google Analytics a su página o generar un mapa del sitio.'
       },
       performant: {
         title: 'Rendimiento',
@@ -96,7 +83,7 @@ module.exports = {
       }
     },
     companies: {
-      title: "Quién usa {nuxt}"
+      title: 'Quién usa {nuxt}'
     },
     modes: {
       title: '{nuxt} rendering',
@@ -104,11 +91,6 @@ module.exports = {
         title: 'Server Side Rendered',
         description:
           'El modo más popular para Nuxt. Con SSR, también llamado modo "universal" o "isomórfico", se utilizará un servidor Node.js para entregar HTML basado en tus componentes de Vue al cliente en lugar del javascript puro. El uso de SSR generará un gran impulso de SEO, una mejor UX y más oportunidades (en comparación con un Vue SPA tradicional). {Break} Debido a que implementar SSR por tu cuenta puede ser realmente tedioso, Nuxt.js le brinda soporte completo listo para usar y se encargará de los errores comunes.'
-      },
-      spa: {
-        title: 'Single Page Application (SPA)',
-        description:
-          "¿No necesita SSR o generación de sitios estáticos pero quiere beneficiarse de los beneficios que ofrece Nuxt? ¿Estás realizando una transición lenta de tu aplicación y desea que sea ligera? Entonces el modo SPA tradicional probablemente será tu elección. El resultado será un Vue SPA típico como lo conoce, pero influenciado por tu configuración de Nuxt y el framework en sí."
       },
       ssg: {
         title: 'Statically Generated',
@@ -275,7 +257,8 @@ module.exports = {
       'Descubra artículos de {nuxtTeam} y {nuxtCommunity} sobre NuxtJS, ¡con sugerencias y trucos incluidos!',
     nuxt_team: 'NuxtJS Team',
     nuxt_community: 'Comunidad Nuxt.js',
-    contribute: '¿Te has equivocado o quieres contribuir a esta publicación de blog?'
+    contribute:
+      '¿Te has equivocado o quieres contribuir a esta publicación de blog?'
   },
   guide: {
     release_notes: 'Notas de publicación (en)',
@@ -298,8 +281,11 @@ module.exports = {
       'La contribución en esta página está cerrada. Si quieres contribuir, por favor, revisa nuestra',
     link: 'nueva documentación'
   },
+  example: {
+    intro: 'En esta ejemplo:'
+  },
   codeSandbox: {
-    open: 'Abrir CodeSandbox'
+    open: 'Ver Ejemplo'
   },
   content: {
     guide: {
@@ -339,18 +325,21 @@ module.exports = {
     links: {
       discover: {
         title: 'Discover',
-        design: 'Design resources',
-        team: 'A worldwide team',
-        blog: 'Blog'
+        shop: 'Our Goodies Store',
+        consulting: 'Training & consultancy',
+        sponsorNuxt: 'Sponsoring & donations'
       },
-      follow: {
-        title: 'Follow'
+      about: {
+        title: 'About',
+        team: 'Our team',
+        design: 'Design kit',
+        contact: 'Contact us'
       },
       support: {
         title: 'Support',
-        sponsorNuxt: 'Sponsor NuxtJS',
-        shop: 'The NuxtJS Shop',
-        consulting: 'NuxtJS Consulting'
+        resources: 'Resources',
+        discord: 'Chat with us',
+        contributionGuide: 'Contribution guide'
       }
     }
   },

@@ -23,7 +23,7 @@ The [content module](https://content.nuxtjs.org) is a git files based headless C
 
 <p align="center">
   <a href="https://blog-with-nuxt-content.netlify.app/" target="_blank" rel="noopener nofollow">View demo</a> /
-  <a href="https://github.com/nuxt-company/demo-blog-nuxt-content" target="_blank" rel="noopener nofollow">Source code</a>
+  <a href="https://github.com/nuxt-academy/demo-blog-nuxt-content" target="_blank" rel="noopener nofollow">Source code</a>
 </p>
 
 - [Getting started](#getting-started)
@@ -128,13 +128,13 @@ In markdown we create a `<h1>` title by using `#`. Make sure you leave a space b
 
 ### Displaying your content
 
-To display our content in our page, we can use a [dynamic page](/guide/routing#dynamic-routes) by prefixing the page with an underscore(`_`). By creating a page component named `_slug.vue` inside our blog folder, we are able to use the `params.slug` variable provided by vue router to get the name of each article.
+To display our content in our page, we can use a [dynamic page](/docs/2.x/directory-structure/pages#dynamic-pages) by prefixing the page with an underscore(`_`). By creating a page component named `_slug.vue` inside our blog folder, we are able to use the `params.slug` variable provided by vue router to get the name of each article.
 
 ```bash
 touch pages/blog/_slug.vue
 ```
 
-Then we can use `asyncData` in our page component to fetch our article content before the page has been rendered. We can have access to our content through the context by using the variable `$content`. As we want to fetch a dynamic page we also need to know which article to fetch with `params.slug` which is available to us through [the context](/api/context).
+Then we can use `asyncData` in our page component to fetch our article content before the page has been rendered. We can have access to our content through the context by using the variable `$content`. As we want to fetch a dynamic page we also need to know which article to fetch with `params.slug` which is available to us through [the context](/docs/2.x/internals-glossary/context).
 
 ```html{}[pages/blog/_slug.vue]
 <script>
@@ -256,6 +256,14 @@ We now have a title, description, img and alt variable that we can access to by 
 </template>
 ```
 
+<base-alert>
+
+In order to render images included in the YAML of the article we either need to place them in the static folder or use the syntax: `` :src="require(`~/assets/images/${article.img}`)" ``.
+
+Images included in the article content should always be placed **in the static folder** as @nuxt/content is independent of Webpack. The static folder doesn't go through webpack whereas the assets folder does.
+
+</base-alert>
+
 ### Styling our markdown content
 
 If we inspect this page we can see that everything written inside our markdown is wrapped inside a div with a class of nuxt-content. That means we can easily add styles to all our elements coming from our markdown file by wrapping them in the nuxt-content class.
@@ -278,11 +286,7 @@ If we inspect this page we can see that everything written inside our markdown i
 
 All other tags that come from our YAML front matter can be styled as normal either using [TailwindCSS](https://tailwindcss.com/) or adding css in the style tag.
 
-<base-alert>
-Scoped styles will not work with nuxt-content so if adding them in the style
-tag you shouldn't use scoped. You can add the styles here or as a global style
-in your css folder.
-</base-alert>
+To use scoped styles with the nuxt-content class you need to use a deep selector: `/deep/`, `::v-deep` or `>>>`
 
 Our markdown tags are converted into the correct tags which means we now have two `<h1>` tags. We should now remove the one from our markdown file.
 
@@ -415,9 +419,9 @@ An other advantage of the YAML properties is that we can make them available to 
 ```yaml{}[content/articles/my-first-blog-post.md]
 ---
 author:
-name: Benjamin
-bio: All about Benjamin
-image: https://images.unsplash.com/.....
+  name: Benjamin
+  bio: All about Benjamin
+  image: https://images.unsplash.com/.....
 ---
 
 ```
@@ -445,7 +449,7 @@ Here we create a div the author image, a title of Author and a dynamic name and 
 
 <base-alert>
 
-Styles have been removed from these examples, feel free to add the styles yourself or copy the styles from the [demo code](https://github.com/nuxt-company/demo-blog-nuxt-content).
+Styles have been removed from these examples, feel free to add the styles yourself or copy the styles from the [demo code](https://github.com/nuxt-academy/demo-blog-nuxt-content).
 
 </base-alert>
 
@@ -467,8 +471,14 @@ Then in our script tag we can add our props of author which is an object and set
 To use the component we will need to add it to our markdown and pass in our props.
 
 ```markdown{}[content/articles/my-first-blog-post.md]
-<author :author="author" />
+<author :author="author"></author>
 ```
+
+<base-alert>
+
+You cannot use self closing tags in markdown, for instance, `<author :author="author" />` won't work.
+
+</base-alert>
 
 Putting the component here means we will have to repeat it for every article. In this case it would be better to add it directly to the slug page. We will need to change the author prop to `article.author`.
 
@@ -491,7 +501,7 @@ We can now move this component out of the global folder and into the components 
 
 ### Adding a code block to your post
 
-With the content module we can style our code blocks withª the automatic inclusion of [prismJS](https://prismjs.com/). That means we can write our code block using the correct markdown syntax and our code block will display with styling depending on the language.
+With the content module we can style our code blocks with the automatic inclusion of [prismJS](https://prismjs.com/). That means we can write our code block using the correct markdown syntax and our code block will display with styling depending on the language.
 
 ```js
 export default {
@@ -655,7 +665,7 @@ We can see individual articles by adding the name of the slug [http://localhost:
 
 <base-alert type="info">
 
-You can use a chrome extension such as [JSON Viewer Awesome](https://chrome.google.com/webstore/detail/json-viewer-awesome/iemadiahhbebdklepanmkjenfdebfpfe?hl=en) so you can better see your results.
+You can use a chrome extension such as [JSON Viewer Pro](https://chrome.google.com/webstore/detail/json-viewer-pro/eifflpmocdbdmepbjaopkkhbfmdgijcc) so you can better see your results.
 
 </base-alert>
 
@@ -675,7 +685,7 @@ We can now create our blog index page to list out our blog posts. As we already 
 
 <base-alert type="info">
 
-In the [demo code](https://github.com/nuxt-company/demo-blog-nuxt-content) I used the main index page instead of creating an index file inside the blog folder because for this example I have no other pages but normally you might have a home page, contact page and then the blog page etc.
+In the [demo code](https://github.com/nuxt-academy/demo-blog-nuxt-content) I used the main index page instead of creating an index file inside the blog folder because for this example I have no other pages but normally you might have a home page, contact page and then the blog page etc.
 
 </base-alert>
 
@@ -806,7 +816,7 @@ We can then use our data to print out a nice author page showing the author name
 
 <base-alert type="info">
 
-Please note all styles have been removed from this example. You can either style the page yourself or copy the styles from the [demo code](https://github.com/nuxt-company/demo-blog-nuxt-content).
+Please note all styles have been removed from this example. You can either style the page yourself or copy the styles from the [demo code](https://github.com/nuxt-academy/demo-blog-nuxt-content).
 
 </base-alert>
 
@@ -901,7 +911,7 @@ We can now use our `<AppSearchInput>` component by adding it anywhere on our pag
 
 <base-alert type="info">
 
-See the [demo code](https://github.com/nuxt-company/demo-blog-nuxt-content) for improved styling of this page as well as the header component that was added which includes the search component and is therefore displayed on the author and index page.
+See the [demo code](https://github.com/nuxt-academy/demo-blog-nuxt-content) for improved styling of this page as well as the header component that was added which includes the search component and is therefore displayed on the author and index page.
 
 </base-alert>
 
@@ -929,4 +939,8 @@ Working with content is great fun and there is so much more you can do and build
 
 ## Further Reading
 
-For more info on how to add a sitemap to your blog check out this article: [Adding a Sitemap Using Nuxt Content](https://redfern.dev/articles/adding-a-sitemap-using-nuxt-content/) by [Gareth Redfern](https://twitter.com/garethredfern)
+For more info on how to improve your blog check out these articles by by [Gareth Redfern](https://twitter.com/garethredfern):
+
+- [Adding a Sitemap Using Nuxt Content](https://redfern.dev/articles/adding-a-sitemap-using-nuxt-content/)
+- [Adding Social Media & SEO Meta Data Using Nuxt Content](https://redfern.dev/articles/adding-social-media-seo-meta-data-using-nuxt-content)
+- [Adding Pagination With Nuxt Content](https://redfern.dev/articles/adding-pagination-nuxt-content-blog)

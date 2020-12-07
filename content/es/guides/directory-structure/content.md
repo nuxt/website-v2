@@ -3,7 +3,7 @@ title: content
 description: Potencia tu aplicación Nuxt.js con el módulo `@nuxtjs/content` donde puedes escribir en un directorio `content/` y extraer tus archivos Markdown, JSON, YAML y CSV a través de una API tipo MongoDB, actuando como **CMS _Headless_ basado en Git**.
 position: 4
 category: directory-structure
-img: /guides/nuxt-content.svg
+img: /docs/2.x/nuxt-content.svg
 imgAlt: nuxt content module
 questions:
   - question: ¿Cuál es el nombre por defecto del directorio donde agregas tus archivos de markdown?

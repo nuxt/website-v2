@@ -18,43 +18,29 @@ module.exports = {
     links: [
       {
         name: 'Rehberler',
-        slug: 'guides',
-        type: 'newDocs',
-        routeName: 'guides-book-slug'
-      },
-      {
-        name: 'Rehber',
-        slug: 'guide',
-        type: 'dynamic',
-        routeName: 'section-slug'
-      },
-      {
-        name: 'API',
-        slug: 'api',
-        type: 'dynamic',
-        routeName: 'section-slug'
+        icon: 'books',
+        slug: 'docs-2.x-book-slug'
       },
       {
         name: 'Örnekler',
-        slug: 'examples',
-        type: 'dynamic',
-        routeName: 'section-slug'
+        icon: 'code',
+        slug: 'examples'
       },
       {
-        name: 'SSS',
-        slug: 'faq',
-        type: 'dynamic',
-        routeName: 'section-slug'
-      },
-      {
-        name: 'Kaynaklar',
-        slug: 'resources',
-        type: 'static'
+        name: 'FAQ',
+        icon: 'resources',
+        slug: 'faq'
       },
       {
         name: 'Blog',
-        slug: 'blog',
-        type: 'static'
+        icon: 'blog',
+        slug: 'blog'
+      },
+      {
+        name: 'Video Courses',
+        icon: 'video',
+        href:
+          'https://masteringnuxt.com?friend=nuxt&utm_source=Nuxtjs.org&utm_medium=Link&utm_content=Navbar&utm_content=prelaunch'
       }
     ],
     search: {
@@ -106,11 +92,6 @@ module.exports = {
         title: 'Sunucu Taraflı İşleme',
         description:
           'Bu mod, Nuxt\'un en popüler modudur. STİ (SSR), "universal" veya "isomorphic" olarak isimlendirdiğimiz bu mod, saf javascript kullanıp Vue komponentlerinizi kullanıcılara sunmaktansa, bir Node.js sunucusu kullanıp bunları sunucuda işleyerek sitenize HTML bazlı olarak çıktı verecektir. STİ kullanmak, büyük bir SEO puanı takviyesi almanıza sebep olacaktır, daha iyi kullanıcı deneyimi ve Vue SPA ile karşılaştırıldığında daha fazla imkanınız olacaktır.{break}STİ\'yi kendi başınıza uygulamanıza uyarlamak zorlu olabilir, Nuxt.js sizlere bunu hazır bir şekilde sunar ve bilinen bir çok ayarı sizin için yapar.'
-      },
-      spa: {
-        title: 'Tek Sayfalı Uygulama (SPA)',
-        description:
-          "STİ'ye veya Statik Site Oluşturma'ya ihtiyacınız yok ancak yine de Nuxt'un sağladığı özelliklerden yararlanmak mı istiyorsunuz? Veya uygulamanızı dönüştürmek istiyor ve hafif bir yükle başlamak mı istiyorsunuz? O halde SPA modu sizin ihtiyacınızı karşılayacaktır. Sonuç, Vue SPA ile aynı olacaktır ancak ayarlar ve Nuxt sisteminin sağladığı ayrıcalıkları kullanabileceksiniz."
       },
       ssg: {
         title: 'Statik Olarak Oluşturma',
@@ -301,6 +282,9 @@ module.exports = {
       'Bu sayfa için şu anda katkıda bulunamazsınız. Eğer katkıda bulunmak istiyorsanız',
     link: 'buraya tıklayın.'
   },
+  example: {
+    intro: 'In this example:'
+  },
   codeSandbox: {
     open: "CodeSandbox'ı Aç"
   },
@@ -342,18 +326,21 @@ module.exports = {
     links: {
       discover: {
         title: 'Discover',
-        design: 'Design resources',
-        team: 'A worldwide team',
-        blog: 'Blog'
+        shop: 'Our Goodies Store',
+        consulting: 'Training & consultancy',
+        sponsorNuxt: 'Sponsoring & donations'
       },
-      follow: {
-        title: 'Follow'
+      about: {
+        title: 'About',
+        team: 'Our team',
+        design: 'Design kit',
+        contact: 'Contact us'
       },
       support: {
         title: 'Support',
-        sponsorNuxt: 'Sponsor NuxtJS',
-        shop: 'The NuxtJS Shop',
-        consulting: 'NuxtJS Consulting'
+        resources: 'Kaynaklar',
+        discord: 'Chat with us',
+        contributionGuide: 'Contribution guide'
       }
     }
   },

@@ -3,15 +3,16 @@ title: 'El método Fetch'
 description: El método `fetch` se usa para llenar la `store` antes de renderizar la página, es como el método` asyncData` excepto que no establece los datos del componente.
 menu: Método Fetch
 category: components-glossary
+position: 0
 ---
 
 ## Nuxt >= 2.12
 
-Nuxt.js `v2.12` introduce un nuevo *hook* llamado `fetch`(traer) **en cualquiera de tus componentes de Vue**.
+Nuxt.js `v2.12` introduce un nuevo _hook_ llamado `fetch`(traer) **en cualquiera de tus componentes de Vue**.
 
 <base-alert>
 
-`fetch(context)` ha quedado obsoleto, en su lugar puede utilizar un [middleware anónimo](/guides/components-glossary/pages-middleware#anonymous-middleware) en vuestra pagina: `middleware(context)`
+`fetch(context)` ha quedado obsoleto, en su lugar puede utilizar un [middleware anónimo](/docs/2.x/components-glossary/pages-middleware#anonymous-middleware) en vuestra pagina: `middleware(context)`
 
 </base-alert>
 
@@ -21,7 +22,7 @@ Cada vez que necesite obtener datos **asincrónicos**. `fetch` se llama en el la
 
 Expone `$fetchState` a nivel de componente:
 
-- `$fetchState.pending`: `Boolean`, permite mostrar un *placeholder* cuando se llama a `fetch` _en el lado del cliente_.
+- `$fetchState.pending`: `Boolean`, permite mostrar un _placeholder_ cuando se llama a `fetch` _en el lado del cliente_.
 - `$fetchState.error`: `null` o `Error`, permite mostrar un mensaje de error
 - `$fetchState.timestamp`: `Integer`, es una marca de tiempo de la última recuperación, útil para almacenar en caché con `keep-alive`
 
@@ -44,7 +45,7 @@ export default {
 }
 ```
 
-Puede acceder el [contexto](/guides/internals-glossary/context) de Nuxt dentro del hook de recuperación usando `this.$nuxt.context`.
+Puede acceder el [contexto](/docs/2.x/internals-glossary/context) de Nuxt dentro del hook de recuperación usando `this.$nuxt.context`.
 
 ### Options
 

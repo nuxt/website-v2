@@ -7,7 +7,7 @@ csb_link_plugins_client: https://codesandbox.io/embed/github/nuxt-academy/guides
 csb_link_plugins_external: https://codesandbox.io/embed/github/nuxt-academy/guides-examples/tree/master/04_directory_structure/12_plugins_external?fontsize=14&hidenavigation=1&theme=dark
 csb_link_plugins_custom: https://codesandbox.io/embed/github/nuxt-academy/guides-examples/tree/master/04_directory_structure/12_plugins_custom_plugin?fontsize=14&hidenavigation=1&theme=dark
 csb_link_plugins_vue: https://codesandbox.io/embed/github/nuxt-academy/guides-examples/tree/master/04_directory_structure/12_plugins_vue?fontsize=14&hidenavigation=1&theme=dark
-img: /guides/plugins.svg
+img: /docs/2.x/plugins.svg
 imgAlt: modules-servermiddleware-plugins-in-nuxt-js
 questions:
   - question: El directorio de `plugins` contiene los plugins de Javascript que quieras ejecutar
@@ -136,6 +136,34 @@ export default {
 </script>
 ```
 
+Otra manera de usar `axios` sin el modulo es importando `axios` directamente en la etiqueta `<script>`.
+
+```js{}[pages/index.vue]
+<script>
+import axios from 'axios'
+
+export default {
+	async asyncData ({ params }) {
+	  const { data: post }  = await axios.get(`https://api.nuxtjs.dev/posts/${params.id}`)
+	  return { post }
+	}
+}
+</script>
+```
+
+<base-alert type="info">
+
+Si obtienes un error de _Cannot use import statement outside a module_, usted debe agregar tu paquete en la opcion `build` > `transpile` en `nuxt.config.js` para que el loader de webpack haga tu plugin disponible.
+
+</base-alert>
+
+```js{}[nuxt.config.js]
+build: {
+  // You can extend webpack config here
+  transpile: ['npm-package-name'],
+},
+```
+
 <app-modal>
   <code-sandbox :src="csb_link_plugins_external"></code-sandbox>
 </app-modal>
@@ -198,7 +226,7 @@ module.exports = {
 }
 ```
 
-Puedes referirte a los documentos de [configuration build](/guides/configuration-glossary/configuration-build#transpile) para más opciones.
+Puedes referirte a los documentos de [configuration build](/docs/2.x/configuration-glossary/configuration-build#transpile) para más opciones.
 
 ## Lado del cliente o server
 
@@ -302,7 +330,7 @@ Esto causaría pérdida de memoria en el lado del servidor.
 
 ## La propiedad de extendPlugins
 
-Puedes extender los plugins on incluso cambiar el orden en el que los plugins se crean en Nuxt.js. Esta función recibe un arreglo de objetos de [plugin](/guides/configuration-glossary/configuration-plugins) y debe retornar un arreglo de objetos de plugins.
+Puedes extender los plugins on incluso cambiar el orden en el que los plugins se crean en Nuxt.js. Esta función recibe un arreglo de objetos de [plugin](/docs/2.x/configuration-glossary/configuration-plugins) y debe retornar un arreglo de objetos de plugins.
 
 Ejemplo de cómo se cambia el orden de plugins:
 
@@ -328,7 +356,7 @@ Puedes añadir fácilmente mixins globales con Nuxt plugins, pero puedes causar 
 
 ```js{}[plugins/my-mixin-plugin.js]
 if (!Vue.__my_mixin__) {
- Vue.__my__mixin__ = true
+  Vue.__my_mixin__ = true
   Vue.mixin({ ... }) // Configura tu mixin
 }
 ```

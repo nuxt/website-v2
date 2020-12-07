@@ -9,19 +9,19 @@ position: 113
 
 ## 命令列表
 
-| 命令 | 描述 |
-| --- | --- |
-| nuxt | 启动一个热加载的 Web 服务器（开发模式） [localhost:3000](http://localhost:3000)。 |
-| nuxt build | 利用 webpack 编译应用，压缩 JS 和 CSS 资源（发布用）。 |
-| nuxt start | 以生产模式启动一个 Web 服务器 (需要先执行`nuxt build`)。 |
-| nuxt generate | 编译应用，并依据路由配置生成对应的 HTML 文件 (用于静态站点的部署)。 |
+| 命令          | 描述                                                                              |
+| ------------- | --------------------------------------------------------------------------------- |
+| nuxt          | 启动一个热加载的 Web 服务器（开发模式） [localhost:3000](http://localhost:3000)。 |
+| nuxt build    | 利用 webpack 编译应用，压缩 JS 和 CSS 资源（发布用）。                            |
+| nuxt start    | 以生产模式启动一个 Web 服务器 (需要先执行`nuxt build`)。                          |
+| nuxt generate | 编译应用，并依据路由配置生成对应的 HTML 文件 (用于静态站点的部署)。               |
 
 如果使用了 Koa/Express 等 Node.js Web 开发框架，并使用了 Nuxt 作为中间件，可以自定义 Web 服务器的启动入口：
 
-| 命令 | 描述 |
-| --- | --- |
-| NODE_ENV=development nodemon server/index.js | 启动一个热加载的自定义 Web 服务器（开发模式）。 |
-| NODE_ENV=production node server/index.js | 以生产模式启动一个自定义 Web 服务器 (需要先执行 `nuxt build`)。 |
+| 命令                                         | 描述                                                            |
+| -------------------------------------------- | --------------------------------------------------------------- |
+| NODE_ENV=development nodemon server/index.js | 启动一个热加载的自定义 Web 服务器（开发模式）。                 |
+| NODE_ENV=production node server/index.js     | 以生产模式启动一个自定义 Web 服务器 (需要先执行 `nuxt build`)。 |
 
 #### 参数
 
@@ -103,11 +103,11 @@ npm run generate
 
 这个命令会创建一个 `dist` 文件夹，所有静态化后的资源文件均在其中。
 
-如果你的项目需要用到[动态路由](/guide/routing#动态路由)，请移步 [generate 配置 API](/api/configuration-generate) 了解如何让 Nuxt.js 生成此类动态路由的静态文件。
+如果你的项目需要用到[动态路由](/docs/2.x/features/file-system-routing#动态路由)，请移步 [generate 配置 API](/docs/2.x/configuration-glossary/configuration-generate) 了解如何让 Nuxt.js 生成此类动态路由的静态文件。
 
 <div class="Alert">
 
-注意：使用 `nuxt generate` 静态化应用的时候, 传给 [asyncData()](/guide/async-data#asyncdata-方法) 和 [fetch()](/guide/vuex-store#fetch-方法) 方法的[上下文对象](/api#上下文对象) 不会包含 `req` 和 `res` 两个属性。
+注意：使用 `nuxt generate` 静态化应用的时候, 传给 [asyncData()](/docs/2.x/features/data-fetching#async-data) 和 [fetch()](/docs/2.x/directory-structure/store) 方法的[上下文对象](/docs/2.x/internals-glossary/context) 不会包含 `req` 和 `res` 两个属性。
 
 </div>
 

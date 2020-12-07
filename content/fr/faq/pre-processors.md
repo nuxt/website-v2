@@ -34,5 +34,5 @@ Exemple d'une `pages/index.vue` utilisant [Pug](https://github.com/pugjs/pug), [
 Pour être en mesure d'utiliser ces préprocesseurs, nous devons installer leurs loaders webpack :
 
 ```bash
-npm install --save-dev pug@2.0.3 pug-plain-loader coffeescript coffee-loader node-sass sass-loader
+npm install --save-dev pug@2.0.3 pug-plain-loader coffeescript coffee-loader sass sass-loader fibers
 ```

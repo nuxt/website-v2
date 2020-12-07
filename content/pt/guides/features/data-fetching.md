@@ -85,7 +85,7 @@ export default {
 
 <base-alert>
 
-`fetch(context)` tornou-se obsoleto, em vez disso você pode usar um [middleware anônimo](/guides/directory-structure/middleware#anonymous-middleware) em sua página: `middleware(context)`
+`fetch(context)` tornou-se obsoleto, em vez disso você pode usar um [middleware anônimo](/docs/2.x/directory-structure/middleware#anonymous-middleware) em sua página: `middleware(context)`
 
 </base-alert>
 
@@ -132,7 +132,7 @@ Você também tem acesso a `this.$fetch()`, útil se você deseja chamar o méto
 
 <base-alert type="info">
 
-Você pode acessar o [contexto](/guides/concepts/context-helpers) do Nuxt dentro do método fetch utilizando o `this.$nuxt.context`.
+Você pode acessar o [contexto](/docs/2.x/concepts/context-helpers) do Nuxt dentro do método fetch utilizando o `this.$nuxt.context`.
 
 </base-alert>
 
@@ -199,9 +199,7 @@ Mantém apenas 10 componentes de página na memória.
 O Nuxt preencherá o `this.$fetchState.timestamp` (timestamp) da última chamada `fetch` (ssr também). Você pode usar esta propriedade combinada com o método `activated` para adicionar um cache de 30 segundos ao `fetch`:
 
 ```html{}[pages/posts/_id.vue]
-<template>
-  ...
-</template>
+<template> ... </template>
 
 <script>
   export default {
@@ -232,13 +230,13 @@ A navegação para a mesma página não executará o `fetch` se a última chamad
 
 <base-alert>
 
-`asyncData` está disponível apenas em [pages](/guides/directory-structure/pages) e você não tem acesso ao `this` dentro deste método.
+`asyncData` está disponível apenas em [pages](/docs/2.x/directory-structure/pages) e você não tem acesso ao `this` dentro deste método.
 
 </base-alert>
 
-A principal diferença com o `fetch` é que você não precisa lidar com nenhum estado pendente ou erro. O Nuxt aguardará a conclusão do método `asyncData` antes de navegar para a próxima página ou exibir a [página de erro](/guides/directory-structure/layouts#error-page).
+A principal diferença com o `fetch` é que você não precisa lidar com nenhum estado pendente ou erro. O Nuxt aguardará a conclusão do método `asyncData` antes de navegar para a próxima página ou exibir a [página de erro](/docs/2.x/directory-structure/layouts#error-page).
 
-Este método recebe [o contexto](/guides/concepts/context-helpers) como primeiro argumento. Você pode usá-lo para buscar alguns dados e o Nuxt.js mesclará automaticamente o objeto retornado com o data do componente.
+Este método recebe [o contexto](/docs/2.x/concepts/context-helpers) como primeiro argumento. Você pode usá-lo para buscar alguns dados e o Nuxt.js mesclará automaticamente o objeto retornado com o data do componente.
 
 ```html{}[pages/index.vue]
 <template>
@@ -309,7 +307,7 @@ Por padrão, o método `asyncData` não é chamado nas alterações da string de
 
 <base-alert type="next">
 
-Saiba mais sobre a [propriedade watchQuery](/guides/components-glossary/pages-watchquery) e veja a list das [propriedades disponíveis no contexto](/guides/concepts/context-helpers).
+Saiba mais sobre a [propriedade watchQuery](/docs/2.x/components-glossary/pages-watchquery) e veja a list das [propriedades disponíveis no contexto](/docs/2.x/concepts/context-helpers).
 
 </base-alert>
 

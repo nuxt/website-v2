@@ -75,13 +75,13 @@ questions:
 
 <base-alert type="next">
 
-[asyncData](/guides/features/data-fetching#async-data)을 활용하여 작업하기
+[asyncData](/docs/2.x/features/data-fetching#async-data)을 활용하여 작업하기
 
 </base-alert>
 
 <base-alert type="next">
 
-다른 [Rendering modes](/guides/features/rendering-modes) 중 선택하기
+다른 [Rendering modes](/docs/2.x/features/rendering-modes) 중 선택하기
 
 </base-alert>
 

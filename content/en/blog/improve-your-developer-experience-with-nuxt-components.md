@@ -64,7 +64,7 @@ In this article, we'll learn about `@nuxt/components` by example. I have setup a
 ----| MagicButton/
 ```
 
-We will implement `@nuxt/components` on these components followed by a detailed look at module options to customise the default behaviour. Later in the article, we will also take a look at **lazy-loading** and **auto-importing 3rd-party library** components.
+We will implement `@nuxt/components` on these components followed by a detailed look at module options to customize the default behavior. Later in the article, we will also take a look at **lazy-loading** and **auto-importing 3rd-party library** components.
 
 It’s best if you setup this [sample project](https://github.com/Krutie/nuxt-components-demo) locally to tryout options that may interest you.
 
@@ -324,8 +324,8 @@ Ignore option excludes components with specified locations and extensions from s
 
 It's important we highlight two similar features of Nuxt that ignore files just like our `ignore` option.
 
-- [.nuxtignore](https://nuxtjs.org/api/configuration-ignore/#-nuxtignore) also ignore files similar to `ignore` option, but `.nuxtignore` ignores files from `/pages`, `/layouts`, `/middleware` and `/store` . It's a dot-file that is defined in the project root. Read more about the [ignore property](https://nuxtjs.org/api/configuration-ignore/) on Nuxt docs.
-- [ignore](https://nuxtjs.org/api/configuration-ignore/#the-ignore-property) property, as well, let us define multiple glob-pattern to ignore matching files, like below.
+- [.nuxtignore](/docs/2.x/configuration-glossary/configuration-ignore#-nuxtignore) also ignore files similar to `ignore` option, but `.nuxtignore` ignores files from `/pages`, `/layouts`, `/middleware` and `/store` . It's a dot-file that is defined in the project root. Read more about the [ignore property](/docs/2.x/configuration-glossary/configuration-ignore) on Nuxt docs.
+- [ignore](/docs/2.x/configuration-glossary/configuration-ignore#the-ignore-property) property, as well, let us define multiple glob-pattern to ignore matching files, like below.
 
 ```js{}[nuxt.config.js]
 export default {

@@ -20,7 +20,7 @@ npm run generate
 
 <div class="Alert Alert--nuxt-green">
 
-<b>提示：</b> 如果你的 GitHub Pages 使用了自定义域名，建议将 `CNAME` 放在 Nuxt.js 应用的 `static` 目录。 可以移步 [`static`](/guide/assets#静态文件) 了解更多信息。
+<b>提示：</b> 如果你的 GitHub Pages 使用了自定义域名，建议将 `CNAME` 放在 Nuxt.js 应用的 `static` 目录。 可以移步 [`static`](/docs/2.x/directory-structure/static) 了解更多信息。
 
 </div>
 
@@ -28,9 +28,9 @@ npm run generate
 
 如果您要为一个特定的存储库创建 GitHub 页面，并且您没有任何自定义域，则该页面的 URL 将采用以下格式：`http://<username>.github.io/<repository-name>`。
 
-如果您在没有添加 [router base](https://nuxtjs.org/api/configuration-router/#base) 的情况下部署了`dist`文件夹，那么当您访问已部署的站点时，您会发现该站点因缺失`assets`而无法正常工作。这是因为我们假设网站根目录是`/`，但在这种情况下它是`/<repository-name>`。
+如果您在没有添加 [router base](/docs/2.x/configuration-glossary/configuration-router#base) 的情况下部署了`dist`文件夹，那么当您访问已部署的站点时，您会发现该站点因缺失`assets`而无法正常工作。这是因为我们假设网站根目录是`/`，但在这种情况下它是`/<repository-name>`。
 
-要解决此问题，我们需要在 `nuxt.config.js` 中添加 [router base](https://nuxtjs.org/api/configuration-router/#base) 配置：
+要解决此问题，我们需要在 `nuxt.config.js` 中添加 [router base](/docs/2.x/configuration-glossary/configuration-router#base) 配置：
 
 ```js
 export default {

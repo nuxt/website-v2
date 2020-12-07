@@ -7,7 +7,7 @@ position: 12
 
 Com Nuxt.js e o estático total (full static), agora você pode usar a visualização instantânea imediatamente, que chamará sua API ou CMS para que você possa pré-visualizar as alterações antes do deploy.
 
-<base-alert> Disponível apenas quando utilizar o [target:static](/guides/features/deployment-targets#static-hosting) </base-alert>
+<base-alert> Disponível apenas quando utilizar o [target:static](/docs/2.x/features/deployment-targets#static-hosting) </base-alert>
 
 O modo de pré-visualização atualizará automaticamente os dados da página, uma vez que usa o `$nuxt.refresh` por debaixo dos panos e, portanto, chama nuxtServerInit, asyncData e fetch no cliente.
 
@@ -85,6 +85,6 @@ Você pode passar dados à função `enablePreview`. Esses dados estarão dispon
 
 <base-alert type="next">
 
-Confira o [livro de Estrutura de Diretórios](/guides/directory-structure/nuxt)
+Confira o [livro de Estrutura de Diretórios](/docs/2.x/directory-structure/nuxt)
 
 </base-alert>

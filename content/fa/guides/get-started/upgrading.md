@@ -7,7 +7,7 @@ category: get-started
 
 > در چند مرحله ساده، می‌توانید نسخه Nuxt.js خود را ارتقا دهید.
 
-اگر درحال به روزرسانی Nuxt به نسخه 2.14 هستید و می‌خواهید از ویژگی static hosting استفاده کنید. شما نیاز خواهید داشت تا [target:static](/guides/features/deployment-targets#static-hosting) را به فایل nuxt.config.js اضافه کنید تا بتوانید بدون مشکل از دستور generate استفاده کنید.
+اگر درحال به روزرسانی Nuxt به نسخه 2.14 هستید و می‌خواهید از ویژگی static hosting استفاده کنید. شما نیاز خواهید داشت تا [target:static](/docs/2.x/features/deployment-targets#static-hosting) را به فایل nuxt.config.js اضافه کنید تا بتوانید بدون مشکل از دستور generate استفاده کنید.
 
 ```js{}[nuxt.config.js]
 export default {
@@ -17,7 +17,7 @@ export default {
 
 ## شروع به روزرسانی
 
-1. از طریق [release notes](/guide/release-notes) می‌توانید نسخه ای که می‌خواهید برنامه را به آن ارتقا دهید، همراه با توضیحات لازم برای ارتقا آن، پیدا کنید.
+1. از طریق [release notes](/docs/release-notes) می‌توانید نسخه ای که می‌خواهید برنامه را به آن ارتقا دهید، همراه با توضیحات لازم برای ارتقا آن، پیدا کنید.
 2. نسخه انتخاب شده را از طریق به روزرسانی پکیج `nuxt` در `package.json` ارتقا دهید.
 
 دستورالعمل های بعد از مرحله 2، با توجه به این که از NPM و یا Yarn استفاده می‌کنید متفاوت خواهد بود. _[Yarn](https://yarnpkg.com/en/docs/usage) پکیج منیجر انتخابی برای کار کردن با Nuxt است. زیرا ابزار توسعه ای است که تست ها با استفاده از آن نوشته شده اند._

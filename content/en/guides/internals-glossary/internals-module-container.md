@@ -57,7 +57,7 @@ This method returns final `{ dst, src, options }` object.
 
 - **template**: On top of [`addTemplate`](#addtemplate-template)'s `template` Object properties (`src`, `options`, and `fileName`),
 the parameter `template` in this scope also has plugin-specific options:
-  - `mode` (`'client'` or `'server'`): as in plugins [mode](/docs/2.x/directory-structure/plugins#object-syntax) 
+  - `mode` (`'all'`, `'client'` or `'server'`): as in plugins [mode](/docs/2.x/directory-structure/plugins#object-syntax) 
   - `ssr` (`Boolean`): Prefer `mode`, as this option will be deprecated in Nuxt 3.
 
 Registers a plugin using `addTemplate` and adds it to first of `plugins[]` option.

@@ -18,7 +18,7 @@ These classes are the heart of Nuxt and should exist on both runtime and build t
 
 #### Nuxt
 
-- [`Nuxt` Class](/docs/2.x/internals-glossary/nuxt)
+- [`Nuxt` Class](/docs/2.x/internals-glossary/internals-nuxt)
 - Source: [core/nuxt.js](https://github.com/nuxt/nuxt.js/blob/dev/packages/core/src/nuxt.js)
 
 #### Renderer

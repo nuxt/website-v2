@@ -119,8 +119,8 @@ export default {
   },
   publicRuntimeConfig: {
     nuxtLocale: process.env.NUXT_LOCALE || 'en',
-    nuxtVersion: '2.14.7',
-    nuxtStars: '31K+'
+    nuxtVersion: '2.14.8',
+    nuxtStars: '32K+'
   },
   loading: { color: '#41B883' },
   generate: {
@@ -232,9 +232,6 @@ export default {
   hooks: {
     'content:file:beforeInsert': item => {
       const stats = require('reading-time')(item.text)
-
-      if (item.slug === '' && item.extension === '.md') {
-      }
 
       item.readingTime = stats
     }

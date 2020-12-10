@@ -4,7 +4,7 @@
 # Global owners will be requested for review when someone opens a pull request
 # These owners will be the default owners for everything in
 # the repo (unless a later match takes precedence)
-*                   @Flosciante
+*                   @alexchopin
 
 # Cypress & Content
 /content/**         @debs-obrien

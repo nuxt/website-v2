@@ -59,7 +59,7 @@ _このディレクトリは追加の設定をせずに名前を変更するこ�
 <img src="/my-image.png" />
 
 <!--assets ディレクトリからの webpack された 画像-->
-<img src="@/assets/my-image-2.png" />
+<img src="~/assets/my-image-2.png" />
 ```
 
 ## Static ディレクトリ構成

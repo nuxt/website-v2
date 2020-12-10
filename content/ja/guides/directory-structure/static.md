@@ -38,7 +38,7 @@ questions:
 
 `/static/robots.txt` は、`http://localhost:3000/robots.txt` で利用できます
 
-`/static/favicon.ico` は、`localhost：3000 /favicon.ico` で利用できます
+`/static/favicon.ico` は、`localhost:3000/favicon.ico` で利用できます
 
 このオプションは `robots.txt`、`sitemap.xml`、`CNAME`（GitHub Pages のデプロイに重要です）などのファイルに役立ちます。
 

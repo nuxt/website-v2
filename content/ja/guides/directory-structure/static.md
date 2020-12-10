@@ -1,74 +1,74 @@
 ---
 title: static
-description: The `static` directory is directly mapped to the server root () and contains files that likely won't be changed. All included files will be automatically served by Nuxt and are accessible through your project root URL.
+description: `static` ディレクトリはサーバルートに直接マッピングされ、また変更されない可能性があるファイルが含まれています。含まれている全てのファイルは Nuxt によって自動で提供され、プロジェクトのルート URL からアクセスできます。
 position: 12
 category: directory-structure
 csb_link: https://codesandbox.io/embed/github/nuxt-academy/guides-examples/tree/master/04_directory_structure/13_static?fontsize=14&hidenavigation=1&theme=dark
 questions:
-  - question: In which directory should you put your files that likely won't be changed such as your favicon or robots.txt?
+  - question: favicon や robots.txt など、変更されない可能性のあるファイルをどのディレクトリに配置する必要がありますか?
     answers:
       - assets
       - static
       - src
     correctAnswer: static
-  - question: This directory can be easily renamed without any configuration
+  - question: このディレクトリは設定なしで簡単に名前を変更できます
     answers:
-      - true
-      - false
+      - 正
+      - 偽
     correctAnswer:
-  - question: Where should you put your images if you want webpack to bundle them?
+  - question: webpack に画像をバンドルさせたい時、どこに画像を配置する必要がありますか?
     answers:
       - static
       - assets
       - src
     correctAnswer: assets
-  - question: Anything in the static directory is relative to the root directory
+  - question: static ディレクトリ内のすべてのものは、ルートディレクトリに関連しています
     answers:
-      - true
-      - false
-    correctAnswer: true
-  - question: You can configure the behavior of the static directory in the nuxt.config.js
+      - 正
+      - 偽
+    correctAnswer: 正
+  - question: nuxt.config.js で static ディレクトリの動作を設定できます
     answers:
-      - true
-      - false
-    correctAnswer: true
+      - 正
+      - 偽
+    correctAnswer: 正
 ---
 
-The `static` directory is directly mapped to the server root and contains files that likely won't be changed. All included files will be automatically served by Nuxt and are accessible through your project root URL.
+`static` ディレクトリはサーバルートに直接マッピングされ、また変更されない可能性があるファイルが含まれています。含まれている全てのファイルは Nuxt によって自動で提供され、プロジェクトのルート URL からアクセスできます。
 
-`/static/robots.txt` will be available at `http://localhost:3000/robots.txt`
+`/static/robots.txt` は、`http://localhost:3000/robots.txt` で利用できます
 
-`/static/favicon.ico` will be available at  `http://localhost:3000/favicon.ico`
+`/static/favicon.ico` は、`localhost:3000/favicon.ico` で利用できます
 
-This option is helpful for files like `robots.txt`, `sitemap.xml` or `CNAME` (which is important for GitHub Pages deployment).
+このオプションは `robots.txt`、`sitemap.xml`、`CNAME`（GitHub Pages のデプロイに重要です）などのファイルに役立ちます。
 
 <base-alert>
 
-_This directory cannot be renamed without extra configuration._
+_このディレクトリは追加の設定をせずに名前を変更することはできません。_
 
 </base-alert>
 
-## Static Assets
+## Static アセット
 
-If you don't want to use Webpack assets from the `assets` directory, you can add the images to the static directory.
+`assets` ディレクトリの Webpack assets を使用したくない場合は、画像を static ディレクトリに追加できます。
 
-In your code, you can then reference these files relative to the root (`/`):
+コードではルート（`/`）を基準にしてこれらのファイルを参照できます:
 
 ```html
-<!-- Static image from static directory -->
+<!--static ディレクトリからの static 画像-->
 <img src="/my-image.png" />
 
-<!-- webpacked image from assets directory -->
-<img src="'~/assets/my-image-2.png" />
+<!--assets ディレクトリからの webpack された 画像-->
+<img src="~/assets/my-image-2.png" />
 ```
 
-## Static Directory Config
+## Static ディレクトリ設定
 
-Should you need to you can configure the `static/` directory behavior in the `nuxt.config.js` file.
+必要に応じて `nuxt.config.js` ファイルで `static/` ディレクトリの動作を設定できます。
 
-### Static asset Prefix
+### Static アセットプレフィックス
 
-If you deploy Nuxt.js to a subfolder, e.g. `/blog/`, the router base will be added to the static asset path by default. If you want to disable this behavior, you can set `static.prefix` to false in the `nuxt.config.js`.
+Nuxt.js をサブフォルダにデプロイする場合（例：`/blog/` の場合）ルータベースはデフォルトで static アセットパスに追加されます。この動作を無効にしたいなら、`nuxt.config.js` で `static.prefix` を false に設定します。
 
 ```js
 export default {
@@ -78,8 +78,12 @@ export default {
 }
 ```
 
-Default: `/blog/my-image.png`
+デフォルト: `/blog/my-image.png`
 
-With `static.prefix` disabled: `/my-image.png`
+`static.prefix` を無効にした場合: `/my-image.png`
+
+<app-modal>
+  <code-sandbox  :src="csb_link"></code-sandbox>
+</app-modal>
 
 <quiz :questions="questions"></quiz>

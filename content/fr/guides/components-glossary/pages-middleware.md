@@ -3,6 +3,7 @@ title: La propriété middleware
 description: Définit le middleware pour une page spécifique de l'application.
 menu: La propriété middleware
 category: components-glossary
+position: 6
 ---
 
 - Type: `String` or `Array` or `Function`

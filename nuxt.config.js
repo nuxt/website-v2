@@ -177,7 +177,7 @@ export default {
         code: 'id',
         iso: 'id-ID',
         file: 'id-ID.js',
-        name: 'Indonesian',
+        name: 'Bahasa Indonesia',
         domain: 'https://id.nuxtjs.org'
       },
       {

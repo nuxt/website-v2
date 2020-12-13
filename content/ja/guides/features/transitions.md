@@ -129,7 +129,7 @@ export default {
 上のように設定すると、コンポーネントは次のようにセットされます:
 
 ```html{}[pages/index.vue]
-<transition name="test" mode="out-in"></transition>
+<transition name="home" mode="out-in"></transition>
 ```
 
 `transition` オブジェクトは name、 mode、 css、 duration などの多くのプロパティを持つことができます。詳細は vue のドキュメントを参照してください。

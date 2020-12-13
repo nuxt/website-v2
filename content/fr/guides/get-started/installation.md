@@ -8,27 +8,71 @@ csb_link: https://codesandbox.io/embed/github/nuxt-academy/guides-examples/tree/
 
 ## Prérequis
 
-Nous pouvons découvrir ci-dessous comment créer un projet Nuxt.js fonctionnel en 4 étapes.
+- [node](https://nodejs.org) - au moins v10.13 _Nous vous recommandons d'installer la dernière version LTS._
+- Un éditeur de texte, nous recommandons [VSCode](https://code.visualstudio.com/) avec l'extension [Vetur](https://marketplace.visualstudio.com/items?itemName=octref.vetur) ou [WebStorm](https://www.jetbrains.com/webstorm/)
+- Un terminal, nous vous recommandons d'utiliser [le terminal intégré de VSCode](https://code.visualstudio.com/docs/editor/integrated-terminal) ou le [terminal de Webstorm](https://www.jetbrains.com/help/webstorm/terminal-emulator.html).
+
+## En utilisant create-nuxt-app
+
+Pour commencer rapidement, vous pouvez utiliser [create-nuxt-app](https://github.com/nuxt/create-nuxt-app).
+
+Assurez-vous que npx est installé (npx est livré par défaut depuis NPM 5.2.0) ou npm v6.1 ou yarn.
+
+<code-group>
+  <code-block label="Yarn" active>
+
+```bash
+yarn create nuxt-app <project-name>
+```
+
+  </code-block>
+  <code-block label="NPX">
+
+```bash
+npx create-nuxt-app <project-name>
+```
+
+  </code-block>
+    <code-block label="NPM">
+
+```bash
+npm init nuxt-app <project-name>
+```
+
+  </code-block>
+
+</code-group>
+
+Il vous posera quelques questions (nom, options Nuxt, framework UI, TypeScript, linter, framework de test, etc). Pour en savoir plus sur toutes les options voir [Create Nuxt app](https://github.com/nuxt/create-nuxt-app/blob/master/README.md).
+
+Une fois toutes les questions répondues, il installera toutes les dépendances. L'étape suivante consiste à accéder au dossier du projet et à le lancer :
+
+<code-group>
+  <code-block label="Yarn" active>
+
+```bash
+cd <project-name>
+yarn dev
+```
+
+  </code-block>
+  <code-block label="NPM">
+
+```bash
+cd <project-name>
+npm run dev
+```
+
+  </code-block>
+</code-group>
+
+L'application s'exécute maintenant sur [http://localhost:3000](http://localhost:3000). Well done!
 
 <base-alert type="info">
 
-Pour commencer avec Nuxt.js, nous pouvons également utiliser [CodeSandbox](https://template.nuxtjs.org) qui est une très bonne manière de tester Nuxt.js rapidement et/ou de partager votre code avec d'autres personnes.
+Une autre façon de démarrer avec Nuxt.js est d'utiliser [CodeSandbox](https://template.nuxtjs.org) ce qui est un excellent moyen de jouer rapidement avec Nuxt.js et/ou de partager votre code avec d'autres personnes.
 
 </base-alert>
-
-### Node
-
-[node](https://nodejs.org/en/download/) - au moins v8.9.0
-
-_Nous recommandons d'avoir la dernière version installée._
-
-### Éditeur de texte
-
-On peut utiliser celui que l'on préfère, mais nous recommandons [VSCode](https://code.visualstudio.com/).
-
-### Terminal
-
-On peut utiliser celui que l'on préfère, mais nous recommandons le [terminal de VSCode](https://code.visualstudio.com/docs/editor/integrated-terminal).
 
 ## Commencer de zéro
 

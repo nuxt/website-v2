@@ -3,6 +3,7 @@ title: La propriété key
 description: Définit la propriété `key` pour un composant `<router-view>` interne
 menu: La propriété key
 category: components-glossary
+position: 3
 ---
 
 > Définit la propriété `key` pour un composant `<router-view>` interne

@@ -1,7 +1,7 @@
 ---
-title: Le ModuleContainer
-description: La classe ModuleContainer de Nuxt
-menu: Le ModuleContainer
+title: Conteneur de module
+description: Conteneur de module Nuxt
+menu: Conteneur de module
 category: internals-glossary
 position: 6
 ---

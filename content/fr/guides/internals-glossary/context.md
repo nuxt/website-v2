@@ -1,7 +1,7 @@
 ---
 title: Le Contexte
 description: Le `context` fournit des objets/paramètres en plus aux composants Vue et est disponible dans des lifecycles Nuxt spéciaux comme par exemple `asyncData`, `fetch`, `plugins`, `middleware` et `nuxtServerInit`.
-menu: Le Contexte
+menu: Contexte
 category: internals-glossary
 position: 1
 ---

@@ -5,44 +5,38 @@ position: 1
 category: features
 ---
 
-## Universel
+## Rendu côté serveur et sites statiques
 
-`mode: 'universal'`: Application isomorphique (rendu côté serveur ou génération de site statique).
+**Les sites de rendus côté serveur** sont rendus sur le serveur chaque fois que l'utilisateur demande une page, par conséquent un serveur est nécessaire pour pouvoir servir la page à chaque demande.
 
-Le mode universel est utilisé pour le rendu côté serveur ainsi que pour les sites statiques.
+**Les sites statiques** sont très similaires aux applications rendues côté serveur, la principale différence étant que les sites statiques sont rendus au moment de la construction, aucun serveur n'est donc nécessaire. La navigation d'une page à l'autre se fait alors côté client.
 
-Les sites statiques sont très similaires aux applications générées côté-serveur avec pour différence principale que les sites statiques sont générés lors du build, ce qui fait qu'il n'y a pas besoin de serveur par la suite. La navigation d'une page à une autre se fait côté client.
-
-Si nous utilisons le mode de render côté serveur (SSR), le site va requêter le serveur à chaque fois que le user veut accéder à une page, il y aura donc besoin d'un serveur pour générer la page et ce pour chaque requête.
-
-Se référer aux [cibles de déploiement](/guides/features/deployment-targets) pour plus d'informations sur l'hébergement en mode statique et serveur.
+Voir les [cibles de déploiements](/docs/2.x/features/deployment-targets) pour plus d'informations sur l'hébergement statique et serveur.
 
 ```js{}[nuxt.config.js]
 export default {
-  mode: 'universal' // par défaut: universel
+  ssr: true // default value
 }
 ```
 
 <base-alert type="info">
 
-Nous n'avons pas besoin d'ajouter cela à notre configuration nuxt afin d'être en mode universel car c'est déjà le mode par défaut.
+Vous n'avez pas besoin d'ajouter `ssr: true` à votre configuration nuxt pour activer le rendu côté serveur vu qu'il est activé par défaut.
 
 </base-alert>
 
-## SPA
+## Rendu côté client uniquement
 
-`mode: 'spa'`: Pas de render côté serveur, seulement du côté client.
-
-Avec les Single Page Applications il n'y a pas de render côté serveur, seulement du côté client. Render côté client signifie que le navigateur va faire le rendu grâce au JavaScript. Au lieu d'avoir le contenu dans un fichier HTML, on va juste avoir un document HTML basique avec un fichier JavaScript qui va render le reste du site grâce au navigateur.
+Avec le rendu côté client uniquement, il n'y a pas de rendu côté serveur. Le rendu côté client signifie le rendu du contenu dans le navigateur à l'aide de JavaScript. Au lieu d'obtenir tout le contenu du HTML, nous obtenons simplement un document HTML de base avec un fichier JavaScript qui rendra ensuite le reste du site à l'aide du navigateur. Pour le rendu côté client, définissez ssr sur `false`.
 
 ```js{}[nuxt.config.js]
 export default {
-  mode: 'spa'
+  ssr: false
 }
 ```
 
 <base-alert type="next">
 
-Plus d'informations sur la [propriété mode](/guides/configuration-glossary/configuration-mode).
+[La propriété ssr](/docs/2.x/configuration-glossary/configuration-ssr)
 
 </base-alert>

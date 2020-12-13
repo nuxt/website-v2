@@ -39,7 +39,7 @@ questions:
 
 La section des vues décrit tout ce que nous avons besoin de savoir pour configurer la data et les vues pour une route spécifique dans notre application Nuxt.js. Les vues se composent d'un template, d'un layout et de la page actuelle. En plus de cela, nous pouvons définir des méta tags personnalisés pour la section `head` de chaque page. Ces derniers sont imporant pour le SEO (référencement naturel).
 
-![Composition d'une vue dans Nuxt.js](/guides/views.png)
+![Composition of a View in Nuxt.js](/docs/2.x/views.png)
 
 Composition d'une vue dans Nuxt.js
 

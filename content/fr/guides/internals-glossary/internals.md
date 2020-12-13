@@ -1,7 +1,7 @@
 ---
 title: Introduction aux modules Nuxt
 description: Mieux comprendre les modules internes de Nuxt
-menu: Introduction aux modules Nuxt
+menu: Modules Nuxt
 category: internals-glossary
 position: 3
 ---

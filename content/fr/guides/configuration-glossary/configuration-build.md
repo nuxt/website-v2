@@ -156,7 +156,7 @@ Si cela a déjà été activé grâce au fichier `nuxt.config.js` ou autrement, 
 
 <base-alert>
 
-**Warning**: Les clés `isClient` et `isServer` fournies n'ont rien à voir avec celles présentes dans le [`context`](/guides/internals-glossary/context). Elles ne sont **pas** dépréciées. Il ne faut en outre pas utiliser `process.client` et `process.server` ici car ils seront `undefined` à ce niveau.
+**Attention**: Les clés `isClient` et `isServer` fournies n'ont rien à voir avec celles présentes dans le [`context`](/guides/internals-glossary/context). Elles ne sont **pas** dépréciées. Il ne faut en outre pas utiliser `process.client` et `process.server` ici car ils seront `undefined` à ce niveau.
 
 </base-alert>
 
@@ -639,7 +639,7 @@ Cette option est automatiquement définie en se basant sur la valeur de `mode` s
 
 <base-alert>
 
-**Warning**: cette propriété est dépréciée. Il faudrait utiliser le module [style-resources-module](https://github.com/nuxt-community/style-resources-module/) à la place, pour avoir des performances accrues et une meilleure DX !
+**Attention**: cette propriété est dépréciée. Il faudrait utiliser le module [style-resources-module](https://github.com/nuxt-community/style-resources-module/) à la place, pour avoir des performances accrues et une meilleure DX !
 
 </base-alert>
 

@@ -63,7 +63,20 @@ questions:
     correctAnswer: vrai
 ---
 
-Dans Nuxt.js, nous avons 2 façons de récupérer de la data depuis une API. Nous pouvons utiliser la méthode fetch ou bien asyncData.
+Nuxt.js prend en charge les modèles Vue traditionnels pour le chargement de données dans votre application côté client, comme la récupération de données dans le hook `mounted()` d'un composant. Cependant, les applications universelles doivent utiliser des hooks spécifiques à Nuxt.js pour pouvoir restituer les données lors du rendu côté serveur. Cela permet à votre page de s'afficher avec toutes ses données requises présentes.
+
+Nuxt a deux hooks pour le chargement asynchrone des données:
+
+- Le hook `fetch` (Nuxt 2.12+). Ce hook peut être placé sur n'importe quel composant et fournit des raccourcis pour le rendu des états de chargement (pendant le rendu côté client) et des erreurs.
+- Le hook `asyncData`. Ce hook ne peut être placé que sur les composants _page_. Contrairement à `fetch`, ce hook n'affiche pas d'espace réservé de chargement pendant le rendu côté client: à la place, ce hook bloque la navigation de l'itinéraire jusqu'à ce qu'il soit résolu, affichant une erreur de page en cas d'échec.
+
+<base-alert>
+
+Dans les versions de Nuxt antérieures à la 2.12, le hook `fetch` fonctionnait un peu comme `asyncData` aujourd'hui. Cette fonctionnalité est toujours supportée aujourd'hui pour des raisons de rétrocompatibilité: si un argument `context` est accepté dans votre `fetch()`, il sera considéré comme un hook de récupération "hérité". Cette fonctionnalité est obsolète et doit être remplacée par `asyncData(context)` ou par un [middleware anonyme](/docs/2.x/directory-structure/middleware#anonymous-middleware) en utilisant `middleware(context)`.
+
+</base-alert>
+
+Ces hooks peuvent être utilisés avec _toute bibliothèque de récupération de données_ que vous choisissez. Nous vous recommandons d'utiliser [@nuxt/http](https://http.nuxtjs.org/) ou [@nuxt/axios](https://axios.nuxtjs.org/) pour faire des requêtes HTTP aux API. Vous trouverez plus d'informations sur ces bibliothèques, telles que des guides de configuration, des en-têtes d'authentification, dans leur documentation respective.
 
 ## Le hook fetch
 

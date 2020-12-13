@@ -15,7 +15,7 @@ questions:
     answers:
       - true
       - false
-    correctAnswer:
+    correctAnswer: false
   - question: Where should you put your images if you want webpack to bundle them?
     answers:
       - static
@@ -59,7 +59,7 @@ In your code, you can then reference these files relative to the root (`/`):
 <img src="/my-image.png" />
 
 <!-- webpacked image from assets directory -->
-<img src="'~/assets/my-image-2.png" />
+<img src="~/assets/my-image-2.png" />
 ```
 
 ## Static Directory Config

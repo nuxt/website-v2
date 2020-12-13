@@ -1,92 +1,92 @@
 ---
 title: content
-description: Empower your Nuxt.js application with `@nuxtjs/content` module where you can write in a `content/` directory and fetch your Markdown, JSON, YAML and CSV files through a MongoDB like API, acting as a **Git-based Headless CMS**.
+description: Berdayakan aplikasi Nuxt.js Anda dengan modul `@nuxtjs/content` dimana Anda dapat menulis di dalam direktori `content/` dan mengambil berkas Markdown, JSON, YAML, dan CSV melalui API mirip MongoDB, yang bertindak sebagai **Git-based Headless CMS**.
 position: 4
 category: directory-structure
 img: /docs/2.x/nuxt-content.svg
 imgAlt: nuxt content module
 questions:
-  - question: What is the default directory name of the directory where you add your markdown files?
+  - question: Apa nama direktori bawaan dari direktori tempat Anda menambahkan berkas _markdown_?
     answers:
       - markdown
       - content
       - pages
     correctAnswer: content
-  - question: What component do you use in your template to display your markdown page body?
+  - question: Komponen apa yang Anda gunakan dalam template Anda untuk menampilkan badan pada halaman _markdown_ Anda?
     answers:
       - <markdown>
       - <nuxt>
       - <nuxt-content>
     correctAnswer: <nuxt-content>
-  - question: What class is automatically added so you can style your markdown?
+  - question: Kelas apa yang ditambahkan secara otomatis sehingga Anda dapat mengatur gaya pada berkas _markdown_ Anda?
     answers:
       - .content
       - .nuxt-content
       - .markdown
     correctAnswer: .nuxt-content
-  - question: The content module can handle markdown, csv, yaml and json files
+  - question: Modul konten dapat menangani berkas markdown, csv, yaml dan json
     answers:
       - true
       - false
     correctAnswer: true
-  - question: You can add vue components to your markdown files
+  - question: Anda dapat menambahkan komponen vue ke berkas _markdown_ Anda
     answers:
       - true
       - false
     correctAnswer: true
-  - question: Which do you use to list, filter and search your content?
+  - question: Manakah yang Anda gunakan untuk mendaftar, memfilter, dan mencari konten Anda?
     answers:
       - $nuxt-content()
       - $content()
       - $nuxt()
     correctAnswer: $content()
-  - question: What do you use to get previous and next articles?
+  - question: Apa yang Anda gunakan untuk mendapatkan artikel sebelumnya dan berikutnya?
     answers:
       - .surround(slug)
       - .prev-next(slug)
       - .slug()
     correctAnswer: .surround(slug)
-  - question: PrismJS classes are applied to code blocks by default?
+  - question: Kelas PrismJS diterapkan ke blok kode secara bawaan?
     answers:
       - true
       - false
     correctAnswer: true
-  - question: What is the default URL you use to access the API to see your JSON?
+  - question: Apa URL bawaan yang Anda gunakan untuk mengakses API untuk melihat JSON Anda?
     answers:
       - http://localhost:3000/content
       - http://localhost:3000/_content
       - http://localhost:3000/api
     correctAnswer: http://localhost:3000/_content
-  - question: Which heading tags are used to create the Table of contents
+  - question: Tag judul mana yang digunakan untuk membuat Daftar Isi
     answers:
       - h1 and h2
       - h2 and h3
       - h1 and h2 and h3
     correctAnswer: h2 and h3
-  - question: You can use the content module with static site generation
+  - question: Anda dapat menggunakan modul konten dengan mode pembuatan situs statis
     answers:
       - true
       - false
     correctAnswer: true
 ---
 
-Empower your Nuxt.js application with `@nuxtjs/content` module where you can write in a `content/` directory and fetch your Markdown, JSON, YAML and CSV files through a MongoDB like API, acting as a **Git-based Headless CMS**.
+Berdayakan aplikasi Nuxt.js Anda dengan modul `@nuxtjs/content` dimana Anda dapat menulis di dalam direktori `content/` dan mengambil berkas Markdown, JSON, YAML, dan CSV melalui API mirip MongoDB, yang bertindak sebagai **Git-based Headless CMS**.
 
 <app-modal :src="img" :alt="imgAlt"></app-modal>
 
-### Hot reload in development
+### Memuat ulang secara langsung dalam pengembangan (_Hot reload_)
 
-The content module is blazing fast when it comes to hot reloading in development due to not having to go through webpack when you make changes to your markdown files. You can also listen to the `content:update` event and create a plugin so that every time you update a file in your content directory it will dispatch a fetchCategories method for example.
+Modul konten sangat cepat dalam hal memuat ulang secara langsung dalam pengembangan karena tidak harus melalui webpack saat Anda membuat perubahan pada berkas _markdown_ Anda. Anda juga dapat mendengarkan peristiwa `content: update` dan membuat _plugin_ sehingga setiap kali Anda memperbarui berkas di dalam direktori konten Anda, sebagai contoh, metode _fetchCategories_ akan dikirim.
 
 <base-alert type="next">
 
-[See the content module docs for more details](https://content.nuxtjs.org/advanced#handling-hot-reload)
+[Lihat dokumentasi modul konten untuk lebih jelasnya](https://content.nuxtjs.org/advanced#handling-hot-reload)
 
 </base-alert>
 
-### Displaying content
+### Menampilkan konten
 
-You can use `<nuxt-content>` component directly in your template to display the page body.
+Anda dapat menggunakan komponen `<nuxt-content>` langsung di template Anda untuk menampilkan badan halaman.
 
 ```html{}[pages/blog/_slug.vue]
 <template>
@@ -98,15 +98,15 @@ You can use `<nuxt-content>` component directly in your template to display the 
 
 <base-alert type="next">
 
-See the [content module docs](https://content.nuxtjs.org/displaying#component) for more details
+Lihat [dokumentasi modul konten](https://content.nuxtjs.org/displaying#component) untuk lebih jelasnya
 
 </base-alert>
 
-### Styling your content
+### Menata gaya konten Anda
 
-Depending on what you're using to design your app, you may need to write some style to properly display the markdown.
+Bergantung pada apa yang Anda gunakan untuk mendesain aplikasi, Anda mungkin perlu menulis beberapa gaya untuk menampilkan _markdown_ dengan benar.
 
-`<nuxt-content>` component will automatically add a `.nuxt-content` class, you can use it to customize your styles.
+Komponen `<nuxt-content>` akan secara otomatis menambahkan kelas `.nuxt-content`, Anda dapat menggunakannya untuk menyesuaikan gaya Anda.
 
 ```html
 <style>
@@ -122,35 +122,35 @@ Depending on what you're using to design your app, you may need to write some st
 
 <base-alert type="next">
 
-See the [content module docs](https://content.nuxtjs.org/displaying#style) for more details
+Lihat [dokumentasi modul konten](https://content.nuxtjs.org/displaying#style) untuk lebih jelasnya
 
 </base-alert>
 
-### Handles Markdown, CSV, YAML, JSON(5)
+### Menangani Markdown, CSV, YAML, JSON (5)
 
-This module converts your .md files into a JSON AST tree structure, stored in a body variable. You can also add a YAML front matter block to your markdown files or a .yaml file which will be injected into the document. You can also add a json/json5 file which can also be injected into the document. And you can use a .csv file where rows will be assigned to the body variable.
+Modul ini mengonversi berkas .md Anda menjadi struktur pohon JSON AST, disimpan dalam variabel _body_. Anda juga dapat menambahkan blok materi depan YAML ke berkas _markdown_ atau berkas .yaml yang akan dimasukkan ke dalam dokumen. Anda juga dapat menambahkan berkas json/json5 yang juga dapat dimasukkan ke dalam dokumen. Dan Anda dapat menggunakan berkas .csv di mana baris akan ditetapkan ke variabel _body_.
 
 ```md
 ---
-title: My first Blog Post
-description: Learning how to use @nuxt/content to create a blog
+title: Postingan Blog Pertama Saya
+description: Mempelajari cara menggunakan @nuxt/content untuk membuat blog
 ---
 ```
 
 <base-alert type="next">
 
-See the [content module docs](https://content.nuxtjs.org/writing#markdown) for more details
+Lihat [dokumentasi modul konten](https://content.nuxtjs.org/writing#markdown) untuk lebih jelasnya
 
 </base-alert>
 
-### Vue components in Markdown
+### Komponen Vue dalam _Markdown_
 
-You can use Vue components directly in your markdown files. You will however need to use your components as kebab case and cannot use self-closing tags.
+Anda dapat menggunakan komponen Vue secara langsung di dalam berkas _markdown_ Anda. Namun Anda perlu menggunakan komponen Anda dalam bentuk _kebab case_ dan tidak dapat menggunakan tag penutup sendiri.
 
 ```html{}[components/global/InfoBox.vue]
 <template>
   <div class="bg-blue-500 text-white p-4 mb-4">
-    <p><slot name="info-box">default</slot></p>
+    <p><slot name="info-box">bawaan</slot></p>
   </div>
 </template>
 ```
@@ -158,20 +158,20 @@ You can use Vue components directly in your markdown files. You will however nee
 ```html{}[content/articles/my-first-blog-post.md]
 <info-box>
   <template #info-box>
-    This is a vue component inside markdown using slots
+    Ini adalah komponen vue di dalam _markdown_ menggunakan slot
   </template>
 </info-box>
 ```
 
 <base-alert type="next">
 
-See the [content module docs](https://content.nuxtjs.org/writing#vue-components) for more details
+Lihat [dokumentasi modul konten](https://content.nuxtjs.org/writing#vue-components) untuk lebih jelasnya
 
 </base-alert>
 
-### Fully Searchable API
+### API yang Sepenuhnya Dapat Dicari
 
-You can use `$content()` to list, filter and search your content easily.
+Anda dapat menggunakan `$content()` untuk membuat daftar, memfilter, dan mencari konten Anda dengan mudah.
 
 ```html{}[pages/blog/index.vue]
 <script>
@@ -192,13 +192,13 @@ You can use `$content()` to list, filter and search your content easily.
 
 <base-alert type="next">
 
-See the [content module docs](https://content.nuxtjs.org/fetching#methods) for more details
+Lihat [dokumentasi modul konten](https://content.nuxtjs.org/fetching#methods) untuk mengetahui detail selengkapnya
 
 </base-alert>
 
-### Previous and Next articles
+### Artikel Sebelumnya dan Berikutnya
 
-The content module includes a `.surround(slug)` so that you get previous and next articles easily.
+Modul konten menyertakan `.surround(slug)` sehingga Anda dapat memperoleh artikel sebelumnya dan berikutnya dengan mudah.
 
 ```js
 async asyncData({ $content, params }) {
@@ -224,13 +224,13 @@ async asyncData({ $content, params }) {
 
 <base-alert type="next">
 
-See the [content module docs](https://content.nuxtjs.org/fetching#surroundslug-options) for more details
+Lihat [dokumentasi modul konten](https://content.nuxtjs.org/fetching#surroundslug-options) untuk mengetahui detail selengkapnya
 
 </base-alert>
 
-### Full-text search
+### Pencarian teks lengkap (_Full-text_)
 
-The content module comes with a full text search so you can easily search across your markdown files without having to install anything.
+Modul konten hadir dengan pencarian teks lengkap sehingga Anda dapat dengan mudah mencari di seluruh berkas markdown Anda tanpa harus memasang apa pun.
 
 ```html{}[components/AppSearchInput.vue]
 <script>
@@ -259,13 +259,13 @@ The content module comes with a full text search so you can easily search across
 
 <base-alert type="next">
 
-See the [content module docs](https://content.nuxtjs.org/fetching#searchfield-value) for more details
+Lihat [dokumentasi modul konten](https://content.nuxtjs.org/fetching#searchfield-value) untuk mengetahui detail selengkapnya
 
 </base-alert>
 
-### Syntax highlighting
+### Penyorotan sintaks
 
-This module automatically wraps codeblocks and applies [PrismJS](https://prismjs.com/) classes. You can also add a different PrismJS theme or disable it altogether.
+Modul ini secara otomatis menggabungkan blok kode dan menerapkan kelas [PrismJS](https://prismjs.com/). Anda juga dapat menambahkan tema PrismJS yang berbeda atau menonaktifkannya sama sekali.
 
 <code-group>
   <code-block label="Yarn" active>
@@ -296,23 +296,23 @@ content: {
 
 <base-alert type="next">
 
-See the [content module docs](https://content.nuxtjs.org/writing#syntax-highlighting) for more details
+Lihat [dokumentasi modul konten](https://content.nuxtjs.org/writing#syntax-highlighting) untuk mengetahui detail selengkapnya
 
 </base-alert>
 
-### Extend Markdown Parsing
+### Memperluas Penguraian Markdown (_Extend Markdown Parsing_)
 
-Originally markdown does not support highlighting lines inside codeblock nor filenames. The content module allows it with its own custom syntax. Line numbers are added to the `pre` tag in data-line attributes and the filename will be converted to a `span` with a `filename` class, so you can style it.
+Awalnya markdown tidak mendukung penyorotan baris di dalam blok kode atau nama berkas. Modul konten bisa memungkinkannya dengan sintaks kustomnya sendiri. Nomor baris ditambahkan ke tag `pre` di atribut data-line dan nama berkas akan diubah menjadi `span` dengan kelas `filename`, sehingga Anda dapat menatanya.
 
 <base-alert type="next">
 
-See the [content module docs](https://content.nuxtjs.org/writing#codeblocks) for more details
+Lihat [dokumentasi modul konten](https://content.nuxtjs.org/writing#codeblocks) untuk mengetahui detail selengkapnya
 
 </base-alert>
 
-### Table of contents generation
+### Pembuatan daftar isi
 
-A toc(Table of Contents) array property will be injected into your document, listing all the headings with their titles and ids, so you can link to them.
+Properti array Daftar Isi akan dimasukkan ke dalam dokumen Anda, mencantumkan semua judul dengan judul dan idnya, sehingga Anda dapat menautkannya.
 
 ```html{}[pages/blog/_slug.vue]
 <nav>
@@ -326,61 +326,61 @@ A toc(Table of Contents) array property will be injected into your document, lis
 
 <base-alert type="next">
 
-See the [content module docs](https://content.nuxtjs.org/writing#table-of-contents) for more details
+Lihat [dokumentasi modul konten](https://content.nuxtjs.org/writing#table-of-contents) untuk mengetahui detail selengkapnya
 
 </base-alert>
 
-### Powerful QueryBuilder API (MongoDB like)
+### API QueryBuilder yang Kuat (seperti MongoDB)
 
-The content module comes with a powerful QueryBuilder API similar to MongoDB which allows you to easily see the JSON of each directory at `http://localhost:3000/_content/`. The endpoint is accessible on GET and POST request, so you can use query params.
+Modul konten hadir dengan _QueryBuilder API_ yang mirip dengan MongoDB yang memungkinkan Anda untuk dengan mudah melihat JSON dari setiap direktori di `http://localhost:3000/_content/`. _Endpoint_ dapat diakses pada permintaan GET dan POST, sehingga Anda dapat menggunakan parameter _query_.
 
 `http://localhost:3000/_content/articles?only=title&only=description&limit=10`
 
 <base-alert type="next">
 
-See the [content module docs](https://content.nuxtjs.org/fetching#api) for more details
+Lihat [dokumentasi modul konten](https://content.nuxtjs.org/fetching#api) untuk mengetahui detail selengkapnya
 
 </base-alert>
 
-### Extend with hooks
+### Memperluas dengan kait (_hooks_)
 
-You can use hooks to extend the module so you can add data to a document before it is stored.
+Anda dapat menggunakan kait untuk memperluas modul sehingga Anda dapat menambahkan data ke dokumen sebelum disimpan.
 
 <base-alert type="next">
 
-See the [content module docs](https://content.nuxtjs.org/advanced#hooks) for more details
+Lihat [dokumentasi modul konten](https://content.nuxtjs.org/advanced#hooks) untuk mengetahui detail selengkapnya
 
 </base-alert>
 
-### Integration with @nuxtjs/feed
+### Integrasi dengan @nuxtjs/feed
 
-In the case of articles, the content can be used to generate news feeds using [@nuxtjs/feed](https://www.npmjs.com/package/@nuxtjs/feed) module.
+Untuk artikel, konten dapat digunakan untuk membuat feed berita menggunakan modul [@nuxtjs/feed](https://www.npmjs.com/package/@nuxtjs/feed).
 
 <base-alert type="next">
 
-See the [content module docs](https://content.nuxtjs.org/advanced#integration-with-nuxtjsfeed) for more details
+Lihat [dokumentasi modul konten](https://content.nuxtjs.org/advanced#integration-with-nuxtjsfeed) untuk mengetahui detail selengkapnya
 
 </base-alert>
 
-### Support static site generation
+### Mendukung pembuatan situs statis
 
-The content module works with static site generation using the `nuxt generate`. All routes will be automatically generated thanks to the nuxt crawler feature.
+Modul konten bekerja dengan pembuatan situs statis menggunakan `nuxt generate`. Semua rute akan dibuat secara otomatis berkat fitur _crawler nuxt_.
 
 <base-alert>
 
-If using Nuxt <2.13 and you need to specify the dynamic routes you can do so using the generate property and using @nuxt/content programmatically.
+Jika menggunakan Nuxt <2.13 dan Anda perlu menentukan rute dinamis, Anda dapat melakukannya menggunakan properti generate dan menggunakan @nuxt/content secara terprogram.
 
 </base-alert>
 
 <base-alert type="next">
 
-See the [content module docs](https://content.nuxtjs.org/advanced#programmatic-usage) for more details
+Lihat [dokumentasi modul konten](https://content.nuxtjs.org/advanced#programmatic-usage) untuk mengetahui detail selengkapnya
 
 </base-alert>
 
 <base-alert type="next">
 
-To see the full [documentation for the content module](https://content.nuxtjs.org/)
+Untuk melihat secara lengkap [dokumentasi untuk modul konten](https://content.nuxtjs.org/)
 
 </base-alert>
 

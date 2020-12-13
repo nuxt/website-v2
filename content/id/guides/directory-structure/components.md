@@ -39,7 +39,7 @@ Direktori `components` berisi komponen Vue.js Anda. Komponen adalah apa yang bia
 
 Untuk mengakses data asynchronous dari API di komponen Anda, Anda dapat menggunakan Nuxt [`fetch()` hook](/docs/2.x/features/data-fetching#the-fetch-method).
 
-Dengan menggunakan `$ fetchState.pending` kita dapat menampilkan pesan ketika data sedang menunggu untuk dimuat dan dengan menggunakan` $ fetchState.error` kita dapat menampilkan pesan kesalahan jika ada kesalahan saat proses pengambilan data. Saat menggunakan fetch, kita harus mendeklarasikan data pada properti data. Ini kemudian diisi dengan data yang berasal dari pengambilan.
+Dengan menggunakan `$fetchState.pending` kita dapat menampilkan pesan ketika data sedang menunggu untuk dimuat dan dengan menggunakan` $fetchState.error` kita dapat menampilkan pesan kesalahan jika ada kesalahan saat proses pengambilan data. Saat menggunakan fetch, kita harus mendeklarasikan data pada properti data. Ini kemudian diisi dengan data yang berasal dari pengambilan.
 
 ```html{}[components/MountainsList.vue]
 <template>

@@ -69,7 +69,7 @@ this.addPlugin({
 })
 ```
 
-If you want, you can specify a custom path for the `fileName` too, so you can prevent name clashing and choose the folder structure inside `.nuxt` folder:
+If you choose to specify a `fileName`, you can configure a custom path for the `fileName` too, so you can choose the folder structure inside `.nuxt` folder or prevent name collisioning:
 
 ```
 {

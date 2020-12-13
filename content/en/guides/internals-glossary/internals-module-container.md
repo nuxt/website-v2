@@ -55,14 +55,28 @@ This method returns final `{ dst, src, options }` object.
 
 ### addPlugin (template)
 
-- **template**: On top of [`addTemplate`](#addtemplate-template)'s `template` Object properties (`src`, `options`, and `fileName`),
-the parameter `template` in this scope also has plugin-specific options:
-  - `mode` (`'all'`, `'client'` or `'server'`): as in plugins [mode](/docs/2.x/directory-structure/plugins#object-syntax) 
-  - `ssr` (`Boolean`): Prefer `mode`, as this option will be deprecated in Nuxt 3.
+- **template**: same signature as [`addTemplate`](#addtemplate-template)'s `template` Object properties (`src`, `options`, and `fileName`).
+  
+  Remember that with [plugins](/docs/2.x/directory-structure/plugins#name-conventional-plugin), you can specify a `fileName` to be run only in `client` or in `server` sides. Avoid passing `mode` and `ssr` options, as those will be deprecated.
 
-Registers a plugin using `addTemplate` and adds it to first of `plugins[]` option.
+Registers a plugin using `addTemplate` and adds it to the top of `plugins[]` option.
+  
+```
+this.addPlugin({
+  src: path.resolve(__dirname, 'templates/foo.js'),
+  /* optional */ fileName: 'foo.server.js' // will only run in server side
+  options: moduleOptions
+})
+```
 
-You can use `template.ssr: false` to disable plugin including in SSR bundle.
+If you want, you can specify a custom path for the `fileName` too, so you can prevent name clashing and choose the folder structure inside `.nuxt` folder:
+
+```
+{
+  fileName: path.join('folder', 'foo.client.js'), // will result in `.nuxt/folder/foo.client.js`
+}
+```
+
 
 ### addServerMiddleware (middleware)
 

@@ -49,7 +49,7 @@ export default axios.create({
 
 ## process.env == {}
 
-Nuxt は webpack の `definePlugin` を用いて環境変数を定義することに注意してください。つまり、Node.js の実際の `process` または `process.env` が利用可能でも定義されていないことを意味します。nuxt.config.js で定義された `env` プロパティは `process.env.xxxx` によってそれぞれ個別にマップされコンパイル時に変換されます。
+Nuxt は webpack の `definePlugin` を用いて環境変数を定義することに注意してください。つまり、Node.js の実際の `process` または `process.env` が利用可能でもなければ定義されてもいないことを意味します。nuxt.config.js で定義された `env` プロパティは `process.env.xxxx` へそれぞれ個別にマップされコンパイル時に変換されます。
 
 つまり、`console.log(process.env)` は `{}` を出力しますが、`console.log(process.env.your_var)` は定義された値を出力します。コードが webpack でコンパイルされると、`process.env.your_var` と記述されたすべての箇所が定義した値に置き換えられます。例えば、`env.test = 'testing123'` と定義すると、コード中に `process.env.test` と記述してある箇所がすべて 'testing123' へ置き換えられます。
 

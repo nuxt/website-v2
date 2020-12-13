@@ -115,7 +115,7 @@ Fill the content of your `package.json` with:
 
 #### **What is a package.json file?**
 
-The `package.json` is like the ID card of your project. If you don't know what the `package.json` file is, we highly recommend you to have a quick read on the [NPM documentation](https://docs.npmjs.com/creating-a-package-json-file).
+The `package.json` is like the ID card of your project. It contains all the project dependencies and much more. If you don't know what the `package.json` file is, we highly recommend you to have a quick read on the [NPM documentation](https://docs.npmjs.com/creating-a-package-json-file).
 
 ### Install Nuxt
 
@@ -228,7 +228,3 @@ Then, go to your browser and see your new page on **[http://localhost:3000/fun](
 Create a directory named `more-fun` and put an `index.vue` file inside. This will give the same result as creating a `more-fun.vue` file
 
 </base-alert>
-
-<app-modal>
-  <code-sandbox  :src="csb_link"></code-sandbox>
-</app-modal>

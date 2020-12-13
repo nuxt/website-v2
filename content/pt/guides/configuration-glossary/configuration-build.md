@@ -687,7 +687,7 @@ export default {
 }
 ```
 
-Os templates são renderizados usando [`lodash.template`](https://lodash.com/docs/#template). Você pode aprender mais sobre como usá-los [aqui](https://github.com/learn-co-students/javascript-lodash-templates-v-000).
+Os templates são renderizados usando [`lodash.template`](https://lodash.com/docs/#template). Você pode aprender mais sobre como usá-los [aqui](https://github.com/learn-co-students/javascript-lodash-templates-lab-v-000).
 
 ## terser
 

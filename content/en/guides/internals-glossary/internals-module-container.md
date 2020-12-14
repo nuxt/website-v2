@@ -55,23 +55,23 @@ This method returns final `{ dst, src, options }` object.
 
 ### addPlugin (template)
 
-- **template**: same signature as [`addTemplate`](#addtemplate-template)'s `template` Object properties (`src`, `options`, and `fileName`).
-  
-  Remember that with [plugins](/docs/2.x/directory-structure/plugins#name-conventional-plugin), you can specify a `fileName` to be run only in `client` or in `server` sides. Avoid passing `mode` and `ssr` options, as those will be deprecated.
+- **template**: Object properties (`src`, `options`, `fileName`, `mode`).
 
-Registers a plugin using `addTemplate` and adds it to the top of `plugins[]` option.
-  
-```
+Registers a plugin using `addTemplate` and prepends it it to `plugins[]` array.
+
+```js
 this.addPlugin({
   src: path.resolve(__dirname, 'templates/foo.js'),
-  /* optional */ fileName: 'foo.server.js' // will only run in server side
+  fileName: 'foo.server.js' // [optional] only include in server bundle
   options: moduleOptions
 })
 ```
 
-If you choose to specify a `fileName`, you can configure a custom path for the `fileName` too, so you can choose the folder structure inside `.nuxt` folder or prevent name collisioning:
+**Note:** You can use `mode` or `.client` and `.server` prefixes with `fileName` option to use plugin only in client or server side. (See [plugins](/docs/2.x/directory-structure/plugins#name-conventional-plugin) for all available options)
 
-```
+If you choose to specify a `fileName`, you can configure a custom path for the `fileName` too, so you can choose the folder structure inside `.nuxt` folder in order to prevent name collisioning:
+
+```js
 {
   fileName: path.join('folder', 'foo.client.js'), // will result in `.nuxt/folder/foo.client.js`
 }

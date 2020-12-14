@@ -3,6 +3,7 @@ title: La propriété `transition` de la page
 description: Nuxt.js utilise le composant `<transition>` pour nous permettre de créer et appliquer de superbes transitions/animations lors de la navigation entre les pages.
 menu: La propriété transition
 category: components-glossary
+position: 7
 ---
 
 > Nuxt.js utilise le composant [`<transition>`](https://vuejs.org/v2/guide/transitions.html#Transitioning-Single-Elements-Components) pour nous permettre de créer et appliquer de superbes transitions/animations lors de la navigation entre les pages.

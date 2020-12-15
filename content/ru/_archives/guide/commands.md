@@ -38,7 +38,7 @@ nuxt build
 nuxt start
 ```
 
-Например, чтобы развернуть на [now.sh](https://zeit.co/now), рекомендуется следующий вид `package.json`:
+Например, чтобы развернуть на [Vercel](https://vercel.com), рекомендуется следующий вид `package.json`:
 
 ```json
 {

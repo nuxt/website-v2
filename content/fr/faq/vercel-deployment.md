@@ -1,6 +1,6 @@
 ---
-title: Déployer avec Now
-description: Comment déployer une application Nuxt.js avec Now ?
+title: Déployer avec Vercel
+description: Comment déployer une application Nuxt.js avec Vercel ?
 category: deployment
 position: 310
 ---
@@ -9,35 +9,35 @@ position: 310
 
 **Remarque:** Vous ne pouvez pas déployer une application Nuxt rendue côté serveur avec Now V2 pour le moment. Veuillez utiliser Now V1 pour ces applications.
 
-Pour déployer avec [ZEIT Now](https://zeit.co/now), il faut un fichier `package.json` ainsi qu'un fichier de configuration `now.json` :
+Pour déployer avec [Vercel](https://vercel.com), il faut un fichier `package.json` ainsi qu'un fichier de configuration `vercel.json` :
 
-- Ajout la commande de script `now-build` à `package.json`:
+- Ajout la commande de script `vercel-build` à `package.json`:
   - Pour SPA (sans SSR):
     ```js
     "scripts": {
        ...
-       "now-build": "nuxt build --spa"
+       "vercel-build": "nuxt build --spa"
     }
     ```
   - Pour la génération statique (Pre rendu):
     ```js
     "scripts": {
        ...
-       "now-build": "nuxt generate"
+       "vercel-build": "nuxt generate"
     }
     ```
 - Créer `now.json` et définir `builds`
   ```json
   {
     "version": 2,
-    "builds": [{ "src": "package.json", "use": "@now/static-build" }]
+    "builds": [{ "src": "package.json", "use": "@vercel/static-build" }]
   }
   ```
 - Puis exécutez `now` et profitez !
 
 ## Now V1 (héritage)
 
-Pour déployer avec [now.sh](https://zeit.co/now), un fichier `package.json` comme suit est recommandé :
+Pour déployer avec [Vercel](https://vercel.com), un fichier `package.json` comme suit est recommandé :
 
 ```json
 {

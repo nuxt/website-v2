@@ -6,11 +6,11 @@ category: deployment
 position: 210
 ---
 
-![nuxt-now-builder](https://user-images.githubusercontent.com/904724/61308402-7a752d00-a7f0-11e9-9502-23731ccd00fd.png)
+![nuxt-vercel-builder](https://user-images.githubusercontent.com/904724/61308402-7a752d00-a7f0-11e9-9502-23731ccd00fd.png)
 
 ## Vercel
 
-[Vercel](https://vercel.com) を使ってデプロイするために、Nuxt.js チームとコントリビューターは公式の [@nuxtjs/now-builder](https://github.com/nuxt/now-builder) パッケージを作成しました（'Now' は Vercel の以前の名前です）。
+[Vercel](https://vercel.com) を使ってデプロイするために、Nuxt.js チームとコントリビューターは公式の [@nuxtjs/vercel-builder](https://github.com/nuxt/vercel-builder) パッケージを作成しました（'Now' は Vercel の以前の名前です）。
 
 必要なのは `now.json` をセットアップすることです:
 
@@ -20,14 +20,14 @@ position: 210
   "builds": [
     {
       "src": "nuxt.config.js",
-      "use": "@nuxtjs/now-builder",
+      "use": "@nuxtjs/vercel-builder",
       "config": {}
     }
   ]
 }
 ```
 
-詳細や例については https://github.com/nuxt/now-builder で見ることができます。
+詳細や例については https://github.com/nuxt/vercel-builder で見ることができます。
 
 ### Nuxt PWA モジュールを持つ Service Worker
 
@@ -39,7 +39,7 @@ Service Worker の 404 を回避するために、ルート設定に `sw` を必
   "builds": [
     {
       "src": "nuxt.config.js",
-      "use": "@nuxtjs/now-builder",
+      "use": "@nuxtjs/vercel-builder",
       "config": {
         "serverFiles": ["package.json"]
       }
@@ -62,7 +62,7 @@ Service Worker の 404 を回避するために、ルート設定に `sw` を必
 
 ## Now V1 (レガシー)
 
-[Now V1](https://zeit.co/now) を使ってデプロイするには `package.json` を次のように記述することが推奨されます:
+[Now V1](https://vercel.com) を使ってデプロイするには `package.json` を次のように記述することが推奨されます:
 
 ```json
 {

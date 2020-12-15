@@ -1,14 +1,14 @@
 ---
-title: Now를 사용한 배포
-description: Now를 사용하여 배포하려면?
+title: Vercel를 사용한 배포
+description: Vercel를 사용하여 배포하려면?
 menu: Deploy on Vercel
 category: deployment
 position: 210
 ---
 
-# Now를 사용하여 배포하려면?
+# Vercel 사용하여 배포하려면?
 
-[now.sh](https://zeit.co/now) 을 사용하여 배포하려면 `package.json` 을 다음처럼작성하는 것을 추천합니다:
+[Vercel](https://vercel.com) 을 사용하여 배포하려면 `package.json` 을 다음처럼작성하는 것을 추천합니다:
 
 ```json
 {

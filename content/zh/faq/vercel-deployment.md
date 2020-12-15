@@ -1,14 +1,14 @@
 ---
-title: 如何使用 Now.sh 进行部署？
-description: 如何使用 Now.sh 进行部署？
+title: 如何使用 Vercel 进行部署？
+description: 如何使用 Vercel 进行部署？
 menu: Deploy on Vercel
 category: deployment
 position: 210
 ---
 
-# 如何使用 Now.sh 进行部署？
+# 如何使用 Vercel 进行部署？
 
-使用 [now.sh](https://zeit.co/now) 部署，推荐的 `package.json` 配置如下：
+使用 [Vercel](https://vercel.com) 部署，推荐的 `package.json` 配置如下：
 
 ```json
 {

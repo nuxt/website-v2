@@ -103,3 +103,4 @@ https://www.nuxtjs.org/* https://nuxtjs.org/:splat 301!
 
 # [LEGACY] Redirect FAQ URLs
 /faq/google-analytics /faq/ga 301!
+/faq/now-deployment /faq/vercel-deployment 301!

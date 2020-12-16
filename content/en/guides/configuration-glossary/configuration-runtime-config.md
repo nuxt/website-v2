@@ -6,7 +6,7 @@ category: configuration-glossary
 position: 25
 ---
 
-Runtime config allows passing dynamic config and environment variables to the nuxt context. For more information of usage, please see [runtime config guide](/guide/runtime-config)
+Runtime config allows passing dynamic config and environment variables to the nuxt context. For more information of usage, please see [runtime config guide](/docs/2.x/directory-structure/nuxt-config#runtimeconfig)
 
 ## `publicRuntimeConfig`
 

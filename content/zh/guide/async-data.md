@@ -115,7 +115,7 @@ export default {
 
 ## 上下文对象
 
-可通过 [API `context`](/api/context) 来了解该对象的所有属性和方法。
+可通过 [API `context`](/docs/2.x/internals-glossary/context) 来了解该对象的所有属性和方法。
 
 ### 使用 `req`/`res`(`request`/`response`) 对象
 
@@ -190,4 +190,4 @@ export default {
 }
 ```
 
-如果你想定制 Nuxt.js 默认的错误提示页面，请参考 [页面布局](/guide/views#布局)。
+如果你想定制 Nuxt.js 默认的错误提示页面，请参考 [页面布局](/docs/2.x/concepts/views#布局)。

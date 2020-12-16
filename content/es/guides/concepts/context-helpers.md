@@ -5,7 +5,7 @@ position: 2
 category: concepts
 csb_link_context: https://codesandbox.io/embed/github/nuxt-academy/guides-examples/tree/master/02_concepts/02_context_helpers-context?fontsize=14&hidenavigation=1&theme=dark
 csb_link_helpers: https://codesandbox.io/embed/github/nuxt-academy/guides-examples/tree/master/02_concepts/02_context_helpers-helpers?fontsize=14&hidenavigation=1&theme=dark
-img: /guides/context.svg
+img: /docs/2.x/context.svg
 imgAlt: nuxt-js-context-keys
 questions:
   - question: Cuál es la razón de ser del contexto?
@@ -48,7 +48,7 @@ questions:
 
 <app-modal :src="img" :alt="imgAlt"></app-modal>
 
-El objeto `context` se encuentra disponible en funciones específicas de Nuxt como [asyncData](/guides/features/data-fetching#async-data), [plugins](/guides/directory-structure/plugins), [middleware](/guides/directory-structure/middleware) y [nuxtServerInit](/guides/directory-structure/store#the-nuxtserverinit-action). Provee información _adicional_ y a menudo opcional sobre la solicitud actual de la aplicación.
+El objeto `context` se encuentra disponible en funciones específicas de Nuxt como [asyncData](/docs/2.x/features/data-fetching#async-data), [plugins](/docs/2.x/directory-structure/plugins), [middleware](/docs/2.x/directory-structure/middleware) y [nuxtServerInit](/docs/2.x/directory-structure/store#the-nuxtserverinit-action). Provee información _adicional_ y a menudo opcional sobre la solicitud actual de la aplicación.
 
 Primero y principal, el contexto es usado para proveer acceso a otras partes de la aplicación Nuxt.js, ej. el `store` de Vuex o la instancia subyacente de `connect`. Así, tenemos los objetos `req` y `res` en el contexto disponibles del lado del servidor y el `store` siempre disponible. Pero con el tiempo, el contexto fue ampliado con muchas otras variables de ayuda y atajos. Ahora tenemos acceso a funcionalidades HMR en modo `development`, el actual `route`, page `params` y `query`, como tambien la opción de acceder a las variables de entorno a través del contexto. Además, funciones de módulos y ayudantes pueden ser expuestas a través del contexto para estar disponibles en ambos lados - el del cliente y el del servidor -
 
@@ -89,7 +89,7 @@ El _contexto_ al que nos referimos aquí no debe confundirse con el objeto `cont
 
 </base-alert>
 
-Aprende más sobre las diferentes claves del contexto in nuestro [Glosario Interno](/guides/internals-glossary/context)
+Aprende más sobre las diferentes claves del contexto in nuestro [Glosario Interno](/docs/2.x/internals-glossary/context)
 
 ## Ejemplos
 
@@ -107,8 +107,8 @@ export default {
         `https://api.nuxtjs.dev/posts/${id}`
       )
       return { post }
-    } catch (error) {
-      context.error(error) // Show the nuxt error page with the thrown error
+    } catch (e) {
+      context.error(e) // Show the nuxt error page with the thrown error
     }
   }
 }
@@ -125,14 +125,14 @@ export default {
       // Using the nuxtjs/http module here exposed via context.app
       const post = await $http.$get(`https://api.nuxtjs.dev/posts/${id}`)
       return { post }
-    } catch (error) {
-      error(error) // Show the nuxt error page with the thrown error
+    } catch (e) {
+      error(e) // Show the nuxt error page with the thrown error
     }
   }
 }
 ```
 
-Le gustaría usar parámetros query en su lugar? Entonces vea [context.query.id](http://context.query.id)
+Le gustaría usar parámetros query en su lugar? Entonces vea [context.query.id](/docs/2.x/internals-glossary/context#query)
 
 ### Redireccionando usuarios & accediendo al store
 

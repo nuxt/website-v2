@@ -2,14 +2,15 @@
 title: 'Metode Validasi'
 description: Nuxt.js memungkinkan Anda menentukan metode validator di dalam komponen rute dinamis Anda.
 menu: Metode Validasi
-category: komponen-glosarium
+category: components-glossary
+position: 0
 ---
 
 > Nuxt.js memungkinkan Anda menentukan metode validator di dalam komponen rute dinamis Anda.
 
 - **Type:** `Function` atau `Async Function`
 
-`validate` dipanggil setiap kali sebelum menavigasi ke rute baru. Ini akan disebut sisi server sekali (pada permintaan pertama ke aplikasi Nuxt) dan sisi klien saat menavigasi ke rute lebih lanjut. Metode ini mengambil [`konteks`](/guides/internals-glossary/context) object as an argument.
+`validate` dipanggil setiap kali sebelum menavigasi ke rute baru. Ini akan disebut sisi server sekali (pada permintaan pertama ke aplikasi Nuxt) dan sisi klien saat menavigasi ke rute lebih lanjut. Metode ini mengambil [`konteks`](/docs/2.x/internals-glossary/context) object as an argument.
 
 ```js
 validate({ params, query, store }) {
@@ -47,7 +48,7 @@ export default {
 }
 ```
 
-Anda juga dapat memeriksa beberapa data di berkas [store](/guides/directory-structure/store) misalnya (diisi oleh [`nuxtServerInit`](/guides/directory-structure/store#the-nuxtserverinit-action) Sebelum tindakan):
+Anda juga dapat memeriksa beberapa data di berkas [store](/docs/2.x/directory-structure/store) misalnya (diisi oleh [`nuxtServerInit`](/docs/2.x/directory-structure/store#the-nuxtserverinit-action) Sebelum tindakan):
 
 ```js
 export default {

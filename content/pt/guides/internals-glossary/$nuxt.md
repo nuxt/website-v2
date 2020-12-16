@@ -6,7 +6,7 @@ position: 2
 ---
 
 `$nuxt` é um helper projetado para melhorar a experiência do usuário.
-Para obter mais informações sobre o helper Nuxt.js, verifique o [capítulo Contexto e Helpers, no livro Conceitos](https://nuxtjs.org/guides/concepts/context-helpers#nuxt-the-nuxtjs-helper).
+Para obter mais informações sobre o helper Nuxt.js, verifique o [capítulo Contexto e Helpers, no livro Conceitos](/docs/2.x/concepts/context-helpers#nuxt-the-nuxtjs-helper).
 
 ## Verificador de conexão
 

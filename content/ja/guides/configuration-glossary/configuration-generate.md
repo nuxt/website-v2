@@ -26,7 +26,7 @@ export default {
 
 - 型: `Object` または `false`
 
-このオプションは追跡したファイルが変更されていない場合にリビルドを避けるために`nuxt generate` の[静的ホスティング](/guides/features/deployment-targets#静的ホスティング)で使われます。
+このオプションは追跡したファイルが変更されていない場合にリビルドを避けるために`nuxt generate` の[静的ホスティング](/docs/2.x/features/deployment-targets#静的ホスティング)で使われます。
 
 デフォルト:
 
@@ -169,7 +169,7 @@ SPA を実行した場合は他のルートが生成されず必要はファイ�
 fallback: false;
 ```
 
-静的に生成されたページを運用する場合、エラーページと [excludes](https://nuxtjs.org/api/configuration-generate#exclude) でカバーされるページに `404.html` を使うことをおすすめします（静的ページとして生成してほしくない場合）。
+静的に生成されたページを運用する場合、エラーページと [excludes](/docs/2.x/configuration-glossary/configuration-generate#exclude) でカバーされるページに `404.html` を使うことをおすすめします（静的ページとして生成してほしくない場合）。
 
 ```js{}[nuxt.config.js]
 fallback: true
@@ -193,7 +193,7 @@ _注意: 複数のサービス（例えば Netlify）では、`404.html` を自�
 ## minify
 
 - **非推奨です！**
-- 代わりに [build.html.minify](/guides/configuration-glossary/configuration-build#htmlminify) を使ってください
+- 代わりに [build.html.minify](/docs/2.x/configuration-glossary/configuration-build#htmlminify) を使ってください
 
 ## routes
 

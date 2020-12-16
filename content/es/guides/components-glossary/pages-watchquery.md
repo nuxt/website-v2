@@ -3,6 +3,7 @@ title: 'La propiedad watchQuery'
 description: Observar los query strings y ejecutar métodos del componente cuando cambien (asyncData, fetch, validate, layout, ...)
 menu: Propiedad WatchQuery
 category: components-glossary
+position: 0
 ---
 
 > Observar los query strings y ejecutar métodos del componente cuando cambien (asyncData, fetch(context), validate, layout, ...)
@@ -33,6 +34,6 @@ export default {
 
 <base-alert>
 
-**Advertencia**: El nuevo hook `fetch` introducido en la versión 2.12 no se ve afectado por `watchQuery`. Para más información ver [escuchando cambios en query strings](/guides/features/data-fetching#the-fetch-hook).
+**Advertencia**: El nuevo hook `fetch` introducido en la versión 2.12 no se ve afectado por `watchQuery`. Para más información ver [escuchando cambios en query strings](/docs/2.x/features/data-fetching#the-fetch-hook).
 
 </base-alert>

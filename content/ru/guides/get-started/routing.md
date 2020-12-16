@@ -14,13 +14,13 @@ csb_link: https://codesandbox.io/embed/github/nuxt-academy/guides-examples/tree/
 
 <base-alert type="next">
 
-Подробнее о [Маршрутизации](/guides/features/file-system-routing)
+Подробнее о [Маршрутизации](/docs/2.x/features/file-system-routing)
 
 </base-alert>
 
 ## Навигация
 
-Для навигации между страницами вашего приложения вы должны использовать компонент [NuxtLink](/guides/features/nuxt-components#the-nuxtlink-component). Этот компонент - часть Nuxt.js и, следовательно, его не нужно импортировать, как вы обычно это делаете с другими компонентами. Он похож на HTML-тег `<a>`, за исключением того, что вместо `href="/about"` мы используем `to="/about"`. Если ранее вы использовали `vue-router`, то можете считать `<NuxtLink>` заменой `<RouterLink>`
+Для навигации между страницами вашего приложения вы должны использовать компонент [NuxtLink](/docs/2.x/features/nuxt-components#the-nuxtlink-component). Этот компонент - часть Nuxt.js и, следовательно, его не нужно импортировать, как вы обычно это делаете с другими компонентами. Он похож на HTML-тег `<a>`, за исключением того, что вместо `href="/about"` мы используем `to="/about"`. Если ранее вы использовали `vue-router`, то можете считать `<NuxtLink>` заменой `<RouterLink>`
 
 Простая ссылка на страницу `index.vue` в директории `pages`:
 
@@ -48,6 +48,6 @@ csb_link: https://codesandbox.io/embed/github/nuxt-academy/guides-examples/tree/
 
 <base-alert type="next">
 
-Подробнее о компоненте [NuxtLink](/guides/features/nuxt-components#the-nuxtlink-component).
+Подробнее о компоненте [NuxtLink](/docs/2.x/features/nuxt-components#the-nuxtlink-component).
 
 </base-alert>

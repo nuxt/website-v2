@@ -3,6 +3,7 @@ title: 'layout プロパティ'
 description: '`layouts` ディレクトリの（第一階層の）ファイルはカスタムレイアウトになります。これらはページコンポーネントの layout プロパティで指定して利用できます'
 menu: layout プロパティ
 category: components-glossary
+position: 0
 ---
 
 > layouts ディレクトリの（第一階層の）ファイルはカスタムレイアウトになります。これらはページコンポーネントの layout プロパティで指定して利用できます

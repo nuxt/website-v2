@@ -38,7 +38,7 @@ Con generación estática de sitio puedes renderizar tu aplicación durante la f
 
 ### Generando tu sitio
 
-Cuando despliegues tu sitio con [target:static](/guides/features/deployment-targets#static-hosting) todas tus páginas `.vue` serán generadas a archivos HTML y JS. Todas las llamadas a APIs serán echas y cacheadas en una carpeta llamada static dentro de tu contenido generado, de forma que no serán necesarias llamadas a tu API en la navegación del cliente.
+Cuando despliegues tu sitio con [target:static](/docs/2.x/features/deployment-targets#static-hosting) todas tus páginas `.vue` serán generadas a archivos HTML y JS. Todas las llamadas a APIs serán echas y cacheadas en una carpeta llamada static dentro de tu contenido generado, de forma que no serán necesarias llamadas a tu API en la navegación del cliente.
 
 ### Paso 1: Navegador a CDN
 
@@ -51,7 +51,7 @@ El contenido será mostrado y la hidratación de Vue.js entrará en acción, hac
 
 ### Paso 3: Navegador a Navegador
 
-La navegación entre rutas con [`<NuxtLink>`](/guides/features/nuxt-components#the-nuxtlink-component) es realizada en el cliente, no será necesario acceder al CDN nuevamente, todas las llamadas a la API serán cargadas desde el caché de la carpeta static, incluso si refrescas el navegador.
+La navegación entre rutas con [`<NuxtLink>`](/docs/2.x/features/nuxt-components#the-nuxtlink-component) es realizada en el cliente, no será necesario acceder al CDN nuevamente, todas las llamadas a la API serán cargadas desde el caché de la carpeta static, incluso si refrescas el navegador.
 
 ### Alternando a SPA
 
@@ -59,7 +59,7 @@ Las páginas que han sido excluidas del proceso de generación usando la propied
 
 <base-alert type="next">
 
-Para aprender más sobre [generate property](/guides/configuration-glossary/configuration-generate#exclude)
+Para aprender más sobre [generate property](/docs/2.x/configuration-glossary/configuration-generate#exclude)
 
 </base-alert>
 
@@ -69,6 +69,6 @@ Con el fin de obtener nuevo contenido desde tu API solo es necesario regenerar t
 
 ### Modo de vista previa
 
-Modo de vista previa llamará a tu API o tu CMS para que veas los cambios antes de desplegar. Ver el [preview mode](/guides/features/live-preview) sobre como activar esta funcionalidad.
+Modo de vista previa llamará a tu API o tu CMS para que veas los cambios antes de desplegar. Ver el [preview mode](/docs/2.x/features/live-preview) sobre como activar esta funcionalidad.
 
 <quiz :questions="questions"></quiz>

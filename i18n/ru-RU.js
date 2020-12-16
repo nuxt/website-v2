@@ -18,43 +18,29 @@ module.exports = {
     links: [
       {
         name: 'Руководства',
-        slug: 'guides',
-        type: 'newDocs',
-        routeName: 'guides-book-slug'
-      },
-      {
-        name: 'Guide',
-        slug: 'guide',
-        type: 'dynamic',
-        routeName: 'section-slug'
-      },
-      {
-        name: 'API',
-        slug: 'api',
-        type: 'dynamic',
-        routeName: 'section-slug'
+        icon: 'books',
+        slug: 'docs-2.x-book-slug'
       },
       {
         name: 'Примеры',
-        slug: 'examples',
-        type: 'dynamic',
-        routeName: 'section-slug'
+        icon: 'code',
+        slug: 'examples'
       },
       {
         name: 'FAQ',
-        slug: 'faq',
-        type: 'dynamic',
-        routeName: 'section-slug'
-      },
-      {
-        name: 'Ресурсы',
-        slug: 'resources',
-        type: 'static'
+        icon: 'resources',
+        slug: 'faq'
       },
       {
         name: 'Блог',
-        slug: 'blog',
-        type: 'static'
+        icon: 'blog',
+        slug: 'blog'
+      },
+      {
+        name: 'Video Courses',
+        icon: 'video',
+        href:
+          'https://masteringnuxt.com?friend=nuxt&utm_source=Nuxtjs.org&utm_medium=Link&utm_content=Navbar&utm_content=prelaunch'
       }
     ],
     search: {
@@ -295,6 +281,9 @@ module.exports = {
       'Изменения на этой странице заблокированы. Если хотите что-то изменить, взгляните на нашу',
     link: 'новую документацию'
   },
+  example: {
+    intro: 'In this example:'
+  },
   codeSandbox: {
     open: 'Открыть CodeSandbox'
   },
@@ -335,19 +324,22 @@ module.exports = {
   footer: {
     links: {
       discover: {
-        title: 'Изучить',
-        design: 'Дизайнерские ресурсы',
-        team: 'Международная команда',
-        blog: 'Блог'
+        title: 'Discover',
+        shop: 'Our Goodies Store',
+        consulting: 'Training & consultancy',
+        sponsorNuxt: 'Sponsoring & donations'
       },
-      follow: {
-        title: 'Следить'
+      about: {
+        title: 'About',
+        team: 'Our team',
+        design: 'Design kit',
+        contact: 'Contact us'
       },
       support: {
-        title: 'Поддержка',
-        sponsorNuxt: 'Спонсорство NuxtJS',
-        shop: 'Магазин NuxtJS',
-        consulting: 'Консалтинг NuxtJS'
+        title: 'Support',
+        resources: 'Resources',
+        discord: 'Chat with us',
+        contributionGuide: 'Contribution guide'
       }
     }
   },

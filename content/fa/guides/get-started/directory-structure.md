@@ -31,7 +31,7 @@ touch nuxt.config.js
 
 <base-alert type="next">
 
-درباره پوشه page [بیشتر بدانید](/guides/directory-structure/pages)
+درباره پوشه page [بیشتر بدانید](/docs/2.x/directory-structure/pages)
 
 </base-alert>
 
@@ -43,7 +43,7 @@ touch nuxt.config.js
 
 <base-alert type="next">
 
-درباره پوشه component [بیشتر بدانید](/guides/directory-structure/components)
+درباره پوشه component [بیشتر بدانید](/docs/2.x/directory-structure/components)
 
 </base-alert>
 
@@ -53,7 +53,7 @@ touch nuxt.config.js
 
 <base-alert type="next">
 
-درباره پوشه assets [بیشتر بدانید](/guides/directory-structure/assets)
+درباره پوشه assets [بیشتر بدانید](/docs/2.x/directory-structure/assets)
 
 </base-alert>
 
@@ -63,7 +63,7 @@ touch nuxt.config.js
 
 <base-alert type="next">
 
-درباره پوشه static [بیشتر بدانید](/guides/directory-structure/static)
+درباره پوشه static [بیشتر بدانید](/docs/2.x/directory-structure/static)
 
 </base-alert>
 
@@ -73,7 +73,7 @@ touch nuxt.config.js
 
 <base-alert type="next">
 
-درباره فایل nuxt.config.js [بیشتر بدانید](/guides/directory-structure/nuxt-config)
+درباره فایل nuxt.config.js [بیشتر بدانید](/docs/2.x/directory-structure/nuxt-config)
 
 </base-alert>
 
@@ -87,10 +87,10 @@ touch nuxt.config.js
 
 ## درباره ساختار پوشه‌بندی بیشتر بدانید
 
-فایل ها و پوشه های مفید دیگری نیز وجود دارند که شامل: [content](/guides/directory-structure/content), [layouts](/guides/directory-structure/layouts), [middleware](/guides/directory-structure/middleware), [modules](/guides/directory-structure/modules), [plugins](/guides/directory-structure/plugins) و [store](/guides/directory-structure/store) می‌شوند. از آنجایی که این پوشه ها برای پروژه های کوچک ضروری نیستند. در این بخش به آن ها پرداخته نشده است.
+فایل ها و پوشه های مفید دیگری نیز وجود دارند که شامل: [content](/docs/2.x/directory-structure/content), [layouts](/docs/2.x/directory-structure/layouts), [middleware](/docs/2.x/directory-structure/middleware), [modules](/docs/2.x/directory-structure/modules), [plugins](/docs/2.x/directory-structure/plugins) و [store](/docs/2.x/directory-structure/store) می‌شوند. از آنجایی که این پوشه ها برای پروژه های کوچک ضروری نیستند. در این بخش به آن ها پرداخته نشده است.
 
 <base-alert type="next">
 
-برای آشنایی بیشتر با این پوشه ها و جزئیات آن ها، می‌توانید [کتاب ساختار پوشه بندی](/guides/directory-structure/nuxt) را مطالعه کنید.
+برای آشنایی بیشتر با این پوشه ها و جزئیات آن ها، می‌توانید [کتاب ساختار پوشه بندی](/docs/2.x/directory-structure/nuxt) را مطالعه کنید.
 
 </base-alert>

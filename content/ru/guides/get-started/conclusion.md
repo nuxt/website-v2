@@ -69,19 +69,19 @@ questions:
 
 <base-alert type="next">
 
-Ознакомьтесь с [Concepts book](/guides/concepts/views)
+Ознакомьтесь с [Concepts book](/docs/2.x/concepts/views)
 
 </base-alert>
 
 <base-alert type="next">
 
-Работаем с [asyncData](/guides/features/data-fetching#async-data)
+Работаем с [asyncData](/docs/2.x/features/data-fetching#async-data)
 
 </base-alert>
 
 <base-alert type="next">
 
-Выбираем между [Режимами рендеринга](/guides/features/rendering-modes)
+Выбираем между [Режимами рендеринга](/docs/2.x/features/rendering-modes)
 
 </base-alert>
 

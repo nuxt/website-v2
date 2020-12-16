@@ -16,44 +16,30 @@ module.exports = {
   header: {
     links: [
       {
-        name: 'Panduan\'s',
-        slug: 'guides',
-        type: 'newDocs',
-        routeName: 'guides-book-slug'
-      },
-      {
         name: 'Panduan',
-        slug: 'guide',
-        type: 'dynamic',
-        routeName: 'section-slug'
-      },
-      {
-        name: 'API',
-        slug: 'api',
-        type: 'dynamic',
-        routeName: 'section-slug'
+        icon: 'books',
+        slug: 'docs-2.x-book-slug'
       },
       {
         name: 'Contoh',
-        slug: 'examples',
-        type: 'dynamic',
-        routeName: 'section-slug'
+        icon: 'code',
+        slug: 'examples'
       },
       {
         name: 'FAQ',
-        slug: 'faq',
-        type: 'dynamic',
-        routeName: 'section-slug'
-      },
-      {
-        name: 'Sumber Daya',
-        slug: 'resources',
-        type: 'static'
+        icon: 'resources',
+        slug: 'faq'
       },
       {
         name: 'Blog',
-        slug: 'blog',
-        type: 'static'
+        icon: 'blog',
+        slug: 'blog'
+      },
+      {
+        name: 'Video Courses',
+        icon: 'video',
+        href:
+          'https://masteringnuxt.com?friend=nuxt&utm_source=Nuxtjs.org&utm_medium=Link&utm_content=Navbar&utm_content=prelaunch'
       }
     ],
     search: {
@@ -295,6 +281,9 @@ module.exports = {
       'Kontribusi untuk halaman ini sekarang ditutup. Jika Anda ingin berkontribusi, silakan periksa ',
     link: 'dokumen baru'
   },
+  example: {
+    intro: 'In this example:'
+  },
   codeSandbox: {
     open: 'Buka CodeSandbox'
   },
@@ -335,19 +324,22 @@ module.exports = {
   footer: {
     links: {
       discover: {
-        title: 'Menemukan',
-        design: 'Sumber daya desain',
-        team: 'Tim sedunia',
-        blog: 'Blog'
+        title: 'Discover',
+        shop: 'Our Goodies Store',
+        consulting: 'Training & consultancy',
+        sponsorNuxt: 'Sponsoring & donations'
       },
-      follow: {
-        title: 'Ikuti'
+      about: {
+        title: 'About',
+        team: 'Our team',
+        design: 'Design kit',
+        contact: 'Contact us'
       },
       support: {
-        title: 'Dukungan',
-        sponsorNuxt: 'Sponsor NuxtJS',
-        shop: 'Toko NuxtJS',
-        consulting: 'Konsultasi NuxtJS'
+        title: 'Support',
+        resources: 'Sumber Daya',
+        discord: 'Chat with us',
+        contributionGuide: 'Contribution guide'
       }
     }
   },

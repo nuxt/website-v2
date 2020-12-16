@@ -94,7 +94,7 @@ Nuxt.js にはアプリケーションの構築に役立つ、いくつかの重
 
 <base-alert>
 
-`<Nuxt>` コンポーネントは [レイアウト](/guides/concepts/views#layouts) 内でのみ使うことができます。
+`<Nuxt>` コンポーネントは [レイアウト](/docs/2.x/concepts/views#layouts) 内でのみ使うことができます。
 
 </base-alert>
 
@@ -255,7 +255,7 @@ keep-alive と keep-alive-props についてより詳しく知るためには [v
 
 <base-alert type="info">
 
-`<NuxtLink>` は[スマートプリフェッチ](/guides/features/nuxt-components#the-nuxtlink-component)の機能も持ちます。
+`<NuxtLink>` は[スマートプリフェッチ](/docs/2.x/features/nuxt-components#the-nuxtlink-component)の機能も持ちます。
 
 </base-alert>
 

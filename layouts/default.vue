@@ -1,8 +1,9 @@
 <template>
   <div>
+    <!-- <MasteringNuxtBanner /> -->
     <TheHeader />
     <main
-      class="lg:block relative pt-16 lg:pt-24 bg-light-elevatedSurface dark:bg-dark-elevatedSurface transition-colors duration-300 ease-linear"
+      class="lg:block relative bg-light-elevatedSurface dark:bg-dark-elevatedSurface transition-colors duration-300 ease-linear"
     >
       <Nuxt />
     </main>

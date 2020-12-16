@@ -117,10 +117,6 @@ If you have two files with the same name eg. `main.scss` and `main.css`, and don
 
 Default order: `['css', 'pcss', 'postcss', 'styl', 'stylus', 'scss', 'sass', 'less']`
 
-<app-modal>
-  <code-sandbox  :src="csb_link_pre-processors"></code-sandbox>
-</app-modal>
-
 ## Pre-processors
 
 Thanks to [Vue Loader](http://vue-loader.vuejs.org/en/configurations/pre-processors.html), you can use any kind of pre-processor for your  `<template>` or `<style>`: use the `lang` attribute.
@@ -128,9 +124,7 @@ Thanks to [Vue Loader](http://vue-loader.vuejs.org/en/configurations/pre-proces
 Example of our `pages/index.vue` using [Pug](https://github.com/pugjs/pug) and [Sass](http://sass-lang.com/):
 
 ```html{}[pages/index.vue]
-<template lang="pug">
-  h1.red Hello {{ name }}!
-</template>
+<template lang="pug"> h1.red Hello {{ name }}! </template>
 
 <style lang="scss">
   .red {
@@ -273,7 +267,7 @@ The `extend` method gets called twice - Once for the client bundle and the oth
 
 ### Customize chunks configuration
 
-You may want to tweak the [optimization configuration](/guides/configuration-glossary/configuration-build#optimization) a bit, avoiding a rewrite of the default object.
+You may want to tweak the [optimization configuration](/docs/2.x/configuration-glossary/configuration-build#optimization) a bit, avoiding a rewrite of the default object.
 
 ```js{}[nuxt.config.js]
 export default {
@@ -307,6 +301,10 @@ export default {
   }
 }
 ```
+
+### Inspect webpack configuration
+
+For complex projects and debugging it's sometimes useful to check what the final webpack configuration will look like. Luckily you can run `nuxt webpack` command from withing your project to output the configuration. Checkout this PR [#7029](https://github.com/nuxt/nuxt.js/pull/7029) for more details.
 
 ## Edit host and port
 
@@ -352,10 +350,6 @@ or create a script in your package.json
 }
 ```
 
-<app-modal>
-  <code-sandbox  :src="csb_link_host_port"></code-sandbox>
-</app-modal>
-
 ## Asynchronous Configuration
 
 Although it is better to use the normal configuration `export default {}` you can have an async configuration by exporting an async function that return the config object.
@@ -384,7 +378,7 @@ The axios-module cannot be used in `nuxt.config.js`. You will need to import axi
 
 <base-alert type="next">
 
-The `nuxt.config.js` has way more customization and configuration options! Check out all its keys in the [configuration glossary](/guides/configuration-glossary/configuration-build).
+The `nuxt.config.js` has way more customization and configuration options! Check out all its keys in the [configuration glossary](/docs/2.x/configuration-glossary/configuration-build).
 
 </base-alert>
 

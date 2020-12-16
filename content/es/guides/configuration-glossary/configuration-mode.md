@@ -22,12 +22,12 @@ Obsoleta: por favor, utiliza `ssr: false` en lugar de `mode: spa`
 
 <base-alert type="next">
 
-Para aprender más sobre la opción `ssr`, échale un vistazo a la [sección propiedad ssr](/guides/configuration-glossary/configuration-ssr).
+Para aprender más sobre la opción `ssr`, échale un vistazo a la [sección propiedad ssr](/docs/2.x/configuration-glossary/configuration-ssr).
 
 </base-alert>
 
 <base-alert type="next">
 
-Para aprender más sobre la opción `mode`, échale un vistazo a la [sección modos de renderizado](/guides/features/rendering-modes).
+Para aprender más sobre la opción `mode`, échale un vistazo a la [sección modos de renderizado](/docs/2.x/features/rendering-modes).
 
 </base-alert>

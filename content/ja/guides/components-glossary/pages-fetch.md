@@ -3,6 +3,7 @@ title: 'fetch メソッド'
 description: '`fetch` メソッドは、ページがレンダリングされる前に、データをストアに入れるために使われます。コンポーネントのデータをセットしないという点を除いては `asyncData`メソッドとよく似ています。'
 menu: fetch メソッド
 category: components-glossary
+position: 0
 ---
 
 ## Nuxt >= 2.12
@@ -11,7 +12,7 @@ Nuxt.js `v2.12` から、**すべての Vue コンポーネントに対して** 
 
 <base-alert>
 
-`fetch(context)` メソッドは非推奨となりましたが、代わりに[無名ミドルウェア](/guides/components-glossary/pages-middleware#無名ミドルウェア)をページコンポーネント内の `middleware(context)` で使うことできます。
+`fetch(context)` メソッドは非推奨となりましたが、代わりに[無名ミドルウェア](/docs/2.x/components-glossary/pages-middleware#無名ミドルウェア)をページコンポーネント内の `middleware(context)` で使うことできます。
 
 </base-alert>
 
@@ -44,7 +45,7 @@ export default {
 }
 ```
 
-fetch フック内では `this.$nuxt.context` を使用して、Nuxt [context](/guides/internals-glossary/context) にアクセスできます。
+fetch フック内では `this.$nuxt.context` を使用して、Nuxt [context](/docs/2.x/internals-glossary/context) にアクセスできます。
 
 ### オプション
 

@@ -24,7 +24,7 @@ tags:
 
 <p align="center">
   <a href="https://blog-with-nuxt-content.netlify.app/" target="_blank" rel="noopener nofollow">Посмотреть демо</a> /
-  <a href="https://github.com/nuxt-company/demo-blog-nuxt-content" target="_blank" rel="noopener nofollow">Код проекта</a>
+  <a href="https://github.com/nuxt-academy/demo-blog-nuxt-content" target="_blank" rel="noopener nofollow">Код проекта</a>
 </p>
 
 - [Начало работы](#начало-работы)
@@ -129,13 +129,13 @@ Welcome to my first blog post using content module
 
 ### Отображение контента
 
-Чтобы отобразить контент на странице, мы используем [динамическую страницу](https://nuxtjs.org/guide/routing#dynamic-routes), добавив к странице знак подчеркивания (`_`). Создав компонент страницы с именем `_slug.vue` внутри папки `blog`, мы можем использовать переменную `params.slug`, предоставляемую vue router, для получения имени каждой статьи.
+Чтобы отобразить контент на странице, мы используем [динамическую страницу](https://nuxtjs.org/docs/2.x/features/file-system-routing#dynamic-routes), добавив к странице знак подчеркивания (`_`). Создав компонент страницы с именем `_slug.vue` внутри папки `blog`, мы можем использовать переменную `params.slug`, предоставляемую vue router, для получения имени каждой статьи.
 
 ```bash
 touch pages/blog/_slug.vue
 ```
 
-Затем используем `asyncData` в компоненте страницы для получения содержимого статьи до того, как страница будет отрисована. Мы можем получить доступ к контенту через context , используя переменную `$content`. Поскольку мы хотим получить динамическую страницу, нам также необходимо знать, какую статью нужно получить с помощью `params.slug`, который доступен нам через [context](https://nuxtjs.org/api/context).
+Затем используем `asyncData` в компоненте страницы для получения содержимого статьи до того, как страница будет отрисована. Мы можем получить доступ к контенту через context , используя переменную `$content`. Поскольку мы хотим получить динамическую страницу, нам также необходимо знать, какую статью нужно получить с помощью `params.slug`, который доступен нам через [context](https://nuxtjs.org/docs/2.x/internals-glossary/context).
 
 ```html{}[pages/blog/_slug.vue]
 <script>
@@ -451,7 +451,7 @@ touch components/global/Author.vue
 
 <base-alert>
 
-Стили были удалены из этих примеров, вы можете добавлять стили самостоятельно или копировать стили [отсюда](https://github.com/nuxt-company/demo-blog-nuxt-content).
+Стили были удалены из этих примеров, вы можете добавлять стили самостоятельно или копировать стили [отсюда](https://github.com/nuxt-academy/demo-blog-nuxt-content).
 
 </base-alert>
 
@@ -687,7 +687,7 @@ async asyncData({ $content, params }) {
 
 <base-alert type="info">
 
-В [демо](https://github.com/nuxt-company/demo-blog-nuxt-content) я использовала главную страницу(index.vue в папке `pages`) вместо создания файла index.vue внутри папки `blog`, потому что в этом примере у меня нет других страниц, но обычно у вас может быть домашняя страница, страница контактов, а затем страница блога и т. д.
+В [демо](https://github.com/nuxt-academy/demo-blog-nuxt-content) я использовала главную страницу(index.vue в папке `pages`) вместо создания файла index.vue внутри папки `blog`, потому что в этом примере у меня нет других страниц, но обычно у вас может быть домашняя страница, страница контактов, а затем страница блога и т. д.
 
 </base-alert>
 
@@ -818,7 +818,7 @@ without(['body', 'title'])
 
 <base-alert type="info">
 
-Обратите внимание, что все стили были удалены из этого примера. Вы можете стилизовать страницу самостоятельно или скопировать стили из [демонстрационного кода](https://github.com/nuxt-company/demo-blog-nuxt-content).
+Обратите внимание, что все стили были удалены из этого примера. Вы можете стилизовать страницу самостоятельно или скопировать стили из [демонстрационного кода](https://github.com/nuxt-academy/demo-blog-nuxt-content).
 
 </base-alert>
 
@@ -913,7 +913,7 @@ touch components/AppSearchInput.vue
 
 <base-alert type="info">
 
-См. [код демо](https://github.com/nuxt-company/demo-blog-nuxt-content) для улучшения стиля этой страницы, а также добавленный компонент заголовка, который включает компонент поиска и поэтому отображается на странице автора и заглавной странице.
+См. [код демо](https://github.com/nuxt-academy/demo-blog-nuxt-content) для улучшения стиля этой страницы, а также добавленный компонент заголовка, который включает компонент поиска и поэтому отображается на странице автора и заглавной странице.
 
 </base-alert>
 

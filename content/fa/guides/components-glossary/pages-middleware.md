@@ -3,6 +3,7 @@ title: 'ویژگی میان‌افزار'
 description: جهت تنظیم میان افزار برای یک صفحه بخصوص در اپلیکیشن.
 menu: ویژگی میان‌افزار
 category: components-glossary
+position: 0
 ---
 
 - **نوع:** `String` یا `Array` یا `Function`

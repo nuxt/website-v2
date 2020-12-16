@@ -3,6 +3,7 @@ title: 'Metode fetch'
 description: Metode `fetch` digunakan untuk mengisi penyimpanan sebelum merender halaman, ini seperti metode `asyncData` kecuali ia tidak menyetel data komponen.
 menu: Metode Fetch
 category: components-glossary
+position: 0
 ---
 
 ## Nuxt >= 2.12
@@ -11,7 +12,7 @@ Nuxt.js `v2.12` memperkenalkan hook baru yang disebut `fetch` **di salah satu ko
 
 <base-alert>
 
-`fetch(context)` sudah tidak digunakan lagi, sebagai gantinya Anda dapat menggunakan [anonymous middleware](/guides/components-glossary/pages-middleware#anonymous-middleware) di halaman Anda: `middleware(context)`
+`fetch(context)` sudah tidak digunakan lagi, sebagai gantinya Anda dapat menggunakan [anonymous middleware](/docs/2.x/components-glossary/pages-middleware#anonymous-middleware) di halaman Anda: `middleware(context)`
 
 </base-alert>
 
@@ -48,7 +49,7 @@ export default {
 }
 ```
 
-Anda dapat mengakses Nuxt [context](/guides/internals-glossary/context) di dalam fetch hook menggunakan `this.$nuxt.context`.
+Anda dapat mengakses Nuxt [context](/docs/2.x/internals-glossary/context) di dalam fetch hook menggunakan `this.$nuxt.context`.
 
 ### Pilihan
 

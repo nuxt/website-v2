@@ -271,7 +271,7 @@ El método `extend` es llamado dos veces - Una vez para el bundle del cliente y 
 
 ### Personalizar la configuración de chunks
 
-Es posible que quieras ajustar un poco la [configuración de optimización](/guides/configuration-glossary/configuration-build#optimization), evitando una sobreescritura del objeto por defecto.
+Es posible que quieras ajustar un poco la [configuración de optimización](/docs/2.x/configuration-glossary/configuration-build#optimization), evitando una sobreescritura del objeto por defecto.
 
 ```js{}[nuxt.config.js]
 export default {
@@ -382,7 +382,7 @@ El módulo axios no puede ser usado en `nuxt.config.js`. Necesitarás importar a
 
 <base-alert type="next">
 
-El archivo `nuxt.config.js` tiene muchas más opciones de personalización y configuración! Echa un vistazo a todas sus keys en el [glosario de configuración](/guides/configuration-glossary/configuration-build).
+El archivo `nuxt.config.js` tiene muchas más opciones de personalización y configuración! Echa un vistazo a todas sus keys en el [glosario de configuración](/docs/2.x/configuration-glossary/configuration-build).
 
 </base-alert>
 

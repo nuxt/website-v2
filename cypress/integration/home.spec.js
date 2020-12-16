@@ -5,8 +5,8 @@ describe('The Home Page links', () => {
   it('checks to see if the get started button links to guides', () => {
     cy.get('a[data-cy="get-started"]')
       .click()
-    cy.url().should('include', '/guides/get-started/installation')
-    cy.visit('/guides/get-started/installation')
+    cy.url().should('include', '/docs/2.x/get-started/installation')
+    cy.visit('/docs/2.x/get-started/installation')
   })
 
   it('github stars links to the right page', () => {

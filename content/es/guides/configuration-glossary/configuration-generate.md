@@ -26,7 +26,7 @@ export default {
 
 - Tipo: `Object` o `false`
 
-Esta opción es utilizada por `nuxt generate` con [static target](/guides/features/deployment-targets#static-hosting) para evitar la reconstrucción cuando no se ha cambiado ningún archivo de seguimiento.
+Esta opción es utilizada por `nuxt generate` con [static target](/docs/2.x/features/deployment-targets#static-hosting) para evitar la reconstrucción cuando no se ha cambiado ningún archivo de seguimiento.
 
 Valores predeterminados:
 
@@ -169,7 +169,7 @@ Cuando se ejecuta un SPA, es más idiomático usar un `200.html`, ya que es el �
 fallback: false;
 ```
 
-Si trabaja con páginas generadas estáticamente, se recomienda utilizar un `404.html` para las páginas de error y para aquellas cubiertas por [excludes](https://nuxtjs.org/api/configuration-generate#exclude) (los archivos que no desea que se generen como páginas estáticas).
+Si trabaja con páginas generadas estáticamente, se recomienda utilizar un `404.html` para las páginas de error y para aquellas cubiertas por [excludes](/docs/2.x/configuration-glossary/#exclude) (los archivos que no desea que se generen como páginas estáticas).
 
 ```js{}[nuxt.config.js]
 fallback: true
@@ -193,7 +193,7 @@ Intervalo entre dos ciclos de renderizado para evitar inundar una API potencial 
 ## minify
 
 - **Obsoleto!**
-- Use [build.html.minify](/guides/configuration-glossary/configuration-build#htmlminify) en su lugar
+- Use [build.html.minify](/docs/2.x/configuration-glossary/configuration-build#htmlminify) en su lugar
 
 ## routes
 

@@ -17,7 +17,7 @@ export default {
 
 ### SPA
 
-Aplicações de página única são páginas que são renderizadas apenas no lado do cliente, sem a necessidade de um servidor. Para fazer o deploy de uma SPA, defina o [modo para `spa`](/guides/features/rendering-modes#spa) e então rode o comando `build` para buildar a sua aplicação.
+Aplicações de página única são páginas que são renderizadas apenas no lado do cliente, sem a necessidade de um servidor. Para fazer o deploy de uma SPA, defina o [modo para `spa`](/docs/2.x/features/rendering-modes#spa) e então rode o comando `build` para buildar a sua aplicação.
 
 ```js{}[nuxt.config.js]
 export default {
@@ -32,7 +32,7 @@ Como o Nuxt.js também funciona como um gerador de site estático, você pode, p
 
 <base-alert type="info">
 
-Sites estátios trabalham no [modo universal](https://nuxtjs.org/guides/features/rendering-modes#universal), que é o modo padrão definido.
+Sites estátios trabalham no [modo universal](/docs/2.x/features/rendering-modes#universal), que é o modo padrão definido.
 
 </base-alert>
 
@@ -65,6 +65,6 @@ export default {
 
 <base-alert type="info">
 
-Sites estátios trabalham no [modo universal](https://nuxtjs.org/guides/features/rendering-modes#universal), que é o modo padrão definido.
+Sites estátios trabalham no [modo universal](/docs/2.x/features/rendering-modes#universal), que é o modo padrão definido.
 
 </base-alert>

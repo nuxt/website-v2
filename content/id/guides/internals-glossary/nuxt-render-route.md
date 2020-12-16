@@ -17,7 +17,7 @@ position: 11
 
 > Merender rute tertentu dengan konteks tertentu.
 
-*Method* ini harus digunakan sebagian besar untuk tujuan pengujian dan juga dengan [`nuxt.renderAndGetWindow`](/guides/internals-glossary/nuxt-render-and-get-window).
+_Method_ ini harus digunakan sebagian besar untuk tujuan pengujian dan juga dengan [`nuxt.renderAndGetWindow`](/docs/2.x/internals-glossary/nuxt-render-and-get-window).
 
 <base-alert>
 
@@ -50,6 +50,6 @@ start()
 
 <base-alert type="next">
 
-Lihat [buku Komponen Glosarium](/guides/components-glossary/pages-fetch)
+Lihat [buku Komponen Glosarium](/docs/2.x/components-glossary/pages-fetch)
 
 </base-alert>

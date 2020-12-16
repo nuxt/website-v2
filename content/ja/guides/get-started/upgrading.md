@@ -1,13 +1,13 @@
 ---
 title: アップグレード
-description: "Nuxt.js のアップグレードは一瞬ですが、package.json のアップデートより複雑です"
-position: 5
+description: 'Nuxt.js のアップグレードは一瞬ですが、package.json のアップデートより複雑です'
+position: 6
 category: get-started
 ---
 
 > Nuxt.js のアップグレードは一瞬ですが、package.json のアップデートより複雑です
 
-Nuxt v2.14 にアップグレードしてスタティックホスティングを使用したい場合、generate コマンドを正しく動作させるために nuxt.config.js ファイルに [target:static](/guides/features/deployment-targets#static-hosting) を追加する必要があります。
+Nuxt v2.14 にアップグレードしてスタティックホスティングを使用したい場合、generate コマンドを正しく動作させるために nuxt.config.js ファイルに [target:static](/docs/2.x/features/deployment-targets#static-hosting) を追加する必要があります。
 
 ```js{}[nuxt.config.js]
 export default {
@@ -17,7 +17,7 @@ export default {
 
 ## はじめに
 
-1. アップグレードしたいバージョンの[リリースノート](/guide/release-notes)を確認し、そのリリースで追加の説明がないか確認してください。
+1. アップグレードしたいバージョンの[リリースノート](/docs/release-notes)を確認し、そのリリースで追加の説明がないか確認してください。
 2. `package.json` ファイルの `nuxt` パッケージに指定したバージョンを更新します。
 
 このステップの後の手順は Yarn を使っているか NPM を使っているかによって異なります。 _[Yarn](https://yarnpkg.com/ja/docs/usage) はテストが書かれている開発ツールなので、Nuxt を使うのに適したパッケージマネージャです。_

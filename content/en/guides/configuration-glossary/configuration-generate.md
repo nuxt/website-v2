@@ -26,7 +26,7 @@ export default {
 
 - Type: `Object` or `false`
 
-This option is used by `nuxt generate` with [static target](/guides/features/deployment-targets#static-hosting) to avoid re-building when no tracked file has been changed.
+This option is used by `nuxt generate` with [static target](/docs/2.x/features/deployment-targets#static-hosting) to avoid re-building when no tracked file has been changed.
 
 Defaults:
 
@@ -167,7 +167,7 @@ The path to the fallback HTML file. It should be set as the error page, so that 
 fallback: false;
 ```
 
-If working with statically generated pages then it is recommended to use a `404.html` for error pages and for those covered by [excludes](https://nuxtjs.org/api/configuration-generate#exclude) (the files that you do not want generated as static pages).
+If working with statically generated pages then it is recommended to use a `404.html` for error pages and for those covered by [excludes](/docs/2.x/configuration-glossary/#exclude) (the files that you do not want generated as static pages).
 
 ```js{}[nuxt.config.js]
 fallback: true
@@ -186,12 +186,12 @@ _Note: Multiple services (e.g. Netlify) detect a `404.html` automatically. If yo
 - Type: `Number`
 - Default: `0`
 
-Interval between two render cycles to avoid flooding a potential API with API calls from the web application.
+Interval in milliseconds between two render cycles to avoid flooding a potential API with calls from the web application.
 
 ## minify
 
 - **Deprecated!**
-- Use [build.html.minify](/guides/configuration-glossary/configuration-build#htmlminify) instead
+- Use [build.html.minify](/docs/2.x/configuration-glossary/configuration-build#htmlminify) instead
 
 ## routes
 

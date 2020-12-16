@@ -17,44 +17,30 @@ module.exports = {
   header: {
     links: [
       {
-        name: 'Guias',
-        slug: 'guides',
-        type: 'newDocs',
-        routeName: 'guides-book-slug'
-      },
-      {
-        name: 'Guia',
-        slug: 'guide',
-        type: 'dynamic',
-        routeName: 'section-slug'
-      },
-      {
-        name: 'API',
-        slug: 'api',
-        type: 'dynamic',
-        routeName: 'section-slug'
+        name: 'Docs',
+        icon: 'books',
+        slug: 'docs-2.x-book-slug'
       },
       {
         name: 'Exemplos',
-        slug: 'examples',
-        type: 'dynamic',
-        routeName: 'section-slug'
+        icon: 'code',
+        slug: 'examples'
       },
       {
         name: 'FAQ',
-        slug: 'faq',
-        type: 'dynamic',
-        routeName: 'section-slug'
-      },
-      {
-        name: 'Recursos',
-        slug: 'resources',
-        type: 'static'
+        icon: 'resources',
+        slug: 'faq'
       },
       {
         name: 'Blog',
-        slug: 'blog',
-        type: 'static'
+        icon: 'blog',
+        slug: 'blog'
+      },
+      {
+        name: 'Video Courses',
+        icon: 'video',
+        href:
+          'https://masteringnuxt.com?friend=nuxt&utm_source=Nuxtjs.org&utm_medium=Link&utm_content=Navbar&utm_content=prelaunch'
       }
     ],
     search: {
@@ -294,6 +280,9 @@ module.exports = {
       'A contribuição para esta página está encerrada. Se você gostaria de contribuir, verifique nossa',
     link: 'nova documentação, por favor.'
   },
+  example: {
+    intro: 'In this example:'
+  },
   codeSandbox: {
     open: 'Abrir no CodeSandbox'
   },
@@ -334,19 +323,22 @@ module.exports = {
   footer: {
     links: {
       discover: {
-        title: 'Descobrir',
-        design: 'Recursos de Design',
-        team: 'Um time global',
-        blog: 'Blog'
+        title: 'Explorar',
+        shop: 'Loja de Mercadorias',
+        consulting: 'Treinamento e Consultoria',
+        sponsorNuxt: 'Patrocínio e Contribuição'
       },
-      follow: {
-        title: 'Seguir'
+      about: {
+        title: 'About',
+        team: 'Nosso time',
+        design: 'Pacote de Designer',
+        contact: 'Contate-nos'
       },
       support: {
         title: 'Suporte',
-        sponsorNuxt: 'Patrocine o NuxtJS',
-        shop: 'A Loja do NuxtJS',
-        consulting: 'Assessoria e Suporte NuxtJS'
+        resources: 'Recursos',
+        discord: 'Fale conosco',
+        contributionGuide: 'Como contribuir'
       }
     }
   },

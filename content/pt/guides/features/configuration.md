@@ -110,9 +110,7 @@ Graças ao [Vue Loader](http://vue-loader.vuejs.org/en/configurations/pre-proces
 Exemplo do nosso `pages/index.vue` usando [Pug](https://github.com/pugjs/pug) e [Sass](http://sass-lang.com/):
 
 ```html{}[pages/index.vue]
-<template lang="pug">
-  h1.red Hello {{ name }}!
-</template>
+<template lang="pug"> h1.red Hello {{ name }}! </template>
 
 <style lang="scss">
   .red {
@@ -255,7 +253,7 @@ O método `extend` é chamado duas vezes - uma para o pacote do cliente e outra 
 
 ### Personalize a configuração de chunks
 
-Você pode querer ajustar a [configuração de otimização](/guides/configuration-glossary/configuration-build#optimization) um pouco, evitando reescrever o objeto padrão.
+Você pode querer ajustar a [configuração de otimização](/docs/2.x/configuration-glossary/configuration-build#optimization) um pouco, evitando reescrever o objeto padrão.
 
 ```js{}[nuxt.config.js]
 export default {

@@ -27,7 +27,7 @@ export default {
 
 `head` に指定できるオプションリストについては [vue-meta のドキュメント](https://vue-meta.nuxtjs.org/api/#metainfo-properties)を参照してください。
 
-コンポーネントの関数として `head` を使用して `this` を介してコンポーネントデータにアクセスすることもできます（[詳細はこちら](/guides/components-glossary/pages-head)）。
+コンポーネントの関数として `head` を使用して `this` を介してコンポーネントデータにアクセスすることもできます（[詳細はこちら](/docs/2.x/components-glossary/pages-head)）。
 
 <base-alert type="info">
 

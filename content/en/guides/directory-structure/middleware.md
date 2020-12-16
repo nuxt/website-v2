@@ -70,9 +70,9 @@ questions:
 
 The `middleware` directory contains your application middleware. Middleware lets you define custom functions that can be run before rendering either a page or a group of pages (layout).
 
-Shared middleware should be placed in the  `middleware/`  directory. The filename will be the name of the middleware (`middleware/auth.js` will be the `auth` middleware). You can also define page-specific middleware by using a function directly, see [anonymous middleware](/guides/components-glossary/pages-middleware#anonymous-middleware).
+Shared middleware should be placed in the  `middleware/`  directory. The filename will be the name of the middleware (`middleware/auth.js` will be the `auth` middleware). You can also define page-specific middleware by using a function directly, see [anonymous middleware](/docs/2.x/components-glossary/pages-middleware#anonymous-middleware).
 
-A middleware receives [the context](/guides/internals-glossary/context) as the first argument.
+A middleware receives [the context](/docs/2.x/internals-glossary/context) as the first argument.
 
 ```js{}[middleware/user-agent.js]
 export default function (context) {
@@ -125,10 +125,6 @@ export default {
 }
 ```
 
-<app-modal>
-  <code-sandbox  :src="csb_link_router"></code-sandbox>
-</app-modal>
-
 ## Named middleware
 
 You can create named middleware by creating a file inside the  `middleware/` directory, the file name will be the middleware name.
@@ -154,10 +150,6 @@ export default function ({ store, redirect }) {
 </script>
 ```
 
-<app-modal>
-  <code-sandbox  :src="csb_link_named"></code-sandbox>
-</app-modal>
-
 ## Anonymous middleware
 
 If you need to use a middleware only for a specific page, you can directly use a function for it (or an array of functions):
@@ -178,9 +170,5 @@ If you need to use a middleware only for a specific page, you can directly use a
   }
 </script>
 ```
-
-<app-modal>
-  <code-sandbox  :src="csb_link_anonymous"></code-sandbox>
-</app-modal>
 
 <quiz :questions="questions"></quiz>

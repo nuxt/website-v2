@@ -100,5 +100,6 @@ jobs:
 
       - name: Check redirects for validity
         run: node -r esm scripts/check-redirects.js
+        continue-on-error: ${{ matrix.site != 'nuxt' }}
         env:
           BASE_URL: ${{ steps.waitForPreview.outputs.url }}

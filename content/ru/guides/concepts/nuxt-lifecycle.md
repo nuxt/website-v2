@@ -3,7 +3,7 @@ title: Жизненный цикл Nuxt
 description: No matter which tool you use, you will always feel more confident when you understand how the tool works under the hood. The same applies to Nuxt.js.
 position: 5
 category: concepts
-img: /guides/nuxt-lifecycle.png
+img: /docs/2.x/nuxt-lifecycle.svg
 imgAlt: understanding-nuxt-2-12-lifecycle-hooks
 questions:
   - question: When does the Nuxt.js lifecycle start?
@@ -141,7 +141,7 @@ Same as for the _client_ part, everything is happening in the browser but only w
 
 <base-alert type="info">
 
-Check out the component chapter to see more info on [`<NuxtLink>`](/guides/features/nuxt-components#the-nuxtlink-component)
+Check out the component chapter to see more info on [`<NuxtLink>`](/docs/2.x/features/nuxt-components#the-nuxtlink-component)
 
 </base-alert>
 
@@ -159,7 +159,7 @@ Check out the component chapter to see more info on [`<NuxtLink>`](/guides/featu
 
 <base-alert type="next">
 
-Check out the [Features book](/guides/features/rendering-modes)
+Check out the [Features book](/docs/2.x/features/rendering-modes)
 
 </base-alert>
 

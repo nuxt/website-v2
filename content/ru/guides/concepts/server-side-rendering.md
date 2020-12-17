@@ -1,61 +1,61 @@
 ---
 title: Серверный рендеринг
-description: Server-side rendering (SSR), is the ability of an application to contribute by displaying the web-page on the server instead of rendering it in the browser.
+description: Рендеринг на стороне сервера (SSR) - это способность приложения вносить свой вклад, отображая веб-страницу на сервере, а не отрисоывая её в браузере.
 position: 3
 category: concepts
 questions:
-  - question: What kinda of server do you need for Server Side Rendering?
+  - question: Какой нужен сервер для рендеринга на стороне сервера?
     answers:
-      - PHP server
-      - JavaScript server
-      - Node.js server
-    correctAnswer: Node.js server
-  - question: What do you use to extend and control the server?
+      - PHP сервер
+      - JavaScript сервер
+      - Node.js сервер
+    correctAnswer: Node.js сервер
+  - question: Что вы используете для расширения и управления сервером?
     answers:
       - Middleware
       - ServerMiddleware
-      - It is not possible to control the server
+      - Невозможно управлять сервером
     correctAnswer: ServerMiddleware
-  - question: You can host a server side rendered application on a serverless hosting provider
+  - question: Вы можете разместить отрисованное на стороне сервера приложение на бессерверном хостинг-провайдере
     answers:
-      - true
-      - false
-    correctAnswer: false
-  - question: Do we have access to  document on the server-side?
+      - да
+      - нет
+    correctAnswer: нет
+  - question: Есть ли у нас доступ к документу на стороне сервера?
     answers:
-      - yes, it is always available
-      - No, The object belongs to the browser and is not available on the server
-    correctAnswer: No, The object belongs to the browser and is not available on the server
-  - question: When does your page become interactive?
+      - Да, доступ есть всегда
+      - Нет, объект принадлежит браузеру и недоступен на сервере
+    correctAnswer: Нет, объект принадлежит браузеру и недоступен на сервере
+  - question: Когда ваша страница станет интерактивной?
     answers:
-      - When the browser receives the rendered HTML from the server
-      - When the Vue.js hydration kicks in
-      - When a browser sends the initial request
-    correctAnswer: When the Vue.js hydration kicks in
-  - question: Navigating between pages using <NuxtLink> is done
+      - Когда браузер получает отрисованный HTML с сервера
+      - Когда начинается гидратация Vue.js
+      - Когда браузер отправляет первый запрос
+    correctAnswer: Когда начинается гидратация Vue.js
+  - question: Навигация между страницами выполнена с помощью <NuxtLink>
     answers:
-      - Client side
-      - Server side
-    correctAnswer: Client side
-  - question: What are the correct steps?
+      - Сторона клиента
+      - Сторона сервера
+    correctAnswer: Сторона клиента
+  - question: Какие шаги правильные?
     answers:
-      - browser → server, server → browser, browser → browser
-      - server → browser, browser → server, server → server
-      - browser → server, server → browser, browser → server
-    correctAnswer: browser → server, server → browser, browser → browser
+      - браузер → сервер, сервер → браузер, браузер → браузер
+      - сервер → браузер, браузер → сервер, сервер → сервер
+      - браузер → сервер, сервер → браузер, браузер → сервер
+    correctAnswer: браузер → сервер, сервер → браузер, браузер → браузер
 ---
 
-Server-side rendering (SSR), is the ability of an application to contribute by displaying the web-page on the server instead of rendering it in the browser. Server-side sends a fully rendered page to the client; the client's JavaScript bundle takes over which then allows the Vue.js app to [hydrate](https://ssr.vuejs.org/guide/hydration.html).
+Серверный рендеринг (SSR) - это способность приложения вносить свой вклад, отрисовывая веб-страницу на сервере, а не в браузере. На стороне сервера клиенту отправляется полностью отрисованная страница; клиентский JavaScript бандл берёт на себя управление, что затем позволяет Vue.js приложению [гидратировать](https://ssr.vuejs.org/ru/guide/hydration.html).
 
-## Node.js server required
+## Требуется сервер Node.js
 
-A JavaScript environment is required to render your web page.
+Для отрисовки вашей веб-страницы требуется среда JavaScript.
 
-A Node.js server needs to be configured to execute your Vue.js application.
+Для выполнения вашего Vue.js приложения необходимо настроить Node.js сервер.
 
-## Extend and control the server
+## Расширение и управление сервером
 
-You can extend the server with serverMiddleware and control routes with middleware.
+Вы можете расширить сервер с помощью serverMiddleware и управлять маршрутами с помощью middleware.
 
 ```js{}[middleware/api/logger.js]
 export default function (req, res, next) {
@@ -72,9 +72,9 @@ export default {
 
 If your server middleware consists of a list of functions mapped to paths:
 
-## Server vs Browser environments
+## Сравнение среды сервера и браузера
 
-Because you are in a Node.js environment you have access to Node.js objects such as `req` and `res`. You do not have access to the `window` or `document` objects as they belong to the browser environment. You can however use `window` or `document` by using the `beforeMount` or `mounted` hooks.
+Поскольку вы находитесь в среде Node.js, у вас есть доступ к объектам Node.js, таким как `req` и `res`. У вас нет доступа к объектам `window` или `document`, поскольку они пренадлежат среде браузера. Однако вы можете использовать `window` или `document` с помощью хуков `beforeMount` или `mounted`.
 
 ```js
 beforeMount{
@@ -85,18 +85,18 @@ mounted{
 }
 ```
 
-## Server-side rendering steps with Nuxt.js
+## Шаги серверного рендеринга с Nuxt.js
 
-### Step 1: Browser to Server
+### Шаг 1: От браузера к серверу
 
-When a browser sends the initial request, it will hit the Node.js internal server. Nuxt.js will generate the HTML and send it back to the browser with results from executed functions, e.g. `asyncData`, `nuxtServerInit` or `fetch`. Hooks functions are executed as well.
+Когда браузер отправляет первый запрос, он попадает на внутренний сервер Node.js. Nuxt.js сгенерирует HTML и отправит его обратно в браузер с результатами выполненных функций, например `asyncData`, `nuxtServerInit` или `fetch`. Также выполняются функции хуков.
 
-### Step 2: Server to Browser
+### Шаг 2: От сервера к браузеру
 
-The browser receives the rendered page from the server with the generated HTML. The content is displayed and the Vue.js hydration kicks in, making it reactive. After this process, the page is interactive.
+Браузер получает отрисованую страницу с сервера с сгенерированным HTML. Отображается контент, и начинается [гидратация Vue.js](https://ssr.vuejs.org/ru/guide/hydration.html), делая его реактивным. После этого процесса страница становится интерактивной.
 
-### Step 3: Browser to Browser
+### Шаг 3: В браузере
 
-Navigating between pages with [`<NuxtLink>`](/guides/features/nuxt-components#the-nuxtlink-component) is done on the client side so you don't hit the server again unless you hard refresh the browser.
+Навигация между страницами с помощью [`<NuxtLink>`](/guides/features/nuxt-components#the-nuxtlink-component) выполняется на стороне клиента, поэтому вы не делаете запрос на сервер снова, если не обновляете страницу.
 
 <quiz :questions="questions"></quiz>

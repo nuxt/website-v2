@@ -5,7 +5,7 @@ position: 2
 category: concepts
 csb_link_context: https://codesandbox.io/embed/github/nuxt-academy/guides-examples/tree/master/02_concepts/02_context_helpers-context?fontsize=14&hidenavigation=1&theme=dark
 csb_link_helpers: https://codesandbox.io/embed/github/nuxt-academy/guides-examples/tree/master/02_concepts/02_context_helpers-helpers?fontsize=14&hidenavigation=1&theme=dark
-img: /guides/context.svg
+img: /docs/2.x/context.svg
 imgAlt: nuxt-js-context-keys
 questions:
   - question: What is the reason the context exists?
@@ -48,7 +48,7 @@ questions:
 
 <app-modal :src="img" :alt="imgAlt"></app-modal>
 
-The `context` object is available in specific Nuxt functions like [asyncData](/guides/features/data-fetching#async-data), [plugins](/guides/directory-structure/plugins), [middleware](/guides/directory-structure/middleware) and [nuxtServerInit](/guides/directory-structure/store#the-nuxtserverinit-action). It provides _additional_ and often optional information about the current request to the application.
+The `context` object is available in specific Nuxt functions like [asyncData](/docs/2.x/features/data-fetching#async-data), [plugins](/docs/2.x/directory-structure/plugins), [middleware](/docs/2.x/directory-structure/middleware) and [nuxtServerInit](/docs/2.x/directory-structure/store#the-nuxtserverinit-action). It provides _additional_ and often optional information about the current request to the application.
 
 First and foremost, the context is used to provide access to other parts of the Nuxt.js application, e.g. the Vuex store or the underlying `connect` instance. Thus, we have the `req` and `res` objects in the context available on the server side and `store` always available. But with time, the context was extended with many other helpful variables and shortcuts. Now we have access to HMR functionalities in `development` mode, the current `route`, page `params` and `query`, as well as the option to access environment variables through the context. Furthermore, module functions and helpers can be exposed through the context to be available on both - the client and the server side.
 
@@ -85,13 +85,11 @@ function (context) { // Could be asyncData, nuxtServerInit, ...
 
 <base-alert>
 
-The _context_ we refer to here is not to be confused with the `context` object available in [Vuex Actions](https://vuex.vuejs.org/guide/actions.html) or the one available in the `build.extend` function in your `nuxt.config.js`. These are all not related to each other!
+The _context_ we refer to here is not to be confused with the `context` object available in [Vuex Actions](https://vuex.vuejs.org/guide/actions.html) or the one available in the `build.extend` function in your `nuxt.config.js`. These are all not related to each other!
 
 </base-alert>
 
-Learn more about the different context keys in our [Internals Glossary](/guides/internals-glossary/context)
-
-## Examples
+Learn more about the different context keys in our [Internals Glossary](/docs/2.x/internals-glossary/context)
 
 ### Using page parameters for your API query
 
@@ -109,14 +107,14 @@ export default {
         `https://api.nuxtjs.dev/posts/${id}`
       )
       return { post }
-    } catch (error) {
-      context.error(error) // Show the nuxt error page with the thrown error
+    } catch (e) {
+      context.error(e) // Show the nuxt error page with the thrown error
     }
   }
 }
 ```
 
-With [ES6](https://hacks.mozilla.org/2015/05/es6-in-depth-destructuring/) you can use this syntax to descructure your context object. You can pass in the objects you want to have access to and then you can use them in the code without using the word context.
+With [ES6](https://hacks.mozilla.org/2015/05/es6-in-depth-destructuring/) you can use this syntax to destructure your context object. You can pass in the objects you want to have access to and then you can use them in the code without using the word context.
 
 ```js{}[pages/posts/_id.vue]
 export default {
@@ -127,14 +125,14 @@ export default {
       // Using the nuxtjs/http module here exposed via context.app
       const post = await $http.$get(`https://api.nuxtjs.dev/posts/${id}`)
       return { post }
-    } catch (error) {
-      error(error) // Show the nuxt error page with the thrown error
+    } catch (e) {
+      error(e) // Show the nuxt error page with the thrown error
     }
   }
 }
 ```
 
-Want to use query parameters instead? You then use [context.query.id](http://context.query.id) then.
+Want to use query parameters instead? You then use [context.query.id](/docs/2.x/internals-glossary/context#query) then.
 
 ### Redirecting users & accessing the store
 
@@ -152,9 +150,11 @@ export default {
 }
 ```
 
-<app-modal>
-  <code-sandbox  :src="csb_link_context"></code-sandbox>
-</app-modal>
+<base-alert type="next">
+
+Check out the Internals Glossary book for more examples of the [redirect method](/docs/2.x/internals-glossary/context#redirect)
+
+</base-alert>
 
 ## Helpers
 
@@ -162,7 +162,7 @@ Besides the shortcuts in the context, there are also other tiny helpers present 
 
 ## `$nuxt`: The Nuxt.js helper
 
-`$nuxt` is a helper designed to improve the user experience and to be an escape hatch in some situations. It is accessible via `this.$nuxt` in Vue components and via `window.$nuxt` otherwise on the client side.
+`$nuxt` is a helper designed to improve the user experience and to be an escape hatch in some situations. It is accessible via `this.$nuxt` in Vue components and via `window.$nuxt` otherwise on the client side.
 
 ### Connection checker
 
@@ -209,7 +209,7 @@ You can do so, by using `this.$nuxt.refresh()`!
 </script>
 ```
 
-### Controlling the loading bar
+#### Controlling the loading bar
 
 With `$nuxt`, you can also control Nuxt's loading bar programmatically via `this.$nuxt.$loading`.
 
@@ -255,9 +255,5 @@ Nuxt.js injects three boolean values into the global `process` object which will
 ```
 
 In the example, `renderedOn` will evaluate to `'server'` when using server-side rendering and a user accesses the page directly. When the user would navigate to the page from another part of the application, e.g. by click on a `<NuxtLink>`, it will evaluate to client.
-
-<app-modal>
-  <code-sandbox  :src="csb_link_helpers"></code-sandbox>
-</app-modal>
 
 <quiz :questions="questions"></quiz>

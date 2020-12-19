@@ -1,23 +1,23 @@
 ---
-title: 'The router Property'
-description: The router property lets you customize Nuxt.js router.
+title: 'router プロパティ'
+description: 'router プロパティを使って Nuxt.js ルーターをカスタマイズできます。'
 menu: router
 category: configuration-glossary
 position: 24
 ---
 
-> The router property lets you customize Nuxt.js router ([vue-router](https://router.vuejs.org/en/)).
+> router プロパティを使って Nuxt.js ルーター（[vue-router](https://router.vuejs.org/ja/)）をカスタマイズできます。
 
 ## base
 
-- Type: `String`
-- Default: `'/'`
+- 型: `String`
+- デフォルト: `'/'`
 
-The base URL of the app. For example, if the entire single page application is served under `/app/`, then base should use the value `'/app/'`.
+アプリケーションのベースの URL です。例えば、単一ページアプリケーション全体が `/app/` 下に配置される場合、base の値は `'/app/'` を指定します。
 
-This can be useful if you need to serve Nuxt as a different context root, from within a bigger Web site. Notice that you may, or may not set up a Front Proxy Web Server.
+これは、より大きな Web サイト内から、Nuxt を別のコンテキストルートとして提供する必要がある場合に役立ちます。フロントプロキシウェブサーバーを設定する場合としない場合があることに注意してください。
 
-If you want to have a redirect to `router.base`, you can do so [using a Hook, see _Redirect to router.base when not on root_](/docs/2.x/configuration-glossary/configuration-hooks#redirect-to-routerbase-when-not-on-root).
+`router.base` にリダイレクトしたい場合、Hook を使ってリダイレクトすることができます。[ルートでない場合 router.base にリダイレクトさせる](/docs/2.x/configuration-glossary/configuration-hooks#root-でない場合は-routerbase-にリダイレクトさせる)を参照してください。
 
 ```js{}[nuxt.config.js]
 export default {
@@ -29,18 +29,18 @@ export default {
 
 <div class="Alert Alert-blue">
 
-When `base` is set, Nuxt.js will also add in the document header `<base href="{{ router.base }}"/>`.
+`base` が設定されている場合、Nuxt.js はドキュメントヘッダー `<base href="{{ router.base }}"/>` も追加します。
 
 </div>
 
-> This option is given directly to the vue-router [base](https://router.vuejs.org/api/#base).
+> このオプションは直接 vue-router の [base](https://router.vuejs.org/ja/api/#base) に渡されます。
 
 ## routeNameSplitter
 
-- Type: `String`
-- Default: `'-'`
+- 型: `String`
+- デフォルト: `'-'`
 
-You may want to change the separator between route names that Nuxt.js uses. You can do so via the `routeNameSplitter` option in your configuration file. Imagine we have the page file `pages/posts/_id.vue`. Nuxt will generate the route name programmatically, in this case `posts-id`. Changing the `routeNameSplitter` config to `/` the name will therefore change to `posts/id`.
+Nuxt.js が使うルート名間の区切り文字を変更したいかもしれません。その場合は設定ファイルの `routeNameSplitter` オプションを介して変更できます。ページファイル `pages/posts/_id.vue` があると仮定します。Nuxt はプログラムでルート名（今回の場合は `posts-id`）を生成します。`routeNameSplitter` の設定を `/` に変更するとルート名は `posts/id` に変更されます。
 
 ```js{}[nuxt.config.js]
 export default {
@@ -52,9 +52,9 @@ export default {
 
 ## extendRoutes
 
-- Type: `Function`
+- 型: `Function`
 
-You may want to extend the routes created by Nuxt.js. You can do so via the `extendRoutes` option.
+Nuxt.js によって作成されたルートを拡張したいことがあるかもしれません。その場合は `extendRoutes` オプションを介して拡張できます。
 
 ```js{}[nuxt.config.js]
 export default {
@@ -70,27 +70,27 @@ export default {
 }
 ```
 
-If you want to sort your routes, you can use the `sortRoutes(routes)` function from `@nuxt/utils`:
+ルートをソートしたい場合、`@nuxt/utils` の `sortRoutes(routes)` 関数を使えます:
 
 ```js{}[nuxt.config.js]
 import { sortRoutes } from '@nuxt/utils'
 export default {
   router: {
     extendRoutes(routes, resolve) {
-      // Add some routes here ...
+      // ルートをここに追加する ...
 
-      // and then sort them
+      // それからソートする
       sortRoutes(routes)
     }
   }
 }
 ```
 
-The schema of the route should respect the [vue-router](https://router.vuejs.org/en/) schema.
+ルートのスキーマは [vue-router](https://router.vuejs.org/ja/) スキーマを尊重してください。
 
 <base-alert>
 
-When adding routes that use Named Views, don't forget to add the corresponding `chunkNames` of named `components`.
+名前付きビューを使うルートを追加する場合、対応する名前付き `components` の `chunkNames` の追加を忘れないでください。
 
 </base-alert>
 
@@ -101,7 +101,7 @@ export default {
       routes.push({
         path: '/users/:id',
         components: {
-          default: resolve(__dirname, 'pages/users'), // or routes[index].component
+          default: resolve(__dirname, 'pages/users'), // または routes[index].component
           modal: resolve(__dirname, 'components/modal.vue')
         },
         chunkNames: {
@@ -115,21 +115,21 @@ export default {
 
 ## fallback
 
-- Type: `boolean`
-- Default: `false`
+- 型: `boolean`
+- デフォルト: `false`
 
-Controls whether the router should fallback to hash mode when the browser does not support history.pushState but mode is set to history.
+history.pushState がサポートされていないブラウザにおいて、モードが history に設定されているとき、ルーターを hash モードにフォールバックするかどうか制御します。
 
-Setting this to false essentially makes every router-link navigation a full page refresh in IE9. This is useful when the app is server-rendered and needs to work in IE9, because a hash mode URL does not work with SSR.
+ケーションがサーバサイドレンダリングされ、IE9 で動作する必要がある場合に便利です。なぜなら、サーバーサイドレンダリングではハッシュモードの URL が機能しないためです。
 
-> This option is given directly to the vue-router [fallback](https://router.vuejs.org/api/#fallback).
+> このオプションは直接 vue-router の [fallback](https://router.vuejs.org/ja/api/#fallback) に渡されます。
 
 ## linkActiveClass
 
-- Type: `String`
-- Default: `'nuxt-link-active'`
+- 型: `String`
+- デフォルト: `'nuxt-link-active'`
 
-Globally configure [`<nuxt-link>`](/docs/2.x/features/nuxt-components#the-nuxtlink-component) default active class.
+[`<nuxt-link>`](/docs/2.x/features/nuxt-components#nuxtlink-コンポーネント) のデフォルトの active class をグローバルに設定します。
 
 ```js{}[nuxt.config.js]
 export default {
@@ -139,14 +139,14 @@ export default {
 }
 ```
 
-> This option is given directly to the vue-router [linkactiveclass](https://router.vuejs.org/api/#linkactiveclass).
+> このオプションは直接 vue-router の [linkactiveclass](https://router.vuejs.org/ja/api/#linkactiveclass) に渡されます。
 
 ## linkExactActiveClass
 
-- Type: `String`
-- Default: `'nuxt-link-exact-active'`
+- 型: `String`
+- デフォルト: `'nuxt-link-exact-active'`
 
-Globally configure [`<nuxt-link>`](/docs/2.x/features/nuxt-components#the-nuxtlink-component) default exact active class.
+[`<nuxt-link>`](/docs/2.x/features/nuxt-components#nuxtlink-コンポーネント) のデフォルトの active class をグローバルに設定します。
 
 ```js{}[nuxt.config.js]
 export default {
@@ -156,14 +156,14 @@ export default {
 }
 ```
 
-> This option is given directly to the vue-router [linkexactactiveclass](https://router.vuejs.org/api/#linkexactactiveclass).
+> このオプションは直接 vue-router の [linkexactactiveclass](https://router.vuejs.org/ja/api/#linkexactactiveclass) に渡されます。
 
 ## linkPrefetchedClass
 
-- Type: `String`
-- Default: `false`
+- 型: `String`
+- デフォルト: `false`
 
-Globally configure [`<nuxt-link>`](/docs/2.x/features/nuxt-components#the-nuxtlink-component) default prefetch class (feature disabled by default)
+[`<nuxt-link>`](/docs/2.x/features/nuxt-components#nuxtlink-コンポーネント) の prefetch クラスをグローバルに設定します（デフォルトは無効の機能）。
 
 ```js{}[nuxt.config.js]
 export default {
@@ -175,15 +175,15 @@ export default {
 
 ## middleware
 
-- Type: `String` or `Array`
-  - Items: `String`
+- 型: `String` または `Array`
+  - 要素: `String`
 
-Set the default(s) middleware for every page of the application.
+アプリケーションのページごとにデフォルトのミドルウェアを設定します。
 
 ```js{}[nuxt.config.js]
 export default {
   router: {
-    // Run the middleware/user-agent.js on every page
+    // ページごとに middleware/user-agent.js を実行します
     middleware: 'user-agent'
   }
 }
@@ -191,21 +191,21 @@ export default {
 
 ```js{}[middleware/user-agent.js]
 export default function (context) {
-  // Add the userAgent property in the context (available in `asyncData` and `fetch`)
+  // userAgent プロパティを context（`asyncData` と `fetch` メソッドで利用できます）内に追加します
   context.userAgent = process.server
     ? context.req.headers['user-agent']
     : navigator.userAgent
 }
 ```
 
-To learn more about the middleware, see the [middleware guide](/docs/2.x/directory-structure/middleware#router-middleware).
+ミドルウェアについてより深く理解するために、[ミドルウェアのドキュメント](/docs/2.x/directory-structure/middleware#router-middleware)を参照してください。
 
 ## mode
 
-- Type: `String`
-- Default: `'history'`
+- 型: `String`
+- デフォルト: `'history'`
 
-Configure the router mode, this is not recommended to change it due to server-side rendering.
+ルーティングのモードを設定します。サーバーサイドレンダリングのためにこの設定を変更することはおすすめしません。
 
 ```js{}[nuxt.config.js]
 export default {
@@ -215,26 +215,26 @@ export default {
 }
 ```
 
-> This option is given directly to the vue-router [mode](https://router.vuejs.org/api/#mode).
+> このオプションは直接 vue-router の [mode](https://router.vuejs.org/ja/api/#mode) に渡されます。
 
 ## parseQuery / stringifyQuery
 
-- Type: `Function`
+- 型: `Function`
 
-Provide custom query string parse / stringify functions. Overrides the default.
+カスタムクエリ構文解析関数/文字列化関数を提供します。デフォルトを上書きします。
 
-> This option is given directly to the vue-router [parseQuery / stringifyQuery](https://router.vuejs.org/api/#parsequery-stringifyquery).
+> このオプションは直接 vue-router の [parseQuery / stringifyQuery](https://router.vuejs.org/ja/api/#parsequery-stringifyquery) に渡されます。
 
 ## prefetchLinks
 
-> Added with Nuxt v2.4.0
+> この機能は Nuxt v2.4.0 で追加されました
 
-- Type: `Boolean`
-- Default: `true`
+- 型: `Boolean`
+- デフォルト: `true`
 
-Configure `<nuxt-link>` to prefetch the _code-splitted_ page when detected within the viewport. Requires [IntersectionObserver](https://developer.mozilla.org/en-US/docs/Web/API/Intersection_Observer_API) to be supported (see [CanIUse](https://caniuse.com/#feat=intersectionobserver)).
+viewport（ブラウザの表示領域）内でリンクが検出された時に*コード分割された*ページを先読みする `<nuxt-link>` の設定をします。[IntersectionObserver](https://developer.mozilla.org/ja/docs/Web/API/Intersection_Observer_API) がサポートされている必要があります（[CanIUse](https://caniuse.com/#feat=intersectionobserver) を参照してください）。
 
-We recommend conditionally polyfilling this feature with a service like [Polyfill.io](https://polyfill.io):
+この機能を [Polyfill.io](https://polyfill.io) のようなサービスに条件付きで埋め込むことをおすすめします:
 
 ```js{}[nuxt.config.js]
 export default {
@@ -250,14 +250,14 @@ export default {
 }
 ```
 
-To disable the prefetching on a specific link, you can use the `no-prefetch` prop. Since Nuxt.js v2.10.0, you can also use the `prefetch` prop set to `false`:
+特定のリンクで先読みを無効にしたい場合、`no-prefetch` プロパティが使えます。Nuxt.js v2.10.0 からは `prefetch` プロパティ（`false` に設定）も使えます:
 
 ```html
 <nuxt-link to="/about" no-prefetch>About page not pre-fetched</nuxt-link>
 <nuxt-link to="/about" :prefetch="false">About page not pre-fetched</nuxt-link>
 ```
 
-To disable the prefetching on all links, set the `prefetchLinks` to `false`:
+全てのリンクで先読みを無効にしたい場合は、`prefetchLinks` を `false` に設定してください:
 
 ```js{}[nuxt.config.js]
 export default {
@@ -267,7 +267,7 @@ export default {
 }
 ```
 
-Since Nuxt.js v2.10.0, if you have set `prefetchLinks` to `false` but you want to prefetch a specific link, you can use the `prefetch` prop:
+Nuxt.js v2.10.0 からは `prefetchLinks` を `false` に設定した上で特定のリンクを先読みしたい場合、`prefetch` プロパティが使えます:
 
 ```html
 <nuxt-link to="/about" prefetch>About page pre-fetched</nuxt-link>
@@ -275,22 +275,22 @@ Since Nuxt.js v2.10.0, if you have set `prefetchLinks` to `false` but you want t
 
 ## prefetchPayloads
 
-> Added with v2.13.0, only available for [static target](/docs/2.x/features/deployment-targets#static-hosting).
+> v2.13.0 で追加された機能で、[静的なターゲット](/docs/2.x/features/deployment-targets#静的ホスティング)でのみ利用できます。
 
-- Type: `Boolean`
-- Default: `true`
+- 型: `Boolean`
+- デフォルト: `true`
 
-When using `nuxt generate` with `target: 'static'`, Nuxt will generate a `payload.js` for each page.
+`target: 'static'` に設定した上で `nuxt generate` を使う場合、Nuxt はページごとに `payload.js` を生成します。
 
-With this option enabled, Nuxt will automatically prefetch the payload of the linked page when the `<nuxt-link>` is visible in the viewport, making **instant navigation**.
+このオプションを有効にすると、viewport に `<nuxt-link>` が表示された時に Nuxt はリンク先ページのペイロードを自動的に先読みし**インスタントナビゲーション**を作成します。
 
 <base-alert type="info">
 
-This option depends of the [prefetchLinks](#prefetchlinks) option to be enabled.
+このオプションの有効化は [prefetchLinks](#prefetchlinks) オプションに依存します。
 
 </base-alert>
 
-You can disable this behavior by setting `prefetchPaylods` to `false`:
+`prefetchPaylods` を `false` に設定することで無効にできます:
 
 ```js{}[nuxt.config.js]
 export default {
@@ -302,19 +302,19 @@ export default {
 
 ## scrollBehavior
 
-- Type: `Function`
+- 型: `Function`
 
-The `scrollBehavior` option lets you define a custom behavior for the scroll position between the routes. This method is called every time a page is rendered. To learn more about it, see [vue-router scrollBehavior documentation](https://router.vuejs.org/guide/advanced/scroll-behavior.html).
+`scrollBehavior` オプションを使って、ページ間のスクロール位置についての独自の振る舞いを定義できます。このメソッドはページがレンダリングされるたびに毎回呼び出されます。詳細は [vue-router のスクロールの振る舞いのドキュメント](https://router.vuejs.org/ja/guide/advanced/scroll-behavior.html)を参照してください。
 
 <div class="Alert Alert-blue">
 
-Starting from v2.9.0, you can use a file to overwrite the router scrollBehavior, this file should be placed in `~/app/router.scrollBehavior.js` (note: filename is case-sensitive if running on Windows).
+v2.9.0 以降、ファイルを使用してルーターの scrollBehavior を上書きすることができます。このファイルは `~/app/router.scrollBehavior.js` に配置する必要があります（注意: Windows ではファイル名の大文字と小文字が区別されます）。
 
 </div>
 
-You can see Nuxt default `router.scrollBehavior.js` file here: [packages/vue-app/template/router.scrollBehavior.js](https://github.com/nuxt/nuxt.js/blob/dev/packages/vue-app/template/router.scrollBehavior.js).
+Nuxt のデフォルトの `router.scrollBehavior.js` ファイルは次の場所にあります: [packages/vue-app/template/router.scrollBehavior.js](https://github.com/nuxt/nuxt.js/blob/dev/packages/vue-app/template/router.scrollBehavior.js)
 
-Example of forcing the scroll position to the top for every routes:
+すべてのルートにおいて強制的にトップまでスクロールさせる例:
 
 `app/router.scrollBehavior.js`
 
@@ -326,10 +326,10 @@ export default function (to, from, savedPosition) {
 
 ## trailingSlash
 
-- Type: `Boolean` or `undefined`
-- Default: `undefined`
-- Available since: v2.10
+- 型: `Boolean` または `undefined`
+- デフォルト: `undefined`
+- 利用できる最小バージョン: v2.10
 
-If this option is set to true, trailing slashes will be appended to every route. If set to false, they'll be removed.
+このオプションを true に設定した場合、末尾のスラッシュがすべてのルートに追加されます。もし false に設定した場合は末尾のスラッシュは削除されます。
 
-**Attention**: This option should not be set without preparation and has to be tested thoroughly. When setting `router.trailingSlash` to something else than `undefined`, the opposite route will stop working. Thus 301 redirects should be in place and you _internal linking_ has to be adapted correctly. If you set `trailingSlash` to `true`, then only `example.com/abc/` will work but not `example.com/abc`. On false, it's vice-versa
+**注意**: このオプションは準備なしに設定すべきではなく、徹底的にテストする必要があります。`router.trailingSlash` に `undefined` 以外の値を設定すると、反対のルートは機能しなくなります。したがって、301 リダイレクトを設定し、*内部リンク*を正しく適応させる必要があります。`trailingSlash` を `true` に設定した場合、`example.com/abc/` のみが動作し `example.com/abc` は動作しません。false に設定する場合はその逆になります。

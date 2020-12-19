@@ -87,7 +87,7 @@ questions:
 
 <base-alert type="star">
 
-Nuxt.js は気に入りましたか？ GitHub で[私たちのプロジェクトにスターをつける](https://github.com/nuxt/nuxt.js)ことを忘れないでください。
+Nuxt.js は気に入りましたか？　 GitHub で[私たちのプロジェクトにスターをつける](https://github.com/nuxt/nuxt.js)ことを忘れないでください。
 
 </base-alert>
 

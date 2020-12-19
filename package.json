@@ -81,6 +81,7 @@
     "format:prettier": "yarn lint:prettier --write --loglevel warn",
     "lint:all:eslint": "yarn lint:eslint --fix",
     "lint:all:markdownlint": "yarn lint:markdownlint",
+    "lint:all:textlint:ja": "yarn lint:textlint:ja --fix",
     "lint:all:stylelint": "yarn lint:stylelint --fix",
     "lint": "run-p lint:all:*",
     "new": "hygen new"

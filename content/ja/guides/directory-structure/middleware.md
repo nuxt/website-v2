@@ -88,13 +88,13 @@ export default function (context) {
 
 ミドルウェアは以下の順序で連続して実行されます:
 
-1. `nuxt.config.js` （ファイル内の順序）
+1. `nuxt.config.js`（ファイル内の順序）
 2. マッチしたレイアウト
 3. マッチしたページ
 
 ## ルーターミドルウェア
 
-ミドルウェアは非同期にすることができます。これを行うには `Promise` を返すか、async/awaitを使用します。
+ミドルウェアは非同期にすることができます。これを行うには `Promise` を返すか、async/await を使用します。
 
 ```js{}[middleware/stats.js]
 import http from 'http'

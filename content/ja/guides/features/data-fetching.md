@@ -67,12 +67,12 @@ Nuxt.js はコンポーネントの `mounted()` フックでデータを取得�
 
 Nuxt は非同期なデータを読み込むために 2 つのフックを提供しています：
 
-- `fetch` フック（Nuxt 2.12 以降）。 どのコンポーネントにでも配置することができ、（クライアントサイドレンダリング中の） 読み込み状態やエラーをレンダリングするショートカットを提供します。
+- `fetch` フック（Nuxt 2.12 以降）。 どのコンポーネントにでも配置することができ、（クライアントサイドレンダリング中の）読み込み状態やエラーをレンダリングするショートカットを提供します。
 - `asyncData` フック。 _ページ_ コンポーネントにのみ配置することができます。 `fetch` と異なり、クライアントサイドレンダリング中にローディングプレースホルダーを示しません： そのかわり、ルートナビゲーションが解決されるまでそれをブロックし、失敗するとエラーページを表示します。
 
 <base-alert>
 
-Nuxt 2.12 未満においては、`fetch` フックは今日の `asyncData` と非常によく似た働きをします。この機能は後方互換性のためまだサポートされています: もし `fetch()` が `context` オブジェクトを受け取っているなら、それは 「レガシー」 な fetch フックだと考えられます。この機能は非推奨なので、`asyncData(context)` や `middleware(context)` を使用した[無名ミドルウェア](/docs/2.x/directory-structure/middleware#無名ミドルウェア) に置き換えてください。
+Nuxt 2.12 未満においては、`fetch` フックは今日の `asyncData` と非常によく似た働きをします。この機能は後方互換性のためまだサポートされています: もし `fetch()` が `context` オブジェクトを受け取っているなら、それは「レガシー」な fetch フックだと考えられます。この機能は非推奨なので、`asyncData(context)` や `middleware(context)` を使用した[無名ミドルウェア](/docs/2.x/directory-structure/middleware#無名ミドルウェア) に置き換えてください。
 
 </base-alert>
 
@@ -136,11 +136,11 @@ fetch フック内では `this.$nuxt.context` を使うことで、Nuxt [contex
 
 ### オプション
 
-`fetchOnServer`: `Boolean` または `Function` （デフォルト: `true`）。サーバーがページをレンダリングする際に `fetch()` を呼び出します。
+`fetchOnServer`: `Boolean` または `Function`（デフォルト: `true`）。サーバーがページをレンダリングする際に `fetch()` を呼び出します。
 
 `fetchDelay`: `Integer` （デフォルト: `200`）。最小実行時間をミリ秒単位で設定します（過剰実行を防ぐため）。
 
-`fetchOnServer` が falsy （`false` または `false` を返す）な場合、`fetch` はクライアントサイドでのみ呼び出され、サーバーでコンポーネントをレンダリングする場合は、`$fetchState.pending` は `true` を返します。
+`fetchOnServer` が falsy（`false` または `false` を返す）な場合、`fetch` はクライアントサイドでのみ呼び出され、サーバーでコンポーネントをレンダリングする場合は、`$fetchState.pending` は `true` を返します。
 
 ```js
 export default {

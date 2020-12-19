@@ -58,7 +58,9 @@
     "stylelint": "^13.8.0",
     "stylelint-config-prettier": "^8.0.2",
     "stylelint-config-standard": "^20.0.0",
-    "stylelint-scss": "^3.18.0"
+    "stylelint-scss": "^3.18.0",
+    "textlint": "^11.7.6",
+    "textlint-rule-preset-ja-spacing": "^2.0.2"
   },
   "scripts": {
     "dev": "nuxt",

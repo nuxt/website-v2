@@ -1,7 +1,7 @@
 ---
 title: La classe `Renderer`
 description: Classe Renderer Nuxt
-menu: La classe Renderer
+menu: Rendu
 category: internals-glossary
 position: 5
 ---

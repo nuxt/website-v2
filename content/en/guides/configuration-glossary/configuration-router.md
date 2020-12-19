@@ -333,3 +333,59 @@ export default function (to, from, savedPosition) {
 If this option is set to true, trailing slashes will be appended to every route. If set to false, they'll be removed.
 
 **Attention**: This option should not be set without preparation and has to be tested thoroughly. When setting `router.trailingSlash` to something else than `undefined`, the opposite route will stop working. Thus 301 redirects should be in place and you _internal linking_ has to be adapted correctly. If you set `trailingSlash` to `true`, then only `example.com/abc/` will work but not `example.com/abc`. On false, it's vice-versa
+
+### Example behaviour (with child routes)
+
+For a directory with this structure:
+
+```bash
+-| pages/
+---| index.vue
+---| posts.vue
+---| posts/
+-----| _slug.vue
+-----| index.vue
+```
+
+This is the behaviour for each possible setting of `trailingSlash`:
+
+<code-group>
+<code-block label="default" active>
+
+```bash
+Route           Page
+/               ~/pages/index.vue
+/posts          ~/pages/posts.vue (parent) + ~/pages/posts.vue (child route)
+/posts/         ~/pages/posts.vue (parent) + ~/pages/posts.vue (child route)
+/posts/foo      ~/pages/posts.vue (parent) + ~/pages/_slug.vue (child route)
+/posts/foo/     ~/pages/posts.vue (parent) + ~/pages/_slug.vue (child route)
+```
+
+</code-block>
+<code-block label="true">
+
+```bash
+
+Route           Page
+/               ~/pages/index.vue
+/posts          404
+/posts/         ~/pages/posts.vue (parent) + ~/pages/index.vue (child route)
+/posts/foo      404
+/posts/foo/     ~/pages/posts.vue (parent) + ~/pages/_slug.vue (child route)
+```
+
+</code-block>
+<code-block label="false">
+
+```bash
+
+Route           Page
+/               ~/pages/index.vue
+/posts          ~/pages/posts.vue
+/posts/         ~/pages/posts.vue (parent) + ~/pages/index.vue (child route)
+/posts/foo      ~/pages/posts.vue (parent) + ~/pages/_slug.vue (child route)
+/posts/foo/     404
+```
+
+</code-block>
+</code-group>

@@ -1,7 +1,7 @@
 ---
 title: La classe Generator
 description: La classe Generator de Nuxt
-menu: La classe Generator
+menu: Générateur
 category: internals-glossary
 position: 8
 ---

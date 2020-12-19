@@ -4,7 +4,9 @@
     "preset-ja-spacing": {
       "ja-space-between-half-and-full-width": {
         "space": "always"
-      }
+      },
+      "ja-space-after-exclamation": false,
+      "ja-space-after-question": false
     }
   }
 }

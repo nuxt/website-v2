@@ -27,6 +27,8 @@ export default {
 }
 ```
 
+<alert>In Nuxt 2.15+, this property can be set using environment variables to change the configuration of an app that has already been built.</alert>
+
 <div class="Alert Alert-blue">
 
 When `base` is set, Nuxt.js will also add in the document header `<base href="{{ router.base }}"/>`.

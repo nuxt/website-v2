@@ -1,6 +1,7 @@
 {
   "filters": {},
   "rules": {
+    "preset-jtf-style": true,
     "preset-ja-spacing": {
       "ja-space-between-half-and-full-width": {
         "space": "always"

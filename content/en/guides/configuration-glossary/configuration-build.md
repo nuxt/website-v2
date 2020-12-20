@@ -593,7 +593,7 @@ export default {
 
 Then, when launching `nuxt build`, upload the content of `.nuxt/dist/client` directory to your CDN and voilà!
 
-In Nuxt 2.15+, this property can be set using environment variables to change the configuration of an app that has already been built.
+In Nuxt 2.15+, changing the value of this property at runtime will override the configuration of an app that has already been built.
 
 ## quiet
 

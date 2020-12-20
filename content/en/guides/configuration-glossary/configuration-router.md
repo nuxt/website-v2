@@ -19,7 +19,7 @@ This can be useful if you need to serve Nuxt as a different context root, from w
 
 If you want to have a redirect to `router.base`, you can do so [using a Hook, see _Redirect to router.base when not on root_](/docs/2.x/configuration-glossary/configuration-hooks#redirect-to-routerbase-when-not-on-root).
 
-In Nuxt 2.15+, this property can be set using environment variables to change the configuration of an app that has already been built.
+In Nuxt 2.15+, changing the value of this property at runtime will override the configuration of an app that has already been built.
 
 ```js{}[nuxt.config.js]
 export default {

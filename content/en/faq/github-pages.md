@@ -83,6 +83,70 @@ You can take deployment one step further and rather than having to manually comp
 
 Before you configure the build server, you'll first need to [generate a GitHub personal access token](https://help.github.com/articles/creating-a-personal-access-token-for-the-command-line/#creating-a-token) in order to grant the build server permission to perform tasks on your behalf. Once you have created your token, keep a copy of it safe ready to use a little later on.
 
+### Github Actions
+
+To deploy via [Github Actions](https://github.com/features/actions), the official tool for software automation with Github, if you don't have a workflow you need to create a new one or append a new step to your existing workflow.
+
+It uses the [Github Pages Action](https://github.com/marketplace/actions/github-pages-action) which push the generated files from `dist` folder to your default Github Pages branch `gh-pages`.
+
+With an existing workflow, add the following step:
+
+```yaml
+- name: Deploy
+  uses: peaceiris/actions-gh-pages@v3
+  with:
+    github_token: ${{ secrets.GITHUB_TOKEN }}
+    publish_dir: ./dist
+```
+
+With a new workflow, paste the following content into a new file called `cd.yml` in `.github/workflows` directory:
+
+```yaml
+name: cd
+
+on: [push, pull_request]
+
+jobs:
+  cd:
+    runs-on: ${{ matrix.os }}
+
+    strategy:
+      matrix:
+        os: [ubuntu-latest]
+        node: [14]
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@master
+
+      - name: Setup node env
+        uses: actions/setup-node@v2.1.2
+        with:
+          node-version: ${{ matrix.node }}
+
+      - name: Install dependencies
+        run: yarn
+
+      - name: Generate
+        run: yarn run generate
+
+      - name: Deploy
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./dist
+```
+
+Then commit this to your repository:
+
+```bash
+git add .github/workflows/cd.yml
+git commit -m "Adding github pages deploy workflow"
+git push origin
+```
+
+On completion, you'll see your `gh-pages` branch updated as well as your site.
+
 ### Travis CI
 
 To deploy with [Travis CI](https://travis-ci.org/), a free for open source projects build server, sign in via your GitHub account, granting Travis access to view your repositories, and then enable the build server for your repository by toggling the switch next to your repositories name in the list displayed.

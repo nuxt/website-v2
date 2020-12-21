@@ -42,7 +42,7 @@
     "cross-env": "^7.0.3",
     "cypress": "6.1.0",
     "eslint": "^7.15.0",
-    "eslint-config-prettier": "^6.15.0",
+    "eslint-config-prettier": "^7.1.0",
     "eslint-plugin-cypress": "^2.11.2",
     "fibers": "^5.0.0",
     "globby": "^11.0.1",

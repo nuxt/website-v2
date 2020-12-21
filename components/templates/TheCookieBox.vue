@@ -15,6 +15,7 @@
       <template slot="button">
         <button
           class="ml-4 no-underline mt-4 font-medium text-sm px-4 py-2 shadow uppercase rounded hover:shadow-md sm:mr-4 py-3 px-6 text-base mb-4 primary bg-primary-base text-white hover:bg-primary-light"
+          @click="$emit('acknowledge-banner')"
         >
           {{ $t('cookies.button') }}
         </button>

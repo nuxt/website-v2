@@ -11,7 +11,7 @@
     <TheMobileBottomNav />
     <TheCookieBox
       class="w-full fixed bottom-0 left-0 mt-8 z-40 bg-light-elevatedSurface dark:bg-dark-elevatedSurface"
-      @remove-spacer="showCookieBanner = false"
+      @acknowledge-banner="showCookieBanner = false"
     />
   </div>
 </template>

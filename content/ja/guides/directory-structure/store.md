@@ -275,7 +275,7 @@ actions: {
 
 ## Vuex 厳格モード
 
-厳格モードは dev モードではデフォルトで有効になっていて、 production モードでは無効になっています。 厳格モードを dev モードでも無効化するには、 `store/index.js` を下記の例に従ってください:
+厳格モードは dev モードではデフォルトで有効になっていて、production モードでは無効になっています。 厳格モードを dev モードでも無効化するには、`store/index.js` を下記の例に従ってください:
 
 ```js
 export const strict = false

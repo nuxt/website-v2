@@ -255,7 +255,7 @@ actions: {
 
 </base-alert>
 
-[コンテキスト](/docs/2.x/concepts/context-helpers) は `asyncData` メソッドのように、 `nuxtServerInit` の第 2 引数として渡されます。
+[コンテキスト](/docs/2.x/concepts/context-helpers)は `asyncData` メソッドのように、`nuxtServerInit` の第 2 引数として渡されます。
 
 `nuxt generate` が走った場合、`nuxtServerInit` は全ての動的に生成されたルートで実行されます。
 

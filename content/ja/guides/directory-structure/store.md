@@ -261,7 +261,7 @@ actions: {
 
 <base-alert type="info">
 
-非同期の `nuxtServerInit` アクションは、 Promise を返すか async/await を利用して nuxt サーバが待機できるようにしなければなりません。
+非同期の `nuxtServerInit` アクションは、Promise を返すか async/await を利用して nuxt サーバが待機できるようにしなければなりません。
 
 </base-alert>
 

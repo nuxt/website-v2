@@ -501,7 +501,7 @@ We can now move this component out of the global folder and into the components 
 
 ### Adding a code block to your post
 
-With the content module we can style our code blocks with the automatic inclusion of [prismJS](https://prismjs.com/). That means we can write our code block using the correct markdown syntax and our code block will display with styling depending on the language.
+With the content module we can style our code blocks with the automatic inclusion of [Prism](https://prismjs.com/). That means we can write our code block using the correct markdown syntax and our code block will display with styling depending on the language.
 
 ```js
 export default {
@@ -521,7 +521,7 @@ export default {
 }
 ```
 
-The filename will be converted to a span with a filename class which we can then style how we like. For this example I am using tailwind classes but you can use ordinary CSS if you prefer.
+The file name will be converted to a span with a filename class which we can then style how we like. For this example I am using tailwind classes but you can use ordinary CSS if you prefer.
 
 ```css{}[assets/css/tailwind.css]
 .nuxt-content-highlight {
@@ -554,7 +554,7 @@ content: {
 
 ### Creating a previous and next component
 
-We now have a pretty complete blog post but wouldn't it be great if users could easily go from one post to another. First let's duplicate our post so we have 3 posts. Then, let's create a new component for our prev and next posts.
+We now have a pretty complete blog post but wouldn't it be great if users could easily go from one post to another. First let's duplicate our post so we have 3 posts. Then, let's create a new component for our previous and next posts.
 
 ```bash
 touch components/PrevNext.vue
@@ -604,7 +604,7 @@ In our component we pass the props `prev` and `next` to makes them available to 
 </script>
 ```
 
-We can now get our prev and next articles by adding them to our `asyncData`. We create an array of const with the name `prev` and `next` and we await the content from the articles folder. This time we only need the title and the slug so we can chain `only()` to our await and pass in title and slug.
+We can now get our previous and next articles by adding them to our `asyncData`. We create an array of const with the name `prev` and `next` and we await the content from the articles folder. This time we only need the title and the slug so we can chain `only()` to our await and pass in title and slug.
 
 We can use the `sortBy()` method to sort our data by the createdAt date in ascending order. We then use the `surround()` method and pass in the slug from params so that it can get the correct slug for the previous and next posts.
 
@@ -756,7 +756,7 @@ export default {
 
 As we can see we get all our data back only for the author Maria. If we were to use maria without a capital letter we wouldn't get anything back. We can therefore use `$regex` so that it remains with a capital letter.
 
-We then fetch all the details we want to show on this page. In the last example we used the `only()` method to return what we wanted but as we require quite a lot of content we can instead use the `without()` method and pass in what we don't wan't to return which is the body of the post.
+We then fetch all the details we want to show on this page. In the last example we used the `only()` method to return what we wanted but as we require quite a lot of content we can instead use the `without()` method and pass in what we don't want to return which is the body of the post.
 
 ```html{}[pages/blog/author/_author.vue]
 <script>

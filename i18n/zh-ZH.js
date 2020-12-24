@@ -296,6 +296,7 @@ module.exports = {
       internals: '内部构造'
     },
     examples: {
+      essentials: '必要',
       routing: '路由',
       dataFetching: '数据获取',
       assetManagement: '资产管理',

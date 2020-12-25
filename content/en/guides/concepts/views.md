@@ -135,7 +135,7 @@ We then use the layout property with the value of 'blog' in the page where we wa
 
 <base-alert type="info">
 
-If you don't add a layout property to your page, eg `layout: 'blog'` then the `default.vue` layout will be used.
+If you don't add a layout property to your page, e.g. `layout: 'blog'`, then the `default.vue` layout will be used.
 
 </base-alert>
 

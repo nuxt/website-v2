@@ -17,18 +17,18 @@ tags:
   <a href="https://github.com/nuxt-community/color-mode-module" target="_blank" rel="noopener nofollow">Source</a>
 </p>
 
-The [@nuxtjs/color-mode module](https://github.com/nuxt-community/color-mode-module) is a cool way of adding dark mode to your site. But not only does it switch from dark to light but also any color theme (eg: sepia mode). It even has auto detection so that it will choose the right mode depending on your system appearance.
+The [@nuxtjs/color-mode module](https://github.com/nuxt-community/color-mode-module) is a cool way of adding dark mode to your site. But not only does it switch from dark to light but also any color theme (e.g.: sepia mode). It even has auto detection so that it will choose the right mode depending on your system appearance.
 
 - [How does it work](#how-does-it-work)
 - [Let's get started](#lets-get-started)
   - [Install the color-mode module](#install-the-color-mode-module)
-  - [Adding your colour styles](#adding-your-colour-styles)
+  - [Adding your color styles](#adding-your-color-styles)
   - [Inspecting the HTML](#inspecting-the-html)
   - [Creating a color-mode switcher](#creating-a-color-mode-switcher)
   - [Importing our component](#importing-our-component)
-  - [Adding a click event to change our colours](#adding-a-click-event-to-change-our-colours)
+  - [Adding a click event to change our colors](#adding-a-click-event-to-change-our-colors)
   - [Adding some icons](#adding-some-icons)
-  - [Importing the svgs as components](#importing-the-svgs-as-components)
+  - [Importing the SVGs as components](#importing-the-svgs-as-components)
   - [Adding a dynamic component](#adding-a-dynamic-component)
   - [Styling our icons](#styling-our-icons)
   - [Creating a method to show our preferred class](#creating-a-method-to-show-our-preferred-class)
@@ -40,11 +40,11 @@ The [@nuxtjs/color-mode module](https://github.com/nuxt-community/color-mode-mod
 
 ## How does it work
 
-The `@nuxtjs/color-mode` adds a `.${color}-mode` class to the `<html>` tag. It works with any NuxtJS target, either static or server and universal or client-side rendering. It auto detects the system color-mode so that you don't have to manually change the colour.
+The `@nuxtjs/color-mode` adds a `.${color}-mode` class to the `<html>` tag. It works with any Nuxt target, either static or server and universal or client-side rendering. It auto detects the system color-mode so that you don't have to manually change the color.
 
 It injects a `$colorMode` helper with:
 
-- `preference`: Actual color-mode selected (can be `'system'`), update it to change the user preferred colour mode
+- `preference`: Actual color-mode selected (can be `'system'`), update it to change the user preferred color mode
 - `value`: Useful to know what color mode has been detected when `$colorMode === 'system'`, you should not update it
 - `unknown`: Useful to know if, during SSR or static generation, we need to render a placeholder
 
@@ -101,9 +101,9 @@ If you using a version of Nuxt.js lower than 2.9.0 you will need to add it to th
 
 </base-alert>
 
-### Adding your colour styles
+### Adding your color styles
 
-Now you need to add some styles to your mode classes. Let's add a `main.css` file in our assets folder. We will use CSS variables to set the root colour which will be light mode and then set the colours for dark and sepia mode. Then we can add some styles to our body and link tags.
+Now you need to add some styles to your mode classes. Let's add a `main.css` file in our assets folder. We will use CSS variables to set the root color which will be light mode and then set the colors for dark and sepia mode. Then we can add some styles to our body and link tags.
 
 ```css{}[assets/main.css]
 :root {
@@ -170,7 +170,7 @@ Using the dev tools change the mode to sepia-mode and light-mode to see the effe
 </html>
 ```
 
-You can also change the colour in the console by typing:
+You can also change the color in the console by typing:
 
 ```js
 $nuxt.$colorMode.preference = 'sepia'
@@ -180,7 +180,7 @@ $nuxt.$colorMode.preference = 'sepia'
 
 ### Creating a color-mode switcher
 
-Obviously changing the mode in the dev tools is not what we want so let's create a color-mode switcher so our users can quickly change from one colour to another.
+Obviously changing the mode in the dev tools is not what we want so let's create a color-mode switcher so our users can quickly change from one color to another.
 
 Let's create a component called `ColorModePicker` and we can add a list of colors. For now we can just print out the color from our v-for.
 
@@ -230,11 +230,11 @@ Let's import our component into our index.vue page so we can see what is happeni
 </script>
 ```
 
-And in our browser under `http://localhost:3000` you will see our list of colours.
+And in our browser under `http://localhost:3000` you will see our list of colors.
 
-![list of colours](/blog/going-dark-with-nuxtjs-color-mode/list-of-colors.png)
+![list of colors](/blog/going-dark-with-nuxtjs-color-mode/list-of-colors.png)
 
-### Adding a click event to change our colours
+### Adding a click event to change our colors
 
 Then in our template we can add a click event that will make the `$colorMode.preference` equal to the color which comes from our data.
 
@@ -252,7 +252,7 @@ This is actually all you need in order for it to work. If you check in your brow
 
 <video src="/blog/going-dark-with-nuxtjs-color-mode/color-changing-text-only.mp4" autoplay loop playsinline controls></video>
 
-And if we check in the broswer we can see it works but this is super ugly. Let's tidy it up a bit.
+And if we check in the browser we can see it works but this is super ugly. Let's tidy it up a bit.
 
 ### Adding some icons
 
@@ -273,9 +273,9 @@ Then we need to add it to your `nuxt.config.js` in the buildModules section whic
 buildModules: ['@nuxtjs/svg', '@nuxtjs/color-mode']
 ```
 
-### Importing the svgs as components
+### Importing the SVGs as components
 
-We can now import these svg icons as components using the `?inline` query so that they are imported as inline svgs.
+We can now import these svg icons as components using the `?inline` query so that they are imported as inline SVGs.
 
 ```html{}[components/ColorModePicker.vue]
 <script>
@@ -297,7 +297,7 @@ We can now import these svg icons as components using the `?inline` query so tha
 
 ### Adding a dynamic component
 
-Now we can use a dynamic component which will check which icon to add depending on the colours in our data array. Lets replace the `{{color}}` text with this new component inside our `<li>`.
+Now we can use a dynamic component which will check which icon to add depending on the colors in our data array. Lets replace the `{{color}}` text with this new component inside our `<li>`.
 
 ```html{}[components/ColorModePicker.vue]
 <component :is="`icon-${color}`" />
@@ -311,7 +311,7 @@ Let's move our click event from our `<li>` to our icon component.
 
 ### Styling our icons
 
-And let's add some styles so we can see our icons. We will use scoped styling and use the class feather. If you look into your svg files you will see that our svgs have the class of feather so we can use this class to style it. We will also add a preferred and selected class so we know which one has been selected and what is the preferred one.
+And let's add some styles so we can see our icons. We will use scoped styling and use the class feather. If you look into your svg files you will see that our SVGs have the class of feather so we can use this class to style it. We will also add a preferred and selected class so we know which one has been selected and what is the preferred one.
 
 ```html{}[components/ColorModePicker.vue]
 <style scoped>
@@ -375,7 +375,7 @@ We can now add this class to our icon component. The class will call the getClas
 />
 ```
 
-And you will see in the browser the colours are being applied just as we wanted. But it is not very clear when we click the system icon what is going on.
+And you will see in the browser the colors are being applied just as we wanted. But it is not very clear when we click the system icon what is going on.
 
 ### Adding some text using the ColorScheme component
 
@@ -433,7 +433,7 @@ p {
 }
 ```
 
-And in order to centre it we can wrap our ColorModePicker component in a div with the class of container.
+And in order to center it we can wrap our ColorModePicker component in a div with the class of container.
 
 ```html{}[pages/index.vue]
 <div class="container">

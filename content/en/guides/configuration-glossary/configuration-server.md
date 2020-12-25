@@ -73,9 +73,9 @@ export default {
 }
 ```
 
-### Using timing api
+### Using timing API
 
-The `timing` api is also injected into the `response` on server-side when `server.time` is enabled.
+The `timing` API is also injected into the `response` on server-side when `server.time` is enabled.
 
 #### Syntax
 
@@ -84,7 +84,7 @@ res.timing.start(name, description)
 res.timing.end(name)
 ```
 
-#### Example using timing in servermiddleware
+#### Example using timing in serverMiddleware
 
 ```js
 export default function (req, res, next) {

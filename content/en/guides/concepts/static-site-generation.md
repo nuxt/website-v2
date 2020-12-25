@@ -1,6 +1,6 @@
 ---
 title: Static Site Generation
-description: With static site generation you can render your application during the build phase and deploy it to any static hosting services such as Netlify, Github pages, Vercel etc.
+description: With static site generation you can render your application during the build phase and deploy it to any static hosting services such as Netlify, GitHub pages, Vercel etc.
 position: 4
 category: concepts
 questions:
@@ -34,7 +34,7 @@ questions:
     correctAnswer: You need to regenerate your site
 ---
 
-With static site generation you can render your application during the build phase and deploy it to any static hosting services such as Netlify, Github pages, Vercel etc. This means that no server is needed in order to deploy your application.
+With static site generation you can render your application during the build phase and deploy it to any static hosting services such as Netlify, GitHub pages, Vercel etc. This means that no server is needed in order to deploy your application.
 
 ### Generating your site
 

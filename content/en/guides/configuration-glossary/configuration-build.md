@@ -225,7 +225,7 @@ You may want to extract all your CSS to a single file. There is a workaround for
 
 <base-alert>
 
-It is not recommended extracting everything into a single file. Extracting into multiple css files is better for caching and preload isolation. It can also improve page performance by downloading and resolving only those resources that are needed.
+It is not recommended to extract everything into a single file. Extracting into multiple CSS files is better for caching and preload isolation. It can also improve page performance by downloading and resolving only those resources that are needed.
 
 </base-alert>
 
@@ -545,11 +545,11 @@ export default {
 }
 ```
 
-### postcss plugins & nuxt-tailwindcss
+### postcss plugins & @nuxtjs/tailwindcss
 
-If you want to apply postcss plugin (eg. postcss-pxtorem) on the nuxt-tailwindcss configuration, you have to change order and load first tailwindcss.
+If you want to apply a postcss plugin (e.g. postcss-pxtorem) on the @nuxtjs/tailwindcss configuration, you have to change order and load tailwindcss first.
 
-**This setup have no impact on the nuxt-purgecss.**
+**This setup has no impact on nuxt-purgecss.**
 
 ```js{}[nuxt.config.js]
 import { join } from 'path'
@@ -641,7 +641,7 @@ This option is automatically set based on `mode` value if not provided.
 
 This is useful when you need to inject some variables and mixins in your pages without having to import them every time.
 
-Nuxt.js uses https://github.com/yenshih/style-resources-loader to achieve this behaviour.
+Nuxt.js uses https://github.com/yenshih/style-resources-loader to achieve this behavior.
 
 You need to specify the patterns/path you want to include for the given pre-processors: `less`, `sass`, `scss` or `stylus`
 

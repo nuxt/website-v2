@@ -8,11 +8,11 @@ category: development
 position: 303
 ---
 
-In auth-routes example both api and nuxt start together and use one Node.js server instance. However, sometimes we should work with external api with jsonWebToken. In this example it will be explained in a simple way.
+In the auth-routes example both the API and Nuxt start together and use one Node.js server instance. However, sometimes we want to work with an external API using a JSON web token (JWT). In this example it will be explained in a simple way.
 
-## Official `auth-module`
+## `@nuxtjs/auth`
 
-If you want to implement complex authentication flows, for example OAuth2, we suggest using the official [`auth-module`](https://github.com/nuxt-community/auth-module)
+If you want to implement more complex authentication flows, for example with OAuth 2, we suggest using [`@nuxtjs/auth`](https://github.com/nuxt-community/auth-module)
 
 ## Structure
 
@@ -103,7 +103,7 @@ export default createStore
 
 ## checking auth middlewares
 
-We can check the store for havin the accessToken in every page we need to limit access. In middleware directory we make `authenticated.js` file:
+We can check the store for having the access token in every page we need to limit access. In middleware directory we make `authenticated.js` file:
 
 ```javascript
 export default function ({ store, redirect }) {

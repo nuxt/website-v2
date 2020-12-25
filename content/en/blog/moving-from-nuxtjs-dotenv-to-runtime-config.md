@@ -42,7 +42,7 @@ It is very easy to think that your secret keys are safe by placing them somewher
 
 Isomorphic applications, otherwise known as universal applications, need to share code between both the server and the client. Babel is used to compile our modern ES6 JavaScript code down to ES5 JavaScript so that it can work across all platforms. Node.js which is an asynchronous event-driven JavaScript runtime that can be used in computers and servers outside of a browser environment, uses the module system.
 
-Using modules in Node.js is done using require, eg require('lodash'). However, browser support for modules is still incomplete and therefore we need bundling tools such as webpack to transpile these modules into code that the browsers can read. Webpack basically makes client-side development more "Node-like" with the same module system semantics. This means that a require statement or an ES6 import statement will resolve the same way. And as our applications are not only JavaScript but also HTML, CSS and images we can require these using webpack's loaders.
+Using modules in Node.js is done using require, e.g. require('lodash'). However, browser support for modules is still incomplete and therefore we need bundling tools such as webpack to transpile these modules into code that the browsers can read. Webpack basically makes client-side development more "Node-like" with the same module system semantics. This means that a require statement or an ES6 import statement will resolve the same way. And as our applications are not only JavaScript but also HTML, CSS and images we can require these using webpack's loaders.
 
 ## How environment variables work
 
@@ -184,10 +184,10 @@ async asyncData ({ $config: { baseURL } }) {
 Then instead of using env.apiUrl
 
 ```js
-const posts = await fetch(`${env.baseUrl}/posts`)
+const posts = await fetch(`${env.baseURL}/posts`)
 ```
 
-you can use baseUrl direct in your code as we have already passed this in into the config option above and therefore we don't have to reference \$config in our fetch.
+you can use baseURL direct in your code as we have already passed this in into the config option above and therefore we don't have to reference \$config in our fetch.
 
 ```js
 const posts = await fetch(`${baseURL}/posts`)

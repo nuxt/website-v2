@@ -18,15 +18,15 @@ Three years ago, my brother Sébastien and I were [open sourcing our code](https
 
 ### Happy "NuxtDay"
 
-Sébastien ([@Atinux](https://twitter.com/Atinux)) made his first commit for Nuxt.js on Github on October 26th 2016. The code base was born after we refactored an e-commerce website with modern open source web technologies: Vue 2, Node.js and Webpack. At the time, there was no documentation for server-side rendering Vue.js applications - we learnt through the [Hacker News example](https://github.com/vuejs/vue-hackernews-2.0) published by [Evan You](https://twitter.com/youyuxi) (Creator of Vue.js). The idea of creating a boilerplate and reusing the code base for other projects became clear once we discovered [Guillermo Rauch](https://twitter.com/rauchg)’s [introduction of Next.js](https://vercel.com/blog/next).
+Sébastien ([@Atinux](https://twitter.com/Atinux)) made his first commit for Nuxt.js on GitHub on October 26th 2016. The code base was born after we refactored an e-commerce website with modern open source web technologies: Vue 2, Node.js and Webpack. At the time, there was no documentation for server-side rendering Vue.js applications - we learnt through the [Hacker News example](https://github.com/vuejs/vue-hackernews-2.0) published by [Evan You](https://twitter.com/youyuxi) (Creator of Vue.js). The idea of creating a boilerplate and reusing the code base for other projects became clear once we discovered [Guillermo Rauch](https://twitter.com/rauchg)’s [introduction of Next.js](https://vercel.com/blog/next).
 
 ### Why the NUXT name?
 
-Once we had created the repository on Github to open source our code, we had our first challenge: find a name for our project! We tried couples of names on NPM who were already taken. In the end we landed on NUXT which was short and explicit. rEact ⇒ nExt made us realise that vUe ⇒ nUxt was a natural fit for us. It is like Next.js but for Vue.js.
+Once we had created the repository on GitHub to open source our code, we had our first challenge: find a name for our project! We tried couples of names on NPM who were already taken. In the end we landed on NUXT which was short and explicit. rEact ⇒ nExt made us realize that vUe ⇒ nUxt was a natural fit for us. It is like Next.js but for Vue.js.
 
 ### Performance, Modularity and Developers Happiness
 
-The core mission at NuxtJS is to provide front-end developers with an open source framework to build fast and high performing websites and applications based on Vue.js with as little friction as possible. Our credo is “Convention over Configuration” to help solve some of the difficulties involved in Vue.js application development. Automatic vue-router configuration based on file system detection is the first and most popular feature of the framework. With the efforts of our community and contributors around the world, over time our framework became ready for production. Every feature and bug fix since has been made with the sole purpose of improving the performance and experience for all our users. Our ultimate vision is to be a modular solution and extend the possibilities of the framework usage. These are endless!
+The core mission at NuxtJS is to provide frontend developers with an open source framework to build fast and high performing websites and applications based on Vue.js with as little friction as possible. Our credo is “Convention over Configuration” to help solve some of the difficulties involved in Vue.js application development. Automatic vue-router configuration based on file system detection is the first and most popular feature of the framework. With the efforts of our community and contributors around the world, over time our framework became ready for production. Every feature and bug fix since has been made with the sole purpose of improving the performance and experience for all our users. Our ultimate vision is to be a modular solution and extend the possibilities of the framework usage. These are endless!
 
 ## From a passion to a company.
 
@@ -36,7 +36,7 @@ Sébastien and I discovered our passion for computers and web development deep w
 
 ### The NuxtJS Company
 
-Before NuxtJS we were originally called ORION, which was established in 2017. At the time we wanted to create a number of different open source projects (ORION is a constellation of stars) and sell our services on the side whilst we had full-time jobs. However, we didn’t realise that what would ultimately become the Nuxt.js framework was going to take off so quickly and be so well-received by the developers community. After receiving amazing feedback at conferences, meet-ups and workshops we decided to go full-time on the Nuxt.js framework in January 2018. A year later we decided to rename our company NuxtJS to focus our efforts on the framework.
+Before NuxtJS we were originally called ORION, which was established in 2017. At the time we wanted to create a number of different open source projects (ORION is a constellation of stars) and sell our services on the side whilst we had full-time jobs. However, we didn’t realize that what would ultimately become the Nuxt.js framework was going to take off so quickly and be so well-received by the developers community. After receiving amazing feedback at conferences, meet-ups and workshops we decided to go full-time on the Nuxt.js framework in January 2018. A year later we decided to rename our company NuxtJS to focus our efforts on the framework.
 
 ### Open source is everywhere
 
@@ -44,13 +44,13 @@ As developers ourselves, we believe in the importance and power of open source. 
 
 ### The NuxtJS Company !== The Nuxt.js Framework
 
-[Dominik Angerer](https://twitter.com/domangerer) (Co-founder & CEO of [Storyblok](https://www.storyblok.com) and our sponsor since July 2018) introduced us with Sam Endacott and Arek Wylegalski from firstminute capital in October 2019. They understood our concerns around developing the commercial side of the business whilst staying true to the community which has helped build Nuxt.js into what it is today. We took our time with the fundraising process and made sure to evaluate the pros and cons before making the decision. After spending many weeks with the team (+ a few dinners and drinks) we decided to close a \$2m seed round for the NuxtJS company. **The Nuxt.js framework is and will always be open source and community-driven.**
+[Dominik Angerer](https://twitter.com/domangerer) (Co-founder & CEO of [Storyblok](https://www.storyblok.com) and our sponsor since July 2018) introduced us with Sam Endacott and Arek Wylegalski from firstminute capital in October 2019. They understood our concerns around developing the commercial side of the business whilst staying true to the community which has helped build Nuxt.js into what it is today. We took our time with the fundraising process and made sure to evaluate the pros and cons before making the decision. After spending many weeks with the team (+ a few dinners and drinks) we decided to close a \$2M seed round for the NuxtJS company. **The Nuxt.js framework is and will always be open source and community-driven.**
 
 ## From an idea to a website
 
 ### The intuitive Web Framework
 
-We love to create websites with Vue, but we are too lazy to configure everything over and over. Nuxt.js provides a simple and intuitive developper experience to prototype blazing fast modern web application. The goal is to decrease the number of decisions the programmer has to make and eliminate the complexity of having to configure all and each of the areas of application development. The immediate result is that you can create many more things in less time. Building a production ready website from an idea has never been so simple. If you follow the established conventions, you can develop a Nuxt.js application in much less time and with many fewer lines of code than you would need developing a similar web application in Vue.js. If, on the other hand, you want to ignore conventions, you can always replace them with your own code. However, since conventions are not arbitrary, but have been established by a community of high level programmers, it rarely does make sense to waste time overwriting them.
+We love to create websites with Vue, but we are too lazy to configure everything over and over. Nuxt.js provides a simple and intuitive developer experience to prototype blazing fast modern web application. The goal is to decrease the number of decisions the programmer has to make and eliminate the complexity of having to configure all and each of the areas of application development. The immediate result is that you can create many more things in less time. Building a production ready website from an idea has never been so simple. If you follow the established conventions, you can develop a Nuxt.js application in much less time and with many fewer lines of code than you would need developing a similar web application in Vue.js. If, on the other hand, you want to ignore conventions, you can always replace them with your own code. However, since conventions are not arbitrary, but have been established by a community of high level programmers, it rarely does make sense to waste time overwriting them.
 
 ### Modularity
 
@@ -58,13 +58,13 @@ By keeping the core light and extensible with hooks, we opened a new range of po
 
 ### Performances
 
-Performances has a huge impact on how visitors see and interact with your website. Since the beginning, performances has been in the heart of the Nuxt.js framework, allowing you to ship efficient and performant web application **by default**. We provide more than [20 optimizations](https://github.com/nuxt/nuxt.js/issues/6467) and have more in our roadmap: reducing the baseline bundle costs of the minimal app (coming with Nuxt 3 and Vue 3), image bloat reduction (lazy-loading and automatic optimisation) and smarter server-side rendering using SWR (stale-while-revalidate).
+Performances has a huge impact on how visitors see and interact with your website. Since the beginning, performances has been in the heart of the Nuxt.js framework, allowing you to ship efficient and performant web application **by default**. We provide more than [20 optimizations](https://github.com/nuxt/nuxt.js/issues/6467) and have more in our roadmap: reducing the baseline bundle costs of the minimal app (coming with Nuxt 3 and Vue 3), image bloat reduction (lazy-loading and automatic optimization) and smarter server-side rendering using SWR (stale-while-revalidate).
 
 ## Nuxtify the world
 
 ### Discovery
 
-Concepts and new features can sometimes be more difficult to explain, instead of using them. Feedback subjects since the last 3 years has been mostly about our lack of explanation and marketing. That's true. It's difficult to explain a framework that can do static site generation (SSG) or dynamic rendering (SSR) as well as optional server-side rendering with convention over configuration in **a simple sentence**. Good news, we are working on a brand new website full of Nuxt.js informations and features explanations.
+Concepts and new features can sometimes be more difficult to explain, instead of using them. Feedback subjects since the last 3 years has been mostly about our lack of explanation and marketing. That's true. It's difficult to explain a framework that can do static site generation (SSG) or dynamic rendering (SSR) as well as optional server-side rendering with convention over configuration in **a simple sentence**. Good news, we are working on a brand new website full of Nuxt.js information and features explanations.
 
 ### Academy
 
@@ -72,7 +72,7 @@ The Nuxt.js documentation is key. Our main efforts are toward on new learning re
 
 ### Community
 
-Community based materials and events (meetups, conferences and live streams) will be displayed on the new website. We plan to organise online events in the future. You can always chat with the community on our [Discord server](https://discord.nuxtjs.org), follow the Nuxt.js feed on our [Twitter account](https://twitter.com/nuxt_js) and contribute on our [GitHub repository](https://github.com/nuxt/nuxt.js). Our [Open Collective](https://opencollective.com/nuxtjs) is used for the open source work done by maintainers, contributors and developer advocates that help Nuxtify the world.
+Community based materials and events (meet-ups, conferences and live streams) will be displayed on the new website. We plan to organize online events in the future. You can always chat with the community on our [Discord server](https://discord.nuxtjs.org), follow the Nuxt.js feed on our [Twitter account](https://twitter.com/nuxt_js) and contribute on our [GitHub repository](https://github.com/nuxt/nuxt.js). Our [Open Collective](https://opencollective.com/nuxtjs) is used for the open source work done by maintainers, contributors and developer advocates that help Nuxtify the world.
 
 ## Thank you!
 

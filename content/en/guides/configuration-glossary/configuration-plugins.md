@@ -26,7 +26,7 @@ If the item is an object, the properties are:
 - src: `String` (path of the file)
 - ssr: `Boolean` (default to `true`) _If false, the file will be included only on the client-side._
 
-> The plugins property lets you add vue.js plugins easily to your main application.
+> The plugins property lets you add Vue.js plugins easily to your main application.
 
 ```js{}[nuxt.config.js]
 export default {

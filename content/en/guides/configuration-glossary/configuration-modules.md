@@ -8,7 +8,7 @@ position: 19
 
 - Type: `Array`
 
-> Modules are Nuxt.js extensions which can extend it's core functionality and add endless integrations. [Learn More](/docs/2.x/directory-structure/modules)
+> Modules are Nuxt.js extensions which can extend its core functionality and add endless integrations. [Learn More](/docs/2.x/directory-structure/modules)
 
 Example (`nuxt.config.js`):
 

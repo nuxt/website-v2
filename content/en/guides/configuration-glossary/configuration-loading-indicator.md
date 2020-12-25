@@ -24,7 +24,7 @@ loadingIndicator: {
 
 ## Built-in indicators
 
-These indicators are imported from the awesome [Spinkit](http://tobiasahlin.com/spinkit) project. You can use its demo page to preview spinners.
+These indicators are imported from the awesome [SpinKit](http://tobiasahlin.com/spinkit) project. You can use its demo page to preview spinners.
 
 - circle
 - cube-grid
@@ -42,6 +42,6 @@ Built-in indicators support `color` and `background` options.
 
 ## Custom indicators
 
-If you need your own special indicator, a String value or Name key can also be a path to an html template of indicator source code! All of the options are passed to the template, too.
+If you need your own special indicator, a String value or Name key can also be a path to an HTML template of indicator source code! All of the options are passed to the template, too.
 
 Nuxt's built-in [source code](https://github.com/nuxt/nuxt.js/tree/dev/packages/vue-app/template/views/loading) is also available if you need a base!

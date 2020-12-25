@@ -1,15 +1,15 @@
 ---
-title: 'How to Deploy on AWS w/ S3 and Cloudfront?'
-description: Static Hosting on AWS with S3 and Cloudfront
-menu: Deploy on Aws w/ S3 and Cloudfront
+title: 'How to Deploy on AWS w/ S3 and CloudFront?'
+description: Static Hosting on AWS with S3 and CloudFront
+menu: Deploy on Aws w/ S3 and CloudFront
 category: deployment
 position: 201
 ---
 
 AWS stands for Amazon Web Services.  
-S3 is their static storage which can be configured for Static Site Hosting. Cloudfront is their CDN (content delivery network)
+S3 is their static storage which can be configured for Static Site Hosting. CloudFront is their CDN (content delivery network)
 
-Hosting a **static generated** Nuxt app on AWS w/ S3 + Cloudfront is powerful and cheap.
+Hosting a **static generated** Nuxt app on AWS w/ S3 + CloudFront is powerful and cheap.
 
 > AWS is a death by 1000 paper cuts. If we missed a step, please submit a PR to update this document.
 
@@ -28,7 +28,7 @@ We'll host super cheap with some AWS services. Briefly:
 We'll push the site like this:
 
 ```
-Nuxt Generate -> Local folder -> AWS S3 Bucket -> AWS Cloudfront CDN -> Browser
+Nuxt Generate -> Local folder -> AWS S3 Bucket -> AWS CloudFront CDN -> Browser
   [      nuxt generate       ]    [         gulp deploy          ]
   [                         deploy.sh                            ]
 ```

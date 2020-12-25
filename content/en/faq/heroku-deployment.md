@@ -33,7 +33,7 @@ Heroku uses a [Procfile](https://devcenter.heroku.com/articles/procfile) (name t
 web: nuxt start
 ```
 
-This will instruct run the `nuxt start` command and tell heroku to direct external HTTP traffic to it.
+This will instruct run the `nuxt start` command and tell Heroku to direct external HTTP traffic to it.
 
 Finally, we can push the app on Heroku with:
 

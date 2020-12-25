@@ -77,7 +77,7 @@ module.exports = {
 
 **Remember to remove the references to the pkg object inside the config.**
 
-Thats it!
+That's it!
 
 For an Azure App Service deployment, make sure you set the following two environment variables (application settings) in App Service &rsaquo; Settings &rsaquo; Configuration &rsaquo; Application settings.
 
@@ -120,7 +120,7 @@ For Azure Portal you will need a `web.config` file. If not supplied, it will cre
     <!-- Visit https://azure.microsoft.com/en-us/blog/introduction-to-websockets-on-windows-azure-web-sites/ for more information on WebSocket support -->
     <webSocket enabled="false" />
     <handlers>
-      <!-- Indicates that the server.js file is a node.js site to be handled by the iisnode module -->
+      <!-- Indicates that the server.js file is a Node.js site to be handled by the iisnode module -->
       <add name="iisnode" path="server" verb="*" modules="iisnode"/>
     </handlers>
     <rewrite>
@@ -135,7 +135,7 @@ For Azure Portal you will need a `web.config` file. If not supplied, it will cre
           <action type="Rewrite" url="public{REQUEST_URI}"/>
         </rule>
 
-        <!-- All other URLs are mapped to the node.js site entry point -->
+        <!-- All other URLs are mapped to the Node.js site entry point -->
         <rule name="DynamicContent">
           <conditions>
             <add input="{REQUEST_FILENAME}" matchType="IsFile" negate="True"/>
@@ -145,7 +145,7 @@ For Azure Portal you will need a `web.config` file. If not supplied, it will cre
       </rules>
     </rewrite>
 
-    <!-- 'bin' directory has no special meaning in node.js and apps can be placed in it -->
+    <!-- 'bin' directory has no special meaning in Node.js and apps can be placed in it -->
     <security>
       <requestFiltering>
         <hiddenSegments>

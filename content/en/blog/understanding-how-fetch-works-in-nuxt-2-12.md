@@ -44,7 +44,7 @@ As a result, Vuex becomes optional, but not impossible. We can still use `this.$
 
 ## Availability of fetch hook
 
-With `fetch`, we can pre-fetch the data asynchronously **in any Vue components**. It means, other than page components found in `/pages` directory, every other `.vue` components found in `/layouts` and `/components` directories can also benefit from the fetch hook.
+With `fetch`, we can prefetch the data asynchronously **in any Vue components**. It means, other than page components found in `/pages` directory, every other `.vue` components found in `/layouts` and `/components` directories can also benefit from the fetch hook.
 
 Let's see what this could mean for layout and building-block components.
 
@@ -207,7 +207,7 @@ As far as page components are concerned, new `fetch` seems way too similar to `a
 
 As of Nuxt 2.12, `asyncData` method is still an active feature. Let’s examine some of the key differences between `asyncData` and new `fetch`.
 
-### AsyncData
+### asyncData
 
 1. `asyncData` is limited to only page-level components
 2. `this` context is unavailable
@@ -291,7 +291,7 @@ export default {
 
 **Before -** Only page (route-level) components were allowed to fetch data on the server-side.
 
-**After -** Now, we can pre-fetch the data asynchronously in any Vue components.
+**After -** Now, we can prefetch the data asynchronously in any Vue components.
 
 ### 4. Call order of `fetch` hook
 
@@ -315,7 +315,7 @@ Yes we can, but only with `asyncData()` when it's about page-level component dat
 
 ## Conclusion
 
-New fetch hook brings a lot of improvements and provides more flexibility in fetching data and organising route-level & building-block components in a whole new way!
+New fetch hook brings a lot of improvements and provides more flexibility in fetching data and organizing route-level & building-block components in a whole new way!
 
 It will certainly make you think a little differently when you plan and design your new Nuxt project that requires multiple API calls within the same route.
 
@@ -323,5 +323,5 @@ I hope this article has helped you get acquainted with the new `fetch` feature. 
 
 ## What's next
 
-- Read [Sergey Bedritsky's article](/blog/build-dev-to-clone-with-nuxt-new-fetch) to see new `fetch` hook in action as he shows how to buid dev.to clone!
+- Read [Sergey Bedritsky's article](/blog/build-dev-to-clone-with-nuxt-new-fetch) to see new `fetch` hook in action as he shows how to build a dev.to clone!
 - Already missed March newsletter? [Subscribe to Nuxt newsletter](#subscribe-to-newsletter) and get latest articles and resources delivered right into your inbox.

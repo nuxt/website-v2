@@ -249,7 +249,7 @@ If you want to know more about `<RouterLink>`, feel free to read the [Vue Route
 
 ## prefetchLinks
 
-Nuxt.js automatically includes smart prefetching. That means it detects when a link is visible, either in the viewport or when scrolling and prefetches the JavaScript for those pages so that they are ready when the user clicks the link. Nuxt.js only loads the resources when the browser isn't busy and skips prefetching if your connection is offline or if you only have 2g connection.
+Nuxt.js automatically includes smart prefetching. That means it detects when a link is visible, either in the viewport or when scrolling and prefetches the JavaScript for those pages so that they are ready when the user clicks the link. Nuxt.js only loads the resources when the browser isn't busy and skips prefetching if your connection is offline or if you only have 2G connection.
 
 <base-alert type="info">
 
@@ -262,8 +262,8 @@ Check out this article to learn more about [smart prefetching](/blog/introducing
 However sometimes you may want to disable prefetching on some links if your page has a lot of JavaScript or you have a lot of different pages that would be prefetched or you have a lot of third party scripts that need to be loaded. To disable the prefetching on a specific link, you can use the `no-prefetch` prop. Since Nuxt.js v2.10.0, you can also use the `prefetch` prop set to `false`
 
 ```html
-<NuxtLink to="/about" no-prefetch>About page not pre-fetched</NuxtLink>
-<NuxtLink to="/about" :prefetch="false">About page not pre-fetched</NuxtLink>
+<NuxtLink to="/about" no-prefetch>About page not prefetched</NuxtLink>
+<NuxtLink to="/about" :prefetch="false">About page not prefetched</NuxtLink>
 ```
 
 ### Disable prefetching globally
@@ -281,7 +281,7 @@ export default {
 Since Nuxt.js v2.10.0, if you have to set `prefetchLinks` to `false` but you want to prefetch a specific link, you can use the `prefetch` prop:
 
 ```html
-<NuxtLink to="/about" prefetch>About page pre-fetched</NuxtLink>
+<NuxtLink to="/about" prefetch>About page prefetched</NuxtLink>
 ```
 
 ## Link Classes
@@ -366,7 +366,7 @@ Then you can add the styles for that class.
 
 ```css
 .nuxt-link-prefetched {
-  color: orangeRed;
+  color: orangered;
 }
 ```
 

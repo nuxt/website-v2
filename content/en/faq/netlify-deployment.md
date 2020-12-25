@@ -36,7 +36,7 @@ Press the _"New site from Git"_ button on the Netlify dashboard. Authenticate wi
 1. **Build command:** `npm run build`
 1. **Publish directory:** `dist`
 
-For a single page app there is a problem with refresh as by default on netlify the site redirects to _"404 not found"_. For any pages that are not generated they will fallback to SPA mode and then if you refresh or share that link you will get Netlify's 404 page. This is because the pages that are not generated don't actually exist as they are actually a single page application so if you refesh this page you will get a 404 because the url for that page doesn't actually exist. By redirecting to the 404.html Nuxt will reload your page correctly in SPA fallback.
+For a single page app there is a problem with refresh as by default on Netlify the site redirects to _"404 not found"_. For any pages that are not generated they will fallback to SPA mode and then if you refresh or share that link you will get Netlify's 404 page. This is because the pages that are not generated don't actually exist as they are actually a single page application so if you refresh this page you will get a 404 because the url for that page doesn't actually exist. By redirecting to the 404.html Nuxt will reload your page correctly in SPA fallback.
 
 The easiest way to fix this is by adding a [generate property](/docs/2.x/configuration-glossary/configuration-generate#fallback) in your `nuxt.config` and setting `fallback: true`. Then it will fallback to the generated 404.html when in SPA mode instead of Netlify's 404 page.
 
@@ -48,13 +48,13 @@ export default {
 }
 ```
 
-If however you want to automatically apply headers and redirects of the SPA then there is a module for that, this is especially useful for when you have custom headers/redirects (in a \_headers or_redirects file):
+If however you want to automatically apply headers and redirects of the SPA then there is a module for that, this is especially useful for when you have custom headers/redirects (in a \_headers or \_redirects file):
 
 [netlify-files-module](https://github.com/nuxt-community/netlify-files-module)
 
 > For more information on Netlify redirects see the [Netlify docs](https://www.netlify.com/docs/redirects/#rewrites-and-proxying).
 
-> For simple reference on netlify redirects read blog [post](https://www.netlify.com/blog/2019/01/16/redirect-rules-for-all-how-to-configure-redirects-for-your-static-site) by Divya Sasidharan
+> For simple reference on Netlify redirects read blog [post](https://www.netlify.com/blog/2019/01/16/redirect-rules-for-all-how-to-configure-redirects-for-your-static-site) by Divya Sasidharan
 
 > Optionally, you can add additional ENV variables via the _"Advanced"_ button. These can be helpful for swapping in alternative API credentials and so on. Netlify also provides a [default ENV variables](https://www.netlify.com/docs/build-settings/#build-environment-variables) which can be read by your Nuxt.js application at build time.
 

@@ -1,7 +1,7 @@
 ---
 title: How to deploy on GitHub Pages?
 description: How to deploy Nuxt.js app on GitHub Pages?
-menu: Deploy on Github
+menu: Deploy on GitHub
 category: deployment
 position: 206
 ---
@@ -83,11 +83,11 @@ You can take deployment one step further and rather than having to manually comp
 
 Before you configure the build server, you'll first need to [generate a GitHub personal access token](https://help.github.com/articles/creating-a-personal-access-token-for-the-command-line/#creating-a-token) in order to grant the build server permission to perform tasks on your behalf. Once you have created your token, keep a copy of it safe ready to use a little later on.
 
-### Github Actions
+### GitHub Actions
 
-To deploy via [Github Actions](https://github.com/features/actions), the official tool for software automation with Github, if you don't have a workflow you need to create a new one or append a new step to your existing workflow.
+To deploy via [GitHub Actions](https://github.com/features/actions), the official tool for software automation with GitHub, if you don't have a workflow you need to create a new one or append a new step to your existing workflow.
 
-It uses the [Github Pages Action](https://github.com/marketplace/actions/github-pages-action) which push the generated files from `dist` folder to your default Github Pages branch `gh-pages`.
+It uses the [GitHub Pages Action](https://github.com/marketplace/actions/github-pages-action) which pushes the generated files from the `dist` folder to your default GitHub Pages branch `gh-pages`.
 
 With an existing workflow, add the following step:
 

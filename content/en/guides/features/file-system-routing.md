@@ -295,7 +295,7 @@ router: {
 
 ## Unknown Dynamic Nested Routes
 
-If you do not know the depth of your URL structure, you can use `_.vue` to dynamically match nested paths. This will handle requests that do not match a *more specific* request.
+If you do not know the depth of your URL structure, you can use `_.vue` to dynamically match nested paths. This will handle requests that do not match a *more specific* route.
 
 This file tree:
 

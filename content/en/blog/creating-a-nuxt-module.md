@@ -84,7 +84,7 @@ npm install --dev ngrok
 
 ## Creating our module
 
-Now that we have installed and registered everything we can now go ahead and create our module. The first thing we need to do is to import ngrok from our node modules folder into our `index.js` file of our ngrok module.
+Now that we have installed and registered everything we can now go ahead and create our module. The first thing we need to do is to import ngrok from our `node_modules` folder into our `index.js` file of our ngrok module.
 
 ```js{}[modules/ngrok/index.js]
 import ngrok from 'ngrok'
@@ -201,7 +201,7 @@ Don't forget to make sure your `.env`file has been added to your `.gitignore`.
 
 </base-alert>
 
-We can now set a const of `options` equal to the options from the ngrok property of our `nuxt.config.js` or equal to an empty object incase we don't define any options. We also add a const of `authtoken` equal to the `NGROK_TOKEN` from our `.env` file or `options.authtoken` which is the same as `nuxt.options.ngrok.authtoken`, incase this value was defined directly in our `ngrok` property in the our `nuxt.config.js`.
+We can now set a const of `options` equal to the options from the ngrok property of our `nuxt.config.js` or equal to an empty object in case we don't define any options. We also add a const of `authtoken` equal to the `NGROK_TOKEN` from our `.env` file or `options.authtoken` which is the same as `nuxt.options.ngrok.authtoken`, in case this value was defined directly in our `ngrok` property in the our `nuxt.config.js`.
 
 We can then await the ngrok authtoken passing in the token value.
 

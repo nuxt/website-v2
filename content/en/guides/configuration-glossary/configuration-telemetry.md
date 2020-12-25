@@ -15,7 +15,7 @@ position: 30
 
 ## Why collect Telemetry
 
-Nuxt.js has grown a lot from it's [initial release](https://github.com/nuxt/nuxt.js/releases/tag/v0.2.0) (7 Nov 2016) and we are keep listening to [community feedback](https://github.com/nuxt/nuxt.js/issues) to improve it.
+Nuxt.js has grown a lot from its [initial release](https://github.com/nuxt/nuxt.js/releases/tag/v0.2.0) (7 Nov 2016) and we are keep listening to [community feedback](https://github.com/nuxt/nuxt.js/issues) to improve it.
 
 However, this manual process only collects feedback from a subset of users that takes the time to fill the issue template and it may have different needs or use-case than you.
 
@@ -25,7 +25,7 @@ We collect multiple events:
 
 - Command invoked (nuxt dev, nuxt build, etc)
 - Versions of Nuxt.js and Node.js
-- General machine information (MacOS/Linux/Windows and if command is run within CI, ci name)
+- General machine information (MacOS/Linux/Windows and if command is run within CI, the CI name)
 - Duration of the Webpack build and average size of the application, as well as the generation stats (when using nuxt generate)
 - What are the public dependency of your project (Nuxt modules)
 

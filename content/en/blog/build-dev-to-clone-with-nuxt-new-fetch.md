@@ -1,6 +1,6 @@
 ---
-title: 'Build a DEV.TO clone with Nuxt new fetch'
-description: Let’s build a blazing fast articles and tutorials app using Nuxt, Dev.to API, with lazy loading, placeholders, caching and trendy neumorphic design UI.
+title: 'Build a dev.to clone with Nuxt new fetch'
+description: Let’s build a blazing fast articles and tutorials app using Nuxt and the DEV API, with lazy loading, placeholders, caching and trendy neumorphic design UI.
 imgUrl: blog/build-dev-to-clone-with-nuxt-new-fetch/main.png
 date: 2020-04-08
 authors:
@@ -17,7 +17,7 @@ tags:
   - API
 ---
 
-_Let’s build a blazing fast articles and tutorials app using Nuxt, Dev.to API, with lazy loading, placeholders, caching and trendy neumorphic design UI._
+_Let’s build a blazing fast articles and tutorials app using Nuxt and the DEV API, with lazy loading, placeholders, caching and trendy neumorphic design UI._
 
 <video src="/blog/build-dev-to-clone-with-nuxt-new-fetch/dev-clone-nuxt.mp4" autoplay loop playsinline controls></video>
 
@@ -26,7 +26,7 @@ _Let’s build a blazing fast articles and tutorials app using Nuxt, Dev.to API,
   <a href="https://github.com/bdrtsky/nuxt-dev-to-clone" target="_blank" rel="noopener nofollow">Source</a>
 </p>
 
-This article is intended to demonstrate use cases and awesomeness of new NuxtJS `fetch` functionality [introduced in release v2.12](/docs/2.x/components-glossary/pages-fetch#nuxt-gt-2-12), and show you how to apply its power in your own projects. For in-depth technical analysis and details of the new `fetch` you can check [Krutie Patel’s article](/blog/understanding-how-fetch-works-in-nuxt-2-12).
+This article is intended to demonstrate use cases and awesomeness of new Nuxt `fetch` functionality [introduced in release v2.12](/docs/2.x/components-glossary/pages-fetch#nuxt-gt-2-12), and show you how to apply its power in your own projects. For in-depth technical analysis and details of the new `fetch` you can check [Krutie Patel’s article](/blog/understanding-how-fetch-works-in-nuxt-2-12).
 
 Here’s the high-level outline of how we will build our dev.to clone using `fetch` hook. We will:
 
@@ -39,7 +39,7 @@ Here’s the high-level outline of how we will build our dev.to clone using `fet
 ## Table of Contents
 
 - [Table of Contents](#table-of-contents)
-- [DEV.TO API](#devto-api)
+- [DEV API](#dev-api)
 - [Setting up the Project](#setting-up-the-project)
   - [CSS Styles](#css-styles)
   - [UI Design](#ui-design)
@@ -55,18 +55,18 @@ Here’s the high-level outline of how we will build our dev.to clone using `fet
   - [Error handling](#error-handling)
 - [Conclusion](#conclusion)
 
-## DEV.TO API
+## DEV API
 
-In September 2019 DEV.TO [opened](https://twitter.com/bendhalpern/status/1176663688742395904) their public API that we can now use to access articles, users and other resources data. _Please note that it’s still Beta, so it could change in future or some things might not work as expected._
+In September 2019 DEV [opened](https://twitter.com/bendhalpern/status/1176663688742395904) their public API that we can now use to access articles, users and other resources data. _Please note that it’s still Beta, so it could change in future or some things might not work as expected._
 
-For creating our DEV.TO clone we are interested in such API endpoints:
+For creating our DEV clone we are interested in such API endpoints:
 
 - [getArticles](https://docs.dev.to/api/#operation/getArticles): to access a list of articles, filtered by the `tag`, `state`, `top`, `username` and paginated with `page` parameters
 - [getArticleById](https://docs.dev.to/api/#operation/getArticleById): to access an article content
 - [getUser](https://docs.dev.to/api/#operation/getUser): to access user data
 - [getCommentsByArticleId](https://docs.dev.to/api/#operation/getCommentsByArticleId): to fetch comments related to the article
 
-To keep it simple, for communication with DEV.TO API we will use native Javascript [Fetch API](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API) .
+To keep it simple, for communication with the DEV API we will use native JavaScript [Fetch API](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API) .
 
 ## Setting up the Project
 
@@ -85,7 +85,7 @@ Let’s install necessary packages and discuss how we will build our app next.
 
 ### CSS Styles
 
-For styling we will use the most common CSS preprocessor Sass/SCSS and leverage Vue.js [Scoped CSS](https://vue-loader.vuejs.org/guide/scoped-css.html) feature, to keep our components styles incapsulated. To [use Sass/SCSS with Nuxt](/faq/pre-processors) run:
+For styling we will use the most common CSS pre-processor Sass/SCSS and leverage Vue.js [Scoped CSS](https://vue-loader.vuejs.org/guide/scoped-css.html) feature, to keep our components styles encapsulated. To [use Sass/SCSS with Nuxt](/faq/pre-processors) run:
 
 <code-group>
   <code-block label="Yarn" active>
@@ -143,9 +143,9 @@ Our design tokens are now available through SCSS variables in every Vue componen
 
 ### UI Design
 
-It will be kinda boring just to copy existing DEV.TO design and layout, so why don’t we experiment a little bit. You have probably already heard of the new UI trend — neumorphism. If you missed it somehow, read more about it [here](https://uxdesign.cc/neumorphism-in-user-interfaces-b47cef3bf3a6).
+It will be kinda boring just to copy the existing DEV design and layout, so why don’t we experiment a little bit. You have probably already heard of the new UI trend — neumorphism. If you missed it somehow, read more about it [here](https://uxdesign.cc/neumorphism-in-user-interfaces-b47cef3bf3a6).
 
-We can find a lot of [dribbble shots](https://dribbble.com/tags/neumorphism) (from where this trend came from), but still only a few examples of real-world web apps built with neumorphism style interface, so we just can’t miss the chance to recreate it with CSS and Vue.js. It’s simple, clean and fresh.
+We can find a lot of [Dribbble shots](https://dribbble.com/tags/neumorphism) (from where this trend came from), but still only a few examples of real-world web apps built with neumorphism style interface, so we just can’t miss the chance to recreate it with CSS and Vue.js. It’s simple, clean and fresh.
 
 I am not going to describe the styling aspect of this application in detail, but if you are interested, you can check this awesome article from [CSS Tricks](https://css-tricks.com/neumorphism-and-css/) about neumorphism and CSS.
 
@@ -176,7 +176,7 @@ buildModules: ['@nuxtjs/svg', '@nuxtjs/style-resources']
 
 ### Dependencies
 
-To keep front-end app fast and simple we will use only two dependencies, both from Vue.js core members:
+To keep the frontend app fast and simple we will use only two dependencies, both from Vue.js core members:
 
 - [vue-observe-visibility](https://github.com/Akryum/vue-observe-visibility) by [Guillaume Chau](https://twitter.com/Akryum), for effective detecting elements in viewport with IntersectionObserver and trigger lazy loading. Only 1.6kB gzipped
 - [vue-content-placeholders](https://github.com/michalsnik/vue-content-placeholders) by [Michał Sajnóg](https://twitter.com/michalsnik), for showing nicely animated placeholders for UI elements while content is fetching. Only 650B gzipped.
@@ -208,11 +208,11 @@ plugins: [
 
 ## Developing the Application
 
-Now we finally can start developing our DEV.TO clone powered by Nuxt and [new fetch](/docs/2.x/components-glossary/pages-fetch).
+Now we finally can start developing our DEV clone powered by Nuxt and [new fetch](/docs/2.x/components-glossary/pages-fetch).
 
 ### URL structure
 
-Let’s imitate DEV.TO URL structure for our simple app. Our [pages](/docs/2.x/concepts/views#pages) folder should look like this:
+Let’s imitate the DEV URL structure for our simple app. Our [pages](/docs/2.x/concepts/views#pages) folder should look like this:
 
 ```
 ├── index.vue
@@ -233,7 +233,7 @@ For the rest of the app URL’s we will use convenient Nuxt file based [dynamic 
 
 - `_username/index.vue` - user profile page with list of his published articles
 - `_username/_article.vue` - this is where article, author profile and comments will be rendered
-- `t/_tag.vue` - list of best articles by any tag that exist on DEV.TO
+- `t/_tag.vue` - list of best articles by any tag that exist on DEV
 
 That’s all. Pretty simple, right?
 
@@ -305,7 +305,7 @@ async fetch() {
 }
 ```
 
-Here we are making a request to DEV.TO `/articles` endpoint, with query parameters that API understands. Don’t confuse `fetch` hook with the Javascript [fetch](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API) interface which simply helps us to send a request to DEV.TO API, and then parse the response with `res.json()`.
+Here we are making a request to the DEV `/articles` endpoint, with query parameters that API understands. Don’t confuse the `fetch` hook with the JavaScript [fetch](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API) interface which simply helps us to send a request to the DEV API, and then parse the response with `res.json()`.
 
 Also notice that the new `fetch` hook doesn’t serve just to dispatch Vuex store action or committing mutation to set state, now it has access to `this` context, and is able to mutate component’s data directly. This is a very important new feature, and you can [read more](/blog/understanding-how-fetch-works-in-nuxt-2-12) about it in the previous article about `fetch`.
 
@@ -379,7 +379,7 @@ Now let’s markup the `<article-card-block>` component which receives `article`
 
 ### Reuse `fetch` with `this.$fetch()`
 
-It already should display a list of articles fetched from DEV.TO but it feels like we are not making a full use of this API. Let’s add lazy loading to articles list, and use the pagination parameter provided by this API. So when we scroll to the bottom of the page a new chunk of articles will be fetched and rendered.
+It already should display a list of articles fetched from DEV - but it feels like we are not making full use of this API. Let’s add lazy loading to the articles list, and use the pagination parameter provided by this API. So when we scroll to the bottom of the page a new chunk of articles will be fetched and rendered.
 
 To efficiently detect when to fetch the next page it’s better to use [Intersection Observer API](https://developer.mozilla.org/en-US/docs/Web/API/Intersection_Observer_API). For that we will use a previously installed Vue plugin called `vue-observe-visibility` which is basically a wrapper around this API and it will detect when an element is becoming visible or hidden on the page. This plugin provides us a possibility to use `v-observe-visibility` directive on any element, so let’s add it to last `<article-card-block>` component:
 
@@ -488,7 +488,7 @@ To explore this great functionality let’s move to `_username/_article.vue` pag
 </script>
 ```
 
-Here we see no data fetching at all, only a template layout consisting of 3 components: `<article-block/>`, `<aside-username-block/>`, `<comments-block/>`. And each of those components has its own `fetch` hook. With old `fetch` or current `asyncData` earlier we would have to make all three requests to three different DEV.TO endpoints and then pass them to each component as a prop. But now those components are completely encapsulated.
+Here we see no data fetching at all, only a template layout consisting of 3 components: `<article-block/>`, `<aside-username-block/>`, `<comments-block/>`. And each of those components has its own `fetch` hook. With old `fetch` or current `asyncData` earlier we would have to make all three requests to three different DEV endpoints and then pass them to each component as a prop. But now those components are completely encapsulated.
 
 In `<article-block/>` we use `fetch` just like we’d use it in a page component.
 
@@ -583,10 +583,10 @@ Note here that we wrap `this.$nuxt.context.res.statusCode = 404` around `process
 
 ## Conclusion
 
-In this article we explored Nuxt.js new `fetch` and built an app with basic DEV.TO content features and structure using only this `fetch` hook. I hope you got some inspiration to build your own version of DEV.TO. Don’t forget to check out the [source code](https://github.com/bdrtsky/nuxt-dev-to-clone) for a more complete example and functionality.
+In this article we explored Nuxt.js new `fetch` and built an app with the basic DEV content features and structure using only this `fetch` hook. I hope you've got some inspiration to build your own version of DEV.TO. Don’t forget to check out the [source code](https://github.com/bdrtsky/nuxt-dev-to-clone) for a more complete example and functionality.
 
 **What to do next:**
 
 - Read [Krutie Patel article](/blog/understanding-how-fetch-works-in-nuxt-2-12) with in-depth analysis of how new `fetch` hook works
 - Check [nuxt-hackernews](https://github.com/nuxt/hackernews) for similar usage of [Hacker News API](https://github.com/HackerNews/API)
-- [Subscribe](#subscribe-to-newsletter) to the newsletter to not miss the upcoming articles and resources, I plan to write an article about How to create your personal blog with Nuxt and Dev.to as CMS.
+- [Subscribe](#subscribe-to-newsletter) to the newsletter to not miss the upcoming articles and resources, I plan to write an article about how to create your personal blog using Nuxt, with DEV as the CMS.

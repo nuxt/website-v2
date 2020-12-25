@@ -1,24 +1,26 @@
 ---
 title: 路由中间件
-description: Using router middleware to set a class to the body so we can then style differently depending on the route
+description: 使用路由中间件在`store`全局设置一个类，这样可以根据路由设置不同的风格样式
 position: 601
 category: middleware
 csb_link: https://codesandbox.io/embed/github/nuxt-academy/examples/tree/master/middleware/router-middleware?fontsize=14&hidenavigation=1&module=%2Fnuxt.config.js&theme=dark&view=editor
 ---
 
+使用路由中间件在`store`全局设置一个类，这样可以根据路由设置不同的风格样式
+
 <example-intro></example-intro>
 
-`store/class.js` sets a class to the body.
+`store/class.js` 在`store`设置一个类。
 
-`middleware/class.js` uses router middleware to set a class before we enter the route.
+`middleware/class.js` 使用路由中间件在进入路由之前修改路由名(route.name)。
 
-`components/Navigation.vue` changes the font size for the route with the name of `router-middleware`.
+`components/Navigation.vue` 使用`router-middleware`的路由名来更改当前路由的字体大小。
 
-`nuxt.config.js` contains the `router` property to activate the middleware.
+`nuxt.config.js` 包含`router`属性用以激活(使用)中间件。
 
 <base-alert type="next">
 
-Learn more in the Directory Structure book in the [middleware](/docs/2.x/directory-structure/middleware#router-middleware) chapter.
+在以下目录中了解更多信息 [middleware](/docs/2.x/directory-structure/middleware#router-middleware)
 
 </base-alert>
 

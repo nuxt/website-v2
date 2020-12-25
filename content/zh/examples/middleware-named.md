@@ -1,24 +1,26 @@
 ---
-title: Named Middleware
-description: Using named middleware to authenticate a user using the store and allow them to visit a page once authenticated
+title: 指定(named)中间件
+description: 使用命名中间件对使用商店的用户进行身份验证，并允许他们在验证通过后访问页面
 position: 602
 category: middleware
 csb_link: https://codesandbox.io/embed/github/nuxt-academy/examples/tree/master/middleware/named-middleware?fontsize=14&hidenavigation=1&module=%2Fpages%2Fnamed-middleware.vue&theme=dark&view=editor
 ---
 
+使用指定(named)中间件对使用商店的用户进行身份验证，并允许他们在验证通过后访问页面
+
 <example-intro></example-intro>
 
-`pages/named-middleware.vue` contains a `middleware` property with the value of `auth` which is called before a user enters the route.
+`pages/named-middleware.vue` 包含具有`auth`值的`middleware`(`中间件`)属性，该属性在用户进入路由之前被调用。
 
-`middleware/auth.js` checks to see if the user is authenticated and if they aren't it redirects them to the auth page.
+`middleware/auth.js` 检查用户是否已通过身份验证，如果不是，则将用户重定向到验证页面。
 
-`pages/auth.vue` uses the store to authenticate the user.
+`pages/auth.vue` 使用`store`来验证用户。
 
-`store/auth.js` sets the the user and password values and redirects the user.
+`store/auth.js` 设置用户名和密码并重定向用户。
 
 <base-alert type="next">
 
-Learn more in the Directory Structure book in the [middleware](/docs/2.x/directory-structure/middleware#named-middleware) chapter.
+在以下目录中了解更多信息 [middleware](/docs/2.x/directory-structure/middleware#named-middleware)
 
 </base-alert>
 

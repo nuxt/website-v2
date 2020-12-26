@@ -5,29 +5,29 @@ position: 1
 category: features
 ---
 
-## Server Side Rendered Sites and Static Sites
+## サーバーサイドでレンダリングされるサイトと静的サイト
 
-**Server-side rendered sites** are rendered on the server each time the user requests a page, therefore a server is needed to be able to serve the page on each request.
+**サーバーサイドでレンダリングされるサイト**は、ユーザーがページをリクエストするたびにサーバー上でレンダリングされるため、リクエストのたびにページを提供できるサーバーが必要です。
 
-**Static sites** are very similar to server-side rendered applications with the main difference being that static sites are rendered at build time, therefore no server is needed. Navigating from one page to another is then on the client-side.
+**静的サイト**は、サーバーサイドでレンダリングされるアプリケーションと非常によく似ていますが、主な違いとして静的サイトはビルド時にレンダリングされるため、サーバーを必要としません。あるページから別のページへの移動はクライアントサイドで行います。
 
-See [deployment targets](/docs/2.x/features/deployment-targets) for more info on static and server hosting.
+静的およびサーバーでのホスティングについては [デプロイターゲット](/docs/2.x/features/deployment-targets) を参照してください。
 
 ```js{}[nuxt.config.js]
 export default {
-  ssr: true // default value
+  ssr: true // デフォルトの値
 }
 ```
 
 <base-alert type="info">
 
-You do not need to add `ssr: true` to your nuxt config in order to enable server-side-rendering as it is enabled by default.
+デフォルトでサーバサイドレンダリングが有効になっているので、サーバサイドレンダリングを有効にするために `ssr: true` を nuxt の設定に追加する必要はありません。
 
 </base-alert>
 
-## Client Side Rendering Only
+## クライアントサイドレンダリングのみ
 
-With client side rendering only there is no server-side rendering. Client side rendering means rendering the content in the browser using JavaScript. Instead of getting all of the content from the HTML we just get a basic HTML document with a JavaScript file that will then render the rest of the site using the browser. For client side rendering set ssr to `false`.
+クライアントサイドレンダリングのみではサーバーサイドレンダリングをすることはできません。クライアントサイドレンダリングとは、JavaScript を使用してブラウザでコンテンツをレンダリングすることです。 HTML からすべてのコンテンツを取得するのではなく、基本的な HTML ドキュメントと JavaScript ファイルを取得し、ブラウザを使用してサイトの残りの部分をレンダリングします。 クライアントサイドレンダリングをするためには ssr を `false` に設定します。
 
 ```js{}[nuxt.config.js]
 export default {
@@ -37,6 +37,6 @@ export default {
 
 <base-alert type="next">
 
-[The ssr property](/docs/2.x/configuration-glossary/configuration-ssr)
+[ssr プロパティ](/docs/2.x/configuration-glossary/configuration-ssr)
 
 </base-alert>

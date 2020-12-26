@@ -1,6 +1,6 @@
 ---
-title: Rendering
-description: Rendering
+title: レンダリング
+description: レンダリング
 position: 1
 category: features
 ---

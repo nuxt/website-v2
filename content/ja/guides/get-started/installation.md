@@ -9,8 +9,8 @@ csb_link: https://codesandbox.io/embed/github/nuxt-academy/guides-examples/tree/
 ## 前提条件
 
 - [node](https://nodejs.org) - v10.13 以上 _最新の LTS バージョンのインストールをおすすめします。_
-- テキストエディタは [Vetur](https://marketplace.visualstudio.com/items?itemName=octref.vetur) 拡張機能をインストールした [VSCode](https://code.visualstudio.com/) か [WebStorm](https://www.jetbrains.com/webstorm/) をおすすめします。
-- ターミナルは VSCode の[統合ターミナル](https://code.visualstudio.com/docs/editor/integrated-terminal)または [Webstorm ターミナル](https://www.jetbrains.com/help/webstorm/terminal-emulator.html)を使うことをおすすめします。
+- テキストエディタは [Vetur](https://marketplace.visualstudio.com/items?itemName=octref.vetur) 拡張機能をインストールした [VS Code](https://code.visualstudio.com/) か [WebStorm](https://www.jetbrains.com/webstorm/) をおすすめします。
+- ターミナルは VS Code の[統合ターミナル](https://code.visualstudio.com/docs/editor/integrated-terminal)または [WebStorm ターミナル](https://www.jetbrains.com/help/webstorm/terminal-emulator.html)を使うことをおすすめします。
 
 ## create-nuxt-app を使う
 

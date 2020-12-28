@@ -1,48 +1,48 @@
 ---
-title: Server Side Rendering
-description: Server-side rendering (SSR), is the ability of an application to contribute by displaying the web-page on the server instead of rendering it in the browser.
+title: サーバーサイドレンダリング
+description: サーバーサイドレンダリング(SSR)はウェブページのレンダリングをブラウザの代わりにサーバー上で行う，画面の表示において有用なアプリケーションの機能です。
 position: 3
 category: concepts
 questions:
-  - question: What kinda of server do you need for Server Side Rendering?
+  - question: サーバーサイドレンダリングを行うために必要なサーバーは？
     answers:
-      - PHP server
-      - JavaScript server
-      - Node.js server
-    correctAnswer: Node.js server
-  - question: What do you use to extend and control the server?
+      - PHP サーバー
+      - JavaScript サーバー
+      - Node.js サーバー
+    correctAnswer: Node.js サーバー
+  - question: サーバーを拡張し制御するために使うのは？
     answers:
       - Middleware
       - ServerMiddleware
-      - It is not possible to control the server
+      - サーバーを制御することはできません
     correctAnswer: ServerMiddleware
-  - question: You can host a server side rendered application on a serverless hosting provider
+  - question: サーバーレスホスティングプロバイダー上でサーバーサイドレンダリングされたアプリをホスティングすることは可能です
     answers:
       - true
       - false
     correctAnswer: false
-  - question: Do we have access to  document on the server-side?
+  - question: サーバーサイドのドキュメントにアクセスすることは？
     answers:
-      - yes, it is always available
-      - No, The object belongs to the browser and is not available on the server
-    correctAnswer: No, The object belongs to the browser and is not available on the server
-  - question: When does your page become interactive?
+      - 常に可能です
+      - ブラウザーに帰属するオブジェクトにのみ可能でありサーバー側のオブジェクトにはできません
+    correctAnswer: ブラウザーに帰属するオブジェクトにのみ可能でありサーバー側のオブジェクトにはできません
+  - question: ページがインタラクティブになるのは？
     answers:
-      - When the browser receives the rendered HTML from the server
-      - When the Vue.js hydration kicks in
-      - When a browser sends the initial request
-    correctAnswer: When the Vue.js hydration kicks in
-  - question: Navigating between pages using <NuxtLink> is done
+      - サーバーからレンダリングされた HTML を受け取った時
+      - Vue.js のハイドレーションが効き始めた時
+      - ブラウザーが最初のリクエストを送った時
+    correctAnswer: Vue.js のハイドレーションが効き始めた時
+  - question: <NuxtLink> を用いたページ遷移が行われるのは？
     answers:
-      - Client side
-      - Server side
-    correctAnswer: Client side
-  - question: What are the correct steps?
+      - クライアント側
+      - サーバー側
+    correctAnswer: クライアント側
+  - question: 正しいステップは？
     answers:
-      - browser → server, server → browser, browser → browser
-      - server → browser, browser → server, server → server
-      - browser → server, server → browser, browser → server
-    correctAnswer: browser → server, server → browser, browser → browser
+      - ブラウザー → サーバー, サーバー → ブラウザー, ブラウザー → ブラウザー
+      - サーバー → ブラウザー, ブラウザー → サーバー, サーバー → サーバー
+      - ブラウザー → サーバー, サーバー → ブラウザー, ブラウザー → サーバー
+    correctAnswer: ブラウザー → サーバー, サーバー → ブラウザー, ブラウザー → ブラウザー
 ---
 
 サーバーサイドレンダリング(SSR)はウェブページのレンダリングをブラウザの代わりにサーバー上で行う，画面の表示において有用なアプリケーションの機能です。

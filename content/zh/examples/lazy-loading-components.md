@@ -21,7 +21,7 @@ csb_link: https://codesandbox.io/embed/github/nuxt-academy/examples/tree/master/
 
 <base-alert type="next">
 
-在以下目录中了解更多信息 [Components](/docs/2.x/directory-structure/components).
+在以下目录中了解更多信息 [Components](/docs/2.x/directory-structure/components)
 
 </base-alert>
 

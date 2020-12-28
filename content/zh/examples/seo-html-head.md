@@ -1,7 +1,7 @@
 ---
 title: SEO HTML 头部
 description: Nuxt.js 的 SEO HTML 头部示例
-category: essentials
+category: seo
 position: 3
 csb_link: https://codesandbox.io/embed/github/nuxt-academy/examples/tree/master/seo/seo-html-head?fontsize=14&hidenavigation=1&module=%2Fnuxt.config.js&theme=dark&view=editor
 ---
@@ -18,13 +18,13 @@ Nuxt.js 的 SEO HTML 头部示例
 
 <base-alert type="next">
 
-在[vue-meta]中了解有关 head 选项的更多信息。 (https://vue-meta.nuxtjs.org/api/#metainfo-properties).
+在[vue-meta]中了解有关 head 选项的更多信息  (https://vue-meta.nuxtjs.org/api/#metainfo-properties).
 
 </base-alert>
 
 <base-alert type="next">
 
-在 [Meta Tags and SEO](/docs/2.x/features/meta-tags-seo) 中了解有关元 Meta & Tags & SEO 的更多信息。
+在 [Meta Tags and SEO](/docs/2.x/features/meta-tags-seo) 中了解有关元 Meta & Tags & SEO 的更多信息
 
 </base-alert>
 

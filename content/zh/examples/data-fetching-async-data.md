@@ -14,13 +14,13 @@ csb_link: https://codesandbox.io/embed/github/nuxt-academy/examples/tree/master/
 
 <base-alert type="next">
 
-了解更多有关 [http module](https://http.nuxtjs.org/).
+了解更多有关 [http module](https://http.nuxtjs.org/)的信息
 
 </base-alert>
 
 <base-alert type="next">
 
-在以下目录中了解更多有关`asyncData`异步请求的信息[Data Fetching](/docs/2.x/features/data-fetching).
+在以下目录中了解更多有关`asyncData`异步请求的信息[Data Fetching](/docs/2.x/features/data-fetching)
 
 </base-alert>
 

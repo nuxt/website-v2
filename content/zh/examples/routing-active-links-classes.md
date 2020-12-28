@@ -14,13 +14,13 @@ csb_link: https://codesandbox.io/embed/github/nuxt-academy/examples/tree/master/
 
 <base-alert type="next">
 
-了解更多有关 [路由](https://router.vuejs.org/api/#exact-active-class) 触发和被触发的样式。
+了解更多有关 [路由](https://router.vuejs.org/api/#exact-active-class) 触发和被触发的样式
 
 </base-alert>
 
 <base-alert type="next">
 
-Learn more about active classes in the Features book in the [Nuxt Components](/docs/2.x/features/nuxt-components#link-classes) chapter.
+在以下目录中了解更多信息 [Nuxt Components](/docs/2.x/features/nuxt-components#link-classes)
 
 </base-alert>
 

@@ -14,7 +14,7 @@ csb_link: https://codesandbox.io/embed/github/nuxt-academy/examples/tree/master/
 
 `middleware/auth.js` 检查用户是否已通过身份验证，如果不是，则将用户重定向到验证页面。
 
-`pages/auth.vue` 使用`store`来验证用户。
+`pages/auth.vue` 使用`store`[状态树]来验证用户。
 
 `store/auth.js` 设置用户名和密码并重定向用户。
 

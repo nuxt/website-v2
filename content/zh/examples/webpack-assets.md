@@ -22,7 +22,7 @@ csb_link: https://codesandbox.io/embed/github/nuxt-academy/examples/tree/master/
 
 <base-alert type="next">
 
-在以下目录中了解更多信息 [Assets](/docs/2.x/directory-structure/assets).
+在以下目录中了解更多信息 [Assets](/docs/2.x/directory-structure/assets)
 
 </base-alert>
 

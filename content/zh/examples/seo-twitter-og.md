@@ -19,13 +19,13 @@ csb_link: https://codesandbox.io/embed/github/nuxt-academy/examples/tree/master/
 
 <base-alert type="next">
 
-在`vue-meta`文档中了解有关于`head`选项的更多信息。 [vue-meta documentation](https://vue-meta.nuxtjs.org/api/#metainfo-properties).
+在`vue-meta`文档中了解有关于`head`属性的更多信息  [vue-meta documentation](https://vue-meta.nuxtjs.org/api/#metainfo-properties)
 
 </base-alert>
 
 <base-alert type="next">
 
-在以下目录中了解更多有关  [Meta Tags and SEO](/docs/2.x/features/meta-tags-seo).
+在以下目录中了解更多有关  [Meta Tags and SEO](/docs/2.x/features/meta-tags-seo)
 
 </base-alert>
 

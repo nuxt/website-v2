@@ -18,7 +18,7 @@ csb_link: https://codesandbox.io/embed/github/nuxt-academy/examples/tree/master/
 
 <base-alert type="next">
 
-在以下目录中了解更多信息 [Nuxt 组件](/docs/2.x/features/nuxt-components#the-nuxtchild-component).
+在以下目录中了解更多信息 [Nuxt 组件](/docs/2.x/features/nuxt-components#the-nuxtchild-component)
 
 </base-alert>
 

@@ -1,7 +1,7 @@
 ---
 title: Hello World
 description: Nuxt.js 的 Hello World 示例
-position: 101
+position: 1
 category: routing
 csb_link: https://codesandbox.io/embed/github/nuxt-academy/examples/tree/master/routing/hello-world?fontsize=14&hidenavigation=1&theme=dark&view=editor
 ---
@@ -14,7 +14,7 @@ Nuxt.js 的 Hello World 示例
 
 <base-alert type="next">
 
-在[安装](/docs/2.x/get-started/installation) 中了解更多信息。.
+在[安装](/docs/2.x/get-started/installation)中了解更多信息
 
 </base-alert>
 

@@ -10,7 +10,7 @@ csb_link: https://codesandbox.io/embed/github/nuxt-academy/examples/tree/master/
 
 <example-intro></example-intro>
 
-`pages/anonymous-middleware.vue` 包含中间件方法，该函数使用`store`来调用变量，并在页面上显示该`store`的值。
+`pages/anonymous-middleware.vue` 包含中间件方法，该函数使用`store`[状态树]来调用变量，并在页面上显示该`store`的值。
 
 `store/analytics.js` 将`pageVisits`设置为 0，并在每次调用递增函数时增加访问次数。
 

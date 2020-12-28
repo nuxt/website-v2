@@ -296,7 +296,7 @@ module.exports = {
       internals: '内部构造'
     },
     examples: {
-      essentials: '必要',
+      // essentials: '必要',
       routing: '路由',
       dataFetching: '数据获取',
       assetManagement: '资源依赖管理',
@@ -306,9 +306,9 @@ module.exports = {
       miscellaneous: '其他项目',
       middleware: '中间件',
       plugins: '插件',
-      modules: '模块',
-      customization: '客制化',
-      advanced: '高级'
+      modules: '模块'
+      // customization: '定制化',
+      // advanced: '高级'
     },
     faq: {
       configuration: '配置',

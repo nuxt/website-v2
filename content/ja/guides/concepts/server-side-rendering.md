@@ -45,17 +45,19 @@ questions:
     correctAnswer: browser → server, server → browser, browser → browser
 ---
 
-Server-side rendering (SSR), is the ability of an application to contribute by displaying the web-page on the server instead of rendering it in the browser. Server-side sends a fully rendered page to the client; the client's JavaScript bundle takes over which then allows the Vue.js app to [hydrate](https://ssr.vuejs.org/guide/hydration.html).
+サーバーサイドレンダリング(SSR)はウェブページのレンダリングをブラウザの代わりにサーバー上で行う，画面の表示において有用なアプリケーションの機能です。
 
-## Node.js server required
+サーバーサイドは完全にレンダリングされたページをクライアントに送信します。クライアントの JavaScript バンドルが引継ぎ Vue.js のアプリが [ハイドレーション](https://ssr.vuejs.org/guide/hydration.html) できるようにします。
 
-A JavaScript environment is required to render your web page.
+## Node.js サーバー環境必須
 
-A Node.js server needs to be configured to execute your Vue.js application.
+ウェブページをレンダリングするためには JavaScript の環境が必要です。
 
-## Extend and control the server
+Vue.js のアプリケーションを実行するには Node.js サーバーの環境構築が必要です。
 
-You can extend the server with serverMiddleware and control routes with middleware.
+## サーバーの拡張と制御
+
+serverMiddleware でサーバーを拡張しルートを middleware で制御することができます。
 
 ```js{}[middleware/api/logger.js]
 export default function (req, res, next) {
@@ -70,11 +72,11 @@ export default {
 }
 ```
 
-If your server middleware consists of a list of functions mapped to paths:
+サーバーのミドルウェアが関数のリストで構成されている場合，パスを割り当てます:
 
-## Server vs Browser environments
+## サーバー環境とブラウザー環境
 
-Because you are in a Node.js environment you have access to Node.js objects such as `req` and `res`. You do not have access to the `window` or `document` objects as they belong to the browser environment. You can however use `window` or `document` by using the `beforeMount` or `mounted` hooks.
+Node.js の環境を利用するため `req` や `res` といった Node.js のオブジェクトにアクセス可能です。また `window` や `document` といったブラウザー環境のオブジェクトは利用できません。ただし `beforeMount` や `mounted` などのフックでは`window` や `document` は使えます。
 
 ```js
 beforeMount{
@@ -85,18 +87,18 @@ mounted{
 }
 ```
 
-## Server-side rendering steps with Nuxt.js
+## Nuxt.js でのサーバーサイドレンダリングのステップ
 
-### Step 1: Browser to Server
+### ステップ 1: ブラウザーからサーバーへ
 
-When a browser sends the initial request, it will hit the Node.js internal server. Nuxt.js will generate the HTML and send it back to the browser with results from executed functions, e.g. `asyncData`, `nuxtServerInit` or `fetch`. Hooks functions are executed as well.
+ブラウザーが最初のリクエストを送ると Node.js の内部サーバーへ到達します。Nuxt.js は HTML を生成し `asyncData`, `nuxtServerInit`, `fetch` といった関数を実行した結果と共にブラウザーへ送り返します。フック関数も同様に実行されます。
 
-### Step 2: Server to Browser
+### ステップ 2: サーバーからブラウザーへ
 
-The browser receives the rendered page from the server with the generated HTML. The content is displayed and the Vue.js hydration kicks in, making it reactive. After this process, the page is interactive.
+サーバーによって生成された HTML と共にレンダリングされたページをブラウザーが受け取ります。その内容が表示され Vue.js の hydration が作用し始めます。この工程の後，ページがインタラクティブになります。
 
-### Step 3: Browser to Browser
+### ステップ 3: ブラウザーからブラウザーへ
 
-Navigating between pages with [`<NuxtLink>`](/docs/2.x/features/nuxt-components#the-nuxtlink-component) is done on the client side so you don't hit the server again unless you hard refresh the browser.
+[`<NuxtLink>`](/docs/2.x/features/nuxt-components#the-nuxtlink-component) によるページ間の遷移はクライアント側で行われるためブラウザーをハード再読み込みをしない限りサーバーへリクエストを送りません。
 
 <quiz :questions="questions"></quiz>

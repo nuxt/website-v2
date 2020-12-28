@@ -79,10 +79,10 @@ export default {
 Node.js の環境を利用するため `req` や `res` といった Node.js のオブジェクトにアクセス可能です。また `window` や `document` といったブラウザー環境のオブジェクトは利用できません。ただし `beforeMount` や `mounted` などのフックでは`window` や `document` は使えます。
 
 ```js
-beforeMount{
+beforeMount () {
   window.alert('hello');
 }
-mounted{
+mounted () {
   window.alert('hello');
 }
 ```

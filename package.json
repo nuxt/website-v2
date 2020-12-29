@@ -21,7 +21,7 @@
     "vue-chartjs": "^3.5.1",
     "vue-cookieconsent-component": "^1.2.0",
     "vue-if-bot": "^1.2.0",
-    "vue-observe-visibility": "^0.4.6",
+    "vue-observe-visibility": "^1.0.0",
     "vue-scrollactive": "^0.9.3",
     "vue-scrollto": "^2.20.0"
   },

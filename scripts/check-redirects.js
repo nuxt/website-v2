@@ -8,6 +8,9 @@ const core = require('@actions/core')
 
 const logger = consola.withTag('redirect-tester')
 
+let baseURL = process.env.BASE_URL || 'https://nuxtjs.org'
+if (baseURL.endsWith('/')) baseURL = baseURL.slice(0, -1)
+
 const redirects = fs
   .readFileSync(path.resolve(__dirname, '../_redirects'))
   .toString()
@@ -16,7 +19,7 @@ const redirects = fs
   .filter(redirect => redirect.startsWith('/'))
   .map(redirect => redirect.split(' ')[1])
   .filter(redirect => redirect.startsWith('/') && !redirect.includes('/:'))
-  .map(redirect => 'https://nuxtjs.org' + redirect)
+  .map(redirect => baseURL + redirect)
 
 const crawler = new Crawler({
   maxConnections: 100,

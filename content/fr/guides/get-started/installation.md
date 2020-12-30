@@ -201,7 +201,7 @@ La commande `dev` est utilisée lorsque l'application est lancée en mode dével
 
 L'application est maintenant en cours d'exécution sur **[http://localhost:3000](http://localhost:3000/).**
 
-On peut l'ouvrir dans notre navigateur en cliquant sur le lien dans le terminal et nous devrios voir le texte "Hello World" que nous avons ajouté dans l'étape précédente.
+On peut l'ouvrir dans notre navigateur en cliquant sur le lien dans le terminal et nous devrions voir le texte "Hello World" que nous avons ajouté dans l'étape précédente.
 
 <base-alert type="info">
 

@@ -32,6 +32,6 @@ export default {
 ## NPM
 
 3. `package-lock.json` ファイルを削除します
-4. node_modules` ディレクトリを削除します
+4. `node_modules` ディレクトリを削除します
 5. `npm install` コマンドを実行します
 6. インストールが完了しテストをしたら他の依存関係のアップグレードも検討してください。`npm outdated` コマンドが使えます。

@@ -49,7 +49,7 @@ questions:
 
 サーバーサイドは完全にレンダリングされたページをクライアントに送信します。クライアントの JavaScript バンドルが引継ぎ Vue.js のアプリが [ハイドレーション](https://ssr.vuejs.org/guide/hydration.html) できるようにします。
 
-## Node.js サーバー環境必須
+## Node.js サーバー環境が必須
 
 ウェブページをレンダリングするためには JavaScript の環境が必要です。
 
@@ -72,11 +72,11 @@ export default {
 }
 ```
 
-サーバーのミドルウェアが関数のリストで構成されている場合、パスを割り当てます:
+サーバーの middleware がパスにマップされた関数のリストで構成されている場合:
 
 ## サーバー環境とブラウザ環境
 
-Node.js の環境を利用するため `req` や `res` といった Node.js のオブジェクトにアクセス可能です。また `window` や `document` といったブラウザ環境のオブジェクトは利用できません。ただし `beforeMount` や `mounted` などのフックでは`window` や `document` は使えます。
+Node.js の環境を利用するため `req` や `res` といった Node.js のオブジェクトにアクセス可能です。また `window` や `document` といったブラウザ環境に帰属するオブジェクトにはアクセスできません。ただし `beforeMount` や `mounted` などのフックを使うと `window` や `document` を使うことができます。
 
 ```js
 beforeMount () {

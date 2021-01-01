@@ -1,6 +1,6 @@
 ---
 title: データの取得
-description: Nuxt.js は api からデータを取得する2つの方法を提供しています。fetch メソッドもしくは asyncData メソッドを使うことができます。
+description: Nuxt.js は api からデータを取得する 2 つの方法を提供しています。fetch メソッドもしくは asyncData メソッドを使うことができます。
 position: 4
 category: features
 csb_link: https://codesandbox.io/embed/github/nuxt-academy/guides-examples/tree/master/03_features/04_data_fetching?fontsize=14&hidenavigation=1&theme=dark
@@ -231,7 +231,7 @@ export default {
 
 </base-alert>
 
-`asyncData` はユニバーサルなデータ取得のためのもうひとつのフックです。非同期な状態を保存するために、コンポーネントのインスタンスにプロパティをセットする(または Vuex アクションをディスパッチする)必要がある `fetch` とは異なり、`asyncData` は単にその返却された値をコンポーネントのデータにマージします。以下は [@nuxt/http](https://http.nuxtjs.org/) ライブラリを使った例です：
+`asyncData` はユニバーサルなデータ取得のためのもう 1 つのフックです。非同期な状態を保存するために、コンポーネントのインスタンスにプロパティをセットする（または Vuex アクションをディスパッチする）必要がある `fetch` とは異なり、`asyncData` は単にその返却された値をコンポーネントのデータにマージします。以下は [@nuxt/http](https://http.nuxtjs.org/) ライブラリを使った例です：
 
 ```html{}[pages/posts/_id.vue]
 <template>
@@ -251,7 +251,7 @@ export default {
 </script>
 ```
 
-`fetch` と異なり、`asyncData` フックから返却される promise は*ルートの遷移の間に*解決されます。つまり、"loading placeholder" はクライアントサイドの遷移で表示されないということです(ただし読み込み中の状態をユーザーに示すために [ローディングバー](https://nuxtjs.org/guides/features/loading/) を使うことができます)。Nuxt は代わりに `asyncData` フックの終了を待ってから、次のページへ移動したり[エラーページ](/docs/2.x/directory-structure/layouts#error-page)を表示したりします。
+`fetch` と異なり、`asyncData` フックから返却される promise は*ルートの遷移の間に*解決されます。つまり、"loading placeholder" はクライアントサイドの遷移で表示されないということです（ただし読み込み中の状態をユーザーに示すために [ローディングバー](https://nuxtjs.org/guides/features/loading/) を使うことができます）。Nuxt は代わりに `asyncData` フックの終了を待ってから、次のページへ移動したり[エラーページ](/docs/2.x/directory-structure/layouts#error-page)を表示したりします。
 
 このフックはページレベルのコンポーネントのためだけに使うことができます。`fetch` と異なり、`asyncData` はコンポーネントインスタンス (`this`) にアクセスすることはできません。そのかわりに、[context](/docs/2.x/concepts/context-helpers) を引数として受け取ります。`asyncData` をデータの取得のために使うことができ、Nuxt.js は自動で返却されたオブジェクトをコンポーネントのデータとマージします。
 

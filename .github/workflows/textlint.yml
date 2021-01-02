@@ -15,5 +15,6 @@ jobs:
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           reporter: local
+          filter_mode: nofilter
           fail_on_error: true
           textlint_flags: "content/ja/**/"

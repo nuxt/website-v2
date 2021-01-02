@@ -20,7 +20,7 @@ export default {
 1. Periksa [catatan rilis](/docs/release-notes) untuk versi yang ingin Anda tingkatkan untuk melihat apakah ada instruksi tambahan untuk rilis tersebut.
 2. Perbarui versi yang ditentukan untuk paket `nuxt` di file `package.json`.
 
-Setelah langkah ini, instruksi bervariasi tergantung pada apakah Anda menggunakan Yarn atau NPM.. _[Yarn](https://yarnpkg.com/en/docs/usage) adalah manajer paket yang lebih disukai untuk bekerja dengan Nuxt karena ini adalah alat pengembangan yang menjadi dasar pengujian._
+Setelah langkah ini, instruksi bervariasi tergantung pada apakah Anda menggunakan Yarn atau npm.. _[Yarn](https://yarnpkg.com/en/docs/usage) adalah manajer paket yang lebih disukai untuk bekerja dengan Nuxt karena ini adalah alat pengembangan yang menjadi dasar pengujian._
 
 ## Yarn
 
@@ -29,7 +29,7 @@ Setelah langkah ini, instruksi bervariasi tergantung pada apakah Anda menggunaka
 3. Jalankan perintah `yarn`
 4. Setelah penginstalan selesai dan Anda telah menjalankan pengujian, pertimbangkan untuk meningkatkan dependensi lain juga. Perintah `yarn outdated` dapat digunakan.
 
-## NPM
+## npm
 
 1. Hapus file `package-lock.json`
 2. Hapus direktori `node_modules`

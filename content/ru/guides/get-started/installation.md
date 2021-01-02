@@ -71,7 +71,7 @@ touch package.json
 
 #### **Что такое файл package.json?**
 
-`package.json` - это как паспорт вашего проекта. Если вы хотите больше узнать о файле `package.json`, то мы рекомендуем почитать [документацию NPM](https://docs.npmjs.com/creating-a-package-json-file).
+`package.json` - это как паспорт вашего проекта. Если вы хотите больше узнать о файле `package.json`, то мы рекомендуем почитать [документацию npm](https://docs.npmjs.com/creating-a-package-json-file).
 
 ### Установка nuxt
 

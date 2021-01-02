@@ -13,7 +13,7 @@ questions:
       - mientras Nuxt.js se ejecuta
       - después de que Nuxt.js inicia
     correctAnswer: antes de que Nuxt.js inicie
-  - question: Los módulos Nuxt.js pueden ser incluidos en paquetes NPM
+  - question: Los módulos Nuxt.js pueden ser incluidos en paquetes npm
     answers:
       - verdadero
       - falso

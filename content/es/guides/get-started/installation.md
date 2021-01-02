@@ -71,7 +71,7 @@ Los `scripts` definen los comandos de Nuxt.js que serán lanzados con el comando
 
 #### **¿Qué es un archivo package.json?**
 
-El `package.json` es como la tarjeta de identificación de tu proyecto. Si no sabes qué es el archivo `package.json`, te recomendamos que leas la [documentación de NPM](https://docs.npmjs.com/creating-a-package-json-file).
+El `package.json` es como la tarjeta de identificación de tu proyecto. Si no sabes qué es el archivo `package.json`, te recomendamos que leas la [documentación de npm](https://docs.npmjs.com/creating-a-package-json-file).
 
 ### Instalar nuxt
 
@@ -193,7 +193,7 @@ Crea un directorio llamado `more-fun` y añade un archivo `index.vue` dentro. Es
 
 Para empezar rápidamente puedes usar el [create-nuxt-app](https://github.com/nuxt/create-nuxt-app).
 
-Asegúrate de tener instalado npx (npx viene por defecto desde NPM 5.2.0) o npm v6.1 o yarn.
+Asegúrate de tener instalado npx (npx viene por defecto desde npm 5.2.0) o npm v6.1 o yarn.
 
 <code-group>
   <code-block label="Yarn" active>

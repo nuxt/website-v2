@@ -71,7 +71,7 @@ Abra o arquivo package.json em seu editor de código favorito e preencha-o com e
 
 #### **O que é um arquivo package.json?**
 
-O `package.json` é como um cartão de identificação do seu projeto. Se você não sabe o que é o arquivo `package.json`, recomendamos que você dê uma lida rápida na [documentação do NPM](https://docs.npmjs.com/creating-a-package-json-file).
+O `package.json` é como um cartão de identificação do seu projeto. Se você não sabe o que é o arquivo `package.json`, recomendamos que você dê uma lida rápida na [documentação do npm](https://docs.npmjs.com/creating-a-package-json-file).
 
 ### Instale nuxt
 
@@ -193,7 +193,7 @@ Crie um diretório com o nome `more-fun` e coloque um arquivo `index.vue` nele. 
 
 Para iniciar rapidamente, você pode utilizar o [create-nuxt-app](https://github.com/nuxt/create-nuxt-app).
 
-Certifique-se de ter o npx instalado (npx é fornecido por padrão desde o NPM 5.2.0) ou npm v6.1 ou yarn.
+Certifique-se de ter o npx instalado (npx é fornecido por padrão desde o npm 5.2.0) ou npm v6.1 ou yarn.
 
 <code-group>
   <code-block label="Yarn" active>

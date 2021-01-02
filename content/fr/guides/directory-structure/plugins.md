@@ -79,7 +79,7 @@ Le répertoire `plugins` contient les plugins JavaScript que l'on souhaite exéc
 
 On pourrait avoir envie d'utiliser des packages/modules externes dans notre application (ex: [axios](https://axios.nuxtjs.org/)) pour faire des requêtes HTTP côté client et serveur.
 
-Premièrement, l'installer via NPM ou Yarn.
+Premièrement, l'installer via npm ou Yarn.
 
 <code-group>
   <code-block label="Yarn" active>

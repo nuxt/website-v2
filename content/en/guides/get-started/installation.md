@@ -16,7 +16,7 @@ csb_link: https://codesandbox.io/embed/github/nuxt-academy/guides-examples/tree/
 
 To get started quickly you can use the [create-nuxt-app](https://github.com/nuxt/create-nuxt-app).
 
-Make sure you have npx installed (npx is shipped by default since NPM 5.2.0) or npm v6.1 or yarn.
+Make sure you have npx installed (npx is shipped by default since npm 5.2.0) or npm v6.1 or yarn.
 
 <code-group>
   <code-block label="Yarn" active>
@@ -115,7 +115,7 @@ Fill the content of your `package.json` with:
 
 #### **What is a package.json file?**
 
-The `package.json` is like the ID card of your project. It contains all the project dependencies and much more. If you don't know what the `package.json` file is, we highly recommend you to have a quick read on the [NPM documentation](https://docs.npmjs.com/creating-a-package-json-file).
+The `package.json` is like the ID card of your project. It contains all the project dependencies and much more. If you don't know what the `package.json` file is, we highly recommend you to have a quick read on the [npm documentation](https://docs.npmjs.com/creating-a-package-json-file).
 
 ### Install Nuxt
 

@@ -14,5 +14,6 @@ jobs:
         uses: tsuyoshicho/action-textlint@v2
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          reporter: github-pr-check
+          reporter: github-check
+          fail_on_error: true
           textlint_flags: "content/ja/**/"

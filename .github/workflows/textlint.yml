@@ -1,8 +1,7 @@
-name: textlint with reviewdog for Japanese documentation
+name: textlint for Japanese documentation
 on: [pull_request]
 jobs:
   textlint:
-    name: textlint with reviewdog
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
@@ -10,10 +9,4 @@ jobs:
         with:
           node-version: '12'
       - run: yarn install
-      - name: textlint and report
-        uses: tsuyoshicho/action-textlint@v2
-        with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          reporter: local
-          filter_mode: nofilter
-          textlint_flags: "content/ja/**/"
+      - run: yarn lint:textlint:ja

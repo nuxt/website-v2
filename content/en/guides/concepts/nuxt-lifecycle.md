@@ -120,7 +120,7 @@ When using static site generation, the server steps are only executed on build t
 This part of the lifecycle is fully executed in the browser, no matter which Nuxt.js mode you've chosen.
 
 - Receives the HTML
-- Loading assets (e.g. Javascript)
+- Loading assets (e.g. JavaScript)
 - Vue Hydration
 - Middleware
   - Global middleware

@@ -53,7 +53,7 @@ export default {
 }
 ```
 
-In this case we use [murmurhash-native](https://github.com/royaltm/node-murmurhash-native), which is faster for larger html body sizes. Note that the `weak` option is ignored, when specifying your own hash function.
+In this case we use [murmurhash-native](https://github.com/royaltm/node-murmurhash-native), which is faster for larger HTML body sizes. Note that the `weak` option is ignored, when specifying your own hash function.
 
 ## compressor
 
@@ -62,7 +62,7 @@ In this case we use [murmurhash-native](https://github.com/royaltm/node-murmurha
 
 When providing an object, the [compression](https://www.npmjs.com/package/compression) middleware will be used (with respective options).
 
-If you want to use your own compression middleware, you can reference it directly (f.ex. `otherComp({ myOptions: 'example' })`).
+If you want to use your own compression middleware, you can reference it directly (e.g. `otherComp({ myOptions: 'example' })`).
 
 To disable compression, use `compressor: false`.
 

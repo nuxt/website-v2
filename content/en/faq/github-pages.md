@@ -1,7 +1,7 @@
 ---
 title: How to deploy on GitHub Pages?
 description: How to deploy Nuxt.js app on GitHub Pages?
-menu: Deploy on Github
+menu: Deploy on GitHub
 category: deployment
 position: 206
 ---
@@ -82,6 +82,70 @@ npm run deploy
 You can take deployment one step further and rather than having to manually compile and deploy the files from your local install, you can make use of a build server to monitor your GitHub repository for new commits and then checkout, compile and deploy everything for you automatically.
 
 Before you configure the build server, you'll first need to [generate a GitHub personal access token](https://help.github.com/articles/creating-a-personal-access-token-for-the-command-line/#creating-a-token) in order to grant the build server permission to perform tasks on your behalf. Once you have created your token, keep a copy of it safe ready to use a little later on.
+
+### GitHub Actions
+
+To deploy via [GitHub Actions](https://github.com/features/actions), the official tool for software automation with GitHub, if you don't have a workflow you need to create a new one or append a new step to your existing workflow.
+
+It uses the [GitHub Pages Action](https://github.com/marketplace/actions/github-pages-action) which pushes the generated files from the `dist` folder to your default GitHub Pages branch `gh-pages`.
+
+With an existing workflow, add the following step:
+
+```yaml
+- name: Deploy
+  uses: peaceiris/actions-gh-pages@v3
+  with:
+    github_token: ${{ secrets.GITHUB_TOKEN }}
+    publish_dir: ./dist
+```
+
+With a new workflow, paste the following content into a new file called `cd.yml` in `.github/workflows` directory:
+
+```yaml
+name: cd
+
+on: [push, pull_request]
+
+jobs:
+  cd:
+    runs-on: ${{ matrix.os }}
+
+    strategy:
+      matrix:
+        os: [ubuntu-latest]
+        node: [14]
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@master
+
+      - name: Setup node env
+        uses: actions/setup-node@v2.1.2
+        with:
+          node-version: ${{ matrix.node }}
+
+      - name: Install dependencies
+        run: yarn
+
+      - name: Generate
+        run: yarn run generate
+
+      - name: Deploy
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./dist
+```
+
+Then commit this to your repository:
+
+```bash
+git add .github/workflows/cd.yml
+git commit -m "Adding github pages deploy workflow"
+git push origin
+```
+
+On completion, you'll see your `gh-pages` branch updated as well as your site.
 
 ### Travis CI
 

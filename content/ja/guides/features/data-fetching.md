@@ -251,7 +251,7 @@ export default {
 </script>
 ```
 
-`fetch` と異なり、`asyncData` フックから返却される promise は*ルートの遷移の間に*解決されます。つまり、"loading placeholder" はクライアントサイドの遷移で表示されないということです(ただし読み込み中の状態をユーザーに示すために [ローディングバー](https://nuxtjs.org/guides/features/loading/) を使うことができます)。Nuxt は代わりに `asyncData` フックの終了を待ってから、次のページへ移動したり[エラーページ](/docs/2.x/directory-structure/layouts#error-page)を表示したりします。
+`fetch` と異なり、`asyncData` フックから返却される promise は*ルートの遷移の間に*解決されます。つまり、"loading placeholder" はクライアントサイドの遷移で表示されないということです（ただし読み込み中の状態をユーザーに示すために [ローディングバー](https://nuxtjs.org/guides/features/loading/) を使うことができます）。Nuxt は代わりに `asyncData` フックの終了を待ってから、次のページへ移動したり[エラーページ](/docs/2.x/directory-structure/layouts#error-page)を表示したりします。
 
 このフックはページレベルのコンポーネントのためだけに使うことができます。`fetch` と異なり、`asyncData` はコンポーネントインスタンス (`this`) にアクセスすることはできません。そのかわりに、[context](/docs/2.x/concepts/context-helpers) を引数として受け取ります。`asyncData` をデータの取得のために使うことができ、Nuxt.js は自動で返却されたオブジェクトをコンポーネントのデータとマージします。
 

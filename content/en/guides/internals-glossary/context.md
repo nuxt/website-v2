@@ -75,7 +75,7 @@ Alias of `route.query`.
 
 `env` (_Object_)
 
-Environment variables set in `nuxt.config.js`, see [env api](/docs/2.x/configuration-glossary/configuration-env).
+Environment variables set in `nuxt.config.js`, see [env API](/docs/2.x/configuration-glossary/configuration-env).
 
 ### isDev
 

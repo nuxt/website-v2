@@ -139,7 +139,7 @@ export default {
 }
 ```
 
-> This option is given directly to the vue-router [linkactiveclass](https://router.vuejs.org/api/#linkactiveclass).
+> This option is given directly to the vue-router [linkActiveClass](https://router.vuejs.org/api/#linkactiveclass).
 
 ## linkExactActiveClass
 
@@ -156,7 +156,7 @@ export default {
 }
 ```
 
-> This option is given directly to the vue-router [linkexactactiveclass](https://router.vuejs.org/api/#linkexactactiveclass).
+> This option is given directly to the vue-router [linkExactActiveClass](https://router.vuejs.org/api/#linkexactactiveclass).
 
 ## linkPrefetchedClass
 
@@ -232,7 +232,7 @@ Provide custom query string parse / stringify functions. Overrides the default.
 - Type: `Boolean`
 - Default: `true`
 
-Configure `<nuxt-link>` to prefetch the _code-splitted_ page when detected within the viewport. Requires [IntersectionObserver](https://developer.mozilla.org/en-US/docs/Web/API/Intersection_Observer_API) to be supported (see [CanIUse](https://caniuse.com/#feat=intersectionobserver)).
+Configure `<nuxt-link>` to prefetch the _code-splitted_ page when detected within the viewport. Requires [IntersectionObserver](https://developer.mozilla.org/en-US/docs/Web/API/Intersection_Observer_API) to be supported (see [Caniuse](https://caniuse.com/#feat=intersectionobserver)).
 
 We recommend conditionally polyfilling this feature with a service like [Polyfill.io](https://polyfill.io):
 
@@ -253,8 +253,8 @@ export default {
 To disable the prefetching on a specific link, you can use the `no-prefetch` prop. Since Nuxt.js v2.10.0, you can also use the `prefetch` prop set to `false`:
 
 ```html
-<nuxt-link to="/about" no-prefetch>About page not pre-fetched</nuxt-link>
-<nuxt-link to="/about" :prefetch="false">About page not pre-fetched</nuxt-link>
+<nuxt-link to="/about" no-prefetch>About page not prefetched</nuxt-link>
+<nuxt-link to="/about" :prefetch="false">About page not prefetched</nuxt-link>
 ```
 
 To disable the prefetching on all links, set the `prefetchLinks` to `false`:
@@ -270,7 +270,7 @@ export default {
 Since Nuxt.js v2.10.0, if you have set `prefetchLinks` to `false` but you want to prefetch a specific link, you can use the `prefetch` prop:
 
 ```html
-<nuxt-link to="/about" prefetch>About page pre-fetched</nuxt-link>
+<nuxt-link to="/about" prefetch>About page prefetched</nuxt-link>
 ```
 
 ## prefetchPayloads
@@ -334,7 +334,7 @@ If this option is set to true, trailing slashes will be appended to every route.
 
 **Attention**: This option should not be set without preparation and has to be tested thoroughly. When setting `router.trailingSlash` to something else than `undefined`, the opposite route will stop working. Thus 301 redirects should be in place and you _internal linking_ has to be adapted correctly. If you set `trailingSlash` to `true`, then only `example.com/abc/` will work but not `example.com/abc`. On false, it's vice-versa
 
-### Example behaviour (with child routes)
+### Example behavior (with child routes)
 
 For a directory with this structure:
 
@@ -347,7 +347,7 @@ For a directory with this structure:
 -----| index.vue
 ```
 
-This is the behaviour for each possible setting of `trailingSlash`:
+This is the behavior for each possible setting of `trailingSlash`:
 
 <code-group>
 <code-block label="default" active>

@@ -66,8 +66,8 @@ CDN は、すでに生成された HTML、JavaScript、静的アセットをブ�
 
 API から新しいコンテンツを取得するには、サイトを再生成する必要があります。ほとんどの静的サイトのホスティングプロバイダでは、git コマンドやプルリクエストで変更を master ブランチにプッシュすることで再生成することができます。
 
-### Preview Mode
+### プレビューモード
 
-The Preview mode will call your API or your CMS so you can see the changes live before deploying. See the [preview mode](/docs/2.x/features/live-preview) on how to enable this feature.
+プレビューモードは API や CMS を呼び出して、デプロイ前に変更点をライブで確認できるようにします。この機能を有効にする方法については[プレビューモード](/docs/2.x/features/live-preview)を参照してください。
 
 <quiz :questions="questions"></quiz>

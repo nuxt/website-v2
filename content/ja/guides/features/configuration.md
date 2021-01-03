@@ -111,7 +111,7 @@ export default {
 
 <base-alert>
 
-`main.css` と `main.css` のような同じ名前の 2 つのファイルが存在し、`css: ['~/assets/css/main']` のように css 配列中で拡張子を明示しなかった場合、`styleExtensions` の順番に応じて 1 つのファイルだけが読み込まれます。このケースの場合、`css` がデフォルトの `styleExtension` の配列の中で最初に登場するため、`css` ファイルだけが読み込まれ `scss` ファイルは無視されます。
+`main.scss` と `main.css` のような同じ名前の 2 つのファイルが存在し、`css: ['~/assets/css/main']` のように css 配列中で拡張子を明示しなかった場合、`styleExtensions` の順番に応じて 1 つのファイルだけが読み込まれます。このケースの場合、`css` がデフォルトの `styleExtension` の配列の中で最初に登場するため、`css` ファイルだけが読み込まれ `scss` ファイルは無視されます。
 
 </base-alert>
 

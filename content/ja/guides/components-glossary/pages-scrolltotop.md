@@ -1,16 +1,16 @@
 ---
-title: 'The scrollToTop Property'
-description: The `scrollToTop` property lets you tell Nuxt.js to scroll to the top before rendering the page.
-menu: scrollToTop Property
+title: 'scrollToTop プロパティ'
+description: '`scrollToTop` プロパティで、ページをレンダリングする前にトップまでスクロールか否かを指定できます。'
+menu: 'scrollToTop プロパティ'
 category: components-glossary
 position: 0
 ---
 
-> The scrollToTop property lets you tell Nuxt.js to scroll to the top before rendering the page.
+> `scrollToTop` プロパティで、ページをレンダリングする前にトップまでスクロールか否かを指定できます。
 
-- **Type:** `Boolean` (default: `false`)
+- **型:** `Boolean`（デフォルト: `false`）
 
-By default, Nuxt.js scrolls to the top when you go to another page, but with children routes, Nuxt.js keeps the scroll position. If you want to tell Nuxt.js to scroll to the top when rendering your child route, set `scrollToTop` to `true`:
+別のページへ遷移する際にトップまでスクロールしますが、子ルートがあるときはスクロール位置をキープする、というのが Nuxt.js のデフォルトの挙動です。子ルートをレンダリングするときにトップまでスクロールさせたいときは `scrollToTop` を `true` に設定してください:
 
 ```html
 <template>
@@ -24,6 +24,6 @@ By default, Nuxt.js scrolls to the top when you go to another page, but with chi
 </script>
 ```
 
-Conversely, you can manually set `scrollToTop` to `false` on parent routes as well.
+逆に、親ルートは手動で `scrollToTop` を `false`に設定することもできます。
 
-If you want to overwrite the default scroll behavior of Nuxt.js, take a look at the [scrollBehavior option](/docs/2.x/configuration-glossary/configuration-router#scrollbehavior).
+スクロールについて Nuxt.js のデフォルトの挙動を上書きしたいときは [scrollBehavior オプション](/docs/2.x/configuration-glossary/configuration-router#scrollbehavior)を参照してください。

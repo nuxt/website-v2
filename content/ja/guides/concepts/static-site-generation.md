@@ -52,13 +52,13 @@ CDN は、すでに生成された HTML、JavaScript、静的アセットをブ�
 
 ページ間の遷移は [`<NuxtLink>`](/docs/2.x/features/nuxt-components#the-nuxtlink-component) を使ってクライアントサイドで行われるので、CDN に再度ヒットすることはありません。そしてブラウザをハードリフレッシュしても、すべての API への呼び出しはすでにキャッシュされている静的フォルダから読み込まれます。
 
-### SPA Fallback
+### SPA フォールバック
 
-Pages that have been excluded from generation, by using the `generate.exclude` property will fallback to being a single page application. These pages will therefore not exist in the CDN and will be rendered on client side in the browser once the user navigates to that page.
+`generate.exclude` プロパティを使用して生成から除外されたページは、シングルページアプリケーションにフォールバックします。そのため、これらのページは CDN には存在せず、ユーザーがそのページに遷移するとクライアントサイドのブラウザでレンダリングされます。
 
 <base-alert type="next">
 
-To learn more about the [generate property](/docs/2.x/configuration-glossary/configuration-generate#exclude)
+より深く理解するには [generate プロパティ](/docs/2.x/configuration-glossary/configuration-generate#exclude)
 
 </base-alert>
 

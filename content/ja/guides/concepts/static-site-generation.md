@@ -44,9 +44,9 @@ questions:
 
 ブラウザが最初のリクエストを送信すると、CDN にヒットします。
 
-### Step 2: CDN to Browser
+### ステップ 2: CDN から ブラウザへ
 
-The CDN will send the already generated HTML, JavaScript and static assets back to the browser. The content is displayed and the Vue.js hydration kicks in, making it reactive. After this process, the page is interactive.
+CDN は、すでに生成された HTML、JavaScript、静的アセットをブラウザに送り返します。コンテンツが表示され、Vue.js のハイドレーションが作動してリアクティブになります。この処理の後、ページはインタラクティブになります。
 
 ### Step 3: Browser to Browser
 

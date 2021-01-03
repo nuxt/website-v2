@@ -62,9 +62,9 @@ CDN は、すでに生成された HTML、JavaScript、静的アセットをブ�
 
 </base-alert>
 
-### Updating your content
+### コンテンツを更新する
 
-In order to get new content to your site from your API you will need to regenerate your site again. With most static sites hosting providers you can do this by pushing your changes to your master branch via the git command or via a pull request.
+API から新しいコンテンツを取得するには、サイトを再生成する必要があります。ほとんどの静的サイトのホスティングプロバイダでは、git コマンドやプルリクエストで変更を master ブランチにプッシュすることで再生成することができます。
 
 ### Preview Mode
 

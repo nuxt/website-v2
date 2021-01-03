@@ -36,9 +36,9 @@ questions:
 
 静的サイト生成を使用すると、ビルドフェーズでアプリケーションをレンダリングし、Netlify、GitHub ページ、Vercel などの静的ホスティングサービスにデプロイすることができます。これは、アプリケーションをデプロイするためにサーバーが必要ないことを意味します。
 
-### Generating your site
+### サイトを生成する
 
-When deploying your site in with [target:static](/docs/2.x/features/deployment-targets#static-hosting) all your `.vue` pages will be generated into HTML and JavaScript files. All calls to APIs will be made and cached in a folder called static inside your generated content so that no calls to your API need to be made on client side navigation.
+[target:static](/docs/2.x/features/deployment-targets#static-hosting) でサイトをデプロイすると、すべての `.vue` のページが HTML と JavaScript ファイルに生成されます。API へのすべての呼び出しは、生成されたコンテンツ内の static と呼ばれるフォルダにキャッシュされ、クライアントサイドのナビゲーションで API を呼び出す必要がなくなります。
 
 ### Step 1: Browser to CDN
 

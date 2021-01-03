@@ -203,7 +203,7 @@ yarn create nuxt-app <nome-do-projeto>
 ```
 
   </code-block>
-  <code-block label="NPX">
+  <code-block label="npx">
 
 ```bash
 npx create-nuxt-app <nome-do-projeto>

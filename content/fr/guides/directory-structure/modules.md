@@ -418,7 +418,7 @@ yarn add -D @nuxtjs/eslint-module
 ```
 
   </code-block>
-  <code-block label="NPM">
+  <code-block label="npm">
 
 ```bash
 npm install --save-dev @nuxtjs/eslint-module

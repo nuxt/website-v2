@@ -73,7 +73,7 @@ yarn add --dev ngrok
 ```
 
 </code-block>
-<code-block label="NPM">
+<code-block label="npm">
 
 ```bash
 npm install --dev ngrok

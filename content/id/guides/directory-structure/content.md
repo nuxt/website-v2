@@ -271,7 +271,7 @@ yarn add prism-themes
 ```
 
   </code-block>
-  <code-block label="NPM">
+  <code-block label="npm">
 
 ```bash
 npm install prism-themes

@@ -40,9 +40,9 @@ questions:
 
 [target:static](/docs/2.x/features/deployment-targets#static-hosting) でサイトをデプロイすると、すべての `.vue` のページが HTML と JavaScript ファイルに生成されます。API へのすべての呼び出しは、生成されたコンテンツ内の static と呼ばれるフォルダにキャッシュされ、クライアントサイドのナビゲーションで API を呼び出す必要がなくなります。
 
-### Step 1: Browser to CDN
+### ステップ 1：ブラウザから CDN へ
 
-When a browser sends the initial request, it will hit the CDN.
+ブラウザが最初のリクエストを送信すると、CDN にヒットします。
 
 ### Step 2: CDN to Browser
 

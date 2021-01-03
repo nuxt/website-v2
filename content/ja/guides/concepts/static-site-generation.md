@@ -4,34 +4,34 @@ description: 静的サイト生成を使用すると、ビルドフェーズで�
 position: 4
 category: concepts
 questions:
-  - question: You need a server to host your static site
+  - question: 静的サイトをホストするためにはサーバーが必要です。
     answers:
-      - True
-      - False
-    correctAnswer: False
-  - question: What command do you use to generate your static site?
+      - はい
+      - いいえ
+    correctAnswer: いいえ
+  - question: 静的サイト生成にはどのようなコマンドを使用しますか？
     answers:
       - nuxt build
       - nuxt prerender
       - nuxt generate
     correctAnswer: nuxt generate
-  - question: When is your API called?
+  - question: APIはいつ呼び出されますか？
     answers:
-      - Every time you navigate to the page with the API content
-      - When you generate your site
-      - When you generate your site and every time you navigate to the page with the API content
-    correctAnswer: When you generate your site
-  - question: Which pages will fallback into single page application mode?
+      - APIの呼び出しが記述されたページに遷移したとき
+      - サイトを生成するとき
+      - サイトを生成するときとAPIの呼び出しが記述されたページに遷移したとき
+    correctAnswer: サイトを生成するとき
+  - question: どのようなページがシングルページアプリケーションモードにフォールバックされますか？
     answers:
-      - The error page
-      - Those that are excluded from generation with generate.excludes
-      - All pages on navigation
-    correctAnswer: Those that are excluded from generation with generate.excludes
-  - question: How do you update the content to your site?
+      - エラーページ
+      - generate.excludesで生成から除外されたもの
+      - 遷移する全てのページ
+    correctAnswer: generate.excludes で生成から除外されたもの
+  - question: どのようにしてサイトのコンテンツを更新しますか？
     answers:
-      - It is updated automatically
-      - You need to regenerate your site
-    correctAnswer: You need to regenerate your site
+      - 自動的に更新されます
+      - サイトを再生成する必要があります
+    correctAnswer: サイトを再生成する必要があります
 ---
 
 静的サイト生成を使用すると、ビルドフェーズでアプリケーションをレンダリングし、Netlify、GitHub ページ、Vercel などの静的ホスティングサービスにデプロイすることができます。これは、アプリケーションをデプロイするためにサーバーが必要ないことを意味します。

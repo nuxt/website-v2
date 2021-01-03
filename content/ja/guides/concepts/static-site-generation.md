@@ -48,9 +48,9 @@ questions:
 
 CDN は、すでに生成された HTML、JavaScript、静的アセットをブラウザに送り返します。コンテンツが表示され、Vue.js のハイドレーションが作動してリアクティブになります。この処理の後、ページはインタラクティブになります。
 
-### Step 3: Browser to Browser
+### ステップ 3: ブラウザからブラウザへ
 
-Navigating between pages with [`<NuxtLink>`](/docs/2.x/features/nuxt-components#the-nuxtlink-component) is done on the client side so you don't hit the CDN again and all API calls will be loaded from the already cached static folder even if you hard refresh the browser.
+ページ間の遷移は [`<NuxtLink>`](/docs/2.x/features/nuxt-components#the-nuxtlink-component) を使ってクライアントサイドで行われるので、CDN に再度ヒットすることはありません。そしてブラウザをハードリフレッシュしても、すべての API コールはすでにキャッシュされている静的フォルダから読み込まれます。
 
 ### SPA Fallback
 

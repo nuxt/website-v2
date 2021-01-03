@@ -1,5 +1,5 @@
 ---
-title: Static Site Generation
+title: 静的サイト生成
 description: With static site generation you can render your application during the build phase and deploy it to any static hosting services such as Netlify, GitHub pages, Vercel etc.
 position: 4
 category: concepts

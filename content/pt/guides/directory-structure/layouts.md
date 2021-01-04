@@ -93,7 +93,9 @@ Você pode adicionar mais componentes aqui, como navegação, cabeçalho, rodap�
 ```
 
 <base-alert type="info">
+  
 Se você [definiu components como verdadeiro](/docs/2.x/directory-structure/components), então não é necessário importar manualmente os seus componentes.
+
 </base-alert>
 
 ## Layout Personalizado

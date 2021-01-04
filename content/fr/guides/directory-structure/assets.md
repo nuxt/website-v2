@@ -118,7 +118,7 @@ yarn add -D node-sass sass-loader
 ```
 
   </code-block>
-  <code-block label="NPM">
+  <code-block label="npm">
 
 ```bash
 npm install --save-dev node-sass sass-loader

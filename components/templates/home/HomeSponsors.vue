@@ -116,6 +116,12 @@ export default {
             url: 'https://www.moovweb.com/?ref=nuxt',
             img: 'moovweb-logo.png',
             class: 'h-12'
+          },
+          {
+            name: 'Ship Shape',
+            url: 'https://shipshape.io/?ref=nuxt',
+            img: 'shipshape-logo.svg',
+            class: 'h-12'
           }
         ],
         gold: [

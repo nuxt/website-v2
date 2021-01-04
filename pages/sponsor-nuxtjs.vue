@@ -9,7 +9,7 @@
             class="text-3xl xl:text-4xl text-light-onSurfacePrimary dark:text-dark-onSurfacePrimary font-medium leading-normal mb-6 lg:pt-4"
           >
             {{ $t('sponsor.title') }}
-            <template v-slot:nuxt>
+            <template #nuxt>
               <AppTitle />
             </template>
           </i18n>
@@ -18,7 +18,7 @@
             tag="h3"
             class="xl:text-lg text-light-onSurfaceSecondary dark:text-dark-onSurfaceSecondary font-medium leading-relaxed mb-6"
           >
-            <template v-slot:break>
+            <template #break>
               <br />
             </template>
           </i18n>
@@ -110,7 +110,7 @@
           tag="p"
           class="text-light-onSurfaceSecondary dark:text-dark-onSurfaceSecondary mb-12"
         >
-          <template v-slot:opencollective>
+          <template #opencollective>
             <a href="https://opencollective.com/nuxtjs">OpenCollective</a>
           </template>
         </i18n>
@@ -193,6 +193,12 @@ export default {
             name: 'Moovweb',
             url: 'https://www.moovweb.com/',
             img: 'moovweb-logo.png',
+            class: 'h-12'
+          },
+          {
+            name: 'Ship Shape',
+            url: 'https://shipshape.io/?ref=nuxt',
+            img: 'shipshape-logo.svg',
             class: 'h-12'
           }
         ],
@@ -284,11 +290,6 @@ export default {
       }
     }
   },
-  computed: {
-    currentOnetime() {
-      return this.onetime.current ? this.onetime[this.onetime.current] : null
-    }
-  },
   head() {
     const title = this.$t('sponsor.meta.title')
     const description = this.$t('sponsor.meta.description')
@@ -312,6 +313,11 @@ export default {
           content: description
         }
       ]
+    }
+  },
+  computed: {
+    currentOnetime() {
+      return this.onetime.current ? this.onetime[this.onetime.current] : null
     }
   }
 }

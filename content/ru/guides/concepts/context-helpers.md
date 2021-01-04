@@ -1,6 +1,6 @@
 ---
 title: Контекст и Хелперы
-description: The context provides *additional* and often optional information about the current request to the application.
+description: Контекст предоставляет *дополнительную* и часто необязательную информацию о текущем запросе к приложению.
 position: 2
 category: concepts
 csb_link_context: https://codesandbox.io/embed/github/nuxt-academy/guides-examples/tree/master/02_concepts/02_context_helpers-context?fontsize=14&hidenavigation=1&theme=dark
@@ -8,55 +8,56 @@ csb_link_helpers: https://codesandbox.io/embed/github/nuxt-academy/guides-exampl
 img: /docs/2.x/context.svg
 imgAlt: nuxt-js-context-keys
 questions:
-  - question: What is the reason the context exists?
+  - question: Для чего нужен контекст?
     answers:
-      - Server-side rendering
-      - Having global state
-      - Laziness
-    correctAnswer: Server-side rendering
-  - question: Which key is not in the context?
+      - Отрисовка на стороне сервера
+      - Глобальное управление состоянием
+      - Лень
+    correctAnswer: Отрисовка на стороне сервера
+  - question: Какой ключ не доступен в контексте?
     answers:
       - env
       - isDev
       - $store
     correctAnswer: $store
-  - question: Which context key is only available on the *server* side?
+  - question: Какой ключ контекста доступен только на *серверной* стороне?
     answers:
       - from
       - app
       - req
     correctAnswer: req
-  - question: Which context key is only available on the *client* side?
+  - question: Какой ключ контекста доступен только на *клиентской* стороне?
     answers:
       - from
       - res
       - app
     correctAnswer: from
-  - question: What can the `$nuxt` helper *not* do?
+  - question: Что может хелпер `$nuxt` и чего *не* может?
     answers:
-      - Displaying the version of Nuxt
-      - Providing info about the users internet connection status
-      - Accessing exposed module functions
-    correctAnswer: Displaying the version of Nuxt
-  - question: What are the names of the process helpers
+      - Отобразить версию Nuxt
+      - Предоставление информации о статусе интернет-соединения пользователей
+      - Доступ к открытым функциям модуля
+    correctAnswer: Отобразить версию Nuxt
+  - question: Какие имена у хелперов процесса?
     answers:
-      - global, client and server
-      - server, client and static
-      - ssr, spa and static
-    correctAnswer: server, client and static
+      - global, client и server
+      - server, client и static
+      - ssr, spa и static
+    correctAnswer: server, client и static
 ---
 
 <app-modal :src="img" :alt="imgAlt"></app-modal>
 
-The `context` object is available in specific Nuxt functions like [asyncData](/docs/2.x/features/data-fetching#async-data), [plugins](/docs/2.x/directory-structure/plugins), [middleware](/docs/2.x/directory-structure/middleware) and [nuxtServerInit](/docs/2.x/directory-structure/store#the-nuxtserverinit-action). It provides _additional_ and often optional information about the current request to the application.
+Объект `context` доступен в специфических для Nuxt функциях, таких как [asyncData](/docs/2.x/features/data-fetching#async-data), [plugins](/docs/2.x/directory-structure/plugins), [middleware](/docs/2.x/directory-structure/middleware) и [nuxtServerInit](/docs/2.x/directory-structure/store#the-nuxtserverinit-action). Это предоставляет *дополнительную* и часто необязательную информацию о текущем запросе к приложению.
 
-First and foremost, the context is used to provide access to other parts of the Nuxt.js application, e.g. the Vuex store or the underlying `connect` instance. Thus, we have the `req` and `res` objects in the context available on the server side and `store` always available. But with time, the context was extended with many other helpful variables and shortcuts. Now we have access to HMR functionalities in `development` mode, the current `route`, page `params` and `query`, as well as the option to access environment variables through the context. Furthermore, module functions and helpers can be exposed through the context to be available on both - the client and the server side.
+Прежде всего контекст используется для предоставления доступа к другим частям Nuxt.js приложения, например, к Vuex или к экземпляру `connect`. Таким образом, у нас в контексте есть объекты `req` и `res`, доступные на стороне сервера и `store`, доступный всегда. Со временем контекст был дополнен многими другими полезными переменными и сокращениями. Теперь
+у нас есть доступ к функционалу HMR в режиме разработки, к текущему `route`, `params` и `query` страницы, а также доступ к переменным среды. Кроме того, функции модулей и хелперы могут быть доступны в контексте, как на стороне сервера, так и на стороне клиента.
 
-**All context keys that are present by default**
+**Все ключи контекста, доступные по умолчанию**
 
 ```js
-function (context) { // Could be asyncData, nuxtServerInit, ...
-  // Always available
+function (context) { // Может быть asyncData, nuxtServerInit, ...
+  // Всегда доступны
   const {
     app,
     store,
@@ -71,12 +72,12 @@ function (context) { // Could be asyncData, nuxtServerInit, ...
    $config
   } = context
 
-  // Only available on the Server-side
+  // Доступны только на стороне сервера
   if (process.server) {
     const { req, res, beforeNuxtRender } = context
   }
 
-  // Only available on the Client-side
+  // Доступны только на стороне клиента
   if (process.client) {
     const { from, nuxtState } = context
   }
@@ -85,13 +86,13 @@ function (context) { // Could be asyncData, nuxtServerInit, ...
 
 <base-alert>
 
-The _context_ we refer to here is not to be confused with the `context` object available in [Vuex Actions](https://vuex.vuejs.org/guide/actions.html) or the one available in the `build.extend` function in your `nuxt.config.js`. These are all not related to each other!
+Не путайте _Контекст_, на который мы тут ссылаемся с объектом `context`, доступным в [Действиях Vuex](https://vuex.vuejs.org/ru/guide/actions.html) или доступным в функции `build.extend` вашего `nuxt.config.js`. Все это не связно друг с другом.
 
 </base-alert>
 
-Learn more about the different context keys in our [Internals Glossary](/docs/2.x/internals-glossary/context)
+Подробнее о различных ключах контекста читайте в разделе [Голосарий](/docs/2.x/internals-glossary/context)
 
-### Using page parameters for your API query
+### Используйте параметры страницы для запроса данных из API
 
 The context directly exposes possible dynamic parameters of the route via `context.params`. In the following example, we call an API via the `nuxt/http` module using a dynamic page parameter as part of the URL. Modules, like the [nuxt/http](https://http.nuxtjs.org/) module, can expose own functions which are then available through the [context.app](http://context.app) object.
 

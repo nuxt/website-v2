@@ -44,9 +44,8 @@ export default {
         },
         {
           name: 'Ship Shape',
-          url: 'https://shipshape.io/?ref=nuxt',
-          img: 'shipshape-logo.svg',
-          class: 'h-12'
+          link: 'https://shipshape.io/?ref=nuxt',
+          img: 'shipshape-logo.svg'
         }
       ]
     }

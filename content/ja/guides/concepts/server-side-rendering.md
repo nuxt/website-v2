@@ -97,6 +97,6 @@ mounted () {
 
 ### ステップ 3: ブラウザからブラウザへ
 
-[`<NuxtLink>`](/docs/2.x/features/nuxt-components#the-nuxtlink-component) によるページ間の遷移はクライアントサイドで行われるためブラウザをハード再読み込みをしない限りサーバーへリクエストを送りません。
+[`<NuxtLink>`](/docs/2.x/features/nuxt-components#nuxtlink-コンポーネント) によるページ間の遷移はクライアントサイドで行われるためブラウザをハード再読み込みをしない限りサーバーへリクエストを送りません。
 
 <quiz :questions="questions"></quiz>

@@ -22,7 +22,7 @@ position: 101
 
 Afin de démarrer rapidement, l'équipe Nuxt.js a créé un outil de démarrage [create-nuxt-app](https://github.com/nuxt/create-nuxt-app).
 
-Assurez-vous que [npx](https://www.npmjs.com/package/npx) est installé (`npx` est livré par défaut depuis NPM `5.2.0`)
+Assurez-vous que [npx](https://www.npmjs.com/package/npx) est installé (`npx` est livré par défaut depuis npm `5.2.0`)
 
 ```bash
 $ npx create-nuxt-app <project-name>

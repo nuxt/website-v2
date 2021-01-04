@@ -22,7 +22,7 @@ position: 101
 
 Untuk memulai sebuah projek dengan cepat, tim Nuxt.js telah membuat suatu scaffolding tool [create-nuxt-app](https://github.com/nuxt/create-nuxt-app).
 
-Pastikan anda sudah menginstall [npx](https://www.npmjs.com/package/npx) (`npx` sudah terisntall secara default pada NPM `5.2.0`)
+Pastikan anda sudah menginstall [npx](https://www.npmjs.com/package/npx) (`npx` sudah terisntall secara default pada npm `5.2.0`)
 
 ```bash
 $ npx create-nuxt-app <project-name>

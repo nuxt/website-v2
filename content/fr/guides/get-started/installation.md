@@ -16,7 +16,7 @@ csb_link: https://codesandbox.io/embed/github/nuxt-academy/guides-examples/tree/
 
 Pour commencer rapidement, vous pouvez utiliser [create-nuxt-app](https://github.com/nuxt/create-nuxt-app).
 
-Assurez-vous que npx est installé (npx est livré par défaut depuis NPM 5.2.0) ou npm v6.1 ou yarn.
+Assurez-vous que npx est installé (npx est livré par défaut depuis npm 5.2.0) ou npm v6.1 ou yarn.
 
 <code-group>
   <code-block label="Yarn" active>
@@ -26,14 +26,14 @@ yarn create nuxt-app <project-name>
 ```
 
   </code-block>
-  <code-block label="NPX">
+  <code-block label="npx">
 
 ```bash
 npx create-nuxt-app <project-name>
 ```
 
   </code-block>
-    <code-block label="NPM">
+    <code-block label="npm">
 
 ```bash
 npm init nuxt-app <project-name>
@@ -56,7 +56,7 @@ yarn dev
 ```
 
   </code-block>
-  <code-block label="NPM">
+  <code-block label="npm">
 
 ```bash
 cd <project-name>
@@ -115,7 +115,7 @@ Ouvrir le fichier `package.json` avec notre éditeur préféré et ajouter ce co
 
 #### **À quoi sert le fichier package.json ?**
 
-Le fichier `package.json` est comme une carte d'identité pour notre projet. Si on ne sait pas ce qu'est le fichier `package.json`, nous vous recommandons grandement de lire la [documentation de NPM](https://docs.npmjs.com/creating-a-package-json-file).
+Le fichier `package.json` est comme une carte d'identité pour notre projet. Si on ne sait pas ce qu'est le fichier `package.json`, nous vous recommandons grandement de lire la [documentation de npm](https://docs.npmjs.com/creating-a-package-json-file).
 
 ### Deuxième étape : installer nuxt
 
@@ -129,7 +129,7 @@ yarn add nuxt
 ```
 
   </code-block>
-  <code-block label="NPM">
+  <code-block label="npm">
 
 ```bash
 npm install nuxt
@@ -184,7 +184,7 @@ yarn dev
 ```
 
   </code-block>
-  <code-block label="NPM">
+  <code-block label="npm">
 
 ```bash
 npm run dev
@@ -247,14 +247,14 @@ yarn create nuxt-app <project-name>
 ```
 
   </code-block>
-  <code-block label="NPX">
+  <code-block label="npx">
 
 ```bash
 npx create-nuxt-app <project-name>
 ```
 
   </code-block>
-    <code-block label="NPM">
+    <code-block label="npm">
 
 ```bash
 npm init nuxt-app <project-name>
@@ -275,7 +275,7 @@ yarn dev
 ```
 
   </code-block>
-  <code-block label="NPM">
+  <code-block label="npm">
 
 ```bash
 cd <project-name>

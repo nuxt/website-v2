@@ -142,7 +142,7 @@ yarn add -D node-sass sass-loader
 ```
 
   </code-block>
-  <code-block label="NPM">
+  <code-block label="npm">
 
 ```bash
 npm install --save-dev pug pug-plain-loader

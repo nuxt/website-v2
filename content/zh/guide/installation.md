@@ -22,7 +22,7 @@ position: 101
 
 为了快速入门，Nuxt.js 团队创建了脚手架工具 [create-nuxt-app](https://github.com/nuxt/create-nuxt-app)。
 
-确保安装了 npx（npx 在 NPM 版本 5.2.0 默认安装了）：
+确保安装了 npx（npx 在 npm 版本 5.2.0 默认安装了）：
 
 ```bash
 $ npx create-nuxt-app <项目名>

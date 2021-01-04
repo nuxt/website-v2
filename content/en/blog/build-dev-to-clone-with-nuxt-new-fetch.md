@@ -95,7 +95,7 @@ yarn add sass sass-loader -D
 ```
 
   </code-block>
-  <code-block label="NPM">
+  <code-block label="npm">
 
 ```bash
 npm install sass sass-loader --save-dev
@@ -114,7 +114,7 @@ yarn add @nuxtjs/style-resources
 ```
 
   </code-block>
-  <code-block label="NPM">
+  <code-block label="npm">
 
 ```bash
 npm install @nuxtjs/style-resources
@@ -161,7 +161,7 @@ yarn add @nuxtjs/svg -D
 ```
 
   </code-block>
-  <code-block label="NPM">
+  <code-block label="npm">
 
 ```bash
 npm install @nuxtjs/svg -D

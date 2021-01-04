@@ -26,7 +26,7 @@ yarn add -g @xdn/cli
 ```
 
   </code-block>
-  <code-block label="NPM">
+  <code-block label="npm">
 
 ```bash
 npm i -g @xdn/cli

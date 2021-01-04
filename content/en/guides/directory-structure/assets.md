@@ -116,7 +116,7 @@ yarn add -D sass sass-loader fibers
 ```
 
   </code-block>
-  <code-block label="NPM">
+  <code-block label="npm">
 
 ```bash
 npm install --save-dev sass sass-loader fibers

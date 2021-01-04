@@ -362,7 +362,7 @@ Pour rendre votre commande reconnaissable par la CLI Nuxt, répertoriez-la dans 
 }
 ```
 
-Une fois votre paquet installé (via NPM ou Yarn), vous pourrez exécuter `nuxt foobar ...` sur la ligne de commande.
+Une fois votre paquet installé (via npm ou Yarn), vous pourrez exécuter `nuxt foobar ...` sur la ligne de commande.
 
 <div class="Alert">
 

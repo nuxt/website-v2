@@ -36,7 +36,7 @@ yarn dev
 
   </code-block>
 
-  <code-block label="NPM">
+  <code-block label="npm">
 
 ```bash
 npm run dev
@@ -77,7 +77,7 @@ yarn build
 ```
 
   </code-block>
-  <code-block label="NPM">
+  <code-block label="npm">
 
 ```bash
 npm run build
@@ -104,7 +104,7 @@ yarn start
 ```
 
   </code-block>
-  <code-block label="NPM">
+  <code-block label="npm">
 
 ```bash
 npm run start
@@ -133,7 +133,7 @@ yarn generate
 ```
 
   </code-block>
-  <code-block label="NPM">
+  <code-block label="npm">
 
 ```bash
 npm run generate
@@ -170,7 +170,7 @@ yarn generate --fail-on-error
 ```
 
   </code-block>
-  <code-block label="NPM">
+  <code-block label="npm">
 
 ```bash
 npm run generate --fail-on-error

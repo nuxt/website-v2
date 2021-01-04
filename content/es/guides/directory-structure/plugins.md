@@ -79,7 +79,7 @@ El directorio de `plugins` contiene todos los plugins de Javascript que necesite
 
 Tal vez necesites usar un paquete externo (`packages/modules`) dentro de tu aplicación (un buen ejemplo seria [axios](https://axios.nuxtjs.org/)) para hacer solicitudes HTTP para el servidor y el cliente.
 
-Primero, instálalo via NPM o Yarn.
+Primero, instálalo via npm o Yarn.
 
 <code-group>
   <code-block label="Yarn" active>
@@ -89,7 +89,7 @@ yarn add @nuxtjs/axios
 **```**
 
   </code-block>
-  <code-block label="NPM">
+  <code-block label="npm">
 
 ```bash
 npm install @nuxtjs/axios
@@ -182,7 +182,7 @@ yarn add v-tooltip
 ```
 
   </code-block>
-  <code-block label="NPM">
+  <code-block label="npm">
 
 ```bash
 npm install v-tooltip

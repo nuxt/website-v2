@@ -70,7 +70,7 @@ yarn add -D @nuxtjs/color-mode
 ```
 
   </code-block>
-  <code-block label="NPM">
+  <code-block label="npm">
 
 ```bash
 npm install --save-dev @nuxtjs/color-mode

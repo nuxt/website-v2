@@ -13,7 +13,7 @@ questions:
       - mientras Nuxt.js se ejecuta
       - después de que Nuxt.js inicia
     correctAnswer: antes de que Nuxt.js inicie
-  - question: Los módulos Nuxt.js pueden ser incluidos en paquetes NPM
+  - question: Los módulos Nuxt.js pueden ser incluidos en paquetes npm
     answers:
       - verdadero
       - falso
@@ -417,7 +417,7 @@ yarn add -D @nuxtjs/eslint-module
 ```
 
   </code-block>
-  <code-block label="NPM">
+  <code-block label="npm">
 
 ```bash
 npm install --save-dev @nuxtjs/eslint-module

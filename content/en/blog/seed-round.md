@@ -22,7 +22,7 @@ Sébastien ([@Atinux](https://twitter.com/Atinux)) made his first commit for Nux
 
 ### Why the NUXT name?
 
-Once we had created the repository on GitHub to open source our code, we had our first challenge: find a name for our project! We tried couples of names on NPM who were already taken. In the end we landed on NUXT which was short and explicit. rEact ⇒ nExt made us realize that vUe ⇒ nUxt was a natural fit for us. It is like Next.js but for Vue.js.
+Once we had created the repository on GitHub to open source our code, we had our first challenge: find a name for our project! We tried couples of names on npm who were already taken. In the end we landed on NUXT which was short and explicit. rEact ⇒ nExt made us realize that vUe ⇒ nUxt was a natural fit for us. It is like Next.js but for Vue.js.
 
 ### Performance, Modularity and Developers Happiness
 

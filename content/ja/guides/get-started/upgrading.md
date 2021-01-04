@@ -20,7 +20,7 @@ export default {
 1. アップグレードしたいバージョンの[リリースノート](/docs/release-notes)を確認し、そのリリースで追加の説明がないか確認してください。
 2. `package.json` ファイルの `nuxt` パッケージに指定したバージョンを更新します。
 
-このステップの後の手順は Yarn を使っているか NPM を使っているかによって異なります。 _[Yarn](https://yarnpkg.com/ja/docs/usage) はテストが書かれている開発ツールなので、Nuxt を使うのに適したパッケージマネージャです。_
+このステップの後の手順は Yarn を使っているか npm を使っているかによって異なります。 _[Yarn](https://yarnpkg.com/ja/docs/usage) はテストが書かれている開発ツールなので、Nuxt を使うのに適したパッケージマネージャです。_
 
 ## Yarn
 
@@ -29,7 +29,7 @@ export default {
 5. `yarn` コマンドを実行します
 6. インストールが完了しテストをしたら他の依存関係のアップグレードも検討してください。`yarn outdated` コマンドが使えます。
 
-## NPM
+## npm
 
 3. `package-lock.json` ファイルを削除します
 4. `node_modules` ディレクトリを削除します

@@ -38,7 +38,7 @@ questions:
 
 ### サイトを生成する
 
-[target:static](/docs/2.x/features/deployment-targets#静的ホスティング) でサイトをデプロイすると、すべての `.vue` のページが HTML と JavaScript ファイルに生成されます。API へのすべての呼び出しは、生成されたコンテンツ内の static と呼ばれるフォルダにキャッシュされ、クライアントサイドのナビゲーションで API を呼び出す必要がなくなります。
+[target:static](/docs/2.x/features/deployment-targets#静的ホスティング) でサイトをデプロイすると、すべての `.vue` のページが HTML と JavaScript ファイルに生成されます。API へのすべての呼び出しは、生成されたコンテンツ内の static と呼ばれるフォルダにキャッシュされ、クライアントサイドの遷移で API を呼び出す必要がなくなります。
 
 ### ステップ 1：ブラウザから CDN へ
 

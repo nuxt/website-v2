@@ -15,16 +15,16 @@ questions:
       - nuxt prerender
       - nuxt generate
     correctAnswer: nuxt generate
-  - question: APIはいつ呼び出されますか？
+  - question: API はいつ呼び出されますか？
     answers:
-      - APIの呼び出しが記述されたページに遷移したとき
+      - API の呼び出しが記述されたページに遷移したとき
       - サイトを生成するとき
-      - サイトを生成するときとAPIの呼び出しが記述されたページに遷移したとき
+      - サイトを生成するときと API の呼び出しが記述されたページに遷移したとき
     correctAnswer: サイトを生成するとき
   - question: どのようなページがシングルページアプリケーションモードにフォールバックされますか？
     answers:
       - エラーページ
-      - generate.excludesで生成から除外されたもの
+      - generate.excludes で生成から除外されたもの
       - 遷移する全てのページ
     correctAnswer: generate.excludes で生成から除外されたもの
   - question: どのようにしてサイトのコンテンツを更新しますか？

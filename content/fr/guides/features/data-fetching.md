@@ -278,7 +278,7 @@ yarn add @nuxt/http
 ```
 
   </code-block>
-  <code-block label="NPM">
+  <code-block label="npm">
 
 ```bash
 npm install @nuxt/http

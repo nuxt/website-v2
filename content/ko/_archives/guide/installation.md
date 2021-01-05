@@ -22,7 +22,7 @@ position: 101
 
 Nuxt.js 팀은 빠른 시작을 위해 [create-nuxt-app](https://github.com/nuxt/create-nuxt-app)라는 툴을 만들었습니다 .
 
-우선 [npx](https://www.npmjs.com/package/npx)가 설치되어 있는 지를 확인하세요 (NPM `5.2.0`부터 `npx`는 기본적으로 설치됩니다).
+우선 [npx](https://www.npmjs.com/package/npx)가 설치되어 있는 지를 확인하세요 (npm `5.2.0`부터 `npx`는 기본적으로 설치됩니다).
 
 ```bash
 $ npx create-nuxt-app <project-name>

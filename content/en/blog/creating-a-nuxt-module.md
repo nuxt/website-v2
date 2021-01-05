@@ -73,7 +73,7 @@ yarn add --dev ngrok
 ```
 
 </code-block>
-<code-block label="NPM">
+<code-block label="npm">
 
 ```bash
 npm install --dev ngrok
@@ -414,7 +414,7 @@ export default function () {
 
 ## Conclusion
 
-We have just created our local module which we can use in our project. This sometimes is enough but sometimes we want to share our module across projects or even better, with the Nuxt Community. To do this we need to create our module using a module template and publish it to NPM.
+We have just created our local module which we can use in our project. This sometimes is enough but sometimes we want to share our module across projects or even better, with the Nuxt Community. To do this we need to create our module using a module template and publish it to npm.
 
 As of today we are working on improving this template to make it more user friendly. All modules are created using typescript and should contain tests, docs and an example.
 

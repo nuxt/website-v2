@@ -71,7 +71,7 @@ touch package.json
 
 #### **Что такое файл package.json?**
 
-`package.json` - это как паспорт вашего проекта. Если вы хотите больше узнать о файле `package.json`, то мы рекомендуем почитать [документацию NPM](https://docs.npmjs.com/creating-a-package-json-file).
+`package.json` - это как паспорт вашего проекта. Если вы хотите больше узнать о файле `package.json`, то мы рекомендуем почитать [документацию npm](https://docs.npmjs.com/creating-a-package-json-file).
 
 ### Установка nuxt
 
@@ -85,7 +85,7 @@ yarn add nuxt
 ```
 
   </code-block>
-  <code-block label="NPM">
+  <code-block label="npm">
 
 ```bash
 npm install nuxt
@@ -140,7 +140,7 @@ yarn dev
 ```
 
   </code-block>
-  <code-block label="NPM">
+  <code-block label="npm">
 
 ```bash
 npm run dev
@@ -203,14 +203,14 @@ yarn create nuxt-app <project-name>
 ```
 
   </code-block>
-  <code-block label="NPX">
+  <code-block label="npx">
 
 ```bash
 npx create-nuxt-app <project-name>
 ```
 
   </code-block>
-    <code-block label="NPM">
+    <code-block label="npm">
 
 ```bash
 npm init nuxt-app <project-name>
@@ -231,7 +231,7 @@ yarn dev
 ```
 
   </code-block>
-  <code-block label="NPM">
+  <code-block label="npm">
 
 ```bash
 cd <project-name>

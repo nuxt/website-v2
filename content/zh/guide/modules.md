@@ -367,7 +367,7 @@ NuxtCommand.run({
 }
 ```
 
-一旦安装了软件包(通过 NPM 或 Yarn)，您就可以`nuxt foobar ...`在命令行上执行。
+一旦安装了软件包(通过 npm 或 Yarn)，您就可以`nuxt foobar ...`在命令行上执行。
 
 <div class="Alert">
 

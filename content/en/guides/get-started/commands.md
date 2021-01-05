@@ -117,7 +117,7 @@ npm run start
 
 Nuxt.js gives you the ability to host your web application on any static hosting.
 
-To deploy a static generated site make sure you have `target: 'static'` in your `nuxt.config.js`.(For Nuxt >= 2.13:)
+To deploy a static generated site make sure you have `target: 'static'` in your `nuxt.config.js`.(For Nuxt >= 2.13)
 
 ```js{}[nuxt.config.js]
 export default {

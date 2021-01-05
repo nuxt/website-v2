@@ -11,9 +11,9 @@ position: 302
 
 > Nuxt.js can be used to create authenticated routes easily.
 
-## Official `auth-module`
+## `@nuxtjs/auth`
 
-If you want to implement complex authentication flows, for example OAuth2, we suggest using the official [`auth-module`](https://github.com/nuxt-community/auth-module)
+If you want to implement complex authentication flows, for example OAuth 2, we suggest using [`@nuxtjs/auth`](https://github.com/nuxt-community/auth-module)
 
 ## Using Express and Sessions
 

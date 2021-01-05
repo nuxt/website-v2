@@ -16,7 +16,7 @@ csb_link: https://codesandbox.io/embed/github/nuxt-academy/guides-examples/tree/
 
 すぐ始めるには、[create-nuxt-app](https://github.com/nuxt/create-nuxt-app) を使うことができます。
 
-npx（npx は NPM 5.2.0 以降だとデフォルトで同梱されています）か、v6.1 の npm か yarn がインストールされていることを確認してください。
+npx（npx は npm 5.2.0 以降だとデフォルトで同梱されています）か、v6.1 の npm か yarn がインストールされていることを確認してください。
 
 <code-group>
   <code-block label="Yarn" active>
@@ -26,14 +26,14 @@ yarn create nuxt-app <project-name>
 ```
 
   </code-block>
-  <code-block label="NPX">
+  <code-block label="npx">
 
 ```bash
 npx create-nuxt-app <project-name>
 ```
 
   </code-block>
-    <code-block label="NPM">
+    <code-block label="npm">
 
 ```bash
 npm init nuxt-app <project-name>
@@ -56,7 +56,7 @@ yarn dev
 ```
 
   </code-block>
-  <code-block label="NPM">
+  <code-block label="npm">
 
 ```bash
 cd <project-name>
@@ -115,7 +115,7 @@ touch package.json
 
 #### **package.json ファイルとは？**
 
-`package.json` はプロジェクトにおける ID カードのようなものです。もし `package.json` ファイルがどんなものかご存知ない場合は [NPM のドキュメント](https://docs.npmjs.com/creating-a-package-json-file)を一読することをおすすめします。
+`package.json` はプロジェクトにおける ID カードのようなものです。もし `package.json` ファイルがどんなものかご存知ない場合は [npm のドキュメント](https://docs.npmjs.com/creating-a-package-json-file)を一読することをおすすめします。
 
 ### nuxt のインストール
 
@@ -129,7 +129,7 @@ yarn add nuxt
 ```
 
   </code-block>
-  <code-block label="NPM">
+  <code-block label="npm">
 
 ```bash
 npm install nuxt
@@ -184,7 +184,7 @@ yarn dev
 ```
 
   </code-block>
-  <code-block label="NPM">
+  <code-block label="npm">
 
 ```bash
 npm run dev

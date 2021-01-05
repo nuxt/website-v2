@@ -22,7 +22,7 @@ export default function ({ query, enablePreview }) {
 ```
 
 <base-alert>
-EnablePreview is only available in the context object of plugins. Previews are handled client-side and
+`enablePreview` is only available in the context object of plugins. Previews are handled client-side and
 thus the plugin should be run on the client: preview.client.js
 </base-alert>
 

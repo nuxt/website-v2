@@ -41,6 +41,11 @@ export default {
           name: 'Moovweb',
           link: 'https://www.moovweb.com/?ref=nuxt',
           img: 'moovweb-logo.png'
+        },
+        {
+          name: 'Ship Shape',
+          link: 'https://shipshape.io/?ref=nuxt',
+          img: 'shipshape-logo.svg'
         }
       ]
     }

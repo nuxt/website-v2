@@ -1,6 +1,6 @@
 ---
 title: static
-description: `static` ディレクトリはサーバルートに直接マッピングされ、また変更されない可能性があるファイルが含まれています。含まれている全てのファイルは Nuxt によって自動で提供され、プロジェクトのルート URL からアクセスできます。
+description: static ディレクトリはサーバルートに直接マッピングされ、また変更されない可能性があるファイルが含まれています。含まれている全てのファイルは Nuxt によって自動で提供され、プロジェクトのルート URL からアクセスできます。
 position: 12
 category: directory-structure
 csb_link: https://codesandbox.io/embed/github/nuxt-academy/guides-examples/tree/master/04_directory_structure/13_static?fontsize=14&hidenavigation=1&theme=dark

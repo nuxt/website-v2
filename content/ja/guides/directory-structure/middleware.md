@@ -1,6 +1,6 @@
 ---
 title: ミドルウェア
-description: `middleware` ディレクトリには、アプリケーションミドルウェアが含まれています。ミドルウェアを使用すると、ページまたはページのグループ（レイアウト）をレンダリングする前に実行できる、カスタム関数を定義できます。
+description: middleware ディレクトリには、アプリケーションミドルウェアが含まれています。ミドルウェアを使用すると、ページまたはページのグループ（レイアウト）をレンダリングする前に実行できる、カスタム関数を定義できます。
 position: 8
 category: directory-structure
 csb_link_anonymous: https://codesandbox.io/embed/github/nuxt-academy/guides-examples/tree/master/04_directory_structure/09_middleware_anonymous?fontsize=14&hidenavigation=1&theme=dark
@@ -94,7 +94,7 @@ export default function (context) {
 
 ## ルーターミドルウェア
 
-ミドルウェアは非同期にすることができます。これを行うには `Promise` を返すか、async/awaitを使用します。
+ミドルウェアは非同期にすることができます。これを行うには `Promise` を返すか、async/await を使用します。
 
 ```js{}[middleware/stats.js]
 import http from 'http'

@@ -58,7 +58,7 @@ CDN は、すでに生成された HTML、JavaScript、静的アセットをブ�
 
 <base-alert type="next">
 
-より深く理解するには [generate プロパティ](/docs/2.x/configuration-glossary/configuration-generate#exclude)
+より深く理解するには [generate プロパティ](/docs/2.x/configuration-glossary/configuration-generate#exclude)を参照してください。
 
 </base-alert>
 

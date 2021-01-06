@@ -333,3 +333,59 @@ export default function (to, from, savedPosition) {
 このオプションを true に設定した場合、末尾のスラッシュがすべてのルートに追加されます。もし false に設定した場合は末尾のスラッシュは削除されます。
 
 **注意**: このオプションは準備なしに設定すべきではなく、徹底的にテストする必要があります。`router.trailingSlash` に `undefined` 以外の値を設定すると、反対のルートは機能しなくなります。したがって、301 リダイレクトを設定し、*内部リンク*を正しく適応させる必要があります。`trailingSlash` を `true` に設定した場合、`example.com/abc/` のみが動作し `example.com/abc` は動作しません。false に設定する場合はその逆になります。
+
+### 動作例（子ルートあり）
+
+ディレクトリ構造:
+
+```bash
+-| pages/
+---| index.vue
+---| posts.vue
+---| posts/
+-----| _slug.vue
+-----| index.vue
+```
+
+これは `trailingSlash` の設定がそれぞれ有効な場合の動作です:
+
+<code-group>
+<code-block label="default" active>
+
+```bash
+ルート          ページ
+/               ~/pages/index.vue
+/posts          ~/pages/posts.vue (parent) + ~/pages/posts.vue (child route)
+/posts/         ~/pages/posts.vue (parent) + ~/pages/posts.vue (child route)
+/posts/foo      ~/pages/posts.vue (parent) + ~/pages/_slug.vue (child route)
+/posts/foo/     ~/pages/posts.vue (parent) + ~/pages/_slug.vue (child route)
+```
+
+</code-block>
+<code-block label="true">
+
+```bash
+
+ルート          ページ
+/               ~/pages/index.vue
+/posts          404
+/posts/         ~/pages/posts.vue (parent) + ~/pages/index.vue (child route)
+/posts/foo      404
+/posts/foo/     ~/pages/posts.vue (parent) + ~/pages/_slug.vue (child route)
+```
+
+</code-block>
+<code-block label="false">
+
+```bash
+
+ルート          ページ
+/               ~/pages/index.vue
+/posts          ~/pages/posts.vue
+/posts/         ~/pages/posts.vue (parent) + ~/pages/index.vue (child route)
+/posts/foo      ~/pages/posts.vue (parent) + ~/pages/_slug.vue (child route)
+/posts/foo/     404
+```
+
+</code-block>
+</code-group>

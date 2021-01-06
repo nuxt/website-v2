@@ -1,18 +1,18 @@
 ---
-title: 'The watchQuery Property'
-description: Watch query strings and execute component methods on change (asyncData, fetch, validate, layout, ...)
-menu: WatchQuery Property
+title: 'watchQuery プロパティ'
+description: 'クエリ文字列を監視し、変更時にコンポーネントメソッドを実行します（asyncData、fetch、validate、layout など）'
+menu: WatchQuery プロパティ
 category: components-glossary
 position: 0
 ---
 
-> Watch query strings and execute component methods on change (asyncData, fetch(context), validate, layout, ...)
+> クエリ文字列を監視し、変更時にコンポーネントメソッドを実行します（asyncData、fetch、validate、layout など）
 
-- **Type:** `Boolean` or `Array` or `Function` (default: `[]`)
+- **型:** `Boolean` または `Array` または `Function`（デフォルト: `[]`）
 
-Use the `watchQuery` key to set up a watcher for query strings. If the defined strings change, all component methods (asyncData, fetch(context), validate, layout, ...) will be called. Watching is disabled by default to improve performance.
+Use the `watchQuery` キーを設定し、監視するクエリ文字列を設定します。定義した文字列に変更が生じると、全てのコンポーネントメソッド（asyncData、fetch、validate、layout などが呼ばれます。パフォーマンス向上のため、監視はデフォルトで無効になっています。
 
-If you want to set up a watcher for all query strings, set `watchQuery: true`.
+すべてのクエリ文字列に対して監視を設定したい場合は `watchQuery: true` を設定してください。
 
 ```js
 export default {
@@ -20,7 +20,7 @@ export default {
 }
 ```
 
-You can also use the function `watchQuery(newQuery, oldQuery)` to have more refined watchers.
+より洗練された監視のために `watchQuery(newQuery, oldQuery)` 関数を使用することもできます。
 
 ```js
 export default {
@@ -34,6 +34,6 @@ export default {
 
 <base-alert>
 
-**Warning**: The new `fetch` hook introduced in 2.12 is not affected by `watchQuery`. For more information see [listening to query string changes](/docs/2.x/features/data-fetching#the-fetch-hook).
+**Warning**: v2.12 で導入された新しい `fetch` フックは `watchQuery` の影響を受けません。詳しくは[クエリ文字列の変化のリスニング](/docs/2.x/features/data-fetching#fetch-フック)を参照してください。
 
 </base-alert>

@@ -1,6 +1,6 @@
 ---
 title: static
-description: `static` ディレクトリはサーバルートに直接マッピングされ、また変更されない可能性があるファイルが含まれています。含まれている全てのファイルは Nuxt によって自動で提供され、プロジェクトのルート URL からアクセスできます。
+description: static ディレクトリはサーバルートに直接マッピングされ、また変更されない可能性があるファイルが含まれています。含まれている全てのファイルは Nuxt によって自動で提供され、プロジェクトのルート URL からアクセスできます。
 position: 12
 category: directory-structure
 csb_link: https://codesandbox.io/embed/github/nuxt-academy/guides-examples/tree/master/04_directory_structure/13_static?fontsize=14&hidenavigation=1&theme=dark
@@ -15,7 +15,7 @@ questions:
     answers:
       - 正
       - 偽
-    correctAnswer:
+    correctAnswer: 偽
   - question: webpack に画像をバンドルさせたい時、どこに画像を配置する必要がありますか?
     answers:
       - static
@@ -38,7 +38,7 @@ questions:
 
 `/static/robots.txt` は、`http://localhost:3000/robots.txt` で利用できます
 
-`/static/favicon.ico` は、`localhost:3000/favicon.ico` で利用できます
+`/static/favicon.ico` は、`http://localhost:3000/favicon.ico` で利用できます
 
 このオプションは `robots.txt`、`sitemap.xml`、`CNAME`（GitHub Pages のデプロイに重要です）などのファイルに役立ちます。
 
@@ -81,9 +81,5 @@ export default {
 デフォルト: `/blog/my-image.png`
 
 `static.prefix` を無効にした場合: `/my-image.png`
-
-<app-modal>
-  <code-sandbox  :src="csb_link"></code-sandbox>
-</app-modal>
 
 <quiz :questions="questions"></quiz>

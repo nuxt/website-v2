@@ -45,7 +45,7 @@ yarn add @nuxt/content
 ```
 
 </code-block>
-<code-block label="NPM">
+<code-block label="npm">
 
 ```bash
 npm install @nuxt/content

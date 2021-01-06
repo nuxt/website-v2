@@ -139,7 +139,7 @@ export default {
 }
 ```
 
-> このオプションは直接 vue-router の [linkactiveclass](https://router.vuejs.org/ja/api/#linkactiveclass) に渡されます。
+> このオプションは直接 vue-router の [linkActiveClass](https://router.vuejs.org/ja/api/#linkactiveclass) に渡されます。
 
 ## linkExactActiveClass
 
@@ -156,7 +156,7 @@ export default {
 }
 ```
 
-> このオプションは直接 vue-router の [linkexactactiveclass](https://router.vuejs.org/ja/api/#linkexactactiveclass) に渡されます。
+> このオプションは直接 vue-router の [linkExactActiveClass](https://router.vuejs.org/ja/api/#linkexactactiveclass) に渡されます。
 
 ## linkPrefetchedClass
 
@@ -232,7 +232,7 @@ export default {
 - 型: `Boolean`
 - デフォルト: `true`
 
-viewport（ブラウザの表示領域）内でリンクが検出された時に*コード分割された*ページを先読みする `<nuxt-link>` の設定をします。[IntersectionObserver](https://developer.mozilla.org/ja/docs/Web/API/Intersection_Observer_API) がサポートされている必要があります（[CanIUse](https://caniuse.com/#feat=intersectionobserver) を参照してください）。
+viewport（ブラウザの表示領域）内でリンクが検出された時に*コード分割された*ページを先読みする `<nuxt-link>` の設定をします。[IntersectionObserver](https://developer.mozilla.org/ja/docs/Web/API/Intersection_Observer_API) がサポートされている必要があります（[Caniuse](https://caniuse.com/#feat=intersectionobserver) を参照してください）。
 
 この機能を [Polyfill.io](https://polyfill.io) のようなサービスに条件付きで埋め込むことをおすすめします:
 
@@ -253,8 +253,8 @@ export default {
 特定のリンクで先読みを無効にしたい場合、`no-prefetch` プロパティが使えます。Nuxt.js v2.10.0 からは `prefetch` プロパティ（`false` に設定）も使えます:
 
 ```html
-<nuxt-link to="/about" no-prefetch>About page not pre-fetched</nuxt-link>
-<nuxt-link to="/about" :prefetch="false">About page not pre-fetched</nuxt-link>
+<nuxt-link to="/about" no-prefetch>About page not prefetched</nuxt-link>
+<nuxt-link to="/about" :prefetch="false">About page not prefetched</nuxt-link>
 ```
 
 全てのリンクで先読みを無効にしたい場合は、`prefetchLinks` を `false` に設定してください:
@@ -270,7 +270,7 @@ export default {
 Nuxt.js v2.10.0 からは `prefetchLinks` を `false` に設定した上で特定のリンクを先読みしたい場合、`prefetch` プロパティが使えます:
 
 ```html
-<nuxt-link to="/about" prefetch>About page pre-fetched</nuxt-link>
+<nuxt-link to="/about" prefetch>About page prefetched</nuxt-link>
 ```
 
 ## prefetchPayloads

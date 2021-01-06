@@ -157,7 +157,7 @@ module.exports.meta = require('./package.json')
 
 ## 1) ModuleOptions
 
-`moduleOptions`: This is the object passed using the `modules` array by the user. We can use it to customize it's behavior.
+`moduleOptions`: This is the object passed using the `modules` array by the user. We can use it to customize its behavior.
 
 ### Top level options
 
@@ -430,7 +430,7 @@ yarn add -D @nuxtjs/eslint-module
 ```
 
   </code-block>
-  <code-block label="NPM">
+  <code-block label="npm">
 
 ```bash
 npm install --save-dev @nuxtjs/eslint-module

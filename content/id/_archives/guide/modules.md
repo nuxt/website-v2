@@ -349,7 +349,7 @@ To make your command recognizable by the Nuxt CLI, list it under the `bin` secti
 }
 ```
 
-Once your package is installed (via NPM or Yarn), you'll be able to execute `nuxt foobar ...` on the command-line.
+Once your package is installed (via npm or Yarn), you'll be able to execute `nuxt foobar ...` on the command-line.
 
 <div class="Alert">
 

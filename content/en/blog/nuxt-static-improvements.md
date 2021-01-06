@@ -72,7 +72,7 @@ yarn upgrade nuxt
 ```
 
   </code-block>
-  <code-block label="NPM">
+  <code-block label="npm">
 
 ```bash
 npm update

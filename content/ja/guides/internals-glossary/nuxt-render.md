@@ -12,7 +12,7 @@ position: 10
   2. [Response](https://nodejs.org/api/http.html#http_class_http_serverresponse)
 - Returns: `Promise`
 
-> You can use Nuxt.js as a middleware with `nuxt.render` for your node.js server.
+> You can use Nuxt.js as a middleware with `nuxt.render` for your Node.js server.
 
 Example with [Express](https://github.com/expressjs/express):
 

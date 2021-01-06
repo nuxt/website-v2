@@ -62,7 +62,7 @@ export default {
 - The views folder contains your app template and your server error page.
 - The app.js is your main application file.
 - The client.js file is your client file needed for everything that happens client side.
-- The empty file is intentionally left empty for noop aliases
+- The empty file is intentionally left empty for no-op aliases
 - The index.js file bootstraps your application.
 - The loading.html is the file that is used when the page is loading.
 - The middleware file is where your middleware is kept

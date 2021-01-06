@@ -63,7 +63,7 @@ export default {
 
 ## 使用 store
 
-之后在 `store` 目录中新建 `index.js` ，如下所示：
+之后在 `store`[状态树] 目录中新建 `index.js` ，如下所示：
 
 ```javascript
 import Vuex from 'vuex'

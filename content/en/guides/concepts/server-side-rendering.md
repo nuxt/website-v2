@@ -77,10 +77,10 @@ If your server middleware consists of a list of functions mapped to paths:
 Because you are in a Node.js environment you have access to Node.js objects such as `req` and `res`. You do not have access to the `window` or `document` objects as they belong to the browser environment. You can however use `window` or `document` by using the `beforeMount` or `mounted` hooks.
 
 ```js
-beforeMount{
+beforeMount () {
   window.alert('hello');
 }
-mounted{
+mounted () {
   window.alert('hello');
 }
 ```

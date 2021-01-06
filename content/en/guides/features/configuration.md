@@ -111,7 +111,7 @@ export default {
 
 <base-alert>
 
-If you have two files with the same name eg. `main.scss` and `main.css`, and don't specify an extension in the css array entry, eg. `css: ['~/assets/css/main']`, then only one file will be loaded depending on the order of `styleExtensions`. In this case only the `css` file will be loaded and the `scss` file will be ignored because `css` comes first in the default `styleExtension` array.
+If you have two files with the same name, e.g. `main.scss` and `main.css`, and don't specify an extension in the css array entry, e.g. `css: ['~/assets/css/main']`, then only one file will be loaded depending on the order of `styleExtensions`. In this case only the `css` file will be loaded and the `scss` file will be ignored because `css` comes first in the default `styleExtension` array.
 
 </base-alert>
 
@@ -144,7 +144,7 @@ yarn add -D sass sass-loader fibers
 ```
 
   </code-block>
-  <code-block label="NPM">
+  <code-block label="npm">
 
 ```bash
 npm install --save-dev pug pug-plain-loader

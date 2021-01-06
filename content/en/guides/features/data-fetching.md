@@ -1,6 +1,6 @@
 ---
 title: Data Fetching
-description: In Nuxt.js we have 2 ways of getting data from an api. We can use the fetch method or the asyncData method.
+description: In Nuxt.js we have 2 ways of getting data from an API. We can use the fetch method or the asyncData method.
 position: 4
 category: features
 csb_link: https://codesandbox.io/embed/github/nuxt-academy/guides-examples/tree/master/03_features/04_data_fetching?fontsize=14&hidenavigation=1&theme=dark

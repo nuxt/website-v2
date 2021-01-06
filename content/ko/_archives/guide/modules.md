@@ -368,7 +368,7 @@ NuxtCommand.run({
 }
 ```
 
-(NPM이나 Yarn을 통해) 여러분의 패키지가 설치되면, `nuxt foobar ...`로 커맨드 라인을 실행시킬 수 있습니다.
+(npm이나 Yarn을 통해) 여러분의 패키지가 설치되면, `nuxt foobar ...`로 커맨드 라인을 실행시킬 수 있습니다.
 
 <div class="Alert">
 

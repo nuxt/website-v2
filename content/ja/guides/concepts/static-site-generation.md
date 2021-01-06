@@ -1,6 +1,6 @@
 ---
 title: Static Site Generation
-description: With static site generation you can render your application during the build phase and deploy it to any static hosting services such as Netlify, Github pages, Vercel etc.
+description: With static site generation you can render your application during the build phase and deploy it to any static hosting services such as Netlify, GitHub pages, Vercel etc.
 position: 4
 category: concepts
 questions:
@@ -34,7 +34,7 @@ questions:
     correctAnswer: You need to regenerate your site
 ---
 
-With static site generation you can render your application during the build phase and deploy it to any static hosting services such as Netlify, Github pages, Vercel etc. This means that no server is needed in order to deploy your application.
+With static site generation you can render your application during the build phase and deploy it to any static hosting services such as Netlify, GitHub pages, Vercel etc. This means that no server is needed in order to deploy your application.
 
 ### Generating your site
 
@@ -46,7 +46,7 @@ When a browser sends the initial request, it will hit the CDN.
 
 ### Step 2: CDN to Browser
 
-The CDN will send the already generated HTML, JavaScript and static assets and send it back to the browser. The content is displayed and the Vue.js hydration kicks in, making it reactive. After this process, the page is interactive.
+The CDN will send the already generated HTML, JavaScript and static assets back to the browser. The content is displayed and the Vue.js hydration kicks in, making it reactive. After this process, the page is interactive.
 
 ### Step 3: Browser to Browser
 

@@ -73,9 +73,9 @@ export default {
 }
 ```
 
-### timing api を使う
+### timing API を使う
 
-`timing` api は `server.time` が有効な場合にサーバーサイドの `response` にも注入されます。
+`timing` API は `server.time` が有効な場合にサーバーサイドの `response` にも注入されます。
 
 #### 構文
 

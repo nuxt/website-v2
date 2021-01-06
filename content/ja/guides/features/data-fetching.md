@@ -1,6 +1,6 @@
 ---
 title: データの取得
-description: Nuxt.js は api からデータを取得する2つの方法を提供しています。fetch メソッドもしくは asyncData メソッドを使うことができます。
+description: Nuxt.js は API からデータを取得する2つの方法を提供しています。fetch メソッドもしくは asyncData メソッドを使うことができます。
 position: 4
 category: features
 csb_link: https://codesandbox.io/embed/github/nuxt-academy/guides-examples/tree/master/03_features/04_data_fetching?fontsize=14&hidenavigation=1&theme=dark

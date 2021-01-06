@@ -22,7 +22,7 @@ export default function ({ query, enablePreview }) {
 ```
 
 <base-alert>
-EnablePreview はプラグインの context オブジェクトでのみ利用可能です。プレビューはクライアントサイドで処理されるため、
+`enablePreview` はプラグインの context オブジェクトでのみ利用可能です。プレビューはクライアントサイドで処理されるため、
 プラグイン(今回の例では preview.client.js)はクライアントでのみ実行される必要があります。
 </base-alert>
 

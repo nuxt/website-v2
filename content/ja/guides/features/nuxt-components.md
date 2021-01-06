@@ -261,15 +261,15 @@ keep-alive と keep-alive-props についてより詳しく知るためには [v
 
 ## prefetchLinks
 
-Nuxt.js はスマートプリフェッチの機能を持ちます。viewport 内やスクロール時にリンクが表示されたことを検知し、それらのページの JavaScript をプリフェッチしてユーザーがリンクをクリックするのを待ちます。Nuxt.js はブラウザがビジーではないときにのみリソースを読み込み、接続がオフラインのときや 2g の接続しかない場合はプリフェッチをスキップします。
+Nuxt.js はスマートプリフェッチの機能を持ちます。viewport 内やスクロール時にリンクが表示されたことを検知し、それらのページの JavaScript をプリフェッチしてユーザーがリンクをクリックするのを待ちます。Nuxt.js はブラウザがビジーではないときにのみリソースを読み込み、接続がオフラインのときや 2G の接続しかない場合はプリフェッチをスキップします。
 
 ### 特定のリンクでプリフェッチを無効にする
 
 多くの JavaScript がある場合や、プリフェッチされる異なるページが多くある場合、サードパーティ製のスクリプトをたくさん読み込む場合には、いくつかのリンクのプリフェッチを無効にしたいでしょう。特定のリンクでプリフェッチを無効にするには、`no-prefetch` prop を使ってください。Nuxt.js v2.10.0 からは `prefetch` prop を `false` に設定することもできます。
 
 ```html
-<NuxtLink to="/about" no-prefetch>About page not pre-fetched</NuxtLink>
-<NuxtLink to="/about" :prefetch="false">About page not pre-fetched</NuxtLink>
+<NuxtLink to="/about" no-prefetch>About page not prefetched</NuxtLink>
+<NuxtLink to="/about" :prefetch="false">About page not prefetched</NuxtLink>
 ```
 
 ### グローバルでプリフェッチを無効にする
@@ -287,7 +287,7 @@ export default {
 Nuxt.js v2.10.0 からは、`prefetchLinks` を `false` に設定した上で特定のリンクでプリフェッチを行いたい場合、`prefetch` prop を使うことができます:
 
 ```html
-<NuxtLink to="/about" prefetch>About page pre-fetched</NuxtLink>
+<NuxtLink to="/about" prefetch>About page prefetched</NuxtLink>
 ```
 
 ## linkActiveClass
@@ -370,7 +370,7 @@ export default {
 
 ```css
 .nuxt-link-prefetched {
-  color: orangeRed;
+  color: orangered;
 }
 ```
 

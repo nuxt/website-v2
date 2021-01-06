@@ -57,7 +57,7 @@ questions:
     correctAnswer: '@@'
 ---
 
-The `assets` directory contains your un-compiled assets such as Stylus or Sass files, images, or fonts.
+The `assets` directory contains your uncompiled assets such as Stylus or Sass files, images, or fonts.
 
 ## Images
 
@@ -207,7 +207,7 @@ The benefits of these loaders are:
 
 `file-loader` lets you designate where to copy and place the asset file, and how to name it using version hashes for better caching. In production, you will benefit from long-term caching by default!
 
-`url-loader` allows you to conditionally inline a file as base-64 data URL if they are smaller than a given threshold. This can reduce the number of HTTP requests for trivial files. If the file is larger than the threshold, it automatically falls back to file-loader.
+`url-loader` allows you to conditionally inline files as base64 data URLs if they are smaller than a given threshold. This can reduce the number of HTTP requests for trivial files. If a file is larger than the threshold, it automatically falls back to file-loader.
 
 For these two loaders, the default configuration is:
 
@@ -233,7 +233,7 @@ For these two loaders, the default configuration is:
 ]
 ```
 
-Which means that every file below 1 KB will be inlined as base-64 data URL. Otherwise, the image/font will be copied in its corresponding folder (inside the `.nuxt` directory) with a name containing a version hash for better caching.
+Which means that every file below 1 kB will be inlined as base64 data URL. Otherwise, the image/font will be copied in its corresponding folder (inside the `.nuxt` directory) with a name containing a version hash for better caching.
 
 When launching your application with `nuxt`, your template in `pages/index.vue`:
 

@@ -53,7 +53,7 @@ export default {
 }
 ```
 
-この場合、大きい html の body サイズに対して高速な [murmurhash-native](https://github.com/royaltm/node-murmurhash-native) を使います。独自のハッシュ関数を指定する場合、`weak` オプションは無視されることに注意してください。
+この場合、大きい HTML の body サイズに対して高速な [murmurhash-native](https://github.com/royaltm/node-murmurhash-native) を使います。独自のハッシュ関数を指定する場合、`weak` オプションは無視されることに注意してください。
 
 ## compressor
 

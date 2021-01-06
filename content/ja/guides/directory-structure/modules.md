@@ -157,7 +157,7 @@ module.exports.meta = require('./package.json')
 
 ## 1) ModuleOptions
 
-`moduleOptions`: This is the object passed using the `modules` array by the user. We can use it to customize it's behavior.
+`moduleOptions`: This is the object passed using the `modules` array by the user. We can use it to customize its behavior.
 
 ### Top level options
 

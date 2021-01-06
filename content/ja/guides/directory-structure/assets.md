@@ -116,7 +116,7 @@ yarn add -D sass sass-loader fibers
 ```
 
   </code-block>
-  <code-block label="NPM">
+  <code-block label="npm">
 
 ```bash
 npm install --save-dev sass sass-loader fibers
@@ -210,8 +210,6 @@ createElement('img', { attrs: { src: require('~/assets/image.png') } })
 `url-loader` は、指定した閾値よりも小さい場合に、Base64 データ URL として条件付きでファイルに埋め込むことができます。これにより、小さなファイル取得のための HTTP リクエスト数を減らすことができます。もし閾値よりも大きい場合は、file-loader に自動的にフォールバックします。
 
 これら 2 つのローダーのデフォルトの設定は次の通りです。:
-
-For these two loaders, the default configuration is:
 
 ```js
 // https://github.com/nuxt/nuxt.js/blob/dev/packages/webpack/src/config/base.js#L297-L316

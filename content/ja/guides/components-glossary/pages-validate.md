@@ -1,33 +1,33 @@
 ---
-title: 'The validate Method'
-description: Nuxt.js lets you define a validator method inside your dynamic route component.
-menu: Validate Method
+title: 'validate メソッド'
+description: 'Nuxt.js では動的なルーティングを行うコンポーネント内でバリデーションメソッドを定義できます'
+menu: 'Validate メソッド'
 category: components-glossary
 position: 0
 ---
 
-> Nuxt.js lets you define a validator method inside your dynamic route component.
+> Nuxt.js では動的なルーティングを行うコンポーネント内でバリデーションメソッドを定義できます。
 
-- **Type:** `Function` or `Async Function`
+- **型:** `Function` または `Async Function`
 
-`validate` is called every time before navigating to a new route. It will be called server-side once (on the first request to the Nuxt app) and client-side when navigating to further routes. This method takes the [`context`](/docs/2.x/internals-glossary/context) object as an argument.
+`validate` は新しいルートに移動する前に毎回呼び出されます。サーバーサイドでは（Nuxt アプリケーションへの最初のリクエストで）1 度、クライアントサイドでは別のルートに遷移する際に呼び出されます。このメソッドは [`context`](/docs/2.x/internals-glossary/context) オブジェクトを引数として受け取ります。
 
 ```js
 validate({ params, query, store }) {
-  return true // if the params are valid
-  return false // will stop Nuxt.js to render the route and display the error page
+  return true // params が有効な場合
+  return false // Nuxt.js にルートをレンダリングさせるのを止め、エラーページを表示させます
 }
 ```
 
 ```js
 async validate({ params, query, store }) {
   // await operations
-  return true // if the params are valid
-  return false // will stop Nuxt.js to render the route and display the error page
+  return true // params が有効な場合
+  return false // Nuxt.js にルートをレンダリングさせるのを止め、エラーページを表示させます
 }
 ```
 
-You can also return promises:
+プロミスを返すこともできます:
 
 ```js
 validate({ params, query, store }) {
@@ -35,36 +35,36 @@ validate({ params, query, store }) {
 }
 ```
 
-Nuxt.js lets you define a validator method inside your dynamic route component (In this example: `pages/users/_id.vue`).
+Nuxt.js では動的なルーティングを行うコンポーネント内でバリデーションメソッドを定義できます（以下の例では `pages/users/_id.vue` です）。
 
-If the validate method does not return `true`, Nuxt.js will automatically load the 404 error page.
+バリデーションメソッドが `true` を返さない場合 Nuxt.js は自動的に 404 エラーページをロードします。
 
 ```js
 export default {
   validate({ params }) {
-    // Must be a number
+    // 数字でなければなりません
     return /^\d+$/.test(params.id)
   }
 }
 ```
 
-You can also check some data in your [store](/docs/2.x/directory-structure/store) for example (filled by [`nuxtServerInit`](/docs/2.x/directory-structure/store#the-nuxtserverinit-action) before action):
+例えば[ストア](/docs/2.x/directory-structure/store)内の一部のデータ（アクションの前に [`nuxtServerInit`](/docs/2.x/directory-structure/store#the-nuxtserverinit-action) で格納されます）を確認することもできます:
 
 ```js
 export default {
   validate({ params, store }) {
-    // Check if `params.id` is an existing category
+    // `params.id` が存在しているカテゴリかどうかを確認します
     return store.state.categories.some(category => category.id === params.id)
   }
 }
 ```
 
-You can also throw expected or unexpected errors during validate function execution:
+バリデーション関数を実行中に想定されるエラーや想定外のエラーを投げることもできます:
 
 ```js
 export default {
   async validate({ params, store }) {
-    // Throws a 500 internal server error with custom message
+    // カスタムメッセージと共に 500 internal server error を投げます
     throw new Error('Under Construction!')
   }
 }

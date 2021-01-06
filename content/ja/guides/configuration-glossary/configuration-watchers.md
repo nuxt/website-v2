@@ -32,7 +32,7 @@ watchers: {
 }
 ```
 
-webpack の watchoptions の詳細は [webpack のドキュメント](https://webpack.js.org/configuration/watch/#watchoptions)を参照してください。
+webpack の watchOptions の詳細は [webpack のドキュメント](https://webpack.js.org/configuration/watch/#watchoptions)を参照してください。
 
 ### このあとは
 

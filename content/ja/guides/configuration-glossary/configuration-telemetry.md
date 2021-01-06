@@ -25,7 +25,7 @@ Nuxt Telemetry は**一般的な使用状況に関する匿名のテレメトリ
 
 - コマンドの呼び出し（nuxt dev、nuxt build など）
 - Nuxt.js と Node.js のバージョン
-- 一般的なマシン情報（MacOS/Linux/Windows や CI 内で実行されるコマンド、CI 名）
+- 一般的なマシン情報（MacOS/Linux/Windows や CI 内で実行されるコマンド、ci 名）
 - Webpack のビルド時間とアプリケーションの平均サイズ、および生成統計（nuxt generate 使用時）
 - プロジェクトのパブリックな依存関係は何か（Nuxt モジュール）
 

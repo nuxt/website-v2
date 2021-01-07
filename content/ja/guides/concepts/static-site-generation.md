@@ -1,6 +1,6 @@
 ---
 title: 静的サイト生成
-description: 静的サイト生成を使用すると、ビルドフェーズでアプリケーションをレンダリングし、Netlify、GitHubページ、Vercelなどの静的ホスティングサービスにデプロイすることができます。
+description: 静的サイト生成を使用すると、ビルドフェーズでアプリケーションをレンダリングし、Netlify、GitHub ページ、Vercel などの静的ホスティングサービスにデプロイすることができます。
 position: 4
 category: concepts
 questions:

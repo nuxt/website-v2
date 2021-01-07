@@ -40,6 +40,7 @@ You can access the Nuxt [context](/docs/2.x/internals-glossary/context) within t
 ### Options
 
 - `fetchOnServer`: `Boolean` or `Function` (default: `true`), call `fetch()` when server-rendering the page
+- `fetchKey`: `String` or `Function` (defaults to the component scope ID or component name), a key (or a function that produces a unique key) that identifies the result of this component's fetch (available on Nuxt 2.15+) [More information available in original PR](https://github.com/nuxt/nuxt.js/pull/8466).
 - `fetchDelay`: `Integer` (default: `200`), set the minimum executing time in milliseconds (to avoid quick flashes)
 
 When `fetchOnServer` is falsy (`false` or returns `false`), `fetch` will be called only on client-side and `$fetchState.pending` will return `true` when server-rendering the component.
@@ -55,7 +56,16 @@ When `fetchOnServer` is falsy (`false` or returns `false`), `fetch` will be call
     async fetch() {
       this.posts = await this.$http.$get('https://api.nuxtjs.dev/posts')
     },
-    fetchOnServer: false
+    fetchOnServer: false,
+    // multiple components can return the same `fetchKey` and Nuxt will track them both separately
+    fetchKey: 'site-sidebar',
+    // alternatively, for more control, a function can be passed with access to the component instance
+    // It will be called in `created` and must not depend on fetched data
+    fetchKey(getCounter) {
+      // getCounter is a method that can be called to get the next number in a sequence
+      // as part of generating a unique fetchKey.
+      return this.someOtherData + getCounter('sidebar')
+    }
   }
 </script>
 ```

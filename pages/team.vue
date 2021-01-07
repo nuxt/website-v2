@@ -153,6 +153,14 @@ export default {
             badges: ['framework']
           },
           {
+            name: 'Daniel Roe',
+            city: 'Durham, UK',
+            github: 'danielroe',
+            twitter: 'danielcroe',
+            website: 'https://roe.dev',
+            badges: ['framework']
+          },
+          {
             name: 'Jonas Galvez',
             city: 'Barretos, Brazil',
             github: 'galvez',
@@ -190,14 +198,7 @@ export default {
             website: 'https://blog.lichter.io',
             badges: ['maintainer']
           },
-          {
-            name: 'Daniel Roe',
-            city: 'Durham, UK',
-            github: 'danielroe',
-            twitter: 'danielcroe',
-            website: 'https://roe.dev',
-            badges: ['maintainer']
-          },
+          
           {
             name: 'Ricardo Gobbo de Souza',
             city: 'São José dos Campos, São Paulo, Brasil',

@@ -57,7 +57,7 @@ export default {
     ) {
       try {
         path = `/${app.i18n.locale}/examples`
-        page = await $content(path, params.slug).fetch()
+        page = await $content(path, params.slug || 'hello-world').fetch()
       } catch (err) {
         langFallback = true
         path = `/${app.i18n.defaultLocale}/examples`

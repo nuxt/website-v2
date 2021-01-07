@@ -1,6 +1,6 @@
 ---
 title: 'Loading Özelliği'
-description: `loading` özelliği, size belirli bir sayfadaki yüklenme çubuğunu devre dışı bırakma seçeneği sunar.
+description: loading özelliği, size belirli bir sayfadaki yüklenme çubuğunu devre dışı bırakma seçeneği sunar.
 menu: Loading Özelliği
 category: components-glossary
 position: 0

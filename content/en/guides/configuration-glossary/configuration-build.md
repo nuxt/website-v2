@@ -593,6 +593,8 @@ export default {
 
 Then, when launching `nuxt build`, upload the content of `.nuxt/dist/client` directory to your CDN and voilà!
 
+In Nuxt 2.15+, changing the value of this property at runtime will override the configuration of an app that has already been built.
+
 ## quiet
 
 > Suppresses most of the build output log

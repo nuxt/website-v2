@@ -34,7 +34,7 @@
             v-for="(sponsor, i) in group"
             :key="i"
             class="sponsor inline-block m-4"
-            :href="sponsor.url"
+            :href="`${sponsor.url}?ref=nuxt`"
             target="_blank"
             rel="noopener sponsored"
           >
@@ -108,18 +108,18 @@ export default {
           {
             name: 'Storyblok',
             img: 'storyblok-logo.svg',
-            url: 'https://www.storyblok.com/?ref=nuxt',
+            url: 'https://www.storyblok.com/',
             class: 'h-24'
           },
           {
             name: 'Moovweb',
-            url: 'https://www.moovweb.com/?ref=nuxt',
+            url: 'https://www.moovweb.com/',
             img: 'moovweb-logo.png',
             class: 'h-12'
           },
           {
             name: 'Ship Shape',
-            url: 'https://shipshape.io/?ref=nuxt',
+            url: 'https://shipshape.io/',
             img: 'shipshape-logo.svg',
             class: 'h-12'
           }
@@ -128,7 +128,13 @@ export default {
           {
             name: 'VueMastery',
             img: 'vueMastery-brand.svg',
-            url: 'https://www.vuemastery.com/?ref=nuxt',
+            url: 'https://www.vuemastery.com/',
+            class: 'h-10'
+          },
+          {
+            name: 'Legal Nature',
+            img: 'legalnature-logo.svg',
+            url: 'https://www.legalnature.com/',
             class: 'h-10'
           }
         ],
@@ -136,7 +142,7 @@ export default {
           {
             name: 'Google Chrome',
             img: 'google-chrome.svg',
-            url: 'https://www.google.com/chrome/?ref=nuxt',
+            url: 'https://www.google.com/chrome/',
             class: 'h-12'
           }
         ]

@@ -197,7 +197,7 @@ export default {
           },
           {
             name: 'Ship Shape',
-            url: 'https://shipshape.io/?ref=nuxt',
+            url: 'https://shipshape.io/',
             img: 'shipshape-logo.svg',
             class: 'h-12'
           }
@@ -207,6 +207,12 @@ export default {
             name: 'VueMastery',
             img: 'vueMastery-brand.svg',
             url: 'https://www.vuemastery.com/',
+            class: 'h-10'
+          },
+          {
+            name: 'Legal Nature',
+            img: 'legalnature-logo.svg',
+            url: 'https://www.legalnature.com/',
             class: 'h-10'
           }
         ],

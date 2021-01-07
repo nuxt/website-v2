@@ -232,6 +232,15 @@ export default {
             url: 'https://www.moovweb.com/?ref=nuxt',
             img: 'moovweb-logo.png',
             class: 'h-12'
+<<<<<<< HEAD
+=======
+          },
+          {
+            name: 'Ship Shape',
+            url: 'https://shipshape.io/',
+            img: 'shipshape-logo.svg',
+            class: 'h-12'
+>>>>>>> 00d6aeaf (feat: add legal nature sponsor (#1130))
           }
         ],
         gold: [
@@ -239,6 +248,12 @@ export default {
             name: 'VueMastery',
             img: 'vueMastery-brand.svg',
             url: 'https://www.vuemastery.com/?ref=nuxt',
+            class: 'h-10'
+          },
+          {
+            name: 'Legal Nature',
+            img: 'legalnature-logo.svg',
+            url: 'https://www.legalnature.com/',
             class: 'h-10'
           }
         ],

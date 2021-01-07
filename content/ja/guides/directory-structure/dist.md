@@ -88,7 +88,7 @@ generate: {
 
 ### The fallback Property
 
-When deploying your site you will need to make sure the fallback html path is set correctly. It should be set as the error page so that unknown routes are rendered via Nuxt. If it is unset Nuxt.js will use the default value which is 200.html.
+When deploying your site you will need to make sure the fallback HTML path is set correctly. It should be set as the error page so that unknown routes are rendered via Nuxt. If it is unset Nuxt.js will use the default value which is 200.html.
 
 When running a single page application it makes more sense to use 200.html as it is the only file necessary as no other routes are generated.
 

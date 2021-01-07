@@ -71,7 +71,7 @@ Buka file package.json di editor kode favorit Anda dan isi dengan konten JSON in
 
 #### **Apa itu file package.json?**
 
-Ini `package.json` seperti kartu ID proyek Anda. Jika Anda tidak tahu apa `package.json` file tersebut, kami sangat menyarankan Anda untuk membaca sekilas [dokumentasi NPM](https://docs.npmjs.com/creating-a-package-json-file).
+Ini `package.json` seperti kartu ID proyek Anda. Jika Anda tidak tahu apa `package.json` file tersebut, kami sangat menyarankan Anda untuk membaca sekilas [dokumentasi npm](https://docs.npmjs.com/creating-a-package-json-file).
 
 ### Install nuxt
 
@@ -85,7 +85,7 @@ yarn add nuxt
 ```
 
   </code-block>
-  <code-block label="NPM">
+  <code-block label="npm">
 
 ```bash
 npm install nuxt
@@ -140,7 +140,7 @@ yarn dev
 ```
 
   </code-block>
-  <code-block label="NPM">
+  <code-block label="npm">
 
 ```bash
 npm run dev
@@ -194,7 +194,7 @@ Buat nama direktori `more-fun` dan letakan file `index.vue` di dalamnya. Ini aka
 
 Untuk memulai dengan cepat, Anda dapat menggunakan aplikasi [create-nuxt-app](https://github.com/nuxt/create-nuxt-app).
 
-Pastikan Anda telah menginstal npx (npx tersedia secara default sejak NPM 5.2.0) atau npm v6.1 atau yarn.
+Pastikan Anda telah menginstal npx (npx tersedia secara default sejak npm 5.2.0) atau npm v6.1 atau yarn.
 
 <code-group>
   <code-block label="Yarn" active>
@@ -204,14 +204,14 @@ yarn create nuxt-app <project-name>
 ```
 
   </code-block>
-  <code-block label="NPX">
+  <code-block label="npx">
 
 ```bash
 npx create-nuxt-app <project-name>
 ```
 
   </code-block>
-    <code-block label="NPM">
+    <code-block label="npm">
 
 ```bash
 npm init nuxt-app <project-name>
@@ -232,7 +232,7 @@ yarn dev
 ```
 
   </code-block>
-  <code-block label="NPM">
+  <code-block label="npm">
 
 ```bash
 cd <project-name>

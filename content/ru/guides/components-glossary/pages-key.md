@@ -11,7 +11,7 @@ category: components-glossary
 
 Свойство `key` передается в `<router-view>`, который используется для создания переходов внутри динамической страницы и различных роутов. Использование разных ключей приводит к перерисовке компонентов страницы.
 
-Есть несколько путей для задания key. Для подробной информации, обратитесь к свойсту `nuxtChildKey` в [nuxt component](/guides/features/nuxt-components)
+Есть несколько путей для задания key. Для подробной информации, обратитесь к свойсту `nuxtChildKey` в [nuxt component](/docs/2.x/features/nuxt-components)
 
 ```js
 export default {

@@ -8,7 +8,7 @@ position: 19
 
 - Type: `Array`
 
-> Módulos são extensões Nuxt.js que podem estender sua funcionalidade principal e adicionar integrações infinitas. [Saiba mais](/guides/directory-structure/modules)
+> Módulos são extensões Nuxt.js que podem estender sua funcionalidade principal e adicionar integrações infinitas. [Saiba mais](/docs/2.x/directory-structure/modules)
 
 Exemplo (`nuxt.config.js`):
 
@@ -36,7 +36,7 @@ O Nuxt.js tenta resolver cada item no array de módulos usando o require do Node
 
 Os módulos devem exportar uma função para aprimorar o build/runtime do nuxt e, opcionalmente, retornar uma promise até que seu trabalho seja concluído. Observe que eles são necessários em tempo de execução, portanto, já devem ser transpilados se depender de recursos ES6 modernos.
 
-Consulte o [Guia de Módulos](/guides/directory-structure/modules) para obter informações mais detalhadas sobre como eles funcionam ou se estiver interessado em desenvolver seu próprio módulo. Também fornecemos uma seção oficial sobre [Módulos](https://github.com/nuxt-community/awesome-nuxt#modules) listando dezenas de módulos prontos para produção feitos pela Comunidade Nuxt.
+Consulte o [Guia de Módulos](/docs/2.x/directory-structure/modules) para obter informações mais detalhadas sobre como eles funcionam ou se estiver interessado em desenvolver seu próprio módulo. Também fornecemos uma seção oficial sobre [Módulos](https://github.com/nuxt-community/awesome-nuxt#modules) listando dezenas de módulos prontos para produção feitos pela Comunidade Nuxt.
 
 ## `buildModules`
 

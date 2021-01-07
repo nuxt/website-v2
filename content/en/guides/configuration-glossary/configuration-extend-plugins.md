@@ -6,12 +6,12 @@ category: configuration-glossary
 position: 9
 ---
 
-> The extendPlugins property lets you customize Nuxt.js plugins ([options.plugins](/guides/configuration-glossary/configuration-plugins)).
+> The extendPlugins property lets you customize Nuxt.js plugins ([options.plugins](/docs/2.x/configuration-glossary/configuration-plugins)).
 
 - Type: `Function`
 - Default: `undefined`
 
-You may want to extend plugins or change plugins order created by Nuxt.js. This function accepts an array of [plugin](/guides/configuration-glossary/configuration-plugins) objects and should return array of plugin objects.
+You may want to extend plugins or change plugins order created by Nuxt.js. This function accepts an array of [plugin](/docs/2.x/configuration-glossary/configuration-plugins) objects and should return array of plugin objects.
 
 Example of changing plugins order:
 

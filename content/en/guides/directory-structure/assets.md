@@ -57,9 +57,9 @@ questions:
     correctAnswer: '@@'
 ---
 
-The `assets` directory contains your un-compiled assets such as Stylus or Sass files, images, or fonts.
+The `assets` directory contains your uncompiled assets such as Stylus or Sass files, images, or fonts.
 
-## Images:
+## Images
 
 Inside your `vue` templates, if you need to link to your `assets` directory use `~/assets/your_image.png` with a slash before assets.
 
@@ -83,11 +83,11 @@ When working with dynamic images you will need to use require
 
 <base-alert type="next">
 
-Learn more about [webpack Assets](/guides/directory-structure/assets#webpack-assets)
+Learn more about [webpack Assets](/docs/2.x/directory-structure/assets#webpack-assets)
 
 </base-alert>
 
-## Styles:
+## Styles
 
 Nuxt.js lets you define the CSS files/modules/libraries you want to set globally (included in every page). In the nuxt.config you can easily add your styles using the CSS Property.
 
@@ -104,24 +104,22 @@ export default {
 }
 ```
 
-<base-alert type="info">
+### Sass
 
-In case you want to use `sass` make sure that you have installed `node-sass` and `sass-loader` packages.
-
-</base-alert>
+In case you want to use `sass` make sure that you have installed `sass` and `sass-loader` packages.
 
 <code-group>
   <code-block label="Yarn" active>
 
 ```bash
-yarn add -D node-sass sass-loader
+yarn add -D sass sass-loader fibers
 ```
 
   </code-block>
-  <code-block label="NPM">
+  <code-block label="npm">
 
 ```bash
-npm install --save-dev node-sass sass-loader
+npm install --save-dev sass sass-loader fibers
 ```
 
   </code-block>
@@ -129,7 +127,7 @@ npm install --save-dev node-sass sass-loader
 
 Nuxt.js will automatically guess the file type by its extension and use the appropriate pre-processor loader for webpack. You will still need to install the required loader if you need to use them.
 
-## Fonts:
+## Fonts
 
 You can use local fonts by adding them to your assets folder. Once they have been added you can then access them though your css using the @font-face.
 
@@ -160,7 +158,7 @@ You can use local fonts by adding them to your assets folder. Once they have bee
 
 <base-alert type="next">
 
-To add external fonts such as google fonts check out the [Meta Tags and SEO chapter](/guides/features/meta-tags-seo#external-resources)
+To add external fonts such as google fonts check out the [Meta Tags and SEO chapter](/docs/2.x/features/meta-tags-seo#external-resources)
 
 </base-alert>
 
@@ -209,7 +207,7 @@ The benefits of these loaders are:
 
 `file-loader` lets you designate where to copy and place the asset file, and how to name it using version hashes for better caching. In production, you will benefit from long-term caching by default!
 
-`url-loader` allows you to conditionally inline a file as base-64 data URL if they are smaller than a given threshold. This can reduce the number of HTTP requests for trivial files. If the file is larger than the threshold, it automatically falls back to file-loader.
+`url-loader` allows you to conditionally inline files as base64 data URLs if they are smaller than a given threshold. This can reduce the number of HTTP requests for trivial files. If a file is larger than the threshold, it automatically falls back to file-loader.
 
 For these two loaders, the default configuration is:
 
@@ -235,13 +233,13 @@ For these two loaders, the default configuration is:
 ]
 ```
 
-Which means that every file below 1 KB will be inlined as base-64 data URL. Otherwise, the image/font will be copied in its corresponding folder (inside the `.nuxt` directory) with a name containing a version hash for better caching.
+Which means that every file below 1 kB will be inlined as base64 data URL. Otherwise, the image/font will be copied in its corresponding folder (inside the `.nuxt` directory) with a name containing a version hash for better caching.
 
 When launching your application with `nuxt`, your template in `pages/index.vue`:
 
 ```html{}[pages/index.vue]
 <template>
-  <img src="@/assets/your_image.png" />
+  <img src="~/assets/your_image.png" />
 </template>
 ```
 
@@ -251,11 +249,7 @@ Will be transformed into:
 <img src="/_nuxt/img/your_image.0c61159.png" />
 ```
 
-If you want to change the loader configurations, please use [build.extend](/guides/configuration-glossary/configuration-build#extend).
-
-<app-modal>
-  <code-sandbox  :src="csb_link"></code-sandbox>
-</app-modal>
+If you want to change the loader configurations, please use [build.extend](/docs/2.x/configuration-glossary/configuration-build#extend).
 
 ## Aliases
 

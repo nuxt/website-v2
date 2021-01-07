@@ -7,7 +7,7 @@ position: 12
 
 Nuxt.js と フルスタティックモジュールを使うことで、API や CMS を呼び出すライブプレビューをすぐに利用することができます。 そして、デプロイする前に変化を確認することができます。
 
-<base-alert>[target:static](/guides/features/deployment-targets#static-hosting) を利用しているときのみ使用可能です</base-alert>
+<base-alert>[target:static](/docs/2.x/features/deployment-targets#static-hosting) を利用しているときのみ使用可能です</base-alert>
 
 内部では `$nuxt.refresh` を使っており、クライアントサイドで nuxtServerInit や asyncData、fetch を呼び出しているため、プレビューモードでは自動的にページのデータが更新されます。
 
@@ -22,7 +22,7 @@ export default function ({ query, enablePreview }) {
 ```
 
 <base-alert>
-EnablePreview はプラグインの context オブジェクトでのみ利用可能です。プレビューはクライアントサイドで処理されるため、
+`enablePreview` はプラグインの context オブジェクトでのみ利用可能です。プレビューはクライアントサイドで処理されるため、
 プラグイン(今回の例では preview.client.js)はクライアントでのみ実行される必要があります。
 </base-alert>
 
@@ -84,6 +84,6 @@ validate({ params, query }) {
 
 <base-alert type="next">
 
-[ディレクトリ構成のドキュメント](/guides/directory-structure/nuxt) を見てみましょう。
+[ディレクトリ構成のドキュメント](/docs/2.x/directory-structure/nuxt) を見てみましょう。
 
 </base-alert>

@@ -3,6 +3,7 @@ title: 'A propriedade watchQuery'
 description: Observe as strings de consulta e execute métodos de componente a cada alteração (asyncData, fetch, validate, layout, ...)
 menu: WatchQuery Property
 category: components-glossary
+position: 0
 ---
 
 > Observe as strings de consulta e execute métodos de componente a cada alteração (asyncData, fetch(contexto), validate, layout, ...)
@@ -33,6 +34,6 @@ export default {
 
 <base-alert>
 
-**Aviso**: O novo hook `fetch`, introduzido em 2.12, não é afetado por `watchQuery`. Para obter mais informações, consulte [ouvindo as alterações da string de consulta](/guides/features/data-fetching#the-fetch-hook).
+**Aviso**: O novo hook `fetch`, introduzido em 2.12, não é afetado por `watchQuery`. Para obter mais informações, consulte [ouvindo as alterações da string de consulta](/docs/2.x/features/data-fetching#the-fetch-hook).
 
 </base-alert>

@@ -15,7 +15,7 @@ questions:
     answers:
       - true
       - false
-    correctAnswer:
+    correctAnswer: false
   - question: Where should you put your images if you want webpack to bundle them?
     answers:
       - static
@@ -27,7 +27,7 @@ questions:
       - true
       - false
     correctAnswer: true
-  - question: You can configure the behaviour of the static directory in the nuxt.config.js
+  - question: You can configure the behavior of the static directory in the nuxt.config.js
     answers:
       - true
       - false
@@ -59,12 +59,12 @@ In your code, you can then reference these files relative to the root (`/`):
 <img src="/my-image.png" />
 
 <!-- webpacked image from assets directory -->
-<img src="@/assets/my-image-2.png" />
+<img src="~/assets/my-image-2.png" />
 ```
 
 ## Static Directory Config
 
-Should you need to you can configure the `static/` directory behaviour in the `nuxt.config.js` file.
+Should you need to you can configure the `static/` directory behavior in the `nuxt.config.js` file.
 
 ### Static asset Prefix
 
@@ -81,9 +81,5 @@ export default {
 Default: `/blog/my-image.png`
 
 With `static.prefix` disabled: `/my-image.png`
-
-<app-modal>
-  <code-sandbox  :src="csb_link"></code-sandbox>
-</app-modal>
 
 <quiz :questions="questions"></quiz>

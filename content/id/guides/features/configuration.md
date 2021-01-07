@@ -2,7 +2,7 @@
 title: Konfigurasi
 description: Secara bawaan, Nuxt.js dikonfigurasi untuk mencakup sebagian besar kasus penggunaan. Konfigurasi bawaan ini dapat ditimpa dengan berkas nuxt.config.js.
 position: 7
-category: fitur
+category: features
 csb_link_host_port: https://codesandbox.io/embed/github/nuxt-academy/guides-examples/tree/master/03_features/07_configuration_host_port?fontsize=14&hidenavigation=1&theme=dark
 csb_link_pre-processors: https://codesandbox.io/embed/github/nuxt-academy/guides-examples/tree/master/03_features/07_configuration_pre-processors?fontsize=14&hidenavigation=1&theme=dark
 questions:
@@ -74,7 +74,7 @@ Nuxt.js mengizinkan Anda untuk mendefinisikan berkas/modul/pustaka yang ingin An
 
 <base-alert>
 
-Seandainya Anda ingin menggunakan `sass`, pastikan Anda telah memasang paket (_packages_) `node-sass` dan `sass-loader`.
+Seandainya Anda ingin menggunakan `sass`, pastikan Anda telah memasang paket (_packages_) `sass` dan `sass-loader`.
 
 </base-alert>
 
@@ -144,15 +144,15 @@ Untuk menggunakan _pre-processors_ ini, kita perlu memasang beberapa pemuat Webp
 
 ```bash
 yarn add -D pug pug-plain-loader
-yarn add -D node-sass sass-loader
+yarn add -D sass sass-loader fibers
 ```
 
   </code-block>
-  <code-block label="NPM">
+  <code-block label="npm">
 
 ```bash
 npm install --save-dev pug pug-plain-loader
-npm install --save-dev node-sass sass-loader
+npm install --save-dev sass sass-loader fibers
 ```
 
   </code-block>
@@ -271,7 +271,7 @@ Metode `extend` dipanggil dua kali, pertama untuk membundel klien dan selebihnya
 
 ### Mengkustomisasi konfigurasi _Chunks_
 
-Anda mungkin ingin mengubah [konfigurasi optimasi](/guides/configuration-glossary/configuration-build#optimization) sedikit untuk menghindari penulisan ulang dari objek bawaan.
+Anda mungkin ingin mengubah [konfigurasi optimasi](/docs/2.x/configuration-glossary/configuration-build#optimization) sedikit untuk menghindari penulisan ulang dari objek bawaan.
 
 ```js{}[nuxt.config.js]
 export default {
@@ -382,7 +382,7 @@ _Axios-module_ tidak dapat digunakan di `nuxt.config.js`. Anda harus melakukan _
 
 <base-alert type="next">
 
-`Nuxt.config.js` memiliki lebih banyak opsi penyesuaian dan konfigurasi! Lihat semua kuncinya di [glosarium konfigurasi](/guides/configuration-glossary/configuration-build).
+`Nuxt.config.js` memiliki lebih banyak opsi penyesuaian dan konfigurasi! Lihat semua kuncinya di [glosarium konfigurasi](/docs/2.x/configuration-glossary/configuration-build).
 
 </base-alert>
 

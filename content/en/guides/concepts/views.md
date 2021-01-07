@@ -39,7 +39,7 @@ questions:
 
 The Views section describes all you need to know to configure data and views for a specific route in your Nuxt.js Application. Views consist of an app template, a layout, and the actual page. In addition, you can define custom meta tags for the head section of each page which are important for SEO (Search Engine Optimization).
 
-![Composition of a View in Nuxt.js](/guides/views.png)
+![Composition of a View in Nuxt.js](/docs/2.x/views.png)
 
 Composition of a View in Nuxt.js
 
@@ -74,7 +74,7 @@ There are many properties of the page component such as the head property in the
 
 <base-alert type="next">
 
-See the [Directory Structure book](/guides/directory-structure/nuxt) to learn more about all the properties can use on your page
+See the [Directory Structure book](/docs/2.x/directory-structure/nuxt) to learn more about all the properties can use on your page
 
 </base-alert>
 
@@ -94,7 +94,7 @@ You can define a default layout by adding a `default.vue` file inside the layo
 
 <base-alert type="next">
 
-Learn more about the [Nuxt component](/guides/features/nuxt-components) in the components chapter
+Learn more about the [Nuxt component](/docs/2.x/features/nuxt-components) in the components chapter
 
 </base-alert>
 
@@ -135,15 +135,11 @@ We then use the layout property with the value of 'blog' in the page where we wa
 
 <base-alert type="info">
 
-If you don't add a layout property to your page, eg `layout: 'blog'` then the `default.vue` layout will be used.
+If you don't add a layout property to your page, e.g. `layout: 'blog'`, then the `default.vue` layout will be used.
 
 </base-alert>
 
-<app-modal>
-  <code-sandbox  :src="csb_link"></code-sandbox>
-</app-modal>
-
-### Error Page
+## Error Page
 
 The error page is a *page component* which is always displayed when an error occurs (that does not happen while server-side rendering).
 

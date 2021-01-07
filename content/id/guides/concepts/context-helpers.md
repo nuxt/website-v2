@@ -5,7 +5,7 @@ position: 2
 category: concepts
 csb_link_context: https://codesandbox.io/embed/github/nuxt-academy/guides-examples/tree/master/02_concepts/02_context_helpers-context?fontsize=14&hidenavigation=1&theme=dark
 csb_link_helpers: https://codesandbox.io/embed/github/nuxt-academy/guides-examples/tree/master/02_concepts/02_context_helpers-helpers?fontsize=14&hidenavigation=1&theme=dark
-img: /guides/context.svg
+img: /docs/2.x/context.svg
 imgAlt: nuxt-js-context-keys
 questions:
   - question: Apa alasan menggunakan context?
@@ -48,7 +48,7 @@ questions:
 
 <app-modal :src="img" :alt="imgAlt"></app-modal>
 
-Objek `context` tersedia dalam fungsi Nuxt tertentu seperti [asyncData](/guides/features/data-fetching#async-data), [plugins](/guides/directory-structure/plugins), [middleware](/guides/directory-structure/middleware) dan [nuxtServerInit](/guides/directory-structure/store#the-nuxtserverinit-action). Ini memberikan _additional_ dan seringkali informasi opsional tentang permintaan saat ini ke aplikasi.
+Objek `context` tersedia dalam fungsi Nuxt tertentu seperti [asyncData](/docs/2.x/features/data-fetching#async-data), [plugins](/docs/2.x/directory-structure/plugins), [middleware](/docs/2.x/directory-structure/middleware) dan [nuxtServerInit](/docs/2.x/directory-structure/store#the-nuxtserverinit-action). Ini memberikan _additional_ dan seringkali informasi opsional tentang permintaan saat ini ke aplikasi.
 
 Pertama dan terpenting, context digunakan untuk menyediakan akses ke bagian lain dari aplikasi Nuxt.js, mis. penyimpanan Vuex atau instance `connect` yang mendasarinya. Jadi, kami memiliki objek `req` dan `res` dalam context yang tersedia di sisi server dan `store` selalu tersedia. Namun seiring waktu, contextnya diperluas dengan banyak variabel dan pintasan bermanfaat lainnya. Sekarang kita memiliki akses ke fungsionalitas HMR dalam mode `development`, `route` saat ini, halaman `params` dan `query`, serta opsi untuk mengakses variabel lingkungan melalui context. Selanjutnya, fungsi modul dan pembantu dapat diekspos melalui context untuk tersedia di kedua sisi - sisi klien dan server.
 
@@ -89,7 +89,7 @@ _Context_ yang kami rujuk di sini tidak sama dengan objek `context` yang tersedi
 
 </base-alert>
 
-Pelajari lebih lanjut tentang kunci context yang berbeda di [Internals Glossary](/guides/internals-glossary/context) kami.
+Pelajari lebih lanjut tentang kunci context yang berbeda di [Internals Glossary](/docs/2.x/internals-glossary/context) kami.
 
 ## Contoh
 
@@ -109,8 +109,8 @@ export default {
         `https://api.nuxtjs.dev/posts/${id}`
       )
       return { post }
-    } catch (error) {
-      context.error(error) // Tampilkan halaman nuxt error dengan kesalahan yang dilemparkan
+    } catch (e) {
+      context.error(e) // Tampilkan halaman nuxt error dengan kesalahan yang dilemparkan
     }
   }
 }
@@ -127,14 +127,14 @@ export default {
       // Menggunakan modul nuxtjs/http di sini diekspos melalui context.app
       const post = await $http.$get(`https://api.nuxtjs.dev/posts/${id}`)
       return { post }
-    } catch (error) {
-      error(error) // Tampilkan halaman nuxt error dengan kesalahan yang dilemparkan
+    } catch (e) {
+      error(e) // Tampilkan halaman nuxt error dengan kesalahan yang dilemparkan
     }
   }
 }
 ```
 
-Ingin menggunakan parameter query Anda? kemudian Anda menggunakan [context.query.id](http://context.query.id) then.
+Ingin menggunakan parameter query Anda? kemudian Anda menggunakan [context.query.id](/docs/2.x/internals-glossary/context#query) then.
 
 ### Redirecting user & mengakses store
 
@@ -223,6 +223,7 @@ export default {
   }
 }
 ```
+
 Baca lebih lanjut di bab fitur loading yang sesuai
 
 ## Helper onNuxtReady

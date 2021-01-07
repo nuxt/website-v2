@@ -58,7 +58,7 @@ questions:
       - add it in the nuxt.config.js under the loading property
       - add it to the nuxt.config.js under the plugins property
     correctAnswer: add it in the nuxt.config.js under the loading property
-  - question: To add a circle spinner when Nuxt.js is in SPA mode what do you add to the loading property?
+  - question: To add a circle spinner when Nuxt.js is using ssr:false what do you add to the loading property?
     answers:
       - 'circle: true'
       - 'spinner: circle'
@@ -68,7 +68,7 @@ questions:
 
 Out of the box, Nuxt.js gives you its own loading progress bar component that's shown between routes. You can customize it, disable it or even create your own loading component.
 
-## Customising the Progress Bar
+## Customizing the Progress Bar
 
 Among other properties, the color, size, duration and direction of the progress bar can be customized to suit your application's needs. This is done by updating the `loading` property of the `nuxt.config.js` with the corresponding properties.
 
@@ -85,16 +85,16 @@ export default {
 
 List of properties to customize the progress bar.
 
-| Key | Type | Default | Description |  |
-| --- | --- | --- | --- | --- |
-| color | String | 'black' | CSS color of the progress bar |  |
-| failedColor | String | 'red' | CSS color of the progress bar when an error appended while rendering the route (if data or fetch sent back an error for example). |  |
-| height | String | '2px' | Height of the progress bar (used in the style property of the progress bar) |  |
-| throttle | Number | 200 | In ms, wait for the specified time before displaying the progress bar. Useful for preventing the bar from flashing. |  |
-| duration | Number | 5000 | In ms, the maximum duration of the progress bar, Nuxt.js assumes that the route will be rendered before 5 seconds. |  |
-| continuous | Boolean | false | Keep animating progress bar when loading takes longer than duration. |  |
-| css | Boolean | true | Set to false to remove default progress bar styles (and add your own). |  |
-| rtl | Boolean | false | Set the direction of the progress bar from right to left. |  |
+| Key         | Type    | Default | Description                                                                                                                       |     |
+| ----------- | ------- | ------- | --------------------------------------------------------------------------------------------------------------------------------- | --- |
+| color       | String  | 'black' | CSS color of the progress bar                                                                                                     |     |
+| failedColor | String  | 'red'   | CSS color of the progress bar when an error appended while rendering the route (if data or fetch sent back an error for example). |     |
+| height      | String  | '2px'   | Height of the progress bar (used in the style property of the progress bar)                                                       |     |
+| throttle    | Number  | 200     | In ms, wait for the specified time before displaying the progress bar. Useful for preventing the bar from flashing.               |     |
+| duration    | Number  | 5000    | In ms, the maximum duration of the progress bar, Nuxt.js assumes that the route will be rendered before 5 seconds.                |     |
+| continuous  | Boolean | false   | Keep animating progress bar when loading takes longer than duration.                                                              |     |
+| css         | Boolean | true    | Set to false to remove default progress bar styles (and add your own).                                                            |     |
+| rtl         | Boolean | false   | Set the direction of the progress bar from right to left.                                                                         |     |
 
 ## Disable the Progress Bar
 
@@ -143,7 +143,7 @@ Unfortunately, it is not possible for the Loading component to know in advance h
 
 Nuxt's loading component partially solves this by letting you set the `duration`, this should be set to an estimate of how long the loading process will take. Unless you use a custom loading component, the progress bar will always move from 0% to 100% in `duration` time (regardless of actual progression). When the loading takes longer than `duration` time, the progress bar will stay at 100% until the loading finishes.
 
-You can change the default behaviour by setting `continuous` to true, then after reaching 100% the progress bar will start shrinking back to 0% again in `duration` time. When the loading is still not finished after reaching 0% it will start growing from 0% to 100% again, this repeats until the loading finishes.
+You can change the default behavior by setting `continuous` to true, then after reaching 100% the progress bar will start shrinking back to 0% again in `duration` time. When the loading is still not finished after reaching 0% it will start growing from 0% to 100% again, this repeats until the loading finishes.
 
 ```js
 export default {
@@ -163,12 +163,12 @@ You can also create your own component that Nuxt.js will call instead of the def
 
 Your component has to expose some of these methods:
 
-| Method | Required | Description |
-| --- | --- | --- |
-| start() | Required | Called when a route changes, this is where you display your component. |
-| finish() | Required | Called when a route is loaded (and data fetched), this is where you hide your component. |
-| fail(error) | Optional | Called when a route couldn't be loaded (failed to fetch data for example). |
-| increase(num) | Optional | Called during loading the route component, num is an Integer < 100. |
+| Method        | Required | Description                                                                              |
+| ------------- | -------- | ---------------------------------------------------------------------------------------- |
+| start()       | Required | Called when a route changes, this is where you display your component.                   |
+| finish()      | Required | Called when a route is loaded (and data fetched), this is where you hide your component. |
+| fail(error)   | Optional | Called when a route couldn't be loaded (failed to fetch data for example).               |
+| increase(num) | Optional | Called during loading the route component, num is an Integer < 100.                      |
 
 You can create your custom component in `components/LoadingBar.vue`:
 
@@ -235,7 +235,7 @@ export default {
 
 ## Built-in indicators
 
-These indicators are imported from awesome [Spinkit](http://tobiasahlin.com/spinkit) project. You can check out its demo page to preview the spinners. In order to use one of these spinners all you have to do is add it's name to the name property. No need to import or install anything. Here is a list of built in indicators you can use.
+These indicators are imported from the awesome [SpinKit](http://tobiasahlin.com/spinkit) project. You can check out its demo page to preview the spinners. In order to use one of these spinners all you have to do is add its name to the name property. No need to import or install anything. Here is a list of built in indicators you can use.
 
 - circle
 - cube-grid
@@ -253,12 +253,8 @@ Built-in indicators support `color` and `background` options.
 
 ## Custom indicators
 
-If you need your own special indicator, a String value or Name key can also be a path to a html template of indicator source code! All of the options are passed to the template, too.
+If you need your own special indicator, a String value or Name key can also be a path to an HTML template of indicator source code! All of the options are passed to the template, too.
 
 Nuxt's built-in [source code](https://github.com/nuxt/nuxt.js/tree/dev/packages/vue-app/template/views/loading) is also available if you need a base!
-
-<app-modal>
-  <code-sandbox  :src="csb_link"></code-sandbox>
-</app-modal>
 
 <quiz :questions="questions"></quiz>

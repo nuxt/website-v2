@@ -5,7 +5,7 @@ imgUrl: blog/nuxt-static-improvements/main.jpg
 date: 2020-07-27
 authors:
   - name: Alexander Lichter
-    avatarUrl: https://pbs.twimg.com/profile_images/952533217923432449/94yyoh67_400x400.jpg
+    avatarUrl: https://pbs.twimg.com/profile_images/1316077440414998528/mY2rcM7__400x400.jpg
     link: https://twitter.com/TheAlexLichter
   - name: Sébastien Chopin
     avatarUrl: https://pbs.twimg.com/profile_images/1042510623962275840/1Iw_Mvud_400x400.jpg
@@ -72,7 +72,7 @@ yarn upgrade nuxt
 ```
 
   </code-block>
-  <code-block label="NPM">
+  <code-block label="npm">
 
 ```bash
 npm update
@@ -109,7 +109,7 @@ By default, nuxt ignores these directories so if any change happens inside them,
 - `README.md`
 - Hidden dotfiles (like `.npmrc`)
 
-You can add more patterns using [generate.cache.ignore](/guides/configuration-glossary/configuration-generate#cache) option in `nuxt.config`:
+You can add more patterns using [generate.cache.ignore](/docs/2.x/configuration-glossary/configuration-generate#cache) option in `nuxt.config`:
 
 ```js{}[nuxt.config.js]
 export default {

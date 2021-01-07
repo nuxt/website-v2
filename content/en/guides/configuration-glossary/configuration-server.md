@@ -22,7 +22,7 @@ export default {
 }
 ```
 
-This lets you specify the [host and port](/guides/features/configuration#edit-host-and-port) for your Nuxt.js server instance.
+This lets you specify the [host and port](/docs/2.x/features/configuration#edit-host-and-port) for your Nuxt.js server instance.
 
 ## Example using HTTPS configuration
 
@@ -73,9 +73,9 @@ export default {
 }
 ```
 
-### Using timing api
+### Using timing API
 
-The `timing` api is also injected into the `response` on server-side when `server.time` is enabled.
+The `timing` API is also injected into the `response` on server-side when `server.time` is enabled.
 
 #### Syntax
 
@@ -84,7 +84,7 @@ res.timing.start(name, description)
 res.timing.end(name)
 ```
 
-#### Example using timing in servermiddleware
+#### Example using timing in serverMiddleware
 
 ```js
 export default function (req, res, next) {

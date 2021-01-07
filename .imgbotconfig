@@ -1,0 +1,5 @@
+{
+    "ignoredFiles": [
+        "static/guides/*.svg"
+    ],
+}

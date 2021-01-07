@@ -7,7 +7,7 @@ position: 12
 
 With Nuxt.js and full static you can now use live preview out of the box which will call your API or your CMS so you can see the changes live before deploying.
 
-<base-alert> Only available when using [target:static](/guides/features/deployment-targets#static-hosting) </base-alert>
+<base-alert> Only available when using [target:static](/docs/2.x/features/deployment-targets#static-hosting) </base-alert>
 
 The preview mode will automatically refresh the page data as it uses `$nuxt.refresh` under the hood and therefore calls nuxtServerInit, asyncData and fetch on the client side.
 
@@ -22,7 +22,7 @@ export default function ({ query, enablePreview }) {
 ```
 
 <base-alert>
-EnablePreview is only available in the context object of plugins. Previews are handled client-side and
+`enablePreview` is only available in the context object of plugins. Previews are handled client-side and
 thus the plugin should be run on the client: preview.client.js
 </base-alert>
 
@@ -53,7 +53,7 @@ yarn start
   </code-block>
 </code-group>
 
-Then you can then see your preview page by adding the query param to the end of the page you want to see once:
+Then you can see your preview page by adding the query param to the end of the page you want to see once:
 
 ```js
 ?preview=true
@@ -85,6 +85,6 @@ You can pass data to the `enablePreview` function. That data will then be availa
 
 <base-alert type="next">
 
-Check out the [Directory Structure book](/guides/directory-structure/nuxt)
+Check out the [Directory Structure book](/docs/2.x/directory-structure/nuxt)
 
 </base-alert>

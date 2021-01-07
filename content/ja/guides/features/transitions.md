@@ -107,10 +107,10 @@ export default {
 これで、あとはトランジションのための新しいクラスを作るだけです。
 
 ```html{}[pages/index.vue]
-<styles>
+<style>
   .home-enter-active, .home-leave-active { transition: opacity .5s; }
   .home-enter, .home-leave-active { opacity: 0; }
-</styles>
+</style>
 ```
 
 ## オブジェクト
@@ -129,7 +129,7 @@ export default {
 上のように設定すると、コンポーネントは次のようにセットされます:
 
 ```html{}[pages/index.vue]
-<transition name="test" mode="out-in"></transition>
+<transition name="home" mode="out-in"></transition>
 ```
 
 `transition` オブジェクトは name、 mode、 css、 duration などの多くのプロパティを持つことができます。詳細は vue のドキュメントを参照してください。
@@ -222,12 +222,14 @@ export default {
 }
 ```
 
-```js{}[assets/main.css]
-.layout-enter-active, .layout-leave-active {
-  transition: opacity .5s
+```css{}[assets/main.css]
+.layout-enter-active,
+.layout-leave-active {
+  transition: opacity 0.5s;
 }
-.layout-enter, .layout-leave-active {
-  opacity: 0
+.layout-enter,
+.layout-leave-active {
+  opacity: 0;
 }
 ```
 

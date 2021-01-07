@@ -38,11 +38,11 @@ Las dos versiones de paquetes son:
 - Nuxt detectará automáticamente el _build_ `modern` en `nuxt start` cuando `modern` no esté definido, modo auto-detectado es:
 
 | Modo      | Modo moderno |
-| --------- | :---------: |
-| universal |   server    |
-| spa       |   client    |
+| --------- | :----------: |
+| universal |    server    |
+| spa       |    client    |
 
 - El modo moderno para `nuxt generate` sólo puede ser `client`
-- Utiliza [`render.crossorigin`](/guides/configuration-glossary/configuration-render#crossorigin) para definir el atributo `crossorigin` en `<link>` y `<script>`
+- Utiliza [`render.crossorigin`](/docs/2.x/configuration-glossary/configuration-render#crossorigin) para definir el atributo `crossorigin` en `<link>` y `<script>`
 
 > Por favor, visita este [excelente post de Phillip Walton](https://philipwalton.com/articles/deploying-es2015-code-in-production-today/) para más información sobre _builds_ modernos.

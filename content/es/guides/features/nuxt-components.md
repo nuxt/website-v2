@@ -94,7 +94,7 @@ El componente `<Nuxt>` se utiliza para desplegar los componentes de tu página. 
 
 <base-alert>
 
-El componente `<Nuxt>` solamente se puede utilizar dentro de [layouts](/guides/concepts/views#layouts).
+El componente `<Nuxt>` solamente se puede utilizar dentro de [layouts](/docs/2.x/concepts/views#layouts).
 
 </base-alert>
 
@@ -215,7 +215,7 @@ Al igual que cualquier componente normal de Vue, los componentes `<NuxtChild>` t
 </template>
 ```
 
-Si deseas ver un ejemplo, consulta aquí: [ejemplo nested-routes](https://nuxtjs.org/examples/nested-routes).
+Si deseas ver un ejemplo, consulta aquí: [ejemplo nested-routes](/examples/nested-routes).
 
 <app-modal>
   <code-sandbox  :src="csb_link_nuxt"></code-sandbox>
@@ -256,7 +256,7 @@ Para aprender más sobre `<RouterLink>`, consulta la [Documentación sobre Vue 
 
 <base-alert type="info">
   
-`<NuxtLink>` posee [*smart prefetching*](/guides/features/nuxt-components#the-nuxtlink-component) integrado.
+`<NuxtLink>` posee [*smart prefetching*](/docs/2.x/features/nuxt-components#the-nuxtlink-component) integrado.
 
 </base-alert>
 

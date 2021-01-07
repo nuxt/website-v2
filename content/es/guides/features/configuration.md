@@ -74,7 +74,7 @@ Nuxt.js te permite definir los archivos/módulos/librerías de CSS que quieras u
 
 <base-alert>
 
-En caso de que quieras usar `sass` asegúrate de tener instalados los paquetes `node-sass` y `sass-loader`.
+En caso de que quieras usar `sass` asegúrate de tener instalados los paquetes `sass` y `sass-loader`.
 
 </base-alert>
 
@@ -144,15 +144,15 @@ Para usar estos preprocesadores, necesitamos instalar sus webpack loaders:
 
 ```bash
 yarn add -D pug pug-plain-loader
-yarn add -D node-sass sass-loader
+yarn add -D sass sass-loader fibers
 ```
 
   </code-block>
-  <code-block label="NPM">
+  <code-block label="npm">
 
 ```bash
 npm install --save-dev pug pug-plain-loader
-npm install --save-dev node-sass sass-loader
+npm install --save-dev sass sass-loader fibers
 ```
 
   </code-block>
@@ -271,7 +271,7 @@ El método `extend` es llamado dos veces - Una vez para el bundle del cliente y 
 
 ### Personalizar la configuración de chunks
 
-Es posible que quieras ajustar un poco la [configuración de optimización](/guides/configuration-glossary/configuration-build#optimization), evitando una sobreescritura del objeto por defecto.
+Es posible que quieras ajustar un poco la [configuración de optimización](/docs/2.x/configuration-glossary/configuration-build#optimization), evitando una sobreescritura del objeto por defecto.
 
 ```js{}[nuxt.config.js]
 export default {
@@ -382,7 +382,7 @@ El módulo axios no puede ser usado en `nuxt.config.js`. Necesitarás importar a
 
 <base-alert type="next">
 
-El archivo `nuxt.config.js` tiene muchas más opciones de personalización y configuración! Echa un vistazo a todas sus keys en el [glosario de configuración](/guides/configuration-glossary/configuration-build).
+El archivo `nuxt.config.js` tiene muchas más opciones de personalización y configuración! Echa un vistazo a todas sus keys en el [glosario de configuración](/docs/2.x/configuration-glossary/configuration-build).
 
 </base-alert>
 

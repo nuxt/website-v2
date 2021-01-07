@@ -94,7 +94,7 @@ Komponen `<Nuxt>` adalah komponen yang Anda gunakan untuk menampilkan komponen-k
 
 <base-alert>
 
-Komponen `<Nuxt>` hanya dapat digunakan di dalam berkas-berkas [_layout_](/guides/concepts/views#layouts).
+Komponen `<Nuxt>` hanya dapat digunakan di dalam berkas-berkas [_layout_](/docs/2.x/concepts/views#layouts).
 
 </base-alert>
 
@@ -215,7 +215,7 @@ Komponen `<NuxtChild>` juga dapat menerima properti layaknya komponen Vue biasa.
 </template>
 ```
 
-Untuk melihat contoh, kunjungi [contoh rute bersarang](https://nuxtjs.org/examples/nested-routes).
+Untuk melihat contoh, kunjungi [contoh rute bersarang](/examples/nested-routes).
 
 <app-modal>
   <code-sandbox  :src="csb_link_nuxt"></code-sandbox>
@@ -258,7 +258,7 @@ Jika Anda ingin mempelajari lebih lanjut tentang `<RouterLink>`, silakan baca [d
 
 <base-alert type="info">
 
-`<NuxtLink>` juga memiliki fitur [_smart prefetching_](/guides/features/nuxt-components#the-nuxtlink-component) bawaan.
+`<NuxtLink>` juga memiliki fitur [_smart prefetching_](/docs/2.x/features/nuxt-components#the-nuxtlink-component) bawaan.
 
 </base-alert>
 

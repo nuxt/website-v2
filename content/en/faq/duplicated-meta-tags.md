@@ -5,7 +5,7 @@ category: development
 position: 104
 ---
 
-This is a "feature" of [vue-meta](https://github.com/nuxt/vue-meta), please take a look at the [documentation of head elements](/guide/views#html-head).
+This is a "feature" of [vue-meta](https://github.com/nuxt/vue-meta), please take a look at the [documentation of head elements](/docs/2.x/concepts/views#html-head).
 
 <div class="Alert">
 
@@ -49,4 +49,4 @@ export default {
 }
 ```
 
-To learn how to use the `head` property in your pages, please see the [HTML head documentation](/guide/views#html-head).
+To learn how to use the `head` property in your pages, please see the [HTML head documentation](/docs/2.x/concepts/views#html-head).

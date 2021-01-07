@@ -7,20 +7,21 @@ position: 28.1
 ---
 
 - Type: `boolean`
-  - Default: `true`
-  - Possible values:
-    - `false`: No server-side rendering (only client-side rendering)
+- Default: `true`
+- Possible values:
+  - `true`: Server-side rendering enabled
+  - `false`: No server-side rendering (only client-side rendering)
 
-> You need to set this option when working with single page applications
+> You can set this option to `false` when you want **only client side rendering**
 
 ```js{}[nuxt.config.js]
 export default {
-  ssr: false // for SPA's
+  ssr: false // Disable Server Side rendering
 }
 ```
 
 <base-alert type="next">
 
-Previously, `mode` was used to disable or enable server-side rendering. Here is the [`mode` documentation](/guides/configuration-glossary/configuration-mode).
+Previously, `mode` was used to disable or enable server-side rendering. Here is the [`mode` documentation](/docs/2.x/configuration-glossary/configuration-mode).
 
 </base-alert>

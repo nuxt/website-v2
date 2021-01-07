@@ -37,12 +37,12 @@ The two versions of bundles are:
 
 - Nuxt will automatically detect `modern` build in `nuxt start` when `modern` is not specified, auto-detected mode is:
 
-| Mode      | Modern Mode |
-| --------- | :---------: |
-| universal |   server    |
-| spa       |   client    |
+| ssr   | Modern Mode |
+| ----- | :---------: |
+| true  |   server    |
+| false |   client    |
 
 - Modern mode for `nuxt generate` can only be `client`
-- Use [`render.crossorigin`](/guides/configuration-glossary/configuration-render#crossorigin) to set `crossorigin` attribute in `<link>` and `<script>`
+- Use [`render.crossorigin`](/docs/2.x/configuration-glossary/configuration-render#crossorigin) to set `crossorigin` attribute in `<link>` and `<script>`
 
 > Please refer [Phillip Walton's excellent post](https://philipwalton.com/articles/deploying-es2015-code-in-production-today/) for more knowledge regarding modern builds.

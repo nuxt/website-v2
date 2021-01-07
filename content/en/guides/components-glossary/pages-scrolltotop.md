@@ -3,6 +3,7 @@ title: 'The scrollToTop Property'
 description: The `scrollToTop` property lets you tell Nuxt.js to scroll to the top before rendering the page.
 menu: scrollToTop Property
 category: components-glossary
+position: 0
 ---
 
 > The scrollToTop property lets you tell Nuxt.js to scroll to the top before rendering the page.
@@ -25,4 +26,4 @@ By default, Nuxt.js scrolls to the top when you go to another page, but with chi
 
 Conversely, you can manually set `scrollToTop` to `false` on parent routes as well.
 
-If you want to overwrite the default scroll behavior of Nuxt.js, take a look at the [scrollBehavior option](/guides/configuration-glossary/configuration-router#scrollbehavior).
+If you want to overwrite the default scroll behavior of Nuxt.js, take a look at the [scrollBehavior option](/docs/2.x/configuration-glossary/configuration-router#scrollbehavior).

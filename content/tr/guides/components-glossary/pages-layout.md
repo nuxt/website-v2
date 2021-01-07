@@ -1,6 +1,6 @@
 ---
 title: 'Layout Özelliği'
-description: `layouts` dizinindeki her dosya (birince seviye), sayfa bileşenindeki layout özelliği ile erişilebilen özel bir düzen oluşturacaktır.
+description: layouts dizinindeki her dosya (birince seviye), sayfa bileşenindeki layout özelliği ile erişilebilen özel bir düzen oluşturacaktır.
 menu: Layout Özelliği
 category: components-glossary
 position: 0

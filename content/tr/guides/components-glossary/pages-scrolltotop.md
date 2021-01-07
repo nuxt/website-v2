@@ -1,6 +1,6 @@
 ---
 title: 'ScrollToTop Özelliği'
-description: `scrollToTop` özelliği, Nuxt.js'e sayfayı oluşturmadan önce en üste kaydırmasını söyleyebilmenizi sağlar.
+description: scrollToTop özelliği, Nuxt.js'e sayfayı oluşturmadan önce en üste kaydırmasını söyleyebilmenizi sağlar.
 menu: scrollToTop Özelliği
 category: components-glossary
 position: 0

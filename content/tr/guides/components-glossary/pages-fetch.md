@@ -1,6 +1,6 @@
 ---
 title: 'Fetch Yöntemi'
-description: `fetch` yöntemi verileri asenkron bir şekilde getirmek için kullanılır. Yol oluşturulurken sunucu tarafında ve gezinme sırasında istemci tarafında çağırılır.
+description: fetch yöntemi verileri asenkron bir şekilde getirmek için kullanılır. Yol oluşturulurken sunucu tarafında ve gezinme sırasında istemci tarafında çağırılır.
 menu: Fetch Yöntemi
 category: components-glossary
 position: 0
@@ -34,6 +34,7 @@ export default {
   }
 }
 ```
+
 `this.$nuxt.context` kullanarak fetch yöntemi içerisindeki Nuxt [context](/docs/2.x/internals-glossary/context)'a erişebilirsiniz.
 
 ### Seçenekler

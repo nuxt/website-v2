@@ -1,6 +1,6 @@
 ---
 title: アセット
-description: `assets` ディレクトリには、Stylus や Sass ファイル、画像、フォントなどコンパイルされていないアセットが含まれます。
+description: assets ディレクトリには、Stylus や Sass ファイル、画像、フォントなどコンパイルされていないアセットが含まれます。
 position: 2
 category: directory-structure
 csb_link: https://codesandbox.io/embed/github/nuxt-academy/guides-examples/tree/master/04_directory_structure/02_assets?fontsize=14&hidenavigation=1&theme=dark

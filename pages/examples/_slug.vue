@@ -56,8 +56,8 @@ export default {
         process.env.NODE_ENV !== 'production')
     ) {
       try {
-        path = `/${app.i18n.locale}/examples/hello-world`
-        page = await $content(path, params.slug).fetch()
+        path = `/${app.i18n.locale}/examples`
+        page = await $content(path, params.slug || 'hello-world').fetch()
       } catch (err) {
         langFallback = true
         path = `/${app.i18n.defaultLocale}/examples`

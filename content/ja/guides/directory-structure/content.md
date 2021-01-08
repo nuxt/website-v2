@@ -368,7 +368,7 @@ The content module works with static site generation using the `nuxt generate`. 
 
 <base-alert>
 
-If using Nuxt <2.13 and you need to specify the dynamic routes you can do so using the generate property and using @nuxt/content programmatically.
+If using Nuxt < 2.13 and you need to specify the dynamic routes you can do so using the generate property and using @nuxt/content programmatically.
 
 </base-alert>
 

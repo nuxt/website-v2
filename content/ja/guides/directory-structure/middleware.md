@@ -88,7 +88,7 @@ export default function (context) {
 
 ミドルウェアは以下の順序で連続して実行されます:
 
-1. `nuxt.config.js` （ファイル内の順序）
+1. `nuxt.config.js`（ファイル内の順序）
 2. マッチしたレイアウト
 3. マッチしたページ
 

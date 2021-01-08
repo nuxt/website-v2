@@ -187,7 +187,7 @@ Nuxt >= v2.13 ではクローラーがインストールされており、リン
 
 ### ルートパラメーターへのローカルアクセス
 
-ローカルページやコンポーネント内の現在のルートパラメータは、`this.$route.params.{parameterName}` を参照することでアクセスすることができます。例えば、動的なユーザーページ （`users/_id.vue`） があり、ユーザーまたはプロセス情報を読み込むために `id` パラメーターにアクセスしたい場合、次のような変数にアクセスできます: `this.$route.params.id`.。
+ローカルページやコンポーネント内の現在のルートパラメータは、`this.$route.params.{parameterName}` を参照することでアクセスすることができます。例えば、動的なユーザーページ（`users/_id.vue`）があり、ユーザーまたはプロセス情報を読み込むために `id` パラメーターにアクセスしたい場合、次のような変数にアクセスできます: `this.$route.params.id`.。
 
 ## ネストされたルート
 
@@ -195,7 +195,7 @@ Nuxt.js は vue-router の子ルートを使ってルートをネストさせる
 
 <base-alert>
 
-親コンポーネント （`.vue` ファイル）内に [NuxtChild  コンポーネント](/docs/2.x/features/nuxt-components#the-nuxtchild-component)を含めることを忘れないでください。
+親コンポーネント（`.vue` ファイル）内に [NuxtChild  コンポーネント](/docs/2.x/features/nuxt-components#the-nuxtchild-component)を含めることを忘れないでください。
 
 </base-alert>
 
@@ -522,7 +522,7 @@ export default {
 
 <base-alert>
 
-このオプションを準備なしに設定しないでください。徹底的にテストする必要があります。`router.trailingSlash` に `undefined` （デフォルトの値）以外の値を設定した場合、どちらかのルートは機能しなくなります。したがって、301 リダイレクトは適切に行われ、*内部リンク*は正しく適応される必要があります。`trailingSlash` を true に設定する場合、`example.com/abc/` のみが機能し、`example.com/abc` は機能しません。false に設定する場合はその逆になります。
+このオプションを準備なしに設定しないでください。徹底的にテストする必要があります。`router.trailingSlash` に `undefined`（デフォルトの値）以外の値を設定した場合、どちらかのルートは機能しなくなります。したがって、301 リダイレクトは適切に行われ、*内部リンク*は正しく適応される必要があります。`trailingSlash` を true に設定する場合、`example.com/abc/` のみが機能し、`example.com/abc` は機能しません。false に設定する場合はその逆になります。
 
 </base-alert>
 

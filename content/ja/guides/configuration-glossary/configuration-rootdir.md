@@ -11,7 +11,7 @@ position: 23
 
 > Nuxt.js アプリケーションのワークスペースを指定します。
 
-nuxt commands（nuxt start、nuxt build など）に引数が渡された場合、このプロパティは上書きされます。例えば `nuxt ./my-app/` を実行すると `rootDir` は カレント/ワーキングディレクトリである `./my-app/` の絶対パスが設定されます。
+nuxt commands（nuxt start、nuxt build など）に引数が渡された場合、このプロパティは上書きされます。例えば `nuxt ./my-app/` を実行すると `rootDir` はカレント/ワーキングディレクトリである `./my-app/` の絶対パスが設定されます。
 
 [Nuxt.js をプログラムで使用](/docs/2.x/internals-glossary/nuxt)しない限り、このオプションを指定する必要はありません。
 

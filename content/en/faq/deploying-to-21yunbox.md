@@ -1,5 +1,5 @@
 ---
-title: How to deploy on 21YunBox?
+title: Deploy on 21YunBox
 description: How to deploy Nuxt.js on 21YunBox?
 category: deployment
 position: 216

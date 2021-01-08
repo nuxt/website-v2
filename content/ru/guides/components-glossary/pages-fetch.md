@@ -63,7 +63,7 @@ export default {
     // Она может быть вызвана в `created` и должна не зависеть от данных получаемых асинхронно
     fetchKey(getCounter) {
       // getCounter метод, который может быть вызван для получения следующего числа в последовательности
-      // как часть создания уникального fetchKey.
+      // как часть генерации уникального fetchKey.
       return this.someOtherData + getCounter('sidebar')
     }
   }

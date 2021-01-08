@@ -22,7 +22,7 @@ questions:
       - before the component instance
       - during the component instance
     correctAnswer: after the component instance
-  - question: Which allows you to display a placeholder when `fetch` is being called *on client-side?*
+  - question: Which allows you to display a placeholder when `fetch` is being called *on client-side?*
     answers:
       - $fetchState.timestamp
       - $fetchState.error
@@ -130,15 +130,15 @@ Nuxt が呼び出す fetch に加え、`this.$fetch()` を使うことでコン�
 
 <base-alert type="info">
 
-fetch フック内では `this.$nuxt.context` を使うことで、Nuxt [context](/docs/2.x/concepts/context-helpers) にアクセスできます。
+fetch フック内では `this.$nuxt.context` を使うことで、Nuxt [context](/docs/2.x/concepts/context-helpers) にアクセスできます。
 
 </base-alert>
 
 ### オプション
 
-`fetchOnServer`: `Boolean` または `Function`（デフォルト: `true`）。サーバーがページをレンダリングする際に `fetch()` を呼び出します。
+`fetchOnServer`: `Boolean` または `Function`（デフォルト: `true`）。サーバーがページをレンダリングする際に `fetch()` を呼び出します。
 
-`fetchDelay`: `Integer` （デフォルト: `200`）。最小実行時間をミリ秒単位で設定します（過剰実行を防ぐため）。
+`fetchDelay`: `Integer`（デフォルト: `200`）。最小実行時間をミリ秒単位で設定します（過剰実行を防ぐため）。
 
 `fetchOnServer` が falsy（`false` または `false` を返す）な場合、`fetch` はクライアントサイドでのみ呼び出され、サーバーでコンポーネントをレンダリングする場合は、`$fetchState.pending` は `true` を返します。
 
@@ -192,7 +192,7 @@ export default {
 
 ページコンポーネントを 10 ページ分だけメモリに保存します。
 
-### `activated`  フックを使う
+### `activated` フックを使う
 
 最後に `fetch` を呼び出したときのタイムスタンプを `this.$fetchState.timestamp` から取得することができます（SSR も含む）。このプロパティを `activated` フックと組み合わせることで、`fetch` に 30 秒のキャッシュを追加することができます：
 

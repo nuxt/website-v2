@@ -89,7 +89,7 @@ background: url('~assets/banner.svg');
 
 ## スタイル
 
-Nuxt.js では、グローバル (すべてのページ) に設定したい CSS ファイルやモジュール、ライブラリを定義することができます。nuxt.config 内で CSS プロパティを使って簡単にスタイルを追加することができます。
+Nuxt.js では、グローバル (すべてのページ）に設定したい CSS ファイルやモジュール、ライブラリを定義することができます。nuxt.config 内で CSS プロパティを使って簡単にスタイルを追加することができます。
 
 ```js{}[nuxt.config.js]
 export default {
@@ -183,7 +183,7 @@ CSS で `url('~assets/image.png')` と記述した場合、それは `require('~
 
 <base-alert>
 
-`~/` エイリアスは CSS ファイルで正しく解決されないでしょう。CSS の `url` の参照には、`~assets` (スラッシュなし) を使わなければなりません。例: `background: url("~assets/banner.svg")`
+`~/` エイリアスは CSS ファイルで正しく解決されないでしょう。CSS の `url` の参照には、`~assets` (スラッシュなし）を使わなければなりません。例: `background: url("~assets/banner.svg")`
 
 </base-alert>
 

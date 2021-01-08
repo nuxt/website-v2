@@ -177,7 +177,7 @@ export default {
 </script>
 ```
 
-`createElement` を `h` にエイリアスすることは、Vue のエコシステムで見られる共通の慣例です。しかしその慣例は JSX では任意です。なぜなら ES2015 の構文で宣言された（関数またはアロー関数ではない）JSX で書かれた任意のメソッドやゲッターには `const h = this.$createElement` が[自動的にインジェクト](https://github.com/vuejs/babel-plugin-transform-vue-jsx#h-auto-injection) されるためです。よって(h)パラメータは削除することができます。
+`createElement` を `h` にエイリアスすることは、Vue のエコシステムで見られる共通の慣例です。しかしその慣例は JSX では任意です。なぜなら ES2015 の構文で宣言された（関数またはアロー関数ではない）JSX で書かれた任意のメソッドやゲッターには `const h = this.$createElement` が[自動的にインジェクト](https://github.com/vuejs/babel-plugin-transform-vue-jsx#h-auto-injection) されるためです。よって `(h)` パラメータは削除することができます。
 
 JSX の使い方をより深く理解するには Vue.js ドキュメントの [JSX のセクション](https://vuejs.org/v2/guide/render-function.html#JSX)を参照してください。
 
@@ -267,7 +267,7 @@ export default {
 }
 ```
 
-`extend` メソッドは二回呼び出されます - 一回目はクライアントのバンドルため、もう一回はサーバーのバンドルのためです。
+`extend` メソッドは 2 回呼び出されます - 1 回目はクライアントのバンドルため、もう 1 回はサーバーのバンドルのためです。
 
 ### チャンク設定をカスタマイズする
 

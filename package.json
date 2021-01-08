@@ -32,7 +32,7 @@
     "@nuxtjs/eslint-module": "^3.0.2",
     "@nuxtjs/netlify-files": "^1.2.0",
     "@nuxtjs/proxy": "^2.1.0",
-    "@nuxtjs/pwa": "^3.3.3",
+    "@nuxtjs/pwa": "^3.3.4",
     "@nuxtjs/style-resources": "^1.0.0",
     "@nuxtjs/svg": "^0.1.12",
     "@types/crawler": "^1.2.0",
@@ -59,7 +59,7 @@
     "stylelint-config-prettier": "^8.0.2",
     "stylelint-config-standard": "^20.0.0",
     "stylelint-scss": "^3.18.0",
-    "textlint": "^11.7.6",
+    "textlint": "^11.7.7",
     "textlint-filter-rule-allowlist": "^2.0.1",
     "textlint-rule-preset-ja-spacing": "^2.0.2",
     "textlint-rule-preset-jtf-style": "^2.3.6"

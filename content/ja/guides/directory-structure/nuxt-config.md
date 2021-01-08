@@ -100,12 +100,12 @@ See more on the [dev property](/docs/2.x/configuration-glossary/configuration-d
 
 ### env
 
-This option lets you define environment variables that are required at build time rather than runtime such as `NODE_ENV=staging` or `VERSION=1.2.3`. However for runtime environment variables the runtime config` is preferred.
+This option lets you define environment variables that are required at build time (rather than runtime) such as `NODE_ENV=staging` or `VERSION=1.2.3`. However, for runtime environment variables `runtimeConfig` is required.
 
 ```js{}[nuxt.config.js]
 export default {
   env: {
-    baseUrl: process.env.BASE_URL
+    baseURL: process.env.BASE_URL
   }
 }
 ```

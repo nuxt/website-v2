@@ -222,12 +222,14 @@ export default {
 }
 ```
 
-```js{}[assets/main.css]
-.layout-enter-active, .layout-leave-active {
-  transition: opacity .5s
+```css{}[assets/main.css]
+.layout-enter-active,
+.layout-leave-active {
+  transition: opacity 0.5s;
 }
-.layout-enter, .layout-leave-active {
-  opacity: 0
+.layout-enter,
+.layout-leave-active {
+  opacity: 0;
 }
 ```
 

@@ -1,6 +1,8 @@
 ---
 title: How to deploy on 21YunBox?
 description: How to deploy Nuxt.js on 21YunBox?
+category: deployment
+position: 216
 ---
 
 [21YunBox](https://www.21yunbox.com) provides blazing fast Chinese CDN, continuous deployment, one-click HTTPS and [other services like managed databases and backend web services](https://www.21yunbox.com/docs/), providing an avenue to launch web projects in China.

@@ -53,12 +53,12 @@ npm run dev
 
 - **nuxt dev** - 開発サーバーを起動します。
 - **nuxt build** - 本番用の webpack を使用してアプリケーションをビルドおよび最適化します。
-- **nuxt start** - （`nuxt build` を実行した後に）本番サーバーを起動します。Heroku や Digital Ocean などの Node.js ホスティングに使用します。
+- **nuxt start** -（`nuxt build` を実行した後に）本番サーバーを起動します。Heroku や Digital Ocean などの Node.js ホスティングに使用します。
 
 ### target: `static`
 
 - **nuxt dev** - 開発サーバーを起動します。
-- **nuxt generate** - （必要に応じて）アプリケーションをビルドし、すべてのルートを HTML ファイルとして生成し、`dist/` ディレクトリに静的にエクスポートします（静的ホスティングに使用されます）。
+- **nuxt generate** -（必要に応じて）アプリケーションをビルドし、すべてのルートを HTML ファイルとして生成し、`dist/` ディレクトリに静的にエクスポートします（静的ホスティングに使用されます）。
 - **nuxt start** - 静的ホスティング（Netlify、Vercel、Surge など）と同じように `dist/` ディレクトリを提供します。デプロイ前のテストに最適です。
 
 ## プロダクション開発

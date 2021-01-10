@@ -210,6 +210,6 @@ ESLint は `.gitignore` に定義されたファイルを無視しますが、�
 
 <div class="Alert Alert--orange">
 
-package.json に `"precommit": "npm run lint"` を追加してコードをコミットする前に自動的に lint するのはベストプラクティスのひとつです。
+package.json に `"precommit": "npm run lint"` を追加してコードをコミットする前に自動的に lint するのはベストプラクティスの 1 つです。
 
 </div>

@@ -169,7 +169,7 @@ export default {
 
 <base-alert type="next">
 
-[runtimeConfig](/docs/2.x/configuration-glossary/configuration-runtime-config)の詳細を見る
+[runtimeConfig](/docs/2.x/configuration-glossary/configuration-runtime-config) の詳細を見る
 
 </base-alert>
 
@@ -187,7 +187,7 @@ export default {
 
 ### generate
 
-このオプションで、アプリケーションの動的なルーティングに用いるパラメータを指定できます。Nuxt.js により HTML ファイルに変換されます。
+このオプションで、Nuxt.js によって HTML ファイルに変換されるアプリケーション内のすべての動的ルートのパラメータを設定することができます。
 
 ```js{}[nuxt.config.js]
 export default {

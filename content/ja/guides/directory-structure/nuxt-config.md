@@ -218,11 +218,11 @@ export default {
 }
 ```
 
-This option lets you define all default meta tags for your application.
+このオプションで、アプリケーションのデフォルトのメタタグを全て指定できます。
 
 <base-alert type="next">
 
-See more on [head integration](/docs/2.x/configuration-glossary/configuration-head)
+[head インテグレーション](/docs/2.x/configuration-glossary/configuration-head)の詳細を見る
 
 </base-alert>
 

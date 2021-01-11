@@ -153,7 +153,7 @@ export default {
 </script>
 ```
 
-Inside your templates you can access your runtimeConfigs directly using `$config.*`
+テンプレートの中では、`$config.*` を使って直接ランタイム設定にアクセスできます。
 
 ```html{}[pages/index.vue]
 <template>
@@ -163,7 +163,7 @@ Inside your templates you can access your runtimeConfigs directly using `$config
 
 <base-alert type="warn">
 
-Your private config could be exposed if you use `$config` outside of a server-only context (for example, if you use `$config` in `fetch`, `asyncData` or directly inside your template).
+サーバー専用のコンテキスト以外で `$config` を使用した場合（例えば `fetch`、 `asyncData`、 あるいはテンプレート内で直接 `$config` を使用した場合など）、プライベートな設定が公開される可能性があります。
 
 </base-alert>
 

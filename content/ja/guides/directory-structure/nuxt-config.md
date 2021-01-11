@@ -280,7 +280,7 @@ export default {
 
 ### plugins
 
-This option lets you define JavaScript plugins that should be run before instantiating the root Vue.js application.
+このオプションで、ルートの Vue.js アプリケーションをインスタンス化する前に実行したい JavaScript plugin を指定できます。
 
 ```js{}[nuxt.config.js]
 export default {
@@ -290,13 +290,13 @@ export default {
 
 <base-alert type="next">
 
-See more on the [plugins property](/docs/2.x/configuration-glossary/configuration-plugins)
+[plugins プロパティ](/docs/2.x/configuration-glossary/configuration-plugins)の詳細を見る
 
 </base-alert>
 
 ### router
 
-With the `router` option you can overwrite the default Nuxt.js configuration of Vue Router.
+`router` オプションで、Nuxt.js のデフォルトの Vue Router 設定を上書きできます。
 
 ```js{}[nuxt.config.js]
 export default {
@@ -308,7 +308,7 @@ export default {
 
 <base-alert type="next">
 
-See more on the [router property](/docs/2.x/configuration-glossary/configuration-router)
+[router プロパティ](/docs/2.x/configuration-glossary/configuration-router)の詳細を見る
 
 </base-alert>
 

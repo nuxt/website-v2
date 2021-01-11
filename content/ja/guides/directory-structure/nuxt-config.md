@@ -240,13 +240,13 @@ export default {
 
 <base-alert type="next">
 
-[loading  インテグレーション](/docs/2.x/configuration-glossary/configuration-loading)の詳細を見る
+[loading インテグレーション](/docs/2.x/configuration-glossary/configuration-loading)の詳細を見る
 
 </base-alert>
 
 ### modules
 
-With this option you can add Nuxt.js modules to your project.
+このオプションで、プロジェクトに Nuxt モジュールを追加できます。
 
 ```js{}[nuxt.config.js]
 export default {
@@ -256,7 +256,7 @@ export default {
 
 <base-alert type="next">
 
-See more on the [modules property](/docs/2.x/configuration-glossary/configuration-modules)
+[modules プロパティ](/docs/2.x/configuration-glossary/configuration-modules)の詳細を見る
 
 </base-alert>
 

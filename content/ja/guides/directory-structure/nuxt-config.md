@@ -338,7 +338,7 @@ export default {
 
 ### srcDir
 
-This option lets you define the source directory of your Nuxt.js application.
+このオプションで、Nuxt.js アプリケーションのソースディレクトリを指定できます。
 
 ```js{}[nuxt.config.js]
 export default {
@@ -346,7 +346,7 @@ export default {
 }
 ```
 
-Project structure example with your Nuxt.js application in the `client` directory.
+`client` ディレクトリにある Nuxt.js アプリケーションのプロジェクト構造の例です。
 
 ```bash
 **-| app/

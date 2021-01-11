@@ -382,7 +382,7 @@ export default {
 
 ### pageTransition
 
-This option lets you define the default properties of the page transitions.
+このオプションで、ページトランジションのデフォルトプロパティを指定できます。
 
 ```js{}[nuxt.config.js]
 export default {
@@ -392,7 +392,7 @@ export default {
 
 <base-alert type="next">
 
-See more on the [transition property](/docs/2.x/configuration-glossary/configuration-transition)
+[transition プロパティ](/docs/2.x/configuration-glossary/configuration-transition)の詳細を見る
 
 </base-alert>
 

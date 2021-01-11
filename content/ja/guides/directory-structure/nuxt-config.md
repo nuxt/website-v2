@@ -169,19 +169,19 @@ export default {
 
 <base-alert type="next">
 
-See more on the [runtimeConfig](/docs/2.x/configuration-glossary/configuration-runtime-config)
+[runtimeConfig](/docs/2.x/configuration-glossary/configuration-runtime-config)の詳細を見る
 
 </base-alert>
 
 <base-alert type="next">
 
-See our blog post on [Moving from @nuxtjs/dotenv to runtime config](/blog/moving-from-nuxtjs-dotenv-to-runtime-config)
+[@nuxtjs/dotenv からランタイム設定への移行](/blog/moving-from-nuxtjs-dotenv-to-runtime-config)のブログ記事を見る
 
 </base-alert>
 
 <base-alert type="next">
 
-See more on the [env property](/docs/2.x/configuration-glossary/configuration-env)
+[env プロパティ](/docs/2.x/configuration-glossary/configuration-env)の詳細を見る
 
 </base-alert>
 

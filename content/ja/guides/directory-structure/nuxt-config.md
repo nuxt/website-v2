@@ -402,16 +402,16 @@ export default {
 
 ### .gitignore
 
-In your .gitignore file you will need to add the following so that they are ignored and not added to version control. `node_modules` which is where all your installed modules are. The `nuxt` folder which is what gets created when running the dev or build commands. The `dist` folder is the folder that gets created when running the generate command.
+.gitignore ファイルに以下の項目を追加して、バージョン管理から無視かつ追加されないようにする必要があります。`node_modules` フォルダはインストールしたモジュールがすべて入っているフォルダです。`nuxt` フォルダは、dev コマンドや build コマンドを実行したときに作成されるフォルダです。`dist` フォルダは generate コマンドの実行時に作成されるフォルダです。
 
 ```markdown{}[.gitignore]
 node_modules .nuxt dist
 ```
 
-### What's next
+### このあとは
 
 <base-alert type="next">
 
-Check out the [configuration-glossary](/docs/2.x/configuration-glossary/configuration-build)
+[設定用語集](/docs/2.x/configuration-glossary/configuration-build)を見てみましょう。
 
 </base-alert>

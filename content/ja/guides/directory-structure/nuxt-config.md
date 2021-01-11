@@ -187,20 +187,20 @@ export default {
 
 ### generate
 
-This option lets you set up parameter values for every dynamic route in your application that will be transformed into HTML files by Nuxt.js.
+このオプションで、アプリケーションの動的なルーティングに用いるパラメータを指定できます。Nuxt.js により HTML ファイルに変換されます。
 
 ```js{}[nuxt.config.js]
 export default {
   generate: {
-    dir: 'gh_pages', // gh_pages/ instead of dist/
-    subFolders: false // HTML files are generated according to the route path
+    dir: 'gh_pages', // dist/ の代わりに gh_pages/ を設定する
+    subFolders: false // HTML ファイルがルートパスに従って生成されます
   }
 }
 ```
 
 <base-alert type="next">
 
-See more on the [generate property](/docs/2.x/configuration-glossary/configuration-generate)
+[generate プロパティ](/docs/2.x/configuration-glossary/configuration-generate)の詳細を見る
 
 </base-alert>
 

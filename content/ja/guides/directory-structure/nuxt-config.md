@@ -396,9 +396,9 @@ export default {
 
 </base-alert>
 
-## Other configuration files
+## その他の設定ファイル
 
-Besides the `nuxt.config.js` there might be other config files in your project root, such as [.eslintrc](https://eslint.org/), [prettier.config.json](https://prettier.io/) or [.gitignore](https://git-scm.com/docs/gitignore). These are used to configure other tools such as your linter, code formatter or your git repository and detached from the `nuxt.config.js`.
+`nuxt.config.js` の他にもプロジェクトのルートに [.eslintrc](https://eslint.org/)、[prettier.config.json](https://prettier.io/)や[.gitignore](https://git-scm.com/docs/gitignore) などの設定ファイルがあるかもしれません。これらは linter やコードフォーマッタ、git リポジトリなどの他のツールを設定するために使われ、`nuxt.config.js` から切り離されています。
 
 ### .gitignore
 

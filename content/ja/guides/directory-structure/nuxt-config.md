@@ -142,7 +142,7 @@ export default {
 
 #### **Using your config values:**
 
-You can then access these values anywhere by using the context in your pages, store, components and plugins by using `this.$config` or `context.$config`.
+ページ、ストア、コンポーネント、プラグインのコンテキストで、`this.$config` や `context.$config` を使用することで、どこからでもこれらの値にアクセスすることができます。
 
 ```html{}[pages/index.vue]
 <script>

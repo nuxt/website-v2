@@ -262,7 +262,7 @@ export default {
 
 ### modulesDir
 
-The modulesDir property is used to set the modules directories for path resolving. For example: Webpack's resolveLoading, nodeExternals and postcss. The configuration path is relative to `options.rootDir` (default: process.cwd()).
+modulesDir プロパティは、モジュールディレクトリの設定でパス解決のために使用します。例えば Webpack の resolveLoading、 nodeExternals や postcss です。設定パスは `options.rootDir` （デフォルト: process.cwd()）からの相対パスになります。
 
 ```js{}[nuxt.config.js]
 export default {
@@ -270,11 +270,11 @@ export default {
 }
 ```
 
-Setting this field may be necessary if your project is organized as a Yarn workspace-styled mono-repository.
+プロジェクトが Yarn ワークスペーススタイルのモノリポジトリで構成されている場合はこのフィールドが必要になるかもしれません。
 
 <base-alert type="next">
 
-See more on the [modulesDir property](/docs/2.x/configuration-glossary/configuration-modulesdir)
+[modulesDir プロパティ](/docs/2.x/configuration-glossary/configuration-modulesdir)の詳細を見る
 
 </base-alert>
 

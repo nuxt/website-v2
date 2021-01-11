@@ -116,8 +116,8 @@ export default {
 
 #### `publicRuntimeConfig`
 
-- should hold all env variables that are public as these will be exposed on the frontend. This could include a reference to your public URL for example.
-- is available using `$config` in both server and client.
+- フロントエンドに公開されるすべての env 変数を保持しなければなりません。例として公開 URL への参照などを含めることができます。
+- サーバーとクライアントの両方で `$config` を使って利用できます。
 
 ```js{}[nuxt.config.js]
 export default {

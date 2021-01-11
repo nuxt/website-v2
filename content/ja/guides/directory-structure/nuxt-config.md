@@ -100,7 +100,7 @@ export default {
 
 ### env
 
-This option lets you define environment variables that are required at build time (rather than runtime) such as `NODE_ENV=staging` or `VERSION=1.2.3`. However, for runtime environment variables `runtimeConfig` is required.
+このオプションを使うと、`NODE_ENV=staging` や `VERSION=1.2.3` のように、ビルド時（ランタイムではなく）に必要な環境変数を定義することができます。ただし、ランタイム環境変数の場合は `runtimeConfig` が必要です。
 
 ```js{}[nuxt.config.js]
 export default {

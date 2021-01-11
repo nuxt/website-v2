@@ -15,7 +15,7 @@ csb_link: https://codesandbox.io/embed/github/nuxt-academy/examples/tree/master/
 
 <base-alert type="next">
 
-Obtenga más información en el libro Funciones en el capítulo [carga](/docs/2.x/features/loading).
+Obtenga más información en el libro de Características en el capítulo [carga](/docs/2.x/features/loading).
 
 </base-alert>
 

@@ -12,7 +12,7 @@ csb_link: https://codesandbox.io/embed/github/nuxt-academy/examples/tree/master/
 
 <base-alert type="next">
 
-Obten más información en el libro de Introducción en el capitulo de [instalacion](/docs/2.x/get-started/installation).
+Obten más información en el libro de Introducción en el capítulo de [instalación](/docs/2.x/get-started/installation).
 
 </base-alert>
 

@@ -18,7 +18,7 @@ csb_link: https://codesandbox.io/embed/github/nuxt-academy/examples/tree/master/
 
 <base-alert type="next">
 
-Otén más información en el capíutlo de [middleware](/docs/2.x/directory-structure/middleware#router-middleware) del libro de Estructura de Directorio.
+Obtén más información en el capíutlo de [middleware](/docs/2.x/directory-structure/middleware#router-middleware) del libro de Estructura de Directorio.
 
 </base-alert>
 

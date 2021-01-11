@@ -10,13 +10,13 @@ csb_link: https://codesandbox.io/embed/github/nuxt-academy/examples/tree/master/
 
 `components/LoadingBar.vue` muestra un indicador de carga personalizado, en lugar de la barra de carga predeterminada.
 
-`nuxt.config.js` contiene la propiedad` loading` que importa el componente de carga
+`nuxt.config.js` contiene la propiedad `loading` que importa el componente de carga
 
-`pages/loading.vue` inicia programáticamente el cargador, por lo que obligamos a la página a tardar 2 segundos en cargarse
+`pages/loading.vue` inicia programáticamente el cargador, por lo que obligamos a la página a tardar 2 segundos en cargarse.
 
 <base-alert type="next">
 
-Obtenga más información en el libro Funciones en el capítulo [carga](/docs/2.x/features/loading).
+Obtenga más información en el libro de Características en el capítulo [carga](/docs/2.x/features/loading).
 
 </base-alert>
 

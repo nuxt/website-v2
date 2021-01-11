@@ -16,7 +16,7 @@ csb_link: https://codesandbox.io/embed/github/nuxt-academy/examples/tree/master/
 
 `plugins/nuxt-ready.client.js` muestra:
 
-- `window.onNuxtReady` - registra un mensaje en la consola cuando Nuxt es reday.
+- `window.onNuxtReady` - registra un mensaje en la consola cuando Nuxt es listo.
 
 <base-alert type="next">
 

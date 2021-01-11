@@ -18,7 +18,7 @@ Aprende más acerca de [vue routers](https://router.vuejs.org/api/#exact-active-
 
 <base-alert type="next">
 
-Obtenga más información sobre las clases activas en el **libro Funciones** en el capitulo de [Components de Nuxt](/docs/2.x/features/nuxt-components#link-classes).
+Obtenga más información sobre las clases activas en el libro de Características en el capitulo de [Components de Nuxt](/docs/2.x/features/nuxt-components#link-classes).
 
 </base-alert>
 

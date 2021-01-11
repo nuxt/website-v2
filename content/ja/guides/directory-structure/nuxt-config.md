@@ -116,7 +116,7 @@ export default {
 
 #### `publicRuntimeConfig`
 
-- フロントエンドに公開されるすべての env 変数を保持しなければなりません。例として公開 URL への参照などを含めることができます。
+- フロントエンドに公開されるすべての env 変数を保持しなければなりません。例として公開 URL への参照を含めることができます。
 - サーバーとクライアントの両方で `$config` を使って利用できます。
 
 ```js{}[nuxt.config.js]
@@ -129,8 +129,8 @@ export default {
 
 #### `privateRuntimeConfig`
 
-- should hold all env variables that are private and that should not be exposed on the frontend. This could include a reference to your API secret tokens for example.
-- is only available on server using same `$config` (it overrides publicRuntimeConfig)
+- プライベートでフロントエンドでは公開されてはいけないすべての env 変数を保持しなければなりません。例として API のシークレットトークンへの参照を含めることができます。
+- サーバーのみで同じく `$config` を使って利用できます。（publicRuntimeConfig を上書きします）
 
 ```js{}[nuxt.config.js]
 export default {

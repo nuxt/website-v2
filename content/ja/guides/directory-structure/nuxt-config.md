@@ -112,7 +112,7 @@ export default {
 
 ### runtimeConfig
 
-The runtime config has built-in dotenv support providing better security and faster development. The runtime config is added to the Nuxt payload so there is no need to rebuild in order to update the runtime configuration when working in development or with Server-side rendering or client side only applications. Although for static sites you will still need to regenerate your site to see these changes.
+ランタイム設定には dotenv サポートが組み込まれているため、より良いセキュリティと高速な開発を実現します。ランタイム設定は Nuxt ペイロードに追加されるので、開発中やサーバーサイドレンダリング、クライアントサイドのみのアプリケーションでランタイム設定を更新するために再構築する必要はありません。しかし、静的サイトでは変更を確認するためにサイトを再生成する必要があります。
 
 #### `publicRuntimeConfig`
 

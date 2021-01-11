@@ -163,7 +163,7 @@ export default {
 
 <base-alert type="warn">
 
-サーバー専用のコンテキスト以外で `$config` を使用した場合（例えば `fetch`、 `asyncData`、 あるいはテンプレート内で直接 `$config` を使用した場合など）、プライベートな設定が公開される可能性があります。
+サーバーのみのコンテキスト以外で `$config` を使用した場合（例えば `fetch`、 `asyncData`、 あるいはテンプレート内で直接 `$config` を使用した場合など）、プライベートな設定が公開される可能性があります。
 
 </base-alert>
 

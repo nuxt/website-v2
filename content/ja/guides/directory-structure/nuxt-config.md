@@ -228,7 +228,7 @@ export default {
 
 ### loading
 
-This option lets you customize the loading component that Nuxt.js uses by default.
+このオプションで、Nuxt.js のデフォルトのローディングコンポーネントをカスタマイズできます。
 
 ```js{}[nuxt.config.js]
 export default {
@@ -240,7 +240,7 @@ export default {
 
 <base-alert type="next">
 
-See more on [loading integration](/docs/2.x/configuration-glossary/configuration-loading)
+[loading  インテグレーション](/docs/2.x/configuration-glossary/configuration-loading)の詳細を見る
 
 </base-alert>
 

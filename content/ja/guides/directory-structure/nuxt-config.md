@@ -84,7 +84,7 @@ export default {
 
 ### dev
 
-このオプションで、Nuxt.js の `development` または `production` モードを定義できます。（Nuxt.js をプログラム的に使う際に重要です）
+このオプションで、Nuxt.js の `development` または `production` モードを定義できます。（Nuxt.js をプログラム上で使う際に重要です）
 
 ```js{}[nuxt.config.js]
 export default {
@@ -140,7 +140,7 @@ export default {
 }
 ```
 
-#### **Using your config values:**
+#### **設定値を使用する:**
 
 ページ、ストア、コンポーネント、プラグインのコンテキストを使って、`this.$config` や `context.$config` を使用することで、どこからでもこれらの値にアクセスすることができます。
 
@@ -398,7 +398,7 @@ export default {
 
 ## その他の設定ファイル
 
-`nuxt.config.js` の他にもプロジェクトのルートに [.eslintrc](https://eslint.org/)、[prettier.config.json](https://prettier.io/)や[.gitignore](https://git-scm.com/docs/gitignore) などの設定ファイルがあるかもしれません。これらは linter やコードフォーマッタ、git リポジトリなどの他のツールを設定するために使われ、`nuxt.config.js` から切り離されています。
+`nuxt.config.js` の他にもプロジェクトのルートに [.eslintrc](https://eslint.org/)、[prettier.config.json](https://prettier.io/) や [.gitignore](https://git-scm.com/docs/gitignore) などの設定ファイルがあるかもしれません。これらは linter やコードフォーマッタ、git リポジトリなどの他のツールを設定するために使われ、`nuxt.config.js` から切り離されています。
 
 ### .gitignore
 

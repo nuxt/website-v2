@@ -58,7 +58,7 @@ export default {
 
 ### css
 
-This option lets you define the CSS files, modules, and libraries you want to include globally (on every page).
+このオプションで、グローバルに（すべてのページで）利用したい CSS ファイル/モジュール/ライブラリを指定できます。
 
 ```js{}[nuxt.config.js]
 export default {
@@ -66,7 +66,7 @@ export default {
 }
 ```
 
-You can omit the file extension for CSS, SCSS, Postcss, Less, Stylus, ... files listed in the css array in your nuxt config file.
+nuxt の設定ファイルで、css プロパティの配列に記述する CSS/SCSS/Postcss/Less/Stylus/ などのファイルの拡張子は省略することができます。
 
 ```js{}[nuxt.config.js]
 export default {
@@ -74,11 +74,11 @@ export default {
 }
 ```
 
-By omitting the extension, if you have a css file and decide to change to use sass for example, you won't have to update your nuxt.config as it will use the new extension once the filename remains the same.
+拡張子を省略することで、例えば css ファイルを使用していて sass を使うように変更した場合でも、ファイル名が同じままであれば新しい拡張子が使用されるので、nuxt.config を更新する必要はありません。
 
 <base-alert type="next">
 
-See more on the [css property](/docs/2.x/configuration-glossary/configuration-css)
+[css プロパティ](/docs/2.x/configuration-glossary/configuration-css)の詳細を見る
 
 </base-alert>
 

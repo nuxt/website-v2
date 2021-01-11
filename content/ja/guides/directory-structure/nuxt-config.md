@@ -314,7 +314,7 @@ export default {
 
 ### server
 
-This option lets you configure the connection variables for the server instance of your Nuxt.js application.
+このオプションで、Nuxt.js アプリケーションのサーバーインスタンスにおける接続変数を設定できます。
 
 ```js{}[nuxt.config.js]
 import path from 'path'
@@ -332,7 +332,7 @@ export default {
 
 <base-alert type="next">
 
-See more on the [server property](/docs/2.x/configuration-glossary/configuration-server)
+[server プロパティ](/docs/2.x/configuration-glossary/configuration-server)の詳細を見る
 
 </base-alert>
 

@@ -84,7 +84,7 @@ export default {
 
 ### dev
 
-This option lets you define the `development` or `production` mode of Nuxt.js (important when you use Nuxt.js programmatically)
+このオプションで、Nuxt.js の `development` または `production` モードを定義できます。（Nuxt.js をプログラム的に使う際に重要です）
 
 ```js{}[nuxt.config.js]
 export default {
@@ -94,7 +94,7 @@ export default {
 
 <base-alert type="next">
 
-See more on the [dev property](/docs/2.x/configuration-glossary/configuration-dev)
+[dev プロパティ](/docs/2.x/configuration-glossary/configuration-dev)の詳細を見る
 
 </base-alert>
 

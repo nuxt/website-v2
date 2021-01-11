@@ -37,13 +37,13 @@ Nuxt.js ではデフォルトの設定でほとんどのユースケースをカ
 
 ### build
 
-This option lets you configure various settings for the `build` step, including `loaders`, `filenames`, the `webpack` config and `transpilation`.
+このオプションで、`loaders`、`filenames` や `webpack` の設定、`transpilation` を含む `build` ステップにおけるさまざまな設定を行うことができます。
 
 ```js{}[nuxt.config.js]
 export default {
   build: {
     /*
-     ** You can extend webpack config here
+     ** ここで webpack の設定を拡張することができます。
      */
     extend(config, ctx) {}
   }
@@ -52,7 +52,7 @@ export default {
 
 <base-alert type="next">
 
-See more on the [build property](/docs/2.x/configuration-glossary/configuration-build)
+[build プロパティ](/docs/2.x/configuration-glossary/configuration-build)の詳細を見る
 
 </base-alert>
 

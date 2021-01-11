@@ -366,17 +366,17 @@ export default {
 
 ### dir
 
-This option lets you define custom names of your Nuxt.js directories.
+このオプションで、Nuxt.js のディレクトリのカスタムネームを指定できます。
 
 ```js{}[nuxt.config.js]
 export default {
-  pages: 'views' // Nuxt will look for the views/ instead of the pages/ folder
+  pages: 'views' // Nuxt は pages/ フォルダの代わりに views/ を探します。
 }
 ```
 
 <base-alert type="next">
 
-See more on the [dir property](/docs/2.x/configuration-glossary/configuration-dir)
+[dir プロパティ](/docs/2.x/configuration-glossary/configuration-dir)の詳細を見る
 
 </base-alert>
 

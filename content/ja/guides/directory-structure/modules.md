@@ -66,6 +66,19 @@ questions:
     correctAnswer: true
 ---
 
+## Exploring Nuxt Modules
+
+Discover our [list of modules](https://modules.nuxtjs.org) to supercharge your Nuxt project, created by the Nuxt team and community.
+
+- 145+ Modules
+- 89+ Maintainers
+
+<base-alert type="next">
+
+Check out [modules.nuxtjs.org](https://modules.nuxtjs.org)
+
+</base-alert>
+
 <app-modal :src="img" :alt="imgAlt"></app-modal>
 
 While developing production-grade applications with Nuxt.js you might find that the framework's core functionality is not enough. Nuxt.js can be extended with configuration options and plugins, but maintaining these customizations across multiple projects is tedious, repetitive and time-consuming. On the other hand, supporting every project's needs out of the box would make Nuxt.js very complex and hard to use.
@@ -102,7 +115,7 @@ Module developers usually provide additionally needed steps and details for usag
 
 </base-alert>
 
-Nuxt.js tries to resolve each item in the modules array using node require path (in the `node_modules`) and then will resolved from the project `srcDir` if `@` alias is used.
+Nuxt.js tries to resolve each item in the modules array using node require path (in the `node_modules`) and then will resolve from the project `srcDir` if `@` alias is used.
 
 <base-alert>
 
@@ -121,22 +134,21 @@ export default {
   exampleMsg: 'hello',
   modules: [
     // Simple usage
-    '~/modules/example'[
-      // Passing options directly
-      ('~/modules/example', { token: '123' })
-    ]
+    '~/modules/example',
+    // Passing options directly
+    ['~/modules/example', { token: '123' }]
   ]
 }
 ```
 
 ```js{}[modules/example.js]
-export default function ExampleModule (moduleOptions) {
+export default function ExampleModule(moduleOptions) {
   console.log(moduleOptions.token) // '123'
   console.log(this.options.exampleMsg) // 'hello'
-	this.addPlugin(
-	this.nuxt.hook('ready', async (nuxt) => {
-		console.log('Nuxt is ready')
-	})
+
+  this.nuxt.hook('ready', async nuxt => {
+    console.log('Nuxt is ready')
+  })
 }
 
 // REQUIRED if publishing the module as npm package
@@ -145,7 +157,7 @@ module.exports.meta = require('./package.json')
 
 ## 1) ModuleOptions
 
-`moduleOptions`: This is the object passed using the `modules` array by the user. We can use it to customize it's behavior.
+`moduleOptions`: This is the object passed using the `modules` array by the user. We can use it to customize its behavior.
 
 ### Top level options
 
@@ -252,11 +264,11 @@ nuxt.hook('listen', async (server, {host, port})) => {
 
 `this`: Context of modules. All modules will be called within context of the ModuleContainer instance.
 
-Please look into the [ModuleContainer](/guides/internals-glossary/internals-module-container) class docs for available methods.
+Please look into the [ModuleContainer](/docs/2.x/internals-glossary/internals-module-container) class docs for available methods.
 
 ### Run Tasks on Specific hooks
 
-Your module may need to do things only on specific conditions and not just during Nuxt.js initialization. We can use the powerful Nuxt.js hooks to do tasks on specific events (based on [Hable](https://github.com/jsless/hable)). Nuxt.js will wait for your function if it returns a Promise or is defined as `async`.
+Your module may need to do things only on specific conditions and not just during Nuxt.js initialization. We can use the powerful Nuxt.js hooks to do tasks on specific events (based on [Hookable](https://github.com/nuxt-contrib/hookable)). Nuxt.js will wait for your function if it returns a Promise or is defined as `async`.
 
 Here are some basic examples:
 
@@ -382,7 +394,7 @@ export default function asyncModule($http) {
 
 <base-alert type="info">
 
-There are way more hooks and possibilities for modules. Please read the [Nuxt Internals](/guides/internals-glossary/internals) to find out more about the nuxt-internal API.
+There are way more hooks and possibilities for modules. Please read the [Nuxt Internals](/docs/2.x/internals-glossary/internals) to find out more about the nuxt-internal API.
 
 </base-alert>
 
@@ -418,7 +430,7 @@ yarn add -D @nuxtjs/eslint-module
 ```
 
   </code-block>
-  <code-block label="NPM">
+  <code-block label="npm">
 
 ```bash
 npm install --save-dev @nuxtjs/eslint-module
@@ -445,21 +457,5 @@ Your module is a `buildModule` unless:
 If you are going to offer using `buildModules` please mention that this feature is only available since Nuxt v2.9. Older users should upgrade Nuxt or use the `modules` section.
 
 </base-alert>
-
-## The modulesDir Property
-
-The modulesDir property is used to set the modules directories for path resolving. For example: Webpack's resolveLoading, nodeExternals and postcss. The configuration path is relative to `options.rootDir` (default: process.cwd()).
-
-```js{}[nuxt.config.js]
-export default {
-  modulesDir: ['../../node_modules']
-}
-```
-
-Setting this field may be necessary if your project is organized as a Yarn workspace-styled mono-repository.
-
-<app-modal>
-  <code-sandbox  :src="csb_link"></code-sandbox>
-</app-modal>
 
 <quiz :questions="questions"></quiz>

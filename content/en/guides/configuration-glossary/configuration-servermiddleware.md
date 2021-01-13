@@ -26,6 +26,14 @@ Additional to them, we introduced a `prefix` option which defaults to `true`. It
 
 Don't confuse it with [routes middleware](/docs/2.x/directory-structure/middleware) which are called before each route by Vue in Client Side or SSR. Middleware listed in the `serverMiddleware` property runs server-side **before** `vue-server-renderer` and can be used for server specific tasks like handling API requests or serving assets.
 
+<base-alert>
+
+Do not add serverMiddleware to the middleware/ directory.
+
+Middleware, are bundled by webpack into your production bundle and run on beforeRouteEnter. If you add serverMiddleware to the middleware/ directory it will be wrongly picked up by Nuxt as middleware and will add wrong dependencies to your bundle or generate errors.
+
+</base-alert>
+
 ## Usage
 
 If middleware is String Nuxt.js will try to automatically resolve and require it.

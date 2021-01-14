@@ -38,8 +38,7 @@ These indicators are imported from the awesome [SpinKit](http://tobiasahlin.com/
 - three-bounce
 - wandering-cubes
 
-Built-in indicators support `color` and `background` options.
-
+feat: Add a description on how to enable dark mode for the loading indicator
 ## Custom indicators
 
 If you need your own special indicator, a String value or Name key can also be a path to an HTML template of indicator source code! All of the options are passed to the template, too.

@@ -408,6 +408,12 @@ Configuration for the [html-minifier](https://github.com/kangax/html-minifier) p
 
 > More details are in [vue-style-loader options](https://github.com/vuejs/vue-style-loader#options).
 
+## loadingScreen
+- Type: `Boolean` or `Object`
+- Default: `{}`
+
+> Disables or enables (default) the [Nuxt loading screen](https://github.com/nuxt/screens). If you pass `false` to disable it, the webpack dev server will not respond until it has fully started up.
+
 ## optimization
 
 - Type: `Object`

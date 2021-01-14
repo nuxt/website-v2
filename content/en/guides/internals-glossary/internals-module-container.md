@@ -77,7 +77,6 @@ If you choose to specify a `fileName`, you can configure a custom path for the `
 }
 ```
 
-
 ### addServerMiddleware (middleware)
 
 Pushes middleware into [options.serverMiddleware](/docs/2.x/configuration-glossary/configuration-servermiddleware).
@@ -89,10 +88,6 @@ Allows easily extending webpack build config by chaining [options.build.extend](
 ### extendRoutes (fn)
 
 Allows easily extending routes by chaining [options.build.extendRoutes](/docs/2.x/configuration-glossary/configuration-router#extendroutes) function.
-
-### extendPlugins (fn)
-
-Allows easily extending plugins by chaining [options.extendPlugins](/docs/2.x/configuration-glossary/configuration-extend-plugins) function.
 
 ### addModule (moduleOpts, requireOnce)
 

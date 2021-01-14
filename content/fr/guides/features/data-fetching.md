@@ -116,7 +116,7 @@ Nous avons aussi accès à `this.$fetch()`, utile si nous voulons appeler le hoo
 
 ```html{}[components/NuxtMountains.vue]
 <template>
-  <p v-if="$fetchState.pending">Récupération des montages... ⛰️</p>
+  <p v-if="$fetchState.pending">Récupération des montagnes... ⛰️</p>
   <p v-else-if="$fetchState.error">Une erreur est survenue :(</p>
   <div v-else>
     <h1>Montagnes Nuxt</h1>

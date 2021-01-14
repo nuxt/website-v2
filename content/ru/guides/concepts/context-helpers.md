@@ -48,7 +48,7 @@ questions:
 
 <app-modal :src="img" :alt="imgAlt"></app-modal>
 
-Объект `context` доступен в специфических для Nuxt функциях, таких как [asyncData](/docs/2.x/features/data-fetching#async-data), [plugins](/docs/2.x/directory-structure/plugins), [middleware](/docs/2.x/directory-structure/middleware) и [nuxtServerInit](/docs/2.x/directory-structure/store#the-nuxtserverinit-action). Это предоставляет *дополнительную* и часто необязательную информацию о текущем запросе к приложению.
+Объект `context` доступен в специфических для Nuxt функциях, таких как [asyncData](/docs/2.x/features/data-fetching#async-data), [plugins](/docs/2.x/directory-structure/plugins), [middleware](/docs/2.x/directory-structure/middleware) и [nuxtServerInit](/docs/2.x/directory-structure/store#the-nuxtserverinit-action). Это предоставляет _дополнительную_ и часто необязательную информацию о текущем запросе к приложению.
 
 Прежде всего контекст используется для предоставления доступа к другим частям Nuxt.js приложения, например, к Vuex или к экземпляру `connect`. Таким образом, у нас в контексте есть объекты `req` и `res`, доступные на стороне сервера и `store`, доступный всегда. Со временем контекст был дополнен многими другими полезными переменными и сокращениями. Теперь у нас есть доступ к функционалу HMR в режиме разработки, к текущему `route`, `params` и `query` страницы, а также доступ к переменным среды. Кроме того, функции модулей и хелперы могут быть доступны в контексте, как на стороне сервера, так и на стороне клиента.
 
@@ -93,28 +93,28 @@ function (context) { // Может быть asyncData, nuxtServerInit, ...
 
 ### Используйте параметры страницы для запроса данных из API
 
-The context directly exposes possible dynamic parameters of the route via `context.params`. In the following example, we call an API via the `nuxt/http` module using a dynamic page parameter as part of the URL. Modules, like the [nuxt/http](https://http.nuxtjs.org/) module, can expose own functions which are then available through the [context.app](http://context.app) object.
+Контекст напрямую раскрывает возможные динамические параметры маршрута через `context.params`. В следующем примере мы вызываем API через модуль `nuxt/http`, используя параметр динамической страницы как часть URL. Модули, такие как [nuxt/http](https://http.nuxtjs.org/) модуль, могут использовать собственные функции, которые затем доступны через объект [context.app](http://context.app).
 
-Also, we wrap the API call in a `try/catch` statement to handle potential errors. With the `context.error` function, we can directly show Nuxt's error page and pass in the occurred error.
+Кроме того, мы оборачиваем наш вызов API с помощью `try/catch` конструкции, для обработки потенциальных ошибок. С помощью функции `context.error` мы можем непосредственно показать страницу ошибки Nuxt и передать в нее возникшую ошибку.
 
 ```js{}[pages/posts/_id.vue]
 export default {
   async asyncData(context) {
     const id = context.params.id
     try {
-      // Using the nuxtjs/http module here exposed via context.app
+      // Использование модуля nuxtjs/http, выставленного через контекст.app.
       const post = await context.app.$http.$get(
         `https://api.nuxtjs.dev/posts/${id}`
       )
       return { post }
     } catch (e) {
-      context.error(e) // Show the nuxt error page with the thrown error
+      context.error(e) // Показать страницу ошибки nuxt с выброшенной ошибкой
     }
   }
 }
 ```
 
-With [ES6](https://hacks.mozilla.org/2015/05/es6-in-depth-destructuring/) you can use this syntax to destructure your context object. You can pass in the objects you want to have access to and then you can use them in the code without using the word context.
+С помощью [ES6](https://hacks.mozilla.org/2015/05/es6-in-depth-destructuring/) вы можете использовать этот синтаксис для деструктуризации вашего объекта контекста. Вы можете передавать объекты, к которым хотите получить доступ, а затем использовать их в коде без использования слова контекст.
 
 ```js{}[pages/posts/_id.vue]
 export default {
@@ -122,26 +122,26 @@ export default {
     const id = params.id
 
     try {
-      // Using the nuxtjs/http module here exposed via context.app
+      // Использование модуля nuxtjs/http, выставленного через контекст.app.
       const post = await $http.$get(`https://api.nuxtjs.dev/posts/${id}`)
       return { post }
     } catch (e) {
-      error(e) // Show the nuxt error page with the thrown error
+      error(e) // Показать страницу ошибки nuxt с выброшенной ошибкой
     }
   }
 }
 ```
 
-Want to use query parameters instead? You then use [context.query.id](/docs/2.x/internals-glossary/context#query) then.
+Хотите использовать query параметры? Тогда используйте [context.query.id](/docs/2.x/internals-glossary/context#query).
 
-### Redirecting users & accessing the store
+### Переадресация пользователей и доступ к хранилищу
 
-Accessing the Vuex store (when you have it set up through the `store` directory) is also possible through the context. It provides a `store` object which can be treated as `this.$store` in Vue components. In addition, we use the `redirect` method, an exposed helper through the context, to redirect the user in case the `authenticated` state is falsy.
+Доступ к Vuex хранилищу (когда он настроен через `store`) также возможен через контекст. Он предоставляет собой объект `store`, который в компонентах Vue может быть вызван как `this.$store`. К тому же, мы используем метод `redirect`, полученным через контекст, для переадресации пользователя если значение `authenticated` является ложным.
 
 ```js
 export default {
   middleware({ store, redirect }) {
-    // retrieving keys via object destructuring
+    // получение ключей через деструктуризацию объектов
     const isAuthenticated = store.state.authenticated
     if (!isAuthenticated) {
       return redirect('/login')
@@ -152,21 +152,21 @@ export default {
 
 <base-alert type="next">
 
-Check out the Internals Glossary book for more examples of the [redirect method](/docs/2.x/internals-glossary/context#redirect)
+Вы можете проверить Internals Глоссарий, если хотите получить больше примеров с [redirect метод](/docs/2.x/internals-glossary/context#redirect)
 
 </base-alert>
 
-## Helpers
+## Хелперы
 
-Besides the shortcuts in the context, there are also other tiny helpers present in your Nuxt.js application.
+Помимо shortcuts (быстрого доступа, ярлыков, ... ?) в контексте, существуют и другие небольшие хелперы в вашем Nuxt.js приложении.
 
-## `$nuxt`: The Nuxt.js helper
+## `$nuxt`: Nuxt.js хелпер
 
-`$nuxt` is a helper designed to improve the user experience and to be an escape hatch in some situations. It is accessible via `this.$nuxt` in Vue components and via `window.$nuxt` otherwise on the client side.
+`$nuxt` - это хелпер, предназначенный для улучшения работы пользователей и для того, чтобы быть спасательным кругом в некоторых ситуациях. Он доступен через `this.$nuxt` в компонентах Vue и через `window.$nuxt` на стороне клиента.
 
-### Connection checker
+### Проверка соединения
 
-The `$nuxt` helper provides a quick way to find out whether the internet connection of a user is present or not: It exposes the boolean values `isOffline` and `isOnline`. We can use these to show a message as soon as the user is offline (for example).
+Хелпер `$nuxt` предоставляет быстрый способ узнать, присутствует ли интернет соединение у пользователя или нет: Он возвращает логические значения `isOffline` и `isOnline`. Мы можем использовать их, чтобы показать сообщение, как только пользователь находится оффлайн (например).
 
 ```html{}[layouts/default.vue]
 <template>
@@ -177,15 +177,15 @@ The `$nuxt` helper provides a quick way to find out whether the internet connect
 </template>
 ```
 
-### Accessing the root instance
+### Доступ к корневому экземпляру
 
-Besides providing DX/UX features, the `$nuxt` helper also provides a shortcut to the root instance of your application from every other component. But that's not everything — you can also access the `$nuxt` helper through `window.$nuxt` which can be used as an escape hatch to gain access to module methods like `$axios` from outside your Vue components. This should be used wisely and **only as last resort**.
+Кроме предоставления возможностей DX/UX, `$nuxt` хелпер также предоставляет доступ к корневому экземпляру вашего приложения из любого компонента. Но это еще не все - вы также можете получить доступ к хелперу `$nuxt` через `window.$nuxt`, который может быть использован для получения доступа к модульным методам вроде `$axios` снаружи ваших компонентов Vue. Это следует использовать с умом и **только в качестве крайней меры**.
 
-### Refreshing page data
+### Обновление данных страницы
 
-When you want to refresh the current page for the user, you don't want to fully reload the page because you might hit the server again and at least re-initialize the whole Nuxt.js application. Instead, you often only want to refresh the data, provided by `asyncData` or `fetch`.
+Когда вы хотите обновить текущую страницу для пользователя, вам не нужно полностью перезагружать страницу, потому что вы можете обратиться к серверу еще раз и заново инициализировать все приложение Nuxt.js. Вместо этого, вы часто хотите только обновить данные, с помочью `asyncData` или `fetch`.
 
-You can do so, by using `this.$nuxt.refresh()`!
+Вы можете сделать это с помощью `this.$nuxt.refresh()`!
 
 ```html
 <template>
@@ -209,9 +209,9 @@ You can do so, by using `this.$nuxt.refresh()`!
 </script>
 ```
 
-#### Controlling the loading bar
+#### Управление полосой загрузки
 
-With `$nuxt`, you can also control Nuxt's loading bar programmatically via `this.$nuxt.$loading`.
+С помощью `$nuxt` вы также можете программно управлять полосой загрузки Nuxt через `this.$nuxt.$load`.
 
 ```js
 export default {
@@ -224,11 +224,11 @@ export default {
 }
 ```
 
-Read more in the corresponding [loading feature chapter](../features/loading)
+Подробнее об этом можно прочитайть в соответствующем разделе [loading feature chapter](../features/loading)
 
-## onNuxtReady helper
+## onNuxtReady хелпер
 
-If you want to run some scripts _after_ your Nuxt.js application has been loaded and is ready, you can use the `window.onNuxtReady` function. This can be useful when you want to execute a function on the client-side without increasing the time to interactive of your site.
+Если вы хотите запустить несколько скриптов _после_ того, как ваше приложение Nuxt.js было загружено и готово, вы можете воспользоваться функцией `window.onNuxtReady`. Это может быть полезно, когда вы хотите выполнить функцию на стороне клиента без увеличения времени на интерактивность вашего сайта.
 
 ```js
 window.onNuxtReady(() => {
@@ -236,9 +236,9 @@ window.onNuxtReady(() => {
 })
 ```
 
-## Process helpers
+## Хелперы по процессам
 
-Nuxt.js injects three boolean values into the global `process` object which will help you to determine whether your app was rendered on the server or fully on the client, as well as checking for static site generation. These helpers are available across your application and are commonly used in `asyncData` userland code.
+Nuxt.js вводит три булевых значения в глобальный `process` объект, которые помогут вам определить, было ли ваше приложение отрисовано на сервере или полностью на клиенте, а также проверить статическую генерацию сайта. Эти хелперы доступны в вашем приложении и обычно используются в методе `asyncData`.
 
 ```html{}[pages/about.vue]
 <template>
@@ -254,6 +254,6 @@ Nuxt.js injects three boolean values into the global `process` object which will
 </script>
 ```
 
-In the example, `renderedOn` will evaluate to `'server'` when using server-side rendering and a user accesses the page directly. When the user would navigate to the page from another part of the application, e.g. by click on a `<NuxtLink>`, it will evaluate to client.
+В примере, `renderedOn` будет оценивать `'server'` при использовании серверного рендеринга и пользователь получает прямой доступ к странице. Когда пользователь перейдет на страницу из другой части приложения, например, нажав на `<NuxtLink>`, ... не знаю как тут выкрутиться с переводом конца предложения :(
 
 <quiz :questions="questions"></quiz>

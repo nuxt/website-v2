@@ -249,7 +249,7 @@ These indicators are imported from the awesome [SpinKit](http://tobiasahlin.com
 - three-bounce
 - wandering-cubes
 
-Built-in indicators support `color` and `background` options.
+Built-in indicators support `color` and `background` options. These options accept both a string (CSS color) or an object with a `light` and `dark` key if you prefer to show different colors when the user has dark mode (`prefers-color-scheme: dark`) enabled.
 
 ## Custom indicators
 

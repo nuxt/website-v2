@@ -224,7 +224,7 @@ export default {
 }
 ```
 
-Подробнее об этом можно прочитайть в соответствующем разделе [loading feature chapter](../features/loading)
+Подробнее об этом можно прочитайть в соответствующем разделе [о функции загрузки](../features/loading)
 
 ## onNuxtReady хелпер
 

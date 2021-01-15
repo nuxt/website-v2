@@ -102,7 +102,7 @@ export default {
   async asyncData(context) {
     const id = context.params.id
     try {
-      // Использование модуля nuxtjs/http, выставленного через контекст.app.
+      // Использование модуля nuxtjs/http, выставленного через context.app.
       const post = await context.app.$http.$get(
         `https://api.nuxtjs.dev/posts/${id}`
       )

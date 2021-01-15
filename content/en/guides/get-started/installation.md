@@ -9,14 +9,14 @@ csb_link: https://codesandbox.io/embed/github/nuxt-academy/guides-examples/tree/
 ## Prerequisites
 
 - [node](https://nodejs.org) - at least v10.13 _We recommend you have the latest LTS version installed._
-- A text editor, we recommend [VSCode](https://code.visualstudio.com/) with the [Vetur](https://marketplace.visualstudio.com/items?itemName=octref.vetur) extension or [WebStorm](https://www.jetbrains.com/webstorm/)
-- A terminal, we recommend using VSCode's [integrated terminal](https://code.visualstudio.com/docs/editor/integrated-terminal) or [Webstorm terminal](https://www.jetbrains.com/help/webstorm/terminal-emulator.html).
+- A text editor, we recommend [VS Code](https://code.visualstudio.com/) with the [Vetur](https://marketplace.visualstudio.com/items?itemName=octref.vetur) extension or [WebStorm](https://www.jetbrains.com/webstorm/)
+- A terminal, we recommend using VS Code's [integrated terminal](https://code.visualstudio.com/docs/editor/integrated-terminal) or [WebStorm terminal](https://www.jetbrains.com/help/webstorm/terminal-emulator.html).
 
 ## Using create-nuxt-app
 
 To get started quickly you can use the [create-nuxt-app](https://github.com/nuxt/create-nuxt-app).
 
-Make sure you have npx installed (npx is shipped by default since NPM 5.2.0) or npm v6.1 or yarn.
+Make sure you have npx installed (npx is shipped by default since npm 5.2.0) or npm v6.1 or yarn.
 
 <code-group>
   <code-block label="Yarn" active>
@@ -26,14 +26,14 @@ yarn create nuxt-app <project-name>
 ```
 
   </code-block>
-  <code-block label="NPX">
+  <code-block label="npx">
 
 ```bash
 npx create-nuxt-app <project-name>
 ```
 
   </code-block>
-    <code-block label="NPM">
+    <code-block label="npm">
 
 ```bash
 npm init nuxt-app <project-name>
@@ -56,7 +56,7 @@ yarn dev
 ```
 
   </code-block>
-  <code-block label="NPM">
+  <code-block label="npm">
 
 ```bash
 cd <project-name>
@@ -115,7 +115,7 @@ Fill the content of your `package.json` with:
 
 #### **What is a package.json file?**
 
-The `package.json` is like the ID card of your project. It contains all the project dependencies and much more. If you don't know what the `package.json` file is, we highly recommend you to have a quick read on the [NPM documentation](https://docs.npmjs.com/creating-a-package-json-file).
+The `package.json` is like the ID card of your project. It contains all the project dependencies and much more. If you don't know what the `package.json` file is, we highly recommend you to have a quick read on the [npm documentation](https://docs.npmjs.com/creating-a-package-json-file).
 
 ### Install Nuxt
 
@@ -129,7 +129,7 @@ yarn add nuxt
 ```
 
   </code-block>
-  <code-block label="NPM">
+  <code-block label="npm">
 
 ```bash
 npm install nuxt
@@ -184,7 +184,7 @@ yarn dev
 ```
 
   </code-block>
-  <code-block label="NPM">
+  <code-block label="npm">
 
 ```bash
 npm run dev

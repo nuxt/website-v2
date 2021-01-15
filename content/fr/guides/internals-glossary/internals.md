@@ -1,7 +1,7 @@
 ---
 title: Introduction aux modules Nuxt
 description: Mieux comprendre les modules internes de Nuxt
-menu: Introduction aux modules Nuxt
+menu: Modules Nuxt
 category: internals-glossary
 position: 3
 ---
@@ -18,7 +18,7 @@ Ces classes sont le cœur de Nuxt et doivent exister à la fois sur le runtime e
 
 #### Nuxt
 
-- [Classe `Nuxt`](/guides/internals-glossary/nuxt)
+- [Classe `Nuxt`](/guides/internals-glossary/internals-nuxt)
 - Source: [core/nuxt.js](https://github.com/nuxt/nuxt.js/blob/dev/packages/core/src/nuxt.js)
 
 #### Renderer

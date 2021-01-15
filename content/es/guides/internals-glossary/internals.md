@@ -18,7 +18,7 @@ Estas clases son el corazón de Nuxt y deberían existir tanto en tiempo de ejec
 
 #### Nuxt
 
-- [Clase `Nuxt`](/docs/2.x/internals-glossary/nuxt)
+- [Clase `Nuxt`](/docs/2.x/internals-glossary/internals-nuxt)
 - Fuente: [core/nuxt.js](https://github.com/nuxt/nuxt.js/blob/dev/packages/core/src/nuxt.js)
 
 #### Renderer

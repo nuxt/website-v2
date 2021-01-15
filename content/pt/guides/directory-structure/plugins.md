@@ -79,7 +79,7 @@ O diretório `plugins` contém seus plugins Javascript que você deseja executar
 
 Você pode querer usar pacotes/módulos externos em sua aplicação (um ótimo exemplo é o [axios](https://axios.nuxtjs.org/)) para fazer solicitações HTTP para servidor e cliente.
 
-Primeiro, instale-o via NPM ou Yarn.
+Primeiro, instale-o via npm ou Yarn.
 
 <code-group>
   <code-block label="Yarn" active>
@@ -89,7 +89,7 @@ yarn add @nuxtjs/axios
 ```
 
   </code-block>
-  <code-block label="NPM">
+  <code-block label="npm">
 
 ```bash
 npm install @nuxtjs/axios
@@ -154,7 +154,7 @@ yarn add v-tooltip
 ```
 
   </code-block>
-  <code-block label="NPM">
+  <code-block label="npm">
 
 ```bash
 npm install v-tooltip

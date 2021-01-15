@@ -6,7 +6,7 @@ category: deployment
 position: 203
 ---
 
-You can now deploy your static sites to Azure using Azure static web apps. You will need to have your app in Github as Azure static web apps leverages Github actions which allow you to re-build your static site on every git push.
+You can now deploy your static sites to Azure using Azure static web apps. You will need to have your app in GitHub as Azure static web apps leverages GitHub actions which allow you to re-build your static site on every git push.
 
 There are 2 things you need to configure in order to deploy your app to Azure static web apps. The first one is to modify the build command as Azure reads the build command from your package.json and for static sites we need to use the generate command.
 
@@ -33,7 +33,7 @@ The second one is to add a routes.json file which is important for catching cust
 }
 ```
 
-If you want to test out deploying to Azure static web apps, we have created a small demo application that is all setup and configured. You will just need to clone it and add it to your Github repo. You can then follow the steps on - Deploying your app with Azure Static Web Apps.
+If you want to test out deploying to Azure static web apps, we have created a small demo application that is all setup and configured. You will just need to clone it and add it to your GitHub repo. You can then follow the steps on - Deploying your app with Azure Static Web Apps.
 
 [Clone the demo app](https://github.com/debs-obrien/nuxtjs-azure-static-app)
 
@@ -43,7 +43,7 @@ If you want to test out deploying to Azure static web apps, we have created a sm
 
 1. Navigate to the [Azure Portal](https://portal.azure.com/).
 2. Click **Create a Resource** then search for **Static App** and select it.
-3. Select a subscription from the *Subscription* dropdown list or use the default one.
+3. Select a subscription from the *Subscription* drop-down list or use the default one.
 4. Click the **New** link below the *Resource group* dropdown. In *New resource group name*, type **nuxt** and click **OK**
 5. Provide a globally unique name for your app in the **Name** text box. Valid characters include `a-z`, `A-Z`, `0-9`, and `-`. The app name is used to identify the app in your list of resources therefore it is a good idea to name your app using the name of your repository.
 6. In the *Region* dropdown, choose a region closest to you.
@@ -86,9 +86,9 @@ Congrats your static site is now hosted on Azure static web apps.
 
 ## Rebuild your static app and monitoring deployment
 
-Now all you have to do is modify your code and push your changes. Pushing your changes will activate a Github action and your new site will automatically rebuild. You can monitor the workflow by clicking on the actions tab in your Github repo and you can inspect even further by selecting the last commit you made. You can then watch to see when the deploy is finished or inspect the log if you have any deployment errors.
+Now all you have to do is modify your code and push your changes. Pushing your changes will activate a GitHub action and your new site will automatically rebuild. You can monitor the workflow by clicking on the actions tab in your GitHub repo and you can inspect even further by selecting the last commit you made. You can then watch to see when the deploy is finished or inspect the log if you have any deployment errors.
 
-![Github actions screen](https://user-images.githubusercontent.com/13063165/82118249-34715880-9776-11ea-92e2-dbd21bbf7cb6.png)
+![GitHub actions screen](https://user-images.githubusercontent.com/13063165/82118249-34715880-9776-11ea-92e2-dbd21bbf7cb6.png)
 
 ## Did you know?
 

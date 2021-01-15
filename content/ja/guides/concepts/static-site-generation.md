@@ -1,73 +1,73 @@
 ---
-title: Static Site Generation
-description: With static site generation you can render your application during the build phase and deploy it to any static hosting services such as Netlify, Github pages, Vercel etc.
+title: 静的サイト生成
+description: 静的サイト生成を使用すると、ビルドフェーズでアプリケーションをレンダリングし、Netlify、GitHub ページ、Vercel などの静的ホスティングサービスにデプロイすることができます。
 position: 4
 category: concepts
 questions:
-  - question: You need a server to host your static site
+  - question: 静的サイトをホストするためにはサーバーが必要です。
     answers:
-      - True
-      - False
-    correctAnswer: False
-  - question: What command do you use to generate your static site?
+      - はい
+      - いいえ
+    correctAnswer: いいえ
+  - question: 静的サイト生成にはどのようなコマンドを使用しますか？
     answers:
       - nuxt build
       - nuxt prerender
       - nuxt generate
     correctAnswer: nuxt generate
-  - question: When is your API called?
+  - question: API はいつ呼び出されますか？
     answers:
-      - Every time you navigate to the page with the API content
-      - When you generate your site
-      - When you generate your site and every time you navigate to the page with the API content
-    correctAnswer: When you generate your site
-  - question: Which pages will fallback into single page application mode?
+      - API の呼び出しが記述されたページに遷移したとき
+      - サイトを生成するとき
+      - サイトを生成するときと API の呼び出しが記述されたページに遷移したとき
+    correctAnswer: サイトを生成するとき
+  - question: どのようなページがシングルページアプリケーションモードにフォールバックされますか？
     answers:
-      - The error page
-      - Those that are excluded from generation with generate.excludes
-      - All pages on navigation
-    correctAnswer: Those that are excluded from generation with generate.excludes
-  - question: How do you update the content to your site?
+      - エラーページ
+      - generate.excludes で生成から除外されたもの
+      - 遷移する全てのページ
+    correctAnswer: generate.excludes で生成から除外されたもの
+  - question: どのようにしてサイトのコンテンツを更新しますか？
     answers:
-      - It is updated automatically
-      - You need to regenerate your site
-    correctAnswer: You need to regenerate your site
+      - 自動的に更新されます
+      - サイトを再生成する必要があります
+    correctAnswer: サイトを再生成する必要があります
 ---
 
-With static site generation you can render your application during the build phase and deploy it to any static hosting services such as Netlify, Github pages, Vercel etc. This means that no server is needed in order to deploy your application.
+静的サイト生成を使用すると、ビルドフェーズでアプリケーションをレンダリングし、Netlify、GitHub ページ、Vercel などの静的ホスティングサービスにデプロイすることができます。これは、アプリケーションをデプロイするためにサーバーが必要ないことを意味します。
 
-### Generating your site
+### サイトを生成する
 
-When deploying your site in with [target:static](/docs/2.x/features/deployment-targets#static-hosting) all your `.vue` pages will be generated into HTML and JavaScript files. All calls to APIs will be made and cached in a folder called static inside your generated content so that no calls to your API need to be made on client side navigation.
+[target:static](/docs/2.x/features/deployment-targets#静的ホスティング) でサイトをデプロイすると、すべての `.vue` のページが HTML と JavaScript ファイルに生成されます。API へのすべての呼び出しは、生成されたコンテンツ内の static と呼ばれるフォルダにキャッシュされ、クライアントサイドの遷移で API を呼び出す必要がなくなります。
 
-### Step 1: Browser to CDN
+### ステップ 1：ブラウザから CDN へ
 
-When a browser sends the initial request, it will hit the CDN.
+ブラウザが最初のリクエストを送信すると、CDN にヒットします。
 
-### Step 2: CDN to Browser
+### ステップ 2: CDN からブラウザへ
 
-The CDN will send the already generated HTML, JavaScript and static assets and send it back to the browser. The content is displayed and the Vue.js hydration kicks in, making it reactive. After this process, the page is interactive.
+CDN は、すでに生成された HTML、JavaScript、静的アセットをブラウザに送り返します。コンテンツが表示され、Vue.js のハイドレーションが作動してリアクティブになります。この処理の後、ページはインタラクティブになります。
 
-### Step 3: Browser to Browser
+### ステップ 3: ブラウザからブラウザへ
 
-Navigating between pages with [`<NuxtLink>`](/docs/2.x/features/nuxt-components#the-nuxtlink-component) is done on the client side so you don't hit the CDN again and all API calls will be loaded from the already cached static folder even if you hard refresh the browser.
+ページ間の遷移は [`<NuxtLink>`](/docs/2.x/features/nuxt-components#nuxtlink-コンポーネント) を使ってクライアントサイドで行われるので、CDN に再度ヒットすることはありません。そしてブラウザをハードリフレッシュしても、すべての API への呼び出しはすでにキャッシュされている静的フォルダから読み込まれます。
 
-### SPA Fallback
+### SPA フォールバック
 
-Pages that have been excluded from generation, by using the `generate.exclude` property will fallback to being a single page application. These pages will therefore not exist in the CDN and will be rendered on client side in the browser once the user navigates to that page.
+`generate.exclude` プロパティを使用して生成から除外されたページは、シングルページアプリケーションにフォールバックします。そのため、これらのページは CDN には存在せず、ユーザーがそのページに遷移するとクライアントサイドのブラウザでレンダリングされます。
 
 <base-alert type="next">
 
-To learn more about the [generate property](/docs/2.x/configuration-glossary/configuration-generate#exclude)
+より深く理解するには [generate プロパティ](/docs/2.x/configuration-glossary/configuration-generate#exclude)を参照してください。
 
 </base-alert>
 
-### Updating your content
+### コンテンツを更新する
 
-In order to get new content to your site from your API you will need to regenerate your site again. With most static sites hosting providers you can do this by pushing your changes to your master branch via the git command or via a pull request.
+API から新しいコンテンツを取得するには、サイトを再生成する必要があります。ほとんどの静的サイトのホスティングプロバイダでは、git コマンドやプルリクエストで変更を master ブランチにプッシュすることで再生成することができます。
 
-### Preview Mode
+### プレビューモード
 
-The Preview mode will call your API or your CMS so you can see the changes live before deploying. See the [preview mode](/docs/2.x/features/live-preview) on how to enable this feature.
+プレビューモードは API や CMS を呼び出して、デプロイ前に変更点をライブで確認できるようにします。この機能を有効にする方法については[プレビューモード](/docs/2.x/features/live-preview)を参照してください。
 
 <quiz :questions="questions"></quiz>

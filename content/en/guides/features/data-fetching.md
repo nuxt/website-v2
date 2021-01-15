@@ -77,7 +77,7 @@ In versions of Nuxt before 2.12, the `fetch` hook worked much like `asyncData` d
 </base-alert>
 
 <base-alert>
-If you define `fetch` or `asyncData` inside a mixin and also have it defined in a component/page, the mixin function be overwritten instead of called.
+If you define `fetch` or `asyncData` inside a mixin and also have it defined in a component/page, the mixin function will be overwritten instead of called.
 </base-alert>
 
 These hooks can be used with _any data fetching library_ you choose. We recommend using [@nuxt/http](https://http.nuxtjs.org/) or [@nuxt/axios](https://axios.nuxtjs.org/) for making requests to HTTP APIs. More information about these libraries, such as guides for configuring authentication headers, can be found in their respective documentation.

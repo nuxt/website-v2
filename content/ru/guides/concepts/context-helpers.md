@@ -152,7 +152,7 @@ export default {
 
 <base-alert type="next">
 
-Вы можете проверить Internals Глоссарий, если хотите получить больше примеров с [redirect метод](/docs/2.x/internals-glossary/context#redirect)
+Вы можете проверить Глоссарий, если хотите получить больше примеров с [методом redirect](/docs/2.x/internals-glossary/context#redirect)
 
 </base-alert>
 

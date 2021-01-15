@@ -1,73 +1,73 @@
 ---
-title: Static Site Generation
-description: With static site generation you can render your application during the build phase and deploy it to any static hosting services such as Netlify, Github pages, Vercel etc.
+title: Статическая генерация
+description: С помощью статической генерации вы можете отрендерить ваше приложение на этапе сборки и развернуть его на любом статическом хостинге, таком как: Netlify, Github pages, Versel и т.д.
 position: 4
 category: concepts
 questions:
-  - question: You need a server to host your static site
+  - question: Вам нужен сервер для размещения вашего статического сайта?
     answers:
-      - True
-      - False
-    correctAnswer: False
-  - question: What command do you use to generate your static site?
+      - Да
+      - Нет
+    correctAnswer: Нет
+  - question: Какую команду вы используете для генерации статического сайта?
     answers:
       - nuxt build
       - nuxt prerender
       - nuxt generate
     correctAnswer: nuxt generate
-  - question: When is your API called?
+  - question: Когда вызывается ваш API?
     answers:
-      - Every time you navigate to the page with the API content
-      - When you generate your site
-      - When you generate your site and every time you navigate to the page with the API content
-    correctAnswer: When you generate your site
-  - question: Which pages will fallback into single page application mode?
+      - Каждый раз при переходе на страницу с содержимым API
+      - Когда вы создаете ваш сайт
+      - Когда вы создаете ваш сайт и каждый раз при переходе на страницу с содержимым API
+    correctAnswer: Когда вы создаете ваш сайт
+  - question: Какие страницы будут переходить в режим одностраничного приложения (SPA)?
     answers:
-      - The error page
-      - Those that are excluded from generation with generate.excludes
-      - All pages on navigation
-    correctAnswer: Those that are excluded from generation with generate.excludes
-  - question: How do you update the content to your site?
+      - Страница с ошибкой
+      - Те страницы, которые исключены из генерации с помощью generate.excludes
+      - Все страницы навигации
+    correctAnswer: Те страницы, которые исключены из генерации с помощью generate.excludes
+  - question: Как обновить содержимое (контент) на вашем сайте?
     answers:
-      - It is updated automatically
-      - You need to regenerate your site
-    correctAnswer: You need to regenerate your site
+      - Он обновляется автоматически
+      - Вам нужно сгенерировать сайт еще раз
+    correctAnswer: Вам нужно сгенерировать сайт еще раз
 ---
 
-With static site generation you can render your application during the build phase and deploy it to any static hosting services such as Netlify, Github pages, Vercel etc. This means that no server is needed in order to deploy your application.
+С помощью статической генерации вы можете показать (представить, отрендерить) ваше приложение на этапе сборки и развернуть его на любом статическом хостинге, таком как: Netlify, Github pages, Versel и т.д. Это означает, что для развертывания вашего приложения не требуется никакого сервера.
 
-### Generating your site
+### Генерация вашего сайта
 
-When deploying your site in with [target:static](/guides/features/deployment-targets#static-hosting) all your `.vue` pages will be generated into HTML and JavaScript files. All calls to APIs will be made and cached in a folder called static inside your generated content so that no calls to your API need to be made on client side navigation.
+При развертывании вашего сайта с [target:static](/docs/2.x/features/deployment-targets#static-hosting) все ваши `.vue` страницы будут сгенерированы в HTML and JavaScript файлы. Все вызовы к API будут производиться и кэшироваться в специальной папке static внутри генерируемого вами контента, поэтому вам не нужно вызывать ваш API при навигации на стороне клиента.
 
-### Step 1: Browser to CDN
+### Step 1: Браузер в CDN
 
-When a browser sends the initial request, it will hit the CDN.
+Когда браузер отправляет начальный запрос, он попадает на CDN.
 
-### Step 2: CDN to Browser
+### Step 2: CDN в Браузер
 
-The CDN will send the already generated HTML, JavaScript and static assets and send it back to the browser. The content is displayed and the Vue.js hydration kicks in, making it reactive. After this process, the page is interactive.
+CDN отправит уже сгенерированные HTML, JavaScript и статические файлы обратно в браузер. Содержимое отобразится и Vue.js запустит гидратацию делая данные реактивными. После этого страница становится интерактивной.
 
-### Step 3: Browser to Browser
+### Step 3: Браузер в Браузер
 
-Navigating between pages with [`<NuxtLink>`](/guides/features/nuxt-components#the-nuxtlink-component) is done on the client side so you don't hit the CDN again and all API calls will be loaded from the already cached static folder even if you hard refresh the browser.
+Навигация между страницами с помощью [`<NuxtLink>`](/docs/2.x/features/nuxt-components#the-nuxtlink-component) делается на стороне клиента, чтобы вы не заходили на CDN снова, и все вызовы API будут загружены из уже кэшированной статической папки, даже если вы обновите страницу браузера.
 
 ### SPA Fallback
 
-Pages that have been excluded from generation, by using the `generate.exclude` property will fallback to being a single page application. These pages will therefore not exist in the CDN and will be rendered on client side in the browser once the user navigates to that page.
+Страницы, которые были исключены из генерации с помощью `generate.exclude` будут возвращены в качестве одностраничного приложения. Поэтому эти страницы не будут существовать в CDN и будут отображаться на клиентской стороне в браузере после того, как пользователь перейдет на эту страницу.
 
 <base-alert type="next">
 
-To learn more about the [generate property](/guides/configuration-glossary/configuration-generate#exclude)
+Узнать больше о [generate property](/docs/2.x/configuration-glossary/configuration-generate#exclude)
 
 </base-alert>
 
-### Updating your content
+### Обновление вашего содержимого
 
-In order to get new content to your site from your API you will need to regenerate your site again. With most static sites hosting providers you can do this by pushing your changes to your master branch via the git command or via a pull request.
+Для того, чтобы получить новый контент на ваш сайт с вашего API, вам нужно будет сгенерировать ваш сайт заново. На большинстве статических сайтов хостинг-провайдеров это можно сделать сохранив ваши изменеия в ветку master с помощью git команды или pull request.
 
-### Preview Mode
+### Режим предварительного просмотра
 
-The Preview mode will call your API or your CMS so you can see the changes live before deploying. See the [preview mode](/guides/features/live-preview) on how to enable this feature.
+Режим предварительного просмотра вызовет ваш API или CMS, чтобы вы могли увидеть изменения в реальном времени перед загрузкой. Ознакомьтесь с [preview mode](/docs/2.x/features/live-preview) чтобы влючить эту функцию.
 
 <quiz :questions="questions"></quiz>

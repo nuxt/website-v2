@@ -230,7 +230,7 @@ export const mutations = {
 }
 ```
 
-プラグインについてより詳細ない情報はこちら: [Vuex のドキュメント](https://vuex.vuejs.org/ja/plugins.html).
+プラグインについてより詳細な情報はこちら: [Vuex のドキュメント](https://vuex.vuejs.org/ja/plugins.html)
 
 ## nuxtServerInit アクション
 

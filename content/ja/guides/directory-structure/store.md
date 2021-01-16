@@ -46,8 +46,7 @@ questions:
       - fetch
       - asyncData
     correctAnswer: nuxtServerInit
-    # あとで翻訳する
-  - question: asyncData で、 context は nuxtServerInit
+  - question: asyncData では、context は nuxtServerInit にどう渡されますか？
     answers:
       - first argument
       - second argument

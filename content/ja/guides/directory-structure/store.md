@@ -48,10 +48,10 @@ questions:
     correctAnswer: nuxtServerInit
   - question: asyncData では、context は nuxtServerInit にどう渡されますか？
     answers:
-      - first argument
-      - second argument
-      - third argument
-    correctAnswer: second argument
+      - 第 1 引数として
+      - 第 2 引数として
+      - 第 3 引数として
+    correctAnswer: 第 2 引数として
 ---
 
 `store` ディレクトリには [Vuex ストア](http://vuex.vuejs.org/ja/)に関するファイルが含まれています。Vuex ストアは Nuxt.js に付属していてすぐに使えますが、デフォルトでは無効化されています。このディレクトリ内に `index.js` ファイルを作成することで、ストアが有効化されます。

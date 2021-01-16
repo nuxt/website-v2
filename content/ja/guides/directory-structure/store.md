@@ -1,6 +1,6 @@
 ---
 title: ストア
-description: `store` ディレクトリには Vuex ストアに関するファイルが含まれています。 Vuex ストアは Nuxt.js に付属していてすぐに使えますが、デフォルトでは無効化されています。 このディレクトリ内に `index.js` ファイルを作成することで、ストアが有効化されます。
+description: `store` ディレクトリには Vuex ストアに関するファイルが含まれています。Vuex ストアは Nuxt.js に付属していてすぐに使えますが、デフォルトでは無効化されています。このディレクトリ内に `index.js` ファイルを作成することで、ストアが有効化されます。
 position: 13
 category: directory-structure
 csb_link: https://codesandbox.io/embed/github/nuxt-academy/guides-examples/tree/master/04_directory_structure/14_store?fontsize=14&hidenavigation=1&theme=dark
@@ -73,7 +73,7 @@ Nuxt.js は `store` ディレクトリを確認します。もし隠しファイ
 
 ## モジュール
 
-`store` ディレクトリの中にあるすべての `.js` ファイルは[名前空間付きモジュール](http://vuex.vuejs.org/ja/modules.html)に変換されます（`index`  はルートモジュールになります）。`state`  の値は不必要に状態がサーバサイドで*共有されてしまう*ことを避けるため、常に `function` であるべきです。
+`store` ディレクトリの中にあるすべての `.js` ファイルは[名前空間付きモジュール](http://vuex.vuejs.org/ja/modules.html)に変換されます（`index` はルートモジュールになります）。`state` の値は不必要に状態がサーバサイドで*共有されてしまう*ことを避けるため、常に `function` であるべきです。
 
 はじめに、ステートを関数で、ミューテーションとアクションをオブジェクトでエクスポートしましょう。
 

@@ -55,7 +55,7 @@ questions:
     correctAnswer: second argument
 ---
 
-`store`  ディレクトリには [Vuex ストア](http://vuex.vuejs.org/ja/) に関するファイルが含まれています。Vuex ストアは Nuxt.js に付属していてすぐに使えますが、デフォルトでは無効化されています。 このディレクトリ内に `index.js` ファイルを作成することで、ストアが有効化されます。
+`store` ディレクトリには [Vuex ストア](http://vuex.vuejs.org/ja/)に関するファイルが含まれています。Vuex ストアは Nuxt.js に付属していてすぐに使えますが、デフォルトでは無効化されています。このディレクトリ内に `index.js` ファイルを作成することで、ストアが有効化されます。
 
 <base-alert>
 

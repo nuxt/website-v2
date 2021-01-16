@@ -71,7 +71,7 @@ touch package.json
 
 #### **فایل package.json چیست؟**
 
-فایل `package.json` مانند یک شناسه منحصر به فرد برای پروژه شماست. اگر شما درباره نحوه ی کارایی `package.json` اطلاع ندارید. ما به شدت به شما توصیه می‌کنیم نگاهی به مستندات [NPM documentation](https://docs.npmjs.com/creating-a-package-json-file) بی‌اندازید.
+فایل `package.json` مانند یک شناسه منحصر به فرد برای پروژه شماست. اگر شما درباره نحوه ی کارایی `package.json` اطلاع ندارید. ما به شدت به شما توصیه می‌کنیم نگاهی به مستندات [npm documentation](https://docs.npmjs.com/creating-a-package-json-file) بی‌اندازید.
 
 ### نصب کردن nuxt
 
@@ -85,7 +85,7 @@ yarn add nuxt
 ```
 
   </code-block>
-  <code-block label="NPM">
+  <code-block label="npm">
 
 ```bash
 npm install nuxt
@@ -140,7 +140,7 @@ yarn dev
 ```
 
   </code-block>
-  <code-block label="NPM">
+  <code-block label="npm">
 
 ```bash
 npm run dev
@@ -193,7 +193,7 @@ npm run dev
 
 برای شروع سریع می‌توانید از [create-nuxt-app](https://github.com/nuxt/create-nuxt-app) استفاده کنید.
 
-مطمئن شوید که npx بروی سیستم شما نصب باشد (npx به صورت پیشفرض با NPM از نسخه 5.2.0 به بعد، منتشر شده است) یا NPM نسخه 6.1 و یا yarn.
+مطمئن شوید که npx بروی سیستم شما نصب باشد (npx به صورت پیشفرض با npm از نسخه 5.2.0 به بعد، منتشر شده است) یا npm نسخه 6.1 و یا yarn.
 
 <code-group>
   <code-block label="Yarn" active>
@@ -203,14 +203,14 @@ yarn create nuxt-app <project-name>
 ```
 
   </code-block>
-  <code-block label="NPX">
+  <code-block label="npx">
 
 ```bash
 npx create-nuxt-app <project-name>
 ```
 
   </code-block>
-    <code-block label="NPM">
+    <code-block label="npm">
 
 ```bash
 npm init nuxt-app <project-name>
@@ -231,7 +231,7 @@ yarn dev
 ```
 
   </code-block>
-  <code-block label="NPM">
+  <code-block label="npm">
 
 ```bash
 cd <project-name>

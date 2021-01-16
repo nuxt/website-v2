@@ -4,8 +4,8 @@ description: Nuxt.js provides a higher-order module system that makes it possibl
 position: 9
 category: directory-structure
 csb_link: https://codesandbox.io/embed/github/nuxt-academy/guides-examples/tree/master/04_directory_structure/10_modules?fontsize=14&hidenavigation=1&theme=dark
-img: /docs/2.x/plugins.jpg
-imgAlt: modules-servermiddleware-plugins-in-nuxt-js
+img: /docs/2.x/modules.svg
+imgAlt: modules-in-nuxt-js
 questions:
   - question: ¿Cuándo se llaman los módulos?
     answers:
@@ -13,7 +13,7 @@ questions:
       - mientras Nuxt.js se ejecuta
       - después de que Nuxt.js inicia
     correctAnswer: antes de que Nuxt.js inicie
-  - question: Los módulos Nuxt.js pueden ser incluidos en paquetes NPM
+  - question: Los módulos Nuxt.js pueden ser incluidos en paquetes npm
     answers:
       - verdadero
       - falso
@@ -417,7 +417,7 @@ yarn add -D @nuxtjs/eslint-module
 ```
 
   </code-block>
-  <code-block label="NPM">
+  <code-block label="npm">
 
 ```bash
 npm install --save-dev @nuxtjs/eslint-module

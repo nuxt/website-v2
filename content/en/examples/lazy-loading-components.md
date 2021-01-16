@@ -13,7 +13,7 @@ csb_link: https://codesandbox.io/embed/github/nuxt-academy/examples/tree/master/
 - `$fetchState.pending` to show a loading message when waiting for the data to load.
 - `$fetchState.error` to show an error message if the component does not load.
 
-`pages/index.vue` shows how to lazy load a component by prefixing it with the world lazy.
+`pages/index.vue` shows how to lazy load a component by prefixing it with the word "Lazy".
 
 `nuxt.config.js` shows `components: true` for auto importing components.
 

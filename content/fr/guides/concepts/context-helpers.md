@@ -5,7 +5,7 @@ position: 2
 category: concepts
 csb_link_context: https://codesandbox.io/embed/github/nuxt-academy/guides-examples/tree/master/02_concepts/02_context_helpers-context?fontsize=14&hidenavigation=1&theme=dark
 csb_link_helpers: https://codesandbox.io/embed/github/nuxt-academy/guides-examples/tree/master/02_concepts/02_context_helpers-helpers?fontsize=14&hidenavigation=1&theme=dark
-img: /guides/context.svg
+img: /docs/2.x/context.svg
 imgAlt: nuxt-js-context-keys
 questions:
   - question: Pour quelle raison le contexte existe-il ?

@@ -124,7 +124,7 @@ router: {
 
 ## Dynamic Routes
 
-Sometimes it is not possible to know the name of the route such as when we make a call to an api to get a list of users or blog posts. We call these dynamic routes. To create a dynamic route you need to add an underscore before the .vue file name or before the name of the directory. You can name the file or directory anything you want but you must prefix it with an underscore.
+Sometimes it is not possible to know the name of the route such as when we make a call to an API to get a list of users or blog posts. We call these dynamic routes. To create a dynamic route you need to add an underscore before the .vue file name or before the name of the directory. You can name the file or directory anything you want but you must prefix it with an underscore.
 
 This file tree:
 
@@ -295,7 +295,7 @@ router: {
 
 ## Unknown Dynamic Nested Routes
 
-If you do not know the depth of your URL structure, you can use `_.vue` to dynamically match nested paths. This will handle requests that do not match a *more specific* request.
+If you do not know the depth of your URL structure, you can use `_.vue` to dynamically match nested paths. This will handle requests that do not match a *more specific* route.
 
 This file tree:
 

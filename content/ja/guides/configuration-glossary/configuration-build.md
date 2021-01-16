@@ -545,9 +545,9 @@ export default {
 }
 ```
 
-### postcss plugins と nuxt-tailwindcss
+### postcss plugins と @nuxtjs/tailwindcss
 
-nuxt-tailwindcss の設定で postcss プラグイン（例えば postcss-pxtorem）を適用したい場合、順番を変更して最初に tailwindcss を読み込む必要があります。
+@nuxtjs/tailwindcss の設定で postcss プラグイン（例えば postcss-pxtorem）を適用したい場合、順番を変更して最初に tailwindcss を読み込む必要があります。
 
 **この設定は nuxt-purgecss には影響しません。**
 

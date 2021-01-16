@@ -1,7 +1,7 @@
 ---
 title: La classe Builder
 description: La classe `Builder` de Nuxt
-menu: La classe Builder
+menu: Constructeur
 category: internals-glossary
 position: 7
 ---

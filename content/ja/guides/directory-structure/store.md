@@ -89,7 +89,7 @@ export const mutations = {
 }
 ```
 
-次に、 `store/todos.js` ファイルを作成しましょう:
+次に、`store/todos.js` ファイルを作成しましょう:
 
 ```js{}[store/todos.js]
 export const state = () => ({

@@ -149,7 +149,7 @@ new Vuex.Store({
 })
 ```
 
-また、 `pages/todos.vue` では `todos` モジュールを以下のように利用することができます:
+また、`pages/todos.vue` では `todos` モジュールを以下のように利用することができます:
 
 ```js{}[pages/todos.vue]
 <template>

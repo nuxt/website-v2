@@ -97,6 +97,6 @@ mounted{
 
 ### Шаг 3: В браузере
 
-Навигация между страницами с помощью [`<NuxtLink>`](/guides/features/nuxt-components#the-nuxtlink-component) выполняется на стороне клиента, поэтому вы не делаете запрос на сервер снова, если не обновляете страницу.
+Навигация между страницами с помощью [`<NuxtLink>`](/docs/2.x/features/nuxt-components#the-nuxtlink-component) выполняется на стороне клиента, поэтому вы не делаете запрос на сервер снова, если не обновляете страницу.
 
 <quiz :questions="questions"></quiz>

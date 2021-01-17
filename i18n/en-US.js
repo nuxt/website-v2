@@ -17,44 +17,30 @@ module.exports = {
   header: {
     links: [
       {
-        name: 'Guides',
-        slug: 'guides',
-        type: 'newDocs',
-        routeName: 'guides-book-slug'
-      },
-      {
-        name: 'Guide',
-        slug: 'guide',
-        type: 'dynamic',
-        routeName: 'section-slug'
-      },
-      {
-        name: 'API',
-        slug: 'api',
-        type: 'dynamic',
-        routeName: 'section-slug'
+        name: 'Docs',
+        icon: 'books',
+        slug: 'docs-2.x-book-slug'
       },
       {
         name: 'Examples',
-        slug: 'examples',
-        type: 'dynamic',
-        routeName: 'section-slug'
+        icon: 'code',
+        slug: 'examples'
       },
       {
         name: 'FAQ',
-        slug: 'faq',
-        type: 'dynamic',
-        routeName: 'section-slug'
-      },
-      {
-        name: 'Resources',
-        slug: 'resources',
-        type: 'static'
+        icon: 'resources',
+        slug: 'faq'
       },
       {
         name: 'Blog',
-        slug: 'blog',
-        type: 'static'
+        icon: 'blog',
+        slug: 'blog'
+      },
+      {
+        name: 'Video Courses',
+        icon: 'video',
+        href:
+          'https://masteringnuxt.com/?utm_source=nuxt&utm_medium=link&utm_campaign=navbar_link'
       }
     ],
     search: {
@@ -105,11 +91,6 @@ module.exports = {
         title: 'Server Side Rendered',
         description:
           'The most popular mode for Nuxt. With SSR, also called "universal" or "isomorphic" mode, a Node.js server will be used to deliver HTML based on your Vue components to the client instead of the pure javascript. Using SSR will lead to a large SEO boost, better UX and more opportunities (compared to a traditional Vue SPA).{break}Because implementing SSR on your own can be really tedious, Nuxt.js gives you full support out of the box and will take care of common pitfalls.'
-      },
-      spa: {
-        title: 'Single Page Application (SPA)',
-        description:
-          "Don't need SSR or Static Site Generation but still want to profit from the benefits that Nuxt provides? Are you slowly transitioning your app and want to start lightweight? Then the traditional SPA mode will likely be your choice. The outcome will be a typical Vue SPA as you know it but influenced by your Nuxt configuration and the framework itself."
       },
       ssg: {
         title: 'Statically Generated',
@@ -299,8 +280,11 @@ module.exports = {
       'Contribution for this page is now closed. If you would like to contribute please check out our',
     link: 'new docs'
   },
+  example: {
+    intro: 'In this example:'
+  },
   codeSandbox: {
-    open: 'Open CodeSandbox'
+    open: 'See Example'
   },
   content: {
     guide: {
@@ -317,7 +301,16 @@ module.exports = {
       internals: 'Internals'
     },
     examples: {
-      essentials: 'Essentials',
+      routing: 'Routing',
+      dataFetching: 'Data Fetching',
+      assetManagement: 'Asset Management',
+      transitions: 'Transitions',
+      seo: 'SEO',
+      loading: 'Loading',
+      miscellaneous: 'Miscellaneous',
+      middleware: 'Middleware',
+      plugins: 'Plugins',
+      modules: 'Modules',
       customization: 'Customization',
       advanced: 'Advanced'
     },
@@ -333,25 +326,29 @@ module.exports = {
       'directory-structure': 'Directory Structure',
       'configuration-glossary': 'Configuration Glossary',
       'internals-glossary': 'Internals Glossary',
-      'components-glossary': 'Components Glossary'
+      'components-glossary': 'Components Glossary',
+      examples: 'Examples'
     }
   },
   footer: {
     links: {
       discover: {
         title: 'Discover',
-        design: 'Design resources',
-        team: 'A worldwide team',
-        blog: 'Blog'
+        shop: 'Our Goodies Store',
+        consulting: 'Training & consultancy',
+        sponsorNuxt: 'Sponsoring & donations'
       },
-      follow: {
-        title: 'Follow'
+      about: {
+        title: 'Help',
+        team: 'Our team',
+        design: 'Design kit',
+        contact: 'Contact us'
       },
       support: {
         title: 'Support',
-        sponsorNuxt: 'Sponsor NuxtJS',
-        shop: 'The NuxtJS Shop',
-        consulting: 'NuxtJS Consulting'
+        resources: 'Resources',
+        discord: 'Chat with us',
+        contributionGuide: 'Contribution guide'
       }
     }
   },

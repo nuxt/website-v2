@@ -1,6 +1,6 @@
 ---
 title: Static Site Generation
-description: With static site generation you can render your application during the build phase and deploy it to any static hosting services such as Netlify, Github pages, Vercel etc.
+description: With static site generation you can render your application during the build phase and deploy it to any static hosting services such as Netlify, GitHub pages, Vercel etc.
 position: 4
 category: concepts
 questions:
@@ -34,11 +34,11 @@ questions:
     correctAnswer: You need to regenerate your site
 ---
 
-With static site generation you can render your application during the build phase and deploy it to any static hosting services such as Netlify, Github pages, Vercel etc. This means that no server is needed in order to deploy your application.
+With static site generation you can render your application during the build phase and deploy it to any static hosting services such as Netlify, GitHub pages, Vercel etc. This means that no server is needed in order to deploy your application.
 
 ### Generating your site
 
-When deploying your site in with [target:static](/guides/features/deployment-targets#static-hosting) all your `.vue` pages will be generated into HTML and JavaScript files. All calls to APIs will be made and cached in a folder called static inside your generated content so that no calls to your API need to be made on client side navigation.
+When deploying your site in with [target:static](/docs/2.x/features/deployment-targets#static-hosting) all your `.vue` pages will be generated into HTML and JavaScript files. All calls to APIs will be made and cached in a folder called static inside your generated content so that no calls to your API need to be made on client side navigation.
 
 ### Step 1: Browser to CDN
 
@@ -46,11 +46,11 @@ When a browser sends the initial request, it will hit the CDN.
 
 ### Step 2: CDN to Browser
 
-The CDN will send the already generated HTML, JavaScript and static assets and send it back to the browser. The content is displayed and the Vue.js hydration kicks in, making it reactive. After this process, the page is interactive.
+The CDN will send the already generated HTML, JavaScript and static assets back to the browser. The content is displayed and the Vue.js hydration kicks in, making it reactive. After this process, the page is interactive.
 
 ### Step 3: Browser to Browser
 
-Navigating between pages with [`<NuxtLink>`](/guides/features/nuxt-components#the-nuxtlink-component) is done on the client side so you don't hit the CDN again and all API calls will be loaded from the already cached static folder even if you hard refresh the browser.
+Navigating between pages with [`<NuxtLink>`](/docs/2.x/features/nuxt-components#the-nuxtlink-component) is done on the client side so you don't hit the CDN again and all API calls will be loaded from the already cached static folder even if you hard refresh the browser.
 
 ### SPA Fallback
 
@@ -58,7 +58,7 @@ Pages that have been excluded from generation, by using the `generate.exclude` p
 
 <base-alert type="next">
 
-To learn more about the [generate property](/guides/configuration-glossary/configuration-generate#exclude)
+To learn more about the [generate property](/docs/2.x/configuration-glossary/configuration-generate#exclude)
 
 </base-alert>
 
@@ -68,6 +68,6 @@ In order to get new content to your site from your API you will need to regenera
 
 ### Preview Mode
 
-The Preview mode will call your API or your CMS so you can see the changes live before deploying. See the [preview mode](/guides/features/live-preview) on how to enable this feature.
+The Preview mode will call your API or your CMS so you can see the changes live before deploying. See the [preview mode](/docs/2.x/features/live-preview) on how to enable this feature.
 
 <quiz :questions="questions"></quiz>

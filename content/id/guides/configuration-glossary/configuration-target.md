@@ -16,4 +16,4 @@ Target penerapan untuk Nuxt >= v2.13:
 
 > Anda dapat memakai opsi ini untuk mengubah nilai bawaan target nuxt untuk proyek anda menggunakan `nuxt.config.js`
 
-Untuk mempelajari lebih lanjut tentang opsi target, lihat [bagian penerapan target](/guides/features/deployment-targets).
+Untuk mempelajari lebih lanjut tentang opsi target, lihat [bagian penerapan target](/docs/2.x/features/deployment-targets).

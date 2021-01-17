@@ -8,7 +8,7 @@ position: 6
 
 - Fonte: **[core/module.js](https://github.com/nuxt/nuxt.js/blob/dev/packages/core/src/module.js)**
 
-Todos os [módulos](/guides/directory-structure/modules) serão chamados dentro do contexto da instância do `ModuleContainer`.
+Todos os [módulos](/docs/2.x/directory-structure/modules) serão chamados dentro do contexto da instância do `ModuleContainer`.
 
 ## Plugins Tapable
 
@@ -20,7 +20,7 @@ nuxt.moduleContainer.plugin('ready', async moduleContainer => {
 })
 ```
 
-Dentro do contexto dos [módulos](/guides/directory-structure/modules), podemos usar isso:
+Dentro do contexto dos [módulos](/docs/2.x/directory-structure/modules), podemos usar isso:
 
 ```js
 this.plugin('ready', async moduleContainer => {
@@ -61,19 +61,19 @@ Você pode usar `template.ssr: false` para desabilitar o plugin, incluindo o pac
 
 ### addServerMiddleware (middleware)
 
-Adiciona o middleware em [options.serverMiddleware](/guides/configuration-glossary/configuration-servermiddleware).
+Adiciona o middleware em [options.serverMiddleware](/docs/2.x/configuration-glossary/configuration-servermiddleware).
 
 ### extendBuild (fn)
 
-Permite estender facilmente a configuração de compilação do webpack ao encadear a função [options.build.extend](/guides/configuration-glossary/configuration-build#extend).
+Permite estender facilmente a configuração de compilação do webpack ao encadear a função [options.build.extend](/docs/2.x/configuration-glossary/configuration-build#extend).
 
 ### extendRoutes (fn)
 
-Permite estender facilmente as rotas encadeando a função [options.build.extendRoutes](/guides/configuration-glossary/configuration-router#extendroutes).
+Permite estender facilmente as rotas encadeando a função [options.build.extendRoutes](/docs/2.x/configuration-glossary/configuration-router#extendroutes).
 
 ### extendPlugins (fn)
 
-Permite estender facilmente os plugins encadeando a função [options.extendPlugins](/guides/configuration-glossary/configuration-extend-plugins) .
+Permite estender facilmente os plugins encadeando a função [options.extendPlugins](/docs/2.x/configuration-glossary/configuration-extend-plugins) .
 
 ### addModule (moduleOpts, requireOnce)
 

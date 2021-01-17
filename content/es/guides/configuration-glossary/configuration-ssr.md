@@ -21,6 +21,6 @@ export default {
 
 <base-alert type="next">
 
-Anteriormente, `mode` se utilizaba para desactivar o activar el renderizado server-side. Aquí está la [documentación de `mode`](/guides/configuration-glossary/configuration-mode).
+Anteriormente, `mode` se utilizaba para desactivar o activar el renderizado server-side. Aquí está la [documentación de `mode`](/docs/2.x/configuration-glossary/configuration-mode).
 
 </base-alert>

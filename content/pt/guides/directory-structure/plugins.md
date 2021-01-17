@@ -7,7 +7,7 @@ csb_link_plugins_client: https://codesandbox.io/embed/github/nuxt-academy/guides
 csb_link_plugins_external: https://codesandbox.io/embed/github/nuxt-academy/guides-examples/tree/master/04_directory_structure/12_plugins_external?fontsize=14&hidenavigation=1&theme=dark
 csb_link_plugins_custom: https://codesandbox.io/embed/github/nuxt-academy/guides-examples/tree/master/04_directory_structure/12_plugins_custom_plugin?fontsize=14&hidenavigation=1&theme=dark
 csb_link_plugins_vue: https://codesandbox.io/embed/github/nuxt-academy/guides-examples/tree/master/04_directory_structure/12_plugins_vue?fontsize=14&hidenavigation=1&theme=dark
-img: /guides/plugins.svg
+img: /docs/2.x/plugins.svg
 imgAlt: modules-servermiddleware-plugins-in-nuxt-js
 questions:
   - question: O diretório `plugins` contém seus plugins Javascript que você deseja executar
@@ -79,7 +79,7 @@ O diretório `plugins` contém seus plugins Javascript que você deseja executar
 
 Você pode querer usar pacotes/módulos externos em sua aplicação (um ótimo exemplo é o [axios](https://axios.nuxtjs.org/)) para fazer solicitações HTTP para servidor e cliente.
 
-Primeiro, instale-o via NPM ou Yarn.
+Primeiro, instale-o via npm ou Yarn.
 
 <code-group>
   <code-block label="Yarn" active>
@@ -89,7 +89,7 @@ yarn add @nuxtjs/axios
 ```
 
   </code-block>
-  <code-block label="NPM">
+  <code-block label="npm">
 
 ```bash
 npm install @nuxtjs/axios
@@ -154,7 +154,7 @@ yarn add v-tooltip
 ```
 
   </code-block>
-  <code-block label="NPM">
+  <code-block label="npm">
 
 ```bash
 npm install v-tooltip
@@ -198,7 +198,7 @@ module.exports = {
 }
 ```
 
-Você pode consultar os documentos de [configuração build](/guides/configuration-glossary/configuration-build#transpile) para obter mais opções de build.
+Você pode consultar os documentos de [configuração build](/docs/2.x/configuration-glossary/configuration-build#transpile) para obter mais opções de build.
 
 ## Apenas cliente ou apenas servidor
 
@@ -301,7 +301,7 @@ Não use `Vue.use()`, `Vue.component()`, e globalmente, não conecte nada no Vue
 
 ## A propriedade extendPlugins
 
-Você pode estender os plugins ou alterar a ordem dos plugins criados pelo Nuxt.js. Esta função aceita um array de objetos [plugin](/guides/configuration-glossary/configuration-plugins) e deve retornar um array de objetos plugin.
+Você pode estender os plugins ou alterar a ordem dos plugins criados pelo Nuxt.js. Esta função aceita um array de objetos [plugin](/docs/2.x/configuration-glossary/configuration-plugins) e deve retornar um array de objetos plugin.
 
 Exemplo de alteração da ordem dos plugins:
 
@@ -327,7 +327,7 @@ Mixins globais podem ser facilmente adicionados com plugins do Nuxt, mas podem c
 
 ```js{}[plugins/meu-mixin-plugin.js]
 if (!Vue.__meu_mixin__) {
-  Vue.__meu__mixin__ = true
+  Vue.__meu_mixin__ = true
   Vue.mixin({ ... }) // Então, configure seu mixin
 }
 ```

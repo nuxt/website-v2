@@ -83,7 +83,7 @@ Ketika bekerja dengan gambar dinamis, Anda perlu menggunakan _require_
 
 <base-alert type="next">
 
-Pelajari lebih lanjut tentang [Aset Webpack](/guides/directory-structure/assets#webpack-assets)
+Pelajari lebih lanjut tentang [Aset Webpack](/docs/2.x/directory-structure/assets#webpack-assets)
 
 </base-alert>
 
@@ -106,7 +106,7 @@ export default {
 
 <base-alert type="info">
 
-Jika Anda ingin menggunakan `sass` pastikan Anda telah memasang _package_ untuk `node-sass` dan `sass-loader`.
+Jika Anda ingin menggunakan `sass` pastikan Anda telah memasang _package_ untuk `sass` dan `sass-loader`.
 
 </base-alert>
 
@@ -114,14 +114,14 @@ Jika Anda ingin menggunakan `sass` pastikan Anda telah memasang _package_ untuk 
   <code-block label="Yarn" active>
 
 ```bash
-yarn add -D node-sass sass-loader
+yarn add -D sass sass-loader fibers
 ```
 
   </code-block>
-  <code-block label="NPM">
+  <code-block label="npm">
 
 ```bash
-npm install --save-dev node-sass sass-loader
+npm install --save-dev sass sass-loader fibers
 ```
 
   </code-block>
@@ -160,7 +160,7 @@ Anda dapat menggunakan fon lokal dengan menambahkannya ke _folder_ aset Anda. Se
 
 <base-alert type="next">
 
-Untuk menambahkan fon eksternal seperti fon google, lihat [bab Tag Meta dan SEO](/guides/features/meta-tags-seo#external-resources)
+Untuk menambahkan fon eksternal seperti fon google, lihat [bab Tag Meta dan SEO](/docs/2.x/features/meta-tags-seo#external-resources)
 
 </base-alert>
 
@@ -251,7 +251,7 @@ Akan diubah menjadi:
 <img src="/_nuxt/img/gambar_anda.0c61159.png" />
 ```
 
-Jika Anda ingin mengubah konfigurasi pada pemuat tersebut, gunakan [build.extend](/guides/configuration-glossary/configuration-build#extend).
+Jika Anda ingin mengubah konfigurasi pada pemuat tersebut, gunakan [build.extend](/docs/2.x/configuration-glossary/configuration-build#extend).
 
 <app-modal>
   <code-sandbox  :src="csb_link"></code-sandbox>

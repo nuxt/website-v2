@@ -14,13 +14,13 @@ csb_link: https://codesandbox.io/embed/github/nuxt-academy/guides-examples/tree/
 
 <base-alert type="next">
 
-درباره مسیریابی [بیشتر بدانید](/guides/features/file-system-routing)
+درباره مسیریابی [بیشتر بدانید](/docs/2.x/features/file-system-routing)
 
 </base-alert>
 
 ## جهت یابی
 
-برای جابه‌جایی بین صفحات وبسایت، شما نیاز دارید تا از کامپوننت [NuxtLink](/guides/features/nuxt-components#the-nuxtlink-component) استفاده کنید. این کامپوننت به صورت پیشفرض همراه با Nuxt.js نصب خواهد شد. به همین علت شما نیاز ندارید تا آن را در برنامه خود دوباره فراخوانی کنید. این کامپوننت به مانند تگ `<a>` در HTML است اما تنها تفاوتی که وجود دارد این است که به جای استفاده از `href="/about` از `to="/about` استفاده می‌کنیم. اگر در گذشته از `vue-router` استفاده کرده باشید، می‌توانید `<NuxtLink>` را به عنوان جایگزین برای `<RouterLink>` در نظر بگیرید.
+برای جابه‌جایی بین صفحات وبسایت، شما نیاز دارید تا از کامپوننت [NuxtLink](/docs/2.x/features/nuxt-components#the-nuxtlink-component) استفاده کنید. این کامپوننت به صورت پیشفرض همراه با Nuxt.js نصب خواهد شد. به همین علت شما نیاز ندارید تا آن را در برنامه خود دوباره فراخوانی کنید. این کامپوننت به مانند تگ `<a>` در HTML است اما تنها تفاوتی که وجود دارد این است که به جای استفاده از `href="/about` از `to="/about` استفاده می‌کنیم. اگر در گذشته از `vue-router` استفاده کرده باشید، می‌توانید `<NuxtLink>` را به عنوان جایگزین برای `<RouterLink>` در نظر بگیرید.
 
 یک لینک ساده که به صفحه `index.vue` در فولدر `pages`، اشاره می‌کند:
 
@@ -50,6 +50,6 @@ csb_link: https://codesandbox.io/embed/github/nuxt-academy/guides-examples/tree/
 
 <base-alert type="next">
 
-درباره کامپوننت NuxtLink [بیشتر بدانید](/guides/features/nuxt-components#the-nuxtlink-component).
+درباره کامپوننت NuxtLink [بیشتر بدانید](/docs/2.x/features/nuxt-components#the-nuxtlink-component).
 
 </base-alert>

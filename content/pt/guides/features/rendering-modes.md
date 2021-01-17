@@ -15,7 +15,7 @@ Sites estáticos são bem similares a aplicações renderizadas no lado do servi
 
 Sites renderizados no lado do servidor são renderizados no servidor toda vez que o usuário solicitar uma página, portanto é necessário um servidor para servir a página ao cliente a cada requisição.
 
-Veja [targets de deploy](/guides/features/deployment-targets) para mais informações sobre hospedagem estática e por servidor.
+Veja [targets de deploy](/docs/2.x/features/deployment-targets) para mais informações sobre hospedagem estática e por servidor.
 
 ```js{}[nuxt.config.js]
 export default {
@@ -41,6 +41,6 @@ export default {
 
 <base-alert type="next">
 
-[A propriedade mode](/guides/configuration-glossary/configuration-mode)
+[A propriedade mode](/docs/2.x/configuration-glossary/configuration-mode)
 
 </base-alert>

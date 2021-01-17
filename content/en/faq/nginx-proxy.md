@@ -3,7 +3,7 @@ title: Using nginx as a reverse proxy
 description: How to use nginx as a reverse proxy
 menu: Using nginx as a proxy
 category: deployment
-position: 214
+position: 215
 ---
 
 ```nginx
@@ -42,7 +42,7 @@ If you have a high volume website with regularly changing content, you might wan
 
 Below is an example configuration. Keep in mind that:
 
-- root folder should be the same as set by [configuration generate.dir](/api/configuration-generate#dir)
+- root folder should be the same as set by [configuration generate.dir](/docs/2.x/configuration-glossary/configuration-generate#dir)
 - expire headers set by Nuxt are stripped (due to the cache)
 - both Nuxt as nginx can set additional headers, it's advised to choose one (if in doubt, choose nginx)
 - if your site is mostly static, increase the `proxy_cache_path inactive` and `proxy_cache_valid` numbers

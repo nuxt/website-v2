@@ -41,7 +41,7 @@ Here is how [Debbie O’Brien](https://twitter.com/debs_obrien) explains how it 
   - [Pattern option](#pattern-option)
   - [Default](#default)
   - [Add additional extensions](#add-additional-extensions)
-  - [Customise as per your requirement](#customise-as-per-your-requirement)
+  - [Customize as per your requirement](#customize-as-per-your-requirement)
 - [Exclusion paths](#exclusion-paths)
   - [Ignore option](#ignore-option)
   - [.nuxtignore, ignore property & ignore option:](#nuxtignore-ignore-property--ignore-option)
@@ -64,11 +64,11 @@ In this article, we'll learn about `@nuxt/components` by example. I have setup a
 ----| MagicButton/
 ```
 
-We will implement `@nuxt/components` on these components followed by a detailed look at module options to customise the default behaviour. Later in the article, we will also take a look at **lazy-loading** and **auto-importing 3rd-party library** components.
+We will implement `@nuxt/components` on these components followed by a detailed look at module options to customize the default behavior. Later in the article, we will also take a look at **lazy-loading** and **auto-importing 3rd-party library** components.
 
 It’s best if you setup this [sample project](https://github.com/Krutie/nuxt-components-demo) locally to tryout options that may interest you.
 
-- **Github Repo** - [https://github.com/Krutie/nuxt-components-demo](https://github.com/Krutie/nuxt-components-demo)
+- **GitHub Repo** - [https://github.com/Krutie/nuxt-components-demo](https://github.com/Krutie/nuxt-components-demo)
 - **Demo** - [http://nuxt-components.surge.sh/](http://nuxt-components.surge.sh/)
 - **3rd Party Sample Components Repo** - [https://github.com/Krutie/Kru-Components](https://github.com/Krutie/Kru-Components)
 
@@ -128,7 +128,7 @@ export default {
 
 In addition to `path`, we can also define additional configuration to include, exclude, watch or even add prefix to components based on their location & extensions.
 
-For example, when components are imported using this module, their names are based on their filename. But you can `prefix` component names to preserve their filenames as they are and still be able to customise their component tags.
+For example, when components are imported using this module, their names are based on their filename. But you can `prefix` component names to preserve their filenames as they are and still be able to customize their component tags.
 
 ```js{}[nuxt.config.js]
 export default {
@@ -239,7 +239,7 @@ Continue reading further to see more examples of these two options and how they 
 
 `pattern` option lets you define which type of components - from the given `path` - should be scanned and registered. Unlike `extensions`, `pattern` is defined as a **single** `String` and it must follow [glob pattern style](https://github.com/isaacs/node-glob#glob-primer).
 
-We can use pattern option as **default** or **add additional** ones or even **customise** it completely.
+We can use pattern option as **default** or **add additional** ones or even **customize** it completely.
 
 ### Default
 
@@ -269,9 +269,9 @@ export default {
 
 Above code adds `.jsx` extension to the default pattern, makes the resulting pattern look like: `**/*.{vue,js,jsx}`
 
-### Customise as per your requirement
+### Customize as per your requirement
 
-If required, you can manually specify extensions to completely customise the pattern.
+If required, you can manually specify extensions to completely customize the pattern.
 
 ```js
 // Multiple extensions
@@ -324,8 +324,8 @@ Ignore option excludes components with specified locations and extensions from s
 
 It's important we highlight two similar features of Nuxt that ignore files just like our `ignore` option.
 
-- [.nuxtignore](https://nuxtjs.org/api/configuration-ignore/#-nuxtignore) also ignore files similar to `ignore` option, but `.nuxtignore` ignores files from `/pages`, `/layouts`, `/middleware` and `/store` . It's a dot-file that is defined in the project root. Read more about the [ignore property](https://nuxtjs.org/api/configuration-ignore/) on Nuxt docs.
-- [ignore](https://nuxtjs.org/api/configuration-ignore/#the-ignore-property) property, as well, let us define multiple glob-pattern to ignore matching files, like below.
+- [.nuxtignore](/docs/2.x/configuration-glossary/configuration-ignore#-nuxtignore) also ignore files similar to `ignore` option, but `.nuxtignore` ignores files from `/pages`, `/layouts`, `/middleware` and `/store` . It's a dot-file that is defined in the project root. Read more about the [ignore property](/docs/2.x/configuration-glossary/configuration-ignore) on Nuxt docs.
+- [ignore](/docs/2.x/configuration-glossary/configuration-ignore#the-ignore-property) property, as well, let us define multiple glob-pattern to ignore matching files, like below.
 
 ```js{}[nuxt.config.js]
 export default {
@@ -333,7 +333,7 @@ export default {
 }
 ```
 
-The impact of both `.nuxtignore` and `ignore` property is realised during build-process, and they operate project-wide, while `ignore` option operates locally and ignores files from `/components` directory.
+The impact of both `.nuxtignore` and `ignore` property is realized during build-process, and they operate project-wide, while `ignore` option operates locally and ignores files from `/components` directory.
 
 So, if you're using 1. `.nuxtignore`, 2. top-level `ignore` property, and 3. `ignore` option, then all three will be merged.
 

@@ -1,6 +1,6 @@
 ---
 title: How to deploy on Google Cloud Run?
-description: How to deploy NuxtJS on Google Cloud Run?
+description: How to deploy Nuxt on Google Cloud Run?
 menu: Deploy on Google Cloud Run
 category: deployment
 position: 208
@@ -64,7 +64,7 @@ export default {
 }
 ```
 
-More information [here](https://nuxtjs.org/api/configuration-server/).
+More information [here](/docs/2.x/configuration-glossary/configuration-server).
 
 Or, add this to your package.json file:
 

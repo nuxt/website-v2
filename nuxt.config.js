@@ -1,3 +1,5 @@
+import webpack from 'webpack'
+
 export default {
   target: 'static',
   ssr: true,
@@ -54,15 +56,16 @@ export default {
     }
   },
   buildModules: [
-    '@nuxtjs/eslint-module',
+    // https://github.com/nuxt-community/eslint-module
+    // Disabled, waiting for https://github.com/nuxt-community/eslint-module/pull/46 to be released
+    // '@nuxtjs/eslint-module',
     // https://github.com/nuxt-community/color-mode-module
     '@nuxtjs/color-mode',
     // https://github.com/nuxt-community/netlify-files-module
     '@nuxtjs/netlify-files',
     // https://github.com/nuxt-community/style-resources-module
     '@nuxtjs/style-resources',
-    // https://github.com/Developmint/nuxt-svg-loader/
-    // 'nuxt-svg-loader',
+    // https://github.com/nuxt-community/svg-module
     '@nuxtjs/svg',
     // https://github.com/Atinux/nuxt-tailwindcss/
     '@nuxtjs/tailwindcss',
@@ -79,16 +82,7 @@ export default {
 
   pwa: {
     manifest: {
-      name: 'NuxtJS',
-      start_url: '/',
-      icons: [
-        {
-          src: '/icon.png',
-          type: 'image/png',
-          sizes: '512x512',
-          purpose: 'any maskable'
-        }
-      ]
+      name: 'NuxtJS'
     }
   },
 
@@ -105,16 +99,6 @@ export default {
     }
   },
   css: ['~/assets/css/main.scss'],
-  hooks: {
-    'content:file:beforeInsert': item => {
-      const stats = require('reading-time')(item.text)
-
-      if (item.slug === '' && item.extension === '.md') {
-      }
-
-      item.readingTime = stats
-    }
-  },
   plugins: [
     '~/plugins/i18n',
     '~/plugins/directives',
@@ -123,7 +107,8 @@ export default {
     '~/plugins/ga.client.js',
     '~/plugins/adblock.client.js',
     '~/plugins/newsletter.client.js',
-    '~/plugins/vue-scrollactive'
+    '~/plugins/vue-scrollactive',
+    '~/plugins/contributors'
   ],
   env: {
     DEPLOY_PRIME_URL: process.env.DEPLOY_PRIME_URL || false,
@@ -134,8 +119,8 @@ export default {
   },
   publicRuntimeConfig: {
     nuxtLocale: process.env.NUXT_LOCALE || 'en',
-    nuxtVersion: '2.14.5',
-    nuxtStars: '30K+'
+    nuxtVersion: '2.14.8',
+    nuxtStars: '32K+'
   },
   loading: { color: '#41B883' },
   generate: {
@@ -235,5 +220,20 @@ export default {
     seo: false,
     lazy: true,
     langDir: 'i18n/'
+  },
+  build: {
+    plugins: [
+      new webpack.IgnorePlugin({
+        resourceRegExp: /^\.\/locale$/,
+        contextRegExp: /moment$/
+      })
+    ]
+  },
+  hooks: {
+    'content:file:beforeInsert': item => {
+      const stats = require('reading-time')(item.text)
+
+      item.readingTime = stats
+    }
   }
 }

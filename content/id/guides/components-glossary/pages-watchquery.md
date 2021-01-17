@@ -2,7 +2,8 @@
 title: 'Properti watchQuery'
 description: Perhatikan kueri string dan jalankan metode komponen pada perubahan (asyncData, fetch, validate, layout, ...)
 menu: Properti watchQuery
-category: komponen-glosarium
+category: components-glossary
+position: 0
 ---
 
 > Perhatikan kueri string dan jalankan metode komponen saat ada perubahan (asyncData, fetch(context), validate, layout, ...)
@@ -33,6 +34,6 @@ export default {
 
 <base-alert>
 
-**Peringatan**: Hook `fetch` baru yang diperkenalkan di 2.12 tidak terpengaruh oleh `watchQuery`. Untuk informasi lebih lanjut, lihat [menjadi perubahan kueri fetch hook](/guides/features/data-fetching#the-fetch-hook).
+**Peringatan**: Hook `fetch` baru yang diperkenalkan di 2.12 tidak terpengaruh oleh `watchQuery`. Untuk informasi lebih lanjut, lihat [menjadi perubahan kueri fetch hook](/docs/2.x/features/data-fetching#the-fetch-hook).
 
 </base-alert>

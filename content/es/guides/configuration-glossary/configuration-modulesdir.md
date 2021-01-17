@@ -9,7 +9,7 @@ position: 20
 - Tipo: `Array`
 - Por defecto: `['node_modules']`
 
-> Se utiliza para configurar los directorios de los módulos (modules) para la resolución de rutas, por ejemplo: Webpack's `resolveLoading`, `nodeExternals` y `postcss`. La ruta de configuración es relativa a [options.rootDir](/guides/configuration-glossary/configuration-rootdir) (por defecto: `process.cwd()`).
+> Se utiliza para configurar los directorios de los módulos (modules) para la resolución de rutas, por ejemplo: Webpack's `resolveLoading`, `nodeExternals` y `postcss`. La ruta de configuración es relativa a [options.rootDir](/docs/2.x/configuration-glossary/configuration-rootdir) (por defecto: `process.cwd()`).
 
 ```js{}[nuxt.config.js]
 export default {

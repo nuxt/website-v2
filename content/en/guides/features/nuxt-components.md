@@ -94,7 +94,7 @@ The `<Nuxt>` component is the component you use to display your page components.
 
 <base-alert>
 
-The `<Nuxt>` component can only be used inside [layouts](/guides/concepts/views#layouts).
+The `<Nuxt>` component can only be used inside [layouts](/docs/2.x/concepts/views#layouts).
 
 </base-alert>
 
@@ -215,12 +215,6 @@ To learn more about keep-alive and keep-alive-props see the [vue docs](https://v
 </template>
 ```
 
-To see an example, take a look at the [nested-routes example](https://nuxtjs.org/examples/nested-routes).
-
-<app-modal>
-  <code-sandbox  :src="csb_link_nuxt"></code-sandbox>
-</app-modal>
-
 ## The NuxtLink Component
 
 To navigate between pages of your app, you should use the  `<NuxtLink>` component. This component is included with Nuxt.js and therefore you don't have to import it like you do with other components. It is similar to the HTML `<a>` tag except that instead of using a `href="/about"` you use `to="/about"`. If you've used `vue-router` before, you can think of `<NuxtLink>` as a replacement of `<RouterLink>`
@@ -253,23 +247,23 @@ If you want to know more about `<RouterLink>`, feel free to read the [Vue Route
 
 </base-alert>
 
-<base-alert type="info">
-
-`<NuxtLink>` also comes with [smart prefetching](/guides/features/nuxt-components#the-nuxtlink-component) out of the box.
-
-</base-alert>
-
 ## prefetchLinks
 
-Nuxt.js automatically includes smart prefetching. That means it detects when a link is visible, either in the viewport or when scrolling and prefetches the JavaScript for those pages so that they are ready when the user clicks the link. Nuxt.js only loads the resources when the browser isn't busy and skips prefetching if your connection is offline or if you only have 2g connection.
+Nuxt.js automatically includes smart prefetching. That means it detects when a link is visible, either in the viewport or when scrolling and prefetches the JavaScript for those pages so that they are ready when the user clicks the link. Nuxt.js only loads the resources when the browser isn't busy and skips prefetching if your connection is offline or if you only have 2G connection.
+
+<base-alert type="info">
+
+Check out this article to learn more about [smart prefetching](/blog/introducing-smart-prefetching).
+
+</base-alert>
 
 ### Disable prefetching for specific links
 
 However sometimes you may want to disable prefetching on some links if your page has a lot of JavaScript or you have a lot of different pages that would be prefetched or you have a lot of third party scripts that need to be loaded. To disable the prefetching on a specific link, you can use the `no-prefetch` prop. Since Nuxt.js v2.10.0, you can also use the `prefetch` prop set to `false`
 
 ```html
-<NuxtLink to="/about" no-prefetch>About page not pre-fetched</NuxtLink>
-<NuxtLink to="/about" :prefetch="false">About page not pre-fetched</NuxtLink>
+<NuxtLink to="/about" no-prefetch>About page not prefetched</NuxtLink>
+<NuxtLink to="/about" :prefetch="false">About page not prefetched</NuxtLink>
 ```
 
 ### Disable prefetching globally
@@ -284,13 +278,15 @@ export default {
 }
 ```
 
-Since Nuxt.js v2.10.0, if you have set `prefetchLinks` to `false` but you want to prefetch a specific link, you can use the `prefetch` prop:
+Since Nuxt.js v2.10.0, if you have to set `prefetchLinks` to `false` but you want to prefetch a specific link, you can use the `prefetch` prop:
 
 ```html
-<NuxtLink to="/about" prefetch>About page pre-fetched</NuxtLink>
+<NuxtLink to="/about" prefetch>About page prefetched</NuxtLink>
 ```
 
-## linkActiveClass
+## Link Classes
+
+### linkActiveClass
 
 The `linkActiveClass` works the same as the `vue-router` class for active links. If we want to show which links are active all you have to do is create some css for the class `nuxt-link-active` .
 
@@ -322,7 +318,7 @@ This option is given directly to the `vue-router` linkActiveClass. See the [vue-
 
 </base-alert>
 
-## linkExactActiveClass
+### linkExactActiveClass
 
 The `linkExactActiveClass` works the same as the `vue-router` class for exact active links. If we want to show which links are active with an exact match all you have to do is create some css for the class `nuxt-link-exact-active` .
 
@@ -354,9 +350,9 @@ This option is given directly to the `vue-router` linkExactActiveClass. See the 
 
 </base-alert>
 
-## linkPrefetchedClass
+### linkPrefetchedClass
 
-The linkPrefetchedClass will allow you to add styles for all links that have been prefetched. This is great for testing which links are being prefetched after modifying the default behaviour. The linkPrefetchedClass is disabled by default. If you want to enable it you need to add it to the router property in your `nuxt-config.js` file.
+The linkPrefetchedClass will allow you to add styles for all links that have been prefetched. This is great for testing which links are being prefetched after modifying the default behavior. The linkPrefetchedClass is disabled by default. If you want to enable it you need to add it to the router property in your `nuxt-config.js` file.
 
 ```js{}[nuxt.config.js]
 export default {
@@ -370,19 +366,9 @@ Then you can add the styles for that class.
 
 ```css
 .nuxt-link-prefetched {
-  color: orangeRed;
+  color: orangered;
 }
 ```
-
-<base-alert type="info">
-
-In this example we have used the class `nuxt-link-prefetched` but you can name it anything you like
-
-</base-alert>
-
-<app-modal>
-  <code-sandbox  :src="csb_link_nuxt_link"></code-sandbox>
-</app-modal>
 
 ## The client-only Component
 
@@ -416,6 +402,29 @@ Use a slot as placeholder until `<client-only />` is mounted on client-side.
   </div>
 </template>
 ```
+
+<base-alert  type="info">
+
+Sometimes in server rendered pages `$refs` inside `<client-only>` might not be ready even with `$nextTick`, the trick might be to call `$nextTick` couple of times:
+
+```js{}[page.vue]
+mounted(){
+  this.initClientOnlyComp()
+},
+methods: {
+  initClientOnlyComp(count = 10) {
+    this.$nextTick(() => {
+      if (this.$refs.myComp) {
+        //...
+      } else if (count > 0) {
+        this.initClientOnlyComp(count - 1);
+      }
+    });
+  },
+}
+```
+
+</base-alert>
 
 <base-alert>
 

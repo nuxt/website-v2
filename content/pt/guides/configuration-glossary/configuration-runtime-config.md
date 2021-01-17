@@ -6,7 +6,7 @@ category: configuration-glossary
 position: 25
 ---
 
-A runtimeConfig permite passar configurações dinâmicas e variáveis ​​de ambiente para o contexto nuxt. Para obter mais informações de uso, consulte o [guia de configuração de tempo de execução](/guide/runtime-config).
+A runtimeConfig permite passar configurações dinâmicas e variáveis ​​de ambiente para o contexto nuxt. Para obter mais informações de uso, consulte o [guia de configuração de tempo de execução](/docs/2.x/configuration-glossary/configuration-runtime-config).
 
 ## `publicRuntimeConfig`
 

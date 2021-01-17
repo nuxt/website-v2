@@ -99,7 +99,7 @@ export default {
           [
             preset,
             {
-              buildTarget: isServer ? 'server' : 'client',
+              targets: isServer ? ... :  ...,
               ...options
             }
           ],
@@ -156,7 +156,7 @@ The extend is called twice, one time for the server bundle, and one time for the
 
 <base-alert>
 
-**Warning:** The `isClient` and `isServer` keys provided in are separate from the keys available in [`context`](/guides/internals-glossary/context). They are **not** deprecated. Do not use `process.client` and `process.server` here as they are `undefined` at this point.
+**Warning:** The `isClient` and `isServer` keys provided in are separate from the keys available in [`context`](/docs/2.x/internals-glossary/context). They are **not** deprecated. Do not use `process.client` and `process.server` here as they are `undefined` at this point.
 
 </base-alert>
 
@@ -225,7 +225,7 @@ You may want to extract all your CSS to a single file. There is a workaround for
 
 <base-alert>
 
-It is not recommended extracting everything into a single file. Extracting into multiple css files is better for caching and preload isolation. It can also improve page performance by downloading and resolving only those resources that are needed.
+It is not recommended to extract everything into a single file. Extracting into multiple CSS files is better for caching and preload isolation. It can also improve page performance by downloading and resolving only those resources that are needed.
 
 </base-alert>
 
@@ -281,13 +281,11 @@ export default {
 
 To understand a bit more about the use of manifests, take a look at this [webpack documentation](https://webpack.js.org/guides/code-splitting/).
 
-
 <base-alert>
 
 Be careful when using non-hashed based filenames in production as most browsers will cache the asset and not detect the changes on first load.
 
 </base-alert>
-
 
 ## friendlyErrors
 
@@ -405,7 +403,7 @@ Configuration for the [html-minifier](https://github.com/kangax/html-minifier) p
 
 ### loaders.sass and loaders.scss
 
-> See the [Node Sass documentation](https://github.com/sass/node-sass/blob/master/README.md#options) for all available Sass options. Note: `loaders.sass` is for [Sass Indented Syntax](http://sass-lang.com/documentation/file.INDENTED_SYNTAX.html)
+> See the [Sass documentation](https://github.com/sass/dart-sass#javascript-api) for all available Sass options. Note: `loaders.sass` is for [Sass Indented Syntax](http://sass-lang.com/documentation/file.INDENTED_SYNTAX.html)
 
 ### loaders.vueStyle
 
@@ -547,11 +545,11 @@ export default {
 }
 ```
 
-### postcss plugins & nuxt-tailwindcss
+### postcss plugins & @nuxtjs/tailwindcss
 
-If you want to apply postcss plugin (eg. postcss-pxtorem) on the nuxt-tailwindcss configuration, you have to change order and load first tailwindcss.
+If you want to apply a postcss plugin (e.g. postcss-pxtorem) on the @nuxtjs/tailwindcss configuration, you have to change order and load tailwindcss first.
 
-**This setup have no impact on the nuxt-purgecss.**
+**This setup has no impact on nuxt-purgecss.**
 
 ```js{}[nuxt.config.js]
 import { join } from 'path'
@@ -594,6 +592,8 @@ export default {
 ```
 
 Then, when launching `nuxt build`, upload the content of `.nuxt/dist/client` directory to your CDN and voilà!
+
+In Nuxt 2.15+, changing the value of this property at runtime will override the configuration of an app that has already been built.
 
 ## quiet
 
@@ -643,7 +643,7 @@ This option is automatically set based on `mode` value if not provided.
 
 This is useful when you need to inject some variables and mixins in your pages without having to import them every time.
 
-Nuxt.js uses https://github.com/yenshih/style-resources-loader to achieve this behaviour.
+Nuxt.js uses https://github.com/yenshih/style-resources-loader to achieve this behavior.
 
 You need to specify the patterns/path you want to include for the given pre-processors: `less`, `sass`, `scss` or `stylus`
 
@@ -668,7 +668,7 @@ You cannot use path aliases here (`~` and `@`), you need to use relative or abso
 
 ## templates
 
-> Nuxt.js allows you provide your own templates which will be rendered based on Nuxt configuration. This feature is specially useful for using with [modules](/guides/directory-structure/modules).
+> Nuxt.js allows you provide your own templates which will be rendered based on Nuxt configuration. This feature is specially useful for using with [modules](/docs/2.x/directory-structure/modules).
 
 - Type: `Array`
 
@@ -689,7 +689,7 @@ export default {
 }
 ```
 
-Templates are rendered using [`lodash.template`](https://lodash.com/docs/#template) you can learn more about using them [here](https://github.com/learn-co-students/javascript-lodash-templates-v-000).
+Templates are rendered using [`lodash.template`](https://lodash.com/docs/#template) you can learn more about using them [here](https://github.com/learn-co-students/javascript-lodash-templates-lab-v-000).
 
 ## terser
 
@@ -758,7 +758,7 @@ Starting with `v2.9.0`, you can also use a function to conditionally transpile, 
 
 ## watch
 
-> You can provide your custom files to watch and regenerate after changes. This feature is specially useful for using with [modules](/guides/directory-structure/modules).
+> You can provide your custom files to watch and regenerate after changes. This feature is specially useful for using with [modules](/docs/2.x/directory-structure/modules).
 
 - Type: `Array<String>`
 

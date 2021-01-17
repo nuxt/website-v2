@@ -11,7 +11,7 @@ Los sitios estáticos son muy similares a las aplicaciones con renderizado serve
 
 Los sitios con renderizado server-side se renderizan en el servidor cada vez que el usuario solicita una página, por lo que se necesita un servidor para poder servir la página con cada petición.
 
-Ver [destinos de despliegue](/guides/features/deployment-targets) para más información acerca de alojamiento estático y en servidor.
+Ver [destinos de despliegue](/docs/2.x/features/deployment-targets) para más información acerca de alojamiento estático y en servidor.
 
 ```js{}[nuxt.config.js]
 export default {
@@ -27,7 +27,7 @@ No necesitas agregar `ssr: true` esto a tu configuración nuxt para activar el r
 
 ## SPA
 
-Con Single Page Applications (aplicaciones de página única) no hay renderizado en el lado del servidor, solo en el lado del cliente. El renderizado en el lado del cliente significa renderizar el contenido en el navegador mediante JavaScript. En lugar de obtener todo el contenido del HTML, solo obtenemos un documento HTML básico con un archivo Javascript que renderizará el resto del sitio usando el navegador. para [desplegar una SPA](/guides/features/deployment-targets#spa) marca `ssr` como `false` y utiliza el comando `build` para construir tu aplicación.
+Con Single Page Applications (aplicaciones de página única) no hay renderizado en el lado del servidor, solo en el lado del cliente. El renderizado en el lado del cliente significa renderizar el contenido en el navegador mediante JavaScript. En lugar de obtener todo el contenido del HTML, solo obtenemos un documento HTML básico con un archivo Javascript que renderizará el resto del sitio usando el navegador. para [desplegar una SPA](/docs/2.x/features/deployment-targets#spa) marca `ssr` como `false` y utiliza el comando `build` para construir tu aplicación.
 
 ```js{}[nuxt.config.js]
 export default {
@@ -37,6 +37,6 @@ export default {
 
 <base-alert type="next">
 
-[La propiedad mode](/guides/configuration-glossary/configuration-mode)
+[La propiedad mode](/docs/2.x/configuration-glossary/configuration-mode)
 
 </base-alert>

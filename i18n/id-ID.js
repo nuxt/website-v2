@@ -16,44 +16,30 @@ module.exports = {
   header: {
     links: [
       {
-        name: 'Guides',
-        slug: 'guides',
-        type: 'newDocs',
-        routeName: 'guides-book-slug'
+        name: 'Panduan',
+        icon: 'books',
+        slug: 'docs-2.x-book-slug'
       },
       {
-        name: 'Guide',
-        slug: 'guide',
-        type: 'dynamic',
-        routeName: 'section-slug'
-      },
-      {
-        name: 'API',
-        slug: 'api',
-        type: 'dynamic',
-        routeName: 'section-slug'
-      },
-      {
-        name: 'Examples',
-        slug: 'examples',
-        type: 'dynamic',
-        routeName: 'section-slug'
+        name: 'Contoh',
+        icon: 'code',
+        slug: 'examples'
       },
       {
         name: 'FAQ',
-        slug: 'faq',
-        type: 'dynamic',
-        routeName: 'section-slug'
-      },
-      {
-        name: 'Resources',
-        slug: 'resources',
-        type: 'static'
+        icon: 'resources',
+        slug: 'faq'
       },
       {
         name: 'Blog',
-        slug: 'blog',
-        type: 'static'
+        icon: 'blog',
+        slug: 'blog'
+      },
+      {
+        name: 'Video Courses',
+        icon: 'video',
+        href:
+          'https://masteringnuxt.com?friend=nuxt&utm_source=Nuxtjs.org&utm_medium=Link&utm_content=Navbar&utm_content=prelaunch'
       }
     ],
     search: {
@@ -106,13 +92,8 @@ module.exports = {
         description:
           'Mode paling populer untuk Nuxt. Dengan SSR, juga disebut mode "universal" atau "isomorphic", server Node.js akan digunakan untuk mengirimkan HTML berdasarkan komponen Vue Anda ke klien alih-alih javascript murni. Menggunakan SSR akan mengarah pada peningkatan SEO yang besar, UX yang lebih baik, dan lebih banyak peluang (dibandingkan dengan Vue SPA tradisional). {Break} Karena menerapkan SSR sendiri bisa sangat membosankan, Nuxt.js memberi Anda dukungan penuh di luar kotak dan akan mengurus perangkap umum.'
       },
-      spa: {
-        title: 'Single Page Application (SPA)',
-        description:
-          'Tidak memerlukan SSR atau Pembuatan Situs Statis tetapi masih ingin mengambil untung dari manfaat yang diberikan Nuxt? Apakah Anda perlahan-lahan mentransisikan aplikasi Anda dan ingin memulai yang ringan? Maka mode SPA tradisional kemungkinan akan menjadi pilihan Anda. Hasilnya akan menjadi Vue SPA khas seperti yang Anda tahu tetapi dipengaruhi oleh konfigurasi Nuxt Anda dan kerangka itu sendiri.'
-      },
       ssg: {
-        title: 'Statically Generated',
+        title: 'Generate Secara Statis',
         description:
           'Pembuatan Situs Statis adalah topik yang sangat panas saat ini (alias JAMStack). Alih-alih beralih ke kerangka kerja lain dan menghabiskan waktu untuk membiasakan diri, mengapa tidak membunuh dua burung dengan satu batu? {proverbial} Nuxt.js mendukung pembuatan situs web statis berdasarkan aplikasi Vue Anda. Ini adalah "yang terbaik dari kedua dunia" karena Anda tidak memerlukan server tetapi masih memiliki manfaat SEO karena Nuxt akan melakukan pra-render semua halaman dan menyertakan HTML yang diperlukan. Anda juga dapat menggunakan halaman yang dihasilkan dengan mudah ke halaman Netlify atau GitHub.',
         proverbial: 'only proverbial'
@@ -286,9 +267,9 @@ module.exports = {
     title: 'Kuis'
   },
   tryNewDocs: {
-    msg1: 'Ingin melihat dokumen baru kami? Kami ',
+    msg1: 'Ingin melihat dokumen baru kami? ',
     link: 'dokumen baru',
-    msg2: ' sekarang dalam versi beta. Selamat bersenang-senang!'
+    msg2: ' kami sekarang dalam versi beta. Selamat bersenang-senang!'
   },
   contribute: {
     title: 'Kontributor',
@@ -300,30 +281,33 @@ module.exports = {
       'Kontribusi untuk halaman ini sekarang ditutup. Jika Anda ingin berkontribusi, silakan periksa ',
     link: 'dokumen baru'
   },
+  example: {
+    intro: 'In this example:'
+  },
   codeSandbox: {
     open: 'Buka CodeSandbox'
   },
   content: {
     guide: {
-      prologue: 'Prologue',
+      prologue: 'Prolog',
       'getting-started': 'Memulai'
     },
     api: {
-      essential: 'Essential',
-      pages: 'Pages',
-      components: 'Components',
-      utils: 'Utils',
-      configuration: 'Configuration',
-      programmatically: 'Programmatically',
-      internals: 'Internals'
+      essential: 'Penting',
+      pages: 'Halaman',
+      components: 'Komponen',
+      utils: 'Utilitas',
+      configuration: 'Konfigurasi',
+      programmatically: 'Secara Terprogram',
+      internals: 'Internal'
     },
     examples: {
-      essentials: 'Essentials',
-      customization: 'Customization',
-      advanced: 'Advanced'
+      essentials: 'Penting',
+      customization: 'Kustomisasi',
+      advanced: 'Lanjutan'
     },
     faq: {
-      configuration: 'Configuration',
+      configuration: 'Konfigurasi',
       development: 'Development',
       deployment: 'Deployment'
     },
@@ -340,19 +324,22 @@ module.exports = {
   footer: {
     links: {
       discover: {
-        title: 'Menemukan',
-        design: 'Sumber daya desain',
-        team: 'Tim sedunia',
-        blog: 'Blog'
+        title: 'Discover',
+        shop: 'Our Goodies Store',
+        consulting: 'Training & consultancy',
+        sponsorNuxt: 'Sponsoring & donations'
       },
-      follow: {
-        title: 'Ikuti'
+      about: {
+        title: 'About',
+        team: 'Our team',
+        design: 'Design kit',
+        contact: 'Contact us'
       },
       support: {
-        title: 'Dukungan',
-        sponsorNuxt: 'Sponsor NuxtJS',
-        shop: 'Toko NuxtJS',
-        consulting: 'Konsultasi NuxtJS'
+        title: 'Support',
+        resources: 'Sumber Daya',
+        discord: 'Chat with us',
+        contributionGuide: 'Contribution guide'
       }
     }
   },

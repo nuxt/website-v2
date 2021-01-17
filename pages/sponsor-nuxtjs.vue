@@ -9,7 +9,7 @@
             class="text-3xl xl:text-4xl text-light-onSurfacePrimary dark:text-dark-onSurfacePrimary font-medium leading-normal mb-6 lg:pt-4"
           >
             {{ $t('sponsor.title') }}
-            <template v-slot:nuxt>
+            <template #nuxt>
               <AppTitle />
             </template>
           </i18n>
@@ -18,7 +18,7 @@
             tag="h3"
             class="xl:text-lg text-light-onSurfaceSecondary dark:text-dark-onSurfaceSecondary font-medium leading-relaxed mb-6"
           >
-            <template v-slot:break>
+            <template #break>
               <br />
             </template>
           </i18n>
@@ -110,7 +110,7 @@
           tag="p"
           class="text-light-onSurfaceSecondary dark:text-dark-onSurfaceSecondary mb-12"
         >
-          <template v-slot:opencollective>
+          <template #opencollective>
             <a href="https://opencollective.com/nuxtjs">OpenCollective</a>
           </template>
         </i18n>
@@ -130,7 +130,7 @@
             v-for="(sponsor, i) in group"
             :key="i"
             class="sponsor inline-block m-4"
-            :href="sponsor.url"
+            :href="`${sponsor.url}?ref=nuxt`"
             target="_blank"
             rel="noopener sponsored"
           >
@@ -186,13 +186,19 @@ export default {
           {
             name: 'Storyblok',
             img: 'storyblok-logo.svg',
-            url: 'https://www.storyblok.com/?ref=nuxt',
+            url: 'https://www.storyblok.com/',
             class: 'h-24'
           },
           {
             name: 'Moovweb',
-            url: 'https://www.moovweb.com/?ref=nuxt',
+            url: 'https://www.moovweb.com/',
             img: 'moovweb-logo.png',
+            class: 'h-12'
+          },
+          {
+            name: 'Ship Shape',
+            url: 'https://shipshape.io/',
+            img: 'shipshape-logo.svg',
             class: 'h-12'
           }
         ],
@@ -200,7 +206,13 @@ export default {
           {
             name: 'VueMastery',
             img: 'vueMastery-brand.svg',
-            url: 'https://www.vuemastery.com/?ref=nuxt',
+            url: 'https://www.vuemastery.com/',
+            class: 'h-10'
+          },
+          {
+            name: 'Legal Nature',
+            img: 'legalnature-logo.svg',
+            url: 'https://www.legalnature.com/',
             class: 'h-10'
           }
         ],
@@ -208,25 +220,25 @@ export default {
           {
             name: 'Sparheld',
             img: 'sparheld.svg',
-            url: 'https://www.sparheld.de/?ref=nuxt',
+            url: 'https://www.sparheld.de/',
             class: 'h-8'
           },
           {
             name: 'Icons8',
             img: 'icons8.svg',
-            url: 'https://icons8.com/?ref=nuxt',
+            url: 'https://icons8.com/',
             class: 'h-8'
           },
           {
             name: 'FireStickHow',
             img: 'fire-stick-how.png',
-            url: 'https://www.firestickhow.com/?ref=nuxt',
+            url: 'https://www.firestickhow.com/',
             class: 'h-8'
           },
           {
             name: 'MiniTool',
             img: 'minitool.png',
-            url: 'https://www.minitool.com',
+            url: 'https://www.minitool.com/',
             class: 'h-8'
           },
           {
@@ -234,13 +246,27 @@ export default {
             img: 'vps-server.png',
             url: 'https://www.vpsserver.com/',
             class: 'h-8'
+          },
+          {
+            name: 'fine VPN',
+            img: 'finevpn.png',
+            url: 'https://en.finevpn.org/',
+            class: 'h-8'
+          }
+        ],
+        bronze: [
+          {
+            name: 'SendCloud',
+            img: 'sendcloud.svg',
+            url: 'https://www.sendcloud.com/',
+            class: 'h-8'
           }
         ],
         special: [
           {
             name: 'Google Chrome',
             img: 'google-chrome.svg',
-            url: 'https://www.google.com/chrome/?ref=nuxt',
+            url: 'https://www.google.com/chrome/',
             class: 'h-12'
           }
         ]
@@ -270,11 +296,6 @@ export default {
       }
     }
   },
-  computed: {
-    currentOnetime() {
-      return this.onetime.current ? this.onetime[this.onetime.current] : null
-    }
-  },
   head() {
     const title = this.$t('sponsor.meta.title')
     const description = this.$t('sponsor.meta.description')
@@ -298,6 +319,11 @@ export default {
           content: description
         }
       ]
+    }
+  },
+  computed: {
+    currentOnetime() {
+      return this.onetime.current ? this.onetime[this.onetime.current] : null
     }
   }
 }

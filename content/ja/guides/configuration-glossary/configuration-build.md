@@ -99,7 +99,7 @@ export default {
           [
             preset,
             {
-              buildTarget: isServer ? 'server' : 'client',
+              targets: isServer ? ... :  ...,
               ...options
             }
           ],
@@ -156,7 +156,7 @@ extend メソッドは一度はサーバーのバンドルのため、一度は�
 
 <base-alert>
 
-**警告:** 提供される `isClient` と `isServer` は [`context`](/guides/internals-glossary/context) で利用可能なキーとは別物です。これらのキーは非推奨では**ありません**。ここでは、`process.client` および `process.server` は `undefined` となるため使用しないでください。
+**警告:** 提供される `isClient` と `isServer` は [`context`](/docs/2.x/internals-glossary/context) で利用可能なキーとは別物です。これらのキーは非推奨では**ありません**。ここでは、`process.client` および `process.server` は `undefined` となるため使用しないでください。
 
 </base-alert>
 
@@ -403,7 +403,7 @@ manifest の使い方をより理解するためにこの [webpack ドキュメ�
 
 ### loaders.sass と loaders.scss
 
-> 利用可能な Sass のオプションについては [Node Sass のドキュメント](https://github.com/sass/node-sass/blob/master/README.md#options)を参照してください。注意: `loaders.sass` は [Sass Indented Syntax](http://sass-lang.com/documentation/file.INDENTED_SYNTAX.html) 用です。
+> 利用可能な Sass のオプションについては [Sass のドキュメント](https://github.com/sass/dart-sass#javascript-api)を参照してください。注意: `loaders.sass` は [Sass Indented Syntax](http://sass-lang.com/documentation/file.INDENTED_SYNTAX.html) 用です。
 
 ### loaders.vueStyle
 
@@ -545,9 +545,9 @@ export default {
 }
 ```
 
-### postcss plugins と nuxt-tailwindcss
+### postcss plugins と @nuxtjs/tailwindcss
 
-nuxt-tailwindcss の設定で postcss プラグイン（例えば postcss-pxtorem）を適用したい場合、順番を変更して最初に tailwindcss を読み込む必要があります。
+@nuxtjs/tailwindcss の設定で postcss プラグイン（例えば postcss-pxtorem）を適用したい場合、順番を変更して最初に tailwindcss を読み込む必要があります。
 
 **この設定は nuxt-purgecss には影響しません。**
 
@@ -666,7 +666,7 @@ Nuxt.js はこの動作を実現するために https://github.com/yenshih/style
 
 ## templates
 
-> Nuxt.js では設定に基づいてレンダリングされる独自のテンプレートを提供できます。この機能は[モジュール](/guides/directory-structure/modules)を使う場合にとりわけ便利です。
+> Nuxt.js では設定に基づいてレンダリングされる独自のテンプレートを提供できます。この機能は[モジュール](/docs/2.x/directory-structure/modules)を使う場合にとりわけ便利です。
 
 - 型: `Array`
 
@@ -687,7 +687,7 @@ export default {
 }
 ```
 
-テンプレートは [`lodash.template`](https://lodash.com/docs/#template) を使ってレンダリングされます。[こちら](https://github.com/learn-co-students/javascript-lodash-templates-v-000)でより詳細な使い方を知ることができます。
+テンプレートは [`lodash.template`](https://lodash.com/docs/#template) を使ってレンダリングされます。[こちら](https://github.com/learn-co-students/javascript-lodash-templates-lab-v-000)でより詳細な使い方を知ることができます。
 
 ## terser
 
@@ -756,7 +756,7 @@ Terser プラグインのオプションです。`false` を設定するとこ�
 
 ## watch
 
-> 監視や変更後に再生成を行うカスタムファイルを提供することができます。この機能は[モジュール](/guides/directory-structure/modules)を使用する場合にとりわけ便利です。
+> 監視や変更後に再生成を行うカスタムファイルを提供することができます。この機能は[モジュール](/docs/2.x/directory-structure/modules)を使用する場合にとりわけ便利です。
 
 - 型: `Array<String>`
 

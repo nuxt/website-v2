@@ -7,7 +7,7 @@ csb_link_plugins_client: https://codesandbox.io/embed/github/nuxt-academy/guides
 csb_link_plugins_external: https://codesandbox.io/embed/github/nuxt-academy/guides-examples/tree/master/04_directory_structure/12_plugins_external?fontsize=14&hidenavigation=1&theme=dark
 csb_link_plugins_custom: https://codesandbox.io/embed/github/nuxt-academy/guides-examples/tree/master/04_directory_structure/12_plugins_custom_plugin?fontsize=14&hidenavigation=1&theme=dark
 csb_link_plugins_vue: https://codesandbox.io/embed/github/nuxt-academy/guides-examples/tree/master/04_directory_structure/12_plugins_vue?fontsize=14&hidenavigation=1&theme=dark
-img: /guides/plugins.svg
+img: /docs/2.x/plugins.svg
 imgAlt: modules-servermiddleware-plugins-in-nuxt-js
 questions:
   - question: Direktori `plugins` mengandung _plugins_ Javascript Anda yang Anda ingin jalankan
@@ -79,7 +79,7 @@ Direktori `plugins` mengandung _plugins_ Javascript Anda yang ingin Anda jalanka
 
 Anda mungkin ingin menggunakan paket/modul dari luar ke dalam aplikasi (salah satu contoh terbaik [axios](https://axios.nuxtjs.org/)) untuk membuat HTTP _requests_ untuk _server_ dan _client_.
 
-Pertama-tama, _install_ paket (_package_) menggunakan NPM atau Yarn.
+Pertama-tama, _install_ paket (_package_) menggunakan npm atau Yarn.
 
 <code-group>
   <code-block label="Yarn" active>
@@ -89,7 +89,7 @@ yarn add @nuxtjs/axios
 ```
 
   </code-block>
-  <code-block label="NPM">
+  <code-block label="npm">
 
 ```bash
 npm install @nuxtjs/axios
@@ -154,7 +154,7 @@ yarn add v-tooltip
 ```
 
   </code-block>
-  <code-block label="NPM">
+  <code-block label="npm">
 
 ```bash
 npm install v-tooltip
@@ -198,7 +198,7 @@ module.exports = {
 }
 ```
 
-Anda dapat mengacu pada dokumentasi [configuration build](/guides/configuration-glossary/configuration-build#transpile) untuk mengetahui lebih lanjut mengenai opsi-opsi yang ada.
+Anda dapat mengacu pada dokumentasi [configuration build](/docs/2.x/configuration-glossary/configuration-build#transpile) untuk mengetahui lebih lanjut mengenai opsi-opsi yang ada.
 
 ## _Client or server side only_ (Hanya _client_ atau sisi _server_)
 
@@ -301,7 +301,7 @@ Jangan menggunakan `Vue.use()`, `Vue.component()`, dan secara global, jangan mem
 
 ## Properti _extendPlugins_
 
-Anda mungkin ingin memperluas _plugins_ atau mengubah urutan _plugins_ yang dihasilkan oleh Nuxt.js. Fungsi ini menerima array dari obyek [plugin](/guides/configuration-glossary/configuration-plugins) dan harus membalikan (_return_) plugin dalam bentuk obyek dalam array.
+Anda mungkin ingin memperluas _plugins_ atau mengubah urutan _plugins_ yang dihasilkan oleh Nuxt.js. Fungsi ini menerima array dari obyek [plugin](/docs/2.x/configuration-glossary/configuration-plugins) dan harus membalikan (_return_) plugin dalam bentuk obyek dalam array.
 
 Contoh pengubahan urutan _plugins_:
 
@@ -327,7 +327,7 @@ _Global mixins_ daoat ditambahkan secara mudah dengan Nuxt _plugins_, tetapi dap
 
 ```js{}[plugins/my-mixin-plugin.js]
 if (!Vue.__my_mixin__) {
-	Vue.__my__mixin__ = true
+  Vue.__my_mixin__ = true
   Vue.mixin({ ... }) // Tetapkan mixin Anda lalu
 }
 ```

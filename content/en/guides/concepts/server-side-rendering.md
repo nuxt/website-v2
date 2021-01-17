@@ -77,10 +77,10 @@ If your server middleware consists of a list of functions mapped to paths:
 Because you are in a Node.js environment you have access to Node.js objects such as `req` and `res`. You do not have access to the `window` or `document` objects as they belong to the browser environment. You can however use `window` or `document` by using the `beforeMount` or `mounted` hooks.
 
 ```js
-beforeMount{
+beforeMount () {
   window.alert('hello');
 }
-mounted{
+mounted () {
   window.alert('hello');
 }
 ```
@@ -97,6 +97,6 @@ The browser receives the rendered page from the server with the generated HTML. 
 
 ### Step 3: Browser to Browser
 
-Navigating between pages with [`<NuxtLink>`](/guides/features/nuxt-components#the-nuxtlink-component) is done on the client side so you don't hit the server again unless you hard refresh the browser.
+Navigating between pages with [`<NuxtLink>`](/docs/2.x/features/nuxt-components#the-nuxtlink-component) is done on the client side so you don't hit the server again unless you hard refresh the browser.
 
 <quiz :questions="questions"></quiz>

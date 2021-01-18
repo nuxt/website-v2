@@ -42,6 +42,6 @@ Built-in indicators support `color` and `background` options.
 
 ## Indicateurs personnalisés
 
-Si nous avons besoin de notre propre indicateur spécial, une chaîne de caractères ou un nom de clé peut aussi être le chemin vers le code source d'un template HTML. Toutes les options seront aussi passées au template.
+Si vous avez besoin de votre propre indicateur spécial, une chaîne de caractères ou un nom de clé peut aussi être le chemin vers le code source d'un template HTML. Toutes les options seront aussi passées au template.
 
 Le [code source](https://github.com/nuxt/nuxt.js/tree/dev/packages/vue-app/template/views/loading) de celui de Nuxt.js est aussi disponible si l'on souhaite avoir une base !

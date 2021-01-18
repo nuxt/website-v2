@@ -1,7 +1,7 @@
 ---
-title: 'How to Deploy on Amazon Web Services'
+title: 'Deploy Nuxt on Amazon Web Services'
 description: Static Hosting on AWS with S3 Amplify and CloudFront
-menu: Deploy on Amazon Web Services
+menu: Amazon Web Services
 category: deployment
 position: 201
 ---

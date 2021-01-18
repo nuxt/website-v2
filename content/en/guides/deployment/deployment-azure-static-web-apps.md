@@ -1,7 +1,7 @@
 ---
-title: How to deploy on Azure Static Web Apps?
+title: Deploy on Azure Static Web Apps
 description: How to deploy a Nuxt.js application on Azure Static Web Apps?
-menu: Deploy on Azure Static Web Apps
+menu: Azure Static Web Apps
 category: deployment
 position: 203
 ---

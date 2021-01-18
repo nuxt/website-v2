@@ -37,7 +37,7 @@ module.exports = {
         slug: 'blog'
       },
       {
-        name: 'Video Courses',
+        name: 'Видео курсы',
         icon: 'video',
         href:
           'https://masteringnuxt.com?friend=nuxt&utm_source=Nuxtjs.org&utm_medium=Link&utm_content=Navbar&utm_content=prelaunch'

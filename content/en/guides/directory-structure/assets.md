@@ -125,6 +125,8 @@ npm install --save-dev sass sass-loader fibers
   </code-block>
 </code-group>
 
+<base-alert type="info">Synchronous compilation with `sass` (2x speed increase) [is enabled automatically](https://github.com/webpack-contrib/sass-loader) when `fibers` is installed.</base-alert>
+
 Nuxt.js will automatically guess the file type by its extension and use the appropriate pre-processor loader for webpack. You will still need to install the required loader if you need to use them.
 
 ## Fonts

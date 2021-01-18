@@ -37,12 +37,14 @@ By default, Nuxt.js is configured to cover most use cases. This default configur
 
 ### alias
 
-This option lets you define other aliases that will be available in all contexts on nuxt: javascript, template and style.
+This option lets you define aliases that will be available within your JavaScript and CSS.
 
 ```js{}[nuxt.config.js]
+import { resolve } from 'path'
+
 export default {
   alias: {
-    'style': './assets/style'
+    'style': resolve(__dirname, './assets/style')
   }
 }
 ```

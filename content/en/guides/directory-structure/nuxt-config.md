@@ -47,6 +47,12 @@ export default {
 }
 ```
 
+<base-alert type="next">
+
+See more on the [alias property](/docs/2.x/configuration-glossary/configuration-alias)
+
+</base-alert>
+
 ### build
 
 This option lets you configure various settings for the `build` step, including `loaders`, `filenames`, the `webpack` config and `transpilation`.

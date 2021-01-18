@@ -69,7 +69,7 @@
           <span
             class="light:text-light-onSurfaceSecondary dark:text-dark-onSurfaceSecondary transition-colors duration-300 ease-linear"
           >
-            {{ post.readingTime.text }}
+            &nbsp;{{ post.readingTime.text }}
           </span>
         </div>
       </div>

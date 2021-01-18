@@ -1,10 +1,12 @@
 ---
 title: 'The alias Property'
-description: Provide alias for javascript, template, and style
+description: Nuxt.js allows you to use aliases to access custom directories within your JavaScript and CSS
 menu: alias
 category: configuration-glossary
 position: 0
 ---
+
+> Nuxt.js allows you to use aliases to access custom directories within your JavaScript and CSS.
 
 - Type: `Object`
 - Default:
@@ -14,14 +16,12 @@ position: 0
     '@@': `<rootDir>`,
     '~': `<srcDir>`,
     '@': `<srcDir>`,
-    // (unless you have set a custom `dir.assets`)
-    'assets': `<srcDir>/assets`,
-    // (unless you have set a custom `dir.static`)
-    'static': `<srcDir>/static`,
+    'assets': `<srcDir>/assets`, // (unless you have set a custom `dir.assets`)
+    'static': `<srcDir>/static`, // (unless you have set a custom `dir.static`)
   }
   ```
 
-This option lets you define aliases that will be available within your JavaScript and CSS (in addition to the ones above).
+This option lets you define aliases to directories within your project (in addition to the ones above). These aliases can be used within your JavaScript and CSS.
 
 ```js{}[nuxt.config.js]
 import { resolve } from 'path'
@@ -55,3 +55,7 @@ body {
 }
 </style>
 ```
+
+<base-alert type="warning">Within a Webpack context (image sources, CSS - but _not_ JavaScript) you must prefix your alias with `~` (as in the example above).</base-alert>
+
+<base-alert type="info">If you are using TypeScript and want to use the alias you define within your TypeScript files, you will need to add the aliases to your `paths` object within `tsconfig.json`.</base-alert>

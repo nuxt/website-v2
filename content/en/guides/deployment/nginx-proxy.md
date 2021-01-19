@@ -1,5 +1,5 @@
 ---
-title: Using nginx as a reverse proxy
+title: Using NGINX as a reverse proxy
 description: How to use nginx as a reverse proxy
 menu: NGINX
 category: deployment

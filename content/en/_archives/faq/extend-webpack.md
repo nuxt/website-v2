@@ -44,24 +44,3 @@ export default {
   }
 }
 ```
-
-#### Execute ESLint on every webpack build in dev environment
-
-In order to be aware of code style errors, you may want to run [ESLint](https://github.com/webpack-contrib/eslint-loader) on every build in dev environment.
-
-```js
-export default {
-  build: {
-    extend(config, { isDev, isClient }) {
-      if (isDev && isClient) {
-        config.module.rules.push({
-          enforce: 'pre',
-          test: /\.(js|vue)$/,
-          loader: 'eslint-loader',
-          exclude: /(node_modules)/
-        })
-      }
-    }
-  }
-}
-```

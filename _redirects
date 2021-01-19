@@ -104,3 +104,16 @@ https://www.nuxtjs.org/* https://nuxtjs.org/:splat 301!
 # [LEGACY] Redirect FAQ URLs
 /faq/google-analytics /faq/ga 301!
 /faq/now-deployment /faq/vercel-deployment 301!
+
+
+/faq/async-data-components /docs/2.x/features/data-fetching#async-data-in-components 301!
+/faq/cached-components https://github.com/nuxt-community/component-cache-module 301!
+/faq/duplicated-meta-tags /docs/2.x/features/meta-tags-seo 301!
+/faq/extend-webpack /docs/2.x/features/configuration#extend-webpack-config 301!
+/faq/external-resources /docs/2.x/features/configuration#external-resources 301!
+/faq/ga https://google-analytics.nuxtjs.org/ 301!
+/faq/host-port /docs/2.x/features/configuration#edit-host-and-port 301!
+/faq/postcss-plugins /docs/2.x/features/configuration#postcss-plugins 301!
+/faq/webpack-plugins /docs/2.x/features/configuration#add-webpack-plugins 301!
+/faq/http-proxy https://github.com/nuxt-community/proxy-module 301!
+/faq/webpack-audio-files /docs/2.x/features/configuration#extend-webpack-to-load-audio-files 301!

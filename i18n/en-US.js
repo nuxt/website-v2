@@ -194,9 +194,9 @@ module.exports = {
     },
     title: '{nuxt} Video Courses',
     description:
-      'With the video courses below created by our partner VueSchool you can discover and learn more about the Nuxt.js Framework.',
+      'With the video courses below you can discover and learn more about the Nuxt Framework.',
     cta: {
-      discover: 'Discover vueschool',
+      discover: 'Discover Mastering Nuxt',
       start: 'START COURSE'
     }
   },

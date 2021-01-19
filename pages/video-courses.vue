@@ -9,7 +9,7 @@
             class="text-3xl xl:text-4xl text-light-onSurfacePrimary dark:text-dark-onSurfacePrimary font-medium leading-normal mb-6 lg:pt-4"
           >
             {{ $t('video-courses.title') }}
-            <template v-slot:nuxt>
+            <template #nuxt>
               <AppTitle />
             </template>
           </i18n>
@@ -19,7 +19,7 @@
             {{ $t('video-courses.description') }}
           </h3>
           <AppButton
-            href="https://vueschool.io/?friend=nuxt&utm_source=Nuxtjs.org&utm_medium=Link&utm_content=HomeHero&utm_content=V1"
+            href="https://masteringnuxt.com/?utm_source=nuxt&utm_medium=link&utm_campaign=navbar_link"
             rel="noopener sponsored"
             target="_blank"
             class="sm:mr-4 py-3 px-6 text-base mb-4"
@@ -83,6 +83,20 @@ export default {
   data() {
     return {
       courses: [
+        {
+          title: 'Get Started with Nuxt',
+          description:
+            'Learn the essentials for how to build and deploy a Nuxt site including dnyamic routes, data fetching, SEO, lazy loading, global styles and transitions as well as how to generate and deploy your Nuxt app.',
+          link: 'https://explorers.netlify.com/learn/get-started-with-nuxt',
+          img: 'get-started-with-nuxt'
+        },
+        {
+          title: 'Building Applications with Vue & Nuxt',
+          description:
+            'Build dynamic web applications with Vue and Nuxt! Throughout the course you’ll build out a variety of projects leveraging the tools in the Vue ecosystem including the Vue CLI, Nuxt, Vuex Store, and more.',
+          link: 'https://frontendmasters.com/courses/vue-nuxt-apps/',
+          img: 'building-applications-with-vue-and-nuxt'
+        },
         {
           title: 'Nuxt.js Fundamentals',
           description:

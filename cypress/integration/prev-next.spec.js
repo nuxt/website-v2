@@ -1,6 +1,6 @@
 describe('It checks to see if prev and next work for the guides ', () => {
   beforeEach(() => {
-    cy.visit('/docs/2.x/get-started/routing')
+    cy.visit('/docs/2.x/get-started/routing/')
   })
   it('checks the previous link', () => {
     cy.get('[data-cy="prev"]').click()

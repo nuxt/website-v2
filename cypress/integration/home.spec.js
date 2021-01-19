@@ -6,7 +6,7 @@ describe('The Home Page links', () => {
     cy.get('a[data-cy="get-started"]')
       .click()
     cy.url().should('include', '/docs/2.x/get-started/installation')
-    cy.visit('/docs/2.x/get-started/installation')
+    cy.visit('/docs/2.x/get-started/installation/')
   })
 
   it('github stars links to the right page', () => {
@@ -36,7 +36,7 @@ describe('The Home Page links', () => {
   it('checks to see if the sponsor button links to the sponsor page', () => {
     cy.get('a[data-cy="sponsors"]').click()
     cy.url().should('include', '/sponsor-nuxtjs')
-    cy.visit('/sponsor-nuxtjs')
+    cy.visit('/sponsor-nuxtjs/')
   })
 
 

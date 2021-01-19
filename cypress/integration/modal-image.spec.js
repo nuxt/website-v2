@@ -1,6 +1,6 @@
 describe('It checks to see if the modals works', () => {
   it('successfully opens checks for image and closes the image modal', () => {
-    cy.visit('/docs/2.x/concepts/context-helpers')
+    cy.visit('/docs/2.x/concepts/context-helpers/')
     cy.get('[data-cy="modal-image"]').click({ force: true })
     cy.get('[data-cy="modal-open"]')
       .should('be.visible')

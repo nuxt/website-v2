@@ -132,7 +132,13 @@ export default {
 
 ### runtimeConfig
 
-The runtime config has built-in dotenv support providing better security and faster development. The runtime config is added to the Nuxt payload so there is no need to rebuild in order to update the runtime configuration when working in development or with Server-side rendering or client side only applications. Although for static sites you will still need to regenerate your site to see these changes.
+The runtime config has built-in [dotenv](https://github.com/motdotla/dotenv) support for better security and faster development. The runtime config is added to the Nuxt payload so there is no need to rebuild in order to update the runtime configuration when working in development or with server-side rendering or client-side only applications. (For static sites you will still need to regenerate your site to see changes.)
+
+#### `.env` support
+
+If you have a `.env` file in your project root directory, it will be automatically loaded into `process.env` and accessible within your `nuxt.config`/`serverMiddleware` and any other files they import.
+
+You can customize the path by using `--dotenv <file>` or disable entirely with `--dotenv false`. For example, you might specify a different `.env` file in production, staging or development environments.
 
 #### `publicRuntimeConfig`
 

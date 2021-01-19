@@ -1,7 +1,7 @@
 ---
 title: Using nginx as a reverse proxy
 description: How to use nginx as a reverse proxy
-menu: nginx
+menu: NGINX
 category: deployment
 position: 213
 ---

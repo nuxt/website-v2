@@ -62,6 +62,14 @@ In your code, you can then reference these files relative to the root (`/`):
 <img src="~/assets/my-image-2.png" />
 ```
 
+<base-alert type="info">Nuxt doesn't change this path, so if you customize your `router.base` then you'll need to make sure to add that manually to your paths. For example:
+
+```html
+<img :src="`${yourPrefix}/my-image.png`" />
+```
+
+</base-alert>
+
 ## Static Directory Config
 
 Should you need to you can configure the `static/` directory behavior in the `nuxt.config.js` file.

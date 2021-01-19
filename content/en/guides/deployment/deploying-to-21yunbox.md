@@ -1,8 +1,9 @@
 ---
-title: Deploy on 21YunBox
+title: Deploy Nuxt on 21YunBox
 description: How to deploy Nuxt.js on 21YunBox?
+menu: 21YunBox
 category: deployment
-position: 216
+position: 200
 ---
 
 [21YunBox](https://www.21yunbox.com) provides blazing fast Chinese CDN, continuous deployment, one-click HTTPS and [other services like managed databases and backend web services](https://www.21yunbox.com/docs/), providing an avenue to launch web projects in China.
@@ -29,11 +30,11 @@ You can set up a Nuxt site on 21YunBox in two quick steps:
 1. Create a new web service on 21YunBox, and give 21YunBox permission to access your GitHub or Gitee repo.
 2. Use the following values during creation:
 
-   |                       |                                                  |
-   | --------------------- | ------------------------------------------------ |
-   | **Environment**       | `Static Site`                                    |
+   |                       |                                                     |
+   | --------------------- | --------------------------------------------------- |
+   | **Environment**       | `Static Site`                                       |
    | **Build Command**     | `yarn && yarn generate` (or your own build command) |
-   | **Publish Directory** | `./dist` (or your own output directory)        |
+   | **Publish Directory** | `./dist` (or your own output directory)             |
 
 That's it! Your site will be live on your 21YunBox URL (which looks like `yoursite.21yunbox.com`) as soon as the build is done.
 

@@ -1,7 +1,7 @@
 ---
-title: How to deploy on Heroku?
+title: Deploy Nuxt on Heroku
 description: How to deploy Nuxt.js on Heroku?
-menu: Deploy on Heroku
+menu: Heroku
 category: deployment
 position: 209
 ---

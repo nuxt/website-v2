@@ -104,3 +104,20 @@ https://www.nuxtjs.org/* https://nuxtjs.org/:splat 301!
 # [LEGACY] Redirect FAQ URLs
 /faq/google-analytics /faq/ga 301!
 /faq/now-deployment /faq/vercel-deployment 301!
+/faq/deployment-aws-s3-cloudfront /docs/2.x/deployment/deployment-aws-s3-cloudfront 301!
+/faq/deployment-aws-amplify /docs/2.x/deployment/deployment-aws-amplify 301!
+/faq/deployment-azure-portal /docs/2.x/deployment/deployment-azure-portal 301!
+/faq/deployment-azure-static-web-apps /docs/2.x/deployment/deployment-azure-static-web-apps 301!
+/faq/bip-deployment /docs/2.x/deployment/bip-deployment 301!
+/faq/dokku-deployment /docs/2.x/deployment/dokku-deployment 301!
+/faq/github-pages /docs/2.x/deployment/github-pages 301!
+/faq/appengine-deployment /docs/2.x/deployment/appengine-deployment 301!
+/faq/deployment-cloud-run /docs/2.x/deployment/deployment-cloud-run 301!
+/faq/heroku-deployment /docs/2.x/deployment/heroku-deployment 301!
+/faq/netlify-deployment /docs/2.x/deployment/netlify-deployment 301!
+/faq/vercel-deployment /docs/2.x/deployment/vercel-deployment 301!
+/faq/surge-deployment /docs/2.x/deployment/surge-deployment 301!
+/faq/deploy-on-moovweb /docs/2.x/deployment/deploy-on-moovweb 301!
+/faq/deployment-pm2 /docs/2.x/deployment/deployment-pm2 301!
+/faq/nginx-proxy /docs/2.x/deployment/nginx-proxy 301!
+/faq/deploying-to-21yunbox /docs/2.x/deployment/deploying-to-21yunbox 301!

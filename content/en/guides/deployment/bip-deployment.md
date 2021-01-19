@@ -1,7 +1,7 @@
 ---
-title: How to deploy with Bip?
+title: Deploy Nuxt with Bip
 description: How to deploy a Nuxt app with Bip?
-menu: Deploy on Bip
+menu: Bip
 category: deployment
 position: 204
 ---

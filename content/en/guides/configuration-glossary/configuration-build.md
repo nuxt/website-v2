@@ -630,6 +630,19 @@ If split codes for `layout`, `pages` and `commons` (common libs: vue|vue-loader|
 
 This option is automatically set based on `mode` value if not provided.
 
+## standalone
+
+> An **experimental** mode to bundle server dependencies with Webpack.
+
+- Type: `Boolean`
+- Default: `false`
+
+This mode bundles `node_modules` that are normally preserved as externals in the server build ([more information](https://github.com/nuxt/nuxt.js/pull/4661)).
+
+<base-alert type="warning">**Warning**: there are a number of potential issues with this (for example, if there are dynamic imports in a 3rd-party module).</base-alert>
+
+<base-alert type="info">**Info:** you can use the command `yarn nuxt build --standalone` to enable this mode on the command line. (If you are not using `yarn` you can run the command with `npx`.)</base-alert>
+
 ## styleResources
 
 - Type: `Object`

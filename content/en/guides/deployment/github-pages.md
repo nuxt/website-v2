@@ -1,7 +1,7 @@
 ---
-title: How to deploy on GitHub Pages?
+title: Deploy Nuxt on GitHub Pages
 description: How to deploy Nuxt.js app on GitHub Pages?
-menu: Deploy on GitHub
+menu: GitHub
 category: deployment
 position: 206
 ---

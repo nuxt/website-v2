@@ -144,6 +144,12 @@ module.exports = {
     themes: {
       title: 'Themes'
     },
+    modules: {
+      title: 'Modules'
+    },
+    faq: {
+      title: 'FAQ'
+    },
     videos: {
       title: 'Video Courses'
     }

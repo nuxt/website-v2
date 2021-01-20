@@ -99,4 +99,18 @@ The browser receives the rendered page from the server with the generated HTML. 
 
 Navigating between pages with [`<NuxtLink>`](/docs/2.x/features/nuxt-components#the-nuxtlink-component) is done on the client side so you don't hit the server again unless you hard refresh the browser.
 
+## Caveats
+
+### window or document undefined
+
+This is due to the server-side rendering. If you need to specify that you want to import a resource only on the client-side, you need to use the `process.client` variable.
+
+For example, in your `.vue` file:
+
+```js
+if (process.client) {
+  require('external_library')
+}
+```
+
 <quiz :questions="questions"></quiz>

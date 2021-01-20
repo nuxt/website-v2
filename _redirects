@@ -135,3 +135,4 @@ https://www.nuxtjs.org/* https://nuxtjs.org/:splat 301!
 /faq/nginx-proxy /docs/2.x/deployment/nginx-proxy 301!
 /faq/deploying-to-21yunbox /docs/2.x/deployment/deploying-to-21yunbox 301!
 /faq/css-flash /faq 301!
+/faq/window-or-document-undefined /docs/2.x/concepts/server-side-rendering#window-or-document-undefined 301!

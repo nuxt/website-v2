@@ -44,9 +44,9 @@
             {{ course.type }}
           </span>
           <div
-            class="block sm:flex w-full h-full items-center pr-6 bg-light-surface hover:bg-gray-200 dark:bg-dark-surface rounded transition-colors duration-300 ease-linear"
+            class="flex flex-col md:flex-row block w-full h-full items-center pr-6 bg-light-surface hover:bg-gray-200 dark:bg-dark-surface rounded transition-colors duration-300 ease-linear"
           >
-            <div class="w-full p-6">
+            <div class="w-full p-6 order-2 md:order-1">
               <h4
                 class="inline w-full font-medium text-xl pb-2 text-light-onSurfacePrimary dark:text-dark-onSurfacePrimary transition-colors duration-300 ease-linear"
               >
@@ -56,21 +56,23 @@
               <p class="mb-3 text-gray-600">
                 {{ course.description }}
               </p>
-              <AppButton
-                :href="course.link"
-                rel="noopener sponsored"
-                target="_blank"
-                class="sm:mr-4 p-3 mt-3 text-sm text-left"
-              >
-                <PlayCircleIcon slot="icon" class="h-4 -mb-1 mr-1" />
-                {{ $t('video-courses.cta.start') }}
-              </AppButton>
+              <div class="flex w-full justify-center md:justify-start">
+                <AppButton
+                  :href="course.link"
+                  rel="noopener sponsored"
+                  target="_blank"
+                  class="md:mr-4 p-3 mt-3 text-sm text-center block"
+                >
+                  <PlayCircleIcon slot="icon" class="h-4 -mb-1 mr-1" />
+                  {{ $t('video-courses.cta.start') }}
+                </AppButton>
+              </div>
             </div>
             <img
               :src="'/courses/' + course.img + '.png'"
               :srcset="'/courses/' + course.img + '-2x.png 2x'"
               :alt="course.title"
-              class="block w-auto rounded xs:px-4 md:px-0"
+              class="block w-auto rounded py-4 md:px-0 order-1 md:order-2"
             />
           </div>
         </div>

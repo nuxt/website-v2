@@ -1,60 +1,60 @@
 ---
-title: Nuxt Components
-description: Nuxt.js comes with a few important components included out of the box, which will be helpful when building your application.
+title: Компоненты Nuxt
+description: Из коробки Nuxt.js поставляется с несколькими важными компонентами, которые будут полензны при создании вашего приложения.
 position: 9
 category: features
 csb_link_nuxt_link: https://codesandbox.io/embed/github/nuxt-academy/guides-examples/tree/master/03_features/09_components_nuxt-link?fontsize=14&hidenavigation=1&theme=dark
 csb_link_nuxt: https://codesandbox.io/embed/github/nuxt-academy/guides-examples/tree/master/03_features/09_components_nuxt?fontsize=14&hidenavigation=1&theme=dark
 questions:
-  - question: What component do you use to display your page components?
+  - question: Какой компонент вы используете для отображения компонентов страницы?
     answers:
       - '<Nuxt>'
       - '<Page>'
       - '<Views>'
     correctAnswer: '<Nuxt>'
-  - question: The `<Nuxt>` component can be used in?
+  - question: Где может использоваться компонент `<Nuxt>`?
     answers:
-      - components
-      - pages
-      - layouts
-    correctAnswer: layouts
-  - question: Which component is used for displaying the children components in a nested route?
+      - компоненты
+      - страницы
+      - макеты
+    correctAnswer: макеты
+  - question: Какой компонент используется для отображения дочерних компонентов во вложенном маршруте?
     answers:
       - '<Nuxt>'
       - '<NuxtChild>'
       - '<Children>'
     correctAnswer: '<NuxtChild>'
-  - question: Where do you insert the `<NuxtChild>` component?
+  - question: Где вы поместите компонент `<NuxtChild>`?
     answers:
       - pages/child.vue
       - pages/parent.vue
       - layouts/parent.vue
     correctAnswer: pages/parent.vue
-  - question: '`keep-alive` can be used in'
+  - question: `keep-alive` может быть использован в
     answers:
-      - '<Nuxt> component only'
-      - '<Nuxt> and <NuxtChild> component'
-      - '<NuxtChild> component only'
-    correctAnswer: '<Nuxt> and <NuxtChild> component'
-  - question: What component do we use to link to internal pages?
+      - только в компоненте <Nuxt>
+      - в компонентах <Nuxt> и <NuxtChild>
+      - только в компоненте <NuxtChild>
+    correctAnswer: в компонентах <Nuxt> и <NuxtChild>
+  - question: Какой компонент мы используем для ссылки на внутренние страницы?
     answers:
       - '<NuxtLink>'
       - '<RouterLink>'
       - '<a>'
     correctAnswer: '<NuxtLink>'
-  - question: 'How do you link to the about page of your app using <NuxtLink>?'
+  - question: Как вы будете ссылаться на страницу про вас внутри вашего приложения используя <NuxtLink>?
     answers:
       - to="/about"
       - href="/about"
       - link="/about"
     correctAnswer: to="/about"
-  - question: What key do you use to disable prefetching for certain pages?
+  - question: Какой ключ вы будете использовать для отключения предварительного получения данных для некоторых страниц?
     answers:
       - no-prefetch
       - :prefetch="false"
-      - no-prefetch and :prefetch="false"
-    correctAnswer: no-prefetch and :prefetch="false"
-  - question: What is the default class you can use to add styles for active links
+      - no-prefetch и :prefetch="false"
+    correctAnswer: no-prefetch и :prefetch="false"
+  - question: Какой по умолчанию класс вы можете использовать для добавления стилей к активным ссылкам?
     answers:
       - nuxt-link-active
       - link-active
@@ -66,7 +66,7 @@ questions:
       - link-exact-active
       - nuxt-exact-active-link
     correctAnswer: nuxt-link-exact-active
-  - question: In Nuxt ≥ 2.9.0 which component do you use so that your component is only rendered on client side?
+  - question: Какой бы вы использовали компонент в Nuxt ≥ 2.9.0 чтоб ваш компонент рендерился на стороне клиента?
     answers:
       - '<client-only>'
       - '<no-ssr>'
@@ -74,13 +74,14 @@ questions:
     correctAnswer: '<client-only>'
 ---
 
-Nuxt.js comes with a few important components included out of the box, which will be helpful when building your application. The components are globally available, which means that you don't need to import them in order to use them.
+Из коробки Nuxt.js поставляется с несколькими важными компонентами, которые будут полензны при создании вашего приложения. Компоненты глобально доступны, это значит что вам не нужно импортировать их при использовании.
 
-In the following paragraphs, each of the included components is explained.
+Описание данных компонентов приведено в следующих параграфах.
 
-## The Nuxt Component
+## Компонент Nuxt
 
-The `<Nuxt>` component is the component you use to display your page components. Basically, this component gets replaced by what is inside your page components depending on the page that is being shown. Therefore it is important that you add the `<Nuxt>` component to your layouts.
+Компонент `<Nuxt>` используется для отображения компонентов страницы. 
+The `<Nuxt>` component is the component you use to display your page components. По сути, он заменяется компонентами страницы, в зависимости от того какая страница показывается. Therefore it is important that you add the `<Nuxt>` component to your layouts.
 
 ```html{}[layouts/default.vue]
 <template>

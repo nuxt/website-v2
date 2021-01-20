@@ -57,7 +57,7 @@ Server Node.js perlu dikonfigurasi untuk menjalankan aplikasi Vue.js Anda.
 
 Anda dapat memperluas server dengan serverMiddleware dan mengontrol rute dengan middleware.
 
-```js{}[middleware/api/logger.js]
+```js{}[api/logger.js]
 export default function (req, res, next) {
   console.log(req.url)
   next()

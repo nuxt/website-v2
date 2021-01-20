@@ -58,6 +58,7 @@ A Node.js server needs to be configured to execute your Vue.js application.
 You can extend the server with serverMiddleware and control routes with middleware.
 
 ```js{}[server-middleware/logger.js]
+
 export default function (req, res, next) {
   console.log(req.url)
   next()
@@ -67,6 +68,7 @@ export default function (req, res, next) {
 ```js{}[nuxt.config.js]
 export default {
   serverMiddleware: ['~/server-middleware/logger']
+
 }
 ```
 

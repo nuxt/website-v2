@@ -25,7 +25,7 @@
 export default {
   scrollToTop: true,
   async asyncData({ $content, $contributors, params, store, error, app }) {
-    const slug = params.slug || 'window-document-undefined'
+    const slug = params.slug || 'ios-phone-numbers'
 
     let path = `/${app.i18n.defaultLocale}/faq`
     let page, prev, next, langFallback

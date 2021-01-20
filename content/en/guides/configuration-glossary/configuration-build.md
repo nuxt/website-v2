@@ -632,7 +632,7 @@ This option is automatically set based on `mode` value if not provided.
 
 ## standalone
 
-> An **advanced** mode to bundle server dependencies with Webpack.
+> Inline server bundle dependencies (advanced)
 
 - Type: `Boolean`
 - Default: `false`

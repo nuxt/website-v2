@@ -39,7 +39,7 @@
           class="w-full p-4 relative"
         >
           <span
-            class="bg-orange-500 text-white dark:text-black text-ss px-1 rounded-sm lowercase absolute m-1 right-0 mr-6"
+            class="bg-orange-500 text-white dark:text-black text-ss px-1 rounded-sm lowercase absolute m-2 right-0 mr-6"
           >
             {{ course.type }}
           </span>
@@ -56,23 +56,21 @@
               <p class="mb-3 text-gray-600">
                 {{ course.description }}
               </p>
-              <div class="flex w-full justify-center md:justify-start">
-                <AppButton
-                  :href="course.link"
-                  rel="noopener sponsored"
-                  target="_blank"
-                  class="md:mr-4 p-3 mt-3 text-sm text-center block"
-                >
-                  <PlayCircleIcon slot="icon" class="h-4 -mb-1 mr-1" />
-                  {{ $t('video-courses.cta.start') }}
-                </AppButton>
-              </div>
+              <AppButton
+                :href="course.link"
+                rel="noopener sponsored"
+                target="_blank"
+                class="md:mr-4 p-3 mt-3 text-sm text-left block"
+              >
+                <PlayCircleIcon slot="icon" class="h-4 -mb-1 mr-1" />
+                {{ $t('video-courses.cta.start') }}
+              </AppButton>
             </div>
             <img
               :src="'/courses/' + course.img + '.png'"
               :srcset="'/courses/' + course.img + '-2x.png 2x'"
               :alt="course.title"
-              class="block w-auto rounded py-4 md:px-0 order-1 md:order-2"
+              class="block w-auto rounded px-6 md:py-8 md:px-0 order-1 md:order-2 self-start"
             />
           </div>
         </div>

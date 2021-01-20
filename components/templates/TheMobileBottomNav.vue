@@ -33,6 +33,7 @@
           :key="link.href"
           :href="link.href"
           target="_blank"
+          rel="noopener"
           class="iblock md:flex md:justify-center w-full p-2 md:p-4 text-light-onSurfacePrimary dark:text-dark-onSurfacePrimary hover:no-underline hover:text-primary-base dark:hover:text-primary-base text-center visited:text-nuxt-gray transition-colors duration-300 ease-linear"
         >
           <component

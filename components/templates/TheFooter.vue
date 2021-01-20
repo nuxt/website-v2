@@ -62,6 +62,7 @@
               class="inline-block"
               href="https://url.netlify.com/B1Mh093Iv"
               target="_blank"
+              rel="noopener"
             >
               <img
                 src="https://www.netlify.com/img/global/badges/netlify-color-bg.svg"

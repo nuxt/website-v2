@@ -333,6 +333,7 @@ module.exports = {
       'configuration-glossary': 'Configuration Glossary',
       'internals-glossary': 'Internals Glossary',
       'components-glossary': 'Components Glossary',
+      deployment: 'Deployment',
       examples: 'Examples'
     }
   },

@@ -57,7 +57,7 @@ questions:
 
 Вы можете расширить сервер с помощью serverMiddleware и управлять маршрутами с помощью middleware.
 
-```js{}[middleware/api/logger.js]
+```js{}[api/logger.js]
 export default function (req, res, next) {
   console.log(req.url)
   next()
@@ -66,7 +66,7 @@ export default function (req, res, next) {
 
 ```js{}[nuxt.config.js]
 export default {
-  serverMiddleware: ['~/middleware/api/logger']
+  serverMiddleware: ['~/api/logger']
 }
 ```
 

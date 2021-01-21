@@ -35,7 +35,7 @@ questions:
       - css
       - globalCss
     correctAnswer: css
-  - question: Можете ли вы испольщовать синтаксис JSX в вашем Nuxt.js приложении?
+  - question: Можете ли вы использовать синтаксис JSX в вашем Nuxt.js приложении?
     answers:
       - Да
       - Нет

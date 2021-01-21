@@ -2,6 +2,7 @@
 title: Deploy Nuxt using PM2
 description: How to deploy Nuxt.js with PM2 cluster mode enabled?
 menu: PM2
+target: Server
 category: deployment
 position: 214
 ---

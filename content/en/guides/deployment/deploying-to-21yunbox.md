@@ -2,6 +2,7 @@
 title: Deploy Nuxt on 21YunBox
 description: How to deploy Nuxt.js on 21YunBox?
 menu: 21YunBox
+target: Server
 category: deployment
 position: 200
 ---

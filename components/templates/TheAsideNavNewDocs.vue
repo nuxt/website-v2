@@ -44,6 +44,12 @@
               >
                 <template v-if="link.menu">
                   {{ link.menu }}
+                  <span
+                    v-if="link.target"
+                    class="text-white text-orange-500 dark:text-black text-ss align-middle ml-2 px-1 py-0 rounded-sm lowercase"
+                  >
+                    {{ link.target }}
+                  </span>
                 </template>
                 <template v-else>
                   {{ link.title }}
@@ -81,7 +87,7 @@ export default {
   props: {
     links: {
       type: Object,
-      default: () => []
+      default: () => {}
     }
   },
   data() {

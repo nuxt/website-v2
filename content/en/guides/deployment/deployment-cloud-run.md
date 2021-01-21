@@ -2,6 +2,7 @@
 title: Deploy Nuxt on Google Cloud Run
 description: How to deploy Nuxt on Google Cloud Run?
 menu: Google Cloud Run
+target: Server
 category: deployment
 position: 208
 ---

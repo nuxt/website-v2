@@ -2,6 +2,7 @@
 title: Deploy Nuxt on Heroku
 description: How to deploy Nuxt.js on Heroku?
 menu: Heroku
+target: Server
 category: deployment
 position: 209
 ---

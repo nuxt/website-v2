@@ -2,6 +2,7 @@
 title: Deploy Nuxt on Dokku
 description: How to deploy a Nuxt.js application on Dokku?
 menu: Dokku
+target: Server
 category: deployment
 position: 205
 ---

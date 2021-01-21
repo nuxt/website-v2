@@ -82,7 +82,8 @@ export default {
 
   pwa: {
     manifest: {
-      name: 'NuxtJS'
+      name: 'NuxtJS',
+      theme_color: '#00C58E'
     }
   },
 
@@ -120,7 +121,7 @@ export default {
   publicRuntimeConfig: {
     nuxtLocale: process.env.NUXT_LOCALE || 'en',
     nuxtVersion: '2.14.8',
-    nuxtStars: '32K+'
+    nuxtStars: '33K+'
   },
   loading: { color: '#41B883' },
   generate: {

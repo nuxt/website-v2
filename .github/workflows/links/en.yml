@@ -1,25 +1,17 @@
 name: Link checking
 on:
-  push:
-    branches:
-      - master
   workflow_dispatch:
+  pull_request:
+    paths:
+      - "content/en/**"
 
 jobs:
   check-links:
-    runs-on: ubuntu-18.04
     strategy:
       matrix:
-        url:
-          - "https://nuxtjs.org"
-          - "https://id.nuxtjs.org"
-          - "https://ja.nuxtjs.org"
-          - "https://ko.nuxtjs.org"
-          - "https://ru.nuxtjs.org"
-          - "https://zh.nuxtjs.org"
-          - "https://es.nuxtjs.org"
-          - "https://fr.nuxtjs.org"
-          - "https://pt.nuxtjs.org"
+        site:
+          - "nuxt"
+    runs-on: ubuntu-18.04
     steps:
       - uses: actions/checkout@v2
 
@@ -38,13 +30,20 @@ jobs:
         if: steps.cache.outputs.cache-hit != 'true'
         run: yarn install --frozen-lockfile
 
+      - name: Waiting for 200 from the Netlify Preview
+        uses: jakepartusch/wait-for-netlify-action@v1.2
+        id: waitForPreview
+        with:
+          site_name: ${{ matrix.site }}
+          max_timeout: 600
+
       - name: Crawl site
         run: node -r esm scripts/crawl.js
         env:
-          BASE_URL: ${{ matrix.url }}
+          BASE_URL: ${{ steps.waitForPreview.outputs.url }}
 
       - name: Check redirects for validity
         run: node -r esm scripts/check-redirects.js
         continue-on-error: ${{ matrix.site != 'nuxt' }}
         env:
-          BASE_URL: ${{ matrix.url }}
+          BASE_URL: ${{ steps.waitForPreview.outputs.url }}

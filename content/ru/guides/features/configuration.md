@@ -23,7 +23,7 @@ questions:
       - language="scss"
       - style="scss"
     correctAnswer: lang="scss"
-  - question: Какой порт булет присвоен по-умолчанию в режиме разработки Nuxt.js?
+  - question: Какой порт будет присвоен по умолчанию в режиме разработки Nuxt.js?
     answers:
       - 8000
       - 3000

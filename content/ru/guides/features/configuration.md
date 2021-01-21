@@ -40,7 +40,7 @@ questions:
       - Да
       - Нет
     correctAnswer: Да
-  - question: Какое ствойство вы будете использовать в файле nuxt.config.js для расширения конфигурации webpack?
+  - question: Какое свойство вы будете использовать в файле nuxt.config.js для расширения конфигурации webpack?
     answers:
       - webpack.extend
       - build.extend

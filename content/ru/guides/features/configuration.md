@@ -1,6 +1,6 @@
 ---
 title: Configuration
-description: По умолчанию Nuxt.js настроен так, чтобы охватить большую часть настроек по умолчанию. Эта конфигурация может быть перезаписана в файле nuxt.config.js.
+description: Nuxt.js настроен так, чтобы охватить большую часть настроек по умолчанию. Эта конфигурация может быть перезаписана в файле nuxt.config.js.
 position: 7
 category: features
 csb_link_host_port: https://codesandbox.io/embed/github/nuxt-academy/guides-examples/tree/master/03_features/07_configuration_host_port?fontsize=14&hidenavigation=1&theme=dark

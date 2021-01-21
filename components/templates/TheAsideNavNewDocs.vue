@@ -44,12 +44,24 @@
               >
                 <template v-if="link.menu">
                   {{ link.menu }}
-                  <span
-                    v-if="link.target"
-                    class="text-white text-orange-500 dark:text-black text-ss align-middle ml-2 px-1 py-0 rounded-sm lowercase"
+                  <AppLabel
+                    v-if="link.target === 'Static'"
+                    class="text-green-500 dark:text-green-300"
                   >
                     {{ link.target }}
-                  </span>
+                  </AppLabel>
+                  <AppLabel
+                    v-if="link.target === 'Server'"
+                    class="text-blue-500 dark:text-blue-300"
+                  >
+                    {{ link.target }}
+                  </AppLabel>
+                  <AppLabel
+                    v-if="link.target === 'Static & Server'"
+                    class="text-purple-500 dark:text-purple-300 text-ss align-middle ml-2 px-1 py-0 rounded-sm lowercase"
+                  >
+                    {{ link.target }}
+                  </AppLabel>
                 </template>
                 <template v-else>
                   {{ link.title }}

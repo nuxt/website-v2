@@ -11,7 +11,7 @@ questions:
       - да
       - нет
     correctAnswer: нет
-  - question: Какой хост будет присвоен по-умолчанию в режиме разработки Nuxt.js?
+  - question: Какой хост будет присвоен по умолчанию в режиме разработки Nuxt.js?
     answers:
       - localhost
       - 3000

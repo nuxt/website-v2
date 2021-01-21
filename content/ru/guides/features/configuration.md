@@ -318,7 +318,7 @@ export default {
 ```js{}[nuxt.config.js]
 export default {
   server: {
-    port: 8000 // по-умолчанию: 3000
+    port: 8000 // по умолчанию: 3000
   }
 }
 ```

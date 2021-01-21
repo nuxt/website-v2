@@ -136,3 +136,4 @@ https://www.nuxtjs.org/* https://nuxtjs.org/:splat 301!
 /faq/deploying-to-21yunbox /docs/2.x/deployment/deploying-to-21yunbox 301!
 /faq/css-flash /faq 301!
 /faq/window-or-document-undefined /docs/2.x/concepts/server-side-rendering#window-or-document-undefined 301!
+/faq/ios-phone-numbers /docs/2.x/concepts/server-side-rendering#ios-phone-numbers 301!

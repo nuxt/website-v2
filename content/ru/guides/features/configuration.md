@@ -29,7 +29,7 @@ questions:
       - 3000
       - localhost
     correctAnswer: 3000
-  - question: Какое ствойство вы будете использовать в файле nuxt.config.js для добавления глобальных CSS файлов?
+  - question: Какое свойство вы будете использовать в файле nuxt.config.js для добавления глобальных CSS файлов?
     answers:
       - styles
       - css

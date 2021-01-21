@@ -52,7 +52,7 @@ questions:
       - .nuxtignore
       - .ignorenuxt
     correctAnswer: .nuxtignore
-  - question: Если вы хотите игнорировать все файлы с названием about в вашем Nuxt.js прилодении, какой перфикс вы будете использовать?
+  - question: Если вы хотите игнорировать все файлы с названием about в вашем Nuxt.js приложении, какой перфикс вы будете использовать?
     answers:
       - _about.vue
       - -about.vue

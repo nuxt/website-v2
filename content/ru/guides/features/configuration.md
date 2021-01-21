@@ -371,7 +371,7 @@ export default async () => {
 
 <base-alert type="next">
 
-TВ `nuxt.config.js` гораздо больше возможностей настройки и конфигурирования! Проверить все возможности можно в [глосарий конфигураций](/docs/2.x/configuration-glossary/configuration-build).
+В `nuxt.config.js` гораздо больше возможностей настройки и конфигурирования! Проверить все возможности можно в [глоссарии конфигураций](/docs/2.x/configuration-glossary/configuration-build).
 
 </base-alert>
 

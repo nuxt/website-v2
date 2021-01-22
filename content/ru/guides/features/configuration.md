@@ -115,7 +115,7 @@ export default {
 
 Спасибо [загрузчику Vue](http://vue-loader.vuejs.org/en/configurations/pre-processors.html), вы можете использовать самые разные препроцессоры в `<template>` или `<style>`: используя `lang` атрибут.
 
-Это пример (`pages/index.vue` удалить из контекста?) использования препроцессоров [Pug](https://github.com/pugjs/pug) или [Sass](http://sass-lang.com/):
+Это пример использования препроцессоров [Pug](https://github.com/pugjs/pug) или [Sass](http://sass-lang.com/):
 
 ```html{}[pages/index.vue]
 <template lang="pug"> h1.red Hello {{ name }}! </template>

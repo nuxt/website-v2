@@ -14,7 +14,7 @@
     "lodash.groupby": "^4.6.0",
     "lodash.sortby": "^4.7.0",
     "node-fetch": "^2.6.1",
-    "nuxt-edge": "^2.15.0-26853192.498f8553",
+    "nuxt-edge": "^2.15.0-26854632.498f8553",
     "nuxt-i18n": "^6.18.0",
     "prism-themes": "^1.5.0",
     "reading-time": "^1.2.1",
@@ -60,7 +60,7 @@
     "stylelint-config-prettier": "^8.0.2",
     "stylelint-config-standard": "^20.0.0",
     "stylelint-scss": "^3.18.0",
-    "textlint": "^11.7.7",
+    "textlint": "^11.8.1",
     "textlint-filter-rule-allowlist": "^2.0.1",
     "textlint-rule-preset-ja-spacing": "^2.0.2",
     "textlint-rule-preset-jtf-style": "^2.3.6"

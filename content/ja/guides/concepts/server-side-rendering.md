@@ -57,7 +57,7 @@ Vue.js のアプリケーションを実行するには Node.js サーバーの�
 
 serverMiddleware でサーバーを拡張しルートを middleware で制御することができます。
 
-```js{}[api/logger.js]
+```js{}[server-middleware/logger.js]
 export default function (req, res, next) {
   console.log(req.url)
   next()
@@ -66,7 +66,7 @@ export default function (req, res, next) {
 
 ```js{}[nuxt.config.js]
 export default {
-  serverMiddleware: ['~/api/logger']
+  serverMiddleware: ['~/server-middleware/logger']
 }
 ```
 

@@ -57,7 +57,7 @@ export default {
 
 カスタムミドルウェアの作成も可能です。 詳細については、 [Connect Docs](https://github.com/senchalabs/connect#appusefn) を参照してください。
 
-ミドルウェア (`api/logger.js`):
+ミドルウェア (`server-middleware/logger.js`):
 
 ```js
 export default function (req, res, next) {

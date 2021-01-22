@@ -17,10 +17,10 @@ Additional to them, we introduced a `prefix` option which defaults to `true`. It
 
 **Example:**
 
-- Server middleware path: `/api`
+- Server middleware path: `/server-middleware`
 - Router base: `/admin`
-- With `prefix: true` (default): `/admin/api`
-- With `prefix: false`: `/api`
+- With `prefix: true` (default): `/admin/server-middleware`
+- With `prefix: false`: `/server-middleware`
 
 ## serverMiddleware vs middleware!
 
@@ -30,9 +30,7 @@ Don't confuse it with [routes middleware](/guide/routing#middleware) which are c
 
 If middleware is String Nuxt.js will try to automatically resolve and require it.
 
-Example (`nuxt.config.js`):
-
-```js
+```js{}[nuxt.config.js]
 import serveStatic from 'serve-static'
 
 export default {
@@ -40,8 +38,8 @@ export default {
     // Will register redirect-ssl npm package
     'redirect-ssl',
 
-    // Will register file from project api directory to handle /api/* requires
-    { path: '/api', handler: '~/api/index.js' },
+    // Will register file from project server-middleware directory to handle /server-middleware/* requires
+    { path: '/server-middleware', handler: '~/server-middleware/index.js' },
 
     // We can create custom instances too
     { path: '/static2', handler: serveStatic(__dirname + '/static2') }
@@ -49,19 +47,17 @@ export default {
 }
 ```
 
-<p class="Alert Alert--danger">
-    <b>HEADS UP! </b>
-    If you don't want middleware to register for all routes you have to use Object form with specific path,
-    otherwise nuxt default handler won't work!
-</p>
+<base-alert>
+
+If you don't want middleware to register for all routes you have to use Object form with specific path, otherwise nuxt default handler won't work!
+
+</base-alert>
 
 ## Custom Server Middleware
 
 It is also possible to write custom middleware. For more information See [Connect Docs](https://github.com/senchalabs/connect#appusefn).
 
-Middleware (`api/logger.js`):
-
-```js
+```js{}[server-middleware/logger.js]
 export default function (req, res, next) {
   // req is the Node.js http request object
   console.log(req.url)
@@ -74,10 +70,8 @@ export default function (req, res, next) {
 }
 ```
 
-Nuxt Config (`nuxt.config.js`):
-
-```js
-serverMiddleware: ['~/api/logger']
+```js{}[nuxt.config.js]
+serverMiddleware: ['~/server-middleware/logger']
 ```
 
 ## Object Syntax
@@ -87,9 +81,9 @@ If your server middleware consists of a list of functions mapped to paths:
 ```js
 export default {
   serverMiddleware: [
-    { path: '/a', handler: '~/api/a.js' },
-    { path: '/b', handler: '~/api/b.js' },
-    { path: '/c', handler: '~/api/c.js' }
+    { path: '/a', handler: '~/server-middleware/a.js' },
+    { path: '/b', handler: '~/server-middleware/b.js' },
+    { path: '/c', handler: '~/server-middleware/c.js' }
   ]
 }
 ```
@@ -99,9 +93,9 @@ You can alternatively pass an object to define them, as follows:
 ```js
 export default {
   serverMiddleware: {
-    '/a': '~/api/a.js',
-    '/b': '~/api/b.js',
-    '/c': '~/api/c.js'
+    '/a': '~/server-middleware/a.js',
+    '/b': '~/server-middleware/b.js',
+    '/c': '~/server-middleware/c.js'
   }
 }
 ```

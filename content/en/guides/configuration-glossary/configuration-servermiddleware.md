@@ -55,19 +55,19 @@ export default {
 }
 ```
 
-<p class="Alert Alert--danger">
-    <b>HEADS UP! </b>
-    If you don't want middleware to register for all routes you have to use Object form with specific path,
-    otherwise nuxt default handler won't work!
-</p>
+<base-alert type="warn">
+
+If you don't want middleware to register for all routes you have to use Object form with specific path, otherwise nuxt default handler won't work!
+
+</base-alert>
 
 ## Custom Server Middleware
 
 It is also possible to write custom middleware. For more information See [Connect Docs](https://github.com/senchalabs/connect#appusefn).
 
-Middleware (`api/logger.js`):
+Middleware (`server-middleware/logger.js`):
 
-```js{}[api/logger.js]
+```js{}[server-middleware/logger.js]
 export default function (req, res, next) {
   // req is the Node.js http request object
   console.log(req.url)
@@ -81,14 +81,14 @@ export default function (req, res, next) {
 ```
 
 ```js{}[nuxt.config.js]
-serverMiddleware: ['~/api/logger']
+serverMiddleware: ['~/server-middleware/logger']
 ```
 
 ## Custom API endpoint
 
 A server middleware can also extend Express. This allows the creation of REST endpoints.
 
-```js{}[api/rest.js]
+```js{}[server-middleware/rest.js]
 const bodyParser = require('body-parser')
 const app = require('express')()
 
@@ -102,7 +102,7 @@ module.exports = app
 
 ```js{}[nuxt.config.js]
 serverMiddleware: [
-  { path: "/api", handler: "~/api/rest.js" },
+  { path: "/server-middleware", handler: "~/server-middleware/rest.js" },
 ],
 ```
 
@@ -113,9 +113,9 @@ If your server middleware consists of a list of functions mapped to paths:
 ```js
 export default {
   serverMiddleware: [
-    { path: '/a', handler: '~/api/a.js' },
-    { path: '/b', handler: '~/api/b.js' },
-    { path: '/c', handler: '~/api/c.js' }
+    { path: '/a', handler: '~/server-middleware/a.js' },
+    { path: '/b', handler: '~/server-middleware/b.js' },
+    { path: '/c', handler: '~/server-middleware/c.js' }
   ]
 }
 ```
@@ -125,9 +125,9 @@ You can alternatively pass an object to define them, as follows:
 ```js
 export default {
   serverMiddleware: {
-    '/a': '~/api/a.js',
-    '/b': '~/api/b.js',
-    '/c': '~/api/c.js'
+    '/a': '~/server-middleware/a.js',
+    '/b': '~/server-middleware/b.js',
+    '/c': '~/server-middleware/c.js'
   }
 }
 ```

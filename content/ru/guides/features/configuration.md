@@ -150,7 +150,7 @@ npm install --save-dev sass sass-loader fibers
 
 ## JSX
 
-Nuxt.js использует пресет [@nuxt/babel-preset-app](https://github.com/nuxt/nuxt.js/tree/dev/packages/babel-preset-app), который основан на официальном пресете [@vue/babel-preset-app](https://github.com/vuejs/vue-cli/tree/dev/packages/%40vue/babel-preset-app) для концигурации babel по-умолчанию, так что вы можете использовать синтаксис JSX в ваших компонентах.
+Nuxt.js использует пресет [@nuxt/babel-preset-app](https://github.com/nuxt/nuxt.js/tree/dev/packages/babel-preset-app), который основан на официальном пресете [@vue/babel-preset-app](https://github.com/vuejs/vue-cli/tree/dev/packages/%40vue/babel-preset-app) для конфигурации babel по умолчанию, что позволяет использовать синтаксис JSX в ваших компонентах.
 
 Так же вы можете использовать синтаксис JSX в методе `render` вашего компонента:
 

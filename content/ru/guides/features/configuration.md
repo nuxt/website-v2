@@ -72,7 +72,7 @@ Nuxt.js позволяет определить CSS-файлы/модули/би
 
 </base-alert>
 
-В файле `nuxt.config.js` добавьте пути до css файлов:
+В файле `nuxt.config.js` добавьте пути до CSS файлов:
 
 ```js{}[nuxt.config.js]
 export default {

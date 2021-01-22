@@ -27,7 +27,7 @@ export default {
         : app.i18n.defaultLocale
 
       pages = await $content(locale, 'guides', { deep: true })
-        .only(['slug', 'title', 'menu', 'category', 'position'])
+        .only(['slug', 'title', 'menu', 'category', 'position', 'target'])
         .sortBy('position')
         .sortBy('title')
         .sortBy('menu')

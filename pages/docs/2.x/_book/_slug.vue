@@ -82,7 +82,7 @@ export default {
           ? path
           : `/${app.i18n.defaultLocale}/guides/${params.book}`
       )
-        .only(['title', 'slug', 'dir', 'menu'])
+        .only(['title', 'slug', 'dir', 'menu', 'target'])
         .sortBy('position')
         .sortBy('title')
         .sortBy('menu')

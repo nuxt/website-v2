@@ -2,8 +2,9 @@
 title: 'Deploy Nuxt on Amazon Web Services'
 description: Static Hosting on AWS with S3 Amplify and CloudFront
 menu: Amazon Web Services
+target: Static
 category: deployment
-position: 201
+position: 101
 ---
 
 AWS stands for Amazon Web Services.  

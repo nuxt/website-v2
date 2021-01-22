@@ -2,8 +2,9 @@
 title: Deploy Nuxt with Bip
 description: How to deploy a Nuxt app with Bip?
 menu: Bip
+target: Static
 category: deployment
-position: 204
+position: 104
 ---
 
 [Bip](https://bip.sh) is a commercial hosting service which provides zero downtime deployment, a global CDN, SSL, unlimited bandwidth and more for Nuxt static websites. Plans are available on a pay as you go, per domain basis.

@@ -2,8 +2,9 @@
 title: Deploy Nuxt with Vercel
 description: How to deploy a Nuxt app with Vercel?
 menu: Vercel
+target: Static & Server
 category: deployment
-position: 216
+position: 116
 ---
 
 ![nuxt-vercel-builder](https://user-images.githubusercontent.com/904724/61308402-7a752d00-a7f0-11e9-9502-23731ccd00fd.png)

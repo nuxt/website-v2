@@ -277,7 +277,7 @@ export default {
 
 ### Проверка линтером ESLint при каждой сборке webpack в режиме разработки
 
-Чтобы быть в курсе ошибок в проекте, возможно вы захотите запустить [ESLint](https://github.com/webpack-contrib/eslint-loader) при каждой сборке проета в режиме разработки.
+Чтобы быть в курсе ошибок в проекте, следует запускать [ESLint](https://github.com/webpack-contrib/eslint-loader) при каждой сборке проета в режиме разработки.
 
 ```js{}[nuxt.config.js]
 export default {

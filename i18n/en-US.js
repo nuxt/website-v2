@@ -147,6 +147,9 @@ module.exports = {
     modules: {
       title: 'Modules'
     },
+    examples: {
+      title: 'Examples'
+    },
     faq: {
       title: 'FAQ'
     },

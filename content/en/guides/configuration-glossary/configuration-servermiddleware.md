@@ -17,10 +17,10 @@ Additional to them, we introduced a `prefix` option which defaults to `true`. It
 
 **Example:**
 
-- Server middleware path: `/api`
+- Server middleware path: `/server-middleware`
 - Router base: `/admin`
-- With `prefix: true` (default): `/admin/api`
-- With `prefix: false`: `/api`
+- With `prefix: true` (default): `/admin/server-middleware`
+- With `prefix: false`: `/server-middleware`
 
 ## serverMiddleware vs middleware!
 
@@ -46,8 +46,8 @@ export default {
     // Will register redirect-ssl npm package
     'redirect-ssl',
 
-    // Will register file from project api directory to handle /api/* requires
-    { path: '/api', handler: '~/api/index.js' },
+    // Will register file from project server-middleware directory to handle /server-middleware/* requires
+    { path: '/server-middleware', handler: '~/server-middleware/index.js' },
 
     // We can create custom instances too
     { path: '/static2', handler: serveStatic(__dirname + '/static2') }

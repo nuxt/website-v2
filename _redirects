@@ -138,5 +138,5 @@ https://www.nuxtjs.org/* https://nuxtjs.org/:splat 301!
 /faq/window-or-document-undefined /docs/2.x/concepts/server-side-rendering#window-or-document-undefined 301!
 /faq/ios-phone-numbers /docs/2.x/concepts/server-side-rendering#ios-phone-numbers 301!
 
-/faq/auth-routes https://github.com/nuxt/nuxt.js/tree/dev/examples/auth-routes !302
-/faq/auth-external-jwt https://github.com/nuxt/nuxt.js/tree/dev/examples/auth-jwt !302
+/faq/auth-routes https://github.com/nuxt/nuxt.js/tree/dev/examples/auth-routes 302!
+/faq/auth-external-jwt https://github.com/nuxt/nuxt.js/tree/dev/examples/auth-jwt 302!

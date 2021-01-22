@@ -209,7 +209,7 @@ middleware/foo/\*.js !middleware/foo/bar.js
 
 ### Свойство ignorePrefix
 
-Некоторые файлы в папках pages/, layout/, middleware/ или store/ будет игнорироваться при сборке проекта, если названия файлов начинаются с специального префикса ignorePrefix.
+Некоторые файлы в папках pages/, layout/, middleware/ или store/ будет игнорироваться при сборке проекта, если названия файлов начинаются со специального префикса ignorePrefix.
 
 По умолчанию, все файлы начинающиеся с `-` будут игнорироваться, например `store/-foo.js` или `pages/-bar.vue`. This allows for co-locating tests, utilities, and components with their callers without themselves being converted into routes, stores, etc. ? хз:)
 

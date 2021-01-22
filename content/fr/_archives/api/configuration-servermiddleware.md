@@ -59,7 +59,7 @@ export default {
 
 Il est également possible d'écrire un middleware personnalisé. Pour plus d'informations, voir [Connect Docs](https://github.com/senchalabs/connect#appusefn).
 
-Middleware (`api/logger.js`):
+Middleware (`server-middleware/logger.js`):
 
 ```js
 export default function (req, res, next) {

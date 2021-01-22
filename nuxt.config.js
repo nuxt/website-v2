@@ -82,7 +82,8 @@ export default {
 
   pwa: {
     manifest: {
-      name: 'NuxtJS'
+      name: 'NuxtJS',
+      theme_color: '#00C58E'
     }
   },
 

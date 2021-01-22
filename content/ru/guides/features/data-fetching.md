@@ -1,6 +1,6 @@
 ---
-title: Data Fetching
-description: In Nuxt.js we have 2 ways of getting data from an API. We can use the fetch method or the asyncData method.
+title: Получение данных
+description: В Nuxt.js у нас есть 2 способа получения данных из API. Мы можем использовать метод `fetch` или `asyncData`.
 position: 4
 category: features
 csb_link: https://codesandbox.io/embed/github/nuxt-academy/guides-examples/tree/master/03_features/04_data_fetching?fontsize=14&hidenavigation=1&theme=dark
@@ -63,16 +63,16 @@ questions:
     correctAnswer: true
 ---
 
-Nuxt.js supports traditional Vue patterns for loading data in your client-side app, such as fetching data in a component's `mounted()` hook. Universal apps, however, need to use Nuxt.js-specific hooks to be able to render data during server-side rendering. This allows your page to render with all of its required data present.
+Nuxt.js поддерживает традиционные методы Vue для загрузки данных в приложение на стороне клиента, такие как например хук `mounted()` - для получения данных в компоненте. Универсальные приложения, тем не менее, должны использовать специфичные хуки в Nuxt.js, чтобы иметь возможность отрисовать данные во время рендеринга на стороне сервера. Это позволяет отрендерить вашу страницу со всеми запрошенными данными.
+ 
+В Nuxt есть два хука для асинхронной загрузки данных:
 
-Nuxt has two hooks for asynchronous data loading:
-
-- The `fetch` hook (Nuxt 2.12+). This hook can be placed on any component, and provides shortcuts for rendering loading states (during client-side rendering) and errors.
-- The `asyncData` hook. This hook can only be placed on _page_ components. Unlike `fetch`, this hook does not display a loading placeholder during client-side rendering: instead, this hook blocks route navigation until it is resolved, displaying a page error if it fails.
+- хук `fetch` (Nuxt 2.12+). Этот хук может использоваться в любом компоненте, and provides shortcuts for rendering loading states (и предоставляет быстрый доступ для отображения загружаемого стейта (состояния)) (во время рендеринга на стороне клиента) и ошибок.
+- хук `asyncData`. Этот хук может использоваться только на _страницах_ комопнентов. В отличие от `fetch`, этот хук не отображает загрузчик во время рендеринга на стороне клиента: вместо этого, этот хук болкирует навигацию по роутам пока не завершиться загрузка, или не отобразится страница с текстом ошибки, если при загрузке та самая ошибка произошла.
 
 <base-alert>
 
-In versions of Nuxt before 2.12, the `fetch` hook worked much like `asyncData` does today. This functionality is still supported today for backwards-compatibility: if a `context` argument is accepted in your `fetch()`, it will be considered a "legacy" fetch hook. This functionality is deprecated, and should be replaced with either `asyncData(context)` or an [anonymous middleware](/docs/2.x/directory-structure/middleware#anonymous-middleware) using `middleware(context)`.
+В версиях Nuxt до версии 2.12, хук `fetch` работал так же, как хук `asyncData` сегодня. Этот функционал до сих пор поддерживается для обратной совместимости в проектах: если вы используете аргумент `context` в хуке `fetch`, это будет считаться "легаси" fetch хуком.  Этот функционал уже устарел, и вы должны заменить его на `asyncData(context)` или на [анонимный middleware](/docs/2.x/directory-structure/middleware#anonymous-middleware) используя `middleware(context)`.
 
 </base-alert>
 

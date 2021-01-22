@@ -308,7 +308,7 @@ Host `'0.0.0.0'` is designated to tell Nuxt.js to resolve a host address, which 
 ```js{}[nuxt.config.js]
 export default {
   server: {
-    host: '0' // по-умолчанию: localhost
+    host: '0' // по умолчанию: localhost
   }
 }
 ```

@@ -261,7 +261,7 @@ export default {
 
 ### Настройка конфигурации чанков (chunks)
 
-Возможно, вы захотите немного подкорректировать [конфигурацию оптимизации](/docs/2.x/configuration-glossary/configuration-build#optimization), избегая перезаписи объекта по умолчанию.
+Возможно, вы захотите немного подкорректировать [настройки оптимизации](/docs/2.x/configuration-glossary/configuration-build#optimization), избегая перезаписи объекта стандартных настроек.
 
 ```js{}[nuxt.config.js]
 export default {

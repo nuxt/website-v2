@@ -225,7 +225,7 @@ export default {
 
 ### ignoreOptions
 
-`nuxtignore` использует `node-ignore` под капотом, поэтому `ignoreOptions` могут быть настроены как `options` of `node-ignore`.
+`nuxtignore` использует пакет `node-ignore` под капотом, поэтому `ignoreOptions` могут быть настроены как свойство `options` пакета `node-ignore`.
 
 ```js{}[nuxt.config.js]
 export default {

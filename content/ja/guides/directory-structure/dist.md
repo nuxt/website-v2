@@ -1,6 +1,6 @@
 ---
 title: dist
-description: `dist` は _distribution_ の略です。dist フォルダは `nuxt generate` コマンドを使用すると動的に生成されます。dist フォルダ内には、静的に生成された Nuxt.js アプリケーションをデプロイ、実行するために必要となる本番用の HTML ファイルとアセットが含まれています。
+description: '`dist` は _distribution_ の略です。dist フォルダは `nuxt generate` コマンドを使用すると動的に生成されます。dist フォルダ内には、静的に生成された Nuxt.js アプリケーションをデプロイ、実行するために必要となる本番用の HTML ファイルとアセットが含まれています。'
 position: 5
 category: directory-structure
 csb_link: https://codesandbox.io/embed/github/nuxt-academy/guides-examples/tree/master/04_directory_structure/05_dist?fontsize=14&hidenavigation=1&theme=dark

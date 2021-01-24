@@ -54,13 +54,13 @@ questions:
       - :prefetch="false"
       - no-prefetch и :prefetch="false"
     correctAnswer: no-prefetch и :prefetch="false"
-  - question: Какой по умолчанию класс вы можете использовать для добавления стилей к активным ссылкам?
+  - question: Какой по умолчанию класс вы можете использовать для стилизации частично совпадающих ссылок?
     answers:
       - nuxt-link-active
       - link-active
       - router-link-active
     correctAnswer: nuxt-link-active
-  - question: What is the default class you can use to add styles for exact active links
+  - question: Какой по умолчанию класс вы можете использовать для стилизации точно совпадающих ссылок?
     answers:
       - nuxt-link-exact-active
       - link-exact-active
@@ -80,8 +80,7 @@ questions:
 
 ## Компонент Nuxt
 
-Компонент `<Nuxt>` используется для отображения компонентов страницы. 
-The `<Nuxt>` component is the component you use to display your page components. По сути, он заменяется компонентами страницы, в зависимости от того какая страница показывается. Therefore it is important that you add the `<Nuxt>` component to your layouts.
+Компонент `<Nuxt>` используется для отображения компонентов страницы. По сути, он заменяется внутренними компонентами страницы, в зависимости от того какая страница отображается. Поэтому компонент `<Nuxt>` необходимо добавлять в ваши макеты.
 
 ```html{}[layouts/default.vue]
 <template>
@@ -95,15 +94,15 @@ The `<Nuxt>` component is the component you use to display your page components.
 
 <base-alert>
 
-The `<Nuxt>` component can only be used inside [layouts](/docs/2.x/concepts/views#layouts).
+Компонент `<Nuxt>` может использоваться только внутри [шаблонов](/docs/2.x/concepts/views#layouts).
 
 </base-alert>
 
-The `<Nuxt>` component can take the prop of `nuxt-child-key`. This prop will be passed to `<RouterView>` so that your transitions will work correctly inside dynamic pages.
+В компоненте `<Nuxt>` может использоваться входной параметр `nuxt-child-key`. Он может передаваться в `<RouterView>` чтобы ваши переходы корректно срабатывали внутри динамических страниц.
 
-There are 2 ways to handle the internal `key` prop of `<RouterView>`.
+Есть 2 способа обработки внутреннего входного параметра `key` в `<RouterView>`.
 
-1. Use a `nuxtChildKey` prop on your `<Nuxt>` component
+1. Использование входного параметра `nuxtChildKey` на вашем `<Nuxt>` компоненте
 
 ```html{}[layouts/default.vue]
 <template>
@@ -113,7 +112,7 @@ There are 2 ways to handle the internal `key` prop of `<RouterView>`.
 </template>
 ```
 
-2. Add the `key` option in _page_ components as `string` or `function`
+2. Добавление опции `key` в компоненты _страницы_ как `string` либо `function`
 
 ```js
 export default {
@@ -123,11 +122,11 @@ export default {
 }
 ```
 
-## The NuxtChild Component
+## Компонент NuxtChild
 
-This component is used for displaying the children components in a nested route.
+Этот компонент используется для отображения дочерних компонентов во вложенном маршруте.
 
-Example:
+Пример:
 
 ```
 -| pages/
@@ -136,7 +135,7 @@ Example:
 ---| parent.vue
 ```
 
-This file tree will generate these routes:
+Это файловое дерево генерирует следующие маршруты:
 
 ```js
 ;[
@@ -155,7 +154,7 @@ This file tree will generate these routes:
 ]
 ```
 
-To display the `child.vue` component, you have to insert the `<NuxtChild>` component inside `pages/parent.vue`:
+Для отображения компонента `child.vue` вам необходимо поместить компонент `<NuxtChild>` внутри `pages/parent.vue`:
 
 ```html{}[pages/parent.vue]
 <template>
@@ -168,11 +167,11 @@ To display the `child.vue` component, you have to insert the `<NuxtChild>` compo
 
 ## keep-alive
 
-Both, the `<Nuxt>` component and the `<NuxtChild/>` component, accept `keep-alive` and `keep-alive-props.`
+Оба компонента, `<Nuxt>` и `<NuxtChild/>`, могут использоваться с `keep-alive` и `keep-alive-props`.
 
 <base-alert type="info">
 
-To learn more about keep-alive and keep-alive-props see the [vue docs](https://vuejs.org/v2/api/#keep-alive)
+Больше информации о keep-alive и keep-alive-props доступно в [руководстве vue](https://vuejs.org/v2/api/#keep-alive)
 
 </base-alert>
 
@@ -183,7 +182,7 @@ To learn more about keep-alive and keep-alive-props see the [vue docs](https://v
   </div>
 </template>
 
-<!-- will be converted into something like this -->
+<!-- будет преобразовано во что-то на подобие этого -->
 <div>
   <KeepAlive :exclude="['modal']">
     <RouterView />
@@ -198,7 +197,7 @@ To learn more about keep-alive and keep-alive-props see the [vue docs](https://v
   </div>
 </template>
 
-<!-- will be converted into something like this -->
+<!-- будет преобразовано во что-то на подобие этого -->
 <div>
   <KeepAlive :exclude="['modal']">
     <RouterView />
@@ -206,7 +205,7 @@ To learn more about keep-alive and keep-alive-props see the [vue docs](https://v
 </div>
 ```
 
-`<NuxtChild>` components can also receive properties like a regular Vue component.
+Компоненты `<NuxtChild>` могут также получать входные параметры как и обычные Vue компоненты.
 
 ```html
 <template>
@@ -216,11 +215,10 @@ To learn more about keep-alive and keep-alive-props see the [vue docs](https://v
 </template>
 ```
 
-## The NuxtLink Component
+## Компонент NuxtLink
+Для перехода между страницами вашего приложения вы должны использовать компонент `<NuxtLink>`. Этот компонент сожержится в Nuxt.js и поэтому вы не должны импортировать его, как это делается с остальными компонентами. Он похож на HTML-тег `<a>` за исключением того, что вместо `href="/about"` вы используете `to="/about"`. Если до этого момента вам приходилось использовать `vue-router`, то вы можете думать о `<NuxtLink>` как о замене `<RouterLink>`.
 
-To navigate between pages of your app, you should use the `<NuxtLink>` component. This component is included with Nuxt.js and therefore you don't have to import it like you do with other components. It is similar to the HTML `<a>` tag except that instead of using a `href="/about"` you use `to="/about"`. If you've used `vue-router` before, you can think of `<NuxtLink>` as a replacement of `<RouterLink>`
-
-A simple link to the `index.vue` page in your `pages` folder:
+Простая ссылка на страницу `index.vue` в папке `pages`:
 
 ```html
 <template>
@@ -228,23 +226,23 @@ A simple link to the `index.vue` page in your `pages` folder:
 </template>
 ```
 
-The `<NuxtLink>` component should be used for all internal links. That means for all links to the pages within your site you should use `<NuxtLink>`. The `<a>` tag should be used for all external links. That means if you have links to other websites you should use the `<a>` tag for those.
+Компонент `<NuxtLink>` должен использоваться для всех внутренних ссылок. Это значит что для всех ссылок на страницы внутри вашего вебсайта вы должны использовать `<NuxtLink>`. HTML-тег `<a>` должен использоваться для всех внешних ссылок. Это значит, что если у вас имеются ссылки на другие вебсайты, то вы должны использовать тег `<a>` для них.
 
 ```html
 <template>
   <div>
     <h1>Home page</h1>
     <NuxtLink to="/about"
-      >About (internal link that belongs to the Nuxt App)</NuxtLink
+      >About (внутренние ссылки, которые принадлежат Nuxt App)</NuxtLink
     >
-    <a href="https://nuxtjs.org">External Link to another page</a>
+    <a href="https://nuxtjs.org">Внешние ссылки на другие вебсайты</a>
   </div>
 </template>
 ```
 
 <base-alert type="info">
 
-If you want to know more about `<RouterLink>`, feel free to read the [Vue Router documentation](https://router.vuejs.org/api/#router-link) for more information.
+Если вы хотите узнать больше о `<RouterLink>`, можете ознакомиться с [документацией Vue Router](https://router.vuejs.org/api/#router-link) для более подробной информации.
 
 </base-alert>
 

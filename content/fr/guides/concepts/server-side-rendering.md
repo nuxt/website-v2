@@ -57,7 +57,7 @@ Un serveur Node.js a besoin d'être configuré pour exécuter notre application 
 
 Nous pouvons étendre les possibilités de notre serveur avec `serverMiddleware` et contrôler les routes avec `middleware`.
 
-```js{}[middleware/api/logger.js]
+```js{}[server-middleware/logger.js]
 export default function (req, res, next) {
   console.log(req.url)
   next()
@@ -66,7 +66,7 @@ export default function (req, res, next) {
 
 ```js{}[nuxt.config.js]
 export default {
-  serverMiddleware: ['~/middleware/api/logger']
+  serverMiddleware: ['~/server-middleware/logger']
 }
 ```
 

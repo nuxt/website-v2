@@ -8,6 +8,9 @@ const logger = consola.withTag('crawler')
 const excludedExtensions = process.env.EXCLUDE
   ? process.env.EXCLUDE.split(',')
   : ['svg', 'png', 'jpg', 'sketch', 'ico', 'gif']
+const urlsToOmit = process.env.OMIT
+  ? process.env.OMIT.split(',')
+  : ['http://localhost:3000']
 const crawlExternal = !!process.env.CRAWL_EXTERNAL || false
 
 let baseURL = process.env.BASE_URL || 'https://nuxtjs.org'
@@ -31,6 +34,8 @@ let crawler
  * @param {string | undefined} referrer
  */
 function queue(path, referrer) {
+  if (urlsToOmit.some(url => path.startsWith(url))) return
+
   const { pathname, origin } = new URL(path, referrer)
 
   const url = `${origin}${pathname}`

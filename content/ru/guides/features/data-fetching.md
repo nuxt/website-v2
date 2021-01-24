@@ -5,36 +5,36 @@ position: 4
 category: features
 csb_link: https://codesandbox.io/embed/github/nuxt-academy/guides-examples/tree/master/03_features/04_data_fetching?fontsize=14&hidenavigation=1&theme=dark
 questions:
-  - question: Where can you use the Nuxt.js fetch hook?
+  - question: Где в Nuxt.js вы можете использовать хук `fetch`?
     answers:
-      - pages and components
-      - only in pages
-      - only in components
-    correctAnswer: pages and components
-  - question: You have access to this when you use the Nuxt.js fetch hook
+      - на страницах и в компонентах
+      - только на страницах
+      - только в компонентах
+    correctAnswer: на страницах и в компонентах
+  - question: У вас есть доступ к this при использовании Nuxt.js хука `fetch`?
     answers:
-      - true
-      - false
-    correctAnswer: true
-  - question: When is the Nuxt.js fetch hook is called?
+      - да
+      - нет
+    correctAnswer: да
+  - question: Когда вызывается Nuxt.js хук `fetch`?
     answers:
-      - after the component instance
-      - before the component instance
-      - during the component instance
-    correctAnswer: after the component instance
-  - question: Which allows you to display a placeholder when `fetch` is being called *on client-side?*
+      - После того как компонент инициализирован
+      - До инициализации компонента
+      - Во время инициализации компонента
+    correctAnswer: После того как компонент инициализирован
+  - question: С помощью какой конструкции вы можете получить доступ для возможности отображения сообщения когда хук `fetch` вызывается на *стороне клиента*?
     answers:
       - $fetchState.timestamp
       - $fetchState.error
       - $fetchState.pending
     correctAnswer: $fetchState.pending
-  - question: How do you save fetch calls on pages you have already visited?
+  - question: Как вы можете сохранить fetch запросы на страницах, которые вы уже посещали?
     answers:
       - keep-alive
       - save-fetch
       - cache-fetch
     correctAnswer: keep-alive
-  - question: In the activated hook which property do you use to add a 30 second cache to fetch?
+  - question: Какую конструкцию вы используете, чтобы добавить в кэш запросы за последние 30 секунд?
     answers:
       - $fetchState.pending
       - $fetchState.timestamp
@@ -76,28 +76,28 @@ Nuxt.js поддерживает традиционные методы Vue дл�
 
 </base-alert>
 
-These hooks can be used with _any data fetching library_ you choose. We recommend using [@nuxt/http](https://http.nuxtjs.org/) or [@nuxt/axios](https://axios.nuxtjs.org/) for making requests to HTTP APIs. More information about these libraries, such as guides for configuring authentication headers, can be found in their respective documentation.
+Эти хуки могут использоваться с любой _библиотекой для получения данных_. Мы рекомендуем использовать библиотеку [@nuxt/http](https://http.nuxtjs.org/) или [@nuxt/axios](https://axios.nuxtjs.org/) для запросов к API. Для получения большей информации по этим библиотекам, такой как конфигурация, авторизация, заголовки запросов, вы найдете в документации этих библиотек.
 
-## The fetch hook
+## Хук fetch
 
 <base-alert type="info">
 
-This hook is only available for Nuxt 2.12 and later.
+Этот хук длступен только в версии Nuxt 2.12 и позже.
 
 </base-alert>
 
-`fetch` is a hook called during server-side rendering after the component instance is created, and on the client when navigating. The fetch hook should return a promise (whether explicitly, or implicitly using `async/await`) that will be resolved:
+  `fetch` - это хук, который вызывается при рендериннге на стороне сервера после создания инстанса компонента и при навигации на стороне клиента. Хук fetch должен вернуть promise (явно или не явно используя `async/await`) который будет выполнен:
 
-- On the server before the initial page is rendered
-- On the client some time after the component is mounted
+- На стороне сервера до того, как страница будет отрендерена
+- На стороне клиента после того как компонент смонтируется
 
-It exposes `$fetchState` at the component level with the following properties:
+Вы можете использовать `$fetchState` на уровне компонента со следующими свойствами:
 
-- `pending` is a `Boolean` that allows you to display a placeholder when `fetch` is being called _on client-side_.
-- `error` is either `null` or an `Error` thrown by the fetch hook
-- `timestamp` is a timestamp of the last fetch, useful for [caching with `keep-alive`](#caching)
+- `pending` тип `Boolean`, которое позволяет вам показать сообщение когда хук `fetch` вызывается на _стороне клиента_ 
+- `error` тип `null` или ошибка `Error` выброшеная хуком `fetch`
+- `timestamp` - это отметка времени когда был сделан последний запрос, которая полезна для [кэширования с помошью `keep-alive`](#caching)
 
-In addition to fetch being called by Nuxt, you can manually call fetch in your component (to e.g. reload its async data) by calling `this.$fetch()`.
+Помимо того, что хук `fetch` может быть вызван Nuxt приложением, вы можете сами вызвать этот хук в вашем компоненте (например, для асинхронного обновления данных) с помошью конструкции `this.$fetch()`.
 
 ```html{}[components/NuxtMountains.vue]
 <template>
@@ -130,17 +130,17 @@ In addition to fetch being called by Nuxt, you can manually call fetch in your c
 
 <base-alert type="info">
 
-You can access the Nuxt [context](/docs/2.x/concepts/context-helpers) within the fetch hook using `this.$nuxt.context`.
+Вы можете получить доступ к Nuxt [контексту](/docs/2.x/concepts/context-helpers) внутри хука fetch с помощью конструкции `this.$nuxt.context`.
 
 </base-alert>
 
-### Options
+### Опции
 
-`fetchOnServer`: `Boolean` or `Function` (default: `true`), call `fetch()` when server-rendering the page
+`fetchOnServer`: тип `Boolean` или `Function` (значение по умолчанию: `true`), вызывает `fetch()` когда страница рендерится на стороне сервера
 
-`fetchDelay`: `Integer` (default: `200`), set the minimum executing time in milliseconds (to avoid quick flashes)
+`fetchDelay`: тип `Integer` (значение по умолчанию: `200`), выставляет минимальное время выполнения в милисекундах (to avoid quick flashes для избежания мерцаний?)
 
-When `fetchOnServer` is falsy (`false` or returns `false`), `fetch` will be called only on client-side and `$fetchState.pending` will return `true` when server-rendering the component.
+Когда `fetchOnServer` имеет значение false (`false` или возвращает `false`), хук `fetch` будет вызван только на стороне клиента и `$fetchState.pending` вернет значение `true` когда компонент рендерится на стороне сервера.
 
 ```js
 export default {
@@ -159,9 +159,9 @@ export default {
 }
 ```
 
-### Listening to query string changes
+### Прослушка изменений в query string
 
-The `fetch` hook is not called on query string changes by default. To watch for query changes you can add a watcher on `$route.query` and call `$fetch`:
+Хук `fetch` не вызывается по умолчанию при изменении query string. Для прослушки изменений в query, вы можете повесить watcher на `$route.query` и вызывать `$fetch`:
 
 ```js
 export default {

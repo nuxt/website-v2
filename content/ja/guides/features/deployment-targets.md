@@ -7,7 +7,7 @@ category: features
 
 ## 静的ホスティング
 
-静的ホスティング(サーバーが必要ないホスティング)のためには、nuxt.config ファイルで target を static に設定する必要があります。
+静的ホスティング（サーバーが必要ないホスティング）のためには、nuxt.config ファイルで target を static に設定する必要があります。
 
 ```js{}[nuxt.config.js]
 export default {

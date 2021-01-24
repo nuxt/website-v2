@@ -17,10 +17,10 @@ Além deles, introduzimos uma opção `prefix` cujo padrão é `true`. Ele adici
 
 **Exemplo:**
 
-- Caminho do server middleware: `/api`
+- Caminho do server middleware: `/server-middleware`
 - Base do Router: `/admin`
-- Com `prefix: true` (padrão): `/admin/api`
-- Com `prefix: false`: `/api`
+- Com `prefix: true` (padrão): `/admin/server-middleware`
+- Com `prefix: false`: `/server-middleware`
 
 ## serverMiddleware vs middleware!
 
@@ -39,7 +39,7 @@ export default {
     'redirect-ssl',
 
     // Registrará o arquivo do diretório da API do projeto para manipular as solicitações /api/*
-    { path: '/api', handler: '~/api/index.js' },
+    { path: '/server-middleware', handler: '~/server-middleware/index.js' },
 
     // Também podemos criar instâncias personalizadas
     { path: '/static2', handler: serveStatic(__dirname + '/static2') }
@@ -47,18 +47,19 @@ export default {
 }
 ```
 
-<p class="Alert Alert--danger">
-    <b> ATENÇÃO! </b>
-    Se você não quiser que o middleware se registre para todas as rotas, você deve usar o formulário de objeto com caminho específico, caso contrário, o handler padrão do nuxt não funcionará!
-</p>
+<base-alert type="warn">
+
+Se você não quiser que o middleware se registre para todas as rotas, você deve usar o formulário de objeto com caminho específico, caso contrário, o handler padrão do nuxt não funcionará!
+
+</base-alert>
 
 ## Middleware de servidor personalizado
 
 Também é possível criar um middleware customizado. Para obter mais informações, consulte a [documentação do Connect](https://github.com/senchalabs/connect#appusefn).
 
-Middleware (`api/logger.js`):
+Middleware (`server-middleware/logger.js`):
 
-```js{}[api/logger.js]
+```js{}[server-middleware/logger.js]
 export default function (req, res, next) {
   // req é o objeto de requisiçao http Node.js
   console.log(req.url)
@@ -72,7 +73,7 @@ export default function (req, res, next) {
 ```
 
 ```js{}[nuxt.config.js]
-serverMiddleware: ['~/api/logger']
+serverMiddleware: ['~/server-middleware/logger']
 ```
 
 ## Sintaxe de Objeto
@@ -82,9 +83,9 @@ Se o middleware de seu servidor consiste em uma lista de funções mapeadas para
 ```js
 export default {
   serverMiddleware: [
-    { path: '/a', handler: '~/api/a.js' },
-    { path: '/b', handler: '~/api/b.js' },
-    { path: '/c', handler: '~/api/c.js' }
+    { path: '/a', handler: '~/server-middleware/a.js' },
+    { path: '/b', handler: '~/server-middleware/b.js' },
+    { path: '/c', handler: '~/server-middleware/c.js' }
   ]
 }
 ```
@@ -94,9 +95,9 @@ Você pode alternativamente passar um objeto para defini-los, da seguinte maneir
 ```js
 export default {
   serverMiddleware: {
-    '/a': '~/api/a.js',
-    '/b': '~/api/b.js',
-    '/c': '~/api/c.js'
+    '/a': '~/server-middleware/a.js',
+    '/b': '~/server-middleware/b.js',
+    '/c': '~/server-middleware/c.js'
   }
 }
 ```

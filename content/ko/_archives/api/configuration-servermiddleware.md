@@ -58,7 +58,7 @@ export default {
 
 커스텀 미들웨어를 작성할 수 있습니다. 더 자세한 내용은 [Connect Docs](https://github.com/senchalabs/connect#appusefn)를 참조하세요.
 
-Middleware (`api/logger.js`):
+Middleware (`server-middleware/logger.js`):
 
 ```js
 export default function (req, res, next) {

@@ -1,6 +1,6 @@
 ---
 title: ストア
-description: `store` ディレクトリには Vuex ストアに関するファイルが含まれています。Vuex ストアは Nuxt.js に付属していてすぐに使えますが、デフォルトでは無効化されています。このディレクトリ内に `index.js` ファイルを作成することで、ストアが有効化されます。
+description: '`store` ディレクトリには Vuex ストアに関するファイルが含まれています。Vuex ストアは Nuxt.js に付属していてすぐに使えますが、デフォルトでは無効化されています。このディレクトリ内に `index.js` ファイルを作成することで、ストアが有効化されます。'
 position: 13
 category: directory-structure
 csb_link: https://codesandbox.io/embed/github/nuxt-academy/guides-examples/tree/master/04_directory_structure/14_store?fontsize=14&hidenavigation=1&theme=dark

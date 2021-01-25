@@ -43,22 +43,22 @@
             />
           </div>
         </a>
-        <NuxtLink :to="{ name: 'video-courses' }" class="w-full lg:w-1/2 p-4">
+        <NuxtLink :to="{ name: 'themes' }" class="w-full lg:w-1/2 p-4">
           <div
             class="block bg-light-surface dark:bg-dark-surface hover:bg-gray-200 rounded p-8 text-center transition-colors duration-300 ease-linear"
           >
             <h2
               class="text-2xl text-light-onSurfacePrimary dark:text-dark-onSurfacePrimary font-medium uppercase mb-8 transition-colors duration-300 ease-linear"
             >
-              {{ $t('resources.videos.title') }}
+              {{ $t('resources.themes.title') }}
             </h2>
-            <VideosIllustration
+            <ThemingIllustration
               class="text-light-onSurfacePrimary dark:text-dark-onSurfacePrimary inline-block w-auto h-40 sm:h-56 xl:h-64 transition-colors duration-300 ease-linear"
             />
           </div>
         </NuxtLink>
       </section>
-      <section class="flex flex-wrap -mx-4">
+      <section class="flex flex-wrap -mx-4 pb-8">
         <NuxtLink
           :to="'examples/hello-world'"
           class="block w-full lg:w-1/2 p-4"
@@ -76,16 +76,17 @@
             />
           </div>
         </NuxtLink>
-        <NuxtLink :to="{ name: 'themes' }" class="w-full lg:w-1/2 p-4">
+
+        <NuxtLink :to="{ name: 'video-courses' }" class="w-full lg:w-1/2 p-4">
           <div
             class="block bg-light-surface dark:bg-dark-surface hover:bg-gray-200 rounded p-8 text-center transition-colors duration-300 ease-linear"
           >
             <h2
               class="text-2xl text-light-onSurfacePrimary dark:text-dark-onSurfacePrimary font-medium uppercase mb-8 transition-colors duration-300 ease-linear"
             >
-              {{ $t('resources.themes.title') }}
+              {{ $t('resources.videos.title') }}
             </h2>
-            <ThemingIllustration
+            <VideosIllustration
               class="text-light-onSurfacePrimary dark:text-dark-onSurfacePrimary inline-block w-auto h-40 sm:h-56 xl:h-64 transition-colors duration-300 ease-linear"
             />
           </div>

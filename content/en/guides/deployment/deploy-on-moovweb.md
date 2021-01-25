@@ -1,9 +1,10 @@
 ---
-title: How to deploy with Moovweb XDN?
+title: Deploy Nuxt with Moovweb XDN
 description: How to deploy Nuxt.js app with Moovweb XDN?
-menu: Deploy on Moovweb XDN
+menu: Moovweb XDN
+target: Server
 category: deployment
-position: 213
+position: 110
 ---
 
 Moovweb XDN supports universal (SSR) Nuxt.js applications.

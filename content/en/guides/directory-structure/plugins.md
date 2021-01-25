@@ -187,7 +187,7 @@ npm install v-tooltip
   </code-block>
 </code-group>
 
-The we create the file `plugins/vue-tooltip.js`
+Then we create the file `plugins/vue-tooltip.js`
 
 ```js{}[plugins/vue-tooltip.js]
 import Vue from 'vue'

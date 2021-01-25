@@ -8762,7 +8762,7 @@ number-is-nan@^1.0.0:
   resolved "https://registry.yarnpkg.com/number-is-nan/-/number-is-nan-1.0.1.tgz#097b602b53422a522c1afb8790318336941a011d"
   integrity sha1-CXtgK1NCKlIsGvuHkDGDNpQaAR0=
 
-nuxt-edge@^2.15.0-26854632.498f8553:
+nuxt-edge@^2.15.0-26856070.8350560:
   version "2.15.0-26856070.8350560"
   resolved "https://registry.yarnpkg.com/nuxt-edge/-/nuxt-edge-2.15.0-26856070.8350560.tgz#93f96083703ebb8598c52db667dbf91d47faa561"
   integrity sha512-SM+b0G/Vaf3I8y5xWZkc5V6uvTlPLwUWosepPsDP4rtV1c476LmZL9rPlXjxmkFshX5aMv/D7sEZ5xCHPIKQnw==

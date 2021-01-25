@@ -1,6 +1,6 @@
 ---
-title: Middleware declarado
-description: Utlizando middleware declarado para autenticar un usuario utilizando el store y permitiéndole visitar la página una vez autenticado.
+title: Middleware nombrado
+description: Utlizando middleware nombrado para autenticar un usuario utilizando el store y permitiéndole visitar la página una vez autenticado.
 position: 602
 category: middleware
 csb_link: https://codesandbox.io/embed/github/nuxt-academy/examples/tree/master/middleware/named-middleware?fontsize=14&hidenavigation=1&module=%2Fpages%2Fnamed-middleware.vue&theme=dark&view=editor

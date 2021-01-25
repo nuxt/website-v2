@@ -18,7 +18,7 @@ Obtén más información sobre [módulo http](https://http.nuxtjs.org/).
 
 <base-alert type="next">
 
-Obtén más información sobre el hook asyncData en el capítulo de [Obtención de datos](/docs/2.x/features/data-fetching) del libro de Características.
+Obtén más información sobre el hook asyncData en el capítulo de [Obtener datos](/docs/2.x/features/data-fetching) del libro de Características.
 
 </base-alert>
 

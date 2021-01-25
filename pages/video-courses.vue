@@ -70,7 +70,7 @@
               :src="'/courses/' + course.img + '.png'"
               :srcset="'/courses/' + course.img + '-2x.png 2x'"
               :alt="course.title"
-              class="block w-auto rounded px-6 md:py-8 md:px-0 order-1 md:order-2 self-start"
+              class="block w-auto rounded pt-6 px-6 md:py-8 md:px-0 order-1 md:order-2 self-start"
             />
           </div>
         </div>

@@ -199,7 +199,7 @@ We use the dev command when running our application in development mode.
 
 </base-alert>
 
-The application is now running on **[http://localhost:3000](http://localhost:3000/).**
+The application is now running on [**http://localhost:3000**](http://localhost:3000/).
 
 Open it in your browser by clicking the link in your terminal and you should see the text "Hello World" we copied in the previous step.
 

@@ -107,7 +107,7 @@ Also this can be a better replacement for `.env.example` and the default values 
 ```js{}[nuxt.config.js]
 export default {
   publicRuntimeConfig: {
-    baseURL: 'https://dev.nuxtjs.org' || 'https://nuxtjs.org'
+    baseURL: process.env.NODE_ENV === 'production' ? 'https://nuxtjs.org' : 'https://dev.nuxtjs.org'
   }
 }
 ```

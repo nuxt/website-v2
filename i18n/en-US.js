@@ -68,10 +68,16 @@ module.exports = {
         routeName: 'section-slug'
       },
       {
+<<<<<<< HEAD
         name: 'FAQ',
         slug: 'faq',
         type: 'dynamic',
         routeName: 'section-slug'
+=======
+        name: 'Resources',
+        icon: 'resources',
+        slug: 'resources'
+>>>>>>> 1ac253b5 (feat: resources page (#1177))
       },
       {
         name: 'Resources',
@@ -79,9 +85,16 @@ module.exports = {
         type: 'static'
       },
       {
+<<<<<<< HEAD
         name: 'Blog',
         slug: 'blog',
         type: 'static'
+=======
+        name: 'Video Courses',
+        icon: 'video',
+        slug: 'video-courses'
+        // href: 'https://masteringnuxt.com/?utm_source=nuxt&utm_medium=link&utm_campaign=navbar_link'
+>>>>>>> 1ac253b5 (feat: resources page (#1177))
       }
     ],
     search: {
@@ -176,11 +189,31 @@ module.exports = {
       title: 'Partners',
       button: 'Support Us'
     },
+<<<<<<< HEAD
     ads: {
       fallback: {
         title: 'Nuxt needs you!',
         description: 'By allowing nuxtjs.org on your Ad-Blocker, you support our work and help us financially.'
       }
+=======
+    title: '{nuxt} Resources',
+    description:
+      'Discover a panel of resources made by our partners. By using thoses affiliate resources links, you are helping us to maintain and develop the Open Source Framework.',
+    themes: {
+      title: 'Themes'
+    },
+    modules: {
+      title: 'Modules'
+    },
+    examples: {
+      title: 'Examples'
+    },
+    faq: {
+      title: 'FAQ'
+    },
+    videos: {
+      title: 'Video Courses'
+>>>>>>> 1ac253b5 (feat: resources page (#1177))
     }
   },
   home: {
@@ -204,10 +237,25 @@ module.exports = {
     loading: 'Loading...',
     error: 'An error occured while fetching modules.'
   },
+<<<<<<< HEAD
   resources: {
     themes: {
       get_for_it: 'Get it for {price}',
       video_course: 'Start course'
+=======
+  'video-courses': {
+    meta: {
+      title: 'NuxtJS Video Courses',
+      description:
+        'With the video courses below created by our partner VueSchool you can discover and learn more about the Nuxt.js Framework.'
+    },
+    title: '{nuxt} Video Courses',
+    description:
+      'With the video courses below you can discover and learn more about the Nuxt Framework.',
+    cta: {
+      discover: 'Discover Mastering Nuxt',
+      start: 'START COURSE'
+>>>>>>> 1ac253b5 (feat: resources page (#1177))
     }
   },
   sustainability: {

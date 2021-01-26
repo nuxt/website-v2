@@ -23,9 +23,17 @@
           <h1
             class="text-3xl xl:text-4xl text-light-onSurfacePrimary dark:text-dark-onSurfacePrimary font-medium leading-normal mb-6 lg:pt-4"
           >
+<<<<<<< HEAD
             <AppTitle />
             Resources<br />
           </h1>
+=======
+            {{ $t('resources.title') }}
+            <template #nuxt>
+              <AppTitle />
+            </template>
+          </i18n>
+>>>>>>> 1ac253b5 (feat: resources page (#1177))
           <h3
             class="xl:text-lg text-light-onSurfaceSecondary dark:text-dark-onSurfaceSecondary font-medium leading-relaxed mb-6"
           >
@@ -55,7 +63,26 @@
         />
       </div>
       <section class="flex flex-wrap -mx-4">
-        <NuxtLink :to="{ name: 'themes' }" class="block w-full lg:w-1/2 p-4">
+        <a
+          href="https://modules.nuxtjs.org/"
+          target="_blank"
+          rel="noopener"
+          class="block w-full lg:w-1/2 p-4"
+        >
+          <div
+            class="block bg-light-surface dark:bg-dark-surface hover:bg-gray-200 rounded p-8 text-center transition-colors duration-300 ease-linear"
+          >
+            <h2
+              class="text-2xl text-light-onSurfacePrimary dark:text-dark-onSurfacePrimary font-medium uppercase mb-8 transition-colors duration-300 ease-linear"
+            >
+              {{ $t('resources.modules.title') }}
+            </h2>
+            <ModulesIllustration
+              class="text-light-onSurfacePrimary dark:text-dark-onSurfacePrimary inline-block w-auto h-40 sm:h-56 xl:h-64 transition-colors duration-300 ease-linear"
+            />
+          </div>
+        </a>
+        <NuxtLink :to="{ name: 'themes' }" class="w-full lg:w-1/2 p-4">
           <div
             class="block bg-light-surface dark:bg-dark-surface hover:bg-gray-200 rounded p-8 text-center transition-colors duration-300 ease-linear"
           >
@@ -69,6 +96,26 @@
             />
           </div>
         </NuxtLink>
+      </section>
+      <section class="flex flex-wrap -mx-4 pb-8">
+        <NuxtLink
+          :to="'examples/hello-world'"
+          class="block w-full lg:w-1/2 p-4"
+        >
+          <div
+            class="block bg-light-surface dark:bg-dark-surface hover:bg-gray-200 rounded p-8 text-center transition-colors duration-300 ease-linear"
+          >
+            <h2
+              class="text-2xl text-light-onSurfacePrimary dark:text-dark-onSurfacePrimary font-medium uppercase mb-8 transition-colors duration-300 ease-linear"
+            >
+              {{ $t('resources.examples.title') }}
+            </h2>
+            <ExamplesIllustration
+              class="text-light-onSurfacePrimary dark:text-dark-onSurfacePrimary inline-block w-auto h-40 sm:h-56 xl:h-64 transition-colors duration-300 ease-linear"
+            />
+          </div>
+        </NuxtLink>
+
         <NuxtLink :to="{ name: 'video-courses' }" class="w-full lg:w-1/2 p-4">
           <div
             class="block bg-light-surface dark:bg-dark-surface hover:bg-gray-200 rounded p-8 text-center transition-colors duration-300 ease-linear"
@@ -112,11 +159,24 @@ import iThemes from '@/components/svg/fogg/themes'
 import ThemesIllustration from '~/assets/illustrations/themes.svg?inline'
 import ThemingIllustration from '~/assets/illustrations/theming.svg?inline'
 import VideosIllustration from '~/assets/illustrations/videos.svg?inline'
+<<<<<<< HEAD
 >>>>>>> 26a70b2b (chore: add guides section (#407))
 
 export default {
   components: {
     iThemes
+=======
+import ExamplesIllustration from '~/assets/illustrations/examples.svg?inline'
+import ModulesIllustration from '~/assets/illustrations/modules.svg?inline'
+
+export default {
+  components: {
+    ThemesIllustration,
+    ThemingIllustration,
+    VideosIllustration,
+    ExamplesIllustration,
+    ModulesIllustration
+>>>>>>> 1ac253b5 (feat: resources page (#1177))
   },
 <<<<<<< HEAD
 <<<<<<< HEAD

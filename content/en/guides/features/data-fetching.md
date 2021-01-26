@@ -1,6 +1,6 @@
 ---
 title: Data Fetching
-description: In Nuxt.js we have 2 ways of getting data from an api. We can use the fetch method or the asyncData method.
+description: In Nuxt.js we have 2 ways of getting data from an API. We can use the fetch method or the asyncData method.
 position: 4
 category: features
 csb_link: https://codesandbox.io/embed/github/nuxt-academy/guides-examples/tree/master/03_features/04_data_fetching?fontsize=14&hidenavigation=1&theme=dark
@@ -72,11 +72,17 @@ Nuxt has two hooks for asynchronous data loading:
 
 <base-alert>
 
-In versions of Nuxt before 2.12, the `fetch` hook worked much like `asyncData` does today. This functionality is still supported today for backwards-compatibility: if a `context` argument is accepted in your `fetch()`, it will be considered a "legacy" fetch hook. This functionality is deprecated, and should be replaced with either `asyncData(context)` or an [anonymous middleware](/guides/directory-structure/middleware#anonymous-middleware) using `middleware(context)`.
+In versions of Nuxt before 2.12, the `fetch` hook worked much like `asyncData` does today. This functionality is still supported today for backwards-compatibility: if a `context` argument is accepted in your `fetch()`, it will be considered a "legacy" fetch hook. This functionality is deprecated, and should be replaced with either `asyncData(context)` or an [anonymous middleware](/docs/2.x/directory-structure/middleware#anonymous-middleware) using `middleware(context)`.
 
 </base-alert>
 
 These hooks can be used with _any data fetching library_ you choose. We recommend using [@nuxt/http](https://http.nuxtjs.org/) or [@nuxt/axios](https://axios.nuxtjs.org/) for making requests to HTTP APIs. More information about these libraries, such as guides for configuring authentication headers, can be found in their respective documentation.
+
+<base-alert type="info">
+  
+If you define `fetch` or `asyncData` inside a mixin and also have it defined in a component/page, the mixin function will be overwritten instead of called.
+
+</base-alert>
 
 ## The fetch hook
 
@@ -102,7 +108,7 @@ In addition to fetch being called by Nuxt, you can manually call fetch in your c
 ```html{}[components/NuxtMountains.vue]
 <template>
   <p v-if="$fetchState.pending">Fetching mountains...</p>
-  <p v-else-if="$fetchState.error">An error occured :(</p>
+  <p v-else-if="$fetchState.error">An error occurred :(</p>
   <div v-else>
     <h1>Nuxt Mountains</h1>
     <ul>
@@ -130,7 +136,7 @@ In addition to fetch being called by Nuxt, you can manually call fetch in your c
 
 <base-alert type="info">
 
-You can access the Nuxt [context](/guides/concepts/context-helpers) within the fetch hook using `this.$nuxt.context`.
+You can access the Nuxt [context](/docs/2.x/concepts/context-helpers) within the fetch hook using `this.$nuxt.context`.
 
 </base-alert>
 
@@ -227,7 +233,7 @@ The navigation to the same page will not call `fetch` if last `fetch` call w
 
 <base-alert>
 
-`asyncData` is only available for [pages](/guides/directory-structure/pages) and you don't have access to `this` inside the hook.
+`asyncData` is only available for [pages](/docs/2.x/directory-structure/pages) and you don't have access to `this` inside the hook.
 
 </base-alert>
 
@@ -236,7 +242,7 @@ The navigation to the same page will not call `fetch` if last `fetch` call w
 ```html{}[pages/posts/_id.vue]
 <template>
   <div>
-    <h1>{{ post.title }</h1>
+    <h1>{{ post.title }}</h1>
     <p>{{ post.description }}</p>
   </div>
 </template>
@@ -251,11 +257,18 @@ The navigation to the same page will not call `fetch` if last `fetch` call w
 </script>
 ```
 
-Unlike `fetch`, the promise returned by the `asyncData` hook is resolved _during route transition_. This means that no "loading placeholder" is visible during client-side transitions (although the [loading bar](https://nuxtjs.org/guides/features/loading/) can be used to indicate a loading state to the user). Nuxt will instead wait for the `asyncData` hook to be finished before navigating to the next page or display the [error page](/guides/directory-structure/layouts#error-page)).
+Unlike `fetch`, the promise returned by the `asyncData` hook is resolved _during route transition_. This means that no "loading placeholder" is visible during client-side transitions (although the [loading bar](https://nuxtjs.org/guides/features/loading/) can be used to indicate a loading state to the user). Nuxt will instead wait for the `asyncData` hook to be finished before navigating to the next page or display the [error page](/docs/2.x/directory-structure/layouts#error-page)).
 
-This hook can only be used for page-level components. Unlike `fetch`, `asyncData` cannot access the component instance (`this`). Instead, it receives [the context](/guides/concepts/context-helpers) as its argument. You can use it to fetch some data and Nuxt.js will automatically merge the returned object with the component data.
+This hook can only be used for page-level components. Unlike `fetch`, `asyncData` cannot access the component instance (`this`). Instead, it receives [the context](/docs/2.x/concepts/context-helpers) as its argument. You can use it to fetch some data and Nuxt.js will automatically merge the returned object with the component data.
 
 In the upcoming examples, we are using [@nuxt/http](https://http.nuxtjs.org/) which we recommend for fetching data from an API.
+
+### Async data in components?
+
+Because components do not have an `asyncData` method, you cannot directly fetch async data server side within a component. In order to get around this limitation you have two basic options:
+
+1. Make the API call in the `mounted` hook and set data properties when loaded. _Downside: Won't work for server side rendering._
+2. Make the API call in the `asyncData` method of the page component and pass the data as props to the sub components. Server rendering will work fine. _Downside: the `asyncData` of the page might be less readable because it's loading the data for other components_.
 
 ### Listening to query changes
 
@@ -263,12 +276,8 @@ The `asyncData` method is not called on query string changes by default. If 
 
 <base-alert type="next">
 
-Learn more about the [watchQuery property](/guides/components-glossary/pages-watchquery) and see the list of available [keys in context](/guides/concepts/context-helpers).
+Learn more about the [watchQuery property](/docs/2.x/components-glossary/pages-watchquery) and see the list of available [keys in context](/docs/2.x/concepts/context-helpers).
 
 </base-alert>
-
-<app-modal>
-  <code-sandbox :src="csb_link"></code-sandbox>
-</app-modal>
 
 <quiz :questions="questions"></quiz>

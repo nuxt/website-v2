@@ -3,7 +3,7 @@ title: content
 description: Empower your Nuxt.js application with `@nuxtjs/content` module where you can write in a `content/` directory and fetch your Markdown, JSON, YAML and CSV files through a MongoDB like API, acting as a **Git-based Headless CMS**.
 position: 4
 category: directory-structure
-img: /guides/nuxt-content.svg
+img: /docs/2.x/nuxt-content.svg
 imgAlt: nuxt content module
 questions:
   - question: What is the default directory name of the directory where you add your markdown files?
@@ -46,7 +46,7 @@ questions:
       - .prev-next(slug)
       - .slug()
     correctAnswer: .surround(slug)
-  - question: PrismJS classes are applied to code blocks by default?
+  - question: Prism classes are applied to code blocks by default?
     answers:
       - true
       - false
@@ -265,7 +265,7 @@ See the [content module docs](https://content.nuxtjs.org/fetching#searchfield-va
 
 ### Syntax highlighting
 
-This module automatically wraps codeblocks and applies [PrismJS](https://prismjs.com/) classes. You can also add a different PrismJS theme or disable it altogether.
+This module automatically wraps codeblocks and applies [Prism](https://prismjs.com/) classes. You can also add a different Prism theme or disable it altogether.
 
 <code-group>
   <code-block label="Yarn" active>
@@ -275,7 +275,7 @@ yarn add prism-themes
 ```
 
   </code-block>
-  <code-block label="NPM">
+  <code-block label="npm">
 
 ```bash
 npm install prism-themes
@@ -330,9 +330,9 @@ See the [content module docs](https://content.nuxtjs.org/writing#table-of-conten
 
 </base-alert>
 
-### Powerful QueryBuilder API (MongoDB like)
+### Powerful query builder API (MongoDB-like)
 
-The content module comes with a powerful QueryBuilder API similar to MongoDB which allows you to easily see the JSON of each directory at `http://localhost:3000/_content/`. The endpoint is accessible on GET and POST request, so you can use query params.
+The content module comes with a powerful query builder API similar to MongoDB which allows you to easily see the JSON of each directory at `http://localhost:3000/_content/`. The endpoint is accessible on GET and POST request, so you can use query params.
 
 `http://localhost:3000/_content/articles?only=title&only=description&limit=10`
 
@@ -374,13 +374,21 @@ If using Nuxt <2.13 and you need to specify the dynamic routes you can do so usi
 
 <base-alert type="next">
 
-See the [content module docs](https://content.nuxtjs.org/advanced#programmatic-usage) for more details
+See the [content module docs](https://content.nuxtjs.org/advanced#programmatic-usage) for more details on programmatic usage
+
+</base-alert>
+
+### What's next
+
+<base-alert type="next">
+
+Check out our tutorial on [How to Create a Blog with Nuxt Content](/blog/creating-blog-with-nuxt-content)
 
 </base-alert>
 
 <base-alert type="next">
 
-To see the full [documentation for the content module](https://content.nuxtjs.org/)
+Check out the [content module docs](https://content.nuxtjs.org/) for more advanced usage and examples
 
 </base-alert>
 

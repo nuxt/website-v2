@@ -99,7 +99,7 @@ export default {
           [
             preset,
             {
-              buildTarget: isServer ? 'server' : 'client',
+              targets: isServer ? ... :  ...,
               ...options
             }
           ],
@@ -156,7 +156,7 @@ La extensión se llama dos veces, una vez para el paquete del servidor y una vez
 
 <base-alert>
 
-**Advertencia:** Las llaves proporcionadas `isClient` e `isServer` son independientes de las llaves disponibles en [`context`](/guides/internals-glossary/context). **No** están obsoletas. No utilice `process.client` ni `process.server` aquí ya que son `undefined` a esté punto.
+**Advertencia:** Las llaves proporcionadas `isClient` e `isServer` son independientes de las llaves disponibles en [`context`](/docs/2.x/internals-glossary/context). **No** están obsoletas. No utilice `process.client` ni `process.server` aquí ya que son `undefined` a esté punto.
 
 </base-alert>
 
@@ -281,13 +281,11 @@ export default {
 
 Para entender mejor como funciona el uso de manifests, echa un vistazo a la [documentación de webpack](https://webpack.js.org/guides/code-splitting/).
 
-
 <base-alert>
 
 Tenga cuidado al usar nombres de archivo no basados en hash en producción, ya que la mayoría de los navegadores almacenarán en caché el activo y no detectarán los cambios en la primera carga.
 
 </base-alert>
-
 
 ## friendlyErrors
 
@@ -405,7 +403,7 @@ Configuración para el complemento [html-minifier](https://github.com/kangax/htm
 
 ### loaders.sass y loaders.scss
 
-> Mira la [documentación de Node Sass](https://github.com/sass/node-sass/blob/master/README.md#options) para todas las opciones disponibles de Sass. Note: `loaders.sass` es para [Sass Indented Syntax](http://sass-lang.com/documentation/file.INDENTED_SYNTAX.html)
+> Mira la [documentación de Sass](https://github.com/sass/dart-sass#javascript-api) para todas las opciones disponibles de Sass. Note: `loaders.sass` es para [Sass Indented Syntax](http://sass-lang.com/documentation/file.INDENTED_SYNTAX.html)
 
 ### loaders.vueStyle
 
@@ -637,7 +635,7 @@ Esta opción se establece automáticamente en función del valor de `mode` si no
 
 <base-alert>
 
-**Advertencia:** Esta propiedad está obsoleta. En su lugar use por favor  [style-resources-module](https://github.com/nuxt-community/style-resources-module/) para mejorar rendimiento y un mejor DX!
+**Advertencia:** Esta propiedad está obsoleta. En su lugar use por favor [style-resources-module](https://github.com/nuxt-community/style-resources-module/) para mejorar rendimiento y un mejor DX!
 
 </base-alert>
 
@@ -668,7 +666,7 @@ Aquí no se pueden usar alises de rutas como (`~` and `@`), necesitas usar rutas
 
 ## templates
 
-> Nuxt.js le permite proporcionar sus propias plantillas que se procesarán según la configuración de Nuxt. Esta función es especialmente útil para usar con [módulos](/guides/directory-structure/modules).
+> Nuxt.js le permite proporcionar sus propias plantillas que se procesarán según la configuración de Nuxt. Esta función es especialmente útil para usar con [módulos](/docs/2.x/directory-structure/modules).
 
 - Tipo: `Array`
 
@@ -689,7 +687,7 @@ export default {
 }
 ```
 
-Las plantillas se renderizan usando [`lodash.template`](https://lodash.com/docs/#template) puedes aprender más sobre su uso [aquí](https://github.com/learn-co-students/javascript-lodash-templates-v-000).
+Las plantillas se renderizan usando [`lodash.template`](https://lodash.com/docs/#template) puedes aprender más sobre su uso [aquí](https://github.com/learn-co-students/javascript-lodash-templates-lab-v-000).
 
 ## terser
 
@@ -725,7 +723,7 @@ Mira [webpack-contrib/terser-webpack-plugin](https://github.com/webpack-contrib/
 
 Si desea transpilar dependencias específicas con Babel, puede agregarlas en `build.transpile`. Cada elemento en transpile puede ser un nombre de paquete, una string o un objeto regex que coincida con el nombre del archivo de la dependencia.
 
-Comenzando con `v2.9.0`, también puedes usar una función para transpilar condicionalmente, la función recibirá un objeto (` {isDev, isServer, isClient, isModern, isLegacy} `):
+Comenzando con `v2.9.0`, también puedes usar una función para transpilar condicionalmente, la función recibirá un objeto (`{isDev, isServer, isClient, isModern, isLegacy}`):
 
 ```js{}[nuxt.config.js]
 {
@@ -758,7 +756,7 @@ Comenzando con `v2.9.0`, también puedes usar una función para transpilar condi
 
 ## watch
 
-> Puede proporcionar sus archivos personalizados para verlos y regenerarlos después de los cambios. Esta característica es especialmente útil para usar con [módulos](/guides/directory-structure/modules).
+> Puede proporcionar sus archivos personalizados para verlos y regenerarlos después de los cambios. Esta característica es especialmente útil para usar con [módulos](/docs/2.x/directory-structure/modules).
 
 - Tipo: `Array<String>`
 

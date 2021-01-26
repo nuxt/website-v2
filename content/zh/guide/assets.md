@@ -88,7 +88,7 @@ createElement('img', { attrs: { src: require('~/assets/image.png') } })
 <img src="/_nuxt/img/image.0c61159.png" />
 ```
 
-如果你想更新这些加载器的配置或者禁用他们，请参考[build.extend](/api/configuration-build#extend)。
+如果你想更新这些加载器的配置或者禁用他们，请参考[build.extend](/docs/2.x/configuration-glossary/configuration-build#extend)。
 
 ## 静态文件
 

@@ -7,7 +7,7 @@ category: features
 
 ## 静的ホスティング
 
-静的ホスティング(サーバーが必要ないホスティング)のためには、nuxt.config ファイルで target を static に設定する必要があります。
+静的ホスティング（サーバーが必要ないホスティング）のためには、nuxt.config ファイルで target を static に設定する必要があります。
 
 ```js{}[nuxt.config.js]
 export default {
@@ -18,7 +18,7 @@ export default {
 target を static にした状態で nuxt dev を実行すると、開発者の体験は向上するでしょう:
 
 - `context` から `req` と `res` を削除します
-- クライアントサイドレンダリングの 404、エラー、リダイレクトをフォールバックします [SPA フォールバックを参照](./guides/concepts/static-site-generation#spa-fallback)
+- クライアントサイドレンダリングの 404、エラー、リダイレクトをフォールバックします [SPA フォールバックを参照](/guides/concepts/static-site-generation#spa-fallback)
 - サーバーサイドレンダリングでは常に `$route.query` と `{}` は等しくなります
 - `process.static` は true になります
 

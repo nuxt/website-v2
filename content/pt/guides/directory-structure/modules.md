@@ -4,8 +4,8 @@ description: Nuxt.js fornece um sistema de módulo de alta ordem que torna poss�
 position: 9
 category: directory-structure
 csb_link: https://codesandbox.io/embed/github/nuxt-academy/guides-examples/tree/master/04_directory_structure/10_modules?fontsize=14&hidenavigation=1&theme=dark
-img: /guides/plugins.jpg
-imgAlt: modules-servermiddleware-plugins-in-nuxt-js
+img: /docs/2.x/modules.svg
+imgAlt: modules-in-nuxt-js
 questions:
   - question: Quando os módulos são chamados?
     answers:
@@ -251,11 +251,11 @@ nuxt.hook('listen', async (server, { host, port })) => {
 
 `this`: Contexto dos módulos. Todos os módulos serão chamados dentro do contexto da instância ModuleContainer.
 
-Consulte a documentação da classe [ModuleContainer](/guides/internals-glossary/internals-module-container) para ver os métodos disponíveis.
+Consulte a documentação da classe [ModuleContainer](/docs/2.x/internals-glossary/internals-module-container) para ver os métodos disponíveis.
 
 ### Executa tarefas em hooks específicos
 
-Seu módulo pode precisar fazer coisas apenas em condições específicas e não somente durante a inicialização do Nuxt.js. Podemos usar os poderosos hooks do Nuxt.js para fazer tarefas em eventos específicos (baseado no [Hable](https://github.com/jsless/hable)). Nuxt.js esperará por sua função se ela retornar uma promise ou for definida como `async`.
+Seu módulo pode precisar fazer coisas apenas em condições específicas e não somente durante a inicialização do Nuxt.js. Podemos usar os poderosos hooks do Nuxt.js para fazer tarefas em eventos específicos (baseado no [Hookable](https://github.com/nuxt-contrib/hookable)). Nuxt.js esperará por sua função se ela retornar uma promise ou for definida como `async`.
 
 Aqui estão alguns exemplos básicos:
 
@@ -381,7 +381,7 @@ export default function moduloAsync($http) {
 
 <base-alert type="info">
 
-Existem muito mais hooks e possibilidades para módulos. Por favor, Leia sobre os [Internals do Nuxt](/guides/internals-glossary/internals) para saber mais sobre a API nuxt-internal.
+Existem muito mais hooks e possibilidades para módulos. Por favor, Leia sobre os [Internals do Nuxt](/docs/2.x/internals-glossary/internals) para saber mais sobre a API nuxt-internal.
 
 </base-alert>
 
@@ -417,7 +417,7 @@ yarn add -D @nuxtjs/eslint-module
 ```
 
   </code-block>
-  <code-block label="NPM">
+  <code-block label="npm">
 
 ```bash
 npm install --save-dev @nuxtjs/eslint-module

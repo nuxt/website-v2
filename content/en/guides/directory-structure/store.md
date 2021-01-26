@@ -46,7 +46,7 @@ questions:
       - fetch
       - asyncData
     correctAnswer: nuxtServerInit
-  - question: In asynData the context is given to the nuxtServerInit as the
+  - question: In asyncData the context is given to the nuxtServerInit as the
     answers:
       - first argument
       - second argument
@@ -66,10 +66,10 @@ Using a store to manage the state is important for every big application. That's
 
 ## Activate the Store
 
-Nuxt.js will look for the `store` directory, if it exists, it will:
+Nuxt.js will look for the `store` directory. If it contains a file, that isn't a hidden file or a `README.md` file, then the store will be activated. This means that Nuxt will:
 
-1. Import Vuex
-2. Add the `store` option to the root Vue instance.
+1. Import Vuex,
+2. Add the `store` option to the root Vue instance.
 
 ## Modules
 
@@ -106,7 +106,7 @@ export const mutations = {
   remove(state, { todo }) {
     state.list.splice(state.list.indexOf(todo), 1)
   },
-  toggle(todo) {
+  toggle(state, todo) {
     todo.done = !todo.done
   }
 }
@@ -254,7 +254,7 @@ Only the primary module (in `store/index.js`) will receive this action. You'll 
 
 </base-alert>
 
-The [context](/guides/concepts/context-helpers) is given to `nuxtServerInit` as the 2nd argument in the `asyncData` method.
+The [context](/docs/2.x/concepts/context-helpers) is given to `nuxtServerInit` as the 2nd argument in the `asyncData` method.
 
 If `nuxt generate` is ran, `nuxtServerInit` will be executed for every dynamic route generated.
 
@@ -279,9 +279,5 @@ Strict mode is enabled by default on dev mode and turned off in production mode.
 ```js
 export const strict = false
 ```
-
-<app-modal>
-  <code-sandbox  :src="csb_link"></code-sandbox>
-</app-modal>
 
 <quiz :questions="questions"></quiz>

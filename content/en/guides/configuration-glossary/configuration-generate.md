@@ -26,7 +26,7 @@ export default {
 
 - Type: `Object` or `false`
 
-This option is used by `nuxt generate` with [static target](/guides/features/deployment-targets#static-hosting) to avoid re-building when no tracked file has been changed.
+This option is used by `nuxt generate` with [static target](/docs/2.x/features/deployment-targets#static-hosting) to avoid re-building when no tracked file has been changed.
 
 Defaults:
 
@@ -83,7 +83,7 @@ export default {
 - Type: `String`
 - Default: `'dist'`
 
-Directory name created when building the web application in static mode with `nuxt generate` or in SPA mode with `nuxt build`.
+Directory name created when building web applications using the `nuxt generate` command.
 
 ## devtools
 
@@ -163,13 +163,11 @@ export default {
 
 The path to the fallback HTML file. It should be set as the error page, so that also unknown routes are rendered via Nuxt. If unset or set to a falsy value, the name of the fallback HTML file will be `200.html`. If set to `true`, the filename will be `404.html`. If you provide a string as a value, it will be used instead.
 
-When running a SPA it is more idiomatic to use a `200.html`, as it's the only file necessary as no other routes are generated.
-
 ```{}[nuxt.config.js]
 fallback: false;
 ```
 
-If working with statically generated pages then it is recommended to use a `404.html` for error pages and for those covered by [excludes](https://nuxtjs.org/api/configuration-generate#exclude) (the files that you do not want generated as static pages).
+If working with statically generated pages then it is recommended to use a `404.html` for error pages and for those covered by [excludes](/docs/2.x/configuration-glossary/#exclude) (the files that you do not want generated as static pages).
 
 ```js{}[nuxt.config.js]
 fallback: true
@@ -181,19 +179,19 @@ However, Nuxt allows you to configure any page you like so if you don't want to 
 fallback: 'fallbackPage.html'
 ```
 
-_Note: Multiple services (e.g. Netlify) detect a `404.html` automatically. If you configure your webserver on your own, please consult it's documentation to find out how to set up an error page (and set it to the `404.html` file)_
+_Note: Multiple services (e.g. Netlify) detect a `404.html` automatically. If you configure your web server on your own, please consult its documentation to find out how to set up an error page (and set it to the `404.html` file)_
 
 ## interval
 
 - Type: `Number`
 - Default: `0`
 
-Interval between two render cycles to avoid flooding a potential API with API calls from the web application.
+Interval in milliseconds between two render cycles to avoid flooding a potential API with calls from the web application.
 
 ## minify
 
 - **Deprecated!**
-- Use [build.html.minify](/guides/configuration-glossary/configuration-build#htmlminify) instead
+- Use [build.html.minify](/docs/2.x/configuration-glossary/configuration-build#htmlminify) instead
 
 ## routes
 

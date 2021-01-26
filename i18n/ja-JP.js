@@ -16,44 +16,30 @@ module.exports = {
   header: {
     links: [
       {
-        name: 'Guides',
-        slug: 'guides',
-        type: 'newDocs',
-        routeName: 'guides-book-slug'
-      },
-      {
-        name: 'Guide',
-        slug: 'guide',
-        type: 'dynamic',
-        routeName: 'section-slug'
-      },
-      {
-        name: 'API',
-        slug: 'api',
-        type: 'dynamic',
-        routeName: 'section-slug'
+        name: 'Docs',
+        icon: 'books',
+        slug: 'docs-2.x-book-slug'
       },
       {
         name: 'Examples',
-        slug: 'examples',
-        type: 'dynamic',
-        routeName: 'section-slug'
+        icon: 'code',
+        slug: 'examples'
       },
       {
         name: 'FAQ',
-        slug: 'faq',
-        type: 'dynamic',
-        routeName: 'section-slug'
-      },
-      {
-        name: 'Resources',
-        slug: 'resources',
-        type: 'static'
+        icon: 'resources',
+        slug: 'faq'
       },
       {
         name: 'Blog',
-        slug: 'blog',
-        type: 'static'
+        icon: 'blog',
+        slug: 'blog'
+      },
+      {
+        name: 'Video Courses',
+        icon: 'video',
+        href:
+          'https://masteringnuxt.com?friend=nuxt&utm_source=Nuxtjs.org&utm_medium=Link&utm_content=Navbar&utm_content=prelaunch'
       }
     ],
     search: {
@@ -105,11 +91,6 @@ module.exports = {
         title: 'サーバーサイドレンダリング',
         description:
           'Nuxt で一番人気のモードです。サーバーサイドレンダリングでは「ユニバーサル」または「アイソモーフィック」モードと呼ばれ、Node.js サーバーではピュア JavaScript の代わりに Vue コンポーネントベースの HTML をクライアントに配信するために利用しています。サーバーサイドレンダリングを利用すると従来の Vue SPA と比較し SEO が大幅に向上し、UX がよくなり、より多くの機会が増えます。{break}サーバーサイドレンダリングを自分で実装するのは非常に面倒です。Nuxt.js はそのまま利用でき、よくある落とし穴を回避します。'
-      },
-      spa: {
-        title: 'シングルページアプリケーション（SPA）',
-        description:
-          'サーバーサイドレンダリングや静的サイト生成は必要ありませんが、それでも Nuxt が提供する利点から利益を得たいですか？徐々にアプリを移行し、軽量に始めたいですか？その場合従来の SPA モードがあなたに適しています。結果はあなたも知っているごく普通の Vue SPA になりますが、Nuxt の設定とフレームワーク自身の影響を受けています。'
       },
       ssg: {
         title: '静的ファイルの生成',
@@ -299,6 +280,9 @@ module.exports = {
       'Contribution for this page is now closed. If you would like to contribute please check out our',
     link: 'new docs'
   },
+  example: {
+    intro: 'In this example:'
+  },
   codeSandbox: {
     open: 'Open CodeSandbox'
   },
@@ -340,18 +324,21 @@ module.exports = {
     links: {
       discover: {
         title: 'Discover',
-        design: 'Design resources',
-        team: 'A worldwide team',
-        blog: 'Blog'
+        shop: 'Our Goodies Store',
+        consulting: 'Training & consultancy',
+        sponsorNuxt: 'Sponsoring & donations'
       },
-      follow: {
-        title: 'Follow'
+      about: {
+        title: 'About',
+        team: 'Our team',
+        design: 'Design kit',
+        contact: 'Contact us'
       },
       support: {
         title: 'Support',
-        sponsorNuxt: 'Sponsor NuxtJS',
-        shop: 'The NuxtJS Shop',
-        consulting: 'NuxtJS Consulting'
+        resources: 'Resources',
+        discord: 'Chat with us',
+        contributionGuide: 'Contribution guide'
       }
     }
   },

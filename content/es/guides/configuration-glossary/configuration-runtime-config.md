@@ -6,7 +6,7 @@ category: configuration-glossary
 position: 25
 ---
 
-La configuración en tiempo de ejecución permite pasar variables dinámicas de configuración y de entorno al contexto de nuxt. Para más información de uso, consulta [runtime config guide](/guide/runtime-config).
+La configuración en tiempo de ejecución permite pasar variables dinámicas de configuración y de entorno al contexto de nuxt. Para más información de uso, consulta [runtime config guide](/docs/2.x/configuration-glossary/configuration-runtime-config).
 
 ## `publicRuntimeConfig`
 

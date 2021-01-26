@@ -7,25 +7,11 @@ category: features
 
 ## Static Hosting
 
-With static hosting, hosting where no server is needed or when not using serverMiddleware, you can choose to either host a single page application or a multiple page application, also known as static sites. With static hosting no server is needed, meaning your SPA or static site can be hosted on any serverless hosting or CDN for free.
-
-### SPA
-
-Single page applications are pages that are rendered only on the client side without the need of a server. To deploy without server-side-rendering support (single page only) set [ssr to `false`](/guides/features/rendering-modes#spa) and then use the `build` command to build your application.
-
-```js{}[nuxt.config.js]
-export default {
-  ssr: false
-}
-```
-
-### Static Sites
-
-As Nuxt.js also works as a static site generator you can therefore generate your application as a static site. Statically render your Nuxt.js application and get all of benefits of a universal app without a server. The nuxt `generate` command will generate a completely static version of your website. It will generate HTML for every one of your routes and put it inside of its own file in the `dist` folder. Basically any file that is placed inside the pages folder will be generated as a static html page. This improves performance as well as SEO and better offline support.
+Nuxt.js also works as a static site generator. Statically render your Nuxt.js application and get all of the benefits of a universal app without a server. The `nuxt generate` command will generate a static version of your website. It will generate HTML for every one of your routes and put it inside of its own file in the `dist/` directory. This improves performance as well as SEO and better offline support.
 
 <base-alert type="info">
 
-Dynamic routes are also generated thanks to the [Nuxt Crawler](/guides/configuration-glossary/configuration-generate#crawler)
+Dynamic routes are also generated thanks to the [Nuxt Crawler](/docs/2.x/configuration-glossary/configuration-generate#crawler)
 
 </base-alert>
 
@@ -40,7 +26,7 @@ export default {
 **Running nuxt dev with the static target will improve the developer experience:**
 
 - Remove `req` & `res` from `context`
-- Fallback to client-side rendering on 404, errors and redirects [see SPA fallback](/guides/concepts/static-site-generation#spa-fallback)
+- Fallback to client-side rendering on 404, errors and redirects [see SPA fallback](/docs/2.x/concepts/static-site-generation#spa-fallback)
 - `$route.query` will always be equal to `{}` on server-side rendering
 - `process.static` is true
 
@@ -52,9 +38,9 @@ We are also exposing `process.target` for module authors to add logic depending 
 
 ## Server Hosting
 
-Server Hosting is hosting that requires a server and is intended for SSR applications or applications that are using [serverMiddleware](/guides/configuration-glossary/configuration-servermiddleware). Server-side rendering otherwise known as SSR means that your page is rendered on the server when it is requested by the user. When the user opens your page in a browser the browser sends a request to the server requesting that page. The page is rendered on the server and sent back to the browser with all its content.
+Server Hosting is hosting that requires a server and is intended for SSR applications or applications that are using [serverMiddleware](/docs/2.x/configuration-glossary/configuration-servermiddleware). Server-side rendering otherwise known as SSR means that your page is rendered on the server when it is requested by the user. When the user opens your page in a browser the browser sends a request to the server requesting that page. The page is rendered on the server and sent back to the browser with all its content.
 
-For server hosting the target of server is used, which is the default value. With SSR you use the `build` command to build you application.
+For server hosting the target of server is used, which is the default value. With SSR you use the `build` command to build your application.
 
 ```js{}[nuxt.config.js]
 export default {

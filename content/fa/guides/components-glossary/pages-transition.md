@@ -3,6 +3,7 @@ title: 'ویژگی transition صفحه'
 description: Nuxt.js از کامپوننت `<transition>` برای ایجاد و استفاده از انیمیشن‌های خارق‌العاده هنگام تغییر صفحات استفاده می‌کند.
 menu: ویژگی Transition
 category: components-glossary
+position: 0
 ---
 
 > Nuxt.js از کامپوننت [`<transition>`](https://vuejs.org/v2/guide/transitions.html#Transitioning-Single-Elements-Components) برای ایجاد و استفاده از انیمیشن‌های خارق‌العاده هنگام تغییر صفحات استفاده می‌کند.

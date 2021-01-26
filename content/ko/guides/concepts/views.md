@@ -39,7 +39,7 @@ questions:
 
 뷰 섹션은 Nuxt.js 애플리케이션에 있는 특정한 라우트에 대한 데이터와 뷰를 구성하기 위해 알아야 하는 모든 것을 설명합니다. 뷰는 앱 텝플릿, 레이아웃, 실제 페이지로 구성됩니다. 또한 SEO (Search Engine Optimization)에 중요한 각 페이지의 해드 섹션에 커스텀 메타 태그를 정의할 수 있습니다.
 
-![Nuxt.js에서의 뷰 구성](/guides/views.png)
+![Nuxt.js에서의 뷰 구성](/docs/2.x/views.png)
 
 Nuxt.js에서의 뷰 구성
 
@@ -74,7 +74,7 @@ Nuxt.js에서의 뷰 구성
 
 <base-alert type="next">
 
-페이지에서 사용할 수 있는 모든 속성에 대해 더 알아보고 싶다면 [Directory Structure book](/guides/directory-structure/nuxt)을 살펴보세요
+페이지에서 사용할 수 있는 모든 속성에 대해 더 알아보고 싶다면 [Directory Structure book](/docs/2.x/directory-structure/nuxt)을 살펴보세요
 
 </base-alert>
 
@@ -94,7 +94,7 @@ Nuxt.js 앱이 어떻게 보이는지 변경하고 싶을 때 유용합니다. �
 
 <base-alert type="next">
 
-컴포넌트 챕터에 있는 [Nuxt component](/guides/features/nuxt-components) 에 대해 더 알아보기
+컴포넌트 챕터에 있는 [Nuxt component](/docs/2.x/features/nuxt-components) 에 대해 더 알아보기
 
 </base-alert>
 

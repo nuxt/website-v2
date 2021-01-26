@@ -8,7 +8,7 @@ position: 13
 
 - Type: `Object`
 
-> Hooks are [listeners to Nuxt events](/guides/internals-glossary/internals) that are typically used in Nuxt modules, but are also available in `nuxt.config.js`.
+> Hooks are [listeners to Nuxt events](/docs/2.x/internals-glossary/internals) that are typically used in Nuxt modules, but are also available in `nuxt.config.js`.
 
 ```js{}[nuxt.config.js]
 import fs from 'fs'
@@ -29,15 +29,15 @@ export default {
 }
 ```
 
-Internally, hooks follow a naming pattern using colons (e.g., `build:done`). For ease of configuration, you can structure them as an hierarchical object when using `nuxt.config.js` (as exemplifed above) to set your own hooks. See [Nuxt Internals](/guides/internals-glossary/internals) for more detailed information on how they work.
+Internally, hooks follow a naming pattern using colons (e.g., `build:done`). For ease of configuration, you can structure them as an hierarchical object when using `nuxt.config.js` (as exemplified above) to set your own hooks. See [Nuxt Internals](/docs/2.x/internals-glossary/internals) for more detailed information on how they work.
 
 ## List of hooks
 
-- [Nuxt hooks](/guides/internals-glossary/internals-renderer#hooks)
-- [Renderer hooks](/guides/internals-glossary/internals-renderer#hooks)
-- [ModulesContainer hooks](/guides/internals-glossary/internals-module-container#hooks)
-- [Builder hooks](/guides/internals-glossary/internals-builder#hooks)
-- [Generator hooks](/guides/internals-glossary/internals-generator#hooks)
+- [Nuxt hooks](/docs/2.x/internals-glossary/internals-nuxt#hooks)
+- [Renderer hooks](/docs/2.x/internals-glossary/internals-renderer#hooks)
+- [ModulesContainer hooks](/docs/2.x/internals-glossary/internals-module-container#hooks)
+- [Builder hooks](/docs/2.x/internals-glossary/internals-builder#hooks)
+- [Generator hooks](/docs/2.x/internals-glossary/internals-generator#hooks)
 
 ## Examples
 
@@ -45,13 +45,13 @@ Internally, hooks follow a naming pattern using colons (e.g., `build:done`). For
 
 Let´s say you want to serve pages as `/portal` instead of `/`.
 
-This is maybe an edge-case, and the point of _nuxt.config.js_’ `router.base` is for when a Web server will serve Nuxt elsewhere than the domain root.
+This is maybe an edge-case, and the point of _nuxt.config.js_’ `router.base` is for when a web server will serve Nuxt elsewhere than the domain root.
 
 But when in local development, hitting _localhost_, when router.base is not / returns a 404. In order to prevent this, you can setup a Hook.
 
 Maybe redirecting is not the best use-case for a production Web site, but this will help you leverage Hooks.
 
-To begin, you [can change `router.base`](/guides/configuration-glossary/configuration-router#base); Update your `nuxt.config.js`:
+To begin, you [can change `router.base`](/docs/2.x/configuration-glossary/configuration-router#base); Update your `nuxt.config.js`:
 
 ```js{}[nuxt.config.js]
 import hooks from './hooks'
@@ -108,9 +108,9 @@ Then, create a few files;
    import parseurl from 'parseurl'
 
    /**
-    * Connect middleware to handle redirecting to desired Web Applicatin Context Root.
+    * Connect middleware to handle redirecting to desired Web Application Context Root.
     *
-    * Notice that Nuxt docs lacks explaning how to use hooks.
+    * Notice that Nuxt docs lacks explaining how to use hooks.
     * This is a sample router to help explain.
     *
     * See nice implementation for inspiration:

@@ -11,7 +11,7 @@ position: 103
 
 Nuxt.js 允许你在自动生成的 `vendor.bundle.js` 文件中添加一些模块，以减少应用 bundle 的体积。如果你的应用依赖第三方模块，这个配置项是十分实用的。
 
-[关于 build 配置项的详细文档](/api/configuration-build)
+[关于 build 配置项的详细文档](/docs/2.x/configuration-glossary/configuration-build)
 
 ### css
 
@@ -29,19 +29,19 @@ Nuxt.js 允许你在自动生成的 `vendor.bundle.js` 文件中添加一些模�
 
 该配置项用于定义应用客户端和服务端的环境变量。
 
-[关于 env 配置项的详细文档](/api/configuration-env)
+[关于 env 配置项的详细文档](/docs/2.x/configuration-glossary/configuration-env)
 
 ### generate
 
 该配置项用于定义每个动态路由的参数，Nuxt.js 依据这些路由配置生成对应目录结构的静态文件。
 
-[关于 generate 配置项的详细文档](/api/configuration-generate)
+[关于 generate 配置项的详细文档](/docs/2.x/configuration-glossary/configuration-generate)
 
 ### head
 
 该配置项用于配置应用默认的 meta 标签。
 
-[关于 head 配置项的详细文档](/api/configuration-head)
+[关于 head 配置项的详细文档](/docs/2.x/configuration-glossary/configuration-head)
 
 ### loading
 
@@ -53,13 +53,13 @@ Nuxt.js 允许你在自动生成的 `vendor.bundle.js` 文件中添加一些模�
 
 该配置项允许您将 Nuxt 模块添加到项目中。
 
-[关于 `modules` 配置项的详细文档](/api/configuration-modules)
+[关于 `modules` 配置项的详细文档](/docs/2.x/configuration-glossary/configuration-modules)
 
 ### modulesDir
 
 该配置项允许您定义`Nuxt.js`应用程序的`node_modules`文件夹。
 
-[关于 `modulesDir` 配置项的详细文档](/api/configuration-modulesdir)
+[关于 `modulesDir` 配置项的详细文档](/docs/2.x/configuration-glossary/configuration-modulesdir)
 
 ### plugins
 

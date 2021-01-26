@@ -17,43 +17,29 @@ module.exports = {
     links: [
       {
         name: 'راهنمایی‌ها',
-        slug: 'guides',
-        type: 'newDocs',
-        routeName: 'guides-book-slug'
-      },
-      {
-        name: 'راهنما',
-        slug: 'guide',
-        type: 'dynamic',
-        routeName: 'section-slug'
-      },
-      {
-        name: 'API',
-        slug: 'api',
-        type: 'dynamic',
-        routeName: 'section-slug'
+        icon: 'books',
+        slug: 'docs-2.x-book-slug'
       },
       {
         name: 'نمونه‌ها',
-        slug: 'examples',
-        type: 'dynamic',
-        routeName: 'section-slug'
+        icon: 'code',
+        slug: 'examples'
       },
       {
-        name: 'سوالات متداول',
-        slug: 'faq',
-        type: 'dynamic',
-        routeName: 'section-slug'
-      },
-      {
-        name: 'منابع',
-        slug: 'resources',
-        type: 'static'
+        name: 'FAQ',
+        icon: 'resources',
+        slug: 'faq'
       },
       {
         name: 'بلاگ',
-        slug: 'blog',
-        type: 'static'
+        icon: 'blog',
+        slug: 'blog'
+      },
+      {
+        name: 'Video Courses',
+        icon: 'video',
+        href:
+          'https://masteringnuxt.com?friend=nuxt&utm_source=Nuxtjs.org&utm_medium=Link&utm_content=Navbar&utm_content=prelaunch'
       }
     ],
     search: {
@@ -105,11 +91,6 @@ module.exports = {
         title: 'رندر سمت سرور (SSR)',
         description:
           'محبوب‌ترین روش رندر در NuxtJS! این روش که به عنوان جهانی (universal) یا ایزومورفیک (isomorphic) شناخته می‌شود، از یک سرور Node.js برای ارسال محتوای HTML بر اساس کامپوننت‌های Vue شما به جای JavaScript خالص استفاده می‌کند. استفاده از این روش اثر بسزایی در SEO و تجربه‌کاربری بهتر خواهد داشت و امکانات بیشتری نسبت به اپیلیکشن‌های تک‌صفحله‌ای در اختیارتان قرار می‌دهد.'
-      },
-      spa: {
-        title: 'اپلیکیشن تک‌صفحه‌ای (SPA)',
-        description:
-          'نمی‌خواهید از SSR یا صفحات ثابت استفاده کنید اما می‌خواهید از امکانات NuxtJS استفاده کنید؟ آیا می‌خواهید در ابتدا یک اپلیکیشن سبک داشته باشید و کم‌کم آن را گسترش دهید؟ حالت سنتی SPA جواب نیاز شماست. خروجی اپلیکیشن شما یک Vue SPA خواهد بود که از تنظیمات و ساختار NuxtJS استفاده می‌کند.'
       },
       ssg: {
         title: 'صفحات ثابت',
@@ -296,6 +277,9 @@ module.exports = {
     msg1: 'مشارکت در این صفحه بسته شده است. اگر می‌‌خواهید مشارکت کنید',
     link: 'مستندات جدید'
   },
+  example: {
+    intro: 'در این مثال:'
+  },
   codeSandbox: {
     open: 'باز کردن CodeSandbox'
   },
@@ -336,19 +320,22 @@ module.exports = {
   footer: {
     links: {
       discover: {
-        title: 'بیشتر',
-        design: 'منابع طراحی',
-        team: 'تیم',
-        blog: 'وبلاگ'
+        title: 'Discover',
+        shop: 'Our Goodies Store',
+        consulting: 'Training & consultancy',
+        sponsorNuxt: 'Sponsoring & donations'
       },
-      follow: {
-        title: 'شبکه‌های اجتماعی'
+      about: {
+        title: 'About',
+        team: 'Our team',
+        design: 'Design kit',
+        contact: 'Contact us'
       },
       support: {
-        title: 'پشتیبانی',
-        sponsorNuxt: 'اسپانسر',
-        shop: 'فروشگاه Nuxt',
-        consulting: 'مشاوره و پشتیبانی'
+        title: 'Support',
+        resources: 'منابع',
+        discord: 'Chat with us',
+        contributionGuide: 'Contribution guide'
       }
     }
   },

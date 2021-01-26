@@ -17,7 +17,9 @@ The base URL of the app. For example, if the entire single page application is s
 
 This can be useful if you need to serve Nuxt as a different context root, from within a bigger Web site. Notice that you may, or may not set up a Front Proxy Web Server.
 
-If you want to have a redirect to `router.base`, you can do so [using a Hook, see _Redirect to router.base when not on root_](/guides/configuration-glossary/configuration-hooks#redirect-to-routerbase-when-not-on-root).
+If you want to have a redirect to `router.base`, you can do so [using a Hook, see _Redirect to router.base when not on root_](/docs/2.x/configuration-glossary/configuration-hooks#redirect-to-routerbase-when-not-on-root).
+
+In Nuxt 2.15+, changing the value of this property at runtime will override the configuration of an app that has already been built.
 
 ```js{}[nuxt.config.js]
 export default {
@@ -40,7 +42,7 @@ When `base` is set, Nuxt.js will also add in the document header `<base href="{{
 - Type: `String`
 - Default: `'-'`
 
-You may want to change the separator between route names that Nuxt.js uses. You can do so via the `routeNameSplitter` option in your configuration file. Imagine we have the page file `pages/posts/_id.vue`. Nuxt will generate the route name programatically, in this case `posts-id`. Changing the `routeNameSplitter` config to `/` the name will therefore change to `posts/id`.
+You may want to change the separator between route names that Nuxt.js uses. You can do so via the `routeNameSplitter` option in your configuration file. Imagine we have the page file `pages/posts/_id.vue`. Nuxt will generate the route name programmatically, in this case `posts-id`. Changing the `routeNameSplitter` config to `/` the name will therefore change to `posts/id`.
 
 ```js{}[nuxt.config.js]
 export default {
@@ -129,7 +131,7 @@ Setting this to false essentially makes every router-link navigation a full page
 - Type: `String`
 - Default: `'nuxt-link-active'`
 
-Globally configure [`<nuxt-link>`](/guides/features/nuxt-components#the-nuxtlink-component) default active class.
+Globally configure [`<nuxt-link>`](/docs/2.x/features/nuxt-components#the-nuxtlink-component) default active class.
 
 ```js{}[nuxt.config.js]
 export default {
@@ -139,14 +141,14 @@ export default {
 }
 ```
 
-> This option is given directly to the vue-router [linkactiveclass](https://router.vuejs.org/api/#linkactiveclass).
+> This option is given directly to the vue-router [linkActiveClass](https://router.vuejs.org/api/#linkactiveclass).
 
 ## linkExactActiveClass
 
 - Type: `String`
 - Default: `'nuxt-link-exact-active'`
 
-Globally configure [`<nuxt-link>`](/guides/features/nuxt-components#the-nuxtlink-component) default exact active class.
+Globally configure [`<nuxt-link>`](/docs/2.x/features/nuxt-components#the-nuxtlink-component) default exact active class.
 
 ```js{}[nuxt.config.js]
 export default {
@@ -156,14 +158,14 @@ export default {
 }
 ```
 
-> This option is given directly to the vue-router [linkexactactiveclass](https://router.vuejs.org/api/#linkexactactiveclass).
+> This option is given directly to the vue-router [linkExactActiveClass](https://router.vuejs.org/api/#linkexactactiveclass).
 
 ## linkPrefetchedClass
 
 - Type: `String`
 - Default: `false`
 
-Globally configure [`<nuxt-link>`](/guides/features/nuxt-components#the-nuxtlink-component) default prefetch class (feature disabled by default)
+Globally configure [`<nuxt-link>`](/docs/2.x/features/nuxt-components#the-nuxtlink-component) default prefetch class (feature disabled by default)
 
 ```js{}[nuxt.config.js]
 export default {
@@ -198,7 +200,7 @@ export default function (context) {
 }
 ```
 
-To learn more about the middleware, see the [middleware guide](/guides/directory-structure/middleware#router-middleware).
+To learn more about the middleware, see the [middleware guide](/docs/2.x/directory-structure/middleware#router-middleware).
 
 ## mode
 
@@ -232,7 +234,7 @@ Provide custom query string parse / stringify functions. Overrides the default.
 - Type: `Boolean`
 - Default: `true`
 
-Configure `<nuxt-link>` to prefetch the _code-splitted_ page when detected within the viewport. Requires [IntersectionObserver](https://developer.mozilla.org/en-US/docs/Web/API/Intersection_Observer_API) to be supported (see [CanIUse](https://caniuse.com/#feat=intersectionobserver)).
+Configure `<nuxt-link>` to prefetch the _code-splitted_ page when detected within the viewport. Requires [IntersectionObserver](https://developer.mozilla.org/en-US/docs/Web/API/Intersection_Observer_API) to be supported (see [Caniuse](https://caniuse.com/#feat=intersectionobserver)).
 
 We recommend conditionally polyfilling this feature with a service like [Polyfill.io](https://polyfill.io):
 
@@ -253,8 +255,8 @@ export default {
 To disable the prefetching on a specific link, you can use the `no-prefetch` prop. Since Nuxt.js v2.10.0, you can also use the `prefetch` prop set to `false`:
 
 ```html
-<nuxt-link to="/about" no-prefetch>About page not pre-fetched</nuxt-link>
-<nuxt-link to="/about" :prefetch="false">About page not pre-fetched</nuxt-link>
+<nuxt-link to="/about" no-prefetch>About page not prefetched</nuxt-link>
+<nuxt-link to="/about" :prefetch="false">About page not prefetched</nuxt-link>
 ```
 
 To disable the prefetching on all links, set the `prefetchLinks` to `false`:
@@ -270,12 +272,12 @@ export default {
 Since Nuxt.js v2.10.0, if you have set `prefetchLinks` to `false` but you want to prefetch a specific link, you can use the `prefetch` prop:
 
 ```html
-<nuxt-link to="/about" prefetch>About page pre-fetched</nuxt-link>
+<nuxt-link to="/about" prefetch>About page prefetched</nuxt-link>
 ```
 
 ## prefetchPayloads
 
-> Added with v2.13.0, only available for [static target](/guides/features/deployment-targets#static-hosting).
+> Added with v2.13.0, only available for [static target](/docs/2.x/features/deployment-targets#static-hosting).
 
 - Type: `Boolean`
 - Default: `true`
@@ -290,7 +292,7 @@ This option depends of the [prefetchLinks](#prefetchlinks) option to be enabled.
 
 </base-alert>
 
-You can disable this behaviour by setting `prefetchPaylods` to `false`:
+You can disable this behavior by setting `prefetchPaylods` to `false`:
 
 ```js{}[nuxt.config.js]
 export default {
@@ -333,3 +335,59 @@ export default function (to, from, savedPosition) {
 If this option is set to true, trailing slashes will be appended to every route. If set to false, they'll be removed.
 
 **Attention**: This option should not be set without preparation and has to be tested thoroughly. When setting `router.trailingSlash` to something else than `undefined`, the opposite route will stop working. Thus 301 redirects should be in place and you _internal linking_ has to be adapted correctly. If you set `trailingSlash` to `true`, then only `example.com/abc/` will work but not `example.com/abc`. On false, it's vice-versa
+
+### Example behavior (with child routes)
+
+For a directory with this structure:
+
+```bash
+-| pages/
+---| index.vue
+---| posts.vue
+---| posts/
+-----| _slug.vue
+-----| index.vue
+```
+
+This is the behavior for each possible setting of `trailingSlash`:
+
+<code-group>
+<code-block label="default" active>
+
+```bash
+Route           Page
+/               ~/pages/index.vue
+/posts          ~/pages/posts.vue (parent) + ~/pages/posts.vue (child route)
+/posts/         ~/pages/posts.vue (parent) + ~/pages/posts.vue (child route)
+/posts/foo      ~/pages/posts.vue (parent) + ~/pages/_slug.vue (child route)
+/posts/foo/     ~/pages/posts.vue (parent) + ~/pages/_slug.vue (child route)
+```
+
+</code-block>
+<code-block label="true">
+
+```bash
+
+Route           Page
+/               ~/pages/index.vue
+/posts          404
+/posts/         ~/pages/posts.vue (parent) + ~/pages/index.vue (child route)
+/posts/foo      404
+/posts/foo/     ~/pages/posts.vue (parent) + ~/pages/_slug.vue (child route)
+```
+
+</code-block>
+<code-block label="false">
+
+```bash
+
+Route           Page
+/               ~/pages/index.vue
+/posts          ~/pages/posts.vue
+/posts/         ~/pages/posts.vue (parent) + ~/pages/index.vue (child route)
+/posts/foo      ~/pages/posts.vue (parent) + ~/pages/_slug.vue (child route)
+/posts/foo/     404
+```
+
+</code-block>
+</code-group>

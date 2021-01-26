@@ -1,21 +1,26 @@
 <template>
-  <div>
+  <div :class="cookieSpacerStyles">
+    <!-- <MasteringNuxtBanner /> -->
     <TheHeader />
     <main
-      class="lg:block relative pt-16 lg:pt-24 bg-light-elevatedSurface dark:bg-dark-elevatedSurface transition-colors duration-300 ease-linear"
+      class="lg:block relative bg-light-elevatedSurface dark:bg-dark-elevatedSurface transition-colors duration-300 ease-linear"
     >
       <Nuxt />
     </main>
     <TheFooter />
     <TheMobileBottomNav />
     <TheCookieBox
-      class="w-full fixed bottom-0 left-0 z-40 bg-light-elevatedSurface dark:bg-dark-elevatedSurface"
+      class="w-full fixed bottom-0 left-0 mt-8 z-40 bg-light-elevatedSurface dark:bg-dark-elevatedSurface"
+      @acknowledge-banner="showCookieBanner = false"
     />
   </div>
 </template>
 
 <script>
 export default {
+  data: () => ({
+    showCookieBanner: false
+  }),
   head() {
     const i18nSeo = this.$nuxtI18nSeo()
     const { path } = this.$route
@@ -93,6 +98,17 @@ export default {
         ...i18nSeo.link
       ]
     }
+  },
+  computed: {
+    cookieSpacerStyles() {
+      return this.showCookieBanner ? 'pb-20 md:pb-4 lg:pb-20' : ''
+    }
+  },
+  mounted() {
+    const bannerCookie = 'cookieconsent_status'
+    const docCookies = `; ${document.cookie}`
+
+    this.showCookieBanner = !docCookies.includes(bannerCookie)
   }
 }
 </script>

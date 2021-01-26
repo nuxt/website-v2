@@ -57,7 +57,7 @@ Server Node.js perlu dikonfigurasi untuk menjalankan aplikasi Vue.js Anda.
 
 Anda dapat memperluas server dengan serverMiddleware dan mengontrol rute dengan middleware.
 
-```js{}[middleware/api/logger.js]
+```js{}[server-middleware/logger.js]
 export default function (req, res, next) {
   console.log(req.url)
   next()
@@ -67,7 +67,7 @@ export default function (req, res, next) {
 ```js{}[nuxt.config.js]
 export default: {
   serverMiddleware: [
-     '~/api/logger'
+     '~/server-middleware/logger'
   ]
 }
 ```
@@ -99,6 +99,6 @@ Browser menerima halaman yang dirender dari server dengan HTML yang dihasilkan. 
 
 ### Langkah 3: Browser ke Browser
 
-Navigasi antar halaman dengan [`<NuxtLink>`](/guides/features/nuxt-components#the-nuxtlink-component) dilakukan di sisi klien sehingga Anda tidak memuat server lagi kecuali Anda menyegarkan ulang browser.
+Navigasi antar halaman dengan [`<NuxtLink>`](/docs/2.x/features/nuxt-components#the-nuxtlink-component) dilakukan di sisi klien sehingga Anda tidak memuat server lagi kecuali Anda menyegarkan ulang browser.
 
 <quiz :questions="questions"></quiz>

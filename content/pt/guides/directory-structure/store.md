@@ -254,7 +254,7 @@ Apenas o módulo primário (em store/index.js) receberá esta action. Você prec
 
 </base-alert>
 
-O [contexto](/guides/concepts/context-helpers) é dado ao `nuxtServerInit` como o segundo argumento no método `asyncData`.
+O [contexto](/docs/2.x/concepts/context-helpers) é dado ao `nuxtServerInit` como o segundo argumento no método `asyncData`.
 
 Se `nuxt generate` for executado, `nuxtServerInit` será executado para cada rota dinâmica gerada.
 

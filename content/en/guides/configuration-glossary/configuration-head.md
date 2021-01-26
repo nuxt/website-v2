@@ -27,10 +27,10 @@ export default {
 
 To know the list of options you can give to `head`, take a look at [vue-meta documentation](https://vue-meta.nuxtjs.org/api/#metainfo-properties).
 
-You can also use `head` as a function in your components to access the component data through `this` ([read more](/guides/components-glossary/pages-head)).
+You can also use `head` as a function in your components to access the component data through `this` ([read more](/docs/2.x/components-glossary/pages-head)).
 
 <base-alert type="info">
 
-<b>Info:</b> To avoid duplicated meta tags when used in child component, set up a unique identifier with the `hid` key for your meta elements ([read more](https://vue-meta.nuxtjs.org/api/#tagidkeyname)).
+To avoid duplicated meta tags when used in child component, set up a unique identifier with the `hid` key for your meta elements ([read more](https://vue-meta.nuxtjs.org/api/#tagidkeyname)).
 
 </base-alert>

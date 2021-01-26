@@ -32,10 +32,10 @@ surge dist/
 
 搞定 :)
 
-如果你的项目有[动态路由](/guide/routing#动态路由)，请参考 [generate 配置文档](/api/configuration-generate) 告诉 Nuxt.js 如何静态化这些动态路由。
+如果你的项目有[动态路由](/docs/2.x/features/file-system-routing#动态路由)，请参考 [generate 配置文档](/docs/2.x/configuration-glossary/) 告诉 Nuxt.js 如何静态化这些动态路由。
 
 <div class="Alert">
 
-使用 `nuxt generate` 命令生成应用的静态站点时，传给页面组件 [asyncData()](/guide/async-data#asyncData-方法) 或 [fetch()](/guide/vuex-store#fetch-方法) 的 [上下文对象](/api) 是不会包含 `req` 和 `res` 属性的。
+使用 `nuxt generate` 命令生成应用的静态站点时，传给页面组件 [asyncData()](/docs/2.x/features/data-fetching#async-data) 或 [fetch()](/docs/2.x/directory-structure/store) 的 [上下文对象](/api) 是不会包含 `req` 和 `res` 属性的。
 
 </div>

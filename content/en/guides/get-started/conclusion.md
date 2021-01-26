@@ -1,7 +1,7 @@
 ---
 title: Conclusion
 description: Congratulations you have now created your first Nuxt.js app and you may now consider yourself a Nuxter. But there is so much more to learn and so much more you can do with Nuxt.js. Here are a few recommendations.
-position: 4
+position: 5
 category: get-started
 questions:
   - question: What is the name of the directory you need to have for Nuxt.js to work?
@@ -75,13 +75,13 @@ Check out the [Concepts book](../concepts/views)
 
 <base-alert type="next">
 
-Working with [asyncData](/guides/features/data-fetching#async-data)
+Working with [asyncData](/docs/2.x/features/data-fetching#async-data)
 
 </base-alert>
 
 <base-alert type="next">
 
-Choosing between different [Rendering modes](/guides/features/rendering-modes)
+Choosing between different [Rendering modes](/docs/2.x/features/rendering-modes)
 
 </base-alert>
 

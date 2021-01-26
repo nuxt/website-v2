@@ -76,7 +76,7 @@ Nuxt.js gives you automatic code splitting for your routes, no configuration is 
 
 <base-alert type="info">
 
-Use the [NuxtLink component](/guides/features/nuxt-components#the-nuxtlink-component) to navigate between pages
+Use the [NuxtLink component](/docs/2.x/features/nuxt-components#the-nuxtlink-component) to navigate between pages
 
 </base-alert>
 
@@ -124,7 +124,7 @@ router: {
 
 ## Dynamic Routes
 
-Sometimes it is not possible to know the name of the route such as when we make a call to an api to get a list of users or blog posts. We call these dynamic routes. To create a dynamic route you need to add an underscore before the .vue file name or before the name of the directory. You can name the file or directory anything you want but you must prefix it with an underscore.
+Sometimes it is not possible to know the name of the route such as when we make a call to an API to get a list of users or blog posts. We call these dynamic routes. To create a dynamic route you need to add an underscore before the .vue file name or before the name of the directory. You can name the file or directory anything you want but you must prefix it with an underscore.
 
 This file tree:
 
@@ -181,13 +181,13 @@ As of Nuxt >= v2.13 there is a crawler installed that will now crawl your link t
 
 <base-alert type="next">
 
-[Generate dynamic routes](/guides/concepts/static-site-generation) for static sites
+[Generate dynamic routes](/docs/2.x/concepts/static-site-generation) for static sites
 
 </base-alert>
 
 ### Locally Accessing Route Params
 
-You can access the current route parameters within your local page or component by referencing `this.$route.params.{parameterName}`. For example, if you had a dynamic users page (`users\_id.vue`) and wanted to access the `id` parameter to load the user or process information, you could access the variable like this: `this.$route.params.id`.
+You can access the current route parameters within your local page or component by referencing `this.$route.params.{parameterName}`. For example, if you had a dynamic users page (`users/_id.vue`) and wanted to access the `id` parameter to load the user or process information, you could access the variable like this: `this.$route.params.id`.
 
 ## Nested Routes
 
@@ -195,7 +195,7 @@ Nuxt.js lets you create nested routes by using the children routes of vue-router
 
 <base-alert>
 
-Don't forget to include the [NuxtChild component](/guides/features/nuxt-components#the-nuxtchild-component) inside the parent component (`.vue` file).
+Don't forget to include the [NuxtChild component](/docs/2.x/features/nuxt-components#the-nuxtchild-component) inside the parent component (`.vue` file).
 
 </base-alert>
 
@@ -295,7 +295,7 @@ router: {
 
 ## Unknown Dynamic Nested Routes
 
-If you do not know the depth of your URL structure, you can use `_.vue` to dynamically match nested paths. This will handle requests that do not match a *more specific* request.
+If you do not know the depth of your URL structure, you can use `_.vue` to dynamically match nested paths. This will handle requests that do not match a *more specific* route.
 
 This file tree:
 
@@ -331,7 +331,7 @@ There are multiple ways to extend the routing with Nuxt:
 
 - [router-extras-module](https://github.com/nuxt-community/router-extras-module) to customize the route parameters in the page
 - component[@nuxtjs/router](https://github.com/nuxt-community/router-module) to overwrite the Nuxt router and write your own `router.js` file
-- Use the [router.extendRoutes](/guides/configuration-glossary/configuration-router#extendroutes) property in your `nuxt.config.js`
+- Use the [router.extendRoutes](/docs/2.x/configuration-glossary/configuration-router#extendroutes) property in your `nuxt.config.js`
 
 ## The router Property
 
@@ -351,7 +351,7 @@ The base URL of the app. For example, if the entire single page application is s
 
 <base-alert type="next">
 
-[Router Base Property](/guides/configuration-glossary/configuration-router#base)
+[Router Base Property](/docs/2.x/configuration-glossary/configuration-router#base)
 
 </base-alert>
 
@@ -399,7 +399,7 @@ The schema of the route should respect the [vue-router](https://router.vuejs.or
 
 <base-alert>
 
-When adding routes that use [Named Views](https://nuxtjs.org/guide/routing#named-views), don't forget to add the corresponding `chunkNames` of named `components`.
+When adding routes that use [Named Views](/docs/2.x/features/file-system-routing#nested-routes), don't forget to add the corresponding `chunkNames` of named `components`.
 
 </base-alert>
 
@@ -424,7 +424,7 @@ export default {
 
 <base-alert type="next">
 
-[extendRoutes Property](/guides/configuration-glossary/configuration-router#extendroutes)
+[extendRoutes Property](/docs/2.x/configuration-glossary/configuration-router#extendroutes)
 
 </base-alert>
 
@@ -434,7 +434,7 @@ Controls whether the router should fallback to hash mode when the browser does n
 
 <base-alert type="next">
 
-[fallback Property](/guides/configuration-glossary/configuration-router#fallback)
+[fallback Property](/docs/2.x/configuration-glossary/configuration-router#fallback)
 
 </base-alert>
 
@@ -444,7 +444,7 @@ Configure the router mode, it is not recommended to change it due to server-side
 
 <base-alert type="next">
 
-[mode Property](/guides/configuration-glossary/configuration-router#mode)
+[mode Property](/docs/2.x/configuration-glossary/configuration-router#mode)
 
 </base-alert>
 
@@ -454,7 +454,7 @@ Provide custom query string parse / stringify functions.
 
 <base-alert type="next">
 
-[parseQuery / stringifyQuery Property](/guides/configuration-glossary/configuration-router#parsequery--stringifyquery)
+[parseQuery / stringifyQuery Property](/docs/2.x/configuration-glossary/configuration-router#parsequery--stringifyquery)
 
 </base-alert>
 
@@ -502,7 +502,7 @@ export default function (to, from, savedPosition) {
 
 <base-alert type="next">
 
-[scrollBehavior Property](/guides/configuration-glossary/configuration-router#scrollbehavior)
+[scrollBehavior Property](/docs/2.x/configuration-glossary/configuration-router#scrollbehavior)
 
 </base-alert>
 
@@ -528,7 +528,7 @@ This option should not be set without preparation and has to be tested thoroughl
 
 <base-alert type="next">
 
-[trailingSlash Property](/guides/configuration-glossary/configuration-router#trailingslash)
+[trailingSlash Property](/docs/2.x/configuration-glossary/configuration-router#trailingslash)
 
 </base-alert>
 

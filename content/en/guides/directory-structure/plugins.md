@@ -7,7 +7,7 @@ csb_link_plugins_client: https://codesandbox.io/embed/github/nuxt-academy/guides
 csb_link_plugins_external: https://codesandbox.io/embed/github/nuxt-academy/guides-examples/tree/master/04_directory_structure/12_plugins_external?fontsize=14&hidenavigation=1&theme=dark
 csb_link_plugins_custom: https://codesandbox.io/embed/github/nuxt-academy/guides-examples/tree/master/04_directory_structure/12_plugins_custom_plugin?fontsize=14&hidenavigation=1&theme=dark
 csb_link_plugins_vue: https://codesandbox.io/embed/github/nuxt-academy/guides-examples/tree/master/04_directory_structure/12_plugins_vue?fontsize=14&hidenavigation=1&theme=dark
-img: /guides/plugins.svg
+img: /docs/2.x/plugins.svg
 imgAlt: modules-servermiddleware-plugins-in-nuxt-js
 questions:
   - question: The `plugins` directory contains your Javascript plugins that you want to run
@@ -73,13 +73,13 @@ questions:
 
 <app-modal :src="img" :alt="imgAlt"></app-modal>
 
-The `plugins` directory contains your Javascript plugins that you want to run before instantiating the root Vue.js Application. This is the place to add Vue plugins and to inject functions or constants. Every time you need to use `Vue.use()`, you should create a file in `plugins/` and add its path to `plugins` in `nuxt.config.js`.
+The `plugins` directory contains JavaScript plugins that you want to run before instantiating the root Vue.js Application. This is the place to add Vue plugins and to inject functions or constants. Every time you need to use `Vue.use()`, you should create a file in `plugins/` and add its path to `plugins` in `nuxt.config.js`.
 
 ## External Packages
 
 You may want to use external packages/modules in your application (one great example is [axios](https://axios.nuxtjs.org/)) for making HTTP requests for both server and client.
 
-First, install it via NPM or Yarn.
+First, install it via npm or Yarn.
 
 <code-group>
   <code-block label="Yarn" active>
@@ -89,7 +89,7 @@ yarn add @nuxtjs/axios
 ```
 
   </code-block>
-  <code-block label="NPM">
+  <code-block label="npm">
 
 ```bash
 npm install @nuxtjs/axios
@@ -129,16 +129,40 @@ Then we can use it directly in your page components:
 <script>
 export default {
 	async asyncData ({ $axios, params }) {
-	    const  post  = await $axios.$get(`https://api.nuxtjs.dev/posts/${params.id}`)
-	    return { post }
-	  }
+	  const  post  = await $axios.$get(`https://api.nuxtjs.dev/posts/${params.id}`)
+	  return { post }
+	}
 }
 </script>
 ```
 
-<app-modal>
-  <code-sandbox :src="csb_link_plugins_external"></code-sandbox>
-</app-modal>
+Another way to use `axios` without installing the module is by importing `axios` direct in the `<script>` tag.
+
+```js{}[pages/index.vue]
+<script>
+import axios from 'axios'
+
+export default {
+	async asyncData ({ params }) {
+	  const { data: post }  = await axios.get(`https://api.nuxtjs.dev/posts/${params.id}`)
+	  return { post }
+	}
+}
+</script>
+```
+
+<base-alert type="info">
+
+If you get an _Cannot use import statement outside a module_ error, you may need to add your package to the `build` > `transpile` option in `nuxt.config.js` for webpack loader to make your plugin available.
+
+</base-alert>
+
+```js{}[nuxt.config.js]
+build: {
+  // You can extend webpack config here
+  transpile: ['npm-package-name'],
+},
+```
 
 ## Vue Plugins
 
@@ -154,7 +178,7 @@ yarn add v-tooltip
 ```
 
   </code-block>
-  <code-block label="NPM">
+  <code-block label="npm">
 
 ```bash
 npm install v-tooltip
@@ -163,7 +187,7 @@ npm install v-tooltip
   </code-block>
 </code-group>
 
-The we create the file `plugins/vue-tooltip.js`
+Then we create the file `plugins/vue-tooltip.js`
 
 ```js{}[plugins/vue-tooltip.js]
 import Vue from 'vue'
@@ -172,13 +196,9 @@ import VTooltip from 'v-tooltip'
 Vue.use(VTooltip)
 ```
 
-<app-modal>
-  <code-sandbox  :src="csb_link_plugins_vue"></code-sandbox>
-</app-modal>
+### The plugins Property
 
-## The plugins Property
-
-Then we add the file path inside the `plugins` key of our `nuxt.config.js`. The plugins property lets you add vue.js plugins easily to your main application. All the paths defined in the `plugins` property will be imported before initializing the main application.
+Then we add the file path inside the `plugins` key of our `nuxt.config.js`. The plugins property lets you add Vue.js plugins easily to your main application. All the paths defined in the `plugins` property will be imported before initializing the main application.
 
 ```js{}[nuxt.config.js]
 export default {
@@ -198,7 +218,7 @@ module.exports = {
 }
 ```
 
-You can refer to the [configuration build](/guides/configuration-glossary/configuration-build#transpile) docs for more build options.
+You can refer to the [configuration build](/docs/2.x/configuration-glossary/configuration-build#transpile) docs for more build options.
 
 ## Client or server side only
 
@@ -231,10 +251,6 @@ export default {
   ]
 }
 ```
-
-<app-modal>
-  <code-sandbox  :src="csb_link_plugins_client"></code-sandbox>
-</app-modal>
 
 ## Inject in `$root` & context
 
@@ -297,13 +313,9 @@ Don't use `Vue.use()`, `Vue.component()`, and globally, don't plug anything in V
 
 </base-alert>
 
-<app-modal>
-  <code-sandbox  :src="csb_link_plugins_custom"></code-sandbox>
-</app-modal>
-
 ## The extendPlugins Property
 
-You may want to extend plugins or change the plugins order created by Nuxt.js. This function accepts an array of [plugin](/guides/configuration-glossary/configuration-plugins) objects and should return an array of plugin objects.
+You may want to extend plugins or change the plugins order created by Nuxt.js. This function accepts an array of [plugin](/docs/2.x/configuration-glossary/configuration-plugins) objects and should return an array of plugin objects.
 
 Example of changing plugins order:
 
@@ -323,13 +335,13 @@ export default {
 }
 ```
 
-### Global mixins
+## Global mixins
 
 Global mixins can be easily added with Nuxt plugins but can cause trouble and memory leaks when not handled correctly. Whenever you add a global mixin to your application, you should use a flag to avoid registering it multiple times:
 
 ```js{}[plugins/my-mixin-plugin.js]
 if (!Vue.__my_mixin__) {
-	Vue.__my__mixin__ = true
+  Vue.__my_mixin__ = true
   Vue.mixin({ ... }) // Set up your mixin then
 }
 ```

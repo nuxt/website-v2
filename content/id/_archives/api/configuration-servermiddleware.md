@@ -50,7 +50,7 @@ module.exports = {
 
 Anda juga dapat menulis middleware sendiri. Untuk informasi lebih lanjut lihat [Dokumentasi Connect](https://github.com/senchalabs/connect#appusefn).
 
-Middleware (`api/logger.js`):
+Middleware (`server-middleware/logger.js`):
 
 ```js
 module.exports = function (req, res, next) {

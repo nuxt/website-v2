@@ -2,8 +2,9 @@
 title: Deploy Nuxt using PM2
 description: How to deploy Nuxt.js with PM2 cluster mode enabled?
 menu: PM2
+target: Server
 category: deployment
-position: 214
+position: 114
 ---
 
 Deploying using [PM2](https://pm2.keymetrics.io/) (Process Manager 2) is a fast and easy solution for hosting your universal Nuxt application on your server or VM.

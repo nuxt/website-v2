@@ -17,10 +17,10 @@ connect 自体はミドルウェアなので、登録されたミドルウェア
 
 **例:**
 
-- サーバーミドルウェアパス: `/api`
+- サーバーミドルウェアパス: `/server-middleware`
 - Router base: `/admin`
-- `prefix: true` の場合（デフォルト）: `/admin/api`
-- `prefix: false` の場合: `/api`
+- `prefix: true` の場合（デフォルト）: `/admin/server-middleware`
+- `prefix: false` の場合: `/server-middleware`
 
 ## サーバーミドルウェア vs ミドルウェア！
 
@@ -38,8 +38,8 @@ export default {
     // redirect-ssl npm パッケージを登録します
     'redirect-ssl',
 
-    // /api/* を処理するために、プロジェクトの api ディレクトリからファイルを登録します
-    { path: '/api', handler: '~/api/index.js' },
+    // /server-middleware/* を処理するために、プロジェクトの server-middleware ディレクトリからファイルを登録します
+    { path: '/server-middleware', handler: '~/server-middleware/index.js' },
 
     // カスタムインスタンスを作成することもできます
     { path: '/static2', handler: serveStatic(__dirname + '/static2') }
@@ -47,19 +47,19 @@ export default {
 }
 ```
 
-<p class="Alert Alert--danger">
-    <b>注意！</b>
-    もしミドルウェアをすべてのルートに登録したくない場合は、特定のパスでオブジェクトフォームを使用する必要があります。
-    そうしないと nuxt の デフォルトハンドラは機能しません。
-</p>
+<base-alert type="warn">
+
+もしミドルウェアをすべてのルートに登録したくない場合は、特定のパスでオブジェクトフォームを使用する必要があります。 そうしないと nuxt のデフォルトハンドラは機能しません。
+
+</base-alert>
 
 ## カスタムサーバーミドルウェア
 
 カスタムミドルウェアの作成も可能です。詳細については [Connect Docs](https://github.com/senchalabs/connect#appusefn) を参照してください。
 
-ミドルウェア（`api/logger.js`）:
+ミドルウェア（`server-middleware/logger.js`）:
 
-```js{}[api/logger.js]
+```js{}[server-middleware/logger.js]
 export default function (req, res, next) {
   // req は Node.js の HTTP リクエストオブジェクトです
   console.log(req.url)
@@ -73,14 +73,14 @@ export default function (req, res, next) {
 ```
 
 ```js{}[nuxt.config.js]
-serverMiddleware: ['~/api/logger']
+serverMiddleware: ['~/server-middleware/logger']
 ```
 
 ## カスタム API エンドポイント
 
 サーバーミドルウェアも Express を拡張できます。これにより REST エンドポイントを作成できます。
 
-```js{}[api/rest.js]
+```js{}[server-middleware/rest.js]
 const bodyParser = require('body-parser')
 const app = require('express')()
 
@@ -94,7 +94,7 @@ module.exports = app
 
 ```js{}[nuxt.config.js]
 serverMiddleware: [
-  { path: "/api", handler: "~/api/rest.js" },
+  { path: "/server-middleware", handler: "~/server-middleware/rest.js" },
 ],
 ```
 
@@ -105,9 +105,9 @@ serverMiddleware: [
 ```js
 export default {
   serverMiddleware: [
-    { path: '/a', handler: '~/api/a.js' },
-    { path: '/b', handler: '~/api/b.js' },
-    { path: '/c', handler: '~/api/c.js' }
+    { path: '/a', handler: '~/server-middleware/a.js' },
+    { path: '/b', handler: '~/server-middleware/b.js' },
+    { path: '/c', handler: '~/server-middleware/c.js' }
   ]
 }
 ```
@@ -117,9 +117,9 @@ export default {
 ```js
 export default {
   serverMiddleware: {
-    '/a': '~/api/a.js',
-    '/b': '~/api/b.js',
-    '/c': '~/api/c.js'
+    '/a': '~/server-middleware/a.js',
+    '/b': '~/server-middleware/b.js',
+    '/c': '~/server-middleware/c.js'
   }
 }
 ```

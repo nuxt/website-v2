@@ -37,7 +37,7 @@ If you are interested in contributing to the Persian translation of Nuxtjs.org p
 
 ## Development
 
-Start the dev server on [http://localhost:3000](http://localhost:3000)
+Start the dev server on [localhost:3000](http://localhost:3000)
 
 ```bash
 yarn dev

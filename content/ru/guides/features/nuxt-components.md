@@ -248,26 +248,26 @@ export default {
 
 ## prefetchLinks
 
-Nuxt.js automatically includes smart prefetching. That means it detects when a link is visible, either in the viewport or when scrolling and prefetches the JavaScript for those pages so that they are ready when the user clicks the link. Nuxt.js only loads the resources when the browser isn't busy and skips prefetching if your connection is offline or if you only have 2G connection.
+В Nuxt.js автоматически включена умная предзагрузка. Это значит что он определяет ссылки которые видимы пользователю, либо находятся в области видимости окна просмотра, либо появляются при прокрутке страницы, и предзагружает JavaScript для этих страниц, поэтому при клике на ссылку страницы уже готовы к отображению. Nuxt.js загружает необходимые ресурсы только когда браузер не занят другими процессами, и пропускает предзагрузку если у девайса 2G связь или вовсе отсутствует.
 
 <base-alert type="info">
 
-Check out this article to learn more about [smart prefetching](/blog/introducing-smart-prefetching).
+Чтобы узнать больше об умной предзагрузке прочтите [эту статью](/blog/introducing-smart-prefetching).
 
 </base-alert>
 
-### Disable prefetching for specific links
+### Отключение предзагрузки для некоторых ссылок
 
-However sometimes you may want to disable prefetching on some links if your page has a lot of JavaScript or you have a lot of different pages that would be prefetched or you have a lot of third party scripts that need to be loaded. To disable the prefetching on a specific link, you can use the `no-prefetch` prop. Since Nuxt.js v2.10.0, you can also use the `prefetch` prop set to `false`
+Иногда вам может быть необходимо отключить предзагрузку для определенных страниц. К примеру если JavaScript для этой страницы имеет большой объем, либо если у вас есть много других страниц которые должны быть предзагружены, или у вас большое количество внешних JavaScript библиотек которые должны быть загружены. Для отключения предзагрузки для определенных страниц вы можете использовать входной параметр `no-prefetch`. Начиная с Nuxt.js v2.10.0, вы можете использовать входной параметр `prefetch` задавая ему значение `false`.
 
 ```html
-<NuxtLink to="/about" no-prefetch>About page not prefetched</NuxtLink>
-<NuxtLink to="/about" :prefetch="false">About page not prefetched</NuxtLink>
+<NuxtLink to="/about" no-prefetch>Страница "Про нас" не предзагружена</NuxtLink>
+<NuxtLink to="/about" :prefetch="false">Страница "Про нас" не предзагружена</NuxtLink>
 ```
 
-### Disable prefetching globally
+### Глобальное отключение предзагрузки
 
-To disable the prefetching on all links, set the `prefetchLinks` to `false`:
+Для отключения предзагрузки для все ссылок задайте в конфигурационном файле `prefetchLinks` значение `false`:
 
 ```js{}[nuxt.config.js]
 export default {
@@ -277,7 +277,7 @@ export default {
 }
 ```
 
-Since Nuxt.js v2.10.0, if you have to set `prefetchLinks` to `false` but you want to prefetch a specific link, you can use the `prefetch` prop:
+Начиная с Nuxt.js v2.10.0, if you have to set `prefetchLinks` to `false` but you want to prefetch a specific link, you can use the `prefetch` prop:
 
 ```html
 <NuxtLink to="/about" prefetch>About page prefetched</NuxtLink>

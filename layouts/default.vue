@@ -24,13 +24,10 @@ export default {
   head() {
     const i18nSeo = this.$nuxtI18nSeo()
     const { path } = this.$route
-
-    let canonical = `https://nuxtjs.org${path}`
-    if (path === '/') {
-      canonical = 'https://nuxtjs.org'
-    }
+    const pathWithSlash = path.endsWith('/') ? path : `${path}/`
+    let canonical = `https://nuxtjs.org${pathWithSlash}`
     if (this.$i18n.locale !== 'en') {
-      canonical = `https://${this.$i18n.locale}.nuxtjs.org${path}`
+      canonical = `https://${this.$i18n.locale}.nuxtjs.org${pathWithSlash}`
     }
     return {
       htmlAttrs: i18nSeo.htmlAttrs,
@@ -65,37 +62,37 @@ export default {
         {
           rel: 'alternate',
           hreflang: 'en',
-          href: `https://nuxtjs.org${path}`
+          href: `https://nuxtjs.org${pathWithSlash}`
         },
         {
           rel: 'alternate',
           hreflang: 'zh',
-          href: `https://zh.nuxtjs.org${path}`
+          href: `https://zh.nuxtjs.org${pathWithSlash}`
         },
         {
           rel: 'alternate',
           hreflang: 'ru',
-          href: `https://ru.nuxtjs.org${path}`
+          href: `https://ru.nuxtjs.org${pathWithSlash}`
         },
         {
           rel: 'alternate',
           hreflang: 'ja',
-          href: `https://ja.nuxtjs.org${path}`
+          href: `https://ja.nuxtjs.org${pathWithSlash}`
         },
         {
           rel: 'alternate',
           hreflang: 'ko',
-          href: `https://ko.nuxtjs.org${path}`
+          href: `https://ko.nuxtjs.org${pathWithSlash}`
         },
         {
           rel: 'alternate',
           hreflang: 'fr',
-          href: `https://fr.nuxtjs.org${path}`
+          href: `https://fr.nuxtjs.org${pathWithSlash}`
         },
         {
           rel: 'alternate',
           hreflang: 'id',
-          href: `https://id.nuxtjs.org${path}`
+          href: `https://id.nuxtjs.org${pathWithSlash}`
         },
 
         ...i18nSeo.link

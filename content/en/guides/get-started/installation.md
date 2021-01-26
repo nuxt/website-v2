@@ -66,7 +66,7 @@ npm run dev
   </code-block>
 </code-group>
 
-The application is now running on [http://localhost:3000](http://localhost:3000). Well done!
+The application is now running on [localhost:3000](http://localhost:3000). Well done!
 
 <base-alert type="info">
 
@@ -199,7 +199,7 @@ We use the dev command when running our application in development mode.
 
 </base-alert>
 
-The application is now running on [**http://localhost:3000**](http://localhost:3000/).
+The application is now running on **[localhost:3000](http://localhost:3000/)**.
 
 Open it in your browser by clicking the link in your terminal and you should see the text "Hello World" we copied in the previous step.
 
@@ -221,7 +221,7 @@ Create a page named `fun.vue` in the `pages` directory.
 
 Add a `<template></template>` and include a heading with a funny sentence inside.
 
-Then, go to your browser and see your new page on **[http://localhost:3000/fun](http://localhost:3000/fun).**
+Then, go to your browser and see your new page on **[localhost:3000/fun](http://localhost:3000/fun)**.
 
 <base-alert type="info">
 

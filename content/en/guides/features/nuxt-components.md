@@ -407,6 +407,8 @@ Use a slot as placeholder until `<client-only />` is mounted on client-side.
 
 Sometimes in server rendered pages `$refs` inside `<client-only>` might not be ready even with `$nextTick`, the trick might be to call `$nextTick` couple of times:
 
+</base-alert>
+
 ```js{}[page.vue]
 mounted(){
   this.initClientOnlyComp()
@@ -423,8 +425,6 @@ methods: {
   },
 }
 ```
-
-</base-alert>
 
 <base-alert>
 

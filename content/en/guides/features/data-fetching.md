@@ -78,6 +78,12 @@ In versions of Nuxt before 2.12, the `fetch` hook worked much like `asyncData` d
 
 These hooks can be used with _any data fetching library_ you choose. We recommend using [@nuxt/http](https://http.nuxtjs.org/) or [@nuxt/axios](https://axios.nuxtjs.org/) for making requests to HTTP APIs. More information about these libraries, such as guides for configuring authentication headers, can be found in their respective documentation.
 
+<base-alert type="info">
+  
+If you define `fetch` or `asyncData` inside a mixin and also have it defined in a component/page, the mixin function will be overwritten instead of called.
+
+</base-alert>
+
 ## The fetch hook
 
 <base-alert type="info">
@@ -256,6 +262,13 @@ Unlike `fetch`, the promise returned by the `asyncData` hook is resolved _during
 This hook can only be used for page-level components. Unlike `fetch`, `asyncData` cannot access the component instance (`this`). Instead, it receives [the context](/docs/2.x/concepts/context-helpers) as its argument. You can use it to fetch some data and Nuxt.js will automatically merge the returned object with the component data.
 
 In the upcoming examples, we are using [@nuxt/http](https://http.nuxtjs.org/) which we recommend for fetching data from an API.
+
+### Async data in components?
+
+Because components do not have an `asyncData` method, you cannot directly fetch async data server side within a component. In order to get around this limitation you have two basic options:
+
+1. Make the API call in the `mounted` hook and set data properties when loaded. _Downside: Won't work for server side rendering._
+2. Make the API call in the `asyncData` method of the page component and pass the data as props to the sub components. Server rendering will work fine. _Downside: the `asyncData` of the page might be less readable because it's loading the data for other components_.
 
 ### Listening to query changes
 

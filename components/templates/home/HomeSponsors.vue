@@ -80,10 +80,7 @@
             data-cy="sponsors"
             class="py-3 px-6 text-base"
           >
-            <OpenCollectiveIcon
-              slot="icon"
-              class="inline-block h-5 -mt-1 mr-1"
-            />
+            <GithubIcon slot="icon" class="inline-block h-5 -mt-1 mr-1" />
             {{ $t('homepage.sponsors.become_a_sponsor') }}
           </AppButton>
         </div>
@@ -93,12 +90,12 @@
 </template>
 
 <script>
-import OpenCollectiveIcon from '~/assets/icons/open-collective.svg?inline'
+import GithubIcon from '~/assets/icons/github.svg?inline'
 import SponsoringIllustration from '~/assets/illustrations/sponsoring.svg?inline'
 
 export default {
   components: {
-    OpenCollectiveIcon,
+    GithubIcon,
     SponsoringIllustration
   },
   data() {

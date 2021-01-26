@@ -4,8 +4,8 @@ description: Nuxt.js provides a higher-order module system that makes it possibl
 position: 9
 category: directory-structure
 csb_link: https://codesandbox.io/embed/github/nuxt-academy/guides-examples/tree/master/04_directory_structure/10_modules?fontsize=14&hidenavigation=1&theme=dark
-img: /docs/2.x/plugins.jpg
-imgAlt: modules-servermiddleware-plugins-in-nuxt-js
+img: /docs/2.x/modules.svg
+imgAlt: modules-in-nuxt-js
 questions:
   - question: When are modules called?
     answers:

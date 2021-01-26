@@ -155,7 +155,7 @@ Usamos o comando dev para executar nossa aplicação no modo de desenvolvimento.
 
 </base-alert>
 
-A aplicação agora está sendo executada em **[http://localhost:3000](http://localhost:3000/).**
+A aplicação agora está sendo executada em **[localhost:3000](http://localhost:3000/).**
 
 Abra-o em seu navegador clicando no link em seu terminal e você deverá ver o texto "Hello World" que copiamos na etapa anterior.
 
@@ -241,4 +241,4 @@ npm run dev
   </code-block>
 </code-group>
 
-A aplicação está rodando no [http://localhost:3000](http://localhost:3000) agora. Parabéns!
+A aplicação está rodando no [localhost:3000](http://localhost:3000) agora. Parabéns!

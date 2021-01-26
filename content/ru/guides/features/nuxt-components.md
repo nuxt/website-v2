@@ -277,17 +277,17 @@ export default {
 }
 ```
 
-Начиная с Nuxt.js v2.10.0, if you have to set `prefetchLinks` to `false` but you want to prefetch a specific link, you can use the `prefetch` prop:
+Начиная с Nuxt.js v2.10.0, если вы задали `prefetchLinks: false`, но вам необходимо предзагружать определенную ссылку, вы можете использовать входной параметр `prefetch`: 
 
 ```html
-<NuxtLink to="/about" prefetch>About page prefetched</NuxtLink>
+<NuxtLink to="/about" prefetch>Страница "Про нас" предзагружена</NuxtLink>
 ```
 
-## Link Classes
+## Классы ссылок
 
 ### linkActiveClass
 
-The `linkActiveClass` works the same as the `vue-router` class for active links. If we want to show which links are active all you have to do is create some css for the class `nuxt-link-active` .
+`linkActiveClass` работает также, как и класс во `vue-router` для активных ссылок. Если вы хотите показывать какие ссылки являются активными, то все что вам необходимо сделать это написать немного css кода для класса `nuxt-link-active`.
 
 ```css
 .nuxt-link-active {
@@ -297,11 +297,11 @@ The `linkActiveClass` works the same as the `vue-router` class for active links.
 
 <base-alert>
 
-This css can be added to the navigation component or for a specific page or layout or in your main.css file.
+Эти css стили могут быть добавлены в ваш компонент навигации, либо для определенной страницы или макета, либо в ваш main.css файл.
 
 </base-alert>
 
-If you want to you can also configure the class name to be something else. You can do this by modifying the `linkActiveClass` in the router property in your `nuxt.config.js` file.
+Если вы хотите, то вы можете также настроить имя класса как вам угодно. Вы можете сделать это модифицируя `linkActiveClass` свойство у роутера в вашем `nuxt.config.js` файле.
 
 ```js
 export default {
@@ -313,13 +313,13 @@ export default {
 
 <base-alert type="info">
 
-This option is given directly to the `vue-router` linkActiveClass. See the [vue-router docs](https://router.vuejs.org/api/#active-class) for more info.
+Эта опция передается напрямую во `vue-router` как linkActiveClass. Более подробную информацию можете прочесть в [документации vue-router](https://router.vuejs.org/api/#active-class)
 
 </base-alert>
 
 ### linkExactActiveClass
 
-The `linkExactActiveClass` works the same as the `vue-router` class for exact active links. If we want to show which links are active with an exact match all you have to do is create some css for the class `nuxt-link-exact-active` .
+The `linkExactActiveClass` works the same as the `vue-router` class for exact active links. If we want to show which links are active with an exact match all you have to do is create some css for the class `nuxt-link-exact-active`.
 
 ```css
 .nuxt-link-exact-active {

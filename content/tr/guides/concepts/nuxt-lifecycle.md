@@ -105,7 +105,7 @@ Statik site oluşturma kullanılırken, sunucu adımları yalnızca derleme zama
 
 - HTML oluşturma gerçekleşir (`render:route` Nuxt.js hook)
 
-- Tarayıcıya HTML gönderildiğinde `render:routeDone` 
+- Tarayıcıya HTML gönderildiğinde `render:routeDone`
 
 - `generate:before` Nuxt.js hook
 - HTML dosyaları oluşturulur

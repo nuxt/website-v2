@@ -50,7 +50,7 @@ questions:
 
 `context` nesnesi, [asyncData](/docs/2.x/features/data-fetching#async-data), [plugins](/docs/2.x/directory-structure/plugins), [middleware](/docs/2.x/directory-structure/middleware) ve [nuxtServerInit](/docs/2.x/directory-structure/store#the-nuxtserverinit-action) gibi belirli Nuxt işlevlerinde bulunur. Uygulamaya yönelik mevcut istek hakkında _fazladan_ ve genellikle isteğe bağlı bilgiler sağlar.
 
-İlk ve en önemlisi; bağlam Nuxt.js uygulamasının diğer bölümlerine erişim sağlayabilmek için kullanılır, örn. Vuex `store` veya temeldeki `connect` örneği. Böylelikle, bağlamda `req` ve `res` nesneleri sunucu tarafında olur ve `store` her zaman kullanılabilir durumdadır. Ancak zamanla bağlam, diğer birçok yararlı değişken ve kısayolla genişletildi. Artık `development` modunda, geçerli `route`, `params` sayfası ve `query` deki HMR işlevlerine, ayrıca bağlam aracılığıyla erişebiliriz. Buna ek olarak, modül işlevleri ve yardımcıları, hem istemci hem de sunucu tarafında mevcut olacak bağlam aracılığıyla açığa çıkarılabilir. 
+İlk ve en önemlisi; bağlam Nuxt.js uygulamasının diğer bölümlerine erişim sağlayabilmek için kullanılır, örn. Vuex `store` veya temeldeki `connect` örneği. Böylelikle, bağlamda `req` ve `res` nesneleri sunucu tarafında olur ve `store` her zaman kullanılabilir durumdadır. Ancak zamanla bağlam, diğer birçok yararlı değişken ve kısayolla genişletildi. Artık `development` modunda, geçerli `route`, `params` sayfası ve `query` deki HMR işlevlerine, ayrıca bağlam aracılığıyla erişebiliriz. Buna ek olarak, modül işlevleri ve yardımcıları, hem istemci hem de sunucu tarafında mevcut olacak bağlam aracılığıyla açığa çıkarılabilir.
 
 **Varsayılan olarak mevcut olan tüm bağlam anahtarları**
 
@@ -113,6 +113,7 @@ export default {
   }
 }
 ```
+
 [ES6](https://hacks.mozilla.org/2015/05/es6-in-depth-destructuring/) ile birlikte bağlam nesnenizi yok etmek için bu sözdizimini kullanabilirsiniz. Erişmek istediğiniz nesneleri içeri aktarabilir ve daha sonra bunları bağlam kelimesini kullanmadan kodda kullanabilirsiniz.
 
 ```js{}[pages/posts/_id.vue]
@@ -130,6 +131,7 @@ export default {
   }
 }
 ```
+
 Bunun yerine sorgu parametrelerini kullanmak istiyorsanız, [context.query.id](/docs/2.x/internals-glossary/context#query)'i kullanabilirsiniz.
 
 ### Kullanıcıları yeniden yönlendirme ve store'a erişim
@@ -160,7 +162,7 @@ Bağlamdaki kısayolların yanı sıra, Nuxt.js uygulamanızda bulunan başka k�
 
 ## `$nuxt`: Nuxt.js yardımcısı
 
-`$nuxt` kullanıcı deneyimini geliştirmek ve bazı durumlarda bir kaçış yolu olmak için tasarlanmış bir yardımcıdır. Vue bileşenlerinde `this.$nuxt` ve istemci tarafında `window.$nuxt` aracılığıyla erişilir.  
+`$nuxt` kullanıcı deneyimini geliştirmek ve bazı durumlarda bir kaçış yolu olmak için tasarlanmış bir yardımcıdır. Vue bileşenlerinde `this.$nuxt` ve istemci tarafında `window.$nuxt` aracılığıyla erişilir.
 
 ### Bağlantı denetleyicisi
 
@@ -221,6 +223,7 @@ export default {
   }
 }
 ```
+
 Daha fazla için ilgili bölümü okuyun [loading feature chapter](../features/loading)
 
 ## onNuxtReady yardımcısı

@@ -40,3 +40,9 @@ Use the `head` method to set the HTML Head tags for the current page.
   }
 </script>
 ```
+
+<base-alert type="info">
+
+To avoid duplicated meta tags when used in child component, set up a unique identifier with the `hid` key for your meta elements ([read more](https://vue-meta.nuxtjs.org/api/#tagidkeyname)).
+
+</base-alert>

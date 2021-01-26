@@ -44,6 +44,7 @@ NUXTJS
               :key="link.href"
               :href="link.href"
               target="_blank"
+              rel="noopener"
               class="block font-medium uppercase hover:no-underline hover:text-nuxt-lightgreen text-light-onSurfacePrimary dark:text-dark-onSurfacePrimary transition-colors duration-300 ease-linear"
             >
               {{ link.name }}

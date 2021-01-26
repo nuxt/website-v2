@@ -27,9 +27,9 @@ module.exports = {
         slug: 'examples'
       },
       {
-        name: 'FAQ',
+        name: 'Resources',
         icon: 'resources',
-        slug: 'faq'
+        slug: 'resources'
       },
       {
         name: 'Blog',
@@ -39,8 +39,8 @@ module.exports = {
       {
         name: 'Video Courses',
         icon: 'video',
-        href:
-          'https://masteringnuxt.com/?utm_source=nuxt&utm_medium=link&utm_campaign=navbar_link'
+        slug: 'video-courses'
+        // href: 'https://masteringnuxt.com/?utm_source=nuxt&utm_medium=link&utm_campaign=navbar_link'
       }
     ],
     search: {
@@ -144,6 +144,15 @@ module.exports = {
     themes: {
       title: 'Themes'
     },
+    modules: {
+      title: 'Modules'
+    },
+    examples: {
+      title: 'Examples'
+    },
+    faq: {
+      title: 'FAQ'
+    },
     videos: {
       title: 'Video Courses'
     }
@@ -188,9 +197,9 @@ module.exports = {
     },
     title: '{nuxt} Video Courses',
     description:
-      'With the video courses below created by our partner VueSchool you can discover and learn more about the Nuxt.js Framework.',
+      'With the video courses below you can discover and learn more about the Nuxt Framework.',
     cta: {
-      discover: 'Discover vueschool',
+      discover: 'Discover Mastering Nuxt',
       start: 'START COURSE'
     }
   },
@@ -327,6 +336,7 @@ module.exports = {
       'configuration-glossary': 'Configuration Glossary',
       'internals-glossary': 'Internals Glossary',
       'components-glossary': 'Components Glossary',
+      deployment: 'Deployment',
       examples: 'Examples'
     }
   },

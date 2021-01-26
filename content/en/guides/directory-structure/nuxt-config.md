@@ -187,7 +187,7 @@ Inside your templates you can access your runtimeConfigs directly using `$config
 </template>
 ```
 
-<base-alert type="warn">
+<base-alert>
 
 Your private config could be exposed if you use `$config` outside of a server-only context (for example, if you use `$config` in `fetch`, `asyncData` or directly inside your template).
 

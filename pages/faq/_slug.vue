@@ -23,8 +23,9 @@
 
 <script>
 export default {
+  scrollToTop: true,
   async asyncData({ $content, $contributors, params, store, error, app }) {
-    const slug = params.slug || 'external-resources'
+    const slug = params.slug || 'auth-routes'
 
     let path = `/${app.i18n.defaultLocale}/faq`
     let page, prev, next, langFallback
@@ -68,12 +69,6 @@ export default {
       contributors
     }
   },
-  computed: {
-    docLink() {
-      return `https://github.com/nuxt/nuxtjs.org/blob/master/content${this.path}.md`
-    }
-  },
-  scrollToTop: true,
   head() {
     return {
       title: this.page.title,
@@ -103,6 +98,11 @@ export default {
           content: this.page.description
         }
       ]
+    }
+  },
+  computed: {
+    docLink() {
+      return `https://github.com/nuxt/nuxtjs.org/blob/master/content${this.path}.md`
     }
   }
 }

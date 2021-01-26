@@ -263,6 +263,13 @@ This hook can only be used for page-level components. Unlike `fetch`, `asyncData
 
 In the upcoming examples, we are using [@nuxt/http](https://http.nuxtjs.org/) which we recommend for fetching data from an API.
 
+### Async data in components?
+
+Because components do not have an `asyncData` method, you cannot directly fetch async data server side within a component. In order to get around this limitation you have two basic options:
+
+1. Make the API call in the `mounted` hook and set data properties when loaded. _Downside: Won't work for server side rendering._
+2. Make the API call in the `asyncData` method of the page component and pass the data as props to the sub components. Server rendering will work fine. _Downside: the `asyncData` of the page might be less readable because it's loading the data for other components_.
+
 ### Listening to query changes
 
 The `asyncData` method is not called on query string changes by default. If you want to change this behavior, for example when building a pagination component, you can set up parameters that should be listened to with the `watchQuery` property of your page component.

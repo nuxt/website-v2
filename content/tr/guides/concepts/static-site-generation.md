@@ -40,7 +40,7 @@ Statik site oluşturma ile, uygulamanızı derleme aşamasında oluşturabilir v
 
 Sitenizi [target:static](/docs/2.x/features/deployment-targets#static-hosting) ile dağıtırken, tüm `.vue` sayfalarınız HTML ve JacaScript dosyaları içerisine oluşturulur. API'lara yapılan tüm çağrılar, oluşturulan içeriğinizin içinde statik olarak adlandırılan bir klasörde yapılır ve önbelleğe alınır, böylece istemci tarafında gezinmede API'nıza çağrı yapılmasına gerek kalmaz.
 
-### Adım 1: Tarayıcıdan CDN'e 
+### Adım 1: Tarayıcıdan CDN'e
 
 Bir tarayıcı ilk isteği gönderdiğinde, CDN'e gelecektir.
 

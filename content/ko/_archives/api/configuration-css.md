@@ -16,7 +16,7 @@ position: 104
 만약 items가 object일 경우의 프로퍼티:
 
 - src: `String` (파일 경로)
-- lang: `String` ([사용된 전처리기](/faq/pre-processors))
+- lang: `String` ([사용된 전처리기](/docs/2.x/features/configuration#pre-processors))
 
 `nuxt.config.js`안에 CSS 리소스를 추가합니다:
 

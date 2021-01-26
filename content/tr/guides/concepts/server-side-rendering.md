@@ -69,6 +69,7 @@ export default {
   serverMiddleware: ['~/middleware/api/logger']
 }
 ```
+
 Sunucu middleware'niz, uzantılarla eşleşen fonksiyonların listesinden oluşuyorsa:
 
 ## Sunucu ve Tarayıcı ortamları

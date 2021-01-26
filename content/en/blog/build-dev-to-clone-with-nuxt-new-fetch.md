@@ -85,7 +85,7 @@ Let’s install necessary packages and discuss how we will build our app next.
 
 ### CSS Styles
 
-For styling we will use the most common CSS pre-processor Sass/SCSS and leverage Vue.js [Scoped CSS](https://vue-loader.vuejs.org/guide/scoped-css.html) feature, to keep our components styles encapsulated. To [use Sass/SCSS with Nuxt](/faq/pre-processors) run:
+For styling we will use the most common CSS pre-processor Sass/SCSS and leverage Vue.js [Scoped CSS](https://vue-loader.vuejs.org/guide/scoped-css.html) feature, to keep our components styles encapsulated. To [use Sass/SCSS with Nuxt](/docs/2.x/features/configuration#pre-processors) run:
 
 <code-group>
   <code-block label="Yarn" active>

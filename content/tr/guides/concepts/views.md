@@ -141,7 +141,7 @@ Sayfanıza bir layout özelliği eklemezseniz, örnek olarak `layout: 'blog'`, `
 
 ## Hata Sayfası
 
-Hata sayfası, bir hata oluştuğunda görüntülenen bir *sayfa bileşenidir* (sunucu tarafı işleme anında olmaz)
+Hata sayfası, bir hata oluştuğunda görüntülenen bir _sayfa bileşenidir_ (sunucu tarafı işleme anında olmaz)
 
 <base-alert>
 
@@ -187,6 +187,7 @@ Nuxt.js tarafından kullanılan varsayılan şablon şudur:
   </body>
 </html>
 ```
+
 Özel bir uygulama şablonu kullanımı, IE için koşullu CSS sınıfları eklemektir:
 
 ```html{}[app.html]

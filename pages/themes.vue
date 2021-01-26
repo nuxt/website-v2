@@ -91,6 +91,14 @@ export default {
           discount2: '30nuxt-exclusive'
         },
         {
+          title: 'Nuxt Argon Dashboard PRO Laravel',
+          description: 'FULL STACK APP WITH NUXT, LARAVEL & JSON:API.',
+          price: '149$',
+          link:
+            'https://www.creative-tim.com/product/nuxt-argon-dashboard-pro-laravel?partner=120213',
+          img: 'nuxt-argon-dashboard-pro-laravel'
+        },
+        {
           title: 'Nuxt Now UI Kit',
           description: 'Premium Bootstrap Nuxt.js UI Kit.',
           price: '89$',

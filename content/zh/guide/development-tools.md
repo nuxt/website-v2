@@ -65,7 +65,7 @@ mkdir test
 </style>
 ```
 
-当我们利用 `npm run dev` 启动开发服务器的时候，用浏览器打开 [http://localhost:3000](http://localhost:3000)，我们能看到红色的 `Hello world` 标题。
+当我们利用 `npm run dev` 启动开发服务器的时候，用浏览器打开 [localhost:3000](http://localhost:3000)，我们能看到红色的 `Hello world` 标题。
 
 添加一个单元测试文件 `test/index.test.js`：
 

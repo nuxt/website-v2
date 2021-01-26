@@ -79,7 +79,7 @@ npx create-nuxt-app nuxt-dev-to-clone
 # leave the default answers for each question
 ```
 
-Now `cd nuxt-dev-to-clone/` and run `npm run dev`. Congrats, your Nuxt app is running on [http://localhost:3000](http://localhost:3000/)!
+Now `cd nuxt-dev-to-clone/` and run `npm run dev`. Congrats, your Nuxt app is running on [localhost:3000](http://localhost:3000/)!
 
 Let’s install necessary packages and discuss how we will build our app next.
 

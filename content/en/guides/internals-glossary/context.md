@@ -113,7 +113,7 @@ A valid workaround would be using `window.onNuxtReady(() => { window.$nuxt.$rout
 
 </base-alert>
 
-<base-alert type="info>
+<base-alert type="info">
 
 A client-side call to `redirect` always throws the error `ERR_REDIRECT`. This is to block Nuxt from doing any tasks between the time redirect call happens until the browser starts navigation.
 

@@ -115,9 +115,9 @@ A valid workaround would be using `window.onNuxtReady(() => { window.$nuxt.$rout
 
 <base-alert type="info>
 
-A client-side call to `redirect` always throws the error `ERR_REDIRECT`. This is to block Nuxt from doing any tasks between the time redirect call happens until browser starts navigation.
+A client-side call to `redirect` always throws the error `ERR_REDIRECT`. This is to block Nuxt from doing any tasks between the time redirect call happens until the browser starts navigation.
 
-To avoid an unexpected flash of an error page after this call, make sure to return the `redirect()` call when used in `asyncData()`. This will gracefully handle the default error. See [issue 8594](https://github.com/nuxt/nuxt.js/issues/8594#issuecomment-754120298).
+To avoid an unexpected flash of an error page, make sure to return the `redirect()` when used in `asyncData()`. This will gracefully handle the error. See [issue 8594](https://github.com/nuxt/nuxt.js/issues/8594#issuecomment-754120298).
 
 </base-alert>
 

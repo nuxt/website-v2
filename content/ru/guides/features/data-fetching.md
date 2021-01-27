@@ -221,17 +221,18 @@ Nuxt будет всегда сохранять `this.$fetchState.timestamp` (о
 </script>
 ```
 
-The navigation to the same page will not call `fetch` if last `fetch` call was before 30 sec ago.
+При навигации на ту же самую страницу хук `fetch` не вызовется, если последний его вызов был менее 30 секунд назад.
 
-## Async Data
+## Асинхронные данные
 
 <base-alert>
 
-`asyncData` is only available for [pages](/docs/2.x/directory-structure/pages) and you don't have access to `this` inside the hook.
+Хук `asyncData` доступен только для [страниц](/docs/2.x/directory-structure/pages) и у вас нет доступа к `this` внутри этого хука.
 
 </base-alert>
 
-`asyncData` is another hook for universal data fetching. Unlike `fetch`, which requires you to set properties on the component instance (or dispatch Vuex actions) to save your async state, `asyncData` simply merges its return value into your component's local state. Here's an example using the [@nuxt/http](https://http.nuxtjs.org/) library:
+
+`asyncData` - это хук для универсальных запросов к серверу для получения данных. В отличии от хука `fetch`, который требует передавать свойства в инстанс компонента (или вызывать экшены во Vuex) для сохранения данных в стейте асинхронно, хук `asyncData` просто возвращает данные в локальный стейт компонента. Это пример использрвания библиотеки [@nuxt/http](https://http.nuxtjs.org/):
 
 ```html{}[pages/posts/_id.vue]
 <template>
@@ -251,19 +252,19 @@ The navigation to the same page will not call `fetch` if last `fetch` call was b
 </script>
 ```
 
-Unlike `fetch`, the promise returned by the `asyncData` hook is resolved _during route transition_. This means that no "loading placeholder" is visible during client-side transitions (although the [loading bar](https://nuxtjs.org/guides/features/loading/) can be used to indicate a loading state to the user). Nuxt will instead wait for the `asyncData` hook to be finished before navigating to the next page or display the [error page](/docs/2.x/directory-structure/layouts#error-page)).
+В отличии от хука `fetch`, promise (промис?) возвращенный хуком `asyncData` вызывается (отрабатывает) _во время перехода между марщрутами_. Это означает что "loading placeholder" будет виден при переходах между маршрутами на стороне клиента (однако, [полоса загрузки](https://nuxtjs.org/guides/features/loading/) может использоваться как индикатор загрузки данных. Nuxt будет ждать окончания работы хука `asyncData` и только после этого перейдет на другую страницу или отобразит [страницу с ошибкой](/docs/2.x/directory-structure/layouts#error-page)).
 
-This hook can only be used for page-level components. Unlike `fetch`, `asyncData` cannot access the component instance (`this`). Instead, it receives [the context](/docs/2.x/concepts/context-helpers) as its argument. You can use it to fetch some data and Nuxt.js will automatically merge the returned object with the component data.
+Этот хук может использоваться только в компонентах на уровне страниц. В отличии от хука `fetch`, хук `asyncData` не имеет доступа к инстансу компонента (`this`). Вместо этого, он получает [контекст](/docs/2.x/concepts/context-helpers) как аргумент. Вы можете использовать это для получения данных и Nuxt.js будет автоматически сохранять возвращаемый объект в локальном стейте компонента.
 
-In the upcoming examples, we are using [@nuxt/http](https://http.nuxtjs.org/) which we recommend for fetching data from an API.
+Мы рекомендуем использовать библиотеку [@nuxt/http](https://http.nuxtjs.org/) для получения данных с API.
 
-### Listening to query changes
+### Прослушивание изменений в query
 
-The `asyncData` method is not called on query string changes by default. If you want to change this behavior, for example when building a pagination component, you can set up parameters that should be listened to with the `watchQuery` property of your page component.
+Метод `asyncData` не вызывает изменения в query строке по умолчанию. Если вы хотите изменить это поведение, например при создании пагинации в компоненте, вы можете настроить парамерты которые должны прослушиваться с помощью свойства `watchQuery` в вашем компоненте.
 
 <base-alert type="next">
 
-Learn more about the [watchQuery property](/docs/2.x/components-glossary/pages-watchquery) and see the list of available [keys in context](/docs/2.x/concepts/context-helpers).
+Вы можете узнать больше о [свойстве watchQuery](/docs/2.x/components-glossary/pages-watchquery) и увидеть список доступных [ключей в контексте](/docs/2.x/concepts/context-helpers).
 
 </base-alert>
 

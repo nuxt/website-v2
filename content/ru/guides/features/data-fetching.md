@@ -40,27 +40,27 @@ questions:
       - $fetchState.timestamp
       - $fetchState.cache
     correctAnswer: $fetchState.timestamp
-  - question: When is `asyncData` called?
+  - question: Когда вызывается метод `asyncData`?
     answers:
-      - after loading the page component
-      - during loading the page component
-      - before loading the page component
-    correctAnswer: before loading the page component
-  - question: You have access to `this` inside asyncData
+      - после загрузки компонента на странице
+      - во время загрузки компонента на странице
+      - до загрузки компонента на старнице
+    correctAnswer: до загрузки компонента на старнице
+  - question: Имеется ли возможность доступа к `this` внутри метода `asyncData`  
     answers:
-      - true
-      - false
-    correctAnswer: false
-  - question: With asyncData you can use the `context` parameter to access dynamic route data
+      - да
+      - нет
+    correctAnswer: нет
+  - question: Можете ли вы использовать параметр `context` в методе `asyncData` для доступа к динамическим данныи в роуте?
     answers:
-      - true
-      - false
-    correctAnswer: true
-  - question: You have access to the error statusCode in asyncData
+      - да
+      - нет
+    correctAnswer: да
+  - question: У вас есть доступ к статусу ошибки `statusCode` в методе `asyncData`
     answers:
-      - true
-      - false
-    correctAnswer: true
+      - да
+      - нет
+    correctAnswer: да
 ---
 
 Nuxt.js поддерживает традиционные методы Vue для загрузки данных в приложение на стороне клиента, такие как например хук `mounted()` - для получения данных в компоненте. Универсальные приложения, тем не менее, должны использовать специфичные хуки в Nuxt.js, чтобы иметь возможность отрисовать данные во время рендеринга на стороне сервера. Это позволяет отрендерить вашу страницу со всеми запрошенными данными.
@@ -159,9 +159,9 @@ export default {
 }
 ```
 
-### Прослушка изменений в query string
+### Прослушка изменений в query строке
 
-Хук `fetch` не вызывается по умолчанию при изменении query string. Для прослушки изменений в query, вы можете повесить watcher на `$route.query` и вызывать `$fetch`:
+Хук `fetch` не вызывается по умолчанию при изменении query строки. Для прослушки изменений, вы можете повесить слушатель на `$route.query` и вызывать `$fetch`:
 
 ```js
 export default {
@@ -174,9 +174,9 @@ export default {
 }
 ```
 
-### Caching
+### Кэширование
 
-You can use `keep-alive` directive in `<nuxt/>` and `<nuxt-child/>` component to save `fetch` calls on pages you already visited:
+Вы можете использовать директиву `keep-alive` в `<nuxt/>` и `<nuxt-child/>` компонентах для сохранения (кэширования?) вызовов хука `fetch` на страницах, которые вы уже посещали.
 
 ```html{}[layouts/default.vue]
 <template>
@@ -184,17 +184,17 @@ You can use `keep-alive` directive in `<nuxt/>` and `<nuxt-child/>` component to
 </template>
 ```
 
-You can also specify the [props](https://vuejs.org/v2/api/#keep-alive) passed to `<keep-alive>` by passing a prop `keep-alive-props` to the `<nuxt>` component.
+Вы также можете указать [пропс](https://vuejs.org/v2/api/#keep-alive) passed to `<keep-alive>` (тут хз че происходит в оригинале) указав пропс `keep-alive-props` в компоненте `<nuxt>`.
 
 ```html{}[layouts/default.vue]
 <nuxt keep-alive :keep-alive-props="{ max: 10 }" />
 ```
 
-Keeps only 10 page components in memory.
+Кэшируются только 10 последних страниц в памяти.
 
-### Using `activated` hook
+### Использование хука `activated`
 
-Nuxt will directly fill `this.$fetchState.timestamp` (timestamp) of the last `fetch` call (ssr included). You can use this property combined with `activated` hook to add a 30 seconds cache to `fetch`:
+Nuxt будет всегда сохранять `this.$fetchState.timestamp` (отметку времени) последних вызовов хука `fetch` (включая рендеринг на стороне сервера). Вы можете использовать это свойство в комбинации с хуком `activated` чтобы закэшировать 30 секунд в `fetch`:
 
 ```html{}[pages/posts/_id.vue]
 <template> ... </template>
@@ -207,7 +207,7 @@ Nuxt will directly fill `this.$fetchState.timestamp` (timestamp) of the last `fe
       }
     },
     activated() {
-      // Call fetch again if last fetch more than 30 sec ago
+      // Вызовите хук fetch еще раз, если последний запрос был сделан больше чем 30 секунд назад
       if (this.$fetchState.timestamp <= Date.now() - 30000) {
         this.$fetch()
       }

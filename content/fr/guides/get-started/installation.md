@@ -66,7 +66,7 @@ npm run dev
   </code-block>
 </code-group>
 
-Notre application est maintenant en cours d'exécution sur [http://localhost:3000](http://localhost:3000).
+Notre application est maintenant en cours d'exécution sur [localhost:3000](http://localhost:3000).
 
 <base-alert type="info">
 
@@ -199,7 +199,7 @@ La commande `dev` est utilisée lorsque l'application est lancée en mode dével
 
 </base-alert>
 
-L'application est maintenant en cours d'exécution sur **[http://localhost:3000](http://localhost:3000/).**
+L'application est maintenant en cours d'exécution sur **[localhost:3000](http://localhost:3000/).**
 
 On peut l'ouvrir dans notre navigateur en cliquant sur le lien dans le terminal et nous devrions voir le texte "Hello World" que nous avons ajouté dans l'étape précédente.
 

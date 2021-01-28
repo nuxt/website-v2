@@ -132,7 +132,7 @@ export default {
 
 - Type: `Object`
 
-Voir [webpack-dev-middleware](https://github.com/webpack/webpack-dev-middleware) fpour les options disponibles.
+Voir [webpack-dev-middleware](https://github.com/webpack/webpack-dev-middleware) pour les options disponibles.
 
 ## devtools
 

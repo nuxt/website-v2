@@ -152,7 +152,7 @@ Pour en savoir plus sur le fonctionnement d'asyncData, consultez notre chapitre 
 
 ### fetch
 
-Chaque fois que vous avez besoin d'obtenir des données asynchrones, vous pouvez utiliser `fetch()'. Fetch est appelé côté serveur lors du rendu de la route, et côté client lors de la navigation.
+Chaque fois que vous avez besoin d'obtenir des données asynchrones, vous pouvez utiliser `fetch()`. Fetch est appelé côté serveur lors du rendu de la route, et côté client lors de la navigation.
 
 ```html
 <script>

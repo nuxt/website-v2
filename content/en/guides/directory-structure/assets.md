@@ -131,7 +131,7 @@ Nuxt.js will automatically guess the file type by its extension and use the appr
 
 ## Fonts
 
-You can use local fonts by adding them to your assets folder. Once they have been added you can then access them though your css using the @font-face.
+You can use local fonts by adding them to your assets folder. Once they have been added you can then access them through your css using the @font-face.
 
 ```
 -| assets

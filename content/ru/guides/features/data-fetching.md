@@ -11,7 +11,7 @@ questions:
       - только на страницах
       - только в компонентах
     correctAnswer: на страницах и в компонентах
-  - question: У вас есть доступ к this при использовании Nuxt.js хука `fetch`?
+  - question: Есть ли у вас доступ к this при использовании Nuxt.js хука `fetch`?
     answers:
       - да
       - нет

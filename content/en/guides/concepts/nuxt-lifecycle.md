@@ -126,9 +126,9 @@ This part of the lifecycle is fully executed in the browser, no matter which Nux
   - Global middleware
   - Layout middleware
   - Route middleware
-- asyncData (blocking)
 - client-side Nuxt.js plugin
   - in order as defined in nuxt.config.js
+- asyncData (blocking)
 - beforeCreate (Vue lifecycle method)
 - created (Vue lifecycle method)
 - The new fetch (top to bottom, siblings = parallel) (non-blocking)

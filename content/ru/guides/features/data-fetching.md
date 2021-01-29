@@ -169,7 +169,7 @@ export default {
     '$route.query': '$fetch'
   },
   async fetch() {
-    // Called also on query changes
+    // Будет выполнено при изменении query строки
   }
 }
 ```

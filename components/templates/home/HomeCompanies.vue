@@ -10,7 +10,7 @@
           class="text-3xl font-medium text-center pb-8"
         >
           {{ $t('homepage.companies.title') }}
-          <template v-slot:nuxt>
+          <template #nuxt>
             <AppTitle />
           </template>
         </i18n>
@@ -157,11 +157,17 @@ export default {
             url: 'https://www.nespresso.com/careers/',
             class: 'h-10'
           },
+          // {
+          //   name: 'System76',
+          //   img: 'system76.svg',
+          //   url: 'https://system76.com',
+          //   class: 'h-10'
+          // },
           {
-            name: 'System76',
-            img: 'system76.svg',
-            url: 'https://system76.com',
-            class: 'h-10'
+            name: 'GitHub',
+            img: 'GitHub_Logo.png',
+            url: 'https://stars.github.com/',
+            class: 'h-12'
           },
           {
             name: 'Aircall',

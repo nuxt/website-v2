@@ -184,7 +184,7 @@ export default {
 </template>
 ```
 
-Вы также можете указать [пропс](https://vuejs.org/v2/api/#keep-alive) passed to `<keep-alive>` (тут хз че происходит в оригинале) указав пропс `keep-alive-props` в компоненте `<nuxt>`.
+Вы также можете пробросить [пропсы](https://vuejs.org/v2/api/#keep-alive) для скрытого кеширующего компонента `<keep-alive>` указав пропс `keep-alive-props` в компоненте `<nuxt>`.
 
 ```html{}[layouts/default.vue]
 <nuxt keep-alive :keep-alive-props="{ max: 10 }" />

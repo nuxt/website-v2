@@ -54,13 +54,13 @@ questions:
       - :prefetch="false"
       - no-prefetch и :prefetch="false"
     correctAnswer: no-prefetch и :prefetch="false"
-  - question: Какой по умолчанию класс вы можете использовать для стилизации частично совпадающих ссылок?
+  - question: Какой по умолчанию класс вы можете использовать для стилизации ссылок с частичным соответствием пути?
     answers:
       - nuxt-link-active
       - link-active
       - router-link-active
     correctAnswer: nuxt-link-active
-  - question: Какой по умолчанию класс вы можете использовать для стилизации точно совпадающих ссылок?
+  - question: Какой по умолчанию класс вы можете использовать для стилизации ссылок с точным соответствием пути?
     answers:
       - nuxt-link-exact-active
       - link-exact-active
@@ -313,13 +313,13 @@ export default {
 
 <base-alert type="info">
 
-Эта опция передается напрямую во `vue-router` как linkActiveClass. Более подробную информацию можете прочесть в [документации vue-router](https://router.vuejs.org/api/#active-class)
+Эта опция передается напрямую во `vue-router` как linkActiveClass. Более подробную информацию можете прочесть в [документации vue-router](https://router.vuejs.org/ru/api/#active-class)
 
 </base-alert>
 
 ### linkExactActiveClass
 
-The `linkExactActiveClass` works the same as the `vue-router` class for exact active links. If we want to show which links are active with an exact match all you have to do is create some css for the class `nuxt-link-exact-active`.
+`linkExactActiveClass` работает также, как и класс во `vue-router` для ссылок с точным совпадением пути. Если вы хотите показывать какие ссылки являются активными с точным совпадением пути, то все что вам необходимо сделать это написать немного CSS кода для класса `nuxt-link-exact-active`.
 
 ```css
 .nuxt-link-exact-active {
@@ -329,11 +329,11 @@ The `linkExactActiveClass` works the same as the `vue-router` class for exact ac
 
 <base-alert type="info">
 
-This css can be added to the navigation component or for a specific page or layout or in your main.css file.
+Эти css стили могут быть добавлены в ваш компонент навигации, либо для определенной страницы или макета, либо в ваш main.css файл.
 
 </base-alert>
 
-If you want to you can also configure the class name to be something else. You con do this by modifying the `linkExactActiveClass` in the router property in your `nuxt.config.js` file.
+Если вы хотите, то вы можете также настроить имя класса как вам угодно. Вы можете сделать это модифицируя `linkExactActiveClass` свойство у роутера в вашем `nuxt.config.js` файле.
 
 ```js{}[nuxt.config.js]
 export default {
@@ -344,14 +344,14 @@ export default {
 ```
 
 <base-alert type="info">
-
-This option is given directly to the `vue-router` linkExactActiveClass. See the [vue-router](https://router.vuejs.org/api/#active-class) [docs](https://router.vuejs.org/api/#exact-active-class) for more info
+  
+Эта опция передается напрямую во `vue-router` как linkExactActiveClass. Более подробную информацию можете прочесть в [документации vue-router](https://router.vuejs.org/ru/api/#exact-active-class)
 
 </base-alert>
 
 ### linkPrefetchedClass
 
-The linkPrefetchedClass will allow you to add styles for all links that have been prefetched. This is great for testing which links are being prefetched after modifying the default behavior. The linkPrefetchedClass is disabled by default. If you want to enable it you need to add it to the router property in your `nuxt-config.js` file.
+linkPrefetchedClass предоставляет возможность добавления стилей ко всем ссылкам которые являются предзагруженными. Это очень полезно для тестировки ссылок которые будут предзагружены после изменения поведения по умолчанию. linkPrefetchedClass отключен по умолчанию. Если вы хотите включить его вам необходимо добавить его в свойства роутера в вашем `nuxt-config.js` файле.
 
 ```js{}[nuxt.config.js]
 export default {
@@ -361,7 +361,7 @@ export default {
 }
 ```
 
-Then you can add the styles for that class.
+Затем вы можете добавить стили для этого класса.
 
 ```css
 .nuxt-link-prefetched {
@@ -369,16 +369,16 @@ Then you can add the styles for that class.
 }
 ```
 
-## The client-only Component
+## Компонент client-only
 
-This component is used to purposely render a component only on client-side. To import a component only on the client, register the component in a client-side only plugin.
+Этот компонент используется для преднамеренного рендеринга компонента только на стороне клиента. Для импорта компонента только на клиенте, поместите компонент внутрь clieny-only компонента.
 
 ```html{}[pages/example.vue]
 <template>
   <div>
     <sidebar />
     <client-only placeholder="Loading...">
-      <!-- this component will only be rendered on client-side -->
+      <!-- этот компонент будет отрендерен только на стороне клиента -->
       <comments />
     </client-only>
   </div>

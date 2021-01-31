@@ -66,7 +66,7 @@ export default {
 }
 ```
 
-nuxt の設定ファイルで、css プロパティの配列に記述する CSS/SCSS/Postcss/Less/Stylus/ などのファイルの拡張子は省略することができます。
+nuxt の設定ファイルで、css プロパティの配列に記述する CSS/SCSS/Postcss/Less/Stylus などのファイルの拡張子は省略することができます。
 
 ```js{}[nuxt.config.js]
 export default {

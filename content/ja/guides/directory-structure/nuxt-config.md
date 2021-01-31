@@ -412,6 +412,6 @@ node_modules .nuxt dist
 
 <base-alert type="next">
 
-[設定用語集](/docs/2.x/configuration-glossary/configuration-build)を見てみましょう。
+[ビルドの設定](/docs/2.x/configuration-glossary/configuration-build)を見てみましょう。
 
 </base-alert>

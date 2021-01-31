@@ -246,7 +246,7 @@ export default {
 
 ### modules
 
-このオプションで、プロジェクトに Nuxt モジュールを追加できます。
+このオプションで、プロジェクトに Nuxt.js モジュールを追加できます。
 
 ```js{}[nuxt.config.js]
 export default {

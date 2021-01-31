@@ -1,6 +1,6 @@
 ---
-title: Nuxt Lifecycle
-description: No matter which tool you use, you will always feel more confident when you understand how the tool works under the hood. The same applies to Nuxt.js.
+title: Nuxt 生命周期
+description: 无论使用哪种工具，当了解了该工具在幕后的工作方式时，那你就会充满信心。 Nuxt.js也是如此。
 position: 5
 category: concepts
 img: /docs/2.x/nuxt-lifecycle.svg
@@ -64,30 +64,34 @@ questions:
 
 <app-modal :src="img" :alt="imgAlt"></app-modal>
 
-No matter which tool you use, you will always feel more confident when you understand how the tool works under the hood. The same applies to Nuxt.js. The goal of this chapter is to give you a high-level overview of the different parts of the framework, their order of execution and how they work together.
+无论使用哪种工具，当了解了该工具在幕后的工作方式时，那你就会充满信心。 Nuxt.js 也是如此。这个章节的目的是为向你介绍框架高阶部分的不同，它们的执行顺序以及它们如何协同工作。
 
-The Nuxt.js lifecycle describes what happens after the build phase, where your application is bundled, chunked and minified. What happens after this phase depends on whether you have server-side rendering enabled or not. If you have, it furthermore depends on the type of server-side rendering you have chosen:
+Nuxt.js 生命周期描述了在开始构建之后发生的情况，在这个阶段，你的应用被打包，分块和压缩。在这个阶段之后会发生什么情况取决于您是否启用了服务器端渲染。如果有的话，它还取决于您选择的服务器端渲染类型：
 
-Dynamic SSR (`nuxt start`)
+动态 SSR (`nuxt start`)
 
-or Static Site Generation (`nuxt generate`).
+或
 
-## Lifecycle
+生成静态网站 (`nuxt generate`).
 
-### Server
+## 生命周期
 
-For SSR, these steps will be executed for every initial request to your app
+### 服务器端
 
-- The server starts (`nuxt start`)
+`下面这段大部分都是api或者是内置对象，译者无法准确翻译它的意思，所以容易有歧义的部分就用作者原文来代替了。`
 
-When using static site generation, the server steps are only executed on build time, but once for every page that will be generated
+在服务器端渲染，应用的每个初始请求将执行以下步骤
 
-- The generation process starts (`nuxt generate`)
+- 服务启动 (`nuxt start`)
+
+当使用生成静态网站时，服务启动步骤仅在构建时执行，但对于将要生成的每个页面都会执行一次
+
+- 开始生成过程 (`nuxt generate`)
 
 - Nuxt hooks
 - serverMiddleware
 - Server-side Nuxt plugins
-  - in order as defined in nuxt.config.js
+  - 按照 nuxt.config.js 中定义的顺序
 - nuxtServerInit
   - Vuex action that is called only on server-side to pre-populate the store
   - First argument is the **Vuex context**, second argument is the **Nuxt.js context**
@@ -98,50 +102,50 @@ When using static site generation, the server steps are only executed on build t
   - Layout middleware
   - Route middleware
 - asyncData
-- beforeCreate (Vue lifecycle method)
-- created (Vue lifecycle method)
+- beforeCreate (Vue 生命周期方法)
+- created (Vue 生命周期方法)
 - The new fetch (top to bottom, siblings = parallel)
 - Serialization of state (`render:routeContext` Nuxt.js hook)
 
-- the HTML rendering happens (`render:route` Nuxt.js hook)
+- HTML 开始渲染 (`render:route` Nuxt.js hook)
 
-- `render:routeDone` hook when HTML has been sent to the browser
+- `render:routeDone` HTML 已经全部发送到浏览器
 
 - `generate:before` Nuxt.js hook
-- HTML files are generated
-  - **Full static generation**
+- 生成 HTML 文件
+  - **全静态生成**
     - e.g. static payloads are extracted
-  - `generate:page` (HTML editable)
-  - `generate:routeCreated` (Route generated)
-- `generate:done` when all HTML files have been generated
+  - `generate:page` (HTML 已经创建好了)
+  - `generate:routeCreated` (路由已经创建好了)
+- `generate:done` 已经生成好了所有的 HTML 文件
 
 ### Client
 
-This part of the lifecycle is fully executed in the browser, no matter which Nuxt.js mode you've chosen.
+无论选择哪种 Nuxt.js 模式，这部分的生命周期都将在浏览器中完全执行。
 
 - Receives the HTML
 - Loading assets (e.g. JavaScript)
-- Vue Hydration
+- Vue Hydration 激活 vue.js
 - Middleware
   - Global middleware
   - Layout middleware
   - Route middleware
-- client-side Nuxt.js plugin
-  - in order as defined in nuxt.config.js
 - asyncData (blocking)
-- beforeCreate (Vue lifecycle method)
-- created (Vue lifecycle method)
+- client-side Nuxt.js plugin
+  - 按照 nuxt.config.js 中定义的顺序
+- beforeCreate (Vue 生命周期方法)
+- created (Vue 生命周期方法)
 - The new fetch (top to bottom, siblings = parallel) (non-blocking)
-- beforeMount (Vue lifecycle method)
-- mounted (Vue lifecycle method)
+- beforeMount (Vue 生命周期方法)
+- mounted (Vue 生命周期方法)
 
 ### Navigate using the NuxtLink component
 
-Same as for the _client_ part, everything is happening in the browser but only when navigating via `<NuxtLink>`. Furthermore, no page content is displayed until all _blocking_ tasks are fulfilled.
+与*client*部分相同，当通过`<NuxtLink>`进行导航时，一切都在浏览器中进行。 此外，在完成所有*blocking*任务之前，不会显示页面内容。
 
 <base-alert type="info">
 
-Check out the component chapter to see more info on [`<NuxtLink>`](/docs/2.x/features/nuxt-components#the-nuxtlink-component)
+了解更多有关[`<NuxtLink>`](/docs/2.x/features/nuxt-components#the-nuxtlink-component)。
 
 </base-alert>
 
@@ -151,7 +155,7 @@ Check out the component chapter to see more info on [`<NuxtLink>`](/docs/2.x/fea
   - Route middleware
 - asyncData (blocking)
 - asyncData (blocking) [or full static payload loading]
-- beforeCreate & created (Vue lifecycle methods)
+- beforeCreate & created (Vue 生命周期方法)
 - fetch (non-blocking)
 - beforeMount & mounted
 
@@ -159,7 +163,7 @@ Check out the component chapter to see more info on [`<NuxtLink>`](/docs/2.x/fea
 
 <base-alert type="next">
 
-Check out the [Features book](/docs/2.x/features/rendering-modes)
+查看这里[Features book](/docs/2.x/features/rendering-modes)
 
 </base-alert>
 

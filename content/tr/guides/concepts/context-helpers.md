@@ -32,7 +32,7 @@ questions:
       - res
       - app
     correctAnswer: from
-  - question: '`$nuxt` yardımcısı neyi yapamaz?'
+  - question: '$nuxt yardımcısı neyi yapamaz?'
     answers:
       - Nuxt sürümünü görüntüleme
       - Kullanıcıların internet bağlantısı hakkında bilgi sunma

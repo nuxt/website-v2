@@ -3,7 +3,7 @@ title: 自定义加载组件
 description: 创建一个自定义加载组件，修改默认加载样式和图标。
 position: 3
 category: loading
-csb_link: https://codesandbox.io/embed/github/nuxt-academy/examples/tree/master/loading/custom-loading-component?fontsize=14&hidenavigation=1&module=%2Fcomponents%2FLoadingBar.vue&theme=dark&view=editor
+csb_link: https://codesandbox.io/embed/github/nuxtlabs/examples/tree/master/loading/custom-loading-component?fontsize=14&hidenavigation=1&module=%2Fcomponents%2FLoadingBar.vue&theme=dark&view=editor
 ---
 
 创建一个自定义加载组件，修改默认加载样式和图标。

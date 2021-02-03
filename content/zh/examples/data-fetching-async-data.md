@@ -3,7 +3,7 @@ title: 异步请求
 description: 使用异步请求从API中获取数据。
 position: 1
 category: dataFetching
-csb_link: https://codesandbox.io/embed/github/nuxt-academy/examples/tree/master/data-fetching/async-data-hook?fontsize=14&hidenavigation=1&theme=dark&view=editor
+csb_link: https://codesandbox.io/embed/github/nuxtlabs/examples/tree/master/data-fetching/async-data-hook?fontsize=14&hidenavigation=1&theme=dark&view=editor
 ---
 
 使用`asyncData`异步请求从 API 中获取数据。（在服务器端获取数据并渲染）

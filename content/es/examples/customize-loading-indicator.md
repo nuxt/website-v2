@@ -10,8 +10,8 @@ csb_link: https://codesandbox.io/embed/github/nuxt-academy/examples/tree/master/
 
 `nuxt.config.js` contiene:
 
-- `ssr: false` por lo que solo tenemos renderizado del lado del cliente
-- `loadingIndicator` propiedad para modificar el indicador de carga predeterminado
+- `ssr: false` por lo que solo tenemos renderizado del lado del cliente.
+- `loadingIndicator` propiedad para modificar el indicador de carga predeterminado.
 
 <base-alert type="next">
 

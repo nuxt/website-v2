@@ -1,6 +1,6 @@
 ---
 title: Preprocesadores
-description: Configura tu aplicación para hacer uso de pug y sass con recursos de estilo y así añadir fácilmente variables a todos los componentes.
+description: Configura tu aplicación para hacer uso de Pug y Sass con recursos de estilo y así añadir fácilmente variables a todos los componentes.
 position: 2
 category: assetManagement
 csb_link: https://codesandbox.io/embed/github/nuxt-academy/examples/tree/master/asset-management/pre-processors?fontsize=14&hidenavigation=1&theme=dark&view=editor
@@ -8,7 +8,7 @@ csb_link: https://codesandbox.io/embed/github/nuxt-academy/examples/tree/master/
 
 <example-intro></example-intro>
 
-`pages/index.vue` hace uso de pug como lenguaje de la plantilla y sass para el estilo.
+`pages/index.vue` hace uso de Pug como lenguaje de la plantilla y Sass para el estilo.
 
 `nuxt.config.js`:
 

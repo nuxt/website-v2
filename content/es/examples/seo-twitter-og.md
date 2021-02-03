@@ -22,7 +22,7 @@ Aprende más sobre las opciones disponibles para `head`, en la [documentación d
 
 <base-alert type="next">
 
-Aprende más sobre las metaetiquetas en el capítulo de [Metaetiquetas y SEO](/docs/2.x/features/meta-tags-seo) en el libro de Características .
+Aprende más sobre las metaetiquetas en el capítulo de [Metaetiquetas y SEO](/docs/2.x/features/meta-tags-seo) en el libro de Características.
 
 </base-alert>
 

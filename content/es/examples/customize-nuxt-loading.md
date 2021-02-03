@@ -1,5 +1,5 @@
 ---
-title: Personalizar la carga de Nuxt
+title: Personalizar el cargador de Nuxt
 description: Cree un componente de carga personalizado para reemplazar el cargador predeterminado
 position: 1
 category: loading
@@ -8,7 +8,7 @@ csb_link: https://codesandbox.io/embed/github/nuxt-academy/examples/tree/master/
 
 <example-intro></example-intro>
 
-`nuxt.config.js` contiene la propiedad `loading` que modifica el cargador predeterminado
+`nuxt.config.js` contiene la propiedad `loading` que modifica el cargador predeterminado.
 
 `pages/loading.vue`inicia programáticamente el cargador, por lo que obligamos a la página a tardar 2 segundos en cargarse.
 

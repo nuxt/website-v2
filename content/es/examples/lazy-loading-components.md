@@ -1,6 +1,6 @@
 ---
 title: Importar componentes dinámicamente
-description: Utiliza fetch en tus componentes para obtener datos de una API así como importar componentes automática y dinámicamente
+description: Utiliza fetch en tus componentes para obtener datos de una API así como importar componentes de forma automática y dinámica
 position: 6
 category: miscellaneous
 csb_link: https://codesandbox.io/embed/github/nuxt-academy/examples/tree/master/miscellaneous/lazy-loading-components?fontsize=14&hidenavigation=1&theme=dark&view=editor

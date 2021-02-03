@@ -3,7 +3,7 @@ title: 本地模块
 description: 使用ngrok建立隧道的本地模块。
 position: 501
 category: modules
-csb_link: https://codesandbox.io/embed/github/nuxt-academy/examples/tree/master/modules/local-module?fontsize=14&hidenavigation=1&module=%2Fmodules%2Fngrok%2Findex.js&theme=dark&view=editor
+csb_link: https://codesandbox.io/embed/github/nuxtlabs/examples/tree/master/modules/local-module?fontsize=14&hidenavigation=1&module=%2Fmodules%2Fngrok%2Findex.js&theme=dark&view=editor
 ---
 
 使用 ngrok 建立隧道的本地模块。

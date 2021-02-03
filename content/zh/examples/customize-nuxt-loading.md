@@ -3,7 +3,7 @@ title: 自定义Nuxt加载样式
 description: 创建自定义加载组件替换默认加载样式
 position: 1
 category: loading
-csb_link: https://codesandbox.io/embed/github/nuxt-academy/examples/tree/master/loading/customize-nuxt-loading?fontsize=14&hidenavigation=1&module=%2Fnuxt.config.js&theme=dark&view=editor
+csb_link: https://codesandbox.io/embed/github/nuxtlabs/examples/tree/master/loading/customize-nuxt-loading?fontsize=14&hidenavigation=1&module=%2Fnuxt.config.js&theme=dark&view=editor
 ---
 
 创建自定义加载组件替换默认加载样式

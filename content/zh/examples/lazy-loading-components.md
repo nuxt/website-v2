@@ -3,7 +3,7 @@ title: 懒加载组件
 description: 在懒加载组件中使用`fetch()`从API接口获取数据，并引入这个组件
 position: 6
 category: miscellaneous
-csb_link: https://codesandbox.io/embed/github/nuxt-academy/examples/tree/master/miscellaneous/lazy-loading-components?fontsize=14&hidenavigation=1&theme=dark&view=editor
+csb_link: https://codesandbox.io/embed/github/nuxtlabs/examples/tree/master/miscellaneous/lazy-loading-components?fontsize=14&hidenavigation=1&theme=dark&view=editor
 ---
 
 在懒加载组件中使用`fetch()`从 API 接口获取数据，并引入这个组件

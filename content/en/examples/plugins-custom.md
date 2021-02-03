@@ -3,7 +3,7 @@ title: Custom Plugins
 description: In this example we show how you how you can create your own plugin
 position: 404
 category: plugins
-csb_link: https://codesandbox.io/embed/github/nuxt-academy/examples/tree/master/plugins/custom-plugins?fontsize=14&hidenavigation=1&module=%2Fplugins%2Fnuxt-api.js&theme=dark&view=editor
+csb_link: https://codesandbox.io/embed/github/nuxtlabs/examples/tree/master/plugins/custom-plugins?fontsize=14&hidenavigation=1&module=%2Fplugins%2Fnuxt-api.js&theme=dark&view=editor
 ---
 
 <example-intro></example-intro>

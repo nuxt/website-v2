@@ -70,10 +70,29 @@ To disable compression, use `compressor: false`.
 
 - Type `Object`
   - Default: `{ dist: {}, static: { skipUnknown: true } }`
+  - `dist` key is for routes matching the [publicPath](/docs/2.x/configuration-glossary/configuration-build#publicpath) (ie: `/_nuxt/*`)
+  - `static` key is for routes matching routes matching `/*`
 
-> Options for [serve-placeholder](https://github.com/nuxt/serve-placeholder) middleware.
+> `dist` and `static` values are forwarded to [serve-placeholder](https://github.com/nuxt-contrib/serve-placeholder) middleware.
 
 If you want to disable one of them or both, you can pass a falsy value.
+
+Example of allowing `.js` extension for routing (ex: `/repos/nuxt.js`):
+
+```js [nuxt.config.js]
+export default {
+  render: {
+    fallback: {
+      static: {
+        // Avoid sending 404 for these extensions
+        handlers: {
+          '.js': false
+        }
+      }
+    }
+  }
+}
+```
 
 ## http2
 

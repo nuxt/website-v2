@@ -3,7 +3,7 @@ title: Customize Nuxt Loading
 description: Create a custom loading component to replace the default loader
 position: 1
 category: loading
-csb_link: https://codesandbox.io/embed/github/nuxt-academy/examples/tree/master/loading/customize-nuxt-loading?fontsize=14&hidenavigation=1&module=%2Fnuxt.config.js&theme=dark&view=editor
+csb_link: https://codesandbox.io/embed/github/nuxtlabs/examples/tree/master/loading/customize-nuxt-loading?fontsize=14&hidenavigation=1&module=%2Fnuxt.config.js&theme=dark&view=editor
 ---
 
 <example-intro></example-intro>

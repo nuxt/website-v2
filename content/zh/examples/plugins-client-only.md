@@ -3,7 +3,7 @@ title: 客户端专用插件
 description: 在此示例中，展示了如何使用插件，使其仅在客户端可用
 position: 402
 category: plugins
-csb_link: https://codesandbox.io/embed/github/nuxt-academy/examples/tree/master/plugins/client-only-plugins?fontsize=14&hidenavigation=1&module=%2Fplugins%2Fclient-only.client.js&theme=dark&view=editor
+csb_link: https://codesandbox.io/embed/github/nuxtlabs/examples/tree/master/plugins/client-only-plugins?fontsize=14&hidenavigation=1&module=%2Fplugins%2Fclient-only.client.js&theme=dark&view=editor
 ---
 
 在此示例中，展示了如何使用插件，使其仅在客户端可用

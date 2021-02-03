@@ -3,7 +3,7 @@ title: 布局
 description: 使用布局显示不同的页面结构方式
 category: miscellaneous
 position: 205
-csb_link: https://codesandbox.io/embed/github/nuxt-academy/examples/tree/master/miscellaneous/layouts?fontsize=14&hidenavigation=1&module=%2Fpages%2Fprofile.vue&theme=dark&view=editor
+csb_link: https://codesandbox.io/embed/github/nuxtlabs/examples/tree/master/miscellaneous/layouts?fontsize=14&hidenavigation=1&module=%2Fpages%2Fprofile.vue&theme=dark&view=editor
 ---
 
 使用布局显示不同的页面结构方式

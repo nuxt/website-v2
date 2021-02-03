@@ -3,7 +3,7 @@ title: SEO HTML 头部
 description: Nuxt.js 的 SEO HTML 头部示例
 category: seo
 position: 3
-csb_link: https://codesandbox.io/embed/github/nuxt-academy/examples/tree/master/seo/seo-html-head?fontsize=14&hidenavigation=1&module=%2Fnuxt.config.js&theme=dark&view=editor
+csb_link: https://codesandbox.io/embed/github/nuxtlabs/examples/tree/master/seo/seo-html-head?fontsize=14&hidenavigation=1&module=%2Fnuxt.config.js&theme=dark&view=editor
 ---
 
 Nuxt.js 的 SEO HTML 头部示例

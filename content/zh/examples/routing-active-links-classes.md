@@ -3,7 +3,7 @@ title: 内部跳转路由
 description: 更改默认的NuxtLink样式，并设置路由触发和被触发的样式
 position: 103
 category: routing
-csb_link: https://codesandbox.io/embed/github/nuxt-academy/examples/tree/master/routing/active-link-classes?fontsize=14&hidenavigation=1&module=%2Flayouts%2Fdefault.vue&theme=dark&view=editor
+csb_link: https://codesandbox.io/embed/github/nuxtlabs/examples/tree/master/routing/active-link-classes?fontsize=14&hidenavigation=1&module=%2Flayouts%2Fdefault.vue&theme=dark&view=editor
 ---
 
 <example-intro></example-intro>

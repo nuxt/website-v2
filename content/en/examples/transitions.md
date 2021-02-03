@@ -3,7 +3,7 @@ title: Nuxt transitions
 description: Adding default and custom transitions to your pages and layouts
 position: 201
 category: transitions
-csb_link: https://codesandbox.io/embed/github/nuxt-academy/examples/tree/master/transitions/nuxt-transitions?fontsize=14&hidenavigation=1&module=%2Flayouts%2Fdefault.vue&theme=dark&view=editor
+csb_link: https://codesandbox.io/embed/github/nuxtlabs/examples/tree/master/transitions/nuxt-transitions?fontsize=14&hidenavigation=1&module=%2Flayouts%2Fdefault.vue&theme=dark&view=editor
 ---
 
 <example-intro></example-intro>

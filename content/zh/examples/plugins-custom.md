@@ -3,7 +3,7 @@ title: 自定义插件
 description: 这个例子将告诉你怎么创建自己的插件
 position: 404
 category: plugins
-csb_link: https://codesandbox.io/embed/github/nuxt-academy/examples/tree/master/plugins/custom-plugins?fontsize=14&hidenavigation=1&module=%2Fplugins%2Fnuxt-api.js&theme=dark&view=editor
+csb_link: https://codesandbox.io/embed/github/nuxtlabs/examples/tree/master/plugins/custom-plugins?fontsize=14&hidenavigation=1&module=%2Fplugins%2Fnuxt-api.js&theme=dark&view=editor
 ---
 
 这个例子将告诉你怎么创建自己的插件

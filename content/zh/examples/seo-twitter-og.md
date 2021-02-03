@@ -3,7 +3,7 @@ title: 搜索引擎优化 Twitter 和 Open Graph
 description: 在此示例中，我们创建了一个组件，用于在社交媒体上共享时添加`Twitter`和`Open Graph`标签。
 position: 4
 category: seo
-csb_link: https://codesandbox.io/embed/github/nuxt-academy/examples/tree/master/seo/seo-twitter-og?fontsize=14&hidenavigation=1&module=%2Fcomponents%2FSocialHead.vue&theme=dark&view=editor
+csb_link: https://codesandbox.io/embed/github/nuxtlabs/examples/tree/master/seo/seo-twitter-og?fontsize=14&hidenavigation=1&module=%2Fcomponents%2FSocialHead.vue&theme=dark&view=editor
 ---
 
 `众所周知，国内不存在这两个网站~`

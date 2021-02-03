@@ -3,7 +3,7 @@ title: Nuxt帮助程序
 description: 使用`$nuxt`帮助程序, 包含`$nuxt.isOnline`，`renderedOn`，`refresh()`，`onNuxtReady`
 position: 8
 category: miscellaneous
-csb_link: https://codesandbox.io/embed/github/nuxt-academy/examples/tree/master/miscellaneous/nuxt-helpers?fontsize=14&hidenavigation=1&theme=dark&view=editor
+csb_link: https://codesandbox.io/embed/github/nuxtlabs/examples/tree/master/miscellaneous/nuxt-helpers?fontsize=14&hidenavigation=1&theme=dark&view=editor
 ---
 
 使用`$nuxt`帮助程序, 包含`$nuxt.isOnline`，`renderedOn`，`refresh()`，`onNuxtReady`

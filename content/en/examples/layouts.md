@@ -3,7 +3,7 @@ title: Layouts
 description: Using layouts to show different ways to structure your page
 position: 1
 category: miscellaneous
-csb_link: https://codesandbox.io/embed/github/nuxt-academy/examples/tree/master/miscellaneous/layouts?fontsize=14&hidenavigation=1&module=%2Fpages%2Fprofile.vue&theme=dark&view=editor
+csb_link: https://codesandbox.io/embed/github/nuxtlabs/examples/tree/master/miscellaneous/layouts?fontsize=14&hidenavigation=1&module=%2Fpages%2Fprofile.vue&theme=dark&view=editor
 ---
 
 <example-intro></example-intro>

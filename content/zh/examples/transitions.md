@@ -3,7 +3,7 @@ title: Nuxt 过渡动画
 description: 使用默认或自定义过渡动画添加到到页面或布局里
 position: 201
 category: transitions
-csb_link: https://codesandbox.io/embed/github/nuxt-academy/examples/tree/master/transitions/nuxt-transitions?fontsize=14&hidenavigation=1&module=%2Flayouts%2Fdefault.vue&theme=dark&view=editor
+csb_link: https://codesandbox.io/embed/github/nuxtlabs/examples/tree/master/transitions/nuxt-transitions?fontsize=14&hidenavigation=1&module=%2Flayouts%2Fdefault.vue&theme=dark&view=editor
 ---
 
 使用`默认`或`自定义过渡动画`用来添加到到页面或布局里

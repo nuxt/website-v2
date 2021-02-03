@@ -3,7 +3,7 @@ title: 嵌套页面
 description: 使用Nuxt Child组件创建包含父页面和子页面的嵌套页面。
 position: 105
 category: routing
-csb_link: https://codesandbox.io/embed/github/nuxt-academy/examples/tree/master/routing/nested-pages?fontsize=14&hidenavigation=1&module=%2Fpages%2Fparent.vue&theme=dark&view=editor
+csb_link: https://codesandbox.io/embed/github/nuxtlabs/examples/tree/master/routing/nested-pages?fontsize=14&hidenavigation=1&module=%2Fpages%2Fparent.vue&theme=dark&view=editor
 ---
 
 使用 Nuxt Child 组件创建包含父页面和子页面的嵌套页面。

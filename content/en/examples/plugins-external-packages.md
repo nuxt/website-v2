@@ -3,7 +3,7 @@ title: External Packages Plugin
 description: In this example we show how to use a plugin with an external package - axios
 position: 403
 category: plugins
-csb_link: https://codesandbox.io/embed/github/nuxt-academy/examples/tree/master/plugins/external-packages-plugin?fontsize=14&hidenavigation=1&module=%2Fplugins%2Faxios.js&theme=dark&view=editor
+csb_link: https://codesandbox.io/embed/github/nuxtlabs/examples/tree/master/plugins/external-packages-plugin?fontsize=14&hidenavigation=1&module=%2Fplugins%2Faxios.js&theme=dark&view=editor
 ---
 
 <example-intro></example-intro>

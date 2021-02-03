@@ -3,7 +3,7 @@ title: Axios用法
 description: 展示如何在`nuxt.config.js` 文件内使用env属性来添加API的Url，以便让我们方便调用，而不用在页面上写入URL
 position: 503
 category: modules
-csb_link: https://codesandbox.io/embed/github/nuxt-academy/examples/tree/master/modules/axios-usage?fontsize=14&hidenavigation=1&module=%2Fnuxt.config.js&theme=dark&view=editor
+csb_link: https://codesandbox.io/embed/github/nuxtlabs/examples/tree/master/modules/axios-usage?fontsize=14&hidenavigation=1&module=%2Fnuxt.config.js&theme=dark&view=editor
 ---
 
 展示如何在`nuxt.config.js` 文件内使用 env 属性来添加 API 接口的 Url，以便让我们方便调用而不用在页面上写入 URL

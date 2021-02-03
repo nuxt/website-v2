@@ -3,7 +3,7 @@ title: 外部插件
 description: 这个示例展示了如何将插件与外部模块包一起使用 - 如axios
 position: 403
 category: plugins
-csb_link: https://codesandbox.io/embed/github/nuxt-academy/examples/tree/master/plugins/external-packages-plugin?fontsize=14&hidenavigation=1&module=%2Fplugins%2Faxios.js&theme=dark&view=editor
+csb_link: https://codesandbox.io/embed/github/nuxtlabs/examples/tree/master/plugins/external-packages-plugin?fontsize=14&hidenavigation=1&module=%2Fplugins%2Faxios.js&theme=dark&view=editor
 ---
 
 这个示例展示了如何将插件与外部依赖包一起使用 - 如`axios`

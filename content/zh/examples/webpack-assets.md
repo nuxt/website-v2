@@ -3,7 +3,7 @@ title: webpack 资源依赖
 description: 使用`assets` 文件夹来添加`css`, `image`, `fonts`到你的应用里
 position: 1
 category: assetManagement
-csb_link: https://codesandbox.io/embed/github/nuxt-academy/examples/tree/master/asset-management/webpack-assets?fontsize=14&hidenavigation=1&theme=dark&view=editor
+csb_link: https://codesandbox.io/embed/github/nuxtlabs/examples/tree/master/asset-management/webpack-assets?fontsize=14&hidenavigation=1&theme=dark&view=editor
 ---
 
 使用`assets` 文件夹来添加`css`, `image`, `fonts`到你的应用里

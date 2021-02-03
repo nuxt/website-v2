@@ -3,7 +3,7 @@ title: Hello World
 description: Nuxt.js 的 Hello World 示例
 position: 1
 category: routing
-csb_link: https://codesandbox.io/embed/github/nuxt-academy/examples/tree/master/routing/hello-world?fontsize=14&hidenavigation=1&theme=dark&view=editor
+csb_link: https://codesandbox.io/embed/github/nuxtlabs/examples/tree/master/routing/hello-world?fontsize=14&hidenavigation=1&theme=dark&view=editor
 ---
 
 Nuxt.js 的 Hello World 示例

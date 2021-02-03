@@ -3,7 +3,7 @@ title: fetch Hook
 description: 使用`fetch`方法从组件和页面中获取数据
 position: 2
 category: dataFetching
-csb_link: https://codesandbox.io/embed/github/nuxt-academy/examples/tree/master/data-fetching/fetch-hook?fontsize=14&hidenavigation=1&module=%2Fcomponents%2FMountains.vue&theme=dark&view=editor
+csb_link: https://codesandbox.io/embed/github/nuxtlabs/examples/tree/master/data-fetching/fetch-hook?fontsize=14&hidenavigation=1&module=%2Fcomponents%2FMountains.vue&theme=dark&view=editor
 ---
 
 使用`fetch`方法从组件和页面中获取数据

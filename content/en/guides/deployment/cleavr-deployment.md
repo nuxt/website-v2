@@ -8,8 +8,7 @@ position: 104.1
 ---
 
 
-[Cleavr](https://cleavr.io) is a server management console that integrates with multiple VPS (cloud hosting) providers and helps you configure servers to host your Nuxt apps as well 
-as deploys your Nuxt apps in just a couple of clicks. 
+[Cleavr](https://cleavr.io) is a server management console that integrates with multiple VPS (cloud hosting) providers and helps you configure servers to host your Nuxt apps as well as deploys your Nuxt apps in just a couple of clicks. 
 
 Cleavr includes the following features: 
 

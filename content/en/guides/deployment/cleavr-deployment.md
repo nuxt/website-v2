@@ -33,7 +33,7 @@ Nuxt app to an existing server. These setup instructions will describe adding a 
 
 In Cleavr, navigate to the server to add the new app to and select **Add Site**. 
 
-Select either Nuxt SSR or Nuxt Static web app type depending on which target you intend to deploy. Fill out the remainder website info and click **Add**. 
+Select either Nuxt SSR or Nuxt Static web app type depending on which target you intend to deploy. Fill out the remaining website info and click **Add**. 
 
 This will add the site to your server and configure the server with any missing environment dependencies.
 

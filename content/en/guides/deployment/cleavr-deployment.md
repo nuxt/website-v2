@@ -38,7 +38,7 @@ This will add the site to your server and configure the server with any missing 
 
 Once the site has been successfully added, go to the Web App section and click **Complete Setup** for the web app that was added. 
 
-Fill in the VC provider, repository, and branch to deploy fields and then click **Update**.
+Fill in your version control provider, repository, and branch to deploy fields and then click **Update**.
 
 ## Step 2: Deploy
 

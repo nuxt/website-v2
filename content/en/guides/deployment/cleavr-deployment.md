@@ -28,8 +28,7 @@ Cleavr includes the following features:
 
 ## Step 1: Initial setup
 
-You can use Flash Deploy to provision / configure a new server and deploy your app in one-fell-swoop, or you can use the traditional method of adding a new
-Nuxt app to an existing server. These setup instructions will describe adding a new app to an existing server. 
+You can use Flash Deploy to provision / configure a new server and deploy your app in one fell swoop, or you can use the traditional method of adding a new Nuxt app to an existing server. These setup instructions will describe adding a new app to an existing server. 
 
 In Cleavr, navigate to the server to add the new app to and select **Add Site**. 
 

@@ -22,7 +22,7 @@ Cleavr includes the following features:
 
 ## Prerequisites
 
-- Your Cleavr account is connected to your VPS and VC (version control - ie: GitHub, GitLab, Bitbucket) providers
+- Your Cleavr account is connected to your VPS and version control (e.g. GitHub, GitLab, Bitbucket) providers
 - You have a Nuxt SSR or Static project ready to deploy
 - You have an existing provisioned server
 

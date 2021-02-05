@@ -4,7 +4,7 @@ description: How to deploy Nuxt.js on DigitalOcean App Platform?
 menu: DO App Platform
 target: Static & Server
 category: deployment
-position: 104.1
+position: 104.2
 ---
 
 [DigitalOcean App Platform](https://www.digitalocean.com/products/app-platform/) allows you to build, deploy, and scale apps quickly using a simple, fully managed solution. They’ll handle the infrastructure, app runtimes and dependencies, so that you can push code to production in just a few clicks.

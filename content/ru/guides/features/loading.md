@@ -66,13 +66,13 @@ questions:
     correctAnswer: 'name: circle'
 ---
 
-Out of the box, Nuxt.js gives you its own loading progress bar component that's shown between routes. You can customize it, disable it or even create your own loading component.
+Прям из коробки Nuxt.js предоставляет вам компонент для отображения состояния загрузки, который показывается при переходах от одной страницы к другой (между маршрутов?). Вы можете настроить его, отключить или даже создать ваш собственный компонент. 
 
-## Customizing the Progress Bar
+## Настройка индикатора загрузки
 
-Among other properties, the color, size, duration and direction of the progress bar can be customized to suit your application's needs. This is done by updating the `loading` property of the `nuxt.config.js` with the corresponding properties.
+Среди прочих свойств, таких как цвет, размер, длительность или направление индикатора загрузки, вы также можете настроить его исходя из потребностей вашего приложения. Это возможно сделать с помощью свойства `loading` в файле `nuxt.config.js` изменив соответствующие своства.
 
-For example, to set a blue progress bar with a height of 5px, we update the `nuxt.config.js` to the following:
+Например, чтобы сделать индикатор загрузки синего цвета и высотой 5px, вам нужно добавить следующие свойства в файле `nuxt.config.js`:
 
 ```js
 export default {
@@ -83,22 +83,22 @@ export default {
 }
 ```
 
-List of properties to customize the progress bar.
+Ниже вы можете увидеть список свойств для настройки индикатора загрузки.
 
-| Key         | Type    | Default | Description                                                                                                                       |     |
-| ----------- | ------- | ------- | --------------------------------------------------------------------------------------------------------------------------------- | --- |
-| color       | String  | 'black' | CSS color of the progress bar                                                                                                     |     |
-| failedColor | String  | 'red'   | CSS color of the progress bar when an error appended while rendering the route (if data or fetch sent back an error for example). |     |
-| height      | String  | '2px'   | Height of the progress bar (used in the style property of the progress bar)                                                       |     |
-| throttle    | Number  | 200     | In ms, wait for the specified time before displaying the progress bar. Useful for preventing the bar from flashing.               |     |
-| duration    | Number  | 5000    | In ms, the maximum duration of the progress bar, Nuxt.js assumes that the route will be rendered before 5 seconds.                |     |
-| continuous  | Boolean | false   | Keep animating progress bar when loading takes longer than duration.                                                              |     |
-| css         | Boolean | true    | Set to false to remove default progress bar styles (and add your own).                                                            |     |
-| rtl         | Boolean | false   | Set the direction of the progress bar from right to left.                                                                         |     |
+| Ключ         | Тип     | По умолчанию   | Описание                                                                                                               |
+| -----------  | ------- | -------------- | --------------------------------------------------------------------------------------------------------------------------------------------------- |
+| цвет         | String  | 'black'        | CSS цвет индикатора загрузки                                                                                           |
+| цвет ошибки  | String  | 'red'          | CSS цвет индикатора загрузки, когда произошла ощибка при переходе между страницами (например когда данные иди запрос вернулись обратно с ошибкой. |
+| высота       | String  | '2px'          | Высота индикатора загрузки (используется в стиле свойста индикатора).                                                   |
+| throttle     | Number  | 200            | Задержка в мс перед отображением индикатора загрузки. Полезно для предотвращения мигания индикатора.|
+| длительность | Number  | 5000           | Максимальная длительность индикатора загрузки. Nuxt.js предполагает, что страница будет отображена в течении 5 секунд. |
+| continuous   | Boolean | false          | Возможность дальнейшего анимирования индикатора загрузки, если загрузка занимает больше времени, чем ее длительность.   |
+| стили css    | Boolean | true           | Указать false для удаления стилей индикатора загрузки по умолчанию (и добавления ваших собственных).                   |
+| направление  | Boolean | false          | Установить направление индикатора загрузки с правва на лево.                                                            |
 
-## Disable the Progress Bar
+## Отключение индикатора загрузки
 
-If you don't want to display the progress bar between the routes add `loading: false` in your `nuxt.config.js` file:
+Если вы не хотите отображать индикатор загрузки при переходах между страницами, просто добавьте `loading: false` в ваш файл `nuxt.config.js`:
 
 ```js{}[nuxt.config.js]
 export default {
@@ -106,7 +106,7 @@ export default {
 }
 ```
 
-The loading property gives you the option to disable the default loading progress bar on a specific page.
+Свойство `loading` дает возможность отключения индикатора загрузки на нужной вам странице.
 
 ```html{}[pages/index.vue]
 <template>

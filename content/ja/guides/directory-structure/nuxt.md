@@ -39,7 +39,7 @@ questions:
 
 <base-alert>
 
-The `.nuxt` directory should not be committed to your version control system and should be ignored through your `.gitignore` as it will be generated automatically when executing `nuxt dev` or `nuxt build`.
+`.nuxt` ディレクトリはバージョン管理システムにコミットされるべきではありません。`nuxt dev` または `nuxt build` を実行したときに自動的に生成されるので、`.gitignore` で無視してください。
 
 </base-alert>
 

@@ -45,7 +45,7 @@ questions:
 
 ### The buildDir Property
 
-By default, many tools assume that `.nuxt` is a hidden directory, because its name starts with a dot. You can use the buildDir option to prevent that. If you do change the name remember to add the new name to your `.gitignore` file.
+デフォルトでは `.nuxt` のディレクトリ名がドットで始まるため、多くのツールが隠しディレクトリと見なします。これを防ぐには buildDir オプションを使用します。名前を変更した場合は、新しい名前を `.gitignore` ファイルに追加することを忘れないようにしてください。
 
 ```js{}[nuxt.config.js]
 export default {

@@ -1,64 +1,64 @@
 ---
 title: Loading
-description: Out of the box, Nuxt.js gives you its own loading progress bar component that's shown between routes. You can customize it, disable it or even create your own loading component.
+description: Прям из коробки Nuxt.js предоставляет вам компонент для отображения состояния загрузки, который показывается при переходах от одной страницы к другой (между маршрутов?). Вы можете настроить его, отключить или даже создать ваш собственный компонент.
 position: 8
 category: features
 csb_link: https://codesandbox.io/embed/github/nuxt-academy/guides-examples/tree/master/03_features/08_loading?fontsize=14&hidenavigation=1&theme=dark
 questions:
-  - question: In order for the Nuxt.js loading progress bar to work what do you have to do?
+  - question: Что нужно сделать, чтобы индикатор прогресса загрузки Nuxt.js заработал?
     answers:
-      - Nothing, it just works
-      - set loading to true in the nuxt.config.js file
-      - create a loading component
-    correctAnswer: Nothing, it just works
-  - question: Where can you modify the styles for the default progress bar?
+      - Ничего, это работает из коробки
+      - Изменить значения свойства `loading` на `true` в файле `nuxt.config.js`
+      - Создать компонент индикатора загрузки
+    correctAnswer: Ничего, это работает из коробки
+  - question: В каком месте вы можете изменить стили для индикатора прогресса загрузки?
     answers:
-      - layout component
-      - page component
-      - nuxt.config.js
-    correctAnswer: layout component
-  - question: In which property do you set the styles for the progress bar in the nuxt.config.js file?
+      - В компоненте макета
+      - В компоненте страницы
+      - В файле nuxt.config.js
+    correctAnswer: В компоненте макета
+  - question: В каком свойстве вы можете прописать стили для индикатора загрузки в файле `nuxt.config.js`?
     answers:
       - progress
       - loading
       - loadingBar
     correctAnswer: loading
-  - question: What do you add in the nuxt.config.js file to disable loading?
+  - question: Какое свойство вы должны добавить в файл `nuxt.config.js` для отключения индикатора загрузки?
     answers:
       - 'loadingBar: false'
       - "loading: 'none'"
       - 'loading: false'
     correctAnswer: 'loading: false'
-  - question: You can disable the loading on specific pages?
+  - question: Можете ли вы отключить индикатор загрузки на нужных вам страницах?
     answers:
       - true
       - false
     correctAnswer: true
-  - question: What do you use to programmatically start the loading bar?
+  - question: Что вы должны использовать чтобы программно запустить индикатор загрузки?
     answers:
       - $nuxt.loading.start()
       - $nuxt.loading()
       - $loading.start()
     correctAnswer: $nuxt.loading.start()
-  - question: Which property do you use to make your progress bar continuous for when the loading takes longer than the duration?
+  - question: Какое свойство вы должны использовать чтобы продолжить показывать индикатор загрузки, когда загрузка занимает больше времени, чем продолжительность выставленная по умолчанию?
     answers:
       - "duration: 'continuous'"
       - "loading: 'continuous'"
       - 'continuous: true'
     correctAnswer: 'continuous: true'
-  - question: Which two methods are required when creating a custom loading component?
+  - question: Какие два метода являются обязательными когда вы создаете ваш собственный компонент для отображения загрузки?
     answers:
       - start() and fail()
       - start() and finish()
       - loading() and finish()
     correctAnswer: start() and finish()
-  - question: Once you have created your new loading.vue component how do you use it?
+  - question: Как вы сможете подключить компонент `loading.vue` после его создания?
     answers:
-      - import it into the layouts page
-      - add it in the nuxt.config.js under the loading property
-      - add it to the nuxt.config.js under the plugins property
-    correctAnswer: add it in the nuxt.config.js under the loading property
-  - question: To add a circle spinner when Nuxt.js is using ssr:false what do you add to the loading property?
+      - Импортировать его в макет страницы
+      - Добавить его в файле `nuxt.config.js` ниже свойства `loading`
+      - Добавить кго в файле `nuxt.config.js` ниже свойства `plugins`
+    correctAnswer: Добавить его в файле `nuxt.config.js` ниже свойства `loading`
+  - question: Что вам нужно добавить в свойство `loading` для показа крутящегося индикатора загурзки когда Nuxt.js используется в режиме ssr:false?
     answers:
       - 'circle: true'
       - 'spinner: circle'
@@ -120,11 +120,11 @@ export default {
 </script>
 ```
 
-## Programmatically starting the loading bar
+## Программный запуск индикатора загрузки
 
-The loading bar can also be programmatically started in your components by calling `this.$nuxt.$loading.start()` to start the loading bar and `this.$nuxt.$loading.finish()` to finish it.
+Индикатор загрузки может быть запущен в вашем компоненте программно, путем вызова метода `this.$nuxt.$loading.start()` для запуска индкатора загрузки, и метода `this.$nuxt.$loading.finish()` для его окончания.
 
-During your page component's mounting process, the `$loading` property may not be immediately available to access. To work around this, if you want to start the loader in the `mounted` method, make sure to wrap your `$loading` method calls inside `this.$nextTick` as shown below.
+В процессе монтирования вашего компонента страницы, свойство `$loading` может быть не доступно для немедленного доступа. Если вы хотите запустить индикатор загрузки в методе `mounted`, то вам нужно сделать обертку над методом `$loading` вызвав его внутри `this.$nextTick` как показано в примере ниже.
 
 ```js
 export default {
@@ -139,11 +139,11 @@ export default {
 
 ## Internals of the Progress Bar
 
-Unfortunately, it is not possible for the Loading component to know in advance how long loading a new page will take. Therefore, it is not possible to accurately animate the progress bar to 100% of the loading time.
+К сожалению, компонент индиактора загрузки не может знать заранее, сколько времени займет загрузка новой страницы. Поэтому невозможно точно анимировать индиактор прогресса до 100% времени загрузки.
 
-Nuxt's loading component partially solves this by letting you set the `duration`, this should be set to an estimate of how long the loading process will take. Unless you use a custom loading component, the progress bar will always move from 0% to 100% in `duration` time (regardless of actual progression). When the loading takes longer than `duration` time, the progress bar will stay at 100% until the loading finishes.
+Компонент индиактора загрузки Nuxt частично решает эту проблему, позволяя установить `длительность` загрузки, это свойство должно быть установлено для оценки того, сколько времени займет процесс загрузки. Если вы не используете ваш собственный компонент загрузки, то индикатор прогресса всегда будет двигаться от 0% до 100% во время "длительности" загрузки (независимо от фактического прогресса). Если загрузка превысит время "длительности" загрузки, то индиактор прогресса загрузки будет оставаться в положении 100% до тех пор, когда загрузка не закончится.
 
-You can change the default behavior by setting `continuous` to true, then after reaching 100% the progress bar will start shrinking back to 0% again in `duration` time. When the loading is still not finished after reaching 0% it will start growing from 0% to 100% again, this repeats until the loading finishes.
+Вы можете изменить поведение по умолчанию поставив свойство `continuous` в `true`, тогда после достижения 100%, индикатор прогресса загрузки снова начнет уменьшаться до 0% во время "длительности". Если загрузка еще не закончена после достижения 0%, она снова начнет расти с 0% до 100%, и это будет повторяется до тех пор, пока загрузка не завершится.
 
 ```js
 export default {

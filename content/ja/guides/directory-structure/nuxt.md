@@ -1,6 +1,6 @@
 ---
 title: .nuxt
-description: The `.nuxt` directory is the so-called *build directory*. It is dynamically generated and hidden by default. Inside the directory you can find automatically generated files when using `nuxt dev` or your build artifacts when using `nuxt build`.
+description: '`.nuxt` ディレクトリはいわゆる *build ディレクトリ*です。このディレクトリは動的に生成され、デフォルトでは非表示になっています。ディレクトリの中には、`nuxt dev` を使っているときには自動生成されたファイルが、`nuxt build` を使っているときにはビルドの成果物が入っています。'
 position: 1
 category: directory-structure
 questions:
@@ -35,7 +35,7 @@ questions:
     correctAnswer: false
 ---
 
-The `.nuxt` directory is the so-called _build directory_. It is dynamically generated and hidden by default. Inside the directory you can find automatically generated files when using `nuxt dev` or your build artifacts when using `nuxt build`. Modifying these files is great for debugging but remember that they are generated files and once you run the `dev` or `build` command again, anything that was saved here will be regenerated.
+`.nuxt` ディレクトリはいわゆる *build ディレクトリ*です。このディレクトリは動的に生成され、デフォルトでは非表示になっています。ディレクトリの中には、`nuxt dev` を使っているときには自動生成されたファイルが、`nuxt build` を使っているときにはビルドの成果物が入っています。 これらのファイルを変更することはデバッグに最適ですが、これらは生成されたファイルであり、`dev` や `build` コマンドを再度実行すると、ここに保存されていたものはすべて再生成されることを覚えておいてください。
 
 <base-alert>
 

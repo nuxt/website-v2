@@ -28,7 +28,7 @@ questions:
       - custom components
       - global components
     correctAnswer: nuxt components
-  - question: .nuxt フォルダは、静的サイトを展開する際にアップロードするフォルダです。
+  - question: .nuxt フォルダは、静的サイトをデプロイする際にアップロードするフォルダです。
     answers:
       - true
       - false

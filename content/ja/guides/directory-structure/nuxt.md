@@ -4,31 +4,31 @@ description: '`.nuxt` ディレクトリはいわゆる *build ディレクト�
 position: 1
 category: directory-structure
 questions:
-  - question: What what commands is the .nuxt folder generated?
+  - question: .nuxt フォルダはどのようなコマンドで生成されますか？
     answers:
       - nuxt start
       - nuxt generate
-      - nuxt build or nuxt dev
-    correctAnswer: nuxt build or nuxt dev
-  - question: What property do you use to rename the nuxt folder?
+      - nuxt build または nuxt dev
+    correctAnswer: nuxt build または nuxt dev
+  - question: nuxt フォルダの名前を変更するときに使用するプロパティは？
     answers:
       - dir
       - build
       - buildDir
     correctAnswer: buildDir
-  - question: In which file can you find your generated routes?
+  - question: 生成されたルートはどのファイルにありますか？
     answers:
       - pages.js
       - router.js
       - views.js
     correctAnswer: router.js
-  - question: What can you find in the components folder?
+  - question: components フォルダには何が入っていますか？
     answers:
       - nuxt components
       - custom components
       - global components
     correctAnswer: nuxt components
-  - question: The .nuxt folder is the folder you need to upload when deploying static sites.
+  - question: .nuxt フォルダは、静的サイトを展開する際にアップロードするフォルダです。
     answers:
       - true
       - false

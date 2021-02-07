@@ -3,7 +3,7 @@ title: 自定义Nuxt加载图标
 description: 当SSR设置为false的时候，自定义Nuxt加载图标
 position: 2
 category: loading
-csb_link: https://codesandbox.io/embed/github/nuxt-academy/examples/tree/master/loading/customize-loading-indicator?fontsize=14&hidenavigation=1&module=%2Fnuxt.config.js&theme=dark&view=editor
+csb_link: https://codesandbox.io/embed/github/nuxtlabs/examples/tree/master/loading/customize-loading-indicator?fontsize=14&hidenavigation=1&module=%2Fnuxt.config.js&theme=dark&view=editor
 ---
 
 当`ssr`设置为`false`的时候，自定义 Nuxt 加载图标

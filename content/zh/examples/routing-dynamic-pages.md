@@ -3,7 +3,7 @@ title: 动态页面
 description: 通过API获取数据并构建页面
 position: 104
 category: routing
-csb_link: https://codesandbox.io/embed/github/nuxt-academy/examples/tree/master/routing/dynamic-pages?fontsize=14&hidenavigation=1&module=%2Fpages%2F_continent%2F_mountain.vue&theme=dark&view=editor
+csb_link: https://codesandbox.io/embed/github/nuxtlabs/examples/tree/master/routing/dynamic-pages?fontsize=14&hidenavigation=1&module=%2Fpages%2F_continent%2F_mountain.vue&theme=dark&view=editor
 ---
 
 通过 API 获取数据并构建页面

@@ -3,7 +3,7 @@ title: 预处理器
 description: 使用`pug`和`sass`样式来配置您的应用，可以轻松地将变量添加到所有组件。
 position: 2
 category: assetManagement
-csb_link: https://codesandbox.io/embed/github/nuxt-academy/examples/tree/master/asset-management/pre-processors?fontsize=14&hidenavigation=1&theme=dark&view=editor
+csb_link: https://codesandbox.io/embed/github/nuxtlabs/examples/tree/master/asset-management/pre-processors?fontsize=14&hidenavigation=1&theme=dark&view=editor
 ---
 
 使用`pug`和`sass`样式来配置你的应用，可以方便地将变量添加到所有组件。

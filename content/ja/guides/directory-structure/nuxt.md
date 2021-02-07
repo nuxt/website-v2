@@ -69,8 +69,8 @@ export default {
 - server.js ファイルは、サーバー上で実行されるすべてのコードです。
 - ユーティリティには、Nuxt が動作するために必要なユーティリティが含まれています。
 
-### Deploying
+### デプロイする
 
-The `.nuxt` folder is part of the files needed to deploy your SSR application. It is not needed for deploying your static Nuxt.js app though because we use the `dist` folder for that.
+`.nuxt` フォルダは SSR アプリケーションのデプロイに必要なファイルの一部です。ただし、静的 Nuxt.js アプリのデプロイには `dist` フォルダを使用するため必要ありません。
 
 <quiz :questions="questions"></quiz>

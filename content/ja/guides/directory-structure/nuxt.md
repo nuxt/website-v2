@@ -43,7 +43,7 @@ questions:
 
 </base-alert>
 
-### The buildDir Property
+### buildDir プロパティ
 
 デフォルトでは `.nuxt` のディレクトリ名がドットで始まるため、多くのツールが隠しディレクトリと見なします。これを防ぐには buildDir オプションを使用します。名前を変更した場合は、新しい名前を `.gitignore` ファイルに追加することを忘れないようにしてください。
 
@@ -53,21 +53,21 @@ export default {
 }
 ```
 
-### Inside the .nuxt folder:
+### .nuxt フォルダの中身 :
 
-- The router.js file is the generated router file that Nuxt.js generates for you when you put `.vue` files inside the pages folder. You can use this file for debugging for when you want to look up which routes are generated for vue-router and find out the names of a specific route.
-- The router.scrollBehavior.js which is your Router ScrollBehavior
-- The Components folder has all your Nuxt components such as NuxtChild and NuxtLink. It also contains the nuxt-build-indicator which is the page we see when your application is building and nuxt-loading which is your loading component that gets seen when we are waiting for your page to load. You will also find the nuxt-error page in here which contains the Nuxt default error page.
-- The mixins folder has the files needed for the Nuxt `$fetch` method.
-- The views folder contains your app template and your server error page.
-- The app.js is your main application file.
-- The client.js file is your client file needed for everything that happens client side.
-- The empty file is intentionally left empty for no-op aliases
-- The index.js file bootstraps your application.
-- The loading.html is the file that is used when the page is loading.
-- The middleware file is where your middleware is kept
-- The server.js file is all the code that is ran on the server
-- the utilities contains the utilities that Nuxt needs for it to work.
+- router.js ファイルは、ページフォルダ内に `.vue` ファイルを配置したときに、Nuxt.js が生成してくれるルーターファイルです。このファイルは、vue-router 用に生成されたルートを調べたり、特定のルートの名前を調べたりしたいときのデバッグに使うことができます。
+- router.scrollBehavior.js は、ルーターの ScrollBehavior です。
+- components フォルダには、NuxtChild や NuxtLink などの Nuxt コンポーネントが入っています。また、アプリケーションのビルド中に表示されるページである nuxt-build-indicator や、ページの読み込みを待っているときに表示されるロードコンポーネントである nuxt-loading も含まれています。Nuxt のデフォルトのエラーページを含む nuxt-error ページもここにあります。
+- mixins フォルダには、Nuxt の `$fetch` メソッドに必要なファイルが含まれています。
+- views フォルダには、アプリのテンプレートとサーバーエラーページが含まれます。
+- app.js は、メインのアプリケーションファイルです。
+- client.js ファイルは、クライアントサイドで発生するすべてのことに必要なクライアントファイルです。
+- empty ファイルは何も処理しないのエイリアスのために意図的に空のままになっています。
+- index.js ファイルは、アプリケーションを起動します。
+- loading.html は、ページの読み込み時に使用するファイルです。
+- middleware ファイルは、ミドルウェアが保存されている場所です。
+- server.js ファイルは、サーバー上で実行されるすべてのコードです。
+- ユーティリティには、Nuxt が動作するために必要なユーティリティが含まれています。
 
 ### Deploying
 

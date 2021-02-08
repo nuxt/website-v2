@@ -275,7 +275,7 @@ You can use the alias of `~~` or `@@` for the root directory.
 
 <base-alert type="info">
 
-Tip: On Spanish keyboard you can access `~` with (`Option` + `ñ`) on Mac OS
+Tip: On Spanish keyboard you can access `~` with (`Option` + `ñ`) on Mac OS, or (`Alt gr` + `4`) on Windows
 
 </base-alert>
 

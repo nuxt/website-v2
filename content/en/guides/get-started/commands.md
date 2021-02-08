@@ -9,7 +9,7 @@ Nuxt.js comes with a set of useful commands, both for development and production
 
 ## Using in package.json
 
-You should put these commands in the `package.json`:
+You should have these commands in your `package.json`:
 
 ```json
 "scripts": {
@@ -20,7 +20,7 @@ You should put these commands in the `package.json`:
 }
 ```
 
-Then, you can launch your commands via `yarn <command>` or `npm run <command>` (example: `yarn dev` / `npm run dev`).
+You can launch your commands via `yarn <command>` or `npm run <command>` (example: `yarn dev` / `npm run dev`).
 
 ## Development Environment
 

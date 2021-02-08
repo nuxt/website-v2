@@ -39,7 +39,7 @@ The components directory contains your Vue.js components. Components are what ma
 
 To access asynchronous data from an API in your components you can use Nuxt [`fetch()` hook](/docs/2.x/features/data-fetching#the-fetch-method).
 
-Using `$fetchState.pending`, we can show a message when the data is waiting to be loaded. We can also use `$fetchState.error` to show an error message if there is an error fetching the data. When using fetch, we must declare the data in the data property. This then gets filled with the data that comes from the fetch.
+By checking `$fetchState.pending`, we can show a message when data is waiting to be loaded. We can also check `$fetchState.error` and show an error message if there is an error fetching the data. When using `fetch()`, we must declare the appropriate properties in `data()`. The data that comes from the fetch can then be assigned to these properties.
 
 ```html{}[components/MountainsList.vue]
 <template>
@@ -170,7 +170,7 @@ components/
     BaseButton.vue
 ```
 
-However, if you want to keep the filename as `Button.vue`, then you can use the `prefix` option in the Nuxt config to add a prefix to all components in a specific folder.
+However, if you want to keep the filename as `Button.vue`, then you can use the `prefix` option in `nuxt.config` to add a prefix to all components in a specific folder.
 
 ```bash
 components/
@@ -190,11 +190,9 @@ components: {
 }
 ```
 
-And now in your template you can use `BaseButton` instead of Button without having to make changes to the name of your `Button.vue` file.
+And now in your template you can use `BaseButton` instead of `Button` without having to make changes to the name of your `Button.vue` file.
 
 ```html{}[pages/index.vue]
 <BaseButton />
 ```
-<base-alert type="next">
-Learn more about the [components module](/blog/improve-your-developer-experience-with-nuxt-components).
-</base-alert>
+<base-alert type="next">Learn more about the [components module](/blog/improve-your-developer-experience-with-nuxt-components).</base-alert>

@@ -197,7 +197,7 @@ There are couple of ways we can selectively include component files this using m
 {
   path: "~/components/ui-2/MagicButton/",
   // prefix: 'aex',
-  extensions: ['vue'], // Array, include files that matche the extension
+  extensions: ['vue'], // Array, include files that match the extension
 }
 ```
 

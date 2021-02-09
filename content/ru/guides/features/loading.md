@@ -7,7 +7,7 @@ csb_link: https://codesandbox.io/embed/github/nuxt-academy/guides-examples/tree/
 questions:
   - question: Что нужно сделать, чтобы индикатор прогресса загрузки Nuxt.js заработал?
     answers:
-      - Ничего, это работает из коробки
+      - Ничего, он работает из коробки
       - Изменить значения свойства `loading` на `true` в файле `nuxt.config.js`
       - Создать компонент индикатора загрузки
     correctAnswer: Ничего, он работает из коробки

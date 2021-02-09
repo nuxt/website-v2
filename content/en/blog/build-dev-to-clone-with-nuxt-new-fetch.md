@@ -91,14 +91,14 @@ For styling we will use the most common CSS pre-processor Sass/SCSS and leverage
   <code-block label="Yarn" active>
 
 ```bash
-yarn add sass sass-loader -D
+yarn add sass sass-loader@10 -D
 ```
 
   </code-block>
   <code-block label="npm">
 
 ```bash
-npm install sass sass-loader --save-dev
+npm install sass sass-loader@10 --save-dev
 ```
 
   </code-block>

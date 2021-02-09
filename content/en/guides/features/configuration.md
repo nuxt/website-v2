@@ -140,7 +140,7 @@ To use these pre-processors, we need to install their webpack loaders:
 
 ```bash
 yarn add -D pug pug-plain-loader
-yarn add -D sass sass-loader fibers
+yarn add -D sass sass-loader@10 fibers
 ```
 
   </code-block>
@@ -148,7 +148,7 @@ yarn add -D sass sass-loader fibers
 
 ```bash
 npm install --save-dev pug pug-plain-loader
-npm install --save-dev sass sass-loader fibers
+npm install --save-dev sass sass-loader@10 fibers
 ```
 
   </code-block>

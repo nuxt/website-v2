@@ -11,7 +11,7 @@ position: 4
 `sass` を利用したい場合は `sass` および `sass-loader` パッケージをインストールしてください。もしインストールしていない場合は以下のようにインストールしてください。
 
 ```sh
-npm install --save-dev sass sass-loader fibers
+npm install --save-dev sass sass-loader@10 fibers
 ```
 
 - 型: `Array`

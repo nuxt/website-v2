@@ -20,7 +20,7 @@ csb_link: https://codesandbox.io/embed/github/nuxt-academy/guides-examples/tree/
 
 ## ナビゲーション
 
-アプリケーションのページ間を遷移するには、[NuxtLink](/docs/2.x/features/nuxt-components#the-nuxtlink-component) コンポーネントを使います。このコンポーネントは Nuxt.js に含まれているため、他のコンポーネントのようにインポートする必要はありません。HTML `<a>` タグに似ていますが、`href="/about"` のかわりに `to="/about"` を使用します。もし以前に `vue-router` を使ったことがある場合は `<NuxtLink>` を `<RouterLink>` の変わりと考えることができます。
+アプリケーションのページ間を遷移するには、[NuxtLink](/docs/2.x/features/nuxt-components#the-nuxtlink-component) コンポーネントを使います。このコンポーネントは Nuxt.js に含まれているため、他のコンポーネントのようにインポートする必要はありません。HTML `<a>` タグに似ていますが、`href="/about"` のかわりに `to="/about"` を使用します。もし以前に `vue-router` を使ったことがある場合は `<NuxtLink>` を `<RouterLink>` の代わりと考えることができます。
 
 `pages` フォルダーにある `index.vue` へのシンプルなリンク:
 

@@ -55,9 +55,9 @@ questions:
   - question: Как вы сможете подключить компонент `loading.vue` после его создания?
     answers:
       - Импортировать его в макет страницы
-      - Добавить его в файле `nuxt.config.js` ниже свойства `loading`
-      - Добавить кго в файле `nuxt.config.js` ниже свойства `plugins`
-    correctAnswer: Добавить его в файле `nuxt.config.js` ниже свойства `loading`
+      - Добавить его в файле `nuxt.config.js` используя свойство `loading`
+      - Добавить кго в файле `nuxt.config.js` используя свойство `plugins`
+    correctAnswer: Добавить его в файле `nuxt.config.js` используя свойство `loading`
   - question: Что вам нужно добавить в свойство `loading` для показа крутящегося индикатора загурзки когда Nuxt.js используется в режиме ssr:false?
     answers:
       - 'circle: true'

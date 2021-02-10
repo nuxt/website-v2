@@ -20,7 +20,7 @@ Untuk mempelajari lebih lanjut mengenai pembantu Nuxt.js lihat [bagian context a
 ```html{}[layouts/default.vue]
 <template>
   <div>
-    <div v-if="$nuxt.isOffline">You are offline</div>
+    <div v-if="$nuxt.isOffline">Anda sedang offline</div>
     <nuxt />
   </div>
 </template>
@@ -29,7 +29,7 @@ Untuk mempelajari lebih lanjut mengenai pembantu Nuxt.js lihat [bagian context a
 ## Menyegarkan data halaman
 
 - `refresh()`
-  - Jika Anda hanya ingin menyegarkan data yang disediakan oleh asyncData atau fetch
+  - Jika Anda hanya ingin menyegarkan data yang disediakan oleh `asyncData` atau `fetch`
 
 ```html{}[example.vue]
 <template>

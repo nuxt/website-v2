@@ -29,7 +29,7 @@ export default {
   alias: {
     'images': resolve(__dirname, './assets/images'),
     'style': resolve(__dirname, './assets/style'),
-    'data': resolve(__dirname, './assets/other/data)'
+    'data': resolve(__dirname, './assets/other/data')
   }
 }
 ```

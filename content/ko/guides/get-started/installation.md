@@ -155,7 +155,7 @@ npm run dev
 
 </base-alert>
 
-이제 애플리케이션은 **[localhost:3000](http://localhost:3000/).**에서 실행됩니다.
+이제 애플리케이션은 **[http://localhost:3000](http://localhost:3000/).**에서 실행됩니다.
 
 터미널에서 링크를 클릭하여 브라우저에서 애플리케이션을 열면 이전 단계에서 복사한 "Hello World" 텍스트가 보입니다.
 
@@ -241,4 +241,4 @@ npm run dev
   </code-block>
 </code-group>
 
-이제 애플리케이션은 [localhost:3000](http://localhost:3000)에서 실행됩니다. 잘하셨습니다!
+이제 애플리케이션은 [http://localhost:3000](http://localhost:3000)에서 실행됩니다. 잘하셨습니다!

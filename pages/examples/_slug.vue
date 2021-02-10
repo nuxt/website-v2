@@ -13,7 +13,7 @@
         </h1>
         <nuxt-content :document="page" />
 
-        <LazyAppPrevNextNew
+        <AppPrevNextNew
           :prev="prev"
           :next="next"
           section="examples"

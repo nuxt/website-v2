@@ -66,7 +66,7 @@ npm run dev
   </code-block>
 </code-group>
 
-アプリケーションは [localhost:3000](http://localhost:3000) で実行されています。おつかれさまでした！
+アプリケーションは [http://localhost:3000](http://localhost:3000) で実行されています。おつかれさまでした！
 
 <base-alert type="info">
 
@@ -199,7 +199,7 @@ npm run dev
 
 </base-alert>
 
-今、アプリケーションは **[localhost:3000](http://localhost:3000/)** で実行されています。
+今、アプリケーションは **[http://localhost:3000](http://localhost:3000/)** で実行されています。
 
 ターミナルのリンクをクリックしてブラウザを開くと、前のステップでコピーした「Hello World」のテキストが表示されます。
 

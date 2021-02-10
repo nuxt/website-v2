@@ -63,28 +63,28 @@ You can run different commands depending on the [target](/docs/2.x/features/depl
 
 ## Webpack Config Inspection 
 
-You can generate the webpack config with an api heavily inspired by [vue inspect](https://cli.vuejs.org/guide/webpack.html#inspecting-the-project-s-webpack-config)
+You can inspect the webpack config used by nuxt to build project similar to [vue inspect](https://cli.vuejs.org/guide/webpack.html#inspecting-the-project-s-webpack-config)).
 
 - **nuxt webpack [query...]**
 
-Options:
+**Arguments:**
 
---name: Bundle name to inspect. (client, server, modern)
---dev: Inspect webpack config for dev mode
---depth: Inspection depth. Defaults to 2 to prevent verbose output.
---no-colors: Disable ANSI colors (disabled by default when TTY is not available or when piping to a file)
+- `--name`: Bundle name to inspect. (client, server, modern)
+- `--dev`: Inspect webpack config for dev mode
+- `--depth`: Inspection depth. Defaults to 2 to prevent verbose output.
+- `--no-colors`: Disable ANSI colors (disabled by default when TTY is not available or when piping to a file)
 
-Examples:
+**Examples:**
 
-- **nuxt webpack**
-- **nuxt webpack devtool**
-- **nuxt webpack resolve alias**
-- **nuxt webpack module rules**
-- **nuxt webpack module rules test=.jsx**
-- **nuxt webpack module rules test=.pug oneOf use.0=raw**
-- **nuxt webpack plugins constructor.name=WebpackBar options reporter**
-- **nuxt webpack module rules loader=vue-**
-- **nuxt webpack module rules "loader=.*-loader"**
+- `nuxt webpack`
+- `nuxt webpack devtool`
+- `nuxt webpack resolve alias`
+- `nuxt webpack module rules`
+- `nuxt webpack module rules test=.jsx`
+- `nuxt webpack module rules test=.pug oneOf use.0=raw`
+- `nuxt webpack plugins constructor.name=WebpackBar options reporter`
+- `nuxt webpack module rules loader=vue-`
+- `nuxt webpack module rules "loader=.*-loader"`
 
 ## Production Deployment
 

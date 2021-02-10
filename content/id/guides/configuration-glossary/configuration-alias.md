@@ -1,23 +1,23 @@
 ---
 title: 'Properti alias'
-description: Nuxt.js memungkinkan kamu menggunakan alias untuk mengakses direktori kustom di dalam JavaScript dan CSS.
+description: Nuxt.js memungkinkan kamu menggunakan alias untuk mengakses direktori khusus di dalam JavaScript dan CSS.
 menu: alias
 category: configuration-glossary
 position: 0
 ---
 
-> Nuxt.js memungkinkan kamu menggunakan alias untuk mengakses direktori kustom di dalam JavaScript dan CSS.
+> Nuxt.js memungkinkan kamu menggunakan alias untuk mengakses direktori khusus di dalam JavaScript dan CSS.
 
 - Tipe: `Object`
-- Nilai bawaan:
+- Bawaan:
   ```js
   {
     '~~': `<rootDir>`,
     '@@': `<rootDir>`,
     '~': `<srcDir>`,
     '@': `<srcDir>`,
-    'assets': `<srcDir>/assets`, // (kecuali kamu telah mengatur `dir.assets` kustom)
-    'static': `<srcDir>/static`, // (kecuali kamu telah mengatur `dir.static` kustom)
+    'assets': `<srcDir>/assets`, // (kecuali kamu telah mengatur `dir.assets` khusus)
+    'static': `<srcDir>/static`, // (kecuali kamu telah mengatur `dir.static` khusus)
   }
   ```
 
@@ -56,6 +56,6 @@ body {
 </style>
 ```
 
-<base-alert type="warning">Di dalam konteks Webpack (sumber gambar, CSS - tetapi _bukan_ JavaScript) kamu harus mengawali alias dengan `~` (seperti pada contoh di atas).</base-alert>
+<base-alert type="warning">Di dalam konteks _Webpack_ (sumber gambar, CSS - tetapi _bukan_ JavaScript) kamu harus mengawali alias dengan `~` (seperti pada contoh di atas).</base-alert>
 
-<base-alert type="info">Jika kamu menggunakan TypeScript dan ingin menggunakan alias yang telah kamu tentukan dalam file TypeScript, kamu perlu menambahkan alias ke objek `paths` kamu di dalam `tsconfig.json`.</base-alert>
+<base-alert type="info">Jika kamu menggunakan TypeScript dan ingin menggunakan alias yang telah kamu tentukan dalam berkas TypeScript, kamu perlu menambahkan alias ke objek `paths` kamu di dalam `tsconfig.json`.</base-alert>

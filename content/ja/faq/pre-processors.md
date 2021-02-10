@@ -10,9 +10,7 @@ position: 2
 [Pug](https://github.com/pugjs/pug) 及び [Sass](http://sass-lang.com/) を使った `pages/index.vue` の例:
 
 ```html
-<template lang="pug">
-  h1.red Hello World!
-</template>
+<template lang="pug"> h1.red Hello World! </template>
 
 <style lang="sass">
   .red
@@ -33,5 +31,5 @@ npm install --save-dev pug pug-plain-loader
 ```
 
 ```bash
-npm install --save-dev sass sass-loader fibers
+npm install --save-dev sass sass-loader@10 fibers
 ```

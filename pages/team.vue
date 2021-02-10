@@ -195,7 +195,6 @@ export default {
             website: 'https://blog.lichter.io',
             badges: ['maintainer']
           },
-
           {
             name: 'Ricardo Gobbo de Souza',
             city: 'São José dos Campos, São Paulo, Brasil',

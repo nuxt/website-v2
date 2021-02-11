@@ -93,7 +93,7 @@ Boolean yang memberi tahu Anda jika metode/_middleware_ dipanggil dari _hot modu
 
 `redirect` (_Function_)
 
-Gunakan metode ini untuk mengarahkan penggunake rute lain, kode statusnya digunakan di sisi server, secara _default_ `302`. `redirect([status,] path [, query])`.
+Gunakan metode ini untuk mengarahkan pengguna ke rute lain, kode statusnya digunakan di sisi peladen, secara bawaan `302`. `redirect([status,] path [, query])`.
 
 Contoh:
 
@@ -133,13 +133,13 @@ Kunci-kunci ini hanya tersedia di sisi server.
 
 `req` ([_http.Request_](https://nodejs.org/api/http.html#http_class_http_incomingmessage))
 
-Permintaan dari server Node.js. Apabila Nuxt digunakan sebagai _middleware_, objek _request_ dapat berbeda bergantung pada _framework_ yang Anda gunakan.<br>**Tidak tersedia melalui `nuxt generate`**.
+Permintaan dari server Node.js. Apabila Nuxt digunakan sebagai _middleware_, objek _request_ dapat berbeda bergantung pada kerangka kerja yang Anda gunakan.<br>**Tidak tersedia melalui `nuxt generate`**.
 
 ### Res
 
 `res` ([_http.Response_](https://nodejs.org/api/http.html#http_class_http_serverresponse))
 
-Tanggapan dari server Node.js. Apabila Nuxt digunakan sebagai _middleware_, objek _response_ dapat berbeda bergantung pada _framework_ yang Anda gunakan.<br>**Tidak tersedia melalui `nuxt generate`**.
+Tanggapan dari server Node.js. Apabila Nuxt digunakan sebagai _middleware_, objek _response_ dapat berbeda bergantung pada kerangka kerja yang Anda gunakan.<br>**Tidak tersedia melalui `nuxt generate`**.
 
 ### beforeNuxtRender
 

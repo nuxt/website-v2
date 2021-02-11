@@ -47,9 +47,9 @@ Menambahkan ke `options.build.vendor` dan menerapkan filter unik.
   - `options`
   - `fileName`
 
-Memuat template yang diberikan menggunakan [template lodash](https://lodash.com/docs/4.17.4#template) saat membangun ke `buildDir` proyek (`.nuxt`).
+Memuat templat yang diberikan menggunakan [templat lodash](https://lodash.com/docs/4.17.4#template) saat membangun ke `buildDir` proyek (`.nuxt`).
 
-Jika `fileName` tidak tersedia atau `template` adalah string, nama berkas target diubah secara default ke `[dirName].[fileName].[pathHash].[ext]`.
+Jika `fileName` tidak tersedia atau `template` adalah _string_, nama berkas target diubah secara bawaan ke `[dirName].[fileName].[pathHash].[ext]`.
 
 Metode ini mengembalikan objek _final_ `{ dst, src, options }`.
 
@@ -57,7 +57,7 @@ Metode ini mengembalikan objek _final_ `{ dst, src, options }`.
 
 - **template**: Properti objek (`src`, `options`, `fileName`, `mode`).
 
-Mendaftarkan plugin menggunakan `addTemplate` dan menambahkannya ke _array_ `plugins[]`.
+Mendaftarkan plugin menggunakan `addTemplate` dan menambahkannya ke larik `plugins[]`.
 
 ```js
 this.addPlugin({
@@ -69,7 +69,7 @@ this.addPlugin({
 
 **Catatan:** Anda dapat menggunakan _modifiers_ `mode` atau `.client` dan `.server` dengan opsi `fileName` untuk menggunakan plugin hanya di sisi pengguna atau server. (Lihat [plugins](/docs/2.x/directory-structure/plugins#name-conventional-plugin) untuk semua opsi yang tersedia)
 
-Jika Anda menentukan `fileName`, Anda juga dapat mengonfigurasi _path_ untuk `fileName`, sehingga Anda dapat memilih struktur folder di dalam folder `.nuxt` folder untuk mencegah nama yang sama:
+Jika Anda menentukan `fileName`, Anda juga dapat mengonfigurasi _path_ untuk `fileName`, sehingga Anda dapat memilih struktur direktori di dalam direktori `.nuxt` untuk mencegah nama yang sama:
 
 ```js
 {

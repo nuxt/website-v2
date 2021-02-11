@@ -219,7 +219,7 @@ export default function () {
 }
 ```
 
-We can then await the ngrok authtoken passing in the value of `authtoken`which we have defined above.
+We can then await the ngrok authtoken passing in the value of `authtoken` which we have defined above.
 
 ```js{}[modules/ngrok/index.js]
 import ngrok from 'ngrok'

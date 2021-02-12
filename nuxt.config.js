@@ -70,7 +70,9 @@ export default {
     // https://github.com/Atinux/nuxt-tailwindcss/
     '@nuxtjs/tailwindcss',
     // https://pwa.nuxtjs.org
-    '@nuxtjs/pwa'
+    '@nuxtjs/pwa',
+    // https://github.com/moritzsternemann/vue-plausible
+    'vue-plausible'
   ],
   modules: [
     '~/modules/releases',
@@ -98,6 +100,9 @@ export default {
   ],
   colorMode: {
     preference: 'light' // disable system
+  },
+  plausible: {
+    domain: 'nuxtjs.org',
   },
   content: {
     markdown: {

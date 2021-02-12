@@ -25,4 +25,4 @@ nuxt.hook('ready', async nuxt => {
 | `ready` | (nuxt) | Nuxt siap bekerja (`ModuleContainer` dan `Renderer` sudah siap). |
 | `error` | (error) | Kesalahan yang tidak teratasi saat memanggil _hook_. |
 | `close` | (nuxt) | _Instance_ Nuxt ditutup dengan baik. |
-| `listen` | (server, {host, port}) | Server **internal** Nuxt mulai berjalan. (Menggunakan `nuxt start` atau `nuxt dev`). |
+| `listen` | (server, {host, port}) | Peladen **internal** Nuxt mulai berjalan. (Menggunakan `nuxt start` atau `nuxt dev`). |

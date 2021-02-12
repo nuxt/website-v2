@@ -26,7 +26,7 @@ function (context) {
     error,
     $config
   } = context
-  // Sisi server
+  // Sisi peladen
   if (process.server) {
     const { req, res, beforeNuxtRender } = context
   }
@@ -39,7 +39,7 @@ function (context) {
 
 ## Universal keys
 
-Kunci-kunci ini tersedia di sisi pengguna dan sisi server.
+Kunci-kunci ini tersedia di sisi pengguna dan sisi peladen.
 
 ### app
 
@@ -107,7 +107,7 @@ Lihat [dokumen Vue Router](https://github.com/vuejs/vue-router/blob/64d60c019204
 
 <base-alert type="info">
 
-`redirect` atau `error` tidak mungkin untuk digunakan di [client-side Nuxt plugin](/docs/2.x/directory-structure/plugins#client-or-server-side-only) karena kesalahan pada _hydration_ (konten pengguna akan berbeda dari yang diharapkan dari server).
+`redirect` atau `error` tidak mungkin untuk digunakan di [client-side Nuxt plugin](/docs/2.x/directory-structure/plugins#client-or-server-side-only) karena kesalahan pada _hydration_ (konten pengguna akan berbeda dari yang diharapkan dari peladen).
 
 Solusi yang benar adalah dengan menggunakan `window.onNuxtReady(() => { window.$nuxt.$router.push('/your-route') })`
 
@@ -127,19 +127,19 @@ Gunakan metode ini untuk menampilkan halaman kesalahan: `error(params)`. `params
 
 ## Server-side keys
 
-Kunci-kunci ini hanya tersedia di sisi server.
+Kunci-kunci ini hanya tersedia di sisi peladen.
 
 ### req
 
 `req` ([_http.Request_](https://nodejs.org/api/http.html#http_class_http_incomingmessage))
 
-Permintaan dari server Node.js. Apabila Nuxt digunakan sebagai _middleware_, objek _request_ dapat berbeda bergantung pada kerangka kerja yang Anda gunakan.<br>**Tidak tersedia melalui `nuxt generate`**.
+Permintaan dari peladen Node.js. Apabila Nuxt digunakan sebagai _middleware_, objek _request_ dapat berbeda bergantung pada kerangka kerja yang Anda gunakan.<br>**Tidak tersedia melalui `nuxt generate`**.
 
 ### Res
 
 `res` ([_http.Response_](https://nodejs.org/api/http.html#http_class_http_serverresponse))
 
-Tanggapan dari server Node.js. Apabila Nuxt digunakan sebagai _middleware_, objek _response_ dapat berbeda bergantung pada kerangka kerja yang Anda gunakan.<br>**Tidak tersedia melalui `nuxt generate`**.
+Tanggapan dari peladen Node.js. Apabila Nuxt digunakan sebagai _middleware_, objek _response_ dapat berbeda bergantung pada kerangka kerja yang Anda gunakan.<br>**Tidak tersedia melalui `nuxt generate`**.
 
 ### beforeNuxtRender
 

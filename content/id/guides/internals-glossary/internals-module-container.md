@@ -62,12 +62,12 @@ Mendaftarkan plugin menggunakan `addTemplate` dan menambahkannya ke larik `plugi
 ```js
 this.addPlugin({
   src: path.resolve(__dirname, 'templates/foo.js'),
-  fileName: 'foo.server.js' // [opsional] hanya sertakan di bundel server
+  fileName: 'foo.server.js' // [opsional] hanya sertakan di bundel peladen
   options: moduleOptions
 })
 ```
 
-**Catatan:** Anda dapat menggunakan _modifiers_ `mode` atau `.client` dan `.server` dengan opsi `fileName` untuk menggunakan plugin hanya di sisi pengguna atau server. (Lihat [plugins](/docs/2.x/directory-structure/plugins#name-conventional-plugin) untuk semua opsi yang tersedia)
+**Catatan:** Anda dapat menggunakan _modifiers_ `mode` atau `.client` dan `.server` dengan opsi `fileName` untuk menggunakan plugin hanya di sisi pengguna atau peladen. (Lihat [plugins](/docs/2.x/directory-structure/plugins#name-conventional-plugin) untuk semua opsi yang tersedia)
 
 Jika Anda menentukan `fileName`, Anda juga dapat mengonfigurasi _path_ untuk `fileName`, sehingga Anda dapat memilih struktur direktori di dalam direktori `.nuxt` untuk mencegah nama yang sama:
 

@@ -8,7 +8,7 @@
           tag="h2"
           class="text-3xl font-medium pt-10 pb-8 text-center"
         >
-          <template v-slot:nuxt>
+          <template #nuxt>
             <AppTitle />
           </template>
         </i18n>
@@ -25,7 +25,7 @@
               tag="p"
               class="leading-loose text-light-onSurfaceSecondary dark:text-dark-onSurfaceSecondary"
             >
-              <template v-slot:break>
+              <template #break>
                 <br />
               </template>
             </i18n>
@@ -42,7 +42,7 @@
               tag="p"
               class="leading-loose text-light-onSurfaceSecondary dark:text-dark-onSurfaceSecondary"
             >
-              <template v-slot:break>
+              <template #break>
                 <br />
               </template>
             </i18n>
@@ -59,7 +59,7 @@
               tag="p"
               class="leading-loose text-light-onSurfaceSecondary dark:text-dark-onSurfaceSecondary"
             >
-              <template v-slot:break>
+              <template #break>
                 💚
                 <br />
               </template>

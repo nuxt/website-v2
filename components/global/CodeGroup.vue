@@ -1,13 +1,13 @@
 <template>
   <div class="code-group">
     <div
-      class="rounded-t border-b-2 border-dark-border px-2 bg-dark-elevatedSurface text-sm text-white relative"
+      class="relative px-2 text-sm text-white border-b-2 rounded-t border-dark-border bg-dark-elevatedSurface"
     >
       <button
         v-for="({ label }, i) in tabs"
         ref="tabs"
         :key="label"
-        class="px-4 py-3 text-gray-400 font-bold font-mono"
+        class="px-4 py-3 font-mono font-bold text-gray-400"
         :class="[activeTabIndex === i && 'active']"
         @click="updateTabs(i)"
       >
@@ -45,7 +45,7 @@ export default {
   },
   methods: {
     switchTab(i) {
-      this.tabs.map(tab => {
+      this.tabs.forEach(tab => {
         tab.elm.classList.remove('active')
       })
       this.tabs[i].elm.classList.add('active')

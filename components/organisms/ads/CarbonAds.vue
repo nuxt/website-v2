@@ -54,6 +54,7 @@ export default {
 
   @screen lg {
     @apply mt-0 mx-auto;
+
     max-width: 160px;
   }
 
@@ -62,6 +63,7 @@ export default {
 
     .carbon-wrap {
       @apply flex flex-col;
+
       flex: 1;
 
       @media (min-width: 320px) {

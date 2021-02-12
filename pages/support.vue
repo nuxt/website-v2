@@ -9,7 +9,7 @@
             class="text-3xl xl:text-4xl text-light-onSurfacePrimary dark:text-dark-onSurfacePrimary font-medium leading-normal mb-6 lg:pt-4"
           >
             {{ $t('support.title') }}
-            <template v-slot:nuxt>
+            <template #nuxt>
               <AppTitle />
             </template>
           </i18n>
@@ -18,10 +18,10 @@
             tag="h3"
             class="xl:text-lg text-light-onSurfaceSecondary dark:text-dark-onSurfaceSecondary font-medium leading-relaxed mb-6"
           >
-            <template v-slot:break>
+            <template #break>
               <br />
             </template>
-            <template v-slot:team>
+            <template #team>
               <NuxtLink to="/team" class="text-nuxt-green underline">
                 NuxtJS team
               </NuxtLink>
@@ -105,7 +105,7 @@
         tag="p"
         class="text-light-onSurfacePrimary dark:text-dark-onSurfacePrimary mb-8 transition-colors duration-300 ease-linear"
       >
-        <template v-slot:break>
+        <template #break>
           <br />
         </template>
       </i18n>

@@ -35,6 +35,7 @@
 import groupBy from 'lodash.groupby'
 
 export default {
+  scrollToTop: true,
   async asyncData({ $content, params, store, error, app }) {
     let pages = []
 
@@ -60,30 +61,6 @@ export default {
       links: groupBy(pages, 'category')
     }
   },
-  computed: {
-    docLink() {
-      return `https://github.com/nuxt/nuxtjs.org/blob/master/content${this.path}.md`
-    },
-    codeSandBox() {
-      return 'https://codesandbox.io'
-    },
-    codeSandBoxLink() {
-      if (!this.page.github) {
-        return ''
-      }
-      return `${this.codeSandBox}/embed/github/nuxt/nuxt.js/tree/dev/examples/${this.page.github}?autoresize=1&view=editor`
-    },
-    liveEditLink() {
-      return `${this.codeSandBox}/s/github/nuxt/nuxt.js/tree/dev/examples/${this.page.github}?from-embed`
-    },
-    downloadLink() {
-      return (
-        'https://minhaskamal.github.io/DownGit/#/home?url=https://github.com/nuxt/nuxt.js/tree/dev/examples/' +
-        this.page.github
-      )
-    }
-  },
-  scrollToTop: true,
   head() {
     return {
       title: this.page.title,
@@ -113,6 +90,29 @@ export default {
           content: this.page.description
         }
       ]
+    }
+  },
+  computed: {
+    docLink() {
+      return `https://github.com/nuxt/nuxtjs.org/blob/master/content${this.path}.md`
+    },
+    codeSandBox() {
+      return 'https://codesandbox.io'
+    },
+    codeSandBoxLink() {
+      if (!this.page.github) {
+        return ''
+      }
+      return `${this.codeSandBox}/embed/github/nuxt/nuxt.js/tree/dev/examples/${this.page.github}?autoresize=1&view=editor`
+    },
+    liveEditLink() {
+      return `${this.codeSandBox}/s/github/nuxt/nuxt.js/tree/dev/examples/${this.page.github}?from-embed`
+    },
+    downloadLink() {
+      return (
+        'https://minhaskamal.github.io/DownGit/#/home?url=https://github.com/nuxt/nuxt.js/tree/dev/examples/' +
+        this.page.github
+      )
     }
   }
 }

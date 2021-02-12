@@ -47,13 +47,13 @@ export default {
       return s
     }
   },
-  async fetch() {
-    this.releases = await this.$http.$get('/_releases')
-  },
   data() {
     return {
       releases: []
     }
+  },
+  async fetch() {
+    this.releases = await this.$http.$get('/_releases')
   }
 }
 </script>

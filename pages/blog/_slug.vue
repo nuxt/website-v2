@@ -1,6 +1,6 @@
 <template>
   <div class>
-    <div class="container lg:max-w-4xl mx-auto p-4 pb-8">
+    <div class="container p-4 pb-8 mx-auto lg:max-w-4xl">
       <NuxtLink
         :to="localePath({ name: 'blog' })"
         class="inline-flex items-center dark:hover:text-nuxt-lightgreen light:hover:text-nuxt-lightgreen dark:text-dark-onSurfaceSecondary light:text-light-onSurfaceSecondary"
@@ -22,17 +22,17 @@ import copyCodeBlock from '~/mixins/copyCodeBlock'
 
 export default {
   name: 'PageSlug',
-  scrollToTop: true,
   components: {
     ArrowLeftIcon
   },
   mixins: [copyCodeBlock],
-  middleware({ params, redirect }) {
+  middleware ({ params, redirect }) {
     if (params.slug === 'index') {
       redirect('/')
     }
   },
-  async asyncData({
+  scrollToTop: true,
+  async asyncData ({
     $content,
     $contributors,
     store,
@@ -68,7 +68,7 @@ export default {
         .sortBy('date', 'desc')
         .surround(slug, { before: 1, after: 1 })
         .fetch()
-    } catch (e) {}
+    } catch (e) { }
 
     return {
       post,
@@ -79,26 +79,8 @@ export default {
       path
     }
   },
-  computed: {
-    docLink() {
-      return `https://github.com/nuxt/nuxtjs.org/blob/master/content${this.path}/${this.slug}.md`
-    },
-    ...mapState({
-      host: state => state.host,
-      isDev: state => state.isDev,
-      isTest: state => state.isTest,
-      isProd: state => state.isProd
-    }),
-    socialImage() {
-      const image = this.post.imgUrl ? this.post.imgUrl : 'nuxt-card.png'
-      if (this.isTest || this.isDev) {
-        return `${this.host}/${image}`
-      } else {
-        return `https://res.cloudinary.com/nuxt/image/upload/w_1200,h_628,c_fill,f_auto/remote/nuxt-org/${this.post.imgUrl}`
-      }
-    }
-  },
-  head() {
+
+  head () {
     return {
       title: this.post.title,
       titleTemplate: '%s - NuxtJS',
@@ -144,6 +126,25 @@ export default {
           content: this.post.imgUrl ? 'Blog post image' : 'NuxtJS'
         }
       ]
+    }
+  },
+  computed: {
+    docLink () {
+      return `https://github.com/nuxt/nuxtjs.org/blob/master/content${this.path}/${this.slug}.md`
+    },
+    ...mapState({
+      host: state => state.host,
+      isDev: state => state.isDev,
+      isTest: state => state.isTest,
+      isProd: state => state.isProd
+    }),
+    socialImage () {
+      const image = this.post.imgUrl ? this.post.imgUrl : 'nuxt-card.png'
+      if (this.isTest || this.isDev) {
+        return `${this.host}/${image}`
+      } else {
+        return `https://res.cloudinary.com/nuxt/image/upload/w_1200,h_628,c_fill,f_auto/remote/nuxt-org/${this.post.imgUrl}`
+      }
     }
   }
 }

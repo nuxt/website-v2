@@ -1,24 +1,24 @@
 <template>
   <div class="shadow-nuxt">
-    <div class="container mx-auto px-4 pt-16 pb-12">
+    <div class="container px-4 pt-16 pb-12 mx-auto">
       <div class="flex flex-wrap justify-between mb-8">
-        <div class="lg:w-6/12 lg:text-left text-center p-4 sm:p-0">
+        <div class="p-4 text-center lg:w-6/12 lg:text-left sm:p-0">
           <i18n
             path="design.title"
             tag="h1"
-            class="text-3xl xl:text-4xl text-light-onSurfacePrimary dark:text-dark-onSurfacePrimary font-medium leading-normal mb-6 lg:pt-4"
+            class="mb-6 text-3xl font-medium leading-normal xl:text-4xl text-light-onSurfacePrimary dark:text-dark-onSurfacePrimary lg:pt-4"
           >
             {{ $t('design.title') }}
-            <template v-slot:nuxt>
+            <template #nuxt>
               <AppTitle />
             </template>
           </i18n>
           <i18n
             path="design.description"
             tag="h3"
-            class="xl:text-lg text-light-onSurfaceSecondary dark:text-dark-onSurfaceSecondary font-medium leading-relaxed mb-6"
+            class="mb-6 font-medium leading-relaxed xl:text-lg text-light-onSurfaceSecondary dark:text-dark-onSurfaceSecondary"
           >
-            <template v-slot:break>
+            <template #break>
               <br />
             </template>
           </i18n>
@@ -28,9 +28,9 @@
         />
       </div>
       <div class="flex flex-wrap -mx-4">
-        <div class="w-full lg:w-1/2 p-4">
-          <section class="bg-gray-100 rounded p-6">
-            <h2 class="text-2xl text-nuxt-gray font-medium leading-normal mb-6">
+        <div class="w-full p-4 lg:w-1/2">
+          <section class="p-6 bg-gray-100 rounded">
+            <h2 class="mb-6 text-2xl font-medium leading-normal text-nuxt-gray">
               Light theme
             </h2>
             <figure class="rounded hover:bg-gray-200">
@@ -45,7 +45,7 @@
                 </a>
               </figcaption>
             </figure>
-            <figure class="rounded hover:bg-gray-200 mt-6">
+            <figure class="mt-6 rounded hover:bg-gray-200">
               <img
                 src="/logos/nuxt-icon.png"
                 srcset="/logos/nuxt-icon@2x.png 2x"
@@ -58,7 +58,7 @@
               </figcaption>
               <span class="dimensions">512 x 512</span>
             </figure>
-            <figure class="rounded hover:bg-gray-200 mt-6">
+            <figure class="mt-6 rounded hover:bg-gray-200">
               <img
                 src="/logos/nuxt-emoji.png"
                 srcset="/logos/nuxt-emoji@2x.png 2x"
@@ -71,7 +71,7 @@
               </figcaption>
               <span class="dimensions">128 x 128</span>
             </figure>
-            <figure class="rounded hover:bg-gray-200 mt-6">
+            <figure class="mt-6 rounded hover:bg-gray-200">
               <img src="/logos/nuxtjs-typo.svg" alt="nuxt-logo" />
               <figcaption>
                 <a href="/logos/nuxtjs-typo.svg" target="_blank" rel="noopener">
@@ -79,7 +79,7 @@
                 </a>
               </figcaption>
             </figure>
-            <figure class="rounded hover:bg-gray-200 mt-6">
+            <figure class="mt-6 rounded hover:bg-gray-200">
               <img
                 src="/logos/built-with-nuxt.svg"
                 alt="built-with-nuxt-logo"
@@ -96,9 +96,9 @@
             </figure>
           </section>
         </div>
-        <div class="w-full lg:w-1/2 p-4">
-          <section class="bg-nuxt-gray rounded p-6">
-            <h2 class="text-2xl text-white font-medium leading-normal mb-6">
+        <div class="w-full p-4 lg:w-1/2">
+          <section class="p-6 rounded bg-nuxt-gray">
+            <h2 class="mb-6 text-2xl font-medium leading-normal text-white">
               Dark theme
             </h2>
             <figure class="rounded hover:bg-gray-800">
@@ -117,7 +117,7 @@
                 </a>
               </figcaption>
             </figure>
-            <figure class="rounded hover:bg-gray-800 mt-6">
+            <figure class="mt-6 rounded hover:bg-gray-800">
               <img
                 src="/logos/nuxt-icon-white.png"
                 srcset="/logos/nuxt-icon-white@2x.png 2x"
@@ -134,7 +134,7 @@
               </figcaption>
               <span class="dimensions">512 x 512</span>
             </figure>
-            <figure class="rounded hover:bg-gray-800 mt-6">
+            <figure class="mt-6 rounded hover:bg-gray-800">
               <img
                 src="/logos/nuxt-emoji-white.png"
                 srcset="/logos/nuxt-emoji-white@2x.png 2x"
@@ -151,7 +151,7 @@
               </figcaption>
               <span class="dimensions">128 x 128</span>
             </figure>
-            <figure class="rounded hover:bg-gray-800 mt-6">
+            <figure class="mt-6 rounded hover:bg-gray-800">
               <img src="/logos/nuxtjs-typo-white.svg" alt="nuxt-logo" />
               <figcaption>
                 <a
@@ -163,7 +163,7 @@
                 </a>
               </figcaption>
             </figure>
-            <figure class="rounded hover:bg-gray-800 mt-6">
+            <figure class="mt-6 rounded hover:bg-gray-800">
               <img
                 src="/logos/built-with-nuxt-white.svg"
                 alt="built-with-nuxt-logo"
@@ -184,12 +184,12 @@
       <i18n
         path="design.other_download_message"
         tag="p"
-        class="text-center mt-8 text-light-onSurfacePrimary dark:text-dark-onSurfacePrimary transition-colors duration-300 ease-linear"
+        class="mt-8 text-center transition-colors duration-300 ease-linear text-light-onSurfacePrimary dark:text-dark-onSurfacePrimary"
       >
-        <template v-slot:favicon>
+        <template #favicon>
           <a href="/favicon.ico" target="_blank" rel="noopener">favicon</a>
         </template>
-        <template v-slot:sketch>
+        <template #sketch>
           <a href="/logos/nuxt-logos.sketch" target="_blank" rel="noopener">
             Sketch
           </a>
@@ -203,10 +203,10 @@
 import DesignIllustration from '~/assets/illustrations/design.svg?inline'
 
 export default {
-  transition: 'logos',
   components: {
     DesignIllustration
   },
+  transition: 'logos',
   head() {
     const title = this.$t('design.meta.title')
     const description = this.$t('design.meta.description')
@@ -235,7 +235,7 @@ export default {
 }
 </script>
 
-<style scoped>
+<style lang="postcss" scoped>
 figure {
   @apply relative p-4 text-center text-gray-500 table w-full;
 

@@ -1,13 +1,13 @@
 <template>
-  <div class="-mx-4 lg:mx-0 flex flex-col-reverse lg:flex-row">
+  <div class="flex flex-col-reverse -mx-4 lg:mx-0 lg:flex-row">
     <div
-      class="lg:min-h-screen lg:w-4/4 w-full py-8 px-4 lg:static lg:overflow-visible lg:max-h-full"
+      class="w-full px-4 py-8 lg:min-h-screen lg:w-4/4 lg:static lg:overflow-visible lg:max-h-full"
     >
       <LangFallback :doc-link="docLink" :lang-fallback="langFallback" />
 
       <article>
         <h1
-          class="text-light-onSurfacePrimary dark:text-dark-onSurfacePrimary transition-colors duration-300 ease-linear"
+          class="transition-colors duration-300 ease-linear text-light-onSurfacePrimary dark:text-dark-onSurfacePrimary"
         >
           {{ page.title }}
         </h1>
@@ -132,13 +132,6 @@ export default {
 </script>
 <style lang="scss" scoped>
 article h1 {
-  @apply font-medium relative text-3xl table mb-8;
-
-  &::after {
-    content: ' ';
-    width: 80%;
-
-    @apply block border-2 border-nuxt-lightgreen mt-2 mb-1 rounded;
-  }
+  @apply font-medium relative text-3xl table mb-6;
 }
 </style>

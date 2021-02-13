@@ -1,27 +1,27 @@
 ---
 title: 'nuxt.renderRoute(route, context)'
-description: Render a specific route with a given context.
+description: 渡されたコンテキストを使い特定のルートをレンダリングします。
 menu: renderRoute
 category: internals-glossary
 position: 11
 ---
 
-- Type: `Function`
-- Arguments:
-  1. `String` : route to render
-  2. _Optional_, `Object`, context given, available keys: `req` & `res`
-- Returns: `Promise`
+- 型: `Function`
+- 引数:
+  1. `String` : レンダリングするルート
+  2. *オプション* `Object`、渡されたコンテキスト、利用可能なキー: `req` と `res`
+- 戻り値: `Promise`
   - `html`: `String`
-  - `error`: `null` or `Object`
-  - `redirected`: `false` or `Object`
+  - `error`: `null` または `Object`
+  - `redirected`: `false` または `Object`
 
-> Render a specific route with a given context.
+> 渡されたコンテキストを使い、特定のルートをレンダリングします。
 
-This method should be used mostly for test purposes as well as with [`nuxt.renderAndGetWindow`](/docs/2.x/internals-glossary/nuxt-render-and-get-window).
+このメソッドはほとんどの場合  [`nuxt.renderAndGetWindow`](/docs/2.x/internals-glossary/nuxt-render-and-get-window) とともにテストする目的で使われます。
 
 <base-alert>
 
-`nuxt.renderRoute` should be executed after the build process in production mode.
+`nuxt.renderRoute` はプロダクションモードではビルド処理の後に実行するといいでしょう。
 
 </base-alert>
 
@@ -29,28 +29,28 @@ This method should be used mostly for test purposes as well as with [`nuxt.rende
 const { loadNuxt, build } = require('nuxt')
 
 async function start() {
-  // Get nuxt instance for start (production mode)
-  // Make sure to have run `nuxt build` before running this script
+  // 起動用の nuxt インスタンスを取得します（プロダクションモード）
+  // このスクリプトを実行する前に `nuxt build` を実行していることを確認してください
   const nuxt = await loadNuxt({ for: 'start' })
 
   const { html, error, redirected } = await nuxt.renderRoute('/')
 
-  // `html` will always be a string
+  // `html` は常に文字列になります
 
-  // `error` not null when the error layout is displayed, the error format is:
-  // { statusCode: 500, message: 'My error message' }
+  // エラーレイアウトが表示されるときは `error` は null ではありません。エラーフォーマットは下記:
+  // { statusCode: 500, message: 'エラーメッセージ' }
 
-  // `redirected` is not `false` when `redirect()` has been used in `asyncData()` or `fetch()`
+  // `asyncData()` または `fetch()` 内で `redirect()` が使われたときは `redirected` は `false` ではありません
   // { path: '/other-path', query: {}, status: 302 }
 }
 
 start()
 ```
 
-### What's next
+### このあとは
 
 <base-alert type="next">
 
-Check out the the [Components Glossary book](/docs/2.x/components-glossary/pages-fetch)
+[fetch メソッド](/docs/2.x/components-glossary/pages-fetch)についてのドキュメントを参照してください。
 
 </base-alert>

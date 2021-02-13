@@ -137,7 +137,7 @@ export default {
 }
 ```
 
-## Internals of the Progress Bar
+## Internals (?) индикатора загрузки
 
 К сожалению, компонент индиактора загрузки не может знать заранее, сколько времени займет загрузка новой страницы. Поэтому невозможно точно анимировать индиактор прогресса до 100% времени загрузки.
 
@@ -153,24 +153,24 @@ export default {
 }
 ```
 
-_Example of a continuous progress bar:_
+_Пример работы индикатора загрузки:_
 
 ![https://nuxtjs.org/api-continuous-loading.gif](https://nuxtjs.org/api-continuous-loading.gif)
 
-## Using a Custom Loading Component
+## Использование индивидуального комопонента
 
-You can also create your own component that Nuxt.js will call instead of the default loading progress bar component. To do so, you need to give a path to your component in the `loading` option. Then, your component will be called directly by Nuxt.js.
+Вы можете создать свой собственный компонент, и Nuxt.js будет вызывать его вместо компонента прогресса загрузки по умолчанию. Для этого вам нужно указать путь до вашего компонента в свойстве `loading`. После этого Nuxt.js будет вызывать ваш компонент вместо компонент по умолчанию.
 
-Your component has to expose some of these methods:
+Ваш компонент должен содержать методы, которые представлены в этой таблице:
 
-| Method        | Required | Description                                                                              |
-| ------------- | -------- | ---------------------------------------------------------------------------------------- |
-| start()       | Required | Called when a route changes, this is where you display your component.                   |
-| finish()      | Required | Called when a route is loaded (and data fetched), this is where you hide your component. |
-| fail(error)   | Optional | Called when a route couldn't be loaded (failed to fetch data for example).               |
-| increase(num) | Optional | Called during loading the route component, num is an Integer < 100.                      |
+| Метод         | Обязательность | Описание                                                                                              |
+| ------------- | -------------- | ----------------------------------------------------------------------------------------------------- |
+| start()       | обязателен     | Вызывается при переходе на страницу, и здесь ваш компонент показывается на странице.                  |
+| finish()      | обязателен     | Вызывается когда переход на страницу завершен (и данные загружены), и здесь ваш компонент скрывается. |
+| fail(error)   | не обязателен  | Вызывается когда страница не может быть загружена (например при ошибке загрузки данных).              |
+| increase(num) | не обязателен  | Вызывается во время загрузки страницы, num - это число, значение которого должно быть меньше чем 100. |
 
-You can create your custom component in `components/LoadingBar.vue`:
+Пример создания вашего собственного комопонента, который находится в папке `components/LoadingBar.vue`:
 
 ```html{}[components/LoadingBar.vue]
 <template>
@@ -211,7 +211,7 @@ You can create your custom component in `components/LoadingBar.vue`:
 </style>
 ```
 
-Then, you update your `nuxt.config.js` to tell Nuxt.js to use your component:
+После того, как вы создали свой компонент, вам нужно указать путь до него в файле `nuxt.config.js`, чтобы Nuxt.js знал откуда его можно запустить:
 
 ```js{}[nuxt.config.js]
 export default {
@@ -219,9 +219,9 @@ export default {
 }
 ```
 
-## The loading indicator Property
+## Свойства индикатора загрузки
 
-When running Nuxt.js in SPA mode, there is no content from the server side on the first page load. So, instead of showing a blank page while the page loads, Nuxt.js gives you a spinner which you can customize to add your own colors or background and even change the the indicator.
+Когда Nuxt.js запущен в режиме SPA, данные не сразу прийдут со стороны сервера когда вы перейдете на страницу. Поэтому вместо того, чтобы показывать пустую страницу когда идет загрузка данных, Nuxt.js дает вам анимированый индикатор загрузки, который вы можете настроить изменив цвет индикатора или его фон, а также выбрать встроенный индикатор на выбор.
 
 ```js{}[nuxt.config.js]
 export default {
@@ -233,9 +233,9 @@ export default {
 }
 ```
 
-## Built-in indicators
+## Встроенные индикаторы
 
-These indicators are imported from the awesome [SpinKit](http://tobiasahlin.com/spinkit) project. You can check out its demo page to preview the spinners. In order to use one of these spinners all you have to do is add its name to the name property. No need to import or install anything. Here is a list of built in indicators you can use.
+Эти индиакторы импортированы из библиотеки [SpinKit](http://tobiasahlin.com/spinkit). Вы можете посмотреть варианты индикаторов на демо-странице перейдя на нее по ссылке. Для использования одного из них, вам надо добавить название индикатора в свойство `name`. Нет необходимости импортировать или устанавливать что либо. Это список встроенных индикаторов которые мы можете использовать в своих проектах:
 
 - circle
 - cube-grid
@@ -249,12 +249,12 @@ These indicators are imported from the awesome [SpinKit](http://tobiasahlin.com/
 - three-bounce
 - wandering-cubes
 
-Built-in indicators support `color` and `background` options.
+Встроенные индикаторы поддерживают свойства `color` и `background`.
 
-## Custom indicators
+## Индикаторы пользователя
 
-If you need your own special indicator, a String value or Name key can also be a path to an HTML template of indicator source code! All of the options are passed to the template, too.
+При использовании специального индикатора, строковые данные или названия ключей тажке должны быть узказаны (String value or Name key can also be a path?) в HTML шаблоне исходного кода индикатора! Все опции также передаются в шаблон.
 
-Nuxt's built-in [source code](https://github.com/nuxt/nuxt.js/tree/dev/packages/vue-app/template/views/loading) is also available if you need a base!
+Nuxt.js индикаторы также доступны для использования. Для вдохновения вы можете посмотреть этот [исходный код](https://github.com/nuxt/nuxt.js/tree/dev/packages/vue-app/template/views/loading)
 
 <quiz :questions="questions"></quiz>

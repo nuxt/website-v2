@@ -1,97 +1,111 @@
 ---
-title: 'The ModuleContainer Class'
-description: Nuxt ModuleContainer Class
+title: 'ModuleContainer クラス'
+description: Nuxt の ModuleContainer クラス
 menu: Module Container
 category: internals-glossary
 position: 6
 ---
 
-- Source: **[core/module.js](https://github.com/nuxt/nuxt.js/blob/dev/packages/core/src/module.js)**
+- ソース: **[core/module.js](https://github.com/nuxt/nuxt.js/blob/dev/packages/core/src/module.js)**
 
-All [modules](/docs/2.x/directory-structure/modules) will be called within context of `ModuleContainer` instance.
+すべての[モジュール](/docs/2.x/directory-structure/modules)は `ModuleContainer` インスタンスのコンテキストの中で呼ばれます。
 
-## Tapable plugins
+## Tapable プラグイン
 
-We can register hooks on certain life cycle events.
+特定のライフサイクルイベントでフックを登録できます。
 
 ```js
 nuxt.moduleContainer.plugin('ready', async moduleContainer => {
-  // Do this after all modules where ready
+  // すべてのモジュールの準備ができたらこの処理を実行します
 })
 ```
 
-Inside [modules](/docs/2.x/directory-structure/modules) context we can use this instead:
+[モジュール](/docs/2.x/directory-structure/modules)コンテキストの中では代わりに以下のようにできます:
 
 ```js
 this.plugin('ready', async moduleContainer => {
-  // Do this after all modules where ready
+  // すべてのモジュールの準備ができたらこの処理を実行します
 })
 ```
 
-| Plugin  | Arguments       | When                                                 |
-| ------- | --------------- | ---------------------------------------------------- |
-| `ready` | moduleContainer | All modules in `nuxt.config.js` has been initialized |
+| プラグイン | 引数            | タイミング                                                  |
+| ---------- | --------------- | ----------------------------------------------------------- |
+| `ready`    | moduleContainer | `nuxt.config.js` にあるすべてのモジュールが初期化されたとき |
 
-## Methods
+## メソッド
 
-### addVendor (vendor)
+### addVendor（vendor）
 
-**Deprecated as `vendor` isn't used anymore**
+**`vendor` は使われていないので非推奨です**
 
-Adds to `options.build.vendor` and apply unique filter.
+`options.build.vendor` に追加し、一意なフィルターを適用します。
 
-### addTemplate (template)
+### addTemplate（template）
 
-- **template**: `String` or `Object`
+- **template**: `String` または `Object`
   - `src`
   - `options`
   - `fileName`
 
-Renders given template using [lodash template](https://lodash.com/docs/4.17.4#template) during build into project `buildDir` (`.nuxt`).
+プロジェクトの `buildDir`（`.nuxt`）へビルド中に、[lodash template](https://lodash.com/docs/4.17.4#template) を使って与えられたテンプレートをレンダリングします。
 
-If `fileName` is not provided or `template` is string, target file name defaults to `[dirName].[fileName].[pathHash].[ext]`.
+`fileName` を与えないか `template` が文字列の場合、ターゲットのファイル名はデフォルトで `[dirName].[fileName].[pathHash].[ext]` になります。
 
-This method returns final `{ dst, src, options }` object.
+このメソッドは最終的な `{ dst, src, options }` オブジェクトを返します。
 
-### addPlugin (template)
+### addPlugin（template）
 
-Registers a plugin using `addTemplate` and adds it to first of `plugins[]` option.
+- **template**: オブジェクトプロパティ（`src`、`options`、`fileName`、`mode`）。
 
-You can use `template.ssr: false` to disable plugin including in SSR bundle.
+`addTemplate` を使ってプラグインを登録し、`plugins[]` 配列の先頭に追加します。
 
-### addServerMiddleware (middleware)
+```js
+this.addPlugin({
+  src: path.resolve(__dirname, 'templates/foo.js'),
+  fileName: 'foo.server.js' // [optional] はサーバーバンドルにのみ含まれます
+  options: moduleOptions
+})
+```
 
-Pushes middleware into [options.serverMiddleware](/docs/2.x/configuration-glossary/configuration-servermiddleware).
+**注意:** プラグインをクライアントサイドまたはサーバーサイドでのみ使う場合は `mode` または `.client` と `.server` 修飾子を `fileName` オプションと共に使えます（利用可能なオプションについては [plugins](/docs/2.x/directory-structure/plugins#name-conventional-plugin) を参照してください）。
 
-### extendBuild (fn)
+`fileName` を指定する場合、`fileName` にカスタムパスを設定できます。名前の衝突を防ぐため `.nuxt` フォルダ内のフォルダ構成を選択できます:
 
-Allows easily extending webpack build config by chaining [options.build.extend](/docs/2.x/configuration-glossary/configuration-build#extend) function.
+```js
+{
+  fileName: path.join('folder', 'foo.client.js'), // 結果は `.nuxt/folder/foo.client.js` になります
+}
+```
 
-### extendRoutes (fn)
+### addServerMiddleware（middleware）
 
-Allows easily extending routes by chaining [options.build.extendRoutes](/docs/2.x/configuration-glossary/configuration-router#extendroutes) function.
+[options.serverMiddleware](/docs/2.x/configuration-glossary/configuration-servermiddleware) にミドルウェアをプッシュします。
 
-### extendPlugins (fn)
+### extendBuild（fn）
 
-Allows easily extending plugins by chaining [options.extendPlugins](/docs/2.x/configuration-glossary/configuration-extend-plugins) function.
+[options.build.extend](/docs/2.x/configuration-glossary/configuration-build#extend) 関数をつなげることで webpack のビルド設定を簡単に拡張できます。
 
-### addModule (moduleOpts, requireOnce)
+### extendRoutes（fn）
 
-_Async function_
+[options.build.extendRoutes](/docs/2.x/configuration-glossary/configuration-router#extendroutes) 関数をつなげることでルートを簡単に拡張できます。
 
-Registers a module. `moduleOpts` can be a string or an array (`[src, options]`). If `requireOnce` is `true` and the resolved module exports `meta`, it prevents registering same module twice.
+### addModule（moduleOpts, requireOnce）
 
-### requireModule (moduleOpts)
+_非同期関数_
 
-_Async function_
+モジュールを登録します。`moduleOpts`は文字列または配列（`[src, options]`）です。`requireOnce` が `true` で解決されたモジュールが `meta` をエクスポートしている場合に、同じモジュールが二度登録されるのを回避します。
 
-Is a shortcut for `addModule(moduleOpts, true)`
+### requireModule（moduleOpts）
 
-## Hooks
+_非同期関数_
 
-We can register hooks on certain life cycle events.
+`addModule(moduleOpts, true)` の短縮形です。
 
-| Hook             | Arguments                  | When                                                                                  |
-| ---------------- | -------------------------- | ------------------------------------------------------------------------------------- |
-| `modules:before` | (moduleContainer, options) | Called before creating ModuleContainer class, useful to overload methods and options. |
-| `modules:done`   | (moduleContainer)          | Called when all modules have been loaded.                                             |
+## フック
+
+特定のライフサイクルイベントでフックを登録できます。
+
+| フック           | 引数                       | タイミング                                                                                     |
+| ---------------- | -------------------------- | ---------------------------------------------------------------------------------------------- |
+| `modules:before` | (moduleContainer, options) | ModuleContainer クラスが作られる前に呼ばれ、メソッドとオプションのオーバーロードに役立ちます。 |
+| `modules:done`   | (moduleContainer)          | すべてのモジュールがロードされたときに呼ばれます。                                             |

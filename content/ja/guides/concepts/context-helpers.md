@@ -10,7 +10,7 @@ imgAlt: nuxt-js-context-keys
 questions:
   - question: コンテキストが存在する理由は？
     answers:
-      - ーサイドレンダリングのため
+      - サーバーサイドレンダリングのため
       - グローバルな状態を持つため
       - Laziness
     correctAnswer: サーバーサイドリングのため

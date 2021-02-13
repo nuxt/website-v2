@@ -12,7 +12,7 @@ questions:
     answers:
       - サーバーサイドレンダリングのため
       - グローバルな状態を持つため
-      - Laziness
+      - 横着するため
     correctAnswer: サーバーサイドリングのため
   - question: コンテキストにないキーは？
     answers:

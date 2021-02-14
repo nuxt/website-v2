@@ -2,9 +2,9 @@
   <div>
     <HomeWelcome />
     <HomeWhy />
-    <LazyHomeCompanies />
-    <LazyHomeModes />
-    <LazyHomeSponsors />
+    <HomeCompanies />
+    <HomeModes />
+    <HomeSponsors />
   </div>
 </template>
 

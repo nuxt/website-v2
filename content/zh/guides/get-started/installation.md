@@ -66,7 +66,7 @@ npm run dev
   </code-block>
 </code-group>
 
-项目现在运行在 [localhost:3000](http://localhost:3000)上，干的漂亮 XD！
+项目现在运行在 [http://localhost:3000](http://localhost:3000)上，干的漂亮 XD！
 
 <base-alert type="info">
 
@@ -199,7 +199,7 @@ npm run dev
 
 </base-alert>
 
-现在项目运行在 **[localhost:3000](http://localhost:3000/).**
+现在项目运行在 **[http://localhost:3000](http://localhost:3000/).**
 
 打开你的浏览器，并在终端中点击链接，你就能看到我们在上一步中复制的文本“Hello World”。
 

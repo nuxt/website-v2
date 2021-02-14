@@ -64,11 +64,6 @@ export default {
       showModal: false
     }
   },
-  computed: {
-    open() {
-      return this.showModal
-    }
-  },
   head() {
     return this.open
       ? {
@@ -77,6 +72,11 @@ export default {
           }
         }
       : undefined
+  },
+  computed: {
+    open() {
+      return this.showModal
+    }
   }
 }
 </script>

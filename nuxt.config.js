@@ -70,7 +70,9 @@ export default {
     // https://github.com/Atinux/nuxt-tailwindcss/
     '@nuxtjs/tailwindcss',
     // https://pwa.nuxtjs.org
-    '@nuxtjs/pwa'
+    '@nuxtjs/pwa',
+    // https://github.com/moritzsternemann/vue-plausible
+    'vue-plausible'
   ],
   modules: [
     '~/modules/releases',
@@ -83,14 +85,24 @@ export default {
   pwa: {
     manifest: {
       name: 'NuxtJS',
+      description: 'Nuxt.js official website',
       theme_color: '#00C58E'
     }
   },
 
   // Auto import components, see https://github.com/nuxt/components
-  components: true,
+  components: [
+    '~/components/templates',
+    '~/components/global',
+    '~/components/atoms',
+    '~/components/molecules',
+    '~/components/organisms',
+  ],
   colorMode: {
     preference: 'light' // disable system
+  },
+  plausible: {
+    domain: 'nuxtjs.org',
   },
   content: {
     markdown: {

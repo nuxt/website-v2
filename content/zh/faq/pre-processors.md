@@ -12,9 +12,7 @@ position: 2
 举个例子，我们在 `pages/index.vue` 组件中使用 [Pug](https://github.com/pugjs/pug)， [CoffeeScript](http://coffeescript.org) 和 [Sass](http://sass-lang.com/)：
 
 ```html
-<template lang="pug">
-  h1.red Hello {{ name }}!
-</template>
+<template lang="pug"> h1.red Hello {{ name }}! </template>
 
 <script lang="coffee">
   export default data: ->
@@ -36,5 +34,5 @@ position: 2
 记得安装这些预处理器对应的 npm 依赖包和 Webpack 加载器:
 
 ```bash
-npm install --save-dev pug@2.0.3 pug-plain-loader coffeescript coffee-loader sass sass-loader fibers
+npm install --save-dev pug@2.0.3 pug-plain-loader coffeescript coffee-loader sass sass-loader@10 fibers
 ```

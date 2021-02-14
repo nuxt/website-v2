@@ -258,12 +258,12 @@ export default {
 
   ```js
   {
-    app: ({ isDev }) => isDev ? '[name].js' : '[contenthash].js',
-    chunk: ({ isDev }) => isDev ? '[name].js' : '[contenthash].js',
-    css: ({ isDev }) => isDev ? '[name].css' : '[contenthash].css',
-    img: ({ isDev }) => isDev ? '[path][name].[ext]' : 'img/[contenthash:7].[ext]',
-    font: ({ isDev }) => isDev ? '[path][name].[ext]' : 'fonts/[contenthash:7].[ext]',
-    video: ({ isDev }) => isDev ? '[path][name].[ext]' : 'videos/[contenthash:7].[ext]'
+    app: ({ isDev, isModern }) => isDev ? `[name]${isModern ? '.modern' : ''}.js` : `[contenthash:7]${isModern ? '.modern' : ''}.js`,
+    chunk: ({ isDev, isModern }) => isDev ? `[name]${isModern ? '.modern' : ''}.js` : `[contenthash:7]${isModern ? '.modern' : ''}.js`,
+    css: ({ isDev }) => isDev ? '[name].css' : 'css/[contenthash:7].css',
+    img: ({ isDev }) => isDev ? '[path][name].[ext]' : 'img/[name].[contenthash:7].[ext]',
+    font: ({ isDev }) => isDev ? '[path][name].[ext]' : 'fonts/[name].[contenthash:7].[ext]',
+    video: ({ isDev }) => isDev ? '[path][name].[ext]' : 'videos/[name].[contenthash:7].[ext]'
   }
   ```
 
@@ -639,7 +639,7 @@ This option is automatically set based on `mode` value if not provided.
 
 This mode bundles `node_modules` that are normally preserved as externals in the server build ([more information](https://github.com/nuxt/nuxt.js/pull/4661)).
 
-<base-alert type="warning">**Warning*: Runtime dependencies (modules, `nuxt.config`, server middleware and static directory) are not bundled. This feature only disables use of [webpack-externals](https://webpack.js.org/configuration/externals/) for server-bundle.</base-alert>
+<base-alert type="warning">\*_Warning_: Runtime dependencies (modules, `nuxt.config`, server middleware and static directory) are not bundled. This feature only disables use of [webpack-externals](https://webpack.js.org/configuration/externals/) for server-bundle.</base-alert>
 
 <base-alert type="info">**Info:** you can use the command `yarn nuxt build --standalone` to enable this mode on the command line. (If you are not using `yarn` you can run the command with `npx`.)</base-alert>
 

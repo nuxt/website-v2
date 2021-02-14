@@ -1,165 +1,165 @@
 ---
-title: Nuxt Lifecycle
-description: No matter which tool you use, you will always feel more confident when you understand how the tool works under the hood. The same applies to Nuxt.js.
+title: Nuxt ライフサイクル
+description: 'どのツールをう場合でも、ツールが内部でどのように機能するかを理解すると常に自信が持てるようになります。同じことが Nuxt.js にも当てはまります。'
 position: 5
 category: concepts
 img: /docs/2.x/nuxt-lifecycle.svg
 imgAlt: understanding-nuxt-2-12-lifecycle-hooks
 questions:
-  - question: When does the Nuxt.js lifecycle start?
+  - question: Nuxt.js ライフサイクルはいつ開始しますか？
     answers:
-      - When the response will be sent to the client
-      - After the build phase
-      - When running nuxt dev
-    correctAnswer: After the build phase
-  - question: On which main factors does the content of the lifecycle depend?
+      - レスポンスがクライアントに送信された時
+      - ビルドフェーズの後
+      - nuxt dev を実行した時
+    correctAnswer: ビルドフェーズの後
+  - question: ライフサイクルの内容はどの主要因に依存しますか？
     answers:
-      - Which time and date we have when starting the server
-      - If server side rendering is enabled and if so, which type is used
-      - What type of OS the Nuxt.js application is running on
-    correctAnswer: If server side rendering is enabled and if so, which type is used
-  - question: When is nuxtServerInit called?
+      - サーバーを起動した際の日時
+      - サーバーサイドレンダリングの有効化と使われているサーバーサイドレンダリングのタイプ
+      - Nuxt.js アプリケーションが実行されている OS の種類
+    correctAnswer: サーバーサイドレンダリングの有効化と使われているサーバーサイドレンダリングのタイプ
+  - question: nuxtServerInit はいつ呼ばれますか？
     answers:
-      - Server-side and client-side
-      - After the Vue hydration
-      - Only on the server side
-    correctAnswer: Only on the server side
-  - question: What are the three types of middleware?
+      - サーバーサイドとクライアントサイド
+      - Vue ハイドレーションの後
+      - サーバーサイドのみ
+    correctAnswer: サーバーサイドのみ
+  - question: ミドルウェアの 3 つのタイプは何ですか？
     answers:
-      - Global, Layout, Route
-      - Global, Layout, Page
-      - Global, Group, Route
-    correctAnswer: Global, Layout, Route
-  - question: What step can only happen on the client side?
+      - グローバル、レイアウト、ルート
+      - グローバル、レイアウト、ページ
+      - グローバル、グループ、ルート
+    correctAnswer: グローバル、レイアウト、ルート
+  - question: クライアントサイドでのみ発生する可能性のあるステップは何ですか？
     answers:
-      - Vue Hydration
-      - Middleware execution
-      - Calling the fetch function
-    correctAnswer: Vue Hydration
-  - question: Which step never happens on the client side?
+      - Vue ハイドレーション
+      - ミドルウェアの実行
+      - fetch 関数の呼び出し
+    correctAnswer: Vue ハイドレーション
+  - question: クライアントサイドでは発生しないステップはどれですか？
     answers:
-      - Executing asyncData
-      - Executing serverMiddleware
-      - Executing fetch
-    correctAnswer: Executing serverMiddleware
-  - question: Which Vue methods are called on both, server and client side?
+      - asyncData の実行
+      - サーバーミドルウェアの実行
+      - fetch の実行
+    correctAnswer: サーバーミドルウェアの実行
+  - question: サーバーサイドとクライアントサイド両方で呼び出される Vue メソッドは何ですか？
     answers:
-      - mounted and beforeMount
-      - beforeDestroy and destroyed
-      - created and beforeCreate
-    correctAnswer: created and beforeCreate
-  - question: What step does not happen after navigating via <NuxtLink>?
+      - mounted と beforeMount
+      - beforeDestroy と destroyed
+      - created と beforeCreate
+    correctAnswer: created と beforeCreate
+  - question: '`<NuxtLink>` を介して遷移した後、発生しないステップはどれですか？'
     answers:
-      - Calling fetch
-      - Executing client-side Nuxt.js plugins
-      - Calling beforeCreate
-    correctAnswer: Executing client-side Nuxt.js plugins
-  - question: What is the special difference between asyncData and fetch after navigating via <NuxtLink>?
+      - fetch の呼び出し
+      - クライアントサイドの Nuxt.js プラグインの実行
+      - beforeCreate の呼び出し
+    correctAnswer: クライアントサイドの Nuxt.js プラグインの実行
+  - question: '`<NuxtLink>` を介して遷移した後、 asyncData と fetch で特別な違いは何ですか？'
     answers:
-      - asyncData is faster than fetch
-      - asyncData is called after fetch
-      - asyncData is blocking while fetch is not
-    correctAnswer: asyncData is blocking while fetch is not
+      - asyncData は fetch より速い
+      - asyncData は fetch の後に呼ばれる
+      - fetch はブロッキングされていないのに asyncData はブロッキングされている
+    correctAnswer: fetch はブロッキングされていないのに asyncData はブロッキングされている
 ---
 
 <app-modal :src="img" :alt="imgAlt"></app-modal>
 
-No matter which tool you use, you will always feel more confident when you understand how the tool works under the hood. The same applies to Nuxt.js. The goal of this chapter is to give you a high-level overview of the different parts of the framework, their order of execution and how they work together.
+どのツールを使う場合でも、ツールが内部でどのように機能するかを理解すると常に自信が持てるようになります。同じことが Nuxt.js にも当てはまります。この章の目的は、フレームワークのさまざまな部分とそれらの実行順序、およびどのように連携するかについての概要を説明することです。
 
-The Nuxt.js lifecycle describes what happens after the build phase, where your application is bundled, chunked and minified. What happens after this phase depends on whether you have server-side rendering enabled or not. If you have, it furthermore depends on the type of server-side rendering you have chosen:
+Nuxt.js ライフサイクルはアプリケーションがバンドルされ、チャンク化され、縮小されるビルドフェーズの後に何が起こるかを説明します。このフェーズの後に何が起こるかは、サーバーサイドのレンダリングが有効になっているかどうかによって異なります。有効になっている場合は、選択したサーバーサイドレンダリングのタイプによってさらに異なります:
 
-Dynamic SSR (`nuxt start`)
+動的な SSR（`nuxt start`）
 
-or Static Site Generation (`nuxt generate`).
+または静的サイト生成（`nuxt generate`）。
 
-## Lifecycle
+## ライフサイクル
 
-### Server
+### サーバー
 
-For SSR, these steps will be executed for every initial request to your app
+SSR の場合、これらのステップはアプリケーションへの最初のリクエストごとに実行されます。
 
-- The server starts (`nuxt start`)
+- サーバーを起動します（`nuxt start`）
 
-When using static site generation, the server steps are only executed on build time, but once for every page that will be generated
+静的サイトの生成を行う場合、サーバーステップはビルド時にのみ実行されますが、生成されるページごとに 1 回実行されます。
 
-- The generation process starts (`nuxt generate`)
+- 生成処理を開始します（`nuxt generate`）
 
-- Nuxt hooks
-- serverMiddleware
-- Server-side Nuxt plugins
-  - in order as defined in nuxt.config.js
+- Nuxt フック
+- サーバーミドルウェア
+- サーバーサイドの Nuxt プラグイン
+  - nuxt.config.js で定義されている順序
 - nuxtServerInit
-  - Vuex action that is called only on server-side to pre-populate the store
-  - First argument is the **Vuex context**, second argument is the **Nuxt.js context**
-    - Dispatch other actions from here → only "entry point" for subsequent store actions on server-side
-  - can only be defined in `store/index.js`
-- Middleware
-  - Global middleware
-  - Layout middleware
-  - Route middleware
+  - ストアに事前にデータを詰めるためにサーバーサイドでのみ呼び出される Vuex アクション
+  - 第 1 引数は **Vuex context**、第 2 引数は **Nuxt.js context** です
+    - ここから他のアクションをディスパッチします → サーバーサイドの後続ストアアクションの「エントリポイント」のみです
+  - `store/index.js` でのみ定義できます
+- ミドルウェア
+  - グローバルミドルウェア
+  - レイアウトミドルウェア
+  - ルートミドルウェア
 - asyncData
-- beforeCreate (Vue lifecycle method)
-- created (Vue lifecycle method)
-- The new fetch (top to bottom, siblings = parallel)
-- Serialization of state (`render:routeContext` Nuxt.js hook)
+- beforeCreate（Vue ライフサイクルメソッド）
+- created（Vue ライフサイクルメソッド）
+- あたらしい fetch（上から下、ノード = 並列）
+- 状態のシリアライズ（`render:routeContext` Nuxt.js フック）
 
-- the HTML rendering happens (`render:route` Nuxt.js hook)
+- HTML レンダリングの開始（`render:route` Nuxt.js フック）
 
-- `render:routeDone` hook when HTML has been sent to the browser
+- `render:routeDone`（HTML がブラウザに送信された際のフック）
 
-- `generate:before` Nuxt.js hook
-- HTML files are generated
-  - **Full static generation**
-    - e.g. static payloads are extracted
-  - `generate:page` (HTML editable)
-  - `generate:routeCreated` (Route generated)
-- `generate:done` when all HTML files have been generated
+- `generate:before` Nuxt.js フック
+- HTML ファイルの生成
+  - **完全な静的生成**
+    - 例えば静的ペイロードが抽出された場合
+  - `generate:page`（HTML が編集可能）
+  - `generate:routeCreated`（ルートが生成されます）
+- `generate:done`（すべての HTML ファイルが生成された際）
 
-### Client
+### クライアント
 
-This part of the lifecycle is fully executed in the browser, no matter which Nuxt.js mode you've chosen.
+ライフサイクルのこの部分は選択した Nuxt.js モードに関係なくブラウザーで完全に実行されます。
 
-- Receives the HTML
-- Loading assets (e.g. JavaScript)
-- Vue Hydration
-- Middleware
-  - Global middleware
-  - Layout middleware
-  - Route middleware
-- asyncData (blocking)
-- client-side Nuxt.js plugin
-  - in order as defined in nuxt.config.js
-- beforeCreate (Vue lifecycle method)
-- created (Vue lifecycle method)
-- The new fetch (top to bottom, siblings = parallel) (non-blocking)
-- beforeMount (Vue lifecycle method)
-- mounted (Vue lifecycle method)
+- HTML を受け取り
+- アセットのロード（例えば JavaScript）
+- Vue ハイドレーション
+- ミドルウェア
+  - グローバルミドルウェア
+  - レイアウトミドルウェア
+  - ルートミドルウェア
+- クライアントサイドの Nuxt.js プラグイン
+  - nuxt.config.js で定義されている順序
+- asyncData（ブロッキング）
+- beforeCreate（Vue ライフサイクルメソッド）
+- created（Vue ライフサイクルメソッド）
+- あたらしい fetch（上から下、ノード = 並列）（ノンブロッキング）
+- beforeMount（Vue ライフサイクルメソッド）
+- mounted（Vue ライフサイクルメソッド）
 
-### Navigate using the NuxtLink component
+### NuxtLink コンポーネントを使って遷移する
 
-Same as for the _client_ part, everything is happening in the browser but only when navigating via `<NuxtLink>`. Furthermore, no page content is displayed until all _blocking_ tasks are fulfilled.
+*クライアント*の章と同様に `<NuxtLink>` を介して遷移する場合だけすべてのステップがブラウザで発生します。さらにすべての*ブロッキング*タスクが実行されるまでページコンテントは表示されません。
 
 <base-alert type="info">
 
-Check out the component chapter to see more info on [`<NuxtLink>`](/docs/2.x/features/nuxt-components#the-nuxtlink-component)
+[`<NuxtLink>`](/docs/2.x/features/nuxt-components#the-nuxtlink-component) のドキュメントで詳細を確認してください。
 
 </base-alert>
 
-- middleware (blocking)
-  - Global middleware
-  - Layout middleware
-  - Route middleware
-- asyncData (blocking)
-- asyncData (blocking) [or full static payload loading]
-- beforeCreate & created (Vue lifecycle methods)
-- fetch (non-blocking)
+- ミドルウェア（ブロッキング）
+  - グローバルミドルウェア
+  - レイアウトミドルウェア
+  - ルートミドルウェア
+- asyncData（ブロッキング）
+- asyncData（ブロッキングまたは完全静的なペイロードをロードします）
+- beforeCreate & created（Vue ライフサイクルメソッド）
+- fetch（ノンブロッキング）
 - beforeMount & mounted
 
-### What's next
+### このあとは
 
 <base-alert type="next">
 
-Check out the [Features book](/docs/2.x/features/rendering-modes)
+[レンダリングモードのドキュメント](/docs/2.x/features/rendering-modes)を参照してください。
 
 </base-alert>
 

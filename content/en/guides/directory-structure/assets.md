@@ -112,14 +112,14 @@ In case you want to use `sass` make sure that you have installed `sass` and�
   <code-block label="Yarn" active>
 
 ```bash
-yarn add -D sass sass-loader fibers
+yarn add -D sass sass-loader@10 fibers
 ```
 
   </code-block>
   <code-block label="npm">
 
 ```bash
-npm install --save-dev sass sass-loader fibers
+npm install --save-dev sass sass-loader@10 fibers
 ```
 
   </code-block>
@@ -157,6 +157,7 @@ You can use local fonts by adding them to your assets folder. Once they have bee
   src: url('~assets/fonts/DMSans-Bold.ttf') format('truetype');
 }
 ```
+
 <base-alert type="info">CSS files are not automatically loaded. Add them using the [CSS config property](https://nuxtjs.org/docs/2.x/configuration-glossary/configuration-css/).</base-alert>
 
 <base-alert type="next">
@@ -275,7 +276,7 @@ You can use the alias of `~~` or `@@` for the root directory.
 
 <base-alert type="info">
 
-Tip: On Spanish keyboard you can access `~` with (`Option` + `ñ`) on Mac OS
+Tip: On Spanish keyboard you can access `~` with (`Option` + `ñ`) on Mac OS, or (`Alt gr` + `4`) on Windows
 
 </base-alert>
 

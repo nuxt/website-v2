@@ -1,29 +1,27 @@
 <template>
   <div
-    class="nui-select text-nuxt-gray bg-gray-200 dark:bg-dark-surface dark:text-dark-onSurfaceSecondary inline-block rounded-full transition-colors duration-300 ease-linear"
+    class="inline-block transition-colors duration-300 ease-linear bg-gray-200 rounded-full nui-select text-nuxt-gray dark:bg-dark-surface dark:text-dark-onSurfaceSecondary"
   >
     <div class="flex items-center content-center px-4">
       <div class="-mr-4">
         <slot name="icon" />
       </div>
-      <template>
-        <select
-          :value="$i18n.locale"
-          class="bg-transparent cursor-pointer font-medium h-10 appearance-none focus:outline-none pl-6 pr-8 z-10"
-          :aria-label="label"
-          @change="onChange"
+      <select
+        :value="$i18n.locale"
+        class="z-10 h-10 pl-6 pr-8 font-medium bg-transparent appearance-none cursor-pointer focus:outline-none"
+        :aria-label="label"
+        @change="onChange"
+      >
+        <option
+          v-for="(locale, i) in $i18n.locales"
+          :key="i"
+          :value="locale.code"
+          class="dark:text-dark-surface"
         >
-          <option
-            v-for="(locale, i) in $i18n.locales"
-            :key="i"
-            :value="locale.code"
-            class="dark:text-dark-surface"
-          >
-            {{ getLocaleDescription(locale) }}
-          </option>
-        </select>
-        <CaretDownIcon class="-ml-4" />
-      </template>
+          {{ getLocaleDescription(locale) }}
+        </option>
+      </select>
+      <CaretDownIcon class="-ml-4" />
     </div>
   </div>
 </template>

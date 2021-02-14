@@ -1,10 +1,10 @@
 <template>
   <AppContainer class="py-12">
     <section>
-      <h1 class="text-3xl uppercase text-center pb-8">
+      <h1 class="pb-8 text-3xl text-center uppercase">
         Nuxt<span class="text-nuxt-lightgreen">JS</span> targets
       </h1>
-      <div class="flex items-end lg:items-center justify-between">
+      <div class="flex items-end justify-between lg:items-center">
         <div class="Home__Modes__Section">
           <h4 class="Home__Modes__Section__Title">
 Server

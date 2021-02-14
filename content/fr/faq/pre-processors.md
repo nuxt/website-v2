@@ -10,9 +10,7 @@ Grâce à [Vue Loader](http://vue-loader.vuejs.org/fr/configurations/pre-process
 Exemple d'une `pages/index.vue` utilisant [Pug](https://github.com/pugjs/pug), [CoffeeScript](http://coffeescript.org) et [Sass](http://sass-lang.com/) :
 
 ```html
-<template lang="pug">
-  h1.red Bonjour {{ name }}!
-</template>
+<template lang="pug"> h1.red Bonjour {{ name }}! </template>
 
 <script lang="coffee">
   export default data: ->
@@ -34,5 +32,5 @@ Exemple d'une `pages/index.vue` utilisant [Pug](https://github.com/pugjs/pug), [
 Pour être en mesure d'utiliser ces préprocesseurs, nous devons installer leurs loaders webpack :
 
 ```bash
-npm install --save-dev pug@2.0.3 pug-plain-loader coffeescript coffee-loader sass sass-loader fibers
+npm install --save-dev pug@2.0.3 pug-plain-loader coffeescript coffee-loader sass sass-loader@10 fibers
 ```

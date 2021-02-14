@@ -1,22 +1,22 @@
 ---
-title: 'The dev Property'
-description: Define the development or production mode.
+title: 'Properti dev'
+description: Menentukan mode pengembangan atau produksi.
 menu: dev
 category: configuration-glossary
 position: 6
 ---
 
-- Type: `Boolean`
-- Default: `true`
+- Tipe: `Boolean`
+- Bawaan: `true`
 
-> Define the development or production mode of Nuxt.js.
+> Menentukan mode pengembangan atau produksi Nuxt.js.
 
-This property is overwritten by the nuxt commands:
+Properti ini ditimpa oleh perintah nuxt:
 
-- `dev` is forced to `true` with `nuxt`
-- `dev` is forced to `false` with `nuxt build`, `nuxt start` and `nuxt generate`
+- `dev` dipaksa menjadi` true` dengan `nuxt`
+- `dev` dipaksa menjadi `false` dengan `nuxt build`, `nuxt start` dan `nuxt generate`
 
-This property should be used when using [Nuxt.js programmatically](/docs/2.x/internals-glossary/nuxt):
+Properti ini harus digunakan saat menggunakan [Nuxt.js secara terprogram](/docs/2.x/internals-glossary/nuxt):
 
 ```js{}[nuxt.config.js]
 export default {
@@ -29,17 +29,17 @@ const { Nuxt, Builder } = require('nuxt')
 const app = require('express')()
 const port = process.env.PORT || 3000
 
-// We instantiate Nuxt.js with the options
+// Kami memberi contoh Nuxt.js dengan opsi
 const config = require('./nuxt.config.js')
 const nuxt = new Nuxt(config)
 app.use(nuxt.render)
 
-// Build only in dev mode
+// Build hanya dalam mode pengembangan
 if (config.dev) {
   new Builder(nuxt).build()
 }
 
-// Listen the server
+// Memantau server
 app.listen(port, '0.0.0.0').then(() => {
   console.log(`Server is listening on port: ${port}`)
 })

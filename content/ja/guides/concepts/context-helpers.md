@@ -1,6 +1,6 @@
 ---
-title: Context and Helpers
-description: The context provides *additional* and often optional information about the current request to the application.
+title: コンテキストとヘルパー
+description: 'コンテキストは、アプリケーションへの現在のリクエストに関する*追加*およびオプションの情報を提供します。'
 position: 2
 category: concepts
 csb_link_context: https://codesandbox.io/embed/github/nuxt-academy/guides-examples/tree/master/02_concepts/02_context_helpers-context?fontsize=14&hidenavigation=1&theme=dark
@@ -8,55 +8,55 @@ csb_link_helpers: https://codesandbox.io/embed/github/nuxt-academy/guides-exampl
 img: /docs/2.x/context.svg
 imgAlt: nuxt-js-context-keys
 questions:
-  - question: What is the reason the context exists?
+  - question: コンテキストが存在する理由は？
     answers:
-      - Server-side rendering
-      - Having global state
-      - Laziness
-    correctAnswer: Server-side rendering
-  - question: Which key is not in the context?
+      - サーバーサイドレンダリングのため
+      - グローバルな状態を持つため
+      - 横着するため
+    correctAnswer: サーバーサイドリングのため
+  - question: コンテキストにないキーは？
     answers:
       - env
       - isDev
       - $store
     correctAnswer: $store
-  - question: Which context key is only available on the *server* side?
+  - question: どのコンテキストキーが*サーバー*サイドでのみ利用可能ですか？
     answers:
       - from
       - app
       - req
     correctAnswer: req
-  - question: Which context key is only available on the *client* side?
+  - question: どのコンテキストキーが*クライアント*サイドでのみ利用可能ですか？
     answers:
       - from
       - res
       - app
     correctAnswer: from
-  - question: What can the `$nuxt` helper *not* do?
+  - question: '`$nuxt` ヘルパーが*しない*ことは？'
     answers:
-      - Displaying the version of Nuxt
-      - Providing info about the users internet connection status
-      - Accessing exposed module functions
-    correctAnswer: Displaying the version of Nuxt
-  - question: What are the names of the process helpers
+      - Nuxt のバージョンを表示する
+      - ユーザーのインターネット接続状況に関する情報を提供する
+      - 公開されたモジュール機能へのアクセス
+    correctAnswer: Nuxt のバージョンを表示する
+  - question: プロセスヘルパーの名前は？
     answers:
-      - global, client and server
-      - server, client and static
-      - ssr, spa and static
-    correctAnswer: server, client and static
+      - global、client と server
+      - server、client と static
+      - ssr、spa と static
+    correctAnswer: server、client と static
 ---
 
 <app-modal :src="img" :alt="imgAlt"></app-modal>
 
-The `context` object is available in specific Nuxt functions like [asyncData](/docs/2.x/features/data-fetching#async-data), [plugins](/docs/2.x/directory-structure/plugins), [middleware](/docs/2.x/directory-structure/middleware) and [nuxtServerInit](/docs/2.x/directory-structure/store#the-nuxtserverinit-action). It provides _additional_ and often optional information about the current request to the application.
+`context` オブジェクトは  [asyncData](/docs/2.x/features/data-fetching#async-data)、[plugins](/docs/2.x/directory-structure/plugins)、[middleware](/docs/2.x/directory-structure/middleware)  や  [nuxtServerInit](/docs/2.x/directory-structure/store#the-nuxtserverinit-action) といった特定の Nuxt 関数で利用できます。これは、アプリケーションへの現在の要求に関する*追加の*情報と多くの場合オプションの情報を提供します。
 
-First and foremost, the context is used to provide access to other parts of the Nuxt.js application, e.g. the Vuex store or the underlying `connect` instance. Thus, we have the `req` and `res` objects in the context available on the server side and `store` always available. But with time, the context was extended with many other helpful variables and shortcuts. Now we have access to HMR functionalities in `development` mode, the current `route`, page `params` and `query`, as well as the option to access environment variables through the context. Furthermore, module functions and helpers can be exposed through the context to be available on both - the client and the server side.
+何よりもまず、コンテキストは Nuxt.js アプリケーションの他の部分（例えば Vuex ストアや基盤となる `connect` インスタンス）へのアクセスを提供するために使用されます。そのため、サーバーサイドと `store` で使用可能なコンテキストの `req` オブジェクトと `res` オブジェクトは常に使用可能です。しかし、時間が経つにつれコンテキストは他の多くの役立つ変数やショートカットで拡張されました。今では `development` モードの HMR 機能、現在の `route`、ページの `params`、そして `query` にアクセスできるほか、コンテキストを介して環境変数にアクセスするオプションもあります。さらに、モジュール関数とヘルパーは、クライアントサイドとサーバーサイドの両方で使用できるようにコンテキストを通じて公開できます。
 
-**All context keys that are present by default**
+**デフォルトで存在するすべてのコンテキストキー**
 
 ```js
-function (context) { // Could be asyncData, nuxtServerInit, ...
-  // Always available
+function (context) { // asyncData、nuxtServerInit, ...
+  // 常に利用可能
   const {
     app,
     store,
@@ -71,12 +71,12 @@ function (context) { // Could be asyncData, nuxtServerInit, ...
    $config
   } = context
 
-  // Only available on the Server-side
+  // サーバーサイドでのみ利用可能
   if (process.server) {
     const { req, res, beforeNuxtRender } = context
   }
 
-  // Only available on the Client-side
+  // クライアントサイドでのみ利用可能
   if (process.client) {
     const { from, nuxtState } = context
   }
@@ -85,36 +85,36 @@ function (context) { // Could be asyncData, nuxtServerInit, ...
 
 <base-alert>
 
-The _context_ we refer to here is not to be confused with the `context` object available in [Vuex Actions](https://vuex.vuejs.org/guide/actions.html) or the one available in the `build.extend` function in your `nuxt.config.js`. These are all not related to each other!
+ここで参照する*コンテキスト*を [Vuex アクション](https://vuex.vuejs.org/ja/guide/actions.html)で利用可能な `context` オブジェクトや `nuxt.config.js` の `build.extend` 関数で利用可能な `context` オブジェクトと混同しないでください。これらはすべて互いに関連していません！
 
 </base-alert>
 
-Learn more about the different context keys in our [Internals Glossary](/docs/2.x/internals-glossary/context)
+他のコンテキストキーについての詳細は[コンテキストのドキュメント](/docs/2.x/internals-glossary/context)を参照してください。
 
-### Using page parameters for your API query
+### API クエリ用にページパラメータを使う
 
-The context directly exposes possible dynamic parameters of the route via `context.params`. In the following example, we call an API via the `nuxt/http` module using a dynamic page parameter as part of the URL. Modules, like the [nuxt/http](https://http.nuxtjs.org/) module, can expose own functions which are then available through the [context.app](http://context.app) object.
+コンテキストは `context.params` を介してルートのとりうる動的パラメータを直接公開します。次の例では、URL の一部として動的ページパラメータを使用して、 `nuxt/http` モジュールを介して API を呼び出します。[nuxt/http](https://http.nuxtjs.org/) モジュールのようなモジュールは、[context.app](http://context.app) オブジェクトを介して利用できる独自の関数を公開できます。
 
-Also, we wrap the API call in a `try/catch` statement to handle potential errors. With the `context.error` function, we can directly show Nuxt's error page and pass in the occurred error.
+また、潜在的なエラーを処理するために API の呼び出しを `try/catch` ステートメントでラップします。 `context.error` 関数を使用すると、Nuxt のエラーページを直接表示して発生したエラーを渡すことができます。
 
 ```js{}[pages/posts/_id.vue]
 export default {
   async asyncData(context) {
     const id = context.params.id
     try {
-      // Using the nuxtjs/http module here exposed via context.app
+      // nuxtjs/http モジュールをここで使い context.app を介して公開します
       const post = await context.app.$http.$get(
         `https://api.nuxtjs.dev/posts/${id}`
       )
       return { post }
     } catch (e) {
-      context.error(e) // Show the nuxt error page with the thrown error
+      context.error(e) // スローしたエラーと一緒に nuxt エラーページを表示します
     }
   }
 }
 ```
 
-With [ES6](https://hacks.mozilla.org/2015/05/es6-in-depth-destructuring/) you can use this syntax to destructure your context object. You can pass in the objects you want to have access to and then you can use them in the code without using the word context.
+[ES6](https://hacks.mozilla.org/2015/05/es6-in-depth-destructuring/) を使用すると、この構文を使用してコンテキストオブジェクトを分解できます。アクセスしたいオブジェクトを渡すと、コンテキストという単語を使用せずにコードでそれらを使用できます。
 
 ```js{}[pages/posts/_id.vue]
 export default {
@@ -122,26 +122,26 @@ export default {
     const id = params.id
 
     try {
-      // Using the nuxtjs/http module here exposed via context.app
+      // nuxtjs/http モジュールをここで使い context.app を介して公開します
       const post = await $http.$get(`https://api.nuxtjs.dev/posts/${id}`)
       return { post }
     } catch (e) {
-      error(e) // Show the nuxt error page with the thrown error
+      error(e) // スローしたエラーと一緒に nuxt エラーページを表示します
     }
   }
 }
 ```
 
-Want to use query parameters instead? You then use [context.query.id](/docs/2.x/internals-glossary/context#query) then.
+代わりにクエリパラメータを使いたい場合は [context.query.id](/docs/2.x/internals-glossary/context#query) を使ってください。
 
-### Redirecting users & accessing the store
+### ユーザをリダイレクトさせストアへアクセスする
 
-Accessing the Vuex store (when you have it set up through the `store` directory) is also possible through the context. It provides a `store` object which can be treated as `this.$store` in Vue components. In addition, we use the `redirect` method, an exposed helper through the context, to redirect the user in case the `authenticated` state is falsy.
+Vuex ストアへのアクセス（`store` ディレクトリを介して設定した場合）もコンテキストを介して可能です。これは、Vue コンポーネントで `this.$store` として扱うことができる `store` オブジェクトを提供します。さらに、コンテキストを介して公開されたヘルパーである `redirect` メソッドを使用して `authenticated` 状態がファルシーな場合にユーザーをリダイレクトします。
 
 ```js
 export default {
   middleware({ store, redirect }) {
-    // retrieving keys via object destructuring
+    // 分解したオブジェクトからキーを取得する
     const isAuthenticated = store.state.authenticated
     if (!isAuthenticated) {
       return redirect('/login')
@@ -152,21 +152,21 @@ export default {
 
 <base-alert type="next">
 
-Check out the Internals Glossary book for more examples of the [redirect method](/docs/2.x/internals-glossary/context#redirect)
+その他の例についての詳細は [redirect メソッドのドキュメント](/docs/2.x/internals-glossary/context#redirect)を参照してください。
 
 </base-alert>
 
-## Helpers
+## ヘルパー
 
-Besides the shortcuts in the context, there are also other tiny helpers present in your Nuxt.js application.
+コンテキスト内のショートカットに加えて、Nuxt.js アプリケーションには他の小さなヘルパーもあります。
 
-## `$nuxt`: The Nuxt.js helper
+## `$nuxt`: Nuxt.js ヘルパー
 
-`$nuxt` is a helper designed to improve the user experience and to be an escape hatch in some situations. It is accessible via `this.$nuxt` in Vue components and via `window.$nuxt` otherwise on the client side.
+`$nuxt` はユーザーエクスペリエンスを向上させ、状況によってはエスケープハッチになるように設計されたヘルパーです。Vue コンポーネントでは `this.$nuxt` を介してアクセスでき、それ以外の場合はクライアント側で `window.$nuxt` を介してアクセスできます。
 
-### Connection checker
+### コネクションチェッカー
 
-The `$nuxt` helper provides a quick way to find out whether the internet connection of a user is present or not: It exposes the boolean values `isOffline` and `isOnline`. We can use these to show a message as soon as the user is offline (for example).
+`$nuxt` ヘルパーはユーザーのインターネット接続があるかどうかをすばやく確認する方法を提供します。ブール値の `isOffline` と `isOnline` を公開します。これらを使用して例えば、ユーザーがオフラインになるとすぐにメッセージを表示できます。
 
 ```html{}[layouts/default.vue]
 <template>
@@ -177,15 +177,15 @@ The `$nuxt` helper provides a quick way to find out whether the internet connect
 </template>
 ```
 
-### Accessing the root instance
+### ルートインスタンスへアクセスする
 
-Besides providing DX/UX features, the `$nuxt` helper also provides a shortcut to the root instance of your application from every other component. But that's not everything — you can also access the `$nuxt` helper through `window.$nuxt` which can be used as an escape hatch to gain access to module methods like `$axios` from outside your Vue components. This should be used wisely and **only as last resort**.
+DX/UX 機能を提供することに加え、`$nuxt` ヘルパーは他のすべてのコンポーネントからアプリケーションのルートインスタンスへのショートカットも提供します。しかし、それだけではありません。Vue コンポーネントの外部から `$axios` などのモジュールメソッドにアクセスするためのエスケープハッチとして使用できる `window.$nuxt` を介して `$nuxt` ヘルパーにアクセスすることもできます。賢明に使う必要があり**最後の手段としてしてください**。
 
-### Refreshing page data
+### ページデータのリフレッシュ
 
-When you want to refresh the current page for the user, you don't want to fully reload the page because you might hit the server again and at least re-initialize the whole Nuxt.js application. Instead, you often only want to refresh the data, provided by `asyncData` or `fetch`.
+ユーザーの現在のページを更新したい場合、サーバーに再度アクセスして少なくとも Nuxt.js アプリケーション全体を再初期化する可能性があるのでページを完全にリロードさせたくないでしょう。リロードの代わりに `asyncData` または `fetch` によって提供されるデータのみを更新したい場合がよくあります。
 
-You can do so, by using `this.$nuxt.refresh()`!
+これは `this.$nuxt.refresh()` を使って行えます！
 
 ```html
 <template>
@@ -209,9 +209,9 @@ You can do so, by using `this.$nuxt.refresh()`!
 </script>
 ```
 
-#### Controlling the loading bar
+#### ローディングバーの制御
 
-With `$nuxt`, you can also control Nuxt's loading bar programmatically via `this.$nuxt.$loading`.
+`$nuxt` を使うと、Nuxt のローディングバーを `this.$nuxt.$loading` を介してプログラムで制御できます。
 
 ```js
 export default {
@@ -224,11 +224,11 @@ export default {
 }
 ```
 
-Read more in the corresponding [loading feature chapter](../features/loading)
+詳細については[ローディング機能のドキュメント](../features/loading)を参照してください。
 
-## onNuxtReady helper
+## onNuxtReady ヘルパー
 
-If you want to run some scripts _after_ your Nuxt.js application has been loaded and is ready, you can use the `window.onNuxtReady` function. This can be useful when you want to execute a function on the client-side without increasing the time to interactive of your site.
+Nuxt.js アプリケーションがロードされて準備ができた*後* 、いくつかのスクリプトを実行する場合は、 `window.onNuxtReady` 関数を使用できます。これはサイトのインタラクティブ化にかかる時間を増やすことなく、クライアントサイドで関数を実行したい場合に便利です。
 
 ```js
 window.onNuxtReady(() => {
@@ -236,9 +236,9 @@ window.onNuxtReady(() => {
 })
 ```
 
-## Process helpers
+## プロセスヘルパー
 
-Nuxt.js injects three boolean values into the global `process` object which will help you to determine whether your app was rendered on the server or fully on the client, as well as checking for static site generation. These helpers are available across your application and are commonly used in `asyncData` userland code.
+Nuxt.js はグローバルな `process` オブジェクトに 3 つのブール値を挿入します。これはアプリケーションがサーバーでレンダリングされたか、完全にクライアントでレンダリングされたかを判断し、静的サイトの生成を確認するのに便利です。これらのヘルパーはアプリケーション全体で利用でき、`asyncData` ユーザーランドコードで一般的に使用されています。
 
 ```html{}[pages/about.vue]
 <template>
@@ -254,6 +254,6 @@ Nuxt.js injects three boolean values into the global `process` object which will
 </script>
 ```
 
-In the example, `renderedOn` will evaluate to `'server'` when using server-side rendering and a user accesses the page directly. When the user would navigate to the page from another part of the application, e.g. by click on a `<NuxtLink>`, it will evaluate to client.
+この例ではサーバーサイドレンダリングを使用し、ユーザーが直接ページにアクセスすると `renderedOn` は `'server'` と評価されます。ユーザーがアプリケーションの別の部分からページに遷移する場合（例えば `<NuxtLink>` をクリックする場合）クライアントに評価されます。
 
 <quiz :questions="questions"></quiz>

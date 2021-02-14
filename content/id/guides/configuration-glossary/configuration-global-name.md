@@ -1,15 +1,15 @@
 ---
-title: 'The globalName Property'
-description: Nuxt.js lets you customize the global ID used in the main HTML template as well as the main Vue instance name and other options.
+title: 'Properti globalName'
+description: Nuxt.js memungkinkan kamu menyesuaikan ID global yang digunakan dalam templat HTML utama serta nama instance Vue utama dan opsi lainnya.
 menu: globalName
 category: configuration-glossary
 position: 11
 ---
 
-> Nuxt.js lets you customize the global ID used in the main HTML template as well as the main Vue instance name and other options.
+> Nuxt.js memungkinkan kamu menyesuaikan ID global yang digunakan dalam templat HTML utama serta nama _instance_ Vue utama dan opsi lainnya.
 
-- Type: `String`
-- Default: `nuxt`
+- Tipe: `String`
+- Bawaan: `nuxt`
 
 ```js{}[nuxt.config.js]
 {
@@ -19,16 +19,16 @@ position: 11
 
 <base-alert>
 
-The `globalName` needs to be a valid JavaScript identifier, and changing it may break support for certain plugins that rely on Nuxt-named functions. If you're looking to just change the visible `__nuxt` HTML ID, then use the `globals` property.
+`globalName` harus menjadi pengenal JavaScript yang valid, dan mengubahnya dapat merusak dukungan untuk _plugin_ tertentu yang mengandalkan fungsi Nuxt-bernama. Jika kamu hanya ingin mengubah ID HTML `__nuxt` yang terlihat, gunakan properti `globals`.
 
 </base-alert>
 
-## The globals property
+## Properti globals
 
-> Customizes specific global names which are based on `globalName` by default.
+> Menyesuaikan nama global tertentu yang didasarkan pada `globalName` secara bawaan.
 
-- Type: `Object`
-- Default:
+- Tipe: `Object`
+- Bawaan:
 
 ```js{}[nuxt.config.js]
 globals: {

@@ -1,6 +1,6 @@
 ---
 title: 'Properti env'
-description: Berbagi variabel lingkungan antara klien dan server.
+description: Berbagi variabel lingkungan antara klien dan peladen.
 menu: env
 category: configuration-glossary
 position: 8
@@ -8,9 +8,9 @@ position: 8
 
 - Tipe: `Object`
 
-> Nuxt.js memungkinkan kamu membuat variabel lingkungan sisi klien, juga untuk dibagikan dari sisi server.
+> Nuxt.js memungkinkan kamu membuat variabel lingkungan sisi klien, juga untuk dibagikan dari sisi peladen.
 
-Properti env mendefinisikan variabel lingkungan yang harus tersedia di sisi klien. Properti ini dapat ditugaskan menggunakan variabel lingkungan sisi server, [modul dotenv](https://github.com/nuxt-community/dotenv-module) atau yang serupa.
+Properti env mendefinisikan variabel lingkungan yang harus tersedia di sisi klien. Properti ini dapat ditugaskan menggunakan variabel lingkungan sisi peladen, [modul dotenv](https://github.com/nuxt-community/dotenv-module) atau yang serupa.
 
 **Pastikan untuk membaca tentang `process.env` dan `process.env == {}` di bawah untuk pemecahan masalah yang lebih baik.**
 
@@ -22,7 +22,7 @@ export default {
 }
 ```
 
-Ini memungkinkan kamu membuat properti `baseUrl` yang akan sama dengan variabel lingkungan sisi server `BASE_URL` jika ada atau telah ditentukan. Jika tidak, `baseUrl` di sisi klien akan sama dengan `'http://localhost:3000'`. Oleh karena itu, variabel sisi server BASE_URL disalin ke sisi klien melalui properti `env` di `nuxt.config.js`. Atau, nilai lain yang ditentukan (http://localhost:3000).
+Ini memungkinkan kamu membuat properti `baseUrl` yang akan sama dengan variabel lingkungan sisi peladen `BASE_URL` jika ada atau telah ditentukan. Jika tidak, `baseUrl` di sisi klien akan sama dengan `'http://localhost:3000'`. Oleh karena itu, variabel sisi peladen BASE_URL disalin ke sisi klien melalui properti `env` di `nuxt.config.js`. Atau, nilai lain yang ditentukan (http://localhost:3000).
 
 Kemudian, kamu dapat mengakses variabel `baseUrl` dengan 2 cara:
 

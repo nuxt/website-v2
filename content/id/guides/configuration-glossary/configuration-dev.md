@@ -39,9 +39,9 @@ if (config.dev) {
   new Builder(nuxt).build()
 }
 
-// Memantau server
+// Memantau peladen
 app.listen(port, '0.0.0.0').then(() => {
-  console.log(`Server is listening on port: ${port}`)
+  console.log(`Peladen sedang memantau pada port: ${port}`)
 })
 ```
 

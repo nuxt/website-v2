@@ -1,18 +1,18 @@
 ---
-title: 'The env Property'
-description: Share environment variables between client and server.
+title: 'Properti env'
+description: Berbagi variabel lingkungan antara klien dan server.
 menu: env
 category: configuration-glossary
 position: 8
 ---
 
-- Type: `Object`
+- Tipe: `Object`
 
-> Nuxt.js lets you create environment variables client side, also to be shared from server side.
+> Nuxt.js memungkinkan kamu membuat variabel lingkungan sisi klien, juga untuk dibagikan dari sisi server.
 
-The env property defines environment variables that should be available on the client side. They can be assigned using server side environment variables, the [dotenv module](https://github.com/nuxt-community/dotenv-module) ones or similar.
+Properti env mendefinisikan variabel lingkungan yang harus tersedia di sisi klien. Properti ini dapat ditugaskan menggunakan variabel lingkungan sisi server, [modul dotenv](https://github.com/nuxt-community/dotenv-module) atau yang serupa.
 
-**Make sure to read about `process.env` and `process.env == {}` below for better troubleshooting.**
+**Pastikan untuk membaca tentang `process.env` dan `process.env == {}` di bawah untuk pemecahan masalah yang lebih baik.**
 
 ```js{}[nuxt.config.js]
 export default {
@@ -22,16 +22,16 @@ export default {
 }
 ```
 
-This lets you create a `baseUrl` property that will be equal to the `BASE_URL` server side environment variable if available or defined. If not, `baseUrl` in client side will be equal to `'http://localhost:3000'`. The server side variable BASE_URL is therefore copied to the client side via the `env` property in the `nuxt.config.js`. Alternatively, the other value is defined (http://localhost:3000).
+Ini memungkinkan kamu membuat properti `baseUrl` yang akan sama dengan variabel lingkungan sisi server `BASE_URL` jika ada atau telah ditentukan. Jika tidak, `baseUrl` di sisi klien akan sama dengan `'http://localhost:3000'`. Oleh karena itu, variabel sisi server BASE_URL disalin ke sisi klien melalui properti `env` di `nuxt.config.js`. Atau, nilai lain yang ditentukan (http://localhost:3000).
 
-Then, I can access my `baseUrl` variable in 2 ways:
+Kemudian, kamu dapat mengakses variabel `baseUrl` dengan 2 cara:
 
-1. Via `process.env.baseUrl`.
-2. Via `context.env.baseUrl`, see [context API](/docs/2.x/internals-glossary/context).
+1. Melalui `process.env.baseUrl`.
+2. Melalui `context.env.baseUrl`, lihat [API konteks](/docs/2.x/internals-glossary/context).
 
-You can use the `env` property for giving a public token for example.
+Kamu dapat menggunakan properti `env` misalnya untuk memberikan token publik.
 
-For the example above, we can use it to configure [axios](https://github.com/mzabriskie/axios).
+Untuk contoh di atas, kita dapat menggunakannya untuk mengkonfigurasi [axios](https://github.com/mzabriskie/axios).
 
 ```js{}[plugins/axios.js]
 import axios from 'axios'
@@ -41,25 +41,25 @@ export default axios.create({
 })
 ```
 
-Then, in your pages, you can import axios like this: `import axios from '~/plugins/axios'`
+Kemudian, di laman kamu, kamu dapat mengimpor axios seperti berikut: `import axios from '~/plugins/axios'`
 
-## Automatic injection of environment variables
+## Injeksi otomatis variabel lingkungan
 
-If you define environment variables starting with `NUXT_ENV_` in the build phase (e.g. `NUXT_ENV_COOL_WORD=freezing nuxt build`, they'll be automatically injected into the process environment. Be aware that they'll potentially take precedence over defined variables in your `nuxt.config.js` with the same name.
+Jika kamu menentukan variabel lingkungan yang dimulai dengan `NUXT_ENV_` dalam fase _build_ (misalnya, `NUXT_ENV_COOL_WORD=freezing nuxt build`), variabel tersebut akan otomatis dimasukkan ke dalam lingkungan proses. Ketahuilah bahwa variabel tersebut berpotensi didahulukan daripada variabel yang ditentukan di `nuxt.config.js` dengan nama yang sama.
 
 ## process.env == {}
 
-Note that Nuxt uses webpack's `definePlugin` to define the environmental variable. This means that the actual `process` or `process.env` from Node.js is neither available nor defined. Each of the `env` properties defined in nuxt.config.js is individually mapped to `process.env.xxxx` and converted during compilation.
+Perhatikan bahwa Nuxt menggunakan `definePlugin` _webpack_ untuk mendefinisikan variabel lingkungan. Ini berarti bahwa `process` atau `process.env` yang aktual dari Node.js, itu tidak tersedia atau ditentukan. Setiap properti `env` yang ditentukan di nuxt.config.js secara individual dipetakan ke `process.env.xxxx` dan diubah selama kompilasi.
 
-Meaning, `console.log(process.env)` will output `{}` but `console.log(process.env.your_var)` will still output your value. When webpack compiles your code, it replaces all instances of `process.env.your_var` with the value you've set it to, e.g.: `env.test = 'testing123'`. If you use `process.env.test` in your code somewhere, it is actually translated to 'testing123'.
+Artinya, `console.log(process.env)` akan memberi keluaran `{}` tetapi `console.log(process.env.your_var)` akan tetap memberikan keluaran nilai kamu. Ketika _webpack_ mengkompilasi kode kamu, itu menggantikan semua _instance_ `process.env.your_var` dengan nilai yang kamu telah setel, misalnya: `env.test = 'testing123'`. Jika kamu menggunakan `process.env.test` dalam kode di suatu tempat, ini sebenarnya diterjemahkan ke 'testing123'.
 
-before
+sebelum
 
 ```js
 if (process.env.test == 'testing123')
 ```
 
-after
+setelah
 
 ```js
 if ('testing123' == 'testing123')
@@ -67,4 +67,4 @@ if ('testing123' == 'testing123')
 
 ## serverMiddleware
 
-As [serverMiddleware](/docs/2.x/configuration-glossary/configuration-servermiddleware) is decoupled from the main Nuxt build, `env` variables defined in `nuxt.config.js` are not available there.
+Karena [serverMiddleware](/docs/2.x/configuration-glossary/configuration-servermiddleware) dipisahkan dari _build_ Nuxt utama, variabel `env` yang ditentukan di `nuxt.config.js` tidak tersedia di sana.

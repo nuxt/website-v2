@@ -1,15 +1,15 @@
 ---
-title: 'The buildDir Property'
-description: Define the dist directory for your Nuxt.js application
+title: 'Propert buildDir'
+description: Menentukan direktori dist untuk aplikasi Nuxt.js kamu
 menu: buildDir
 category: configuration-glossary
 position: 2
 ---
 
-- Type: `String`
-- Default: `.nuxt`
+- Tipe: `String`
+- Bawaan: `.nuxt`
 
-> Define the dist directory for your Nuxt.js application
+> Menentukan direktori dist untuk aplikasi Nuxt.js kamu
 
 ```js{}[nuxt.config.js]
 export default {
@@ -17,4 +17,4 @@ export default {
 }
 ```
 
-By default, many tools assume that `.nuxt` is a hidden directory, because its name starts with a dot. You can use this option to prevent that.
+Secara bawaan, banyak alat mengasumsikan bahwa `.nuxt` adalah direktori tersembunyi, karena namanya dimulai dengan titik. Kamu dapat menggunakan opsi ini untuk mencegahnya.

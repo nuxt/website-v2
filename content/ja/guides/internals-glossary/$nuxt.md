@@ -29,7 +29,7 @@ Nuxt.js ヘルパーの詳細については [コンテキストとヘルパー�
 ## ページデータのリフレッシュ
 
 - `refresh()`
-  - asyncData または fetch が提供するデータのみをリフレッシュしたい時
+  - asyncData または fetch が提供するデータのみをリフレッシュしたいとき
 
 ```html{}[example.vue]
 <template>

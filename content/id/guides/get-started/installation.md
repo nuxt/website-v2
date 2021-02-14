@@ -155,7 +155,7 @@ Kita gunakan perintah _dev_ ketika menjalankan aplikasi dalam mode pengembangan.
 
 </base-alert>
 
-Aplikasi sekarang berjalan di **[localhost:3000](http://localhost:3000/).**
+Aplikasi sekarang berjalan di **[http://localhost:3000](http://localhost:3000/).**
 
 Buka di _browser_ Anda dengan mengklik link di terminal Anda dan Anda akan melihat teks "Hello World" yang kita salin di langkah sebelumnya.
 
@@ -242,4 +242,4 @@ npm run dev
   </code-block>
 </code-group>
 
-Aplikasi sekarang berjalan di [localhost:3000](http://localhost:3000). Bagus!
+Aplikasi sekarang berjalan di [http://localhost:3000](http://localhost:3000). Bagus!

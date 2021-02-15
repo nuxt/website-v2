@@ -304,6 +304,16 @@ module.exports = {
       internals: 'Mécanismes'
     },
     examples: {
+      routing: 'Routage',
+      dataFetching: 'Data Fetching',
+      assetManagement: 'Gestion d\'assets',
+      transitions: 'Transitions',
+      seo: 'SEO',
+      loading: 'Chargement',
+      miscellaneous: 'Divers',
+      middleware: 'Middleware',
+      plugins: 'Plugins',
+      modules: 'Modules',
       essentials: 'Essentiels',
       customization: 'Personnalisation',
       advanced: 'Avancé'

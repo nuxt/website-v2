@@ -1,5 +1,5 @@
 ---
-title: plugin
+title: plugins
 description: `plugins` ディレクトリには、ルート Vue.js アプリケーションをインスタンス化する前に実行する Javascript プラグインが含まれています。
 position: 11
 category: directory-structure
@@ -125,6 +125,7 @@ module.exports = {
 <template>
   <h1>{{ post.title }}</h1>
 </template>
+
 <script>
 export default {
 	async asyncData ({ $axios, params }) {
@@ -135,11 +136,12 @@ export default {
 </script>
 ```
 
-モジュールをインストールせずに `axios` を使用する別の方法は、`<script>` タグに `axios` を直接インポートすることです。
+Another way to use `axios` without installing the module is by importing `axios` direct in the `<script>` tag.
 
 ```js{}[pages/index.vue]
 <script>
 import axios from 'axios'
+
 export default {
 	async asyncData ({ params }) {
 	  const { data: post }  = await axios.get(`https://api.nuxtjs.dev/posts/${params.id}`)
@@ -263,7 +265,6 @@ Vue[インスタンスのライフサイクル](https://jp.vuejs.org/v2/guide/in
 
 ```js{}[plugins/hello.js]
 export default ({ app }, inject) => {
-  // Inject $hello(msg) in Vue, context and store.
   // Vue、コンテキスト、ストアに$hello(msg）を挿入します。
   inject('hello', msg => console.log(`Hello ${msg}!`))
 }
@@ -295,6 +296,7 @@ export default {
 export const state = () => ({
   someValue: ''
 })
+
 export const actions = {
   setSomeValueToWhatever({ commit }) {
     this.$hello('store action')
@@ -323,8 +325,10 @@ export default {
       ({ src }) => src === '~/plugins/shouldBeFirst.js'
     )
     const shouldBeFirstPlugin = plugins[pluginIndex]
+
     plugins.splice(pluginIndex, 1)
     plugins.unshift(shouldBeFirstPlugin)
+
     return plugins
   }
 }

@@ -9,7 +9,7 @@
             class="text-3xl xl:text-4xl text-light-onSurfacePrimary dark:text-dark-onSurfacePrimary font-medium leading-normal mb-6 lg:pt-4"
           >
             {{ $t('sponsor.title') }}
-            <template v-slot:nuxt>
+            <template #nuxt>
               <AppTitle />
             </template>
           </i18n>
@@ -18,7 +18,7 @@
             tag="h3"
             class="xl:text-lg text-light-onSurfaceSecondary dark:text-dark-onSurfaceSecondary font-medium leading-relaxed mb-6"
           >
-            <template v-slot:break>
+            <template #break>
               <br />
             </template>
           </i18n>
@@ -27,78 +27,6 @@
           class="w-2/3 mx-auto lg:mx-0 lg:w-5/12 lg:-mt-8 text-light-elevatedSurface dark:text-dark-elevatedSurface"
         />
       </div>
-      <section
-        class="flex flex-wrap bg-light-surface dark:bg-dark-surface p-8 rounded my-12"
-      >
-        <div class="w-full lg:w-2/3 text-center lg:text-left">
-          <h2 class="text-2xl uppercase pt-4 pb-6">
-            {{ $t('sponsor.donations.title') }}
-          </h2>
-          <p class="mb-8 text-gray-600">
-            {{ $t('sponsor.donations.description') }}
-          </p>
-          <div
-            class="flex flex-wrap justify-center lg:justify-start items-end mb-8 text-light-onSurfacePrimary"
-          >
-            <a
-              href="https://www.paypal.me/nuxtjs"
-              target="_blank"
-              class="flex items-center my-2 bg-gray-200 hover:bg-gray-300 rounded-full px-6 py-4 font-bold mr-2 -ml-2"
-            >
-              <img
-                src="/img/wallet/paypal.png"
-                alt="Paypal"
-                class="h-6 block"
-              />
-            </a>
-            <a
-              href="#btc"
-              class="flex items-center my-2 bg-gray-200 hover:bg-gray-300 rounded-full p-2 pr-6 font-bold mx-2"
-              :class="{ 'bg-gray-300': onetime.current === 'btc' }"
-              @click.prevent="onetime.current = 'btc'"
-            >
-              <BtcLogo class="mr-3" /> BTC
-            </a>
-            <a
-              href="#bch"
-              class="flex items-center my-2 bg-gray-200 hover:bg-gray-300 rounded-full p-2 pr-6 font-bold mx-2"
-              :class="{ 'bg-gray-300': onetime.current === 'bch' }"
-              @click.prevent="onetime.current = 'bch'"
-            >
-              <BchLogo class="mr-3" /> BCH
-            </a>
-            <a
-              href="#eth"
-              class="flex items-center my-2 bg-gray-200 hover:bg-gray-300 rounded-full p-2 pr-6 font-bold mx-2"
-              :class="{ 'bg-gray-300': onetime.current === 'eth' }"
-              @click.prevent="onetime.current = 'eth'"
-            >
-              <EthLogo class="mr-3" /> ETH
-            </a>
-            <a
-              href="#ltc"
-              class="flex items-center my-2 bg-gray-200 hover:bg-gray-300 rounded-full p-2 pr-6 font-bold mx-2"
-              :class="{ 'bg-gray-300': onetime.current === 'ltc' }"
-              @click.prevent="onetime.current = 'ltc'"
-            >
-              <LtcLogo class="mr-3" /> LTC
-            </a>
-          </div>
-        </div>
-        <div v-if="currentOnetime" class="text-center w-full lg:w-1/3">
-          <p class="text-xl">
-            {{ currentOnetime.title }}
-          </p>
-          <p class="py-3 text-gray-600">
-            {{ currentOnetime.address }}
-          </p>
-          <img
-            :src="currentOnetime.img"
-            :alt="currentOnetime.title"
-            class="w-5/12 inline-block"
-          />
-        </div>
-      </section>
       <section class="text-center">
         <h2
           class="text-2xl text-light-onSurfacePrimary dark:text-dark-onSurfacePrimary font-medium uppercase pt-10 pb-8"
@@ -110,8 +38,8 @@
           tag="p"
           class="text-light-onSurfaceSecondary dark:text-dark-onSurfaceSecondary mb-12"
         >
-          <template v-slot:opencollective>
-            <a href="https://opencollective.com/nuxtjs">OpenCollective</a>
+          <template #opencollective>
+            <a href="https://github.com/sponsors/nuxt">GitHub</a>
           </template>
         </i18n>
         <div
@@ -147,13 +75,10 @@
         </div>
         <div class="text-center">
           <AppButton
-            href="https://opencollective.com/nuxtjs"
+            href="https://github.com/sponsors/nuxt"
             class="py-3 px-6 text-base"
           >
-            <OpenCollectiveIcon
-              slot="icon"
-              class="h-5 -mt-1 mr-1 inline-block"
-            />
+            <GithubIcon slot="icon" class="h-5 -mt-1 mr-1 inline-block" />
             {{ $t('sponsor.become_a_sponsor') }}
           </AppButton>
         </div>
@@ -163,21 +88,13 @@
 </template>
 
 <script>
-import OpenCollectiveIcon from '~/assets/icons/open-collective.svg?inline'
-import BtcLogo from '~/assets/icons/btc.svg?inline'
-import BchLogo from '~/assets/icons/bch.svg?inline'
-import EthLogo from '~/assets/icons/eth.svg?inline'
-import LtcLogo from '~/assets/icons/ltc.svg?inline'
+import GithubIcon from '~/assets/icons/github.svg?inline'
 import SponsorIllustration from '~/assets/illustrations/sponsor.svg?inline'
 
 export default {
   components: {
     SponsorIllustration,
-    OpenCollectiveIcon,
-    BtcLogo,
-    BchLogo,
-    EthLogo,
-    LtcLogo
+    GithubIcon
   },
   data() {
     return {
@@ -194,6 +111,12 @@ export default {
             url: 'https://www.moovweb.com/',
             img: 'moovweb-logo.png',
             class: 'h-12'
+          },
+          {
+            name: 'Ship Shape',
+            url: 'https://shipshape.io/',
+            img: 'shipshape-logo.svg',
+            class: 'h-12'
           }
         ],
         gold: [
@@ -201,6 +124,12 @@ export default {
             name: 'VueMastery',
             img: 'vueMastery-brand.svg',
             url: 'https://www.vuemastery.com/',
+            class: 'h-10'
+          },
+          {
+            name: 'Legal Nature',
+            img: 'legalnature-logo.svg',
+            url: 'https://www.legalnature.com/',
             class: 'h-10'
           }
         ],
@@ -258,35 +187,7 @@ export default {
             class: 'h-12'
           }
         ]
-      },
-      onetime: {
-        current: 'btc',
-        btc: {
-          title: 'Bitcoin Address',
-          address: '1DVJSFQzfVkLdW7drR7pRW2tWV1XDCv6gF',
-          img: '/img/wallet/btc.png'
-        },
-        bch: {
-          title: 'Bitcoin Cash Address',
-          address: 'qrm24z9xr9nvafeejt346waa9shk5mjagv0fgpedrt',
-          img: '/img/wallet/bch.png'
-        },
-        eth: {
-          title: 'Ethereum Address',
-          address: '0x6513bC2B1824d997699cF177591b6aa9cEE2d12A',
-          img: '/img/wallet/eth.png'
-        },
-        ltc: {
-          title: 'Litecoin Address',
-          address: 'MSoJB2AUZMss82HLk7fwggZhJDKxQ1HZAh',
-          img: '/img/wallet/ltc.png'
-        }
       }
-    }
-  },
-  computed: {
-    currentOnetime() {
-      return this.onetime.current ? this.onetime[this.onetime.current] : null
     }
   },
   head() {

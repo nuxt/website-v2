@@ -3,7 +3,7 @@ title: fetch Hook
 description: In this example we use the fetch hook to fetch data from components and from pages
 position: 2
 category: dataFetching
-csb_link: https://codesandbox.io/embed/github/nuxt-academy/examples/tree/master/data-fetching/fetch-hook?fontsize=14&hidenavigation=1&module=%2Fcomponents%2FMountains.vue&theme=dark&view=editor
+csb_link: https://codesandbox.io/embed/github/nuxtlabs/examples/tree/master/data-fetching/fetch-hook?fontsize=14&hidenavigation=1&module=%2Fcomponents%2FMountains.vue&theme=dark&view=editor
 ---
 
 <example-intro></example-intro>

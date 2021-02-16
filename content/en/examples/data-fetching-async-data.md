@@ -3,7 +3,7 @@ title: asyncData Hook
 description: In this example we use asyncData to fetch our data from our API.
 position: 1
 category: dataFetching
-csb_link: https://codesandbox.io/embed/github/nuxt-academy/examples/tree/master/data-fetching/async-data-hook?fontsize=14&hidenavigation=1&theme=dark&view=editor
+csb_link: https://codesandbox.io/embed/github/nuxtlabs/examples/tree/master/data-fetching/async-data-hook?fontsize=14&hidenavigation=1&theme=dark&view=editor
 ---
 
 <example-intro></example-intro>

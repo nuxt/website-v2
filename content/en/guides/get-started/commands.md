@@ -9,7 +9,7 @@ Nuxt.js comes with a set of useful commands, both for development and production
 
 ## Using in package.json
 
-You should put these commands in the `package.json`:
+You should have these commands in your `package.json`:
 
 ```json
 "scripts": {
@@ -20,7 +20,7 @@ You should put these commands in the `package.json`:
 }
 ```
 
-Then, you can launch your commands via `yarn <command>` or `npm run <command>` (example: `yarn dev` / `npm run dev`).
+You can launch your commands via `yarn <command>` or `npm run <command>` (example: `yarn dev` / `npm run dev`).
 
 ## Development Environment
 
@@ -36,7 +36,7 @@ yarn dev
 
   </code-block>
 
-  <code-block label="NPM">
+  <code-block label="npm">
 
 ```bash
 npm run dev
@@ -61,13 +61,38 @@ You can run different commands depending on the [target](/docs/2.x/features/depl
 - **nuxt generate** - Build the application (if needed), generate every route as a HTML file and statically export to `dist/` directory (used for static hosting).
 - **nuxt start** - serve the `dist/` directory like your static hosting would do (Netlify, Vercel, Surge, etc), great for testing before deploying.
 
+## Webpack Config Inspection 
+
+You can inspect the webpack config used by nuxt to build project similar to [vue inspect](https://cli.vuejs.org/guide/webpack.html#inspecting-the-project-s-webpack-config)).
+
+- **nuxt webpack [query...]**
+
+**Arguments:**
+
+- `--name`: Bundle name to inspect. (client, server, modern)
+- `--dev`: Inspect webpack config for dev mode
+- `--depth`: Inspection depth. Defaults to 2 to prevent verbose output.
+- `--no-colors`: Disable ANSI colors (disabled by default when TTY is not available or when piping to a file)
+
+**Examples:**
+
+- `nuxt webpack`
+- `nuxt webpack devtool`
+- `nuxt webpack resolve alias`
+- `nuxt webpack module rules`
+- `nuxt webpack module rules test=.jsx`
+- `nuxt webpack module rules test=.pug oneOf use.0=raw`
+- `nuxt webpack plugins constructor.name=WebpackBar options reporter`
+- `nuxt webpack module rules loader=vue-`
+- `nuxt webpack module rules "loader=.*-loader"`
+
 ## Production Deployment
 
 Nuxt.js lets you choose between Server or Static deployments.
 
 ### Server Deployment
 
-To deploy a SSR application we use `target: server`, where server is the default value.
+To deploy a SSR application we use `target: 'server'`, where server is the default value.
 
 <code-group>
   <code-block label="Yarn" active>
@@ -77,7 +102,7 @@ yarn build
 ```
 
   </code-block>
-  <code-block label="NPM">
+  <code-block label="npm">
 
 ```bash
 npm run build
@@ -104,7 +129,7 @@ yarn start
 ```
 
   </code-block>
-  <code-block label="NPM">
+  <code-block label="npm">
 
 ```bash
 npm run start
@@ -117,7 +142,7 @@ npm run start
 
 Nuxt.js gives you the ability to host your web application on any static hosting.
 
-To deploy a static generated site make sure you have `target: static` in your `nuxt.config.js`.(For Nuxt >= 2.13:)
+To deploy a static generated site make sure you have `target: 'static'` in your `nuxt.config.js` (for Nuxt >= 2.13):
 
 ```js{}[nuxt.config.js]
 export default {
@@ -133,7 +158,7 @@ yarn generate
 ```
 
   </code-block>
-  <code-block label="NPM">
+  <code-block label="npm">
 
 ```bash
 npm run generate
@@ -170,7 +195,7 @@ yarn generate --fail-on-error
 ```
 
   </code-block>
-  <code-block label="NPM">
+  <code-block label="npm">
 
 ```bash
 npm run generate --fail-on-error

@@ -13,7 +13,7 @@
         </h1>
         <nuxt-content :document="page" />
 
-        <LazyAppPrevNextNew
+        <AppPrevNextNew
           :prev="prev"
           :next="next"
           section="examples"
@@ -52,15 +52,15 @@ export default {
 
     if (
       app.i18n.locale !== app.i18n.defaultLocale &&
-      (['pt', 'es'].includes(app.i18n.locale) ||
+      (['pt', 'es', 'zh'].includes(app.i18n.locale) ||
         process.env.NODE_ENV !== 'production')
     ) {
       try {
-        path = `/${app.i18n.locale}/examples/`
-        page = await $content(path, params.slug).fetch()
+        path = `/${app.i18n.locale}/examples`
+        page = await $content(path, params.slug || 'hello-world').fetch()
       } catch (err) {
         langFallback = true
-        path = `/${app.i18n.defaultLocale}/examples/`
+        path = `/${app.i18n.defaultLocale}/examples`
       }
     }
 
@@ -68,7 +68,7 @@ export default {
 
     try {
       ;[prev, next] = await $content(
-        ['pt', 'es'].includes(app.i18n.locale)
+        ['pt', 'es', 'zh'].includes(app.i18n.locale)
           ? path
           : `/${app.i18n.defaultLocale}/examples/`
       )

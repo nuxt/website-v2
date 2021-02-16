@@ -111,7 +111,7 @@ export default {
 
 <base-alert>
 
-`main.css` と `main.css` のような同じ名前の 2 つのファイルが存在し、`css: ['~/assets/css/main']` のように css 配列中で拡張子を明示しなかった場合、`styleExtensions` の順番に応じて 1 つのファイルだけが読み込まれます。このケースの場合、`css` がデフォルトの `styleExtension` の配列の中で最初に登場するため、`css` ファイルだけが読み込まれ `scss` ファイルは無視されます。
+`main.scss` と `main.css` のような同じ名前の 2 つのファイルが存在し、`css: ['~/assets/css/main']` のように css 配列中で拡張子を明示しなかった場合、`styleExtensions` の順番に応じて 1 つのファイルだけが読み込まれます。このケースの場合、`css` がデフォルトの `styleExtension` の配列の中で最初に登場するため、`css` ファイルだけが読み込まれ `scss` ファイルは無視されます。
 
 </base-alert>
 
@@ -148,7 +148,7 @@ yarn add -D node-sass sass-loader
 ```
 
   </code-block>
-  <code-block label="NPM">
+  <code-block label="npm">
 
 ```bash
 npm install --save-dev pug pug-plain-loader
@@ -177,7 +177,7 @@ export default {
 </script>
 ```
 
-`createElement` を `h` にエイリアスすることは、Vue のエコシステムで見られる共通の慣例です。しかしその慣例は JSX では任意です。なぜなら ES2015 の構文で宣言された（関数またはアロー関数ではない）JSX で書かれた任意のメソッドやゲッターには `const h = this.$createElement` が[自動的にインジェクト](https://github.com/vuejs/babel-plugin-transform-vue-jsx#h-auto-injection) されるためです。よって(h)パラメータは削除することができます。
+`createElement` を `h` にエイリアスすることは、Vue のエコシステムで見られる共通の慣例です。しかしその慣例は JSX では任意です。なぜなら ES2015 の構文で宣言された（関数またはアロー関数ではない）JSX で書かれた任意のメソッドやゲッターには `const h = this.$createElement` が[自動的にインジェクト](https://github.com/vuejs/babel-plugin-transform-vue-jsx#h-auto-injection) されるためです。よって `(h)` パラメータは削除することができます。
 
 JSX の使い方をより深く理解するには Vue.js ドキュメントの [JSX のセクション](https://vuejs.org/v2/guide/render-function.html#JSX)を参照してください。
 
@@ -267,7 +267,7 @@ export default {
 }
 ```
 
-`extend` メソッドは二回呼び出されます - 一回目はクライアントのバンドルため、もう一回はサーバーのバンドルのためです。
+`extend` メソッドは 2 回呼び出されます - 1 回目はクライアントのバンドルため、もう 1 回はサーバーのバンドルのためです。
 
 ### チャンク設定をカスタマイズする
 

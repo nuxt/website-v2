@@ -3,6 +3,7 @@ title: La propriété loading
 description: La propriété loading vous donne la possibilité de désactiver la barre de progression par défaut sur une page spécifique.
 menu: La propriété loading
 category: components-glossary
+position: 5
 ---
 
 > La propriété loading vous donne la possibilité de désactiver la barre de progression par défaut sur une page spécifique.

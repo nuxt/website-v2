@@ -55,9 +55,27 @@ This method returns final `{ dst, src, options }` object.
 
 ### addPlugin (template)
 
-Registers a plugin using `addTemplate` and adds it to first of `plugins[]` option.
+- **template**: Object properties (`src`, `options`, `fileName`, `mode`).
 
-You can use `template.ssr: false` to disable plugin including in SSR bundle.
+Registers a plugin using `addTemplate` and prepends it it to `plugins[]` array.
+
+```js
+this.addPlugin({
+  src: path.resolve(__dirname, 'templates/foo.js'),
+  fileName: 'foo.server.js' // [optional] only include in server bundle
+  options: moduleOptions
+})
+```
+
+**Note:** You can use `mode` or `.client` and `.server` modifiers with `fileName` option to use plugin only in client or server side. (See [plugins](/docs/2.x/directory-structure/plugins#name-conventional-plugin) for all available options)
+
+If you choose to specify a `fileName`, you can configure a custom path for the `fileName` too, so you can choose the folder structure inside `.nuxt` folder in order to prevent name collisioning:
+
+```js
+{
+  fileName: path.join('folder', 'foo.client.js'), // will result in `.nuxt/folder/foo.client.js`
+}
+```
 
 ### addServerMiddleware (middleware)
 
@@ -70,10 +88,6 @@ Allows easily extending webpack build config by chaining [options.build.extend](
 ### extendRoutes (fn)
 
 Allows easily extending routes by chaining [options.build.extendRoutes](/docs/2.x/configuration-glossary/configuration-router#extendroutes) function.
-
-### extendPlugins (fn)
-
-Allows easily extending plugins by chaining [options.extendPlugins](/docs/2.x/configuration-glossary/configuration-extend-plugins) function.
 
 ### addModule (moduleOpts, requireOnce)
 

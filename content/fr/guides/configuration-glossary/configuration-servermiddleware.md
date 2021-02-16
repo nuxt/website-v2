@@ -17,10 +17,10 @@ En plus, nous avons introduit une option `prefix` dont la valeur par défaut est
 
 **Exemple:**
 
-- Chemin d'accès au middleware du serveur : `/api`
+- Chemin d'accès au middleware du serveur : `/server-middleware`
 - Base du routeur : `/admin`
-- Avec `prefix: true` (par défaut): `/admin/api`
-- Avec `prefix: false`: `/api`
+- Avec `prefix: true` (par défaut): `/admin/server-middleware`
+- Avec `prefix: false`: `/server-middleware`
 
 ## serverMiddleware vs middleware!
 
@@ -38,8 +38,8 @@ export default {
     // Inscrira redirect-ssl dans les package npm
     'redirect-ssl',
 
-    // Inscrira le fichier index du répertoire api pour gérer /api/*
-    { path: '/api', handler: '~/api/index.js' },
+    // Inscrira le fichier index du répertoire server-middleware pour gérer /server-middleware/*
+    { path: '/server-middleware', handler: '~/server-middleware/index.js' },
 
     // Nous pouvons également créer des instances personnalisées
     { path: '/static2', handler: serveStatic(__dirname + '/static2') }
@@ -47,18 +47,19 @@ export default {
 }
 ```
 
-<p class="Alert Alert--danger">
-    <b>ATTENTION! </b>
-    Si vous ne voulez pas que le middleware s'enregistre pour toutes les routes, vous devez l'utiliser sous la forme d'un Object avec un chemin d'accès spécifique, sinon le gestionnaire par défaut nuxt ne fonctionnera pas !
-</p>
+<base-alert type="warn">
+
+Si vous ne voulez pas que le middleware s'enregistre pour toutes les routes, vous devez l'utiliser sous la forme d'un Object avec un chemin d'accès spécifique, sinon le gestionnaire par défaut nuxt ne fonctionnera pas !
+
+</base-alert>
 
 ## Middleware de serveur personnalisé
 
 Il est également possible d'écrire des Middleware personnalisés. Pour plus d'informations, voir [Connect Docs](https://github.com/senchalabs/connect#appusefn).
 
-Middleware (`api/logger.js`):
+Middleware (`server-middleware/logger.js`):
 
-```js{}[api/logger.js]
+```js{}[server-middleware/logger.js]
 export default function (req, res, next) {
   // req est l'objet de la requête http de Node.js
   console.log(req.url)
@@ -72,14 +73,14 @@ export default function (req, res, next) {
 ```
 
 ```js{}[nuxt.config.js]
-serverMiddleware: ['~/api/logger']
+serverMiddleware: [server-middleware]
 ```
 
 ## API endpoint personnalisé
 
 Un middleware de serveur peut également étendre Express. Cela permet la création d'endpoint REST.
 
-```js{}[api/rest.js]
+```js{}[server-middleware/rest.js]
 const bodyParser = require('body-parser')
 const app = require('express')()
 
@@ -93,7 +94,7 @@ module.exports = app
 
 ```js{}[nuxt.config.js]
 serverMiddleware: [
-  { path: "/api", handler: "~/api/rest.js" },
+  { path: "/server-middleware", handler: "~/server-middleware/rest.js" },
 ],
 ```
 
@@ -104,9 +105,9 @@ Si le middleware de votre serveur est constitué d'une liste de fonctions mises 
 ```js
 export default {
   serverMiddleware: [
-    { path: '/a', handler: '~/api/a.js' },
-    { path: '/b', handler: '~/api/b.js' },
-    { path: '/c', handler: '~/api/c.js' }
+    { path: '/a', handler: '~/server-middleware/a.js' },
+    { path: '/b', handler: '~/server-middleware/b.js' },
+    { path: '/c', handler: '~/server-middleware/c.js' }
   ]
 }
 ```
@@ -116,9 +117,9 @@ Vous pouvez aussi passer un objet pour les définir, comme suit :
 ```js
 export default {
   serverMiddleware: {
-    '/a': '~/api/a.js',
-    '/b': '~/api/b.js',
-    '/c': '~/api/c.js'
+    '/a': '~/server-middleware/a.js',
+    '/b': '~/server-middleware/b.js',
+    '/c': '~/server-middleware/c.js'
   }
 }
 ```

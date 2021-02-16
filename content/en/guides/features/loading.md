@@ -235,7 +235,7 @@ export default {
 
 ## Built-in indicators
 
-These indicators are imported from awesome [Spinkit](http://tobiasahlin.com/spinkit) project. You can check out its demo page to preview the spinners. In order to use one of these spinners all you have to do is add it's name to the name property. No need to import or install anything. Here is a list of built in indicators you can use.
+These indicators are imported from the awesome [SpinKit](http://tobiasahlin.com/spinkit) project. You can check out its demo page to preview the spinners. In order to use one of these spinners all you have to do is add its name to the name property. No need to import or install anything. Here is a list of built in indicators you can use.
 
 - circle
 - cube-grid
@@ -253,7 +253,7 @@ Built-in indicators support `color` and `background` options.
 
 ## Custom indicators
 
-If you need your own special indicator, a String value or Name key can also be a path to a html template of indicator source code! All of the options are passed to the template, too.
+If you need your own special indicator, a String value or Name key can also be a path to an HTML template of indicator source code! All of the options are passed to the template, too.
 
 Nuxt's built-in [source code](https://github.com/nuxt/nuxt.js/tree/dev/packages/vue-app/template/views/loading) is also available if you need a base!
 

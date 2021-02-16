@@ -3,6 +3,7 @@ title: La méthode head
 description: Nuxt.js utilise vue-meta pour mettre à jour les entêtes et attributs HTML de votre application.
 menu: La méthode head
 category: components-glossary
+position: 2
 ---
 
 > Nuxt.js utilise [vue-meta](https://github.com/nuxt/vue-meta) pour mettre à jour les `entêtes` et `attributs HTML` de votre application.

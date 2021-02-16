@@ -53,7 +53,7 @@ export default {
 }
 ```
 
-In this case we use [murmurhash-native](https://github.com/royaltm/node-murmurhash-native), which is faster for larger html body sizes. Note that the `weak` option is ignored, when specifying your own hash function.
+In this case we use [murmurhash-native](https://github.com/royaltm/node-murmurhash-native), which is faster for larger HTML body sizes. Note that the `weak` option is ignored, when specifying your own hash function.
 
 ## compressor
 
@@ -62,7 +62,7 @@ In this case we use [murmurhash-native](https://github.com/royaltm/node-murmurha
 
 When providing an object, the [compression](https://www.npmjs.com/package/compression) middleware will be used (with respective options).
 
-If you want to use your own compression middleware, you can reference it directly (f.ex. `otherComp({ myOptions: 'example' })`).
+If you want to use your own compression middleware, you can reference it directly (e.g. `otherComp({ myOptions: 'example' })`).
 
 To disable compression, use `compressor: false`.
 
@@ -70,10 +70,29 @@ To disable compression, use `compressor: false`.
 
 - Type `Object`
   - Default: `{ dist: {}, static: { skipUnknown: true } }`
+  - `dist` key is for routes matching the [publicPath](/docs/2.x/configuration-glossary/configuration-build#publicpath) (ie: `/_nuxt/*`)
+  - `static` key is for routes matching routes matching `/*`
 
-> Options for [serve-placeholder](https://github.com/nuxt/serve-placeholder) middleware.
+> `dist` and `static` values are forwarded to [serve-placeholder](https://github.com/nuxt-contrib/serve-placeholder) middleware.
 
 If you want to disable one of them or both, you can pass a falsy value.
+
+Example of allowing `.js` extension for routing (ex: `/repos/nuxt.js`):
+
+```js [nuxt.config.js]
+export default {
+  render: {
+    fallback: {
+      static: {
+        // Avoid sending 404 for these extensions
+        handlers: {
+          '.js': false
+        }
+      }
+    }
+  }
+}
+```
 
 ## http2
 

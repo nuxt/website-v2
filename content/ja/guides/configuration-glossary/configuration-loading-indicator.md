@@ -24,7 +24,7 @@ loadingIndicator: {
 
 ## 内蔵されているインジケータ
 
-これらのインジケータは素晴らしい [Spinkit](http://tobiasahlin.com/spinkit) プロジェクトからインポートされています。Spinkit のデモページを使ってスピナーをプレビューできます。
+これらのインジケータは素晴らしい [SpinKit](http://tobiasahlin.com/spinkit) プロジェクトからインポートされています。SpinKit のデモページを使ってスピナーをプレビューできます。
 
 - circle
 - cube-grid
@@ -42,6 +42,6 @@ loadingIndicator: {
 
 ## 独自のインジケータ
 
-独自の特別なインジケータが必要な場合は文字列または Name キーをインジケータのソースコードの html テンプレートへのパスにすることもできます。すべてのオプションもテンプレートに渡されます。
+独自の特別なインジケータが必要な場合は文字列または Name キーをインジケータのソースコードの HTML テンプレートへのパスにすることもできます。すべてのオプションもテンプレートに渡されます。
 
 もしベースが必要な場合は[ソースコード](https://github.com/nuxt/nuxt.js/tree/dev/packages/vue-app/template/views/loading)も利用できます！

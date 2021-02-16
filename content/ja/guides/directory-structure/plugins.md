@@ -77,7 +77,7 @@ questions:
 
 ## 外部パッケージ
 
-サーバーとクライアント両方に HTTP リクエストを行うためには、アプリケーションで外部パッケージ/モジュール(著名な例は [axios](https://axios.nuxtjs.org/) です。)を使用することをお勧めします。
+サーバーとクライアント両方に HTTP リクエストを行うためには、アプリケーションで外部パッケージ/モジュール（著名な例は [axios](https://axios.nuxtjs.org/) です）を使用することをお勧めします。
 
 はじめに、npm か Yarn を介してインストールします。
 
@@ -192,6 +192,7 @@ npm install v-tooltip
 ```js{}[plugins/vue-tooltip.js]
 import Vue from 'vue'
 import VTooltip from 'v-tooltip'
+
 Vue.use(VTooltip)
 ```
 

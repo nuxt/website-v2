@@ -2,24 +2,23 @@
   <AppContainer class="px-4">
     <section
       id="subscribe-to-newsletter"
-      class="py-8 px-3 -mx-4 lg:mx-0 text-center rounded-t-lg"
+      class="px-3 py-8 -mx-4 text-center rounded-t-lg lg:mx-0"
     >
       <!-- why title i18n -->
       <i18n
         path="homepage.newsletter.title"
         tag="h2"
-        class="text-3xl font-medium text-light-onSurfacePrimary dark:text-dark-onSurfacePrimary mb-2 transition-colors duration-300 ease-linear"
+        class="mb-2 text-3xl font-medium transition-colors duration-300 ease-linear text-light-onSurfacePrimary dark:text-dark-onSurfacePrimary"
       >
         <template #nuxt>
           <AppTitle />
         </template>
       </i18n>
       <p
-        class="mb-6 text-light-onSurfaceSecondary dark:text-dark-onSurfaceSecondary transition-colors duration-300 ease-linear"
+        class="mb-6 transition-colors duration-300 ease-linear text-light-onSurfaceSecondary dark:text-dark-onSurfaceSecondary"
       >
         {{ $t('homepage.newsletter.description') }}
       </p>
-      <ClientOnly>
         <form
           class="flex flex-row justify-center mb-2"
           data-cy="newsletter"
@@ -35,7 +34,7 @@
               type="email"
               required
               :placeholder="$t('homepage.newsletter.form.email')"
-              class="border border-r-0 w-48 md:w-64 bg-light-elevatedSurface text-light-onSurfacePrimary rounded py-3 px-4 font-medium rounded-r-none outline-none focus:border-primary-base"
+              class="w-48 px-4 py-3 font-medium border border-r-0 rounded rounded-r-none outline-none md:w-64 bg-light-elevatedSurface text-light-onSurfacePrimary focus:border-primary-base"
               aria-label="Newsletter"
             />
           </div>
@@ -47,19 +46,18 @@
                 : $t('homepage.newsletter.form.subscribe')
             "
             name="subscribe"
-            class="cursor-pointer inline-block bg-primary-base text-white font-medium text-sm px-4 py-2 shadow uppercase rounded rounded-l-none hover:bg-primary-light hover:shadow-md text-base"
+            class="inline-block px-4 py-2 text-sm text-base font-medium text-white uppercase rounded rounded-l-none shadow cursor-pointer bg-primary-base hover:bg-primary-light hover:shadow-md"
             :class="[pending ? 'bg-nuxt-green' : '']"
           />
         </form>
-        <p v-if="subscribed" class="text-nuxt-green py-1">
+        <p v-if="subscribed" class="py-1 text-nuxt-green">
           {{ $t('homepage.newsletter.form.subscribed_messages.pre') }}
           {{ subscribedEmail }}
           {{ $t('homepage.newsletter.form.subscribed_messages.post') }}
         </p>
-        <p v-if="error" class="text-red-600 py-1">
+        <p v-if="error" class="py-1 text-red-600">
           {{ error }}
         </p>
-      </ClientOnly>
     </section>
   </AppContainer>
 </template>

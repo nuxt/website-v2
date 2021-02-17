@@ -29,7 +29,7 @@ Press the _"New site from Git"_ button on the Netlify dashboard. Authenticate wi
 
 Make sure you have `target: 'static'`in your `nuxt.config`.
 
-1. **Branch to deploy:** `master`, or which-ever branch you prefer
+1. **Branch to deploy:** `main`, or which-ever branch you prefer
 1. **Build command:** `npm run generate`
 1. **Publish directory:** `dist`
 
@@ -37,7 +37,7 @@ Make sure you have `target: 'static'`in your `nuxt.config`.
 
 Make sure you have `target: 'static'` and `ssr: false`in your `nuxt.config`.
 
-1. **Branch to deploy:** `master`, or which-ever branch you prefer
+1. **Branch to deploy:** `main`, or which-ever branch you prefer
 1. **Build command:** `npm run generate`
 1. **Publish directory:** `dist`
 

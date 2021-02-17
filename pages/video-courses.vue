@@ -85,128 +85,63 @@ import PlayCircleIcon from '~/assets/icons/play-circle.svg?inline'
 import MeteorIcon from '~/assets/icons/meteor.svg?inline'
 
 export default {
+  async asyncData({ $content, app }) {
+    let courses = []
+
+    try {
+      courses = await $content(app.i18n.defaultLocale, 'video-courses')
+        .only([
+          'slug',
+          'title',
+          'position',
+          'menu',
+          'category',
+          'type',
+          'img',
+          'description',
+          'platform',
+          'link'
+        ])
+        .sortBy('position')
+        .fetch()
+
+      if (app.i18n.locale !== app.i18n.defaultLocale) {
+        const newCourses = await $content(app.i18n.locale, 'video-courses')
+          .only([
+            'slug',
+            'title',
+            'position',
+            'menu',
+            'category',
+            'type',
+            'img',
+            'description',
+            'platform',
+            'link'
+          ])
+          .sortBy('position')
+          .fetch()
+        courses = courses.map(course => {
+          const newCourse = newCourses.find(
+            newCourse => newCourse.slug === course.slug
+          )
+
+          return newCourse || course
+        })
+      }
+    } catch (e) {}
+
+    return {
+      courses
+    }
+  },
   components: {
     ThemesIllustration,
     PlayCircleIcon,
     MeteorIcon
   },
   data() {
-    return {
-      courses: [
-        {
-          title: 'Learn Nuxt.js by Building a Real World App',
-          description:
-            'Learn how to build robust, modern websites with Nuxt from scratch. Or improve your website performance, code quality, while making better use of the framework.',
-          link:
-            'https://masteringnuxt.com/?utm_source=nuxt&utm_medium=link&utm_campaign=navbar_link',
-          img: 'mastering-nuxt',
-          platform: 'Mastering Nuxt',
-          type: 'premium'
-        },
-        {
-          title: 'Get Started with Nuxt',
-          description:
-            'Learn the essentials for how to build and deploy a Nuxt site including dnyamic routes, data fetching, SEO, lazy loading, global styles and transitions as well as how to generate and deploy your Nuxt app.',
-          link: 'https://explorers.netlify.com/learn/get-started-with-nuxt',
-          img: 'get-started-with-nuxt',
-          platform: 'Jamstack Explorers',
-          type: 'free'
-        },
-        {
-          title: 'Learn Nuxt with Debbie',
-          description:
-            'A playlist of YouTube videos covering all things Nuxt including short videos and live streams.',
-          link: 'https://www.youtube.com/c/DebbieOBrien',
-          img: 'learn-nuxt-with-debbie',
-          platform: 'YouTube',
-          type: 'free'
-        },
-        {
-          title: 'Building Applications with Vue & Nuxt',
-          description:
-            'Build dynamic web applications with Vue and Nuxt! Throughout the course you’ll build out a variety of projects leveraging the tools in the Vue ecosystem including the Vue CLI, Nuxt, Vuex Store, and more.',
-          link: 'https://frontendmasters.com/courses/vue-nuxt-apps/',
-          img: 'building-applications-with-vue-and-nuxt',
-          platform: 'Frontend Masters',
-          type: 'premium'
-        },
-        {
-          title: 'Build a Job Board with Laravel, GraphQL, Nuxt and Apollo',
-          description:
-            'Learn while you build a GraphQL API with Laravel Lighthouse, then build a Nuxt frontend with Apollo to consume it. All styled with Tailwind.',
-          link:
-            'https://codecourse.com/courses/build-a-job-board-with-laravel-graphql-nuxt-and-apollo',
-          img: 'build-job-board-with-nuxt',
-          platform: 'Code Course',
-          type: 'premium'
-        },
-
-        {
-          title: 'Nuxt.js - Vue.js on Steroids',
-          description:
-            'Build highly engaging Vue JS apps with Nuxt.js. Nuxt adds easy server-side-rendering and a folder-based config approach.',
-          link: 'https://www.udemy.com/course/nuxtjs-vuejs-on-steroids/',
-          img: 'nuxt-vue-steroids',
-          platform: 'Udemy',
-          type: 'premium'
-        },
-        {
-          title: 'Scaling Vue with Nuxt.js',
-          description:
-            'Once you are comfortable with Vue, learning a framework like Nuxt allows you to create production-ready web apps which follow best practices.',
-          link:
-            'https://www.vuemastery.com/courses/scaling-vue-with-nuxt-js/why-use-nuxt',
-          img: 'scaling-vue-with-nuxt',
-          platform: 'Vue Mastery',
-          type: 'premium'
-        },
-        {
-          title: 'Nuxt.js Fundamentals',
-          description:
-            'Learn the fundamentals of Nuxt.js in this course that we created together with the founders of Nuxt. The course covers what you need to know from scaffolding to deploying your first Nuxt.js application.',
-          link:
-            'https://vueschool.io/courses/nuxtjs-fundamentals?friend=nuxt&utm_source=Nuxtjs.org&utm_medium=Link&utm_content=Courses&utm_campaign=nuxtjs-fundamentals',
-          img: 'nuxt-fundamentals',
-          platform: 'Vue School',
-          type: 'free'
-        },
-        {
-          title: 'Create a News App with Vue.js and Nuxt',
-          description:
-            'You will learn how to create dynamic pages for each section of your application and load, store, display, filter, and style the data. Then end result will be a News app with multiple category pages, comments for each section, and user pages.',
-          link:
-            'https://egghead.io/courses/create-a-news-app-with-vue-js-and-nuxt',
-          img: 'create-news-app-with-vue-and-nuxt',
-          platform: 'egghead',
-          type: 'free'
-        }
-        // {
-        //   title: 'Build a Server Rendered Vue.js App with Nuxt and Vuex',
-        //   description:
-        //     'This course will start with an empty app and walk through how to use Vue.js for building the app, Nuxt.js for organizing the app, and Vuex for managing state.',
-        //   link:
-        //     'https://egghead.io/courses/build-a-server-rendered-vue-js-app-with-nuxt-and-vuex',
-        //   img: 'build-server-rendered-app-with-nuxt',
-        //   platform: 'egghead'
-        // },
-        // {
-        //   title: 'Async Data with Nuxt.js',
-        //   description:
-        //     'Learn how to manage asynchronous data and render your application server-side with Nuxt.js.',
-        //   link:
-        //     'https://vueschool.io/courses/async-data-with-nuxtjs?friend=nuxt&utm_source=Nuxtjs.org&utm_medium=Link&utm_content=Courses&utm_campaign=async-data',
-        //   img: 'async-data-with-nuxtjs'
-        // },
-        // {
-        //   title: 'Static Site Generation with Nuxt.js',
-        //   description:
-        //     'Learn how to generate static websites (pre-rendering) with Nuxt.js to improve both performance and SEO while eliminating hosting costs.',
-        //   link:
-        //     'https://vueschool.io/courses/static-site-generation-with-nuxtjs?friend=nuxt&utm_source=Nuxtjs.org&utm_medium=Link&utm_content=Courses&utm_campaign=static-site-generation',
-        //   img: 'static-site-generation-with-nuxtjs'
-        // }
-      ]
-    }
+    return {}
   },
   head() {
     const title = this.$t('video-courses.meta.title')

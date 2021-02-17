@@ -31,15 +31,17 @@ npm install --save-dev jsdom
 Example:
 
 ```js
-const { Nuxt } = require('nuxt')
+const { loadNuxt } = require('nuxt')
 
-const config = require('./nuxt.config.js')
-config.dev = false
-
-const nuxt = new Nuxt(config)
-
-nuxt.renderAndGetWindow('http://localhost:3000').then(window => {
+async function init() {
+  // Assuming you've already built your project
+  const nuxt = await loadNuxt({ for: 'start' })
+  await nuxt.listen(3000)
+  const window = await nuxt.renderAndGetWindow('http://localhost:3000')
   // Display the head `<title>`
   console.log(window.document.title)
-})
+  nuxt.close()
+}
+
+init()
 ```

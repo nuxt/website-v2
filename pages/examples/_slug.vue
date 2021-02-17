@@ -1,13 +1,13 @@
 <template>
-  <div class="-mx-4 lg:mx-0 flex flex-col-reverse lg:flex-row">
+  <div class="flex flex-col-reverse -mx-4 lg:mx-0 lg:flex-row">
     <div
-      class="lg:min-h-screen lg:w-4/4 w-full py-8 px-4 lg:static lg:overflow-visible lg:max-h-full"
+      class="w-full px-4 py-8 lg:min-h-screen lg:w-4/4 lg:static lg:overflow-visible lg:max-h-full"
     >
       <LangFallback :doc-link="docLink" :lang-fallback="langFallback" />
 
       <article>
         <h1
-          class="text-light-onSurfacePrimary dark:text-dark-onSurfacePrimary transition-colors duration-300 ease-linear"
+          class="transition-colors duration-300 ease-linear text-light-onSurfacePrimary dark:text-dark-onSurfacePrimary"
         >
           {{ page.title }}
         </h1>
@@ -57,7 +57,7 @@ export default {
     ) {
       try {
         path = `/${app.i18n.locale}/examples`
-        page = await $content(path, params.slug || 'hello-world').fetch()
+        page = await $content(path, slug).fetch()
       } catch (err) {
         langFallback = true
         path = `/${app.i18n.defaultLocale}/examples`
@@ -66,19 +66,19 @@ export default {
 
     const contributors = await $contributors(`/content${path}/${slug}`)
 
-    try {
-      ;[prev, next] = await $content(
-        ['pt', 'es', 'zh'].includes(app.i18n.locale)
-          ? path
-          : `/${app.i18n.defaultLocale}/examples/`
-      )
-        .only(['title', 'slug', 'dir', 'menu'])
-        .sortBy('position')
-        .sortBy('title')
-        .sortBy('menu')
-        .surround(params.slug, { before: 1, after: 1 })
-        .fetch()
-    } catch (e) {}
+    // try {
+    //   ;[prev, next] = await $content(
+    //     ['pt', 'es', 'zh'].includes(app.i18n.locale)
+    //       ? path
+    //       : `/${app.i18n.defaultLocale}/examples`
+    //   )
+    //     .only(['title', 'slug', 'dir', 'menu'])
+    //     .sortBy('position')
+    //     .sortBy('title')
+    //     .sortBy('menu')
+    //     .surround(slug, { before: 1, after: 1 })
+    //     .fetch()
+    // } catch (e) {}
 
     return {
       path,
@@ -87,8 +87,8 @@ export default {
       section: params.section,
       book: params.book,
       page,
-      prev,
-      next,
+      prev: null,
+      next: null,
       contributors
     }
   },

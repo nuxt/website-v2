@@ -1,6 +1,6 @@
 ---
 title: 'The Context'
-description: `context` menyediakan objek/parameter tambahan dari Nuxt yang biasanya tidak tersedia untuk komponen Vue. `context` tersedia di lifecycle Nuxt khusus seperti `asyncData`, `plugins`, `middlewares`, `modules`, dan `store/nuxtServerInit`.
+description: '`context` menyediakan objek/parameter tambahan dari Nuxt yang biasanya tidak tersedia untuk komponen Vue. `context` tersedia di lifecycle Nuxt khusus seperti `asyncData`, `plugins`, `middlewares`, `modules`, dan `store/nuxtServerInit`.'
 menu: The Context
 category: internals-glossary
 position: 1

@@ -3,7 +3,7 @@
     <div class="pt-3 mt-6 border-t border-light-border dark:border-dark-border">
       <h3
         v-if="contributors.length"
-        class="empty-after after:block after:border-2 after:rounded dark:after:border-dark-onSurfacePrimary light:after:border-light-onSurfacePrimary after:mt-2 after:mb-1 after:w-4/5 my-2 text-light-onSurfacePrimary dark:text-dark-onSurfacePrimary relative text-xl table transition-colors duration-300 ease-linear"
+        class="relative table my-2 text-xl transition-colors duration-300 ease-linear empty-after after:block after:border-2 after:rounded dark:after:border-dark-onSurfacePrimary light:after:border-light-onSurfacePrimary after:mt-2 after:mb-1 after:w-4/5 text-light-onSurfacePrimary dark:text-dark-onSurfacePrimary"
       >
         {{ $t('contribute.title') }}
       </h3>
@@ -14,7 +14,7 @@
           :href="`https://github.com/${contributor.login}`"
           rel="noopener"
           target="_blank"
-          class="text-light-onSurfacePrimary dark:text-dark-onSurfacePrimary bg-light-surfaceElevated light:hover:bg-gray-300 dark:bg-dark-elevatedSurface dark:hover:bg-dark-surface rounded overflow-hidden inline-flex mb-2 mr-2 border border-light-border dark:border-dark-border transition-colors duration-300 ease-linear"
+          class="inline-flex mb-2 mr-2 overflow-hidden transition-colors duration-300 ease-linear border rounded text-light-onSurfacePrimary dark:text-dark-onSurfacePrimary bg-light-surfaceElevated light:hover:bg-gray-300 dark:bg-dark-elevatedSurface dark:hover:bg-dark-surface border-light-border dark:border-dark-border"
         >
           <img
             :alt="contributor.name"
@@ -29,7 +29,7 @@
       </div>
       <p
         v-if="docLink && $route.params.book"
-        class="text-light-onSurfaceSecondary dark:text-dark-onSurfaceSecondary pt-1 mb-8 transition-colors duration-300 ease-linear"
+        class="pt-1 mb-8 transition-colors duration-300 ease-linear text-light-onSurfaceSecondary dark:text-dark-onSurfaceSecondary"
       >
         {{ $t('contribute.docs') }}
         <a
@@ -43,7 +43,7 @@
       </p>
       <p
         v-else-if="docLink && $route.path.startsWith('/blog')"
-        class="text-light-onSurfaceSecondary dark:text-dark-onSurfaceSecondary pt-1 mb-8 transition-colors duration-300 ease-linear"
+        class="pt-1 mb-8 transition-colors duration-300 ease-linear text-light-onSurfaceSecondary dark:text-dark-onSurfaceSecondary"
       >
         {{ $t('contribute.blog') }}
         <a
@@ -56,7 +56,7 @@
         </a>
       </p>
 
-      <CarbonAdsText :key="$route.path" />
+      <AdsCarbonText :key="$route.path" />
     </div>
   </div>
 </template>

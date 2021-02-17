@@ -178,7 +178,7 @@ Para personalizar la página de error, define el fichero `layouts/error.vue`:
 
 La plantilla app se usa para crear el marco HTML del documento para tu aplicación Nuxt.js, el cual inyecta contenido y variables para el encabezado y cuerpo del documento. Este fichero se crea automáticamente y rara vez necesita ser modificado. Puedes personalizar la plantilla HTML utilizada por Nuxt.js para incluir scripts o clases CSS de forma condicional, creado el fichero `app.html` en la carpeta source del proyecto que por defecto es la raíz del mismo.
 
-La plantilla por defecto usada por Nuxt.js is es:
+La plantilla por defecto usada por Nuxt.js es:
 
 ```html{}[app.html]
 <!DOCTYPE html>

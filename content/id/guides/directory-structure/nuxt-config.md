@@ -37,7 +37,7 @@ Secara bawaan, Nuxt.js dikonfigurasi untuk mencakup sebagian besar kasus penggun
 
 ### alias
 
-Opsi ini memungkinkan kamu untuk mendefinisikan alias yang akan tersedia dalam JavaScript dan CSS.
+Opsi ini memungkinkan Anda untuk mendefinisikan alias yang akan tersedia dalam JavaScript dan CSS.
 
 ```js{}[nuxt.config.js]
 import { resolve } from 'path'
@@ -57,13 +57,13 @@ Lihat selengkapnya di [properti alias](/docs/2.x/configuration-glossary/configur
 
 ### build
 
-Opsi ini memungkinkan kamu mengonfigurasi berbagai pengaturan untuk langkah `build`, termasuk ` loaders`, `filenames`, konfigurasi `webpack` dan `transpilation`.
+Opsi ini memungkinkan Anda mengonfigurasi berbagai pengaturan untuk langkah `build`, termasuk ` loaders`, `filenames`, konfigurasi `webpack`, dan `transpilation`.
 
 ```js{}[nuxt.config.js]
 export default {
   build: {
     /*
-     ** Kamu dapat memperluas konfigurasi webpack di sini
+     ** Anda dapat memperluas konfigurasi webpack di sini
      */
     extend(config, ctx) {}
   }
@@ -78,7 +78,7 @@ Lihat selengkapnya di [properti build](/docs/2.x/configuration-glossary/configur
 
 ### css
 
-Opsi ini memungkinkan kamu untuk mendefinisikan berkas CSS, modul, dan pustaka yang ingin disertakan secara global (di setiap laman).
+Opsi ini memungkinkan Anda untuk mendefinisikan berkas CSS, modul, dan pustaka yang ingin disertakan secara global (di setiap laman).
 
 ```js{}[nuxt.config.js]
 export default {
@@ -86,7 +86,7 @@ export default {
 }
 ```
 
-Kamu dapat menghilangkan ekstensi berkas untuk berkas CSS, SCSS, Postcss, Less, Stylus, ... yang terdaftar dalam larik css di berkas konfigurasi nuxt.
+Anda dapat menghilangkan ekstensi berkas untuk berkas CSS, SCSS, Postcss, Less, Stylus, ... yang terdaftar dalam larik css di berkas konfigurasi nuxt.
 
 ```js{}[nuxt.config.js]
 export default {
@@ -94,7 +94,7 @@ export default {
 }
 ```
 
-Dengan menghilangkan ekstensi, misalnya jika kamu memiliki file css dan memutuskan untuk menggunakan sass, kamu tidak perlu memperbarui nuxt.config karena akan menggunakan ekstensi baru selama nama file tetap sama.
+Dengan menghilangkan ekstensi, misalnya jika Anda memiliki berkas css dan memutuskan untuk menggunakan sass, Anda tidak perlu memperbarui nuxt.config karena akan menggunakan ekstensi baru selama nama berkas tetap sama.
 
 <base-alert type="next">
 
@@ -104,7 +104,7 @@ Lihat selengkapnya di [properti css](/docs/2.x/configuration-glossary/configurat
 
 ### dev
 
-Opsi ini memungkinkan kamu untuk mendefinisikan mode `pengembangan` atau` produksi` Nuxt.js (penting saat kamu menggunakan Nuxt.js secara terprogram)
+Opsi ini memungkinkan Anda untuk mendefinisikan mode `pengembangan` atau` produksi` Nuxt.js (penting saat Anda menggunakan Nuxt.js secara terprogram)
 
 ```js{}[nuxt.config.js]
 export default {
@@ -120,7 +120,7 @@ Lihat selengkapnya di [properti dev](/docs/2.x/configuration-glossary/configurat
 
 ### env
 
-Opsi ini memungkinkan kamu untuk mendefinisikan variabel lingkungan yang diperlukan pada waktu _build_ (bukan _runtime_) seperti `NODE_ENV=staging` atau `VERSION=1.2.3`. Namun, untuk variabel lingkungan _runtime_, diperlukan `runtimeConfig`.
+Opsi ini memungkinkan Anda untuk mendefinisikan variabel lingkungan yang diperlukan pada waktu _build_ (bukan _runtime_) seperti `NODE_ENV=staging` atau `VERSION=1.2.3`. Namun, untuk variabel lingkungan _runtime_, diperlukan `runtimeConfig`.
 
 ```js{}[nuxt.config.js]
 export default {
@@ -132,13 +132,13 @@ export default {
 
 ### runtimeConfig
 
-Konfigurasi _runtime_ memiliki dukungan [dotenv](https://github.com/motdotla/dotenv) bawaan untuk keamanan yang lebih baik dan pengembangan yang lebih cepat. Konfigurasi _runtime_ ditambahkan ke _payload_ Nuxt sehingga tidak perlu membangun kembali untuk memperbarui konfigurasi _runtime_ saat bekerja dalam pengembangan atau dengan aplikasi _server-side rendering_ atau _client-only_. (Untuk situs statis, kamu masih perlu membuat ulang situs kamu untuk melihat perubahan.)
+Konfigurasi _runtime_ memiliki dukungan [dotenv](https://github.com/motdotla/dotenv) bawaan untuk keamanan yang lebih baik dan pengembangan yang lebih cepat. Konfigurasi _runtime_ ditambahkan ke _payload_ Nuxt sehingga tidak perlu membangun kembali untuk memperbarui konfigurasi _runtime_ saat bekerja dalam pengembangan atau dengan aplikasi _server-side rendering_ atau _client-only_. (Untuk situs statis, Anda masih perlu membuat ulang situs Anda untuk melihat perubahan.)
 
 #### dukungan `.env`
 
-Jika kamu memiliki berkas `.env` di direktori akar proyek kamu, berkas tersebut akan secara otomatis dimuat ke dalam `process.env` dan dapat diakses dalam `nuxt.config`/`serverMiddleware` dan berkas lain yang diimpor.
+Jika Anda memiliki berkas `.env` di direktori akar proyek Anda, berkas tersebut akan secara otomatis dimuat ke dalam `process.env` dan dapat diakses dalam `nuxt.config`/`serverMiddleware` dan berkas lain yang diimpor.
 
-Kamu dapat menyesuaikan jalur dengan menggunakan `--dotenv <file>` atau menonaktifkan sepenuhnya dengan `--dotenv false`. Misalnya, kamu mungkin menetapkan file `.env` yang berbeda dalam lingkungan produksi, pementasan, atau pengembangan.
+Anda dapat menyesuaikan jalur dengan menggunakan `--dotenv <file>` atau menonaktifkan sepenuhnya dengan `--dotenv false`. Misalnya, Anda mungkin menetapkan berkas `.env` yang berbeda dalam lingkungan produksi, pementasan, atau pengembangan.
 
 #### `publicRuntimeConfig`
 
@@ -166,9 +166,9 @@ export default {
 }
 ```
 
-#### **Menggunakan nilai konfigurasi kamu:**
+#### **Menggunakan nilai konfigurasi Anda:**
 
-Kamu dapat mengakses nilai-nilai ini di mana saja dengan menggunakan konteks di laman, penyimpanan, komponen dan _plugin_ dengan menggunakan `this.$Config` atau `context.$Config`.
+Anda dapat mengakses nilai-nilai ini di mana saja dengan menggunakan konteks di laman, penyimpanan, komponen, dan _plugin_ dengan menggunakan `this.$Config` atau `context.$Config`.
 
 ```html{}[pages/index.vue]
 <script>
@@ -179,7 +179,7 @@ Kamu dapat mengakses nilai-nilai ini di mana saja dengan menggunakan konteks di 
 </script>
 ```
 
-Di dalam templat, kamu dapat mengakses runtimeConfigs secara langsung menggunakan `$config.*`
+Di dalam templat, Anda dapat mengakses runtimeConfigs secara langsung menggunakan `$config.*`
 
 ```html{}[pages/index.vue]
 <template>
@@ -189,7 +189,7 @@ Di dalam templat, kamu dapat mengakses runtimeConfigs secara langsung menggunaka
 
 <base-alert>
 
-Konfigurasi pribadi kamu dapat diekspos jika kamu menggunakan `$config` di luar konteks khusus server (misalnya, jika kamu menggunakan `$config` di `fetch`, `asyncData` atau langsung di dalam templat).
+Konfigurasi pribadi Anda dapat diekspos jika Anda menggunakan `$config` di luar konteks _server-only_ (misalnya, jika Anda menggunakan `$config` di `fetch`, `asyncData` atau langsung di dalam templat).
 
 </base-alert>
 
@@ -213,7 +213,7 @@ Lihat selengkapnya di [properti env](/docs/2.x/configuration-glossary/configurat
 
 ### generate
 
-Opsi ini memungkinkan kamu mengatur nilai parameter untuk setiap rute dinamis dalam aplikasi kamu yang akan diubah menjadi berkas HTML oleh Nuxt.js.
+Opsi ini memungkinkan Anda mengatur nilai parameter untuk setiap rute dinamis dalam aplikasi Anda yang akan diubah menjadi berkas HTML oleh Nuxt.js.
 
 ```js{}[nuxt.config.js]
 export default {
@@ -244,7 +244,7 @@ export default {
 }
 ```
 
-Opsi ini memungkinkan kamu untuk mendefinisikan semua tag meta bawaan untuk aplikasi kamu.
+Opsi ini memungkinkan Anda untuk mendefinisikan semua tag meta bawaan untuk aplikasi Anda.
 
 <base-alert type="next">
 
@@ -254,7 +254,7 @@ Lebih lanjut lihat [integrasi head](/docs/2.x/configuration-glossary/configurati
 
 ### loading
 
-Opsi ini memungkinkan kamu menyesuaikan komponen pemuatan bawaan yang digunakan Nuxt.js.
+Opsi ini memungkinkan Anda menyesuaikan komponen pemuatan bawaan yang digunakan Nuxt.js.
 
 ```js{}[nuxt.config.js]
 export default {
@@ -272,7 +272,7 @@ Lebih lanjut lihat [integrasi loading](/docs/2.x/configuration-glossary/configur
 
 ### modules
 
-Dengan opsi ini kamu dapat menambahkan modul Nuxt.js ke proyek kamu.
+Dengan opsi ini Anda dapat menambahkan modul Nuxt.js ke proyek Anda.
 
 ```js{}[nuxt.config.js]
 export default {
@@ -288,7 +288,7 @@ Lihat selengkapnya di [properti modules](/docs/2.x/configuration-glossary/config
 
 ### modulesDir
 
-Properti modulesDir digunakan untuk mengatur direktori modul untuk penyelesaian jalur. Misalnya: resolveLoading, nodeExternals dan postcss _Webpack_. Jalur konfigurasi relatif terhadap `options.rootDir` (bawaan: process.cwd()).
+Properti modulesDir digunakan untuk mengatur direktori modul untuk penyelesaian jalur. Misalnya: resolveLoading, nodeExternals, dan postcss _Webpack_. Jalur konfigurasi relatif terhadap `options.rootDir` (bawaan: process.cwd()).
 
 ```js{}[nuxt.config.js]
 export default {
@@ -296,7 +296,7 @@ export default {
 }
 ```
 
-Setting this field may be necessary if your project is organized as a Yarn workspace-styled mono-repository.
+Menyesuaikan lokasi ini mungkin diperlukan jika proyek diatur sebagai ruang kerja Yarn dengan mono-repositori.
 
 <base-alert type="next">
 
@@ -306,7 +306,7 @@ Lihat selengkapnya di [properti modulesDir](/docs/2.x/configuration-glossary/con
 
 ### plugins
 
-Opsi ini memungkinkan kamu untuk mendefinisikan _plugin_ JavaScript yang harus dijalankan sebelum _instantiate_ root aplikasi Vue.js.
+Opsi ini memungkinkan Anda untuk mendefinisikan _plugin_ JavaScript yang harus dijalankan sebelum _instantiate_ _root_ aplikasi Vue.js.
 
 ```js{}[nuxt.config.js]
 export default {
@@ -322,7 +322,7 @@ Lihat selengkapnya di [properti plugins](/docs/2.x/configuration-glossary/config
 
 ### router
 
-Dengan opsi `router` kamu dapat menimpa konfigurasi Vue Router bawaan dari Nuxt.js.
+Dengan opsi `router` Anda dapat menimpa konfigurasi Vue Router bawaan dari Nuxt.js.
 
 ```js{}[nuxt.config.js]
 export default {
@@ -340,7 +340,7 @@ Lihat selengkapnya di [properti router](/docs/2.x/configuration-glossary/configu
 
 ### server
 
-Opsi ini memungkinkan kamu untuk mengkonfigurasi variabel koneksi untuk _instance_ peladen dari aplikasi Nuxt.js.
+Opsi ini memungkinkan Anda untuk mengkonfigurasi variabel koneksi untuk _instance_ peladen dari aplikasi Nuxt.js.
 
 ```js{}[nuxt.config.js]
 import path from 'path'
@@ -364,7 +364,7 @@ Lihat selengkapnya di [properti server](/docs/2.x/configuration-glossary/configu
 
 ### srcDir
 
-Opsi ini memungkinkan kamu untuk mendefinisikan direktori sumber dari aplikasi Nuxt.js.
+Opsi ini memungkinkan Anda untuk mendefinisikan direktori sumber dari aplikasi Nuxt.js.
 
 ```js{}[nuxt.config.js]
 export default {
@@ -392,7 +392,7 @@ Contoh struktur proyek aplikasi Nuxt.js di direktori `client`.
 
 ### dir
 
-Opsi ini memungkinkan kamu untuk mendefinisikan nama khusus untuk direktori Nuxt.js.
+Opsi ini memungkinkan Anda untuk mendefinisikan nama khusus untuk direktori Nuxt.js.
 
 ```js{}[nuxt.config.js]
 export default {
@@ -408,7 +408,7 @@ Lihat selengkapnya di [properti dir](/docs/2.x/configuration-glossary/configurat
 
 ### pageTransition
 
-Opsi ini memungkinkan kamu untuk mendefinisikan properti bawaan dari transisi laman.
+Opsi ini memungkinkan Anda untuk mendefinisikan properti bawaan dari transisi laman.
 
 ```js{}[nuxt.config.js]
 export default {
@@ -424,11 +424,11 @@ Lihat selengkapnya di [properti transition](/docs/2.x/configuration-glossary/con
 
 ## Berkas konfigurasi lainnya
 
-Selain `nuxt.config.js`, mungkin ada beberapa berkas konfigurasi lainnya di root proyek kamu, seperti [.eslintrc](https://eslint.org/), [prettier.config.json](https://prettier.io/) atau [.gitignore](https://git-scm.com/docs/gitignore). Berkas-berkas ini digunakan untuk mengonfigurasi alat-alat lain seperti linter, pemformat kode, atau repositori git kamu dan terpisah dari `nuxt.config.js`.
+Selain `nuxt.config.js`, mungkin ada beberapa berkas konfigurasi lainnya di _root_ proyek Anda, seperti [.eslintrc](https://eslint.org/), [prettier.config.json](https://prettier.io/) atau [.gitignore](https://git-scm.com/docs/gitignore). Berkas-berkas ini digunakan untuk mengonfigurasi alat-alat lain seperti linter, pemformat kode, atau repositori git Anda dan terpisah dari `nuxt.config.js`.
 
 ### .gitignore
 
-Dalam berkas .gitignore, kamu perlu menambahkan yang berikut ini agar diabaikan dan tidak ditambahkan ke kontrol versi. `node_modules` yang merupakan tempat semua modul yang terinstal berada. Direktori `nuxt` yang dibuat saat menjalankan perintah dev atau build. Direktori `dist` yang merupakan direktori yang dibuat saat menjalankan perintah generate.
+Dalam berkas .gitignore, Anda perlu menambahkan yang berikut ini agar diabaikan dan tidak ditambahkan ke kontrol versi. `node_modules` yang merupakan tempat semua modul yang terinstal berada. Direktori `nuxt` yang dibuat saat menjalankan perintah dev atau build. Direktori `dist` yang merupakan direktori yang dibuat saat menjalankan perintah generate.
 
 ```markdown{}[.gitignore]
 node_modules

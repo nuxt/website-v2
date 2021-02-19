@@ -187,6 +187,6 @@ components: {
 And now in your template you can use `AwesomeButton` instead of `BaseFooButton`.
 
 ```html{}[pages/index.vue]
-<FooButton />
+<AwesomeButton />
 ```
 <base-alert type="next">Learn more about the [components module](/blog/improve-your-developer-experience-with-nuxt-components).</base-alert>

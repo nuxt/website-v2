@@ -1,5 +1,5 @@
 <template>
-  <AdsBlock v-if="$store.state.adBlocked" />
+  <AdBlock v-if="$store.state.adBlocked" />
   <AdsCarbon v-else-if="displayCarbon" />
   <AdsCodeFund v-else :fallback.sync="displayCarbon" />
 </template>

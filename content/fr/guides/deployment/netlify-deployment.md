@@ -1,15 +1,15 @@
 ---
-title: Deploy Nuxt on Netlify
-description: How to deploy Nuxt.js on Netlify?
+title: Déployer Nuxt sur Netlify
+description: Comment déployer Nuxt.js sur Netlify ?
 menu: Netlify
 target: Static
 category: deployment
 position: 112
 ---
 
-Deploying to [Netlify](https://www.netlify.com) is a low friction option for getting a **statically generated** Nuxt.js site online quickly.
+Le déploiement sur [Netlify](https://www.netlify.com) est une option simple et rapide afin de mettre en ligne un site **généré statiquement** avec Nuxt.js.
 
-The core of the process leverages the `nuxt generate`(<= v2.12) command during deployment to build a static version of your Nuxt.js app into a `dist` directory. The contents of this directory are then deployed to a production URL.
+Le cœur du processus utilise la commande `nuxt generate`(<= v2.12) pendant le déploiement pour créer une version statique de votre application Nuxt.js dans un répertoire `dist`. Le contenu de ce répertoire est ensuite déployé sur une URL de production.
 
 <div class="Promo__Video">
   <a href="https://explorers.netlify.com/learn/get-started-with-nuxt/nuxt-generate-and-deploy" target="_blank">
@@ -19,31 +19,35 @@ The core of the process leverages the `nuxt generate`(<= v2.12) command during d
   </a>
 </div>
 
-## Getting Started
+## Commencer
 
-Press the _"New site from Git"_ button on the Netlify dashboard. Authenticate with your repository host, select a repository to deploy, and continue. You should land on step 3: _"Build options, and deploy!"_
+Appuyez sur le bouton _"New site from Git"_ du tableau de bord Netlify.
 
-## Configure:
+Authentifiez-vous auprès de votre hébergeur Git puis sélectionnez un repository à déployer et continuez.
 
-### For a statically generated site
+Vous devriez atterrir à l'étape 3: _"Build options, and deploy!"_
 
-Make sure you have `target: 'static'`in your `nuxt.config`.
+## Configurer
 
-1. **Branch to deploy:** `main`, or which-ever branch you prefer
-1. **Build command:** `npm run generate`
-1. **Publish directory:** `dist`
+### Pour un site généré statiquement
 
-### For client side rendering only
+Assurez-vous que vous avez `target: 'static'` dans votre `nuxt.config`.
 
-Make sure you have `target: 'static'` and `ssr: false`in your `nuxt.config`.
+1. **Branche à déployer:** `main`, ou la branche que vous préférez
+1. **Commande de construction:** `npm run generate`
+1. **Répertoire de publication:** `dist`
 
-1. **Branch to deploy:** `main`, or which-ever branch you prefer
-1. **Build command:** `npm run generate`
-1. **Publish directory:** `dist`
+### Pour le rendu côté client uniquement
 
-For client side rendering there is a problem with refresh as by default on Netlify the site redirects to _"404 not found"_. For any pages that are not generated they will fallback to SPA mode and then if you refresh or share that link you will get Netlify's 404 page. This is because the pages that are not generated don't actually exist as they are actually a single page application so if you refresh this page you will get a 404 because the url for that page doesn't actually exist. By redirecting to the 404.html Nuxt will reload your page correctly in SPA fallback.
+Assurez-vous que vous avez `target: 'static'` et `ssr: false` dans votre `nuxt.config`.
 
-The easiest way to fix this is by adding a [generate property](/docs/2.x/configuration-glossary/configuration-generate#fallback) in your `nuxt.config` and setting `fallback: true`. Then it will fallback to the generated 404.html when in SPA mode instead of Netlify's 404 page.
+1. **Branche à déployer:** `main`, ou la branche que vous préférez
+1. **Commande de construction:** `npm run generate`
+1. **Répertoire de publication:** `dist`
+
+Pour le rendu côté client, il y a un problème d'actualisation car par défaut sur Netlify le site redirige vers _"404 not found"_. Pour toutes les pages qui ne sont pas générées, elles reviendront en mode SPA, puis si vous actualisez ou partagez ce lien, vous obtiendrez la page 404 de Netlify. C'est parce que les pages qui ne sont pas générées n'existent pas réellement. En redirigeant vers le 404.html, Nuxt rechargera correctement votre page dans SPA fallback.
+
+Le moyen le plus simple de résoudre ce problème est d'ajouter une [propriété generate](/docs/2.x/configuration-glossary/configuration-generate#fallback) dans votre `nuxt.config` et en définissant `fallback: true`. Ainsi, il reviendra au 404.html généré en mode SPA au lieu de la page 404 de Netlify.
 
 ```js
 export default {
@@ -53,16 +57,16 @@ export default {
 }
 ```
 
-If however you want to automatically apply headers and redirects of the application then there is a module for that, this is especially useful for when you have custom headers/redirects (in a \_headers or \_redirects file):
+Si toutefois vous souhaitez appliquer automatiquement les en-têtes et les redirections de l'application, il existe un module pour cela, particulièrement utile pour les headers/redirects custom (dans un \_headers ou \_redirects):
 
 [netlify-files-module](https://github.com/nuxt-community/netlify-files-module)
 
-> For more information on Netlify redirects see the [Netlify docs](https://www.netlify.com/docs/redirects/#rewrites-and-proxying).
+> Pour plus d'informations sur les redirections Netlify, consultez la [documentation Netlify](https://www.netlify.com/docs/redirects/#rewrites-and-proxying).
 
-> For simple reference on Netlify redirects read blog [post](https://www.netlify.com/blog/2019/01/16/redirect-rules-for-all-how-to-configure-redirects-for-your-static-site) by Divya Sasidharan
+> Pour une référence simple sur les redirections Netlify, lisez cet [article de blog](https://www.netlify.com/blog/2019/01/16/redirect-rules-for-all-how-to-configure-redirects-for-your-static-site) by Divya Sasidharan
 
-> Optionally, you can add additional ENV variables via the _"Advanced"_ button. These can be helpful for swapping in alternative API credentials and so on. Netlify also provides a [default ENV variables](https://www.netlify.com/docs/build-settings/#build-environment-variables) which can be read by your Nuxt.js application at build time.
+> En option, vous pouvez ajouter des variables ENV supplémentaires via le bouton _"Advanced"_. Celles-ci peuvent être utiles pour échanger des informations d'identification d'API alternatives, etc. Netlify fournit également des [variables ENV par défaut](https://www.netlify.com/docs/build-settings/#build-environment-variables) qui peuvent être lues par votre application Nuxt.js au moment de la construction.
 
-Click _"Deploy site"_ to immediately trigger a deploy. Your Netlify site will be assigned a random URL and deployed using the `nuxt generate` command.
+Cliquez sur _"Deploy site"_ pour déclencher immédiatement un déploiement. Votre site Netlify recevra une URL aléatoire et sera déployé à l'aide de la commande `nuxt generate`.
 
-Voilà! Your Nuxt.js application is now hosted on Netlify!
+Voilà ! Votre application Nuxt.js est désormais hébergée sur Netlify !

@@ -156,19 +156,13 @@ components/
     Button.vue
 ```
 
-The component name will be based on its own filename. Therefore, the component will be:
+The component name will contain its path. Therefore, the component will be:
 
 ```html
-<button />
+<baseButton />
 ```
 
-We recommend you use the directory name in the filename for clarity:
-
-```bash
-components/
-  base/
-    BaseButton.vue
-```
+For clarity, it is recommended that component file name matches its name.
 
 However, if you want to keep the filename as `Button.vue`, then you can use the `prefix` option in `nuxt.config` to add a prefix to all components in a specific folder.
 
@@ -195,4 +189,8 @@ And now in your template you can use `BaseButton` instead of `Button` without ha
 ```html{}[pages/index.vue]
 <BaseButton />
 ```
+
+
+
+
 <base-alert type="next">Learn more about the [components module](/blog/improve-your-developer-experience-with-nuxt-components).</base-alert>

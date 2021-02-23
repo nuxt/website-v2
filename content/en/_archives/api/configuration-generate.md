@@ -197,13 +197,6 @@ Interval (in milliseconds) between two render cycles to avoid flooding a potenti
 - **Deprecated!**
 - Use [build.html.minify](/api/configuration-build#html-minify) instead
 
-## nojekyll
-
-- Type: `Boolean`
-- Default: `true`
-
-Adds a `.nojekyll` file to enable serving `/_nuxt/` when deployed on GitHub Pages. If you want to disable this feature you can set the value to `false`.
-
 ## routes
 
 - Type: `Array`

@@ -716,7 +716,7 @@ Les templates sont render en utilisant [`lodash.template`](https://lodash.com/do
 
 Options du plugin Terser. Il suffit de mettre un `false` pour désactiver le plugin.
 
-`sourceMap` serait activé lorsque le paramètre `config.devtool` match `source-?map`.
+L'activation de `sourceMap` laissera le commentaire de liaison `//# sourceMappingURL` à la fin de chaque fichier de sortie si webpack `config.devtool` est défini sur `source-map`.
 
 Voir [webpack-contrib/terser-webpack-plugin](https://github.com/webpack-contrib/terser-webpack-plugin).
 

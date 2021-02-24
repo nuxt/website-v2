@@ -178,15 +178,15 @@ components: {
     '~/components', // shortcut to { path: '~/components' }
       {
         path: '~/components/base/foo/',
-        prefix: 'awesome'
+        prefix: 'foo'
       }
   ]
 }
 ```
 
-And now in your template you can use `AwesomeButton` instead of `BaseFooButton`.
+And now in your template you can use `FooButton` instead of `BaseFooButton`.
 
 ```html{}[pages/index.vue]
-<AwesomeButton />
+<FooButton />
 ```
 <base-alert type="next">Learn more about the [components module](/blog/improve-your-developer-experience-with-nuxt-components).</base-alert>

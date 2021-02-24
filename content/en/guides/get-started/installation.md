@@ -4,6 +4,10 @@ description: Here, you will find information on setting up and running a Nuxt.js
 position: 1
 category: get-started
 csb_link: https://codesandbox.io/embed/github/nuxt-academy/guides-examples/tree/master/01_get_started/01_installation?fontsize=14&hidenavigation=1&theme=dark
+CreateNuxtAppVideo: wHkPjOmJTt0
+CreateNuxtAppVideoTitle: Using create-nuxt-app
+ManualInstallVideo: mKV_9AIG70E
+ManualInstallVideoTitle: Nuxt Manual Installation
 ---
 
 ## Prerequisites
@@ -14,7 +18,7 @@ csb_link: https://codesandbox.io/embed/github/nuxt-academy/guides-examples/tree/
 
 ## Using create-nuxt-app
 
-<lite-youtube videoid="wHkPjOmJTt0" playlabel="Using create-nuxt-app"> </lite-youtube>
+<YouTubeLite :video="CreateNuxtAppVideo" :title="CreateNuxtAppVideoTitle" ></YouTubeLite>
 
 To get started quickly you can use the [create-nuxt-app](https://github.com/nuxt/create-nuxt-app).
 
@@ -78,7 +82,7 @@ Another way to get started with Nuxt.js is to use [CodeSandbox](https://template
 
 ## Manual Installation
 
-<lite-youtube videoid="mKV_9AIG70E" playlabel="Nuxt Manual Installation"> </lite-youtube>
+<YouTubeLite :video="ManualInstallVideo" :title="ManualInstallVideoTitle" ></YouTubeLite>
 
 Creating a Nuxt.js project from scratch only requires one file and one directory.
 

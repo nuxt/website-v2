@@ -6,7 +6,7 @@ category: get-started
 video: hYdXzIGDlYA
 ---
 
-<!-- <lite-youtube videoid="hYdXzIGDlYA" playlabel="Nuxt Commands and Deployment"> </lite-youtube> -->
+<YouTubeLite :video="video" :title="title" ></YouTubeLite>
 
 Nuxt.js comes with a set of useful commands, both for development and production purpose.
 

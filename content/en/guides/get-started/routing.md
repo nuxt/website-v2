@@ -7,7 +7,7 @@ csb_link: https://codesandbox.io/embed/github/nuxt-academy/guides-examples/tree/
 video: cKutrcn-hdE
 ---
 
-<lite-youtube videoid="cKutrcn-hdE" playlabel="Nuxt Routing"> </lite-youtube>
+<YouTubeLite :video="video" :title="title" ></YouTubeLite>
 
 ## Automatic Routes
 

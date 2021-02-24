@@ -163,7 +163,7 @@ The component name will be based on its own path directory and filename. Therefo
 <BaseFooButton />
 ```
 
-However, if you want to use custom prefix, then you can use the `prefix` option in `nuxt.config` to add a prefix to all components in a specific folder.
+However, if you want to use custom directory strcture that should not be part of component name, can explicitly specify these directories: 
 
 ```bash
 components/

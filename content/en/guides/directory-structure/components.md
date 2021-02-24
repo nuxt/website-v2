@@ -153,46 +153,37 @@ If you have components in nested directories such as:
 ```bash
 components/
   base/
-    Button.vue
+      foo/
+         Button.vue
 ```
 
-The component name will be based on its own filename. Therefore, the component will be:
+The component name will be based on its own path directory and filename. Therefore, the component will be:
 
 ```html
-<button />
+<BaseFooButton />
 ```
 
-We recommend you use the directory name in the filename for clarity:
+However, if you want to use custom directory strcture that should not be part of component name, can explicitly specify these directories: 
 
 ```bash
 components/
   base/
-    BaseButton.vue
-```
-
-However, if you want to keep the filename as `Button.vue`, then you can use the `prefix` option in `nuxt.config` to add a prefix to all components in a specific folder.
-
-```bash
-components/
-  base/
-   Button.vue
+      foo/
+         Button.vue
 ```
 
 ```bash{}[nuxt.config.js]
 components: {
   dirs: [
     '~/components',
-      {
-        path: '~/components/base/',
-        prefix: 'Base'
-      }
+    '~/components/base'
   ]
 }
 ```
 
-And now in your template you can use `BaseButton` instead of `Button` without having to make changes to the name of your `Button.vue` file.
+And now in your template you can use `FooButton` instead of `BaseFooButton`.
 
 ```html{}[pages/index.vue]
-<BaseButton />
+<FooButton />
 ```
 <base-alert type="next">Learn more about the [components module](/blog/improve-your-developer-experience-with-nuxt-components).</base-alert>

@@ -175,11 +175,8 @@ components/
 ```bash{}[nuxt.config.js]
 components: {
   dirs: [
-    '~/components', // shortcut to { path: '~/components' }
-      {
-        path: '~/components/base/foo/',
-        prefix: 'foo'
-      }
+    '~/components',
+    '~/components/base'
   ]
 }
 ```

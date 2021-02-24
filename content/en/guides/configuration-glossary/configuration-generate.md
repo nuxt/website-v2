@@ -198,7 +198,7 @@ Interval in milliseconds between two render cycles to avoid flooding a potential
 - Type: `Boolean`
 - Default: `true`
 
-By default, adding `.nojekyll` file for serving static pages on GitHub Pages. If you want to disable this feature you can set the value to `false`
+Adds a `.nojekyll` file to enable serving `/_nuxt/` when deployed on GitHub Pages. If you want to disable this feature you can set the value to `false`.
 
 ## routes
 

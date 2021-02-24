@@ -1,109 +1,109 @@
 ---
 title: modules
-description: Nuxt.js provides a higher-order module system that makes it possible to extend the core. Modules are functions that are called sequentially when booting Nuxt.js.
+description: Nuxt.js menyediakan sistem modul tingkat tinggi yang memungkinkan untuk memperluas inti. Modul adalah fungsi yang dipanggil secara berurutan saat mem-_boot_ Nuxt.js.
 position: 9
 category: directory-structure
 csb_link: https://codesandbox.io/embed/github/nuxt-academy/guides-examples/tree/master/04_directory_structure/10_modules?fontsize=14&hidenavigation=1&theme=dark
 img: /docs/2.x/modules.svg
 imgAlt: modules-in-nuxt-js
 questions:
-  - question: When are modules called?
+  - question: Kapan modul dipanggil?
     answers:
-      - before Nuxt.js starts
-      - while Nuxt.js is running
-      - after Nuxt.js starts
-    correctAnswer: before Nuxt.js starts
-  - question: Nuxt.js modules can be incorporated into npm packages
+      - sebelum Nuxt.js dimulai
+      - saat Nuxt.js sedang berjalan
+      - setelah Nuxt.js dimulai
+    correctAnswer: sebelume Nuxt.js dimulai
+  - question: Modul Nuxt.js dapat digabungkan ke dalam paket npm
     answers:
-      - true
-      - false
-    correctAnswer: true
-  - question: In your nuxt.config.js file under what property do you add your modules?
+      - benar
+      - salah
+    correctAnswer: benar
+  - question: Di berkas nuxt.config.js, di properti mana anda menambahkan modul?
     answers:
       - nuxtModules
       - modules
       - plugins
     correctAnswer: modules
-  - question: The order you add your modules to the nuxt.config.js file is important
+  - question: Urutan dalam penambahan modul ke berkas nuxt.config.js sangat penting
     answers:
-      - true
-      - false
-    correctAnswer: true
-  - question: Where should you add your modules that are only required during development and build time?
+      - benar
+      - salah
+    correctAnswer: benar
+  - question: Di mana kamu harus menambahkan modul yang hanya diperlukan selama pengembangan dan waktu _build_?
     answers:
       - modules
       - build
       - buildModules
     correctAnswer: buildModules
-  - question: What exactly are modules?
+  - question: Apa sebenarnya modul itu?
     answers:
       - arrays
       - functions
       - plugins
     correctAnswer: functions
-  - question: What do we use when we want to do things only on specific conditions and not just during Nuxt.js initialization?
+  - question: Apa yang kita gunakan ketika ingin melakukan sesuatu hanya pada kondisi tertentu dan tidak hanya selama inisialisasi Nuxt.ja?
     answers:
       - plugins
       - hooks
       - asyncData
     correctAnswer: hooks
-  - question: Modules can
+  - question: Modul bisa
     answers:
-      - only be used as npm packages
-      - can only be directly included in your project source code
-      - both
-    correctAnswer: both
-  - question: Which line is required if you are publishing your module as an npm package?
+      - hanya dapat digunakan sebagai paket npm
+      - hanay dapat disertakan langsung dalam kode sumber proyek
+      - keduanya
+    correctAnswer: keduanya
+  - question: Baris mana yang diperlukan jika anda ingin menerbitkan modul sebagai paket npm?
     answers:
       - module.exports
       - module.exports.meta
       - module.exports.module
     correctAnswer: module.exports.meta
-  - question: You can tell Nuxt.js to load modules with optional parameters as options
+  - question: Anda dapat memerintahkan Nuxt.js untuk memuat modul dengan parameter opsional sebagai opsi
     answers:
       - true
       - false
     correctAnswer: true
 ---
 
-## Exploring Nuxt Modules
+## Menjelajahi Modul Nuxt
 
-Discover our [list of modules](https://modules.nuxtjs.org) to supercharge your Nuxt project, created by the Nuxt team and community.
+Temukan [daftar modul](https://modules.nuxtjs.org) kami untuk meningkatkan proyek Nuxt anda, yang dibuat oleh tim dan komunitas Nuxt.
 
-- 145+ Modules
-- 89+ Maintainers
+- 145+ Modul
+- 89+ Pemelihara
 
 <base-alert type="next">
 
-Check out [modules.nuxtjs.org](https://modules.nuxtjs.org)
+Lihat [modules.nuxtjs.org](https://modules.nuxtjs.org)
 
 </base-alert>
 
 <app-modal :src="img" :alt="imgAlt"></app-modal>
 
-While developing production-grade applications with Nuxt.js you might find that the framework's core functionality is not enough. Nuxt.js can be extended with configuration options and plugins, but maintaining these customizations across multiple projects is tedious, repetitive and time-consuming. On the other hand, supporting every project's needs out of the box would make Nuxt.js very complex and hard to use.
+Saat mengembangkan aplikasi tingkat produksi dengan Nuxt.js, anda mungkin menemukan bahwa fungsionalitas inti dari kerangka kerja tidak cukup. Nuxt.js dapat diperluas dengan opsi konfigurasi dan _plugin_, tetapi memelihara kustomisasi ini di banyak proyek itu membosankan, berulang, dan memakan waktu. Di sisi lain, mendukung setiap kebutuhan proyek yang tidak biasa akan membuat Nuxt.js sangat kompleks dan sulit digunakan.
 
-This is one of the reasons why Nuxt.js provides a higher-order module system that makes it possible to extend the core. Modules are functions that are called sequentially when booting Nuxt.js. The framework waits for each module to finish before continuing. In this way, modules can customize almost any aspect of your project. Thanks to Nuxt.js' modular design (based on webpack's [Tapable](https://github.com/webpack/tapable)), modules can easily register hooks for certain entry points like the builder initialization. Modules can also override templates, configure webpack loaders, add CSS libraries, and perform many other useful tasks.
+Inilah salah satu alasan mengapa Nuxt.js menyediakan sistem modul tingkat tinggi yang memungkinkan untuk memperluas inti. Modul adalah fungsi yang dipanggil secara berurutan saat mem-_boot_ Nuxt.js. Kerangka kerja menunggu setiap modul selesai sebelum melanjutkan. Dengan cara ini, modul dapat menyesuaikan hampir semua aspek proyek anda. Berkat desain modular Nuxt.js (berdasarkan [Tapable](https://github.com/webpack/tapable) _webpack_), modul dapat dengan mudah mendaftarkan _hook_ untuk titik masuk tertentu seperti inisialisasi _builder_. Modul juga dapat mengganti templat, mengkonfigurasi pemuat _webpack_, menambahkan pustaka CSS, dan melakukan banyak tugas berguna lainnya.
 
-Best of all, Nuxt.js modules can be incorporated into npm packages. This makes it possible to reuse across projects and to share with the community, helping create an ecosystem of high-quality add-ons.
+Yang terbaik dari semuanya, modul Nuxt.js dapat digabungkan ke dalam paket npm. Hal ini memungkinkan untuk digunakan kembali di seluruh proyek anda dan untuk dibagikan dengan komunitas, membantu menciptakan ekosistem pengaya berkualitas tinggi.
 
-## The modules Property
+## Properti modules
 
-Modules are Nuxt.js extensions which can extend the framework's core functionality and add endless integrations. Once you have installed the modules you can then add them to your nuxt.config.js file under the modules property.
+Modul adalah ekstensi Nuxt.js yang dapat memperluas fungsionalitas inti kerangka kerja dan menambahkan integrasi tanpa akhir. Setelah anda menginstal modul, anda dapat menambahkannya ke berkas nuxt.config.js pada properti modules.
 
 ```js{}[nuxt.config.js]
 export default {
   modules: [
-    // Using package name
+    // Menggunakan nama paket
     '@nuxtjs/axios',
 
-    // Relative to your project srcDir
+    // Relatif terhadap srcDir proyek
     '~/modules/awesome.js',
 
-    // Providing options
+    // Memberikan opsi
     ['@nuxtjs/google-analytics', { ua: 'X1234567' }],
 
-    // Inline definition
+    // Definisi sebaris
     function () {}
   ]
 }
@@ -111,31 +111,31 @@ export default {
 
 <base-alert type="info">
 
-Module developers usually provide additionally needed steps and details for usage.
+Pengembang modul biasanya memberikan langkah dan detail tambahan yang diperlukan untuk penggunaan.
 
 </base-alert>
 
-Nuxt.js tries to resolve each item in the modules array using node require path (in the `node_modules`) and then will resolve from the project `srcDir` if `@` alias is used.
+Nuxt.js mencoba menyelesaikan setiap item dalam larik modul menggunakan jalur yang dibutuhkan node (dalam `node_modules`) dan kemudian akan menyelesaikan dari `srcDir` proyek jika alias `@` digunakan.
 
 <base-alert>
 
-Modules are executed sequentially so the order is important.
+Modul dijalankan secara berurutan sehingga urutannya sangat penting.
 
 </base-alert>
 
-Modules should export a function to enhance build/runtime and optionally return a promise until their job is finished. Note that they are imported at runtime so they should be already transpiled if using modern ES6 features.
+Modul harus mengekspor _function_ untuk meningkatkan _build_/_runtime_ dan secara opsional mengembalikan sebuah _promise_ sampai tugasnya selesai. Perhatikanlah bahwa modul diimpor saat _runtime_ sehingga harus sudah ditranspilasi jika menggunakan fitur ES6 modern.
 
-## Write your own Module
+## Menulis Modul sendiri
 
-Modules are functions. They can be packaged as npm modules or directly included in your project source code.
+Modul adalah fungsi, dapat dikemas sebagai modul npm atau langsung disertakan dalam kode sumber proyek.
 
 ```js{}[nuxt.config.js]
 export default {
   exampleMsg: 'hello',
   modules: [
-    // Simple usage
+    // Penggunaan sederhana
     '~/modules/example',
-    // Passing options directly
+    // Meneruskan opsi secara langsung
     ['~/modules/example', { token: '123' }]
   ]
 }
@@ -144,30 +144,30 @@ export default {
 ```js{}[modules/example.js]
 export default function ExampleModule(moduleOptions) {
   console.log(moduleOptions.token) // '123'
-  console.log(this.options.exampleMsg) // 'hello'
+  console.log(this.options.exampleMsg) // 'halo'
 
   this.nuxt.hook('ready', async nuxt => {
-    console.log('Nuxt is ready')
+    console.log('Nuxt sudah siap')
   })
 }
 
-// REQUIRED if publishing the module as npm package
+// DIBUTUHKAN jika menerbitkan modul sebagai paket npm
 module.exports.meta = require('./package.json')
 ```
 
 ## 1) ModuleOptions
 
-`moduleOptions`: This is the object passed using the `modules` array by the user. We can use it to customize its behavior.
+`moduleOptions`: Ini adalah objek yang diteruskan menggunakan larik `modules` oleh pengguna. Kita dapat menggunakannya untuk menyesuaikan perilakunya.
 
-### Top level options
+### Opsi tingkat atas
 
-Sometimes it is more convenient if we can use top level options while registering modules in `nuxt.config.js`. This allows us to combine multiple option sources.
+Terkadang lebih nyaman jika kita dapat menggunakan opsi tingkat atas saat mendaftarkan modul di `nuxt.config.js`. Ini memungkinkan kita untuk menggabungkan berbagai sumber opsi.
 
 ```js{}[nuxt.config.js]
 export default {
   modules: [['@nuxtjs/axios', { anotherOption: true }]],
 
-  // axios module is aware of this by using `this.options.axios`
+  // modul axios menyadari hal ini dengan menggunakan `this.options.axios`
   axios: {
     option1,
     option2
@@ -177,43 +177,43 @@ export default {
 
 ## 2) this.options
 
-`this.options`: You can directly access the Nuxt.js options using this reference. This is the content of the user's `nuxt.config.js` with all default options assigned to it. It can be used for shared options between modules.
+`this.options`: Anda dapat langsung mengakses opsi Nuxt.js menggunakan referensi ini. Ini adalah isi dari `nuxt.config.js` pengguna, dengan semua opsi bawaannya. Ini dapat digunakan sebagai bersama antar modul/
 
 ```js{}[module.js]
 export default function (moduleOptions) {
-  // `options` will contain option1, option2 and anotherOption
+  // `options` akan berisi opsi1, opsi2, dan opsiLainnya
   const options = Object.assign({}, this.options.axios, moduleOptions)
 
   // ...
 }
 ```
 
-### Add a CSS Library
+### Menambahkan Pustaka CSS
 
-If your module will provide a CSS library, make sure to perform a check if the user already included the library to avoid duplicates, and add an option to disable the CSS library in the module.
+Jika modul anda akan menyediakan pustaka CSS, pastikan untuk melakukan pemeriksaan jika pengguna sudah menyertakan pustaka tersebut untuk menghindari duplikasi, dan tambahkan opsi untuk menonaktifkan pustaka CSS di modul.
 
 ```js{}[module.js]
 export default function (moduleOptions) {
   if (moduleOptions.fontAwesome !== false) {
-    // Add Font Awesome
+    // Menambahkan Font Awesome
     this.options.css.push('font-awesome/css/font-awesome.css')
   }
 }
 ```
 
-### Emit assets
+### Emisi aset
 
-We can register webpack plugins to emit assets during build.
+Kita dapat mendaftarkan _plugin_ _webpack_ untuk mengeluarkan aset selama _build_.
 
 ```js{}[module.js]
 export default function (moduleOptions) {
-  const info = 'Built by awesome module - 1.3 alpha on ' + Date.now()
+  const info = 'Dibangun dengan awesome module - 1.3 alpha pada ' + Date.now()
 
   this.options.build.plugins.push({
     apply(compiler) {
       compiler.plugin('emit', (compilation, cb) => {
-        // This will generate `.nuxt/dist/info.txt' with contents of info variable.
-        // Source can be buffer too
+        // Ini akan menghasilkan `.nuxt/dist/info.txt' yang berisi variabel info.
+        // Sumber juga bisa menjadi buffer
         compilation.assets['info.txt'] = {
           source: () => info,
           size: () => info.length
@@ -228,73 +228,73 @@ export default function (moduleOptions) {
 
 ## 3) this.nuxt
 
-`this.nuxt`: This is a reference to the current Nuxt.js instance. We can register hooks on certain life cycle events.
+`this.nuxt`: Ini adalah referensi ke _instance_ Nuxt.js saat ini. Kita dapat mendaftarkan _hook_ pada peristiwa siklus hidup tertentu.
 
-- **Ready** : Nuxt is ready to work (ModuleContainer and Renderer ready).
+- **Siap** : Nuxt siap untuk bekerja (ModuleContainer dan Perender siap).
 
 ```js
 nuxt.hook('ready', async nuxt => {
-  // Your custom code here
+  // Kode khusus anda di sini
 })
 ```
 
-- **Error**: An unhandled error when calling hooks.
+- **Galat**: Kesalahan yang tidak tertangani saat memanggil _hook_.
 
 ```js
 nuxt.hook('error', async error => {
-  // Your custom code here
+  // Kode khusus anda di sini
 })
 ```
 
-- **Close**: Nuxt instance is gracefully closing.
+- **Tutup**: _Instance_ Nuxt ditutup dengan baik.
 
 ```js
 nuxt.hook('close', async nuxt => {
-  // Your custom code here
+  // Kode khusus anda di sini
 })
 ```
 
-- **Listen**: Nuxt internal server starts listening. (Using nuxt start or nuxt dev)
+- **Pantau**: Peladen internal Nuxt mulai memantau. (Menggunakan nuxt start atau nuxt dev)
 
 ```js
-nuxt.hook('listen', async (server, {host, port})) => {
-  // Your custom code here
+nuxt.hook('listen', async (server, {host, port}) => {
+  // Kode khusus anda di sini
 })
 ```
 
-`this`: Context of modules. All modules will be called within context of the ModuleContainer instance.
+`this`: Konteks modul. Semua modul akan dipanggil dalam konteks _instance_ ModuleContainer.
 
-Please look into the [ModuleContainer](/docs/2.x/internals-glossary/internals-module-container) class docs for available methods.
+Harap lihat dokumentasi kelas [ModuleContainer](/docs/2.x/internals-glossary/internals-module-container) untuk mengetahui metode yang tersedia.
 
-### Run Tasks on Specific hooks
+### Menjalankan Tugas pada _hook_ Tertentu
 
-Your module may need to do things only on specific conditions and not just during Nuxt.js initialization. We can use the powerful Nuxt.js hooks to do tasks on specific events (based on [Hookable](https://github.com/nuxt-contrib/hookable)). Nuxt.js will wait for your function if it returns a Promise or is defined as `async`.
+Modul anda mungkin perlu melakukan beberapa hal hanya pada kondisi tertentu dan tidak hanya selama inisialisasi Nuxt.js. Kita dapat menggunakan _hook_ Nuxt.js yang sangat berguna untuk melakukan tugas pada peristiwa tertentu (berdasarkan [Hookable](https://github.com/nuxt-contrib/hookable)). Nuxt.js akan menunggu _function_ anda jika ia mengembalikan _promise_ atau didefinisikan sebagai `async`.
 
-Here are some basic examples:
+Berikut beberapa contoh dasar:
 
 ```js{}[modules/myModule.js]
 export default function myModule() {
   this.nuxt.hook('modules:done', moduleContainer => {
-    // This will be called when all modules finished loading
+    // Ini akan dipanggil ketika semua modul selesai dimuat
   })
 
   this.nuxt.hook('render:before', renderer => {
-    // Called after the renderer was created
+    // Dipanggil setelah perender dibuat
   })
 
   this.nuxt.hook('build:compile', async ({ name, compiler }) => {
-    // Called before the compiler (default: webpack) starts
+    // Dipanggil sebelum kompilator (bawaan: webpack) memulai
   })
 
   this.nuxt.hook('generate:before', async generator => {
-    // This will be called before Nuxt generates your pages
+    // Ini akan dipanggil sebelum Nuxt membuat laman anda
   })
 }
 ```
 
-### Provide plugins
+### Menyediakan _plugin_
 
-It is common that modules provide one or more plugins when added. For example [bootstrap-vue](https://bootstrap-vue.js.org/) module would require to register itself into Vue. In such situations we can use the `this.addPlugin` helper.
+Biasanya modul menyediakan satu atau lebih plugin saat ditambahkan. Misalnya modul [bootstrap-vue](https://bootstrap-vue.js.org/) akan perlu mendaftar sendiri ke Vue. Dalam situasi seperti itu kita bisa menggunakan _helper_ `this.addPlugin`.
 
 ```js{}[plugin.js]
 import Vue from 'vue'
@@ -307,21 +307,21 @@ Vue.use(BootstrapVue)
 import path from 'path'
 
 export default function nuxtBootstrapVue(moduleOptions) {
-  // Register `plugin.js` template
+  // Mendaftarkan templat `plugin.js`
   this.addPlugin(path.resolve(__dirname, 'plugin.js'))
 }
 ```
 
-### Template plugins
+### Templat _plugin_
 
-Registered templates and plugins can leverage [lodash templates](https://lodash.com/docs/4.17.4#template) to conditionally change registered plugins output.
+Templat dan _plugin_ yang terdaftar dapat memanfaatkan [templat lodash](https://lodash.com/docs/4.17.4#template) untuk mengubah keluaran dari _plugin_ yang terdaftar, secara bersyarat.
 
 ```js{}[plugin.js]
-// Set Google Analytics UA
+// Mengatur Google Analytics UA
 ga('create', '<%= options.ua %>', 'auto')
 
 <% if (options.debug) { %>
-// Dev only code
+// Kode dev saja
 <% } %>
 ```
 
@@ -329,57 +329,57 @@ ga('create', '<%= options.ua %>', 'auto')
 import path from 'path'
 
 export default function nuxtBootstrapVue(moduleOptions) {
-  // Register `plugin.js` template
+  // Mendaftarkan templar `plugin.js`
   this.addPlugin({
     src: path.resolve(__dirname, 'plugin.js'),
     options: {
-      // Nuxt will replace `options.ua` with `123` when copying plugin to project
+      // Nuxt akan mengganti `options.ua` dengan `123` saat menyalin plugin ke proyek
       ua: 123,
 
-      // conditional parts with dev will be stripped from plugin code on production builds
+      //bagian bersyarat dengan dev akan dihapus dari kode plugin pada build produksi
       debug: this.options.dev
     }
   })
 }
 ```
 
-### Register custom webpack loaders
+### Mendaftarkan pemuat _webpack_ khusus
 
-We can do the same as  `build.extend`  in  `nuxt.config.js`  using  `this.extendBuild`.
+Kita bisa melakukan hal yang sama seperti `build.extend`  di  `nuxt.config.js`  menggunakan  `this.extendBuild`.
 
 ```js{}[module.js]
 export default function (moduleOptions) {
     this.extendBuild((config, { isClient, isServer }) => {
-      // `.foo` Loader
+      // Pemuat `.foo`
       config.module.rules.push({
         test: /\.foo$/,
         use: [...]
       })
 
-      // Customize existing loaders
-      // Refer to source code for Nuxt internals:
+      // Menyesuaikan pemuat yang sudah ada
+      // Lihat kode sumber untuk internal Nuxt:
       // https://github.com/nuxt/nuxt.js/blob/dev/packages/webpack/src/config/base.js
       const barLoader = config.module.rules.find(rule => rule.loader === 'bar-loader')
   })
 }
 ```
 
-## Async Modules
+## Modul Asinkron
 
-Not all modules will do everything synchronous. For example you may want to develop a module which needs fetching some API or doing asynchronous Operation. For this, Nuxt.js supports async modules which can return a Promise or call a callback.
+Tidak semua modul akan melakukan semuanya secara sinkron. Misalnya, anda mungkin ingin mengembangkan modul yang perlu mengambil beberapa API atau melakukan Operasi asinkron. Untuk ini, Nuxt.js mendukung modul asinkron yang dapat mengembalikan _Promise_ atau memanggil _callback_.
 
-### Use async/await
+### Menggunakan async/await
 
 ```js
 import fse from 'fs-extra'
 
 export default async function asyncModule() {
-  // You can do async work here using `async`/`await`
+  // Anda dapat melakukan pekerjaan asinkron di sini menggunakan `async`/`await`
   const pages = await fse.readJson('./pages.json')
 }
 ```
 
-### Return a Promise
+### Mengembalikan _Promise_
 
 ```js
 export default function asyncModule($http) {
@@ -387,20 +387,20 @@ export default function asyncModule($http) {
     .get('https://jsonplaceholder.typicode.com/users')
     .then(res => res.data.map(user => '/users/' + user.username))
     .then(routes => {
-      // Do something by extending Nuxt routes
+      // Melakukan sesuatu dengan memperluas rute Nuxt
     })
 }
 ```
 
 <base-alert type="info">
 
-There are way more hooks and possibilities for modules. Please read the [Nuxt Internals](/docs/2.x/internals-glossary/internals) to find out more about the nuxt-internal API.
+Ada lebih banyak _hook_ dan kemungkinan untuk modul. Silakan baca [Internal Nuxt](/docs/2.x/internals-glossary/internals) untuk mengetahui lebih lanjut mengenai API _nuxt-internal_.
 
 </base-alert>
 
-## Publishing your module
+## Menerbitkan modul
 
-`module.exports.meta`: This line is required if you are publishing the module as an npm package. Nuxt internally uses meta to work better with your package.
+`module.exports.meta`: Baris ini diperlukan jika anda menerbitkan modul sebagasi paket npm.Nuxt secara internal akan menggunakan meta untuk bekerja lebih baik dengan paket anda.
 
 ```js{}[modules/myModule.js]
 module.exports.meta = require('./package.json')
@@ -408,11 +408,11 @@ module.exports.meta = require('./package.json')
 
 ## buildModules
 
-Some modules are only imported during development and build time. Using `buildModules` helps to make production startup faster and also significantly decrease the size of your `node_modules` for production deployments. Please refer to the docs for each module to see if it is recommended to use `modules` or `buildModules`.
+Beberapa modul hanya diimpor selama pengembangan dan waktu _build_. Penggunaan `buildModules` dapat membantu mempercepat proses produksi dan juga dapat mengurangi ukuran `node_modules` secara signifikan untuk penggelaran (_deployment_) produksi. Silakan merujuk ke dokumentasi setiap modul guna mengetahui apaka direkomendasikan untuk menggunakan `modules` atau `buildModules`.
 
-The usage difference is:
+Perbedaan penggunaannya adalah:
 
-- Instead of adding to `modules` inside `nuxt.config.js`, use `buildModules`
+- Daripada menambahkan ke `modules` di dalam `nuxt.config.js`, tambahkan ke `buildModules`
 
 ```js{}[nuxt.config.js]
 export default {
@@ -420,7 +420,7 @@ export default {
 }
 ```
 
-- Instead of adding to `dependencies` inside `package.json`, use `devDependencies`
+- Daripada menambahkan ke `dependencies` di dalam `package.json`, tambahkan ke `devDependencies`
 
 <code-group>
   <code-block label="Yarn" active>
@@ -441,20 +441,20 @@ npm install --save-dev @nuxtjs/eslint-module
 
 <base-alert type="info">
 
-If you are a module author, It is highly recommended to suggest to users to install your package as a `devDependency` and use  `buildModules` instead of `modules` for `nuxt.config.js`.
+Jika anda adalah pembuat modul, sangat disarankan untuk menyarankan pengguna untuk menginstal paket anda sebagai `devDependency` dan menggunakan  `buildModules` alih-alih `modules` untuk `nuxt.config.js`.
 
 </base-alert>
 
-Your module is a `buildModule` unless:
+Modul anda adalah `buildModule`, kecuali:
 
-- It is providing a serverMiddleware
-- It has to register a Node.js runtime hook (Like sentry)
-- It is affecting vue-renderer behavior or using a hook from `server:` or `vue-renderer:` namespace
-- Anything else that is outside of webpack scope (Hint: plugins and templates are compiled and are in webpack scope)
+- menyediakan serverMiddleware
+- Harus mendaftarkan _hook runtime_ Node.js (Seperti sentry)
+- Mempengaruhi perilaku vue-renderer atau menggunakan _hook_ dari _namespace_ `server:` atau `vue-renderer:`
+- Apa pun yang berada di luar cakupan _webpack_ (Petunjuk: _plugin_ dan templat dikompilasi dan berada dalam cakupan _webpack_)
 
 <base-alert> 
 
-If you are going to offer using `buildModules` please mention that this feature is only available since Nuxt v2.9. Older users should upgrade Nuxt or use the `modules` section.
+Jika anda menawarkan untuk menggunakan `buildModules` harap sebutkan bahwa fitur ini hanya tersedia untuk Nuxt v2.9 ke atas. Pengguna yang menggunakan versi lama harus meningkatkan Nuxt atau menggunakan properti `modules`.
 
 </base-alert>
 

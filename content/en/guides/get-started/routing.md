@@ -4,7 +4,10 @@ description: Most websites have more than just one page. For example a home page
 position: 2
 category: get-started
 csb_link: https://codesandbox.io/embed/github/nuxt-academy/guides-examples/tree/master/01_get_started/02_routing?fontsize=14&hidenavigation=1&theme=dark
+video: cKutrcn-hdE
 ---
+
+<YouTubeLite :video="video" :title="title" ></YouTubeLite>
 
 ## Automatic Routes
 

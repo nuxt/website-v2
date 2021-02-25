@@ -11,6 +11,7 @@
         >
           {{ page.title }}
         </h1>
+
         <nuxt-content :document="page" />
 
         <AppPrevNextNew

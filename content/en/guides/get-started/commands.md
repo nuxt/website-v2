@@ -3,7 +3,10 @@ title: Commands and Deployment
 description: Nuxt.js comes with a set of useful commands, both for development and production purpose.
 position: 4
 category: get-started
+video: hYdXzIGDlYA
 ---
+
+<YouTubeLite :video="video" :title="title" ></YouTubeLite>
 
 Nuxt.js comes with a set of useful commands, both for development and production purpose.
 
@@ -61,7 +64,7 @@ You can run different commands depending on the [target](/docs/2.x/features/depl
 - **nuxt generate** - Build the application (if needed), generate every route as a HTML file and statically export to `dist/` directory (used for static hosting).
 - **nuxt start** - serve the `dist/` directory like your static hosting would do (Netlify, Vercel, Surge, etc), great for testing before deploying.
 
-## Webpack Config Inspection 
+## Webpack Config Inspection
 
 You can inspect the webpack config used by nuxt to build project similar to [vue inspect](https://cli.vuejs.org/guide/webpack.html#inspecting-the-project-s-webpack-config)).
 

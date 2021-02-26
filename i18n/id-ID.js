@@ -36,7 +36,7 @@ module.exports = {
         slug: 'blog'
       },
       {
-        name: 'Video Courses',
+        name: 'Kursus Video',
         icon: 'video',
         href:
           'https://masteringnuxt.com?friend=nuxt&utm_source=Nuxtjs.org&utm_medium=Link&utm_content=Navbar&utm_content=prelaunch'
@@ -50,10 +50,10 @@ module.exports = {
     meta: {
       title: 'Nuxt.js - Aplikasi Vue.js Universal',
       description:
-        'Nuxt.js adalah framework minimalis untuk membuat aplikasi Vue.js dengan server side rendering, hot-reloading, static generation, dan banyak lagi!'
+        'Nuxt.js adalah kerangka kerja minimalis untuk membuat aplikasi Vue.js dengan server side rendering, hot-reloading, static generation, dan banyak lagi!'
     },
     welcome: {
-      title: 'Intuitif {br} {frameworkType} Framework',
+      title: 'Kerangka Kerja Intuitif {br} {frameworkType}',
       description:
         'Bangun aplikasi Vue.js Anda berikutnya dengan percaya diri menggunakan NuxtJS. Kerangka {openSource} membuat pengembangan web sederhana dan kuat.',
       openSource: 'sumber terbuka',
@@ -61,11 +61,11 @@ module.exports = {
       get_updates: 'Dapatkan pembaruan NuxtJS ke kotak masuk Anda setiap bulan',
       video:
         'Video diproduksi oleh {company}, unduh gratis mereka {cheatSheet}',
-      cheatSheet: 'Nuxt Cheat Sheet.'
+      cheatSheet: 'Contekan Nuxt.'
     },
     why: {
       title: 'Mengapa {nuxt}',
-      try_nuxtjs_online: 'Coba NuxtJS Online',
+      try_nuxtjs_online: 'Coba NuxtJS secara Daring',
       enjoyable: {
         title: 'Menyenangkan',
         description:
@@ -282,7 +282,7 @@ module.exports = {
     link: 'dokumen baru'
   },
   example: {
-    intro: 'In this example:'
+    intro: 'Dalam contoh berikut:'
   },
   codeSandbox: {
     open: 'Buka CodeSandbox'
@@ -326,20 +326,20 @@ module.exports = {
       discover: {
         title: 'Discover',
         shop: 'Our Goodies Store',
-        consulting: 'Training & consultancy',
-        sponsorNuxt: 'Sponsoring & donations'
+        consulting: 'Konsultasi & Training',
+        sponsorNuxt: 'Donasi dan Mensponsori'
       },
       about: {
-        title: 'About',
-        team: 'Our team',
-        design: 'Design kit',
-        contact: 'Contact us'
+        title: 'Tentang',
+        team: 'Tim kami',
+        design: 'Kit desain',
+        contact: 'Kontak kami'
       },
       support: {
-        title: 'Support',
+        title: 'Dukungan',
         resources: 'Sumber Daya',
-        discord: 'Chat with us',
-        contributionGuide: 'Contribution guide'
+        discord: 'Mengobrol dengan kami',
+        contributionGuide: 'Panduan kontribusi'
       }
     }
   },

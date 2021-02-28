@@ -254,7 +254,7 @@ nuxt.hook('close', async nuxt => {
 })
 ```
 
-- **Listen**: Server internal Nuxt mulai mendengarkan. (Menggunakan nuxt start atau nuxt dev)
+- **Listen**: Peladen (_server_) internal Nuxt mulai mendengarkan (_listening_). (Menggunakan `nuxt start` atau `nuxt dev`)
 
 ```js
 nuxt.hook('listen', async (server, {host, port})) => {

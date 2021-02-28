@@ -100,7 +100,7 @@ export default {
     // Relatif terhadap struktur `srcDir` proyek Anda
     '~/modules/awesome.js',
 
-    // Providing options
+    // Memberikan opsi
     ['@nuxtjs/google-analytics', { ua: 'X1234567' }],
 
     // Inline definition

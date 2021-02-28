@@ -195,7 +195,7 @@ Jika modul Anda akan menyediakan pustaka CSS, pastikan untuk melakukan pemeriksa
 ```js{}[module.js]
 export default function (moduleOptions) {
   if (moduleOptions.fontAwesome !== false) {
-    // Add Font Awesome
+    // Menambahkan modul Font Awesome
     this.options.css.push('font-awesome/css/font-awesome.css')
   }
 }

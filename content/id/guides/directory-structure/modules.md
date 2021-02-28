@@ -167,7 +167,7 @@ Terkadang akan lebih mudah jika kita dapat menggunakan opsi level atas saat mend
 export default {
   modules: [['@nuxtjs/axios', { anotherOption: true }]],
 
-  // axios module is aware of this by using `this.options.axios`
+  // modul axios memahami opsi ini menggunakan `this.options.axios`
   axios: {
     option1,
     option2

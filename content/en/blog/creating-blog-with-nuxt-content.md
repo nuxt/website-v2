@@ -695,7 +695,7 @@ Passing in `$content` and `params` to the context in our `asyncData` function we
 <script>
   export default {
     async asyncData({ $content, params }) {
-      const articles = await $content('articles', params.slug)
+      const articles = await $content('articles')
         .only(['title', 'description', 'img', 'slug', 'author'])
         .sortBy('createdAt', 'asc')
         .fetch()

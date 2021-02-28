@@ -279,7 +279,7 @@ export default function myModule() {
   })
 
   this.nuxt.hook('render:before', renderer => {
-    // Called after the renderer was created
+    // Kode di sini akan dipanggil setelah semua pe-_render_ selesai dibuat
   })
 
   this.nuxt.hook('build:compile', async ({ name, compiler }) => {

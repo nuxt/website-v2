@@ -181,7 +181,7 @@ export default {
 
 ```js{}[module.js]
 export default function (moduleOptions) {
-  // `options` will contain option1, option2 and anotherOption
+  // `options` berisi option1, option2 dan anotherOption
   const options = Object.assign({}, this.options.axios, moduleOptions)
 
   // ...

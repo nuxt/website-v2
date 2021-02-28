@@ -394,7 +394,7 @@ export default function asyncModule($http) {
 
 <base-alert type="info">
 
-Ada lebih banyak kait dan kemungkinan untuk modul. Silakan baca [Nuxt Internals](/docs/2.x/internals-glossary/internals) untuk mengetahui lebih lanjut tentang API nuxt-internal.
+Ada lebih banyak kait (_hook_) dan kemungkinan yang dapat kita lakukan untuk modul. Silakan baca [Internal Nuxt](/docs/2.x/internals-glossary/internals) untuk mengetahui lebih lanjut tentang API nuxt-internal.
 
 </base-alert>
 

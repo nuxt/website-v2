@@ -85,7 +85,7 @@ Saat mengembangkan aplikasi tingkat produksi dengan Nuxt.js, Anda mungkin menemu
 
 Inilah salah satu alasan mengapa Nuxt.js menyediakan sistem modul tingkat tinggi yang memungkinkan untuk memperluas fitur utama. Modul adalah fungsi yang dipanggil secara berurutan saat mem-_boot_ Nuxt.js. Nuxt.js menunggu setiap modul selesai sebelum melanjutkan ke modul selanjutnya. Dengan cara ini, modul dapat menyesuaikan hampir semua aspek proyek Anda. Berkat desain modular Nuxt.js (berdasarkan webpack [Tapable](https://github.com/webpack/tapable)), modul dapat dengan mudah mennambahkan _hook_ untuk _entrypoint_ tertentu seperti inisialisasi builder. Modul juga dapat mengganti templat, mengonfigurasi webpack loader, menambahkan pustaka CSS, dan melakukan banyak tugas berguna lainnya.
 
-Yang terbaik dari semuanya, modul Nuxt.js dapat digabungkan ke dalam paket npm. Hal ini memungkinkan untuk digunakan kembali di seluruh proyek dan untuk dibagikan dengan komunitas, membantu menciptakan ekosistem add-on berkualitas tinggi.
+Yang terbaik dari semuanya, modul Nuxt.js dapat digabungkan ke dalam paket NPM. Hal ini memungkinkan (modul) dapat digunakan kembali di seluruh proyek dan dibagikan dengan komunitas, membantu menciptakan ekosistem _add-on_ berkualitas tinggi.
 
 ## The modules Property
 

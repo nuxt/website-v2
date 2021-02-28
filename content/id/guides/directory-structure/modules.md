@@ -94,7 +94,7 @@ Modul adalah ekstensi Nuxt.js yang dapat memperluas fungsionalitas utama kerangk
 ```js{}[nuxt.config.js]
 export default {
   modules: [
-    // Using package name
+    // Menggunakan nama paket NPM
     '@nuxtjs/axios',
 
     // Relatif terhadap struktur `srcDir` proyek Anda

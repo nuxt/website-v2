@@ -454,7 +454,7 @@ Modul Anda adalah `buildModule` kecuali:
 
 <base-alert>
 
-Jika Anda akan menawarkan menggunakan `buildModules`, harap sebutkan bahwa fitur ini hanya tersedia sejak Nuxt v2.9. Pengguna yang lebih tua harus mengupgrade Nuxt atau menggunakan bagian `modules`.
+Jika Anda akan menyarankan untuk pengguna Anda menggunakan `buildModules`, harap sebutkan bahwa fitur ini hanya tersedia sejak Nuxt v2.9. Pengguna Nuxt versi sebelumnya harus memutakhirkan Nuxt atau menggunakan bagian `modules`.
 
 </base-alert>
 

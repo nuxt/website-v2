@@ -264,7 +264,7 @@ nuxt.hook('listen', async (server, {host, port})) => {
 
 `this`: Konteks modul. Semua modul akan dipanggil dalam konteks instance ModuleContainer.
 
-Silahkan lihat dokumen kelas [ModuleContainer](/docs/2.x/internals-glossary/internals-module-container) untuk mengetahui metode yang tersedia.
+Silahkan lihat dokumentasi mengenai kelas [ModuleContainer](/docs/2.x/internals-glossary/internals-module-container) untuk mengetahui metode yang tersedia.
 
 ### Run Tasks on Specific hooks
 

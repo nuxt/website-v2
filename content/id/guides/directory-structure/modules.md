@@ -336,7 +336,7 @@ export default function nuxtBootstrapVue(moduleOptions) {
       // Nuxt will replace `options.ua` with `123` when copying plugin to project
       ua: 123,
 
-      // conditional parts with dev will be stripped from plugin code on production builds
+      // bagian kode yang menggunakan mode pengembangan akan dihilangkan dari kode plugin pada hasil produksi
       debug: this.options.dev
     }
   })

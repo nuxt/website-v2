@@ -275,7 +275,7 @@ Berikut beberapa contoh dasar:
 ```js{}[modules/myModule.js]
 export default function myModule() {
   this.nuxt.hook('modules:done', moduleContainer => {
-    // This will be called when all modules finished loading
+    // Kode di sini akan dipanggil ketika semua modul telah sukses termuat
   })
 
   this.nuxt.hook('render:before', renderer => {

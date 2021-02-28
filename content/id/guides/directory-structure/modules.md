@@ -123,7 +123,7 @@ Modul dijalankan secara berurutan sehingga urutannya penting.
 
 </base-alert>
 
-Modul harus mengekspor fungsi untuk meningkatkan build/runtime dan secara opsional mengembalikan sebuah promise sampai tugasnya selesai. Perhatikan bahwa mereka diimpor saat runtime sehingga seharusnya sudah ditranspilasi jika menggunakan fitur ES6 modern.
+Modul harus mengekspor fungsi untuk meningkatkan build/runtime dan secara opsional mengembalikan sebuah promise sampai tugasnya selesai. Perhatikan bahwa mereka diimpor saat runtime sehingga seharusnya sudah ditranspilasi jika menggunakan fitur terbaru ES6.
 
 ## Write your own Module
 

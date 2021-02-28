@@ -329,7 +329,7 @@ ga('create', '<%= options.ua %>', 'auto')
 import path from 'path'
 
 export default function nuxtBootstrapVue(moduleOptions) {
-  // Register `plugin.js` template
+  // Mendaftarkan templat `plugin.js`
   this.addPlugin({
     src: path.resolve(__dirname, 'plugin.js'),
     options: {

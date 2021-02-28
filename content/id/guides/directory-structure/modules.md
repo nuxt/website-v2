@@ -314,7 +314,7 @@ export default function nuxtBootstrapVue(moduleOptions) {
 
 ### Template plugins
 
-Template dan plugin terdaftar dapat memanfaatkan [template lodash](https://lodash.com/docs/4.17.4#template) untuk mengubah keluaran plugin terdaftar secara bersyarat.
+Templat dan plugin terdaftar dapat memanfaatkan [templat lodash](https://lodash.com/docs/4.17.4#template) untuk mengubah hasil keluaran plugin yang terdaftar dengan syarat-syarat tertentu.
 
 ```js{}[plugin.js]
 // Set Google Analytics UA

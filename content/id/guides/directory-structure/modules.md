@@ -441,7 +441,7 @@ npm install --save-dev @nuxtjs/eslint-module
 
 <base-alert type="info">
 
-Jika Anda adalah pembuat modul, Sangat disarankan untuk menyarankan pengguna menginstal paket Anda sebagai `devDependency` dan gunakan `buildModules` alih-alih `modules` untuk `nuxt.config.js`.
+Jika Anda adalah pembuat modul, sangat disarankan untuk menyarankan pengguna memasang paket Anda sebagai `devDependency` dan gunakan `buildModules` alih-alih `modules` untuk `nuxt.config.js`.
 
 </base-alert>
 

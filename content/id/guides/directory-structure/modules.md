@@ -127,7 +127,7 @@ Modul harus mengekspor fungsi untuk meningkatkan build/runtime dan secara opsion
 
 ## Write your own Module
 
-Modul adalah fungsi. Mereka dapat dikemas sebagai modul npm atau langsung disertakan dalam kode sumber proyek Anda.
+Modul adalah fungsi. Mereka dapat dikemas sebagai modul NPM atau langsung disertakan dalam kode sumber proyek Anda.
 
 ```js{}[nuxt.config.js]
 export default {

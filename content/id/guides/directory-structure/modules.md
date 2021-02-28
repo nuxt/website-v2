@@ -307,7 +307,7 @@ Vue.use(BootstrapVue)
 import path from 'path'
 
 export default function nuxtBootstrapVue(moduleOptions) {
-  // Register `plugin.js` template
+  // Mendaftarkan templat `plugin.js`
   this.addPlugin(path.resolve(__dirname, 'plugin.js'))
 }
 ```

@@ -135,7 +135,7 @@ export default {
   modules: [
     // Contoh penggunaan
     '~/modules/example',
-    // Passing options directly
+    // Menambahkan opsi secara langsung
     ['~/modules/example', { token: '123' }]
   ]
 }

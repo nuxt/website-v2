@@ -213,7 +213,7 @@ export default function (moduleOptions) {
     apply(compiler) {
       compiler.plugin('emit', (compilation, cb) => {
         // Kode di bawah ini akan menghasilkan `.nuxt/dist/info.txt' dengan konten variabel `info`.
-        // Source can be buffer too
+        // `source` dapat berupa buffer juga
         compilation.assets['info.txt'] = {
           source: () => info,
           size: () => info.length

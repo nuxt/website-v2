@@ -283,7 +283,7 @@ export default function myModule() {
   })
 
   this.nuxt.hook('build:compile', async ({ name, compiler }) => {
-    // Called before the compiler (default: webpack) starts
+    // Kode di sini akan dipanggil sebelum memulai _compiler_ (default: webpack)
   })
 
   this.nuxt.hook('generate:before', async generator => {

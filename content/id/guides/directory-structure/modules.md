@@ -103,7 +103,7 @@ export default {
     // Memberikan opsi
     ['@nuxtjs/google-analytics', { ua: 'X1234567' }],
 
-    // Inline definition
+    // Definisi sebaris (_inline_)
     function () {}
   ]
 }

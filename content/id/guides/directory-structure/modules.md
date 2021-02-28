@@ -151,7 +151,7 @@ export default function ExampleModule(moduleOptions) {
   })
 }
 
-// REQUIRED if publishing the module as npm package
+// WAJIB ADA jika mempublikasikan modul sebagai paket NPM
 module.exports.meta = require('./package.json')
 ```
 

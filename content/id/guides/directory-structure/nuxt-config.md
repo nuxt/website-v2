@@ -94,7 +94,7 @@ export default {
 }
 ```
 
-Dengan menghilangkan ekstensi, misalnya jika Anda memiliki berkas css dan memutuskan untuk menggunakan sass, Anda tidak perlu memperbarui nuxt.config karena akan menggunakan ekstensi baru selama nama berkas tetap sama.
+Dengan menghilangkan ekstensi, misalnya jika Anda memiliki berkas CSS dan memutuskan untuk menggunakan SASS, Anda tidak perlu memperbarui nuxt.config karena akan menggunakan ekstensi baru selama nama berkas tetap sama.
 
 <base-alert type="next">
 

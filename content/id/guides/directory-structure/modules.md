@@ -374,7 +374,7 @@ Tidak semua modul akan melakukan semuanya secara sinkron. Misalnya, Anda mungkin
 import fse from 'fs-extra'
 
 export default async function asyncModule() {
-  // You can do async work here using `async`/`await`
+  // Anda dapat melakukan pekerjaan asinkronus menggunakan `async`/`await`
   const pages = await fse.readJson('./pages.json')
 }
 ```

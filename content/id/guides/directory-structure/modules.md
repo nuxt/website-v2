@@ -238,7 +238,7 @@ nuxt.hook('ready', async nuxt => {
 })
 ```
 
-- **Error**: Error yang tidak tertangani saat memanggil hook.
+- **Error**: Galat yang tidak tertangani saat memanggil hook.
 
 ```js
 nuxt.hook('error', async error => {

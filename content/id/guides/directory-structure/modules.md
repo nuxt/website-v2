@@ -234,7 +234,7 @@ export default function (moduleOptions) {
 
 ```js
 nuxt.hook('ready', async nuxt => {
-  // Your custom code here
+  // Letakkan kode _custom_ Anda di sini
 })
 ```
 

@@ -89,7 +89,7 @@ Yang terbaik dari semuanya, modul Nuxt.js dapat digabungkan ke dalam paket NPM. 
 
 ## The modules Property
 
-Modul adalah ekstensi Nuxt.js yang dapat memperluas fungsionalitas inti kerangka kerja dan menambahkan integrasi tanpa akhir. Setelah Anda menginstal modul, Anda dapat menambahkannya ke file nuxt.config.js di bawah properti modules.
+Modul adalah ekstensi Nuxt.js yang dapat memperluas fungsionalitas utama kerangka kerja dan menambahkan integrasi tanpa akhir. Setelah Anda memasang modul, Anda dapat menambahkannya ke berkas nuxt.config.js di bawah properti modules.
 
 ```js{}[nuxt.config.js]
 export default {

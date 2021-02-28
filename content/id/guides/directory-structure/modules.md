@@ -387,7 +387,7 @@ export default function asyncModule($http) {
     .get('https://jsonplaceholder.typicode.com/users')
     .then(res => res.data.map(user => '/users/' + user.username))
     .then(routes => {
-      // Do something by extending Nuxt routes
+      // Melakukan sesuatu dengan meng-_extend_ _route_ Nuxt
     })
 }
 ```

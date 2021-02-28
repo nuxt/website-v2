@@ -400,7 +400,7 @@ Ada lebih banyak kait dan kemungkinan untuk modul. Silakan baca [Nuxt Internals]
 
 ## Publishing your module
 
-`module.exports.meta`: Baris ini diperlukan jika Anda menerbitkan modul sebagai paket npm. Nuxt secara internal menggunakan meta untuk bekerja lebih baik dengan paket Anda.
+`module.exports.meta`: Baris ini diperlukan jika Anda menerbitkan modul sebagai paket NPM. Nuxt secara internal menggunakan meta untuk bekerja lebih baik dengan paket Anda.
 
 ```js{}[modules/myModule.js]
 module.exports.meta = require('./package.json')

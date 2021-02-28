@@ -258,7 +258,7 @@ nuxt.hook('close', async nuxt => {
 
 ```js
 nuxt.hook('listen', async (server, {host, port})) => {
-  // Your custom code here
+  // Letakkan kode _custom_ Anda di sini
 })
 ```
 

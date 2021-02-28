@@ -97,7 +97,7 @@ export default {
     // Using package name
     '@nuxtjs/axios',
 
-    // Relative to your project srcDir
+    // Relatif terhadap struktur `srcDir` proyek Anda
     '~/modules/awesome.js',
 
     // Providing options

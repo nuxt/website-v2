@@ -333,7 +333,7 @@ export default function nuxtBootstrapVue(moduleOptions) {
   this.addPlugin({
     src: path.resolve(__dirname, 'plugin.js'),
     options: {
-      // Nuxt will replace `options.ua` with `123` when copying plugin to project
+      // Nuxt akan mengganti `options.ua` dengan `123` ketika menggandakan plugin untuk proyek yang kita buat
       ua: 123,
 
       // bagian kode yang menggunakan mode pengembangan akan dihilangkan dari kode plugin pada hasil produksi

@@ -133,7 +133,7 @@ Modul adalah fungsi. Mereka dapat dikemas sebagai modul NPM atau langsung disert
 export default {
   exampleMsg: 'hello',
   modules: [
-    // Simple usage
+    // Contoh penggunaan
     '~/modules/example',
     // Passing options directly
     ['~/modules/example', { token: '123' }]

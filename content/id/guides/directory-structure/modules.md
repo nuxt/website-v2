@@ -287,7 +287,7 @@ export default function myModule() {
   })
 
   this.nuxt.hook('generate:before', async generator => {
-    // This will be called before Nuxt generates your pages
+    // Kode di sini akan dipanggil sebelum Nuxt _generate_ halaman-halaman Anda
   })
 }
 ```

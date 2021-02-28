@@ -294,7 +294,7 @@ export default function myModule() {
 
 ### Provide plugins
 
-Biasanya modul menyediakan satu atau lebih plugin saat ditambahkan. Misalnya modul [bootstrap-vue](https://bootstrap-vue.js.org/) akan perlu mendaftar sendiri ke Vue. Dalam situasi seperti itu kita bisa menggunakan helper `this.addPlugin`.
+Biasanya modul menyediakan satu atau lebih plugin saat ditambahkan. Misalnya modul [bootstrap-vue](https://bootstrap-vue.js.org/) akan mendaftarkan sendiri ke Vue. Dalam situasi seperti itu kita bisa menggunakan fungsi bantuan `this.addPlugin`.
 
 ```js{}[plugin.js]
 import Vue from 'vue'

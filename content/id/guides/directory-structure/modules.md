@@ -250,7 +250,7 @@ nuxt.hook('error', async error => {
 
 ```js
 nuxt.hook('close', async nuxt => {
-  // Your custom code here
+  // Letakkan kode _custom_ Anda di sini
 })
 ```
 

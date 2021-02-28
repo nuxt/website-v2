@@ -356,7 +356,7 @@ export default function (moduleOptions) {
         use: [...]
       })
 
-      // Customize existing loaders
+      // Meng-_custom_ _loader_ yang sebelumnya tersedia
       // Mengacu pada kode sumber internal Nuxt berikut:
       // https://github.com/nuxt/nuxt.js/blob/dev/packages/webpack/src/config/base.js
       const barLoader = config.module.rules.find(rule => rule.loader === 'bar-loader')

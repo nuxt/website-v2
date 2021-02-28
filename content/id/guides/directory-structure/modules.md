@@ -242,7 +242,7 @@ nuxt.hook('ready', async nuxt => {
 
 ```js
 nuxt.hook('error', async error => {
-  // Your custom code here
+  // Letakkan kode _custom_ Anda di sini
 })
 ```
 

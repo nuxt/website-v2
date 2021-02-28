@@ -321,7 +321,7 @@ Templat dan plugin terdaftar dapat memanfaatkan [templat lodash](https://lodash.
 ga('create', '<%= options.ua %>', 'auto')
 
 <% if (options.debug) { %>
-// Dev only code
+// Kode yang dijalankan ketika proses pengembangan
 <% } %>
 ```
 

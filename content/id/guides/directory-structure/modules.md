@@ -366,7 +366,7 @@ export default function (moduleOptions) {
 
 ## Async Modules
 
-Tidak semua modul akan melakukan semuanya secara sinkron. Misalnya, Anda mungkin ingin mengembangkan modul yang perlu mengambil beberapa API atau melakukan Operasi asinkron. Untuk ini, Nuxt.js mendukung modul async yang dapat mengembalikan Promise atau memanggil callback.
+Tidak semua modul akan melakukan semuanya secara sinkronus. Misalnya, Anda mungkin ingin mengembangkan modul yang perlu mengambil beberapa API atau melakukan operasi asinkronus. Dalam kasus ini, Nuxt.js mendukung modul asinkronus yang dapat mengembalikan Promise atau memanggil callback.
 
 ### Use async/await
 

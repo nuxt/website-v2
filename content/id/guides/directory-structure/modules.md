@@ -230,7 +230,7 @@ export default function (moduleOptions) {
 
 `this.nuxt`: Ini adalah referensi ke instance Nuxt.js saat ini. Kita dapat mendaftarkan pengait pada peristiwa siklus hidup tertentu.
 
-- **Ready** : Nuxt siap untuk bekerja (ModuleContainer dan Renderer ready).
+- **Ready** : Nuxt siap untuk bekerja (ModuleContainer dan Renderer siap).
 
 ```js
 nuxt.hook('ready', async nuxt => {

@@ -408,7 +408,7 @@ module.exports.meta = require('./package.json')
 
 ## buildModules
 
-Beberapa modul hanya diimpor selama pengembangan dan waktu pembuatan. Penggunaan `buildModules` membantu mempercepat proses produksi dan juga secara signifikan mengurangi ukuran `node_modules` Anda untuk penerapan produksi. Silakan merujuk ke dokumen untuk setiap modul guna mengetahui apakah direkomendasikan untuk menggunakan `modules` atau `buildModules`.
+Beberapa modul hanya diimpor selama pengembangan dan waktu pembuatan. Penggunaan `buildModules` membantu mempercepat proses produksi dan juga secara signifikan mengurangi ukuran `node_modules` Anda untuk penerapan produksi. Silakan merujuk ke dokumentasi berikut untuk setiap modul guna mengetahui apakah direkomendasikan untuk menggunakan `modules` atau `buildModules`.
 
 Perbedaan penggunaannya adalah:
 

@@ -1,6 +1,6 @@
 ---
-title: 'The ignore Property'
-description: Define the ignore files for your Nuxt.js application
+title: 'Properti ignore'
+description: Definisikan berkas ignore untuk aplikasi Nuxt.js Anda
 menu: ignore
 category: configuration-glossary
 position: 14
@@ -8,52 +8,52 @@ position: 14
 
 ## .nuxtignore
 
-You can use a `.nuxtignore` file to let Nuxt.js ignore `layout`, `page`, `store` and `middleware` files in your project’s root directory (`rootDir`) during the build phase. The `.nuxtignore` file is subject to the same specification as `.gitignore` and `.eslintignore` files, in which each line is a glob pattern indicating which files should be ignored.
+Anda dapat menggunakan berkas `.nuxtignore` untuk memerintahkan Nuxt.js untuk mengabaikan berkas `layout`, `page`, `store` dan `middleware` yang ada di direktori akar (`rootDir`) proyek Anda selama fase _build_. Spesifikasi berkas `.nuxtignore` ini mirip seperti berkas `.gitignore` dan `.eslintignore`, yang tiap barisnya adalah pola glob yang mengindikasikan berkas mana yang harus diabaikan.
 
-For example:
+Contoh:
 
 ```
-# ignore layout foo.vue
+# abaikan layout foo.vue
 layouts/foo.vue
-# ignore layout files whose name ends with -ignore.vue
+# abaikan berkas layout yang namanya berakhiran -ignore.vue
 layouts/*-ignore.vue
 
-# ignore page bar.vue
+# abaikan page bar.vue
 pages/bar.vue
-# ignore page inside ignore folder
+# abaikan semua page di dalam direktori ignore
 pages/ignore/*.vue
 
-# ignore store baz.js
+# abaikan store baz.js
 store/baz.js
-# ignore store files match *.test.*
+# abaikan berkas store yang memiliki pola *.test.*
 store/ignore/*.test.*
 
-# ignore middleware files under foo folder except foo/bar.js
+# abaikan semua berkas middleware di dalam direktori foo kecuali foo/bar.js
 middleware/foo/*.js
 !middleware/foo/bar.js
 ```
 
-> More details about the spec are in [gitignore doc](https://git-scm.com/docs/gitignore)
+> Detail lebih lanjut terkait spesifikasi berkas .gitignore dapat dilihat [di sini](https://git-scm.com/docs/gitignore)
 
-## The ignorePrefix Property
+## Properti ignorePrefix
 
-- Type: `String`
-- Default: `'-'`
+- Tipe: `String`
+- Nilai bawaan: `'-'`
 
-> Any file in pages/, layouts/, middleware/ or store/ will be ignored during building if its filename starts with the prefix specified by `ignorePrefix`.
+> Berkas apapun di dalam direktori pages/, layouts/, middleware/, ataupun store/ akan diabaikan selama proses build jika nama berkasnya berawalan dengan awalan yang ditentukan oleh `ignorePrefix`.
 
-By default all files which start with `-` will be ignored, such as `store/-foo.js` and `pages/-bar.vue`. This allows for co-locating tests, utilities, and components with their callers without themselves being converted into routes, stores, etc.
+Bawaannya, semua berkas yang berawalan dengan `-` akan diabaikan, misal seperti `store/-foo.js` dan `pages/-bar.vue`. Hal ini memungkinkan kita untuk mengumpulkan tes, utilitas, dan komponen dengan pemanggilnya tanpa mengubah ketiga hal tersebut menjadi _routes_, _stores_, dll.
 
-## The ignore Property
+## Properti ignore
 
-- Type: `Array`
-- Default: `['**/*.test.*']`
+- Tipe: `Array`
+- Nilai bawaan: `['**/*.test.*']`
 
-> More customizable than `ignorePrefix`: all files matching glob patterns specified inside `ignore` will be ignored in building.
+> Lebih mudah dikustomisasi daripada `ignorePrefix`: semua berkas yang sesuai dengan pola glob yang ditentukan di properti `ignore` akan diabaikan saat proses build.
 
 ## ignoreOptions
 
-`nuxtignore` is using `node-ignore` under the hood, `ignoreOptions` can be configured as `options` of `node-ignore`.
+Pada dasarnya, `nuxtignore` menggunakan `node-ignore`, sehingga `ignoreOptions` dapat dikonfigurasikan sebagai `options` dari `node-ignore`.
 
 ```js{}[nuxt.config.js]
 export default {

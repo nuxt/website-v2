@@ -67,24 +67,24 @@ questions:
     correctAnswer: nuxt.config.js
 ---
 
-Nuxt.js uses the [transition component](http://vuejs.org/v2/guide/transitions.html#Transitioning-Single-Elements-Components) to let you create amazing transitions/animations between your routes.
+Nuxt.js использует [transition компонент](http://vuejs.org/v2/guide/transitions.html#Transitioning-Single-Elements-Components) что позволяет создавать удивительные переходы/анимации между вашими страницами.
 
-To define a custom transition for a specific route add the `transition` key to the page component.
+Чтобы создать какой либо эффект перехода между страницами, нужно добавить свойство `transition` в ваш компонент.
 
 ```js{}[pages/index.vue]
 export default {
-  // Can be a String
+  // Значение может быть строкой
   transition: ''
-  // Or an Object
+  // или объектом
   transition: {}
-  // or a Function
+  // или функцией
   transition (to, from) {}
 }
 ```
 
-## String
+## Строка
 
-If the `transition` key is set as a string, it will be used as the `transition.name`.
+Если значение свойства `transition` является строкой, то необходимо использовать `transition.name`.
 
 ```js{}[pages/index.vue]
 export default {
@@ -92,7 +92,7 @@ export default {
 }
 ```
 
-Nuxt.js will use these settings to set the component as follows:
+Nuxt.js будет использовать эти настройки, для того чтобы компонент выглядел следующим образом:
 
 ```html{}[pages/index.vue]
 <transition name="home"></transition>
@@ -100,11 +100,11 @@ Nuxt.js will use these settings to set the component as follows:
 
 <base-alert>
 
-This is automatically done for you and you do not need to add the `<transition>` component to your pages or layouts.
+Для вашего удобства это генерируется автоматически, поэтому нет необходимости добавлять компонент `<transition>` в вашу разметку или страницу.
 
 </base-alert>
 
-Now all you have to do is create the new class for your transitions.
+Все что вам нужно сделать, это создать новый класс для компонента.
 
 ```html{}[pages/index.vue]
 <style>
@@ -119,9 +119,9 @@ Now all you have to do is create the new class for your transitions.
 </style>
 ```
 
-## Object
+## Объект
 
-If the `transition` key is set as an object:
+Ксли значение свойства `transition` установлено как объект:
 
 ```js{}[pages/index.vue]
 export default {
@@ -132,15 +132,15 @@ export default {
 }
 ```
 
-Nuxt.js will use these settings to set the component as follows:
+Nuxt.js будет использовать эти настройки, для того чтобы компонент выглядел следующим образом: 
 
 ```html{}[pages/index.vue]
 <transition name="home" mode="out-in"></transition>
 ```
 
-The `transition` object can have many properties such as name, mode, css, duration and many more. Please see the vue docs for more info.
+В объекте `transition` могут быть определены такие свойства как name, mode, css, duration и многие другие. Для большей информации пожалуйста воспользуйтесь документацией Vue.
 
-You can also define methods in the page `transition` property, for more information on the [JavaScript hooks](https://vuejs.org/v2/guide/transitions.html#JavaScript-Hooks) see the vue docs.
+Вы также можете уставновить методы в объекте `transition` на странице. Для получения большей информации посмотрите [JavaScript хуки](https://vuejs.org/v2/guide/transitions.html#JavaScript-Hooks) в документации Vue.
 
 ```js
 export default {
@@ -152,11 +152,11 @@ export default {
 }
 ```
 
-### Transition Mode
+### Режим переходов
 
 <base-alert>
 
-The default transition mode for pages differs from the default mode in Vue.js. The `transition` mode is by default set to `out-in`. If you want to run leaving and entering transitions simultaneously, you have to set the mode to the empty string `mode: ''`.
+Режим перехода по умолчанию для страниц отличается от режима перехода по умолчанию в Vue.js. По-умолчанию, режимом для `transition` является `out-in`. Если вы хотите запустить одновременно переходы при входе на страницу и после ее закрытия, вам нужно определить режим перехода как пустая строка `mode: ''`.
 
 </base-alert>
 
@@ -169,9 +169,9 @@ export default {
 }
 ```
 
-## Function
+## Функция
 
-If the `transition` key is set as a function:
+Если значение свойства `transition` установлено как функция:
 
 ```js{}[pages/index.vue]
 export default {
@@ -184,15 +184,15 @@ export default {
 }
 ```
 
-Transitions applied on navigation:
+Переходы, применяемые в навигации:
 
 `/` to `/posts` => `slide-left`,`/posts` to `/posts?page=3` => `slide-left`,`/posts?page=3` to `/posts?page=2` => `slide-right`.
 
 ## Global Settings
 
-The Nuxt.js default transition name is `"page"`. To add a fade transition to every page of your application, all you need is a CSS file that is shared across all your routes.
+По умолчанию, название перехода в Nuxt.js это `"page"`. Чтобы добавить переход fade на каждую страницу в вашем приложении, вам нужно внести изменения в CSS файл, который будет доступен на всех страницах.
 
-Our global css in `assets/main.css`:
+Глобальный файл css в `assets/main.css`:
 
 ```css{}[assets/main.css]
 .page-enter-active,
@@ -205,7 +205,7 @@ Our global css in `assets/main.css`:
 }
 ```
 
-Then we add its path to the `css` array in our `nuxt.config.js` file:
+Затем нам нужно добавить путь до файла в массиве `css` в нашем конфигурационном файле `nuxt.config.js`:
 
 ```js{}[nuxt.config.js]
 export default {

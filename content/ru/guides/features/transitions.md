@@ -1,17 +1,17 @@
 ---
 title: Transitions
-description: Nuxt.js uses the `<transition>` component to let you create amazing transitions/animations between your routes.
+description: Nuxt.js использует `<transition>` компонент что позволяет создавать классные переходы/анимации между вашими страницами.
 position: 10
 category: features
 csb_link: https://codesandbox.io/embed/github/nuxt-academy/guides-examples/tree/master/03_features/05_transitions?fontsize=14&hidenavigation=1&theme=dark
 questions:
-  - question: To define a custom transition for a specific route what key do you add to your page?
+  - question: Какое свойтсво нужно добавить на странице чтобы создать эффект перехода между страницами?
     answers:
       - pageTransition
       - transition
       - layoutTransition
     correctAnswer: transition
-  - question: What is the default transition mode in Nuxt.js?
+  - question: Какой режим по умолчанию используется в Nuxt.js?
     answers:
       - in-out
       - out-in
@@ -67,7 +67,7 @@ questions:
     correctAnswer: nuxt.config.js
 ---
 
-Nuxt.js использует [transition компонент](http://vuejs.org/v2/guide/transitions.html#Transitioning-Single-Elements-Components) что позволяет создавать удивительные переходы/анимации между вашими страницами.
+Nuxt.js использует [transition компонент](http://vuejs.org/v2/guide/transitions.html#Transitioning-Single-Elements-Components) что позволяет создавать классные переходы/анимации между вашими страницами.
 
 Чтобы создать какой либо эффект перехода между страницами, нужно добавить свойство `transition` в ваш компонент.
 
@@ -188,7 +188,7 @@ export default {
 
 `/` to `/posts` => `slide-left`,`/posts` to `/posts?page=3` => `slide-left`,`/posts?page=3` to `/posts?page=2` => `slide-right`.
 
-## Global Settings
+## Глобальные настройки
 
 По умолчанию, название перехода в Nuxt.js это `"page"`. Чтобы добавить переход fade на каждую страницу в вашем приложении, вам нужно внести изменения в CSS файл, который будет доступен на всех страницах.
 
@@ -213,13 +213,13 @@ export default {
 }
 ```
 
-## Configuration Settings
+## Настройки конфигурации
 
-### The layoutTransition Property
+### Свойство layoutTransition
 
-The layout transition is used to set the default properties of the layout transitions.
+The layout transition is used to set the default properties of the layout transitions.(непонял о чем тут)
 
-The default settings for layout transitions are:
+Настройки по умолчанию для переходов между макетами:
 
 ```js
 {
@@ -239,7 +239,7 @@ The default settings for layout transitions are:
 }
 ```
 
-If you want to change the default settings for your layout transitions you can do so in the nuxt.config.js file.
+Если вы хотите изменить настройки по умолчанию для переходом между layout, то вы можете сделать это в файле nuxt.config.js.
 
 ```js{}[nuxt.config.js]
 export default {
@@ -263,9 +263,9 @@ export default {
 }
 ```
 
-### The pageTransition Property
+### Свойство pageTransition
 
-The default settings for page transitions are:
+Настройки по умолчанию для переходов между страницами:
 
 ```js
 {
@@ -274,7 +274,7 @@ The default settings for page transitions are:
 }
 ```
 
-Should you wish to modify the default settings you can do so in the nuxt.config.js
+Если вы хотите изменить настройки по умолчанию, вы можете это сделать в файле nuxt.config.js
 
 ```js{}[nuxt.config.js]
 export default {
@@ -290,7 +290,7 @@ export default {
 }
 ```
 
-If you do modify the page Transition name you will also have to rename the css class.
+Если вы хотите изменить название для pageTransition, вы можете это сделать изменив название css класса.
 
 ```css{}[assets/main.css]
 .my-page-enter-active,

@@ -194,7 +194,7 @@ Vue’s `activated` hook is used here with Nuxt's `keep-alive` prop to re-fetch 
 export default {
   activated() {
     // Call fetch again if last fetch more than a minute ago
-    if (this.$fetchState.timestamp <= Date.now() - 60000) {
+    if (this.$fetchState.timestamp <= Date.now() - 60000 || this.$fetchState.error) {
       this.$fetch()
     }
   }

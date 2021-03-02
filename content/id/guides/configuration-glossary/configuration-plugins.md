@@ -1,32 +1,32 @@
 ---
-title: 'API: The plugins Property'
-description: 'Use vue.js plugins with the plugins option of Nuxt.js.'
+title: 'API: Properti plugins'
+description: 'Gunakan plugin Vue.js melalui properti plugins milik Nuxt.js'
 menu: plugins
 category: configuration-glossary
 position: 21
 ---
 
-**Note**: Since Nuxt.js 2.4, `mode` has been introduced as option of `plugins` to specify plugin type, possible value are: `client` or `server`. `ssr: false` will be adapted to `mode: 'client'` and deprecated in next major release.
+**Note**: Sejak Nuxt.js 2.4, kita dapat menggunakan sub-properti `mode` dari properti `plugins` untuk menentukan tipe plugin yang kita gunakan, nilai yang dapat digunakan adalah: `client` atau `server`. Mode `ssr: false` juga akan diadaptasikan menjadi `mode: 'client'` dan akan menjadi _deprecated_ di rilis mayor selanjutnya.
 
-- Type: `Array`
-  - Items: `String` or `Object`
+- Tipe: `Array`
+  - Butir: `String` atau `Object`
 
-If the item is an object, the properties are:
+Jika butirnya berupa objek, propertinya adalah:
 
-- src: `String` (path of the file)
-- mode: `String` (can be `client` or `server`) _If defined, the file will be included only on the respective (client or server) side._
+- src: `String` (_path_ dari berkas)
+- mode: `String` (bisa bernilai `client` atau `server`) _Jika terdefinisi, berkas akan diikutkan hanya pada sisi yang tertulis (klien atau server)._
 
-**Note**: Old version
+**Note**: Versi lama
 
-- Type: `Array`
-  - Items: `String` or `Object`
+- Tipe: `Array`
+  - Butir: `String` or `Object`
 
-If the item is an object, the properties are:
+Jika butir berupa objek, propertinya adalah:
 
-- src: `String` (path of the file)
-- ssr: `Boolean` (default to `true`) _If false, the file will be included only on the client-side._
+- src: `String` (_path_ dari berkas)
+- ssr: `Boolean` (nilai bawannya adalah `true`) _Jika bernilai false, berkas hanya akan diikutkan di sisi klien._
 
-> The plugins property lets you add Vue.js plugins easily to your main application.
+> Properti plugins memudahkan Anda untuk menggunakan plugin Vue.js di aplikasi Nuxt.js Anda.
 
 ```js{}[nuxt.config.js]
 export default {
@@ -47,11 +47,11 @@ export default {
 ```js{}[plugins/ant-design-vue.js]
 import Vue from 'vue'
 import Antd from 'ant-design-vue'
-import 'ant-design-vue/dist/antd.css' // Per Ant Design's docs
+import 'ant-design-vue/dist/antd.css' // Berdasarkan dokumentasi Ant Design
 
 Vue.use(Antd)
 ```
 
-Note that the css was [imported as per Ant Design Documentation](https://vue.ant.design/docs/vue/getting-started/#3.-Use-antd's-Components 'External tip relevant to building plugins')
+Perlu dicatat bahwa berkas CSS di atas [diimpor berdasarkan panduan di dokumentasi Ant Design](https://vue.ant.design/docs/vue/getting-started/#3.-Use-antd's-Components)
 
-All the paths defined in the `plugins` property will be **imported** before initializing the main application.
+Semua _path_ yang ditentukan di properti `plugins` akan **diimpor** sebelum aplikasi utama diinisialisasi.

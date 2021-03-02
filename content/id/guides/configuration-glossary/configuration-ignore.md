@@ -1,6 +1,6 @@
 ---
 title: 'Properti ignore'
-description: Definisikan berkas ignore untuk aplikasi Nuxt.js Anda
+description: Tentukan berkas ignore untuk aplikasi Nuxt.js Anda
 menu: ignore
 category: configuration-glossary
 position: 14
@@ -8,7 +8,7 @@ position: 14
 
 ## .nuxtignore
 
-Anda dapat menggunakan berkas `.nuxtignore` untuk memerintahkan Nuxt.js untuk mengabaikan berkas `layout`, `page`, `store` dan `middleware` yang ada di direktori akar (`rootDir`) proyek Anda selama fase _build_. Spesifikasi berkas `.nuxtignore` ini mirip seperti berkas `.gitignore` dan `.eslintignore`, yang tiap barisnya adalah pola glob yang mengindikasikan berkas mana yang harus diabaikan.
+Anda dapat menggunakan berkas `.nuxtignore` untuk memerintahkan Nuxt.js untuk mengabaikan berkas `layout`, `page`, `store` dan `middleware` yang ada di direktori akar (`rootDir`) proyek Anda selama fase _build_. Spesifikasi berkas `.nuxtignore` ini mirip seperti berkas `.gitignore` dan `.eslintignore`, yang tiap barisnya merupakan pola glob yang mengindikasikan berkas mana yang harus diabaikan.
 
 Contoh:
 
@@ -40,9 +40,9 @@ middleware/foo/*.js
 - Tipe: `String`
 - Nilai bawaan: `'-'`
 
-> Berkas apapun di dalam direktori pages/, layouts/, middleware/, ataupun store/ akan diabaikan selama proses build jika nama berkasnya berawalan dengan awalan yang ditentukan oleh `ignorePrefix`.
+> Berkas apapun di dalam direktori pages/, layouts/, middleware/, ataupun store/ akan diabaikan selama proses build jika nama berkasnya berawalan sama dengan nilai `ignorePrefix`.
 
-Bawaannya, semua berkas yang berawalan dengan `-` akan diabaikan, misal seperti `store/-foo.js` dan `pages/-bar.vue`. Hal ini memungkinkan kita untuk mengumpulkan tes, utilitas, dan komponen dengan pemanggilnya tanpa mengubah ketiga hal tersebut menjadi _routes_, _stores_, dll.
+Bawaannya, semua berkas yang berawalan dengan `-` akan diabaikan, seperti `store/-foo.js` dan `pages/-bar.vue`. Hal ini memungkinkan kita untuk mengumpulkan tes, utilitas, dan komponen dengan pemanggilnya tanpa mengubah ketiga hal tersebut menjadi _routes_, _stores_, dll.
 
 ## Properti ignore
 

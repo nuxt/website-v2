@@ -1,6 +1,6 @@
 ---
-title: assets
-description: The `assets` directory contains your un-compiled assets such as Stylus or Sass files, images, or fonts.
+title: アセット
+description: assets ディレクトリには、Stylus や Sass ファイル、画像、フォントなどコンパイルされていないアセットが含まれます。
 position: 2
 category: directory-structure
 csb_link: https://codesandbox.io/embed/github/nuxt-academy/guides-examples/tree/master/04_directory_structure/02_assets?fontsize=14&hidenavigation=1&theme=dark
@@ -57,11 +57,11 @@ questions:
     correctAnswer: '@@'
 ---
 
-The `assets` directory contains your un-compiled assets such as Stylus or Sass files, images, or fonts.
+`assets` ディレクトリには、Stylus や Sass ファイル、画像、フォントなどコンパイルされていないアセットが含まれます。
 
-## Images
+## 画像ファイル
 
-Inside your `vue` templates, if you need to link to your `assets` directory use `~/assets/your_image.png` with a slash before assets.
+`vue` テンプレートの中で `assets` ディレクトリにリンクする必要がある場合は、`assets` の前にスラッシュを付け `~/assets/your_image.png` と記述します。
 
 ```html
 <template>
@@ -69,13 +69,13 @@ Inside your `vue` templates, if you need to link to your `assets` directory 
 </template>
 ```
 
-Inside your `css` files, if you need to reference your  `assets`  directory, use `~assets/your_image.png`(without a slash)
+`css` ファイルの中で `assets` ディレクトリにリンクする必要がある場合は、スラッシュなしで `~assets/your_image.png` と記述します。
 
 ```css
 background: url('~assets/banner.svg');
 ```
 
-When working with dynamic images you will need to use require
+動的イメージを使う場合は、`require` を使う必要があります。
 
 ```html
 <img :src="require(`~/assets/img/${image}.jpg`)" />
@@ -83,13 +83,13 @@ When working with dynamic images you will need to use require
 
 <base-alert type="next">
 
-Learn more about [webpack Assets](/docs/2.x/directory-structure/assets#webpack-assets)
+[webpack Assets](/docs/2.x/directory-structure/assets#webpack-assets) の詳細についてはこちらをご覧ください。
 
 </base-alert>
 
-## Styles
+## スタイル
 
-Nuxt.js lets you define the CSS files/modules/libraries you want to set globally (included in every page). In the nuxt.config you can easily add your styles using the CSS Property.
+Nuxt.js では、グローバル (すべてのページ）に設定したい CSS ファイルやモジュール、ライブラリを定義することができます。nuxt.config 内で CSS プロパティを使って簡単にスタイルを追加することができます。
 
 ```js{}[nuxt.config.js]
 export default {
@@ -106,30 +106,30 @@ export default {
 
 ### Sass
 
-In case you want to use `sass` make sure that you have installed `sass` and `sass-loader` packages.
+`sass` を使用したい場合、`sass` と `sass-loader` プラグインがインストールされているか確認してください。
 
 <code-group>
   <code-block label="Yarn" active>
 
 ```bash
-yarn add -D sass sass-loader fibers
+yarn add -D sass sass-loader@10 fibers
 ```
 
   </code-block>
-  <code-block label="NPM">
+  <code-block label="npm">
 
 ```bash
-npm install --save-dev sass sass-loader fibers
+npm install --save-dev sass sass-loader@10 fibers
 ```
 
   </code-block>
 </code-group>
 
-Nuxt.js will automatically guess the file type by its extension and use the appropriate pre-processor loader for webpack. You will still need to install the required loader if you need to use them.
+Nuxt.js は拡張子からファイルの種類を自動的に推測して webpack に適したプリプロセッサローダーを使用します。それでも必要な場合は、必要なローダーをインストールする必要があります。
 
-## Fonts
+## フォント
 
-You can use local fonts by adding them to your assets folder. Once they have been added you can then access them though your css using the @font-face.
+ローカルフォントをアセットフォルダに追加することで使用できるようになります。追加したら @font-face を使用して css からアクセスすることができます。
 
 ```
 -| assets
@@ -158,19 +158,19 @@ You can use local fonts by adding them to your assets folder. Once they have bee
 
 <base-alert type="next">
 
-To add external fonts such as google fonts check out the [Meta Tags and SEO chapter](/docs/2.x/features/meta-tags-seo#external-resources)
+Google フォントのような外部フォントを追加する場合は [Meta Tags and SEO chapter](/docs/2.x/features/meta-tags-seo#external-resources) を確認してください。
 
 </base-alert>
 
-## Webpack Assets
+## Webpack アセット
 
-By default, Nuxt uses webpack's vue-loader, file-loader and url-loader to serve your assets. You can also use the static directory for assets that should not run through webpack
+デフォルトでは、Nuxt は webpack の vue-loader、file-loader、url-loader を使用してアセットを提供します。また webpack を通して実行されるべきではないアセットのために、静的ディレクトリを使用することもできます。
 
 ## Webpack
 
-[vue-loader](http://vue-loader.vuejs.org/) automatically processes your style and template files with `css-loader` and the Vue template compiler out of the box. In this compilation process, all asset URLs such as `<img src="...">`, `background: url(...)` and CSS `@import` are resolved as module dependencies.
+[vue-loader](http://vue-loader.vuejs.org/)  は、`css-loader` と Vue テンプレートコンパイラを用いて、スタイルやテンプレートファイルを自動的に処理します。このコンパイル処理の中で、`<img src="...">` や  `background: url(...)` や CSS `@import` などのすべてのアセット URL はモジュールの依存関係として解決されます。
 
-For example, we have this file tree:
+例えば、次のようなファイル構成があるとします。:
 
 ```
 -| assets/
@@ -179,15 +179,15 @@ For example, we have this file tree:
 ----| index.vue
 ```
 
-If you use `url('~assets/image.png')` in your CSS, it will be translated  into  `require('~/assets/image.png')`.
+CSS で `url('~assets/image.png')` と記述した場合、それは `require('~/assets/image.png')` に変換されます。
 
 <base-alert>
 
-The `~/` alias won't be resolved correctly in your CSS files. You must use `~assets` (**without a slash**) in `url` CSS references, i.e. `background: url("~assets/banner.svg")`
+`~/` エイリアスは CSS ファイルで正しく解決されないでしょう。CSS の `url` の参照には、`~assets` (スラッシュなし）を使わなければなりません。例: `background: url("~assets/banner.svg")`
 
 </base-alert>
 
-If you reference that image in your `pages/index.vue`:
+`pages/index.vue` で画像を参照する場合:
 
 ```html{}[pages/index.vue]
 <template>
@@ -195,21 +195,21 @@ If you reference that image in your `pages/index.vue`:
 </template>
 ```
 
-It will be compiled into:
+次のようにコンパイルされます:
 
 ```js
 createElement('img', { attrs: { src: require('~/assets/image.png') } })
 ```
 
-Because `.png` is not a JavaScript file, Nuxt.js configures webpack to use [file-loader](https://github.com/webpack/file-loader) and [url-loader](https://github.com/webpack/url-loader) to handle them for you.
+`.png` は JavaScript ファイルではないため、Nuxt.js は file-loader と url-loader を使ってそれらを処理できるよう webpack を設定します。
 
-The benefits of these loaders are:
+これらのローダーを利用する利点:
 
-`file-loader` lets you designate where to copy and place the asset file, and how to name it using version hashes for better caching. In production, you will benefit from long-term caching by default!
+`file-loader` は、アセットファイルをコピー・配置する場所と、キャッシュ改善のためにバージョンハッシュを用いてファイル名を指定することができます。
 
-`url-loader` allows you to conditionally inline a file as base-64 data URL if they are smaller than a given threshold. This can reduce the number of HTTP requests for trivial files. If the file is larger than the threshold, it automatically falls back to file-loader.
+`url-loader` は、指定した閾値よりも小さい場合に、Base64 データ URL として条件付きでファイルに埋め込むことができます。これにより、小さなファイル取得のための HTTP リクエスト数を減らすことができます。もし閾値よりも大きい場合は、file-loader に自動的にフォールバックします。
 
-For these two loaders, the default configuration is:
+これら 2 つのローダーのデフォルトの設定は次の通りです。:
 
 ```js
 // https://github.com/nuxt/nuxt.js/blob/dev/packages/webpack/src/config/base.js#L297-L316
@@ -233,9 +233,9 @@ For these two loaders, the default configuration is:
 ]
 ```
 
-Which means that every file below 1 KB will be inlined as base-64 data URL. Otherwise, the image/font will be copied in its corresponding folder (inside the `.nuxt` directory) with a name containing a version hash for better caching.
+つまり、1 KB 未満のすべてのファイルは Base64 データ URL としてインライン化されます。 それ以外の場合、画像やフォントは、対応するフォルダ（`.nuxt` ディレクトリの下）にコピーされ、より良いキャッシュのためにバージョンハッシュを含む名前が付けられます。
 
-When launching your application with `nuxt`, your template in `pages/index.vue`:
+`nuxt` コマンドでアプリケーションを起動するときの `pages/index.vue` のテンプレートは以下の通りです。:
 
 ```html{}[pages/index.vue]
 <template>
@@ -243,19 +243,19 @@ When launching your application with `nuxt`, your template in `pages/index.vue
 </template>
 ```
 
-Will be transformed into:
+次のように生成されます。
 
 ```html
 <img src="/_nuxt/img/your_image.0c61159.png" />
 ```
 
-If you want to change the loader configurations, please use [build.extend](/docs/2.x/configuration-glossary/configuration-build#extend).
+ローダの設定を変更したい場合は [build.extend](/docs/2.x/configuration-glossary/configuration-build#extend) を使用してください。
 
-## Aliases
+## エイリアス
 
-By default the source directory (srcDir) and the root directory (rootDir) are the same. You can use the alias of `~` for the source directory. Instead of writing relative paths like `../assets/your_image.png` you can use `~/assets/your_image.png`.
+デフォルトでは、ソースディレクトリ (srcDir) とルートディレクトリ (rootDir) は同じディレクトリを意味します。ソースディレクトリには `~` のエイリアスを使うことができます。`../assets/your_image.png` のような相対パスを記述する代わりに、`~/assets/your_image.png` と記述することができます。
 
-Both will achieve the same results.
+どちらも同じ結果になります。
 
 ```html{}[components/Avatar.vue]
 <template>
@@ -266,14 +266,8 @@ Both will achieve the same results.
 </template>
 ```
 
-We recommend using the `~` as an alias. `@` is still supported but will not work in all cases such as with background images in your css.
+エイリアスとして `~` を使うことをお勧めします。`@` はまだサポートされていますが、CSS の background image などすべてのケースで機能するわけではありません。
 
-You can use the alias of `~~` or `@@` for the root directory.
-
-<base-alert type="info">
-
-Tip: On Spanish keyboard you can access `~` with (`Option` + `ñ`) on Mac OS
-
-</base-alert>
+ルートディレクトリには、エイリアスの `~~` や `@@` を使用することができます。
 
 <quiz :questions="questions"></quiz>

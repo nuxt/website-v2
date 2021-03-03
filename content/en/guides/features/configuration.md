@@ -111,7 +111,7 @@ export default {
 
 <base-alert>
 
-If you have two files with the same name eg. `main.scss` and `main.css`, and don't specify an extension in the css array entry, eg. `css: ['~/assets/css/main']`, then only one file will be loaded depending on the order of `styleExtensions`. In this case only the `css` file will be loaded and the `scss` file will be ignored because `css` comes first in the default `styleExtension` array.
+If you have two files with the same name, e.g. `main.scss` and `main.css`, and don't specify an extension in the css array entry, e.g. `css: ['~/assets/css/main']`, then only one file will be loaded depending on the order of `styleExtensions`. In this case only the `css` file will be loaded and the `scss` file will be ignored because `css` comes first in the default `styleExtension` array.
 
 </base-alert>
 
@@ -140,19 +140,112 @@ To use these pre-processors, we need to install their webpack loaders:
 
 ```bash
 yarn add -D pug pug-plain-loader
-yarn add -D sass sass-loader fibers
+yarn add -D sass sass-loader@10 fibers
 ```
 
   </code-block>
-  <code-block label="NPM">
+  <code-block label="npm">
 
 ```bash
 npm install --save-dev pug pug-plain-loader
-npm install --save-dev sass sass-loader fibers
+npm install --save-dev sass sass-loader@10 fibers
 ```
 
   </code-block>
 </code-group>
+
+<base-alert type="info">Synchronous compilation with `sass` (2x speed increase) [is enabled automatically](https://github.com/webpack-contrib/sass-loader) when `fibers` is installed.</base-alert>
+
+## External Resources
+
+### Global Settings
+
+You can include your external resources in the head object or function. As described in the [head API docs](https://nuxtjs.org/api/pages-head/), the following examples shows the use of `head` as an object and as a function. If you want to use values from your Vue component like computed properties or data, you can use the `head()` function, returning the final head object. You can also pass each resource an optional `body: true` to include the resource before the closing `</body>` tag.
+
+Include your resources in `nuxt.config.js` (here in the head object):
+
+```js
+export default {
+  head: {
+    script: [
+      {
+        src: 'https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js'
+      }
+    ],
+    link: [
+      {
+        rel: 'stylesheet',
+        href: 'https://fonts.googleapis.com/css?family=Roboto&display=swap'
+      }
+    ]
+  }
+}
+```
+
+### Local Settings
+
+Include your resources in your `.vue` file inside the `pages/` directory (here in the head function):
+
+```html
+<template>
+  <h1>About page with jQuery and Roboto font</h1>
+</template>
+
+<script>
+  export default {
+    head() {
+      return {
+        script: [
+          {
+            src:
+              'https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js'
+          }
+        ],
+        link: [
+          {
+            rel: 'stylesheet',
+            href: 'https://fonts.googleapis.com/css?family=Roboto&display=swap'
+          }
+        ]
+      }
+    }
+  }
+</script>
+
+<style scoped>
+  h1 {
+    font-family: Roboto, sans-serif;
+  }
+</style>
+```
+
+## PostCSS plugins
+
+If present, rename or delete the `postcss.config.js` in your project directory. Then, in your `nuxt.config.js` file add the following:
+
+```js
+export default {
+  build: {
+    postcss: {
+      // Add plugin names as key and arguments as value
+      // Install them before as dependencies with npm or yarn
+      plugins: {
+        // Disable a plugin by passing false as value
+        'postcss-url': false,
+        'postcss-nested': {},
+        'postcss-responsive-type': {},
+        'postcss-hexrgba': {}
+      },
+      preset: {
+        // Change the postcss-preset-env settings
+        autoprefixer: {
+          grid: true
+        }
+      }
+    }
+  }
+}
+```
 
 ## JSX
 
@@ -281,30 +374,83 @@ export default {
 }
 ```
 
-### Execute ESLint on every webpack build in dev environment
+### Inspect webpack configuration
 
-In order to be aware of code style errors, you may want to run [ESLint](https://github.com/webpack-contrib/eslint-loader) on every build in the dev environment.
+For complex projects and debugging it's sometimes useful to check what the final webpack configuration will look like. Luckily you can run `nuxt webpack` command from withing your project to output the configuration. Checkout this PR [#7029](https://github.com/nuxt/nuxt.js/pull/7029) for more details.
 
-```js{}[nuxt.config.js]
+### Add webpack plugins
+
+In your `nuxt.config.js` file, under the `build` option, you can pass webpack `plugins`, the same way you would do it in [a `webpack.config.js` file](https://webpack.js.org/configuration/plugins/).
+
+In this example we add the webpack built-in [ProvidePlugin](https://webpack.js.org/plugins/provide-plugin/) for automatically loading JavaScript modules (_lodash_ and _jQuery_) instead of having to `import` or `require` them everywhere.
+
+```js
+import webpack from 'webpack'
+
 export default {
   build: {
-    extend(config, { isDev, isClient }) {
-      if (isDev && isClient) {
-        config.module.rules.push({
-          enforce: 'pre',
-          test: /\.(js|vue)$/,
-          loader: 'eslint-loader',
-          exclude: /(node_modules)/
-        })
-      }
+    plugins: [
+      new webpack.ProvidePlugin({
+        // global modules
+        $: 'jquery',
+        _: 'lodash'
+      })
+    ]
+  }
+}
+```
+
+> Note: You might not need jQuery in a Vue-based app.
+
+With Nuxt, you can also control plugins execution context: if they are meant to be run on the `client` or in the `server` builds (or differentiating `dev` and `prod` builds) within [`build.extend`](/docs/2.x/configuration-glossary/configuration-build#extend), where you can manually pass webpack plugins too.
+
+### Extend Webpack to load audio files
+
+Audio files should be processed by `file-loader`. This loader is already included in the default Webpack configuration, but it is not set up to handle audio files. You need to extend its default configuration in `nuxt.config.js`:
+
+```js
+export default {
+  build: {
+    extend(config, ctx) {
+      config.module.rules.push({
+        test: /\.(ogg|mp3|wav|mpe?g)$/i,
+        loader: 'file-loader',
+        options: {
+          name: '[path][name].[ext]'
+        }
+      })
     }
   }
 }
 ```
 
-### Inspect webpack configuration
+You can now import audio files like this `<audio :src="require('@/assets/water.mp3')" controls></audio>`.
 
-For complex projects and debugging it's sometimes useful to check what the final webpack configuration will look like. Luckily you can run `nuxt webpack` command from withing your project to output the configuration. Checkout this PR [#7029](https://github.com/nuxt/nuxt.js/pull/7029) for more details.
+If you only want to write: `<audio src="@/assets/water.mp3" controls></audio>`, you need to tell `vue-loader` to automatically require your audio files when you reference them with the `src` attribute:
+
+```js
+export default {
+  build: {
+    loaders: {
+      vue: {
+        transformAssetUrls: {
+          audio: 'src'
+        }
+      }
+    },
+
+    extend(config, ctx) {
+      config.module.rules.push({
+        test: /\.(ogg|mp3|wav|mpe?g)$/i,
+        loader: 'file-loader',
+        options: {
+          name: '[path][name].[ext]'
+        }
+      })
+    }
+  }
+}
+```
 
 ## Edit host and port
 

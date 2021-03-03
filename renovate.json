@@ -1,7 +1,7 @@
 {
   "extends": ["@nuxtjs"],
   "baseBranches": ["master"],
-  "ignoreDeps": [],
+  "ignoreDeps": ["sass-loader"],
   "lockFileMaintenance": {
     "enabled": true
   }

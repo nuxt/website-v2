@@ -4,8 +4,8 @@ description: Nuxt.js fournit un système de modules d'ordre supérieur qui perme
 position: 9
 category: directory-structure
 csb_link: https://codesandbox.io/embed/github/nuxt-academy/guides-examples/tree/master/04_directory_structure/10_modules?fontsize=14&hidenavigation=1&theme=dark
-img: /guides/plugins.jpg
-imgAlt: modules-servermiddleware-plugins-in-nuxt-js
+img: /docs/2.x/modules.svg
+imgAlt: modules-in-nuxt-js
 questions:
   - question: Quand les modules sont-ils appellés ?
     answers:
@@ -13,7 +13,7 @@ questions:
       - pendant que Nuxt.js s'exécute
       - au démarrage de Nuxt.js
     correctAnswer: avant que Nuxt.js ne démarre
-  - question: Les modules de Nuxt.js peuvent être intégrés dans des packages NPM
+  - question: Les modules de Nuxt.js peuvent être intégrés dans des packages npm
     answers:
       - true
       - false
@@ -49,11 +49,11 @@ questions:
     correctAnswer: hooks
   - question: Les modules peuvent
     answers:
-      - seulement être utilisés en tant que packages NPM
+      - seulement être utilisés en tant que packages npm
       - peuvent être seulement inclus directement dans le code source de notre projet
       - les deux
     correctAnswer: les deux
-  - question: Quelle ligne est requise si l'on publie notre module en tant que package NPM ?
+  - question: Quelle ligne est requise si l'on publie notre module en tant que package npm ?
     answers:
       - module.exports
       - module.exports.meta
@@ -72,7 +72,7 @@ Lors du développement d'applications complexes avec Nuxt.js, on pourrait finir 
 
 Ces raisons font que Nuxt.js nous fournit un système de modules d'ordre supérieur qui permet de personnaliser son fonctionnement interne. Les modules sont des fonctions qui sont appelées de manière séquentielle lors du démarrage de Nuxt.js. Le framework attend que chaque module ait fini avant de procéder. Ainsi, les modules peuvent personnaliser presque n'importe quel aspect du projet. Grâce au design modulaire de Nuxt.js (basé sur [Tapable](https://github.com/webpack/tapable) de Webpack), les modules peuvent facilement utiliser des hooks pour certains points d'entrée tel que l'initialisation du builder. Les modules peuvent aussi écraser les templates, paramétrer les loaders de Webpack, ajouter des librairies CSS et faire plein d'autres tâches utiles.
 
-Et surtout, les modules de Nuxt.js peuvent être intégrés dans des packages NPM. Cela rend possible leur réutilisation à travers plusieurs projets ainsi que la possibilité de partager avec la communauté, en créant un écosystème d'add-ons de haute qualité.
+Et surtout, les modules de Nuxt.js peuvent être intégrés dans des packages npm. Cela rend possible leur réutilisation à travers plusieurs projets ainsi que la possibilité de partager avec la communauté, en créant un écosystème d'add-ons de haute qualité.
 
 ## La propriété modules
 
@@ -114,7 +114,7 @@ Les modules doivent exporter une fonction pour permettre d'améliorer le build/r
 
 ## Écrire votre propre Module
 
-Les modules sont des fonctions. Ils peuvent être emballés en tant que modules NPM ou directement ajoutés dans le code source du projet.
+Les modules sont des fonctions. Ils peuvent être emballés en tant que modules npm ou directement ajoutés dans le code source du projet.
 
 ```js{}[nuxt.config.js]
 export default {
@@ -138,7 +138,7 @@ export default function ExampleModule(moduleOptions) {
   })
 }
 
-// REQUIS si l'on publie le module en tant que package NPM
+// REQUIS si l'on publie le module en tant que package npm
 module.exports.meta = require('./package.json')
 ```
 
@@ -388,7 +388,7 @@ Il y a beaucoup de hooks et de possibilités pour les modules. Se référer au [
 
 ## Publication de votre module
 
-`module.exports.meta`: Cette ligne est requise si l'on veut publier le module en tant que package NPM. Nuxt.js utilise `meta` en interne afin de fonctionner au mieux avec votre package.
+`module.exports.meta`: Cette ligne est requise si l'on veut publier le module en tant que package npm. Nuxt.js utilise `meta` en interne afin de fonctionner au mieux avec votre package.
 
 ```js{}[modules/myModule.js]
 module.exports.meta = require('./package.json')
@@ -418,7 +418,7 @@ yarn add -D @nuxtjs/eslint-module
 ```
 
   </code-block>
-  <code-block label="NPM">
+  <code-block label="npm">
 
 ```bash
 npm install --save-dev @nuxtjs/eslint-module

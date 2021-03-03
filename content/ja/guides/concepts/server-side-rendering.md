@@ -1,63 +1,63 @@
 ---
-title: Server Side Rendering
-description: Server-side rendering (SSR), is the ability of an application to contribute by displaying the web-page on the server instead of rendering it in the browser.
+title: サーバーサイドレンダリング
+description: サーバーサイドレンダリング（SSR）はウェブページのレンダリングをブラウザの代わりにサーバー上で行う、画面の表示において有用なアプリケーションの機能です。
 position: 3
 category: concepts
 questions:
-  - question: What kinda of server do you need for Server Side Rendering?
+  - question: サーバーサイドレンダリングを行うために必要なサーバーは？
     answers:
-      - PHP server
-      - JavaScript server
-      - Node.js server
-    correctAnswer: Node.js server
-  - question: What do you use to extend and control the server?
+      - PHP サーバー
+      - JavaScript サーバー
+      - Node.js サーバー
+    correctAnswer: Node.js サーバー
+  - question: サーバーを拡張し制御するために使うのは？
     answers:
       - Middleware
       - ServerMiddleware
-      - It is not possible to control the server
+      - サーバーを制御することはできません
     correctAnswer: ServerMiddleware
-  - question: You can host a server side rendered application on a serverless hosting provider
+  - question: サーバーレスホスティングプロバイダー上でサーバーサイドレンダリングされたアプリをホスティングすることは可能です
     answers:
       - true
       - false
     correctAnswer: false
-  - question: Do we have access to  document on the server-side?
+  - question: サーバーサイドのドキュメントにアクセスすることは？
     answers:
-      - yes, it is always available
-      - No, The object belongs to the browser and is not available on the server
-    correctAnswer: No, The object belongs to the browser and is not available on the server
-  - question: When does your page become interactive?
+      - 常に可能です
+      - ブラウザに帰属するオブジェクトにのみ可能でありサーバーサイドのオブジェクトにはできません
+    correctAnswer: ブラウザに帰属するオブジェクトにのみ可能でありサーバーサイドのオブジェクトにはできません
+  - question: ページがインタラクティブになるのは？
     answers:
-      - When the browser receives the rendered HTML from the server
-      - When the Vue.js hydration kicks in
-      - When a browser sends the initial request
-    correctAnswer: When the Vue.js hydration kicks in
-  - question: Navigating between pages using <NuxtLink> is done
+      - サーバーからレンダリングされた HTML を受け取った時
+      - Vue.js のハイドレーションが効き始めた時
+      - ブラウザが最初のリクエストを送った時
+    correctAnswer: Vue.js のハイドレーションが効き始めた時
+  - question: <NuxtLink> を用いたページ遷移が行われるのは？
     answers:
-      - Client side
-      - Server side
-    correctAnswer: Client side
-  - question: What are the correct steps?
+      - クライアントサイド
+      - サーバーサイド
+    correctAnswer: クライアントサイド
+  - question: 正しいステップは？
     answers:
-      - browser → server, server → browser, browser → browser
-      - server → browser, browser → server, server → server
-      - browser → server, server → browser, browser → server
-    correctAnswer: browser → server, server → browser, browser → browser
+      - ブラウザ → サーバー、サーバー → ブラウザ、ブラウザ → ブラウザ
+      - サーバー → ブラウザ、ブラウザ → サーバー、サーバー → サーバー
+      - ブラウザ → サーバー、サーバー → ブラウザ、ブラウザ → サーバー
+    correctAnswer: ブラウザ → サーバー、サーバー → ブラウザ、ブラウザ → ブラウザ
 ---
 
-Server-side rendering (SSR), is the ability of an application to contribute by displaying the web-page on the server instead of rendering it in the browser. Server-side sends a fully rendered page to the client; the client's JavaScript bundle takes over which then allows the Vue.js app to [hydrate](https://ssr.vuejs.org/guide/hydration.html).
+サーバーサイドレンダリング（SSR）はウェブページのレンダリングをブラウザの代わりにサーバー上で行う、画面の表示において有用なアプリケーションの機能です。サーバーサイドは完全にレンダリングされたページをクライアントに送信します。クライアントの JavaScript バンドルが引継ぎ Vue.js のアプリが[ハイドレーション](https://ssr.vuejs.org/ja/guide/hydration.html)できるようにします。
 
-## Node.js server required
+## Node.js サーバー環境が必須
 
-A JavaScript environment is required to render your web page.
+ウェブページをレンダリングするためには JavaScript の環境が必要です。
 
-A Node.js server needs to be configured to execute your Vue.js application.
+Vue.js のアプリケーションを実行するには Node.js サーバーの環境構築が必要です。
 
-## Extend and control the server
+## サーバーの拡張と制御
 
-You can extend the server with serverMiddleware and control routes with middleware.
+serverMiddleware でサーバーを拡張しルートを middleware で制御することができます。
 
-```js{}[middleware/api/logger.js]
+```js{}[server-middleware/logger.js]
 export default function (req, res, next) {
   console.log(req.url)
   next()
@@ -66,37 +66,37 @@ export default function (req, res, next) {
 
 ```js{}[nuxt.config.js]
 export default {
-  serverMiddleware: ['~/middleware/api/logger']
+  serverMiddleware: ['~/server-middleware/logger']
 }
 ```
 
-If your server middleware consists of a list of functions mapped to paths:
+サーバーの middleware がパスにマップされた関数のリストで構成されている場合:
 
-## Server vs Browser environments
+## サーバー環境とブラウザ環境
 
-Because you are in a Node.js environment you have access to Node.js objects such as `req` and `res`. You do not have access to the `window` or `document` objects as they belong to the browser environment. You can however use `window` or `document` by using the `beforeMount` or `mounted` hooks.
+Node.js の環境を利用するため `req` や `res` といった Node.js のオブジェクトにアクセス可能です。また `window` や `document` といったブラウザ環境に帰属するオブジェクトにはアクセスできません。ただし `beforeMount` や `mounted` などのフックを使うと `window` や `document` を使うことができます。
 
 ```js
-beforeMount{
+beforeMount () {
   window.alert('hello');
 }
-mounted{
+mounted () {
   window.alert('hello');
 }
 ```
 
-## Server-side rendering steps with Nuxt.js
+## Nuxt.js でのサーバーサイドレンダリングのステップ
 
-### Step 1: Browser to Server
+### ステップ 1: ブラウザからサーバーへ
 
-When a browser sends the initial request, it will hit the Node.js internal server. Nuxt.js will generate the HTML and send it back to the browser with results from executed functions, e.g. `asyncData`, `nuxtServerInit` or `fetch`. Hooks functions are executed as well.
+ブラウザが最初のリクエストを送ると Node.js の内部サーバーへ到達します。Nuxt.js は HTML を生成し `asyncData`、 `nuxtServerInit`、 `fetch` といった関数を実行した結果と共にブラウザへ送り返します。フック関数も同様に実行されます。
 
-### Step 2: Server to Browser
+### ステップ 2: サーバーからブラウザへ
 
-The browser receives the rendered page from the server with the generated HTML. The content is displayed and the Vue.js hydration kicks in, making it reactive. After this process, the page is interactive.
+サーバーによって生成された HTML と共にレンダリングされたページをブラウザが受け取ります。その内容が表示され Vue.js のハイドレーションが作用し始めます。この工程の後、ページがインタラクティブになります。
 
-### Step 3: Browser to Browser
+### ステップ 3: ブラウザからブラウザへ
 
-Navigating between pages with [`<NuxtLink>`](/docs/2.x/features/nuxt-components#the-nuxtlink-component) is done on the client side so you don't hit the server again unless you hard refresh the browser.
+[`<NuxtLink>`](/docs/2.x/features/nuxt-components#nuxtlink-コンポーネント) によるページ間の遷移はクライアントサイドで行われるためブラウザをハード再読み込みをしない限りサーバーへリクエストを送りません。
 
 <quiz :questions="questions"></quiz>

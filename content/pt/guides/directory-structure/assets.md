@@ -114,14 +114,14 @@ Caso você queira usar `sass`, certifique-se de ter instalado os pacotes `sass` 
   <code-block label="Yarn" active>
 
 ```bash
-yarn add -D sass sass-loader fibers
+yarn add -D sass sass-loader@10 fibers
 ```
 
   </code-block>
-  <code-block label="NPM">
+  <code-block label="npm">
 
 ```bash
-npm install --save-dev sass sass-loader fibers
+npm install --save-dev sass sass-loader@10 fibers
 ```
 
   </code-block>

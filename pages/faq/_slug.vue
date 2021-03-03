@@ -1,11 +1,11 @@
 <template>
-  <div class="-mx-4 lg:mx-0 flex flex-col-reverse lg:flex-row">
+  <div class="flex flex-col-reverse -mx-4 lg:mx-0 lg:flex-row">
     <div
-      class="w-full py-8 px-4 lg:static lg:overflow-visible lg:max-h-full lg:w-3/4"
+      class="w-full px-4 py-8 lg:static lg:overflow-visible lg:max-h-full lg:w-3/4"
     >
       <article>
         <h1
-          class="text-light-onSurfacePrimary dark:text-dark-onSurfacePrimary transition-colors duration-300 ease-linear"
+          class="transition-colors duration-300 ease-linear text-light-onSurfacePrimary dark:text-dark-onSurfacePrimary"
         >
           {{ page.title }}
         </h1>
@@ -23,8 +23,9 @@
 
 <script>
 export default {
+  scrollToTop: true,
   async asyncData({ $content, $contributors, params, store, error, app }) {
-    const slug = params.slug || 'external-resources'
+    const slug = params.slug || 'auth-routes'
 
     let path = `/${app.i18n.defaultLocale}/faq`
     let page, prev, next, langFallback
@@ -68,12 +69,6 @@ export default {
       contributors
     }
   },
-  computed: {
-    docLink() {
-      return `https://github.com/nuxt/nuxtjs.org/blob/master/content${this.path}.md`
-    }
-  },
-  scrollToTop: true,
   head() {
     return {
       title: this.page.title,
@@ -103,6 +98,11 @@ export default {
           content: this.page.description
         }
       ]
+    }
+  },
+  computed: {
+    docLink() {
+      return `https://github.com/nuxt/nuxtjs.org/blob/master/content${this.path}.md`
     }
   }
 }

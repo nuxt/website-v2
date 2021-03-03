@@ -47,10 +47,5 @@ export default {
       ]
     }
   }
-  // async asyncData () {
-  //   let sponsors = await fetch('https://opencollective.com/nuxtjs/members/organizations.json').then(res => res.json())
-  //   return {
-  //     sponsors
-  //   }
 }
 </script>

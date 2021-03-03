@@ -34,7 +34,7 @@
             v-for="(sponsor, i) in group"
             :key="i"
             class="sponsor inline-block m-4"
-            :href="sponsor.url"
+            :href="`${sponsor.url}?ref=nuxt`"
             target="_blank"
             rel="noopener sponsored"
           >
@@ -80,10 +80,7 @@
             data-cy="sponsors"
             class="py-3 px-6 text-base"
           >
-            <OpenCollectiveIcon
-              slot="icon"
-              class="inline-block h-5 -mt-1 mr-1"
-            />
+            <GithubIcon slot="icon" class="inline-block h-5 -mt-1 mr-1" />
             {{ $t('homepage.sponsors.become_a_sponsor') }}
           </AppButton>
         </div>
@@ -93,12 +90,12 @@
 </template>
 
 <script>
-import OpenCollectiveIcon from '~/assets/icons/open-collective.svg?inline'
+import GithubIcon from '~/assets/icons/github.svg?inline'
 import SponsoringIllustration from '~/assets/illustrations/sponsoring.svg?inline'
 
 export default {
   components: {
-    OpenCollectiveIcon,
+    GithubIcon,
     SponsoringIllustration
   },
   data() {
@@ -108,13 +105,19 @@ export default {
           {
             name: 'Storyblok',
             img: 'storyblok-logo.svg',
-            url: 'https://www.storyblok.com/?ref=nuxt',
+            url: 'https://www.storyblok.com/',
             class: 'h-24'
           },
           {
             name: 'Moovweb',
-            url: 'https://www.moovweb.com/?ref=nuxt',
+            url: 'https://www.moovweb.com/',
             img: 'moovweb-logo.png',
+            class: 'h-12'
+          },
+          {
+            name: 'Ship Shape',
+            url: 'https://shipshape.io/',
+            img: 'shipshape-logo.svg',
             class: 'h-12'
           }
         ],
@@ -122,7 +125,13 @@ export default {
           {
             name: 'VueMastery',
             img: 'vueMastery-brand.svg',
-            url: 'https://www.vuemastery.com/?ref=nuxt',
+            url: 'https://www.vuemastery.com/',
+            class: 'h-10'
+          },
+          {
+            name: 'Legal Nature',
+            img: 'legalnature-logo.svg',
+            url: 'https://www.legalnature.com/',
             class: 'h-10'
           }
         ],
@@ -130,7 +139,7 @@ export default {
           {
             name: 'Google Chrome',
             img: 'google-chrome.svg',
-            url: 'https://www.google.com/chrome/?ref=nuxt',
+            url: 'https://www.google.com/chrome/',
             class: 'h-12'
           }
         ]

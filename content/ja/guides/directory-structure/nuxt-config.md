@@ -1,6 +1,6 @@
 ---
 title: nuxt.config
-description: By default, Nuxt.js is configured to cover most use cases. This default configuration can be overwritten with the nuxt.config.js file.
+description: Nuxt.js ではデフォルトの設定でほとんどのユースケースをカバーしています。nuxt.config.js を使ってこの設定を上書きすることができます。
 position: 14
 category: directory-structure
 csb_link: https://codesandbox.io/embed/github/nuxt-academy/guides-examples/tree/master/04_directory_structure/15_nuxt-config?fontsize=14&hidenavigation=1&theme=dark
@@ -31,19 +31,19 @@ questions:
     correctAnswer:
 ---
 
-By default, Nuxt.js is configured to cover most use cases. This default configuration can be overwritten with the nuxt.config.js file.
+Nuxt.js ではデフォルトの設定でほとんどのユースケースをカバーしています。nuxt.config.js を使ってこの設定を上書きすることができます。
 
 ## nuxt.config.js
 
 ### build
 
-This option lets you configure various settings for the `build` step, including `loaders`, `filenames`, the `webpack` config and `transpilation`.
+このオプションで、`loaders`、`filenames` や `webpack` の設定、`transpilation` を含む `build` ステップにおけるさまざまな設定を行うことができます。
 
 ```js{}[nuxt.config.js]
 export default {
   build: {
     /*
-     ** You can extend webpack config here
+     ** ここで webpack の設定を拡張することができます。
      */
     extend(config, ctx) {}
   }
@@ -52,13 +52,13 @@ export default {
 
 <base-alert type="next">
 
-See more on the [build property](/docs/2.x/configuration-glossary/configuration-build)
+[build プロパティ](/docs/2.x/configuration-glossary/configuration-build)の詳細を見る
 
 </base-alert>
 
 ### css
 
-This option lets you define the CSS files, modules, and libraries you want to include globally (on every page).
+このオプションで、グローバルに（すべてのページで）利用したい CSS ファイル/モジュール/ライブラリを指定できます。
 
 ```js{}[nuxt.config.js]
 export default {
@@ -66,7 +66,7 @@ export default {
 }
 ```
 
-You can omit the file extension for CSS, SCSS, Postcss, Less, Stylus, ... files listed in the css array in your nuxt config file.
+nuxt の設定ファイルで、css プロパティの配列に記述する CSS/SCSS/Postcss/Less/Stylus などのファイルの拡張子は省略することができます。
 
 ```js{}[nuxt.config.js]
 export default {
@@ -74,17 +74,17 @@ export default {
 }
 ```
 
-By omitting the extension, if you have a css file and decide to change to use sass for example, you won't have to update your nuxt.config as it will use the new extension once the filename remains the same.
+拡張子を省略することで、例えば css ファイルを使用していて sass を使うように変更した場合でも、ファイル名が同じままであれば新しい拡張子が使用されるので、nuxt.config を更新する必要はありません。
 
 <base-alert type="next">
 
-See more on the [css property](/docs/2.x/configuration-glossary/configuration-css)
+[css プロパティ](/docs/2.x/configuration-glossary/configuration-css)の詳細を見る
 
 </base-alert>
 
 ### dev
 
-This option lets you define the `development` or `production` mode of Nuxt.js (important when you use Nuxt.js programmatically)
+このオプションで、Nuxt.js の `development` または `production` モードを定義できます。（Nuxt.js をプログラム上で使う際に重要です）
 
 ```js{}[nuxt.config.js]
 export default {
@@ -94,30 +94,30 @@ export default {
 
 <base-alert type="next">
 
-See more on the [dev property](/docs/2.x/configuration-glossary/configuration-dev)
+[dev プロパティ](/docs/2.x/configuration-glossary/configuration-dev)の詳細を見る
 
 </base-alert>
 
 ### env
 
-This option lets you define environment variables that are required at build time rather than runtime such as `NODE_ENV=staging` or `VERSION=1.2.3`. However for runtime environment variables the runtime config` is preferred.
+このオプションを使うと、`NODE_ENV=staging` や `VERSION=1.2.3` のように、ビルド時（ランタイムではなく）に必要な環境変数を定義することができます。ただし、ランタイム環境変数の場合は `runtimeConfig` が必要です。
 
 ```js{}[nuxt.config.js]
 export default {
   env: {
-    baseUrl: process.env.BASE_URL
+    baseURL: process.env.BASE_URL
   }
 }
 ```
 
 ### runtimeConfig
 
-The runtime config has built-in dotenv support providing better security and faster development. The runtime config is added to the Nuxt payload so there is no need to rebuild in order to update the runtime configuration when working in development or with Server-side rendering or client side only applications. Although for static sites you will still need to regenerate your site to see these changes.
+ランタイム設定には dotenv サポートが組み込まれているため、より良いセキュリティと高速な開発を実現します。ランタイム設定は Nuxt ペイロードに追加されるので、開発中、サーバーサイドレンダリング、またはクライアントサイドのみのアプリケーションで作業する際に、ランタイム設定を更新するためにリビルドする必要はありません。しかし、静的サイトでは変更を確認するためにサイトをリビルドする必要があります。
 
 #### `publicRuntimeConfig`
 
-- should hold all env variables that are public as these will be exposed on the frontend. This could include a reference to your public URL for example.
-- is available using `$config` in both server and client.
+- フロントエンドに公開されるのでパブリックな env 変数はすべて保持しなければなりません。例として公開 URL への参照を含めることができます。
+- サーバーとクライアントの両方で `$config` を使って利用できます。
 
 ```js{}[nuxt.config.js]
 export default {
@@ -129,8 +129,8 @@ export default {
 
 #### `privateRuntimeConfig`
 
-- should hold all env variables that are private and that should not be exposed on the frontend. This could include a reference to your API secret tokens for example.
-- is only available on server using same `$config` (it overrides publicRuntimeConfig)
+- プライベートでフロントエンドでは公開されてはいけないすべての env 変数を保持しなければなりません。例として API のシークレットトークンへの参照を含めることができます。
+- サーバーのみで同じく `$config` を使って利用できます。（publicRuntimeConfig を上書きします）
 
 ```js{}[nuxt.config.js]
 export default {
@@ -140,9 +140,9 @@ export default {
 }
 ```
 
-#### **Using your config values:**
+#### **設定値を使用する:**
 
-You can then access these values anywhere by using the context in your pages, store, components and plugins by using `this.$config` or `context.$config`.
+ページ、ストア、コンポーネント、プラグインのコンテキストを使って、`this.$config` や `context.$config` を使用することで、どこからでもこれらの値にアクセスすることができます。
 
 ```html{}[pages/index.vue]
 <script>
@@ -153,7 +153,7 @@ You can then access these values anywhere by using the context in your pages, st
 </script>
 ```
 
-Inside your templates you can access your runtimeConfigs directly using `$config.*`
+テンプレートの中では、`$config.*` を使って直接ランタイム設定にアクセスできます。
 
 ```html{}[pages/index.vue]
 <template>
@@ -163,44 +163,44 @@ Inside your templates you can access your runtimeConfigs directly using `$config
 
 <base-alert type="warn">
 
-Your private config could be exposed if you use `$config` outside of a server-only context (for example, if you use `$config` in `fetch`, `asyncData` or directly inside your template).
+サーバーのみのコンテキスト以外で `$config` を使用した場合（例えば `fetch`、 `asyncData`、 あるいはテンプレート内で直接 `$config` を使用した場合など）、プライベートな設定が公開される可能性があります。
 
 </base-alert>
 
 <base-alert type="next">
 
-See more on the [runtimeConfig](/docs/2.x/configuration-glossary/configuration-runtime-config)
+[runtimeConfig](/docs/2.x/configuration-glossary/configuration-runtime-config) の詳細を見る
 
 </base-alert>
 
 <base-alert type="next">
 
-See our blog post on [Moving from @nuxtjs/dotenv to runtime config](/blog/moving-from-nuxtjs-dotenv-to-runtime-config)
+[@nuxtjs/dotenv からランタイム設定への移行](/blog/moving-from-nuxtjs-dotenv-to-runtime-config)のブログ記事を見る
 
 </base-alert>
 
 <base-alert type="next">
 
-See more on the [env property](/docs/2.x/configuration-glossary/configuration-env)
+[env プロパティ](/docs/2.x/configuration-glossary/configuration-env)の詳細を見る
 
 </base-alert>
 
 ### generate
 
-This option lets you set up parameter values for every dynamic route in your application that will be transformed into HTML files by Nuxt.js.
+このオプションで、Nuxt.js によって HTML ファイルに変換されるアプリケーション内のすべての動的ルートのパラメータを設定することができます。
 
 ```js{}[nuxt.config.js]
 export default {
   generate: {
-    dir: 'gh_pages', // gh_pages/ instead of dist/
-    subFolders: false // HTML files are generated according to the route path
+    dir: 'gh_pages', // dist/ の代わりに gh_pages/ を設定する
+    subFolders: false // HTML ファイルがルートパスに従って生成されます
   }
 }
 ```
 
 <base-alert type="next">
 
-See more on the [generate property](/docs/2.x/configuration-glossary/configuration-generate)
+[generate プロパティ](/docs/2.x/configuration-glossary/configuration-generate)の詳細を見る
 
 </base-alert>
 
@@ -218,17 +218,17 @@ export default {
 }
 ```
 
-This option lets you define all default meta tags for your application.
+このオプションで、アプリケーションのデフォルトのメタタグを全て指定できます。
 
 <base-alert type="next">
 
-See more on [head integration](/docs/2.x/configuration-glossary/configuration-head)
+[head インテグレーション](/docs/2.x/configuration-glossary/configuration-head)の詳細を見る
 
 </base-alert>
 
 ### loading
 
-This option lets you customize the loading component that Nuxt.js uses by default.
+このオプションで、Nuxt.js のデフォルトのローディングコンポーネントをカスタマイズできます。
 
 ```js{}[nuxt.config.js]
 export default {
@@ -240,13 +240,13 @@ export default {
 
 <base-alert type="next">
 
-See more on [loading integration](/docs/2.x/configuration-glossary/configuration-loading)
+[loading インテグレーション](/docs/2.x/configuration-glossary/configuration-loading)の詳細を見る
 
 </base-alert>
 
 ### modules
 
-With this option you can add Nuxt.js modules to your project.
+このオプションで、プロジェクトに Nuxt.js モジュールを追加できます。
 
 ```js{}[nuxt.config.js]
 export default {
@@ -256,13 +256,13 @@ export default {
 
 <base-alert type="next">
 
-See more on the [modules property](/docs/2.x/configuration-glossary/configuration-modules)
+[modules プロパティ](/docs/2.x/configuration-glossary/configuration-modules)の詳細を見る
 
 </base-alert>
 
 ### modulesDir
 
-The modulesDir property is used to set the modules directories for path resolving. For example: Webpack's resolveLoading, nodeExternals and postcss. The configuration path is relative to `options.rootDir` (default: process.cwd()).
+modulesDir プロパティは、モジュールディレクトリの設定でパス解決のために使用します。例えば Webpack の resolveLoading、 nodeExternals や postcss です。設定パスは `options.rootDir` （デフォルト: process.cwd()）からの相対パスになります。
 
 ```js{}[nuxt.config.js]
 export default {
@@ -270,17 +270,17 @@ export default {
 }
 ```
 
-Setting this field may be necessary if your project is organized as a Yarn workspace-styled mono-repository.
+プロジェクトが Yarn ワークスペーススタイルのモノリポジトリで構成されている場合はこのフィールドが必要になるかもしれません。
 
 <base-alert type="next">
 
-See more on the [modulesDir property](/docs/2.x/configuration-glossary/configuration-modulesdir)
+[modulesDir プロパティ](/docs/2.x/configuration-glossary/configuration-modulesdir)の詳細を見る
 
 </base-alert>
 
 ### plugins
 
-This option lets you define JavaScript plugins that should be run before instantiating the root Vue.js application.
+このオプションで、ルートの Vue.js アプリケーションをインスタンス化する前に実行したい JavaScript plugin を指定できます。
 
 ```js{}[nuxt.config.js]
 export default {
@@ -290,13 +290,13 @@ export default {
 
 <base-alert type="next">
 
-See more on the [plugins property](/docs/2.x/configuration-glossary/configuration-plugins)
+[plugins プロパティ](/docs/2.x/configuration-glossary/configuration-plugins)の詳細を見る
 
 </base-alert>
 
 ### router
 
-With the `router` option you can overwrite the default Nuxt.js configuration of Vue Router.
+`router` オプションで、Nuxt.js のデフォルトの Vue Router 設定を上書きできます。
 
 ```js{}[nuxt.config.js]
 export default {
@@ -308,13 +308,13 @@ export default {
 
 <base-alert type="next">
 
-See more on the [router property](/docs/2.x/configuration-glossary/configuration-router)
+[router プロパティ](/docs/2.x/configuration-glossary/configuration-router)の詳細を見る
 
 </base-alert>
 
 ### server
 
-This option lets you configure the connection variables for the server instance of your Nuxt.js application.
+このオプションで、Nuxt.js アプリケーションのサーバーインスタンスにおける接続変数を設定できます。
 
 ```js{}[nuxt.config.js]
 import path from 'path'
@@ -332,13 +332,13 @@ export default {
 
 <base-alert type="next">
 
-See more on the [server property](/docs/2.x/configuration-glossary/configuration-server)
+[server プロパティ](/docs/2.x/configuration-glossary/configuration-server)の詳細を見る
 
 </base-alert>
 
 ### srcDir
 
-This option lets you define the source directory of your Nuxt.js application.
+このオプションで、Nuxt.js アプリケーションのソースディレクトリを指定できます。
 
 ```js{}[nuxt.config.js]
 export default {
@@ -346,7 +346,7 @@ export default {
 }
 ```
 
-Project structure example with your Nuxt.js application in the `client` directory.
+`client` ディレクトリにある Nuxt.js アプリケーションのプロジェクト構造の例です。
 
 ```bash
 **-| app/
@@ -366,23 +366,23 @@ Project structure example with your Nuxt.js application in the `client` director
 
 ### dir
 
-This option lets you define custom names of your Nuxt.js directories.
+このオプションで、Nuxt.js のディレクトリのカスタムネームを指定できます。
 
 ```js{}[nuxt.config.js]
 export default {
-  pages: 'views' // Nuxt will look for the views/ instead of the pages/ folder
+  pages: 'views' // Nuxt は pages/ フォルダの代わりに views/ を探します。
 }
 ```
 
 <base-alert type="next">
 
-See more on the [dir property](/docs/2.x/configuration-glossary/configuration-dir)
+[dir プロパティ](/docs/2.x/configuration-glossary/configuration-dir)の詳細を見る
 
 </base-alert>
 
 ### pageTransition
 
-This option lets you define the default properties of the page transitions.
+このオプションで、ページトランジションのデフォルトプロパティを指定できます。
 
 ```js{}[nuxt.config.js]
 export default {
@@ -392,26 +392,26 @@ export default {
 
 <base-alert type="next">
 
-See more on the [transition property](/docs/2.x/configuration-glossary/configuration-transition)
+[transition プロパティ](/docs/2.x/configuration-glossary/configuration-transition)の詳細を見る
 
 </base-alert>
 
-## Other configuration files
+## その他の設定ファイル
 
-Besides the `nuxt.config.js` there might be other config files in your project root, such as [.eslintrc](https://eslint.org/), [prettier.config.json](https://prettier.io/) or [.gitignore](https://git-scm.com/docs/gitignore). These are used to configure other tools such as your linter, code formatter or your git repository and detached from the `nuxt.config.js`.
+`nuxt.config.js` の他にもプロジェクトのルートに [.eslintrc](https://eslint.org/)、[prettier.config.json](https://prettier.io/) や [.gitignore](https://git-scm.com/docs/gitignore) などの設定ファイルがあるかもしれません。これらは linter やコードフォーマッタ、git リポジトリなどの他のツールを設定するために使われ、`nuxt.config.js` から切り離されています。
 
 ### .gitignore
 
-In your .gitignore file you will need to add the following so that they are ignored and not added to version control. `node_modules` which is where all your installed modules are. The `nuxt` folder which is what gets created when running the dev or build commands. The `dist` folder is the folder that gets created when running the generate command.
+.gitignore ファイルに以下の項目を追加して、バージョン管理から無視かつ追加されないようにする必要があります。`node_modules` フォルダはインストールしたモジュールがすべて入っているフォルダです。`nuxt` フォルダは、dev コマンドや build コマンドを実行したときに作成されるフォルダです。`dist` フォルダは generate コマンドの実行時に作成されるフォルダです。
 
 ```markdown{}[.gitignore]
 node_modules .nuxt dist
 ```
 
-### What's next
+### このあとは
 
 <base-alert type="next">
 
-Check out the [configuration-glossary](/docs/2.x/configuration-glossary/configuration-build)
+[ビルドの設定](/docs/2.x/configuration-glossary/configuration-build)を見てみましょう。
 
 </base-alert>

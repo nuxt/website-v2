@@ -32,7 +32,7 @@ watchers: {
 }
 ```
 
-To learn more about webpack watchoptions, see the [webpack documentation](https://webpack.js.org/configuration/watch/#watchoptions).
+To learn more about webpack watchOptions, see the [webpack documentation](https://webpack.js.org/configuration/watch/#watchoptions).
 
 ### What's next
 

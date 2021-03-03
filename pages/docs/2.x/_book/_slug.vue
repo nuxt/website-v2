@@ -11,9 +11,10 @@
         >
           {{ page.title }}
         </h1>
+
         <nuxt-content :document="page" />
 
-        <LazyAppPrevNextNew
+        <AppPrevNextNew
           :prev="prev"
           :next="next"
           section="guides"
@@ -82,7 +83,7 @@ export default {
           ? path
           : `/${app.i18n.defaultLocale}/guides/${params.book}`
       )
-        .only(['title', 'slug', 'dir', 'menu'])
+        .only(['title', 'slug', 'dir', 'menu', 'target'])
         .sortBy('position')
         .sortBy('title')
         .sortBy('menu')

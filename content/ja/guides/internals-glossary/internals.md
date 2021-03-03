@@ -1,71 +1,71 @@
 ---
-title: 'Nuxt Modules Intro'
-description: Better understand Nuxt internals
-menu: Nuxt Modules
+title: 'Nuxt モジュールの紹介'
+description: Nuxt 内部をより理解する
+menu: Nuxt モジュール
 category: internals-glossary
 position: 3
 ---
 
-Nuxt.js has a fully modular architecture which allows developers extending any part of Nuxt Core using a flexible API.
+Nuxt.js は完全にモジュール化されたアーキテクチャを備えているため、開発者は柔軟な API を使用して NuxtCore の任意の部分を拡張できます。
 
-Please see [Modules Guide](/docs/2.x/directory-structure/modules) for more detailed information if interested developing your own module.
+独自のモジュール開発に興味がある場合は[モジュールガイドのドキュメント](/docs/2.x/directory-structure/modules)を参照してください。
 
-This section helps getting familiar to Nuxt internals and can be used as a reference to understand it better while writing your own modules.
+このセクションは Nuxt 内部に詳しくなるために役立ち、独自のモジュールを作成する際に Nuxt 内部をよりよく理解するためのリファレンスとして使えます。
 
 ### Core
 
-These classes are the heart of Nuxt and should exist on both runtime and build time.
+これらのクラスは Nuxt の心臓部であり、実行時とビルド時の両方に存在する必要があります。
 
 #### Nuxt
 
-- [`Nuxt` Class](/docs/2.x/internals-glossary/internals-nuxt)
-- Source: [core/nuxt.js](https://github.com/nuxt/nuxt.js/blob/dev/packages/core/src/nuxt.js)
+- [`Nuxt` クラス](/docs/2.x/internals-glossary/internals-nuxt)
+- ソース: [core/nuxt.js](https://github.com/nuxt/nuxt.js/blob/dev/packages/core/src/nuxt.js)
 
 #### Renderer
 
-- [`Renderer` Class](/docs/2.x/internals-glossary/internals-renderer)
-- Source: [vue-renderer/renderer.js](https://github.com/nuxt/nuxt.js/blob/dev/packages/vue-renderer/src/renderer.js)
+- [`Renderer` クラス](/docs/2.x/internals-glossary/internals-renderer)
+- ソース: [vue-renderer/renderer.js](https://github.com/nuxt/nuxt.js/blob/dev/packages/vue-renderer/src/renderer.js)
 
 #### ModuleContainer
 
-- [`ModuleContainer` Class](/docs/2.x/internals-glossary/internals-module-container)
-- Source: [core/module.js](https://github.com/nuxt/nuxt.js/blob/dev/packages/core/src/module.js)
+- [`ModuleContainer` クラス](/docs/2.x/internals-glossary/internals-module-container)
+- ソース: [core/module.js](https://github.com/nuxt/nuxt.js/blob/dev/packages/core/src/module.js)
 
 ### Build
 
-These classes are only needed for build or dev mode.
+これらのクラスは、ビルドモードまたは開発モードでのみ必要です。
 
 #### Builder
 
-- [`Builder` Class](/docs/2.x/internals-glossary/internals-builder)
-- Source: [builder/builder.js](https://github.com/nuxt/nuxt.js/blob/dev/packages/builder/src/builder.js)
+- [`Builder` クラス](/docs/2.x/internals-glossary/internals-builder)
+- ソース: [builder/builder.js](https://github.com/nuxt/nuxt.js/blob/dev/packages/builder/src/builder.js)
 
 #### Generator
 
-- [`Generator` Class](/docs/2.x/internals-glossary/internals-generator)
-- Source: [generator/generator.js](https://github.com/nuxt/nuxt.js/blob/dev/packages/generator/src/generator.js)
+- [`Generator` クラス](/docs/2.x/internals-glossary/internals-generator)
+- ソース: [generator/generator.js](https://github.com/nuxt/nuxt.js/blob/dev/packages/generator/src/generator.js)
 
-### Common
+### 共通
 
 #### Utils
 
-- Source: [utils/src](https://github.com/nuxt/nuxt.js/blob/dev/packages/utils/src)
+- ソース: [utils/src](https://github.com/nuxt/nuxt.js/blob/dev/packages/utils/src)
 
 #### Options
 
-- Source: [config/options.js](https://github.com/nuxt/nuxt.js/blob/dev/packages/config/src/options.js)
+- ソース: [config/options.js](https://github.com/nuxt/nuxt.js/blob/dev/packages/config/src/options.js)
 
-## Packaging & Usage
+## パッケージング＆使用方法
 
-Nuxt exports all classes by default. To import them:
+Nuxt はデフォルトですべてのクラスをエクスポートします。それらをインポートするには:
 
 ```js
 import { Nuxt, Builder, Utils } from 'nuxt'
 ```
 
-## Common patterns
+## 共通のパターン
 
-All Nuxt classes have a reference to `nuxt` instance and options, this way we always have a consistent API across classes to access `options` and `nuxt`.
+すべての Nuxt クラスには `nuxt` インスタンスとオプションへの参照を持ちます。そのため `options` と `nuxt` にアクセスするためのクラス間で一貫した API を常に持ちます。
 
 ```js
 class SomeClass {
@@ -76,12 +76,12 @@ class SomeClass {
   }
 
   someFunction() {
-    // We have access to `this.nuxt` and `this.options`
+    // `this.nuxt` と `this.options` へアクセスできます
   }
 }
 ```
 
-Classes are _pluggable_ so they should register a plugin on main `nuxt` container to register more hooks.
+クラスは*プラガブル*なのでより多くのフックを登録するには `nuxt` コンテナにプラグインを登録する必要があります。
 
 ```js
 class FooClass {
@@ -95,7 +95,7 @@ class FooClass {
 }
 ```
 
-So we can hook into `foo` module like this:
+以下のように `fook` モジュールにフックできます:
 
 ```js
 nuxt.hook('foo', foo => {

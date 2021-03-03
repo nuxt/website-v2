@@ -132,7 +132,7 @@ export default {
 <transition name="home" mode="out-in"></transition>
 ```
 
-`transition` オブジェクトは name、 mode、 css、 duration などの多くのプロパティを持つことができます。詳細は vue のドキュメントを参照してください。
+`transition` オブジェクトは name、mode、css、duration などの多くのプロパティを持つことができます。詳細は vue のドキュメントを参照してください。
 
 ページ内の `transition` プロパティで関数を定義することもできます。 詳細は vue のドキュメントの[JavaScript フック](https://jp.vuejs.org/v2/guide/transitions.html#JavaScript-%E3%83%95%E3%83%83%E3%82%AF) を参照してください。
 
@@ -150,7 +150,7 @@ export default {
 
 <base-alert>
 
-デフォルトのトランジションモードは Vue.js とは異なります。 `transition` モードはデフォルトで `out-in` に設定されています。 leaving と entering トランジションを同時に実行したい場合、 モードプロパティに空文字列をセット( `mode: ''` )する必要があります 。
+デフォルトのトランジションモードは Vue.js とは異なります。`transition` モードはデフォルトで `out-in` に設定されています。leaving と entering トランジションを同時に実行したい場合、モードプロパティに空文字列をセット（`mode: ''`）する必要があります 。
 
 </base-alert>
 
@@ -199,7 +199,7 @@ Nuxt.js のデフォルトのトランジション名は `"page"` です。 ア�
 }
 ```
 
-`nuxt.config.js` ファイルの `css`配列に CSS ファイルのパスを追加します:
+`nuxt.config.js` ファイルの `css` 配列に CSS ファイルのパスを追加します:
 
 ```js{}[nuxt.config.js]
 export default {
@@ -222,12 +222,14 @@ export default {
 }
 ```
 
-```js{}[assets/main.css]
-.layout-enter-active, .layout-leave-active {
-  transition: opacity .5s
+```css{}[assets/main.css]
+.layout-enter-active,
+.layout-leave-active {
+  transition: opacity 0.5s;
 }
-.layout-enter, .layout-leave-active {
-  opacity: 0
+.layout-enter,
+.layout-leave-active {
+  opacity: 0;
 }
 ```
 

@@ -12,11 +12,11 @@ csb_link: https://codesandbox.io/embed/github/nuxt-academy/guides-examples/tree/
 - Un éditeur de texte, nous recommandons [VSCode](https://code.visualstudio.com/) avec l'extension [Vetur](https://marketplace.visualstudio.com/items?itemName=octref.vetur) ou [WebStorm](https://www.jetbrains.com/webstorm/)
 - Un terminal, nous vous recommandons d'utiliser [le terminal intégré de VSCode](https://code.visualstudio.com/docs/editor/integrated-terminal) ou le [terminal de Webstorm](https://www.jetbrains.com/help/webstorm/terminal-emulator.html).
 
-## En utilisant create-nuxt-app
+## Utiliser create-nuxt-app
 
-Pour commencer rapidement, vous pouvez utiliser [create-nuxt-app](https://github.com/nuxt/create-nuxt-app).
+Pour créer rapidement un nouveau projet, nous pouvons utiliser [create-nuxt-app](https://github.com/nuxt/create-nuxt-app).
 
-Assurez-vous que npx est installé (npx est livré par défaut depuis NPM 5.2.0) ou npm v6.1 ou yarn.
+Il faut vérifier que `npx` est installé (npx est livré par défaut depuis npm v5.2.0) ou npm v6.1 ou yarn.
 
 <code-group>
   <code-block label="Yarn" active>
@@ -26,14 +26,14 @@ yarn create nuxt-app <project-name>
 ```
 
   </code-block>
-  <code-block label="NPX">
+  <code-block label="npx">
 
 ```bash
 npx create-nuxt-app <project-name>
 ```
 
   </code-block>
-    <code-block label="NPM">
+    <code-block label="npm">
 
 ```bash
 npm init nuxt-app <project-name>
@@ -43,9 +43,9 @@ npm init nuxt-app <project-name>
 
 </code-group>
 
-Il vous posera quelques questions (nom, options Nuxt, framework UI, TypeScript, linter, framework de test, etc). Pour en savoir plus sur toutes les options voir [Create Nuxt app](https://github.com/nuxt/create-nuxt-app/blob/master/README.md).
+Quelques questions nous seront posées (nom, options Nuxt, framework UI, TypeScript, linter, framework de test, etc.). Pour en savoir plus sur toutes les options voir [Create Nuxt App](https://github.com/nuxt/create-nuxt-app/blob/master/README.md).
 
-Une fois toutes les questions répondues, il installera toutes les dépendances. L'étape suivante consiste à accéder au dossier du projet et à le lancer :
+Quand on y aura répondu, toutes les dépendances seront installées. La prochaine étape est de naviguer dans le répertoire et de démarrer notre application:
 
 <code-group>
   <code-block label="Yarn" active>
@@ -56,7 +56,7 @@ yarn dev
 ```
 
   </code-block>
-  <code-block label="NPM">
+  <code-block label="npm">
 
 ```bash
 cd <project-name>
@@ -66,7 +66,7 @@ npm run dev
   </code-block>
 </code-group>
 
-L'application s'exécute maintenant sur [http://localhost:3000](http://localhost:3000). Well done!
+Notre application est maintenant en cours d'exécution sur [http://localhost:3000](http://localhost:3000).
 
 <base-alert type="info">
 
@@ -115,7 +115,7 @@ Ouvrir le fichier `package.json` avec notre éditeur préféré et ajouter ce co
 
 #### **À quoi sert le fichier package.json ?**
 
-Le fichier `package.json` est comme une carte d'identité pour notre projet. Si on ne sait pas ce qu'est le fichier `package.json`, nous vous recommandons grandement de lire la [documentation de NPM](https://docs.npmjs.com/creating-a-package-json-file).
+Le fichier `package.json` est comme une carte d'identité pour notre projet. Si on ne sait pas ce qu'est le fichier `package.json`, nous vous recommandons grandement de lire la [documentation de npm](https://docs.npmjs.com/creating-a-package-json-file).
 
 ### Deuxième étape : installer nuxt
 
@@ -129,7 +129,7 @@ yarn add nuxt
 ```
 
   </code-block>
-  <code-block label="NPM">
+  <code-block label="npm">
 
 ```bash
 npm install nuxt
@@ -184,7 +184,7 @@ yarn dev
 ```
 
   </code-block>
-  <code-block label="NPM">
+  <code-block label="npm">
 
 ```bash
 npm run dev
@@ -201,7 +201,7 @@ La commande `dev` est utilisée lorsque l'application est lancée en mode dével
 
 L'application est maintenant en cours d'exécution sur **[http://localhost:3000](http://localhost:3000/).**
 
-On peut l'ouvrir dans notre navigateur en cliquant sur le lien dans le terminal et nous devrios voir le texte "Hello World" que nous avons ajouté dans l'étape précédente.
+On peut l'ouvrir dans notre navigateur en cliquant sur le lien dans le terminal et nous devrions voir le texte "Hello World" que nous avons ajouté dans l'étape précédente.
 
 <base-alert type="info">
 
@@ -232,57 +232,3 @@ Si nous créons un répertoire nommé `more-fun` et ajoutons un fichier `index.v
 <app-modal>
   <code-sandbox :src="csb_link"></code-sandbox>
 </app-modal>
-
-## Utiliser create-nuxt-app
-
-Pour créer rapidement un nouveau projet, nous pouvons utiliser [create-nuxt-app](https://github.com/nuxt/create-nuxt-app).
-
-Il faut vérifier que `npx` est installé (npx est embarqué par défaut depuis npm v5.2.0) ou npm v6.1 ou yarn.
-
-<code-group>
-  <code-block label="Yarn" active>
-
-```bash
-yarn create nuxt-app <project-name>
-```
-
-  </code-block>
-  <code-block label="NPX">
-
-```bash
-npx create-nuxt-app <project-name>
-```
-
-  </code-block>
-    <code-block label="NPM">
-
-```bash
-npm init nuxt-app <project-name>
-```
-
-  </code-block>
-
-</code-group>
-
-Quelques questions nous seront posées (nom, options Nuxt, framework UI, TypeScript, linter, framework de test, etc.), quand on y aura répondu, toutes les dépendances seront installées. La prochaine étape est de naviguer dans le répertoire et de démarrer notre application:
-
-<code-group>
-  <code-block label="Yarn" active>
-
-```bash
-cd <project-name>
-yarn dev
-```
-
-  </code-block>
-  <code-block label="NPM">
-
-```bash
-cd <project-name>
-npm run dev
-```
-
-  </code-block>
-</code-group>
-
-Notre application est maintenant en cours d'exécution sur [http://localhost:3000](http://localhost:3000).

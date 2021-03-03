@@ -5,7 +5,7 @@ category: features
 position: 12
 ---
 
-Nuxt.js と フルスタティックモジュールを使うことで、API や CMS を呼び出すライブプレビューをすぐに利用することができます。 そして、デプロイする前に変化を確認することができます。
+Nuxt.js とフルスタティックモジュールを使うことで、API や CMS を呼び出すライブプレビューをすぐに利用することができます。 そして、デプロイする前に変化を確認することができます。
 
 <base-alert>[target:static](/docs/2.x/features/deployment-targets#static-hosting) を利用しているときのみ使用可能です</base-alert>
 
@@ -22,7 +22,7 @@ export default function ({ query, enablePreview }) {
 ```
 
 <base-alert>
-EnablePreview はプラグインの context オブジェクトでのみ利用可能です。プレビューはクライアントサイドで処理されるため、
+`enablePreview` はプラグインの context オブジェクトでのみ利用可能です。プレビューはクライアントサイドで処理されるため、
 プラグイン(今回の例では preview.client.js)はクライアントでのみ実行される必要があります。
 </base-alert>
 

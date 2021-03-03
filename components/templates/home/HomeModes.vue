@@ -8,7 +8,7 @@
           tag="h2"
           class="text-3xl text-center pt-10 font-medium"
         >
-          <template v-slot:nuxt>
+          <template #nuxt>
             <AppTitle />
           </template>
         </i18n>
@@ -27,7 +27,7 @@
               tag="p"
               class="leading-loose text-left text-light-onSurfaceSecondary dark:text-dark-onSurfaceSecondary"
             >
-              <template v-slot:break>
+              <template #break>
                 <br />
                 <br />
               </template>
@@ -45,7 +45,7 @@
               tag="p"
               class="leading-loose text-left text-light-onSurfaceSecondary dark:text-dark-onSurfaceSecondary"
             >
-              <template v-slot:proverbial>
+              <template #proverbial>
                 <span class="text-gray-600">
                   ({{ $t('homepage.modes.ssg.proverbial') }} 🐦🐦)
                 </span>

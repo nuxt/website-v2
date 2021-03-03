@@ -1,5 +1,5 @@
 ---
-title: 'NuxtJS: From Terminal to Browser'
+title: 'Nuxt: From Terminal to Browser'
 description: How we changed the developer experience to stop switching between the terminal and browser.
 imgUrl: blog/nuxtjs-from-terminal-to-browser/main.png
 date: 2019-06-04
@@ -37,7 +37,7 @@ _ℹ️ These features are all available with [v2.8.0 release](https://github.co
 
 [![nuxt-ssr-logs-forwarding](https://res.cloudinary.com/practicaldev/image/fetch/s--bwQ8iEq2--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_66%2Cw_880/https://user-images.githubusercontent.com/904724/58566291-a3396700-8230-11e9-9dd6-09c3ff8578d2.gif)](https://res.cloudinary.com/practicaldev/image/fetch/s--bwQ8iEq2--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_66%2Cw_880/https://user-images.githubusercontent.com/904724/58566291-a3396700-8230-11e9-9dd6-09c3ff8578d2.gif)
 
-## [](#nuxtjs-vision)NuxtJS Vision
+## [](#nuxtjs-vision)Nuxt Vision
 
 The purpose to these changes is to use the terminal for commands only.
 

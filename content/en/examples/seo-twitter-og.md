@@ -3,7 +3,7 @@ title: SEO Twitter and Open Graph
 description: In this example we create a component to add our Twitter and Open Graph tags for when sharing on social media.
 position: 4
 category: seo
-csb_link: https://codesandbox.io/embed/github/nuxt-academy/examples/tree/master/seo/seo-twitter-og?fontsize=14&hidenavigation=1&module=%2Fcomponents%2FSocialHead.vue&theme=dark&view=editor
+csb_link: https://codesandbox.io/embed/github/nuxtlabs/examples/tree/master/seo/seo-twitter-og?fontsize=14&hidenavigation=1&module=%2Fcomponents%2FSocialHead.vue&theme=dark&view=editor
 ---
 
 <example-intro></example-intro>

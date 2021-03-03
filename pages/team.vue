@@ -9,7 +9,7 @@
             class="text-3xl xl:text-4xl text-light-onSurfacePrimary dark:text-dark-onSurfacePrimary font-medium leading-normal mb-6 lg:pt-4 transition-colors duration-300 ease-linear"
           >
             {{ $t('team.title') }}
-            <template v-slot:nuxt>
+            <template #nuxt>
               <AppTitle />
             </template>
           </i18n>
@@ -24,10 +24,7 @@
         />
 
         <TeamMembers :team="nuxtCompany.team" :title="nuxtCompany.title" />
-        <LazyTeamMembers
-          :team="nuxtCommunity.team"
-          :title="nuxtCommunity.title"
-        />
+        <TeamMembers :team="nuxtCommunity.team" :title="nuxtCommunity.title" />
       </div>
     </div>
   </div>
@@ -153,6 +150,14 @@ export default {
             badges: ['framework']
           },
           {
+            name: 'Daniel Roe',
+            city: 'Durham, UK',
+            github: 'danielroe',
+            twitter: 'danielcroe',
+            website: 'https://roe.dev',
+            badges: ['framework']
+          },
+          {
             name: 'Jonas Galvez',
             city: 'Barretos, Brazil',
             github: 'galvez',
@@ -188,14 +193,6 @@ export default {
             github: 'manniL',
             twitter: 'TheAlexLichter',
             website: 'https://blog.lichter.io',
-            badges: ['maintainer']
-          },
-          {
-            name: 'Daniel Roe',
-            city: 'Durham, UK',
-            github: 'danielroe',
-            twitter: 'danielcroe',
-            website: 'https://roe.dev',
             badges: ['maintainer']
           },
           {

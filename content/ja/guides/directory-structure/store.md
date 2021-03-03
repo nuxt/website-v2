@@ -1,81 +1,81 @@
 ---
-title: store
-description: The `store` directory contains your Vuex Store files. The Vuex Store comes with Nuxt.js out of the box but is disabled by default. Creating an `index.js`  file in this directory enables the store.
+title: ストア
+description: '`store` ディレクトリには Vuex ストアに関するファイルが含まれています。Vuex ストアは Nuxt.js に付属していてすぐに使えますが、デフォルトでは無効化されています。このディレクトリ内に `index.js` ファイルを作成することで、ストアが有効化されます。'
 position: 13
 category: directory-structure
 csb_link: https://codesandbox.io/embed/github/nuxt-academy/guides-examples/tree/master/04_directory_structure/14_store?fontsize=14&hidenavigation=1&theme=dark
 questions:
-  - question: How do you enable the store?
+  - question: どうしたらストアを有効化できますか？
     answers:
-      - It is enabled by default
-      - create a js file in the store folder
-      - 'add store: true to your nuxt.config.js file'
-    correctAnswer: create an js file in the store folder
-  - question: Every .js file in the store directory is transformed to a
+      - デフォルトで有効化されている
+      - ストアのフォルダに js ファイルを作成する
+      - 'store: true を nuxt.config.js ファイルに追加する'
+    correctAnswer: ストアのフォルダに js ファイルを作成する
+  - question: store ディレクトリに存在するすべての .js ファイルは以下のどれに変換されますか？
     answers:
-      - plugin
-      - module
-      - function
-    correctAnswer: module
-  - question: In the store you should export the state as
+      - プラグイン
+      - モジュール
+      - 関数
+    correctAnswer: モジュール
+  - question: ストアの中ではステートを以下のどの形式でエクスポートする必要がありますか？
     answers:
-      - a function
-      - an object
-      - a string
-    correctAnswer: a function
-  - question: In the store you should export the mutations and actions as
+      - 関数
+      - オブジェクト
+      - 文字列
+    correctAnswer: 関数
+  - question: ストアの中ではミューテーションとアクションを以下のどの形でエクスポートする必要がありますか？
     answers:
-      - a function
-      - an object
-      - a string
-    correctAnswer: an object
-  - question: You can add plugins to the store
+      - 関数
+      - オブジェクト
+      - 文字列
+    correctAnswer: オブジェクト
+  - question: ストアにプラグインを追加することができますか？
     answers:
-      - true
-      - false
-    correctAnswer: true
-  - question: The fetch method is used to fill the store
+      - はい
+      - いいえ
+    correctAnswer: はい
+  - question: fetch メソッドは以下のどのタイミングでストアを更新しますか？
     answers:
-      - before rendering the page
-      - while rendering the page
-      - after rendering the page
-    correctAnswer: before rendering the page
-  - question: What can you use when you have some data on the server that you want to give directly to the client side?
+      - ページをレンダリングする前
+      - ページをレンダリングしている間
+      - ページをレンダリングした後
+    correctAnswer: ページをレンダリングする前
+  - question: サーバでデータを持っていて、クライアントサイドに直接渡したいときはどれを使うのが良いですか？
     answers:
       - nuxtServerInit
       - fetch
       - asyncData
     correctAnswer: nuxtServerInit
-  - question: In asyncData the context is given to the nuxtServerInit as the
+  - question: asyncData では、context は nuxtServerInit にどう渡されますか？
     answers:
-      - first argument
-      - second argument
-      - third argument
-    correctAnswer: second argument
+      - 第 1 引数として
+      - 第 2 引数として
+      - 第 3 引数として
+    correctAnswer: 第 2 引数として
 ---
 
-The `store` directory contains your [Vuex Store](http://vuex.vuejs.org/en/) files. The Vuex Store comes with Nuxt.js out of the box but is disabled by default. Creating an  `index.js`  file in this directory enables the store.
+`store`  ディレクトリには [Vuex ストア](http://vuex.vuejs.org/ja/)に関するファイルが含まれています。Vuex ストアは Nuxt.js に付属していてすぐに使えますが、デフォルトでは無効化されています。このディレクトリ内に `index.js` ファイルを作成することで、ストアが有効化されます。
 
 <base-alert>
 
-_This directory cannot be renamed without extra configuration._
+_このディレクトリは追加の設定無しにリネームすることはできません。_
 
 </base-alert>
 
-Using a store to manage the state is important for every big application. That's why Nuxt.js implements Vuex in its core.
+ストアを使って状態を管理するのは、どういった大きなアプリケーションを作るにあたっても重要なことです。それがなぜ Nuxt.js がそのコアに Vuex を組み込んでいるかの理由です。
 
-## Activate the Store
+## ストアを有効化する
 
-Nuxt.js will look for the `store` directory. If it contains a file, that isn't a hidden file or a `README.md` file, then the store will be activated. This means that Nuxt will:
+Nuxt.js は `store` ディレクトリを確認します。もし隠しファイルや `README.md` ではないファイルが含まれていたら、ストアは有効化されます。これは Nuxt が以下を行うことを意味しています:
 
-1. Import Vuex,
-2. Add the `store` option to the root Vue instance.
+1. Vuex をインポートする
+2. ルートの Vue インスタンスに `store` オプションを追加します。
 
-## Modules
+## モジュール
 
-Every `.js` file inside the `store` directory is transformed as a [namespaced module](http://vuex.vuejs.org/en/modules.html) (`index` being the root module). Your `state` value should always be a `function` to avoid unwanted *shared* state on the server side.
+`store` ディレクトリの中にあるすべての  `.js` ファイルは[名前空間付きモジュール](http://vuex.vuejs.org/ja/modules.html)に変換されます（`index` はルートモジュールになります）。`state` の値は不必要に状態がサーバサイドで*共有されてしまう*ことを避けるため、常に `function` であるべきです。
 
-To get started, export the state as a function, and the mutations and actions as objects.
+はじめに、ステートを関数で、ミューテーションとアクションをオブジェクトでエクスポートしましょう。
 
 ```js{}[store/index.js]
 export const state = () => ({
@@ -89,7 +89,7 @@ export const mutations = {
 }
 ```
 
-Then, you can have a `store/todos.js` file:
+次に、`store/todos.js` ファイルを作成しましょう:
 
 ```js{}[store/todos.js]
 export const state = () => ({
@@ -112,7 +112,7 @@ export const mutations = {
 }
 ```
 
-The store will be created as such:
+ストアは以下のように生成されるでしょう:
 
 ```js
 new Vuex.Store({
@@ -149,7 +149,7 @@ new Vuex.Store({
 })
 ```
 
-And in your `pages/todos.vue`, using the `todos` module:
+また、`pages/todos.vue` では `todos` モジュールを以下のように利用することができます:
 
 ```js{}[pages/todos.vue]
 <template>
@@ -190,9 +190,9 @@ export default {
 </style>
 ```
 
-The module method also works for top-level definitions without implementing a sub-directory in the store directory.
+モジュールメソッドはストアディレクトリにサブディレクトリを追加することなく、トップレベルでの定義に利用することができます。
 
-Example for state: you create a file `store/state.js` and add the following.
+ステートの例: 以下のように `store/state.js` を作成します。
 
 ```js
 export default () => ({
@@ -200,7 +200,7 @@ export default () => ({
 })
 ```
 
-And the corresponding mutations can be in the file  `store/mutations.js`
+対応するミューテーションは `store/mutations.js` に置くことができます
 
 ```js{}[store/mutations.js]
 export default {
@@ -210,9 +210,9 @@ export default {
 }
 ```
 
-## Plugins in the Store
+## ストアでのプラグイン
 
-You can add additional plugins to the store by putting them into the `store/index.js` file:
+`store/index.js` ファイルの中に置くことで、ストアにプラグインを追加することができます:
 
 ```js{}[store/index.js]
 import myPlugin from 'myPlugin'
@@ -230,13 +230,13 @@ export const mutations = {
 }
 ```
 
-More information about the plugins: [Vuex documentation](https://vuex.vuejs.org/en/plugins.html).
+プラグインについてより詳細な情報はこちら: [Vuex のドキュメント](https://vuex.vuejs.org/ja/plugins.html)
 
-## The nuxtServerInit Action
+## nuxtServerInit アクション
 
-If the action `nuxtServerInit` is defined in the store and the mode is `universal`, Nuxt.js will call it with the context (only from the server-side). It's useful when we have some data on the server we want to give directly to the client-side.
+ストアに `nuxtServerInit` アクションが定義されていて、かつ `universal` モードの場合、Nuxt.js はコンテキストを渡してこれを呼び出します（サーバサイドのみ）。これはサーバにある何らかのデータを直接クライアントサイドに渡すときに便利です。
 
-For example, let's say we have sessions on the server-side and we can access the connected user through `req.session.user`. To give the authenticated user to our store, we update our `store/index.js` to the following:
+例えば、サーバサイドにセッションがあり、`req.session.user` で接続したユーザにアクセスできるとしましょう。認証されたユーザをストアに渡すには、`store/index.js` を以下のように変更します:
 
 ```js{}[store/index.js]
 actions: {
@@ -250,17 +250,17 @@ actions: {
 
 <base-alert>
 
-Only the primary module (in `store/index.js`) will receive this action. You'll need to chain your module actions from there.
+このアクションは受け取るのは（`store/index.js` 内の）プライマリモジュールだけです。ここから他のモジュールのアクションに呼び出しを繋いでいく必要があります。
 
 </base-alert>
 
-The [context](/docs/2.x/concepts/context-helpers) is given to `nuxtServerInit` as the 2nd argument in the `asyncData` method.
+[コンテキスト](/docs/2.x/concepts/context-helpers)は `asyncData` メソッドのように、`nuxtServerInit` の第 2 引数として渡されます。
 
-If `nuxt generate` is ran, `nuxtServerInit` will be executed for every dynamic route generated.
+`nuxt generate` が走った場合、`nuxtServerInit` は全ての動的に生成されたルートで実行されます。
 
 <base-alert type="info">
 
-Asynchronous `nuxtServerInit` actions must return a Promise or leverage async/await to allow the nuxt server to wait on them.
+非同期の `nuxtServerInit` アクションは、Promise を返すか async/await を利用して nuxt サーバが待機できるようにしなければなりません。
 
 </base-alert>
 
@@ -272,9 +272,9 @@ actions: {
 }
 ```
 
-## Vuex Strict Mode
+## Vuex 厳格モード
 
-Strict mode is enabled by default on dev mode and turned off in production mode. To disable strict mode in dev, follow the below example in `store/index.js`:
+厳格モードは dev モードではデフォルトで有効になっていて、production モードでは無効になっています。 厳格モードを dev モードでも無効化するには、`store/index.js` を下記の例に従ってください:
 
 ```js
 export const strict = false

@@ -396,6 +396,12 @@ manifest の使い方をより理解するためには [webpack のドキュメ�
 
 > 詳細は [vue-style-loader options](https://github.com/vuejs/vue-style-loader#options) を参照してください。
 
+## loadingScreen
+- 型: `Boolean` または `Object`
+- デフォルト: `{}`
+       
+> [Nuxt loading screen](https://github.com/nuxt/screens) を無効または有効（デフォルト）にします。`false` を渡して無効にした場合, webpack dev サーバーは完全に起動するまで応答しません。
+
 ## optimization
 
 - 型: `Object`

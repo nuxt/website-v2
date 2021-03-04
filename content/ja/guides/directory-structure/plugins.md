@@ -1,6 +1,6 @@
 ---
 title: plugins
-description: The `plugins` directory contains your Javascript plugins that you want to run before instantiating the root Vue.js Application.
+description: `plugins` ディレクトリには、ルート Vue.js アプリケーションをインスタンス化する前に実行する Javascript プラグインが含まれています。
 position: 11
 category: directory-structure
 csb_link_plugins_client: https://codesandbox.io/embed/github/nuxt-academy/guides-examples/tree/master/04_directory_structure/12_plugins_client?fontsize=14&hidenavigation=1&theme=dark
@@ -10,60 +10,60 @@ csb_link_plugins_vue: https://codesandbox.io/embed/github/nuxt-academy/guides-ex
 img: /docs/2.x/plugins.svg
 imgAlt: modules-servermiddleware-plugins-in-nuxt-js
 questions:
-  - question: The `plugins` directory contains your Javascript plugins that you want to run
+  - question: `plugins` ディレクトリには、実行する Javascript プラグインが含まれています
     answers:
-      - before instantiating the root Vue.js Application
-      - while instantiating the root Vue.js Application
-      - after instantiating the root Vue.js Application
-    correctAnswer: before instantiating the root Vue.js Application
-  - question: The Vue.js hooks beforeCreate and created are called
+      - ルート Vue.js アプリケーションをインスタンス化する前
+      - ルート Vue.js アプリケーションのインスタンス化中
+      - ルート Vue.js アプリケーションをインスタンス化した後
+    correctAnswer: ルート Vue.js アプリケーションをインスタンス化する前
+  - question: beforeCreate および created の Vue.js フックが呼び出される
     answers:
-      - only from client side
-      - only from server side
-      - from both client side and server side
-    correctAnswer: from both client side and server side
-  - question: Every time you want to use use Vue.use() you should create a file in which directory?
+      - クライアントサイドからのみ
+      - サーバーサイドからのみ
+      - クライアントサイドとサーバーサイドの両方から
+    correctAnswer: クライアントサイドとサーバーサイドの両方から
+  - question: Vue.use() を使用するたびに、どのディレクトリにファイルを作成する必要がありますか？
     answers:
       - vue
       - plugins
       - vuePlugins
     correctAnswer: plugins
-  - question: Where do you add the plugin so it is imported to your main application?
+  - question: プラグインをどこに追加して、メインアプリケーションにインポートしますか？
     answers:
-      - in your layouts page
-      - in the nuxt.config.js file
-      - you don't have to, it is automatically imported
-    correctAnswer: in the nuxt.config.js file
-  - question: Some plugins might work only in the browser?
+      - レイアウトページに
+      - nuxt.config.js ファイル内に
+      - あなたがする必要はなく、それは自動的にインポートされる
+    correctAnswer: nuxt.config.js ファイル内に
+  - question: 一部のプラグインはブラウザでのみ機能する可能性がありますか？
     answers:
-      - true
-      - false
-    correctAnswer: true
-  - question: What extension can you apply if you want your plugin to only run on the server?
+      - 正
+      - 偽
+    correctAnswer: 正
+  - question: プラグインをサーバー上のみで実行する場合、どの拡張機能を適用できますか？
     answers:
       - .serverside.js
       - .ssr.js
       - .server.js
     correctAnswer: .server.js
-  - question: What two modes can you use for your plugins?
+  - question: プラグインに使用できる2つのモードは何ですか？
     answers:
-      - server and client
-      - ssr and client
-      - server-side and client-side
-    correctAnswer: server and client
-  - question: What do you do to make functions or values available across your app?
+      - サーバーとクライアント
+      - ssrとクライアント
+      - サーバーサイドとクライアントサイド
+    correctAnswer: サーバーとクライアント
+  - question: アプリ全体で関数や値を利用できるようにするために何をしますか？
     answers:
-      - create a plugin
-      - use the inject method
-      - create a module
-    correctAnswer: use the inject method
-  - question: As a convention what should you prefix your inject functions with?
+      - プラグインを作成する
+      - インジェクトメソッドを使用する
+      - モジュールを作成する
+    correctAnswer: インジェクトメソッドを使用する
+  - question: 慣例として、注入関数の前に何を付ける必要がありますか？
     answers:
       - $
       - _
       - ':'
     correctAnswer: $
-  - question: To change the order of your plugins what property do you use?
+  - question: プラグインの順序を変更するには、どのプロパティを使用しますか？
     answers:
       - orderPlugins
       - extendPlugins
@@ -73,13 +73,13 @@ questions:
 
 <app-modal :src="img" :alt="imgAlt"></app-modal>
 
-The `plugins` directory contains JavaScript plugins that you want to run before instantiating the root Vue.js Application. This is the place to add Vue plugins and to inject functions or constants. Every time you need to use `Vue.use()`, you should create a file in `plugins/` and add its path to `plugins` in `nuxt.config.js`.
+`plugins` ディレクトリにはルート Vue.js アプリケーションがインスタンス化する前に実行する Javascript プラグインが含まれています。これは Vue プラグインを追加し、関数や定数を導入する場所です。`Vue.use()` を使用する必要がある時は都度 `plugins/` ファイルを作成し、`nuxt.config.js` の `plugins` にそのパスを追加する必要があります。
 
-## External Packages
+## 外部パッケージ
 
-You may want to use external packages/modules in your application (one great example is [axios](https://axios.nuxtjs.org/)) for making HTTP requests for both server and client.
+サーバーとクライアント両方に HTTP リクエストを行うためには、アプリケーションで外部パッケージ/モジュール（著名な例は [axios](https://axios.nuxtjs.org/) です）を使用することをお勧めします。
 
-First, install it via npm or Yarn.
+はじめに、npm か Yarn を介してインストールします。
 
 <code-group>
   <code-block label="Yarn" active>
@@ -98,7 +98,7 @@ npm install @nuxtjs/axios
   </code-block>
 </code-group>
 
-You can configure for example the axios interceptors to react on possible errors from your API calls across the application. In this example we redirect the user to a custom error page called sorry when we get a 500 status error from our API.
+例えば、アプリケーション全体の API 呼び出しから発生する可能性のあるエラーに対応するよう、axios インターセプターを設定できます。この例では、API から 500 ステータスエラーが発生した時、sorry というカスタムエラーページにユーザをリダイレクトします。
 
 ```js{}[plugins/axios.js]
 export default function ({ $axios, redirect }) {
@@ -110,7 +110,7 @@ export default function ({ $axios, redirect }) {
 }
 ```
 
-Last but not least, add the module and the newly created plugin to the project configuration.
+最後になりますが、モジュールと新しく作成したプラグインをプロジェクト構成に追加します。
 
 ```js{}[nuxt.config.js]
 module.exports = {
@@ -119,7 +119,7 @@ module.exports = {
 }
 ```
 
-Then we can use it directly in your page components:
+そのあとページコンポーネントで直接使用できます:
 
 ```js{}[pages/index.vue]
 <template>
@@ -153,22 +153,22 @@ export default {
 
 <base-alert type="info">
 
-If you get an _Cannot use import statement outside a module_ error, you may need to add your package to the `build` > `transpile` option in `nuxt.config.js` for webpack loader to make your plugin available.
+_モジュールの外部でインポートステートメントを使用できない_ というエラーが発生した場合、プラグインを使用できるようにするために、webpack ローダーの `nuxt.config.js` の `build` > `transpile` オプションにパッケージを追加する必要があります。
 
 </base-alert>
 
 ```js{}[nuxt.config.js]
 build: {
-  // You can extend webpack config here
+  // ここでwebpack設定を拡張できます
   transpile: ['npm-package-name'],
 },
 ```
 
 ## Vue Plugins
 
-If we want to use Vue plugins, like [v-tooltip](https://akryum.github.io/v-tooltip) to display tooltips in your application, we need to setup the plugin before launching the app.
+[v-tooltip](https://akryum.github.io/v-tooltip) などの Vue プラグインを使用してアプリケーションにツールチップを表示する場合、アプリを起動する前にプラグインを設定する必要があります。
 
-First we need to install it
+はじめにインストールをする必要があります
 
 <code-group>
   <code-block label="Yarn" active>
@@ -187,7 +187,7 @@ npm install v-tooltip
   </code-block>
 </code-group>
 
-The we create the file `plugins/vue-tooltip.js`
+次にファイル `plugins/vue-tooltip.js` を作成します
 
 ```js{}[plugins/vue-tooltip.js]
 import Vue from 'vue'
@@ -196,9 +196,9 @@ import VTooltip from 'v-tooltip'
 Vue.use(VTooltip)
 ```
 
-### The plugins Property
+### plugins プロパティ
 
-Then we add the file path inside the `plugins` key of our `nuxt.config.js`. The plugins property lets you add Vue.js plugins easily to your main application. All the paths defined in the `plugins` property will be imported before initializing the main application.
+次に `nuxt.config.js` の `plugins` キー内にファイルパスを追加します。plugins プロパティを使用すると、簡単に Vue.js プラグインをメインアプリケーションに追加できます。`plugins` プロパティで定義されているすべてのパスは、メインアプリケーションを初期化する前にインポートされます。
 
 ```js{}[nuxt.config.js]
 export default {
@@ -208,7 +208,7 @@ export default {
 
 ### ES6 Plugins
 
-If the plugin is located in `node_modules` and exports an ES6 module, you may need to add it to the `transpile` build option:
+プラグインが `node_modules` にあり、ES6 モジュールをエクスポートする場合、`transpile` ビルドオプションに追加する必要がある場合があります:
 
 ```js{}[nuxt.config.js]
 module.exports = {
@@ -218,55 +218,55 @@ module.exports = {
 }
 ```
 
-You can refer to the [configuration build](/docs/2.x/configuration-glossary/configuration-build#transpile) docs for more build options.
+その他のビルドオプションについては、[configuration build](https://ja.nuxtjs.org/docs/2.x/configuration-glossary/configuration-build#transpile)のドキュメントを参照してください。
 
-## Client or server side only
+## クライアント、またはサーバーサイドのみ
 
-Some plugins might work only in the browser because they lack SSR support.
+一部のプラグインは SSR がサポートされていないため、ブラウザのみで機能する場合があります。
 
-### Name conventional plugin
+### 従来のプラグインに名前を付ける
 
-If a plugin is assumed to be run only on client or server side,  `.client.js`  or `.server.js` can be applied as an extension of the plugin file. The file will be automatically included only on the respective (client or server) side.
+プラグインがクライアント、もしくはサーバーサイドのみで実行されると想定される場合、`.client.js` または `.server.js` は、プラグインファイルの拡張子として適用できます。ファイルはそれぞれの（クライアントまたはサーバー）サイドのみに自動的に含まれます。
 
 ```js{}[nuxt.config.js]
 export default {
   plugins: [
-    '~/plugins/foo.client.js', // only in client side
-    '~/plugins/bar.server.js', // only in server side
-    '~/plugins/baz.js' // both client & server
+    '~/plugins/foo.client.js', // クライアントサイドのみ
+    '~/plugins/bar.server.js', // サーバーサイドのみ
+    '~/plugins/baz.js' // クライアントとサーバー両方
   ]
 }
 ```
 
-### Object syntax
+### オブジェクト構文
 
-You can also use the object syntax with the `mode` property (`'client'`  or `'server'`) in `plugins`.
+`plugins` の `mode` プロパティ（`'client'` または `'server'`）でオブジェクト構文を使用することもできます。
 
 ```js{}[nuxt.config.js]
 export default {
   plugins: [
     { src: '~/plugins/both-sides.js' },
-    { src: '~/plugins/client-only.js', mode: 'client' }, // only on client side
-    { src: '~/plugins/server-only.js', mode: 'server' } // only on server side
+    { src: '~/plugins/client-only.js', mode: 'client' }, // クライアントサイドのみ
+    { src: '~/plugins/server-only.js', mode: 'server' } // サーバーサイドのみ
   ]
 }
 ```
 
-## Inject in `$root` & context
+## `$root` とコンテキストの挿入
 
-Sometimes you want to make functions or values available across your app. You can inject those variables into Vue instances (client side), the context (server side) and even in the Vuex store. It is a convention to prefix those functions with a `$`.
+これらの変数を Vue インスタンス（クライアントサイド）、コンテキスト（サーバーサイド）、さらには Vuex ストアに挿入できます。これらの関数の前に `$` を付けるのが慣例です。
 
-Nuxt.js provides you with an `inject(key, value)` method to do this easily. Inject is given as the second parameter when exporting a function. The `$` will be prepended automatically to the key.
+Nuxt.js はこれを簡単に行うための `inject（key、value）` メソッドを提供します。関数をエクスポートするとき、2 番目のパラメーターとして Inject が指定されます。`$` は、キーの先頭に自動的に追加されます。
 
 <base-alert type="info">
 
-It is important to know that in any Vue [instance lifecycle](https://vuejs.org/v2/guide/instance.html#Lifecycle-Diagram), only  `beforeCreate` and `created` hooks are called both, from client-side and server-side. All other hooks are called only from the client-side.
+Vue[インスタンスのライフサイクル](https://jp.vuejs.org/v2/guide/instance.html)では、`beforeCreate` フックと `created`  フックのみがクライアント、サーバーサイド両方から呼び出されることを把握しておくことが重要です。他のすべてのフックはクライアントサイドからのみ呼び出されます。
 
 </base-alert>
 
 ```js{}[plugins/hello.js]
 export default ({ app }, inject) => {
-  // Inject $hello(msg) in Vue, context and store.
+  // Vue、コンテキスト、ストアに$hello(msg）を挿入します。
   inject('hello', msg => console.log(`Hello ${msg}!`))
 }
 ```
@@ -277,17 +277,17 @@ export default {
 }
 ```
 
-Now `$hello` service can be accessed from `context` and `this` in pages, components, plugins, and store actions.
+`$hello` サービスは、ページ、コンポーネント、プラグイン、ストアアクションの `context` と `this` にアクセスできるようになりました。
 
 ```js{}[example-component.vue]
 export default {
   mounted() {
     this.$hello('mounted')
-    // will console.log 'Hello mounted!'
+    // console.log 'Hello mounted!'
   },
   asyncData({ app, $hello }) {
     $hello('asyncData')
-    // If using Nuxt <= 2.12, use 👇
+    // Nuxt <= 2.12 を使用する場合は 👇
     app.$hello('asyncData')
   }
 }
@@ -309,15 +309,15 @@ export const actions = {
 
 <base-alert>
 
-Don't use `Vue.use()`, `Vue.component()`, and globally, don't plug anything in Vue **inside** this function, dedicated to Nuxt injection. It will cause memory leak on server-side.
+`Vue.use()`、`Vue.component()` を使用しないでください、またグローバルに、Nuxt インジェクション専用のこの関数**内**に Vue を接続しないでください。サーバーサイドでメモリリークが発生します。
 
 </base-alert>
 
-## The extendPlugins Property
+## extendsPlugins プロパティ
 
-You may want to extend plugins or change the plugins order created by Nuxt.js. This function accepts an array of [plugin](/docs/2.x/configuration-glossary/configuration-plugins) objects and should return an array of plugin objects.
+プラグインを拡張したり、Nuxt.js によって作成されたプラグインの順序を変更したりすることができます。この関数は [plugin](https://ja.nuxtjs.org/docs/2.x/configuration-glossary/configuration-plugins) オブジェクトの配列を受け入れ、プラグインオブジェクトの配列を返す必要があります。
 
-Example of changing plugins order:
+プラグインの順序を変更する例:
 
 ```js{}[nuxt.config.js]
 export default {
@@ -335,14 +335,15 @@ export default {
 }
 ```
 
-## Global mixins
+## グローバルミックスイン
 
-Global mixins can be easily added with Nuxt plugins but can cause trouble and memory leaks when not handled correctly. Whenever you add a global mixin to your application, you should use a flag to avoid registering it multiple times:
+グローバルミックスインは Nuxt プラグインで簡単に追加できますが、正しく処理しないとトラブルやメモリリークが発生する可能性があります。アプリケーションにグローバルミックスインを追加するときは、常にフラグを使用して複数回登録しないようにする必要があります:
+
 
 ```js{}[plugins/my-mixin-plugin.js]
 if (!Vue.__my_mixin__) {
   Vue.__my_mixin__ = true
-  Vue.mixin({ ... }) // Set up your mixin then
+  Vue.mixin({ ... }) // ミックスインを設定する
 }
 ```
 

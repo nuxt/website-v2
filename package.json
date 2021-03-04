@@ -94,5 +94,8 @@
     "vue-plausible": "^1.1.2",
     "vue-scrollactive": "^0.9.3",
     "vue-scrollto": "^2.20.0"
+  },
+  "dependencies": {
+    "lite-youtube-embed": "^0.1.3"
   }
 }

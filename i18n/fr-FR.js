@@ -26,9 +26,9 @@ module.exports = {
         slug: 'examples'
       },
       {
-        name: 'FAQ',
+        name: 'Ressources',
         icon: 'resources',
-        slug: 'faq'
+        slug: 'resources'
       },
       {
         name: 'Blog',
@@ -38,8 +38,7 @@ module.exports = {
       {
         name: 'Cours Video',
         icon: 'video',
-        href:
-          'https://masteringnuxt.com?friend=nuxt&utm_source=Nuxtjs.org&utm_medium=Link&utm_content=Navbar&utm_content=prelaunch'
+        slug: 'video-courses'
       }
     ],
     search: {
@@ -305,6 +304,16 @@ module.exports = {
       internals: 'Mécanismes'
     },
     examples: {
+      routing: 'Routage',
+      dataFetching: 'Data Fetching',
+      assetManagement: 'Gestion d\'assets',
+      transitions: 'Transitions',
+      seo: 'SEO',
+      loading: 'Chargement',
+      miscellaneous: 'Divers',
+      middleware: 'Middleware',
+      plugins: 'Plugins',
+      modules: 'Modules',
       essentials: 'Essentiels',
       customization: 'Personnalisation',
       advanced: 'Avancé'

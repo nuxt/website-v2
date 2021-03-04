@@ -1,25 +1,25 @@
 ---
-title: 'The Generator Class'
-description: Nuxt Generator Class
+title: 'Generator クラス'
+description: Nuxt の Generator クラス
 menu: Generator
 category: internals-glossary
 position: 8
 ---
 
-- Source: **[generator/generator.js](https://github.com/nuxt/nuxt.js/blob/dev/packages/generator/src/generator.js)**
+- ソース: **[generator/generator.js](https://github.com/nuxt/nuxt.js/blob/dev/packages/generator/src/generator.js)**
 
-## Hooks
+## フック
 
-`generate:` hooks:
+`generate:` フック:
 
-| Hook                    | Arguments                    | When                                                                                                                                          |
-| ----------------------- | ---------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------- |
-| `generate:before`       | (generator, generateOptions) | Hook on before generation                                                                                                                     |
-| `generate:distRemoved`  | (generator)                  | Hook on destination folder cleaned                                                                                                            |
-| `generate:distCopied`   | (generator)                  | Hook on copy static and built files                                                                                                           |
-| `generate:route`        | ({ route, setPayload })      | Hook before generating the page, useful for dynamic payload, see [#7422](https://github.com/nuxt/nuxt.js/pull/7422), available for Nuxt 2.13+ |
-| `generate:page`         | ({ route, path, html })      | Hook to let user update the path & html after generation                                                                                      |
-| `generate:routeCreated` | ({ route, path, errors })    | Hook on saving generated page success                                                                                                         |
-| `generate:extendRoutes` | (routes)                     | Hook to let user update the routes to generate                                                                                                |
-| `generate:routeFailed`  | ({ route, errors })          | Hook on saving generated page failure                                                                                                         |
-| `generate:done`         | (generator, errors)          | Hook on generation finished                                                                                                                   |
+| フック | 引数 | タイミング |
+| --- | --- | --- |
+| `generate:before` | (generator, generateOptions) | 生成前のフック |
+| `generate:distRemoved` | (generator) | ビルド先のフォルダが削除されるときのフック |
+| `generate:distCopied` | (generator) | 静的ファイルとビルドされたファイルがコピーされるときのフック |
+| `generate:route` | ({ route, setPayload }) | ページ生成前のフック。動的ペイロードに便利です。[#7422](https://github.com/nuxt/nuxt.js/pull/7422) を参照してください。Nuxt v2.13 以上で利用可能 |
+| `generate:page` | ({ route, path, html }) | ユーザーが生成後のパスと HTML を更新するときのフック |
+| `generate:routeCreated` | ({ route, path, errors }) | 生成されたページの保存に成功したときのフック |
+| `generate:extendRoutes` | (routes) | ユーザーが生成するルートを更新をするときのフック |
+| `generate:routeFailed` | ({ route, errors }) | 生成されたページの保存に失敗したときのフック |
+| `generate:done` | (generator, errors) | 生成完了時のフック |

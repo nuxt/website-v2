@@ -1,28 +1,28 @@
 ---
-title: 'The Nuxt Class'
-description: Nuxt Core Class
-menu: Nuxt Class
+title: 'Nuxt クラス'
+description: Nuxt のコアクラス
+menu: Nuxt クラス
 category: internals-glossary
 position: 4
 ---
 
-- Source: **[core/nuxt.js](https://github.com/nuxt/nuxt.js/blob/dev/packages/core/src/nuxt.js)**
+- ソース: **[core/nuxt.js](https://github.com/nuxt/nuxt.js/blob/dev/packages/core/src/nuxt.js)**
 
-This is the core container which allows all modules and classes communicate with each other. All modules have access to Nuxt instance using `this.nuxt`.
+すべてのモジュールとクラスが通信できるようにするためのコアコンテナです。すべてのモジュールは `this.nuxt` を使って Nuxt インスタンスにアクセスできます。
 
-## Hooks
+## フック
 
-We can register hooks on certain life cycle events.
+特定のライフサイクルイベントでフックを登録できます。
 
 ```js
 nuxt.hook('ready', async nuxt => {
-  // Your custom code here
+  // ここにコードを記述してください
 })
 ```
 
-| Plugin   | Arguments              | When                                                                           |
-| -------- | ---------------------- | ------------------------------------------------------------------------------ |
-| `ready`  | (nuxt)                 | Nuxt is ready to work (`ModuleContainer` and `Renderer` ready).                |
-| `error`  | (error)                | An unhandled error when calling hooks.                                         |
-| `close`  | (nuxt)                 | Nuxt instance is gracefully closing.                                           |
-| `listen` | (server, {host, port}) | Nuxt **internal** server starts listening. (Using `nuxt start` or `nuxt dev`). |
+| プラグイン | 引数 | タイミング |
+| --- | --- | --- |
+| `ready` | (nuxt) | Nuxt（`ModuleContainer` と `Renderer`）の準備が整ったとき |
+| `error` | (error) | フックの呼び出し時に未処理のエラーが発生したとき |
+| `close` | (nuxt) | Nuxt インスタンスが正しく終了したとき |
+| `listen` | (server, {host, port}) | Nuxt **内部**のサーバーがリッスンを始めたとき（`nuxt start` または `nuxt dev` を使用時に発生します） |

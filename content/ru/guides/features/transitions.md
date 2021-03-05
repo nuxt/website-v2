@@ -67,7 +67,7 @@ questions:
     correctAnswer: nuxt.config.js
 ---
 
-Nuxt.js использует [transition компонент](http://vuejs.org/v2/guide/transitions.html#Transitioning-Single-Elements-Components) что позволяет создавать классные переходы/анимации между вашими страницами.
+Nuxt.js использует [transition компонент](http://vuejs.org/v2/guide/transitions.html#Transitioning-Single-Elements-Components) что позволяет создавать классные анимированные переходы между вашими страницами.
 
 Чтобы создать какой либо эффект перехода между страницами, нужно добавить свойство `transition` в ваш компонент.
 

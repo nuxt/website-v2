@@ -1,5 +1,5 @@
 ---
-title: Transitions
+title: Анимирование переходов
 description: Nuxt.js использует `<transition>` компонент что позволяет создавать классные переходы/анимации между вашими страницами.
 position: 10
 category: features

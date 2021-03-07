@@ -53,7 +53,7 @@ module.exports = {
         'Nuxt.js adalah kerangka kerja minimalis untuk membuat aplikasi Vue.js dengan server side rendering, hot-reloading, static generation, dan banyak lagi!'
     },
     welcome: {
-      title: 'Kerangka Kerja {br} {frameworkType} yang Intuitif',
+      title: 'Kerangka Kerja {br} {frameworkType} nan Intuitif',
       description:
         'Bangun aplikasi Vue.js Anda berikutnya dengan percaya diri menggunakan NuxtJS. Kerangka kerja {openSource} yang membuat pengembangan web menjadi sederhana dan efektif.',
       openSource: 'sumber terbuka',

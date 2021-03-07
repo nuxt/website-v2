@@ -222,7 +222,7 @@ module.exports = {
     },
     title: 'Konsultasi {nuxt} Dukungan',
     description:
-      '{team} kami sekarang menawarkan layanan konsultasi resmi untuk aplikasi NuxtJS Anda. {Break} Kami menawarkan layanan berbeda tergantung kebutuhan Anda, dari dukungan teknis hingga pengembangan kustom. Anda dapat mengharapkan balasan dalam satu hari kerja, kami dapat menandatangani NDA khusus dan Anda bisa mendapatkan pengembalian dana penuh jika Anda tidak puas dengan layanan kami.',
+      '{team} kami sekarang menawarkan layanan konsultasi resmi untuk aplikasi NuxtJS Anda. {Break} Kami menawarkan layanan berbeda tergantung kebutuhan Anda, dari dukungan teknis hingga pengembangan kustom. Anda dapat mengharapkan balasan dalam satu hari kerja, kami dapat menandatangani Perjanjian Larangan Pengungkapan Informasi Rahasia (_Non-Disclosure Agreement_) khusus dan Anda bisa mendapatkan pengembalian dana penuh jika Anda tidak puas dengan layanan kami.',
     technical: {
       title: 'Dukungan teknis',
       description:

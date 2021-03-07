@@ -327,7 +327,7 @@ module.exports = {
         title: 'Discover',
         shop: 'Our Goodies Store',
         consulting: 'Konsultasi & Training',
-        sponsorNuxt: 'Donasi dan menjadi sponsor'
+        sponsorNuxt: 'Donasi dan Menjadi Sponsor'
       },
       about: {
         title: 'Tentang',

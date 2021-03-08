@@ -1,6 +1,6 @@
 ---
 title: 'Properti ignore'
-description: Tentukan berkas ignore untuk aplikasi Nuxt.js Anda
+description: Tentukan berkas yang diabaikan untuk aplikasi Nuxt.js Anda
 menu: ignore
 category: configuration-glossary
 position: 14

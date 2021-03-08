@@ -258,7 +258,7 @@ module.exports = {
     nuxt_team: 'Tim NuxtJS',
     nuxt_community: 'Komunitas Nuxt.js',
     contribute:
-      'Jumpa kesalahan atau ingin berkontribusi pada posting blog ini?'
+      'Menemukan kesalahan atau ingin berkontribusi pada pengeposan blog ini?'
   },
   guide: {
     release_notes: 'Catatan Rilis',

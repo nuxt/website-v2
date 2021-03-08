@@ -69,7 +69,7 @@ npm run dev
 
 **引数:**
 
-- `--name`: 検査するバンドル名。（client, server, modern）
+- `--name`: 検査するバンドル名。（client、server、modern）
 - `--dev`: 開発用の webpack の設定を検査します。
 - `--depth`: 出力する深さ。冗長に出力されないように、デフォルトでは 2 が設定されています。
 - `--no-colors`: ANSI カラーを無効にします。（TTY が使用できない場合、またはファイルへパイプしている場合は、デフォルトで無効になります）

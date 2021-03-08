@@ -17,6 +17,6 @@ Dengan demikian Anda biasanya tidak perlu mengkonfigurasi properti ini kecuali j
 
 <base-alert type="info">
 
-Dua `rootDir` sebagai akar paket yang berisi direktori `node_modules` harus berada di dalam satu pohon direktori yang sama agar Node.js dapat <a href="https://nodejs.org/api/modules.html#modules_all_together">me-_resolve_ dependensi proyek Anda</a>. Kunjungi halaman [properti `srcDir`](/docs/2.x/configuration-glossary/configuration-srcdir) untuk melihat contoh-contoh struktur direktori yang dapat digunakan jika hal tersebut tidak memungkinkan.
+Dua `rootDir` sebagai akar paket yang berisi direktori `node_modules` harus berada di dalam satu struktur direktori yang sama agar Node.js dapat <a href="https://nodejs.org/api/modules.html#modules_all_together">menemukan (_resolve_) dependensi proyek Anda</a>. Kunjungi halaman [properti `srcDir`](/docs/2.x/configuration-glossary/configuration-srcdir) untuk melihat contoh-contoh struktur direktori yang dapat digunakan jika hal tersebut tidak memungkinkan.
 
 </base-alert>

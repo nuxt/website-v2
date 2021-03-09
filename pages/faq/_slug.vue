@@ -16,7 +16,8 @@
     </div>
     <AffixBlock>
       <SponsorsBlock />
-      <AdsBlock :key="$route.params.slug" />
+      test
+      <AdsCarbon :key="$route.params.slug" />
     </AffixBlock>
   </div>
 </template>

@@ -8,7 +8,7 @@ position: 18
 
 > Fitur ini terinspirasi dari [mode modern dari vue-cli](https://cli.vuejs.org/guide/browser-compatibility.html#modern-mode)
 
-- Tipe: `String` atau `Boolean`
+- Tipe Data: `String` atau `Boolean`
   - Nilai anggapan: `false`
   - Nilai yang mungkin:
     - `'client'`: Sajikan kode dengan sintaks modern melalui perintah `<script type="module">` dan kode dengan sintaks lama melalui perintah `<script nomodule>`, juga menambahkan tag `<link rel="modulepreload">` untuk menyajikan kode dengan sintaks modern. Setiap peramban yang memahami tipe `module` akan menyajikan kode dengan sintaks modern sedangkan peramban lama akan menyajikan kode dengan sintaks lama.

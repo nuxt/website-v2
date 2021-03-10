@@ -6,7 +6,7 @@ category: configuration-glossary
 position: 19
 ---
 
-- Tipe: `Array`
+- Tipe Data: `Array`
 
 > Modul adalah ekstensi dari Nuxt.js yang dapat menambah fungsionalitas utama dari Nuxt.js dan menambah integrasi tanpa batas. [Pelajari Lebih Lanjut](/docs/2.x/directory-structure/modules)
 

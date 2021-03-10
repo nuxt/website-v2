@@ -1,39 +1,39 @@
 ---
-title: 'Using Nuxt.js Programmatically'
-description: You can use Nuxt.js programmatically to use it as a middleware giving you the freedom of creating your own server for rendering your web applications.
-menu: Using Nuxt Programmatically
+title: 'Nuxt.js をプログラムで使う'
+description: 'Nuxt.js はプログラム上で、ミドルウェアとして使うことができます。そうすることでウェブアプリケーションをレンダリングする独自のサーバーを自由に作ることができます。'
+menu: 'Nuxt をプログラムで使う'
 category: internals-glossary
 position: 9
 ---
 
-You might want to use your own server with your middleware and your API. That's why you can use Nuxt.js programmatically.
+あなた自身のサーバーと共にミドルウェアや API を使いたい場合もあるかもしれません。そういった場合に Nuxt.js をプログラムから利用することができます。
 
-## Nuxt Constructor
+## Nuxt コンストラクタ
 
-To see the list of options to give to Nuxt.js, see the configuration section.
+Nuxt.js に渡すことができるオプション一覧を見るには、設定のセクションを参照してください。
 
 ```js
 const { loadNuxt, build } = require('nuxt')
 
-// Check if we need to run Nuxt in development mode
+// Nuxt を開発モードで実行する必要があるかどうかをチェックします
 const isDev = process.env.NODE_ENV !== 'production'
 
-// Get a ready to use Nuxt instance
+// Nuxt のインスタンスを取得します
 const nuxt = await loadNuxt(isDev ? 'dev' : 'start')
 
-// Enable live build & reloading on dev
+// 開発モードの場合にライブビルドとライブリローディングを有効化します
 if (isDev) {
   build(nuxt)
 }
 
-// We can use `nuxt.render(req, res)` or `nuxt.renderRoute(route, context)`
+// `nuxt.render(req, res)` または `nuxt.renderRoute(route, context)` が使えます
 ```
 
-You can take a look at the [nuxt-express](https://github.com/nuxt/express) and [adonuxt](https://github.com/nuxt/adonuxt) starters to get started quickly.
+手っ取り早く始めるために [nuxt-express](https://github.com/nuxt/express) や [adonuxt](https://github.com/nuxt/adonuxt) スターターを参照できます。
 
-### Debug logs
+### デバッグログ
 
-If you want to display Nuxt.js logs, you can add the following to the top of your file:
+Nuxt.js のログを表示したいときはファイルの始めに次のコードを追加してください:
 
 ```js
 process.env.DEBUG = 'nuxt:*'

@@ -1,6 +1,6 @@
 ---
 title: plugins
-description: `plugins` ディレクトリには、ルート Vue.js アプリケーションをインスタンス化する前に実行する Javascript プラグインが含まれています。
+description: '`plugins` ディレクトリには、ルート Vue.js アプリケーションをインスタンス化する前に実行する Javascript プラグインが含まれています。'
 position: 11
 category: directory-structure
 csb_link_plugins_client: https://codesandbox.io/embed/github/nuxt-academy/guides-examples/tree/master/04_directory_structure/12_plugins_client?fontsize=14&hidenavigation=1&theme=dark
@@ -10,7 +10,7 @@ csb_link_plugins_vue: https://codesandbox.io/embed/github/nuxt-academy/guides-ex
 img: /docs/2.x/plugins.svg
 imgAlt: modules-servermiddleware-plugins-in-nuxt-js
 questions:
-  - question: `plugins` ディレクトリには、実行する Javascript プラグインが含まれています
+  - question: '`plugins` ディレクトリには、実行する Javascript プラグインが含まれています'
     answers:
       - ルート Vue.js アプリケーションをインスタンス化する前
       - ルート Vue.js アプリケーションのインスタンス化中

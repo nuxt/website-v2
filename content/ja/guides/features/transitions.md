@@ -257,7 +257,7 @@ export default {
 }
 ```
 
-## pageTransition プロパティ
+### pageTransition プロパティ
 
 デフォルトの設定は以下の通りです:
 
@@ -296,9 +296,5 @@ export default {
   opacity: 0;
 }
 ```
-
-<app-modal>
-  <code-sandbox  :src="csb_link"></code-sandbox>
-</app-modal>
 
 <quiz :questions="questions"></quiz>

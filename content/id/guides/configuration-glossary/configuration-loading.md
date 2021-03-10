@@ -1,14 +1,14 @@
 ---
-title: 'The loading Property'
-description: Nuxt.js uses its own component to show a progress bar between the routes. You can customize it, disable it or create your own component.
+title: 'Properti loading'
+description: Nuxt.js menggunakan komponen bawaannya tersendiri untuk menampilkan bar proses saat berpindah rute. Anda dapat memodifikasinya, menonaktifkannya, ataupun menggantinya dengan komponen buatan Anda sendiri.
 menu: loading
 category: configuration-glossary
 position: 15
 ---
 
-- Type: `Boolean` or `Object` or `String`
+- Tipe: `Boolean` atau `Object` atau `String`
 
-> Out of the box, Nuxt.js gives you its own loading progress bar component that's shown between routes. You can customize it, disable it or create your own component.
+> Nuxt.js menggunakan sebuah komponen bawaannya untuk menampilkan bar proses saat perpindahan rute. Anda dapat memodifikasinya, menonaktifkannya, ataupun menggantinya dengan komponen buatan Anda sendiri.
 
 ```javascript
 export default {
@@ -22,9 +22,9 @@ export default {
 }
 ```
 
-## Disable the Progress Bar
+## Menonaktifkan Bar Proses
 
-- Type: `Boolean`
+- Tipe: `Boolean`
 
 ```js{}[nuxt.config.js]
 export default {
@@ -32,9 +32,9 @@ export default {
 }
 ```
 
-## Customizing the Progress Bar
+## Memodifikasi Bar Proses
 
-- Type: `Object`
+- Tipe: `Object`
 
 ```js
 export default {
@@ -45,30 +45,30 @@ export default {
 }
 ```
 
-List of properties to customize the progress bar.
-| Key | Type | Default | Description |
+Daftar properti yang dapat diubah nilainya untuk memodifikasi bar proses bawaan Nuxt.js.
+| Key | Tipe | Nilai Bawaan | Deskripsi |
 | ------------- | ------- | --------- | ------------------------------------------------------------------------------------------------------------------------------------- |
-| `color` | String | `'black'` | CSS color of the progress bar |
-| `failedColor` | String | `'red'` | CSS color of the progress bar when an error appended while rendering the route (if `data` or `fetch` sent back an error for example). |
-| `height` | String | `'2px'` | Height of the progress bar (used in the `style` property of the progress bar) |
-| `throttle` | Number | `200` | In ms, wait for the specified time before displaying the progress bar. Useful for preventing the bar from flashing. |
-| `duration` | Number | `5000` | In ms, the maximum duration of the progress bar, Nuxt.js assumes that the route will be rendered before 5 seconds. |
-| `continuous` | Boolean | `false` | Keep animating progress bar when loading takes longer than `duration`. |
-| `css` | Boolean | `true` | Set to false to remove default progress bar styles (and add your own). |
-| `rtl` | Boolean | `false` | Set the direction of the progress bar from right to left. |
+| `color` | String | `'black'` | Warna bar proses (dalam format warna CSS) |
+| `failedColor` | String | `'red'` | Warna bar proses jika terjadi error saat me-_render_ suatu rute (misal jika terjadi error di dalam fungsi `data` ataupun `fetch`). |
+| `height` | String | `'2px'` | Tinggi bar proses (digunakan dalam properti `style` bar proses). |
+| `throttle` | Number | `200` | Tunggu sekian milidetik sebelum menampilkan bar proses. Berguna untuk mencegah bar berkedip. |
+| `duration` | Number | `5000` | Durasi maksimum penampilan bar proses dalam milidetik, Nuxt.js mengasumsikan rute Anda dapat di-_render_ tidak lebih dari 5 detik. |
+| `continuous` | Boolean | `false` | Terus animasikan bar proses jika proses memuat berlangsung lebih lama dari nilai yang terdapat di properti `duraton`. |
+| `css` | Boolean | `true` | Ubah menjadi _false_ untuk menghapus semua _style_ bawaan bar proses (Anda juga dapat menambahkan _style_ Anda sendiri). |
+| `rtl` | Boolean | `false` | Untuk mengubah arah bar proses menjadi dari kanan ke kiri. |
 
-## Using a Custom Loading Component
+## Menggunakan Komponen _Loading_ Buatan Anda Sendiri
 
-- Type: `String`
+- Tipe: `String`
 
-**Your component has to expose some of these methods:**
+**Komponen Anda harus mengekspos beberapa _method_ berikut:**
 
-| Method          | Required   | Description                                                                              |
-| --------------- | ---------- | ---------------------------------------------------------------------------------------- |
-| `start()`       | Required   | Called when a route changes, this is where you display your component.                   |
-| `finish()`      | Required   | Called when a route is loaded (and data fetched), this is where you hide your component. |
-| `fail(error)`   | _Optional_ | Called when a route couldn't be loaded (failed to fetch data for example).               |
-| `increase(num)` | _Optional_ | Called during loading the route component, `num` is an Integer < 100.                    |
+| Method          | Harus ada | Deskripsi                                                                                                                                              |
+| --------------- | --------- | ------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| `start()`       | Harus ada | Dieksekusi saat rute berganti, di dalam _method_ ini Anda dapat menuliskan kode untuk menampilkan komponen Anda                                        |
+| `finish()`      | Harus ada | Dieksekusi saat rute sudah termuat (dan data sudah selesai ditarik), di dalam _method_ Anda ini dapat menulis kode untuk menyembunyikan komponen Anda. |
+| `fail(error)`   | Opsional  | Dieksekusi saat rute tidak dapat dimuat (misal terdapat galat saat proses penarikan data)                                                              |
+| `increase(num)` | Opsional  | Dieksekusi saat sedang memuat komponen rute, `num` adalah bilangan bulat kurang dari 100.                                                              |
 
 ```html{}[components/loading.vue]
 <template lang="html">

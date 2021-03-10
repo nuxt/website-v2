@@ -1,13 +1,13 @@
 <template>
-  <div class="-mx-4 lg:mx-0 flex flex-col-reverse lg:flex-row">
+  <div class="flex flex-col-reverse -mx-4 lg:mx-0 lg:flex-row">
     <div
-      class="lg:min-h-screen lg:w-3/4 w-full py-8 px-4 lg:static lg:overflow-visible lg:max-h-full"
+      class="w-full px-4 py-8 lg:min-h-screen lg:w-3/4 lg:static lg:overflow-visible lg:max-h-full"
     >
       <LangFallback :doc-link="docLink" :lang-fallback="langFallback" />
 
       <article>
         <h1
-          class="text-light-onSurfacePrimary dark:text-dark-onSurfacePrimary transition-colors duration-300 ease-linear"
+          class="transition-colors duration-300 ease-linear text-light-onSurfacePrimary dark:text-dark-onSurfacePrimary"
         >
           {{ page.title }}
         </h1>
@@ -27,10 +27,10 @@
       <AppToc
         v-if="page.toc && page.toc.length"
         :toc="page.toc"
-        class="mb-8 block"
+        class="block mb-8"
       />
       <SponsorsBlock />
-      <AdsBlock :key="$route.params.slug" />
+      <AdsCarbon :key="$route.params.slug" />
     </AffixBlock>
   </div>
 </template>

@@ -61,6 +61,31 @@ npm run dev
 - **nuxt generate** -（必要に応じて）アプリケーションをビルドし、すべてのルートを HTML ファイルとして生成し、`dist/` ディレクトリに静的にエクスポートします（静的ホスティングに使用されます）。
 - **nuxt start** - 静的ホスティング（Netlify、Vercel、Surge など）と同じように `dist/` ディレクトリを提供します。デプロイ前のテストに最適です。
 
+## Webpackの設定を検査
+
+[vue inspect](https://cli.vuejs.org/guide/webpack.html#inspecting-the-project-s-webpack-config) のように、nuxt がプロジェクトをビルドする際に使用する webpack の設定を検査することができます。
+
+- **nuxt webpack [query...]**
+
+**引数:**
+
+- `--name`: 検査するバンドル名。（client、server、modern）
+- `--dev`: 開発用の webpack の設定を検査します。
+- `--depth`: 出力する深さ。冗長に出力されないように、デフォルトでは 2 が設定されています。
+- `--no-colors`: ANSI カラーを無効にします。（TTY が使用できない場合、またはファイルへパイプしている場合は、デフォルトで無効になります）
+
+**例:**
+
+- `nuxt webpack`
+- `nuxt webpack devtool`
+- `nuxt webpack resolve alias`
+- `nuxt webpack module rules`
+- `nuxt webpack module rules test=.jsx`
+- `nuxt webpack module rules test=.pug oneOf use.0=raw`
+- `nuxt webpack plugins constructor.name=WebpackBar options reporter`
+- `nuxt webpack module rules loader=vue-`
+- `nuxt webpack module rules "loader=.*-loader"`
+
 ## プロダクション開発
 
 Nuxt.js では、サーバーデプロイと静的デプロイのどちらかを選択することができます。

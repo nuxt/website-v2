@@ -1,18 +1,18 @@
 <template>
   <div class="shadow-nuxt">
-    <div class="container mx-auto px-4 lg:flex pb-12">
+    <div class="container px-4 pb-12 mx-auto lg:flex">
       <TheMobileAsideNavNewDocs :links="links" />
       <TheAsideNavNewDocs :links="links" class="hidden lg:block" />
       <div
-        class="min-h-screen w-full lg:static lg:max-h-full lg:overflow-visible lg:w-3/4"
+        class="w-full min-h-screen lg:static lg:max-h-full lg:overflow-visible lg:w-3/4"
       >
-        <div class="-mx-4 lg:mx-0 flex flex-col-reverse lg:flex-row">
+        <div class="flex flex-col-reverse -mx-4 lg:mx-0 lg:flex-row">
           <div
-            class="w-full py-8 px-4 lg:static lg:overflow-visible lg:max-h-full lg:w-3/4"
+            class="w-full px-4 py-8 lg:static lg:overflow-visible lg:max-h-full lg:w-3/4"
           >
             <article>
               <h1
-                class="text-light-onSurfacePrimary dark:text-dark-onSurfacePrimary transition-colors duration-300 ease-linear"
+                class="transition-colors duration-300 ease-linear text-light-onSurfacePrimary dark:text-dark-onSurfacePrimary"
               >
                 {{ page.title }}
               </h1>
@@ -23,7 +23,7 @@
           </div>
           <AffixBlock>
             <SponsorsBlock />
-            <AdsBlock key="release-notes" />
+            <AdsCarbon key="release-notes" />
           </AffixBlock>
         </div>
       </div>

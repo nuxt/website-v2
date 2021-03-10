@@ -1,45 +1,47 @@
 ---
 title: 'nuxt.renderAndGetWindow(url, options)'
-description: Get the `window` from a given URL of a Nuxt.js Application.
+description: 'Nuxt.js アプリケーションの URL を渡して `window` を取得します。'
 menu: renderAndGetWindow
 category: internals-glossary
 position: 12
 ---
 
-- Type: `Function`
-- Argument: `String`
-  1. `String`: URL to render
-  2. _Optional_, `Object`: options
-  - virtualConsole: `Boolean` (default: `true`)
-- Returns: `Promise`
-  - Returns: `window`
+- 型: `Function`
+- 引数: `String`
+  1. `String`: レンダリングする URL
+  2. *オプション* `Object`: オプション
+  - virtualConsole: `Boolean`（デフォルト: `true`）
+- 戻り値: `Promise`
+  - 戻り値: `window`
 
 > Get the window from a given url of a Nuxt.js application.
 
 <base-alert>
 
-This method is made for test purposes.
+このメソッドはテスト目的で作られました。
 
 </base-alert>
 
-To use this function, you have to install `jsdom`:
+この関数を使うためには `jsdom` をインストールする必要があります:
 
 ```bash
 npm install --save-dev jsdom
 ```
 
-Example:
+例:
 
 ```js
-const { Nuxt } = require('nuxt')
+const { loadNuxt } = require('nuxt')
 
-const config = require('./nuxt.config.js')
-config.dev = false
-
-const nuxt = new Nuxt(config)
-
-nuxt.renderAndGetWindow('http://localhost:3000').then(window => {
-  // Display the head `<title>`
+async function init() {
+  // すでにプロジェクトをビルド済みと仮定します
+  const nuxt = await loadNuxt({ for: 'start' })
+  await nuxt.listen(3000)
+  const window = await nuxt.renderAndGetWindow('http://localhost:3000')
+  // head `<title>` を表示する
   console.log(window.document.title)
-})
+  nuxt.close()
+}
+
+init()
 ```

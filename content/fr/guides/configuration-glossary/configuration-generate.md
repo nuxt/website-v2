@@ -188,7 +188,7 @@ _Note: De nombreux services (ex: Netlify) détectent une `404.html` automatiquem
 - Type: `Boolean`
 - Par défault: `false`
 
-Ignore les changements à l'environnement durant l'exécution de `yarn generate`. Cette option permet d'ignorer `process.env` et `env` lors de la vérification du build webpack. Elle peut être utile lorsqu'on génère plusieurs site avec le même projet Nuxt.js.
+Ignore les changements à l'environnement durant l'exécution de `nuxt generate`. Cette option permet d'ignorer `process.env` et `env` lors de la vérification du build webpack. Elle peut être utile lorsqu'on génère plusieurs site avec le même projet Nuxt.js.
 ## interval
 
 - Type: `Number`

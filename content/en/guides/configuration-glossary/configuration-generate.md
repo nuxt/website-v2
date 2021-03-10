@@ -186,7 +186,7 @@ _Note: Multiple services (e.g. Netlify) detect a `404.html` automatically. If yo
 - Type: `Boolean`
 - Default: `false`
 
-Ignore environment changes when running `yarn generate`. This will ignore `process.env` and `env` when ensuring webpack build. It can be useful when generating different sites using the same code base.
+Ignore environment changes when running `nuxt generate`. This will ignore `process.env` and `env` when ensuring webpack build. It can be useful when generating different sites using the same code base.
 
 ## interval
 

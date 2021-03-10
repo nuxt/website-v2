@@ -39,7 +39,7 @@
     "@nuxt/content": "^1.13.1",
     "@nuxt/http": "^0.6.2",
     "@nuxtjs/color-mode": "^2.0.3",
-    "@nuxtjs/eslint-config": "^5.0.0",
+    "@nuxtjs/eslint-config": "^6.0.0",
     "@nuxtjs/eslint-module": "^3.0.2",
     "@nuxtjs/netlify-files": "^1.2.0",
     "@nuxtjs/proxy": "^2.1.0",

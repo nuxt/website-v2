@@ -417,6 +417,29 @@ export default {
 </template>
 ```
 
+<base-alert  type="info">
+
+サーバーでレンダリングされたページでは `<client-only>` 内の `$refs` が `$nextTick` を使っても準備ができていない場合があります。手としては `$nextTick` を数回呼び出すことです:
+
+</base-alert>
+
+```js{}[page.vue]
+mounted(){
+  this.initClientOnlyComp()
+},
+methods: {
+  initClientOnlyComp(count = 10) {
+    this.$nextTick(() => {
+      if (this.$refs.myComp) {
+        //...
+      } else if (count > 0) {
+        this.initClientOnlyComp(count - 1);
+      }
+    });
+  },
+}
+```
+
 <base-alert>
 
 Nuxt のバージョンが v2.9.0 未満の場合、`<client-only>` のかわりに `<no-ssr>` を使用してください。

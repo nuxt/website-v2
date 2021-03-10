@@ -253,15 +253,15 @@ keep-alive と keep-alive-props についてより詳しく知るためには [v
 
 </base-alert>
 
-<base-alert type="info">
-
-`<NuxtLink>` は[スマートプリフェッチ](/docs/2.x/features/nuxt-components#the-nuxtlink-component)の機能も持ちます。
-
-</base-alert>
-
 ## prefetchLinks
 
 Nuxt.js はスマートプリフェッチの機能を持ちます。viewport 内やスクロール時にリンクが表示されたことを検知し、それらのページの JavaScript をプリフェッチしてユーザーがリンクをクリックするのを待ちます。Nuxt.js はブラウザがビジーではないときにのみリソースを読み込み、接続がオフラインのときや 2G の接続しかない場合はプリフェッチをスキップします。
+
+<base-alert type="info">
+
+スマートプリフェッチについての詳細は[こちらの記事](/blog/introducing-smart-prefetching)を参照してください。
+
+</base-alert>
 
 ### 特定のリンクでプリフェッチを無効にする
 

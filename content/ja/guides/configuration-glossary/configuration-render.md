@@ -97,6 +97,13 @@ pushAssets: (req, res, publicPath, preloadFiles) =>
 
 アセットは `,` で結合され、1 つの `Link` ヘッダーとして渡されます。
 
+## asyncScripts
+
+- 型: `Boolean`
+  - デフォルト: `false`
+
+> Nuxt バンドル用に `<script>` タグに `async` 属性を追加し、パースと並行してフェッチできるようにします（`v2.14.8` 以上から利用可能）。[詳細はこちら](https://developer.mozilla.org/ja/docs/Web/HTML/Element/script)を参照してください。
+
 ## injectScripts
 
 - 型: `Boolean`

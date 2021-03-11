@@ -22,7 +22,7 @@ export default {
 }
 ```
 
-Hal ini memungkinan Anda untuk menentukan [_host_ dan _port_](/docs/2.x/features/configuration#edit-host-and-port) instansi server Nuxt.js Anda.
+Hal ini memungkinan Anda untuk menentukan [_host_ dan _port_](/docs/2.x/features/configuration#edit-host-and-port) _instance_ peladen (_server_) Nuxt.js Anda.
 
 ## Contoh Menggunakan Konfigurasi HTTPS
 

@@ -57,7 +57,7 @@ export default {
 - Tipe data: `Object` atau `Boolean`
 - Nilai bawaan: `false`
 
-Dengan mengaktifkan properti `server.timing`, Nuxt.js akan membuat _middleware_ yang bertugas mengukur berapa lama waktu yang diperlukan untuk melakukan _server-side rendering_. _Middleware_ ini kemudian akan mencantumkan hasil pengukurannya ke _headers_ respon server Anda pada _key_ `Server-Timing`.
+Dengan mengaktifkan properti `server.timing`, Nuxt.js akan membuat _middleware_ yang bertugas mengukur berapa lama waktu yang diperlukan untuk melakukan _server-side rendering_. _Middleware_ ini kemudian akan mencantumkan hasil pengukurannya ke _headers_ respon peladen (_server_) Anda pada _key_ `Server-Timing`.
 
 ### Contoh Menggunakan Konfigurasi timing
 

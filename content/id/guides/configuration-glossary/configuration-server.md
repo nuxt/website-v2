@@ -1,30 +1,30 @@
 ---
-title: 'The server Property'
-description: Nuxt.js let you define the server connection variables for your application inside `nuxt.config.js`.
+title: 'Properti server'
+description: Nuxt.js memungkinkan Anda untuk menentukan variabel untuk koneksi ke server melalui `nuxt.config.js`.
 menu: server
 category: configuration-glossary
 position: 26
 ---
 
-- Type: `Object`
+- Tipe Data: `Object`
 
-> Nuxt.js let you define the server connection variables for your application inside `nuxt.config.js`.
+> Nuxt.js memungkinkan Anda untuk menentukan variabel untuk koneksi ke server melalui `nuxt.config.js`.
 
-## Basic example:
+## Contoh sederhana:
 
 ```js{}[nuxt.config.js]
 export default {
   server: {
-    port: 8000, // default: 3000
-    host: '0.0.0.0', // default: localhost,
+    port: 8000, // nilai bawaan: 3000
+    host: '0.0.0.0', // nilai bawaan: localhost,
     timing: false
   }
 }
 ```
 
-This lets you specify the [host and port](/docs/2.x/features/configuration#edit-host-and-port) for your Nuxt.js server instance.
+Hal ini memungkinan Anda untuk menentukan [_host_ dan _port_](/docs/2.x/features/configuration#edit-host-and-port) instansi server Nuxt.js Anda.
 
-## Example using HTTPS configuration
+## Contoh menggunakan konfigurasi HTTPS
 
 ```js{}[nuxt.config.js]
 import path from 'path'
@@ -40,9 +40,9 @@ export default {
 }
 ```
 
-You can find additional information on creating server keys and certificates on `localhost` on [certificates for localhost](https://letsencrypt.org/docs/certificates-for-localhost/) article.
+Anda dapat menemukan informasi lebih lanjut terkait pemembuatan _key_ dan sertifikat server di `localhost` pada [sertifikat untuk localhost](https://letsencrypt.org/docs/certificates-for-localhost/)
 
-## Example using sockets configuration
+## Contoh menggunakan konfigurasi sockets
 
 ```js{}[nuxt.config.js]
 export default {
@@ -54,14 +54,14 @@ export default {
 
 ## timing
 
-- Type: `Object` or `Boolean`
-- Default: `false`
+- Tipe data: `Object` atau `Boolean`
+- Nilai bawaan: `false`
 
-Enabling the `server.timing` option adds a middleware to measure the time elapsed during server-side rendering and adds it to the headers as 'Server-Timing'
+Dengan mengaktifkan properti `server.timing`, Nuxt.js akan membuat _middleware_ yang bertugas mengukur berapa lama waktu yang diperlukan untuk melakukan _server-side rendering_. _Middleware_ ini kemudian akan mencantumkan hasil pengukurannya ke _headers_ respon server Anda pada _key_ `Server-Timing`.
 
-### Example using timing configuration
+### Contoh menggunakan konfigurasi timing
 
-`server.timing` can be an object for providing options. Currently, only `total` is supported (which directly tracks the whole time spent on server-side rendering)
+`server.timing` dapat berupa objek yang berisi properti-properti yang bertindak sebagai opsi pengukuran. Saat ini, Nuxt.js hanya mendukung properti `total` sebagai opsi (dengan mengaktifkan properti ini, Nuxt.js secara langsung memantau keseluruhan waktu yang dihabiskan pada proses _server-side rendering_).
 
 ```js{}[nuxt.config.js]
 export default {
@@ -73,33 +73,33 @@ export default {
 }
 ```
 
-### Using timing API
+### Menggunakan API timing
 
-The `timing` API is also injected into the `response` on server-side when `server.time` is enabled.
+API `timing` juga akan dicantumkan di `response` di sisi server jika `server.time` diaktifkan.
 
-#### Syntax
+#### Sintaks
 
 ```js
 res.timing.start(name, description)
 res.timing.end(name)
 ```
 
-#### Example using timing in serverMiddleware
+#### Contoh menggunakan timing di serverMiddleware
 
 ```js
 export default function (req, res, next) {
-  res.timing.start('midd', 'Middleware timing description')
-  // server side operation..
+  res.timing.start('midd', 'Deskripsi timing middleware')
+  // operasi di sisi server
   // ...
   res.timing.end('midd')
   next()
 }
 ```
 
-Then `server-timing` head will be included in response header like:
+Lalu _head_ `Server-Timing` akan secara otomatis dibuat di dalam _header_ respon server:
 
 ```bash
-Server-Timing: midd;desc="Middleware timing description";dur=2.4
+Server-Timing: midd;desc="Deskripsi timing middleware";dur=2.4
 ```
 
-Please refer to [Server-Timing MDN](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Server-Timing) for more details.
+Silakan merujuk pada [Server-Timing MDN](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Server-Timing) untuk detail lebih lanjut.

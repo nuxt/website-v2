@@ -10,7 +10,7 @@ position: 26
 
 > Nuxt.js memungkinkan Anda untuk menentukan variabel untuk koneksi ke server melalui `nuxt.config.js`.
 
-## Contoh sederhana:
+## Contoh Sederhana:
 
 ```js{}[nuxt.config.js]
 export default {
@@ -24,7 +24,7 @@ export default {
 
 Hal ini memungkinan Anda untuk menentukan [_host_ dan _port_](/docs/2.x/features/configuration#edit-host-and-port) instansi server Nuxt.js Anda.
 
-## Contoh menggunakan konfigurasi HTTPS
+## Contoh Menggunakan Konfigurasi HTTPS
 
 ```js{}[nuxt.config.js]
 import path from 'path'
@@ -42,7 +42,7 @@ export default {
 
 Anda dapat menemukan informasi lebih lanjut terkait pemembuatan _key_ dan sertifikat server di `localhost` pada [sertifikat untuk localhost](https://letsencrypt.org/docs/certificates-for-localhost/)
 
-## Contoh menggunakan konfigurasi sockets
+## Contoh Menggunakan Konfigurasi Sockets
 
 ```js{}[nuxt.config.js]
 export default {
@@ -59,7 +59,7 @@ export default {
 
 Dengan mengaktifkan properti `server.timing`, Nuxt.js akan membuat _middleware_ yang bertugas mengukur berapa lama waktu yang diperlukan untuk melakukan _server-side rendering_. _Middleware_ ini kemudian akan mencantumkan hasil pengukurannya ke _headers_ respon server Anda pada _key_ `Server-Timing`.
 
-### Contoh menggunakan konfigurasi timing
+### Contoh Menggunakan Konfigurasi timing
 
 `server.timing` dapat berupa objek yang berisi properti-properti yang bertindak sebagai opsi pengukuran. Saat ini, Nuxt.js hanya mendukung properti `total` sebagai opsi (dengan mengaktifkan properti ini, Nuxt.js secara langsung memantau keseluruhan waktu yang dihabiskan pada proses _server-side rendering_).
 
@@ -84,7 +84,7 @@ res.timing.start(name, description)
 res.timing.end(name)
 ```
 
-#### Contoh menggunakan timing di serverMiddleware
+#### Contoh Menggunakan timing di serverMiddleware
 
 ```js
 export default function (req, res, next) {

@@ -22,7 +22,7 @@ loadingIndicator: {
 }
 ```
 
-## Komponen indikator bawaan Nuxt.js
+## Komponen Indikator Bawaan Nuxt.js
 
 Komponen-komponen indikator ini diimpor dari proyek [SpinKit](http://tobiasahlin.com/spinkit). Anda dapat mengunjungi halaman demonya untuk meninjau _spinner-spinner_ ini.
 
@@ -40,7 +40,7 @@ Komponen-komponen indikator ini diimpor dari proyek [SpinKit](http://tobiasahlin
 
 Anda dapat memodifikasi properti `color` dan `background` dari komponen-komponen indikator bawaan tersebut.
 
-## Komponen indikator buatan Anda sendiri
+## Gunakan Komponen Indikator Buatan Anda Sendiri
 
 Jika Anda perlu membuat komponen indikator Anda sendiri, Anda dapat mengisi nilai properti `loadingIndicator` dengan _string_ yang berisi _path_ ke _template_ HTML komponen indikator buatan Anda. Sub-properti lainnya di dalam properti `loadingIndicator` juga akan diteruskan ke _template_ buatan Anda.
 

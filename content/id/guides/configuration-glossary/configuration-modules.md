@@ -30,7 +30,7 @@ export default {
 }
 ```
 
-Pengembang modul biasanya menyediakan langkah-langkah tambahan yang perlu diambil serta cara untuk menggunakan modul.
+Pengembang modul biasanya menyediakan langkah-langkah tambahan yang perlu dilakukan untuk menggunakan modul.
 
 Nuxt.js akan berusaha untuk mencari setiap modul dalam _array_ `modules` menggunakan _require path_ milik node (yang ada dalam `node_modules`) dan akan mencari pada direktori yang ditunjuk oleh `srcDir` apabila alias `~` digunakan. Modul akan dieksekusi secara sekuensial sehingga urutan penulisan menjadi penting.
 

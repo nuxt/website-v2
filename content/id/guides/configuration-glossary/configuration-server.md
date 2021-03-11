@@ -75,7 +75,7 @@ export default {
 
 ### Menggunakan API timing
 
-API `timing` juga akan dicantumkan di `response` di sisi server jika `server.time` diaktifkan.
+API `timing` juga akan dicantumkan di `response` di sisi peladen (_server_) jika `server.time` diaktifkan.
 
 #### Sintaks
 

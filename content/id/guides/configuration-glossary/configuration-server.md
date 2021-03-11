@@ -1,6 +1,6 @@
 ---
 title: 'Properti server'
-description: Nuxt.js memungkinkan Anda untuk menentukan variabel untuk koneksi ke server melalui `nuxt.config.js`.
+description: Nuxt.js memungkinkan Anda untuk menentukan variabel untuk koneksi ke peladen (server) melalui `nuxt.config.js`.
 menu: server
 category: configuration-glossary
 position: 26

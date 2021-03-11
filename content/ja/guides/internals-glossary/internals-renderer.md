@@ -1,26 +1,26 @@
 ---
-title: 'The Renderer Class'
-description: Nuxt Renderer Class
+title: 'Renderer クラス'
+description: Nuxt の Renderer クラス
 menu: Renderer
 category: internals-glossary
 position: 5
 ---
 
-- Source: **[vue-renderer/renderer.js](https://github.com/nuxt/nuxt.js/blob/dev/packages/vue-renderer/src/renderer.js)**
+- ソース: **[vue-renderer/renderer.js](https://github.com/nuxt/nuxt.js/blob/dev/packages/vue-renderer/src/renderer.js)**
 
-This class is exporting a connect middleware which handles and serves all SSR and asset requests.
+このクラスは、すべての SSR とアセットのリクエストを処理して提供する connect ミドルウェアをエクスポートしています。
 
-## Hooks
+## フック
 
-We can register hooks on certain life cycle events.
+特定のライフサイクルイベントでフックを登録できます。
 
-| Hook                     | Arguments                | When                                                                                                                                                                                                               |
-| ------------------------ | ------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| `render:before`          | (renderer, options)      | Before setting up middleware and resources for the Renderer class, useful to overload some methods or options.                                                                                                     |
-| `render:setupMiddleware` | (app) _connect instance_ | Before Nuxt adds its middleware stack. We can use it to register custom server side middleware.                                                                                                                    |
-| `render:errorMiddleware` | (app) _connect instance_ | Before adding Nuxt error middleware, useful to add your own middleware before using Nuxt's. See the [Sentry module](https://github.com/nuxt-community/sentry-module/blob/v4.0.3/lib/module.js#L151) for more info. |
-| `render:resourcesLoaded` | (resources)              | Called after resources for renderer are loaded (client manifest, server bundle, etc).                                                                                                                              |
-| `render:done`            | (renderer)               | SSR Middleware and all resources are ready (Renderer ready)                                                                                                                                                        |
-| `render:routeContext`    | (context.nuxt)           | _Every time a route is server-rendered and before `render:route` hook_. Called before serializing Nuxt context into `window.__NUXT__`, useful to add some data that you can fetch on client-side.                  |
-| `render:route`           | (url, result, context)   | _Every time a route is server-rendered_. Called before sending back the request to the browser.                                                                                                                    |
-| `render:routeDone`       | (url, result, context)   | _Every time a route is server-rendered_. Called after the response has been sent to the browser.                                                                                                                   |
+| フック | 引数 | タイミング |
+| --- | --- | --- |
+| `render:before` | (renderer, options) | Renderer クラスのミドルウェアとリソースを設定する前、メソッドやオプションのオーバーロードに役立ちます。 |
+| `render:setupMiddleware` | (app) _connect instance_ | Nuxt が追加する前のミドルウェアスタックです。カスタムしたサーバーサイドミドルウェアを登録するために使用できます。 |
+| `render:errorMiddleware` | (app) _connect instance_ | Nuxt のエラーミドルウェアを追加する前、Nuxt のミドルウェアを使用する前に独自のミドルウェアを追加することに役立ちます。詳細については [Sentry モジュール](https://github.com/nuxt-community/sentry-module/blob/v4.0.3/lib/module.js#L151)を参照してください。 |
+| `render:resourcesLoaded` | (resources) | レンダラーのリソースがロードされた後に呼び出されます（クライアントマニフェスト、サーバーバンドルなど）。 |
+| `render:done` | (renderer) | SSR ミドルウェアとすべてのリソースの準備がおわったとき（Renderer の準備完了） |
+| `render:routeContext` | (context.nuxt) | _`render:route` フックの前に route がサーバーレンダリングされるたび_。 Nuxt コンテキストを `window.__NUXT__` にシリアライズする前に呼び出され、クライアントサイドでフェッチできるデータを追加することに役立ちます。 |
+| `render:route` | (url, result, context) | _route がサーバーレンダリングされるたび_。リクエストをブラウザに送り返す前に呼び出されます。 |
+| `render:routeDone` | (url, result, context) | _route がサーバーレンダリングされるたび_。レスポンスがブラウザに送られた後に呼び出されます。 |

@@ -8,7 +8,7 @@ position: 26
 
 - Tipe Data: `Object`
 
-> Nuxt.js memungkinkan Anda untuk menentukan variabel untuk koneksi ke server melalui `nuxt.config.js`.
+> Nuxt.js memungkinkan Anda untuk menentukan variabel untuk koneksi ke peladen (_server_) melalui `nuxt.config.js`.
 
 ## Contoh Sederhana:
 

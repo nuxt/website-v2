@@ -8,7 +8,7 @@ position: 16
 
 > Tampilkan indikator _loading_ saat halaman sedang dimuat.
 
-Tanpa _server-side rendering_ (ketika properti `ssr` bernilai `false`), tidak ada konten dari sisi server yang perlu diambil ketika halaman pertama kali dimuat. Jadi alih-alih menampilkan halaman kosong, kita bisa menampilkan _spinner_.
+Tanpa _server-side rendering_ (ketika properti `ssr` bernilai `false`), tidak ada konten dari sisi peladen (_server_) yang perlu diambil ketika halaman pertama kali dimuat. Alih-alih menampilkan halaman kosong, kita bisa menampilkan _spinner_.
 
 Properti ini dapat berupa 3 tipe data: `string` atau `false` atau `object`. Jika berupa _string_, akan diubah menjadi format objek seperti berikut dengan nilai yang Anda tuliskan diletakkan sebagai nilai sub-properti `name`.
 

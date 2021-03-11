@@ -49,7 +49,7 @@ Daftar properti yang dapat diubah nilainya untuk memodifikasi bar proses bawaan 
 | Key | Tipe | Nilai Bawaan | Deskripsi |
 | ------------- | ------- | --------- | ------------------------------------------------------------------------------------------------------------------------------------- |
 | `color` | String | `'black'` | Warna bar proses (dalam format warna CSS) |
-| `failedColor` | String | `'red'` | Warna bar proses jika terjadi error saat me-_render_ suatu rute (misal jika terjadi error di dalam fungsi `data` ataupun `fetch`). |
+| `failedColor` | String | `'red'` | Warna bar proses jika terjadi error saat me-_render_ suatu halaman (misal jika terjadi error di dalam fungsi `data` ataupun `fetch`). |
 | `height` | String | `'2px'` | Tinggi bar proses (digunakan dalam properti `style` bar proses). |
 | `throttle` | Number | `200` | Tunggu sekian milidetik sebelum menampilkan bar proses. Berguna untuk mencegah bar berkedip. |
 | `duration` | Number | `5000` | Durasi maksimum penampilan bar proses dalam milidetik, Nuxt.js mengasumsikan rute Anda dapat di-_render_ tidak lebih dari 5 detik. |

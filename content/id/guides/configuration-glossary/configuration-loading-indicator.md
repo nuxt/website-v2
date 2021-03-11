@@ -1,18 +1,18 @@
 ---
-title: 'The loading indicator Property'
-description: Show fancy loading indicator while page is loading!
+title: 'Properti loadingIndicator'
+description: Tampilkan indikator loading saat halaman sedang dimuat.
 menu: loadingIndicator
 category: configuration-glossary
 position: 16
 ---
 
-> Show fancy loading indicator while page is loading!
+> Tampilkan indikator _loading_ saat halaman sedang dimuat.
 
-Without Server Side Rendering (when `ssr` option is `false`), there is no content from the server side on the first page load. So, instead of showing a blank page while the page loads, we may show a spinner.
+Tanpa _server-side rendering_ (ketika properti `ssr` bernilai `false`), tidak ada konten dari sisi server yang perlu diambil ketika halaman pertama kali dimuat. Jadi alih-alih menampilkan halaman kosong, kita bisa menampilkan _spinner_.
 
-This property can have 3 different types: `string` or `false` or `object`. If a string value is provided it is converted to object style.
+Properti ini dapat berupa 3 tipe data: `string` atau `false` atau `object`. Jika berupa _string_, akan diubah menjadi format objek seperti berikut dengan nilai yang Anda tuliskan diletakkan sebagai nilai sub-properti `name`.
 
-Default value is:
+Nilai bawaannya adalah:
 
 ```js
 loadingIndicator: {
@@ -22,9 +22,9 @@ loadingIndicator: {
 }
 ```
 
-## Built-in indicators
+## Komponen indikator bawaan Nuxt.js
 
-These indicators are imported from the awesome [SpinKit](http://tobiasahlin.com/spinkit) project. You can use its demo page to preview spinners.
+Komponen-komponen indikator ini diimpor dari proyek [SpinKit](http://tobiasahlin.com/spinkit). Anda dapat mengunjungi halaman demonya untuk meninjau _spinner-spinner_ ini.
 
 - circle
 - cube-grid
@@ -38,10 +38,10 @@ These indicators are imported from the awesome [SpinKit](http://tobiasahlin.com/
 - three-bounce
 - wandering-cubes
 
-Built-in indicators support `color` and `background` options.
+Anda dapat memodifikasi properti `color` dan `background` dari komponen-komponen indikator bawaan tersebut.
 
-## Custom indicators
+## Komponen indikator buatan Anda sendiri
 
-If you need your own special indicator, a String value or Name key can also be a path to an HTML template of indicator source code! All of the options are passed to the template, too.
+Jika Anda perlu membuat komponen indikator Anda sendiri, Anda dapat mengisi nilai properti `loadingIndicator` dengan _string_ yang berisi _path_ ke _template_ HTML komponen indikator buatan Anda. Sub-properti lainnya di dalam properti `loadingIndicator` juga akan diteruskan ke _template_ buatan Anda.
 
-Nuxt's built-in [source code](https://github.com/nuxt/nuxt.js/tree/dev/packages/vue-app/template/views/loading) is also available if you need a base!
+Jika Anda membutuhkan komponen dasar, Anda dapat melihat [kode sumber](https://github.com/nuxt/nuxt.js/tree/dev/packages/vue-app/template/views/loading) komponen-komponen indikator bawaan Nuxt.js

@@ -1,6 +1,6 @@
 ---
 title: 'Properti loading'
-description: Nuxt.js menggunakan komponen bawaannya tersendiri untuk menampilkan bar proses saat berpindah rute. Anda dapat memodifikasinya, menonaktifkannya, ataupun menggantinya dengan komponen buatan Anda sendiri.
+description: Nuxt.js menggunakan sebuah komponen bawaan untuk menampilkan bar proses saat perpindahan rute. Anda dapat memodifikasinya, menonaktifkannya, ataupun menggantinya dengan komponen buatan Anda sendiri.
 menu: loading
 category: configuration-glossary
 position: 15
@@ -8,7 +8,7 @@ position: 15
 
 - Tipe: `Boolean` atau `Object` atau `String`
 
-> Nuxt.js menggunakan sebuah komponen bawaannya untuk menampilkan bar proses saat perpindahan rute. Anda dapat memodifikasinya, menonaktifkannya, ataupun menggantinya dengan komponen buatan Anda sendiri.
+> Nuxt.js menggunakan sebuah komponen bawaan untuk menampilkan bar proses saat perpindahan rute. Anda dapat memodifikasinya, menonaktifkannya, ataupun menggantinya dengan komponen buatan Anda sendiri.
 
 ```javascript
 export default {

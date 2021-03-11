@@ -66,7 +66,7 @@ Daftar properti yang dapat diubah nilainya untuk memodifikasi bar proses bawaan 
 | Method          | Harus ada | Deskripsi                                                                                                                                              |
 | --------------- | --------- | ------------------------------------------------------------------------------------------------------------------------------------------------------ |
 | `start()`       | Harus ada | Dieksekusi saat halaman berganti, di dalam _method_ ini Anda dapat menuliskan kode untuk menampilkan komponen Anda                                        |
-| `finish()`      | Harus ada | Dieksekusi saat rute sudah termuat (dan data sudah selesai ditarik), di dalam _method_ Anda ini dapat menulis kode untuk menyembunyikan komponen Anda. |
+| `finish()`      | Harus ada | Dieksekusi saat halaman sudah termuat (dan data sudah selesai ditarik), di dalam _method_ Anda ini dapat menulis kode untuk menyembunyikan komponen Anda. |
 | `fail(error)`   | Opsional  | Dieksekusi saat rute tidak dapat dimuat (misal terdapat galat saat proses penarikan data)                                                              |
 | `increase(num)` | Opsional  | Dieksekusi saat sedang memuat komponen rute, `num` adalah bilangan bulat kurang dari 100.                                                              |
 

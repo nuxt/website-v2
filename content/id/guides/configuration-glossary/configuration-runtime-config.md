@@ -6,7 +6,7 @@ category: configuration-glossary
 position: 25
 ---
 
-Konfigurasi _runtime_ memperbolehkan Anda untuk meneruskan konfigurasi dan variabel lingkungan pada konteks Nuxt. Anda dapat membaca [panduan konfigurasi runtime](/docs/2.x/directory-structure/nuxt-config#runtimeconfig) untuk mengetahui informasi lebih lanjut mengenai penggunaan konfigurasi _runtime_
+Konfigurasi _runtime_ memperbolehkan Anda untuk meneruskan konfigurasi dan variabel lingkungan pada konteks Nuxt. Anda dapat membaca [panduan konfigurasi runtime](/docs/2.x/directory-structure/nuxt-config#runtimeconfig) untuk mengetahui informasi lebih lanjut mengenai penggunaan konfigurasi _runtime_.
 
 ## `publicRuntimeConfig`
 

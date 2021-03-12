@@ -12,7 +12,7 @@ position: 28.1
   - `true`: Mengaktifkan _server-side rendering_
   - `false`: Menonaktifkan _server-side rendering_ (Nuxt hanya akan menyediakan _client-side rendering_)
 
-> Anda dapat menyetel opsi ini ke `false` ketika Anda **hanya menginginkan _client-side rendering_** 
+> Anda dapat menyetel opsi ini ke `false` ketika Anda **hanya menginginkan _client-side rendering_**.
 
 ```js{}[nuxt.config.js]
 export default {

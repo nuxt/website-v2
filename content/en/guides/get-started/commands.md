@@ -3,7 +3,10 @@ title: Commands and Deployment
 description: Nuxt.js comes with a set of useful commands, both for development and production purpose.
 position: 4
 category: get-started
+video: hYdXzIGDlYA
 ---
+
+<YouTubeLite :video="video" :title="title" ></YouTubeLite>
 
 Nuxt.js comes with a set of useful commands, both for development and production purpose.
 
@@ -60,6 +63,31 @@ You can run different commands depending on the [target](/docs/2.x/features/depl
 - **nuxt dev** - Launch the development server.
 - **nuxt generate** - Build the application (if needed), generate every route as a HTML file and statically export to `dist/` directory (used for static hosting).
 - **nuxt start** - serve the `dist/` directory like your static hosting would do (Netlify, Vercel, Surge, etc), great for testing before deploying.
+
+## Webpack Config Inspection
+
+You can inspect the webpack config used by nuxt to build project similar to [vue inspect](https://cli.vuejs.org/guide/webpack.html#inspecting-the-project-s-webpack-config)).
+
+- **nuxt webpack [query...]**
+
+**Arguments:**
+
+- `--name`: Bundle name to inspect. (client, server, modern)
+- `--dev`: Inspect webpack config for dev mode
+- `--depth`: Inspection depth. Defaults to 2 to prevent verbose output.
+- `--no-colors`: Disable ANSI colors (disabled by default when TTY is not available or when piping to a file)
+
+**Examples:**
+
+- `nuxt webpack`
+- `nuxt webpack devtool`
+- `nuxt webpack resolve alias`
+- `nuxt webpack module rules`
+- `nuxt webpack module rules test=.jsx`
+- `nuxt webpack module rules test=.pug oneOf use.0=raw`
+- `nuxt webpack plugins constructor.name=WebpackBar options reporter`
+- `nuxt webpack module rules loader=vue-`
+- `nuxt webpack module rules "loader=.*-loader"`
 
 ## Production Deployment
 

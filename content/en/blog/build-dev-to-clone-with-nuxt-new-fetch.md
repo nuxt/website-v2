@@ -22,7 +22,7 @@ _Let’s build a blazing fast articles and tutorials app using Nuxt and the DEV 
 <video src="/blog/build-dev-to-clone-with-nuxt-new-fetch/dev-clone-nuxt.mp4" autoplay loop playsinline controls></video>
 
 <p align="center">
-  <a href="https://dev-clone.nuxtjs.app" target="_blank" rel="noopener nofollow">View demo</a> / 
+  <a href="https://dev-clone.nuxtjs.app" target="_blank" rel="noopener nofollow">View demo</a> /
   <a href="https://github.com/bdrtsky/nuxt-dev-to-clone" target="_blank" rel="noopener nofollow">Source</a>
 </p>
 
@@ -79,7 +79,7 @@ npx create-nuxt-app nuxt-dev-to-clone
 # leave the default answers for each question
 ```
 
-Now `cd nuxt-dev-to-clone/` and run `npm run dev`. Congrats, your Nuxt app is running on [localhost:3000](http://localhost:3000/)!
+Now `cd nuxt-dev-to-clone/` and run `npm run dev`. Congrats, your Nuxt app is running on [http://localhost:3000](http://localhost:3000/)!
 
 Let’s install necessary packages and discuss how we will build our app next.
 

@@ -103,6 +103,12 @@ It exposes `$fetchState` at the component level with the following properties:
 - `error` is either `null` or an `Error` thrown by the fetch hook
 - `timestamp` is a timestamp of the last fetch, useful for [caching with `keep-alive`](#caching)
 
+<base-alert type="info">
+
+For [static hosting](/docs/2.x/features/deployment-targets#static-hosting), the fetch hook is only called during page generation, and the result is then cached for use on the client. To avoid cache conflicts, it may be necessary to specify a name for your component, or alternatively provide a unique [fetchKey](/docs/2.x/components-glossary/pages-fetch#options) implementation.
+
+</base-alert>
+
 In addition to fetch being called by Nuxt, you can manually call fetch in your component (to e.g. reload its async data) by calling `this.$fetch()`.
 
 ```html{}[components/NuxtMountains.vue]

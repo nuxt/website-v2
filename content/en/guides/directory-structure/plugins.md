@@ -342,7 +342,9 @@ Global mixins can be easily added with Nuxt plugins but can cause trouble and me
 ```js{}[plugins/my-global-mixin.js]
 import Vue from "vue"
 
-if (!Vue._myGlobalMixin) { // Define a new name for each plugin
+// Make sure to pick a unique name for the flag
+// so it won't conflict with any other mixin.
+if (!Vue._myGlobalMixin) {
   Vue._myGlobalMixin = true
   Vue.mixin({ ... }) // Set up your mixin then
 }

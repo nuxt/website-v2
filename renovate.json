@@ -1,6 +1,6 @@
 {
   "extends": ["@nuxtjs"],
-  "baseBranches": ["master"],
+  "baseBranches": ["main"],
   "ignoreDeps": ["sass-loader"],
   "lockFileMaintenance": {
     "enabled": true

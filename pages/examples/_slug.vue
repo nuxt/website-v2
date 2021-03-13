@@ -32,7 +32,7 @@ export default {
     const slug = params.slug || 'hello-world'
 
     let path = `/${app.i18n.defaultLocale}/examples`
-    let page, prev, next, langFallback
+    let page, /* prev, next, */ langFallback
 
     try {
       page = await $content(path, slug).fetch()

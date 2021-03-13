@@ -1,5 +1,5 @@
 <template>
-  <lite-youtube :videoid="video" :playlabel="title" :key="video">
+  <lite-youtube :key="video" :videoid="video" :playlabel="title">
   </lite-youtube>
 </template>
 

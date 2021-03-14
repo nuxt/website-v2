@@ -2,12 +2,12 @@ name: Link checking
 on:
   push:
     branches:
-      - master
+      - main
   workflow_dispatch:
 
 jobs:
   check-links:
-    runs-on: ubuntu-18.04
+    runs-on: ubuntu-20.04
     strategy:
       matrix:
         url:

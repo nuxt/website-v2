@@ -26,9 +26,9 @@ module.exports = {
         slug: 'examples'
       },
       {
-        name: 'FAQ',
+        name: 'Resources',
         icon: 'resources',
-        slug: 'faq'
+        slug: 'resources'
       },
       {
         name: 'Blog',

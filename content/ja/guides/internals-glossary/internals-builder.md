@@ -1,32 +1,32 @@
 ---
-title: 'The Builder Class'
-description: Nuxt `Builder` Class
+title: 'Builder クラス'
+description: 'Nuxt の `Builder` クラス'
 menu: Builder
 category: internals-glossary
 position: 7
 ---
 
-- Source: **[builder/builder.js](https://github.com/nuxt/nuxt.js/blob/dev/packages/builder/src/builder.js)**
+- ソース: **[builder/builder.js](https://github.com/nuxt/nuxt.js/blob/dev/packages/builder/src/builder.js)**
 
-## Hooks
+## フック
 
-We can register hooks on certain life cycle events.
+特定のライフサイクルイベントにフックを登録できます。
 
 ```js
-// Add hook for build
+// ビルド用にフックを追加
 this.nuxt.hook('build:done', (builder) => {
   ...
 })
 ```
 
-| Hook                    | Arguments                                   | When                                                                                                                                    |
-| ----------------------- | ------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------- |
-| `build:before`          | (nuxt, buildOptions)                        | Before Nuxt build started                                                                                                               |
-| `builder:prepared`      | (nuxt, buildOptions)                        | The build directories have been created                                                                                                 |
-| `builder:extendPlugins` | (plugins)                                   | Generating plugins                                                                                                                      |
-| `build:templates`       | ({ templatesFiles, templateVars, resolve }) | Generating `.nuxt` template files                                                                                                       |
-| `build:extendRoutes`    | (routes, resolve)                           | Generating routes                                                                                                                       |
-| `webpack:config`        | (webpackConfigs)                            | Before configuration of compilers                                                                                                       |
-| `build:compile`         | ({ name, compiler })                        | Before webpack compile (compiler is a webpack `Compiler` instance), if universal mode, called twice with name `'client'` and `'server'` |
-| `build:compiled`        | ({ name, compiler, stats })                 | webpack build finished                                                                                                                  |
-| `build:done`            | (nuxt)                                      | Nuxt build finished                                                                                                                     |
+| フック                  | 引数                                        | タイミング                                                                                                                                              |
+| ----------------------- | ------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `build:before`          | (nuxt, buildOptions)                        | Nuxt のビルド開始前                                                                                                                                     |
+| `builder:prepared`      | (nuxt, buildOptions)                        | ビルドディレクトリが作成された時                                                                                                                        |
+| `builder:extendPlugins` | (plugins)                                   | プラグイン生成時                                                                                                                                        |
+| `build:templates`       | ({ templatesFiles, templateVars, resolve }) | `.nuxt` テンプレートファイル生成時                                                                                                                      |
+| `build:extendRoutes`    | (routes, resolve)                           | ルーティング生成時                                                                                                                                      |
+| `webpack:config`        | (webpackConfigs)                            | コンパイラの設定前                                                                                                                                      |
+| `build:compile`         | ({ name, compiler })                        | webpack コンパイル前（コンパイラは webpack `Compiler` インスタンス）でもし universal モードの場合 `'client'` と `'server'` の名前で二度呼び出されます。 |
+| `build:compiled`        | ({ name, compiler, stats })                 | webpack のビルド終了時                                                                                                                                  |
+| `build:done`            | (nuxt)                                      | Nuxt のビルド終了時                                                                                                                                     |

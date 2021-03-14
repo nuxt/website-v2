@@ -1,35 +1,35 @@
 ---
-title: '$nuxt: The Nuxt.js helper'
-description: $nuxt is a helper designed to improve user experience.
+title: '$nuxt: Nuxt.js のヘルパー'
+description: '$nuxt はユーザーエクスペリエンスを向上するために設計されたヘルパーです。'
 category: internals-glossary
 position: 2
 ---
 
-`$nuxt` is a helper designed to improve user experience.
-For more info on the Nuxt.js helper check out the [context and helpers chapter in the Concepts book](/docs/2.x/concepts/context-helpers#nuxt-the-nuxtjs-helper)
+`$nuxt` はユーザーエクスペリエンスを向上するために設計されたヘルパーです。
+Nuxt.js ヘルパーの詳細については [コンテキストとヘルパーのドキュメント](/docs/2.x/concepts/context-helpers#nuxt-nuxtjs-ヘルパー)を参照してください。
 
-## Connection checker
+## コネクションチェッカー
 
 - `isOffline`
-  - Type: `Boolean`
-  - Description: `true` when the user's internet connection becomes offline
+  - 型: `Boolean`
+  - 説明: ユーザーのインターネット接続環境がオフラインになった時に `true`
 - `isOnline`
-  - Type: `Boolean`
-  - Description: Opposite of `isOffline`
+  - 型: `Boolean`
+  - 説明: `isOffline` の反対でユーザーのインターネット接続環境がオンラインになった時に `true`
 
 ```html{}[layouts/default.vue]
 <template>
   <div>
-    <div v-if="$nuxt.isOffline">You are offline</div>
+    <div v-if="$nuxt.isOffline">オフラインです</div>
     <nuxt />
   </div>
 </template>
 ```
 
-## Refreshing page data
+## ページデータのリフレッシュ
 
 - `refresh()`
-  - When you want to only refresh the data provided by asyncData or fetch
+  - asyncData または fetch が提供するデータのみをリフレッシュしたいとき
 
 ```html{}[example.vue]
 <template>
@@ -53,10 +53,10 @@ For more info on the Nuxt.js helper check out the [context and helpers chapter i
 </script>
 ```
 
-## Controlling the loading bar
+## ローディングバーの制御
 
 - `$loading`
-  - When you want to control Nuxt's loading bar programmatically
+  - Nuxt のローディングバーをプログラムで制御したいとき
 
 ```js{}[]
 export default {

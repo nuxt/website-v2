@@ -85,6 +85,11 @@ import PlayCircleIcon from '~/assets/icons/play-circle.svg?inline'
 import MeteorIcon from '~/assets/icons/meteor.svg?inline'
 
 export default {
+  components: {
+    ThemesIllustration,
+    PlayCircleIcon,
+    MeteorIcon
+  },
   async asyncData({ $content, app }) {
     let courses = []
 
@@ -134,11 +139,6 @@ export default {
     return {
       courses
     }
-  },
-  components: {
-    ThemesIllustration,
-    PlayCircleIcon,
-    MeteorIcon
   },
   data() {
     return {}

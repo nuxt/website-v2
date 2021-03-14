@@ -26,7 +26,7 @@ module.exports = {
         slug: 'examples'
       },
       {
-        name: 'Resources',
+        name: '资源',
         icon: 'resources',
         slug: 'resources'
       },

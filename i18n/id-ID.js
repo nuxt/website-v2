@@ -26,7 +26,7 @@ module.exports = {
         slug: 'examples'
       },
       {
-        name: 'Resources',
+        name: 'Sumber Daya',
         icon: 'resources',
         slug: 'resources'
       },
@@ -38,7 +38,8 @@ module.exports = {
       {
         name: 'Kursus Video',
         icon: 'video',
-        href: 'https://masteringnuxt.com/?utm_source=nuxt&utm_medium=link&utm_campaign=navbar_link'
+        href:
+          'https://masteringnuxt.com/?utm_source=nuxt&utm_medium=link&utm_campaign=navbar_link'
       }
     ],
     search: {

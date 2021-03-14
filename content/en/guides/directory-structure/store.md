@@ -210,36 +210,25 @@ export default {
 }
 ```
 
-A complex store setup file/folder structure might look as follows (in `store/`)
+### Example folder structure
+
+A complex store setup file/folder structure might look like this:
 
 ```
- store
-   |_modules
-     |_shop
-       |_cart
-         |_actions.js
-         |_getters.js
-         |_mutations.js
-         |_state.js
-       |_products
-         |_itemsGroup1
-           |_actions.js
-           |_getters.js
-           |_mutations.js
-           |_state.js
-         |_itemsGroup2
-           |_actions.js
-           ...
-           |_state.js
-         |_actions.js
-         |_getters.js
-         |_mutations.js
-         |_state.js
-   |_index.js (containing plugins and other additional elements, see below)
-   |_actions.js (being the root actions, contains nuxtServerInit)
-   |_getters.js (being the root getters)
-   |_mutations.js (being the root mutations)
-   |_state.js (being the root state)
+ store/
+--| index.js
+--| ui.js
+--| shop/
+----| cart/
+------| actions.js
+------| getters.js
+------| mutations.js
+------| state.js
+----| products/
+------| mutations.js
+------| state.js
+------| itemsGroup1/
+--------| state.js
 ```
 
 ## Plugins in the Store

@@ -210,6 +210,27 @@ export default {
 }
 ```
 
+### Example folder structure
+
+A complex store setup file/folder structure might look like this:
+
+```
+ store/
+--| index.js
+--| ui.js
+--| shop/
+----| cart/
+------| actions.js
+------| getters.js
+------| mutations.js
+------| state.js
+----| products/
+------| mutations.js
+------| state.js
+------| itemsGroup1/
+--------| state.js
+```
+
 ## Plugins in the Store
 
 You can add additional plugins to the store by putting them into the `store/index.js` file:

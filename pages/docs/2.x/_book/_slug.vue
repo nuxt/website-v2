@@ -140,7 +140,7 @@ export default {
   },
   computed: {
     docLink() {
-      return `https://github.com/nuxt/nuxtjs.org/blob/master/content${this.path}/${this.$route.params.slug}.md`
+      return `https://github.com/nuxt/nuxtjs.org/blob/main/content${this.path}/${this.$route.params.slug}.md`
     }
   }
 }

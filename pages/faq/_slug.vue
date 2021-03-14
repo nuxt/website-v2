@@ -103,7 +103,7 @@ export default {
   },
   computed: {
     docLink() {
-      return `https://github.com/nuxt/nuxtjs.org/blob/master/content${this.path}.md`
+      return `https://github.com/nuxt/nuxtjs.org/blob/main/content${this.path}.md`
     }
   }
 }

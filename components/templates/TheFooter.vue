@@ -124,7 +124,7 @@ export default {
           {
             key: this.$t('footer.links.support.contributionGuide'),
             href:
-              'https://github.com/nuxt/nuxtjs.org/blob/master/content/en/_archives/guide/contribution-guide.md'
+              'https://github.com/nuxt/nuxtjs.org/blob/main/content/en/_archives/guide/contribution-guide.md'
           }
         ],
         support: [

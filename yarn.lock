@@ -8854,7 +8854,7 @@ number-is-nan@^1.0.0:
   resolved "https://registry.yarnpkg.com/number-is-nan/-/number-is-nan-1.0.1.tgz#097b602b53422a522c1afb8790318336941a011d"
   integrity sha1-CXtgK1NCKlIsGvuHkDGDNpQaAR0=
 
-nuxt-edge@^2.16.0-26928038.f08f4efc:
+nuxt-edge@^2.16.0-26929477.f08f4efc:
   version "2.16.0-26929477.f08f4efc"
   resolved "https://registry.yarnpkg.com/nuxt-edge/-/nuxt-edge-2.16.0-26929477.f08f4efc.tgz#a47f70ace2c4806486953e70d8182892b958a370"
   integrity sha512-MUCWkJ5O2EcjZerSDvOwZ+vnMrXNUEY1COUd2ITVdzqEhpDQZeGe42HHmc3NoUoVpCAttKgeU9KGOWAtWlGBAQ==
@@ -8875,10 +8875,10 @@ nuxt-edge@^2.16.0-26928038.f08f4efc:
     "@nuxt/vue-renderer-edge" "2.16.0-26929477.f08f4efc"
     "@nuxt/webpack-edge" "2.16.0-26929477.f08f4efc"
 
-nuxt-i18n@^6.21.0:
-  version "6.21.0"
-  resolved "https://registry.yarnpkg.com/nuxt-i18n/-/nuxt-i18n-6.21.0.tgz#93d17ab7bd3580344ee404889432ef12bc5e9c8e"
-  integrity sha512-L8MOuhVEbLxPOo6sjUZp6CaKBM+F3vkcGAhcS1+bva3YriJxa3KWPwrb1dvUccXFB46hYw4PnZ7pw8s776CLgg==
+nuxt-i18n@^6.21.1:
+  version "6.21.1"
+  resolved "https://registry.yarnpkg.com/nuxt-i18n/-/nuxt-i18n-6.21.1.tgz#a69d581a870b8eac1d5b2f8812b92a41fbe29708"
+  integrity sha512-zjqqUMJgIDDxrJDO5Ot3s8F1y71A4otTyGyf/RmQHptfY1HpvqwFx8087p5vUOI9XoRsGHSYB4n4wcMxurw+qA==
   dependencies:
     "@babel/parser" "^7.5.5"
     "@babel/traverse" "^7.5.5"
@@ -10350,7 +10350,7 @@ prh@^5.4.4:
     diff "^4.0.1"
     js-yaml "^3.9.1"
 
-prism-themes@^1.5.0:
+prism-themes@^1.6.0:
   version "1.6.0"
   resolved "https://registry.yarnpkg.com/prism-themes/-/prism-themes-1.6.0.tgz#3bdb4f0780588a4abd770f70537e5cc4898198d1"
   integrity sha512-L7pbxbUvFj8bVIWpcHCwDFOykhozk6Dja9sxqdcFCWwUI77tSFsWE7imf9OQQAmezLNLaBxRlXNcD2k0VCE/0w==

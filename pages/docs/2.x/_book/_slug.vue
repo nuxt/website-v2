@@ -147,13 +147,6 @@ export default {
 </script>
 <style lang="scss" scoped>
 article h1 {
-  @apply font-medium relative text-3xl table mb-8;
-
-  &::after {
-    content: ' ';
-    width: 80%;
-
-    @apply block border-2 border-nuxt-lightgreen mt-2 mb-1 rounded;
-  }
+  @apply font-medium relative text-4xl table mb-6;
 }
 </style>

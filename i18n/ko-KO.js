@@ -26,9 +26,9 @@ module.exports = {
         slug: 'examples'
       },
       {
-        name: 'FAQ',
+        name: 'Resources',
         icon: 'resources',
-        slug: 'FAQ'
+        slug: 'resources'
       },
       {
         name: 'Blog',
@@ -39,7 +39,7 @@ module.exports = {
         name: 'Video Courses',
         icon: 'video',
         href:
-          'https://masteringnuxt.com?friend=nuxt&utm_source=Nuxtjs.org&utm_medium=Link&utm_content=Navbar&utm_content=prelaunch'
+          'https://masteringnuxt.com/?utm_source=nuxt&utm_medium=link&utm_campaign=navbar_link'
       }
     ],
     search: {

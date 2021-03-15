@@ -8,7 +8,7 @@ https://www.nuxtjs.org/* https://nuxtjs.org/:splat 301!
 # [LEGACY] Redirect GUIDE URLs
 /guide/themes /themes 301!
 /guide/typescript https://typescript.nuxtjs.org/ 301!
-/guide/contribution-guide https://github.com/nuxt/nuxtjs.org/blob/master/content/en/_archives/guide/contribution-guide.md 301!
+/guide/contribution-guide https://github.com/nuxt/nuxtjs.org/blob/main/content/en/_archives/guide/contribution-guide.md 301!
 /guide /docs/2.x/concepts/nuxt-lifecycle 301!
 /guide/assets /docs/2.x/directory-structure/assets 301!
 /guide/async-data /docs/2.x/features/data-fetching#async-data 301!

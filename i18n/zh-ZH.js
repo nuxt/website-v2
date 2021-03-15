@@ -26,9 +26,9 @@ module.exports = {
         slug: 'examples'
       },
       {
-        name: 'FAQ',
+        name: '资源',
         icon: 'resources',
-        slug: 'faq'
+        slug: 'resources'
       },
       {
         name: '博客',
@@ -39,7 +39,7 @@ module.exports = {
         name: '视频课程',
         icon: 'video',
         href:
-          'https://masteringnuxt.com?friend=nuxt&utm_source=Nuxtjs.org&utm_medium=Link&utm_content=Navbar&utm_content=prelaunch'
+          'https://masteringnuxt.com/?utm_source=nuxt&utm_medium=link&utm_campaign=navbar_link'
       }
     ],
     search: {

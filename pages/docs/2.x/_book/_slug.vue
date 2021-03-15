@@ -11,6 +11,7 @@
         >
           {{ page.title }}
         </h1>
+
         <nuxt-content :document="page" />
 
         <AppPrevNextNew
@@ -29,7 +30,7 @@
         class="block mb-8"
       />
       <SponsorsBlock />
-      <AdsBlock :key="$route.params.slug" />
+      <AdsCarbon :key="$route.params.slug" />
     </AffixBlock>
   </div>
 </template>
@@ -139,7 +140,7 @@ export default {
   },
   computed: {
     docLink() {
-      return `https://github.com/nuxt/nuxtjs.org/blob/master/content${this.path}/${this.$route.params.slug}.md`
+      return `https://github.com/nuxt/nuxtjs.org/blob/main/content${this.path}/${this.$route.params.slug}.md`
     }
   }
 }

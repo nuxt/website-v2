@@ -140,7 +140,7 @@ npm run deploy
 ```yaml
 language: node_js
 node_js:
-  - '8'
+  - '12'
 
 cache:
   directories:
@@ -193,8 +193,8 @@ git push origin
 
 ```yaml
 environment:
-  # Nuxt requires node v8 minimum
-  nodejs_version: '8'
+  # Nuxt requires node v12 minimum
+  nodejs_version: '12'
   # Encrypt sensitive data (https://ci.appveyor.com/tools/encrypt)
   github_access_token:
     secure: ENCRYPTED_GITHUB_ACCESS_TOKEN

@@ -103,6 +103,12 @@ It exposes `$fetchState` at the component level with the following properties:
 - `error` is either `null` or an `Error` thrown by the fetch hook
 - `timestamp` is a timestamp of the last fetch, useful for [caching with `keep-alive`](#caching)
 
+<base-alert type="info">
+
+For [static hosting](/docs/2.x/features/deployment-targets#static-hosting), the fetch hook is only called during page generation, and the result is then cached for use on the client. To avoid cache conflicts, it may be necessary to specify a name for your component, or alternatively provide a unique [fetchKey](/docs/2.x/components-glossary/pages-fetch#options) implementation.
+
+</base-alert>
+
 In addition to fetch being called by Nuxt, you can manually call fetch in your component (to e.g. reload its async data) by calling `this.$fetch()`.
 
 ```html{}[components/NuxtMountains.vue]
@@ -259,7 +265,7 @@ The navigation to the same page will not call `fetch` if last `fetch` call w
 
 Unlike `fetch`, the promise returned by the `asyncData` hook is resolved _during route transition_. This means that no "loading placeholder" is visible during client-side transitions (although the [loading bar](https://nuxtjs.org/guides/features/loading/) can be used to indicate a loading state to the user). Nuxt will instead wait for the `asyncData` hook to be finished before navigating to the next page or display the [error page](/docs/2.x/directory-structure/layouts#error-page)).
 
-This hook can only be used for page-level components. Unlike `fetch`, `asyncData` cannot access the component instance (`this`). Instead, it receives [the context](/docs/2.x/concepts/context-helpers) as its argument. You can use it to fetch some data and Nuxt.js will automatically merge the returned object with the component data.
+This hook can only be used for page-level components. Unlike `fetch`, `asyncData` cannot access the component instance (`this`). Instead, it receives [the context](/docs/2.x/concepts/context-helpers) as its argument. You can use it to fetch some data and Nuxt.js will automatically shallow merge the returned object with the component data.
 
 In the upcoming examples, we are using [@nuxt/http](https://http.nuxtjs.org/) which we recommend for fetching data from an API.
 

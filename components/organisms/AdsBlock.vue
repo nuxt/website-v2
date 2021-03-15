@@ -1,7 +1,7 @@
 <template>
   <AdBlock v-if="$store.state.adBlocked" />
-  <CarbonAds v-else-if="displayCarbon" />
-  <CodeFundAds v-else :fallback.sync="displayCarbon" />
+  <AdsCarbon v-else-if="displayCarbon" />
+  <AdsCodeFund v-else :fallback.sync="displayCarbon" />
 </template>
 
 <script>

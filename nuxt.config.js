@@ -96,13 +96,13 @@ export default {
     '~/components/global',
     '~/components/atoms',
     '~/components/molecules',
-    '~/components/organisms',
+    '~/components/organisms'
   ],
   colorMode: {
     preference: 'light' // disable system
   },
   plausible: {
-    domain: 'nuxtjs.org',
+    domain: 'nuxtjs.org'
   },
   content: {
     markdown: {
@@ -111,17 +111,21 @@ export default {
       }
     }
   },
-  css: ['~/assets/css/main.scss'],
+  css: [
+    '~/assets/css/main.scss',
+    'node_modules/lite-youtube-embed/src/lite-yt-embed.css'
+  ],
   plugins: [
     '~/plugins/i18n',
     '~/plugins/directives',
     '~/plugins/intersection-observer.client.js',
     '~/plugins/vue-observe-visibility.client.js',
     '~/plugins/ga.client.js',
-    '~/plugins/adblock.client.js',
+    // '~/plugins/adblock.client.js',
     '~/plugins/newsletter.client.js',
     '~/plugins/vue-scrollactive',
-    '~/plugins/contributors'
+    '~/plugins/contributors',
+    '~/plugins/youtube.client.js'
   ],
   env: {
     DEPLOY_PRIME_URL: process.env.DEPLOY_PRIME_URL || false,
@@ -132,8 +136,8 @@ export default {
   },
   publicRuntimeConfig: {
     nuxtLocale: process.env.NUXT_LOCALE || 'en',
-    nuxtVersion: '2.14.8',
-    nuxtStars: '33K+'
+    nuxtVersion: '2.15.2',
+    nuxtStars: '34K+'
   },
   loading: { color: '#41B883' },
   generate: {

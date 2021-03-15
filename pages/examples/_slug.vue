@@ -32,7 +32,7 @@ export default {
     const slug = params.slug || 'hello-world'
 
     let path = `/${app.i18n.defaultLocale}/examples`
-    let page, prev, next, langFallback
+    let page, /* prev, next, */ langFallback
 
     try {
       page = await $content(path, slug).fetch()
@@ -57,7 +57,7 @@ export default {
     ) {
       try {
         path = `/${app.i18n.locale}/examples`
-        page = await $content(path, params.slug || 'hello-world').fetch()
+        page = await $content(path, slug).fetch()
       } catch (err) {
         langFallback = true
         path = `/${app.i18n.defaultLocale}/examples`
@@ -66,19 +66,19 @@ export default {
 
     const contributors = await $contributors(`/content${path}/${slug}`)
 
-    try {
-      ;[prev, next] = await $content(
-        ['pt', 'es', 'zh'].includes(app.i18n.locale)
-          ? path
-          : `/${app.i18n.defaultLocale}/examples/`
-      )
-        .only(['title', 'slug', 'dir', 'menu'])
-        .sortBy('position')
-        .sortBy('title')
-        .sortBy('menu')
-        .surround(params.slug, { before: 1, after: 1 })
-        .fetch()
-    } catch (e) {}
+    // try {
+    //   ;[prev, next] = await $content(
+    //     ['pt', 'es', 'zh'].includes(app.i18n.locale)
+    //       ? path
+    //       : `/${app.i18n.defaultLocale}/examples`
+    //   )
+    //     .only(['title', 'slug', 'dir', 'menu'])
+    //     .sortBy('position')
+    //     .sortBy('title')
+    //     .sortBy('menu')
+    //     .surround(slug, { before: 1, after: 1 })
+    //     .fetch()
+    // } catch (e) {}
 
     return {
       path,
@@ -87,8 +87,8 @@ export default {
       section: params.section,
       book: params.book,
       page,
-      prev,
-      next,
+      prev: null,
+      next: null,
       contributors
     }
   },
@@ -125,7 +125,7 @@ export default {
   },
   computed: {
     docLink() {
-      return `https://github.com/nuxt/nuxtjs.org/blob/master/content${this.path}/${this.$route.params.slug}.md`
+      return `https://github.com/nuxt/nuxtjs.org/blob/main/content${this.path}/${this.$route.params.slug}.md`
     }
   }
 }

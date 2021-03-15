@@ -16,7 +16,8 @@
     </div>
     <AffixBlock>
       <SponsorsBlock />
-      <AdsBlock :key="$route.params.slug" />
+      test
+      <AdsCarbon :key="$route.params.slug" />
     </AffixBlock>
   </div>
 </template>
@@ -102,7 +103,7 @@ export default {
   },
   computed: {
     docLink() {
-      return `https://github.com/nuxt/nuxtjs.org/blob/master/content${this.path}.md`
+      return `https://github.com/nuxt/nuxtjs.org/blob/main/content${this.path}.md`
     }
   }
 }

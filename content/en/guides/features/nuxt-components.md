@@ -165,7 +165,7 @@ To display the `child.vue` component, you have to insert the `<NuxtChild>` co
 </template>
 ```
 
-## keep-alive
+### keep-alive
 
 Both, the `<Nuxt>` component and the `<NuxtChild/>` component, accept `keep-alive` and `keep-alive-props.`
 
@@ -247,7 +247,7 @@ If you want to know more about `<RouterLink>`, feel free to read the [Vue Route
 
 </base-alert>
 
-## prefetchLinks
+### prefetchLinks
 
 Nuxt.js automatically includes smart prefetching. That means it detects when a link is visible, either in the viewport or when scrolling and prefetches the JavaScript for those pages so that they are ready when the user clicks the link. Nuxt.js only loads the resources when the browser isn't busy and skips prefetching if your connection is offline or if you only have 2G connection.
 
@@ -257,7 +257,7 @@ Check out this article to learn more about [smart prefetching](/blog/introducing
 
 </base-alert>
 
-### Disable prefetching for specific links
+#### Disable prefetching for specific links
 
 However sometimes you may want to disable prefetching on some links if your page has a lot of JavaScript or you have a lot of different pages that would be prefetched or you have a lot of third party scripts that need to be loaded. To disable the prefetching on a specific link, you can use the `no-prefetch` prop. Since Nuxt.js v2.10.0, you can also use the `prefetch` prop set to `false`
 
@@ -266,7 +266,7 @@ However sometimes you may want to disable prefetching on some links if your page
 <NuxtLink to="/about" :prefetch="false">About page not prefetched</NuxtLink>
 ```
 
-### Disable prefetching globally
+#### Disable prefetching globally
 
 To disable the prefetching on all links, set the `prefetchLinks` to `false`:
 
@@ -284,9 +284,9 @@ Since Nuxt.js v2.10.0, if you have to set `prefetchLinks` to `false` but you
 <NuxtLink to="/about" prefetch>About page prefetched</NuxtLink>
 ```
 
-## Link Classes
+### Link Classes
 
-### linkActiveClass
+#### linkActiveClass
 
 The `linkActiveClass` works the same as the `vue-router` class for active links. If we want to show which links are active all you have to do is create some css for the class `nuxt-link-active` .
 
@@ -318,7 +318,7 @@ This option is given directly to the `vue-router` linkActiveClass. See the [vue-
 
 </base-alert>
 
-### linkExactActiveClass
+#### linkExactActiveClass
 
 The `linkExactActiveClass` works the same as the `vue-router` class for exact active links. If we want to show which links are active with an exact match all you have to do is create some css for the class `nuxt-link-exact-active` .
 
@@ -350,7 +350,7 @@ This option is given directly to the `vue-router` linkExactActiveClass. See the 
 
 </base-alert>
 
-### linkPrefetchedClass
+#### linkPrefetchedClass
 
 The linkPrefetchedClass will allow you to add styles for all links that have been prefetched. This is great for testing which links are being prefetched after modifying the default behavior. The linkPrefetchedClass is disabled by default. If you want to enable it you need to add it to the router property in your `nuxt-config.js` file.
 

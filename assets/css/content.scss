@@ -241,33 +241,20 @@
   }
 
   & h2 {
-    @apply relative text-2xl table my-8;
-
-    &::after {
-      content: ' ';
-      width: 80%;
-
-      @apply block border-2 border-nuxt-green mt-2 mb-1 rounded border-solid;
-    }
+    @apply relative text-3xl font-semibold table mt-8 mb-3;
 
     & code {
       @apply text-xl;
     }
 
     & a.icon-link {
-      @apply pt-3;
+      @apply pt-2;
     }
   }
 
   & h3 {
-    @apply relative text-xl table my-8;
+    @apply relative text-2xl font-semibold table mt-8 pb-3;
 
-    &::after {
-      content: ' ';
-      width: 80%;
-
-      @apply block border-2 border-gray-600 mt-2 mb-1 rounded border-solid;
-    }
 
     & code {
       @apply text-lg;
@@ -275,6 +262,18 @@
 
     & a.icon {
       @apply pt-2;
+    }
+  }
+
+  & h4 {
+    @apply relative text-xl font-semibold table pt-6 pb-2;
+
+    & code {
+      @apply text-base;
+    }
+
+    & a.icon {
+      @apply pt-0;
     }
   }
 

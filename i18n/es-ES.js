@@ -36,7 +36,7 @@ module.exports = {
         slug: 'blog'
       },
       {
-        name: 'Video Courses',
+        name: 'Cursos en video',
         icon: 'video',
         href:
           'https://masteringnuxt.com/?utm_source=nuxt&utm_medium=link&utm_campaign=navbar_link'
@@ -122,11 +122,11 @@ module.exports = {
   },
   design: {
     meta: {
-      title: 'NuxtJS Design',
+      title: 'Diseño de NuxtJS',
       description:
         'Descargue los recursos de diseño de NuxtJS (SVG, iconos, emoji y favicon)'
     },
-    title: '{nuxt} Design',
+    title: 'Diseño de {nuxt}',
     description:
       'Nuxt JS es un proyecto de código abierto con licencia del MIT y de uso completamente gratuito. {break} Puede usar libremente nuestros logotipos siempre que mencione Nuxt JS y enlace a nuxtjs.org.',
     other_download_message:
@@ -134,11 +134,11 @@ module.exports = {
   },
   resources: {
     meta: {
-      title: 'NuxtJS Recursos',
+      title: 'Recursos de NuxtJS',
       description:
         'Descubra un panel de recursos elaborado por nuestros socios. Al utilizar estos enlaces de recursos para afiliados, nos ayuda a mantener y desarrollar el framework de código abierto.'
     },
-    title: '{nuxt} Recursos',
+    title: 'Recursos de {nuxt}',
     description:
       'Descubra un panel de recursos elaborado por nuestros socios. Al utilizar estos enlaces de recursos para afiliados, nos ayuda a mantener y desarrollar el framework de código abierto.',
     themes: {
@@ -150,18 +150,18 @@ module.exports = {
   },
   shop: {
     meta: {
-      title: 'La tienda NuxtJS',
+      title: 'Tienda de NuxtJS',
       description:
         '¿Quieres apoyar el proyecto NuxtJS y mostrar tu amor al resto de la comunidad? ¡Aquí nuestros productos con la mejor calidad!'
     },
-    title: 'La tienda {nuxt}',
+    title: 'Tienda de {nuxt}',
     description:
       '¿Quieres apoyar el proyecto NuxtJS y mostrar tu amor al resto de la comunidad? {Break} ¡Aquí nuestros productos con la mejor calidad!',
     button: 'Próximamente'
   },
   team: {
     meta: {
-      title: 'Equipo NuxtJS',
+      title: 'Equipo de NuxtJS',
       description:
         'NuxtJS tiene un equipo muy activo y comprometido que se esfuerza constantemente por impulsar a Nuxt hacia adelante.'
     },
@@ -171,11 +171,11 @@ module.exports = {
   },
   themes: {
     meta: {
-      title: 'NuxtJS Temas',
+      title: 'Temas de NuxtJS',
       description:
         'Con los temas creados por nuestros socios de Creative Tim y Theme Forest, puede ver cómo se construye una aplicación del mundo real, con Nuxt.js.'
     },
-    title: '{nuxt} Temas',
+    title: 'Temas de {nuxt}',
     description:
       'Con los temas creados por nuestros socios de Creative Tim y Theme Forest, puede ver cómo se construye una aplicación del mundo real, con Nuxt.js.',
     button: 'OBTENERLO por'
@@ -302,18 +302,18 @@ module.exports = {
       internals: 'Mecanismos'
     },
     examples: {
-      routing: 'Routing',
-      dataFetching: 'Data Fetching',
-      assetManagement: 'Asset Management',
-      transitions: 'Transitions',
+      routing: 'Enrutamiento',
+      dataFetching: 'Obtención de datos',
+      assetManagement: 'Gestión de activos',
+      transitions: 'Transiciones',
       seo: 'SEO',
-      loading: 'Loading',
-      miscellaneous: 'Miscellaneous',
+      loading: 'Carga',
+      miscellaneous: 'Diverso',
       middleware: 'Middleware',
-      plugins: 'Plugins',
-      modules: 'Modules',
-      customization: 'Customization',
-      advanced: 'Advanced'
+      plugins: 'Complementos',
+      modules: 'Módulos',
+      customization: 'Personalización',
+      advanced: 'Avanzados'
     },
     faq: {
       configuration: 'Configuración',
@@ -333,22 +333,22 @@ module.exports = {
   footer: {
     links: {
       discover: {
-        title: 'Discover',
-        shop: 'Our Goodies Store',
-        consulting: 'Training & consultancy',
-        sponsorNuxt: 'Sponsoring & donations'
+        title: 'Descubrir',
+        shop: 'Nuestra tienda',
+        consulting: 'Formación y consultoría',
+        sponsorNuxt: 'Patrocinio y donaciones'
       },
       about: {
-        title: 'About',
-        team: 'Our team',
-        design: 'Design kit',
-        contact: 'Contact us'
+        title: 'Acerca de',
+        team: 'Nuestro equipo',
+        design: 'Kit de diseño',
+        contact: 'Contáctanos'
       },
       support: {
-        title: 'Support',
-        resources: 'Resources',
-        discord: 'Chat with us',
-        contributionGuide: 'Contribution guide'
+        title: 'Soporte',
+        resources: 'Recursos',
+        discord: 'Habla con nosotros',
+        contributionGuide: 'Guía de contribución'
       }
     }
   },

@@ -53,6 +53,6 @@ Your Nuxt.js application is now serving!
 
 ## Further Information
 
-This solution guaranty a no downtime for your application on this server. You should prevent server failing through redundancy or high availability cloud solutions.
+This solution guarantees no downtime for your application on this server. (You should also prevent server failure through redundancy or high availability cloud solutions.)
 
 You can find PM2 additional configurations [here](https://pm2.keymetrics.io/docs/usage/application-declaration/#general).

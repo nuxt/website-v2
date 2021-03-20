@@ -40,6 +40,7 @@ handlers:
 
 env_variables:
   HOST: '0.0.0.0'
+  NUXT_PORT: 8080
 ```
 
 or for flexible environment the minimal configuration is:

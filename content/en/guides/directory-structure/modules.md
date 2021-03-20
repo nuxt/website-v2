@@ -257,7 +257,7 @@ nuxt.hook('close', async nuxt => {
 - **Listen**: Nuxt internal server starts listening. (Using nuxt start or nuxt dev)
 
 ```js
-nuxt.hook('listen', async (server, {host, port})) => {
+nuxt.hook('listen', async (server, { host, port }) => {
   // Your custom code here
 })
 ```

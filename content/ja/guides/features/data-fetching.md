@@ -267,8 +267,4 @@ export default {
 
 </base-alert>
 
-<app-modal>
-  <code-sandbox :src="csb_link"></code-sandbox>
-</app-modal>
-
 <quiz :questions="questions"></quiz>

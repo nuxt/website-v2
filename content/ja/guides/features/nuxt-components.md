@@ -215,12 +215,6 @@ keep-alive と keep-alive-props についてより詳しく知るためには [v
 </template>
 ```
 
-実際の例を見たいときは、[ネストされたルートの例](https://ja.nuxtjs.org/examples/nested-routes) を参照してください。
-
-<app-modal>
-  <code-sandbox  :src="csb_link_nuxt"></code-sandbox>
-</app-modal>
-
 ## NuxtLink コンポーネント
 
 アプリケーションでページ間を遷移するためには、`<NuxtLink>` コンポーネントを使うべきです。このコンポーネントは Nuxt.js に含まれているので、他のコンポーネントのようにインポートする必要はありません。これは HTML の `<a>` タグと似ていますが、`href="/about"` の代わりに `to="/about"` を使います。もし以前 `vue-router` を使ったことがあるなら、`<RouterLink>` の代わりが `<NuxtLink>` だと考えることができます。
@@ -290,7 +284,9 @@ Nuxt.js v2.10.0 からは、`prefetchLinks` を `false` に設定した上で特
 <NuxtLink to="/about" prefetch>About page prefetched</NuxtLink>
 ```
 
-## linkActiveClass
+## Link クラス
+
+### linkActiveClass
 
 `linkActiveClass` は、アクティブなリンクのための `vue-router` の CSS クラスと同じように機能します。どのリンクがアクティブかを表示したい場合は、`nuxt-link-active` クラスを持つ css を作成することで実現できます。
 
@@ -322,7 +318,7 @@ export default {
 
 </base-alert>
 
-## linkExactActiveClass
+### linkExactActiveClass
 
 `linkExactActiveClass` は、正確なアクティブなリンクのための `vue-router` の CSS クラスと同じように機能します。どのリンクがアクティブか完全に一致させて表示したい場合は、`nuxt-link-exact-active` クラスを css に追加することで実現できます。
 
@@ -354,7 +350,7 @@ export default {
 
 </base-alert>
 
-## linkPrefetchedClass
+### linkPrefetchedClass
 
 プリフェッチしたリンクすべてにスタイルを追加することができます。これはデフォルトの挙動を変更した後に、どのリンクでプリフェッチが行われているかをテストする際に役立ちます。linkPrefetchedClass はデフォルトでは無効になっています。有効にしたい場合、 `nuxt.config.js` ファイルの router プロパティに `linkPrefetchedClass` を追加する必要があります。
 
@@ -373,16 +369,6 @@ export default {
   color: orangered;
 }
 ```
-
-<base-alert type="info">
-
-この例では `nuxt-link-prefetched` というクラス名を使用しましたが、好きな名前を使用することができます。
-
-</base-alert>
-
-<app-modal>
-  <code-sandbox  :src="csb_link_nuxt_link"></code-sandbox>
-</app-modal>
 
 ## client-only コンポーネント
 

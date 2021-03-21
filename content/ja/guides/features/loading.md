@@ -257,8 +257,4 @@ export default {
 
 ベースが必要な場合は、Nuxt.js のビルトイン[ソースコード](https://github.com/nuxt/nuxt.js/tree/dev/packages/vue-app/template/views/loading) を使うこともできます。
 
-<app-modal>
-  <code-sandbox  :src="csb_link"></code-sandbox>
-</app-modal>
-
 <quiz :questions="questions"></quiz>

@@ -70,10 +70,29 @@ export default {
 
 - 型: `Object`
   - デフォルト: `{ dist: {}, static: { skipUnknown: true } }`
+  - `dist` キーは [publicPath](/docs/2.x/configuration-glossary/configuration-build#publicpath) に一致するルート用です（例: `/_nuxt/*`）
+  - `static` キーは `/*` に一致するルートに一致するルート用です
 
-> [serve-placeholder](https://github.com/nuxt/serve-placeholder) ミドルウェアのオプションです。
+> `dist` と `static` の値は [serve-placeholder](https://github.com/nuxt/serve-placeholder) ミドルウェアに転送されます。
 
 もしこれらのうち 1 つか両方を無効にする場合は、falsy な値を渡すことができます。
+
+ルーティングに `.js` 拡張子を許可する例（例: `/repos/nuxt.js`）:
+
+```js [nuxt.config.js]
+export default {
+  render: {
+    fallback: {
+      static: {
+        // これらの拡張子に対し 404 の送信を避けます
+        handlers: {
+          '.js': false
+        }
+      }
+    }
+  }
+}
+```
 
 ## http2
 
@@ -96,6 +115,13 @@ pushAssets: (req, res, publicPath, preloadFiles) =>
 独自のアセットを配列に追加することもできます。`req` と `res` を使ってリクエストヘッダーを元にプッシュするリンクを決めることができます。例えばアプリケーションのバージョンでクッキーを使います。
 
 アセットは `,` で結合され、1 つの `Link` ヘッダーとして渡されます。
+
+## asyncScripts
+
+- 型: `Boolean`
+  - デフォルト: `false`
+
+> Nuxt バンドル用に `<script>` タグに `async` 属性を追加し、パースと並行してフェッチできるようにします（`v2.14.8` 以上から利用可能）。[詳細はこちら](https://developer.mozilla.org/ja/docs/Web/HTML/Element/script)を参照してください。
 
 ## injectScripts
 

@@ -253,15 +253,15 @@ keep-alive と keep-alive-props についてより詳しく知るためには [v
 
 </base-alert>
 
-<base-alert type="info">
-
-`<NuxtLink>` は[スマートプリフェッチ](/docs/2.x/features/nuxt-components#the-nuxtlink-component)の機能も持ちます。
-
-</base-alert>
-
 ## prefetchLinks
 
 Nuxt.js はスマートプリフェッチの機能を持ちます。viewport 内やスクロール時にリンクが表示されたことを検知し、それらのページの JavaScript をプリフェッチしてユーザーがリンクをクリックするのを待ちます。Nuxt.js はブラウザがビジーではないときにのみリソースを読み込み、接続がオフラインのときや 2G の接続しかない場合はプリフェッチをスキップします。
+
+<base-alert type="info">
+
+スマートプリフェッチについての詳細は[こちらの記事](/blog/introducing-smart-prefetching)を参照してください。
+
+</base-alert>
 
 ### 特定のリンクでプリフェッチを無効にする
 
@@ -415,6 +415,29 @@ export default {
     </client-only>
   </div>
 </template>
+```
+
+<base-alert  type="info">
+
+サーバーでレンダリングされたページでは `<client-only>` 内の `$refs` が `$nextTick` を使っても準備ができていない場合があります。手としては `$nextTick` を数回呼び出すことです:
+
+</base-alert>
+
+```js{}[page.vue]
+mounted(){
+  this.initClientOnlyComp()
+},
+methods: {
+  initClientOnlyComp(count = 10) {
+    this.$nextTick(() => {
+      if (this.$refs.myComp) {
+        //...
+      } else if (count > 0) {
+        this.initClientOnlyComp(count - 1);
+      }
+    });
+  },
+}
 ```
 
 <base-alert>

@@ -22,7 +22,7 @@ export default {
 }
 ```
 
-이 설정은 여러분의 Nuxt.js 서버 인스턴스의 [호스트와 포트](/faq/host-port)를 지정합니다.
+이 설정은 여러분의 Nuxt.js 서버 인스턴스의 [호스트와 포트](/docs/2.x/features/configuration#edit-host-and-port)를 지정합니다.
 
 ## HTTPS 설정을 사용한 예제
 

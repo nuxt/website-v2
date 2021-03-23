@@ -212,7 +212,7 @@ npm run generate --fail-on-error
 
 <base-alert type="next">
 
-Read our [FAQ](/faq) to find examples for deployments to popular hosts.
+Read our [Deployment Guides](/docs/2.x/deployment/deploying-to-21yunbox) to find examples for deployments to popular hosts.
 
 </base-alert>
 

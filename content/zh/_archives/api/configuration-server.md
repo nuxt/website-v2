@@ -23,7 +23,7 @@ export default {
 }
 ```
 
-这允许您指定 Nuxt.js 服务器实例的[主机和端口](/faq/host-port)。
+这允许您指定 Nuxt.js 服务器实例的[主机和端口](/docs/2.x/features/configuration#edit-host-and-port)。
 
 ## 使用 HTTPS 配置的示例
 

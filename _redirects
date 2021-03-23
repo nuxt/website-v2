@@ -102,6 +102,7 @@ https://www.nuxtjs.org/* https://nuxtjs.org/:splat 301!
 /examples/i18n https://i18n.nuxtjs.org/ 301!
 
 # [LEGACY] Redirect FAQ URLs
+/faq /docs/2.x/deployment/deploying-to-21yunbox 302!
 /faq/google-analytics /faq/ga 301!
 /faq/now-deployment /faq/vercel-deployment 301!
 
@@ -117,7 +118,7 @@ https://www.nuxtjs.org/* https://nuxtjs.org/:splat 301!
 /faq/http-proxy https://github.com/nuxt-community/proxy-module 301!
 /faq/webpack-audio-files /docs/2.x/features/configuration#extend-webpack-to-load-audio-files 301!
 /faq/pre-processors /docs/2.x/features/configuration#pre-processors
-/faq/deployment-aws-s3-cloudfront /docs/2.x/deployment/deployment-aws-s3-cloudfront 301!
+/faq/deployment-aws-s3-cloudfront /docs/2.x/deployment/deployment-amazon-web-services#aws-w-s3--cloudfront 301!
 /faq/deployment-aws-amplify /docs/2.x/deployment/deployment-aws-amplify 301!
 /faq/deployment-azure-portal /docs/2.x/deployment/deployment-azure-portal 301!
 /faq/deployment-azure-static-web-apps /docs/2.x/deployment/deployment-azure-static-web-apps 301!

@@ -127,12 +127,12 @@ SPA 应用的想法很简单！ 使用时启用 SPA 模式 `mode: 'spa'` 或 `--
 
 <div class="Alert">
 
-请参考 [如何在 Heroku 上部署?](/faq/heroku-deployment) 来查看更多部署信息。
+请参考 [如何在 Heroku 上部署?](/docs/2.x/deployment/heroku-deployment) 来查看更多部署信息。
 
 </div>
 
 <div class="Alert">
 
-请参考 [如何在 GitHub Pages 上部署?](/faq/github-pages) 查看如何部署到 GitHub 页面的更多详细信息。
+请参考 [如何在 GitHub Pages 上部署?](/docs/2.x/deployment/github-pages) 查看如何部署到 GitHub 页面的更多详细信息。
 
 </div>

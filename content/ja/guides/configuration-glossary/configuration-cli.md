@@ -8,6 +8,20 @@ position: 3
 
 > Nuxt.js では CLI の設定をカスタマイズできます。
 
+## badgeMessages
+
+- 型 `Array`
+
+CLI バナーにメッセージを追加します。
+
+```js{}[nuxt.config.js]
+cli: {
+  badgeMessages: ['Hello World!']
+}
+```
+
+<img src="/docs/2.x/cli-badge.png" />
+
 ## bannerColor
 
 - 型: `String`

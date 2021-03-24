@@ -33,53 +33,11 @@ questions:
     correctAnswer:
 ---
 
-The components directory contains your Vue.js components. Components are what makes up the different parts of your page and can be reused and imported into your pages, layouts and even other components.
+The `components` directory contains your Vue.js components. Components make up the different parts of your page and can be reused throughout your pages, layouts and even other components.
 
-### Fetching Data
+## Auto-Importing Components
 
-To access asynchronous data from an API in your components you can use Nuxt [`fetch()` hook](/docs/2.x/features/data-fetching#the-fetch-method).
-
-By checking `$fetchState.pending`, we can show a message when data is waiting to be loaded. We can also check `$fetchState.error` and show an error message if there is an error fetching the data. When using `fetch()`, we must declare the appropriate properties in `data()`. The data that comes from the fetch can then be assigned to these properties.
-
-```html{}[components/MountainsList.vue]
-<template>
-  <div>
-    <p v-if="$fetchState.pending">Loading....</p>
-    <p v-else-if="$fetchState.error">Error while fetching mountains</p>
-    <ul v-else>
-      <li v-for="(mountain, index) in mountains" :key="index">
-        {{ mountain.title }}
-      </li>
-    </ul>
-  </div>
-</template>
-<script>
-  export default {
-    data() {
-      return {
-        mountains: []
-      }
-    },
-    async fetch() {
-      this.mountains = await fetch(
-        'https://api.nuxtjs.dev/mountains'
-      ).then(res => res.json())
-    }
-  }
-</script>
-```
-
-<base-alert type="next">
-
-See the chapter on [fetch()](/docs/2.x/features/data-fetching#the-fetch-method) for more details on how fetch works.
-
-</base-alert>
-
-## Components Discovery
-
-<app-modal :src="img" :alt="imgAlt"></app-modal>
-
-Starting from `v2.13`, Nuxt can auto import your components when used in your templates. To activate this feature, set `components: true` in your configuration:
+Starting from `v2.13`, Nuxt can auto-import the components you use. To activate this feature, set `components: true` in your configuration:
 
 ```js{}[nuxt.config.js]
 export default {
@@ -87,7 +45,7 @@ export default {
 }
 ```
 
-Once you create your components in the components directory they will then be available to be auto imported.
+Any components in the components directory can then be used throughout your pages, layouts (and other components) without needing to explicitly import them.
 
 ```bash
 components/
@@ -105,9 +63,45 @@ components/
 </template>
 ```
 
+### Component Names
+
+The component name will be based on the full path (directory and filename).
+
+If you have components in nested directories, this will affect the component name. Consider this directory structure:
+
+```bash
+components/
+  base/
+      foo/
+         Button.vue
+```
+
+In this case the component can be auto-imported with:
+
+```html
+<BaseFooButton />
+```
+
+If you don't want to include your directory in the component name, it's possible to specify the prefix you want (or even disable it completely using `pathPrefix: false`): 
+
+```bash{}[nuxt.config.js]
+components: {
+  dirs: [
+    '~/components',
+    { path: '~/components/base/foo/', prefix: 'custom' },
+  ]
+}
+```
+
+And now in your template you can use `CustomButton` instead of `BaseButton`.
+
+```html{}[pages/index.vue]
+<CustomButton />
+```
+
 ### Dynamic Imports
 
-To dynamically import a component, also known as lazy loading a component, all you need to do is add the `Lazy` prefix in your templates.
+To dynamically import a component (also known as lazy-loading a component) all you need to do is add the `Lazy` prefix to the component name.
 
 ```html{}[layouts/default.vue]
 <template>
@@ -119,7 +113,7 @@ To dynamically import a component, also known as lazy loading a component, all y
 </template>
 ```
 
-Using the lazy prefix you can also dynamically import a component when an event is triggered.
+This is particularly useful if the component is not always needed. By using the `Lazy` prefix you can delay delay loading the component code until the right moment, which can be helpful for optimizing your JavaScript bundle size.
 
 ```html{}[pages/index.vue]
 <template>
@@ -146,44 +140,18 @@ Using the lazy prefix you can also dynamically import a component when an event 
 </script>
 ```
 
-### Nested Directories
+### Cheat Sheet
 
-If you have components in nested directories such as:
+<app-modal :src="img" :alt="imgAlt"></app-modal>
 
-```bash
-components/
-  base/
-      foo/
-         Button.vue
-```
+<base-alert type="next">For more information check out the [@nuxt/components documentation](https://github.com/nuxt/components/).</base-alert>
 
-The component name will be based on its own path directory and filename. Therefore, the component will be:
+## Fetching Data
 
-```html
-<BaseFooButton />
-```
+To access asynchronous data from an API in your components you can use the [`fetch()` hook](/docs/2.x/features/data-fetching#the-fetch-method).
 
-However, if you want to use custom directory strcture that should not be part of component name, can explicitly specify these directories: 
+<base-alert type="next">
 
-```bash
-components/
-  base/
-      foo/
-         Button.vue
-```
+See the chapter on [fetch()](/docs/2.x/features/data-fetching#the-fetch-method) for more details on how fetch works.
 
-```bash{}[nuxt.config.js]
-components: {
-  dirs: [
-    '~/components',
-    '~/components/base'
-  ]
-}
-```
-
-And now in your template you can use `FooButton` instead of `BaseFooButton`.
-
-```html{}[pages/index.vue]
-<FooButton />
-```
-<base-alert type="next">Learn more about the [components module](/blog/improve-your-developer-experience-with-nuxt-components).</base-alert>
+</base-alert>

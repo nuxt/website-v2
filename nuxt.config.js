@@ -57,8 +57,7 @@ export default {
   },
   buildModules: [
     // https://github.com/nuxt-community/eslint-module
-    // Disabled, waiting for https://github.com/nuxt-community/eslint-module/pull/46 to be released
-    // '@nuxtjs/eslint-module',
+    '@nuxtjs/eslint-module',
     // https://github.com/nuxt-community/color-mode-module
     '@nuxtjs/color-mode',
     // https://github.com/nuxt-community/netlify-files-module

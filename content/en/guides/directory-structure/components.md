@@ -1,5 +1,6 @@
 ---
-title: components
+title: Components directory
+menuTitle: components
 description: The components directory contains your Vue.js Components. Components are what makes up the different parts of your page and can be reused and imported into your pages, layouts and even other components.
 position: 3
 category: directory-structure
@@ -70,27 +71,29 @@ The component name will be based on the full path (directory and filename).
 If you have components in nested directories, this will affect the component name. Consider this directory structure:
 
 ```bash
-components/
-  base/
-      foo/
-         Button.vue
+| components/
+---| base/
+-----| custom/
+-------| Button.vue
 ```
 
 In this case the component can be auto-imported with:
 
 ```html
-<BaseFooButton />
+<BaseCustomButton />
 ```
 
 If you don't want to include your directory in the component name, it's possible to specify the prefix you want (or even disable it completely using `pathPrefix: false`): 
 
-```bash{}[nuxt.config.js]
-components: {
-  dirs: [
-    '~/components',
-    { path: '~/components/base/foo/', prefix: 'custom' },
-  ]
-}
+```js{}[nuxt.config.js]
+components: [
+  '~/components',
+  {
+    path: '~/components/base/custom/',
+    pathPrefix: false,
+    prefix: 'custom'
+  },
+]
 ```
 
 And now in your template you can use `CustomButton` instead of `BaseButton`.
@@ -120,23 +123,18 @@ This is particularly useful if the component is not always needed. By using the 
   <div>
     <h1>Mountains</h1>
     <LazyMountainsList v-if="show" />
-    <button v-if="!show" @click="showList">Show List</button>
+    <button v-if="!show" @click="show = true">Show List</button>
   </div>
 </template>
 
 <script>
-  export default {
-    data() {
-      return {
-        show: false
-      }
-    },
-    methods: {
-      showList() {
-        this.show = true
-      }
+export default {
+  data() {
+    return {
+      show: false
     }
   }
+}
 </script>
 ```
 
@@ -146,6 +144,9 @@ This is particularly useful if the component is not always needed. By using the 
 
 <base-alert type="next">For more information check out the [@nuxt/components documentation](https://github.com/nuxt/components/).</base-alert>
 
+### Configuration
+
+You can learn more about the components options in the [Configuration Glossary > components](/docs/2.x/configuration-glossary/configuration-components).
 ## Fetching Data
 
 To access asynchronous data from an API in your components you can use the [`fetch()` hook](/docs/2.x/features/data-fetching#the-fetch-method).

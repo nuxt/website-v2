@@ -1,5 +1,6 @@
 ---
-title: layouts
+title: Layouts directory
+menuTitle: layouts
 description: Layouts are a great help when you want to change the look and feel of your Nuxt.js app. Whether you want to include a sidebar or have distinct layouts for mobile and desktop.
 position: 7
 category: directory-structure

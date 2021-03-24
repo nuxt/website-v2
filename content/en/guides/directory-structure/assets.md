@@ -1,5 +1,6 @@
 ---
-title: assets
+title: Assets directory
+menuTitle: assets
 description: The `assets` directory contains your un-compiled assets such as Stylus or Sass files, images, or fonts.
 position: 2
 category: directory-structure

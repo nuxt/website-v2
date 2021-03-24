@@ -151,8 +151,10 @@ npm install --save-dev pug pug-plain-loader
 npm install --save-dev node-sass sass-loader
 ```
 
-</code-block>`
+  </code-block>
 </code-group>
+
+<base-alert type="info">`fibers` がインストールされている場合、`sass` の同期コンパイル（2倍速）が[自動的に有効になります](https://github.com/webpack-contrib/sass-loader)。</base-alert>
 
 ## JSX
 

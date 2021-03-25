@@ -46,7 +46,7 @@ export default {
 }
 ```
 
-Any components in the components directory can then be used throughout your pages, layouts (and other components) without needing to explicitly import them.
+Any components in the `~/components` directory can then be used throughout your pages, layouts (and other components) without needing to explicitly import them.
 
 ```bash
 components/
@@ -149,6 +149,7 @@ export default {
 You can learn more about the components options in the [Configuration Glossary > components](/docs/2.x/configuration-glossary/configuration-components).
 
 For advanced usage, we recommend looking at the [nuxt/components](https://github.com/nuxt/components) repository and README.
+
 ## Fetching Data
 
 To access asynchronous data from an API in your components you can use the [`fetch()` hook](/docs/2.x/features/data-fetching#the-fetch-method).

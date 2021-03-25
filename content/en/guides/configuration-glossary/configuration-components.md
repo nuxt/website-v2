@@ -118,7 +118,7 @@ export default {
 
 Path (absolute or relative) to the directory containing your components.
 
-You can use Nuxt aliases (`~` or `@`) to refer to directories inside project or directly use a npm package path similar to require.
+You can use Nuxt aliases (`~` or `@`) to refer to directories inside the project or directly use a npm package path (similar to using `require` within your project).
 
 #### extensions
 
@@ -129,7 +129,7 @@ You can use Nuxt aliases (`~` or `@`) to refer to directories inside project or 
 
 **Example:** Support multi-file component structure
 
-If you prefer to split your SFCs into `.js`, `.vue` and `.css`, you could choose only to scan `.vue` files:
+If you prefer to split your SFCs into `.js`, `.vue` and `.css`, you could choose only to scan for `.vue` files:
 
 ```
 | components
@@ -153,7 +153,7 @@ export default {
 - Type: `string` ([glob pattern]( https://github.com/isaacs/node-glob#glob-primer))
 - Default: `**/*.${extensions.join(',')}`
 
-Acceptance pattern that will be run against specified `path`.
+Within the specified `path`, only files that match this pattern will be included.
 
 #### ignore
 
@@ -161,7 +161,7 @@ Acceptance pattern that will be run against specified `path`.
 - Items: `string` ([glob pattern]( https://github.com/isaacs/node-glob#glob-primer))
 - Default: `[]`
 
-Ignore patterns that will be run against specified `path`.
+Patterns to exclude files within the specified `path`.
 
 #### prefix
 
@@ -170,7 +170,7 @@ Ignore patterns that will be run against specified `path`.
 
 Prefix all matched components.
 
-Example below adds `awesome-`/`Awesome` prefix to the name of components in `awesome/` directory.
+The example below adds the `awesome-`/`Awesome` prefix to the name of components in the `awesome/` directory.
 
 ```js
 // nuxt.config.js
@@ -203,28 +203,28 @@ components/
 - Type: `Boolean`
 - Default: `true`
 
-Prefix component name by its path
+Prefix component name by its path.
 
 #### watch
 
 - Type: `Boolean`
 - Default: `true`
 
-Watch specified `path` for changes, including file additions and file deletions.
+Watch the specified `path` for changes, including file additions and file deletions.
 
 #### transpile
 
 - Type: `Boolean`
 - Default: `'auto'`
 
-Transpile specified `path` using [`build.transpile`](https://nuxtjs.org/api/configuration-build#transpile), by default (`'auto'`) it will set `transpile: true` if `node_modules/` is in `path`.
+Transpile specified `path` using [`build.transpile`](https://nuxtjs.org/api/configuration-build#transpile). By default (`'auto'`) it will set `transpile: true` if `node_modules/` is in `path`.
 
 #### level
 
 - Type: `Number`
 - Default: `0`
 
-Level are use to define a hint when overwriting the components which have the same name in two different directories, this is useful for theming.
+Levels are used to define allow overwriting components that have the same name in two different directories. This can be useful for library authors who want to allow users to override their components, or for custom themes.
 
 ```js
 export default {
@@ -235,7 +235,7 @@ export default {
 }
 ```
 
-Components having the same name in `~/components` will overwrite the one in `my-theme/components`. The lowest value will overwrite.
+A component in `~/components` will then overwrite one with the same name in `my-theme/components`. The lowest value takes priority.
 
 <base-alert type="info">
 

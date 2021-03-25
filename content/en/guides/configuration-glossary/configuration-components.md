@@ -235,7 +235,7 @@ export default {
 }
 ```
 
-Components having the same name in `~/components` will overwrite the one in `my-theme/components`. For more information, check out the [nuxt/components](https://github.com/nuxt/components). The lowest value will overwrite.
+Components having the same name in `~/components` will overwrite the one in `my-theme/components`. The lowest value will overwrite.
 
 <base-alert type="info">
 

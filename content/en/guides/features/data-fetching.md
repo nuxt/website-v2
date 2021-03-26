@@ -273,7 +273,7 @@ In the upcoming examples, we are using [@nuxt/http](https://http.nuxtjs.org/) wh
 
 Because components do not have an `asyncData` method, you cannot directly fetch async data server side within a component. In order to get around this limitation you have three basic options:
 
-1. Use the new `fetch` hook that is available in Nuxt 2.12 and later versions. You can find more about this hook from the [beginning of this page](#the-fetch-hook).
+1. Use [the new `fetch` hook](#the-fetch-hook) that is available in Nuxt 2.12 and later versions.
 2. Make the API call in the `mounted` hook and set data properties when loaded. _Downside: Won't work for server side rendering._
 3. Make the API call in the `asyncData` method of the page component and pass the data as props to the sub components. Server rendering will work fine. _Downside: the `asyncData` of the page might be less readable because it's loading the data for other components_.
 

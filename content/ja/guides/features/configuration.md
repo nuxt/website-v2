@@ -154,7 +154,7 @@ npm install --save-dev sass sass-loader@10 fibers
   </code-block>
 </code-group>
 
-<base-alert type="info">`fibers` がインストールされている場合、`sass` の同期コンパイル（2倍速）が[自動的に有効になります](https://github.com/webpack-contrib/sass-loader)。</base-alert>
+<base-alert type="info">`fibers` がインストールされている場合、`sass` の同期コンパイル（2 倍速）が[自動的に有効になります](https://github.com/webpack-contrib/sass-loader)。</base-alert>
 
 ## 外部のリソース
 
@@ -382,7 +382,7 @@ export default {
 
 `nuxt.config.js` ファイルの `build` オプションを使うと、[`webpack.config.js` ファイル](https://webpack.js.org/configuration/plugins/)と同じ方法で webpack `plugins` を渡すことができます。
 
-この例では JavaScriptモジュール（_lodash_ と _jQuery_）を `import` や `require` するかわりに自動的にロードする webpack ビルトインの [ProvidePlugin](https://webpack.js.org/plugins/provide-plugin/)を追加します。
+この例では JavaScript モジュール（_lodash_ と _jQuery_）を `import` や `require` するかわりに自動的にロードする webpack ビルトインの [ProvidePlugin](https://webpack.js.org/plugins/provide-plugin/)を追加します。
 
 ```js
 import webpack from 'webpack'

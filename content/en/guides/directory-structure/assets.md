@@ -231,7 +231,7 @@ For these two loaders, the default configuration is:
 {
   test: /\.(woff2?|eot|ttf|otf)(\?.*)?$/i,
   use: [{
-    loader: this.resolveModule('url-loader'),
+    loader: 'url-loader',
     options: {
        esModule: false,
        limit: 1000, // 1kB

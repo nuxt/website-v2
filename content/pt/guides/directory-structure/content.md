@@ -338,7 +338,7 @@ O módulo content vem com uma API QueryBuilder poderosa semelhante ao MongoDB qu
 
 <base-alert type="next">
 
-Veja a [documentação do módulo content](https://content.nuxtjs.org/fetching#api) para mais detalhes
+Veja a [documentação do módulo content](https://content.nuxtjs.org/advanced/#api-endpoint) para mais detalhes
 
 </base-alert>
 
@@ -358,7 +358,7 @@ No caso de artigos, o content pode ser usado para gerar feeds de notícias usand
 
 <base-alert type="next">
 
-Veja a [documentação do módulo content](https://content.nuxtjs.org/advanced#integration-with-nuxtjsfeed) para mais detalhes
+Veja a [documentação do módulo content](https://content.nuxtjs.org/integrations/#nuxtjsfeed) para mais detalhes
 
 </base-alert>
 

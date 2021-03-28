@@ -238,7 +238,7 @@ window.onNuxtReady(() => {
 
 ## Process helpers
 
-Nuxt.js injects three boolean values into the global `process` object which will help you to determine whether your app was rendered on the server or fully on the client, as well as checking for static site generation. These helpers are available across your application and are commonly used in `asyncData` userland code.
+Nuxt.js injects three boolean values (`client`, `server`, and `static`) into the global `process` object which will help you to determine whether your app was rendered on the server or fully on the client, as well as checking for static site generation. These helpers are available across your application and are commonly used in `asyncData` userland code.
 
 ```html{}[pages/about.vue]
 <template>

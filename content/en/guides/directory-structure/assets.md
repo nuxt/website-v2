@@ -220,7 +220,7 @@ For these two loaders, the default configuration is:
 {
   test: /\.(png|jpe?g|gif|svg|webp|avif)$/i,
   use: [{
-    loader: this.resolveModule('url-loader'),
+    loader: 'url-loader',
     options: {
       esModule: false,
       limit: 1000, // 1kB

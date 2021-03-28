@@ -184,7 +184,7 @@ npm run generate --fail-on-error
 
 <base-alert type="next">
 
-Lisez notre [FAQ](/faq) pour trouver des exemples de déploiements sur des hôtes connus.
+Lisez notre [FAQ](/docs/2.x/deployment/deploying-to-21yunbox) pour trouver des exemples de déploiements sur des hôtes connus.
 
 </base-alert>
 

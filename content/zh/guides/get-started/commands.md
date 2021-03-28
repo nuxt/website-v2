@@ -186,7 +186,7 @@ npm run generate --fail-on-error
 
 <base-alert type="next">
 
-阅读我们的[FAQ](/faq) 查找有关当下流行的部署托管的示例。
+阅读我们的[FAQ](/docs/2.x/deployment/deploying-to-21yunbox) 查找有关当下流行的部署托管的示例。
 
 </base-alert>
 

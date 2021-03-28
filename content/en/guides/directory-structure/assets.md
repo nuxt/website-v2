@@ -216,25 +216,39 @@ The benefits of these loaders are:
 For these two loaders, the default configuration is:
 
 ```js
-// https://github.com/nuxt/nuxt.js/blob/dev/packages/webpack/src/config/base.js#L297-L316
-;[
-  {
-    test: /\.(png|jpe?g|gif|svg|webp)$/,
-    loader: 'url-loader',
-    query: {
-      limit: 1000, // 1kB
-      name: 'img/[name].[hash:7].[ext]'
+// https://github.com/nuxt/nuxt.js/blob/dev/packages/webpack/src/config/base.js#L382-L411
+{
+  test: /\.(png|jpe?g|gif|svg|webp|avif)$/i,
+  use: [{
+    loader: this.resolveModule('url-loader'),
+    options: {
+      esModule: false,
+      limit: 1000,
+      name: 'img/[name].[contenthash:7].[ext]'
     }
-  },
-  {
-    test: /\.(woff2?|eot|ttf|otf)(\?.*)?$/,
-    loader: 'url-loader',
-    query: {
-      limit: 1000, // 1kB
-      name: 'fonts/[name].[hash:7].[ext]'
+  }]
+},
+{
+  test: /\.(woff2?|eot|ttf|otf)(\?.*)?$/i,
+  use: [{
+    loader: this.resolveModule('url-loader'),
+    options: {
+       esModule: false,
+       limit: 1000,
+       name: 'fonts/[name].[contenthash:7].[ext]'
     }
-  }
-]
+  }]
+},
+{
+  test: /\.(webm|mp4|ogv)$/i,
+  use: [{
+    loader: this.resolveModule('file-loader'),
+    options: {
+      esModule: false,
+      name: 'videos/[name].[contenthash:7].[ext]'
+    }
+  }]
+}
 ```
 
 Which means that every file below 1 kB will be inlined as base64 data URL. Otherwise, the image/font will be copied in its corresponding folder (inside the `.nuxt` directory) with a name containing a version hash for better caching.

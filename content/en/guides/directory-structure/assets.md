@@ -242,7 +242,7 @@ For these two loaders, the default configuration is:
 {
   test: /\.(webm|mp4|ogv)$/i,
   use: [{
-    loader: this.resolveModule('file-loader'),
+    loader: 'file-loader',
     options: {
       esModule: false,
       name: 'videos/[name].[contenthash:7].[ext]'

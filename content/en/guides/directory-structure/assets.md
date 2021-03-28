@@ -223,7 +223,7 @@ For these two loaders, the default configuration is:
     loader: this.resolveModule('url-loader'),
     options: {
       esModule: false,
-      limit: 1000,
+      limit: 1000, // 1kB
       name: 'img/[name].[contenthash:7].[ext]'
     }
   }]
@@ -234,7 +234,7 @@ For these two loaders, the default configuration is:
     loader: this.resolveModule('url-loader'),
     options: {
        esModule: false,
-       limit: 1000,
+       limit: 1000, // 1kB
        name: 'fonts/[name].[contenthash:7].[ext]'
     }
   }]

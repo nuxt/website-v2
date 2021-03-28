@@ -58,6 +58,7 @@ Vue.js のアプリケーションを実行するには Node.js サーバーの�
 serverMiddleware でサーバーを拡張しルートを middleware で制御することができます。
 
 ```js{}[server-middleware/logger.js]
+
 export default function (req, res, next) {
   console.log(req.url)
   next()
@@ -67,6 +68,7 @@ export default function (req, res, next) {
 ```js{}[nuxt.config.js]
 export default {
   serverMiddleware: ['~/server-middleware/logger']
+
 }
 ```
 
@@ -98,5 +100,41 @@ mounted () {
 ### ステップ 3: ブラウザからブラウザへ
 
 [`<NuxtLink>`](/docs/2.x/features/nuxt-components#nuxtlink-コンポーネント) によるページ間の遷移はクライアントサイドで行われるためブラウザをハード再読み込みをしない限りサーバーへリクエストを送りません。
+
+## 警告
+
+### window または document undefined
+
+これはサーバーサイドレンダリングによるものです。クライアントサイドでのみリソースをインポートするように指定する必要がある場合は `process.client` 変数を使用する必要があります。
+
+たとえば `.vue` ファイルは次のようになります:
+
+```js
+if (process.client) {
+  require('external_library')
+}
+```
+
+### iOS と電話番号
+
+モバイル Safari の一部のバージョンでは、電話番号を自動的にリンクに変換します。これにより SSR コンテンツがウェブサイトのコンテンツと一致しなくなるため、`NodeMismatch` の警告が引き起こされます。そのためこれらの Safari バージョンでアプリが使用できなくなる可能性があります。
+
+Nuxt ページに電話番号を含める場合、2 つのオプションがあります。
+
+## メタタグを使用して変換を停止する
+
+```html
+<meta name="format-detection" content="telephone=no" />
+```
+
+## 電話番号をリンクにラップする
+
+```html
+<!-- 電話番号の例: +7 (982) 536-50-77 -->
+
+<template>
+  <a href="tel: +7 (982) 536-50-77">+7 (982) 536-50-77</a>
+</template>
+```
 
 <quiz :questions="questions"></quiz>

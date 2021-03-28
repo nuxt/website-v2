@@ -14,6 +14,8 @@ position: 4
 npm install --save-dev sass sass-loader@10 fibers
 ```
 
+<base-alert type="info">`fibers` がインストールされている場合、`sass` の同期コンパイル（2 倍速）が[自動的に有効になります](https://github.com/webpack-contrib/sass-loader)。</base-alert>
+
 - 型: `Array`
   - 要素: `string`
 

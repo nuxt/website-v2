@@ -40,3 +40,9 @@ position: 0
   }
 </script>
 ```
+
+<base-alert type="info">
+
+子コンポーネントで使用するときにメタタグが重複しないようにするために、メタ要素の `hid` キーを使って一意の識別子を設定します（[詳細はこちら](https://vue-meta.nuxtjs.org/api/#tagidkeyname)）。
+
+</base-alert>

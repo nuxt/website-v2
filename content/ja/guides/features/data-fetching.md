@@ -102,7 +102,7 @@ Nuxt が呼び出す fetch に加え、`this.$fetch()` を使うことでコン�
 ```html{}[components/NuxtMountains.vue]
 <template>
   <p v-if="$fetchState.pending">Fetching mountains...</p>
-  <p v-else-if="$fetchState.error">An error occured :(</p>
+  <p v-else-if="$fetchState.error">An error occurred :(</p>
   <div v-else>
     <h1>Nuxt Mountains</h1>
     <ul>
@@ -256,6 +256,13 @@ export default {
 このフックはページレベルのコンポーネントのためだけに使うことができます。`fetch` と異なり、`asyncData` はコンポーネントインスタンス (`this`) にアクセスすることはできません。そのかわりに、[context](/docs/2.x/concepts/context-helpers) を引数として受け取ります。`asyncData` をデータの取得のために使うことができ、Nuxt.js は自動で返却されたオブジェクトをコンポーネントのデータとマージします。
 
 今後の例では、API からのデータの取得におすすめの [@nuxt/http](https://http.nuxtjs.org/) を使用します。
+
+### コンポーネントの非同期データ？
+
+コンポーネントには `asyncData` メソッドがないため、コンポーネント内でサーバーから非同期データを直接取得することはできません。この制限を回避するには、2 つの基本的なオプションがあります:
+
+1. `mounted` フックで API を呼び出し、ロード時にデータプロパティを設定します。_欠点: サーバーサイドレンダリングでは機能しません。_
+2. ページコンポーネントの `asyncData` メソッドで API を呼び出し、データをプロパティとしてサブコンポーネントに渡します。サーバーのレンダリングは正常に機能します。_欠点: ページの `asyncData` は他のコンポーネントのデータを読み込むため読みにくい可能性があります_。
 
 ### クエリ文字列の変化のリスニング
 

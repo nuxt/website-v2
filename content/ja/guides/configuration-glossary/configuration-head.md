@@ -31,6 +31,6 @@ export default {
 
 <base-alert type="info">
 
-<b>情報:</b> 子コンポーネントを使用した際にメタタグの重複を避けるために、meta 要素に `hid` キーで一意な識別子を設定してください（[詳細はこちら](https://vue-meta.nuxtjs.org/api/#tagidkeyname)）。
+子コンポーネントを使用した際にメタタグの重複を避けるために、meta 要素に `hid` キーで一意な識別子を設定してください（[詳細はこちら](https://vue-meta.nuxtjs.org/api/#tagidkeyname)）。
 
 </base-alert>

@@ -334,7 +334,7 @@ Modul konten dilengkapi dengan _QueryBuilder API_ yang mirip dengan MongoDB yang
 
 <base-alert type="next">
 
-Lihat [content module docs](https://content.nuxtjs.org/fetching#api) untuk mengetahui detail selengkapnya
+Lihat [content module docs](https://content.nuxtjs.org/advanced/#api-endpoint) untuk mengetahui detail selengkapnya
 
 </base-alert>
 
@@ -354,7 +354,7 @@ Untuk artikel, konten dapat digunakan untuk membuat _feed_ berita menggunakan mo
 
 <base-alert type="next">
 
-Lihat [dokumen modul konten](https://content.nuxtjs.org/advanced#integration-with-nuxtjsfeed) untuk mengetahui detail selengkapnya
+Lihat [dokumen modul konten](https://content.nuxtjs.org/integrations/#nuxtjsfeed) untuk mengetahui detail selengkapnya
 
 </base-alert>
 

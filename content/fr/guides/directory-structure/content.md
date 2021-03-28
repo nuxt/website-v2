@@ -341,7 +341,7 @@ Le module `content` possède un puissant QueryBuilder d'API (similaire à MongoD
 
 <base-alert type="next">
 
-Se référer à la [documentation du module content](https://content.nuxtjs.org/fetching#api) pour davantage de détails.
+Se référer à la [documentation du module content](https://content.nuxtjs.org/advanced/#api-endpoint) pour davantage de détails.
 
 </base-alert>
 
@@ -361,7 +361,7 @@ Dans le cas d'articles, le contenu peut être utilisé pour générer un fil d'a
 
 <base-alert type="next">
 
-Se référer à la [documentation du module content](https://content.nuxtjs.org/advanced#integration-with-nuxtjsfeed) pour davantage de détails.
+Se référer à la [documentation du module content](https://content.nuxtjs.org/integrations/#nuxtjsfeed) pour davantage de détails.
 
 </base-alert>
 

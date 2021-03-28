@@ -125,6 +125,8 @@ npm install --save-dev sass sass-loader@10 fibers
   </code-block>
 </code-group>
 
+<base-alert type="info">`fibers` がインストールされている場合、`sass` の同期コンパイル（2 倍速）が[自動的に有効になります](https://github.com/webpack-contrib/sass-loader)。</base-alert>
+
 Nuxt.js は拡張子からファイルの種類を自動的に推測して webpack に適したプリプロセッサローダーを使用します。それでも必要な場合は、必要なローダーをインストールする必要があります。
 
 ## フォント

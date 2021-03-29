@@ -49,37 +49,6 @@ $ npm run dev
 
 Check that everything works.
 
-## Application configuration
-
-!Attention: from now and on, the port is set to `3000`, change all occurrences if needed.
-
-The host should not be set to localhost, but to 0.0.0.0. You can update the server configuration in `nuxt.config.js`:
-
-```javascript
-export default {
-  server: {
-    port: 3000, // default: 3000
-    host: '0.0.0.0', // default: localhost,
-    timing: false
-  }
-}
-```
-
-More information [here](/docs/2.x/configuration-glossary/configuration-server).
-
-Or, add this to your package.json file:
-
-```json
-{
-  "config": {
-    "nuxt": {
-      "host": "0.0.0.0",
-      "port": "3000",
-      "timing": false
-    }
-  }
-}
-```
 
 ## Containerize your application
 
@@ -94,11 +63,13 @@ FROM node:14
 
 WORKDIR /usr/src/app
 
-COPY package.json ./
+COPY . ./
 RUN yarn
 
-COPY . .
-EXPOSE 3000
+EXPOSE 8080
+
+ENV HOST=0.0.0.0
+ENV PORT=8080
 
 RUN yarn build
 
@@ -112,11 +83,13 @@ FROM node:14
 
 WORKDIR /usr/src/app
 
-COPY package.json ./
+COPY . ./
 RUN npm install
 
-COPY . .
-EXPOSE 3000
+EXPOSE 8080
+
+ENV HOST=0.0.0.0
+ENV PORT=8080
 
 RUN npm run build
 

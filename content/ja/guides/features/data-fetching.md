@@ -102,7 +102,7 @@ Nuxt が呼び出す fetch に加え、`this.$fetch()` を使うことでコン�
 ```html{}[components/NuxtMountains.vue]
 <template>
   <p v-if="$fetchState.pending">Fetching mountains...</p>
-  <p v-else-if="$fetchState.error">An error occured :(</p>
+  <p v-else-if="$fetchState.error">An error occurred :(</p>
   <div v-else>
     <h1>Nuxt Mountains</h1>
     <ul>
@@ -257,6 +257,13 @@ export default {
 
 今後の例では、API からのデータの取得におすすめの [@nuxt/http](https://http.nuxtjs.org/) を使用します。
 
+### コンポーネントの非同期データ？
+
+コンポーネントには `asyncData` メソッドがないため、コンポーネント内でサーバーから非同期データを直接取得することはできません。この制限を回避するには、2 つの基本的なオプションがあります:
+
+1. `mounted` フックで API を呼び出し、ロード時にデータプロパティを設定します。_欠点: サーバーサイドレンダリングでは機能しません。_
+2. ページコンポーネントの `asyncData` メソッドで API を呼び出し、データをプロパティとしてサブコンポーネントに渡します。サーバーのレンダリングは正常に機能します。_欠点: ページの `asyncData` は他のコンポーネントのデータを読み込むため読みにくい可能性があります_。
+
 ### クエリ文字列の変化のリスニング
 
 デフォルトでは、クエリ文字列の変化で `asyncData` メソッドは呼び出されません。ページネーションコンポーネントを作成するときなどにこの挙動を変えたい場合は、ページコンポーネントの `watchQuery` プロパティを見るパラメータを設定することができます。
@@ -266,9 +273,5 @@ export default {
 [watchQuery プロパティ](/docs/2.x/components-glossary/pages-watchquery)についてより学び、利用可能な [context 内のキー](/docs/2.x/concepts/context-helpers)のリストを見てみましょう。
 
 </base-alert>
-
-<app-modal>
-  <code-sandbox :src="csb_link"></code-sandbox>
-</app-modal>
 
 <quiz :questions="questions"></quiz>

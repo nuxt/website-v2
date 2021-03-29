@@ -3,7 +3,7 @@ title: 匿名中间件
 description: 使用匿名中间件显示用户访问页面的次数分析。
 position: 603
 category: middleware
-csb_link: https://codesandbox.io/embed/github/nuxt-academy/examples/tree/master/middleware/anonymous-middleware?fontsize=14&hidenavigation=1&module=%2Fpages%2Fanonymous-middleware.vue&theme=dark&view=editor
+csb_link: https://codesandbox.io/embed/github/nuxtlabs/examples/tree/master/middleware/anonymous-middleware?fontsize=14&hidenavigation=1&module=%2Fpages%2Fanonymous-middleware.vue&theme=dark&view=editor
 ---
 
 使用匿名中间件显示用户访问页面的次数分析。

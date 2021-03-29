@@ -4,6 +4,10 @@ description: Here, you will find information on setting up and running a Nuxt.js
 position: 1
 category: get-started
 csb_link: https://codesandbox.io/embed/github/nuxt-academy/guides-examples/tree/master/01_get_started/01_installation?fontsize=14&hidenavigation=1&theme=dark
+CreateNuxtAppVideo: wHkPjOmJTt0
+CreateNuxtAppVideoTitle: Using create-nuxt-app
+ManualInstallVideo: mKV_9AIG70E
+ManualInstallVideoTitle: Nuxt Manual Installation
 ---
 
 ## Prerequisites
@@ -13,6 +17,8 @@ csb_link: https://codesandbox.io/embed/github/nuxt-academy/guides-examples/tree/
 - A terminal, we recommend using VS Code's [integrated terminal](https://code.visualstudio.com/docs/editor/integrated-terminal) or [WebStorm terminal](https://www.jetbrains.com/help/webstorm/terminal-emulator.html).
 
 ## Using create-nuxt-app
+
+<YouTubeLite :video="CreateNuxtAppVideo" :title="CreateNuxtAppVideoTitle" ></YouTubeLite>
 
 To get started quickly you can use the [create-nuxt-app](https://github.com/nuxt/create-nuxt-app).
 
@@ -66,7 +72,7 @@ npm run dev
   </code-block>
 </code-group>
 
-The application is now running on [localhost:3000](http://localhost:3000). Well done!
+The application is now running on [http://localhost:3000](http://localhost:3000). Well done!
 
 <base-alert type="info">
 
@@ -75,6 +81,8 @@ Another way to get started with Nuxt.js is to use [CodeSandbox](https://template
 </base-alert>
 
 ## Manual Installation
+
+<YouTubeLite :video="ManualInstallVideo" :title="ManualInstallVideoTitle" ></YouTubeLite>
 
 Creating a Nuxt.js project from scratch only requires one file and one directory.
 
@@ -199,7 +207,7 @@ We use the dev command when running our application in development mode.
 
 </base-alert>
 
-The application is now running on **[localhost:3000](http://localhost:3000/)**.
+The application is now running on **[http://localhost:3000](http://localhost:3000/)**.
 
 Open it in your browser by clicking the link in your terminal and you should see the text "Hello World" we copied in the previous step.
 

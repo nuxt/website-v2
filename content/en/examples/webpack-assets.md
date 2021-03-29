@@ -3,7 +3,7 @@ title: webpack Assets
 description: Use the assets folder to add css, images and fonts to your application
 position: 1
 category: assetManagement
-csb_link: https://codesandbox.io/embed/github/nuxt-academy/examples/tree/master/asset-management/webpack-assets?fontsize=14&hidenavigation=1&theme=dark&view=editor
+csb_link: https://codesandbox.io/embed/github/nuxtlabs/examples/tree/master/asset-management/webpack-assets?fontsize=14&hidenavigation=1&theme=dark&view=editor
 ---
 
 <example-intro></example-intro>

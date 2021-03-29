@@ -57,8 +57,7 @@ export default {
   },
   buildModules: [
     // https://github.com/nuxt-community/eslint-module
-    // Disabled, waiting for https://github.com/nuxt-community/eslint-module/pull/46 to be released
-    // '@nuxtjs/eslint-module',
+    '@nuxtjs/eslint-module',
     // https://github.com/nuxt-community/color-mode-module
     '@nuxtjs/color-mode',
     // https://github.com/nuxt-community/netlify-files-module
@@ -70,7 +69,9 @@ export default {
     // https://github.com/Atinux/nuxt-tailwindcss/
     '@nuxtjs/tailwindcss',
     // https://pwa.nuxtjs.org
-    '@nuxtjs/pwa'
+    '@nuxtjs/pwa',
+    // https://github.com/moritzsternemann/vue-plausible
+    'vue-plausible'
   ],
   modules: [
     '~/modules/releases',
@@ -83,14 +84,24 @@ export default {
   pwa: {
     manifest: {
       name: 'NuxtJS',
+      description: 'Nuxt.js official website',
       theme_color: '#00C58E'
     }
   },
 
   // Auto import components, see https://github.com/nuxt/components
-  components: true,
+  components: [
+    '~/components/templates',
+    '~/components/global',
+    '~/components/atoms',
+    '~/components/molecules',
+    '~/components/organisms'
+  ],
   colorMode: {
     preference: 'light' // disable system
+  },
+  plausible: {
+    domain: 'nuxtjs.org'
   },
   content: {
     markdown: {
@@ -99,17 +110,21 @@ export default {
       }
     }
   },
-  css: ['~/assets/css/main.scss'],
+  css: [
+    '~/assets/css/main.scss',
+    'node_modules/lite-youtube-embed/src/lite-yt-embed.css'
+  ],
   plugins: [
     '~/plugins/i18n',
     '~/plugins/directives',
     '~/plugins/intersection-observer.client.js',
     '~/plugins/vue-observe-visibility.client.js',
     '~/plugins/ga.client.js',
-    '~/plugins/adblock.client.js',
+    // '~/plugins/adblock.client.js',
     '~/plugins/newsletter.client.js',
     '~/plugins/vue-scrollactive',
-    '~/plugins/contributors'
+    '~/plugins/contributors',
+    '~/plugins/youtube.client.js'
   ],
   env: {
     DEPLOY_PRIME_URL: process.env.DEPLOY_PRIME_URL || false,
@@ -120,8 +135,8 @@ export default {
   },
   publicRuntimeConfig: {
     nuxtLocale: process.env.NUXT_LOCALE || 'en',
-    nuxtVersion: '2.14.8',
-    nuxtStars: '33K+'
+    nuxtVersion: '2.15.2',
+    nuxtStars: '34K+'
   },
   loading: { color: '#41B883' },
   generate: {

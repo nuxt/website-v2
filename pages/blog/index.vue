@@ -9,7 +9,7 @@
             class="text-3xl xl:text-4xl text-light-onSurfacePrimary dark:text-dark-onSurfacePrimary font-medium leading-normal mb-6 lg:pt-4"
           >
             {{ $t('blog.title') }}
-            <template v-slot:nuxt>
+            <template #nuxt>
               <AppTitle />
             </template>
           </i18n>
@@ -20,7 +20,7 @@
             tag="h3"
             class="xl:text-lg light:text-light-onSurfaceSecondary dark:text-dark-onSurfaceSecondary font-medium leading-relaxed mb-6"
           >
-            <template v-slot:nuxtTeam>
+            <template #nuxtTeam>
               <NuxtLink
                 class="text-nuxt-green underline"
                 to="/team#nuxtCompany"
@@ -28,7 +28,7 @@
                 {{ $t('blog.nuxt_team') }}
               </NuxtLink>
             </template>
-            <template v-slot:nuxtCommunity>
+            <template #nuxtCommunity>
               <NuxtLink
                 class="text-nuxt-green underline"
                 to="/team#nuxtCommunity"

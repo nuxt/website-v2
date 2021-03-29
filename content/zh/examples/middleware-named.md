@@ -3,7 +3,7 @@ title: 指定(named)中间件
 description: 使用命名中间件对使用商店的用户进行身份验证，并允许他们在验证通过后访问页面
 position: 602
 category: middleware
-csb_link: https://codesandbox.io/embed/github/nuxt-academy/examples/tree/master/middleware/named-middleware?fontsize=14&hidenavigation=1&module=%2Fpages%2Fnamed-middleware.vue&theme=dark&view=editor
+csb_link: https://codesandbox.io/embed/github/nuxtlabs/examples/tree/master/middleware/named-middleware?fontsize=14&hidenavigation=1&module=%2Fpages%2Fnamed-middleware.vue&theme=dark&view=editor
 ---
 
 使用指定(named)中间件对使用商店的用户进行身份验证，并允许他们在验证通过后访问页面

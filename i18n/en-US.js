@@ -39,8 +39,7 @@ module.exports = {
       {
         name: 'Video Courses',
         icon: 'video',
-        slug: 'video-courses'
-        // href: 'https://masteringnuxt.com/?utm_source=nuxt&utm_medium=link&utm_campaign=navbar_link'
+        href: 'https://masteringnuxt.com/?utm_source=nuxt&utm_medium=link&utm_campaign=navbar_link'
       }
     ],
     search: {

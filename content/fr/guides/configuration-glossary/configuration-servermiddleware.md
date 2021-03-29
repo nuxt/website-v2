@@ -11,7 +11,7 @@ position: 27
 
 Nuxt crée en interne une instance [connect](https://github.com/senchalabs/connect) à laquelle vous pouvez ajouter votre propre middleware personnalisé. Cela nous permet d'enregistrer des routes supplémentaires (généralement des routes `/api`) **sans avoir besoin d'un serveur externe**.
 
-Parce que Connect itself est un middleware, les middleware enregistrés fonctionneront avec `nuxt start` et aussi lorsqu'il est utilisé comme un middleware avec des usages programmatiques comme [express-template](https://github.com/nuxt-community/express-template). Les [Modules](/guide/modules) nuxt peuvent également fournir `serverMiddleware` en utilisant [this.addServerMiddleware()](/docs/2.x//internals-glossary/internals-module-container#addservermiddleware-middleware)
+Parce que Connect itself est un middleware, les middleware enregistrés fonctionneront avec `nuxt start` et aussi lorsqu'il est utilisé comme un middleware avec des usages programmatiques comme [express-template](https://github.com/nuxt-community/express-template). Les [Modules](/guide/modules) nuxt peuvent également fournir `serverMiddleware` en utilisant [this.addServerMiddleware()]((/docs/2.x/internals-glossary/internals-module-container#addservermiddleware-middleware)
 
 En plus, nous avons introduit une option `prefix` dont la valeur par défaut est `true`. Elle ajoutera la base du routeur aux middlewares de votre serveur.
 

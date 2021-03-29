@@ -76,7 +76,7 @@ fr: Si notre middleware de serveur est constitué d'une liste de fonctions corre
 
 ## Différence entre serveur et navigateur
 
-Comme nous sommes dans un environnement Node.js nous avons accès aux objets Node.js tels que `req` et `res`. Nous n'avez pas accès aux objets `window` ou `document` vu qu'ils appartiennent au navigateur. Nous pouvons cependant utiliser `window` ou `document` en les utilisant dans les hooks `beforeMount` ou `mounted`.
+Comme nous sommes dans un environnement Node.js nous avons accès aux objets Node.js tels que `req` et `res`. Nous n'avons pas accès aux objets `window` ou `document` vu qu'ils appartiennent au navigateur. Nous pouvons cependant utiliser `window` ou `document` en les utilisant dans les hooks `beforeMount` ou `mounted`.
 
 ```js
 beforeMount{

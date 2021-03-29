@@ -217,7 +217,7 @@ Nous voudrons peut-être désactiver cette option si nous avons beaucoup de page
 
 <base-alert type="next">
 
-[Conseils pour les ressources](/guides/configuration-glossary/configuration-render#resourcehints).
+[Conseils pour les ressources](/docs/2.x/configuration-glossary/configuration-render#resourcehints).
 
 </base-alert>
 

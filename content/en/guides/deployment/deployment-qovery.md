@@ -2,16 +2,16 @@
 title: Deploy Nuxt on Qovery
 description: How to deploy Nuxt.js on Qovery?
 menu: Qovery
-target: Server
+target: Static & Server
 category: deployment
-position: 109
+position: 115
 ---
 
 [Qovery](https://qovery.com) is a fully-managed cloud platform that runs on your AWS, GCP, Azure and Digital Ocean account where you can host static sites, backend APIs, databases, cron jobs, and all your other apps in one place.
 
 Static sites are **completely free** on Qovery and include the following:
 
-- Continuous, automatic builds & deploys from GitHub, Bitbucket, and GitLab.
+- Continuous, automatic builds & deploys from GitHub and GitLab.
 - Automatic SSL certificates through [Let's Encrypt](https://letsencrypt.org).
 - Free managed PostgreSQL.
 - Free SSD storage.
@@ -20,7 +20,7 @@ Static sites are **completely free** on Qovery and include the following:
 
 ## Prerequisites
 
-This guide assumes you already have a Nuxt project to deploy. If you need a project, use the [Get Started](/content/en/get-started/installation.md).
+This guide assumes you already have a Nuxt project to deploy. If you need a project, follow the [Get Started](/content/en/get-started/installation.md) guide.
 
 ## Setup
 
@@ -38,7 +38,7 @@ Click on "Next".
 
 ### 3. Add an application
 
-Click on "Create an application" then choose "I have an application" and select your GitHub or GitLab repository where your Nuxt site is located.
+Click on "Create an application" then choose "I have an application" and select the repository where your Nuxt site is located.
 
 Click on "Next".
 
@@ -52,7 +52,7 @@ Your app should be deployed. You can see the status in real time by clicking on 
 
 ## Continuous deploys
 
-Now that Qovery is connected to your repo, it will **automatically build and publish your site** any time you push to GitHub.
+Now that Qovery is connected to your repo, it will **automatically build and publish your site** any time you push to git.
 
 ## Custom domains
 

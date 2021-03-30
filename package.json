@@ -22,12 +22,8 @@
     "new": "hygen new",
     "start": "nuxt start",
     "test:e2e:dev": "start-server-and-test dev http://localhost:3000 cy:open",
-    "test:e2e:run": "cypress install && start-server-and-test start http://localhost:3000 cy:run"
-  },
-  "husky": {
-    "hooks": {
-      "pre-commit": "cross-env PRE_COMMIT=true lint-staged"
-    }
+    "test:e2e:run": "cypress install && start-server-and-test start http://localhost:3000 cy:run",
+    "prepare": "husky install"
   },
   "lint-staged": {
     "*.{js,json,css,vue,md}": "prettier --write",

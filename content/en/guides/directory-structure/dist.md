@@ -78,7 +78,7 @@ If you do change your dist folder then you will need to add that to your version
 
 ### The subFolders Property
 
-Nuxt.js puts all your generated pages inside a folder by default, however you can change this if you wanted to by modifying the nuxt.config and changing the subFolders to be false.
+Nuxt.js puts all your generated pages inside a folder by default, however you can change this if you want by modifying the nuxt.config and changing the subFolders to be false.
 
 ```js{}[nuxt.config.js]
 generate: {

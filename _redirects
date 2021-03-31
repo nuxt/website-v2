@@ -119,7 +119,7 @@ https://www.nuxtjs.org/* https://nuxtjs.org/:splat 301!
 /faq/webpack-audio-files /docs/2.x/features/configuration#extend-webpack-to-load-audio-files 301!
 /faq/pre-processors /docs/2.x/features/configuration#pre-processors
 /faq/deployment-aws-s3-cloudfront /docs/2.x/deployment/deployment-amazon-web-services#aws-w-s3--cloudfront 301!
-/faq/deployment-aws-amplify /docs/2.x/deployment/deployment-aws-amplify 301!
+/faq/deployment-aws-amplify /docs/2.x/deployment/deployment-amazon-web-services 301!
 /faq/deployment-azure-portal /docs/2.x/deployment/deployment-azure-portal 301!
 /faq/deployment-azure-static-web-apps /docs/2.x/deployment/deployment-azure-static-web-apps 301!
 /faq/bip-deployment /docs/2.x/deployment/bip-deployment 301!

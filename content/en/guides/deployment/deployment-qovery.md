@@ -20,7 +20,7 @@ Static sites are **completely free** on Qovery and include the following:
 
 ## Prerequisites
 
-This guide assumes you already have a Nuxt project to deploy. If you need a project, follow the [Get Started](/content/en/get-started/installation.md) guide.
+This guide assumes you already have a Nuxt project to deploy. If you need a project, follow the [Get Started](/docs/2.x/get-started/installation) guide.
 
 ## Setup
 

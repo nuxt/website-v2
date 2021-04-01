@@ -24,7 +24,7 @@ This guide assumes you already have a Nuxt project to deploy. If you need a proj
 
 ## Setup
 
-Follow the procedure below to set up a Nuxt on Qovery:
+Follow the procedure below to set up Nuxt on Qovery:
 
 ### 1. Create a Qovery account.
 

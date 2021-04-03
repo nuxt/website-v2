@@ -209,7 +209,7 @@ npm run generate --fail-on-error
 
 <base-alert type="next">
 
-[FAQ](/faq) で人気のホストへのデプロイ例を参照してください。
+[FAQ](/docs/2.x/deployment/deploying-to-21yunbox) で人気のホストへのデプロイ例を参照してください。
 
 </base-alert>
 

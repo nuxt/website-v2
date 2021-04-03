@@ -140,7 +140,7 @@ export default {
 
 ```bash
 yarn add -D pug pug-plain-loader
-yarn add -D node-sass sass-loader
+yarn add -D sass sass-loader@10 fibers
 ```
 
   </code-block>
@@ -148,11 +148,104 @@ yarn add -D node-sass sass-loader
 
 ```bash
 npm install --save-dev pug pug-plain-loader
-npm install --save-dev node-sass sass-loader
+npm install --save-dev sass sass-loader@10 fibers
 ```
 
-</code-block>`
+  </code-block>
 </code-group>
+
+<base-alert type="info">`fibers` がインストールされている場合、`sass` の同期コンパイル（2 倍速）が[自動的に有効になります](https://github.com/webpack-contrib/sass-loader)。</base-alert>
+
+## 外部のリソース
+
+### グローバルの設定
+
+ヘッドオブジェクトまたは関数に外部リソースを含めることができます。[head API のドキュメント](https://nuxtjs.org/api/pages-head/)で説明したように、次の例ではオブジェクトや関数として `head` の使い方を示します。もし計算されたプロパティやデータなど、Vue コンポーネントの値を使いたい場合は、 `head()` 関数を使って最終的な head オブジェクトを返すことができます。オプションの `body: true` を各リソースに渡して、閉じる `</body>` タグの前にリソースを含めることもできます。
+
+`nuxt.config.js`（ここでは head オブジェクト）にリソースを含めます:
+
+```js
+export default {
+  head: {
+    script: [
+      {
+        src: 'https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js'
+      }
+    ],
+    link: [
+      {
+        rel: 'stylesheet',
+        href: 'https://fonts.googleapis.com/css?family=Roboto&display=swap'
+      }
+    ]
+  }
+}
+```
+
+### ローカルの設定
+
+`pages/` ディレクトリ（ここでは head 関数）内の `.vue` ファイルにリソースを含めます:
+
+```html
+<template>
+  <h1>About page with jQuery and Roboto font</h1>
+</template>
+
+<script>
+  export default {
+    head() {
+      return {
+        script: [
+          {
+            src:
+              'https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js'
+          }
+        ],
+        link: [
+          {
+            rel: 'stylesheet',
+            href: 'https://fonts.googleapis.com/css?family=Roboto&display=swap'
+          }
+        ]
+      }
+    }
+  }
+</script>
+
+<style scoped>
+  h1 {
+    font-family: Roboto, sans-serif;
+  }
+</style>
+```
+
+## PostCSS プラグイン
+
+もし存在する場合、プロジェクトディレクトリにある `postcss.config.js` の名前を変更するか削除します。そして `nuxt.config.js` ファイルに以下を追加します:
+
+```js
+export default {
+  build: {
+    postcss: {
+      // プラグイン名をキーとして、引数を値として追加します
+      // npm または yarn を使って依存関係としてこれらを事前にインストールします
+      plugins: {
+        // false を値として渡しプラグインを無効にします
+        'postcss-url': false,
+        'postcss-nested': {},
+        'postcss-responsive-type': {},
+        'postcss-hexrgba': {}
+      },
+      preset: {
+        // postcss-preset-env の設定を変更します
+        autoprefixer: {
+          grid: true
+        }
+      }
+    }
+  }
+}
+```
 
 ## JSX
 
@@ -281,22 +374,79 @@ export default {
 }
 ```
 
-### 開発環境のすべての webpack ビルドで ESLint を実行する
+### webpack 設定の検査
 
-コードスタイルエラーに気づくために、開発環境のすべてのビルドで [ESLint](https://github.com/webpack-contrib/eslint-loader) を実行することができます。
+複雑なプロジェクトやデバッグの場合、最終的な webpack 構成がどのようになるかを確認すると便利な場合があります。幸い、プロジェクトから `nuxt webpack` コマンドを実行して設定を出力できます。詳細については、[#7029](https://github.com/nuxt/nuxt.js/pull/7029) の PR を確認してください。
 
-```js{}[nuxt.config.js]
+### webpack プラグインの追加
+
+`nuxt.config.js` ファイルの `build` オプションを使うと、[`webpack.config.js` ファイル](https://webpack.js.org/configuration/plugins/)と同じ方法で webpack `plugins` を渡すことができます。
+
+この例では JavaScript モジュール（_lodash_ と _jQuery_）を `import` や `require` するかわりに自動的にロードする webpack ビルトインの [ProvidePlugin](https://webpack.js.org/plugins/provide-plugin/)を追加します。
+
+```js
+import webpack from 'webpack'
+
 export default {
   build: {
-    extend(config, { isDev, isClient }) {
-      if (isDev && isClient) {
-        config.module.rules.push({
-          enforce: 'pre',
-          test: /\.(js|vue)$/,
-          loader: 'eslint-loader',
-          exclude: /(node_modules)/
-        })
+    plugins: [
+      new webpack.ProvidePlugin({
+        // グローバルモジュール
+        $: 'jquery',
+        _: 'lodash'
+      })
+    ]
+  }
+}
+```
+
+> 注意: Vue ベースのアプリケーションでは jQuery は必要ないかもしれません。
+
+Nuxt を使うと、プラグインの実行コンテキストを制御することもできます。もしプラグインが [`build.extend`](/docs/2.x/configuration-glossary/configuration-build#extend) 内の `client` または  `server` ビルド（または `dev` ビルドと `prod` ビルドを区別する）で実行されることを意図している場合 、webpack プラグインを手動で渡すこともできます。 
+
+### Webpack を拡張してオーディオファイルをロードする
+
+オーディオファイルは `file-loader` で処理する必要があります。このローダーはすでにデフォルトの Webpack 設定に含まれていますが、オーディオファイルを処理するように設定されていません。`nuxt.config.js` でデフォルトの設定を拡張する必要があります:
+
+```js
+export default {
+  build: {
+    extend(config, ctx) {
+      config.module.rules.push({
+        test: /\.(ogg|mp3|wav|mpe?g)$/i,
+        loader: 'file-loader',
+        options: {
+          name: '[path][name].[ext]'
+        }
+      })
+    }
+  }
+}
+```
+
+これでオーディオファイルを `<audio :src="require('@/assets/water.mp3')" controls></audio>` のようにインポートできます。
+
+`<audio src="@/assets/water.mp3" controls></audio>` だけ書きたい場合、`src` 属性でこれらを参照する際に `vue-loader` に自動的にオーディオファイルを要求するように支持する必要があります:
+
+```js
+export default {
+  build: {
+    loaders: {
+      vue: {
+        transformAssetUrls: {
+          audio: 'src'
+        }
       }
+    },
+
+    extend(config, ctx) {
+      config.module.rules.push({
+        test: /\.(ogg|mp3|wav|mpe?g)$/i,
+        loader: 'file-loader',
+        options: {
+          name: '[path][name].[ext]'
+        }
+      })
     }
   }
 }

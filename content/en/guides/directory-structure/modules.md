@@ -70,8 +70,8 @@ questions:
 
 Discover our [list of modules](https://modules.nuxtjs.org) to supercharge your Nuxt project, created by the Nuxt team and community.
 
-- 145+ Modules
-- 89+ Maintainers
+- 165+ Modules
+- 105+ Maintainers
 
 <base-alert type="next">
 

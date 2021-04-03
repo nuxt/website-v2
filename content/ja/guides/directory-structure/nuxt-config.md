@@ -161,7 +161,7 @@ export default {
 </template>
 ```
 
-<base-alert type="warn">
+<base-alert>
 
 サーバーのみのコンテキスト以外で `$config` を使用した場合（例えば `fetch`、 `asyncData`、 あるいはテンプレート内で直接 `$config` を使用した場合など）、プライベートな設定が公開される可能性があります。
 

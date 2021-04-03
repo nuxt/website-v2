@@ -78,6 +78,12 @@ Nuxt 2.12 未満においては、`fetch` フックは今日の `asyncData` と�
 
 これらのフックは、選択した _あらゆるデータ取得ライブラリ_ で使用することができます。HTTP API へリクエストを送るために [@nuxt/http](https://http.nuxtjs.org/) や [@nuxt/axios](https://axios.nuxtjs.org/) を使用することをおすすめします。認証ヘッダーの設定のような、これらのライブラリのより詳しい情報はそれぞれのドキュメントで見つけることができるでしょう。
 
+<base-alert type="info">
+  
+ミックスイン内で `fetch` または `asyncData` を定義し、それをコンポーネントやページでも定義するとミックスイン関数は呼び出されるかわりに上書きされます。
+
+</base-alert>
+
 ## fetch フック
 
 <base-alert type="info">

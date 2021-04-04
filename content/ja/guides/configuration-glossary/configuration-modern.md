@@ -37,10 +37,10 @@ position: 18
 
 - `modern` が指定されていない場合、Nuxt は `nuxt start` の `modern` ビルドを自動的に検出します。自動検出モードは次のとおりです:
 
-| モード    | モダンモード |
+| ssr    | モダンモード |
 | --------- | :----------: |
-| universal |    server    |
-| spa       |    client    |
+| true |    server    |
+| false       |    client    |
 
 - `nuxt generate` のモダンモードは `client` のみになります。
 - [`render.crossorigin`](/docs/2.x/configuration-glossary/configuration-render#クロスオリジン) を使って `<link>` と `<script>` タグに `crossorigin` 属性を設定します。

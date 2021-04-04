@@ -44,10 +44,6 @@ csb_link: https://codesandbox.io/embed/github/nuxt-academy/guides-examples/tree/
 </template>
 ```
 
-<app-modal>
-  <code-sandbox :src="csb_link"></code-sandbox>
-</app-modal>
-
 <base-alert type="next">
 
 詳細は [NuxtLink コンポーネント](/docs/2.x/features/nuxt-components#the-nuxtlink-component)を参照してください。

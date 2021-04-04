@@ -322,10 +322,6 @@ export default {
 
 </base-alert>
 
-<app-modal>
-  <code-sandbox :src="csb_link"></code-sandbox>
-</app-modal>
-
 ## ページを無視する
 
 ページを無視したい場合は、ファイルの先頭に `-` を付けると `router.js` ファイルに含まれなくなります。

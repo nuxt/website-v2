@@ -81,10 +81,6 @@ Nuxt.js を使用すると、作成したコンポーネントを .vue ファイ
 
 `package.json`  ファイルには、アプリケーションのすべての依存関係とスクリプトが含まれています。
 
-<app-modal>
-  <code-sandbox  :src="csb_link"></code-sandbox>
-</app-modal>
-
 ## プロジェクト構成についての詳細
 
 [content](/docs/2.x/directory-structure/content)、[layouts](/docs/2.x/directory-structure/layouts)、[middleware](/docs/2.x/directory-structure/middleware)、[modules](/docs/2.x/directory-structure/modules)、[plugins](/docs/2.x/directory-structure/plugins) そして [store](/docs/2.x/directory-structure/store) など、さらに役立つディレクトリやファイルがあります。これらは小規模なアプリケーションには必要ないのでここでは説明しません。

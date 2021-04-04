@@ -139,10 +139,6 @@ blog レイアウトを作成するには、`blog.vue` ファイルを layouts �
 
 </base-alert>
 
-<app-modal>
-  <code-sandbox  :src="csb_link"></code-sandbox>
-</app-modal>
-
 ### エラーページ
 
 エラーページは、エラーが発生したときに常に表示される _ページコンポーネント_ です（サーバーサイドレンダリングでは発生しません）。

@@ -62,6 +62,14 @@ _このディレクトリは追加の設定をせずに名前を変更するこ�
 <img src="~/assets/my-image-2.png" />
 ```
 
+<base-alert type="info">Nuxt はこのパスを変更しないため `router.base` をカスタマイズする場合、手動でパスを追加する必要があります。例:
+
+```html
+<img :src="`${yourPrefix}/my-image.png`" />
+```
+
+</base-alert>
+
 ## Static ディレクトリ設定
 
 必要に応じて `nuxt.config.js` ファイルで `static/` ディレクトリの動作を設定できます。

@@ -19,6 +19,8 @@ position: 24
 
 `router.base` にリダイレクトしたい場合、Hook を使ってリダイレクトすることができます。[ルートでない場合 router.base にリダイレクトさせる](/docs/2.x/configuration-glossary/configuration-hooks#root-でない場合は-routerbase-にリダイレクトさせる)を参照してください。
 
+Nuxt v2.15 以降では、実行時にこのプロパティの値を変更すると、既にビルドされているアプリケーションの設定が上書きされます。
+
 ```js{}[nuxt.config.js]
 export default {
   router: {

@@ -22,12 +22,8 @@
     "new": "hygen new",
     "start": "nuxt start",
     "test:e2e:dev": "start-server-and-test dev http://localhost:3000 cy:open",
-    "test:e2e:run": "cypress install && start-server-and-test start http://localhost:3000 cy:run"
-  },
-  "husky": {
-    "hooks": {
-      "pre-commit": "cross-env PRE_COMMIT=true lint-staged"
-    }
+    "test:e2e:run": "cypress install && start-server-and-test start http://localhost:3000 cy:run",
+    "prepare": "husky install"
   },
   "lint-staged": {
     "*.{js,json,css,vue,md}": "prettier --write",
@@ -62,7 +58,7 @@
     "esm": "^3.2.25",
     "fibers": "^5.0.0",
     "globby": "^11.0.2",
-    "husky": "^5.1.3",
+    "husky": "^6.0.0",
     "hygen": "^6.0.4",
     "intersection-observer": "^0.12.0",
     "lint-staged": ">=10.5.4",

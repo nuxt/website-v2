@@ -45,7 +45,7 @@ Then, in your pages, you can import axios like this: `import axios from '~/plugi
 
 ## Automatic injection of environment variables
 
-If you define environment variables starting with `NUXT_ENV_` in the build phase (e.g. `NUXT_ENV_COOL_WORD=freezing nuxt build`, they'll be automatically injected into the process environment. Be aware that they'll potentially take precedence over defined variables in your `nuxt.config.js` with the same name.
+If you define environment variables starting with `NUXT_ENV_` in the build phase (e.g. `NUXT_ENV_COOL_WORD=freezing nuxt build` or `SET NUXT_ENV_COOL_WORD=freezing & nuxt build` for the Windows console, they'll be automatically injected into the process environment. Be aware that they'll potentially take precedence over defined variables in your `nuxt.config.js` with the same name.
 
 ## process.env == {}
 

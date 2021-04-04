@@ -1,92 +1,92 @@
 ---
 title: content
-description: Empower your Nuxt.js application with `@nuxtjs/content` module where you can write in a `content/` directory and fetch your Markdown, JSON, YAML and CSV files through a MongoDB like API, acting as a **Git-based Headless CMS**.
+description: '`@nuxtjs/content` モジュールを使うことで Nuxt.js アプリケーションを強化できます。このモジュールは `content/` ディレクトリへの書き込みや、**Git ベースのヘッドレス CMS** のように動作する MongoDB のような API を介してマークダウン、JSON、YAML や CSV ファイルを取得できます。'
 position: 4
 category: directory-structure
 img: /docs/2.x/nuxt-content.svg
 imgAlt: nuxt content module
 questions:
-  - question: What is the default directory name of the directory where you add your markdown files?
+  - question: マークダウンファイルを追加するディレクトリのデフォルト名は？
     answers:
       - markdown
       - content
       - pages
     correctAnswer: content
-  - question: What component do you use in your template to display your markdown page body?
+  - question: マークダウンのページ本文を表示するためにテンプレートでどのコンポーネントを使いますか？
     answers:
       - <markdown>
       - <nuxt>
       - <nuxt-content>
     correctAnswer: <nuxt-content>
-  - question: What class is automatically added so you can style your markdown?
+  - question: マークダウンのスタイルを設定するためにどのクラスが自動的に追加されますか？
     answers:
       - .content
       - .nuxt-content
       - .markdown
     correctAnswer: .nuxt-content
-  - question: The content module can handle markdown, csv, yaml and json files
+  - question: content モジュールはマークダウン、CSV、YAML、JSON ファイルを処理できますか？
     answers:
-      - true
-      - false
-    correctAnswer: true
-  - question: You can add vue components to your markdown files
+      - 正
+      - 偽
+    correctAnswer: 正
+  - question: マークダウンに Vue コンポーネントを追加できますか？
     answers:
-      - true
-      - false
-    correctAnswer: true
-  - question: Which do you use to list, filter and search your content?
+      - 正
+      - 偽
+    correctAnswer: 正
+  - question: contentの一覧表示、フィルタリング、検索にはどれを使いますか？
     answers:
       - $nuxt-content()
       - $content()
       - $nuxt()
     correctAnswer: $content()
-  - question: What do you use to get previous and next articles?
+  - question: 前の記事や次の記事を取得するために使うのは？
     answers:
       - .surround(slug)
       - .prev-next(slug)
       - .slug()
     correctAnswer: .surround(slug)
-  - question: Prism classes are applied to code blocks by default?
+  - question: Prism クラスはデフォルトでコードブロックに適用されますか？
     answers:
-      - true
-      - false
-    correctAnswer: true
-  - question: What is the default URL you use to access the API to see your JSON?
+      - 正
+      - 偽
+    correctAnswer: 正
+  - question: API をつかって JSON を表示するためにアクセスするデフォルトの URL はどれですか？
     answers:
       - http://localhost:3000/content
       - http://localhost:3000/_content
       - http://localhost:3000/api
     correctAnswer: http://localhost:3000/_content
-  - question: Which heading tags are used to create the Table of contents
+  - question: 目次の作成に使われる見出しタグはどれですか？
     answers:
-      - h1 and h2
-      - h2 and h3
-      - h1 and h2 and h3
-    correctAnswer: h2 and h3
-  - question: You can use the content module with static site generation
+      - h1 と h2
+      - h2 と h3
+      - h1 と h2 と h3
+    correctAnswer: h2 と h3
+  - question:静的サイト生成に content モジュールを使えますか？
     answers:
-      - true
-      - false
-    correctAnswer: true
+      - 正
+      - 偽
+    correctAnswer: 正
 ---
 
-Empower your Nuxt.js application with `@nuxtjs/content` module where you can write in a `content/` directory and fetch your Markdown, JSON, YAML and CSV files through a MongoDB like API, acting as a **Git-based Headless CMS**.
+`@nuxt/content`  モジュールを使うことで Nuxt.js アプリケーションを強化できます。このモジュールは  `content/`  ディレクトリへの書き込みや、**Git ベースのヘッドレス CMS** のように動作する MongoDB のような API を介してマークダウン、JSON、YAML や CSV ファイルを取得できます。
 
 <app-modal :src="img" :alt="imgAlt"></app-modal>
 
-### Hot reload in development
+### 開発時のホットリロード
 
-The content module is blazing fast when it comes to hot reloading in development due to not having to go through webpack when you make changes to your markdown files. You can also listen to the `content:update` event and create a plugin so that every time you update a file in your content directory it will dispatch a fetchCategories method for example.
+マークダウンファイルに変更があった場合 webpack を介する必要がないので、開発時における content モジュールのホットリロードは非常に高速です。また、`content:update` イベントのリッスンやプラグインを作ることもできるので content 内のファイルを更新するたびに例えば fetchCategories メソッドをディスパッチすることができます。
 
 <base-alert type="next">
 
-[See the content module docs for more details](https://content.nuxtjs.org/advanced#handling-hot-reload)
+詳細は [content モジュールのドキュメントのホットリロードの取り扱い](https://content.nuxtjs.org/ja/advanced/#%E3%83%9B%E3%83%83%E3%83%88%E3%83%AA%E3%83%AD%E3%83%BC%E3%83%89%E3%81%AE%E5%8F%96%E3%82%8A%E6%89%B1%E3%81%84)を参照してください
 
 </base-alert>
 
-### Displaying content
+### content の表示
 
-You can use `<nuxt-content>` component directly in your template to display the page body.
+ページの本文を表示するために `<nuxt-content>` コンポーネントをテンプレートで直接使えます。
 
 ```html{}[pages/blog/_slug.vue]
 <template>
@@ -98,15 +98,15 @@ You can use `<nuxt-content>` component directly in your template to display the 
 
 <base-alert type="next">
 
-See the [content module docs](https://content.nuxtjs.org/displaying#component) for more details
+詳細は [content モジュールのドキュメントのコンポーネント](https://content.nuxtjs.org/ja/displaying/#component)を参照してください
 
 </base-alert>
 
-### Styling your content
+### content のスタイリング
 
-Depending on what you're using to design your app, you may need to write some style to properly display the markdown.
+アプリケーションの設計に使っているものによってはマークダウンを適切に表示するために何らかのスタイルを作成する必要があるかもしれません。
 
-`<nuxt-content>` component will automatically add a `.nuxt-content` class, you can use it to customize your styles.
+`<nuxt-content>`  コンポーネントは自動的に  `.nuxt-content`  クラスを追加します。このクラスを使ってスタイルをカスタマイズできます。
 
 ```html
 <style>
@@ -122,35 +122,35 @@ Depending on what you're using to design your app, you may need to write some st
 
 <base-alert type="next">
 
-See the [content module docs](https://content.nuxtjs.org/displaying#style) for more details
+詳細は [content モジュールのドキュメントのスタイル](https://content.nuxtjs.org/ja/displaying#style)を参照してください
 
 </base-alert>
 
-### Handles Markdown, CSV, YAML, JSON(5)
+### マークダウン、CSV、YAML、JSON（5）を扱う
 
-This module converts your .md files into a JSON AST tree structure, stored in a body variable. You can also add a YAML front matter block to your markdown files or a .yaml file which will be injected into the document. You can also add a json/json5 file which can also be injected into the document. And you can use a .csv file where rows will be assigned to the body variable.
+このモジュールは `.md` ファイルを JSON AST ツリー構造に変換し body 変数に格納します。YAML front matter ブロックをマークダウンファイルまたはドキュメントに挿入される .yaml ファイルに追加することもできます。また、同様にドキュメントに挿入できる json/json5 ファイルや行が body 変数に割り当てられる .csv ファイルを追加することもできます。
 
 ```md
 ---
-title: My first Blog Post
-description: Learning how to use @nuxt/content to create a blog
+title: 最初のブログ投稿
+description:@nuxt/content を使ってブログを作る方法を学びます
 ---
 ```
 
 <base-alert type="next">
 
-See the [content module docs](https://content.nuxtjs.org/writing#markdown) for more details
+詳細は [content モジュールのドキュメントのマークダウン](https://content.nuxtjs.org/ja/writing/#markdown)を参照してください
 
 </base-alert>
 
-### Vue components in Markdown
+### マークダウン内の Vue コンポーネント
 
-You can use Vue components directly in your markdown files. You will however need to use your components as kebab case and cannot use self-closing tags.
+マークダウンファイルで Vue コンポーネントを直接使えます。ただし、コンポーネントをケバブケースで参照する必要があり自動終了タグは使えません。
 
 ```html{}[components/global/InfoBox.vue]
 <template>
-  <div class="bg-blue-500 text-white p-4 mb-4">
-    <p><slot name="info-box">default</slot></p>
+  <div class="p-4 mb-4 text-white bg-blue-500">
+    <p><slot name="info-box">デフォルト</slot></p>
   </div>
 </template>
 ```
@@ -158,20 +158,20 @@ You can use Vue components directly in your markdown files. You will however nee
 ```html{}[content/articles/my-first-blog-post.md]
 <info-box>
   <template #info-box>
-    This is a vue component inside markdown using slots
+    これは slot を使ったマークダウン内の Vue コンポーネントです
   </template>
 </info-box>
 ```
 
 <base-alert type="next">
 
-See the [content module docs](https://content.nuxtjs.org/writing#vue-components) for more details
+詳細は [content モジュールのドキュメントの vue コンポーネント](https://content.nuxtjs.org/writing#vue-components)を参照してください
 
 </base-alert>
 
-### Fully Searchable API
+### 完全検索可能な API
 
-You can use `$content()` to list, filter and search your content easily.
+`$content()` を使って content を簡単に一覧表示したりフィルタしたり検索したりできます。
 
 ```html{}[pages/blog/index.vue]
 <script>
@@ -192,13 +192,13 @@ You can use `$content()` to list, filter and search your content easily.
 
 <base-alert type="next">
 
-See the [content module docs](https://content.nuxtjs.org/fetching#methods) for more details
+詳細は [content モジュールのドキュメントのメソッド一覧](https://content.nuxtjs.org/ja/fetching/#%E3%83%A1%E3%82%BD%E3%83%83%E3%83%89%E4%B8%80%E8%A6%A7)を参照してください
 
 </base-alert>
 
-### Previous and Next articles
+### 前の記事と次の記事
 
-The content module includes a `.surround(slug)` so that you get previous and next articles easily.
+content モジュールには `.surround(slug)` が含まれているので前の記事と次の記事を簡単に取得できます。
 
 ```js
 async asyncData({ $content, params }) {
@@ -224,13 +224,13 @@ async asyncData({ $content, params }) {
 
 <base-alert type="next">
 
-See the [content module docs](https://content.nuxtjs.org/fetching#surroundslug-options) for more details
+詳細は [content モジュールのドキュメントの surroundslug オプション](https://content.nuxtjs.org/ja/fetching/#surroundslug-options)を参照してください
 
 </base-alert>
 
-### Full-text search
+### 全文検索
 
-The content module comes with a full text search so you can easily search across your markdown files without having to install anything.
+content モジュールには全文検索が備わっているので何もインストールしなくてもマークダウンファイルを簡単に検索できます。
 
 ```html{}[components/AppSearchInput.vue]
 <script>
@@ -259,13 +259,13 @@ The content module comes with a full text search so you can easily search across
 
 <base-alert type="next">
 
-See the [content module docs](https://content.nuxtjs.org/fetching#searchfield-value) for more details
+詳細は [content モジュールのドキュメントの search](https://content.nuxtjs.org/ja/fetching/#searchfield-value)を参照してください
 
 </base-alert>
 
-### Syntax highlighting
+### シンタックスハイライト
 
-This module automatically wraps codeblocks and applies [Prism](https://prismjs.com/) classes. You can also add a different Prism theme or disable it altogether.
+このモジュールは自動的にコードブロックをラップ氏、[Prism](https://prismjs.com/)  クラスを適用します。異なる Prism テーマを使ったり無効化したりすることもできます。
 
 <code-group>
   <code-block label="Yarn" active>
@@ -296,23 +296,23 @@ content: {
 
 <base-alert type="next">
 
-See the [content module docs](https://content.nuxtjs.org/writing#syntax-highlighting) for more details
+詳細は [content モジュールのドキュメントのシンタックスハイライト](https://content.nuxtjs.org/ja/writing/#%E3%82%B7%E3%83%B3%E3%82%BF%E3%83%83%E3%82%AF%E3%82%B9%E3%83%8F%E3%82%A4%E3%83%A9%E3%82%A4%E3%83%88)を参照してください
 
 </base-alert>
 
-### Extend Markdown Parsing
+### マークダウンのパースを拡張する
 
-Originally markdown does not support highlighting lines inside codeblock nor filenames. The content module allows it with its own custom syntax. Line numbers are added to the `pre` tag in data-line attributes and the filename will be converted to a `span` with a `filename` class, so you can style it.
+もともとマークダウンはコードブロック内の行やファイル名の強調表示をサポートしていません。content モジュールでは独自のカスタム構文を使えます。行番号は  data-line  属性の `pre`  タグに追加され、ファイル名は `filename`  クラスの `span` に変換されるのでスタイルを設定できます。
 
 <base-alert type="next">
 
-See the [content module docs](https://content.nuxtjs.org/writing#codeblocks) for more details
+詳細は [content モジュールのドキュメントのコードブロック](https://content.nuxtjs.org/ja/writing/#%E3%82%B3%E3%83%BC%E3%83%89%E3%83%96%E3%83%AD%E3%83%83%E3%82%AF)を参照してください
 
 </base-alert>
 
-### Table of contents generation
+### 目次の生成
 
-A toc(Table of Contents) array property will be injected into your document, listing all the headings with their titles and ids, so you can link to them.
+TOC（Table of Contents/ 目次）配列プロパティがドキュメントに挿入され、すべての見出しとそのタイトル、ID の一覧が表示されるのでそれらにリンクできます。
 
 ```html{}[pages/blog/_slug.vue]
 <nav>
@@ -326,69 +326,69 @@ A toc(Table of Contents) array property will be injected into your document, lis
 
 <base-alert type="next">
 
-See the [content module docs](https://content.nuxtjs.org/writing#table-of-contents) for more details
+詳細は [content モジュールのドキュメントのテーブルコンテンツ](https://content.nuxtjs.org/writing#table-of-contents)を参照してください
 
 </base-alert>
 
-### Powerful query builder API (MongoDB-like)
+### （MongoDB のような）力強いクエリビルダー API
 
-The content module comes with a powerful query builder API similar to MongoDB which allows you to easily see the JSON of each directory at `http://localhost:3000/_content/`. The endpoint is accessible on GET and POST request, so you can use query params.
+content モジュールには MongoDB に似た強力なクエリビルダー API が備わっており、`http://localhost:3000/_content/` で各ディレクトリの JSON を簡単に確認できます。エンドポイントは GET や POST リクエストでアクセスできるのでクエリパラメータを使えます。
 
 `http://localhost:3000/_content/articles?only=title&only=description&limit=10`
 
 <base-alert type="next">
 
-See the [content module docs](https://content.nuxtjs.org/advanced/#api-endpoint) for more details
+詳細は [content モジュールのドキュメントの API エンドポイント](https://content.nuxtjs.org/ja/advanced#api%E3%82%A8%E3%83%B3%E3%83%89%E3%83%9D%E3%82%A4%E3%83%B3%E3%83%88)を参照してください
 
 </base-alert>
 
-### Extend with hooks
+### フックを使った拡張
 
-You can use hooks to extend the module so you can add data to a document before it is stored.
+フックを使用してモジュールを拡張し、ドキュメントを保存する前にデータをドキュメントに追加できます。
 
 <base-alert type="next">
 
-See the [content module docs](https://content.nuxtjs.org/advanced#hooks) for more details
+詳細は [content モジュールのドキュメントのフック](https://content.nuxtjs.org/ja/advanced/#%E3%83%95%E3%83%83%E3%82%AF)を参照してください
 
 </base-alert>
 
-### Integration with @nuxtjs/feed
+### @nuxtjs/feed を使った統合
 
-In the case of articles, the content can be used to generate news feeds using [@nuxtjs/feed](https://www.npmjs.com/package/@nuxtjs/feed) module.
+記事の場合、content は [@nuxtjs/feed](https://www.npmjs.com/package/@nuxtjs/feed) モジュールを使ってニュースフィードを生成することに使えます。
 
 <base-alert type="next">
 
-See the [content module docs](https://content.nuxtjs.org/integrations/#nuxtjsfeed) for more details
+詳細は [content モジュールのドキュメントの @nuxtjs/feed との統合](https://content.nuxtjs.org/ja/integrations/#nuxtjsfeed)を参照してください
 
 </base-alert>
 
-### Support static site generation
+### 静的サイト生成のサポート
 
-The content module works with static site generation using the `nuxt generate`. All routes will be automatically generated thanks to the nuxt crawler feature.
+content モジュールは `nuxt generate` を使って静的サイト生成ができます。nuxt クローラ機能のおかげですべてのルートが自動的に生成されます。
 
 <base-alert>
 
-If using Nuxt < 2.13 and you need to specify the dynamic routes you can do so using the generate property and using @nuxt/content programmatically.
+もし Nuxt v2.12 以下を使っていて動的ルートを指定する必要がある場合は、generate プロパティを使ってプログラムから @nuxt/content を使って指定できます。
 
 </base-alert>
 
 <base-alert type="next">
 
-See the [content module docs](https://content.nuxtjs.org/advanced#programmatic-usage) for more details on programmatic usage
+プログラムでの扱い方についての詳細は [content モジュールのドキュメントのプログラマティックな利用方法](https://content.nuxtjs.org/ja/advanced/#programmatic-usage)を参照してください
 
 </base-alert>
 
-### What's next
+### このあとは
 
 <base-alert type="next">
 
-Check out our tutorial on [How to Create a Blog with Nuxt Content](/blog/creating-blog-with-nuxt-content)
+チュートリアル [Nuxt Content でブログを作る方法](/blog/creating-blog-with-nuxt-content)を参照してください
 
 </base-alert>
 
 <base-alert type="next">
 
-Check out the [content module docs](https://content.nuxtjs.org/) for more advanced usage and examples
+高度な使用方法と例については [content モジュールのドキュメント](https://content.nuxtjs.org/ja)を参照してください
 
 </base-alert>
 

@@ -5,60 +5,60 @@ position: 8
 category: features
 csb_link: https://codesandbox.io/embed/github/nuxt-academy/guides-examples/tree/master/03_features/08_loading?fontsize=14&hidenavigation=1&theme=dark
 questions:
-  - question: In order for the Nuxt.js loading progress bar to work what do you have to do?
+  - question: Nuxt.js のローディングプログレスバーが機能するためには何をする必要がありますか？
     answers:
-      - Nothing, it just works
-      - set loading to true in the nuxt.config.js file
-      - create a loading component
-    correctAnswer: Nothing, it just works
-  - question: Where can you modify the styles for the default progress bar?
+      - 何もしなくとも機能します
+      - nuxt.config.js ファイルで loading を true に設定します
+      - ローディングコンポーネントを作成します
+    correctAnswer: 何もしなくとも機能します
+  - question: デフォルトのプログレスバーのスタイルはどこで変更できますか？
     answers:
-      - layout component
-      - page component
+      - layout コンポーネント
+      - page コンポーネント
       - nuxt.config.js
-    correctAnswer: layout component
-  - question: In which property do you set the styles for the progress bar in the nuxt.config.js file?
+    correctAnswer: layout コンポーネント
+  - question: nuxt.config.js ファイルのプログレスバーのスタイルをどのプロパティに設定しますか？
     answers:
       - progress
       - loading
       - loadingBar
     correctAnswer: loading
-  - question: What do you add in the nuxt.config.js file to disable loading?
+  - question: 読み込みを無効にするために nuxt.config.js ファイルに何を追加しますか？
     answers:
       - 'loadingBar: false'
       - "loading: 'none'"
       - 'loading: false'
     correctAnswer: 'loading: false'
-  - question: You can disable the loading on specific pages?
+  - question: 特定のページの読み込みを無効にできますか？
     answers:
-      - true
-      - false
-    correctAnswer: true
-  - question: What do you use to programmatically start the loading bar?
+      - できます
+      - できません
+    correctAnswer: できます
+  - question: ローディングバーをプログラムで開始するために何を使いますか？
     answers:
       - $nuxt.loading.start()
       - $nuxt.loading()
       - $loading.start()
     correctAnswer: $nuxt.loading.start()
-  - question: Which property do you use to make your progress bar continuous for when the loading takes longer than the duration?
+  - question: 読み込みに時間がかかる場合、プログレスバーを継続させるために使うプロパティは？
     answers:
       - "duration: 'continuous'"
       - "loading: 'continuous'"
       - 'continuous: true'
     correctAnswer: 'continuous: true'
-  - question: Which two methods are required when creating a custom loading component?
+  - question: カスタムロードコンポーネントを作成するときに必要な 2 つのメソッドは？
     answers:
-      - start() and fail()
-      - start() and finish()
-      - loading() and finish()
-    correctAnswer: start() and finish()
-  - question: Once you have created your new loading.vue component how do you use it?
+      - start() と fail()
+      - start() と finish()
+      - loading() と finish()
+    correctAnswer: start() と finish()
+  - question: 新しい loading.vue コンポーネントを作成した後どのように使いますか？
     answers:
-      - import it into the layouts page
-      - add it in the nuxt.config.js under the loading property
-      - add it to the nuxt.config.js under the plugins property
-    correctAnswer: add it in the nuxt.config.js under the loading property
-  - question: To add a circle spinner when Nuxt.js is using ssr:false what do you add to the loading property?
+      - layouts ページにインポートします
+      - nuxt.config.js の loading プロパティ下に追加します
+      - nuxt.config.js の plugins プロパティ下に追加します
+    correctAnswer: nuxt.config.js の loading プロパティ下に追加します
+  - question: 'Nuxt.js が `ssr:false` を使っているときにサークルスピナーを追加するには loading プロパティに何を追加しますか？'
     answers:
       - 'circle: true'
       - 'spinner: circle'

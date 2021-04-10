@@ -8,7 +8,7 @@ position: 3
 
 Nuxt.js a une architecture entièrement modulaire qui permet aux développeurs d'étendre n'importe quelle partie de Nuxt Core en utilisant une API flexible.
 
-Pour plus d'informations détaillées, veuillez consulter le [Guide des modules](/guides/directory-structure/modules) si vous souhaitez développer votre propre module.
+Pour plus d'informations détaillées, veuillez consulter le [Guide des modules](/docs/2.x/directory-structure/modules) si vous souhaitez développer votre propre module.
 
 Cette section aide à se familiariser avec les modules internes de Nuxt et peut être utilisée comme référence pour mieux comprendre et écrire vos propres modules.
 

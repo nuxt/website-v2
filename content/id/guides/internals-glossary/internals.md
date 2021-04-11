@@ -8,7 +8,7 @@ position: 3
 
 Nuxt.js memiliki arsitektur yang sepenuhnya modular yang membuka kesempatan bagi pengembang untuk memperluas bagian apapun dari Nuxt Core menggunakan sebuah API yang fleksibel.
 
-Anda dapat membaca [Panduan Modul](/guides/directory-structure/modules) untuk mempelajari lebih lanjut apabila Anda tertarik untuk mengembangkan modul Anda sendiri.
+Anda dapat membaca [Panduan Modul](/docs/2.x/directory-structure/modules) untuk mempelajari lebih lanjut apabila Anda tertarik untuk mengembangkan modul Anda sendiri.
 
 Dokumen ini membantu Anda untuk akrab dengan internal Nuxt dan dapat digunakan sebagai acuan ketika Anda mengemabngkan modul Anda sendiri.
 
@@ -18,17 +18,17 @@ Kelas-kelas berikut merupakan kelas utama dalam Nuxt dan tersedia baik pada saat
 
 #### Nuxt
 
-- [Kelas `Nuxt`](/guides/internals-glossary/internals-nuxt)
+- [Kelas `Nuxt`](/docs/2.x/internals-glossary/internals-nuxt)
 - Sumber: [core/nuxt.js](https://github.com/nuxt/nuxt.js/blob/dev/packages/core/src/nuxt.js)
 
 #### Renderer
 
-- [Kelas `Renderer`](/guides/internals-glossary/internals-renderer)
+- [Kelas `Renderer`](/docs/2.x/internals-glossary/internals-renderer)
 - Sumber: [vue-renderer/renderer.js](https://github.com/nuxt/nuxt.js/blob/dev/packages/vue-renderer/src/renderer.js)
 
 #### ModuleContainer
 
-- [Kelas `ModuleContainer`](/guides/internals-glossary/internals-module-container)
+- [Kelas `ModuleContainer`](/docs/2.x/internals-glossary/internals-module-container)
 - Source: [core/module.js](https://github.com/nuxt/nuxt.js/blob/dev/packages/core/src/module.js)
 
 ### Build
@@ -37,12 +37,12 @@ Kelas-kelas berikut hanya dibutuhkan pada saat pengembangan atau pada saat kode 
 
 #### Builder
 
-- [Kelas `Builder`](/guides/internals-glossary/internals-builder)
+- [Kelas `Builder`](/docs/2.x/internals-glossary/internals-builder)
 - Sumber: [builder/builder.js](https://github.com/nuxt/nuxt.js/blob/dev/packages/builder/src/builder.js)
 
 #### Generator
 
-- [Kelas `Generator`](/guides/internals-glossary/internals-generator)
+- [Kelas `Generator`](/docs/2.x/internals-glossary/internals-generator)
 - Sumber: [generator/generator.js](https://github.com/nuxt/nuxt.js/blob/dev/packages/generator/src/generator.js)
 
 ### Common

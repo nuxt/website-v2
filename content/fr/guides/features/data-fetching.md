@@ -98,7 +98,7 @@ export default {
 
 <base-alert>
 
-`fetch(context)` a été déprécié dans nos pages, il faut utiliser un [middleware anonyme](/guides/directory-structure/middleware#anonymous-middleware) à la place: `middleware(context)`
+`fetch(context)` a été déprécié dans nos pages, il faut utiliser un [middleware anonyme](/docs/2.x/directory-structure/middleware#anonymous-middleware) à la place: `middleware(context)`
 
 </base-alert>
 
@@ -145,7 +145,7 @@ Nous avons aussi accès à `this.$fetch()`, utile si nous voulons appeler le hoo
 
 <base-alert type="info">
 
-On peut accéder au [contexte](/guides/concepts/context-helpers) Nuxt à l'intérieur du hook `fetch` avec `this.$nuxt.context`.
+On peut accéder au [contexte](/docs/2.x/concepts/context-helpers) Nuxt à l'intérieur du hook `fetch` avec `this.$nuxt.context`.
 
 </base-alert>
 
@@ -242,13 +242,13 @@ La navigation à la même page ne va pas rappeler `fetch` tant que le dernier ca
 
 <base-alert>
 
-`asyncData` est seulement disponible pour les [pages](/guides/directory-structure/pages) et nous n'avons donc pas accès à `this` à l'intérieur du hook.
+`asyncData` est seulement disponible pour les [pages](/docs/2.x/directory-structure/pages) et nous n'avons donc pas accès à `this` à l'intérieur du hook.
 
 </base-alert>
 
-La différence principale avec `fetch` est que vous n'avez pas à gérer les status d'erreur ou en cours. Nuxt.js va attendre que le hook `asyncData` soit terminé avant de procéder à la navigation sur la page suivante ou afficher la [page d'erreur](/guides/directory-structure/layouts#error-page)
+La différence principale avec `fetch` est que vous n'avez pas à gérer les status d'erreur ou en cours. Nuxt.js va attendre que le hook `asyncData` soit terminé avant de procéder à la navigation sur la page suivante ou afficher la [page d'erreur](/docs/2.x/directory-structure/layouts#error-page)
 
-Ce hook reçoit [le contexte](/guides/concepts/context-helpers) en tant que premier argument. Nous pouvons l'utiliser pour aller chercher de la data et Nuxt.js va automatiquement fusionner l'object retourné avec le `data` du composant.
+Ce hook reçoit [le contexte](/docs/2.x/concepts/context-helpers) en tant que premier argument. Nous pouvons l'utiliser pour aller chercher de la data et Nuxt.js va automatiquement fusionner l'object retourné avec le `data` du composant.
 
 ```html{}[pages/index.vue]
 <template>
@@ -319,7 +319,7 @@ La méthode `asyncData` n'est pas appelée par défaut sur les modifications li�
 
 <base-alert type="next">
 
-Pour en apprendre davantage sur la [propriété watchQuery](/guides/components-glossary/pages-watchquery) et voir la liste des [clés disponibles dans le contexte](/guides/concepts/context-helpers).
+Pour en apprendre davantage sur la [propriété watchQuery](/docs/2.x/components-glossary/pages-watchquery) et voir la liste des [clés disponibles dans le contexte](/docs/2.x/concepts/context-helpers).
 
 </base-alert>
 

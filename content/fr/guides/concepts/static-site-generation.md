@@ -38,7 +38,7 @@ Avec la génération statique nous pouvons générer notre application durant la
 
 ### Générer notre site
 
-Lorsque nous déployons notre site avec [target:static](/guides/features/deployment-targets#static-hosting), toutes nos pages `.vue` seront générées dans des fichiers HTML et JavaScript. Tous les calls aux API seront faits et mis en cache dans un répertoire nommé `static` à l'intérieur de notre contenu généré pour le côté client, ainsi il n'y aura pas besoin de faire d'appels à notre API par la suite.
+Lorsque nous déployons notre site avec [target:static](/docs/2.x/features/deployment-targets#static-hosting), toutes nos pages `.vue` seront générées dans des fichiers HTML et JavaScript. Tous les calls aux API seront faits et mis en cache dans un répertoire nommé `static` à l'intérieur de notre contenu généré pour le côté client, ainsi il n'y aura pas besoin de faire d'appels à notre API par la suite.
 
 ### Étape 1: Du navigateur au CDN
 
@@ -50,7 +50,7 @@ Le CDN va envoyer le HTML préalablement généré, ainsi que le JavaScript et t
 
 ### Étape 3: du navigateur au navigateur
 
-Naviguer entre les pages à l'aide de [`<NuxtLink>`](/guides/features/nuxt-components#the-nuxtlink-component) est fait du côté client afin que nous n'ayons pas besoin de refaire une requête au CDN et les appels à l'API seront chargés à partir du répertoire des ressources mis en cache et ce même si nous rafraîchissez manuellement notre page.
+Naviguer entre les pages à l'aide de [`<NuxtLink>`](/docs/2.x/features/nuxt-components#the-nuxtlink-component) est fait du côté client afin que nous n'ayons pas besoin de refaire une requête au CDN et les appels à l'API seront chargés à partir du répertoire des ressources mis en cache et ce même si nous rafraîchissez manuellement notre page.
 
 ### Solution de secours: la SPA
 
@@ -58,7 +58,7 @@ Les pages qui auront été exclues de la génération en utilisant la propriét�
 
 <base-alert type="next">
 
-Pour en savoir davantage sur la [propriété `generate`](/guides/configuration-glossary/configuration-generate#exclude)
+Pour en savoir davantage sur la [propriété `generate`](/docs/2.x/configuration-glossary/configuration-generate#exclude)
 
 </base-alert>
 
@@ -68,6 +68,6 @@ Afin de récupérer le nouveau contenu sur notre site à partir de l'API, nous a
 
 ### Mode de prévisualisation
 
-Le mode de prévisualisation va appeler notre API ou notre CMS afin que nous puissions voir les changements en live avant de déployer. Se référer au [mode de prévisualisation](/guides/features/live-preview) pour activer cette fonctionnalité.
+Le mode de prévisualisation va appeler notre API ou notre CMS afin que nous puissions voir les changements en live avant de déployer. Se référer au [mode de prévisualisation](/docs/2.x/features/live-preview) pour activer cette fonctionnalité.
 
 <quiz :questions="questions"></quiz>

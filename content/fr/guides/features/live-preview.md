@@ -7,7 +7,7 @@ position: 12
 
 Avec Nuxt.js et une génération axée sur de l'intégralement statique, nous pouvons maintenant utiliser la prévisualisation en temps réel, sans configuration additionnelle. Cela nous permettra d'appeler notre API ou notre CMS afin que nous puissions voir les changements avant de déployer.
 
-<base-alert>Seulement disponible dans le cas d'un [target:static](/guides/features/deployment-targets#static-hosting)</base-alert>
+<base-alert>Seulement disponible dans le cas d'un [target:static](/docs/2.x/features/deployment-targets#static-hosting)</base-alert>
 
 Le mode de prévisualisation va s'occuper de rafraîchir automatiquement la data de la page vu qu'il utilise `$nuxt.refresh` (et donc fait les appels de `nuxtServerInit`, `asyncData` et `fetch`) du côté client.
 
@@ -83,6 +83,6 @@ On peut passer de la data à la fonction `enablePreview`. La data sera ainsi dis
 
 <base-alert type="next">
 
-Se référer au [document sur la structure des répertoires](/guides/directory-structure/nuxt).
+Se référer au [document sur la structure des répertoires](/docs/2.x/directory-structure/nuxt).
 
 </base-alert>

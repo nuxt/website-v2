@@ -37,7 +37,7 @@ export default {
 }
 ```
 
-La clé de transition dans `nuxt.config.js` est utilisée pour définir les propriétés par défaut des transitions de page. Pour en savoir plus sur les clés disponibles, voir la [propriété de transition des pages](/guides/features/transitions).
+La clé de transition dans `nuxt.config.js` est utilisée pour définir les propriétés par défaut des transitions de page. Pour en savoir plus sur les clés disponibles, voir la [propriété de transition des pages](/docs/2.x/features/transitions).
 
 ## La propriété layoutTransition
 

@@ -12,7 +12,7 @@ Avec l'arrivée de la `v2.12` de Nuxt.js, nous avons droit à un nouveau hook di
 
 <base-alert>
 
-`fetch(context)` a été déprécié, à la place on peut utiliser un [middleware anonyme](/guides/components-glossary/pages-middleware#anonymous-middleware) dans la page: `middleware(context)`
+`fetch(context)` a été déprécié, à la place on peut utiliser un [middleware anonyme](/docs/2.x/components-glossary/pages-middleware#anonymous-middleware) dans la page: `middleware(context)`
 
 </base-alert>
 
@@ -45,7 +45,7 @@ export default {
 }
 ```
 
-On peut accéder au [context](/guides/internals-glossary/context) de Nuxt.js à l'intérieur du hook `fetch` en utilisant `this.$nuxt.context`.
+On peut accéder au [context](/docs/2.x/internals-glossary/context) de Nuxt.js à l'intérieur du hook `fetch` en utilisant `this.$nuxt.context`.
 
 ### Options
 

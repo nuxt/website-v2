@@ -21,6 +21,6 @@ export default {
 
 <base-alert type="next">
 
-Auparavant, le `mode` était utilisé pour désactiver ou activer le rendu côté serveur. Voici la [documentation de `mode'](/guides/configuration-glossary/configuration-mode).
+Auparavant, le `mode` était utilisé pour désactiver ou activer le rendu côté serveur. Voici la [documentation de `mode'](/docs/2.x/configuration-glossary/configuration-mode).
 
 </base-alert>

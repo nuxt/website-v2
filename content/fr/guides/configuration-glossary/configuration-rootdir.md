@@ -19,6 +19,6 @@ Exemple: lancer `nuxt ./my-app/` va définir `rootDir` au chemin absolu `./my-ap
 
 <base-alert type="info">
 
-`rootDir` doit être au même niveau que le répertoire `node_modules` afin de pouvoir [résoudre les dépendances](https://nodejs.org/api/modules.html#modules_all_together). Se référer à l'[option `srcDir`](/guides/configuration-glossary/configuration-srcdir) pour des exemples de structure de répertoire lorsque ce n'est pas le cas.
+`rootDir` doit être au même niveau que le répertoire `node_modules` afin de pouvoir [résoudre les dépendances](https://nodejs.org/api/modules.html#modules_all_together). Se référer à l'[option `srcDir`](/docs/2.x/configuration-glossary/configuration-srcdir) pour des exemples de structure de répertoire lorsque ce n'est pas le cas.
 
 </base-alert>

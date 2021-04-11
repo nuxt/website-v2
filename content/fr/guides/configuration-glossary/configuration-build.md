@@ -156,7 +156,7 @@ Si cela a déjà été activé grâce au fichier `nuxt.config.js` ou autrement, 
 
 <base-alert>
 
-**Attention**: Les clés `isClient` et `isServer` fournies n'ont rien à voir avec celles présentes dans le [`context`](/guides/internals-glossary/context). Elles ne sont **pas** dépréciées. Il ne faut en outre pas utiliser `process.client` et `process.server` ici car ils seront `undefined` à ce niveau.
+**Attention**: Les clés `isClient` et `isServer` fournies n'ont rien à voir avec celles présentes dans le [`context`](/docs/2.x/internals-glossary/context). Elles ne sont **pas** dépréciées. Il ne faut en outre pas utiliser `process.client` et `process.server` ici car ils seront `undefined` à ce niveau.
 
 </base-alert>
 
@@ -670,7 +670,7 @@ On ne peut pas utiliser d'alias de chemin (`~` ou `@`), on aura besoin d'utilise
 
 ## templates
 
-> Nuxt.js nous permet d'utiliser nos propres templates qui seront render basés sur les [modules](/guides/directory-structure/modules).
+> Nuxt.js nous permet d'utiliser nos propres templates qui seront render basés sur les [modules](/docs/2.x/directory-structure/modules).
 
 - Type: `Array`
 
@@ -760,7 +760,7 @@ Depuis `v2.9.0`, on peut aussi utiliser une fonction pour rendre la transpilatio
 
 ## watch
 
-> On peut fournir nos propres fichiers personnalisés à surveiller avant de régénérer après des modifications. Cette fonctionnalité est surtout utile à utiliser avec [modules](/guides/directory-structure/modules).
+> On peut fournir nos propres fichiers personnalisés à surveiller avant de régénérer après des modifications. Cette fonctionnalité est surtout utile à utiliser avec [modules](/docs/2.x/directory-structure/modules).
 
 - Type: `Array<String>`
 

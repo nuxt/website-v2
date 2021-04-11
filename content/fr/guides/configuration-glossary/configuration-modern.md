@@ -43,6 +43,6 @@ Les deux bundles possibles sont:
 | spa       |   client    |
 
 - Le mode `moderne` pour `nuxt generate` ne peut être que `client`
-- Il faut utiliser [`render.crossorigin`](/guides/configuration-glossary/configuration-render#crossorigin) pour définir l'attribut `crossorigin` dans `<link>` et `<script>`.
+- Il faut utiliser [`render.crossorigin`](/docs/2.x/configuration-glossary/configuration-render#crossorigin) pour définir l'attribut `crossorigin` dans `<link>` et `<script>`.
 
 > Se réferer à l'excellent post de [Phillip Walton](https://philipwalton.com/articles/deploying-es2015-code-in-production-today/) sur les builds modernes.

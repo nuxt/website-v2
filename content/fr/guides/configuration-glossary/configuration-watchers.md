@@ -38,6 +38,6 @@ Pour en savoir plus sur les options webpack de surveillance, voir la [documentat
 
 <base-alert type="next">
 
-Consultez le [Glossaire interne](/guides/internals-glossary/$nuxt)
+Consultez le [Glossaire interne](/docs/2.x/internals-glossary/$nuxt)
 
 </base-alert>

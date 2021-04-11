@@ -12,7 +12,7 @@ position: 5
 
 Par défaut, Nuxt.js utilise son propre composant pour afficher une barre de progression entre les routes.
 
-Vous pouvez la désactiver ou la personnaliser à travers les [options de configuration du chargement](/guides/configuration-glossary/configuration-loading), mais aussi la désactiver seulement sur des pages spécifiques en passant la propriété `loading` à false:
+Vous pouvez la désactiver ou la personnaliser à travers les [options de configuration du chargement](/docs/2.x/configuration-glossary/configuration-loading), mais aussi la désactiver seulement sur des pages spécifiques en passant la propriété `loading` à false:
 
 ```html
 <template>

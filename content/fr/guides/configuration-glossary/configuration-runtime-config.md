@@ -6,7 +6,7 @@ category: configuration-glossary
 position: 25
 ---
 
-RuntimeConfig permet de passer des variables d'environnement et de la configuration dynamique au contexte de Nuxt.js. Pour plus d'informations sur l'utilisation, se référer au guide du [runtime config](/guide/runtime-config).
+RuntimeConfig permet de passer des variables d'environnement et de la configuration dynamique au contexte de Nuxt.js. Pour plus d'informations sur l'utilisation, se référer au guide du [runtime config](/docs/2.x/runtime-config).
 
 ## `publicRuntimeConfig`
 

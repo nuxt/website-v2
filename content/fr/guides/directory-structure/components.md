@@ -37,7 +37,7 @@ Le répertoire des composants contient les composants Vue.js. Les composants son
 
 ### Récupérer de la data
 
-Pour récupérer de la data depuis une API de manière asynchrone dans les composants, on peut utiliser le hook [`fetch()`](/guides/features/data-fetching#the-fetch-method) de Nuxt.js.
+Pour récupérer de la data depuis une API de manière asynchrone dans les composants, on peut utiliser le hook [`fetch()`](/docs/2.x/features/data-fetching#the-fetch-method) de Nuxt.js.
 
 En utilisant `$fetchState.pending`, on peut afficher un message pendant le chargement de la data. En utilisant `$fetchState.error`, on peut afficher un message d'erreur s'il y a une erreur lors de la récupération des données. Lorsque l'on utilise `fetch`, il faut définir la data dans la propriété `data`, celle-ci sera par la suite remplie une fois que les données auront été récoltées.
 
@@ -73,7 +73,7 @@ En utilisant `$fetchState.pending`, on peut afficher un message pendant le charg
 
 <base-alert type="next">
 
-Se référer au chapitre sur [fetch()](/guides/features/data-fetching#the-fetch-method) pour avoir davantage d'informations sur son fonctionnement.
+Se référer au chapitre sur [fetch()](/docs/2.x/features/data-fetching#the-fetch-method) pour avoir davantage d'informations sur son fonctionnement.
 
 </base-alert>
 

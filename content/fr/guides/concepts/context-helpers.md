@@ -48,7 +48,7 @@ questions:
 
 <app-modal :src="img" :alt="imgAlt"></app-modal>
 
-L'object `context` est disponible dans des fonctions spécifiques de Nuxt comme [asyncData](/guides/features/data-fetching#async-data), [plugins](/guides/directory-structure/plugins), [middleware](/guides/directory-structure/middleware) et [nuxtServerInit](/guides/directory-structure/store#the-nuxtserverinit-action). Le contexte fournit des informations _additionnelles_ et souvent optionnelles de la requête envoyée à l'application.
+L'object `context` est disponible dans des fonctions spécifiques de Nuxt comme [asyncData](/docs/2.x/features/data-fetching#async-data), [plugins](/docs/2.x/directory-structure/plugins), [middleware](/docs/2.x/directory-structure/middleware) et [nuxtServerInit](/docs/2.x/directory-structure/store#the-nuxtserverinit-action). Le contexte fournit des informations _additionnelles_ et souvent optionnelles de la requête envoyée à l'application.
 
 Tout d'abord, le contexte est utilisé pour permettre un accès aux autres parties d'une application Nuxt.js, comme par exemple un store Vuex ou l'instance `connect` sous-jacente. Ainsi, nous avons les objets `req` et `res` disponibles dans le contexte du côté serveur et le `store` de toujours disponible. Avec le temps, le contexte fût étendu avec plein d'autres variables bien pratiques et de raccourcis. Ainsi, nous avons accès au fonctionnalités du HMR en mode `development`, la `route` actuelle, les `params` de la page, la `query` (URL), ainsi que la possibilité d'avoir accès à des variables d'environment à travers le contexte. En plus de cela, les modules de fonctions et les helpers peuvent être exposés à travers le contexte pour être disponibles sur les deux - côté client et serveur.
 
@@ -89,7 +89,7 @@ Le _context_ dont nous parlons ici ne doit pas être confondu avec l'objet `cont
 
 </base-alert>
 
-Découvrez davantage de propriétés disponibles dans le contexte dans le [Glossaire des propriétés internes](/guides/internals-glossary/context)
+Découvrez davantage de propriétés disponibles dans le contexte dans le [Glossaire des propriétés internes](/docs/2.x/internals-glossary/context)
 
 ## Exemples
 

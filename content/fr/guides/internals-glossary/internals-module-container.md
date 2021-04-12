@@ -8,7 +8,7 @@ position: 6
 
 - Source: **[core/module.js](https://github.com/nuxt/nuxt.js/blob/dev/packages/core/src/module.js)**
 
-Tous les [modules](/guides/directory-structure/modules) seront appelés dans le contexte de l'instance `ModuleContainer`.
+Tous les [modules](/docs/2.x/directory-structure/modules) seront appelés dans le contexte de l'instance `ModuleContainer`.
 
 ## Plugins à usage unique
 
@@ -20,7 +20,7 @@ nuxt.moduleContainer.plugin('ready', async moduleContainer => {
 })
 ```
 
-Dans le contexte des [modules](/guides/directory-structure/modules), nous pouvons utiliser cette méthode à la place :
+Dans le contexte des [modules](/docs/2.x/directory-structure/modules), nous pouvons utiliser cette méthode à la place :
 
 ```js
 this.plugin('ready', async moduleContainer => {
@@ -61,19 +61,19 @@ Vous pouvez utiliser `template.ssr : false` pour désactiver le plugin y compris
 
 ### addServerMiddleware (middleware)
 
-Pousse le middleware dans [options.serverMiddleware](/guides/configuration-glossary/configuration-servermiddleware).
+Pousse le middleware dans [options.serverMiddleware](/docs/2.x/configuration-glossary/configuration-servermiddleware).
 
 ### extendBuild (fn)
 
-Permet d'étendre facilement la configuration du webpack par chaînage dans la fonction [options.build.extend](/guides/configuration-glossary/configuration-build#extend).
+Permet d'étendre facilement la configuration du webpack par chaînage dans la fonction [options.build.extend](/docs/2.x/configuration-glossary/configuration-build#extend).
 
 ### extendRoutes (fn)
 
-Permet d'étendre facilement les routes dans la fonction [options.build.extendRoutes](/guides/configuration-glossary/configuration-router#extendroutes).
+Permet d'étendre facilement les routes dans la fonction [options.build.extendRoutes](/docs/2.x/configuration-glossary/configuration-router#extendroutes).
 
 ### extendPlugins (fn)
 
-Permet d'étendre facilement les plugins dans la fonction [options.extendPlugins](/guides/configuration-glossary/configuration-extend-plugins).
+Permet d'étendre facilement les plugins dans la fonction [options.extendPlugins](/docs/2.x/configuration-glossary/configuration-extend-plugins).
 
 ### addModule (moduleOpts, requireOnce)
 

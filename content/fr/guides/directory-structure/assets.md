@@ -83,7 +83,7 @@ Si l'on travaille avec des images dynamiques, on aura besoin d'utiliser `require
 
 <base-alert type="next">
 
-Voir les [ressources webpack](/guides/directory-structure/assets#webpack-assets).
+Voir les [ressources webpack](/docs/2.x/directory-structure/assets#webpack-assets).
 
 </base-alert>
 
@@ -160,7 +160,7 @@ On peut utiliser des polices de caractères locales en les ajoutant dans le rép
 
 <base-alert type="next">
 
-Pour ajouter des polices de caractères externes telles que des Google Fonts, se référer le chapitre sur le [SEO et les méta tags](/guides/features/meta-tags-seo#external-resources).
+Pour ajouter des polices de caractères externes telles que des Google Fonts, se référer le chapitre sur le [SEO et les méta tags](/docs/2.x/features/meta-tags-seo#external-resources).
 
 </base-alert>
 
@@ -251,7 +251,7 @@ Cela sera transformé en:
 <img src="/_nuxt/img/notre_image.0c61159.png" />
 ```
 
-Si on souhaite changer la configuration d'un des loaders, on trouvera plus de détails à la page de [`build.extend`](/guides/configuration-glossary/configuration-build#extend).
+Si on souhaite changer la configuration d'un des loaders, on trouvera plus de détails à la page de [`build.extend`](/docs/2.x/configuration-glossary/configuration-build#extend).
 
 <app-modal>
   <code-sandbox :src="csb_link"></code-sandbox>

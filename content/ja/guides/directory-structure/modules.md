@@ -1,109 +1,109 @@
 ---
-title: modules
-description: Nuxt.js provides a higher-order module system that makes it possible to extend the core. Modules are functions that are called sequentially when booting Nuxt.js.
+title: モジュール
+description: Nuxt.js はコア機能を拡張できるようにする高度なモジュールシステムを提供します。モジュールは Nuxt.js 起動時に順番に呼び出される関数です。
 position: 9
 category: directory-structure
 csb_link: https://codesandbox.io/embed/github/nuxt-academy/guides-examples/tree/master/04_directory_structure/10_modules?fontsize=14&hidenavigation=1&theme=dark
 img: /docs/2.x/modules.svg
 imgAlt: modules-in-nuxt-js
 questions:
-  - question: When are modules called?
+  - question: モジュールはいつ呼ばれますか？
     answers:
-      - before Nuxt.js starts
-      - while Nuxt.js is running
-      - after Nuxt.js starts
-    correctAnswer: before Nuxt.js starts
-  - question: Nuxt.js modules can be incorporated into npm packages
+      - Nuxt.js 開始前
+      - Nuxt.js 実行中
+      - Nuxt.js 開始後
+    correctAnswer: Nuxt.js 開始前
+  - question: Nuxt.js モジュールは npm パッケージに組み込むことができますか？
     answers:
       - true
       - false
     correctAnswer: true
-  - question: In your nuxt.config.js file under what property do you add your modules?
+  - question: nuxt.config.js ファイルのどのプロパティでモジュールを追加しますか？
     answers:
       - nuxtModules
       - modules
       - plugins
     correctAnswer: modules
-  - question: The order you add your modules to the nuxt.config.js file is important
+  - question: nuxt.config.js ファイルにモジュールをに追加する際、順序は重要ですか？
     answers:
       - true
       - false
     correctAnswer: true
-  - question: Where should you add your modules that are only required during development and build time?
+  - question: 開発およびビルド時にのみ必要なモジュールはどこに追加しますか？
     answers:
       - modules
       - build
       - buildModules
     correctAnswer: buildModules
-  - question: What exactly are modules?
+  - question: モジュールは正確に言うと？
     answers:
-      - arrays
-      - functions
-      - plugins
-    correctAnswer: functions
-  - question: What do we use when we want to do things only on specific conditions and not just during Nuxt.js initialization?
+      - 配列
+      - 関数
+      - プラグイン
+    correctAnswer: 関数
+  - question: Nuxt.js の初期化中だけでなく特定の条件でのみ処理を実行したい場合は何を使いますか？
     answers:
       - plugins
       - hooks
       - asyncData
     correctAnswer: hooks
-  - question: Modules can
+  - question: モジュールができることは
     answers:
-      - only be used as npm packages
-      - can only be directly included in your project source code
-      - both
-    correctAnswer: both
-  - question: Which line is required if you are publishing your module as an npm package?
+      - npm パッケージとしてのみ使われます
+      - プロジェクトのソースコードに調節含めることができます
+      - 両方
+    correctAnswer: 両方
+  - question: モジュールを npm パッケージとして公開する場合どれが必要ですか？
     answers:
       - module.exports
       - module.exports.meta
       - module.exports.module
     correctAnswer: module.exports.meta
-  - question: You can tell Nuxt.js to load modules with optional parameters as options
+  - question: オプションとしてオプションのパラメーターを使ってモジュールをロードするように Nuxt.js に指示できますか？
     answers:
       - true
       - false
     correctAnswer: true
 ---
 
-## Exploring Nuxt Modules
+## Nuxt モジュールを探す
 
-Discover our [list of modules](https://modules.nuxtjs.org) to supercharge your Nuxt project, created by the Nuxt team and community.
+Nuxt プロジェクトを強化するために、Nuxt チームとコミュニティによって作成された[モジュールの一覧](https://modules.nuxtjs.org)を見てください。
 
-- 145+ Modules
-- 89+ Maintainers
+- 165 以上のモジュール
+- 105 人以上のメンテナー
 
 <base-alert type="next">
 
-Check out [modules.nuxtjs.org](https://modules.nuxtjs.org)
+[modules.nuxtjs.org](https://modules.nuxtjs.org) を確認してください。
 
 </base-alert>
 
 <app-modal :src="img" :alt="imgAlt"></app-modal>
 
-While developing production-grade applications with Nuxt.js you might find that the framework's core functionality is not enough. Nuxt.js can be extended with configuration options and plugins, but maintaining these customizations across multiple projects is tedious, repetitive and time-consuming. On the other hand, supporting every project's needs out of the box would make Nuxt.js very complex and hard to use.
+Nuxt.js を使って本番相当のアプリケーションを開発しているときに、フレームワークのコア機能が十分でないことに気付くかもしれません。Nuxt.js は設定オプションとプラグインで拡張できますが、複数のプロジェクト間でこれらのカスタマイズを維持するのは面倒で反復的で時間がかかります。一方、すべてのプロジェクトのニーズをすぐにサポートすると、Nuxt.js は非常に複雑になり使いにくくなります。
 
-This is one of the reasons why Nuxt.js provides a higher-order module system that makes it possible to extend the core. Modules are functions that are called sequentially when booting Nuxt.js. The framework waits for each module to finish before continuing. In this way, modules can customize almost any aspect of your project. Thanks to Nuxt.js' modular design (based on webpack's [Tapable](https://github.com/webpack/tapable)), modules can easily register hooks for certain entry points like the builder initialization. Modules can also override templates, configure webpack loaders, add CSS libraries, and perform many other useful tasks.
+これが Nuxt がコア機能を簡単に拡張できるようにするために、より高度なモジュールシステムを導入する理由の 1 つです。モジュールは Nuxt 起動時に順番に呼び出される関数です。フレームワークは Nuxt が処理を続ける前に各モジュールが処理を完了するまで待機します。このようにして、モジュールは Nuxt のほとんどすべての項目をカスタマイズできます。Webpack の [Tapable](https://github.com/webpack/tapable) に基づいた Nuxt のモジュール設計のおかげで、モジュールは例えばビルドの初期化のような特定のエントリーポイントにフックを簡単に登録できます。また、モジュールはテンプレートの上書き、webpack ローダーの設定、CSS ライブラリの追加、その他多くの便利なタスクを実行することができます。
 
-Best of all, Nuxt.js modules can be incorporated into npm packages. This makes it possible to reuse across projects and to share with the community, helping create an ecosystem of high-quality add-ons.
+素晴らしいことに Nuxt モジュールは npm パッケージに組み込めます。これによりてプロジェクト間で再利用したり、コミュニティでシェアすることができるようになり、高品質なアドオンのエコシステムを作成できます。
 
-## The modules Property
+## modules プロパティ
 
-Modules are Nuxt.js extensions which can extend the framework's core functionality and add endless integrations. Once you have installed the modules you can then add them to your nuxt.config.js file under the modules property.
+モジュールは Nuxt.js の拡張機能であり、フレームワークのコア機能を拡張し無限に組み込めます。一度モジュールをインストールすると、nuxt.config.js ファイルの modueles プロパティにモジュールを追加できます。
 
 ```js{}[nuxt.config.js]
 export default {
   modules: [
-    // Using package name
+    // 使うパッケージ名
     '@nuxtjs/axios',
 
-    // Relative to your project srcDir
+    // プロジェクトのソースディレクトリの相対パス
     '~/modules/awesome.js',
 
-    // Providing options
+    // オプションの提供
     ['@nuxtjs/google-analytics', { ua: 'X1234567' }],
 
-    // Inline definition
+    // インライン定義
     function () {}
   ]
 }
@@ -111,31 +111,31 @@ export default {
 
 <base-alert type="info">
 
-Module developers usually provide additionally needed steps and details for usage.
+モジュール開発者は通常、使い方について追加で必要な手順と詳細を提供します。
 
 </base-alert>
 
-Nuxt.js tries to resolve each item in the modules array using node require path (in the `node_modules`) and then will resolve from the project `srcDir` if `@` alias is used.
+Nuxt.js は node が要求するパス（`node_modules` 内）を使ってモジュール配列内の各項目を解決しようとします。`@` エイリアスが使われている場合はプロジェクトの  `srcDir`  から解決します。
 
 <base-alert>
 
-Modules are executed sequentially so the order is important.
+モジュールは順番に実行されるため、順序が重要です。
 
 </base-alert>
 
-Modules should export a function to enhance build/runtime and optionally return a promise until their job is finished. Note that they are imported at runtime so they should be already transpiled if using modern ES6 features.
+モジュールはビルドや実行を強化する関数をエクスポートし、オプションでジョブが終了するまで promise を返す必要があります。実行時にインポートされるので、最新の ES6 機能を使っている場合は事前にトランスパイルする必要があることに注意してください。
 
-## Write your own Module
+## 独自のモジュールを書く
 
-Modules are functions. They can be packaged as npm modules or directly included in your project source code.
+モジュールは関数です。モジュールは npm モジュールとしてパッケージ化することもプロジェクトのソースコードに直接含めることもできます。
 
 ```js{}[nuxt.config.js]
 export default {
   exampleMsg: 'hello',
   modules: [
-    // Simple usage
+    // シンプルな使い方
     '~/modules/example',
-    // Passing options directly
+    // オプションを直接渡す
     ['~/modules/example', { token: '123' }]
   ]
 }
@@ -151,23 +151,23 @@ export default function ExampleModule(moduleOptions) {
   })
 }
 
-// REQUIRED if publishing the module as npm package
+// モジュールを npm パッケージとして公開する場合は必須
 module.exports.meta = require('./package.json')
 ```
 
 ## 1) ModuleOptions
 
-`moduleOptions`: This is the object passed using the `modules` array by the user. We can use it to customize its behavior.
+`moduleOptions`: これは `modules` の配列を利用するために、モジュールの利用者から渡されるオブジェクトです。これを使うことで modules のふるまいをカスタマイズすることができます。
 
-### Top level options
+### トップレベルのオプション
 
-Sometimes it is more convenient if we can use top level options while registering modules in `nuxt.config.js`. This allows us to combine multiple option sources.
+`nuxt.config.js` にモジュールを登録するときにトップレベルでオプションを使えると便利な場合があります。このオプションにより、複数のオプションソースを組み合わせることができます。
 
 ```js{}[nuxt.config.js]
 export default {
   modules: [['@nuxtjs/axios', { anotherOption: true }]],
 
-  // axios module is aware of this by using `this.options.axios`
+  // axios モジュールは `this.options.axios` を使ってこのオプションを認識します
   axios: {
     option1,
     option2
@@ -177,33 +177,33 @@ export default {
 
 ## 2) this.options
 
-`this.options`: You can directly access the Nuxt.js options using this reference. This is the content of the user's `nuxt.config.js` with all default options assigned to it. It can be used for shared options between modules.
+`this.options`: このリファレンスを使って Nuxt.js オプションに直接アクセスできます。これはすべてのデフォルトオプションが割り当てられたユーザーの `nuxt.config.js` のコンテンツです。モジュール間の共有オプションに使用えます。
 
 ```js{}[module.js]
 export default function (moduleOptions) {
-  // `options` will contain option1, option2 and anotherOption
+  // `options` には option1、option2、anotherOption が含まれます
   const options = Object.assign({}, this.options.axios, moduleOptions)
 
   // ...
 }
 ```
 
-### Add a CSS Library
+### CSS ライブラリの追加
 
-If your module will provide a CSS library, make sure to perform a check if the user already included the library to avoid duplicates, and add an option to disable the CSS library in the module.
+モジュールが CSS ライブラリを提供する場合は、重複を避けるためにユーザーがすでにライブラリを含んでいるかどうかを確認し、モジュールで CSS ライブラリを無効にするオプションを追加してください。
 
 ```js{}[module.js]
 export default function (moduleOptions) {
   if (moduleOptions.fontAwesome !== false) {
-    // Add Font Awesome
+    // Font Awesome を追加
     this.options.css.push('font-awesome/css/font-awesome.css')
   }
 }
 ```
 
-### Emit assets
+### アセットの出力
 
-We can register webpack plugins to emit assets during build.
+ビルド中にアセットを出力するために webpack プラグインを登録できます。
 
 ```js{}[module.js]
 export default function (moduleOptions) {
@@ -212,8 +212,8 @@ export default function (moduleOptions) {
   this.options.build.plugins.push({
     apply(compiler) {
       compiler.plugin('emit', (compilation, cb) => {
-        // This will generate `.nuxt/dist/info.txt' with contents of info variable.
-        // Source can be buffer too
+        // info 変数の内容を含む `.nuxt/dist/info.txt` が生成されます。
+        // ソースもバッファにすることができます
         compilation.assets['info.txt'] = {
           source: () => info,
           size: () => info.length
@@ -228,73 +228,73 @@ export default function (moduleOptions) {
 
 ## 3) this.nuxt
 
-`this.nuxt`: This is a reference to the current Nuxt.js instance. We can register hooks on certain life cycle events.
+`this.nuxt`: これは現在の Nuxt.js インスタンスへの参照です。特定のライフサイクルイベントにフックを登録できます。
 
-- **Ready** : Nuxt is ready to work (ModuleContainer and Renderer ready).
+- **Ready** : Nuxt は動作する準備ができています（ModuleContainer とレンダラーの準備ができます）。
 
 ```js
 nuxt.hook('ready', async nuxt => {
-  // Your custom code here
+  // カスタムコードはここに記述する
 })
 ```
 
-- **Error**: An unhandled error when calling hooks.
+- **Error**: フックを呼び出すときに捕まえられなかったエラーです。
 
 ```js
 nuxt.hook('error', async error => {
-  // Your custom code here
+  // カスタムコードはここに記述する
 })
 ```
 
-- **Close**: Nuxt instance is gracefully closing.
+- **Close**: Nuxt インスタンスは正常に終了します。
 
 ```js
 nuxt.hook('close', async nuxt => {
-  // Your custom code here
+  // カスタムコードはここに記述する
 })
 ```
 
-- **Listen**: Nuxt internal server starts listening. (Using nuxt start or nuxt dev)
+- **Listen**: Nuxt の内部サーバーがリッスンを開始します（nuxt start または nuxt dev を使います）
 
 ```js
-nuxt.hook('listen', async (server, {host, port})) => {
-  // Your custom code here
+nuxt.hook('listen', async (server, { host, port }) => {
+  // カスタムコードはここに記述する
 })
 ```
 
-`this`: Context of modules. All modules will be called within context of the ModuleContainer instance.
+`this`: モジュールのコンテキストです。すべてのモジュールは、ModuleContainer インスタンスのコンテキスト内で呼び出されます。
 
-Please look into the [ModuleContainer](/docs/2.x/internals-glossary/internals-module-container) class docs for available methods.
+利用可能なメソッドについては  [ModuleContainer](/docs/2.x/internals-glossary/internals-module-container)  クラスのドキュメントを参照してください。
 
-### Run Tasks on Specific hooks
+### 特定のフックでタスクを実行する
 
-Your module may need to do things only on specific conditions and not just during Nuxt.js initialization. We can use the powerful Nuxt.js hooks to do tasks on specific events (based on [Hookable](https://github.com/nuxt-contrib/hookable)). Nuxt.js will wait for your function if it returns a Promise or is defined as `async`.
+モジュールは Nuxt.js の初期化中だけでなく、特定の条件でのみ処理を実行する必要がある場合があります。強力な Nuxt.js フックを使って特定のイベントでタスクを実行できます（[Hookable](https://github.com/nuxt-contrib/hookable) に基づきます）。Nuxt.js は Promise か `async` として定義された関数が返されるのを待ちます。
 
-Here are some basic examples:
+基本的な例をいくつか提示します:
 
 ```js{}[modules/myModule.js]
 export default function myModule() {
   this.nuxt.hook('modules:done', moduleContainer => {
-    // This will be called when all modules finished loading
+    // これはすべてのモジュールのロードが終了したときに呼び出されます
   })
 
   this.nuxt.hook('render:before', renderer => {
-    // Called after the renderer was created
+    // レンダラーが作成された後に呼び出されます
   })
 
   this.nuxt.hook('build:compile', async ({ name, compiler }) => {
-    // Called before the compiler (default: webpack) starts
+    // コンパイラ（デフォルト: webpack）が起動する前に呼び出されます
   })
 
   this.nuxt.hook('generate:before', async generator => {
-    // This will be called before Nuxt generates your pages
+    // これは Nuxt がページを生成する前に呼び出されます
   })
 }
 ```
 
-### Provide plugins
+### 提供されるプラグイン
 
-It is common that modules provide one or more plugins when added. For example [bootstrap-vue](https://bootstrap-vue.js.org/) module would require to register itself into Vue. In such situations we can use the `this.addPlugin` helper.
+モジュールが追加されると、1 つ以上のプラグインを提供するのが一般的です。たとえば、[bootstrap-vue](https://bootstrap-vue.js.org/) モジュールは自分自身を Vue に登録する必要があります。このような状況では `this.addPlugin` ヘルパーが使えます。
 
 ```js{}[plugin.js]
 import Vue from 'vue'
@@ -307,14 +307,14 @@ Vue.use(BootstrapVue)
 import path from 'path'
 
 export default function nuxtBootstrapVue(moduleOptions) {
-  // Register `plugin.js` template
+  // `plugin.js` テンプレートを登録する
   this.addPlugin(path.resolve(__dirname, 'plugin.js'))
 }
 ```
 
-### Template plugins
+### テンプレートプラグイン
 
-Registered templates and plugins can leverage [lodash templates](https://lodash.com/docs/4.17.4#template) to conditionally change registered plugins output.
+登録済みのテンプレートとプラグインは [lodash テンプレート](https://lodash.com/docs/4.17.4#template)を利用して登録済みのプラグインの出力を条件付きで変更できます。
 
 ```js{}[plugin.js]
 // Set Google Analytics UA
@@ -329,57 +329,57 @@ ga('create', '<%= options.ua %>', 'auto')
 import path from 'path'
 
 export default function nuxtBootstrapVue(moduleOptions) {
-  // Register `plugin.js` template
+  // `plugin.js` テンプレートを登録する
   this.addPlugin({
     src: path.resolve(__dirname, 'plugin.js'),
     options: {
-      // Nuxt will replace `options.ua` with `123` when copying plugin to project
+      // プラグインをプロジェクトにコピーするとき Nuxt は `options.ua` を `123` に置き換えます
       ua: 123,
 
-      // conditional parts with dev will be stripped from plugin code on production builds
+      // dev を含む条件付きパーツは本番ビルドのプラグインコードから削除されます
       debug: this.options.dev
     }
   })
 }
 ```
 
-### Register custom webpack loaders
+### カスタム webpack ローダーの登録
 
-We can do the same as  `build.extend`  in  `nuxt.config.js`  using  `this.extendBuild`.
+`this.extendBuild` を使って `nuxt.config.js` の `build.extend` と同じことが行えます。
 
 ```js{}[module.js]
 export default function (moduleOptions) {
     this.extendBuild((config, { isClient, isServer }) => {
-      // `.foo` Loader
+      // `.foo` ローダー
       config.module.rules.push({
         test: /\.foo$/,
         use: [...]
       })
 
-      // Customize existing loaders
-      // Refer to source code for Nuxt internals:
+      // 既存のローダーをカスタマイズします
+      // Nuxt 内部のソースコードを参照してください:
       // https://github.com/nuxt/nuxt.js/blob/dev/packages/webpack/src/config/base.js
       const barLoader = config.module.rules.find(rule => rule.loader === 'bar-loader')
   })
 }
 ```
 
-## Async Modules
+## 非同期モジュール
 
-Not all modules will do everything synchronous. For example you may want to develop a module which needs fetching some API or doing asynchronous Operation. For this, Nuxt.js supports async modules which can return a Promise or call a callback.
+すべてのモジュールがすべてを同期的に実行するわけではありません。たとえば、API でデータを取得したり非同期操作を実行したりする必要があるモジュールを開発したい場合があります。このため、Nuxt.js は Promise を返すか、コールバックを呼び出すことができる非同期モジュールをサポートしています。
 
-### Use async/await
+### async/await を使う
 
 ```js
 import fse from 'fs-extra'
 
 export default async function asyncModule() {
-  // You can do async work here using `async`/`await`
+  // ここで `async`/`await` を使って非同期作業が行えます
   const pages = await fse.readJson('./pages.json')
 }
 ```
 
-### Return a Promise
+### Promise を返す
 
 ```js
 export default function asyncModule($http) {
@@ -387,20 +387,20 @@ export default function asyncModule($http) {
     .get('https://jsonplaceholder.typicode.com/users')
     .then(res => res.data.map(user => '/users/' + user.username))
     .then(routes => {
-      // Do something by extending Nuxt routes
+      // Nuxt ルートを拡張して何かをする
     })
 }
 ```
 
 <base-alert type="info">
 
-There are way more hooks and possibilities for modules. Please read the [Nuxt Internals](/docs/2.x/internals-glossary/internals) to find out more about the nuxt-internal API.
+モジュールにはもっと多くのフックと可能性があります。Nuxt 内部の API についての詳細は [NuxtInternals](/docs/2.x/internals-glossary/internals) を参照してください。
 
 </base-alert>
 
-## Publishing your module
+## モジュールを公開する
 
-`module.exports.meta`: This line is required if you are publishing the module as an npm package. Nuxt internally uses meta to work better with your package.
+`module.exports.meta`: モジュールを npm パッケージとして公開する場合はこの行が必要です。Nuxt は内部的にメタを使ってパッケージをより適切に処理します。
 
 ```js{}[modules/myModule.js]
 module.exports.meta = require('./package.json')
@@ -408,11 +408,11 @@ module.exports.meta = require('./package.json')
 
 ## buildModules
 
-Some modules are only imported during development and build time. Using `buildModules` helps to make production startup faster and also significantly decrease the size of your `node_modules` for production deployments. Please refer to the docs for each module to see if it is recommended to use `modules` or `buildModules`.
+一部のモジュールは開発およびビルド時にのみインポートされます。`buildModules`  を使うと本番環境での起動が速くなり、本番環境での `node_modules` のサイズが大幅に削減されます。各モジュールのドキュメントを参照し `modules` または  `buildModules` の使用が推奨されているかどうかを確認してください。
 
-The usage difference is:
+使い方の違いは以下の通りです:
 
-- Instead of adding to `modules` inside `nuxt.config.js`, use `buildModules`
+- `nuxt.config.js` に `modules` を追加するかわりに `buildModules` を使います
 
 ```js{}[nuxt.config.js]
 export default {
@@ -420,7 +420,7 @@ export default {
 }
 ```
 
-- Instead of adding to `dependencies` inside `package.json`, use `devDependencies`
+- `package.json` に `dependencies` を追加するかわりに `devDependencies` を使います
 
 <code-group>
   <code-block label="Yarn" active>
@@ -441,20 +441,20 @@ npm install --save-dev @nuxtjs/eslint-module
 
 <base-alert type="info">
 
-If you are a module author, It is highly recommended to suggest to users to install your package as a `devDependency` and use  `buildModules` instead of `modules` for `nuxt.config.js`.
+モジュール作成者の場合、パッケージを  `devDependency` としてインストールし、`nuxt.config.js` では  `modules`  のかわりに  `buildModules`  を使うことをユーザーに提案することを強くおすすめします。
 
 </base-alert>
 
-Your module is a `buildModule` unless:
+次の場合を除いてモジュールは `buildModule` です:
 
-- It is providing a serverMiddleware
-- It has to register a Node.js runtime hook (Like sentry)
-- It is affecting vue-renderer behavior or using a hook from `server:` or `vue-renderer:` namespace
-- Anything else that is outside of webpack scope (Hint: plugins and templates are compiled and are in webpack scope)
+- serverMiddleware を提供している
+- Node.js ランタイムフックを登録する必要がある（例えば Sentry）
+- vue-renderer の動作に影響しているか、`server:`  または `vue-renderer:` 名前空間からのフックを使っている
+- webpack スコープ外のその他のもの（ヒント: プラグインとテンプレートはコンパイルされ、webpack スコープ内にある）
 
 <base-alert> 
 
-If you are going to offer using `buildModules` please mention that this feature is only available since Nuxt v2.9. Older users should upgrade Nuxt or use the `modules` section.
+`buildModules` を使って提供する場合、この機能は Nuxt v2.9 以降から利用可能であることに注意してください。昔からのユーザーは、Nuxt をアップグレードするか `modules` セクションを使う必要があります。
 
 </base-alert>
 

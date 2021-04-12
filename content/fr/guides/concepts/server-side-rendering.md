@@ -99,6 +99,6 @@ Le navigateur reçoit la page avec le HTML généré depuis le serveur. Le conte
 
 ### Étape 3: Du navigateur au navigateur
 
-Naviguer entre les pages à l'aide de [`<NuxtLink>`](/guides/features/nuxt-components#the-nuxtlink-component) est fait du côté client afin que nous n'ayons pas besoin de faire une requête au serveur, sauf si nous faisons un rafraîchissement manuel de notre navigateur.
+Naviguer entre les pages à l'aide de [`<NuxtLink>`](/docs/2.x/features/nuxt-components#the-nuxtlink-component) est fait du côté client afin que nous n'ayons pas besoin de faire une requête au serveur, sauf si nous faisons un rafraîchissement manuel de notre navigateur.
 
 <quiz :questions="questions"></quiz>

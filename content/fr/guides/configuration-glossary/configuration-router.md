@@ -17,7 +17,7 @@ L'URL de base de l'application. Par exemple, si l'intégralité de la SPA se sit
 
 Ceci peut être utile si l'on a besoin de servir du Nuxt.js dans un autre contexte, tel qu'une partie d'un plus gros site par exemple. Il sera à vous de juger si vous pensez qu'un reverse proxy pour le front sera nécessaire ou pas.
 
-Si on veut une redirection sur le `router.base`, on peut y parvenir en utilisant un hook, se référer à la documentation sur la [redirection sur router.base lorsque non à la racine](/guides/configuration-glossary/configuration-hooks#redirect-to-routerbase-when-not-on-root).
+Si on veut une redirection sur le `router.base`, on peut y parvenir en utilisant un hook, se référer à la documentation sur la [redirection sur router.base lorsque non à la racine](/docs/2.x/configuration-glossary/configuration-hooks#redirect-to-routerbase-when-not-on-root).
 
 ```js{}[nuxt.config.js]
 export default {
@@ -129,7 +129,7 @@ Si on le passe à `false`, le router va faire un rafraîchissement à chaque nav
 - Type: `String`
 - Par défaut: `'nuxt-link-active'`
 
-Permet de personnaliser globalement la classe active par défaut de [`<nuxt-link>`](/guides/features/nuxt-components#the-nuxtlink-component).
+Permet de personnaliser globalement la classe active par défaut de [`<nuxt-link>`](/docs/2.x/features/nuxt-components#the-nuxtlink-component).
 
 ```js{}[nuxt.config.js]
 export default {
@@ -146,7 +146,7 @@ export default {
 - Type: `String`
 - Par défaut: `'nuxt-link-exact-active'`
 
-Permet de personnaliser globalement la classe active exacte par défaut de [`<nuxt-link>`](/guides/features/nuxt-components#the-nuxtlink-component).
+Permet de personnaliser globalement la classe active exacte par défaut de [`<nuxt-link>`](/docs/2.x/features/nuxt-components#the-nuxtlink-component).
 
 ```js{}[nuxt.config.js]
 export default {
@@ -163,7 +163,7 @@ export default {
 - Type: `String`
 - Par défaut: `false`
 
-Permet de personnaliser globalement la classe prefetch par défaut de [`<nuxt-link>`](/guides/features/nuxt-components#the-nuxtlink-component) (cette option est désactivée par défaut).
+Permet de personnaliser globalement la classe prefetch par défaut de [`<nuxt-link>`](/docs/2.x/features/nuxt-components#the-nuxtlink-component) (cette option est désactivée par défaut).
 
 ```js{}[nuxt.config.js]
 export default {
@@ -198,7 +198,7 @@ export default function (context) {
 }
 ```
 
-Pour en apprendre davantage, se référer au [guide du middleware](/guides/directory-structure/middleware#router-middleware).
+Pour en apprendre davantage, se référer au [guide du middleware](/docs/2.x/directory-structure/middleware#router-middleware).
 
 ## mode
 
@@ -277,7 +277,7 @@ Depuis Nuxt.js v2.10.0, si nous avons défini `prefetchLinks` à `false` mais so
 
 ## prefetchPayloads
 
-> Ajouté avec la v2.13.0, disponible seulement pour une [cible statique](/guides/features/deployment-targets#static-hosting).
+> Ajouté avec la v2.13.0, disponible seulement pour une [cible statique](/docs/2.x/features/deployment-targets#static-hosting).
 
 - Type: `Boolean`
 - Par défaut: `true`

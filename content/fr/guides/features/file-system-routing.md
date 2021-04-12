@@ -76,7 +76,7 @@ Nuxt.js nous offre du code splitting automatique pour nos routes, sans configura
 
 <base-alert type="info">
 
-Utilisez le composant [NuxtLink](/guides/features/nuxt-components#the-nuxtlink-component) pour naviguer entre les pages.
+Utilisez le composant [NuxtLink](/docs/2.x/features/nuxt-components#the-nuxtlink-component) pour naviguer entre les pages.
 
 </base-alert>
 
@@ -181,7 +181,7 @@ Depuis Nuxt >= v2.13, un crawler va détecter nos liens et générer des routes 
 
 <base-alert type="next">
 
-[Générer des routes dynamiques](/guides/concepts/static-site-generation) pour des sites statiques.
+[Générer des routes dynamiques](/docs/2.x/concepts/static-site-generation) pour des sites statiques.
 
 </base-alert>
 
@@ -195,7 +195,7 @@ Nuxt.js nous permet de créer des routes imbriquées grâce à `vue-router`. Pou
 
 <base-alert>
 
-Il ne faut pas oublier d'inclure le composant [NuxtChild](/guides/features/nuxt-components#the-nuxtchild-component) à l'intérieur du composant parent (fichier `.vue`).
+Il ne faut pas oublier d'inclure le composant [NuxtChild](/docs/2.x/features/nuxt-components#the-nuxtchild-component) à l'intérieur du composant parent (fichier `.vue`).
 
 </base-alert>
 
@@ -331,7 +331,7 @@ Il y a plusieurs façons de personnaliser notre routeur avec Nuxt:
 
 - [router-extras-module](https://github.com/nuxt-community/router-extras-module) pour personnaliser les paramètres dans la page
 - le composant [@nuxtjs/router](https://github.com/nuxt-community/router-module) pour écraser le routeur Nuxt et écrire notre propre fichier `router.js`
-- utiliser la propriété [router.extendRoutes](/guides/configuration-glossary/configuration-router#extendroutes) dans notre fichier `nuxt.config.js`
+- utiliser la propriété [router.extendRoutes](/docs/2.x/configuration-glossary/configuration-router#extendroutes) dans notre fichier `nuxt.config.js`
 
 ## La propriété router
 
@@ -351,7 +351,7 @@ L'url de base de notre application. Par exemple, si nous voulons que notre Singl
 
 <base-alert type="next">
 
-[Propriété base du routeur](/guides/configuration-glossary/configuration-router#base).
+[Propriété base du routeur](/docs/2.x/configuration-glossary/configuration-router#base).
 
 </base-alert>
 
@@ -424,7 +424,7 @@ export default {
 
 <base-alert type="next">
 
-[propriété extendRoutes](/guides/configuration-glossary/configuration-router#extendroutes).
+[propriété extendRoutes](/docs/2.x/configuration-glossary/configuration-router#extendroutes).
 
 </base-alert>
 
@@ -434,7 +434,7 @@ S'occupe du routeur, si ce dernier doit se rabattre en mode `hash` lorsque le na
 
 <base-alert type="next">
 
-[propriété fallback](/guides/configuration-glossary/configuration-router#fallback).
+[propriété fallback](/docs/2.x/configuration-glossary/configuration-router#fallback).
 
 </base-alert>
 
@@ -444,7 +444,7 @@ Nous pouvons changer le mode du routeur, ce n'est cependant pas recommandé en r
 
 <base-alert type="next">
 
-[propriété mode](/guides/configuration-glossary/configuration-router#mode).
+[propriété mode](/docs/2.x/configuration-glossary/configuration-router#mode).
 
 </base-alert>
 
@@ -454,7 +454,7 @@ Fournit des fonctions de _parsing_ / _stringification_ personnalisées.
 
 <base-alert type="next">
 
-[propriété parseQuery / stringifyQuery](/guides/configuration-glossary/configuration-router#parsequery--stringifyquery).
+[propriété parseQuery / stringifyQuery](/docs/2.x/configuration-glossary/configuration-router#parsequery--stringifyquery).
 
 </base-alert>
 
@@ -502,7 +502,7 @@ export default function (to, from, savedPosition) {
 
 <base-alert type="next">
 
-[propriété scrollBehavior](/guides/configuration-glossary/configuration-router#scrollbehavior).
+[propriété scrollBehavior](/docs/2.x/configuration-glossary/configuration-router#scrollbehavior).
 
 </base-alert>
 
@@ -528,7 +528,7 @@ Cette option doit être changée avec une certaine préparation et une sequence 
 
 <base-alert type="next">
 
-[propriété trailingSlash](/guides/configuration-glossary/configuration-router#trailingslash).
+[propriété trailingSlash](/docs/2.x/configuration-glossary/configuration-router#trailingslash).
 
 </base-alert>
 

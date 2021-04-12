@@ -17,7 +17,7 @@ export default {
 
 ### SPA
 
-Les Single Page Applications (SPA) sont des pages qui sont render seulement du côté client sans le besoin d'un serveur. Pour déployer une SPA, il faut mettre [le `mode` à `spa`](/guides/features/rendering-modes#spa) et ensuite utiliser la commande `build` pour générer notre application.
+Les Single Page Applications (SPA) sont des pages qui sont render seulement du côté client sans le besoin d'un serveur. Pour déployer une SPA, il faut mettre [le `mode` à `spa`](/docs/2.x/features/rendering-modes#spa) et ensuite utiliser la commande `build` pour générer notre application.
 
 ```js{}[nuxt.config.js]
 export default {
@@ -41,7 +41,7 @@ Les sites statiques fonctionnent avec le mode [universel](https://nuxtjs.org/gui
 **Utiliser la commande `nuxt dev` avec `static` comme cible de déploiement peut améliorer l'expérience développeur.**
 
 - Enlève `req` & `res` du `context`
-- Solution de secours sur le rendu côté client dans le cas d'une 404, d'erreurs et de redirections [voir les solutions de secours d'une SPA](/guides/concepts/static-site-generation#spa-fallback)
+- Solution de secours sur le rendu côté client dans le cas d'une 404, d'erreurs et de redirections [voir les solutions de secours d'une SPA](/docs/2.x/concepts/static-site-generation#spa-fallback)
 - `$route.query` sera toujours égal à `{}` sur le render côté serveur
 - `process.static` est vrai
 

@@ -147,7 +147,7 @@ export default {
 
 <base-alert type="next">
 
-`asyncData` の詳細は[データの取得](/guides/features/data-fetching#async-data)ページを参照してください。
+`asyncData` の詳細は[データの取得](/docs/2.x/features/data-fetching#async-data)ページを参照してください。
 
 </base-alert>
 
@@ -174,7 +174,7 @@ export default {
 
 <base-alert type="next">
 
-`fetch` の詳細は[データの取得](/guides/features/data-fetching)ページを参照してください。
+`fetch` の詳細は[データの取得](/docs/2.x/features/data-fetching)ページを参照してください。
 
 </base-alert>
 
@@ -192,7 +192,7 @@ export default {
 
 <base-alert type="next">
 
-詳細は[メタタグと SEO](/guides/features/meta-tags-seo) ページを参照してください。
+詳細は[メタタグと SEO](/docs/2.x/features/meta-tags-seo) ページを参照してください。
 
 </base-alert>
 
@@ -208,7 +208,7 @@ export default {
 
 <base-alert type="next">
 
-レイアウトの詳細は[レイアウトのドキュメント](/guides/concepts/views#layouts)を参照してください。
+レイアウトの詳細は[レイアウトのドキュメント](/docs/2.x/concepts/views#layouts)を参照してください。
 
 </base-alert>
 
@@ -230,7 +230,7 @@ nuxt.config.js で `loading` が設定されている場合のみ適用されま
 
 <base-alert type="next">
 
-詳細は[ローディング](/guides/features/loading)ページを参照してください。
+詳細は[ローディング](/docs/2.x/features/loading)ページを参照してください。
 
 </base-alert>
 
@@ -264,7 +264,7 @@ export default {
 
 逆に、親ルートでも `scrollToTop` を手動で `false` に設定することができます。
 
-スクロールについて Nuxt.js のデフォルトの挙動を上書きしたいときは、[scrollBehavior オプション](/guides/configuration-glossary/configuration-router#scrollbehavior)を参照してください。
+スクロールについて Nuxt.js のデフォルトの挙動を上書きしたいときは、[scrollBehavior オプション](/docs/2.x/configuration-glossary/configuration-router#scrollbehavior)を参照してください。
 
 ### middleware プロパティ
 
@@ -318,7 +318,7 @@ export default {
 
 <base-alert type="next">
 
-詳細は[データの取得](/guides/features/data-fetching)ページを参照してください。
+詳細は[データの取得](/docs/2.x/features/data-fetching)ページを参照してください。
 
 </base-alert>
 
@@ -330,7 +330,7 @@ export default {
 
 <base-alert type="next">
 
-詳細は[ignore オプション](/guides/configuration-glossary/configuration-ignore)ページを参照してください。
+詳細は[ignore オプション](/docs/2.x/configuration-glossary/configuration-ignore)ページを参照してください。
 
 </base-alert>
 
@@ -349,7 +349,7 @@ export default {
 
 <base-alert type="next">
 
-詳細は [dir オプション](/guides/configuration-glossary/configuration-dir)ページを参照してください。
+詳細は [dir オプション](/docs/2.x/configuration-glossary/configuration-dir)ページを参照してください。
 
 </base-alert>
 

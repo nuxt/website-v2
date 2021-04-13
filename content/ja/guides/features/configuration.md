@@ -6,59 +6,53 @@ category: features
 csb_link_host_port: https://codesandbox.io/embed/github/nuxt-academy/guides-examples/tree/master/03_features/07_configuration_host_port?fontsize=14&hidenavigation=1&theme=dark
 csb_link_pre-processors: https://codesandbox.io/embed/github/nuxt-academy/guides-examples/tree/master/03_features/07_configuration_pre-processors?fontsize=14&hidenavigation=1&theme=dark
 questions:
-  - question: You can use the axios-module in the nuxt.config.js?
+  - question: nuxt.config.js の axios モジュールを使えますか？
     answers:
-      - true
-      - false
-    correctAnswer: false
-  - question: What is the default Nuxt.js development server host?
+      - 使えます
+      - 使えません
+    correctAnswer: 使えません
+  - question: Nuxt.js 開発のサーバーホストのデフォルトは？
     answers:
       - localhost
       - 3000
       - '0'
     correctAnswer: localhost
-  - question: Which attribute do you use in your style tag to use SCSS?
+  - question: SCSS を使うためにスタイルタグでどの属性を使いますか？
     answers:
       - lang="scss"
       - language="scss"
       - style="scss"
     correctAnswer: lang="scss"
-  - question: What is the default Nuxt.js development server port?
+  - question: Nuxt.js 開発サーバーポート番号のデフォルト値は？
     answers:
       - 8000
       - 3000
       - localhost
     correctAnswer: 3000
-  - question: In the nuxt.config.js what property do you use to add global CSS files?
+  - question: nuxt.config.js でグローバルな CSS ファイルを追加するためにどのプロパティを使いますか？
     answers:
       - styles
       - css
       - globalCss
     correctAnswer: css
-  - question: You can use JSX in your Nuxt.js application?
+  - question: Nuxt.js アプリケーションで JSX を使えますか？
     answers:
-      - True
-      - False
-    correctAnswer: True
-  - question: In the nuxt.config.js what property do you use to add global CSS files?
-    answers:
-      - styles
-      - css
-      - global-css
-    correctAnswer: css
-  - question: In the nuxt.config.js what property do you use to extend the webpack config?
+      - 使えます
+      - 使えません
+    correctAnswer: 使えます
+  - question: nuxt.config.js で webpack の設定を拡張するためにどのプロパティを使いますか？
     answers:
       - webpack.extend
       - build.extend
       - extend.build
     correctAnswer: build.extend
-  - question: What is the file called for ignoring files in your Nuxt.js app?
+  - question: Nuxt.js アプリケーションのファイルを無視するために呼び出されるファイルは？
     answers:
       - .ignore
       - .nuxtignore
       - .ignorenuxt
     correctAnswer: .nuxtignore
-  - question: If you want to ignore the about file of your Nuxt.js app what prefix would you use?
+  - question: Nuxt.js アプリケーションの about ファイルを無視したい場合に使われるプレフィックスは？
     answers:
       - _about.vue
       - -about.vue
@@ -402,7 +396,7 @@ export default {
 
 > 注意: Vue ベースのアプリケーションでは jQuery は必要ないかもしれません。
 
-Nuxt を使うと、プラグインの実行コンテキストを制御することもできます。もしプラグインが [`build.extend`](/docs/2.x/configuration-glossary/configuration-build#extend) 内の `client` または  `server` ビルド（または `dev` ビルドと `prod` ビルドを区別する）で実行されることを意図している場合 、webpack プラグインを手動で渡すこともできます。 
+Nuxt を使うと、プラグインの実行コンテキストを制御することもできます。もしプラグインが [`build.extend`](/docs/2.x/configuration-glossary/configuration-build#extend) 内の `client` または `server` ビルド（または `dev` ビルドと `prod` ビルドを区別する）で実行されることを意図している場合 、webpack プラグインを手動で渡すこともできます。
 
 ### Webpack を拡張してオーディオファイルをロードする
 

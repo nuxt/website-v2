@@ -5,63 +5,63 @@ position: 10
 category: directory-structure
 csb_link: https://codesandbox.io/embed/github/nuxt-academy/guides-examples/tree/master/04_directory_structure/11_pages?fontsize=14&hidenavigation=1&theme=dark
 questions:
-  - question: In which directory do you put your page components?
+  - question: ページコンポーネントを配置するディレクトリは？
     answers:
       - views
       - pages
       - vues
     correctAnswer: pages
-  - question: To create routes you need to manually configure a router.js file
+  - question: ルートを作成するには router.js ファイルを手動で設定する必要がありますか？
     answers:
-      - true
-      - false
-    correctAnswer:
-  - question: You can create routes with .js files and .ts files
+      - 必要があります
+      - 必要がありません
+    correctAnswer: 必要がありません
+  - question: .js ファイルや .ts ファイルを使ってルートを作成できます
     answers:
-      - true
-      - false
-    correctAnswer: true
-  - question: When is asyncData called?
+      - できます
+      - できません
+    correctAnswer: できます
+  - question: asyncData はいつ呼び出されますか？
     answers:
-      - before loading the component
-      - while loading the component
-      - after loading the component
-    correctAnswer: before loading the component
-  - question: In what property do you add your meta tags?
+      - コンポーネントをロードする前
+      - コンポーネントをロード中
+      - コンポーネントをロードした後
+    correctAnswer: コンポーネントをロードする前
+  - question: メタタグを追加するプロパティは？
     answers:
       - head
       - meta
       - metaTags
     correctAnswer: head
-  - question: Which property do you use to add a different layout to your page?
+  - question: ページに別のレイアウトを追加するために使うプロパティは？
     answers:
       - layouts
       - page
       - layout
     correctAnswer: layout
-  - question: How do you set the scrollToTop property if you want to tell Nuxt.js to scroll to the top when rendering your child route?
+  - question: 子ルートをレンダリングするときに一番上にスクロールするように Nuxt.js に指示する場合、scrollToTop プロパティをどのように設定しますか？
     answers:
       - "scrollToTop: 'scroll'"
       - 'scrollToTop: true'
       - "scroll: 'top'"
     correctAnswer: 'scrollToTop: true'
-  - question: How do you add the middleware/auth.js to your page?
+  - question: middleware/auth.js をどのようにページに追加しますか？
     answers:
       - 'middleware: true'
       - "middleware: 'auth'"
       - "import auth from 'middleware/auth.js'"
     correctAnswer: "middleware: 'auth'"
-  - question: To set up a watcher for query strings what property do you use?
+  - question: クエリ文字列の監視の設定に使うプロパティは？
     answers:
       - watcher
       - queryWatcher
       - watchQuery
     correctAnswer: watchQuery
-  - question: Watching is disabled by default.
+  - question: 監視はデフォルトで無効になっていますか？
     answers:
-      - true
-      - false
-    correctAnswer: true
+      - 無効になっています
+      - 無効になっていません
+    correctAnswer: 無効になっています
 ---
 
 `pages` ディレクトリには、アプリケーションのビューとルートが格納されています。Nuxt.js はこのディレクトリ内のすべての `.vue` ファイルを読み込んで、ルーターの設定を自動的に作成します。

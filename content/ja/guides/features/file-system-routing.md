@@ -4,64 +4,64 @@ description: Nuxt.js は pages ディレクトリにある Vue ファイルの�
 position: 3
 category: features
 questions:
-  - question: What is the name of the component you use to navigate between pages?
+  - question: ページ間を遷移するために使うコンポーネント名は？
     answers:
       - '<a>'
       - '<NuxtLink>'
       - '<Nuxt>'
     correctAnswer: '<NuxtLink>'
-  - question: What do you need to do to generate an automatic router configuration?
+  - question: 自動ルーターの設定を生成するには何をする必要がありますか？
     answers:
-      - add a .vue file to the pages directory
-      - create a router.config file
-      - 'add a <NuxtLink> to your page'
-    correctAnswer: add a .vue file to the pages directory
-  - question: Which of the following will not create a dynamic route?
+      - pages ディレクトリに .vue ファイルを追加する
+      - router.config ファイルを作成する
+      - '<NuxtLink> をページに追加する'
+    correctAnswer: pages ディレクトリに .vue ファイルを追加する
+  - question: 動的ルートを作成しないのは次のうちどれですか？
     answers:
       - dynamic.vue
       - _slug.vue
       - _slug/index.vue
     correctAnswer: dynamic.vue
-  - question: Dynamic routes are ignored by the nuxt generate command?
+  - question: 動的ルートは nuxt generate コマンドによって無視されますか？
     answers:
-      - True
-      - False
-    correctAnswer: False
-  - question: How do you access the route params for a dynamic page such as users/_id.vue?
+      - 無視されます
+      - 無視されません
+    correctAnswer: 無視されません
+  - question: users/_id.vue などの動的ページのルートパラメータにどのようにアクセスしますか？
     answers:
       - $route.params.id
       - $route.id
       - $route.params.users.id
     correctAnswer: $route.params.id
-  - question: How do you define the parent component of a nested route?
+  - question: ネストされたルートの親コンポーネントをどのように定義しますか？
     answers:
-      - create a Vue file called parent inside the directory which contains the children views
-      - create a Vue file with a different name as the directory which contains the children views
-      - create a Vue file with the same name as the directory which contains the children views
-    correctAnswer: create a Vue file with the same name as the directory which contains the children views
-  - question: If you do not know the depth of your URL structure, you can use which file to dynamically match nested paths?
+      - 子ビューを含むディレクトリ内に parent という Vue ファイルを作成します
+      - 子ビューを含むディレクトリとは異なる名前の Vue ファイルを作成します
+      - 子ビューを含むディレクトリと同じ名前の Vue ファイルを作成します
+    correctAnswer: 子ビューを含むディレクトリと同じ名前の Vue ファイルを作成します
+  - question: URL 構造の深さがわからない場合、どのファイルを使ってネストされたパスを動的に照合しますか？
     answers:
       - _.vue
       - _index.vue
       - _id.vue
     correctAnswer: _.vue
-  - question: Which components can you use to render named views?
+  - question: 名前付きビューをレンダリングするために使うコンポーネントは？
     answers:
-      - '<Nuxt> and <Child>'
-      - '<Nuxt> and <NuxtChild>'
-      - '<NuxtChild> and <NuxtLink>'
-    correctAnswer: '<Nuxt> and <NuxtChild>'
-  - question: In Nuxt.js which file can you create to force the scroll position to the top for every route?
+      - '<Nuxt> と <Child>'
+      - '<Nuxt> と <NuxtChild>'
+      - '<NuxtChild> と <NuxtLink>'
+    correctAnswer: '<Nuxt> と <NuxtChild>'
+  - question: Nuxt.js ですべてのルートでスクロール位置を上に強制するために、どのファイルを作成しますか？
     answers:
       - app/router.scrollBehavior.js
       - app/scrollBehavior.js
       - app/router.js
     correctAnswer: app/router.scrollBehavior.js
-  - question: In Nuxt.js you can add trailing slashes which will be appended to every route?
+  - question: Nuxt.js ではすべてのルートの末尾にスラッシュを追加できますか？
     answers:
-      - true
-      - false
-    correctAnswer: true
+      - できます
+      - できません
+    correctAnswer: できます
 ---
 
 Nuxt.js は pages ディレクトリにある Vue ファイルの木構造に基づいて、vue-router の設定を自動的に生成します。pages ディレクトリに .vue ファイルを作成すると、特別な設定をせずとも基本的なルーティングが動作するようになります。

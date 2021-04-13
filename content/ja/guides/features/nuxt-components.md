@@ -6,67 +6,67 @@ category: features
 csb_link_nuxt_link: https://codesandbox.io/embed/github/nuxt-academy/guides-examples/tree/master/03_features/09_components_nuxt-link?fontsize=14&hidenavigation=1&theme=dark
 csb_link_nuxt: https://codesandbox.io/embed/github/nuxt-academy/guides-examples/tree/master/03_features/09_components_nuxt?fontsize=14&hidenavigation=1&theme=dark
 questions:
-  - question: What component do you use to display your page components?
+  - question: ページコンポーネントを表示するためにどのコンポーネントを使いますか？
     answers:
       - '<Nuxt>'
       - '<Page>'
       - '<Views>'
     correctAnswer: '<Nuxt>'
-  - question: The `<Nuxt>` component can be used in?
+  - question: `<Nuxt>` コンポーネントが使われるのは？
     answers:
-      - components
-      - pages
-      - layouts
-    correctAnswer: layouts
-  - question: Which component is used for displaying the children components in a nested route?
+      - コンポーネント
+      - ページ
+      - レイアウト
+    correctAnswer: レイアウト
+  - question: ネストされたルートで子コンポーネントを表示するために使われるコンポーネントは？
     answers:
       - '<Nuxt>'
       - '<NuxtChild>'
       - '<Children>'
     correctAnswer: '<NuxtChild>'
-  - question: Where do you insert the `<NuxtChild>` component?
+  - question: `<NuxtChild>` コンポーネントはどこに挿入しますか？
     answers:
       - pages/child.vue
       - pages/parent.vue
       - layouts/parent.vue
     correctAnswer: pages/parent.vue
-  - question: '`keep-alive` can be used in'
+  - question: '`keep-alive` が使われるのは？'
     answers:
-      - '<Nuxt> component only'
-      - '<Nuxt> and <NuxtChild> component'
-      - '<NuxtChild> component only'
-    correctAnswer: '<Nuxt> and <NuxtChild> component'
-  - question: What component do we use to link to internal pages?
+      - '<Nuxt> コンポーネントのみ'
+      - '<Nuxt> と <NuxtChild> コンポーネント'
+      - '<NuxtChild> コンポーネントのみ'
+    correctAnswer: '<Nuxt> と <NuxtChild> コンポーネント'
+  - question: 内部ページにリンクするためにどのコンポーネントを使いますか？
     answers:
       - '<NuxtLink>'
       - '<RouterLink>'
       - '<a>'
     correctAnswer: '<NuxtLink>'
-  - question: 'How do you link to the about page of your app using <NuxtLink>?'
+  - question: '<NuxtLink> を使ってアプリケーションの概要ページにリンクを作る際正しいのは？'
     answers:
       - to="/about"
       - href="/about"
       - link="/about"
     correctAnswer: to="/about"
-  - question: What key do you use to disable prefetching for certain pages?
+  - question: 特定ページのプリフェッチを無効にするためにどのキーを使用しますか？
     answers:
       - no-prefetch
       - :prefetch="false"
-      - no-prefetch and :prefetch="false"
-    correctAnswer: no-prefetch and :prefetch="false"
-  - question: What is the default class you can use to add styles for active links
+      - no-prefetch と :prefetch="false"
+    correctAnswer: no-prefetch と :prefetch="false"
+  - question: アクティブなリンクのスタイルを追加するために使えるデフォルトのクラスは？
     answers:
       - nuxt-link-active
       - link-active
       - router-link-active
     correctAnswer: nuxt-link-active
-  - question: What is the default class you can use to add styles for exact active links
+  - question: 正確なアクティブリンクのスタイルを追加するために使えるデフォルトのクラスは？
     answers:
       - nuxt-link-exact-active
       - link-exact-active
       - nuxt-exact-active-link
     correctAnswer: nuxt-link-exact-active
-  - question: In Nuxt ≥ 2.9.0 which component do you use so that your component is only rendered on client side?
+  - question: Nuxt v2.9.0 以上ではコンポーネントがクライアントサイドでのみレンダリングされるように、どのコンポーネントを使いますか？
     answers:
       - '<client-only>'
       - '<no-ssr>'

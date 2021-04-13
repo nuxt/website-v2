@@ -5,61 +5,61 @@ position: 10
 category: features
 csb_link: https://codesandbox.io/embed/github/nuxt-academy/guides-examples/tree/master/03_features/05_transitions?fontsize=14&hidenavigation=1&theme=dark
 questions:
-  - question: To define a custom transition for a specific route what key do you add to your page?
+  - question: 特定のルートのカスタムトランジションを定義するためにどのキーをページに追加しますか？
     answers:
       - pageTransition
       - transition
       - layoutTransition
     correctAnswer: transition
-  - question: What is the default transition mode in Nuxt.js?
+  - question: Nuxt.js のデフォルトのトランジションモードは？
     answers:
       - in-out
       - out-in
       - none
     correctAnswer: out-in
-  - question: What is the default transition name for transitions on pages?
+  - question: ページトランジションのデフォルトのトランジション名は？
     answers:
       - .page
       - .pages
       - .page-transition
     correctAnswer: .page
-  - question: Where is the best place to add your CSS transition classes so you have global transitions on all routes?
+  - question: すべてのルートでグローバルトランジションを使えるように、CSS トランジションクラスを追加するのに最適な場所は？
     answers:
       - index.vue
-      - A global css file
+      - グローバル css ファイル
       - layouts/default.vue
-    correctAnswer: A global css file
-  - question: In which array in the nuxt.config.js file do you add your global stylesheet?
+    correctAnswer: グローバル css ファイル
+  - question: nuxt.config.js ファイルのどの配列にグローバルなスタイルシートを追加しますか？
     answers:
       - 'css: []'
       - 'styles: []'
       - 'transitions: []'
     correctAnswer: 'css: []'
-  - question: What is the default css class for layout transitions?
+  - question: レイアウトトランジションのデフォルトの css クラスは？
     answers:
       - layout
       - layout-transition
       - transition
     correctAnswer: layout
-  - question: In the nuxt.config.js file what is the property you use to configure the default settings for layout transitions?
+  - question: nuxt.config.js ファイルでレイアウトトランジションのデフォルト設定をするために使うプロパティは？
     answers:
       - layout
       - layoutTransition
       - layoutTransitions
     correctAnswer: layoutTransition
-  - question: If you change the default layout to be called 'my-layout' what class do you use to create the css transitions?
+  - question: デフォルトのレイアウトを 'my-layout' で呼ばれるように変更した場、css トランジションを作成するために使うクラスは？
     answers:
       - layout
       - my-layout
       - myLayout
     correctAnswer: my-layout
-  - question: In the nuxt.config.js file what is the property you use to configure the default settings for page transitions?
+  - question: nuxt.config.js ファイルでページトランジションのデフォルト設定をするために使うプロパティは？
     answers:
       - page
       - pageTransition
       - layoutTransition
     correctAnswer: pageTransition
-  - question: Where do you modify the default settings for your page transitions?
+  - question: ページトランジションのデフォルト設定をどこで変更しますか？
     answers:
       - main.css
       - pages.vue

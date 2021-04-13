@@ -5,30 +5,30 @@ position: 6
 category: features
 csb_link: https://codesandbox.io/embed/github/nuxt-academy/guides-examples/tree/master/03_features/06_meta_tags_seo?fontsize=14&hidenavigation=1&theme=dark
 questions:
-  - question: Where do you set the title and meta descriptions globally?
+  - question: タイトルとメタディスクリプションをグローバルに設定する場合どこに設定しますか？
     answers:
-      - in the page component
-      - in the nuxt.config.js
-      - in the package.json
-    correctAnswer: in the nuxt.config.js
-  - question: Where do you set the title and meta descriptions locally?
+      - ページコンポーネント内
+      - nuxt.config.js 内
+      - package.json 内
+    correctAnswer: nuxt.config.js 内
+  - question: タイトルとメタディスクリプションをローカルに設定する場合どこに設定しますか？
     answers:
-      - in the page component
-      - in the nuxt.config.js
-      - in the seo component
-    correctAnswer: in the page component
-  - question: In pages, to get access to your data in your title or meta description you use the
+      - ページコンポーネント内
+      - nuxt.config.js 内
+      - seo コンポーネント内
+    correctAnswer: ページコンポーネント内
+  - question: ページではタイトルまたはメタディスクリプションのデータにアクセスするために何を使いますか？
     answers:
-      - meta function
-      - head function
-      - seo function
-    correctAnswer: head function
-  - question: You can load external resources only in the nuxt.config.js
+      - meta 関数
+      - head 関数
+      - seo 関数
+    correctAnswer: head 関数
+  - question: 外部リソーをロードできるのは nuxt.config.js のみですか？
     answers:
-      - true
-      - false
-    correctAnswer: false
-  - question: To include scripts before the closing body tag use
+      - はい
+      - いいえ
+    correctAnswer: いいえ
+  - question: 本文の終了タグを使う前にスクリプトを含めるにはどのオプションを使いますか？
     answers:
       - 'body: true'
       - 'body: false'

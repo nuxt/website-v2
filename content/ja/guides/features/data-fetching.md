@@ -5,62 +5,62 @@ position: 4
 category: features
 csb_link: https://codesandbox.io/embed/github/nuxt-academy/guides-examples/tree/master/03_features/04_data_fetching?fontsize=14&hidenavigation=1&theme=dark
 questions:
-  - question: Where can you use the Nuxt.js fetch hook?
+  - question: どこで Nuxt.js の fetch フックが使えますか？
     answers:
-      - pages and components
-      - only in pages
-      - only in components
-    correctAnswer: pages and components
-  - question: You have access to this when you use the Nuxt.js fetch hook
+      - ページとコンポーネント
+      - ページでのみ
+      - コンポーネントでのみ
+    correctAnswer: ページとコンポーネント
+  - question: 'Nuxt.js fetch フックを使うと `this` にアクセスできますか？'
     answers:
-      - true
-      - false
-    correctAnswer: true
-  - question: When is the Nuxt.js fetch hook is called?
+      - できます
+      - できません
+    correctAnswer: できます
+  - question: Nuxt.js の fetch フックはいつ呼ばれますか？
     answers:
-      - after the component instance
-      - before the component instance
-      - during the component instance
-    correctAnswer: after the component instance
-  - question: Which allows you to display a placeholder when `fetch` is being called *on client-side?*
+      - コンポーネントがインスタンス化された後
+      - コンポーネントがインスタンス化される前
+      - コンポーネントがインスタンス化される間
+    correctAnswer: コンポーネントがインスタンス化された後
+  - question: '`fetch` が*クライアントサイド*で呼び出されているときにプレースホルダを表示できるのはどれですか？'
     answers:
       - $fetchState.timestamp
       - $fetchState.error
       - $fetchState.pending
     correctAnswer: $fetchState.pending
-  - question: How do you save fetch calls on pages you have already visited?
+  - question: 既にアクセスしたページの fetch の呼び出しをどのように保存しますか？
     answers:
       - keep-alive
       - save-fetch
       - cache-fetch
     correctAnswer: keep-alive
-  - question: In the activated hook which property do you use to add a 30 second cache to fetch?
+  - question: アクティブ化されたフックで、fetchする 30 秒のキャッシュを追加するためにどのプロパティを使いますか？
     answers:
       - $fetchState.pending
       - $fetchState.timestamp
       - $fetchState.cache
     correctAnswer: $fetchState.timestamp
-  - question: When is `asyncData` called?
+  - question: '`asyncData` はいつ呼ばれますか？'
     answers:
-      - after loading the page component
-      - during loading the page component
-      - before loading the page component
-    correctAnswer: before loading the page component
-  - question: You have access to `this` inside asyncData
+      - ページコンポーネントをロードした後
+      - ページコンポーネントをロード中
+      - ページコンポーネントをロードする前
+    correctAnswer: ページコンポーネントをロードする前
+  - question: 'asyncData 内の `this` にアクセスできますか？'
     answers:
-      - true
-      - false
-    correctAnswer: false
-  - question: With asyncData you can use the `context` parameter to access dynamic route data
+      - アクセスできます
+      - アクセスできません
+    correctAnswer: アクセスできません
+  - question: 'asyncDataを使用すると `context` パラメータを使って動的ルートデータにアクセスできますか？'
     answers:
-      - true
-      - false
-    correctAnswer: true
-  - question: You have access to the error statusCode in asyncData
+      - できます
+      - できません
+    correctAnswer: できません
+  - question: asyncData のエラーステータスコードにアクセスできますか？
     answers:
-      - true
-      - false
-    correctAnswer: true
+      - できます
+      - できません
+    correctAnswer: できます
 ---
 
 Nuxt.js はコンポーネントの `mounted()` フックでデータを取得するような、クライアントサイドアプリケーションにおける従来の Vue のデータの取得パターンをサポートしています。しかしユニバーサルアプリケーションでは、サーバーサイドレンダリング中にデータをレンダリングするために Nuxt.js 特有のフックを使う必要があります。これによりすべての必要なデータと一緒にページをレンダリングすることができます。

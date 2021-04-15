@@ -397,11 +397,16 @@ Use a slot as placeholder until `<client-only />` is mounted on client-side.
       <comments />
 
       <!-- loading indicator, rendered on server-side -->
-      <comments-placeholder slot="placeholder" />
+      <comments-placeholder #placeholder />
     </client-only>
   </div>
 </template>
 ```
+<base-alert>
+
+If you are using a version of Nuxt < v2.5.0 *and* a vue version < v2.6.0 use the deprecated syntax `<client-only slot="placeholder">` instead of `<client-only #placeholder>`. More Info: https://vuejs.org/v2/guide/components-slots.html#Deprecated-Syntax
+
+</base-alert>
 
 <base-alert  type="info">
 

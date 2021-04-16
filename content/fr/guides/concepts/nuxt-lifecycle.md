@@ -3,7 +3,7 @@ title: Cycle de vie de Nuxt
 description: Peu importe l'outil que nous utilisons, nous serons davantage en confiance lorsque nous serons capable de comprendre comment il marche dans les détails. Il en est de même pour Nuxt.js.
 position: 5
 category: concepts
-img: /guides/nuxt-lifecycle.png
+img: /docs/2.x/nuxt-lifecycle.svg
 imgAlt: understanding-nuxt-2-12-lifecycle-hooks
 questions:
   - question: Quand commence le cycle de Nuxt.js ?
@@ -70,7 +70,7 @@ Le cycle de vie de Nuxt.js décrit les différentes étapes qui ont lieu après 
 
 Rendu dynamique côté serveur (SSR) (`nuxt start`)
 
-or Génération statique de site (SSG) (`nuxt generate`).
+ou Génération statique de site (SSG) (`nuxt generate`).
 
 ## Cycle de vie
 
@@ -141,7 +141,7 @@ De la même façon que pour la partie _client_, tout se passe dans le navigateur
 
 <base-alert type="info">
 
-Se référer au chapitre sur les composants pour plus d'informations sur [`<NuxtLink>`](/guides/features/nuxt-components#the-nuxtlink-component).
+Se référer au chapitre sur les composants pour plus d'informations sur [`<NuxtLink>`](/docs/2.x/features/nuxt-components#the-nuxtlink-component).
 
 </base-alert>
 
@@ -159,7 +159,7 @@ Se référer au chapitre sur les composants pour plus d'informations sur [`<Nuxt
 
 <base-alert type="next">
 
-Plus d'informations dans le [recueil sur les features](/guides/features/rendering-modes).
+Plus d'informations dans le [recueil sur les features](/docs/2.x/features/rendering-modes).
 
 </base-alert>
 

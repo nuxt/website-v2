@@ -112,7 +112,7 @@ Nuxt.js をプロジェクトの UI レンダリング全体を担うフレー�
 
 1. [nuxtjs.org リポジトリ](https://github.com/nuxt/nuxtjs.org)をクローンする
 2. `npm install` で依存関係のあるパッケージをインストールする
-3. `nuxt build && nuxt export`（Nuxt v2.13 以上） または `npm run generate`（Nuxt v2.12 以下） を実行する
+3. `nuxt build && nuxt export`（Nuxt v2.13 以上）または `npm run generate`（Nuxt v2.12 以下）を実行する
 4. `dist` ディレクトリに配置する
 
 これで自動化された**静的に生成されたウェブアプリケーション**ができます。:)

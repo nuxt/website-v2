@@ -132,7 +132,7 @@ export default {
 
 - Type: `Object`
 
-Voir [webpack-dev-middleware](https://github.com/webpack/webpack-dev-middleware) fpour les options disponibles.
+Voir [webpack-dev-middleware](https://github.com/webpack/webpack-dev-middleware) pour les options disponibles.
 
 ## devtools
 
@@ -156,7 +156,7 @@ Si cela a déjà été activé grâce au fichier `nuxt.config.js` ou autrement, 
 
 <base-alert>
 
-**Warning**: Les clés `isClient` et `isServer` fournies n'ont rien à voir avec celles présentes dans le [`context`](/guides/internals-glossary/context). Elles ne sont **pas** dépréciées. Il ne faut en outre pas utiliser `process.client` et `process.server` ici car ils seront `undefined` à ce niveau.
+**Attention**: Les clés `isClient` et `isServer` fournies n'ont rien à voir avec celles présentes dans le [`context`](/docs/2.x/internals-glossary/context). Elles ne sont **pas** dépréciées. Il ne faut en outre pas utiliser `process.client` et `process.server` ici car ils seront `undefined` à ce niveau.
 
 </base-alert>
 
@@ -258,12 +258,12 @@ export default {
 
   ```js
   {
-    app: ({ isDev }) => isDev ? '[name].js' : '[contenthash].js',
-    chunk: ({ isDev }) => isDev ? '[name].js' : '[contenthash].js',
-    css: ({ isDev }) => isDev ? '[name].css' : '[contenthash].css',
-    img: ({ isDev }) => isDev ? '[path][name].[ext]' : 'img/[contenthash:7].[ext]',
-    font: ({ isDev }) => isDev ? '[path][name].[ext]' : 'fonts/[contenthash:7].[ext]',
-    video: ({ isDev }) => isDev ? '[path][name].[ext]' : 'videos/[contenthash:7].[ext]'
+    app: ({ isDev, isModern }) => isDev ? `[name]${isModern ? '.modern' : ''}.js` : `[contenthash:7]${isModern ? '.modern' : ''}.js`,
+    chunk: ({ isDev, isModern }) => isDev ? `[name]${isModern ? '.modern' : ''}.js` : `[contenthash:7]${isModern ? '.modern' : ''}.js`,
+    css: ({ isDev }) => isDev ? '[name].css' : 'css/[contenthash:7].css',
+    img: ({ isDev }) => isDev ? '[path][name].[ext]' : 'img/[name].[contenthash:7].[ext]',
+    font: ({ isDev }) => isDev ? '[path][name].[ext]' : 'fonts/[name].[contenthash:7].[ext]',
+    video: ({ isDev }) => isDev ? '[path][name].[ext]' : 'videos/[name].[contenthash:7].[ext]'
   }
   ```
 
@@ -639,7 +639,7 @@ Cette option est automatiquement définie en se basant sur la valeur de `mode` s
 
 <base-alert>
 
-**Warning**: cette propriété est dépréciée. Il faudrait utiliser le module [style-resources-module](https://github.com/nuxt-community/style-resources-module/) à la place, pour avoir des performances accrues et une meilleure DX !
+**Attention**: cette propriété est dépréciée. Il faudrait utiliser le module [style-resources-module](https://github.com/nuxt-community/style-resources-module/) à la place, pour avoir des performances accrues et une meilleure DX !
 
 </base-alert>
 
@@ -670,7 +670,7 @@ On ne peut pas utiliser d'alias de chemin (`~` ou `@`), on aura besoin d'utilise
 
 ## templates
 
-> Nuxt.js nous permet d'utiliser nos propres templates qui seront render basés sur les [modules](/guides/directory-structure/modules).
+> Nuxt.js nous permet d'utiliser nos propres templates qui seront render basés sur les [modules](/docs/2.x/directory-structure/modules).
 
 - Type: `Array`
 
@@ -760,7 +760,7 @@ Depuis `v2.9.0`, on peut aussi utiliser une fonction pour rendre la transpilatio
 
 ## watch
 
-> On peut fournir nos propres fichiers personnalisés à surveiller avant de régénérer après des modifications. Cette fonctionnalité est surtout utile à utiliser avec [modules](/guides/directory-structure/modules).
+> On peut fournir nos propres fichiers personnalisés à surveiller avant de régénérer après des modifications. Cette fonctionnalité est surtout utile à utiliser avec [modules](/docs/2.x/directory-structure/modules).
 
 - Type: `Array<String>`
 

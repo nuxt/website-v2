@@ -46,7 +46,7 @@ questions:
       - .prev-next(slug)
       - .slug()
     correctAnswer: .surround(slug)
-  - question: PrismJS classes are applied to code blocks by default?
+  - question: Prism classes are applied to code blocks by default?
     answers:
       - true
       - false
@@ -265,7 +265,7 @@ See the [content module docs](https://content.nuxtjs.org/fetching#searchfield-va
 
 ### Syntax highlighting
 
-This module automatically wraps codeblocks and applies [PrismJS](https://prismjs.com/) classes. You can also add a different PrismJS theme or disable it altogether.
+This module automatically wraps codeblocks and applies [Prism](https://prismjs.com/) classes. You can also add a different Prism theme or disable it altogether.
 
 <code-group>
   <code-block label="Yarn" active>
@@ -275,7 +275,7 @@ yarn add prism-themes
 ```
 
   </code-block>
-  <code-block label="NPM">
+  <code-block label="npm">
 
 ```bash
 npm install prism-themes
@@ -330,15 +330,15 @@ See the [content module docs](https://content.nuxtjs.org/writing#table-of-conten
 
 </base-alert>
 
-### Powerful QueryBuilder API (MongoDB like)
+### Powerful query builder API (MongoDB-like)
 
-The content module comes with a powerful QueryBuilder API similar to MongoDB which allows you to easily see the JSON of each directory at `http://localhost:3000/_content/`. The endpoint is accessible on GET and POST request, so you can use query params.
+The content module comes with a powerful query builder API similar to MongoDB which allows you to easily see the JSON of each directory at `http://localhost:3000/_content/`. The endpoint is accessible on GET and POST request, so you can use query params.
 
 `http://localhost:3000/_content/articles?only=title&only=description&limit=10`
 
 <base-alert type="next">
 
-See the [content module docs](https://content.nuxtjs.org/fetching#api) for more details
+See the [content module docs](https://content.nuxtjs.org/advanced/#api-endpoint) for more details
 
 </base-alert>
 
@@ -358,7 +358,7 @@ In the case of articles, the content can be used to generate news feeds using [@
 
 <base-alert type="next">
 
-See the [content module docs](https://content.nuxtjs.org/advanced#integration-with-nuxtjsfeed) for more details
+See the [content module docs](https://content.nuxtjs.org/integrations/#nuxtjsfeed) for more details
 
 </base-alert>
 

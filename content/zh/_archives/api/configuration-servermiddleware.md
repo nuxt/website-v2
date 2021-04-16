@@ -49,7 +49,7 @@ export default {
 
 编写自定义中间件也是可能的。有关更多信息，请参阅 [Connect Docs](https://github.com/senchalabs/connect#appusefn).
 
-Middleware (`api/logger.js`):
+Middleware (`server-middleware/logger.js`):
 
 ```js
 export default function (req, res, next) {

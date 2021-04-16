@@ -1,6 +1,6 @@
 ---
 title: Data Fetching
-description: In Nuxt.js we have 2 ways of getting data from an api. We can use the fetch method or the asyncData method.
+description: In Nuxt.js we have 2 ways of getting data from an API. We can use the fetch method or the asyncData method.
 position: 4
 category: features
 csb_link: https://codesandbox.io/embed/github/nuxt-academy/guides-examples/tree/master/03_features/04_data_fetching?fontsize=14&hidenavigation=1&theme=dark
@@ -78,6 +78,12 @@ In versions of Nuxt before 2.12, the `fetch` hook worked much like `asyncData` d
 
 These hooks can be used with _any data fetching library_ you choose. We recommend using [@nuxt/http](https://http.nuxtjs.org/) or [@nuxt/axios](https://axios.nuxtjs.org/) for making requests to HTTP APIs. More information about these libraries, such as guides for configuring authentication headers, can be found in their respective documentation.
 
+<base-alert type="info">
+  
+If you define `fetch` or `asyncData` inside a mixin and also have it defined in a component/page, the mixin function will be overwritten instead of called.
+
+</base-alert>
+
 ## The fetch hook
 
 <base-alert type="info">
@@ -96,6 +102,12 @@ It exposes `$fetchState` at the component level with the following properties:
 - `pending` is a `Boolean` that allows you to display a placeholder when `fetch` is being called *on client-side*.
 - `error` is either `null` or an `Error` thrown by the fetch hook
 - `timestamp` is a timestamp of the last fetch, useful for [caching with `keep-alive`](#caching)
+
+<base-alert type="info">
+
+For [static hosting](/docs/2.x/features/deployment-targets#static-hosting), the fetch hook is only called during page generation, and the result is then cached for use on the client. To avoid cache conflicts, it may be necessary to specify a name for your component, or alternatively provide a unique [fetchKey](/docs/2.x/components-glossary/pages-fetch#options) implementation.
+
+</base-alert>
 
 In addition to fetch being called by Nuxt, you can manually call fetch in your component (to e.g. reload its async data) by calling `this.$fetch()`.
 
@@ -253,9 +265,17 @@ The navigation to the same page will not call `fetch` if last `fetch` call w
 
 Unlike `fetch`, the promise returned by the `asyncData` hook is resolved _during route transition_. This means that no "loading placeholder" is visible during client-side transitions (although the [loading bar](https://nuxtjs.org/guides/features/loading/) can be used to indicate a loading state to the user). Nuxt will instead wait for the `asyncData` hook to be finished before navigating to the next page or display the [error page](/docs/2.x/directory-structure/layouts#error-page)).
 
-This hook can only be used for page-level components. Unlike `fetch`, `asyncData` cannot access the component instance (`this`). Instead, it receives [the context](/docs/2.x/concepts/context-helpers) as its argument. You can use it to fetch some data and Nuxt.js will automatically merge the returned object with the component data.
+This hook can only be used for page-level components. Unlike `fetch`, `asyncData` cannot access the component instance (`this`). Instead, it receives [the context](/docs/2.x/concepts/context-helpers) as its argument. You can use it to fetch some data and Nuxt.js will automatically shallow merge the returned object with the component data.
 
 In the upcoming examples, we are using [@nuxt/http](https://http.nuxtjs.org/) which we recommend for fetching data from an API.
+
+### Async data in components?
+
+Because components do not have an `asyncData` method, you cannot directly fetch async data server side within a component. In order to get around this limitation you have three basic options:
+
+1. Use [the new `fetch` hook](#the-fetch-hook) that is available in Nuxt 2.12 and later versions.
+2. Make the API call in the `mounted` hook and set data properties when loaded. _Downside: Won't work for server side rendering._
+3. Make the API call in the `asyncData` method of the page component and pass the data as props to the sub components. Server rendering will work fine. _Downside: the `asyncData` of the page might be less readable because it's loading the data for other components_.
 
 ### Listening to query changes
 

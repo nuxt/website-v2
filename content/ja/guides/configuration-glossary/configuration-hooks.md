@@ -33,7 +33,7 @@ export default {
 
 ## フックのリスト
 
-- [Nuxt フック](/docs/2.x/internals-glossary/internals-renderer#フック)
+- [Nuxt フック](/docs/2.x/internals-glossary/internals-nuxt#フック)
 - [Renderer フック](/docs/2.x/internals-glossary/internals-renderer#フック)
 - [ModulesContainer フック](/docs/2.x/internals-glossary/internals-module-container#フック)
 - [Builder フック](/docs/2.x/internals-glossary/internals-builder#フック)
@@ -45,9 +45,9 @@ export default {
 
 ページを `/` のかわりに `/portal` として提供するとします。
 
-これはおそらくエッジケースであり、nuxt.config.js\_ の `router.base` のポイントは Web サーバーがドメインルート以外の場所で Nuxt を提供するときのためのものです。
+これはおそらくエッジケースであり、nuxt.config.js\_ の `router.base` のポイントは web サーバーがドメインルート以外の場所で Nuxt を提供するときのためのものです。
 
-しかしローカル開発宙に _localhost_ にアクセスすると router.base が / でない場合は 404 が返されます。フックを設定することでこれを防げます。
+しかしローカル開発中に _localhost_ にアクセスすると router.base が / でない場合は 404 が返されます。フックを設定することでこれを防げます。
 
 リダイレクトはプロダクション用の Web サイトでは最適なユースケースではないかもしれませんがフックを活用するのに役立ちます。
 

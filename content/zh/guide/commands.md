@@ -11,7 +11,7 @@ position: 113
 
 | 命令          | 描述                                                                              |
 | ------------- | --------------------------------------------------------------------------------- |
-| nuxt          | 启动一个热加载的 Web 服务器（开发模式） [localhost:3000](http://localhost:3000)。 |
+| nuxt          | 启动一个热加载的 Web 服务器（开发模式） [http://localhost:3000](http://localhost:3000)。 |
 | nuxt build    | 利用 webpack 编译应用，压缩 JS 和 CSS 资源（发布用）。                            |
 | nuxt start    | 以生产模式启动一个 Web 服务器 (需要先执行`nuxt build`)。                          |
 | nuxt generate | 编译应用，并依据路由配置生成对应的 HTML 文件 (用于静态站点的部署)。               |
@@ -127,12 +127,12 @@ SPA 应用的想法很简单！ 使用时启用 SPA 模式 `mode: 'spa'` 或 `--
 
 <div class="Alert">
 
-请参考 [如何在 Heroku 上部署?](/faq/heroku-deployment) 来查看更多部署信息。
+请参考 [如何在 Heroku 上部署?](/docs/2.x/deployment/heroku-deployment) 来查看更多部署信息。
 
 </div>
 
 <div class="Alert">
 
-请参考 [如何在 GitHub Pages 上部署?](/faq/github-pages) 查看如何部署到 GitHub 页面的更多详细信息。
+请参考 [如何在 GitHub Pages 上部署?](/docs/2.x/deployment/github-pages) 查看如何部署到 GitHub 页面的更多详细信息。
 
 </div>

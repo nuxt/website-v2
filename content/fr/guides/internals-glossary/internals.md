@@ -1,14 +1,14 @@
 ---
 title: Introduction aux modules Nuxt
 description: Mieux comprendre les modules internes de Nuxt
-menu: Introduction aux modules Nuxt
+menu: Modules Nuxt
 category: internals-glossary
 position: 3
 ---
 
 Nuxt.js a une architecture entièrement modulaire qui permet aux développeurs d'étendre n'importe quelle partie de Nuxt Core en utilisant une API flexible.
 
-Pour plus d'informations détaillées, veuillez consulter le [Guide des modules](/guides/directory-structure/modules) si vous souhaitez développer votre propre module.
+Pour plus d'informations détaillées, veuillez consulter le [Guide des modules](/docs/2.x/directory-structure/modules) si vous souhaitez développer votre propre module.
 
 Cette section aide à se familiariser avec les modules internes de Nuxt et peut être utilisée comme référence pour mieux comprendre et écrire vos propres modules.
 
@@ -18,17 +18,17 @@ Ces classes sont le cœur de Nuxt et doivent exister à la fois sur le runtime e
 
 #### Nuxt
 
-- [Classe `Nuxt`](/guides/internals-glossary/nuxt)
+- [Classe `Nuxt`](/docs/2.x/internals-glossary/internals-nuxt)
 - Source: [core/nuxt.js](https://github.com/nuxt/nuxt.js/blob/dev/packages/core/src/nuxt.js)
 
 #### Renderer
 
-- [Classe `Renderer`](/guides/internals-glossary/internals-renderer)
+- [Classe `Renderer`](/docs/2.x/internals-glossary/internals-renderer)
 - Source: [vue-renderer/renderer.js](https://github.com/nuxt/nuxt.js/blob/dev/packages/vue-renderer/src/renderer.js)
 
 #### ModuleContainer
 
-- [Classe `ModuleContainer`](/guides/internals-glossary/internals-module-container)
+- [Classe `ModuleContainer`](/docs/2.x/internals-glossary/internals-module-container)
 - Source: [core/module.js](https://github.com/nuxt/nuxt.js/blob/dev/packages/core/src/module.js)
 
 ### Build
@@ -37,12 +37,12 @@ Ces classes sont nécessaires que pour le mode build ou dev.
 
 #### Builder
 
-- [Classe `Builder`](/guides/internals-glossary/internals-builder)
+- [Classe `Builder`](/docs/2.x/internals-glossary/internals-builder)
 - Source: [builder/builder.js](https://github.com/nuxt/nuxt.js/blob/dev/packages/builder/src/builder.js)
 
 #### Generator
 
-- [Classe `Generator`](/guides/internals-glossary/internals-generator)
+- [Classe `Generator`](/docs/2.x/internals-glossary/internals-generator)
 - Source: [generator/generator.js](https://github.com/nuxt/nuxt.js/blob/dev/packages/generator/src/generator.js)
 
 ### Générale

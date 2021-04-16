@@ -16,30 +16,30 @@ module.exports = {
   header: {
     links: [
       {
-        name: 'Docs',
+        name: 'ドキュメント',
         icon: 'books',
         slug: 'docs-2.x-book-slug'
       },
       {
-        name: 'Examples',
+        name: '例',
         icon: 'code',
         slug: 'examples'
       },
       {
-        name: 'FAQ',
+        name: 'Resources',
         icon: 'resources',
-        slug: 'faq'
+        slug: 'resources'
       },
       {
-        name: 'Blog',
+        name: 'ブログ',
         icon: 'blog',
         slug: 'blog'
       },
       {
-        name: 'Video Courses',
+        name: 'ビデオコース',
         icon: 'video',
         href:
-          'https://masteringnuxt.com?friend=nuxt&utm_source=Nuxtjs.org&utm_medium=Link&utm_content=Navbar&utm_content=prelaunch'
+          'https://masteringnuxt.com/?utm_source=nuxt&utm_medium=link&utm_campaign=navbar_link'
       }
     ],
     search: {
@@ -58,9 +58,9 @@ module.exports = {
         'NuxtJS を使用し自信を持って次の Vue.js アプリケーションをビルドしましょう。ウェブ開発をシンプルかつ強力にする{openSource}フレームワークです。',
       openSource: 'オープンソース',
       get_started: 'はじめる',
-      get_updates: 'Get NuxtJS updates to your inbox each month',
+      get_updates: '毎月 NuxtJS の更新を受信します',
       video:
-        '動画は {company} による提供で、彼らの {cheatSheet}は無料でダウンロードできます。.',
+        '動画は {company} による提供で、彼らの {cheatSheet} は無料でダウンロードできます。',
       cheatSheet: 'Nuxt チートシート.'
     },
     why: {
@@ -122,229 +122,229 @@ module.exports = {
   },
   design: {
     meta: {
-      title: 'NuxtJS Design',
+      title: 'NuxtJS のデザイン',
       description:
-        'Download NuxtJS design resources (SVG, icons, emoji and favicon).'
+        'NuxtJS のデザインリソース（SVG、icons、emoji や favicon）をダウンロードする'
     },
-    title: '{nuxt} Design',
+    title: '{nuxt} のデザイン',
     description:
-      'NuxtJS is an MIT licensed open source project and completely free to use. {break} You can freely use our logos as long as you mention NuxtJS and link to nuxtjs.org.',
+      'NuxtJS は MIT ライセンスのオープンソースプロジェクトであり、完全に無料で使えます。{break} NuxtJS に言及し、nuxtjs.org にリンクしている限り、ロゴを自由に使えます。',
     other_download_message:
-      'You can also download our {favicon} or our {sketch} file.'
+      'また、{favicon} や {sketch} ファイルもダウンロードできます。'
   },
   resources: {
     meta: {
-      title: 'NuxtJS Resources',
+      title: 'NuxtJS のリソース',
       description:
-        'Discover a panel of resources made by our partners. By using thoses affiliate resources links, you are helping us to maintain and develop the Open Source Framework.'
+        'パートナーが作成したリソースパネルをご覧ください。もしそれらのアフィリエイトリソースリンクを使っていただけたら、オープンソースフレームワークの維持と開発を支援につながります。'
     },
-    title: '{nuxt} Resources',
+    title: '{nuxt} のリソース',
     description:
-      'Discover a panel of resources made by our partners. By using thoses affiliate resources links, you are helping us to maintain and develop the Open Source Framework.',
+      'パートナーが作成したリソースパネルをご覧ください。もしそれらのアフィリエイトリソースリンクを使っていただけたら、オープンソースフレームワークの維持と開発を支援につながります。',
     themes: {
-      title: 'Themes'
+      title: 'テーマ'
     },
     videos: {
-      title: 'Video Courses'
+      title: 'ビデオコース'
     }
   },
   shop: {
     meta: {
-      title: 'The NuxtJS Shop',
+      title: 'NuxtJS ショップ',
       description:
-        'You want to support the NuxtJS project and show your love to the rest of the community? Here our products with the best quality ever!'
+        'NuxtJS プロジェクトをサポートし、コミュニティの他のメンバーに愛を示したいですか？ これまでで最高品質のプロダクトをご紹介します。'
     },
-    title: 'The {nuxt} Shop',
+    title: '{nuxt} ショップ',
     description:
-      'You want to support the NuxtJS project and show your love to the rest of the community?{break} Here our products with the best quality ever!',
+      'NuxtJS プロジェクトをサポートし、コミュニティの他のメンバーに愛を示したいですか？ これまでで最高品質のプロダクトをご紹介します！',
     button: 'Coming soon'
   },
   team: {
     meta: {
-      title: 'NuxtJS Team',
+      title: 'NuxtJS チーム',
       description:
-        'NuxtJS has a very active and engaged team that is constantly striving to push Nuxt forward.'
+        'NuxtJS には非常に活発で熱心なチームがあり、Nuxt を前進させるために絶えず努力しています。'
     },
-    title: '{nuxt} Team',
+    title: '{nuxt} チーム',
     description:
-      'The development of NuxtJS and its ecosystem is guided by an international team. We have a very active and engaged team that is constantly striving to push Nuxt forward.'
+      'NuxtJS とそのエコシステムの開発は国際的なチームによって行われています。 私たちには非常に活発で熱心なチームがあり、Nuxt を前進させるために絶えず努力しています。'
   },
   themes: {
     meta: {
-      title: 'NuxtJS Themes',
+      title: 'NuxtJS テーマ',
       description:
-        'With the themes below built by our partners from Creative Tim and Theme Forest you can see how a real world application is built, with Nuxt.js stack behind.'
+        'パートナーの CreativeTim と ThemeForest によって作成された以下のテーマを使用すると、Nuxt.js スタックを背後に実際のアプリケーションがどのように作成されているかを確認できます。'
     },
-    title: '{nuxt} Themes',
+    title: '{nuxt} テーマ',
     description:
-      'With the themes below built by our partners from Creative Tim and Theme Forest you can see how a real world application is built, with Nuxt.js stack behind.',
-    button: 'GET IT for'
+      'パートナーの CreativeTim と ThemeForest によって作成された以下のテーマを使用すると、Nuxt.js スタックを背後に実際のアプリケーションがどのように作成されているかを確認できます。',
+    button: '取得する'
   },
   'video-courses': {
     meta: {
-      title: 'NuxtJS Video Courses',
+      title: 'NuxtJS のビデオコース',
       description:
-        'With the video courses below created by our partner VueSchool you can discover and learn more about the Nuxt.js Framework.'
+        'パートナーの VueSchool が作成した以下のビデオコースを使用すると、Nuxt.js フレームワークについて詳しく知ることができます。'
     },
-    title: '{nuxt} Video Courses',
+    title: '{nuxt} ビデオコース',
     description:
-      'With the video courses below created by our partner VueSchool you can discover and learn more about the Nuxt.js Framework.',
+      'パートナーの VueSchool が作成した以下のビデオコースを使用すると、Nuxt.js フレームワークについて詳しく知ることができます。',
     cta: {
-      discover: 'Discover vueschool',
-      start: 'START COURSE'
+      discover: 'vueschool で発見する',
+      start: 'コースをはじめる'
     }
   },
   sponsor: {
     meta: {
-      title: 'Sponsor NuxtJS Development',
+      title: 'NuxtJS の開発スポンサー',
       description:
-        'You can support NuxtJS development via different methods and ensure regular updates to the framework.'
+        'さまざまな方法で NuxtJS の開発をサポートし、フレームワークを定期的に更新することができます。'
     },
-    title: 'Sponsor {nuxt} Development',
+    title: '{nuxt} 開発スポンサー',
     description:
-      'NuxtJS is an MIT licensed open source project and completely free to use.{break} However, the amount of effort needed to maintain and develop new features for the project is not sustainable without proper financial backing.{break} You can support NuxtJS development via the following methods:',
+      'NuxtJS は MIT ライセンスのオープンソースプロジェクトであり完全に無料で使用できます。{break} ただし、プロジェクトの新機能の維持と開発に必要な労力は適切な財政的支援なしには持続できません。{break} NuxtJS の開発は次の方法でサポートできます:',
     donations: {
-      title: 'One-time donations',
-      description: 'We accept donations through these channels'
+      title: '一度きりの寄付',
+      description: 'これらのチャネルを通して寄付を受け付けています'
     },
     pledges: {
-      title: 'Recurring Pledges',
+      title: 'リカーリングの誓約',
       description:
-        'Recurring pledges come with exclusive perks, e.g. having your name listed in the NuxtJS GitHub repository, or have your company logo placed on this website. Become a nuxter or sponsor via {opencollective} (goes into a fund with transparent expense models supporting community efforts and events).'
+        'リカーリングの誓約には排他的な特典（NuxtJS の GitHub リポジトリにあなたの名前を掲載するか、この Web サイトに会社のロゴを掲載します）が付属しています。{opencollective}（コミュニティの取り組みやイベントをサポートする透明な経費モデルを備えたファンドに参加しています）を介して nuxter またはスポンサーになれます。'
     },
-    become_a_sponsor: 'Become a sponsor'
+    become_a_sponsor: 'スポンサーになる'
   },
   support: {
     meta: {
-      title: 'The NuxtJS Support',
+      title: 'NuxtJS サポート',
       description:
-        'Our NuxtJS team now offers official consulting services for your NuxtJS applications.'
+        'NuxtJS チームは、NuxtJS アプリケーションの公式コンサルティングサービスを提供しています。'
     },
-    title: 'Consulting {nuxt} Support',
+    title: '{nuxt} サポートのコンサルティング',
     description:
-      'Our {team} now offers official consulting services for your NuxtJS applications.{break} We offer different services depending of your needs, from technical support to custom development. Expect a reply within one business day, we can sign custom NDA and you can get a full refund if you are not satisfied with our service.',
+      '現在 {team} は NuxtJS アプリケーションの公式コンサルティングサービスを提供しています。{break} テクニカルサポートからカスタム開発までニーズに応じてさまざまなサービスを提供しています。1 営業日以内に返信しカスタム NDA に署名できます。サービスにご満足いただけない場合は全額払い戻しを受けることができます。',
     technical: {
-      title: 'Technical support',
+      title: 'テクニカルサポート',
       description:
-        'Get project audits, app deployments, custom development and technical support from the NuxtJS team.',
-      start: 'Start chat',
+        'プロジェクト監査、アプリのデプロイ、カスタム開発、テクニカルサポートを NuxtJS チームから受けられます。',
+      start: 'チャットを始める',
       partner: {
-        pre: 'We partnered with',
+        pre: '私たちはこれらのサービスを提供するために',
         post:
-          'to offer these services so we can focus on helping you as fast as possible.'
+          'と提携しましたので、できるだけ早くサポートすることに集中できます。'
       }
     },
     entreprise: {
-      title: 'for enterprise',
+      title: '企業向け',
       description:
-        'NuxtJS and the maintainers of thousands of other packages are working with Tidelift to deliver one enterprise subscription that covers all of the open source you use.{break} If you want the flexibility of open source and the confidence of commercial-grade software, this is for you.',
+        'NuxtJS と他の何千ものパッケージのメンテナーは、Tidelift と協力して使用するすべてのオープンソースをカバーする 1 つのエンタープライズサブスクリプションを提供しています。{break} オープンソースの柔軟性と商用グレードのソフトウェアの信頼性が必要な場合、Tidelift はあなたのためにあります。',
       partner: {
-        pre: 'Available as part of the',
-        post: 'subscription.'
+        pre: 'サブスクリプションの一部として',
+        post: 'を利用できます。'
       },
-      learn_more: 'Learn more',
-      request_a_demo: 'Request a demo'
+      learn_more: '詳細',
+      request_a_demo: 'デモをリクエストする'
     }
   },
   blog: {
     meta: {
-      title: 'NuxtJS Blog',
+      title: 'NuxtJS ブログ',
       description:
-        'Discover articles from the NuxtJS team and NuxtJS Community about NuxtJS, tips and tricks included!'
+        'NuxtJS チームと NuxtJS コミュニティの NuxtJS に関する記事、ヒントとコツが含まれています！'
     },
-    title: '{nuxt} Blog',
+    title: '{nuxt} ブログ',
     description:
-      'Discover articles from the {nuxtTeam} and {nuxtCommunity} about NuxtJS, tips and tricks included!',
-    nuxt_team: 'NuxtJS Team',
-    nuxt_community: 'Nuxt.js Community',
-    contribute: 'Caught a mistake or want to contribute to this blog post?'
+      'NuxtJS について {nuxtTeam} と {nuxtCommunity} のヒントとコツが含まれています！',
+    nuxt_team: 'NuxtJS チーム',
+    nuxt_community: 'Nuxt.js コミュニティ',
+    contribute: '間違いを見つけた、またはこのブログ投稿に貢献したいですか？'
   },
   guide: {
     release_notes: 'リリースノート',
-    toc_title: 'On this page'
+    toc_title: 'このページで'
   },
   quiz: {
-    title: 'Quiz'
+    title: 'クイズ'
   },
   tryNewDocs: {
-    msg1: 'Want to take a look at our new docs? Our ',
-    link: 'new docs',
-    msg2: 'are now in beta. Have fun!'
+    msg1: '新しいドキュメントを見たいですか？私たちの',
+    link: '新しいドキュメント',
+    msg2: 'は今ベータ版です。楽しんでください！'
   },
   contribute: {
-    title: 'Contributors',
+    title: 'コントリビューター',
     docs: '間違いを見つけた、またはドキュメントに貢献したいですか？',
-    blog: 'Caught a mistake or want to contribute to this blog post?',
+    blog: '間違いを見つけた、またはこのブログ投稿に貢献したいですか？',
     edit_on_github: 'GitHub でこのページを編集する',
     msg1:
-      'Contribution for this page is now closed. If you would like to contribute please check out our',
-    link: 'new docs'
+      'このページへの貢献は受け付けていません。もし貢献したい場合は新しいドキュメントをチェックアウトしてください',
+    link: '新しいドキュメント'
   },
   example: {
-    intro: 'In this example:'
+    intro: 'この例では:'
   },
   codeSandbox: {
-    open: 'Open CodeSandbox'
+    open: 'CodeSandbox を開く'
   },
   content: {
     guide: {
-      prologue: 'Prologue',
-      'getting-started': 'Getting Started'
+      prologue: 'プロローグ',
+      'getting-started': 'はじめる'
     },
     api: {
-      essential: 'Essential',
-      pages: 'Pages',
-      components: 'Components',
-      utils: 'Utils',
-      configuration: 'Configuration',
-      programmatically: 'Programmatically',
-      internals: 'Internals'
+      essential: 'エッセンシャル',
+      pages: 'ページ',
+      components: 'コンポーネント',
+      utils: 'ユーティリティ',
+      configuration: '設定',
+      programmatically: 'プログラムで使う',
+      internals: '内部'
     },
     examples: {
-      essentials: 'Essentials',
-      customization: 'Customization',
-      advanced: 'Advanced'
+      essentials: 'エッセンシャル',
+      customization: 'カスタマイズ',
+      advanced: '上級'
     },
     faq: {
-      configuration: 'Configuration',
-      development: 'Development',
-      deployment: 'Deployment'
+      configuration: '設定',
+      development: '開発',
+      deployment: 'デプロイ'
     },
     guides: {
-      'get-started': 'Get Started',
-      concepts: 'Concepts',
-      features: 'Features',
-      'directory-structure': 'Directory Structure',
-      'configuration-glossary': 'Configuration Glossary',
-      'internals-glossary': 'Internals Glossary',
-      'components-glossary': 'Components Glossary'
+      'get-started': 'はじめる',
+      concepts: 'コンセプト',
+      features: '機能',
+      'directory-structure': 'ディレクトリ構造',
+      'configuration-glossary': '設定用語集',
+      'internals-glossary': '内部の用語集',
+      'components-glossary': 'コンポーネント用語集'
     }
   },
   footer: {
     links: {
       discover: {
-        title: 'Discover',
-        shop: 'Our Goodies Store',
-        consulting: 'Training & consultancy',
-        sponsorNuxt: 'Sponsoring & donations'
+        title: '発見',
+        shop: 'グッズストア',
+        consulting: 'トレーニングとコンサルティング',
+        sponsorNuxt: 'スポンサーと寄付'
       },
       about: {
         title: 'About',
-        team: 'Our team',
-        design: 'Design kit',
-        contact: 'Contact us'
+        team: '私たちのチーム',
+        design: 'デザインキット',
+        contact: 'お問い合わせ'
       },
       support: {
-        title: 'Support',
-        resources: 'Resources',
-        discord: 'Chat with us',
-        contributionGuide: 'Contribution guide'
+        title: 'サポート',
+        resources: 'リソース',
+        discord: 'チャット',
+        contributionGuide: '貢献ガイド'
       }
     }
   },
   cookies: {
-    consent: 'We use Cookies for user analysis and on-page improvements!',
-    linkLabel: 'Learn about cookies',
-    button: 'Got it'
+    consent: 'ユーザー分析とページ上の改善の目的でクッキーを使っています！',
+    linkLabel: 'クッキーの詳細',
+    button: 'わかりました'
   }
 }

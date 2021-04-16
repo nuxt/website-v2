@@ -57,7 +57,7 @@ questions:
     correctAnswer: '@@'
 ---
 
-The `assets` directory contains your un-compiled assets such as Stylus or Sass files, images, or fonts.
+The `assets` directory contains your uncompiled assets such as Stylus or Sass files, images, or fonts.
 
 ## Images
 
@@ -112,24 +112,26 @@ In case you want to use `sass` make sure that you have installed `sass` and�
   <code-block label="Yarn" active>
 
 ```bash
-yarn add -D sass sass-loader fibers
+yarn add -D sass sass-loader@10 fibers
 ```
 
   </code-block>
-  <code-block label="NPM">
+  <code-block label="npm">
 
 ```bash
-npm install --save-dev sass sass-loader fibers
+npm install --save-dev sass sass-loader@10 fibers
 ```
 
   </code-block>
 </code-group>
 
+<base-alert type="info">Synchronous compilation with `sass` (2x speed increase) [is enabled automatically](https://github.com/webpack-contrib/sass-loader) when `fibers` is installed.</base-alert>
+
 Nuxt.js will automatically guess the file type by its extension and use the appropriate pre-processor loader for webpack. You will still need to install the required loader if you need to use them.
 
 ## Fonts
 
-You can use local fonts by adding them to your assets folder. Once they have been added you can then access them though your css using the @font-face.
+You can use local fonts by adding them to your assets folder. Once they have been added you can then access them through your css using the @font-face.
 
 ```
 -| assets
@@ -155,6 +157,8 @@ You can use local fonts by adding them to your assets folder. Once they have bee
   src: url('~assets/fonts/DMSans-Bold.ttf') format('truetype');
 }
 ```
+
+<base-alert type="info">CSS files are not automatically loaded. Add them using the [CSS config property](https://nuxtjs.org/docs/2.x/configuration-glossary/configuration-css/).</base-alert>
 
 <base-alert type="next">
 
@@ -207,33 +211,47 @@ The benefits of these loaders are:
 
 `file-loader` lets you designate where to copy and place the asset file, and how to name it using version hashes for better caching. In production, you will benefit from long-term caching by default!
 
-`url-loader` allows you to conditionally inline a file as base-64 data URL if they are smaller than a given threshold. This can reduce the number of HTTP requests for trivial files. If the file is larger than the threshold, it automatically falls back to file-loader.
+`url-loader` allows you to conditionally inline files as base64 data URLs if they are smaller than a given threshold. This can reduce the number of HTTP requests for trivial files. If a file is larger than the threshold, it automatically falls back to file-loader.
 
 For these two loaders, the default configuration is:
 
 ```js
-// https://github.com/nuxt/nuxt.js/blob/dev/packages/webpack/src/config/base.js#L297-L316
-;[
-  {
-    test: /\.(png|jpe?g|gif|svg|webp)$/,
+// https://github.com/nuxt/nuxt.js/blob/dev/packages/webpack/src/config/base.js#L382-L411
+{
+  test: /\.(png|jpe?g|gif|svg|webp|avif)$/i,
+  use: [{
     loader: 'url-loader',
-    query: {
+    options: {
+      esModule: false,
       limit: 1000, // 1kB
-      name: 'img/[name].[hash:7].[ext]'
+      name: 'img/[name].[contenthash:7].[ext]'
     }
-  },
-  {
-    test: /\.(woff2?|eot|ttf|otf)(\?.*)?$/,
+  }]
+},
+{
+  test: /\.(woff2?|eot|ttf|otf)(\?.*)?$/i,
+  use: [{
     loader: 'url-loader',
-    query: {
-      limit: 1000, // 1kB
-      name: 'fonts/[name].[hash:7].[ext]'
+    options: {
+       esModule: false,
+       limit: 1000, // 1kB
+       name: 'fonts/[name].[contenthash:7].[ext]'
     }
-  }
-]
+  }]
+},
+{
+  test: /\.(webm|mp4|ogv)$/i,
+  use: [{
+    loader: 'file-loader',
+    options: {
+      esModule: false,
+      name: 'videos/[name].[contenthash:7].[ext]'
+    }
+  }]
+}
 ```
 
-Which means that every file below 1 KB will be inlined as base-64 data URL. Otherwise, the image/font will be copied in its corresponding folder (inside the `.nuxt` directory) with a name containing a version hash for better caching.
+Which means that every file below 1 kB will be inlined as base64 data URL. Otherwise, the image/font will be copied in its corresponding folder (inside the `.nuxt` directory) with a name containing a version hash for better caching.
 
 When launching your application with `nuxt`, your template in `pages/index.vue`:
 
@@ -272,7 +290,7 @@ You can use the alias of `~~` or `@@` for the root directory.
 
 <base-alert type="info">
 
-Tip: On Spanish keyboard you can access `~` with (`Option` + `ñ`) on Mac OS
+Tip: On Spanish keyboard you can access `~` with (`Option` + `ñ`) on Mac OS, or (`Alt gr` + `4`) on Windows
 
 </base-alert>
 

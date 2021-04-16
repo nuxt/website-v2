@@ -4,8 +4,8 @@ description: Nuxt.js fornece um sistema de módulo de alta ordem que torna poss�
 position: 9
 category: directory-structure
 csb_link: https://codesandbox.io/embed/github/nuxt-academy/guides-examples/tree/master/04_directory_structure/10_modules?fontsize=14&hidenavigation=1&theme=dark
-img: /docs/2.x/plugins.jpg
-imgAlt: modules-servermiddleware-plugins-in-nuxt-js
+img: /docs/2.x/modules.svg
+imgAlt: modules-in-nuxt-js
 questions:
   - question: Quando os módulos são chamados?
     answers:
@@ -417,7 +417,7 @@ yarn add -D @nuxtjs/eslint-module
 ```
 
   </code-block>
-  <code-block label="NPM">
+  <code-block label="npm">
 
 ```bash
 npm install --save-dev @nuxtjs/eslint-module

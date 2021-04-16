@@ -79,7 +79,7 @@ Le répertoire `plugins` contient les plugins JavaScript que l'on souhaite exéc
 
 On pourrait avoir envie d'utiliser des packages/modules externes dans notre application (ex: [axios](https://axios.nuxtjs.org/)) pour faire des requêtes HTTP côté client et serveur.
 
-Premièrement, l'installer via NPM ou Yarn.
+Premièrement, l'installer via npm ou Yarn.
 
 <code-group>
   <code-block label="Yarn" active>
@@ -89,7 +89,7 @@ yarn add @nuxtjs/axios
 ```
 
   </code-block>
-  <code-block label="NPM">
+  <code-block label="npm">
 
 ```bash
 npm install @nuxtjs/axios
@@ -154,7 +154,7 @@ yarn add v-tooltip
 ```
 
   </code-block>
-  <code-block label="NPM">
+  <code-block label="npm">
 
 ```bash
 npm install v-tooltip
@@ -198,7 +198,7 @@ module.exports = {
 }
 ```
 
-Pour davantage d'informations sur les options, veuillez vous référer à la [configuration du build](/guides/configuration-glossary/configuration-build#transpile).
+Pour davantage d'informations sur les options, veuillez vous référer à la [configuration du build](/docs/2.x/configuration-glossary/configuration-build#transpile).
 
 ## Côté client ou serveur seulement
 
@@ -303,7 +303,7 @@ Il faut bien faire attention à ne pas utiliser `Vue.use()`, `Vue.component()` o
 
 ## La propriété extendPlugins
 
-On pourrait avoir envie de personnaliser les plugins ou changer l'ordre des plugins créé par Nuxt.js. Cette fonction accepte un tableau d'objets [plugins](/guides/configuration-glossary/configuration-plugins) et retourne la même chose, réarrangé.
+On pourrait avoir envie de personnaliser les plugins ou changer l'ordre des plugins créé par Nuxt.js. Cette fonction accepte un tableau d'objets [plugins](/docs/2.x/configuration-glossary/configuration-plugins) et retourne la même chose, réarrangé.
 
 Un exemple de changement de l'ordre des plugins:
 

@@ -225,7 +225,7 @@ You may want to extract all your CSS to a single file. There is a workaround for
 
 <base-alert>
 
-It is not recommended extracting everything into a single file. Extracting into multiple css files is better for caching and preload isolation. It can also improve page performance by downloading and resolving only those resources that are needed.
+It is not recommended to extract everything into a single file. Extracting into multiple CSS files is better for caching and preload isolation. It can also improve page performance by downloading and resolving only those resources that are needed.
 
 </base-alert>
 
@@ -258,12 +258,12 @@ export default {
 
   ```js
   {
-    app: ({ isDev }) => isDev ? '[name].js' : '[contenthash].js',
-    chunk: ({ isDev }) => isDev ? '[name].js' : '[contenthash].js',
-    css: ({ isDev }) => isDev ? '[name].css' : '[contenthash].css',
-    img: ({ isDev }) => isDev ? '[path][name].[ext]' : 'img/[contenthash:7].[ext]',
-    font: ({ isDev }) => isDev ? '[path][name].[ext]' : 'fonts/[contenthash:7].[ext]',
-    video: ({ isDev }) => isDev ? '[path][name].[ext]' : 'videos/[contenthash:7].[ext]'
+    app: ({ isDev, isModern }) => isDev ? `[name]${isModern ? '.modern' : ''}.js` : `[contenthash:7]${isModern ? '.modern' : ''}.js`,
+    chunk: ({ isDev, isModern }) => isDev ? `[name]${isModern ? '.modern' : ''}.js` : `[contenthash:7]${isModern ? '.modern' : ''}.js`,
+    css: ({ isDev }) => isDev ? '[name].css' : 'css/[contenthash:7].css',
+    img: ({ isDev }) => isDev ? '[path][name].[ext]' : 'img/[name].[contenthash:7].[ext]',
+    font: ({ isDev }) => isDev ? '[path][name].[ext]' : 'fonts/[name].[contenthash:7].[ext]',
+    video: ({ isDev }) => isDev ? '[path][name].[ext]' : 'videos/[name].[contenthash:7].[ext]'
   }
   ```
 
@@ -545,11 +545,11 @@ export default {
 }
 ```
 
-### postcss plugins & nuxt-tailwindcss
+### postcss plugins & @nuxtjs/tailwindcss
 
-If you want to apply postcss plugin (eg. postcss-pxtorem) on the nuxt-tailwindcss configuration, you have to change order and load first tailwindcss.
+If you want to apply a postcss plugin (e.g. postcss-pxtorem) on the @nuxtjs/tailwindcss configuration, you have to change order and load tailwindcss first.
 
-**This setup have no impact on the nuxt-purgecss.**
+**This setup has no impact on nuxt-purgecss.**
 
 ```js{}[nuxt.config.js]
 import { join } from 'path'
@@ -593,6 +593,8 @@ export default {
 
 Then, when launching `nuxt build`, upload the content of `.nuxt/dist/client` directory to your CDN and voilà!
 
+In Nuxt 2.15+, changing the value of this property at runtime will override the configuration of an app that has already been built.
+
 ## quiet
 
 > Suppresses most of the build output log
@@ -628,6 +630,19 @@ If split codes for `layout`, `pages` and `commons` (common libs: vue|vue-loader|
 
 This option is automatically set based on `mode` value if not provided.
 
+## standalone
+
+> Inline server bundle dependencies (advanced)
+
+- Type: `Boolean`
+- Default: `false`
+
+This mode bundles `node_modules` that are normally preserved as externals in the server build ([more information](https://github.com/nuxt/nuxt.js/pull/4661)).
+
+<base-alert type="warning">\*_Warning_: Runtime dependencies (modules, `nuxt.config`, server middleware and static directory) are not bundled. This feature only disables use of [webpack-externals](https://webpack.js.org/configuration/externals/) for server-bundle.</base-alert>
+
+<base-alert type="info">**Info:** you can use the command `yarn nuxt build --standalone` to enable this mode on the command line. (If you are not using `yarn` you can run the command with `npx`.)</base-alert>
+
 ## styleResources
 
 - Type: `Object`
@@ -641,7 +656,7 @@ This option is automatically set based on `mode` value if not provided.
 
 This is useful when you need to inject some variables and mixins in your pages without having to import them every time.
 
-Nuxt.js uses https://github.com/yenshih/style-resources-loader to achieve this behaviour.
+Nuxt.js uses https://github.com/yenshih/style-resources-loader to achieve this behavior.
 
 You need to specify the patterns/path you want to include for the given pre-processors: `less`, `sass`, `scss` or `stylus`
 
@@ -712,7 +727,7 @@ Templates are rendered using [`lodash.template`](https://lodash.com/docs/#templa
 
 Terser plugin options. Set to `false` to disable this plugin.
 
-`sourceMap` will be enabled when webpack `config.devtool` matches `source-?map`
+Enabling `sourceMap` will leave `//# sourceMappingURL` linking comment at the end of each output file if webpack `config.devtool` is set to `source-map`.
 
 See [webpack-contrib/terser-webpack-plugin](https://github.com/webpack-contrib/terser-webpack-plugin).
 

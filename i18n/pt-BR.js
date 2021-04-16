@@ -27,9 +27,9 @@ module.exports = {
         slug: 'examples'
       },
       {
-        name: 'FAQ',
+        name: 'Recursos',
         icon: 'resources',
-        slug: 'faq'
+        slug: 'resources'
       },
       {
         name: 'Blog',
@@ -40,7 +40,7 @@ module.exports = {
         name: 'Video Courses',
         icon: 'video',
         href:
-          'https://masteringnuxt.com?friend=nuxt&utm_source=Nuxtjs.org&utm_medium=Link&utm_content=Navbar&utm_content=prelaunch'
+          'https://masteringnuxt.com/?utm_source=nuxt&utm_medium=link&utm_campaign=navbar_link'
       }
     ],
     search: {
@@ -323,22 +323,22 @@ module.exports = {
   footer: {
     links: {
       discover: {
-        title: 'Discover',
-        shop: 'Our Goodies Store',
-        consulting: 'Training & consultancy',
-        sponsorNuxt: 'Sponsoring & donations'
+        title: 'Explorar',
+        shop: 'Loja de Mercadorias',
+        consulting: 'Treinamento e Consultoria',
+        sponsorNuxt: 'Patrocínio e Contribuição'
       },
       about: {
         title: 'About',
-        team: 'Our team',
-        design: 'Design kit',
-        contact: 'Contact us'
+        team: 'Nosso time',
+        design: 'Pacote de Designer',
+        contact: 'Contate-nos'
       },
       support: {
-        title: 'Support',
-        resources: 'Resources',
-        discord: 'Chat with us',
-        contributionGuide: 'Contribution guide'
+        title: 'Suporte',
+        resources: 'Recursos',
+        discord: 'Fale conosco',
+        contributionGuide: 'Como contribuir'
       }
     }
   },

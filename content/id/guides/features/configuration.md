@@ -144,15 +144,15 @@ Untuk menggunakan _pre-processors_ ini, kita perlu memasang beberapa pemuat Webp
 
 ```bash
 yarn add -D pug pug-plain-loader
-yarn add -D sass sass-loader fibers
+yarn add -D sass sass-loader@10 fibers
 ```
 
   </code-block>
-  <code-block label="NPM">
+  <code-block label="npm">
 
 ```bash
 npm install --save-dev pug pug-plain-loader
-npm install --save-dev sass sass-loader fibers
+npm install --save-dev sass sass-loader@10 fibers
 ```
 
   </code-block>

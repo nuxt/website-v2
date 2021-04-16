@@ -62,6 +62,7 @@
               class="inline-block"
               href="https://url.netlify.com/B1Mh093Iv"
               target="_blank"
+              rel="noopener"
             >
               <img
                 src="https://www.netlify.com/img/global/badges/netlify-color-bg.svg"
@@ -123,7 +124,7 @@ export default {
           {
             key: this.$t('footer.links.support.contributionGuide'),
             href:
-              'https://github.com/nuxt/nuxtjs.org/blob/master/content/en/_archives/guide/contribution-guide.md'
+              'https://github.com/nuxt/nuxtjs.org/blob/main/content/en/_archives/guide/contribution-guide.md'
           }
         ],
         support: [

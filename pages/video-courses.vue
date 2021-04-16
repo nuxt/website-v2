@@ -9,7 +9,7 @@
             class="text-3xl xl:text-4xl text-light-onSurfacePrimary dark:text-dark-onSurfacePrimary font-medium leading-normal mb-6 lg:pt-4"
           >
             {{ $t('video-courses.title') }}
-            <template v-slot:nuxt>
+            <template #nuxt>
               <AppTitle />
             </template>
           </i18n>
@@ -19,7 +19,7 @@
             {{ $t('video-courses.description') }}
           </h3>
           <AppButton
-            href="https://vueschool.io/?friend=nuxt&utm_source=Nuxtjs.org&utm_medium=Link&utm_content=HomeHero&utm_content=V1"
+            href="https://masteringnuxt.com/?utm_source=nuxt&utm_medium=link&utm_campaign=navbar_link"
             rel="noopener sponsored"
             target="_blank"
             class="sm:mr-4 py-3 px-6 text-base mb-4"
@@ -33,16 +33,26 @@
         />
       </div>
       <section class="flex flex-wrap items-stretch -mx-4">
-        <div v-for="course in courses" :key="course.title" class="w-full p-4">
-          <div
-            class="block sm:flex w-full h-full items-center pr-6 bg-light-surface hover:bg-gray-200 dark:bg-dark-surface rounded transition-colors duration-300 ease-linear"
+        <div
+          v-for="course in courses"
+          :key="course.title"
+          class="w-full p-4 relative"
+        >
+          <span
+            class="bg-orange-500 text-white dark:text-black text-ss px-1 rounded-sm lowercase absolute m-2 right-0 mr-6"
           >
-            <div class="w-full p-6">
+            {{ course.type }}
+          </span>
+          <div
+            class="flex flex-col md:flex-row block w-full h-full items-center pr-6 bg-light-surface hover:bg-gray-200 dark:bg-dark-surface rounded transition-colors duration-300 ease-linear"
+          >
+            <div class="w-full p-6 order-2 md:order-1">
               <h4
-                class="block w-full font-medium text-xl pb-2 text-light-onSurfacePrimary dark:text-dark-onSurfacePrimary transition-colors duration-300 ease-linear"
+                class="inline w-full font-medium text-xl pb-2 text-light-onSurfacePrimary dark:text-dark-onSurfacePrimary transition-colors duration-300 ease-linear"
               >
                 {{ course.title }}
               </h4>
+              <span class="inline"> on {{ course.platform }}</span>
               <p class="mb-3 text-gray-600">
                 {{ course.description }}
               </p>
@@ -50,7 +60,7 @@
                 :href="course.link"
                 rel="noopener sponsored"
                 target="_blank"
-                class="sm:mr-4 p-3 mt-3 text-sm text-left"
+                class="md:mr-4 p-3 mt-3 text-sm text-left block"
               >
                 <PlayCircleIcon slot="icon" class="h-4 -mb-1 mr-1" />
                 {{ $t('video-courses.cta.start') }}
@@ -60,7 +70,7 @@
               :src="'/courses/' + course.img + '.png'"
               :srcset="'/courses/' + course.img + '-2x.png 2x'"
               :alt="course.title"
-              class="block w-auto rounded"
+              class="block w-auto rounded pt-6 px-6 md:py-8 md:px-0 order-1 md:order-2 self-start"
             />
           </div>
         </div>
@@ -80,35 +90,58 @@ export default {
     PlayCircleIcon,
     MeteorIcon
   },
-  data() {
+  async asyncData({ $content, app }) {
+    let courses = []
+
+    try {
+      courses = await $content(app.i18n.defaultLocale, 'video-courses')
+        .only([
+          'slug',
+          'title',
+          'position',
+          'menu',
+          'category',
+          'type',
+          'img',
+          'description',
+          'platform',
+          'link'
+        ])
+        .sortBy('position')
+        .fetch()
+
+      if (app.i18n.locale !== app.i18n.defaultLocale) {
+        const newCourses = await $content(app.i18n.locale, 'video-courses')
+          .only([
+            'slug',
+            'title',
+            'position',
+            'menu',
+            'category',
+            'type',
+            'img',
+            'description',
+            'platform',
+            'link'
+          ])
+          .sortBy('position')
+          .fetch()
+        courses = courses.map(course => {
+          const newCourse = newCourses.find(
+            newCourse => newCourse.slug === course.slug
+          )
+
+          return newCourse || course
+        })
+      }
+    } catch (e) {}
+
     return {
-      courses: [
-        {
-          title: 'Nuxt.js Fundamentals',
-          description:
-            'Learn the fundamentals of Nuxt.js in this course that we created together with the founders of Nuxt. The course covers what you need to know from scaffolding to deploying your first Nuxt.js application.',
-          link:
-            'https://vueschool.io/courses/nuxtjs-fundamentals?friend=nuxt&utm_source=Nuxtjs.org&utm_medium=Link&utm_content=Courses&utm_campaign=nuxtjs-fundamentals',
-          img: 'nuxt-fundamentals'
-        },
-        {
-          title: 'Async Data with Nuxt.js',
-          description:
-            'Learn how to manage asynchronous data and render your application server-side with Nuxt.js.',
-          link:
-            'https://vueschool.io/courses/async-data-with-nuxtjs?friend=nuxt&utm_source=Nuxtjs.org&utm_medium=Link&utm_content=Courses&utm_campaign=async-data',
-          img: 'async-data-with-nuxtjs'
-        },
-        {
-          title: 'Static Site Generation with Nuxt.js',
-          description:
-            'Learn how to generate static websites (pre-rendering) with Nuxt.js to improve both performance and SEO while eliminating hosting costs.',
-          link:
-            'https://vueschool.io/courses/static-site-generation-with-nuxtjs?friend=nuxt&utm_source=Nuxtjs.org&utm_medium=Link&utm_content=Courses&utm_campaign=static-site-generation',
-          img: 'static-site-generation-with-nuxtjs'
-        }
-      ]
+      courses
     }
+  },
+  data() {
+    return {}
   },
   head() {
     const title = this.$t('video-courses.meta.title')

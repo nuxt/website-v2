@@ -33,7 +33,7 @@ Internally, hooks follow a naming pattern using colons (e.g., `build:done`). For
 
 ## List of hooks
 
-- [Nuxt hooks](/docs/2.x/internals-glossary/internals-renderer#hooks)
+- [Nuxt hooks](/docs/2.x/internals-glossary/internals-nuxt#hooks)
 - [Renderer hooks](/docs/2.x/internals-glossary/internals-renderer#hooks)
 - [ModulesContainer hooks](/docs/2.x/internals-glossary/internals-module-container#hooks)
 - [Builder hooks](/docs/2.x/internals-glossary/internals-builder#hooks)
@@ -45,7 +45,7 @@ Internally, hooks follow a naming pattern using colons (e.g., `build:done`). For
 
 Let´s say you want to serve pages as `/portal` instead of `/`.
 
-This is maybe an edge-case, and the point of _nuxt.config.js_’ `router.base` is for when a Web server will serve Nuxt elsewhere than the domain root.
+This is maybe an edge-case, and the point of _nuxt.config.js_’ `router.base` is for when a web server will serve Nuxt elsewhere than the domain root.
 
 But when in local development, hitting _localhost_, when router.base is not / returns a 404. In order to prevent this, you can setup a Hook.
 

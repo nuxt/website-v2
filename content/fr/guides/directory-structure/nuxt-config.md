@@ -52,7 +52,7 @@ export default {
 
 <base-alert type="next">
 
-Se référer à la propriété [build](/guides/configuration-glossary/configuration-build).
+Se référer à la propriété [build](/docs/2.x/configuration-glossary/configuration-build).
 
 </base-alert>
 
@@ -78,7 +78,7 @@ En omettant l'extension, cela nous permet de ne pas avoir à renommer le fichier
 
 <base-alert type="next">
 
-Se référer à la propriété [css](/guides/configuration-glossary/configuration-css).
+Se référer à la propriété [css](/docs/2.x/configuration-glossary/configuration-css).
 
 </base-alert>
 
@@ -94,7 +94,7 @@ export default {
 
 <base-alert type="next">
 
-Se référer à la propriété [dev](/guides/configuration-glossary/configuration-dev).
+Se référer à la propriété [dev](/docs/2.x/configuration-glossary/configuration-dev).
 
 </base-alert>
 
@@ -112,7 +112,7 @@ export default {
 
 <base-alert type="next">
 
-Se référer à la propriété [env](/guides/configuration-glossary/configuration-env).
+Se référer à la propriété [env](/docs/2.x/configuration-glossary/configuration-env).
 
 </base-alert>
 
@@ -131,7 +131,7 @@ export default {
 
 <base-alert type="next">
 
-Se référer à la propriété [generate](/guides/configuration-glossary/configuration-generate).
+Se référer à la propriété [generate](/docs/2.x/configuration-glossary/configuration-generate).
 
 </base-alert>
 
@@ -153,7 +153,7 @@ Cette option permet de définir toutes les balises méta par défaut pour l'appl
 
 <base-alert type="next">
 
-Se référer à la propriété [head](/guides/configuration-glossary/configuration-head).
+Se référer à la propriété [head](/docs/2.x/configuration-glossary/configuration-head).
 
 </base-alert>
 
@@ -171,7 +171,7 @@ export default {
 
 <base-alert type="next">
 
-Se référer à l'intégration du [chargement](/guides/configuration-glossary/configuration-loading).
+Se référer à l'intégration du [chargement](/docs/2.x/configuration-glossary/configuration-loading).
 
 </base-alert>
 
@@ -187,7 +187,7 @@ export default {
 
 <base-alert type="next">
 
-Se référer à la propriété [modules](/guides/configuration-glossary/configuration-modules).
+Se référer à la propriété [modules](/docs/2.x/configuration-glossary/configuration-modules).
 
 </base-alert>
 
@@ -205,7 +205,7 @@ Adapter cet emplacement peut être nécessaire si le projet est organisé en tan
 
 <base-alert type="next">
 
-Se référer à la propriété [modulesDir](/guides/configuration-glossary/configuration-modulesdir).
+Se référer à la propriété [modulesDir](/docs/2.x/configuration-glossary/configuration-modulesdir).
 
 </base-alert>
 
@@ -221,7 +221,7 @@ export default {
 
 <base-alert type="next">
 
-Se référer à la propriété [plugins](/guides/configuration-glossary/configuration-plugins).
+Se référer à la propriété [plugins](/docs/2.x/configuration-glossary/configuration-plugins).
 
 </base-alert>
 
@@ -239,7 +239,7 @@ export default {
 
 <base-alert type="next">
 
-Se référer à la propriété [router](/guides/configuration-glossary/configuration-router).
+Se référer à la propriété [router](/docs/2.x/configuration-glossary/configuration-router).
 
 </base-alert>
 
@@ -263,7 +263,7 @@ export default {
 
 <base-alert type="next">
 
-Se référer à la propriété [server](/guides/configuration-glossary/configuration-server).
+Se référer à la propriété [server](/docs/2.x/configuration-glossary/configuration-server).
 
 </base-alert>
 
@@ -307,7 +307,7 @@ export default {
 
 <base-alert type="next">
 
-Se référer à la propriété [dir](/guides/configuration-glossary/configuration-dir).
+Se référer à la propriété [dir](/docs/2.x/configuration-glossary/configuration-dir).
 
 </base-alert>
 
@@ -323,7 +323,7 @@ export default {
 
 <base-alert type="next">
 
-Se référer à la propriété [transition](/guides/configuration-glossary/configuration-transition).
+Se référer à la propriété [transition](/docs/2.x/configuration-glossary/configuration-transition).
 
 </base-alert>
 
@@ -347,6 +347,6 @@ node_modules .nuxt dist
 
 <base-alert type="next">
 
-Se référer au [glossaire de configuration](/guides/configuration-glossary/configuration-build).
+Se référer au [glossaire de configuration](/docs/2.x/configuration-glossary/configuration-build).
 
 </base-alert>

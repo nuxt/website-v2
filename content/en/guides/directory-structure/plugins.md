@@ -73,13 +73,13 @@ questions:
 
 <app-modal :src="img" :alt="imgAlt"></app-modal>
 
-The `plugins` directory contains your Javascript plugins that you want to run before instantiating the root Vue.js Application. This is the place to add Vue plugins and to inject functions or constants. Every time you need to use `Vue.use()`, you should create a file in `plugins/` and add its path to `plugins` in `nuxt.config.js`.
+The `plugins` directory contains JavaScript plugins that you want to run before instantiating the root Vue.js Application. This is the place to add Vue plugins and to inject functions or constants. Every time you need to use `Vue.use()`, you should create a file in `plugins/` and add its path to `plugins` in `nuxt.config.js`.
 
 ## External Packages
 
 You may want to use external packages/modules in your application (one great example is [axios](https://axios.nuxtjs.org/)) for making HTTP requests for both server and client.
 
-First, install it via NPM or Yarn.
+First, install it via npm or Yarn.
 
 <code-group>
   <code-block label="Yarn" active>
@@ -89,7 +89,7 @@ yarn add @nuxtjs/axios
 ```
 
   </code-block>
-  <code-block label="NPM">
+  <code-block label="npm">
 
 ```bash
 npm install @nuxtjs/axios
@@ -178,7 +178,7 @@ yarn add v-tooltip
 ```
 
   </code-block>
-  <code-block label="NPM">
+  <code-block label="npm">
 
 ```bash
 npm install v-tooltip
@@ -187,7 +187,7 @@ npm install v-tooltip
   </code-block>
 </code-group>
 
-The we create the file `plugins/vue-tooltip.js`
+Then we create the file `plugins/vue-tooltip.js`
 
 ```js{}[plugins/vue-tooltip.js]
 import Vue from 'vue'
@@ -198,7 +198,7 @@ Vue.use(VTooltip)
 
 ### The plugins Property
 
-Then we add the file path inside the `plugins` key of our `nuxt.config.js`. The plugins property lets you add vue.js plugins easily to your main application. All the paths defined in the `plugins` property will be imported before initializing the main application.
+Then we add the file path inside the `plugins` key of our `nuxt.config.js`. The plugins property lets you add Vue.js plugins easily to your main application. All the paths defined in the `plugins` property will be imported before initializing the main application.
 
 ```js{}[nuxt.config.js]
 export default {
@@ -340,6 +340,10 @@ export default {
 Global mixins can be easily added with Nuxt plugins but can cause trouble and memory leaks when not handled correctly. Whenever you add a global mixin to your application, you should use a flag to avoid registering it multiple times:
 
 ```js{}[plugins/my-mixin-plugin.js]
+import Vue from "vue"
+
+// Make sure to pick a unique name for the flag
+// so it won't conflict with any other mixin.
 if (!Vue.__my_mixin__) {
   Vue.__my_mixin__ = true
   Vue.mixin({ ... }) // Set up your mixin then

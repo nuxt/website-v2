@@ -3,13 +3,14 @@ title: La méthode validate
 description: Nuxt.js vous permet de définir une méthode de validation à l'intérieur de votre composant de routes dynamiques.
 menu: La méthode validate
 category: components-glossary
+position: 9
 ---
 
 > Nuxt.js vous permet de définir une méthode de validation à l'intérieur de votre composant de routes dynamiques.
 
 - **Type:** `Function` ou `Async Function`
 
-`validate` est appelé avant chaque navigation sur une nouvelle route. Il sera appelé une fois côté serveur: lors de la première requête à l'application Nuxt et côté client: lors de la navigation sur d'autres routes . Cette méthode prend l'objet [`context`](/guides/internals-glossary/context) en tant qu'argument.
+`validate` est appelé avant chaque navigation sur une nouvelle route. Il sera appelé une fois côté serveur: lors de la première requête à l'application Nuxt et côté client: lors de la navigation sur d'autres routes . Cette méthode prend l'objet [`context`](/docs/2.x/internals-glossary/context) en tant qu'argument.
 
 ```js
 validate({ params, query, store }) {
@@ -47,7 +48,7 @@ export default {
 }
 ```
 
-On peut aussi vérifier de la data dans notre [store](/guides/directory-structure/store) (remplie par exemple par [`nuxtServerInit`](/guides/directory-structure/store#the-nuxtserverinit-action) avant l'action):
+On peut aussi vérifier de la data dans notre [store](/docs/2.x/directory-structure/store) (remplie par exemple par [`nuxtServerInit`](/docs/2.x/directory-structure/store#the-nuxtserverinit-action) avant l'action):
 
 ```js
 export default {

@@ -15,7 +15,7 @@ questions:
     answers:
       - true
       - false
-    correctAnswer:
+    correctAnswer: false
   - question: Where should you put your images if you want webpack to bundle them?
     answers:
       - static
@@ -59,8 +59,16 @@ In your code, you can then reference these files relative to the root (`/`):
 <img src="/my-image.png" />
 
 <!-- webpacked image from assets directory -->
-<img src="'~/assets/my-image-2.png" />
+<img src="~/assets/my-image-2.png" />
 ```
+
+<base-alert type="info">Nuxt doesn't change this path, so if you customize your `router.base` then you'll need to make sure to add that manually to your paths. For example:
+
+```html
+<img :src="`${yourPrefix}/my-image.png`" />
+```
+
+</base-alert>
 
 ## Static Directory Config
 

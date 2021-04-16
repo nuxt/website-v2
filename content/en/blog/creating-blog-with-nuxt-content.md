@@ -23,7 +23,7 @@ The [content module](https://content.nuxtjs.org) is a git files based headless C
 
 <p align="center">
   <a href="https://blog-with-nuxt-content.netlify.app/" target="_blank" rel="noopener nofollow">View demo</a> /
-  <a href="https://github.com/nuxt-company/demo-blog-nuxt-content" target="_blank" rel="noopener nofollow">Source code</a>
+  <a href="https://github.com/nuxt-academy/demo-blog-nuxt-content" target="_blank" rel="noopener nofollow">Source code</a>
 </p>
 
 - [Getting started](#getting-started)
@@ -63,7 +63,7 @@ yarn add @nuxt/content
 ```
 
 </code-block>
-<code-block label="NPM">
+<code-block label="npm">
 
 ```bash
 npm install @nuxt/content
@@ -449,7 +449,7 @@ Here we create a div the author image, a title of Author and a dynamic name and 
 
 <base-alert>
 
-Styles have been removed from these examples, feel free to add the styles yourself or copy the styles from the [demo code](https://github.com/nuxt-company/demo-blog-nuxt-content).
+Styles have been removed from these examples, feel free to add the styles yourself or copy the styles from the [demo code](https://github.com/nuxt-academy/demo-blog-nuxt-content).
 
 </base-alert>
 
@@ -501,7 +501,7 @@ We can now move this component out of the global folder and into the components 
 
 ### Adding a code block to your post
 
-With the content module we can style our code blocks with the automatic inclusion of [prismJS](https://prismjs.com/). That means we can write our code block using the correct markdown syntax and our code block will display with styling depending on the language.
+With the content module we can style our code blocks with the automatic inclusion of [Prism](https://prismjs.com/). That means we can write our code block using the correct markdown syntax and our code block will display with styling depending on the language.
 
 ```js
 export default {
@@ -521,7 +521,7 @@ export default {
 }
 ```
 
-The filename will be converted to a span with a filename class which we can then style how we like. For this example I am using tailwind classes but you can use ordinary CSS if you prefer.
+The file name will be converted to a span with a filename class which we can then style how we like. For this example I am using tailwind classes but you can use ordinary CSS if you prefer.
 
 ```css{}[assets/css/tailwind.css]
 .nuxt-content-highlight {
@@ -554,7 +554,7 @@ content: {
 
 ### Creating a previous and next component
 
-We now have a pretty complete blog post but wouldn't it be great if users could easily go from one post to another. First let's duplicate our post so we have 3 posts. Then, let's create a new component for our prev and next posts.
+We now have a pretty complete blog post but wouldn't it be great if users could easily go from one post to another. First let's duplicate our post so we have 3 posts. Then, let's create a new component for our previous and next posts.
 
 ```bash
 touch components/PrevNext.vue
@@ -604,7 +604,7 @@ In our component we pass the props `prev` and `next` to makes them available to 
 </script>
 ```
 
-We can now get our prev and next articles by adding them to our `asyncData`. We create an array of const with the name `prev` and `next` and we await the content from the articles folder. This time we only need the title and the slug so we can chain `only()` to our await and pass in title and slug.
+We can now get our previous and next articles by adding them to our `asyncData`. We create an array of const with the name `prev` and `next` and we await the content from the articles folder. This time we only need the title and the slug so we can chain `only()` to our await and pass in title and slug.
 
 We can use the `sortBy()` method to sort our data by the createdAt date in ascending order. We then use the `surround()` method and pass in the slug from params so that it can get the correct slug for the previous and next posts.
 
@@ -685,7 +685,7 @@ We can now create our blog index page to list out our blog posts. As we already 
 
 <base-alert type="info">
 
-In the [demo code](https://github.com/nuxt-company/demo-blog-nuxt-content) I used the main index page instead of creating an index file inside the blog folder because for this example I have no other pages but normally you might have a home page, contact page and then the blog page etc.
+In the [demo code](https://github.com/nuxt-academy/demo-blog-nuxt-content) I used the main index page instead of creating an index file inside the blog folder because for this example I have no other pages but normally you might have a home page, contact page and then the blog page etc.
 
 </base-alert>
 
@@ -695,7 +695,7 @@ Passing in `$content` and `params` to the context in our `asyncData` function we
 <script>
   export default {
     async asyncData({ $content, params }) {
-      const articles = await $content('articles', params.slug)
+      const articles = await $content('articles')
         .only(['title', 'description', 'img', 'slug', 'author'])
         .sortBy('createdAt', 'asc')
         .fetch()
@@ -756,7 +756,7 @@ export default {
 
 As we can see we get all our data back only for the author Maria. If we were to use maria without a capital letter we wouldn't get anything back. We can therefore use `$regex` so that it remains with a capital letter.
 
-We then fetch all the details we want to show on this page. In the last example we used the `only()` method to return what we wanted but as we require quite a lot of content we can instead use the `without()` method and pass in what we don't wan't to return which is the body of the post.
+We then fetch all the details we want to show on this page. In the last example we used the `only()` method to return what we wanted but as we require quite a lot of content we can instead use the `without()` method and pass in what we don't want to return which is the body of the post.
 
 ```html{}[pages/blog/author/_author.vue]
 <script>
@@ -816,7 +816,7 @@ We can then use our data to print out a nice author page showing the author name
 
 <base-alert type="info">
 
-Please note all styles have been removed from this example. You can either style the page yourself or copy the styles from the [demo code](https://github.com/nuxt-company/demo-blog-nuxt-content).
+Please note all styles have been removed from this example. You can either style the page yourself or copy the styles from the [demo code](https://github.com/nuxt-academy/demo-blog-nuxt-content).
 
 </base-alert>
 
@@ -911,13 +911,13 @@ We can now use our `<AppSearchInput>` component by adding it anywhere on our pag
 
 <base-alert type="info">
 
-See the [demo code](https://github.com/nuxt-company/demo-blog-nuxt-content) for improved styling of this page as well as the header component that was added which includes the search component and is therefore displayed on the author and index page.
+See the [demo code](https://github.com/nuxt-academy/demo-blog-nuxt-content) for improved styling of this page as well as the header component that was added which includes the search component and is therefore displayed on the author and index page.
 
 </base-alert>
 
 ## Live editing our content
 
-Our blog is looking really great and if we need to modify any of the content on the page we can do so directly in the browser thanks to the live edit feature. All you have to do is double click on your page while in dev mode and and the live edit will open. Here you can modify any of your text and also the front matter. You can even add a component that is in the global components folder and just by clicking away you will see your changes live in the browser and you will see in your editor and console that the file has been modified and saved.
+Our blog is looking really great and if we need to modify any of the content on the page we can do so directly in the browser thanks to the live edit feature. All you have to do is double click on your page while in dev mode and the live edit will open. Here you can modify any of your text and also the front matter. You can even add a component that is in the global components folder and just by clicking away you will see your changes live in the browser and you will see in your editor and console that the file has been modified and saved.
 
 <video poster="https://res.cloudinary.com/nuxt/video/upload/v1588091670/live-edit-content_kdorvi.jpg" loop="loop" plays-inline="true" controls="controls">
   <source src="https://res.cloudinary.com/nuxt/video/upload/v1588091670/live-edit-content_kdorvi.webm" type="video/webm">

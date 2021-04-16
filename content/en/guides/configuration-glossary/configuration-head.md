@@ -31,6 +31,6 @@ You can also use `head` as a function in your components to access the component
 
 <base-alert type="info">
 
-<b>Info:</b> To avoid duplicated meta tags when used in child component, set up a unique identifier with the `hid` key for your meta elements ([read more](https://vue-meta.nuxtjs.org/api/#tagidkeyname)).
+To avoid duplicated meta tags when used in child component, set up a unique identifier with the `hid` key for your meta elements ([read more](https://vue-meta.nuxtjs.org/api/#tagidkeyname)).
 
 </base-alert>

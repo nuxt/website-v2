@@ -40,7 +40,7 @@ Kemudian, Anda bisa menjalankan perintah Anda melalui `npm run <command>` (conto
 
 <div class="Alert Alert--nuxt-green">
 
-<b>Pro tip:</b> untuk menyampaikan argumen kepada perintah NPM, Anda perlu nama script ekstra berupa <code>--</code> (contoh: <code>npm run dev -- --spa</code>).
+<b>Pro tip:</b> untuk menyampaikan argumen kepada perintah npm, Anda perlu nama script ekstra berupa <code>--</code> (contoh: <code>npm run dev -- --spa</code>).
 
 </div>
 

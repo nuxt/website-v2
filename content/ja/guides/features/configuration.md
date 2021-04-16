@@ -6,59 +6,53 @@ category: features
 csb_link_host_port: https://codesandbox.io/embed/github/nuxt-academy/guides-examples/tree/master/03_features/07_configuration_host_port?fontsize=14&hidenavigation=1&theme=dark
 csb_link_pre-processors: https://codesandbox.io/embed/github/nuxt-academy/guides-examples/tree/master/03_features/07_configuration_pre-processors?fontsize=14&hidenavigation=1&theme=dark
 questions:
-  - question: You can use the axios-module in the nuxt.config.js?
+  - question: nuxt.config.js の axios モジュールを使えますか？
     answers:
-      - true
-      - false
-    correctAnswer: false
-  - question: What is the default Nuxt.js development server host?
+      - 使えます
+      - 使えません
+    correctAnswer: 使えません
+  - question: Nuxt.js 開発のサーバーホストのデフォルトは？
     answers:
       - localhost
       - 3000
       - '0'
     correctAnswer: localhost
-  - question: Which attribute do you use in your style tag to use SCSS?
+  - question: SCSS を使うためにスタイルタグでどの属性を使いますか？
     answers:
       - lang="scss"
       - language="scss"
       - style="scss"
     correctAnswer: lang="scss"
-  - question: What is the default Nuxt.js development server port?
+  - question: Nuxt.js 開発サーバーポート番号のデフォルト値は？
     answers:
       - 8000
       - 3000
       - localhost
     correctAnswer: 3000
-  - question: In the nuxt.config.js what property do you use to add global CSS files?
+  - question: nuxt.config.js でグローバルな CSS ファイルを追加するためにどのプロパティを使いますか？
     answers:
       - styles
       - css
       - globalCss
     correctAnswer: css
-  - question: You can use JSX in your Nuxt.js application?
+  - question: Nuxt.js アプリケーションで JSX を使えますか？
     answers:
-      - True
-      - False
-    correctAnswer: True
-  - question: In the nuxt.config.js what property do you use to add global CSS files?
-    answers:
-      - styles
-      - css
-      - global-css
-    correctAnswer: css
-  - question: In the nuxt.config.js what property do you use to extend the webpack config?
+      - 使えます
+      - 使えません
+    correctAnswer: 使えます
+  - question: nuxt.config.js で webpack の設定を拡張するためにどのプロパティを使いますか？
     answers:
       - webpack.extend
       - build.extend
       - extend.build
     correctAnswer: build.extend
-  - question: What is the file called for ignoring files in your Nuxt.js app?
+  - question: Nuxt.js アプリケーションのファイルを無視するために呼び出されるファイルは？
     answers:
       - .ignore
       - .nuxtignore
       - .ignorenuxt
     correctAnswer: .nuxtignore
-  - question: If you want to ignore the about file of your Nuxt.js app what prefix would you use?
+  - question: Nuxt.js アプリケーションの about ファイルを無視したい場合に使われるプレフィックスは？
     answers:
       - _about.vue
       - -about.vue
@@ -111,15 +105,11 @@ export default {
 
 <base-alert>
 
-`main.css` と `main.css` のような同じ名前の 2 つのファイルが存在し、`css: ['~/assets/css/main']` のように css 配列中で拡張子を明示しなかった場合、`styleExtensions` の順番に応じて 1 つのファイルだけが読み込まれます。このケースの場合、`css` がデフォルトの `styleExtension` の配列の中で最初に登場するため、`css` ファイルだけが読み込まれ `scss` ファイルは無視されます。
+`main.scss` と `main.css` のような同じ名前の 2 つのファイルが存在し、`css: ['~/assets/css/main']` のように css 配列中で拡張子を明示しなかった場合、`styleExtensions` の順番に応じて 1 つのファイルだけが読み込まれます。このケースの場合、`css` がデフォルトの `styleExtension` の配列の中で最初に登場するため、`css` ファイルだけが読み込まれ `scss` ファイルは無視されます。
 
 </base-alert>
 
 デフォルトの順番: `['css', 'pcss', 'postcss', 'styl', 'stylus', 'scss', 'sass', 'less']`
-
-<app-modal>
-  <code-sandbox  :src="csb_link_pre-processors"></code-sandbox>
-</app-modal>
 
 ## プリプロセッサ
 
@@ -144,19 +134,112 @@ export default {
 
 ```bash
 yarn add -D pug pug-plain-loader
-yarn add -D node-sass sass-loader
+yarn add -D sass sass-loader@10 fibers
 ```
 
   </code-block>
-  <code-block label="NPM">
+  <code-block label="npm">
 
 ```bash
 npm install --save-dev pug pug-plain-loader
-npm install --save-dev node-sass sass-loader
+npm install --save-dev sass sass-loader@10 fibers
 ```
 
-</code-block>`
+  </code-block>
 </code-group>
+
+<base-alert type="info">`fibers` がインストールされている場合、`sass` の同期コンパイル（2 倍速）が[自動的に有効になります](https://github.com/webpack-contrib/sass-loader)。</base-alert>
+
+## 外部のリソース
+
+### グローバルの設定
+
+ヘッドオブジェクトまたは関数に外部リソースを含めることができます。[head API のドキュメント](https://nuxtjs.org/api/pages-head/)で説明したように、次の例ではオブジェクトや関数として `head` の使い方を示します。もし計算されたプロパティやデータなど、Vue コンポーネントの値を使いたい場合は、 `head()` 関数を使って最終的な head オブジェクトを返すことができます。オプションの `body: true` を各リソースに渡して、閉じる `</body>` タグの前にリソースを含めることもできます。
+
+`nuxt.config.js`（ここでは head オブジェクト）にリソースを含めます:
+
+```js
+export default {
+  head: {
+    script: [
+      {
+        src: 'https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js'
+      }
+    ],
+    link: [
+      {
+        rel: 'stylesheet',
+        href: 'https://fonts.googleapis.com/css?family=Roboto&display=swap'
+      }
+    ]
+  }
+}
+```
+
+### ローカルの設定
+
+`pages/` ディレクトリ（ここでは head 関数）内の `.vue` ファイルにリソースを含めます:
+
+```html
+<template>
+  <h1>About page with jQuery and Roboto font</h1>
+</template>
+
+<script>
+  export default {
+    head() {
+      return {
+        script: [
+          {
+            src:
+              'https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js'
+          }
+        ],
+        link: [
+          {
+            rel: 'stylesheet',
+            href: 'https://fonts.googleapis.com/css?family=Roboto&display=swap'
+          }
+        ]
+      }
+    }
+  }
+</script>
+
+<style scoped>
+  h1 {
+    font-family: Roboto, sans-serif;
+  }
+</style>
+```
+
+## PostCSS プラグイン
+
+もし存在する場合、プロジェクトディレクトリにある `postcss.config.js` の名前を変更するか削除します。そして `nuxt.config.js` ファイルに以下を追加します:
+
+```js
+export default {
+  build: {
+    postcss: {
+      // プラグイン名をキーとして、引数を値として追加します
+      // npm または yarn を使って依存関係としてこれらを事前にインストールします
+      plugins: {
+        // false を値として渡しプラグインを無効にします
+        'postcss-url': false,
+        'postcss-nested': {},
+        'postcss-responsive-type': {},
+        'postcss-hexrgba': {}
+      },
+      preset: {
+        // postcss-preset-env の設定を変更します
+        autoprefixer: {
+          grid: true
+        }
+      }
+    }
+  }
+}
+```
 
 ## JSX
 
@@ -177,7 +260,7 @@ export default {
 </script>
 ```
 
-`createElement` を `h` にエイリアスすることは、Vue のエコシステムで見られる共通の慣例です。しかしその慣例は JSX では任意です。なぜなら ES2015 の構文で宣言された（関数またはアロー関数ではない）JSX で書かれた任意のメソッドやゲッターには `const h = this.$createElement` が[自動的にインジェクト](https://github.com/vuejs/babel-plugin-transform-vue-jsx#h-auto-injection) されるためです。よって(h)パラメータは削除することができます。
+`createElement` を `h` にエイリアスすることは、Vue のエコシステムで見られる共通の慣例です。しかしその慣例は JSX では任意です。なぜなら ES2015 の構文で宣言された（関数またはアロー関数ではない）JSX で書かれた任意のメソッドやゲッターには `const h = this.$createElement` が[自動的にインジェクト](https://github.com/vuejs/babel-plugin-transform-vue-jsx#h-auto-injection) されるためです。よって `(h)` パラメータは削除することができます。
 
 JSX の使い方をより深く理解するには Vue.js ドキュメントの [JSX のセクション](https://vuejs.org/v2/guide/render-function.html#JSX)を参照してください。
 
@@ -267,7 +350,7 @@ export default {
 }
 ```
 
-`extend` メソッドは二回呼び出されます - 一回目はクライアントのバンドルため、もう一回はサーバーのバンドルのためです。
+`extend` メソッドは 2 回呼び出されます - 1 回目はクライアントのバンドルため、もう 1 回はサーバーのバンドルのためです。
 
 ### チャンク設定をカスタマイズする
 
@@ -285,22 +368,79 @@ export default {
 }
 ```
 
-### 開発環境のすべての webpack ビルドで ESLint を実行する
+### webpack 設定の検査
 
-コードスタイルエラーに気づくために、開発環境のすべてのビルドで [ESLint](https://github.com/webpack-contrib/eslint-loader) を実行することができます。
+複雑なプロジェクトやデバッグの場合、最終的な webpack 構成がどのようになるかを確認すると便利な場合があります。幸い、プロジェクトから `nuxt webpack` コマンドを実行して設定を出力できます。詳細については、[#7029](https://github.com/nuxt/nuxt.js/pull/7029) の PR を確認してください。
 
-```js{}[nuxt.config.js]
+### webpack プラグインの追加
+
+`nuxt.config.js` ファイルの `build` オプションを使うと、[`webpack.config.js` ファイル](https://webpack.js.org/configuration/plugins/)と同じ方法で webpack `plugins` を渡すことができます。
+
+この例では JavaScript モジュール（_lodash_ と _jQuery_）を `import` や `require` するかわりに自動的にロードする webpack ビルトインの [ProvidePlugin](https://webpack.js.org/plugins/provide-plugin/)を追加します。
+
+```js
+import webpack from 'webpack'
+
 export default {
   build: {
-    extend(config, { isDev, isClient }) {
-      if (isDev && isClient) {
-        config.module.rules.push({
-          enforce: 'pre',
-          test: /\.(js|vue)$/,
-          loader: 'eslint-loader',
-          exclude: /(node_modules)/
-        })
+    plugins: [
+      new webpack.ProvidePlugin({
+        // グローバルモジュール
+        $: 'jquery',
+        _: 'lodash'
+      })
+    ]
+  }
+}
+```
+
+> 注意: Vue ベースのアプリケーションでは jQuery は必要ないかもしれません。
+
+Nuxt を使うと、プラグインの実行コンテキストを制御することもできます。もしプラグインが [`build.extend`](/docs/2.x/configuration-glossary/configuration-build#extend) 内の `client` または `server` ビルド（または `dev` ビルドと `prod` ビルドを区別する）で実行されることを意図している場合 、webpack プラグインを手動で渡すこともできます。
+
+### Webpack を拡張してオーディオファイルをロードする
+
+オーディオファイルは `file-loader` で処理する必要があります。このローダーはすでにデフォルトの Webpack 設定に含まれていますが、オーディオファイルを処理するように設定されていません。`nuxt.config.js` でデフォルトの設定を拡張する必要があります:
+
+```js
+export default {
+  build: {
+    extend(config, ctx) {
+      config.module.rules.push({
+        test: /\.(ogg|mp3|wav|mpe?g)$/i,
+        loader: 'file-loader',
+        options: {
+          name: '[path][name].[ext]'
+        }
+      })
+    }
+  }
+}
+```
+
+これでオーディオファイルを `<audio :src="require('@/assets/water.mp3')" controls></audio>` のようにインポートできます。
+
+`<audio src="@/assets/water.mp3" controls></audio>` だけ書きたい場合、`src` 属性でこれらを参照する際に `vue-loader` に自動的にオーディオファイルを要求するように支持する必要があります:
+
+```js
+export default {
+  build: {
+    loaders: {
+      vue: {
+        transformAssetUrls: {
+          audio: 'src'
+        }
       }
+    },
+
+    extend(config, ctx) {
+      config.module.rules.push({
+        test: /\.(ogg|mp3|wav|mpe?g)$/i,
+        loader: 'file-loader',
+        options: {
+          name: '[path][name].[ext]'
+        }
+      })
     }
   }
 }
@@ -349,10 +489,6 @@ HOST=0 PORT=8000 npm run dev
   "dev:host": "nuxt --hostname '0' --port 8000"
 }
 ```
-
-<app-modal>
-  <code-sandbox  :src="csb_link_host_port"></code-sandbox>
-</app-modal>
 
 ## 非同期な設定
 

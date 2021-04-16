@@ -4,8 +4,8 @@ description: Nuxt.js provides a higher-order module system that makes it possibl
 position: 9
 category: directory-structure
 csb_link: https://codesandbox.io/embed/github/nuxt-academy/guides-examples/tree/master/04_directory_structure/10_modules?fontsize=14&hidenavigation=1&theme=dark
-img: /docs/2.x/plugins.jpg
-imgAlt: modules-servermiddleware-plugins-in-nuxt-js
+img: /docs/2.x/modules.svg
+imgAlt: modules-in-nuxt-js
 questions:
   - question: When are modules called?
     answers:
@@ -70,8 +70,8 @@ questions:
 
 Discover our [list of modules](https://modules.nuxtjs.org) to supercharge your Nuxt project, created by the Nuxt team and community.
 
-- 145+ Modules
-- 89+ Maintainers
+- 165+ Modules
+- 105+ Maintainers
 
 <base-alert type="next">
 
@@ -157,7 +157,7 @@ module.exports.meta = require('./package.json')
 
 ## 1) ModuleOptions
 
-`moduleOptions`: This is the object passed using the `modules` array by the user. We can use it to customize it's behavior.
+`moduleOptions`: This is the object passed using the `modules` array by the user. We can use it to customize its behavior.
 
 ### Top level options
 
@@ -257,7 +257,7 @@ nuxt.hook('close', async nuxt => {
 - **Listen**: Nuxt internal server starts listening. (Using nuxt start or nuxt dev)
 
 ```js
-nuxt.hook('listen', async (server, {host, port})) => {
+nuxt.hook('listen', async (server, { host, port }) => {
   // Your custom code here
 })
 ```
@@ -430,7 +430,7 @@ yarn add -D @nuxtjs/eslint-module
 ```
 
   </code-block>
-  <code-block label="NPM">
+  <code-block label="npm">
 
 ```bash
 npm install --save-dev @nuxtjs/eslint-module

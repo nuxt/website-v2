@@ -37,9 +37,9 @@ questions:
     correctAnswer: dans le répertoire layouts
 ---
 
-La section des vues décrit tout ce que nous avons besoin de savoir pour configurer la data et les vues pour une route spécifique dans notre application Nuxt.js. Les vues se composent d'un template, d'un layout et de la page actuelle. En plus de cela, nous pouvons définir des méta tags personnalisés pour la section `head` de chaque page. Ces derniers sont imporant pour le SEO (référencement naturel).
+La section des vues décrit tout ce que nous avons besoin de savoir pour configurer la data et les vues pour une route spécifique dans notre application Nuxt.js. Les vues se composent d'un template, d'un layout et de la page actuelle. En plus de cela, nous pouvons définir des méta tags personnalisés pour la section `head` de chaque page. Ces derniers sont important pour le SEO (référencement naturel).
 
-![Composition d'une vue dans Nuxt.js](/guides/views.png)
+![Composition of a View in Nuxt.js](/docs/2.x/views.png)
 
 Composition d'une vue dans Nuxt.js
 
@@ -74,7 +74,7 @@ Il y a beaucoup de propriétés possibles sur un composant Page comme le `head` 
 
 <base-alert type="next">
 
-Se référer à [la documentation sur la structure des répertoires](/guides/directory-structure/nuxt) pour en apprendre davantage sur les propriétés que nous pouvons utiliser sur notre page.
+Se référer à [la documentation sur la structure des répertoires](/docs/2.x/directory-structure/nuxt) pour en apprendre davantage sur les propriétés que nous pouvons utiliser sur notre page.
 
 </base-alert>
 
@@ -94,7 +94,7 @@ Nous pouvons définir un layout par défaut en ajoutant un fichier `default.vue`
 
 <base-alert type="next">
 
-Se référer au [composant Nuxt](/guides/features/nuxt-components) dans le chapitre des composants.
+Se référer au [composant Nuxt](/docs/2.x/features/nuxt-components) dans le chapitre des composants.
 
 </base-alert>
 

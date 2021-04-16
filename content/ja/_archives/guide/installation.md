@@ -22,7 +22,7 @@ position: 101
 
 素早くスタートできるようにするため、Nuxt.js チームは足場ツール [create-nuxt-app](https://github.com/nuxt/create-nuxt-app) を作成しました。
 
-[npx](https://www.npmjs.com/package/npx) がインストールされていることを確認してください。（`npx` は NPM `5.2.0` からデフォルトでバンドルされています）
+[npx](https://www.npmjs.com/package/npx) がインストールされていることを確認してください。（`npx` は npm `5.2.0` からデフォルトでバンドルされています）
 
 ```bash
 $ npx create-nuxt-app <project-name>
@@ -91,7 +91,7 @@ $ npm install --save nuxt
 
 ### `pages` ディレクトリ
 
-Nuxt.js は `pages` ディレクトリ内の `*.vue` ファイルについて、各ファイルがアプリケーションのひとつのルートに対応するものとして変換します。
+Nuxt.js は `pages` ディレクトリ内の `*.vue` ファイルについて、各ファイルがアプリケーションの 1 つのルートに対応するものとして変換します。
 
 `pages` ディレクトリを作ります:
 

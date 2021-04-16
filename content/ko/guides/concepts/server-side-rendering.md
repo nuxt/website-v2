@@ -57,7 +57,7 @@ Vue.js 애플리케이션을 실행하려면 Node.js 서버를 구성해야 합�
 
 serverMiddleware로 서버를 확장하고 middleware로 라우트를 제어할 수 있습니다.
 
-```js{}[middleware/api/logger.js]
+```js{}[server-middleware/logger.js]
 export default function (req, res, next) {
   console.log(req.url)
   next()
@@ -67,7 +67,7 @@ export default function (req, res, next) {
 ```js{}[nuxt.config.js]
 export default: {
   serverMiddleware: [
-     '~/api/logger'
+     '~/server-middleware/logger'
   ]
 }
 ```

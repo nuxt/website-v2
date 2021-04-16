@@ -1,14 +1,14 @@
 <template>
   <div
     v-click-outside="clickOutsideHandler"
-    class="header_mobile_aside shadow-nuxt block lg:hidden fixed left-0 z-20 w-full sm:w-1/2"
+    class="fixed left-0 z-20 block w-full header_mobile_aside shadow-nuxt lg:hidden sm:w-1/2"
     :class="{ 'header_mobile_aside--open': show }"
   >
     <div
-      class="mx-auto h-full light:bg-light-surface dark:bg-dark-surface transition-colors duration-300 ease-linear"
+      class="h-full mx-auto transition-colors duration-300 ease-linear light:bg-light-surface dark:bg-dark-surface"
     >
-      <div class="content-wrapper h-full relative">
-        <div class="overflow-y-auto h-full pt-4">
+      <div class="relative h-full content-wrapper">
+        <div class="h-full pt-4 overflow-y-auto">
           <transition-group
             v-for="(sublinks, group) in sortedLinks"
             :key="group"
@@ -16,13 +16,13 @@
             name="list"
             class="header_mobile_aside_group"
           >
-            <h3 :key="`title-${group}`" class="uppercase text-gray-500 pb-2">
+            <h3 :key="`title-${group}`" class="pb-2 text-gray-500 uppercase">
               {{ $t(`content.${section}.${group}`) }}
             </h3>
             <ul :key="`list-${group}`" class="pb-6">
               <li v-for="(link, index) in sublinks" :key="index" class="py-2">
                 <NuxtLink
-                  class="block dark:text-dark-onSurfacePrimary hover:text-nuxt-lightgreen transition-colors duration-300 ease-linear"
+                  class="block transition-colors duration-300 ease-linear dark:text-dark-onSurfacePrimary hover:text-nuxt-lightgreen"
                   active-class
                   exact
                   exact-active-class="text-nuxt-lightgreen"
@@ -36,26 +36,26 @@
           </transition-group>
         </div>
         <button
-          class="inner-button sm:hidden absolute h-10 w-10 flex items-center justify-center text-nuxt-gray bg-gray-200 dark:bg-dark-elevatedSurface dark:text-dark-onSurfaceSecondary transition-colors duration-300 ease-linear"
+          class="absolute flex items-center justify-center w-10 h-10 transition-colors duration-300 ease-linear bg-gray-200 inner-button sm:hidden text-nuxt-gray dark:bg-dark-elevatedSurface dark:text-dark-onSurfaceSecondary"
           @click="show = false"
         >
           <TimesIcon
-            class="block h-5 fill-current transition-colors duration-300 ease-linear"
+            class="block h-5 transition-colors duration-300 ease-linear fill-current"
           />
         </button>
       </div>
 
       <button
-        class="bookmark-button absolute h-10 w-10 flex items-center justify-center text-nuxt-gray bg-gray-200 dark:bg-dark-surface dark:text-dark-onSurfaceSecondary transition-colors duration-300 ease-linear"
+        class="absolute flex items-center justify-center w-10 h-10 transition-colors duration-300 ease-linear bg-gray-200 bookmark-button text-nuxt-gray dark:bg-dark-surface dark:text-dark-onSurfaceSecondary"
         @click="show = !show"
       >
         <ListIcon
           v-if="!show"
-          class="block text-nuxt-gray dark:text-dark-onSurfaceSecondary stroke-current transition-colors duration-300 ease-linear"
+          class="block transition-colors duration-300 ease-linear stroke-current text-nuxt-gray dark:text-dark-onSurfaceSecondary"
         />
         <TimesIcon
           v-else
-          class="block h-5 fill-current transition-colors duration-300 ease-linear"
+          class="block h-5 transition-colors duration-300 ease-linear fill-current"
         />
       </button>
     </div>
@@ -76,7 +76,7 @@ export default {
   props: {
     links: {
       type: Object,
-      default: () => []
+      default: () => {}
     },
     section: {
       type: String,

@@ -139,10 +139,6 @@ blog レイアウトを作成するには、`blog.vue` ファイルを layouts �
 
 </base-alert>
 
-<app-modal>
-  <code-sandbox  :src="csb_link"></code-sandbox>
-</app-modal>
-
 ### エラーページ
 
 エラーページは、エラーが発生したときに常に表示される _ページコンポーネント_ です（サーバーサイドレンダリングでは発生しません）。
@@ -192,7 +188,7 @@ Nuxt.js で使用されるデフォルトのテンプレートは次のとおり
 </html>
 ```
 
-カスタムアプリテンプレートを使うユースケースの一つとして、IE 用の条件付き CSS クラスを追加します:
+カスタムアプリテンプレートを使うユースケースの 1 つとして、IE 用の条件付き CSS クラスを追加します:
 
 ```html{}[app.html]
 <!DOCTYPE html>
@@ -209,7 +205,7 @@ Nuxt.js で使用されるデフォルトのテンプレートは次のとおり
 
 <base-alert type="info">
 
-JavaScript や CSS ファイルを `app.html` に追加することもできますが、代わりに `nuxt.config.js` を使用することをお勧めします!
+JavaScript や CSS ファイルを `app.html` に追加することもできますが、代わりに `nuxt.config.js` を使用することをお勧めします！
 
 </base-alert>
 

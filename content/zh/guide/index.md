@@ -125,6 +125,6 @@ Nuxt.js 的官网就是一个绝佳的例子, 它静态化后托管在 [Netlify]
 
 <div class="Alert">
 
-查看 [如何在 Netlify 上部署？](/faq/netlify-deployment) 来获取更多相关信息。
+查看 [如何在 Netlify 上部署？](/docs/2.x/deployment/netlify-deployment) 来获取更多相关信息。
 
 </div>

@@ -1,11 +1,16 @@
 import Crawler from 'crawler'
 import consola from 'consola'
 
+const core = require('@actions/core')
+
 const logger = consola.withTag('crawler')
 
 const excludedExtensions = process.env.EXCLUDE
   ? process.env.EXCLUDE.split(',')
   : ['svg', 'png', 'jpg', 'sketch', 'ico', 'gif']
+const urlsToOmit = process.env.OMIT
+  ? process.env.OMIT.split(',')
+  : ['http://localhost:3000']
 const crawlExternal = !!process.env.CRAWL_EXTERNAL || false
 
 let baseURL = process.env.BASE_URL || 'https://nuxtjs.org'
@@ -29,6 +34,8 @@ let crawler
  * @param {string | undefined} referrer
  */
 function queue(path, referrer) {
+  if (urlsToOmit.some(url => path.startsWith(url))) return
+
   const { pathname, origin } = new URL(path, referrer)
 
   const url = `${origin}${pathname}`
@@ -65,8 +72,12 @@ crawler = new Crawler({
     const { statusCode } = res.request.response
 
     if (error || ![200, 301, 302].includes(statusCode)) {
-      logger.error('Error crawling', uri, `(status ${statusCode})`)
-      if (referrers[uri]) logger.info(`${uri} referred by`, referrers[uri])
+      const message = `Error crawling ${uri} (status ${statusCode})`
+      core.setFailed(message)
+      logger.error(message)
+      if (referrers[uri]) {
+        logger.info(`${uri} referred by`, referrers[uri])
+      }
       erroredUrls.push(uri)
       return done()
     }
@@ -86,10 +97,11 @@ crawler = new Crawler({
       logger.log('')
       logger.info(`Checked \`${urls.size}\` pages.`)
       // Tasks to run at the end.
-      if (erroredUrls.length)
-        throw new Error(
-          `\n\nErrors found when crawling ${erroredUrls.join(', ')}.`
-        )
+      if (erroredUrls.length) {
+        const message = `Errors found when crawling ${erroredUrls.join(', ')}.`
+
+        throw new Error(`\n\n${message}`)
+      }
     }
     done()
   }

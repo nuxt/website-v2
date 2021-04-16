@@ -33,7 +33,7 @@ Internamente, se usan dos puntos (:) para nombrar los _hooks_ (p.e., `build:done
 
 ## Lista de _hooks_
 
-- [_Hooks_ de Nuxt](/docs/2.x/internals-glossary/internals-renderer#hooks)
+- [_Hooks_ de Nuxt](/docs/2.x/internals-glossary/internals-nuxt#hooks)
 - [_Hooks_ de Renderer](/docs/2.x/internals-glossary/internals-renderer#hooks)
 - [\_Hooks_s de ModulesContainer](/docs/2.x/internals-glossary/internals-module-container#hooks)
 - [\_Hooks_s de Builder](/docs/2.x/internals-glossary/internals-builder#hooks)

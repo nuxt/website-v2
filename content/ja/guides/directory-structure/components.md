@@ -1,6 +1,6 @@
 ---
 title: components
-description: The components directory contains your Vue.js Components. Components are what makes up the different parts of your page and can be reused and imported into your pages, layouts and even other components.
+description: components ディレクトリには、Vue.js コンポーネントが含まれています。コンポーネントは、ページのさまざまな部分を構成するものであり、再利用して、ページ、レイアウト、さらには他のコンポーネントにインポートすることができます。
 position: 3
 category: directory-structure
 csb_link: https://codesandbox.io/embed/github/nuxt-academy/guides-examples/tree/master/04_directory_structure/03_components?fontsize=14&hidenavigation=1&theme=dark
@@ -33,13 +33,13 @@ questions:
     correctAnswer:
 ---
 
-The components directory contains your Vue.js components. Components are what makes up the different parts of your page and can be reused and imported into your pages, layouts and even other components.
+components ディレクトリには、Vue.js コンポーネントが含まれています。コンポーネントは、ページのさまざまな部分を構成するものであり、再利用して、ページ、レイアウト、さらには他のコンポーネントにインポートすることができます。
 
-### Fetching Data
+### データの取得
 
-To access asynchronous data from an API in your components you can use Nuxt [`fetch()` hook](/docs/2.x/features/data-fetching#the-fetch-method).
+コンポーネントの API から非同期データにアクセスするには、[`fetch()`フック](/docs/2.x/features/data-fetching#the-fetch-method)を使用できます。
 
-By checking `$fetchState.pending`, we can show a message when data is waiting to be loaded. We can also check `$fetchState.error` and show an error message if there is an error fetching the data. When using `fetch()`, we must declare the appropriate properties in `data()`. The data that comes from the fetch can then be assigned to these properties.
+`$fetchState.pending` をチェックすることで、データがロードされるのを待っている時にメッセージを表示することができます。`$fetchState.error` を確認し、データの取得中にエラーが発生した場合はエラーメッセージを表示することもできます。`fetch()` を使用する場合、`data()` で適切なプロパティを宣言する必要があります。フェッチから取得したデータは、これらのプロパティに割り当てることができます。
 
 ```html{}[components/MountainsList.vue]
 <template>
@@ -71,15 +71,15 @@ By checking `$fetchState.pending`, we can show a message when data is waiting to
 
 <base-alert type="next">
 
-See the chapter on [fetch()](/docs/2.x/features/data-fetching#the-fetch-method) for more details on how fetch works.
+フェッチの動作の詳細については、[fetch()](/docs/2.x/features/data-fetching#the-fetch-method) の章を参照してください
 
 </base-alert>
 
-## Components Discovery
+## コンポーネントの発見
 
 <app-modal :src="img" :alt="imgAlt"></app-modal>
 
-Starting from `v2.13`, Nuxt can auto import your components when used in your templates. To activate this feature, set `components: true` in your configuration:
+`v2.13` 以降、Nuxt はテンプレートで使用される時にコンポーネントを自動でインポートできます。この機能をアクティブにするには、構成を `components: true` と設定します:
 
 ```js{}[nuxt.config.js]
 export default {
@@ -87,7 +87,7 @@ export default {
 }
 ```
 
-Once you create your components in the components directory they will then be available to be auto imported.
+components ディレクトリにコンポーネントを作成すると、それらを自動インポートできるようになります。
 
 ```bash
 components/
@@ -105,9 +105,9 @@ components/
 </template>
 ```
 
-### Dynamic Imports
+### 動的インポート
 
-To dynamically import a component, also known as lazy loading a component, all you need to do is add the `Lazy` prefix in your templates.
+コンポーネントを動的にインポートするには、コンポーネントの遅延読み込みともいわれる、`Lazy` プレフィックスをテンプレートに追加するだけです。
 
 ```html{}[layouts/default.vue]
 <template>
@@ -119,7 +119,7 @@ To dynamically import a component, also known as lazy loading a component, all y
 </template>
 ```
 
-Using the lazy prefix you can also dynamically import a component when an event is triggered.
+lazy プレフィックスを使用すると、イベントが発火された時にコンポーネントを動的にインポートすることもできます。
 
 ```html{}[pages/index.vue]
 <template>
@@ -145,10 +145,9 @@ Using the lazy prefix you can also dynamically import a component when an event 
   }
 </script>
 ```
+### ネストされたディレクトリ
 
-### Nested Directories
-
-If you have components in nested directories such as:
+次のようにネストされたディレクトリにコンポーネントがある場合:
 
 ```bash
 components/
@@ -157,13 +156,13 @@ components/
          Button.vue
 ```
 
-The component name will be based on its own path directory and filename. Therefore, the component will be:
+コンポーネント名は独自のパスディレクトリとファイル名に基づいています。したがってコンポーネントは次のようになります:
 
 ```html
 <BaseFooButton />
 ```
 
-However, if you want to use custom directory strcture that should not be part of component name, can explicitly specify these directories: 
+ただしコンポーネント名の一部にあってはならないカスタムディレクトリ構造を使用する場合、次のディレクトリを明示的に指定できます:
 
 ```bash
 components/
@@ -181,9 +180,9 @@ components: {
 }
 ```
 
-And now in your template you can use `FooButton` instead of `BaseFooButton`.
+またテンプレートで `BaseFooButton` の代わりに `FooButton` を使用できます。
 
 ```html{}[pages/index.vue]
 <FooButton />
 ```
-<base-alert type="next">Learn more about the [components module](/blog/improve-your-developer-experience-with-nuxt-components).</base-alert>
+<base-alert type="next">詳しくは[components module](/blog/improve-your-developer-experience-with-nuxt-components)をご覧ください。</base-alert>

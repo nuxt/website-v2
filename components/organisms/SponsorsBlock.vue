@@ -1,15 +1,15 @@
 <template>
   <div>
     <p
-      class="lg:text-sm text-light-onSurfacePrimary dark:text-dark-onSurfacePrimary text-center"
+      class="text-center lg:text-sm text-light-onSurfacePrimary dark:text-dark-onSurfacePrimary"
     >
-      Platinum Sponsors
+      Partners Sponsors
     </p>
     <a
       v-for="sponsor in sponsors"
       :key="sponsor.name"
       :href="sponsor.link"
-      class="block lg:inline-block my-4 w-48 lg:w-full"
+      class="block w-48 my-4 lg:inline-block lg:w-full"
       rel="noopener sponsored"
       target="_blank"
     >
@@ -33,14 +33,10 @@ export default {
     return {
       sponsors: [
         {
-          name: 'Storyblok',
-          link: 'https://www.storyblok.com/?ref=nuxt',
-          img: 'storyblok-logo.svg'
-        },
-        {
-          name: 'Moovweb',
-          link: 'https://www.moovweb.com/?ref=nuxt',
-          img: 'moovweb-logo.png'
+          name: 'Strapi',
+          url: 'https://strapi.io/',
+          img: 'strapi-logo.svg',
+          class: 'h-12'
         },
         {
           name: 'Ship Shape',

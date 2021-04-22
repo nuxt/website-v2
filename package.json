@@ -51,7 +51,7 @@
     "clipboard": "^2.0.8",
     "crawler": "^1.3.0",
     "cross-env": "^7.0.3",
-    "cypress": "^6.6.0",
+    "cypress": "^7.1.0",
     "eslint": "^7.22.0",
     "eslint-config-prettier": "^8.1.0",
     "eslint-plugin-cypress": "^2.11.2",

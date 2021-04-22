@@ -1,12 +1,12 @@
 <template>
   <div class="shadow-nuxt">
-    <div class="container mx-auto px-4 pt-16 pb-12">
+    <div class="container px-4 pt-16 pb-12 mx-auto">
       <div class="flex flex-wrap justify-between mb-8">
-        <div class="lg:w-6/12 lg:text-left text-center p-4 sm:p-0">
+        <div class="p-4 text-center lg:w-6/12 lg:text-left sm:p-0">
           <i18n
             path="sponsor.title"
             tag="h1"
-            class="text-3xl xl:text-4xl text-light-onSurfacePrimary dark:text-dark-onSurfacePrimary font-medium leading-normal mb-6 lg:pt-4"
+            class="mb-6 text-3xl font-medium leading-normal xl:text-4xl text-light-onSurfacePrimary dark:text-dark-onSurfacePrimary lg:pt-4"
           >
             {{ $t('sponsor.title') }}
             <template #nuxt>
@@ -16,7 +16,7 @@
           <i18n
             path="sponsor.description"
             tag="h3"
-            class="xl:text-lg text-light-onSurfaceSecondary dark:text-dark-onSurfaceSecondary font-medium leading-relaxed mb-6"
+            class="mb-6 font-medium leading-relaxed xl:text-lg text-light-onSurfaceSecondary dark:text-dark-onSurfaceSecondary"
           >
             <template #break>
               <br />
@@ -29,14 +29,14 @@
       </div>
       <section class="text-center">
         <h2
-          class="text-2xl text-light-onSurfacePrimary dark:text-dark-onSurfacePrimary font-medium uppercase pt-10 pb-8"
+          class="pt-10 pb-8 text-2xl font-medium uppercase text-light-onSurfacePrimary dark:text-dark-onSurfacePrimary"
         >
           {{ $t('sponsor.pledges.title') }}
         </h2>
         <i18n
           path="sponsor.pledges.description"
           tag="p"
-          class="text-light-onSurfaceSecondary dark:text-dark-onSurfaceSecondary mb-12"
+          class="mb-12 text-light-onSurfaceSecondary dark:text-dark-onSurfaceSecondary"
         >
           <template #opencollective>
             <a href="https://github.com/sponsors/nuxt">GitHub</a>
@@ -45,11 +45,11 @@
         <div
           v-for="(group, groupKey) in sponsors"
           :key="groupKey"
-          class="text-center pb-8"
+          class="pb-8 text-center"
         >
-          <h2 class="uppercase text-xl pb-8">
+          <h2 class="pb-8 text-xl uppercase">
             <span
-              class="pb-2 border-b-2 border-nuxt-lightgreen text-light-onSurfacePrimary dark:text-dark-onSurfacePrimary transition-colors duration-300 ease-linear"
+              class="pb-2 transition-colors duration-300 ease-linear border-b-2 border-nuxt-lightgreen text-light-onSurfacePrimary dark:text-dark-onSurfacePrimary"
             >
               {{ groupKey }} SPONSORS
             </span>
@@ -57,7 +57,7 @@
           <a
             v-for="(sponsor, i) in group"
             :key="i"
-            class="sponsor inline-block m-4"
+            class="inline-block m-4 sponsor"
             :href="`${sponsor.url}?ref=nuxt`"
             target="_blank"
             rel="noopener sponsored"
@@ -76,9 +76,9 @@
         <div class="text-center">
           <AppButton
             href="https://github.com/sponsors/nuxt"
-            class="py-3 px-6 text-base"
+            class="px-6 py-3 text-base"
           >
-            <GithubIcon slot="icon" class="h-5 -mt-1 mr-1 inline-block" />
+            <GithubIcon slot="icon" class="inline-block h-5 mr-1 -mt-1" />
             {{ $t('sponsor.become_a_sponsor') }}
           </AppButton>
         </div>
@@ -99,17 +99,11 @@ export default {
   data() {
     return {
       sponsors: {
-        platinum: [
+        partners: [
           {
-            name: 'Storyblok',
-            img: 'storyblok-logo.svg',
-            url: 'https://www.storyblok.com/',
-            class: 'h-24'
-          },
-          {
-            name: 'Moovweb',
-            url: 'https://www.moovweb.com/',
-            img: 'moovweb-logo.png',
+            name: 'Strapi',
+            url: 'https://strapi.io/',
+            img: 'strapi-logo.svg',
             class: 'h-12'
           },
           {

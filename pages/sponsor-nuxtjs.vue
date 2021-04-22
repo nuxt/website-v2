@@ -1,4 +1,5 @@
 <template>
+<<<<<<< HEAD
   <div class="bg-light-elevatedSurface dark:bg-dark-elevatedSurface shadow-nuxt transition-colors duration-300 ease-linear">
     <div class="container mx-auto px-4 pt-16 pb-12">
       <div class="flex flex-wrap justify-between mb-8">
@@ -15,6 +16,26 @@
           </h1>
           <h3
             class="xl:text-lg text-light-onSurfaceSecondary dark:text-dark-onSurfaceSecondary font-medium leading-relaxed mb-6"
+=======
+  <div class="shadow-nuxt">
+    <div class="container px-4 pt-16 pb-12 mx-auto">
+      <div class="flex flex-wrap justify-between mb-8">
+        <div class="p-4 text-center lg:w-6/12 lg:text-left sm:p-0">
+          <i18n
+            path="sponsor.title"
+            tag="h1"
+            class="mb-6 text-3xl font-medium leading-normal xl:text-4xl text-light-onSurfacePrimary dark:text-dark-onSurfacePrimary lg:pt-4"
+          >
+            {{ $t('sponsor.title') }}
+            <template #nuxt>
+              <AppTitle />
+            </template>
+          </i18n>
+          <i18n
+            path="sponsor.description"
+            tag="h3"
+            class="mb-6 font-medium leading-relaxed xl:text-lg text-light-onSurfaceSecondary dark:text-dark-onSurfaceSecondary"
+>>>>>>> d935b8b9 (Feature/sponsors/partners (#1403))
           >
             NuxtJS is an MIT licensed open source project and completely free to
             use.<br />
@@ -120,12 +141,19 @@
       </section>
       <section class="text-center">
         <h2
-          class="text-2xl text-light-onSurfacePrimary dark:text-dark-onSurfacePrimary font-medium uppercase pt-10 pb-8"
+          class="pt-10 pb-8 text-2xl font-medium uppercase text-light-onSurfacePrimary dark:text-dark-onSurfacePrimary"
         >
           Recurring Pledges
         </h2>
+<<<<<<< HEAD
         <p
           class="text-light-onSurfaceSecondary dark:text-dark-onSurfaceSecondary mb-12"
+=======
+        <i18n
+          path="sponsor.pledges.description"
+          tag="p"
+          class="mb-12 text-light-onSurfaceSecondary dark:text-dark-onSurfaceSecondary"
+>>>>>>> d935b8b9 (Feature/sponsors/partners (#1403))
         >
           Recurring pledges come with exclusive perks, e.g. having your name
           listed in the NuxtJS GitHub repository, or have your company logo
@@ -137,11 +165,11 @@
         <div
           v-for="(group, groupKey) in sponsors"
           :key="groupKey"
-          class="text-center pb-8"
+          class="pb-8 text-center"
         >
-          <h2 class="uppercase text-xl pb-8">
+          <h2 class="pb-8 text-xl uppercase">
             <span
-              class="pb-2 border-b-2 border-nuxt-lightgreen text-light-onSurfacePrimary dark:text-dark-onSurfacePrimary transition-colors duration-300 ease-linear"
+              class="pb-2 transition-colors duration-300 ease-linear border-b-2 border-nuxt-lightgreen text-light-onSurfacePrimary dark:text-dark-onSurfacePrimary"
             >
               {{ groupKey }} SPONSORS
             </span>
@@ -149,8 +177,13 @@
           <a
             v-for="(sponsor, i) in group"
             :key="i"
+<<<<<<< HEAD
             class="sponsor inline-block m-4"
             :href="sponsor.url"
+=======
+            class="inline-block m-4 sponsor"
+            :href="`${sponsor.url}?ref=nuxt`"
+>>>>>>> d935b8b9 (Feature/sponsors/partners (#1403))
             target="_blank"
             rel="noopener sponsored"
           >
@@ -175,6 +208,7 @@
         </div>
         <div class="text-center">
           <AppButton
+<<<<<<< HEAD
             href="https://opencollective.com/nuxtjs"
             class="py-3 px-6 text-base"
           >
@@ -185,6 +219,14 @@
 >>>>>>> 26a70b2b (chore: add guides section (#407))
             Become a sponsor
           </nui-button>
+=======
+            href="https://github.com/sponsors/nuxt"
+            class="px-6 py-3 text-base"
+          >
+            <GithubIcon slot="icon" class="inline-block h-5 mr-1 -mt-1" />
+            {{ $t('sponsor.become_a_sponsor') }}
+          </AppButton>
+>>>>>>> d935b8b9 (Feature/sponsors/partners (#1403))
         </div>
       </section>
     </div>
@@ -220,8 +262,9 @@ export default {
   data() {
     return {
       sponsors: {
-        platinum: [
+        partners: [
           {
+<<<<<<< HEAD
             name: 'Storyblok',
             img: 'storyblok-logo.svg',
             url: 'https://www.storyblok.com/?ref=nuxt',
@@ -231,6 +274,11 @@ export default {
             name: 'Moovweb',
             url: 'https://www.moovweb.com/?ref=nuxt',
             img: 'moovweb-logo.png',
+=======
+            name: 'Strapi',
+            url: 'https://strapi.io/',
+            img: 'strapi-logo.svg',
+>>>>>>> d935b8b9 (Feature/sponsors/partners (#1403))
             class: 'h-12'
 <<<<<<< HEAD
 =======

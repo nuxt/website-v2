@@ -747,7 +747,7 @@ Starting with `v2.9.0`, you can also use a function to conditionally transpile, 
   }
 }
 ```
-With this example the dependency `ky` will be transpiled by Babel if nuxed is not in [modern mode](/docs/2.x/configuration-glossary/configuration-modern).
+In this example, `ky` will be transpiled by Babel if Nuxt is not in [modern mode](/docs/2.x/configuration-glossary/configuration-modern).
 
 ## vueLoader
 

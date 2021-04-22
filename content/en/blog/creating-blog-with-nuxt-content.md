@@ -939,7 +939,7 @@ Working with content is great fun and there is so much more you can do and build
 
 ## Further Reading
 
-For more info on how to improve your blog check out these articles by by [Gareth Redfern](https://twitter.com/garethredfern):
+For more info on how to improve your blog check out these articles by [Gareth Redfern](https://twitter.com/garethredfern):
 
 - [Adding a Sitemap Using Nuxt Content](https://redfern.dev/articles/adding-a-sitemap-using-nuxt-content/)
 - [Adding Social Media & SEO Meta Data Using Nuxt Content](https://redfern.dev/articles/adding-social-media-seo-meta-data-using-nuxt-content)

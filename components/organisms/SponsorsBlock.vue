@@ -34,7 +34,7 @@ export default {
       sponsors: [
         {
           name: 'Strapi',
-          url: 'https://strapi.io/',
+          link: 'https://strapi.io/',
           img: 'strapi-logo.svg',
           class: 'h-12'
         },

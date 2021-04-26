@@ -146,7 +146,7 @@ export default {
 
 <base-alert type="next">
 
-Pour en savoir plus sur le fonctionnement d'asyncData, consultez notre chapitre [Data Fetching](/guides/features/data-fetching#async-data)
+Pour en savoir plus sur le fonctionnement d'asyncData, consultez notre chapitre [Data Fetching](/docs/2.x/features/data-fetching#async-data)
 
 </base-alert>
 
@@ -173,7 +173,7 @@ Chaque fois que vous avez besoin d'obtenir des données asynchrones, vous pouvez
 
 <base-alert type="next">
 
-Pour en savoir plus sur le fonctionnement de l'extraction, consultez notre chapitre [Data Fetching](/guides/features/data-fetching)
+Pour en savoir plus sur le fonctionnement de l'extraction, consultez notre chapitre [Data Fetching](/docs/2.x/features/data-fetching)
 
 </base-alert>
 
@@ -191,7 +191,7 @@ export default {
 
 <base-alert type="next">
 
-Pour en savoir plus, consultez notre chapitre [Balises meta et référencement SEO](/guides/features/meta-tags-seo)
+Pour en savoir plus, consultez notre chapitre [Balises meta et référencement SEO](/docs/2.x/features/meta-tags-seo)
 
 </base-alert>
 
@@ -207,7 +207,7 @@ export default {
 
 <base-alert type="next">
 
-Pour en savoir plus sur les mises en page, consultez notre chapitre sur les [Vues](/guides/concepts/views#layouts).
+Pour en savoir plus sur les mises en page, consultez notre chapitre sur les [Vues](/docs/2.x/concepts/views#layouts).
 
 </base-alert>
 
@@ -229,7 +229,7 @@ S'applique uniquement si la propriété loading est également défini dans le f
 
 <base-alert type="next">
 
-Pour en savoir plus, consultez notre chapitre sur le [Chargement](/guides/features/loading).
+Pour en savoir plus, consultez notre chapitre sur le [Chargement](/docs/2.x/features/loading).
 
 </base-alert>
 
@@ -245,7 +245,7 @@ export default {
 
 <base-alert type="next">
 
-Pour en savoir plus, consultez notre chapitre sur les [Transitions](/guides/features/transitions)
+Pour en savoir plus, consultez notre chapitre sur les [Transitions](/docs/2.x/features/transitions)
 
 </base-alert>
 
@@ -261,7 +261,7 @@ export default {
 
 Inversement, vous pouvez aussi régler manuellement `scrollToTop` à `false` sur les routes parentes.
 
-Si vous souhaitez remplacer le comportement de défilement par défaut de Nuxt.js, consultez l'option [scrollBehavior](/guides/configuration-glossary/configuration-router#scrollbehavior).
+Si vous souhaitez remplacer le comportement de défilement par défaut de Nuxt.js, consultez l'option [scrollBehavior](/docs/2.x/configuration-glossary/configuration-router#scrollbehavior).
 
 ### middleware
 
@@ -275,7 +275,7 @@ export default {
 
 <base-alert type="next">
 
-Pour en savoir plus, consultez notre chapitre sur les [Middleware](/guides/directory-structure/middleware)
+Pour en savoir plus, consultez notre chapitre sur les [Middleware](/docs/2.x/directory-structure/middleware)
 
 </base-alert>
 
@@ -315,7 +315,7 @@ export default {
 
 <base-alert type="next">
 
-Pour en savoir plus sur la propriété d'observation, consultez notre chapitre [Data Fetching](/guides/features/data-fetching) chapter
+Pour en savoir plus sur la propriété d'observation, consultez notre chapitre [Data Fetching](/docs/2.x/features/data-fetching) chapter
 
 </base-alert>
 
@@ -331,7 +331,7 @@ Par exemple, `pages/-about.vue` sera ignorée.
 
 <base-alert type="next">
 
-Pour en savoir plus, consultez notre chapitre sur l'option [ignore](/guides/configuration-glossary/configuration-ignore)
+Pour en savoir plus, consultez notre chapitre sur l'option [ignore](/docs/2.x/configuration-glossary/configuration-ignore)
 
 </base-alert>
 
@@ -350,7 +350,7 @@ export default {
 
 <base-alert type="next">
 
-Pour en savoir plus, consultez notre chapitre sur l'option [dir](/guides/configuration-glossary/configuration-dir)
+Pour en savoir plus, consultez notre chapitre sur l'option [dir](/docs/2.x/configuration-glossary/configuration-dir)
 
 </base-alert>
 

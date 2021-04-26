@@ -5,61 +5,61 @@ position: 7
 category: directory-structure
 csb_link: https://codesandbox.io/embed/github/nuxt-academy/guides-examples/tree/master/04_directory_structure/07_layouts?fontsize=14&hidenavigation=1&theme=dark
 questions:
-  - question: You can easily rename the layouts directory without any configuration
+  - question: 設定しなくてもレイアウトディレクトリの名前を簡単に変更できますか？
     answers:
-      - true
-      - false
-    correctAnswer: false
-  - question: What is the default layout page called?
+      - できます
+      - できません
+    correctAnswer: できません
+  - question: デフォルトのレイアウトページは何と呼ばれていますか？
     answers:
       - layout.vue
       - default.vue
       - defaultLayout.vue
     correctAnswer: default.vue
-  - question: What component must you include in your layouts?
+  - question: レイアウトにどのコンポーネントを含める必要がありますか？
     answers:
       - <Nuxt />
       - <NuxtLink />
       - <RouterView />
     correctAnswer: <Nuxt />
-  - question: You can add any other component to your layout
+  - question: レイアウトに他のコンポーネントを追加できますか？
     answers:
-      - true
-      - false
-    correctAnswer: true
-  - question: To add a custom layout you create a `.vue` file and add it to what folder?
+      - できます
+      - できません
+    correctAnswer: できます
+  - question: 'カスタムレイアウトを追加するために `.vue` ファイルを作成しそれをどのフォルダーに追加しますか？'
     answers:
       - layout
       - layouts
       - page
     correctAnswer: layouts
-  - question: How do you tell the a page to use the blog layout?
+  - question: ブログレイアウトを使うためにページにどのような実装をしますか？
     answers:
       - "layout: 'blog'"
       - "name: 'blog'"
       - 'blog: true'
     correctAnswer: "layout: 'blog'"
-  - question: In which directory do you add an error page?
+  - question: どのディレクトリにエラーページを追加しますか？
     answers:
       - pages
       - layouts
       - errors
     correctAnswer: layouts
-  - question: You should add the `<Nuxt>` component to the error page?
+  - question: 'エラーページに `<Nuxt>` コンポーネントを追加する必要がありますか？'
     answers:
-      - true
-      - false
-    correctAnswer: false
-  - question: You can set a custom layout for your error page
+      - はい
+      - いいえ
+    correctAnswer: いいえ
+  - question: エラーページのカスタムレイアウトを設定できますか？
     answers:
-      - true
-      - false
-    correctAnswer: true
-  - question: The error page is displayed when an error occurs while server side rendering?
+      - 設定できます
+      - 設定できません
+    correctAnswer: 設定できます
+  - question: サーバーサイドレンダリング中にエラーが発生した場合エラーページは表示されますか？
     answers:
-      - true
-      - false
-    correctAnswer: false
+      - 表示されます
+      - 表示されません
+    correctAnswer: 表示されません
 ---
 
 レイアウトは Nuxt.js アプリケーションのルック&フィールを変えるとき、とても役に立ちます。例えばサイドバーを含めたいときや、モバイルとデスクトップのための別々のレイアウトを持ちたいときなどに有用です。
@@ -70,7 +70,7 @@ _このディレクトリは追加の設定なしに名前を変更できませ�
 
 </base-alert>
 
-## デフォルトレイアウト
+### デフォルトレイアウト
 
 `layouts/default.vue` ファイルを追加することでメインレイアウトを設定できます。これはレイアウトが指定されていない全てのページで使用されます。ページコンポーネントを含むレイアウトを作成するときには `<Nuxt>` コンポーネントを記述することを忘れないようにしてください。
 
@@ -100,7 +100,7 @@ _このディレクトリは追加の設定なしに名前を変更できませ�
 
 </base-alert>
 
-## カスタムレイアウト
+### カスタムレイアウト
 
 `layout` ディレクトリの全てのファイル（_トップレベル_）は、ページコンポーネントの `layout` プロパティで使えるカスタムレイアウトが作られます。
 
@@ -128,10 +128,6 @@ export default {
 }
 </script>
 ```
-
-<app-modal>
-  <code-sandbox  :src="csb_link"></code-sandbox>
-</app-modal>
 
 ## エラーページ
 

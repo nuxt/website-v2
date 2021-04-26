@@ -6,7 +6,7 @@ category: internals-glossary
 position: 1
 ---
 
-Le `context` fournit des objets/paramètres en plus aux composants Vue et est disponible dans des lifecycles Nuxt spéciaux comme par exemple [`asyncData`](/api), [`fetch`](/guides/features/data-fetching), [`plugins`](/guides/directory-structure/plugins), [`middleware`](/guides/directory-structure/middleware#router-middleware) et [`nuxtServerInit`](/guides/directory-structure/store#the-nuxtserverinit-action).
+Le `context` fournit des objets/paramètres en plus aux composants Vue et est disponible dans des lifecycles Nuxt spéciaux comme par exemple [`asyncData`](/api), [`fetch`](/docs/2.x/features/data-fetching), [`plugins`](/docs/2.x/directory-structure/plugins), [`middleware`](/docs/2.x/directory-structure/middleware#router-middleware) et [`nuxtServerInit`](/docs/2.x/directory-structure/store#the-nuxtserverinit-action).
 
 > _Note: Le "context" auquel on fait référence ici ne doit pas être confondu avec l'objet `context` disponible dans les [`actions Vuex`](https://vuex.vuejs.org/guide/actions.html). Les deux n'ont rien à voir._
 
@@ -51,7 +51,7 @@ L'instance principale de Vue avec les options qui incluent tous vos plugins. Par
 
 `store` ([_Store Vuex_](https://vuex.vuejs.org/api/#vuex-store-instance-properties))
 
-L'instance du Store Vuex. **Disponible uniquement si le [store vuex](/guides/directory-structure/store) a été défini**.
+L'instance du Store Vuex. **Disponible uniquement si le [store vuex](/docs/2.x/directory-structure/store) a été défini**.
 
 ### route
 
@@ -75,7 +75,7 @@ Un alias de `route.query`.
 
 `env` (_Objet_)
 
-Variables d'environnement définies dans le fichier `nuxt.config.js`, se référer à l'[API env](/guides/configuration-glossary/configuration-env).
+Variables d'environnement définies dans le fichier `nuxt.config.js`, se référer à l'[API env](/docs/2.x/configuration-glossary/configuration-env).
 
 ### IsDev
 
@@ -105,7 +105,7 @@ Utilisez cette méthode pour afficher la page d'erreur: `error(paramètres)`. Le
 
 `$config` (_Objet_)
 
-La [configuration de l'exécution](/guide/runtime-config) même.
+La [configuration de l'exécution](/docs/2.x/runtime-config) même.
 
 ## Paramètres côté serveur
 

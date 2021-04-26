@@ -1,10 +1,10 @@
 <template>
   <div
-    class="bg-light-elevatedSurface dark:bg-dark-elevatedSurface shadow-nuxt transition-colors duration-300 ease-linear"
+    class="transition-colors duration-300 ease-linear bg-light-elevatedSurface dark:bg-dark-elevatedSurface shadow-nuxt"
   >
-    <div class="container mx-auto px-4 py-12 text-centshadow-nuxter">
+    <div class="container px-4 py-12 mx-auto text-centshadow-nuxter">
       <section class="px-4">
-        <h1 class="text-3xl uppercase mb-2 sm:mb-0 font-medium">
+        <h1 class="mb-2 text-3xl font-medium uppercase sm:mb-0">
           {{ $t('homepage.sponsors.title') }}
         </h1>
         <SponsoringIllustration
@@ -12,7 +12,7 @@
           class="inline-block float-right lg:ml-4"
         />
         <div
-          class="pt-6 pb-12 leading-loose text-left text-light-onSurfaceSecondary dark:text-dark-onSurfaceSecondary transition-colors duration-300 ease-linear"
+          class="pt-6 pb-12 leading-loose text-left transition-colors duration-300 ease-linear text-light-onSurfaceSecondary dark:text-dark-onSurfaceSecondary"
         >
           <p>
             {{ $t('homepage.sponsors.description') }}
@@ -21,10 +21,10 @@
         <div
           v-for="(group, groupKey) in sponsors"
           :key="groupKey"
-          class="text-center pb-8"
+          class="pb-8 text-center"
         >
           <h2
-            class="uppercase text text-light-onSurfacePrimary dark:text-dark-onSurfacePrimary font-medium pb-8 transition-colors duration-300 ease-linear"
+            class="pb-8 font-medium uppercase transition-colors duration-300 ease-linear text text-light-onSurfacePrimary dark:text-dark-onSurfacePrimary"
           >
             <span class="pb-2 border-b-2 border-nuxt-lightgreen">
               {{ groupKey }}
@@ -33,7 +33,7 @@
           <a
             v-for="(sponsor, i) in group"
             :key="i"
-            class="sponsor inline-block m-4"
+            class="inline-block m-4 sponsor"
             :href="`${sponsor.url}?ref=nuxt`"
             target="_blank"
             rel="noopener sponsored"
@@ -49,16 +49,16 @@
             </ClientOnly>
           </a>
         </div>
-        <div class="text-center pb-8">
+        <div class="pb-8 text-center">
           <h2
-            class="uppercase text text-light-onSurfacePrimary dark:text-dark-onSurfacePrimary font-medium pb-8 transition-colors duration-300 ease-linear"
+            class="pb-8 font-medium uppercase transition-colors duration-300 ease-linear text text-light-onSurfacePrimary dark:text-dark-onSurfacePrimary"
           >
             <span class="pb-2 border-b-2 border-nuxt-lightgreen">
               Educational Partner
             </span>
           </h2>
           <a
-            class="sponsor inline-block m-4"
+            class="inline-block m-4 sponsor"
             href="https://vueschool.io?friend=nuxt"
             target="_blank"
             rel="noopener sponsored"
@@ -78,9 +78,9 @@
           <AppButton
             :to="localePath({ name: 'sponsor-nuxtjs' })"
             data-cy="sponsors"
-            class="py-3 px-6 text-base"
+            class="px-6 py-3 text-base"
           >
-            <GithubIcon slot="icon" class="inline-block h-5 -mt-1 mr-1" />
+            <GithubIcon slot="icon" class="inline-block h-5 mr-1 -mt-1" />
             {{ $t('homepage.sponsors.become_a_sponsor') }}
           </AppButton>
         </div>
@@ -101,17 +101,11 @@ export default {
   data() {
     return {
       sponsors: {
-        platinum: [
+        partners: [
           {
-            name: 'Storyblok',
-            img: 'storyblok-logo.svg',
-            url: 'https://www.storyblok.com/',
-            class: 'h-24'
-          },
-          {
-            name: 'Moovweb',
-            url: 'https://www.moovweb.com/',
-            img: 'moovweb-logo.png',
+            name: 'Strapi',
+            url: 'https://strapi.io/',
+            img: 'strapi-logo.svg',
             class: 'h-12'
           },
           {

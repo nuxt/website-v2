@@ -70,8 +70,8 @@ questions:
 
 Discover our [list of modules](https://modules.nuxtjs.org) to supercharge your Nuxt project, created by the Nuxt team and community.
 
-- 145+ Modules
-- 89+ Maintainers
+- 165+ Modules
+- 105+ Maintainers
 
 <base-alert type="next">
 
@@ -257,7 +257,7 @@ nuxt.hook('close', async nuxt => {
 - **Listen**: Nuxt internal server starts listening. (Using nuxt start or nuxt dev)
 
 ```js
-nuxt.hook('listen', async (server, {host, port})) => {
+nuxt.hook('listen', async (server, { host, port }) => {
   // Your custom code here
 })
 ```

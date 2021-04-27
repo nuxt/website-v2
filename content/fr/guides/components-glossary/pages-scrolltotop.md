@@ -26,4 +26,4 @@ Par défaut, Nuxt.js défile tout en haut lorsque l'on va sur une autre page, ma
 
 Inversement, on peut passer `scrollToTop` à `false` sur les routes parent.
 
-Si l'on souhaite écraser le comportement du défilement par défaut de Nuxt, veuillez vous référer à l'[option scrollBehavior](/guides/configuration-glossary/configuration-router#scrollbehavior).
+Si l'on souhaite écraser le comportement du défilement par défaut de Nuxt, veuillez vous référer à l'[option scrollBehavior](/docs/2.x/configuration-glossary/configuration-router#scrollbehavior).

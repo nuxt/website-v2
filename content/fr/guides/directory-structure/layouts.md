@@ -94,7 +94,7 @@ Vous pouvez ajouter ici d'autres éléments tels que : Navigation, Header, Foote
 
 <base-alert type="info">
 
-Si vos [composants sont réglés sur true](/guides/directory-structure/components) alors il n'est pas nécessaire de déclarer l'importation pour vos composants.
+Si vos [composants sont réglés sur true](/docs/2.x/directory-structure/components) alors il n'est pas nécessaire de déclarer l'importation pour vos composants.
 
 </base-alert>
 

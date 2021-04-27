@@ -70,9 +70,9 @@ questions:
 
 Direktori `middleware` berisi aplikasi _middleware_ Anda. _Middleware_ memungkinkan Anda menentukan fungsi kustom yang dapat dijalankan sebelum merender halaman atau sekelompok halaman (_layout_).
 
-_Shared Middleware_ harus ditempatkan di direktori `middleware/`. Nama berkas akan menjadi nama _middleware_ (`middleware/auth.js` akan menjadi _middleware_ `auth`). Anda juga dapat mendefinisikan middleware khusus halaman dengan menggunakan fungsi secara langsung, lihat [_middleware_ anonim](/guides/components-glossary/pages-middleware#anonymous-middleware).
+_Shared Middleware_ harus ditempatkan di direktori `middleware/`. Nama berkas akan menjadi nama _middleware_ (`middleware/auth.js` akan menjadi _middleware_ `auth`). Anda juga dapat mendefinisikan middleware khusus halaman dengan menggunakan fungsi secara langsung, lihat [_middleware_ anonim](/docs/2.x/components-glossary/pages-middleware#anonymous-middleware).
 
-Sebuah middleware menerima [_context_](/guides/internals-glossary/context) sebagai argumen pertama.
+Sebuah middleware menerima [_context_](/docs/2.x/internals-glossary/context) sebagai argumen pertama.
 
 ```js{}[middleware/user-agent.js]
 export default function (context) {

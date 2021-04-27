@@ -141,7 +141,7 @@ De la même façon que pour la partie _client_, tout se passe dans le navigateur
 
 <base-alert type="info">
 
-Se référer au chapitre sur les composants pour plus d'informations sur [`<NuxtLink>`](/guides/features/nuxt-components#the-nuxtlink-component).
+Se référer au chapitre sur les composants pour plus d'informations sur [`<NuxtLink>`](/docs/2.x/features/nuxt-components#the-nuxtlink-component).
 
 </base-alert>
 
@@ -159,7 +159,7 @@ Se référer au chapitre sur les composants pour plus d'informations sur [`<Nuxt
 
 <base-alert type="next">
 
-Plus d'informations dans le [recueil sur les features](/guides/features/rendering-modes).
+Plus d'informations dans le [recueil sur les features](/docs/2.x/features/rendering-modes).
 
 </base-alert>
 

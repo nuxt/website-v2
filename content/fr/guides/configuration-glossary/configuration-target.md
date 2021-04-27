@@ -16,4 +16,4 @@ Cibles de déploiement pour Nuxt >= v2.13 :
 
 > Vous pouvez utiliser cette option pour changer la cible de déploiement par défaut pour votre projet nuxt en utilisant `nuxt.config.js`
 
-Pour en savoir plus sur l'option `target`, consultez la [section sur les cibles de déploiement](/guides/features/deployment-targets).
+Pour en savoir plus sur l'option `target`, consultez la [section sur les cibles de déploiement](/docs/2.x/features/deployment-targets).

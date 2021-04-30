@@ -37,7 +37,7 @@ Nuxt.js ではデフォルトの設定でほとんどのユースケースをカ
 
 ### alias
 
-This option lets you define aliases that will be available within your JavaScript and CSS.
+このオプションで JavaScript や CSS で利用可能なエイリアスを定義できます。
 
 ```js{}[nuxt.config.js]
 import { resolve } from 'path'
@@ -51,7 +51,7 @@ export default {
 
 <base-alert type="next">
 
-See more on the [alias property](/docs/2.x/configuration-glossary/configuration-alias)
+[alias プロパティ](/docs/2.x/configuration-glossary/configuration-alias)の詳細を見る
 
 </base-alert>
 

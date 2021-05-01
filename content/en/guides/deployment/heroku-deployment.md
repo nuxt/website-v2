@@ -24,6 +24,8 @@ heroku config:set HOST=0.0.0.0
 heroku config:set NODE_ENV=production
 ```
 
+Note that `NODE_ENV` is set to `production` [by default](https://devcenter.heroku.com/articles/nodejs-support#runtime-behavior).
+
 You should see this in your Heroku dashboard (Settings section):
 
 ![nuxt config vars Heroku](https://i.imgur.com/EEKl6aS.png)
@@ -34,7 +36,7 @@ Heroku uses a [Procfile](https://devcenter.heroku.com/articles/procfile) (name t
 web: nuxt start
 ```
 
-This will instruct run the `nuxt start` command and tell Heroku to direct external HTTP traffic to it.
+This will instruct run the `nuxt start` command and tell Heroku to direct external HTTP traffic to it. Note that if no Procfile is present, the web process of your Heroku dyno will be started by running `npm start` ([see here](https://devcenter.heroku.com/articles/nodejs-support#default-web-process-type)). If your `npm start` runs `nuxt start`, then you will not be to create a Procfile.
 
 Finally, we can push the app on Heroku with:
 

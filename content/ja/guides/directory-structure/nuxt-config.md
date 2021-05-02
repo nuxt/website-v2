@@ -35,6 +35,26 @@ Nuxt.js ではデフォルトの設定でほとんどのユースケースをカ
 
 ## nuxt.config.js
 
+### alias
+
+このオプションで JavaScript や CSS で利用可能なエイリアスを定義できます。
+
+```js{}[nuxt.config.js]
+import { resolve } from 'path'
+
+export default {
+  alias: {
+    'style': resolve(__dirname, './assets/style')
+  }
+}
+```
+
+<base-alert type="next">
+
+[alias プロパティ](/docs/2.x/configuration-glossary/configuration-alias)の詳細を見る
+
+</base-alert>
+
 ### build
 
 このオプションで、`loaders`、`filenames` や `webpack` の設定、`transpilation` を含む `build` ステップにおけるさまざまな設定を行うことができます。

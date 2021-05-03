@@ -27,7 +27,7 @@ heroku buildpacks:set heroku/nodejs
 heroku config:set HOST=0.0.0.0
 ```
 
-Your app's Settings panel on the Heroku dashboard should look like this:
+Your app's Settings section on the Heroku dashboard should contain this:
 
 ![nuxt config vars Heroku](https://user-images.githubusercontent.com/23453691/116850762-81ea0e00-abf1-11eb-9f70-260721a1d525.png)
 
@@ -45,6 +45,6 @@ git push heroku develop:master
 
 where `develop` is the name of your branch.
 
-You can optionally configure automatic deploys from a selected branch of your app's GitHub repository in the _Deploy_ section of your app in the Heroku dashboard.
+You can optionally configure automatic deploys from a selected branch of your app's GitHub repository in the Deploy section of your app in the Heroku dashboard.
 
 Voilà! Your Nuxt.js application is now hosted on Heroku!

@@ -4,7 +4,7 @@ description: How to deploy Nuxt.js app with Surge?
 menu: Surge
 target: Static
 category: deployment
-position: 115
+position: 116
 ---
 
 Nuxt.js gives you the possibility to host your web application on any static hosting like [Surge](https://surge.sh/) for example.

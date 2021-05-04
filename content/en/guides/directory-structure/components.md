@@ -163,7 +163,7 @@ The component name will be based on its own path directory and filename. Therefo
 <BaseFooButton />
 ```
 
-However, if you want to use custom directory strcture that should not be part of component name, can explicitly specify these directories: 
+However, if you want to use a custom directory structure that should not be part of the component name, you can explicitly specify these directories: 
 
 ```bash
 components/

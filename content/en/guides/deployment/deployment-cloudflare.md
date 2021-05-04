@@ -1,9 +1,9 @@
 ---
-title: Using Nuxt with Cloudflare
+title: Deploy Nuxt on Cloudflare
 description: What needs to be considered when using Nuxt with Cloudflare
 menu: Cloudflare
 category: deployment
-position: 204.5
+position: 118
 ---
 
 In most cases, Nuxt can work with third party content that is not generated or created by Nuxt itself. But sometimes such content can cause problems, especially Cloudflare's "Minification and Security Options".

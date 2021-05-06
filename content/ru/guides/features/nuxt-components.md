@@ -385,17 +385,17 @@ export default {
 </template>
 ```
 
-Use a slot as placeholder until `<client-only />` is mounted on client-side.
+Используйте slot как плейсхолдер пока `<client-only />` не будет отрендерен на стороне клиента.
 
 ```html{}[pages/example.vue]
 <template>
   <div>
     <sidebar />
     <client-only>
-      <!-- this component will only be rendered on client-side -->
+      <!-- этот компонент будет отрендерен только на стороне клиента -->
       <comments />
 
-      <!-- loading indicator, rendered on server-side -->
+      <!-- индикатор загрузки, будет отрендерен на стороне сервера -->
       <comments-placeholder slot="placeholder" />
     </client-only>
   </div>
@@ -404,7 +404,7 @@ Use a slot as placeholder until `<client-only />` is mounted on client-side.
 
 <base-alert  type="info">
 
-Sometimes in server rendered pages `$refs` inside `<client-only>` might not be ready even with `$nextTick`, the trick might be to call `$nextTick` couple of times:
+Иногда у страниц с серверным рендерингом `$refs` внутри `<client-only>` может быть не доступен даже в связке с `$nextTick`, данная проблема может быть устранена при помощи повторного вызова `$nextTick`:
 
 ```js{}[page.vue]
 mounted(){
@@ -427,7 +427,7 @@ methods: {
 
 <base-alert>
 
-If you are using a version of Nuxt < v2.9.0, use `<no-ssr>` instead of `<client-only>`
+Если у вас установлен Nuxt версии < v2.9.0, то необходимо использовать `<no-ssr>` вместо `<client-only>`
 
 </base-alert>
 

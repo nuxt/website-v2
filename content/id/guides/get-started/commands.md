@@ -1,6 +1,6 @@
 ---
-title: Commands and Deployment
-description: Nuxt.js comes with a set of useful commands, both for development and production purpose.
+title: Perintah dan Penggelaran (_Deployment_)
+description: Nuxt.js hadir dengan sekumpulan perintah yang berguna, baik untuk tujuan pengembangan dan produksi.
 position: 4
 category: get-started
 video: hYdXzIGDlYA
@@ -8,11 +8,11 @@ video: hYdXzIGDlYA
 
 <YouTubeLite :video="video" :title="title" ></YouTubeLite>
 
-Nuxt.js comes with a set of useful commands, both for development and production purpose.
+Nuxt.js hadir dengan sekumpulan perintah yang berguna, baik untuk tujuan pengembangan dan produksi.
 
-## Using in package.json
+## Penggunaan in package.json
 
-You should have these commands in your `package.json`:
+Anda harus memiliki perintah ini di `package.json`:
 
 ```json
 "scripts": {
@@ -23,11 +23,11 @@ You should have these commands in your `package.json`:
 }
 ```
 
-You can launch your commands via `yarn <command>` or `npm run <command>` (example: `yarn dev` / `npm run dev`).
+Anda dapat meluncurkan perintah Anda melalui `yarn <perintah>` atau `npm run <perintah>` (contoh: `yarn dev` / `npm run dev`).
 
-## Development Environment
+## Lingkungan Pengembangan
 
-To launch Nuxt in development mode with [hot module replacement](https://webpack.js.org/concepts/hot-module-replacement/) on `http://localhost:3000`:
+Untuk meluncurkan Nuxt dalam mode pengembangan dengan [_hot module replacement_](https://webpack.js.org/concepts/hot-module-replacement/) pada `http://localhost:3000`:
 
 <code-group>
 
@@ -48,36 +48,36 @@ npm run dev
   </code-block>
 </code-group>
 
-## List of Commands
+## Daftar Perintah
 
-You can run different commands depending on the [target](/docs/2.x/features/deployment-targets):
+Anda dapat menjalankan perintah yang berbeda tergantung pada [target](/docs/2.x/features/deployment-targets):
 
-### target: `server` (default value)
+### target: `server` (nilai bawaan)
 
-- **nuxt dev** - Launch the development server.
-- **nuxt build** - Build and optimize your application with webpack for production.
-- **nuxt start** - Start the production server (after running `nuxt build`). Use it for Node.js hosting like Heroku, Digital Ocean, etc.
+- **nuxt dev** - Meluncurkan peladen pengembangan.
+- **nuxt build** - Bangun dan optimalkan aplikasi Anda dengan webpack untuk produksi.
+- **nuxt start** - Mulai peladen produksi (setelah menjalankan `nuxt build`). Gunakan untuk hosting Node.js seperti Heroku, Digital Ocean, dll.
 
 ### target: `static`
 
-- **nuxt dev** - Launch the development server.
-- **nuxt generate** - Build the application (if needed), generate every route as a HTML file and statically export to `dist/` directory (used for static hosting).
-- **nuxt start** - serve the `dist/` directory like your static hosting would do (Netlify, Vercel, Surge, etc), great for testing before deploying.
+- **nuxt dev** - Meluncurkan peladen pengembangan.
+- **nuxt generate** - Bangun aplikasi (jika perlu), buat setiap rute sebagai berkas HTML dan ekspor secara statis ke direktori `dist/` (digunakan untuk hosting statis).
+- **nuxt start** - Melayani direktori `dist/` seperti yang akan dilakukan oleh hosting statis Anda (Netlify, Vercel, Surge, dll), bagus untuk pengujian sebelum penggelaran (_deploying_).
 
-## Webpack Config Inspection
+## Inspeksi Konfigurasi Webpack
 
-You can inspect the webpack config used by nuxt to build project similar to [vue inspect](https://cli.vuejs.org/guide/webpack.html#inspecting-the-project-s-webpack-config)).
+Anda dapat memeriksa konfigurasi webpack yang digunakan oleh nuxt untuk membuat proyek yang mirip dengan [vue inspect](https://cli.vuejs.org/guide/webpack.html#inspecting-the-project-s-webpack-config).
 
 - **nuxt webpack [query...]**
 
-**Arguments:**
+**Argumen:**
 
-- `--name`: Bundle name to inspect. (client, server, modern)
-- `--dev`: Inspect webpack config for dev mode
-- `--depth`: Inspection depth. Defaults to 2 to prevent verbose output.
-- `--no-colors`: Disable ANSI colors (disabled by default when TTY is not available or when piping to a file)
+- `--name`: Nama paket untuk diperiksa. (klien, server, modern).
+- `--dev`: Periksa konfigurasi webpack untuk mode pengembang.
+- `--depth`: Kedalaman inspeksi. Bawaannya adalah 2 untuk mencegah keluaran verbose.
+- `--no-colors`: Nonaktifkan warna ANSI (dinonaktifkan secara bawaan saat TTY tidak tersedia atau saat menyalurkan ke berkas).
 
-**Examples:**
+**Contoh:**
 
 - `nuxt webpack`
 - `nuxt webpack devtool`
@@ -89,13 +89,13 @@ You can inspect the webpack config used by nuxt to build project similar to [vue
 - `nuxt webpack module rules loader=vue-`
 - `nuxt webpack module rules "loader=.*-loader"`
 
-## Production Deployment
+## Penggelaran Produksi
 
-Nuxt.js lets you choose between Server or Static deployments.
+Nuxt.js memungkinkan Anda memilih antara penggelaran Server atau Statis.
 
-### Server Deployment
+### Penggelaran Server
 
-To deploy a SSR application we use `target: 'server'`, where server is the default value.
+Untuk menerapkan aplikasi SSR, kita harus menggunakan `target: 'server'`, di mana server adalah nilai bawaan.
 
 <code-group>
   <code-block label="Yarn" active>
@@ -114,15 +114,15 @@ npm run build
   </code-block>
 </code-group>
 
-Nuxt.js will create a `.nuxt` directory with everything inside ready to be deployed on your server hosting.
+Nuxt.js akan membuat direktori `.nuxt` dengan semua yang ada di dalamnya siap untuk digunakan di peladen hosting Anda.
 
 <base-alert type="info">
 
-we recommend putting `.nuxt` in `.npmignore` or `.gitignore`.
+sebaiknya letakkan `.nuxt` di `.npmignore` atau `.gitignore`.
 
 </base-alert>
 
-Once your application is built you can use the `start` command to see a production version of your application.
+Setelah aplikasi Anda dibuat, Anda dapat menggunakan perintah `start` untuk melihat versi produksi aplikasi Anda.
 
 <code-group>
   <code-block label="Yarn" active>
@@ -141,11 +141,11 @@ npm run start
   </code-block>
 </code-group>
 
-### Static Deployment (Pre-rendered)
+### Penggelaran Statis (Pra-render)
 
-Nuxt.js gives you the ability to host your web application on any static hosting.
+Nuxt.js memberi Anda kemampuan untuk menghosting aplikasi web Anda di hosting statis apa pun.
 
-To deploy a static generated site make sure you have `target: 'static'` in your `nuxt.config.js` (for Nuxt >= 2.13):
+Untuk menggelar situs yang dibuat statis, pastikan Anda memiliki `target: 'static'` di `nuxt.config.js` (untuk Nuxt >= 2.13):
 
 ```js{}[nuxt.config.js]
 export default {
@@ -170,25 +170,25 @@ npm run generate
   </code-block>
 </code-group>
 
-Nuxt.js will create a `dist/` directory with everything inside ready to be deployed on a static hosting service.
+Nuxt.js akan membuat direktori `dist/` dengan semua yang ada di dalamnya siap untuk digunakan pada layanan hosting statis.
 
-As of Nuxt v2.13 there is a crawler installed that will now crawl your link tags and generate your routes when using the command `nuxt generate` based on those links.
+Pada Nuxt v2.13, terpasang perayap yang akan merayapi tag tautan Anda dan menghasilkan rute Anda saat menggunakan perintah `nuxt generate` berdasarkan tautan tersebut.
 
 <base-alert>
 
-**Warning:** dynamic routes are ignored by the `generate` command when using Nuxt <= v2.12: [API Configuration generate](/docs/2.x/configuration-glossary/configuration-generate)
+**Peringatan:** rute dinamis diabaikan oleh perintah `generate` saat menggunakan Nuxt <= v2.12: [API Configuration generate](/docs/2.x/configuration-glossary/configuration-generate)
 
 </base-alert>
 
 <base-alert type="info">
 
-When generating your web application with `nuxt generate`, [the context](/docs/2.x/internals-glossary/context) given to [asyncData](/docs/2.x/features/data-fetching#async-data) and [fetch](/docs/2.x/features/data-fetching#the-fetch-hook) will not have `req` and `res`.
+Saat membuat aplikasi web Anda dengan `nuxt generate`, [konteks](/docs/2.x/internals-glossary/context) yang diberikan ke [asyncData](/docs/2.x/features/data-fetching#async-data) dan [fetch](/docs/2.x/features/data-fetching#the-fetch-hook) tidak akan memiliki `req` and `res`.
 
 </base-alert>
 
 #### **Fail on Error**
 
-To return a non-zero status code when a page error is encountered and let the CI/CD fail the deployment or build, you can use the `--fail-on-error` argument.
+Untuk mengembalikan kode status bukan nol saat kesalahan halaman ditemukan dan membiarkan CI/CD gagal dalam penggelaran atau pembuatan, Anda dapat menggunakan argumen `--fail-on-error`.
 
 <code-group>
   <code-block label="Yarn" active>
@@ -208,11 +208,11 @@ npm run generate --fail-on-error
 
 </code-group>
 
-## What's next?
+## Apa selanjutnya?
 
 <base-alert type="next">
 
-Read our [Deployment Guides](/docs/2.x/deployment/deploying-to-21yunbox) to find examples for deployments to popular hosts.
+Baca [Panduan Penggelaran](/docs/2.x/deployment/deploying-to-21yunbox) kami untuk menemukan contoh penerapan ke host populer.
 
 </base-alert>
 

@@ -42,7 +42,7 @@ questions:
       - '<RouterLink>'
       - '<a>'
     correctAnswer: '<NuxtLink>'
-  - question: Как вы будете ссылаться на страницу про вас внутри вашего приложения используя <NuxtLink>?
+  - question: Как вы будете ссылаться на страницу "about" внутри вашего приложения используя <NuxtLink>?
     answers:
       - to="/about"
       - href="/about"

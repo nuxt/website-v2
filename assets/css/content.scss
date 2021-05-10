@@ -417,4 +417,14 @@
   }
 }
 
+.nuxt-content {
+  table {
+    @media (max-width: 678px) {
+      display: block;
+      width: 100%;
+      overflow-x: scroll;
+    }
+  }
+}
+
 /* purgecss end ignore */

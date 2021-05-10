@@ -1,6 +1,6 @@
 ---
 title: Компоненты Nuxt
-description: Из коробки Nuxt.js поставляется с несколькими важными компонентами, которые будут полензны при создании вашего приложения.
+description: Из коробки Nuxt.js поставляется с несколькими важными компонентами, которые будут полезны при создании вашего приложения.
 position: 9
 category: features
 csb_link_nuxt_link: https://codesandbox.io/embed/github/nuxt-academy/guides-examples/tree/master/03_features/09_components_nuxt-link?fontsize=14&hidenavigation=1&theme=dark

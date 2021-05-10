@@ -66,7 +66,7 @@ questions:
       - link-exact-active
       - nuxt-exact-active-link
     correctAnswer: nuxt-link-exact-active
-  - question: Какой бы вы использовали компонент в Nuxt ≥ 2.9.0 чтоб ваш компонент рендерился на стороне клиента?
+  - question: Какой бы вы использовали компонент в Nuxt ≥ 2.9.0 чтобы ваш компонент рендерился только на стороне клиента?
     answers:
       - '<client-only>'
       - '<no-ssr>'

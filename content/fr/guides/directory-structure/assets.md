@@ -158,6 +158,8 @@ On peut utiliser des polices de caractères locales en les ajoutant dans le rép
 }
 ```
 
+<base-alert type="info">Les fichiers CSS ne sont pas chargés automatiquement. Ajoutez-les en utilisant la [propriété css](https://nuxtjs.org/docs/2.x/configuration-glossary/configuration-css/).</base-alert>
+
 <base-alert type="next">
 
 Pour ajouter des polices de caractères externes telles que des Google Fonts, se référer le chapitre sur le [SEO et les méta tags](/docs/2.x/features/meta-tags-seo#external-resources).
@@ -278,7 +280,7 @@ On peut utiliser `~~` ou `@@` pour le répertoire racine.
 
 <base-alert type="info">
 
-Astuce: Pour avoir accès à `~` sur un clavier espagnol, il faut utiliser `Option` + `ñ` sur Mac OS.
+Astuce: Pour avoir accès à `~` sur un clavier espagnol, il faut utiliser `Option` + `ñ` sur Mac OS ou (`Alt gr` + `4`) sur Windows.
 
 </base-alert>
 

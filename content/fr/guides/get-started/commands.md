@@ -61,6 +61,31 @@ Vous pouvez exécuter différentes commandes en fonction de la [cible](/docs/2.x
 - **nuxt generate** - Construisez l'application (si nécessaire), générez chaque route sous forme de fichier HTML et exportez statiquement vers le répertoire `dist/` (utilisé pour l'hébergement statique).
 - **nuxt start** - servir le répertoire `dist/` comme le ferait votre hébergement statique (Netlify, Vercel, Surge, etc.), idéal pour les tests avant le déploiement.
 
+## Webpack Config Inspection
+
+Vous pouvez inspecter la configuration webpack utilisée par nuxt pour créer un projet similaire à [vue inspect](https://cli.vuejs.org/guide/webpack.html#inspecting-the-project-s-webpack-config).
+
+- **nuxt webpack [query...]**
+
+**Arguments:**
+
+- `--name`: nom du bundle à inspecter (client, serveur, moderne)
+- `--dev`: inspecter la configuration webpack pour le mode dev
+- `--depth`: inspecter en profondeur. La valeur par défaut est 2 pour empêcher la sortie verbeuse.
+- `--no-colors`: désactiver les couleurs ANSI (désactivées par défaut lorsque TTY n'est pas disponible ou quand piping vers un fichier)
+
+**Exemples:**
+
+- `nuxt webpack`
+- `nuxt webpack devtool`
+- `nuxt webpack resolve alias`
+- `nuxt webpack module rules`
+- `nuxt webpack module rules test=.jsx`
+- `nuxt webpack module rules test=.pug oneOf use.0=raw`
+- `nuxt webpack plugins constructor.name=WebpackBar options reporter`
+- `nuxt webpack module rules loader=vue-`
+- `nuxt webpack module rules "loader=.*-loader"`
+
 ## Déploiement de production
 
 Nuxt.js vous permet de choisir entre les déploiements de serveur ou statique.

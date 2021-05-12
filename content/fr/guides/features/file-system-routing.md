@@ -124,7 +124,7 @@ router: {
 
 ## Routes Dynamiques
 
-Parfois il n'est pas possible de connaître le nom de la route. Un call vers une API pour récupérer une liste d'utilisateurs ou d'articles de blog par exemple. C'est ce que l'on appelle des routes dynamiques. Pour créer une route dynamique, il faut ajouter un underscore avant le nom du fichier `.vue` ou devant le nom du répertoire. Nous pouvons nommer le fichier ou le répertoire de la façon dont nous voulons mais il doit être préfixé d'un underscore.
+Parfois il n'est pas possible de connaître le nom de la route. Un call vers une API pour récupérer une liste d'utilisateurs ou d'articles de blog par exemple. C'est ce que l'on appelle des routes dynamiques. Pour créer une route dynamique, il faut ajouter un underscore (`_`) avant le nom du fichier `.vue` ou devant le nom du répertoire. Nous pouvons nommer le fichier ou le répertoire de la façon dont nous voulons mais il doit être préfixé d'un underscore.
 
 Cette structure de fichiers:
 

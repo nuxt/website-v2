@@ -146,6 +146,12 @@ module.exports = {
     },
     videos: {
       title: 'Cours Vidéos'
+    },
+    modules: {
+      title: 'Modules'
+    },
+    examples: {
+      title: 'Exemples'
     }
   },
   shop: {
@@ -284,7 +290,7 @@ module.exports = {
     link: 'nouvelle documentation'
   },
   example: {
-    intro: 'In this example:'
+    intro: 'Dans cet exemple:'
   },
   codeSandbox: {
     open: 'Ouvrir CodeSandbox'
@@ -330,34 +336,37 @@ module.exports = {
       'directory-structure': 'Structure',
       'configuration-glossary': 'Configuration',
       'internals-glossary': 'Internes',
-      'components-glossary': 'Composants'
+      'components-glossary': 'Composants',
+      deployment: 'Déploiement',
+      examples: 'Exemples'
+
     }
   },
   footer: {
     links: {
       discover: {
-        title: 'Discover',
-        shop: 'Our Goodies Store',
-        consulting: 'Training & consultancy',
-        sponsorNuxt: 'Sponsoring & donations'
+        title: 'Découvrir',
+        shop: 'Nos goodies',
+        consulting: 'Formation & consulting',
+        sponsorNuxt: 'Sponsoring & dons'
       },
       about: {
-        title: 'About',
-        team: 'Our team',
+        title: 'À propos',
+        team: 'Notre équipe',
         design: 'Design kit',
-        contact: 'Contact us'
+        contact: 'Nous contacter'
       },
       support: {
         title: 'Support',
         resources: 'Ressources',
-        discord: 'Chat with us',
+        discord: 'Parlons ensemble',
         contributionGuide: 'Contribution guide'
       }
     }
   },
   cookies: {
     consent:
-      "Nous utilisons des cookies pour l'analyse des utilisateurs et les améliorations sur la page!",
+      "Nous utilisons des cookies pour l'analyse des utilisateurs et les améliorations sur la page !",
     linkLabel: 'En savoir plus sur les cookies',
     button: 'Accepter'
   }

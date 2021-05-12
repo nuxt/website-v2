@@ -1,6 +1,11 @@
 <template>
   <div
-    class="bg-light-elevatedSurface dark:bg-dark-elevatedSurface shadow-nuxt relative"
+    class="
+      bg-light-elevatedSurface
+      dark:bg-dark-elevatedSurface
+      shadow-nuxt
+      relative
+    "
   >
     <div class="container mx-auto px-4 py-24">
       <section>
@@ -90,7 +95,14 @@
         </div>
         <div
           v-if="langCompanies.length > 10"
-          class="hidden lg:flex flex-col lg:flex-row items-center justify-between"
+          class="
+            hidden
+            lg:flex
+            flex-col
+            lg:flex-row
+            items-center
+            justify-between
+          "
         >
           <div
             v-for="(company, i) in langCompanies.slice(10, 15)"
@@ -402,6 +414,12 @@ export default {
             name: 'ZEN Architects',
             img: 'zenarchitects.svg',
             url: 'https://app.zenadvisor.io/docs',
+            class: 'h-10'
+          },
+          {
+            name: 'hey',
+            img: 'hey.svg',
+            url: 'https://hey.jp/',
             class: 'h-10'
           }
         ],

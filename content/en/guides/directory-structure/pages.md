@@ -282,7 +282,7 @@ See more on middleware in our [Middleware](/docs/2.x/directory-structure/middlew
 
 ### The watchQuery Property
 
-Use the `watchQuery` key to set up a watcher for query strings. If the defined strings change, all component methods (asyncData, fetch, validate, layout, ...) will be called. Watching is disabled by default to improve performance.
+Use the `watchQuery` key to set up a watcher for query strings. If the defined strings change, all component methods (asyncData, fetch(context), validate, layout, ...) will be called. Watching is disabled by default to improve performance.
 
 ```js{}[pages/index.vue]
 export default {
@@ -290,9 +290,9 @@ export default {
 }
 ```
 
-<base-alert type="info">
+<base-alert>
 
-If you want to set up a watcher for all query strings, set `watchQuery` to `true`.
+**Warning**: The new `fetch` hook introduced in 2.12 is not affected by `watchQuery`. For more information see [listening to query string changes](/docs/2.x/features/data-fetching#the-fetch-hook).
 
 </base-alert>
 

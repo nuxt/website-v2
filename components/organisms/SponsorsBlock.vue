@@ -3,12 +3,12 @@
     <p
       class="text-center lg:text-sm text-light-onSurfacePrimary dark:text-dark-onSurfacePrimary"
     >
-      Partners Sponsors
+      Partners
     </p>
     <a
       v-for="sponsor in sponsors"
       :key="sponsor.name"
-      :href="sponsor.link"
+      :href="sponsor.url"
       class="block w-48 my-4 lg:inline-block lg:w-full"
       rel="noopener sponsored"
       target="_blank"
@@ -40,8 +40,14 @@ export default {
         },
         {
           name: 'Ship Shape',
-          link: 'https://shipshape.io/?ref=nuxt',
+          url: 'https://shipshape.io/?ref=nuxt',
           img: 'shipshape-logo.svg'
+        },
+        {
+          name: 'Google Chrome',
+          img: 'google-chrome.svg',
+          url: 'https://www.google.com/chrome/',
+          class: 'h-12'
         }
       ]
     }

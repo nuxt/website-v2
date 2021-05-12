@@ -17,49 +17,49 @@ questions:
       - out-in
       - none
     correctAnswer: out-in
-  - question: What is the default transition name for transitions on pages?
+  - question: Какое название свойства transition по-умолчанию используется при переходах между страницами?
     answers:
       - .page
       - .pages
       - .page-transition
     correctAnswer: .page
-  - question: Where is the best place to add your CSS transition classes so you have global transitions on all routes?
+  - question: В каком месте лучше всего добавить CSS transition классы чтобы они были доступны глобально для всех роутов?
     answers:
       - index.vue
-      - A global css file
+      - Глобальный css файл
       - layouts/default.vue
-    correctAnswer: A global css file
-  - question: In which array in the nuxt.config.js file do you add your global stylesheet?
+    correctAnswer: Глобальный css файл
+  - question: В какой массив в nuxt.config.js файле вам нужно добавить вашу глобальную таблицу стилей?
     answers:
       - 'css: []'
       - 'styles: []'
       - 'transitions: []'
     correctAnswer: 'css: []'
-  - question: What is the default css class for layout transitions?
+  - question: Какой класс по умолчанию используется для переходов между layouts?
     answers:
       - layout
       - layout-transition
       - transition
     correctAnswer: layout
-  - question: In the nuxt.config.js file what is the property you use to configure the default settings for layout transitions?
+  - question: Какое свойство вы используете для настроек по умолчанию layout transitions в nuxt.config.js файле?
     answers:
       - layout
       - layoutTransition
       - layoutTransitions
     correctAnswer: layoutTransition
-  - question: If you change the default layout to be called 'my-layout' what class do you use to create the css transitions?
+  - question: Если вы измените layout на 'my-layout', какой класс вы будете использовать для создания css переходов?
     answers:
       - layout
       - my-layout
       - myLayout
     correctAnswer: my-layout
-  - question: In the nuxt.config.js file what is the property you use to configure the default settings for page transitions?
+  - question: Какое свойство вы должны использовать в nuxt.config.js файле при конфигурировании настроек по умолчанию для переходов между страницами?
     answers:
       - page
       - pageTransition
       - layoutTransition
     correctAnswer: pageTransition
-  - question: Where do you modify the default settings for your page transitions?
+  - question: Где вы можете изменить настройки по умолчанию для переходов между страницами?
     answers:
       - main.css
       - pages.vue

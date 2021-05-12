@@ -56,6 +56,8 @@ export default {
     }
   },
   buildModules: [
+    // https://github.com/teamnovu/nuxt-breaky
+    '@teamnovu/nuxt-breaky',
     // https://github.com/nuxt-community/eslint-module
     '@nuxtjs/eslint-module',
     // https://github.com/nuxt-community/color-mode-module
@@ -120,7 +122,7 @@ export default {
     '~/plugins/intersection-observer.client.js',
     '~/plugins/vue-observe-visibility.client.js',
     '~/plugins/ga.client.js',
-    // '~/plugins/adblock.client.js',
+    '~/plugins/adblock.client.js',
     '~/plugins/newsletter.client.js',
     '~/plugins/vue-scrollactive',
     '~/plugins/contributors',
@@ -142,6 +144,9 @@ export default {
   generate: {
     fallback: false,
     routes: ['/', '404']
+  },
+  tailwindcss: {
+    exposeConfig: true
   },
   i18n: {
     strategy: 'no_prefix',

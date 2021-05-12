@@ -35,6 +35,26 @@ Nuxt.js ではデフォルトの設定でほとんどのユースケースをカ
 
 ## nuxt.config.js
 
+### alias
+
+このオプションで JavaScript や CSS で利用可能なエイリアスを定義できます。
+
+```js{}[nuxt.config.js]
+import { resolve } from 'path'
+
+export default {
+  alias: {
+    'style': resolve(__dirname, './assets/style')
+  }
+}
+```
+
+<base-alert type="next">
+
+[alias プロパティ](/docs/2.x/configuration-glossary/configuration-alias)の詳細を見る
+
+</base-alert>
+
 ### build
 
 このオプションで、`loaders`、`filenames` や `webpack` の設定、`transpilation` を含む `build` ステップにおけるさまざまな設定を行うことができます。
@@ -112,7 +132,13 @@ export default {
 
 ### runtimeConfig
 
-ランタイム設定には dotenv サポートが組み込まれているため、より良いセキュリティと高速な開発を実現します。ランタイム設定は Nuxt ペイロードに追加されるので、開発中、サーバーサイドレンダリング、またはクライアントサイドのみのアプリケーションで作業する際に、ランタイム設定を更新するためにリビルドする必要はありません。しかし、静的サイトでは変更を確認するためにサイトをリビルドする必要があります。
+ランタイム設定にはより良いセキュリティと高速な開発のため [dotenv](https://github.com/motdotla/dotenv) サポートが組み込まれています。ランタイム設定は Nuxt ペイロードに追加されるので、開発中、サーバーサイドレンダリング、またはクライアントサイドのみのアプリケーションで作業する際に、ランタイム設定を更新するためにリビルドする必要はありません。（静的サイトでは変更を確認するためにサイトをリビルドする必要があります）
+
+#### `.env` サポート
+
+もしプロジェクトのルートディレクトリに `.env` ファイルがあるなら、自動的に `process.env` にロードされ、`nuxt.config`/`serverMiddleware` またはそれらがインポートする別のファイル内からアクセスできます。
+
+`--dotenv <file>` を使用してパスをカスタマイズすることができ、また `--dotenv false` を使用して完全に無効にすることができます。例えば本番、ステージング、開発環境で違う `.env` ファイルを指定することができます。
 
 #### `publicRuntimeConfig`
 

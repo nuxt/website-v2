@@ -9,10 +9,8 @@
       />
     </div>
     <div>
-      <p class="sm:text-sm m-0 text-nuxt-green font-bold">
-NuxtJS needs you!
-</p>
-      <p class="sm:text-xs p-0 m-0 text-gray-600 leading-normal">
+      <p class="m-0 font-bold sm:text-sm text-nuxt-green">NuxtJS needs you!</p>
+      <p class="p-0 m-0 leading-normal text-gray-600 sm:text-xs">
         By whitelisting nuxtjs.org on your Ad-Blocker, you support our work and
         help us financially.
       </p>

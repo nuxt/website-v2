@@ -12,7 +12,7 @@ questions:
       - '<Page>'
       - '<Views>'
     correctAnswer: '<Nuxt>'
-  - question: `<Nuxt>` コンポーネントが使われるのは？
+  - question: '`<Nuxt>` コンポーネントが使われるのは？'
     answers:
       - コンポーネント
       - ページ

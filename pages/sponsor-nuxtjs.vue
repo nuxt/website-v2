@@ -51,7 +51,7 @@
             <span
               class="pb-2 transition-colors duration-300 ease-linear border-b-2 border-nuxt-lightgreen text-light-onSurfacePrimary dark:text-dark-onSurfacePrimary"
             >
-              {{ groupKey }} SPONSORS
+              {{ groupKey }}
             </span>
           </h2>
           <a
@@ -90,6 +90,7 @@
 <script>
 import GithubIcon from '~/assets/icons/github.svg?inline'
 import SponsorIllustration from '~/assets/illustrations/sponsor.svg?inline'
+import sponsors from '~/content/sponsors'
 
 export default {
   components: {
@@ -98,90 +99,7 @@ export default {
   },
   data() {
     return {
-      sponsors: {
-        partners: [
-          {
-            name: 'Strapi',
-            url: 'https://strapi.io/',
-            img: 'strapi-logo.svg',
-            class: 'h-12'
-          },
-          {
-            name: 'Ship Shape',
-            url: 'https://shipshape.io/',
-            img: 'shipshape-logo.svg',
-            class: 'h-12'
-          }
-        ],
-        gold: [
-          {
-            name: 'VueMastery',
-            img: 'vueMastery-brand.svg',
-            url: 'https://www.vuemastery.com/',
-            class: 'h-10'
-          },
-          {
-            name: 'Legal Nature',
-            img: 'legalnature-logo.svg',
-            url: 'https://www.legalnature.com/',
-            class: 'h-10'
-          }
-        ],
-        silver: [
-          {
-            name: 'Sparheld',
-            img: 'sparheld.svg',
-            url: 'https://www.sparheld.de/',
-            class: 'h-8'
-          },
-          {
-            name: 'Icons8',
-            img: 'icons8.svg',
-            url: 'https://icons8.com/',
-            class: 'h-8'
-          },
-          {
-            name: 'FireStickHow',
-            img: 'fire-stick-how.png',
-            url: 'https://www.firestickhow.com/',
-            class: 'h-8'
-          },
-          {
-            name: 'MiniTool',
-            img: 'minitool.png',
-            url: 'https://www.minitool.com/',
-            class: 'h-8'
-          },
-          {
-            name: 'VPS Server',
-            img: 'vps-server.png',
-            url: 'https://www.vpsserver.com/',
-            class: 'h-8'
-          },
-          {
-            name: 'fine VPN',
-            img: 'finevpn.png',
-            url: 'https://en.finevpn.org/',
-            class: 'h-8'
-          }
-        ],
-        bronze: [
-          {
-            name: 'SendCloud',
-            img: 'sendcloud.svg',
-            url: 'https://www.sendcloud.com/',
-            class: 'h-8'
-          }
-        ],
-        special: [
-          {
-            name: 'Google Chrome',
-            img: 'google-chrome.svg',
-            url: 'https://www.google.com/chrome/',
-            class: 'h-12'
-          }
-        ]
-      }
+      sponsors
     }
   },
   head() {

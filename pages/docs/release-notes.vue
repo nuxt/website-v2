@@ -4,15 +4,36 @@
       <TheMobileAsideNavNewDocs :links="links" />
       <TheAsideNavNewDocs :links="links" class="hidden lg:block" />
       <div
-        class="w-full min-h-screen lg:static lg:max-h-full lg:overflow-visible lg:w-3/4"
+        class="
+          w-full
+          min-h-screen
+          lg:static
+          lg:max-h-full
+          lg:overflow-visible
+          lg:w-3/4
+        "
       >
         <div class="flex flex-col-reverse -mx-4 lg:mx-0 lg:flex-row">
           <div
-            class="w-full px-4 py-8 lg:static lg:overflow-visible lg:max-h-full lg:w-3/4"
+            class="
+              w-full
+              px-4
+              py-8
+              lg:static
+              lg:overflow-visible
+              lg:max-h-full
+              lg:w-3/4
+            "
           >
             <article>
               <h1
-                class="transition-colors duration-300 ease-linear text-light-onSurfacePrimary dark:text-dark-onSurfacePrimary"
+                class="
+                  transition-colors
+                  duration-300
+                  ease-linear
+                  text-light-onSurfacePrimary
+                  dark:text-dark-onSurfacePrimary
+                "
               >
                 {{ page.title }}
               </h1>
@@ -23,7 +44,7 @@
           </div>
           <AffixBlock>
             <SponsorsBlock />
-            <AdsCarbon key="release-notes" />
+            <AdsBlock />
           </AffixBlock>
         </div>
       </div>

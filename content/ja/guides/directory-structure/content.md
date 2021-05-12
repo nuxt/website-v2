@@ -63,7 +63,7 @@ questions:
       - h2 と h3
       - h1 と h2 と h3
     correctAnswer: h2 と h3
-  - question:静的サイト生成に content モジュールを使えますか？
+  - question: 静的サイト生成に content モジュールを使えますか？
     answers:
       - 正
       - 偽

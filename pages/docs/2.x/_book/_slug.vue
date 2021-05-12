@@ -1,13 +1,28 @@
 <template>
   <div class="flex flex-col-reverse -mx-4 lg:mx-0 lg:flex-row">
     <div
-      class="w-full px-4 py-8 lg:min-h-screen lg:w-3/4 lg:static lg:overflow-visible lg:max-h-full"
+      class="
+        w-full
+        px-4
+        py-8
+        lg:min-h-screen
+        lg:w-3/4
+        lg:static
+        lg:overflow-visible
+        lg:max-h-full
+      "
     >
       <LangFallback :doc-link="docLink" :lang-fallback="langFallback" />
 
       <article>
         <h1
-          class="transition-colors duration-300 ease-linear text-light-onSurfacePrimary dark:text-dark-onSurfacePrimary"
+          class="
+            transition-colors
+            duration-300
+            ease-linear
+            text-light-onSurfacePrimary
+            dark:text-dark-onSurfacePrimary
+          "
         >
           {{ page.title }}
         </h1>
@@ -30,7 +45,7 @@
         class="block mb-8"
       />
       <SponsorsBlock />
-      <AdsCarbon :key="$route.params.slug" />
+      <AdsBlock />
     </AffixBlock>
   </div>
 </template>

@@ -23,7 +23,7 @@ questions:
       - .pages
       - .page-transition
     correctAnswer: .page
-  - question: В каком месте лучше всего добавить CSS transition классы чтобы они были доступны глобально для всех роутов?
+  - question: В каком месте лучше всего добавить классы CSS переходов чтобы они были доступны глобально для всех роутов?
     answers:
       - index.vue
       - Глобальный css файл

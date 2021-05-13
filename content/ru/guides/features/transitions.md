@@ -17,7 +17,7 @@ questions:
       - out-in
       - none
     correctAnswer: out-in
-  - question: Какое название свойства transition по-умолчанию используется при переходах между страницами?
+  - question: Какое название свойства transition по умолчанию используется при переходе между страницами?
     answers:
       - .page
       - .pages

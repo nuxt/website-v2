@@ -9,7 +9,7 @@ position: 11
 - 型: `Function`
 - 引数:
   1. `String` : レンダリングするルート
-  2. _オプション_ `Object`、渡されたコンテキスト、利用可能なキー: `req` と `res`
+  2. *オプション* `Object`、渡されたコンテキスト、利用可能なキー: `req` と `res`
 - 戻り値: `Promise`
   - `html`: `String`
   - `error`: `null` または `Object`
@@ -17,7 +17,7 @@ position: 11
 
 > 渡されたコンテキストを使い、特定のルートをレンダリングします。
 
-このメソッドはほとんどの場合 [`nuxt.renderAndGetWindow`](/docs/2.x/internals-glossary/nuxt-render-and-get-window) とともにテストする目的で使われます。
+このメソッドはほとんどの場合  [`nuxt.renderAndGetWindow`](/docs/2.x/internals-glossary/nuxt-render-and-get-window) とともにテストする目的で使われます。
 
 <base-alert>
 

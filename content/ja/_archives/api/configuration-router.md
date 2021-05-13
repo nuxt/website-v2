@@ -269,7 +269,8 @@ export default {
   head: {
     script: [
       {
-        src: 'https://polyfill.io/v3/polyfill.min.js?features=IntersectionObserver',
+        src:
+          'https://polyfill.io/v3/polyfill.min.js?features=IntersectionObserver',
         body: true
       }
     ]

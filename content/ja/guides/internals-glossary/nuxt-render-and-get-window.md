@@ -9,7 +9,7 @@ position: 12
 - 型: `Function`
 - 引数: `String`
   1. `String`: レンダリングする URL
-  2. _オプション_ `Object`: オプション
+  2. *オプション* `Object`: オプション
   - virtualConsole: `Boolean`（デフォルト: `true`）
 - 戻り値: `Promise`
   - 戻り値: `window`

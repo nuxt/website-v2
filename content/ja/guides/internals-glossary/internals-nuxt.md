@@ -20,9 +20,9 @@ nuxt.hook('ready', async nuxt => {
 })
 ```
 
-| プラグイン | 引数                   | タイミング                                                                                           |
-| ---------- | ---------------------- | ---------------------------------------------------------------------------------------------------- |
-| `ready`    | (nuxt)                 | Nuxt（`ModuleContainer` と `Renderer`）の準備が整ったとき                                            |
-| `error`    | (error)                | フックの呼び出し時に未処理のエラーが発生したとき                                                     |
-| `close`    | (nuxt)                 | Nuxt インスタンスが正しく終了したとき                                                                |
-| `listen`   | (server, {host, port}) | Nuxt **内部**のサーバーがリッスンを始めたとき（`nuxt start` または `nuxt dev` を使用時に発生します） |
+| プラグイン | 引数 | タイミング |
+| --- | --- | --- |
+| `ready` | (nuxt) | Nuxt（`ModuleContainer` と `Renderer`）の準備が整ったとき |
+| `error` | (error) | フックの呼び出し時に未処理のエラーが発生したとき |
+| `close` | (nuxt) | Nuxt インスタンスが正しく終了したとき |
+| `listen` | (server, {host, port}) | Nuxt **内部**のサーバーがリッスンを始めたとき（`nuxt start` または `nuxt dev` を使用時に発生します） |

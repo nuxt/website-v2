@@ -260,7 +260,7 @@ Nuxt.js はこれを簡単に行うための `inject（key、value）` メソッ
 
 <base-alert type="info">
 
-Vue[インスタンスのライフサイクル](https://jp.vuejs.org/v2/guide/instance.html)では、`beforeCreate` フックと `created` フックのみがクライアント、サーバーサイド両方から呼び出されることを把握しておくことが重要です。他のすべてのフックはクライアントサイドからのみ呼び出されます。
+Vue[インスタンスのライフサイクル](https://jp.vuejs.org/v2/guide/instance.html)では、`beforeCreate` フックと `created`  フックのみがクライアント、サーバーサイド両方から呼び出されることを把握しておくことが重要です。他のすべてのフックはクライアントサイドからのみ呼び出されます。
 
 </base-alert>
 
@@ -338,6 +338,7 @@ export default {
 ## グローバルミックスイン
 
 グローバルミックスインは Nuxt プラグインで簡単に追加できますが、正しく処理しないとトラブルやメモリリークが発生する可能性があります。アプリケーションにグローバルミックスインを追加するときは、常にフラグを使用して複数回登録しないようにする必要があります:
+
 
 ```js{}[plugins/my-mixin-plugin.js]
 if (!Vue.__my_mixin__) {

@@ -145,6 +145,7 @@ lazy プレフィックスを使用すると、イベントが発火された時
   }
 </script>
 ```
+
 ### ネストされたディレクトリ
 
 次のようにネストされたディレクトリにコンポーネントがある場合:
@@ -185,4 +186,5 @@ components: {
 ```html{}[pages/index.vue]
 <FooButton />
 ```
+
 <base-alert type="next">詳しくは[components module](/blog/improve-your-developer-experience-with-nuxt-components)をご覧ください。</base-alert>

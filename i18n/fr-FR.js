@@ -236,8 +236,7 @@ module.exports = {
       start: 'Démarrer le chat',
       partner: {
         pre: 'Nous nous sommes associés',
-        post:
-          'pour offrir ces services afin que nous puissions nous concentrer pour vous aider le plus rapidement possible.'
+        post: 'pour offrir ces services afin que nous puissions nous concentrer pour vous aider le plus rapidement possible.'
       }
     },
     entreprise: {
@@ -280,13 +279,10 @@ module.exports = {
   },
   contribute: {
     title: 'Contributeurs',
-    docs:
-      'Vous avez vu une erreur ou vous souhaitez contribuer à la documentation ?',
-    blog:
-      'Vous avez commis une erreur ou souhaitez contribuer à cet article de blog ?',
+    docs: 'Vous avez vu une erreur ou vous souhaitez contribuer à la documentation ?',
+    blog: 'Vous avez commis une erreur ou souhaitez contribuer à cet article de blog ?',
     edit_on_github: 'Éditez cette page sur GitHub !',
-    msg1:
-      'La contribution pour cette page est maintenant fermée. Si vous souhaitez contribuer, veuillez consulter notre',
+    msg1: 'La contribution pour cette page est maintenant fermée. Si vous souhaitez contribuer, veuillez consulter notre',
     link: 'nouvelle documentation'
   },
   example: {
@@ -312,7 +308,7 @@ module.exports = {
     examples: {
       routing: 'Routage',
       dataFetching: 'Data Fetching',
-      assetManagement: 'Gestion d\'assets',
+      assetManagement: "Gestion d'assets",
       transitions: 'Transitions',
       seo: 'SEO',
       loading: 'Chargement',
@@ -339,7 +335,6 @@ module.exports = {
       'components-glossary': 'Composants',
       deployment: 'Déploiement',
       examples: 'Exemples'
-
     }
   },
   footer: {

@@ -12,13 +12,14 @@ position: 0
 
 Sorgu stringlerine bir seyredici ayarlamak için `watchQuery` anahtarını kullanın. Eğer tanımlanan stringler değişirse, tüm bileşen yöntemleri (asyncData, fetch(context), validate, layout, ...) çağrılacaktır. Performansı arttırmak için watching varsayılan olarak devre dışı bırakılmıştır.
 
-Tüm sorgu stringleri için bir seyredici kurmak istiyorsanız, `watchQuery: true` olarak ayarlayın. 
+Tüm sorgu stringleri için bir seyredici kurmak istiyorsanız, `watchQuery: true` olarak ayarlayın.
 
 ```js
 export default {
   watchQuery: ['page']
 }
 ```
+
 Daha ayrıntılı seyredicilere sahip olmak için `watchQuery(newQuery, oldQuery)` fonksiyonunu da kullanabilirsiniz.
 
 ```js

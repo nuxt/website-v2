@@ -49,7 +49,6 @@ $ npm run dev
 
 Check that everything works.
 
-
 ## Containerize your application
 
 Now, we will create a container with Cloud Build.

@@ -1,17 +1,17 @@
 ---
 title: Мета-теги и SEO
-description: Nuxt.js позволяет вам определить все стандартные `<meta>` теги для вашего приложения внутри nuxt.config.js файла используя свойство `head`. Это очень полезно при добавлении стандарных тегов `title` и `description` для SEO либо задания viewport или добавления favicon.
+description: Nuxt.js позволяет вам определить все стандартные мета-теги для вашего приложения внутри nuxt.config.js файла используя свойство `head`. Это очень полезно при добавлении стандарных тегов `title` и `description` для SEO либо задания `viewport` или добавления `favicon`.
 position: 6
 category: features
 csb_link: https://codesandbox.io/embed/github/nuxt-academy/guides-examples/tree/master/03_features/06_meta_tags_seo?fontsize=14&hidenavigation=1&theme=dark
 questions:
-  - question: Где вы задаете мета-теги `title` и `description` глобально?
+  - question: Где задаются мета-теги `title` и `description` глобально?
     answers:
       - в компоненте страницы
       - в nuxt.config.js
       - в package.json
     correctAnswer: в nuxt.config.js
-  - question: Где вы задаете мета-теги `title` и `description` локально?
+  - question: Где задаются мета-теги `title` и `description` локально?
     answers:
       - в компоненте страницы
       - в nuxt.config.js
@@ -44,7 +44,7 @@ Nuxt.js предоставляет вам 3 различных пути доба
 
 ### Глобальные настройки
 
-Nuxt.js позволяет вам определить все стандартные `<meta>` теги для вашего приложения внутри nuxt.config.js файла используя свойство `head`. Это очень полезно при добавлении стандарных тегов `title` и `description` для SEO либо задания viewport или добавления favicon.
+Nuxt.js позволяет вам определить все стандартные мета-теги для вашего приложения внутри nuxt.config.js файла используя свойство `head`. Это очень полезно при добавлении стандарных тегов `title` и `description` для SEO либо задания viewport или добавления favicon.
 
 ```js{}[nuxt.config.js]
 export default {
@@ -66,7 +66,7 @@ export default {
 
 <base-alert type="info">
 
-Этот код даст вам одинаковые title и description для каждой страницы
+Этот код даст вам одинаковые title и description для всех страниц
 
 </base-alert>
 

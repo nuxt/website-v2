@@ -75,6 +75,12 @@ export default {
       img: 'sendcloud.svg',
       url: 'https://www.sendcloud.com/',
       class: 'h-8'
+    },
+    {
+      name: 'Remotely',
+      img: 'remotely-logo.svg',
+      url: 'https://remotely.so/',
+      class: 'h-8'
     }
   ]
 }

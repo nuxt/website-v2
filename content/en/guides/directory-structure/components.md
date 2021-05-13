@@ -5,8 +5,6 @@ description: The components directory contains your Vue.js Components. Component
 position: 3
 category: directory-structure
 csb_link: https://codesandbox.io/embed/github/nuxt-academy/guides-examples/tree/master/04_directory_structure/03_components?fontsize=14&hidenavigation=1&theme=dark
-img: /docs/2.x/components.png
-imgAlt: nuxt components module
 questions:
   - question:
     answers:
@@ -36,7 +34,7 @@ questions:
 
 The `components` directory contains your Vue.js components. Components make up the different parts of your page and can be reused throughout your pages, layouts and even other components.
 
-## Auto-Importing Components
+## Components Discovery
 
 Starting from `v2.13`, Nuxt can auto-import the components you use. To activate this feature, set `components: true` in your configuration:
 
@@ -49,9 +47,9 @@ export default {
 Any components in the `~/components` directory can then be used throughout your pages, layouts (and other components) without needing to explicitly import them.
 
 ```bash
-components/
-  TheHeader.vue
-  TheFooter.vue
+| components/
+--| TheHeader.vue
+--| TheFooter.vue
 ```
 
 ```html{}[layouts/default.vue]
@@ -64,98 +62,12 @@ components/
 </template>
 ```
 
-### Component Names
+<base-alert type="next">Learn more about the components module [in the component discovery documentation](/docs/2.x/features/component-discovery) and [in this announcement article](/blog/improve-your-developer-experience-with-nuxt-components).</base-alert>
 
-The component name will be based on the full path (directory and filename).
+## Other Features
 
-If you have components in nested directories, this will affect the component name. Consider this directory structure:
+<base-alert type="info">
 
-```bash
-| components/
----| base/
------| custom/
--------| Button.vue
-```
-
-In this case the component can be auto-imported with:
-
-```html
-<BaseCustomButton />
-```
-
-If you don't want to include your directory in the component name, it's possible to specify the prefix you want (or even disable it completely using `pathPrefix: false`): 
-
-```js{}[nuxt.config.js]
-components: [
-  '~/components',
-  {
-    path: '~/components/base/custom/',
-    pathPrefix: false,
-    prefix: 'custom'
-  },
-]
-```
-
-And now in your template you can use `CustomButton` instead of `BaseButton`.
-
-```html{}[pages/index.vue]
-<CustomButton />
-```
-
-### Dynamic Imports
-
-To dynamically import a component (also known as lazy-loading a component) all you need to do is add the `Lazy` prefix to the component name.
-
-```html{}[layouts/default.vue]
-<template>
-  <div>
-    <TheHeader />
-    <Nuxt />
-    <LazyTheFooter />
-  </div>
-</template>
-```
-
-This is particularly useful if the component is not always needed. By using the `Lazy` prefix you can delay delay loading the component code until the right moment, which can be helpful for optimizing your JavaScript bundle size.
-
-```html{}[pages/index.vue]
-<template>
-  <div>
-    <h1>Mountains</h1>
-    <LazyMountainsList v-if="show" />
-    <button v-if="!show" @click="show = true">Show List</button>
-  </div>
-</template>
-
-<script>
-export default {
-  data() {
-    return {
-      show: false
-    }
-  }
-}
-</script>
-```
-
-### Cheat Sheet
-
-<app-modal :src="img" :alt="imgAlt"></app-modal>
-
-<base-alert type="next">For more information check out the [@nuxt/components documentation](https://github.com/nuxt/components/).</base-alert>
-
-### Configuration
-
-You can learn more about the components options in the [Configuration Glossary > components](/docs/2.x/configuration-glossary/configuration-components).
-
-For advanced usage, we recommend looking at the [nuxt/components](https://github.com/nuxt/components) repository and README.
-
-## Fetching Data
-
-To access asynchronous data from an API in your components you can use the [`fetch()` hook](/docs/2.x/features/data-fetching#the-fetch-method).
-
-<base-alert type="next">
-
-See the chapter on [fetch()](/docs/2.x/features/data-fetching#the-fetch-method) for more details on how fetch works.
+You may also want to check out [the special hooks in the Components Glossary](http://localhost:3000/docs/2.x/components-glossary/pages-fetch) and find out more about [the built-in Nuxt Data Fetching features](http://localhost:3000/docs/2.x/features/data-fetching).
 
 </base-alert>

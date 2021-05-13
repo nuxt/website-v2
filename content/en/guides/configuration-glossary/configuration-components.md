@@ -8,110 +8,47 @@ position: 5
 
 > Nuxt.js 2.13+ can scan and auto import your components.
 
+<base-alert>It is possible to use this feature with Nuxt 2.10 - 2.12. Just manually install and add `@nuxt/components` to `buildModules` inside `nuxt.config`.</base-alert>
+
 - Type: `Boolean` or `Object`
 - Default: `false`
 
-When set to `true` or using an object, Nuxt will use [@nuxt/components](https://github.com/nuxt/components) to auto-import the components you use.
+When set to `true` or an options object, Nuxt will include [@nuxt/components](https://github.com/nuxt/components) and auto-import your components wherever you use them within your pages, layouts (and other components).
 
-### Basic Usage
+<base-alert type="info">For more information on how to use, please refer to [component auto-discovery documentation](/docs/2.x/features/component-discovery) for more information.</base-alert>
+
+## Configuration
 
 ```js{}[nuxt.config.js]
 export default {
+  // This will automatically load components from `~/components`
   components: true
 }
 ```
 
-This means that any components in the `~/components` directory can then be used throughout your pages, layouts (and other components) without needing to explicitly import them.
+With `components: true`, by default the `~/components` directory will be included.
 
-```bash
-components/
-  TheHeader.vue
-  TheFooter.vue
-```
-
-```html{}[layouts/default.vue]
-<template>
-  <div>
-    <TheHeader />
-    <Nuxt />
-    <TheFooter />
-  </div>
-</template>
-```
-
-<base-alert>
-
-The component name will be based on the full path (directory and filename).
-
-If you have components in nested directories, this will affect the component name. Consider this directory structure:
-
-```bash
-| components/
----| base/
------| custom/
--------| Button.vue
-```
-
-In this case the component can be auto-imported with:
-
-```html
-<BaseCustomButton />
-```
-
-</base-alert>
-
-
-### Dynamic Imports
-
-To dynamically import a component (also known as lazy-loading a component) all you need to do is add the `Lazy` prefix to the component name.
-
-```html{}[layouts/default.vue]
-<template>
-  <div>
-    <TheHeader />
-    <Nuxt />
-    <LazyTheFooter />
-  </div>
-</template>
-```
-
-This is particularly useful if the component is not always needed. By using the `Lazy` prefix you can delay delay loading the component code until the right moment, which can be helpful for optimizing your JavaScript bundle size.
-
-```html{}[pages/index.vue]
-<template>
-  <div>
-    <h1>Mountains</h1>
-    <LazyMountainsList v-if="show" />
-    <button v-if="!show" @click="show = true">Show List</button>
-  </div>
-</template>
-
-<script>
-export default {
-  data() {
-    return {
-      show: false
-    }
-  }
-}
-</script>
-```
-
-### Custom Directory Options
-
-Alternatively, you can take full control with an array of directories or directory objects.
+However you can customize auto-discovery behaviour by providing additional directories to scan:
 
 ```js{}[nuxt.config.js]
 export default {
   components: [
-    // Equivalent to { path: '~/components/custom' }
-    '~/components/custom',
+    // Equivalent to { path: '~/components' }
+    '~/components',
     { path: '~/components/other', extensions: ['vue'] }
   ]
 }
 ```
 
 #### path
+
+Each item can be either string or object. A string value is a shortcut for `{ path }`.
+
+<base-alert type="info">
+Don't worry about ordering or overlapping directories! The components module will take care of it. (Each file will be only matched once with longest path.)
+</base-alert>
+
+### path
 
 - Required
 - Type: `String`
@@ -120,7 +57,7 @@ Path (absolute or relative) to the directory containing your components.
 
 You can use Nuxt aliases (`~` or `@`) to refer to directories inside the project or directly use a npm package path (similar to using `require` within your project).
 
-#### extensions
+### extensions
 
 - Type: `Array<string>`
 - Default:
@@ -142,28 +79,26 @@ If you prefer to split your SFCs into `.js`, `.vue` and `.css`, you could choose
 ```js
 // nuxt.config.js
 export default {
-  components: [
-    { path: '~/components', extensions: ['vue'] }
-  ]
+  components: [{ path: '~/components', extensions: ['vue'] }]
 }
 ```
 
-#### pattern
+### pattern
 
-- Type: `string` ([glob pattern]( https://github.com/isaacs/node-glob#glob-primer))
+- Type: `string` ([glob pattern](https://github.com/isaacs/node-glob#glob-primer))
 - Default: `**/*.${extensions.join(',')}`
 
 Within the specified `path`, only files that match this pattern will be included.
 
-#### ignore
+### ignore
 
 - Type: `Array`
-- Items: `string` ([glob pattern]( https://github.com/isaacs/node-glob#glob-primer))
+- Items: `string` ([glob pattern](https://github.com/isaacs/node-glob#glob-primer))
 - Default: `[]`
 
 Patterns to exclude files within the specified `path`.
 
-#### prefix
+### prefix
 
 - Type: `String`
 - Default: `''` (no prefix)
@@ -183,43 +118,43 @@ export default {
 ```
 
 ```bash
-components/
-  awesome/
-    Button.vue
-  Button.vue
+| components/
+---| awesome/
+------| Button.vue
+---| Button.vue
 ```
 
 ```html
 <template>
   <div>
     <AwesomeButton>Click on me 🤘</AwesomeButton>
-    <Button>Click on me</Button>
+    <button>Click on me</button>
   </div>
 </template>
 ```
 
-#### pathPrefix
+### pathPrefix
 
 - Type: `Boolean`
 - Default: `true`
 
 Prefix component name by its path.
 
-#### watch
+### watch
 
 - Type: `Boolean`
 - Default: `true`
 
 Watch the specified `path` for changes, including file additions and file deletions.
 
-#### transpile
+### transpile
 
 - Type: `Boolean`
 - Default: `'auto'`
 
 Transpile specified `path` using [`build.transpile`](https://nuxtjs.org/api/configuration-build#transpile). By default (`'auto'`) it will set `transpile: true` if `node_modules/` is in `path`.
 
-#### level
+### level
 
 - Type: `Number`
 - Default: `0`
@@ -230,15 +165,96 @@ Levels are used to define allow overwriting components that have the same name i
 export default {
   components: [
     '~/components', // default level is 0
-   { path: 'my-theme/components', level: 1 }
+    { path: 'my-theme/components', level: 1 }
   ]
 }
 ```
 
 A component in `~/components` will then overwrite one with the same name in `my-theme/components`. The lowest value takes priority.
 
-<base-alert type="info">
+## Advanced
 
-Please refer to the [nuxt/components](https://github.com/nuxt/components) repository for full usage details.
+### Overwriting Components
 
-</base-alert>
+It is possible to have a way to overwrite components using the [level](#level) option. This is very useful for modules and theme authors.
+
+Considering this structure:
+
+```bash
+| node_modules/
+---| my-theme/
+------| components/
+---------| Header.vue
+| components/
+---| Header.vue
+```
+
+Then defining in the `nuxt.config`:
+
+```js
+components: [
+  '~/components', // default level is 0
+  { path: 'node_modules/my-theme/components', level: 1 }
+]
+```
+
+Our `components/Header.vue` will overwrite our theme component since the lowest level takes priority.
+
+### Library Authors
+
+Making Vue Component libraries with automatic tree-shaking and component registration is now super easy ✨
+
+This module exposes a hook named `components:dirs` so you can easily extend the directory list without requiring user configuration in your Nuxt module.
+
+Imagine a directory structure like this:
+
+```bash
+| node_modules/
+---| awesome-ui/
+------| components/
+---------| Alert.vue
+---------| Button.vue
+------| nuxt.js
+| pages/
+---| index.vue
+| nuxt.config.js
+```
+
+Then in `awesome-ui/nuxt.js` you can use the `components:dir` hook:
+
+```js
+import { join } from 'path'
+
+export default function () {
+  this.nuxt.hook('components:dirs', dirs => {
+    // Add ./components dir to the list
+    dirs.push({
+      path: join(__dirname, 'components'),
+      prefix: 'awesome'
+    })
+  })
+}
+```
+
+That's it! Now in your project, you can import your ui library as a Nuxt module in your `nuxt.config.js`:
+
+```js
+export default {
+  buildModules: ['@nuxt/components', 'awesome-ui/nuxt']
+}
+```
+
+And directly use the module components (prefixed with `awesome-`), our `pages/index.vue`:
+
+```vue
+<template>
+  <div>
+    My <AwesomeButton>UI button</AwesomeButton>!
+    <awesome-alert>Here's an alert!</awesome-alert>
+  </div>
+</template>
+```
+
+It will automatically import the components only if used and also support HMR when updating your components in `node_modules/awesome-ui/components/`.
+
+**Next**: publish your `awesome-ui` module to [npm](https://www.npmjs.com) and share it with the other Nuxters ✨

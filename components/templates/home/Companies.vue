@@ -1,6 +1,11 @@
 <template>
   <div
-    class="bg-light-elevatedSurface dark:bg-dark-elevatedSurface shadow-nuxt relative"
+    class="
+      bg-light-elevatedSurface
+      dark:bg-dark-elevatedSurface
+      shadow-nuxt
+      relative
+    "
   >
     <div class="container mx-auto px-4 py-24">
       <section>
@@ -90,7 +95,14 @@
         </div>
         <div
           v-if="langCompanies.length > 10"
-          class="hidden lg:flex flex-col lg:flex-row items-center justify-between"
+          class="
+            hidden
+            lg:flex
+            flex-col
+            lg:flex-row
+            items-center
+            justify-between
+          "
         >
           <div
             v-for="(company, i) in langCompanies.slice(10, 15)"
@@ -232,8 +244,7 @@ export default {
           {
             name: 'LINE',
             img: 'line.png',
-            url:
-              'https://linecorp.com/?utm_source=nuxtjs&utm_medium=cases&utm_campaign=cases_list',
+            url: 'https://linecorp.com/?utm_source=nuxtjs&utm_medium=cases&utm_campaign=cases_list',
             class: 'h-8'
           }
         ],

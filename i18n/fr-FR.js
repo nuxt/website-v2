@@ -38,8 +38,7 @@ module.exports = {
       {
         name: 'Cours Video',
         icon: 'video',
-        href:
-          'https://masteringnuxt.com/?utm_source=nuxt&utm_medium=link&utm_campaign=navbar_link'
+        href: 'https://masteringnuxt.com/?utm_source=nuxt&utm_medium=link&utm_campaign=navbar_link'
       }
     ],
     search: {
@@ -313,7 +312,7 @@ module.exports = {
     examples: {
       routing: 'Routage',
       dataFetching: 'Data Fetching',
-      assetManagement: "Gestion d'assets",
+      assetManagement: 'Gestion d\'assets',
       transitions: 'Transitions',
       seo: 'SEO',
       loading: 'Chargement',
@@ -340,6 +339,7 @@ module.exports = {
       'components-glossary': 'Composants',
       deployment: 'Déploiement',
       examples: 'Exemples'
+
     }
   },
   footer: {

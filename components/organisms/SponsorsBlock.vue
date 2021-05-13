@@ -1,7 +1,18 @@
 <template>
   <div>
     <p
-      class="pb-3 text-sm font-bold tracking-wide text-gray-500 uppercase border-b border-dashed lg:mb-2 dark:text-gray-600 lg:text-xs"
+      class="
+        pb-3
+        text-sm
+        font-bold
+        tracking-wide
+        text-gray-500
+        uppercase
+        border-b border-dashed
+        lg:mb-2
+        dark:text-gray-600
+        lg:text-xs
+      "
     >
       Partners
     </p>
@@ -9,7 +20,15 @@
       v-for="sponsor in sponsors"
       :key="sponsor.name"
       :href="sponsor.url"
-      class="block py-2 border-b border-dashed opacity-75 hover:opacity-100 lg:inline-block lg:w-full"
+      class="
+        block
+        py-2
+        border-b border-dashed
+        opacity-75
+        hover:opacity-100
+        lg:inline-block
+        lg:w-full
+      "
       rel="noopener sponsored"
       target="_blank"
     >

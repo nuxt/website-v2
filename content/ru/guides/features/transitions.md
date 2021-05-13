@@ -5,7 +5,7 @@ position: 10
 category: features
 csb_link: https://codesandbox.io/embed/github/nuxt-academy/guides-examples/tree/master/03_features/05_transitions?fontsize=14&hidenavigation=1&theme=dark
 questions:
-  - question: Какое свойтсво нужно добавить на странице чтобы создать эффект перехода между страницами?
+  - question: Какое свойтсво нужно добавить в страничный компонент чтобы создать эффект перехода между страницами?
     answers:
       - pageTransition
       - transition

@@ -1,34 +1,34 @@
 ---
-title: Meta Tags and SEO
-description: Nuxt.js lets you define all default `<meta>` tags for your application inside the nuxt.config.js file using the head property. This is very useful for adding a default title and description tag for SEO purposes or for setting the viewport or adding the favicon.
+title: Мета-теги и SEO
+description: Nuxt.js позволяет вам определить все стандартные `<meta>` теги для вашего приложения внутри nuxt.config.js файла используя свойство `head`. Это очень полезно при добавлении стандарных тегов `title` и `description` для SEO либо задания viewport или добавления favicon.
 position: 6
 category: features
 csb_link: https://codesandbox.io/embed/github/nuxt-academy/guides-examples/tree/master/03_features/06_meta_tags_seo?fontsize=14&hidenavigation=1&theme=dark
 questions:
-  - question: Where do you set the title and meta descriptions globally?
+  - question: Где вы задаете мета-теги `title` и `description` глобально?
     answers:
-      - in the page component
-      - in the nuxt.config.js
-      - in the package.json
-    correctAnswer: in the nuxt.config.js
-  - question: Where do you set the title and meta descriptions locally?
+      - в компоненте страницы
+      - в nuxt.config.js
+      - в package.json
+    correctAnswer: в nuxt.config.js
+  - question: Где вы задаете мета-теги `title` и `description` локально?
     answers:
-      - in the page component
-      - in the nuxt.config.js
-      - in the seo component
-    correctAnswer: in the page component
-  - question: In pages, to get access to your data in your title or meta description you use the
+      - в компоненте страницы
+      - в nuxt.config.js
+      - в seo компоненте
+    correctAnswer: в компоненте страницы
+  - question: В компоненте страницы, чтобы использовать данные из data в ваших `title` и `description` вам необходимо использовать
     answers:
-      - meta function
-      - head function
-      - seo function
-    correctAnswer: head function
-  - question: You can load external resources only in the nuxt.config.js
+      - функцию meta
+      - функцию head 
+      - функцию seo
+    correctAnswer: функцию head
+  - question: Вы можете добавить внешние ресурсы только в nuxt.config.js
     answers:
-      - true
-      - false
-    correctAnswer: false
-  - question: To include scripts before the closing body tag use
+      - верно
+      - не верно
+    correctAnswer: не верно
+  - question: Чтобы поместить скрипты до закрывающегося тега `</body>` необходимо использовать
     answers:
       - 'body: true'
       - 'body: false'
@@ -36,27 +36,27 @@ questions:
     correctAnswer: 'body: true'
 ---
 
-Nuxt.js gives you 3 different ways to add meta data to your application:
+Nuxt.js предоставляет вам 3 различных пути добавления мета-тегов в ваше приложение:
 
-1. Globally using the nuxt.config.js
-2. Locally using the head as an object
-3. Locally using the head as a function so that you have access to data and computed properties.
+1. Глобально, используя nuxt.config.js
+2. Локально, используя head как объект
+3. Локально, используя head как функцию, что позволяет вам иметь доступ к data и вычисляемым свойствам.
 
-### Global Settings
+### Глобальные настройки
 
-Nuxt.js lets you define all default `<meta>` tags for your application inside the nuxt.config.js file using the head property. This is very useful for adding a default title and description tag for SEO purposes or for setting the viewport or adding the favicon.
+Nuxt.js позволяет вам определить все стандартные `<meta>` теги для вашего приложения внутри nuxt.config.js файла используя свойство `head`. Это очень полезно при добавлении стандарных тегов `title` и `description` для SEO либо задания viewport или добавления favicon.
 
 ```js{}[nuxt.config.js]
 export default {
   head: {
-    title: 'my website title',
+    title: 'заголовок моего сайта',
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
       {
         hid: 'description',
         name: 'description',
-        content: 'my website description'
+        content: 'описание моего сайта'
       }
     ],
     link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }]
@@ -66,24 +66,24 @@ export default {
 
 <base-alert type="info">
 
-This will give you the same title and description on every page
+Этот код даст вам одинаковые title и description для каждой страницы
 
 </base-alert>
 
-### Local Settings
+### Локальные настройки
 
-You can also add titles and meta for each page using the `head` method inside your script tag on every page.
+Вы также можете добавлять заголовки и мета-теги для каждой страницы используя метод `head` внутри тега script на каждой странице.
 
 ```js{}[pages/index.vue]
 <script>
 export default {
   head: {
-    title: 'Home page',
+    title: 'Главная страница',
     meta: [
       {
         hid: 'description',
         name: 'description',
-        content: 'Home page description'
+        content: 'Описание главной страницы'
       }
     ],
   }
@@ -93,7 +93,7 @@ export default {
 
 <base-alert type="info">
 
-Use `head` as an object to set a title and description only for the home page
+Используйте `head` как объект для задания title и description только для главной страницы
 
 </base-alert>
 
@@ -105,7 +105,7 @@ Use `head` as an object to set a title and description only for the home page
   export default {
     data() {
       return {
-        title: 'Home page'
+        title: 'Главная страница'
       }
     },
     head() {
@@ -115,7 +115,7 @@ Use `head` as an object to set a title and description only for the home page
           {
             hid: 'description',
             name: 'description',
-            content: 'Home page description'
+            content: 'Описание главной страницы'
           }
         ]
       }
@@ -126,35 +126,35 @@ Use `head` as an object to set a title and description only for the home page
 
 <base-alert type="info">
 
-Use `head` as a function to set a title and description only for the home page. By using a function you have access to data and computed properties
+Используйте `head` как функцию для задания title и description только для главной страницы. При использовании функции у вас есть доступ к data и вычисляемым свойствам 
 
 </base-alert>
 
-Nuxt.js uses [vue-meta](https://vue-meta.nuxtjs.org/) to update the document head and meta attributes of your application.
+Nuxt.js использует [vue-meta](https://vue-meta.nuxtjs.org/) для обновления head страниц и мета-тегов вашего приложения.
 
 <base-alert>
 
-To avoid any duplication when used in child components, please give a unique identifier with the `hid` key to the meta description. This way `vue-meta` will know that it has to overwrite the default tag.
+Во избежание дублирования при использовании в дочерних компонентов, пожалуйста задавайте уникальные идентификаторы `hid` для мета description. Так `vue-meta` будет понимать что необходимо перезаписать стандартный тег.
 
 </base-alert>
 
 <base-alert type="next">
 
-Learn more about the options available for `head`, in the [vue-meta documentation](https://vue-meta.nuxtjs.org/api/#metainfo-properties).
+Узнать больше о доступных свойствах `head` можно в [документации vue-meta](https://vue-meta.nuxtjs.org/api/#metainfo-properties)
 
 </base-alert>
 
-## External Resources
+## Внешние ресурсы
 
-You can include external resources such as scripts and fonts by adding them globally to the `nuxt.config.js` or locally in the `head` object or function.
+Вы можете добавлять внешние ресурсы, такие как скрипты/шрифты, добавив их глобально в `nuxt.config.js` или локально в объект или функцию `head`.
 
 <base-alert type="info">
 
-You can also pass each resource an optional `body: true` to include the resource before the closing `</body>` tag.
+Вы можете также передать каждому ресурсу необязательный параметр `body: true` чтоб поместить его до закрывающегося тега `</body>`.
 
 </base-alert>
 
-### Global Settings
+### Глобальные настройки
 
 ```js{}[nuxt.config.js]
 export default {
@@ -174,11 +174,11 @@ export default {
 }
 ```
 
-### Local Settings
+### Локальные настройки
 
 ```html{}[pages/index.vue]
 <template>
-  <h1>About page with jQuery and Roboto font</h1>
+  <h1>Страница "Про нас" с jQuery и шрифтом Roboto</h1>
 </template>
 
 <script>
@@ -209,15 +209,16 @@ export default {
 </style>
 ```
 
-## Resource Hints
+## resourceHints
 
-Adds prefetch and preload links for faster initial page load time.
 
-You may want to only disable this option if you have many pages and routes.
+Добавляйте ссылки с атрибутом prefetch или preload для более быстрой загрузки страниц.
+
+Вы можете отключить эту опцию если у вас много страниц и маршрутов.
 
 <base-alert type="next">
 
-[Resource Hints](/docs/2.x/configuration-glossary/configuration-render#resourcehints)
+[resourceHints](/docs/2.x/configuration-glossary/configuration-render#resourcehints)
 
 </base-alert>
 

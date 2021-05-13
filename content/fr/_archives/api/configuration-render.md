@@ -204,7 +204,7 @@ export default {
 
 // OU
 /*
-  L'exemple suivant autorise Google Analytics, LogRocket.io et Sentry.io pour 
+  L'exemple suivant autorise Google Analytics, LogRocket.io et Sentry.io pour
   la journalisation et le suivi analytique.
 
   Consulter ce blog sur Sentry.io

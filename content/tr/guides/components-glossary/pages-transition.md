@@ -10,7 +10,7 @@ position: 0
 
 - **Type:** `String` veya `Object` veya `Function`
 
-Belirli bir rotaya özel bir geçiş tanımlamak için, sayfa bileşenine `transition` anahtarını eklemeniz yeterlidir. 
+Belirli bir rotaya özel bir geçiş tanımlamak için, sayfa bileşenine `transition` anahtarını eklemeniz yeterlidir.
 
 ```js
 export default {
@@ -32,6 +32,7 @@ export default {
   transition: 'test'
 }
 ```
+
 Nuxt.js, bileşeni aşağıdaki gibi ayarlayabilmek için bu ayarları kullanır:
 
 ```html
@@ -59,20 +60,19 @@ Nuxt.js, bileşeni aşağıdaki gibi ayarlayabilmek için bu ayarları kullanır
 
 `transition` objesi aşağıdaki özelliklere sahip olabilir:
 
-| anahtar                | Tip      | Varsayılan    | tanım                                                                                                                                                                                                                 |
-| ------------------ | --------- | ---------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `name`             | `String`  | `"page"`   | Tüm rota geçişlerine uygulanan geçiş ismidir.                                                                                                                                                                  |
-| `mode`             | `String`  | `"out-in"` | Tüm rotalara uygulanan geçiş modu, [Vue.js belgeleri](https://vuejs.org/v2/guide/transitions.html#Transition-Modes).                                                                                       |
-| `css`              | `Boolean` | `true`     | CSS geçiş sınıflarının uygulanıp uygulanmayacağıdır. Varsayılan olarak `true` değerindedir. Eğer `false` olarak ayarlanırsa, yalnızca bileşen etkinlikleri aracılığıyla kaydedilen JavaScript hooklarını tetikler.                                                                        |
-| `duration`         | `Integer` | n/a        | Geçişte uygulanan süredir (milisaniye cinsinden), bkz. [Vue.js belgeleri](https://vuejs.org/v2/guide/transitions.html#Explicit-Transition-Durations).                                                           |
+| anahtar            | Tip       | Varsayılan | tanım                                                                                                                                                                                                                |
+| ------------------ | --------- | ---------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `name`             | `String`  | `"page"`   | Tüm rota geçişlerine uygulanan geçiş ismidir.                                                                                                                                                                        |
+| `mode`             | `String`  | `"out-in"` | Tüm rotalara uygulanan geçiş modu, [Vue.js belgeleri](https://vuejs.org/v2/guide/transitions.html#Transition-Modes).                                                                                                 |
+| `css`              | `Boolean` | `true`     | CSS geçiş sınıflarının uygulanıp uygulanmayacağıdır. Varsayılan olarak `true` değerindedir. Eğer `false` olarak ayarlanırsa, yalnızca bileşen etkinlikleri aracılığıyla kaydedilen JavaScript hooklarını tetikler.   |
+| `duration`         | `Integer` | n/a        | Geçişte uygulanan süredir (milisaniye cinsinden), bkz. [Vue.js belgeleri](https://vuejs.org/v2/guide/transitions.html#Explicit-Transition-Durations).                                                                |
 | `type`             | `String`  | n/a        | Geçiş bitiş zamanlamasını belirlemek için beklenecek geçiş olaylarının tipini belirtin. Mevcut değerler `"transition"` ve `"animation"`'dır. Varsayılan olarak, daha uzun süreye sahip tipi otomatik olarak algılar. |
-| `enterClass`       | `String`  | n/a        | Geçiş sınıfının başlangıç durumu. Bkz. [Vue.js belgeleri](https://vuejs.org/v2/guide/transitions.html#Custom-Transition-Classes).                                                                             |
-| `enterToClass`     | `String`  | n/a        | Geçiş sınıfının bitiş durumu. Bkz. [Vue.js belgeleri](https://vuejs.org/v2/guide/transitions.html#Custom-Transition-Classes).                                                                                    |
-| `enterActiveClass` | `String`  | n/a        | Tüm geçiş süresi boyunca uygulanan sınıf. Bkz. [Vue.js belgeleri](https://vuejs.org/v2/guide/transitions.html#Custom-Transition-Classes).                                                                |
-| `leaveClass`       | `String`  | n/a        | Geçiş sınıfının başlangıç durumu. Bkz. [Vue.js belgeleri](https://vuejs.org/v2/guide/transitions.html#Custom-Transition-Classes).                                                                             |
-| `leaveToClass`     | `String`  | n/a        | Geçiş için bitiş durumu. Bkz. [Vue.js belgeleri](https://vuejs.org/v2/guide/transitions.html#Custom-Transition-Classes).                                                                                    |
-| `leaveActiveClass` | `String`  | n/a        | Tüm geçiş süresi boyunca uygulanan sınıf. Bkz. [Vue.js belgeleri](https://vuejs.org/v2/guide/transitions.html#Custom-Transition-Classes).                                                                |
-
+| `enterClass`       | `String`  | n/a        | Geçiş sınıfının başlangıç durumu. Bkz. [Vue.js belgeleri](https://vuejs.org/v2/guide/transitions.html#Custom-Transition-Classes).                                                                                    |
+| `enterToClass`     | `String`  | n/a        | Geçiş sınıfının bitiş durumu. Bkz. [Vue.js belgeleri](https://vuejs.org/v2/guide/transitions.html#Custom-Transition-Classes).                                                                                        |
+| `enterActiveClass` | `String`  | n/a        | Tüm geçiş süresi boyunca uygulanan sınıf. Bkz. [Vue.js belgeleri](https://vuejs.org/v2/guide/transitions.html#Custom-Transition-Classes).                                                                            |
+| `leaveClass`       | `String`  | n/a        | Geçiş sınıfının başlangıç durumu. Bkz. [Vue.js belgeleri](https://vuejs.org/v2/guide/transitions.html#Custom-Transition-Classes).                                                                                    |
+| `leaveToClass`     | `String`  | n/a        | Geçiş için bitiş durumu. Bkz. [Vue.js belgeleri](https://vuejs.org/v2/guide/transitions.html#Custom-Transition-Classes).                                                                                             |
+| `leaveActiveClass` | `String`  | n/a        | Tüm geçiş süresi boyunca uygulanan sınıf. Bkz. [Vue.js belgeleri](https://vuejs.org/v2/guide/transitions.html#Custom-Transition-Classes).                                                                            |
 
 Ayrıca sayfa `transition` özelliğinde yöntemler de tanımlayabilirsiniz, bunlar [JavaScript hooks](https://vuejs.org/v2/guide/transitions.html#JavaScript-Hooks) içindir:
 
@@ -94,6 +94,7 @@ export default {
   }
 }
 ```
+
 _Not: Yalnızca JavaScript geçişleri için `css: false` eklemek de iyi bir fikirdir, böylece Vue CSS'i tespit etmeyi atlayabilir. Bu aynı zamanda CSS kurallarının geçişe yanlışlıkla da olsa müdahele etmesini önler._
 
 ### Geçiş Modu

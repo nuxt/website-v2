@@ -3,6 +3,7 @@ title: 'Свойство key'
 description: Задание свойства `key` для внутреннего `<router-view>` компонента
 menu: Свойство Key
 category: components-glossary
+position: 0
 ---
 
 > Задание свойства `key` для внутреннего `<router-view>` компонента

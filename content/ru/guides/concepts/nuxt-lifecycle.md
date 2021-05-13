@@ -126,9 +126,9 @@ questions:
   - Global middleware
   - Layout middleware
   - Route middleware
-- asyncData (блокирующий)
 - Плагины Nuxt на стороне клиента
   - в порядке, указанном в файле nuxt.config.js
+- asyncData (блокирующий)
 - beforeCreate (метод жизненого цикла Vue)
 - created (метод жизненого цикла Vue)
 - новый Fetch (сверху вниз, родственные = паралельны) (неблокирующий)

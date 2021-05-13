@@ -4,6 +4,10 @@ description: Здесь вы найдете информацию по настр
 position: 1
 category: get-started
 csb_link: https://codesandbox.io/embed/github/nuxt-academy/guides-examples/tree/master/01_get_started/01_installation?fontsize=14&hidenavigation=1&theme=dark
+CreateNuxtAppVideo: wHkPjOmJTt0
+CreateNuxtAppVideoTitle: Используя create-nuxt-app
+ManualInstallVideo: mKV_9AIG70E
+ManualInstallVideoTitle: Установка Nuxt вручную
 ---
 
 ## Необходимые условия

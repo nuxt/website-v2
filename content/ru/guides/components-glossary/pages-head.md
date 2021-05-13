@@ -3,6 +3,7 @@ title: 'Метод head'
 description: Nuxt.js использует `vue-meta` для изменения заголовков и `html атрибутов` вашего приложения.
 menu: Метод Head
 category: components-glossary
+position: 0
 ---
 
 > Nuxt.js использует [vue-meta](https://github.com/nuxt/vue-meta) для изменения заголовков и `html атрибутов` вашего приложения.
@@ -39,3 +40,9 @@ category: components-glossary
   }
 </script>
 ```
+
+<base-alert type="info">
+
+Чтобы избежать дубликата meta тэгов в дочернем компоненте, установите уникальный ключ `hid` для ваших meta тэгов ([узнать больше](https://vue-meta.nuxtjs.org/api/#tagidkeyname)).
+
+</base-alert>

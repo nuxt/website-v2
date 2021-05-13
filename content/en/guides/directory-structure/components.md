@@ -1,5 +1,6 @@
 ---
-title: components
+title: Components directory
+menuTitle: components
 description: The components directory contains your Vue.js Components. Components are what makes up the different parts of your page and can be reused and imported into your pages, layouts and even other components.
 position: 3
 category: directory-structure
@@ -126,23 +127,18 @@ Using the lazy prefix you can also dynamically import a component when an event 
   <div>
     <h1>Mountains</h1>
     <LazyMountainsList v-if="show" />
-    <button v-if="!show" @click="showList">Show List</button>
+    <button v-if="!show" @click="show = true">Show List</button>
   </div>
 </template>
 
 <script>
-  export default {
-    data() {
-      return {
-        show: false
-      }
-    },
-    methods: {
-      showList() {
-        this.show = true
-      }
+export default {
+  data() {
+    return {
+      show: false
     }
   }
+}
 </script>
 ```
 

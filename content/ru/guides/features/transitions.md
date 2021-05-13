@@ -47,7 +47,7 @@ questions:
       - layoutTransition
       - layoutTransitions
     correctAnswer: layoutTransition
-  - question: Если вы измените layout на 'my-layout', какой класс вы будете использовать для создания css переходов?
+  - question: Если вы измените стандартный шаблон layout на 'my-layout', какой класс вы будете использовать для создания css переходов?
     answers:
       - layout
       - my-layout

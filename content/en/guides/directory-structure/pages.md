@@ -1,5 +1,6 @@
 ---
-title: pages
+title: Pages directory
+menuTitle: pages
 description: The `pages` directory contains your Application Views and Routes. Nuxt.js reads all the `.vue` files inside this directory and automatically creates the  router configuration for you.
 position: 10
 category: directory-structure

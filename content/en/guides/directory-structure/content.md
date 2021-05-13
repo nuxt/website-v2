@@ -1,5 +1,6 @@
 ---
-title: content
+title: Content directory
+menuTitle: content
 description: Empower your Nuxt.js application with `@nuxt/content` module where you can write in a `content/` directory and fetch your Markdown, JSON, YAML and CSV files through a MongoDB like API, acting as a **Git-based Headless CMS**.
 position: 4
 category: directory-structure
@@ -149,7 +150,7 @@ You can use Vue components directly in your markdown files. You will however nee
 
 ```html{}[components/global/InfoBox.vue]
 <template>
-  <div class="bg-blue-500 text-white p-4 mb-4">
+  <div class="p-4 mb-4 text-white bg-blue-500">
     <p><slot name="info-box">default</slot></p>
   </div>
 </template>

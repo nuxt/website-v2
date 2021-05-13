@@ -1,5 +1,6 @@
 ---
-title: plugins
+title: Plugins directory
+menuTitle: plugins
 description: The `plugins` directory contains your Javascript plugins that you want to run before instantiating the root Vue.js Application.
 position: 11
 category: directory-structure

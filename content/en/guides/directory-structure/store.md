@@ -1,5 +1,6 @@
 ---
-title: store
+title: Store directory
+menuTitle: store
 description: The `store` directory contains your Vuex Store files. The Vuex Store comes with Nuxt.js out of the box but is disabled by default. Creating an `index.js`  file in this directory enables the store.
 position: 13
 category: directory-structure

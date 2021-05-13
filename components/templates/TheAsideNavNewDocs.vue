@@ -1,12 +1,48 @@
 <template>
   <aside
-    class="opacity-transition block bg-gray-100 mt-8 -mx-4 lg:bg-transparent lg:mt-0 lg:mx-0 lg:inset-0 z-90 lg:mb-0 lg:static lg:h-auto lg:overflow-y-visible lg:pt-0 lg:w-1/4 lg:block"
+    class="
+      block
+      mt-8
+      -mx-4
+      bg-gray-100
+      opacity-transition
+      lg:bg-transparent
+      lg:mt-0
+      lg:mx-0
+      lg:inset-0
+      z-90
+      lg:mb-0
+      lg:static
+      lg:h-auto
+      lg:overflow-y-visible
+      lg:pt-0
+      lg:w-1/4
+      lg:block
+    "
   >
     <div
-      class="h-full overflow-y-auto scrolling-touch text-center lg:text-left lg:h-auto lg:block lg:relative lg:sticky lg:top-24"
+      class="
+        h-full
+        overflow-y-auto
+        scrolling-touch
+        text-center
+        lg:text-left
+        lg:h-auto
+        lg:block
+        lg:relative
+        lg:sticky
+        lg:top-24
+      "
     >
       <nav
-        class="pt-8 lg:overflow-y-auto lg:block lg:pl-0 lg:pr-8 sticky?lg:max-h-(screen-24)"
+        class="
+          pt-8
+          lg:overflow-y-auto
+          lg:block
+          lg:pl-0
+          lg:pr-8
+          sticky?lg:max-h-(screen-24)
+        "
         :class="{ hidden: !showNav }"
       >
         <div v-for="(sublinks, group) in sortedLinks" :key="`links-${group}`">
@@ -17,7 +53,18 @@
               name: 'docs-2.x-book-slug',
               params: { book: group, slug: sublinks[0].slug }
             }"
-            class="flex items-center uppercase font-medium text-light-onSurfaceSecondary dark:text-dark-onSurfaceSecondary pb-2 transition-colors duration-300 ease-linear"
+            class="
+              flex
+              items-center
+              pb-2
+              font-medium
+              uppercase
+              transition-colors
+              duration-300
+              ease-linear
+              text-light-onSurfaceSecondary
+              dark:text-dark-onSurfaceSecondary
+            "
             :class="{
               'hover:text-nuxt-lightgreen mb-4 block':
                 $route.params.book !== group,
@@ -35,11 +82,25 @@
             <li
               v-for="(link, index) in sublinks"
               :key="index"
-              class="text-light-onSurfacePrimary dark:text-dark-onSurfacePrimary"
+              class="
+                text-light-onSurfacePrimary
+                dark:text-dark-onSurfacePrimary
+              "
             >
               <NuxtLink
-                class="p-2 pl-4 flex rounded hover:text-nuxt-lightgreen dark:hover:text-nuxt-lightgreen transition-colors duration-300 ease-linear justify-between"
-                exact-active-class="text-nuxt-lightgreen bg-green-100 dark:bg-green-800 dark:text-white"
+                class="
+                  flex
+                  justify-between
+                  p-2
+                  pl-4
+                  transition-colors
+                  duration-300
+                  ease-linear
+                  rounded
+                  hover:text-nuxt-lightgreen
+                  dark:hover:text-nuxt-lightgreen
+                "
+                exact-active-class="bg-green-100 text-nuxt-lightgreen dark:bg-green-800 dark:text-white"
                 :to="toLink(group, link)"
               >
                 <template v-if="link.menu">
@@ -58,22 +119,43 @@
                   </AppLabel>
                   <AppLabel
                     v-if="link.target === 'Static & Server'"
-                    class="text-purple-500 dark:text-purple-300 text-ss align-middle ml-2 px-1 py-0 rounded-sm lowercase"
+                    class="
+                      px-1
+                      py-0
+                      ml-2
+                      text-purple-500
+                      lowercase
+                      align-middle
+                      rounded-sm
+                      dark:text-purple-300
+                      text-ss
+                    "
                   >
                     {{ link.target }}
                   </AppLabel>
                 </template>
                 <template v-else>
-                  {{ link.title }}
+                  {{ link.menuTitle || link.title }}
                 </template>
               </NuxtLink>
             </li>
           </ul>
         </div>
-        <p class="uppercase font-bold pb-6">
+        <p class="pb-6 font-bold uppercase">
           <NuxtLink
             to="/docs/release-notes"
-            class="block bg-gray-100 dark:bg-dark-surface p-2 rounded border dark:border-gray-900 text-sm text-light-onSurfaceSecondary dark:text-dark-onSurfaceSecondary"
+            class="
+              block
+              p-2
+              text-sm
+              bg-gray-100
+              border
+              rounded
+              dark:bg-dark-surface
+              dark:border-gray-900
+              text-light-onSurfaceSecondary
+              dark:text-dark-onSurfaceSecondary
+            "
             active-class=""
             exact-active-class=""
           >

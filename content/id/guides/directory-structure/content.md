@@ -1,6 +1,6 @@
 ---
 title: content
-description: Berdayakan aplikasi Nuxt.js Anda dengan modul `@nuxtjs/content` tempat Anda dapat menulis di direktori `content/` dan mengambil berkas Markdown, JSON, YAML, dan CSV melalui API mirip MongoDB, yang bertindak sebagai **Git-based Headless CMS**.
+description: Berdayakan aplikasi Nuxt.js Anda dengan modul `@nuxt/content` tempat Anda dapat menulis di direktori `content/` dan mengambil berkas Markdown, JSON, YAML, dan CSV melalui API mirip MongoDB, yang bertindak sebagai **Git-based Headless CMS**.
 position: 4
 category: directory-structure
 img: /docs/2.x/nuxt-content.svg
@@ -65,7 +65,7 @@ questions:
     correctAnswer: true
 ---
 
-Berdayakan aplikasi Nuxt.js Anda dengan modul `@nuxtjs/content` tempat Anda dapat menulis di direktori `content/` dan mengambil berkas _Markdown_, _JSON_, _YAML_, dan _CSV_ melalui _API_ mirip MongoDB, yang bertindak sebagai **Git-based Headless CMS**.
+Berdayakan aplikasi Nuxt.js Anda dengan modul `@nuxt/content` tempat Anda dapat menulis di direktori `content/` dan mengambil berkas _Markdown_, _JSON_, _YAML_, dan _CSV_ melalui _API_ mirip MongoDB, yang bertindak sebagai **Git-based Headless CMS**.
 
 <app-modal :src="img" :alt="imgAlt"></app-modal>
 

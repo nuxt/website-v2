@@ -265,7 +265,7 @@ La méthode `extend` est appelée deux fois, une fois pour le bundle du client e
 
 ### Personnaliser la configuration des fragments
 
-Nous souhaiterions peut-être customiser un peu la [configuration d'optimisation](/guides/configuration-glossary/configuration-build#optimization), en évitant de ré-écrire l'objet par défaut.
+Nous souhaiterions peut-être customiser un peu la [configuration d'optimisation](/docs/2.x/configuration-glossary/configuration-build#optimization), en évitant de ré-écrire l'objet par défaut.
 
 ```js{}[nuxt.config.js]
 export default {
@@ -376,7 +376,7 @@ L'`axios-module` ne peut pas être utilisé dans le fichier `nuxt.config.js`. No
 
 <base-alert type="next">
 
-Le fichier `nuxt.config.js` a bien plus d'option de customisation et de configuration ! Se référer aux clés présentes dans le [glossaire de configuration](/guides/configuration-glossary/configuration-build).
+Le fichier `nuxt.config.js` a bien plus d'option de customisation et de configuration ! Se référer aux clés présentes dans le [glossaire de configuration](/docs/2.x/configuration-glossary/configuration-build).
 
 </base-alert>
 

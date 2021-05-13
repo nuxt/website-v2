@@ -228,6 +228,13 @@ export default {
             img: 'backmarket.svg',
             url: 'https://www.backmarket.com',
             class: 'h-8'
+          },
+          {
+            name: 'LINE',
+            img: 'line.png',
+            url:
+              'https://linecorp.com/?utm_source=nuxtjs&utm_medium=cases&utm_campaign=cases_list',
+            class: 'h-8'
           }
         ],
         fr: [
@@ -402,6 +409,12 @@ export default {
             name: 'ZEN Architects',
             img: 'zenarchitects.svg',
             url: 'https://app.zenadvisor.io/docs',
+            class: 'h-10'
+          },
+          {
+            name: 'hey',
+            img: 'hey.svg',
+            url: 'https://hey.jp/',
             class: 'h-10'
           }
         ],

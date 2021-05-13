@@ -30,7 +30,7 @@
         class="block mb-8"
       />
       <SponsorsBlock />
-      <AdsCarbon :key="$route.params.slug" />
+      <AdsBlock />
     </AffixBlock>
   </div>
 </template>

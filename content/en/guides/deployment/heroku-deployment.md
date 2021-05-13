@@ -17,24 +17,19 @@ We recommend you read the [Heroku documentation for Node.js](https://devcenter.h
   </a>
 </div>
 
-First, we want our application to listen on the host `0.0.0.0` and run in production mode:
+You can set up and configure your app via the [Heroku dashboard](https://devcenter.heroku.com/articles/heroku-dashboard) or the [Heroku CLI](https://devcenter.heroku.com/articles/heroku-cli).
+
+First, we create our app. Then we add the Node.js [buildpack](https://devcenter.heroku.com/articles/buildpacks) and configure the app to listen on the host `0.0.0.0`:
 
 ```bash
+heroku create myapp
+heroku buildpacks:set heroku/nodejs
 heroku config:set HOST=0.0.0.0
-heroku config:set NODE_ENV=production
 ```
 
-You should see this in your Heroku dashboard (Settings section):
+Your app's Settings section on the Heroku dashboard should contain this:
 
-![nuxt config vars Heroku](https://i.imgur.com/EEKl6aS.png)
-
-Heroku uses a [Procfile](https://devcenter.heroku.com/articles/procfile) (name the file `Procfile` with no file extension) that specifies the commands that are executed by the apps dynos. To start the Procfile will be very simple, and needs to contain the following line:
-
-```
-web: nuxt start
-```
-
-This will instruct run the `nuxt start` command and tell Heroku to direct external HTTP traffic to it.
+![nuxt config vars Heroku](https://user-images.githubusercontent.com/23453691/116850762-81ea0e00-abf1-11eb-9f70-260721a1d525.png)
 
 Finally, we can push the app on Heroku with:
 
@@ -49,5 +44,7 @@ git push heroku develop:master
 ```
 
 where `develop` is the name of your branch.
+
+You can optionally configure automatic deploys from a selected branch of your app's GitHub repository in the Deploy section of your app in the Heroku dashboard.
 
 Voilà! Your Nuxt.js application is now hosted on Heroku!

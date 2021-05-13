@@ -339,7 +339,7 @@ The content module comes with a powerful query builder API similar to MongoDB wh
 
 <base-alert type="next">
 
-See the [content module docs](https://content.nuxtjs.org/fetching#api) for more details
+See the [content module docs](https://content.nuxtjs.org/advanced/#api-endpoint) for more details
 
 </base-alert>
 
@@ -359,7 +359,7 @@ In the case of articles, the content can be used to generate news feeds using [@
 
 <base-alert type="next">
 
-See the [content module docs](https://content.nuxtjs.org/advanced#integration-with-nuxtjsfeed) for more details
+See the [content module docs](https://content.nuxtjs.org/integrations/#nuxtjsfeed) for more details
 
 </base-alert>
 

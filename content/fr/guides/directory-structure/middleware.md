@@ -70,9 +70,9 @@ questions:
 
 Le répertoire `middleware` contient les middlewares de l'application. Un middleware nous permet de définir des fonctions personnalisées qui peuvent s'exécuter avant de render une page ou un groupe de pages (layout).
 
-Les middlewares partagés devraient être placés dans le répertoire `middleware/`. Le nom du fichiers sera aussi le nom du middleware (un fichier `middleware/auth.js` sera appelé avec middleware `auth`). On peut aussi utiliser des middlewares spécifiques à des pages en utilisant directement une fonction, voir [middlewares anonymes](/guides/components-glossary/pages-middleware#anonymous-middleware).
+Les middlewares partagés devraient être placés dans le répertoire `middleware/`. Le nom du fichiers sera aussi le nom du middleware (un fichier `middleware/auth.js` sera appelé avec middleware `auth`). On peut aussi utiliser des middlewares spécifiques à des pages en utilisant directement une fonction, voir [middlewares anonymes](/docs/2.x/components-glossary/pages-middleware#anonymous-middleware).
 
-Un middleware reçoit le [context](/guides/internals-glossary/context) en tant que premier argument.
+Un middleware reçoit le [context](/docs/2.x/internals-glossary/context) en tant que premier argument.
 
 ```js{}[middleware/user-agent.js]
 export default function (context) {

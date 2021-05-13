@@ -61,7 +61,7 @@ npm run dev
 - **nuxt generate** -（必要に応じて）アプリケーションをビルドし、すべてのルートを HTML ファイルとして生成し、`dist/` ディレクトリに静的にエクスポートします（静的ホスティングに使用されます）。
 - **nuxt start** - 静的ホスティング（Netlify、Vercel、Surge など）と同じように `dist/` ディレクトリを提供します。デプロイ前のテストに最適です。
 
-## Webpackの設定を検査
+## Webpack の設定を検査
 
 [vue inspect](https://cli.vuejs.org/guide/webpack.html#inspecting-the-project-s-webpack-config) のように、nuxt がプロジェクトをビルドする際に使用する webpack の設定を検査することができます。
 
@@ -92,7 +92,7 @@ Nuxt.js では、サーバーデプロイと静的デプロイのどちらかを
 
 ### サーバー開発
 
-SSR アプリケーションをデプロイするためにデフォルト値である `target: server` を使います。
+SSR アプリケーションをデプロイするためにデフォルト値である `target: 'server'` を使います。
 
 <code-group>
   <code-block label="Yarn" active>
@@ -142,7 +142,7 @@ npm run start
 
 Nuxt.js を使うと、どんな静的なホスティング上でもウェブアプリケーションをホストすることができます。
 
-静的に生成されたサイトをデプロイするには、`nuxt.config.js` に `target：static` を指定していることを確認してください（Nuxt v2.13 以上）。
+静的に生成されたサイトをデプロイするには、`nuxt.config.js` に `target：static` を指定していることを確認してください（Nuxt v2.13 以上）:
 
 ```js{}[nuxt.config.js]
 export default {

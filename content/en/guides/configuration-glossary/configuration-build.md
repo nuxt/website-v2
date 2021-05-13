@@ -748,6 +748,8 @@ Starting with `v2.9.0`, you can also use a function to conditionally transpile, 
 }
 ```
 
+In this example, `ky` will be transpiled by Babel if Nuxt is not in [modern mode](/docs/2.x/configuration-glossary/configuration-modern).
+
 ## vueLoader
 
 > Note: This config has been removed since Nuxt 2.0, please use [`build.loaders.vue`](#loaders)instead.

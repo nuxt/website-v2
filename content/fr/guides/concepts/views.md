@@ -74,7 +74,7 @@ Il y a beaucoup de propriétés possibles sur un composant Page comme le `head` 
 
 <base-alert type="next">
 
-Se référer à [la documentation sur la structure des répertoires](/guides/directory-structure/nuxt) pour en apprendre davantage sur les propriétés que nous pouvons utiliser sur notre page.
+Se référer à [la documentation sur la structure des répertoires](/docs/2.x/directory-structure/nuxt) pour en apprendre davantage sur les propriétés que nous pouvons utiliser sur notre page.
 
 </base-alert>
 
@@ -94,7 +94,7 @@ Nous pouvons définir un layout par défaut en ajoutant un fichier `default.vue`
 
 <base-alert type="next">
 
-Se référer au [composant Nuxt](/guides/features/nuxt-components) dans le chapitre des composants.
+Se référer au [composant Nuxt](/docs/2.x/features/nuxt-components) dans le chapitre des composants.
 
 </base-alert>
 

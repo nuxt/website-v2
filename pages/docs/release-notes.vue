@@ -23,7 +23,7 @@
           </div>
           <AffixBlock>
             <SponsorsBlock />
-            <AdsCarbon key="release-notes" />
+            <AdsBlock />
           </AffixBlock>
         </div>
       </div>

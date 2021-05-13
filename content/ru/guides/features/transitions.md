@@ -35,7 +35,7 @@ questions:
       - 'styles: []'
       - 'transitions: []'
     correctAnswer: 'css: []'
-  - question: Какой класс по умолчанию используется для переходов между layouts?
+  - question: Какой класс по умолчанию используется для переходов между шаблонами?
     answers:
       - layout
       - layout-transition

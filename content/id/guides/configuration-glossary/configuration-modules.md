@@ -1,6 +1,6 @@
 ---
 title: 'Properti modules'
-description: Modul adalah ekstensi dari Nuxt.js yang dapat menambah fungsionalitas utama dari Nuxt.js dan menambah integrasi tanpa batas. 
+description: Modul adalah ekstensi dari Nuxt.js yang dapat menambah fungsionalitas utama dari Nuxt.js dan menambah integrasi tanpa batas.
 menu: modules
 category: configuration-glossary
 position: 19
@@ -34,7 +34,7 @@ Pengembang modul biasanya menyediakan langkah-langkah tambahan yang perlu dilaku
 
 Nuxt.js akan berusaha untuk mencari setiap modul dalam _array_ `modules` menggunakan _require path_ milik node (yang ada dalam `node_modules`) dan akan mencari pada direktori yang ditunjuk oleh `srcDir` apabila alias `~` digunakan. Modul akan dieksekusi secara sekuensial sehingga urutan penulisan menjadi penting.
 
-Modul harus mengekspor sebuah fungsi untuk meningkatkan kemampuan nuxt saat pembangunan kode program / _runtime_ dan dapat mengembalikan sebuah _Promise_ sampai pekerjaan yang modul tersebut lakukan selesai. Sebagai catatan, modul dibutuhkan saat _runtime_, sehingga kode dalam modul harus sudah ditranspilasi apabila Anda bergantung pada fitur ES6 modern. 
+Modul harus mengekspor sebuah fungsi untuk meningkatkan kemampuan nuxt saat pembangunan kode program / _runtime_ dan dapat mengembalikan sebuah _Promise_ sampai pekerjaan yang modul tersebut lakukan selesai. Sebagai catatan, modul dibutuhkan saat _runtime_, sehingga kode dalam modul harus sudah ditranspilasi apabila Anda bergantung pada fitur ES6 modern.
 
 Anda dapat membaca pada [panduan modul](/docs/2.x/directory-structure/modules) untuk mencari informasi lebih lanjut tentang cara kerja modul atau tertarik untuk mengembangkan modul Anda sendiri. Selain itu, kami juga sudah menyediakan bagian [modul](https://github.com/nuxt-community/awesome-nuxt#modules) resmi yang mampu menyajikan daftar modul yang layak digunakan dalam kode produksi yang dibuat oleh komunitas Nuxt.
 

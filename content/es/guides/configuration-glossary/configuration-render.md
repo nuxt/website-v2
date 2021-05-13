@@ -116,7 +116,7 @@ Es posible que solo desee deshabilitar esta opción si tiene muchas páginas y r
 ## ssr
 
 - Tipo: `Boolean`
-  - Por defecto: `true` en modo universal y `false`  en modo spa
+  - Por defecto: `true` en modo universal y `false` en modo spa
 
 > Habilitar la representación SSR
 

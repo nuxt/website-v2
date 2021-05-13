@@ -18,6 +18,7 @@ Si vous souhaitez déployer un site statique sur Vercel, aucune configuration n'
 Pour déployer un runtime Nuxt sans serveur avec [Vercel](https://vercel.com), l'équipe et les contributeurs Nuxt.js ont produit un [@nuxtjs/vercel-builder](https://github.com/nuxt/vercel-builder) package.
 
 Vous n'avez qu'à configurer le fichier `vercel.json`:
+
 ```json
 {
   "builds": [

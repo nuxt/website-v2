@@ -32,7 +32,7 @@ Visit the [Qovery dashboard](https://console.qovery.com) to create an account if
 
 ### 2. Create a project
 
-Click on "Create a new project" and give a name to your project. 
+Click on "Create a new project" and give a name to your project.
 
 Click on "Next".
 

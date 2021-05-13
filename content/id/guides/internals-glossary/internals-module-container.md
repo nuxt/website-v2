@@ -28,7 +28,7 @@ this.plugin('ready', async moduleContainer => {
 })
 ```
 
-| Plugin  | Argumen       | Kapan                                                 |
+| Plugin  | Argumen         | Kapan                                                |
 | ------- | --------------- | ---------------------------------------------------- |
 | `ready` | moduleContainer | Semua modul di `nuxt.config.js` telah diinisialisasi |
 
@@ -105,7 +105,7 @@ Jalan pintas untuk `addModule(moduleOpts, true)`
 
 Anda dapat mendaftarkan _hooks_ pada siklus hidup Nuxt tertentu.
 
-| Hook             | Argumen                  | Kapan                                                                                  |
-| ---------------- | -------------------------- | ------------------------------------------------------------------------------------- |
+| Hook             | Argumen                    | Kapan                                                                                           |
+| ---------------- | -------------------------- | ----------------------------------------------------------------------------------------------- |
 | `modules:before` | (moduleContainer, options) | Dipanggil sebelum membuat kelas ModuleContainer, berguna untuk meng-_overload_ metode dan opsi. |
-| `modules:done`   | (moduleContainer)          | Dipanggil setelah semua modul dimuat.                                             |
+| `modules:done`   | (moduleContainer)          | Dipanggil setelah semua modul dimuat.                                                           |

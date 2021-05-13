@@ -14,7 +14,7 @@ csb_link: https://codesandbox.io/embed/github/nuxt-academy/examples/tree/master/
 
 <base-alert type="next">
 
-Obtén más información en el capítulo  [middleware](/docs/2.x/directory-structure/middleware#anonymous-middleware) del libro de Estructura del Directorio.
+Obtén más información en el capítulo [middleware](/docs/2.x/directory-structure/middleware#anonymous-middleware) del libro de Estructura del Directorio.
 
 </base-alert>
 

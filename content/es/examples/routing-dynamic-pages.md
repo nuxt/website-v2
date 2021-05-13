@@ -1,6 +1,6 @@
 ---
 title: Páginas Dinámicas
-description: Haciendo uso de páginas dinámicas para obtener datos de una API e ingresarlos en esas páginas 
+description: Haciendo uso de páginas dinámicas para obtener datos de una API e ingresarlos en esas páginas
 position: 104
 category: routing
 csb_link: https://codesandbox.io/embed/github/nuxt-academy/examples/tree/master/routing/dynamic-pages?fontsize=14&hidenavigation=1&module=%2Fpages%2F_continent%2F_mountain.vue&theme=dark&view=editor

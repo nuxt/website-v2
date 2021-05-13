@@ -35,7 +35,7 @@ questions:
     correctAnswer: false
 ---
 
-Direktori `.nuxt` bisa disebut juga sebagai *direktori build*. Direktori ini dibuat secara dinamis dan disembunyikan secara default. Di dalam direktori ini, Anda dapat menemukan file yang dibuat secara otomatis saat menjalankan `nuxt dev` atau menggunakan artefak build ketika menjalankan` nuxt build`. Memodifikasi file-file ini sangat bagus untuk keperluan debugging, tetapi ingat bahwa itu adalah file yang dihasilkan setelah Anda menjalankan perintah `dev` atau` build`. Jadi apapun yang disimpan di `.nuxt` akan dibuat ulang.
+Direktori `.nuxt` bisa disebut juga sebagai _direktori build_. Direktori ini dibuat secara dinamis dan disembunyikan secara default. Di dalam direktori ini, Anda dapat menemukan file yang dibuat secara otomatis saat menjalankan `nuxt dev` atau menggunakan artefak build ketika menjalankan` nuxt build`. Memodifikasi file-file ini sangat bagus untuk keperluan debugging, tetapi ingat bahwa itu adalah file yang dihasilkan setelah Anda menjalankan perintah `dev` atau` build`. Jadi apapun yang disimpan di `.nuxt` akan dibuat ulang.
 
 <base-alert>
 

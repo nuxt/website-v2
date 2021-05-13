@@ -13,13 +13,13 @@ questions:
       - pages
     correctAnswer: content
   - question: Komponen apa yang Anda gunakan dalam template Anda untuk menampilkan badan halaman markdown?
-    answers: 
+    answers:
       - <markdown>
       - <nuxt>
       - <nuxt-content>
     correctAnswer: <nuxt-content>
   - question: Kelas apa yang ditambahkan secara otomatis sehingga Anda dapat mengatur gaya markdown Anda?
-    answers: 
+    answers:
       - .content
       - .nuxt-content
       - .markdown
@@ -30,7 +30,7 @@ questions:
       - false
     correctAnswer: true
   - question: Manakah yang Anda gunakan untuk mendaftar, memfilter, dan mencari konten Anda?
-    answers: 
+    answers:
       - $nuxt-content()
       - $content()
       - $nuxt()
@@ -42,7 +42,7 @@ questions:
       - .slug()
     correctAnswer: .surround(slug)
   - question: Kelas PrismJS diterapkan ke blok kode secara default?
-    answers: 
+    answers:
       - true
       - false
     correctAnswer: true
@@ -53,13 +53,13 @@ questions:
       - http://localhost:3000/api
     correctAnswer: http://localhost:3000/_content
   - question: Tag judul mana yang digunakan untuk membuat daftar isi
-    answers: 
+    answers:
       - h1 dan h2
       - h2 dan h3
       - h1 dan h2 dan h3
     correctAnswer: h2 dan h3
   - question: Anda dapat menggunakan modul konten dengan pembuatan situs statis
-    answers: 
+    answers:
       - true
       - false
     correctAnswer: true
@@ -120,7 +120,6 @@ Komponen `<nuxt-content>` akan secara otomatis menambahkan kelas `.nuxt-content`
 Lihat [dokumen modul konten](https://content.nuxtjs.org/displaying#style) untuk mengetahui detail selengkapnya
 
 </base-alert>
-
 
 ### Handles Markdown, CSV, YAML, JSON(5)
 

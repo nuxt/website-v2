@@ -10,7 +10,7 @@ csb_link: https://codesandbox.io/embed/github/nuxt-academy/examples/tree/master/
 
 `pages/named-middleware.vue` contiene una propiedad `middleware` con valor `auth` la cual es llamada antes de que el usuario acceda a la ruta.
 
-`middleware/auth.js` comprueba que el usuario está autenticado y si no lo está le redireccionará a la página de autentificación. 
+`middleware/auth.js` comprueba que el usuario está autenticado y si no lo está le redireccionará a la página de autentificación.
 
 `pages/auth.vue` utiliza el store para autenticar al usuario.
 

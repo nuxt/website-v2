@@ -396,7 +396,9 @@ This option lets you define custom names of your Nuxt.js directories.
 
 ```js{}[nuxt.config.js]
 export default {
-  pages: 'views' // Nuxt will look for the views/ instead of the pages/ folder
+  dir: {
+    pages: 'views' // Nuxt will look for the views/ instead of the pages/ folder
+  }
 }
 ```
 

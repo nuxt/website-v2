@@ -217,7 +217,7 @@ export default {
 
 ### Свойство layoutTransition
 
-The layout transition is used to set the default properties of the layout transitions.(непонял о чем тут)
+Свойство layoutTransition используется для задания стандартных настроек анимации перехода между шаблонами.
 
 Настройки по умолчанию для переходов между макетами:
 

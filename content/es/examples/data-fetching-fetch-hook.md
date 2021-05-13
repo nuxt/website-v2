@@ -1,6 +1,6 @@
 ---
 title: Hook fetch
-description: En este ejemplo utilizamos el hook fetch en componentes y páginas para obtener datos 
+description: En este ejemplo utilizamos el hook fetch en componentes y páginas para obtener datos
 position: 2
 category: dataFetching
 csb_link: https://codesandbox.io/embed/github/nuxt-academy/examples/tree/master/data-fetching/fetch-hook?fontsize=14&hidenavigation=1&module=%2Fcomponents%2FMountains.vue&theme=dark&view=editor

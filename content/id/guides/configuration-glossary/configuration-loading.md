@@ -63,8 +63,8 @@ Daftar properti yang dapat diubah nilainya untuk memodifikasi bar proses bawaan 
 
 **Komponen Anda harus mengekspos beberapa _method_ berikut:**
 
-| Method          | Harus ada | Deskripsi                                                                                                                                              |
-| --------------- | --------- | ------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| Method          | Harus ada | Deskripsi                                                                                                                                                 |
+| --------------- | --------- | --------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | `start()`       | Harus ada | Dieksekusi saat halaman berganti, di dalam _method_ ini Anda dapat menuliskan kode untuk menampilkan komponen Anda                                        |
 | `finish()`      | Harus ada | Dieksekusi saat halaman sudah termuat (dan data sudah selesai ditarik), di dalam _method_ Anda ini dapat menulis kode untuk menyembunyikan komponen Anda. |
 | `fail(error)`   | Opsional  | Dieksekusi saat halaman tidak dapat dimuat (misal terdapat galat saat proses penarikan data)                                                              |

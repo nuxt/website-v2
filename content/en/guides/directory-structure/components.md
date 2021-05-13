@@ -163,7 +163,7 @@ The component name will be based on its own path directory and filename. Therefo
 <BaseFooButton />
 ```
 
-However, if you want to use a custom directory structure that should not be part of the component name, you can explicitly specify these directories: 
+However, if you want to use a custom directory structure that should not be part of the component name, you can explicitly specify these directories:
 
 ```bash
 components/
@@ -186,4 +186,5 @@ And now in your template you can use `FooButton` instead of `BaseFooButton`.
 ```html{}[pages/index.vue]
 <FooButton />
 ```
+
 <base-alert type="next">Learn more about the [components module](/blog/improve-your-developer-experience-with-nuxt-components).</base-alert>

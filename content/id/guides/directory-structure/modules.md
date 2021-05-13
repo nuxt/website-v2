@@ -6,20 +6,20 @@ category: directory-structure
 csb_link: https://codesandbox.io/embed/github/nuxt-academy/guides-examples/tree/master/04_directory_structure/10_modules?fontsize=14&hidenavigation=1&theme=dark
 img: /docs/2.x/plugins.jpg
 imgAlt: modules-servermiddleware-plugins-in-nuxt-js
-questions: 
-  - question: Kapan modul dipanggil? 
-    answers: 
+questions:
+  - question: Kapan modul dipanggil?
+    answers:
       - sebelum Nuxt.js dimulai
       - saat Nuxt.js dijalankan
       - setelah Nuxt.js dimulai
     correctAnswer: sebelum Nuxt.js dimulai
   - question: Modul Nuxt.js dapat digabungkan ke dalam paket npm
-    answers: 
+    answers:
       - true
       - false
     correctAnswer: true
   - question: Di berkas nuxt.config.js Anda, di bawah properti apa Anda menambahkan modul?
-    answers: 
+    answers:
       - nuxtModules
       - modules
       - plugins
@@ -30,37 +30,37 @@ questions:
       - false
     correctAnswer: true
   - question: Di mana Anda harus menambahkan modul yang hanya diperlukan selama pengembangan dan waktu pembuatan?
-    answers: 
+    answers:
       - modules
       - build
       - buildModules
     correctAnswer: buildModules
   - question: Apa sebenarnya modul itu?
-    answers: 
+    answers:
       - arrays
       - functions
       - plugins
     correctAnswer: functions
   - question: Apa yang kita gunakan ketika kita ingin melakukan sesuatu hanya pada kondisi tertentu dan tidak hanya selama inisialisasi Nuxt.js?
-    answers: 
+    answers:
       - plugins
       - hooks
       - asyncData
     correctAnswer: hooks
   - question: modul bisa
-    answers: 
+    answers:
       - hanya digunakan sebagai paket npm
       - hanya dapat langsung disertakan dalam kode sumber proyek Anda
       - keduanya
     correctAnswer: keduanya
   - question: Baris mana yang diperlukan jika Anda menerbitkan modul Anda sebagai paket npm?
-    answers: 
+    answers:
       - module.exports
       - module.exports.meta
       - module.exports.module
     correctAnswer: module.exports.meta
   - question: Anda dapat memberi tahu Nuxt.js untuk memuat modul dengan parameter opsional sebagai opsi
-    answers: 
+    answers:
       - true
       - false
     correctAnswer: true

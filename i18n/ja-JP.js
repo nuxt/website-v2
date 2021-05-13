@@ -38,8 +38,7 @@ module.exports = {
       {
         name: 'ビデオコース',
         icon: 'video',
-        href:
-          'https://masteringnuxt.com/?utm_source=nuxt&utm_medium=link&utm_campaign=navbar_link'
+        href: 'https://masteringnuxt.com/?utm_source=nuxt&utm_medium=link&utm_campaign=navbar_link'
       }
     ],
     search: {
@@ -230,8 +229,7 @@ module.exports = {
       start: 'チャットを始める',
       partner: {
         pre: '私たちはこれらのサービスを提供するために',
-        post:
-          'と提携しましたので、できるだけ早くサポートすることに集中できます。'
+        post: 'と提携しましたので、できるだけ早くサポートすることに集中できます。'
       }
     },
     entreprise: {
@@ -276,8 +274,7 @@ module.exports = {
     docs: '間違いを見つけた、またはドキュメントに貢献したいですか？',
     blog: '間違いを見つけた、またはこのブログ投稿に貢献したいですか？',
     edit_on_github: 'GitHub でこのページを編集する',
-    msg1:
-      'このページへの貢献は受け付けていません。もし貢献したい場合は新しいドキュメントをチェックアウトしてください',
+    msg1: 'このページへの貢献は受け付けていません。もし貢献したい場合は新しいドキュメントをチェックアウトしてください',
     link: '新しいドキュメント'
   },
   example: {

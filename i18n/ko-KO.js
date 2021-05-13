@@ -38,8 +38,7 @@ module.exports = {
       {
         name: 'Video Courses',
         icon: 'video',
-        href:
-          'https://masteringnuxt.com/?utm_source=nuxt&utm_medium=link&utm_campaign=navbar_link'
+        href: 'https://masteringnuxt.com/?utm_source=nuxt&utm_medium=link&utm_campaign=navbar_link'
       }
     ],
     search: {
@@ -230,8 +229,7 @@ module.exports = {
       start: 'Start chat',
       partner: {
         pre: 'We partnered with',
-        post:
-          'to offer these services so we can focus on helping you as fast as possible.'
+        post: 'to offer these services so we can focus on helping you as fast as possible.'
       }
     },
     entreprise: {
@@ -276,8 +274,7 @@ module.exports = {
     docs: '잘못된 부분이 있거나 이 문서에 기여하고 싶으신가요?',
     blog: 'Caught a mistake or want to contribute to this blog post?',
     edit_on_github: 'GitHub에서 이 페이지를 수정해주세요!',
-    msg1:
-      'Contribution for this page is now closed. If you would like to contribute please check out our',
+    msg1: 'Contribution for this page is now closed. If you would like to contribute please check out our',
     link: 'new docs'
   },
   example: {

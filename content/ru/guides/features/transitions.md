@@ -29,7 +29,7 @@ questions:
       - Глобальный css файл
       - layouts/default.vue
     correctAnswer: Глобальный css файл
-  - question: В какой массив в nuxt.config.js файле вам нужно добавить вашу глобальную таблицу стилей?
+  - question: В какой массив в nuxt.config.js файле нужно добавлять глобальную таблицу стилей?
     answers:
       - 'css: []'
       - 'styles: []'

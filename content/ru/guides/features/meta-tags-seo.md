@@ -130,7 +130,7 @@ export default {
 
 </base-alert>
 
-Nuxt.js использует [vue-meta](https://vue-meta.nuxtjs.org/) для обновления head страниц и мета-тегов вашего приложения.
+Nuxt.js использует [vue-meta](https://vue-meta.nuxtjs.org/) для обновления мета-тегов вашего приложения.
 
 <base-alert>
 

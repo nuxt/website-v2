@@ -1,6 +1,6 @@
 ---
 title: Мета-теги и SEO
-description: Nuxt.js позволяет вам определить все стандартные мета-теги для вашего приложения внутри nuxt.config.js файла используя свойство `head`. Это очень полезно при добавлении стандарных тегов `title` и `description` для SEO либо задания `viewport` или добавления `favicon`.
+description: Nuxt.js позволяет определить все стандартные мета-теги для вашего приложения внутри nuxt.config.js файла используя свойство `head`. Это очень полезно при добавлении стандартных тегов `title` и `description` для SEO, для задания `viewport` или добавления `favicon`.
 position: 6
 category: features
 csb_link: https://codesandbox.io/embed/github/nuxt-academy/guides-examples/tree/master/03_features/06_meta_tags_seo?fontsize=14&hidenavigation=1&theme=dark

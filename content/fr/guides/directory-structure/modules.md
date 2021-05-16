@@ -316,7 +316,7 @@ ga('create', '<%= options.ua %>', 'auto')
 ```js{}[module.js]
 import path from 'path'
 
-export default function nuxtBootstrapVue(moduleOptions) {
+export default function nuxtGoogleAnalytics(moduleOptions) {
   // Enregistrer le template `plugin.js`
   this.addPlugin({
     src: path.resolve(__dirname, 'plugin.js'),

@@ -1,94 +1,94 @@
 ---
-title: File System Routing
-description: Nuxt.js automatically generates the vue-router configuration based on your file tree of Vue files inside the pages directory. When you create a .vue file in your pages directory you will have basic routing working with no extra configuration needed.
+title: Маршрутизация файловой системы
+description: Nuxt.js автоматически генерирует конфигурацию vue-router на основе вашего файлового дерева файлов Vue внутри директории со страницами. Когда вы создаете файл .vue в каталоге страниц, у вас будет базовая маршрутизация без дополнительной настройки.
 position: 3
 category: features
 questions:
-  - question: What is the name of the component you use to navigate between pages?
+  - question: Как называется компонент, который вы используете для перехода между страницами?
     answers:
       - '<a>'
       - '<NuxtLink>'
       - '<Nuxt>'
     correctAnswer: '<NuxtLink>'
-  - question: What do you need to do to generate an automatic router configuration?
+  - question: Что нужно сделать, чтобы сгенерировать автоматическую конфигурацию маршрутизатора?
     answers:
-      - add a .vue file to the pages directory
-      - create a router.config file
-      - 'add a <NuxtLink> to your page'
-    correctAnswer: add a .vue file to the pages directory
-  - question: Which of the following will not create a dynamic route?
+      - добавить файл .vue в директорию со страницами
+      - создать файл router.config
+      - 'добавить на страницу <NuxtLink>'
+    correctAnswer: добавить файл .vue в директорию со страницами
+  - question: Что из перечисленного не приведет к созданию динамического маршрута?
     answers:
       - dynamic.vue
       - _slug.vue
       - _slug/index.vue
     correctAnswer: dynamic.vue
-  - question: Dynamic routes are ignored by the nuxt generate command?
+  - question: Динамические маршруты игнорируются командой nuxt generate?
     answers:
-      - True
-      - False
-    correctAnswer: False
-  - question: How do you access the route params for a dynamic page such as users/_id.vue?
+      - Правда
+      - Ложь
+    correctAnswer: Ложь
+  - question: Как получить доступ к параметрам маршрута для динамической страницы, такой как users/_id.vue?
     answers:
       - $route.params.id
       - $route.id
       - $route.params.users.id
     correctAnswer: $route.params.id
-  - question: How do you define the parent component of a nested route?
+  - question: Как определить родительский компонент вложенного маршрута?
     answers:
-      - create a Vue file called parent inside the directory which contains the children views
-      - create a Vue file with a different name as the directory which contains the children views
-      - create a Vue file with the same name as the directory which contains the children views
-    correctAnswer: create a Vue file with the same name as the directory which contains the children views
-  - question: If you do not know the depth of your URL structure, you can use which file to dynamically match nested paths?
+      - создать Vue файл с именем parent внутри директории, которая содержит дочерние представления
+      - создать файл Vue с именем отличающимся от имени директории, содержащая дочерние представления
+      - создать файл Vue с тем же именем, что и директория, содержащая дочерние представления
+    correctAnswer: cсоздать файл Vue с тем же именем, что и директория, содержащая дочерние представления
+  - question: Если вам неизвестна глубина вашей структуры URL-адресов, какой файл можно использовать для динамического сопоставления вложенных путей?
     answers:
       - _.vue
       - _index.vue
       - _id.vue
     correctAnswer: _.vue
-  - question: Which components can you use to render named views?
+  - question: Какие компоненты можно использовать для рендеринга именованных представлений?
     answers:
-      - '<Nuxt> and <Child>'
-      - '<Nuxt> and <NuxtChild>'
-      - '<NuxtChild> and <NuxtLink>'
-    correctAnswer: '<Nuxt> and <NuxtChild>'
-  - question: In Nuxt.js which file can you create to force the scroll position to the top for every route?
+      - '<Nuxt> и <Child>'
+      - '<Nuxt> и <NuxtChild>'
+      - '<NuxtChild> и <NuxtLink>'
+    correctAnswer: '<Nuxt> и <NuxtChild>'
+  - question: Какой файл вы можете создать в Nuxt.js, чтобы принудительно перемещать позицию прокрутки вверх для каждого маршрута?
     answers:
       - app/router.scrollBehavior.js
       - app/scrollBehavior.js
       - app/router.js
     correctAnswer: app/router.scrollBehavior.js
-  - question: In Nuxt.js you can add trailing slashes which will be appended to every route?
+  - question: Вы можете добавить завершающие слэши, которые будут добавляться к каждому маршруту в Nuxt.js?
     answers:
-      - true
-      - false
-    correctAnswer: true
+      - Правда
+      - Ложь
+    correctAnswer: Правда
 ---
 
-Nuxt.js automatically generates the vue-router configuration based on your file tree of Vue files inside the pages directory. When you create a .vue file in your pages directory you will have basic routing working with no extra configuration needed.
+Nuxt.js автоматически генерирует конфигурацию vue-router на основе вашего файлового дерева файлов Vue внутри директории страниц. Когда вы создаете файл .vue в директории страниц, у вас будет базовая маршрутизация без дополнительной настройки.
 
-Sometimes you might need to create dynamic routes or nested routes or you might need to further configure the router property. This chapter will go through everything you need to know in order to get the best out of your router.
+Иногда вам может потребоваться создать динамические маршруты или вложенные маршруты, или вам может потребоваться дополнительная настройка свойств маршрутизатора. В этой главе будет рассмотрено все, что вам нужно знать, чтобы получить максимальную отдачу от вашего маршрутизатора.
 
 <base-alert type="info">
 
-Nuxt.js gives you automatic code splitting for your routes, no configuration is needed
+Nuxt.js дает вам автоматическое разделение кода для ваших маршрутов, настройка не требуется
 
 </base-alert>
 
 <base-alert type="info">
 
-Use the [NuxtLink component](/docs/2.x/features/nuxt-components#the-nuxtlink-component) to navigate between pages
+Используйте [NuxtLink компонент](/docs/2.x/features/nuxt-components#the-nuxtlink-component) для навигации между страницами
 
 </base-alert>
 
 ```html
 <template>
-  <NuxtLink to="/">Home page</NuxtLink>
+  <NuxtLink to="/">Главная</NuxtLink>
 </template>
 ```
 
-## Basic Routes
+## Основный маршруты
 
-This file tree:
+Данное файловое дерево:
 
 ```
 pages/
@@ -98,7 +98,7 @@ pages/
 --| index.vue
 ```
 
-will automatically generate:
+автоматически сгенерирует:
 
 ```js
 router: {
@@ -122,11 +122,11 @@ router: {
 }
 ```
 
-## Dynamic Routes
+## Динамические маршруты
 
-Sometimes it is not possible to know the name of the route such as when we make a call to an API to get a list of users or blog posts. We call these dynamic routes. To create a dynamic route you need to add an underscore before the .vue file name or before the name of the directory. You can name the file or directory anything you want but you must prefix it with an underscore.
+Иногда невозможно узнать имя маршрута, например, когда мы делаем запрос к API, чтобы получить список пользователей или сообщения в блоге. Мы называем эти маршруты динамическими. Чтобы создать динамический маршрут, вам нужно добавить символ нижнего подчеркивания перед именем файла .vue или перед именем директории. Вы можете назвать файл или директорию как хотите, но вы должны поставить перед ним знак нижнего подчеркивания.
 
-This file tree:
+Данное файловое дерево:
 
 ```
 pages/
@@ -138,7 +138,7 @@ pages/
 --| index.vue
 ```
 
-will automatically generate:
+автоматически сгенерирует:
 
 ```js
 router: {
@@ -169,37 +169,37 @@ router: {
 
 <base-alert type="info">
 
-As you can see the route named `users-id` has the path `:id?` which makes it optional, if you want to make it required, create an `index.vue` file in the `users/_id` directory instead.
+Как вы можете видеть, маршрут с именем `users-id` имеет путь`:id?`, Что делает его необязательным, если вы хотите сделать его обязательным, вместо этого создайте файл` index.vue` в директории `users/_id`.
 
 </base-alert>
 
 <base-alert type="info">
 
-As of Nuxt >= v2.13 there is a crawler installed that will now crawl your link tags and generate your dynamic routes based on those links. However if you have pages that are not linked to such as a secret page, then you will need to manually generate those dynamic routes.
+Начиная с Nuxt >= v2.13 установлен сканер, который теперь будет сканировать ваши теги ссылок и генерировать ваши динамические маршруты на основе этих ссылок. Однако, если у вас есть страницы, которые не связаны, например, секретная страница, вам нужно будет вручную сгенерировать эти динамические маршруты.
 
 </base-alert>
 
 <base-alert type="next">
 
-[Generate dynamic routes](/docs/2.x/concepts/static-site-generation) for static sites
+[Создание динамических маршрутов](/docs/2.x/concepts/static-site-generation) для статических сайтов
 
 </base-alert>
 
-### Locally Accessing Route Params
+### Локальный доступ к параметрам маршрута
 
-You can access the current route parameters within your local page or component by referencing `this.$route.params.{parameterName}`. For example, if you had a dynamic users page (`users/_id.vue`) and wanted to access the `id` parameter to load the user or process information, you could access the variable like this: `this.$route.params.id`.
+Вы можете получить доступ к текущим параметрам маршрута на вашей локальной странице или в компоненте, указав `this.$Route.params.{ParameterName}`. Например, если у вас есть страница динамических пользователей (`users/_id.vue`) и вы хотите получить доступ к параметру `id` для загрузки информации о пользователе или процессе, вы можете получить доступ к переменной следующим образом: `this.$Route.params.id`.
 
-## Nested Routes
+## Вложенные маршруты
 
-Nuxt.js lets you create nested routes by using the children routes of vue-router. To define the parent component of a nested route, you need to create a Vue file with the same name as the directory which contains your children views.
+Nuxt.js позволяет создавать вложенные маршруты, используя дочерние маршруты vue-router. Чтобы определить родительский компонент вложенного маршрута, вам необходимо создать файл Vue с тем же именем, что и директория, содержащая ваши дочерние представления.
 
 <base-alert>
 
-Don't forget to include the [NuxtChild component](/docs/2.x/features/nuxt-components#the-nuxtchild-component) inside the parent component (`.vue` file).
+Незабудьте добавить [NuxtChild компонент](/docs/2.x/features/nuxt-components#the-nuxtchild-component) в родительский компонент (файл `.vue`).
 
 </base-alert>
 
-This file tree:
+Данное файловое дерево:
 
 ```
 pages/
@@ -209,7 +209,7 @@ pages/
 --| users.vue
 ```
 
-will automatically generate:
+автоматически сгенерирует:
 
 ```js
 router: {
@@ -234,11 +234,11 @@ router: {
 }
 ```
 
-## Dynamic Nested Routes
+## Динамические вложенные маршруты
 
-This is not a common scenario, but it is possible with Nuxt.js to have dynamic children inside dynamic parents.
+Динамические вложенные маршруты - это не распространенный сценарий, но с Nuxt.js можно иметь динамические дочерние элементы внутри динамических родителей.
 
-This file tree:
+Данное файловое дерево:
 
 ```
 pages/
@@ -252,7 +252,7 @@ pages/
 --| index.vue
 ```
 
-will automatically generate:
+автоматически сгенерирует:
 
 ```js
 router: {
@@ -293,11 +293,11 @@ router: {
 }
 ```
 
-## Unknown Dynamic Nested Routes
+## Неизвестные динамические вложенные маршруты
 
-If you do not know the depth of your URL structure, you can use `_.vue` to dynamically match nested paths. This will handle requests that do not match a _more specific_ route.
+Если вам неизвестна глубина вашей структуры URL, вы можете использовать `_.vue` для динамического сопоставления вложенных путей. Так будут обработаны запросы, которые не соответствуют _ более конкретному_ маршруту.
 
-This file tree:
+Данное файловое дерево:
 
 ```
 pages/
@@ -308,7 +308,7 @@ pages/
 --| index.vue
 ```
 
-Will handle requests like this:
+Будет обрабатывать такие запросы:
 
 ```
 / -> index.vue
@@ -321,45 +321,45 @@ Will handle requests like this:
 
 <base-alert type="info">
 
-Handling 404 pages is now up to the logic of the `_.vue` page.
+Обработка страниц 404 теперь зависит от логики страницы `_.vue`.
 
 </base-alert>
 
-## Extending the router
+## Расширение маршрутизации
 
-There are multiple ways to extend the routing with Nuxt:
+Есть несколько способов расширить маршрутизацию с помощью Nuxt:
 
-- [router-extras-module](https://github.com/nuxt-community/router-extras-module) to customize the route parameters in the page
-- component[@nuxtjs/router](https://github.com/nuxt-community/router-module) to overwrite the Nuxt router and write your own `router.js` file
-- Use the [router.extendRoutes](/docs/2.x/configuration-glossary/configuration-router#extendroutes) property in your `nuxt.config.js`
+- [router-extras-module](https://github.com/nuxt-community/router-extras-module) настроить параметры маршрута на странице
+- компонент[@nuxtjs/router](https://github.com/nuxt-community/router-module) для перезаписи маршрутизатора Nuxt и записи собственного файла `router.js`
+- Использовать свойство [router.extendRoutes](/docs/2.x/configuration-glossary/configuration-router#extendroutes) в вашем `nuxt.config.js`
 
-## The router Property
+## Свойства маршрутизации
 
-The router property lets you customize the Nuxt.js router (vue-router).
+Свойство router позволяет настраивать маршрутизатор Nuxt.js (vue-router).
 
 ```js{}[nuxt.config.js]
 export default {
   router: {
-    // customize the Nuxt.js router
+    // настроить маршрутизацию Nuxt.js 
   }
 }
 ```
 
 ### Base:
 
-The base URL of the app. For example, if the entire single page application is served under `/app/`, then base should use the value `'/app/'`.
+Базовый URL-адрес приложения. Например, если все одностраничное приложение обслуживается в `/app/`, тогда base должно использовать значение `'/app/'`.
 
 <base-alert type="next">
 
-[Router Base Property](/docs/2.x/configuration-glossary/configuration-router#base)
+[Базовое свойство маршрутизатора](/docs/2.x/configuration-glossary/configuration-router#base)
 
 </base-alert>
 
 ### extendRoutes
 
-You may want to extend the routes created by Nuxt.js. You can do so via the `extendRoutes` option.
+Вы можете захотеть расширить маршруты, созданные Nuxt.js. Это можно сделать с помощью опции `extendRoutes`.
 
-Example of adding a custom route:
+Пример добавления собственного маршрута:
 
 ```js{}[nuxt.config.js]
 export default {
@@ -375,16 +375,16 @@ export default {
 }
 ```
 
-If you want to sort your routes, you can use the `sortRoutes(routes)` function from `@nuxt/utils`:
+Если вы хотите отсортировать свои маршруты, вы можете использовать функцию `sortRoutes(routes)` из `@ nuxt/utils`:
 
 ```js{}[nuxt.config.js]
 import { sortRoutes } from '@nuxt/utils'
 export default {
   router: {
     extendRoutes(routes, resolve) {
-      // Add some routes here ...
+      // Добавьте сюда несколько маршрутов ...
 
-      // and then sort them
+      // и затем отсортируйте их
       sortRoutes(routes)
     }
   }
@@ -393,13 +393,13 @@ export default {
 
 <base-alert>
 
-The schema of the route should respect the [vue-router](https://router.vuejs.org/en/) schema.
+Схема маршрута должна соответствовать схеме [vue-router](https://router.vuejs.org/en/).
 
 </base-alert>
 
 <base-alert>
 
-When adding routes that use [Named Views](/docs/2.x/features/file-system-routing#nested-routes), don't forget to add the corresponding `chunkNames` of named `components`.
+При добавлении маршрутов, использующих [Именованные представления](/docs/2.x/features/file-system-routing#nested-routes), не забудьте добавить соответствующие `chunkNames` именованных `components`.
 
 </base-alert>
 
@@ -410,7 +410,7 @@ export default {
       routes.push({
         path: '/users/:id',
         components: {
-          default: resolve(__dirname, 'pages/users'), // or routes[index].component
+          default: resolve(__dirname, 'pages/users'), // или routes[index].component
           modal: resolve(__dirname, 'components/modal.vue')
         },
         chunkNames: {
@@ -424,43 +424,43 @@ export default {
 
 <base-alert type="next">
 
-[extendRoutes Property](/docs/2.x/configuration-glossary/configuration-router#extendroutes)
+[Свойство extendRoutes](/docs/2.x/configuration-glossary/configuration-router#extendroutes)
 
 </base-alert>
 
 ### fallback
 
-Controls whether the router should fallback to hash mode when the browser does not support history.pushState but mode is set to history.
+Определяет, должен ли маршрутизатор переходить в режим хеширования, если браузер не поддерживает history.pushState, но для режима задано значение history.
 
 <base-alert type="next">
 
-[fallback Property](/docs/2.x/configuration-glossary/configuration-router#fallback)
+[Свойство fallback](/docs/2.x/configuration-glossary/configuration-router#fallback)
 
 </base-alert>
 
 ### mode
 
-Configure the router mode, it is not recommended to change it due to server-side rendering.
+Настройте режим роутера, менять его не рекомендуется из-за рендеринга на стороне сервера.
 
 <base-alert type="next">
 
-[mode Property](/docs/2.x/configuration-glossary/configuration-router#mode)
+[Свойство mode](/docs/2.x/configuration-glossary/configuration-router#mode)
 
 </base-alert>
 
 ### parseQuery / stringifyQuery
 
-Provide custom query string parse / stringify functions.
+Предоставьте свои функции parse и stringify для строки параметров запроса.
 
 <base-alert type="next">
 
-[parseQuery / stringifyQuery Property](/docs/2.x/configuration-glossary/configuration-router#parsequery--stringifyquery)
+[Свойство parseQuery / stringifyQuery](/docs/2.x/configuration-glossary/configuration-router#parsequery--stringifyquery)
 
 </base-alert>
 
 ### routeNameSplitter
 
-You may want to change the separator between route names that Nuxt.js uses. You can do so via the `routeNameSplitter` option in your configuration file. Imagine we have the page file `pages/posts/_id.vue`. Nuxt.js will generate the route name programmatically, in this case `posts-id`. Changing the `routeNameSplitter` config to `/` the name will therefore change to `posts/id`.
+Вы можете изменить разделитель между именами маршрутов, которые использует Nuxt.js. Вы можете сделать это с помощью параметра `routeNameSplitter` в вашем файле конфигурации. Представьте, что у нас есть файл страницы `pages/posts/_id.vue`. Nuxt.js сгенерирует имя маршрута программно, в данном случае `posts-id`. Изменив конфигурацию `routeNameSplitter` на `/`, имя изменится на `posts/id`.
 
 ```js{}[nuxt.config.js]
 export default {
@@ -472,21 +472,21 @@ export default {
 
 ### scrollBehavior
 
-The `scrollBehavior` option lets you define a custom behavior for the scroll position between the routes. This method is called every time a page is rendered.
+Параметр `scrollBehavior` позволяет вам определять настраиваемое поведение для позиции прокрутки между маршрутами. Этот метод вызывается каждый раз при отображении страницы.
 
 <base-alert type="next">
 
-To learn more about it, see [vue-router scrollBehavior documentation](https://router.vuejs.org/guide/advanced/scroll-behavior.html).
+Чтобы узнать об этом больше, см. [документация vue-router scrollBehavior](https://router.vuejs.org/guide/advanced/scroll-behavior.html).
 
 </base-alert>
 
-Available since:v2.9.0:
+Доступно с: v2.9.0:
 
-In Nuxt.js you can use a file to overwrite the router scrollBehavior. This file should be placed in a folder called app.
+В Nuxt.js вы можете использовать файл для перезаписи scrollBehavior маршрутизатора. Этот файл следует поместить в папку с именем app.
 
 `~/app/router.scrollBehavior.js`.
 
-Example of forcing the scroll position to the top for every route:
+Пример принудительного перемещения позиции прокрутки вверх для каждого маршрута:
 
 ```js{}[app/router.scrollBehavior.js]
 export default function (to, from, savedPosition) {
@@ -496,21 +496,21 @@ export default function (to, from, savedPosition) {
 
 <base-alert type="next">
 
-[Nuxt.js default `router.scrollBehavior.js` file.](https://github.com/nuxt/nuxt.js/blob/dev/packages/vue-app/template/router.scrollBehavior.js)
+[Файл по умолчанию `router.scrollBehavior.js` в Nuxt.js.](https://github.com/nuxt/nuxt.js/blob/dev/packages/vue-app/template/router.scrollBehavior.js)
 
 </base-alert>
 
 <base-alert type="next">
 
-[scrollBehavior Property](/docs/2.x/configuration-glossary/configuration-router#scrollbehavior)
+[Свойство scrollBehavior](/docs/2.x/configuration-glossary/configuration-router#scrollbehavior)
 
 </base-alert>
 
 ### trailingSlash
 
-Available since: v2.10
+Доступно с: v2.10
 
-If this option is set to true, trailing slashes will be appended to every route. If set to false, they'll be removed.
+Если для этого параметра установлено значение true, завершающие слэши будут добавлены к каждому маршруту. Если установлено значение false, они будут удалены.
 
 ```js{}[nuxt.config.js]
 export default {
@@ -522,13 +522,13 @@ export default {
 
 <base-alert>
 
-This option should not be set without preparation and has to be tested thoroughly. When setting `router.trailingSlash` to something else other than `undefined`(which is the default value), the opposite route will stop working. Thus 301 redirects should be in place and your _internal linking_ has to be adapted correctly. If you set `trailingSlash` to `true`, then only `example.com/abc/` will work but not `example.com/abc`. On false, it's vice-versa.
+Этот параметр не следует устанавливать без подготовки и должен быть тщательно протестирован. Если установить для параметра `router.trailingSlash` значение, отличное от `undefined` (значение по умолчанию), противоположный маршрут перестанет работать. Таким образом, редирект для 301 должен быть на месте, и ваша _внутренняя ссылка_ должна быть правильно адаптирована. Если вы установите значение true для параметра `trailingSlash`, тогда будет работать только `example.com/abc/` но не `example.com/abc`. При false все наоборот.
 
 </base-alert>
 
 <base-alert type="next">
 
-[trailingSlash Property](/docs/2.x/configuration-glossary/configuration-router#trailingslash)
+[Свойство trailingSlash](/docs/2.x/configuration-glossary/configuration-router#trailingslash)
 
 </base-alert>
 

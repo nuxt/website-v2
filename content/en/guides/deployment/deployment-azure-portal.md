@@ -12,7 +12,7 @@ position: 102
 - It is required that you select a backend when setting up the project. Even if you don't need it, or else the site won't start up.
 - The server is running Node 8 or greater
 
-## What if I already have a project without an backend?
+## What if I already have a project without a backend?
 
 No worries. It is easy to add an express server to an existing project.
 

@@ -16,6 +16,10 @@
       <img
         :src="`/img/sponsors/${$colorMode.value}/${sponsor.img}`"
         :alt="sponsor.name"
+<<<<<<< HEAD
+=======
+        :class="sponsor.class"
+>>>>>>> 5eefa048 (sponsors: Add Swell partner (#1448))
       />
     </a>
     <AppButton
@@ -36,12 +40,30 @@ export default {
           name: 'Strapi',
           url: 'https://strapi.io/',
           img: 'strapi-logo.svg',
-          class: 'h-12'
+          class: 'w-32'
         },
         {
           name: 'Ship Shape',
+<<<<<<< HEAD
           link: 'https://shipshape.io/?ref=nuxt',
           img: 'shipshape-logo.svg'
+=======
+          url: 'https://shipshape.io/?ref=nuxt',
+          img: 'shipshape-logo.svg',
+          class: 'w-32'
+        },
+        {
+          name: 'Swell',
+          url: 'https://swell.is/',
+          img: 'swell-logo.svg',
+          class: 'h-8'
+        },
+        {
+          name: 'Google Chrome',
+          img: 'google-chrome.svg',
+          url: 'https://www.google.com/chrome/?ref=nuxt',
+          class: 'w-32'
+>>>>>>> 5eefa048 (sponsors: Add Swell partner (#1448))
         }
       ]
     }

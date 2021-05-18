@@ -35,7 +35,7 @@
       <img
         :src="`/img/sponsors/${$colorMode.value}/${sponsor.img}`"
         :alt="sponsor.name"
-        class="w-32"
+        :class="sponsor.class"
       />
     </a>
     <AppButton
@@ -56,18 +56,25 @@ export default {
           name: 'Strapi',
           url: 'https://strapi.io/?ref=nuxt',
           img: 'strapi-logo.svg',
-          class: 'h-12'
+          class: 'w-32'
         },
         {
           name: 'Ship Shape',
           url: 'https://shipshape.io/?ref=nuxt',
-          img: 'shipshape-logo.svg'
+          img: 'shipshape-logo.svg',
+          class: 'w-32'
+        },
+        {
+          name: 'Swell',
+          url: 'https://swell.is/',
+          img: 'swell-logo.svg',
+          class: 'h-8'
         },
         {
           name: 'Google Chrome',
           img: 'google-chrome.svg',
           url: 'https://www.google.com/chrome/?ref=nuxt',
-          class: 'h-12'
+          class: 'w-32'
         }
       ]
     }

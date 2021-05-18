@@ -9,6 +9,12 @@ export default {
   ],
   partners: [
     {
+      name: 'Swell',
+      url: 'https://swell.is/',
+      img: 'swell-logo.svg',
+      class: 'h-12'
+    },
+    {
       name: 'Strapi',
       url: 'https://strapi.io/',
       img: 'strapi-logo.svg',

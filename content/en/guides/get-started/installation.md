@@ -233,6 +233,6 @@ Then, go to your browser and see your new page on **[localhost:3000/fun](http://
 
 <base-alert type="info">
 
-Create a directory named `more-fun` and put an `index.vue` file inside. This will give the same result as creating a `more-fun.vue` file
+Creating a directory named `more-fun` and putting an `index.vue` file inside it will give the same result as creating a `more-fun.vue` file.
 
 </base-alert>

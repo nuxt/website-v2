@@ -258,12 +258,12 @@ export default {
 
   ```js
   {
-    app: ({ isDev }) => isDev ? '[name].js' : '[contenthash].js',
-    chunk: ({ isDev }) => isDev ? '[name].js' : '[contenthash].js',
-    css: ({ isDev }) => isDev ? '[name].css' : '[contenthash].css',
-    img: ({ isDev }) => isDev ? '[path][name].[ext]' : 'img/[contenthash:7].[ext]',
-    font: ({ isDev }) => isDev ? '[path][name].[ext]' : 'fonts/[contenthash:7].[ext]',
-    video: ({ isDev }) => isDev ? '[path][name].[ext]' : 'videos/[contenthash:7].[ext]'
+    app: ({ isDev, isModern }) => isDev ? `[name]${isModern ? '.modern' : ''}.js` : `[contenthash:7]${isModern ? '.modern' : ''}.js`,
+    chunk: ({ isDev, isModern }) => isDev ? `[name]${isModern ? '.modern' : ''}.js` : `[contenthash:7]${isModern ? '.modern' : ''}.js`,
+    css: ({ isDev }) => isDev ? '[name].css' : 'css/[contenthash:7].css',
+    img: ({ isDev }) => isDev ? '[path][name].[ext]' : 'img/[name].[contenthash:7].[ext]',
+    font: ({ isDev }) => isDev ? '[path][name].[ext]' : 'fonts/[name].[contenthash:7].[ext]',
+    video: ({ isDev }) => isDev ? '[path][name].[ext]' : 'videos/[name].[contenthash:7].[ext]'
   }
   ```
 
@@ -593,6 +593,8 @@ export default {
 
 設定後、`nuxt build` を実行する際に `.nuxt/dist/client` ディレクトリの内容を CDN にアップロードしてください。
 
+Nuxt v2.15 以降では、実行時にこのプロパティの値を変更すると、既にビルドされているアプリケーションの設定が上書きされます。
+
 ## quiet
 
 > ビルド出力ログの大半を抑制します
@@ -627,6 +629,19 @@ export default {
 - デフォルト: ユニバーサルモードでのデフォルト値は `true`、spa モードでのデフォルト値は `false`
 
 このオプションは、指定されていない場合は `mode` 値に基づいて自動的に設定されます。
+
+## standalone
+
+> サーバービルドにおいて依存関係をインラインでバンドル（アドバンスド）
+
+- 型: `Boolean`
+- デフォルト: `false`
+
+このモードは通常サーバービルドで外部として保存される `node_modules` をバンドルします（[詳細](https://github.com/nuxt/nuxt.js/pull/4661)）。
+
+<base-alert type="warning">\*_Warning_: ランタイムの依存関係（モジュール、`nuxt.config`、サーバーミドルウェア、静的ディレクトリ）はバンドルされていません。この機能は、server-bundle での [webpack-externals](https://webpack.js.org/configuration/externals/) の使用のみを無効にします。</base-alert>
+
+<base-alert type="info">**Info:** コマンド `yarnnuxt build --standalone` を使用して、コマンドラインでこのモードを有効にすることができます。（`yarn` を使用していない場合は、`npx` を使用してコマンドを実行できます）</base-alert>
 
 ## styleResources
 

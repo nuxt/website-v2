@@ -57,7 +57,8 @@ A Node.js server needs to be configured to execute your Vue.js application.
 
 You can extend the server with serverMiddleware and control routes with middleware.
 
-```js{}[middleware/api/logger.js]
+```js{}[server-middleware/logger.js]
+
 export default function (req, res, next) {
   console.log(req.url)
   next()
@@ -66,7 +67,8 @@ export default function (req, res, next) {
 
 ```js{}[nuxt.config.js]
 export default {
-  serverMiddleware: ['~/middleware/api/logger']
+  serverMiddleware: ['~/server-middleware/logger']
+
 }
 ```
 
@@ -98,5 +100,41 @@ The browser receives the rendered page from the server with the generated HTML. 
 ### Step 3: Browser to Browser
 
 Navigating between pages with [`<NuxtLink>`](/docs/2.x/features/nuxt-components#the-nuxtlink-component) is done on the client side so you don't hit the server again unless you hard refresh the browser.
+
+## Caveats
+
+### window or document undefined
+
+This is due to the server-side rendering. If you need to specify that you want to import a resource only on the client-side, you need to use the `process.client` variable.
+
+For example, in your `.vue` file:
+
+```js
+if (process.client) {
+  require('external_library')
+}
+```
+
+### iOS and phone numbers
+
+Some mobile Safari versions will automatically transform phone numbers into links. This will trigger a `NodeMismatch` warning as the SSR content doesn't match the website content anymore. This can make your app unusable on these Safari versions.
+
+If you include telephone numbers in your Nuxt page, you have two options.
+
+## Use a meta tag to stop the transformation
+
+```html
+<meta name="format-detection" content="telephone=no" />
+```
+
+## Wrap your phone numbers in links
+
+```html
+<!-- Example phone number: +7 (982) 536-50-77 -->
+
+<template>
+  <a href="tel: +7 (982) 536-50-77">+7 (982) 536-50-77</a>
+</template>
+```
 
 <quiz :questions="questions"></quiz>

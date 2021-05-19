@@ -1,5 +1,6 @@
 ---
-title: pages
+title: Pages directory
+menuTitle: pages
 description: The `pages` directory contains your Application Views and Routes. Nuxt.js reads all the `.vue` files inside this directory and automatically creates the  router configuration for you.
 position: 10
 category: directory-structure
@@ -94,7 +95,7 @@ Every Page component is a Vue component but Nuxt.js adds special attributes and 
 
 ## Dynamic Pages
 
-Dynamic pages can be created when you don't know the name of the page due to it coming from an API or you don't want to have to create the same page over and over again. To create a dynamic page you need to add an underscore before the .vue file name or before the the name of the directory, if you want the directory to be dynamic. You can name the file or directory anything you want but you must prefix it with an underscore.
+Dynamic pages can be created when you don't know the name of the page due to it coming from an API or you don't want to have to create the same page over and over again. To create a dynamic page you need to add an underscore before the .vue file name or before the name of the directory, if you want the directory to be dynamic. You can name the file or directory anything you want but you must prefix it with an underscore.
 
 If you've defined a file named `_slug.vue` in your pages folder, you can access the value using the context with params.slug
 
@@ -282,7 +283,7 @@ See more on middleware in our [Middleware](/docs/2.x/directory-structure/middlew
 
 ### The watchQuery Property
 
-Use the `watchQuery` key to set up a watcher for query strings. If the defined strings change, all component methods (asyncData, fetch, validate, layout, ...) will be called. Watching is disabled by default to improve performance.
+Use the `watchQuery` key to set up a watcher for query strings. If the defined strings change, all component methods (asyncData, fetch(context), validate, layout, ...) will be called. Watching is disabled by default to improve performance.
 
 ```js{}[pages/index.vue]
 export default {
@@ -290,9 +291,9 @@ export default {
 }
 ```
 
-<base-alert type="info">
+<base-alert>
 
-If you want to set up a watcher for all query strings, set `watchQuery` to `true`.
+**Warning**: The new `fetch` hook introduced in 2.12 is not affected by `watchQuery`. For more information see [listening to query string changes](/docs/2.x/features/data-fetching#the-fetch-hook).
 
 </base-alert>
 

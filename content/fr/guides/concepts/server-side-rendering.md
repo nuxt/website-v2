@@ -57,7 +57,7 @@ Un serveur Node.js a besoin d'être configuré pour exécuter notre application 
 
 Nous pouvons étendre les possibilités de notre serveur avec `serverMiddleware` et contrôler les routes avec `middleware`.
 
-```js{}[middleware/api/logger.js]
+```js{}[server-middleware/logger.js]
 export default function (req, res, next) {
   console.log(req.url)
   next()
@@ -66,7 +66,7 @@ export default function (req, res, next) {
 
 ```js{}[nuxt.config.js]
 export default {
-  serverMiddleware: ['~/middleware/api/logger']
+  serverMiddleware: ['~/server-middleware/logger']
 }
 ```
 
@@ -76,7 +76,7 @@ fr: Si notre middleware de serveur est constitué d'une liste de fonctions corre
 
 ## Différence entre serveur et navigateur
 
-Comme nous sommes dans un environnement Node.js nous avons accès aux objets Node.js tels que `req` et `res`. Nous n'avez pas accès aux objets `window` ou `document` vu qu'ils appartiennent au navigateur. Nous pouvons cependant utiliser `window` ou `document` en les utilisant dans les hooks `beforeMount` ou `mounted`.
+Comme nous sommes dans un environnement Node.js nous avons accès aux objets Node.js tels que `req` et `res`. Nous n'avons pas accès aux objets `window` ou `document` vu qu'ils appartiennent au navigateur. Nous pouvons cependant utiliser `window` ou `document` en les utilisant dans les hooks `beforeMount` ou `mounted`.
 
 ```js
 beforeMount{
@@ -99,6 +99,6 @@ Le navigateur reçoit la page avec le HTML généré depuis le serveur. Le conte
 
 ### Étape 3: Du navigateur au navigateur
 
-Naviguer entre les pages à l'aide de [`<NuxtLink>`](/guides/features/nuxt-components#the-nuxtlink-component) est fait du côté client afin que nous n'ayons pas besoin de faire une requête au serveur, sauf si nous faisons un rafraîchissement manuel de notre navigateur.
+Naviguer entre les pages à l'aide de [`<NuxtLink>`](/docs/2.x/features/nuxt-components#the-nuxtlink-component) est fait du côté client afin que nous n'ayons pas besoin de faire une requête au serveur, sauf si nous faisons un rafraîchissement manuel de notre navigateur.
 
 <quiz :questions="questions"></quiz>

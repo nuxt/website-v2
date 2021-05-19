@@ -11,8 +11,10 @@ position: 4
 In case you want to use `sass` make sure that you have installed `sass` and `sass-loader` packages. If you didn't just
 
 ```sh
-npm install --save-dev sass sass-loader fibers
+npm install --save-dev sass sass-loader@10 fibers
 ```
+
+<base-alert type="info">Synchronous compilation with `sass` (2x speed increase) [is enabled automatically](https://github.com/webpack-contrib/sass-loader) when `fibers` is installed.</base-alert>
 
 - Type: `Array`
   - Items: `string`

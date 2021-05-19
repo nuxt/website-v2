@@ -22,7 +22,7 @@ export default {
 }
 ```
 
-Cela vous permet de spécifier l'[hôte et le port](/guides/features/configuration#edit-host-and-port) pour votre instance de serveur Nuxt.js.
+Cela vous permet de spécifier l'[hôte et le port](/docs/2.x/features/configuration#edit-host-and-port) pour votre instance de serveur Nuxt.js.
 
 ## Exemple utilisant la configuration HTTPS
 

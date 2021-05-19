@@ -26,9 +26,9 @@ module.exports = {
         slug: 'examples'
       },
       {
-        name: 'FAQ',
+        name: 'Ressources',
         icon: 'resources',
-        slug: 'faq'
+        slug: 'resources'
       },
       {
         name: 'Blog',
@@ -38,8 +38,7 @@ module.exports = {
       {
         name: 'Cours Video',
         icon: 'video',
-        href:
-          'https://masteringnuxt.com?friend=nuxt&utm_source=Nuxtjs.org&utm_medium=Link&utm_content=Navbar&utm_content=prelaunch'
+        href: 'https://masteringnuxt.com/?utm_source=nuxt&utm_medium=link&utm_campaign=navbar_link'
       }
     ],
     search: {
@@ -147,6 +146,12 @@ module.exports = {
     },
     videos: {
       title: 'Cours Vidéos'
+    },
+    modules: {
+      title: 'Modules'
+    },
+    examples: {
+      title: 'Exemples'
     }
   },
   shop: {
@@ -231,8 +236,7 @@ module.exports = {
       start: 'Démarrer le chat',
       partner: {
         pre: 'Nous nous sommes associés',
-        post:
-          'pour offrir ces services afin que nous puissions nous concentrer pour vous aider le plus rapidement possible.'
+        post: 'pour offrir ces services afin que nous puissions nous concentrer pour vous aider le plus rapidement possible.'
       }
     },
     entreprise: {
@@ -275,17 +279,14 @@ module.exports = {
   },
   contribute: {
     title: 'Contributeurs',
-    docs:
-      'Vous avez vu une erreur ou vous souhaitez contribuer à la documentation ?',
-    blog:
-      'Vous avez commis une erreur ou souhaitez contribuer à cet article de blog ?',
+    docs: 'Vous avez vu une erreur ou vous souhaitez contribuer à la documentation ?',
+    blog: 'Vous avez commis une erreur ou souhaitez contribuer à cet article de blog ?',
     edit_on_github: 'Éditez cette page sur GitHub !',
-    msg1:
-      'La contribution pour cette page est maintenant fermée. Si vous souhaitez contribuer, veuillez consulter notre',
+    msg1: 'La contribution pour cette page est maintenant fermée. Si vous souhaitez contribuer, veuillez consulter notre',
     link: 'nouvelle documentation'
   },
   example: {
-    intro: 'In this example:'
+    intro: 'Dans cet exemple:'
   },
   codeSandbox: {
     open: 'Ouvrir CodeSandbox'
@@ -305,6 +306,16 @@ module.exports = {
       internals: 'Mécanismes'
     },
     examples: {
+      routing: 'Routage',
+      dataFetching: 'Data Fetching',
+      assetManagement: "Gestion d'assets",
+      transitions: 'Transitions',
+      seo: 'SEO',
+      loading: 'Chargement',
+      miscellaneous: 'Divers',
+      middleware: 'Middleware',
+      plugins: 'Plugins',
+      modules: 'Modules',
       essentials: 'Essentiels',
       customization: 'Personnalisation',
       advanced: 'Avancé'
@@ -321,34 +332,36 @@ module.exports = {
       'directory-structure': 'Structure',
       'configuration-glossary': 'Configuration',
       'internals-glossary': 'Internes',
-      'components-glossary': 'Composants'
+      'components-glossary': 'Composants',
+      deployment: 'Déploiement',
+      examples: 'Exemples'
     }
   },
   footer: {
     links: {
       discover: {
-        title: 'Discover',
-        shop: 'Our Goodies Store',
-        consulting: 'Training & consultancy',
-        sponsorNuxt: 'Sponsoring & donations'
+        title: 'Découvrir',
+        shop: 'Nos goodies',
+        consulting: 'Formation & consulting',
+        sponsorNuxt: 'Sponsoring & dons'
       },
       about: {
-        title: 'About',
-        team: 'Our team',
+        title: 'À propos',
+        team: 'Notre équipe',
         design: 'Design kit',
-        contact: 'Contact us'
+        contact: 'Nous contacter'
       },
       support: {
         title: 'Support',
         resources: 'Ressources',
-        discord: 'Chat with us',
+        discord: 'Parlons ensemble',
         contributionGuide: 'Contribution guide'
       }
     }
   },
   cookies: {
     consent:
-      "Nous utilisons des cookies pour l'analyse des utilisateurs et les améliorations sur la page!",
+      "Nous utilisons des cookies pour l'analyse des utilisateurs et les améliorations sur la page !",
     linkLabel: 'En savoir plus sur les cookies',
     button: 'Accepter'
   }

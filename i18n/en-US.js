@@ -27,9 +27,9 @@ module.exports = {
         slug: 'examples'
       },
       {
-        name: 'FAQ',
+        name: 'Resources',
         icon: 'resources',
-        slug: 'faq'
+        slug: 'resources'
       },
       {
         name: 'Blog',
@@ -39,8 +39,7 @@ module.exports = {
       {
         name: 'Video Courses',
         icon: 'video',
-        href:
-          'https://masteringnuxt.com/?utm_source=nuxt&utm_medium=link&utm_campaign=navbar_link'
+        href: 'https://masteringnuxt.com/?utm_source=nuxt&utm_medium=link&utm_campaign=navbar_link'
       }
     ],
     search: {
@@ -144,6 +143,15 @@ module.exports = {
     themes: {
       title: 'Themes'
     },
+    modules: {
+      title: 'Modules'
+    },
+    examples: {
+      title: 'Examples'
+    },
+    faq: {
+      title: 'FAQ'
+    },
     videos: {
       title: 'Video Courses'
     }
@@ -188,9 +196,9 @@ module.exports = {
     },
     title: '{nuxt} Video Courses',
     description:
-      'With the video courses below created by our partner VueSchool you can discover and learn more about the Nuxt.js Framework.',
+      'With the video courses below you can discover and learn more about the Nuxt Framework.',
     cta: {
-      discover: 'Discover vueschool',
+      discover: 'Discover Mastering Nuxt',
       start: 'START COURSE'
     }
   },
@@ -230,8 +238,7 @@ module.exports = {
       start: 'Start chat',
       partner: {
         pre: 'We partnered with',
-        post:
-          'to offer these services so we can focus on helping you as fast as possible.'
+        post: 'to offer these services so we can focus on helping you as fast as possible.'
       }
     },
     entreprise: {
@@ -276,8 +283,7 @@ module.exports = {
     docs: 'Caught a mistake or want to contribute to the documentation?',
     blog: 'Caught a mistake or want to contribute to this blog post?',
     edit_on_github: 'Edit this page on GitHub!',
-    msg1:
-      'Contribution for this page is now closed. If you would like to contribute please check out our',
+    msg1: 'Contribution for this page is now closed. If you would like to contribute please check out our',
     link: 'new docs'
   },
   example: {
@@ -327,6 +333,7 @@ module.exports = {
       'configuration-glossary': 'Configuration Glossary',
       'internals-glossary': 'Internals Glossary',
       'components-glossary': 'Components Glossary',
+      deployment: 'Deployment',
       examples: 'Examples'
     }
   },

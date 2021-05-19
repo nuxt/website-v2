@@ -1,6 +1,6 @@
 ---
 title: content
-description: Augmentez le potentiel de votre application Nuxt.js avec le module `@nuxtjs/content` grâce auquel on peut écrire dans un répertoire `content/` et récupérer du Markdown, JSON, YAML et des fichiers CSV à travers une API dans le style de MongoDB, qui remplit donc le rôle d'un **CMS headless basé sur Git**.
+description: Augmentez le potentiel de votre application Nuxt.js avec le module `@nuxt/content` grâce auquel on peut écrire dans un répertoire `content/` et récupérer du Markdown, JSON, YAML et des fichiers CSV à travers une API dans le style de MongoDB, qui remplit donc le rôle d'un **CMS headless basé sur Git**.
 position: 4
 category: directory-structure
 img: /guides/nuxt-content.svg
@@ -70,7 +70,7 @@ questions:
     correctAnswer: true
 ---
 
-Augmentez le potentiel de votre application Nuxt.js avec le module `@nuxtjs/content` grâce auquel on peut écrire dans un répertoire `content/` et récupérer du Markdown, JSON, YAML et des fichiers CSV à travers une API dans le style de MongoDB, qui remplit donc le rôle d'un **CMS headless basé sur Git**.
+Augmentez le potentiel de votre application Nuxt.js avec le module `@nuxt/content` grâce auquel on peut écrire dans un répertoire `content/` et récupérer du Markdown, JSON, YAML et des fichiers CSV à travers une API dans le style de MongoDB, qui remplit donc le rôle d'un **CMS headless basé sur Git**.
 
 <app-modal :src="img" :alt="imgAlt"></app-modal>
 
@@ -341,7 +341,7 @@ Le module `content` possède un puissant QueryBuilder d'API (similaire à MongoD
 
 <base-alert type="next">
 
-Se référer à la [documentation du module content](https://content.nuxtjs.org/fetching#api) pour davantage de détails.
+Se référer à la [documentation du module content](https://content.nuxtjs.org/advanced/#api-endpoint) pour davantage de détails.
 
 </base-alert>
 
@@ -361,7 +361,7 @@ Dans le cas d'articles, le contenu peut être utilisé pour générer un fil d'a
 
 <base-alert type="next">
 
-Se référer à la [documentation du module content](https://content.nuxtjs.org/advanced#integration-with-nuxtjsfeed) pour davantage de détails.
+Se référer à la [documentation du module content](https://content.nuxtjs.org/integrations/#nuxtjsfeed) pour davantage de détails.
 
 </base-alert>
 

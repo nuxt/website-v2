@@ -1,5 +1,6 @@
 ---
-title: dist
+title: Dist directory
+menuTitle: dist
 description: The `dist` folder, short for *distribution* folder. It is dynamically generated when using the `nuxt generate` commands and includes the generated production ready HTML files and assets that are necessary to deploy and run your statically generated Nuxt.js application.
 position: 5
 category: directory-structure
@@ -78,7 +79,7 @@ If you do change your dist folder then you will need to add that to your version
 
 ### The subFolders Property
 
-Nuxt.js puts all your generated pages inside a folder by default, however you can change this if you wanted to by modifying the nuxt.config and changing the subFolders to be false.
+Nuxt.js puts all your generated pages inside a folder by default, however you can change this if you want by modifying the nuxt.config and changing the subFolders to be false.
 
 ```js{}[nuxt.config.js]
 generate: {

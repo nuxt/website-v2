@@ -9,7 +9,7 @@
             class="text-3xl xl:text-4xl text-light-onSurfacePrimary dark:text-dark-onSurfacePrimary font-medium leading-normal mb-6 lg:pt-4 transition-colors duration-300 ease-linear"
           >
             {{ $t('team.title') }}
-            <template v-slot:nuxt>
+            <template #nuxt>
               <AppTitle />
             </template>
           </i18n>
@@ -24,10 +24,7 @@
         />
 
         <TeamMembers :team="nuxtCompany.team" :title="nuxtCompany.title" />
-        <LazyTeamMembers
-          :team="nuxtCommunity.team"
-          :title="nuxtCommunity.title"
-        />
+        <TeamMembers :team="nuxtCommunity.team" :title="nuxtCommunity.title" />
       </div>
     </div>
   </div>
@@ -198,7 +195,6 @@ export default {
             website: 'https://blog.lichter.io',
             badges: ['maintainer']
           },
-          
           {
             name: 'Ricardo Gobbo de Souza',
             city: 'São José dos Campos, São Paulo, Brasil',

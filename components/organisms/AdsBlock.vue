@@ -1,15 +1,4 @@
 <template>
-  <AdBlock v-if="$store.state.adBlocked" />
-  <CarbonAds v-else-if="displayCarbon" />
-  <CodeFundAds v-else :fallback.sync="displayCarbon" />
+  <AdsFallback v-if="$store.state.adBlocked" />
+  <AdsCarbon v-else :key="$route.params.slug" />
 </template>
-
-<script>
-export default {
-  data() {
-    return {
-      displayCarbon: true
-    }
-  }
-}
-</script>

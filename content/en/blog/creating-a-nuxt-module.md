@@ -201,7 +201,7 @@ Don't forget to make sure your `.env`file has been added to your `.gitignore`.
 
 </base-alert>
 
-We can now set a const of `options` equal to the options from the ngrok property of our `nuxt.config.js` or equal to an empty object in case we don't define any options. We also add a const of `authtoken` equal to the `NGROK_TOKEN` from our `.env` file or `options.authtoken` which is the same as `nuxt.options.ngrok.authtoken`, in case this value was defined directly in our `ngrok` property in the our `nuxt.config.js`.
+We can now set a const of `options` equal to the options from the ngrok property of our `nuxt.config.js` or equal to an empty object in case we don't define any options. We also add a const of `token` equal to the `NGROK_TOKEN` from our `.env` file or `options.token` which is the same as `nuxt.options.ngrok.token`, in case this value was defined directly in our `ngrok` property in the our `nuxt.config.js`.
 
 We can then await the ngrok authtoken passing in the token value.
 
@@ -213,13 +213,13 @@ export default function () {
 
   // Read ngrok property defined in nuxt.config.js
   const options = nuxt.options.ngrok || {}
-  const authtoken = process.env.NGROK_TOKEN || options.authtoken
+  const token = process.env.NGROK_TOKEN || options.token
 
   // [...]
 }
 ```
 
-We can then await the ngrok authtoken passing in the value of `token`which we have defined above.
+We can then await the ngrok authtoken passing in the value of `token` which we have defined above.
 
 ```js{}[modules/ngrok/index.js]
 import ngrok from 'ngrok'
@@ -229,13 +229,13 @@ export default function () {
 
   // Read ngrok property defined in nuxt.config.js
   const options = nuxt.options.ngrok || {}
-  const token = process.env.NGROK_TOKEN || options.authtoken
+  const token = process.env.NGROK_TOKEN || options.token
 
   // https://nuxtjs.org/docs/2.x/internals-glossary/internals-nuxt#hooks
   nuxt.hook('listen', async function (server, { port }) {
 
-    if(options.authtoken){
-      await ngrok.authtoken(options.authtoken)
+    if(token){
+      await ngrok.authtoken(token)
     }
 
     url = await ngrok.connect(port)
@@ -265,8 +265,8 @@ export default function () {
   // https://nuxtjs.org/docs/2.x/internals-glossary/internals-nuxt#hooks
   nuxt.hook('listen', async function (server, { port }) {
 
-    if(options.authtoken){
-      await ngrok.authtoken(options.authtoken)
+    if(token){
+      await ngrok.authtoken(token)
     }
 
     url = await ngrok.connect(port)
@@ -384,13 +384,13 @@ export default function () {
 
   // Read ngrok property defined in nuxt.config.js
   const options = nuxt.options.ngrok || {}
-  const authtoken = process.env.NGROK_TOKEN
+  const token = process.env.NGROK_TOKEN || options.token
 
   // https://nuxtjs.org/docs/2.x/internals-glossary/internals-nuxt#hooks
   nuxt.hook('listen', async function (server, { port }) {
 
-    if(options.authtoken){
-      await ngrok.authtoken(options.authtoken)
+    if(token){
+      await ngrok.authtoken(token)
     }
 
 

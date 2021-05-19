@@ -1,5 +1,6 @@
 ---
-title: plugins
+title: Plugins directory
+menuTitle: plugins
 description: The `plugins` directory contains your Javascript plugins that you want to run before instantiating the root Vue.js Application.
 position: 11
 category: directory-structure
@@ -187,7 +188,7 @@ npm install v-tooltip
   </code-block>
 </code-group>
 
-The we create the file `plugins/vue-tooltip.js`
+Then we create the file `plugins/vue-tooltip.js`
 
 ```js{}[plugins/vue-tooltip.js]
 import Vue from 'vue'
@@ -340,6 +341,10 @@ export default {
 Global mixins can be easily added with Nuxt plugins but can cause trouble and memory leaks when not handled correctly. Whenever you add a global mixin to your application, you should use a flag to avoid registering it multiple times:
 
 ```js{}[plugins/my-mixin-plugin.js]
+import Vue from "vue"
+
+// Make sure to pick a unique name for the flag
+// so it won't conflict with any other mixin.
 if (!Vue.__my_mixin__) {
   Vue.__my_mixin__ = true
   Vue.mixin({ ... }) // Set up your mixin then

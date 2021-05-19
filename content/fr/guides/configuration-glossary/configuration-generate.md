@@ -26,7 +26,7 @@ export default {
 
 - Type: `Object` ou `false`
 
-Cette option est utilisée par `nuxt generate` avec la [cible statique](/guides/features/deployment-targets#static-hosting) pour éviter de re-build lorsque les fichiers traqués n'ont pas été modifiés.
+Cette option est utilisée par `nuxt generate` avec la [cible statique](/docs/2.x/features/deployment-targets#static-hosting) pour éviter de re-build lorsque les fichiers traqués n'ont pas été modifiés.
 
 Par défaut:
 
@@ -193,7 +193,7 @@ L'intervalle entre 2 cycles de render, utile pour éviter de spam une API avec l
 ## minify
 
 - **Déprécié !**
-- Il faut utiliser [build.html.minify](/guides/configuration-glossary/configuration-build#htmlminify) à la place.
+- Il faut utiliser [build.html.minify](/docs/2.x/configuration-glossary/configuration-build#htmlminify) à la place.
 
 ## routes
 

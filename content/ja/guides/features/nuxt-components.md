@@ -6,67 +6,67 @@ category: features
 csb_link_nuxt_link: https://codesandbox.io/embed/github/nuxt-academy/guides-examples/tree/master/03_features/09_components_nuxt-link?fontsize=14&hidenavigation=1&theme=dark
 csb_link_nuxt: https://codesandbox.io/embed/github/nuxt-academy/guides-examples/tree/master/03_features/09_components_nuxt?fontsize=14&hidenavigation=1&theme=dark
 questions:
-  - question: What component do you use to display your page components?
+  - question: ページコンポーネントを表示するためにどのコンポーネントを使いますか？
     answers:
       - '<Nuxt>'
       - '<Page>'
       - '<Views>'
     correctAnswer: '<Nuxt>'
-  - question: The `<Nuxt>` component can be used in?
+  - question: '`<Nuxt>` コンポーネントが使われるのは？'
     answers:
-      - components
-      - pages
-      - layouts
-    correctAnswer: layouts
-  - question: Which component is used for displaying the children components in a nested route?
+      - コンポーネント
+      - ページ
+      - レイアウト
+    correctAnswer: レイアウト
+  - question: ネストされたルートで子コンポーネントを表示するために使われるコンポーネントは？
     answers:
       - '<Nuxt>'
       - '<NuxtChild>'
       - '<Children>'
     correctAnswer: '<NuxtChild>'
-  - question: Where do you insert the `<NuxtChild>` component?
+  - question: `<NuxtChild>` コンポーネントはどこに挿入しますか？
     answers:
       - pages/child.vue
       - pages/parent.vue
       - layouts/parent.vue
     correctAnswer: pages/parent.vue
-  - question: '`keep-alive` can be used in'
+  - question: '`keep-alive` が使われるのは？'
     answers:
-      - '<Nuxt> component only'
-      - '<Nuxt> and <NuxtChild> component'
-      - '<NuxtChild> component only'
-    correctAnswer: '<Nuxt> and <NuxtChild> component'
-  - question: What component do we use to link to internal pages?
+      - '<Nuxt> コンポーネントのみ'
+      - '<Nuxt> と <NuxtChild> コンポーネント'
+      - '<NuxtChild> コンポーネントのみ'
+    correctAnswer: '<Nuxt> と <NuxtChild> コンポーネント'
+  - question: 内部ページにリンクするためにどのコンポーネントを使いますか？
     answers:
       - '<NuxtLink>'
       - '<RouterLink>'
       - '<a>'
     correctAnswer: '<NuxtLink>'
-  - question: 'How do you link to the about page of your app using <NuxtLink>?'
+  - question: '<NuxtLink> を使ってアプリケーションの概要ページにリンクを作る際正しいのは？'
     answers:
       - to="/about"
       - href="/about"
       - link="/about"
     correctAnswer: to="/about"
-  - question: What key do you use to disable prefetching for certain pages?
+  - question: 特定ページのプリフェッチを無効にするためにどのキーを使用しますか？
     answers:
       - no-prefetch
       - :prefetch="false"
-      - no-prefetch and :prefetch="false"
-    correctAnswer: no-prefetch and :prefetch="false"
-  - question: What is the default class you can use to add styles for active links
+      - no-prefetch と :prefetch="false"
+    correctAnswer: no-prefetch と :prefetch="false"
+  - question: アクティブなリンクのスタイルを追加するために使えるデフォルトのクラスは？
     answers:
       - nuxt-link-active
       - link-active
       - router-link-active
     correctAnswer: nuxt-link-active
-  - question: What is the default class you can use to add styles for exact active links
+  - question: 正確なアクティブリンクのスタイルを追加するために使えるデフォルトのクラスは？
     answers:
       - nuxt-link-exact-active
       - link-exact-active
       - nuxt-exact-active-link
     correctAnswer: nuxt-link-exact-active
-  - question: In Nuxt ≥ 2.9.0 which component do you use so that your component is only rendered on client side?
+  - question: Nuxt v2.9.0 以上ではコンポーネントがクライアントサイドでのみレンダリングされるように、どのコンポーネントを使いますか？
     answers:
       - '<client-only>'
       - '<no-ssr>'
@@ -215,12 +215,6 @@ keep-alive と keep-alive-props についてより詳しく知るためには [v
 </template>
 ```
 
-実際の例を見たいときは、[ネストされたルートの例](https://ja.nuxtjs.org/examples/nested-routes) を参照してください。
-
-<app-modal>
-  <code-sandbox  :src="csb_link_nuxt"></code-sandbox>
-</app-modal>
-
 ## NuxtLink コンポーネント
 
 アプリケーションでページ間を遷移するためには、`<NuxtLink>` コンポーネントを使うべきです。このコンポーネントは Nuxt.js に含まれているので、他のコンポーネントのようにインポートする必要はありません。これは HTML の `<a>` タグと似ていますが、`href="/about"` の代わりに `to="/about"` を使います。もし以前 `vue-router` を使ったことがあるなら、`<RouterLink>` の代わりが `<NuxtLink>` だと考えることができます。
@@ -253,15 +247,15 @@ keep-alive と keep-alive-props についてより詳しく知るためには [v
 
 </base-alert>
 
-<base-alert type="info">
-
-`<NuxtLink>` は[スマートプリフェッチ](/docs/2.x/features/nuxt-components#the-nuxtlink-component)の機能も持ちます。
-
-</base-alert>
-
 ## prefetchLinks
 
 Nuxt.js はスマートプリフェッチの機能を持ちます。viewport 内やスクロール時にリンクが表示されたことを検知し、それらのページの JavaScript をプリフェッチしてユーザーがリンクをクリックするのを待ちます。Nuxt.js はブラウザがビジーではないときにのみリソースを読み込み、接続がオフラインのときや 2G の接続しかない場合はプリフェッチをスキップします。
+
+<base-alert type="info">
+
+スマートプリフェッチについての詳細は[こちらの記事](/blog/introducing-smart-prefetching)を参照してください。
+
+</base-alert>
 
 ### 特定のリンクでプリフェッチを無効にする
 
@@ -290,7 +284,9 @@ Nuxt.js v2.10.0 からは、`prefetchLinks` を `false` に設定した上で特
 <NuxtLink to="/about" prefetch>About page prefetched</NuxtLink>
 ```
 
-## linkActiveClass
+## Link クラス
+
+### linkActiveClass
 
 `linkActiveClass` は、アクティブなリンクのための `vue-router` の CSS クラスと同じように機能します。どのリンクがアクティブかを表示したい場合は、`nuxt-link-active` クラスを持つ css を作成することで実現できます。
 
@@ -322,7 +318,7 @@ export default {
 
 </base-alert>
 
-## linkExactActiveClass
+### linkExactActiveClass
 
 `linkExactActiveClass` は、正確なアクティブなリンクのための `vue-router` の CSS クラスと同じように機能します。どのリンクがアクティブか完全に一致させて表示したい場合は、`nuxt-link-exact-active` クラスを css に追加することで実現できます。
 
@@ -354,7 +350,7 @@ export default {
 
 </base-alert>
 
-## linkPrefetchedClass
+### linkPrefetchedClass
 
 プリフェッチしたリンクすべてにスタイルを追加することができます。これはデフォルトの挙動を変更した後に、どのリンクでプリフェッチが行われているかをテストする際に役立ちます。linkPrefetchedClass はデフォルトでは無効になっています。有効にしたい場合、 `nuxt.config.js` ファイルの router プロパティに `linkPrefetchedClass` を追加する必要があります。
 
@@ -373,16 +369,6 @@ export default {
   color: orangered;
 }
 ```
-
-<base-alert type="info">
-
-この例では `nuxt-link-prefetched` というクラス名を使用しましたが、好きな名前を使用することができます。
-
-</base-alert>
-
-<app-modal>
-  <code-sandbox  :src="csb_link_nuxt_link"></code-sandbox>
-</app-modal>
 
 ## client-only コンポーネント
 
@@ -415,6 +401,29 @@ export default {
     </client-only>
   </div>
 </template>
+```
+
+<base-alert  type="info">
+
+サーバーでレンダリングされたページでは `<client-only>` 内の `$refs` が `$nextTick` を使っても準備ができていない場合があります。手としては `$nextTick` を数回呼び出すことです:
+
+</base-alert>
+
+```js{}[page.vue]
+mounted(){
+  this.initClientOnlyComp()
+},
+methods: {
+  initClientOnlyComp(count = 10) {
+    this.$nextTick(() => {
+      if (this.$refs.myComp) {
+        //...
+      } else if (count > 0) {
+        this.initClientOnlyComp(count - 1);
+      }
+    });
+  },
+}
 ```
 
 <base-alert>

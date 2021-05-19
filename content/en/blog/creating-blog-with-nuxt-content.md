@@ -695,7 +695,7 @@ Passing in `$content` and `params` to the context in our `asyncData` function we
 <script>
   export default {
     async asyncData({ $content, params }) {
-      const articles = await $content('articles', params.slug)
+      const articles = await $content('articles')
         .only(['title', 'description', 'img', 'slug', 'author'])
         .sortBy('createdAt', 'asc')
         .fetch()
@@ -917,7 +917,7 @@ See the [demo code](https://github.com/nuxt-academy/demo-blog-nuxt-content) for 
 
 ## Live editing our content
 
-Our blog is looking really great and if we need to modify any of the content on the page we can do so directly in the browser thanks to the live edit feature. All you have to do is double click on your page while in dev mode and and the live edit will open. Here you can modify any of your text and also the front matter. You can even add a component that is in the global components folder and just by clicking away you will see your changes live in the browser and you will see in your editor and console that the file has been modified and saved.
+Our blog is looking really great and if we need to modify any of the content on the page we can do so directly in the browser thanks to the live edit feature. All you have to do is double click on your page while in dev mode and the live edit will open. Here you can modify any of your text and also the front matter. You can even add a component that is in the global components folder and just by clicking away you will see your changes live in the browser and you will see in your editor and console that the file has been modified and saved.
 
 <video poster="https://res.cloudinary.com/nuxt/video/upload/v1588091670/live-edit-content_kdorvi.jpg" loop="loop" plays-inline="true" controls="controls">
   <source src="https://res.cloudinary.com/nuxt/video/upload/v1588091670/live-edit-content_kdorvi.webm" type="video/webm">
@@ -939,7 +939,7 @@ Working with content is great fun and there is so much more you can do and build
 
 ## Further Reading
 
-For more info on how to improve your blog check out these articles by by [Gareth Redfern](https://twitter.com/garethredfern):
+For more info on how to improve your blog check out these articles by [Gareth Redfern](https://twitter.com/garethredfern):
 
 - [Adding a Sitemap Using Nuxt Content](https://redfern.dev/articles/adding-a-sitemap-using-nuxt-content/)
 - [Adding Social Media & SEO Meta Data Using Nuxt Content](https://redfern.dev/articles/adding-social-media-seo-meta-data-using-nuxt-content)

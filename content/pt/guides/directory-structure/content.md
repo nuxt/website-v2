@@ -1,6 +1,6 @@
 ---
 title: content
-description: Empodere sua aplicacão Nuxt.js com o módulo `@nuxtjs/content`, no qual você pode escrever em um diretório `content/` e requisitar seus arquivos Markdown, JSON, YAML e CSV através de um API no semelhante ao MongoDB, agindo como um **CMS Headless baseado em Git**.
+description: Empodere sua aplicacão Nuxt.js com o módulo `@nuxt/content`, no qual você pode escrever em um diretório `content/` e requisitar seus arquivos Markdown, JSON, YAML e CSV através de um API no semelhante ao MongoDB, agindo como um **CMS Headless baseado em Git**.
 position: 4
 category: directory-structure
 img: /docs/2.x/nuxt-content.svg
@@ -70,7 +70,7 @@ questions:
     correctAnswer: true
 ---
 
-Empodere sua aplicacão Nuxt.js com o módulo `@nuxtjs/content`, no qual você pode escrever em um diretório `content/` e requisitar seus arquivos Markdown, JSON, YAML e CSV através de uma API no semelhante ao MongoDB, agindo como um **CMS Headless baseado em Git**.
+Empodere sua aplicacão Nuxt.js com o módulo `@nuxt/content`, no qual você pode escrever em um diretório `content/` e requisitar seus arquivos Markdown, JSON, YAML e CSV através de uma API no semelhante ao MongoDB, agindo como um **CMS Headless baseado em Git**.
 
 <app-modal :src="img" :alt="imgAlt"></app-modal>
 
@@ -338,7 +338,7 @@ O módulo content vem com uma API QueryBuilder poderosa semelhante ao MongoDB qu
 
 <base-alert type="next">
 
-Veja a [documentação do módulo content](https://content.nuxtjs.org/fetching#api) para mais detalhes
+Veja a [documentação do módulo content](https://content.nuxtjs.org/advanced/#api-endpoint) para mais detalhes
 
 </base-alert>
 
@@ -358,7 +358,7 @@ No caso de artigos, o content pode ser usado para gerar feeds de notícias usand
 
 <base-alert type="next">
 
-Veja a [documentação do módulo content](https://content.nuxtjs.org/advanced#integration-with-nuxtjsfeed) para mais detalhes
+Veja a [documentação do módulo content](https://content.nuxtjs.org/integrations/#nuxtjsfeed) para mais detalhes
 
 </base-alert>
 

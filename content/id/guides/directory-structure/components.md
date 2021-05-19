@@ -37,7 +37,7 @@ Direktori komponen berisi komponen Vue.js Anda. Komponen adalah bagian-bagian be
 
 ### Data _Fetching_
 
-Untuk mengakses data _asynchronous_ dari API di komponen Anda, Anda dapat menggunakan Nuxt [hook `fetch()`](/guides/features/data-fetching#the-fetch-method).
+Untuk mengakses data _asynchronous_ dari API di komponen Anda, Anda dapat menggunakan Nuxt [hook `fetch()`](/docs/2.x/features/data-fetching#the-fetch-method).
 
 Dengan menggunakan `$fetchState.pending` Anda dapat menampilkan pesan ketika data sedang menunggu untuk dimuat dan dengan menggunakan `$fetchState.error` Anda dapat menampilkan pesan galat jika ada galat saat mengambil data. Saat menggunakan _fetch_ Anda harus mendeklarasikan data di properti data. Ini kemudian diisi dengan data yang berasal dari pengambilan.
 
@@ -71,7 +71,7 @@ Dengan menggunakan `$fetchState.pending` Anda dapat menampilkan pesan ketika dat
 
 <base-alert type="next">
 
-Lihat bab tentang [fetch()](/guides/features/data-fetching#the-fetch-method) untuk detail lebih lanjut tentang cara kerja _fetch_.
+Lihat bab tentang [fetch()](/docs/2.x/features/data-fetching#the-fetch-method) untuk detail lebih lanjut tentang cara kerja _fetch_.
 
 </base-alert>
 

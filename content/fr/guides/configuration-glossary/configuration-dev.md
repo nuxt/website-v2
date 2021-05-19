@@ -16,7 +16,7 @@ Cette propriété est écrasée par les commandes `nuxt`:
 - `dev` est forcé à `true` avec `nuxt`
 - `dev` est forcé à `false` avec `nuxt build`, `nuxt start` et `nuxt generate`
 
-Cette propriété devrait être utilisée lorsque l'on utilise Nuxt de [manière programmatique](/guides/internals-glossary/nuxt):
+Cette propriété devrait être utilisée lorsque l'on utilise Nuxt de [manière programmatique](/docs/2.x/internals-glossary/nuxt):
 
 ```js{}[nuxt.config.js]
 export default {

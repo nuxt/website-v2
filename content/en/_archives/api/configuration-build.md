@@ -409,6 +409,7 @@ Configuration for the [html-minifier](https://github.com/kangax/html-minifier) p
 > More details are in [vue-style-loader options](https://github.com/vuejs/vue-style-loader#options).
 
 ## loadingScreen
+
 - Type: `Boolean` or `Object`
 - Default: `{}`
 

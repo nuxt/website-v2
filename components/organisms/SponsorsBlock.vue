@@ -1,26 +1,46 @@
 <template>
   <div>
     <p
-      class="lg:text-sm text-light-onSurfacePrimary dark:text-dark-onSurfacePrimary text-center"
+      class="
+        pb-3
+        text-sm
+        font-bold
+        tracking-wide
+        text-gray-500
+        uppercase
+        border-b border-dashed
+        lg:mb-2
+        dark:text-gray-600
+        lg:text-xs
+      "
     >
-      Platinum Sponsors
+      Partners
     </p>
     <a
       v-for="sponsor in sponsors"
       :key="sponsor.name"
-      :href="sponsor.link"
-      class="block lg:inline-block my-4 w-48 lg:w-full"
+      :href="sponsor.url"
+      class="
+        block
+        py-2
+        border-b border-dashed
+        opacity-75
+        hover:opacity-100
+        lg:inline-block
+        lg:w-full
+      "
       rel="noopener sponsored"
       target="_blank"
     >
       <img
         :src="`/img/sponsors/${$colorMode.value}/${sponsor.img}`"
         :alt="sponsor.name"
+        :class="sponsor.class"
       />
     </a>
     <AppButton
       :to="localePath({ name: 'sponsor-nuxtjs' })"
-      class="justify-center mb-8"
+      class="justify-center mt-2 mb-8"
     >
       Support Us
     </AppButton>
@@ -33,19 +53,28 @@ export default {
     return {
       sponsors: [
         {
-          name: 'Storyblok',
-          link: 'https://www.storyblok.com/?ref=nuxt',
-          img: 'storyblok-logo.svg'
-        },
-        {
-          name: 'Moovweb',
-          link: 'https://www.moovweb.com/?ref=nuxt',
-          img: 'moovweb-logo.png'
+          name: 'Strapi',
+          url: 'https://strapi.io/?ref=nuxt',
+          img: 'strapi-logo.svg',
+          class: 'w-32'
         },
         {
           name: 'Ship Shape',
-          link: 'https://shipshape.io/?ref=nuxt',
-          img: 'shipshape-logo.svg'
+          url: 'https://shipshape.io/?ref=nuxt',
+          img: 'shipshape-logo.svg',
+          class: 'w-32'
+        },
+        {
+          name: 'Swell',
+          url: 'https://swell.is/',
+          img: 'swell-logo.svg',
+          class: 'h-8'
+        },
+        {
+          name: 'Google Chrome',
+          img: 'google-chrome.svg',
+          url: 'https://www.google.com/chrome/?ref=nuxt',
+          class: 'w-32'
         }
       ]
     }

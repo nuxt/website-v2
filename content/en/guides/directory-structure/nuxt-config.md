@@ -1,5 +1,6 @@
 ---
-title: nuxt.config
+title: Nuxt configuration file
+menuTitle: nuxt.config
 description: By default, Nuxt.js is configured to cover most use cases. This default configuration can be overwritten with the nuxt.config.js file.
 position: 14
 category: directory-structure
@@ -34,6 +35,26 @@ questions:
 By default, Nuxt.js is configured to cover most use cases. This default configuration can be overwritten with the nuxt.config.js file.
 
 ## nuxt.config.js
+
+### alias
+
+This option lets you define aliases that will be available within your JavaScript and CSS.
+
+```js{}[nuxt.config.js]
+import { resolve } from 'path'
+
+export default {
+  alias: {
+    'style': resolve(__dirname, './assets/style')
+  }
+}
+```
+
+<base-alert type="next">
+
+See more on the [alias property](/docs/2.x/configuration-glossary/configuration-alias)
+
+</base-alert>
 
 ### build
 
@@ -112,7 +133,13 @@ export default {
 
 ### runtimeConfig
 
-The runtime config has built-in dotenv support providing better security and faster development. The runtime config is added to the Nuxt payload so there is no need to rebuild in order to update the runtime configuration when working in development or with Server-side rendering or client side only applications. Although for static sites you will still need to regenerate your site to see these changes.
+The runtime config has built-in [dotenv](https://github.com/motdotla/dotenv) support for better security and faster development. The runtime config is added to the Nuxt payload so there is no need to rebuild in order to update the runtime configuration when working in development or with server-side rendering or client-side only applications. (For static sites you will still need to regenerate your site to see changes.)
+
+#### `.env` support
+
+If you have a `.env` file in your project root directory, it will be automatically loaded into `process.env` and accessible within your `nuxt.config`/`serverMiddleware` and any other files they import.
+
+You can customize the path by using `--dotenv <file>` or disable entirely with `--dotenv false`. For example, you might specify a different `.env` file in production, staging or development environments.
 
 #### `publicRuntimeConfig`
 
@@ -161,7 +188,7 @@ Inside your templates you can access your runtimeConfigs directly using `$config
 </template>
 ```
 
-<base-alert type="warn">
+<base-alert>
 
 Your private config could be exposed if you use `$config` outside of a server-only context (for example, if you use `$config` in `fetch`, `asyncData` or directly inside your template).
 
@@ -370,7 +397,9 @@ This option lets you define custom names of your Nuxt.js directories.
 
 ```js{}[nuxt.config.js]
 export default {
-  pages: 'views' // Nuxt will look for the views/ instead of the pages/ folder
+  dir: {
+    pages: 'views' // Nuxt will look for the views/ instead of the pages/ folder
+  }
 }
 ```
 

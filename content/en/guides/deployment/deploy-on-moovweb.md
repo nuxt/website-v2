@@ -4,7 +4,7 @@ description: How to deploy Nuxt.js app on Layer0?
 menu: Layer0
 target: Server
 category: deployment
-position: 110
+position: 110.2
 ---
 
 Layer0 supports universal (SSR) Nuxt.js applications.

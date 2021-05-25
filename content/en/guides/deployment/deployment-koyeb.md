@@ -19,7 +19,7 @@ To successfully follow and complete this guide, you need:
 
 1. A Nuxt project to deploy. You can use the [create-nuxt-app](https://github.com/nuxt/create-nuxt-app) to create a Nuxt project and get started
 2. A [Koyeb account](https://app.koyeb.com) to deploy and run the dockerized Nuxt application
-3. A [Docker Hub] account to push the Docker image and deploy it on Koyeb
+3. A [Docker Hub](https://hub.docker.com/) account to push the Docker image and deploy it on Koyeb
 
 ## Getting started
 

@@ -290,6 +290,7 @@
 
   & code {
     @apply p-1 not-italic rounded text-sm;
+    word-break: break-word;
   }
 
   & a {

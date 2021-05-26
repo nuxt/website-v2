@@ -1,6 +1,12 @@
 export default {
   'mvp-Partners': [
     {
+      name: 'Netlify',
+      img: 'netlify-logo.svg',
+      url: 'https://www.netlify.com/',
+      class: 'h-12'
+    },
+    {
       name: 'Google Chrome',
       img: 'google-chrome.svg',
       url: 'https://www.google.com/chrome/',

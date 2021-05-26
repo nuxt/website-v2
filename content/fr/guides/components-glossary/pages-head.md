@@ -26,7 +26,7 @@ Utilisez la méthode `head` pour définir les balises d'entête HTML de votre pa
     },
     head() {
       return {
-        titre: this.titre,
+        title: this.titre,
         meta: [
           // `hid` est un identifiant unique. N'utilisez pas `vmid` pour cela car cela ne marchera pas.
           {

@@ -37,6 +37,12 @@ export default {
     return {
       sponsors: [
         {
+          name: 'Netlify',
+          url: 'https://www.netlify.com',
+          img: 'netlify-logo.svg',
+          class: 'w-32'
+        },
+        {
           name: 'Strapi',
           url: 'https://strapi.io/',
           img: 'strapi-logo.svg',

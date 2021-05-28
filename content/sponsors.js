@@ -31,6 +31,12 @@ export default {
       url: 'https://shipshape.io/',
       img: 'shipshape-logo.svg',
       class: 'h-12'
+    },
+    {
+      name: 'Layer0',
+      url: 'https://www.layer0.co/?ref=nuxt',
+      img: 'layer0-logo.svg',
+      class: 'h-12'
     }
   ],
   sponsors: [

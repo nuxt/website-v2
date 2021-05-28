@@ -38,8 +38,14 @@ export default {
       sponsors: [
         {
           name: 'Netlify',
-          url: 'https://www.netlify.com',
+          url: 'https://www.netlify.com/?ref=nuxt',
           img: 'netlify-logo.svg',
+          class: 'w-32'
+        },
+        {
+          name: 'Google Chrome',
+          img: 'google-chrome.svg',
+          url: 'https://www.google.com/chrome/?ref=nuxt',
           class: 'w-32'
         },
         {
@@ -59,10 +65,17 @@ export default {
           class: 'w-32'
         },
         {
+          name: 'Layer0',
+          url: 'https://www.layer0.co/?ref=nuxt',
+          img: 'layer0-logo.svg',
+          class: 'w-32'
+        },
+        {
           name: 'Swell',
-          url: 'https://swell.is/',
+          url: 'https://swell.is/?ref=nuxt',
           img: 'swell-logo.svg',
           class: 'h-8'
+<<<<<<< HEAD
         },
         {
           name: 'Google Chrome',
@@ -70,6 +83,8 @@ export default {
           url: 'https://www.google.com/chrome/?ref=nuxt',
           class: 'w-32'
 >>>>>>> 5eefa048 (sponsors: Add Swell partner (#1448))
+=======
+>>>>>>> 8bbc3f6c (docs: Add layer0 partner (#1463))
         }
       ]
     }

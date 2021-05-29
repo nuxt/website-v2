@@ -1,13 +1,13 @@
 ---
 title: assets
-description: Direktori `assets` berisikan aset Anda yang belum dikompilasi seperti berkas Stylus/Sass, gambar atau font.
+description: Direktori `assets` berisikan aset Anda yang belum dikompilasi seperti berkas Stylus/Sass, gambar atau fon.
 position: 2
 category: directory-structure
 csb_link: https://codesandbox.io/embed/github/nuxt-academy/guides-examples/tree/master/04_directory_structure/02_assets?fontsize=14&hidenavigation=1&theme=dark
 videoScript:
   - assets-video.md
 questions:
-  - question: Direktori mana yang berisi aset Anda yang belum dikompilasi seperti berkas Stylus/Sass, gambar, atau font?
+  - question: Direktori mana yang berisi aset Anda yang belum dikompilasi seperti berkas Stylus/Sass, gambar, atau fon?
     answers:
       - static
       - assets
@@ -31,7 +31,7 @@ questions:
       - di dalam berkas nuxt.config.js
       - di dalam berkas layout default
     correctAnswer: di dalam berkas nuxt.config.js
-  - question: Di properti mana Anda mengimpor font global?
+  - question: Di properti mana Anda mengimpor fon global?
     answers:
       - font
       - head
@@ -57,7 +57,7 @@ questions:
     correctAnswer: '@@'
 ---
 
-Direktori `assets` berisi aset Anda yang belum terkompilasi seperti berkas Stylus/Sass, gambar atau font.
+Direktori `assets` berisi aset Anda yang belum terkompilasi seperti berkas Stylus/Sass, gambar atau fon.
 
 ## Gambar:
 
@@ -129,9 +129,9 @@ npm install --save-dev sass sass-loader@10 fibers
 
 Nuxt.js secara otomatis akan menebak jenis file dengan ekstensinya dan menggunakan pemuat pra-prosesor yang sesuai untuk webpack. Anda masih perlu memasang pemuat yang diperlukan jika Anda perlu menggunakannya.
 
-## Font:
+## Fon:
 
-Anda dapat menggunakan font lokal dengan menambahkannya ke _folder_ aset Anda. Setelah ditambahkan, Anda dapat mengaksesnya melalui css menggunakan @font-face.
+Anda dapat menggunakan fon lokal dengan menambahkannya ke _folder_ aset Anda. Setelah ditambahkan, Anda dapat mengaksesnya melalui css menggunakan @font-face.
 
 ```
 -| assets
@@ -160,7 +160,7 @@ Anda dapat menggunakan font lokal dengan menambahkannya ke _folder_ aset Anda. S
 
 <base-alert type="next">
 
-Untuk menambahkan font eksternal seperti font google, lihat [bab Tag Meta dan SEO](/docs/2.x/features/meta-tags-seo#external-resources)
+Untuk menambahkan fon eksternal seperti fon google, lihat [bab Tag Meta dan SEO](/docs/2.x/features/meta-tags-seo#external-resources)
 
 </base-alert>
 
@@ -235,7 +235,7 @@ Untuk kedua pemuat ini, setelan standarnya adalah:
 ]
 ```
 
-Artinya, setiap berkas di bawah 1 KB akan disisipkan sebagai URL data _base-64_. Jika tidak, gambar/font akan disalin di _folder_ yang sesuai (di dalam direktori `.nuxt`) dengan nama yang berisi hash versi untuk penyimpanan tembolok yang lebih baik.
+Artinya, setiap berkas di bawah 1 KB akan disisipkan sebagai URL data _base-64_. Jika tidak, gambar/fon akan disalin di _folder_ yang sesuai (di dalam direktori `.nuxt`) dengan nama yang berisi hash versi untuk penyimpanan tembolok yang lebih baik.
 
 Saat meluncurkan aplikasi Anda dengan `nuxt`, templat Anda di `pages/index.vue`:
 

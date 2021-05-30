@@ -87,6 +87,6 @@ There are more helpful directories and files, including [content](/docs/2.x/dire
 
 <base-alert type="next">
 
-To learn about all directories in detail, feel free to read the the [Directory Structure book](/docs/2.x/directory-structure/nuxt).
+To learn about all directories in detail, feel free to read the [Directory Structure book](/docs/2.x/directory-structure/nuxt).
 
 </base-alert>

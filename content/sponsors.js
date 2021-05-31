@@ -1,6 +1,12 @@
 export default {
   'mvp-Partners': [
     {
+      name: 'Netlify',
+      img: 'netlify-logo.svg',
+      url: 'https://www.netlify.com/',
+      class: 'h-12'
+    },
+    {
       name: 'Google Chrome',
       img: 'google-chrome.svg',
       url: 'https://www.google.com/chrome/',
@@ -24,6 +30,12 @@ export default {
       name: 'Ship Shape',
       url: 'https://shipshape.io/',
       img: 'shipshape-logo.svg',
+      class: 'h-12'
+    },
+    {
+      name: 'Layer0',
+      url: 'https://www.layer0.co/?ref=nuxt',
+      img: 'layer0-logo.svg',
       class: 'h-12'
     }
   ],

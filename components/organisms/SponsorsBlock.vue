@@ -53,6 +53,18 @@ export default {
     return {
       sponsors: [
         {
+          name: 'Netlify',
+          url: 'https://www.netlify.com/?ref=nuxt',
+          img: 'netlify-logo.svg',
+          class: 'w-32'
+        },
+        {
+          name: 'Google Chrome',
+          img: 'google-chrome.svg',
+          url: 'https://www.google.com/chrome/?ref=nuxt',
+          class: 'w-32'
+        },
+        {
           name: 'Strapi',
           url: 'https://strapi.io/?ref=nuxt',
           img: 'strapi-logo.svg',
@@ -65,16 +77,16 @@ export default {
           class: 'w-32'
         },
         {
-          name: 'Swell',
-          url: 'https://swell.is/',
-          img: 'swell-logo.svg',
-          class: 'h-8'
+          name: 'Layer0',
+          url: 'https://www.layer0.co/?ref=nuxt',
+          img: 'layer0-logo.svg',
+          class: 'w-32'
         },
         {
-          name: 'Google Chrome',
-          img: 'google-chrome.svg',
-          url: 'https://www.google.com/chrome/?ref=nuxt',
-          class: 'w-32'
+          name: 'Swell',
+          url: 'https://swell.is/?ref=nuxt',
+          img: 'swell-logo.svg',
+          class: 'h-8'
         }
       ]
     }

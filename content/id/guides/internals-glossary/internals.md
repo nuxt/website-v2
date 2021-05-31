@@ -10,7 +10,7 @@ Nuxt.js memiliki arsitektur yang sepenuhnya modular yang membuka kesempatan bagi
 
 Anda dapat membaca [Panduan Modul](/docs/2.x/directory-structure/modules) untuk mempelajari lebih lanjut apabila Anda tertarik untuk mengembangkan modul Anda sendiri.
 
-Dokumen ini membantu Anda untuk akrab dengan internal Nuxt dan dapat digunakan sebagai acuan ketika Anda mengemabngkan modul Anda sendiri.
+Dokumen ini membantu Anda untuk akrab dengan internal Nuxt dan dapat digunakan sebagai acuan ketika Anda mengembangkan modul Anda sendiri.
 
 ### Core
 

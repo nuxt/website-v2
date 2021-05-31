@@ -202,11 +202,11 @@ Anda dapat mengacu pada dokumentasi [configuration build](/docs/2.x/configurati
 
 ## _Client or server side only_ (Hanya _client_ atau sisi _server_)
 
-Beberapa _plugins_ mungkin hanya dapat bekerja pada _browser_ karena mereka kurang pendukungan untuk SSR.
+Beberapa _plugins_ mungkin hanya dapat bekerja pada _browser_ karena mereka kurang dukungan untuk SSR.
 
 ### Penamaan konvensional _plugin_
 
-Jika _plugin_ diasumsikan hanya bekerja pada _client_ ato sisi _server_, `.client.js` atau `.server.js` dapat diterapkan menjadi _extension_ dari berkas _plugin_ tersebut. Berkas tersebut akan secara otomatis dimasukkan hanya pada sisi (_client_ atau _server_) yang bersangkutan.
+Jika _plugin_ diasumsikan hanya bekerja pada _client_ atau sisi _server_, `.client.js` atau `.server.js` dapat diterapkan menjadi _extension_ dari berkas _plugin_ tersebut. Berkas tersebut akan secara otomatis dimasukkan hanya pada sisi (_client_ atau _server_) yang bersangkutan.
 
 ```js{}[nuxt.config.js]
 export default {
@@ -323,7 +323,7 @@ export default {
 
 ### _Global mixins_
 
-_Global mixins_ daoat ditambahkan secara mudah dengan Nuxt _plugins_, tetapi dapat menyebabkan masalah dan _memory leaks_ ketika tidak ditangani dengan baik. Kapanpun Anda menambahkan _global mixin_ ke dalam aplikasi Anda, Anda diharuskan untuk menggunakan _flag_ untuk menghindari melakukan pendaftarannya secara berulang kali:
+_Global mixins_ dapat ditambahkan secara mudah dengan Nuxt _plugins_, tetapi dapat menyebabkan masalah dan _memory leaks_ ketika tidak ditangani dengan baik. Kapanpun Anda menambahkan _global mixin_ ke dalam aplikasi Anda, Anda diharuskan untuk menggunakan _flag_ untuk menghindari melakukan pendaftarannya secara berulang kali:
 
 ```js{}[plugins/my-mixin-plugin.js]
 if (!Vue.__my_mixin__) {

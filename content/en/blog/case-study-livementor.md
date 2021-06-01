@@ -6,6 +6,10 @@ date: 2021-06-01
 tags:
   - case-study
   - nuxt-migration
+authors:
+  - name: 'Clement Ollivier'
+    avatarUrl: https://pbs.twimg.com/profile_images/1370286658432724996/ZMSDzzIi_400x400.jpg
+    link: https://twitter.com/clemcodes
 ---
 
 For the Case Studies series, we've been talking to companies using Nuxt to build their product. We'll explore their journey into the framework and its ecosystem, examine the variety of projects you can use Nuxt for, and consider the challenges they encountered and benefits they experienced.

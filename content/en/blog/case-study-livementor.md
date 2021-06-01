@@ -18,7 +18,7 @@ LiveMentor is one of the world's leading education companies focused on entrepre
 
 Our platform combines technology with storytelling, teachers and community integration. We teach the topics that are most important for someone who's starting a business: sales, marketing, hiring, financing, business planning, and all the basics that you need when you are creating a company.
 
-We focus on helping you start a business, quit your salary job and be able to live from your own activity. We have students in 30 countries, but all our lessons are in French, so French people leaving abroad. We have 100 people working at LiveMentor.
+We focus on helping you start a business, quit your day job and make a living from your own business. We have students in 30 countries, but all our lessons are in French, so many of them are French people living abroad. We have 100 people working at LiveMentor.
 
 ### How did you discover Nuxt?
 

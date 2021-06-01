@@ -22,7 +22,7 @@ We focus on helping you start a business, quit your day job and make a living fr
 
 ### How did you discover Nuxt?
 
-We started LiveMentor as a monolith app on a Rails stack, which allowed us to iterate quickly during the first years. Two years ago, we decided to solidify our codebase, and chose VueJS to propose a rich client-side experience.
+We started LiveMentor as a monolithic app on a Rails stack, which allowed us to iterate quickly during the first few years. Two years ago, we decided to solidify our codebase, and chose VueJS for a rich client-side experience.
 
 To make the transition progressive, we built micro Vue apps functioning on page levels, with a wrapper still rendered by Rails. But loading times were increasing, and we then knew we had to go a step further.
 

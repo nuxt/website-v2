@@ -42,6 +42,8 @@ We are focused like crazy on reactivity because all our pedagogical experience, 
 
 The Firebase plus Nuxt combo made it much better.
 
+![LiveMentor dashboard](case-study-livementor/mockup-m1-3.png)
+
 ### What is your favorite feature?
 
 The first feature that made us choose Nuxt was the project's architecture. Be it file-based routing or folders separation, it makes all fit in an intuitive way. Just dropping a file in your `pages` folder without having to configure a router is a must.

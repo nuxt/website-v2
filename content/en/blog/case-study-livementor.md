@@ -38,7 +38,7 @@ Regarding deployments, Nuxt also helps a lot by abstracting the Node parts. We'r
 
 We use dynamic rendering because our pages are not static and we have a lot of content updated constantly, so we use SSR to do this because it's not really a static site.
 
-We are focused like crazy on reactivity because all our pedagogical experience, all the learning experiences is based on the messaging app between the mentor and the students. We had trouble with our previous messaging system, latency and messages not showing up.
+We are focused like crazy on reactivity because all our pedagogical experience, all the learning experience is based on the messaging app between the mentor and the students. We had trouble with our previous messaging system, latency and messages not showing up.
 
 The Firebase plus Nuxt combo made it much better.
 

@@ -46,7 +46,7 @@ The Firebase plus Nuxt combo made it much better.
 
 ### What is your favorite feature?
 
-The first feature that made us choose Nuxt was the project's architecture. Be it file-based routing or folders separation, it makes all fit in an intuitive way. Just dropping a file in your `pages` folder without having to configure a router is a must.
+The first feature that made us choose Nuxt was the project's architecture. Be it file-based routing or folder separation, it all fits in an intuitive way. Just dropping a file in your `pages` folder without having to configure a router is a must.
 
 For the moment, we use Vuex a lot, but we're thinking about moving a little bit from it by leveraging the Composition API.
 

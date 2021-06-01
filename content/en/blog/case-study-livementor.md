@@ -24,7 +24,7 @@ We focus on helping you start a business, quit your day job and make a living fr
 
 We started LiveMentor as a monolithic app on a Rails stack, which allowed us to iterate quickly during the first few years. Two years ago, we decided to solidify our codebase, and chose VueJS for a rich client-side experience.
 
-To make the transition progressive, we built micro Vue apps functioning on page levels, with a wrapper still rendered by Rails. But loading times were increasing, and we then knew we had to go a step further.
+To make the transition progressively, we began by building micro Vue apps functioning at the page level, with a wrapper rendered by Rails. But loading times kept going up, and we knew we had to go a step further.
 
 We found Nuxt at this time, via Twitter, and made a Proof of Concept project that went very well. Since then we're moving all our pages to Nuxt progressively.
 

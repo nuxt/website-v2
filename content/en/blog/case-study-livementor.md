@@ -26,7 +26,7 @@ We started LiveMentor as a monolithic app on a Rails stack, which allowed us to 
 
 To make the transition progressively, we began by building micro Vue apps functioning at the page level, with a wrapper rendered by Rails. But loading times kept going up, and we knew we had to go a step further.
 
-We found Nuxt at this time, via Twitter, and made a Proof of Concept project that went very well. Since then we're moving all our pages to Nuxt progressively.
+We found Nuxt at this time, via Twitter, and made a Proof of Concept project that went very well. Since then, we have been moving all our pages to Nuxt progressively.
 
 ### So you're making a progressive transition?
 

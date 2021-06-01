@@ -16,7 +16,7 @@ We're starting this series with [LiveMentor](https://www.livementor.com/), a com
 
 LiveMentor is one of the world's leading education companies focused on entrepreneurship. We help creators to go from the idea stage to being able to make a living from their projects. So basically being profitable. We have been doing online courses for almost 10 years now, and trying a lot of different ways to teach online. We have tried what we called CBC (cool-off based courses), soft courses, courses with only content and eventually we decided four years ago to focus on one-on-one mentoring. Our three months' training is powered by a messaging app where you can chat with your mentor. We have trained more than 10,000 people so far and we are now on track to train 10,000 people per year.
 
-Our platform is combining technology with storytelling teachers and community integration. We teach in the topics that are the most important for someone who's starting a business, sales, marketing, hiring, financing, business planning, and all the basics that you need when you are creating a company.
+Our platform combines technology with storytelling, teachers and community integration. We teach the topics that are most important for someone who's starting a business: sales, marketing, hiring, financing, business planning, and all the basics that you need when you are creating a company.
 
 We focus on helping you start a business, quit your salary job and be able to live from your own activity. We have students in 30 countries, but all our lessons are in French, so French people leaving abroad. We have 100 people working at LiveMentor.
 

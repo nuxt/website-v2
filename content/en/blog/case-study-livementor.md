@@ -50,7 +50,7 @@ The first feature that made us choose Nuxt was the project's architecture. Be it
 
 For the moment, we use Vuex a lot, but we're thinking about moving a little bit from it by leveraging the Composition API.
 
-### Do you have performances benchmarks before & after using Nuxt?
+### Do you have performance benchmarks before & after using Nuxt?
 
 On the migrated pages, we managed to cut by half our loading time. When we launched the new messaging, one of the first feedback from our users was "Wow this is really fast!".
 

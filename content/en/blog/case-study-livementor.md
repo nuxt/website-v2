@@ -8,7 +8,7 @@ tags:
   - nuxt-migration
 ---
 
-For the Case Studies series, we've been talking to companies using Nuxt to build their product. We'll explore their journey into the framework and its ecosystem, that witness the variety of the projects you can use Nuxt for, as well as the challenges and benefits they got down the road.
+For the Case Studies series, we've been talking to companies using Nuxt to build their product. We'll explore their journey into the framework and its ecosystem, examine the variety of projects you can use Nuxt for, and consider the challenges they encountered and benefits they experienced.
 
 We're starting this series with [LiveMentor](https://www.livementor.com/), a company helping entrepreneurs through mentoring and courses. Happy reading!
 

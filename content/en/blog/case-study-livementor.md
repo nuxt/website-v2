@@ -52,7 +52,7 @@ At the moment, we use Vuex a lot, but we're thinking about moving a little bit a
 
 ### Do you have performance benchmarks before & after using Nuxt?
 
-On the migrated pages, we managed to cut by half our loading time. When we launched the new messaging, one of the first feedback from our users was "Wow this is really fast!".
+On the migrated pages, we managed to cut our loading time in half. When we launched the new messaging, one of the first comments we had from our users was "Wow this is really fast!"
 
 We also noticed that the team velocity increased, as we can now have people who only focus on the front-end, and others on the API. There's a big bonus in development time. But we still work with cross-functional teams, where we're allowed to do Pull Requests in all repositories! So the teams are not siloed by technologies, but more focused.
 

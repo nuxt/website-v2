@@ -26,11 +26,11 @@ We started LiveMentor as a monolithic app on a Rails stack, which allowed us to 
 
 To make the transition progressively, we began by building micro Vue apps functioning at the page level, with a wrapper rendered by Rails. But loading times kept going up, and we knew we had to go a step further.
 
-We found Nuxt at this time, via Twitter, and made a Proof of Concept project that went very well. Since then, we have been moving all our pages to Nuxt progressively.
+We found Nuxt at this time, via [Twitter](https://twitter.com/nuxt_js), and made a Proof of Concept project that went very well. Since then, we have been moving all our pages to Nuxt progressively.
 
 ### So you're making a progressive transition?
 
-Yes, and we're now close to the end. We really wanted to reduce that transition phase, so we extracted features "as-is" to Nuxt. It's important to say that Nuxt made it really easy to make this progressive transition, it all fits together very simply.
+Yes, and we're now close to the end. We really wanted to reduce that transition phase, so we extracted features "as-is" to Nuxt. **It's important to say that Nuxt made it really easy to make this progressive transition, it all fits together very simply.**
 
 Regarding deployments, Nuxt also helps a lot by abstracting the Node parts. We're using Heroku, and with a well configured Docker, it was seamless.
 
@@ -46,16 +46,16 @@ The Firebase plus Nuxt combo made it much better.
 
 ### What is your favorite feature?
 
-The first feature that made us choose Nuxt was the project's architecture. Be it file-based routing or folder separation, it all fits in an intuitive way. Just dropping a file in your `pages` folder without having to configure a router is a must.
+The first feature that made us choose Nuxt was the project's architecture. Be it file-based routing or folder separation, it all fits in an intuitive way. Just dropping a file in your [pages/](/docs/2.x/directory-structure/pages) folder without having to configure a router is a must.
 
 At the moment, we use Vuex a lot, but we're thinking about moving a little bit away from it by leveraging the Composition API.
 
 ### Do you have performance benchmarks before & after using Nuxt?
 
-On the migrated pages, we managed to cut our loading time in half. When we launched the new messaging, one of the first comments we had from our users was "Wow this is really fast!"
+On the migrated pages, **we managed to cut our loading time in half**. When we launched the new messaging, one of the first comments we had from our users was "Wow this is really fast!"
 
 We also noticed that the team velocity increased, as we can now have people who only focus on the front-end, and others on the API. There's a big bonus in development time. But we still work with cross-functional teams, where we're allowed to do Pull Requests in all repositories! So the teams are not siloed by technologies, but more focused.
 
 ### Would you recommend Nuxt?
 
-Yes, of course. We have no doubts about the framework's future, it's well maintained by a solid team. And the community and Sébastien Chopin are really reactive to our messages and there is a community around it which is going to grow big in the next few years. So of course I would recommend it.
+Yes, of course. We have no doubts about the framework's future, it's well maintained by a [solid team](/team). The community is reactive to our messages and we believe Nuxt will keep growing in the coming years.

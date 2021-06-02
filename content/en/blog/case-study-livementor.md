@@ -16,7 +16,7 @@ For the Case Studies series, we've been talking to companies using Nuxt to build
 
 We're starting this series with [LiveMentor](https://www.livementor.com/), a company helping entrepreneurs through mentoring and courses. Happy reading!
 
-### What is LiveMentor ?
+### What is LiveMentor?
 
 LiveMentor is one of the world's leading education companies focused on entrepreneurship. We help creators to go from the idea stage to being able to make a living from their projects. So basically being profitable. We have been doing online courses for almost 10 years now, and trying a lot of different ways to teach online. We have tried what we called CBC (cool-off based courses), soft courses, courses with only content and eventually we decided four years ago to focus on one-on-one mentoring. Our three months' training is powered by a messaging app where you can chat with your mentor. We have trained more than 10,000 people so far and we are now on track to train 10,000 people per year.
 

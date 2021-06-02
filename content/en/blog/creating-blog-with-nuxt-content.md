@@ -1,7 +1,9 @@
 ---
 title: 'Create a Blog with Nuxt Content'
 description: 'The Content module is a git files based headless CMS that provides powerful features when it comes to write blogs, documentation sites or just adding content to any regular website. In this post we will go through most of the benefits of this module and discover how we can create a blog with it.'
-imgUrl: blog/creating-blog-with-nuxt-content/main.png
+imgUrl: blog/creating-blog-with-nuxt-content/main.jpeg
+imgCredits: M
+imgCreditsUrl: https://unsplash.com/@lamerbrain
 date: 2020-07-02
 authors:
   - name: "Debbie O'Brien"
@@ -363,7 +365,7 @@ We can improve this further by using dynamic classes to style the heading classe
 Sometimes we might want to add HTML to our markdown files. Let's add a div with some classes so it has a background color of blue with white text, some padding and a margin bottom.
 
 ```html{}[content/articles/my-first-blog-post.md]
-<div class="bg-blue-500 text-white p-4 mb-4">
+<div class="p-4 mb-4 text-white bg-blue-500">
   This is HTML inside markdown that has a class of note
 </div>
 ```
@@ -390,7 +392,7 @@ We can then create our InfoBox component inside this folder.
 
 ```html{}[components/global/InfoBox.vue]
 <template>
-  <div class="bg-blue-500 text-white p-4 mb-4">
+  <div class="p-4 mb-4 text-white bg-blue-500">
     <p><slot name="info-box">default</slot></p>
   </div>
 </template>
@@ -568,7 +570,7 @@ In this component we use a `v-if` inside our `NuxtLink` component to see if ther
     <NuxtLink
       v-if="prev"
       :to="{ name: 'blog-slug', params: { slug: prev.slug } }"
-      class="text-primary font-bold hover:underline"
+      class="font-bold text-primary hover:underline"
     >
       {{ prev.title }}
     </NuxtLink>

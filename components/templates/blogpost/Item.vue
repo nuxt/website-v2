@@ -39,11 +39,15 @@
         >
           Photo by
           <a
+            v-if="post.imgCreditsUrl"
             :href="post.imgCreditsUrl"
             target="_blank"
             rel="noreferer noopener"
             >{{ post.imgCredits }}</a
           >
+          <span v-else>
+            {{ post.imgCredits }}
+          </span>
         </figcaption>
       </figure>
     </header>

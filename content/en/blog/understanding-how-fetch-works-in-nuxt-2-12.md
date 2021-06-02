@@ -1,7 +1,9 @@
 ---
 title: 'Understanding how fetch works in Nuxt 2.12'
 description: Explore different features of the fetch hook and learn a brand new way to bring data into Nuxt applications.
-imgUrl: blog/understanding-how-fetch-works-in-nuxt-2-12/main.png
+imgUrl: blog/understanding-how-fetch-works-in-nuxt-2-12/main.jpeg
+imgCredits: Rahul Bhosale
+imgCreditsUrl: https://unsplash.com/@rahul_design
 date: 2020-04-06
 authors:
   - name: Krutie Patel

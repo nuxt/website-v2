@@ -1,7 +1,7 @@
 ---
 title: "Announcing Nuxt's $2M seed round"
 description: 'Three years ago, my brother Sébastien and I were open sourcing our code to build Vue.js application server side rendered easily. Today, we are incredibly excited to announce that NuxtJS has raised $2M in seed funding.'
-imgUrl: blog/seed-round/main.jpeg
+imgUrl: blog/seed-round/main.jpeg?cover=new
 imgCredits: Raimond Klavins
 imgCreditsUrl: https://unsplash.com/@raimondklavins
 date: 2020-05-01

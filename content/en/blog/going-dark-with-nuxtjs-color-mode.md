@@ -1,7 +1,7 @@
 ---
 title: 'Going dark with Nuxt.js color mode'
 description: 'The @nuxtjs/color-mode module is a cool way of adding dark mode to your site. But not only does it switch from dark to light but also any color theme (eg. sepia mode). It even has auto detection so that it will choose the right mode depending on your system appearance.'
-imgUrl: blog/going-dark-with-nuxtjs-color-mode/main.jpeg
+imgUrl: blog/going-dark-with-nuxtjs-color-mode/main.jpeg?cover=new
 imgCredits: Benjamin Voros
 imgCreditsUrl: https://unsplash.com/@vorosbenisop
 date: 2020-05-19

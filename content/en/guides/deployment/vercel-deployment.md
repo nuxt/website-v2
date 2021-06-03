@@ -64,7 +64,7 @@ To avoid 404 for Service Workers, make sure to include `sw` to your routes setti
       "headers": [
         {
           "key": "Cache-Control",
-          "value": "public, max-age=43200, immutable"
+          "value": "public, max-age=0, must-revalidate"
         },
         {
           "key": "Service-Worker-Allowed",

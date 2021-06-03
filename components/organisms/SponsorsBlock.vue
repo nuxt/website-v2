@@ -55,6 +55,7 @@ export default {
   computed: {
     partners() {
       const partners = [sponsors['mvp-Partners'], sponsors.partners].flat()
+      /* Double partners array for correct animation */
       return partners.concat(partners)
     }
   }
@@ -105,11 +106,7 @@ export default {
 
 .dark-mode .partners__slider::before,
 .dark-mode .partners__slider::after {
-  background: linear-gradient(
-    to top,
-    theme('colors.dark.surface') 0%,
-    rgba(255, 255, 255, 0) 100%
-  );
+  background: linear-gradient(to top, #2f485e 0%, rgba(255, 255, 255, 0) 100%);
 }
 
 .partners__slider::after {

@@ -45,29 +45,17 @@ Service Worker の 404 を回避するために、ルート設定に `sw` を必
       }
     }
   ],
-  "headers": [
+  "routes": [
+    { "src": "/_nuxt/.+", "headers": { "Cache-Control": "max-age=31557600" } },
     {
-      "source": "/_nuxt/(.+)",
-      "headers": [
-        {
-          "key": "Cache-Control",
-          "value": "max-age=31557600"
-        }
-      ]
+      "src": "/sw.js",
+      "dest": "/_nuxt/static/sw.js",
+      "headers": {
+        "cache-control": "public, max-age=43200, immutable",
+        "Service-Worker-Allowed": "/"
+      }
     },
-    {
-      "source": "/sw.js",
-      "headers": [
-        {
-          "key": "Cache-Control",
-          "value": "public, max-age=43200, immutable"
-        },
-        {
-          "key": "Service-Worker-Allowed",
-          "value": "/"
-        }
-      ]
-    }
+    { "src": "/(.*)", "dest": "/" }
   ]
 }
 ```

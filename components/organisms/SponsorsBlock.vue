@@ -97,11 +97,7 @@ export default {
 
 .light-mode .partners__slider::before,
 .light-mode .partners__slider::after {
-  background: linear-gradient(
-    to top,
-    theme('colors.light.surface') 0%,
-    rgba(255, 255, 255, 0) 100%
-  );
+  background: linear-gradient(to top, #fff 0%, rgba(255, 255, 255, 0) 100%);
 }
 
 .dark-mode .partners__slider::before,

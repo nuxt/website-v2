@@ -51,15 +51,6 @@ To avoid 404 for Service Workers, make sure to include `sw` to your routes setti
   ],
   "headers": [
     {
-      "source": "/_nuxt/(.+)",
-      "headers": [
-        {
-          "key": "Cache-Control",
-          "value": "max-age=31557600"
-        }
-      ]
-    },
-    {
       "source": "/sw.js",
       "headers": [
         {

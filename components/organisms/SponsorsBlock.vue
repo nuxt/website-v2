@@ -69,8 +69,8 @@ export default {
     transform: translateY(0);
   }
   100% {
-    -webkit-transform: translateY(calc(-80px * 6));
-    transform: translateY(calc(-80px * 6));
+    -webkit-transform: translateY(calc(-82px * 7));
+    transform: translateY(calc(-82px * 7));
   }
 }
 
@@ -80,8 +80,8 @@ export default {
     transform: translateY(0);
   }
   100% {
-    -webkit-transform: translateY(calc(-80px * 6));
-    transform: translateY(calc(-80px * 6));
+    -webkit-transform: translateY(calc(-82px * 7));
+    transform: translateY(calc(-82px * 7));
   }
 }
 

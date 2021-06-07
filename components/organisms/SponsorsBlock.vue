@@ -33,7 +33,7 @@
               loading="lazy"
               :src="`/img/sponsors/${$colorMode.value}/${partner.img}`"
               :alt="partner.name"
-              :class="partner.class"
+              class="h-8"
             />
           </a>
         </li>
@@ -69,8 +69,8 @@ export default {
     transform: translateY(0);
   }
   100% {
-    -webkit-transform: translateY(calc(-82px * 7));
-    transform: translateY(calc(-82px * 7));
+    -webkit-transform: translateY(calc(-64px * 7));
+    transform: translateY(calc(-64px * 7));
   }
 }
 
@@ -80,13 +80,14 @@ export default {
     transform: translateY(0);
   }
   100% {
-    -webkit-transform: translateY(calc(-82px * 7));
-    transform: translateY(calc(-82px * 7));
+    -webkit-transform: translateY(calc(-64px * 7));
+    /* single logo height + margin-bottom * 7 */
+    transform: translateY(calc(-64px * 7));
   }
 }
 
 .partners__slider {
-  @apply relative pb-8 h-32 overflow-hidden w-full;
+  @apply relative pb-8 h-40 overflow-hidden w-full;
 }
 
 .partners__slider::before,
@@ -115,7 +116,7 @@ export default {
 
 .partners__slider .partners__slide-track {
   -webkit-animation: scroll 0s linear infinite;
-  animation: 6s scroll 0s linear infinite;
+  animation: 10s scroll 0s linear infinite;
 
   & img {
     @apply select-none cursor-pointer;

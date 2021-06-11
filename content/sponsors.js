@@ -37,6 +37,12 @@ export default {
       url: 'https://www.layer0.co/?ref=nuxt',
       img: 'layer0-logo.svg',
       class: 'h-12'
+    },
+    {
+      name: 'Storyblok',
+      url: 'https://www.storyblok.com/?ref=nuxt',
+      img: 'storyblok-logo.svg',
+      class: 'h-16'
     }
   ],
   sponsors: [

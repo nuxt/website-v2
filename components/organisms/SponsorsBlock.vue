@@ -116,7 +116,7 @@ export default {
 
 .partners__slider .partners__slide-track {
   -webkit-animation: scroll 0s linear infinite;
-  animation: 10s scroll 0s linear infinite;
+  animation: 15s scroll 0s linear infinite;
 
   & img {
     @apply select-none cursor-pointer;

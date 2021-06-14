@@ -1,53 +1,53 @@
 ---
-title: Deploy Nuxt with Bip
-description: How to deploy a Nuxt app with Bip?
+title: Bip で Nuxt をデプロイする
+description: Bip で Nuxt アプリケーションをデプロイする方法は?
 menu: Bip
 target: Static
 category: deployment
 position: 104
 ---
 
-[Bip](https://bip.sh) is a commercial hosting service which provides zero downtime deployment, a global CDN, SSL, unlimited bandwidth and more for Nuxt static websites. Plans are available on a pay as you go, per domain basis.
+[Bip](https://bip.sh) はダウンタイムのないデプロイ、グローバル CDN、SSL、無制限の帯域幅などを Nuxt の静的 Web サイトに提供する商業ホスティングサービスです。プランはドメインごとの従量制で利用できます。
 
-The following guide will show you how to deploy your Nuxt static site to Bip in just a couple simple steps.
+以下のガイドではほんの数ステップで Nuxt の静的 Web サイトを Bip にデプロイする方法を説明します。
 
-## Prerequisites
+## 前提条件
 
-- You have [Yarn](https://yarnpkg.com/getting-started/install) installed.
-- You have the Bip CLI installed, along with a Bip account and domain ready to use. Visit the [Bip Get Started guide](https://bip.sh/getstarted) for further instructions.
+- [Yarn](https://yarnpkg.com/getting-started/install) がインストールされていること
+- Bip CLI がインストールされていること、加えて Bip アカウントとドメインが使える状態になっていること。詳しい説明は [Bip Get Started guide](https://bip.sh/getstarted) を見てください。
 
-## Step 1: Initial setup
+## ステップ 1: 初期設定
 
-You'll first need a Nuxt project ready to deploy and share with the world. If you need a project, use the [create-nuxt-app](https://github.com/nuxt/create-nuxt-app):
+はじめに Nuxt プロジェクトをデプロイして、世界にシェアできる状態にする必要があります。プロジェクトが必要な場合は、[create-nuxt-app](https://github.com/nuxt/create-nuxt-app)を使用してください:
 
-Use Yarn to create your new project:
+Yarn を使用して新しいプロジェクトを作成してください:
 
 ```bash
 yarn create nuxt-app <project-name>
 ```
 
-Follow the prompts to setup your Nuxt project. Ensure that when you reach the 'Deployment target' setting, select 'Static (Static/JAMstack hosting)'.
+画面の指示に従って Nuxt プロジェクトの設定をします。'Deployment target' では、'Static (Static/JAMstack hosting)' が選択されていることを確認してください。
 
-Once complete, move into your new directory:
+完了後、新しいディレクトリに移動してください:
 
 ```bash
 cd <project-name>
 ```
 
-Next, you'll need to initialize your project with Bip. This only needs to be done once.
+次に、Bip でプロジェクトを初期化する必要があります。この作業は一度だけで済みます。
 
 ```bash
 bip init
 ```
 
-Follow the prompts, where you'll be asked which domain you'd like to deploy to. Bip will detect that you're using Nuxt, and set project settings like the source file directory automatically.
+画面の指示に従うと、どのドメインにデプロイしたいか尋ねられます。Bip は Nuxt を使用しているのを検出し、ソースファイルのディレクトリなどのプロジェクトの設定を自動的にセットします。
 
-## Step 2: Deploy
+## ステップ 2: デプロイ
 
-You're now ready to deploy your website. To do so, run:
+Web サイトのデプロイをする準備ができました。以下を実行してください:
 
 ```bash
 yarn generate && bip deploy
 ```
 
-That's it! After a few moments, your website will be deployed.
+これでおしまいです！　少しすれば Web サイトはデプロイされているでしょう。

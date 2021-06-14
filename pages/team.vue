@@ -6,7 +6,19 @@
           <i18n
             path="team.title"
             tag="h1"
-            class="text-3xl xl:text-4xl text-light-onSurfacePrimary dark:text-dark-onSurfacePrimary font-medium leading-normal mb-6 lg:pt-4 transition-colors duration-300 ease-linear"
+            class="
+              text-3xl
+              xl:text-4xl
+              text-light-onSurfacePrimary
+              dark:text-dark-onSurfacePrimary
+              font-medium
+              leading-normal
+              mb-6
+              lg:pt-4
+              transition-colors
+              duration-300
+              ease-linear
+            "
           >
             {{ $t('team.title') }}
             <template #nuxt>
@@ -14,13 +26,28 @@
             </template>
           </i18n>
           <h3
-            class="xl:text-lg text-light-onSurfaceSecondary dark:text-dark-onSurfaceSecondary font-medium leading-relaxed mb-6"
+            class="
+              xl:text-lg
+              text-light-onSurfaceSecondary
+              dark:text-dark-onSurfaceSecondary
+              font-medium
+              leading-relaxed
+              mb-6
+            "
           >
             {{ $t('team.description') }}
           </h3>
         </div>
         <TeamIllustration
-          class="w-2/3 mx-auto lg:mx-0 lg:w-5/12 lg:-mt-8 text-light-elevatedSurface dark:text-dark-elevatedSurface"
+          class="
+            w-2/3
+            mx-auto
+            lg:mx-0
+            lg:w-5/12
+            lg:-mt-8
+            text-light-elevatedSurface
+            dark:text-dark-elevatedSurface
+          "
         />
 
         <TeamMembers :team="nuxtCompany.team" :title="nuxtCompany.title" />
@@ -257,6 +284,14 @@ export default {
             github: 'lauragift21',
             twitter: 'lauragift_',
             website: 'https://www.giftegwuenu.com/',
+            badges: ['ambassador']
+          },
+          {
+            name: 'Ben Hong',
+            city: 'Washington D.C., USA',
+            github: 'bencodezen',
+            twitter: 'bencodezen',
+            website: 'https://www.bencodezen.io/',
             badges: ['ambassador']
           }
         ]

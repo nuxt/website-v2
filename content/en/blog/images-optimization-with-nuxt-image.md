@@ -2,7 +2,7 @@
 title: Hands-on images optimization with Nuxt Image
 description: The Nuxt Image module provides an intuitive way to optimize our images, let's dive in with a concrete example.
 imgUrl: blog/filename/main.jpg
-date: 2021-06-08
+date: 2021-06-15
 authors:
   - name: Clément Ollivier
     avatarUrl: https://pbs.twimg.com/profile_images/1370286658432724996/ZMSDzzIi_400x400.jpg
@@ -16,13 +16,14 @@ tags:
 Images optimization is a crucial part for improving a website's performance, but it can be a hard work to do on our own. We have to make sure that the images that we use are not wider than their display size, and that we serve the best formats according to browsers specifications and viewport's dimensions.
 
 To help us with that, the Nuxt Image module provides two components that act as drop-in replacements for the HTML `<img>` and `<picture>` tags. We'll start from a design comp and analyze it to see how we can get the most out of the module.
+
 <base-alert type="info">
 In this tutorial, we will focus on integrating the images parts. We recommend you to <a href="https://codesandbox.io/s/image-optimization-with-nuxt-image-31c65" target="_blank" rel="noreferer noopener">use the Codesandbox</a> to follow along and inspect the generated HTML.
 </base-alert>
 
-## Analyze the layout
+## Analyzing the layout
 
-![Composition of a View in Nuxt.js](/blog/hands-on-image-optimization-with-nuxt-image/homepage.png)
+![Homepage layouts in phone, tablet and desktop view](/blog/hands-on-image-optimization-with-nuxt-image/homepage.png)
 
 ### Avatar image
 
@@ -120,29 +121,6 @@ The process for the featured images is similar to the hero picture, we will appl
 <nuxt-img src="/img/featured.jpeg" alt="Featured image" sizes="sm:90vw md:80vw lg:30vw" />
 ```
 
-But wait, there are three of them, right ? We could make a `<FeaturedImage />` component to avoid repeating the sizes for each image, or extract them in a `data()` option. What if this size's pattern is used anywhere else in the website? That's where Nuxt Image's [presets](https://image.nuxtjs.org/api/options#presets) come in.
-
-### Use images presets
-
-Presets allow to use a predefined set of image properties by naming them. Let's see how it applies to our featured images.
-
-In the `nuxt.config` file, add an `image` entry and define a preset:
-
-```js{}[nuxt.config.js]
-export default {
-  modules: ['@nuxt/image'],
-  image: {
-    presets: {
-      featured: {
-        modifiers: {
-          sizes: "sm:90vw md:80vw lg:30vw"
-        }
-      }
-    }
-  }
-}
-```
-
 ### Serve modern formats with `<nuxt-picture>`
 
 For now, we're serving our images in their original `.jpeg` format. But modern formats like `webp` offer better compression rates. Wouldn't it be nice to serve our images in `webp` for browsers that support this format? In HTML, we can achieve that with the `<picture>` tag. The traditional way is to include a step in our build pipeline that handles the copy and conversion of `.jpeg` and `.png` images to `.webp`, and handle the fallback in our HTML like so:
@@ -162,20 +140,18 @@ Thanks to the Nuxt Image module, we can handle this directly inside our markup, 
 
 Take a look at the generated HTML. The `<picture>` tag is now used to display out image, converted to WebP. A `jpeg` fallback is also provided, to make sure legacy browsers can still display the image.
 
-### What's next?
-
 Our homepage image's are now ready for production. To recap what we learned:
 
 - Define `width` property to adjust the images dimension and avoid serving bigger images that what is actually needed
 - Adapt to responsive breakpoints with the `sizes` prop
-- Use presets to define an image properties blueprint and avoid duplication
 - Convert our images to modern formats while still supporting legacy browsers
 
----
+### What's next?
 
 We didn't cover up every module's features, the Image module also provides:
 
 - Integrations with [third-parties providers](https://image.nuxtjs.org/getting-started/providers) to use CDNs to serve our images.
+- [Presets](https://image.nuxtjs.org/components/nuxt-img/#preset) to enforce consistency and avoid duplication.
 - [Advanced transformations and modifiers](https://image.nuxtjs.org/api/options), such as crop or grayscales.
 - [The `$img` functionality](https://image.nuxtjs.org/api/$img) to apply transformations outside the provided components.
 

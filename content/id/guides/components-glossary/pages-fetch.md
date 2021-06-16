@@ -54,7 +54,7 @@ Anda dapat mengakses Nuxt [context](/docs/2.x/internals-glossary/context) di dal
 ### Pilihan
 
 - `fetchOnServer`: `Boolean` atau `Function` (default: `true`), memanggil `fetch()` saat server merender halaman.
-- `fetchKey`: `String` or `Function` (defaults to the component scope ID or component name), a key (or a function that produces a unique key) that identifies the result of this component's fetch (available on Nuxt 2.15+) [More information available in original PR](https://github.com/nuxt/nuxt.js/pull/8466).
+- `fetchKey`: `String` atau `Function` (default ke ID cakupan komponen atau nama komponen), kunci (atau fungsi yang menghasilkan kunci unik) yang mengidentifikasi hasil pengambilan komponen ini (tersedia di Nuxt 2.15+) [Informasi lebih lanjut tersedia di PR asli](https://github.com/nuxt/nuxt.js/pull/8466).
 - `fetchDelay`: `Integer` (default: `200`), atur waktu eksekusi minimum dalam milidetik (untuk menghindari flash cepat).
 
 <div class="Alert Alert--green">
@@ -90,6 +90,6 @@ Jika `fetchOnServer` false (`false` atau mengembalikan `false`), `fetch` hanya a
 
 <base-alert type="next">
 
-For more info on the Fetch Hook checkout the [data fetching](/docs/2.x/features/data-fetching) chapter of our Features book
+Untuk info lebih lanjut tentang Fetch Hook periksa bab [pengambilan data](/docs/2.x/features/data-fetching) dari buku Fitur kami.
 
 </base-alert>

@@ -54,6 +54,7 @@ Anda dapat mengakses Nuxt [context](/docs/2.x/internals-glossary/context) di dal
 ### Pilihan
 
 - `fetchOnServer`: `Boolean` atau `Function` (default: `true`), memanggil `fetch()` saat server merender halaman.
+- `fetchKey`: `String` atau `Function` (default ke ID cakupan komponen atau nama komponen), kunci (atau fungsi yang menghasilkan kunci unik) yang mengidentifikasi hasil pengambilan komponen ini (tersedia di Nuxt 2.15+) [Informasi lebih lanjut tersedia di PR asli](https://github.com/nuxt/nuxt.js/pull/8466).
 - `fetchDelay`: `Integer` (default: `200`), atur waktu eksekusi minimum dalam milidetik (untuk menghindari flash cepat).
 
 <div class="Alert Alert--green">
@@ -71,11 +72,24 @@ Jika `fetchOnServer` false (`false` atau mengembalikan `false`), `fetch` hanya a
       }
     },
     async fetch() {
-      this.posts = await this.$http.$get(
-        'https://jsonplaceholder.typicode.com/posts'
-      )
+      this.posts = await this.$http.$get('https://api.nuxtjs.dev/posts')
     },
-    fetchOnServer: false
+    fetchOnServer: false,
+    // beberapa komponen dapat mengembalikan `fetchKey` yang sama dan Nuxt akan melacak keduanya secara terpisah
+    fetchKey: 'site-sidebar',
+    // sebagai alternatif, untuk kontrol lebih, suatu fungsi dapat diteruskan dengan akses ke instance komponen
+    // Ini akan dipanggil dalam `created` dan tidak boleh bergantung pada data yang diambil
+    fetchKey(getCounter) {
+      // getCounter adalah metode yang dapat dipanggil untuk mendapatkan nomor berikutnya secara berurutan
+      // sebagai bagian dari menghasilkan fetchKey yang unik.
+      return this.someOtherData + getCounter('sidebar')
+    }
   }
 </script>
 ```
+
+<base-alert type="next">
+
+Untuk info lebih lanjut tentang _Fetch Hook_ periksa bab [pengambilan data](/docs/2.x/features/data-fetching) dari buku fitur kami.
+
+</base-alert>

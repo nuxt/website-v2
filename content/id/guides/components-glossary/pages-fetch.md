@@ -75,13 +75,13 @@ Jika `fetchOnServer` false (`false` atau mengembalikan `false`), `fetch` hanya a
       this.posts = await this.$http.$get('https://api.nuxtjs.dev/posts')
     },
     fetchOnServer: false,
-    // multiple components can return the same `fetchKey` and Nuxt will track them both separately
+    // beberapa komponen dapat mengembalikan `fetchKey` yang sama dan Nuxt akan melacak keduanya secara terpisah
     fetchKey: 'site-sidebar',
-    // alternatively, for more control, a function can be passed with access to the component instance
-    // It will be called in `created` and must not depend on fetched data
+    // sebagai alternatif, untuk kontrol lebih, suatu fungsi dapat diteruskan dengan akses ke instance komponen
+    // Ini akan dipanggil dalam `created` dan tidak boleh bergantung pada data yang diambil
     fetchKey(getCounter) {
-      // getCounter is a method that can be called to get the next number in a sequence
-      // as part of generating a unique fetchKey.
+      // getCounter adalah metode yang dapat dipanggil untuk mendapatkan nomor berikutnya secara berurutan
+      // sebagai bagian dari menghasilkan fetchKey yang unik.
       return this.someOtherData + getCounter('sidebar')
     }
   }
@@ -90,6 +90,6 @@ Jika `fetchOnServer` false (`false` atau mengembalikan `false`), `fetch` hanya a
 
 <base-alert type="next">
 
-Untuk info lebih lanjut tentang Fetch Hook periksa bab [pengambilan data](/docs/2.x/features/data-fetching) dari buku Fitur kami.
+Untuk info lebih lanjut tentang _Fetch Hook_ periksa bab [pengambilan data](/docs/2.x/features/data-fetching) dari buku fitur kami.
 
 </base-alert>

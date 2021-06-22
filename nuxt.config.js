@@ -62,6 +62,8 @@ export default {
     '@nuxtjs/eslint-module',
     // https://github.com/nuxt-community/color-mode-module
     '@nuxtjs/color-mode',
+    // https://github.com/nuxt-community/critters-module/
+    '@nuxtjs/critters',
     // https://github.com/nuxt-community/netlify-files-module
     '@nuxtjs/netlify-files',
     // https://github.com/nuxt-community/style-resources-module

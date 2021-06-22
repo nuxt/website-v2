@@ -35,6 +35,7 @@
     "@nuxt/content": "^1.14.0",
     "@nuxt/http": "^0.6.4",
     "@nuxtjs/color-mode": "^2.0.9",
+    "@nuxtjs/critters": "^0.1.1",
     "@nuxtjs/eslint-config": "^6.0.0",
     "@nuxtjs/eslint-module": "^3.0.2",
     "@nuxtjs/netlify-files": "^1.2.0",

@@ -290,7 +290,7 @@ Esta opción depende de la opción [prefetchLinks](#prefetchlinks) que se habili
 
 </base-alert>
 
-Puede deshabilitar este comportamiento configurando `prefetchPaylods` en `false`:
+Puede deshabilitar este comportamiento configurando `prefetchPayloads` en `false`:
 
 ```js{}[nuxt.config.js]
 export default {

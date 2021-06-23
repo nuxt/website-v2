@@ -2,8 +2,8 @@
 title: 'The router Property'
 description: The router property lets you customize Nuxt.js router.
 menu: router
-category: configuration-glossary
-position: 24
+category: configuration
+position: 124
 ---
 
 > The router property lets you customize Nuxt.js router ([vue-router](https://router.vuejs.org/en/)).
@@ -17,9 +17,11 @@ The base URL of the app. For example, if the entire single page application is s
 
 This can be useful if you need to serve Nuxt as a different context root, from within a bigger Web site. Notice that you may, or may not set up a Front Proxy Web Server.
 
-If you want to have a redirect to `router.base`, you can do so [using a Hook, see _Redirect to router.base when not on root_](/guides/configuration-glossary/configuration-hooks#redirect-to-routerbase-when-not-on-root).
+If you want to have a redirect to `router.base`, you can do so [using a Hook, see _Redirect to router.base when not on root_](/api/configuration-hooks#redirect-to-router-base-when-not-on-root).
 
-```js{}[nuxt.config.js]
+Example (`nuxt.config.js`):
+
+```js
 export default {
   router: {
     base: '/app/'
@@ -42,7 +44,9 @@ When `base` is set, Nuxt.js will also add in the document header `<base href="{{
 
 You may want to change the separator between route names that Nuxt.js uses. You can do so via the `routeNameSplitter` option in your configuration file. Imagine we have the page file `pages/posts/_id.vue`. Nuxt will generate the route name programatically, in this case `posts-id`. Changing the `routeNameSplitter` config to `/` the name will therefore change to `posts/id`.
 
-```js{}[nuxt.config.js]
+Example (`nuxt.config.js`):
+
+```js
 export default {
   router: {
     routeNameSplitter: '/'
@@ -56,7 +60,11 @@ export default {
 
 You may want to extend the routes created by Nuxt.js. You can do so via the `extendRoutes` option.
 
-```js{}[nuxt.config.js]
+Example of adding a custom route:
+
+`nuxt.config.js`
+
+```js
 export default {
   router: {
     extendRoutes(routes, resolve) {
@@ -72,7 +80,9 @@ export default {
 
 If you want to sort your routes, you can use the `sortRoutes(routes)` function from `@nuxt/utils`:
 
-```js{}[nuxt.config.js]
+`nuxt.config.js`
+
+```js
 import { sortRoutes } from '@nuxt/utils'
 export default {
   router: {
@@ -88,13 +98,15 @@ export default {
 
 The schema of the route should respect the [vue-router](https://router.vuejs.org/en/) schema.
 
-<base-alert>
+<div class="Alert Alert--orange">
 
-When adding routes that use Named Views, don't forget to add the corresponding `chunkNames` of named `components`.
+<b>Warning:</b> when adding routes that use [Named Views](/guide/routing#named-views), don't forget to add the corresponding `chunkNames` of named `components`.
 
-</base-alert>
+</div>
 
-```js{}[nuxt.config.js]
+`nuxt.config.js`
+
+```js
 export default {
   router: {
     extendRoutes(routes, resolve) {
@@ -129,9 +141,11 @@ Setting this to false essentially makes every router-link navigation a full page
 - Type: `String`
 - Default: `'nuxt-link-active'`
 
-Globally configure [`<nuxt-link>`](/guides/features/nuxt-components#the-nuxtlink-component) default active class.
+Globally configure [`<nuxt-link>`](/api/components-nuxt-link) default active class.
 
-```js{}[nuxt.config.js]
+Example (`nuxt.config.js`):
+
+```js
 export default {
   router: {
     linkActiveClass: 'active-link'
@@ -146,9 +160,11 @@ export default {
 - Type: `String`
 - Default: `'nuxt-link-exact-active'`
 
-Globally configure [`<nuxt-link>`](/guides/features/nuxt-components#the-nuxtlink-component) default exact active class.
+Globally configure [`<nuxt-link>`](/api/components-nuxt-link) default exact active class.
 
-```js{}[nuxt.config.js]
+Example (`nuxt.config.js`):
+
+```js
 export default {
   router: {
     linkExactActiveClass: 'exact-active-link'
@@ -163,9 +179,11 @@ export default {
 - Type: `String`
 - Default: `false`
 
-Globally configure [`<nuxt-link>`](/guides/features/nuxt-components#the-nuxtlink-component) default prefetch class (feature disabled by default)
+Globally configure [`<nuxt-link>`](/api/components-nuxt-link) default prefetch class (feature disabled by default)
 
-```js{}[nuxt.config.js]
+Example (`nuxt.config.js`):
+
+```js
 export default {
   router: {
     linkPrefetchedClass: 'nuxt-link-prefetched'
@@ -180,7 +198,11 @@ export default {
 
 Set the default(s) middleware for every page of the application.
 
-```js{}[nuxt.config.js]
+Example:
+
+`nuxt.config.js`
+
+```js
 export default {
   router: {
     // Run the middleware/user-agent.js on every page
@@ -189,7 +211,9 @@ export default {
 }
 ```
 
-```js{}[middleware/user-agent.js]
+`middleware/user-agent.js`
+
+```js
 export default function (context) {
   // Add the userAgent property in the context (available in `asyncData` and `fetch`)
   context.userAgent = process.server
@@ -198,7 +222,7 @@ export default function (context) {
 }
 ```
 
-To learn more about the middleware, see the [middleware guide](/guides/directory-structure/middleware#router-middleware).
+To learn more about the middleware, see the [middleware guide](/guide/routing#middleware).
 
 ## mode
 
@@ -207,7 +231,9 @@ To learn more about the middleware, see the [middleware guide](/guides/directory
 
 Configure the router mode, this is not recommended to change it due to server-side rendering.
 
-```js{}[nuxt.config.js]
+Example (`nuxt.config.js`):
+
+```js
 export default {
   router: {
     mode: 'hash'
@@ -236,13 +262,14 @@ Configure `<nuxt-link>` to prefetch the _code-splitted_ page when detected withi
 
 We recommend conditionally polyfilling this feature with a service like [Polyfill.io](https://polyfill.io):
 
-```js{}[nuxt.config.js]
+`nuxt.config.js`
+
+```js
 export default {
   head: {
     script: [
       {
-        src:
-          'https://polyfill.io/v3/polyfill.min.js?features=IntersectionObserver',
+        src: 'https://polyfill.io/v3/polyfill.min.js?features=IntersectionObserver',
         body: true
       }
     ]
@@ -275,7 +302,7 @@ Since Nuxt.js v2.10.0, if you have set `prefetchLinks` to `false` but you want t
 
 ## prefetchPayloads
 
-> Added with v2.13.0, only available for [static target](/guides/features/deployment-targets#static-hosting).
+> Added with v2.13.0, only available for [static target](/docs/2.x/features/deployment-targets#static-hosting).
 
 - Type: `Boolean`
 - Default: `true`
@@ -290,11 +317,7 @@ This option depends of the [prefetchLinks](#prefetchlinks) option to be enabled.
 
 </base-alert>
 
-<<<<<<< HEAD
-You can disable this behaviour by setting `prefetchPaylods` to `false`:
-=======
 You can disable this behavior by setting `prefetchPayloads` to `false`:
->>>>>>> fb08b981 (docs: fix typo, `prefetchPaylods` -> `prefetchPayloads` (#1494))
 
 ```js{}[nuxt.config.js]
 export default {
@@ -322,7 +345,7 @@ Example of forcing the scroll position to the top for every routes:
 
 `app/router.scrollBehavior.js`
 
-```js{}[app/router.scrollBehavior.js]
+```js
 export default function (to, from, savedPosition) {
   return { x: 0, y: 0 }
 }

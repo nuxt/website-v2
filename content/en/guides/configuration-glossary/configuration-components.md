@@ -8,7 +8,7 @@ position: 5
 
 > Nuxt.js 2.13+ can scan and auto import your components.
 
-<base-alert>It is possible to use this feature with Nuxt 2.10 - 2.12. Just manually install and add `@nuxt/components` to `buildModules` inside `nuxt.config`.</base-alert>
+<base-alert>It is possible to use this feature with Nuxt 2.10 - 2.12 if you cannot upgrade. Just manually install and add `@nuxt/components` to `buildModules` inside `nuxt.config`.</base-alert>
 
 - Type: `Boolean` or `Object`
 - Default: `false`

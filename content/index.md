@@ -113,6 +113,7 @@ From an Idea to a Masterpiece, guides show the path to become a Nuxter.
   description: 'Learn Nuxt concepts and features from beginning to mastery.'
   image: /img/home/learn/guides/gem-usage.svg
   to: '/docs/get-started/installation'
+  linkName: 'Learn Nuxt'
   ---
   ::
 
@@ -121,6 +122,7 @@ From an Idea to a Masterpiece, guides show the path to become a Nuxter.
   description: "Dive deep into Nuxt internals to extend your application's behavior."
   image: /img/home/learn/guides/gem-internals.svg
   to: '/docs/internals-glossary/context'
+  linkName: 'Explore Internals'
   ---
   ::
 
@@ -129,6 +131,7 @@ From an Idea to a Masterpiece, guides show the path to become a Nuxter.
   description: 'Discover all properties and their options when you need a complete overview.'
   image: /img/home/learn/guides/gem-api.svg
   to: '/docs/configuration-glossary/configuration-alias'
+  linkName: 'Discover the API'
   ---
   ::
 ::
@@ -145,6 +148,7 @@ Nuxt has plently of areas to explore, learn with examples, integrate with your f
   description: 'Get inspired by use-cases, from common tasks to advanced examples.'
   image: '/img/home/explore/gem-1-hover.svg'
   to: '/examples'
+  linkName: 'Get inspired'
   ---
   ::
   ::section-content-item
@@ -152,6 +156,7 @@ Nuxt has plently of areas to explore, learn with examples, integrate with your f
   description: 'Take advantage of our module ecosystem to stop reinventing the wheel.'
   image: '/img/home/explore/gem-3-hover.svg'
   to: 'https://modules.nuxtjs.org'
+  linkName: 'Browse modules'
   ---
   ::
   ::section-content-item
@@ -159,6 +164,7 @@ Nuxt has plently of areas to explore, learn with examples, integrate with your f
   description: 'Start coding in minutes with a pre-made design thanks to our list of Nuxt themes.'
   image: '/img/home/explore/gem-4-hover.svg'
   to: '/themes'
+  linkName: 'Start now'
   ---
   ::
 ::

@@ -112,7 +112,7 @@ export default defineComponent({
       default: ''
     }
   },
-  setup(_props, context) {
+  setup(_, context) {
     const { $colorMode } = useContext() as any
     const lottieAnimPathLight = 'https://assets10.lottiefiles.com/private_files/lf30_8cv6lgcx.json'
     const lottieAnimPathDark = 'https://assets10.lottiefiles.com/private_files/lf30_obsnpogu.json'

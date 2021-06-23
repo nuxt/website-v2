@@ -101,7 +101,7 @@ export default defineComponent({
         subLinks: [
           {
             title: 'Sustainability',
-            to: '/sponsoring'
+            to: '/sponsors-nuxtjs'
           },
           {
             title: 'Training',

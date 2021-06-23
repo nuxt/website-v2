@@ -106,6 +106,12 @@
 import { defineComponent, ref, onMounted, watch, useContext, computed } from '@nuxtjs/composition-api'
 import lottie, { AnimationItem, AnimationSegment } from 'lottie-web'
 export default defineComponent({
+  props: {
+    category: {
+      type: String,
+      default: ''
+    }
+  },
   setup(_props, context) {
     const { $colorMode } = useContext() as any
     const lottieAnimPathLight = 'https://assets10.lottiefiles.com/private_files/lf30_8cv6lgcx.json'

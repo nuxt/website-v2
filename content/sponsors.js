@@ -1,24 +1,54 @@
 export default {
   'mvp-Partners': [
     {
+      name: 'Netlify',
+      img: 'netlify-logo.svg',
+      url: 'https://www.netlify.com/',
+      class: 'h-12'
+    },
+    {
       name: 'Google Chrome',
       img: 'google-chrome.svg',
       url: 'https://www.google.com/chrome/',
       class: 'h-12'
+    },
+    {
+      name: 'Vercel',
+      img: 'vercel.svg',
+      url: 'https://vercel.com',
+      class: 'h-10'
     }
   ],
   partners: [
     {
+      name: 'Swell',
+      url: 'https://swell.is/',
+      img: 'swell-logo.svg',
+      class: 'h-10'
+    },
+    {
       name: 'Strapi',
       url: 'https://strapi.io/',
       img: 'strapi-logo.svg',
-      class: 'h-12'
+      class: 'h-10'
     },
     {
       name: 'Ship Shape',
       url: 'https://shipshape.io/',
       img: 'shipshape-logo.svg',
+      class: 'h-10'
+    },
+    {
+      name: 'Layer0',
+      url: 'https://www.layer0.co/?ref=nuxt',
+      img: 'layer0-logo.svg',
       class: 'h-12'
+    },
+    {
+      name: 'Storyblok',
+      url: 'https://www.storyblok.com/?ref=nuxt',
+      img: 'storyblok-logo.svg',
+      class: 'h-10'
     }
   ],
   sponsors: [
@@ -26,7 +56,7 @@ export default {
       name: 'VueMastery',
       img: 'vueMastery-brand.svg',
       url: 'https://www.vuemastery.com/',
-      class: 'h-10'
+      class: 'h-8'
     },
     {
       name: 'Legal Nature',

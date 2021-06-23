@@ -12,7 +12,7 @@ ManualInstallVideoTitle: Nuxt Manual Installation
 
 ## Prerequisites
 
-- [node](https://nodejs.org) - at least v10.13 _We recommend you have the latest LTS version installed._
+- [node](https://nodejs.org) - _We recommend you have the latest LTS version installed_.
 - A text editor, we recommend [VS Code](https://code.visualstudio.com/) with the [Vetur](https://marketplace.visualstudio.com/items?itemName=octref.vetur) extension or [WebStorm](https://www.jetbrains.com/webstorm/)
 - A terminal, we recommend using VS Code's [integrated terminal](https://code.visualstudio.com/docs/editor/integrated-terminal) or [WebStorm terminal](https://www.jetbrains.com/help/webstorm/terminal-emulator.html).
 
@@ -233,6 +233,6 @@ Then, go to your browser and see your new page on **[localhost:3000/fun](http://
 
 <base-alert type="info">
 
-Create a directory named `more-fun` and put an `index.vue` file inside. This will give the same result as creating a `more-fun.vue` file
+Creating a directory named `more-fun` and putting an `index.vue` file inside it will give the same result as creating a `more-fun.vue` file.
 
 </base-alert>

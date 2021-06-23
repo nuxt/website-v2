@@ -1,8 +1,9 @@
 <template>
   <nav class="relative w-full h-full flex items-center justify-center">
     <Link
-      v-for="{ title, href, slug } in links"
+      v-for="{ title, href, slug, blank } in links"
       :key="slug"
+      :aria-label="title"
       class="
         relative
         capitalize
@@ -17,6 +18,7 @@
         items-center
       "
       :to="href"
+      :blank="blank"
       :class="{
         'text-primary': currentSlug === slug,
         'hover:d-primary-text-hover': currentSlug !== slug
@@ -59,7 +61,8 @@ export default defineComponent({
         {
           title: 'Video Courses',
           slug: 'video-courses',
-          href: 'https://masteringnuxt.com/?utm_source=nuxt&utm_medium=link&utm_campaign=navbar_link'
+          href: 'https://masteringnuxt.com/?utm_source=nuxt&utm_medium=link&utm_campaign=navbar_link',
+          blank: true
         }
       ]
     }

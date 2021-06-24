@@ -7,6 +7,6 @@
     "start": "nuxt start"
   },
   "devDependencies": {
-    "docus": "^0.8.2"
+    "docus": "^0.8.4"
   }
 }

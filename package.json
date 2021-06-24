@@ -7,6 +7,7 @@
     "start": "nuxt start"
   },
   "devDependencies": {
+    "@nuxt/typescript-build": "^2.1.0",
     "docus": "^0.8.4"
   }
 }

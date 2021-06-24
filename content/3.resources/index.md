@@ -22,12 +22,12 @@ resources:
     description: Get inspired and use real world applications built with Nuxt.
     image: /img/resources/themes.png
     slug: themes
-    href: /themes
+    href: /resources/themes
   video-courses:
     title: Video Courses
     description: Learn more about Nuxt with a selection of video courses, for beginners and advanced users.
     image: /img/resources/courses.png
     slug: video-courses
-    href: /video-courses
+    href: /resources/video-courses
 ---
 ::

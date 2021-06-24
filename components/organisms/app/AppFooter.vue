@@ -1,6 +1,6 @@
 <template>
   <footer class="" aria-labelledby="footerHeading">
-    <div class="select-none">
+    <div class="select-none pt-24">
       <img
         loading="lazy"
         :src="`/img/footer/dark/landscape.svg`"

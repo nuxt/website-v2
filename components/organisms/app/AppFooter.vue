@@ -71,7 +71,7 @@ export default defineComponent({
           },
           {
             title: 'Design Kit',
-            to: '/design-kit'
+            to: '/design'
           },
           {
             title: 'Contact us',

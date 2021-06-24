@@ -163,7 +163,7 @@ Nuxt has plently of areas to explore, learn with examples, integrate with your f
   title: 'Themes'
   description: 'Start coding in minutes with a pre-made design thanks to our list of Nuxt themes.'
   image: '/img/home/explore/gem-4-hover.svg'
-  to: '/themes'
+  to: '/resources/themes'
   linkName: 'Start now'
   ---
   ::

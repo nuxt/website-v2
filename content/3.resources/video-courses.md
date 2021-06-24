@@ -3,6 +3,7 @@ template: page
 ---
 
 ::simple-page-hero
+backPath: resources
 title: NuxtJS Video Courses
 description: "Discover and learn more about the Nuxt Framework with free and premium video courses."
 ---
@@ -30,7 +31,7 @@ video-courses:
     description: Build dynamic web applications with Vue and Nuxt! Throughout the course you’ll build out a variety of projects leveraging the tools in the Vue ecosystem including the Vue CLI, Nuxt, Vuex Store, and more.
     image: /img/video-courses/building_applications_fe_masters.png
     tier: Premium
-  five: 
+  five:
     title: Build a Job Board with Laravel, GraphQL, Nuxt and Apollo
     description: Learn while you build a GraphQL API with Laravel Lighthouse, then build a Nuxt frontend with Apollo to consume it. All styled with Tailwind.
     image: /img/video-courses/job_board.png

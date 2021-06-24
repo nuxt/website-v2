@@ -47,6 +47,7 @@ export default withDocus({
       class: ['min-w-xs']
     }
   },
+  buildModules: ['@nuxt/typescript-build'],
   plugins: ['~/plugins/adblock.client'],
   windicss: {
     root: resolve(__dirname),

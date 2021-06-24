@@ -5,7 +5,7 @@
     </div>
     <div>
       <p class="m-0 font-bold sm:text-sm d-text-primary">NuxtJS needs you!</p>
-      <p class="p-0 m-0 leading-normal text-gray-600 sm:text-xs">
+      <p class="p-0 m-0 leading-normal text-gray-600 dark:text-white sm:text-xs">
         By whitelisting nuxtjs.org on your Ad-Blocker, you support our work and help us financially.
       </p>
     </div>
@@ -24,12 +24,12 @@ export default {
 
 <style lang="postcss">
 .nui-support-nuxt {
-  @apply bg-gray-200 p-4 flex flex-row w-full items-center mt-4 rounded-md;
+  @apply bg-white bg-opacity-10 p-4 flex flex-row w-full items-center mt-4 rounded-md;
 }
 
 @screen sm {
   .nui-support-nuxt {
-    @apply bg-white flex-col w-40 mt-0;
+    @apply flex-col w-40 mt-0;
   }
 }
 </style>

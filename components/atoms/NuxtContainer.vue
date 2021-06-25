@@ -1,5 +1,5 @@
 <template>
-  <Component :is="tag" class="relative w-full px-6 sm:px-8 lg:px-16 mx-auto max-w-8xl">
+  <Component :is="tag" class="relative w-full d-container-content">
     <slot />
   </Component>
 </template>

@@ -2,6 +2,7 @@
   <NuxtLink
     v-if="is === 'NuxtLink'"
     v-bind="props"
+    class="inline-flex"
     :class="{ 'pointer-events-none opacity-50': disabled }"
     v-on="$listeners"
     @focus.native="handleFocus(true)"
@@ -14,6 +15,7 @@
     :is="is"
     v-else
     v-bind="props"
+    class="inline-flex"
     :class="{ 'pointer-events-none opacity-50': disabled }"
     v-on="$listeners"
     @focus="handleFocus(true)"
@@ -111,7 +113,9 @@ export default defineComponent({
     isExternal() {
       if (!this.to) return false
 
-      const isInternal = typeof this.to !== 'string' || (this.to.startsWith('/') && this.to.startsWith('//') === false)
+      const isInternal =
+        typeof this.to !== 'string' ||
+        (this.to.startsWith('/') && this.to.startsWith('//') === false)
 
       return !isInternal
     },

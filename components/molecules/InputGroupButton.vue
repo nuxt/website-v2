@@ -33,27 +33,17 @@
       "
       @input="$emit('input', $event)"
     />
-    <div class="mt-3 rounded-md sm:mt-0 sm:ml-3 sm:flex-shrink-0">
-      <NuxtButton
+
+      <SectionButton
         type="submit"
+        size="md"
         aria-label="Submit"
-        class="
-          bg-primary
-          w-full
-          rounded-md
-          text-sm
-          px-4
-          h-10
-          font-medium
-          text-gray-800
-          hover:bg-green-300
-          focus:bg-green-300
-        "
+        class="mt-2 sm:mt-0 sm:ml-2 bg-primary text-gray-800 font-semibold hover:bg-green-300 focus:bg-green-300"
         @click="submit"
       >
         <slot />
-      </NuxtButton>
-    </div>
+      </SectionButton>
+
   </form>
 </template>
 

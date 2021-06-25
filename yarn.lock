@@ -1395,10 +1395,10 @@
     ts-loader "^8.0.17"
     typescript "~4.2"
 
-"@nuxt/utils-edge@2.16.0-27072017.35c6ac41":
-  version "2.16.0-27072017.35c6ac41"
-  resolved "https://registry.yarnpkg.com/@nuxt/utils-edge/-/utils-edge-2.16.0-27072017.35c6ac41.tgz#6b97b4c0c60d80cd7d220b6a6f77a6f9bacf7d79"
-  integrity sha512-y3pcVnKvpZPAvBWcfEJ9GjeC+lEZ/tjBN0mBQ0vTZaKfUccAwNSkPq8gQ8MQjWayjPrkU0QYg7v6aY3b2piryA==
+"@nuxt/utils-edge@2.16.0-27073457.35c6ac41":
+  version "2.16.0-27073457.35c6ac41"
+  resolved "https://registry.yarnpkg.com/@nuxt/utils-edge/-/utils-edge-2.16.0-27073457.35c6ac41.tgz#f9606e8d0099c56791a5e82576aa2a78b752aa29"
+  integrity sha512-RumqWvvqmW7/WvCaQQkARVXixJHgYhJNkn/IKVMq2uVvuR6Y1ke4BKFjdSR4DXiR9lCddw67aivKqzyO3LOUZg==
   dependencies:
     consola "^2.15.3"
     create-require "^1.1.1"
@@ -4318,10 +4318,10 @@ doctypes@^1.1.0:
   resolved "https://registry.yarnpkg.com/doctypes/-/doctypes-1.1.0.tgz#ea80b106a87538774e8a3a4a5afe293de489e0a9"
   integrity sha1-6oCxBqh1OHdOijpKWv4pPeSJ4Kk=
 
-docus@^0.8.4:
-  version "0.8.4"
-  resolved "https://registry.yarnpkg.com/docus/-/docus-0.8.4.tgz#dbab331eb3475b296d150ca7a4ce41515651b1f7"
-  integrity sha512-A+jaY+O/cmL4m+YIsaRso2llVvB9BUFj/sHpKMRwxZylE4pBATHjRXocGIQjiHzkdVJG9vTLRPLqA8ffJbC9LQ==
+docus@^0.8.5:
+  version "0.8.5"
+  resolved "https://registry.yarnpkg.com/docus/-/docus-0.8.5.tgz#5814d9c85e37645f47f48d315007f6e48ba276f1"
+  integrity sha512-Wyh0iRS3Boem/XgYCy5OPaeb0q8mprMPvos1h8IT5APtYre1i8/uXHqTItC4RTF/HkvSDE4Z05QBv4K7wsLMpA==
   dependencies:
     "@docsearch/css" "^1.0.0-alpha.28"
     "@docsearch/js" "^1.0.0-alpha.28"

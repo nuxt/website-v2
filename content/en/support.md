@@ -2,7 +2,9 @@
 template: page
 layout:
   fluid: true
+navigation: false
 ---
+
 ::page-hero
 title: Consulting NuxtJS Support
 description: "Our NuxtJS team now offers official consulting services for your NuxtJS applications.

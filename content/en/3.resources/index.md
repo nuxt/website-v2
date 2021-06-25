@@ -1,6 +1,8 @@
 ---
 template: page
 title: Resources
+navigation:
+  collapse: true
 ---
 
 ::simple-page-hero

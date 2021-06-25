@@ -2,6 +2,7 @@
 template: page
 layout:
   fluid: true
+navigation: false
 ---
 ::page-hero
 title: Sponsor NuxtJS Development

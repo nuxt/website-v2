@@ -2,6 +2,7 @@
 template: page
 layout:
   fluid: true
+navigation: false
 ---
 ::design-hero
 title: NuxtJS Design Kit

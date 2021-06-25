@@ -3,7 +3,10 @@
     <div class="flex flex-none h-full d-container-content">
       <NavigationButton v-if="aside" />
 
-      <div :class="[aside ? 'justify-center' : 'justify-start']" class="flex items-center flex-1 lg:flex-none">
+      <div
+        :class="[aside ? 'justify-center' : 'justify-start']"
+        class="flex items-center flex-1 lg:flex-none"
+      >
         <Logo :settings="settings" />
       </div>
 

@@ -6,8 +6,8 @@ export default {
   credits: true,
   socialImage: false,
   algolia: {
-    apiKey: 'd8bb34f345ca54362176cf78fcf4ed9d',
-    indexName: 'docus'
+    apiKey: 'ff80fbf046ce827f64f06e16f82f1401',
+    indexName: 'nuxtjs'
   },
   github: {
     repo: 'nuxt/nuxtjs.org',

@@ -1,8 +1,8 @@
 <template>
   <div class="flex items-center" @click.right.prevent="$router.push('/design')">
     <span>
-      <img :src="logo.light" class="w-auto h-6 md:h-8 dark:hidden" :alt="settings.title" />
-      <img :src="logo.dark" class="w-auto h-6 md:h-8 light:hidden" :alt="settings.title" />
+      <img :src="logo.light" class="w-auto h-6 md:h-7 dark:hidden" :alt="settings.title" />
+      <img :src="logo.dark" class="w-auto h-6 md:h-7 light:hidden" :alt="settings.title" />
     </span>
   </div>
 </template>

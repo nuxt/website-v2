@@ -107,7 +107,7 @@ If you've defined a file named `_slug.vue` in your pages folder, you can access 
 <script>
   export default {
     async asyncData({ params }) {
-      const slug = params.slug // When calling /abc the slug will be "abc"
+      const slug = await params.slug // When calling /abc the slug will be "abc"
       return { slug }
     }
   }

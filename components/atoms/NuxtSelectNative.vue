@@ -163,3 +163,9 @@ export default defineComponent({
   }
 })
 </script>
+<style lang="postcss" scoped>
+option {
+  font: -moz-pull-down-menu; /* fix font - only firefox */
+  @apply dark:text-black;
+}
+</style>

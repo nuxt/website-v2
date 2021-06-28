@@ -1,4 +1,8 @@
 ---
 template: docs
-navigation.exclusive: true
+layout.fluid: false
+layout.asideClass: ''
+navigation:
+  exclusive: true
+  redirect: /docs/get-started/installation
 ---

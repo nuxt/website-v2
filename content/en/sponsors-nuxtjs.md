@@ -14,6 +14,7 @@ You can support NuxtJS development via the following methods:
 ::
 
 ::sustainability-section
+buttonText: Become a sponsor
 ---titleSection
 Recurring pledges
 ---descriptionSection

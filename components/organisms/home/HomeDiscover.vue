@@ -61,15 +61,15 @@
               "
             >
               <div v-for="(animation, index) in animations" :key="animation.name">
-                <div class="flex flex-col-reverse md:flex-row md:flex-row justify-center items-center space-x-2">
+                <div class="flex flex-col-reverse md:flex-row justify-center items-center space-x-2">
                   <img
                     :src="`/img/home/discover/diamond.svg`"
                     alt="diamond"
-                    class="h-4 w-4 opacity-0"
+                    class="h-3.5 w-5 pl-1.5 opacity-0"
                     :class="{ 'opacity-100': index === currentIndex }"
                   />
                   <button
-                    class="font-semibold"
+                    class="font-semibold focus:outline-none"
                     :class="
                       index === currentIndex ? 'text-gray-700 dark:text-white' : 'text-gray-400 dark:text-gray-400'
                     "

@@ -1,5 +1,6 @@
 ---
 template: page
+layout.fluid: false
 ---
 
 ::simple-page-hero

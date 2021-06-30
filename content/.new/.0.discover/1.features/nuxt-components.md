@@ -1,5 +1,5 @@
 ---
-title: Nuxt Components
+title: Built-in Components
 description: Nuxt.js comes with a few important components included out of the box, which will be helpful when building your application.
 csb_link_nuxt_link: https://codesandbox.io/embed/github/nuxt-academy/guides-examples/tree/master/03_features/09_components_nuxt-link?fontsize=14&hidenavigation=1&theme=dark
 csb_link_nuxt: https://codesandbox.io/embed/github/nuxt-academy/guides-examples/tree/master/03_features/09_components_nuxt?fontsize=14&hidenavigation=1&theme=dark
@@ -90,11 +90,9 @@ The `<Nuxt>` component is the component you use to display your page components.
 </template>
 ```
 
-<alert>
-
+::alert{type="warning"}
 The `<Nuxt>` component can only be used inside [layouts](/docs/concepts/views#layouts).
-
-</alert>
+::
 
 The `<Nuxt>` component can take the prop of `nuxt-child-key`. This prop will be passed to `<RouterView>` so that your transitions will work correctly inside dynamic pages.
 
@@ -167,11 +165,9 @@ To display the `child.vue` component, you have to insert the `<NuxtChild>` co
 
 Both, the `<Nuxt>` component and the `<NuxtChild/>` component, accept `keep-alive` and `keep-alive-props.`
 
-<alert type="info">
-
+::alert{type="info"}
 To learn more about keep-alive and keep-alive-props see the [vue docs](https://vuejs.org/v2/api/#keep-alive)
-
-</alert>
+::
 
 ```html{}[layouts/default.vue]
 <template>
@@ -215,9 +211,7 @@ To learn more about keep-alive and keep-alive-props see the [vue docs](https://v
 
 To see an example, take a look at the [nested-routes example](https://nuxtjs.org/examples/nested-routes).
 
-<app-modal>
-  <code-sandbox  :src="csb_link_nuxt"></code-sandbox>
-</app-modal>
+:code-sandbox{src="csb_link_nuxt"}
 
 ## The NuxtLink Component
 
@@ -245,17 +239,15 @@ The `<NuxtLink>` component should be used for all internal links. That means for
 </template>
 ```
 
-<alert type="info">
-
+::alert{type="info"}
 If you want to know more about `<RouterLink>`, feel free to read the [Vue Router documentation](https://router.vuejs.org/api/#router-link) for more information.
+::
 
-</alert>
-
-<alert type="info">
+::alert{type="info"}
 
 `<NuxtLink>` also comes with [smart prefetching](/docs/features/nuxt-components#the-nuxtlink-component) out of the box.
 
-</alert>
+::
 
 ## prefetchLinks
 
@@ -298,11 +290,9 @@ The `linkActiveClass` works the same as the `vue-router` class for active links.
 }
 ```
 
-<alert>
-
+::alert
 This css can be added to the navigation component or for a specific page or layout or in your main.css file.
-
-</alert>
+::
 
 If you want to you can also configure the class name to be something else. You can do this by modifying the `linkActiveClass` in the router property in your `nuxt.config.js` file.
 
@@ -314,11 +304,9 @@ export default {
 }
 ```
 
-<alert type="info">
-
+::alert{type="info"}
 This option is given directly to the `vue-router` linkActiveClass. See the [vue-router docs](https://router.vuejs.org/api/#active-class) for more info.
-
-</alert>
+::
 
 ## linkExactActiveClass
 
@@ -330,11 +318,9 @@ The `linkExactActiveClass` works the same as the `vue-router` class for exact ac
 }
 ```
 
-<alert type="info">
-
+::alert{type="info"}
 This css can be added to the navigation component or for a specific page or layout or in your main.css file.
-
-</alert>
+::
 
 If you want to you can also configure the class name to be something else. You con do this by modifying the `linkExactActiveClass` in the router property in your `nuxt.config.js` file.
 
@@ -346,11 +332,9 @@ export default {
 }
 ```
 
-<alert type="info">
-
+::alert{type="info"}
 This option is given directly to the `vue-router` linkExactActiveClass. See the [vue-router](https://router.vuejs.org/api/#active-class) [docs](https://router.vuejs.org/api/#exact-active-class) for more info
-
-</alert>
+::
 
 ## linkPrefetchedClass
 
@@ -372,15 +356,11 @@ Then you can add the styles for that class.
 }
 ```
 
-<alert type="info">
-
+::alert{type="info"}
 In this example we have used the class `nuxt-link-prefetched` but you can name it anything you like
+::
 
-</alert>
-
-<app-modal>
-  <code-sandbox  :src="csb_link_nuxt_link"></code-sandbox>
-</app-modal>
+:code-sandbox{src="csb_link_nuxt_link"}
 
 ## The client-only Component
 
@@ -409,15 +389,14 @@ Use a slot as placeholder until `<client-only />` is mounted on client-side.
       <comments />
 
       <!-- loading indicator, rendered on server-side -->
-      <comments-placeholder slot="placeholder" />
+      <comments-placeholder #placeholder />
     </client-only>
   </div>
 </template>
 ```
 
-<alert  type="info">
-
-Sometimes in server rendered pages `$refs` inside `<client-only>` might not be ready even with `$nextTick`, the trick might be to call `$nextTick` couple of times:
+::alert{type="info"}
+Sometimes in server rendered pages `$refs` inside `<client-only>` might not be ready even with `$nextTick`, the trick might be to call `$nextTick` a couple of times:
 
 ```js{}[page.vue]
 mounted(){
@@ -436,12 +415,10 @@ methods: {
 }
 ```
 
-</alert>
+::
 
-<alert>
-
+::alert
 If you are using a version of Nuxt < v2.9.0, use `<no-ssr>` instead of `<client-only>`
-
-</alert>
+::
 
 <quiz :questions="questions"></quiz>

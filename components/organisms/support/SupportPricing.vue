@@ -10,15 +10,6 @@
           <p class="mt-6 text-base text-gray-500 dark:text-white">
             <Markdown use="description" unwrap="p" />
           </p>
-
-          <div class="mt-6">
-            <div class="flex items-center">
-              <div class="flex-1 border-t-2 border-gray-200"></div>
-            </div>
-            <p class="mt-6 text-secondary-darker dark:text-white">
-              <Markdown use="subdescription" unwrap="p" />
-            </p>
-          </div>
         </div>
 
         <div
@@ -31,25 +22,12 @@
             lg:flex-shrink-0 lg:flex lg:flex-col lg:justify-center lg:p-12
           "
         >
-          <div
-            class="mt-4 flex items-center justify-center text-5xl font-extrabold text-secondary-darker dark:text-white"
-          >
-            <Markdown use="price" unwrap="span" />
-            <span class="ml-3 text-xl font-medium text-gray-500 dark:text-gray-200">
-              <Markdown use="currency" unwrap="span" />
-            </span>
-          </div>
-
-          <div class="mt-6">
-            <SectionButton
-              to="#"
-              size="md"
-              class="bg-primary text-gray-800 hover:bg-green-300 focus:bg-green-300"
-              aria-label="test"
-            >
-              <Markdown :use="$scopedSlots.cta" unwrap="span" />
-            </SectionButton>
-          </div>
+          <a
+            href="mailto:support@nuxtjs.org"
+            size="md"
+            class="inline-flex font-medium rounded-md bg-primary text-gray-800 hover:bg-green-300 focus:bg-green-300 px-4 py-2.5 text-sm 2xl:text-md "
+            aria-label="test"
+          >Contact us</a>
         </div>
       </div>
     </div>

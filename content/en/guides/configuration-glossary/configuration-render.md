@@ -123,6 +123,13 @@ The assets will be joined together with `,` and passed as a single `Link` header
 
 > Adds an `async` attribute to `<script>` tags for Nuxt bundles, enabling them to be fetched in parallel to parsing (available with `2.14.8+`). [More information](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/script).
 
+<base-alert>
+  
+When deploying your app as a [SSG](https://nuxtjs.org/docs/2.x/concepts/static-site-generation), having `asyncScripts: true` can result in hydration race conditions. Use with caution.
+
+</base-alert>
+
+
 ## injectScripts
 
 - Type: `Boolean`

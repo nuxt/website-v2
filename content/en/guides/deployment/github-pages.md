@@ -93,6 +93,9 @@ It uses the [GitHub Pages Action](https://github.com/marketplace/actions/github-
 With an existing workflow, add the following step:
 
 ```yaml
+- name: Generate page
+  run: yarn generate
+        
 - name: Deploy
   uses: peaceiris/actions-gh-pages@v3
   with:

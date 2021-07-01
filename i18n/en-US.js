@@ -107,15 +107,14 @@ export default {
       become_a_sponsor: 'Become a sponsor'
     },
     newsletter: {
-      title: '{nuxt} Newsletter',
-      description: 'Get the latest Nuxt news to your inbox, curated by the NuxtJS team.',
+      title: 'Subscribe to our newsletter',
+      description: 'The latest news, articles, and resources, sent to your inbox monthly.',
       form: {
         email: 'Email',
         subscribing: 'Subscribing...',
         subscribe: 'Subscribe',
         subscribed_messages: {
-          pre: 'An email to confirm your subscription has been sent to',
-          post: '💚'
+          pre: 'An email to confirm your subscription has been sent to'
         }
       }
     }

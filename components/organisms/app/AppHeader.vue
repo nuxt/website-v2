@@ -7,7 +7,7 @@
         :class="[aside ? 'justify-center' : 'justify-start']"
         class="flex items-center flex-1 lg:flex-none"
       >
-        <Logo :settings="settings" />
+        <HeaderLogo />
       </div>
 
       <div class="items-center hidden lg:flex lg:flex-1">
@@ -38,15 +38,9 @@ export default defineComponent({
   },
   setup() {
     const { $docus } = useContext()
-
     const settings = computed(() => $docus.settings.value)
 
-    const lastRelease = computed(() => $docus.lastRelease?.value)
-
-    return {
-      settings,
-      lastRelease
-    }
+    return { settings }
   }
 })
 </script>

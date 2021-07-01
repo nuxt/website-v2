@@ -16,16 +16,15 @@ export default {
   },
   theme: {
     header: {
-      logo: {
-        dark: '/img/header/dark/logo.svg',
-        light: '/img/header/light/logo.svg'
-      },
+      logo: true,
       title: false
     },
     colors: {
-      primary: '#00DC82'
+      primary: '#00DC82',
+      logo: '#003543'
     },
     shortcuts: {
+      'd-logo': 'w-auto h-6 md:h-7 text-logo dark:text-white',
       'd-body-bg': 'bg-white dark:bg-secondary-black',
       'd-body-text-color': 'text-secondary-darker dark:text-white', // text-secondary dark:text-white
       'd-secondary-bg': 'bg-gray-500 dark:bg-cloud-light',

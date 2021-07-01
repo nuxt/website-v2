@@ -24,6 +24,13 @@ Build your next Vue.js application with confidence using NuxtJS.<br class="hidde
 
 ::home-discover
 category: Discover
+animationsText: [
+  It all starts with HTML and Vue components,
+  Add some style using your favorite tools,
+  Fetch content locally or from third-parties,
+  Extend Nuxt's behavior with our modules ecosystem,
+  Deploy on various platforms with confidence
+  ]
 primary:
   text: Get started
   url: /docs/get-started/installation
@@ -32,6 +39,7 @@ primary:
 Easier :highlight[_Life_], from :highlight[_Code_] to :highlight[_Cloud_]
 ---description
 Nuxt is an open source web framework based on official Vue.js libraries, Node.js and using powerful tools such as Webpack, Babel and PostCSS. Nuxt makes web development intuitive and performant with a great developer experience in mind. Deploy with one command your application to many platforms, from Node.js hosting to static websites.
+
 ::
 
 ::home-features

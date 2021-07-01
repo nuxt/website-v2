@@ -115,5 +115,8 @@ export default withDocus({
   },
   i18n: {
     langDir: 'i18n/'
+  },
+  build: {
+    transpile: ['ohmyfetch']
   }
 })

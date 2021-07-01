@@ -3,41 +3,33 @@
     <img
       loading="lazy"
       :src="`/img/home/discover/modules/dark/landscape-discover-modules-t.svg`"
-      class="absolute w-full h-40 object-fill left-0 -mt-24 light:hidden"
+      class="absolute left-0 object-fill w-full h-40 -mt-24 light:hidden"
       alt="A landscape image"
     />
     <img
       loading="lazy"
       :src="`/img/home/discover/modules/light/landscape-discover-modules-t.svg`"
-      class="absolute w-full h-40 object-fill left-0 -mt-24 dark:hidden"
+      class="absolute left-0 object-fill w-full h-40 -mt-24 dark:hidden"
       alt="A landscape image"
     />
 
     <HomeSection class="pt-40 light:bg-gray-50 dark:bg-secondary-darkest">
       <template #section-content>
-        <SectionContent class="col-span-6 items-center md:items-start justify-center">
+        <SectionContent class="items-center justify-center col-span-6 md:items-start">
           <template #category>
-            <span class="text-tertiary font-bold text-lg">{{ category }}</span>
+            <span class="text-lg font-bold text-tertiary">{{ category }}</span>
           </template>
 
           <template #title>
             <h2
-              class="
-                font-normal
-                text-center
-                md:text-left
-                font-serif
-                text-display-6
-                md:text-display-5
-                2xl:text-display-4
-              "
+              class="font-serif font-normal text-center md:text-left text-display-6 md:text-display-5 2xl:text-display-4"
             >
               <Markdown use="title" unwrap="p" />
             </h2>
           </template>
 
           <template #paragraph>
-            <SectionDescription class="py-4 w-full" size="md">
+            <SectionDescription class="w-full py-4" size="md">
               Nuxt is an Open Source web framework based on official Vue.js libraries, Node.js and using powerful
               development tools such as Vite, Webpack, Babel and PostCSS. Nuxt's purpose is to make web application
               development intuitive and performant with a great developer experience in mind.
@@ -47,21 +39,12 @@
       </template>
       <template #right-illustration>
         <div class="col-span-12">
-          <div class="flex flex-col md:flex-row justify-center items-center">
+          <div class="flex flex-col items-center justify-center md:flex-row">
             <div
-              class="
-                grid grid-cols-3
-                gap-8
-                md:gap-0 md:flex md:flex-col
-                items-center
-                md:items-start
-                space-x-4
-                md:space-x-0 md:space-y-2 md:w-2/5
-                xl:w-1/5
-              "
+              class="grid items-center grid-cols-3 gap-8 space-x-4 md:gap-0 md:flex md:flex-col md:items-start md:space-x-0 md:space-y-2 md:w-2/5 xl:w-1/5"
             >
               <div v-for="(animation, index) in animations" :key="animation.name">
-                <div class="flex flex-col-reverse md:flex-row justify-center items-center space-x-2">
+                <div class="flex flex-col-reverse items-center justify-center space-x-2 md:flex-row">
                   <img
                     :src="`/img/home/discover/diamond.svg`"
                     alt="diamond"
@@ -82,6 +65,7 @@
             </div>
             <div class="anim">
               <div ref="lottieAnim" class="h-96" />
+                       <p class="z-20"> {{ animationsText[currentIndex]}} </p>
             </div>
           </div>
         </div>
@@ -91,13 +75,13 @@
     <img
       loading="lazy"
       :src="`/img/home/discover/modules/dark/landscape-discover-modules-b.svg`"
-      class="absolute w-full h-40 object-fill left-0 -mt-20 z-10 light:hidden"
+      class="absolute left-0 z-10 object-fill w-full h-40 -mt-20 light:hidden"
       alt="A landscape image"
     />
     <img
       loading="lazy"
       :src="`/img/home/discover/modules/light/landscape-discover-modules-b.svg`"
-      class="absolute w-full h-40 object-fill left-0 -mt-20 z-10 dark:hidden"
+      class="absolute left-0 z-10 object-fill w-full h-40 -mt-20 dark:hidden"
       alt="A landscape image"
     />
   </div>
@@ -110,6 +94,11 @@ export default defineComponent({
     category: {
       type: String,
       default: ''
+    },
+    animationsText: {
+      type: Array,
+      required: true,
+      default: () => []
     }
   },
   setup(_, context) {
@@ -230,6 +219,6 @@ export default defineComponent({
 </script>
 <style lang="postcss" scoped>
 .anim {
-  @apply w-full flex justify-center items-center md:justify-end w-full;
+  @apply w-full flex flex-col justify-center items-center md:justify-end w-full;
 }
 </style>

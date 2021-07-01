@@ -2,7 +2,7 @@
   <div>
     <FooterSocialLinks />
     <p class="mt-8 text-base light:text-gray-400 dark:text-cloud-light md:mt-0 md:order-1">
-      &copy; {{ year }} Nuxt, Inc. All rights reserved.
+      NuxtJS is an open source framework under MIT license.
     </p>
   </div>
 </template>

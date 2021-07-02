@@ -5,11 +5,6 @@
       >The quick brown fox jumps over<br />
       the lazy dog.</span
     >
-    <p>
-      Our brand typeface is DM Sans by Colophon Foundry for Google. This open-sourcetypeface was chosen for its
-      combination of smoothness and structure. Its geometric shapes and soft transitions will bring clarity and openness
-      to our texts. Also, it’s open availability will let other members of the NuxtJS community incorporate it into
-      their work.
-    </p>
+    <Markdown use="description" unwrap="p" />
   </div>
 </template>

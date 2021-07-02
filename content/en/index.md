@@ -110,6 +110,13 @@ Nuxt development is made from passionate developers, however, the amount of effo
 ::
 
 ::home-learn-master
+category: Learn
+---title
+:highlight[_Easy_] &nbsp;to learn. :highlight[_Easy_] to master
+---description
+Be part of the Nuxt.js community and help us Nuxtify the world.
+---bottom
+:button-link[Learn everything]{href="/docs/get-started/installation" size="medium"}
 ::
 
 ::home-learn-guides
@@ -189,4 +196,9 @@ Discover articles from the NuxtJS Team and Nuxt.js Community about NuxtJS, tips 
 ::
 
 ::home-testimonials
+category: Community
+---title
+Testimonials
+---description
+Learn from experts what they love about Nuxt.
 ::

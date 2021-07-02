@@ -1,0 +1,3 @@
+---
+navigation.collapse: true
+---

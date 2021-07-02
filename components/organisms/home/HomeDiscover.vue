@@ -29,11 +29,9 @@
           </template>
 
           <template #paragraph>
-            <SectionDescription class="w-full py-4" size="md">
-              Nuxt is an Open Source web framework based on official Vue.js libraries, Node.js and using powerful
-              development tools such as Vite, Webpack, Babel and PostCSS. Nuxt's purpose is to make web application
-              development intuitive and performant with a great developer experience in mind.
-            </SectionDescription>
+            <p class="py-4 w-full font-normal text-body-base md:text-body-lg 2xl:text-body-xl">
+              <Markdown use="description" unwrap="p" />
+            </p>
           </template>
         </SectionContent>
       </template>

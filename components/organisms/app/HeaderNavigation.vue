@@ -24,7 +24,7 @@
         'hover:d-primary-text-hover': currentSlug !== slug
       }"
     >
-      {{ title }}
+      {{ $t(`header.${title}`) }}
     </Link>
   </nav>
 </template>

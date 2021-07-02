@@ -19,15 +19,29 @@
     <template #section-content>
       <SectionContent class="col-span-12 items-center py-20">
         <template #category>
-          <span class="text-tertiary font-bold text-lg">Community</span>
+          <span class="text-tertiary font-bold text-lg">{{ category }}</span>
         </template>
 
         <template #title>
-          <SectionTitle class="text-center font-serif">Testimonials</SectionTitle>
-        </template>
+            <h2
+              class="
+                font-normal
+                text-center
+                md:text-left
+                font-serif
+                text-display-6
+                md:text-display-5
+                2xl:text-display-4
+              "
+            >
+              <Markdown use="title" unwrap="p" />
+            </h2>
+          </template>
 
         <template #paragraph>
-          <SectionDescription class="text-center">Learn from experts what they love about Nuxt.</SectionDescription>
+          <p class="text-center font-normal text-body-base md:text-body-lg 2xl:text-body-xl">
+            <Markdown use="description" unwrap="p" />
+          </p>
         </template>
 
         <template #content>
@@ -93,6 +107,12 @@
 import { defineComponent } from '@vue/composition-api'
 
 export default defineComponent({
+  props: {
+    category: {
+      type: String,
+      default: 'Category'
+    }
+  },
   setup() {
     const testimonials = [
       {

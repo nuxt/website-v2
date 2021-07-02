@@ -32,4 +32,9 @@ Our colours have been carefully considered to work in harmony and consistency ac
 sectionComponent: DesignTypography
 ---title
 Typography
+---description
+Our brand typeface is DM Sans by Colophon Foundry for Google. This open-source typeface was chosen for its
+combination of smoothness and structure. Its geometric shapes and soft transitions will bring clarity and openness
+to our texts. Also, it’s open availability will let other members of the NuxtJS community incorporate it into
+their work.
 ::

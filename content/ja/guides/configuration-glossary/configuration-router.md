@@ -292,7 +292,7 @@ Nuxt.js v2.10.0 からは `prefetchLinks` を `false` に設定した上で特�
 
 </base-alert>
 
-`prefetchPaylods` を `false` に設定することで無効にできます:
+`prefetchPayloads` を `false` に設定することで無効にできます:
 
 ```js{}[nuxt.config.js]
 export default {

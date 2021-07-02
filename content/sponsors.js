@@ -105,6 +105,12 @@ export default {
       img: 'remotely-logo.svg',
       url: 'https://remotely.so/',
       class: 'h-8'
+    },
+    {
+      name: 'Movavi',
+      img: 'movavi.svg',
+      url: 'https://www.movavi.com/',
+      class: 'h-8'
     }
   ]
 }

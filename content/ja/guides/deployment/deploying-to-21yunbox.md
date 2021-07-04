@@ -1,54 +1,54 @@
 ---
-title: Deploy Nuxt on 21YunBox
-description: How to deploy Nuxt.js on 21YunBox?
+title: 21YunBox で Nuxt をデプロイする
+description: 21YunBox で Nuxt.js をデプロイするには?
 menu: 21YunBox
 target: Static
 category: deployment
 position: 100
 ---
 
-[21YunBox](https://www.21yunbox.com) provides blazing fast Chinese CDN, continuous deployment, one-click HTTPS and [other services like managed databases and backend web services](https://www.21yunbox.com/docs/), providing an avenue to launch web projects in China.
+[21YunBox](https://www.21yunbox.com) は中国の高速 CDN を提供し、継続的なデプロイメント、ワンクリック HTTPS、また[マネージドサービスやバックエンド web サービスといった他のサービス](https://www.21yunbox.com/docs/)など、中国で web プロジェクトを立ち上げるための手段を提供しています。
 
-21YunBox includes the following features:
+21YunBox には以下の機能があります:
 
-- Continuous, automatic builds & deploys from GitHub and Gitee
-- Automatic SSL certificates through [Let's Encrypt](https://letsencrypt.org)
-- Instant cache invalidation with a blazing fast, Chinese CDN
-- Unlimited [custom domains](https://www.21yunbox.com/docs/#/custom-domains)
-- Automatic [Brotli compression](https://en.wikipedia.org/wiki/Brotli) for faster sites
-- Native HTTP/2 support
-- Automatic HTTP → HTTPS redirects
-- Custom URL redirects and rewrites
+- GitHub と Gitee からの継続的な、自動ビルドとデプロイ
+- [Let's Encrypt](https://letsencrypt.org) による自動 SSL 証明書の発行
+- 中国製の高速 CDN で瞬時のキャッシュの無効化
+- 無制限の [custom domains](https://www.21yunbox.com/docs/#/custom-domains)
+- サイト高速化のための自動 [Brotli コンプレッション](https://en.wikipedia.org/wiki/Brotli)
+- ネイティブな HTTP/2 のサポート
+- HTTP → HTTPS の自動リダイレクト
+- カスタム URL のリダイレクトとリライト
 
-## Prerequisites
+## 前提条件
 
-This guide assumes you already have a Nuxt project to deploy. If you need a project, use the [create-nuxt-app](https://github.com/nuxt/create-nuxt-app) to get started or fork 21YunBox's [Nuxt Example](https://gitee.com/eryiyunbox-examples/nuxtjs) before continuing.
+このガイドではデプロイする Nuxt プロジェクトがあることを想定しています。もしプロジェクトが必要なら、開始するために [create-nuxt-app](https://github.com/nuxt/create-nuxt-app) を使用するか、21YunBox の [Nuxt Example](https://gitee.com/eryiyunbox-examples/nuxtjs) をフォークしてから続けてください。
 
-## Setup
+## セットアップ
 
-You can set up a Nuxt site on 21YunBox in two quick steps:
+2 つの簡単なステップで Nuxt サイトを 21YunBox にセットアップできます:
 
-1. Create a new web service on 21YunBox, and give 21YunBox permission to access your GitHub or Gitee repo.
-2. Use the following values during creation:
+1. 21YunBox に新しい web サービスを作成し、 21YunBox に GitHub か Gitee リポジトリのアクセス許可を与えます。
+2. 作成時には以下の値を使用してください:
 
    |                       |                                                     |
    | --------------------- | --------------------------------------------------- |
    | **Environment**       | `Static Site`                                       |
-   | **Build Command**     | `yarn && yarn generate` (or your own build command) |
-   | **Publish Directory** | `./dist` (or your own output directory)             |
+   | **Build Command**     | `yarn && yarn generate` （もしくは独自のビルドコマンド） |
+   | **Publish Directory** | `./dist` （もしくは独自の出力ディレクトリ）               |
 
-That's it! Your site will be live on your 21YunBox URL (which looks like `yoursite.21yunbox.com`) as soon as the build is done.
+それだけです！ビルドが完了するとサイトは 21YunBox の URL（`yoursite.21yunbox.com` のようなもの）にサイトが公開されます。
 
-## Continuous deploys
+## 継続的なデプロイ
 
-Now that 21YunBox is connected to your repo, it will automatically build and publish your site any time you push to GitHub.
+今 21YunBox はリポジトリに接続されており、GitHub にプッシュするといつでも自動的にサイトを構築して公開します。
 
-## 21YunBox CDN and cache invalidation
+## 21YunBox CDN とキャッシュの無効化
 
-21YunBox hosts your site on a Chinese, blazing fast CDN which ensures the fastest possible download times for all your users across China.
+21YunBox はサイトを、中国の超高速 CDN でホスティングし、中国すべてのユーザーに最速のダウンロード時間を保証します。
 
-Every deploy automatically and instantly invalidates the CDN cache, so your users can always access the latest content on your site.
+すべてのデプロイは自動的、かつ瞬時にキャッシュを無効化し、ユーザーはいつでもサイトの最新のコンテンツにアクセスできます。
 
 ## Custom domains
 
-Add your own domains to your site easily using 21YunBox's [custom domains](https://www.21yunbox.com/docs/#/custom-domains) guide.
+21YunBox の [custom domains](https://www.21yunbox.com/docs/#/custom-domains) ガイドを使用することで、簡単にサイトへ独自のドメイン追加ができます。

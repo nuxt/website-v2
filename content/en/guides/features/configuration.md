@@ -267,6 +267,8 @@ export default {
 
 Aliasing `createElement` to `h` is a common convention you’ll see in the Vue ecosystem but is actually optional for JSX since it [automatically injects](https://github.com/vuejs/babel-plugin-transform-vue-jsx#h-auto-injection) `const h = this.$createElement` in any method and getter (not functions or arrow functions) declared in ES2015 syntax that has JSX so you can drop the (h) parameter.
 
+If you're using typescript, make sure to use `<script lang="tsx">` in your single file components, as jsx will lead to syntax errors otherwise.
+
 You can learn more about how to use it in the [JSX section](https://vuejs.org/v2/guide/render-function.html#JSX) of the Vue.js documentation.
 
 ## Ignoring files

@@ -19,10 +19,14 @@ import { defineComponent, ref, useContext, useFetch } from '@nuxtjs/composition-
 
 export default defineComponent({
   setup() {
-    const { $docus } = useContext()
+    const { $docus, i18n } = useContext()
     const teams = ref()
     useFetch(async () => {
-      teams.value = await $docus.search('/teams', { deep: true }).sortBy('position', 'asc').fetch()
+      teams.value = await $docus
+        .search('/teams', { deep: true })
+        .where({ 'language': i18n.locale })
+        .sortBy('position', 'asc')
+        .fetch()
       teams.value = teams.value.filter(team => team.name)
     })
     return {

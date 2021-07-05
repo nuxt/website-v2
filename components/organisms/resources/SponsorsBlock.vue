@@ -45,13 +45,13 @@ import { defineComponent, ref, useContext, useFetch } from '@nuxtjs/composition-
 
 export default defineComponent({
   setup() {
-    const { $docus } = useContext()
+    const { $docus, i18n } = useContext()
     const partners = ref()
 
     useFetch(async () => {
       partners.value = await $docus
         .search('/sponsors', { deep: true })
-        .where({ tier: { $in: ['MVP Partners', 'Partners'] } })
+        .where({ tier: { $in: ['MVP Partners', 'Partners'] }, language: i18n.locale })
         .fetch()
     })
 

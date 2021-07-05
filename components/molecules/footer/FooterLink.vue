@@ -11,7 +11,7 @@
         <li v-for="subLink in link.subLinks" :key="subLink.title">
           <NuxtHref
             :href="subLink.href"
-            :to="subLink.to"
+            :to="localePath(subLink.to)"
             :aria-label="subLink.title"
             class="light:text-gray-500 dark:text-white hover:d-primary-text-hover"
             >{{ $t(`footer.${subLink.title}`) }}</NuxtHref

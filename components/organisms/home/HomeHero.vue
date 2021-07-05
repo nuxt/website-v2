@@ -35,7 +35,7 @@
           "
         >
           <SectionButton
-            :to="primary.url"
+            :to="localePath(primary.url)"
             :aria-label="primary.text"
             size="md"
             class="bg-primary text-gray-800 hover:bg-green-300 focus:bg-green-300"

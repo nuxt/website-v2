@@ -165,7 +165,7 @@ export default {
 </template>
 ```
 
-## keep-alive
+### keep-alive
 
 `<Nuxt>` コンポーネントと `<NuxtChild/>` コンポーネントは、`keep-alive` と `keep-alive-props` を受け入れます。
 
@@ -247,7 +247,7 @@ keep-alive と keep-alive-props についてより詳しく知るためには [v
 
 </base-alert>
 
-## prefetchLinks
+### prefetchLinks
 
 Nuxt.js はスマートプリフェッチの機能を持ちます。viewport 内やスクロール時にリンクが表示されたことを検知し、それらのページの JavaScript をプリフェッチしてユーザーがリンクをクリックするのを待ちます。Nuxt.js はブラウザがビジーではないときにのみリソースを読み込み、接続がオフラインのときや 2G の接続しかない場合はプリフェッチをスキップします。
 
@@ -257,7 +257,7 @@ Nuxt.js はスマートプリフェッチの機能を持ちます。viewport 内
 
 </base-alert>
 
-### 特定のリンクでプリフェッチを無効にする
+#### 特定のリンクでプリフェッチを無効にする
 
 多くの JavaScript がある場合や、プリフェッチされる異なるページが多くある場合、サードパーティ製のスクリプトをたくさん読み込む場合には、いくつかのリンクのプリフェッチを無効にしたいでしょう。特定のリンクでプリフェッチを無効にするには、`no-prefetch` prop を使ってください。Nuxt.js v2.10.0 からは `prefetch` prop を `false` に設定することもできます。
 
@@ -266,7 +266,7 @@ Nuxt.js はスマートプリフェッチの機能を持ちます。viewport 内
 <NuxtLink to="/about" :prefetch="false">About page not prefetched</NuxtLink>
 ```
 
-### グローバルでプリフェッチを無効にする
+#### グローバルでプリフェッチを無効にする
 
 すべてのリンクでプリフェッチを無効にするには、`prefetchLinks` を `false` に設定します:
 
@@ -284,9 +284,9 @@ Nuxt.js v2.10.0 からは、`prefetchLinks` を `false` に設定した上で特
 <NuxtLink to="/about" prefetch>About page prefetched</NuxtLink>
 ```
 
-## Link クラス
+### Link クラス
 
-### linkActiveClass
+#### linkActiveClass
 
 `linkActiveClass` は、アクティブなリンクのための `vue-router` の CSS クラスと同じように機能します。どのリンクがアクティブかを表示したい場合は、`nuxt-link-active` クラスを持つ css を作成することで実現できます。
 
@@ -318,7 +318,7 @@ export default {
 
 </base-alert>
 
-### linkExactActiveClass
+#### linkExactActiveClass
 
 `linkExactActiveClass` は、正確なアクティブなリンクのための `vue-router` の CSS クラスと同じように機能します。どのリンクがアクティブか完全に一致させて表示したい場合は、`nuxt-link-exact-active` クラスを css に追加することで実現できます。
 
@@ -350,7 +350,7 @@ export default {
 
 </base-alert>
 
-### linkPrefetchedClass
+#### linkPrefetchedClass
 
 プリフェッチしたリンクすべてにスタイルを追加することができます。これはデフォルトの挙動を変更した後に、どのリンクでプリフェッチが行われているかをテストする際に役立ちます。linkPrefetchedClass はデフォルトでは無効になっています。有効にしたい場合、 `nuxt.config.js` ファイルの router プロパティに `linkPrefetchedClass` を追加する必要があります。
 

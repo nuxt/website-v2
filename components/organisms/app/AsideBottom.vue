@@ -2,7 +2,7 @@
   <div>
     <NuxtLink
       v-if="$route.path.startsWith('/docs')"
-      to="/releases"
+      :to="localePath('/releases')"
       class="
         flex
         items-center

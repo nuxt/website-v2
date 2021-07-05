@@ -48,10 +48,16 @@ export default defineComponent({
     }
   },
   setup() {
-    const { $docus } = useContext()
+
+    const { $docus, i18n } = useContext()
     const sustainability = ref()
+
     useFetch(async () => {
-      sustainability.value = await $docus.search('/sustainability', { deep: true }).sortBy('position', 'asc').fetch()
+      sustainability.value = await $docus
+        .search('/sustainability', { deep: true })
+        .where({ 'language': i18n.locale })
+        .sortBy('position', 'asc')
+        .fetch()
       sustainability.value = sustainability.value.filter(sustainability => sustainability.tier)
     })
 

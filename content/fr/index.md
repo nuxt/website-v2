@@ -111,7 +111,7 @@ Nuxt est construit et maintenu par des développeurs passionnés, cependant, les
 ::home-learn-master
 category: Learn
 ---title
-:highlight[_Facile_] &nbsp;à apprendre. :highlight[_Facile_] à maîtriser
+:highlight[_Facile_]{.text-primary} &nbsp;à apprendre. :highlight[_Facile_]{.text-primary} à maîtriser
 ---description
 Prenez part à la communauté Nuxt.js et aidez nous à rendre le monde plus Nuxt.
 ---bottom

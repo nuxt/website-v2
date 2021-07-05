@@ -24,6 +24,13 @@ Construisez votre prochaine application Vue.js en toute confiance avec NuxtJS.<b
 
 ::home-discover
 category: Discover
+animationsText: [
+  Tout commence par du HTML et des composants Vue,
+  Utilisez vos outils favoris pour ajouter du style,
+  Requêtez du contenu localement ou via des APIs tierces,
+  Etendez le comportement de Nuxt avec notre écosystème de modules,
+  Déployez en toute confiance sur de nombreuses plateformes
+  ]
 primary:
   text: Démarrez
   url: /docs/get-started/installation

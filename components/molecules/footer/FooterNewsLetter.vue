@@ -5,7 +5,7 @@
       <p class="mt-2 text-base text-gray-500 dark:text-secondary-surface">{{ $t('footer.newsletter.description') }}</p>
     </div>
     <div class="relative">
-      <InputGroupButton class="justify-end" v-model="email" :placeholder="$t('footer.newsletter.form.email')" @submit="subscribe">{{ pending ? $t('footer.newsletter.form.subscribing') : $t('footer.newsletter.form.subscribe') }}</InputGroupButton>
+      <InputGroupButton class="justify-end sm:justify-start" v-model="email" :placeholder="$t('footer.newsletter.form.email')" @submit="subscribe">{{ pending ? $t('footer.newsletter.form.subscribing') : $t('footer.newsletter.form.subscribe') }}</InputGroupButton>
       <p v-if="subscribed" class="pt-1 text-green-400">
         {{ $t('footer.newsletter.form.subscribed_messages.pre') }}
         {{ subscribed }}

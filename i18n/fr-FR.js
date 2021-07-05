@@ -29,7 +29,7 @@ export default {
       form: {
         email: 'Email',
         subscribing: 'Inscription...',
-        subscribe: 'Inscrivez-vous',
+        subscribe: 'S\'inscrire',
         subscribed_messages: {
           pre: 'Un email de confirmation de votre inscription a été envoyé'
         }

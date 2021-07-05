@@ -1,5 +1,5 @@
 <template>
-  <form class="mt-4 sm:flex lg:mt-0" @submit.prevent="submit">
+  <form class="mt-4 sm:flex" @submit.prevent="submit">
     <NuxtTextInput
       :value="value"
       :placeholder="placeholder"

@@ -115,7 +115,21 @@ export default withDocus({
     ]
   },
   i18n: {
-    langDir: 'i18n/'
+    langDir: 'i18n/',
+    locales: [
+      {
+        code: 'en',
+        iso: 'en-US',
+        file: 'en-US.js',
+        name: 'English'
+      },
+      {
+        code: 'fr',
+        iso: 'fr-FR',
+        file: 'fr-FR.js',
+        name: 'Français'
+      }
+    ]
   },
   build: {
     transpile: ['ohmyfetch']

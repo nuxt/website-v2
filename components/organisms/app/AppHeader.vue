@@ -2,14 +2,14 @@
   <header class="sticky w-full top-0 z-50 ">
     <HeaderNuxt3Banner />
     <div class="d-header -mt-0.5 lg:-mt-0">
-      <div class="flex flex-none d-container-content pt-1">
+      <div class="flex flex-none d-container-content pt-1 md:pt-2.5">
         <NavigationButton v-if="aside" />
 
         <div
           :class="[aside ? 'justify-center' : 'justify-start']"
-          class="flex items-center flex-1 lg:flex-none"
+          class="flex items-center flex-1 lg:flex-none lg:mr-28"
         >
-          <Logo :settings="settings" />
+          <Logo :settings="settings" class="h-5 sm:h-6 md:h-7"/>
         </div>
 
         <div class="items-center hidden lg:flex lg:flex-1">

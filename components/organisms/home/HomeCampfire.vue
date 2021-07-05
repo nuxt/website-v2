@@ -39,10 +39,10 @@ export default defineComponent({
     }
   },
   setup() {
-    const { $docus } = useContext()
+    const { $docus, i18n } = useContext()
     const posts = ref()
     useFetch(async () => {
-      const documents = await $docus.search('/blog/', { deep: true }).sortBy('position', 'asc').limit(2).fetch()
+      const documents = await $docus.search('/blog/', { deep: true }).where({ 'language': i18n.locale }).sortBy('position', 'asc').limit(2).fetch()
 
       posts.value = documents
     })

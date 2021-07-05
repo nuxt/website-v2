@@ -13,7 +13,7 @@
       >
         <div slot="footer" class="px-4 mb-4 mt-auto">
           <div class="flex items-center">
-            <div class="flex mr-4">
+            <div class="flex mr-4" v-if="post.authors">
               <a
                 v-for="(author, index) in post.authors"
                 :key="index"
@@ -33,7 +33,7 @@
               </a>
             </div>
             <div class="text-sm flex flex-col">
-              <span class="font-bold">{{ post.authors.length > 1 ? 'Multiple Authors' : post.authors[0].name }}</span>
+              <span class="font-bold" v-if="post.authors">{{ post.authors.length > 1 ? 'Multiple Authors' : post.authors[0].name }}</span>
               <time :datetime="post.date" class="font-medium mr-2 text-sm text-gray-400 dark:text-cloud">
                 {{ formatDateByLocale($i18n.locale, post.date) }}
               </time>
@@ -50,14 +50,16 @@ import { defineComponent, ref, useContext, useFetch } from '@nuxtjs/composition-
 
 export default defineComponent({
   setup() {
-    const { $docus } = useContext()
+    const { $docus, i18n } = useContext()
     const posts = ref()
     useFetch(async () => {
       const documents = await $docus
         .search('/blog', { deep: true })
-        .where({ slug: { $ne: '' } })
+        .where({ slug: { $ne: '' }, language: i18n.locale })
         .sortBy('date', 'desc')
         .fetch()
+
+        console.log(documents)
 
       posts.value = documents
     })

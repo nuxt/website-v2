@@ -34,6 +34,19 @@ export default {
           pre: 'An email to confirm your subscription has been sent to'
         }
       }
+    },
+    license: "NuxtJS is an open source framework under MIT license."
+  },
+  sidebar: {
+    partners: {
+      title: "Partners",
+      button: "Support Us"
+    },
+    ads: {
+      fallback: {
+        title: "NuxtJS needs you!",
+        description: "By allowing nuxtjs.org on your Ad-Blocker, you support our work and help us financially."
+      }
     }
   },
   common: {
@@ -42,7 +55,8 @@ export default {
     please_define_title: 'Please define a title in the front matter',
     please_define_description: 'Please define a description in the front matter',
     search: 'Search ("/" to focus)',
-    version: 'Version'
+    version: 'Version',
+    go_to: "Go to"
   },
   iso: 'en'
 }

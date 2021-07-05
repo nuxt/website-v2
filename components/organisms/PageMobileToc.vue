@@ -27,7 +27,7 @@
         flex
         items-center
         w-full
-        py-3
+        pt-10 pb-2
         text-sm
         font-semibold
         text-gray-900

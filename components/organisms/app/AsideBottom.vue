@@ -1,7 +1,7 @@
 <template>
   <div>
     <NuxtLink
-      v-if="$route.path.startsWith('/docs')"
+      v-if="$route.path.startsWith(localePath('/docs'))"
       :to="localePath('/releases')"
       class="
         flex

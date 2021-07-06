@@ -6,10 +6,6 @@
 # the repo (unless a later match takes precedence)
 *                   @alexchopin
 
-# Cypress & Content
-/content/**         @debs-obrien
-/cypress/**         @debs-obrien
-
 # Main content
 /content/en/**      @nuxt/framework
 

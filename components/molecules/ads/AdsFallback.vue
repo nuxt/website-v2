@@ -11,7 +11,7 @@
 
 <style lang="postcss">
 .nui-support-nuxt {
-  @apply bg-white bg-opacity-10 p-4 flex flex-row w-full items-center mt-4 rounded-md;
+  @apply light:bg-gray-100 dark:bg-white dark:bg-opacity-10 p-4 flex flex-row w-full items-center mt-4 rounded-md ;
 }
 
 @screen sm {

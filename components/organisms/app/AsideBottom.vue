@@ -8,10 +8,11 @@
         items-center
         py-1.5
         group
-        dark:hover:text-gray-100
-        hover:text-gray-900
-        bg-white bg-opacity-10
-        hover:bg-opacity-9
+        dark:bg-white
+        dark:bg-opacity-10
+        dark:hover:bg-opacity-9
+        light:bg-gray-100
+        light:hover:bg-gray-50
         p-4
         mt-4
         rounded-md

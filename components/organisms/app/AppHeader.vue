@@ -5,12 +5,13 @@
       <div class="flex flex-none d-container-content pt-1 md:pt-2.5">
         <NavigationButton v-if="aside" />
 
-        <div
+        <Link
           :class="[aside ? 'justify-center' : 'justify-start']"
           class="flex items-center flex-1 lg:flex-none lg:mr-28"
+          :to="localePath('/')"
         >
-          <Logo :settings="settings" class="h-5 sm:h-6 md:h-7"/>
-        </div>
+          <Logo :settings="settings" class="h-5 sm:h-6 md:h-7" />
+        </Link>
 
         <div class="items-center hidden lg:flex lg:flex-1">
           <HeaderNavigation />

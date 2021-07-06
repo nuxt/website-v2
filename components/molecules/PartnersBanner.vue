@@ -6,7 +6,7 @@
         :key="`${partner.alt}-${index}`"
         class="flex items-center p-8 mx-12 partners__slide md:p-4"
       >
-        <a :href="partner.url" class="opacity-75 hover:opacity-100" rel="noopener sponsored" target="_blank">
+        <a :href="partner.url" class="opacity-75 hover:opacity-100 w-28" rel="noopener sponsored" target="_blank">
           <img
             loading="lazy"
             :src="`/img/sponsors/light/${partner.img}`"

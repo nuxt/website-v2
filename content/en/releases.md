@@ -1,8 +1,9 @@
 ---
 template: releases
-layout.fluid: false
-layout.aside: false
 navigation: false
+layout.fluid: false
+layout.asideClass: 'block lg:hidden'
+layout.aside: true
 ---
 
 # Releases

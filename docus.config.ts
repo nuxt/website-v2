@@ -62,7 +62,9 @@ export default {
       'd-tertiary-text': 'text-gray-400 dark:text-cloud-dark',
       'd-prose-hr-border':
         'border-t border-gray-100 dark:border-secondary-darker',
-      'd-prose-ul-li-bullet': 'd-secondary-bg'
+      'd-prose-ul-li-bullet': 'd-secondary-bg',
+      'd-scrollbar':
+        'scrollbar-thin scrollbar-thumb-gray-200 dark:scrollbar-thumb-secondary-dark scrollbar-thumb-rounded'
     }
   }
 }

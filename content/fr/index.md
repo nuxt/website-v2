@@ -31,10 +31,6 @@ animationsText: [
   Etendez le comportement de Nuxt avec notre écosystème de modules,
   Déployez en toute confiance sur de nombreuses plateformes
   ]
-primary:
-  text: Démarrez
-  url: /docs/get-started/installation
-  icon: IconPlay
 ---title
 Une [_vie_]{.text-primary} plus simple, du [_Code_]{.text-primary} au [_Cloud_]{.text-primary}
 ---description
@@ -101,7 +97,7 @@ Nuxt contient de nombreuses fonctionnalités améliorant l'expérience de dével
 ::home-discover-partners
 category: Partenaires
 ---title
-Un [_développement_]{.text-primary} pérenne
+Un [_développement_]{.text-primary} soutenu
 ---description
 Nuxt est construit et maintenu par des développeurs passionnés, cependant, les effort nécessaires pour développer et maintenir de nouvelles fonctionnalités n'est pas durable sans une réelle contribution financière. Nous remercions nos sponsors et partenaires de rendre ceci possible.<br>
 ---bottom

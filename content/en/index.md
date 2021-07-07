@@ -31,10 +31,6 @@ animationsText: [
   Extend Nuxt's behavior with our modules ecosystem,
   Deploy on various platforms with confidence
   ]
-primary:
-  text: Get started
-  url: /docs/get-started/installation
-  icon: IconPlay
 ---title
 Easier [_Life_]{.text-primary}, from [_Code_]{.text-primary} to [_Cloud_]{.text-primary}
 ---description

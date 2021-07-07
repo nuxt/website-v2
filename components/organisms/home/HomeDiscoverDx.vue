@@ -2,7 +2,7 @@
   <div>
     <HomeSection class="pt-40 pb-20">
       <template #section-content>
-        <SectionContent class="col-span-12 items-center">
+        <SectionContent>
           <template #category>
             <span class="text-tertiary font-bold text-lg">Discover</span>
           </template>

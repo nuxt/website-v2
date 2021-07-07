@@ -12,9 +12,10 @@
       class="absolute left-0 object-fill w-full h-40 -mt-24 dark:hidden"
       alt="A landscape image"
     />
-    <HomeSection class="pt-40 light:bg-gray-50 dark:bg-secondary-darkest">
+
+    <HomeSection class="pt-40" secondary>
       <template #section-content>
-        <SectionContent class="items-center justify-center col-span-12">
+        <SectionContent>
           <template #category>
             <span class="text-lg font-bold text-tertiary">{{ category }}</span>
           </template>

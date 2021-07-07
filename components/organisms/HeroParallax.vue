@@ -1,5 +1,5 @@
 <template>
-  <div ref="containerImg" class="absolute top-0 left-0 -z-0 w-full h-full select-none pointer-events-none">
+  <div ref="containerImg" class="absolute top-0 left-0 -z-0 w-full h-full select-none pointer-events-none transition-opacity ease-out duration-800" :class="[hidden ? 'opacity-0' : 'opacity-100']">
     <img
       ref="gem1"
       data-speed="2"
@@ -57,9 +57,13 @@ import { defineComponent, ref, onMounted, onBeforeUnmount } from '@vue/compositi
 export default defineComponent({
   setup() {
     const containerImg = ref(null)
+    const hidden = ref(true)
 
     function parallax(e) {
       const images = Array.from(containerImg.value.children)
+      if (hidden.value) {
+        hidden.value = false
+      }
 
       for (const el of images) {
         const image = el
@@ -75,6 +79,7 @@ export default defineComponent({
     onBeforeUnmount(() => window.removeEventListener('mousemove', parallax))
 
     return {
+      hidden,
       containerImg,
       parallax
     }

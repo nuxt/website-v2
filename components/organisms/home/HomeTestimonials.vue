@@ -4,20 +4,20 @@
       <img
         loading="lazy"
         :src="`/img/home/community/dark/landscape-community-t.svg`"
-        class="w-full h-20 object-fill light:hidden pointer-events-none"
+        class="w-full h-20 object-fill -mt-12 dark-img pointer-events-none"
         alt="A landscape image"
       />
 
       <img
         loading="lazy"
         :src="`/img/home/community/light/landscape-community-t.svg`"
-        class="w-full h-20 object-fill dark:hidden pointer-events-none"
+        class="w-full h-20 object-fill -mt-12 light-img pointer-events-none"
         alt="A landscape image"
       />
     </template>
 
     <template #section-content>
-      <SectionContent class="col-span-12 items-center py-20">
+      <SectionContent class="pt-20">
         <template #category>
           <span class="text-tertiary font-bold text-lg">{{ category }}</span>
         </template>

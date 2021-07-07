@@ -1,5 +1,5 @@
 <template>
-  <section class="relative">
+  <section class="relative" :class="{ 'light:bg-gray-50 dark:bg-secondary-darkest': secondary }">
     <!-- Background -->
     <slot name="background-illustration" />
 
@@ -40,6 +40,10 @@ export default defineComponent({
     minHeight: {
       type: String,
       default: '560px'
+    },
+    secondary: {
+      type: Boolean,
+      default: false
     }
   }
 })

@@ -47,6 +47,7 @@ export default withDocus({
       class: ['min-w-xs']
     }
   },
+  css: [resolve(__dirname, './assets/nuxt.css')],
   buildModules: ['@nuxt/typescript-build'],
   plugins: ['~/plugins/adblock.client'],
   windicss: {

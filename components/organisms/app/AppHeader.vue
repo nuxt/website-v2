@@ -1,6 +1,5 @@
 <template>
   <header class="sticky w-full top-0 z-50 ">
-    <HeaderNuxt3Banner />
     <div class="d-header -mt-0.5 lg:-mt-0">
       <div class="flex flex-none d-container-content pt-1 md:pt-2.5">
         <NavigationButton v-if="aside" />

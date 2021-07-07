@@ -9,6 +9,9 @@ export default {
     apiKey: 'ff80fbf046ce827f64f06e16f82f1401',
     indexName: 'nuxtjs'
   },
+  layout: {
+    banner: true
+  },
   github: {
     repo: 'nuxt/nuxtjs.org',
     branch: 'dev',

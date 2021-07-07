@@ -6,16 +6,9 @@
       class="
         flex
         items-center
-        py-1.5
         group
-        dark:bg-white
-        dark:bg-opacity-10
-        dark:hover:bg-opacity-9
-        light:bg-gray-100
-        light:hover:bg-gray-50
-        p-4
+        nuxt-text-highlight-hover
         mt-4
-        rounded-md
       "
     >
       <IconNuxt class="w-5 h-5 mr-2" />

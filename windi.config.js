@@ -151,6 +151,9 @@ export default {
         sans: 'DM Sans',
         serif: 'DM Serif Display',
         mono: 'DM Mono'
+      },
+      transitionProperty: {
+        height: 'height',
       }
     }
   },

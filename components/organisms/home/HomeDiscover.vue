@@ -12,7 +12,6 @@
       class="absolute left-0 object-fill w-full h-40 -mt-24 dark:hidden"
       alt="A landscape image"
     />
-
     <HomeSection class="pt-40 light:bg-gray-50 dark:bg-secondary-darkest">
       <template #section-content>
         <SectionContent class="items-center justify-center col-span-12">
@@ -22,14 +21,31 @@
 
           <template #title>
             <h2
-              class="font-serif font-normal text-center md:text-left text-display-6 md:text-display-5 2xl:text-display-4"
+              class="
+                font-serif font-normal
+                text-center
+                md:text-left
+                text-display-6
+                md:text-display-5
+                2xl:text-display-4
+              "
             >
               <Markdown use="title" unwrap="p" />
             </h2>
           </template>
 
           <template #paragraph>
-            <p class="py-4 w-full font-normal text-body-base md:text-body-lg 2xl:text-body-xl">
+            <p
+              class="
+                py-4
+                w-full
+                font-normal
+                text-center
+                text-body-base
+                md:text-body-lg
+                2xl:text-body-xl
+              "
+            >
               <Markdown use="description" unwrap="p" />
             </p>
           </template>
@@ -37,12 +53,45 @@
       </template>
       <template #right-illustration>
         <div class="col-span-12">
-          <div class="flex flex-col items-center justify-center md:flex-row xl:ml-12">
+          <div
+            class="
+              flex flex-col
+              items-center
+              justify-center
+              md:flex-row
+              xl:ml-12
+            "
+          >
             <div
-              class="grid items-center grid-cols-3 gap-8 space-x-4 md:gap-0 md:flex md:flex-col md:items-start md:space-x-0 md:space-y-2 md:w-2/5 xl:w-1/5"
+              class="
+                grid
+                items-center
+                grid-cols-3
+                gap-8
+                space-x-4
+                md:gap-0
+                md:flex
+                md:flex-col
+                md:items-start
+                md:space-x-0
+                md:space-y-2
+                md:w-2/5
+                xl:w-1/5
+              "
             >
-              <div v-for="(animation, index) in animations" :key="animation.name">
-                <div class="flex flex-col-reverse items-center justify-center space-x-2 md:flex-row">
+              <div
+                v-for="(animation, index) in animations"
+                :key="animation.name"
+              >
+                <div
+                  class="
+                    flex flex-col-reverse
+                    items-center
+                    justify-center
+                    space-x-2
+                    md:flex-row
+                  "
+                >
                   <img
                     :src="`/img/home/discover/diamond.svg`"
                     alt="diamond"
@@ -52,7 +101,9 @@
                   <button
                     class="font-semibold focus:outline-none"
                     :class="
-                      index === currentIndex ? 'text-gray-700 dark:text-white' : 'text-gray-400 dark:text-gray-400'
+                      index === currentIndex
+                        ? 'text-gray-700 dark:text-white'
+                        : 'text-gray-400 dark:text-gray-400'
                     "
                     @click="changeAnimation(index)"
                   >
@@ -63,7 +114,9 @@
             </div>
             <div class="anim">
               <div ref="lottieAnim" class="h-96" />
-                       <p class="z-20"> {{ animationsText[currentIndex]}} </p>
+              <p class="z-20 nuxt-text-highlight text-sm font-medium text-center mt-20 -mb-8 md:mb-0 md:-mt-8">
+                <Markdown :use="texts[currentIndex]" />
+              </p>
             </div>
           </div>
         </div>
@@ -79,30 +132,36 @@
     <img
       loading="lazy"
       :src="`/img/home/discover/modules/light/landscape-discover-modules-b.svg`"
-      class="absolute left-0 z-10 object-fill w-full h-40 -mt-20 dark:hidden"
+      class="absolute left-0 z-10 object-fill w-full h-40 md:-mt-20 dark:hidden"
       alt="A landscape image"
     />
   </div>
 </template>
 <script lang="ts">
-import { defineComponent, ref, onMounted, watch, useContext, computed } from '@nuxtjs/composition-api'
+import {
+  defineComponent,
+  ref,
+  onMounted,
+  watch,
+  useContext,
+  computed
+} from '@nuxtjs/composition-api'
 import lottie, { AnimationItem, AnimationSegment } from 'lottie-web'
+import { flatUnwrap } from '~docus/utils'
+
 export default defineComponent({
   props: {
     category: {
       type: String,
       default: ''
-    },
-    animationsText: {
-      type: Array,
-      required: true,
-      default: () => []
     }
   },
   setup(_, context) {
     const { $colorMode } = useContext() as any
-    const lottieAnimPathLight = 'https://assets10.lottiefiles.com/private_files/lf30_8cv6lgcx.json'
-    const lottieAnimPathDark = 'https://assets10.lottiefiles.com/private_files/lf30_obsnpogu.json'
+    const lottieAnimPathLight =
+      'https://assets10.lottiefiles.com/private_files/lf30_8cv6lgcx.json'
+    const lottieAnimPathDark =
+      'https://assets10.lottiefiles.com/private_files/lf30_obsnpogu.json'
     const animations = ref([
       {
         name: 'Pages',
@@ -155,7 +214,11 @@ export default defineComponent({
         renderer: 'svg',
         loop: true,
         autoplay: false,
-        path: colorMode.value === 'dark' ? lottieAnimPathDark : lottieAnimPathLight
+        path:
+          colorMode.value === 'dark' ? lottieAnimPathDark : lottieAnimPathLight,
+        rendererSettings: {
+          viewBoxSize: '0 0 1300 600'
+        }
       })
 
       anim.addEventListener('DOMLoaded', function () {
@@ -164,7 +227,9 @@ export default defineComponent({
       })
 
       anim.addEventListener('enterFrame', function () {
-        const currentIndexFrame = animFrames.value.indexOf(Math.round(anim.currentFrame))
+        const currentIndexFrame = animFrames.value.indexOf(
+          Math.round(anim.currentFrame)
+        )
 
         if (currentIndexFrame !== -1 && anim.loop === true) {
           currentIndex.value = currentIndexFrame
@@ -177,7 +242,7 @@ export default defineComponent({
     }
 
     function animationObserver() {
-      const callback = entries => {
+      const callback = (entries) => {
         entries.forEach(({ _, isIntersecting }) => {
           if (!isIntersecting) {
             anim.pause()
@@ -188,7 +253,7 @@ export default defineComponent({
       }
 
       const observer = new IntersectionObserver(callback, {
-        root: document.querySelector('anim'),
+        root: document.querySelector('.anim'),
         threshold: 0.8 // isIntersecting when 80% of container is visible
       })
 
@@ -203,6 +268,26 @@ export default defineComponent({
 
     onMounted(() => setTimeout(loadAnimation, 250))
 
+    // TODO: Create an helper in Docus for this pattern
+    // Get animations texts from 'animations-texts' slot
+    const textContent = ref('')
+    const texts = computed(() => {
+      // A simple variable to fix HMR reload
+      // eslint-disable-next-line no-unused-expressions
+      textContent.value
+
+      // Get slot if it exists
+      let slot = context.slots['animations-texts'] || []
+
+      // Cast slot factory function
+      if (typeof slot === 'function') slot = slot()
+
+      // Return empty array if slot broken
+      if (!slot) return []
+
+      return flatUnwrap(slot, ['p', 'ul', 'li'])
+    })
+
     return {
       lottieAnim,
       anim,
@@ -210,13 +295,14 @@ export default defineComponent({
       changeAnimation,
       animations,
       currentIndex,
-      animationObserver
+      animationObserver,
+      texts
     }
   }
 })
 </script>
 <style lang="postcss" scoped>
 .anim {
-  @apply w-full flex flex-col justify-center items-center md:justify-end w-full;
+  @apply w-full flex flex-col-reverse md:flex-col justify-center items-center md:justify-end w-full;
 }
 </style>

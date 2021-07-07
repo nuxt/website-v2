@@ -155,6 +155,8 @@ export default {
     }
   },
   shortcuts: {
+    'nuxt-text-highlight': 'py-2 px-4 rounded-md bg-gray-100 dark:bg-white dark:bg-opacity-10',
+    'nuxt-text-highlight-hover': 'nuxt-text-highlight dark:hover:bg-opacity-9 light:hover:bg-gray-50',
     'text-display-6': {
       fontSize: '1.875rem',
       lineHeight: '2.25rem'

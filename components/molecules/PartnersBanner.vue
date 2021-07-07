@@ -58,8 +58,8 @@ export default defineComponent({
     transform: translateX(0);
   }
   100% {
-    -webkit-transform: translateX(calc(-250px * 7));
-    transform: translateX(calc(-250px * 7));
+    -webkit-transform: translateX(calc(-250px * 8));
+    transform: translateX(calc(-250px * 8));
   }
 }
 
@@ -69,8 +69,8 @@ export default defineComponent({
     transform: translateX(0);
   }
   100% {
-    -webkit-transform: translateX(calc(-250px * 7));
-    transform: translateX(calc(-250px * 7));
+    -webkit-transform: translateX(calc(-250px * 8));
+    transform: translateX(calc(-250px * 8));
   }
 }
 
@@ -135,7 +135,7 @@ export default defineComponent({
   @apply flex;
   -webkit-animation: scroll 30s linear infinite;
   animation: scroll 30s linear infinite;
-  width: calc(250px * 14);
+  width: calc(250px * 16);
 }
 
 .partners__slider .partners__slide {

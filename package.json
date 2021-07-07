@@ -8,7 +8,7 @@
   },
   "devDependencies": {
     "@nuxt/typescript-build": "^2.1.0",
-    "docus": "0.8.9",
+    "docus": "0.8.11",
     "@snackbar/core": "^1.7.0",
     "ohmyfetch": "^0.2.0"
   }

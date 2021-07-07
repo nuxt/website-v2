@@ -15,7 +15,7 @@
 
     <HomeSection class="pt-40 light:bg-gray-50 dark:bg-secondary-darkest">
       <template #section-content>
-        <SectionContent class="items-center justify-center col-span-6 md:items-start">
+        <SectionContent class="items-center justify-center col-span-12">
           <template #category>
             <span class="text-lg font-bold text-tertiary">{{ category }}</span>
           </template>
@@ -37,7 +37,7 @@
       </template>
       <template #right-illustration>
         <div class="col-span-12">
-          <div class="flex flex-col items-center justify-center md:flex-row">
+          <div class="flex flex-col items-center justify-center md:flex-row xl:ml-12">
             <div
               class="grid items-center grid-cols-3 gap-8 space-x-4 md:gap-0 md:flex md:flex-col md:items-start md:space-x-0 md:space-y-2 md:w-2/5 xl:w-1/5"
             >

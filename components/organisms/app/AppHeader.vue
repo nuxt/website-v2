@@ -1,7 +1,7 @@
 <template>
   <header class="sticky w-full top-0 z-50">
     <div class="d-header">
-      <div class="flex h-full flex-none d-container-content -mx-3 lg:mx-auto">
+      <div class="flex h-full flex-none max-w-7xl mx-auto px-1 sm:px-3 lg:px-6">
         <NavigationButton v-if="aside" class="px-2.5" />
 
         <Link

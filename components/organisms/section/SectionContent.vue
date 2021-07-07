@@ -1,9 +1,9 @@
 <template>
   <div
-    class="flex flex-col w-full"
+    class="flex flex-col w-full col-span-12"
     :class="{
       'items-start': position === 'left',
-      'items-center text-center': position === 'center',
+      'items-center jtext-center': position === 'center',
       'items-end': position === 'right'
     }"
   >
@@ -32,7 +32,7 @@ export default defineComponent({
   props: {
     position: {
       type: String,
-      default: 'left',
+      default: 'center',
       validator(value) {
         return ['left', 'center', 'right'].includes(value)
       }

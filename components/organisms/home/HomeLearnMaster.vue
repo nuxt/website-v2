@@ -1,7 +1,7 @@
 <template>
-  <HomeSection class="py-20 light:bg-gray-50 dark:bg-secondary-darkest">
+  <HomeSection secondary class="py-20">
     <template #section-content>
-      <SectionContent class="col-span-12 items-center">
+      <SectionContent>
         <template #category>
           <span class="text-tertiary font-bold text-lg">{{ category }}</span>
         </template>

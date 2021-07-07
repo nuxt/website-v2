@@ -112,7 +112,7 @@ Nuxt development is made from passionate developers, however, the amount of effo
 ::home-learn-master
 category: Learn
 ---title
-[_Easy_]{.text-primary} &nbsp;to learn. [_Easy_]{.text-primary} to master
+[_Easy_]{.text-primary} to learn. [_Easy_]{.text-primary} to master
 ---description
 Be part of the Nuxt.js community and help us Nuxtify the world.
 ---bottom

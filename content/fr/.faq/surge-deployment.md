@@ -33,6 +33,6 @@ Si vous avez un projet avec des [routes dynamiques](/docs/2.x/directory-structur
 
 <div class="Alert">
 
-Quand vous générez votre application web via `nuxt generate`, [le contexte](/api) passé à [`asyncData`](/docs/2.x/features/data-fetching#async-data) et [`fetch`](/docs/2.x/directory-structure/store) ne disposent pas de `req` ni de `res`.
+Quand vous générez votre application web via `nuxt generate`, [le contexte](/docs/internals-glossary/context) passé à [`asyncData`](/docs/2.x/features/data-fetching#async-data) et [`fetch`](/docs/2.x/directory-structure/store) ne disposent pas de `req` ni de `res`.
 
 </div>

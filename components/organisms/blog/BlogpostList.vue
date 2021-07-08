@@ -59,8 +59,6 @@ export default defineComponent({
         .sortBy('date', 'desc')
         .fetch()
 
-        console.log(documents)
-
       posts.value = documents
     })
 

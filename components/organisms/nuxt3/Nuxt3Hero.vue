@@ -1,6 +1,6 @@
 <template>
   <div class="overflow-hidden relative mx-auto max-w-8xl">
-    <HeroParallax />
+    <Nuxt3HeroParallax />
     <div class="flex flex-wrap justify-center py-0 section">
       <section
         class="

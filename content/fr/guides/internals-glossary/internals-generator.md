@@ -8,7 +8,7 @@ position: 8
 
 - Source: **[generator/generator.js](https://github.com/nuxt/nuxt.js/blob/dev/packages/generator/src/generator.js)**
 
-## Use
+## Utilisation
 
 ```js
 const { Generator } = require('nuxt');

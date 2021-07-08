@@ -193,9 +193,13 @@ export default {
   display: inline !important;
 }
 
+.DocSearch-Input {
+  color: #fff;
+}
 .dark {
   & .DocSearch {
-    --docsearch-text-color: var(--color-gray-300);
+    --docsearch-text-color: #fff;
+    /* --docsearch-text-color: var(--color-gray-300); */
     --docsearch-container-background: rgb(0 30 38 / 64%);
     --docsearch-modal-background: #003543;
     --docsearch-modal-shadow: inset 1px 1px 0 0 #052f14, 0 3px 8px 0 #0b160d;

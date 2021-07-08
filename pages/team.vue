@@ -97,14 +97,6 @@ export default {
             badges: ['framework']
           },
           {
-            name: "Debbie O'Brien",
-            city: 'Palma de Mallorca, Spain',
-            github: 'debs-obrien',
-            twitter: 'debs_obrien',
-            website: 'https://debbie.codes',
-            role: 'Head of Learning'
-          },
-          {
             name: 'Florent Delerue',
             city: 'Bordeaux, France',
             github: 'Flosciante',
@@ -292,6 +284,14 @@ export default {
             github: 'bencodezen',
             twitter: 'bencodezen',
             website: 'https://www.bencodezen.io/',
+            badges: ['ambassador']
+          },
+          {
+            name: "Debbie O'Brien",
+            city: 'Palma de Mallorca, Spain',
+            github: 'debs-obrien',
+            twitter: 'debs_obrien',
+            website: 'https://debbie.codes',
             badges: ['ambassador']
           }
         ]

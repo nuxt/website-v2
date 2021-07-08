@@ -6,7 +6,7 @@ category: essential
 position: 1
 ---
 
-> Le `context` fournit des objets/paramètres de Nuxt qui ne sont pas traditionnellement disponible dans les composants de Vue. Le `context` est disponible dans des zones spéciales du cycle de vie de Nuxt comme [`asyncData`](/api), [`fetch`](/api/pages-fetch), [`plugins`](/guide/plugins), [`middleware`](/guide/routing#middleware) et [`nuxtServerInit`](/guide/vuex-store#the-nuxtserverinit-action).
+> Le `context` fournit des objets/paramètres de Nuxt qui ne sont pas traditionnellement disponible dans les composants de Vue. Le `context` est disponible dans des zones spéciales du cycle de vie de Nuxt comme [`asyncData`](/docs/internals-glossary/context), [`fetch`](/api/pages-fetch), [`plugins`](/guide/plugins), [`middleware`](/guide/routing#middleware) et [`nuxtServerInit`](/guide/vuex-store#the-nuxtserverinit-action).
 
 > _Note: "Le Contexte" auquel nous nous référons ici ne doit pas être confondu avec le `context` disponible dans les actions du store [`Vuex`](https://vuex.vuejs.org/guide/actions.html). Les deux ne sont pas liés._
 

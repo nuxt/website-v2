@@ -43,6 +43,12 @@ export default {
       url: 'https://www.storyblok.com/?ref=nuxt',
       img: 'storyblok-logo.svg',
       class: 'h-16'
+    },
+    {
+      name: '64 Robots',
+      url: 'https://www.64robots.com/?ref=nuxt',
+      img: '64-robots.png',
+      class: 'h-10'
     }
   ],
   sponsors: [

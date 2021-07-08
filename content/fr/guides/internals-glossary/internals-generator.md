@@ -28,7 +28,7 @@ const { Generator, Builder } = require('nuxt');
 
 const generate = async () => {
   const nuxt = new Nuxt();
-  const nuxtBuilder = await Builder(nuxt);
+  const nuxtBuilder = await new Builder(nuxt);
   await new Generator(nuxt, nuxtBuilder).generate();
 }
 

@@ -56,7 +56,8 @@ export default {
     please_define_description: 'Please define a description in the front matter',
     search: 'Search ("/" to focus)',
     version: 'Version',
-    go_to: "Go to"
+    go_to: "Go to",
+    read_article: "Read article"
   },
   iso: 'en'
 }

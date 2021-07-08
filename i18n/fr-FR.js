@@ -56,7 +56,8 @@ export default {
     please_define_description: 'Merci de définir une description',
     search: 'Rechercher',
     version: 'Version',
-    go_to: "Visiter les"
+    go_to: "Visiter les",
+    read_article: "Lire l'article"
   },
   iso: 'fr',
   cookies: {

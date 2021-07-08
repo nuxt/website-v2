@@ -17,8 +17,10 @@
   >
     <p
       class="
+        text-secondary-dark
+        group-hover:text-secondary-darker
         dark:text-gray-100
-        group-hover:text-white
+        dark:group-hover:text-white
         sm:top-1.5
         w-full
         pl-4

@@ -74,9 +74,19 @@ export default defineComponent({
       }
     }
 
-    onMounted(() => window.addEventListener('mousemove', parallax))
-
-    onBeforeUnmount(() => window.removeEventListener('mousemove', parallax))
+    if (process.client) {
+      const isTouchDevice = (('ontouchstart' in window) || (navigator.maxTouchPoints > 0) || (navigator.msMaxTouchPoints > 0));
+      if (isTouchDevice) {
+        onMounted(() => {
+          setTimeout(() => {
+            hidden.value = false
+          }, 200)
+        })
+      } else {
+        onMounted(() => window.addEventListener('mousemove', parallax))
+        onBeforeUnmount(() => window.removeEventListener('mousemove', parallax))
+      }
+    }
 
     return {
       hidden,

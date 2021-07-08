@@ -2,8 +2,44 @@
   <div class="overflow-hidden relative mx-auto max-w-8xl">
     <HeroParallax />
     <div class="flex flex-wrap justify-center py-0 section">
-      <section class="flex flex-col justify-start w-full px-4 pt-36 pb-52 md:pt-44 lg:pb-56 lg:pt-52 text-center">
-        <h1 class="font-normal font-serif text-display-5 xs:text-display-4 md:text-display-3 2xl:text-display-2 mb-4">
+      <section
+        class="
+          flex flex-col
+          justify-start
+          w-full
+          px-4
+          pt-36
+          pb-52
+          md:pt-40
+          lg:pb-56 lg:pt-48
+          text-center
+        "
+      >
+        <div>
+          <span
+            class="
+              inline-block
+              text-secondary-darker text-sm
+              bg-primary-green
+              px-2
+              py-0.7
+              mb-4
+              font-bold
+              rounded-md
+            "
+            >Currently in private beta</span
+          >
+        </div>
+        <h1
+          class="
+            font-normal font-serif
+            text-display-5
+            xs:text-display-4
+            md:text-display-3
+            2xl:text-display-2
+            mb-4
+          "
+        >
           <Markdown use="title" unwrap="p" />
         </h1>
         <h2
@@ -22,27 +58,49 @@
         >
           <Markdown use="description" unwrap="p" />
         </h2>
-        <div
-          class="
-            flex flex-col
-            xs:flex-row
-            flex-wrap
-            items-center
-            justify-center
-            space-y-3
-            xs:space-y-0 xs:space-x-3
-            xl:space-x-4
-          "
-        >
-          Something here
+        <p class="text-center text-secondary-dark dark:text-cloud-lighter">
+          <Markdown use="body" unwrap="p" />
+        </p>
+        <div class="flex flex-col items-center justify-center">
+          <InputGroupButton
+            v-model="email"
+            :placeholder="$t('footer.newsletter.form.email')"
+            @submit="subscribe"
+            >{{
+              pending
+                ? $t("footer.newsletter.form.subscribing")
+                : $t("footer.newsletter.form.subscribe")
+            }}</InputGroupButton
+          >
+          <p v-if="subscribed" class="mt-2 text-green-400">
+            {{ $t("footer.newsletter.form.subscribed_messages.pre") }}
+            {{ subscribed }}
+          </p>
+          <p v-else-if="error" class="text-sm mt-2 text-yellow-500">
+            {{ error }}
+          </p>
         </div>
+
       </section>
     </div>
   </div>
 </template>
 
 <script>
-import { defineComponent } from '@nuxtjs/composition-api'
+import { defineComponent } from '@vue/composition-api'
+import { useNewsletter } from '~/plugins/composables'
 
-export default defineComponent({})
+export default defineComponent({
+  setup() {
+    const { email, error, subscribe, pending, subscribed } = useNewsletter()
+
+    return {
+      email,
+      pending,
+      subscribe,
+      subscribed,
+      error
+    }
+  }
+})
 </script>

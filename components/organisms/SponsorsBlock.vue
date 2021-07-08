@@ -135,8 +135,8 @@ export default {
     transform: translateY(0);
   }
   100% {
-    -webkit-transform: translateY(calc(-64px * 7));
-    transform: translateY(calc(-64px * 7));
+    -webkit-transform: translateY(calc(-64px * 8));
+    transform: translateY(calc(-64px * 8));
   }
 }
 
@@ -146,9 +146,9 @@ export default {
     transform: translateY(0);
   }
   100% {
-    -webkit-transform: translateY(calc(-64px * 7));
-    /* single logo height + margin-bottom * 7 */
-    transform: translateY(calc(-64px * 7));
+    -webkit-transform: translateY(calc(-64px * 8));
+    /* single logo height + margin-bottom * 8 */
+    transform: translateY(calc(-64px * 8));
   }
 }
 

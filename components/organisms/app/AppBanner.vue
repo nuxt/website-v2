@@ -13,7 +13,7 @@
       dark:from-sky-darkest dark:to-sky-darker
       hover:from-cloud-lightest hover:dark:from-sky-darker
     "
-    :class="[$route.path === '/' ? 'h-8' : 'h-0']"
+    :class="[$route.path === localePath('/') ? 'h-8' : 'h-0']"
   >
     <p
       class="
@@ -39,7 +39,7 @@ export default defineComponent({
   setup() {
     const route = useRoute()
     const showBanner = computed(() => {
-      return route.value.path === '/'
+      return route.value.path === localePath('/')
     })
   },
 })

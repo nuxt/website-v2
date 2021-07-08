@@ -3,14 +3,14 @@
     <template #header-illustration>
       <img
         loading="lazy"
-        :src="`/img/home/community/dark/landscape-community-t.svg`"
+        :src="`/img/home/testimonials/dark/landscape-community-t.svg`"
         class="w-full h-20 object-fill -mt-12 dark-img pointer-events-none"
         alt="A landscape image"
       />
 
       <img
         loading="lazy"
-        :src="`/img/home/community/light/landscape-community-t.svg`"
+        :src="`/img/home/testimonials/light/landscape-community-t.svg`"
         class="w-full h-20 object-fill -mt-12 light-img pointer-events-none"
         alt="A landscape image"
       />
@@ -65,7 +65,7 @@
               <div class="flex w-full justify-between items-center">
                 <a :href="testimonial.authorUrl" target="_blank" rel="noopener">
                   <img
-                    :src="`/img/home/community/${testimonial.authorIcon}.png`"
+                    :src="`/img/home/testimonials/${testimonial.authorIcon}.png`"
                     width="48"
                     height="48"
                     class="h-12 w-12"
@@ -82,14 +82,14 @@
                 </a>
                 <a :href="testimonial.jobUrl" target="_blank" rel="noopener sponsored" class="hidden xl:block">
                   <img
-                    :src="`/img/home/community/${testimonial.jobIcon}.svg`"
+                    :src="`/img/home/testimonials/${testimonial.jobIcon}.svg`"
                     width="28"
                     height="28"
                     :class="{ 'light-img': testimonial.jobIconDark }"
                   />
                   <img
                     v-if="testimonial.jobIconDark"
-                    :src="`/img/home/community/${testimonial.jobIconDark}.svg`"
+                    :src="`/img/home/testimonials/${testimonial.jobIconDark}.svg`"
                     width="28"
                     height="28"
                     class="dark-img"
@@ -151,7 +151,7 @@ export default defineComponent({
         author: 'Guillermo Rauch',
         authorIcon: 'guillermo',
         authorUrl: 'https://twitter.com/rauchg',
-        job: 'CEO of Vercel',
+        job: 'Founder of Vercel',
         jobIcon: 'vercel-light',
         jobIconDark: 'vercel-dark',
         jobUrl: 'https://vercel.com'
@@ -162,7 +162,7 @@ export default defineComponent({
         author: 'Dominik Angerer',
         authorIcon: 'dominik',
         authorUrl: 'https://twitter.com/domangerer',
-        job: 'CEO of Storyblok',
+        job: 'Founder of Storyblok',
         jobIcon: 'storyblok',
         jobUrl: 'https://www.storyblok.com'
       },
@@ -172,7 +172,7 @@ export default defineComponent({
         author: 'Sadek Drobi',
         authorIcon: 'sadek',
         authorUrl: 'https://twitter.com/Sadache',
-        job: 'CEO of Prismic',
+        job: 'Founder of Prismic',
         jobIcon: 'prismic',
         jobUrl: 'https://prismic.io'
       },
@@ -182,7 +182,7 @@ export default defineComponent({
         author: 'Ajay Kapur',
         authorIcon: 'ajay',
         authorUrl: 'https://www.linkedin.com/in/ajaykapur/',
-        job: 'CEO of Layer0',
+        job: 'Founder of Layer0',
         jobIcon: 'layer0-light',
         jobIconDark: 'layer0-dark',
         jobUrl: 'https://www.layer0.co/'
@@ -196,6 +196,16 @@ export default defineComponent({
         job: 'Co-founder of Swell',
         jobIcon: 'swell',
         jobUrl: 'https://swell.is'
+      },
+      {
+        testimonial:
+          'The moment I used Nuxt for the first time I felt in love with it. Apart from its scalability, performance and developer experience, the team behind of it is also fantastic. Thanks for developing such a great framework and making our lives much easier!',
+        author: 'Savas Vedova',
+        authorIcon: 'savas',
+        authorUrl: 'https://www.linkedin.com/in/savas-vedova/',
+        job: 'Founder of Stormkit',
+        jobIcon: 'stormkit',
+        jobUrl: 'https://www.stormkit.io/'
       }
     ]
 

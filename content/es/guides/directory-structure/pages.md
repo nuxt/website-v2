@@ -72,8 +72,6 @@ También puedes crear rutas de archivos con la extensión `.js` o `.ts`.
 
 </base-alert>
 
-Every Page component is a Vue component but Nuxt.js adds special attributes and functions to make the development of your universal application as easy as possible.
-
 Cada componente de página es un componente de Vue, pero Nuxt.js añade atributos especiales y funciones para hacer que el desarrollo de tu aplicación universal sea más fácil.
 
 ```html{}[pages

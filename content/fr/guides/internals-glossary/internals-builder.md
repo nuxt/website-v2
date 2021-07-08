@@ -8,6 +8,19 @@ position: 7
 
 - Source: **[builder/builder.js](https://github.com/nuxt/nuxt.js/blob/dev/packages/builder/src/builder.js)**
 
+## Utilisation
+
+```js
+const { Builder } = require('nuxt');
+
+const build = async () => {
+  const nuxt = new Nuxt();
+  await new Builder(nuxt).build();
+}
+
+build();
+```
+
 ## Hooks
 
 Nous pouvons enregistrer des hooks sur certains événements du cycle de vie.

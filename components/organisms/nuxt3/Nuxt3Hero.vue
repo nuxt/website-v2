@@ -17,16 +17,7 @@
       >
         <div>
           <span
-            class="
-              inline-block
-              text-secondary-darker text-sm
-              bg-primary-green
-              px-2
-              py-0.7
-              mb-4
-              font-bold
-              rounded-md
-            "
+            class="nuxt-text-highlight"
             >Currently in private beta</span
           >
         </div>
@@ -37,7 +28,7 @@
             xs:text-display-4
             md:text-display-3
             2xl:text-display-2
-            mb-4
+            my-4
           "
         >
           <Markdown use="title" unwrap="p" />

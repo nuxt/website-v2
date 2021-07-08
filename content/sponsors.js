@@ -48,13 +48,13 @@ export default {
       name: 'Storyblok',
       url: 'https://www.storyblok.com/?ref=nuxt',
       img: 'storyblok-logo.svg',
-      class: 'h-16'
+      class: 'h-10'
     },
     {
       name: '64 Robots',
       url: 'https://www.64robots.com/?ref=nuxt',
       img: '64-robots.png',
-      class: 'h-16'
+      class: 'h-12'
     }
   ],
   sponsors: [

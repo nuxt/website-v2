@@ -23,7 +23,7 @@ export default defineComponent({
         icon: 'IconDiscord'
       },
       {
-        href: 'https://twitter.com/nuxt_js?lang=fr',
+        href: 'https://twitter.com/nuxt_js',
         icon: 'IconTwitter'
       },
       {

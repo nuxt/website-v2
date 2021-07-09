@@ -2,7 +2,7 @@
   <ul class="flex items-center space-x-4 xl:space-x-5">
     <li v-for="(social, key) in socials" :key="key">
       <NuxtHref :href="social.href">
-        <Component :is="social.icon" class="h-6 w-6 text-gray-400 dark:text-cloud-lighter hover:text-primary" />
+        <Component :is="social.icon" class="w-6 h-6 text-gray-400 dark:text-cloud-lighter hover:text-primary" />
       </NuxtHref>
     </li>
   </ul>
@@ -23,7 +23,7 @@ export default defineComponent({
         icon: 'IconDiscord'
       },
       {
-        href: 'https://twitter.com/nuxt_js?lang=fr',
+        href: 'https://twitter.com/nuxt_js',
         icon: 'IconTwitter'
       },
       {

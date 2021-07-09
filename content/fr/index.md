@@ -27,7 +27,7 @@ category: Discover
 ---title
 Une [_vie_]{.text-primary} plus simple, du [_Code_]{.text-primary} au [_Cloud_]{.text-primary}
 ---description
-Nuxt est un framework web open source basé sur les librairies officielles Vue.js, Node.js, et de puissants outils comme Webpack, Babel and PostCSS. Nuxt rend le développement web intuitif et performant, avec toujours en tête l'expérience de développement. Déployez en une commande votre application sur de nombreuses plateformes, d'un hébergement Node.js à un site web statique.
+Nuxt est un framework web open source basé sur les librairies officielles Vue.js, Node.js, et de puissants outils comme Webpack, Babel et PostCSS. Nuxt rend le développement web intuitif et performant, avec toujours en tête l'expérience de développement. Déployez en une commande votre application sur de nombreuses plateformes, d'un hébergement Node.js à un site web statique.
 ---animations-texts
 - Tout commence par du HTML et des composants Vue
 - Utilisez vos outils favoris pour ajouter du style

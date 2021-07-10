@@ -1,5 +1,5 @@
 <template>
-  <div class="fromcli__container">
+  <div class="fromcli__container" aria-live="polite">
     <div class="fromcli__code">
       <div class="fromcli__code__wrapper">
         <div class="fromcli__code__bash">
@@ -114,23 +114,25 @@
     </div>
     <div class="fromcli__display">
       <div class="fromcli__display_loading">
-        <img loading="lazy" class="fromcli__display__logo" src="~/static/img/home/learn/master/logo.svg" />
+        <img loading="lazy" class="fromcli__display__logo" src="~/static/img/home/learn/master/logo.svg" alt="" />
         <div class="fromcli__display__progressbar">
           <div class="fromcli__display__progressbar__background"></div>
           <div class="fromcli__display__progressbar__progress"></div>
         </div>
       </div>
       <div class="fromcli__display__content">
-        <img loading="lazy" class="fromcli__display__content__logo" src="~/static/img/home/learn/master/logo.svg" />
+        <img loading="lazy" class="fromcli__display__content__logo" src="~/static/img/home/learn/master/logo.svg" alt="" />
         <img
           loading="lazy"
           class="fromcli__display__content__content1"
           src="~/static/img/home/learn/master/cliContent1.svg"
+          alt=""
         />
         <img
           loading="lazy"
           class="fromcli__display__content__content2"
           src="~/static/img/home/learn/master/cliContent2.svg"
+          alt=""
         />
       </div>
     </div>

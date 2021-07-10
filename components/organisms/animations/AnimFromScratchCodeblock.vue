@@ -57,16 +57,16 @@
               <span>&lt;</span>
               <span class="text-red-400">h1</span>
               <span>&gt;</span>
-              Hello world !
+              <span>Hello world !</span>
               <span>&lt;</span>
-              &#47;
+              <span>&#47;</span>
               <span class="text-red-400">h1</span>
               <span>&gt;</span>
             </p>
             <p>
               <!-- Template tag open -->
               <span>&lt;</span>
-              &#47;
+              <span>&#47;</span>
               <span class="text-red-400">template</span>
               <span>&gt;</span>
             </p>
@@ -76,14 +76,14 @@
     </div>
     <div class="fromscratch__display">
       <div class="fromscratch__display_loading">
-        <img loading="lazy" class="fromscratch__display__logo" src="~/static/img/home/learn/master/logo.svg" />
+        <img loading="lazy" class="fromscratch__display__logo" src="~/static/img/home/learn/master/logo.svg" alt="" />
         <div class="fromscratch__display__progressbar">
           <div class="fromscratch__display__progressbar__background"></div>
           <div class="fromscratch__display__progressbar__progress"></div>
         </div>
       </div>
       <div class="fromscratch__display__content">
-        <img loading="lazy" src="~/static/img/home/learn/master/sidebar.svg" />
+        <img loading="lazy" src="~/static/img/home/learn/master/sidebar.svg" alt="" />
         <p>Hello world !</p>
       </div>
     </div>

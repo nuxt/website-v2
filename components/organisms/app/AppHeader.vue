@@ -7,6 +7,7 @@
         <Link
           :class="[aside ? 'justify-center lg:justify-start' : 'justify-start']"
           class="flex items-center flex-1 lg:flex-none lg:w-60"
+          aria-label="Homepage"
           :to="localePath('/')"
         >
           <!-- "mr-4 lg:mr-0" to optically center logo text -->

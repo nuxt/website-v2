@@ -1,5 +1,5 @@
 <template>
-  <div class="fromcli__container" aria-live="polite">
+  <div class="fromcli__container">
     <div class="fromcli__code">
       <div class="fromcli__code__wrapper">
         <div class="fromcli__code__bash">

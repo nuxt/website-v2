@@ -85,7 +85,7 @@
                   <NuxtLabel tag="span" class="font-bold text-base">{{ testimonial.author }}</NuxtLabel>
                   <NuxtLabel tag="span" class="text-sm dark:text-cloud-lighter">{{ testimonial.job }}</NuxtLabel>
                 </a>
-                <a :href="testimonial.jobUrl" :aria-label="`${testimonial.jobName} website`" target="_blank" rel="noopener sponsored" class="hidden xl:block">
+                <a :href="testimonial.jobUrl" :title="testimonial.jobName" target="_blank" rel="noopener sponsored" class="hidden xl:block">
                   <img
                     :src="`/img/home/testimonials/${testimonial.jobIcon}.svg`"
                     :alt="`${testimonial.jobName} Logo`"

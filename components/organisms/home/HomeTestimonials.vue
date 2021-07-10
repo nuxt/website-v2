@@ -67,12 +67,12 @@
             >
               <NuxtLabel tag="p" class="text-left" v-html="testimonial.testimonial"></NuxtLabel>
               <div class="flex w-full justify-between items-center">
-                <a :href="testimonial.authorUrl" target="_blank" rel="noopener">
+                <a :href="testimonial.authorUrl" target="_blank" rel="noopener" class="block h-12 w-12">
                   <img
                     :src="`/img/home/testimonials/${testimonial.authorIcon}.png`"
                     width="48"
                     height="48"
-                    class="h-12 w-12"
+                    loading="lazy"
                   />
                 </a>
                 <a
@@ -89,6 +89,7 @@
                     :src="`/img/home/testimonials/${testimonial.jobIcon}.svg`"
                     width="28"
                     height="28"
+                    loading="lazy"
                     :class="{ 'light-img': testimonial.jobIconDark }"
                   />
                   <img
@@ -97,6 +98,7 @@
                     width="28"
                     height="28"
                     class="dark-img"
+                    loading="lazy"
                   />
                 </a>
               </div>

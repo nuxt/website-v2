@@ -1,5 +1,5 @@
 <template>
-  <div class="group flex flex-col items-center transition duration-200 hover:bg-secondary-darkest p-6 hover:shadow-inner">
+  <div class="flex flex-col items-center transition duration-200 p-6" :class="{ 'group hover:bg-[#fefefe] dark:hover:bg-secondary-darkest hover:shadow-inner': hover }">
     <InjectComponent :component="image" class="mb-4 transition duration-200 text-primary group-hover:text-primary-400" :class="imageClass">
       <img :src="image" :alt="`A ${title} image`" />
     </InjectComponent>
@@ -14,6 +14,10 @@ import { defineComponent } from '@nuxtjs/composition-api'
 
 export default defineComponent({
   props: {
+    hover: {
+      type: Boolean,
+      default: false
+    },
     image: {
       type: String,
       default: ''

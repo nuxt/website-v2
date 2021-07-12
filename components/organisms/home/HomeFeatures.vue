@@ -12,7 +12,7 @@
           <Markdown use="description" unwrap="p" />
         </p>
 
-        <div class="grid grid-cols-1 xs:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 sm:gap-12">
+        <div class="grid grid-cols-1 xs:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
           <slot />
         </div>
       </div>

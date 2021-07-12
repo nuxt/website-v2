@@ -5,6 +5,8 @@ layout:
 navigation: false
 layout.asideClass: 'block lg:hidden'
 layout.aside: true
+title: 'NuxtJS - The Intuitive Vue Framework'
+head.titleTemplate: null
 ---
 
 ::home-hero

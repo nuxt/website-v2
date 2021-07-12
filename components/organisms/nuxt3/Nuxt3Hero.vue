@@ -63,7 +63,7 @@
                 : $t("footer.newsletter.form.subscribe")
             }}</InputGroupButton
           >
-          <p v-if="subscribed" class="mt-2 text-green-400">
+          <p v-if="subscribed" class="mt-2 text-primary">
             {{ $t("footer.newsletter.form.subscribed_messages.pre") }}
             {{ subscribed }}
           </p>

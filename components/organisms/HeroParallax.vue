@@ -5,7 +5,7 @@
       data-speed="2"
       loading="lazy"
       :src="`/img/home/hero/gem-1.svg`"
-      class="hidden lg:block absolute left-0 top-0 ml-0 md:ml-12 ml-20 mt-0 md:mt-8 mt-8"
+      class="hidden lg:block absolute left-30 top-10 ml-0 md:ml-12 ml-20 mt-0 md:mt-8 mt-8"
       alt="An image of a green gem from nuxt galaxy"
     />
     <img
@@ -45,7 +45,7 @@
       data-speed="-2"
       loading="lazy"
       :src="`/img/home/hero/gem-2.svg`"
-      class="hidden sm:block absolute left-0 top-0 mt-20 lg:top-1/4 lg:mt-8 rotate-45"
+      class="hidden sm:block absolute left-20 top-0 mt-20 lg:top-1/3 lg:-mt-2 rotate-45"
       alt="An image of a green gem from nuxt galaxy"
     />
   </div>

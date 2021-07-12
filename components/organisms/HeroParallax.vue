@@ -5,7 +5,7 @@
       data-speed="2"
       loading="lazy"
       :src="`/img/home/hero/gem-1.svg`"
-      class="hidden lg:block absolute left-0 top-0 ml-0 md:ml-12 ml-20 mt-0 md:mt-4 mt-8"
+      class="hidden lg:block absolute left-0 top-0 ml-0 md:ml-12 ml-20 mt-0 md:mt-8 mt-8"
       alt="An image of a green gem from nuxt galaxy"
     />
     <img

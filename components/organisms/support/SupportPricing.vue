@@ -25,7 +25,7 @@
           <a
             href="mailto:support@nuxtjs.org"
             size="md"
-            class="inline-flex font-medium rounded-md bg-primary text-gray-800 hover:bg-green-300 focus:bg-green-300 px-4 py-2.5 text-sm 2xl:text-md "
+            class="inline-flex font-medium rounded-md bg-primary text-gray-800 hover:bg-primary-400 focus:bg-primary-400 px-4 py-2.5 text-sm 2xl:text-md "
             aria-label="test"
           >Contact us</a>
         </div>

@@ -4332,10 +4332,10 @@ doctypes@^1.1.0:
   resolved "https://registry.yarnpkg.com/doctypes/-/doctypes-1.1.0.tgz#ea80b106a87538774e8a3a4a5afe293de489e0a9"
   integrity sha1-6oCxBqh1OHdOijpKWv4pPeSJ4Kk=
 
-docus@0.8.14:
-  version "0.8.14"
-  resolved "https://registry.yarnpkg.com/docus/-/docus-0.8.14.tgz#6bbcbb1206dd9559d25ae2fedc4156160f34bd9e"
-  integrity sha512-+XALt07raLPFFg6r6SYDQyecEHb+Ub7uNk6tZxytHtgwJmRb07s3tgcHHu4ZjN1VAbiSNwy7LlT2V3Jry9Figw==
+docus@0.8.15:
+  version "0.8.15"
+  resolved "https://registry.yarnpkg.com/docus/-/docus-0.8.15.tgz#1ef5ff2e3bbc82bd6330aab050f7b90d512c152f"
+  integrity sha512-Oa5lyjx6gSWAYNCF+FfRRgjHVoikPLHt3WCol8htz2yIlODkrqP8XS/OpvV83U3LZnHvOJucz0QxZLTUzGDlwQ==
   dependencies:
     "@docsearch/css" "^1.0.0-alpha.28"
     "@docsearch/js" "^1.0.0-alpha.28"

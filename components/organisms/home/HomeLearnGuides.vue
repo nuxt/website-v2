@@ -1,6 +1,12 @@
 <template>
-  <section class="relative pt-20 light:bg-gray-50 dark:bg-secondary-darkest">
-    <NuxtContainer class="flex flex-col items-center">
+  <section class="relative light:bg-gray-50 dark:bg-secondary-darkest">
+    <img
+      loading="lazy"
+      :src="`/img/home/discover/modules/dark/landscape-discover-modules-t.svg`"
+      class="absolute left-0 object-fill w-full h-40 -mt-24 light:hidden"
+      alt="A landscape image"
+    />
+    <NuxtContainer class="pt-20 flex flex-col items-center">
       <div class="flex flex-col w-full items-center col-span-12">
         <div class="mb-2">
           <span class="text-tertiary font-bold text-lg">{{ category }} </span>

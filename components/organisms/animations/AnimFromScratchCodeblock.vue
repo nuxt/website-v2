@@ -181,7 +181,7 @@ span[class*='fromscratch__yarn'] {
   @apply mt-2 w-1/2;
   & .fromscratch__progressbar {
     &:nth-child(1) {
-      @apply bg-green-300;
+      @apply bg-primary-400;
       animation-delay: 2.4s;
     }
     &:nth-child(2) {
@@ -199,7 +199,7 @@ span[class*='fromscratch__yarn'] {
   @apply mt-2 w-1/4;
   & .fromscratch__progressbar {
     &:nth-child(1) {
-      @apply bg-green-300;
+      @apply bg-primary-400;
       animation-delay: 4.8s;
     }
     &:nth-child(2) {

@@ -15,7 +15,7 @@
             to="#"
             size="md"
             aria-label="Start course"
-            class="bg-primary text-gray-800 hover:bg-green-300 focus:bg-green-300"
+            class="bg-primary text-gray-800 hover:bg-primary-400 focus:bg-primary-400"
           >
             Start course
           </SectionButton>

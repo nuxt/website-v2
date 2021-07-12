@@ -12,7 +12,7 @@
       <NuxtHref
         href="/design-kit/DesignKitColors.fig"
         aria-label="Dowload Color System"
-        class="font-medium rounded bg-primary-green text-gray-800 hover:bg-green-300 focus:bg-green-300 py-3 px-4"
+        class="font-medium rounded bg-primary text-gray-800 hover:bg-primary-400 focus:bg-primary-400 py-3 px-4"
         download
         ><span class="font-medium">Download Color System</span></NuxtHref
       >
@@ -25,13 +25,13 @@ import { defineComponent, useContext, ref, useFetch } from '@nuxtjs/composition-
 
 export default defineComponent({
   setup() {
-    const { $docus } = useContext()
+    const { $docus, i18n } = useContext()
     const colorsMd = ref()
 
     useFetch(async () => {
       colorsMd.value = await $docus
         .search('/design-kit', { deep: true })
-        .where({ slug: { $in: ['colors'] } })
+        .where({ slug: { $in: ['colors'] }, language: i18n.locale })
         .fetch()
     })
 

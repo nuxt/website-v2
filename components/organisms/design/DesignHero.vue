@@ -8,7 +8,7 @@
           <NuxtHref
             :href="downloadLink.url"
             :aria-label="downloadLink.text"
-            class="rounded bg-primary-green text-gray-800 hover:bg-green-300 focus:bg-green-300 py-3 px-4"
+            class="rounded bg-primary text-gray-800 hover:bg-primary-400 focus:bg-primary-300 py-3 px-4"
             download
             ><span class="font-medium">{{ downloadLink.text }}</span></NuxtHref
           >

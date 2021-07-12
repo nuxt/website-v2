@@ -12,14 +12,14 @@
           <div class="font-semibold">{{ logo.type }}</div>
           <div class="flex space-x-2">
             <NuxtHref
-              class="hover:text-primary-green light:text-gray-500 dark:white hover:underline"
+              class="hover:text-primary light:text-gray-500 dark:white hover:underline"
               :href="`${logo.logoImg}.svg`"
               aria-label="Download svg"
               download
               >SVG</NuxtHref
             >
             <NuxtHref
-              class="hover:text-primary-green light:text-gray-500 dark:white hover:underline"
+              class="hover:text-primary light:text-gray-500 dark:white hover:underline"
               :href="`${logo.logoImg}.png`"
               aria-label="Download png"
               download
@@ -37,13 +37,13 @@ import { defineComponent, useContext, ref, useFetch } from '@nuxtjs/composition-
 
 export default defineComponent({
   setup() {
-    const { $docus } = useContext()
+    const { $docus, i18n } = useContext()
     const logosMd = ref()
 
     useFetch(async () => {
       logosMd.value = await $docus
         .search('/design-kit', { deep: true })
-        .where({ slug: { $in: ['logos'] } })
+        .where({ slug: { $in: ['logos'] }, language: i18n.locale })
         .fetch()
     })
     return {

@@ -1,6 +1,6 @@
 <template>
   <Link
-    to="/3"
+    to="/v3"
     class="
       group
       block
@@ -8,28 +8,23 @@
       items-center
       transition-height
       delay-200
-      bg-gradient-to-t
-      light:from-cloud-surface light:to-cloud-lightest
-      dark:from-sky-darkest dark:to-sky-darker
-      hover:from-cloud-lightest hover:dark:from-sky-darker
+      bg-primary
+      hover:bg-primary-400
     "
-    :class="[$route.path === localePath('/') ? 'h-8' : 'h-0']"
+    :class="[$route.path === localePath('/') ? 'h-10' : 'h-0']"
   >
     <p
       class="
-        text-secondary-dark
-        group-hover:text-secondary-darker
-        dark:text-gray-100
-        dark:group-hover:text-white
+        text-sky-darkest
+        group-hover:text-black
         sm:top-1.5
         w-full
         pl-4
         sm:text-center
-        font-semibold
         text-sm
       "
     >
-      Is Nuxt 3 ready?
+      <b>Nuxt 3</b> is coming... Discover more about it <b>here</b>!
     </p>
   </Link>
 </template>

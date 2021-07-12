@@ -21,10 +21,10 @@
         :to="localePath('/sponsors-nuxtjs')"
         class="
           rounded-md
-          bg-primary-green
+          bg-primary
           text-gray-800
-          hover:bg-green-300
-          focus:bg-green-300
+          hover:bg-primary-300
+          focus:bg-primary-300
           inline-flex
           items-center
           px-3

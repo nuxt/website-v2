@@ -134,5 +134,10 @@ export default withDocus({
   },
   build: {
     transpile: ['ohmyfetch']
+  },
+  publicRuntimeConfig: {
+    plausible: {
+      domain: process.env.PLAUSIBLE_DOMAIN
+    }
   }
 })

@@ -57,9 +57,6 @@
                 space-y-4
                 border-2 border-gray-200
                 dark:border-secondary-dark
-                md:opacity-90 md:hover:opacity-100
-                md:hover:bg-gray-50
-                md:hover:dark:bg-secondary-darker
                 md:transition-all md:ease-out
                 rounded-lg
                 p-4

@@ -11085,6 +11085,13 @@ vue-plausible@^1.1.4:
   dependencies:
     plausible-tracker "^0.3.1"
 
+vue-plausible@^1.2.1:
+  version "1.2.1"
+  resolved "https://registry.yarnpkg.com/vue-plausible/-/vue-plausible-1.2.1.tgz#66ceb925a98ecca715a11c3c77e1e11b8f0945fc"
+  integrity sha512-+HIO35sHLPMtpSzyQSjGUFQUmqHXHas5kQ/XSdowS6z8FryfP/uyPURUT1hoXK217DD2w7EbZqjs59TDcHhcEw==
+  dependencies:
+    plausible-tracker "^0.3.1"
+
 vue-router@^3.5.1:
   version "3.5.2"
   resolved "https://registry.yarnpkg.com/vue-router/-/vue-router-3.5.2.tgz#5f55e3f251970e36c3e8d88a7cd2d67a350ade5c"

@@ -48,7 +48,7 @@ export default withDocus({
     }
   },
   css: [resolve(__dirname, './assets/nuxt.css')],
-  buildModules: ['@nuxt/typescript-build'],
+  buildModules: ['@nuxt/typescript-build', 'vue-plausible'],
   plugins: ['~/plugins/adblock.client'],
   windicss: {
     root: resolve(__dirname),

@@ -51,6 +51,8 @@ Check the status `pm2 ls`.
 
 Your Nuxt.js application is now serving!
 
+After `npm run build`, and then run `pm2 start` and my nuxt app is running on port then it tries to run app again and again and it throws error that app is already listening on port. While my `ecosystem.config.js` file is in fork mode.
+
 ## Further Information
 
 This solution guarantees no downtime for your application on this server. (You should also prevent server failure through redundancy or high availability cloud solutions.)

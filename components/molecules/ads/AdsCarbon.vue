@@ -1,5 +1,5 @@
 <template>
-  <div ref="carbonads" class="Carbon" />
+  <div ref="carbonads" class="Carbon dark:bg-secondary-darkest bg-gray-50" />
 </template>
 
 <script>
@@ -20,9 +20,7 @@ export default defineComponent({
 </script>
 
 <style lang="postcss">
-.dark-mode .Carbon {
-  background-color: theme('colors.dark.surface');
-
+.dark .Carbon {
   .carbon-text {
     color: theme('colors.dark.onSurfacePrimary');
 
@@ -32,9 +30,7 @@ export default defineComponent({
   }
 }
 
-.light-mode .Carbon {
-  background-color: theme('colors.gray.200');
-
+.light .Carbon {
   .carbon-text {
     @apply text-gray-600;
 

@@ -14,7 +14,7 @@
     >
       <div class="flex items-center">
           {{ title }}
-          <Component v-if="icon" :is="icon" class="w-4 h-4 ml-2 text-gray-400 opacity-0 group-hover:opacity-100"/>
+          <Component v-if="icon" :is="icon" class="w-4 h-4 ml-2 text-gray-400 opacity-0 lg:group-hover:opacity-100"/>
         </div>
 
     </Link>

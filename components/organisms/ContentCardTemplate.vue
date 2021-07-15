@@ -13,9 +13,7 @@
     "
   >
     <div class="aspect-h-9 bg-gray-100 dark:bg-secondary-darker mb-4">
-      <Link :to="href">
-        <NuxtImg :src="image" width="864" height="378" :alt="title" />
-      </Link>
+      <NuxtImg :src="image" width="864" height="378" :alt="title" />
     </div>
 
     <div v-if="tags.length" class="px-4 mb-1">
@@ -85,7 +83,7 @@ export default defineComponent({
     function navigateToUrl(href) {
       const isInternal = href.startsWith('/') && href.startsWith('//') === false
       if (isInternal) {
-        this.$router.push(href)
+        this.$router.push(this.localePath(href))
       } else {
         window.open(href, '_blank')
       }

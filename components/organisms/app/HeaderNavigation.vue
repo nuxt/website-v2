@@ -1,93 +1,55 @@
 <template>
-  <nav class="relative w-full h-full flex items-center justify-center">
+  <nav class="relative flex items-center justify-center w-full h-full">
     <Link
-      v-for="{ title, href, slug, blank } in links"
+      v-for="{ title, href, slug, blank, icon, to } in links"
       :key="slug"
       :aria-label="title"
-      class="
-        relative
-        capitalize
-        font-medium
-        flex flex-col
-        items-center
-        justify-center
-        text-center
-        px-4
-        h-full
-        flex
-        items-center
-      "
-      :to="href"
+      class="relative flex flex-col items-center justify-center h-full px-4 font-medium text-center capitalize group "
+      :to="href || to"
       :blank="blank"
       :class="{
         'text-primary': currentSlug === slug,
         'hover:d-primary-text-hover': currentSlug !== slug
       }"
     >
-      {{ $t(`header.${title}`) }}
+      <div class="flex items-center">
+          {{ title }}
+          <Component v-if="icon" :is="icon" class="w-4 h-4 ml-2 text-gray-400 opacity-0 group-hover:opacity-100"/>
+        </div>
+
     </Link>
   </nav>
 </template>
-
 <script>
-import { computed, defineComponent, useRoute } from '@nuxtjs/composition-api'
-
+import { computed, defineComponent, useRoute, useContext } from '@nuxtjs/composition-api'
 export default defineComponent({
-  props: {
-    links: {
-      type: Array,
-      required: false,
-      default: () => [
-        {
-          title: 'Docs',
-          slug: 'docs',
-          href: '/docs'
-        },
-        {
-          title: 'Examples',
-          slug: 'examples',
-          href: '/examples'
-        },
-        {
-          title: 'Resources',
-          slug: 'resources',
-          href: '/resources'
-        },
-        {
-          title: 'Blog',
-          slug: 'blog',
-          href: '/blog'
-        },
-        {
-          title: 'Video Courses',
-          slug: 'video-courses',
-          href: 'https://masteringnuxt.com/?utm_source=nuxt&utm_medium=link&utm_campaign=navbar_link',
-          blank: true
-        }
-      ]
-    }
-  },
-  setup() {
+  setup(props) {
     const route = useRoute()
-
+    const { $docus } = useContext()
+    let links = [
+      ...$docus.currentNav.value.links,
+    {
+      title: 'Mastering Nuxt',
+      href: 'https://masteringnuxt.com/?utm_source=nuxt&utm_medium=link&utm_campaign=navbar_link',
+      blank: true,
+      icon: 'IconExternalLink'
+    }]
     const currentSlug = computed(() => {
       return route.value.path !== '/' && route?.value?.params?.pathMatch
         ? route.value.params.pathMatch.split('/')[0]
         : null
     })
-
     return {
-      currentSlug
+      currentSlug,
+      links
     }
   }
 })
 </script>
-
 <style scoped lang="postcss">
 .nuxt-link-active {
   color: rgba(52, 211, 153);
 }
-
 .menu li {
   display: block;
   position: relative;

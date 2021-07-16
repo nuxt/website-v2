@@ -56,12 +56,10 @@ export default defineComponent({
   },
   setup(_, context) {
     let codeBlock = ref(null)
-
     onMounted(() => {
       codeBlock = context.refs.codeBlock as Element
       console.log('codeBlock', codeBlock)
     })
-
     function animationObserver() {
       const callback = (entries) => {
         entries.forEach(({ _, isIntersecting }) => {
@@ -72,16 +70,14 @@ export default defineComponent({
           }
         })
       }
-
       const observer = new IntersectionObserver(callback, {
         root: document.querySelector('.master-section'),
         threshold: 0.8 // isIntersecting when 80% of container is visible
       })
-
       observer.observe(codeBlock)
     }
-
     return {
+      codeBlock,
       animationObserver
     }
   }

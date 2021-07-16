@@ -52,7 +52,7 @@
 </template>
 
 <script>
-import { defineComponent, ref, onMounted, onBeforeUnmount } from '@vue/composition-api'
+import { defineComponent, ref, onMounted, onBeforeUnmount } from '@nuxtjs/composition-api'
 
 export default defineComponent({
   setup() {

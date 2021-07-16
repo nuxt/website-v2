@@ -11,17 +11,17 @@
         </p>
       </div>
 
-      <div v-for="(sponsors, index) in sustainability" :key="index" class="text-center">
-        <h2 class="font-semibold text-display-6">{{ sponsors.tier }}</h2>
+      <div v-for="(sponsor, index) in sponsors" :key="index" class="text-center">
+        <h2 class="font-semibold text-display-6">{{ sponsor.tier }}</h2>
         <div class="flex flex-wrap justify-center pt-8 pb-16 -mx-8">
           <NuxtHref
-            v-for="logo in sponsors.logos"
+            v-for="logo in sponsor.logos"
             :key="logo.title"
             :href="logo.url"
             :aria-label="logo.title"
             class="mx-8 my-4"
           >
-            <img :src="`/img/sponsors/${$colorMode.value}/${logo.img}.png`" :alt="logo.title" :class="logo.size" />
+            <img :src="`/img/sponsors/${$colorMode.value}/${logo.img}`" :alt="logo.title" :class="logo.size" />
           </NuxtHref>
         </div>
       </div>
@@ -49,30 +49,29 @@ export default defineComponent({
   },
   setup() {
 
-    const { $docus, i18n } = useContext()
-    const sustainability = ref()
+    const { $docus } = useContext()
     const sponsors = ref()
 
     useFetch(async () => {
       sponsors.value = await $docus
         .search('/sponsors', { deep: true })
-        .where({tier: { $in : ['MVP Partners'] }})
         .sortBy('position', 'asc')
         .fetch()
-      console.log(sponsors.value)
-    })
+      sponsors.value = sponsors.value.filter(sponsor => sponsor.tier).reduce((acc, val) => {
+        if (val.tier === "MVP Partners") {
+          acc[0].logos.push(val)
+        } else if (val.tier === "Partners") {
+          acc[1].logos.push(val)
+        } else {
+          acc[2].logos.push(val)
+        }
+        return acc;
+      }, [{tier: "MVP Partners", logos: []}, {tier: "Partners", logos: []}, {tier: "Sponsors", logos: []}])
 
-    useFetch(async () => {
-      sustainability.value = await $docus
-        .search('/sustainability', { deep: true })
-        .where({ 'language': i18n.locale })
-        .sortBy('position', 'asc')
-        .fetch()
-      sustainability.value = sustainability.value.filter(sustainability => sustainability.tier)
     })
 
     return {
-      sustainability
+      sponsors
     }
   }
 })

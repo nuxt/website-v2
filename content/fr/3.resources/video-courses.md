@@ -13,49 +13,49 @@ description: "Apprenez-en plus sur le framework Nuxt avec ce choix de vidéos en
 ::video-courses-list
 video-courses:
   one:
-    title: Learn Nuxt.js by Building a Real World App
-    description: Learn how to build robust, modern websites with Nuxt from scratch. Or improve your website performance, code quality, while making better use of the framework.
+    title: Apprenez Nuxt.js en créant une application du monde réel
+    description: Apprenez à créer des sites web robustes et modernes avec Nuxt à partir de zéro. Ou améliorez les performances de votre site web, la qualité du code, tout en utilisant mieux le framework.
     image: /img/video-courses/mastering_nuxt.png
     tier: Premium
   two:
-    title: Get Started with Nuxt
-    description: Learn the essentials for how to build and deploy a Nuxt site including dnyamic routes, data fetching, SEO, lazy loading, global styles and transitions as well as how to generate and deploy your Nuxt app.
+    title: Démarrer avec Nuxt
+    description: Apprenez l'essentiel pour créer et déployer un site Nuxt, y compris les routes dynamiques, la récupération de données, le référencement, le chargement en arrière plan, les styles globaux et les transitions, ainsi que comment générer et déployer votre application Nuxt.
     image: /img/video-courses/jamstack_explorer.png
-    tier: Free
+    tier: Gratuit
   three:
-    title: Learn Nuxt with Debbie
-    description: A playlist of YouTube videos covering all things Nuxt including short videos and live streams.
+    title: Apprenez Nuxt avec Debbie
+    description: Une liste de lecture de vidéos YouTube couvrant tout ce qui concerne Nuxt, y compris de courtes vidéos et des flux en direct.
     image: /img/video-courses/learn_nuxt_with_debbie.png
-    tier: Free
+    tier: Gratuit
   four:
-    title: Building Applications with Vue & Nuxt
-    description: Build dynamic web applications with Vue and Nuxt! Throughout the course you’ll build out a variety of projects leveraging the tools in the Vue ecosystem including the Vue CLI, Nuxt, Vuex Store, and more.
+    title: Création d'applications avec Vue et Nuxt
+    description: Créez des applications Web dynamiques avec Vue et Nuxt ! Tout au long du cours, vous développerez une variété de projets en tirant parti des outils de l'écosystème Vue, notamment Vue CLI, Nuxt, Vuex Store, etc.
     image: /img/video-courses/building_applications_fe_masters.png
     tier: Premium
   five:
-    title: Build a Job Board with Laravel, GraphQL, Nuxt and Apollo
-    description: Learn while you build a GraphQL API with Laravel Lighthouse, then build a Nuxt frontend with Apollo to consume it. All styled with Tailwind.
+    title: Construisez un tableau de Job avec Laravel, GraphQL, Nuxt et Apollo
+    description: Apprenez pendant que vous créez une API GraphQL avec Laravel Lighthouse, puis créez une interface Nuxt avec Apollo pour la consommer. Le tout stylisé avec Tailwind.
     image: /img/video-courses/job_board.png
     tier: Premium
   six:
-    title: Nuxt.js - Vue.js on Steroids
-    description: Build highly engaging Vue JS apps with Nuxt.js. Nuxt adds easy server-side-rendering and a folder-based config approach.
+    title: Nuxt.js - Vue.js sur Steroids
+    description: Créez des applications Vue JS très attrayantes avec Nuxt.js. Nuxt ajoute un rendu côté serveur facile et une approche de configuration basée sur les dossiers.
     image: /img/video-courses/vuejs_on_steroids.png
     tier: Premium
   seven:
-    title: Scaling Vue with Nuxt.js
-    description: Once you are comfortable with Vue, learning a framework like Nuxt allows you to create production-ready web apps which follow best practices.
+    title: Mise à l'échelle de Vue avec Nuxt.js
+    description: Une fois que vous êtes à l'aise avec Vue, l'apprentissage d'un framework comme Nuxt vous permet de créer des applications Web prêtes pour la production qui suivent les meilleures pratiques.
     image: /img/video-courses/scaling_vue_with_nuxt.png
     tier: Premium
   eight:
-    title: Nuxt.js Fundamentals
-    description: Learn the fundamentals of Nuxt.js in this course that we created together with the founders of Nuxt. The course covers what you need to know from scaffolding to deploying your first Nuxt.js application.
+    title: Les fondamentales de Nuxt.js
+    description: Apprenez les bases de Nuxt.js dans ce cours que nous avons créé avec les fondateurs de Nuxt. Le cours couvre ce que vous devez savoir, de l'échafaudage au déploiement de votre première application Nuxt.js.
     image: /img/video-courses/nuxt_fundamentals.png
-    tier: Free
+    tier: Gratuit
   nine:
-    title: Create a News App with Vue.js and Nuxt
-    description: You will learn how to create dynamic pages for each section of your application and load, store, display, filter, and style the data. Then end result will be a News app with multiple category pages, comments for each section, and user pages.
+    title: Créer une application d'actualités avec Vue.js et Nuxt
+    description: Vous apprendrez à créer des pages dynamiques pour chaque section de votre application et à charger, stocker, afficher, filtrer et styliser les données. Ensuite, le résultat final sera une application d'actualités avec plusieurs pages de catégories, des commentaires pour chaque section et des pages utilisateurs.
     image: /img/video-courses/news_app.png
-    tier: Free
+    tier: Gratuit
 ---
 ::

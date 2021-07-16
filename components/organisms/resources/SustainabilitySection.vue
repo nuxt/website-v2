@@ -11,20 +11,10 @@
         </p>
       </div>
 
-      <div v-for="(sponsor, index) in sponsors" :key="index" class="text-center">
-        <h2 class="font-semibold text-display-6">{{ sponsor.tier }}</h2>
-        <div class="flex flex-wrap justify-center pt-8 pb-16 -mx-8">
-          <NuxtHref
-            v-for="logo in sponsor.logos"
-            :key="logo.title"
-            :href="logo.url"
-            :aria-label="logo.title"
-            class="mx-8 my-4"
-          >
-            <img :src="`/img/sponsors/${$colorMode.value}/${logo.img}`" :alt="logo.title" :class="logo.size" />
-          </NuxtHref>
-        </div>
-      </div>
+      <section-sponsors tier="MVP Partners" :sponsors="mvpPartners" />
+      <section-sponsors tier="Partners" :sponsors="partners" />
+      <section-sponsors tier="Sponsors" :sponsors="sponsors" />
+
       <SectionButton
         to="https://github.com/sponsors/nuxt"
         :aria-label="buttonText"
@@ -50,27 +40,26 @@ export default defineComponent({
   setup() {
 
     const { $docus } = useContext()
+
+    const mvpPartners = ref()
+    const partners = ref()
     const sponsors = ref()
 
     useFetch(async () => {
-      sponsors.value = await $docus
+      const documents = await $docus
         .search('/sponsors', { deep: true })
         .sortBy('position', 'asc')
         .fetch()
-      sponsors.value = sponsors.value.filter(sponsor => sponsor.tier).reduce((acc, val) => {
-        if (val.tier === "MVP Partners") {
-          acc[0].logos.push(val)
-        } else if (val.tier === "Partners") {
-          acc[1].logos.push(val)
-        } else {
-          acc[2].logos.push(val)
-        }
-        return acc;
-      }, [{tier: "MVP Partners", logos: []}, {tier: "Partners", logos: []}, {tier: "Sponsors", logos: []}])
+
+      mvpPartners.value = documents.filter(sponsor => sponsor.tier === 'MVP Partners')
+      partners.value = documents.filter(sponsor => sponsor.tier === 'Partners')
+      sponsors.value = documents.filter(sponsor => sponsor.tier === 'Sponsors')
 
     })
 
     return {
+      mvpPartners,
+      partners,
       sponsors
     }
   }

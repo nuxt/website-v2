@@ -1,5 +1,5 @@
 <template>
-  <HomeSection secondary class="py-20">
+  <HomeSection secondary class="master-section">
     <template #section-content>
       <SectionContent>
         <template #category>
@@ -29,7 +29,9 @@
         </template>
 
         <template #content>
-          <CodeBlockAnimation class="w-full text-gray-50" />
+          <div ref="codeBlock">
+            <CodeBlockAnimation class="w-full text-gray-50" ref="codeBlock"/>
+          </div>
         </template>
 
         <template #button>
@@ -42,8 +44,8 @@
   </HomeSection>
 </template>
 
-<script>
-import { defineComponent } from '@nuxtjs/composition-api'
+<script lang="ts">
+import { defineComponent, onMounted, ref } from '@nuxtjs/composition-api'
 
 export default defineComponent({
   props: {
@@ -51,6 +53,43 @@ export default defineComponent({
       type: String,
       default: 'Category'
     }
+  },
+  setup(_, context) {
+    let codeBlock = ref(null)
+
+    onMounted(() => {
+      codeBlock = context.refs.codeBlock as Element
+      console.log('codeBlock', codeBlock)
+    })
+
+    function animationObserver() {
+      const callback = (entries) => {
+        entries.forEach(({ _, isIntersecting }) => {
+          if (!isIntersecting) {
+            console.log("isNotIntersecting")
+          } else {
+            console.log("isIntersecting")
+          }
+        })
+      }
+
+      const observer = new IntersectionObserver(callback, {
+        root: document.querySelector('.master-section'),
+        threshold: 0.8 // isIntersecting when 80% of container is visible
+      })
+
+      observer.observe(codeBlock)
+    }
+
+    return {
+      animationObserver
+    }
   }
 })
 </script>
+
+<style lang="postcss" scoped>
+.master-section {
+  @apply py-20;
+}
+</style>

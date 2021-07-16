@@ -5,7 +5,7 @@
     </InjectComponent>
     <h3 class="mb-1 text-center text-body-lg lg:text-body-xl font-bold">{{ title }}</h3>
     <p class="text-center text-sm lg:text-base d-secondary-text mb-4">{{ description }}</p>
-    <MarketingLink v-if="to" color="primary" :name="linkName" icon="IconChevronRight" :to="localePath(to)" />
+    <MarketingLink v-if="to" color="primary" :name="linkName" icon="IconChevronRight" :to="to" />
   </div>
 </template>
 

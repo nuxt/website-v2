@@ -30,8 +30,11 @@ export default {
         email: 'Email',
         subscribing: 'Inscription...',
         subscribe: 'S\'inscrire',
+        already_registered: 'Vous êtes déjà inscrit(e)',
+        invalid_address: 'Adresse invalide',
         subscribed_messages: {
-          pre: 'Un email de confirmation de votre inscription a été envoyé'
+          pre: 'Un email de confirmation de votre inscription a été envoyé',
+          confirmation: 'Email confirmé'
         }
       }
     },

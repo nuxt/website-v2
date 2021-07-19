@@ -24,7 +24,7 @@ video-courses:
     tier: Gratuit
   three:
     title: Apprenez Nuxt avec Debbie
-    description: Une liste de lecture de vidéos YouTube couvrant tout ce qui concerne Nuxt, y compris de courtes vidéos et des flux en direct.
+    description: Une liste de lecture de vidéos YouTube couvrant tout ce qui concerne Nuxt, y compris de courtes vidéos et des livestreams.
     image: /img/video-courses/learn_nuxt_with_debbie.png
     tier: Gratuit
   four:

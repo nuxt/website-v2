@@ -54,12 +54,13 @@ export default {
   },
   common: {
     an_error_occurred: 'An error occurred',
-    page_not_found: 'Page not found',
+    page_not_found: "We couldn't find the page you are looking for.",
     please_define_title: 'Please define a title in the front matter',
     please_define_description: 'Please define a description in the front matter',
     search: 'Search ("/" to focus)',
     version: 'Version',
     go_to: "Go to",
+    go_home: "Go home",
     read_article: "Read article"
   },
   iso: 'en'

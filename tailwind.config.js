@@ -76,7 +76,8 @@ module.exports = {
       maxWidth: {
         '1/4': '25%',
         '1/2': '50%',
-        '3/4': '75%'
+        '3/4': '75%',
+        72: ' 18rem'
       },
       transitionTimingFunction: {
         'ease-in-material': 'cubic-bezier(0.4, 0, 1, 1)',

@@ -3,9 +3,10 @@
     href="https://masteringnuxt.com/?utm_source=nuxt&utm_medium=link&utm_campaign=pre_launch"
     target="_blank"
     rel="noopener"
-    class="block bg-black"
+    class="block"
+    :style="{ backgroundColor: '#21272d' }"
   >
-    <div class="font-roboto container mx-auto">
+    <div class="font-roboto lg:container lg:mx-auto">
       <div
         class="
           h-20
@@ -13,14 +14,14 @@
           flex
           items-center
           justify-center
-          font-medium
           text-xs
-          md:text-sm
-          lg:text-base
+          mx-4
+          md:mx-10 md:text-sm
+          lg:text-base lg:mx-0
           text-white
         "
       >
-        <div class="w-12 absolute left-0">
+        <div class="w-12 md:absolute md:left-0">
           <svg viewBox="0 0 49 32" xmlns="http://www.w3.org/2000/svg">
             <g fill-rule="nonzero" fill="none">
               <path
@@ -34,30 +35,42 @@
             </g>
           </svg>
         </div>
-        <div class="flex items-center justify-center">
-          <p class="text-xl font-medium">
+        <div class="flex items-center justify-center space-x-2 md:space-x-4">
+          <div class="hidden md:block">
+            <img
+              src="/img/banners/masteringnuxt/cup.png"
+              :style="{ width: '62px' }"
+            />
+          </div>
+          <p
+            class="
+              leading-tight
+              text-sm
+              font-bold
+              max-w-72
+              md:text-xl
+              lg:max-w-full
+            "
+          >
             <span :style="{ color: '#00dc82' }"> Save 40% </span>
             on the completed Mastering Nuxt course!
           </p>
-          <div class="flex items-center ml-4">
+          <div class="flex items-center">
             <button
               class="
-                font-medium
+                font-bold
                 uppercase
                 bg-orange-500
                 hover:bg-orange-600
                 text-white
                 no-underline
                 inline-block
-                font-bold
-                text-xs
                 px-3
-                py-1
-                lg:py-2
-                shadow
+                py-3
+                md:px-6
                 uppercase
                 rounded
-                hover:shadow-md
+                white-space-nowrap
               "
             >
               Get Access

@@ -4,7 +4,9 @@ import '@snackbar/core/dist/snackbar.css'
 
 export function useNewsletter() {
   // @ts-ignore
-  const { $http, $colorMode, query } = useContext()
+  const { $colorMode, query, app } = useContext()
+
+  const { i18n } = app;
 
   let _timeout
   const email = ref('')
@@ -31,11 +33,11 @@ export function useNewsletter() {
       method: 'POST',
       body: { email, hash }
     })
-      .then(() => showSnackbar('Email confirmed'))
+      .then(() => showSnackbar(i18n.t('footer.newsletter.form.subscribed_messages.confirmation')))
       .catch(async err => {
         if (err.data) {
           if (err.data.code === 'member-exists') {
-            showSnackbar('You are already registered.')
+            showSnackbar(i18n.t('footer.newsletter.form.already_registered'))
           }
         }
       })
@@ -65,8 +67,8 @@ export function useNewsletter() {
       if (e.data) {
         const { code, name } = e.data
 
-        if (code === 'member-exists') error.value = 'You are already registered.'
-        if (name === 'ValidationException') error.value = 'Invalid email address'
+        if (code === 'member-exists') error.value = i18n.t('footer.newsletter.form.already_registered')
+        if (name === 'ValidationException') error.value = i18n.t('footer.newsletter.form.invalid_address')
 
         _timeout = setTimeout(() => (error.value = null), 3000)
       }

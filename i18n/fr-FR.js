@@ -30,8 +30,11 @@ export default {
         email: 'Email',
         subscribing: 'Inscription...',
         subscribe: 'S\'inscrire',
+        already_registered: 'Vous êtes déjà inscrit(e)',
+        invalid_address: 'Adresse invalide',
         subscribed_messages: {
-          pre: 'Un email de confirmation de votre inscription a été envoyé'
+          pre: 'Un email de confirmation de votre inscription a été envoyé',
+          confirmation: 'Email confirmé'
         }
       }
     },
@@ -51,12 +54,13 @@ export default {
   },
   common: {
     an_error_occurred: "Une erreur s'est produite",
-    page_not_found: 'La page est introuvable',
+    page_not_found: 'La page est que vous demandez est introuvable...',
     please_define_title: 'Merci de définir un titre',
     please_define_description: 'Merci de définir une description',
     search: 'Rechercher',
     version: 'Version',
     go_to: "Visiter les",
+    go_home: "Retourner à l'accueil",
     read_article: "Lire l'article"
   },
   iso: 'fr',

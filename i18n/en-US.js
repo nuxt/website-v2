@@ -30,8 +30,11 @@ export default {
         email: 'Email',
         subscribing: 'Subscribing...',
         subscribe: 'Subscribe',
+        already_registered: 'You are already registered',
+        invalid_address: 'Invalid address',
         subscribed_messages: {
-          pre: 'An email to confirm your subscription has been sent to'
+          pre: 'An email to confirm your subscription has been sent to',
+          confirmation: 'Email confirmed'
         }
       }
     },
@@ -51,12 +54,13 @@ export default {
   },
   common: {
     an_error_occurred: 'An error occurred',
-    page_not_found: 'Page not found',
+    page_not_found: "We couldn't find the page you are looking for.",
     please_define_title: 'Please define a title in the front matter',
     please_define_description: 'Please define a description in the front matter',
     search: 'Search ("/" to focus)',
     version: 'Version',
     go_to: "Go to",
+    go_home: "Go home",
     read_article: "Read article"
   },
   iso: 'en'

@@ -122,7 +122,19 @@ export default {
       name: 'Movavi',
       img: 'movavi.svg',
       url: 'https://www.movavi.com/',
-      class: 'h-8'
+      class: 'h-6'
+    },
+    {
+      name: 'Flashdrive',
+      img: 'flashdrive.png',
+      url: 'https://flashdrive.io',
+      class: 'h-6'
+    },
+    {
+      name: 'Agema',
+      img: 'agema.png',
+      url: 'https://agema.io',
+      class: 'h-6'
     }
   ]
 }

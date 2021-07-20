@@ -5,12 +5,12 @@
         <h1 class="text-display-3 font-serif mb-4">{{ title }}</h1>
         <p class="text-body-xl max-w-3xl">{{ description }}</p>
         <div class="mt-8">
-          <NuxtHref
-            :href="downloadLink.url"
-            :aria-label="downloadLink.text"
+          <a
+            href="/design-kit/DesignKit_Nuxt.zip"
+            :aria-label="downloadText"
             class="rounded bg-primary text-gray-800 hover:bg-primary-400 focus:bg-primary-300 py-3 px-4"
             download
-            ><span class="font-medium">{{ downloadLink.text }}</span></NuxtHref
+            ><span class="font-medium">{{ downloadText }}</span></a
           >
         </div>
       </div>
@@ -48,12 +48,9 @@ export default defineComponent({
       type: String,
       default: ''
     },
-    downloadLink: {
-      type: Object,
-      default: () => ({
-        text: 'Download Design Kit',
-        url: '/design-kit/DesignKit_Nuxt.zip'
-      })
+    downloadText: {
+      type: String,
+      default: 'Download Design Kit'
     }
   }
 })

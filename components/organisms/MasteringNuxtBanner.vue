@@ -3,7 +3,7 @@
     href="https://masteringnuxt.com/?utm_source=nuxt&utm_medium=link&utm_campaign=pre_launch"
     target="_blank"
     rel="noopener"
-    class="block"
+    :class="isOpen ? 'block' : 'hidden'"
     :style="{ backgroundColor: '#21272d' }"
   >
     <div class="font-roboto lg:container lg:mx-auto">
@@ -57,6 +57,7 @@
           </p>
           <div class="flex items-center">
             <button
+              :style="{ 'white-space': 'nowrap' }"
               class="
                 font-bold
                 uppercase
@@ -70,14 +71,44 @@
                 md:px-6
                 uppercase
                 rounded
-                white-space-nowrap
               "
             >
               Get Access
             </button>
           </div>
         </div>
+        <div
+          class="hidden w-3 absolute right-0 md:block"
+          @click.prevent.stop="close"
+        >
+          <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14">
+            <path
+              d="M13.69.321a1.059 1.059 0 00-1.498 0L7 5.503 1.808.311a1.056 1.056 0 00-1.497 0 1.056 1.056 0 000 1.497L5.503 7 .311 12.192a1.056 1.056 0 000 1.497 1.056 1.056 0 001.497 0L7 8.497l5.192 5.192a1.056 1.056 0 001.497 0 1.056 1.056 0 000-1.497L8.497 7l5.192-5.192a1.064 1.064 0 000-1.487z"
+              fill="#FFF"
+              fill-rule="nonzero"
+            />
+          </svg>
+        </div>
       </div>
     </div>
   </a>
 </template>
+
+<script>
+export default {
+  data() {
+    return {
+      isOpen: false
+    }
+  },
+  mounted() {
+    this.isOpen = !localStorage.getItem('mn-banner-closed')
+  },
+  methods: {
+    close() {
+      this.isOpen = false
+      localStorage.setItem('mn-banner-closed', 1)
+    }
+  }
+}
+</script>

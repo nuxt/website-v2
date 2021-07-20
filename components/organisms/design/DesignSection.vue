@@ -6,7 +6,7 @@
       </h2>
       <hr class="mt-2 mb-4" />
       <Markdown use="description" class="text-lg" />
-      <Component :is="sectionComponent" />
+      <Component :is="sectionComponent" :buttonText="buttonText" />
     </div>
   </div>
 </template>
@@ -19,6 +19,10 @@ export default defineComponent({
     sectionComponent: {
       type: String,
       default: null
+    },
+    buttonText: {
+      type: String,
+      default: 'Download Color System'
     }
   }
 })

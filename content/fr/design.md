@@ -22,6 +22,7 @@ Notre logo est formé de deux éléments: les montagnes triangulaires et le nom.
 
 ::design-section
 sectionComponent: DesignColors
+buttonText: Télécharger les couleurs système
 ---title
 Primary colors
 ---description

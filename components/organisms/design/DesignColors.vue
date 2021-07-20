@@ -9,12 +9,12 @@
       </div>
     </div>
     <div class="mt-4">
-      <NuxtHref
+      <a
         href="/design-kit/DesignKitColors.fig"
-        aria-label="Dowload Color System"
+        :aria-label="buttonText"
         class="font-medium rounded bg-primary text-gray-800 hover:bg-primary-400 focus:bg-primary-400 py-3 px-4"
         download
-        ><span class="font-medium">Download Color System</span></NuxtHref
+        ><span class="font-medium">{{ buttonText }}</span></a
       >
     </div>
   </div>
@@ -24,6 +24,12 @@
 import { defineComponent, useContext, ref, useFetch } from '@nuxtjs/composition-api'
 
 export default defineComponent({
+  props: {
+    buttonText: {
+      type: String,
+      default: ''
+    }
+  },
   setup() {
     const { $docus, i18n } = useContext()
     const colorsMd = ref()

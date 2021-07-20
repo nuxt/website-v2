@@ -1,35 +1,25 @@
 <template>
   <div class="py-4 d-container-content">
-    <div class="flex flex-col items-center light:text-sky-darker dark:text-white pt-8 space-y-4">
-      <h2 class="font-semibold text-display-6 text-center">
+    <div class="flex flex-col items-center pt-8 space-y-4 light:text-sky-darker dark:text-white">
+      <h2 class="font-semibold text-center text-display-6">
         <Markdown use="titleSection" unwrap="p" />
       </h2>
 
-      <div class="text-lg w-full flex justify-center pb-16">
+      <div class="flex justify-center w-full pb-16 text-lg">
         <p class="text-center md:w-2/3">
           <Markdown use="descriptionSection" unwrap="p" />
         </p>
       </div>
 
-      <div v-for="(sponsors, index) in sustainability" :key="index" class="text-center">
-        <h2 class="text-display-6 font-semibold">{{ sponsors.tier }}</h2>
-        <div class="flex flex-wrap justify-center -mx-8 pt-8 pb-16">
-          <NuxtHref
-            v-for="logo in sponsors.logos"
-            :key="logo.title"
-            :href="logo.url"
-            :aria-label="logo.title"
-            class="mx-8 my-4"
-          >
-            <img :src="`/img/sponsors/${$colorMode.value}/${logo.img}.png`" :alt="logo.title" :class="logo.size" />
-          </NuxtHref>
-        </div>
-      </div>
+      <section-sponsors :tier="$t('sustainability.tiers.mvp_partners')" :sponsors="mvpPartners" />
+      <section-sponsors :tier="$t('sustainability.tiers.partners')" :sponsors="partners" />
+      <section-sponsors :tier="$t('sustainability.tiers.sponsors')" :sponsors="sponsors" />
+
       <SectionButton
         to="https://github.com/sponsors/nuxt"
         :aria-label="buttonText"
         size="md"
-        class="bg-primary text-gray-800 hover:bg-primary-400 focus:bg-primary-400">
+        class="text-gray-800 bg-primary hover:bg-primary-400 focus:bg-primary-400">
           {{ buttonText }}
       </SectionButton>
     </div>
@@ -49,20 +39,28 @@ export default defineComponent({
   },
   setup() {
 
-    const { $docus, i18n } = useContext()
-    const sustainability = ref()
+    const { $docus } = useContext()
+
+    const mvpPartners = ref()
+    const partners = ref()
+    const sponsors = ref()
 
     useFetch(async () => {
-      sustainability.value = await $docus
-        .search('/sustainability', { deep: true })
-        .where({ 'language': i18n.locale })
+      const documents = await $docus
+        .search('/sponsors', { deep: true })
         .sortBy('position', 'asc')
         .fetch()
-      sustainability.value = sustainability.value.filter(sustainability => sustainability.tier)
+
+      mvpPartners.value = documents.filter(sponsor => sponsor.tier === 'MVP Partners')
+      partners.value = documents.filter(sponsor => sponsor.tier === 'Partners')
+      sponsors.value = documents.filter(sponsor => sponsor.tier === 'Sponsors')
+
     })
 
     return {
-      sustainability
+      mvpPartners,
+      partners,
+      sponsors
     }
   }
 })

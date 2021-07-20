@@ -9,3 +9,4 @@ dist
 sw.*
 .env
 .output
+.husky

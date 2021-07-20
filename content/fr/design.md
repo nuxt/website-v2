@@ -8,7 +8,7 @@ navigation: false
 title: Design Kit NuxtJS
 description: "NuxtJS est un projet open source sous license MIT et totalement libre d'utilisation.
 Vous pouvez télécharger gratuitement nos logos tant qu'une mention est faite de NuxtJS et un lien vers nuxtjs.org."
-downloadLink.text : Téléchargez le Design Kit
+downloadText : Téléchargez le Design Kit
 ---
 ::
 

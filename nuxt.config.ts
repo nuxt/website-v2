@@ -132,6 +132,10 @@ export default withDocus({
       }
     ]
   },
+  colorMode: {
+    preference: 'system',
+    fallback: 'light'
+  },
   build: {
     transpile: ['ohmyfetch']
   },

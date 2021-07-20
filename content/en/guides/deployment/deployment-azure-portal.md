@@ -83,7 +83,7 @@ If you are using Azure DevOps and let the build pipeline do its work you and wan
 
 ## Running the webserver
 
-For Azure Portal you will need a `web.config` file. If not supplied, it will create one itself. This one **won't work for Nuxt** though. Add a web.config file to your repository. For the latest version of `Nuxt` the server file is located at `server/index.js`. In the web.config you don't specify the exact path `server/index.js` but just `server`. See the example web.config below. If you don't do this the logs will tell you that Vue cannot find any routes.
+For Azure Portal you will need a `web.config` file. If not supplied, it will create one itself. The generated file **won't work for Nuxt** though. Add a web.config file to your repository. For the latest version of `Nuxt` the server file is located at `server/index.js`. In the web.config you don't specify the exact path `server/index.js` but just `server`. See the example web.config below. If you don't do this the logs will tell you that Vue cannot find any routes.
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>

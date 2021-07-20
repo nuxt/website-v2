@@ -5,7 +5,7 @@ layout:
 navigation: false
 ---
 
-::page-hero
+::simple-page-hero
 title: Entreprise Support
 description: "We offer different services depending of your needs, from technical support, training to custom development. We have a range of agencies partners to guide you on using Nuxt at its best."
 ---

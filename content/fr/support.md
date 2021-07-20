@@ -5,7 +5,7 @@ layout:
 navigation: false
 ---
 
-::page-hero
+::simple-page-hero
 title: Service de consulting NuxtJS
 description: "Notre équipe offre un service officiel de consulting pour vos applications NuxtJS.
 Dépendant de vos besoin, nous offrons différents services,du support technique au développement de fonctionnalités. Nous essaierons de vous répondre dans un délai d'un jour ouvrable, et signons une NDA. Nous nous engageons à vous rembourser si vous n'êtes pas satisfaits de la qualité du service."
@@ -13,6 +13,9 @@ Dépendant de vos besoin, nous offrons différents services,du support technique
 ::
 
 ::support-pricing
+
+buttonText: Contactez-nous
+
 ---title
 Support technique
 

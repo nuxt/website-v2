@@ -11,9 +11,9 @@
         </p>
       </div>
 
-      <section-sponsors tier="MVP Partners" :sponsors="mvpPartners" />
-      <section-sponsors tier="Partners" :sponsors="partners" />
-      <section-sponsors tier="Sponsors" :sponsors="sponsors" />
+      <section-sponsors :tier="$t('sustainability.tiers.mvp_partners')" :sponsors="mvpPartners" />
+      <section-sponsors :tier="$t('sustainability.tiers.partners')" :sponsors="partners" />
+      <section-sponsors :tier="$t('sustainability.tiers.sponsors')" :sponsors="sponsors" />
 
       <SectionButton
         to="https://github.com/sponsors/nuxt"

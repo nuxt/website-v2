@@ -49,6 +49,13 @@ export default {
       }
     }
   },
+  sustainability: {
+    tiers: {
+      mvp_partners: "Partenaires MVP",
+      partners: "Partenaires",
+      sponsors: "Sponsors"
+    }
+  },
   common: {
     an_error_occurred: "Une erreur s'est produite",
     page_not_found: 'La page est introuvable',

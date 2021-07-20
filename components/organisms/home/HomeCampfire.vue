@@ -15,7 +15,7 @@
           <li v-for="post in posts" :key="post.title" class="flex flex-col self-start">
             <NuxtLink :to="localePath(post.to)">
               <div class="aspect-w-16 aspect-h-8 bg-gray-100 overflow-hidden dark:bg-secondary-darker mb-4 rounded-lg">
-                <NuxtImg :src="post.imgUrl" width="864" height="378" :alt="post.title" />
+                <NuxtImg :src="post.imgUrl" width="864" height="378" :alt="post.title" class="object-cover" />
               </div>
             </NuxtLink>
             <span class="text-cloud-light text-body-base lg:text-body-lg font-bold mb-2">{{ post.category }}</span>

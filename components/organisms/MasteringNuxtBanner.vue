@@ -1,6 +1,6 @@
 <template>
   <a
-    href="https://masteringnuxt.com/?utm_source=nuxt&utm_medium=link&utm_campaign=pre_launch"
+    href="https://masteringnuxt.com/?utm_source=nuxt&utm_medium=banner&utm_campaign=summer21"
     target="_blank"
     rel="noopener"
     :class="isOpen ? 'block' : 'hidden'"
@@ -52,8 +52,8 @@
               lg:max-w-full
             "
           >
-            <span :style="{ color: '#00dc82' }"> Save 40% </span>
-            on the completed Mastering Nuxt course!
+            <span :style="{ color: '#00dc82' }"> Save 40% off</span>
+            the MasteringNuxt course!
           </p>
           <div class="flex items-center">
             <button

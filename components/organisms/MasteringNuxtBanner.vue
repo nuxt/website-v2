@@ -53,7 +53,7 @@
             "
           >
             <span :style="{ color: '#00dc82' }"> Save 40% off</span>
-            the MasteringNuxt course!
+            the completed MasteringNuxt course!
           </p>
           <div class="flex items-center">
             <button

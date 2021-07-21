@@ -32,14 +32,13 @@ export default defineComponent({
     }
   },
   setup(props) {
-    const { $docus, i18n } = useContext()
+    const { $docus } = useContext()
     const teams = ref()
     const team = ref([])
 
     useFetch(async () => {
       teams.value = await $docus
         .search(`/teams/${props.teamName}`, { deep: true })
-        .where({ language: i18n.locale })
         .sortBy('position', 'asc')
         .fetch()
 

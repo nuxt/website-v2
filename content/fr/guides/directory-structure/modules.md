@@ -190,7 +190,6 @@ export default function (moduleOptions) {
 
 ### Émettre des ressources
 
-We can register webpack plugins to emit assets during build.
 On peut paramétrer les plugins de Webpack afin qu'ils émettent des ressources durant le build.
 
 ```js{}[module.js]

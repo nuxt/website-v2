@@ -255,8 +255,13 @@ export default {
   },
   publicRuntimeConfig: {
     nuxtLocale: process.env.NUXT_LOCALE || 'en',
+<<<<<<< HEAD
     nuxtVersion: '2.14.0',
     nuxtStars: '28K+'
+=======
+    nuxtVersion: '2.15.2',
+    nuxtStars: '37K+'
+>>>>>>> 27303b77 (changed number of stars from 34k to 37k (#1576))
   },
   loading: { color: '#41B883' },
   generate: {

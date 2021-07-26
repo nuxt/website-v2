@@ -14,7 +14,7 @@ The env property defines environment variables that should be available on the c
 
 <base-alert type="info">
   
-For nuxt versions > 2.12+, in cases where environment variables are required at runtime (not build time) it is recommended to subsitute the `env` property with [runtimeConfig properties](https://nuxtjs.org/docs/2.x/configuration-glossary/configuration-runtime-config#publicruntimeconfig) `publicRuntimeOptions` and `privateRuntimeOptions`. 
+For nuxt versions > 2.12+, in cases where environment variables are required at runtime (not build time) it is recommended to substitute the `env` property with [runtimeConfig properties](https://nuxtjs.org/docs/2.x/configuration-glossary/configuration-runtime-config#publicruntimeconfig) `publicRuntimeOptions` and `privateRuntimeOptions`. 
   
 See also: Blogpost, _Moving from @nuxtjs/dotenv to runtime config_  (https://nuxtjs.org/blog/moving-from-nuxtjs-dotenv-to-runtime-config)
   

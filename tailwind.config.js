@@ -13,6 +13,20 @@ module.exports = {
           'Quicksand',
           // ...defaultTheme.fontFamily.sans
           "-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans', sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji'"
+        ],
+        roboto: [
+          'Roboto',
+          '-apple-system',
+          'BlinkMacSystemFont',
+          '"Segoe UI"',
+          '"Helvetica Neue"',
+          'Arial',
+          '"Noto Sans"',
+          'sans-serif',
+          '"Apple Color Emoji"',
+          '"Segoe UI Emoji"',
+          '"Segoe UI Symbol"',
+          '"Noto Color Emoji"'
         ]
       },
       fontSize: {
@@ -63,7 +77,18 @@ module.exports = {
       maxWidth: {
         '1/4': '25%',
         '1/2': '50%',
+<<<<<<< HEAD
         '3/4': '75%'
+=======
+        '3/4': '75%',
+        72: ' 18rem'
+      },
+      transitionTimingFunction: {
+        'ease-in-material': 'cubic-bezier(0.4, 0, 1, 1)',
+        'ease-out-material': 'cubic-bezier(0, 0, 0.2, 1)',
+        'ease-in-out-material': 'cubic-bezier(0.4, 0, 0.2, 1)',
+        'ease-in-out-material-sharp': 'cubic-bezier(0.4, 0, 0.6, 1)'
+>>>>>>> 79644567 (docs: Add Mastering Nuxt summer sale banner (#1568))
       }
     }
   },

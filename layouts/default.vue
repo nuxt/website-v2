@@ -1,4 +1,5 @@
 <template>
+<<<<<<< HEAD
   <div>
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -19,12 +20,43 @@
     <TheHeader />
     <main
       class="lg:block relative pt-16 lg:pt-24 bg-light-elevatedSurface dark:bg-dark-elevatedSurface transition-colors duration-300 ease-linear"
+=======
+  <div :class="cookieSpacerStyles">
+    <MasteringNuxtBanner />
+    <TheHeader />
+    <main
+      class="
+        lg:block
+        relative
+        bg-light-elevatedSurface
+        dark:bg-dark-elevatedSurface
+        transition-colors
+        duration-300
+        ease-linear
+      "
+>>>>>>> 79644567 (docs: Add Mastering Nuxt summer sale banner (#1568))
     >
       <Nuxt />
     </main>
     <TheFooter />
     <TheMobileBottomNav />
+<<<<<<< HEAD
 >>>>>>> 26a70b2b (chore: add guides section (#407))
+=======
+    <TheCookieBox
+      class="
+        w-full
+        fixed
+        bottom-0
+        left-0
+        mt-8
+        z-40
+        bg-light-elevatedSurface
+        dark:bg-dark-elevatedSurface
+      "
+      @acknowledge-banner="showCookieBanner = false"
+    />
+>>>>>>> 79644567 (docs: Add Mastering Nuxt summer sale banner (#1568))
   </div>
 </template>
 

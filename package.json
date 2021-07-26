@@ -14,6 +14,7 @@
     "docus": "0.8.15",
     "ohmyfetch": "^0.2.0",
     "ufo": "^0.7.7",
-    "vue-plausible": "^1.2.1"
+    "vue-plausible": "^1.2.1",
+    "millify": "^3.5.0"
   }
 }

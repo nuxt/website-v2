@@ -9,7 +9,7 @@
     <div class="font-roboto lg:container lg:mx-auto">
       <div
         class="
-          h-20
+          h-12
           relative
           flex
           items-center
@@ -21,7 +21,7 @@
           text-white
         "
       >
-        <div class="w-12 md:absolute md:left-0">
+        <div class="w-10 md:absolute md:left-0">
           <svg viewBox="0 0 49 32" xmlns="http://www.w3.org/2000/svg">
             <g fill-rule="nonzero" fill="none">
               <path
@@ -37,19 +37,15 @@
         </div>
         <div class="flex items-center justify-center space-x-2 md:space-x-4">
           <div class="hidden md:block">
-            <img
-              src="/img/banners/masteringnuxt/cup.png"
-              :style="{ width: '62px' }"
-            />
+            <img src="/img/banners/masteringnuxt/cup.png" class="w-8" />
           </div>
           <p
             class="
               leading-tight
-              text-sm
               font-bold
               max-w-72
-              md:text-xl
-              lg:max-w-full
+              text-xs
+              md:text-sm md:max-w-full
             "
           >
             <span :style="{ color: '#00dc82' }"> Save 40% off</span>
@@ -67,8 +63,8 @@
                 no-underline
                 inline-block
                 px-3
-                py-3
-                md:px-6
+                py-1
+                text-sm
                 uppercase
                 rounded
               "

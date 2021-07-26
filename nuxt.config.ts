@@ -112,7 +112,8 @@ export default withDocus({
       'unsplash.com',
       'user-images.githubusercontent.com',
       'abs.twimg.com',
-      'https://res.cloudinary.com/nuxt/'
+      'https://res.cloudinary.com/nuxt/',
+      'npmjs.com'
     ]
   },
   i18n: {

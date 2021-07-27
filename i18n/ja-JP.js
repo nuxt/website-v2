@@ -66,7 +66,7 @@ export default {
     please_define_description: 'front matter で説明を定義してください',
     search: '検索 ("/" はフォーカスを合わせるため)',
     version: 'バージョン',
-    go_to: "進む",
+    go_to: "{title}に進む",
     go_home: "ホームへ",
     read_article: "記事を読む"
   },

@@ -1,0 +1,79 @@
+<template>
+  <div>
+    <div v-if="link" class="flex flex-col justify-between d-secondary-text mt-8 mb-4 px-4 sm:px-6 sm:flex-row">
+      <a :href="link" target="_blank" rel="noopener" class="flex items-center mb-2 text-sm sm:mb-0 hover:underline">
+        <IconEdit class="w-3 h-3 mr-1" />
+        <span>
+          {{ $t('article.github') }}
+        </span>
+      </a>
+
+      <span class="flex items-center text-sm">
+        {{ $t('article.updatedAt') }} {{ $d(Date.parse(page.updatedAt), 'long') }}
+      </span>
+    </div>
+    <div class="px-4 sm:px-6">
+      <a
+          v-for="contributor of contributors"
+          :key="contributor.login"
+          :href="`https://github.com/${contributor.login}`"
+          rel="noopener"
+          target="_blank"
+          class="inline-flex mb-2 mr-2 overflow-hidden transition-colors duration-300 ease-linear border rounded text-light-onSurfacePrimary dark:text-dark-onSurfacePrimary bg-light-surfaceElevated light:hover:bg-gray-300 dark:bg-dark-elevatedSurface dark:hover:bg-dark-surface border-light-border dark:border-dark-border"
+        >
+          <img
+            :alt="contributor.name"
+            :srcset="`https://github.com/${contributor.login}.png?size=32 1x, https://github.com/${contributor.login}.png?size=64 2x`"
+            :src="`https://github.com/${contributor.login}.png?size=32`"
+            class="h-8"
+          />
+          <span class="inline-block px-2 leading-loose">
+            {{ contributor.name }}
+          </span>
+        </a>
+    </div>
+  </div>
+</template>
+
+<script>
+import { computed, defineComponent, useContext, ref, useFetch } from '@nuxtjs/composition-api'
+import { $fetch } from 'ohmyfetch'
+
+export default defineComponent({
+  props: {
+    page: {
+      type: Object,
+      required: true
+    }
+  },
+  setup(props) {
+    const contributors = ref([])
+    const { $docus } = useContext()
+
+    const { value: settings } = computed(() => $docus.settings)
+
+    const link = computed(() => {
+      if (!settings.value.github) return
+
+      return [
+        $docus.repoUrl.value,
+        'edit',
+        settings.value.github.branch,
+        settings.value.github.dir || '',
+        settings.value.contentDir,
+        `${props.page.source}`.replace(/^\//g, '')
+      ]
+        .filter(Boolean)
+        .join('/')
+    })
+    const path = [settings.value.github.repo, settings.value.github.branch, settings.value.contentDir, props.page.source].join('/')
+    useFetch(async () => {
+      contributors.value = await $fetch(`https://api.nuxtjs.org/api/contributors/${path}`)
+    })
+    return {
+      link,
+      contributors
+    }
+  }
+})
+</script>

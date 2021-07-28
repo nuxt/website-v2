@@ -45,7 +45,7 @@ export default defineComponent({
     //methods
     function iconUrl({ icon, category}) {
       if (icon)
-        return `img/modules/${icon}`
+        return `https://modules.nuxtjs.org/icons/${icon}`
 
       return `img/modules/categories/${category.toLowerCase()}.svg`
     }

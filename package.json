@@ -6,12 +6,21 @@
     "dev": "nuxt dev",
     "start": "nuxt start"
   },
+  "resolutions": {
+    "@nuxt/components": "npm:@pi0/components",
+    "vue-server-renderer": "2.6.14",
+    "vue-template-compiler": "2.6.14"
+  },
   "devDependencies": {
+    "@docus/app": "^1.0.31",
+    "@docus/github": "^1.0.3",
+    "@docus/social-image": "^1.0.2",
+    "@docus/theme": "^1.0.7",
+    "@docus/twitter": "^1.0.3",
     "@nuxt/typescript-build": "^2.1.0",
     "@snackbar/core": "^1.7.0",
     "@types/crawler": "^1.2.2",
     "crawler": "^1.3.0",
-    "docus": "0.8.15",
     "ohmyfetch": "^0.2.0",
     "ufo": "^0.7.7",
     "vue-plausible": "^1.2.1"

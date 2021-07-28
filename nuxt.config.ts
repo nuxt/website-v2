@@ -1,8 +1,17 @@
 import { resolve } from 'path'
-import { withDocus } from 'docus'
+import { withDocus } from '@docus/app'
 
 // Learn more at https://docus.dev
 export default withDocus({
+  // TODO: Remove that temporary fix
+  // @ts-ignore
+  vite: {
+    server: {
+      fs: {
+        strict: false
+      }
+    }
+  },
   rootDir: __dirname,
   head: {
     titleTemplate: '%s | NuxtJS',
@@ -48,7 +57,12 @@ export default withDocus({
     }
   },
   css: [resolve(__dirname, './assets/nuxt.css')],
-  buildModules: ['@nuxt/typescript-build', 'vue-plausible'],
+  buildModules: [
+    '@nuxt/typescript-build',
+    'vue-plausible',
+    '@docus/github',
+    '@docus/twitter'
+  ],
   plugins: ['~/plugins/adblock.client'],
   windicss: {
     root: resolve(__dirname),

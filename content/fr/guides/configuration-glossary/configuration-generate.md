@@ -161,7 +161,7 @@ export default {
 }
 ```
 
-Fournit le chemin du fallback au fichier HTML. Cela devrait être définit en tant que page d'erreur, pour que toutes les routes inconnues soient render via Nuxt.js. Si la valeur n'est pas spécifiée ou est `falsy`, le fallback sera `200.html`. Si la valeur est à `true`, le fallback sera à `404.html`. Si l'on fournit une chaîne de caractères, elle sera utilisée à la place.
+Fournit le chemin du fallback au fichier HTML. Cela devrait être définit en tant que page d'erreur, pour que toutes les routes inconnues soient rendues via Nuxt.js. Si la valeur n'est pas spécifiée ou est `false`, le fallback sera `200.html`. Si la valeur est à `true`, le fallback sera à `404.html`. Si l'on fournit une chaîne de caractères, elle sera utilisée à la place.
 
 Lorsque notre application est une SPA, il est plus idiomatique d'utiliser une `200.html` vu que ce sera le seul fichier nécessaire car aucune autre route ne sera générée.
 

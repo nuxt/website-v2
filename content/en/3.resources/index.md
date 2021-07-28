@@ -18,7 +18,7 @@ resources:
     description: Browse our modules to extend NuxtJS core features and integrate third-parties.
     image: /img/resources/modules.png
     slug: modules
-    href: https://modules.nuxtjs.org
+    href: /modules
   themes:
     title: Themes
     description: Get inspired and use real world applications built with Nuxt.

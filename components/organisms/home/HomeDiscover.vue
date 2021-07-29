@@ -22,14 +22,7 @@
 
           <template #title>
             <h2
-              class="
-                font-serif font-normal
-                text-center
-                md:text-left
-                text-display-6
-                md:text-display-5
-                2xl:text-display-4
-              "
+              class="font-serif font-normal text-center  md:text-left text-display-6 md:text-display-5 2xl:text-display-4"
             >
               <Markdown use="title" unwrap="p" />
             </h2>
@@ -37,15 +30,7 @@
 
           <template #paragraph>
             <p
-              class="
-                py-4
-                w-full
-                font-normal
-                text-center
-                text-body-base
-                md:text-body-lg
-                2xl:text-body-xl
-              "
+              class="w-full py-4 font-normal text-center  text-body-base md:text-body-lg 2xl:text-body-xl"
             >
               <Markdown use="description" unwrap="p" />
             </p>
@@ -55,43 +40,17 @@
       <template #right-illustration>
         <div class="col-span-12">
           <div
-            class="
-              flex flex-col
-              items-center
-              justify-center
-              md:flex-row
-              xl:ml-12
-            "
+            class="flex flex-col items-center justify-center  md:flex-row xl:ml-12"
           >
             <div
-              class="
-                grid
-                items-center
-                grid-cols-3
-                gap-8
-                space-x-4
-                md:gap-0
-                md:flex
-                md:flex-col
-                md:items-start
-                md:space-x-0
-                md:space-y-2
-                md:w-2/5
-                xl:w-1/5
-              "
+              class="grid items-center grid-cols-3 gap-8 space-x-4  md:gap-0 md:flex md:flex-col md:items-start md:space-x-0 md:space-y-2 md:w-2/5 xl:w-1/5"
             >
               <div
                 v-for="(animation, index) in animations"
                 :key="animation.name"
               >
                 <div
-                  class="
-                    flex flex-col-reverse
-                    items-center
-                    justify-center
-                    space-x-2
-                    md:flex-row
-                  "
+                  class="flex flex-col-reverse items-center justify-center space-x-2  md:flex-row"
                 >
                   <img
                     :src="`/img/home/discover/diamond.svg`"
@@ -115,7 +74,7 @@
             </div>
             <div class="anim">
               <div ref="lottieAnim" class="h-96" />
-              <p class="z-20 nuxt-text-highlight text-sm font-medium text-center mt-20 -mb-8 md:mb-0 md:-mt-8">
+              <p class="z-20 mt-20 -mb-8 text-sm font-medium text-center nuxt-text-highlight md:mb-0 md:-mt-8">
                 <Markdown :use="texts[currentIndex]" />
               </p>
             </div>
@@ -148,7 +107,7 @@ import {
   computed
 } from '@nuxtjs/composition-api'
 import lottie, { AnimationItem, AnimationSegment } from 'lottie-web'
-import { flatUnwrap } from '~docus/utils'
+import { flatUnwrap } from '@docus/core'
 
 export default defineComponent({
   props: {

@@ -3,15 +3,6 @@ import { withDocus } from '@docus/app'
 
 // Learn more at https://docus.dev
 export default withDocus({
-  // TODO: Remove that temporary fix
-  // @ts-ignore
-  vite: {
-    server: {
-      fs: {
-        strict: false
-      }
-    }
-  },
   rootDir: __dirname,
   head: {
     titleTemplate: '%s | NuxtJS',
@@ -89,9 +80,10 @@ export default withDocus({
     }
   },
   vite: {
-    optimizeDeps: {
-      include: ['cookie', 'js-cookie', 'property-information', 'clipboard'],
-      exclude: ['lokidb']
+    server: {
+      fs: {
+        strict: false
+      }
     }
   },
   image: {
@@ -149,9 +141,6 @@ export default withDocus({
   colorMode: {
     preference: 'system',
     fallback: 'light'
-  },
-  build: {
-    transpile: ['ohmyfetch']
   },
   publicRuntimeConfig: {
     plausible: {

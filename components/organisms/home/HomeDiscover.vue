@@ -107,7 +107,7 @@ import {
   computed
 } from '@nuxtjs/composition-api'
 import lottie, { AnimationItem, AnimationSegment } from 'lottie-web'
-import { flatUnwrap } from '@docus/core'
+import { flatUnwrap } from '@docus/core/runtime'
 
 export default defineComponent({
   props: {

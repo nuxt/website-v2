@@ -9,7 +9,7 @@
       </a>
 
       <span class="flex items-center text-sm">
-        {{ $t('article.updatedAt') }} {{ $d(Date.parse(page.updatedAt), 'long') }}
+        {{ $t('article.updatedAt') }} {{ $d(Date.parse(page.mtime), 'long') }}
       </span>
     </div>
     <div class="px-4 sm:px-6">
@@ -38,6 +38,7 @@
 <script>
 import { computed, defineComponent, useContext, ref, useFetch } from '@nuxtjs/composition-api'
 import { $fetch } from 'ohmyfetch'
+import { joinURL } from 'ufo'
 
 export default defineComponent({
   props: {
@@ -52,16 +53,24 @@ export default defineComponent({
 
     const { value: settings } = computed(() => $docus.settings)
 
+    const repoUrl = computed(() => joinURL(settings.value.github.url, settings.value.github.repo))
+
     const link = computed(() => {
       if (!settings.value.github) return
 
+      // TODO: Fix source; regression from split
+      const key = props.page.key.split(':')
+      const dir = key[key.length - 2]
+      const source = key[key.length - 1]
+
       return [
-        $docus.repoUrl.value,
+        repoUrl.value,
         'edit',
         settings.value.github.branch,
         settings.value.github.dir || '',
         settings.value.contentDir,
-        `${props.page.source}`.replace(/^\//g, '')
+        dir,
+        `${source}`.replace(/^\//g, '')
       ]
         .filter(Boolean)
         .join('/')

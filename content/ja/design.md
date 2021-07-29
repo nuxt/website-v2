@@ -7,7 +7,7 @@ navigation: false
 ::design-hero
 title: NuxtJS デザインキット
 description: "NuxtJS は MIT ライセンスされたオープンソースプロジェクトで利用は完全に無料です。NuxtJS について言及し、nuxtjs.org にリンクしている場合に限り、私たちのロゴを自由に使用することができます。"
-button: デザインキットをダウンロード
+downloadText: デザインキットをダウンロード
 ---
 ::
 
@@ -21,6 +21,7 @@ sectionComponent: DesignLogos
 
 ::design-section
 sectionComponent: DesignColors
+buttonText: カラーシステムをダウンロード
 ---title
 プライマリカラー
 ---description

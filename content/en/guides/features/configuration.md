@@ -467,6 +467,12 @@ export default {
 }
 ```
 
+<base-alert type="info">
+
+Do not specific the protocol when setting the host property.
+
+</base-alert>
+
 You can also change the port number from the default port of 3000.
 
 ```js{}[nuxt.config.js]

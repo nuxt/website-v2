@@ -51,7 +51,7 @@ export default defineComponent({
     useFetch(async () => {
       partners.value = await $docus
         .search('/sponsors', { deep: true })
-        .where({ tier: { $in: ['MVP Partners', 'Partners'] }, language: i18n.locale })
+        .where({ tier: { $in: ['MVP Partners', 'Partners'] } })
         .fetch()
     })
 

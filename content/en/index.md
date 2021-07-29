@@ -201,6 +201,7 @@ category: Explore
 ---
 
 ::section-content-item
+---
 title: 'Examples'
 description: 'Get inspired by use-cases, from common tasks to advanced examples.'
 image: '/img/home/explore/gem-1-hover.svg'
@@ -209,6 +210,7 @@ linkName: 'Get inspired'
 ---
 ::
 ::section-content-item
+---
 title: 'Modules'
 description: 'Take advantage of our module ecosystem to stop reinventing the wheel.'
 image: '/img/home/explore/gem-3-hover.svg'
@@ -217,6 +219,7 @@ linkName: 'Browse modules'
 ---
 ::
 ::section-content-item
+---
 title: 'Themes'
 description: 'Start coding in minutes with a pre-made design thanks to our list of Nuxt themes.'
 image: '/img/home/explore/gem-4-hover.svg'

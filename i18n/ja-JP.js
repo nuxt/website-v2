@@ -52,6 +52,17 @@ export default {
       }
     }
   },
+  home: {
+    discover: {
+      pages: 'ページ',
+      ui: 'UI',
+      data: 'データ',
+      modules: 'モジュール',
+      deployment: '配置'
+    },
+    cli: 'CLI',
+    scratch: 'スクラッチ'
+  },
   resources: {
     themes: {
       get_for_it: "{price} で手に入れる",

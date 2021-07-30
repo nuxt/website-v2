@@ -52,6 +52,17 @@ export default {
       }
     }
   },
+  home: {
+    discover: {
+      pages: 'Pages',
+      ui: 'UI',
+      data: 'Data',
+      modules: 'Modules',
+      deployment: 'Deployment'
+    },
+    cli: 'From CLI',
+    scratch: 'From Scratch'
+  },
   resources: {
     themes: {
       get_for_it: "Get it for {price}",

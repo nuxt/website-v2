@@ -60,7 +60,7 @@ export default defineComponent({
 
       // TODO: Fix source; regression from split
       const key = props.page.key.split(':')
-      const dir = key[key.length - 2]
+      const dir = key.slice(1, key.length - 1).join('/')
       const source = key[key.length - 1]
 
       return [

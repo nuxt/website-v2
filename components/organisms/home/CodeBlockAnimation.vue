@@ -29,20 +29,22 @@
     </div>
   </div>
 </template>
-<script lang="ts">
+
+<script>
 import { defineComponent, ref, onMounted } from '@nuxtjs/composition-api'
+
 export default defineComponent({
   setup(_, context) {
-
     let activeCodeBlock = ref('')
     let anim = ref(null)
     let codeBlock = ref(null)
 
     onMounted(() => {
-      codeBlock = context.refs.codeBlock as Element
-      anim = context.refs.anim as Element
+      codeBlock = context.refs.codeBlock
+      anim = context.refs.anim
       animationObserver()
     })
+
     function animationObserver() {
       const callback = (entries) => {
         entries.forEach(({ _, isIntersecting }) => {
@@ -51,11 +53,14 @@ export default defineComponent({
           }
         })
       }
+
       const observer = new IntersectionObserver(callback, {
         root: anim.value
       })
+
       observer.observe(codeBlock)
     }
+
     return {
       activeCodeBlock,
       anim,

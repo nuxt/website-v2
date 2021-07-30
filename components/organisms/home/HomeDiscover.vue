@@ -97,7 +97,8 @@
     />
   </div>
 </template>
-<script lang="ts">
+
+<script>
 import {
   defineComponent,
   ref,
@@ -117,7 +118,7 @@ export default defineComponent({
     }
   },
   setup(_, context) {
-    const { $colorMode } = useContext() as any
+    const { $colorMode } = useContext()
     const lottieAnimPathLight =
       'https://assets10.lottiefiles.com/private_files/lf30_8cv6lgcx.json'
     const lottieAnimPathDark =
@@ -125,29 +126,29 @@ export default defineComponent({
     const animations = ref([
       {
         name: 'Pages',
-        segment: [1, 238] as AnimationSegment
+        segment: [1, 238]
       },
       {
         name: 'UI',
-        segment: [238, 448] as AnimationSegment
+        segment: [238, 448]
       },
       {
         name: 'Data',
-        segment: [447, 688] as AnimationSegment
+        segment: [447, 688]
       },
       {
         name: 'Modules',
-        segment: [688, 928] as AnimationSegment
+        segment: [688, 928]
       },
       {
         name: 'Deployment',
-        segment: [928, 1167] as AnimationSegment
+        segment: [928, 1167]
       }
     ])
     const lottieAnim = ref(null)
     const currentIndex = ref(0)
     const animFrames = ref([0, 238, 448, 688, 928])
-    let anim: AnimationItem
+    let anim
 
     /* computed */
     const colorMode = computed(() => {
@@ -156,7 +157,7 @@ export default defineComponent({
 
     /* function */
     // if user clicks on section, stop loop and play specified segment
-    function changeAnimation(index: number) {
+    function changeAnimation(index) {
       currentIndex.value = index
       anim.loop = false
       anim.playSegments(animations.value[index].segment, true)
@@ -167,7 +168,7 @@ export default defineComponent({
       /**
        * Temporary use `context.ref` this should replace by Vue3 ref
        */
-      lottieAnim.value = context.refs.lottieAnim as Element
+      lottieAnim.value = context.refs.lottieAnim
 
       anim = lottie.loadAnimation({
         container: lottieAnim.value,
@@ -261,6 +262,7 @@ export default defineComponent({
   }
 })
 </script>
+
 <style lang="postcss" scoped>
 .anim {
   @apply w-full flex flex-col-reverse md:flex-col justify-center items-center md:justify-end w-full;

@@ -52,6 +52,11 @@ export default {
       }
     }
   },
+  resources: {
+    themes: {
+      get_for_it: "Achetez-le pour {price}"
+    }
+  },
   sustainability: {
     tiers: {
       mvp_partners: "Partenaires MVP",

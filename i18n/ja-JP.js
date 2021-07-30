@@ -52,6 +52,11 @@ export default {
       }
     }
   },
+  resources: {
+    themes: {
+      get_for_it: "{price} で手に入れる"
+    }
+  },
   sustainability: {
     tiers: {
       mvp_partners: "MVP パートナー",

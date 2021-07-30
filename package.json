@@ -13,7 +13,7 @@
   },
   "dependencies": {
     "lottie-web": "^5.7.12",
-    "@docus/app": "^1.0.34",
+    "@docus/app": "^1.0.36",
     "@docus/github": "^1.0.3",
     "@docus/social-image": "^1.0.2",
     "@docus/theme": "^1.0.7",
@@ -25,6 +25,6 @@
   "devDependencies": {
     "@types/crawler": "^1.2.2",
     "crawler": "^1.3.0",
-    "ts-loader": "^8.2.0"
+    "ts-loader": "^9.2.4"
   }
 }

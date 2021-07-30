@@ -1,5 +1,5 @@
 <template>
-  <footer class="" aria-labelledby="footerHeading">
+  <footer class="">
     <div class="select-none pt-24">
       <img
         loading="lazy"

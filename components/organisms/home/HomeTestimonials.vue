@@ -67,6 +67,7 @@
                 <a :href="testimonial.authorUrl" target="_blank" rel="noopener">
                   <img
                     :src="`/img/home/testimonials/${testimonial.authorIcon}.png`"
+                    :alt="`Photo of ${testimonial.author}`"
                     width="48"
                     height="48"
                     class="h-12 w-12"
@@ -81,9 +82,10 @@
                   <NuxtLabel tag="span" class="font-bold text-base">{{ testimonial.author }}</NuxtLabel>
                   <NuxtLabel tag="span" class="text-sm dark:text-cloud-lighter">{{ testimonial.job }}</NuxtLabel>
                 </a>
-                <a :href="testimonial.jobUrl" target="_blank" rel="noopener sponsored" class="hidden xl:block">
+                <a :href="testimonial.jobUrl" :title="testimonial.jobName" target="_blank" rel="noopener sponsored" class="hidden xl:block">
                   <img
                     :src="`/img/home/testimonials/${testimonial.jobIcon}.svg`"
+                    :alt="`${testimonial.jobName} Logo`"
                     width="28"
                     height="28"
                     :class="{ 'light-img': testimonial.jobIconDark }"
@@ -91,6 +93,7 @@
                   <img
                     v-if="testimonial.jobIconDark"
                     :src="`/img/home/testimonials/${testimonial.jobIconDark}.svg`"
+                    :alt="`${testimonial.jobName} Logo`"
                     width="28"
                     height="28"
                     class="dark-img"
@@ -123,6 +126,7 @@ export default defineComponent({
         authorIcon: 'evan',
         authorUrl: 'https://twitter.com/youyuxi',
         job: 'Creator of Vue.js',
+        jobName: 'Vue.js',
         jobIcon: 'vue',
         jobUrl: 'https://vuejs.org'
       },
@@ -133,6 +137,7 @@ export default defineComponent({
         authorIcon: 'sarah',
         authorUrl: 'https://twitter.com/sarah_edo',
         job: 'Core Team of Vue.js',
+        jobName: 'Vue.js',
         jobIcon: 'vue',
         jobUrl: 'https://vuejs.org'
       },
@@ -143,6 +148,7 @@ export default defineComponent({
         authorIcon: 'addy',
         authorUrl: 'https://twitter.com/addyosmani',
         job: 'Chief Engineer of Chrome',
+        jobName: 'Google Chrome',
         jobIcon: 'chrome',
         jobUrl: 'https://www.google.com/chrome/'
       },
@@ -153,6 +159,7 @@ export default defineComponent({
         authorIcon: 'guillermo',
         authorUrl: 'https://twitter.com/rauchg',
         job: 'Founder of Vercel',
+        jobName: 'Vercel',
         jobIcon: 'vercel-light',
         jobIconDark: 'vercel-dark',
         jobUrl: 'https://vercel.com'
@@ -164,6 +171,7 @@ export default defineComponent({
         authorIcon: 'dominik',
         authorUrl: 'https://twitter.com/domangerer',
         job: 'Founder of Storyblok',
+        jobName: 'Storyblok',
         jobIcon: 'storyblok',
         jobUrl: 'https://www.storyblok.com'
       },
@@ -174,6 +182,7 @@ export default defineComponent({
         authorIcon: 'sadek',
         authorUrl: 'https://twitter.com/Sadache',
         job: 'Founder of Prismic',
+        jobName: 'Prismic',
         jobIcon: 'prismic',
         jobUrl: 'https://prismic.io'
       },
@@ -184,6 +193,7 @@ export default defineComponent({
         authorIcon: 'ajay',
         authorUrl: 'https://www.linkedin.com/in/ajaykapur/',
         job: 'Founder of Layer0',
+        jobName: 'Layer0',
         jobIcon: 'layer0-light',
         jobIconDark: 'layer0-dark',
         jobUrl: 'https://www.layer0.co/'
@@ -195,6 +205,7 @@ export default defineComponent({
         authorIcon: 'dave',
         authorUrl: 'https://twitter.com/paper_tokyo',
         job: 'Co-founder of Swell',
+        jobName: 'Swell',
         jobIcon: 'swell',
         jobUrl: 'https://swell.is'
       },
@@ -205,6 +216,7 @@ export default defineComponent({
         authorIcon: 'savas',
         authorUrl: 'https://www.linkedin.com/in/savas-vedova/',
         job: 'Founder of Stormkit',
+        jobName: 'Stormkit',
         jobIcon: 'stormkit',
         jobUrl: 'https://www.stormkit.io/'
       }

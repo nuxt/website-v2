@@ -48,8 +48,9 @@
               md:text-sm md:max-w-full
             "
           >
-            <span :style="{ color: '#00dc82' }"> Save 40% off</span>
-            the completed MasteringNuxt course!
+            Less than
+            <span :style="{ color: '#00dc82' }"> 48hrs left </span>
+            for the Nuxt course offer!
           </p>
           <div class="flex items-center">
             <button

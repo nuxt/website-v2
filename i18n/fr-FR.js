@@ -82,6 +82,7 @@ export default {
     please_define_title: 'Merci de définir un titre',
     please_define_description: 'Merci de définir une description',
     search: 'Rechercher',
+    settings: 'Settings',
     version: 'Version',
     back: 'Dos',
     go_to: "Visiter {title}",

@@ -82,6 +82,7 @@ export default {
     please_define_title: 'front matter でタイトルを定義してください',
     please_define_description: 'front matter で説明を定義してください',
     search: '検索 ("/"を押すとここにフォーカスします)',
+    settings: '設定',
     version: 'バージョン',
     back: '戻る',
     go_to: "{title}に進む",

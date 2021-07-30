@@ -82,6 +82,7 @@ export default {
     please_define_title: 'Please define a title in the front matter',
     please_define_description: 'Please define a description in the front matter',
     search: 'Search ("/" to focus)',
+    settings: 'Settings',
     version: 'Version',
     back: 'Back',
     go_to: "Go to {title}",

@@ -6,15 +6,16 @@ navigation: false
 ---
 
 ::simple-page-hero
-title: Entreprise Support
-description: "We offer different services depending of your needs, from technical support, training to custom development. We have a range of agencies partners to guide you on using Nuxt at its best."
+title: エンタープライズサポート
+description: "テクニカルサポート、トレーニング、カスタム開発など、お客様のニーズに応じてさまざまなサービスを提供しています。私たちは、Nuxt を最大限に活用するために、さまざまな代理店パートナーをご案内しています。 "
 ---
 ::
 
 ::support-pricing
+buttonText: お問い合わせ
 ---title
-Technical Support
+テクニカルサポート
 
 ---description
-Get project audits, best practices and get answers from the Framework team.
+プロジェクトの監査、ベストプラクティス、フレームワークチームからの回答を得ることができます。
 ::

@@ -54,7 +54,8 @@ export default {
   },
   resources: {
     themes: {
-      get_for_it: "{price} で手に入れる"
+      get_for_it: "{price} で手に入れる",
+      video_course: "コースを開始する"
     }
   },
   sustainability: {
@@ -71,6 +72,7 @@ export default {
     please_define_description: 'front matter で説明を定義してください',
     search: '検索 ("/" はフォーカスを合わせるため)',
     version: 'バージョン',
+    back: '戻る',
     go_to: "{title}に進む",
     go_home: "ホームへ",
     read_article: "記事を読む"

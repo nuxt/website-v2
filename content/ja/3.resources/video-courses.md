@@ -5,57 +5,57 @@ layout.fluid: false
 
 ::simple-page-hero
 backPath: resources
-title: NuxtJS Video Courses
-description: "Discover and learn more about the Nuxt Framework with free and premium video courses."
+title: NuxtJS ビデオコース
+description: 探索して無料およびプレミアムビデオコースで Nuxt フレームワークをより学びましょう。
 ---
 ::
 
 ::video-courses-list
 video-courses:
   one:
-    title: Learn Nuxt.js by Building a Real World App
-    description: Learn how to build robust, modern websites with Nuxt from scratch. Or improve your website performance, code quality, while making better use of the framework.
+    title: 実世界で使えるアプリケーションを作って Nuxt.js を学習する
+    description: Nuxt を使って堅牢でモダンなウェブサイトをゼロから構築する方法を学びましょう。あるいは、フレームワークをより有効に活用しながら、ウェブサイトのパフォーマンスやコード品質を向上させましょう。
     image: /img/video-courses/mastering_nuxt.png
-    tier: Premium
+    tier: プレミアム
   two:
-    title: Get Started with Nuxt
-    description: Learn the essentials for how to build and deploy a Nuxt site including dnyamic routes, data fetching, SEO, lazy loading, global styles and transitions as well as how to generate and deploy your Nuxt app.
+    title: Nuxt で始める
+    description: 動的ルート、データ Fetch、SEO、遅延ローディング、グローバルスタイル、トランジションなど、Nuxt サイトを構築してデプロイするための必須事項を学び、Nuxt アプリを生成してデプロイする方法についてもご紹介します。
     image: /img/video-courses/jamstack_explorer.png
-    tier: Free
+    tier: 無料
   three:
-    title: Learn Nuxt with Debbie
-    description: A playlist of YouTube videos covering all things Nuxt including short videos and live streams.
+    title: Debbie で Nuxt を学習する
+    description: ショートビデオやライブストリームなど、Nuxt のすべてを網羅した YouTube 動画のプレイリストです。
     image: /img/video-courses/learn_nuxt_with_debbie.png
-    tier: Free
+    tier: 無料
   four:
-    title: Building Applications with Vue & Nuxt
-    description: Build dynamic web applications with Vue and Nuxt! Throughout the course you’ll build out a variety of projects leveraging the tools in the Vue ecosystem including the Vue CLI, Nuxt, Vuex Store, and more.
+    title: Vue と Nuxt でアプリケーションを作成する
+    description: Vue と Nuxt でダイナミックな Web アプリケーションを構築します! このコースでは、Vue CLI、Nuxt、Vuex Store などの Vue エコシステムのツールを活用して、さまざまなプロジェクトを構築します。
     image: /img/video-courses/building_applications_fe_masters.png
-    tier: Premium
+    tier: プレミアム
   five:
-    title: Build a Job Board with Laravel, GraphQL, Nuxt and Apollo
-    description: Learn while you build a GraphQL API with Laravel Lighthouse, then build a Nuxt frontend with Apollo to consume it. All styled with Tailwind.
+    title: Laravel、GraphQL、Nuxt そして Appolo でジョブボードを作成する
+    description: Laravel Lighthouse で GraphQL API を構築し、Apollo で Nuxt のフロントエンドを構築して、それを消費しながら学習します。すべて Tailwind でスタイリングされています。
     image: /img/video-courses/job_board.png
-    tier: Premium
+    tier: プレミアム
   six:
     title: Nuxt.js - Vue.js on Steroids
-    description: Build highly engaging Vue JS apps with Nuxt.js. Nuxt adds easy server-side-rendering and a folder-based config approach.
+    description: Nuxt.js で魅力的な Vue JS アプリケーションを構築しましょう。Nuxt は、簡単なサーバーサイドレンダリングと、フォルダベースの設定方法を追加します。
     image: /img/video-courses/vuejs_on_steroids.png
-    tier: Premium
+    tier: プレミアム
   seven:
-    title: Scaling Vue with Nuxt.js
-    description: Once you are comfortable with Vue, learning a framework like Nuxt allows you to create production-ready web apps which follow best practices.
+    title: Nuxt.js で Vue をスケーリングさせる
+    description: Vue に慣れてきたら、Nuxt のようなフレームワークを学ぶことで、ベストプラクティスに沿った制作可能な Web アプリを作ることができます。
     image: /img/video-courses/scaling_vue_with_nuxt.png
-    tier: Premium
+    tier: プレミアム
   eight:
-    title: Nuxt.js Fundamentals
-    description: Learn the fundamentals of Nuxt.js in this course that we created together with the founders of Nuxt. The course covers what you need to know from scaffolding to deploying your first Nuxt.js application.
+    title: Nuxt.js の基礎
+    description: このコースでは、Nuxt.js の基礎を Nuxt の創設者と一緒に作成しました。このコースでは、スキャフォールドから最初の Nuxt.js アプリケーションのデプロイまで、必要な知識をカバーしています。
     image: /img/video-courses/nuxt_fundamentals.png
-    tier: Free
+    tier: 無料
   nine:
-    title: Create a News App with Vue.js and Nuxt
-    description: You will learn how to create dynamic pages for each section of your application and load, store, display, filter, and style the data. Then end result will be a News app with multiple category pages, comments for each section, and user pages.
+    title: Vue.js と Nuxt でニュースアプリケーションを作成する
+    description: アプリケーションの各セクションにダイナミックページを作成し、データの読み込み、保存、表示、フィルタリング、スタイル設定を行う方法を学びます。最終的には、複数のカテゴリーページ、各セクションのコメント、ユーザーページを備えたニュースアプリケーションが完成します。
     image: /img/video-courses/news_app.png
-    tier: Free
+    tier: 無料
 ---
 ::

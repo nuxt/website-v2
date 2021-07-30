@@ -54,7 +54,8 @@ export default {
   },
   resources: {
     themes: {
-      get_for_it: "Achetez-le pour {price}"
+      get_for_it: "Achetez-le pour {price}",
+      video_course: "Début du cours"
     }
   },
   sustainability: {
@@ -71,6 +72,7 @@ export default {
     please_define_description: 'Merci de définir une description',
     search: 'Rechercher',
     version: 'Version',
+    back: 'Dos',
     go_to: "Visiter {title}",
     go_home: "Retourner à l'accueil",
     read_article: "Lire l'article"

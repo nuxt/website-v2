@@ -1,6 +1,6 @@
 <template>
   <div :class="cookieSpacerStyles">
-    <MasteringNuxtBanner />
+    <!-- <MasteringNuxtBanner /> -->
     <TheHeader />
     <main
       class="

@@ -48,6 +48,9 @@ export default withDocus({
     }
   },
   css: [resolve(__dirname, './assets/nuxt.css')],
+  build: {
+    transpile: ['ohmyfetch']
+  },
   buildModules: [
     '@nuxt/typescript-build',
     'vue-plausible',

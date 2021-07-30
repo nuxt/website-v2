@@ -5,36 +5,33 @@ layout:
 navigation: false
 ---
 ::design-hero
-title: NuxtJS Design Kit
-description: "NuxtJS is an MIT licensed open source project and completely free to use.
-You can freely use our logos as long as you mention NuxtJS and link to nuxtjs.org."
-button: Download Design Kit
+title: NuxtJS デザインキット
+description: "NuxtJS は MIT ライセンスされたオープンソースプロジェクトで利用は完全に無料です。NuxtJS について言及し、nuxtjs.org にリンクしている場合に限り、私たちのロゴを自由に使用することができます。"
+downloadText: デザインキットをダウンロード
 ---
 ::
 
 ::design-section
 sectionComponent: DesignLogos
 ---title
-Logos
+ロゴ
 ---description
-Our logo is made from two elements: the triangular mountains and the wordmark. In most cases, they should appear together as the opposite master lockup shows. The triangular mountains can be used on their own as an icon, profile picture or badge, but the wordmark should never be used without this symbol on the side.
+私たちのロゴは三角形の山とワードマークの2つの要素から作られています。ほとんの場合、それらは反対側のマスターロックアップが示すように、これらは一緒に表示されるべきです。三角形の山は、アイコンやプロフィール写真、バッジとして単独で使用することができますが、ワードマークは、このシンボルを横に置かずに使用することはできません。
 ::
 
 ::design-section
 sectionComponent: DesignColors
+buttonText: カラーシステムをダウンロード
 ---title
-Primary colors
+プライマリカラー
 ---description
-Our colours have been carefully considered to work in harmony and consistency across various media. When creating NuxtJS communications, use the colour values shown on the following pages to make sure your designs stay on-brand. This nature-inspired primary colour palette should be used in all of our formal company related communications..
+私たちのカラーは、様々なメディアで調和と一貫性を持って機能するように慎重に検討されています。NuxtJS のコミュニケーションを作成する際には、以下のページに示されているカラーバリューを使用して、デザインがブランドに沿ったものであることを確認してください。この自然にインスパイアされたプライマリーカラーパレットは、会社関連の正式なコミュニケーションのすべてに使用する必要があります。
 ::
 
 ::design-section
 sectionComponent: DesignTypography
 ---title
-Typography
+タイポグラフィ
 ---description
-Our brand typeface is DM Sans by Colophon Foundry for Google. This open-source typeface was chosen for its
-combination of smoothness and structure. Its geometric shapes and soft transitions will bring clarity and openness
-to our texts. Also, it’s open availability will let other members of the NuxtJS community incorporate it into
-their work.
+私たちのブランド書体は、Colophon Foundry 社が Google のために開発した DM Sans です。このオープンソースの書体が選ばれた理由は、滑らかさと構造の組み合わせです。幾何学的な形と柔らかな変化が、私たちのテキストに明快さと開放感をもたらします。私たちのテキストに明快さと開放感をもたらします。また、オープンソースなので、NuxtJS コミュニティの他のメンバーが作品に取り入れることもできます。自分の作品に取り入れることができます。
 ::

@@ -5,21 +5,21 @@ layout:
 navigation: false
 ---
 ::page-hero
-title: NuxtJS teams
-description: "The NuxtJS and its ecosystem development is lead by an international team. Our committed team works every day to bring NuxtJS forward."
+title: NuxtJS チーム
+description: "NuxtJS とそのエコシステムの開発は国際チームよって主導しています。私たちのコミットチームは、NuxtJS をより前進させるために毎日開発しています。"
 ---
 ::
 
 ::team-section
 teamName: framework
 ---title
-[_Framework_]{.text-primary} Teams
+[_フレームワーク_]{.text-primary}チーム
 ::
 
 ::team-section
 teamName: community
 ---title
-[_Community_]{.text-primary} Teams
+[_コミュニティ_]{.text-primary}チーム
 ---description
-From contributors to advocators, the community is made of member from different horizon and skills. We are happy to see new member everyday and encourage anyone to help in any way (answering questions, giving a talk, creating modules and contributing to the core).
+コントリビューターからアドボケーターまで、コミュニティは様々な分野やスキルを持ったメンバーで構成されています。私たちは毎日新しいメンバーに会えることはうれしいですし、誰でもどんな形（質問に答えたり、講演をしたり、モジュールを作成したり、コアに貢献したり）でも、手助けすることができます。
 ::

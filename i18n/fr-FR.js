@@ -84,6 +84,7 @@ export default {
     search: 'Rechercher',
     settings: 'Settings',
     version: 'Version',
+    currently_version: 'Currently in private beta',
     back: 'Dos',
     go_to: "Visiter {title}",
     go_home: "Retourner à l'accueil",

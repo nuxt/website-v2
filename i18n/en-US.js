@@ -84,6 +84,7 @@ export default {
     search: 'Search ("/" to focus)',
     settings: 'Settings',
     version: 'Version',
+    currently_version: 'Currently in private beta',
     back: 'Back',
     go_to: "Go to {title}",
     go_home: "Go home",

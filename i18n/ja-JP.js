@@ -84,6 +84,7 @@ export default {
     search: '検索 ("/"を押すとここにフォーカスします)',
     settings: '設定',
     version: 'バージョン',
+    currently_version: '現在プライベートベータ',
     back: '戻る',
     go_to: "{title}に進む",
     go_home: "ホームへ",

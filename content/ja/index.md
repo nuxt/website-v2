@@ -120,7 +120,7 @@ Nuxt.js コミュニティに参加し私達を助け Nuxtify な世界にしま
 ::home-learn-guides
 category: 学習
 ---title
-私達の[ガイド]{.text-primary}の紹介
+私たちの[ガイド]{.text-primary}の紹介
 ---description
 着想から名作まで、ガイドは Nuxter になるためのパスを示します。
 ---
@@ -155,7 +155,7 @@ category: 学習
 ::home-explore
 category: 探求
 ---title
-前に進む必要がありますか? [探求]{.text-primary}することがたくさんあります
+前進したいですか? [探求]{.text-primary}できることがたくさんあります
 ---description
 Nuxt には、例で学習したり、お気に入りのプロバイダと統合したり、そしてテーマを使ってすぐに始められる領域がたくさんあります。
 ---

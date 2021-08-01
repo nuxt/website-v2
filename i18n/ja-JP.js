@@ -58,7 +58,7 @@ export default {
       ui: 'UI',
       data: 'データ',
       modules: 'モジュール',
-      deployment: '配置'
+      deployment: 'デプロイ'
     },
     cli: 'CLI',
     scratch: 'スクラッチ'

@@ -1,6 +1,6 @@
 <template>
-  <Link :to="module.website" target="blank" class="hover:bg-gray-50 hover:dark:bg-opacity-80 dark:bg-sky-darker rounded-md shadow-md h-40 p-4 flex flex-col justify-between">
-    <div class="flex space-x-3">
+  <Link :to="module.website" target="blank" class="hover:bg-gray-50 hover:dark:bg-opacity-80 dark:bg-sky-darker rounded-md shadow-md h-64 lg:h-40 p-4 flex flex-col justify-between">
+    <div class="flex flex-col lg:flex-row space-y-4 lg:space-y-0 lg:space-x-3">
       <img :src="iconUrl(module)" :alt="module.name" class="w-10 h-10 mt-2" />
       <div class="flex flex-col space-y-1">
         <span class="font-medium">{{ module.name }}</span>
@@ -9,7 +9,18 @@
         </div>
       </div>
     </div>
-    <div class="flex justify-between w-full">
+    <div class="lg:flex lg:flex-row-reverse justify-between w-full">
+      <ul class="flex space-x-1 pb-4 lg:pb-0">
+        <li v-for="maintainer in module.maintainers"
+          :key="maintainer.name"
+          v-tooltip="{ content: maintainer.name, classes: ['bg-sky-darker dark:bg-white', 'text-white dark:text-sky-darker', 'px-2', 'py-1', 'rounded', 'text-sm'] }"
+        >
+
+          <Link :to="githubUrl(maintainer)" target="blank">
+            <img :src="maintainer.avatar" :alt="maintainer.name" class="rounded-full w-6 h-6">
+          </Link>
+        </li>
+      </ul>
       <div class="flex items-center space-x-4 w-1/2 text-xs font-medium">
         <Link :to="module.github" class="flex space-x-2 items-center" target="blank">
           <IconStar alt="Star icon" class="text-sky-darker dark:text-white"/>
@@ -20,13 +31,6 @@
           <span class="truncate pt-0.5">{{ numberFormat(module.downloads) }} download{{ module.downloads !== 1 ? 's' : '' }}</span>
         </Link>
       </div>
-      <ul class="flex space-x-1">
-        <li v-for="maintainer in module.maintainers" :key="maintainer.name">
-          <Link :to="githubUrl(maintainer)" target="blank">
-            <img :src="maintainer.avatar" :alt="maintainer.name" class="rounded-full w-6 h-6">
-          </Link>
-        </li>
-      </ul>
     </div>
   </Link>
 </template>

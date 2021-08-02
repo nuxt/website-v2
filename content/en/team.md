@@ -1,5 +1,7 @@
 ---
 template: page
+title: 'NuxtJS teams'
+description: 'The NuxtJS and its ecosystem development is lead by an international team. Our committed team works every day to bring NuxtJS forward.'
 layout:
   fluid: true
 navigation: false

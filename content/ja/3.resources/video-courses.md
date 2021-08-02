@@ -4,6 +4,7 @@ layout.fluid: false
 ---
 
 ::simple-page-hero
+---
 backPath: resources
 title: NuxtJS ビデオコース
 description: 探索して無料およびプレミアムビデオコースで Nuxt フレームワークをより学びましょう。
@@ -11,6 +12,7 @@ description: 探索して無料およびプレミアムビデオコースで Nux
 ::
 
 ::video-courses-list
+---
 video-courses:
   one:
     title: 実世界で使えるアプリケーションを作って Nuxt.js を学習する

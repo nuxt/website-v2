@@ -10,7 +10,7 @@ description: "パートナーが構築したテーマを使って、Nuxt.jsを�
 ::
 
 ::themes-list
-
+---
 themes:
   one:
     title: Nuxt Argon Dashboard PRO

@@ -6,12 +6,14 @@ navigation:
 ---
 
 ::simple-page-hero
+---
 title: NuxtJS リソース
 description: "私たちのパートナーによって作られたリソースのパネルを探索します。これらのアフィリエイトリソースのリンクを利用することで、オープンソースフレームワークの維持・発展に貢献することができます。"
 ---
 ::
 
 ::resources-list
+---
 resources:
   modules:
     title: モジュール

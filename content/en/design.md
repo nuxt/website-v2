@@ -1,15 +1,15 @@
 ---
 template: page
-title: 'NuxtJS Design Kit'
+title: 'Nuxt Design Kit'
 description: 'Learn how to use Nuxt logos, colors and fonts and download the design kit.'
 layout:
   fluid: true
 navigation: false
 ---
 ::design-hero
-title: NuxtJS Design Kit
-description: "NuxtJS is an MIT licensed open source project and completely free to use.
-You can freely use our logos as long as you mention NuxtJS and link to nuxtjs.org."
+title: Nuxt Design Kit
+description: "Nuxt is an MIT licensed open source project and completely free to use.
+You can freely use our logos as long as you mention Nuxt and link to nuxtjs.org."
 button: Download Design Kit
 ---
 ::
@@ -27,7 +27,7 @@ sectionComponent: DesignColors
 ---title
 Primary colors
 ---description
-Our colours have been carefully considered to work in harmony and consistency across various media. When creating NuxtJS communications, use the colour values shown on the following pages to make sure your designs stay on-brand. This nature-inspired primary colour palette should be used in all of our formal company related communications..
+Our colours have been carefully considered to work in harmony and consistency across various media. When creating Nuxt communications, use the colour values shown on the following pages to make sure your designs stay on-brand. This nature-inspired primary colour palette should be used in all of our formal company related communications..
 ::
 
 ::design-section
@@ -37,6 +37,6 @@ Typography
 ---description
 Our brand typeface is DM Sans by Colophon Foundry for Google. This open-source typeface was chosen for its
 combination of smoothness and structure. Its geometric shapes and soft transitions will bring clarity and openness
-to our texts. Also, it’s open availability will let other members of the NuxtJS community incorporate it into
+to our texts. Also, it’s open availability will let other members of the Nuxt community incorporate it into
 their work.
 ::

@@ -107,7 +107,7 @@ import {
   useContext,
   computed
 } from '@nuxtjs/composition-api'
-import lottie, { AnimationItem, AnimationSegment } from 'lottie-web'
+import lottie from 'lottie-web'
 import { flatUnwrap } from '@docus/core/runtime'
 
 export default defineComponent({
@@ -118,7 +118,7 @@ export default defineComponent({
     }
   },
   setup(_, context) {
-    const { $colorMode, app } = useContext() as any
+    const { $colorMode, app } = useContext()
     const { i18n } = app
     const lottieAnimPathLight =
       'https://assets10.lottiefiles.com/private_files/lf30_8cv6lgcx.json'
@@ -128,27 +128,27 @@ export default defineComponent({
       {
         name: 'Pages',
         display: i18n.t('home.discover.pages'),
-        segment: [1, 238] as AnimationSegment
+        segment: [1, 238]
       },
       {
         name: 'UI',
         display: i18n.t('home.discover.ui'),
-        segment: [238, 448] as AnimationSegment
+        segment: [238, 448]
       },
       {
         name: 'Data',
         display: i18n.t('home.discover.data'),
-        segment: [447, 688] as AnimationSegment
+        segment: [447, 688]
       },
       {
         name: 'Modules',
         display: i18n.t('home.discover.modules'),
-        segment: [688, 928] as AnimationSegment
+        segment: [688, 928]
       },
       {
         name: 'Deployment',
         display: i18n.t('home.discover.deployment'),
-        segment: [928, 1167] as AnimationSegment
+        segment: [928, 1167]
       }
     ])
     const lottieAnim = ref(null)

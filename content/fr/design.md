@@ -4,6 +4,7 @@ layout:
   fluid: true
 navigation: false
 ---
+
 ::design-hero
 ---
 title: Design Kit NuxtJS

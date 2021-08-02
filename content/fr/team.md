@@ -4,6 +4,7 @@ layout:
   fluid: true
 navigation: false
 ---
+
 ::page-hero
 ---
 title: L'équipe NuxtJS

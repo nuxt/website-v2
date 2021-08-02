@@ -68,7 +68,7 @@
       </div>
 
       <div class="max-w-3xl mx-auto">
-        <BlogpostToc :toc="page.toc.links" :title="page.toc.title" class="mb-8" />
+        <BlogpostToc :toc="page.body.toc.links" :title="page.body.toc.title" class="mb-8" />
         <DocusContent :document="page" class="px-4 docus-content" />
       </div>
     </div>

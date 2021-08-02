@@ -6,28 +6,30 @@ navigation:
 ---
 
 ::simple-page-hero
-title: NuxtJS Resources
-description: "Discover a panel of resources made by our partners. By using thoses affiliate resources links, you are helping us to maintain and develop the Open Source Framework."
+---
+title: NuxtJS リソース
+description: "私たちのパートナーによって作られたリソースのパネルを探索します。これらのアフィリエイトリソースのリンクを利用することで、オープンソースフレームワークの維持・発展に貢献することができます。"
 ---
 ::
 
 ::resources-list
+---
 resources:
   modules:
-    title: Modules
-    description: Browse our modules to extend NuxtJS core features and integrate third-parties.
+    title: モジュール
+    description: NuxtJS コア機能の拡張とサードパーティに統合するための私たちのモジュールを見る
     image: /img/resources/modules.png
     slug: modules
     href: https://modules.nuxtjs.org
   themes:
-    title: Themes
-    description: Get inspired and use real world applications built with Nuxt.
+    title: テーマ
+    description: インスピレーションを得て Nuxt で構築された実際のアプリケーションを使用する
     image: /img/resources/themes.png
     slug: themes
     href: /resources/themes
   video-courses:
-    title: Video Courses
-    description: Learn more about Nuxt with a selection of video courses, for beginners and advanced users.
+    title: ビデオコース
+    description: ビデオコースの選択によって Nuxt についてもっと学習する初心者と上級者向けユーザー向けのリソースです
     image: /img/resources/courses.png
     slug: video-courses
     href: /resources/video-courses

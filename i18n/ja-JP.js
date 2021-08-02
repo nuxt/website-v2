@@ -52,6 +52,23 @@ export default {
       }
     }
   },
+  home: {
+    discover: {
+      pages: 'ページ',
+      ui: 'UI',
+      data: 'データ',
+      modules: 'モジュール',
+      deployment: 'デプロイ'
+    },
+    cli: 'CLI',
+    scratch: 'スクラッチ'
+  },
+  resources: {
+    themes: {
+      get_for_it: "{price} で手に入れる",
+      video_course: "コースを開始する"
+    }
+  },
   sustainability: {
     tiers: {
       mvp_partners: "MVP パートナー",
@@ -64,8 +81,11 @@ export default {
     page_not_found: "探しているページを見つけることできませんでした。",
     please_define_title: 'front matter でタイトルを定義してください',
     please_define_description: 'front matter で説明を定義してください',
-    search: '検索 ("/" はフォーカスを合わせるため)',
+    search: '検索 ("/"を押すとここにフォーカスします)',
+    settings: '設定',
     version: 'バージョン',
+    currently_version: '現在プライベートベータ',
+    back: '戻る',
     go_to: "{title}に進む",
     go_home: "ホームへ",
     read_article: "記事を読む"

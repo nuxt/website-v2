@@ -22,14 +22,7 @@
 
           <template #title>
             <h2
-              class="
-                font-serif font-normal
-                text-center
-                md:text-left
-                text-display-6
-                md:text-display-5
-                2xl:text-display-4
-              "
+              class="font-serif font-normal text-center  md:text-left text-display-6 md:text-display-5 2xl:text-display-4"
             >
               <Markdown use="title" unwrap="p" />
             </h2>
@@ -37,15 +30,7 @@
 
           <template #paragraph>
             <p
-              class="
-                py-4
-                w-full
-                font-normal
-                text-center
-                text-body-base
-                md:text-body-lg
-                2xl:text-body-xl
-              "
+              class="w-full py-4 font-normal text-center  text-body-base md:text-body-lg 2xl:text-body-xl"
             >
               <Markdown use="description" unwrap="p" />
             </p>
@@ -55,43 +40,17 @@
       <template #right-illustration>
         <div class="col-span-12">
           <div
-            class="
-              flex flex-col
-              items-center
-              justify-center
-              md:flex-row
-              xl:ml-12
-            "
+            class="flex flex-col items-center justify-center  md:flex-row xl:ml-12"
           >
             <div
-              class="
-                grid
-                items-center
-                grid-cols-3
-                gap-8
-                space-x-4
-                md:gap-0
-                md:flex
-                md:flex-col
-                md:items-start
-                md:space-x-0
-                md:space-y-2
-                md:w-2/5
-                xl:w-1/5
-              "
+              class="grid items-center grid-cols-3 gap-8 space-x-4  md:gap-0 md:flex md:flex-col md:items-start md:space-x-0 md:space-y-2 md:w-2/5 xl:w-1/5"
             >
               <div
                 v-for="(animation, index) in animations"
                 :key="animation.name"
               >
                 <div
-                  class="
-                    flex flex-col-reverse
-                    items-center
-                    justify-center
-                    space-x-2
-                    md:flex-row
-                  "
+                  class="flex flex-col-reverse items-center justify-center space-x-2  md:flex-row"
                 >
                   <img
                     :src="`/img/home/discover/diamond.svg`"
@@ -108,14 +67,14 @@
                     "
                     @click="changeAnimation(index)"
                   >
-                    {{ animation.name }}
+                    {{ animation.display }}
                   </button>
                 </div>
               </div>
             </div>
             <div class="anim">
               <div ref="lottieAnim" class="h-96" />
-              <p class="z-20 nuxt-text-highlight text-sm font-medium text-center mt-20 -mb-8 md:mb-0 md:-mt-8">
+              <p class="z-20 mt-20 -mb-8 text-sm font-medium text-center nuxt-text-highlight md:mb-0 md:-mt-8">
                 <Markdown :use="texts[currentIndex]" />
               </p>
             </div>
@@ -138,7 +97,8 @@
     />
   </div>
 </template>
-<script lang="ts">
+
+<script>
 import {
   defineComponent,
   ref,
@@ -147,8 +107,8 @@ import {
   useContext,
   computed
 } from '@nuxtjs/composition-api'
-import lottie, { AnimationItem, AnimationSegment } from 'lottie-web'
-import { flatUnwrap } from '~docus/utils'
+import lottie from 'lottie-web'
+import { flatUnwrap } from '@docus/core/runtime'
 
 export default defineComponent({
   props: {
@@ -158,7 +118,8 @@ export default defineComponent({
     }
   },
   setup(_, context) {
-    const { $colorMode } = useContext() as any
+    const { $colorMode, app } = useContext()
+    const { i18n } = app
     const lottieAnimPathLight =
       'https://assets10.lottiefiles.com/private_files/lf30_8cv6lgcx.json'
     const lottieAnimPathDark =
@@ -166,29 +127,34 @@ export default defineComponent({
     const animations = ref([
       {
         name: 'Pages',
-        segment: [1, 238] as AnimationSegment
+        display: i18n.t('home.discover.pages'),
+        segment: [1, 238]
       },
       {
         name: 'UI',
-        segment: [238, 448] as AnimationSegment
+        display: i18n.t('home.discover.ui'),
+        segment: [238, 448]
       },
       {
         name: 'Data',
-        segment: [447, 688] as AnimationSegment
+        display: i18n.t('home.discover.data'),
+        segment: [447, 688]
       },
       {
         name: 'Modules',
-        segment: [688, 928] as AnimationSegment
+        display: i18n.t('home.discover.modules'),
+        segment: [688, 928]
       },
       {
         name: 'Deployment',
-        segment: [928, 1167] as AnimationSegment
+        display: i18n.t('home.discover.deployment'),
+        segment: [928, 1167]
       }
     ])
     const lottieAnim = ref(null)
     const currentIndex = ref(0)
     const animFrames = ref([0, 238, 448, 688, 928])
-    let anim: AnimationItem
+    let anim
 
     /* computed */
     const colorMode = computed(() => {
@@ -197,7 +163,7 @@ export default defineComponent({
 
     /* function */
     // if user clicks on section, stop loop and play specified segment
-    function changeAnimation(index: number) {
+    function changeAnimation(index) {
       currentIndex.value = index
       anim.loop = false
       anim.playSegments(animations.value[index].segment, true)
@@ -208,7 +174,7 @@ export default defineComponent({
       /**
        * Temporary use `context.ref` this should replace by Vue3 ref
        */
-      lottieAnim.value = context.refs.lottieAnim as Element
+      lottieAnim.value = context.refs.lottieAnim
 
       anim = lottie.loadAnimation({
         container: lottieAnim.value,
@@ -302,6 +268,7 @@ export default defineComponent({
   }
 })
 </script>
+
 <style lang="postcss" scoped>
 .anim {
   @apply w-full flex flex-col-reverse md:flex-col justify-center items-center md:justify-end w-full;

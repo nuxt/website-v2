@@ -4,6 +4,7 @@ layout.fluid: false
 ---
 
 ::simple-page-hero
+---
 backPath: resources
 title: Cours vidéos NuxtJS
 description: "Apprenez-en plus sur le framework Nuxt avec ce choix de vidéos en anglais, gratuites ou premium."
@@ -11,6 +12,7 @@ description: "Apprenez-en plus sur le framework Nuxt avec ce choix de vidéos en
 ::
 
 ::video-courses-list
+---
 video-courses:
   one:
     title: Apprenez Nuxt.js en créant une application du monde réel

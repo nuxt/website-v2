@@ -3,6 +3,7 @@ template: page
 layout.fluid: false
 ---
 ::simple-page-hero
+---
 backPath: resources
 title: Thèmes NuxtJS
 description: "Découvrez comment une vraie application est construite avec la stack Nuxt.js grâce aux thèmes édités par nos partenaires."
@@ -10,7 +11,7 @@ description: "Découvrez comment une vraie application est construite avec la st
 ::
 
 ::themes-list
-
+---
 themes:
   one:
     title: Nuxt Argon Dashboard PRO

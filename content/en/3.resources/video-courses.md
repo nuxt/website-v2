@@ -4,8 +4,8 @@ title: 'Nuxt Video Courses'
 description: 'Discover and learn more about the Nuxt Framework with free and premium video courses.'
 layout.fluid: false
 ---
-
 ::simple-page-hero
+---
 backPath: resources
 title: Nuxt Video Courses
 description: "Discover and learn more about the Nuxt Framework with free and premium video courses."
@@ -13,6 +13,7 @@ description: "Discover and learn more about the Nuxt Framework with free and pre
 ::
 
 ::video-courses-list
+---
 video-courses:
   one:
     title: Learn Nuxt.js by Building a Real World App

@@ -20,7 +20,7 @@
   </div>
 </template>
 
-<script lang="ts">
+<script>
 import { defineComponent } from '@nuxtjs/composition-api'
 
 export default defineComponent({
@@ -31,7 +31,7 @@ export default defineComponent({
     }
   },
   setup() {
-    function getSocialIcon(social: String) {
+    function getSocialIcon(social) {
       return `Icon${social.charAt(0).toUpperCase() + social.slice(1)}`
     }
 

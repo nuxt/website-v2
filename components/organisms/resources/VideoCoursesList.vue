@@ -17,7 +17,7 @@
             aria-label="Start course"
             class="bg-primary text-gray-800 hover:bg-primary-400 focus:bg-primary-400"
           >
-            Start course
+            {{ $t('resources.themes.video_course') }}
           </SectionButton>
         </div>
       </ContentCardTemplate>

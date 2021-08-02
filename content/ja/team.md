@@ -13,13 +13,13 @@ description: "NuxtJS とそのエコシステムの開発は国際チームよ�
 ::team-section
 teamName: framework
 ---title
-[_フレームワーク_]{.text-primary}チーム
+[フレームワーク]{.text-primary}チーム
 ::
 
 ::team-section
 teamName: community
 ---title
-[_コミュニティ_]{.text-primary}チーム
+[コミュニティ]{.text-primary}チーム
 ---description
 コントリビューターからアドボケーターまで、コミュニティは様々な分野やスキルを持ったメンバーで構成されています。私たちは毎日新しいメンバーに会えることはうれしいですし、誰でもどんな形（質問に答えたり、講演をしたり、モジュールを作成したり、コアに貢献したり）でも、手助けすることができます。
 ::

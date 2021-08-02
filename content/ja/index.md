@@ -27,17 +27,17 @@ NuxtJS を使って信頼ある次世代の Vue.js アプリケーションを�
 ::home-discover
 category: 発見
 ---title
-[_コード_]{.text-primary}から[_クラウド_]{.text-primary}へ、より快適な[_生活_]{.text-primary}を
+[コード]{.text-primary}から[クラウド]{.text-primary}へ、より快適な[生活]{.text-primary}を
 ---description
 Nuxt は Node.js や Webpack、Babel そして PostCSS のようなパワフルなツールを使った公式 Vue.js ライブラリをベースにしたオープンソース Web フレームワークです。
 Nuxt は優れた開発者体験を念頭に、直感的でパフォーマンスの高い Web 開発を実現します。
-アプリケーションを Node.js のホスティングから静的な Web サイトまで、多くのプラットフォームに1つのコマンドで配置します。
+アプリケーションを Node.js のホスティングから静的な Web サイトまで、多くのプラットフォームに1つのコマンドでデプロイします。
 ---animations-texts
 - HTML と Vue コンポーネントで全て開始する
 - お気に入りのツールを使っていくつかのスタイルを追加する
 - ローカルまたはサードパーティからコンテンツを取得する
 - モジュールエコシステムを使って Nuxt の動作を拡張する
-- 信頼されたさまざまなプラットフォームに配置する
+- 信頼されたさまざまなプラットフォームにデプロイする
 ::
 
 ::home-features
@@ -100,7 +100,7 @@ Nuxt は開発者の生産性やエンドユーザーの体験を向上させる
 ::home-discover-partners
 category: パートナー
 ---title
-持続可能な[_開発_]{.text-primary}
+持続可能な[開発]{.text-primary}
 ---description
 Nuxt の開発は情熱を持った開発者によって作られますが、メンテナンスするための必要な労力と新機能開発には、適切な資金のサポートなしには持続できません。これを可能にするのは、スポンサーやパートナーの皆様のおかげです。<br>
 ---bottom
@@ -110,7 +110,7 @@ Nuxt の開発は情熱を持った開発者によって作られますが、メ
 ::home-learn-master
 category: 学習
 ---title
-学習も[_簡単_]{.text-primary}、マスターも[_簡単_]{.text-primary}
+学習も[簡単]{.text-primary}、マスターも[簡単]{.text-primary}
 ---description
 Nuxt.js コミュニティに参加し私達を助け Nuxtify な世界にします。
 ---bottom
@@ -120,7 +120,7 @@ Nuxt.js コミュニティに参加し私達を助け Nuxtify な世界にしま
 ::home-learn-guides
 category: 学習
 ---title
-私達の[_ガイド_]{.text-primary}の紹介
+私たちの[ガイド]{.text-primary}の紹介
 ---description
 着想から名作まで、ガイドは Nuxter になるためのパスを示します。
 ---
@@ -155,7 +155,7 @@ category: 学習
 ::home-explore
 category: 探求
 ---title
-前に進む必要がありますか? [_探求_]{.text-primary}することがたくさんあります
+前進したいですか? [探求]{.text-primary}できることがたくさんあります
 ---description
 Nuxt には、例で学習したり、お気に入りのプロバイダと統合したり、そしてテーマを使ってすぐに始められる領域がたくさんあります。
 ---
@@ -188,7 +188,7 @@ Nuxt には、例で学習したり、お気に入りのプロバイダと統合
 ::home-campfire
 category: コミュニティ
 ---title
-共有は[_大事_]{.text-primary}です
+共有は[大事]{.text-primary}です
 ---description
 NuxtJS チームと Nuxt.js コミュニティによる、NuxtJS のヒントややり方に関する記事をご覧ください！
 ::

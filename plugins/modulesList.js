@@ -8,7 +8,18 @@ export function useModules() {
     return await $fetch(`${apiURL}/modules`)
   }
 
+  async function getModulesCategories (modules) {
+    return Object.entries(modules
+      .reduce((result, current) => {
+        result[current.category] = (result[current.category] || 0) + 1
+        return result
+      }, {}))
+      .map(categ => ({ name: categ[0], count: categ[1] }))
+      .sort((a, b) => a.name.toLowerCase().localeCompare(b.name.toLowerCase()))
+  }
+
   return {
-    getModules
+    getModules,
+    getModulesCategories
   }
 }

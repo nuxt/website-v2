@@ -4,7 +4,7 @@ export default {
   url: 'https://nuxtjs.org',
   template: 'docs',
   credits: true,
-  socialImage: false,
+  socialImage: true,
   algolia: {
     apiKey: 'ff80fbf046ce827f64f06e16f82f1401',
     indexName: 'nuxtjs'

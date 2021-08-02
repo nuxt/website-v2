@@ -5,14 +5,15 @@ navigation:
   collapse: true
   title: Ressources
 ---
-
 ::simple-page-hero
+---
 title: Les ressources NuxtJS
 description: "Explorez un panel de ressources créées par nos partenaires et la communauté. En utilisant ces liens affiliés, vous nous aidez à développer et maintenir le framework Open Source."
 ---
 ::
 
 ::resources-list
+---
 resources:
   modules:
     title: Modules

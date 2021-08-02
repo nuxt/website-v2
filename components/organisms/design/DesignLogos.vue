@@ -32,7 +32,7 @@
   </div>
 </template>
 
-<script lang="ts">
+<script>
 import { defineComponent, useContext, ref, useFetch } from '@nuxtjs/composition-api'
 
 export default defineComponent({
@@ -46,6 +46,7 @@ export default defineComponent({
         .where({ slug: { $in: ['logos'] }, language: i18n.locale })
         .fetch()
     })
+
     return {
       logosMd
     }

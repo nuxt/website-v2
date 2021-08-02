@@ -67,7 +67,7 @@
                     "
                     @click="changeAnimation(index)"
                   >
-                    {{ animation.name }}
+                    {{ animation.display }}
                   </button>
                 </div>
               </div>
@@ -118,7 +118,8 @@ export default defineComponent({
     }
   },
   setup(_, context) {
-    const { $colorMode } = useContext()
+    const { $colorMode, app } = useContext() as any
+    const { i18n } = app
     const lottieAnimPathLight =
       'https://assets10.lottiefiles.com/private_files/lf30_8cv6lgcx.json'
     const lottieAnimPathDark =
@@ -126,23 +127,28 @@ export default defineComponent({
     const animations = ref([
       {
         name: 'Pages',
-        segment: [1, 238]
+        display: i18n.t('home.discover.pages'),
+        segment: [1, 238] as AnimationSegment
       },
       {
         name: 'UI',
-        segment: [238, 448]
+        display: i18n.t('home.discover.ui'),
+        segment: [238, 448] as AnimationSegment
       },
       {
         name: 'Data',
-        segment: [447, 688]
+        display: i18n.t('home.discover.data'),
+        segment: [447, 688] as AnimationSegment
       },
       {
         name: 'Modules',
-        segment: [688, 928]
+        display: i18n.t('home.discover.modules'),
+        segment: [688, 928] as AnimationSegment
       },
       {
         name: 'Deployment',
-        segment: [928, 1167]
+        display: i18n.t('home.discover.deployment'),
+        segment: [928, 1167] as AnimationSegment
       }
     ])
     const lottieAnim = ref(null)

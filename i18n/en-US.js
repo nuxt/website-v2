@@ -52,6 +52,23 @@ export default {
       }
     }
   },
+  home: {
+    discover: {
+      pages: 'Pages',
+      ui: 'UI',
+      data: 'Data',
+      modules: 'Modules',
+      deployment: 'Deployment'
+    },
+    cli: 'From CLI',
+    scratch: 'From Scratch'
+  },
+  resources: {
+    themes: {
+      get_for_it: "Get it for {price}",
+      video_course: "Start cource"
+    }
+  },
   sustainability: {
     tiers: {
       mvp_partners: "MVP Partners",
@@ -65,8 +82,11 @@ export default {
     please_define_title: 'Please define a title in the front matter',
     please_define_description: 'Please define a description in the front matter',
     search: 'Search ("/" to focus)',
+    settings: 'Settings',
     version: 'Version',
-    go_to: "Go to",
+    currently_version: 'Currently in private beta',
+    back: 'Back',
+    go_to: "Go to {title}",
     go_home: "Go home",
     read_article: "Read article"
   },

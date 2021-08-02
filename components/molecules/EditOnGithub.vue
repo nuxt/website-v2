@@ -12,7 +12,7 @@
         {{ $t('article.updatedAt') }} {{ $d(Date.parse(page.mtime), 'long') }}
       </span>
     </div>
-    <div class="px-4 sm:px-6">
+    <div class="px-4 sm:px-6" v-if="contributors.length">
       <a
           v-for="contributor of contributors"
           :key="contributor.login"

@@ -13,7 +13,7 @@
                 hover:text-gray-500 hover:dark:text-gray-400
                 font-medium
               "
-              >← Back</span>
+              >← {{ $t('common.back') }}</span>
         </Link>
       </div>
       <h1 class="text-display-4 font-serif mb-4">{{ title }}</h1>

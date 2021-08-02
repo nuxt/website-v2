@@ -1,7 +1,7 @@
 ---
 template: page
 title: Resources
-description: 'Discover a panel of resources made by our partners. By using thoses affiliate resources links, you are helping us to maintain and develop the Open Source Framework.'
+description: 'Discover a panel of resources made by our partners. By using thoses affiliate resources links, you are helping us to maintain and develop the Nuxt Framework.'
 navigation:
   collapse: true
 ---

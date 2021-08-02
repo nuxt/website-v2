@@ -1,11 +1,12 @@
 ---
 template: page
+description: 'See how a real world application is built using the Nuxt stack with the themes built by our partners.'
 layout.fluid: false
 ---
 ::simple-page-hero
 ---
 backPath: resources
-title: NuxtJS Themes
+title: Nuxt Themes
 description: "See how a real world application is built using the Nuxt.js stack with the themes built by our partners."
 ---
 ::

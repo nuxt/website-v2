@@ -1,11 +1,13 @@
 ---
 template: page
+title: 'Nuxt Video Courses'
+description: 'Discover and learn more about the Nuxt Framework with free and premium video courses.'
 layout.fluid: false
 ---
 ::simple-page-hero
 ---
 backPath: resources
-title: NuxtJS Video Courses
+title: Nuxt Video Courses
 description: "Discover and learn more about the Nuxt Framework with free and premium video courses."
 ---
 ::

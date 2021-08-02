@@ -1,12 +1,14 @@
 ---
 template: page
 title: Resources
+description: 'Discover a panel of resources made by our partners. By using thoses affiliate resources links, you are helping us to maintain and develop the Nuxt Framework.'
 navigation:
   collapse: true
 ---
+
 ::simple-page-hero
 ---
-title: NuxtJS Resources
+title: Nuxt Resources
 description: "Discover a panel of resources made by our partners. By using thoses affiliate resources links, you are helping us to maintain and develop the Open Source Framework."
 ---
 ::
@@ -16,7 +18,7 @@ description: "Discover a panel of resources made by our partners. By using those
 resources:
   modules:
     title: Modules
-    description: Browse our modules to extend NuxtJS core features and integrate third-parties.
+    description: Browse our modules to extend Nuxt core features and integrate third-parties.
     image: /img/resources/modules.png
     slug: modules
     href: https://modules.nuxtjs.org

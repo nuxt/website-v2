@@ -1,5 +1,7 @@
 ---
 template: page
+title: 'NuxtJS Design Kit'
+description: 'Learn how to use NuxtJS logos, colors and fonts and download the design kit.'
 layout:
   fluid: true
 navigation: false

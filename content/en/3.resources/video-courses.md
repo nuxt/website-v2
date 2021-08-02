@@ -1,5 +1,7 @@
 ---
 template: page
+title: 'NuxtJS Video Courses'
+description: 'Discover and learn more about the Nuxt Framework with free and premium video courses.'
 layout.fluid: false
 ---
 

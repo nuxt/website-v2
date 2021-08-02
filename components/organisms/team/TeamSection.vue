@@ -16,7 +16,7 @@
   </div>
 </template>
 
-<script lang="ts">
+<script>
 import {
   defineComponent,
   ref,
@@ -37,6 +37,7 @@ export default defineComponent({
     const team = ref([])
 
     useFetch(async () => {
+      console.log(await $docus.search('/teams', { deep: true }).fetch())
       teams.value = await $docus
         .search(`/teams/${props.teamName}`, { deep: true })
         .sortBy('position', 'asc')
@@ -44,6 +45,7 @@ export default defineComponent({
 
       team.value = teams.value[0]
     })
+
     return {
       team
     }

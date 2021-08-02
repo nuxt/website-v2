@@ -1,5 +1,5 @@
 import { resolve } from 'path'
-import { withDocus } from 'docus'
+import { withDocus } from '@docus/app'
 
 // Learn more at https://docus.dev
 export default withDocus({
@@ -48,7 +48,15 @@ export default withDocus({
     }
   },
   css: [resolve(__dirname, './assets/nuxt.css')],
-  buildModules: ['@nuxt/typescript-build', 'vue-plausible'],
+  build: {
+    transpile: ['ohmyfetch']
+  },
+  buildModules: [
+    '@nuxt/typescript-build',
+    'vue-plausible',
+    '@docus/github',
+    '@docus/twitter'
+  ],
   plugins: ['~/plugins/adblock.client'],
   windicss: {
     root: resolve(__dirname),
@@ -75,9 +83,10 @@ export default withDocus({
     }
   },
   vite: {
-    optimizeDeps: {
-      include: ['cookie', 'js-cookie', 'property-information', 'clipboard'],
-      exclude: ['lokidb']
+    server: {
+      fs: {
+        strict: false
+      }
     }
   },
   image: {
@@ -141,9 +150,6 @@ export default withDocus({
   colorMode: {
     preference: 'system',
     fallback: 'light'
-  },
-  build: {
-    transpile: ['ohmyfetch']
   },
   publicRuntimeConfig: {
     plausible: {

@@ -66,7 +66,7 @@ export default {
   resources: {
     themes: {
       get_for_it: "Get it for {price}",
-      video_course: "Start cource"
+      video_course: "Start course"
     }
   },
   sustainability: {

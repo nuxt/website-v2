@@ -27,7 +27,7 @@
           d-scrollbar
         "
       >
-        <div class="py-4 pr-0 lg:pt-10">
+        <div class="py-4 pr-0">
           <ul class="flex flex-wrap lg:flex-col">
             <li v-for="category in categories" :key="category.name">
               <button @click="selectCategory(category.name)" class="py-2 px-4 flex justify-between w-full focus:outline-none focus:ring-transparent" :class="{ 'rounded-md bg-gray-100 dark:bg-white dark:bg-opacity-10': category.name === selected }">

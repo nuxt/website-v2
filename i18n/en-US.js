@@ -90,5 +90,8 @@ export default {
     go_home: "Go home",
     read_article: "Read article"
   },
+  modules: {
+    error: "Une erreur est survenue lors de la récupération des modules"
+  },
   iso: 'en'
 }

@@ -10,3 +10,4 @@ sw.*
 .env
 .output
 .husky
+package-lock.json

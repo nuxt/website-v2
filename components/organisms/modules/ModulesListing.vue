@@ -40,7 +40,7 @@
 </template>
 
 <script lang="ts">
-import { defineComponent, ref, useContext, useFetch, computed, watch } from '@nuxtjs/composition-api'
+import { defineComponent, ref, useContext, useFetch, computed, watch , onMounted} from '@nuxtjs/composition-api'
 import { useModules } from '../../../plugins/modulesList'
 import LazyHydrate from 'vue-lazy-hydration'
 import Fuse from 'fuse.js/dist/fuse.basic.esm'
@@ -84,8 +84,14 @@ export default defineComponent({
     // fetch modules
     useFetch(async () => {
       modules.value = await getModules()
-      init()
+      if (process.client) {
+        init()
+      }
     })
+
+    if (process.static && process.client && modules.value) {
+      onMounted(init)
+    }
 
     const filteredModules = computed(() => {
 
@@ -123,21 +129,10 @@ export default defineComponent({
       return options
     })
 
-    watch(selectedCategory, () => {
-      syncURL()
-    })
-
-    watch(query, () => {
-      syncURL()
-    })
-
-    watch(orderedBy, () => {
-      syncURL()
-    })
-
-    watch(sortedBy, () => {
-      syncURL()
-    })
+    watch(selectedCategory, syncURL)
+    watch(query, syncURL)
+    watch(orderedBy, syncURL)
+    watch(sortedBy, syncURL)
 
     function init() {
       const fuseOptions = {

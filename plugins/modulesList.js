@@ -1,5 +1,5 @@
 import { ref, useContext } from '@nuxtjs/composition-api'
-import { $fetch } from 'ohmyfetch'
+import { $fetch } from 'ohmyfetch/node'
 
 let modules = null
 export function useModules() {

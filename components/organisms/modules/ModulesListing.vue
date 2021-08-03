@@ -4,7 +4,7 @@
       <div class="flex flex-row space-x-4 items-center justify-start">
         <IconSearch alt="Search Icon" class="text-sky-darker dark:text-white w-4 h-4" />
         <NuxtTextInput
-          v-model="q"
+          v-model="query"
           v-focus
           type="search"
           placeholder="Search a module (name, category, username, etc.)"
@@ -14,18 +14,18 @@
       <div class="flex space-x-2 items-center">
         <span>Sort by</span>
         <NuxtSelectNative
-          v-model="sortBy"
+          v-model="sortedBy"
           :options="sortFields"
           select-class="appearance-none block w-full bg-none dark:bg-transparent light:bg-white py-2 pl-3 pr-10 text-base focus:outline-none light:focus:ring-black dark:focus:ring-white light:focus:border-gray-400 dark:focus:border-secondary-light sm:text-md font-medium"
         />
         <button @click="toggleOrderBy" class="focus:outline-none focus:ring-transparent">
-          <IconSortDesc v-if="orderBy === 'desc'" alt="Descending sort" class="text-sky-darker dark:text-white w-4 h-4"/>
+          <IconSortDesc v-if="orderedBy === 'desc'" alt="Descending sort" class="text-sky-darker dark:text-white w-4 h-4"/>
           <IconSortAsc v-else alt="Ascending sort" class="text-sky-darker dark:text-white w-4 h-4"/>
         </button>
       </div>
     </div>
     <div class="lg:flex">
-      <AsideModules :modules="modules" @category="getCategory" />
+      <AsideModules :modules="modules" @category="getCategory" :selectedCategory="selectedCategory" />
       <div class="w-full px-4 md:px-0 lg:w-4/5 min-w-0 min-h-0 lg:static lg:overflow-visible mt-8 grid md:grid-cols-2 gap-8 lg:ml-20 auto-rows-min">
         <div v-for="module in pageFilteredModulesList" :key="module.name">
           <LazyHydrate when-visible>
@@ -65,7 +65,7 @@ export default defineComponent({
     }
   },
 
-  setup() {
+  setup(_, { emit }) {
     const { route } = useContext()
     const { getModules } = useModules()
     const sortFields = [{ text: 'Downloads' , value: 'downloads' }, { text: 'Stars', value: 'stars' }]
@@ -73,9 +73,9 @@ export default defineComponent({
     let modules = ref(null)
     let categories = ref(null)
     let fuse = null
-    let q = ref(null)
-    let orderBy = ref(ORDERS.DESC)
-    let sortBy = ref(sortFields[0].value)
+    let query = ref(null)
+    let orderedBy = ref(ORDERS.DESC)
+    let sortedBy = ref(sortFields[0].value)
     let sortByMenuVisible = ref(false)
     let selectedCategory = ref('')
     let pageFilteredModulesList = ref(null)
@@ -94,10 +94,10 @@ export default defineComponent({
       let filteredModulesList = modules.value
 
       if (filteredModulesList) {
-        if (q.value) {
-          filteredModulesList = fuse.search(q.value).map((r: { item: any }) => r.item)
+        if (query.value) {
+          filteredModulesList = fuse.search(query.value).map((r: { item: any }) => r.item)
         } else {
-          filteredModulesList = filteredModulesList.sort((a: number, b: number) => sort(a[sortBy.value], b[sortBy.value], orderBy.value === ORDERS.ASC))
+          filteredModulesList = filteredModulesList.sort((a: number, b: number) => sort(a[sortedBy.value], b[sortedBy.value], orderedBy.value === ORDERS.ASC))
         }
 
         if (selectedCategory.value) {
@@ -109,14 +109,14 @@ export default defineComponent({
     })
 
     const sortByComp = computed(() => {
-      return sortFields[sortBy.value]
+      return sortFields[sortedBy.value]
     })
 
     const sortByOptions = computed(() => {
       const options = {}
 
       for (const field in sortFields) {
-        if (field === sortBy.value) { continue }
+        if (field === sortedBy.value) { continue }
 
         options[field] = {
           ...sortFields[field]
@@ -129,15 +129,15 @@ export default defineComponent({
       syncURL()
     })
 
-    watch(q, () => {
+    watch(query, () => {
       syncURL()
     })
 
-    watch(orderBy, () => {
+    watch(orderedBy, () => {
       syncURL()
     })
 
-    watch(sortBy, () => {
+    watch(sortedBy, () => {
       syncURL()
     })
 
@@ -157,17 +157,20 @@ export default defineComponent({
       const index = Fuse.createIndex(fuseOptions.keys, modules.value)
       fuse = new Fuse(modules.value, fuseOptions, index)
 
-      const { query, sortedBy, orderedBy } = route.value.query
-      if (query) {
-        q.value = query
+      selectedCategory.value = (window.location.hash || '').substr(1)
+
+      const { q, sortBy, orderBy } = route.value.query
+
+      if (q) {
+        query.value = q as any
       }
 
-      if (sortedBy) {
-        sortBy.value = sortedBy as any
+      if (sortBy) {
+        sortedBy.value = sortBy as any
       }
 
-      if (orderedBy) {
-        orderBy.value = orderedBy as any
+      if (orderBy) {
+        orderedBy.value = orderBy as any
       }
 
       setPageFilteredModules(MODULE_INCREMENT_LOADING)
@@ -175,27 +178,27 @@ export default defineComponent({
 
     function syncURL () {
       const url = route.value.path
-      let query = ''
+      let q = ''
       resetModuleLoaded()
       setPageFilteredModules(MODULE_INCREMENT_LOADING)
 
-      if (q.value) {
-        query += `?q=${q.value}`
+      if (query.value) {
+        q += `?q=${query.value}`
       }
 
-      if (orderBy.value !== ORDERS.DESC) {
-        query += `${query ? '&' : '?'}orderBy=${orderBy.value}`
+      if (orderedBy.value !== ORDERS.DESC) {
+        q += `${q ? '&' : '?'}orderBy=${orderedBy.value}`
       }
 
-      if (sortBy.value !== sortFields[0].value) {
-        query += `${query ? '&' : '?'}sortBy=${sortBy.value}`
+      if (sortedBy.value !== sortFields[0].value) {
+        q += `${q ? '&' : '?'}sortBy=${sortedBy.value}`
       }
 
       if (selectedCategory.value) {
-        query += `#${selectedCategory.value}`
+        q += `#${selectedCategory.value}`
       }
 
-      window.history.pushState('', '', `${url}${query}`)
+      window.history.pushState('', '', `${url}${q}`)
     }
 
     function getCategory(category: string) {
@@ -204,7 +207,7 @@ export default defineComponent({
 
     function clearFilters () {
       selectedCategory.value = null
-      q.value = null
+      query.value = null
       resetModuleLoaded()
     }
 
@@ -213,11 +216,11 @@ export default defineComponent({
     }
 
     function toggleOrderBy () {
-      orderBy.value = (orderBy.value === ORDERS.ASC) ? ORDERS.DESC : ORDERS.ASC
+      orderedBy.value = (orderedBy.value === ORDERS.ASC) ? ORDERS.DESC : ORDERS.ASC
     }
 
     function selectSortBy (field: any) {
-      sortBy.value = field
+      sortedBy.value = field
       sortByMenuVisible.value = false
     }
 
@@ -235,16 +238,16 @@ export default defineComponent({
       pageFilteredModulesList,
       sortByComp,
       sortByOptions,
-      sortBy,
+      sortedBy,
       clearFilters,
       sortFields,
       toggleOrderBy,
-      orderBy,
+      orderedBy,
       selectSortBy,
       selectedCategory,
       intersectedModulesLoading,
       pending,
-      q,
+      query,
       categories,
       getCategory,
       modules

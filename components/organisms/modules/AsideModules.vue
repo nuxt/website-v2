@@ -50,6 +50,10 @@ export default defineComponent({
     modules: {
       type: Array,
       required: true
+    },
+    selectedCategory: {
+      type: String,
+      default: null
     }
   },
   setup(props, { emit }) {
@@ -66,15 +70,12 @@ export default defineComponent({
     })
 
     onMounted(() => {
-      const selectedCateg = (window.location.hash || '').substr(1)
-
-      if (selectedCateg) {
-        selectCategory(selectedCateg)
+      if (props.selectedCategory) {
+        selectCategory(props.selectedCategory)
       }
     })
 
     function selectCategory (category: string) {
-
       if (selected.value === category) {
         selected.value = null
       } else {

@@ -20,7 +20,7 @@ resources:
     description: Visitez notre catalogue de modules, étendez les fonctionnalités de NuxtJS et intégrez des applications tierces.
     image: /img/resources/modules.png
     slug: modules
-    href: https://modules.nuxtjs.org
+    href: /modules
   themes:
     title: Thèmes
     description: Puisez de l'inspiration en utilisant de vraies applications faites avec Nuxt.

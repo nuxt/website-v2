@@ -18,19 +18,18 @@
           :key="maintainer.name"
           v-tooltip="{ content: maintainer.name, classes: ['bg-sky-darker dark:bg-white', 'text-white dark:text-sky-darker', 'px-2', 'py-1', 'rounded', 'text-sm'] }"
         >
-
-          <Link :to="githubUrl" target="blank">
+          <Link :to="`https://github.com/${maintainer.github}`" target="blank">
             <img :src="maintainer.avatar" :alt="maintainer.name" class="rounded-full w-6 h-6">
           </Link>
         </li>
       </ul>
       <div class="flex items-center space-x-4 w-1/2 text-xs font-medium">
-        <Link :to="module.github" class="flex space-x-2 items-center" target="blank">
-          <IconStar alt="Star icon" class="text-sky-darker dark:text-white"/>
+        <Link :to="module.github" class="group flex space-x-2 items-center" target="blank">
+          <IconStar alt="Star icon" class="text-sky-dark group-hover:text-sky-darker dark:text-cloud-surface dark:group-hover:text-white"/>
           <span class="truncate pt-0.5">{{ numberFormat(module.stars) }} star{{ module.stars !== 1 ? 's' : '' }}</span>
         </Link>
-        <Link :to="npmUrl" class="flex space-x-2 items-center" target="blank" >
-          <IconDownload alt="Download icon" class="w-4 h-4 text-sky-darker dark:text-white" />
+        <Link :to="npmUrl" class="group flex space-x-2 items-center" target="blank" >
+          <IconDownload alt="Download icon" class="w-4 h-4 text-sky-dark group-hover:text-sky-darker dark:text-cloud-surface dark:group-hover:text-white" />
           <span class="truncate pt-0.5">{{ numberFormat(module.downloads) }} download{{ module.downloads !== 1 ? 's' : '' }}</span>
         </Link>
       </div>

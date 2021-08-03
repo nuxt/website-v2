@@ -83,10 +83,8 @@ export default defineComponent({
 
     // fetch modules
     useFetch(async () => {
-      await getModules().then((mods) => {
-        modules.value = mods
-        init()
-      })
+      modules.value = await getModules()
+      init()
     })
 
     const filteredModules = computed(() => {

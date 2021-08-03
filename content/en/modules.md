@@ -8,8 +8,10 @@ navigation: false
 ::page-hero
 ---
 title: Modules
-description: "Discover a panel of resources made by our partners. By using thoses affiliate resources links, you are helping us to maintain and develop the Open Source Framework."
+description: Discover our list of modules to supercharge your Nuxt project. Created by the Nuxt team and community.
 ---
+#bottom
+[Contribute on GitHub](https://github.com/nuxt/modules)
 ::
 
 ::modules-listing

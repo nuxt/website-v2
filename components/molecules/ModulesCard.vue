@@ -1,7 +1,10 @@
 <template>
-  <Link :to="module.website" target="blank" class="hover:bg-gray-50 hover:dark:bg-opacity-80 dark:bg-sky-darker rounded-md shadow-md h-64 lg:h-40 p-4 flex flex-col justify-between">
+  <Link :to="module.website" target="blank" class="group relative hover:bg-gray-50 hover:dark:bg-opacity-80 dark:bg-sky-darker rounded-md shadow-md h-64 lg:h-40 p-4 flex flex-col justify-between">
+    <div class="transition-opacity duration-200 ease-in-out opacity-0 group-hover:opacity-100 absolute top-4 right-4 cursor-pointer">
+      <nuxt-img alt="external_link" src="/img/icons/ext.svg" width="24" height="24" />
+    </div>
     <div class="flex flex-col lg:flex-row space-y-4 lg:space-y-0 lg:space-x-3">
-      <img :src="iconUrl(module)" :alt="module.name" class="w-10 h-10 mt-2" />
+      <img :src="iconUrl" :alt="module.name" class="w-10 h-10 mt-2" />
       <div class="flex flex-col space-y-1">
         <span class="font-medium">{{ module.name }}</span>
         <div class="max-h-20 text-sm overflow-y-auto">
@@ -16,7 +19,7 @@
           v-tooltip="{ content: maintainer.name, classes: ['bg-sky-darker dark:bg-white', 'text-white dark:text-sky-darker', 'px-2', 'py-1', 'rounded', 'text-sm'] }"
         >
 
-          <Link :to="githubUrl(maintainer)" target="blank">
+          <Link :to="githubUrl" target="blank">
             <img :src="maintainer.avatar" :alt="maintainer.name" class="rounded-full w-6 h-6">
           </Link>
         </li>
@@ -26,7 +29,7 @@
           <IconStar alt="Star icon" class="text-sky-darker dark:text-white"/>
           <span class="truncate pt-0.5">{{ numberFormat(module.stars) }} star{{ module.stars !== 1 ? 's' : '' }}</span>
         </Link>
-        <Link :to="npmUrl(module)" class="flex space-x-2 items-center" target="blank" >
+        <Link :to="npmUrl" class="flex space-x-2 items-center" target="blank" >
           <IconDownload alt="Download icon" class="w-4 h-4 text-sky-darker dark:text-white" />
           <span class="truncate pt-0.5">{{ numberFormat(module.downloads) }} download{{ module.downloads !== 1 ? 's' : '' }}</span>
         </Link>
@@ -45,32 +48,30 @@ export default defineComponent({
       required: true
     }
   },
-  setup() {
-    //methods
-    function iconUrl({ icon, category}) {
-      if (icon)
+  computed: {
+    iconUrl() {
+      const { icon, category } = this.module
+      if (icon && icon.startsWith('https://')) {
+        return icon
+      }
+      if (icon) {
         return `https://modules.nuxtjs.org/icons/${icon}`
+      }
 
       return `img/modules/categories/${category.toLowerCase()}.svg`
-    }
+    },
 
-    function npmUrl ({ npm }) {
-      return `https://npmjs.com/package/${npm}`
-    }
+    npmUrl () {
+      return `https://npmjs.com/package/${this.module.npm}`
+    },
 
-    function githubUrl({ github }) {
-     return `https://github.com/${github}`
-    }
-
-    function numberFormat(num: any, options = { precision: 1 }) {
+    githubUrl () {
+     return `https://github.com/${this.module.github}`
+    },
+  },
+  methods: {
+    numberFormat(num: any, options = { precision: 1 }) {
       return millify(num || 0, options)
-    }
-
-    return {
-      iconUrl,
-      npmUrl,
-      githubUrl,
-      numberFormat
     }
   }
 })

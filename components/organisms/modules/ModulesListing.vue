@@ -5,6 +5,7 @@
         <IconSearch alt="Search Icon" class="text-sky-darker dark:text-white w-4 h-4" />
         <NuxtTextInput
           v-model="q"
+          v-focus
           type="search"
           placeholder="Search a module (name, category, username, etc.)"
           class="bg-transparent border-none w-full md:w-md xl:w-4xl outline-none"
@@ -80,7 +81,7 @@ export default defineComponent({
     let pageFilteredModulesList = ref(null)
     let moduleLoaded = MODULE_INCREMENT_LOADING
 
-    //fetch modules
+    // fetch modules
     useFetch(async () => {
       await getModules().then((mods) => {
         modules.value = mods
@@ -141,10 +142,9 @@ export default defineComponent({
     })
 
     function init() {
-
       const fuseOptions = {
-      threshold: 0.1,
-      keys: [
+        threshold: 0.1,
+        keys: [
           'name',
           'npm',
           'category',

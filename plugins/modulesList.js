@@ -1,11 +1,14 @@
 import { ref, useContext } from '@nuxtjs/composition-api'
 import { $fetch } from 'ohmyfetch'
 
+let modules = null
 export function useModules() {
   const apiURL = 'https://api.nuxtjs.org/api'
 
   const getModules = async () => {
-    return await $fetch(`${apiURL}/modules`)
+    if (modules) return modules
+    modules = await $fetch(`${apiURL}/modules`)
+    return modules
   }
 
   async function getModulesCategories (modules) {

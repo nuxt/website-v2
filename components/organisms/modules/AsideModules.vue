@@ -52,8 +52,8 @@ export default defineComponent({
       required: true
     }
   },
-  setup(props) {
-    // @ts-ignore
+  setup(props, { emit }) {
+    // @ts-i, gnore
     let selected = ref('')
     let categories = ref([])
     const { getModulesCategories } = useModules()
@@ -67,6 +67,7 @@ export default defineComponent({
 
     onMounted(() => {
       const selectedCateg = (window.location.hash || '').substr(1)
+
       if (selectedCateg) {
         selectCategory(selectedCateg)
       }
@@ -80,7 +81,7 @@ export default defineComponent({
         selected.value = category
       }
 
-      this.$emit('category', selected.value)
+      emit('category', selected.value)
     }
 
     return {

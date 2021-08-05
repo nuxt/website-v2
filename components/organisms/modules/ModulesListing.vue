@@ -1,0 +1,250 @@
+<template>
+  <div v-if="pageFilteredModulesList" class="d-container-content">
+    <div class="w-full flex-col flex md:flex-row space-y-8 pl-4 md:pl-0 md:space-y-0 justify-between md:border-b border-b-sky-dark pb-2">
+      <div class="flex flex-row space-x-4 items-center justify-start">
+        <IconSearch alt="Search Icon" class="text-sky-darker dark:text-white w-4 h-4" />
+        <NuxtTextInput
+          v-model="query"
+          v-focus
+          type="search"
+          placeholder="Search a module (name, category, username, etc.)"
+          class="bg-transparent border-none w-full md:w-md xl:w-4xl outline-none"
+        />
+      </div>
+      <div class="flex space-x-2 items-center">
+        <span>Sort by</span>
+        <NuxtSelectNative
+          v-model="sortedBy"
+          :options="sortFields"
+          select-class="appearance-none block w-full bg-none dark:bg-transparent light:bg-white py-2 pl-3 pr-10 text-base focus:outline-none light:focus:ring-black dark:focus:ring-white light:focus:border-gray-400 dark:focus:border-secondary-light sm:text-md font-medium"
+        />
+        <button @click="toggleOrderBy" class="focus:outline-none focus:ring-transparent">
+          <IconSortDesc v-if="orderedBy === 'desc'" alt="Descending sort" class="text-sky-darker dark:text-white w-4 h-4"/>
+          <IconSortAsc v-else alt="Ascending sort" class="text-sky-darker dark:text-white w-4 h-4"/>
+        </button>
+      </div>
+    </div>
+    <div class="lg:flex">
+      <AsideModules :modules="modules" @category="getCategory" :selectedCategory="selectedCategory" />
+      <div class="w-full px-4 md:px-0 lg:w-4/5 min-w-0 min-h-0 lg:static lg:overflow-visible mt-8 grid md:grid-cols-2 gap-8 lg:ml-20 auto-rows-min">
+        <div v-for="module in pageFilteredModulesList" :key="module.name">
+          <LazyHydrate when-visible>
+            <ModulesCard :module="module" />
+          </LazyHydrate>
+        </div>
+        <ObserverModules @intersect="intersectedModulesLoading" />
+      </div>
+    </div>
+  </div>
+  <div v-else class="text-center">Loading...</div>
+</template>
+
+<script lang="ts">
+import { defineComponent, ref, useContext, useFetch, computed, watch , onMounted} from '@nuxtjs/composition-api'
+import { useModules } from '../../../plugins/modulesList'
+import LazyHydrate from 'vue-lazy-hydration'
+import Fuse from 'fuse.js/dist/fuse.basic.esm'
+
+const sort = (a: number, b: number, asc: boolean) => asc ? a - b : b - a
+
+const ORDERS = {
+  DESC: 'desc',
+  ASC: 'asc'
+}
+
+const MODULE_INCREMENT_LOADING = 12
+
+export default defineComponent({
+  components: { LazyHydrate },
+  directives: {
+    focus: {
+      // directive definition
+      inserted (el) {
+        el.focus()
+      }
+    }
+  },
+
+  setup(_, { emit }) {
+    const { route } = useContext()
+    const { getModules } = useModules()
+    const sortFields = [{ text: 'Downloads' , value: 'downloads' }, { text: 'Stars', value: 'stars' }]
+    const pending = ref(false)
+    let modules = ref(null)
+    let categories = ref(null)
+    let fuse = null
+    let query = ref(null)
+    let orderedBy = ref(ORDERS.DESC)
+    let sortedBy = ref(sortFields[0].value)
+    let sortByMenuVisible = ref(false)
+    let selectedCategory = ref('')
+    let pageFilteredModulesList = ref(null)
+    let moduleLoaded = MODULE_INCREMENT_LOADING
+
+    // fetch modules
+    useFetch(async () => {
+      modules.value = await getModules()
+      if (process.client) {
+        init()
+      }
+    })
+
+    if (process.static && process.client && modules.value) {
+      onMounted(init)
+    }
+
+    const filteredModules = computed(() => {
+
+      let filteredModulesList = modules.value
+
+      if (filteredModulesList) {
+        if (query.value) {
+          filteredModulesList = fuse.search(query.value).map((r: { item: any }) => r.item)
+        } else {
+          filteredModulesList = filteredModulesList.sort((a: number, b: number) => sort(a[sortedBy.value], b[sortedBy.value], orderedBy.value === ORDERS.ASC))
+        }
+
+        if (selectedCategory.value) {
+          filteredModulesList = filteredModulesList.filter((module: { category: string }) => module.category === selectedCategory.value)
+        }
+      }
+
+      return filteredModulesList
+    })
+
+    const sortByComp = computed(() => {
+      return sortFields[sortedBy.value]
+    })
+
+    const sortByOptions = computed(() => {
+      const options = {}
+
+      for (const field in sortFields) {
+        if (field === sortedBy.value) { continue }
+
+        options[field] = {
+          ...sortFields[field]
+        }
+      }
+      return options
+    })
+
+    watch(selectedCategory, syncURL)
+    watch(query, syncURL)
+    watch(orderedBy, syncURL)
+    watch(sortedBy, syncURL)
+
+    function init() {
+      const fuseOptions = {
+        threshold: 0.1,
+        keys: [
+          'name',
+          'npm',
+          'category',
+          'maintainers.name',
+          'maintainers.github',
+          'description',
+          'repo'
+        ]
+      }
+      const index = Fuse.createIndex(fuseOptions.keys, modules.value)
+      fuse = new Fuse(modules.value, fuseOptions, index)
+
+      selectedCategory.value = (window.location.hash || '').substr(1)
+
+      const { q, sortBy, orderBy } = route.value.query
+
+      if (q) {
+        query.value = q as any
+      }
+
+      if (sortBy) {
+        sortedBy.value = sortBy as any
+      }
+
+      if (orderBy) {
+        orderedBy.value = orderBy as any
+      }
+
+      setPageFilteredModules(MODULE_INCREMENT_LOADING)
+    }
+
+    function syncURL () {
+      const url = route.value.path
+      let q = ''
+      resetModuleLoaded()
+      setPageFilteredModules(MODULE_INCREMENT_LOADING)
+
+      if (query.value) {
+        q += `?q=${query.value}`
+      }
+
+      if (orderedBy.value !== ORDERS.DESC) {
+        q += `${q ? '&' : '?'}orderBy=${orderedBy.value}`
+      }
+
+      if (sortedBy.value !== sortFields[0].value) {
+        q += `${q ? '&' : '?'}sortBy=${sortedBy.value}`
+      }
+
+      if (selectedCategory.value) {
+        q += `#${selectedCategory.value}`
+      }
+
+      window.history.pushState('', '', `${url}${q}`)
+    }
+
+    function getCategory(category: string) {
+      selectedCategory.value = category
+    }
+
+    function clearFilters () {
+      selectedCategory.value = null
+      query.value = null
+      resetModuleLoaded()
+    }
+
+    function resetModuleLoaded () {
+      moduleLoaded = MODULE_INCREMENT_LOADING
+    }
+
+    function toggleOrderBy () {
+      orderedBy.value = (orderedBy.value === ORDERS.ASC) ? ORDERS.DESC : ORDERS.ASC
+    }
+
+    function selectSortBy (field: any) {
+      sortedBy.value = field
+      sortByMenuVisible.value = false
+    }
+
+    function intersectedModulesLoading () {
+      moduleLoaded += MODULE_INCREMENT_LOADING
+      setPageFilteredModules(moduleLoaded)
+    }
+
+    function setPageFilteredModules (moduleLoaded: number) {
+      pageFilteredModulesList.value = Object.assign([], filteredModules.value).splice(0, moduleLoaded)
+    }
+
+    return {
+      filteredModules,
+      pageFilteredModulesList,
+      sortByComp,
+      sortByOptions,
+      sortedBy,
+      clearFilters,
+      sortFields,
+      toggleOrderBy,
+      orderedBy,
+      selectSortBy,
+      selectedCategory,
+      intersectedModulesLoading,
+      pending,
+      query,
+      categories,
+      getCategory,
+      modules
+    }
+  }
+})
+</script>

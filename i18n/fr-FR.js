@@ -102,5 +102,8 @@ export default {
     consent: "Nous utilisons des cookies pour l'analyse des utilisateurs et les améliorations sur la page !",
     linkLabel: 'En savoir plus sur les cookies',
     button: 'Accepter'
+  },
+  modules: {
+    error: "Une erreur est survenue lors de la récupération des modules"
   }
 }

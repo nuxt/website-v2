@@ -2,7 +2,8 @@
   <div class="relative pt-24 pb-32 bg-gray-100 dark:bg-secondary-darkest">
     <div class="relative d-container-content">
       <h1 class="text-display-3 font-serif mb-4">{{ title }}</h1>
-      <p :class="{ 'text-body-xl max-w-3xl': !descriptionFullWidth }">{{ description }}</p>
+       <p :class="{ 'text-body-xl max-w-3xl': !descriptionFullWidth }">{{ description }}</p>
+      <Markdown use="bottom" />
     </div>
 
     <img

@@ -57,7 +57,7 @@ export default withDocus({
     '@docus/github',
     '@docus/twitter'
   ],
-  plugins: ['~/plugins/adblock.client'],
+  plugins: ['~/plugins/adblock.client', '~/plugins/v-tooltip.ts'],
   windicss: {
     root: resolve(__dirname),
     config: resolve(__dirname, 'windi.config.js')
@@ -121,7 +121,8 @@ export default withDocus({
       'unsplash.com',
       'user-images.githubusercontent.com',
       'abs.twimg.com',
-      'https://res.cloudinary.com/nuxt/'
+      'https://res.cloudinary.com/nuxt/',
+      'npmjs.com'
     ]
   },
   i18n: {

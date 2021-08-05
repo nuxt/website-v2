@@ -66,7 +66,7 @@ export default {
   resources: {
     themes: {
       get_for_it: "Get it for {price}",
-      video_course: "Start cource"
+      video_course: "Start course"
     }
   },
   sustainability: {
@@ -96,6 +96,9 @@ export default {
     go_to: "Go to {title}",
     go_home: "Go home",
     read_article: "Read article"
+  },
+  modules: {
+    error: "Une erreur est survenue lors de la récupération des modules"
   },
   iso: 'en'
 }

@@ -1,7 +1,7 @@
 <template>
   <div>
     <h2 class="font-semibold text-lg border-b border-b border-b-sky-dark dark:border-b-white mb-4">{{ tier }}</h2>
-    <div class="grid grid-cols-3 gap-8">
+    <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
       <Link
         v-for="sponsor in sponsors"
         :key="sponsor.title"

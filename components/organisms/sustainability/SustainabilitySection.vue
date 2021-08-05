@@ -1,6 +1,6 @@
 <template>
   <div class="py-4 d-container-content">
-    <div class="flex flex-col items-center pt-8 space-y-4 light:text-sky-darker dark:text-white">
+    <div class="flex flex-col pt-8 space-y-4 light:text-sky-darker dark:text-white">
       <!-- h2 class="font-semibold text-center text-display-6">
         <Markdown use="titleSection" unwrap="p" />
       </h2>

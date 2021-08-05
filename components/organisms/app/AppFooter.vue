@@ -63,49 +63,69 @@ export default defineComponent({
   setup() {
     const links = [
       {
-        title: 'Discover',
+        title: 'About',
         subLinks: [
           {
-            title: 'Our team',
-            to: '/team'
+            title: 'Blog',
+            to: '/blog'
+          },
+          {
+            title: 'Support',
+            to: '/support'
           },
           {
             title: 'Design Kit',
             to: '/design'
           },
           {
-            title: 'Contact us',
+            title: 'Contact Us',
             href: 'https://twitter.com/nuxt_js'
           }
         ]
       },
       {
-        title: 'Help',
+        title: 'Ressources',
         subLinks: [
           {
-            title: 'Resources',
-            to: '/resources'
+            title: 'Examples',
+            to: '/examples'
           },
           {
-            title: 'Chat with us',
-            href: 'https://discord.nuxtjs.org/'
+            title: 'Deployments',
+            to: '/docs/deployment'
           },
           {
-            title: 'Contribution guide',
-            href: 'https://github.com/nuxt/nuxtjs.org/blob/main/content/en/_archives/guide/contribution-guide.md'
+            title: 'Modules',
+            to: '/resources/modules'
+          },
+          {
+            title: 'Themes',
+            to: '/resources/themes'
+          },
+          {
+            title: 'Telemetry',
+            href: 'https://stats.nuxtjs.org/'
           }
         ]
       },
       {
-        title: 'Support',
+        title: 'Comunity',
         subLinks: [
           {
-            title: 'Sustainability',
-            to: '/sponsors-nuxtjs'
+            title: 'Team',
+            to: '/team'
           },
           {
-            title: 'Training',
-            to: '/support'
+            title: 'Sustainability',
+            to: '/sponsor-nuxtjs'
+          },
+          {
+            title: 'Vue Telescope',
+            href: 'https://vuetelescope.com/'
+          },
+          {
+            title: 'Videos courses',
+            to: '/resources/video-courses'
           }
         ]
       }

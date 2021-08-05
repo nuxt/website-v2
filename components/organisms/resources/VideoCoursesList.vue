@@ -2,22 +2,23 @@
   <div class="px-6 mb-8">
     <div class="flex flex-wrap grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
       <ContentCardTemplate
-        v-for="({ title, description, image, tier }, id) in videoCourses"
+        v-for="({ title, description, image, tier, link }, id) in videoCourses"
         :key="id"
         class=""
         :title="title"
         :description="description"
         :image="image"
         :tags="[tier]"
+        :href="link"
       >
         <div slot="footer" class="px-4 mb-4 mt-auto">
           <SectionButton
-            to="#"
+            :to="link"
             size="md"
-            aria-label="Start course"
+            :aria-label="$t('resources.themes.video_course')"
             class="bg-primary text-gray-800 hover:bg-primary-400 focus:bg-primary-400"
           >
-            Start course
+            {{ $t('resources.themes.video_course') }}
           </SectionButton>
         </div>
       </ContentCardTemplate>

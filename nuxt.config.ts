@@ -1,11 +1,11 @@
 import { resolve } from 'path'
-import { withDocus } from 'docus'
+import { withDocus } from '@docus/app'
 
 // Learn more at https://docus.dev
 export default withDocus({
   rootDir: __dirname,
   head: {
-    titleTemplate: '%s | NuxtJS',
+    titleTemplate: '%s | Nuxt',
     link: [
       {
         rel: 'stylesheet',
@@ -48,8 +48,16 @@ export default withDocus({
     }
   },
   css: [resolve(__dirname, './assets/nuxt.css')],
-  buildModules: ['@nuxt/typescript-build', 'vue-plausible'],
-  plugins: ['~/plugins/adblock.client'],
+  build: {
+    transpile: ['ohmyfetch']
+  },
+  buildModules: [
+    '@nuxt/typescript-build',
+    'vue-plausible',
+    '@docus/github',
+    '@docus/twitter'
+  ],
+  plugins: ['~/plugins/adblock.client', '~/plugins/v-tooltip.ts'],
   windicss: {
     root: resolve(__dirname),
     config: resolve(__dirname, 'windi.config.js')
@@ -75,9 +83,10 @@ export default withDocus({
     }
   },
   vite: {
-    optimizeDeps: {
-      include: ['cookie', 'js-cookie', 'property-information', 'clipboard'],
-      exclude: ['lokidb']
+    server: {
+      fs: {
+        strict: false
+      }
     }
   },
   image: {
@@ -112,7 +121,8 @@ export default withDocus({
       'unsplash.com',
       'user-images.githubusercontent.com',
       'abs.twimg.com',
-      'https://res.cloudinary.com/nuxt/'
+      'https://res.cloudinary.com/nuxt/',
+      'npmjs.com'
     ]
   },
   i18n: {
@@ -129,15 +139,18 @@ export default withDocus({
         iso: 'fr-FR',
         file: 'fr-FR.js',
         name: 'Français'
+      },
+      {
+        code: 'ja',
+        iso: 'ja-JP',
+        file: 'ja-JP.js',
+        name: '日本語'
       }
     ]
   },
   colorMode: {
     preference: 'system',
     fallback: 'light'
-  },
-  build: {
-    transpile: ['ohmyfetch']
   },
   publicRuntimeConfig: {
     plausible: {

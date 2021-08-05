@@ -52,6 +52,23 @@ export default {
       }
     }
   },
+  home: {
+    discover: {
+      pages: 'Pages',
+      ui: 'UI',
+      data: 'Data',
+      modules: 'Modules',
+      deployment: 'Deployment'
+    },
+    cli: "Depuis l'interface CLI",
+    scratch: "À partir de zéro"
+  },
+  resources: {
+    themes: {
+      get_for_it: "Achetez-le pour {price}",
+      video_course: "Début du cours"
+    }
+  },
   sustainability: {
     tiers: {
       mvp_partners: "Partenaires MVP",
@@ -65,8 +82,11 @@ export default {
     please_define_title: 'Merci de définir un titre',
     please_define_description: 'Merci de définir une description',
     search: 'Rechercher',
+    settings: 'Settings',
     version: 'Version',
-    go_to: "Visiter les",
+    currently_version: 'Currently in private beta',
+    back: 'Dos',
+    go_to: "Visiter {title}",
     go_home: "Retourner à l'accueil",
     read_article: "Lire l'article"
   },
@@ -75,5 +95,8 @@ export default {
     consent: "Nous utilisons des cookies pour l'analyse des utilisateurs et les améliorations sur la page !",
     linkLabel: 'En savoir plus sur les cookies',
     button: 'Accepter'
+  },
+  modules: {
+    error: "Une erreur est survenue lors de la récupération des modules"
   }
 }

@@ -12,7 +12,7 @@
       >
         <div slot="footer" class="px-4 mb-4 mt-auto">
           <SectionButton :to="href" size="md" class="bg-primary text-gray-800 hover:bg-primary-400 focus:bg-primary-400">
-            Get it for {{ price }}
+            {{ $t('resources.themes.get_for_it', { price }) }}
           </SectionButton>
         </div>
       </ContentCardTemplate>

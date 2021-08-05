@@ -26,7 +26,7 @@
   </div>
 </template>
 
-<script lang="ts">
+<script>
 import { defineComponent, useContext, ref, useFetch } from '@nuxtjs/composition-api'
 
 export default defineComponent({
@@ -38,7 +38,6 @@ export default defineComponent({
     }
   },
   setup() {
-
     const { $docus } = useContext()
 
     const mvpPartners = ref()
@@ -54,7 +53,6 @@ export default defineComponent({
       mvpPartners.value = documents.filter(sponsor => sponsor.tier === 'MVP Partners')
       partners.value = documents.filter(sponsor => sponsor.tier === 'Partners')
       sponsors.value = documents.filter(sponsor => sponsor.tier === 'Sponsors')
-
     })
 
     return {

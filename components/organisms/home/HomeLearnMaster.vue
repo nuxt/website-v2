@@ -42,7 +42,7 @@
   </HomeSection>
 </template>
 
-<script lang="ts">
+<script>
 import { defineComponent, onMounted, ref } from '@nuxtjs/composition-api'
 
 export default defineComponent({

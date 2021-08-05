@@ -33,7 +33,8 @@
     </div>
   </div>
 </template>
-<script lang="ts">
+
+<script>
 import { defineComponent } from '@vue/composition-api'
 
 export default defineComponent({
@@ -42,7 +43,6 @@ export default defineComponent({
       type: String,
       default: 'Contact Us'
     }
-  },
-  setup() {},
+  }
 })
 </script>

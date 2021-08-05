@@ -18,7 +18,7 @@
         <div>
           <span
             class="nuxt-text-highlight"
-            >Currently in private beta</span
+            >{{ $t('common.currently_version') }}</span
           >
         </div>
         <h1

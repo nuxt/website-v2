@@ -87,6 +87,10 @@ export default withDocus({
       fs: {
         strict: false
       }
+    },
+    optimizeDeps: {
+      exclude: ['vue-demi', 'scule', '@vueuse/integrations', 'ohmyfetch'],
+      include: ['defu', 'theme-colors', 'cookie', 'js-cookie', 'clipboard', 'property-information', 'ufo']
     }
   },
   image: {
@@ -122,7 +126,10 @@ export default withDocus({
       'user-images.githubusercontent.com',
       'abs.twimg.com',
       'https://res.cloudinary.com/nuxt/',
-      'npmjs.com'
+      'npmjs.com',
+      'cdn.krutiepatel.com',
+      'nuxtjs.org',
+      'i.imgur.com'
     ]
   },
   i18n: {

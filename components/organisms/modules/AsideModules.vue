@@ -30,9 +30,9 @@
         <div class="py-4 pr-0">
           <ul class="flex flex-wrap lg:flex-col">
             <li v-for="category in categories" :key="category.name">
-              <button @click="selectCategory(category.name)" class="py-2 px-4 flex justify-between w-full focus:outline-none focus:ring-transparent" :class="{ 'rounded-md bg-gray-100 dark:bg-white dark:bg-opacity-10': category.name === selected }">
+              <button @click="selectCategory(category.name)" class="py-2 px-4 flex justify-between w-full focus:outline-none focus:ring-transparent" :class="{ 'rounded-md bg-gray-100 dark:bg-white dark:bg-opacity-10': category.name === selectedCategory }">
                 <div class="truncate max-w-48 font">{{ category.name }}</div>
-                <span v-if="category.name === selected" class="rounded-xl bg-white dark:bg-sky-darkest ml-2 px-2 py-0.5 text-xs">{{ category.count }}</span>
+                <span v-if="category.name === selectedCategory" class="rounded-xl bg-white dark:bg-sky-darkest ml-2 px-2 py-0.5 text-xs">{{ category.count }}</span>
               </button>
             </li>
           </ul>
@@ -43,51 +43,17 @@
 </template>
 <script lang="ts">
 import { defineComponent, ref, onMounted, useFetch } from '@nuxtjs/composition-api'
-import { useModules } from '../../../plugins/modulesList'
+import { useFuse } from '../../../plugins/fuse'
+import { useModules } from '../../../plugins/modules'
 
 export default defineComponent({
-  props: {
-    modules: {
-      type: Array,
-      required: true
-    },
-    selectedCategory: {
-      type: String,
-      default: null
-    }
-  },
   setup(props, { emit }) {
-    // @ts-i, gnore
-    let selected = ref('')
-    let categories = ref([])
-    const { getModulesCategories } = useModules()
-
-    //fetch modules
-    useFetch(async () => {
-      await getModulesCategories(props.modules).then((categs) => {
-        categories.value = categs
-      })
-    })
-
-    onMounted(() => {
-      if (props.selectedCategory) {
-        selectCategory(props.selectedCategory)
-      }
-    })
-
-    function selectCategory (category: string) {
-      if (selected.value === category) {
-        selected.value = null
-      } else {
-        selected.value = category
-      }
-
-      emit('category', selected.value)
-    }
+    const { categories, modules } = useModules()
+    const { selectedCategory, selectCategory } = useFuse(modules)
 
     return {
       categories,
-      selected,
+      selectedCategory,
       selectCategory
     }
   },

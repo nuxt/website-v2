@@ -1,7 +1,7 @@
 <template>
   <div class="py-4 d-container-content">
     <div class="flex flex-col items-center pt-8 space-y-4 light:text-sky-darker dark:text-white">
-      <h2 class="font-semibold text-center text-display-6">
+      <!-- h2 class="font-semibold text-center text-display-6">
         <Markdown use="titleSection" unwrap="p" />
       </h2>
 
@@ -9,19 +9,21 @@
         <p class="text-center md:w-2/3">
           <Markdown use="descriptionSection" unwrap="p" />
         </p>
-      </div>
+      </div-->
 
-      <section-sponsors :tier="$t('sustainability.tiers.mvp_partners')" :sponsors="mvpPartners" />
-      <section-sponsors :tier="$t('sustainability.tiers.partners')" :sponsors="partners" />
-      <section-sponsors :tier="$t('sustainability.tiers.sponsors')" :sponsors="sponsors" />
+      <SustainabilityDonation :donations="donations" />
 
-      <SectionButton
+      <SectionSponsors :tier="$t('sustainability.tiers.mvp_partners')" :sponsors="mvpPartners" class="pb-12" />
+      <SectionSponsors :tier="$t('sustainability.tiers.partners')" :sponsors="partners" class="pb-12" />
+      <SectionSponsors :tier="$t('sustainability.tiers.sponsors')" :sponsors="sponsors" />
+
+      <!-- SectionButton
         to="https://github.com/sponsors/nuxt"
         :aria-label="buttonText"
         size="md"
         class="text-gray-800 bg-primary hover:bg-primary-400 focus:bg-primary-400">
           {{ buttonText }}
-      </SectionButton>
+      </SectionButton -->
     </div>
   </div>
 </template>
@@ -43,6 +45,7 @@ export default defineComponent({
     const mvpPartners = ref()
     const partners = ref()
     const sponsors = ref()
+    const donations = ref()
 
     useFetch(async () => {
       const documents = await $docus
@@ -53,12 +56,14 @@ export default defineComponent({
       mvpPartners.value = documents.filter(sponsor => sponsor.tier === 'MVP Partners')
       partners.value = documents.filter(sponsor => sponsor.tier === 'Partners')
       sponsors.value = documents.filter(sponsor => sponsor.tier === 'Sponsors')
+      donations.value = documents.filter(sponsor => sponsor.tier === 'Donations')
     })
 
     return {
       mvpPartners,
       partners,
-      sponsors
+      sponsors,
+      donations
     }
   }
 })

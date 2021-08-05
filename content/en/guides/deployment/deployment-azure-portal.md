@@ -12,6 +12,38 @@ position: 102
 - It is required that you select a backend when setting up the project. Even if you don't need it, or else the site won't start up.
 - The server is running Node 8 or greater
 
+## Azure Web App
+
+Deploying a NuxtJS SPA, as a zip artifact, to an Azure Web App (_Web App on Linux_), using the Azure pipeline task `AzureWebApp@1`, required the following adjustments:
+
+### Pipeline `vmImage`
+
+- `vmImage: 'vs2017-win2016'` (***worked***)
+- vmImage: 'ubuntu-latest' (_did not work_)
+
+### NuxtJS
+
+```js{}[nuxt.config.js]
+server: {
+  host: process.env.HOST || 'localhost',
+  port: process.env.PORT || 3000
+}
+```
+
+```json{}[package.json]
+scripts: {
+  "start": "node ./node_modules/nuxt/bin/nuxt.js start"
+}
+```
+
+### Azure App Service
+The addition to the _App Service_ > _Configuration_ > _Application settings_ of the following environment variables:
+
+```sh
+HOST=0.0.0.0
+PORT=8080 # this was necessary at first, but later it was not (shrug)
+```
+
 ## What if I already have a project without a backend?
 
 No worries. It is easy to add an express server to an existing project.

@@ -1,2 +1,73 @@
+# 2.x
 /docs/2.x /docs 301!
 
+# Components glossary
+/docs/2.x/components-glossary/pages-fetch docs/components-glossary/fetch 301!
+/docs/2.x/components-glossary/pages-head /docs/components-glossary/head 301!
+/docs/2.x/components-glossary/pages-key /docs/components-glossary/key 301!
+/docs/2.x/components-glossary/pages-layout /docs/components-glossary/layout 301!
+/docs/2.x/components-glossary/pages-loading /docs/components-glossary/loading 301!
+/docs/2.x/components-glossary/pages-middleware /docs/components-glossary/middleware 301!
+/docs/2.x/components-glossary/pages-transition /docs/components-glossary/transition 301!
+/docs/2.x/components-glossary/pages-scrolltotop /docs/components-glossary/scrolltotop 301!
+/docs/2.x/components-glossary/pages-validate /docs/components-glossary/validate 301!
+/docs/2.x/components-glossary/pages-watchquery /docs/components-glossary/watchquery 301!
+
+# Deployment
+/docs/2.x/deployment/deploying-to-21yunbox /docs/deployment/21yunbox 301!
+/docs/2.x/deployment/deployment-amazon-web-services /docs/deployment/amazon-web-services 301!
+/docs/2.x/deployment/deployment-azure-portal /docs/deployment/azure-portal 301!
+/docs/2.x/deployment/deployment-azure-static-web-apps /docs/deployment/azure-static-web-apps 301!
+/docs/2.x/deployment/bip-deployment /docs/deployment/bip 301!
+/docs/2.x/deployment/cleavr-deployment /docs/deployment/cleavr 301!
+/docs/2.x/deployment/deploying-to-do-app-platform /docs/deployment/do-app-platform 301!
+/docs/2.x/deployment/dokku-deployment /docs/deployment/dokku 301!
+/docs/2.x/deployment/deployment-fume /docs/deployment/fume 301!
+/docs/2.x/deployment/appengine-deployment /docs/deployment/google-appengine 301!
+/docs/2.x/deployment/deployment-cloud-run /docs/deployment/google-cloud-run 301!
+/docs/2.x/deployment/heroku-deployment /docs/deployment/heroku 301!
+/docs/2.x/deployment/hostman-deployment /docs/deployment/hostman 301!
+/docs/2.x/deployment/deployment-koyeb /docs/deployment/koyeb 301!
+/docs/2.x/deployment/deploy-on-moovweb /docs/deployment/layer0 301!
+/docs/2.x/deployment/netlify-deployment /docs/deployment/netlify 301!
+/docs/2.x/deployment/nginx-proxy /docs/deployment/nginx 301!
+/docs/2.x/deployment/deployment-platformsh /docs/deployment/platformsh 301!
+/docs/2.x/deployment/deployment-pm2 /docs/deployment/pm2 301!
+/docs/2.x/deployment/deployment-qovery /docs/deployment/qovery 301!
+/docs/2.x/deployment/surge-deployment /docs/deployment/surge 301!
+/docs/2.x/deployment/vercel-deployment /docs/deployment/vercel 301!
+/docs/2.x/deployment/deployment-cloudflare /docs/deployment/cloudflare 301!
+/docs/2.x/deployment/deployment-stormkitio /docs/deployment/Stormkitio 301!
+
+# Examples
+/examples/hello-world /examples/routing/hello-world 301!
+/examples/routing-active-links-classes /examples/routing/active-link-classes 301!
+/examples/routing-dynamic-pages /examples/routing/dynamic-pages 301!
+/examples/routing-nested-pages /examples/routing/nested-pages 301!
+/examples/data-fetching-async-data examples/data-fetching/async-data 301!
+/examples/data-fetching-fetch-hook /examples/data-fetching/fetch-hook 301!
+/examples/webpack-assets /examples/assets-management/webpack-assets 301!
+/examples/pre-processors /examples/assets-management/pre-processors 301!
+/examples/transitions /examples/transitions/transitions 301!
+/examples/seo-html-head /examples/seo/html-head 301!
+/examples/seo-twitter-og /examples/seo/twitter-og 301!
+/examples/customize-nuxt-loading /examples/loading/customize-nuxt-loading 301!
+/examples/customize-loading-indicator /examples/loading/customize-loading-indicator 301!
+/examples/custom-loading-component /examples/loading/custom-loading-component 301!
+/examples/layouts /examples/miscellaneous/layouts 301!
+/examples/lazy-loading-components /examples/miscellaneous/lazy-loading-components 301!
+/examples/vuex-store /examples/miscellaneous/vuex-store 301!
+/examples/helpers /examples/miscellaneous/helpers 301!
+/examples/middleware-router /examples/middlewares/router 301!
+/examples/middleware-named /examples/middlewares/named 301!
+/examples/middleware-anonymous /examples/middlewares/anonymous 301!
+/examples/plugins-vue /examples/plugins/vue 301!
+/examples/plugins-client-only /examples/plugins/client-only 301!
+/examples/plugins-external-packages /examples/plugins/external-packages 301!
+/examples/plugins-custom /examples/plugins/custom 301!
+/examples/modules-internal /examples/modules/local 301!
+/examples/modules-axios /examples/modules/axios 301!
+
+# Resources
+/themes /resources/themes 301!
+/video-courses /resources/video-courses 301!

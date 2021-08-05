@@ -73,7 +73,14 @@ export default {
     tiers: {
       mvp_partners: "MVP パートナー",
       partners: "パートナー",
-      sponsors: "スポンサー"
+      sponsors: "スポンサー",
+      donations: "寄付"
+    },
+    mvp_detail: {
+      services: "サービス",
+      location: "場所",
+      contact_partner: "Contact Partner",
+      visit_website: "Visit Website"
     }
   },
   common: {

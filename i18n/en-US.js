@@ -73,7 +73,14 @@ export default {
     tiers: {
       mvp_partners: "MVP Partners",
       partners: "Partners",
-      sponsors: "Sponsors"
+      sponsors: "Sponsors",
+      donations: "Donate"
+    },
+    mvp_detail: {
+      services: "Services",
+      location: "Location",
+      contact_partner: "Contact Partner",
+      visit_website: "Visit Website"
     }
   },
   common: {

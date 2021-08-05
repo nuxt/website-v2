@@ -109,7 +109,7 @@ export default defineComponent({
         ]
       },
       {
-        title: 'Comunity',
+        title: 'Community',
         subLinks: [
           {
             title: 'Team',

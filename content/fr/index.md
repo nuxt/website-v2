@@ -125,7 +125,7 @@ Un [_développement_]{.text-primary} soutenu
 Nuxt est construit et maintenu par des développeurs passionnés mais il serait impossible de fournir les efforts nécessaires pour développer et maintenir de nouvelles fonctionnalités sans une réelle contribution financière. Nous remercions nos sponsors et partenaires qui rendent cela possible.<br>
 
 #bottom
-:button-link[Sponsorisez NuxtJS]{href="/sponsors-nuxtjs" size="medium"}
+:button-link[Sponsorisez NuxtJS]{href="/sponsor-nuxtjs" size="medium"}
 ::
 
 ::home-learn-master

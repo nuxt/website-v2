@@ -1,6 +1,34 @@
 <template>
-  <Link :to="module.website" target="blank" class="group relative hover:bg-gray-50 hover:dark:bg-opacity-80 dark:bg-sky-darker rounded-md shadow-md h-64 lg:h-40 p-4 flex flex-col justify-between">
-    <div class="transition-opacity duration-200 ease-in-out opacity-0 group-hover:opacity-100 absolute top-4 right-4 cursor-pointer">
+  <Link
+    :to="module.website"
+    target="blank"
+    class="
+      group
+      relative
+      hover:bg-gray-50 hover:dark:bg-opacity-80
+      dark:bg-sky-darker
+      rounded-md
+      shadow-md
+      h-64
+      lg:h-40
+      p-4
+      flex flex-col
+      justify-between
+    "
+  >
+    <div
+      class="
+        transition-opacity
+        duration-200
+        ease-in-out
+        opacity-0
+        group-hover:opacity-100
+        absolute
+        top-4
+        right-4
+        cursor-pointer
+      "
+    >
       <nuxt-img alt="external_link" src="/img/icons/ext.svg" width="24" height="24" />
     </div>
     <div class="flex flex-col lg:flex-row space-y-4 lg:space-y-0 lg:space-x-3">
@@ -14,23 +42,48 @@
     </div>
     <div class="lg:flex lg:flex-row-reverse justify-between w-full">
       <ul class="flex space-x-1 pb-4 lg:pb-0">
-        <li v-for="maintainer in module.maintainers"
+        <li
+          v-for="maintainer in module.maintainers"
           :key="maintainer.name"
-          v-tooltip="{ content: maintainer.name, classes: ['bg-sky-darker dark:bg-white', 'text-white dark:text-sky-darker', 'px-2', 'py-1', 'rounded', 'text-sm'] }"
+          v-tooltip="{
+            content: maintainer.name,
+            classes: [
+              'bg-sky-darker dark:bg-white',
+              'text-white dark:text-sky-darker',
+              'px-2',
+              'py-1',
+              'rounded',
+              'text-sm'
+            ]
+          }"
         >
           <Link :to="`https://github.com/${maintainer.github}`" target="blank">
-            <img :src="maintainer.avatar" :alt="maintainer.name" class="rounded-full w-6 h-6">
+            <img :src="maintainer.avatar" :alt="maintainer.name" class="rounded-full w-6 h-6" />
           </Link>
         </li>
       </ul>
       <div class="flex items-center space-x-4 w-1/2 text-xs font-medium">
         <Link :to="module.github" class="group flex space-x-2 items-center" target="blank">
-          <IconStar alt="Star icon" class="text-sky-dark group-hover:text-sky-darker dark:text-cloud-surface dark:group-hover:text-white"/>
+          <IconStar
+            alt="Star icon"
+            class="text-sky-dark group-hover:text-sky-darker dark:text-cloud-surface dark:group-hover:text-white"
+          />
           <span class="truncate pt-0.5">{{ numberFormat(module.stars) }} star{{ module.stars !== 1 ? 's' : '' }}</span>
         </Link>
-        <Link :to="npmUrl" class="group flex space-x-2 items-center" target="blank" >
-          <IconDownload alt="Download icon" class="w-4 h-4 text-sky-dark group-hover:text-sky-darker dark:text-cloud-surface dark:group-hover:text-white" />
-          <span class="truncate pt-0.5">{{ numberFormat(module.downloads) }} download{{ module.downloads !== 1 ? 's' : '' }}</span>
+        <Link :to="npmUrl" class="group flex space-x-2 items-center" target="blank">
+          <IconDownload
+            alt="Download icon"
+            class="
+              w-4
+              h-4
+              text-sky-dark
+              group-hover:text-sky-darker
+              dark:text-cloud-surface dark:group-hover:text-white
+            "
+          />
+          <span class="truncate pt-0.5"
+            >{{ numberFormat(module.downloads) }} download{{ module.downloads !== 1 ? 's' : '' }}</span
+          >
         </Link>
       </div>
     </div>
@@ -50,23 +103,25 @@ export default defineComponent({
   computed: {
     iconUrl() {
       const { icon, category } = this.module
+
       if (icon && icon.startsWith('https://')) {
         return icon
       }
+
       if (icon) {
         return `https://modules.nuxtjs.org/icons/${icon}`
       }
 
-      return `img/modules/categories/${category.toLowerCase()}.svg`
+      return `img/modules/categories/${(category || '').toLowerCase()}.svg`
     },
 
-    npmUrl () {
+    npmUrl() {
       return `https://npmjs.com/package/${this.module.npm}`
     },
 
-    githubUrl () {
-     return `https://github.com/${this.module.github}`
-    },
+    githubUrl() {
+      return `https://github.com/${this.module.github}`
+    }
   },
   methods: {
     numberFormat(num: any, options = { precision: 1 }) {

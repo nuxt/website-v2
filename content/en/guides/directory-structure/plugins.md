@@ -259,6 +259,8 @@ Sometimes you want to make functions or values available across your app. You ca
 
 Nuxt.js provides you with an `inject(key, value)` method to do this easily. Inject is given as the second parameter when exporting a function. The `$` will be prepended automatically to the key.
 
+You can also use `options` provided by a module using [the plugin-template](/docs/2.x/directory-structure/modules#template-plugins).
+
 <base-alert type="info">
 
 It is important to know that in any Vue [instance lifecycle](https://vuejs.org/v2/guide/instance.html#Lifecycle-Diagram), only  `beforeCreate` and `created` hooks are called both, from client-side and server-side. All other hooks are called only from the client-side.

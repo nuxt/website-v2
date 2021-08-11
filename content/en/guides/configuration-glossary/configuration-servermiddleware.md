@@ -89,10 +89,10 @@ serverMiddleware: ['~/server-middleware/logger']
 A server middleware can also extend Express. This allows the creation of REST endpoints.
 
 ```js{}[server-middleware/rest.js]
-const bodyParser = require('body-parser')
-const app = require('express')()
+const express = require('express')
+const app = express()
 
-app.use(bodyParser.json())
+app.use(express.json())
 app.all('/getJSON', (req, res) => {
   res.json({ data: 'data' })
 })

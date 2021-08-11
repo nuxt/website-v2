@@ -62,7 +62,7 @@ Registers a plugin using `addTemplate` and prepends it it to `plugins[]` array.
 ```js
 this.addPlugin({
   src: path.resolve(__dirname, 'templates/foo.js'),
-  fileName: 'foo.server.js' // [optional] only include in server bundle
+  fileName: 'foo.server.js', // [optional] only include in server bundle
   options: moduleOptions
 })
 ```

@@ -6,11 +6,6 @@
     "dev": "nuxt dev",
     "start": "nuxt start"
   },
-  "resolutions": {
-    "@nuxt/components": "npm:@pi0/components",
-    "vue-server-renderer": "2.6.14",
-    "vue-template-compiler": "2.6.14"
-  },
   "dependencies": {
     "@docus/app": "^1.1.3",
     "@docus/github": "^1.0.4",

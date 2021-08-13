@@ -11,3 +11,4 @@ sw.*
 .output
 .husky
 package-lock.json
+yarn-error.log

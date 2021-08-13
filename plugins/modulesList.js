@@ -1,10 +1,14 @@
 import { ref, useContext } from '@nuxtjs/composition-api'
-import { $fetch } from 'ohmyfetch/node'
+import { $fetch } from 'ohmyfetch'
+
+// Nuxt API URL
+const apiURL = 'https://api.nuxtjs.org/api'
+
+// Universal $fetch workaround (server/client side)
+const _fetch = typeof fetch === 'undefined' ? require('ohmyfetch/node').$fetch : $fetch
 
 let modules = null
 export function useModules() {
-  const apiURL = 'https://api.nuxtjs.org/api'
-
   const getModules = async () => {
     if (modules) return modules
     modules = await $fetch(`${apiURL}/modules`)

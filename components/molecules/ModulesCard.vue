@@ -1,6 +1,5 @@
 <template>
   <div
-    target="blank"
     class="
       group
       relative
@@ -15,6 +14,7 @@
       justify-between
     "
   >
+    <Link :to="module.website" :aria-label="module.website" target="_blank" class="absolute inset-0" />
     <div
       class="
         transition-opacity
@@ -39,7 +39,7 @@
         </div>
       </div>
     </div>
-    <div class="lg:flex lg:flex-row-reverse justify-between w-full">
+    <div class="lg:flex lg:flex-row-reverse justify-between w-full z-0">
       <ul class="flex space-x-1 pb-4 lg:pb-0">
         <li
           v-for="maintainer in module.maintainers"

@@ -12,14 +12,14 @@
     "vue-template-compiler": "2.6.14"
   },
   "dependencies": {
-    "@docus/app": "^1.0.38",
-    "@docus/github": "^1.0.3",
-    "@docus/social-image": "^1.0.2",
-    "@docus/theme": "^1.0.7",
-    "@docus/twitter": "^1.0.3",
+    "@docus/app": "^1.1.3",
+    "@docus/github": "^1.0.4",
+    "@docus/social-image": "^1.0.3",
+    "@docus/theme": "^1.1.1",
+    "@docus/twitter": "^1.0.4",
     "@nuxt/typescript-build": "^2.1.0",
     "@snackbar/core": "^1.7.0",
-    "lottie-web": "^5.7.12",
+    "lottie-web": "^5.7.13",
     "vue-plausible": "^1.2.1"
   },
   "devDependencies": {
@@ -33,7 +33,7 @@
     "v-tooltip": "^2.1.3",
     "vue-lazy-hydration": "^2.0.0-beta.4",
     "ts-loader": "8.2.0",
-    "@nuxt/types": "^2.15.7",
+    "@nuxt/types": "^2.15.8",
     "eslint": "^7.32.0",
     "eslint-config-prettier": "^8.3.0",
     "eslint-plugin-nuxt": "^2.0.0",

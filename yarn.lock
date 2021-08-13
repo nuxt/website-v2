@@ -1490,12 +1490,12 @@
     upath "^2.0.1"
     wrap-ansi "^7.0.0"
 
-"@nuxt/components@^2.2.0", "@nuxt/components@npm:@pi0/components":
-  version "2.1.8"
-  resolved "https://registry.yarnpkg.com/@pi0/components/-/components-2.1.8.tgz#9d95e781b9ab797e5befb1c7bb4b3571985dc4d1"
-  integrity sha512-ibyKBG9OcUnxJVBgkgnoJHcstQ/imCuHJMYzvZbRh+8sg2q6TpMx0paFfNcc5f+gLIvbatGM5LFg9+AZgUuZUA==
+"@nuxt/components@^2.2.0":
+  version "2.2.0"
+  resolved "https://registry.yarnpkg.com/@nuxt/components/-/components-2.2.0.tgz#8e97f01db71665d10ac94614df76c662a9b9f63e"
+  integrity sha512-D7kxuboGDCd8lFU7zYH9iVUT7IL6nMHLCp0ajvRS26Y5gZRggkXMnGGNp7oCv0FY7UVySmJ7wzy0Ctl46eKqdw==
   dependencies:
-    chalk "^4.1.1"
+    chalk "^4.1.2"
     chokidar "^3.5.2"
     glob "^7.1.7"
     globby "^11.0.4"
@@ -13060,7 +13060,7 @@ vue-router@^3.5.2:
   resolved "https://registry.yarnpkg.com/vue-router/-/vue-router-3.5.2.tgz#5f55e3f251970e36c3e8d88a7cd2d67a350ade5c"
   integrity sha512-807gn82hTnjCYGrnF3eNmIw/dk7/GE4B5h69BlyCK9KHASwSloD1Sjcn06zg9fVG4fYH2DrsNBZkpLtb25WtaQ==
 
-vue-server-renderer@2.6.14, vue-server-renderer@^2.6.14:
+vue-server-renderer@^2.6.14:
   version "2.6.14"
   resolved "https://registry.yarnpkg.com/vue-server-renderer/-/vue-server-renderer-2.6.14.tgz#c8bffff152df6b47b858818ef8d524d2fc351654"
   integrity sha512-HifYRa/LW7cKywg9gd4ZtvtRuBlstQBao5ZCWlg40fyB4OPoGfEXAzxb0emSLv4pBDOHYx0UjpqvxpiQFEuoLA==
@@ -13082,7 +13082,7 @@ vue-style-loader@^4.1.0, vue-style-loader@^4.1.3:
     hash-sum "^1.0.2"
     loader-utils "^1.0.2"
 
-vue-template-compiler@2.6.14, vue-template-compiler@^2.6.14:
+vue-template-compiler@^2.6.14:
   version "2.6.14"
   resolved "https://registry.yarnpkg.com/vue-template-compiler/-/vue-template-compiler-2.6.14.tgz#a2f0e7d985670d42c9c9ee0d044fed7690f4f763"
   integrity sha512-ODQS1SyMbjKoO1JBJZojSw6FE4qnh9rIpUZn2EUT86FKizx9uH5z6uXiIrm4/Nb/gwxTi/o17ZDEGWAXHvtC7g==

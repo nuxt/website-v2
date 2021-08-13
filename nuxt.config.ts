@@ -86,6 +86,10 @@ export default withDocus({
     server: {
       fs: {
         strict: false
+      },
+      optimizeDeps: {
+        exclude: ['vue-demi', 'scule', '@vueuse/integrations', 'ohmyfetch'],
+        include: ['defu', 'theme-colors', 'cookie', 'js-cookie', 'clipboard', 'property-information', 'ufo', 'url']
       }
     }
   },

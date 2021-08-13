@@ -1,0 +1,132 @@
+<template>
+  <div class="mt-4 ml-4">
+    <h3 class="text-xl font-medium">
+      {{ title }}
+    </h3>
+    <ul class="flex flex-col space-y-4">
+      <li>
+        <Markdown use="step-1" unwrap="p" />
+        <div class="w-64 pt-4 pl-10">
+          <NuxtSelectNative
+            v-model="status"
+            :options="statusList"
+            select-class="w-full px-4 py-2 border rounded bg-none dark:bg-transparent light:bg-white focus:outline-none light:focus:ring-black dark:focus:ring-white light:focus:border-gray-400 dark:focus:border-secondary-light sm:text-sm"
+          />
+        </div>
+      </li>
+      <li>
+        <Markdown use="step-2" unwrap="p" />
+        <div class="w-64 pt-4 pl-10">
+          <NuxtTextInput
+            v-model="company"
+            :placeholder="placeholder.company"
+            class="w-full p-2 text-sm bg-transparent border rounded outline-none"
+          />
+        </div>
+      </li>
+      <li>
+        <Markdown use="step-3" unwrap="p" />
+        <div class="flex space-x-4">
+          <div class="w-64 pt-4 pl-10">
+            <NuxtTextInput
+              v-model="name"
+              :placeholder="placeholder.name"
+              class="w-full p-2 text-sm bg-transparent border rounded outline-none"
+            />
+          </div>
+          <div class="w-56 pt-4">
+            <NuxtTextInput
+              v-model="email"
+              :placeholder="placeholder.mail"
+              class="w-full p-2 text-sm bg-transparent border rounded outline-none"
+            />
+          </div>
+          <div class="w-56 pt-4">
+            <NuxtTextInput
+              v-model="phone"
+              :placeholder="placeholder.phone"
+              class="w-full p-2 text-sm bg-transparent border rounded outline-none"
+            />
+          </div>
+        </div>
+      </li>
+      <li>
+        <Markdown use="step-4" unwrap="p" />
+        <div class="w-5/12 pt-4 pl-10 pr-4">
+          <NuxtTextInput
+            v-model="subject"
+            :placeholder="placeholder.subject"
+            class="w-full p-2 text-sm bg-transparent border rounded outline-none"
+          />
+        </div>
+      </li>
+      <li>
+        <Markdown use="step-5" unwrap="p" />
+        <div class="w-5/12 pt-4 pl-10 pr-4">
+          <textarea
+            rows='8'
+            v-model="message"
+            :placeholder="placeholder.message"
+            class="w-full p-2 text-sm bg-transparent border rounded outline-none"
+          />
+        </div>
+      </li>
+    </ul>
+    <SectionButton
+      :aria-label="buttonText"
+      size="md"
+      class="mt-4 ml-10 text-gray-800 bg-primary hover:bg-primary-400 focus:bg-primary-400"
+      >{{ buttonText }}</SectionButton
+    >
+  </div>
+</template>
+<script lang="ts">
+import { defineComponent, ref } from '@nuxtjs/composition-api'
+
+export default defineComponent({
+  props: {
+    title: {
+      type: String,
+      default: 'Send us a message'
+    },
+    statusList: {
+      type: Array,
+      default: () => [`I'am a company`, `I'am a student`]
+    },
+    placeholder: {
+      type: Object,
+      default: {
+        company: '',
+        name: '',
+        mail: '',
+        phone: '',
+        subject: '',
+        message: ''
+      }
+    },
+    buttonText: {
+      type: String,
+      default: 'Send message'
+    }
+  },
+  setup(props) {
+    const status = ref(props.statusList[0])
+    const company = ref('')
+    const name = ref('')
+    const email = ref('')
+    const phone = ref('')
+    const subject = ref('')
+    const message = ref('')
+
+    return {
+      status,
+      company,
+      name,
+      email,
+      phone,
+      subject,
+      message
+    }
+  },
+})
+</script>

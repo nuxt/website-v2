@@ -9,24 +9,24 @@ const ORDERS = {
   ASC: 'asc'
 }
 // Incrementing interval
-const MODULE_INCREMENT_LOADING = 12
+const MODULE_INCREMENT_LOADING = 24
 // Sorting fields
 const sortFields = [
   { text: 'Downloads', value: 'downloads' },
   { text: 'Stars', value: 'stars' }
 ]
+// Filtered modules from Fuse
+const filteredModules = ssrRef([])
 // Fuse instance
-const fuse = ssrRef(undefined, 'fuseInstanceRef')
+let fuse
 // Query reference
 const query = ssrRef(undefined, 'fuseQueryRef')
 // Ordered by
-const orderedBy = ssrRef(ORDERS.DESC, 'fuseOrderRef')
+const orderedBy = ssrRef('desc', 'fuseOrderRef')
 // Sorted by
-const sortedBy = ssrRef(sortFields[0].value, 'fuseSortedByRef')
-// Sort by menu
-const sortByMenuVisible = ssrRef(false, 'fuseSortByMenuVisible')
+const sortedBy = ssrRef('downloads', 'fuseSortedByRef')
 // Currently selected category
-const selectedCategory = ssrRef('', 'fuseSortByCategoryRef')
+const selectedCategory = ssrRef(undefined, 'fuseSortByCategoryRef')
 // Amount of modules loaded
 const modulesLoaded = ssrRef(MODULE_INCREMENT_LOADING, 'fuseModulesLoadedRef')
 
@@ -39,33 +39,45 @@ export function useFuse(modules) {
   // Context
   const { route } = useContext()
 
-  // Filtered modules list
-  const filteredModules = computed(() => {
-    let filteredModulesList = modules.value
-
-    // Filter modules w/ Fuse
-    if (filteredModulesList) {
-      if (query.value) {
-        filteredModulesList = fuse.value.search(query.value).map(r => r.item)
-      } else {
-        filteredModulesList = filteredModulesList.sort((a, b) =>
-          sort(a[sortedBy.value], b[sortedBy.value], orderedBy.value === ORDERS.ASC)
-        )
-      }
-
-      if (selectedCategory.value) {
-        filteredModulesList = filteredModulesList.filter(module => module.category === selectedCategory.value)
-      }
-    }
-
-    return (filteredModulesList || []).splice(0, modulesLoaded.value)
-  })
-
   // Sorting options
   const sortByComp = computed(() => sortFields[sortedBy.value])
 
   // Watch local references and sync URL on changes
-  watch([selectedCategory, query, orderedBy, sortedBy], syncURL)
+  watch([selectedCategory, query, orderedBy, sortedBy], () => {
+    updateList(modules)
+    syncURL()
+  })
+
+  // Watch modules count to display and update list accordingly
+  watch(modulesLoaded, () => updateList(modules))
+
+  // Update modules list
+  function updateList(modules) {
+    let filteredModulesList = Object.assign([], modules.value)
+
+    // Filter modules w/ Fuse
+    if (fuse && query.value) {
+      filteredModulesList = fuse.search(query.value).map(r => r.item)
+    }
+
+    // Filter by sorting type
+    if (sortedBy.value) {
+      filteredModulesList = filteredModulesList.sort((a, b) =>
+        sort(a[sortedBy.value], b[sortedBy.value], orderedBy.value === ORDERS.ASC)
+      )
+    }
+
+    // Filter by categories
+    if (selectedCategory.value) {
+      filteredModulesList = filteredModulesList.filter(module => module.category === selectedCategory.value)
+    }
+
+    // Splice with intersection observer count value
+    filteredModulesList = filteredModulesList.splice(0, modulesLoaded.value)
+
+    // Assign to displayed list
+    filteredModules.value = filteredModulesList
+  }
 
   // Initialize Fuse
   function init() {
@@ -74,70 +86,46 @@ export function useFuse(modules) {
       keys: ['name', 'npm', 'category', 'maintainers.name', 'maintainers.github', 'description', 'repo']
     }
 
+    // Create index
     const index = Fuse.createIndex(fuseOptions.keys, modules.value)
 
-    fuse.value = new Fuse(modules.value, fuseOptions, index)
+    // Create Fuse instance
+    fuse = new Fuse(modules.value, fuseOptions, index)
 
+    // Get selected category from hash location
     selectedCategory.value = (window.location.hash || '').substr(1)
 
+    // Get other query params
     const { q, sortBy, orderBy } = route.value.query
 
-    if (q) {
-      query.value = q
-    }
+    if (q) query.value = q
 
-    if (sortBy) {
-      sortedBy.value = sortBy
-    }
+    if (sortBy) sortedBy.value = sortBy
 
-    if (orderBy) {
-      orderedBy.value = orderBy
-    }
-
-    modulesLoaded.value = MODULE_INCREMENT_LOADING
+    if (orderBy) orderedBy.value = orderBy
   }
 
   // Sync page URL with current page state
   function syncURL() {
     const url = route.value.path
+
     let q = ''
-    resetModulesLoaded()
-    modulesLoaded.value = MODULE_INCREMENT_LOADING
 
-    if (query.value) {
-      q += `?q=${query.value}`
-    }
+    if (query.value) q += `?q=${query.value}`
 
-    if (orderedBy.value !== ORDERS.DESC) {
-      q += `${q ? '&' : '?'}orderBy=${orderedBy.value}`
-    }
+    if (orderedBy.value !== ORDERS.DESC) q += `${q ? '&' : '?'}orderBy=${orderedBy.value}`
 
-    if (sortedBy.value !== sortFields[0].value) {
-      q += `${q ? '&' : '?'}sortBy=${sortedBy.value}`
-    }
+    if (sortedBy.value !== sortFields[0].value) q += `${q ? '&' : '?'}sortBy=${sortedBy.value}`
 
-    if (selectedCategory.value) {
-      q += `#${selectedCategory.value}`
-    }
+    if (selectedCategory.value) q += `#${selectedCategory.value}`
 
+    // Set window history state
     window.history.pushState('', '', `${url}${q}`)
   }
 
   // Select current category
   function getCategory(category) {
     selectedCategory.value = category
-  }
-
-  // Reset filters
-  function clearFilters() {
-    selectedCategory.value = null
-    query.value = null
-    resetModulesLoaded()
-  }
-
-  // Reset modules list incrementing
-  function resetModulesLoaded() {
-    modulesLoaded.value = MODULE_INCREMENT_LOADING
   }
 
   // Toggle sorting type
@@ -148,7 +136,6 @@ export function useFuse(modules) {
   // Select sorting type
   function selectSortBy(field) {
     sortedBy.value = field
-    sortByMenuVisible.value = false
   }
 
   // Update selected category
@@ -162,13 +149,18 @@ export function useFuse(modules) {
     modulesLoaded.value += MODULE_INCREMENT_LOADING
   }
 
+  // Reset filters
+  function clearFilters() {
+    selectedCategory.value = null
+    query.value = null
+  }
+
   return {
     // References
     fuse,
     query,
     orderedBy,
     sortedBy,
-    sortByMenuVisible,
     selectedCategory,
     modulesLoaded,
     // Computed
@@ -176,10 +168,10 @@ export function useFuse(modules) {
     sortByComp,
     // Functions
     init,
+    updateList,
     syncURL,
     getCategory,
     clearFilters,
-    resetModulesLoaded,
     toggleOrderBy,
     selectSortBy,
     selectCategory,

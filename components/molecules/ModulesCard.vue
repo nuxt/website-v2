@@ -1,6 +1,5 @@
 <template>
-  <Link
-    :to="module.website"
+  <div
     target="blank"
     class="
       group
@@ -87,7 +86,7 @@
         </Link>
       </div>
     </div>
-  </Link>
+  </div>
 </template>
 <script lang="ts">
 import { defineComponent } from '@nuxtjs/composition-api'

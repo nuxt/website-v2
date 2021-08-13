@@ -31,6 +31,8 @@ export function useModules() {
     )
       .map(categ => ({ name: categ[0], count: categ[1] }))
       .sort((a, b) => a.name.toLowerCase().localeCompare(b.name.toLowerCase()))
+
+    return modules
   }
 
   return {

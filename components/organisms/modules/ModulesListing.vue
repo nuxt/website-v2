@@ -60,10 +60,9 @@
         "
       >
         <div v-for="module in filteredModules" :key="module.name">
-          <LazyHydrate when-visible>
-            <ModulesCard :module="module" />
-          </LazyHydrate>
+          <ModulesCard :module="module" />
         </div>
+
         <ObserverModules @intersect="loadModules" />
       </div>
     </div>
@@ -71,13 +70,11 @@
 </template>
 
 <script lang="ts">
-import { defineComponent, useFetch, onMounted, nextTick } from '@nuxtjs/composition-api'
-import LazyHydrate from 'vue-lazy-hydration'
+import { defineComponent, useAsync, onMounted } from '@nuxtjs/composition-api'
 import { useModules } from '../../../plugins/modules'
 import { useFuse } from '../../../plugins/fuse'
 
 export default defineComponent({
-  components: { LazyHydrate },
   directives: {
     focus: {
       inserted(el) {
@@ -99,17 +96,20 @@ export default defineComponent({
       clearFilters,
       sortByComp,
       selectSortBy,
-      init,
+      init: initFuse,
       sortFields,
       toggleOrderBy,
-      loadModules
+      loadModules,
+      updateList
     } = useFuse(modules)
 
-    // Fetch modules
-    useFetch(async () => await fetchModules())
+    useAsync(async () => {
+      const modules = await fetchModules()
+      updateList(modules)
+    }, 'fetchModules')
 
-    // Init client side
-    onMounted(() => nextTick(init))
+    // Init Fuse search
+    onMounted(initFuse)
 
     return {
       filteredModules,

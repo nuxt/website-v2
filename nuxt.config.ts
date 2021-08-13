@@ -49,14 +49,12 @@ export default withDocus({
   },
   css: [resolve(__dirname, './assets/nuxt.css')],
   build: {
-    transpile: ['ohmyfetch']
+    transpile: ['ohmyfetch'],
+    loaders: {
+      imgUrl: { limit: 0 }
+    }
   },
-  buildModules: [
-    '@nuxt/typescript-build',
-    'vue-plausible',
-    '@docus/github',
-    '@docus/twitter'
-  ],
+  buildModules: ['@nuxt/typescript-build', 'vue-plausible', '@docus/github', '@docus/twitter'],
   plugins: ['~/plugins/adblock.client', '~/plugins/v-tooltip.ts'],
   windicss: {
     root: resolve(__dirname),
@@ -71,7 +69,7 @@ export default withDocus({
         try {
           if (!process.env.VERCEL) return
 
-          const { copy } = await import('fs-extra').then((r) => r.default || r)
+          const { copy } = await import('fs-extra').then(r => r.default || r)
           const src = resolve(__dirname, '.vercel_build_output')
           const dest = resolve(__dirname, '../.vercel_build_output')
           await copy(src, dest)
@@ -129,7 +127,12 @@ export default withDocus({
       'npmjs.com',
       'cdn.krutiepatel.com',
       'nuxtjs.org',
-      'i.imgur.com'
+      'i.imgur.com',
+      'avatars0.githubusercontent.com',
+      'avatars1.githubusercontent.com',
+      'avatars2.githubusercontent.com',
+      'avatars3.githubusercontent.com',
+      'modules.nuxtjs.org'
     ]
   },
   i18n: {

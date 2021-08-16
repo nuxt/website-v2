@@ -1,16 +1,16 @@
 <template>
-  <div class="text-center">
-    <h2 class="font-semibold text-display-6">{{ tier }}</h2>
-    <div class="flex flex-wrap justify-center pt-8 pb-16 -mx-8">
-      <NuxtHref
+  <div>
+    <h2 class="font-semibold text-lg border-b border-b border-b-sky-dark dark:border-b-white mb-4">{{ tier }}</h2>
+    <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
+      <Link
         v-for="sponsor in sponsors"
         :key="sponsor.title"
-        :href="sponsor.url"
+        :to="sponsor.url ? `${sponsor.url}` : `${$route.path}/${sponsor.link}`"
         :aria-label="sponsor.title"
-        class="mx-8 my-4"
+        :blank="sponsor.url ? true : false"
       >
-        <img :src="`/img/sponsors/${$colorMode.value}/${sponsor.img}`" :alt="sponsor.title" :class="sponsor.size" />
-      </NuxtHref>
+        <SustainabilityCard :sponsor="sponsor" />
+      </Link>
     </div>
   </div>
 </template>

@@ -9,7 +9,7 @@
         <a :href="partner.url" class="opacity-75 hover:opacity-100 w-28" rel="noopener sponsored" target="_blank">
           <img
             loading="lazy"
-            :src="`/img/sponsors/light/${partner.img}`"
+            :src="`/img/sponsors/banner/light/${partner.img}`"
             :alt="partner.title"
             :title="partner.title"
             class="light-img"
@@ -17,7 +17,7 @@
           />
           <img
             loading="lazy"
-            :src="`/img/sponsors/dark/${partner.img}`"
+            :src="`/img/sponsors/banner/dark/${partner.img}`"
             :alt="partner.title"
             :title="partner.title"
             class="dark-img"

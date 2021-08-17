@@ -1,7 +1,7 @@
 ---
 template: page
 title: Resources
-description: 'Discover a panel of resources made by our partners. By using thoses affiliate resources links, you are helping us to maintain and develop the Nuxt Framework.'
+description: 'Discover a panel of resources, from articles to pre-built themes and educational videos to take your Nuxt skills to the next level.'
 navigation:
   collapse: true
 ---
@@ -9,7 +9,7 @@ navigation:
 ::simple-page-hero
 ---
 title: Nuxt Resources
-description: "Discover a panel of resources made by our partners. By using thoses affiliate resources links, you are helping us to maintain and develop the Open Source Framework."
+description: "Discover a panel of resources, from articles to pre-built themes and educational videos to take your Nuxt skills to the next level."
 ---
 ::
 
@@ -17,11 +17,11 @@ description: "Discover a panel of resources made by our partners. By using those
 ---
 resources:
   modules:
-    title: Modules
-    description: Browse our modules to extend Nuxt core features and integrate third-parties.
-    image: /img/resources/modules.png
-    slug: modules
-    href: /modules
+    title: Blog
+    description: Discover articles from the framework Team and Community about Nuxt, tips and tricks included!
+    image: /img/resources/blog.png
+    slug: blog
+    href: /blog
   themes:
     title: Themes
     description: Get inspired and use real world applications built with Nuxt.

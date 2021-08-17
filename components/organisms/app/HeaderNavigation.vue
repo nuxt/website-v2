@@ -39,21 +39,19 @@ export default defineComponent({
           href: '/examples'
         },
         {
+          title: 'Modules',
+          slug: 'modules',
+          href: '/modules'
+        },
+        {
           title: 'Resources',
           slug: 'resources',
           href: '/resources'
         },
         {
-          title: 'Blog',
-          slug: 'blog',
-          href: '/blog'
-        },
-        {
-          title: 'Video Courses',
-          slug: 'video-courses',
-          href: 'https://masteringnuxt.com/?utm_source=nuxt&utm_medium=link&utm_campaign=navbar_link',
-          blank: true,
-          icon: 'IconExternalLink'
+          title: 'Partners',
+          slug: 'partners',
+          href: '/sponsors-nuxtjs'
         }
       ]
     }

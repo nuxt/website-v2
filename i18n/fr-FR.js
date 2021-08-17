@@ -6,6 +6,8 @@ export default {
     Docs: "Docs",
     Examples: "Exemples",
     Resources: "Ressources",
+    Modules: "Modules",
+    Partners: "Partenaires",
     Blog: "Blog",
     "Video Courses": "Cours Video"
   },

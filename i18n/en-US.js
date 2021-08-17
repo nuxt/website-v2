@@ -7,6 +7,8 @@ export default {
     Examples: "Examples",
     Resources: "Resources",
     Blog: "Blog",
+    Modules: "Modules",
+    Partners: "Partners",
     "Video Courses": "Video courses"
   },
   footer: {

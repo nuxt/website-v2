@@ -1,5 +1,10 @@
 ---
+<<<<<<< HEAD
 title: modules
+=======
+title: Modules
+menuTitle: modules
+>>>>>>> d77fc16e (rename title 'modules directory' to 'modules' (#1625))
 description: Nuxt.js provides a higher-order module system that makes it possible to extend the core. Modules are functions that are called sequentially when booting Nuxt.js.
 position: 9
 category: directory-structure

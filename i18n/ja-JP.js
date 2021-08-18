@@ -7,6 +7,8 @@ export default {
     Examples: "例",
     Resources: "リソース",
     Blog: "ブログ",
+    Modules: "モジュール",
+    Partners: "パートナー",
     "Video Courses": "ビデオコース"
   },
   footer: {
@@ -62,6 +64,16 @@ export default {
     },
     cli: 'CLI',
     scratch: 'スクラッチ'
+  },
+  modules: {
+    search: "モジュールを検索 (名前、カテゴリ、ユーザー名、など)",
+    sort_by: "ソート方法",
+    sort_fields: {
+      downloads: "ダウンロード数",
+      stars: "スター数"
+    },
+    loading: "ロード中...",
+    error: "モジュール情報の取得中にエラーが発生しました"
   },
   resources: {
     themes: {

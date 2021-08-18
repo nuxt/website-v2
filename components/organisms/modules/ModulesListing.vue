@@ -7,12 +7,12 @@
           v-model="query"
           v-focus
           type="search"
-          placeholder="Search a module (name, category, username, etc.)"
+          :placeholder="$t('modules.search')"
           class="bg-transparent border-none w-full md:w-md xl:w-4xl outline-none"
         />
       </div>
       <div class="flex space-x-2 items-center">
-        <span>Sort by</span>
+        <span>{{ $t('modules.sort_by') }}</span>
         <NuxtSelectNative
           v-model="sortedBy"
           :options="sortFields"
@@ -36,7 +36,7 @@
       </div>
     </div>
   </div>
-  <div v-else class="text-center">Loading...</div>
+  <div v-else class="text-center">{{ $t('modules.loading') }}</div>
 </template>
 
 <script lang="ts">
@@ -66,9 +66,10 @@ export default defineComponent({
   },
 
   setup(_, { emit }) {
-    const { route } = useContext()
+    const { route, app } = useContext()
+    const { i18n } = app
     const { getModules } = useModules()
-    const sortFields = [{ text: 'Downloads' , value: 'downloads' }, { text: 'Stars', value: 'stars' }]
+    const sortFields = [{ text: i18n.t('modules.sort_fields.downloads') , value: 'downloads' }, { text: i18n.t('modules.sort_fields.stars'), value: 'stars' }]
     const pending = ref(false)
     let modules = ref(null)
     let categories = ref(null)

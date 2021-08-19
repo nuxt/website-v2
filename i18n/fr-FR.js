@@ -65,6 +65,16 @@ export default {
     cli: "Depuis l'interface CLI",
     scratch: "À partir de zéro"
   },
+  modules: {
+    search: "Search a module (name, category, username, etc.)",
+    sort_by: "Sort by",
+    sort_fields: {
+      downloads: "Downloads",
+      stars: "Stars"
+    },
+    loading: "Loading...",
+    error: "Une erreur est survenue lors de la récupération des modules"
+  },
   resources: {
     themes: {
       get_for_it: "Achetez-le pour {price}",
@@ -104,8 +114,5 @@ export default {
     consent: "Nous utilisons des cookies pour l'analyse des utilisateurs et les améliorations sur la page !",
     linkLabel: 'En savoir plus sur les cookies',
     button: 'Accepter'
-  },
-  modules: {
-    error: "Une erreur est survenue lors de la récupération des modules"
   }
 }

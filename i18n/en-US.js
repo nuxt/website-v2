@@ -65,6 +65,16 @@ export default {
     cli: 'From CLI',
     scratch: 'From Scratch'
   },
+  modules: {
+    search: "Search a module (name, category, username, etc.)",
+    sort_by: "Sort by",
+    sort_fields: {
+      downloads: "Downloads",
+      stars: "Stars"
+    },
+    loading: "Loading...",
+    error: "Une erreur est survenue lors de la récupération des modules"
+  },
   resources: {
     themes: {
       get_for_it: "Get it for {price}",
@@ -98,9 +108,6 @@ export default {
     go_to: "Go to {title}",
     go_home: "Go home",
     read_article: "Read article"
-  },
-  modules: {
-    error: "Une erreur est survenue lors de la récupération des modules"
   },
   iso: 'en'
 }

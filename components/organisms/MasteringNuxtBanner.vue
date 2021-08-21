@@ -45,11 +45,12 @@
               font-bold
               max-w-72
               text-xs
-              md:text-sm md:max-w-full
+              md:text-base md:max-w-full
             "
           >
-            <span :style="{ color: '#00dc82' }"> Save 40% off</span>
-            the completed MasteringNuxt course!
+            Less than
+            <span :style="{ color: '#00dc82' }"> 48 hours </span>
+            for the Nuxt video course offer!
           </p>
           <div class="flex items-center">
             <button

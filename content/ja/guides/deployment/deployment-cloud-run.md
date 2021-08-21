@@ -1,61 +1,61 @@
 ---
-title: Deploy Nuxt on Google Cloud Run
-description: How to deploy Nuxt on Google Cloud Run?
+title: Nuxt を Google Cloud Run へデプロイする
+description: Nuxt を Google Cloud Run にデプロイするには?
 menu: Google Cloud Run
 target: Server
 category: deployment
 position: 108
 ---
 
-[Google Cloud Run](https://cloud.google.com/run) is a fully managed compute platform for deploying and scaling containerized applications quickly and securely.
+[Google Cloud Run](https://cloud.google.com/run) はコンテナ化されたアプリケーションを迅速に安全にデプロイし、スケーリングするためのフルマネージド・コンピュータ・プラットフォームです。
 
-In this guide, we simply upload the entire project folder to Google Cloud Build with a Dockerfile. After the upload, Cloud Build will automatically generate a container. Then we will deploy this container to Google Cloud Run which will start it with the `start` script in our package.json.
+このガイドでは、簡単にプロジェクトのフォルダ全体を Dockerfile で Google Cloud Build にアップロードします。アップロードした後、Cloud Build は自動でコンテナを生成します。そしてコンテナを package.json の `start` スクリプトで起動する、Google Cloud Run にデプロイします。
 
-## Getting Started
+## はじめに
 
-Make sure you have a Google Cloud Account, a project and the accesses as editor on Cloud Build and Cloud Run. Furthermore, make sure to download and install the Cloud SDK (CLI) from Google as explained [here](https://cloud.google.com/sdk/) and log into your Google Cloud Account. If you do not want to download the Cloud SDK, be aware that you can use gcloud CLI from the Google Cloud Console.
+Google Cloud Account とプロジェクト、そしてエディターとして Cloud Build と Cloud Run にアクセス権があることを確認してください。さらに Google の[こちら](https://cloud.google.com/sdk/)で解説されている Cloud SDK (CLI) をダウンロードしてインストールし、Google Cloud Account でログインしてください。もし Cloud SDK をダウンロードしたくない場合、Google Cloud Console から gcloud CLI を使用することができます。
 
-Now, let's do few checks!
+いくつかチェックをしましょう！
 
-If the Cloud Build API and the Cloud Run API are not enabled, enable them:
+Cloud Build API と Cloud Run API が無効の場合、有効にします:
 
 ```bash
-# Enabling Cloud Build
+# Cloud Build を有効にする
 $ gcloud services enable cloudbuild.googleapis.com
 
-# Enabling Cloud Run
+# Cloud Run を有効にする
 $ gcloud services enable run.googleapis.com
 ```
 
-Go in your application directory and install dependencies:
+アプリケーションディレクトリに移動し、依存関係をインストールします:
 
 ```bash
-# For yarn users
+# yarn ユーザー向け
 $ yarn
 
-# For npm users
+# npm ユーザー向け
 $ npm install
 ```
 
-Start the application locally:
+アプリケーションをローカルで起動します:
 
 ```bash
-# For yarn users
+# yarn ユーザー向け
 $ yarn dev
 
-# For npm users
+# npm ユーザー向け
 $ npm run dev
 ```
 
-Check that everything works.
+全ての動作を確認します。
 
-## Containerize your application
+## アプリケーションのコンテナ化
 
-Now, we will create a container with Cloud Build.
+それでは、Cloud Build でコンテナを作成します。
 
-You need to add to your Nuxt app a `Dockerfile`. Create a new file named `Dockerfile` in your root project directory and add the following content:
+Nuxt アプリケーションに `Dockerfile` を追加する必要があります。 プロジェクトのルートディレクトリに `Dockerfile` という名前の新しいファイルを作成し、以下の内容を追加してください:
 
-For yarn users:
+yarn ユーザー向け:
 
 ```Dockerfile
 FROM node:14
@@ -75,7 +75,7 @@ RUN yarn build
 CMD [ "yarn", "start" ]
 ```
 
-For npm users:
+npm ユーザー向け:
 
 ```Dockerfile
 FROM node:14
@@ -95,26 +95,26 @@ RUN npm run build
 CMD [ "npm", "run", "start" ]
 ```
 
-Run the following command to start the build process:
+ビルドプロセスを開始するため、以下のコマンドを実行してください:
 
 `gcloud builds submit --tag gcr.io/<YOUR_GOOGLE_CLOUD_PROJECT_ID>/my-nuxt-app-name:1.0.0 .`
 
-!Attention: if you want to implement continuous delivery or .env files configurations, you will have to use a [Cloud Build configuration file](https://cloud.google.com/cloud-build/docs/build-config).
+!注意: もし継続的デリバリーや .env ファイルでの設定を実装したい場合、[Cloud Build 構成ファイル](https://cloud.google.com/cloud-build/docs/build-config) を使用する必要があります。
 
-## Deploying your application on Cloud Run
+## Cloud Run へのアプリケーションのデプロイ
 
-Run the following command to deploy your application:
+アプリケーションをデプロイするため以下のコマンドを実行してください:
 
 `gcloud run deploy --image=gcr.io/<YOUR_GOOGLE_CLOUD_PROJECT_ID>/my-nuxt-app-name:1.0.0 --platform managed --port 3000`
 
-Allow unauthenticated invocations if you want to set up a public access.
+パブリックアクセスの設定を行いたい場合、認証されていない起動を許可します。
 
-Be aware that Cloud Run applications will have a default concurrency value of 80 (each container instance will handle up to 80 requests at a time). You can specify the concurrency value this way:
+Cloud Run アプリケーションのデフォルトの同時実行値は 80 であることに注意してください（各コンテナ・インスタンスは、一度に最大 80 のリクエストを処理します）。このようにして同時実行値を指定することができます:
 
 `gcloud run deploy --image=gcr.io/<YOUR_GOOGLE_CLOUD_PROJECT_ID>/my-nuxt-app-name:1.0.0 --platform managed --port 3000 --concurrency <YOUR_CONCURRENCY_VALUE>`
 
-Run the following command to check if the deployment was created successfully:
+デプロイメントの作成に成功しているか確認するため、以下のコマンドを実行してください:
 
 `gcloud run services list --platform managed`
 
-A list of Cloud Run services is displayed. Click on the URL of your deployment and enjoy the result!
+Cloud Run サービスのリストが表示されます。デプロイした URL をクリックし、結果をお楽しみください！

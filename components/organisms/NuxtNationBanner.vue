@@ -17,7 +17,7 @@
           text-xs
           mx-4
           md:mx-10 md:text-sm
-          lg:text-base lg:mx-0
+          lg:text-base lg:mx-4
           text-white
         "
       >

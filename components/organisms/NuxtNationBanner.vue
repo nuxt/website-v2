@@ -46,6 +46,7 @@
             class="
               font-bold
               text-primary-base
+              hover:text-primary-light
               underline
               inline-block
               px-3

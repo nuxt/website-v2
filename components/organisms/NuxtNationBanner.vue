@@ -41,7 +41,7 @@
           <p class="leading-tight font-bold text-xs md:text-sm md:max-w-full">
             🚀 Join us for the Nuxt Nation 2021 conference
           </p>
-          <a
+          <div
             :style="{ 'white-space': 'nowrap' }"
             class="
               font-bold
@@ -55,7 +55,7 @@
             "
           >
             Register Now →
-          </a>
+          </div>
         </div>
         <div class="w-3" @click.prevent.stop="close">
           <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14">

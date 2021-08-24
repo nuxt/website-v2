@@ -126,7 +126,7 @@ category: パートナー
 Nuxt の開発は情熱を持った開発者によって作られますが、メンテナンスするための必要な労力と新機能開発には、適切な資金のサポートなしには持続できません。これを可能にするのは、スポンサーやパートナーの皆様のおかげです。<br>
 
 #bottom
-:button-link[NuxtJS のスポンサー]{href="/sponsors-nuxtjs" size="medium"}
+:button-link[NuxtJS のスポンサー]{href="/sponsor-nuxtjs" size="medium"}
 ::
 
 ::home-learn-master

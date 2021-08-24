@@ -136,7 +136,7 @@ Sustainable [_Development_]{.text-primary}
 Nuxt development is made from passionate developers, however, the amount of effort needed to maintain and develop new features is not sustainable without proper financial backing. We are thanksful to our sponsors and partners to make it possible.<br>
 
 #bottom
-:button-link[Sponsor Nuxt]{href="/sponsors-nuxtjs" size="medium"}
+:button-link[Sponsor Nuxt]{href="/sponsor-nuxtjs" size="medium"}
 ::
 
 ::home-learn-master

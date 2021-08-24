@@ -1,55 +1,118 @@
 ---
 template: page
+title: 'Support'
+description: 'Recevez une assistance technique, signalez des bugs ou contribuez au développement du framework.'
 layout:
   fluid: true
 navigation: false
 ---
-
-::simple-page-hero
+::page-hero
 ---
-title: Service de consulting NuxtJS
-description: "Notre équipe offre un service officiel de consulting pour vos applications NuxtJS.
-Dépendant de vos besoin, nous offrons différents services,du support technique au développement de fonctionnalités. Nous essaierons de vous répondre dans un délai d'un jour ouvrable, et signons une NDA. Nous nous engageons à vous rembourser si vous n'êtes pas satisfaits de la qualité du service."
+title: Support
+description: "Recevez une assistance technique, signalez des bugs ou contribuez au développement du framework."
 ---
 ::
 
-::support-pricing
+::support-container
+#support-cards-list
+::support-card
 ---
-buttonText: Contactez-nous
+title: 'Support technique'
+description: 'Contactez-nous pour réserver une session de consulting ou un audit de votre projet.'
+imgName: 'technical'
+button:
+  text: 'Nous contacter'
+  url: ''
+form: true
+#form
+  :::support-form
+  ---
+  title: 'Envoyez-nous un message'
+  placeholder:
+    company: 'Nom de l'entreprise'
+    name: 'Votre nom'
+    mail: 'Votre Email'
+    phone: 'Numéro de téléphone'
+    subject: 'Sujet'
+    message: 'Votre message'
+  ---
+  #step-1
+    ::::support-step-title
+    ---
+    number: '1'
+    text: Sélectionnez votre statut
+    ---
+    ::::
+  #step-2
+    ::::support-step-title
+    ---
+    number: '2'
+    text: Complétez le nom de votre entreprise
+    ---
+    ::::
+  #step-3
+    ::::support-step-title
+    ---
+    number: '3'
+    text: Completétez vos informations
+    ---
+    ::::
+  #step-4
+    ::::support-step-title
+    ---
+    number: '4'
+    text: Sujet
+    ---
+    ::::
+  #step-5
+    ::::support-step-title
+    ---
+    number: '5'
+    text: Votre message
+    ---
+    ::::
+  :::
 ---
-
-#title
-Support technique
-
-#description
-Audits de projets, déploiements, développement personnalisé et support technique par l'équipe de NuxtJS.
-
-#subdescription
-Nous sommes associés à ![](/img/support/light/otechie.svg){.inline-block.px-1.-mt-1.dark:hidden} ![](/img/support/dark/otechie.svg){.inline-block.px-1.-mt-1.light:hidden} pour offrir ces services, et vous assurer une aide la plus rapide possible.
-
-#price
-250$
-
-#currency
-USD
-
-#cta
-Start chat
 ::
-
-::support-entreprise
-#title
-NuxtJS pour les entreprises
-
-#description
-Disponible avec un souscription Tidelift
-
-#subdescription
-NuxtJS et les contributeurs de milleirs de packages travaillent avec Tidelift pour fournir un plan d'entreprise qui couvre toute la stack open source que vous utilisez. Si vous désirez la flexibilité de l'open source et la confiance de logiciels d'entreprise, c'est pour vous.
-
-#cta
-En savoir plus
-
-#secondaryCta
-Demandez une démo
+::support-card
+---
+title: 'Signalez un bug'
+description: 'Si quelque chose ne fonctionne pas comme prévu, ouvrez une issue sur Github.'
+imgName: 'report'
+button:
+  text: 'Créer une issue'
+  url: ''
+---
+::
+::support-card
+---
+title: 'Suggérez une fonctionnalité ou une amélioration'
+description: 'Grâce aux conributions de notre communauté, Nuxt continue d'évoluer et de s'améliorer. Si vous avez une idée, n'hésitez pas à la proposer sur Github Discussions.'
+imgName: 'suggest'
+button:
+  text: 'Proposer une idée'
+  url: ''
+---
+::
+::support-card
+---
+title: 'Faites un don'
+description: 'NuxtJS est un projet open source sous license MIT et totalement libre d'utilisation.
+Cependant, les efforts pour maintenir le projet et développer de nouvelles fonctionnalités ne sont pas pérennes sans source de financement.'
+imgName: 'donate'
+button:
+  text: 'Faire un don'
+  url: ''
+---
+::
+::support-card
+---
+title: 'Contribuez'
+description: 'Contribuez au développement du framework, à la documentation, ou au testing.'
+imgName: 'contribute'
+button:
+  text: 'Contribuer'
+  url: ''
+---
+::
 ::

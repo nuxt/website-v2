@@ -1,19 +1,19 @@
 ---
-title: Deploy Nuxt on Cloudflare
-description: What needs to be considered when using Nuxt with Cloudflare
+title: Nuxt を Cloudflare へデプロイする
+description: Cloudflare で Nuxt を使用する時に注意すべきこと
 menu: Cloudflare
 category: deployment
 position: 118
 ---
 
-In most cases, Nuxt can work with third party content that is not generated or created by Nuxt itself. But sometimes such content can cause problems, especially Cloudflare's "Minification and Security Options".
+ほとんどのケースで、Nuxt は Nuxt 自体によって生成、もしくは作成していないサードパーティコンテンツと連携することができます。しかし時々そのようなコンテンツは問題を起こします、特に Cloudflare の"Minification と Security Options"によってです。
 
-Accordingly, you should make sure that the following options are unchecked / disabled in Cloudflare. Otherwise, unnecessary re-rendering or hydration errors could impact your production application.
+よって Cloudflare の以下のオプションのチェックがされていないか、無効になっているか確認してください。そうでなければ、必要のない再レンダリングやハイドレーションのエラーが本番環境のアプリケーションに影響を与える可能性があります。
 
-1. Speed > Optimization > Auto Minify: **Uncheck** JavaScript, CSS and HTML
-2. Speed > Optimization > **Disable** "Rocket Loader™"
-3. Speed > Optimization > **Disable** "Mirage"
-4. Scrape Shield > **Disable** "Email Address Obfuscation"
-5. Scrape Shield > **Disable** "Server-side Excludes"
+1. Speed > Optimization > Auto Minify: **チェックを外してください** JavaScript, CSS と HTML
+2. Speed > Optimization > **無効にしてください** "Rocket Loader™"
+3. Speed > Optimization > **無効にしてください** "Mirage"
+4. Scrape Shield > **無効にしてください** "Email Address Obfuscation"
+5. Scrape Shield > **無効にしてください** "Server-side Excludes"
 
-With these settings, you can be sure that Cloudflare won't inject scripts into your Nuxt application that may cause unwanted side effects.
+これらの設定により、望んでいない副作用が引き起こされる可能性があるスクリプトを、Cloudflare が Nuxt アプリケーションに追加しなくなることが保証されます。

@@ -126,7 +126,7 @@ category: パートナー
 Nuxt の開発は情熱を持った開発者によって作られますが、メンテナンスするための必要な労力と新機能開発には、適切な資金のサポートなしには持続できません。これを可能にするのは、スポンサーやパートナーの皆様のおかげです。<br>
 
 #bottom
-:button-link[NuxtJS のスポンサー]{href="/sponsors-nuxtjs" size="medium"}
+:button-link[NuxtJS のスポンサー]{href="/sponsor-nuxtjs" size="medium"}
 ::
 
 ::home-learn-master
@@ -167,11 +167,11 @@ category: 学習
 
   ::section-content-item
   ---
-  title: 內部構造
-  description: 'アプリケーションの動作を拡張するために Nuxt の內部構造詳細に入り込めます'
+  title: 内部構造
+  description: 'アプリケーションの動作を拡張するために Nuxt の内部構造詳細に入り込めます'
   image: /img/home/learn/guides/gem-internals.svg
   to: '/docs/internals-glossary/context'
-  linkName: '內部構造を調べる'
+  linkName: '内部構造を調べる'
   ---
   ::
 

@@ -16,11 +16,11 @@ description: "私たちのパートナーによって作られたリソースの
 ---
 resources:
   modules:
-    title: モジュール
-    description: NuxtJS コア機能の拡張とサードパーティに統合するための私たちのモジュールを見る
-    image: /img/resources/modules.png
-    slug: modules
-    href: https://modules.nuxtjs.org
+    title: ブログ
+    description: フレームワークチームとコミュニティによる、Nuxt に関する記事をご覧ください！ヒントやトリックも含まれています
+    image: /img/resources/blog.png
+    slug: blog
+    href: /blog
   themes:
     title: テーマ
     description: インスピレーションを得て Nuxt で構築された実際のアプリケーションを使用する

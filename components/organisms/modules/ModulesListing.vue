@@ -20,12 +20,12 @@
           v-model="query"
           v-focus
           type="search"
-          placeholder="Search a module (name, category, username, etc.)"
+          :placeholder="$t('modules.search')"
           class="bg-transparent border-none w-full md:w-md xl:w-4xl outline-none"
         />
       </div>
       <div class="flex space-x-2 items-center">
-        <span>Sort by</span>
+        <span>{{ $t('modules.sort_by') }}</span>
         <NuxtSelectNative
           v-model="sortedBy"
           :options="sortFields"

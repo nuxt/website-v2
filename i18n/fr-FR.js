@@ -6,6 +6,8 @@ export default {
     Docs: "Docs",
     Examples: "Exemples",
     Resources: "Ressources",
+    Modules: "Modules",
+    Partners: "Partenaires",
     Blog: "Blog",
     "Video Courses": "Cours Video"
   },
@@ -63,6 +65,16 @@ export default {
     cli: "Depuis l'interface CLI",
     scratch: "À partir de zéro"
   },
+  modules: {
+    search: "Search a module (name, category, username, etc.)",
+    sort_by: "Sort by",
+    sort_fields: {
+      downloads: "Downloads",
+      stars: "Stars"
+    },
+    loading: "Loading...",
+    error: "Une erreur est survenue lors de la récupération des modules"
+  },
   resources: {
     themes: {
       get_for_it: "Achetez-le pour {price}",
@@ -73,7 +85,14 @@ export default {
     tiers: {
       mvp_partners: "Partenaires MVP",
       partners: "Partenaires",
-      sponsors: "Sponsors"
+      sponsors: "Sponsors",
+      donations: "Faire un don"
+    },
+    mvp_detail: {
+      services: "Services",
+      location: "Lieu",
+      contact_partner: "Contacter le partenaire",
+      visit_website: "Visitez le website"
     }
   },
   common: {
@@ -95,8 +114,5 @@ export default {
     consent: "Nous utilisons des cookies pour l'analyse des utilisateurs et les améliorations sur la page !",
     linkLabel: 'En savoir plus sur les cookies',
     button: 'Accepter'
-  },
-  modules: {
-    error: "Une erreur est survenue lors de la récupération des modules"
   }
 }

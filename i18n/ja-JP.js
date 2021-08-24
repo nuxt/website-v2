@@ -7,6 +7,8 @@ export default {
     Examples: "例",
     Resources: "リソース",
     Blog: "ブログ",
+    Modules: "モジュール",
+    Partners: "パートナー",
     "Video Courses": "ビデオコース"
   },
   footer: {
@@ -63,6 +65,16 @@ export default {
     cli: 'CLI',
     scratch: 'スクラッチ'
   },
+  modules: {
+    search: "モジュールを検索 (名前、カテゴリ、ユーザー名、など)",
+    sort_by: "ソート方法",
+    sort_fields: {
+      downloads: "ダウンロード数",
+      stars: "スター数"
+    },
+    loading: "ロード中...",
+    error: "モジュール情報の取得中にエラーが発生しました"
+  },
   resources: {
     themes: {
       get_for_it: "{price} で手に入れる",
@@ -73,7 +85,14 @@ export default {
     tiers: {
       mvp_partners: "MVP パートナー",
       partners: "パートナー",
-      sponsors: "スポンサー"
+      sponsors: "スポンサー",
+      donations: "寄付"
+    },
+    mvp_detail: {
+      services: "サービス",
+      location: "場所",
+      contact_partner: "Contact Partner",
+      visit_website: "Visit Website"
     }
   },
   common: {

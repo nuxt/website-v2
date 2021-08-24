@@ -1,14 +1,14 @@
 <template>
   <li class="w-full p-4 rounded-md shadow-lg dark:bg-sky-darker">
-    <div class="flex items-center justify-between h-24">
-      <div class="flex items-center space-x-4">
+    <div class="flex items-center justify-between xl:h-24">
+      <div class="flex flex-col xl:flex-row justify-start items-start xl:items-center space-x-4">
         <img :src="`/img/support/${imgName}.svg`" class="h-20" />
         <div class="flex flex-col">
-          <h2 class="text-2xl font-medium">{{ title }}</h2>
-          <span>{{ description }}</span>
+          <h2 class="text-xl lg:text-2xl font-medium">{{ title }}</h2>
+          <span class="text-sm md:text-base max-w-3/5 xl:w-full">{{ description }}</span>
         </div>
       </div>
-      <div class="flex flex-col justify-end pr-4">
+      <div class="pr-4">
         <SectionButton
           :to="button.to"
           @click.native="form ? show() : showForm = false"

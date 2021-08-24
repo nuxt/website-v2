@@ -17,9 +17,6 @@ export default defineComponent({
       type: String,
       default: 'Please choose your status'
     }
-  },
-  setup() {
-
-  },
+  }
 })
 </script>

@@ -1,6 +1,6 @@
 ---
 title: Hands-on image optimization with Nuxt Image
-description: The Nuxt Image module provides an intuitive way to optimize our images, let's dive in with a concrete example.
+description: The Nuxt Image module provides an intuitive way to optimize our images. Let's dive in with a concrete example.
 imgUrl: blog/filename/main.jpg
 date: 2021-06-15
 authors:
@@ -9,16 +9,16 @@ authors:
     link: https://twitter.com/clemcodes
 tags:
   - Nuxt Image
-  - Image optimisation
+  - Image optimization
   - Nuxt module
 ---
 
-Images optimization is a crucial part for improving a website's performance, but it can be a hard work to do on our own. We have to make sure that the images that we use are not wider than their display size, and that we serve the best formats according to browsers specifications and viewport's dimensions.
+Image optimization is a crucial part of improving a website's performance, but it can be hard to do on our own. We have to make sure that the images that we use are not wider than their display size, and that we serve the best format and size for the browser given the viewport's dimensions.
 
-To help us with that, the Nuxt Image module provides two components that act as drop-in replacements for the HTML `<img>` and `<picture>` tags. We'll start from a design comp and analyze it to see how we can get the most out of the module.
+To help us with that, the Nuxt Image module provides two components that act as drop-in replacements for the HTML `<img>` and `<picture>` tags. We'll start from a design and analyze it to see how we can get the most out of the module.
 
 <base-alert type="info">
-In this tutorial, we will focus on integrating the images parts. We recommend you to <a href="https://codesandbox.io/s/image-optimization-with-nuxt-image-31c65" target="_blank" rel="noreferer noopener">use the Codesandbox</a> to follow along and inspect the generated HTML.
+In this tutorial, we will focus on configuring the image components. We recommend you to <a href="https://codesandbox.io/s/image-optimization-with-nuxt-image-31c65" target="_blank" rel="noreferer noopener">use the Codesandbox</a> to follow along and inspect the generated HTML.
 </base-alert>
 
 ## Analyzing the layout
@@ -31,15 +31,15 @@ The avatar image is pretty small, and its size doesn't change depending on the v
 
 ### Hero image
 
-In small and medium sizes, the hero image takes the whole viewport's width. In large screens, the hero image's width is capped at 1280px.
+In small and medium sizes, the hero image is full width. In large screens, its maximum width is 1280px.
 
 ### Featured images
 
-The columns layout below the hero image depends on the viewport's size as well : It displays a vertical layout with images taking almost the whole viewport until reaching the `lg` breakpoint, and then transforms into a 3 columns layout.
+The column layout below the hero image depends on the viewport's size as well. It displays a vertical layout with images taking almost the whole viewport until reaching the `lg` breakpoint, and then transforms into a 3-column layout.
 
 ## Installation
 
-Now that we have a clear vision of the images displays, let's use the Nuxt Image module!
+Now that we have a clear picture of how the images need to be displayed, let's use the Nuxt Image module!
 
 First, install the module:
 
@@ -81,7 +81,7 @@ The avatar picture won't change between viewports, meaning we can apply a single
 Inspect the generated HTML, and notice the image's URL:
 
 ```html{}
-<img src="/_IPX/avatar.jpg?w=250" alt="profile thumbnail" width="250" />
+<img src="/_ipx/avatar.jpg?w=250" alt="profile thumbnail" width="250" />
 ```
 
 Behind the scene, Nuxt Image's default provider, [IPX](https://github.com/unjs/ipx), reduces the size of the image to match the 250px width we specify in the markup, so we're assured we won't deliver an image bigger than necessary to the users.
@@ -98,7 +98,7 @@ Thankfully, Nuxt Image has got us covered. The `sizes` prop allows to specify di
 <nuxt-img src="/img/hero.jpeg" alt="Our beautiful hero" sizes="md:100vw xl:1280px" />
 ```
 
-Nuxt Image generates an image tag with an `srcset` attribute based on what we specify in the `sizes`prop:
+Nuxt Image generates an image tag with a `srcset` attribute based on what we specified in the `sizes`prop:
 
 ```html{}
 <img
@@ -110,12 +110,12 @@ Nuxt Image generates an image tag with an `srcset` attribute based on what we sp
 ```
 
 <base-alert type="info">
-  You might wonder where the `md` and `lg` breakpoints do come from. Nuxt Image provides aliases for sensible default breakpoints. <a href="https://image.nuxtjs.org/api/options#screens" target="_blank" rel="noferer noopener">Refer to the documentation</a> for a complete list and how to override them.
+  You might wonder where the `md` and `lg` breakpoints come from. Nuxt Image provides a set of sensible aliases by default. <a href="https://image.nuxtjs.org/api/options#screens" target="_blank" rel="noferer noopener">Refer to the documentation</a> for a complete list and how to override them.
 </base-alert>
 
 ### Integrate the featured images
 
-The process for the featured images is similar to the hero picture, we will apply the `sizes`prop to resize the images accordingly.
+The process for the featured images is similar to the hero picture; we will apply the `sizes`prop to resize the images accordingly.
 
 ```vue{}
 <nuxt-img src="/img/featured.jpeg" alt="Featured image" sizes="sm:90vw md:80vw lg:30vw" />
@@ -140,19 +140,19 @@ Thanks to the Nuxt Image module, we can handle this directly inside our markup, 
 
 Take a look at the generated HTML. The `<picture>` tag is now used to display out image, converted to WebP. A `jpeg` fallback is also provided, to make sure legacy browsers can still display the image.
 
-Our homepage image's are now ready for production. To recap what we learned:
+Our homepage images are now ready for production. To recap what we learned:
 
-- Define `width` property to adjust the images dimension and avoid serving bigger images that what is actually needed
+- Define `width` property to adjust the images' dimensions and avoid serving bigger images than what is actually needed
 - Adapt to responsive breakpoints with the `sizes` prop
 - Convert our images to modern formats while still supporting legacy browsers
 
 ### What's next?
 
-We didn't cover up every module's features, the Image module also provides:
+We didn't cover all the module's features; the Nuxt Image module also provides:
 
-- Integrations with [third-parties providers](https://image.nuxtjs.org/getting-started/providers) to use CDNs to serve our images.
+- Integrations with [third-party providers](https://image.nuxtjs.org/getting-started/providers) to use CDNs to serve our images.
 - [Presets](https://image.nuxtjs.org/components/nuxt-img/#preset) to enforce consistency and avoid duplication.
-- [Advanced transformations and modifiers](https://image.nuxtjs.org/api/options), such as crop or grayscales.
+- [Advanced transformations and modifiers](https://image.nuxtjs.org/api/options), such as crop or grayscale.
 - [The `$img` functionality](https://image.nuxtjs.org/api/$img) to apply transformations outside the provided components.
 
 To take advantage of all these features, refer to the [module's documentation](https://image.nuxtjs.org/).

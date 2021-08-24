@@ -1,15 +1,15 @@
 ---
 template: page
 title: 'Support'
-description: 'We offer different services depending of your needs, from technical support, training to custom development to guide you on using Nuxt at its best.'
+description: 'Get technical support, report bugs or contribute to the Nuxt framework development.'
 layout:
   fluid: true
 navigation: false
 ---
 ::page-hero
 ---
-title: Entreprise Support
-description: "We offer different services depending of your needs, from technical support, training to custom development. We have a range of agencies partners to guide you on using Nuxt at its best."
+title: Support
+description: "Get technical support, report bugs or contribute to the Nuxt framework development."
 ---
 ::
 
@@ -18,7 +18,7 @@ description: "We offer different services depending of your needs, from technica
 ::support-card
 ---
 title: 'Technical support'
-description: 'Get project audits, best practices and get answers from the Framework team.'
+description: 'Contact us to book a slot for a private consulting session or audit of your project.'
 imgName: 'technical'
 button:
   text: 'Contact us'
@@ -77,7 +77,7 @@ form: true
 ::support-card
 ---
 title: 'Report a bug'
-description: 'Get project audits, best practices and get answers from the Framework team.'
+description: 'If anything isn't working like it's supposed to, open an issue on Github.'
 imgName: 'report'
 button:
   text: 'Create an issue'
@@ -87,7 +87,7 @@ button:
 ::support-card
 ---
 title: 'Suggest a new feature or improvement'
-description: 'Get project audits, best practices and get answers from the Framework team.'
+description: 'Thanks to our community contributions, Nuxt keeps evolving with continuous features improvements. If you have an idea, feel free to propose it on Github Discussions.'
 imgName: 'suggest'
 button:
   text: 'Suggest an idea'
@@ -97,7 +97,8 @@ button:
 ::support-card
 ---
 title: 'Donate'
-description: 'Get project audits, best practices and get answers from the Framework team.'
+description: 'Nuxt is an MIT licensed open source project and completely free to use.
+However, the amount of effort needed to maintain and develop new features for the project is not sustainable without proper financial backing.'
 imgName: 'donate'
 button:
   text: 'Donate'
@@ -106,8 +107,8 @@ button:
 ::
 ::support-card
 ---
-title: 'Contribute or Development'
-description: 'Get project audits, best practices and get answers from the Framework team.'
+title: 'Contribute'
+description: 'Start contributing to the framework development, documentation, or testing.'
 imgName: 'contribute'
 button:
   text: 'Contribute'

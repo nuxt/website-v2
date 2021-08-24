@@ -11,7 +11,7 @@ position: 4
 Jika kamu ingin menggunakan `sass` pastikan kamu telah menginstal _package_ `sass` dan `sass-loader`. Jika belum, maka
 
 ```sh
-npm install --save-dev sass sass-loader fibers
+npm install --save-dev sass sass-loader@10 fibers
 ```
 
 <base-alert type="info">Kompilasi sinkron dengan `sass` (peningkatan kecepatan 2x) [diaktifkan secara otomatis](https://github.com/webpack-contrib/sass-loader) ketika `fibers` telah terinstal.</base-alert>

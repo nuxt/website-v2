@@ -1,46 +1,46 @@
 ---
-title: Deploy Nuxt with Cleavr
-description: How to deploy a Nuxt app with Cleavr?
+title: Cleavr で Nuxt をデプロイする
+description: Cleavr で Nuxt アプリケーションをデプロイする方法は?
 menu: Cleavr
 target: Static & Server
 category: deployment
 position: 104.1
 ---
 
-[Cleavr](https://cleavr.io) is a server management console that integrates with multiple VPS (cloud hosting) providers and helps you configure servers to host your Nuxt apps as well as deploys your Nuxt apps in just a couple of clicks.
+[Cleavr](https://cleavr.io) は多様な VPS（クラウドホスティング）プロバイダーを統合したサーバーマネジメントコンソールで、Nuxt アプリケーションをホストするサーバーの設定や、Nuxt アプリケーションのデプロイを数回のクリックで実行することができます。
 
-Cleavr includes the following features:
+Cleavr には以下のような機能があります:
 
-- Provision and configure servers ready to run Nuxt SSR and Static applications
-- Secure servers and provides free SSL certs
-- Deploy code from GitHub, GitLab, and Bitbucket repositories with zero-downtime
-- Auto-installs and configures PM2 (with cluster mode enabled) for Nuxt SSR apps
-- GitHub Actions integration to build app with no additional configuration required
+- Nuxt SSR と静的アプリケーションを実行するためのサーバーのプロビジョニングと設定
+- 安全なサーバーと無料の SSL 証明書の提供
+- GitHub、GitLab、また Bitbucket のリポジトリからダウンタイムなくコードをデプロイできる
+- Nuxt SSR アプリケーション用の PM2（クラスタモードが有効な場合）の自動インストールと設定
+- GitHub Actions の統合によって、追加の設定をせずにアプリケーションの構築が可能
 
-## Prerequisites
+## 前提条件
 
-- Your Cleavr account is connected to your VPS and version control (e.g. GitHub, GitLab, Bitbucket) providers
-- You have a Nuxt SSR or Static project ready to deploy
-- You have an existing provisioned server
+- Cleavr アカウントが VPS、バージョン管理（例: GitHub, GitLab, Bitbucket）プロバイダーに接続されていること
+- デプロイできる Nuxt SSR か Static プロジェクトがあること
+- 既存のプロビジョニングされたサーバーがあること
 
-## Step 1: Initial setup
+## ステップ 1: 初期設定
 
-You can use Flash Deploy to provision / configure a new server and deploy your app in one fell swoop, or you can use the traditional method of adding a new Nuxt app to an existing server. These setup instructions will describe adding a new app to an existing server.
+Flash Deploy を使用して新しいサーバーのプロビジョニング/設定、アプリケーションのデプロイを一気に行うこともできますし、既存のサーバーに新しい Nuxt アプリケーションを追加する従来の方法もあります。ここでは既存のサーバーに新しいアプリケーションを追加する方法を説明します。
 
-In Cleavr, navigate to the server to add the new app to and select **Add Site**.
+Cleavr で、新しいアプリケーションを追加するサーバーに移動し、**Add Site** を選択してください。
 
-Select either Nuxt SSR or Nuxt Static web app type depending on which target you intend to deploy. Fill out the remaining website info and click **Add**.
+デプロイするターゲットに応じて、 Nuxt SSR か Nuxt Static の web アプリケーションタイプを選択してください。残りの web サイト情報を入力して **Add** をクリックしてください。
 
-This will add the site to your server and configure the server with any missing environment dependencies.
+これによりサーバーにサイトが追加され、不足している環境依存の状態ででサーバーを設定します。
 
-Once the site has been successfully added, go to the Web App section and click **Complete Setup** for the web app that was added.
+サイトの追加が成功したら、Web App セクションに移動し、追加された web アプリケーションの **Complete Setup** をクリックしてください。
 
-Fill in your version control provider, repository, and branch to deploy fields and then click **Update**.
+バージョン管理プロバイダー、リポジトリ、デプロイするブランチを入力し、**Update** をクリックしてください。
 
-## Step 2: Deploy
+## ステップ 2: デプロイ
 
-You're now ready to deploy your web app.
+web アプリケーションをデプロイする準備ができました。
 
-On the web app's deployment page, click **Deploy**.
+web アプリケーションのデプロイメントページで、**Deploy** をクリックして下さい。
 
-The deployment process will begin and complete in a few moments.
+デプロイメントのプロセスが始まり、少しすると完了します。

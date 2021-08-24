@@ -82,8 +82,6 @@ npm run deploy
 
 You can take deployment one step further and rather than having to manually compile and deploy the files from your local install, you can make use of a build server to monitor your GitHub repository for new commits and then checkout, compile and deploy everything for you automatically.
 
-Before you configure the build server, you'll first need to [generate a GitHub personal access token](https://help.github.com/articles/creating-a-personal-access-token-for-the-command-line/#creating-a-token) in order to grant the build server permission to perform tasks on your behalf. Once you have created your token, keep a copy of it safe ready to use a little later on.
-
 ### GitHub Actions
 
 To deploy via [GitHub Actions](https://github.com/features/actions), the official tool for software automation with GitHub, if you don't have a workflow you need to create a new one or append a new step to your existing workflow.
@@ -93,6 +91,9 @@ It uses the [GitHub Pages Action](https://github.com/marketplace/actions/github-
 With an existing workflow, add the following step:
 
 ```yaml
+- name: Generate page
+  run: yarn generate
+        
 - name: Deploy
   uses: peaceiris/actions-gh-pages@v3
   with:

@@ -110,7 +110,7 @@ title: 'Contribute or Development'
 description: 'Get project audits, best practices and get answers from the Framework team.'
 imgName: 'contribute'
 button:
-  text: 'Read Developer Docs'
+  text: 'Contribute'
   url: ''
 ---
 ::

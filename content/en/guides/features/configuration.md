@@ -105,7 +105,7 @@ Nuxt.js will automatically guess the file type by its extension and use the appr
 
 ## Pre-processors
 
-Thanks to [Vue Loader](http://vue-loader.vuejs.org/en/configurations/pre-processors.html), you can use any kind of pre-processor for your  `<template>` or `<style>`: use the `lang` attribute.
+Thanks to [Vue Loader](http://vue-loader.vuejs.org/en/configurations/pre-processors.html), you can use any kind of pre-processor for your  `<template>` or `<style>`: Use the `lang` attribute.
 
 Example of our `pages/index.vue` using [Pug](https://github.com/pugjs/pug) and [Sass](http://sass-lang.com/):
 
@@ -142,6 +142,101 @@ npm install --save-dev node-sass sass-loader
   </code-block>
 </code-group>
 
+<<<<<<< HEAD
+=======
+<base-alert type="info">Synchronous compilation with `sass` (2x speed increase) [is enabled automatically](https://github.com/webpack-contrib/sass-loader) when `fibers` is installed.</base-alert>
+
+## External Resources
+
+### Global Settings
+
+You can include your external resources in the `head` object or function. As described in the [head API docs](https://nuxtjs.org/api/pages-head/), the following examples shows the use of `head` as an object and as a function. If you want to use values from your Vue component like computed properties or data, you can use the `head()` function, returning the final head object. You can also pass each resource an optional `body: true` to include the resource before the closing `</body>` tag.
+
+Include your resources in `nuxt.config.js` (here in the head object):
+
+```js
+export default {
+  head: {
+    script: [
+      {
+        src: 'https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js'
+      }
+    ],
+    link: [
+      {
+        rel: 'stylesheet',
+        href: 'https://fonts.googleapis.com/css?family=Roboto&display=swap'
+      }
+    ]
+  }
+}
+```
+
+### Local Settings
+
+Include your resources in your `.vue` file inside the `pages/` directory (here in the head function):
+
+```html
+<template>
+  <h1>About page with jQuery and Roboto font</h1>
+</template>
+
+<script>
+  export default {
+    head() {
+      return {
+        script: [
+          {
+            src: 'https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js'
+          }
+        ],
+        link: [
+          {
+            rel: 'stylesheet',
+            href: 'https://fonts.googleapis.com/css?family=Roboto&display=swap'
+          }
+        ]
+      }
+    }
+  }
+</script>
+
+<style scoped>
+  h1 {
+    font-family: Roboto, sans-serif;
+  }
+</style>
+```
+
+## PostCSS plugins
+
+If present, rename or delete the `postcss.config.js` in your project directory. Then, in your `nuxt.config.js` file add the following:
+
+```js
+export default {
+  build: {
+    postcss: {
+      // Add plugin names as key and arguments as value
+      // Install them before as dependencies with npm or yarn
+      plugins: {
+        // Disable a plugin by passing false as value
+        'postcss-url': false,
+        'postcss-nested': {},
+        'postcss-responsive-type': {},
+        'postcss-hexrgba': {}
+      },
+      preset: {
+        // Change the postcss-preset-env settings
+        autoprefixer: {
+          grid: true
+        }
+      }
+    }
+  }
+}
+```
+
+>>>>>>> 3bf2bbdd (docs: Consistent formatting (#1583))
 ## JSX
 
 Nuxt.js uses [@nuxt/babel-preset-app](https://github.com/nuxt/nuxt.js/tree/dev/packages/babel-preset-app), which is based on the official [@vue/babel-preset-app](https://github.com/vuejs/vue-cli/tree/dev/packages/%40vue/babel-preset-app) for babel default configuration, so you can use JSX in your components.
@@ -205,13 +300,13 @@ middleware/foo/\*.js !middleware/foo/bar.js
 
 ### The ignorePrefix Property
 
-Any file in pages/, layout/, middleware/ or store/ will be ignored during the build if its filename starts with the prefix specified by ignorePrefix.
+Any file in the `pages`, `layout`, `middleware` or `store` directores will be ignored during the build if its filename starts with the prefix specified by `ignorePrefix`.
 
 By default all files which start with `-` will be ignored, such as `store/-foo.js` and `pages/-bar.vue`. This allows for co-locating tests, utilities, and components with their callers without themselves being converted into routes, stores, etc.
 
 ### The ignore Property
 
-More customizable than ignorePrefix: all files matching glob patterns specified inside ignore will be ignored in building.
+More customizable than `ignorePrefix`: All files matching glob patterns specified inside ignore will be ignored in building.
 
 ```js{}[nuxt.config.js]
 export default {
@@ -221,7 +316,7 @@ export default {
 
 ### ignoreOptions
 
-`nuxtignore` is using `node-ignore` under the hood, `ignoreOptions` can be configured as `options` of `node-ignore`.
+`nuxtignore` is using `node-ignore` under the hood; `ignoreOptions` can be configured as `options` of `node-ignore`.
 
 ```js{}[nuxt.config.js]
 export default {
@@ -233,7 +328,7 @@ export default {
 
 ## Extend webpack config
 
-You can extend nuxt's webpack configuration via the `extend` option in your `nuxt.config.js`. The `extend` option of the `build` property is a method that accepts two arguments. The first argument is the webpack `config` object exported from nuxt's webpack config. The second parameter is a context object with the following boolean properties: `{ isDev, isClient, isServer, loaders }`.
+You can extend nuxt's webpack configuration via the `extend` option in your `nuxt.config.js`. The `extend` option of the `build` property is a method that accepts two arguments. The first argument is the webpack `config` object exported from nuxt's webpack config. The second parameter is a context object with the following boolean properties: `isDev`, `isClient`, `isServer` and `loaders`.
 
 ```js{}[nuxt.config.js]
 export default {
@@ -253,7 +348,7 @@ export default {
 }
 ```
 
-The `extend` method gets called twice - Once for the client bundle and the other for the server bundle.
+The `extend` method gets called twice - once for the client bundle and the other for the server bundle.
 
 ### Customize chunks configuration
 
@@ -271,7 +366,65 @@ export default {
 }
 ```
 
+<<<<<<< HEAD
 ### Execute ESLint on every webpack build in dev environment
+=======
+### Inspect webpack configuration
+
+For complex projects and debugging it's sometimes useful to check what the final webpack configuration will look like. Luckily you can run `nuxt webpack` command from withing your project to output the configuration. Checkout this PR [#7029](https://github.com/nuxt/nuxt.js/pull/7029) for more details.
+
+### Add webpack plugins
+
+In your `nuxt.config.js` file, under the `build` option, you can pass webpack `plugins`, the same way you would do it in [a `webpack.config.js` file](https://webpack.js.org/configuration/plugins/).
+
+In this example we add the webpack built-in [ProvidePlugin](https://webpack.js.org/plugins/provide-plugin/) for automatically loading JavaScript modules (_lodash_ and _jQuery_) instead of having to `import` or `require` them everywhere.
+
+```js
+import webpack from 'webpack'
+
+export default {
+  build: {
+    plugins: [
+      new webpack.ProvidePlugin({
+        // global modules
+        $: 'jquery',
+        _: 'lodash'
+      })
+    ]
+  }
+}
+```
+
+<base-alert type="info">
+
+Note: You might not need jQuery in a Vue-based app.
+
+</base-alert>
+
+With Nuxt, you can also control plugins execution context: if they are meant to be run on the `client` or in the `server` builds (or differentiating `dev` and `prod` builds) within [`build.extend`](/docs/2.x/configuration-glossary/configuration-build#extend), where you can manually pass webpack plugins too.
+
+### Extend Webpack to load audio files
+
+Audio files should be processed by `file-loader`. This loader is already included in the default Webpack configuration, but it is not set up to handle audio files. You need to extend its default configuration in `nuxt.config.js`:
+
+```js
+export default {
+  build: {
+    extend(config, ctx) {
+      config.module.rules.push({
+        test: /\.(ogg|mp3|wav|mpe?g)$/i,
+        loader: 'file-loader',
+        options: {
+          name: '[path][name].[ext]'
+        }
+      })
+    }
+  }
+}
+```
+
+You can now import audio files like this `<audio :src="require('@/assets/water.mp3')" controls></audio>`.
+>>>>>>> 3bf2bbdd (docs: Consistent formatting (#1583))
 
 In order to be aware of code style errors, you may want to run [ESLint](https://github.com/webpack-contrib/eslint-loader) on every build in the dev environment.
 
@@ -294,9 +447,9 @@ export default {
 
 ## Edit host and port
 
-By default, the Nuxt.js development server host is `localhost`  which is only accessible from within the host machine. In order to view your app on another device you need to modify the host. You can modify the host in your nuxt.config.js file.
+By default, the Nuxt.js development server host is `localhost`  which is only accessible from within the host machine. In order to view your app on another device you need to modify the host. You can modify the host in your `nuxt.config.js` file.
 
-Host `'0.0.0.0'`  is designated to tell Nuxt.js to resolve a host address, which is accessible to connections *outside* of the host machine (e.g. LAN). If the host is assigned the string value of `'0'` (not 0, which is falsy), or `'0.0.0.0'` your local IP address will be assigned to your Nuxt.js application.
+Host `'0.0.0.0'`  is designated to tell Nuxt.js to resolve a host address, which is accessible to connections *outside* of the host machine (e.g. LAN). If the host is assigned the string value of `'0'` (not `0`, which is falsy), or `'0.0.0.0'` your local IP address will be assigned to your Nuxt.js application.
 
 ```js{}[nuxt.config.js]
 export default {
@@ -318,17 +471,17 @@ export default {
 
 <base-alert type="info">
 
-If the port is assigned the string value of `'0'` (not 0, which is falsy) a random port number will be assigned to your Nuxt.js application.
+If the port is assigned the string value of `'0'` (not `0`, which is falsy) a random port number will be assigned to your Nuxt.js application.
 
 </base-alert>
 
-Although you can modify this in the nuxt.config.js file it is not advised to as it might cause you issues when hosting your site. It is much better to modify the host and port direct in the dev command.
+Although you can modify this in the `nuxt.config.js` file it is not advised to as it might cause you issues when hosting your site. It is much better to modify the host and port direct in the `dev` command.
 
 ```bash
 HOST=0 PORT=8000 npm run dev
 ```
 
-or create a script in your package.json
+or create a script in your `package.json`
 
 ```json
 "scripts": {

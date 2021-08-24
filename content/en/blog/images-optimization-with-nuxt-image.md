@@ -1,5 +1,5 @@
 ---
-title: Hands-on images optimization with Nuxt Image
+title: Hands-on image optimization with Nuxt Image
 description: The Nuxt Image module provides an intuitive way to optimize our images, let's dive in with a concrete example.
 imgUrl: blog/filename/main.jpg
 date: 2021-06-15

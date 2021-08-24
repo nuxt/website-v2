@@ -44,10 +44,10 @@ Azure static web apps へのデプロイを実際試してみたい人のため�
 
 1. [Azure Portal](https://portal.azure.com/) に移動してください。
 2. **Create a Resource** をクリックし、**Static App** を検索して選択してください。
-3. *Subscription* ドロップダウンリストの中からサブスクリプションを選択するか、デフォルトのものを使用してください。
-4. *Resource group* ドロップダウンの下の **New** リングをクリックしてください。*New resource group name* 内に **nuxt** と入力し **OK** をクリックしてください。
+3. _Subscription_ ドロップダウンリストの中からサブスクリプションを選択するか、デフォルトのものを使用してください。
+4. _Resource group_ ドロップダウンの下の **New** リングをクリックしてください。_New resource group name_ 内に **nuxt** と入力し **OK** をクリックしてください。
 5. **Name** テキストボックスにアプリケーションのグローバルで一意な名前を入力してください。有効な文字は `a-z`、 `A-Z`、 `0-9`、`-` です。 アプリケーション名はリソースのリストでアプリを識別するために使用されます。したがってリポジトリの名前を使用してアプリケーションを命名するのをおすすめします。
-6. *Region* ドロップダウン内から、最も近い地域を選択してください。
+6. *Region*  ドロップダウン内から、最も近い地域を選択してください。
 
 ![Azure Portal リソースとアプリケーションの構築](https://user-images.githubusercontent.com/13063165/82118135-71891b00-9775-11ea-8284-aa94d17a3bc3.png)
 
@@ -58,7 +58,7 @@ Azure App Service の Static App は Nuxt.js アプリケーションが格納�
 1. **Sign in with GitHub button** をクリックしてください
 2. Nuxt.js プロジェクトのために作成したリポジトリの **Organization** を選択してください。また GitHub のユーザー名でも良いです。
 3. 先ほど作成したリポジトリの名前を探して選択してください。
-4. *Branch* ドロップダウンからブランチとして **master** を選択してください。
+4. _Branch_ ドロップダウンからブランチとして **master** を選択してください。
 
 ![github への追加方法](https://user-images.githubusercontent.com/13063165/82118359-38ea4100-9777-11ea-9c5e-7ba5c4da708e.png)
 
@@ -67,7 +67,7 @@ Azure App Service の Static App は Nuxt.js アプリケーションが格納�
 Azure App Service の Static App が想定できることはいくつかあります。それは npm の自動インストールや、`npm run build` の実行です。またビルド後にどのフォルダに静的アプリをコピーして、そこから静的サイトを提供するかなど、明確にしなければならないこともあります。
 
 1. 静的な出力フォルダの設定のため **Build** タブをクリックしてください。
-2. *App artifact location* テキストボックスに **dist** と入力してください。
+2. _App artifact location_ テキストボックスに **dist** と入力してください。
 
 ![Azure ポータルのコンフィグレーション・ビルド](https://user-images.githubusercontent.com/13063165/82118277-71d5e600-9776-11ea-88ad-48cf0793905d.png)
 
@@ -79,7 +79,7 @@ Azure App Service の Static App が想定できることはいくつかあり�
 
 ![azure ポータルのデプロイ完了メッセージ](https://user-images.githubusercontent.com/13063165/82118390-67681c00-9777-11ea-9778-671dc768393e.png)
 
-4. リソースの画面でデプロイしたアプリケーションを開くため *URL* リンクをクリックしてください。
+4. リソースの画面でデプロイしたアプリケーションを開くため _URL_ リンクをクリックしてください。
 
 ![デプロイされたアプリの URL を含むリソース画面](https://user-images.githubusercontent.com/13063165/82118042-d001c980-9774-11ea-94f5-57d995aa5391.png)
 

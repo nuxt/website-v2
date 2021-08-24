@@ -9,16 +9,15 @@
     <div class="font-roboto lg:container lg:mx-auto">
       <div
         class="
-          h-12
           relative
           flex
           items-center
           justify-between
-          text-xs
+          h-12
           mx-4
+          text-xs text-white
           md:mx-10 md:text-sm
           lg:text-base lg:mx-4
-          text-white
         "
       >
         <div class="w-10">
@@ -36,26 +35,26 @@
           </svg>
         </div>
         <div
-          class="flex items-center justify-between space-x-2 md:space-x-4 mx-4"
+          class="flex items-center justify-between mx-4 space-x-2 md:space-x-4"
         >
-          <p class="leading-tight font-bold text-xs md:text-sm md:max-w-full">
+          <p class="text-xs font-bold leading-tight md:text-sm md:max-w-full">
             🚀 Join us for the Nuxt Nation 2021 conference
           </p>
-          <a
+          <span
             :style="{ 'white-space': 'nowrap' }"
             class="
-              font-bold
-              text-primary-base
-              hover:text-primary-light
-              underline
               inline-block
               px-3
               py-1
+              font-bold
+              underline
               rounded
+              text-primary-base
+              hover:text-primary-light
             "
           >
             Register Now →
-          </a>
+          </span>
         </div>
         <div class="w-3" @click.prevent.stop="close">
           <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14">

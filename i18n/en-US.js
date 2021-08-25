@@ -9,6 +9,7 @@ export default {
     Blog: "Blog",
     Modules: "Modules",
     Partners: "Partners",
+    Showcases: "Showcases",
     "Video Courses": "Video courses"
   },
   footer: {

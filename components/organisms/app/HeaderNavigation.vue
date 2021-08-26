@@ -51,7 +51,7 @@ export default defineComponent({
         {
           title: 'Partners',
           slug: 'partners',
-          href: '/sponsors-nuxtjs'
+          href: '/sponsor-nuxtjs'
         }
       ]
     }

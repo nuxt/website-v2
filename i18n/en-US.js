@@ -95,6 +95,9 @@ export default {
       visit_website: "Visit Website"
     }
   },
+  showcases: {
+    loading: 'Loading...'
+  },
   common: {
     an_error_occurred: 'An error occurred',
     page_not_found: "We couldn't find the page you are looking for.",

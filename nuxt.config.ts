@@ -57,7 +57,7 @@ export default withDocus({
     '@docus/github',
     '@docus/twitter'
   ],
-  plugins: ['~/plugins/adblock.client', '~/plugins/v-tooltip.ts'],
+  plugins: ['~/plugins/adblock.client', '~/plugins/v-tooltip.ts', '~/plugins/showcases'],
   windicss: {
     root: resolve(__dirname),
     config: resolve(__dirname, 'windi.config.js')

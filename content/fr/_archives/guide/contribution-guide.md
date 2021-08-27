@@ -90,7 +90,7 @@ Comme vous l'avez peut-être remarqué, nous utilisons ESLint pour appliquer un 
 
 ### Documentation
 
-Si vous avez ajouté une nouvelle fonctionnalité, fait une refonte ou changé le comportement de Nuxt d'une autre manière, vous voudrez probablement documenter les changements. Merci de le faire par une pull request sur le dépôt de la [documentation](https://github.com/nuxt/docs/pulls). Vous n'êtes pas obligé de modifier la documentation immédiatement (mais veuillez le faire dès que votre pull request est suffisamment mature).
+Si vous avez ajouté une nouvelle fonctionnalité, fait une refonte ou changé le comportement de Nuxt d'une autre manière, vous voudrez probablement documenter les changements. Merci de le faire par une pull request sur le dépôt de la [documentation](https://github.com/nuxt/nuxtjs.org/pulls). Vous n'êtes pas obligé de modifier la documentation immédiatement (mais veuillez le faire dès que votre pull request est suffisamment mature).
 
 ### Listes de contrôle finales
 

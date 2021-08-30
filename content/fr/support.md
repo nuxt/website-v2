@@ -19,7 +19,7 @@ description: "Recevez une assistance technique, signalez des bugs ou contribuez 
 ---
 title: 'Support technique'
 description: 'Contactez-nous pour réserver une session de consulting ou un audit de votre projet.'
-imgName: 'technical'
+image: 'technical'
 button:
   text: 'Nous contacter'
   url: ''
@@ -29,7 +29,7 @@ form: true
   ---
   title: 'Envoyez-nous un message'
   placeholder:
-    company: 'Nom de l'entreprise'
+    company: "Nom de l'entreprise"
     name: 'Votre nom'
     mail: 'Votre Email'
     phone: 'Numéro de téléphone'
@@ -78,7 +78,7 @@ form: true
 ---
 title: 'Signalez un bug'
 description: 'Si quelque chose ne fonctionne pas comme prévu, ouvrez une issue sur Github.'
-imgName: 'report'
+image: 'report'
 button:
   text: 'Créer une issue'
   url: ''
@@ -87,8 +87,8 @@ button:
 ::support-card
 ---
 title: 'Suggérez une fonctionnalité ou une amélioration'
-description: 'Grâce aux conributions de notre communauté, Nuxt continue d'évoluer et de s'améliorer. Si vous avez une idée, n'hésitez pas à la proposer sur Github Discussions.'
-imgName: 'suggest'
+description: "Grâce aux conributions de notre communauté, Nuxt continue d'évoluer et de s'améliorer. Si vous avez une idée, n'hésitez pas à la proposer sur Github Discussions."
+image: 'suggest'
 button:
   text: 'Proposer une idée'
   url: ''
@@ -97,9 +97,8 @@ button:
 ::support-card
 ---
 title: 'Faites un don'
-description: 'NuxtJS est un projet open source sous license MIT et totalement libre d'utilisation.
-Cependant, les efforts pour maintenir le projet et développer de nouvelles fonctionnalités ne sont pas pérennes sans source de financement.'
-imgName: 'donate'
+description: "NuxtJS est un projet open source sous license MIT et totalement libre d'utilisation. Cependant, les efforts pour maintenir le projet et développer de nouvelles fonctionnalités ne sont pas pérennes sans source de financement."
+image: 'donate'
 button:
   text: 'Faire un don'
   url: ''
@@ -109,7 +108,7 @@ button:
 ---
 title: 'Contribuez'
 description: 'Contribuez au développement du framework, à la documentation, ou au testing.'
-imgName: 'contribute'
+image: 'contribute'
 button:
   text: 'Contribuer'
   url: ''

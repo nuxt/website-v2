@@ -1,6 +1,6 @@
 <template>
   <div class="flex items-center pt-4 space-x-3 font-medium">
-    <div class="px-2.5 rounded-full bg-secondary-black"><span>{{ number }}</span></div>
+    <div class="px-2.5 rounded-full bg-sky-darker dark:bg-secondary-black"><span class="text-white">{{ number }}</span></div>
     <span>{{ text }}</span>
   </div>
 </template>

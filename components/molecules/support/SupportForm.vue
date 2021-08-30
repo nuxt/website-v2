@@ -1,5 +1,5 @@
 <template>
-  <div class="mt-4 ml-4">
+  <form @submit.prevent="onSubmit" class="mt-4 ml-4">
     <h3 class="text-xl font-medium">
       {{ title }}
     </h3>
@@ -72,7 +72,8 @@
       class="mt-4 ml-10 text-gray-800 bg-primary hover:bg-primary-400 focus:bg-primary-400"
       >{{ buttonText }}</SectionButton
     >
-  </div>
+    <Recaptcha />
+  </form>
 </template>
 <script lang="ts">
 import { defineComponent, ref } from '@nuxtjs/composition-api'

@@ -55,7 +55,8 @@ export default withDocus({
     '@nuxt/typescript-build',
     'vue-plausible',
     '@docus/github',
-    '@docus/twitter'
+    '@docus/twitter',
+    '@nuxtjs/recaptcha'
   ],
   plugins: ['~/plugins/adblock.client', '~/plugins/v-tooltip.ts'],
   windicss: {
@@ -156,9 +157,17 @@ export default withDocus({
     preference: 'system',
     fallback: 'light'
   },
+  recaptcha: {
+    version: 3,
+    siteKey: '6LdSIyAcAAAAABoVED_NebKHYWIMFJjVNVH2Jbl3'
+  },
   publicRuntimeConfig: {
     plausible: {
       domain: process.env.PLAUSIBLE_DOMAIN
+    },
+    recaptcha: {
+      version: 3,
+      siteKey: '6LdSIyAcAAAAABoVED_NebKHYWIMFJjVNVH2Jbl3'
     }
   }
 })

@@ -7,8 +7,8 @@
     <div class="relative aspect-w-4 aspect-h-3">
       <NuxtImg
         :src="`https://res.cloudinary.com/nuxt/image/upload/f_auto,q_auto/${showcase.screenshotUrl}`"
-        height="800"
-        width="600"
+        width="800"
+        height="600"
         :alt="showcase.hostname"
         class="object-cover"
       />

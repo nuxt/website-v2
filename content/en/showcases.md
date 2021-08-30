@@ -8,7 +8,7 @@ layout:
 
 ::page-hero
 ---
-title: 'Nuxt Showcases'
+title: 'Showcases'
 description: 'Discover our selection of websites built with NuxtJS.'
 ---
 #bottom

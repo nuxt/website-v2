@@ -1,21 +1,9 @@
 <template>
-  <div class="d-container-content">
-    <div v-if="categories && categories.length">
-      <div class="mt-8 flex flex-wrap gap-2">
-        <button
-          v-for="(category, index) in categories"
-          :key="category"
-          class="border border-black dark:border-white rounded-full px-3 py-0.5 focus:outline-none"
-          :class="{
-            'bg-black dark:bg-white text-white dark:text-black': category === selectedCategory || (!selectedCategory && index === 0)
-          }"
-          @click="selectCategory(category)"
-        >
-          {{ category }}
-        </button>
-      </div>
+  <div class="d-container-content mt-8">
+    <div v-if="categories && categories.length" class="lg:flex gap-8">
+      <AsideShowcases :options="categories" :selected="selectedCategory || categories[0]" @selected="(category) => selectCategory(category)" />
 
-      <div class="mt-8 grid md:grid-cols-2 lg:grid-cols-3 gap-8 auto-rows-min">
+      <div class="w-full px-4 md:px-0 lg:w-4/5 min-w-0 min-h-0 lg:static lg:overflow-visible mt-8 grid md:grid-cols-2 gap-8 lg:ml-20 auto-rows-min">
         <div v-for="showcase in selectedShowcases" :key="showcase.id">
           <ShowcasesCard :showcase="showcase" />
         </div>
@@ -63,7 +51,14 @@ export default {
   },
   watch: {
     selectedCategory (value) {
-      this.$router.push({ hash: value })
+      // TOFIX: should use router but not scroll
+      // this.$router.push({ hash: value })
+      const url = this.$route.path
+      let hash = ''
+      if (value) {
+        hash = `#${value}`
+      }
+      window.history.pushState('', '', `${url}${hash}`)
     },
     '$route.hash' (hash) {
       this.selectedCategory = (hash || '').substr(1)

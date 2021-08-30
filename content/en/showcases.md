@@ -9,18 +9,15 @@ layout:
 ::page-hero
 ---
 title: 'Showcases'
-description: 'Discover our selection of websites built with NuxtJS.'
+description: "Discover our selection of websites built with NuxtJS.
+This collection is powered by VueTelescope.
+Visit vuetelescope.com and try out the browser extension."
 ---
 #bottom
-  :::marketing-link{.mt-8}
-  ---
-  to: https://vuetelescope.com/explore?framework.slug=nuxtjs&_sort=rank%3Aasc
-  color: white
-  name: 'Discover more on vuetelescope.com'
-  icon: IconChevronRight
-  size: sm
-  ---
-  :::
+  :vue-telescope-extension-cta{type='chrome' .mt-8}
+  :vue-telescope-extension-cta{type='firefox' .ml-8}
+#right
+  :vue-telescope-cta
 ::
 
 ::showcases-listing

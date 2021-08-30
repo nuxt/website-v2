@@ -31,7 +31,7 @@ surge dist/
 
 Voilà!
 
-Si vous avez un projet avec des [pages dynamiques](/docs/2.x/directory-structure/pages#dynamic-pages), consultez la [proprieté `generate`](/docs/2.x/configuration-glossary/configuration-generate) afin d'indiquer a Nuxt.js comment générer ces pages dynamiques si vous utilisez Nuxt <= v.2.v12.
+Si vous avez un projet avec des [pages dynamiques](/docs/2.x/directory-structure/pages#dynamic-pages), consultez la [proprieté `generate`](/docs/2.x/configuration-glossary/configuration-generate) afin d'indiquer à Nuxt.js comment générer ces pages dynamiques si vous utilisez Nuxt <= v2.12.
 
 <div class="Alert">
 

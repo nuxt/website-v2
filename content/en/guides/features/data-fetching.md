@@ -107,8 +107,13 @@ You also have access to `this.$fetch()`, useful if you want to call the `fetch`
   <p v-else-if="$fetchState.error">An error occured :(</p>
   <div v-else>
     <h1>Nuxt Mountains</h1>
+<<<<<<< HEAD
     <ul v-for="mountain of mountains">
       <li>{{ mountain.name }}</li>
+=======
+    <ul>
+      <li v-for="mountain of mountains" :key="mountain.slug">{{ mountain.title }}</li>
+>>>>>>> ad3d2b3b (chore(examples): add missing key to v-for for data-fetching (#1645))
     </ul>
     <button @click="$fetch">Refresh</button>
   </div>

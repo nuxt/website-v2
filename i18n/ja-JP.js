@@ -2,6 +2,10 @@ import ja from '~docus-i18n/ja-JP'
 
 export default {
   ...ja,
+  banner: {
+    here: 'ここ',
+    format: '{nuxt} はまもなくやってきます... {here}で知ることができます！'
+  },
   header: {
     Docs: "ドキュメント",
     Examples: "例",

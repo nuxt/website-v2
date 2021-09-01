@@ -2,6 +2,10 @@ import en from '~docus-i18n/en-US'
 
 export default {
   ...en,
+  banner: {
+    here: 'here',
+    format: '{nuxt} is coming... Discover more about it {here} !'
+  },
   header: {
     Docs: "Docs",
     Examples: "Examples",

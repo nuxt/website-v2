@@ -2,6 +2,10 @@ import fr from '~docus-i18n/fr-FR'
 
 export default {
   ...fr,
+  banner: {
+    here: 'here',
+    format: '{nuxt} is coming... Discover more about it {here} !'
+  },
   header: {
     Docs: "Docs",
     Examples: "Exemples",

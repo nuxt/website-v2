@@ -13,7 +13,9 @@
     "
     :class="[$route.path === localePath('/') ? 'h-10' : 'h-0']"
   >
-    <p
+    <i18n
+      tag="p" 
+      path="banner.format"
       class="
         text-sky-darkest
         group-hover:text-black
@@ -24,8 +26,13 @@
         text-sm
       "
     >
-      <b>Nuxt 3</b> is coming... Discover more about it <b>here</b>!
-    </p>
+      <template #nuxt>
+        <b>Nuxt 3</b>
+      </template>
+      <template #here>
+        <b>{{ $t('banner.here') }}</b>
+      </template>
+    </i18n>
   </Link>
 </template>
 

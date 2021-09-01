@@ -102,7 +102,7 @@
             <AppButton
               href="https://template.nuxtjs.org"
               class="py-3 px-6 text-base"
-              data-cy="why-cbs"
+              data-cy="why-csb"
             >
               <svg
                 slot="icon"

@@ -23,7 +23,11 @@
             <i18n
               path="homepage.why.modular.description"
               tag="p"
-              class="leading-loose text-light-onSurfaceSecondary dark:text-dark-onSurfaceSecondary"
+              class="
+                leading-loose
+                text-light-onSurfaceSecondary
+                dark:text-dark-onSurfaceSecondary
+              "
             >
               <template #break>
                 <br />
@@ -40,7 +44,11 @@
             <i18n
               path="homepage.why.performant.description"
               tag="p"
-              class="leading-loose text-light-onSurfaceSecondary dark:text-dark-onSurfaceSecondary"
+              class="
+                leading-loose
+                text-light-onSurfaceSecondary
+                dark:text-dark-onSurfaceSecondary
+              "
             >
               <template #break>
                 <br />
@@ -57,7 +65,11 @@
             <i18n
               path="homepage.why.enjoyable.description"
               tag="p"
-              class="leading-loose text-light-onSurfaceSecondary dark:text-dark-onSurfaceSecondary"
+              class="
+                leading-loose
+                text-light-onSurfaceSecondary
+                dark:text-dark-onSurfaceSecondary
+              "
             >
               <template #break>
                 💚
@@ -67,36 +79,57 @@
           </div>
         </div>
         <div class="text-center">
-          <AppButton
-            href="https://template.nuxtjs.org"
-            class="py-3 px-6 text-base"
-            data-cy="why"
-          >
-            <svg
-              slot="icon"
-              aria-label="CodeSandbox"
-              class="inline-block h-5 -mt-1 mr-1 align-middle"
-              viewBox="0 0 1024 1024"
+          {{ $t('homepage.why.try_nuxtjs_online') }}:
+          <div class="inline-block mt-2">
+            <AppButton
+              href="https://stackblitz.com/fork/github/nuxt/starter/tree/stackblitz"
+              class="mx-2 py-3 px-6 text-base"
+              data-cy="why-sb"
             >
-              <g fill="currentColor">
-                <path
-                  d="M719 851V639.85L902 533.8v211.47L719 851M302.08 643.44l-179.91-104.3v208.6l179.91 104.83V643.44M511.98 275.8l182.96-106.17L512.06 63 328.44 169.99l183.54 105.8"
-                />
-              </g>
-              <g
-                fill="none"
-                stroke="currentColor"
-                stroke-width="80"
-                stroke-miterlimit="10"
+              <svg
+                slot="icon"
+                aria-label="StackBlitz"
+                class="inline-block h-5 -mt-1 mr-1 align-middle"
+                viewBox="0 0 32 32"
               >
-                <path d="M899 287.83L509 513v450M122.17 289L511.5 513" />
                 <path
-                  d="M121 739.08l389.92 223.96L901 738.34V288L511 62 121 289z"
+                  d="M5.853 18.647h8.735L9.45 31l16.697-17.647h-8.735L22.55 1 5.853 18.647z"
                 />
-              </g>
-            </svg>
-            {{ $t('homepage.why.try_nuxtjs_online') }}
-          </AppButton>
+              </svg>
+              StackBlitz
+            </AppButton>
+
+            <AppButton
+              href="https://template.nuxtjs.org"
+              class="py-3 px-6 text-base"
+              data-cy="why-csb"
+            >
+              <svg
+                slot="icon"
+                aria-label="CodeSandbox"
+                class="inline-block h-5 -mt-1 mr-1 align-middle"
+                viewBox="0 0 1024 1024"
+              >
+                <g fill="currentColor">
+                  <path
+                    d="M719 851V639.85L902 533.8v211.47L719 851M302.08 643.44l-179.91-104.3v208.6l179.91 104.83V643.44M511.98 275.8l182.96-106.17L512.06 63 328.44 169.99l183.54 105.8"
+                  />
+                </g>
+                <g
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="80"
+                  stroke-miterlimit="10"
+                >
+                  <path d="M899 287.83L509 513v450M122.17 289L511.5 513" />
+                  <path
+                    d="M121 739.08l389.92 223.96L901 738.34V288L511 62 121 289z"
+                  />
+                </g>
+              </svg>
+              CodeSandbox
+            </AppButton>
+          </div>
         </div>
       </section>
     </div>

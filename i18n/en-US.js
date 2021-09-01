@@ -96,7 +96,20 @@ export default {
     }
   },
   showcases: {
-    loading: 'Loading...'
+    loading: 'Loading...',
+    categories: {
+      Featured: 'Featured',
+      'E-Commerce': 'E-Commerce',
+      News: 'News',
+      Government: 'Government',
+      Sport: 'Sport',
+      Education: 'Education',
+      Entertainment: 'Entertainment',
+      Travel: 'Travel',
+      Finance: 'Finance',
+      Tech: 'Tech',
+      Business: 'Business'
+    }
   },
   common: {
     an_error_occurred: 'An error occurred',

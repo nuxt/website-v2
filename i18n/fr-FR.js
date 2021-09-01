@@ -95,6 +95,22 @@ export default {
       visit_website: "Visitez le website"
     }
   },
+  showcases: {
+    loading: 'Loading...',
+    categories: {
+      Featured: 'Featured',
+      'E-Commerce': 'E-Commerce',
+      News: 'News',
+      Government: 'Government',
+      Sport: 'Sport',
+      Education: 'Education',
+      Entertainment: 'Entertainment',
+      Travel: 'Travel',
+      Finance: 'Finance',
+      Tech: 'Tech',
+      Business: 'Business'
+    }
+  },
   common: {
     an_error_occurred: "Une erreur s'est produite",
     page_not_found: 'La page est que vous demandez est introuvable...',

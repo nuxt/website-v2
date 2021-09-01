@@ -95,6 +95,22 @@ export default {
       visit_website: "Visit Website"
     }
   },
+  showcases: {
+    loading: '詠み込み中...',
+    categories: {
+      Featured: '特集',
+      'E-Commerce': 'E-コマース',
+      News: 'ニュース',
+      Government: '政治',
+      Sport: 'スポーツ',
+      Education: '教育',
+      Entertainment: '娯楽',
+      Travel: '旅行',
+      Finance: '金融',
+      Tech: '技術',
+      Business: 'ビジネス'
+    }
+  },
   common: {
     an_error_occurred: 'エラーが発生しました',
     page_not_found: "探しているページを見つけることできませんでした。",

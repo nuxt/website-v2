@@ -11,14 +11,14 @@
           class="bg-transparent border-none w-full md:w-md xl:w-4xl outline-none"
         />
       </div>
-      <div class="flex space-x-2 items-center">
+      <div class="flex space-x-1 items-center">
         <span>{{ $t('modules.sort_by') }}</span>
         <NuxtSelectNative
           v-model="sortedBy"
           :options="sortFields"
-          select-class="appearance-none block w-full bg-none dark:bg-transparent light:bg-white py-2 pl-3 pr-10 text-base focus:outline-none light:focus:ring-black dark:focus:ring-white light:focus:border-gray-400 dark:focus:border-secondary-light sm:text-md font-medium"
+          select-class="appearance-none block w-full bg-none dark:bg-transparent light:bg-white ml-2 py-2 pl-3 pr-10 text-base focus:outline-none light:focus:ring-black dark:focus:ring-white light:focus:border-gray-400 dark:focus:border-secondary-light sm:text-md font-medium"
         />
-        <button @click="toggleOrderBy" class="focus:outline-none focus:ring-transparent">
+        <button @click="toggleOrderBy" class="focus:outline-none focus:ring-transparent pl-3 pr-3 md:pr-0 py-3" aria-label="reverseSortButton">
           <IconSortDesc v-if="orderedBy === 'desc'" alt="Descending sort" class="text-sky-darker dark:text-white w-4 h-4"/>
           <IconSortAsc v-else alt="Ascending sort" class="text-sky-darker dark:text-white w-4 h-4"/>
         </button>

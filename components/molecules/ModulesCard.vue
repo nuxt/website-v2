@@ -4,7 +4,7 @@
       <nuxt-img alt="external_link" src="/img/icons/ext.svg" width="24" height="24" />
     </div>
     <div class="flex flex-col lg:flex-row space-y-4 lg:space-y-0 lg:space-x-3">
-      <img :src="iconUrl" :alt="module.name" class="w-10 h-10 mt-2" />
+      <img loading="lazy" :src="iconUrl" :alt="module.name" class="w-10 h-10 mt-2 object-contain" />
       <div class="flex flex-col space-y-1">
         <span class="font-medium">{{ module.name }}</span>
         <div class="max-h-20 text-sm overflow-y-auto">
@@ -19,7 +19,7 @@
           v-tooltip="{ content: maintainer.name, classes: ['bg-sky-darker dark:bg-white', 'text-white dark:text-sky-darker', 'px-2', 'py-1', 'rounded', 'text-sm'] }"
         >
           <Link :to="`https://github.com/${maintainer.github}`" target="blank">
-            <img :src="maintainer.avatar" :alt="maintainer.name" class="rounded-full w-6 h-6">
+            <img loading="lazy" :src="maintainer.avatar" :alt="maintainer.name" class="rounded-full w-6 h-6" />
           </Link>
         </li>
       </ul>

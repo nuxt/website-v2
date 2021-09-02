@@ -34,7 +34,7 @@
             </div>
             <div class="text-sm flex flex-col">
               <span class="font-bold" v-if="post.authors">{{ post.authors.length > 1 ? 'Multiple Authors' : post.authors[0].name }}</span>
-              <time :datetime="post.date" class="font-medium mr-2 text-sm text-gray-400 dark:text-cloud">
+              <time :datetime="post.date" class="font-medium mr-2 text-sm text-gray-500 dark:text-cloud-light">
                 {{ formatDateByLocale($i18n.locale, post.date) }}
               </time>
             </div>

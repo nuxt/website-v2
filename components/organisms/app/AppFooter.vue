@@ -1,5 +1,5 @@
 <template>
-  <footer class="" aria-labelledby="footerHeading">
+  <footer class="" aria-label="footerHeading">
     <div class="select-none pt-24">
       <img
         loading="lazy"
@@ -26,7 +26,7 @@
             </div>
           </div>
           <div class="mt-12 xl:mt-0">
-            <h3 class="text-lg font-semibold light:text-gray-400 dark:text-cloud-light">{{ $t('common.settings') }}</h3>
+            <h3 class="text-lg font-semibold light:text-gray-500 dark:text-cloud-light">{{ $t('common.settings') }}</h3>
             <FooterLocaleSelector class="mt-4 sm:max-w-xs" />
             <FooterColorModeSelector class="mt-4 sm:max-w-xs" />
           </div>

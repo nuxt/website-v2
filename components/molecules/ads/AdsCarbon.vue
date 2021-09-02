@@ -11,7 +11,7 @@ export default defineComponent({
     if (this.$refs.carbonads) {
       const script = document.createElement('script')
       script.setAttribute('type', 'text/javascript')
-      script.setAttribute('src', '//cdn.carbonads.com/carbon.js?serve=CKYILK7U&placement=nuxtjsorg')
+      script.setAttribute('src', 'https://cdn.carbonads.com/carbon.js?serve=CKYILK7U&placement=nuxtjsorg')
       script.setAttribute('id', '_carbonads_js')
       this.$refs.carbonads.appendChild(script)
     }

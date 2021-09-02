@@ -1,7 +1,7 @@
 <template>
   <section id="subscribe-to-newsletter">
     <div>
-      <h3 class="font-semibold light:text-gray-400 dark:text-cloud-light text-lg">{{ $t('footer.newsletter.title') }}</h3>
+      <h3 class="font-semibold light:text-gray-500 dark:text-cloud-light text-lg">{{ $t('footer.newsletter.title') }}</h3>
       <p class="mt-2 text-base text-gray-500 dark:text-secondary-surface">{{ $t('footer.newsletter.description') }}</p>
     </div>
     <div class="relative">

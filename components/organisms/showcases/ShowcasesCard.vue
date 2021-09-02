@@ -14,7 +14,7 @@
       />
       <div class="absolute inset-0 bg-gray-700 dark:bg-black opacity-0 group-hover:opacity-10 group-hover:dark:opacity-20 transition-opacity duration-200 ease-in-out" />
     </div>
-    <h3 class="font-bold p-2 truncate">{{ showcase.hostname }}</h3>
+    <h2 class="font-bold p-2 truncate">{{ showcase.hostname }}</h2>
   </Link>
 </template>
 

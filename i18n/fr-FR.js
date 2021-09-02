@@ -2,6 +2,10 @@ import fr from '~docus-i18n/fr-FR'
 
 export default {
   ...fr,
+  banner: {
+    here: 'here',
+    format: '{nuxt} is coming... Discover more about it {here} !'
+  },
   header: {
     Docs: "Docs",
     Examples: "Exemples",
@@ -93,6 +97,22 @@ export default {
       location: "Lieu",
       contact_partner: "Contacter le partenaire",
       visit_website: "Visitez le website"
+    }
+  },
+  showcases: {
+    loading: 'Loading...',
+    categories: {
+      Featured: 'Featured',
+      'E-Commerce': 'E-Commerce',
+      News: 'News',
+      Government: 'Government',
+      Sport: 'Sport',
+      Education: 'Education',
+      Entertainment: 'Entertainment',
+      Travel: 'Travel',
+      Finance: 'Finance',
+      Tech: 'Tech',
+      Business: 'Business'
     }
   },
   common: {

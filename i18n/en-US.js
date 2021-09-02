@@ -2,6 +2,10 @@ import en from '~docus-i18n/en-US'
 
 export default {
   ...en,
+  banner: {
+    here: 'here',
+    format: '{nuxt} is coming... Discover more about it {here} !'
+  },
   header: {
     Docs: "Docs",
     Examples: "Examples",
@@ -96,7 +100,20 @@ export default {
     }
   },
   showcases: {
-    loading: 'Loading...'
+    loading: 'Loading...',
+    categories: {
+      Featured: 'Featured',
+      'E-Commerce': 'E-Commerce',
+      News: 'News',
+      Government: 'Government',
+      Sport: 'Sport',
+      Education: 'Education',
+      Entertainment: 'Entertainment',
+      Travel: 'Travel',
+      Finance: 'Finance',
+      Tech: 'Tech',
+      Business: 'Business'
+    }
   },
   common: {
     an_error_occurred: 'An error occurred',

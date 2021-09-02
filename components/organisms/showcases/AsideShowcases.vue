@@ -29,9 +29,9 @@
       >
         <div class="py-4 pr-0">
           <ul class="flex flex-wrap lg:flex-col">
-            <li v-for="option in options" :key="option">
-              <button @click="$emit('selected', option)" class="py-2 px-4 flex justify-between w-full focus:outline-none focus:ring-transparent" :class="{ 'rounded-md bg-gray-100 dark:bg-white dark:bg-opacity-10': option === selected }">
-                <div class="truncate max-w-48 font">{{option }}</div>
+            <li v-for="option in options" :key="option.name">
+              <button @click="$emit('selected', option)" class="py-2 px-4 flex justify-between w-full focus:outline-none focus:ring-transparent" :class="{ 'rounded-md bg-gray-100 dark:bg-white dark:bg-opacity-10': option.name === selected }">
+                <div class="truncate max-w-48 font">{{option.display}}</div>
               </button>
             </li>
           </ul>

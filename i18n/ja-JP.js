@@ -2,6 +2,10 @@ import ja from '~docus-i18n/ja-JP'
 
 export default {
   ...ja,
+  banner: {
+    here: 'ここ',
+    format: '{nuxt} はまもなくやってきます... {here}で知ることができます！'
+  },
   header: {
     Docs: "ドキュメント",
     Examples: "例",
@@ -93,6 +97,22 @@ export default {
       location: "場所",
       contact_partner: "Contact Partner",
       visit_website: "Visit Website"
+    }
+  },
+  showcases: {
+    loading: '詠み込み中...',
+    categories: {
+      Featured: '特集',
+      'E-Commerce': 'E-コマース',
+      News: 'ニュース',
+      Government: '政治',
+      Sport: 'スポーツ',
+      Education: '教育',
+      Entertainment: '娯楽',
+      Travel: '旅行',
+      Finance: '金融',
+      Tech: '技術',
+      Business: 'ビジネス'
     }
   },
   common: {

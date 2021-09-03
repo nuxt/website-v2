@@ -25,6 +25,7 @@
   },
   "devDependencies": {
     "@types/crawler": "^1.2.2",
+    "@types/fs-extra": "^9.0.12",
     "crawler": "^1.3.0",
     "docus": "0.8.15",
     "fuse.js": "^6.4.6",

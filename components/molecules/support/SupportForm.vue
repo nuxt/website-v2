@@ -68,15 +68,16 @@
     </ul>
     <SectionButton
       :aria-label="buttonText"
+      @click.native="send"
       size="md"
       class="mt-4 ml-10 text-gray-800 bg-primary hover:bg-primary-400 focus:bg-primary-400"
       >{{ buttonText }}</SectionButton
     >
-    <Recaptcha />
   </form>
 </template>
 <script lang="ts">
-import { defineComponent, ref } from '@nuxtjs/composition-api'
+import { defineComponent, useContext, onMounted, onBeforeUnmount } from '@nuxtjs/composition-api'
+import { useTechnicalSupport } from '~/plugins/technicalSupportForm'
 
 export default defineComponent({
   props: {
@@ -105,13 +106,17 @@ export default defineComponent({
     }
   },
   setup(props) {
-    const status = ref(props.statusList[0])
-    const company = ref('')
-    const name = ref('')
-    const email = ref('')
-    const phone = ref('')
-    const subject = ref('')
-    const message = ref('')
+    const { $recaptcha } = useContext()
+    const { status, company, name, email, phone, subject, message, send } = useTechnicalSupport()
+
+    onMounted(async () => {
+      await $recaptcha.init()
+    })
+
+    onBeforeUnmount(() => {
+      $recaptcha.destroy()
+    })
+
 
     return {
       status,
@@ -120,7 +125,8 @@ export default defineComponent({
       email,
       phone,
       subject,
-      message
+      message,
+      send
     }
   },
 })

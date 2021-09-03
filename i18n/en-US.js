@@ -76,6 +76,11 @@ export default {
       sponsors: "Sponsors"
     }
   },
+  support: {
+    confirm_sending: "Message sent to technical support",
+    error_sending: "Error during sending",
+    invalid_adress: "Invalid address",
+  },
   common: {
     an_error_occurred: 'An error occurred',
     page_not_found: "We couldn't find the page you are looking for.",

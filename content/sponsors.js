@@ -40,19 +40,19 @@ export default {
     },
     {
       name: 'Layer0',
-      url: 'https://www.layer0.co/?ref=nuxt',
+      url: 'https://www.layer0.co/',
       img: 'layer0-logo.svg',
       class: 'h-12'
     },
     {
       name: 'Storyblok',
-      url: 'https://www.storyblok.com/?ref=nuxt',
+      url: 'https://www.storyblok.com/',
       img: 'storyblok-logo.svg',
       class: 'h-10'
     },
     {
       name: '64 Robots',
-      url: 'https://www.64robots.com/?ref=nuxt',
+      url: 'https://www.64robots.com/',
       img: '64-robots.png',
       class: 'h-12'
     }

@@ -25,7 +25,7 @@ resources:
   themes:
     title: Themes
     description: Get inspired and use real world applications built with Nuxt.
-    image: /img/resources/themes.png
+    image: /img/resources/themes.jpg
     slug: themes
     href: /resources/themes
   video-courses:

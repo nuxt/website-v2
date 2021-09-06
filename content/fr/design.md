@@ -14,39 +14,61 @@ downloadText : Téléchargez le Design Kit
 ---
 ::
 
-::design-section
----
-sectionComponent: DesignLogos
----
+::design-sections
 
-#title
-Logos
+  ::design-section
+  #title
+  Monogramme
 
-#description
-Notre logo est formé de deux éléments: les montagnes triangulaires et le nom. Dans la plupart des cas, ils doivent apparaître ensemble comme sur les exemples ci-joint. Les montagnes triangulaires peuvent être utilisées seules en tant qu'icône, image de profil ou badge, mais le logo-nom ne doit jamais être utilisé sans le symbôle à ses côtés.
-::
+  #description
+  Notre logo est formé de deux éléments: les montagnes triangulaires et le nom. Dans la plupart des cas, ils doivent apparaître ensemble comme sur les exemples ci-joint. Les montagnes triangulaires peuvent être utilisées seules en tant qu'icône, image de profil ou badge, mais le logo-nom ne doit jamais être utilisé sans le symbôle à ses côtés.
 
-::design-section
----
-sectionComponent: DesignColors
-buttonText: Télécharger les couleurs système
----
+  #sectionComponent
+    :::design-logos
+    ---
+    type: monogram
+    ---
+    :::
+  ::
 
-#title
-Primary colors
+  ::design-section
+  #title
+  Logos
 
-#description
-Nos couleurs ont été soigneusement choisies pour fonctionner de façon harmonieuse et consistente dans une large variété de medias. Lorsque vous créez un support de communication pour NuxtJS, utilisez les valeurs colorimétriques détaillées dans les pages suivantes pour que vos compositions restent alignés avec la marque. Cette palette de couleurs primaires inspirées par la nature doit être utilisée dans chacune des communications officielles de l'organisation.
-::
+  #sectionComponent
+    :::design-logos
+    ---
+    type: logos
+    ---
+    :::
+  ::
 
-::design-section
----
-sectionComponent: DesignTypography
----
-#title
-Typographie
+  ::design-section
+  #title
+  Primary colors
 
-#description
-Notre typographie est DM Sans par Colophon Foundry pour Google. Cette typographie open-source a été retenue pour son alliage de douceur et structure. Ses formes géométriques et transitions douces apportent clarté et aération à nos textes.
-Sa disponibilité publique laisse la liberté aux membres de la communauté NuxtJS de l'incorporer dans leurs propres travaux.
+  #description
+  Nos couleurs ont été soigneusement choisies pour fonctionner de façon harmonieuse et consistente dans une large variété de medias. Lorsque vous créez un support de communication pour NuxtJS, utilisez les valeurs colorimétriques détaillées dans les pages suivantes pour que vos compositions restent alignés avec la marque. Cette palette de couleurs primaires inspirées par la nature doit être utilisée dans chacune des communications officielles de l'organisation.
+
+  #sectionComponent
+    :::design-colors
+    ---
+    buttonText: Télécharger les couleurs système
+    ---
+    :::
+  ::
+
+  ::design-section
+
+  #title
+  Typographie
+
+  #description
+  Notre typographie est DM Sans par Colophon Foundry pour Google. Cette typographie open-source a été retenue pour son alliage de douceur et structure. Ses formes géométriques et transitions douces apportent clarté et aération à nos textes.
+  Sa disponibilité publique laisse la liberté aux membres de la communauté NuxtJS de l'incorporer dans leurs propres travaux.
+
+  #sectionComponent
+    :::design-typography
+    :::
+  ::
 ::

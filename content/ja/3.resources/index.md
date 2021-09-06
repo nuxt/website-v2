@@ -1,6 +1,6 @@
 ---
 template: page
-title: Resources
+title: リソース
 navigation:
   collapse: true
 ---

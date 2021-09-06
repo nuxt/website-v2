@@ -124,7 +124,7 @@ export default {
     settings: 'Settings',
     version: 'Version',
     currently_version: 'Currently in private beta',
-    back: 'Dos',
+    back: 'Retour',
     go_to: "Visiter {title}",
     go_home: "Retourner à l'accueil",
     read_article: "Lire l'article"

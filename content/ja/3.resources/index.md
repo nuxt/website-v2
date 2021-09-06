@@ -24,7 +24,7 @@ resources:
   themes:
     title: テーマ
     description: インスピレーションを得て Nuxt で構築された実際のアプリケーションを使用する
-    image: /img/resources/themes.png
+    image: /img/resources/themes.jpg
     slug: themes
     href: /resources/themes
   video-courses:

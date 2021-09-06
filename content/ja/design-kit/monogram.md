@@ -1,19 +1,16 @@
 ---
 logos:
 -
-  type: Colored
+  type: Logo colored
   logoImg: '/design-kit/colored-logo'
   color: dark
 -
-  type: Black
+  type: Logo black
   logoImg: '/design-kit/black-logo'
   color: dark
 -
-  type: White
+  type: Logo white
   logoImg: '/design-kit/white-logo'
   color: light
 -
-  type: Colored & White
-  logoImg: '/design-kit/colored-white-logo'
-  color: light
 ---

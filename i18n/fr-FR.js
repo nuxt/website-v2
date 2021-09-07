@@ -115,6 +115,11 @@ export default {
       Business: 'Business'
     }
   },
+  theme_mode: {
+    system: 'Système',
+    light: 'Clair',
+    dark: 'Sombre'
+  },
   common: {
     an_error_occurred: "Une erreur s'est produite",
     page_not_found: 'La page est que vous demandez est introuvable...',

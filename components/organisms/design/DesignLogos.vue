@@ -1,6 +1,6 @@
 <template>
   <div v-if="logosMd">
-    <div v-for="(content, index) in logosMd" :key="index" class="grid grid-cols-1 sm:grid-cols-3 sm:gap-6">
+    <div v-for="(content, i) in logosMd" :key="i" class="grid grid-cols-1 sm:grid-cols-3 sm:gap-6">
       <div v-for="(logo, index) in content.logos" :key="index" class="mt-4">
         <div v-if="logo">
           <div
@@ -49,14 +49,10 @@ export default defineComponent({
     const logosMd = ref()
 
     useFetch(async () => {
-
-      console.log('type',)
       logosMd.value = await $docus
         .search('/design-kit', { deep: true })
         .where({ slug: { $in: props.type }, language: i18n.locale })
         .fetch()
-
-        console.log('logosMd', logosMd.value)
     })
 
     return {

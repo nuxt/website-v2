@@ -6,7 +6,8 @@
       :description-full-width="page.heroDescriptionFullWidth"
     />
     <div class="d-container">
-      <DocusContent :document="page" />
+      <DocusContent v-if="!page.blogPostList" :document="page" />
+      <BlogpostList v-else :slug="page.to" />
     </div>
   </div>
 </template>

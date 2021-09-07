@@ -1,42 +1,42 @@
 ---
 template: blog
-title: Nuxt Themes
-description: 'See how a real world application is built using the Nuxt stack with the themes built by our partners.'
+title: Thèmes NuxtJS
+description: "Découvrez comment une vraie application est construite avec la stack Nuxt.js grâce aux thèmes édités par nos partenaires."
 ---
 ::themes-list
 ---
 themes:
   one:
     title: Nuxt Argon Dashboard PRO
-    description: Nuxt Argon Dashboard PRO is built with over 200 individual components, giving you the freedom of choosing and combining.
+    description: Le thème Nuxt Argon Dashboard PRO est constitué de plus de 200 composants, vous offrant un large choix de combinaisons.
     image: /img/themes/argon_dashboard_pro.jpg
     slug: one
     price: $99
     href: https://www.creative-tim.com/product/nuxt-argon-dashboard-pro?partner=120213
   two:
     title: Nuxt Argon Dashboard PRO Laravel
-    description: "All the functionality of a lightweight CMS out of the box, built using two of the most popular frameworks today: Nuxt and Laravel."
+    description: "Toutes les fonctionnalités d'un CMS léger et prêt à l'emploi, tirant partie de deux frameworks populaires et modernes: Nuxt et Laravel."
     image: /img/themes/argon_dashboard_pro_laravel.jpg
     slug: two
     price: $149
     href: https://www.creative-tim.com/product/nuxt-argon-dashboard-pro-laravel?partner=120213
   three:
     title: Nuxt Now UI Kit
-    description: A premium responsive Bootstrap 4 kit provided by Invision and Creative Tim. It is a beautiful cross-platform UI kit featuring over 1000+ elements and 11 templates.
+    description: Un kit premium responsive basé sur Bootstrap 4, conçu par Invision et Creative Tim. Ce beau kit UI cross-platform comprend plus de 1000 éléments et 11 templates.
     image: /img/themes/nuxt_now_ui_kit.jpg
     slug: three
     price: $89
     href: https://www.creative-tim.com/product/nuxt-now-ui-kit-pro?partner=120213
   four:
     title: Nuxt Black Dashboard PRO
-    description: "A beautiful Bootstrap 4 Admin Dashboard that comes in 2 versions: Dark and Light Mode."
+    description: "Un beau tableau de bord Bootstrap 4 livré en 2 versions: Mode Light et Dark."
     image: /img/themes/nuxt_black_dashboard_pro.jpg
     slug: four
     price: $79
     href: https://www.creative-tim.com/product/nuxt-black-dashboard-pro?partner=120213
   five:
     title: Nuxt Scutum Dashboard
-    description: Scutum Admin is a professional HTML5/CSS3 Material Design template based on UIkit Framework (v3) and Nuxt.
+    description: Scutum Admin est un template Material Design professionel en HTML5/CSS3, basé sur UIkit Framework (v3) et Nuxt.
     image: /img/themes/scutum_dashboard.jpg
     slug: five
     price: $26

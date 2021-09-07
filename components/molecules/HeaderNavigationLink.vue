@@ -10,7 +10,7 @@
       'hover:d-primary-text-hover': currentSlug !== link.slug
     }"
   >
-    {{ $t(`header.${link.title}`) }}
+    {{ link.title }}
   </component>
 </template>
 
@@ -24,7 +24,7 @@ export default defineComponent({
       required: true
     }
   },
-  setup (props) {
+  setup(props) {
     const route = useRoute()
     const currentSlug = computed(() => {
       return route.value.path !== '/' && route?.value?.params?.pathMatch

@@ -31,7 +31,7 @@ links:
         slug: 'releases'
         to: '/releases'
       -
-        title: 'Mastering Nuxt'
+        title: 'Master courses'
         href: 'https://masteringnuxt.com/'
   -
     title: 'Explore'
@@ -39,17 +39,44 @@ links:
       -
         title: 'Integrations'
         slug: 'integrations'
-        to: '/docs/deployment'
+        to: '/integrations/deployments'
+      -
+        title: 'Modules'
+        slug: 'modules'
+        to: '/modules'
       -
         title: 'Themes'
         slug: 'themes'
-        to: '/resources/themes'
+        to: '/themes'
       -
         title: 'Video Courses'
         slug: 'video-courses'
-        to: '/resources/video-courses'
+        to: '/video-courses'
+  -
+    title: 'Community'
+    items:
+      -
+        title: 'Announcements'
+        slug: 'announcements'
+        to: '/annoucements'
+      -
+        title: 'Events'
+        slug: 'events'
+        to: '/events'
+      -
+        title: 'Sponsors'
+        slug: 'sponsors'
+        to: '/sponsors'
+      -
+        title: 'Teams'
+        slug: 'teams'
+        to: '/teams'
+      -
+        title: 'Tutorials'
+        slug: 'tutorials'
+        to: '/tutorials'
   -
     title: 'Partners'
     slug: 'partners'
-    to: '/sponsor-nuxtjs'
+    to: '/partners'
 ---

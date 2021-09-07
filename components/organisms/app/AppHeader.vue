@@ -16,7 +16,7 @@
         </Link>
       </div>
 
-      <nav class="hidden lg:flex items-center justify-center">
+      <nav class="hidden lg:flex items-center justify-center h-full gap-4">
         <template v-for="link in links">
           <Dropdown
             v-if="link.items && link.items.length"
@@ -28,13 +28,14 @@
             <template #trigger>
               <HeaderNavigationLink
                 :link="link"
+                class="p-1"
               />
             </template>
 
             <template #item="{ item }">
               <HeaderNavigationLink
                 :link="item"
-                class="py-1"
+                class="px-4 py-1"
               />
             </template>
           </Dropdown>
@@ -42,6 +43,7 @@
             v-else
             :key="link.slug"
             :link="link"
+            class="p-1"
           />
         </template>
       </nav>

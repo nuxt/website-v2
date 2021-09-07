@@ -4,7 +4,7 @@
     v-bind="linkProps"
     :key="link.slug"
     :aria-label="link.title"
-    class="relative flex flex-col items-center justify-center h-full px-4 font-medium text-center capitalize group"
+    class="flex font-medium capitalize group whitespace-nowrap"
     :class="{
       'text-primary': currentSlug === link.slug,
       'hover:d-primary-text-hover': currentSlug !== link.slug
@@ -24,7 +24,7 @@ export default defineComponent({
       required: true
     }
   },
-  setup (props) {
+  setup(props) {
     const route = useRoute()
     const currentSlug = computed(() => {
       return route.value.path !== '/' && route?.value?.params?.pathMatch
@@ -49,7 +49,7 @@ export default defineComponent({
         }
       } else {
         return {
-          is: 'div'
+          is: 'span'
         }
       }
     })

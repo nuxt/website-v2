@@ -9,6 +9,20 @@
   >
     <div class="flex items-center">
       <slot name="trigger" :toggle="toggle" :open="open" />
+      <svg
+        v-if="icon"
+        class="h-4 w-4 dark:text-secondary light:text-gray-300"
+        xmlns="http://www.w3.org/2000/svg"
+        viewBox="0 0 20 20"
+        fill="currentColor"
+        aria-hidden="true"
+      >
+        <path
+          fill-rule="evenodd"
+          d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+          clip-rule="evenodd"
+        />
+      </svg>
     </div>
 
     <transition
@@ -23,17 +37,19 @@
       <div
         v-show="open && (items.length || $slots.header || $scopedSlots.header)"
         ref="tooltip"
-        :class="[
-          dropdownClass,
-          mode === 'hover' && 'pt-2'
-        ]"
+        :class="[dropdownClass, mode === 'hover' && 'pt-2']"
         class="z-30 rounded-md shadow-lg"
       >
         <div
-          class="overflow-y-auto rounded-md bg-white dark:bg-secondary-darkest divide-y divide-gray-100 dark:divide-gray-700"
-          :class="[
-            dropdownMenuClass
-          ]"
+          class="
+            overflow-y-auto
+            rounded-md
+            bg-white
+            dark:bg-secondary-darkest
+            divide-y divide-gray-100
+            dark:divide-gray-700
+          "
+          :class="[dropdownMenuClass]"
           role="menu"
           aria-orientation="vertical"
           aria-labelledby="options-menu"
@@ -71,8 +87,8 @@ export default {
       default: ''
     },
     icon: {
-      type: String,
-      default: 'solid/chevron-down'
+      type: Boolean,
+      default: true
     },
     items: {
       type: Array,
@@ -85,14 +101,14 @@ export default {
     size: {
       type: String,
       default: 'md',
-      validator (value) {
+      validator(value) {
         return ['', 'xxs', 'xs', 'sm', 'md', 'lg', 'xl'].includes(value)
       }
     },
     mode: {
       type: String,
       default: 'click',
-      validator (value) {
+      validator(value) {
         return ['click', 'hover'].includes(value)
       }
     },
@@ -105,10 +121,6 @@ export default {
       default: 'absolute'
     },
     wrapperClass: {
-      type: String,
-      default: null
-    },
-    iconClass: {
       type: String,
       default: null
     },
@@ -134,7 +146,7 @@ export default {
     },
     dropdownClass: {
       type: String,
-      default: 'w-48'
+      default: 'w-auto'
     },
     dropdownMenuClass: {
       type: String,
@@ -153,7 +165,7 @@ export default {
       default: 8
     }
   },
-  data () {
+  data() {
     return {
       open: false,
       instance: null,
@@ -162,10 +174,12 @@ export default {
     }
   },
   watch: {
-    disabled (value) {
-      if (value && open) { this.close() }
+    disabled(value) {
+      if (value && open) {
+        this.close()
+      }
     },
-    open (value) {
+    open(value) {
       if (!value) {
         return
       }
@@ -202,14 +216,14 @@ export default {
       })
     }
   },
-  beforeDestroy () {
+  beforeDestroy() {
     if (this.instance) {
       this.instance.destroy()
       this.instance = null
     }
   },
   methods: {
-    click (link) {
+    click(link) {
       if (link.click) {
         link.click()
       }
@@ -217,26 +231,30 @@ export default {
         this.toggle()
       }
     },
-    mouseover () {
+    mouseover() {
       clearTimeout(this.closeTimeout)
       this.closeTimeout = null
-      this.openTimeout = this.openTimeout || setTimeout(() => {
-        this.open = true
-        this.openTimeout = null
-      }, this.openDelay)
+      this.openTimeout =
+        this.openTimeout ||
+        setTimeout(() => {
+          this.open = true
+          this.openTimeout = null
+        }, this.openDelay)
     },
-    mouseleave () {
+    mouseleave() {
       clearTimeout(this.openTimeout)
       this.openTimeout = null
-      this.closeTimeout = this.closeTimeout || setTimeout(() => {
-        this.close()
-        this.closeTimeout = null
-      }, this.closeDelay)
+      this.closeTimeout =
+        this.closeTimeout ||
+        setTimeout(() => {
+          this.close()
+          this.closeTimeout = null
+        }, this.closeDelay)
     },
-    toggle () {
+    toggle() {
       this.open = !this.open
     },
-    close () {
+    close() {
       this.open = false
     }
   }

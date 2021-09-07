@@ -13,7 +13,17 @@ export default {
     Blog: "Blog",
     Modules: "Modules",
     Partners: "Partners",
-    "Video Courses": "Video courses"
+    "Video Courses": "Video courses",
+    Discover: 'Discover',
+    Showcases: 'Showcases',
+    'Case studies': 'Case studies',
+    Testimonials: 'Testimonials',
+    Learn: 'Learn',
+    Releases: 'Releases',
+    'Mastering Nuxt': 'Mastering Nuxt',
+    Explore: 'Explore',
+    Integrations: 'Integrations',
+    Themes: 'Themes'
   },
   footer: {
     titles: {

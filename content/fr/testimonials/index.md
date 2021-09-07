@@ -1,7 +1,7 @@
 ---
 template: blog
-title: Testimonials
-description: Learn from experts what they love about Nuxt
+title: Témoignages
+description: Découvrez ce que ces experts apprécient chez Nuxt.
 ---
 
 ::home-testimonials

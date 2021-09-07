@@ -1,7 +1,7 @@
 ---
 template: blog
-title: Testimonials
-description: Learn from experts what they love about Nuxt
+title: 著名人の声
+description: エキスパートが語る Nuxt の魅力
 ---
 
 ::home-testimonials

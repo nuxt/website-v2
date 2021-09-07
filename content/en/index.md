@@ -241,15 +241,3 @@ Sharing is [_Caring_]{.text-primary}
 #description
 Discover articles from the framework Team and Community about Nuxt, tips and tricks included!
 ::
-
-::home-testimonials
----
-category: Community
----
-
-#title
-Testimonials
-
-#description
-Learn from experts what they love about Nuxt.
-::

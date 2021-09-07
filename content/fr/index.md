@@ -233,15 +233,3 @@ Sharing is [_Caring_]{.text-primary}
 #description
 Lisez nos articles rédigés par l'équipe NuxtJS et la communauté
 ::
-
-::home-testimonials
----
-category: Community
----
-
-#title
-Témoignages
-
-#description
-Découvrez ce que ces experts apprécient chez Nuxt.
-::

@@ -1,16 +1,10 @@
 <template>
   <header class="d-header">
     <div class="flex h-full max-w-7xl mx-auto px-1 sm:px-3 lg:px-6">
-      <NavigationButton aria-label="mobileMenu" v-if="aside" class="px-2.5" />
+      <NavigationButton v-if="aside" aria-label="mobileMenu" class="px-2.5" />
 
-      <div
-        :class="[aside ? 'justify-center lg:justify-start' : 'justify-start']"
-        class="flex items-center flex-1"
-      >
-        <Link
-          :to="localePath('/')"
-          aria-label="homeLink"
-        >
+      <div :class="[aside ? 'justify-center lg:justify-start' : 'justify-start']" class="flex items-center flex-1">
+        <Link :to="localePath('/')" aria-label="homeLink">
           <!-- "mr-4 lg:mr-0" to optically center logo text -->
           <Logo :settings="settings" class="h-8 md:h-9 mr-4 lg:mr-0" />
         </Link>
@@ -26,23 +20,14 @@
             mode="hover"
           >
             <template #trigger>
-              <HeaderNavigationLink
-                :link="link"
-              />
+              <HeaderNavigationLink :link="link" />
             </template>
 
             <template #item="{ item }">
-              <HeaderNavigationLink
-                :link="item"
-                class="py-1"
-              />
+              <HeaderNavigationLink :link="item" class="py-1" />
             </template>
           </Dropdown>
-          <HeaderNavigationLink
-            v-else
-            :key="link.slug"
-            :link="link"
-          />
+          <HeaderNavigationLink v-else :key="link.slug" :link="link" />
         </template>
       </nav>
 
@@ -51,11 +36,7 @@
         <LangSwitcher class="hidden lg:inline-flex xl:hidden relative justify-center w-12 h-12" />
         <FooterColorModeSelector class="hidden xl:flex flex-shrink-0" />
         <ColorSwitcher class="hidden lg:inline-flex xl:hidden items-center justify-center w-12 h-12" />
-        <AlgoliaSearchBox
-          v-if="settings && settings.algolia"
-          :options="settings.algolia"
-          :settings="settings"
-        />
+        <AlgoliaSearchBox v-if="settings && settings.algolia" :options="settings.algolia" :settings="settings" />
       </div>
     </div>
   </header>
@@ -78,11 +59,8 @@ export default defineComponent({
     const links = ref([])
 
     useFetch(async () => {
-      const header = await $docus
-        .search('/collections/navigations', { deep: true })
-        .where({ slug: { $in: ['header'] }, language: i18n.locale })
-        .fetch()
-      links.value = header[0].links
+      const header = await $docus.search('/collections/navigations/header').where({ language: i18n.locale }).fetch()
+      links.value = header.links
     })
 
     return {

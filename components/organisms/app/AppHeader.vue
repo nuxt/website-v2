@@ -79,7 +79,7 @@ export default defineComponent({
 
     useFetch(async () => {
       const header = await $docus
-        .search('/navigation', { deep: true })
+        .search('/collections/navigations', { deep: true })
         .where({ slug: { $in: ['header'] }, language: i18n.locale })
         .fetch()
       links.value = header[0].links

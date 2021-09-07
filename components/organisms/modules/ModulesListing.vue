@@ -1,6 +1,19 @@
 <template>
-  <div v-if="pageFilteredModulesList" class="d-container-content">
-    <div class="w-full flex-col flex md:flex-row space-y-8 pl-4 md:pl-0 md:space-y-0 justify-between md:border-b border-b-sky-dark pb-2">
+  <div class="d-container-content">
+    <div
+      class="
+        w-full
+        flex-col flex
+        md:flex-row
+        space-y-8
+        pl-4
+        md:pl-0 md:space-y-0
+        justify-between
+        md:border-b
+        border-b-sky-dark
+        pb-2
+      "
+    >
       <div class="flex flex-row space-x-4 items-center justify-start">
         <IconSearch alt="Search Icon" class="text-sky-darker dark:text-white w-4 h-4" />
         <NuxtTextInput
@@ -25,213 +38,78 @@
       </div>
     </div>
     <div class="lg:flex">
-      <AsideModules :modules="modules" @category="getCategory" :selectedCategory="selectedCategory" />
-      <div class="w-full px-4 md:px-0 lg:w-4/5 min-w-0 min-h-0 lg:static lg:overflow-visible mt-8 grid md:grid-cols-2 gap-8 lg:ml-20 auto-rows-min">
-        <div v-for="module in pageFilteredModulesList" :key="module.name">
-          <LazyHydrate when-visible>
-            <ModulesCard :module="module" />
-          </LazyHydrate>
+      <AsideModules />
+      <div
+        class="
+          w-full
+          px-4
+          md:px-0
+          lg:w-4/5
+          min-w-0 min-h-0
+          lg:static lg:overflow-visible
+          mt-8
+          grid
+          md:grid-cols-2
+          gap-8
+          lg:ml-20
+          auto-rows-min
+        "
+      >
+        <div v-for="module in filteredModules" :key="module.name">
+          <ModulesCard :module="module" />
         </div>
-        <ObserverModules @intersect="intersectedModulesLoading" />
+
+        <ObserverModules @intersect="loadModules" />
       </div>
     </div>
   </div>
-  <div v-else class="text-center">{{ $t('modules.loading') }}</div>
 </template>
 
 <script lang="ts">
-import { defineComponent, ref, useContext, useFetch, computed, watch , onMounted} from '@nuxtjs/composition-api'
-import { useModules } from '../../../plugins/modulesList'
-import LazyHydrate from 'vue-lazy-hydration'
-import Fuse from 'fuse.js/dist/fuse.basic.esm'
-
-const sort = (a: number, b: number, asc: boolean) => asc ? a - b : b - a
-
-const ORDERS = {
-  DESC: 'desc',
-  ASC: 'asc'
-}
-
-const MODULE_INCREMENT_LOADING = 12
+import { defineComponent, useAsync, onMounted } from '@nuxtjs/composition-api'
+import { useModules } from '../../../plugins/modules'
+import { useFuse } from '../../../plugins/fuse'
 
 export default defineComponent({
-  components: { LazyHydrate },
   directives: {
     focus: {
-      // directive definition
-      inserted (el) {
+      inserted(el) {
         el.focus()
       }
     }
   },
+  setup(_) {
+    // Modules composable
+    const { fetch: fetchModules, modules } = useModules()
 
-  setup(_, { emit }) {
-    const { route, app } = useContext()
-    const { i18n } = app
-    const { getModules } = useModules()
-    const sortFields = [{ text: i18n.t('modules.sort_fields.downloads') , value: 'downloads' }, { text: i18n.t('modules.sort_fields.stars'), value: 'stars' }]
-    const pending = ref(false)
-    let modules = ref(null)
-    let categories = ref(null)
-    let fuse = null
-    let query = ref(null)
-    let orderedBy = ref(ORDERS.DESC)
-    let sortedBy = ref(sortFields[0].value)
-    let sortByMenuVisible = ref(false)
-    let selectedCategory = ref('')
-    let pageFilteredModulesList = ref(null)
-    let moduleLoaded = MODULE_INCREMENT_LOADING
+    // Fuse composable
+    const {
+      query,
+      orderedBy,
+      sortedBy,
+      selectedCategory,
+      filteredModules,
+      clearFilters,
+      sortByComp,
+      selectSortBy,
+      init: initFuse,
+      sortFields,
+      toggleOrderBy,
+      loadModules,
+      updateList
+    } = useFuse(modules)
 
-    // fetch modules
-    useFetch(async () => {
-      modules.value = await getModules()
-      if (process.client) {
-        init()
-      }
-    })
+    useAsync(async () => {
+      const modules = await fetchModules()
+      updateList(modules)
+    }, 'fetchModules')
 
-    if (process.static && process.client && modules.value) {
-      onMounted(init)
-    }
-
-    const filteredModules = computed(() => {
-
-      let filteredModulesList = modules.value
-
-      if (filteredModulesList) {
-        if (query.value) {
-          filteredModulesList = fuse.search(query.value).map((r: { item: any }) => r.item)
-        } else {
-          filteredModulesList = filteredModulesList.sort((a: number, b: number) => sort(a[sortedBy.value], b[sortedBy.value], orderedBy.value === ORDERS.ASC))
-        }
-
-        if (selectedCategory.value) {
-          filteredModulesList = filteredModulesList.filter((module: { category: string }) => module.category === selectedCategory.value)
-        }
-      }
-
-      return filteredModulesList
-    })
-
-    const sortByComp = computed(() => {
-      return sortFields[sortedBy.value]
-    })
-
-    const sortByOptions = computed(() => {
-      const options = {}
-
-      for (const field in sortFields) {
-        if (field === sortedBy.value) { continue }
-
-        options[field] = {
-          ...sortFields[field]
-        }
-      }
-      return options
-    })
-
-    watch(selectedCategory, syncURL)
-    watch(query, syncURL)
-    watch(orderedBy, syncURL)
-    watch(sortedBy, syncURL)
-
-    function init() {
-      const fuseOptions = {
-        threshold: 0.1,
-        keys: [
-          'name',
-          'npm',
-          'category',
-          'maintainers.name',
-          'maintainers.github',
-          'description',
-          'repo'
-        ]
-      }
-      const index = Fuse.createIndex(fuseOptions.keys, modules.value)
-      fuse = new Fuse(modules.value, fuseOptions, index)
-
-      selectedCategory.value = (window.location.hash || '').substr(1)
-
-      const { q, sortBy, orderBy } = route.value.query
-
-      if (q) {
-        query.value = q as any
-      }
-
-      if (sortBy) {
-        sortedBy.value = sortBy as any
-      }
-
-      if (orderBy) {
-        orderedBy.value = orderBy as any
-      }
-
-      setPageFilteredModules(MODULE_INCREMENT_LOADING)
-    }
-
-    function syncURL () {
-      const url = route.value.path
-      let q = ''
-      resetModuleLoaded()
-      setPageFilteredModules(MODULE_INCREMENT_LOADING)
-
-      if (query.value) {
-        q += `?q=${query.value}`
-      }
-
-      if (orderedBy.value !== ORDERS.DESC) {
-        q += `${q ? '&' : '?'}orderBy=${orderedBy.value}`
-      }
-
-      if (sortedBy.value !== sortFields[0].value) {
-        q += `${q ? '&' : '?'}sortBy=${sortedBy.value}`
-      }
-
-      if (selectedCategory.value) {
-        q += `#${selectedCategory.value}`
-      }
-
-      window.history.pushState('', '', `${url}${q}`)
-    }
-
-    function getCategory(category: string) {
-      selectedCategory.value = category
-    }
-
-    function clearFilters () {
-      selectedCategory.value = null
-      query.value = null
-      resetModuleLoaded()
-    }
-
-    function resetModuleLoaded () {
-      moduleLoaded = MODULE_INCREMENT_LOADING
-    }
-
-    function toggleOrderBy () {
-      orderedBy.value = (orderedBy.value === ORDERS.ASC) ? ORDERS.DESC : ORDERS.ASC
-    }
-
-    function selectSortBy (field: any) {
-      sortedBy.value = field
-      sortByMenuVisible.value = false
-    }
-
-    function intersectedModulesLoading () {
-      moduleLoaded += MODULE_INCREMENT_LOADING
-      setPageFilteredModules(moduleLoaded)
-    }
-
-    function setPageFilteredModules (moduleLoaded: number) {
-      pageFilteredModulesList.value = Object.assign([], filteredModules.value).splice(0, moduleLoaded)
-    }
+    // Init Fuse search
+    onMounted(initFuse)
 
     return {
       filteredModules,
-      pageFilteredModulesList,
       sortByComp,
-      sortByOptions,
       sortedBy,
       clearFilters,
       sortFields,
@@ -239,12 +117,8 @@ export default defineComponent({
       orderedBy,
       selectSortBy,
       selectedCategory,
-      intersectedModulesLoading,
-      pending,
       query,
-      categories,
-      getCategory,
-      modules
+      loadModules
     }
   }
 })

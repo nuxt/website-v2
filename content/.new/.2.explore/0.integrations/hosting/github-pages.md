@@ -152,15 +152,15 @@ On completion, you'll see your `gh-pages` branch updated as well as your site.
 
 To deploy with [Travis CI](https://travis-ci.org/), a free for open source projects build server, sign in via your GitHub account, granting Travis access to view your repositories, and then enable the build server for your repository by toggling the switch next to your repositories name in the list displayed.
 
-![Travis Builder Server Enable](/github_pages_travis_01.png)
+![Travis Builder Server Enable](/img/docs/github_pages_travis_01.png)
 
 Next, click the cog icon beside your repository name to configure the general settings of the build sever and enable the 'Build only if .travis.yml is present' feature by toggling the switch.
 
-![Travis Builder Server Settings](/github_pages_travis_02.png)
+![Travis Builder Server Settings](/img/docs/github_pages_travis_02.png)
 
 On the same screen, scroll down to the Environment Variables section and create a new variables named `GITHUB_ACCESS_TOKEN` and in the value field paste a copy of the GitHub personal access token your created earlier and click the 'Add' button.
 
-![Travis Builder Server Environment Variables](/github_pages_travis_03.png)
+![Travis Builder Server Environment Variables](/img/docs/github_pages_travis_03.png)
 
 Finally, create a `.travis.yml` configuration file in the root of your repository with the following contents
 
@@ -204,7 +204,7 @@ git push origin
 
 Now, whenever you commit any changes to your repository, from within Travis, you'll see a new build start up
 
-![Travis Builder Server Output](/github_pages_travis_04.png)
+![Travis Builder Server Output](/img/docs/github_pages_travis_04.png)
 
 and on completion, you'll see your GitHub pages site automatically updated.
 
@@ -214,7 +214,7 @@ To deploy via [Appveyor](https://www.appveyor.com), another free for open source
 
 Once signed in, click the 'New project' link and then click the 'Add' button beside your repository name in the list displayed to enable the build server on your repository.
 
-![Appveyor Builder Server Enable](/github_pages_appveyor_01.png)
+![Appveyor Builder Server Enable](/img/docs/github_pages_appveyor_01.png)
 
 Next, in the root of your repository, create an `appveyor.yml` configuration file with the following contents
 
@@ -269,6 +269,6 @@ git push origin
 
 Now, whenever you commit any changes to your repository, from within Appveyor, you'll see a new build start up
 
-![Appveyor Builder Server Output](/github_pages_appveyor_02.png)
+![Appveyor Builder Server Output](/img/docs/github_pages_appveyor_02.png)
 
 and on completion, you'll see your GitHub pages site automatically updated.

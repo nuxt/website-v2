@@ -12,7 +12,7 @@
           aria-label="homeLink"
         >
           <!-- "mr-4 lg:mr-0" to optically center logo text -->
-          <Logo class="h-5 sm:h-6 md:h-7 mr-4 lg:mr-0" />
+          <Logo :settings="settings" class="h-8 md:h-9 mr-4 lg:mr-0" />
         </Link>
       </div>
 

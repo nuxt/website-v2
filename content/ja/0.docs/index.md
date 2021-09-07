@@ -1,5 +1,5 @@
 ---
-title: Docs
+title: ドキュメント
 layout.fluid: false
 layout.asideClass: ''
 navigation:

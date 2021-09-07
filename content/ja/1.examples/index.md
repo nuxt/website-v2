@@ -1,5 +1,5 @@
 ---
-title: Examples
+title: 例
 layout.fluid: false
 layout.asideClass: ''
 navigation:

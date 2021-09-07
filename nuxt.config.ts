@@ -49,7 +49,10 @@ export default withDocus({
   },
   css: [resolve(__dirname, './assets/nuxt.css')],
   build: {
-    transpile: ['ohmyfetch']
+    transpile: ['ohmyfetch'],
+    loaders: {
+      imgUrl: { limit: 0 }
+    }
   },
   buildModules: [
     '@nuxt/typescript-build',
@@ -71,7 +74,7 @@ export default withDocus({
         try {
           if (!process.env.VERCEL) return
 
-          const { copy } = await import('fs-extra').then((r) => r.default || r)
+          const { copy } = await import('fs-extra').then(r => r.default || r)
           const src = resolve(__dirname, '.vercel_build_output')
           const dest = resolve(__dirname, '../.vercel_build_output')
           await copy(src, dest)
@@ -83,9 +86,14 @@ export default withDocus({
     }
   },
   vite: {
+    server: {
+      fs: {
+        strict: false
+      }
+    },
     optimizeDeps: {
       exclude: ['vue-demi', 'scule', '@vueuse/integrations', 'ohmyfetch'],
-      include: ['defu', 'theme-colors', 'cookie', 'js-cookie', 'clipboard', 'property-information', 'ufo', 'url']
+      include: ['defu', 'theme-colors', 'cookie', 'js-cookie', 'clipboard', 'property-information', 'ufo']
     }
   },
   image: {
@@ -121,7 +129,15 @@ export default withDocus({
       'user-images.githubusercontent.com',
       'abs.twimg.com',
       'https://res.cloudinary.com/nuxt/',
-      'npmjs.com'
+      'npmjs.com',
+      'cdn.krutiepatel.com',
+      'nuxtjs.org',
+      'i.imgur.com',
+      'avatars0.githubusercontent.com',
+      'avatars1.githubusercontent.com',
+      'avatars2.githubusercontent.com',
+      'avatars3.githubusercontent.com',
+      'modules.nuxtjs.org'
     ]
   },
   i18n: {

@@ -4,7 +4,7 @@ title: Témoignages
 description: Découvrez ce que ces experts apprécient chez Nuxt.
 ---
 
-::home-testimonials
+::testimonials
 ---
 testimonials:
   -

@@ -4,7 +4,7 @@ title: Testimonials
 description: Learn from experts what they love about Nuxt
 ---
 
-::home-testimonials
+::testimonials
 ---
 testimonials:
   -

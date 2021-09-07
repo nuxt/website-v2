@@ -1,10 +1,7 @@
 ---
 template: page
-layout:
-  fluid: true
-navigation: false
-layout.asideClass: 'block lg:hidden'
-layout.aside: true
+title: 'Le framework Vue intuitif'
+description: 'Construisez votre prochaine application Vue.js en toute confiance avec NuxtJS. Un framework open source qui rend le développement web simple et puissant.'
 ---
 ::home-hero
 ---

@@ -1,13 +1,7 @@
 ---
 template: blank
-layout:
-  fluid: true
-navigation: false
-layout.asideClass: 'block lg:hidden'
-layout.aside: true
 title: 'Nuxt - The Intuitive Vue Framework'
 description: 'Build your next Vue.js application with confidence using Nuxt. An open source framework making web development simple and powerful.'
-head.titleTemplate: null
 ---
 
 ::home-hero

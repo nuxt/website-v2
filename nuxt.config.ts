@@ -54,8 +54,13 @@ export default withDocus({
       imgUrl: { limit: 0 }
     }
   },
-  buildModules: ['@nuxt/typescript-build', 'vue-plausible', '@docus/github', '@docus/twitter'],
-  plugins: ['~/plugins/adblock.client', '~/plugins/v-tooltip.ts'],
+  buildModules: [
+    '@nuxt/typescript-build',
+    'vue-plausible',
+    '@docus/github',
+    '@docus/twitter'
+  ],
+  plugins: ['~/plugins/adblock.client', '~/plugins/v-tooltip.ts', '~/plugins/showcases'],
   windicss: {
     root: resolve(__dirname),
     config: resolve(__dirname, 'windi.config.js')

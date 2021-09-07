@@ -20,7 +20,7 @@
       <span
         v-for="(tag, i) in tags"
         :key="tag"
-        class="text-gray-400 dark:text-cloud font-medium text-sm"
+        class="text-gray-500 dark:text-cloud-light font-medium text-sm"
       >
         <span>{{ tag }}</span>
         <span v-if="(i === 0 && tags.length > 1) || i !== tags.length - 1">
@@ -30,7 +30,7 @@
     </div>
 
     <div v-else-if="category" class="px-4 mb-1">
-      <span class="text-gray-400 dark:text-cloud font-medium text-sm">
+      <span class="text-gray-500 dark:text-cloud-light font-medium text-sm">
         {{ category }}
       </span>
     </div>

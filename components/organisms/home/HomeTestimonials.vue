@@ -66,7 +66,9 @@
               <div class="flex w-full justify-between items-center">
                 <a :href="testimonial.authorUrl" target="_blank" rel="noopener">
                   <img
+                    loading="lazy"
                     :src="`/img/home/testimonials/${testimonial.authorIcon}.png`"
+                    :alt="testimonial.author"
                     width="48"
                     height="48"
                     class="h-12 w-12"
@@ -83,14 +85,18 @@
                 </a>
                 <a :href="testimonial.jobUrl" target="_blank" rel="noopener sponsored" class="hidden xl:block">
                   <img
+                    loading="lazy"
                     :src="`/img/home/testimonials/${testimonial.jobIcon}.svg`"
+                    :alt="testimonial.jobIcon"
                     width="28"
                     height="28"
                     :class="{ 'light-img': testimonial.jobIconDark }"
                   />
                   <img
+                    loading="lazy"
                     v-if="testimonial.jobIconDark"
                     :src="`/img/home/testimonials/${testimonial.jobIconDark}.svg`"
+                    :alt="testimonial.jobIconDark"
                     width="28"
                     height="28"
                     class="dark-img"

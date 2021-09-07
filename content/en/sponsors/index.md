@@ -1,5 +1,5 @@
 ---
-template: page
+template: blank
 title: 'Sponsor Nuxt development'
 description: 'Nuxt is an MIT licensed open source project and free to use. However, the maintenance effort is not sustainable without proper financial backing.'
 layout:

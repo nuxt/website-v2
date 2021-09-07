@@ -1,4 +1,5 @@
 ---
+template: guide
 title: Docs
 layout.fluid: false
 layout.asideClass: ''

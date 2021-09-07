@@ -1,5 +1,5 @@
 ---
-template: page
+template: blank
 title: 'Nuxt Design Kit'
 description: 'Learn how to use Nuxt logos, colors and fonts and download the design kit.'
 layout:

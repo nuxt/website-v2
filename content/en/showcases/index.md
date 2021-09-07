@@ -1,5 +1,5 @@
 ---
-template: page
+template: list
 title: 'Showcases'
 description: 'Discover our selection of websites built with NuxtJS.'
 layout:

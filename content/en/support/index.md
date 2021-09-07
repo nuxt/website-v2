@@ -1,5 +1,5 @@
 ---
-template: page
+template: blank
 title: 'Support'
 description: 'We offer different services depending of your needs, from technical support, training to custom development to guide you on using Nuxt at its best.'
 layout:

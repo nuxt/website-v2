@@ -1,4 +1,5 @@
 ---
+template: guide
 title: Examples
 layout.fluid: false
 layout.asideClass: ''

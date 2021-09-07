@@ -1,5 +1,5 @@
 ---
-template: page
+template: blog
 description: 'See how a real world application is built using the Nuxt stack with the themes built by our partners.'
 layout.fluid: false
 ---

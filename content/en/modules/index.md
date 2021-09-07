@@ -1,5 +1,5 @@
 ---
-template: page
+template: list
 layout:
   fluid: true
 navigation: false

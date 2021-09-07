@@ -1,5 +1,5 @@
 ---
-template: page
+template: blog
 title: 'Nuxt Video Courses'
 description: 'Discover and learn more about the Nuxt Framework with free and premium video courses.'
 layout.fluid: false

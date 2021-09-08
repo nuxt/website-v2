@@ -1,4 +1,5 @@
 ---
+title: リリース
 template: releases
 navigation: false
 layout.fluid: false

@@ -3,11 +3,12 @@
     ref="container"
     v-on-clickaway="close"
     :class="typeof wrapperClass === 'string' ? wrapperClass : 'relative inline-block text-left'"
+    tabindex="0"
     @keydown.escape="open = false"
     @mouseover="mode === 'hover' ? mouseover() : () => {}"
     @mouseleave="mode === 'hover' ? mouseleave() : () => {}"
   >
-    <div class="flex items-center">
+    <div class="flex items-center w-full">
       <slot name="trigger" :toggle="toggle" :open="open" />
       <svg
         v-if="icon"

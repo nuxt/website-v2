@@ -2,7 +2,7 @@
 template: post
 title: Parent Scheme
 description: "Parent Scheme is a UK-based start-up that works globally with organisations to help them support working parents. It offers livestreams, resources, articles, videos and coaching through an interactive platform."
-imgUrl: img/case-studies/parent-scheme/main.png
+imgUrl: img/case-studies/parent-scheme/cover.png
 ---
 
 For the Case Studies series, we've been talking to companies using Nuxt to build their product. We'll explore their journey into the framework and its ecosystem, examine the variety of projects you can use Nuxt for, and consider the challenges they encountered and benefits they experienced.

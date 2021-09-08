@@ -2,7 +2,7 @@
 template: post
 title: Komercia
 description: "Komercia is a platform from Columbia. They create online shops so people with no developer skills or who don't have a team of developers can easily create and add products to their shops."
-imgUrl: img/case-studies/komercia/main.png
+imgUrl: img/case-studies/komercia/cover.png
 ---
 
 For the Case Studies series, we've been talking to companies using Nuxt to build their product. We'll explore their journey into the framework and its ecosystem, examine the variety of projects you can use Nuxt for, and consider the challenges they encountered and benefits they experienced.

@@ -2,7 +2,7 @@
 template: post
 title: LiveMentor
 description: LiveMentor is one of the world's leading education companies focused on entrepreneurship. They decided to migrate their existing front-end to Nuxt. We met with Romain and Alexandre to talk about their journey.
-imgUrl: img/case-studies/livementor/main.png
+imgUrl: img/case-studies/livementor/cover.png
 ---
 
 For the Case Studies series, we've been talking to companies using Nuxt to build their product. We'll explore their journey into the framework and its ecosystem, examine the variety of projects you can use Nuxt for, and consider the challenges they encountered and benefits they experienced.

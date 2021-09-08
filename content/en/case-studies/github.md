@@ -2,7 +2,7 @@
 template: post
 title: Github Stars
 description: "GitHub Stars recognises those folks who are going above and beyond in helping others in the developer world. These exceptional folks are not only maintaining projects but they are going out there to educate. They are inspiring people and influencing people, both online and offline in everyday things that they do. It's for this purpose that they created the GitHub Stars program."
-imgUrl: img/case-studies/github/main.png
+imgUrl: img/case-studies/github/cover.png
 ---
 
 For the Case Studies series, we've been talking to companies using Nuxt to build their product. We'll explore their journey into the framework and its ecosystem, examine the variety of projects you can use Nuxt for, and consider the challenges they encountered and benefits they experienced.

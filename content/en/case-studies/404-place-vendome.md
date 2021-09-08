@@ -2,7 +2,7 @@
 template: post
 title: "404 Place Vendôme"
 description: ""
-imgUrl: img/case-studies/404-place-vendome/main.png
+imgUrl: img/case-studies/404-place-vendome/cover.png
 ---
 
 For the Case Studies series, we've been talking to companies using Nuxt to build their product. We'll explore their journey into the framework and its ecosystem, examine the variety of projects you can use Nuxt for, and consider the challenges they encountered and benefits they experienced.

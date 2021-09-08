@@ -2,7 +2,7 @@
 template: post
 title: Stores.jp
 description: "stores.jp is an e-commerce platform which allows users to create their own e-commerce website. It focuses on users who don't have their own e-commerce site yet. That's why most of the features are designed so users can change the style and functionality easily without having any technical background knowledge."
-imgUrl: img/case-studies/stores/main.png
+imgUrl: img/case-studies/stores/cover.png
 ---
 
 For the Case Studies series, we've been talking to companies using Nuxt to build their product. We'll explore their journey into the framework and its ecosystem, examine the variety of projects you can use Nuxt for, and consider the challenges they encountered and benefits they experienced.

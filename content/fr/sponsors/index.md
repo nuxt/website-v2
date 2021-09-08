@@ -1,5 +1,7 @@
 ---
 template: page
+title: Sponsorisez le développement de NuxtJS
+description: "NuxtJS est un projet open source sous license MIT et totalement libre d'utilisation."
 layout:
   fluid: true
 navigation: false

@@ -36,7 +36,7 @@ export default defineComponent({
 
     useFetch(async () => {
       colorsMd.value = await $docus
-        .search('/_collections/design', { deep: true })
+        .search('/collections/design', { deep: true })
         .where({ slug: { $in: 'colors' }, language: i18n.locale })
         .fetch()
     })

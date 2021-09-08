@@ -40,7 +40,7 @@ export default defineComponent({
     }
   },
   setup() {
-    const { $docus } = useContext()
+    const { $docus, i18n } = useContext()
 
     const mvpPartners = ref()
     const partners = ref()
@@ -49,7 +49,8 @@ export default defineComponent({
 
     useFetch(async () => {
       const documents = await $docus
-        .search('/sponsors', { deep: true })
+        .search('/collections/sponsors', { deep: true })
+        .where({ language: i18n.locale })
         .sortBy('position', 'asc')
         .fetch()
 

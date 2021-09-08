@@ -17,12 +17,7 @@
 </template>
 
 <script>
-import {
-  defineComponent,
-  ref,
-  useContext,
-  useFetch
-} from '@nuxtjs/composition-api'
+import { defineComponent, ref, useContext, useFetch } from '@nuxtjs/composition-api'
 
 export default defineComponent({
   props: {
@@ -32,12 +27,13 @@ export default defineComponent({
     }
   },
   setup(props) {
-    const { $docus } = useContext()
+    const { $docus, i18n } = useContext()
     const team = ref([])
 
     useFetch(async () => {
       const teams = await $docus
-        .search(`/teams/${props.teamName}`, { deep: true })
+        .search(`/collections/teams/${props.teamName}`, { deep: true })
+        .where({ language: i18n.locale })
         .sortBy('position', 'asc')
         .fetch()
 

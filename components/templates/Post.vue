@@ -32,11 +32,6 @@
               {{ formatDateByLocale($i18n.locale, page.date) }}
             </time>
 
-            <div v-else class="font-medium mr-2 text-sm text-yellow-600 dark:text-yellow-500">
-              ⚠️ Please add
-              <ProseCodeInline>date: {{ today }}</ProseCodeInline>
-              in the page front-matter`
-            </div>
             <div v-if="page.authors && page.authors.length" class="text-sm d-tertiary-text">|</div>
             <div class="flex ml-4 sm:ml-2">
               <a

@@ -7,7 +7,7 @@
     />
     <div class="d-container">
       <DocusContent v-if="!page.blogPostList" :document="page" />
-      <BlogpostList v-else :slug="page.to" />
+      <BlogpostList v-else :slug="page.to" :sort-by="page.sortBy" />
     </div>
   </div>
 </template>

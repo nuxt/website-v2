@@ -15,16 +15,16 @@ export default defineComponent({
   setup() {
     const socials = [
       {
-        href: 'https://github.com/nuxt',
-        icon: 'IconGitHub'
-      },
-      {
         href: 'https://twitter.com/nuxt_js',
         icon: 'IconTwitter'
       },
       {
         href: 'https://discord.com/invite/ps2h6QT',
         icon: 'IconDiscord'
+      },
+      {
+        href: 'https://github.com/nuxt',
+        icon: 'IconGitHub'
       }
     ]
 

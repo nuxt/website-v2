@@ -22,7 +22,7 @@ links:
         title: 'Telemetry'
         href: 'https://github.com/nuxt/telemetry'
   -
-    title: 'Community'
+    title: 'Ecosystem'
     items:
       -
         title: 'Announcements'

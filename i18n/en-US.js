@@ -21,7 +21,7 @@ export default {
     Sustainability: 'Sustainability',
     Training: 'Training',
     newsletter: {
-      title: 'Subscribe to our newsletter',
+      title: 'Newsletter',
       description: 'The latest news, articles, and resources, sent to your inbox monthly.',
       form: {
         email: 'Email',

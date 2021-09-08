@@ -1,7 +1,8 @@
 ---
 title: ドキュメント
-layout.fluid: false
-layout.asideClass: ''
+template:
+  nested: 'guide'
+  self: 'guide'
 navigation:
   exclusive: true
   collapse: true

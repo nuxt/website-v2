@@ -52,8 +52,6 @@
         <PageTocList :toc="toc" />
       </div>
 
-      <hr class="mb-4 w-11/12 light:border-gray-400">
-
       <PageTocBottom />
     </div>
   </div>

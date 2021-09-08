@@ -58,7 +58,7 @@ links:
       -
         title: 'Announcements'
         slug: 'announcements'
-        to: '/annoucements'
+        to: '/announcements'
       -
         title: 'Events'
         slug: 'events'

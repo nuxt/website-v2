@@ -1,7 +1,8 @@
 ---
-title: 例
-layout.fluid: false
-layout.asideClass: ''
+title: Examples
+template:
+  nested: 'guide'
+  self: 'guide'
 navigation:
   exclusive: true
   redirect: /examples/routing/hello-world

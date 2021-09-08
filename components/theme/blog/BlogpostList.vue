@@ -1,5 +1,5 @@
 <template>
-  <div class="px-6 my-8">
+  <div class="px-6 mt-12 mb-8">
     <div class="flex flex-wrap grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
       <ContentCardTemplate
         v-for="post in posts"
@@ -13,7 +13,7 @@
       >
         <div slot="footer" class="px-4 mb-4 mt-auto">
           <div class="flex items-center">
-            <div class="flex mr-4" v-if="post.authors">
+            <div v-if="post.authors" class="flex mr-4">
               <a
                 v-for="(author, index) in post.authors"
                 :key="index"
@@ -33,7 +33,9 @@
               </a>
             </div>
             <div class="text-sm flex flex-col">
-              <span class="font-bold" v-if="post.authors">{{ post.authors.length > 1 ? 'Multiple Authors' : post.authors[0].name }}</span>
+              <span v-if="post.authors" class="font-bold">{{
+                post.authors.length > 1 ? 'Multiple Authors' : post.authors[0].name
+              }}</span>
               <time :datetime="post.date" class="font-medium mr-2 text-sm text-gray-500 dark:text-cloud-light">
                 {{ formatDateByLocale($i18n.locale, post.date) }}
               </time>
@@ -49,12 +51,18 @@
 import { defineComponent, ref, useContext, useFetch } from '@nuxtjs/composition-api'
 
 export default defineComponent({
-  setup() {
+  props: {
+    slug: {
+      type: String,
+      required: true
+    }
+  },
+  setup(props) {
     const { $docus, i18n } = useContext()
     const posts = ref()
     useFetch(async () => {
       const documents = await $docus
-        .search('/blog', { deep: true })
+        .search(props.slug, { deep: true })
         .where({ slug: { $ne: '' }, language: i18n.locale })
         .sortBy('date', 'desc')
         .fetch()

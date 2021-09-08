@@ -1,6 +1,6 @@
 <template>
   <div class="px-6 mt-12 mb-8">
-    <div class="flex flex-wrap grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+    <div class="flex grid flex-wrap grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
       <ContentCardTemplate
         v-for="post in posts"
         :key="post.id"
@@ -11,7 +11,7 @@
         :href="post.to"
         :category="post.category"
       >
-        <div slot="footer" class="px-4 mb-4 mt-auto">
+        <div slot="footer" class="px-4 mt-auto mb-4">
           <div class="flex items-center">
             <div v-if="post.authors" class="flex mr-4">
               <a
@@ -21,10 +21,10 @@
                 target="_blank"
                 rel="noopener noindex nofollow"
                 :class="{ '-ml-4': index !== 0 }"
-                class="flex items-center justify-end rounded-full border-3 border-white dark:border-secondary-darker"
+                class="flex items-center justify-end border-white rounded-full border-3 dark:border-secondary-darker"
               >
                 <NuxtImg
-                  class="inline-block h-10 w-10 rounded-full"
+                  class="inline-block w-10 h-10 rounded-full"
                   height="32"
                   width="32"
                   :src="author.avatarUrl"
@@ -32,11 +32,15 @@
                 />
               </a>
             </div>
-            <div class="text-sm flex flex-col">
+            <div class="flex flex-col text-sm">
               <span v-if="post.authors" class="font-bold">{{
                 post.authors.length > 1 ? 'Multiple Authors' : post.authors[0].name
               }}</span>
-              <time :datetime="post.date" class="font-medium mr-2 text-sm text-gray-500 dark:text-cloud-light">
+              <time
+                v-if="post.date"
+                :datetime="post.date"
+                class="mr-2 text-sm font-medium text-gray-500 dark:text-cloud-light"
+              >
                 {{ formatDateByLocale($i18n.locale, post.date) }}
               </time>
             </div>

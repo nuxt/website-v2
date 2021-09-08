@@ -1,8 +1,8 @@
 ---
-template: guide
+template:
+  nested: 'guide'
+  self: 'guide'
 title: Docs
-layout.fluid: false
-layout.asideClass: ''
 navigation:
   exclusive: true
   collapse: true

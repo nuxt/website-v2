@@ -5,8 +5,6 @@ description: "LINE is a worldwide messaging platform with its main focus being i
 imgUrl: img/case-studies/line/cover.png
 ---
 
-For the Case Studies series, we've been talking to companies using Nuxt to build their product. We'll explore their journey into the framework and its ecosystem, examine the variety of projects you can use Nuxt for, and consider the challenges they encountered and benefits they experienced.
-
 ## What is Line ?
 
 LINE is a worldwide messaging platform with its main focus being in Asia and especially in Japan, where there are more than 86 million monthly active users, which is equivalent to about 70% of the Japanese population.

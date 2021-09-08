@@ -4,9 +4,6 @@ title: Github Stars
 description: "GitHub Stars recognises those folks who are going above and beyond in helping others in the developer world. These exceptional folks are not only maintaining projects but they are going out there to educate. They are inspiring people and influencing people, both online and offline in everyday things that they do. It's for this purpose that they created the GitHub Stars program."
 imgUrl: img/case-studies/github/cover.png
 ---
-
-For the Case Studies series, we've been talking to companies using Nuxt to build their product. We'll explore their journey into the framework and its ecosystem, examine the variety of projects you can use Nuxt for, and consider the challenges they encountered and benefits they experienced.
-
 ## What is GitHub?
 
 GitHub is the home for millions of developers. We have over 56 million developers and essentially it's a place where developers can go and create, share and make their best code possible. We try and make it  easy for developers to meet developers, work together, solve challenging problems and create the world's most important technologies. Our community is made up from a diverse set of people from students to hobbyists, enterprise professionals, partners and executives, and the list goes on. GitHub is not just code, it is much more than code, it's the home of open source collaboration. It's where new developers can come and get started. It's where experienced developers can expand their knowledge with developers solving the unsolvable and testing the limits of what software can do.

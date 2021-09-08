@@ -454,7 +454,7 @@
     chalk "^2.0.0"
     js-tokens "^4.0.0"
 
-"@babel/parser@^7.1.0", "@babel/parser@^7.15.0":
+"@babel/parser@^7.1.0":
   version "7.15.2"
   resolved "https://registry.yarnpkg.com/@babel/parser/-/parser-7.15.2.tgz#08d4ffcf90d211bf77e7cc7154c6f02d468d2b1d"
   integrity sha512-bMJXql1Ss8lFnvr11TZDH4ArtwlAS5NG9qBmdiFW2UHHm6MVoR+GDc5XE2b9K938cyjc9O6/+vjjcffLDtfuDg==
@@ -1162,14 +1162,6 @@
     "@babel/helper-validator-identifier" "^7.14.9"
     to-fast-properties "^2.0.0"
 
-"@babel/types@^7.15.0":
-  version "7.15.0"
-  resolved "https://registry.yarnpkg.com/@babel/types/-/types-7.15.0.tgz#61af11f2286c4e9c69ca8deb5f4375a73c72dcbd"
-  integrity sha512-OBvfqnllOIdX4ojTHpwZbpvz4j3EWyjkZEdmjH0/cgsd6QOdSgU8rLSk6ard/pcW7rlmjdVSX/AWOaORR1uNOQ==
-  dependencies:
-    "@babel/helper-validator-identifier" "^7.14.9"
-    to-fast-properties "^2.0.0"
-
 "@csstools/convert-colors@^1.4.0":
   version "1.4.0"
   resolved "https://registry.yarnpkg.com/@csstools/convert-colors/-/convert-colors-1.4.0.tgz#ad495dc41b12e75d588c6db8b9834f08fa131eb7"
@@ -1295,14 +1287,15 @@
     node-fetch "^2.6.1"
     puppeteer-core "^10.2.0"
 
-"@docus/theme@^1.1.1":
-  version "1.1.1"
-  resolved "https://registry.yarnpkg.com/@docus/theme/-/theme-1.1.1.tgz#3f4ad0f8f5fda4f546b431f7889d2d5062c0373c"
-  integrity sha512-OIoF8Rau/pJLSgbDocM/NJCQ/5hxM6j4l/RGFrA0esdfjSmIOUs999WFBR9Nj2tVuQAK4uR0A0pp21z0KVmUZA==
+"@docus/theme@^1.1.5":
+  version "1.1.6"
+  resolved "https://registry.yarnpkg.com/@docus/theme/-/theme-1.1.6.tgz#b4607a8fdfe7f409fce9e0c982c0717dca683ef5"
+  integrity sha512-YbP40DrG6z9y5HGmUT+jnSlYlM6qwY/rWMT11Syn/+jKyJgtGtDQpRbSLmfG0jd/WN1dR+sOsZaE0sYksSWYzQ==
   dependencies:
     "@docsearch/css" "^1.0.0-alpha.28"
     "@docsearch/js" "^1.0.0-alpha.28"
     "@docus/windicss" "^1.0.4"
+    "@nuxt/kit" "npm:@nuxt/kit-edge"
     "@nuxtjs/color-mode" "^2.1.1"
     "@windicss/plugin-scrollbar" "^1.2.3"
     clipboard "^2.0.8"
@@ -1629,6 +1622,27 @@
     ufo "^0.7.5"
     unctx "^0.0.3"
     untyped "^0.2.5"
+    upath "^2.0.1"
+
+"@nuxt/kit@npm:@nuxt/kit-edge":
+  version "0.10.0-27183684.49f7b39"
+  resolved "https://registry.yarnpkg.com/@nuxt/kit-edge/-/kit-edge-0.10.0-27183684.49f7b39.tgz#ade74379c617a5c482c2b0ef1efe6f80bfa83c77"
+  integrity sha512-s1INGGEyayf+QvrGa4nWnKir1W2vhrWikuYnlpHpRiPYo0Euiyvo8uq+hANyYOKBqppWIWqHpaJ7znq7C1YZYg==
+  dependencies:
+    consola "^2.15.3"
+    create-require "^1.1.1"
+    defu "^5.0.0"
+    dotenv "^10.0.0"
+    globby "^11.0.4"
+    hash-sum "^2.0.0"
+    hookable "^5.0.0"
+    jiti "^1.11.0"
+    rc9 "^1.2.0"
+    scule "^0.2.1"
+    std-env "^2.3.0"
+    ufo "^0.7.9"
+    unctx "^1.0.2"
+    untyped "^0.2.8"
     upath "^2.0.1"
 
 "@nuxt/loading-screen@^2.0.4":
@@ -6803,6 +6817,11 @@ hookable@^4.4.1:
   version "4.4.1"
   resolved "https://registry.yarnpkg.com/hookable/-/hookable-4.4.1.tgz#3d7154ac7e1f6f147e50fef583832f2645b9f04f"
   integrity sha512-KWjZM8C7IVT2qne5HTXjM6R6VnRfjfRlf/oCnHd+yFxoHO1DzOl6B9LzV/VqGQK/IrFewq+EG+ePVrE9Tpc3fg==
+
+hookable@^5.0.0:
+  version "5.0.0"
+  resolved "https://registry.yarnpkg.com/hookable/-/hookable-5.0.0.tgz#bac6f1d4b56e3f590f21cfe3f813731372c0c69f"
+  integrity sha512-IqoJ8oXCNTUtNfqwbUQvLd+6ebVXk5qqGpSMOe4BS514vd4bEEH+hd9lva48mbbbe9q4eFKmsOViTZkr7ludHg==
 
 hosted-git-info@^2.1.4:
   version "2.8.9"
@@ -12430,6 +12449,11 @@ ufo@^0.7.5, ufo@^0.7.7:
   resolved "https://registry.yarnpkg.com/ufo/-/ufo-0.7.7.tgz#0062f9e5e790819b0fb23ca24d7c63a4011c036a"
   integrity sha512-N25aY3HBkJBnahm+2l4JRBBrX5I+JPakF/tDHYDTjd3wUR7iFLdyiPhj8mBwBz21v728BKwM9L9tgBfCntgdlw==
 
+ufo@^0.7.9:
+  version "0.7.9"
+  resolved "https://registry.yarnpkg.com/ufo/-/ufo-0.7.9.tgz#0268e3734b413c9ed6f3510201f42372821b875c"
+  integrity sha512-6t9LrLk3FhqTS+GW3IqlITtfRB5JAVr5MMNjpBECfK827W+Vh5Ilw/LhTcHWrt6b3hkeBvcbjx4Ti7QVFzmcww==
+
 uglify-js@^3.5.1:
   version "3.14.1"
   resolved "https://registry.yarnpkg.com/uglify-js/-/uglify-js-3.14.1.tgz#e2cb9fe34db9cb4cf7e35d1d26dfea28e09a7d06"
@@ -12489,6 +12513,11 @@ unctx@^1.0.1:
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/unctx/-/unctx-1.0.1.tgz#e976394f22ab00ac4088d86ebfc639861ed3ec24"
   integrity sha512-LTxBg2tHfEFwpiIGIM7MOODR1hPiO0njHRIbb6fpxL6czd/rkaSeWoaLAVUDP8qDF1Xvq/wO3Eyp4B8yogiObA==
+
+unctx@^1.0.2:
+  version "1.0.2"
+  resolved "https://registry.yarnpkg.com/unctx/-/unctx-1.0.2.tgz#d8d9c83a0965aa277f61058c94548fcee6861e48"
+  integrity sha512-qxRfnQZWJqkg180JeOCJEvtjj5/7wnWVqkNHln8muY5/z8kMWBFqikFBPwIPCQrZJ+jtaSWkVHJkuHUAXls6zw==
 
 unfetch@^4.2.0:
   version "4.2.0"

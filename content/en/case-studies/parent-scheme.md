@@ -5,8 +5,6 @@ description: "Parent Scheme is a UK-based start-up that works globally with orga
 imgUrl: img/case-studies/parent-scheme/cover.png
 ---
 
-For the Case Studies series, we've been talking to companies using Nuxt to build their product. We'll explore their journey into the framework and its ecosystem, examine the variety of projects you can use Nuxt for, and consider the challenges they encountered and benefits they experienced.
-
 ## What is Parent Scheme?
 
 Parent Scheme is a UK-based start-up that works globally with organisations to help them support working parents. It offers livestreams, resources, articles, videos and coaching through an interactive platform. Parent Scheme is wholly inclusive and makes no assumptions about the gender, age, ethnicity and family circumstances of their users to allow them to find the right approach and solutions for their context. This is reflected in the graphic-based design. Parent Scheme also completely preserves users' privacy enabling them to customise the platform, favourite articles and save notes and coaching answers without having to worry their employer may see. All content on the platform is current and based on expert advice, covering topical challenges for every stage of the working parent lifecycle, from pregnancy and parental leave, through childcare options and the school years, to teens and young people starting university. There are sections for managers and HR as well. 

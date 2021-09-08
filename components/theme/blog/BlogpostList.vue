@@ -59,16 +59,26 @@ export default defineComponent({
     slug: {
       type: String,
       required: true
+    },
+    sortBy: {
+      type: Object,
+      default() {
+        return {
+          field: 'date',
+          direction: 'desc'
+        }
+      }
     }
   },
   setup(props) {
     const { $docus, i18n } = useContext()
     const posts = ref()
+
     useFetch(async () => {
       const documents = await $docus
         .search(props.slug, { deep: true })
         .where({ slug: { $ne: '' }, language: i18n.locale })
-        .sortBy('date', 'desc')
+        .sortBy(props.sortBy.field, props.sortBy.direction)
         .fetch()
 
       posts.value = documents

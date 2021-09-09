@@ -1,34 +1,26 @@
 <template>
   <div>
-    <div class="py-16 sm:py-24 relative">
+    <div class="relative py-16 sm:py-24">
       <div class="relative max-w-3xl mx-auto">
         <NuxtLink
-          :to="$contentLocalePath(page.to.substr(0, page.to.indexOf('/', 1)))"
+          :to="$contentLocalePath(page.to.substr(0, page.to.lastIndexOf('/')))"
           class="absolute top-0 left-0 px-4 -mt-12 sm:-mt-16"
         >
           <span
-            class="
-              text-sm
-              sm:text-base
-              leading-none
-              text-gray-900
-              dark:text-gray-100
-              hover:d-secondary-text
-              font-medium
-            "
+            class="text-sm font-medium leading-none text-gray-900  sm:text-base dark:text-gray-100 hover:d-secondary-text"
             >← Back</span
           >
         </NuxtLink>
-        <div class="mb-6 px-4">
-          <h1 class="flex-1 text-3xl sm:text-4xl font-semibold tracking-tight text-gray-900 dark:text-gray-100">
+        <div class="px-4 mb-6">
+          <h1 class="flex-1 text-3xl font-semibold tracking-tight text-gray-900 sm:text-4xl dark:text-gray-100">
             {{ page.title }}
           </h1>
           <p class="my-4 text-base font-medium d-secondary-text">
             {{ page.description }}
           </p>
 
-          <div class="flex sm:flex-row items-center">
-            <time v-if="page.date" :datetime="page.date" class="font-medium mr-2 text-sm d-tertiary-text">
+          <div class="flex items-center sm:flex-row">
+            <time v-if="page.date" :datetime="page.date" class="mr-2 text-sm font-medium d-tertiary-text">
               {{ formatDateByLocale($i18n.locale, page.date) }}
             </time>
 
@@ -43,14 +35,14 @@
                 class="flex items-center justify-end -ml-2 sm:ml-0 sm:mr-2 hover:d-secondary-text"
               >
                 <NuxtImg
-                  class="rounded-full border d-border-tertiary inline-block h-8 w-8 sm:mr-1"
+                  class="inline-block w-8 h-8 border rounded-full d-border-tertiary sm:mr-1"
                   height="32"
                   width="32"
                   :src="author.avatarUrl"
                   :alt="author.name"
                   :title="author.name"
                 />
-                <span class="hidden sm:inline-block font-medium text-sm">
+                <span class="hidden text-sm font-medium sm:inline-block">
                   {{ author.name }}
                 </span>
               </a>
@@ -59,8 +51,8 @@
         </div>
       </div>
 
-      <div class="max-w-4xl mx-auto">
-        <div class="aspect-w-16 aspect-h-9 bg-gray-100 dark:bg-gray-800 mb-8 mx-4">
+      <div v-if="imgUrl" class="max-w-4xl mx-auto">
+        <div class="mx-4 mb-8 bg-gray-100 aspect-w-16 aspect-h-9 dark:bg-gray-800">
           <NuxtImg :src="imgUrl" :alt="page.title" class="object-cover" />
         </div>
       </div>
@@ -150,7 +142,11 @@ export default defineComponent({
   },
   computed: {
     imgUrl() {
-      return this.page.imgUrl || 'https://source.unsplash.com/random'
+      /* In some cases we don't want the cover image to be displayed in the Post template */
+      if (!this.page.headingImg?.hidden) {
+        return this.page.imgUrl || 'https://source.unsplash.com/random'
+      }
+      return false
     }
   },
   templateOptions: {

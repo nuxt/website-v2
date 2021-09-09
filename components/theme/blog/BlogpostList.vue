@@ -9,7 +9,7 @@
         :description="post.description"
         :image="post.imgUrl"
         :href="post.to"
-        :category="post.category"
+        :category="post.target || post.category"
       >
         <div slot="footer" class="px-4 mt-auto mb-4">
           <div class="flex items-center">

@@ -11,7 +11,7 @@ csb_link: https://codesandbox.io/embed/github/nuxt-academy/examples/tree/master/
 - `pages/index.vue` y `pages/fade.vue` usan la transición de página predeterminada.
 - `pages/bounce.vue` usa la propiedad `transition` con una transición de rebote.
 - `pages/slide.vue` usa la propiedad `transition` con una transición de desplazamiento hacia abajo.
-- `layout/default.vue` contiene las clases para todas las transiciones.
+- `layouts/default.vue` contiene las clases para todas las transiciones.
 
 <base-alert type="next">
 

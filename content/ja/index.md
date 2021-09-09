@@ -1,12 +1,7 @@
 ---
 template: page
-layout:
-  fluid: true
-navigation: false
-layout.asideClass: 'block lg:hidden'
-layout.aside: true
-title: 'NuxtJS - The Intuitive Vue Framework'
-head.titleTemplate: null
+title: The Intuitive Vue Framework
+description: NuxtJS を使って信頼ある次世代の Vue.js アプリケーションを構築する Web 開発をシンプルにかつパワフルにするオープンソースフレームワーク
 ---
 
 ::home-hero
@@ -126,7 +121,7 @@ category: パートナー
 Nuxt の開発は情熱を持った開発者によって作られますが、メンテナンスするための必要な労力と新機能開発には、適切な資金のサポートなしには持続できません。これを可能にするのは、スポンサーやパートナーの皆様のおかげです。<br>
 
 #bottom
-:button-link[NuxtJS のスポンサー]{href="/sponsors-nuxtjs" size="medium"}
+:button-link[NuxtJS のスポンサー]{href="/sponsor-nuxtjs" size="medium"}
 ::
 
 ::home-learn-master
@@ -167,11 +162,11 @@ category: 学習
 
   ::section-content-item
   ---
-  title: 內部構造
-  description: 'アプリケーションの動作を拡張するために Nuxt の內部構造詳細に入り込めます'
+  title: 内部構造
+  description: 'アプリケーションの動作を拡張するために Nuxt の内部構造詳細に入り込めます'
   image: /img/home/learn/guides/gem-internals.svg
   to: '/docs/internals-glossary/context'
-  linkName: '內部構造を調べる'
+  linkName: '内部構造を調べる'
   ---
   ::
 
@@ -237,16 +232,4 @@ category: コミュニティ
 
 #description
 NuxtJS チームと Nuxt.js コミュニティによる、NuxtJS のヒントややり方に関する記事をご覧ください！
-::
-
-::home-testimonials
----
-category: コミュニティ
----
-
-#title
-著名人の声
-
-#description
-エキスパートが語る Nuxt の魅力
 ::

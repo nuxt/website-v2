@@ -1,13 +1,7 @@
 ---
-template: page
-layout:
-  fluid: true
-navigation: false
-layout.asideClass: 'block lg:hidden'
-layout.aside: true
+template: blank
 title: 'Nuxt - The Intuitive Vue Framework'
 description: 'Build your next Vue.js application with confidence using Nuxt. An open source framework making web development simple and powerful.'
-head.titleTemplate: null
 ---
 
 ::home-hero
@@ -136,7 +130,7 @@ Sustainable [_Development_]{.text-primary}
 Nuxt development is made from passionate developers, however, the amount of effort needed to maintain and develop new features is not sustainable without proper financial backing. We are thanksful to our sponsors and partners to make it possible.<br>
 
 #bottom
-:button-link[Sponsor Nuxt]{href="/sponsors-nuxtjs" size="medium"}
+:button-link[Sponsor Nuxt]{href="/sponsor-nuxtjs" size="medium"}
 ::
 
 ::home-learn-master
@@ -246,16 +240,4 @@ Sharing is [_Caring_]{.text-primary}
 
 #description
 Discover articles from the framework Team and Community about Nuxt, tips and tricks included!
-::
-
-::home-testimonials
----
-category: Community
----
-
-#title
-Testimonials
-
-#description
-Learn from experts what they love about Nuxt.
 ::

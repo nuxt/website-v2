@@ -2,30 +2,27 @@ import en from '~docus-i18n/en-US'
 
 export default {
   ...en,
-  header: {
-    Docs: "Docs",
-    Examples: "Examples",
-    Resources: "Resources",
-    Blog: "Blog",
-    "Video Courses": "Video courses"
+  banner: {
+    here: 'here',
+    format: '{nuxt} is coming... Discover more about it {here} !'
   },
   footer: {
     titles: {
-      Discover: "Discover",
-      Help: "Help",
-      Support: "Support"
+      Discover: 'Discover',
+      Help: 'Help',
+      Support: 'Support'
     },
-    "Our team": "Our team",
-    "Design Kit": "Design Kit",
-    "Contact us": "Contact us",
-    "Resources": "Resources",
-    "Chat with us": "Chat with us",
-    "Contribution guide": "Contribution guide",
-    Sustainability: "Sustainability",
-    Training: "Training",
+    'Our team': 'Our team',
+    'Design Kit': 'Design Kit',
+    'Contact us': 'Contact us',
+    Resources: 'Resources',
+    'Chat with us': 'Chat with us',
+    'Contribution guide': 'Contribution guide',
+    Sustainability: 'Sustainability',
+    Training: 'Training',
     newsletter: {
-      title: "Subscribe to our newsletter",
-      description: "The latest news, articles, and resources, sent to your inbox monthly.",
+      title: 'Newsletter',
+      description: 'The latest news, articles, and resources, sent to your inbox monthly.',
       form: {
         email: 'Email',
         subscribing: 'Subscribing...',
@@ -38,17 +35,17 @@ export default {
         }
       }
     },
-    license: "NuxtJS is an open source framework under MIT license."
+    license: 'NuxtJS is an open source framework under MIT license.'
   },
   sidebar: {
     partners: {
-      title: "Partners",
-      button: "Support Us"
+      title: 'Partners',
+      button: 'Support Us'
     },
     ads: {
       fallback: {
-        title: "NuxtJS needs you!",
-        description: "By allowing nuxtjs.org on your Ad-Blocker, you support our work and help us financially."
+        title: 'NuxtJS needs you!',
+        description: 'By allowing nuxtjs.org on your Ad-Blocker, you support our work and help us financially.'
       }
     }
   },
@@ -63,23 +60,61 @@ export default {
     cli: 'From CLI',
     scratch: 'From Scratch'
   },
+  modules: {
+    search: 'Search a module (name, category, username, etc.)',
+    sort_by: 'Sort by',
+    sort_fields: {
+      downloads: 'Downloads',
+      stars: 'Stars'
+    },
+    loading: 'Loading...',
+    error: 'Une erreur est survenue lors de la récupération des modules'
+  },
   resources: {
     themes: {
-      get_for_it: "Get it for {price}",
-      video_course: "Start course"
+      get_for_it: 'Get it for {price}',
+      video_course: 'Start course'
     }
   },
   sustainability: {
     tiers: {
-      mvp_partners: "MVP Partners",
-      partners: "Partners",
-      sponsors: "Sponsors"
+      mvp_partners: 'MVP Partners',
+      partners: 'Partners',
+      sponsors: 'Sponsors',
+      donations: 'Donate'
+    },
+    mvp_detail: {
+      services: 'Services',
+      location: 'Location',
+      contact_partner: 'Contact Partner',
+      visit_website: 'Visit Website'
     }
   },
   support: {
-    confirm_sending: "Message sent to technical support",
-    error_sending: "Error during sending",
-    invalid_adress: "Invalid address",
+    confirm_sending: 'Message sent to technical support',
+    error_sending: 'Error during sending',
+    invalid_adress: 'Invalid address'
+  },
+  showcases: {
+    loading: 'Loading...',
+    categories: {
+      Featured: 'Featured',
+      'E-Commerce': 'E-Commerce',
+      News: 'News',
+      Government: 'Government',
+      Sport: 'Sport',
+      Education: 'Education',
+      Entertainment: 'Entertainment',
+      Travel: 'Travel',
+      Finance: 'Finance',
+      Tech: 'Tech',
+      Business: 'Business'
+    }
+  },
+  theme_mode: {
+    system: 'System',
+    light: 'Light',
+    dark: 'Dark'
   },
   common: {
     an_error_occurred: 'An error occurred',
@@ -91,12 +126,9 @@ export default {
     version: 'Version',
     currently_version: 'Currently in private beta',
     back: 'Back',
-    go_to: "Go to {title}",
-    go_home: "Go home",
-    read_article: "Read article"
-  },
-  modules: {
-    error: "Une erreur est survenue lors de la récupération des modules"
+    go_to: 'Go to {title}',
+    go_home: 'Go home',
+    read_article: 'Read article'
   },
   iso: 'en'
 }

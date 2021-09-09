@@ -1,6 +1,5 @@
 <template>
   <article
-    @click="navigateToUrl(href)"
     class="
       flex flex-col
       shadow
@@ -11,26 +10,21 @@
       cursor-pointer
       dark:bg-secondary-darkest
     "
+    @click="navigateToUrl(href)"
   >
     <div class="aspect-h-9 bg-gray-100 dark:bg-secondary-darker mb-4">
-      <NuxtImg :src="image" width="864" height="378" :alt="title" />
+      <NuxtImg :src="imgUrl" width="864" height="378" :alt="title" />
     </div>
 
     <div v-if="tags.length" class="px-4 mb-1">
-      <span
-        v-for="(tag, i) in tags"
-        :key="tag"
-        class="text-gray-400 dark:text-cloud font-medium text-sm"
-      >
+      <span v-for="(tag, i) in tags" :key="tag" class="text-gray-500 dark:text-cloud-light font-medium text-sm">
         <span>{{ tag }}</span>
-        <span v-if="(i === 0 && tags.length > 1) || i !== tags.length - 1">
-          –
-        </span>
+        <span v-if="(i === 0 && tags.length > 1) || i !== tags.length - 1"> – </span>
       </span>
     </div>
 
     <div v-else-if="category" class="px-4 mb-1">
-      <span class="text-gray-400 dark:text-cloud font-medium text-sm">
+      <span class="text-gray-500 dark:text-cloud-light font-medium text-sm">
         {{ category }}
       </span>
     </div>
@@ -50,7 +44,7 @@
 </template>
 
 <script>
-import { defineComponent } from '@nuxtjs/composition-api'
+import { defineComponent, computed } from '@nuxtjs/composition-api'
 
 export default defineComponent({
   props: {
@@ -79,7 +73,9 @@ export default defineComponent({
       default: ''
     }
   },
-  setup() {
+  setup(props) {
+    const imgUrl = computed(() => props.image || 'https://source.unsplash.com/random')
+
     function navigateToUrl(href) {
       const isInternal = href.startsWith('/') && href.startsWith('//') === false
       if (isInternal) {
@@ -88,7 +84,7 @@ export default defineComponent({
         window.open(href, '_blank')
       }
     }
-    return { navigateToUrl }
+    return { navigateToUrl, imgUrl }
   }
 })
 </script>

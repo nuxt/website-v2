@@ -1,9 +1,14 @@
 <template>
   <div class="relative pt-24 pb-32 bg-gray-100 dark:bg-secondary-darkest">
-    <div class="relative d-container-content">
-      <h1 class="text-display-3 font-serif mb-4">{{ title }}</h1>
-      <p class="text-body-xl max-w-3xl">{{ description }}</p>
-      <Markdown use="bottom" />
+    <div class="flex justify-between relative d-container-content">
+      <div>
+        <h1 class="text-display-3 pb-4 font-serif overflow-ellipsis overflow-hidden">{{ title }}</h1>
+        <p class="text-body-xl" :class="{ 'max-w-3xl': !descriptionFullWidth }">{{ description }}</p>
+        <Markdown use="bottom" />
+      </div>
+      <div class="flex items-center">
+        <Markdown use="right" />
+      </div>
     </div>
 
     <img
@@ -33,6 +38,10 @@ export default defineComponent({
     description: {
       type: String,
       default: ''
+    },
+    descriptionFullWidth: {
+      type: Boolean,
+      default: false
     }
   }
 })

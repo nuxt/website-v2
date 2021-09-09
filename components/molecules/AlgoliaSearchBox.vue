@@ -1,7 +1,6 @@
 <template>
   <div id="docsearch">
-    <!-- DO NOT CHANGE: this code is just a placeholder -->
-    <button type="button" class="DocSearch-Button" aria-label="Search">
+    <button type="button" class="DocSearch DocSearch-Button" aria-label="Search">
       <svg width="20" height="20" class="DocSearch-Search-Icon" viewBox="0 0 20 20">
         <path
           d="M14.386 14.386l4.0877 4.0877-4.0877-4.0877c-2.9418 2.9419-7.7115 2.9419-10.6533 0-2.9419-2.9418-2.9419-7.7115 0-10.6533 2.9418-2.9419 7.7115-2.9419 10.6533 0 2.9419 2.9418 2.9419 7.7115 0 10.6533z"
@@ -131,7 +130,6 @@ export default {
       })
     },
     update(options, lang) {
-      this.$el.innerHTML = '<div id="docsearch"></div>'
       this.initialize(options, lang)
     }
   }
@@ -145,76 +143,49 @@ export default {
   --docsearch-text-color: var(--color-gray-700);
   --docsearch-modal-background: theme('colors.gray.100');
   --docsearch-searchbox-shadow: inset 0 0 0 2px var(--docsearch-primary-color);
-  --docsearch-searchbox-background: var(--color-gray-200);
-  --docsearch-searchbox-focus-background: var(--color-gray-200);
+  --docsearch-searchbox-background: var(--color-transparent);
+  --docsearch-searchbox-focus-background: var(--color-transparent);
   --docsearch-hit-color: var(--color-gray-700);
+  --docsearch-logo-color: var(--docsearch-text-color);
   --docsearch-muted-color: var(--color-gray-500);
-  /* bg-gray-400 with 0.8 opacity */
   --docsearch-container-background: rgb(244 244 245 / 55%);
 }
 
-.DocSearch-Container {
-  @apply p-4 blur-8;
-}
-
-.DocSearch-Modal {
-  @apply rounded-xl overflow-hidden h-auto !important;
-  .DocSearch-SearchBar {
-    @apply bg-gray-50 dark:bg-secondary-darkest p-2;
-  }
-}
-
-.DocSearch-Footer {
-  @apply relative !important;
-}
-
-.DocSearch-Button {
-  @apply h-12 ml-auto relative rounded-lg flex items-center justify-center bg-transparent border-0 text-gray-500 dark:text-gray-600 hover:text-gray-600 transition-colors ring-0 px-3 !important;
-}
-
-.DocSearch-Button-Placeholder {
-  @apply hidden px-3 font-medium !important;
-}
-
-.DocSearch-Search-Icon {
-  @apply text-current w-5 h-5 d-icon !important;
-  stroke-width: 2;
-}
-
-.DocSearch-Button-Key {
-  @apply hidden bg-none font-medium top-0 relative rounded h-5 w-5 items-center justify-center border border-gray-300 dark:border-gray-600 text-gray-500 dark:text-gray-400 shadow-none p-1 text-xs mr-0.5 !important;
-}
-
-.DocSearch-Commands {
-  @apply hidden !important;
-}
-
-.DocSearch-Screen-Icon > svg {
-  display: inline !important;
-}
-
-.DocSearch-Input {
-  color: #fff;
-}
 .dark {
   & .DocSearch {
     --docsearch-text-color: #fff;
-    /* --docsearch-text-color: var(--color-gray-300); */
-    --docsearch-container-background: rgb(0 30 38 / 64%);
-    --docsearch-modal-background: #003543;
+    --docsearch-modal-background: theme('colors.secondary-darker');
     --docsearch-modal-shadow: inset 1px 1px 0 0 #052f14, 0 3px 8px 0 #0b160d;
-    /* --docsearch-searchbox-background: var(--color-gray-800); */
-    --docsearch-searchbox-focus-background: rgba(1, 42, 53, 1);
     --docsearch-hit-color: var(--color-gray-300);
-    --docsearch-highlight-color: var(--docsearch-primary-color);
-    --docsearch-hit-shadow: none;
     --docsearch-hit-background: var(--color-gray-800);
-    --docsearch-key-gradient: linear-gradient(-26.5deg, #565872, #31355b);
-    --docsearch-key-shadow: inset 0 -2px 0 0 #282d55, inset 0 0 1px 1px #51577d, 0 2px 2px 0 rgba(3, 4, 9, 0.3);
-    --docsearch-footer-background: rgba(1, 42, 53, 1);
+    --docsearch-footer-background: theme('colors.secondary-darkest');
     --docsearch-footer-shadow: inset 0 1px 0 0 rgba(73, 76, 106, 0.5), 0 -4px 8px 0 rgba(0, 0, 0, 0.2);
-    --docsearch-logo-color: #fff;
-    --docsearch-muted-color: var(--color-gray-500);
+    --docsearch-container-background: rgb(0 30 38 / 64%);
   }
+}
+
+.DocSearch-Container {
+  @apply blur-8;
+}
+.DocSearch-Modal {
+  @apply lg:rounded-xl !important;
+}
+.DocSearch-Button {
+  @apply rounded w-12 h-12 m-auto !important;
+}
+.DocSearch-Button-Key {
+  @apply hidden !important;
+}
+.DocSearch-Button-Placeholder {
+  @apply hidden !important;
+}
+.DocSearch-Button > svg {
+  @apply d-icon m-auto !important;
+}
+.DocSearch-NoResults > .DocSearch-Screen-Icon > svg {
+  @apply mx-auto !important;
+}
+.DocSearch-Commands-Key {
+  @apply inline-flex items-center justify-center w-auto h-auto p-1 bg-none rounded shadow-none border light:border-gray-500 !important;
 }
 </style>

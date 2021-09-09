@@ -18,7 +18,7 @@
     <div class="pt-2">
       <NuxtButton
         type="button"
-        :to="localePath('/sponsors-nuxtjs')"
+        :to="localePath('/sponsor-nuxtjs')"
         class="
           rounded-md
           bg-primary

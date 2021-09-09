@@ -53,12 +53,15 @@ export default defineComponent({
   setup() {
     const { $docus, i18n } = useContext()
     const settings = computed(() => $docus.settings.value)
-
+    const header = ref()
     const links = ref([])
 
     useFetch(async () => {
-      const header = await $docus.search('/collections/navigations/header').where({ language: i18n.locale }).fetch()
-      links.value = header.links
+      header.value = await $docus
+        .search('/collections/navigations', { deep: true })
+        .where({ slug: { $in: 'header' }, language: i18n.locale })
+        .fetch()
+      links.value = header.value[0].links
     })
 
     return {

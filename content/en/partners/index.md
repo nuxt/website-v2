@@ -7,10 +7,5 @@ heroDescription: 'Nuxt is an open source Web Framework. We solve front-end devel
 If you use Nuxt in your daily work and feel that it has made your life easier, please consider backing us.
 If you run a business and is using Nuxt in a revenue-generating product, it makes business sense to sponsor Nuxt development: it ensures the project that your product relies on stays healthy and actively maintained. It can also help your exposure in the Nuxt community and makes it easier to attract Nuxt developers.'
 heroDescriptionFullWidth: true
+blogPostList: true
 ---
-
-::sustainability-section
----
-buttonText: Become a sponsor
----
-::

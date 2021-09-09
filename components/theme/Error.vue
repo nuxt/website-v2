@@ -24,10 +24,6 @@ export default defineComponent({
     return {
       title: this.error.message
     }
-  },
-  templateOptions: {
-    aside: false,
-    fluid: false
   }
 })
 </script>

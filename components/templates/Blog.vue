@@ -21,10 +21,6 @@ export default defineComponent({
       type: Object,
       required: true
     }
-  },
-  templateOptions: {
-    aside: false,
-    fluid: true
   }
 })
 </script>

@@ -148,10 +148,6 @@ export default defineComponent({
       }
       return false
     }
-  },
-  templateOptions: {
-    aside: false,
-    fluid: true
   }
 })
 </script>

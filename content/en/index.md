@@ -7,13 +7,12 @@ description: 'Build your next Vue.js application with confidence using Nuxt. An 
 ::home-hero
 ---
 primary:
-  text: Get started
-  url: /docs/get-started/installation
-  icon: IconPlay
-secondary:
-  text: 37K+ GitHub stars
+  text: 38K+ GitHub stars
   url: https://github.com/nuxt/nuxt.js
   icon: IconGitHub
+secondary:
+  text: npm init nuxt
+  icon: IconCopy
 ---
 
 #title

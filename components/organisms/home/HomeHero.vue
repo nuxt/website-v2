@@ -2,7 +2,7 @@
   <div class="overflow-hidden relative mx-auto max-w-8xl">
     <HeroParallax />
     <!-- Stars -->
-    <div class="absolute left-0 w-full h-full overflow-hidden -top-24">
+    <div class="absolute left-0 w-full h-full overflow-hidden -top-24 z-10">
       <Star v-for="star in 80" :key="star" />
       <ShootingStar />
     </div>
@@ -40,28 +40,27 @@
           "
         >
           <SectionButton
-            :to="localePath(primary.url)"
+            :to="primary.url"
             :aria-label="primary.text"
             size="lg"
-            class="bg-primary text-gray-800 hover:bg-primary-400 focus:bg-primary-400"
+            class="bg-transparant hover:bg-gray-200 dark:text-white dark:hover:bg-white dark:hover:bg-opacity-10 z-20"
             :icon-left="primary.icon"
             >{{ primary.text }}</SectionButton
           >
           <SectionButton
-            :to="secondary.url"
             :aria-label="secondary.text"
             size="lg"
             class="
-              bg-white
-              border
+              bg-secondary-black
+              text-white
+              dark:bg-white dark:bg-opacity-10
               rounded-md
               shadow-sm
-              border-gray-700
-              text-gray-800
-              focus:bg-gray-200
-              hover:bg-gray-200
+              font-mono
+              cursor-pointer
+              z-20
             "
-            :icon-left="secondary.icon"
+            :icon-right="secondary.icon"
             >{{ secondary.text }}</SectionButton
           >
         </div>
@@ -78,17 +77,17 @@ export default defineComponent({
     primary: {
       type: Object,
       default: () => ({
-        text: 'Get started',
-        url: '/get-started',
-        icon: 'IconPlay'
+        text: '38K+ GitHub stars',
+        url: '/https://github.com',
+        icon: 'IconGitHub'
       })
     },
     secondary: {
       type: Object,
       default: () => ({
-        text: 'Open on GitHub',
-        url: '/https://github.com',
-        icon: 'IconGitHub'
+        text: 'npm init nuxt',
+        url: '/docs',
+        icon: 'IconCopy'
       })
     }
   }

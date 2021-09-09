@@ -20,7 +20,7 @@
             mode="hover"
           >
             <template #trigger>
-              <HeaderNavigationLink :link="link" class="p-1" />
+              <HeaderNavigationLink :link="link" class="px-1 py-2" />
             </template>
 
             <template #item="{ item }">

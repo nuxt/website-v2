@@ -171,7 +171,7 @@ export default {
   @apply lg:rounded-xl !important;
 }
 .DocSearch-Button {
-  @apply rounded w-12 h-12 m-auto !important;
+  @apply rounded w-12 h-12 m-auto hover:shadow-none focus:shadow-none !important;
 }
 .DocSearch-Button-Key {
   @apply hidden !important;

@@ -49,6 +49,7 @@
             dark:bg-secondary-darkest
             divide-y divide-gray-100
             dark:divide-gray-700
+            py-1
           "
           :class="[dropdownMenuClass]"
           role="menu"

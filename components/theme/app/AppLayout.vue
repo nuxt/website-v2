@@ -1,7 +1,20 @@
 <template>
   <div class="relative w-full">
     <AppHeader />
-    <slot />
+
+    <div class="lg:flex" :class="{ 'd-container': layout.aside }">
+      <!-- TODO: to improve -->
+      <div :class="{ 'lg:hidden': !layout.aside }">
+        <slot name="aside">
+          <AppAside :class="layout.asideClass" />
+        </slot>
+      </div>
+
+      <div class="flex-auto w-full min-w-0 lg:static lg:max-h-full lg:overflow-visible">
+        <slot />
+      </div>
+    </div>
+
     <AppFooter />
   </div>
 </template>

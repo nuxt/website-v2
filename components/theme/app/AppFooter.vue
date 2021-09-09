@@ -49,12 +49,15 @@ import { defineComponent, useContext, useFetch, ref } from '@nuxtjs/composition-
 export default defineComponent({
   setup() {
     const { $docus, i18n } = useContext()
+    const results = ref()
     const links = ref([])
 
     useFetch(async () => {
-      const results = await $docus.search('/collections/navigations/footer').where({ language: i18n.locale }).fetch()
-      links.value = results.links
-      console.log(links.value)
+      results.value = await $docus
+        .search('/collections/navigations/', { deep: true })
+        .where({ slug: { $in: 'footer' }, language: i18n.locale })
+        .fetch()
+      links.value = results.value[0].links
     })
     return { links }
   }

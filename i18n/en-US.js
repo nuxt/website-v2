@@ -90,6 +90,11 @@ export default {
       visit_website: 'Visit Website'
     }
   },
+  support: {
+    confirm_sending: 'Message sent to technical support',
+    error_sending: 'Error during sending',
+    invalid_adress: 'Invalid address'
+  },
   showcases: {
     loading: 'Loading...',
     categories: {

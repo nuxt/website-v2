@@ -55,6 +55,7 @@ export default withDocus({
     }
   },
   buildModules: ['@nuxt/typescript-build', 'vue-plausible', '@docus/github', '@docus/twitter'],
+  modules: ['@nuxtjs/recaptcha'],
   plugins: ['~/plugins/adblock.client', '~/plugins/v-tooltip.ts', '~/plugins/showcases'],
   windicss: {
     root: resolve(__dirname),
@@ -84,6 +85,10 @@ export default withDocus({
     server: {
       fs: {
         strict: false
+      },
+      optimizeDeps: {
+        exclude: ['vue-demi', 'scule', '@vueuse/integrations', 'ohmyfetch'],
+        include: ['defu', 'theme-colors', 'cookie', 'js-cookie', 'clipboard', 'property-information', 'ufo', 'url']
       }
     },
     optimizeDeps: {
@@ -165,6 +170,10 @@ export default withDocus({
   publicRuntimeConfig: {
     plausible: {
       domain: process.env.PLAUSIBLE_DOMAIN
+    },
+    recaptcha: {
+      version: 3,
+      siteKey: process.env.RECAPTCHA_SITE_KEY
     }
   }
 })

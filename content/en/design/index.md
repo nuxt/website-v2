@@ -1,6 +1,6 @@
 ---
 template: blank
-title: 'Nuxt Design Kit'
+title: 'Design Kit'
 description: 'Learn how to use Nuxt logos, colors and fonts and download the design kit.'
 layout:
   fluid: true
@@ -8,9 +8,9 @@ navigation: false
 ---
 ::design-hero
 ---
-title: Nuxt Design Kit
-description: "Nuxt is an MIT licensed open source project and completely free to use.
-You can freely use our logos as long as you mention Nuxt and link to nuxtjs.org."
+title: Design Kit
+description: "NuxtJS is an MIT licensed open source project and completely free to use.
+You can freely use our logos as long as you mention NuxtJS and link to nuxtjs.org."
 button: Download Design Kit
 ---
 ::

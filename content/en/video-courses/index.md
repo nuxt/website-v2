@@ -1,6 +1,6 @@
 ---
 template: blog
-title: 'Nuxt Video Courses'
+title: 'Video Courses'
 description: 'Discover and learn more about the Nuxt Framework with free and premium video courses.'
 ---
 ::video-courses-list

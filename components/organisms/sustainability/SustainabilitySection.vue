@@ -13,8 +13,7 @@
 
       <SustainabilityDonation :donations="donations" />
 
-      <SectionSponsors :tier="$t('sustainability.tiers.mvp_partners')" :sponsors="mvpPartners" class="pb-12" />
-      <SectionSponsors :tier="$t('sustainability.tiers.partners')" :sponsors="partners" class="pb-12" />
+      <SectionSponsors :tier="$t('sustainability.tiers.mvp_partners')" :sponsors="mvp" class="pb-12" />
       <SectionSponsors :tier="$t('sustainability.tiers.sponsors')" :sponsors="sponsors" />
 
       <!-- SectionButton
@@ -42,8 +41,7 @@ export default defineComponent({
   setup() {
     const { $docus, i18n } = useContext()
 
-    const mvpPartners = ref()
-    const partners = ref()
+    const mvp = ref()
     const sponsors = ref()
     const donations = ref()
 
@@ -54,15 +52,13 @@ export default defineComponent({
         .sortBy('position', 'asc')
         .fetch()
 
-      mvpPartners.value = documents.filter(sponsor => sponsor.tier === 'MVP Partners')
-      partners.value = documents.filter(sponsor => sponsor.tier === 'Partners')
+      mvp.value = documents.filter(sponsor => sponsor.tier === 'MVP')
       sponsors.value = documents.filter(sponsor => sponsor.tier === 'Sponsors')
       donations.value = documents.filter(sponsor => sponsor.tier === 'Donations')
     })
 
     return {
-      mvpPartners,
-      partners,
+      mvp,
       sponsors,
       donations
     }

@@ -1,8 +1,11 @@
 ---
 template: page
-title: 'Partner | Your company'
-category: 'Agency | Technology'
+title: 'Vercel'
+category: 'Technology'
 tier: 'bronze | silver | gold | platinum'
+img: 'vercel.png'
+img_square: 'vercel.svg'
+url: https://vercel.com
 ---
 <!-- Leave the icon prop as is, the Nuxt team will replace it -->
 ::SustainabilityDetail

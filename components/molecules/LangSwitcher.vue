@@ -2,6 +2,7 @@
   <Dropdown
     v-if="$i18n.locales.length > 1"
     :items="[$i18n.locales]"
+    strategy="fixed"
     placement="bottom"
     mode="hover"
     class="inline-flex items-center w-12 h-12"

@@ -144,7 +144,7 @@ category: Learn
 Be part of the Nuxt.js community and help us Nuxtify the world.
 
 #bottom
-:button-link[Learn everything]{href="/docs/get-started/installation" size="medium"}
+:button-link[Get started]{href="/docs/get-started/installation" size="medium"}
 ::
 
 ::home-learn-guides

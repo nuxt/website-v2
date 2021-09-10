@@ -26,52 +26,42 @@
       </svg>
     </div>
 
-    <transition
-      appear
-      enter-class="transform scale-95 opacity-0"
-      enter-active-class="transition duration-100 ease-out"
-      enter-to-class="transform scale-100 opacity-100"
-      leave-class="transform scale-100 opacity-100"
-      leave-active-class="transition duration-75 ease-in"
-      leave-to-class="transform scale-95 opacity-0"
+    <div
+      v-show="open && (items.length || $slots.header || $scopedSlots.header)"
+      ref="tooltip"
+      :class="[dropdownClass, mode === 'hover' && 'pt-2']"
+      class="z-30 rounded-md shadow-lg"
     >
       <div
-        v-show="open && (items.length || $slots.header || $scopedSlots.header)"
-        ref="tooltip"
-        :class="[dropdownClass, mode === 'hover' && 'pt-2']"
-        class="z-30 rounded-md shadow-lg"
+        class="
+          overflow-y-auto
+          rounded-md
+          bg-white
+          dark:bg-secondary-darkest
+          divide-y divide-gray-100
+          dark:divide-gray-700
+          py-1
+        "
+        :class="[dropdownMenuClass]"
+        role="menu"
+        aria-orientation="vertical"
+        aria-labelledby="options-menu"
       >
-        <div
-          class="
-            overflow-y-auto
-            rounded-md
-            bg-white
-            dark:bg-secondary-darkest
-            divide-y divide-gray-100
-            dark:divide-gray-700
-            py-1
-          "
-          :class="[dropdownMenuClass]"
-          role="menu"
-          aria-orientation="vertical"
-          aria-labelledby="options-menu"
-        >
-          <slot name="header" />
-          <div v-if="items.length" class="divide-y divide-gray-100 dark:divide-gray-700">
-            <div v-for="(subItems, index) of items" :key="index" class="py-1">
-              <div
-                v-for="(item, i) of subItems"
-                :key="i"
-                role="menuitem"
-                @click="!item.disabled ? click(item) : (() => {})()"
-              >
-                <slot name="item" :item="item" />
-              </div>
+        <slot name="header" />
+        <div v-if="items.length" class="divide-y divide-gray-100 dark:divide-gray-700">
+          <div v-for="(subItems, index) of items" :key="index" class="py-1">
+            <div
+              v-for="(item, i) of subItems"
+              :key="i"
+              role="menuitem"
+              @click="!item.disabled ? click(item) : (() => {})()"
+            >
+              <slot name="item" :item="item" />
             </div>
           </div>
         </div>
       </div>
-    </transition>
+    </div>
   </div>
 </template>
 

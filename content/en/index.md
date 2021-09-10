@@ -1,6 +1,6 @@
 ---
 template: blank
-title: 'Nuxt - The Intuitive Vue Framework'
+title: 'The Intuitive Vue Framework'
 description: 'Build your next Vue.js application with confidence using Nuxt. An open source framework making web development simple and powerful.'
 ---
 

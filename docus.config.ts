@@ -10,6 +10,7 @@ export default {
     indexName: 'nuxtjs'
   },
   layout: {
+    aside: false,
     banner: true
   },
   github: {

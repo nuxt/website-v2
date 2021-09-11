@@ -1,8 +1,11 @@
 ---
 template: page
-title: 'Partner | Your company'
-category: 'Agency | Technology'
-tier: 'bronze | silver | gold | platinum'
+title: 'Layer 0'
+description: '64 Robots is the complete digital product agency.'
+category: 'Technology'
+tier: 'Bronze'
+logo: ''
+link: https://www.layer0.co/
 ---
 <!-- Leave the icon prop as is, the Nuxt team will replace it -->
 ::SustainabilityDetail

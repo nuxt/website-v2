@@ -1,8 +1,11 @@
 ---
 template: page
-title: 'Partner | Your company'
-category: 'Agency | Technology'
-tier: 'bronze | silver | gold | platinum'
+title: 'Swell'
+description: 'todo'
+category: 'Technology'
+tier: 'Bronze'
+logo: ''
+link: ''
 ---
 <!-- Leave the icon prop as is, the Nuxt team will replace it -->
 ::SustainabilityDetail

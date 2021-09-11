@@ -1,11 +1,11 @@
 ---
 template: page
 title: 'Netlify'
+description: 'todo'
 category: 'Technology'
-tier: 'bronze | silver | gold | platinum'
-img_square: 'netlify.svg'
-img: 'netlify.png'
-url: https://www.netlify.com/
+tier: 'Bronze'
+logo: 'netlify.svg'
+link: https://www.netlify.com/
 ---
 <!-- Leave the icon prop as is, the Nuxt team will replace it -->
 ::SustainabilityDetail

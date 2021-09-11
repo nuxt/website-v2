@@ -1,7 +1,7 @@
 <template>
-  <Link :to="url" blank class="inline-block">
-    <img loading="lazy" :src="`/img/showcases/${this.type}.svg`" :alt="type" class="w-16 h-16" />
-  </Link>
+  <Button :to="url" blank class="inline-block">
+    <img loading="lazy" :src="`/img/showcases/${type}.svg`" :alt="type" class="w-16 h-16" />
+  </Button>
 </template>
 
 <script>
@@ -10,13 +10,13 @@ export default {
     type: {
       type: String,
       required: true,
-      validate (value) {
+      validate(value) {
         return ['chrome', 'firefox'].includes(value)
       }
     }
   },
   computed: {
-    url () {
+    url() {
       return {
         chrome: 'https://chrome.google.com/webstore/detail/vue-telescope/neaebjphlfplgdhedjdhcnpjkndddbpd',
         firefox: 'https://addons.mozilla.org/en/firefox/addon/vue-telescope/'

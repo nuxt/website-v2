@@ -1,8 +1,11 @@
 ---
 template: page
-title: 'Partner | Your company'
-category: 'Agency | Technology'
-tier: 'bronze | silver | gold | platinum'
+title: '64 Robots'
+description: '64 Robots is the complete digital product agency.'
+category: 'Agency'
+tier: 'Bronze'
+logo: https://www.64robots.com/_nuxt/5743d8710e85984cc0b1712d199121c0.svg
+link: https://www.64robots.com/
 ---
 <!-- Leave the icon prop as is, the Nuxt team will replace it -->
 ::SustainabilityDetail

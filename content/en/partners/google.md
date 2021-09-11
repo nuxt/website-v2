@@ -1,8 +1,11 @@
 ---
 template: page
-title: 'Google'
+title: 'Google Chrome'
+description: 'todo'
 category: 'Technology'
-tier: 'platinum'
+tier: 'Platinum'
+logo: ''
+link: ''
 ---
 <!-- Leave the icon prop as is, the Nuxt team will replace it -->
 ::SustainabilityDetail

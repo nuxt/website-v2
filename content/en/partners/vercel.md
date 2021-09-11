@@ -1,11 +1,11 @@
 ---
 template: page
 title: 'Vercel'
+description: 'todo'
 category: 'Technology'
-tier: 'bronze | silver | gold | platinum'
-img: 'vercel.png'
-img_square: 'vercel.svg'
-url: https://vercel.com
+tier: 'Silver'
+logo: 'vercel.svg'
+link: https://vercel.com
 ---
 <!-- Leave the icon prop as is, the Nuxt team will replace it -->
 ::SustainabilityDetail

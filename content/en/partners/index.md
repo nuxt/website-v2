@@ -5,9 +5,4 @@ description: 'Nuxt is an MIT licensed open source project and free to use. Howev
 heroTitle: 'Partners'
 heroDescription: 'Find your perfect match. Get help from a solutions partner or solutions provider.'
 heroDescriptionFullWidth: true
-blogPostList: true
 ---
-
-::list-card
-
-::

@@ -328,6 +328,24 @@ export default {
       //   name: 'Español',
       //   domain: 'https://es.nuxtjs.org'
       // }
+<<<<<<< HEAD
+=======
+      // please leave this commented out until subdomain is live
+      // {
+      // code: 'ar',
+      // iso: 'ar-AR',
+      // file: 'ar-AR.js',
+      // name: 'العربية',
+      // domain: 'https://ar.nuxtjs.org'
+      // }
+      {
+        code: 'es',
+        iso: 'es-ES',
+        file: 'es-ES.js',
+        name: 'Español',
+        domain: 'https://es.nuxtjs.org'
+      }
+>>>>>>> 3d60d29b (adding arabic lanuage to the nuxt config file)
     ],
     vueI18n: {
       fallbackLocale: 'en'

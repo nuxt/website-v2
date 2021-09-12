@@ -68,7 +68,17 @@ export default {
       stars: 'Stars'
     },
     loading: 'Loading...',
-    error: 'Une erreur est survenue lors de la récupération des modules'
+    error: 'An error occured while fetching modules.'
+  },
+  events: {
+    search: 'Search an event (title, year, speaker, etc.)',
+    sort_by: 'Sort by',
+    sort_fields: {
+      downloads: 'Downloads',
+      stars: 'Stars'
+    },
+    loading: 'Loading...',
+    error: 'An error occured while fetching events.'
   },
   resources: {
     themes: {

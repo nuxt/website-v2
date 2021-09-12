@@ -3,7 +3,7 @@
     class="relative flex flex-col justify-between h-64 p-4 rounded-md shadow-md  group hover:bg-gray-50 hover:dark:bg-opacity-80 dark:bg-sky-darker lg:h-40"
   >
     <div class="flex flex-col space-y-4 lg:flex-row lg:space-y-0 lg:space-x-3">
-      <img loading="lazy" :src="avatarUrl" :alt="event.title" class="object-contain w-10 h-10 mt-2" />
+      <img loading="lazy" :src="avatarUrl" :alt="event.title" class="object-contain mt-2 rounded-full w-18 h-18" />
       <div class="flex flex-col space-y-1">
         <span class="font-medium">{{ event.title }}</span>
         <div v-if="event.description" class="overflow-y-auto text-sm max-h-20">

@@ -2,7 +2,7 @@
   <div
     ref="container"
     v-on-clickaway="close"
-    :class="typeof wrapperClass === 'string' ? wrapperClass : 'relative inline-block text-left'"
+    :class="typeof wrapperClass === 'string' ? wrapperClass : 'relative inline-block text-left cursor-default'"
     tabindex="0"
     @keydown.escape="open = false"
     @mouseover="mode === 'hover' ? mouseover() : () => {}"

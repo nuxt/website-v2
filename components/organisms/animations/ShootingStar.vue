@@ -1,6 +1,6 @@
 <script>
 import { defineComponent, ref, onMounted } from '@nuxtjs/composition-api'
-import Star from '../atoms/Star'
+import Star from '../../atoms/Star'
 
 export default defineComponent({
   name: 'ShootingStar',

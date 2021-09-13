@@ -78,7 +78,7 @@ export default {
   },
   sustainability: {
     tiers: {
-      mvp_partners: 'MVP Partners',
+      mvp_sponsors: 'MVP Sponsors',
       partners: 'Partners',
       sponsors: 'Sponsors',
       donations: 'Donate'

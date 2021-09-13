@@ -11,9 +11,7 @@
         </p>
       </div-->
 
-      <SustainabilityDonation :donations="donations" />
-
-      <SectionSponsors :tier="$t('sustainability.tiers.mvp_partners')" :sponsors="mvp" class="pb-12" />
+      <SectionSponsors :tier="$t('sustainability.tiers.mvp_sponsors')" :sponsors="mvp" class="pb-12" />
       <SectionSponsors :tier="$t('sustainability.tiers.sponsors')" :sponsors="sponsors" />
 
       <!-- SectionButton
@@ -43,7 +41,6 @@ export default defineComponent({
 
     const mvp = ref()
     const sponsors = ref()
-    const donations = ref()
 
     useFetch(async () => {
       const documents = await $docus
@@ -54,13 +51,11 @@ export default defineComponent({
 
       mvp.value = documents.filter(sponsor => sponsor.tier === 'MVP')
       sponsors.value = documents.filter(sponsor => sponsor.tier === 'Sponsors')
-      donations.value = documents.filter(sponsor => sponsor.tier === 'Donations')
     })
 
     return {
       mvp,
-      sponsors,
-      donations
+      sponsors
     }
   }
 })

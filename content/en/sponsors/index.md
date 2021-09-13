@@ -4,10 +4,9 @@ title: 'Sponsors'
 description: 'Nuxt is an MIT licensed open source project and free to use. However, the maintenance effort is not sustainable without proper financial backing.'
 layout:
   fluid: true
-navigation: false
 ---
 
-::page-hero
+::sponsors-hero
 ---
 title: Sponsors
 description: "NuxtJS solves front-end development issues, using Vue.js, Node.js and a suite of other open source tools such as Vite, Webpack, Babel and PostCSS.
@@ -17,14 +16,4 @@ If you run a business and is using NuxtJS in a revenue-generating product, it ma
 ---
 ::
 
-::sustainability-section
----
-buttonText: Become a sponsor
----
-
-#titleSection
-Recurring pledges
-
-#descriptionSection
-Recurring pledges come with exclusive perks, e.g. having your name listed in the Nuxt GitHub repository, or have your company logo placed on this website. Become a nuxter or sponsor via GitHub (goes into a fund with transparent expense models supporting community efforts and events).
-::
+:sustainability-section

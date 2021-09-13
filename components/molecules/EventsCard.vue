@@ -21,7 +21,7 @@
         </span>
         <NuxtButton
           :to="event.url"
-          class="font-medium rounded-md bg-primary inline-flex items-center px-4 py-2.5 text-sm 2xl:text-md"
+          class="font-medium rounded-md bg-primary flex group items-center px-4 py-2.5 text-sm 2xl:text-md"
         >
           Watch
         </NuxtButton>

@@ -1,27 +1,24 @@
 <template>
-  <div class="d-container-content">
-    <div class="lg:flex">
-      <AsideEvents />
-      <div
-        class="grid w-full min-w-0 min-h-0 gap-8 px-4 mt-8  md:px-0 lg:w-4/5 lg:static lg:overflow-visible md:grid-cols-2 lg:ml-20 auto-rows-min"
-      >
-        <div v-for="event in events" :key="event.title">
-          <EventsCard :event="event" />
-        </div>
-      </div>
+  <div>
+    <PageHero
+      :title="page.heroTitle || page.title"
+      :description="page.heroDescription || page.description"
+      :description-full-width="page.heroDescriptionFullWidth"
+    />
+    <div class="d-container px-6 grid sm:grid-cols-2 lg:grid-cols-3 gap-6 pt-8">
+      <LogoCard v-for="(item, index) in events" :key="index" :item="item" />
     </div>
   </div>
 </template>
 
-<script lang="ts">
+<script>
 import { defineComponent, useFetch, useContext, ref } from '@nuxtjs/composition-api'
 
 export default defineComponent({
-  directives: {
-    focus: {
-      inserted(el) {
-        el.focus()
-      }
+  props: {
+    page: {
+      type: Object,
+      required: true
     }
   },
   setup(_) {

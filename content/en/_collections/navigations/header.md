@@ -2,6 +2,7 @@
 links:
   -
     title: 'Discover'
+    slug: 'discover'
     items:
       -
         title: 'Showcases'
@@ -17,6 +18,7 @@ links:
         to: '/testimonials'
   -
     title: 'Learn'
+    slug: 'learn'
     items:
       -
         title: 'Docs'
@@ -35,6 +37,7 @@ links:
         href: 'https://masteringnuxt.com/'
   -
     title: 'Explore'
+    slug: 'explore'
     items:
       -
         title: 'Integrations'
@@ -54,6 +57,7 @@ links:
         to: '/video-courses'
   -
     title: 'Community'
+    slug: 'community'
     items:
       -
         title: 'Announcements'

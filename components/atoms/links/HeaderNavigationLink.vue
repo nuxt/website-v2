@@ -6,8 +6,8 @@
     :aria-label="link.title"
     class="flex font-medium capitalize group whitespace-nowrap"
     :class="{
-      'text-primary': currentSlug === link.slug,
-      'hover:d-primary-text-hover': currentSlug !== link.slug
+      [activeClass]: currentSlug === link.slug,
+      [inactiveClass]: currentSlug !== link.slug
     }"
   >
     {{ link.title }}
@@ -22,6 +22,14 @@ export default defineComponent({
     link: {
       type: Object,
       required: true
+    },
+    activeClass: {
+      type: String,
+      default: 'text-primary'
+    },
+    inactiveClass: {
+      type: String,
+      default: 'hover:d-primary-text-hover'
     }
   },
   setup(props) {

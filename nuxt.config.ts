@@ -54,8 +54,13 @@ export default withDocus({
       imgUrl: { limit: 0 }
     }
   },
-  buildModules: ['@nuxt/typescript-build', 'vue-plausible', '@docus/github', '@docus/twitter'],
-  modules: ['@nuxtjs/recaptcha'],
+  buildModules: [
+    '@nuxt/typescript-build',
+    'vue-plausible',
+    '@docus/github',
+    '@docus/twitter',
+    process.env.RECAPTCHA_SITE_KEY ? '@nuxtjs/recaptcha' : undefined
+  ].filter(_ => _),
   plugins: ['~/plugins/adblock.client', '~/plugins/v-tooltip.ts', '~/plugins/showcases'],
   windicss: {
     root: resolve(__dirname),

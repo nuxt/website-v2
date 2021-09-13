@@ -3,6 +3,24 @@
     <div class="relative d-container-content">
       <h1 class="text-display-3 pb-4 font-serif overflow-ellipsis overflow-hidden">{{ title }}</h1>
       <p class="text-body-xl" :class="{ 'max-w-3xl': !descriptionFullWidth }">{{ description }}</p>
+      <div class="mt-4 flex flex-col sm:flex-row sm:space-x-6 space-y-4 sm:space-y-0">
+        <Link
+          to="https://chrome.google.com/webstore/detail/vue-telescope/neaebjphlfplgdhedjdhcnpjkndddbpd"
+          blank
+          class="inline-flex items-center gap-2"
+        >
+          <img loading="lazy" :src="`/img/showcases/chrome.svg`" :alt="type" class="w-12 h-12" />
+          <span class="font-medium">{{ $t('showcases.chrome_extension') }}</span>
+        </Link>
+        <Link
+          to="https://addons.mozilla.org/en/firefox/addon/vue-telescope/"
+          blank
+          class="inline-flex items-center gap-2"
+        >
+          <img loading="lazy" :src="`/img/showcases/firefox.svg`" :alt="type" class="w-12 h-12" />
+          <span class="font-medium">{{ $t('showcases.firefox_extension') }}</span>
+        </Link>
+      </div>
     </div>
 
     <img

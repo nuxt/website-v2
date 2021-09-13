@@ -41,7 +41,7 @@ export default defineComponent({
     useFetch(async () => {
       const document = await $docus.data('github-releases')
 
-      releases.value = document.releases
+      releases.value = document.body?.releases
     })
 
     return {

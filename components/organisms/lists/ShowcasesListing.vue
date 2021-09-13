@@ -1,9 +1,27 @@
 <template>
   <div class="d-container-content mt-8">
     <div v-if="categories && categories.length" class="lg:flex gap-8">
-      <AsideShowcases :options="categories" :selected="selectedCategory || categories[0].name" @selected="(category) => selectCategory(category)" />
+      <AsideShowcases
+        :options="categories"
+        :selected="selectedCategory || categories[0].name"
+        @selected="category => selectCategory(category)"
+      />
 
-      <div class="w-full px-4 md:px-0 lg:w-4/5 min-w-0 min-h-0 lg:static lg:overflow-visible mt-8 grid md:grid-cols-2 gap-8 lg:ml-20 auto-rows-min">
+      <div
+        class="
+          w-full
+          lg:w-4/5
+          min-w-0 min-h-0
+          lg:static lg:overflow-visible
+          mt-8
+          lg:mt-4
+          grid
+          md:grid-cols-2
+          gap-8
+          lg:ml-20
+          auto-rows-min
+        "
+      >
         <div v-for="showcase in selectedShowcases" :key="showcase.id">
           <ShowcasesCard :showcase="showcase" />
         </div>
@@ -26,31 +44,44 @@ export default {
       required: true
     }
   },
-  data () {
+  data() {
     return {
       showcases: null,
       selectedCategory: ''
     }
   },
+  async fetch() {
+    const { fetch: fetchShowcases, showcases } = useShowcases({ id: this.id })
+    this.showcases = (await fetchShowcases()).value
+    this.selectedCategory = (this.$route.hash || '').substr(1)
+  },
   computed: {
-    selectedShowcases () {
-      return uniqBy(this.showcases?.groups
-        ?.filter((group, index) => (!this.selectedCategory && index === 0) || group.name === this.selectedCategory)
-        ?.map(group => ({
-          ...group,
-          showcases: group.showcases.map(showcase => ({
-            ...showcase
+    selectedShowcases() {
+      return uniqBy(
+        this.showcases?.groups
+          ?.filter((group, index) => (!this.selectedCategory && index === 0) || group.name === this.selectedCategory)
+          ?.map(group => ({
+            ...group,
+            showcases: group.showcases.map(showcase => ({
+              ...showcase
+            }))
           }))
-        }))
-        ?.flatMap(group => group.showcases)
-        ?.sort((a, b) => Number(a.rank) - Number(b.rank)) || [], 'id')
+          ?.flatMap(group => group.showcases)
+          ?.sort((a, b) => Number(a.rank) - Number(b.rank)) || [],
+        'id'
+      )
     },
-    categories () {
-      return this.showcases?.groups?.map(group => ({ name: group.name, display: this.$t(`showcases.categories.${group.name}`) })) || []
+    categories() {
+      return (
+        this.showcases?.groups?.map(group => ({
+          name: group.name,
+          display: this.$t(`showcases.categories.${group.name}`)
+        })) || []
+      )
     }
   },
   watch: {
-    selectedCategory (value) {
+    selectedCategory(value) {
       // TOFIX: should use router but not scroll
       // this.$router.push({ hash: value })
       const url = this.$route.path
@@ -60,12 +91,12 @@ export default {
       }
       window.history.pushState('', '', `${url}${hash}`)
     },
-    '$route.hash' (hash) {
+    '$route.hash'(hash) {
       this.selectedCategory = (hash || '').substr(1)
     }
   },
   methods: {
-    selectCategory (category) {
+    selectCategory(category) {
       if (category.name === this.selectedCategory) {
         return
       }
@@ -75,11 +106,6 @@ export default {
         this.selectedCategory = category.name
       }
     }
-  },
-  async fetch () {
-    const { fetch: fetchShowcases, showcases } = useShowcases({ id: this.id })
-    this.showcases = (await fetchShowcases()).value
-    this.selectedCategory = (this.$route.hash || '').substr(1)
   }
 }
 </script>

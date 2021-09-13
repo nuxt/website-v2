@@ -6,7 +6,7 @@ export function useTechnicalSupport() {
   // @ts-ignore
   const { $colorMode, query, app, $recaptcha } = useContext()
 
-  const { i18n } = app;
+  const { i18n } = app
 
   let _timeout
   const status = ref()
@@ -47,7 +47,6 @@ export function useTechnicalSupport() {
       })
   }
   const send = async () => {
-
     // Cancel empty input
     if (!status.value || !status.value.trim()) return
     if (!company.value || !company.value.trim()) return
@@ -61,12 +60,16 @@ export function useTechnicalSupport() {
     error.value = null
     pending.value = true
 
-    const token = await $recaptcha.execute('login')
+    let token = null
+    if ($recaptcha) {
+      token = await $recaptcha.execute('login')
+    }
 
     try {
       await $fetch(`${apiURL}/techninalSupport`, {
         method: 'POST',
         body: {
+          token,
           status: status.value,
           company: company.value,
           name: name.value,
@@ -92,8 +95,6 @@ export function useTechnicalSupport() {
       }
     }
   }
-
-
   if (query.value.email && query.value.hash) {
     confirmSending(query.value.email, query.value.hash)
   }

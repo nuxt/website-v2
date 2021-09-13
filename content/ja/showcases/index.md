@@ -9,8 +9,9 @@ layout:
 ::showcases-hero
 ---
 title: 事例紹介
-description: NuxtJS で構築されたウェブサイトのセレクションをご覧ください。このコレクションは、VueTelescope によって提供されています。vuetelescope.com にアクセスして、ブラウザ拡張をお試しください。
 ---
+#description
+  NuxtJS で構築されたウェブサイトのセレクションをご覧ください。このコレクションは、VueTelescope によって提供されています。[vuetelescope.com](https://vuetelescope.com) にアクセスして、ブラウザ拡張をお試しください。
 ::
 
 ::showcases-listing

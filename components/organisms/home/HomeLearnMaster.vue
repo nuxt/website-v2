@@ -7,20 +7,12 @@
         </template>
 
         <template #title>
-            <h2
-              class="
-                font-normal
-                text-center
-                md:text-left
-                font-serif
-                text-display-6
-                md:text-display-5
-                2xl:text-display-4
-              "
-            >
-              <Markdown use="title" unwrap="p" />
-            </h2>
-          </template>
+          <h2
+            class="font-normal text-center md:text-left font-serif text-display-6 md:text-display-5 2xl:text-display-4"
+          >
+            <Markdown use="title" unwrap="p" />
+          </h2>
+        </template>
 
         <template #paragraph>
           <p class="text-center font-normal text-body-base md:text-body-lg 2xl:text-body-xl">
@@ -34,7 +26,7 @@
 
         <template #button>
           <div class="w-full self-start">
-           <Markdown use="bottom" unwrap="p" />
+            <Markdown use="bottom" unwrap="p" />
           </div>
         </template>
       </SectionContent>

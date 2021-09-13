@@ -1,5 +1,5 @@
 <template>
-  <div class="overflow-hidden relative mx-auto max-w-8xl">
+  <div class="overflow-hidden relative bg-sky-black text-white">
     <HeroParallax />
     <!-- Stars -->
     <div class="absolute left-0 w-full h-full overflow-hidden -top-24 z-10">
@@ -21,8 +21,7 @@
             mb-8
             px-8
             sm:px-0
-            text-secondary-dark
-            dark:text-cloud-lighter
+            text-cloud-lighter
           "
         >
           <Markdown use="description" unwrap="p" />
@@ -51,7 +50,7 @@
             :aria-label="secondary.text"
             size="lg"
             class="
-              bg-secondary-black
+              bg-secondary-darkest
               text-white
               dark:bg-white dark:bg-opacity-10
               rounded-md

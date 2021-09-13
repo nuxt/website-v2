@@ -26,7 +26,7 @@ Nuxt 3 amène les applications web à un nouveau niveau, rendu hybride statique 
 Soyez averti lorsque Nuxt 3 passe en version bêta publique.
 ::
 
-::home-learn-guides
+::nuxt3-timeline
 ---
 category: Quand ?
 ---
@@ -178,9 +178,9 @@ Reconstruit à partir de zéro avec TypeScript et une architecture plus solide, 
     :headline[Moteur Nitro]
 
   Nous avons travaillé pendant 9 mois sur le nouveau moteur de serveur pour Nuxt : **Nitro**. Il débloque de nouvelles **capacités robustes** sur le serveur Nuxt et au-delà.
-  
+
   En développement, il utilise Rollup et des workers Node pour fournir un remplacement de module à chaud pour votre code serveur et l'isolation du contexte. Il **génère également l'API de votre serveur** en lisant les fichiers dans `server/api/` et des **fonctions serveurs** à partir de `server/functions/`.
-  
+
   En production, il construit votre application et votre serveur dans un répertoire universel `.output`. Cette **sortie est légère** : minimisée et supprimée de tous les modules de node (excepté les polyfills). Vous pouvez déployer cette sortie sur n'importe quel système prenant en charge JavaScript, à partir de Node, Serverless, Workers, Edge-side Rendering ou purement statique.
 
   La sortie est combinée à la fois au code d'exécution pour exécuter votre serveur Nuxt dans n'importe quel environnement (y compris les Service Workers du navigateur, expérimental) et vous servir des fichiers statiques, ce qui en fait un **véritable framework hybride** pour JAMStack. De plus, une couche de stockage native est implémentée, prenant en charge plusieurs sources, pilotes et ressources locales.

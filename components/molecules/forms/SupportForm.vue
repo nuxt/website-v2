@@ -1,7 +1,7 @@
 <template>
-  <form @submit.prevent="onSubmit" class="mt-4 ml-4">
+  <form class="mt-4 ml-4" @submit.prevent="onSubmit">
     <h3 class="text-xl font-medium">
-      {{ title }}
+      {{ title }}
     </h3>
     <ul class="flex flex-col space-y-4">
       <li>
@@ -30,7 +30,20 @@
           <NuxtTextInput
             v-model="name"
             :placeholder="placeholder.name"
-            class="w-full md:w-2/3 lg:w-1/3 xl:w-1/4 lg:ml-10 my-2 p-2 text-sm bg-transparent border rounded outline-none"
+            class="
+              w-full
+              md:w-2/3
+              lg:w-1/3
+              xl:w-1/4
+              lg:ml-10
+              my-2
+              p-2
+              text-sm
+              bg-transparent
+              border
+              rounded
+              outline-none
+            "
           />
           <NuxtTextInput
             v-model="email"
@@ -58,8 +71,8 @@
         <Markdown use="step-5" unwrap="p" />
         <div class="mt-2 lg:pr-6 xl:pr-0 w-full md:w-2/3 xl:w-2/4 pl-10 md:pl-0 md:ml-10">
           <textarea
-            rows='8'
             v-model="message"
+            rows="8"
             :placeholder="placeholder.message"
             class="mt-2 w-full p-2 text-sm bg-transparent border rounded outline-none"
           />
@@ -68,9 +81,9 @@
     </ul>
     <SectionButton
       :aria-label="buttonText"
-      @click.native="send"
       size="md"
       class="mt-4 ml-10 text-gray-800 bg-primary hover:bg-primary-400 focus:bg-primary-400"
+      @click.native="send"
       >{{ buttonText }}</SectionButton
     >
   </form>
@@ -87,37 +100,37 @@ export default defineComponent({
     },
     statusList: {
       type: Array,
-      default: () => [`I'am a company`, `I'am a student`]
+      default: () => ["I'am a company", "I'am a student"]
     },
     placeholder: {
       type: Object,
-      default: {
+      default: () => ({
         company: '',
         name: '',
         mail: '',
         phone: '',
         subject: '',
         message: ''
-      }
+      })
     },
     buttonText: {
       type: String,
       default: 'Send message'
     }
   },
-  setup(props) {
+  setup() {
     const { $recaptcha } = useContext()
     const { status, company, name, email, phone, subject, message, send } = useTechnicalSupport()
 
-    onMounted(async () => {
-      await $recaptcha.init()
-    })
+    if ($recaptcha) {
+      onMounted(async () => {
+        await $recaptcha.init()
+      })
 
-    onBeforeUnmount(() => {
-      $recaptcha.destroy()
-    })
-
-
+      onBeforeUnmount(() => {
+        $recaptcha.destroy()
+      })
+    }
     return {
       status,
       company,
@@ -128,6 +141,6 @@ export default defineComponent({
       message,
       send
     }
-  },
+  }
 })
 </script>

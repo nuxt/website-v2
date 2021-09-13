@@ -1,16 +1,16 @@
 <template>
-  <footer class="" aria-label="footerHeading">
-    <div class="select-none pt-24">
+  <footer class="relative" aria-label="footerHeading">
+    <div class="select-none pt-24 absolute w-full bottom-full">
       <img
         loading="lazy"
         :src="`/img/footer/dark/landscape.svg`"
-        class="w-full h-40 object-fill light:hidden pointer-events-none"
+        class="w-full h-20 lg:h-40 object-fill light:hidden pointer-events-none"
         alt="A landscape image"
       />
       <img
         loading="lazy"
         :src="`/img/footer/${$colorMode.value}/landscape.svg`"
-        class="w-full h-40 object-fill dark:hidden pointer-events-none"
+        class="w-full h-20 lg:h-40 object-fill dark:hidden pointer-events-none"
         alt="A landscape image"
       />
     </div>

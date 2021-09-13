@@ -1,5 +1,5 @@
 <template>
-  <ul class="grid grid-cols-1 md:grid-cols-3 gap-12 md:gap-4 lg:gap-8 pt-16 pb-8 sm:mx-20 md:mx-0">
+  <ul class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12 md:gap-4 lg:gap-8 pt-16 pb-8 px-6 sm:px-20 md:px-6">
     <li
       v-for="testimonial in testimonials"
       :key="testimonial.author"

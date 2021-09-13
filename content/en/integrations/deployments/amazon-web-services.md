@@ -1,10 +1,10 @@
 ---
-template: post
-title: Deploy Nuxt on Amazon Web Services
+template: guide
+title: Amazon Web Services
 description: Static Hosting on AWS with S3 Amplify and CloudFront
-navigation.title: Amazon Web Services
 target: Static
 category: deployment
+logo: "/img/modules/categories/deployment.svg"
 ---
 # Deploy Nuxt on Amazon Web Services
 

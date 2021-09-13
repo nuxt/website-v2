@@ -1,10 +1,10 @@
 ---
-template: post
-title: Deploy Nuxt using PM2
+template: guide
+title: PM2
 description: How to deploy Nuxt.js with PM2 cluster mode enabled?
-navigation.title: PM2
 target: Server
 category: deployment
+logo: "/img/modules/categories/deployment.svg"
 ---
 # Deploy Nuxt using PM2
 

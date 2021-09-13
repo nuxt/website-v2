@@ -22,9 +22,9 @@
     </NuxtLink>
 
     <!-- Title -->
-    <h5 v-if="!isDirectory && title" class="d-aside-title">
+    <!-- <h5 v-if="!isDirectory && title" class="py-2 text-gray-400 font-bold uppercase">
       {{ title }}
-    </h5>
+    </h5> -->
 
     <!-- Links list -->
     <ul>

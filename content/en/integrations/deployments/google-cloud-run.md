@@ -1,10 +1,10 @@
 ---
-template: post
-title: Deploy Nuxt on Google Cloud Run
+template: guide
+title: Google Cloud Run
 description: How to deploy Nuxt on Google Cloud Run?
-navigation.title: Google Cloud Run
 target: Server
 category: deployment
+logo: "/img/modules/categories/deployment.svg"
 ---
 # Deploy Nuxt on Google Cloud Run
 

@@ -1,10 +1,10 @@
 ---
-template: post
-title: Deploy on Azure Static Web Apps
+template: guide
+title: Azure Static Web Apps
 description: How to deploy a Nuxt.js application on Azure Static Web Apps?
-navigation.title: Azure Static Web Apps
 target: Static
 category: deployment
+logo: "/img/modules/categories/deployment.svg"
 ---
 # Deploy on Azure Static Web Apps
 

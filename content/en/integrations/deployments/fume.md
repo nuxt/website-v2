@@ -1,10 +1,10 @@
 ---
-template: post
-title: Deploy Nuxt on Fume
+template: guide
+title: Fume
 description: How to deploy Nuxt.js on Fume
-navigation.title: Fume
 target: Static & Server
 category: deployment
+logo: "/img/modules/categories/deployment.svg"
 ---
 # Deploy Nuxt on Fume
 

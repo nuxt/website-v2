@@ -1,10 +1,10 @@
 ---
-template: post
-title: Deploy Nuxt with Surge
+template: guide
+title: Surge
 description: How to deploy Nuxt.js app with Surge?
-navigation.title: Surge
 target: Static
 category: deployment
+logo: "/img/modules/categories/deployment.svg"
 ---
 # Deploy Nuxt with Surge
 

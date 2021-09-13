@@ -1,10 +1,10 @@
 ---
-template: post
+template: guide
 title: Deploy Nuxt with Cleavr
 description: How to deploy a Nuxt app with Cleavr?
-navigation.title: Cleavr
 target: Static & Server
 category: deployment
+logo: "/img/modules/categories/deployment.svg"
 ---
 # Deploy Nuxt with Cleavr
 

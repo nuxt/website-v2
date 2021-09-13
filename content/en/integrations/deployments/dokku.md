@@ -1,10 +1,10 @@
 ---
-template: post
-title: Deploy Nuxt on Dokku
+template: guide
+title: Dokku
 description: How to deploy a Nuxt.js application on Dokku?
-navigation.title: Dokku
 target: Server
 category: deployment
+logo: "/img/modules/categories/deployment.svg"
 ---
 # Deploy Nuxt on Dokku
 

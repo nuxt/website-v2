@@ -1,9 +1,9 @@
 ---
-template: post
-title: Deploy Nuxt on Cloudflare
+template: guide
+title: Cloudflare
 description: What needs to be considered when using Nuxt with Cloudflare
-navigation.title: Cloudflare
 category: deployment
+logo: "/img/modules/categories/deployment.svg"
 ---
 # Deploy Nuxt on Cloudflare
 

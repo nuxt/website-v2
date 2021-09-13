@@ -1,10 +1,10 @@
 ---
-template: post
-title: Deploy Nuxt on Google App Engine
+template: guide
+title: Google App Engine
 description: How to deploy Nuxt.js on Google App Engine?
-navigation.title: Google App Engine
 target: Server
 category: deployment
+logo: "/img/modules/categories/deployment.svg"
 ---
 # Deploy Nuxt on Google App Engine
 

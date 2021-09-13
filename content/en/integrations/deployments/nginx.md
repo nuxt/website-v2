@@ -1,10 +1,10 @@
 ---
-template: post
-title: Using NGINX as a reverse proxy
+template: guide
+title: NGINX
 description: How to use nginx as a reverse proxy
-navigation.title: NGINX
 target: Static & Server
 category: deployment
+logo: "/img/modules/categories/deployment.svg"
 ---
 # Using NGINX as a reverse proxy
 

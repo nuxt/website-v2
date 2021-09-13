@@ -42,7 +42,7 @@ links:
       -
         title: 'Integrations'
         slug: 'integrations'
-        to: '/integrations/deployments'
+        to: '/integrations'
       -
         title: 'Modules'
         slug: 'modules'

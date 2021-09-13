@@ -1,11 +1,10 @@
 ---
-template: post
-title: Deploy Nuxt with Bip
+template: guide
+title: Bip
 description: How to deploy a Nuxt app with Bip?
-navigation:
-  title: Bip
 target: Static
 category: deployment
+logo: "/img/modules/categories/deployment.svg"
 ---
 # Deploy Nuxt with Bip
 

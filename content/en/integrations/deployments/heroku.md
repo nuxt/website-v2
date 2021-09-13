@@ -1,10 +1,10 @@
 ---
-template: post
-title: Deploy Nuxt on Heroku
+template: guide
+title: Heroku
 description: How to deploy Nuxt.js on Heroku?
-navigation.title: Heroku
 target: Server
 category: deployment
+logo: "/img/modules/categories/deployment.svg"
 ---
 # Deploy Nuxt on Heroku
 

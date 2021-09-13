@@ -1,10 +1,10 @@
 ---
-template: post
-title: Deploy Nuxt with Stormkit.io
+template: guide
+title: Stormkit.io
 description: How to deploy Nuxt with Stormkit.io?
-navigation.title: Stormkit.io
 target: Static & Server
 category: deployment
+logo: "/img/modules/categories/deployment.svg"
 ---
 
 Easily build, deploy and scale your Nuxt applications with [Stormkit.io](https://www.stormkit.io). It supports instant rollbacks, serverless-side logic, snippet injections, multiple development environments and more...

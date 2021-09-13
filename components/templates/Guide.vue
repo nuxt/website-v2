@@ -8,10 +8,6 @@
 
     <EditOnGithub v-if="repoUrl" :page="page" />
 
-    <template #prev-next>
-      <PagePrevNext :prev="prev" :next="next" />
-    </template>
-
     <template #toc>
       <PageToc v-if="!page.body.hideToc" :title="page.body.toc.title" :toc="page.body.toc.links" />
     </template>
@@ -62,17 +58,8 @@ export default defineComponent({
       }, 500)
     })
 
-    useFetch(async () => {
-      const [prevLink, nextLink] = await $docus.getPreviousAndNextLink(props.page)
-
-      prev.value = prevLink
-      next.value = nextLink
-    })
-
     return {
-      repoUrl,
-      prev,
-      next
+      repoUrl
     }
   }
 })

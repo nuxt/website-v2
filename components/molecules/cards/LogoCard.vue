@@ -4,8 +4,9 @@
       <Link :to="item.link" :aria-label="item.title" target="_blank" class="absolute inset-0" />
       <nuxt-img class="ListCard-external group-hover:opacity-100" alt="external_link" src="/img/icons/ext.svg" />
     </template>
+    <Link v-else :to="item.to || ''" :aria-label="item.title" class="absolute inset-0" />
     <div class="ListCard-body">
-      <nuxt-img :alt="`${item.title} logo`" :src="item.logo" class="w-12 h-12 mr-4 rounded-md" />
+      <nuxt-img :alt="`${item.title} logo`" :src="item.logo || ''" class="w-12 h-12 mr-4 rounded-md" />
       <h3 class="font-bold text-xl py-2">{{ item.title || 'Title' }}</h3>
       <p class="text-sm">{{ item.description || 'Description' }}</p>
     </div>

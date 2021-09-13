@@ -1,10 +1,10 @@
 ---
-template: post
-title: Deploy Nuxt on Koyeb Serverless Platform
+template: guide
+title: Koyeb
 description: Deploy Nuxt on Koyeb Serverless Platform with Docker
-navigation.title: Koyeb
 target: Server
 category: deployment
+logo: "/img/modules/categories/deployment.svg"
 ---
 # Deploy Nuxt on Koyeb Serverless Platform
 

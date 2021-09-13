@@ -1,10 +1,10 @@
 ---
-template: post
-title: Deploy Nuxt on GitHub Pages
+template: guide
+title: GitHub Pages
 description: How to deploy Nuxt.js app on GitHub Pages?
-navigation.title: GitHub
 target: Static
 category: deployment
+logo: "/img/modules/categories/deployment.svg"
 ---
 # Deploy Nuxt on GitHub Pages
 

@@ -1,10 +1,10 @@
 ---
-template: post
-title: Deploy Nuxt on Qovery
+template: guide
+title: Qovery
 description: How to deploy Nuxt.js on Qovery?
-navigation.title: Qovery
 target: Static & Server
 category: deployment
+logo: "/img/modules/categories/deployment.svg"
 ---
 # Deploy Nuxt on Qovery
 

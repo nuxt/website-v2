@@ -1,10 +1,10 @@
 ---
-template: post
-title: Deploy Nuxt on Platform.sh
+template: guide
+title: Platform.sh
 description: How to deploy Nuxt.js on Platform.sh?
-navigation.title: Platform.sh
 target: Static & Server
 category: deployment
+logo: "/img/modules/categories/deployment.svg"
 ---
 # Deploy Nuxt on Platform.sh
 

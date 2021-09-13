@@ -2,7 +2,9 @@
   <div class="relative pt-24 pb-32 bg-gray-100 dark:bg-secondary-darkest">
     <div class="relative d-container-content">
       <h1 class="text-display-3 pb-8 font-serif overflow-ellipsis overflow-hidden">{{ title }}</h1>
-      <p class="text-body-lg" :class="{ 'max-w-3xl': !descriptionFullWidth }">{{ description }}</p>
+      <p class="text-body-lg max-w-3xl">
+        <Markdown use="description" unwrap="p" />
+      </p>
       <div class="mt-8 flex flex-col sm:flex-row sm:space-x-6 space-y-4 sm:space-y-0">
         <Link
           to="https://chrome.google.com/webstore/detail/vue-telescope/neaebjphlfplgdhedjdhcnpjkndddbpd"

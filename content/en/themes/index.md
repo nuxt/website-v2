@@ -1,6 +1,6 @@
 ---
 template: blog
-title: Nuxt Themes
+title: Themes
 description: 'See how a real world application is built using the Nuxt stack with the themes built by our partners.'
 ---
 ::themes-list

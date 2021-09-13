@@ -1,5 +1,6 @@
 ---
 template: blank
+title: Modules
 layout:
   fluid: true
 navigation: false

@@ -1,6 +1,6 @@
 ---
 template: blank
-title: 'Support'
+title: 'Enterprise Support'
 description: 'Get technical support, report bugs or contribute to the Nuxt framework development.'
 layout:
   fluid: true
@@ -8,7 +8,7 @@ navigation: false
 ---
 ::page-hero
 ---
-title: Support
+title: Enterprise Support
 description: "Get technical support, report bugs or contribute to the Nuxt framework development."
 ---
 ::
@@ -91,17 +91,6 @@ description: "Get technical support, report bugs or contribute to the Nuxt frame
   image: 'suggest'
   button:
     text: 'Suggest an idea'
-    url: ''
-  ---
-  ::
-  ::support-card
-  ---
-  title: 'Donate'
-  description: 'Nuxt is an MIT licensed open source project and completely free to use.
-  However, the amount of effort needed to maintain and develop new features for the project is not sustainable without proper financial backing.'
-  image: 'donate'
-  button:
-    text: 'Donate'
     url: ''
   ---
   ::

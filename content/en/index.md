@@ -1,19 +1,18 @@
 ---
 template: blank
-title: 'Nuxt - The Intuitive Vue Framework'
+title: 'The Intuitive Vue Framework'
 description: 'Build your next Vue.js application with confidence using Nuxt. An open source framework making web development simple and powerful.'
 ---
 
 ::home-hero
 ---
 primary:
-  text: Get started
-  url: /docs/get-started/installation
-  icon: IconPlay
-secondary:
-  text: 37K+ GitHub stars
+  text: 38K+ GitHub stars
   url: https://github.com/nuxt/nuxt.js
   icon: IconGitHub
+secondary:
+  text: npm init nuxt
+  icon: IconCopy
 ---
 
 #title
@@ -145,7 +144,7 @@ category: Learn
 Be part of the Nuxt.js community and help us Nuxtify the world.
 
 #bottom
-:button-link[Learn everything]{href="/docs/get-started/installation" size="medium"}
+:button-link[Get started]{href="/docs/get-started/installation" size="medium"}
 ::
 
 ::home-learn-guides

@@ -163,6 +163,8 @@ export function useFuse(modules) {
     sortedBy,
     selectedCategory,
     modulesLoaded,
+    // Data
+    sortFields,
     // Computed
     filteredModules,
     sortByComp,

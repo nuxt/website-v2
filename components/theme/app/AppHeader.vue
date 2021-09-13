@@ -1,9 +1,9 @@
 <template>
   <header class="d-header">
     <div class="flex h-full px-1 mx-auto max-w-7xl sm:px-3 lg:px-6">
-      <NavigationButton v-if="aside" aria-label="mobileMenu" class="px-2.5" />
+      <NavigationButton aria-label="mobileMenu" class="px-2.5 lg:hidden" />
 
-      <div :class="[aside ? 'justify-center lg:justify-start' : 'justify-start']" class="flex items-center flex-1">
+      <div class="flex items-center flex-1 justify-center lg:justify-start">
         <Link :to="localePath('/')" aria-label="homeLink">
           <!-- "mr-4 lg:mr-0" to optically center logo text -->
           <Logo :settings="settings" class="h-8 mr-4 md:h-9 lg:mr-0" />
@@ -44,12 +44,6 @@
 import { defineComponent, useContext, useFetch, ref, computed } from '@nuxtjs/composition-api'
 
 export default defineComponent({
-  props: {
-    aside: {
-      type: Boolean,
-      default: false
-    }
-  },
   setup() {
     const { $docus, i18n } = useContext()
     const settings = computed(() => $docus.settings.value)

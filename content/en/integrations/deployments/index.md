@@ -1,7 +1,7 @@
 ---
-template: blog
+template: list
 title: Deployments
-description: Deployments description
+description: Discover how to deploy your NuxtJS project for each hosting provider.
 blogPostList: true
 sortBy:
   - field: position

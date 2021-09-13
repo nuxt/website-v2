@@ -97,6 +97,8 @@ export default {
   },
   showcases: {
     loading: 'Loading...',
+    chrome_extension: 'Chrome extension',
+    firefox_extension: 'Firefox extension',
     categories: {
       Featured: 'Featured',
       'E-Commerce': 'E-Commerce',

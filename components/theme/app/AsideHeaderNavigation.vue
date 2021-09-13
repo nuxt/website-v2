@@ -7,7 +7,7 @@
           <IconChevronBottom v-if="openedLink === link.slug" class="flex-shrink-0 w-4 h-4" />
           <IconChevronRight v-else class="flex-shrink-0 w-4 h-4" />
         </div>
-        <div v-show="openedLink === link.slug" class="pl-2 py-2 gap-2">
+        <div v-show="openedLink === link.slug" class="pl-2 pt-2 gap-2">
           <HeaderNavigationLink
             v-for="subLink in link.items"
             :key="subLink.slug"

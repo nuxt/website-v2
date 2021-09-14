@@ -1,6 +1,5 @@
 <template>
   <header :class="home ? 'd-header-home' : 'd-header'">
-    <AppBanner />
     <div class="flex h-full px-1 mx-auto max-w-7xl sm:px-3 lg:px-6">
       <NavigationButton
         aria-label="mobileMenu"

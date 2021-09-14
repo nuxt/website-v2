@@ -1,5 +1,6 @@
 <template>
   <div class="relative w-full">
+    <AppBanner />
     <AppHeader :links="headerLinks" />
 
     <div class="lg:flex" :class="{ 'd-container': layout.aside }">

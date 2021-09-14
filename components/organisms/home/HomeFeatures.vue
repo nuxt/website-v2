@@ -22,7 +22,7 @@
     <img
       loading="lazy"
       :src="`/img/home/discover/dx/discover-mountain.svg`"
-      class="absolute left-0 bottom-0 z-10 object-fill w-full"
+      class="absolute left-0 bottom-0 z-10 object-cover w-full"
       alt="A landscape image"
     />
   </div>

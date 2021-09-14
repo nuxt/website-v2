@@ -46,7 +46,7 @@
     </HomeSection>
     <img
       loading="lazy"
-      :src="`/img/home/footer.svg`"
+      :src="`/img/home/home_footer.svg`"
       class="absolute left-0 bottom-0 z-10 h-60 lg:h-80 2xl:h-128 object-cover w-full"
       alt="A landscape image"
     />

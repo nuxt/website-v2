@@ -224,7 +224,8 @@ Nuxt has plently of areas to explore, learn with examples, integrate with your f
 ::home-campfire
 ---
 category: Community
-articleCategory: Next Conferences
+announcementsCategory: Announcements
+eventsCategory: Events
 articleLinkTitle: Get infos
 ---
 

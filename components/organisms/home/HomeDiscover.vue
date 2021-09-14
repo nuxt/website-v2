@@ -6,7 +6,7 @@
       class="absolute left-0 object-fill w-full h-40 -mt-24"
       alt="A landscape image"
     />
-    <HomeSection class="pt-32 pb-32 bg-sky-darkest text-white">
+    <HomeSection class="pt-32 pb-32">
       <template #section-content>
         <SectionContent class="col-span-6 flex items-center md:items-start pt-16 md:pt-0" position="left">
           <template #category>

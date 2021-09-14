@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="relative pb-60 lg:pb-80 2xl:pb-102">
     <HomeSection>
       <template #header-illustration>
         <img
@@ -11,7 +11,7 @@
       </template>
 
       <template #section-content>
-        <SectionContent class="pt-20 pb-60 text-secondary-black">
+        <SectionContent class="pt-20 text-secondary-black">
           <template #category>
             <span class="text-tertiary font-bold text-lg">{{ category }}</span>
           </template>
@@ -47,7 +47,7 @@
     <img
       loading="lazy"
       :src="`/img/home/footer.svg`"
-      class="absolute left-0 z-10 object-cover w-full h-80 -mt-56"
+      class="absolute left-0 bottom-0 z-10 h-60 lg:h-80 2xl:h-128 object-cover w-full"
       alt="A landscape image"
     />
   </div>

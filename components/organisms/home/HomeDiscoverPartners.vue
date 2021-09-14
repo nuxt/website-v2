@@ -1,11 +1,5 @@
 <template>
-  <div class="mt-40 pb-40 sm:pb-44 md:pb-48 lg:pb-68 xl:pb-92 bg-sky-surface">
-    <img
-      loading="lazy"
-      :src="`/img/home/discover/dx/discover-mountain.svg`"
-      class="absolute left-0 z-10 object-fill w-full -mt-28 sm:-mt-32 md:-mt-40 lg:-mt-56 xl:-mt-60 2xl:-mt-84"
-      alt="A landscape image"
-    />
+  <div class="relative pb-48 sm:pb-56 md:pb-64 lg:pb-72 xl:pb-92 2xl:pb-128 bg-sky-surface">
     <section class="relative pt-20">
       <NuxtContainer class="flex flex-col items-center xl:pt-10 text-sky-black">
         <div class="flex flex-col w-full items-center col-span-12">
@@ -23,6 +17,12 @@
         </div>
       </NuxtContainer>
     </section>
+    <img
+      loading="lazy"
+      :src="`/img/home/discover/partners/partners-illustration.svg`"
+      class="absolute left-0 bottom-0 z-10 object-fill w-full -mt-28 sm:-mt-40 lg:-mt-60 xl:-mt-80"
+      alt="A landscape image"
+    />
   </div>
 </template>
 
@@ -37,13 +37,13 @@ export default defineComponent({
     }
   },
   setup() {
-    const { $docus } = useContext()
+    const { $docus, i18n } = useContext()
     const partners = ref()
 
     useFetch(async () => {
       partners.value = await $docus
-        .search('/collections/sponsors', { deep: true })
-        .where({ tier: { $in: ['MVP', 'Sponsors', 'Donations'] } })
+        .search('/partners', { deep: true })
+        .where({ slug: { $ne: '' }, language: i18n.locale })
         .fetch()
     })
 

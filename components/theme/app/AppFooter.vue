@@ -1,6 +1,6 @@
 <template>
   <footer class="" aria-label="footerHeading">
-    <div class="select-none pt-24">
+    <div class="select-none" :class="{ 'pt-24': !home }">
       <img
         v-if="!home"
         loading="lazy"

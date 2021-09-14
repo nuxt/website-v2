@@ -117,14 +117,14 @@ touch content/articles/my-first-blog-post.md
 We can now add a title and text for our blog post:
 
 ```markdown
-# My first blog post
+## My first blog post
 
 Welcome to my first blog post using content module
 ```
 
 <base-alert>
 
-In markdown we create a `<h1>` title by using `#`. Make sure you leave a space between it and your blog title. For more info on writing in markdown see the [basic syntax guide](https://www.markdownguide.org/basic-syntax).
+In markdown we create a `<h2>` title by using `#`. Make sure you leave a space between it and your blog title. For more info on writing in markdown see the [basic syntax guide](https://www.markdownguide.org/basic-syntax).
 
 </base-alert>
 

@@ -41,11 +41,13 @@ export default {
       'd-header-home':
         'sticky w-full top-0 z-50 bg-secondary-black bg-opacity-80 d-border-header d-blur-header h-header',
       'd-bg-header': 'bg-white bg-opacity-80 dark:bg-secondary-black dark:bg-opacity-80',
+      'd-bg-header-home': 'bg-opacity-80 bg-secondary-black',
       'd-border': 'light:border-gray-200 light:border-opacity-50 dark:border-secondary-darker',
       'd-border-hover': 'border-primary-200 dark:border-secondary-dark',
       'd-border-header': 'border-none',
       'd-page-mobile-toc-bg': 'd-body-bg bg-opacity-80 dark:bg-opacity-80',
       'd-aside-header-bg': 'bg-gray-50 dark:bg-secondary-darkest',
+      'd-aside-header-home-bg': 'bg-secondary-darkest',
       'd-active-aside-navigation-item-bg': 'bg-primary-50 dark:bg-secondary-darkest',
       'd-active-aside-navigation-item-text': 'text-primary-500 dark:text-primary-400 ',
       'd-code-group-header-bg': 'bg-gray-200 dark:bg-secondary-darker',

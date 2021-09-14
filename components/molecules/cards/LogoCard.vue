@@ -35,4 +35,7 @@ export default defineComponent({
 .ListCard-external {
   @apply transition-opacity duration-200 opacity-0 absolute top-4 right-4 cursor-pointer h-6 w-6;
 }
+.ListCard-foot {
+  @apply text-right text-sm pt-4 font-medium text-gray-400;
+}
 </style>

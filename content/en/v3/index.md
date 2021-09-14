@@ -1,10 +1,5 @@
 ---
 template: blank
-layout:
-  fluid: true
-navigation: false
-layout.asideClass: 'block lg:hidden'
-layout.aside: true
 title: Is Nuxt3 Ready?
 description: 'Nuxt3 is rebuilt from the ground up for the modern web. Hybrid static & server rendering, API routes and native serverless.'
 head.titleTemplate: null
@@ -23,10 +18,10 @@ Rebuilt from the ground up for the modern web.<br>
 Hybrid static & server rendering, API routes and native serverless.
 
 #body
-Get notified when Nuxt3 is in public beta.
+Get notified by email when Nuxt3 is out in public beta.
 ::
 
-::home-features
+::home-features{.dark:bg-secondary-darkest .bg-gray-50}
 ---
 category: Discover
 ---
@@ -40,7 +35,7 @@ Nuxt3 has been re-architected with a smaller core and optimized for faster perfo
   ::section-content-item
   ---
   title: Lighter
-  description: Out of the box, Nuxt3 is 20% smaller than Nuxt2 (just 13kb).
+  description: Nuxt3 provides up to 5x smaller modernclient bundle and 100x smaller deployment bundle.
   image: IconFeather
   imageClass: w-10 h-10
   ---
@@ -135,7 +130,7 @@ Nuxt3 has been re-architected with a smaller core and optimized for faster perfo
   ::
 ::
 
-::section{.dark:bg-secondary-darkest .bg-gray-50 .py-20 .text-lg}
+::section{.py-20 .text-lg}
   ::nuxt-container{.text-justify}
     :icon-nuxt-nitro{.h-32}
     :headline[Nitro Engine]
@@ -152,32 +147,34 @@ Nuxt3 has been re-architected with a smaller core and optimized for faster perfo
   ::
 ::
 
-::nuxt-container{.pt-20 .text-justify}
-  :icon-nuxt-bridge{.h-32}
-  :headline[Nuxt Bridge]
+::section{.dark:bg-secondary-darkest .bg-gray-50 .py-20 .text-justify}
+  ::nuxt-container{.text-justify}
+    :icon-nuxt-bridge{.h-32}
+    :headline[Nuxt Bridge]
 
-We moved to Vue 3 and re-wrote Nuxt after 4 years of development to make it a strong foundation for the future.
+    We moved to Vue 3 and re-wrote Nuxt after 4 years of development to make it a strong foundation for the future.
 
-### Smooth upgrade to Nuxt3
+    ### Smooth upgrade to Nuxt3
 
-We've worked to make the upgrade as easy as possible between Nuxt2 and Nuxt3.
+    We've worked to make the upgrade as easy as possible between Nuxt2 and Nuxt3.
 
-- Legacy plugins and modules working
-- Nuxt2 config compatible
-- Partial pages options API
+    - Legacy plugins and modules working
+    - Nuxt2 config compatible
+    - Partial pages options API
 
-### Bringing Nuxt3 experience to your existing Nuxt2 project
+    ### Bringing Nuxt3 experience to your existing Nuxt2 project
 
-As we've been working on new features for Nuxt3, we've back-ported some of them to Nuxt2.
+    As we've been working on new features for Nuxt3, we've back-ported some of them to Nuxt2.
 
-- Using Nitro with Nuxt2
-- Using Composition API with Nuxt2
-- Using new CLI and Devtools with Nuxt2
-- Progressively upgrade to Nuxt3
-- Compatibility with Nuxt2 module ecosystem
-- Upgrade piece by piece (Nitro, Composition API, Nuxt Kit)
+    - Using Nitro with Nuxt2
+    - Using Composition API with Nuxt2
+    - Using new CLI and Devtools with Nuxt2
+    - Progressively upgrade to Nuxt3
+    - Compatibility with Nuxt2 module ecosystem
+    - Upgrade piece by piece (Nitro, Composition API, Nuxt Kit)
+  ::
 ::
 
-::nuxt-container{.text-center .text-xl .pt-10}
+::section{.text-center .text-xl .pt-10}
 Thank you for your patience, we cannot wait to open it publicly to get your feedback — [The Nuxt Team.]{.font-serif}
 ::

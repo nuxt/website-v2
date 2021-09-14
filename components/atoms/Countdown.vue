@@ -1,6 +1,9 @@
 <template>
-  <div>
-    <div class="grid grid-cols-4 gap-4 sm:gap-8 mb-6 font-bold">
+  <div class="px-8 py-4 nuxt-text-highlight dark:bg-secondary-darkest rounded-md">
+    <div class="whitespace-nowrap font-medium text-lg mb-4">
+      {{ formatDateByLocale($i18n.locale, date) }}
+    </div>
+    <div class="grid grid-cols-4 gap-4 sm:gap-8 font-bold">
       <div class="flex flex-col items-center">
         <span class="text-5xl">{{ days }}</span>
         <span class="uppercase text-sm">{{ $t('common.days') }}</span>
@@ -18,17 +21,16 @@
         <span class="uppercase text-sm">{{ $t('common.seconds') }}</span>
       </div>
     </div>
-    <span class="whitespace-nowrap font-medium text-lg">{{ formatDateByLocale($i18n.locale, date) }}</span>
   </div>
 </template>
 
 <script>
 import { defineComponent, ref, computed } from '@nuxtjs/composition-api'
-import { parse } from 'date-fns'
+import { parseISO } from 'date-fns'
 
 export default defineComponent({
   setup() {
-    const date = ref(parse('12/10/2021', 'dd/MM/yyyy', new Date()))
+    const date = ref(parseISO('2021-10-12T16:00:00+02:00'))
     const now = new Date()
 
     const timer = ref(0)
@@ -55,7 +57,7 @@ export default defineComponent({
 
     const formatDateByLocale = (locale, d) => {
       const currentLocale = locale || 'en'
-      const options = { year: 'numeric', month: 'long', day: 'numeric' }
+      const options = { year: 'numeric', month: 'long', day: 'numeric', hour: 'numeric', timeZoneName: 'short' }
       return new Date(d).toLocaleDateString(currentLocale, options)
     }
 

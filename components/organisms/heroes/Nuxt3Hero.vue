@@ -9,7 +9,6 @@
         <h1 class="font-normal font-serif text-display-5 xs:text-display-4 md:text-display-3 2xl:text-display-2 my-4">
           <Markdown use="title" unwrap="p" />
         </h1>
-        <Countdown class="mx-auto my-8" />
         <h2
           class="
             font-normal
@@ -17,7 +16,6 @@
             xs:text-body-lg
             md:text-body-xl
             2xl:text-body-2xl
-            mb-8
             px-8
             sm:px-0
             text-secondary-dark
@@ -26,7 +24,8 @@
         >
           <Markdown use="description" unwrap="p" />
         </h2>
-        <p class="text-center text-secondary-dark dark:text-cloud-lighter">
+        <Countdown class="mx-auto my-4" />
+        <p class="text-center mt-2 text-secondary-dark dark:text-cloud-lighter">
           <Markdown use="body" unwrap="p" />
         </p>
         <div class="flex flex-col items-center justify-center">

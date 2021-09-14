@@ -26,41 +26,6 @@ Nuxt 3 amène les applications web à un nouveau niveau, rendu hybride statique 
 Soyez averti lorsque Nuxt 3 passe en version bêta publique.
 ::
 
-::nuxt3-timeline
----
-category: Quand ?
----
-
-#title
-Chronologie
-
-#description
-Après plus de 16 mois de travail, Nuxt 3 est prêt à sortir, en trois étapes.
-
-#default
-  ::section-content-item
-  ---
-  image: /img/v3/step1.svg
-  title: Juillet 2021
-  description: Bêta privée pour l'équipe core de Vue et les auteurs de modules Nuxt.
-  ---
-  ::
-  ::section-content-item
-  ---
-  image: /img/v3/step2.svg
-  title: Septembre 2021
-  description: Bêta publique.
-  ---
-  ::
-  ::section-content-item
-  ---
-  image: /img/v3/step3.svg
-  title: Fin 2021
-  description: Version stable.
-  ---
-  ::
-::
-
 ::home-features
 ---
 category: Découvrir

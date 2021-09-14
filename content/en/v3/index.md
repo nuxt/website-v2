@@ -26,40 +26,6 @@ Hybrid static & server rendering, API routes and native serverless.
 Get notified when Nuxt3 is in public beta.
 ::
 
-::nuxt3-timeline
----
-category: When?
----
-#title
-Timeline
-
-#description
-After more than 16 months of work, Nuxt3 is ready to be released, in three stages.
-
-#default
-  ::section-content-item
-  ---
-  image: /img/v3/step1.svg
-  title: July 2021
-  description: Private beta for Vue core team, Nuxt module authors and partners.
-  ---
-  ::
-  ::section-content-item
-  ---
-  image: /img/v3/step2.svg
-  title: September 2021
-  description: Public beta for anyone willing to help make Nuxt3 bullet-proof.
-  ---
-  ::
-  ::section-content-item
-  ---
-  image: /img/v3/step3.svg
-  title: Q4 2021
-  description: Stable version for confident production deployment.
-  ---
-  ::
-::
-
 ::home-features
 ---
 category: Discover

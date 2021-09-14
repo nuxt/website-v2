@@ -43,7 +43,7 @@ links:
       -
         title: 'Themes'
         slug: 'themes'
-        to: '/resources/themes'
+        to: '/themes'
       -
         title: 'Video Courses'
         slug: 'video-courses'
@@ -51,5 +51,5 @@ links:
   -
     title: 'Partners'
     slug: 'partners'
-    to: '/sponsor-nuxtjs'
+    to: '/partners'
 ---

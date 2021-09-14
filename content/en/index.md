@@ -126,7 +126,7 @@ Sustainable [_Development_]{.text-primary}
 Nuxt development is made from passionate developers, however, the amount of effort needed to maintain and develop new features is not sustainable without proper financial backing. We are thanksful to our sponsors and partners to make it possible.<br>
 
 #bottom
-:button-link[Sponsor Nuxt]{href="/sponsor-nuxtjs" size="medium"}
+:button-link[Sponsor Nuxt]{href="/sponsors" size="medium"}
 ::
 
 ::home-learn-guides
@@ -200,7 +200,7 @@ hoverClass: 'hover:bg-sky-surface'
 title: 'Themes'
 description: 'NuxtJS has been a discovery for our development teams.'
 image: '/img/home/explore/gem-explore-2.svg'
-to: '/theme'
+to: '/themes'
 hoverClass: 'hover:bg-sky-surface'
 ---
 ::

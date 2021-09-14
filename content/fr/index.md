@@ -122,7 +122,7 @@ Un [_développement_]{.text-primary} soutenu
 Nuxt est construit et maintenu par des développeurs passionnés mais il serait impossible de fournir les efforts nécessaires pour développer et maintenir de nouvelles fonctionnalités sans une réelle contribution financière. Nous remercions nos sponsors et partenaires qui rendent cela possible.<br>
 
 #bottom
-:button-link[Sponsorisez NuxtJS]{href="/sponsor-nuxtjs" size="medium"}
+:button-link[Sponsorisez NuxtJS]{href="/sponsors" size="medium"}
 ::
 
 ::home-learn-master
@@ -216,7 +216,7 @@ Nuxt a beaucoup de dimensions à explorer, apprenez par l'exemple, intégrez des
   title: 'Thèmes'
   description: "Démarrez en quelques minutes avec un design fourni par un de nos thèmes."
   image: '/img/home/explore/gem-4-hover.svg'
-  to: '/resources/themes'
+  to: '/themes'
   linkName: 'Démarrez tout de suite'
   ---
   ::

@@ -22,8 +22,8 @@ description: "Get technical support, report bugs or contribute to the Nuxt frame
   image: 'technical'
   button:
     text: 'Contact us'
-    url: ''
-  form: true
+    url: 'mailto:support@nuxtlabs.com'
+  form: false
   #form
     :::support-form
     ---
@@ -81,7 +81,7 @@ description: "Get technical support, report bugs or contribute to the Nuxt frame
   image: 'report'
   button:
     text: 'Create an issue'
-    url: ''
+    url: 'https://github.com/nuxt/nuxt.js/issues'
   ---
   ::
   ::support-card
@@ -91,7 +91,7 @@ description: "Get technical support, report bugs or contribute to the Nuxt frame
   image: 'suggest'
   button:
     text: 'Suggest an idea'
-    url: ''
+    url: 'https://github.com/nuxt/nuxt.js/discussions'
   ---
   ::
   ::support-card
@@ -101,7 +101,7 @@ description: "Get technical support, report bugs or contribute to the Nuxt frame
   image: 'contribute'
   button:
     text: 'Contribute'
-    url: ''
+    url: 'https://github.com/nuxt/nuxtjs.org/blob/main/content/en/_archives/guide/contribution-guide.md'
   ---
   ::
 ::

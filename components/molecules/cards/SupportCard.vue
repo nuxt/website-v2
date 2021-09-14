@@ -9,13 +9,14 @@
         </div>
       </div>
       <div class="pr-4 ml-4 sm:ml-0 py-2 sm:py-0">
-        <SectionButton
-          :to="button.to"
-          @click.native="form ? showForm = !showForm : showForm = false"
+        <Link
+          :to="button.url"
           :aria-label="button.text"
           size="md"
-          class="text-gray-800 bg-primary hover:bg-primary-400 focus:bg-primary-400"
-          >{{ button.text }}</SectionButton
+          blank
+          class="text-gray-800 bg-primary hover:bg-primary-400 focus:bg-primary-400 px-5 py-3 rounded-md font-medium"
+          @click.native="form ? (showForm = !showForm) : (showForm = false)"
+          >{{ button.text }}</Link
         >
       </div>
     </div>
@@ -57,6 +58,6 @@ export default defineComponent({
     return {
       showForm
     }
-  },
+  }
 })
 </script>

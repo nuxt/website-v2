@@ -73,7 +73,7 @@
                 {{ $t('footer.newsletter.form.subscribed_messages.pre') }}
                 {{ subscribed }}
               </p>
-              <p v-else-if="error" class="absolute text-sm pt-1 text-yellow-500">{{ error }}</p>
+              <p v-else-if="error" class="pt-1 text-sm text-yellow-500">{{ error }}</p>
             </div>
           </section>
           <ul class="flex items-center space-x-4 xl:space-x-5 mt-4">

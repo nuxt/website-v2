@@ -143,7 +143,11 @@ export default {
     back: 'Retour',
     go_to: 'Visiter {title}',
     go_home: "Retourner à l'accueil",
-    read_article: "Lire l'article"
+    read_article: "Lire l'article",
+    days: 'jours',
+    hours: 'heures',
+    minutes: 'minutes',
+    seconds: 'secondes'
   },
   iso: 'fr',
   cookies: {

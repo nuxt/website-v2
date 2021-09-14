@@ -67,3 +67,17 @@
 /examples/plugins-custom /examples/plugins/custom 301!
 /examples/modules-internal /examples/modules/local 301!
 /examples/modules-axios /examples/modules/axios 301!
+
+# Blog
+/blog/case-study-livementor /case-studies/livementor 301!
+/blog/creating-a-nuxt-module /tutorials/creating-a-nuxt-module 301!
+/blog/creating-a-nuxt-module /tutorials/creating-a-nuxt-module 301!
+/blog/nuxt-static-improvements /announcements/nuxt-static-improvements 301!
+/blog/creating-blog-with-nuxt-content /tutorials/creating-blog-with-nuxt-content 301!
+/blog/improve-your-developer-experience-with-nuxt-components /tutorials/improve-your-developer-experience-with-nuxt-components 301!
+/blog/going-full-static /announcements/going-full-static 301!
+/blog/moving-from-nuxtjs-dotenv-to-runtime-config /tutorials/moving-from-nuxtjs-dotenv-to-runtime-config 301!
+/blog/going-dark-with-nuxtjs-color-mode /tutorials/going-dark-with-nuxtjs-color-mode 301!
+/blog/build-dev-to-clone-with-nuxt-new-fetch /tutorials/build-dev-to-clone-with-nuxt-new-fetch 301!
+/blog/nuxtjs-from-terminal-to-browser /announcements/nuxtjs-from-terminal-to-browser 301!
+/blog/introducing-smart-prefetching /announcements/introducing-smart-prefetching 301!

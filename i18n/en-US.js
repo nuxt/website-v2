@@ -140,7 +140,11 @@ export default {
     back: 'Back',
     go_to: 'Go to {title}',
     go_home: 'Go home',
-    read_article: 'Read article'
+    read_article: 'Read article',
+    days: 'days',
+    hours: 'hours',
+    minutes: 'minutes',
+    seconds: 'seconds'
   },
   iso: 'en'
 }

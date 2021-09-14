@@ -1,5 +1,5 @@
 import Fuse from 'fuse.js/dist/fuse.basic.esm'
-import { ssrRef, computed, watch, useContext } from '@nuxtjs/composition-api'
+import { ssrRef, computed, watch, useContext, useRouter } from '@nuxtjs/composition-api'
 
 // Sorting function
 const sort = (a, b, asc) => (asc ? a - b : b - a)
@@ -38,6 +38,7 @@ const modulesLoaded = ssrRef(MODULE_INCREMENT_LOADING, 'fuseModulesLoadedRef')
 export function useFuse(modules) {
   // Context
   const { route } = useContext()
+  const router = useRouter()
 
   // Sorting options
   const sortByComp = computed(() => sortFields[sortedBy.value])
@@ -119,8 +120,12 @@ export function useFuse(modules) {
 
     if (selectedCategory.value) q += `#${selectedCategory.value}`
 
-    // Set window history state
-    window.history.pushState('', '', `${url}${q}`)
+    // Rewrite url
+    router.replace(
+      `${url}${q}`,
+      () => {},
+      () => {}
+    )
   }
 
   // Select current category

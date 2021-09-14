@@ -121,7 +121,7 @@ category: パートナー
 Nuxt の開発は情熱を持った開発者によって作られますが、メンテナンスするための必要な労力と新機能開発には、適切な資金のサポートなしには持続できません。これを可能にするのは、スポンサーやパートナーの皆様のおかげです。<br>
 
 #bottom
-:button-link[NuxtJS のスポンサー]{href="/sponsor-nuxtjs" size="medium"}
+:button-link[NuxtJS のスポンサー]{href="/sponsors" size="medium"}
 ::
 
 ::home-learn-master
@@ -216,7 +216,7 @@ Nuxt には、例で学習したり、お気に入りのプロバイダと統合
   title: 'テーマ'
   description: 'Nuxt のテーマ一覧は予め用意されたデザインを使ってコーディングをすぐに開始できます'
   image: '/img/home/explore/gem-4-hover.svg'
-  to: '/resources/themes'
+  to: '/themes'
   linkName: '今始める'
   ---
   ::

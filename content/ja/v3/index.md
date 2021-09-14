@@ -25,39 +25,6 @@ primary: false
 Nuxt3 がパブリックベータがリリースされたときお知らせを取得する。
 ::
 
-::nuxt3-timeline
----
-category: いつですか？
----
-#title
-タイムライン
-#description
-16ヶ月以上にも及ぶ開発を経て、Nuxt3 は3つの段階を経てリリースされることになりました。
-
-#default
-  ::section-content-item
-  ---
-  image: /img/v3/step1.svg
-  title: 2021年7月
-  description: Vue コアチーム、Nuxt モジュール作者そしてパートナーにプライベートベータをリリースします。
-  ---
-  ::
-  ::section-content-item
-  ---
-  image: /img/v3/step2.svg
-  title: 2021年9月
-  description: パブリックベータでは Nuxt3 をより堅固にするために協力者を募集します。
-  ---
-  ::
-  ::section-content-item
-  ---
-  image: /img/v3/step3.svg
-  title: 2021年 Q4
-  description: 安定バージョンでは自信を持って本番環境で利用することができます。
-  ---
-  ::
-::
-
 ::home-features
 ---
 category: 発見

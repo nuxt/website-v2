@@ -17,7 +17,7 @@ links:
         href: 'https://github.com/nuxt'
       -
         title: 'Partnerships'
-        href: '/partners'
+        to: '/partners'
       -
         title: 'Telemetry'
         href: 'https://github.com/nuxt/telemetry'

@@ -1,7 +1,7 @@
 ---
 template: blank
 title: 'Sponsors'
-description: 'NuxtJS est un projet open source sous license MIT et totalement libre d'utilisation.'
+description: "NuxtJS est un projet open source sous license MIT et totalement libre d'utilisation."
 layout:
   fluid: true
 ---

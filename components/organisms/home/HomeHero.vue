@@ -84,7 +84,7 @@ export default defineComponent({
     secondary: {
       type: Object,
       default: () => ({
-        text: 'npm init nuxt',
+        text: 'npm init nuxt-app',
         url: '/docs',
         icon: 'IconCopy'
       })

@@ -1,10 +1,10 @@
 <template>
-  <div>
-    <section class="relative bg-white">
+  <div class="relative pb-20 sm:pb-28 md:pb-36 lg:pb-48">
+    <section class="bg-white">
       <img
         loading="lazy"
         :src="`/img/home/explore/landscape-explore.svg`"
-        class="left-0 object-cover w-full h-40 -mt-16"
+        class="left-0 bottom-0 object-cover w-full h-40 -mt-16"
         alt="A landscape image"
       />
       <NuxtContainer class="flex flex-col items-center py-20 text-secondary-black">
@@ -24,6 +24,18 @@
         </div>
       </NuxtContainer>
     </section>
+    <img
+      loading="lazy"
+      :src="`/img/home/campfire/campfire-illustration-big.svg`"
+      class="hidden xl:block absolute bottom-0 left-0 w-full object-fit z-10"
+      alt="A landscape image"
+    />
+    <img
+      loading="lazy"
+      :src="`/img/home/campfire/campfire-illustration.svg`"
+      class="absolute left-0 bottom-0 w-full object-fit z-10 xl:hidden"
+      alt="A landscape image"
+    />
   </div>
 </template>
 

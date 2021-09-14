@@ -6,13 +6,16 @@
       :description-full-width="page.heroDescriptionFullWidth"
     />
     <div class="d-container px-6 grid sm:grid-cols-2 lg:grid-cols-3 gap-6 pt-8">
-      <LogoCard v-for="(item, index) in events" :key="index" :item="item" />
+      <LogoCard v-for="(item, index) in events" :key="index" :item="item">
+        <template #footer> {{ item.date }} - {{ item.CTA }} </template>
+      </LogoCard>
     </div>
   </div>
 </template>
 
 <script>
 import { defineComponent, useFetch, useContext, ref } from '@nuxtjs/composition-api'
+import { isFuture, parse } from 'date-fns'
 
 export default defineComponent({
   props: {
@@ -36,6 +39,10 @@ export default defineComponent({
         .map(e => e.events)
         .flat()
         .filter(v => v)
+        .map(event => ({
+          ...event,
+          CTA: isFuture(parse(event.date, 'dd/MM/yyyy', new Date())) ? 'Subscribe' : 'Watch'
+        }))
     })
 
     return {

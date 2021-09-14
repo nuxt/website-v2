@@ -1,10 +1,10 @@
 <template>
   <div id="docsearch">
     <button type="button" class="DocSearch DocSearch-Button" aria-label="Search">
-      <svg width="20" height="20" class="DocSearch-Search-Icon" viewBox="0 0 20 20">
+      <svg width="20" height="20" class="d-icon m-auto" viewBox="0 0 20 20">
         <path
           d="M14.386 14.386l4.0877 4.0877-4.0877-4.0877c-2.9418 2.9419-7.7115 2.9419-10.6533 0-2.9419-2.9418-2.9419-7.7115 0-10.6533 2.9418-2.9419 7.7115-2.9419 10.6533 0 2.9419 2.9418 2.9419 7.7115 0 10.6533z"
-          stroke="currentColor"
+          stroke="#FFFFFFF"
           fill="none"
           fill-rule="evenodd"
           stroke-linecap="round"
@@ -140,7 +140,7 @@ export default {
 .DocSearch {
   --docsearch-primary-color: #00dc82;
   --docsearch-highlight-color: var(--docsearch-primary-color);
-  --docsearch-text-color: var(--color-gray-700);
+  --docsearch-text-color: theme('colors.gray.300');
   --docsearch-modal-background: theme('colors.gray.100');
   --docsearch-searchbox-shadow: inset 0 0 0 2px var(--docsearch-primary-color);
   --docsearch-searchbox-background: var(--color-transparent);
@@ -178,9 +178,6 @@ export default {
 }
 .DocSearch-Button-Placeholder {
   @apply hidden !important;
-}
-.DocSearch-Button > svg {
-  @apply d-icon m-auto !important;
 }
 .DocSearch-NoResults > .DocSearch-Screen-Icon > svg {
   @apply mx-auto !important;

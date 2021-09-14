@@ -2,24 +2,29 @@
   <footer class="" aria-label="footerHeading">
     <div class="select-none pt-24">
       <img
+        v-if="!home"
         loading="lazy"
         :src="`/img/footer/dark/landscape.svg`"
         class="w-full h-40 object-fill light:hidden pointer-events-none"
         alt="A landscape image"
       />
       <img
+        v-if="!home"
         loading="lazy"
         :src="`/img/footer/${$colorMode.value}/landscape.svg`"
         class="w-full h-40 object-fill dark:hidden pointer-events-none"
         alt="A landscape image"
       />
     </div>
-    <div class="bg-gray-50 dark:bg-secondary-black">
+    <div :class="!home ? 'bg-gray-50 dark:bg-secondary-black' : 'bg-secondary-darker'">
       <div
         class="max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:py-16 lg:px-8 grid gap-8 lg:gap-0 sm:grid-cols-2 lg:grid-cols-4"
       >
         <div v-for="group in links" :key="group.title">
-          <h3 class="font-semibold light:text-gray-500 dark:text-cloud-light text-lg">
+          <h3
+            class="font-semibold text-lg"
+            :class="!home ? 'light:text-gray-500 dark:text-cloud-light' : 'text-cloud-light'"
+          >
             {{ group.title }}
           </h3>
           <ul class="mt-4 space-y-3">
@@ -28,7 +33,12 @@
                 :href="link.href"
                 :to="localePath(link.to)"
                 :aria-label="link.title"
-                class="light:text-gray-500 dark:text-white hover:d-primary-text-hover"
+                class=""
+                :class="
+                  !home
+                    ? 'light:text-gray-500 dark:text-white hover:d-primary-text-hover'
+                    : 'text-white hover:text-cloud-light'
+                "
                 >{{ link.title }}</NuxtHref
               >
             </li>
@@ -37,10 +47,16 @@
         <div>
           <section id="subscribe-to-newsletter">
             <div>
-              <h3 class="font-semibold light:text-gray-500 dark:text-cloud-light text-lg">
+              <h3
+                class="font-semibold text-lg"
+                :class="!home ? 'light:text-gray-500 dark:text-cloud-light' : 'text-cloud-light'"
+              >
                 {{ $t('footer.newsletter.title') }}
               </h3>
-              <p class="mt-2 text-base text-gray-500 dark:text-secondary-surface">
+              <p
+                class="mt-2 text-base"
+                :class="!home ? 'text-gray-500 dark:text-secondary-surface' : 'text-secondary-surface'"
+              >
                 {{ $t('footer.newsletter.description') }}
               </p>
             </div>
@@ -63,7 +79,11 @@
           <ul class="flex items-center space-x-4 xl:space-x-5 mt-4">
             <li v-for="(social, key) in socials" :key="key">
               <NuxtHref :href="social.href" :aria-label="social.icon">
-                <Component :is="social.icon" class="w-6 h-6 text-gray-400 dark:text-cloud-lighter hover:text-primary" />
+                <Component
+                  :is="social.icon"
+                  class="w-6 h-6 hover:text-primary"
+                  :class="!home ? 'text-gray-400 dark:text-cloud-lighter' : 'text-gray-300'"
+                />
               </NuxtHref>
             </li>
           </ul>
@@ -74,7 +94,7 @@
 </template>
 
 <script>
-import { defineComponent, useContext, useFetch, ref } from '@nuxtjs/composition-api'
+import { defineComponent, useContext, useFetch, ref, computed } from '@nuxtjs/composition-api'
 import { useNewsletter } from '~/plugins/composables'
 
 export default defineComponent({
@@ -104,6 +124,9 @@ export default defineComponent({
         .fetch()
       links.value = results.value[0].links
     })
+
+    const home = computed(() => $docus.currentPath.value === '/')
+
     return {
       links,
       socials,
@@ -111,7 +134,8 @@ export default defineComponent({
       pending,
       subscribe,
       subscribed,
-      error
+      error,
+      home
     }
   }
 })

@@ -6,6 +6,25 @@ export default {
     here: 'here',
     format: '{nuxt} is coming... Discover more about it {here} !'
   },
+  header: {
+    Docs: 'Docs',
+    Examples: 'Exemples',
+    Resources: 'Ressources',
+    Modules: 'Modules',
+    Partners: 'Partenaires',
+    Blog: 'Blog',
+    'Video Courses': 'Cours Video',
+    Discover: 'Discover',
+    Showcases: 'Showcases',
+    'Case studies': 'Case studies',
+    Testimonials: 'Testimonials',
+    Learn: 'Learn',
+    Releases: 'Releases',
+    'Mastering Nuxt': 'Mastering Nuxt',
+    Explore: 'Explore',
+    Integrations: 'Integrations',
+    Themes: 'Themes'
+  },
   footer: {
     titles: {
       Discover: 'Découvrir',

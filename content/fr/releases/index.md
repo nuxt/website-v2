@@ -1,4 +1,5 @@
 ---
+title: リリース
 template: releases
 description: 'Nuxt releases notes'
 navigation: false

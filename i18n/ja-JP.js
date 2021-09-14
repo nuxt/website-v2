@@ -13,7 +13,17 @@ export default {
     Blog: 'ブログ',
     Modules: 'モジュール',
     Partners: 'パートナー',
-    'Video Courses': 'ビデオコース'
+    'Video Courses': 'ビデオコース',
+    Discover: '探求',
+    Showcases: '事例紹介',
+    'Case studies': '導入事例',
+    Testimonials: '著名人の声',
+    Learn: '学習',
+    Releases: 'リリース',
+    'Mastering Nuxt': 'Mastering Nuxt',
+    Explore: '検索',
+    Integrations: 'インテグレーション',
+    Themes: 'テーマ'
   },
   footer: {
     titles: {
@@ -114,6 +124,11 @@ export default {
       Tech: '技術',
       Business: 'ビジネス'
     }
+  },
+  theme_mode: {
+    system: 'システム',
+    light: '明るい',
+    dark: '暗い'
   },
   common: {
     an_error_occurred: 'エラーが発生しました',

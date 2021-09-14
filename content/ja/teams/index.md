@@ -1,5 +1,7 @@
 ---
-template: page
+template: blank
+title: 'Teams'
+description: 'The development of Nuxt is lead by an international team. Our committed team works every day to move Nuxt forward.'
 layout:
   fluid: true
 navigation: false

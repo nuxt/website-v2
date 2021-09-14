@@ -1,55 +1,39 @@
 <template>
-  <div class="mt-40 overflow-x-hidden">
-    <img
-      loading="lazy"
-      :src="`/img/home/campfire/campfire-illustration-big.svg`"
-      class="hidden lg:block absolute left-0 w-full object-cover h-56 -mt-40 z-10"
-      alt="A landscape image"
-    />
-    <img
-      loading="lazy"
-      :src="`/img/home/campfire/campfire-illustration.svg`"
-      class="absolute left-0 w-full object-cover h-40 -mt-40 z-10 lg:hidden"
-      alt="A landscape image"
-    />
-    <section class="pb-20 pt-32 bg-sky-darker text-white">
-      <NuxtContainer>
-        <div class="flex flex-col items-start col-span-12">
-          <div class="mb-2">
-            <span class="text-primary font-bold text-lg">{{ category }} </span>
-          </div>
-          <h2 class="mb-2 font-serif font-normal text-display-6 md:text-display-5 2xl:text-display-4">
-            <Markdown use="title" unwrap="p" />
-          </h2>
-          <p class="mb-12 font-normal text-body-base md:text-body-lg 2xl:text-body-xl w-1/2">
-            <Markdown use="description" unwrap="p" />
-          </p>
-          <div class="flex flex-col items-center grid lg:grid-cols-1 lg:grid-cols-12">
-            <div class="flex flex-col pr-4 space-y-4 col-span-7">
-              <Markdown use="campfire-list" unwrap="p" />
-            </div>
-            <div v-if="post" class="col-span-5">
-              <div>
-                <div
-                  class="aspect-w-16 aspect-h-8 bg-gray-100 overflow-hidden dark:bg-secondary-darker mb-4 rounded-lg"
-                >
-                  <NuxtImg :src="post.imgUrl" :alt="post.title" class="object-cover" />
-                </div>
-                <img
-                  :src="`/img/home/campfire/book.svg`"
-                  class="absolute bottom-40 right-0 lg:-right-5 lg:bottom-1/5 h-20 lg:h-28"
-                />
+  <section class="pb-20 pt-20 bg-sky-darker text-white">
+    <NuxtContainer>
+      <div class="flex flex-col items-center xl:items-start col-span-12">
+        <div class="mb-2">
+          <span class="text-primary font-bold text-lg">{{ category }} </span>
+        </div>
+        <h2 class="mb-2 font-serif font-normal text-display-6 md:text-display-5 2xl:text-display-4">
+          <Markdown use="title" unwrap="p" />
+        </h2>
+        <p class="mb-12 font-normal text-body-base md:text-body-lg 2xl:text-body-xl w-1/2 text-center xl:text-left">
+          <Markdown use="description" unwrap="p" />
+        </p>
+        <ul class="flex flex-col items-start grid grid-cols-1 sm:grid-cols-2 gap-8">
+          <li v-for="(post, index) in posts" :key="index">
+            <div v-if="post">
+              <div class="aspect-w-16 aspect-h-8 bg-gray-100 overflow-hidden dark:bg-secondary-darker mb-4 rounded-lg">
+                <NuxtImg :src="post.imgUrl || post.logo" :alt="post.title" class="object-cover" />
               </div>
-              <span class="text-primary text-body-base lg:text-body-lg font-bold mb-2">{{ articleCategory }}</span>
+              <span class="text-primary text-body-base lg:text-body-lg font-bold mb-2">{{
+                index > 0 ? eventsCategory : announcementsCategory
+              }}</span>
               <h3 class="text-body-xl lg:text-body-2xl font-bold mb-2">{{ post.title }}</h3>
               <p class="mb-4 text-body-base lg:text-body-lg truncate">{{ post.description }}</p>
-              <MarketingLink color="primary" :name="articleLinkTitle" icon="IconChevronRight" :to="post.to" />
+              <MarketingLink
+                color="primary"
+                :name="articleLinkTitle"
+                icon="IconChevronRight"
+                :to="post.to || post.link"
+              />
             </div>
-          </div>
-        </div>
-      </NuxtContainer>
-    </section>
-  </div>
+          </li>
+        </ul>
+      </div>
+    </NuxtContainer>
+  </section>
 </template>
 
 <script>
@@ -60,7 +44,11 @@ export default defineComponent({
       type: String,
       default: 'Category'
     },
-    articleCategory: {
+    announcementsCategory: {
+      type: String,
+      default: ''
+    },
+    eventsCategory: {
       type: String,
       default: ''
     },
@@ -71,19 +59,31 @@ export default defineComponent({
   },
   setup() {
     const { $docus, i18n } = useContext()
-    const post = ref()
+    const posts = ref([])
+
     useFetch(async () => {
-      const documents = await $docus
-        .search('/announcements/', { deep: true })
+      const announcements = await $docus
+        .search('/announcements', { deep: true })
         .where({ language: i18n.locale })
         .sortBy('position', 'asc')
         .limit(1)
         .fetch()
 
-      post.value = documents[0]
+      const events = await $docus
+        .search('/collections/events', { deep: true })
+        .where({ slug: { $ne: '' }, language: i18n.locale })
+        .sortBy('position', 'desc')
+        .limit(1)
+        .fetch()
+
+      posts.value.push(announcements[0])
+      posts.value.push(events[0].events[events[0].events.length - 1])
+
+      console.log(events[0].events[events[0].events.length])
     })
+
     return {
-      post
+      posts
     }
   }
 })

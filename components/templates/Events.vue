@@ -38,7 +38,6 @@ export default defineComponent({
         .filter(e => e.events)
         .map(e => e.events)
         .flat()
-        .filter(v => v)
         .map(event => ({
           ...event,
           CTA: isFuture(parse(event.date, 'dd/MM/yyyy', new Date())) ? 'Subscribe' : 'Watch'

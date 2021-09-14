@@ -10,7 +10,9 @@
       <h3 class="font-bold text-xl py-2">{{ item.title || 'Title' }}</h3>
       <p class="text-sm">{{ item.description || 'Description' }}</p>
     </div>
-    <div class="ListCard-foot hidden">Foot</div>
+    <div class="ListCard-foot">
+      <slot name="footer" />
+    </div>
   </div>
 </template>
 <script lang="ts">

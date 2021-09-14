@@ -94,15 +94,19 @@
 </template>
 
 <script>
-import { defineComponent, useContext, useFetch, ref, computed } from '@nuxtjs/composition-api'
+import { defineComponent, useContext, computed } from '@nuxtjs/composition-api'
 import { useNewsletter } from '~/plugins/composables'
 
 export default defineComponent({
+  props: {
+    links: {
+      type: Array,
+      default: () => []
+    }
+  },
   setup() {
     const { email, error, subscribe, pending, subscribed } = useNewsletter()
-    const { $docus, i18n } = useContext()
-    const results = ref()
-    const links = ref([])
+    const { $docus } = useContext()
     const socials = [
       {
         href: 'https://twitter.com/nuxt_js',
@@ -117,18 +121,8 @@ export default defineComponent({
         icon: 'IconGitHub'
       }
     ]
-    useFetch(async () => {
-      results.value = await $docus
-        .search('/collections/navigations/', { deep: true })
-        .where({ slug: { $in: 'footer' }, language: i18n.locale })
-        .fetch()
-      links.value = results.value[0].links
-    })
-
     const home = computed(() => $docus.currentPath.value === '/')
-
     return {
-      links,
       socials,
       email,
       pending,

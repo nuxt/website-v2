@@ -68,7 +68,7 @@
             </div>
 
             <AsideNavigation v-if="!mobileMainNav && layout.aside" />
-            <AsideHeaderNavigation v-else />
+            <AsideHeaderNavigation v-else :links="links" />
           </div>
         </div>
       </Transition>
@@ -80,6 +80,12 @@
 import { defineComponent, useContext, ref, watch } from '@nuxtjs/composition-api'
 
 export default defineComponent({
+  props: {
+    links: {
+      type: Array,
+      default: () => []
+    }
+  },
   setup() {
     const {
       $docus: { layout },

@@ -6,8 +6,8 @@
     :aria-label="link.title"
     class="flex font-medium capitalize group whitespace-nowrap"
     :class="{
-      [activeClass]: currentSlug === link.slug,
-      [inactiveClass]: currentSlug !== link.slug
+      [activeClass]: forceActive || currentSlug === link.slug,
+      [inactiveClass]: !forceActive && currentSlug !== link.slug
     }"
   >
     {{ link.title }}
@@ -22,6 +22,10 @@ export default defineComponent({
     link: {
       type: Object,
       required: true
+    },
+    forceActive: {
+      type: Boolean,
+      default: false
     },
     activeClass: {
       type: String,

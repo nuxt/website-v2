@@ -1,16 +1,16 @@
 <template>
-  <nav class="flex flex-col gap-0 py-4 px-4 sm:px-6">
-    <template v-for="link in links">
-      <div v-if="link.items && link.items.length" :key="link.slug" class="flex flex-col py-2">
-        <div class="flex items-center justify-between cursor-pointer" @click="toggle(link.slug)">
+  <nav ref="nav" class="flex flex-col gap-0 py-4 px-4 sm:px-6">
+    <template v-for="(link, index) in links">
+      <div v-if="link.items && link.items.length" :key="index" class="flex flex-col py-2">
+        <div class="flex items-center justify-between cursor-pointer" @click="toggle(index)">
           <HeaderNavigationLink :link="link" />
-          <IconChevronBottom v-if="openedLink === link.slug" class="flex-shrink-0 w-4 h-4" />
+          <IconChevronBottom v-if="openedLink === index" class="flex-shrink-0 w-4 h-4" />
           <IconChevronRight v-else class="flex-shrink-0 w-4 h-4" />
         </div>
-        <div v-show="openedLink === link.slug" class="pl-2 pt-2 gap-2">
+        <div v-show="openedLink === index" class="pl-2 pt-2 gap-2">
           <HeaderNavigationLink
-            v-for="subLink in link.items"
-            :key="subLink.slug"
+            v-for="(subLink, subIndex) in link.items"
+            :key="subIndex"
             :link="subLink"
             class="rounded-md px-2 py-1 text-sm"
             active-class="d-active-aside-navigation-item-bg"
@@ -18,54 +18,65 @@
           />
         </div>
       </div>
-      <HeaderNavigationLink v-else :key="link.slug" :link="link" class="py-2" />
+      <HeaderNavigationLink v-else :key="index" :link="link" class="py-2" />
     </template>
   </nav>
 </template>
 
 <script>
-import { defineComponent, useContext, useRoute, useFetch, ref } from '@nuxtjs/composition-api'
+import { defineComponent, useContext, useRoute, ref, computed, watch } from '@nuxtjs/composition-api'
 
 export default defineComponent({
-  setup() {
-    const { $docus, i18n } = useContext()
+  props: {
+    links: {
+      type: Array,
+      default: () => []
+    }
+  },
+  setup(props) {
+    const { $docus, $menu } = useContext()
     const route = useRoute()
+    const nav = ref(null)
+    const openedLink = ref(null)
+    const currentSlug = computed(() => {
+      return route.value.path !== '/' && route?.value?.params?.pathMatch
+        ? route.value.params.pathMatch.split('/')[0]
+        : null
+    })
 
-    const header = ref()
-    const links = ref([])
-    const openedLink = ref('')
-
-    useFetch(async () => {
-      header.value = await $docus
-        .search('/collections/navigations', { deep: true })
-        .where({ slug: { $in: 'header' }, language: i18n.locale })
-        .fetch()
-      links.value = header.value[0].links
-
-      const currentSlug =
-        route.value.path !== '/' && route?.value?.params?.pathMatch ? route.value.params.pathMatch.split('/')[0] : null
-      if (currentSlug) {
-        for (const link of links.value) {
-          if (link.slug === currentSlug || link.items?.some(item => item.slug === currentSlug)) {
-            openedLink.value = link.slug
+    function selectActiveLink() {
+      if (currentSlug.value) {
+        for (const [index, link] of props.links.entries()) {
+          if (link.slug === currentSlug.value || link.items?.some(item => item.slug === currentSlug.value)) {
+            openedLink.value = index
             break
           }
         }
+      } else {
+        openedLink.value = null
+      }
+    }
+
+    selectActiveLink()
+
+    watch($menu.visible, value => {
+      if (value) {
+        selectActiveLink()
       }
     })
 
-    function toggle(slug) {
-      if (openedLink.value === slug) {
-        openedLink.value = ''
+    function toggle(index) {
+      if (openedLink.value === index) {
+        openedLink.value = null
       } else {
-        openedLink.value = slug
+        openedLink.value = index
       }
     }
 
     return {
-      links,
       openedLink,
-      toggle
+      toggle,
+      nav
     }
   }
 })

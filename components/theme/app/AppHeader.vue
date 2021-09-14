@@ -11,23 +11,28 @@
       </div>
 
       <nav class="items-center justify-center hidden h-full gap-4 lg:flex">
-        <template v-for="link in links">
+        <template v-for="(link, index) in links">
           <Dropdown
             v-if="link.items && link.items.length"
-            :key="link.slug"
+            :key="index"
             :items="[link.items]"
             placement="bottom"
             mode="hover"
           >
             <template #trigger>
-              <HeaderNavigationLink :link="link" class="px-1 py-2" :class="{ 'text-white': home }" />
+              <HeaderNavigationLink
+                :link="link"
+                class="px-1 py-2"
+                :class="{ 'text-white': home }"
+                :force-active="isActiveGroup(link)"
+              />
             </template>
 
             <template #item="{ item }">
               <HeaderNavigationLink :link="item" class="px-4 py-1" :class="{ 'text-white': home }" />
             </template>
           </Dropdown>
-          <HeaderNavigationLink v-else :key="link.slug" :link="link" class="p-1" :class="{ 'text-white': home }" />
+          <HeaderNavigationLink v-else :key="index" :link="link" class="p-1" :class="{ 'text-white': home }" />
         </template>
       </nav>
 
@@ -47,29 +52,37 @@
 </template>
 
 <script>
-import { defineComponent, useContext, useFetch, ref, computed } from '@nuxtjs/composition-api'
+import { defineComponent, useContext, useRoute, computed } from '@nuxtjs/composition-api'
 
 export default defineComponent({
+  props: {
+    links: {
+      type: Array,
+      default: () => []
+    }
+  },
   setup() {
-    const { $docus, i18n } = useContext()
+    const { $docus } = useContext()
     const settings = computed(() => $docus.settings.value)
-    const header = ref()
-    const links = ref([])
-
-    useFetch(async () => {
-      header.value = await $docus
-        .search('/collections/navigations', { deep: true })
-        .where({ slug: { $in: 'header' }, language: i18n.locale })
-        .fetch()
-      links.value = header.value[0].links
+    const route = useRoute()
+    const currentSlug = computed(() => {
+      return route.value.path !== '/' && route?.value?.params?.pathMatch
+        ? route.value.params.pathMatch.split('/')[0]
+        : null
     })
 
     const home = computed(() => $docus.currentPath.value === '/')
+    function isActiveGroup(link) {
+      if (link.slug === currentSlug.value || link.items?.some(item => item.slug === currentSlug.value)) {
+        return true
+      }
+      return false
+    }
 
     return {
       settings,
-      links,
-      home
+      home,
+      isActiveGroup
     }
   }
 })

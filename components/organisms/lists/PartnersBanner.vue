@@ -12,15 +12,6 @@
             :src="`/img/sponsors/banner/light/${partner.img}`"
             :alt="partner.title"
             :title="partner.title"
-            class="light-img"
-            :class="partner.imgClass"
-          />
-          <img
-            loading="lazy"
-            :src="`/img/sponsors/banner/dark/${partner.img}`"
-            :alt="partner.title"
-            :title="partner.title"
-            class="dark-img"
             :class="partner.imgClass"
           />
         </a>
@@ -81,7 +72,7 @@ export default defineComponent({
 .partners__slider::before,
 .partners__slider::after {
   @apply absolute h-24 w-48 z-10;
-  background: linear-gradient(to right, white 0%, rgba(255, 255, 255, 0) 20%);
+  background: linear-gradient(to right, rgba(229, 249, 255, 0) 0%, rgba(255, 255, 255, 0) 20%);
   content: '';
   pointer-events: none;
 }
@@ -98,7 +89,7 @@ export default defineComponent({
 @screen sm {
   .partners__slider::before,
   .partners__slider::after {
-    background: linear-gradient(to right, white 0%, rgba(255, 255, 255, 0) 50%);
+    background: linear-gradient(to right, rgba(229, 249, 255, 0) 0%, rgba(255, 255, 255, 0) 50%);
   }
 }
 
@@ -112,7 +103,7 @@ export default defineComponent({
 @screen md {
   .partners__slider::before,
   .partners__slider::after {
-    background: linear-gradient(to right, white 0%, rgba(255, 255, 255, 0) 100%);
+    background: linear-gradient(to right, rgba(229, 249, 255, 0) 0%, rgba(255, 255, 255, 0) 100%);
   }
 }
 

@@ -42,8 +42,8 @@ export default defineComponent({
 
     useFetch(async () => {
       partners.value = await $docus
-        .search('/sponsors', { deep: true })
-        .where({ tier: { $in: ['MVP Partners', 'Partners'] } })
+        .search('/collections/sponsors', { deep: true })
+        .where({ tier: { $in: ['MVP', 'Sponsors', 'Donations'] } })
         .fetch()
     })
 

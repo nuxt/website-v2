@@ -1,12 +1,7 @@
 ---
 template: page
-layout:
-  fluid: true
-navigation: false
-layout.asideClass: 'block lg:hidden'
-layout.aside: true
-title: 'NuxtJS - The Intuitive Vue Framework'
-head.titleTemplate: null
+title: The Intuitive Vue Framework
+description: NuxtJS を使って信頼ある次世代の Vue.js アプリケーションを構築する Web 開発をシンプルにかつパワフルにするオープンソースフレームワーク
 ---
 
 ::home-hero
@@ -237,16 +232,4 @@ category: コミュニティ
 
 #description
 NuxtJS チームと Nuxt.js コミュニティによる、NuxtJS のヒントややり方に関する記事をご覧ください！
-::
-
-::home-testimonials
----
-category: コミュニティ
----
-
-#title
-著名人の声
-
-#description
-エキスパートが語る Nuxt の魅力
 ::

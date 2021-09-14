@@ -1,8 +1,13 @@
 <template>
   <div>
-    <PageHero :title="page.title" />
+    <PageHero
+      :title="page.heroTitle || page.title"
+      :description="page.heroDescription || page.description"
+      :description-full-width="page.heroDescriptionFullWidth"
+    />
     <div class="d-container">
-      <BlogpostList />
+      <DocusContent v-if="!page.blogPostList" :document="page" />
+      <BlogpostList v-else :slug="page.to" :sort-by="page.sortBy" />
     </div>
   </div>
 </template>
@@ -16,10 +21,6 @@ export default defineComponent({
       type: Object,
       required: true
     }
-  },
-  templateOptions: {
-    aside: false,
-    fluid: true
   }
 })
 </script>

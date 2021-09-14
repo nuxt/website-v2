@@ -3,82 +3,50 @@
     <img
       loading="lazy"
       :src="`/img/home/discover/modules/dark/landscape-discover-modules-t.svg`"
-      class="absolute left-0 object-fill w-full h-40 -mt-24 light:hidden"
+      class="absolute left-0 object-fill w-full h-40 -mt-24"
       alt="A landscape image"
     />
-    <img
-      loading="lazy"
-      :src="`/img/home/discover/modules/light/landscape-discover-modules-t.svg`"
-      class="absolute left-0 object-fill w-full h-40 -mt-24 dark:hidden"
-      alt="A landscape image"
-    />
-
-    <HomeSection class="pt-40" secondary>
+    <HomeSection class="pt-32 pb-32 bg-sky-darkest text-white">
       <template #section-content>
-        <SectionContent>
+        <SectionContent class="col-span-6 flex items-center md:items-start pt-16 md:pt-0" position="left">
           <template #category>
             <span class="text-lg font-bold text-tertiary">{{ category }}</span>
           </template>
 
           <template #title>
             <h2
-              class="font-serif font-normal text-center  md:text-left text-display-6 md:text-display-5 2xl:text-display-4"
+              class="
+                font-serif font-normal
+                text-center
+                md:text-left
+                text-display-6
+                md:text-display-5
+                2xl:text-display-4
+              "
             >
               <Markdown use="title" unwrap="p" />
             </h2>
           </template>
 
           <template #paragraph>
-            <p
-              class="w-full py-4 font-normal text-center  text-body-base md:text-body-lg 2xl:text-body-xl"
-            >
+            <p class="w-full pt-4 font-normal text-center md:text-left text-body-base md:text-body-lg 2xl:text-body-xl">
               <Markdown use="description" unwrap="p" />
             </p>
           </template>
+          <template #button>
+            <SectionButton
+              to="#"
+              :aria-label="buttonText"
+              size="lg"
+              class="bg-primary text-gray-800 hover:bg-primary-400 focus:bg-primary-400 text-sm"
+              >{{ buttonText }}</SectionButton
+            >
+          </template>
         </SectionContent>
       </template>
-      <template #right-illustration>
-        <div class="col-span-12">
-          <div
-            class="flex flex-col items-center justify-center  md:flex-row xl:ml-12"
-          >
-            <div
-              class="grid items-center grid-cols-3 gap-8 space-x-4  md:gap-0 md:flex md:flex-col md:items-start md:space-x-0 md:space-y-2 md:w-2/5 xl:w-1/5"
-            >
-              <div
-                v-for="(animation, index) in animations"
-                :key="animation.name"
-              >
-                <div
-                  class="flex flex-col-reverse items-center justify-center space-x-2  md:flex-row"
-                >
-                  <img
-                    :src="`/img/home/discover/diamond.svg`"
-                    alt="diamond"
-                    class="h-3.5 w-5 pl-1.5 opacity-0"
-                    :class="{ 'opacity-100': index === currentIndex }"
-                  />
-                  <button
-                    class="font-semibold focus:outline-none"
-                    :class="
-                      index === currentIndex
-                        ? 'text-gray-700 dark:text-white'
-                        : 'text-gray-400 dark:text-gray-400'
-                    "
-                    @click="changeAnimation(index)"
-                  >
-                    {{ animation.display }}
-                  </button>
-                </div>
-              </div>
-            </div>
-            <div class="anim">
-              <div ref="lottieAnim" class="h-96" />
-              <p class="z-20 mt-20 -mb-8 text-sm font-medium text-center nuxt-text-highlight md:mb-0 md:-mt-8">
-                <Markdown :use="texts[currentIndex]" />
-              </p>
-            </div>
-          </div>
+      <template #left-illustration>
+        <div class="col-span-6 h-full md:pr-16 flex flex justify-center">
+          <img :src="`/img/home/discover/discover.svg`" />
         </div>
       </template>
     </HomeSection>
@@ -99,178 +67,18 @@
 </template>
 
 <script>
-import {
-  defineComponent,
-  ref,
-  onMounted,
-  watch,
-  useContext,
-  computed
-} from '@nuxtjs/composition-api'
-import lottie from 'lottie-web'
-import { flatUnwrap } from '@docus/core/runtime'
+import { defineComponent } from '@nuxtjs/composition-api'
 
 export default defineComponent({
   props: {
     category: {
       type: String,
       default: ''
-    }
-  },
-  setup(_, context) {
-    const { $colorMode, app } = useContext()
-    const { i18n } = app
-    const lottieAnimPathLight =
-      'https://assets10.lottiefiles.com/private_files/lf30_8cv6lgcx.json'
-    const lottieAnimPathDark =
-      'https://assets10.lottiefiles.com/private_files/lf30_obsnpogu.json'
-    const animations = ref([
-      {
-        name: 'Pages',
-        display: i18n.t('home.discover.pages'),
-        segment: [1, 238]
-      },
-      {
-        name: 'UI',
-        display: i18n.t('home.discover.ui'),
-        segment: [238, 448]
-      },
-      {
-        name: 'Data',
-        display: i18n.t('home.discover.data'),
-        segment: [447, 688]
-      },
-      {
-        name: 'Modules',
-        display: i18n.t('home.discover.modules'),
-        segment: [688, 928]
-      },
-      {
-        name: 'Deployment',
-        display: i18n.t('home.discover.deployment'),
-        segment: [928, 1167]
-      }
-    ])
-    const lottieAnim = ref(null)
-    const currentIndex = ref(0)
-    const animFrames = ref([0, 238, 448, 688, 928])
-    let anim
-
-    /* computed */
-    const colorMode = computed(() => {
-      return $colorMode.value
-    })
-
-    /* function */
-    // if user clicks on section, stop loop and play specified segment
-    function changeAnimation(index) {
-      currentIndex.value = index
-      anim.loop = false
-      anim.playSegments(animations.value[index].segment, true)
-    }
-
-    function loadAnimation() {
-      anim?.destroy()
-      /**
-       * Temporary use `context.ref` this should replace by Vue3 ref
-       */
-      lottieAnim.value = context.refs.lottieAnim
-
-      anim = lottie.loadAnimation({
-        container: lottieAnim.value,
-        renderer: 'svg',
-        loop: true,
-        autoplay: false,
-        path:
-          colorMode.value === 'dark' ? lottieAnimPathDark : lottieAnimPathLight,
-        rendererSettings: {
-          viewBoxSize: '0 0 1300 600'
-        }
-      })
-
-      anim.addEventListener('DOMLoaded', function () {
-        // play animation when lottie container is visible otherwise pause it
-        animationObserver()
-      })
-
-      anim.addEventListener('enterFrame', function () {
-        const currentIndexFrame = animFrames.value.indexOf(
-          Math.round(anim.currentFrame)
-        )
-
-        if (currentIndexFrame !== -1 && anim.loop === true) {
-          currentIndex.value = currentIndexFrame
-        }
-      })
-
-      anim.addEventListener('loopComplete', function () {
-        currentIndex.value = 0
-      })
-    }
-
-    function animationObserver() {
-      const callback = (entries) => {
-        entries.forEach(({ _, isIntersecting }) => {
-          if (!isIntersecting) {
-            anim.pause()
-          } else {
-            anim.play()
-          }
-        })
-      }
-
-      const observer = new IntersectionObserver(callback, {
-        root: document.querySelector('.anim'),
-        threshold: 0.8 // isIntersecting when 80% of container is visible
-      })
-
-      observer.observe(lottieAnim.value)
-    }
-
-    /* watcher */
-    // reload anim with new path according color mode
-    watch(colorMode, (_, __) => {
-      loadAnimation()
-    })
-
-    onMounted(() => setTimeout(loadAnimation, 250))
-
-    // TODO: Create an helper in Docus for this pattern
-    // Get animations texts from 'animations-texts' slot
-    const textContent = ref('')
-    const texts = computed(() => {
-      // A simple variable to fix HMR reload
-      // eslint-disable-next-line no-unused-expressions
-      textContent.value
-
-      // Get slot if it exists
-      let slot = context.slots['animations-texts'] || []
-
-      // Cast slot factory function
-      if (typeof slot === 'function') slot = slot()
-
-      // Return empty array if slot broken
-      if (!slot) return []
-
-      return flatUnwrap(slot, ['p', 'ul', 'li'])
-    })
-
-    return {
-      lottieAnim,
-      anim,
-      loadAnimation,
-      changeAnimation,
-      animations,
-      currentIndex,
-      animationObserver,
-      texts
+    },
+    buttonText: {
+      type: String,
+      default: 'Discover Nuxt'
     }
   }
 })
 </script>
-
-<style lang="postcss" scoped>
-.anim {
-  @apply w-full flex flex-col-reverse md:flex-col justify-center items-center md:justify-end w-full;
-}
-</style>

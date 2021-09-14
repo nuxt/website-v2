@@ -1,8 +1,12 @@
 <template>
-  <div class="overflow-hidden relative mx-auto max-w-8xl">
+  <div class="overflow-hidden relative bg-sky-black text-white -mt-18 pt-18">
     <HeroParallax />
+    <!-- Stars -->
+    <div class="absolute left-0 w-full h-full overflow-hidden -top-24 z-0">
+      <Star v-for="star in 80" :key="star" />
+    </div>
     <div class="flex flex-wrap justify-center py-0 section">
-      <section class="flex flex-col justify-start w-full px-4 pt-36 pb-48 md:pt-44 lg:pb-56 lg:pt-52 text-center">
+      <section class="flex flex-col justify-start w-full px-4 pt-36 pb-48 md:pt-44 lg:pb-56 lg:pt-36 text-center">
         <h1 class="font-normal font-serif text-display-5 xs:text-display-4 md:text-display-3 2xl:text-display-2 mb-6">
           <Markdown use="title" unwrap="p" />
         </h1>
@@ -16,8 +20,7 @@
             mb-8
             px-8
             sm:px-0
-            text-secondary-dark
-            dark:text-cloud-lighter
+            text-cloud-lighter
           "
         >
           <Markdown use="description" unwrap="p" />
@@ -35,28 +38,18 @@
           "
         >
           <SectionButton
-            :to="localePath(primary.url)"
+            :to="primary.url"
             :aria-label="primary.text"
             size="lg"
-            class="bg-primary text-gray-800 hover:bg-primary-400 focus:bg-primary-400"
+            class="bg-sky-black hover:bg-sky-darker z-20"
             :icon-left="primary.icon"
             >{{ primary.text }}</SectionButton
           >
           <SectionButton
-            :to="secondary.url"
             :aria-label="secondary.text"
             size="lg"
-            class="
-              bg-white
-              border
-              rounded-md
-              shadow-sm
-              border-gray-700
-              text-gray-800
-              focus:bg-gray-200
-              hover:bg-gray-200
-            "
-            :icon-left="secondary.icon"
+            class="bg-sky-darker bg-opacity-100 hover:bg-sky-dark rounded-md shadow-sm font-mono cursor-pointer z-20"
+            :icon-right="secondary.icon"
             >{{ secondary.text }}</SectionButton
           >
         </div>
@@ -73,17 +66,17 @@ export default defineComponent({
     primary: {
       type: Object,
       default: () => ({
-        text: 'Get started',
-        url: '/get-started',
-        icon: 'IconPlay'
+        text: '38K+ GitHub stars',
+        url: '/https://github.com',
+        icon: 'IconGitHub'
       })
     },
     secondary: {
       type: Object,
       default: () => ({
-        text: 'Open on GitHub',
-        url: '/https://github.com',
-        icon: 'IconGitHub'
+        text: 'npm init nuxt-app',
+        url: '/docs',
+        icon: 'IconCopy'
       })
     }
   }

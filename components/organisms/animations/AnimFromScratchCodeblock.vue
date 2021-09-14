@@ -96,12 +96,12 @@
 }
 
 .fromscratch__code {
-  @apply relative -top-40 lg:top-0 dark:bg-secondary-black bg-secondary-darkest rounded-md col-span-full lg:col-span-7 p-5 overflow-hidden;
+  @apply relative -top-40 lg:top-0 bg-secondary-black rounded-md col-span-full lg:col-span-7 p-5 overflow-hidden;
 }
 
 .fromscratch__display__logo {
   @apply absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2;
-  height: 60px;
+  height: 80px;
 }
 
 .fromscratch__display {
@@ -119,7 +119,7 @@
 .fromscratch__display__content {
   @apply absolute top-0 left-0 h-full w-full;
   & img {
-    @apply absolute top-0 h-full bg-;
+    @apply absolute top-0 h-full;
     left: -150px;
     animation: slideSidebarRight 600ms cubic-bezier(0.83, 0, 0.17, 1) forwards 9s;
   }

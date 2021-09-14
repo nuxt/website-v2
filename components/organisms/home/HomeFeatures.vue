@@ -1,5 +1,5 @@
 <template>
-  <section class="relative py-40">
+  <section class="relative py-40 text-secondary-black">
     <NuxtContainer class="flex flex-col items-center">
       <div class="flex flex-col w-full items-center col-span-12">
         <div class="mb-2">

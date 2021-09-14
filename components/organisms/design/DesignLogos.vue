@@ -50,7 +50,7 @@ export default defineComponent({
 
     useFetch(async () => {
       logosMd.value = await $docus
-        .search('/design-kit', { deep: true })
+        .search('/collections/design', { deep: true })
         .where({ slug: { $in: props.type }, language: i18n.locale })
         .fetch()
     })

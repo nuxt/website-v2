@@ -14,30 +14,30 @@
 /docs/2.x/components-glossary/pages-watchquery /docs/components-glossary/watchquery 301!
 
 # Deployment
-/docs/2.x/deployment/deploying-to-21yunbox /integrations/deployment/21yunbox 301!
-/docs/2.x/deployment/deployment-amazon-web-services /integrations/deployment/amazon-web-services 301!
-/docs/2.x/deployment/deployment-azure-portal /integrations/deployment/azure-portal 301!
-/docs/2.x/deployment/deployment-azure-static-web-apps /integrations/deployment/azure-static-web-apps 301!
-/docs/2.x/deployment/bip-deployment /integrations/deployment/bip 301!
-/docs/2.x/deployment/cleavr-deployment /integrations/deployment/cleavr 301!
-/docs/2.x/deployment/deploying-to-do-app-platform /integrations/deployment/do-app-platform 301!
-/docs/2.x/deployment/dokku-deployment /integrations/deployment/dokku 301!
-/docs/2.x/deployment/deployment-fume /integrations/deployment/fume 301!
-/docs/2.x/deployment/appengine-deployment /integrations/deployment/google-appengine 301!
-/docs/2.x/deployment/deployment-cloud-run /integrations/deployment/google-cloud-run 301!
-/docs/2.x/deployment/heroku-deployment /integrations/deployment/heroku 301!
-/docs/2.x/deployment/hostman-deployment /integrations/deployment/hostman 301!
-/docs/2.x/deployment/deployment-koyeb /integrations/deployment/koyeb 301!
-/docs/2.x/deployment/deploy-on-moovweb /integrations/deployment/layer0 301!
-/docs/2.x/deployment/netlify-deployment /integrations/deployment/netlify 301!
-/docs/2.x/deployment/nginx-proxy /integrations/deployment/nginx 301!
-/docs/2.x/deployment/deployment-platformsh /integrations/deployment/platformsh 301!
-/docs/2.x/deployment/deployment-pm2 /integrations/deployment/pm2 301!
-/docs/2.x/deployment/deployment-qovery /integrations/deployment/qovery 301!
-/docs/2.x/deployment/surge-deployment /integrations/deployment/surge 301!
-/docs/2.x/deployment/vercel-deployment /integrations/deployment/vercel 301!
-/docs/2.x/deployment/deployment-cloudflare /integrations/deployment/cloudflare 301!
-/docs/2.x/deployment/deployment-stormkitio /integrations/deployment/Stormkitio 301!
+/docs/2.x/deployment/deploying-to-21yunbox /integrations/deployments/21yunbox 301!
+/docs/2.x/deployment/deployment-amazon-web-services /integrations/deployments/amazon-web-services 301!
+/docs/2.x/deployment/deployment-azure-portal /integrations/deployments/azure-portal 301!
+/docs/2.x/deployment/deployment-azure-static-web-apps /integrations/deployments/azure-static-web-apps 301!
+/docs/2.x/deployment/bip-deployment /integrations/deployments/bip 301!
+/docs/2.x/deployment/cleavr-deployment /integrations/deployments/cleavr 301!
+/docs/2.x/deployment/deploying-to-do-app-platform /integrations/deployments/digital-ocean 301!
+/docs/2.x/deployment/dokku-deployment /integrations/deployments/dokku 301!
+/docs/2.x/deployment/deployment-fume /integrations/deployments/fume 301!
+/docs/2.x/deployment/appengine-deployment /integrations/deployments/google-appengine 301!
+/docs/2.x/deployment/deployment-cloud-run /integrations/deployments/google-cloud-run 301!
+/docs/2.x/deployment/heroku-deployment /integrations/deployments/heroku 301!
+/docs/2.x/deployment/hostman-deployment /integrations/deployments/hostman 301!
+/docs/2.x/deployment/deployment-koyeb /integrations/deployments/koyeb 301!
+/docs/2.x/deployment/deploy-on-moovweb /integrations/deployments/layer0 301!
+/docs/2.x/deployment/netlify-deployment /integrations/deployments/netlify 301!
+/docs/2.x/deployment/nginx-proxy /integrations/deployments/nginx 301!
+/docs/2.x/deployment/deployment-platformsh /integrations/deployments/platformsh 301!
+/docs/2.x/deployment/deployment-pm2 /integrations/deployments/pm2 301!
+/docs/2.x/deployment/deployment-qovery /integrations/deployments/qovery 301!
+/docs/2.x/deployment/surge-deployment /integrations/deployments/surge 301!
+/docs/2.x/deployment/vercel-deployment /integrations/deployments/vercel 301!
+/docs/2.x/deployment/deployment-cloudflare /integrations/deployments/cloudflare 301!
+/docs/2.x/deployment/deployment-stormkitio /integrations/deployments/stormkitio 301!
 
 # Examples
 /examples/hello-world /examples/routing/hello-world 301!

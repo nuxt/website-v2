@@ -5,7 +5,8 @@
       <Transition name="fade">
         <div
           v-if="$menu.visible.value"
-          class="fixed top-0 left-0 z-0 w-full h-full pointer-events-auto d-blur-header d-bg-header lg:hidden"
+          class="fixed top-0 left-0 z-0 w-full h-full pointer-events-auto d-blur-header lg:hidden"
+          :class="home ? 'd-bg-header-home' : 'd-bg-header'"
           @click.stop="$menu.toggle"
         />
       </Transition>
@@ -51,10 +52,14 @@
             !w-base
           "
         >
-          <div class="w-auto h-full overflow-auto d-bg-header">
-            <div class="flex items-center justify-between w-full px-0.5 sm:px-2 h-header d-aside-header-bg">
+          <div class="w-auto h-full overflow-auto" :class="home ? 'd-bg-header-home' : 'd-bg-header'">
+            <div
+              class="flex items-center justify-between w-full px-0.5 sm:px-2 h-header d-aside-header-bg"
+              :class="home ? 'd-aside-header-home-bg' : 'd-aside-header-bg'"
+            >
               <button
-                class="transition-colors duration-200 focus:outline-none d-secondary-text hover:d-secondary-text-hover"
+                class="transition-colors duration-200 focus:outline-none"
+                :class="home ? 'text-gray-300 hover:text-white' : 'd-secondary-text hover:d-secondary-text-hover'"
                 aria-label="backButton"
                 @click.stop="mobileBack"
               >
@@ -62,7 +67,12 @@
                 <IconClose v-else class="p-3 w-12 h-12" />
               </button>
               <div class="flex items-center h-header space-x-2">
-                <LangSwitcher />
+                <LangSwitcher
+                  :class="{ 'text-white': home }"
+                  :icon-class="`w-6 h-6 m-auto ${
+                    home ? 'text-gray-300 hover:text-primary-400' : 'd-secondary-text hover:d-secondary-text-hover'
+                  }`"
+                />
                 <ColorSwitcher />
               </div>
             </div>
@@ -77,7 +87,7 @@
 </template>
 
 <script lang="ts">
-import { defineComponent, useContext, ref, watch } from '@nuxtjs/composition-api'
+import { defineComponent, useContext, ref, watch, computed } from '@nuxtjs/composition-api'
 
 export default defineComponent({
   props: {
@@ -88,11 +98,12 @@ export default defineComponent({
   },
   setup() {
     const {
-      $docus: { layout },
+      $docus: { layout, currentPath },
       $menu
     } = useContext()
 
     const mobileMainNav = ref(!layout.value.aside)
+    const home = computed(() => currentPath.value === '/')
 
     watch($menu.visible, (value, old) => {
       if (value && !old && layout.value.aside) {
@@ -111,7 +122,8 @@ export default defineComponent({
     return {
       mobileMainNav,
       mobileBack,
-      layout
+      layout,
+      home
     }
   }
 })

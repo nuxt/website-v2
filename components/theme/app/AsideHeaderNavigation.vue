@@ -3,9 +3,13 @@
     <template v-for="(link, index) in links">
       <div v-if="link.items && link.items.length" :key="index" class="flex flex-col py-2">
         <div class="flex items-center justify-between cursor-pointer" @click="toggle(index)">
-          <HeaderNavigationLink :link="link" />
-          <IconChevronBottom v-if="openedLink === index" class="flex-shrink-0 w-4 h-4" />
-          <IconChevronRight v-else class="flex-shrink-0 w-4 h-4" />
+          <HeaderNavigationLink :link="link" :class="{ 'text-cloud-lighter hover:text-cloud-lightest': home }" />
+          <IconChevronBottom
+            v-if="openedLink === index"
+            class="flex-shrink-0 w-4 h-4"
+            :class="{ 'text-cloud-lighter': home }"
+          />
+          <IconChevronRight v-else class="flex-shrink-0 w-4 h-4" :class="{ 'text-cloud-lighter': home }" />
         </div>
         <div v-show="openedLink === index" class="pl-2 pt-2 gap-2">
           <HeaderNavigationLink
@@ -13,12 +17,19 @@
             :key="subIndex"
             :link="subLink"
             class="rounded-md px-2 py-1 text-sm"
+            :class="{ 'text-cloud-lighter hover:text-cloud-lightest': home }"
             active-class="d-active-aside-navigation-item-bg"
             inactive-class="d-secondary-text hover:d-secondary-text-hover"
           />
         </div>
       </div>
-      <HeaderNavigationLink v-else :key="index" :link="link" class="py-2" />
+      <HeaderNavigationLink
+        v-else
+        :key="index"
+        :link="link"
+        class="py-2"
+        :class="{ 'text-cloud-lighter hover:text-cloud-lightest': home }"
+      />
     </template>
   </nav>
 </template>
@@ -65,6 +76,8 @@ export default defineComponent({
       }
     })
 
+    const home = computed(() => $docus.currentPath.value === '/')
+
     function toggle(index) {
       if (openedLink.value === index) {
         openedLink.value = null
@@ -76,7 +89,8 @@ export default defineComponent({
     return {
       openedLink,
       toggle,
-      nav
+      nav,
+      home
     }
   }
 })

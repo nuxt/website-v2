@@ -12,7 +12,7 @@ primary:
   url: https://github.com/nuxt/nuxt.js
   icon: IconGitHub
 secondary:
-  text: npm init nuxt
+  text: npm init nuxt-app
   icon: IconCopy
 ---
 
@@ -23,23 +23,19 @@ The Intuitive Vue<br>Framework
 Build your next Vue.js application with confidence using Nuxt.<br class="hidden sm:block" /> An open source framework making web development simple and powerful.
 ::
 
-::home-discover
+::home-learn-master
 ---
-category: Discover
+category: Learn
 ---
 
 #title
-Easier [_Life_]{.text-primary}, from [_Code_]{.text-primary} to [_Cloud_]{.text-primary}
+[Easy]{.text-primary} to learn. [Easy]{.text-primary} to master
 
 #description
-Nuxt is an open source web framework based on official Vue.js libraries, Node.js and using powerful tools such as Webpack, Babel and PostCSS. Nuxt makes web development intuitive and performant with a great developer experience in mind. Deploy with one command your application to many platforms, from Node.js hosting to static websites.
+Be part of the Nuxt.js community and help us Nuxtify the world.
 
-#animations-texts
-- It all starts with HTML and Vue components
-- Add some style using your favorite tools
-- Fetch content locally or from third-parties
-- Extend Nuxt's behavior with our modules ecosystem
-- Deploy on various platforms with confidence
+#bottom
+:button-link[Learn everything]{href="/docs/get-started/installation" size="medium"}
 ::
 
 ::home-features

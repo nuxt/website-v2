@@ -239,28 +239,28 @@ Discover articles from the framework Team and Community about Nuxt, tips and tri
   :::campfire-list-item
   ---
   title: Announcements
-  description: Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+  description: Discover articles from NuxtJS team.
   to: '/announcements'
   ---
   :::
   :::campfire-list-item
   ---
   title: Events
-  description: Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+  description: Discover and subscribe to future events featuring Nuxt content, and watch previous talks from the core team and the community.
   to: '/events'
   ---
   :::
   :::campfire-list-item
   ---
   title: Sponsors
-  description: Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+  description: If you use NuxtJS in your daily work and feel that it has made your life easier, please consider backing us.
   to: '/sponsors'
   ---
   :::
   :::campfire-list-item
   ---
   title: Tutorials
-  description: Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+  description: Discover tutorials made by the NuxtJS community.
   to: '/tutorials'
   ---
   :::

@@ -4,7 +4,7 @@
       <svg width="20" height="20" class="d-icon m-auto" viewBox="0 0 20 20">
         <path
           d="M14.386 14.386l4.0877 4.0877-4.0877-4.0877c-2.9418 2.9419-7.7115 2.9419-10.6533 0-2.9419-2.9418-2.9419-7.7115 0-10.6533 2.9418-2.9419 7.7115-2.9419 10.6533 0 2.9419 2.9418 2.9419 7.7115 0 10.6533z"
-          stroke="#FFFFFFF"
+          stroke="currentColor"
           fill="none"
           fill-rule="evenodd"
           stroke-linecap="round"
@@ -140,7 +140,7 @@ export default {
 .DocSearch {
   --docsearch-primary-color: #00dc82;
   --docsearch-highlight-color: var(--docsearch-primary-color);
-  --docsearch-text-color: theme('colors.gray.300');
+  --docsearch-text-color: rgb(113, 113, 122);
   --docsearch-modal-background: theme('colors.gray.100');
   --docsearch-searchbox-shadow: inset 0 0 0 2px var(--docsearch-primary-color);
   --docsearch-searchbox-background: var(--color-transparent);
@@ -153,7 +153,7 @@ export default {
 
 .dark {
   & .DocSearch {
-    --docsearch-text-color: #fff;
+    --docsearch-text-color: rgb(146, 173, 173);
     --docsearch-modal-background: theme('colors.secondary-darker');
     --docsearch-modal-shadow: inset 1px 1px 0 0 #052f14, 0 3px 8px 0 #0b160d;
     --docsearch-hit-color: var(--color-gray-300);

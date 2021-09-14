@@ -3,7 +3,7 @@
     class="
       group
       relative
-      hover:bg-gray-50 hover:dark:bg-opacity-80
+      hover:bg-gray-50 hover:dark:bg-sky-darkest
       dark:bg-sky-darker
       rounded-md
       shadow-md

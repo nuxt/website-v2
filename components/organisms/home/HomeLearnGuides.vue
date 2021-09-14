@@ -6,7 +6,7 @@
       class="absolute left-0 z-10 object-fill w-full -mt-28 sm:-mt-40 lg:-mt-60 xl:-mt-80"
       alt="A landscape image"
     />
-    <section class="relative bg-secondary-black pt-18 sm:pt-20 md:pt-24 xl:pt-28">
+    <section class="relative bg-secondary-black pt-18 sm:pt-20 md:pt-24 xl:pt-40">
       <NuxtContainer class="flex flex-col items-center text-white">
         <div class="flex flex-col w-full items-center col-span-12">
           <div class="mb-2">

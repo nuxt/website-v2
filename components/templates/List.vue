@@ -4,6 +4,7 @@
       :title="page.heroTitle || page.title"
       :description="page.heroDescription || page.description"
       :description-full-width="page.heroDescriptionFullWidth"
+      :button="page.heroButton"
     />
     <div class="d-container px-6 grid sm:grid-cols-2 lg:grid-cols-3 gap-6 pt-8">
       <LogoCard v-for="item in list" :key="item.id" :item="item" />

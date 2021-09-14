@@ -9,7 +9,7 @@
           blank
           class="inline-flex items-center gap-3 h-12 bg-gray-500 bg-opacity-10 px-4 hover:bg-opacity-20 rounded-md"
         >
-          <component is="IconGitHub" class="h-5 w-5" />
+          <component is="IconStar" class="h-5 w-5" />
           <span class="font-medium">{{ github }}</span>
         </Link>
         <Link

@@ -2,6 +2,7 @@
 template: blank
 title: 'The Intuitive Vue Framework'
 description: 'Build your next Vue.js application with confidence using Nuxt. An open source framework making web development simple and powerful.'
+bgClass: 'bg-white'
 ---
 
 ::home-hero
@@ -11,7 +12,7 @@ primary:
   url: https://github.com/nuxt/nuxt.js
   icon: IconGitHub
 secondary:
-  text: npm init nuxt
+  text: npm init nuxt-app
   icon: IconCopy
 ---
 
@@ -22,23 +23,19 @@ The Intuitive Vue<br>Framework
 Build your next Vue.js application with confidence using Nuxt.<br class="hidden sm:block" /> An open source framework making web development simple and powerful.
 ::
 
-::home-discover
+::home-learn-master
 ---
-category: Discover
+category: Learn
 ---
 
 #title
-Easier [_Life_]{.text-primary}, from [_Code_]{.text-primary} to [_Cloud_]{.text-primary}
+[Easy]{.text-primary} to learn. [Easy]{.text-primary} to master
 
 #description
-Nuxt is an open source web framework based on official Vue.js libraries, Node.js and using powerful tools such as Webpack, Babel and PostCSS. Nuxt makes web development intuitive and performant with a great developer experience in mind. Deploy with one command your application to many platforms, from Node.js hosting to static websites.
+Be part of the Nuxt.js community and help us Nuxtify the world.
 
-#animations-texts
-- It all starts with HTML and Vue components
-- Add some style using your favorite tools
-- Fetch content locally or from third-parties
-- Extend Nuxt's behavior with our modules ecosystem
-- Deploy on various platforms with confidence
+#bottom
+:button-link[Learn everything]{href="/docs/get-started/installation" size="medium"}
 ::
 
 ::home-features
@@ -132,21 +129,6 @@ Nuxt development is made from passionate developers, however, the amount of effo
 :button-link[Sponsor Nuxt]{href="/sponsor-nuxtjs" size="medium"}
 ::
 
-::home-learn-master
----
-category: Learn
----
-
-#title
-[_Easy_]{.text-primary} to learn. [_Easy_]{.text-primary} to master
-
-#description
-Be part of the Nuxt.js community and help us Nuxtify the world.
-
-#bottom
-:button-link[Get started]{href="/docs/get-started/installation" size="medium"}
-::
-
 ::home-learn-guides
 ---
 category: Learn
@@ -154,31 +136,41 @@ category: Learn
 
 ::section-content-item
 ---
-title: Usage
-description: 'Learn Nuxt concepts and features from beginning to mastery.'
-image: /img/home/learn/guides/gem-usage.svg
+title: Documentation
+description: 'NuxtJS has been a discovery for our development teams.'
+image: /img/home/learn/guides/gem-1.svg
 to: '/docs/get-started/installation'
-linkName: 'Learn Nuxt'
+hoverClass: 'hover:bg-sky-darker'
 ---
 ::
 
 ::section-content-item
 ---
-title: Internals
-description: "Dive deep into Nuxt internals to extend your application's behavior."
-image: /img/home/learn/guides/gem-internals.svg
-to: '/docs/internals-glossary/context'
-linkName: 'Explore Internals'
+title: Examples
+description: "NuxtJS has been a discovery for our development teams."
+image: /img/home/learn/guides/gem-2.svg
+to: '/examples'
+hoverClass: 'hover:bg-sky-darker'
 ---
 ::
 
 ::section-content-item
 ---
-title: API References
-description: 'Discover all properties and their options when you need a complete overview.'
-image: /img/home/learn/guides/gem-api.svg
-to: '/docs/configuration-glossary/configuration-alias'
-linkName: 'Discover the API'
+title: Releases
+description: 'NuxtJS has been a discovery for our development teams.'
+image: /img/home/learn/guides/gem-3.svg
+to: '/releases'
+hoverClass: 'hover:bg-sky-darker'
+---
+::
+
+::section-content-item
+---
+title: Master Courses
+description: 'NuxtJS has been a discovery for our development teams.'
+image: /img/home/learn/guides/gem-4.svg
+to: 'https://masteringnuxt.com'
+hoverClass: 'hover:bg-sky-darker'
 ---
 ::
 
@@ -196,29 +188,29 @@ category: Explore
 
 ::section-content-item
 ---
-title: 'Examples'
-description: 'Get inspired by use-cases, from common tasks to advanced examples.'
-image: '/img/home/explore/gem-1-hover.svg'
-to: '/examples'
-linkName: 'Get inspired'
----
-::
-::section-content-item
----
-title: 'Modules'
-description: 'Take advantage of our module ecosystem to stop reinventing the wheel.'
-image: '/img/home/explore/gem-3-hover.svg'
-to: 'https://modules.nuxtjs.org'
-linkName: 'Browse modules'
+title: 'Integrations'
+description: 'NuxtJS has been a discovery for our development teams.'
+image: '/img/home/explore/gem-explore-1.svg'
+to: '/integrations'
+hoverClass: 'hover:bg-sky-surface'
 ---
 ::
 ::section-content-item
 ---
 title: 'Themes'
-description: 'Start coding in minutes with a pre-made design thanks to our list of Nuxt themes.'
-image: '/img/home/explore/gem-4-hover.svg'
-to: '/resources/themes'
-linkName: 'Start now'
+description: 'NuxtJS has been a discovery for our development teams.'
+image: '/img/home/explore/gem-explore-2.svg'
+to: '/theme'
+hoverClass: 'hover:bg-sky-surface'
+---
+::
+::section-content-item
+---
+title: 'Video Courses'
+description: 'NuxtJS has been a discovery for our development teams.'
+image: '/img/home/explore/gem-explore-3.svg'
+to: '/video-courses'
+hoverClass: 'hover:bg-sky-surface'
 ---
 ::
 
@@ -232,11 +224,61 @@ Nuxt has plently of areas to explore, learn with examples, integrate with your f
 ::home-campfire
 ---
 category: Community
+articleCategory: Next Conferences
+articleLinkTitle: Get infos
 ---
 
 #title
-Sharing is [_Caring_]{.text-primary}
+Sharing is [Caring]{.text-sky-lighter}
 
 #description
 Discover articles from the framework Team and Community about Nuxt, tips and tricks included!
+
+#campfire-list
+  :::campfire-list-item
+  ---
+  title: Announcements
+  description: Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+  to: '/announcements'
+  ---
+  :::
+  :::campfire-list-item
+  ---
+  title: Events
+  description: Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+  to: '/events'
+  ---
+  :::
+  :::campfire-list-item
+  ---
+  title: Sponsors
+  description: Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+  to: '/sponsors'
+  ---
+  :::
+  :::campfire-list-item
+  ---
+  title: Tutorials
+  description: Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+  to: '/tutorials'
+  ---
+  :::
+::
+
+::home-testimonials
+---
+category: Community
+---
+#title
+Testimonials
+
+#description
+Learn from experts what they love about Nuxt.
+
+#testimonials
+  :::testimonials
+  ---
+  home: true
+  ---
+  :::
 ::

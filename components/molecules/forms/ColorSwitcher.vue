@@ -1,5 +1,11 @@
 <template>
-  <button slot="placeholder" class="d-icon w-12 h-12 rounded" aria-label="Color Mode" @click="switchColor">
+  <button
+    slot="placeholder"
+    class="w-12 h-12 rounded"
+    :class="$docus.currentPath.value === '/' ? 'focus:outline-none text-gray-300 hover:text-sky-surface' : 'd-icon'"
+    aria-label="Color Mode"
+    @click="switchColor"
+  >
     <ClientOnly>
       <IconSun v-if="$colorMode.preference === 'light'" :class="iconClass" />
       <IconMoon v-else-if="$colorMode.preference === 'dark'" :class="iconClass" />

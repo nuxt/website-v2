@@ -26,7 +26,7 @@ Hybrid static & server rendering, API routes and native serverless.
 Get notified when Nuxt3 is in public beta.
 ::
 
-::home-learn-guides
+::nuxt3-timeline
 ---
 category: When?
 ---

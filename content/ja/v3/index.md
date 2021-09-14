@@ -25,7 +25,7 @@ primary: false
 Nuxt3 がパブリックベータがリリースされたときお知らせを取得する。
 ::
 
-::home-learn-guides
+::nuxt3-timeline
 ---
 category: いつですか？
 ---

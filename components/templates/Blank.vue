@@ -1,5 +1,5 @@
 <template>
-  <DocusContent :document="page" />
+  <DocusContent :document="page" :class="page.bgClass" />
 </template>
 
 <script>

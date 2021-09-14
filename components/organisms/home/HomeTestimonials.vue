@@ -1,14 +1,17 @@
 <template>
   <div>
-    <img
-      loading="lazy"
-      :src="`/img/home/discover/modules/dark/landscape-discover-modules-t.svg`"
-      class="absolute left-0 object-fill w-full h-40 -mt-24"
-      alt="A landscape image"
-    />
-    <HomeSection class="py-20 bg-sky-darkest text-white">
+    <HomeSection>
+      <template #header-illustration>
+        <img
+          loading="lazy"
+          :src="`/img/home/testimonials/landscape-community.svg`"
+          class="w-full h-28 object-cover -mt-12 pointer-events-none"
+          alt="A landscape image"
+        />
+      </template>
+
       <template #section-content>
-        <SectionContent>
+        <SectionContent class="pt-20 pb-60 text-secondary-black">
           <template #category>
             <span class="text-tertiary font-bold text-lg">{{ category }}</span>
           </template>
@@ -36,29 +39,21 @@
           </template>
 
           <template #content>
-            <CodeBlockAnimation class="w-full text-gray-50" />
-          </template>
-
-          <template #button>
-            <div class="w-full self-start">
-              <Markdown use="bottom" unwrap="p" />
-            </div>
+            <Markdown use="testimonials" unwrap="p" />
           </template>
         </SectionContent>
       </template>
     </HomeSection>
     <img
       loading="lazy"
-      :src="`/img/home/discover/modules/dark/landscape-discover-modules-b.svg`"
-      class="absolute left-0 z-10 object-fill w-full h-40 -mt-20"
+      :src="`/img/home/footer.svg`"
+      class="absolute left-0 z-10 object-cover w-full h-80 -mt-56"
       alt="A landscape image"
     />
   </div>
 </template>
-
 <script>
 import { defineComponent } from '@nuxtjs/composition-api'
-
 export default defineComponent({
   props: {
     category: {

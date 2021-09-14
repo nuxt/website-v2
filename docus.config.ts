@@ -38,6 +38,8 @@ export default {
       'd-primary-text-hover': 'text-gray-600 dark:text-cloud-lighter',
       'd-prose-code-inline-bg': 'bg-gray-100 dark:bg-secondary-darkest',
       'd-prose-code-bg': 'bg-gray-100 dark:bg-secondary-darkest',
+      'd-header-home':
+        'sticky w-full top-0 z-50 bg-secondary-black bg-opacity-80 d-border-header d-blur-header h-header',
       'd-bg-header': 'bg-white bg-opacity-80 dark:bg-secondary-black dark:bg-opacity-80',
       'd-border': 'light:border-gray-200 light:border-opacity-50 dark:border-secondary-darker',
       'd-border-hover': 'border-primary-200 dark:border-secondary-dark',

@@ -12,7 +12,7 @@
       class="absolute left-0 w-full object-cover h-40 -mt-40 z-10 lg:hidden"
       alt="A landscape image"
     />
-    <section class="py-20 bg-sky-darker">
+    <section class="py-20 bg-sky-darker text-white">
       <NuxtContainer>
         <div class="flex flex-col items-start col-span-12">
           <div class="mb-2">

@@ -6,7 +6,7 @@
       class="absolute left-0 object-fill w-full h-40 -mt-24"
       alt="A landscape image"
     />
-    <HomeSection secondary class="py-20">
+    <HomeSection class="py-20 bg-sky-darkest text-white">
       <template #section-content>
         <SectionContent>
           <template #category>

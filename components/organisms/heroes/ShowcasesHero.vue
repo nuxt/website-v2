@@ -11,7 +11,7 @@
           blank
           class="inline-flex items-center gap-3 h-12 bg-gray-500 bg-opacity-10 px-4 hover:bg-opacity-20 rounded-md"
         >
-          <img loading="lazy" :src="`/img/showcases/chrome.svg`" :alt="type" class="w-5 h-5" />
+          <img loading="lazy" :src="`/img/showcases/chrome.svg`" alt="chrome" class="w-5 h-5" />
           <span class="font-medium">{{ $t('showcases.chrome_extension') }}</span>
         </Link>
         <Link
@@ -19,7 +19,7 @@
           blank
           class="inline-flex items-center gap-3 h-12 bg-gray-500 bg-opacity-10 px-4 hover:bg-opacity-20 rounded-md"
         >
-          <img loading="lazy" :src="`/img/showcases/firefox.svg`" :alt="type" class="w-5 h-5" />
+          <img loading="lazy" :src="`/img/showcases/firefox.svg`" alt="firefox" class="w-5 h-5" />
           <span class="font-medium">{{ $t('showcases.firefox_extension') }}</span>
         </Link>
       </div>

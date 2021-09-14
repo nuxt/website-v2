@@ -1,5 +1,5 @@
 <template>
-  <ul class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12 md:gap-4 lg:gap-8 pt-16 pb-8 px-6 sm:px-20 md:px-6">
+  <ul class="grid grid-cols-1 md:grid-cols-3 gap-12 md:gap-4 lg:gap-8 pt-16 pb-8 px-4">
     <li
       v-for="testimonial in testimonials"
       :key="testimonial.author"
@@ -56,13 +56,25 @@
   </ul>
 </template>
 <script>
-import { defineComponent } from '@nuxtjs/composition-api'
+import { defineComponent, useContext, ref, useFetch } from '@nuxtjs/composition-api'
 
 export default defineComponent({
-  props: {
-    testimonials: {
-      type: Array,
-      default: () => []
+  setup() {
+    const { $docus, i18n } = useContext()
+    const results = ref()
+    const testimonials = ref([])
+
+    useFetch(async () => {
+      results.value = await $docus
+        .search('/collections/testimonials', { deep: true })
+        .where({ language: i18n.locale })
+        .fetch()
+
+      testimonials.value = results.value[0].testimonials
+    })
+
+    return {
+      testimonials
     }
   }
 })

@@ -1,5 +1,22 @@
 <template>
-  <div ref="containerImg" class="absolute top-0 left-0 -z-0 w-full h-full select-none pointer-events-none transition-opacity ease-out duration-800" :class="[hidden ? 'opacity-0' : 'opacity-100']">
+  <div
+    ref="containerImg"
+    class="
+      absolute
+      top-0
+      left-0
+      z-10
+      w-full
+      h-full
+      select-none
+      pointer-events-none
+      transition-opacity
+      ease-out
+      duration-800
+      mt-18
+    "
+    :class="[hidden ? 'opacity-0' : 'opacity-100']"
+  >
     <img
       ref="gem1"
       data-speed="2"
@@ -75,7 +92,7 @@ export default defineComponent({
     }
 
     if (process.client) {
-      const isTouchDevice = (('ontouchstart' in window) || (navigator.maxTouchPoints > 0) || (navigator.msMaxTouchPoints > 0));
+      const isTouchDevice = 'ontouchstart' in window || navigator.maxTouchPoints > 0 || navigator.msMaxTouchPoints > 0
       if (isTouchDevice) {
         onMounted(() => {
           setTimeout(() => {

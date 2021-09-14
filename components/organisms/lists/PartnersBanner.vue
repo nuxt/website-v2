@@ -9,10 +9,10 @@
         <a :href="partner.url" class="opacity-75 hover:opacity-100 w-28" rel="noopener sponsored" target="_blank">
           <img
             loading="lazy"
-            :src="`/img/sponsors/banner/light/${partner.img}`"
+            :src="partner.logo.replace('dark', 'light')"
             :alt="partner.title"
             :title="partner.title"
-            :class="partner.imgClass"
+            class="h-8"
           />
         </a>
       </li>

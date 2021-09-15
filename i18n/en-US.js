@@ -144,7 +144,8 @@ export default {
     days: 'days',
     hours: 'hours',
     minutes: 'minutes',
-    seconds: 'seconds'
+    seconds: 'seconds',
+    copied: 'Copied'
   },
   iso: 'en'
 }

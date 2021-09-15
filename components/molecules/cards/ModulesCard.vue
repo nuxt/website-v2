@@ -111,7 +111,7 @@ export default defineComponent({
         return `https://modules.nuxtjs.org/icons/${icon}`
       }
 
-      return `img/modules/categories/${(category || '').toLowerCase()}.svg`
+      return `/img/modules/categories/${(category || '').toLowerCase()}.svg`
     },
 
     npmUrl() {

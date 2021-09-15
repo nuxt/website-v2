@@ -1,8 +1,8 @@
 ---
 template: list
 title: Integrations
-description: "Extend and automate your workflow by using integrations for your favorite tools."
+description: "Étendez et automatisez votre flux de travail en utilisant des intégrations pour vos outils préférés."
 heroTitle: Integrations
-heroDescription: "Extend and automate your workflow by using integrations for your favorite tools."
+heroDescription: "Étendez et automatisez votre flux de travail en utilisant des intégrations pour vos outils préférés."
 heroDescriptionFullWidth: true
 ---

@@ -24,7 +24,10 @@
         >
           <Markdown use="description" unwrap="p" />
         </h2>
-        <Countdown class="mx-auto my-4" />
+        <ClientOnly>
+          <Countdown class="mx-auto my-4" />
+          <template #placeholder>...</template>
+        </ClientOnly>
         <p class="text-center mt-2 text-secondary-dark dark:text-cloud-lighter">
           <Markdown use="body" unwrap="p" />
         </p>

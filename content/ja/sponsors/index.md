@@ -11,6 +11,8 @@ layout:
 title: NuxtJS 開発を支援するスポンサー
 description: "NuxtJS は MIT ライセンスされたオープンソースプロジェクトで利用は完全に無料です。しかしながら、プロジェクトを維持し、新しい機能を開発するために必要な労力は、適切な資金的裏付けがなければ持続できません。
 以下の方法でNuxtJSの開発をサポートすることができます:"
+github: Sponsor on GitHub
+opencollective: Sponsor on Open Collective
 ---
 ::
 

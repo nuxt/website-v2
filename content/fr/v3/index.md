@@ -1,14 +1,9 @@
 ---
 template: blank
-layout:
-  fluid: true
-navigation: false
-layout.asideClass: 'block lg:hidden'
-layout.aside: true
 title: Is Nuxt 3 Ready?
+description: 'Nuxt 3 is rebuilt from the ground up for the modern web. Hybrid static & server rendering, API routes and native serverless.'
 head.titleTemplate: null
 ---
-
 
 ::nuxt3-hero
 ---

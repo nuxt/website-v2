@@ -6,25 +6,6 @@ export default {
     here: 'ここ',
     format: '{nuxt} はまもなくやってきます... {here}で知ることができます！'
   },
-  header: {
-    Docs: 'ドキュメント',
-    Examples: '例',
-    Resources: 'リソース',
-    Blog: 'ブログ',
-    Modules: 'モジュール',
-    Partners: 'パートナー',
-    'Video Courses': 'ビデオコース',
-    Discover: '探求',
-    Showcases: '事例紹介',
-    'Case studies': '導入事例',
-    Testimonials: '著名人の声',
-    Learn: '学習',
-    Releases: 'リリース',
-    'Mastering Nuxt': 'Mastering Nuxt',
-    Explore: '検索',
-    Integrations: 'インテグレーション',
-    Themes: 'テーマ'
-  },
   footer: {
     titles: {
       Discover: '発見',

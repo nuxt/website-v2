@@ -1,6 +1,6 @@
 ---
 template: blog
 title: Tutorials
-description: Tutorials description
+description: Discover tutorials made by the NuxtJS community.
 blogPostList: true
 ---

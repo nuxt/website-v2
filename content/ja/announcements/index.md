@@ -1,6 +1,6 @@
 ---
 template: blog
 title: Annoucements
-description: Annoucements description
+description: Discover articles from NuxtJS team.
 blogPostList: true
 ---

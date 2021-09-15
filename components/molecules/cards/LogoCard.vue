@@ -6,7 +6,11 @@
     </template>
     <Link v-else :to="item.to || ''" :aria-label="item.title" class="absolute inset-0" />
     <div class="ListCard-body">
-      <nuxt-img :alt="`${item.title} logo`" :src="item.logo || ''" class="w-12 h-12 mr-4 rounded-md" />
+      <nuxt-img
+        :alt="`${item.title} logo`"
+        :src="item.logo[$colorMode.value] || item.logo || ''"
+        class="w-12 h-12 mr-4 rounded-md"
+      />
       <h3 class="font-bold text-xl py-2">{{ item.title || 'Title' }}</h3>
       <p class="text-sm">{{ item.description || 'Description' }}</p>
     </div>

@@ -30,6 +30,17 @@ import { parseISO } from 'date-fns'
 
 export default defineComponent({
   setup() {
+    if (process.server) {
+      return {
+        date: ref('..'),
+        days: ref('..'),
+        hours: ref('..'),
+        minutes: ref('..'),
+        seconds: ref('..'),
+        formatDateByLocale: () => '..'
+      }
+    }
+
     const date = ref(parseISO('2021-10-12T16:00:00+02:00'))
     const now = new Date()
 

@@ -1,11 +1,15 @@
 ---
 template: guide
-title: Deploy Nuxt with Cleavr
+title: Cleavr
 description: Comment déployer une application Nuxt avec Cleavr?
 target: Static & Server
 category: deployment
-logo: "/img/modules/categories/deployment.svg"
+logo:
+  light: "/img/partners/dark/cleavr.svg"
+  dark: "/img/partners/light/cleavr.svg"
 ---
+
+# Deploy Nuxt with Cleavr
 
 [Cleavr](https://cleavr.io) est une console de gestion de serveur qui s'intègre à plusieurs fournisseurs de VPS (hébergement cloud) et vous aide à configurer des serveurs pour héberger et déployer vos applications Nuxt en quelques clics.
 

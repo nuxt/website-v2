@@ -7,7 +7,7 @@ links:
         title: 'Contact us'
         href: 'mailto:hello@nuxtjs.com'
       -
-        title: 'Entreprise support'
+        title: 'Enterprise support'
         to: '/support'
       -
         title: 'NuxtLabs company'

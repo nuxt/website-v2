@@ -2,7 +2,7 @@
 /docs/2.x /docs 301!
 
 # Components glossary
-/docs/2.x/components-glossary/pages-fetch docs/components-glossary/fetch 301!
+/docs/2.x/components-glossary/pages-fetch /docs/components-glossary/fetch 301!
 /docs/2.x/components-glossary/pages-head /docs/components-glossary/head 301!
 /docs/2.x/components-glossary/pages-key /docs/components-glossary/key 301!
 /docs/2.x/components-glossary/pages-layout /docs/components-glossary/layout 301!
@@ -40,7 +40,17 @@
 /docs/2.x/deployment/deployment-stormkitio /integrations/deployments/stormkitio 301!
 
 # Features
+/docs/2.x/features/rendering-modes /docs/features/rendering-modes 301!
+/docs/2.x/features/deployment-targets /docs/features/deployment-targets 301!
+/docs/2.x/features/file-system-routing /docs/features/file-system-routing 301!
+/docs/2.x/features/data-fetching /docs/features/data-fetching 301!
+/docs/2.x/features/meta-tags-seo /docs/features/meta-tags-seo 301!
+/docs/2.x/features/configuration /docs/features/configuration 301!
+/docs/2.x/features/loading /docs/features/loading 301!
 /docs/2.x/features/nuxt-components /docs/features/nuxt-components 301!
+/docs/2.x/features/component-discovery /docs/features/component-discovery 301!
+/docs/2.x/features/transitions /docs/features/transitions 301!
+/docs/2.x/features/live-preview /docs/features/live-preview 301!
 
 #Releases
 /docs/release-notes /releases 310!
@@ -50,7 +60,7 @@
 /examples/routing-active-links-classes /examples/routing/active-link-classes 301!
 /examples/routing-dynamic-pages /examples/routing/dynamic-pages 301!
 /examples/routing-nested-pages /examples/routing/nested-pages 301!
-/examples/data-fetching-async-data examples/data-fetching/async-data 301!
+/examples/data-fetching-async-data /examples/data-fetching/async-data 301!
 /examples/data-fetching-fetch-hook /examples/data-fetching/fetch-hook 301!
 /examples/webpack-assets /examples/assets-management/webpack-assets 301!
 /examples/pre-processors /examples/assets-management/pre-processors 301!

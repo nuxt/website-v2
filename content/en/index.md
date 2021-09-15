@@ -137,7 +137,7 @@ category: Learn
 ::section-content-item
 ---
 title: Documentation
-description: 'NuxtJS has been a discovery for our development teams.'
+description: 'Discover every Nuxt concepts and find a complete APIs reference.'
 image: /img/home/learn/guides/gem-1.svg
 to: '/docs/get-started/installation'
 hoverClass: 'hover:bg-sky-darker'
@@ -147,7 +147,7 @@ hoverClass: 'hover:bg-sky-darker'
 ::section-content-item
 ---
 title: Examples
-description: "NuxtJS has been a discovery for our development teams."
+description: "Learn by the examples produced by the community."
 image: /img/home/learn/guides/gem-2.svg
 to: '/examples'
 hoverClass: 'hover:bg-sky-darker'
@@ -157,7 +157,7 @@ hoverClass: 'hover:bg-sky-darker'
 ::section-content-item
 ---
 title: Releases
-description: 'NuxtJS has been a discovery for our development teams.'
+description: 'Find out what has changed before upgrading.'
 image: /img/home/learn/guides/gem-3.svg
 to: '/releases'
 hoverClass: 'hover:bg-sky-darker'
@@ -167,7 +167,7 @@ hoverClass: 'hover:bg-sky-darker'
 ::section-content-item
 ---
 title: Master Courses
-description: 'NuxtJS has been a discovery for our development teams.'
+description: 'Watch a complete series of videos to learn Nuxt with our partner Vue School.'
 image: /img/home/learn/guides/gem-4.svg
 to: 'https://masteringnuxt.com'
 hoverClass: 'hover:bg-sky-darker'
@@ -189,7 +189,7 @@ category: Explore
 ::section-content-item
 ---
 title: 'Integrations'
-description: 'NuxtJS has been a discovery for our development teams.'
+description: 'Extend and automate your workflow by using integrations for your favorite tools.'
 image: '/img/home/explore/gem-explore-1.svg'
 to: '/integrations'
 hoverClass: 'hover:bg-sky-surface'
@@ -198,7 +198,7 @@ hoverClass: 'hover:bg-sky-surface'
 ::section-content-item
 ---
 title: 'Themes'
-description: 'NuxtJS has been a discovery for our development teams.'
+description: 'See how a real world application is built using the Nuxt stack with the themes built by our partners.'
 image: '/img/home/explore/gem-explore-2.svg'
 to: '/themes'
 hoverClass: 'hover:bg-sky-surface'
@@ -207,7 +207,7 @@ hoverClass: 'hover:bg-sky-surface'
 ::section-content-item
 ---
 title: 'Video Courses'
-description: 'NuxtJS has been a discovery for our development teams.'
+description: 'Discover and learn more about the Nuxt Framework with free and premium video courses.'
 image: '/img/home/explore/gem-explore-3.svg'
 to: '/video-courses'
 hoverClass: 'hover:bg-sky-surface'

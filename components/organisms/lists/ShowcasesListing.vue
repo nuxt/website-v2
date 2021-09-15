@@ -51,7 +51,7 @@ export default {
     }
   },
   async fetch() {
-    const { fetch: fetchShowcases, showcases } = useShowcases({ id: this.id })
+    const { fetch: fetchShowcases } = useShowcases({ id: this.id })
     this.showcases = (await fetchShowcases()).value
     this.selectedCategory = (this.$route.hash || '').substr(1)
   },

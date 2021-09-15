@@ -123,6 +123,10 @@ export default {
       Business: 'Business'
     }
   },
+  releases: {
+    version: 'Version',
+    released_on: 'Released on'
+  },
   theme_mode: {
     system: 'System',
     light: 'Light',

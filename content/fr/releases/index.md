@@ -1,7 +1,6 @@
 ---
 template: releases
 title: Release
-description: "Discover all the release notes for the NuxtJS framework"
+description: "Découvrez toutes les notes de version du framework NuxtJS"
 navigation: false
 ---
-

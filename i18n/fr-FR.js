@@ -126,6 +126,10 @@ export default {
       Business: 'Business'
     }
   },
+  releases: {
+    version: 'Version',
+    released_on: 'Sortie le'
+  },
   theme_mode: {
     system: 'Système',
     light: 'Clair',

@@ -46,11 +46,12 @@
             >{{ primary.text }}</SectionButton
           >
           <SectionButton
+            ref="copy"
             :aria-label="secondary.text"
             size="lg"
             class="bg-sky-darker bg-opacity-100 hover:bg-sky-dark rounded-md shadow-sm font-mono cursor-pointer z-20"
-            :icon-right="secondary.icon"
-            >{{ secondary.text }}</SectionButton
+            :icon-right="state === 'copied' ? 'IconCheck' : secondary.icon"
+            >{{ state === 'copied' ? $t('common.copied') : secondary.text }}</SectionButton
           >
         </div>
       </section>
@@ -59,7 +60,8 @@
 </template>
 
 <script>
-import { defineComponent } from '@nuxtjs/composition-api'
+import { defineComponent, onMounted, ref } from '@nuxtjs/composition-api'
+import Clipboard from 'clipboard'
 
 export default defineComponent({
   props: {
@@ -78,6 +80,33 @@ export default defineComponent({
         url: '/docs',
         icon: 'IconCopy'
       })
+    }
+  },
+  setup() {
+    const copy = ref()
+    const state = ref('init')
+
+    onMounted(() => {
+      const copyCode = new Clipboard(copy.value.$el, {
+        target(trigger) {
+          return trigger
+        }
+      })
+
+      copyCode.on('success', event => {
+        event.clearSelection()
+
+        state.value = 'copied'
+
+        window.setTimeout(() => {
+          state.value = 'init'
+        }, 2000)
+      })
+    })
+
+    return {
+      state,
+      copy
     }
   }
 })

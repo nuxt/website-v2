@@ -28,7 +28,7 @@
 </template>
 
 <script>
-import { defineComponent, ref, useContext, useFetch, onMounted } from '@nuxtjs/composition-api'
+import { defineComponent, ref, useContext, useFetch } from '@nuxtjs/composition-api'
 
 export default defineComponent({
   props: {

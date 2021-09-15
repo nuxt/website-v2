@@ -147,7 +147,8 @@ export default {
     days: 'jours',
     hours: 'heures',
     minutes: 'minutes',
-    seconds: 'secondes'
+    seconds: 'secondes',
+    copied: 'Copié'
   },
   iso: 'fr',
   cookies: {

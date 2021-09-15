@@ -28,7 +28,7 @@
         <div
           class="
             flex flex-col
-            xs:flex-row
+            sm:flex-row
             flex-wrap
             items-center
             justify-center

@@ -1,5 +1,5 @@
 <template>
-  <Link class="button-link" :class="[size, bold ? 'font-semibold' : 'font-medium']" :to="href">
+  <Link class="button-link" :class="[size, bold ? 'font-semibold' : 'font-medium']" :to="href" :blank="blank">
     <Markdown unwrap="p ul li" />
 
     <template #href>

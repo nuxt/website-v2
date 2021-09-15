@@ -1,10 +1,12 @@
 ---
 template: guide
-title: Deploy Nuxt with Cleavr
+title: Cleavr
 description: Nuxt アプリケーションを Cleavr でどうやってデプロイするのか？
 target: Static & Server
 category: deployment
-logo: "/img/modules/categories/deployment.svg"
+logo:
+  light: "/img/partners/dark/cleavr.svg"
+  dark: "/img/partners/light/cleavr.svg"
 ---
 
 # Cleavr で Nuxt をデプロイする

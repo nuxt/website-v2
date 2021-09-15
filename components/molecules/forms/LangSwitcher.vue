@@ -2,7 +2,7 @@
   <Dropdown
     v-if="$i18n.locales.length > 1"
     :items="[$i18n.locales]"
-    strategy="fixed"
+    :strategy="strategy"
     placement="bottom"
     mode="hover"
     class="inline-flex items-center w-12 h-12"
@@ -36,6 +36,10 @@ export default defineComponent({
     iconClass: {
       type: String,
       default: 'w-6 h-6 m-auto'
+    },
+    strategy: {
+      type: String,
+      default: 'absolute'
     }
   }
 })

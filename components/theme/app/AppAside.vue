@@ -72,6 +72,7 @@
                   :icon-class="`w-6 h-6 m-auto ${
                     home ? 'text-gray-300 hover:text-primary-400' : 'd-secondary-text hover:d-secondary-text-hover'
                   }`"
+                  strategy="fixed"
                 />
                 <ColorSwitcher />
               </div>

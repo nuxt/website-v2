@@ -61,7 +61,7 @@
             home ? 'text-gray-300 hover:text-primary-400' : 'd-secondary-text hover:d-secondary-text-hover'
           }`"
         />
-        <ColorSwitcher class="hidden lg:block" />
+        <ColorSwitcher v-if="$route.path !== '/'" class="hidden lg:block" />
         <AlgoliaSearchBox v-if="settings && settings.algolia" :options="settings.algolia" :settings="settings" />
       </div>
     </div>

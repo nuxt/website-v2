@@ -74,7 +74,7 @@
                   }`"
                   strategy="fixed"
                 />
-                <ColorSwitcher />
+                <ColorSwitcher v-if="$route.path !== '/'" />
               </div>
             </div>
 

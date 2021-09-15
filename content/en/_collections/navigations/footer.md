@@ -47,7 +47,7 @@ links:
         to: '/tutorials'
       -
         title: 'Video courses'
-        to: '/releases'
+        to: '/video-courses/'
   -
     title: 'Resources'
     items:

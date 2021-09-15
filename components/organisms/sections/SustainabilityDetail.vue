@@ -26,14 +26,14 @@
     </div>
     <div class="flex pt-16 space-x-4 text-sm">
       <SectionButton
-        :to="partnerContactUrl"
+        :href="partnerContactUrl"
         :aria-label="partnerContactUrl"
         size="lg"
         class="bg-primary text-gray-800 hover:bg-primary-400 focus:outline-none">
           {{ $t('sustainability.mvp_detail.contact_partner') }}
       </SectionButton>
       <SectionButton
-        :to="websiteUrl"
+        :href="websiteUrl"
         :aria-label="websiteUrl"
         size="lg"
         class="bg-white dark:bg-secondary-black hover:light:bg-gray-50 hover:dark:bg-secondary-darkest border focus:outline-none">

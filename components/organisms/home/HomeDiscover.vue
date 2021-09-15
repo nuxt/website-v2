@@ -35,7 +35,7 @@
           </template>
           <template #button>
             <SectionButton
-              to="#"
+              href="#"
               :aria-label="buttonText"
               size="lg"
               class="bg-primary text-gray-800 hover:bg-primary-400 focus:bg-primary-400 text-sm"

@@ -38,7 +38,7 @@
           "
         >
           <SectionButton
-            :to="primary.url"
+            :href="primary.url"
             :aria-label="primary.text"
             size="lg"
             class="bg-sky-black hover:bg-sky-darker z-20"

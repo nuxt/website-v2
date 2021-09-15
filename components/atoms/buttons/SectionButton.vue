@@ -1,8 +1,8 @@
 <template>
-  <button
-    type="button"
+  <!-- eslint-disable-next-line vue/require-component-is -->
+  <component
+    v-bind="linkProps"
     :aria-label="ariaLabel"
-    :to="to"
     class="font-medium rounded-md"
     :class="[
       iconLeft || iconRight ? 'inline-flex items-center px-4 py-2.5' : 'px-4 py-2.5',
@@ -18,16 +18,20 @@
     <div v-if="iconRight" class="h-full flex items-center justify-center">
       <Component :is="iconRight" class="ml-2" :class="{ 'w-5 h-5': size === 'lg' }" />
     </div>
-  </button>
+  </component>
 </template>
 
 <script>
-import { defineComponent } from '@nuxtjs/composition-api'
+import { defineComponent, computed } from '@nuxtjs/composition-api'
 export default defineComponent({
   props: {
     to: {
-      type: [String, Object],
-      default: null
+      type: String,
+      default: ''
+    },
+    href: {
+      type: String,
+      default: ''
     },
     size: {
       type: String,
@@ -47,6 +51,33 @@ export default defineComponent({
     ariaLabel: {
       type: String,
       default: null
+    }
+  },
+  setup(props) {
+    const linkProps = computed(() => {
+      const { to, href } = props
+      if (to?.length) {
+        return {
+          is: 'Link',
+          to
+        }
+      } else if (href?.length) {
+        return {
+          is: 'Link',
+          static: true,
+          to: '',
+          href,
+          blank: true
+        }
+      } else {
+        return {
+          is: 'button'
+        }
+      }
+    })
+
+    return {
+      linkProps
     }
   }
 })

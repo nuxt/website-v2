@@ -1,24 +1,24 @@
 ---
 template: blank
-title: Is Nuxt3 Ready?
-description: 'Nuxt3 is rebuilt from the ground up for the modern web. Hybrid static & server rendering, API routes and native serverless.'
+title: Is Nuxt 3 Ready?
+description: 'Nuxt 3 is rebuilt from the ground up for the modern web. Hybrid static & server rendering, API routes and native serverless.'
 head.titleTemplate: null
 ---
 
-::nuxt3-hero
+::Nuxt 3-hero
 ---
 primary: false
 ---
 
 #title
-Nuxt3 is coming[.]{.text-primary}
+Nuxt 3 is coming[.]{.text-primary}
 
 #description
 Rebuilt from the ground up for the modern web.<br>
 Hybrid static & server rendering, API routes and native serverless.
 
 #body
-Get notified by email when Nuxt3 is out in public beta.
+Get notified by email when Nuxt 3 is out in public beta.
 ::
 
 ::home-features{.dark:bg-secondary-darkest .bg-gray-50}
@@ -29,13 +29,13 @@ category: Discover
 With new features
 
 #description
-Nuxt3 has been re-architected with a smaller core and optimized for faster performance and better developer experience.
+Nuxt 3 has been re-architected with a smaller core and optimized for faster performance and better developer experience.
 
 #default
   ::section-content-item
   ---
   title: Lighter
-  description: Nuxt3 provides up to 5x smaller modernclient bundle and 100x smaller deployment bundle.
+  description: Up to 75x smaller server deployments and smaller client bundle targeting modern browsers.
   image: IconFeather
   imageClass: w-10 h-10
   ---
@@ -43,7 +43,7 @@ Nuxt3 has been re-architected with a smaller core and optimized for faster perfo
   ::section-content-item
   ---
   title: Faster
-  description: 'Optimized cold start with dynamic SSR code-splitting, powered by h3.'
+  description: 'Optimized cold start with dynamic server code-splitting, powered by nitro.'
   image: IconRabbit
   imageClass: w-10 h-10
   ---
@@ -67,7 +67,7 @@ Nuxt3 has been re-architected with a smaller core and optimized for faster perfo
   ::section-content-item
   ---
   title: Composition API
-  description: "Use the Composition API and Nuxt3's composables for true code re-usability."
+  description: "Use the Composition API and Nuxt 3's composables for true code re-usability."
   image: IconCAPI
   imageClass: w-10 h-10
   ---
@@ -91,7 +91,7 @@ Nuxt3 has been re-architected with a smaller core and optimized for faster perfo
   ::section-content-item
   ---
   title: Nuxt Kit
-  description: 'Create modules that can run on both Nuxt2 and Nuxt3 with ease.'
+  description: 'Brand new module development with Typescript and cross-version compatibility.'
   image: IconKit
   imageClass: w-10 h-10
   ---
@@ -106,7 +106,7 @@ Nuxt3 has been re-architected with a smaller core and optimized for faster perfo
   ::
   ::section-content-item
   ---
-  title: Vite (beta)
+  title: Vite
   description: 'Experience lightning fast HMR by using Vite as your bundler.'
   image: IconVite
   imageClass: w-10 h-10
@@ -137,13 +137,13 @@ Nuxt3 has been re-architected with a smaller core and optimized for faster perfo
 
     We worked for 9 months on Nuxt's new server engine for Nuxt: **Nitro**. It unlocks new **full-stack capabilities** to Nuxt server and beyond.
 
-    In development, it uses rollup and node workers to give Hot Module Replacement for your server code and context isolation. It also **generates your server API** by reading files in `server/api/` and **server functions** from `server/functions/`.
+    In development, it uses rollup and Node.js workers for your server code and context isolation. It also **generates your server API** by reading files in `server/api/` and **server functions** from `server/functions/`.
 
-    In production, it builds your app and server into one universal `.output` directory. This **output is light**: minified and removed from any node modules (except polyfills). You can deploy this output on any system supporting JavaScript, from Node, Serverless, Workers, Edge-side rendering or purely static.
+    In production, it builds your app and server into one universal `.output` directory. This **output is light**: minified and removed from any Node.js modules (except polyfills). You can deploy this output on any system supporting JavaScript, from Node.js, Serverless, Workers, Edge-side rendering or purely static.
 
-    The output is combined with both runtime code to run your Nuxt server in any environment (including browser Service Workers, experimental) and serve you static files, making it a **true hybrid framework** for the JAMStack. In addition, a native storage layer is implemented, supporting multi source, drivers and local assets.
+    The output is combined with both runtime code to run your Nuxt server in any environment (including experimental browser Service Workers!) and serve you static files, making it a **true hybrid framework** for the JAMStack. In addition, a native storage layer is implemented, supporting multi source, drivers and local assets.
 
-    The foundation of the Nitro server is [h3](https://github.com/unjs/h3): a minimal http framework built for high performance and portability.
+    The foundation of the Nitro server is rollup and [h3](https://github.com/unjs/h3): a minimal http framework built for high performance and portability.
   ::
 ::
 
@@ -154,23 +154,23 @@ Nuxt3 has been re-architected with a smaller core and optimized for faster perfo
 
     We moved to Vue 3 and re-wrote Nuxt after 4 years of development to make it a strong foundation for the future.
 
-    ### Smooth upgrade to Nuxt3
+    ### Smooth upgrade to Nuxt 3
 
-    We've worked to make the upgrade as easy as possible between Nuxt2 and Nuxt3.
+    We've worked to make the upgrade as easy as possible between Nuxt 2 and Nuxt 3.
 
-    - Legacy plugins and modules working
-    - Nuxt2 config compatible
-    - Partial pages options API
+    - Legacy plugins and modules will keep working
+    - Nuxt 2 config is compatible
+    - Partial pages options API available
 
-    ### Bringing Nuxt3 experience to your existing Nuxt2 project
+    ### Bringing Nuxt 3 experience to your existing Nuxt 2 project
 
-    As we've been working on new features for Nuxt3, we've back-ported some of them to Nuxt2.
+    As we've been working on new features for Nuxt 3, we've back-ported some of them to Nuxt 2.
 
-    - Using Nitro with Nuxt2
-    - Using Composition API with Nuxt2
-    - Using new CLI and Devtools with Nuxt2
-    - Progressively upgrade to Nuxt3
-    - Compatibility with Nuxt2 module ecosystem
+    - Using Nitro server with Nuxt 2
+    - Using Composition API (same as Nuxt 3) with Nuxt 2
+    - Using new CLI and Devtools with Nuxt 2
+    - Progressively upgrade to Nuxt 3
+    - Compatibility with Nuxt 2 module ecosystem
     - Upgrade piece by piece (Nitro, Composition API, Nuxt Kit)
   ::
 ::

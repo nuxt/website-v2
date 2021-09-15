@@ -1,11 +1,7 @@
 ---
-title: リリース
 template: releases
-description: 'Nuxt releases notes'
+title: Release
+description: "Discover all the release notes for the NuxtJS framework"
 navigation: false
-layout.fluid: false
-layout.asideClass: 'block lg:hidden'
-layout.aside: true
 ---
 
-# Releases

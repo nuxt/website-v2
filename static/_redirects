@@ -39,6 +39,9 @@
 /docs/2.x/deployment/deployment-cloudflare /integrations/deployments/cloudflare 301!
 /docs/2.x/deployment/deployment-stormkitio /integrations/deployments/stormkitio 301!
 
+# Features
+/docs/2.x/features/nuxt-components /docs/features/nuxt-components 301!
+
 #Releases
 /docs/release-notes /releases 310!
 

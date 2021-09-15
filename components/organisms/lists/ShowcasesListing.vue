@@ -66,8 +66,7 @@ export default {
               ...showcase
             }))
           }))
-          ?.flatMap(group => group.showcases)
-          ?.sort((a, b) => Number(a.rank) - Number(b.rank)) || [],
+          ?.flatMap(group => group.showcases) || [],
         'id'
       )
     },

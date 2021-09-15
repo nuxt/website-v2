@@ -6,25 +6,6 @@ export default {
     here: 'here',
     format: '{nuxt} is coming... Discover more about it {here} !'
   },
-  header: {
-    Docs: 'Docs',
-    Examples: 'Exemples',
-    Resources: 'Ressources',
-    Modules: 'Modules',
-    Partners: 'Partenaires',
-    Blog: 'Blog',
-    'Video Courses': 'Cours Video',
-    Discover: 'Découverte',
-    Showcases: 'Showcases',
-    'Case studies': 'Études De Cas',
-    Testimonials: 'Témoignages',
-    Learn: 'Apprendre',
-    Releases: 'Releases',
-    'Mastering Nuxt': 'Mastering Nuxt',
-    Explore: 'Explore',
-    Integrations: 'Intégrations',
-    Themes: 'Thèmes'
-  },
   footer: {
     titles: {
       Discover: 'Découvrir',
@@ -110,8 +91,15 @@ export default {
       visit_website: 'Visitez le website'
     }
   },
+  support: {
+    confirm_sending: 'Message envoyé au support technique',
+    error_sending: "Erreur de l'envoi",
+    invalid_adress: 'Addresse invalide'
+  },
   showcases: {
     loading: 'Chargement...',
+    chrome_extension: 'Extension Chrome',
+    firefox_extension: 'Extension Firefox',
     categories: {
       Featured: 'Featured',
       'E-Commerce': 'E-Commerce',

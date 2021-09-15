@@ -45,7 +45,7 @@ export default defineComponent({
     }
   },
   setup(props) {
-    const { $docus, $menu } = useContext()
+    const { $docus, $menu, app } = useContext()
     const route = useRoute()
     const nav = ref(null)
     const openedLink = ref(null)
@@ -76,7 +76,7 @@ export default defineComponent({
       }
     })
 
-    const home = computed(() => $docus.currentPath.value === '/')
+    const home = computed(() => app.localePath($docus.currentPath.value) === app.localePath('/'))
 
     function toggle(index) {
       if (openedLink.value === index) {

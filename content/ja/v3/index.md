@@ -1,7 +1,7 @@
 ---
 template: blank
 title: Nuxt3 は準備できていますか？
-description: 'Nuxt 3 is rebuilt from the ground up for the modern web. Hybrid static & server rendering, API routes and native serverless.'
+description: 'Nuxt 3は、モダンなウェブのためにゼロから再構築されています。スタティックとサーバーのハイブリッドレンダリング、APIルート、ネイティブなサーバーレスを提供します。'
 head.titleTemplate: null
 ---
 

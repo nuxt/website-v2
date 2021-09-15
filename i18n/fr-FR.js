@@ -14,16 +14,16 @@ export default {
     Partners: 'Partenaires',
     Blog: 'Blog',
     'Video Courses': 'Cours Video',
-    Discover: 'Discover',
+    Discover: 'Découverte',
     Showcases: 'Showcases',
-    'Case studies': 'Case studies',
-    Testimonials: 'Testimonials',
-    Learn: 'Learn',
+    'Case studies': 'Études De Cas',
+    Testimonials: 'Témoignages',
+    Learn: 'Apprendre',
     Releases: 'Releases',
     'Mastering Nuxt': 'Mastering Nuxt',
     Explore: 'Explore',
-    Integrations: 'Integrations',
-    Themes: 'Themes'
+    Integrations: 'Intégrations',
+    Themes: 'Thèmes'
   },
   footer: {
     titles: {
@@ -75,19 +75,19 @@ export default {
       ui: 'UI',
       data: 'Data',
       modules: 'Modules',
-      deployment: 'Deployment'
+      deployment: 'Déploiement'
     },
     cli: "Depuis l'interface CLI",
     scratch: 'À partir de zéro'
   },
   modules: {
-    search: 'Search a module (name, category, username, etc.)',
-    sort_by: 'Sort by',
+    search: "Chercher un module (nom, catégorie, nom d'utilisateur, etc.)",
+    sort_by: 'Trier par',
     sort_fields: {
-      downloads: 'Downloads',
+      downloads: 'Téléchargements',
       stars: 'Stars'
     },
-    loading: 'Loading...',
+    loading: 'Chargement...',
     error: 'Une erreur est survenue lors de la récupération des modules'
   },
   resources: {
@@ -111,16 +111,16 @@ export default {
     }
   },
   showcases: {
-    loading: 'Loading...',
+    loading: 'Chargement...',
     categories: {
       Featured: 'Featured',
       'E-Commerce': 'E-Commerce',
       News: 'News',
-      Government: 'Government',
+      Government: 'Gouvernement',
       Sport: 'Sport',
-      Education: 'Education',
-      Entertainment: 'Entertainment',
-      Travel: 'Travel',
+      Education: 'Éducation',
+      Entertainment: 'Divertissement',
+      Travel: 'Voyage',
       Finance: 'Finance',
       Tech: 'Tech',
       Business: 'Business'
@@ -141,9 +141,9 @@ export default {
     please_define_title: 'Merci de définir un titre',
     please_define_description: 'Merci de définir une description',
     search: 'Rechercher',
-    settings: 'Settings',
+    settings: 'Réglages',
     version: 'Version',
-    currently_version: 'Currently in private beta',
+    currently_version: 'Actuellement en beta privée',
     back: 'Retour',
     go_to: 'Visiter {title}',
     go_home: "Retourner à l'accueil",

@@ -30,7 +30,7 @@
 </template>
 
 <script>
-import { defineComponent, computed, useContext } from '@nuxtjs/composition-api'
+import { defineComponent, computed, useContext, useRoute } from '@nuxtjs/composition-api'
 
 export default defineComponent({
   props: {
@@ -40,8 +40,10 @@ export default defineComponent({
     }
   },
   setup() {
-    const { $docus, app } = useContext()
-    const home = computed(() => app.localePath($docus.currentPath.value) === app.localePath('/'))
+    const { app } = useContext()
+    const route = useRoute()
+
+    const home = computed(() => route.value.fullPath === (app.localePath('/') || app.localePath('/').slice(0, -1)))
 
     return { home }
   }

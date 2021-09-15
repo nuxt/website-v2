@@ -7,8 +7,21 @@
     <Link v-else :to="item.to || ''" :aria-label="item.title" class="absolute inset-0" />
     <div class="ListCard-body">
       <nuxt-img
+        v-if="item.logo && item.logo.dark"
         :alt="`${item.title} logo`"
-        :src="item.logo[$colorMode.value] || item.logo || ''"
+        :src="item.logo.dark"
+        class="dark-img w-12 h-12 mr-4 rounded-md"
+      />
+      <nuxt-img
+        v-if="item.logo && item.logo.light"
+        :alt="`${item.title} logo`"
+        :src="item.logo.light"
+        class="light-img w-12 h-12 mr-4 rounded-md"
+      />
+      <nuxt-img
+        v-if="typeof item.logo === 'string'"
+        :alt="`${item.title} logo`"
+        :src="item.logo || ''"
         class="w-12 h-12 mr-4 rounded-md"
       />
       <h3 class="font-bold text-xl py-2">{{ item.title || 'Title' }}</h3>

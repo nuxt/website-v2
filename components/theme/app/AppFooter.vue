@@ -5,14 +5,14 @@
         v-if="!home"
         loading="lazy"
         :src="`/img/footer/dark/landscape.svg`"
-        class="w-full h-40 object-fill light:hidden pointer-events-none"
+        class="w-full h-40 object-fill dark-img pointer-events-none"
         alt="A landscape image"
       />
       <img
         v-if="!home"
         loading="lazy"
-        :src="`/img/footer/${$colorMode.value}/landscape.svg`"
-        class="w-full h-40 object-fill dark:hidden pointer-events-none"
+        :src="`/img/footer/light/landscape.svg`"
+        class="w-full h-40 object-fill light-img pointer-events-none"
         alt="A landscape image"
       />
     </div>

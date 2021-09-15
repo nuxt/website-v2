@@ -1,10 +1,16 @@
 <template>
   <div class="p-4 dark:bg-sky-darker rounded-md shadow-lg flex space-x-4 items-center dark:text-white">
     <img
-      :src="`/img/sponsors/sponsors-square/${$colorMode.value}/${sponsor.img_square}`"
+      :src="`/img/sponsors/sponsors-square/dark/${sponsor.img_square}`"
       :alt="sponsor.title"
       :class="sponsor.size"
-      class="h-10 object-contain"
+      class="dark-img h-10 object-contain"
+    />
+    <img
+      :src="`/img/sponsors/sponsors-square/light/${sponsor.img_square}`"
+      :alt="sponsor.title"
+      :class="sponsor.size"
+      class="light-img h-10 object-contain"
     />
     <!-- img :src="`/img/sponsors/sponsors-square/${sponsor.img_square}`" :alt="sponsor.title" /-->
     <div class="flex w-3/4" :class="{ 'justify-between items-center': sponsor.link }">

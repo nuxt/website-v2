@@ -1,18 +1,18 @@
 ---
-template: page
+template: blank
 title: 'Le framework Vue intuitif'
 description: 'Construisez votre prochaine application Vue.js en toute confiance avec NuxtJS. Un framework open source qui rend le développement web simple et puissant.'
+bgClass: 'bg-white'
 ---
 ::home-hero
 ---
 primary:
-  text: Démarrez
-  url: /docs/get-started/installation
-  icon: IconPlay
-secondary:
-  text: 37K+ GitHub stars
+  text: 38K+ GitHub stars
   url: https://github.com/nuxt/nuxt.js
   icon: IconGitHub
+secondary:
+  text: npm init nuxt-app
+  icon: IconCopy
 ---
 
 #title
@@ -22,36 +22,25 @@ Le framework Vue<br>intuitif
 Construisez votre prochaine application Vue.js en toute confiance avec NuxtJS.<br class="hidden sm:block" /> Un framework open source qui rend le développement web simple et puissant.
 ::
 
-::home-discover
+::home-learn-master
 ---
-category: Discover
+category: Apprendre
 ---
 
 #title
-Une [_vie_]{.text-primary} plus simple, du [_Code_]{.text-primary} au [_Cloud_]{.text-primary}
+[_Facile_]{.text-primary} à apprendre. [_Facile_]{.text-primary} à maîtriser
 
 #description
-Nuxt est un framework web open source basé sur les librairies officielles Vue.js, Node.js, et de puissants outils comme Webpack, Babel et PostCSS. Nuxt rend le développement web intuitif et performant, avec toujours en tête l'expérience de développement. Déployez en une commande votre application sur de nombreuses plateformes, d'un hébergement Node.js à un site web statique.
+Prenez part à la communauté Nuxt.js et aidez nous à rendre le monde plus Nuxt.
 
-#animations-texts
-- Tout commence par du HTML et des composants Vue
-- Utilisez vos outils favoris pour ajouter du style
-- Requêtez du contenu localement ou via des APIs tierces
-- Etendez le comportement de Nuxt avec notre écosystème de modules
-- Déployez en toute confiance sur de nombreuses plateformes
+#bottom
+:button-link[Commencez]{href="/docs/get-started/installation" size="medium"}
 ::
 
 ::home-features
 ---
 category: Fonctionnalités
 ---
-#title
-Intuitive [D]{.text-primary}eveloper E[x]{.text-primary}perience
-
-#description
-Nuxt contient de nombreuses fonctionnalités améliorant l'expérience de développement et l'expérience de l'utilisateur final.
-
-#default
   ::section-content-item
   ---
   title: Zero Configuration
@@ -108,6 +97,11 @@ Nuxt contient de nombreuses fonctionnalités améliorant l'expérience de dével
   image: /img/home/discover/dx/modular.svg
   ---
   ::
+#title
+Intuitive [D]{.text-primary}eveloper E[x]{.text-primary}perience
+
+#description
+Nuxt contient de nombreuses fonctionnalités améliorant l'expérience de développement et l'expérience de l'utilisateur final.
 ::
 
 ::home-discover-partners
@@ -125,111 +119,156 @@ Nuxt est construit et maintenu par des développeurs passionnés mais il serait 
 :button-link[Sponsorisez NuxtJS]{href="/sponsors" size="medium"}
 ::
 
-::home-learn-master
----
-category: Learn
----
-
-#title
-[_Facile_]{.text-primary} à apprendre. [_Facile_]{.text-primary} à maîtriser
-
-#description
-Prenez part à la communauté Nuxt.js et aidez nous à rendre le monde plus Nuxt.
-
-#bottom
-:button-link[Commencez]{href="/docs/get-started/installation" size="medium"}
-::
-
 ::home-learn-guides
 ---
-category: Learn
+category: Apprendre
 ---
+  ::section-content-item
+  ---
+  title: Documentation
+  description: "Apprenez les concepts et fonctionnalités de Nuxt, du débutant à l'expert."
+  image: /img/home/learn/guides/gem-1.svg
+  to: '/docs/get-started/installation'
+  hoverClass: 'hover:bg-sky-darker'
+  ---
+  ::
+
+  ::section-content-item
+  ---
+  title: Exemples
+  description: "Apprenez grâce aux exemples créés par la communauté."
+  image: /img/home/learn/guides/gem-2.svg
+  to: '/examples'
+  hoverClass: 'hover:bg-sky-darker'
+  ---
+  ::
+
+  ::section-content-item
+  ---
+  title: Releases
+  description: "Découvrez ce qui a changé avant la mise à jour."
+  image: /img/home/learn/guides/gem-3.svg
+  to: '/releases'
+  hoverClass: 'hover:bg-sky-darker'
+  ---
+  ::
+
+  ::section-content-item
+  ---
+  title: Master Courses
+  description: 'Visionnez une série complète de vidéos pour apprendre Nuxt avec notre partenaire Vue School.'
+  image: /img/home/learn/guides/gem-4.svg
+  to: 'https://masteringnuxt.com'
+  hoverClass: 'hover:bg-sky-darker'
+  ---
+  ::
+
 #title
 Suivez nos [_Guides_]{.text-primary}
 
 #description
-De l'idée au chef d'oeuvre, nos guides vous indiquent la voie à suivre.
-
-#default
-  ::section-content-item
-  ---
-  title: Usage
-  description: "Apprenez les concepts et fonctionnalités de Nuxt, du débutant à l'expert."
-  image: /img/home/learn/guides/gem-usage.svg
-  to: '/docs/get-started/installation'
-  linkName: 'Apprenez Nuxt'
-  ---
-  ::
-
-  ::section-content-item
-  ---
-  title: Glossaire interne
-  description: "Plongez au coeur de Nuxt pour étendre le comportement de votre application."
-  image: /img/home/learn/guides/gem-internals.svg
-  to: '/docs/internals-glossary/context'
-  linkName: 'Explorez le glossaire interne'
-  ---
-  ::
-
-  ::section-content-item
-  ---
-  title: Références des APIs
-  description: "Découvrez chaque propriété et ses options lorsque vous avez besoin d'une vue complète."
-  image: /img/home/learn/guides/gem-api.svg
-  to: '/docs/configuration-glossary/configuration-alias'
-  linkName: 'Découvrez les références des APIs'
-  ---
-  ::
+From an Idea to a Masterpiece, guides show the path to become a Nuxter.
 ::
 
 ::home-explore
 ---
 category: Explorez
 ---
+  ::section-content-item
+  ---
+  title: 'Integrations'
+  description: "Étendez et automatisez votre travail en utilisant les intégrations pour vos outils préférés."
+  image: '/img/home/explore/gem-explore-1.svg'
+  to: '/integrations'
+  hoverClass: 'hover:bg-sky-surface'
+  ---
+  ::
+  ::section-content-item
+  ---
+  title: 'Themes'
+  description: "Découvrez comment une application du monde réel est construite à l'aide de Nuxt avec les thèmes construits par nos partenaires."
+  image: '/img/home/explore/gem-explore-2.svg'
+  to: '/themes'
+  hoverClass: 'hover:bg-sky-surface'
+  ---
+  ::
+  ::section-content-item
+  ---
+  title: 'Cours vidéo'
+  description: "Découvrez et apprenez-en plus sur le Framework Nuxt avec les cours vidéos gratuits et premium."
+  image: '/img/home/explore/gem-explore-3.svg'
+  to: '/video-courses'
+  hoverClass: 'hover:bg-sky-surface'
+  ---
+  ::
+
 #title
 Besoin d'aller plus loin ? Il y a tellement à [_Explorer_]{.text-primary}
 
 #description
 Nuxt a beaucoup de dimensions à explorer, apprenez par l'exemple, intégrez des fournisseurs externes ou commencez plus vite avec un thème.
 
-#default
-  ::section-content-item
-  ---
-  title: 'Exemples'
-  description: "Inspirez vous de cas d'usage, des tâches communes à des exemples avancés."
-  image: '/img/home/explore/gem-1-hover.svg'
-  to: '/examples'
-  linkName: "Cherchez l'inspiration"
-  ---
-  ::
-  ::section-content-item
-  ---
-  title: 'Modules'
-  description: "Tirez partie de notre écosystème de modules pour ne pas réinventer la roue."
-  image: '/img/home/explore/gem-3-hover.svg'
-  to: 'https://modules.nuxtjs.org'
-  linkName: 'Découvrez les modules'
-  ---
-  ::
-  ::section-content-item
-  ---
-  title: 'Thèmes'
-  description: "Démarrez en quelques minutes avec un design fourni par un de nos thèmes."
-  image: '/img/home/explore/gem-4-hover.svg'
-  to: '/themes'
-  linkName: 'Démarrez tout de suite'
-  ---
-  ::
 ::
 
 ::home-campfire
 ---
 category: Communauté
+announcementsCategory: Annonces
+eventsCategory: Evénements
+articleLinkTitle: Informations
 ---
 
 #title
 Sharing is [_Caring_]{.text-primary}
 
 #description
-Lisez nos articles rédigés par l'équipe NuxtJS et la communauté
+Lisez nos articles rédigés par l'équipe NuxtJS et la communauté, trucs et astuces inclus !
+
+#campfire-list
+  :::campfire-list-item
+  ---
+  title: Annonces
+  description: Découvrez les articles de l'équipe NuxtJS.
+  to: '/announcements'
+  ---
+  :::
+  :::campfire-list-item
+  ---
+  title: Evénements
+  description: Découvrez et abonnez-vous aux futurs événements mettant en avant du contenu Nuxt, et regardez les discussions précédentes de l'équipe et de la communauté.
+  to: '/events'
+  ---
+  :::
+  :::campfire-list-item
+  ---
+  title: Sponsors
+  description: Si vous utilisez NuxtJS dans votre travail quotidien et que cela vous a rendu la vie plus facile, pensez à nous soutenir.
+  to: '/sponsors'
+  ---
+  :::
+  :::campfire-list-item
+  ---
+  title: Tutoriels
+  description: Découvrez les tutoriels réalisés par la communauté NuxtJS.
+  to: '/tutorials'
+  ---
+  :::
+::
+
+::home-testimonials
+---
+category: Communauté
+---
+#title
+Témoignages
+
+#description
+Apprenez ce que les experts aiment chez Nuxt.
+
+#testimonials
+  :::testimonials
+  ---
+  home: true
+  ---
+  :::
 ::

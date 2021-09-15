@@ -17,8 +17,8 @@
     "
   >
     <!-- Back link -->
-    <NuxtLink v-if="parent" class="mb-3 block" :to="$contentLocalePath(parent.to)">
-      <IconArrowLeft width="16" height="16" class="inline-block mr-2" /> {{ parent.title }}
+    <NuxtLink v-show="parent" class="mb-3 block" :to="(parent && $contentLocalePath(parent.to)) || ''">
+      <IconArrowLeft width="16" height="16" class="inline-block mr-2" /> {{ parent && parent.title }}
     </NuxtLink>
 
     <!-- Title -->

@@ -21,13 +21,11 @@
 </template>
 
 <script>
-import { computed, defineComponent, useContext, useFetch, ref, watch } from '@nuxtjs/composition-api'
+import { defineComponent, useContext, useFetch, ref, watch } from '@nuxtjs/composition-api'
 
 export default defineComponent({
   setup() {
     const { $docus, i18n } = useContext()
-
-    const layout = computed(() => $docus.layout.value)
 
     const headerLinks = ref([])
     const footerLinks = ref([])
@@ -53,8 +51,12 @@ export default defineComponent({
 
     return {
       headerLinks,
-      footerLinks,
-      layout
+      footerLinks
+    }
+  },
+  computed: {
+    layout() {
+      return this.$docus.layout.value
     }
   }
 })

@@ -15,7 +15,7 @@
 </template>
 
 <script lang="ts">
-import { defineComponent, ref, useContext, useFetch, onMounted } from '@nuxtjs/composition-api'
+import { defineComponent, onMounted } from '@nuxtjs/composition-api'
 import { useGitHub, scrollToHeading } from '@docus/theme/runtime'
 
 export default defineComponent({
@@ -25,11 +25,8 @@ export default defineComponent({
       required: true
     }
   },
-  setup(props) {
-    const { $docus } = useContext()
+  setup() {
     const { repoUrl } = useGitHub()
-    const prev = ref(null)
-    const next = ref(null)
 
     onMounted(() => {
       if (window.location.hash) {

@@ -1,10 +1,11 @@
 ---
-title: Examples
 template:
-  nested: 'guide'
-  self: 'guide'
+  nested: guide
+  self: guide
+title: Exemples
 navigation:
   exclusive: true
-  redirect: /examples/routing/hello-world
   collapse: true
+  redirect: /examples/routing/hello-world
+layout.aside: true
 ---

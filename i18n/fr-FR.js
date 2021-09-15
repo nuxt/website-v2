@@ -6,25 +6,6 @@ export default {
     here: 'here',
     format: '{nuxt} is coming... Discover more about it {here} !'
   },
-  header: {
-    Docs: 'Docs',
-    Examples: 'Exemples',
-    Resources: 'Ressources',
-    Modules: 'Modules',
-    Partners: 'Partenaires',
-    Blog: 'Blog',
-    'Video Courses': 'Cours Video',
-    Discover: 'Discover',
-    Showcases: 'Showcases',
-    'Case studies': 'Case studies',
-    Testimonials: 'Testimonials',
-    Learn: 'Learn',
-    Releases: 'Releases',
-    'Mastering Nuxt': 'Mastering Nuxt',
-    Explore: 'Explore',
-    Integrations: 'Integrations',
-    Themes: 'Themes'
-  },
   footer: {
     titles: {
       Discover: 'Découvrir',
@@ -75,19 +56,19 @@ export default {
       ui: 'UI',
       data: 'Data',
       modules: 'Modules',
-      deployment: 'Deployment'
+      deployment: 'Déploiement'
     },
     cli: "Depuis l'interface CLI",
     scratch: 'À partir de zéro'
   },
   modules: {
-    search: 'Search a module (name, category, username, etc.)',
-    sort_by: 'Sort by',
+    search: "Chercher un module (nom, catégorie, nom d'utilisateur, etc.)",
+    sort_by: 'Trier par',
     sort_fields: {
-      downloads: 'Downloads',
+      downloads: 'Téléchargements',
       stars: 'Stars'
     },
-    loading: 'Loading...',
+    loading: 'Chargement...',
     error: 'Une erreur est survenue lors de la récupération des modules'
   },
   resources: {
@@ -110,21 +91,32 @@ export default {
       visit_website: 'Visitez le website'
     }
   },
+  support: {
+    confirm_sending: 'Message envoyé au support technique',
+    error_sending: "Erreur de l'envoi",
+    invalid_adress: 'Addresse invalide'
+  },
   showcases: {
-    loading: 'Loading...',
+    loading: 'Chargement...',
+    chrome_extension: 'Extension Chrome',
+    firefox_extension: 'Extension Firefox',
     categories: {
       Featured: 'Featured',
       'E-Commerce': 'E-Commerce',
       News: 'News',
-      Government: 'Government',
+      Government: 'Gouvernement',
       Sport: 'Sport',
-      Education: 'Education',
-      Entertainment: 'Entertainment',
-      Travel: 'Travel',
+      Education: 'Éducation',
+      Entertainment: 'Divertissement',
+      Travel: 'Voyage',
       Finance: 'Finance',
       Tech: 'Tech',
       Business: 'Business'
     }
+  },
+  releases: {
+    version: 'Version',
+    released_on: 'Sortie le'
   },
   theme_mode: {
     system: 'Système',
@@ -137,9 +129,9 @@ export default {
     please_define_title: 'Merci de définir un titre',
     please_define_description: 'Merci de définir une description',
     search: 'Rechercher',
-    settings: 'Settings',
+    settings: 'Réglages',
     version: 'Version',
-    currently_version: 'Currently in private beta',
+    currently_version: 'Actuellement en beta privée',
     back: 'Retour',
     go_to: 'Visiter {title}',
     go_home: "Retourner à l'accueil",
@@ -147,7 +139,8 @@ export default {
     days: 'jours',
     hours: 'heures',
     minutes: 'minutes',
-    seconds: 'secondes'
+    seconds: 'secondes',
+    copied: 'Copié'
   },
   iso: 'fr',
   cookies: {

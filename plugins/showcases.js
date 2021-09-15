@@ -16,6 +16,12 @@ export function useShowcases({ id }) {
     // Get showcases
     showcases.value = await _fetch(`https://api.vuetelescope.com/lists/${id}`)
 
+    // ensure groups & showcases are well sorted
+    showcases.value.groups?.sort((a, b) => Number(a.position) - Number(b.position))
+    showcases.value.groups?.forEach(group => {
+      group.showcases.sort((a, b) => Number(a.position) - Number(b.position))
+    })
+
     return showcases
   }
 

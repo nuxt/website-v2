@@ -47,7 +47,7 @@
 export default {
   methods: {
     home() {
-      if (this.$route.path === '/') {
+      if (this.$route.path === this.localePath('/')) {
         // scroll to top
         window.scrollTo(0, 0)
       }

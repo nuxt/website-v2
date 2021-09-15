@@ -45,7 +45,7 @@ import { defineComponent, ref, useContext, useFetch } from '@nuxtjs/composition-
 
 export default defineComponent({
   setup() {
-    const { $docus, i18n } = useContext()
+    const { $docus } = useContext()
     const partners = ref()
 
     useFetch(async () => {

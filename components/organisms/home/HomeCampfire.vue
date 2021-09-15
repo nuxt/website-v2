@@ -78,8 +78,6 @@ export default defineComponent({
 
       posts.value.push(announcements[0])
       posts.value.push(events[0].events[events[0].events.length - 1])
-
-      console.log(events[0].events[events[0].events.length])
     })
 
     return {

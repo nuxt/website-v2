@@ -1,7 +1,7 @@
 ---
 template: blank
 title: 'Showcases'
-description: 'Discover our selection of websites built with NuxtJS.'
+description: 'Découvrez notre sélection de site fait avec NuxtJS.'
 layout:
   fluid: true
 ---
@@ -11,7 +11,7 @@ layout:
 title: 'Showcases'
 ---
 #description
-  Discover our selection of websites built with NuxtJS. This collection is powered by VueTelescope. Visit [vuetelescope.com](https://vuetelescope.com) and try out the browser extension.
+  Découvrez notre sélection de site fait avec NuxtJS. Cette collection est propulsée par VueTelescope. Visitez [vuetelescope.com](https://vuetelescope.com) et essayez l'extension pour Chrome et Firefox.
 ::
 
 ::showcases-listing

@@ -1,5 +1,5 @@
 <template>
-  <div class="relative sm:pb-20 lg:pb-28 xl:pb-40 2xl:pb-60">
+  <div class="relative" :class="{ 'sm:pb-20 lg:pb-28 xl:pb-40 2xl:pb-60': home }">
     <section class="py-40" :class="home ? 'bg-white text-secondary-black' : 'text-white light:text-secondary-black'">
       <NuxtContainer class="flex flex-col items-center">
         <div class="flex flex-col w-full items-center col-span-12">
@@ -20,6 +20,7 @@
       </NuxtContainer>
     </section>
     <img
+      v-if="home"
       loading="lazy"
       :src="`/img/home/discover/dx/discover-mountain.svg`"
       class="absolute left-0 bottom-0 z-10 object-cover w-full"
@@ -29,7 +30,7 @@
 </template>
 
 <script>
-import { defineComponent, computed, useContext } from '@nuxtjs/composition-api'
+import { defineComponent, computed, useContext, useRoute } from '@nuxtjs/composition-api'
 
 export default defineComponent({
   props: {
@@ -39,8 +40,10 @@ export default defineComponent({
     }
   },
   setup() {
-    const { $docus } = useContext()
-    const home = computed(() => $docus.currentPath.value === '/')
+    const { app } = useContext()
+    const route = useRoute()
+
+    const home = computed(() => route.value.fullPath === (app.localePath('/') || app.localePath('/').slice(0, -1)))
 
     return { home }
   }

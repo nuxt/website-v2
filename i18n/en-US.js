@@ -70,16 +70,6 @@ export default {
     loading: 'Loading...',
     error: 'An error occured while fetching modules.'
   },
-  events: {
-    search: 'Search an event (title, year, speaker, etc.)',
-    sort_by: 'Sort by',
-    sort_fields: {
-      downloads: 'Downloads',
-      stars: 'Stars'
-    },
-    loading: 'Loading...',
-    error: 'An error occured while fetching events.'
-  },
   resources: {
     themes: {
       get_for_it: 'Get it for {price}',
@@ -123,6 +113,10 @@ export default {
       Business: 'Business'
     }
   },
+  releases: {
+    version: 'Version',
+    released_on: 'Released on'
+  },
   theme_mode: {
     system: 'System',
     light: 'Light',
@@ -144,7 +138,8 @@ export default {
     days: 'days',
     hours: 'hours',
     minutes: 'minutes',
-    seconds: 'seconds'
+    seconds: 'seconds',
+    copied: 'Copied'
   },
   iso: 'en'
 }

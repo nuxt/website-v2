@@ -6,13 +6,13 @@
         :key="`${partner.alt}-${index}`"
         class="flex items-center p-8 mx-12 partners__slide md:p-4"
       >
-        <a :href="partner.url" class="opacity-75 hover:opacity-100 w-28" rel="noopener sponsored" target="_blank">
+        <a :href="partner.link" class="opacity-75 hover:opacity-100 w-28" rel="noopener sponsored" target="_blank">
           <img
             loading="lazy"
-            :src="partner.logo.replace('dark', 'light')"
+            :src="partner.logoFull"
             :alt="partner.title"
             :title="partner.title"
-            class="h-8"
+            :class="partner.logoSize || 'h-full w-full'"
           />
         </a>
       </li>
@@ -76,16 +76,6 @@ export default defineComponent({
   content: '';
   pointer-events: none;
 }
-
-//TODO: put real color when there will be available via docus
-.dark .partners__slider::before,
-.dark .partners__slider::after {
-  @apply absolute h-24 w-48 z-10;
-  background: linear-gradient(to right, #001e26 0%, rgba(255, 255, 255, 0) 20%);
-  content: '';
-  pointer-events: none;
-}
-
 @screen sm {
   .partners__slider::before,
   .partners__slider::after {
@@ -93,24 +83,10 @@ export default defineComponent({
   }
 }
 
-@screen sm {
-  .dark .partners__slider::before,
-  .dark .partners__slider::after {
-    background: linear-gradient(to right, #001e26 0%, rgba(255, 255, 255, 0) 50%);
-  }
-}
-
 @screen md {
   .partners__slider::before,
   .partners__slider::after {
     background: linear-gradient(to right, rgba(229, 249, 255, 0) 0%, rgba(255, 255, 255, 0) 100%);
-  }
-}
-
-@screen md {
-  .dark .partners__slider::before,
-  .dark .partners__slider::after {
-    background: linear-gradient(to right, #001e26 0%, rgba(255, 255, 255, 0) 100%);
   }
 }
 

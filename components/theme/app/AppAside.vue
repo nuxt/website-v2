@@ -72,8 +72,9 @@
                   :icon-class="`w-6 h-6 m-auto ${
                     home ? 'text-gray-300 hover:text-primary-400' : 'd-secondary-text hover:d-secondary-text-hover'
                   }`"
+                  strategy="fixed"
                 />
-                <ColorSwitcher />
+                <ColorSwitcher v-if="localePath($route.path) !== localePath('/')" />
               </div>
             </div>
 
@@ -99,11 +100,12 @@ export default defineComponent({
   setup() {
     const {
       $docus: { layout, currentPath },
-      $menu
+      $menu,
+      app
     } = useContext()
 
     const mobileMainNav = ref(!layout.value.aside)
-    const home = computed(() => currentPath.value === '/')
+    const home = computed(() => app.localePath(currentPath.value) === app.localePath('/'))
 
     watch($menu.visible, (value, old) => {
       if (value && !old && layout.value.aside) {

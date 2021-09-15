@@ -40,8 +40,8 @@ export default defineComponent({
     }
   },
   setup() {
-    const { $docus } = useContext()
-    const home = computed(() => $docus.currentPath.value === '/')
+    const { $docus, app } = useContext()
+    const home = computed(() => app.localePath($docus.currentPath.value) === app.localePath('/'))
 
     return { home }
   }

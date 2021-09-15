@@ -7,7 +7,15 @@
           class="absolute top-0 left-0 px-4 -mt-12 sm:-mt-16"
         >
           <span
-            class="text-sm font-medium leading-none text-gray-900  sm:text-base dark:text-gray-100 hover:d-secondary-text"
+            class="
+              text-sm
+              font-medium
+              leading-none
+              text-gray-900
+              sm:text-base
+              dark:text-gray-100
+              hover:d-secondary-text
+            "
             >← Back</span
           >
         </NuxtLink>
@@ -75,8 +83,7 @@ export default defineComponent({
       required: true
     }
   },
-  setup(props) {
-    console.log(props.page)
+  setup() {
     onMounted(() => {
       if (window.location.hash) {
         const hash = window.location.hash.replace('#', '')

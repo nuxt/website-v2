@@ -35,8 +35,6 @@ export default defineComponent({
     // double array values
     const partners = computed(() => props.partnersLogo.concat(props.partnersLogo))
 
-    console.log(partners.value)
-
     return {
       partners
     }

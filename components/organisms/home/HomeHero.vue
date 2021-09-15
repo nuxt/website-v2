@@ -1,5 +1,5 @@
 <template>
-  <div class="overflow-hidden relative bg-sky-black text-white -mt-18 pt-18">
+  <div class="overflow-hidden relative bg-sky-black text-white -mt-14 pt-14 md:-mt-18 md:pt-18">
     <HeroParallax />
     <!-- Stars -->
     <div class="absolute left-0 w-full h-full overflow-hidden -top-24 z-0">

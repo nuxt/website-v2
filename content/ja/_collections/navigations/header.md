@@ -1,82 +1,82 @@
 ---
 links:
   -
-    title: 'Discover'
+    title: '見る'
     items:
       -
-        title: 'Showcases'
+        title: '導入事例'
         slug: 'showcases'
         to: '/showcases'
       -
-        title: 'Case studies'
+        title: '事例紹介'
         slug: 'case-studies'
         to: '/case-studies'
       -
-        title: 'Testimonials'
+        title: '著名人の声'
         slug: 'testimonials'
         to: '/testimonials'
   -
-    title: 'Learn'
+    title: '学ぶ'
     items:
       -
-        title: 'Docs'
+        title: 'ドキュメント'
         slug: 'docs'
         to: '/docs'
       -
-        title: 'Examples'
+        title: '例'
         slug: 'examples'
         to: '/examples'
       -
-        title: 'Releases'
+        title: 'リリース'
         slug: 'releases'
         to: '/releases'
       -
-        title: 'Master courses'
+        title: 'マスターコース'
         href: 'https://masteringnuxt.com/'
   -
-    title: 'Explore'
+    title: '探す'
     items:
       -
-        title: 'Integrations'
+        title: 'インテグレーション'
         slug: 'integrations'
         to: '/integrations'
       -
-        title: 'Modules'
+        title: 'モジュール'
         slug: 'modules'
         to: '/modules'
       -
-        title: 'Themes'
+        title: 'テーマ'
         slug: 'themes'
         to: '/themes'
       -
-        title: 'Video Courses'
+        title: 'ビデオコース'
         slug: 'video-courses'
         to: '/video-courses'
   -
-    title: 'Community'
+    title: 'コミュニティ'
     items:
       -
-        title: 'Announcements'
+        title: 'お知らせ'
         slug: 'announcements'
         to: '/announcements'
       -
-        title: 'Events'
+        title: 'イベント'
         slug: 'events'
         to: '/events'
       -
-        title: 'Sponsors'
+        title: 'スポンサー'
         slug: 'sponsors'
         to: '/sponsors'
       -
-        title: 'Teams'
+        title: 'チーム'
         slug: 'teams'
         to: '/teams'
       -
-        title: 'Tutorials'
+        title: 'チュートリアル'
         slug: 'tutorials'
         to: '/tutorials'
   -
-    title: 'Partners'
+    title: 'パートナー'
     slug: 'partners'
     to: '/partners'
 ---

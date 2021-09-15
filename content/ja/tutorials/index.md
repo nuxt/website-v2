@@ -1,6 +1,6 @@
 ---
 template: blog
-title: Tutorials
-description: Discover tutorials made by the NuxtJS community.
+title: チュートリアル
+description: NuxtJS コミュニティが作成したチュートリアルをご覧ください。
 blogPostList: true
 ---

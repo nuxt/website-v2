@@ -1,7 +1,7 @@
 ---
 template: blog
-title: Annoucements
-description: Discover articles from NuxtJS team.
+title: お知らせ
+description: NuxtJS チームから記事を見つける
 blogPostList: true
 sortBy:
   field: 'position'

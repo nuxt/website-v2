@@ -1,8 +1,8 @@
 ---
 template: list
-title: Partners
-description: "Nuxt is an MIT licensed open source project and free to use. However, the maintenance effort is not sustainable without proper financial backing."
-heroTitle: Partners
-heroDescription: "Find your perfect match. Get help from a solutions partner or solutions provider."
+title: パートナー
+description: "Nuxt は MIT ライセンスのオープンソースプロジェクトで、無料で使用できます。しかし、適切な資金的裏付けがなければ、メンテナンスの努力は持続しません。"
+heroTitle: パートナー
+heroDescription: "あなたにぴったりの相手を見つけてください。ソリューションパートナーやソリューションプロバイダーのサポートを受けることができます。"
 heroButton: partners
 ---

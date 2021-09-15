@@ -39,6 +39,9 @@
 /docs/2.x/deployment/deployment-cloudflare /integrations/deployments/cloudflare 301!
 /docs/2.x/deployment/deployment-stormkitio /integrations/deployments/stormkitio 301!
 
+#Releases
+/docs/release-notes /releases 310!
+
 # Examples
 /examples/hello-world /examples/routing/hello-world 301!
 /examples/routing-active-links-classes /examples/routing/active-link-classes 301!
@@ -69,18 +72,29 @@
 /examples/modules-axios /examples/modules/axios 301!
 
 # Blog
+/blog /announcements 301!
 /blog/case-study-livementor /case-studies/livementor 301!
-/blog/creating-a-nuxt-module /tutorials/creating-a-nuxt-module 301!
-/blog/creating-a-nuxt-module /tutorials/creating-a-nuxt-module 301!
 /blog/nuxt-static-improvements /announcements/nuxt-static-improvements 301!
+/blog/going-full-static /announcements/going-full-static 301!
+/blog/nuxtjs-from-terminal-to-browser /announcements/nuxtjs-from-terminal-to-browser 301!
+/blog/introducing-smart-prefetching /announcements/introducing-smart-prefetching 301!
+/blog/understanding-how-fetch-works-in-nuxt-2-12 /announcements/understanding-how-fetch-works-in-nuxt-2-12 301!
+/blog/creating-a-nuxt-module /tutorials/creating-a-nuxt-module 301!
 /blog/creating-blog-with-nuxt-content /tutorials/creating-blog-with-nuxt-content 301!
 /blog/improve-your-developer-experience-with-nuxt-components /tutorials/improve-your-developer-experience-with-nuxt-components 301!
-/blog/going-full-static /announcements/going-full-static 301!
 /blog/moving-from-nuxtjs-dotenv-to-runtime-config /tutorials/moving-from-nuxtjs-dotenv-to-runtime-config 301!
 /blog/going-dark-with-nuxtjs-color-mode /tutorials/going-dark-with-nuxtjs-color-mode 301!
 /blog/build-dev-to-clone-with-nuxt-new-fetch /tutorials/build-dev-to-clone-with-nuxt-new-fetch 301!
-/blog/nuxtjs-from-terminal-to-browser /announcements/nuxtjs-from-terminal-to-browser 301!
-/blog/introducing-smart-prefetching /announcements/introducing-smart-prefetching 301!
+/blog/seed-round https://www.nuxtlabs.com 301!
+
+#Resources
+/resources /modules 301!
+
+#Shop
+/shop /sponsors 301!
 
 #Sponsors
 /sponsor-nuxtjs /sponsors 301!
+
+#Teams
+/team /teams 301!

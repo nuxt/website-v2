@@ -96,6 +96,7 @@ category: Fonctionnalités
   description: "Etendez votre application avec plus de 160 modules Nuxt, et créez le vôtre."
   image: /img/home/discover/dx/modular.svg
   ---
+---
   ::
 #title
 Intuitive [D]{.text-primary}eveloper E[x]{.text-primary}perience
@@ -185,19 +186,19 @@ category: Explorez
   ::
   ::section-content-item
   ---
-  title: 'Themes'
-  description: "Découvrez comment une application du monde réel est construite à l'aide de Nuxt avec les thèmes construits par nos partenaires."
+  title: 'Modules'
+  description: "Découvrez la liste des modules pour étendre vos projects Nuxt. Créés par l'équipe de Nuxt et sa communauté"
   image: '/img/home/explore/gem-explore-2.svg'
-  to: '/themes'
+  to: '/modules'
   hoverClass: 'hover:bg-sky-surface'
   ---
   ::
   ::section-content-item
   ---
-  title: 'Cours vidéo'
-  description: "Découvrez et apprenez-en plus sur le Framework Nuxt avec les cours vidéos gratuits et premium."
+  title: 'Themes'
+  description: "Découvrez comment une application du monde réel est construite à l'aide de Nuxt avec les thèmes construits par nos partenaires."
   image: '/img/home/explore/gem-explore-3.svg'
-  to: '/video-courses'
+  to: '/themes'
   hoverClass: 'hover:bg-sky-surface'
   ---
   ::

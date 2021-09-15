@@ -197,19 +197,19 @@ hoverClass: 'hover:bg-sky-surface'
 ::
 ::section-content-item
 ---
-title: 'Themes'
-description: 'See how a real world application is built using the Nuxt stack with the themes built by our partners.'
+title: 'Modules'
+description: 'Discover our list of modules to supercharge your Nuxt project. Created by the Nuxt team and community.'
 image: '/img/home/explore/gem-explore-2.svg'
-to: '/themes'
+to: '/modules'
 hoverClass: 'hover:bg-sky-surface'
 ---
 ::
 ::section-content-item
 ---
-title: 'Video Courses'
-description: 'Discover and learn more about the Nuxt Framework with free and premium video courses.'
+title: 'Themes'
+description: 'See how a real world application is built using the Nuxt stack with the themes built by our partners.'
 image: '/img/home/explore/gem-explore-3.svg'
-to: '/video-courses'
+to: '/themes'
 hoverClass: 'hover:bg-sky-surface'
 ---
 ::

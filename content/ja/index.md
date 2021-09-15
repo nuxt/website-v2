@@ -1,235 +1,285 @@
 ---
-template: page
-title: The Intuitive Vue Framework
-description: NuxtJS を使って信頼ある次世代の Vue.js アプリケーションを構築する Web 開発をシンプルにかつパワフルにするオープンソースフレームワーク
+template: blank
+title: 'The Intuitive Vue Framework'
+description: 'Build your next Vue.js application with confidence using Nuxt. An open source framework making web development simple and powerful.'
+bgClass: 'bg-white'
 ---
 
 ::home-hero
 ---
 primary:
-  text: はじめる
-  url: /docs/get-started/installation
-  icon: IconPlay
-secondary:
-  text: 37K+ GitHub stars
+  text: 38K+ GitHub stars
   url: https://github.com/nuxt/nuxt.js
   icon: IconGitHub
+secondary:
+  text: npm init nuxt-app
+  icon: IconCopy
 ---
+
 #title
 The Intuitive Vue<br>Framework
-#description
-NuxtJS を使って信頼ある次世代の Vue.js アプリケーションを構築する<br class="hidden sm:block" /> Web 開発をシンプルにかつパワフルにするオープンソースフレームワーク
-::
-
-::home-discover
----
-category: 発見
----
-#title
-[コード]{.text-primary}から[クラウド]{.text-primary}へ、より快適な[生活]{.text-primary}を
 
 #description
-Nuxt は Node.js や Webpack、Babel そして PostCSS のようなパワフルなツールを使った公式 Vue.js ライブラリをベースにしたオープンソース Web フレームワークです。
-Nuxt は優れた開発者体験を念頭に、直感的でパフォーマンスの高い Web 開発を実現します。
-アプリケーションを Node.js のホスティングから静的な Web サイトまで、多くのプラットフォームに1つのコマンドでデプロイします。
-
-#animations-texts
-- HTML と Vue コンポーネントで全て開始する
-- お気に入りのツールを使っていくつかのスタイルを追加する
-- ローカルまたはサードパーティからコンテンツを取得する
-- モジュールエコシステムを使って Nuxt の動作を拡張する
-- 信頼されたさまざまなプラットフォームにデプロイする
-::
-
-::home-features
----
-category: 機能
----
-#title
-直感的な[開]{.text-primary}発者[体]{.text-primary}験
-
-#description
-Nuxt は開発者の生産性やエンドユーザーの体験を向上させるための機能が数多く搭載されています。
-
-#default
-  ::section-content-item
-  ---
-  title: ゼロコンフィグレーション
-  description: '素早くアプリケーションのコーディングを開始し、Nuxt が面倒を見てくれます。'
-  image: /img/home/discover/dx/zero-config.svg
-  ---
-  ::
-  ::section-content-item
-  ---
-  title: ファイルシステムルーティング
-  description: '自動ルーティングとページごとにコード分割します。'
-  image: /img/home/discover/dx/file-system-routing.svg
-  ---
-  ::
-  ::section-content-item
-  ---
-  title: レンダリングモード
-  description: '静的サイト生成とオンデマンドのサーバーレンダリングを切り替えることができます。'
-  image: /img/home/discover/dx/hybrid.svg
-  ---
-  ::
-  ::section-content-item
-  ---
-  title: データフェッチング
-  description: 'SSR に対応した Vue コンポーネントで、任意のソースからコンテンツを取得できます。'
-  image: /img/home/discover/dx/fetch.svg
-  ---
-  ::
-  ::section-content-item
-  ---
-  title: 強力な規約
-  description: '強力なディレクトリ構造と規約による効率的なチームワーク。'
-  image: /img/home/discover/dx/conventions.svg
-  ---
-  ::
-  ::section-content-item
-  ---
-  title: SEO フレンドリー
-  description: 'メタタグ管理と優れたインデックスに対して速いコンテンツへの到達時間を実現。'
-  image: /img/home/discover/dx/seo.svg
-  ---
-  ::
-  ::section-content-item
-  ---
-  title: コンポーネント自動インポート
-  description: 'コンポーネントを使って、Nuxt はそれらをスマートなコード分割によってインポートします。'
-  image: /img/home/discover/dx/auto-inject.svg
-  ---
-  ::
-  ::section-content-item
-  ---
-  title: モジュールエコシステム
-  description: '160以上による Nuxt モジュールでアプリケーションを拡張し、あなた自身で作成できます。'
-  image: /img/home/discover/dx/modular.svg
-  ---
-  ::
-::
-
-::home-discover-partners
----
-category: パートナー
----
-#title
-持続可能な[開発]{.text-primary}
-
-#description
-Nuxt の開発は情熱を持った開発者によって作られますが、メンテナンスするための必要な労力と新機能開発には、適切な資金のサポートなしには持続できません。これを可能にするのは、スポンサーやパートナーの皆様のおかげです。<br>
-
-#bottom
-:button-link[NuxtJS のスポンサー]{href="/sponsors" size="medium"}
+Build your next Vue.js application with confidence using Nuxt.<br class="hidden sm:block" /> An open source framework making web development simple and powerful.
 ::
 
 ::home-learn-master
 ---
-category: 学習
+category: Learn
 ---
+
 #title
-学習も[簡単]{.text-primary}、マスターも[簡単]{.text-primary}
+[Easy]{.text-primary} to learn. [Easy]{.text-primary} to master
 
 #description
-Nuxt.js コミュニティに参加し私達を助け Nuxtify な世界にします。
+Be part of the Nuxt.js community and help us Nuxtify the world.
 
 #bottom
-:button-link[全てを学習する]{href="/docs/get-started/installation" size="medium"}
+:button-link[Learn everything]{href="/docs/get-started/installation" size="medium"}
+::
+
+::home-features
+---
+category: Features
+---
+
+::section-content-item
+---
+title: Zero Configuration
+description: 'Start coding your app right away, Nuxt takes care of the rest.'
+image: /img/home/discover/dx/zero-config.svg
+---
+::
+
+::section-content-item
+---
+title: File-system Routing
+description: 'Automatic routing and code-splitting every pages.'
+image: /img/home/discover/dx/file-system-routing.svg
+---
+::
+
+::section-content-item
+---
+title: Rendering Modes
+description: 'Switch between static-site generation or on-demand server rendering.'
+image: /img/home/discover/dx/hybrid.svg
+---
+::
+
+::section-content-item
+---
+title: Data Fetching
+description: 'Fetch your content from any source in your Vue components, SSR ready.'
+image: /img/home/discover/dx/fetch.svg
+---
+::
+
+::section-content-item
+---
+title: Strong Conventions
+description: 'Efficient teamwork with a strong directory structure and conventions.'
+image: /img/home/discover/dx/conventions.svg
+---
+::
+
+::section-content-item
+---
+title: SEO Friendly
+description: 'Meta Tags management and faster time-to-content for a great indexing.'
+image: /img/home/discover/dx/seo.svg
+---
+::
+
+::section-content-item
+---
+title: Components Auto-import
+description: 'Use your components, Nuxt will import them with smart code-splitting.'
+image: /img/home/discover/dx/auto-inject.svg
+---
+::
+
+::section-content-item
+---
+title: Modules Ecosystem
+description: 'Extend your app with 160+ Nuxt modules and create your own.'
+image: /img/home/discover/dx/modular.svg
+---
+::
+
+#title
+Intuitive [D]{.text-primary}eveloper E[x]{.text-primary}perience
+
+#description
+Nuxt is shipped with plenty of features to boost developer productivity and the end user experience.
+::
+
+::home-discover-partners
+---
+category: Partners
+---
+
+#title
+Sustainable [_Development_]{.text-primary}
+
+#description
+Nuxt development is made from passionate developers, however, the amount of effort needed to maintain and develop new features is not sustainable without proper financial backing. We are thanksful to our sponsors and partners to make it possible.<br>
+
+#bottom
+:button-link[Sponsor Nuxt]{href="/sponsors" size="medium"}
 ::
 
 ::home-learn-guides
 ---
-category: 学習
+category: Learn
 ---
 
+::section-content-item
+---
+title: Documentation
+description: 'Discover every Nuxt concepts and find a complete APIs reference.'
+image: /img/home/learn/guides/gem-1.svg
+to: '/docs/get-started/installation'
+hoverClass: 'hover:bg-sky-darker'
+---
+::
+
+::section-content-item
+---
+title: Examples
+description: "Learn by the examples produced by the community."
+image: /img/home/learn/guides/gem-2.svg
+to: '/examples'
+hoverClass: 'hover:bg-sky-darker'
+---
+::
+
+::section-content-item
+---
+title: Releases
+description: 'Find out what has changed before upgrading.'
+image: /img/home/learn/guides/gem-3.svg
+to: '/releases'
+hoverClass: 'hover:bg-sky-darker'
+---
+::
+
+::section-content-item
+---
+title: Master Courses
+description: 'Watch a complete series of videos to learn Nuxt with our partner Vue School.'
+image: /img/home/learn/guides/gem-4.svg
+to: 'https://masteringnuxt.com'
+hoverClass: 'hover:bg-sky-darker'
+---
+::
+
 #title
-私たちの[ガイド]{.text-primary}の紹介
+Follow our [_Guides_]{.text-primary}
 
 #description
-着想から名作まで、ガイドは Nuxter になるためのパスを示します。
-
-#default
-  ::section-content-item
-  ---
-  title: 使い方
-  description: 'Nuxt のコンセプトと機能を初級からマスターまで学べます'
-  image: /img/home/learn/guides/gem-usage.svg
-  to: '/docs/get-started/installation'
-  linkName: 'Nuxt を学習する'
-  ---
-  ::
-
-  ::section-content-item
-  ---
-  title: 内部構造
-  description: 'アプリケーションの動作を拡張するために Nuxt の内部構造詳細に入り込めます'
-  image: /img/home/learn/guides/gem-internals.svg
-  to: '/docs/internals-glossary/context'
-  linkName: '内部構造を調べる'
-  ---
-  ::
-
-  ::section-content-item
-  ---
-  title: API リファレンス
-  description: '全体像が必要なとき、全てのプロパティとそれらのオプションを探させます'
-  image: /img/home/learn/guides/gem-api.svg
-  to: '/docs/configuration-glossary/configuration-alias'
-  linkName: 'API を調べる'
-  ---
-  ::
+From an Idea to a Masterpiece, guides show the path to become a Nuxter.
 ::
 
 ::home-explore
 ---
-category: 探求
+category: Explore
 ---
 
+::section-content-item
+---
+title: 'Integrations'
+description: 'Extend and automate your workflow by using integrations for your favorite tools.'
+image: '/img/home/explore/gem-explore-1.svg'
+to: '/integrations'
+hoverClass: 'hover:bg-sky-surface'
+---
+::
+::section-content-item
+---
+title: 'Modules'
+description: 'Discover our list of modules to supercharge your Nuxt project. Created by the Nuxt team and community.'
+image: '/img/home/explore/gem-explore-2.svg'
+to: '/modules'
+hoverClass: 'hover:bg-sky-surface'
+---
+::
+::section-content-item
+---
+title: 'Themes'
+description: 'See how a real world application is built using the Nuxt stack with the themes built by our partners.'
+image: '/img/home/explore/gem-explore-3.svg'
+to: '/themes'
+hoverClass: 'hover:bg-sky-surface'
+---
+::
+
 #title
-前進したいですか? [探求]{.text-primary}できることがたくさんあります
+Need to move Forward? So much to [_Explore_]{.text-primary}
 
 #description
-Nuxt には、例で学習したり、お気に入りのプロバイダと統合したり、そしてテーマを使ってすぐに始められる領域がたくさんあります。
-
-#default
-  ::section-content-item
-  ---
-  title: '例'
-  description: '一般的なタスクから高度な例まで、ユースケースを使ってインスピレーションを得てください。'
-  image: '/img/home/explore/gem-1-hover.svg'
-  to: '/examples'
-  linkName: 'インスピレーションを得る'
-  ---
-  ::
-  ::section-content-item
-  ---
-  title: 'モジュール'
-  description: '車輪の再発明をやめるためにモジュールのエコシステムを活用する'
-  image: '/img/home/explore/gem-3-hover.svg'
-  to: 'https://modules.nuxtjs.org'
-  linkName: 'モジュールを見る'
-  ---
-  ::
-  ::section-content-item
-  ---
-  title: 'テーマ'
-  description: 'Nuxt のテーマ一覧は予め用意されたデザインを使ってコーディングをすぐに開始できます'
-  image: '/img/home/explore/gem-4-hover.svg'
-  to: '/themes'
-  linkName: '今始める'
-  ---
-  ::
+Nuxt has plently of areas to explore, learn with examples, integrate with your favorite providers and start quickly with themes.
 ::
 
 ::home-campfire
 ---
-category: コミュニティ
+category: Community
+announcementsCategory: Announcements
+eventsCategory: Events
+articleLinkTitle: Get infos
 ---
 
 #title
-共有は[大事]{.text-primary}です
+Sharing is [Caring]{.text-sky-lighter}
 
 #description
-NuxtJS チームと Nuxt.js コミュニティによる、NuxtJS のヒントややり方に関する記事をご覧ください！
+Discover articles from the framework Team and Community about Nuxt, tips and tricks included!
+
+#campfire-list
+  :::campfire-list-item
+  ---
+  title: Announcements
+  description: Discover articles from NuxtJS team.
+  to: '/announcements'
+  ---
+  :::
+  :::campfire-list-item
+  ---
+  title: Events
+  description: Discover and subscribe to future events featuring Nuxt content, and watch previous talks from the core team and the community.
+  to: '/events'
+  ---
+  :::
+  :::campfire-list-item
+  ---
+  title: Sponsors
+  description: If you use NuxtJS in your daily work and feel that it has made your life easier, please consider backing us.
+  to: '/sponsors'
+  ---
+  :::
+  :::campfire-list-item
+  ---
+  title: Tutorials
+  description: Discover tutorials made by the NuxtJS community.
+  to: '/tutorials'
+  ---
+  :::
+::
+
+::home-testimonials
+---
+category: Community
+---
+#title
+Testimonials
+
+#description
+Learn from experts what they love about Nuxt.
+
+#testimonials
+  :::testimonials
+  ---
+  home: true
+  ---
+  :::
 ::

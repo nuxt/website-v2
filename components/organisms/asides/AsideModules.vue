@@ -1,7 +1,5 @@
 <template>
-  <div
-    class="lg:sticky top-0 lg:left-0 h-full pointer-events-auto min-h-fill-available lg:h-screen lg:top-header lg:w-1/5"
-  >
+  <div class="lg:sticky top-0 lg:left-0 h-full pointer-events-auto lg:h-screen lg:top-header lg:w-1/5">
     <div class="w-auto h-full d-bg-header dark:lg:bg-transparent lg:bg-transparent">
       <nav
         class="

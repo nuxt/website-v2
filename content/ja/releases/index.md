@@ -1,6 +1,7 @@
 ---
+title: リリース
 template: releases
-description: 'Nuxt releases notes'
+description: 'Nuxt リリースノート'
 navigation: false
 layout.fluid: false
 layout.asideClass: 'block lg:hidden'

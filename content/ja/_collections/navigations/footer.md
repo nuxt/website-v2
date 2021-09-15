@@ -1,81 +1,81 @@
 ---
 links:
   -
-    title: 'About'
+    title: '私たちについて'
     items:
       -
-        title: 'Contact us'
+        title: '連絡先'
         href: 'mailto:hello@nuxtjs.com'
       -
-        title: 'Entreprise support'
+        title: 'エンタープライズサポート'
         to: '/support'
       -
-        title: 'NuxtLabs company'
+        title: 'NuxtLabs について'
         href: 'https://nuxtlabs.com/'
       -
-        title: 'Open Source Software'
+        title: 'オープンソースソフトウェア'
         href: 'https://github.com/nuxt'
       -
-        title: 'Partnerships'
+        title: 'パートナーシップ'
         to: '/partners'
       -
-        title: 'Telemetry'
+        title: 'テレメトリ'
         href: 'https://github.com/nuxt/telemetry'
   -
-    title: 'Ecosystem'
+    title: 'エコシステム'
     items:
       -
-        title: 'Announcements'
+        title: 'お知らせ'
         to: '/announcements'
       -
-        title: 'Contribute'
+        title: '貢献'
         href: 'https://github.com/nuxt/nuxtjs.org/blob/main/content/en/_archives/guide/contribution-guide.md'
       -
-        title: 'Chat with us'
+        title: 'チャット'
         href: 'https://discord.nuxtjs.org/'
       -
-        title: 'Events'
+        title: 'イベント'
         to: '/events'
       -
-        title: 'Sponsors'
+        title: 'スポンサー'
         to: '/sponsors'
       -
-        title: 'Teams'
+        title: 'チーム'
         to: '/teams'
       -
-        title: 'Tutorials'
+        title: 'チュートリアル'
         to: '/tutorials'
       -
-        title: 'Video cources'
+        title: 'ビデオコース'
         to: '/releases'
   -
-    title: 'Resources'
+    title: 'リソース'
     items:
       -
-        title: 'Design'
+        title: 'デザイン'
         to: '/design'
       -
-        title: 'Documentation'
+        title: 'ドキュメント'
         to: '/docs'
       -
-        title: 'Examples'
+        title: '例'
         to: '/examples'
       -
-        title: 'Integrations'
+        title: 'インテグレーション'
         to: '/integrations'
       -
-        title: 'Master courses'
+        title: 'マスターコース'
         href: 'https://masteringnuxt.com/'
       -
-        title: 'Modules'
+        title: 'モジュール'
         to: '/modules'
       -
-        title: 'Releases'
+        title: 'リリース'
         to: '/releases'
       -
-        title: 'Showcases'
+        title: '導入事例'
         to: '/showcases'
       -
-        title: 'Themes'
+        title: 'テーマ'
         to: '/themes'
 ---

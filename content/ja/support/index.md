@@ -1,7 +1,7 @@
 ---
 template: blank
-title: 'Enterprise Support'
-description: 'Get technical support, report bugs or contribute to the Nuxt framework development.'
+title: エンタープライズサポート
+description: 'テクニカルサポートを受けたり、バグを報告したり、Nuxt フレームワークの開発に貢献することができます。'
 layout:
   fluid: true
 navigation: false
@@ -18,58 +18,62 @@ description: "テクニカルサポート、トレーニング、カスタム開
 #support-cards-list
   ::support-card
   ---
-  title: 'Technical support'
-  description: 'Contact us to book a slot for a private consulting session or audit of your project.'
+  title: 'テクニカルサポート'
+  description: '個人的なコンサルティングセッションやプロジェクトの監査のためのスロットを予約するには、私たちに連絡してください。'
   image: 'technical'
   button:
-    text: 'Contact us'
+    text: '連絡する'
     url: ''
   form: true
   #form
     :::support-form
     ---
-    title: 'Send us a message'
+    title: 'メッセージを送る'
     placeholder:
-      company: 'Company Name'
-      name: 'Your name'
-      mail: 'Your Email'
-      phone: 'Phone Number'
-      subject: 'Subject'
-      message: 'Your message'
+      company: '会社名'
+      name: '名前'
+      mail: 'Eメールアドレス'
+      phone: '電話番号'
+      subject: 'タイトル'
+      message: 'メッセージ'
+    buttonText: 'メッセージを送信する'
+    statusList:
+      - "会社員"
+      - "学生"
     ---
     #step-1
       ::::support-step-title
       ---
       number: '1'
-      text: Please choose your status
+      text: あなたのステータスを選択してください
       ---
       ::::
     #step-2
       ::::support-step-title
       ---
       number: '2'
-      text: Complete your company name
+      text: 会社名を入力してください
       ---
       ::::
     #step-3
       ::::support-step-title
       ---
       number: '3'
-      text: Complete your informations
+      text: あなたの情報をすべて入力してください
       ---
       ::::
     #step-4
       ::::support-step-title
       ---
       number: '4'
-      text: Add a subject
+      text: タイトルを入力してください
       ---
       ::::
     #step-5
       ::::support-step-title
       ---
       number: '5'
-      text: Write your message
+      text: メッセージを入力してください
       ---
       ::::
     :::
@@ -77,31 +81,31 @@ description: "テクニカルサポート、トレーニング、カスタム開
   ::
   ::support-card
   ---
-  title: 'Report a bug'
-  description: "If anything isn't working like it's supposed to, open an issue on Github."
+  title: '不具合を報告する'
+  description: "期待した通りに動作しない場合は、GitHub で問題を提起してください。"
   image: 'report'
   button:
-    text: 'Create an issue'
+    text: 'GitHub issues を作成する'
     url: ''
   ---
   ::
   ::support-card
   ---
-  title: 'Suggest a new feature or improvement'
-  description: 'Thanks to our community contributions, Nuxt keeps evolving with continuous features improvements. If you have an idea, feel free to propose it on Github Discussions.'
+  title: '新しい機能や改善点を提案する'
+  description: 'コミュニティからの貢献により、Nuxt は継続的に機能を改善しながら進化し続けています。もしアイデアがあれば、GitHub Discussions で気軽に提案してください。'
   image: 'suggest'
   button:
-    text: 'Suggest an idea'
+    text: 'アイデアを提案する'
     url: ''
   ---
   ::
   ::support-card
   ---
-  title: 'Contribute'
-  description: 'Start contributing to the framework development, documentation, or testing.'
+  title: '貢献'
+  description: 'フレームワークの開発、ドキュメント、テストへの貢献始めます'
   image: 'contribute'
   button:
-    text: 'Contribute'
+    text: '貢献する'
     url: ''
   ---
   ::

@@ -97,7 +97,7 @@ export default {
   },
   sustainability: {
     tiers: {
-      mvp_partners: 'MVP パートナー',
+      mvp_sponsors: 'MVP パートナー',
       partners: 'パートナー',
       sponsors: 'スポンサー',
       donations: '寄付'
@@ -105,12 +105,19 @@ export default {
     mvp_detail: {
       services: 'サービス',
       location: '場所',
-      contact_partner: 'Contact Partner',
-      visit_website: 'Visit Website'
+      contact_partner: 'パートナーに連絡する',
+      visit_website: 'ウェブサイトに訪問する'
     }
+  },
+  support: {
+    confirm_sending: 'テクニカルサポートにメッセージを送信する',
+    error_sending: '送信中にエラーが発生しました。',
+    invalid_adress: '不正なアドレスです。'
   },
   showcases: {
     loading: '詠み込み中...',
+    chrome_extension: 'Chrome 拡張',
+    firefox_extension: 'Firefox 拡張',
     categories: {
       Featured: '特集',
       'E-Commerce': 'E-コマース',

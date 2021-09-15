@@ -1,6 +1,6 @@
 ---
 template: blog
-title: Annoucements
-description: Annoucements description
+title: お知らせ
+description: NuxtJS チームから記事を見つける
 blogPostList: true
 ---

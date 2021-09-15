@@ -1,7 +1,7 @@
 ---
 template: events
-title: Events
-description: Discover and subscribe to future events featuring Nuxt content, and watch previous talks from the core team and the community
-heroTitle: 'Events'
-heroDescription: 'Discover and subscribe to future events featuring Nuxt content, and watch previous talks from the core team and the community'
+title: イベント
+description: Nuxt のコンテンツを使った今後のイベントを見つけて購読したり、コアチームやコミュニティによる過去の講演を見たりすることができます。
+heroTitle: 'イベント'
+heroDescription: 'Nuxt のコンテンツを使った今後のイベントを見つけて購読したり、コアチームやコミュニティによる過去の講演を見たりすることができます。'
 ---

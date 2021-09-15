@@ -35,6 +35,10 @@ description: "Get technical support, report bugs or contribute to the Nuxt frame
       phone: 'Phone Number'
       subject: 'Subject'
       message: 'Your message'
+    buttonText: 'Send Message'
+    statusList:
+      - "I'am a company"
+      - "I'am a student"
     ---
     #step-1
       ::::support-step-title

@@ -16,3 +16,11 @@
     --docs-scroll-margin-block: calc(var(--header-height) + 1rem);
   }
 }
+
+button:focus-visible, div:focus-visible, a:focus-visible {
+  /* remove default focus style */
+  outline: none;
+  /* custom focus style */
+  border-radius: 2px;
+  box-shadow: 0 0 0 2px #00DC82;
+}

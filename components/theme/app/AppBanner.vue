@@ -3,6 +3,7 @@
     to="/v3"
     class="group flex items-center transition-height delay-200 bg-primary hover:bg-primary-400"
     :class="[$route.path === localePath('/') ? 'h-10' : 'h-0 overflow-hidden']"
+    :tabindex="$route.path === localePath('/') ? 0 : -1"
   >
     <i18n
       tag="p"

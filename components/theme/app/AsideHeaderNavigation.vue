@@ -1,8 +1,8 @@
 <template>
   <nav ref="nav" class="flex flex-col gap-0 py-4 px-4 sm:px-6">
     <template v-for="(link, index) in links">
-      <div v-if="link.items && link.items.length" :key="index" class="flex flex-col py-2">
-        <div class="flex items-center justify-between cursor-pointer" @click="toggle(index)">
+      <div v-if="link.items && link.items.length" :key="index" class="flex flex-col">
+        <div class="flex items-center justify-between cursor-pointer py-2" tabindex="0" @click="toggle(index)">
           <HeaderNavigationLink :link="link" :class="{ 'text-cloud-lighter hover:text-cloud-lightest': home }" />
           <IconChevronBottom
             v-if="openedLink === index"
@@ -11,7 +11,7 @@
           />
           <IconChevronRight v-else class="flex-shrink-0 w-4 h-4" :class="{ 'text-cloud-lighter': home }" />
         </div>
-        <div v-show="openedLink === index" class="pl-2 pt-2 gap-2">
+        <div v-show="openedLink === index" class="pl-2 pb-2 gap-2">
           <HeaderNavigationLink
             v-for="(subLink, subIndex) in link.items"
             :key="subIndex"

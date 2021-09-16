@@ -1,18 +1,18 @@
 <template>
-  <footer class="" aria-label="footerHeading">
-    <div class="select-none" :class="{ 'pt-24': !home }">
+  <footer class="relative z-10" :class="{ 'mt-48': !home }" aria-label="footerHeading">
+    <div class="select-none absolute bottom-full w-full">
       <img
         v-if="!home"
         loading="lazy"
         :src="`/img/footer/dark/landscape.svg`"
-        class="w-full h-40 object-fill dark-img pointer-events-none"
+        class="w-full h-12 sm:h-20 lg:h-40 object-fill dark-img pointer-events-none"
         alt="A landscape image"
       />
       <img
         v-if="!home"
         loading="lazy"
         :src="`/img/footer/light/landscape.svg`"
-        class="w-full h-40 object-fill light-img pointer-events-none"
+        class="w-full h-12 sm:h-20 lg:h-40 object-fill light-img pointer-events-none"
         alt="A landscape image"
       />
     </div>

@@ -106,7 +106,7 @@ export default defineComponent({
   },
   setup() {
     const { email, error, subscribe, pending, subscribed } = useNewsletter()
-    const { $docus, app } = useContext()
+    const { $docus, app, route } = useContext()
     const socials = [
       {
         href: 'https://twitter.com/nuxt_js',
@@ -121,7 +121,7 @@ export default defineComponent({
         icon: 'IconGitHub'
       }
     ]
-    const home = computed(() => app.localePath($docus.currentPath.value) === app.localePath('/'))
+    const home = computed(() => route.value.path === app.localePath('/'))
     return {
       socials,
       email,

@@ -161,8 +161,8 @@ export default defineComponent({
     }
   },
   setup() {
-    const { $docus, app } = useContext()
-    const home = computed(() => app.localePath($docus.currentPath.value) === app.localePath('/'))
+    const { route, app } = useContext()
+    const home = computed(() => route.value.path === app.localePath('/'))
 
     return {
       home

@@ -17,7 +17,7 @@
         class="px-4 py-1 flex items-center whitespace-no-wrap"
         :class="[
           $i18n.locale === locale.code
-            ? localePath($docus.currentPath.value) === localePath('/')
+            ? $route.path === localePath('/')
               ? 'font-semibold cursor-default text-gray-200'
               : 'font-semibold cursor-default text-gray-800 dark:text-gray-200'
             : 'hover:d-text-primary'

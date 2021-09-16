@@ -61,7 +61,7 @@
             home ? 'text-gray-300 hover:text-primary-400' : 'd-secondary-text hover:d-secondary-text-hover'
           }`"
         />
-        <ColorSwitcher v-if="localePath($route.path) !== localePath('/')" class="hidden lg:block" />
+        <ColorSwitcher v-if="$route.path !== localePath('/')" class="hidden lg:block" />
         <AlgoliaSearchBox v-if="settings && settings.algolia" :options="settings.algolia" :settings="settings" />
       </div>
     </div>
@@ -88,7 +88,7 @@ export default defineComponent({
         : null
     })
 
-    const home = computed(() => app.localePath($docus.currentPath.value) === app.localePath('/'))
+    const home = computed(() => route.value.path === app.localePath('/'))
     function isActiveGroup(link) {
       if (link.slug === currentSlug.value || link.items?.some(item => item.slug === currentSlug.value)) {
         return true

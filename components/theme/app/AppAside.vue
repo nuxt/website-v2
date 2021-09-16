@@ -74,7 +74,7 @@
                   }`"
                   strategy="fixed"
                 />
-                <ColorSwitcher v-if="localePath($route.path) !== localePath('/')" />
+                <ColorSwitcher v-if="$route.path !== localePath('/')" />
               </div>
             </div>
 
@@ -99,13 +99,14 @@ export default defineComponent({
   },
   setup() {
     const {
-      $docus: { layout, currentPath },
+      $docus: { layout },
       $menu,
-      app
+      app,
+      route
     } = useContext()
 
     const mobileMainNav = ref(!layout.value.aside)
-    const home = computed(() => app.localePath(currentPath.value) === app.localePath('/'))
+    const home = computed(() => route.value.path === app.localePath('/'))
 
     watch($menu.visible, (value, old) => {
       if (value && !old && layout.value.aside) {

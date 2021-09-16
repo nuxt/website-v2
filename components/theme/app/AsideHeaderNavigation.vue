@@ -76,7 +76,7 @@ export default defineComponent({
       }
     })
 
-    const home = computed(() => app.localePath($docus.currentPath.value) === app.localePath('/'))
+    const home = computed(() => route.value.path === app.localePath('/'))
 
     function toggle(index) {
       if (openedLink.value === index) {

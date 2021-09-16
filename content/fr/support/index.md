@@ -22,7 +22,7 @@ description: 'Contactez-nous pour réserver une session de consulting ou un audi
 image: 'technical'
 button:
   text: 'Nous contacter'
-  url: ''
+  url: 'mailto:support@nuxtlabs.com'
 form: true
 #form
   :::support-form

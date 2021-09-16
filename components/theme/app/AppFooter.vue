@@ -78,7 +78,7 @@
           </section>
           <ul class="flex items-center space-x-4 xl:space-x-5 mt-4">
             <li v-for="(social, key) in socials" :key="key">
-              <NuxtHref :href="social.href" :aria-label="social.icon">
+              <NuxtHref :href="social.href" :aria-label="social.icon" class="block">
                 <Component
                   :is="social.icon"
                   class="w-6 h-6 hover:text-primary"

@@ -32,13 +32,13 @@
     <img
       loading="lazy"
       :src="`/img/page-hero/dark/mountains.svg`"
-      class="absolute -bottom-1px left-0 w-full h-24 object-fill light:hidden pointer-events-none"
+      class="absolute -bottom-1px left-0 w-full h-12 md:h-24 object-fill light:hidden pointer-events-none"
       alt="A landscape image"
     />
     <img
       loading="lazy"
       :src="`/img/page-hero/light/mountains.svg`"
-      class="absolute -bottom-1px left-0 w-full h-24 object-fill dark:hidden pointer-events-none"
+      class="absolute -bottom-1px left-0 w-full h-12 md:h-24 object-fill dark:hidden pointer-events-none"
       alt="A landscape image"
     />
   </div>

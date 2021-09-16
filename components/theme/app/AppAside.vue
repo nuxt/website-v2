@@ -47,10 +47,10 @@
             overflow-auto
             pointer-events-auto
             min-h-fill-available
-            d-border
             border-r
             !w-base
           "
+          :class="home ? 'border-sky-darker' : 'd-border'"
         >
           <div class="w-auto h-full overflow-auto" :class="home ? 'd-bg-header-home' : 'd-bg-header'">
             <div

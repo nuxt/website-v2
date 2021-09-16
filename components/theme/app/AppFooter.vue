@@ -1,5 +1,5 @@
 <template>
-  <footer class="relative z-10" :class="{ 'mt-48': !home }" aria-label="footerHeading">
+  <footer class="relative z-10" :class="{ 'mt-64': !home }" aria-label="footerHeading">
     <div class="select-none absolute bottom-full w-full">
       <img
         v-if="!home"

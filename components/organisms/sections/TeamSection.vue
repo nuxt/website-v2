@@ -1,5 +1,5 @@
 <template>
-  <div class="py-16 d-container-content">
+  <div class="pt-16 d-container-content">
     <h2 class="text-center pb-4 text-display-4 font-serif">
       <Markdown use="title" unwrap="p" />
     </h2>

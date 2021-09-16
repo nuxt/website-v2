@@ -21,42 +21,38 @@
 </template>
 
 <script>
-import { defineComponent, useContext, useFetch, ref, watch } from '@nuxtjs/composition-api'
+import { defineComponent } from '@nuxtjs/composition-api'
 
 export default defineComponent({
-  setup() {
-    const { $docus, i18n } = useContext()
-
-    const headerLinks = ref([])
-    const footerLinks = ref([])
-
-    async function loadNavigation() {
-      headerLinks.value = (
-        await $docus
-          .search('/collections/navigations', { deep: true })
-          .where({ slug: { $in: 'header' }, language: i18n.locale })
-          .fetch()
-      )[0].links
-      footerLinks.value = (
-        await $docus
-          .search('/collections/navigations/', { deep: true })
-          .where({ slug: { $in: 'footer' }, language: i18n.locale })
-          .fetch()
-      )[0].links
-    }
-
-    useFetch(loadNavigation)
-
-    watch(() => i18n.locale, loadNavigation)
-
+  data() {
     return {
-      headerLinks,
-      footerLinks
+      headerLinks: [],
+      footerLinks: []
     }
+  },
+  async fetch() {
+    const { $docus, $i18n } = this
+    this.headerLinks = (
+      await $docus
+        .search('/collections/navigations', { deep: true })
+        .where({ slug: { $in: 'header' }, language: $i18n.locale })
+        .fetch()
+    )[0].links
+    this.footerLinks = (
+      await $docus
+        .search('/collections/navigations/', { deep: true })
+        .where({ slug: { $in: 'footer' }, language: $i18n.locale })
+        .fetch()
+    )[0].links
   },
   computed: {
     layout() {
       return this.$docus.layout.value
+    }
+  },
+  watch: {
+    '$i18n.locale'() {
+      this.$fetch()
     }
   }
 })

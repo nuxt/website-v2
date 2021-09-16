@@ -1,6 +1,93 @@
 # 2.x
 /docs/2.x/* /docs 301!
-https://nuxtjs.org/docs/2.x/get-started/installation https://nuxtjs.org/docs/get-started/installation 301!
+/docs/2.x/get-started/installation /docs/get-started/installation 301!
+/docs/2.x/get-started/routing /docs/get-started/routing 301!
+/docs/2.x/get-started/directory-structure /docs/get-started/directory-structure 301!
+/docs/2.x/get-started/commands /docs/get-started/commands 301!
+/docs/2.x/get-started/conclusion /docs/get-started/conclusion 301!
+/docs/2.x/get-started/upgrading /docs/get-started/upgrading 301!
+
+/docs/2.x/concepts/views /docs/concepts/views 301!
+/docs/2.x/concepts/context-helpers /docs/concepts/context-helpers 301!
+/docs/2.x/concepts/server-side-rendering /docs/concepts/server-side-rendering 301!
+/docs/2.x/concepts/static-site-generation /docs/concepts/static-site-generation 301!
+/docs/2.x/concepts/nuxt-lifecycle /docs/concepts/nuxt-lifecycle 301!
+
+/docs/2.x/features/rendering-modes /docs/features/rendering-modes 301!
+/docs/2.x/features/deployment-targets /docs/features/deployment-targets 301!
+/docs/2.x/features/file-system-routing /docs/features/file-system-routing 301!
+/docs/2.x/features/data-fetching /docs/features/data-fetching 301!
+/docs/2.x/features/meta-tags-seo /docs/features/meta-tags-seo 301!
+/docs/2.x/features/configuration /docs/features/configuration 301!
+/docs/2.x/features/loading /docs/features/loading 301!
+/docs/2.x/features/nuxt-components /docs/features/nuxt-components 301!
+/docs/2.x/features/component-discovery /docs/features/component-discovery 301!
+/docs/2.x/features/transitions /docs/features/transitions 301!
+/docs/2.x/features/live-preview /docs/features/live-preview 301!
+
+/docs/2.x/directory-structure/nuxt /docs/directory-structure/nuxt 301!
+/docs/2.x/directory-structure/assets /docs/directory-structure/assets 301!
+/docs/2.x/directory-structure/components /docs/directory-structure/components 301!
+/docs/2.x/directory-structure/content /docs/directory-structure/content 301!
+/docs/2.x/directory-structure/dist /docs/directory-structure/dist 301!
+/docs/2.x/directory-structure/layouts /docs/directory-structure/layouts 301!
+/docs/2.x/directory-structure/middleware /docs/directory-structure/middleware 301!
+/docs/2.x/directory-structure/modules /docs/directory-structure/modules 301!
+/docs/2.x/directory-structure/pages /docs/directory-structure/pages 301!
+/docs/2.x/directory-structure/plugins /docs/directory-structure/plugins 301!
+/docs/2.x/directory-structure/static /docs/directory-structure/static 301!
+/docs/2.x/directory-structure/store /docs/directory-structure/store 301!
+/docs/2.x/directory-structure/nuxt-config /docs/directory-structure/nuxt-config 301!
+
+/docs/2.x/configuration-glossary/configuration-alias /docs/configuration-glossary/configuration-alias 301!
+/docs/2.x/configuration-glossary/configuration-build /docs/configuration-glossary/configuration-build 301!
+/docs/2.x/configuration-glossary/configuration-builddir /docs/configuration-glossary/configuration-builddir 301!
+/docs/2.x/configuration-glossary/configuration-cli /docs/configuration-glossary/configuration-cli 301!
+/docs/2.x/configuration-glossary/configuration-css /docs/configuration-glossary/configuration-css 301!
+/docs/2.x/configuration-glossary/configuration-components /docs/configuration-glossary/configuration-components 301!
+/docs/2.x/configuration-glossary/configuration-dev /docs/configuration-glossary/configuration-dev 301!
+/docs/2.x/configuration-glossary/configuration-dir /docs/configuration-glossary/configuration-dir 301!
+/docs/2.x/configuration-glossary/configuration-env /docs/configuration-glossary/configuration-env 301!
+/docs/2.x/configuration-glossary/configuration-extend-plugins /docs/configuration-glossary/configuration-extend-plugins 301!
+/docs/2.x/configuration-glossary/configuration-generate /docs/configuration-glossary/configuration-generate 301!
+/docs/2.x/configuration-glossary/configuration-global-name /docs/configuration-glossary/configuration-global-name 301!
+/docs/2.x/configuration-glossary/configuration-head /docs/configuration-glossary/configuration-head 301!
+/docs/2.x/configuration-glossary/configuration-hooks /docs/configuration-glossary/configuration-hooks 301!
+/docs/2.x/configuration-glossary/configuration-ignore /docs/configuration-glossary/configuration-ignore 301!
+/docs/2.x/configuration-glossary/configuration-loading /docs/configuration-glossary/configuration-loading 301!
+/docs/2.x/configuration-glossary/configuration-loading-indicator /docs/configuration-glossary/configuration-loading-indicator 301!
+/docs/2.x/configuration-glossary/configuration-mode /docs/configuration-glossary/configuration-mode 301!
+/docs/2.x/configuration-glossary/configuration-modern /docs/configuration-glossary/configuration-modern 301!
+/docs/2.x/configuration-glossary/configuration-modules /docs/configuration-glossary/configuration-modules 301!
+/docs/2.x/configuration-glossary/configuration-modulesdir /docs/configuration-glossary/configuration-modulesdir 301!
+/docs/2.x/configuration-glossary/configuration-plugins /docs/configuration-glossary/configuration-plugins 301!
+/docs/2.x/configuration-glossary/configuration-render /docs/configuration-glossary/configuration-render 301!
+/docs/2.x/configuration-glossary/configuration-rootdir /docs/configuration-glossary/configuration-rootdir 301!
+/docs/2.x/configuration-glossary/configuration-router /docs/configuration-glossary/configuration-router 301!
+/docs/2.x/configuration-glossary/configuration-runtime-config /docs/configuration-glossary/configuration-runtime-config 301!
+/docs/2.x/configuration-glossary/configuration-server /docs/configuration-glossary/configuration-server 301!
+/docs/2.x/configuration-glossary/configuration-servermiddleware /docs/configuration-glossary/configuration-servermiddleware 301!
+/docs/2.x/configuration-glossary/configuration-srcdir /docs/configuration-glossary/configuration-srcdir 301!
+/docs/2.x/configuration-glossary/configuration-ssr /docs/configuration-glossary/configuration-ssr 301!
+/docs/2.x/configuration-glossary/configuration-target /docs/configuration-glossary/configuration-target 301!
+/docs/2.x/configuration-glossary/configuration-telemetry /docs/configuration-glossary/configuration-telemetry 301!
+/docs/2.x/configuration-glossary/configuration-transition /docs/configuration-glossary/configuration-transition 301!
+/docs/2.x/configuration-glossary/configuration-vue-config /docs/configuration-glossary/configuration-vue-config 301!
+/docs/2.x/configuration-glossary/configuration-watch /docs/configuration-glossary/configuration-watch 301!
+/docs/2.x/configuration-glossary/configuration-watchers /docs/configuration-glossary/configuration-watchers 301!
+
+/docs/2.x/internals-glossary/context /docs/configuration-glossary/context 301!
+/docs/2.x/internals-glossary/$nuxt /docs/configuration-glossary/$nuxt 301!
+/docs/2.x/internals-glossary/internals /docs/configuration-glossary/internals 301!
+/docs/2.x/internals-glossary/internals-nuxt /docs/configuration-glossary/internals-nuxt 301!
+/docs/2.x/internals-glossary/internals-renderer /docs/configuration-glossary/internals-renderer 301!
+/docs/2.x/internals-glossary/internals-module-container /docs/configuration-glossary/internals-module-container 301!
+/docs/2.x/internals-glossary/internals-builder /docs/configuration-glossary/internals-builder 301!
+/docs/2.x/internals-glossary/internals-generator /docs/configuration-glossary/internals-generator 301!
+/docs/2.x/internals-glossary/nuxt /docs/configuration-glossary/nuxt 301!
+/docs/2.x/internals-glossary/nuxt-render /docs/configuration-glossary/nuxt-render 301!
+/docs/2.x/internals-glossary/nuxt-render-route /docs/configuration-glossary/nuxt-render-route 301!
+/docs/2.x/internals-glossary/nuxt-render-and-get-window /docs/configuration-glossary/nuxt-render-and-get-window 301!
 
 # Components glossary
 /docs/2.x/components-glossary/pages-fetch /docs/components-glossary/fetch 301!
@@ -40,21 +127,8 @@ https://nuxtjs.org/docs/2.x/get-started/installation https://nuxtjs.org/docs/get
 /docs/2.x/deployment/deployment-cloudflare /integrations/deployments/cloudflare 301!
 /docs/2.x/deployment/deployment-stormkitio /integrations/deployments/stormkitio 301!
 
-# Features
-/docs/2.x/features/rendering-modes /docs/features/rendering-modes 301!
-/docs/2.x/features/deployment-targets /docs/features/deployment-targets 301!
-/docs/2.x/features/file-system-routing /docs/features/file-system-routing 301!
-/docs/2.x/features/data-fetching /docs/features/data-fetching 301!
-/docs/2.x/features/meta-tags-seo /docs/features/meta-tags-seo 301!
-/docs/2.x/features/configuration /docs/features/configuration 301!
-/docs/2.x/features/loading /docs/features/loading 301!
-/docs/2.x/features/nuxt-components /docs/features/nuxt-components 301!
-/docs/2.x/features/component-discovery /docs/features/component-discovery 301!
-/docs/2.x/features/transitions /docs/features/transitions 301!
-/docs/2.x/features/live-preview /docs/features/live-preview 301!
-
 #Releases
-/docs/release-notes /releases 310!
+/docs/release-notes /releases 301!
 
 # Examples
 /examples/hello-world /examples/routing/hello-world 301!

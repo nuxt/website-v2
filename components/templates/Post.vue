@@ -3,7 +3,7 @@
     <div class="relative py-16 sm:py-24">
       <div class="relative max-w-3xl mx-auto">
         <NuxtLink
-          :to="$contentLocalePath(page.to.substr(0, page.to.lastIndexOf('/')))"
+          :to="$contentLocalePath(page.to.lastIndexOf('/') !== 0 ? page.to.substr(0, page.to.lastIndexOf('/')) : '/')"
           class="absolute top-0 left-0 px-4 -mt-12 sm:-mt-16"
         >
           <span

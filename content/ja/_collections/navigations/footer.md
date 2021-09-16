@@ -29,7 +29,7 @@ links:
         to: '/announcements'
       -
         title: '貢献'
-        href: 'https://github.com/nuxt/nuxtjs.org/blob/main/content/en/_archives/guide/contribution-guide.md'
+        to: '/contribution-guide'
       -
         title: 'チャット'
         href: 'https://discord.nuxtjs.org/'

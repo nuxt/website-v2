@@ -4,7 +4,7 @@
       <li
         v-for="(partner, index) in partners"
         :key="`${partner.alt}-${index}`"
-        class="flex items-center p-8 mx-12 partners__slide md:p-4"
+        class="flex items-center partners__slide"
       >
         <a :href="partner.link" class="opacity-75 hover:opacity-100 w-28" rel="noopener sponsored" target="_blank">
           <img

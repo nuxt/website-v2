@@ -4,7 +4,9 @@ title: Google App Engine
 description: How to deploy Nuxt on Google App Engine?
 target: Server
 category: deployment
-logo: "/img/modules/categories/deployment.svg"
+logo:
+  light: "/img/partners/dark/Google_engine_app.svg"
+  dark: "/img/partners/light/Google_engine_app.svg"
 ---
 # Deploy Nuxt on Google App Engine
 

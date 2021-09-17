@@ -4,7 +4,9 @@ title: Surge
 description: How to deploy Nuxt app with Surge?
 target: Static
 category: deployment
-logo: "/img/modules/categories/deployment.svg"
+logo:
+  light: "/img/partners/dark/Surge.svg"
+  dark: "/img/partners/light/Surge.svg"
 ---
 # Deploy Nuxt with Surge
 

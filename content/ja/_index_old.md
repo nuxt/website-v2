@@ -132,7 +132,7 @@ category: 学習
 学習も[簡単]{.text-primary}、マスターも[簡単]{.text-primary}
 
 #description
-Nuxt.js コミュニティに参加し私達を助け Nuxtify な世界にします。
+Nuxt コミュニティに参加し私達を助け Nuxtify な世界にします。
 
 #bottom
 :button-link[全てを学習する]{href="/docs/get-started/installation" size="medium"}
@@ -231,5 +231,5 @@ category: コミュニティ
 共有は[大事]{.text-primary}です
 
 #description
-Nuxt チームと Nuxt.js コミュニティによる、Nuxt のヒントややり方に関する記事をご覧ください！
+Nuxt チームと Nuxt コミュニティによる、Nuxt のヒントややり方に関する記事をご覧ください！
 ::

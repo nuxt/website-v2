@@ -47,9 +47,9 @@ export default {
   },
   homepage: {
     meta: {
-      title: 'Nuxt.js - Aplikasi Vue.js Universal',
+      title: 'Nuxt - Aplikasi Vue.js Universal',
       description:
-        'Nuxt.js adalah kerangka kerja minimalis untuk membuat aplikasi Vue.js dengan server side rendering, hot-reloading, static generation, dan banyak lagi!'
+        'Nuxt adalah kerangka kerja minimalis untuk membuat aplikasi Vue.js dengan server side rendering, hot-reloading, static generation, dan banyak lagi!'
     },
     welcome: {
       title: 'Kerangka Kerja {br} {frameworkType} nan Intuitif',
@@ -67,7 +67,7 @@ export default {
       enjoyable: {
         title: 'Menyenangkan',
         description:
-          'Fokus utama kami adalah pengalaman pengembang. Kami menyukai Nuxt.js dan terus meningkatkan kerangka kerja ini sehingga Anda juga akan menyukainya! {break} Harapkan solusi yang menarik, pesan kesalahan deskriptif, standar kuat dan dokumentasi terperinci. Jika ada pertanyaan atau masalah, komunitas kami akan membantu Anda.'
+          'Fokus utama kami adalah pengalaman pengembang. Kami menyukai Nuxt dan terus meningkatkan kerangka kerja ini sehingga Anda juga akan menyukainya! {break} Harapkan solusi yang menarik, pesan kesalahan deskriptif, standar kuat dan dokumentasi terperinci. Jika ada pertanyaan atau masalah, komunitas kami akan membantu Anda.'
       },
       modular: {
         title: 'Modular',
@@ -77,7 +77,7 @@ export default {
       performant: {
         title: 'Kinerja',
         description:
-          'Dengan Nuxt.js, aplikasi Anda akan dioptimalkan secara otomatis. Kami melakukan yang terbaik untuk membangun aplikasi yang efisien dengan memanfaatkan praktik terbaik Vue.js dan Node.js. Untuk membuang setiap bagian yang tidak perlu dari aplikasi Anda, Nuxt menyertakan penganalisa bundel dan banyak peluang untuk menyempurnakan aplikasi Anda.'
+          'Dengan Nuxt, aplikasi Anda akan dioptimalkan secara otomatis. Kami melakukan yang terbaik untuk membangun aplikasi yang efisien dengan memanfaatkan praktik terbaik Vue.js dan Node.js. Untuk membuang setiap bagian yang tidak perlu dari aplikasi Anda, Nuxt menyertakan penganalisa bundel dan banyak peluang untuk menyempurnakan aplikasi Anda.'
       }
     },
     companies: {
@@ -88,12 +88,12 @@ export default {
       ssr: {
         title: 'Server Side Rendered',
         description:
-          'Mode paling populer untuk Nuxt. Dengan SSR, juga disebut mode "universal" atau "isomorphic", server Node.js akan digunakan untuk mengirimkan HTML berdasarkan komponen Vue Anda ke klien alih-alih JavaScript murni. Menggunakan SSR membawa keuntungan besar seperti peningkatan SEO, UX yang lebih baik, dan lebih banyak peluang (dibandingkan dengan Vue SPA tradisional). {Break} Dikarenakan menerapkan SSR dari awal bisa jadi sangat menjemukan, Nuxt.js sudah memiliki dukungan penuh untuk SSR dan dirancang untuk terhindar dari kesulitan-kesulitan tersembunyi yang umum terjadi.'
+          'Mode paling populer untuk Nuxt. Dengan SSR, juga disebut mode "universal" atau "isomorphic", server Node.js akan digunakan untuk mengirimkan HTML berdasarkan komponen Vue Anda ke klien alih-alih JavaScript murni. Menggunakan SSR membawa keuntungan besar seperti peningkatan SEO, UX yang lebih baik, dan lebih banyak peluang (dibandingkan dengan Vue SPA tradisional). {Break} Dikarenakan menerapkan SSR dari awal bisa jadi sangat menjemukan, Nuxt sudah memiliki dukungan penuh untuk SSR dan dirancang untuk terhindar dari kesulitan-kesulitan tersembunyi yang umum terjadi.'
       },
       ssg: {
         title: 'Generate Secara Statis',
         description:
-          'Static Site Generation (alias JAMStack) adalah topik yang banyak dibicarakan saat ini. Alih-alih beralih ke kerangka kerja lain dan menghabiskan waktu untuk membiasakan diri, mengapa tidak membunuh dua burung dengan satu batu? {proverbial} Nuxt.js mendukung pembuatan situs web statis berdasarkan aplikasi Vue Anda. Ini adalah "yang terbaik dari kedua dunia" karena Anda tidak memerlukan server tetapi masih memiliki manfaat SEO karena Nuxt akan melakukan pra-render terhadap semua halaman Anda dan menyertakan HTML yang diperlukan. Anda juga dapat men-deploy halaman yang dihasilkan dengan mudah ke Netlify atau GitHub.',
+          'Static Site Generation (alias JAMStack) adalah topik yang banyak dibicarakan saat ini. Alih-alih beralih ke kerangka kerja lain dan menghabiskan waktu untuk membiasakan diri, mengapa tidak membunuh dua burung dengan satu batu? {proverbial} Nuxt mendukung pembuatan situs web statis berdasarkan aplikasi Vue Anda. Ini adalah "yang terbaik dari kedua dunia" karena Anda tidak memerlukan server tetapi masih memiliki manfaat SEO karena Nuxt akan melakukan pra-render terhadap semua halaman Anda dan menyertakan HTML yang diperlukan. Anda juga dapat men-deploy halaman yang dihasilkan dengan mudah ke Netlify atau GitHub.',
         proverbial: 'hanya pepatah'
       }
     },
@@ -171,18 +171,18 @@ export default {
     },
     title: 'Tema {nuxt}',
     description:
-      'Dengan tema di bawah ini yang dibangun oleh mitra kami dari Tim Kreatif dan Hutan Tema Anda dapat melihat bagaimana aplikasi dunia nyata dibangun, dengan Nuxt.js menumpuk di belakang.',
+      'Dengan tema di bawah ini yang dibangun oleh mitra kami dari Tim Kreatif dan Hutan Tema Anda dapat melihat bagaimana aplikasi dunia nyata dibangun, dengan Nuxt menumpuk di belakang.',
     button: 'Dapatkan harga'
   },
   'video-courses': {
     meta: {
       title: 'Video Kursus Nuxt',
       description:
-        'Dengan kursus video di bawah ini yang dibuat oleh mitra kami VueSchool, Anda dapat menemukan dan mempelajari lebih lanjut tentang kerangka kerja Nuxt.js.'
+        'Dengan kursus video di bawah ini yang dibuat oleh mitra kami VueSchool, Anda dapat menemukan dan mempelajari lebih lanjut tentang kerangka kerja Nuxt.'
     },
     title: 'Video Kursus {nuxt}',
     description:
-      'Dengan kursus video di bawah ini yang dibuat oleh mitra kami VueSchool Anda dapat menemukan dan mempelajari lebih lanjut tentang kerangka kerja Nuxt.js.',
+      'Dengan kursus video di bawah ini yang dibuat oleh mitra kami VueSchool Anda dapat menemukan dan mempelajari lebih lanjut tentang kerangka kerja Nuxt.',
     cta: {
       discover: 'Discover vueschool',
       start: 'MULAI KURSUS'
@@ -218,8 +218,7 @@ export default {
       '{team} kami sekarang menawarkan layanan konsultasi resmi untuk aplikasi Nuxt Anda. {Break} Kami menawarkan layanan berbeda tergantung kebutuhan Anda, dari dukungan teknis hingga pengembangan kustom. Anda dapat mengharapkan balasan dalam satu hari kerja, kami dapat menandatangani Perjanjian Larangan Pengungkapan Informasi Rahasia (_Non-Disclosure Agreement_) khusus dan Anda bisa mendapatkan pengembalian dana penuh jika Anda tidak puas dengan layanan kami.',
     technical: {
       title: 'Dukungan teknis',
-      description:
-        'Dapatkan audit proyek, penerapan aplikasi, pengembangan kustom, dan dukungan teknis dari tim Nuxt.',
+      description: 'Dapatkan audit proyek, penerapan aplikasi, pengembangan kustom, dan dukungan teknis dari tim Nuxt.',
       start: 'Memulai obrolan',
       partner: {
         pre: 'Kami bermitra dengan',
@@ -246,7 +245,7 @@ export default {
     title: 'Blog {nuxt}',
     description: 'Temukan artikel tentang Nuxt dari {nuxtTeam} dan {nuxtCommunity} Nuxt, termasuk tips dan trik!',
     nuxt_team: 'Tim Nuxt',
-    nuxt_community: 'Komunitas Nuxt.js',
+    nuxt_community: 'Komunitas Nuxt',
     contribute: 'Menemukan kesalahan atau ingin berkontribusi pada pengeposan blog ini?'
   },
   guide: {

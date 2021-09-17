@@ -32,7 +32,7 @@ category: Learn
 [Easy]{.text-primary} to learn. [Easy]{.text-primary} to master
 
 #description
-Be part of the Nuxt.js community and help us Nuxtify the world.
+Be part of the Nuxt community and help us Nuxtify the world.
 
 #bottom
 :button-link[Learn everything]{href="/docs/get-started/installation" size="medium"}

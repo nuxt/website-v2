@@ -12,7 +12,7 @@ Nuxt アプリケーションを GitHub Pages でどうやってデプロイす�
 
 ---
 
-Nuxt.jsは、例えば [GitHub Pages](https://pages.github.com/) のような任意の静的ホスティング上で Web アプリケーションのホストすることができます。
+Nuxtは、例えば [GitHub Pages](https://pages.github.com/) のような任意の静的ホスティング上で Web アプリケーションのホストすることができます。
 
 GitHub Pages 上にデプロイするために、静的 Web アプリケーションを生成する必要があります：
 

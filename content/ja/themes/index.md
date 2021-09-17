@@ -1,7 +1,7 @@
 ---
 template: blog
 title: Nuxt テーマ
-description: "パートナーが構築したテーマを使って、Nuxt.jsを使った実際のアプリケーションがどのように構築されているかをご覧ください。"
+description: "パートナーが構築したテーマを使って、Nuxtを使った実際のアプリケーションがどのように構築されているかをご覧ください。"
 ---
 
 ::themes-list

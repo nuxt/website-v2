@@ -31,7 +31,7 @@ category: Apprendre
 [_Facile_]{.text-primary} à apprendre. [_Facile_]{.text-primary} à maîtriser
 
 #description
-Prenez part à la communauté Nuxt.js et aidez nous à rendre le monde plus Nuxt.
+Prenez part à la communauté Nuxt et aidez nous à rendre le monde plus Nuxt.
 
 #bottom
 :button-link[Commencez]{href="/docs/get-started/installation" size="medium"}

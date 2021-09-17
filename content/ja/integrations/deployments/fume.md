@@ -1,14 +1,14 @@
 ---
 template: guide
 title: Fume
-description: Fume への Nuxt.js のデプロイの仕方
+description: Fume への Nuxt のデプロイの仕方
 target: Static & Server
 category: deployment
 logo: "/img/modules/categories/deployment.svg"
 ---
 # Fume で Nuxt をデプロイする
 
-Fume への Nuxt.js のデプロイの仕方
+Fume への Nuxt のデプロイの仕方
 
 ---
 

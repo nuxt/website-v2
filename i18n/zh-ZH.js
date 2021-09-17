@@ -47,9 +47,9 @@ export default {
   },
   homepage: {
     meta: {
-      title: 'Nuxt.js - Vue.js 通用应用框架',
+      title: 'Nuxt - Vue.js 通用应用框架',
       description:
-        'Nuxt.js 是一个基于 Vue.js 的轻量级应用框架，可用来创建服务端渲染 (SSR) 应用，也可充当静态站点引擎生成静态站点应用，具有优雅的代码结构分层和热加载等特性。'
+        'Nuxt 是一个基于 Vue.js 的轻量级应用框架，可用来创建服务端渲染 (SSR) 应用，也可充当静态站点引擎生成静态站点应用，具有优雅的代码结构分层和热加载等特性。'
     },
     welcome: {
       title: '易于使用的 {br} {frameworkType} 框架',
@@ -67,7 +67,7 @@ export default {
       enjoyable: {
         title: '令人愉快',
         description:
-          '我们的主要重点是开发人员体验。我们喜欢 Nuxt.js，并且会不断改进框架，所以您也喜欢它！ {break}期待有吸引力的解决方案，描述性的错误消息，强大的默认值和详细的文档。 如果有问题或疑问，我们有用的社区将为您提供帮助。'
+          '我们的主要重点是开发人员体验。我们喜欢 Nuxt，并且会不断改进框架，所以您也喜欢它！ {break}期待有吸引力的解决方案，描述性的错误消息，强大的默认值和详细的文档。 如果有问题或疑问，我们有用的社区将为您提供帮助。'
       },
       modular: {
         title: '模块化',
@@ -77,7 +77,7 @@ export default {
       performant: {
         title: '高效率',
         description:
-          '借助 Nuxt.js，您的应用程序将得到开箱即用的优化。我们尽最大努力通过利用 Vue.js 和 Node.js 最佳实践来构建高性能应用程序。为了从应用程序中挤出所有不必要的内容，Nuxt 包括捆绑分析器和许多微调您的应用程序的机会。 '
+          '借助 Nuxt，您的应用程序将得到开箱即用的优化。我们尽最大努力通过利用 Vue.js 和 Node.js 最佳实践来构建高性能应用程序。为了从应用程序中挤出所有不必要的内容，Nuxt 包括捆绑分析器和许多微调您的应用程序的机会。 '
       }
     },
     companies: {
@@ -88,12 +88,12 @@ export default {
       ssr: {
         title: '服务器端渲染',
         description:
-          '这是 Nuxt 最受欢迎的模式。使用 SSR（也称为 "universal" 或 "isomorphic" 模式），将使用 Node.js 服务器将基于 Vue 组件的 HTML 传递给客户端，而不是纯 JavaScript。与传统的 Vue SPA 相比，使用 SSR 将带来更大的 SEO 提升，更好的用户体验和更多的机会。{break}由于单独实施 SSR 可能非常繁琐，因此 Nuxt.js 可为您提供全面的支持，并将处理常见的缺陷。'
+          '这是 Nuxt 最受欢迎的模式。使用 SSR（也称为 "universal" 或 "isomorphic" 模式），将使用 Node.js 服务器将基于 Vue 组件的 HTML 传递给客户端，而不是纯 JavaScript。与传统的 Vue SPA 相比，使用 SSR 将带来更大的 SEO 提升，更好的用户体验和更多的机会。{break}由于单独实施 SSR 可能非常繁琐，因此 Nuxt 可为您提供全面的支持，并将处理常见的缺陷。'
       },
       ssg: {
         title: '静态生成',
         description:
-          '静态网站生成是当前非常热门的话题（又名 JAMStack）。与其切换到另一个框架并花时间去适应它，不如一石二鸟？ {proverbial} Nuxt.js 支持根据您的 Vue 应用程序生成静态网站。它是 “两全其美” 的选择，因为您不需要服务器，但仍然拥有 SEO 的好处，因为 Nuxt 会预先渲染所有页面并包含必要的 HTML。另外，您可以轻松地将结果页面部署到 Netlify 或 GitHub 页面。',
+          '静态网站生成是当前非常热门的话题（又名 JAMStack）。与其切换到另一个框架并花时间去适应它，不如一石二鸟？ {proverbial} Nuxt 支持根据您的 Vue 应用程序生成静态网站。它是 “两全其美” 的选择，因为您不需要服务器，但仍然拥有 SEO 的好处，因为 Nuxt 会预先渲染所有页面并包含必要的 HTML。另外，您可以轻松地将结果页面部署到 Netlify 或 GitHub 页面。',
         proverbial: ''
       }
     },
@@ -163,20 +163,20 @@ export default {
     meta: {
       title: 'Nuxt 主题',
       description:
-        '通过我们由 Creative Tim 和 Theme Forest 的合作伙伴构建的以下主题，您可以了解如何构建真实的应用程序以及 Nuxt.js 。'
+        '通过我们由 Creative Tim 和 Theme Forest 的合作伙伴构建的以下主题，您可以了解如何构建真实的应用程序以及 Nuxt 。'
     },
     title: '{nuxt} 主题',
     description:
-      '通过我们由 Creative Tim 和 Theme Forest 的合作伙伴构建的以下主题，您可以了解如何构建真实的应用程序以及 Nuxt.js',
+      '通过我们由 Creative Tim 和 Theme Forest 的合作伙伴构建的以下主题，您可以了解如何构建真实的应用程序以及 Nuxt',
     button: '获得它，仅需'
   },
   'video-courses': {
     meta: {
       title: 'Nuxt 视频课程',
-      description: '通过我们的合作伙伴 Vue School 创建的以下视频课程，您可以发现并了解有关 Nuxt.js 框架的更多信息。'
+      description: '通过我们的合作伙伴 Vue School 创建的以下视频课程，您可以发现并了解有关 Nuxt 框架的更多信息。'
     },
     title: '{nuxt} 视频课程',
-    description: '通过我们的合作伙伴 VueSchool 创建的以下视频课程，您可以发现并了解有关 Nuxt.js 框架的更多信息。',
+    description: '通过我们的合作伙伴 VueSchool 创建的以下视频课程，您可以发现并了解有关 Nuxt 框架的更多信息。',
     cta: {
       discover: '探索 vueschool',
       start: '开始课程'
@@ -238,7 +238,7 @@ export default {
     title: '{nuxt} 博客',
     description: '从 {nuxtTeam} 和 {nuxtCommunity} 中找到有关 Nuxt 的文章，包括技巧和窍门！',
     nuxt_team: 'Nuxt 团队',
-    nuxt_community: 'Nuxt.js 社区',
+    nuxt_community: 'Nuxt 社区',
     contribute: '遇到错误或想要为该博客文章做出贡献？'
   },
   guide: {

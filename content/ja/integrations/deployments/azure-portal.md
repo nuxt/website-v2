@@ -1,13 +1,13 @@
 ---
 template: guide
 title: Azure Portal
-description: Nuxt.js アプリケーションを Azure Portal にデプロイするには？
+description: Nuxt アプリケーションを Azure Portal にデプロイするには？
 target: Server
 category: deployment
 logo: "/img/modules/categories/deployment.svg"
 ---# Nuxt を Azure Portal へデプロイする
 
-Nuxt.js アプリケーションを Azure Portal にデプロイするには？
+Nuxt アプリケーションを Azure Portal にデプロイするには？
 
 ---
 

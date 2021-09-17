@@ -47,7 +47,7 @@ export default {
   },
   homepage: {
     meta: {
-      title: 'Nuxt.js - فریم‌ورک بصری Vue',
+      title: 'Nuxt - فریم‌ورک بصری Vue',
       description:
         'اپلیکیشن Vue.js بعدی خود را با NuxtJs بسازید! فریم‌ورک متن‌بازی که توسعه وب را آسان و قدرتمند می‌کند!'
     },
@@ -190,8 +190,7 @@ export default {
   sponsor: {
     meta: {
       title: 'اسپانسر Nuxt شوید',
-      description:
-        'شما میتوانید از روش های مختلفی اسپانسر Nuxt شوید و از آپدیت‌های دائمی این پروژه اطمینان حاصل کنید.'
+      description: 'شما میتوانید از روش های مختلفی اسپانسر Nuxt شوید و از آپدیت‌های دائمی این پروژه اطمینان حاصل کنید.'
     },
     title: 'اسپانسر {nuxt} شوید',
     description:

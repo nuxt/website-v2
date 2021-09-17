@@ -1,20 +1,20 @@
 ---
 template: guide
 title: Dokku
-description: How to deploy a Nuxt.js application on Dokku?
+description: How to deploy a Nuxt application on Dokku?
 target: Server
 category: deployment
 logo: "/img/modules/categories/deployment.svg"
 ---
 # Deploy Nuxt on Dokku
 
-How to deploy a Nuxt.js application on Dokku?
+How to deploy a Nuxt application on Dokku?
 
 ---
 
 We recommend to read [Dokku documentation for the setup](http://dokku.viewdocs.io/dokku/getting-started/installation/) and [Deploying a Node.js Application on Digital Ocean using Dokku](http://jakeklassen.com/post/deploying-a-node-app-on-digital-ocean-using-dokku/).
 
-For the example, we will call our Nuxt.js application `my-nuxt-app`.
+For the example, we will call our Nuxt application `my-nuxt-app`.
 
 We need to tell Dokku to install the `devDependencies` of the project (to be able to launch `npm run build`):
 
@@ -62,4 +62,4 @@ git remote add dokku dokku@yourServer:my-nuxt-app
 git push dokku master
 ```
 
-Voilà! Our Nuxt.js application is now hosted on Dokku!
+Voilà! Our Nuxt application is now hosted on Dokku!

@@ -1,11 +1,11 @@
 ---
 template: post
 title: Contribution Guide
-description: Any contribution to Nuxt.js is more than welcome!
+description: Any contribution to Nuxt is more than welcome!
 back: false
 ---
 
-> Any contribution to Nuxt.js is more than welcome!
+> Any contribution to Nuxt is more than welcome!
 
 ## Reporting Issues
 

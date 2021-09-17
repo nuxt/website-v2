@@ -14,7 +14,7 @@ export default withDocus({
       { rel: 'preconnect', href: 'https://fonts.gstatic.com' }
     ],
     meta: [
-      { hid: 'og:site_name', property: 'og:site_name', content: 'Nuxt.js' },
+      { hid: 'og:site_name', property: 'og:site_name', content: 'Nuxt' },
       { hid: 'og:type', property: 'og:type', content: 'website' },
       { hid: 'twitter:site', name: 'twitter:site', content: '@nuxt_js' },
       {
@@ -35,7 +35,7 @@ export default withDocus({
       {
         hid: 'og:image:alt',
         property: 'og:image:alt',
-        content: 'Nuxt.js'
+        content: 'Nuxt'
       },
       {
         hid: 'twitter:image',

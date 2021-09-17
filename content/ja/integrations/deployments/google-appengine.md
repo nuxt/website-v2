@@ -1,14 +1,14 @@
 ---
 template: guide
 title: Google App Engine
-description: Nuxt.js を Google App Engine にどうやってデプロイするのか？
+description: Nuxt を Google App Engine にどうやってデプロイするのか？
 target: Server
 category: deployment
 logo: "/img/modules/categories/deployment.svg"
 ---
 # Nuxt を Google App Engine へデプロイする
 
-Nuxt.js を Google App Engine にどうやってデプロイするのか？
+Nuxt を Google App Engine にどうやってデプロイするのか？
 
 ---
 
@@ -64,7 +64,7 @@ env: flex
 gcloud app deploy app.yaml --project [project-id]
 ```
 
-ほら！今 Nuxt.js アプリケーションは Google App Engine にホストされています！
+ほら！今 Nuxt アプリケーションは Google App Engine にホストされています！
 
 ## さらなる詳細情報
 

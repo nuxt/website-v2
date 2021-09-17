@@ -1,14 +1,14 @@
 ---
 template: guide
 title: Platform.sh
-description: Nuxt.js を Platform.sh にどうやってデプロイするのか？
+description: Nuxt を Platform.sh にどうやってデプロイするのか？
 target: Static & Server
 category: deployment
 logo: "/img/modules/categories/deployment.svg"
 ---
 # Nuxt を Platform.sh にデプロイする
 
-Nuxt.js を Platform.sh にどうやってデプロイするのか？
+Nuxt を Platform.sh にどうやってデプロイするのか？
 
 ---
 
@@ -26,7 +26,7 @@ Platform.shには以下のような機能があります：
 
 ## セットアップ
 
-Platform.sh には、Nuxt.js 用のテンプレートがあらかじめ用意されています。以下のリンクをクリックすると、新しい Platform.sh プロジェクトが作成され、Nuxt.js のサンプルアプリケーションがあらかじめ用意されています。それをカスタマイズしてみてください。
+Platform.sh には、Nuxt 用のテンプレートがあらかじめ用意されています。以下のリンクをクリックすると、新しい Platform.sh プロジェクトが作成され、Nuxt のサンプルアプリケーションがあらかじめ用意されています。それをカスタマイズしてみてください。
 
 <p align="center">
 <a href="https://console.platform.sh/projects/create-project?template=https://raw.githubusercontent.com/platformsh/template-builder/master/templates/nuxtjs/.platform.template.yaml&utm_content=nuxtjs&utm_source=nuxtjs_orgb&utm_medium=button&utm_campaign=deploy_on_platform" target="_blank">

@@ -47,7 +47,7 @@ export default {
   },
   homepage: {
     meta: {
-      title: 'Nuxt.js - Sezgisel Vue Sistemi',
+      title: 'Nuxt - Sezgisel Vue Sistemi',
       description:
         'Bir sonraki Vue.js uygulamanızı, Nuxt ile güvenli bir şekilde programlayın. Web geliştirmeyi basit ve güçlü kılan açık kaynak bir sistem.'
     },
@@ -67,7 +67,7 @@ export default {
       enjoyable: {
         title: 'Eğlenceli',
         description:
-          "Ana amacımız Geliştirici Deneyimini geliştirmektir. Nuxt.js'yi seviyoruz ve sistemi sürekli olarak sizin de sevmenizi hedefliyoruz! 💚 {break} Kolay çözümler, açıklayıcı hata mesajları, güçlü varsayılanlar ve ayrıntılı dokümantasyona hazır olun! Eğer bir sorunla karşılaşır veya bir soru sormak isterseniz, yardımsever topluluğumuz size yardımcı olacaktır."
+          "Ana amacımız Geliştirici Deneyimini geliştirmektir. Nuxt'yi seviyoruz ve sistemi sürekli olarak sizin de sevmenizi hedefliyoruz! 💚 {break} Kolay çözümler, açıklayıcı hata mesajları, güçlü varsayılanlar ve ayrıntılı dokümantasyona hazır olun! Eğer bir sorunla karşılaşır veya bir soru sormak isterseniz, yardımsever topluluğumuz size yardımcı olacaktır."
       },
       modular: {
         title: 'Modüler',
@@ -77,7 +77,7 @@ export default {
       performant: {
         title: 'Performanslı',
         description:
-          "Nuxt.js ile, uygulamanız kutudan çıktığı haliyle optimize edilmiş olacaktır. Vue.js ve Node.js pratiklerini en iyi şekilde kullanıp sizlere en güçlü performans sunan bir sistem geliştirmeye çalışıyoruz. Gereği olmayan en küçük ayrıntıya kadar Nuxt'un imkanları sayesinde uygulamanız her zaman optimize edilmiş bir şekilde çalışır."
+          "Nuxt ile, uygulamanız kutudan çıktığı haliyle optimize edilmiş olacaktır. Vue.js ve Node.js pratiklerini en iyi şekilde kullanıp sizlere en güçlü performans sunan bir sistem geliştirmeye çalışıyoruz. Gereği olmayan en küçük ayrıntıya kadar Nuxt'un imkanları sayesinde uygulamanız her zaman optimize edilmiş bir şekilde çalışır."
       }
     },
     companies: {
@@ -88,12 +88,12 @@ export default {
       ssr: {
         title: 'Sunucu Taraflı İşleme',
         description:
-          'Bu mod, Nuxt\'un en popüler modudur. STİ (SSR), "universal" veya "isomorphic" olarak isimlendirdiğimiz bu mod, saf javascript kullanıp Vue komponentlerinizi kullanıcılara sunmaktansa, bir Node.js sunucusu kullanıp bunları sunucuda işleyerek sitenize HTML bazlı olarak çıktı verecektir. STİ kullanmak, büyük bir SEO puanı takviyesi almanıza sebep olacaktır, daha iyi kullanıcı deneyimi ve Vue SPA ile karşılaştırıldığında daha fazla imkanınız olacaktır.{break}STİ\'yi kendi başınıza uygulamanıza uyarlamak zorlu olabilir, Nuxt.js sizlere bunu hazır bir şekilde sunar ve bilinen bir çok ayarı sizin için yapar.'
+          'Bu mod, Nuxt\'un en popüler modudur. STİ (SSR), "universal" veya "isomorphic" olarak isimlendirdiğimiz bu mod, saf javascript kullanıp Vue komponentlerinizi kullanıcılara sunmaktansa, bir Node.js sunucusu kullanıp bunları sunucuda işleyerek sitenize HTML bazlı olarak çıktı verecektir. STİ kullanmak, büyük bir SEO puanı takviyesi almanıza sebep olacaktır, daha iyi kullanıcı deneyimi ve Vue SPA ile karşılaştırıldığında daha fazla imkanınız olacaktır.{break}STİ\'yi kendi başınıza uygulamanıza uyarlamak zorlu olabilir, Nuxt sizlere bunu hazır bir şekilde sunar ve bilinen bir çok ayarı sizin için yapar.'
       },
       ssg: {
         title: 'Statik Olarak Oluşturma',
         description:
-          'Statik Site Oluşturma bu sıralar çok popüler bir oluştur. Bir başka sisteme geçip alışmakla zaman kaybetmek yerine neden bir taşla iki kuş vurmayasınız ki? {proverbial} Nuxt.js, Vue uygulamanıza bağlı olarak statik bir site oluşturabilir. Buna ayrıca "her iki tarafın da en iyisi" denilir çünkü bir sunucuya ihtiyacınız olmadığı halde Nuxt\'un tüm sayfaları önceden işleyerek verdiği sonuçlar doğrultusunda tüm SEO ayrıcalıklarına erişebilirsiniz. Ayrıca, bu yöntemle oluşturduğunuz sayfalarınızı kolaylıkla Netlify veya GitHub sayfalarınızda kullanabilirsiniz. ',
+          'Statik Site Oluşturma bu sıralar çok popüler bir oluştur. Bir başka sisteme geçip alışmakla zaman kaybetmek yerine neden bir taşla iki kuş vurmayasınız ki? {proverbial} Nuxt, Vue uygulamanıza bağlı olarak statik bir site oluşturabilir. Buna ayrıca "her iki tarafın da en iyisi" denilir çünkü bir sunucuya ihtiyacınız olmadığı halde Nuxt\'un tüm sayfaları önceden işleyerek verdiği sonuçlar doğrultusunda tüm SEO ayrıcalıklarına erişebilirsiniz. Ayrıca, bu yöntemle oluşturduğunuz sayfalarınızı kolaylıkla Netlify veya GitHub sayfalarınızda kullanabilirsiniz. ',
         proverbial: 'sadece atasözü olarak elbette'
       }
     },
@@ -168,7 +168,7 @@ export default {
     meta: {
       title: 'Nuxt Temalar',
       description:
-        'With the themes below built by our partners from Creative Tim and Theme Forest you can see how a real world application is built, with Nuxt.js stack behind.'
+        'With the themes below built by our partners from Creative Tim and Theme Forest you can see how a real world application is built, with Nuxt stack behind.'
     },
     title: '{nuxt} Temalar',
     description:
@@ -179,11 +179,11 @@ export default {
     meta: {
       title: 'Nuxt Video Kursları',
       description:
-        'With the video courses below created by our partner VueSchool you can discover and learn more about the Nuxt.js Framework.'
+        'With the video courses below created by our partner VueSchool you can discover and learn more about the Nuxt Framework.'
     },
     title: '{nuxt} Video Kursları',
     description:
-      'Aşağıdaki VueSchool tarafından hazırlanan video kurslarımız ile Nuxt.js sistemi hakkında daha fazla keşif yapabilir ve daha fazla bilgiye sahip olabilirsiniz.',
+      'Aşağıdaki VueSchool tarafından hazırlanan video kurslarımız ile Nuxt sistemi hakkında daha fazla keşif yapabilir ve daha fazla bilgiye sahip olabilirsiniz.',
     cta: {
       discover: "Vueschool'u keşfet",
       start: 'KURSU BAŞLAT'
@@ -192,8 +192,7 @@ export default {
   sponsor: {
     meta: {
       title: 'Sponsor Nuxt Development',
-      description:
-        'You can support Nuxt development via different methods and ensure regular updates to the framework.'
+      description: 'You can support Nuxt development via different methods and ensure regular updates to the framework.'
     },
     title: '{nuxt} Gelişimine Destek Ol',
     description:
@@ -246,7 +245,7 @@ export default {
     title: '{nuxt} Blog',
     description: '{nuxtTeam} ve {nuxtCommunity} tarafından hazırlanan Nuxt gönderilerini ve ipuçlarını keşfedin!',
     nuxt_team: 'Nuxt Team',
-    nuxt_community: 'Nuxt.js Community',
+    nuxt_community: 'Nuxt Community',
     contribute: 'Hata yakaladınız veya bu gönderiye katkıda bulunmak mı istiyorsunuz?'
   },
   guide: {

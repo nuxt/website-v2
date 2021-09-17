@@ -1,7 +1,7 @@
 ---
 template: guide
 title: Google App Engine
-description: How to deploy Nuxt.js on Google App Engine?
+description: How to deploy Nuxt on Google App Engine?
 target: Server
 category: deployment
 logo: "/img/modules/categories/deployment.svg"
@@ -59,7 +59,7 @@ At this point, your app is ready to be uploaded to Google App Engine. Now just r
 gcloud app deploy app.yaml --project [project-id]
 ```
 
-Voilà! Your Nuxt.js application is now hosted on Google App Engine!
+Voilà! Your Nuxt application is now hosted on Google App Engine!
 
 ## Further Information
 

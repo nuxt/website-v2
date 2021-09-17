@@ -50,7 +50,7 @@ export default {
   },
   homepage: {
     meta: {
-      title: 'Nuxt.js - El Framework intuitivo de Vue',
+      title: 'Nuxt - El Framework intuitivo de Vue',
       description:
         'Construye tu siguiente aplicación de Vue.js con confianza usando Nuxt. Un framework de código abierto que trabaja para conseguir que el desarrollo web sea simple y poderoso.'
     },
@@ -70,7 +70,7 @@ export default {
       enjoyable: {
         title: 'Agradable',
         description:
-          'Nuestro enfoque principal es la experiencia del desarrollador. Nos encanta Nuxt.js y mejoramos continuamente, ¡así que a ti también te encanta! {break} Espere soluciones atractivas, mensajes de error descriptivos, poderosos valores predeterminados y documentación detallada. Si surgen preguntas o problemas, nuestra comunidad te ayudará.'
+          'Nuestro enfoque principal es la experiencia del desarrollador. Nos encanta Nuxt y mejoramos continuamente, ¡así que a ti también te encanta! {break} Espere soluciones atractivas, mensajes de error descriptivos, poderosos valores predeterminados y documentación detallada. Si surgen preguntas o problemas, nuestra comunidad te ayudará.'
       },
       modular: {
         title: 'Modular',
@@ -80,7 +80,7 @@ export default {
       performant: {
         title: 'Rendimiento',
         description:
-          'Con Nuxt.js, tu aplicación se optimizará desde el primer momento. Hacemos todo lo posible para crear aplicaciones de alto rendimiento utilizando las mejores prácticas de Vue.js y Node.js.Para exprimir cada bit innecesario de tu aplicación, Nuxt incluye un analizador de paquetes y muchas oportunidades para ajustar tu aplicación.'
+          'Con Nuxt, tu aplicación se optimizará desde el primer momento. Hacemos todo lo posible para crear aplicaciones de alto rendimiento utilizando las mejores prácticas de Vue.js y Node.js.Para exprimir cada bit innecesario de tu aplicación, Nuxt incluye un analizador de paquetes y muchas oportunidades para ajustar tu aplicación.'
       }
     },
     companies: {
@@ -91,12 +91,12 @@ export default {
       ssr: {
         title: 'Server Side Rendered',
         description:
-          'El modo más popular para Nuxt. Con SSR, también llamado modo "universal" o "isomórfico", se utilizará un servidor Node.js para entregar HTML basado en tus componentes de Vue al cliente en lugar del javascript puro. El uso de SSR generará un gran impulso de SEO, una mejor UX y más oportunidades (en comparación con un Vue SPA tradicional). {Break} Debido a que implementar SSR por tu cuenta puede ser realmente tedioso, Nuxt.js le brinda soporte completo listo para usar y se encargará de los errores comunes.'
+          'El modo más popular para Nuxt. Con SSR, también llamado modo "universal" o "isomórfico", se utilizará un servidor Node.js para entregar HTML basado en tus componentes de Vue al cliente en lugar del javascript puro. El uso de SSR generará un gran impulso de SEO, una mejor UX y más oportunidades (en comparación con un Vue SPA tradicional). {Break} Debido a que implementar SSR por tu cuenta puede ser realmente tedioso, Nuxt le brinda soporte completo listo para usar y se encargará de los errores comunes.'
       },
       ssg: {
         title: 'Statically Generated',
         description:
-          'La generación de sitios estáticos es un tema muy candente en este momento (también conocido como JAMStack). En lugar de cambiar a otro framework y dedicar tiempo a acostumbrarse a él, ¿por qué no matar dos pájaros de un tiro? {proverbial} Nuxt.js admite la generación de un sitio web estático basado en tu aplicación Vue. Es "lo mejor de ambos mundos", ya que no necesitas un servidor, pero todavía tiene beneficios de SEO porque Nuxt pre-renderizará todas las páginas e incluirá el HTML necesario. Además, puede implementar la página resultante fácilmente en páginas de Netlify o GitHub.',
+          'La generación de sitios estáticos es un tema muy candente en este momento (también conocido como JAMStack). En lugar de cambiar a otro framework y dedicar tiempo a acostumbrarse a él, ¿por qué no matar dos pájaros de un tiro? {proverbial} Nuxt admite la generación de un sitio web estático basado en tu aplicación Vue. Es "lo mejor de ambos mundos", ya que no necesitas un servidor, pero todavía tiene beneficios de SEO porque Nuxt pre-renderizará todas las páginas e incluirá el HTML necesario. Además, puede implementar la página resultante fácilmente en páginas de Netlify o GitHub.',
         proverbial: 'sólo proverbial'
       }
     },
@@ -172,22 +172,22 @@ export default {
     meta: {
       title: 'Nuxt Temas',
       description:
-        'Con los temas creados por nuestros socios de Creative Tim y Theme Forest, puede ver cómo se construye una aplicación del mundo real, con Nuxt.js.'
+        'Con los temas creados por nuestros socios de Creative Tim y Theme Forest, puede ver cómo se construye una aplicación del mundo real, con Nuxt.'
     },
     title: '{nuxt} Temas',
     description:
-      'Con los temas creados por nuestros socios de Creative Tim y Theme Forest, puede ver cómo se construye una aplicación del mundo real, con Nuxt.js.',
+      'Con los temas creados por nuestros socios de Creative Tim y Theme Forest, puede ver cómo se construye una aplicación del mundo real, con Nuxt.',
     button: 'OBTENERLO por'
   },
   'video-courses': {
     meta: {
       title: 'Nuxt Video Cursos',
       description:
-        'Con los cursos en video creados por nuestro socio VueSchool, puede descubrir y aprender más sobre Nuxt.js.'
+        'Con los cursos en video creados por nuestro socio VueSchool, puede descubrir y aprender más sobre Nuxt.'
     },
     title: '{nuxt} Video Cursos',
     description:
-      'Con los cursos en video creados por nuestro socio VueSchool, puede descubrir y aprender más sobre Nuxt.js.',
+      'Con los cursos en video creados por nuestro socio VueSchool, puede descubrir y aprender más sobre Nuxt.',
     cta: {
       discover: 'Descubrir vueschool',
       start: 'INICIAR CURSO'
@@ -216,8 +216,7 @@ export default {
   support: {
     meta: {
       title: 'El soporte de Nuxt',
-      description:
-        'Nuestro equipo de Nuxt ahora ofrece servicios de consultoría oficiales para sus aplicaciones Nuxt.'
+      description: 'Nuestro equipo de Nuxt ahora ofrece servicios de consultoría oficiales para sus aplicaciones Nuxt.'
     },
     title: 'Asistencia de consultoría {nuxt}',
     description:
@@ -251,10 +250,9 @@ export default {
         'Descubra artículos del equipo de Nuxt y de la comunidad de Nuxt sobre Nuxt, ¡se incluyen consejos y trucos!'
     },
     title: '{nuxt} Blog',
-    description:
-      'Descubra artículos de {nuxtTeam} y {nuxtCommunity} sobre Nuxt, ¡con sugerencias y trucos incluidos!',
+    description: 'Descubra artículos de {nuxtTeam} y {nuxtCommunity} sobre Nuxt, ¡con sugerencias y trucos incluidos!',
     nuxt_team: 'Nuxt Team',
-    nuxt_community: 'Comunidad Nuxt.js',
+    nuxt_community: 'Comunidad Nuxt',
     contribute: '¿Te has equivocado o quieres contribuir a esta publicación de blog?'
   },
   guide: {

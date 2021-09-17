@@ -1,7 +1,7 @@
 ---
 template: blog
 title: Thèmes Nuxt
-description: "Découvrez comment une vraie application est construite avec la stack Nuxt.js grâce aux thèmes édités par nos partenaires."
+description: "Découvrez comment une vraie application est construite avec la stack Nuxt grâce aux thèmes édités par nos partenaires."
 ---
 ::themes-list
 ---

@@ -1,14 +1,14 @@
 ---
 template: guide
 title: Digital Ocean
-description: How to deploy Nuxt.js on DigitalOcean App Platform?
+description: How to deploy Nuxt on DigitalOcean App Platform?
 target: Static & Server
 category: deployment
 logo: "/img/modules/categories/deployment.svg"
 ---
 # Deploy Nuxt on DigitalOcean App Platform
 
-How to deploy Nuxt.js on DigitalOcean App Platform?
+How to deploy Nuxt on DigitalOcean App Platform?
 
 ---
 

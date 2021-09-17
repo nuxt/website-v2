@@ -47,7 +47,7 @@ export default {
   },
   homepage: {
     meta: {
-      title: 'Nuxt.js - O Framework Vue Intuitivo',
+      title: 'Nuxt - O Framework Vue Intuitivo',
       description:
         'Construa sua próxima aplicação Vue.js com confiança utilizando Nuxt. Um framework de código aberto que torna o desenvolvimento web simples e poderoso.'
     },
@@ -67,7 +67,7 @@ export default {
       enjoyable: {
         title: 'Divertido',
         description:
-          'Nosso foco principal é a Experiência do Desenvolvedor. Adoramos o Nuxt.js e melhoramos continuamente o framework para que você também o adore! {break} Espere soluções atraentes, mensagens de erro descritivas, padrões poderosos e documentação detalhada. Se surgirem dúvidas ou problemas, nossa comunidade prestativa irá ajudá-lo(a).'
+          'Nosso foco principal é a Experiência do Desenvolvedor. Adoramos o Nuxt e melhoramos continuamente o framework para que você também o adore! {break} Espere soluções atraentes, mensagens de erro descritivas, padrões poderosos e documentação detalhada. Se surgirem dúvidas ou problemas, nossa comunidade prestativa irá ajudá-lo(a).'
       },
       modular: {
         title: 'Modular',
@@ -77,7 +77,7 @@ export default {
       performant: {
         title: 'Performático',
         description:
-          'Com o Nuxt.js, seu aplicativo será otimizado imediatamente. Fazemos o nosso melhor para construir aplicativos de alto desempenho, utilizando as melhores práticas do Vue.js e Node.js. Para extrair cada bit desnecessário de seu aplicativo, o Nuxt inclui um analisador de pacotes e muitas oportunidades para ajustar seu aplicativo.'
+          'Com o Nuxt, seu aplicativo será otimizado imediatamente. Fazemos o nosso melhor para construir aplicativos de alto desempenho, utilizando as melhores práticas do Vue.js e Node.js. Para extrair cada bit desnecessário de seu aplicativo, o Nuxt inclui um analisador de pacotes e muitas oportunidades para ajustar seu aplicativo.'
       }
     },
     companies: {
@@ -88,12 +88,12 @@ export default {
       ssr: {
         title: 'Renderizado no Servidor (SSR)',
         description:
-          'O modo mais popular para Nuxt. Com o SSR, também conhecido de modo "universal" ou "isomórfico", um servidor Node.js será utilizado para entregar ao cliente o HTML com base em seus componentes Vue, em vez de javascript puro. Usar SSR levará a um grande impulso no SEO, melhor UX e mais oportunidades (em comparação com uma SPA Vue tradicional). {break} Como implementar SSR por conta própria pode ser bem chato, o Nuxt.js oferece suporte completo pronto para uso e cuidará de erros comuns.'
+          'O modo mais popular para Nuxt. Com o SSR, também conhecido de modo "universal" ou "isomórfico", um servidor Node.js será utilizado para entregar ao cliente o HTML com base em seus componentes Vue, em vez de javascript puro. Usar SSR levará a um grande impulso no SEO, melhor UX e mais oportunidades (em comparação com uma SPA Vue tradicional). {break} Como implementar SSR por conta própria pode ser bem chato, o Nuxt oferece suporte completo pronto para uso e cuidará de erros comuns.'
       },
       ssg: {
         title: 'Gerado Estaticamente',
         description:
-          'Geração de Site Estático é um tópico muito falado no momento (também conhecido como JAMStack). Em vez de mudar para outro framework e perder tempo para conhecê-lo, por que não matar dois passáros com uma cajadada só? {proverbial} Nuxt.js suporta a geração de site estático baseado no seu aplicativo Vue. É o "melhor dos dois mundos", pois você não precisa de um servidor, mas ainda sim possui os benefícios de SEO porquê o Nuxt pré-renderizará todas as páginas e incluirá o HTML necessário. Além disso, você pode fazer o deploy das páginas geradas facilmente no Netlify ou GitHub Pages.',
+          'Geração de Site Estático é um tópico muito falado no momento (também conhecido como JAMStack). Em vez de mudar para outro framework e perder tempo para conhecê-lo, por que não matar dois passáros com uma cajadada só? {proverbial} Nuxt suporta a geração de site estático baseado no seu aplicativo Vue. É o "melhor dos dois mundos", pois você não precisa de um servidor, mas ainda sim possui os benefícios de SEO porquê o Nuxt pré-renderizará todas as páginas e incluirá o HTML necessário. Além disso, você pode fazer o deploy das páginas geradas facilmente no Netlify ou GitHub Pages.',
         proverbial: 'apenas um provérbio'
       }
     },
@@ -168,22 +168,22 @@ export default {
     meta: {
       title: 'Nuxt Temas',
       description:
-        'Com os temas abaixo, desenvolvidos por nossos parceiros da Creative Tim e Theme Forest, você pode ver como um aplicativo do mundo real é construído, utilizando a stack Nuxt.js.'
+        'Com os temas abaixo, desenvolvidos por nossos parceiros da Creative Tim e Theme Forest, você pode ver como um aplicativo do mundo real é construído, utilizando a stack Nuxt.'
     },
     title: '{nuxt} Temas',
     description:
-      'Com os temas abaixo, desenvolvidos por nossos parceiros da Creative Tim e Theme Forest, você pode ver como um aplicativo do mundo real é construído, utilizando a stack Nuxt.js.',
+      'Com os temas abaixo, desenvolvidos por nossos parceiros da Creative Tim e Theme Forest, você pode ver como um aplicativo do mundo real é construído, utilizando a stack Nuxt.',
     button: 'GET IT for'
   },
   'video-courses': {
     meta: {
       title: 'Nuxt Cursos em Vídeo',
       description:
-        'Com os cursos em vídeo abaixo, criados por nosso parceiro VueSchool, você pode descobrir e aprender mais sobre o Framework Nuxt.js.'
+        'Com os cursos em vídeo abaixo, criados por nosso parceiro VueSchool, você pode descobrir e aprender mais sobre o Framework Nuxt.'
     },
     title: '{nuxt} Cursos em Vídeo',
     description:
-      'Com os cursos em vídeo abaixo, criados por nosso parceiro VueSchool, você pode descobrir e aprender mais sobre o Framework Nuxt.js.',
+      'Com os cursos em vídeo abaixo, criados por nosso parceiro VueSchool, você pode descobrir e aprender mais sobre o Framework Nuxt.',
     cta: {
       discover: 'Conheça o vueschool',
       start: 'INICIAR CURSO'
@@ -192,8 +192,7 @@ export default {
   sponsor: {
     meta: {
       title: 'Pratrocine o Desenvolvimento do Nuxt',
-      description:
-        'You can support Nuxt development via different methods and ensure regular updates to the framework.'
+      description: 'You can support Nuxt development via different methods and ensure regular updates to the framework.'
     },
     title: 'Pratrocine o Desenvolvimento do {nuxt}',
     description:
@@ -247,7 +246,7 @@ export default {
     title: 'Blog do {nuxt}',
     description: 'Descubra artigos da {nuxtTeam} e {nuxtCommunity} sobre Nuxt, incluindo dicas e truques!',
     nuxt_team: 'Nuxt Team',
-    nuxt_community: 'Nuxt.js Community',
+    nuxt_community: 'Nuxt Community',
     contribute: 'Encontrou um erro ou deseja contribuir para esta postagem?'
   },
   guide: {

@@ -1,7 +1,7 @@
 ---
 template: guide
 title: PM2
-description: How to deploy Nuxt.js with PM2 cluster mode enabled?
+description: How to deploy Nuxt with PM2 cluster mode enabled?
 target: Server
 category: deployment
 logo: "/img/modules/categories/deployment.svg"
@@ -49,7 +49,7 @@ And serve it with `pm2 start`.
 
 Check the status `pm2 ls`.
 
-Your Nuxt.js application is now serving!
+Your Nuxt application is now serving!
 
 ## Further Information
 

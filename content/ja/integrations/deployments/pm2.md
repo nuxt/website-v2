@@ -1,14 +1,14 @@
 ---
 template: guide
 title: PM2
-description: PM2 クラスタモードの有効によって Nuxt.js をどうやってデプロイするのか？
+description: PM2 クラスタモードの有効によって Nuxt をどうやってデプロイするのか？
 target: Server
 category: deployment
 logo: "/img/modules/categories/deployment.svg"
 ---
 # PM2 を使った Nuxt のデプロイ
 
-PM2 クラスタモードの有効によって Nuxt.js をどうやってデプロイするのか？
+PM2 クラスタモードの有効によって Nuxt をどうやってデプロイするのか？
 
 ---
 
@@ -53,7 +53,7 @@ module.exports = {
 
 ステータスを確認するには `pm2 ls` とします。
 
-Nuxt.js アプリケーションが提供されました!
+Nuxt アプリケーションが提供されました!
 
 ## さらなる情報
 

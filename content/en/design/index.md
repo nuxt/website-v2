@@ -9,8 +9,8 @@ navigation: false
 ::design-hero
 ---
 title: Design Kit
-description: "NuxtJS is an MIT licensed open source project and completely free to use.
-You can freely use our logos as long as you mention NuxtJS and link to nuxtjs.org."
+description: "Nuxt is an MIT licensed open source project and completely free to use.
+You can freely use our logos as long as you mention Nuxt and link to nuxtjs.org."
 button: Download Design Kit
 ---
 ::

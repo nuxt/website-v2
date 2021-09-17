@@ -9,8 +9,8 @@ navigation: false
 
 ::page-hero
 ---
-title: NuxtJS チーム
-description: "NuxtJS とそのエコシステムの開発は国際チームよって主導しています。私たちのコミットチームは、NuxtJS をより前進させるために毎日開発しています。"
+title: Nuxt チーム
+description: "Nuxt とそのエコシステムの開発は国際チームよって主導しています。私たちのコミットチームは、Nuxt をより前進させるために毎日開発しています。"
 ---
 ::
 

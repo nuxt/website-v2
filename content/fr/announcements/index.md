@@ -1,7 +1,7 @@
 ---
 template: blog
 title: Annoucements
-description: Découvrez les articles de l'équipe NuxtJS.
+description: Découvrez les articles de l'équipe Nuxt.
 blogPostList: true
 sortBy:
   field: 'position'

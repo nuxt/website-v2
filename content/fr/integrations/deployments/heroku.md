@@ -1,7 +1,7 @@
 ---
 template: guide
 title: Heroku
-description: How to deploy Nuxt.js on Heroku?
+description: How to deploy Nuxt on Heroku?
 target: Server
 category: deployment
 logo: "/img/modules/categories/deployment.svg"
@@ -12,7 +12,7 @@ We recommend you read the [Heroku documentation for Node.js](https://devcenter.h
 <div class="Promo__Video">
   <a href="https://vueschool.io/lessons/how-to-deploy-nuxtjs-to-heroku?friend=nuxt" target="_blank">
     <p class="Promo__Video__Icon">
-      Watch a free lesson on <strong>How to deploy Nuxt.js to Heroku</strong> on Vue School 
+      Watch a free lesson on <strong>How to deploy Nuxt to Heroku</strong> on Vue School
     </p>
   </a>
 </div>
@@ -50,4 +50,4 @@ git push heroku develop:master
 
 where `develop` is the name of your branch.
 
-Voilà! Your Nuxt.js application is now hosted on Heroku!
+Voilà! Your Nuxt application is now hosted on Heroku!

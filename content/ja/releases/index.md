@@ -1,7 +1,7 @@
 ---
 title: リリース
 template: releases
-description: 'NuxtJS フレームワークのすべてのリリースノートを見る'
+description: 'Nuxt フレームワークのすべてのリリースノートを見る'
 navigation: false
 ---
 

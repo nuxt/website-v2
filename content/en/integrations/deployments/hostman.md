@@ -1,14 +1,14 @@
 ---
 template: guide
 title: Hostman
-description: How to deploy Nuxt.js on Hostman?
+description: How to deploy Nuxt on Hostman?
 target: Static
 category: deployment
 logo: "/img/modules/categories/deployment.svg"
 ---
 # Deploy Nuxt on Hostman
 
-How to deploy Nuxt.js on Hostman?
+How to deploy Nuxt on Hostman?
 
 ---
 

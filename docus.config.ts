@@ -1,5 +1,5 @@
 export default {
-  title: 'NuxtJS',
+  title: 'Nuxt',
   description: '',
   url: 'https://nuxtjs.org',
   template: 'docs',

@@ -35,7 +35,7 @@
             <span class="text-primary">Tailwind CSS</span>
           </p>
           <p class="fromcli__question5">
-            <span class="text-primary">? </span> Nuxt.js modules :
+            <span class="text-primary">? </span> Nuxt modules :
             <span class="text-primary">Axios</span>
           </p>
           <p class="fromcli__question6">

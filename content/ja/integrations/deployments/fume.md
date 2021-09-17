@@ -1,14 +1,14 @@
 ---
 template: guide
 title: Fume
-description: Fume への Nuxt.js のデプロイの仕方
+description: Fume への Nuxt のデプロイの仕方
 target: Static & Server
 category: deployment
 logo: "/img/modules/categories/deployment.svg"
 ---
 # Fume で Nuxt をデプロイする
 
-Fume への Nuxt.js のデプロイの仕方
+Fume への Nuxt のデプロイの仕方
 
 ---
 
@@ -27,7 +27,7 @@ Fume には以下の機能があります：
 以下の手順で、2 分で本番用の URL を取得できます：
 
 - [Fume](https://fume.app) に向かい、AWS アカウントに接続し、プラグインします
-- チームと NuxtJS プロジェクトの作成
+- チームと Nuxt プロジェクトの作成
 - プロジェクトのルートフォルダ内で以下のコマンドを実行
 
 ::code-group

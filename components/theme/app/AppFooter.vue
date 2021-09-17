@@ -1,18 +1,18 @@
 <template>
-  <footer class="" aria-label="footerHeading">
-    <div class="select-none" :class="{ 'pt-24': !home }">
+  <footer class="relative z-10" :class="{ 'mt-28 sm:mt-36 md:mt-48 lg:mt-64': !home }" aria-label="footerHeading">
+    <div class="select-none absolute bottom-full w-full">
       <img
         v-if="!home"
         loading="lazy"
         :src="`/img/footer/dark/landscape.svg`"
-        class="w-full h-40 object-fill dark-img pointer-events-none"
+        class="w-full h-12 sm:h-20 lg:h-40 object-fill dark-img pointer-events-none"
         alt="A landscape image"
       />
       <img
         v-if="!home"
         loading="lazy"
         :src="`/img/footer/light/landscape.svg`"
-        class="w-full h-40 object-fill light-img pointer-events-none"
+        class="w-full h-12 sm:h-20 lg:h-40 object-fill light-img pointer-events-none"
         alt="A landscape image"
       />
     </div>
@@ -78,7 +78,7 @@
           </section>
           <ul class="flex items-center space-x-4 xl:space-x-5 mt-4">
             <li v-for="(social, key) in socials" :key="key">
-              <NuxtHref :href="social.href" :aria-label="social.icon">
+              <NuxtHref :href="social.href" :aria-label="social.icon" class="block">
                 <Component
                   :is="social.icon"
                   class="w-6 h-6 hover:text-primary"
@@ -106,7 +106,7 @@ export default defineComponent({
   },
   setup() {
     const { email, error, subscribe, pending, subscribed } = useNewsletter()
-    const { $docus, app } = useContext()
+    const { $docus, app, route } = useContext()
     const socials = [
       {
         href: 'https://twitter.com/nuxt_js',
@@ -121,7 +121,7 @@ export default defineComponent({
         icon: 'IconGitHub'
       }
     ]
-    const home = computed(() => app.localePath($docus.currentPath.value) === app.localePath('/'))
+    const home = computed(() => route.value.path === app.localePath('/'))
     return {
       socials,
       email,

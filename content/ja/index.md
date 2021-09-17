@@ -1,7 +1,7 @@
 ---
 template: blank
 title: 'The Intuitive Vue Framework'
-description: 'NuxtJS を使って信頼ある次世代の Vue.js アプリケーションを構築する Web 開発をシンプルにかつパワフルにするオープンソースフレームワーク'
+description: 'Nuxt を使って信頼ある次世代の Vue.js アプリケーションを構築する Web 開発をシンプルにかつパワフルにするオープンソースフレームワーク'
 bgClass: 'bg-white'
 ---
 
@@ -20,7 +20,7 @@ secondary:
 The Intuitive Vue<br>Framework
 
 #description
-NuxtJS を使って信頼ある次世代の Vue.js アプリケーションを構築する<br class="hidden sm:block" /> Web 開発をシンプルにかつパワフルにするオープンソースフレームワーク
+Nuxt を使って信頼ある次世代の Vue.js アプリケーションを構築する<br class="hidden sm:block" /> Web 開発をシンプルにかつパワフルにするオープンソースフレームワーク
 ::
 
 ::home-learn-master
@@ -32,7 +32,7 @@ category: 学ぶ
 学習も[簡単]{.text-primary}、マスターも[簡単]{.text-primary}
 
 #description
-Nuxt.js コミュニティに参加し私達を助け Nuxtify な世界にします。
+Nuxt コミュニティに参加し私達を助け Nuxtify な世界にします。
 
 #bottom
 :button-link[全てを学習する]{href="/docs/get-started/installation" size="medium"}
@@ -126,7 +126,7 @@ category: パートナー
 Nuxt の開発は情熱を持った開発者によって作られますが、メンテナンスするための必要な労力と新機能開発には、適切な資金のサポートなしには持続できません。これを可能にするのは、スポンサーやパートナーの皆様のおかげです。<br>
 
 #bottom
-:button-link[NuxtJS のスポンサー]{href="/sponsors" size="medium"}
+:button-link[Nuxt のスポンサー]{href="/sponsors" size="medium"}
 ::
 
 ::home-learn-guides
@@ -233,13 +233,13 @@ articleLinkTitle: 情報を得る
 共有は[大事]{.text-sky-lighter}です
 
 #description
-NuxtJS チームと Nuxt.js コミュニティによる、NuxtJS のヒントややり方に関する記事をご覧ください！
+Nuxt チームと Nuxt コミュニティによる、Nuxt のヒントややり方に関する記事をご覧ください！
 
 #campfire-list
   :::campfire-list-item
   ---
   title: お知らせ
-  description: NuxtJS チームの記事を見る。
+  description: Nuxt チームの記事を見る。
   to: '/announcements'
   ---
   :::
@@ -253,14 +253,14 @@ NuxtJS チームと Nuxt.js コミュニティによる、NuxtJS のヒントや
   :::campfire-list-item
   ---
   title: スポンサー
-  description: 日々の仕事で NuxtJS を使い、生活が便利になったと感じられたら、ぜひご支援をご検討ください。
+  description: 日々の仕事で Nuxt を使い、生活が便利になったと感じられたら、ぜひご支援をご検討ください。
   to: '/sponsors'
   ---
   :::
   :::campfire-list-item
   ---
   title: チュートリアル
-  description: NuxtJS コミュニティによって作られたチュートリアルを見る。
+  description: Nuxt コミュニティによって作られたチュートリアルを見る。
   to: '/tutorials'
   ---
   :::

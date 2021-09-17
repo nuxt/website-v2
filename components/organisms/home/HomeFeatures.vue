@@ -43,7 +43,7 @@ export default defineComponent({
     const { app } = useContext()
     const route = useRoute()
 
-    const home = computed(() => route.value.fullPath === (app.localePath('/') || app.localePath('/').slice(0, -1)))
+    const home = computed(() => route.value.path === app.localePath('/'))
 
     return { home }
   }

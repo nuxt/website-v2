@@ -2,11 +2,7 @@
   <button
     slot="placeholder"
     class="w-12 h-12 rounded"
-    :class="
-      localePath($docus.currentPath.value) === localePath('/')
-        ? 'focus:outline-none text-gray-300 hover:text-sky-surface'
-        : 'd-icon'
-    "
+    :class="$route.path === localePath('/') ? 'focus:outline-none text-gray-300 hover:text-sky-surface' : 'd-icon'"
     aria-label="Color Mode"
     @click="switchColor"
   >

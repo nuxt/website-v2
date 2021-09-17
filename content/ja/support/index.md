@@ -23,7 +23,7 @@ description: "テクニカルサポート、トレーニング、カスタム開
   image: 'technical'
   button:
     text: '連絡する'
-    url: ''
+    url: 'mailto:support@nuxtlabs.com'
   form: true
   #form
     :::support-form

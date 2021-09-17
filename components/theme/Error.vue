@@ -1,6 +1,6 @@
 <template>
-  <AppPage class="min-h-screen-sm relative z-0 h-full mb-4 sm:mb-8 lg:mb-20 bg-secondary-black text-white">
-    <div class="relative flex flex-col items-center justify-center px-4 mt-48 md:px-0 z-10">
+  <AppPage class="min-h-screen-sm relative z-0 h-full -mb-48 bg-secondary-black text-white">
+    <div class="relative flex flex-col items-center justify-center px-2 sm:px-4 mt-20 lg:mt-32 md:px-0 z-10">
       <h1 class="font-serif text-center text-display-6 md:text-display-5 2xl:text-display-4">{{ error.message }}</h1>
       <p class="mt-4 mb-4 text-center">{{ $t('common.page_not_found') }}</p>
       <NuxtLink

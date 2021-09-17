@@ -1,9 +1,9 @@
 <template>
   <header :class="home ? 'd-header-home' : 'd-header'">
-    <div class="flex h-full px-1 mx-auto max-w-7xl sm:px-3 lg:px-6">
+    <div class="flex items-center h-full px-1 mx-auto max-w-7xl sm:px-3 lg:px-6">
       <NavigationButton
         aria-label="mobileMenu"
-        class="px-2.5 lg:hidden"
+        class="w-12 h-12 lg:hidden"
         :class="{ 'text-gray-300 hover:text-cloud-lighter': home }"
       />
 
@@ -46,7 +46,7 @@
             v-else
             :key="index"
             :link="link"
-            class="p-1"
+            class="px-1 py-2"
             :class="{ 'text-white': home }"
             :inactive-class="`${!home ? 'hover:d-primary-text-hover ' : 'hover:text-gray-300'}`"
           />
@@ -61,7 +61,7 @@
             home ? 'text-gray-300 hover:text-primary-400' : 'd-secondary-text hover:d-secondary-text-hover'
           }`"
         />
-        <ColorSwitcher v-if="localePath($route.path) !== localePath('/')" class="hidden lg:block" />
+        <ColorSwitcher v-if="$route.path !== localePath('/')" class="hidden lg:block" />
         <AlgoliaSearchBox v-if="settings && settings.algolia" :options="settings.algolia" :settings="settings" />
       </div>
     </div>
@@ -88,7 +88,7 @@ export default defineComponent({
         : null
     })
 
-    const home = computed(() => app.localePath($docus.currentPath.value) === app.localePath('/'))
+    const home = computed(() => route.value.path === app.localePath('/'))
     function isActiveGroup(link) {
       if (link.slug === currentSlug.value || link.items?.some(item => item.slug === currentSlug.value)) {
         return true

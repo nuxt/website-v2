@@ -142,7 +142,7 @@ export default {
   --docsearch-highlight-color: var(--docsearch-primary-color);
   --docsearch-text-color: rgb(113, 113, 122);
   --docsearch-modal-background: theme('colors.gray.100');
-  --docsearch-searchbox-shadow: inset 0 0 0 2px var(--docsearch-primary-color);
+  --docsearch-searchbox-shadow: 0 0 0 2px var(--docsearch-primary-color);
   --docsearch-searchbox-background: var(--color-transparent);
   --docsearch-searchbox-focus-background: var(--color-transparent);
   --docsearch-hit-color: var(--color-gray-700);
@@ -171,7 +171,7 @@ export default {
   @apply lg:rounded-xl !important;
 }
 .DocSearch-Button {
-  @apply rounded w-12 h-12 m-auto bg-transparent hover:shadow-none focus:shadow-none !important;
+  @apply rounded-sm w-12 h-12 m-auto bg-transparent hover:shadow-none focus:outline-none !important;
 }
 .DocSearch-Button > svg {
   @apply mx-auto !important;

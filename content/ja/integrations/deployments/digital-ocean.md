@@ -1,14 +1,14 @@
 ---
 template: guide
 title: Digital Ocean
-description: Nuxt.js を DigitalOcean App Platform でどうやってデプロイするのか？
+description: Nuxt を DigitalOcean App Platform でどうやってデプロイするのか？
 target: Static & Server
 category: deployment
 logo: "/img/modules/categories/deployment.svg"
 ---
 # Nuxt を DigitalOcean App Platform でデプロイする
 
-Nuxt.js を DigitalOcean App Platform でどうやってデプロイするのか？
+Nuxt を DigitalOcean App Platform でどうやってデプロイするのか？
 
 ---
 

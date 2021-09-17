@@ -29,7 +29,7 @@ links:
         to: '/announcements'
       -
         title: 'Contribuer'
-        href: 'https://github.com/nuxt/nuxtjs.org/blob/main/content/en/_archives/guide/contribution-guide.md'
+        to: '/contribution-guide'
       -
         title: 'Discutez avec nous'
         href: 'https://discord.nuxtjs.org/'

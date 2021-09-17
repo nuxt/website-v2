@@ -12,7 +12,7 @@
           <div class="mb-2">
             <span class="text-tertiary font-bold text-lg">{{ category }} </span>
           </div>
-          <h2 class="mb-2 font-serif font-normal text-display-6 md:text-display-5 2xl:text-display-4">
+          <h2 class="mb-2 font-serif font-normal text-center text-display-6 md:text-display-5 2xl:text-display-4">
             <Markdown use="title" unwrap="p" />
           </h2>
           <p class="mb-12 font-normal text-center text-body-base md:text-body-lg 2xl:text-body-xl">

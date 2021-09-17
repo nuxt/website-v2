@@ -1,14 +1,14 @@
 ---
 template: guide
 title: Qovery
-description: Nuxt.js を Qovery にどうやってデプロイするのか？
+description: Nuxt を Qovery にどうやってデプロイするのか？
 target: Static & Server
 category: deployment
 logo: "/img/modules/categories/deployment.svg"
 ---
 # Nuxt を Qovery にデプロイする
 
-Nuxt.js を Qovery にどうやってデプロイするのか？
+Nuxt を Qovery にどうやってデプロイするのか？
 
 ---
 

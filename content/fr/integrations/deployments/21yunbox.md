@@ -1,7 +1,7 @@
 ---
 template: guide
 title: 21YunBox
-description: Comment déployer Nuxt.js sur 21YunBox ?
+description: Comment déployer Nuxt sur 21YunBox ?
 target: Static
 category: deployment
 logo: "/img/modules/categories/deployment.svg"

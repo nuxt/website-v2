@@ -1,14 +1,14 @@
 ---
 template: guide
 title: 21YunBox
-description: 21YunBox に Nuxt.js をどうやってデプロイしますか？
+description: 21YunBox に Nuxt をどうやってデプロイしますか？
 target: Static
 category: deployment
 logo: "/img/modules/categories/deployment.svg"
 ---
 # 21YunBox で Nuxt をデプロイする
 
-21YunBox に Nuxt.js をどうやってデプロイしますか？
+21YunBox に Nuxt をどうやってデプロイしますか？
 
 ---
 
@@ -22,7 +22,7 @@ logo: "/img/modules/categories/deployment.svg"
 - 無制限の [カスタムドメイン](https://www.21yunbox.com/docs/#/custom-domains)
 - サイト高速化のための自動 [Brotli 圧縮](https://en.wikipedia.org/wiki/Brotli)
 - ネイティブな HTTP/2 のサポート
-- HTTP → HTTPS の自動リダイレクト 
+- HTTP → HTTPS の自動リダイレクト
 - カスタム URL のリダイレクトとリライト
 
 ## 前提条件

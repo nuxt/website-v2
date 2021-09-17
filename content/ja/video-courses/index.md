@@ -1,6 +1,6 @@
 ---
 template: blog
-title: NuxtJS ビデオコース
+title: Nuxt ビデオコース
 description: 探索して無料およびプレミアムビデオコースで Nuxt フレームワークをより学びましょう。
 ---
 
@@ -8,7 +8,7 @@ description: 探索して無料およびプレミアムビデオコースで Nux
 ---
 video-courses:
   one:
-    title: 実世界で使えるアプリケーションを作って Nuxt.js を学習する
+    title: 実世界で使えるアプリケーションを作って Nuxt を学習する
     description: Nuxt を使って堅牢でモダンなウェブサイトをゼロから構築する方法を学びましょう。あるいは、フレームワークをより有効に活用しながら、ウェブサイトのパフォーマンスやコード品質を向上させましょう。
     image: /img/video-courses/mastering_nuxt.png
     link: 'https://masteringnuxt.com/?utm_source=nuxt&utm_medium=link&utm_campaign=navbar_link'
@@ -38,20 +38,20 @@ video-courses:
     link: 'https://codecourse.com/courses/build-a-job-board-with-laravel-graphql-nuxt-and-apollo'
     tier: プレミアム
   six:
-    title: Nuxt.js - Vue.js on Steroids
-    description: Nuxt.js で魅力的な Vue JS アプリケーションを構築しましょう。Nuxt は、簡単なサーバーサイドレンダリングと、フォルダベースの設定方法を追加します。
+    title: Nuxt - Vue.js on Steroids
+    description: Nuxt で魅力的な Vue JS アプリケーションを構築しましょう。Nuxt は、簡単なサーバーサイドレンダリングと、フォルダベースの設定方法を追加します。
     image: /img/video-courses/vuejs_on_steroids.png
     link: 'https://www.udemy.com/course/nuxtjs-vuejs-on-steroids/'
     tier: プレミアム
   seven:
-    title: Nuxt.js で Vue をスケーリングさせる
+    title: Nuxt で Vue をスケーリングさせる
     description: Vue に慣れてきたら、Nuxt のようなフレームワークを学ぶことで、ベストプラクティスに沿った制作可能な Web アプリを作ることができます。
     image: /img/video-courses/scaling_vue_with_nuxt.png
     link: 'https://www.vuemastery.com/courses/scaling-vue-with-nuxt-js/why-use-nuxt'
     tier: プレミアム
   eight:
-    title: Nuxt.js の基礎
-    description: このコースでは、Nuxt.js の基礎を Nuxt の創設者と一緒に作成しました。このコースでは、スキャフォールドから最初の Nuxt.js アプリケーションのデプロイまで、必要な知識をカバーしています。
+    title: Nuxt の基礎
+    description: このコースでは、Nuxt の基礎を Nuxt の創設者と一緒に作成しました。このコースでは、スキャフォールドから最初の Nuxt アプリケーションのデプロイまで、必要な知識をカバーしています。
     image: /img/video-courses/nuxt_fundamentals.png
     link: 'https://vueschool.io/courses/nuxtjs-fundamentals?friend=nuxt&utm_source=Nuxtjs.org&utm_medium=Link&utm_content=Courses&utm_campaign=nuxtjs-fundamentals'
     tier: 無料

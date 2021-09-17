@@ -11,7 +11,7 @@
         justify-between
         md:border-b
         border-b-sky-dark
-        pb-2
+        mb-2
       "
     >
       <div class="flex flex-row space-x-4 items-center justify-start">
@@ -31,9 +31,17 @@
           :options="sortFields"
           select-class="appearance-none block w-full bg-none dark:bg-transparent light:bg-white ml-2 py-2 pl-3 pr-10 text-base focus:outline-none light:focus:ring-black dark:focus:ring-white light:focus:border-gray-400 dark:focus:border-secondary-light sm:text-md font-medium"
         />
-        <button @click="toggleOrderBy" class="focus:outline-none focus:ring-transparent pl-3 pr-3 md:pr-0 py-3" aria-label="reverseSortButton">
-          <IconSortDesc v-if="orderedBy === 'desc'" alt="Descending sort" class="text-sky-darker dark:text-white w-4 h-4"/>
-          <IconSortAsc v-else alt="Ascending sort" class="text-sky-darker dark:text-white w-4 h-4"/>
+        <button
+          class="focus:outline-none focus:ring-transparent pl-3 pr-3 md:pr-0 py-3"
+          aria-label="reverseSortButton"
+          @click="toggleOrderBy"
+        >
+          <IconSortDesc
+            v-if="orderedBy === 'desc'"
+            alt="Descending sort"
+            class="text-sky-darker dark:text-white w-4 h-4"
+          />
+          <IconSortAsc v-else alt="Ascending sort" class="text-sky-darker dark:text-white w-4 h-4" />
         </button>
       </div>
     </div>

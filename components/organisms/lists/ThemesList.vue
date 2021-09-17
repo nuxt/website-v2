@@ -10,7 +10,7 @@
         :image="image"
         :href="href"
       >
-        <div slot="footer" class="px-4 mb-4 mt-auto">
+        <div slot="footer" class="mt-auto mb-6 mx-4">
           <SectionButton
             :href="href"
             size="md"

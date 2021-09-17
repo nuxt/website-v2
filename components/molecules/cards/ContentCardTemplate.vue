@@ -35,7 +35,7 @@
       </Link>
     </h1>
 
-    <p class="pb-8 px-4 text-gray-500 dark:text-cloud-lighter">
+    <p class="pb-8 px-4 text-gray-500 dark:text-cloud-lighter truncate sm:whitespace-normal">
       {{ description }}
     </p>
 

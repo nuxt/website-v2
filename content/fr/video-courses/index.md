@@ -1,6 +1,6 @@
 ---
 template: blog
-title: Cours vidéos NuxtJS
+title: Cours vidéos Nuxt
 description: "Apprenez-en plus sur le framework Nuxt avec ce choix de vidéos en anglais, gratuites ou premium."
 ---
 

@@ -1,7 +1,7 @@
 ---
 template: page
 title: The Intuitive Vue Framework
-description: NuxtJS を使って信頼ある次世代の Vue.js アプリケーションを構築する Web 開発をシンプルにかつパワフルにするオープンソースフレームワーク
+description: Nuxt を使って信頼ある次世代の Vue.js アプリケーションを構築する Web 開発をシンプルにかつパワフルにするオープンソースフレームワーク
 ---
 
 ::home-hero
@@ -18,7 +18,7 @@ secondary:
 #title
 The Intuitive Vue<br>Framework
 #description
-NuxtJS を使って信頼ある次世代の Vue.js アプリケーションを構築する<br class="hidden sm:block" /> Web 開発をシンプルにかつパワフルにするオープンソースフレームワーク
+Nuxt を使って信頼ある次世代の Vue.js アプリケーションを構築する<br class="hidden sm:block" /> Web 開発をシンプルにかつパワフルにするオープンソースフレームワーク
 ::
 
 ::home-discover
@@ -121,7 +121,7 @@ category: パートナー
 Nuxt の開発は情熱を持った開発者によって作られますが、メンテナンスするための必要な労力と新機能開発には、適切な資金のサポートなしには持続できません。これを可能にするのは、スポンサーやパートナーの皆様のおかげです。<br>
 
 #bottom
-:button-link[NuxtJS のスポンサー]{href="/sponsors" size="medium"}
+:button-link[Nuxt のスポンサー]{href="/sponsors" size="medium"}
 ::
 
 ::home-learn-master
@@ -231,5 +231,5 @@ category: コミュニティ
 共有は[大事]{.text-primary}です
 
 #description
-NuxtJS チームと Nuxt.js コミュニティによる、NuxtJS のヒントややり方に関する記事をご覧ください！
+Nuxt チームと Nuxt.js コミュニティによる、Nuxt のヒントややり方に関する記事をご覧ください！
 ::

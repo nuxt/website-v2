@@ -49,21 +49,21 @@ export default {
     meta: {
       title: 'Nuxt.js - O Framework Vue Intuitivo',
       description:
-        'Construa sua próxima aplicação Vue.js com confiança utilizando NuxtJS. Um framework de código aberto que torna o desenvolvimento web simples e poderoso.'
+        'Construa sua próxima aplicação Vue.js com confiança utilizando Nuxt. Um framework de código aberto que torna o desenvolvimento web simples e poderoso.'
     },
     welcome: {
       title: 'O Framework {br} {frameworkType} Intuitivo',
       description:
-        'Construa sua próxima aplicação Vue.js com confiança utilizando NuxtJS. Um framework de {openSource} que torna o desenvolvimento web simples e poderoso.',
+        'Construa sua próxima aplicação Vue.js com confiança utilizando Nuxt. Um framework de {openSource} que torna o desenvolvimento web simples e poderoso.',
       openSource: 'código aberto',
       get_started: 'Começar',
-      get_updates: 'Receba atualizações do NuxtJS no seu e-mail todos os meses',
+      get_updates: 'Receba atualizações do Nuxt no seu e-mail todos os meses',
       video: 'Video produzido por {company}, baixe a {cheatSheet} deles.',
       cheatSheet: 'folha grátis de dicas do Nuxt'
     },
     why: {
       title: 'Por que {nuxt}',
-      try_nuxtjs_online: 'Experiemente o NuxtJS Online',
+      try_nuxtjs_online: 'Experiemente o Nuxt Online',
       enjoyable: {
         title: 'Divertido',
         description:
@@ -100,13 +100,13 @@ export default {
     sponsors: {
       title: 'Patrocinadores',
       description:
-        'NuxtJS é um projeto de código aberto de licença MIT e de uso totalmente gratuito. No entanto, o esforço necessário para manter e desenvolver novos recursos para o projeto não é sustentável sem apoio financeiro adequado. Se você possui um negócio e está utilizando o Nuxt em um produto que gera receita, faz sentido para os negócios patrocinar o desenvolvimento do Nuxt: isso garante que o projeto do qual seu produto depende permaneça saudável e com manutenção ativa. Ele também pode ajudar sua exposição na comunidade Vue/Nuxt e torna mais fácil atrair desenvolvedores Vue/Nuxt. Se você é um usuário individual e tem aproveitado a produtividade de usar o Nuxt, considere fazer uma doação como um sinal de agradecimento.',
+        'Nuxt é um projeto de código aberto de licença MIT e de uso totalmente gratuito. No entanto, o esforço necessário para manter e desenvolver novos recursos para o projeto não é sustentável sem apoio financeiro adequado. Se você possui um negócio e está utilizando o Nuxt em um produto que gera receita, faz sentido para os negócios patrocinar o desenvolvimento do Nuxt: isso garante que o projeto do qual seu produto depende permaneça saudável e com manutenção ativa. Ele também pode ajudar sua exposição na comunidade Vue/Nuxt e torna mais fácil atrair desenvolvedores Vue/Nuxt. Se você é um usuário individual e tem aproveitado a produtividade de usar o Nuxt, considere fazer uma doação como um sinal de agradecimento.',
       become_a_sponsor: 'Torne-se um patricionador'
     },
     newsletter: {
       title: '{nuxt} Newsletter',
       description:
-        'Receba as atualizações mais recentes do NuxtJS no seu e-mail, escolhidas cuidadosamente pelo time do NuxtJS.',
+        'Receba as atualizações mais recentes do Nuxt no seu e-mail, escolhidas cuidadosamente pelo time do Nuxt.',
       form: {
         email: 'Email',
         subscribing: 'Assinando...',
@@ -120,17 +120,17 @@ export default {
   },
   design: {
     meta: {
-      title: 'NuxtJS Design',
-      description: 'Download NuxtJS design resources (SVG, icons, emoji and favicon).'
+      title: 'Nuxt Design',
+      description: 'Download Nuxt design resources (SVG, icons, emoji and favicon).'
     },
     title: '{nuxt} Design',
     description:
-      'NuxtJS é um projeto de código aberto de licença MIT e de uso totalmente gratuito. {break} Você pode utilizar nossos logotipos livremente, desde que mencione NuxtJS e faça um link para nuxtjs.org.',
+      'Nuxt é um projeto de código aberto de licença MIT e de uso totalmente gratuito. {break} Você pode utilizar nossos logotipos livremente, desde que mencione Nuxt e faça um link para nuxtjs.org.',
     other_download_message: 'Você também baixar nosso {favicon} ou nosso arquivo {sketch}.'
   },
   resources: {
     meta: {
-      title: 'NuxtJS Recursos',
+      title: 'Nuxt Recursos',
       description:
         'Discover a panel of resources made by our partners. By using thoses affiliate resources links, you are helping us to maintain and develop the Open Source Framework.'
     },
@@ -146,27 +146,27 @@ export default {
   },
   shop: {
     meta: {
-      title: 'Loja NuxtJS',
+      title: 'Loja Nuxt',
       description:
-        'You want to support the NuxtJS project and show your love to the rest of the community? Here our products with the best quality ever!'
+        'You want to support the Nuxt project and show your love to the rest of the community? Here our products with the best quality ever!'
     },
     title: 'Loja {nuxt}',
     description:
-      'Quer apoiar o projeto NuxtJS e mostrar o seu amor ao resto da comunidade?{break} Aqui estão os nossos produtos de melhor qualidade!',
+      'Quer apoiar o projeto Nuxt e mostrar o seu amor ao resto da comunidade?{break} Aqui estão os nossos produtos de melhor qualidade!',
     button: 'Coming soon'
   },
   team: {
     meta: {
-      title: 'NuxtJS Time',
-      description: 'NuxtJS has a very active and engaged team that is constantly striving to push Nuxt forward.'
+      title: 'Nuxt Time',
+      description: 'Nuxt has a very active and engaged team that is constantly striving to push Nuxt forward.'
     },
     title: '{nuxt} Time',
     description:
-      'O desenvolvimento da NuxtJS e de seu ecossistema é orientado por uma equipe internacional. Temos uma equipe muito ativa e engajada que está constantemente se esforçando para levar a Nuxt adiante.'
+      'O desenvolvimento da Nuxt e de seu ecossistema é orientado por uma equipe internacional. Temos uma equipe muito ativa e engajada que está constantemente se esforçando para levar a Nuxt adiante.'
   },
   themes: {
     meta: {
-      title: 'NuxtJS Temas',
+      title: 'Nuxt Temas',
       description:
         'Com os temas abaixo, desenvolvidos por nossos parceiros da Creative Tim e Theme Forest, você pode ver como um aplicativo do mundo real é construído, utilizando a stack Nuxt.js.'
     },
@@ -177,7 +177,7 @@ export default {
   },
   'video-courses': {
     meta: {
-      title: 'NuxtJS Cursos em Vídeo',
+      title: 'Nuxt Cursos em Vídeo',
       description:
         'Com os cursos em vídeo abaixo, criados por nosso parceiro VueSchool, você pode descobrir e aprender mais sobre o Framework Nuxt.js.'
     },
@@ -191,13 +191,13 @@ export default {
   },
   sponsor: {
     meta: {
-      title: 'Pratrocine o Desenvolvimento do NuxtJS',
+      title: 'Pratrocine o Desenvolvimento do Nuxt',
       description:
-        'You can support NuxtJS development via different methods and ensure regular updates to the framework.'
+        'You can support Nuxt development via different methods and ensure regular updates to the framework.'
     },
     title: 'Pratrocine o Desenvolvimento do {nuxt}',
     description:
-      'NuxtJS é um projeto de código aberto de licença MIT e de uso totalmente gratuito.{break} No entanto, o esforço necessário para manter e desenvolver novos recursos para o projeto não é sustentável sem apoio financeiro adequado.{break} Você pode dar surpote ao desenvolvimento do NuxtJS pelos seguintes métodos:',
+      'Nuxt é um projeto de código aberto de licença MIT e de uso totalmente gratuito.{break} No entanto, o esforço necessário para manter e desenvolver novos recursos para o projeto não é sustentável sem apoio financeiro adequado.{break} Você pode dar surpote ao desenvolvimento do Nuxt pelos seguintes métodos:',
     donations: {
       title: 'Doações únicas',
       description: 'Aceitamos doações por meio desses canais'
@@ -205,22 +205,22 @@ export default {
     pledges: {
       title: 'Pagamentos Mensais',
       description:
-        'Os pagamentos mensais vêm com vantagens exclusivas, por exemplo, ter seu nome listado no repositório do NuxtJS no GitHub, ou ter o logotipo de sua empresa colocado neste site. Torne-se um nuxter ou patrocinador por meio de {opencollective} (vai para um fundo com modelos de despesas transparentes que apoiam os esforços e eventos da comunidade).'
+        'Os pagamentos mensais vêm com vantagens exclusivas, por exemplo, ter seu nome listado no repositório do Nuxt no GitHub, ou ter o logotipo de sua empresa colocado neste site. Torne-se um nuxter ou patrocinador por meio de {opencollective} (vai para um fundo com modelos de despesas transparentes que apoiam os esforços e eventos da comunidade).'
     },
     become_a_sponsor: 'Torne-se um patricionador'
   },
   support: {
     meta: {
-      title: 'NuxtJS Suporte',
-      description: 'Our NuxtJS team now offers official consulting services for your NuxtJS applications.'
+      title: 'Nuxt Suporte',
+      description: 'Our Nuxt team now offers official consulting services for your Nuxt applications.'
     },
     title: 'Assessoria {nuxt} Suporte',
     description:
-      'Nossa {team} oferece serviços de consultoria oficial para seus aplicativos NuxtJS.{break} Oferecemos diversos serviços, dependendo de suas necessidades, desde suporte técnico até desenvolvimento personalizado. Espere uma resposta dentro de um dia útil, podemos assinar um NDA personalizado e você pode obter um reembolso total se não ficar satisfeito com nosso serviço.',
+      'Nossa {team} oferece serviços de consultoria oficial para seus aplicativos Nuxt.{break} Oferecemos diversos serviços, dependendo de suas necessidades, desde suporte técnico até desenvolvimento personalizado. Espere uma resposta dentro de um dia útil, podemos assinar um NDA personalizado e você pode obter um reembolso total se não ficar satisfeito com nosso serviço.',
     technical: {
       title: 'Suporte Técnico',
       description:
-        'Obtenha auditorias de projetos, deploy de aplicativos, desenvolvimento personalizado e suporte técnico da equipe NuxtJS.',
+        'Obtenha auditorias de projetos, deploy de aplicativos, desenvolvimento personalizado e suporte técnico da equipe Nuxt.',
       start: 'Iniciar chat',
       partner: {
         pre: 'Temos parceria com',
@@ -230,7 +230,7 @@ export default {
     entreprise: {
       title: 'para empresas',
       description:
-        'O NuxtJS e milhares de mantenedores de outros pacotes estão trabalhando com a Tidelift para fornecer uma assinatura corporativa que cubra todo o código aberto que você usa.{break} Se você deseja a flexibilidade do código aberto e a confiança do software de nível comercial, isso é para voce.',
+        'O Nuxt e milhares de mantenedores de outros pacotes estão trabalhando com a Tidelift para fornecer uma assinatura corporativa que cubra todo o código aberto que você usa.{break} Se você deseja a flexibilidade do código aberto e a confiança do software de nível comercial, isso é para voce.',
       partner: {
         pre: 'Disponível como parte da assinatura',
         post: '.'
@@ -241,12 +241,12 @@ export default {
   },
   blog: {
     meta: {
-      title: 'Blog do NuxtJS',
-      description: 'Discover articles from the NuxtJS team and NuxtJS Community about NuxtJS, tips and tricks included!'
+      title: 'Blog do Nuxt',
+      description: 'Discover articles from the Nuxt team and Nuxt Community about Nuxt, tips and tricks included!'
     },
     title: 'Blog do {nuxt}',
-    description: 'Descubra artigos da {nuxtTeam} e {nuxtCommunity} sobre NuxtJS, incluindo dicas e truques!',
-    nuxt_team: 'NuxtJS Team',
+    description: 'Descubra artigos da {nuxtTeam} e {nuxtCommunity} sobre Nuxt, incluindo dicas e truques!',
+    nuxt_team: 'Nuxt Team',
     nuxt_community: 'Nuxt.js Community',
     contribute: 'Encontrou um erro ou deseja contribuir para esta postagem?'
   },

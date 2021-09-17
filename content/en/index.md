@@ -239,7 +239,7 @@ Discover articles from the framework Team and Community about Nuxt, tips and tri
   :::campfire-list-item
   ---
   title: Announcements
-  description: Discover articles from NuxtJS team.
+  description: Discover articles from Nuxt team.
   to: '/announcements'
   ---
   :::
@@ -253,14 +253,14 @@ Discover articles from the framework Team and Community about Nuxt, tips and tri
   :::campfire-list-item
   ---
   title: Sponsors
-  description: If you use NuxtJS in your daily work and feel that it has made your life easier, please consider backing us.
+  description: If you use Nuxt in your daily work and feel that it has made your life easier, please consider backing us.
   to: '/sponsors'
   ---
   :::
   :::campfire-list-item
   ---
   title: Tutorials
-  description: Discover tutorials made by the NuxtJS community.
+  description: Discover tutorials made by the Nuxt community.
   to: '/tutorials'
   ---
   :::

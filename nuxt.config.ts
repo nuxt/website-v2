@@ -5,7 +5,7 @@ import { withDocus } from '@docus/app'
 export default withDocus({
   rootDir: __dirname,
   head: {
-    titleTemplate: 'NuxtJS - %s',
+    titleTemplate: 'Nuxt - %s',
     link: [
       {
         rel: 'stylesheet',

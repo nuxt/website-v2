@@ -1,6 +1,6 @@
 ---
 template: blog
-title: NuxtJS ビデオコース
+title: Nuxt ビデオコース
 description: 探索して無料およびプレミアムビデオコースで Nuxt フレームワークをより学びましょう。
 ---
 

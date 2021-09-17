@@ -1,6 +1,6 @@
 ---
 template: blog
-title: Thèmes NuxtJS
+title: Thèmes Nuxt
 description: "Découvrez comment une vraie application est construite avec la stack Nuxt.js grâce aux thèmes édités par nos partenaires."
 ---
 ::themes-list

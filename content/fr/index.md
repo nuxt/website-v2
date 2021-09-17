@@ -1,7 +1,7 @@
 ---
 template: blank
 title: 'Le framework Vue intuitif'
-description: 'Construisez votre prochaine application Vue.js en toute confiance avec NuxtJS. Un framework open source qui rend le développement web simple et puissant.'
+description: 'Construisez votre prochaine application Vue.js en toute confiance avec Nuxt. Un framework open source qui rend le développement web simple et puissant.'
 bgClass: 'bg-white'
 ---
 ::home-hero
@@ -19,7 +19,7 @@ secondary:
 Le framework Vue<br>intuitif
 
 #description
-Construisez votre prochaine application Vue.js en toute confiance avec NuxtJS.<br class="hidden sm:block" /> Un framework open source qui rend le développement web simple et puissant.
+Construisez votre prochaine application Vue.js en toute confiance avec Nuxt.<br class="hidden sm:block" /> Un framework open source qui rend le développement web simple et puissant.
 ::
 
 ::home-learn-master
@@ -117,7 +117,7 @@ Un [_développement_]{.text-primary} soutenu
 Nuxt est construit et maintenu par des développeurs passionnés mais il serait impossible de fournir les efforts nécessaires pour développer et maintenir de nouvelles fonctionnalités sans une réelle contribution financière. Nous remercions nos sponsors et partenaires qui rendent cela possible.<br>
 
 #bottom
-:button-link[Sponsorisez NuxtJS]{href="/sponsors" size="medium"}
+:button-link[Sponsorisez Nuxt]{href="/sponsors" size="medium"}
 ::
 
 ::home-learn-guides
@@ -223,13 +223,13 @@ articleLinkTitle: Informations
 Sharing is [_Caring_]{.text-primary}
 
 #description
-Lisez nos articles rédigés par l'équipe NuxtJS et la communauté, trucs et astuces inclus !
+Lisez nos articles rédigés par l'équipe Nuxt et la communauté, trucs et astuces inclus !
 
 #campfire-list
   :::campfire-list-item
   ---
   title: Annonces
-  description: Découvrez les articles de l'équipe NuxtJS.
+  description: Découvrez les articles de l'équipe Nuxt.
   to: '/announcements'
   ---
   :::
@@ -243,14 +243,14 @@ Lisez nos articles rédigés par l'équipe NuxtJS et la communauté, trucs et as
   :::campfire-list-item
   ---
   title: Sponsors
-  description: Si vous utilisez NuxtJS dans votre travail quotidien et que cela vous a rendu la vie plus facile, pensez à nous soutenir.
+  description: Si vous utilisez Nuxt dans votre travail quotidien et que cela vous a rendu la vie plus facile, pensez à nous soutenir.
   to: '/sponsors'
   ---
   :::
   :::campfire-list-item
   ---
   title: Tutoriels
-  description: Découvrez les tutoriels réalisés par la communauté NuxtJS.
+  description: Découvrez les tutoriels réalisés par la communauté Nuxt.
   to: '/tutorials'
   ---
   :::

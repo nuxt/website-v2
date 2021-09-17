@@ -4,7 +4,9 @@ title: Dokku
 description: How to deploy a Nuxt application on Dokku?
 target: Server
 category: deployment
-logo: "/img/modules/categories/deployment.svg"
+logo:
+  light: "/img/partners/dark/dokku.png"
+  dark: "/img/partners/light/dokku.png"
 ---
 # Deploy Nuxt on Dokku
 

@@ -47,7 +47,7 @@ links:
         to: '/tutorials'
       -
         title: 'ビデオコース'
-        to: '/releases'
+        to: '/video-courses'
   -
     title: 'リソース'
     items:

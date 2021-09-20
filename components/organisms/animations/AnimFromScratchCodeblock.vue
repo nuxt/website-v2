@@ -256,9 +256,13 @@ span[class*='fromscratch__yarn'] {
     border-right: 0.15em solid transparent;
     letter-spacing: 0.75px;
   }
+  & p:nth-child(2),
+  & p:nth-child(5) {
+    @apply ml-3;
+  }
   & p:nth-child(3),
   & p:nth-child(4) {
-    @apply ml-3;
+    @apply ml-6;
   }
   & p:nth-child(1),
   & p:nth-child(2) {

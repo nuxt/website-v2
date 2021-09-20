@@ -1,11 +1,14 @@
 <template>
   <div>
-    <PageHero :description-full-width="page.heroDescriptionFullWidth" :button="page.heroButton">
+    <PageHero :description-full-width="page.heroDescriptionFullWidth">
       <template #title>
         {{ page.heroTitle || page.title }}
       </template>
       <template #description>
         {{ page.heroDescription || page.description }}
+      </template>
+      <template v-if="page.heroType" #bottom>
+        <PartnersBottomHero v-if="page.heroType === 'partners'" />
       </template>
     </PageHero>
     <div class="d-container px-6 grid sm:grid-cols-2 lg:grid-cols-3 gap-6 pt-8">

@@ -1,6 +1,13 @@
 <template>
   <div class="overflow-x-hidden sm:overflow-x-visible">
-    <PageHero :title="page.title" :description="page.description" />
+    <PageHero>
+      <template #title>
+        {{ page.title }}
+      </template>
+      <template #description>
+        {{ page.description }}
+      </template>
+    </PageHero>
     <div class="d-container px-6">
       <div
         v-for="release of releases"

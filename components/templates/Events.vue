@@ -1,10 +1,13 @@
 <template>
   <div>
-    <PageHero
-      :title="page.heroTitle || page.title"
-      :description="page.heroDescription || page.description"
-      :description-full-width="page.heroDescriptionFullWidth"
-    />
+    <PageHero :description-full-width="page.heroDescriptionFullWidth">
+      <template #title>
+        {{ page.heroTitle || page.title }}
+      </template>
+      <template #description>
+        {{ page.heroDescription || page.description }}
+      </template>
+    </PageHero>
     <div class="d-container px-6 grid sm:grid-cols-2 lg:grid-cols-3 gap-6 pt-8">
       <LogoCard v-for="(item, index) in events" :key="index" :item="item">
         <template #footer> {{ item.date }}</template>

@@ -7,10 +7,11 @@ layout:
 navigation: false
 ---
 ::page-hero
----
-title: Enterprise Support
-description: "Get technical support, report bugs or contribute to the Nuxt framework development."
----
+#title
+Enterprise Support
+
+#description
+"Get technical support, report bugs or contribute to the Nuxt framework development."
 ::
 
 ::support-container

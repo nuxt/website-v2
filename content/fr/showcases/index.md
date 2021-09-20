@@ -7,9 +7,9 @@ layout:
 ---
 
 ::showcases-hero
----
-title: 'Showcases'
----
+#title
+Showcases
+
 #description
   Découvrez notre sélection de site fait avec Nuxt. Cette collection est propulsée par VueTelescope. Visitez [vuetelescope.com](https://vuetelescope.com) et essayez l'extension pour Chrome et Firefox.
 ::

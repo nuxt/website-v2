@@ -13,10 +13,10 @@
           overflow-ellipsis overflow-hidden
         "
       >
-        {{ title }}
+        <Markdown use="title" unwrap="p" />
       </h1>
       <p class="text-body-md sm:text-body-lg md:text-body-xl" :class="{ 'max-w-3xl': !descriptionFullWidth }">
-        {{ description }}
+        <Markdown use="description" unwrap="p" />
       </p>
       <Link
         v-if="button && button === 'partners'"
@@ -49,14 +49,6 @@ import { defineComponent } from '@nuxtjs/composition-api'
 
 export default defineComponent({
   props: {
-    title: {
-      type: String,
-      default: ''
-    },
-    description: {
-      type: String,
-      default: ''
-    },
     descriptionFullWidth: {
       type: Boolean,
       default: false

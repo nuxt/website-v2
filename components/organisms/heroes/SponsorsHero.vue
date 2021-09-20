@@ -2,9 +2,11 @@
   <div class="relative pt-24 pb-32 bg-gray-100 dark:bg-secondary-darkest">
     <div class="relative d-container-content">
       <h1 class="text-display-5 sm:text-display-4 md:text-display-3 pb-8 font-serif overflow-ellipsis overflow-hidden">
-        {{ title }}
+        <Markdown use="title" unwrap="p" />
       </h1>
-      <p class="text-body-md sm:text-body-lg md:text-body-xl">{{ description }}</p>
+      <p class="text-body-md sm:text-body-lg md:text-body-xl">
+        <Markdown use="description" unwrap="p" />
+      </p>
       <div class="mt-8 flex flex-col sm:flex-row sm:space-x-6 space-y-4 sm:space-y-0">
         <Link
           to="https://github.com/sponsors/nuxt"
@@ -45,14 +47,6 @@ import { defineComponent } from '@nuxtjs/composition-api'
 
 export default defineComponent({
   props: {
-    title: {
-      type: String,
-      default: ''
-    },
-    description: {
-      type: String,
-      default: ''
-    },
     github: {
       type: String,
       default: 'Sponsor on GitHub'

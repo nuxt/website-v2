@@ -42,12 +42,14 @@
             <span>3</span>
             <span>4</span>
             <span>5</span>
+            <span>6</span>
           </div>
           <div class="fromscratch__code__ide__content">
             <p>
               <!-- Template tag open -->
               <span>&lt;</span><span class="text-red-400">template</span><span>&gt;</span>
             </p>
+            <p><span>&lt;</span><span class="text-red-400">div</span><span>&gt;</span></p>
             <p>
               <!-- Sidebar component -->
               <span>&lt;</span><span class="text-red-400">Sidebar</span><span>/&gt;</span>
@@ -63,12 +65,10 @@
               <span class="text-red-400">h1</span>
               <span>&gt;</span>
             </p>
+            <p><span>&lt;</span>&#47;<span class="text-red-400">div</span><span>&gt;</span></p>
             <p>
               <!-- Template tag open -->
-              <span>&lt;</span>
-              &#47;
-              <span class="text-red-400">template</span>
-              <span>&gt;</span>
+              <span>&lt;</span>&#47;<span class="text-red-400">template</span><span>&gt;</span>
             </p>
           </div>
         </div>
@@ -256,22 +256,26 @@ span[class*='fromscratch__yarn'] {
     border-right: 0.15em solid transparent;
     letter-spacing: 0.75px;
   }
-  & p:nth-child(2),
-  & p:nth-child(3) {
+  & p:nth-child(3),
+  & p:nth-child(4) {
     @apply ml-3;
   }
-  & p:nth-child(1) {
+  & p:nth-child(1),
+  & p:nth-child(2) {
     animation: typingSmall 400ms steps(12, end) forwards 7.3s;
   }
   & p:nth-child(3) {
-    animation: typingLong 400ms steps(12, end) forwards 7.7s;
-  }
-  & p:nth-child(4) {
-    animation: typingSmall 400ms steps(12, end) forwards 8.1s;
-  }
-  & p:nth-child(2) {
     height: 0;
     animation: typingSmall 400ms steps(12, end) forwards 9s, heightAppear 100ms ease forwards 9s;
+  }
+  & p:nth-child(4) {
+    animation: typingLong 400ms steps(12, end) forwards 7.7s;
+  }
+  & p:nth-child(5) {
+    animation: typingSmall 400ms steps(12, end) forwards 8.1s;
+  }
+  & p:nth-child(6) {
+    animation: typingSmall 400ms steps(12, end) forwards 8.3s;
   }
 }
 

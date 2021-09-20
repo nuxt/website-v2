@@ -88,6 +88,7 @@
               <span>&lt;</span><span class="text-red-400">{{ 'template' }}</span
               ><span>&gt;</span>
             </p>
+            <p><span>&lt;</span><span class="text-red-400">div</span><span>/&gt;</span></p>
             <p>
               <!-- Logo component -->
               <span>&lt;</span><span class="text-red-400">Logo</span><span>/&gt;</span>
@@ -104,6 +105,7 @@
               <!-- AlertBanner component -->
               <span>&lt;</span><span class="text-red-400">AlertBanner</span><span>&#47;&gt;</span>
             </p>
+            <p><span>&lt;</span><span class="text-red-400">div</span><span>&#47;&gt;</span></p>
             <p>
               <span>&lt;</span>&#47;<span class="text-red-400">{{ 'template' }}</span
               ><span>&gt;</span>
@@ -388,11 +390,15 @@ span[class*='fromcli__yarn'] {
     border-right: 0.15em solid transparent;
     letter-spacing: 0.75px;
   }
-  & p:nth-child(2),
+  & p:nth-child(3),
+  & p:nth-child(4) {
+    @apply ml-3;
+  }
   & p:nth-child(3),
   & p:nth-child(4),
-  & p:nth-child(5) {
-    @apply ml-3;
+  & p:nth-child(5),
+  & p:nth-child(6) {
+    @apply ml-5;
   }
 }
 

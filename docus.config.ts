@@ -15,7 +15,7 @@ export default {
   },
   github: {
     repo: 'nuxt/nuxtjs.org',
-    branch: 'preview',
+    branch: 'main',
     releases: 'nuxt/nuxt.js'
   },
   theme: {

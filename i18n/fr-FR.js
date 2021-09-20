@@ -118,6 +118,9 @@ export default {
     version: 'Version',
     released_on: 'Sortie le'
   },
+  partners: {
+    become_partner: 'Devenez partenaire'
+  },
   theme_mode: {
     system: 'Système',
     light: 'Clair',

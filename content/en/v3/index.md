@@ -5,7 +5,7 @@ description: 'Nuxt 3 is rebuilt from the ground up for the modern web. Hybrid st
 head.titleTemplate: null
 ---
 
-::Nuxt3-hero
+::nuxt3-hero
 ---
 primary: false
 ---

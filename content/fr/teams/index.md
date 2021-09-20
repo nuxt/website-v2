@@ -8,10 +8,11 @@ navigation: false
 ---
 
 ::page-hero
----
-title: Équipes
-description: "Le développement de Nuxt et son écosystème est guidée par une équipe internationale. Notre équipe très active et engagée travaille continuellement pour amener Nuxt plus loin."
----
+#title
+Équipes
+
+#description
+Le développement de Nuxt et son écosystème est guidée par une équipe internationale. Notre équipe très active et engagée travaille continuellement pour amener Nuxt plus loin.
 ::
 
 ::team-section

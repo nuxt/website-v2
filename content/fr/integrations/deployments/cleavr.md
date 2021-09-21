@@ -8,7 +8,7 @@ logo:
   light: "/img/partners/dark/cleavr.svg"
   dark: "/img/partners/light/cleavr.svg"
 ---
-# Deploy Nuxt with Cleavr
+# Déployer Nuxt sur Cleavr
 
 Comment déployer une application Nuxt avec Cleavr ?
 

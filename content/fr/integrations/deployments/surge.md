@@ -10,7 +10,7 @@ logo:
 ---
 # Déployer Nuxt vec Surge
 
-Comment deployer Nuxt.js sur Surge ?
+Comment déployer Nuxt.js sur Surge ?
 
 ---
 

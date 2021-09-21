@@ -9,7 +9,7 @@ logo:
   dark: "/img/partners/light/Yunbox.svg"
 ---
 
-# Deployer Nuxt sur 21YunBox
+# Déployer Nuxt sur 21YunBox
 
 Comment déployer Nuxt sur 21YunBox?
 

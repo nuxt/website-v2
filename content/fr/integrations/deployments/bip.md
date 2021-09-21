@@ -8,7 +8,7 @@ logo:
   light: "/img/partners/dark/bip.png"
   dark: "/img/partners/light/bip.png"
 ---
-# Deployer Nuxt avec Bip
+# Déployer Nuxt avec Bip
 
 Comment déployer une application Nuxt avec Bip ?
 

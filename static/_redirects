@@ -76,18 +76,18 @@
 /docs/2.x/configuration-glossary/configuration-watch /docs/configuration-glossary/configuration-watch 302!
 /docs/2.x/configuration-glossary/configuration-watchers /docs/configuration-glossary/configuration-watchers 302!
 
-/docs/2.x/internals-glossary/context /docs/configuration-glossary/context 302!
-/docs/2.x/internals-glossary/$nuxt /docs/configuration-glossary/$nuxt 302!
-/docs/2.x/internals-glossary/internals /docs/configuration-glossary/internals 302!
-/docs/2.x/internals-glossary/internals-nuxt /docs/configuration-glossary/internals-nuxt 302!
-/docs/2.x/internals-glossary/internals-renderer /docs/configuration-glossary/internals-renderer 302!
-/docs/2.x/internals-glossary/internals-module-container /docs/configuration-glossary/internals-module-container 302!
-/docs/2.x/internals-glossary/internals-builder /docs/configuration-glossary/internals-builder 302!
-/docs/2.x/internals-glossary/internals-generator /docs/configuration-glossary/internals-generator 302!
-/docs/2.x/internals-glossary/nuxt /docs/configuration-glossary/nuxt 302!
-/docs/2.x/internals-glossary/nuxt-render /docs/configuration-glossary/nuxt-render 302!
-/docs/2.x/internals-glossary/nuxt-render-route /docs/configuration-glossary/nuxt-render-route 302!
-/docs/2.x/internals-glossary/nuxt-render-and-get-window /docs/configuration-glossary/nuxt-render-and-get-window 302!
+/docs/2.x/internals-glossary/context /docs/internals-glossary/context 302!
+/docs/2.x/internals-glossary/$nuxt /docs/internals-glossary/$nuxt 302!
+/docs/2.x/internals-glossary/internals /docs/internals-glossary/internals 302!
+/docs/2.x/internals-glossary/internals-nuxt /docs/internals-glossary/internals-nuxt 302!
+/docs/2.x/internals-glossary/internals-renderer /docs/internals-glossary/internals-renderer 302!
+/docs/2.x/internals-glossary/internals-module-container /docs/internals-glossary/internals-module-container 302!
+/docs/2.x/internals-glossary/internals-builder /docs/internals-glossary/internals-builder 302!
+/docs/2.x/internals-glossary/internals-generator /docs/internals-glossary/internals-generator 302!
+/docs/2.x/internals-glossary/nuxt /docs/internals-glossary/nuxt 302!
+/docs/2.x/internals-glossary/nuxt-render /docs/internals-glossary/nuxt-render 302!
+/docs/2.x/internals-glossary/nuxt-render-route /docs/internals-glossary/nuxt-render-route 302!
+/docs/2.x/internals-glossary/nuxt-render-and-get-window /docs/internals-glossary/nuxt-render-and-get-window 302!
 
 # Components glossary
 /docs/2.x/components-glossary/pages-fetch /docs/components-glossary/fetch 302!

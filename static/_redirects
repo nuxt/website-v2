@@ -1,5 +1,7 @@
 # 2.x
 
+/guides/* /docs/:splat 302!
+
 /docs/2.x/get-started/installation /docs/get-started/installation 302!
 /docs/2.x/get-started/routing /docs/get-started/routing 302!
 /docs/2.x/get-started/directory-structure /docs/get-started/directory-structure 302!

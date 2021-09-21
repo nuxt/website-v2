@@ -87,7 +87,7 @@ navigation: false
   image: 'report'
   button:
     text: 'GitHub issues を作成する'
-    url: ''
+    url: 'https://github.com/nuxt/nuxt.js/issues/new?assignees=&labels=bug-report&template=bug-report.md&title='
   ---
   ::
   ::support-card
@@ -97,7 +97,7 @@ navigation: false
   image: 'suggest'
   button:
     text: 'アイデアを提案する'
-    url: ''
+    url: 'https://github.com/nuxt/nuxt.js/issues/new?assignees=&labels=feature-request&template=feature-request.md&title='
   ---
   ::
   ::support-card
@@ -107,7 +107,7 @@ navigation: false
   image: 'contribute'
   button:
     text: '貢献する'
-    url: ''
+    url: '/contribution-guide'
   ---
   ::
 ::

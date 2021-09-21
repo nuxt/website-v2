@@ -86,7 +86,7 @@ Enterprise Support
   image: 'report'
   button:
     text: 'Create an issue'
-    url: 'https://github.com/nuxt/nuxt.js/issues'
+    url: 'https://github.com/nuxt/nuxt.js/issues/new?assignees=&labels=bug-report&template=bug-report.md&title='
   ---
   ::
   ::support-card
@@ -96,7 +96,7 @@ Enterprise Support
   image: 'suggest'
   button:
     text: 'Suggest an idea'
-    url: 'https://github.com/nuxt/nuxt.js/discussions'
+    url: 'https://github.com/nuxt/nuxt.js/issues/new?assignees=&labels=feature-request&template=feature-request.md&title='
   ---
   ::
   ::support-card
@@ -106,7 +106,7 @@ Enterprise Support
   image: 'contribute'
   button:
     text: 'Contribute'
-    url: 'https://github.com/nuxt/nuxtjs.org/blob/main/content/en/_archives/guide/contribution-guide.md'
+    url: '/contribution-guide'
   ---
   ::
 ::

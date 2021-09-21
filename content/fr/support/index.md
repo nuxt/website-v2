@@ -82,7 +82,7 @@ description: 'Si quelque chose ne fonctionne pas comme prévu, ouvrez une issue 
 image: 'report'
 button:
   text: 'Créer une issue'
-  url: ''
+  url: 'https://github.com/nuxt/nuxt.js/issues/new?assignees=&labels=bug-report&template=bug-report.md&title='
 ---
 ::
 ::support-card
@@ -92,17 +92,7 @@ description: "Grâce aux conributions de notre communauté, Nuxt continue d'évo
 image: 'suggest'
 button:
   text: 'Proposer une idée'
-  url: ''
----
-::
-::support-card
----
-title: 'Faites un don'
-description: "Nuxt est un projet open source sous license MIT et totalement libre d'utilisation. Cependant, les efforts pour maintenir le projet et développer de nouvelles fonctionnalités ne sont pas pérennes sans source de financement."
-image: 'donate'
-button:
-  text: 'Faire un don'
-  url: ''
+  url: 'https://github.com/nuxt/nuxt.js/issues/new?assignees=&labels=feature-request&template=feature-request.md&title='
 ---
 ::
 ::support-card
@@ -112,7 +102,7 @@ description: 'Contribuez au développement du framework, à la documentation, ou
 image: 'contribute'
 button:
   text: 'Contribuer'
-  url: ''
+  url: '/contribution-guide'
 ---
 ::
 ::

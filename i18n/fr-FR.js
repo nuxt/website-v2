@@ -143,7 +143,8 @@ export default {
     hours: 'heures',
     minutes: 'minutes',
     seconds: 'secondes',
-    copied: 'Copié'
+    copied: 'Copié',
+    watch_video: 'Regarder'
   },
   iso: 'fr',
   cookies: {

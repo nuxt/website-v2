@@ -86,7 +86,7 @@ image: /img/home/discover/dx/conventions.svg
 ::section-content-item
 ---
 title: SEO Friendly
-description: 'Meta Tags management and faster time-to-content for great indexing.'
+description: 'Meta tag management and faster time-to-content for great indexing.'
 image: /img/home/discover/dx/seo.svg
 ---
 ::

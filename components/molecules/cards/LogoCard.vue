@@ -1,12 +1,12 @@
 <template>
   <div class="ListCard group">
     <template v-if="item.link">
-      <Link :to="item.link" :aria-label="item.title" target="_blank" class="absolute inset-0" />
       <div class="ListCard-external group-hover:opacity-100">
         <slot name="external">
           <nuxt-img alt="external_link" src="/img/icons/ext.svg" />
         </slot>
       </div>
+      <Link :to="item.link" :aria-label="item.title" target="_blank" class="absolute inset-0" />
     </template>
     <Link v-else :to="item.to || ''" :aria-label="item.title" class="absolute inset-0" />
     <div class="ListCard-body">

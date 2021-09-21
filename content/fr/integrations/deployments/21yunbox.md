@@ -11,7 +11,7 @@ logo:
 
 # Déployer Nuxt sur 21YunBox
 
-Comment déployer Nuxt sur 21YunBox?
+Comment déployer Nuxt sur 21YunBox ?
 
 ---
 

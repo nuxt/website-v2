@@ -32,7 +32,7 @@ links:
         to: '/releases'
       -
         title: 'Master courses'
-        href: 'https://masteringnuxt.com/'
+        href: 'https://masteringnuxt.com/?utm_source=nuxt&utm_medium=link&utm_campaign=nsite'
   -
     title: 'Explore'
     items:

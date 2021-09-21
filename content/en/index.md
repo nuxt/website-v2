@@ -169,7 +169,7 @@ hoverClass: 'hover:bg-sky-darker'
 title: Master Courses
 description: 'Watch a complete series of videos to learn Nuxt with our partner Vue School.'
 image: /img/home/learn/guides/gem-4.svg
-to: 'https://masteringnuxt.com'
+to: 'https://masteringnuxt.com/?utm_source=nuxt&utm_medium=link&utm_campaign=nsite'
 hoverClass: 'hover:bg-sky-darker'
 ---
 ::

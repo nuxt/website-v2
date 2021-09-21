@@ -1,5 +1,5 @@
 export default {
-  title: 'NuxtJS',
+  title: 'Nuxt',
   description: '',
   url: 'https://nuxtjs.org',
   template: 'docs',
@@ -15,7 +15,7 @@ export default {
   },
   github: {
     repo: 'nuxt/nuxtjs.org',
-    branch: 'preview',
+    branch: 'main',
     releases: 'nuxt/nuxt.js'
   },
   theme: {

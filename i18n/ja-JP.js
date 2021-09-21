@@ -35,7 +35,7 @@ export default {
         }
       }
     },
-    license: 'NuxtJS は MIT ライセンスのオープンソースフレームワークです。'
+    license: 'Nuxt は MIT ライセンスのオープンソースフレームワークです。'
   },
   sidebar: {
     partners: {
@@ -44,7 +44,7 @@ export default {
     },
     ads: {
       fallback: {
-        title: 'NuxtJS はあなたが必要です！',
+        title: 'Nuxt はあなたが必要です！',
         description: 'アドブロッカーに nuxtjs.org を許可することで、私たちの活動をサポートし、経済的な助けとなります。'
       }
     }

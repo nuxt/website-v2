@@ -1,14 +1,14 @@
 ---
 template: guide
 title: Heroku
-description: Nuxt.js を Heroku にどうやってデプロイするのか？
+description: Nuxt を Heroku にどうやってデプロイするのか？
 target: Server
 category: deployment
 logo: "/img/modules/categories/deployment.svg"
 ---
 # Nuxt を Heroku へデプロイする
 
-Nuxt.js を Heroku にどうやってデプロイするのか？
+Nuxt を Heroku にどうやってデプロイするのか？
 
 ---
 
@@ -17,7 +17,7 @@ Nuxt.js を Heroku にどうやってデプロイするのか？
 <div class="Promo__Video">
   <a href="https://vueschool.io/lessons/how-to-deploy-nuxtjs-to-heroku?friend=nuxt" target="_blank">
     <p class="Promo__Video__Icon">
-      Watch a free lesson on <strong>How to deploy Nuxt.js to Heroku</strong> on Vue School
+      Watch a free lesson on <strong>How to deploy Nuxt to Heroku</strong> on Vue School
     </p>
   </a>
 </div>
@@ -52,4 +52,4 @@ git push heroku develop:master
 
 オプションで、Heroku ダッシュボードのアプリの Deploy セクションで、アプリの GitHub リポジトリの選択したブランチからの自動デプロイを設定することができます。
 
-ほら! あなたの Nuxt.js アプリケーションがHerokuにホスティングされました。
+ほら! あなたの Nuxt アプリケーションがHerokuにホスティングされました。

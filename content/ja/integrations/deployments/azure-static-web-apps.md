@@ -1,7 +1,7 @@
 ---
 template: guide
 title: Azure Static Web Apps
-description: Nuxt.js アプリケーションを Azure Static Web Apps でどうやってデプロイするのか？
+description: Nuxt アプリケーションを Azure Static Web Apps でどうやってデプロイするのか？
 target: Static
 category: deployment
 logo: "/img/modules/categories/deployment.svg"
@@ -50,16 +50,16 @@ Azure static web apps へのデプロイを実際試してみたい人のため�
 3. *Subscription* ドロップダウンリストの中からサブスクリプションを選択するか、デフォルトのものを使用してください。
 4. *Resource group* ドロップダウンの下の **New** リンクをクリックしてください。*New resource group name* 内に **nuxt** と入力し **OK** をクリックしてください。
 5. **Name** テキストボックスにアプリケーションのグローバルで一意な名前を入力してください。有効な文字は `a-z`、`A-Z`、`0-9`、そして `-` です。 アプリケーション名はリソースのリストでアプリを識別するために使用されます。したがってリポジトリの名前を使用してアプリケーションを命名するのをおすすめします。
-6. *Region* ドロップダウン内から、最も近い地域を選択してください。 
+6. *Region* ドロップダウン内から、最も近い地域を選択してください。
 
 ![Azure Portalのリソースとアプリのセットアップ](https://user-images.githubusercontent.com/13063165/82118135-71891b00-9775-11ea-8284-aa94d17a3bc3.png)
 
 ### ステップ 2: **GitHub リポジトリの追加**
 
-Azure App Service の Static App は Nuxt.js アプリケーションが格納されているリポジトリへのアクセスを必要とし、自動でコミットをデプロイすることができます：
+Azure App Service の Static App は Nuxt アプリケーションが格納されているリポジトリへのアクセスを必要とし、自動でコミットをデプロイすることができます：
 
 1. **Sign in with GitHub button** をクリックしてください
-2. Nuxt.js プロジェクトのために作成したリポジトリの **Organization** を選択してください。また GitHub のユーザー名でも良いです。
+2. Nuxt プロジェクトのために作成したリポジトリの **Organization** を選択してください。また GitHub のユーザー名でも良いです。
 3. 先ほど作成したリポジトリの名前を探して選択してください。
 4. *Branch* ドロップダウンからブランチとして **master** を選択してください。
 

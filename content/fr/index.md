@@ -1,7 +1,7 @@
 ---
 template: blank
 title: 'Le framework Vue intuitif'
-description: 'Construisez votre prochaine application Vue.js en toute confiance avec NuxtJS. Un framework open source qui rend le développement web simple et puissant.'
+description: 'Construisez votre prochaine application Vue.js en toute confiance avec Nuxt. Un framework open source qui rend le développement web simple et puissant.'
 bgClass: 'bg-white'
 ---
 ::home-hero
@@ -19,7 +19,7 @@ secondary:
 Le framework Vue<br>intuitif
 
 #description
-Construisez votre prochaine application Vue.js en toute confiance avec NuxtJS.<br class="hidden sm:block" /> Un framework open source qui rend le développement web simple et puissant.
+Construisez votre prochaine application Vue.js en toute confiance avec Nuxt.<br class="hidden sm:block" /> Un framework open source qui rend le développement web simple et puissant.
 ::
 
 ::home-learn-master
@@ -31,7 +31,7 @@ category: Apprendre
 [_Facile_]{.text-primary} à apprendre. [_Facile_]{.text-primary} à maîtriser
 
 #description
-Prenez part à la communauté Nuxt.js et aidez nous à rendre le monde plus Nuxt.
+Prenez part à la communauté Nuxt et aidez nous à rendre le monde plus Nuxt.
 
 #bottom
 :button-link[Commencez]{href="/docs/get-started/installation" size="medium"}
@@ -117,7 +117,7 @@ Un [_développement_]{.text-primary} soutenu
 Nuxt est construit et maintenu par des développeurs passionnés mais il serait impossible de fournir les efforts nécessaires pour développer et maintenir de nouvelles fonctionnalités sans une réelle contribution financière. Nous remercions nos sponsors et partenaires qui rendent cela possible.<br>
 
 #bottom
-:button-link[Sponsorisez NuxtJS]{href="/sponsors" size="medium"}
+:button-link[Sponsorisez Nuxt]{href="/sponsors" size="medium"}
 ::
 
 ::home-learn-guides
@@ -159,7 +159,7 @@ category: Apprendre
   title: Master Courses
   description: 'Visionnez une série complète de vidéos pour apprendre Nuxt avec notre partenaire Vue School.'
   image: /img/home/learn/guides/gem-4.svg
-  to: 'https://masteringnuxt.com'
+  to: 'https://masteringnuxt.com/?utm_source=nuxt&utm_medium=link&utm_campaign=nsite'
   hoverClass: 'hover:bg-sky-darker'
   ---
   ::
@@ -223,13 +223,13 @@ articleLinkTitle: Informations
 Sharing is [_Caring_]{.text-primary}
 
 #description
-Lisez nos articles rédigés par l'équipe NuxtJS et la communauté, trucs et astuces inclus !
+Lisez nos articles rédigés par l'équipe Nuxt et la communauté, trucs et astuces inclus !
 
 #campfire-list
   :::campfire-list-item
   ---
   title: Annonces
-  description: Découvrez les articles de l'équipe NuxtJS.
+  description: Découvrez les articles de l'équipe Nuxt.
   to: '/announcements'
   ---
   :::
@@ -243,14 +243,14 @@ Lisez nos articles rédigés par l'équipe NuxtJS et la communauté, trucs et as
   :::campfire-list-item
   ---
   title: Sponsors
-  description: Si vous utilisez NuxtJS dans votre travail quotidien et que cela vous a rendu la vie plus facile, pensez à nous soutenir.
+  description: Si vous utilisez Nuxt dans votre travail quotidien et que cela vous a rendu la vie plus facile, pensez à nous soutenir.
   to: '/sponsors'
   ---
   :::
   :::campfire-list-item
   ---
   title: Tutoriels
-  description: Découvrez les tutoriels réalisés par la communauté NuxtJS.
+  description: Découvrez les tutoriels réalisés par la communauté Nuxt.
   to: '/tutorials'
   ---
   :::

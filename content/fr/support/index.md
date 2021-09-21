@@ -7,10 +7,11 @@ layout:
 navigation: false
 ---
 ::page-hero
----
-title: Support
-description: "Recevez une assistance technique, signalez des bugs ou contribuez au développement du framework."
----
+#title
+Support
+
+#description
+Recevez une assistance technique, signalez des bugs ou contribuez au développement du framework.
 ::
 
 ::support-container
@@ -97,7 +98,7 @@ button:
 ::support-card
 ---
 title: 'Faites un don'
-description: "NuxtJS est un projet open source sous license MIT et totalement libre d'utilisation. Cependant, les efforts pour maintenir le projet et développer de nouvelles fonctionnalités ne sont pas pérennes sans source de financement."
+description: "Nuxt est un projet open source sous license MIT et totalement libre d'utilisation. Cependant, les efforts pour maintenir le projet et développer de nouvelles fonctionnalités ne sont pas pérennes sans source de financement."
 image: 'donate'
 button:
   text: 'Faire un don'

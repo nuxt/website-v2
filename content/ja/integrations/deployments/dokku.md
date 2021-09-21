@@ -15,7 +15,7 @@ Nuxt アプリケーションを Dokku でどうやってデプロイするの�
 
 [Dokku documentation for setup](http://dokku.viewdocs.io/dokku/getting-started/installation/) そして [Deploying a Node.js Application on Digital Ocean using Dokku](http://jakeklassen.com/post/deploying-a-node-app-on-digital-ocean-using-dokku/)をお読みになることをお勧めします。
 
-例として、ここでは Nuxt.js アプリケーションを `my-nuxt-app` と呼ぶことにします。
+例として、ここでは Nuxt アプリケーションを `my-nuxt-app` と呼ぶことにします。
 
 プロジェクトの `devDependencies` をインストールするように Dokku に指示する必要があります（`npm run build` を起動できるようにするため）。
 
@@ -63,4 +63,4 @@ git remote add dokku dokku@yourServer:my-nuxt-app
 git push dokku master
 ```
 
-ここに、Nuxt.js アプリケーションが Dokku にホストされました！
+ここに、Nuxt アプリケーションが Dokku にホストされました！

@@ -1,14 +1,14 @@
 ---
 template: guide
 title: Hostman
-description: Nuxt.js を Hostman にどうやってデプロイするのか？
+description: Nuxt を Hostman にどうやってデプロイするのか？
 target: Static
 category: deployment
 logo: "/img/modules/categories/deployment.svg"
 ---
 # Nuxt を Hostman へデプロイする
 
-Nuxt.js を Hostman にどうやってデプロイするのか？
+Nuxt を Hostman にどうやってデプロイするのか？
 
 ---
 

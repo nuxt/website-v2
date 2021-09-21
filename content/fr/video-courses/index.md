@@ -1,6 +1,6 @@
 ---
 template: blog
-title: Cours vidéos NuxtJS
+title: Cours vidéos Nuxt
 description: "Apprenez-en plus sur le framework Nuxt avec ce choix de vidéos en anglais, gratuites ou premium."
 ---
 
@@ -8,7 +8,7 @@ description: "Apprenez-en plus sur le framework Nuxt avec ce choix de vidéos en
 ---
 video-courses:
   one:
-    title: Apprenez Nuxt.js en créant une application du monde réel
+    title: Apprenez Nuxt en créant une application du monde réel
     description: Apprenez à créer des sites web robustes et modernes avec Nuxt à partir de zéro. Ou améliorez les performances de votre site web, la qualité du code, tout en utilisant mieux le framework.
     image: /img/video-courses/mastering_nuxt.png
     link: 'https://masteringnuxt.com/?utm_source=nuxt&utm_medium=link&utm_campaign=navbar_link'
@@ -38,20 +38,20 @@ video-courses:
     link: 'https://codecourse.com/courses/build-a-job-board-with-laravel-graphql-nuxt-and-apollo'
     tier: Premium
   six:
-    title: Nuxt.js - Vue.js sur Steroids
-    description: Créez des applications Vue JS très attrayantes avec Nuxt.js. Nuxt ajoute un rendu côté serveur facile et une approche de configuration basée sur les dossiers.
+    title: Nuxt - Vue.js sur Steroids
+    description: Créez des applications Vue JS très attrayantes avec Nuxt. Nuxt ajoute un rendu côté serveur facile et une approche de configuration basée sur les dossiers.
     image: /img/video-courses/vuejs_on_steroids.png
     link: 'https://www.udemy.com/course/nuxtjs-vuejs-on-steroids/'
     tier: Premium
   seven:
-    title: Mise à l'échelle de Vue avec Nuxt.js
+    title: Mise à l'échelle de Vue avec Nuxt
     description: Une fois que vous êtes à l'aise avec Vue, l'apprentissage d'un framework comme Nuxt vous permet de créer des applications Web prêtes pour la production qui suivent les meilleures pratiques.
     image: /img/video-courses/scaling_vue_with_nuxt.png
     link: 'https://www.vuemastery.com/courses/scaling-vue-with-nuxt-js/why-use-nuxt'
     tier: Premium
   eight:
-    title: Les fondamentales de Nuxt.js
-    description: Apprenez les bases de Nuxt.js dans ce cours que nous avons créé avec les fondateurs de Nuxt. Le cours couvre ce que vous devez savoir, de l'échafaudage au déploiement de votre première application Nuxt.js.
+    title: Les fondamentales de Nuxt
+    description: Apprenez les bases de Nuxt dans ce cours que nous avons créé avec les fondateurs de Nuxt. Le cours couvre ce que vous devez savoir, de l'échafaudage au déploiement de votre première application Nuxt.
     image: /img/video-courses/nuxt_fundamentals.png
     link: 'https://vueschool.io/courses/nuxtjs-fundamentals?friend=nuxt&utm_source=Nuxtjs.org&utm_medium=Link&utm_content=Courses&utm_campaign=nuxtjs-fundamentals'
     tier: Gratuit

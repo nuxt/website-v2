@@ -7,10 +7,10 @@ description: 'Discover and learn more about the Nuxt Framework with free and pre
 ---
 video-courses:
   one:
-    title: Learn Nuxt.js by Building a Real World App
+    title: Learn Nuxt by Building a Real World App
     description: Learn how to build robust, modern websites with Nuxt from scratch. Or improve your website performance, code quality, while making better use of the framework.
     image: /img/video-courses/mastering_nuxt.png
-    link: 'https://masteringnuxt.com/?utm_source=nuxt&utm_medium=link&utm_campaign=navbar_link'
+    link: 'https://masteringnuxt.com/?utm_source=nuxt&utm_medium=link&utm_campaign=nsite'
     tier: Premium
   two:
     title: Get Started with Nuxt
@@ -37,20 +37,20 @@ video-courses:
     link: 'https://codecourse.com/courses/build-a-job-board-with-laravel-graphql-nuxt-and-apollo'
     tier: Premium
   six:
-    title: Nuxt.js - Vue.js on Steroids
-    description: Build highly engaging Vue JS apps with Nuxt.js. Nuxt adds easy server-side-rendering and a folder-based config approach.
+    title: Nuxt - Vue.js on Steroids
+    description: Build highly engaging Vue JS apps with Nuxt. Nuxt adds easy server-side-rendering and a folder-based config approach.
     image: /img/video-courses/vuejs_on_steroids.png
     link: 'https://www.udemy.com/course/nuxtjs-vuejs-on-steroids/'
     tier: Premium
   seven:
-    title: Scaling Vue with Nuxt.js
+    title: Scaling Vue with Nuxt
     description: Once you are comfortable with Vue, learning a framework like Nuxt allows you to create production-ready web apps which follow best practices.
     image: /img/video-courses/scaling_vue_with_nuxt.png
     link: 'https://www.vuemastery.com/courses/scaling-vue-with-nuxt-js/why-use-nuxt'
     tier: Premium
   eight:
-    title: Nuxt.js Fundamentals
-    description: Learn the fundamentals of Nuxt.js in this course that we created together with the founders of Nuxt. The course covers what you need to know from scaffolding to deploying your first Nuxt.js application.
+    title: Nuxt Fundamentals
+    description: Learn the fundamentals of Nuxt in this course that we created together with the founders of Nuxt. The course covers what you need to know from scaffolding to deploying your first Nuxt application.
     image: /img/video-courses/nuxt_fundamentals.png
     link: 'https://vueschool.io/courses/nuxtjs-fundamentals?friend=nuxt&utm_source=Nuxtjs.org&utm_medium=Link&utm_content=Courses&utm_campaign=nuxtjs-fundamentals'
     tier: Free

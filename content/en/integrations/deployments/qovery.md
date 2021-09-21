@@ -1,14 +1,16 @@
 ---
 template: guide
 title: Qovery
-description: How to deploy Nuxt.js on Qovery?
+description: How to deploy Nuxt on Qovery?
 target: Static & Server
 category: deployment
-logo: "/img/modules/categories/deployment.svg"
+logo:
+  light: "/img/partners/dark/Qovery.svg"
+  dark: "/img/partners/light/Qovery.svg"
 ---
 # Deploy Nuxt on Qovery
 
-How to deploy Nuxt.js on Qovery?
+How to deploy Nuxt on Qovery?
 
 ---
 

@@ -1,14 +1,16 @@
 ---
 template: guide
 title: Platform.sh
-description: How to deploy Nuxt.js on Platform.sh?
+description: How to deploy Nuxt on Platform.sh?
 target: Static & Server
 category: deployment
-logo: "/img/modules/categories/deployment.svg"
+logo:
+  light: "/img/partners/dark/Platformsh_Dark.svg"
+  dark: "/img/partners/light/Platformsh_Light.svg"
 ---
 # Deploy Nuxt on Platform.sh
 
-How to deploy Nuxt.js on Platform.sh?
+How to deploy Nuxt on Platform.sh?
 
 ---
 
@@ -26,7 +28,7 @@ Platform.sh includes the following features:
 
 ## Setup
 
-Platform.sh has a pre-made template for Nuxt.js available. The link below will create a new Platform.sh project and pre-populate it with a sample Nuxt.js application that you can then customize.
+Platform.sh has a pre-made template for Nuxt available. The link below will create a new Platform.sh project and pre-populate it with a sample Nuxt application that you can then customize.
 
 <p align="center">
 <a href="https://console.platform.sh/projects/create-project?template=https://raw.githubusercontent.com/platformsh/template-builder/master/templates/nuxtjs/.platform.template.yaml&utm_content=nuxtjs&utm_source=nuxtjs_orgb&utm_medium=button&utm_campaign=deploy_on_platform" target="_blank">

@@ -39,7 +39,7 @@
         "
       />
     </div>
-    <h2 class="font-bold p-2 truncate">{{ showcase.hostname }}</h2>
+    <h2 class="font-bold py-2 px-4 truncate">{{ showcase.hostname }}</h2>
   </Link>
 </template>
 

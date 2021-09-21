@@ -3,7 +3,9 @@ template: guide
 title: Cloudflare
 description: What needs to be considered when using Nuxt with Cloudflare
 category: deployment
-logo: "/img/modules/categories/deployment.svg"
+logo:
+  light: "/img/partners/dark/Cloudflare.svg"
+  dark: "/img/partners/light/Cloudflare.svg"
 ---
 # Deploy Nuxt on Cloudflare
 

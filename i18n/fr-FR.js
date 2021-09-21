@@ -35,7 +35,7 @@ export default {
         }
       }
     },
-    license: 'NuxtJS est un framework open source sous license MIT.'
+    license: 'Nuxt est un framework open source sous license MIT.'
   },
   sidebar: {
     partners: {
@@ -44,7 +44,7 @@ export default {
     },
     ads: {
       fallback: {
-        title: 'NuxtJS a besoin de vous !',
+        title: 'Nuxt a besoin de vous !',
         description:
           'En autorisant nuxtjs.org sur votre bloqueur de publicité, vous soutenez notre travail et nous aidez financièrement.'
       }
@@ -118,6 +118,9 @@ export default {
     version: 'Version',
     released_on: 'Sortie le'
   },
+  partners: {
+    become_partner: 'Devenez partenaire'
+  },
   theme_mode: {
     system: 'Système',
     light: 'Clair',
@@ -140,7 +143,8 @@ export default {
     hours: 'heures',
     minutes: 'minutes',
     seconds: 'secondes',
-    copied: 'Copié'
+    copied: 'Copié',
+    watch_video: 'Regarder'
   },
   iso: 'fr',
   cookies: {

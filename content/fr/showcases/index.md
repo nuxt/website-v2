@@ -1,17 +1,20 @@
 ---
 template: blank
 title: 'Showcases'
-description: 'Découvrez notre sélection de site fait avec NuxtJS.'
+description: 'Découvrez notre sélection de site fait avec Nuxt.'
 layout:
   fluid: true
 ---
 
-::showcases-hero
----
-title: 'Showcases'
----
+::page-hero
+#title
+Showcases
+
 #description
-  Découvrez notre sélection de site fait avec NuxtJS. Cette collection est propulsée par VueTelescope. Visitez [vuetelescope.com](https://vuetelescope.com) et essayez l'extension pour Chrome et Firefox.
+Découvrez notre sélection de site fait avec Nuxt. Cette collection est propulsée par VueTelescope. Visitez [vuetelescope.com](https://vuetelescope.com) et essayez l'extension pour Chrome et Firefox.
+
+#bottom
+  :showcases-bottom-hero
 ::
 
 ::showcases-listing

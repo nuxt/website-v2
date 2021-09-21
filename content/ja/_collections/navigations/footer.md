@@ -65,7 +65,7 @@ links:
         to: '/integrations'
       -
         title: 'マスターコース'
-        href: 'https://masteringnuxt.com/'
+        href: 'https://masteringnuxt.com/?utm_source=nuxt&utm_medium=link&utm_campaign=nsite'
       -
         title: 'モジュール'
         to: '/modules'

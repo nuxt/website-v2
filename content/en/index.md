@@ -32,7 +32,7 @@ category: Learn
 [Easy]{.text-primary} to learn. [Easy]{.text-primary} to master
 
 #description
-Be part of the Nuxt.js community and help us Nuxtify the world.
+Be part of the Nuxt community and help us Nuxtify the world.
 
 #bottom
 :button-link[Learn everything]{href="/docs/get-started/installation" size="medium"}
@@ -54,7 +54,7 @@ image: /img/home/discover/dx/zero-config.svg
 ::section-content-item
 ---
 title: File-system Routing
-description: 'Automatic routing and code-splitting every pages.'
+description: 'Automatic routing and code-splitting for every page.'
 image: /img/home/discover/dx/file-system-routing.svg
 ---
 ::
@@ -86,7 +86,7 @@ image: /img/home/discover/dx/conventions.svg
 ::section-content-item
 ---
 title: SEO Friendly
-description: 'Meta Tags management and faster time-to-content for a great indexing.'
+description: 'Meta tag management and faster time-to-content for great indexing.'
 image: /img/home/discover/dx/seo.svg
 ---
 ::
@@ -123,7 +123,7 @@ category: Partners
 Sustainable [_Development_]{.text-primary}
 
 #description
-Nuxt development is made from passionate developers, however, the amount of effort needed to maintain and develop new features is not sustainable without proper financial backing. We are thanksful to our sponsors and partners to make it possible.<br>
+Nuxt development is carried out by passionate developers, but the amount of effort needed to maintain and develop new features is not sustainable without proper financial backing. We are thankful for our sponsors and partners, who help make Nuxt possible.<br>
 
 #bottom
 :button-link[Sponsor Nuxt]{href="/sponsors" size="medium"}
@@ -137,7 +137,7 @@ category: Learn
 ::section-content-item
 ---
 title: Documentation
-description: 'Discover every Nuxt concepts and find a complete APIs reference.'
+description: 'Discover Nuxt concepts and find a complete API reference.'
 image: /img/home/learn/guides/gem-1.svg
 to: '/docs/get-started/installation'
 hoverClass: 'hover:bg-sky-darker'
@@ -147,7 +147,7 @@ hoverClass: 'hover:bg-sky-darker'
 ::section-content-item
 ---
 title: Examples
-description: "Learn by the examples produced by the community."
+description: "Learn by examples produced by the community."
 image: /img/home/learn/guides/gem-2.svg
 to: '/examples'
 hoverClass: 'hover:bg-sky-darker'
@@ -169,7 +169,7 @@ hoverClass: 'hover:bg-sky-darker'
 title: Master Courses
 description: 'Watch a complete series of videos to learn Nuxt with our partner Vue School.'
 image: /img/home/learn/guides/gem-4.svg
-to: 'https://masteringnuxt.com'
+to: 'https://masteringnuxt.com/?utm_source=nuxt&utm_medium=link&utm_campaign=nsite'
 hoverClass: 'hover:bg-sky-darker'
 ---
 ::
@@ -178,7 +178,7 @@ hoverClass: 'hover:bg-sky-darker'
 Follow our [_Guides_]{.text-primary}
 
 #description
-From an Idea to a Masterpiece, guides show the path to become a Nuxter.
+From an idea to a masterpiece, guides take you on the path to becoming a Nuxter.
 ::
 
 ::home-explore
@@ -215,10 +215,10 @@ hoverClass: 'hover:bg-sky-surface'
 ::
 
 #title
-Need to move Forward? So much to [_Explore_]{.text-primary}
+Moving forward? So much to [_Explore_]{.text-primary}
 
 #description
-Nuxt has plently of areas to explore, learn with examples, integrate with your favorite providers and start quickly with themes.
+Discover powerful modules, integrate with your favorite providers and start quickly with themes.
 ::
 
 ::home-campfire
@@ -233,13 +233,13 @@ articleLinkTitle: Get infos
 Sharing is [Caring]{.text-sky-lighter}
 
 #description
-Discover articles from the framework Team and Community about Nuxt, tips and tricks included!
+Discover articles from the framework team and community about Nuxt. Tips and tricks included!
 
 #campfire-list
   :::campfire-list-item
   ---
   title: Announcements
-  description: Discover articles from NuxtJS team.
+  description: Discover articles from Nuxt team.
   to: '/announcements'
   ---
   :::
@@ -253,14 +253,14 @@ Discover articles from the framework Team and Community about Nuxt, tips and tri
   :::campfire-list-item
   ---
   title: Sponsors
-  description: If you use NuxtJS in your daily work and feel that it has made your life easier, please consider backing us.
+  description: If you use Nuxt in your daily work and feel that it has made your life easier, please consider backing us.
   to: '/sponsors'
   ---
   :::
   :::campfire-list-item
   ---
   title: Tutorials
-  description: Discover tutorials made by the NuxtJS community.
+  description: Discover tutorials made by the Nuxt community.
   to: '/tutorials'
   ---
   :::
@@ -274,7 +274,7 @@ category: Community
 Testimonials
 
 #description
-Learn from experts what they love about Nuxt.
+Learn what the experts love about Nuxt.
 
 #testimonials
   :::testimonials

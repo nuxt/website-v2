@@ -1,14 +1,16 @@
 ---
 template: guide
 title: 21YunBox
-description: "How to deploy Nuxt.js on 21YunBox?"
+description: "How to deploy Nuxt on 21YunBox?"
 target: Static
 category: deployment
-logo: "/img/modules/categories/deployment.svg"
+logo:
+  light: "/img/partners/dark/Yunbox.svg"
+  dark: "/img/partners/light/Yunbox.svg"
 ---
 # Deploy Nuxt on 21YunBox
 
-How to deploy Nuxt.js on 21YunBox?
+How to deploy Nuxt on 21YunBox?
 
 ---
 

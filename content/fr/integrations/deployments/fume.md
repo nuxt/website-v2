@@ -1,14 +1,14 @@
 ---
 template: guide
 title: Fume
-description: How to deploy Nuxt.js on Fume
+description: How to deploy Nuxt on Fume
 target: Static & Server
 category: deployment
 logo: "/img/modules/categories/deployment.svg"
 ---
 # Deploy Nuxt on Fume
 
-How to deploy Nuxt.js on Fume
+How to deploy Nuxt on Fume
 
 ---
 
@@ -27,7 +27,7 @@ Fume includes the following features:
 Get a production-ready URL in 2 minutes with these steps:
 
 - Head to [Fume](https://fume.app), connect and plug in your AWS account
-- Create a Team, and a NuxtJS project
+- Create a Team, and a Nuxt project
 - Run the following command inside your projects root folder
 
 ::code-group

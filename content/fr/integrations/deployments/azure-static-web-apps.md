@@ -1,7 +1,7 @@
 ---
 template: guide
 title: Azure Static Web Apps
-description: Comment déployer une application Nuxt.js sur Azure Static Web Apps?
+description: Comment déployer une application Nuxt sur Azure Static Web Apps?
 target: Static
 category: deployment
 logo: "/img/modules/categories/deployment.svg"
@@ -52,10 +52,10 @@ Si vous souhaitez tester le déploiement sur des applications Web statiques Azur
 
 ### Étape 2: **Ajouter un dépôt GitHub**
 
-L'application statique Azure App Service a besoin d'accéder au dépôt où réside votre application Nuxt.js afin qu'elle puisse déployer automatiquement des commits :
+L'application statique Azure App Service a besoin d'accéder au dépôt où réside votre application Nuxt afin qu'elle puisse déployer automatiquement des commits :
 
 1. Cliquez sur le bouton **Se connecter avec GitHub**
-2. Sélectionnez l'**Organisation** sous laquelle vous avez créé le dépôt pour votre projet Nuxt.js. Il peut également s'agir de votre nom d'utilisateur GitHub.
+2. Sélectionnez l'**Organisation** sous laquelle vous avez créé le dépôt pour votre projet Nuxt. Il peut également s'agir de votre nom d'utilisateur GitHub.
 3. Recherchez le nom du dépôt que vous avez créé précédemment et sélectionnez-le.
 4. Choisissez **master** comme branche dans la liste déroulante *Branche*.
 

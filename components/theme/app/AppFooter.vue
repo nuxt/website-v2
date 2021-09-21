@@ -78,7 +78,7 @@
           </section>
           <ul class="flex items-center space-x-4 xl:space-x-5 mt-4">
             <li v-for="(social, key) in socials" :key="key">
-              <NuxtHref :href="social.href" :aria-label="social.icon" class="block">
+              <NuxtHref :href="social.href" :aria-label="social.title" :title="social.title" class="block">
                 <Component
                   :is="social.icon"
                   class="w-6 h-6 hover:text-primary"
@@ -110,15 +110,18 @@ export default defineComponent({
     const socials = [
       {
         href: 'https://twitter.com/nuxt_js',
-        icon: 'IconTwitter'
+        icon: 'IconTwitter',
+        title: "Follow us on Twitter!"
       },
       {
         href: 'https://discord.com/invite/ps2h6QT',
-        icon: 'IconDiscord'
+        icon: 'IconDiscord',
+        title: "Join our Discord server!"
       },
       {
         href: 'https://github.com/nuxt',
-        icon: 'IconGitHub'
+        icon: 'IconGitHub',
+        title: "See our works on GitHub!"
       }
     ]
     const home = computed(() => route.value.path === app.localePath('/'))

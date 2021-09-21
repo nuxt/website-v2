@@ -10,7 +10,7 @@ video-courses:
     title: Learn Nuxt by Building a Real World App
     description: Learn how to build robust, modern websites with Nuxt from scratch. Or improve your website performance, code quality, while making better use of the framework.
     image: /img/video-courses/mastering_nuxt.png
-    link: 'https://masteringnuxt.com/?utm_source=nuxt&utm_medium=link&utm_campaign=navbar_link'
+    link: 'https://masteringnuxt.com/?utm_source=nuxt&utm_medium=link&utm_campaign=nsite'
     tier: Premium
   two:
     title: Get Started with Nuxt

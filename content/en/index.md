@@ -123,7 +123,7 @@ category: Partners
 Sustainable [_Development_]{.text-primary}
 
 #description
-Nuxt development is carried out by passionate developers, but the amount of effort needed to maintain and develop new features is not sustainable without proper financial backing. We are thankful for our sponsors and partners, who help make Nuxt possible.<br>
+Nuxt development is made from passionate developers, however, the amount of effort needed to maintain and develop new features is not sustainable without proper financial backing. We are thankful to our sponsors and partners to make it possible.<br>
 
 #bottom
 :button-link[Sponsor Nuxt]{href="/sponsors" size="medium"}
@@ -169,7 +169,7 @@ hoverClass: 'hover:bg-sky-darker'
 title: Master Courses
 description: 'Watch a complete series of videos to learn Nuxt with our partner Vue School.'
 image: /img/home/learn/guides/gem-4.svg
-to: 'https://masteringnuxt.com'
+to: 'https://masteringnuxt.com/?utm_source=nuxt&utm_medium=link&utm_campaign=nsite'
 hoverClass: 'hover:bg-sky-darker'
 ---
 ::

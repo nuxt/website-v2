@@ -8,10 +8,11 @@ navigation: false
 ---
 
 ::page-hero
----
-title: Teams
-description: "The development of Nuxt and its ecosystem is lead by an international team. Our committed team works every day to bring Nuxt forward."
----
+#title
+Teams
+
+#description
+The development of Nuxt and its ecosystem is lead by an international team. Our committed team works every day to bring Nuxt forward.
 ::
 
 ::team-section

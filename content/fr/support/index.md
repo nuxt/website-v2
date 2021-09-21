@@ -7,10 +7,11 @@ layout:
 navigation: false
 ---
 ::page-hero
----
-title: Support
-description: "Recevez une assistance technique, signalez des bugs ou contribuez au développement du framework."
----
+#title
+Support
+
+#description
+Recevez une assistance technique, signalez des bugs ou contribuez au développement du framework.
 ::
 
 ::support-container

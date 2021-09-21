@@ -117,6 +117,9 @@ export default {
     version: 'Version',
     released_on: 'Released on'
   },
+  partners: {
+    become_partner: 'Become a partner'
+  },
   theme_mode: {
     system: 'System',
     light: 'Light',
@@ -139,7 +142,8 @@ export default {
     hours: 'hours',
     minutes: 'minutes',
     seconds: 'seconds',
-    copied: 'Copied'
+    copied: 'Copied',
+    watch_video: 'Watch video'
   },
   iso: 'en'
 }

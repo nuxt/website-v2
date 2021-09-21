@@ -159,7 +159,7 @@ category: Apprendre
   title: Master Courses
   description: 'Visionnez une série complète de vidéos pour apprendre Nuxt avec notre partenaire Vue School.'
   image: /img/home/learn/guides/gem-4.svg
-  to: 'https://masteringnuxt.com'
+  to: 'https://masteringnuxt.com/?utm_source=nuxt&utm_medium=link&utm_campaign=nsite'
   hoverClass: 'hover:bg-sky-darker'
   ---
   ::

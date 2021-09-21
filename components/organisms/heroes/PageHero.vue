@@ -13,20 +13,14 @@
           overflow-ellipsis overflow-hidden
         "
       >
-        {{ title }}
+        <Markdown use="title" unwrap="p" />
       </h1>
       <p class="text-body-md sm:text-body-lg md:text-body-xl" :class="{ 'max-w-3xl': !descriptionFullWidth }">
-        {{ description }}
+        <Markdown use="description" unwrap="p" />
       </p>
-      <Link
-        v-if="button && button === 'partners'"
-        to="mailto:partners@nuxtlabs.com"
-        blank
-        class="inline-flex mt-6 items-center gap-3 h-12 bg-gray-500 bg-opacity-10 px-4 hover:bg-opacity-20 rounded-md"
-      >
-        <component :is="'IconStar'" class="h-5 w-5 -mt-1 text-currentColor" />
-        <span class="font-medium">Become a Partner</span>
-      </Link>
+      <div v-if="$slots.bottom || $scopedSlots.bottom" class="mt-8">
+        <Markdown use="bottom" />
+      </div>
     </div>
 
     <img
@@ -49,21 +43,9 @@ import { defineComponent } from '@nuxtjs/composition-api'
 
 export default defineComponent({
   props: {
-    title: {
-      type: String,
-      default: ''
-    },
-    description: {
-      type: String,
-      default: ''
-    },
     descriptionFullWidth: {
       type: Boolean,
       default: false
-    },
-    button: {
-      type: String,
-      default: ''
     }
   }
 })

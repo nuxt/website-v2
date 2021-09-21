@@ -6,12 +6,15 @@ layout:
   fluid: true
 ---
 
-::showcases-hero
----
-title: 導入事例
----
+::page-hero
+#title
+導入事例
+
 #description
   Nuxt で構築されたウェブサイトのセレクションをご覧ください。このコレクションは、VueTelescope によって提供されています。[vuetelescope.com](https://vuetelescope.com) にアクセスして、ブラウザ拡張をお試しください。
+
+#bottom
+  :showcases-bottom-hero
 ::
 
 ::showcases-listing

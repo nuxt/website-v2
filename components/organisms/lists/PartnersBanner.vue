@@ -4,15 +4,19 @@
       <li
         v-for="(partner, index) in partners"
         :key="`${partner.alt}-${index}`"
-        class="flex items-center partners__slide"
+        class="flex md:mx-12 items-center partners__slide"
       >
-        <a :href="partner.link" class="opacity-75 hover:opacity-100 w-28" rel="noopener sponsored" target="_blank">
-          <img
-            loading="lazy"
+        <a
+          :href="partner.link"
+          class="hover:opacity-85 w-36 flex justify-center"
+          rel="noopener sponsored"
+          target="_blank"
+        >
+          <NuxtImg
+            :height="partner.logoHeight || 30"
             :src="partner.logoFull"
             :alt="partner.title"
             :title="partner.title"
-            :class="partner.logoSize || 'h-full w-full'"
           />
         </a>
       </li>

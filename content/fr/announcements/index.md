@@ -1,7 +1,7 @@
 ---
 template: blog
-title: Annoucements
-description: Découvrez les articles de l'équipe Nuxt.
+title: Annonces
+description: Découvrez les annonces de l'équipe Nuxt.
 blogPostList: true
 sortBy:
   field: 'position'

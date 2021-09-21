@@ -4,7 +4,14 @@ title: Stormkit.io
 description: Nuxt を Stormkit.io にどうやってデプロイするのか？
 target: Static & Server
 category: deployment
-logo: "/img/modules/categories/deployment.svg"
+logo:
+  light: "/img/partners/dark/Stormkit_Dark.svg"
+  dark: "/img/partners/light/Stormkit_Light.svg"
+---
+# Deploy with Stormkit
+
+How to deploy Nuxt with Stormkit.io?
+
 ---
 
 [Stormkit.io](https://www.stormkit.io) を使って、Nuxt アプリケーションを簡単に構築、デプロイ、スケーリングすることができます。インスタントロールバック、サーバーレスサイドロジック、スニペットインジェクション、複数の開発環境など...をサポートしています。

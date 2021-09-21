@@ -34,7 +34,7 @@ links:
         title: 'Discutez avec nous'
         href: 'https://discord.nuxtjs.org/'
       -
-        title: 'Évènements'
+        title: 'Événements'
         to: '/events'
       -
         title: 'Sponsors'
@@ -70,7 +70,7 @@ links:
         title: 'Modules'
         to: '/modules'
       -
-        title: 'Releases'
+        title: 'Notes de version'
         to: '/releases'
       -
         title: 'Showcases'

@@ -1,7 +1,7 @@
 ---
 template: guide
 title: Fume
-description: How to deploy Nuxt on Fume
+description: How to deploy Nuxt on Fume?
 target: Static & Server
 category: deployment
 logo:
@@ -10,7 +10,7 @@ logo:
 ---
 # Deploy Nuxt on Fume
 
-How to deploy Nuxt on Fume
+How to deploy Nuxt on Fume?
 
 ---
 

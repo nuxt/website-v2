@@ -4,7 +4,14 @@ title: Bip
 description: Comment déployer une application Nuxt avec Bip ?
 target: Static
 category: deployment
-logo: "/img/modules/categories/deployment.svg"
+logo:
+  light: "/img/partners/dark/bip.png"
+  dark: "/img/partners/light/bip.png"
+---
+# Déployer Nuxt avec Bip
+
+Comment déployer une application Nuxt avec Bip ?
+
 ---
 
 [Bip](https://bip.sh) est un service commercial d'hébergement qui fournit un déploiement sans interruption, un CDN mondial, SSL, une bande passante illimitée et plus encore pour les sites web statiques Nuxt. Les plans sont disponibles sur une base de paiement au fur et à mesure, par domaine.
@@ -44,7 +51,7 @@ Suivez les instructions, où il vous sera demandé sur quel domaine vous souhait
 
 ## Étape 2: Déploiement
 
-Vous êtes maintenant prêt à déployer votre site web. Pour ce faire, exécutez : 
+Vous êtes maintenant prêt à déployer votre site web. Pour ce faire, exécutez :
 
 ```bash
 yarn generate && bip deploy

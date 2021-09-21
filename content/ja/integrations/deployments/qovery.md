@@ -4,7 +4,9 @@ title: Qovery
 description: Nuxt を Qovery にどうやってデプロイするのか？
 target: Static & Server
 category: deployment
-logo: "/img/modules/categories/deployment.svg"
+logo:
+  light: "/img/partners/dark/Qovery.svg"
+  dark: "/img/partners/light/Qovery.svg"
 ---
 # Nuxt を Qovery にデプロイする
 

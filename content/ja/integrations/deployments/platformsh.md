@@ -4,7 +4,9 @@ title: Platform.sh
 description: Nuxt を Platform.sh にどうやってデプロイするのか？
 target: Static & Server
 category: deployment
-logo: "/img/modules/categories/deployment.svg"
+logo:
+  light: "/img/partners/dark/Platformsh_Dark.svg"
+  dark: "/img/partners/light/Platformsh_Light.svg"
 ---
 # Nuxt を Platform.sh にデプロイする
 

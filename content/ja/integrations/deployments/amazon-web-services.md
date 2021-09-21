@@ -4,7 +4,9 @@ title: Amazon Web Services
 description: S3 Amplify と CloudFront による AWS 上の静的ホスティング
 target: Static
 category: deployment
-logo: "/img/modules/categories/deployment.svg"
+logo:
+  light: "/img/partners/light/AWS_Light.svg"
+  dark: "/img/partners/dark/AWS_Dark.svg"
 ---
 
 # Nuxt を Amazon Web Services にデプロイする
@@ -13,7 +15,7 @@ S3 Amplify と CloudFront による AWS 上の静的ホスティング
 
 ---
 
-AWS とは Amazon Web Services の略です。 
+AWS とは Amazon Web Services の略です。
 S3 は静的サイトホスティング用の設定が行える静的ストレージです。CloudFront はそれらの CDN です（コンテンツ・デリバリー・ネットワーク）。
 
 ## Amplify Console と AWS

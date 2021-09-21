@@ -4,8 +4,17 @@ title: Amazon Web Services
 description: Hébergement statique sur AWS avec S3 Amplify et CloudFront
 target: Static
 category: deployment
-logo: "/img/modules/categories/deployment.svg"
+logo:
+  light: "/img/partners/light/AWS_Light.svg"
+  dark: "/img/partners/dark/AWS_Dark.svg"
 ---
+
+# Déployer Nuxt sur Amazon Web Services
+
+Hébergement statique sur AWS avec S3 Amplify et CloudFront
+
+---
+
 
 AWS signifie Amazon Web Services.
 S3 est l'outil de stockage statique qui peut être configuré pour l'hébergement de site statique. CloudFront est l'outil de CDN (réseau de diffusion de contenu).

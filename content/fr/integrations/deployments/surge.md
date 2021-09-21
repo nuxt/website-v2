@@ -1,14 +1,21 @@
 ---
 template: guide
 title: Surge
-description: Comment deployer Nuxt.js sur Surge ?
+description: Comment deployer Nuxt sur Surge ?
 target: Static
 category: deployment
-logo: "/img/modules/categories/deployment.svg"
+logo:
+  light: "/img/partners/dark/Surge.svg"
+  dark: "/img/partners/light/Surge.svg"
+---
+# Déployer Nuxt vec Surge
+
+Comment déployer Nuxt sur Surge ?
+
 ---
 
 
-Nuxt.js vous permet d'héberger votre site web sur n'importe quel hébergeur statique tel que [Surge](https://surge.sh/).
+Nuxt vous permet d'héberger votre site web sur n'importe quel hébergeur statique tel que [Surge](https://surge.sh/).
 
 Afin de deployer sur Surge, installez le sur votre machine :
 
@@ -32,7 +39,7 @@ surge dist/
 
 Voilà!
 
-Si vous avez un projet avec des [pages dynamiques](/docs/2.x/directory-structure/pages#dynamic-pages), consultez la [proprieté `generate`](/docs/2.x/configuration-glossary/configuration-generate) afin d'indiquer à Nuxt.js comment générer ces pages dynamiques si vous utilisez Nuxt <= v2.12.
+Si vous avez un projet avec des [pages dynamiques](/docs/2.x/directory-structure/pages#dynamic-pages), consultez la [proprieté `generate`](/docs/2.x/configuration-glossary/configuration-generate) afin d'indiquer à Nuxt comment générer ces pages dynamiques si vous utilisez Nuxt <= v2.12.
 
 <div class="Alert">
 

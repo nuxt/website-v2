@@ -4,7 +4,14 @@ title: Platform.sh
 description: How to deploy Nuxt on Platform.sh?
 target: Static & Server
 category: deployment
-logo: "/img/modules/categories/deployment.svg"
+logo:
+  light: "/img/partners/dark/Platformsh_Dark.svg"
+  dark: "/img/partners/light/Platformsh_Light.svg"
+---
+# Deploy Nuxt on Platform.sh
+
+How to deploy Nuxt on Platform.sh?
+
 ---
 
 [Platform.sh](https://platform.sh/) is a full-featured end-to-end continuous deployment cloud hosting system for both staging and production environments. It is capable of hosting both static and dynamic applications in a variety of languages.

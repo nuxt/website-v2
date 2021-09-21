@@ -4,7 +4,14 @@ title: Digital Ocean
 description: Comment déployer Nuxt sur DigitalOcean App Platform ?
 target: Static & Server
 category: deployment
-logo: "/img/modules/categories/deployment.svg"
+logo:
+  light: "/img/partners/dark/Digital_Ocean.svg"
+  dark: "/img/partners/light/Digital_Ocean.svg"
+---
+# Déployer Nuxt sur DigitalOcean App Platform
+
+Comment déployer Nuxt sur DigitalOcean App Platform ?
+
 ---
 
 [DigitalOcean App Platform](https://www.digitalocean.com/products/app-platform/) vous permet de créer, déployer et mettre à l'échelle des applications rapidement à l'aide d'une solution simple et entièrement gérée. Ils géreront l'infrastructure, les environnements d'exécution et les dépendances des applications, afin que vous puissiez pousser le code vers la production en quelques clics.

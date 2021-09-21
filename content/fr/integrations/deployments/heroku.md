@@ -4,7 +4,14 @@ title: Heroku
 description: How to deploy Nuxt on Heroku?
 target: Server
 category: deployment
-logo: "/img/modules/categories/deployment.svg"
+logo:
+  light: "/img/partners/dark/Heroku_Dark.svg"
+  dark: "/img/partners/light/Heroku_Light.svg"
+---
+# Deploy Nuxt on Heroku
+
+How to deploy Nuxt on Heroku?
+
 ---
 
 We recommend you read the [Heroku documentation for Node.js](https://devcenter.heroku.com/articles/nodejs-support).

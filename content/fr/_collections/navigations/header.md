@@ -27,7 +27,7 @@ links:
         slug: 'examples'
         to: '/examples'
       -
-        title: 'Releases'
+        title: 'Notes de version'
         slug: 'releases'
         to: '/releases'
       -
@@ -60,7 +60,7 @@ links:
         slug: 'announcements'
         to: '/announcements'
       -
-        title: 'Évènements'
+        title: 'Événements'
         slug: 'events'
         to: '/events'
       -

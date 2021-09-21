@@ -4,7 +4,9 @@ title: NGINX
 description: リバースプロキシとして NGINX の使い方
 target: Static & Server
 category: deployment
-logo: "/img/modules/categories/deployment.svg"
+logo:
+  light: "/img/partners/dark/Nginx.svg"
+  dark: "/img/partners/light/Nginx.svg"
 ---
 # リバースプロキシとして NGINX を使う
 

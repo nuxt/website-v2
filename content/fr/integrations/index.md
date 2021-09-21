@@ -1,8 +1,8 @@
 ---
 template: PageList
-title: Integrations
+title: Intégrations
 description: "Étendez et automatisez votre flux de travail en utilisant des intégrations pour vos outils préférés."
-heroTitle: Integrations
+heroTitle: Intégrations
 heroDescription: "Étendez et automatisez votre flux de travail en utilisant des intégrations pour vos outils préférés."
 heroDescriptionFullWidth: true
 ---

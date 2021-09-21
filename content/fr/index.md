@@ -146,8 +146,8 @@ category: Apprendre
 
   ::section-content-item
   ---
-  title: Releases
-  description: "Découvrez ce qui a changé avant la mise à jour."
+  title: Notes de version
+  description: "Découvrez ce qui a changé dans chaque mise à jour."
   image: /img/home/learn/guides/gem-3.svg
   to: '/releases'
   hoverClass: 'hover:bg-sky-darker'
@@ -177,7 +177,7 @@ category: Explorez
 ---
   ::section-content-item
   ---
-  title: 'Integrations'
+  title: 'Intégrations'
   description: "Étendez et automatisez votre travail en utilisant les intégrations pour vos outils préférés."
   image: '/img/home/explore/gem-explore-1.svg'
   to: '/integrations'

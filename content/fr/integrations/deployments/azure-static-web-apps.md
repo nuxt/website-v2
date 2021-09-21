@@ -1,10 +1,17 @@
 ---
 template: guide
 title: Azure Static Web Apps
-description: Comment déployer une application Nuxt sur Azure Static Web Apps?
+description: Comment déployer une application Nuxt sur Azure Static Web Apps ?
 target: Static
 category: deployment
-logo: "/img/modules/categories/deployment.svg"
+logo:
+  light: "/img/partners/dark/Azure.svg"
+  dark: "/img/partners/light/Azure.svg"
+---
+# Déployer Nuxt sur Azure Static Web App
+
+Comment déployer une application Nuxt sur Azure Static Web Apps ?
+
 ---
 
 Vous pouvez maintenant déployer vos sites statiques sur Azure à l'aide d'applications web statiques. Vous devrez avoir votre application dans GitHub car les applications web statiques Azure exploitent les actions GitHub qui vous permettent de reconstruire votre site statique à chaque commit poussée sur git.

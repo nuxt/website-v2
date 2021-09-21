@@ -8,6 +8,11 @@ logo:
   light: "/img/partners/dark/Stormkit_Dark.svg"
   dark: "/img/partners/light/Stormkit_Light.svg"
 ---
+# Deploy with Stormkit
+
+How to deploy Nuxt with Stormkit.io?
+
+---
 
 Easily build, deploy and scale your Nuxt applications with [Stormkit.io](https://www.stormkit.io). It supports instant rollbacks, serverless-side logic, snippet injections, multiple development environments and more...
 

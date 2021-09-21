@@ -4,7 +4,9 @@ title: Hostman
 description: Nuxt を Hostman にどうやってデプロイするのか？
 target: Static
 category: deployment
-logo: "/img/modules/categories/deployment.svg"
+logo:
+  light: "/img/partners/dark/Hostman_Dark.svg"
+  dark: "/img/partners/light/Hostman_Light.svg"
 ---
 # Nuxt を Hostman へデプロイする
 

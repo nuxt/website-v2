@@ -4,7 +4,9 @@ title: PM2
 description: PM2 クラスタモードの有効によって Nuxt をどうやってデプロイするのか？
 target: Server
 category: deployment
-logo: "/img/modules/categories/deployment.svg"
+logo:
+  light: "/img/partners/dark/pm2.png"
+  dark: "/img/partners/light/pm2.png"
 ---
 # PM2 を使った Nuxt のデプロイ
 

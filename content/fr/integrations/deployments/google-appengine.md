@@ -4,7 +4,14 @@ title: Google App Engine
 description: How to deploy Nuxt on Google App Engine?
 target: Server
 category: deployment
-logo: "/img/modules/categories/deployment.svg"
+logo:
+  light: "/img/partners/dark/Google_engine_app.svg"
+  dark: "/img/partners/light/Google_engine_app.svg"
+---
+# Deploy Nuxt on Google App Engine
+
+How to deploy Nuxt on Google App Engine?
+
 ---
 
 Deploying to [Google App Engine](https://cloud.google.com/appengine/) is a fast and easy solution for hosting your universal Nuxt application on Google's Cloud Services.

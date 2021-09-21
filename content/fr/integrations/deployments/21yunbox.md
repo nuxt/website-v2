@@ -4,7 +4,15 @@ title: 21YunBox
 description: Comment déployer Nuxt sur 21YunBox ?
 target: Static
 category: deployment
-logo: "/img/modules/categories/deployment.svg"
+logo:
+  light: "/img/partners/dark/Yunbox.svg"
+  dark: "/img/partners/light/Yunbox.svg"
+---
+
+# Deployer Nuxt sur 21YunBox
+
+Comment déployer Nuxt sur 21YunBox?
+
 ---
 
 [21YunBox](https://www.21yunbox.com) fournit un CDN chinois ultra-rapide, un déploiement continu, un HTTPS en un clic et [d'autres services tels que des bases de données gérées et des services backend](https://www.21yunbox.com/docs/), fournissant un moyen de lancer des projets Web en Chine.

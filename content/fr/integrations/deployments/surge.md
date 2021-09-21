@@ -4,7 +4,14 @@ title: Surge
 description: Comment deployer Nuxt.js sur Surge ?
 target: Static
 category: deployment
-logo: "/img/modules/categories/deployment.svg"
+logo:
+  light: "/img/partners/dark/Surge.svg"
+  dark: "/img/partners/light/Surge.svg"
+---
+# Déployer Nuxt vec Surge
+
+Comment deployer Nuxt.js sur Surge ?
+
 ---
 
 

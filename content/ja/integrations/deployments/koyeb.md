@@ -4,7 +4,9 @@ title: Koyeb
 description: Nuxt を Docker を使って Koyeb Serverless Platform にデプロイします
 target: Server
 category: deployment
-logo: "/img/modules/categories/deployment.svg"
+logo:
+  light: "/img/partners/dark/Koyeb_Dark.svg"
+  dark: "/img/partners/light/Koyeb_Light.svg"
 ---
 # Nuxt を Koyeb Serverless Platform へデプロイする
 

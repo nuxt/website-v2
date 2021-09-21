@@ -4,9 +4,10 @@ title: Koyeb
 description: Deploy Nuxt on Koyeb Serverless Platform with Docker
 target: Server
 category: deployment
-logo: "/img/modules/categories/deployment.svg"
+logo:
+  light: "/img/partners/dark/Koyeb_Dark.svg"
+  dark: "/img/partners/light/Koyeb_Light.svg"
 ---
-
 # Deploy Nuxt on Koyeb Serverless Platform
 
 Deploy Nuxt on Koyeb Serverless Platform with Docker

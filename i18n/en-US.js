@@ -139,7 +139,8 @@ export default {
     hours: 'hours',
     minutes: 'minutes',
     seconds: 'seconds',
-    copied: 'Copied'
+    copied: 'Copied',
+    watch_video: 'Watch video'
   },
   iso: 'en'
 }

@@ -9,19 +9,24 @@
       <LogoCard v-for="(item, index) in events" :key="index" :item="item">
         <template #footer>
           <div class="flex items-center" :class="item.eventLogo ? 'justify-between' : 'justify-end'">
-            <img
-              v-if="item.eventLogo"
-              :src="`/img/events/light/${item.eventLogo}`"
-              loading="lazy"
-              class="h-5 light-img"
-            />
-            <img
-              v-if="item.eventLogo"
-              :src="`/img/events/dark/${item.eventLogo}`"
-              loading="lazy"
-              class="h-5 dark-img"
-            />
+            <a
+              v-if="item.eventLogo && item.eventLink"
+              :href="item.eventLink"
+              target="_blank"
+              rel="noopener"
+              class="z-10"
+            >
+              <img :src="`/img/events/light/${item.eventLogo}`" :alt="item.name" loading="lazy" class="h-5 light-img" />
+              <img :src="`/img/events/dark/${item.eventLogo}`" :alt="item.name" loading="lazy" class="h-5 dark-img" />
+            </a>
             {{ item.displayDate }}
+          </div>
+        </template>
+
+        <template #external>
+          <div class="flex items-center gap-1">
+            <span class="text-sm font-medium text-gray-400">{{ $t('common.watch_video') }}</span>
+            <img :src="`/img/icons/ext.svg`" alt="external_link" />
           </div>
         </template>
       </LogoCard>

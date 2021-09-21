@@ -233,7 +233,7 @@ articleLinkTitle: Get infos
 Sharing is [Caring]{.text-sky-lighter}
 
 #description
-Discover articles from the framework Team and Community about Nuxt. Tips and tricks included!
+Discover articles from the framework team and community about Nuxt. Tips and tricks included!
 
 #campfire-list
   :::campfire-list-item

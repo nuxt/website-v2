@@ -62,6 +62,7 @@ export default withDocus({
     process.env.RECAPTCHA_SITE_KEY ? '@nuxtjs/recaptcha' : undefined
   ].filter(_ => _),
   plugins: [
+    '~/plugins/mq',
     '~/plugins/gtag.client',
     '~/plugins/adblock.client',
     '~/plugins/v-tooltip.ts',

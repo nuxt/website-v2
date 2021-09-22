@@ -21,6 +21,7 @@
     "vue-clickaway": "^2.2.2",
     "vue-cookieconsent-component": "^1.2.0",
     "vue-if-bot": "^1.2.0",
+    "vue-mq": "^1.0.1",
     "vue-plausible": "^1.2.1"
   },
   "devDependencies": {

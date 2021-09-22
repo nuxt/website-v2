@@ -5,12 +5,9 @@
     <AppHeader :links="headerLinks" />
 
     <div class="lg:flex" :class="{ 'd-container': layout.aside }">
-      <!-- TODO: to improve -->
-      <div :class="{ 'lg:hidden': !layout.aside }">
-        <slot name="aside">
-          <AppAside :links="headerLinks" :class="layout.asideClass" />
-        </slot>
-      </div>
+      <slot v-if="['xs', 'sm', 'md'].includes($mq) || layout.aside" name="aside">
+        <AppAside :links="headerLinks" :class="layout.asideClass" />
+      </slot>
 
       <div class="flex-auto w-full min-w-0 lg:static lg:max-h-full lg:overflow-visible">
         <slot />

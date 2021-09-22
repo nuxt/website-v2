@@ -15,7 +15,7 @@ themes:
     href: https://www.creative-tim.com/product/nuxt-argon-dashboard-pro?partner=120213
   two:
     title: Nuxt Argon Dashboard PRO Laravel
-    description: Alle Funktionen eines leichtgewichtigen CMS, das mit zwei der derzeit beliebtesten Frameworks erstellt wurde: Nuxt und Laravel.
+    description: Alle Funktionen eines leichtgewichtigen CMS, das mit zwei der derzeit beliebtesten Frameworks erstellt wurde, Nuxt und Laravel.
     image: /img/themes/argon_dashboard_pro_laravel.jpg
     slug: two
     price: $149

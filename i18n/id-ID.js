@@ -8,7 +8,11 @@ export default {
     version: 'Versi'
   },
   iso: 'id',
-
+  cookies: {
+    message: 'Kami menggunakan Cookie untuk menganalisis pengguna dan melakukan peningkatan pada halaman!',
+    link: 'Pelajari tentang cookie',
+    button: 'Mengerti'
+  },
   links: {
     download: 'Unduh',
     live_edit: 'Sunting Langsung'
@@ -329,10 +333,5 @@ export default {
         contributionGuide: 'Panduan kontribusi'
       }
     }
-  },
-  cookies: {
-    consent: 'Kami menggunakan Cookie untuk menganalisis pengguna dan melakukan peningkatan pada halaman!',
-    linkLabel: 'Pelajari tentang cookie',
-    button: 'Mengerti'
   }
 }

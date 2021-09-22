@@ -11,7 +11,11 @@ export default {
     version: 'Версия'
   },
   iso: 'ru',
-
+  cookies: {
+    message: 'Мы используем файлы Cookies для аналитики!',
+    link: 'Узнать больше о Cookies',
+    button: 'Понятно'
+  },
   links: {
     download: 'Скачать',
     live_edit: 'Пробовать вживую'
@@ -333,10 +337,5 @@ export default {
         contributionGuide: 'Contribution guide'
       }
     }
-  },
-  cookies: {
-    consent: 'Мы используем файлы Cookies для аналитики!',
-    linkLabel: 'Узнать больше о Cookies',
-    button: 'Понятно'
   }
 }

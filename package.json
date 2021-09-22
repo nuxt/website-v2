@@ -32,7 +32,7 @@
     "eslint-plugin-nuxt": "^2.0.0",
     "eslint-plugin-prettier": "^3.4.0",
     "fuse.js": "^6.4.6",
-    "millify": "^3.5.0",
+    "millify": "^4.0.0",
     "ohmyfetch": "^0.2.0",
     "prettier": "^2.3.2",
     "ts-loader": "8.2.0",

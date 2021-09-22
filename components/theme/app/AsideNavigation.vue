@@ -39,6 +39,8 @@
         <AsideNavigationItem v-else :key="link.to" :docs="[link]" />
       </template>
     </ul>
+
+    <AsideBottom />
   </nav>
 </template>
 

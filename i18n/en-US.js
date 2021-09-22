@@ -115,7 +115,7 @@ export default {
   },
   releases: {
     version: 'Version',
-    released_on: 'Released on'
+    released_on: 'Released on {datetime}'
   },
   partners: {
     become_partner: 'Become a partner'

@@ -20,14 +20,7 @@
               {{ $t('releases.version') }} <span class="font-bold">{{ release.name }}</span>
             </h2>
             <p class="text-xs font-semibold uppercase text-tw-gray-400">
-              {{ $t('releases.released_on') }}
-              {{
-                new Date(release.date).toLocaleDateString($i18n.locale, {
-                  year: 'numeric',
-                  month: 'long',
-                  day: 'numeric'
-                })
-              }}
+              {{ $t('releases.released_on', { datetime: formatDateByLocale($i18n.locale, release.date) }) }}
             </p>
           </div>
 
@@ -58,8 +51,15 @@ export default defineComponent({
       releases.value = document.body?.releases
     })
 
+    const formatDateByLocale = (locale, d) => {
+      const currentLocale = locale || 'en-US'
+      const options = { year: 'numeric', month: 'long', day: 'numeric' }
+      return new Date(d).toLocaleDateString(currentLocale, options)
+    }
+
     return {
-      releases
+      releases,
+      formatDateByLocale
     }
   }
 })

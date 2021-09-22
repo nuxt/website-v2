@@ -1,5 +1,5 @@
 <template>
-  <ul class="grid grid-cols-1 md:grid-cols-3 gap-12 md:gap-4 lg:gap-8 pb-8 px-4" :class="{ 'pt-16': !home }">
+  <ul class="grid grid-cols-1 md:grid-cols-3 gap-12 md:gap-4 lg:gap-8 pb-8 px-4" :class="{ 'pt-16': !isHome }">
     <li
       v-for="testimonial in testimonials"
       :key="testimonial.author"
@@ -14,7 +14,7 @@
         rounded-lg
         p-4
       "
-      :class="{ 'dark:border-secondary-dark': !home }"
+      :class="{ 'dark:border-secondary-dark': !isHome }"
     >
       <NuxtLabel tag="p" class="text-left" v-html="testimonial.testimonial"></NuxtLabel>
       <div class="flex w-full justify-between items-center">
@@ -30,7 +30,7 @@
         </a>
         <a :href="testimonial.authorUrl" target="_blank" rel="noopener" class="flex flex-1 pl-4 text-left flex-col">
           <NuxtLabel tag="span" class="font-bold text-base">{{ testimonial.author }}</NuxtLabel>
-          <NuxtLabel tag="span" class="text-sm" :class="{ 'dark:text-cloud-lighter': !home }">{{
+          <NuxtLabel tag="span" class="text-sm" :class="{ 'dark:text-cloud-lighter': !isHome }">{{
             testimonial.job
           }}</NuxtLabel>
         </a>
@@ -44,7 +44,7 @@
             :class="{ 'light-img': testimonial.jobIconDark }"
           />
           <img
-            v-if="testimonial.jobIconDark && !home"
+            v-if="testimonial.jobIconDark && !isHome"
             loading="lazy"
             :src="`/img/home/testimonials/${testimonial.jobIconDark}.svg`"
             :alt="testimonial.jobIconDark"
@@ -62,7 +62,7 @@ import { defineComponent, useContext, ref, useFetch } from '@nuxtjs/composition-
 
 export default defineComponent({
   props: {
-    home: {
+    isHome: {
       type: Boolean,
       default: false
     }

@@ -1,8 +1,9 @@
-import { useContext, computed } from '@nuxtjs/composition-api'
+import { useContext, useRoute, computed } from '@nuxtjs/composition-api'
 
 // TODO: do these checks on `$docus.currentPath` instead of `route.path` once `$docus.currentPath` ssr issue is fixed
 export function useNav() {
-  const { app, route } = useContext()
+  const { app } = useContext()
+  const route = useRoute()
 
   const isHome = computed(() => {
     let path = route.value.path

@@ -13,7 +13,19 @@
   >
     <VueIfBot>
       <CookieConsent
-        class="d-container-content p-4 flex flex-col md:flex-row items-center md:justify-between space-y-4 md:space-y-0"
+        class="
+          d-container-content
+          py-4
+          px-4
+          sm:px-6
+          lg:px-8
+          flex flex-col
+          md:flex-row
+          items-center
+          md:justify-between
+          space-y-4
+          md:space-y-0
+        "
       >
         <template slot="message">
           <p class="md:w-1/2">
@@ -24,7 +36,11 @@
           </p>
         </template>
         <template slot="button">
-          <SectionButton size="md" class="bg-primary text-black hover:bg-primary-400 focus:bg-primary-400">
+          <SectionButton
+            size="md"
+            class="bg-primary text-black hover:bg-primary-400 focus:bg-primary-400"
+            @click.native="$emit('cookie-banner')"
+          >
             {{ $t('cookies.button') }}
           </SectionButton>
         </template>
@@ -37,10 +53,10 @@
 import VueIfBot from 'vue-if-bot/dist/vue-if-bot.es'
 import CookieConsent from 'vue-cookieconsent-component/src/components/CookieConsent.vue'
 
-export default defineComponent({
+export default {
   components: {
     VueIfBot,
     CookieConsent
   }
-})
+}
 </script>

@@ -19,6 +19,8 @@
     "date-fns": "^2.23.0",
     "lottie-web": "^5.7.13",
     "vue-clickaway": "^2.2.2",
+    "vue-cookieconsent-component": "^1.2.0",
+    "vue-if-bot": "^1.2.0",
     "vue-plausible": "^1.2.1"
   },
   "devDependencies": {

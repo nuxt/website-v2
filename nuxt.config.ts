@@ -160,6 +160,12 @@ export default withDocus({
         file: 'en-US.js',
         name: 'English'
       },
+	  {
+        code: 'de',
+        iso: 'de-DE',
+        file: 'de-DE.js',
+        name: 'Deutsch'
+      },
       {
         code: 'fr',
         iso: 'fr-FR',

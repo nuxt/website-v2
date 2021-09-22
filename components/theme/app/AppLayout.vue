@@ -1,6 +1,7 @@
 <template>
   <div class="relative w-full">
     <AppBanner />
+
     <AppHeader :links="headerLinks" />
 
     <div class="lg:flex" :class="{ 'd-container': layout.aside }">
@@ -17,6 +18,8 @@
     </div>
 
     <AppFooter :links="footerLinks" />
+
+    <CookieBanner class="w-full fixed bottom-0 left-0 mt-8 z-40" @cookie-banner="showCookieBanner = false" />
   </div>
 </template>
 
@@ -27,7 +30,8 @@ export default defineComponent({
   data() {
     return {
       headerLinks: [],
-      footerLinks: []
+      footerLinks: [],
+      showCookieBanner: false
     }
   },
   async fetch() {
@@ -48,12 +52,21 @@ export default defineComponent({
   computed: {
     layout() {
       return this.$docus.layout.value
+    },
+    cookieSpacerStyles() {
+      return this.showCookieBanner ? 'pb-20 md:pb-4 lg:pb-20' : ''
     }
   },
   watch: {
     '$i18n.locale'() {
       this.$fetch()
     }
+  },
+  onMounted() {
+    const bannerCookie = 'cookieconsent_status'
+    const docCookies = `; ${document.cookie}`
+
+    this.showCookieBanner = !docCookies.includes(bannerCookie)
   }
 })
 </script>

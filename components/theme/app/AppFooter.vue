@@ -111,17 +111,17 @@ export default defineComponent({
       {
         href: 'https://twitter.com/nuxt_js',
         icon: 'IconTwitter',
-        title: "Follow us on Twitter!"
+        title: 'Follow us on Twitter!'
       },
       {
         href: 'https://discord.com/invite/ps2h6QT',
         icon: 'IconDiscord',
-        title: "Join our Discord server!"
+        title: 'Join our Discord server!'
       },
       {
         href: 'https://github.com/nuxt',
         icon: 'IconGitHub',
-        title: "See our works on GitHub!"
+        title: 'See our works on GitHub!'
       }
     ]
     const home = computed(() => route.value.path === app.localePath('/'))

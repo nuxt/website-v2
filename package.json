@@ -30,7 +30,7 @@
     "eslint": "^7.32.0",
     "eslint-config-prettier": "^8.3.0",
     "eslint-plugin-nuxt": "^2.0.0",
-    "eslint-plugin-prettier": "^3.4.0",
+    "eslint-plugin-prettier": "^4.0.0",
     "fuse.js": "^6.4.6",
     "millify": "^4.0.0",
     "ohmyfetch": "^0.2.0",

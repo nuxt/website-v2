@@ -113,6 +113,9 @@ export default {
       Business: 'ビジネス'
     }
   },
+  partners: {
+    become_partner: 'パートナーになる'
+  },
   theme_mode: {
     system: 'システム',
     light: '明るい',

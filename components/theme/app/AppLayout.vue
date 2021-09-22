@@ -52,9 +52,6 @@ export default defineComponent({
   computed: {
     layout() {
       return this.$docus.layout.value
-    },
-    cookieSpacerStyles() {
-      return this.showCookieBanner ? 'pb-20 md:pb-4 lg:pb-20' : ''
     }
   },
   watch: {
@@ -63,10 +60,10 @@ export default defineComponent({
     }
   },
   onMounted() {
-    const bannerCookie = 'cookieconsent_status'
+    const cookieBanner = 'cookieconsent_status'
     const docCookies = `; ${document.cookie}`
 
-    this.showCookieBanner = !docCookies.includes(bannerCookie)
+    this.showCookieBanner = !docCookies.includes(cookieBanner)
   }
 })
 </script>

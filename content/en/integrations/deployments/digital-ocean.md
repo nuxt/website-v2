@@ -37,8 +37,14 @@ This guide assumes you already have a Nuxt project to deploy. If you need a proj
 
    | Type       | Settings                                                               |
    | ---------- | ---------------------------------------------------------------------- |
-   | **Server** | Web service - Build command `yarn build` & Run command `yarn start`    |
+   | **Server** | Web service - Build command `yarn build` & Run command `yarn start --hostname 0.0.0.0`    |
    | **Static** | Static Sites - Build command `yarn generate` & Output directory `dist` |
+
+   ::alert{type="warning"}
+    <b>Warning:</b> For the server type you need to change the **HTTP port** from 8080 to **3000** in the Web service settings. <br /> More information at [this article](https://dev.to/tillsanders/deploy-nuxt-js-on-digitalocean-app-platform-in-5-minutes-or-less-2dij).
+   ::
+
+   ![DO App platform Web Service Nuxt configuration](https://i.imgur.com/BhBu49J.png)
 
 4. If you have any environment variable, add them manually in the key-value pair inputs.
 

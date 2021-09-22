@@ -47,7 +47,7 @@
 export default {
   methods: {
     home() {
-      if (this.$route.path === this.localePath('/')) {
+      if (this.$docus.currentPath.value === '/') {
         // scroll to top
         window.scrollTo(0, 0)
       }

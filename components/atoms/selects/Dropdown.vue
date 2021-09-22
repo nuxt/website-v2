@@ -13,7 +13,7 @@
       <svg
         v-if="icon"
         class="h-4 w-4"
-        :class="home ? 'text-white' : 'dark:text-secondary light:text-gray-300'"
+        :class="isHome ? 'text-white' : 'dark:text-secondary light:text-gray-300'"
         xmlns="http://www.w3.org/2000/svg"
         viewBox="0 0 20 20"
         fill="currentColor"
@@ -37,7 +37,7 @@
         class="overflow-y-auto rounded-md divide-y py-1"
         :class="[
           dropdownMenuClass,
-          home
+          isHome
             ? 'divide-gray-700 bg-secondary-darkest'
             : 'divide-gray-100 dark:divide-gray-700 bg-white dark:bg-secondary-darkest '
         ]"
@@ -49,7 +49,7 @@
         <div
           v-if="items.length"
           class="divide-y"
-          :class="home ? 'divide-gray-700' : 'divide-gray-100 dark:divide-gray-700'"
+          :class="isHome ? 'divide-gray-700' : 'divide-gray-100 dark:divide-gray-700'"
         >
           <div v-for="(subItems, index) of items" :key="index" class="py-1">
             <div
@@ -70,7 +70,8 @@
 <script>
 import { createPopper } from '@popperjs/core'
 import { directive as onClickaway } from 'vue-clickaway'
-import { defineComponent, computed, useContext } from '@nuxtjs/composition-api'
+import { defineComponent } from '@nuxtjs/composition-api'
+import { useNav } from '~/plugins/nav'
 
 export default defineComponent({
   directives: {
@@ -161,11 +162,10 @@ export default defineComponent({
     }
   },
   setup() {
-    const { route, app } = useContext()
-    const home = computed(() => route.value.path === app.localePath('/'))
+    const { isHome } = useNav()
 
     return {
-      home
+      isHome
     }
   },
   data() {

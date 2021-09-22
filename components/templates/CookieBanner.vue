@@ -34,7 +34,6 @@
 </template>
 
 <script>
-import { defineComponent } from '@nuxtjs/composition-api'
 import VueIfBot from 'vue-if-bot/dist/vue-if-bot.es'
 import CookieConsent from 'vue-cookieconsent-component/src/components/CookieConsent.vue'
 

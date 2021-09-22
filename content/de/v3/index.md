@@ -107,7 +107,7 @@ Nuxt 3 hat eine neue Architektur mit einem kleineren Kern und wurde für eine sc
   ::section-content-item
   ---
   title: Vite
-  description: 'Experience lightning fast HMR by using Vite as your bundler.'
+  description: 'Erleben Sie blitzschnelle HMR, indem Sie Vite als Ihren Builder verwenden.'
   image: IconVite
   imageClass: w-10 h-10
   ---
@@ -115,7 +115,7 @@ Nuxt 3 hat eine neue Architektur mit einem kleineren Kern und wurde für eine sc
   ::section-content-item
   ---
   title: Vue 3
-  description: 'Vue 3 is a solid foundation for your next web app.'
+  description: 'Vue 3 ist eine solide Grundlage für ihre nächste Webanwendung.'
   image: IconVue
   imageClass: w-10 h-10
   ---
@@ -123,7 +123,7 @@ Nuxt 3 hat eine neue Architektur mit einem kleineren Kern und wurde für eine sc
   ::section-content-item
   ---
   title: TypeScript
-  description: 'Built with native TypeScript and ESM - no extra steps required.'
+  description: 'Erstellt mit nativem TypeScript und ESM - keine zusätzlichen Schritte erforderlich.'
   image: IconTypeScript
   imageClass: w-10 h-10
   ---
@@ -135,15 +135,15 @@ Nuxt 3 hat eine neue Architektur mit einem kleineren Kern und wurde für eine sc
     :icon-nuxt-nitro{.h-32}
     :headline[Nitro Engine]
 
-    We worked for 9 months on Nuxt's new server engine for Nuxt: **Nitro**. It unlocks new **full-stack capabilities** to Nuxt server and beyond.
+    Wir haben 9 Monate lang an der neuen Server-Engine für Nuxt gearbeitet: **Nitro**. Sie schaltet neue **Full-Stack-Funktionen** für Nuxt Server und darüber hinaus frei.
 
-    In development, it uses rollup and Node.js workers for your server code and context isolation. It also **generates your server API** by reading files in `server/api/` and **server functions** from `server/functions/`.
+	 In der Entwicklung verwendet es Rollup und Node.js Worker für Ihren Servercode und die Kontextisolierung. Außerdem **erzeugt es Ihre Server-API**, indem es Dateien in `server/api/` und **Serverfunktionen** aus `server/functions/` liest.
 
-    In production, it builds your app and server into one universal `.output` directory. This **output is light**: minified and removed from any Node.js modules (except polyfills). You can deploy this output on any system supporting JavaScript, from Node.js, Serverless, Workers, Edge-side rendering or purely static.
+    In der Produktion werden Ihre Anwendung und Ihr Server in einem universellen `.output`-Verzeichnis erstellt. Diese **Ausgabe ist leicht**: minifiziert und von allen Node.js-Modulen entfernt (außer Polyfills). Sie können diese Ausgabe auf jedem System bereitstellen, das JavaScript unterstützt, von Node.js, Serverless, Workers, Edge-seitigem Rendering oder rein statisch.
 
-    The output is combined with both runtime code to run your Nuxt server in any environment (including experimental browser Service Workers!) and serve you static files, making it a **true hybrid framework** for the JAMStack. In addition, a native storage layer is implemented, supporting multi source, drivers and local assets.
+	Die Ausgabe wird sowohl mit Runtime-Code kombiniert, um Ihren Nuxt-Server in jeder Umgebung auszuführen (einschließlich experimenteller Browser Service Worker!), als auch um Ihnen Static Dateien zu liefern, was es zu einem **echten Hybrid-Framework** für den JAMStack macht. Darüber hinaus ist eine native Speicherschicht implementiert, die Multi-Source, Treiber und lokale Assets unterstützt.
 
-    The foundation of the Nitro server is rollup and [h3](https://github.com/unjs/h3): a minimal http framework built for high performance and portability.
+    Die Grundlagen von dem Nitro Server sind rollup und [h3](https://github.com/unjs/h3): ein minimales HTTP Framework gemacht für hohe Leistung und Tragbarkeit.
   ::
 ::
 
@@ -152,29 +152,29 @@ Nuxt 3 hat eine neue Architektur mit einem kleineren Kern und wurde für eine sc
     :icon-nuxt-bridge{.h-32}
     :headline[Nuxt Bridge]
 
-    We moved to Vue 3 and re-wrote Nuxt after 4 years of development to make it a strong foundation for the future.
+    Wir sind auf Vue 3 umgestiegen und haben Nuxt nach 4 Jahren Entwicklungszeit neu geschrieben, um es zu einer starken Grundlage für die Zukunft zu machen.
 
-    ### Smooth upgrade to Nuxt 3
+    ### Reibungsloses Upgrade auf Nuxt 3
 
-    We've worked to make the upgrade as easy as possible between Nuxt 2 and Nuxt 3.
+    Wir haben uns bemüht, das Upgrade zwischen Nuxt 2 und Nuxt 3 so einfach wie möglich zu gestalten.
 
-    - Legacy plugins and modules will keep working
-    - Nuxt 2 config is compatible
-    - Partial pages options API available
+    - Ältere Plugins und Module werden weiterhin funktionieren.
+    - Nuxt 2 Config ist kompatibel
+    - Optionen für Teilseiten API verfügbar
 
-    ### Bringing Nuxt 3 experience to your existing Nuxt 2 project
+    ### Bringen Sie Nuxt 3 Erfahrung in Ihr bestehendes Nuxt 2 Projekt
 
-    As we've been working on new features for Nuxt 3, we've back-ported some of them to Nuxt 2.
+    Da wir an neuen Funktionen für Nuxt 3 gearbeitet haben, haben wir einige von ihnen in Nuxt 2 zurückportiert.
 
-    - Using Nitro server with Nuxt 2
-    - Using Composition API (same as Nuxt 3) with Nuxt 2
-    - Using new CLI and Devtools with Nuxt 2
-    - Progressively upgrade to Nuxt 3
-    - Compatibility with Nuxt 2 module ecosystem
-    - Upgrade piece by piece (Nitro, Composition API, Nuxt Kit)
+    - Verwendung von Nitro Server mit Nuxt 2
+    - Verwendung von der Composition API (Gleich wie Nuxt 3) mit Nuxt 2
+    - Verwendung der neuen CLI und Devtools mit Nuxt 2
+    - Schrittweises Upgrade auf Nuxt 3
+    - Kompatibilität mit dem Nuxt 2 Modul-Ökosystem
+    - Stück für Stück aufrüsten (Nitro, Composition API, Nuxt Kit)
   ::
 ::
 
 ::section{.text-center .text-xl .pt-10}
-Thank you for your patience, we cannot wait to open it publicly to get your feedback — [The Nuxt Team.]{.font-serif}
+Vielen Dank für Ihre Geduld, wir können es kaum erwarten, V3 zu veröffentlichen und Ihr Feedback einzuholen. — [Das Nuxt Team.]{.font-serif}
 ::

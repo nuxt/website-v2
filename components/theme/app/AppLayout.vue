@@ -16,10 +16,9 @@
         <slot />
       </div>
     </div>
+    <AppFooter :links="footerLinks" :class="showCookieBanner ? 'pb-16 md:pb-12' : ''" />
 
-    <AppFooter :links="footerLinks" />
-
-    <CookieBanner class="w-full fixed bottom-0 left-0 mt-8 z-40" @cookie-banner="showCookieBanner = false" />
+    <CookieBanner class="w-full fixed bottom-0 left-0 z-40" @cookie-banner="showCookieBanner = false" />
   </div>
 </template>
 
@@ -59,7 +58,7 @@ export default defineComponent({
       this.$fetch()
     }
   },
-  onMounted() {
+  mounted() {
     const cookieBanner = 'cookieconsent_status'
     const docCookies = `; ${document.cookie}`
 

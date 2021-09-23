@@ -67,6 +67,7 @@ export default withDocus({
     '~/plugins/adblock.client',
     '~/plugins/v-tooltip.ts',
     '~/plugins/showcases',
+    '~/plugins/tweets',
     '~/plugins/nav'
   ],
   windicss: {

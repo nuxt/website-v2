@@ -7,6 +7,11 @@ export default {
     here: 'here',
     format: '{nuxt} is coming... Discover more about it {here} !'
   },
+  cookies: {
+    message: "Nous utilisons des cookies pour mesurer l'audience et améliorer le site !",
+    link: 'En savoir plus sur les cookies',
+    button: 'Accepter'
+  },
   footer: {
     titles: {
       Discover: 'Découvrir',
@@ -117,7 +122,7 @@ export default {
   },
   releases: {
     version: 'Version',
-    released_on: 'Sortie le'
+    released_on: 'Sortie le {datetime}'
   },
   partners: {
     become_partner: 'Devenez partenaire'
@@ -147,6 +152,7 @@ export default {
     copied: 'Copié',
     watch_video: 'Regarder'
   },
+<<<<<<< HEAD
   iso: 'fr',
   cookies: {
     consent: "Nous utilisons des cookies pour l'analyse des utilisateurs et les améliorations sur la page !",
@@ -361,4 +367,7 @@ module.exports = {
     }
 >>>>>>> 26a70b2b (chore: add guides section (#407))
   }
+=======
+  iso: 'fr'
+>>>>>>> upstream/main
 }

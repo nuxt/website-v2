@@ -18,7 +18,11 @@ module.exports = {
     version: '버전'
   },
   iso: 'ko',
-
+  cookies: {
+    message: 'We use Cookies for user analysis and on-page improvements!',
+    link: 'Learn about cookies',
+    button: 'Got it'
+  },
   links: {
     download: '다운로드',
     live_edit: '라이브 수정'
@@ -449,6 +453,7 @@ module.exports = {
         contributionGuide: 'Contribution guide'
       }
     }
+<<<<<<< HEAD
   },
   cookies: {
     consent: 'We use Cookies for user analysis and on-page improvements!',
@@ -456,5 +461,7 @@ module.exports = {
     button: 'Got it'
 =======
 >>>>>>> 26a70b2b (chore: add guides section (#407))
+=======
+>>>>>>> upstream/main
   }
 }

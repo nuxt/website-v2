@@ -8,7 +8,11 @@ export default {
     version: 'Sürüm'
   },
   iso: 'tr',
-
+  cookies: {
+    message: 'Kullanıcı analizleri ve sayfa içerisi geliştirmeler yapmak için çerezleri kullanıyoruz.',
+    link: 'Çerezler hakkında bilgi',
+    button: 'Tamam'
+  },
   links: {
     download: 'İndir',
     live_edit: 'Canlı Düzenleme'
@@ -329,10 +333,5 @@ export default {
         contributionGuide: 'Contribution guide'
       }
     }
-  },
-  cookies: {
-    consent: 'Kullanıcı analizleri ve sayfa içerisi geliştirmeler yapmak için çerezleri kullanıyoruz.',
-    linkLabel: 'Çerezler hakkında bilgi',
-    button: 'Tamam'
   }
 }

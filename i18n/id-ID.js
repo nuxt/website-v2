@@ -19,7 +19,11 @@ module.exports = {
     version: 'Versi'
   },
   iso: 'id',
-
+  cookies: {
+    message: 'Kami menggunakan Cookie untuk menganalisis pengguna dan melakukan peningkatan pada halaman!',
+    link: 'Pelajari tentang cookie',
+    button: 'Mengerti'
+  },
   links: {
     download: 'Unduh',
     live_edit: 'Sunting Langsung'
@@ -505,6 +509,7 @@ module.exports = {
         contributionGuide: 'Panduan kontribusi'
       }
     }
+<<<<<<< HEAD
   },
   cookies: {
     consent: 'Kami menggunakan Cookie untuk menganalisis pengguna dan melakukan peningkatan pada halaman!',
@@ -520,5 +525,7 @@ module.exports = {
       'components-glossary': 'Components Glossary'
     }
 >>>>>>> 26a70b2b (chore: add guides section (#407))
+=======
+>>>>>>> upstream/main
   }
 }

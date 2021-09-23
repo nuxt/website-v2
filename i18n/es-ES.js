@@ -22,7 +22,11 @@ module.exports = {
 >>>>>>> 26a70b2b (chore: add guides section (#407))
   },
   iso: 'es',
-
+  cookies: {
+    message: 'Usamos cookies para análisis de usuarios y mejoras en la página.',
+    link: 'Más información sobre las cookies',
+    button: 'Entendido'
+  },
   links: {
     download: 'Descargar',
     live_edit: 'Editar en línea'
@@ -491,6 +495,7 @@ module.exports = {
         contributionGuide: 'Contribution guide'
       }
     }
+<<<<<<< HEAD
   },
   cookies: {
     consent: 'Usamos cookies para análisis de usuarios y mejoras en la página.',
@@ -506,5 +511,7 @@ module.exports = {
       'components-glossary': 'Components Glossary'
     }
 >>>>>>> 26a70b2b (chore: add guides section (#407))
+=======
+>>>>>>> upstream/main
   }
 }

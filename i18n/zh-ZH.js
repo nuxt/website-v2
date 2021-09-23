@@ -18,7 +18,11 @@ module.exports = {
     version: '版本'
   },
   iso: 'zh',
-
+  cookies: {
+    message: '我们使用 Cookies 进行用户分析和页面改进！',
+    link: '了解 Cookie',
+    button: '明白了'
+  },
   links: {
     download: '下载',
     live_edit: '在线编辑'
@@ -456,6 +460,7 @@ module.exports = {
         contributionGuide: '贡献指南'
       }
     }
+<<<<<<< HEAD
   },
   cookies: {
     consent: '我们使用 Cookies 进行用户分析和页面改进！',
@@ -527,5 +532,7 @@ module.exports = {
       'components-glossary': 'Components Glossary'
     }
 >>>>>>> 26a70b2b (chore: add guides section (#407))
+=======
+>>>>>>> upstream/main
   }
 }

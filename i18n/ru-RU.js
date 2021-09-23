@@ -12,7 +12,11 @@ export default {
     version: 'Версия'
   },
   iso: 'ru',
-
+  cookies: {
+    message: 'Мы используем файлы Cookies для аналитики!',
+    link: 'Узнать больше о Cookies',
+    button: 'Понятно'
+  },
   links: {
     download: 'Скачать',
     live_edit: 'Пробовать вживую'
@@ -490,6 +494,7 @@ module.exports = {
         contributionGuide: 'Contribution guide'
       }
     }
+<<<<<<< HEAD
   },
   cookies: {
     consent: 'Мы используем файлы Cookies для аналитики!',
@@ -524,5 +529,7 @@ module.exports = {
       'components-glossary': 'Components Glossary'
     }
 >>>>>>> 26a70b2b (chore: add guides section (#407))
+=======
+>>>>>>> upstream/main
   }
 }

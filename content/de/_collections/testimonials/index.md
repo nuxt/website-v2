@@ -66,7 +66,7 @@ testimonials:
     jobUrl: 'https://www.layer0.co/'
   -
     testimonial:
-      'Nuxt hat eine ideale Balance zwischen Zugänglichkeit für Entwickler, die neu in JAMstack sind, und Leistung für erfahrene Teams, die an komplexen Anwendungen arbeiten. Die Module und die erstklassige Integration mit dem Rest des Vue-Ökosystems sorgen für einen hervorragenden DX.'
+      'Nuxt hat die ideale Balance zwischen Zugänglichkeit für Entwickler, die neu in Jamstack sind, und Leistung für erfahrene Teams, die an komplexen Anwendungen arbeiten. Die Module und die erstklassige Integration mit dem Rest des Vue-Ökosystems sorgen für eine hervorragende DX.'
     author: 'Dave Loneragan'
     authorIcon: 'dave'
     authorUrl: 'https://twitter.com/paper_tokyo'

@@ -7,9 +7,9 @@ export default {
     format: '{nuxt} はまもなくやってきます... {here}で知ることができます！'
   },
   cookies: {
-    message: 'ユーザー分析とページ上の改善の目的でクッキーを使っています！',
-    link: 'クッキーの詳細',
-    button: 'わかりました'
+    message: 'ユーザー分析とページ上の改善の目的で Cookie を使っています！',
+    link: 'Cookie の詳細',
+    button: '分かりました'
   },
   footer: {
     titles: {

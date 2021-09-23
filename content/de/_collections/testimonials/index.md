@@ -10,7 +10,7 @@ testimonials:
     jobUrl: 'https://vuejs.org'
   -
     testimonial:
-      'Nuxt bietet von Anfang an eine herausragende Entwicklerproduktivität, -erfahrung und -leistung.<br/> Es gibt so viel Liebe zum Detail, dass die Teams alles zur Hand haben, um alle Arten von Anwendungen produktiv zu entwickeln.'
+      'Nuxt bringt von Anfang an eine herausragende Entwicklerproduktivität, -erfahrung und -leistung mit sich.<br/> Es gibt so viel Liebe zum Detail, dass die Teams alles zur Hand haben, um jegliche Arten von Anwendungen produktiv zu entwickeln.'
     author: 'Sarah Drasner'
     authorIcon: 'sarah'
     authorUrl: 'https://twitter.com/sarah_edo'

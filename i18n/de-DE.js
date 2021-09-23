@@ -115,7 +115,7 @@ export default {
   },
   releases: {
     version: 'Version',
-    released_on: 'Veröffentlicht in' //Veröffentlicht in Version 1.9 (Example)
+    released_on: 'Veröffentlicht am {datetime}' //Veröffentlicht in Version 1.9 (Example)
   },
   partners: {
     become_partner: 'Werden Sie Partner'

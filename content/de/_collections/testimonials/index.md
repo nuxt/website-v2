@@ -38,7 +38,7 @@ testimonials:
     jobUrl: 'https://vercel.com'
   -
     testimonial:
-      'Nuxt hat einen einzigartigen Ansatz, der eine großartige Entwicklererfahrung mit wieder verwendbaren, vollständig integrierten Funktionen kombiniert, die die Entwicklung und Leistung Ihrer nächsten Website oder Anwendung beschleunigen.'
+      'Nuxt hat einen einzigartigen Ansatz, der eine großartige Entwicklererfahrung mit wiederverwendbaren, vollständig integrierten Funktionen kombiniert, die die Entwicklung und Leistung Ihrer nächsten Website oder Anwendung beschleunigen.'
     author: 'Dominik Angerer'
     authorIcon: 'dominik'
     authorUrl: 'https://twitter.com/domangerer'

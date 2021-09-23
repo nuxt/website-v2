@@ -8,7 +8,11 @@ export default {
     version: 'Versão'
   },
   iso: 'pt-BR',
-
+  cookies: {
+    message: 'Usamos Cookies para análise do usuário e melhorias na página!',
+    link: 'Descubra mais sobre cookies',
+    button: 'Entendi'
+  },
   links: {
     download: 'Baixar',
     live_edit: 'Edição Ao Vivo'
@@ -330,10 +334,5 @@ export default {
         contributionGuide: 'Como contribuir'
       }
     }
-  },
-  cookies: {
-    consent: 'Usamos Cookies para análise do usuário e melhorias na página!',
-    linkLabel: 'Descubra mais sobre cookies',
-    button: 'Entendi'
   }
 }

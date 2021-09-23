@@ -6,6 +6,11 @@ export default {
     here: 'ここ',
     format: '{nuxt} はまもなくやってきます... {here}で知ることができます！'
   },
+  cookies: {
+    message: 'ユーザー分析とページ上の改善の目的でクッキーを使っています！',
+    link: 'クッキーの詳細',
+    button: 'わかりました'
+  },
   footer: {
     titles: {
       Discover: '発見',

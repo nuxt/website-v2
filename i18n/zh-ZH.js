@@ -8,7 +8,11 @@ export default {
     version: '版本'
   },
   iso: 'zh',
-
+  cookies: {
+    message: '我们使用 Cookies 进行用户分析和页面改进！',
+    link: '了解 Cookie',
+    button: '明白了'
+  },
   links: {
     download: '下载',
     live_edit: '在线编辑'
@@ -333,10 +337,5 @@ export default {
         contributionGuide: '贡献指南'
       }
     }
-  },
-  cookies: {
-    consent: '我们使用 Cookies 进行用户分析和页面改进！',
-    linkLabel: '了解 Cookie',
-    button: '明白了'
   }
 }

@@ -11,7 +11,11 @@ export default {
     version: 'Versión'
   },
   iso: 'es',
-
+  cookies: {
+    message: 'Usamos cookies para análisis de usuarios y mejoras en la página.',
+    link: 'Más información sobre las cookies',
+    button: 'Entendido'
+  },
   links: {
     download: 'Descargar',
     live_edit: 'Editar en línea'
@@ -345,10 +349,5 @@ export default {
         contributionGuide: 'Contribution guide'
       }
     }
-  },
-  cookies: {
-    consent: 'Usamos cookies para análisis de usuarios y mejoras en la página.',
-    linkLabel: 'Más información sobre las cookies',
-    button: 'Entendido'
   }
 }

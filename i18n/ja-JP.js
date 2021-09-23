@@ -118,6 +118,10 @@ export default {
       Business: 'ビジネス'
     }
   },
+  releases: {
+    version: 'バージョン',
+    released_on: 'リリース日 {datetime}'
+  },
   partners: {
     become_partner: 'パートナーになる'
   },

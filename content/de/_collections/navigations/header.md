@@ -56,7 +56,7 @@ links:
     title: 'Community'
     items:
       -
-        title: 'Announcements'
+        title: 'Ankündigungen'
         slug: 'announcements'
         to: '/announcements'
       -

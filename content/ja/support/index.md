@@ -12,7 +12,7 @@ navigation: false
 エンタープライズサポート
 
 #description
-テクニカルサポート、トレーニング、カスタム開発など、お客様のニーズに応じてさまざまなサービスを提供しています。私たちは、Nuxt を最大限に活用するために、さまざまな代理店パートナーをご案内しています。
+テクニカルサポートを受けたり、バグを報告したり、Nuxt フレームワークの開発に貢献することができます。
 ::
 
 ::support-container
@@ -20,7 +20,7 @@ navigation: false
   ::support-card
   ---
   title: 'テクニカルサポート'
-  description: '個人的なコンサルティングセッションやプロジェクトの監査のためのスロットを予約するには、私たちに連絡してください。'
+  description: '個人的なコンサルティングセッションやプロジェクトの監査のためのサポート枠を予約するには、私たちに連絡してください。'
   image: 'technical'
   button:
     text: '連絡する'
@@ -86,7 +86,7 @@ navigation: false
   description: "期待した通りに動作しない場合は、GitHub で問題を提起してください。"
   image: 'report'
   button:
-    text: 'GitHub issues を作成する'
+    text: 'GitHub Issues を作成する'
     url: 'https://github.com/nuxt/nuxt.js/issues/new?assignees=&labels=bug-report&template=bug-report.md&title='
   ---
   ::

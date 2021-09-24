@@ -30,9 +30,12 @@
         </a>
         <a :href="testimonial.authorUrl" target="_blank" rel="noopener" class="flex flex-1 pl-4 text-left flex-col">
           <NuxtLabel tag="span" class="font-bold text-base">{{ testimonial.author }}</NuxtLabel>
-          <NuxtLabel tag="span" class="text-sm" :class="{ 'dark:text-cloud-lighter': !isHome }">{{
-            testimonial.job
-          }}</NuxtLabel>
+          <NuxtLabel
+            tag="span"
+            class="text-sm"
+            :class="isHome ? 'text-cloud' : 'light:text-cloud dark:text-cloud-lighter'"
+            >{{ testimonial.job }}
+          </NuxtLabel>
         </a>
         <a :href="testimonial.jobUrl" target="_blank" rel="noopener sponsored" class="hidden xl:block">
           <img
@@ -59,18 +62,14 @@
 </template>
 <script>
 import { defineComponent, useContext, ref, useFetch } from '@nuxtjs/composition-api'
+import { useNav } from '~/plugins/nav'
 
 export default defineComponent({
-  props: {
-    isHome: {
-      type: Boolean,
-      default: false
-    }
-  },
   setup() {
     const { $docus, i18n } = useContext()
     const results = ref()
     const testimonials = ref([])
+    const { isHome } = useNav()
 
     useFetch(async () => {
       results.value = await $docus
@@ -82,7 +81,8 @@ export default defineComponent({
     })
 
     return {
-      testimonials
+      testimonials,
+      isHome
     }
   }
 })

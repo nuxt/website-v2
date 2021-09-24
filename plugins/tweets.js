@@ -13,7 +13,8 @@ const tweets = ssrRef([], 'tweetsRef')
  * Tweets helpers
  */
 export function useTweets({ collectionID }) {
-  // Fetch showcases
+  // Fetch TweetsCollection
+  // TODO: add BAERER Token
   const fetch = async () => {
     // Get collection
     tweets.value = await _fetch(`${BASE_URL}/show.json?id=${collectionID}`, {

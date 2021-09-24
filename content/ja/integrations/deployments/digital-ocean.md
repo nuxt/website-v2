@@ -37,9 +37,14 @@ App Platform には以下の機能があります：
 
    | タイプ      | 設定                                                                    |
    | ---------- | ---------------------------------------------------------------------- |
-   | **Server** | Web サービス - Build コマンド `yarn build` & 実行コマンド   `yarn start`    |
+   | **Server** | Web サービス - Build コマンド `yarn build` & 実行コマンド   `yarn start --hostname 0.0.0.0`    |
    | **Static** | 静的サイト - Build コマンド `yarn generate` & 出力先ディレクトリ `dist`      |
 
+   ::alert{type="warning"}
+   <b>警告：</b>サーバータイプについては、Web サービスの設定で、**HTTP ポート**を 8080 から **3000** に変更する必要があります。<br />より詳細は[この記事](https://dev.to/tillsanders/deploy-nuxt-js-on-digitalocean-app-platform-in-5-minutes-or-less-2dij)参照ください。
+   ::
+
+   ![DO App platform Web Service Nuxt configuration](https://i.imgur.com/BhBu49J.png)
 4. 環境変数がある場合、キー/値ペアの入力を手動で行います。
 
 プロセスが一度通って、デプロイボタンを押すとビルドが完了すると同時に、自動的に作成された URL でサイトが公開されます。

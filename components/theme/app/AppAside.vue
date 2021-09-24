@@ -6,7 +6,7 @@
         <div
           v-if="$menu.visible.value"
           class="fixed top-0 left-0 z-0 w-full h-full pointer-events-auto d-blur-header lg:hidden"
-          :class="home ? 'd-bg-header-home' : 'd-bg-header'"
+          :class="isHome ? 'd-bg-header-home' : 'd-bg-header'"
           @click.stop="$menu.toggle"
         />
       </Transition>
@@ -50,16 +50,16 @@
             border-r
             !w-base
           "
-          :class="home ? 'border-sky-darker' : 'd-border'"
+          :class="isHome ? 'border-sky-darker' : 'd-border'"
         >
-          <div class="w-auto h-full overflow-auto" :class="home ? 'd-bg-header-home' : 'd-bg-header'">
+          <div class="w-auto h-full overflow-auto" :class="isHome ? 'd-bg-header-home' : 'd-bg-header'">
             <div
               class="flex items-center justify-between w-full px-0.5 sm:px-2 h-header d-aside-header-bg"
-              :class="home ? 'd-aside-header-home-bg' : 'd-aside-header-bg'"
+              :class="isHome ? 'd-aside-header-home-bg' : 'd-aside-header-bg'"
             >
               <button
                 class="transition-colors duration-200 focus:outline-none"
-                :class="home ? 'text-gray-300 hover:text-white' : 'd-secondary-text hover:d-secondary-text-hover'"
+                :class="isHome ? 'text-gray-300 hover:text-white' : 'd-secondary-text hover:d-secondary-text-hover'"
                 aria-label="backButton"
                 @click.stop="mobileBack"
               >
@@ -68,13 +68,13 @@
               </button>
               <div class="flex items-center h-header space-x-2">
                 <LangSwitcher
-                  :class="{ 'text-white': home }"
+                  :class="{ 'text-white': isHome }"
                   :icon-class="`w-6 h-6 m-auto ${
-                    home ? 'text-gray-300 hover:text-primary-400' : 'd-secondary-text hover:d-secondary-text-hover'
+                    isHome ? 'text-gray-300 hover:text-primary-400' : 'd-secondary-text hover:d-secondary-text-hover'
                   }`"
                   strategy="fixed"
                 />
-                <ColorSwitcher v-if="$route.path !== localePath('/')" />
+                <ColorSwitcher v-if="!isHome" />
               </div>
             </div>
 
@@ -88,7 +88,8 @@
 </template>
 
 <script lang="ts">
-import { defineComponent, useContext, ref, watch, computed } from '@nuxtjs/composition-api'
+import { defineComponent, useContext, ref, watch } from '@nuxtjs/composition-api'
+import { useNav } from '~/plugins/nav'
 
 export default defineComponent({
   props: {
@@ -98,18 +99,13 @@ export default defineComponent({
     }
   },
   setup() {
-    const {
-      $docus: { layout },
-      $menu,
-      app,
-      route
-    } = useContext()
+    const { $docus, $menu } = useContext()
+    const { isHome } = useNav()
 
-    const mobileMainNav = ref(!layout.value.aside)
-    const home = computed(() => route.value.path === app.localePath('/'))
+    const mobileMainNav = ref(!$docus.layout.value.aside)
 
     watch($menu.visible, (value, old) => {
-      if (value && !old && layout.value.aside) {
+      if (value && !old && $docus.layout.value.aside) {
         mobileMainNav.value = false
       }
     })
@@ -125,8 +121,8 @@ export default defineComponent({
     return {
       mobileMainNav,
       mobileBack,
-      layout,
-      home
+      layout: $docus.layout,
+      isHome
     }
   }
 })

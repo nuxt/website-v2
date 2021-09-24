@@ -8,7 +8,11 @@ export default {
     version: 'نسخه'
   },
   iso: 'fa',
-
+  cookies: {
+    message: 'ما از کوکی‌ها برای آمارگیری و ایجاد تجربه‌کاربری بهتر استفاده می کنیم.',
+    link: 'بیشتر بدانید',
+    button: 'حله'
+  },
   links: {
     download: 'دانلود',
     live_edit: 'ویرایش زنده'
@@ -327,10 +331,5 @@ export default {
         contributionGuide: 'Contribution guide'
       }
     }
-  },
-  cookies: {
-    consent: 'ما از کوکی‌ها برای آمارگیری و ایجاد تجربه‌کاربری بهتر استفاده می کنیم.',
-    linkLabel: 'بیشتر بدانید',
-    button: 'حله'
   }
 }

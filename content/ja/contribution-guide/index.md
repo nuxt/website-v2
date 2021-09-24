@@ -9,7 +9,7 @@ back: false
 
 ## Reporting Issues
 
-A great way to contribute to the project is to send a detailed report when you encounter an issue. To make things easier for contributors and maintainers, we use [CMTY](https://cmty.nuxtjs.org/).
+A great way to contribute to the project is to send a detailed report when you encounter an issue: [Bug report](https://github.com/nuxt/nuxt.js/issues/new?assignees=&labels=bug-report&template=bug-report.md&title=)
 
 Please make sure to include a reproduction repository or [CodeSandBox](https://template.nuxtjs.org/) so that bugs can be reproduced without great efforts. The better a bug can be reproduced, the faster we can start fixing it!
 

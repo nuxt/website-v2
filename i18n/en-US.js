@@ -6,6 +6,11 @@ export default {
     here: 'here',
     format: '{nuxt} is coming... Discover more about it {here} !'
   },
+  cookies: {
+    message: 'We use Cookies for user analysis and on-page improvements!',
+    link: 'Learn about cookies',
+    button: 'Got it'
+  },
   footer: {
     titles: {
       Discover: 'Discover',
@@ -115,7 +120,7 @@ export default {
   },
   releases: {
     version: 'Version',
-    released_on: 'Released on'
+    released_on: 'Released on {datetime}'
   },
   partners: {
     become_partner: 'Become a partner'

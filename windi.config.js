@@ -16,7 +16,7 @@ export default {
         600: '#00C675',
         700: '#00844E',
         800: '#00633B',
-        900: '#004227',
+        900: '#004227'
       },
       'secondary-surface': '#E5F9FF',
       'secondary-lightest': '#B7E1ED',
@@ -42,21 +42,22 @@ export default {
       blue: colors.lightBlue,
       green: {
         // 50: "#eefdf2",
-        50: "#d0fcde",
-        100: "#b0fccb",
-        200: "#8cfab7",
-        300: "#64f4a3",
-        400: "#37e990",
-        500: "#00d77d",
-        600: "#00bb6a",
-        700: "#009956",
-        800: "#047342",
-        900: "#134d2e",
+        50: '#d0fcde',
+        100: '#b0fccb',
+        200: '#8cfab7',
+        300: '#64f4a3',
+        400: '#37e990',
+        500: '#00d77d',
+        600: '#00bb6a',
+        700: '#009956',
+        800: '#047342',
+        900: '#134d2e'
         // 950: "#132a1c",
       },
       red: colors.red,
       rose: colors.rose,
       yellow: colors.amber,
+      orange: colors.orange,
       gray: colors.gray,
       purple: colors.purple,
       sky: {
@@ -176,7 +177,7 @@ export default {
         mono: 'DM Mono'
       },
       transitionProperty: {
-        height: 'height',
+        height: 'height'
       }
     }
   },

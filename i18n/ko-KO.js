@@ -11,7 +11,11 @@ export default {
     version: '버전'
   },
   iso: 'ko',
-
+  cookies: {
+    message: 'We use Cookies for user analysis and on-page improvements!',
+    link: 'Learn about cookies',
+    button: 'Got it'
+  },
   links: {
     download: '다운로드',
     live_edit: '라이브 수정'
@@ -331,10 +335,5 @@ export default {
         contributionGuide: 'Contribution guide'
       }
     }
-  },
-  cookies: {
-    consent: 'We use Cookies for user analysis and on-page improvements!',
-    linkLabel: 'Learn about cookies',
-    button: 'Got it'
   }
 }

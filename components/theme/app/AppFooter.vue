@@ -1,29 +1,29 @@
 <template>
-  <footer class="relative z-10" :class="{ 'mt-28 sm:mt-36 md:mt-48 lg:mt-64': !home }" aria-label="footerHeading">
+  <footer class="relative z-10" :class="{ 'mt-28 sm:mt-36 md:mt-48 lg:mt-64': !isHome }" aria-label="footerHeading">
     <div class="select-none absolute bottom-full w-full">
       <img
-        v-if="!home"
+        v-if="!isHome"
         loading="lazy"
         :src="`/img/footer/dark/landscape.svg`"
         class="w-full h-12 sm:h-20 lg:h-40 object-fill dark-img pointer-events-none"
         alt="A landscape image"
       />
       <img
-        v-if="!home"
+        v-if="!isHome"
         loading="lazy"
         :src="`/img/footer/light/landscape.svg`"
         class="w-full h-12 sm:h-20 lg:h-40 object-fill light-img pointer-events-none"
         alt="A landscape image"
       />
     </div>
-    <div :class="!home ? 'bg-gray-50 dark:bg-secondary-black' : 'bg-secondary-darker'">
+    <div :class="!isHome ? 'bg-gray-50 dark:bg-secondary-black' : 'bg-secondary-darker'">
       <div
         class="max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:py-16 lg:px-8 grid gap-8 lg:gap-0 sm:grid-cols-2 lg:grid-cols-4"
       >
         <div v-for="group in links" :key="group.title">
           <h3
             class="font-semibold text-lg"
-            :class="!home ? 'light:text-gray-500 dark:text-cloud-light' : 'text-cloud-light'"
+            :class="!isHome ? 'light:text-gray-500 dark:text-cloud-light' : 'text-cloud-light'"
           >
             {{ group.title }}
           </h3>
@@ -35,7 +35,7 @@
                 :aria-label="link.title"
                 class=""
                 :class="
-                  !home
+                  !isHome
                     ? 'light:text-gray-500 dark:text-white hover:d-primary-text-hover'
                     : 'text-white hover:text-cloud-light'
                 "
@@ -49,13 +49,13 @@
             <div>
               <h3
                 class="font-semibold text-lg"
-                :class="!home ? 'light:text-gray-500 dark:text-cloud-light' : 'text-cloud-light'"
+                :class="!isHome ? 'light:text-gray-500 dark:text-cloud-light' : 'text-cloud-light'"
               >
                 {{ $t('footer.newsletter.title') }}
               </h3>
               <p
                 class="mt-2 text-base"
-                :class="!home ? 'text-gray-500 dark:text-secondary-surface' : 'text-secondary-surface'"
+                :class="!isHome ? 'text-gray-500 dark:text-secondary-surface' : 'text-secondary-surface'"
               >
                 {{ $t('footer.newsletter.description') }}
               </p>
@@ -82,7 +82,7 @@
                 <Component
                   :is="social.icon"
                   class="w-6 h-6 hover:text-primary"
-                  :class="!home ? 'text-gray-400 dark:text-cloud-lighter' : 'text-gray-300'"
+                  :class="!isHome ? 'text-gray-400 dark:text-cloud-lighter' : 'text-gray-300'"
                 />
               </NuxtHref>
             </li>
@@ -94,8 +94,9 @@
 </template>
 
 <script>
-import { defineComponent, useContext, computed } from '@nuxtjs/composition-api'
+import { defineComponent } from '@nuxtjs/composition-api'
 import { useNewsletter } from '~/plugins/composables'
+import { useNav } from '~/plugins/nav'
 
 export default defineComponent({
   props: {
@@ -106,25 +107,25 @@ export default defineComponent({
   },
   setup() {
     const { email, error, subscribe, pending, subscribed } = useNewsletter()
-    const { $docus, app, route } = useContext()
+    const { isHome } = useNav()
     const socials = [
       {
         href: 'https://twitter.com/nuxt_js',
         icon: 'IconTwitter',
-        title: "Follow us on Twitter!"
+        title: 'Follow us on Twitter!'
       },
       {
         href: 'https://discord.com/invite/ps2h6QT',
         icon: 'IconDiscord',
-        title: "Join our Discord server!"
+        title: 'Join our Discord server!'
       },
       {
         href: 'https://github.com/nuxt',
         icon: 'IconGitHub',
-        title: "See our works on GitHub!"
+        title: 'See our works on GitHub!'
       }
     ]
-    const home = computed(() => route.value.path === app.localePath('/'))
+
     return {
       socials,
       email,
@@ -132,7 +133,7 @@ export default defineComponent({
       subscribe,
       subscribed,
       error,
-      home
+      isHome
     }
   }
 })

@@ -26,7 +26,26 @@ export default {
           }
         ]
       },
-      { responsive: true, maintainAspectRatio: false }
+      {
+        responsive: true,
+        maintainAspectRatio: false,
+        scales: {
+          xAxes: [
+            {
+              gridLines: {
+                color: '#688282'
+              }
+            }
+          ],
+          yAxes: [
+            {
+              gridLines: {
+                color: '#688282'
+              }
+            }
+          ]
+        }
+      }
     )
   }
 }

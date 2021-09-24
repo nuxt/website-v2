@@ -13,7 +13,7 @@
       <template #section-content>
         <SectionContent class="pt-20 text-secondary-black">
           <template #category>
-            <span class="text-tertiary font-bold text-lg">{{ category }}</span>
+            <span class="text-cloud font-bold text-lg">{{ category }}</span>
           </template>
 
           <template #title>
@@ -54,6 +54,7 @@
 </template>
 <script>
 import { defineComponent } from '@nuxtjs/composition-api'
+
 export default defineComponent({
   props: {
     category: {

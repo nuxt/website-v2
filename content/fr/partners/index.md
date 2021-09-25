@@ -1,8 +1,8 @@
 ---
 template: PageList
-title: Partners
-description: "Nuxt is an MIT licensed open source project and free to use. However, the maintenance effort is not sustainable without proper financial backing."
-heroTitle: Partners
-heroDescription: "Find your perfect match. Get help from a solutions partner or solutions provider."
+title: Partenaires
+description: "Nuxt est un projet open source sous licence MIT et gratuit à utiliser. Cependant, l'effort d'entretien n'est pas durable sans un soutien financier approprié."
+heroTitle: Partenaires
+heroDescription: "Trouvez votre match parfait. Obtenez de l'aide d'un partenaire de solutions ou d'un fournisseur de solutions"
 heroType: partners
 ---

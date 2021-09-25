@@ -6,6 +6,11 @@ export default {
     here: 'ここ',
     format: '{nuxt} はまもなくやってきます... {here}で知ることができます！'
   },
+  cookies: {
+    message: 'ユーザー分析とページ上の改善の目的で Cookie を使っています！',
+    link: 'Cookie の詳細',
+    button: '分かりました'
+  },
   footer: {
     titles: {
       Discover: '発見',
@@ -112,6 +117,10 @@ export default {
       Tech: '技術',
       Business: 'ビジネス'
     }
+  },
+  releases: {
+    version: 'バージョン',
+    released_on: 'リリース日 {datetime}'
   },
   partners: {
     become_partner: 'パートナーになる'

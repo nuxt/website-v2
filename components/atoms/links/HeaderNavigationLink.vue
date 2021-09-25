@@ -15,7 +15,8 @@
 </template>
 
 <script>
-import { defineComponent, useRoute, computed } from '@nuxtjs/composition-api'
+import { defineComponent, computed } from '@nuxtjs/composition-api'
+import { useNav } from '~/plugins/nav'
 
 export default defineComponent({
   props: {
@@ -37,12 +38,7 @@ export default defineComponent({
     }
   },
   setup(props) {
-    const route = useRoute()
-    const currentSlug = computed(() => {
-      return route.value.path !== '/' && route?.value?.params?.pathMatch
-        ? route.value.params.pathMatch.split('/')[0]
-        : null
-    })
+    const { currentSlug } = useNav()
 
     const linkProps = computed(() => {
       const { to, href } = props.link

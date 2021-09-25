@@ -61,7 +61,14 @@ export default withDocus({
     '@docus/twitter',
     process.env.RECAPTCHA_SITE_KEY ? '@nuxtjs/recaptcha' : undefined
   ].filter(_ => _),
-  plugins: ['~/plugins/gtag.client', '~/plugins/adblock.client', '~/plugins/v-tooltip.ts', '~/plugins/showcases'],
+  plugins: [
+    '~/plugins/mq',
+    '~/plugins/gtag.client',
+    '~/plugins/adblock.client',
+    '~/plugins/v-tooltip.ts',
+    '~/plugins/showcases',
+    '~/plugins/nav'
+  ],
   windicss: {
     root: resolve(__dirname),
     config: resolve(__dirname, 'windi.config.js')

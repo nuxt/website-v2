@@ -1,7 +1,7 @@
 <template>
   <div v-if="lastRelease">
     <NuxtLink
-      v-if="$route.path.startsWith(localePath('/docs'))"
+      v-if="$docus.currentPath.value.startsWith('/docs')"
       :to="localePath('/releases')"
       class="flex items-center group nuxt-text-highlight-hover mt-4"
     >

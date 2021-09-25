@@ -1,10 +1,10 @@
 <template>
-  <div class="relative" :class="{ 'sm:pb-20 lg:pb-28 xl:pb-40 2xl:pb-60': home }">
-    <section class="py-40" :class="home ? 'bg-white text-secondary-black' : 'text-white light:text-secondary-black'">
+  <div class="relative" :class="{ 'sm:pb-20 lg:pb-28 xl:pb-40 2xl:pb-60': isHome }">
+    <section class="py-40" :class="isHome ? 'bg-white text-secondary-black' : 'text-white light:text-secondary-black'">
       <NuxtContainer class="flex flex-col items-center">
         <div class="flex flex-col w-full items-center col-span-12">
           <div class="mb-2">
-            <span class="text-tertiary font-bold text-lg">{{ category }} </span>
+            <span class="text-cloud font-bold text-lg">{{ category }} </span>
           </div>
           <h2 class="font-normal text-center font-serif text-display-6 md:text-display-5 2xl:text-display-4 mb-2">
             <Markdown use="title" unwrap="p" />
@@ -20,7 +20,7 @@
       </NuxtContainer>
     </section>
     <img
-      v-if="home"
+      v-if="isHome"
       loading="lazy"
       :src="`/img/home/discover/dx/discover-mountain.svg`"
       class="absolute left-0 bottom-0 z-10 object-cover w-full"
@@ -30,7 +30,8 @@
 </template>
 
 <script>
-import { defineComponent, computed, useContext, useRoute } from '@nuxtjs/composition-api'
+import { defineComponent } from '@nuxtjs/composition-api'
+import { useNav } from '~/plugins/nav'
 
 export default defineComponent({
   props: {
@@ -40,12 +41,11 @@ export default defineComponent({
     }
   },
   setup() {
-    const { app } = useContext()
-    const route = useRoute()
+    const { isHome } = useNav()
 
-    const home = computed(() => route.value.path === app.localePath('/'))
-
-    return { home }
+    return {
+      isHome
+    }
   }
 })
 </script>

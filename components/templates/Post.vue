@@ -28,11 +28,17 @@
           </p>
 
           <div class="flex items-center sm:flex-row">
-            <time v-if="page.date" :datetime="page.date" class="mr-2 text-sm font-medium d-tertiary-text">
+            <time
+              v-if="page.date"
+              :datetime="page.date"
+              class="mr-2 text-sm font-medium d-tertiary-text dark:text-cloud-lighter"
+            >
               {{ formatDateByLocale($i18n.locale, page.date) }}
             </time>
 
-            <div v-if="page.authors && page.authors.length" class="text-sm d-tertiary-text">|</div>
+            <div v-if="page.authors && page.authors.length" class="text-sm d-tertiary-text dark:text-cloud-lighter">
+              |
+            </div>
             <div class="flex ml-4 sm:ml-2">
               <a
                 v-for="(author, index) in page.authors"
@@ -43,7 +49,7 @@
                 class="flex items-center justify-end -ml-2 sm:ml-0 sm:mr-2 hover:d-secondary-text"
               >
                 <NuxtImg
-                  class="inline-block w-8 h-8 border rounded-full d-border-tertiary sm:mr-1"
+                  class="inline-block w-8 h-8 border rounded-full d-border-tertiary dark:d-border-cloud-lighter sm:mr-1"
                   height="32"
                   width="32"
                   :src="author.avatarUrl"

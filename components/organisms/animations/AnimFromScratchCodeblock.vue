@@ -58,11 +58,7 @@
               <!-- Hello world h1 -->
               <span>&lt;</span>
               <span class="text-red-400">h1</span>
-              <span>&gt;</span>
-              Hello world !
-              <span>&lt;</span>
-              &#47;
-              <span class="text-red-400">h1</span>
+              <span>&gt;</span>Hello world !<span>&lt;</span>&#47;<span class="text-red-400">h1</span>
               <span>&gt;</span>
             </p>
             <p><span>&lt;</span>&#47;<span class="text-red-400">div</span><span>&gt;</span></p>

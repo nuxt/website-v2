@@ -5,7 +5,7 @@
     <div class="absolute left-0 w-full h-full overflow-hidden -top-24 z-0">
       <Star v-for="star in 80" :key="star" />
     </div>
-    <div class="flex flex-wrap justify-center py-0 section">
+    <div class="flex flex-wrap justify-center py-0 section relative z-20">
       <section class="flex flex-col justify-start w-full px-4 pt-36 pb-48 md:pt-44 lg:pb-56 lg:pt-36 text-center">
         <h1 class="font-normal font-serif text-display-5 xs:text-display-4 md:text-display-3 2xl:text-display-2 mb-6">
           <Markdown use="title" unwrap="p" />

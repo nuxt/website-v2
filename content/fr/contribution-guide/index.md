@@ -1,105 +1,105 @@
 ---
 template: post
-title: Contribution Guide
-description: Any contribution to Nuxt is more than welcome!
+title: Guide de contribution
+description: Toute contribution à Nuxt est plus que bienvenue !
 back: false
 ---
 
-> Any contribution to Nuxt is more than welcome!
+> Toute contribution à Nuxt est plus que bienvenue !
 
-## Reporting Issues
+## Signaler des erreurs
 
-A great way to contribute to the project is to send a detailed report when you encounter an issue: [Bug report](https://github.com/nuxt/nuxt.js/issues/new?assignees=&labels=bug-report&template=bug-report.md&title=)
+Une excellente façon de contribuer au projet est d'envoyer un rapport détaillé lorsque vous rencontrez un problème : [Bug report](https://github.com/nuxt/nuxt.js/issues/new?assignees=&labels=bug-report&template=bug-report.md&title=)
 
-Please make sure to include a reproduction repository or [CodeSandBox](https://template.nuxtjs.org/) so that bugs can be reproduced without great efforts. The better a bug can be reproduced, the faster we can start fixing it!
+Veuillez vous assurer d'inclure un dépôt de reproduction ou [CodeSandBox](https://template.nuxtjs.org/) afin que les bogues puissent être reproduits sans grands efforts. Plus un bug peut être reproduit, plus vite nous pouvons commencer à le corriger !
 
 ## Pull Requests
 
-We'd love to see your pull requests, even if it's just to fix a typo!
+Nous serons ravis de recevoir vos demandes de modification, même s'il s'agit simplement de corriger une coquille !
 
-However, any significant improvement should be associated to an existing [feature request](https://feature.nuxtjs.org/) or [bug report](https://bug.nuxtjs.org/).
+Cependant, toute amélioration significative doit être associée à une demande de [fonctionnalité](https://feature.nuxtjs.org/) ou d'un [bug report](https://bug.nuxtjs.org/).
 
 ### Getting started
 
-1. [Fork](https://help.github.com/articles/fork-a-repo/) the [Nuxt repository](https://github.com/nuxt/nuxt.js) to your own GitHub account and then [clone](https://help.github.com/articles/cloning-a-repository/) it to your local device.
-2. Run `npm install` or `yarn install` to install the dependencies.
+1. [Dupliquez (Fork)](https://help.github.com/articles/fork-a-repo/) le [dépôt Nuxt](https://github.com/nuxt/nuxt.js) sur votre propre compte GitHub, puis le [cloner](https://help.github.com/articles/cloning-a-repository/) sur votre machine local.
+2. Exécutez `npm install` ou `yarn install` pour installer les dépendances.
 
-> _Note that both **npm** and **yarn** have been seen to miss installing dependencies. To remedy that, you can either delete the `node_modules` folder in your example app and install again or do a local install of the missing dependencies._
+> _Notez que **npm** et **yarn** ont été vus comme manquant l'installation des dépendances. Pour remédier à cela, vous pouvez soit supprimer le dossier `node_modules` de votre application d'exemple et l'installer à nouveau, soit faire une installation locale des dépendances manquantes._
 
-> If you are adding a dependency, please use `yarn add`. The `yarn.lock` file is the source of truth for all Nuxt dependencies.
+> Si vous ajoutez une dépendance, veuillez utiliser `yarn add`. Le fichier `yarn.lock` est la source de vérité pour toutes les dépendances de Nuxt.
 
-### Setup
+### Installation
 
-Before running any tests, make sure all dependencies are met and build all packages:
+Avant d'exécuter les tests, assurez-vous que toutes les dépendances ont bien installées et vous pouvez alors construire les paquets :
 
 ```sh
 yarn
 yarn build
 ```
 
-### Test structure
+### Structure d'un Test
 
-A great PR, whether it includes a bug fix or a new feature, will often include tests. To write great tests, let us explain our test structure:
+Une bonne Pull Request, qu'il s'agisse d'une correction de bogue ou d'une nouvelle fonctionnalité, comprendra souvent des tests. Pour écrire de bons tests, nous allons vous expliquer la structure attendu :
 
 #### Fixtures
 
-The fixtures (found under `tests/fixtures`) contain several Nuxt applications. To keep build time as short as possible, we don't build an own Nuxt application per test. Instead, the fixtures are built (`yarn test:fixtures`) before running the actual unit tests.
+Les fixtures (trouvés sous `tests/fixtures`) contiennent plusieurs applications Nuxt. Pour que le temps de construction soit le plus court possible, nous ne construisons pas une application Nuxt par test. Au lieu de cela, les fixtures sont construites (`yarn test:fixtures`) avant d'exécuter les tests unitaires.
 
-Please make sure to **alter** or **add a new fixture** when submitting a PR to reflect the changes properly (if applicable).
+Veillez à **modifier** ou **ajouter une nouvelle fixture** lorsque vous soumettez une PR afin de refléter correctement les changements (si applicable).
 
-Also, don't forget to **rebuild** a fixture after changing it by running the corresponding test with `jest test/fixtures/my-fixture/my-fixture.test.js`!
+N'oubliez pas non plus de **reconstruire** un fixture après l'avoir modifié en exécutant le test correspondant avec `jest test/fixtures/my-fixture/my-fixture.test.js`!
 
-#### Unit tests
+#### Tests unitaires
 
-The unit tests can be found in `tests/unit` and will be executed after building the fixtures. A fresh Nuxt server will be used per test so that no shared state (except the initial state from the build step) is present.
+Les tests unitaires peuvent être trouvés dans `tests/unit` et seront exécutés après la construction des fixtures. Un nouveau serveur Nuxt sera utilisé pour chaque test afin qu'aucun état partagé (excepté l'état initial de l'étape de construction) ne soit présent.
 
-After adding your unit tests, you can run them directly:
+Après avoir ajouté vos tests unitaires, vous pouvez les exécuter directement :
 
 ```sh
 jest test/unit/test.js
 ```
 
-Or you can run the whole unit test suite:
+Ou vous pouvez exécuter toute la suite de tests unitaires :
 
 ```sh
 yarn test:unit
 ```
 
-Again, please be aware that you might have to rebuild your fixtures before!
+Encore une fois, sachez qu'il se peut que vous deviez reconstruire vos fixtures avant !
 
-### Testing your changes
+### Tester vos changements
 
-While working on your PR you will likely want to check if your fixture is set up correctly or debug your current changes.
+Pendant que vous travaillez sur votre PR, vous voudrez probablement vérifier si votre fixture est configuré correctement ou déboguer vos modifications en cours.
 
-To do so you can use the Nuxt script itself to launch for example your fixture or an example app:
+Pour ce faire, vous pouvez utiliser le script Nuxt pour lancer, par exemple, votre fixture ou une application d'exemple :
 
 ```sh
 yarn nuxt examples/your-app
 yarn nuxt test/fixtures/your-fixture-app
 ```
 
-> `npm link` could also (and does, to some extent) work for this, but it has been known to exhibit some issues. That is why we recommend calling `yarn nuxt` directly to run examples.
+> `npm link` pourrait également fonctionner pour cela (et fonctionne, dans une certaine mesure), mais il est connu pour présenter quelques problèmes. C'est pourquoi nous recommandons d'appeler directement `yarn nuxt` pour exécuter les exemples.
 
 ### Examples
 
-If you are working on a larger feature, please set up an example app in `examples/`. This will help greatly in understanding changes and also help Nuxt users to understand the feature you've built in-depth.
+Si vous travaillez sur une fonctionnalité plus importante, veuillez mettre en place une application d'exemple dans `examples/`. Cela aidera grandement à comprendre les changements et permettra aux utilisateurs de Nuxt à comprendre la fonctionnalité que vous avez construite en profondeur.
 
 ### Linting
 
-As you might have noticed already, we are using ESLint to enforce a code standard. Please run `yarn lint` before committing your changes to verify that the code style is correct. If not, you can use `yarn lint --fix` or `npm run lint -- --fix` (no typo!) to fix most of the style changes. If there are still errors left, you must correct them manually.
+Comme vous l'avez peut-être déjà remarqué, nous utilisons ESLint afin de standardiser le code. Veuillez lancer `yarn lint` avant de valider vos modifications pour vérifier que le style du code est correct. Si ce n'est pas le cas, vous pouvez utiliser `yarn lint --fix` ou `npm run lint -- --fix` (sans faute de frappe !) pour corriger la plupart des changements de style. S'il reste des erreurs, vous devez les corriger manuellement.
 
 ### Documentation
 
-If you are adding a new feature, or refactoring or changing the behavior of Nuxt in any other manner, you'll likely want to document the changes. Please do so with a PR to the [docs](https://github.com/nuxt/docs/pulls) repository. You don't have to write documentation up immediately (but please do so as soon as your pull request is mature enough).
+Si vous ajoutez une nouvelle fonctionnalité, ou si vous modifiez le comportement de Nuxt de toute autre manière, vous voudrez probablement documenter les changements. Veuillez le faire avec une PR dans le dépôt [docs](https://github.com/nuxt/docs/pulls). Vous n'êtes pas obligé de rédiger la documentation immédiatement (mais faites-le dès que votre PR est prête).
 
-### Final checklist
+### Liste de vérification finale
 
-When submitting your PR, there is a simple template that you have to fill out. Please tick all appropriate "answers" in the checklists.
+Lorsque vous soumettez votre PR, il existe un modèle simple que vous devez remplir. Veuillez cocher toutes les "réponses" appropriées dans les listes de contrôle.
 
-### Troubleshooting
+### Dépannage
 
-#### Debugging tests on macOS
+#### Débogage des tests sur macOS
 
-Searching for `getPort()` will reveal it's used to start new Nuxt processes during tests. It's been seen to stop working on macOS at times and may require you to manually set a port for testing.
+La recherche de `getPort()` révélera qu'il est utilisé pour démarrer de nouveaux processus Nuxt pendant les tests. Il a été constaté qu'elle ne fonctionne pas toujours sous macOS et peut vous obliger à définir manuellement un port pour les tests.
 
-Another common issue is Nuxt processes that may hang in memory when running fixture tests. A ghost process will often prevent subsequent tests from working. Run `ps aux | grep -i node` to inspect any hanging test processes if you suspect this is happening.
+Un autre problème courant est celui des processus Nuxt qui peuvent rester en mémoire lors de l'exécution des tests de fixture. Un processus fantôme empêchera souvent les tests suivants de fonctionner. Exécutez `ps aux | grep -i node` pour inspecter les processus de test suspendus si vous pensez que cela se produit.

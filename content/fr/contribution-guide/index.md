@@ -19,9 +19,9 @@ Nous serons ravis de recevoir vos demandes de modification, même s'il s'agit si
 
 Cependant, toute amélioration significative doit être associée à une demande de [fonctionnalité](https://feature.nuxtjs.org/) ou d'un [bug report](https://bug.nuxtjs.org/).
 
-### Getting started
+### Pour commencer
 
-1. [Dupliquez (Fork)](https://help.github.com/articles/fork-a-repo/) le [dépôt Nuxt](https://github.com/nuxt/nuxt.js) sur votre propre compte GitHub, puis le [cloner](https://help.github.com/articles/cloning-a-repository/) sur votre machine local.
+1. [Dupliquez (Fork)](https://help.github.com/articles/fork-a-repo/) le [dépôt Nuxt](https://github.com/nuxt/nuxt.js) sur votre propre compte GitHub, puis le [cloner](https://help.github.com/articles/cloning-a-repository/) sur votre machine locale.
 2. Exécutez `npm install` ou `yarn install` pour installer les dépendances.
 
 > _Notez que **npm** et **yarn** ont été vus comme manquant l'installation des dépendances. Pour remédier à cela, vous pouvez soit supprimer le dossier `node_modules` de votre application d'exemple et l'installer à nouveau, soit faire une installation locale des dépendances manquantes._
@@ -30,7 +30,7 @@ Cependant, toute amélioration significative doit être associée à une demande
 
 ### Installation
 
-Avant d'exécuter les tests, assurez-vous que toutes les dépendances ont bien installées et vous pouvez alors construire les paquets :
+Avant d'exécuter les tests, assurez-vous que toutes les dépendances ont bien été installées et vous pouvez alors construire les paquets :
 
 ```sh
 yarn
@@ -39,15 +39,15 @@ yarn build
 
 ### Structure d'un Test
 
-Une bonne Pull Request, qu'il s'agisse d'une correction de bogue ou d'une nouvelle fonctionnalité, comprendra souvent des tests. Pour écrire de bons tests, nous allons vous expliquer la structure attendu :
+Une bonne Pull Request, qu'il s'agisse d'une correction de bogue ou d'une nouvelle fonctionnalité, comprendra souvent des tests. Pour écrire de bons tests, nous allons vous expliquer la structure attendue :
 
 #### Fixtures
 
-Les fixtures (trouvés sous `tests/fixtures`) contiennent plusieurs applications Nuxt. Pour que le temps de construction soit le plus court possible, nous ne construisons pas une application Nuxt par test. Au lieu de cela, les fixtures sont construites (`yarn test:fixtures`) avant d'exécuter les tests unitaires.
+Les fixtures (trouvées sous `tests/fixtures`) contiennent plusieurs applications Nuxt. Pour que le temps de construction soit le plus court possible, nous ne construisons pas une application Nuxt par test. Au lieu de cela, les fixtures sont construites (`yarn test:fixtures`) avant d'exécuter les tests unitaires.
 
 Veillez à **modifier** ou **ajouter une nouvelle fixture** lorsque vous soumettez une PR afin de refléter correctement les changements (si applicable).
 
-N'oubliez pas non plus de **reconstruire** un fixture après l'avoir modifié en exécutant le test correspondant avec `jest test/fixtures/my-fixture/my-fixture.test.js`!
+N'oubliez pas non plus de **reconstruire** une fixture après l'avoir modifié en exécutant le test correspondant avec `jest test/fixtures/my-fixture/my-fixture.test.js`!
 
 #### Tests unitaires
 
@@ -69,7 +69,7 @@ Encore une fois, sachez qu'il se peut que vous deviez reconstruire vos fixtures 
 
 ### Tester vos changements
 
-Pendant que vous travaillez sur votre PR, vous voudrez probablement vérifier si votre fixture est configuré correctement ou déboguer vos modifications en cours.
+Pendant que vous travaillez sur votre PR, vous voudrez probablement vérifier si votre fixture est configurée correctement ou déboguer vos modifications en cours.
 
 Pour ce faire, vous pouvez utiliser le script Nuxt pour lancer, par exemple, votre fixture ou une application d'exemple :
 
@@ -80,7 +80,7 @@ yarn nuxt test/fixtures/your-fixture-app
 
 > `npm link` pourrait également fonctionner pour cela (et fonctionne, dans une certaine mesure), mais il est connu pour présenter quelques problèmes. C'est pourquoi nous recommandons d'appeler directement `yarn nuxt` pour exécuter les exemples.
 
-### Examples
+### Exemples
 
 Si vous travaillez sur une fonctionnalité plus importante, veuillez mettre en place une application d'exemple dans `examples/`. Cela aidera grandement à comprendre les changements et permettra aux utilisateurs de Nuxt à comprendre la fonctionnalité que vous avez construite en profondeur.
 

@@ -11,7 +11,7 @@ layout:
 Showcases
 
 #description
-  Discover our selection of websites built with Nuxt. This collection is powered by VueTelescope. Visit [vuetelescope.com](https://vuetelescope.com) and try out the browser extension.
+  Discover our selection of websites built with Nuxt. This collection is powered by VueTelescope. Visit [VueTelescope](https://vuetelescope.com) and try out the browser extension.
 
 #bottom
   :showcases-bottom-hero

@@ -11,7 +11,7 @@ layout:
 導入事例
 
 #description
-  Nuxt で構築されたウェブサイトのセレクションをご覧ください。このコレクションは、VueTelescope によって提供されています。[vuetelescope.com](https://vuetelescope.com) にアクセスして、ブラウザ拡張をお試しください。
+  Nuxt で構築されたウェブサイトのセレクションをご覧ください。このコレクションは、VueTelescope によって提供されています。[VueTelescope](https://vuetelescope.com) にアクセスして、ブラウザ拡張をお試しください。
 
 #bottom
   :showcases-bottom-hero

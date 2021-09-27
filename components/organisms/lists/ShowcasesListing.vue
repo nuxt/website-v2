@@ -1,5 +1,5 @@
 <template>
-  <div class="d-container-content mt-8">
+  <div ref="showcases-container" class="d-container-content mt-8">
     <div v-if="categories && categories.length" class="lg:flex gap-8">
       <AsideShowcases
         :options="categories"
@@ -72,10 +72,18 @@ export default {
     },
     categories() {
       return (
-        this.showcases?.groups?.map(group => ({
-          name: group.name,
-          display: this.$t(`showcases.categories.${group.name}`)
-        })) || []
+        this.showcases?.groups?.map(group => {
+          const key = `showcases.categories.${group.name}`
+          let display = this.$t(`showcases.categories.${group.name}`)
+          // fallback on `group.name` if translation unavailable
+          if (display === key) {
+            display = group.name
+          }
+          return {
+            name: group.name,
+            display
+          }
+        }) || []
       )
     }
   },
@@ -104,6 +112,11 @@ export default {
       } else {
         this.selectedCategory = category.name
       }
+
+      // scroll to top of the list, handling header height
+      const yOffset = 72
+      const y = this.$refs['showcases-container'].getBoundingClientRect().top + window.pageYOffset - yOffset
+      window.scrollTo({ top: y, behavior: 'smooth' })
     }
   }
 }

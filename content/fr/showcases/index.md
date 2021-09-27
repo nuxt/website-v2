@@ -11,7 +11,7 @@ layout:
 Showcases
 
 #description
-Découvrez notre sélection de site fait avec Nuxt. Cette collection est propulsée par VueTelescope. Visitez [vuetelescope.com](https://vuetelescope.com) et essayez l'extension pour Chrome et Firefox.
+Découvrez notre sélection de site fait avec Nuxt. Cette collection est propulsée par VueTelescope. Visitez [VueTelescope](https://vuetelescope.com) et essayez l'extension pour Chrome et Firefox.
 
 #bottom
   :showcases-bottom-hero

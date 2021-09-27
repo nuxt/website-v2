@@ -1,7 +1,7 @@
 ---
 testimonials:
   -
-    testimonial: 'Nuxt offers a compelling solution and a great ecosystem to help you ship fullstack Vue apps that are performant and SEO friendly flexibility to choose between SSR and SSG is icing on the cake.'
+    testimonial: 'Nuxt offers a compelling solution and a great ecosystem to help you ship fullstack Vue apps that are performant and SEO friendly. The flexibility to choose between SSR and SSG is icing on the cake.'
     author: 'Evan You'
     authorIcon: 'evan'
     authorUrl: 'https://twitter.com/youyuxi'

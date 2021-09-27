@@ -1,43 +1,41 @@
 ---
 template: guide
 title: Stormkit.io
-description: How to deploy Nuxt with Stormkit.io?
+description: Comment déployer Nuxt avec Stormkit.io ?
 target: Static & Server
 category: deployment
 logo:
   light: "/img/partners/dark/Stormkit_Dark.svg"
   dark: "/img/partners/light/Stormkit_Light.svg"
 ---
-# Deploy with Stormkit
+# Déployer avec Stormkit
 
-How to deploy Nuxt with Stormkit.io?
+Comment déployer Nuxt avec Stormkit.io ?
 
 ---
 
-Easily build, deploy and scale your Nuxt applications with [Stormkit.io](https://www.stormkit.io). It supports instant rollbacks, serverless-side logic, snippet injections, multiple development environments and more...
+Créez, déployez et faites évoluer facilement vos applications Nuxt avec [Stormkit.io](https://www.stormkit.io). Il prend en charge les roolbacks instantanées, la logique côté serveur, les injections d'extraits de code, plusieurs environnements de développement et plus encore...
 
-## Prerequisites
+## Conditions préalables
 
-This guide assumes you already have a Nuxt project to deploy. If you need a project, use the [create-nuxt-app](https://github.com/nuxt/create-nuxt-app) to get started or fork Stormkit's [Nuxt Example](https://github.com/stormkit-dev/hackernews-nuxt) before continuing.
+Ce guide suppose que vous avez déjà un projet Nuxt à déployer. Si vous avez besoin d'un projet, utilisez [create-nuxt-app](https://github.com/nuxt/create-nuxt-app) pour commencer ou forker [l'exemple Nuxt de Stormkit](https://github.com/stormkit-dev/hackernews-nuxt) avant de continuer.
 
-## Setup
+## Installer
 
-1. Go to [app.stormkit.io](https://app.stormkit.io) and log in by selecting your git provider.
-2. Once logged in, Stormkit will ask you in which provider your codebase is located. Click on the provider once more.
-3. If Github, click on ‘Connect more repositories’ and grant Stormkit access to it.
-4. Next, select your repository. This will create the application on Stormkit.
-5. On your application's page, find the **Production** environment and click on that.
-6. Click on edit to configure your application. You will provide the build command and the
-   environment variables in this screen.
+1. Accédez à [app.stormkit.io](https://app.stormkit.io) et connectez-vous en sélectionnant votre fournisseur git.
+2. Une fois connecté, Stormkit vous demandera dans quel fournisseur se trouve votre base de code. Cliquez à nouveau sur le fournisseur.
+3. Si Github, cliquez sur « Connecter plus de référentiels » et accordez à Stormkit l'accès.
+4. Ensuite, sélectionnez votre référentiel. Cela créera l'application sur Stormkit.
+5. Sur la page de votre application, recherchez l'environnement **Production** et cliquez dessus.
+6. Cliquez sur modifier pour configurer votre application. Vous devez fournir la commande build et les variables d'environnement dans cet écran.
 
-## Static websites
+## Sites Web statiques
 
-You don't have to do anything for static websites. Applications built with `nuxt generate` will be handled out of the box.
+Vous n'avez rien à faire pour les sites Web statiques. Les applications construites avec `nuxt generate` seront gérées directement.
 
 ## Single page applications
 
-For single page applications, all you have to do is to provide a `stormkit.config.yml` which redirects
-all requests to `index.html`. To do so, create a `stormkit.config.yml` file on the top level of your project and specify the following rule:
+Pour les SPA, tout ce que vous avez à faire est de fournir un `stormkit.config.yml` qui redirige toutes les requêtes à `index.html`. Pour ce faire, créez un fichier `stormkit.config.yml` au niveau supérieur de votre projet et spécifiez la règle suivante :
 
 ```
 app:
@@ -47,14 +45,14 @@ app:
       assets: false
 ```
 
-## Hybrid applications
+## Applications hybrides
 
-For hybrid applications, you'll have to turn on the `Serverless` toggle on the build configuration page. This will tell Stormkit to serve the requests from the lambdas instead of the CDN. You can find more on [this guide](https://www.stormkit.io/docs/deployments/configuration/nuxt#hybrid) to configure your hybrid serverless applications.
+Pour les applications hybrides, vous devrez activer le mode `Serverless` sur la page de configuration de la construction. Cela indiquera à Stormkit de servir les demandes des lambdas au lieu du CDN. Vous pouvez en savoir plus sur [ce guide](https://www.stormkit.io/docs/deployments/configuration/nuxt#hybrid) pour configurer vos applications hybrides serverless.
 
-## Hosting using Stormkit
+## Hébergement avec Stormkit
 
-Stormkit generates a unique URL for each deployment. You can preview your application using these links. Later, you can connect your domain and publish any deployment so that the users will start to see that version of your application. You can also do staged-rollouts or A/B testing by publishing multiple versions at the same time.
+Stormkit génère une URL unique pour chaque déploiement. Vous pouvez prévisualiser votre application en utilisant ces liens. Plus tard, vous pouvez connecter votre domaine et publier n'importe quel déploiement afin que les utilisateurs commencent à voir cette nouvelle version de votre application. Vous pouvez également effectuer des déploiements par étapes ou des tests A/B en publiant plusieurs versions en même temps.
 
 ## Support
 
-If you need additional support, you can chat with Stormkit developers and other community members on [Discord](https://discord.gg/6yQWhyY).
+Si vous avez besoin d'une assistance supplémentaire, vous pouvez discuter avec les développeurs Stormkit et d'autres membres de la communauté sur [Discord](https://discord.gg/6yQWhyY).

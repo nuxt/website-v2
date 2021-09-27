@@ -1,36 +1,38 @@
 ---
 template: guide
 title: Fume
-description: How to deploy Nuxt on Fume
+description: Comment déployer Nuxt sur Fume ?
 target: Static & Server
 category: deployment
 logo:
   light: "/img/partners/dark/Fume.svg"
   dark: "/img/partners/light/Fume.svg"
 ---
-# Deploy Nuxt on Fume
+# Déployer Nuxt sur Fume
 
-How to deploy Nuxt on Fume
+Comment déployer Nuxt sur Fume ?
 
 ---
 
-[Fume](https://fume.app/) is an operations control platform powered by AWS.
+[Fume](https://fume.app/) est une plate-forme de contrôle des opérations optimisée par AWS.
 
-Fume includes the following features:
+Fume comprend les fonctionnalités suivantes :
 
-- Serverless structures supporting both Server and Static with Lambda and CloudFront.
-- [Automated](https://github.com/marketplace/actions/fume-deployment) deployments with rollbacks with the click of a button
-- Metrics and cost prediction for each environment
-- Domain control - import hosts, issues certificates, and map recorde to environments
-- Integrated notifications to Slack, Discord, and other collaboration platforms
+Fume comprend les fonctionnalités suivantes :
 
-## Setup
+- Structures à moindre coût prenant en charge à la fois Server et Static avec Lambda et CloudFront.
+- [Automated](https://github.com/marketplace/actions/fume-deployment) Déploiements avec rollbacks en un clic
+- Métriques et prévision des coûts pour chaque environnement
+- Contrôle de domaine - importer des hôtes, émettre des certificats et mapper l'enregistrement aux environnements
+- Notifications intégrées à Slack, Discord et autres plateformes de collaboration
 
-Get a production-ready URL in 2 minutes with these steps:
+## Installer
 
-- Head to [Fume](https://fume.app), connect and plug in your AWS account
-- Create a Team, and a Nuxt project
-- Run the following command inside your projects root folder
+Obtenez une URL prête pour la production en 2 minutes en suivant ces étapes :
+
+- Rendez-vous sur [Fume](https://fume.app), connectez-vous et branchez votre compte AWS
+- Créer une équipe, et un projet Nuxt
+- Exécutez la commande suivante dans le dossier racine de vos projets
 
 ::code-group
 ```bash [Yarn]

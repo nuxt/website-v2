@@ -1,44 +1,44 @@
 ---
 template: guide
 title: Dokku
-description: How to deploy a Nuxt application on Dokku?
+description: Comment déployer une application Nuxt sur Dokku ?
 target: Server
 category: deployment
 logo:
   light: "/img/partners/dark/dokku.png"
   dark: "/img/partners/light/dokku.png"
 ---
-# Deploy Nuxt on Dokku
+# Déployer Nuxt sur Dokku
 
-How to deploy a Nuxt application on Dokku?
+Comment déployer une application Nuxt sur Dokku ?
 
 ---
 
-We recommend to read [Dokku documentation for the setup](http://dokku.viewdocs.io/dokku/getting-started/installation/) and [Deploying a Node.js Application on Digital Ocean using Dokku](http://jakeklassen.com/post/deploying-a-node-app-on-digital-ocean-using-dokku/).
+Nous vous recommandons de lire [la documentation Dokku pour la configuration](http://dokku.viewdocs.io/dokku/getting-started/installation/) et [Déployer une application Node.js sur Digital Ocean en utilisant Dokku](http://jakeklassen.com/post/deploying-a-node-app-on-digital-ocean-using-dokku/).
 
-For the example, we will call our Nuxt application `my-nuxt-app`.
+Pour l'exemple, nous appellerons notre application Nuxt `my-nuxt-app`.
 
-We need to tell Dokku to install the `devDependencies` of the project (to be able to launch `npm run build`):
+Nous devons dire à Dokku d'installer les `devDependencies` du projet (pour pouvoir lancer `npm run build`) :
 
 ```bash
-// on Dokku Server
+// sur le serveur Dokku
 dokku config:set my-nuxt-app NPM_CONFIG_PRODUCTION=false YARN_PRODUCTION=false
 ```
 
-Also, we want our application to listen on the host `0.0.0.0` and run in production mode:
+De plus, nous voulons que notre application écoute sur l'hôte `0.0.0.0` et s'exécute en mode production :
 
 ```bash
-// on Dokku Server
+// sur le serveur Dokku
 dokku config:set my-nuxt-app HOST=0.0.0.0 NODE_ENV=production
 ```
 
-You should see these 3 lines when you type `dokku config my-nuxt-app`
+Vous devriez voir ces 3 lignes lorsque vous tapez `dokku config my-nuxt-app`
 
 ![nuxt config vars Dokku](https://i.imgur.com/9FNsaoQ.png)
 
-Then, we tell Dokku to launch `npm run build` via the `scripts.dokku.predeploy` script in our project `app.json`:
+Ensuite, nous disons à Dokku de lancer `npm run build` via le script `scripts.dokku.predeploy` dans notre projet `app.json` :
 
-`create a file name app.json in our project root folder`
+`créer un nom de fichier app.json dans le dossier racine de notre projet`
 
 ```js
 {
@@ -50,18 +50,18 @@ Then, we tell Dokku to launch `npm run build` via the `scripts.dokku.predeploy` 
 }
 ```
 
-To launch the application we run `npm run start` using the [Procfile](http://dokku.viewdocs.io/dokku/deployment/methods/dockerfiles/#procfiles-and-multiple-processes):
+Pour lancer l'application nous exécutons `npm run start` en utilisant [Procfile](http://dokku.viewdocs.io/dokku/deployment/methods/dockerfiles/#procfiles-and-multiple-processes):
 
 ```
 web: npm run start
 ```
 
-Finally, we can push our app on Dokku with:
+Enfin, nous pouvons pousser notre application sur Dokku avec :
 
 ```bash
-// commit your change before push.
+// validez votre modification avant de pousser.
 git remote add dokku dokku@yourServer:my-nuxt-app
 git push dokku master
 ```
 
-Voilà! Our Nuxt application is now hosted on Dokku!
+Voilà ! Notre application Nuxt est désormais hébergée sur Dokku !

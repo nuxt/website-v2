@@ -1,26 +1,26 @@
 ---
 template: guide
 title: Cloudflare
-description: What needs to be considered when using Nuxt with Cloudflare
+description: Ce qui doit être pris en compte lors de l'utilisation de Nuxt avec Cloudflare
 category: deployment
 logo:
   light: "/img/partners/dark/Cloudflare.svg"
   dark: "/img/partners/light/Cloudflare.svg"
 ---
-# Deploy Nuxt on Cloudflare
+# Déployez Nuxt sur Cloudflare
 
-What needs to be considered when using Nuxt with Cloudflare
+Ce qui doit être pris en compte lors de l'utilisation de Nuxt avec Cloudflare
 
 ---
 
-In most cases, Nuxt can work with third party content that is not generated or created by Nuxt itself. But sometimes such content can cause problems, especially Cloudflare's "Minification and Security Options".
+Dans la plupart des cas, Nuxt peut fonctionner avec du contenu tiers qui n'est pas généré ou créé par Nuxt lui-même. Mais parfois, un tel contenu peut causer des problèmes, en particulier les "Options de minification et de sécurité" de Cloudflare.
 
-Accordingly, you should make sure that the following options are unchecked / disabled in Cloudflare. Otherwise, unnecessary re-rendering or hydration errors could impact your production application.
+En conséquence, vous devez vous assurer que les options suivantes sont décochées/désactivées dans Cloudflare. Sinon, des erreurs de rendu ou d'hydratation inutiles pourraient avoir un impact néfaste sur votre application de production.
 
-1. Speed > Optimization > Auto Minify: **Uncheck** JavaScript, CSS and HTML
-2. Speed > Optimization > **Disable** "Rocket Loader™"
-3. Speed > Optimization > **Disable** "Mirage"
-4. Scrape Shield > **Disable** "Email Address Obfuscation"
-5. Scrape Shield > **Disable** "Server-side Excludes"
+1. Vitesse > Optimisation > Auto Minify : **Décochez** JavaScript, CSS et HTML
+2. Vitesse > Optimisation > **Désactiver** "Rocket Loader™"
+3. Vitesse > Optimisation > **Désactiver** "Mirage"
+4. Scrape Shield > **Désactiver** "Obfuscation de l'adresse e-mail"
+5. Scrape Shield > **Désactiver** "Exclusions côté serveur"
 
-With these settings, you can be sure that Cloudflare won't inject scripts into your Nuxt application that may cause unwanted side effects.
+Avec ces paramètres, vous pouvez être sûr que Cloudflare n'injectera pas de scripts dans votre application Nuxt qui pourraient provoquer des effets secondaires indésirables.

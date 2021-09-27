@@ -33,7 +33,7 @@
             items-center
             justify-center
             space-y-3
-            xs:space-y-0 xs:space-x-3
+            sm:space-y-0 sm:space-x-3
             xl:space-x-4
           "
         >

@@ -146,6 +146,7 @@ export default {
   --docsearch-searchbox-background: var(--color-transparent);
   --docsearch-searchbox-focus-background: var(--color-transparent);
   --docsearch-hit-color: var(--color-gray-700);
+  --docsearch-hit-shadow: none;
   --docsearch-logo-color: var(--docsearch-text-color);
   --docsearch-muted-color: var(--color-gray-500);
   --docsearch-container-background: rgb(244 244 245 / 55%);
@@ -157,7 +158,7 @@ export default {
     --docsearch-modal-background: theme('colors.secondary-darker');
     --docsearch-modal-shadow: inset 1px 1px 0 0 #052f14, 0 3px 8px 0 #0b160d;
     --docsearch-hit-color: var(--color-gray-300);
-    --docsearch-hit-background: var(--color-gray-800);
+    --docsearch-hit-background: theme('colors.secondary-darkest');
     --docsearch-footer-background: theme('colors.secondary-darkest');
     --docsearch-footer-shadow: inset 0 1px 0 0 rgba(73, 76, 106, 0.5), 0 -4px 8px 0 rgba(0, 0, 0, 0.2);
     --docsearch-container-background: rgb(0 30 38 / 64%);
@@ -169,6 +170,9 @@ export default {
 }
 .DocSearch-Modal {
   @apply lg:rounded-xl !important;
+}
+.DocSearch-SearchBar {
+  @apply pb-1 !important;
 }
 .DocSearch-Button {
   @apply rounded-sm w-12 h-12 m-auto bg-transparent hover:shadow-none focus:outline-none !important;

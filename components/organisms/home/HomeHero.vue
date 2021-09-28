@@ -6,7 +6,7 @@
       <Star v-for="star in 80" :key="star" />
     </div>
     <div class="flex flex-wrap justify-center py-0 section">
-      <section class="flex flex-col justify-start w-full px-4 pt-36 pb-48 md:pt-44 lg:pb-56 lg:pt-36 text-center">
+      <section class="flex flex-col justify-start w-full px-4 pt-36 pb-48 md:pt-44 lg:pb-56 lg:pt-36 text-center z-20">
         <h1 class="font-normal font-serif text-display-5 xs:text-display-4 md:text-display-3 2xl:text-display-2 mb-6">
           <Markdown use="title" unwrap="p" />
         </h1>
@@ -35,7 +35,6 @@
             space-y-3
             sm:space-y-0 sm:space-x-3
             xl:space-x-4
-            z-20
           "
         >
           <SectionButton

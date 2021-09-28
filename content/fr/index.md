@@ -10,9 +10,6 @@ primary:
   text: 38K+ GitHub stars
   url: https://github.com/nuxt/nuxt.js
   icon: IconGitHub
-secondary:
-  text: npm init nuxt-app
-  icon: IconCopy
 ---
 
 #title
@@ -20,6 +17,9 @@ Le framework Vue<br>intuitif
 
 #description
 Construisez votre prochaine application Vue.js en toute confiance avec Nuxt.<br class="hidden sm:block" /> Un framework open source qui rend le développement web simple et puissant.
+
+#secondary-button
+:button-link[Commencer]{ href="/docs/get-started/installation" size="medium" aria-label="Commencer" }
 ::
 
 ::home-learn-master

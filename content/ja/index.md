@@ -20,7 +20,7 @@ The Intuitive Vue<br>Framework
 Nuxt を使って信頼ある次世代の Vue.js アプリケーションを構築する<br class="hidden sm:block" /> Web 開発をシンプルにかつパワフルにするオープンソースフレームワーク
 
 #secondary-button
-:button-link[Get started]{ href="/docs/get-started/installation" size="medium" aria-label="Get started" }
+:button-link[はじめる]{ href="/docs/get-started/installation" size="medium" aria-label="はじめる" }
 ::
 
 ::home-learn-master

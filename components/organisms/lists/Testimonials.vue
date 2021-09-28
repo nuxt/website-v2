@@ -14,7 +14,7 @@
         rounded-lg
         p-4
       "
-      :class="{ 'dark:border-secondary-dark': !isHome }"
+      :class="{ 'dark:border-secondary-dark': !isHome, 'bg-white': isHome }"
     >
       <NuxtLabel tag="p" class="text-left" v-html="testimonial.testimonial"></NuxtLabel>
       <div class="flex w-full justify-between items-center">

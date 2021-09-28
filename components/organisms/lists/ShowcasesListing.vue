@@ -1,5 +1,5 @@
 <template>
-  <div ref="showcases-container" class="d-container-content mt-8">
+  <div ref="showcases-container" class="d-container mt-8">
     <div v-if="categories && categories.length" class="lg:flex gap-8">
       <AsideShowcases
         :options="categories"
@@ -20,6 +20,7 @@
           gap-8
           lg:ml-20
           auto-rows-min
+          d-px-container
         "
       >
         <div v-for="showcase in selectedShowcases" :key="showcase.id">
@@ -104,13 +105,13 @@ export default {
   },
   methods: {
     selectCategory(category) {
-      if (category.name === this.selectedCategory) {
+      if (category === this.selectedCategory) {
         return
       }
-      if (category.name === this.categories[0].name) {
+      if (category === this.categories[0].name) {
         this.selectedCategory = ''
       } else {
-        this.selectedCategory = category.name
+        this.selectedCategory = category
       }
 
       // scroll to top of the list, handling header height

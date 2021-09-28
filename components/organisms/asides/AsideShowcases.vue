@@ -1,36 +1,45 @@
 <template>
-  <div class="lg:sticky top-0 lg:left-0 h-full pointer-events-auto lg:h-screen lg:top-header lg:w-1/5">
-    <div class="w-auto h-full d-bg-header dark:lg:bg-transparent lg:bg-transparent">
-      <nav
-        class="
-          flex
-          lg:flex-col
-          justify-between
-          lg:justify-start lg:max-w-sm
-          w-full
-          overflow-y-auto
-          text-sm
-          font-medium
-          lg:h-[reset]
-          h-(full-header)
-          d-scrollbar
-        "
-      >
-        <div class="py-4 pr-0">
-          <ul class="flex lg:flex-col">
-            <li v-for="option in options" :key="option.name">
-              <button
-                class="py-2 px-4 flex justify-between w-full focus:outline-none focus:ring-transparent"
-                :class="{ 'rounded-md bg-gray-100 dark:bg-white dark:bg-opacity-10': option.name === selected }"
-                @click="$emit('selected', option)"
-              >
-                <div class="truncate max-w-48 font">{{ option.display }}</div>
-              </button>
-            </li>
-          </ul>
-        </div>
-      </nav>
-    </div>
+  <div class="sticky top-0 lg:left-0 pointer-events-auto lg:h-screen top-header lg:w-1/5 z-10 lg:z-0">
+    <nav
+      class="
+        flex
+        lg:flex-col
+        justify-end
+        lg:justify-start lg:max-w-sm
+        w-full
+        overflow-y-auto
+        text-sm
+        font-medium
+        lg:h-[reset]
+        h-(full-header)
+        d-scrollbar d-px-container d-bg-header
+        blur-12
+        lg:blur-0
+      "
+    >
+      <div class="hidden lg:block py-4 pr-0">
+        <ul class="flex lg:flex-col">
+          <li v-for="option in options" :key="option.name">
+            <button
+              class="py-2 px-4 flex justify-between w-full focus:outline-none focus:ring-transparent"
+              :class="{ 'rounded-md bg-gray-100 dark:bg-white dark:bg-opacity-10': option.name === selected }"
+              @click="$emit('selected', option.name)"
+            >
+              <div class="truncate max-w-48 font">{{ option.display }}</div>
+            </button>
+          </li>
+        </ul>
+      </div>
+      <div class="relative py-4">
+        <NuxtSelectNative
+          :value="selected"
+          :options="mappedOptions"
+          class="lg:hidden"
+          select-class="appearance-none block light:bg-white dark:bg-sky-black ml-2 py-2 pl-3 pr-10 text-base sm:text-md font-medium rounded-md border-1 border-sky-dark focus:border-primary focus:outline-none"
+          @input="option => $emit('selected', option)"
+        />
+      </div>
+    </nav>
   </div>
 </template>
 
@@ -44,6 +53,14 @@ export default {
     selected: {
       type: String,
       default: ''
+    }
+  },
+  computed: {
+    mappedOptions() {
+      return this.options.map(option => ({
+        text: option.display,
+        value: option.name
+      }))
     }
   }
 }

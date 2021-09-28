@@ -1,5 +1,5 @@
 <template>
-  <div class="ListCard group">
+  <li class="ListCard group">
     <template v-if="item.link">
       <div class="ListCard-external group-hover:opacity-100">
         <slot name="external">
@@ -34,7 +34,7 @@
     <div class="ListCard-foot">
       <slot name="footer" />
     </div>
-  </div>
+  </li>
 </template>
 <script lang="ts">
 import { defineComponent } from '@nuxtjs/composition-api'

@@ -1,5 +1,12 @@
 <template>
   <div class="relative pb-60 lg:pb-80 2xl:pb-102">
+    <img
+      loading="lazy"
+      :src="`/img/home/home_footer.svg`"
+      class="absolute left-0 bottom-0 object-cover w-full"
+      alt="A landscape image"
+    />
+
     <HomeSection>
       <template #header-illustration>
         <img
@@ -44,12 +51,6 @@
         </SectionContent>
       </template>
     </HomeSection>
-    <img
-      loading="lazy"
-      :src="`/img/home/home_footer.svg`"
-      class="absolute left-0 bottom-0 z-10 h-60 lg:h-80 2xl:h-128 object-cover w-full"
-      alt="A landscape image"
-    />
   </div>
 </template>
 <script>

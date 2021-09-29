@@ -1,7 +1,7 @@
 <template>
   <div class="py-4 d-container-content light:text-sky-darker dark:text-white mb-4">
     <div class="flex space-x-4 items-center pb-4">
-      <img :src="icon" :alt="category" class="w-8 h-8" />
+      <img :src="`/img/partners/categories/${icon}`" :alt="category" class="w-8 h-8" />
       <h2 class="font-semibold text-center text-display-6">
         <Markdown use="category-title" unwrap="p" />
       </h2>
@@ -38,9 +38,8 @@ export default defineComponent({
 
     useFetch(async () => {
       partners.value = await $docus
-        .search('/collections/partners', { deep: true })
-        .where({ category: { $in: props.category }, language: i18n.locale })
-        .sortBy('position', 'asc')
+        .search(`/collections/partners/${props.category}`, { deep: true })
+        .where({ language: i18n.locale })
         .fetch()
     })
 

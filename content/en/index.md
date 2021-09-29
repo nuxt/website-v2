@@ -32,10 +32,10 @@ category: Learn
 [Easy]{.text-primary} to learn. [Easy]{.text-primary} to master
 
 #description
-Be part of the Nuxt community and help us Nuxtify the world.
+Learn everything you need to know, from beginner to master.
 
 #bottom
-:button-link[Learn everything]{href="/docs/get-started/installation" size="medium"}
+:button-link[Start learning]{href="/docs/get-started/installation" size="medium"}
 ::
 
 ::home-features

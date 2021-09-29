@@ -1,10 +1,12 @@
 <template>
   <div>
     <div
-      class="h-80"
+      class="h-80 p-6"
       :class="{ 'bg-sky-dark': !page.color }"
       :style="page.color ? `background-color: ${page.color}` : ''"
-    ></div>
+    >
+      <img v-if="page.logoFull" loading="lazy" :src="`${page.logoFull}`" class="w-full h-full object-contain" />
+    </div>
 
     <div class="d-container-content">
       <div class="relative flex gap-8 -mt-8 pb-8 xl:pb-16">
@@ -24,7 +26,7 @@
 
       <div class="flex flex-col-reverse gap-8 xl:gap-12 xl:flex-row xl:justify-between">
         <p class="w-full xl:w-[70%] text-md sm:text-lg">
-          <span>{{ fullDescription }}</span>
+          <span>{{ page.fullDescription }}</span>
         </p>
 
         <div class="w-full xl:w-[30%] flex flex-col p-6 gap-6 bg-sky-darker rounded-md">
@@ -100,7 +102,7 @@
           </div>
         </div>
 
-        <form class="contact-form w-2/3 h-full grid grid-cols-1 lg:grid-cols-2 p-6 gap-6">
+        <form class="contact-form w-2/3 h-full grid grid-cols-1 lg:grid-cols-2 p-6 gap-6" @submit.prevent="onSubmit">
           <div>
             <label class="block">{{ $t('sustainability.mvp_detail.first_name') }}</label>
             <input id="firstName" type="text" />
@@ -165,8 +167,14 @@ export default defineComponent({
 
       return domain
     })
+
+    function onSubmit() {
+      // TODO
+    }
+
     return {
-      websiteDomain
+      websiteDomain,
+      onSubmit
     }
   }
 })

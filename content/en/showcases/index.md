@@ -6,14 +6,15 @@ layout:
   fluid: true
 ---
 
-::page-hero
+::page-hero{descriptionFullWidth}
 #title
 Showcases
 
 #description
-  Discover our selection of websites built with Nuxt. This collection is powered by VueTelescope. Visit [vuetelescope.com](https://vuetelescope.com) and try out the browser extension.
+  Discover our selection of websites built with Nuxt. This collection is powered by [VueTelescope](https://vuetelescope.com).
 
-#bottom
+#bottomDesktop
+  Try out the browser extensions:
   :showcases-bottom-hero
 ::
 

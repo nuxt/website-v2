@@ -75,6 +75,9 @@ links:
         title: 'Tutorials'
         slug: 'tutorials'
         to: '/tutorials'
+      -
+        title: 'Tweets'
+        href: 'https://twitter.com/nuxt_js/timelines/1439936107421085704'
   -
     title: 'Partners'
     slug: 'partners'

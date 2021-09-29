@@ -15,7 +15,11 @@
     </div>
     <AppFooter :links="footerLinks" :class="{ 'pb-16 md:pb-12': showCookieBanner }" />
 
-    <CookieBanner class="fixed bottom-0 inset-x-0 z-40" @cookie-banner="showCookieBanner = false" />
+    <CookieBanner
+      v-if="showCookieBanner"
+      class="fixed bottom-0 inset-x-0 z-40"
+      @cookie-banner="showCookieBanner = false"
+    />
   </div>
 </template>
 

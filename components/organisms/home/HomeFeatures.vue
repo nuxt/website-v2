@@ -1,5 +1,13 @@
 <template>
   <div class="relative" :class="{ 'sm:pb-20 lg:pb-28 xl:pb-40 2xl:pb-60': isHome }">
+    <img
+      v-if="isHome"
+      loading="lazy"
+      :src="`/img/home/discover/dx/discover-mountain.svg`"
+      class="absolute left-0 bottom-0 object-cover w-full"
+      alt="A landscape image"
+    />
+
     <section class="py-40" :class="isHome ? 'bg-white text-secondary-black' : 'text-white light:text-secondary-black'">
       <NuxtContainer class="flex flex-col items-center">
         <div class="flex flex-col w-full items-center col-span-12">
@@ -19,13 +27,6 @@
         </div>
       </NuxtContainer>
     </section>
-    <img
-      v-if="isHome"
-      loading="lazy"
-      :src="`/img/home/discover/dx/discover-mountain.svg`"
-      class="absolute left-0 bottom-0 z-10 object-cover w-full"
-      alt="A landscape image"
-    />
   </div>
 </template>
 

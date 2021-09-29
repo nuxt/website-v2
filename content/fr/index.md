@@ -116,8 +116,39 @@ Un [_développement_]{.text-primary} soutenu
 #description
 Nuxt est construit et maintenu par des développeurs passionnés mais il serait impossible de fournir les efforts nécessaires pour développer et maintenir de nouvelles fonctionnalités sans une réelle contribution financière. Nous remercions nos sponsors et partenaires qui rendent cela possible.<br>
 
+#partners-card
+  ::home-partners-card
+  ---
+  icon: technology.svg
+  category: technology
+  ---
+  #title
+  Technology partners
+
+  #description
+  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis.
+
+  #button
+  See technology partners
+  ::
+
+  ::home-partners-card
+  ---
+  icon: agency.svg
+  category: agency
+  ---
+  #title
+  Agency partners
+
+  #description
+  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis.
+
+  #button
+  See agency partners
+  ::
+
 #bottom
-:button-link[Sponsorisez Nuxt]{href="/sponsors" size="medium"}
+  :button-link[Devenez un partenaire]{href="mailto:partners@nuxtlabs.com" size="medium"}
 ::
 
 ::home-learn-guides

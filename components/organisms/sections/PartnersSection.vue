@@ -1,16 +1,18 @@
 <template>
-  <div class="py-4 d-container-content">
-    <div class="flex flex-col pt-8 space-y-4 light:text-sky-darker dark:text-white">
-      <div class="flex space-x-4 items-center">
-        <img :src="icon" :alt="title" class="w-8 h-8" />
-        <h2 class="font-semibold text-center text-display-6">
-          <Markdown use="title" unwrap="p" />
-        </h2>
-      </div>
-      <ul class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
-        <LogoCard v-for="partner in partners" :key="partner.title" :item="partner" />
-      </ul>
+  <div class="py-4 d-container-content light:text-sky-darker dark:text-white mb-4">
+    <div class="flex space-x-4 items-center pb-4">
+      <img :src="icon" :alt="category" class="w-8 h-8" />
+      <h2 class="font-semibold text-center text-display-6">
+        <Markdown use="category-title" unwrap="p" />
+      </h2>
     </div>
+    <ul class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+      <LogoCard v-for="partner in partners" :key="partner.title" :item="partner">
+        <template #footer>
+          <PartnerServices :services="partner.services" class="text-sm mt-4" />
+        </template>
+      </LogoCard>
+    </ul>
   </div>
 </template>
 
@@ -40,11 +42,6 @@ export default defineComponent({
         .where({ category: { $in: props.category }, language: i18n.locale })
         .sortBy('position', 'asc')
         .fetch()
-
-      console.log(partners.value)
-
-      // mvp.value = documents.filter(sponsor => sponsor.tier === 'MVP')
-      // sponsors.value = documents.filter(sponsor => sponsor.tier === 'Sponsors')
     })
 
     return {

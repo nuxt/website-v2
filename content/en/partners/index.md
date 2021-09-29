@@ -21,17 +21,16 @@ category: technology
 icon: 'icon.png'
 ---
 
-#title
+#category-title
 Technology
 ::
 
 ::partners-section
 ---
 category: agency
-title: Agency
 icon: 'icon.png'
 ---
 
-#title
+#category-title
 Agency
 ::

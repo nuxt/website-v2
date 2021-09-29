@@ -9,8 +9,8 @@
     </div>
 
     <div class="d-container-content">
-      <div class="relative flex gap-8 -mt-8 pb-8 xl:pb-16">
-        <div class="w-32 h-32 p-4 bg-sky-darker rounded-md">
+      <div class="relative flex gap-8 -mt-6 sm:-mt-8 pb-8 xl:pb-16">
+        <div class="w-24 h-24 sm:w-32 sm:h-32 p-4 bg-sky-darker rounded-md">
           <img
             :src="`/img/sponsors/sponsors-square/light/${page.icon}`"
             :alt="page.title"
@@ -19,114 +19,127 @@
           <img :src="`/img/sponsors/sponsors-square/dark/${page.icon}`" :alt="page.title" class="dark-img text-white" />
         </div>
         <div class="flex flex-col justify-end gap-1">
-          <h1 class="text-display-4 font-bold">{{ page.title }}</h1>
+          <h1 class="text-display-5 sm:text-display-4 font-bold">{{ page.title }}</h1>
           <a :href="page.link"><IconExternalLink class="inline w-4 h-4 mr-1" /> {{ websiteDomain }}</a>
         </div>
       </div>
 
       <div class="flex flex-col-reverse gap-8 xl:gap-12 xl:flex-row xl:justify-between">
-        <p class="w-full xl:w-[70%] text-md sm:text-lg">
-          <span>{{ page.fullDescription }}</span>
-        </p>
+        <div class="w-full xl:w-[70%]">
+          <p class="text-md sm:text-lg">
+            <span>{{ page.fullDescription }}</span>
+          </p>
 
-        <div class="w-full xl:w-[30%] flex flex-col p-6 gap-6 bg-sky-darker rounded-md">
-          <div v-if="page.location">
-            <h2 class="font-semibold text-lg mb-2">{{ $t('sustainability.mvp_detail.location') }}</h2>
-            <span class="text-sm text-gray-300">{{ page.location }}</span>
-          </div>
-          <div v-if="page.services && page.services.length">
-            <h2 class="font-semibold text-lg mb-2">{{ $t('sustainability.mvp_detail.services') }}</h2>
-            <ul class="flex flex-row flex-wrap gap-3">
-              <li
-                v-for="(service, index) in page.services"
-                :key="index"
-                class="text-sm rounded-md bg-sky-dark px-2 py-1"
-              >
-                {{ service }}
-              </li>
-            </ul>
-          </div>
-          <div v-if="page.resources && page.resources.length">
-            <h2 class="font-semibold text-lg mb-2">{{ $t('sustainability.mvp_detail.resources') }}</h2>
-            <ul>
-              <li v-for="(link, index) in page.resources" :key="index">
-                <a :href="link.url" class="inline-flex items-center text-sm text-gray-300"
-                  ><IconExternalLink class="inline w-4 h-4 mr-1" />
-                  {{ link.name }}
-                </a>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </div>
-
-      <div class="flex w-full bg-sky-darker rounded-md mt-16 xl:mt-24 overflow-hidden">
-        <div
-          class="flex flex-col justify-between w-1/3 p-6"
-          :class="{ 'bg-sky-dark': !page.color }"
-          :style="page.color ? `background-color: ${page.color}` : ''"
-        >
-          <div>
-            <h2 class="font-semibold text-lg">
-              {{ $t('sustainability.mvp_detail.contact_partner', { partner: page.title }) }}
-            </h2>
-            <span class="block text-gray-100 mt-2">{{
-              $t('sustainability.mvp_detail.they_will_get_back_to_you')
-            }}</span>
-            <Link :href="page.link" to="" blank class="block mt-4">
-              <IconExternalLink class="inline w-4 h-4 mr-1" />
-              {{ websiteDomain }}
-            </Link>
-            <Link v-if="page.emailAddress" :to="`mailto:${page.emailAddress}`" blank class="block mt-4">
-              <IconEmail class="inline w-4 h-4 mr-1" />
-              {{ page.emailAddress }}
-            </Link>
-            <Link v-if="page.phoneNumber" :to="`tel:${page.phoneNumber}`" blank class="block mt-4">
-              <IconPhone class="inline w-4 h-4 mr-1" />
-              {{ page.phoneNumber }}
-            </Link>
-          </div>
-          <div class="flex items-center gap-10">
-            <Link
-              v-if="page.twitter"
-              :href="`https://twitter.com/${page.twitter}`"
-              to=""
-              blank
-              aria-label="twitterLink"
+          <div class="flex flex-col sm:flex-row w-full bg-sky-darker rounded-md mt-16 xl:mt-24 overflow-hidden">
+            <div
+              class="flex flex-col justify-between sm:w-1/3 p-6 gap-8"
+              :class="{ 'bg-sky-dark': !page.color }"
+              :style="page.color ? `background-color: ${page.color}` : ''"
             >
-              <IconTwitter class="inline w-6 h-6" />
-            </Link>
-            <Link v-if="page.github" :href="`https://github.com/${page.github}`" to="" blank aria-label="githubLink">
-              <IconGitHub class="inline w-6 h-6" />
-            </Link>
+              <div>
+                <h2 class="font-semibold text-lg">
+                  {{ $t('sustainability.mvp_detail.contact_partner', { partner: page.title }) }}
+                </h2>
+                <span class="block text-gray-100 mt-2">{{
+                  $t('sustainability.mvp_detail.they_will_get_back_to_you')
+                }}</span>
+                <Link :href="page.link" to="" blank class="flex items-center mt-4">
+                  <IconExternalLink class="inline flex-shrink-0 w-4 h-4 mr-1" />
+                  <span class="truncate">{{ websiteDomain }}</span>
+                </Link>
+                <Link v-if="page.emailAddress" :to="`mailto:${page.emailAddress}`" blank class="flex items-center mt-4">
+                  <IconEmail class="inline flex-shrink-0 w-4 h-4 mr-1" />
+                  <span class="truncate">{{ page.emailAddress }}</span>
+                </Link>
+                <Link v-if="page.phoneNumber" :to="`tel:${page.phoneNumber}`" blank class="flex items-center mt-4">
+                  <IconPhone class="inline flex-shrink-0 w-4 h-4 mr-1" />
+                  <span class="truncate">{{ page.phoneNumber }}</span>
+                </Link>
+              </div>
+              <div class="flex items-center gap-10">
+                <Link
+                  v-if="page.twitter"
+                  :href="`https://twitter.com/${page.twitter}`"
+                  to=""
+                  blank
+                  aria-label="twitterLink"
+                >
+                  <IconTwitter class="inline w-6 h-6" />
+                </Link>
+                <Link
+                  v-if="page.github"
+                  :href="`https://github.com/${page.github}`"
+                  to=""
+                  blank
+                  aria-label="githubLink"
+                >
+                  <IconGitHub class="inline w-6 h-6" />
+                </Link>
+              </div>
+            </div>
+
+            <form
+              class="contact-form sm:w-2/3 h-full grid grid-cols-1 lg:grid-cols-2 p-6 gap-6"
+              @submit.prevent="onSubmit"
+            >
+              <div>
+                <label class="block">{{ $t('sustainability.mvp_detail.first_name') }}</label>
+                <input id="firstName" type="text" />
+              </div>
+              <div>
+                <label class="block">{{ $t('sustainability.mvp_detail.last_name') }}</label>
+                <input id="lastName" type="text" />
+              </div>
+              <div>
+                <label class="block">{{ $t('sustainability.mvp_detail.company_name') }}</label>
+                <input id="companyName" type="text" />
+              </div>
+              <div>
+                <label class="block">{{ $t('sustainability.mvp_detail.email') }}</label>
+                <input id="email" type="text" />
+              </div>
+              <div class="lg:col-span-full">
+                <label class="block">{{ $t('sustainability.mvp_detail.message') }}</label>
+                <textarea id="message" rows="3" />
+              </div>
+              <div class="lg:col-span-full flex justify-end">
+                <button submit>{{ $t('sustainability.mvp_detail.submit') }}</button>
+              </div>
+            </form>
           </div>
         </div>
 
-        <form class="contact-form w-2/3 h-full grid grid-cols-1 lg:grid-cols-2 p-6 gap-6" @submit.prevent="onSubmit">
-          <div>
-            <label class="block">{{ $t('sustainability.mvp_detail.first_name') }}</label>
-            <input id="firstName" type="text" />
+        <div class="w-full xl:w-[30%]">
+          <div class="px-6 py-3 bg-sky-darker rounded-md">
+            <div v-if="page.location" class="py-3">
+              <h2 class="font-semibold text-lg mb-2">{{ $t('sustainability.mvp_detail.location') }}</h2>
+              <span class="text-sm text-gray-300">{{ page.location }}</span>
+            </div>
+            <div v-if="page.services && page.services.length" class="py-3">
+              <h2 class="font-semibold text-lg mb-2">{{ $t('sustainability.mvp_detail.services') }}</h2>
+              <ul class="flex flex-row flex-wrap gap-3">
+                <li
+                  v-for="(service, index) in page.services"
+                  :key="index"
+                  class="text-sm rounded-md bg-sky-dark px-2 py-1"
+                >
+                  {{ service }}
+                </li>
+              </ul>
+            </div>
+            <div v-if="page.resources && page.resources.length" class="py-3">
+              <h2 class="font-semibold text-lg mb-2">{{ $t('sustainability.mvp_detail.resources') }}</h2>
+              <ul>
+                <li v-for="(link, index) in page.resources" :key="index">
+                  <a :href="link.url" class="inline-flex items-center text-sm text-gray-300"
+                    ><IconExternalLink class="inline w-4 h-4 mr-1" />
+                    {{ link.name }}
+                  </a>
+                </li>
+              </ul>
+            </div>
           </div>
-          <div>
-            <label class="block">{{ $t('sustainability.mvp_detail.last_name') }}</label>
-            <input id="lastName" type="text" />
-          </div>
-          <div>
-            <label class="block">{{ $t('sustainability.mvp_detail.company_name') }}</label>
-            <input id="companyName" type="text" />
-          </div>
-          <div>
-            <label class="block">{{ $t('sustainability.mvp_detail.email') }}</label>
-            <input id="email" type="text" />
-          </div>
-          <div class="lg:col-span-full">
-            <label class="block">{{ $t('sustainability.mvp_detail.message') }}</label>
-            <textarea id="message" rows="3" />
-          </div>
-          <div class="lg:col-span-full flex justify-end">
-            <button submit>{{ $t('sustainability.mvp_detail.submit') }}</button>
-          </div>
-        </form>
+        </div>
       </div>
 
       <div class="relative flex items-center justify-center bg-sky-dark rounded-md h-60 mt-16 xl:mt-24">

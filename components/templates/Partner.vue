@@ -109,8 +109,8 @@
           </div>
         </div>
 
-        <div class="w-full xl:w-[30%]">
-          <div class="px-6 py-3 bg-sky-darker rounded-md">
+        <div class="relative w-full xl:w-[30%]">
+          <div class="xl:sticky xl:top-header px-6 py-3 bg-sky-darker rounded-md">
             <div v-if="page.location" class="py-3">
               <h2 class="font-semibold text-lg mb-2">{{ $t('sustainability.mvp_detail.location') }}</h2>
               <span class="text-sm text-gray-300">{{ page.location }}</span>

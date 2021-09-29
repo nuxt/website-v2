@@ -31,9 +31,7 @@
       <h3 class="font-bold text-xl py-2">{{ item.title || 'Title' }}</h3>
       <p class="text-sm">{{ item.description || 'Description' }}</p>
     </div>
-    <div class="ListCard-foot">
-      <slot name="footer" />
-    </div>
+    <slot name="footer" />
   </li>
 </template>
 <script lang="ts">
@@ -55,8 +53,5 @@ export default defineComponent({
 }
 .ListCard-external {
   @apply transition-opacity duration-200 opacity-0 absolute top-4 right-4 cursor-pointer h-6;
-}
-.ListCard-foot {
-  @apply text-right text-sm pt-4 font-medium text-gray-400;
 }
 </style>

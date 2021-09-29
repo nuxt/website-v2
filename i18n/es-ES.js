@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import es from '~docus-i18n/es-ES'
 
 export default {
@@ -10,16 +9,6 @@ export default {
     please_define_description: 'Por favor, añade una descripción',
     search: 'Buscar ("/" recibir el foco)',
     version: 'Versión'
-=======
-module.exports = {
-  common: {
-    an_error_occurred: 'Ha ocurrido un error',
-    api_page_not_found: 'Página API no encontrada',
-    please_define_title: 'Por favor, añade un título',
-    please_define_description: 'Por favor, añade una descripción',
-    search: 'Buscar ("/" to focus)',
-    version: 'Version'
->>>>>>> 26a70b2b (chore: add guides section (#407))
   },
   iso: 'es',
   cookies: {
@@ -34,7 +23,6 @@ module.exports = {
   header: {
     links: [
       {
-<<<<<<< HEAD
         name: 'Docs',
         icon: 'books',
         slug: 'docs-2.x-book-slug'
@@ -62,55 +50,10 @@ module.exports = {
     ],
     search: {
       placeholder: 'Buscar ("/" recibir el foco)'
-=======
-        name: 'Guides',
-        slug: 'guides',
-        type: 'newDocs',
-        routeName: 'guides-book-slug'
-      },
-      {
-        name: 'Guide',
-        slug: 'guide',
-        type: 'dynamic',
-        routeName: 'section-slug'
-      },
-      {
-        name: 'API',
-        slug: 'api',
-        type: 'dynamic',
-        routeName: 'section-slug'
-      },
-      {
-        name: 'Ejemplos',
-        slug: 'Ejemplos',
-        type: 'dynamic',
-        routeName: 'section-slug'
-      },
-      {
-        name: 'FAQ',
-        slug: 'faq',
-        type: 'dynamic',
-        routeName: 'section-slug'
-      },
-      {
-        name: 'Resources',
-        slug: 'resources',
-        type: 'static'
-      },
-      {
-        name: 'Blog',
-        slug: 'blog',
-        type: 'static'
-      }
-    ],
-    search: {
-      placeholder: 'Buscar ("/" to focus)'
->>>>>>> 26a70b2b (chore: add guides section (#407))
     }
   },
   homepage: {
     meta: {
-<<<<<<< HEAD
       title: 'Nuxt - El Framework intuitivo de Vue',
       description:
         'Construye tu siguiente aplicación de Vue.js con confianza usando Nuxt. Un framework de código abierto que trabaja para conseguir que el desarrollo web sea simple y poderoso.'
@@ -122,43 +65,20 @@ module.exports = {
       openSource: 'código abierto',
       get_started: 'comenzar',
       get_updates: 'Obtenga actualizaciones de Nuxt cada mes en su bandeja de entrada',
-=======
-      title: 'Nuxt.js - El Framework intuitivo de Vue',
-      description:
-        'Construye tu siguiente aplicación de Vue.js con confianza usando NuxtJS. Un framework de código abierto que trabaja en conseguir que el desarrollo web sea simple y poderoso.'
-    },
-    welcome: {
-      title: 'The Intuitive{break}{frameworkType}Framework',
-      description:
-        'Build your next Vue.js application with confidence using NuxtJS. An {openSource} framework making web development simple and powerful.',
-      openSource: 'open source',
-      get_started: 'get started',
-      get_updates: 'Get NuxtJS updates to your inbox each month',
->>>>>>> 26a70b2b (chore: add guides section (#407))
       video: 'Video produced by {company}, download their free {cheatSheet}.',
       cheatSheet: 'Nuxt Cheat Sheet.'
     },
     why: {
-<<<<<<< HEAD
       title: 'Por qué {nuxt}',
       try_nuxtjs_online: 'Experimenta con Nuxt Online',
       enjoyable: {
         title: 'Agradable',
         description:
           'Nuestro enfoque principal es la experiencia del desarrollador. Nos encanta Nuxt y mejoramos continuamente, ¡así que a ti también te encanta! {break} Espere soluciones atractivas, mensajes de error descriptivos, poderosos valores predeterminados y documentación detallada. Si surgen preguntas o problemas, nuestra comunidad te ayudará.'
-=======
-      title: 'Why {nuxt}',
-      try_nuxtjs_online: 'Try NuxtJS Online',
-      enjoyable: {
-        title: 'Enjoyable',
-        description:
-          'Our main focus is the Developer Experience. We love Nuxt.js and continuously improve the framework so you love it too! {break}Expect appealing solutions, descriptive error messages, powerful defaults and detailed documentation. If questions or problems come up, our helpful community will help you out.'
->>>>>>> 26a70b2b (chore: add guides section (#407))
       },
       modular: {
         title: 'Modular',
         description:
-<<<<<<< HEAD
           'Nuxt se basa en una potente arquitectura modular. Puede elegir entre más de 50 módulos para que su desarrollo sea más rápido y sencillo. No tiene que reinventar la rueda para obtener los beneficios de PWA, agregar Google Analytics a su página o generar un mapa del sitio.'
       },
       performant: {
@@ -169,39 +89,17 @@ module.exports = {
     },
     companies: {
       title: 'Quién usa {nuxt}'
-=======
-          "Nuxt is based on a powerful modular architecture. You can choose from more than 50 modules to make your development faster and easier. You don't have to reinvent the wheel to get PWA benefits, add Google Analytics to your page or generate a sitemap."
-      },
-      performant: {
-        title: 'Performant',
-        description:
-          'With Nuxt.js, your application will be optimized out of the box.We do our best to build performant applications by utilizing Vue.js and Node.js best practices.To squeeze every unnecessary bit out of your app Nuxt includes a bundle analyzer and lots of opportunities to fine-tune your app.'
-      }
-    },
-    companies: {
-      title: "Who's using {nuxt}"
->>>>>>> 26a70b2b (chore: add guides section (#407))
     },
     modes: {
       title: '{nuxt} rendering',
       ssr: {
         title: 'Server Side Rendered',
         description:
-<<<<<<< HEAD
           'El modo más popular para Nuxt. Con SSR, también llamado modo "universal" o "isomórfico", se utilizará un servidor Node.js para entregar HTML basado en tus componentes de Vue al cliente en lugar del javascript puro. El uso de SSR generará un gran impulso de SEO, una mejor UX y más oportunidades (en comparación con un Vue SPA tradicional). {Break} Debido a que implementar SSR por tu cuenta puede ser realmente tedioso, Nuxt le brinda soporte completo listo para usar y se encargará de los errores comunes.'
-=======
-          'The most popular mode for Nuxt. With SSR, also called "universal" or "isomorphic" mode, a Node.js server will be used to deliver HTML based on your Vue components to the client instead of the pure javascript. Using SSR will lead to a large SEO boost, better UX and more opportunities (compared to a traditional Vue SPA).{break}Because implementing SSR on your own can be really tedious, Nuxt.js gives you full support out of the box and will take care of common pitfalls.'
-      },
-      spa: {
-        title: 'Single Page Application (SPA)',
-        description:
-          "Don't need SSR or Static Site Generation but still want to profit from the benefits that Nuxt provides? Are you slowly transitioning your app and want to start lightweight? Then the traditional SPA mode will likely be your choice. The outcome will be a typical Vue SPA as you know it but influenced by your Nuxt configuration and the framework itself."
->>>>>>> 26a70b2b (chore: add guides section (#407))
       },
       ssg: {
         title: 'Statically Generated',
         description:
-<<<<<<< HEAD
           'La generación de sitios estáticos es un tema muy candente en este momento (también conocido como JAMStack). En lugar de cambiar a otro framework y dedicar tiempo a acostumbrarse a él, ¿por qué no matar dos pájaros de un tiro? {proverbial} Nuxt admite la generación de un sitio web estático basado en tu aplicación Vue. Es "lo mejor de ambos mundos", ya que no necesitas un servidor, pero todavía tiene beneficios de SEO porque Nuxt pre-renderizará todas las páginas e incluirá el HTML necesario. Además, puede implementar la página resultante fácilmente en páginas de Netlify o GitHub.',
         proverbial: 'sólo proverbial'
       }
@@ -211,17 +109,6 @@ module.exports = {
       description:
         'Nuxt es un proyecto de código abierto con licencia del MIT y de uso completamente gratuito. Sin embargo, la cantidad de esfuerzo necesaria para mantener y desarrollar nuevas funciones para el proyecto no es sostenible sin el respaldo financiero adecuado. Si dirige un negocio y está utilizando Nuxt en un producto que genera ingresos, tiene sentido comercial patrocinar el desarrollo de Nuxt: asegura que el proyecto en el que se basa su producto se mantenga saludable y mantenido activamente. También puede ayudar a su exposición en la comunidad de Vue / Nuxt y facilita la atracción de desarrolladores de Vue / Nuxt. Si es un usuario individual y ha disfrutado de la productividad de usar Nuxt, considere donar como una señal de agradecimiento.',
       become_a_sponsor: 'Conviértete en patrocinador'
-=======
-          'Static Site Generation is a very hot topic right now (aka JAMStack). Instead of switching to another framework and spending time to get used to it, why not kill two birds with one stone? {proverbial} Nuxt.js supports generating a static website based on your Vue application. It is the "best of both worlds" as you don\'t need a server but still have SEO benefits because Nuxt will pre-render all pages and include the necessary HTML. Also, you can deploy the resulting page easily to Netlify or GitHub pages.',
-        proverbial: 'only proverbial'
-      }
-    },
-    sponsors: {
-      title: 'Sponsors',
-      description:
-        'NuxtJS is an MIT licensed open source project and completely free to use. However, the amount of effort needed to maintain and develop new features for the project is not sustainable without proper financial backing. If you run a business and are using Nuxt in a revenue-generating product, it makes business sense to sponsor Nuxt development: it ensures the project that your product relies on stays healthy and actively maintained. It can also help your exposure in the Vue/Nuxt community and makes it easier to attract Vue/Nuxt developers. If you are an individual user and have enjoyed the productivity of using Nuxt, consider donating as a sign of appreciation.',
-      become_a_sponsor: 'Become a sponsor'
->>>>>>> 26a70b2b (chore: add guides section (#407))
     },
     newsletter: {
       title: '{nuxt} Newsletter',
@@ -238,7 +125,6 @@ module.exports = {
       }
     }
   },
-<<<<<<< HEAD
   design: {
     meta: {
       title: 'Nuxt Design',
@@ -376,18 +262,6 @@ module.exports = {
   guide: {
     release_notes: 'Notas de publicación (en)',
     toc_title: 'En esta página'
-=======
-  blog: {
-    title: 'NuxtJS Blog',
-    description:
-      'Discover articles from the {nuxtTeam} and {ambassadors} about NuxtJS, tips and tricks included!',
-    ambassadors: 'ambassadors',
-    contribute: 'Caught a mistake or want to contribute to this blog post?'
-  },
-  guide: {
-    release_notes: 'Notas de publicación (en)',
-    toc_title: 'On this page'
->>>>>>> 26a70b2b (chore: add guides section (#407))
   },
   quiz: {
     title: 'Quiz'
@@ -398,7 +272,6 @@ module.exports = {
     msg2: 'están ahora en modo beta. Pásalo bien!'
   },
   contribute: {
-<<<<<<< HEAD
     title: 'Colaboradores',
     docs: '¿Has encontrado un error o quieres contribuir en la documentación?',
     blog: '¿Has encontrado un error o quieres contribuir en este artículo?',
@@ -411,18 +284,6 @@ module.exports = {
   },
   codeSandbox: {
     open: 'Ver Ejemplo'
-=======
-    title: 'Contributors',
-    docs: '¿Has encontrado un error o quieres contribuir en la documentación?',
-    blog: '¿Has encontrado un error o quieres contribuir en este artículo?',
-    edit_on_github: 'Edita esta página en GitHub!',
-    msg1:
-      'La contribución en esta página está cerrada. Si quieres contribuir, por favor, revisa nuestra',
-    link: 'nueva documentación'
-  },
-  codeSandbox: {
-    open: 'Abrir CodeSandbox'
->>>>>>> 26a70b2b (chore: add guides section (#407))
   },
   content: {
     guide: {
@@ -439,7 +300,6 @@ module.exports = {
       internals: 'Mecanismos'
     },
     examples: {
-<<<<<<< HEAD
       routing: 'Routing',
       dataFetching: 'Data Fetching',
       assetManagement: 'Asset Management',
@@ -452,11 +312,6 @@ module.exports = {
       modules: 'Modules',
       customization: 'Customization',
       advanced: 'Advanced'
-=======
-      essentials: 'Esenciales',
-      customization: 'Personalización',
-      advanced: 'Avanzado'
->>>>>>> 26a70b2b (chore: add guides section (#407))
     },
     faq: {
       configuration: 'Configuración',
@@ -464,7 +319,6 @@ module.exports = {
       deployment: 'Deployment'
     },
     guides: {
-<<<<<<< HEAD
       'get-started': 'Comenzar',
       concepts: 'Conceptos',
       features: 'Características',
@@ -495,23 +349,5 @@ module.exports = {
         contributionGuide: 'Contribution guide'
       }
     }
-<<<<<<< HEAD
-  },
-  cookies: {
-    consent: 'Usamos cookies para análisis de usuarios y mejoras en la página.',
-    linkLabel: 'Más información sobre las cookies',
-    button: 'Entendido'
-=======
-      'get-started': 'Get Started',
-      concepts: 'Concepts',
-      features: 'Features',
-      'directory-structure': 'Directory Structure',
-      'configuration-glossary': 'Configuration Glossary',
-      'internals-glossary': 'Internals Glossary',
-      'components-glossary': 'Components Glossary'
-    }
->>>>>>> 26a70b2b (chore: add guides section (#407))
-=======
->>>>>>> upstream/main
   }
 }

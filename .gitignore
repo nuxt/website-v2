@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 node_modules
 *.iml
 .idea
@@ -13,42 +12,3 @@ sw.*
 .husky
 package-lock.json
 yarn-error.log
-=======
-# dependencies
-yarn.lock
-node_modules
-
-# logs
-npm-debug.log
-
-# other
-.nuxt
-<<<<<<< HEAD
->>>>>>> 4cc9d7b5 (Home page and routes)
-=======
-dist
-.vscode
-.idea
-newrelic_agent.log
-.DS_STORE
-.eslintrc
-
-# docs
-docs
-
-# @nuxtjs/pwa
-sw.*
-<<<<<<< HEAD
->>>>>>> dd0be05d (feat(pwa): Add PWA mode)
-=======
-
-.env
-
-# Optional eslint cache
-.eslintcache
-
-
-cypress/integration/examples
-cypress/videos
-cypress/screenshots
->>>>>>> 26a70b2b (chore: add guides section (#407))

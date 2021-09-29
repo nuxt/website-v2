@@ -1,11 +1,6 @@
 {
   "extends": ["@nuxtjs"],
-<<<<<<< HEAD
   "baseBranches": ["main"],
-=======
-  "baseBranches": ["master"],
-  "ignoreDeps": [],
->>>>>>> 26a70b2b (chore: add guides section (#407))
   "lockFileMaintenance": {
     "enabled": true
   }

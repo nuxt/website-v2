@@ -11,9 +11,6 @@ primary:
   text: 38K+ GitHub stars
   url: https://github.com/nuxt/nuxt.js
   icon: IconGitHub
-secondary:
-  text: npm init nuxt-app
-  icon: IconCopy
 ---
 
 #title
@@ -21,6 +18,9 @@ The Intuitive Vue<br>Framework
 
 #description
 Build your next Vue.js application with confidence using Nuxt.<br class="hidden sm:block" /> An open source framework making web development simple and powerful.
+
+#secondary-button
+:button-link[Get started]{ href="/docs/get-started/installation" size="medium" aria-label="Get started" }
 ::
 
 ::home-learn-master
@@ -32,10 +32,10 @@ category: Learn
 [Easy]{.text-primary} to learn. [Easy]{.text-primary} to master
 
 #description
-Be part of the Nuxt community and help us Nuxtify the world.
+Learn everything you need to know, from beginner to master.
 
 #bottom
-:button-link[Learn everything]{href="/docs/get-started/installation" size="medium"}
+:button-link[Start learning]{href="/docs/get-started/installation" size="medium"}
 ::
 
 ::home-features

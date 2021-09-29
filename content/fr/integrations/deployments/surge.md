@@ -39,10 +39,10 @@ surge dist/
 
 Voilà!
 
-Si vous avez un projet avec des [pages dynamiques](/docs/2.x/directory-structure/pages#dynamic-pages), consultez la [proprieté `generate`](/docs/2.x/configuration-glossary/configuration-generate) afin d'indiquer à Nuxt comment générer ces pages dynamiques si vous utilisez Nuxt <= v2.12.
+Si vous avez un projet avec des [pages dynamiques](/docs/directory-structure/pages/#dynamic-pages), consultez la [proprieté `generate`](/docs/configuration-glossary/configuration-generate) afin d'indiquer à Nuxt comment générer ces pages dynamiques si vous utilisez Nuxt <= v2.12.
 
 <div class="Alert">
 
-Lorsque vous genérez un site statique avec `nuxt generate`, le [`context`](/docs/2.x/internals-glossary/context) fourni par [asyncData](/docs/2.x/features/data-fetching) ne contiendra pas `req` ni `res`.
+Lorsque vous genérez un site statique avec `nuxt generate`, le [`context`](/docs/internals-glossary/context) fourni par [asyncData](/docs/features/data-fetching) ne contiendra pas `req` ni `res`.
 
 </div>

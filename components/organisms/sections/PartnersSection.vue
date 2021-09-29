@@ -36,10 +36,12 @@ export default defineComponent({
     const partners = ref(null)
 
     useFetch(async () => {
-      partners.value = await $docus
-        .search(`/collections/partners/${props.category}`, { deep: true })
-        .where({ language: i18n.locale })
-        .fetch()
+      partners.value = (
+        await $docus
+          .search(`/collections/partners/${props.category}`, { deep: true })
+          .where({ language: i18n.locale })
+          .fetch()
+      ).map(partner => ({ ...partner, link: null, to: `/partners/${partner.slug}` }))
     })
 
     onMounted(() => {

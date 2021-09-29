@@ -2,7 +2,7 @@
   <div class="py-4 d-container-content light:text-sky-darker dark:text-white mb-4">
     <div class="flex space-x-4 items-center pb-4">
       <img :src="`/img/partners/categories/${icon}`" :alt="category" class="w-8 h-8" />
-      <h2 class="font-semibold text-center text-display-6">
+      <h2 :id="category" class="font-semibold text-center text-display-6 relative">
         <Markdown use="category-title" unwrap="p" />
       </h2>
     </div>
@@ -16,19 +16,18 @@
   </div>
 </template>
 
-<script>
-import { defineComponent, useContext, ref, useFetch } from '@nuxtjs/composition-api'
+<script lang="ts">
+import { defineComponent, useContext, ref, useFetch, onMounted } from '@nuxtjs/composition-api'
+import { scrollToHeading } from '@docus/theme/runtime'
 
 export default defineComponent({
   props: {
     category: {
       type: String,
-      default: '',
       required: true
     },
     icon: {
       type: String,
-      default: '',
       required: true
     }
   },
@@ -41,6 +40,17 @@ export default defineComponent({
         .search(`/collections/partners/${props.category}`, { deep: true })
         .where({ language: i18n.locale })
         .fetch()
+    })
+
+    onMounted(() => {
+      if (window.location.hash) {
+        const hash = window.location.hash.replace('#', '')
+
+        // do not remove setTimeout (wrong scroll pos)
+        setTimeout(() => {
+          scrollToHeading(hash, '--docs-scroll-margin-block')
+        }, 300)
+      }
     })
 
     return {

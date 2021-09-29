@@ -1,78 +1,78 @@
-import en from '~docus-i18n/en-US'
+import ar from '~docus-i18n/ar-AR'
 
 export default {
   ...en,
   banner: {
-    here: 'here',
-    format: '{nuxt} is coming... Discover more about it {here} !'
+    here: 'هــنا',
+    format: '{nuxt} قادم..... اكتشف أكثر من {here} !'
   },
   cookies: {
-    message: 'We use Cookies for user analysis and on-page improvements!',
-    link: 'Learn about cookies',
-    button: 'Got it'
+    message: 'نستخدم ملفات تعريف الارتباط لتحسين تجربة المستخدم وتحليلها!',
+    link: 'اعلم أكثر حول ملفات تعريف الارتباط',
+    button: 'فهمت'
   },
   footer: {
     titles: {
-      Discover: 'Discover',
-      Help: 'Help',
-      Support: 'Support'
+      Discover: 'إكتشف',
+      Help: 'مساعدة',
+      Support: 'دعم'
     },
-    'Our team': 'Our team',
-    'Design Kit': 'Design Kit',
-    'Contact us': 'Contact us',
-    Resources: 'Resources',
-    'Chat with us': 'Chat with us',
-    'Contribution guide': 'Contribution guide',
-    Sustainability: 'Sustainability',
-    Training: 'Training',
+    'Our team': 'فريقنا',
+    'Design Kit': 'أدوات التصميم',
+    'Contact us': 'اتصل بنا',
+    Resources: 'مصادر',
+    'Chat with us': 'راسلنا',
+    'Contribution guide': 'دليل المساهمة',
+    Sustainability: 'ثبات وديمومة',
+    Training: 'تدريب',
     newsletter: {
-      title: 'Newsletter',
-      description: 'The latest news, articles, and resources, sent to your inbox monthly.',
+      title: 'أخر الأخبار',
+      description: 'آخر الأخبار، المقالات، المصادر، ترسل الى بريدك الالكتروني شهريا.',
       form: {
-        email: 'Email',
-        subscribing: 'Subscribing...',
-        subscribe: 'Subscribe',
-        already_registered: 'You are already registered',
-        invalid_address: 'Invalid address',
+        email: 'البريد',
+        subscribing: 'اشتراك...',
+        subscribe: 'اشترك',
+        already_registered: 'أنت مسجل مسبقا',
+        invalid_address: 'عنوان غيرصالح',
         subscribed_messages: {
-          pre: 'An email to confirm your subscription has been sent to',
-          confirmation: 'Email confirmed'
+          pre: 'تم ارسال رسالة الى بريدك الالكتروني لتأكيد الاشتراك',
+          confirmation: 'تم تأكيد البريد الالكتروني'
         }
       }
     },
-    license: 'Nuxt is an open source framework under MIT license.'
+    license: 'نوكست هو منصة عمل مفتوحة المصدر تحت ترخيص MIT'
   },
   sidebar: {
     partners: {
-      title: 'Partners',
-      button: 'Support Us'
+      title: 'شركاؤنا',
+      button: 'ادعمنا'
     },
     ads: {
       fallback: {
-        title: 'Nuxt needs you!',
+        title: 'نوكست يحتاجك!',
         description: 'By allowing nuxtjs.org on your Ad-Blocker, you support our work and help us financially.'
       }
     }
   },
   home: {
     discover: {
-      pages: 'Pages',
-      ui: 'UI',
-      data: 'Data',
-      modules: 'Modules',
-      deployment: 'Deployment'
+      pages: 'الصفحات',
+      ui: 'واجهة المستخدم',
+      data: 'البيانات',
+      modules: 'الوحدات',
+      deployment: 'إنتاج'
     },
-    cli: 'From CLI',
-    scratch: 'From Scratch'
+    cli: 'من واجهة الأوامر',
+    scratch: 'من الصفر'
   },
   modules: {
     search: 'Search a module (name, category, username, etc.)',
-    sort_by: 'Sort by',
+    sort_by: 'مصنفة حسب',
     sort_fields: {
-      downloads: 'Downloads',
-      stars: 'Stars'
+      downloads: 'تنزيلات',
+      stars: 'نجوم'
     },
-    loading: 'Loading...',
+    loading: 'جاري التحميل....',
     error: 'An error occured while fetching modules.'
   },
   resources: {

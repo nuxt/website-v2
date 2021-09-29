@@ -1,5 +1,5 @@
 <template>
-  <li class="ListCard group">
+  <div class="ListCard group">
     <template v-if="item.link">
       <div class="ListCard-external group-hover:opacity-100">
         <slot name="external">
@@ -32,7 +32,7 @@
       <p class="text-sm">{{ item.description || 'Description' }}</p>
     </div>
     <slot name="footer" />
-  </li>
+  </div>
 </template>
 <script lang="ts">
 import { defineComponent } from '@nuxtjs/composition-api'

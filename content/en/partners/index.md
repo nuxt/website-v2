@@ -18,7 +18,7 @@ Find your perfect match. Get help from a solutions partner or solutions provider
 ::partners-section
 ---
 category: technology
-icon: 'icon.png'
+icon: 'technology.svg'
 ---
 
 #category-title
@@ -28,7 +28,7 @@ Technology
 ::partners-section
 ---
 category: agency
-icon: 'icon.png'
+icon: 'agency.svg'
 ---
 
 #category-title

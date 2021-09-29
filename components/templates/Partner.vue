@@ -1,16 +1,12 @@
 <template>
   <div>
-    <div
-      class="h-80 p-6"
-      :class="{ 'bg-sky-dark': !page.color }"
-      :style="page.color ? `background-color: ${page.color}` : ''"
-    >
+    <div class="h-80 p-6" :style="customBackground">
       <img v-if="page.logoFull" loading="lazy" :src="`${page.logoFull}`" class="w-full h-full object-contain" />
     </div>
 
     <div class="d-container-content">
       <div class="relative flex gap-8 -mt-6 sm:-mt-8 pb-8 xl:pb-16">
-        <div class="w-24 h-24 sm:w-32 sm:h-32 p-4 bg-sky-darker rounded-md">
+        <div class="w-24 h-24 sm:w-32 sm:h-32 p-4 bg-cloud-surface dark:bg-sky-darker rounded-md">
           <img
             :src="`/img/sponsors/sponsors-square/light/${page.icon}`"
             :alt="page.title"
@@ -30,12 +26,20 @@
             <span>{{ page.fullDescription }}</span>
           </p>
 
-          <div class="flex flex-col sm:flex-row w-full bg-sky-darker rounded-md mt-16 xl:mt-24 overflow-hidden">
-            <div
-              class="flex flex-col justify-between sm:w-1/3 p-6 gap-8"
-              :class="{ 'bg-sky-dark': !page.color }"
-              :style="page.color ? `background-color: ${page.color}` : ''"
-            >
+          <div
+            class="
+              flex flex-col
+              sm:flex-row
+              w-full
+              bg-cloud-surface
+              dark:bg-sky-darker
+              rounded-md
+              mt-16
+              xl:mt-24
+              overflow-hidden
+            "
+          >
+            <div class="flex flex-col justify-between text-white sm:w-1/3 p-6 gap-8" :style="customBackground">
               <div>
                 <h2 class="font-semibold text-lg">
                   {{ $t('sustainability.mvp_detail.contact_partner', { partner: page.title }) }}
@@ -110,10 +114,10 @@
         </div>
 
         <div class="relative w-full xl:w-[30%]">
-          <div class="xl:sticky xl:top-header px-6 py-3 bg-sky-darker rounded-md">
+          <div class="xl:sticky xl:top-header px-6 py-3 bg-cloud-surface dark:bg-sky-darker rounded-md">
             <div v-if="page.location" class="py-3">
               <h2 class="font-semibold text-lg mb-2">{{ $t('sustainability.mvp_detail.location') }}</h2>
-              <span class="text-sm text-gray-300">{{ page.location }}</span>
+              <span class="text-sm text-sky-dark dark:text-gray-300">{{ page.location }}</span>
             </div>
             <div v-if="page.services && page.services.length" class="py-3">
               <h2 class="font-semibold text-lg mb-2">{{ $t('sustainability.mvp_detail.services') }}</h2>
@@ -121,7 +125,7 @@
                 <li
                   v-for="(service, index) in page.services"
                   :key="index"
-                  class="text-sm rounded-md bg-sky-dark px-2 py-1"
+                  class="text-sm rounded-md bg-cloud-lightest dark:bg-sky-dark px-2 py-1"
                 >
                   {{ service }}
                 </li>
@@ -131,7 +135,7 @@
               <h2 class="font-semibold text-lg mb-2">{{ $t('sustainability.mvp_detail.resources') }}</h2>
               <ul>
                 <li v-for="(link, index) in page.resources" :key="index">
-                  <a :href="link.url" class="inline-flex items-center text-sm text-gray-300"
+                  <a :href="link.url" class="inline-flex items-center text-sm text-sky-dark dark:text-gray-300"
                     ><IconExternalLink class="inline w-4 h-4 mr-1" />
                     {{ link.name }}
                   </a>
@@ -142,7 +146,7 @@
         </div>
       </div>
 
-      <div class="relative flex items-center justify-center bg-sky-dark rounded-md h-60 mt-16 xl:mt-24">
+      <div class="relative flex items-center justify-center rounded-md h-60 mt-16 xl:mt-24">
         <img
           loading="lazy"
           :src="`/img/home/discover/partners/partners-illustration.svg`"
@@ -181,12 +185,29 @@ export default defineComponent({
       return domain
     })
 
+    const customBackground = computed(() => {
+      if (typeof props.page.color === 'object') {
+        if (props.page.color?.length === 1) {
+          return `background-color: ${props.page.color[0]}`
+        }
+        const colors = props.page.color
+          .map((value, index) => `${value} ${Math.round((index / (props.page.color.length - 1)) * 100)}%`)
+          .join(', ')
+        return `background: radial-gradient(100% 100% at 0% 0%, ${colors})`
+      } else if (props.page.color) {
+        return `background-color: ${props.page.color}`
+      } else {
+        return 'background-color: #255461' // sky-dark
+      }
+    })
+
     function onSubmit() {
       // TODO
     }
 
     return {
       websiteDomain,
+      customBackground,
       onSubmit
     }
   }
@@ -199,10 +220,10 @@ export default defineComponent({
     @apply text-sm mb-1 font-medium;
   }
   & input {
-    @apply w-full rounded-md h-10 bg-sky-dark px-3 focus:outline-none border-2 border-transparent focus:border-primary;
+    @apply w-full rounded-md h-10 bg-cloud-lightest dark:bg-sky-dark px-3 focus:outline-none border-2 border-transparent focus:border-primary;
   }
   & textarea {
-    @apply w-full rounded-md resize-none bg-sky-dark px-3 py-2 focus:outline-none border-2 border-transparent focus:border-primary;
+    @apply w-full rounded-md resize-none bg-cloud-lightest dark:bg-sky-dark px-3 py-2 focus:outline-none border-2 border-transparent focus:border-primary;
   }
   & button {
     @apply rounded-md text-black text-sm font-medium bg-primary px-4 py-2 focus:outline-none border-2 border-transparent focus:border-black;

@@ -31,10 +31,10 @@ category: Apprendre
 [_Facile_]{.text-primary} à apprendre. [_Facile_]{.text-primary} à maîtriser
 
 #description
-Prenez part à la communauté Nuxt et aidez nous à rendre le monde plus Nuxt.
+Tout ce que vous devez savoir, pour passer de débutant à expert.
 
 #bottom
-:button-link[Commencez]{href="/docs/get-started/installation" size="medium"}
+:button-link[Commencer le voyage]{href="/docs/get-started/installation" size="medium"}
 ::
 
 ::home-features

@@ -1,7 +1,13 @@
 <template>
   <div>
     <div class="h-80 p-6" :style="customBackground">
-      <img v-if="page.logoFull" loading="lazy" :src="`${page.logoFull}`" class="w-full h-full object-contain" />
+      <img
+        v-if="page.logoFull"
+        loading="lazy"
+        :src="`${page.logoFull}`"
+        :alt="page.title"
+        class="w-full h-full object-contain"
+      />
     </div>
 
     <div class="d-container-content">
@@ -34,8 +40,8 @@
               bg-cloud-surface
               dark:bg-sky-darker
               rounded-md
-              mt-16
-              xl:mt-24
+              mt-8
+              xl:mt-12
               overflow-hidden
             "
           >
@@ -87,23 +93,23 @@
               @submit.prevent="onSubmit"
             >
               <div>
-                <label class="block">{{ $t('sustainability.mvp_detail.first_name') }}</label>
+                <label for="firstName" class="block">{{ $t('sustainability.mvp_detail.first_name') }}</label>
                 <input id="firstName" type="text" />
               </div>
               <div>
-                <label class="block">{{ $t('sustainability.mvp_detail.last_name') }}</label>
+                <label for="lastName" class="block">{{ $t('sustainability.mvp_detail.last_name') }}</label>
                 <input id="lastName" type="text" />
               </div>
               <div>
-                <label class="block">{{ $t('sustainability.mvp_detail.company_name') }}</label>
+                <label for="companyName" class="block">{{ $t('sustainability.mvp_detail.company_name') }}</label>
                 <input id="companyName" type="text" />
               </div>
               <div>
-                <label class="block">{{ $t('sustainability.mvp_detail.email') }}</label>
+                <label for="email" class="block">{{ $t('sustainability.mvp_detail.email') }}</label>
                 <input id="email" type="text" />
               </div>
               <div class="lg:col-span-full">
-                <label class="block">{{ $t('sustainability.mvp_detail.message') }}</label>
+                <label for="message" class="block">{{ $t('sustainability.mvp_detail.message') }}</label>
                 <textarea id="message" rows="3" />
               </div>
               <div class="lg:col-span-full flex justify-end">

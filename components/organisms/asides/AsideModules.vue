@@ -44,15 +44,22 @@
 <script lang="ts">
 import { defineComponent } from '@nuxtjs/composition-api'
 import { useFuse } from '../../../plugins/fuse'
-import { useModules } from '../../../plugins/modules'
 
 export default defineComponent({
-  setup() {
-    const { categories, modules } = useModules()
-    const { selectedCategory, selectCategory } = useFuse(modules)
+  props: {
+    categories: {
+      type: Array,
+      default: () => []
+    },
+    modules: {
+      type: Array,
+      default: () => []
+    }
+  },
+  setup(props) {
+    const { selectedCategory, selectCategory } = useFuse(props.modules)
 
     return {
-      categories,
       selectedCategory,
       selectCategory
     }

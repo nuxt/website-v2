@@ -10,7 +10,8 @@
       [inactiveClass]: !forceActive && currentSlug !== link.slug
     }"
   >
-    {{ link.title }}
+    <HeaderDropdown :title="link.title" :sub-title="link.subTitle" :icon="link.icon" class="hidden lg:block" />
+    <span class="block lg:hidden">{{ link.title }}</span>
   </component>
 </template>
 

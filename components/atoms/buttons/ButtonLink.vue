@@ -35,7 +35,7 @@ export default defineComponent({
 
 <style lang="postcss" scoped>
 a.button-link {
-  @apply inline-flex items-center flex-none rounded-md mb-2 sm:mb-0 px-3 py-1.5 text-xs leading-4 text-black transition-colors duration-200 border border-transparent bg-primary-500 hover:bg-primary-400  focus:ring-2 focus:ring-offset-2 focus:ring-offset-white dark:focus:ring-offset-gray-900 focus:ring-primary-600 focus:outline-none;
+  @apply inline-flex items-center flex-none rounded-md px-3 py-1.5 text-xs leading-4 text-black transition-colors duration-200 border border-transparent bg-primary-500 hover:bg-primary-400  focus:ring-2 focus:ring-offset-2 focus:ring-offset-white dark:focus:ring-offset-gray-900 focus:ring-primary-600 focus:outline-none;
   &.medium {
     @apply px-4 py-2.5 text-sm leading-4;
   }

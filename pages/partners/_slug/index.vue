@@ -29,6 +29,23 @@ export default {
     return {
       page
     }
+  },
+  head() {
+    const title = this.page.title
+    const description = this.page.description
+
+    return {
+      title,
+      meta: [
+        { hid: 'description', name: 'description', content: description },
+        // Open Graph
+        { hid: 'og:title', property: 'og:title', content: `Nuxt - ${title}` },
+        { hid: 'og:description', property: 'og:description', content: description },
+        // Twitter Card
+        { hid: 'twitter:title', name: 'twitter:title', content: `Nuxt - ${title}` },
+        { hid: 'twitter:description', name: 'twitter:description', content: description }
+      ]
+    }
   }
 }
 </script>

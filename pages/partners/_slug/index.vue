@@ -3,7 +3,12 @@
 </template>
 
 <script>
-export default {
+import { defineComponent } from '@nuxtjs/composition-api'
+
+// Some code has been imported from Docus to make this working
+// @docus/app/dist/app/pages/_.vue
+
+export default defineComponent({
   async asyncData({ $docus, i18n, route, error }) {
     const { slug } = route.params
     if (!slug) {
@@ -26,8 +31,15 @@ export default {
 
     const page = pages[0]
 
+    const templateOptions = {
+      ...$docus.settings.value.layout,
+      aside: false,
+      asideClass: ''
+    }
+
     return {
-      page
+      page,
+      templateOptions
     }
   },
   head() {
@@ -46,6 +58,24 @@ export default {
         { hid: 'twitter:description', name: 'twitter:description', content: description }
       ]
     }
+  },
+  created() {
+    if (process.client) {
+      // Set template options
+      this.$docus.layout.value = this.templateOptions
+
+      // Set Docus runtime current page
+      this.$docus.currentPage.value = this.page
+      // Update navigation path to update currentNav
+      this.$docus.currentPath.value = `/${this.$route.params.pathMatch}`
+    }
+  },
+  render(h) {
+    return h(this.page.template, {
+      props: {
+        page: this.page
+      }
+    })
   }
-}
+})
 </script>

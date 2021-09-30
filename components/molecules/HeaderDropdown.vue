@@ -1,9 +1,11 @@
 <template>
-  <div class="flex space-x-2">
-    <img :src="`/img/header/${slug}/${icon}`" :alt="title" class="w-4 h-4" />
-    <div>
-      <h5 class="font-medium text-sm">{{ title }}</h5>
-      <p class="text-xs">{{ subTitle }}</p>
+  <div class="py-1 px-2 hover:bg-cloud-lightest hover:dark:bg-sky-darkest rounded-md">
+    <div class="flex space-x-2">
+      <img :src="`/img/header/${icon}`" :alt="title" />
+      <div>
+        <h5 class="font-bold text-sm">{{ title }}</h5>
+        <p class="text-xs">{{ subtitle }}</p>
+      </div>
     </div>
   </div>
 </template>
@@ -14,15 +16,11 @@ export default {
       type: String,
       required: true
     },
-    subTitle: {
+    subtitle: {
       type: String,
       required: true
     },
     icon: {
-      type: String,
-      required: true
-    },
-    slug: {
       type: String,
       required: true
     }

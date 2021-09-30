@@ -51,7 +51,7 @@
           class="divide-y"
           :class="isHome ? 'divide-gray-700' : 'divide-gray-100 dark:divide-gray-700'"
         >
-          <div v-for="(subItems, index) of items" :key="index" class="py-1">
+          <div v-for="(subItems, index) of items" :key="index" :class="itemsClass">
             <div
               v-for="(item, i) of subItems"
               :key="i"
@@ -159,6 +159,10 @@ export default defineComponent({
     preventOverflow: {
       type: Number,
       default: 8
+    },
+    itemsClass: {
+      type: String,
+      default: 'py-1'
     }
   },
   setup() {

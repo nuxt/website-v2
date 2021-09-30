@@ -22,6 +22,10 @@
             :items="[link.items]"
             placement="bottom"
             mode="hover"
+            dropdown-menu-class="h-full bg-cloud-surface dark:bg-sky-darker"
+            dropdown-class="w-max"
+            open-delay="0"
+            :items-class="`py-1 grid grid-cols-${Math.round(link.items.length / 3)} gap-x-12`"
           >
             <template #trigger>
               <HeaderNavigationLink
@@ -30,16 +34,27 @@
                 :class="{ 'text-white': isHome }"
                 :force-active="isActiveGroup(link)"
                 :inactive-class="`${!isHome ? 'hover:d-primary-text-hover ' : 'hover:text-gray-300'}`"
-              />
+              >
+                {{ link.title }}
+              </HeaderNavigationLink>
             </template>
 
             <template #item="{ item }">
               <HeaderNavigationLink
                 :link="item"
-                class="px-4 py-1"
+                class="px-2 py-1"
                 :class="{ 'text-white': isHome }"
                 :inactive-class="`${!isHome ? 'hover:d-primary-text-hover ' : 'hover:text-gray-300'}`"
-              />
+              >
+                <span class="block lg:hidden">{{ item.title }}</span>
+                <HeaderDropdown
+                  :title="item.title"
+                  :subtitle="item.subtitle"
+                  :icon="item.icon"
+                  :slug="item.slug"
+                  class="hidden lg:block"
+                />
+              </HeaderNavigationLink>
             </template>
           </Dropdown>
           <HeaderNavigationLink
@@ -49,7 +64,9 @@
             class="px-1 py-2"
             :class="{ 'text-white': isHome }"
             :inactive-class="`${!isHome ? 'hover:d-primary-text-hover ' : 'hover:text-gray-300'}`"
-          />
+          >
+            {{ link.title }}
+          </HeaderNavigationLink>
         </template>
       </nav>
 

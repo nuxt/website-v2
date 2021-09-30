@@ -152,16 +152,13 @@
         </div>
       </div>
 
-      <div class="relative flex items-center justify-center rounded-md h-60 mt-16 xl:mt-24">
-        <img
-          loading="lazy"
-          :src="`/img/home/discover/partners/partners-illustration.svg`"
-          class="absolute inset-0"
-          alt="A landscape image"
-        />
-        <div class="text-center z-10">
-          <span class="block text-5xl font-bold mb-8">{{ $t('sustainability.mvp_detail.join_us') }}</span>
-          <ButtonLink size="large">{{ $t('sustainability.mvp_detail.become_partner') }}</ButtonLink>
+      <div class="relative flex items-center justify-center mt-16 xl:mt-24">
+        <img loading="lazy" :src="`/img/partners/banner.svg`" alt="A landscape image" />
+        <div class="absolute inset-0 flex lg:flex-col items-center justify-center gap-4 sm:gap-12 lg:gap-8">
+          <span class="block text-2xl sm:text-4xl font-bold">{{ $t('sustainability.mvp_detail.join_us') }}</span>
+          <ButtonLink :size="$mq === 'xs' ? 'small' : 'large'" class="mb-0">{{
+            $t('sustainability.mvp_detail.become_partner')
+          }}</ButtonLink>
         </div>
       </div>
     </div>

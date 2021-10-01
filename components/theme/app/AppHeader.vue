@@ -48,7 +48,7 @@
                 :class="{ 'text-white': isHome }"
                 :inactive-class="`${!isHome ? 'hover:d-primary-text-hover ' : 'hover:text-gray-300'}`"
               >
-                <ItemHeaderDropdown
+                <HeaderDropdownItem
                   :title="item.title"
                   :subtitle="item.subtitle"
                   :icon="item.icon"

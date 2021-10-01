@@ -48,13 +48,11 @@
                 :class="{ 'text-white': isHome }"
                 :inactive-class="`${!isHome ? 'hover:d-primary-text-hover ' : 'hover:text-gray-300'}`"
               >
-                <span class="block lg:hidden">{{ item.title }}</span>
                 <ItemHeaderDropdown
                   :title="item.title"
                   :subtitle="item.subtitle"
                   :icon="item.icon"
                   :color-class="item.color"
-                  class="hidden lg:block"
                 /> </HeaderNavigationLink
             ></template>
           </Dropdown>

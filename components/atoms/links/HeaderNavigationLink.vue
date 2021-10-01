@@ -4,7 +4,7 @@
     v-bind="linkProps"
     :key="link.slug"
     :aria-label="link.title"
-    class="flex font-medium capitalize group whitespace-nowrap"
+    class="flex font-medium group whitespace-nowrap"
     :class="{
       [activeClass]: forceActive || currentSlug === link.slug,
       [inactiveClass]: !forceActive && currentSlug !== link.slug

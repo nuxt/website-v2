@@ -22,9 +22,11 @@
             :items="[link.items]"
             placement="bottom"
             mode="hover"
-            dropdown-menu-class="h-full bg-cloud-surface dark:bg-sky-darker"
+            :dropdown-menu-class="
+              ('h-full', isHome ? 'bg-sky-darker text-white' : 'bg-cloud-surface dark:bg-sky-darker')
+            "
             dropdown-class="w-max"
-            open-delay="0"
+            :open-delay="0"
             :items-class="`py-1 grid grid-cols-${Math.round(link.items.length / 3)} gap-x-12`"
           >
             <template #trigger>
@@ -47,11 +49,11 @@
                 :inactive-class="`${!isHome ? 'hover:d-primary-text-hover ' : 'hover:text-gray-300'}`"
               >
                 <span class="block lg:hidden">{{ item.title }}</span>
-                <HeaderDropdown
+                <HeaderItemDropdown
                   :title="item.title"
                   :subtitle="item.subtitle"
                   :icon="item.icon"
-                  :slug="item.slug"
+                  :color-class="item.color"
                   class="hidden lg:block"
                 />
               </HeaderNavigationLink>

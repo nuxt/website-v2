@@ -49,14 +49,13 @@
                 :inactive-class="`${!isHome ? 'hover:d-primary-text-hover ' : 'hover:text-gray-300'}`"
               >
                 <span class="block lg:hidden">{{ item.title }}</span>
-                <HeaderItemDropdown
+                <ItemHeaderDropdown
                   :title="item.title"
                   :subtitle="item.subtitle"
                   :icon="item.icon"
                   :color-class="item.color"
                   class="hidden lg:block"
                 />
-              </HeaderNavigationLink>
             </template>
           </Dropdown>
           <HeaderNavigationLink
@@ -89,13 +88,15 @@
 
 <script>
 import { defineComponent, useContext, computed } from '@nuxtjs/composition-api'
+import ItemHeaderDropdown from 'components/molecules/ItemHeaderDropdown.vue'
 import { useNav } from '~/plugins/nav'
 
 export default defineComponent({
   props: {
     links: {
       type: Array,
-      default: () => []
+
+ItemHeaderDropdown  default: () => []
     }
   },
   setup() {

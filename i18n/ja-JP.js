@@ -91,8 +91,16 @@ export default {
     mvp_detail: {
       services: 'サービス',
       location: '場所',
-      contact_partner: 'パートナーに連絡する',
-      visit_website: 'ウェブサイトに訪問する'
+      contact_partner: 'Contact {partner}',
+      resources: 'Resources',
+      join_us: 'Join us',
+      they_will_get_back_to_you: 'They will get back to you asap.',
+      first_name: 'First name',
+      last_name: 'Last name',
+      company_name: 'Company name',
+      email: 'Email',
+      message: 'Message',
+      submit: 'Submit'
     }
   },
   support: {

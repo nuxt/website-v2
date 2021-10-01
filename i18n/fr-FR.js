@@ -92,8 +92,16 @@ export default {
     mvp_detail: {
       services: 'Services',
       location: 'Lieu',
-      contact_partner: 'Contacter le partenaire',
-      visit_website: 'Visitez le website'
+      contact_partner: 'Contacter {partner}',
+      resources: 'Ressources',
+      join_us: 'Nous rejoindre',
+      they_will_get_back_to_you: 'Ils vous recontacteront prochainement.',
+      first_name: 'Prénom',
+      last_name: 'Nom',
+      company_name: 'Entreprise',
+      email: 'Email',
+      message: 'Message',
+      submit: 'Envoyer'
     }
   },
   support: {

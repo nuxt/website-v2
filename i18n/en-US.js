@@ -93,7 +93,6 @@ export default {
       location: 'Location',
       resources: 'Resources',
       join_us: 'Join us',
-      become_partner: 'Become partner',
       contact_partner: 'Contact {partner}',
       they_will_get_back_to_you: 'They will get back to you asap.',
       first_name: 'First name',

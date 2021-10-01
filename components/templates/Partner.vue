@@ -22,7 +22,7 @@
         </div>
         <div class="flex flex-col justify-end gap-1">
           <h1 class="text-display-5 sm:text-display-4 font-bold">{{ page.title }}</h1>
-          <a :href="page.link"><IconExternalLink class="inline w-4 h-4 mr-1" /> {{ websiteDomain }}</a>
+          <Link :to="page.link" blank><IconExternalLink class="inline w-4 h-4 mr-1" /> {{ websiteDomain }}</Link>
         </div>
       </div>
 
@@ -141,10 +141,10 @@
               <h2 class="font-semibold text-lg mb-2">{{ $t('sustainability.mvp_detail.resources') }}</h2>
               <ul>
                 <li v-for="(link, index) in page.resources" :key="index">
-                  <a :href="link.url" class="inline-flex items-center text-sm text-sky-dark dark:text-gray-300"
+                  <Link :to="link.url" blank class="inline-flex items-center text-sm text-sky-dark dark:text-gray-300"
                     ><IconExternalLink class="inline w-4 h-4 mr-1" />
                     {{ link.name }}
-                  </a>
+                  </Link>
                 </li>
               </ul>
             </div>
@@ -156,8 +156,8 @@
         <img loading="lazy" :src="`/img/partners/banner.svg`" alt="A landscape image" />
         <div class="absolute inset-0 flex lg:flex-col items-center justify-center gap-4 sm:gap-12 lg:gap-8">
           <span class="block text-2xl sm:text-4xl font-bold">{{ $t('sustainability.mvp_detail.join_us') }}</span>
-          <ButtonLink :size="$mq === 'xs' ? 'small' : 'large'" class="mb-0">{{
-            $t('sustainability.mvp_detail.become_partner')
+          <ButtonLink href="mailto:partners@nuxtlabs.com" :size="$mq === 'xs' ? 'small' : 'large'" blank class="mb-0">{{
+            $t('partners.become_partner')
           }}</ButtonLink>
         </div>
       </div>

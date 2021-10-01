@@ -157,7 +157,7 @@ Nuxt の開発は情熱を持った開発者によって作られますが、メ
   ::
 
 #bottom
-  :button-link[Become a partner]{href="mailto:partners@nuxtlabs.com" size="medium"}
+  :button-link[Become a partner]{href="mailto:partners@nuxtlabs.com" size="medium" blank}
 ::
 
 ::home-learn-guides

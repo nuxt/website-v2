@@ -157,7 +157,7 @@ Nuxt development is carried out by passionate developers, but the amount of effo
   ::
 
 #bottom
-  :button-link[Become a partner]{href="mailto:partners@nuxtlabs.com" size="medium"}
+  :button-link[Become a partner]{href="mailto:partners@nuxtlabs.com" size="medium" blank}
 ::
 
 ::home-learn-guides

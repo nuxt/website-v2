@@ -55,8 +55,8 @@
                   :icon="item.icon"
                   :color-class="item.color"
                   class="hidden lg:block"
-                />
-            </template>
+                /> </HeaderNavigationLink
+            ></template>
           </Dropdown>
           <HeaderNavigationLink
             v-else
@@ -88,15 +88,13 @@
 
 <script>
 import { defineComponent, useContext, computed } from '@nuxtjs/composition-api'
-import ItemHeaderDropdown from 'components/molecules/ItemHeaderDropdown.vue'
 import { useNav } from '~/plugins/nav'
 
 export default defineComponent({
   props: {
     links: {
       type: Array,
-
-ItemHeaderDropdown  default: () => []
+      default: () => []
     }
   },
   setup() {

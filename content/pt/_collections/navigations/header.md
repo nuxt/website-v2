@@ -133,6 +133,4 @@ links:
     title: "Partners"
     slug: "partners"
     to: "/partners"
-    subtitle: "subtitle"
-    icon: "icon"
 ---

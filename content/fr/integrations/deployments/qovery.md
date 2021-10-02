@@ -55,7 +55,7 @@ Cliquez sur "Déployer".
 
 ## Déployer
 
-Your app should be deployed. You can see the status in real time by clicking on deployment logs.
+Votre application devrait être déployée. Vous pouvez voir le statut en temps réel en cliquant sur les journaux de déploiement.
 
 ## Déploiement continu
 

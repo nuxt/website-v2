@@ -20,7 +20,7 @@ Créez, déployez et faites évoluer facilement vos applications Nuxt avec [Stor
 
 Ce guide suppose que vous avez déjà un projet Nuxt à déployer. Si vous avez besoin d'un projet, utilisez [create-nuxt-app](https://github.com/nuxt/create-nuxt-app) pour commencer ou forker [l'exemple Nuxt de Stormkit](https://github.com/stormkit-dev/hackernews-nuxt) avant de continuer.
 
-## Installer
+## Installation
 
 1. Accédez à [app.stormkit.io](https://app.stormkit.io) et connectez-vous en sélectionnant votre fournisseur git.
 2. Une fois connecté, Stormkit vous demandera dans quel fournisseur se trouve votre base de code. Cliquez à nouveau sur le fournisseur.

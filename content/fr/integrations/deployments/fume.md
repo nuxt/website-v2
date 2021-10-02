@@ -26,7 +26,7 @@ Fume comprend les fonctionnalités suivantes :
 - Contrôle de domaine - importer des hôtes, émettre des certificats et mapper l'enregistrement aux environnements
 - Notifications intégrées à Slack, Discord et autres plateformes de collaboration
 
-## Installer
+## Installation
 
 Obtenez une URL prête pour la production en 2 minutes en suivant ces étapes :
 

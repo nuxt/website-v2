@@ -1,7 +1,7 @@
 ---
 template: blank
 title: Ist Nuxt 3 bereit?
-description: 'Nuxt 3 wurde von Grund auf für das moderne Web neu entwickelt. Hybrides Static & Server-Rendering, API-Routen und natives Serverless.'
+description: 'Nuxt 3 wurde von Grund auf für das moderne Web neu entwickelt. Hybrides statisches & Server-Rendering, API-Routen und natives Serverless.'
 head.titleTemplate: null
 ---
 
@@ -15,7 +15,7 @@ Nuxt 3 kommt[.]{.text-primary}
 
 #description
 Von Grund auf neu aufgebaut für das moderne Web.<br>
-Hybrides Static & Server-Rendering, API-Routen und natives Serverless.
+Hybrides statisches & Server-Rendering, API-Routen und natives Serverless.
 
 #body
 Lassen Sie sich per E-Mail benachrichtigen, wenn Nuxt 3 in der öffentlichen Beta-Version erscheint.
@@ -51,7 +51,7 @@ Nuxt 3 hat eine neue Architektur mit einem kleineren Kern und wurde für eine sc
   ::section-content-item
   ---
   title: Hybrid
-  description: 'Incremental Static Generation und andere erweiterte Modi sind jetzt möglich.'
+  description: 'Inkrementelle statische Generation und andere erweiterte Modi sind jetzt möglich.'
   image: IconHybrid
   imageClass: w-10 h-10
   ---
@@ -141,7 +141,7 @@ Nuxt 3 hat eine neue Architektur mit einem kleineren Kern und wurde für eine sc
 
     In der Produktion werden Ihre Anwendung und Ihr Server in einem universellen `.output`-Verzeichnis erstellt. Diese **Ausgabe ist leicht**: minifiziert und von allen Node.js-Modulen entfernt (außer Polyfills). Sie können diese Ausgabe auf jedem System bereitstellen, das JavaScript unterstützt, von Node.js, Serverless, Workers, Edge-seitigem Rendering oder rein statisch.
 
-	Die Ausgabe wird sowohl mit Runtime-Code kombiniert, um Ihren Nuxt-Server in jeder Umgebung auszuführen (einschließlich experimenteller Browser Service Worker!), als auch um Ihnen Static Dateien zu liefern, was es zu einem **echten Hybrid-Framework** für den JAMStack macht. Darüber hinaus ist eine native Speicherschicht implementiert, die Multi-Source, Treiber und lokale Assets unterstützt.
+	Die Ausgabe wird sowohl mit Runtime-Code kombiniert, um Ihren Nuxt-Server in jeder Umgebung auszuführen (einschließlich experimenteller Browser Service Worker!), als auch um Ihnen statische Dateien zu liefern, was es zu einem **echten Hybrid-Framework** für den JAMStack macht. Darüber hinaus ist eine native Speicherschicht implementiert, die Multi-Source, Treiber und lokale Assets unterstützt.
 
     Die Grundlagen von dem Nitro Server sind rollup und [h3](https://github.com/unjs/h3): ein minimales HTTP Framework gemacht für hohe Leistung und Tragbarkeit.
   ::

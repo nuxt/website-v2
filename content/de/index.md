@@ -53,7 +53,7 @@ image: /img/home/discover/dx/zero-config.svg
 
 ::section-content-item
 ---
-title: File-system Routing
+title: Dateisystem-Routing
 description: 'Automatisches Routing und Code-Splitting für jede Seite.'
 image: /img/home/discover/dx/file-system-routing.svg
 ---
@@ -61,23 +61,23 @@ image: /img/home/discover/dx/file-system-routing.svg
 
 ::section-content-item
 ---
-title: Rendering Modes
-description: 'Wechseln Sie zwischen Static Website-Generierung und On-Demand-Server-Rendering.'
+title: Rendering-Modi
+description: 'Wechseln Sie zwischen statischer Website-Generierung und On-Demand-Server-Rendering.'
 image: /img/home/discover/dx/hybrid.svg
 ---
 ::
 
 ::section-content-item
 ---
-title: Data Fetching
-description: 'Laden Sie Ihre Inhalte aus jeder beliebigen Quelle in Ihren Vue-Komponenten, SSR ready.'
+title: Abruf von Daten
+description: 'Laden Sie Ihre Inhalte aus jeder beliebigen Quelle in Ihren Vue-Komponenten, SSR bereit.'
 image: /img/home/discover/dx/fetch.svg
 ---
 ::
 
 ::section-content-item
 ---
-title: Strong Conventions
+title: Starke Konventionen
 description: 'Effiziente Teamarbeit mit einer starken Verzeichnisstruktur und Konventionen.'
 image: /img/home/discover/dx/conventions.svg
 ---
@@ -93,7 +93,7 @@ image: /img/home/discover/dx/seo.svg
 
 ::section-content-item
 ---
-title: Components Auto-import
+title: Komponenten Auto-Importieren
 description: 'Verwenden Sie Ihre Komponenten, Nuxt importiert sie mit intelligentem Code-Splitting.'
 image: /img/home/discover/dx/auto-inject.svg
 ---

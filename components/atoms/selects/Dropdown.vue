@@ -8,7 +8,7 @@
     @mouseover="mode === 'hover' ? mouseover() : () => {}"
     @mouseleave="mode === 'hover' ? mouseleave() : () => {}"
   >
-    <div class="flex items-center w-full">
+    <div class="flex items-center w-full" :class="mainLinkClass">
       <slot name="trigger" :toggle="toggle" :open="open" />
       <svg
         v-if="icon"
@@ -127,6 +127,10 @@ export default defineComponent({
     customLinkClass: {
       type: String,
       default: null
+    },
+    mainLinkClass: {
+      type: String,
+      default: ''
     },
     rounded: {
       type: Boolean,

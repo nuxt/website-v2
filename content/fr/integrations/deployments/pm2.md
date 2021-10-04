@@ -1,26 +1,26 @@
 ---
 template: guide
 title: PM2
-description: How to deploy Nuxt with PM2 cluster mode enabled?
+description: Comment déployer Nuxt avec le mode cluster PM2 activé ?
 target: Server
 category: deployment
 logo:
   light: "/img/partners/dark/pm2.png"
   dark: "/img/partners/light/pm2.png"
 ---
-# Deploy Nuxt using PM2
+# Déployer Nuxt en utilisant PM2
 
-How to deploy Nuxt with PM2 cluster mode enabled?
+Comment déployer Nuxt avec le mode cluster PM2 activé ?
 
 ---
 
-Deploying using [PM2](https://pm2.keymetrics.io/) (Process Manager 2) is a fast and easy solution for hosting your universal Nuxt application on your server or VM.
+Le déploiement à l'aide de [PM2](https://pm2.keymetrics.io/) (Process Manager 2) est une solution rapide et facile pour héberger votre application universelle Nuxt sur votre serveur ou votre VM.
 
-In this guide, we build the application locally and serve it though a PM2 config file with the cluster mode activated. Cluster mode will prevent downtime by allowing applications to be scaled across multiple CPUs.
+Dans ce guide, nous construisons l'application localement et la servons via un fichier de configuration PM2 avec le mode cluster activé. Le mode cluster permet d'éviter les temps d'arrêt en permettant aux applications d'être mises à l'échelle sur plusieurs CPU.
 
-## Getting Started
+## Commencer
 
-Make sure you have pm2 installed on your server. If not, simply globally install it from yarn or npm.
+Assurez-vous que pm2 est installé sur votre serveur. Si ce n'est pas le cas, installez-le simplement de façon globale à partir de yarn ou npm.
 
 ```bash
 # yarn pm2 install
@@ -30,9 +30,9 @@ $ sudo yarn global add pm2 --prefix /usr/local
 $ npm install pm2 -g
 ```
 
-## Configure your application
+## Configurer votre application
 
-All you need to add to your universal Nuxt app for serving it though PM2 is a file called `ecosystem.config.js`. Create a new file with that name in your root project directory and add the following content:
+Tout ce que vous devez ajouter à votre application universelle Nuxt pour la servir via PM2 est un fichier appelé `ecosystem.config.js`. Créez un nouveau fichier avec ce nom dans le répertoire racine de votre projet et ajoutez le contenu suivant :
 
 ```javascript
 module.exports = {
@@ -40,7 +40,7 @@ module.exports = {
     {
       name: 'NuxtAppName',
       exec_mode: 'cluster',
-      instances: 'max', // Or a number of instances
+      instances: 'max', // Ou un certain nombre d'instances
       script: './node_modules/nuxt/bin/nuxt.js',
       args: 'start'
     }
@@ -48,18 +48,18 @@ module.exports = {
 }
 ```
 
-## Build and serve the app
+## Créer et servir l'application
 
-Now build your app with `npm run build`.
+Maintenant, construisez votre application avec `npm run build`.
 
-And serve it with `pm2 start`.
+Et le servir avec `pm2 start`.
 
-Check the status `pm2 ls`.
+Vérifier le statut `pm2 ls`.
 
-Your Nuxt application is now serving!
+Votre application Nuxt est maintenant en service !
 
-## Further Information
+## Informations complémentaires
 
-This solution guaranty a no downtime for your application on this server. You should prevent server failing through redundancy or high availability cloud solutions.
+Cette solution garantit l'absence de temps d'arrêt pour votre application sur ce serveur. Vous devez éviter les pannes de serveur par la redondance ou par des solutions de haute disponibilité en cloud.
 
-You can find PM2 additional configurations [here](https://pm2.keymetrics.io/docs/usage/application-declaration/#general).
+Vous pouvez trouver des configurations supplémentaires de PM2 [ici](https://pm2.keymetrics.io/docs/usage/application-declaration/#general).

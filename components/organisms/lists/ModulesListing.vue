@@ -46,7 +46,7 @@
       </div>
     </div>
     <div class="lg:flex">
-      <AsideModules />
+      <AsideModules :categories="categories" :modules="modules" />
       <div
         class="
           w-full
@@ -74,7 +74,7 @@
 </template>
 
 <script lang="ts">
-import { defineComponent, useAsync, onMounted } from '@nuxtjs/composition-api'
+import { defineComponent, useFetch } from '@nuxtjs/composition-api'
 import { useModules } from '../../../plugins/modules'
 import { useFuse } from '../../../plugins/fuse'
 
@@ -88,43 +88,25 @@ export default defineComponent({
   },
   setup(_) {
     // Modules composable
-    const { fetch: fetchModules, modules } = useModules()
+    const { fetch: fetchModules, categories, modules } = useModules()
 
     // Fuse composable
-    const {
-      query,
-      orderedBy,
-      sortedBy,
-      selectedCategory,
-      filteredModules,
-      clearFilters,
-      sortByComp,
-      selectSortBy,
-      init: initFuse,
-      sortFields,
-      toggleOrderBy,
-      loadModules,
-      updateList
-    } = useFuse(modules)
+    const { query, orderedBy, sortedBy, filteredModules, sortFields, toggleOrderBy, loadModules, updateList } =
+      useFuse(modules)
 
-    useAsync(async () => {
+    useFetch(async () => {
       const modules = await fetchModules()
       updateList(modules)
-    }, 'fetchModules')
-
-    // Init Fuse search
-    onMounted(initFuse)
+    })
 
     return {
+      categories,
+      modules,
       filteredModules,
-      sortByComp,
       sortedBy,
-      clearFilters,
       sortFields,
       toggleOrderBy,
       orderedBy,
-      selectSortBy,
-      selectedCategory,
       query,
       loadModules
     }

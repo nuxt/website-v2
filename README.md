@@ -1,20 +1,28 @@
-<p align="center"><img align="center" src="./.github/logo.svg"/></p><br/>
+<img align="center" src="./.github/logo.svg"/><br/>
 
-> Website and documentation of [Nuxt](https://nuxtjs.org/)
+## Website and documentation of [Nuxt](https://nuxtjs.org)
 
-## Local Development
+We are using [Docus](https://nuxtlabs.com/docus) to write our documentation (*we plan to open source it in the following weeks once the documentation is ready*). It is similar to Nuxt Content [Docs theme](https://content.nuxtjs.org/themes/docs) but with an advanced syntax to use Vue components without having to write HTML (support props and slots).
+
+## Setup
 
 ```bash
 git clone https://github.com/nuxt/nuxtjs.org.git
 cd nuxtjs.org/
-yarn install
+npm install
 ```
+
+We also recommend to install the [Docus extension](https://marketplace.visualstudio.com/items?itemName=NuxtLabs.docus) for VS Code.
+
+## Development
 
 Start the development server on [http://localhost:4000](http://localhost:4000)
 
 ```bash
 yarn dev
 ```
+
+The pages are generated from [docs/content/](./docs/content), you can start editing them to start helping us on documenting Nuxt 💚
 
 ## Lisense
 

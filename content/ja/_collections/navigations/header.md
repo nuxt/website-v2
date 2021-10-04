@@ -9,7 +9,7 @@ links:
         slug: "showcases"
         to: "/showcases"
         icon: "showcases.svg"
-        color: "bg-sand-darker"
+        color: "bg-sand"
       -
         title: "事例紹介"
         subtitle: "How companies use NuxtJS"
@@ -23,7 +23,7 @@ links:
         slug: "testimonials"
         to: "/testimonials"
         icon: "testimonials.svg"
-        color: "bg-sand"
+        color: "bg-sand-darker"
   -
     title: '学ぶ'
     items:
@@ -33,27 +33,27 @@ links:
         slug: "docs"
         to: "/docs"
         icon: "docs.svg"
-        color: "bg-green-800"
+        color: "bg-green-500"
       -
         title: "例"
         subtitle: "Understand everything in NuxtJS"
         slug: "examples"
         to: "/examples"
         icon: "examples.svg"
-        color: "bg-green-700"
+        color: "bg-green-600"
       -
         title: "リリース"
         subtitle: "All the code we released"
         slug: "releases"
         to: "/releases"
         icon: "releases.svg"
-        color: "bg-green-600"
+        color: "bg-green-700"
       -
         title: "マスターコース"
         subtitle: "Learn more with experts"
         href: "https://masteringnuxt.com/?utm_source=nuxt&utm_medium=link&utm_campaign=nsite"
         icon: "master-courses.svg"
-        color: "bg-green-500"
+        color: "bg-green-800"
   -
     title: '探す'
     items:
@@ -63,28 +63,28 @@ links:
         slug: "integrations"
         to: "/integrations"
         icon: "integrations.svg"
-        color: "bg-indigo-darker"
+        color: "bg-indigo-light"
       -
         title: "モジュール"
         subtitle: "Extend the power of NuxtJs"
         slug: "modules"
         to: "/modules"
         icon: "modules.svg"
-        color: "bg-indigo-dark"
+        color: "bg-indigo"
       -
         title: "テーマ"
         subtitle: "Get start with themes"
         slug: "themes"
         to: "/themes"
         icon: "themes.svg"
-        color: "bg-indigo"
+        color: "bg-indigo-dark"
       -
         title: "ビデオコース"
         subtitle: "Learn step by step"
         slug: "video-courses"
         to: "/video-courses"
         icon: "video-courses.svg"
-        color: "bg-indigo-light"
+        color: "bg-indigo-darker"
   -
     title: 'コミュニティ'
     items:
@@ -94,41 +94,41 @@ links:
         slug: "announcements"
         to: "/announcements"
         icon: "announcements.svg"
-        color: "bg-mint-darkest"
+        color: "bg-mint-lighter"
       -
         title: "イベント"
         subtitle: "When and where we gonna be"
         slug: "events"
         to: "/events"
         icon: "events.svg"
-        color: "bg-mint-darker"
+        color: "bg-mint-light"
       -
         title: "スポンサー"
         subtitle: "They trust us"
         slug: "sponsors"
         to: "/sponsors"
         icon: "sponsors.svg"
-        color: "bg-mint-dark"
+        color: "bg-mint"
       -
         title: "チーム"
         subtitle: "They are NuxtJS"
         slug: "teams"
         to: "/teams"
         icon: "teams.svg"
-        color: "bg-mint"
+        color: "bg-mint-dark"
       -
         title: "チュートリアル"
         subtitle: "Learn with concrete cases"
         slug: "tutorials"
         to: "/tutorials"
         icon: "tutorials.svg"
-        color: "bg-mint-light"
+        color: "bg-mint-darker"
       -
         title: "ツイート"
         subtitle: "They talk about us"
         href: "https://twitter.com/nuxt_js/timelines/1439936107421085704"
         icon: "tweets.svg"
-        color: "bg-mint-lighter"
+        color: "bg-mint-darkest"
   -
     title: "パートナー"
     slug: "partners"

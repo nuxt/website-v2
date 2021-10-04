@@ -14,12 +14,13 @@
         </Link>
       </div>
 
-      <nav class="items-center justify-center hidden h-full gap-4 lg:flex">
+      <nav class="items-center justify-center hidden h-full lg:flex">
         <template v-for="(link, index) in links">
           <Dropdown
             v-if="link.items && link.items.length"
             :key="index"
             :items="[link.items]"
+            main-link-class="mx-2"
             placement="bottom"
             mode="hover"
             :dropdown-menu-class="
@@ -27,7 +28,7 @@
             "
             dropdown-class="w-max"
             :open-delay="0"
-            :items-class="`py-1 grid grid-cols-${Math.round(link.items.length / 3)} gap-x-12`"
+            :items-class="`py-1 grid grid-cols-${Math.round(link.items.length / 3)}`"
           >
             <template #trigger>
               <HeaderNavigationLink

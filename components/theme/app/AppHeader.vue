@@ -24,7 +24,7 @@
             placement="bottom"
             mode="hover"
             :dropdown-menu-class="
-              ('h-full', isHome ? 'bg-sky-darker text-white' : 'bg-cloud-surface dark:bg-sky-darker')
+              ('h-full', isHome ? 'bg-sky-darkest text-white' : 'bg-cloud-surface dark:bg-sky-darkest')
             "
             dropdown-class="w-max"
             :open-delay="0"
@@ -47,7 +47,7 @@
                 :link="item"
                 class="px-2 py-1"
                 :class="{ 'text-white': isHome }"
-                :inactive-class="`${!isHome ? 'hover:d-primary-text-hover ' : 'hover:text-gray-300'}`"
+                :inactive-class="`${!isHome ? 'hover:text-sky-black dark:text-white' : 'hover:text-white'}`"
               >
                 <HeaderDropdownItem
                   :title="item.title"

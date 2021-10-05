@@ -1,7 +1,7 @@
 <template>
   <div
     class="py-1 px-2 rounded-md w-full"
-    :class="isHome ? 'hover:bg-sky-darkest' : 'hover:dark:bg-sky-darkest hover:bg-cloud-lightest'"
+    :class="isHome ? 'hover:bg-sky-black' : 'hover:dark:bg-sky-black hover:bg-cloud-lightest'"
   >
     <div class="flex space-x-2 items-center">
       <div class="rounded-md w-8 h-8 p-2" :class="colorClass">

@@ -47,7 +47,7 @@
                 :link="item"
                 class="px-2 py-1"
                 :class="{ 'text-white': isHome }"
-                :inactive-class="`${!isHome ? 'hover:text-sky-black dark:text-white' : 'hover:text-white'}`"
+                :inactive-class="`${!isHome ? 'hover:text-sky-black dark:hover:text-white' : 'hover:text-white'}`"
               >
                 <HeaderDropdownItem
                   :title="item.title"

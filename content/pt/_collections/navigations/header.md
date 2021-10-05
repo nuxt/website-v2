@@ -12,7 +12,7 @@ links:
         color: "bg-sand"
       -
         title: "Case studies"
-        subtitle: "How companies use NuxtJS"
+        subtitle: "How companies use Nuxt"
         slug: "case-studies"
         to: "/case-studies"
         icon: "case-studies.svg"
@@ -36,7 +36,7 @@ links:
         color: "bg-green-500"
       -
         title: "Examples"
-        subtitle: "Understand everything in NuxtJS"
+        subtitle: "Understand everything in Nuxt"
         slug: "examples"
         to: "/examples"
         icon: "examples.svg"
@@ -59,14 +59,14 @@ links:
     items:
       -
         title: "Integrations"
-        subtitle: "How to Deploy NuxtJS"
+        subtitle: "How to Deploy Nuxt"
         slug: "integrations"
         to: "/integrations"
         icon: "integrations.svg"
         color: "bg-indigo-light"
       -
         title: "Modules"
-        subtitle: "Extend the power of NuxtJs"
+        subtitle: "Extend the power of Nuxt"
         slug: "modules"
         to: "/modules"
         icon: "modules.svg"
@@ -90,7 +90,7 @@ links:
     items:
       -
         title: "Announcements"
-        subtitle: "Last news about NuxtJS "
+        subtitle: "Last news about Nuxt"
         slug: "announcements"
         to: "/announcements"
         icon: "announcements.svg"
@@ -111,7 +111,7 @@ links:
         color: "bg-mint"
       -
         title: "Teams"
-        subtitle: "They are NuxtJS"
+        subtitle: "They are Nuxt"
         slug: "teams"
         to: "/teams"
         icon: "teams.svg"

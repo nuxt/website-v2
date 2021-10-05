@@ -3,7 +3,9 @@
     <template v-for="(link, index) in links">
       <div v-if="link.items && link.items.length" :key="index" class="flex flex-col">
         <div class="flex items-center justify-between cursor-pointer py-2" tabindex="0" @click="toggle(index)">
-          <HeaderNavigationLink :link="link" :class="{ 'text-cloud-lighter hover:text-cloud-lightest': isHome }" />
+          <HeaderNavigationLink :link="link" :class="{ 'text-cloud-lighter hover:text-cloud-lightest': isHome }">
+            {{ link.title }}
+          </HeaderNavigationLink>
           <IconChevronBottom
             v-if="openedLink === index"
             class="flex-shrink-0 w-4 h-4"
@@ -20,7 +22,9 @@
             :class="{ 'text-cloud-lighter hover:text-cloud-lightest': isHome }"
             active-class="d-active-aside-navigation-item-bg"
             inactive-class="d-secondary-text hover:d-secondary-text-hover"
-          />
+          >
+            {{ subLink.title }}
+          </HeaderNavigationLink>
         </div>
       </div>
       <HeaderNavigationLink

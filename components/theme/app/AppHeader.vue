@@ -14,14 +14,21 @@
         </Link>
       </div>
 
-      <nav class="items-center justify-center hidden h-full gap-4 lg:flex">
+      <nav class="items-center justify-center hidden h-full lg:flex">
         <template v-for="(link, index) in links">
           <Dropdown
             v-if="link.items && link.items.length"
             :key="index"
             :items="[link.items]"
+            main-link-class="mx-2"
             placement="bottom"
             mode="hover"
+            :dropdown-menu-class="
+              ('h-full', isHome ? 'bg-sky-darkest text-white' : 'bg-cloud-surface dark:bg-sky-darkest')
+            "
+            dropdown-class="w-max"
+            :open-delay="0"
+            :items-class="`py-1 grid grid-cols-${Math.round(link.items.length / 3)}`"
           >
             <template #trigger>
               <HeaderNavigationLink
@@ -30,17 +37,25 @@
                 :class="{ 'text-white': isHome }"
                 :force-active="isActiveGroup(link)"
                 :inactive-class="`${!isHome ? 'hover:d-primary-text-hover ' : 'hover:text-gray-300'}`"
-              />
+              >
+                {{ link.title }}
+              </HeaderNavigationLink>
             </template>
 
             <template #item="{ item }">
               <HeaderNavigationLink
                 :link="item"
-                class="px-4 py-1"
+                class="px-2 py-1"
                 :class="{ 'text-white': isHome }"
-                :inactive-class="`${!isHome ? 'hover:d-primary-text-hover ' : 'hover:text-gray-300'}`"
-              />
-            </template>
+                :inactive-class="`${!isHome ? 'hover:text-sky-black dark:hover:text-white' : 'hover:text-white'}`"
+              >
+                <HeaderDropdownItem
+                  :title="item.title"
+                  :subtitle="item.subtitle"
+                  :icon="item.icon"
+                  :color-class="item.color"
+                /> </HeaderNavigationLink
+            ></template>
           </Dropdown>
           <HeaderNavigationLink
             v-else
@@ -49,7 +64,9 @@
             class="px-1 py-2"
             :class="{ 'text-white': isHome }"
             :inactive-class="`${!isHome ? 'hover:d-primary-text-hover ' : 'hover:text-gray-300'}`"
-          />
+          >
+            {{ link.title }}
+          </HeaderNavigationLink>
         </template>
       </nav>
 

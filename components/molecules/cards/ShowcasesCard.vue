@@ -23,6 +23,7 @@
         width="800"
         height="600"
         :alt="showcase.hostname"
+        loading="lazy"
         class="object-cover"
       />
       <div

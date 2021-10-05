@@ -42,11 +42,11 @@ links:
         icon: "examples.svg"
         color: "bg-green-600"
       -
-        title: "Notes de version"
-        subtitle: "Tout le code que nous avons publié"
-        slug: "releases"
-        to: "/releases"
-        icon: "releases.svg"
+        title: "Tutoriels"
+        subtitle: "Apprenez avec des cas concrets"
+        slug: "tutorials"
+        to: "/tutorials"
+        icon: "tutorials.svg"
         color: "bg-green-700"
       -
         title: "Master courses"
@@ -58,11 +58,11 @@ links:
     title: 'Explorer'
     items:
       -
-        title: "Intégrations"
+        title: "Déploiements"
         subtitle: "Comment déployer Nuxt"
-        slug: "integrations"
-        to: "/integrations"
-        icon: "integrations.svg"
+        slug: "deployments"
+        to: "/deployments"
+        icon: "deployments.svg"
         color: "bg-indigo-light"
       -
         title: "Modules"
@@ -96,20 +96,6 @@ links:
         icon: "announcements.svg"
         color: "bg-mint-lighter"
       -
-        title: "Événements"
-        subtitle: "Quand et où nous trouver"
-        slug: "events"
-        to: "/events"
-        icon: "events.svg"
-        color: "bg-mint-light"
-      -
-        title: "Sponsors"
-        subtitle: "Ils croient en nous"
-        slug: "sponsors"
-        to: "/sponsors"
-        icon: "sponsors.svg"
-        color: "bg-mint"
-      -
         title: "Équipes"
         subtitle: "Nous sommes Nuxt"
         slug: "teams"
@@ -117,12 +103,26 @@ links:
         icon: "teams.svg"
         color: "bg-mint-dark"
       -
-        title: "Tutoriels"
-        subtitle: "Apprenez avec des cas concrets"
-        slug: "tutorials"
-        to: "/tutorials"
-        icon: "tutorials.svg"
+        title: "Événements"
+        subtitle: "Quand et où nous trouver"
+        slug: "events"
+        to: "/events"
+        icon: "events.svg"
+        color: "bg-mint-light"
+      -
+        title: "Notes de version"
+        subtitle: "Tout le code que nous avons publié"
+        slug: "releases"
+        to: "/releases"
+        icon: "releases.svg"
         color: "bg-mint-darker"
+      -
+        title: "Sponsors"
+        subtitle: "Ils croient en nous"
+        slug: "sponsors"
+        to: "/sponsors"
+        icon: "sponsors.svg"
+        color: "bg-mint"
       -
         title: "Tweets"
         subtitle: "Ils parlent de nous"

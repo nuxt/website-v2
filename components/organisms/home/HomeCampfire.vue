@@ -15,7 +15,7 @@
           <li v-for="(post, index) in posts" :key="index">
             <div v-if="post">
               <div class="aspect-w-16 aspect-h-8 bg-gray-100 overflow-hidden dark:bg-secondary-darker mb-4 rounded-lg">
-                <NuxtImg :src="post.imgUrl || post.logo" :alt="post.title" class="object-cover" />
+                <NuxtImg :src="post.imgUrl || post.logo" :alt="post.title" loading="lazy" class="object-cover" />
               </div>
               <span class="text-primary text-body-base lg:text-body-lg font-bold mb-2">{{
                 index > 0 ? eventsCategory : announcementsCategory

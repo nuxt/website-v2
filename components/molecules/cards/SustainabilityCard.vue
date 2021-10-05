@@ -3,12 +3,14 @@
     <img
       :src="`/img/sponsors/sponsors-square/dark/${sponsor.img_square}`"
       :alt="sponsor.title"
+      loading="lazy"
       :class="sponsor.size"
       class="dark-img h-10 object-contain"
     />
     <img
       :src="`/img/sponsors/sponsors-square/light/${sponsor.img_square}`"
       :alt="sponsor.title"
+      loading="lazy"
       :class="sponsor.size"
       class="light-img h-10 object-contain"
     />

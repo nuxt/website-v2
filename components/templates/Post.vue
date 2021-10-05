@@ -52,6 +52,7 @@
                   class="inline-block w-8 h-8 border rounded-full d-border-tertiary dark:d-border-cloud-lighter sm:mr-1"
                   height="32"
                   width="32"
+                  loading="lazy"
                   :src="author.avatarUrl"
                   :alt="author.name"
                   :title="author.name"
@@ -67,7 +68,7 @@
 
       <div v-if="imgUrl" class="max-w-4xl mx-auto">
         <div class="mx-4 mb-8 bg-gray-100 aspect-w-16 aspect-h-9 dark:bg-gray-800">
-          <NuxtImg :src="imgUrl" :alt="page.title" class="object-cover" />
+          <NuxtImg :src="imgUrl" :alt="page.title" loading="lazy" class="object-cover" />
         </div>
       </div>
 

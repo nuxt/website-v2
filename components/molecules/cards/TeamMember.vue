@@ -1,6 +1,6 @@
 <template>
   <div class="flex flex-col w-48 items-center pb-12">
-    <NuxtImg :src="member.avatarUrl" class="h-24 w-24 rounded-full" />
+    <NuxtImg :src="member.avatarUrl" loading="lazy" class="h-24 w-24 rounded-full" />
     <span class="light:text-sky-darker dark:text-white font-semibold pt-4">{{ member.name }}</span>
     <!-- <span class="text-primary font-semibold">{{ member.role }}</span> -->
     <span class="text-gray-500 dark:text-gray-400">{{ member.location }}</span>

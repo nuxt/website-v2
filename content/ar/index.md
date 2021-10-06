@@ -1,7 +1,7 @@
 ---
 template: blank
-title: 'The Intuitive Vue Framework'
-description: 'Build your next Vue.js application with confidence using Nuxt. An open source framework making web development simple and powerful.'
+title: 'منصة VUe المطور كليا'
+description: 'ابني تطبيقك التالي من Vue.js بكل ثقة مع نوكست. منصة مفتوحة المصدر تجعل من تطوير الويب سهل وقوي.'
 bgClass: 'bg-white'
 ---
 

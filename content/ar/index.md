@@ -1,6 +1,6 @@
 ---
 template: blank
-title: 'منصة VUe المطور كليا'
+title: 'منصة فيو المطور كليا'
 description: 'ابني تطبيقك التالي من Vue.js بكل ثقة مع نوكست. منصة مفتوحة المصدر تجعل من تطوير الويب سهل وقوي.'
 bgClass: 'bg-white'
 ---
@@ -14,104 +14,104 @@ primary:
 ---
 
 #title
-The Intuitive Vue<br>Framework
+منصة فيو<br>المطورة
 
 #description
-Build your next Vue.js application with confidence using Nuxt.<br class="hidden sm:block" /> An open source framework making web development simple and powerful.
+ابني تطبيقك التالي Vue.js بكل ثقة مع نوكست.<br class="hidden sm:block" /> منصة مفتوحة المصدر تجعل من تطوير الويب سهل وقوي.
 
 #secondary-button
-:button-link[Get started]{ href="/docs/get-started/installation" size="medium" aria-label="Get started" }
+:button-link[ابدأ هنا]{ href="/docs/get-started/installation" size="medium" aria-label="ابدأ هنا" }
 ::
 
 ::home-learn-master
 ---
-category: Learn
+category: تعلم
 ---
 
 #title
-[Easy]{.text-primary} to learn. [Easy]{.text-primary} to master
+[سهل]{.text-primary} لتعلمه. [سهل]{.text-primary} لتتقنه
 
 #description
-Learn everything you need to know, from beginner to master.
+تعلم كل شيء تحتاج أن تعرفه، المستوى المبتدئ للإتقان.
 
 #bottom
-:button-link[Start learning]{href="/docs/get-started/installation" size="medium"}
+:button-link[ابدأ التعلم]{href="/docs/get-started/installation" size="medium"}
 ::
 
 ::home-features
 ---
-category: Features
+category: خصائص
 ---
 
 ::section-content-item
 ---
-title: Zero Configuration
-description: 'Start coding your app right away, Nuxt takes care of the rest.'
+title: بدون إعدادات
+description: 'ابدأ بتكويد تطبيقك حال، نوكست تتكفل بالباقي'
 image: /img/home/discover/dx/zero-config.svg
 ---
 ::
 
 ::section-content-item
 ---
-title: File-system Routing
-description: 'Automatic routing and code-splitting for every page.'
+title: توجيه نظام الملفات
+description: 'التوجيه الآلي وفصل التكويد لكل صفحة على حدى.'
 image: /img/home/discover/dx/file-system-routing.svg
 ---
 ::
 
 ::section-content-item
 ---
-title: Rendering Modes
-description: 'Switch between static-site generation or on-demand server rendering.'
+title: أوضاع التثبيت
+description: 'اختر بين إنشاء موقع ثابت أو تشغيل خادم عند الحاجة.'
 image: /img/home/discover/dx/hybrid.svg
 ---
 ::
 
 ::section-content-item
 ---
-title: Data Fetching
-description: 'Fetch your content from any source in your Vue components, SSR ready.'
+title: استدعاء البيانات
+description: 'استدع محتواك من أي عنصر لمنصة الفيو، عندما يكون الخادم شغالا.'
 image: /img/home/discover/dx/fetch.svg
 ---
 ::
 
 ::section-content-item
 ---
-title: Strong Conventions
-description: 'Efficient teamwork with a strong directory structure and conventions.'
+title: اتفاقيات قوية
+description: '.فعالية العمل كفريق بوجود اتفاقيات وبنية مجلدات قوية'
 image: /img/home/discover/dx/conventions.svg
 ---
 ::
 
 ::section-content-item
 ---
-title: SEO Friendly
-description: 'Meta tag management and faster time-to-content for great indexing.'
+title: صديق لمحركات البحث
+description: 'إدارة العلامات الوصفية أرشفة محتوى سريعة ورائعة.'
 image: /img/home/discover/dx/seo.svg
 ---
 ::
 
 ::section-content-item
 ---
-title: Components Auto-import
-description: 'Use your components, Nuxt will import them with smart code-splitting.'
+title: استيراد تلقائي للعناصر
+description: 'استخدم عناصرك، نوكست سيقوم باستيرادها باستخدام تقسيم التكويد الذكي'
 image: /img/home/discover/dx/auto-inject.svg
 ---
 ::
 
 ::section-content-item
 ---
-title: Modules Ecosystem
-description: 'Extend your app with 160+ Nuxt modules and create your own.'
+title: نظام الوحدات المساعدة
+description: 'قم بتوسيع تطبيقك باستخدام أكثر من 160 وحدة مدمجة مع نوكست أنشئ الوحدة الخاصة بك.'
 image: /img/home/discover/dx/modular.svg
 ---
 ::
 
 #title
-Intuitive [D]{.text-primary}eveloper E[x]{.text-primary}perience
+تجربة [ت]{.text-primary}طوير م[م]{.text-primary}تعة
 
 #description
-Nuxt is shipped with plenty of features to boost developer productivity and the end user experience.
+يأتي نوكست بالكثير من المزايا لتحسين تجربة المطور وتعزيز الانتاجية.
 ::
 
 ::home-discover-partners

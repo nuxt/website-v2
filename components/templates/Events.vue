@@ -29,7 +29,7 @@
         <template #external>
           <div class="flex items-center gap-1">
             <span class="text-sm font-medium text-gray-400">{{ $t('common.watch_video') }}</span>
-            <img :src="`/img/icons/ext.svg`" alt="external_link" />
+            <img :src="`/img/icons/ext.svg`" alt="external_link" loading="lazy" />
           </div>
         </template>
       </LogoCard>

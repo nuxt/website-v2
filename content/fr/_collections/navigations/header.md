@@ -4,82 +4,133 @@ links:
     title: 'Découvrir'
     items:
       -
-        title: 'Showcases'
-        slug: 'showcases'
-        to: '/showcases'
+        title: "Showcases"
+        subtitle: "Sélection de sites créés avec Nuxt"
+        slug: "showcases"
+        to: "/showcases"
+        icon: "showcases.svg"
+        color: "bg-sand"
       -
-        title: 'Étude de cas'
-        slug: 'case-studies'
-        to: '/case-studies'
+        title: "Étude de cas"
+        subtitle: "Comment Nuxt est utilisé par les entreprises"
+        slug: "case-studies"
+        to: "/case-studies"
+        icon: "case-studies.svg"
+        color: "bg-sand-dark"
       -
-        title: 'Témoignages'
-        slug: 'testimonials'
-        to: '/testimonials'
+        title: "Témoignages"
+        subtitle: "Ce qu'ils pensent de nous"
+        slug: "testimonials"
+        to: "/testimonials"
+        icon: "testimonials.svg"
+        color: "bg-sand-darker"
   -
     title: 'Apprendre'
     items:
       -
-        title: 'Docs'
-        slug: 'docs'
-        to: '/docs'
+        title: "Docs"
+        subtitle: "Créez un site web facilement"
+        slug: "docs"
+        to: "/docs"
+        icon: "docs.svg"
+        color: "bg-green-500"
       -
-        title: 'Exemples'
-        slug: 'examples'
-        to: '/examples'
+        title: "Exemples"
+        subtitle: "Comprendre tout sur Nuxt"
+        slug: "examples"
+        to: "/examples"
+        icon: "examples.svg"
+        color: "bg-green-600"
       -
-        title: 'Notes de version'
-        slug: 'releases'
-        to: '/releases'
+        title: "Notes de version"
+        subtitle: "Tout le code que nous avons publié"
+        slug: "releases"
+        to: "/releases"
+        icon: "releases.svg"
+        color: "bg-green-700"
       -
-        title: 'Master courses'
-        href: 'https://masteringnuxt.com/?utm_source=nuxt&utm_medium=link&utm_campaign=nsite'
+        title: "Master courses"
+        subtitle: "Apprenez en plus grâce aux experts"
+        href: "https://masteringnuxt.com/?utm_source=nuxt&utm_medium=link&utm_campaign=nsite"
+        icon: "master-courses.svg"
+        color: "bg-green-800"
   -
     title: 'Explorer'
     items:
       -
-        title: 'Intégrations'
-        slug: 'integrations'
-        to: '/integrations'
+        title: "Intégrations"
+        subtitle: "Comment déployer Nuxt"
+        slug: "integrations"
+        to: "/integrations"
+        icon: "integrations.svg"
+        color: "bg-indigo-light"
       -
-        title: 'Modules'
-        slug: 'modules'
-        to: '/modules'
+        title: "Modules"
+        subtitle: "Toute la puissance de Nuxt"
+        slug: "modules"
+        to: "/modules"
+        icon: "modules.svg"
+        color: "bg-indigo"
       -
-        title: 'Thèmes'
-        slug: 'themes'
-        to: '/themes'
+        title: "Thèmes"
+        subtitle: "Commencez avec les thèmes"
+        slug: "themes"
+        to: "/themes"
+        icon: "themes.svg"
+        color: "bg-indigo-dark"
       -
-        title: 'Cours vidéo'
-        slug: 'video-courses'
-        to: '/video-courses'
+        title: "Cours vidéo"
+        subtitle: "Apprendre étape par étape"
+        slug: "video-courses"
+        to: "/video-courses"
+        icon: "video-courses.svg"
+        color: "bg-indigo-darker"
   -
     title: 'Communauté'
     items:
       -
-        title: 'Annonces'
-        slug: 'announcements'
-        to: '/announcements'
+        title: "Annonces"
+        subtitle: "Les dernières nouvelles concerant Nuxt"
+        slug: "announcements"
+        to: "/announcements"
+        icon: "announcements.svg"
+        color: "bg-mint-lighter"
       -
-        title: 'Événements'
-        slug: 'events'
-        to: '/events'
+        title: "Événements"
+        subtitle: "Quand et où nous trouver"
+        slug: "events"
+        to: "/events"
+        icon: "events.svg"
+        color: "bg-mint-light"
       -
-        title: 'Sponsors'
-        slug: 'sponsors'
-        to: '/sponsors'
+        title: "Sponsors"
+        subtitle: "Ils croient en nous"
+        slug: "sponsors"
+        to: "/sponsors"
+        icon: "sponsors.svg"
+        color: "bg-mint"
       -
-        title: 'Équipes'
-        slug: 'teams'
-        to: '/teams'
+        title: "Équipes"
+        subtitle: "Nous sommes Nuxt"
+        slug: "teams"
+        to: "/teams"
+        icon: "teams.svg"
+        color: "bg-mint-dark"
       -
-        title: 'Tutoriels'
-        slug: 'tutorials'
-        to: '/tutorials'
+        title: "Tutoriels"
+        subtitle: "Apprenez avec des cas concrets"
+        slug: "tutorials"
+        to: "/tutorials"
+        icon: "tutorials.svg"
+        color: "bg-mint-darker"
       -
-        title: 'Tweets'
-        href: 'https://twitter.com/nuxt_js/timelines/1439936107421085704'
+        title: "Tweets"
+        subtitle: "Ils parlent de nous"
+        href: "https://twitter.com/nuxt_js/timelines/1439936107421085704"
+        icon: "tweets.svg"
+        color: "bg-mint-darkest"
   -
-    title: 'Partenaires'
-    slug: 'partners'
-    to: '/partners'
+    title: "Partenaires"
+    slug: "partners"
+    to: "/partners"
 ---

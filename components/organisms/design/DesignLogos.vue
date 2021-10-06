@@ -7,7 +7,7 @@
             class="border px-12 py-10 flex justify-center rounded-md max-h-36"
             :class="logo.color === 'light' ? 'bg-secondary-black border-white' : 'bg-white'"
           >
-            <img :src="`${logo.logoImg}.svg`" />
+            <img loading="lazy" :src="`${logo.logoImg}.svg`" />
           </div>
           <div class="flex w-full justify-between pt-2 pb-4">
             <div class="font-semibold">{{ logo.type }}</div>

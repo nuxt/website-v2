@@ -149,7 +149,8 @@ export default {
     minutes: 'minutes',
     seconds: 'secondes',
     copied: 'Copié',
-    watch_video: 'Regarder'
+    watch_video: 'Regarder',
+    multiple_authors: 'Plusieurs auteurs'
   },
   iso: 'fr'
 }

@@ -43,7 +43,7 @@ links:
         color: "bg-green-600"
       -
         title: "リリース"
-        subtitle: "私達がリリースしたすべてのコード"
+        subtitle: "私たちがリリースしたすべてのコード"
         slug: "releases"
         to: "/releases"
         icon: "releases.svg"
@@ -104,14 +104,14 @@ links:
         color: "bg-mint-light"
       -
         title: "スポンサー"
-        subtitle: "私達を信頼しています"
+        subtitle: "私たちを信頼しています"
         slug: "sponsors"
         to: "/sponsors"
         icon: "sponsors.svg"
         color: "bg-mint"
       -
         title: "チーム"
-        subtitle: "私達は Nuxt です"
+        subtitle: "私たちは Nuxt です"
         slug: "teams"
         to: "/teams"
         icon: "teams.svg"
@@ -125,7 +125,7 @@ links:
         color: "bg-mint-darker"
       -
         title: "ツイート"
-        subtitle: "私達について話しています"
+        subtitle: "私たちについて話しています"
         href: "https://twitter.com/nuxt_js/timelines/1439936107421085704"
         icon: "tweets.svg"
         color: "bg-mint-darkest"

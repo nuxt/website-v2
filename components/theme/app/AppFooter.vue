@@ -90,7 +90,7 @@
 
 <script>
 import { defineComponent, useContext, watch } from '@nuxtjs/composition-api'
-import { useNewsletter } from '~/plugins/composables'
+import { useNewsletter } from '~/plugins/newsletter'
 import { useNav } from '~/plugins/nav'
 import { useNotifications } from '~/plugins/notifications'
 

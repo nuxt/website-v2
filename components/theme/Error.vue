@@ -12,14 +12,17 @@
       </NuxtLink>
     </div>
     <NuxtImg
+      loading="lazy"
       class="hidden lg:block absolute w-full bottom-0 left-0 z-0 select-none"
       :src="`/img/error/bg-error_desktop.svg`"
     />
     <NuxtImg
+      loading="lazy"
       class="hidden sm:block lg:hidden absolute w-full bottom-0 left-0 z-0 select-none"
       :src="`/img/error/bg-error_tablet.svg`"
     />
     <NuxtImg
+      loading="lazy"
       class="block sm:hidden absolute w-full bottom-0 left-0 z-0 select-none"
       :src="`/img/error/bg-error_mobile.svg`"
     />

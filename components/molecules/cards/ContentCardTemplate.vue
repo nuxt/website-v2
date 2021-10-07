@@ -13,7 +13,7 @@
     @click="navigateToUrl(href)"
   >
     <div class="aspect-h-9 bg-gray-100 dark:bg-secondary-darker mb-4">
-      <NuxtImg :src="imgUrl" width="864" height="378" :alt="title" />
+      <NuxtImg :src="imgUrl" width="864" height="378" :alt="title" loading="lazy" />
     </div>
 
     <div v-if="tags.length" class="px-4 mb-1">

@@ -27,14 +27,15 @@
                   class="inline-block w-10 h-10 rounded-full"
                   height="32"
                   width="32"
+                  loading="lazy"
                   :src="author.avatarUrl"
-                  alt
+                  :alt="author.name"
                 />
               </a>
             </div>
             <div class="flex flex-col text-sm">
               <span v-if="post.authors" class="font-bold">{{
-                post.authors.length > 1 ? 'Multiple Authors' : post.authors[0].name
+                post.authors.length > 1 ? $t('common.multiple_authors') : post.authors[0].name
               }}</span>
               <time
                 v-if="post.date"

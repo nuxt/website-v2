@@ -40,7 +40,7 @@ category: تعلم
 
 ::home-features
 ---
-category: خصائص
+category: الميزات
 ---
 
 ::section-content-item
@@ -116,28 +116,28 @@ image: /img/home/discover/dx/modular.svg
 
 ::home-discover-partners
 ---
-category: Partners
+category: الشركاء
 ---
 
 #title
-Sustainable [_Development_]{.text-primary}
+مستقر [_تطوير_]{.text-primary}
 
 #description
-Nuxt development is carried out by passionate developers, but the amount of effort needed to maintain and develop new features is not sustainable without proper financial backing. We are thankful for our sponsors and partners, who help make Nuxt possible.<br>
+يتم تطوير نوكست من قبل مطورين شغوفين، لكن مقدار الجهد المطلوب للحفاظ على الميزات الجديدة وتطويرها لا يكون مستداما بدون دعم مالي مناسب. نحن ممتنون كثيرا للرعاة والشركاء الذين جعلوا من هذا ممكنا.<br>
 
 #bottom
-:button-link[Sponsor Nuxt]{href="/sponsors" size="medium"}
+:button-link[رعاة نوكست]{href="/sponsors" size="medium"}
 ::
 
 ::home-learn-guides
 ---
-category: Learn
+category: تعلم
 ---
 
 ::section-content-item
 ---
-title: Documentation
-description: 'Discover Nuxt concepts and find a complete API reference.'
+title: توثيق
+description: '.API اكتشف مفاهيم نوكست وابحث عن مرجع كامل لواجهة برمجة التطبيقات'
 image: /img/home/learn/guides/gem-1.svg
 to: '/docs/get-started/installation'
 hoverClass: 'hover:bg-sky-darker'
@@ -146,8 +146,8 @@ hoverClass: 'hover:bg-sky-darker'
 
 ::section-content-item
 ---
-title: Examples
-description: "Learn by examples produced by the community."
+title: أمثلة
+description: ".تعلم عن طريق الأمثلة التي يقدمها لك مجتمع الدعم"
 image: /img/home/learn/guides/gem-2.svg
 to: '/examples'
 hoverClass: 'hover:bg-sky-darker'
@@ -156,8 +156,8 @@ hoverClass: 'hover:bg-sky-darker'
 
 ::section-content-item
 ---
-title: Releases
-description: 'Find out what has changed before upgrading.'
+title: الإصدرات
+description: '.إكتشف مالذي تغير قبل الترقية'
 image: /img/home/learn/guides/gem-3.svg
 to: '/releases'
 hoverClass: 'hover:bg-sky-darker'
@@ -166,8 +166,8 @@ hoverClass: 'hover:bg-sky-darker'
 
 ::section-content-item
 ---
-title: Master Courses
-description: 'Watch a complete series of videos to learn Nuxt with our partner Vue School.'
+title: دورات ماستر
+description: '.Vue school شاهد سلاسل فيديو كاملة لتعلم نوكست مع شريكنا مدرسة فيو'
 image: /img/home/learn/guides/gem-4.svg
 to: 'https://masteringnuxt.com/?utm_source=nuxt&utm_medium=link&utm_campaign=nsite'
 hoverClass: 'hover:bg-sky-darker'
@@ -175,21 +175,21 @@ hoverClass: 'hover:bg-sky-darker'
 ::
 
 #title
-Follow our [_Guides_]{.text-primary}
+تابع [_دليلنا_]{.text-primary}
 
 #description
-From an idea to a masterpiece, guides take you on the path to becoming a Nuxter.
+من فكرة إلى تحفة، دليلنا يأخذك على طريق لتصبح نوكستر.
 ::
 
 ::home-explore
 ---
-category: Explore
+category: إكتشف
 ---
 
 ::section-content-item
 ---
-title: 'Integrations'
-description: 'Extend and automate your workflow by using integrations for your favorite tools.'
+title: 'تكامل'
+description: '.قم بتوسيع و أتمتة عملك عن طريق تكامل أدواتك التي تستعملها'
 image: '/img/home/explore/gem-explore-1.svg'
 to: '/integrations'
 hoverClass: 'hover:bg-sky-surface'
@@ -197,8 +197,8 @@ hoverClass: 'hover:bg-sky-surface'
 ::
 ::section-content-item
 ---
-title: 'Modules'
-description: 'Discover our list of modules to supercharge your Nuxt project. Created by the Nuxt team and community.'
+title: 'وحدات'
+description: '.إكتشف لائحة وحدات لتعزيز مشروع نوكست الخاص بك، هذه الوحدات تم إنشاؤها من طرف فريق ومجتمع نوكست'
 image: '/img/home/explore/gem-explore-2.svg'
 to: '/modules'
 hoverClass: 'hover:bg-sky-surface'
@@ -206,8 +206,8 @@ hoverClass: 'hover:bg-sky-surface'
 ::
 ::section-content-item
 ---
-title: 'Themes'
-description: 'See how a real world application is built using the Nuxt stack with the themes built by our partners.'
+title: 'السمات'
+description: '.تعرف على كيفية انشاء تطبيق  حقيقي باستعمال حزمة نوكست مع السمات المبنية من طرف  شركاءنا'
 image: '/img/home/explore/gem-explore-3.svg'
 to: '/themes'
 hoverClass: 'hover:bg-sky-surface'
@@ -215,22 +215,22 @@ hoverClass: 'hover:bg-sky-surface'
 ::
 
 #title
-Moving forward? So much to [_Explore_]{.text-primary}
+تريد المزيد؟ هناك الكثير[_لتكتشفه_]{.text-primary}
 
 #description
-Discover powerful modules, integrate with your favorite providers and start quickly with themes.
+.إكتشف وحدات قوية تتكامل مع مزودي الخدمة المفظلين لديك وابدأ سريعا بالسمات
 ::
 
 ::home-campfire
 ---
-category: Community
-announcementsCategory: Announcements
-eventsCategory: Events
-articleLinkTitle: Get infos
+category: المجتمع
+announcementsCategory: اعلانات
+eventsCategory: مناسبات
+articleLinkTitle: احصل على معلومات
 ---
 
 #title
-Sharing is [Caring]{.text-sky-lighter}
+المشاركة تعني [الاهتمام]{.text-sky-lighter}
 
 #description
 Discover articles from the framework team and community about Nuxt. Tips and tricks included!
@@ -238,29 +238,29 @@ Discover articles from the framework team and community about Nuxt. Tips and tri
 #campfire-list
   :::campfire-list-item
   ---
-  title: Announcements
-  description: Discover articles from Nuxt team.
+  title: اعلانات
+  description: اكتشف مقالات من طرف فريق نوكست.
   to: '/announcements'
   ---
   :::
   :::campfire-list-item
   ---
-  title: Events
-  description: Discover and subscribe to future events featuring Nuxt content, and watch previous talks from the core team and the community.
+  title: مناسبات
+  description: إكتشف واشترك في المناسبات المستقبلية التي تعرض محتوى نوكست، وشاهد اللقاءات السابقة للفريق الأساسي ومجتمع نوكست
   to: '/events'
   ---
   :::
   :::campfire-list-item
   ---
-  title: Sponsors
-  description: If you use Nuxt in your daily work and feel that it has made your life easier, please consider backing us.
+  title: الرعاة
+  description: إذا كنت تستعمل نوكست في عملك اليومي وتفكر أنه جعل حياتك أسهل، فيرجى أن تفكر في دعمنا.
   to: '/sponsors'
   ---
   :::
   :::campfire-list-item
   ---
-  title: Tutorials
-  description: Discover tutorials made by the Nuxt community.
+  title: دروس
+  description: إكتشف دروس صنعها مجتمع نوكست.
   to: '/tutorials'
   ---
   :::
@@ -268,13 +268,13 @@ Discover articles from the framework team and community about Nuxt. Tips and tri
 
 ::home-testimonials
 ---
-category: Community
+category: المجتمع
 ---
 #title
-Testimonials
+شهادات
 
 #description
-Learn what the experts love about Nuxt.
+.تعرف على ما يحبه الخبراء في نوكست
 
 #testimonials
   :::testimonials

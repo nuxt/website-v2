@@ -24,7 +24,6 @@ links:
         to: "/testimonials"
         icon: "testimonials.svg"
         color: "bg-sand-darker"
-
   -
     title: "Learn"
     items:
@@ -44,11 +43,11 @@ links:
         icon: "examples.svg"
         color: "bg-green-600"
       -
-        title: "Releases"
-        subtitle: "All the code we released"
-        slug: "releases"
-        to: "/releases"
-        icon: "releases.svg"
+        title: "Tutorials"
+        subtitle: "Learn with concrete cases"
+        slug: "tutorials"
+        to: "/tutorials"
+        icon: "tutorials.svg"
         color: "bg-green-700"
       -
         title: "Master courses"
@@ -60,11 +59,11 @@ links:
     title: "Explore"
     items:
       -
-        title: "Integrations"
+        title: "Deployments"
         subtitle: "How to Deploy Nuxt"
-        slug: "integrations"
-        to: "/integrations"
-        icon: "integrations.svg"
+        slug: "deployments"
+        to: "/deployments"
+        icon: "deployments.svg"
         color: "bg-indigo-light"
       -
         title: "Modules"
@@ -98,20 +97,6 @@ links:
         icon: "announcements.svg"
         color: "bg-mint-lighter"
       -
-        title: "Events"
-        subtitle: "When and where we gonna be"
-        slug: "events"
-        to: "/events"
-        icon: "events.svg"
-        color: "bg-mint-light"
-      -
-        title: "Sponsors"
-        subtitle: "They trust us"
-        slug: "sponsors"
-        to: "/sponsors"
-        icon: "sponsors.svg"
-        color: "bg-mint"
-      -
         title: "Teams"
         subtitle: "They are Nuxt"
         slug: "teams"
@@ -119,12 +104,26 @@ links:
         icon: "teams.svg"
         color: "bg-mint-dark"
       -
-        title: "Tutorials"
-        subtitle: "Learn with concrete cases"
-        slug: "tutorials"
-        to: "/tutorials"
-        icon: "tutorials.svg"
+        title: "Events"
+        subtitle: "When and where we gonna be"
+        slug: "events"
+        to: "/events"
+        icon: "events.svg"
+        color: "bg-mint-light"
+      -
+        title: "Releases"
+        subtitle: "All the code we released"
+        slug: "releases"
+        to: "/releases"
+        icon: "releases.svg"
         color: "bg-mint-darker"
+      -
+        title: "Sponsors"
+        subtitle: "They trust us"
+        slug: "sponsors"
+        to: "/sponsors"
+        icon: "sponsors.svg"
+        color: "bg-mint"
       -
         title: "Tweets"
         subtitle: "They talk about us"

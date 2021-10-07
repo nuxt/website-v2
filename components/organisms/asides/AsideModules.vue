@@ -43,7 +43,7 @@
 </template>
 <script lang="ts">
 import { defineComponent } from '@nuxtjs/composition-api'
-import { useFuse } from '../../../plugins/fuse'
+import { useFuse } from '~/plugins/fuse'
 
 export default defineComponent({
   props: {

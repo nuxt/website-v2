@@ -36,7 +36,7 @@
 <script>
 import uniqBy from 'lodash/uniqBy'
 
-import { useShowcases } from '../../../plugins/showcases'
+import { useShowcases } from '~/plugins/showcases'
 
 export default {
   props: {

@@ -75,8 +75,8 @@
 
 <script lang="ts">
 import { defineComponent, useFetch } from '@nuxtjs/composition-api'
-import { useModules } from '../../../plugins/modules'
-import { useFuse } from '../../../plugins/fuse'
+import { useModules } from '~/plugins/modules'
+import { useFuse } from '~/plugins/fuse'
 
 export default defineComponent({
   directives: {

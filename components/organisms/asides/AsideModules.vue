@@ -50,14 +50,10 @@ export default defineComponent({
     categories: {
       type: Array,
       default: () => []
-    },
-    modules: {
-      type: Array,
-      default: () => []
     }
   },
-  setup(props) {
-    const { selectedCategory, selectCategory } = useFuse(props.modules)
+  setup() {
+    const { selectedCategory, selectCategory } = useFuse()
 
     return {
       selectedCategory,

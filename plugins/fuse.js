@@ -1,5 +1,4 @@
-import Fuse from 'fuse.js/dist/fuse.basic.esm'
-import { ssrRef, computed, watch, useContext, useRouter } from '@nuxtjs/composition-api'
+import { ssrRef, computed, watch, useRoute, useRouter } from '@nuxtjs/composition-api'
 
 // Sorting function
 const sort = (a, b, asc) => (asc ? a - b : b - a)
@@ -12,10 +11,10 @@ const ORDERS = {
 const MODULE_INCREMENT_LOADING = 24
 // Sorting fields
 const sortFields = ['downloads', 'stars']
-// Filtered modules from Fuse
+// Modules
+const modules = ssrRef([])
+// Filtered modules
 const filteredModules = ssrRef([])
-// Fuse instance
-let fuse
 // Query reference
 const query = ssrRef(undefined, 'fuseQueryRef')
 // Ordered by
@@ -32,27 +31,39 @@ const modulesLoaded = ssrRef(MODULE_INCREMENT_LOADING, 'fuseModulesLoadedRef')
  * NOTE: We still use a paramater instead of a direct reference to modules.js/modules
  *       as this composable could be used with other kind of datas afterwards.
  */
-export function useFuse(modules) {
+export function useFuse() {
   // Context
-  const { route } = useContext()
+  const route = useRoute()
   const router = useRouter()
 
   // Watch local references and sync URL on changes
   watch([selectedCategory, query, orderedBy, sortedBy], () => {
-    updateList(modules)
+    updateList()
     syncURL()
   })
 
   // Watch modules count to display and update list accordingly
-  watch(modulesLoaded, () => updateList(modules))
+  watch(modulesLoaded, () => updateList())
 
   // Update modules list
-  function updateList(modules) {
+  function updateList() {
     let filteredModulesList = Object.assign([], modules.value)
 
-    // Filter modules w/ Fuse
-    if (fuse && query.value) {
-      filteredModulesList = fuse.search(query.value).map(r => r.item)
+    // Filter modules
+    if (query.value) {
+      filteredModulesList = filteredModulesList.filter(item =>
+        [
+          item.name,
+          item.npm,
+          item.category,
+          item.maintainers.name,
+          item.maintainers.github,
+          item.description,
+          item.repo
+        ]
+          .filter(Boolean)
+          .some(attribute => attribute.includes(query.value))
+      )
     }
 
     // Filter by sorting type
@@ -74,21 +85,13 @@ export function useFuse(modules) {
     filteredModules.value = filteredModulesList
   }
 
-  // Initialize Fuse
-  function init() {
-    const fuseOptions = {
-      threshold: 0.1,
-      keys: ['name', 'npm', 'category', 'maintainers.name', 'maintainers.github', 'description', 'repo']
-    }
-
-    // Create index
-    const index = Fuse.createIndex(fuseOptions.keys, modules.value)
-
-    // Create Fuse instance
-    fuse = new Fuse(modules.value, fuseOptions, index)
+  // Initialize modules
+  function init(loadedModules) {
+    modules.value = loadedModules.value
 
     // Get selected category from hash location
-    selectedCategory.value = (window.location.hash || '').substr(1)
+    selectedCategory.value = route.value.hash.substr(1)
+    console.log(selectedCategory.value)
 
     // Get other query params
     const { q, sortBy, orderBy } = route.value.query
@@ -156,7 +159,6 @@ export function useFuse(modules) {
 
   return {
     // References
-    fuse,
     query,
     orderedBy,
     sortedBy,

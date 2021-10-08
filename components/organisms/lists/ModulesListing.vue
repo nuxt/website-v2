@@ -40,7 +40,7 @@
       </div>
     </div>
     <div class="lg:flex">
-      <AsideModules :categories="categories" :modules="modules" />
+      <AsideModules :categories="categories" />
       <div
         class="
           w-full
@@ -68,7 +68,7 @@
 </template>
 
 <script lang="ts">
-import { defineComponent, useContext, useFetch, computed } from '@nuxtjs/composition-api'
+import { defineComponent, useContext, useFetch, computed, onMounted } from '@nuxtjs/composition-api'
 import { useModules } from '~/plugins/modules'
 import { useFuse } from '~/plugins/fuse'
 
@@ -86,19 +86,21 @@ export default defineComponent({
     const { fetch: fetchModules, categories, modules } = useModules()
 
     // Fuse composable
-    const { query, orderedBy, sortedBy, filteredModules, sortFields, toggleOrderBy, loadModules, updateList } =
-      useFuse(modules)
+    const { query, orderedBy, sortedBy, filteredModules, sortFields, toggleOrderBy, loadModules, updateList, init } =
+      useFuse()
 
     const sorts = computed(() => sortFields.map(value => ({ text: i18n.t(`common.${value}`), value })))
 
     useFetch(async () => {
-      const modules = await fetchModules()
-      updateList(modules)
+      await fetchModules()
+
+      updateList()
     })
+
+    onMounted(() => init(modules))
 
     return {
       categories,
-      modules,
       filteredModules,
       sortedBy,
       sorts,

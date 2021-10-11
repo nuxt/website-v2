@@ -74,7 +74,7 @@ links:
         color: "bg-indigo"
       -
         title: "Themes"
-        subtitle: "Get start with themes"
+        subtitle: "Get started with themes"
         slug: "themes"
         to: "/themes"
         icon: "themes.svg"

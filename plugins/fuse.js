@@ -28,6 +28,19 @@ const modulesLoaded = ssrRef(MODULE_INCREMENT_LOADING, 'fuseModulesLoadedRef')
 // Sorting options
 const sortByComp = computed(() => sortFields[sortedBy.value])
 
+// Fuzzy search to avoid using Fuse
+// https://stackoverflow.com/a/39905590/3926832
+const fuzzySearch = (value, query, ratio = 0.75) => {
+  const string = value.toLowerCase()
+  const compare = query.toLowerCase()
+  let matches = 0
+  if (string.includes(compare)) return true
+  for (let i = 0; i < compare.length; i++) {
+    string.includes(compare[i]) ? (matches += 1) : (matches -= 1)
+  }
+  return matches / string.length >= ratio || query === ''
+}
+
 /**
  * Modules helpers
  * NOTE: We still use a paramater instead of a direct reference to modules.js/modules
@@ -64,7 +77,7 @@ export function useFuse() {
           item.repo
         ]
           .filter(Boolean)
-          .some(attribute => attribute.includes(query.value))
+          .some(attribute => fuzzySearch(attribute, query.value))
       )
     }
 

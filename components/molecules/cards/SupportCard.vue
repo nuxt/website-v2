@@ -4,8 +4,12 @@
       <div class="flex flex-col sm:w-2/3 xl:flex-row justify-start items-start xl:items-center space-x-4">
         <img loading="lazy" :src="`/img/support/${image}.svg`" class="h-20" />
         <div class="flex flex-col">
-          <h2 class="text-xl lg:text-2xl font-medium">{{ title }}</h2>
-          <span class="text-sm md:text-base sm:w-full">{{ description }}</span>
+          <h2 class="text-xl lg:text-2xl font-medium">
+            <Markdown use="title" unwrap="p" />
+          </h2>
+          <p class="text-sm md:text-base sm:w-full">
+            <Markdown use="description" unwrap="p" />
+          </p>
         </div>
       </div>
       <div class="pr-4 ml-4 sm:ml-0 py-2 sm:py-0">
@@ -15,16 +19,14 @@
           size="md"
           blank
           class="text-gray-800 bg-primary hover:bg-primary-400 focus:bg-primary-400 px-5 py-3 rounded-md font-medium"
-          @click.native="form ? (showForm = !showForm) : (showForm = false)"
           >{{ button.text }}</Link
         >
       </div>
     </div>
-    <Markdown v-if="showForm" use="form" unwrap="p" />
   </li>
 </template>
 <script lang="ts">
-import { defineComponent, ref } from '@nuxtjs/composition-api'
+import { defineComponent } from '@nuxtjs/composition-api'
 
 export default defineComponent({
   props: {
@@ -32,31 +34,12 @@ export default defineComponent({
       type: String,
       default: ''
     },
-    title: {
-      type: String,
-      default: ''
-    },
-    description: {
-      type: String,
-      default: ''
-    },
     button: {
       type: Object,
-      default: {
+      default: () => ({
         text: '',
-        to: ''
-      }
-    },
-    form: {
-      type: Boolean,
-      default: false
-    }
-  },
-  setup() {
-    const showForm = ref(false)
-
-    return {
-      showForm
+        url: ''
+      })
     }
   }
 })

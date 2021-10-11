@@ -40,7 +40,7 @@
       </div>
     </div>
     <div class="lg:flex">
-      <AsideModules :categories="categories" />
+      <AsideModules />
       <div
         class="
           w-full
@@ -83,24 +83,35 @@ export default defineComponent({
   setup(_) {
     // Modules composable
     const { i18n } = useContext()
-    const { fetch: fetchModules, categories, modules } = useModules()
+    const { fetch: fetchModules, modules } = useModules()
 
     // Fuse composable
-    const { query, orderedBy, sortedBy, filteredModules, sortFields, toggleOrderBy, loadModules, updateList, init } =
-      useFuse()
+    const {
+      query,
+      orderedBy,
+      sortedBy,
+      filteredModules,
+      sortFields,
+      toggleOrderBy,
+      loadModules,
+      updateList,
+      init,
+      syncModules
+    } = useFuse()
 
     const sorts = computed(() => sortFields.map(value => ({ text: i18n.t(`common.${value}`), value })))
 
     useFetch(async () => {
       await fetchModules()
 
+      init(modules)
+
       updateList()
     })
 
-    onMounted(() => init(modules))
+    onMounted(syncModules)
 
     return {
-      categories,
       filteredModules,
       sortedBy,
       sorts,

@@ -1,26 +1,11 @@
 {
   "private": true,
   "scripts": {
+    "prepare": "husky install",
     "generate": "nuxt generate",
     "build": "nuxt generate",
     "dev": "nuxt dev",
     "start": "nuxt start"
-  },
-  "husky": {
-    "hooks": {
-      "pre-commit": "lint-staged"
-    }
-  },
-  "lint-staged": {
-    "*.{js,vue}": [
-      "prettier --write",
-      "eslint --fix",
-      "git add"
-    ],
-    "*.{html,css}": [
-      "prettier --write",
-      "git add"
-    ]
   },
   "dependencies": {
     "@docus/app": "^1.1.3",

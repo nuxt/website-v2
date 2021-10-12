@@ -1,7 +1,6 @@
 {
   "private": true,
   "scripts": {
-    "prepare": "husky install",
     "generate": "nuxt generate",
     "build": "nuxt generate",
     "dev": "nuxt dev",

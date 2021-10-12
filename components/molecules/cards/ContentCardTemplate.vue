@@ -39,7 +39,9 @@
       {{ description }}
     </p>
 
-    <slot name="footer" />
+    <div class="px-4 mt-auto mb-4">
+      <Markdown use="footer" unwrap="p" />
+    </div>
   </article>
 </template>
 

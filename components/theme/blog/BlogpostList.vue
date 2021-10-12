@@ -11,7 +11,7 @@
         :href="post.to"
         :category="post.target || post.category"
       >
-        <div slot="footer" class="px-4 mt-auto mb-4">
+        <div slot="footer">
           <div class="flex items-center">
             <div v-if="post.authors" class="flex mr-4">
               <a

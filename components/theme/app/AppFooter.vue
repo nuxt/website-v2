@@ -29,17 +29,16 @@
           </h3>
           <ul class="mt-4 space-y-3">
             <li v-for="link in group.items" :key="link.title">
-              <NuxtHref
-                :href="link.href"
-                :to="localePath(link.to)"
+              <Link
+                :to="localePath(link.to) || link.href"
                 :aria-label="link.title"
-                class=""
+                :blank="link.href ? true : false"
                 :class="
                   !isHome
                     ? 'light:text-gray-500 dark:text-white hover:d-primary-text-hover'
                     : 'text-white hover:text-cloud-light'
                 "
-                >{{ link.title }}</NuxtHref
+                >{{ link.title }}</Link
               >
             </li>
           </ul>
@@ -73,13 +72,13 @@
           </section>
           <ul class="flex items-center space-x-4 xl:space-x-5 mt-4">
             <li v-for="(social, key) in socials" :key="key">
-              <NuxtHref :href="social.href" :aria-label="social.title" :title="social.title" class="block">
+              <Link :to="social.href" :aria-label="social.title" :title="social.title" blank class="block">
                 <Component
                   :is="social.icon"
                   class="w-6 h-6 hover:text-primary"
                   :class="!isHome ? 'text-gray-400 dark:text-cloud-lighter' : 'text-gray-300'"
                 />
-              </NuxtHref>
+              </Link>
             </li>
           </ul>
         </div>

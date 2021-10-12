@@ -97,7 +97,7 @@ export default defineComponent({
   setup() {
     const { email, error, subscribe, pending, subscribed } = useNewsletter()
 
-    const date = ref(parseISO('2021-10-12T14:00:00+02:00'))
+    const date = ref(parseISO('2021-10-12T16:00:00+02:00'))
     const now = new Date()
 
     const isDatePassed = date.value.getTime() - now.getTime() < 0

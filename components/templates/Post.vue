@@ -40,11 +40,10 @@
               |
             </div>
             <div class="flex ml-4 sm:ml-2">
-              <a
+              <AppLink
                 v-for="(author, index) in page.authors"
                 :key="index"
                 :href="author.link"
-                target="_blank"
                 rel="noopener noindex nofollow"
                 class="flex items-center justify-end -ml-2 sm:ml-0 sm:mr-2 hover:d-secondary-text"
               >
@@ -60,7 +59,7 @@
                 <span class="hidden text-sm font-medium sm:inline-block">
                   {{ author.name }}
                 </span>
-              </a>
+              </AppLink>
             </div>
           </div>
         </div>

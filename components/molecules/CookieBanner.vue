@@ -30,9 +30,9 @@
         <template slot="message">
           <p class="md:w-1/2">
             {{ $t('cookies.message') }}
-            <a class="underline" rel="noopener" target="_blank" href="https://www.cookiesandyou.com/">
+            <AppLink href="https://www.cookiesandyou.com/" class="underline">
               {{ $t('cookies.link') }}
-            </a>
+            </AppLink>
           </p>
         </template>
         <template slot="button">

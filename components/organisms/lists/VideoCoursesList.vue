@@ -12,14 +12,14 @@
         :href="link"
       >
         <div slot="footer" class="mt-auto mb-6 mx-4">
-          <SectionButton
+          <NuxtButton
             :href="link"
             size="md"
             :aria-label="$t('resources.themes.video_course')"
             class="bg-primary text-gray-800 hover:bg-primary-400 focus:bg-primary-400"
           >
             {{ $t('resources.themes.video_course') }}
-          </SectionButton>
+          </NuxtButton>
         </div>
       </ContentCardTemplate>
     </div>

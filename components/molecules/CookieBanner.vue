@@ -36,13 +36,13 @@
           </p>
         </template>
         <template slot="button">
-          <SectionButton
+          <NuxtButton
             size="md"
             class="bg-primary text-black hover:bg-primary-400 focus:bg-primary-400"
             @click.native="$emit('cookie-banner')"
           >
             {{ $t('cookies.button') }}
-          </SectionButton>
+          </NuxtButton>
         </template>
       </CookieConsent>
     </VueIfBot>

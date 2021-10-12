@@ -252,7 +252,7 @@ hoverClass: 'hover:bg-sky-surface'
 Nuxt には、例で学習したり、お気に入りのプロバイダと統合したり、そしてテーマを使ってすぐに始められる領域がたくさんあります。
 ::
 
-::home-campfire
+::home-community
 ---
 category: コミュニティ
 announcementsCategory: お知らせ

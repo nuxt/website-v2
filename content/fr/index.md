@@ -242,7 +242,7 @@ Nuxt a beaucoup de dimensions à explorer, apprenez par l'exemple, intégrez des
 
 ::
 
-::home-campfire
+::home-community
 ---
 category: Communauté
 announcementsCategory: Annonces

@@ -252,7 +252,7 @@ Moving forward? So much to [_Explore_]{.text-primary}
 Discover powerful modules, integrate with your favorite providers and start quickly with themes.
 ::
 
-::home-campfire
+::home-community
 ---
 category: Community
 announcementsCategory: Announcements

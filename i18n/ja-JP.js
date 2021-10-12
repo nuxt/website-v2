@@ -3,8 +3,8 @@ import ja from '~docus-i18n/ja-JP'
 export default {
   ...ja,
   banner: {
-    here: 'ここ',
-    format: '{nuxt} はまもなくやってきます... {here}で知ることができます！'
+    here: 'v3.nuxtjs.org',
+    format: '{nuxt} beta is out! Discover more about it on {here}'
   },
   cookies: {
     message: 'ユーザー分析とページ上の改善の目的で Cookie を使っています！',

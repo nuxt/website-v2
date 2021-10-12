@@ -44,10 +44,6 @@ export default {
     license: 'Nuxt は MIT ライセンスのオープンソースフレームワークです。'
   },
   sidebar: {
-    partners: {
-      title: 'パートナー',
-      button: 'サポート'
-    },
     ads: {
       fallback: {
         title: 'Nuxt はあなたが必要です！',

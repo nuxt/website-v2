@@ -1,6 +1,6 @@
 <template>
   <!-- eslint-disable-next-line vue/require-component-is -->
-  <component
+  <Component
     v-bind="linkProps"
     :aria-label="ariaLabel"
     class="font-medium rounded-md"
@@ -18,7 +18,7 @@
     <div v-if="iconRight" class="h-full flex items-center justify-center">
       <Component :is="iconRight" class="ml-2" :class="{ 'w-5 h-5': size === 'lg' }" />
     </div>
-  </component>
+  </Component>
 </template>
 
 <script>

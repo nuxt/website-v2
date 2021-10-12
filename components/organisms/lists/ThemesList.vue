@@ -11,13 +11,13 @@
         :href="href"
       >
         <div slot="footer" class="mt-auto mb-6 mx-4">
-          <SectionButton
+          <NuxtButton
             :href="href"
             size="md"
             class="bg-primary text-gray-800 hover:bg-primary-400 focus:bg-primary-400"
           >
             {{ $t('resources.themes.get_for_it', { price }) }}
-          </SectionButton>
+          </NuxtButton>
         </div>
       </ContentCardTemplate>
     </div>

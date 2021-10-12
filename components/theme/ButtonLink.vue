@@ -1,10 +1,15 @@
 <template>
-  <Link class="button-link" :class="[size, bold ? 'font-semibold' : 'font-medium']" :to="href" :blank="blank">
+  <Link
+    class="button-link"
+    :class="[customClass, size, bold ? 'font-semibold' : 'font-medium']"
+    :to="href"
+    :blank="blank"
+  >
+    <Component :is="icon" v-if="icon" class="mr-2" :class="{ 'w-5 h-5': size === 'large' }" />
+
     <Markdown unwrap="p ul li" />
 
-    <template #href>
-      <IconExternalLink v-if="blank" class="w-4 h-4 ml-2" />
-    </template>
+    <IconExternalLink v-if="blank && externalIcon" class="w-4 h-4 ml-2" />
   </Link>
 </template>
 
@@ -21,6 +26,10 @@ export default defineComponent({
       type: Boolean,
       default: false
     },
+    externalIcon: {
+      type: Boolean,
+      default: true
+    },
     size: {
       type: String,
       default: ''
@@ -28,6 +37,14 @@ export default defineComponent({
     bold: {
       type: Boolean,
       default: false
+    },
+    icon: {
+      type: String,
+      default: ''
+    },
+    customClass: {
+      type: String,
+      default: 'text-black bg-primary-500 hover:bg-primary-400 focus:ring-primary-600 '
     }
   }
 })
@@ -35,12 +52,12 @@ export default defineComponent({
 
 <style lang="postcss" scoped>
 a.button-link {
-  @apply inline-flex items-center flex-none rounded-md px-3 py-1.5 text-xs leading-4 text-black transition-colors duration-200 border border-transparent bg-primary-500 hover:bg-primary-400  focus:ring-2 focus:ring-offset-2 focus:ring-offset-white dark:focus:ring-offset-gray-900 focus:ring-primary-600 focus:outline-none;
+  @apply inline-flex items-center flex-none rounded-md px-4 py-2.5 text-xs leading-4 transition-colors duration-200 border border-transparent focus:ring-2 focus:ring-offset-2 focus:ring-offset-white dark:focus:ring-offset-gray-900 focus:outline-none;
   &.medium {
-    @apply px-4 py-2.5 text-sm leading-4;
+    @apply text-sm leading-4;
   }
   &.large {
-    @apply px-6 py-2.5 text-lg leading-6;
+    @apply text-base leading-6;
   }
 }
 </style>

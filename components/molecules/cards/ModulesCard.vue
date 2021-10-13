@@ -14,7 +14,7 @@
       justify-between
     "
   >
-    <Link :to="module.website" :aria-label="module.website" target="_blank" class="absolute inset-0" />
+    <AppLink :href="module.website" :aria-label="module.website" class="absolute inset-0" />
     <div
       class="
         transition-opacity
@@ -56,20 +56,20 @@
             ]
           }"
         >
-          <Link :to="`https://github.com/${maintainer.github}`" target="blank">
+          <AppLink :href="`https://github.com/${maintainer.github}`">
             <img loading="lazy" :src="maintainer.avatar" :alt="maintainer.name" class="rounded-full w-6 h-6" />
-          </Link>
+          </AppLink>
         </li>
       </ul>
       <div class="flex items-center space-x-4 w-1/2 text-xs font-medium">
-        <Link :to="module.github" class="group flex space-x-2 items-center" target="blank">
+        <AppLink :href="module.github" class="group flex space-x-2 items-center">
           <IconStar
             alt="Star icon"
             class="text-sky-dark group-hover:text-sky-darker dark:text-cloud-surface dark:group-hover:text-white"
           />
           <span class="truncate pt-0.5">{{ numberFormat(module.stars) }} star{{ module.stars !== 1 ? 's' : '' }}</span>
-        </Link>
-        <Link :to="npmUrl" class="group flex space-x-2 items-center" target="blank">
+        </AppLink>
+        <AppLink :href="npmUrl" class="group flex space-x-2 items-center">
           <IconDownload
             alt="Download icon"
             class="
@@ -83,7 +83,7 @@
           <span class="truncate pt-0.5"
             >{{ numberFormat(module.downloads) }} download{{ module.downloads !== 1 ? 's' : '' }}</span
           >
-        </Link>
+        </AppLink>
       </div>
     </div>
   </div>

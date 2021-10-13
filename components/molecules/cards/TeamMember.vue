@@ -11,9 +11,9 @@
         class="text-gray-700 dark:text-gray-300 hover:text-gray-900 dark:hover:text-gray-100"
       >
         <div v-for="(href, value, i) in social" :key="i">
-          <Link :to="href" :aria-label="value" blank>
+          <AppLink :href="href" :aria-label="value">
             <Component :is="getSocialIcon(value)" class="h-5 w-5" />
-          </Link>
+          </AppLink>
         </div>
       </li>
     </ul>

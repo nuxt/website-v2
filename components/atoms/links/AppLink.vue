@@ -37,7 +37,8 @@ export default defineComponent({
         }
       } else {
         return {
-          to: props.to
+          to: props.to,
+          blank: props.blank
         }
       }
     })

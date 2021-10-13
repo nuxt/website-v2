@@ -1,7 +1,6 @@
 <template>
-  <Link
-    :to="showcase.url"
-    blank
+  <AppLink
+    :href="showcase.url"
     class="
       flex flex-col
       justify-between
@@ -41,7 +40,7 @@
       />
     </div>
     <h2 class="font-bold py-2 px-4 truncate">{{ showcase.hostname }}</h2>
-  </Link>
+  </AppLink>
 </template>
 
 <script>

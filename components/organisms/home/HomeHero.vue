@@ -37,14 +37,7 @@
             xl:space-x-4
           "
         >
-          <NuxtButton
-            :href="primary.url"
-            :aria-label="primary.text"
-            size="lg"
-            class="bg-sky-black hover:bg-sky-darker"
-            :icon-left="primary.icon"
-            >{{ primary.text }}</NuxtButton
-          >
+          <Markdown use="primary-button" unwrap="p" />
           <Markdown use="secondary-button" unwrap="p" />
         </div>
       </section>

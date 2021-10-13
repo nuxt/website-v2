@@ -8,10 +8,10 @@
       <IconNuxt class="w-5 h-5 mr-2" />
       <span>{{ $t('common.version') }}: {{ lastRelease }}</span>
     </NuxtLink>
-    <Link to="https://v3.nuxtjs.org" class="flex items-center group nuxt-text-highlight-hover mt-4">
+    <AppLink to="https://v3.nuxtjs.org" class="flex items-center group nuxt-text-highlight-hover mt-4">
       <IconNuxt class="w-5 h-5 mr-2 text-primary" />
       <span>{{ $t('common.version') }}: v3.x (Beta)</span>
-    </Link>
+    </AppLink>
   </div>
 </template>
 

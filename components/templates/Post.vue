@@ -2,8 +2,8 @@
   <div>
     <div class="relative py-16 sm:py-24">
       <div class="relative max-w-3xl mx-auto">
-        <NuxtLink
-          :to="$contentLocalePath(page.to.lastIndexOf('/') !== 0 ? page.to.substr(0, page.to.lastIndexOf('/')) : '/')"
+        <AppLink
+          :to="page.to.lastIndexOf('/') !== 0 ? page.to.substr(0, page.to.lastIndexOf('/')) : '/'"
           class="absolute top-0 left-0 px-4 -mt-12 sm:-mt-16"
         >
           <span
@@ -18,7 +18,7 @@
             "
             >← Back</span
           >
-        </NuxtLink>
+        </AppLink>
         <div class="px-4 mb-6">
           <h1 class="flex-1 text-3xl font-semibold tracking-tight text-gray-900 sm:text-4xl dark:text-gray-100">
             {{ page.title }}

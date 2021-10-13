@@ -22,12 +22,7 @@
               }}</span>
               <h3 class="text-body-xl lg:text-body-2xl font-bold mb-2">{{ post.title }}</h3>
               <p class="mb-4 text-body-base lg:text-body-lg truncate">{{ post.description }}</p>
-              <MarketingLink
-                color="primary"
-                :name="articleLinkTitle"
-                icon="IconChevronRight"
-                :to="post.to || post.link"
-              />
+              <MarketingLink :name="articleLinkTitle" :to="post.to || post.link" />
             </div>
           </li>
         </ul>

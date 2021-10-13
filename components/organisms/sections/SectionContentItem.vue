@@ -15,7 +15,6 @@
     </InjectComponent>
     <h3 class="mb-1 text-center text-body-lg lg:text-body-xl font-bold">{{ title }}</h3>
     <p class="text-center text-sm lg:text-base mb-4">{{ description }}</p>
-    <MarketingLink v-if="to && linkName" color="primary" :name="linkName" icon="IconChevronRight" :to="to" />
   </component>
 </template>
 
@@ -47,15 +46,11 @@ export default defineComponent({
     to: {
       type: String,
       default: ''
-    },
-    linkName: {
-      type: String,
-      default: ''
     }
   },
   setup(props) {
     const component = computed(() => {
-      if (props.to && !props.linkName) return 'Link'
+      if (props.to) return 'Link'
       return 'div'
     })
 

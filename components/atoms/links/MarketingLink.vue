@@ -1,19 +1,16 @@
 <template>
   <Link
-    :key="name"
     class="relative inline-flex items-center font-bold group flex-nowrap max-w-max"
     :class="'text-' + color"
     :to="`${to}`"
     :blank="blank"
   >
-    <span :class="[
-      { 'text-md 2xl:text-base ': size === 'sm' },
-      { 'text-lg': size === 'md' },
-      { 'text-xl': size === 'lg' }
-    ]">{{ name }}</span>
+    <span
+      :class="[{ 'text-md 2xl:text-base ': size === 'sm' }, { 'text-lg': size === 'md' }, { 'text-xl': size === 'lg' }]"
+      >{{ name }}</span
+    >
 
-    <Component :is="icon" class="ml-2"
-    :class="size === 'sm' ? 'w-4 h-4' : 'w-5 h-5'" />
+    <Component :is="icon" class="ml-2" :class="size === 'sm' ? 'w-4 h-4' : 'w-5 h-5'" />
 
     <span class="absolute -bottom-2 h-0.5 w-8 group-hover:w-full transition-all" :class="'bg-' + color" />
   </Link>
@@ -29,7 +26,7 @@ export default defineComponent({
     },
     color: {
       type: String,
-      required: true
+      default: 'primary'
     },
     to: {
       type: String,
@@ -37,12 +34,11 @@ export default defineComponent({
     },
     icon: {
       type: String,
-      default: 'chevronRight'
+      default: 'IconChevronRight'
     },
     blank: {
       type: Boolean,
-      default: true,
-      required: false
+      default: true
     },
     size: {
       type: String,

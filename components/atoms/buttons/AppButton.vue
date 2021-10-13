@@ -1,0 +1,84 @@
+<template>
+  <!-- eslint-disable-next-line vue/require-component-is -->
+  <Component v-bind="buttonProps" class="button-link" :class="[buttonClass, size]">
+    <Component :is="icon" v-if="icon" class="mr-2 icon" :class="size" />
+
+    <Markdown unwrap="li ul p" />
+
+    <IconExternalLink v-if="externalIcon" class="ml-2 icon" :class="size" />
+  </Component>
+</template>
+<script lang="ts">
+import { defineComponent, computed } from '@nuxtjs/composition-api'
+
+export default defineComponent({
+  props: {
+    to: {
+      type: String,
+      default: ''
+    },
+    href: {
+      type: String,
+      default: ''
+    },
+    externalIcon: {
+      type: Boolean,
+      default: false
+    },
+    size: {
+      type: String,
+      default: 'medium'
+    },
+    icon: {
+      type: String,
+      default: ''
+    },
+    buttonClass: {
+      type: String,
+      default: 'text-black bg-primary-500 hover:bg-primary-400 focus:ring-primary-600'
+    }
+  },
+  setup(props) {
+    const buttonProps = computed(() => {
+      const { to, href } = props
+      if (to?.length) {
+        return {
+          is: 'AppLink',
+          to
+        }
+      } else if (href?.length) {
+        return {
+          is: 'AppLink',
+          href
+        }
+      } else {
+        return {
+          is: 'button'
+        }
+      }
+    })
+
+    return {
+      buttonProps
+    }
+  }
+})
+</script>
+<style lang="postcss" scoped>
+a.button-link {
+  @apply inline-flex items-center flex-none rounded-md mb-2 sm:mb-0 px-4 py-2.5 text-sm font-medium leading-4 transition-colors duration-200 border border-transparent focus:ring-2 focus:ring-offset-2 focus:ring-offset-white dark:focus:ring-offset-gray-900 focus:outline-none;
+  &.small {
+    @apply text-xs leading-2 py-2;
+  }
+  &.large {
+    @apply text-base leading-6;
+  }
+}
+
+.icon {
+  @apply w-4 h-4;
+  &.large {
+    @apply w-5 h-5;
+  }
+}
+</style>

@@ -13,14 +13,9 @@
         </div>
       </div>
       <div class="pr-4 ml-4 sm:ml-0 py-2 sm:py-0">
-        <Link
-          :to="button.url"
-          :aria-label="button.text"
-          size="md"
-          blank
-          class="text-gray-800 bg-primary hover:bg-primary-400 focus:bg-primary-400 px-5 py-3 rounded-md font-medium"
-          >{{ button.text }}</Link
-        >
+        <AppButton :href="button.url" class="text-black bg-primary-500 hover:bg-primary-400 focus:ring-primary-600">
+          {{ button.text }}
+        </AppButton>
       </div>
     </div>
   </li>

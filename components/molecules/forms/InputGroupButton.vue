@@ -33,16 +33,13 @@
       "
       @input="$emit('input', $event)"
     />
-
-    <NuxtButton
-      type="submit"
-      size="md"
-      aria-label="Submit"
-      class="mt-2 sm:mt-0 sm:ml-2 bg-primary text-gray-800 font-semibold hover:bg-primary-400 focus:bg-primary-300"
+    <AppButton
+      type="sumbit"
+      button-class="mt-2 sm:mt-0 sm:ml-2 bg-primary text-gray-800 font-semibold hover:bg-primary-400 focus:bg-primary-300"
       @click="submit"
     >
       <slot />
-    </NuxtButton>
+    </AppButton>
   </form>
 </template>
 

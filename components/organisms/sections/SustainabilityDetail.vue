@@ -25,19 +25,13 @@
       </div>
     </div>
     <div class="flex pt-16 space-x-4 text-sm">
-      <NuxtButton
-        :href="partnerContactUrl"
-        :aria-label="partnerContactUrl"
-        size="lg"
-        class="bg-primary text-gray-800 hover:bg-primary-400 focus:outline-none"
-      >
+      <AppButton :href="partnerContactUrl">
         {{ $t('sustainability.mvp_detail.contact_partner') }}
-      </NuxtButton>
-      <NuxtButton
+      </AppButton>
+      <AppButton
         :href="websiteUrl"
-        :aria-label="websiteUrl"
-        size="lg"
-        class="
+        size="large"
+        button-class="
           bg-white
           dark:bg-secondary-black
           hover:light:bg-gray-50 hover:dark:bg-secondary-darkest
@@ -46,7 +40,7 @@
         "
       >
         {{ $t('sustainability.mvp_detail.visit_website') }}
-      </NuxtButton>
+      </AppButton>
     </div>
   </div>
 </template>

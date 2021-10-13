@@ -10,14 +10,10 @@
         :image="image"
         :href="href"
       >
-        <div slot="footer" class="mt-auto mb-6 mx-4">
-          <NuxtButton
-            :href="href"
-            size="md"
-            class="bg-primary text-gray-800 hover:bg-primary-400 focus:bg-primary-400"
-          >
+        <div slot="footer" class="-mb-2 sm:mb-0">
+          <AppButton :href="href">
             {{ $t('resources.themes.get_for_it', { price }) }}
-          </NuxtButton>
+          </AppButton>
         </div>
       </ContentCardTemplate>
     </div>

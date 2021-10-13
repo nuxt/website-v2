@@ -265,36 +265,6 @@ articleLinkTitle: 情報を得る
 
 #description
 Nuxt チームと Nuxt コミュニティによる、Nuxt のヒントややり方に関する記事をご覧ください！
-
-#campfire-list
-  :::campfire-list-item
-  ---
-  title: お知らせ
-  description: Nuxt チームの記事を見る。
-  to: '/announcements'
-  ---
-  :::
-  :::campfire-list-item
-  ---
-  title: イベント
-  description: Nuxt のコンテンツを使った今後のイベントを発見したり、購読したり、コアチームやコミュニティの過去の講演を見ることができます。
-  to: '/events'
-  ---
-  :::
-  :::campfire-list-item
-  ---
-  title: スポンサー
-  description: 日々の仕事で Nuxt を使い、生活が便利になったと感じられたら、ぜひご支援をご検討ください。
-  to: '/sponsors'
-  ---
-  :::
-  :::campfire-list-item
-  ---
-  title: チュートリアル
-  description: Nuxt コミュニティによって作られたチュートリアルを見る。
-  to: '/tutorials'
-  ---
-  :::
 ::
 
 ::home-testimonials

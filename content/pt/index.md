@@ -265,36 +265,6 @@ Sharing is [Caring]{.text-sky-lighter}
 
 #description
 Discover articles from the framework team and community about Nuxt. Tips and tricks included!
-
-#campfire-list
-  :::campfire-list-item
-  ---
-  title: Announcements
-  description: Discover articles from Nuxt team.
-  to: '/announcements'
-  ---
-  :::
-  :::campfire-list-item
-  ---
-  title: Events
-  description: Discover and subscribe to future events featuring Nuxt content, and watch previous talks from the core team and the community.
-  to: '/events'
-  ---
-  :::
-  :::campfire-list-item
-  ---
-  title: Sponsors
-  description: If you use Nuxt in your daily work and feel that it has made your life easier, please consider backing us.
-  to: '/sponsors'
-  ---
-  :::
-  :::campfire-list-item
-  ---
-  title: Tutorials
-  description: Discover tutorials made by the Nuxt community.
-  to: '/tutorials'
-  ---
-  :::
 ::
 
 ::home-testimonials

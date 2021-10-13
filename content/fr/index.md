@@ -255,36 +255,6 @@ Sharing is [_Caring_]{.text-primary}
 
 #description
 Lisez nos articles rédigés par l'équipe Nuxt et la communauté, trucs et astuces inclus !
-
-#campfire-list
-  :::campfire-list-item
-  ---
-  title: Annonces
-  description: Découvrez les articles de l'équipe Nuxt.
-  to: '/announcements'
-  ---
-  :::
-  :::campfire-list-item
-  ---
-  title: Evénements
-  description: Découvrez et abonnez-vous aux futurs événements mettant en avant du contenu Nuxt, et regardez les discussions précédentes de l'équipe et de la communauté.
-  to: '/events'
-  ---
-  :::
-  :::campfire-list-item
-  ---
-  title: Sponsors
-  description: Si vous utilisez Nuxt dans votre travail quotidien et que cela vous a rendu la vie plus facile, pensez à nous soutenir.
-  to: '/sponsors'
-  ---
-  :::
-  :::campfire-list-item
-  ---
-  title: Tutoriels
-  description: Découvrez les tutoriels réalisés par la communauté Nuxt.
-  to: '/tutorials'
-  ---
-  :::
 ::
 
 ::home-testimonials

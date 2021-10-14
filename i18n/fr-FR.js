@@ -66,10 +66,6 @@ export default {
   modules: {
     search: "Chercher un module (nom, catégorie, nom d'utilisateur, etc.)",
     sort_by: 'Trier par',
-    sort_fields: {
-      downloads: 'Téléchargements',
-      stars: 'Stars'
-    },
     loading: 'Chargement...',
     error: 'Une erreur est survenue lors de la récupération des modules'
   },
@@ -164,7 +160,11 @@ export default {
     seconds: 'secondes',
     copied: 'Copié',
     watch_video: 'Regarder',
-    multiple_authors: 'Plusieurs auteurs'
+    multiple_authors: 'Plusieurs auteurs',
+    download: 'Téléchargement',
+    downloads: 'Téléchargements',
+    star: 'Star',
+    stars: 'Stars'
   },
   iso: 'fr'
 }

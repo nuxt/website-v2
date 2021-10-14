@@ -39,8 +39,8 @@
         </div>
       </div>
     </div>
-    <div class="lg:flex lg:flex-row-reverse justify-between w-full z-0">
-      <ul class="flex space-x-1 pb-4 lg:pb-0">
+    <div class="lg:flex lg:flex-row-reverse lg:gap-2 justify-between w-full z-0">
+      <ul class="flex lg:flex-shrink-0 space-x-1 pb-4 lg:pb-0">
         <li
           v-for="maintainer in module.maintainers"
           :key="maintainer.name"
@@ -61,15 +61,18 @@
           </AppLink>
         </li>
       </ul>
-      <div class="flex items-center space-x-4 w-1/2 text-xs font-medium">
+      <div class="flex flex-shrink items-center space-x-4 text-xs font-medium truncate">
         <AppLink :href="module.github" class="group flex space-x-2 items-center">
           <IconStar
             alt="Star icon"
             class="text-sky-dark group-hover:text-sky-darker dark:text-cloud-surface dark:group-hover:text-white"
           />
-          <span class="truncate pt-0.5">{{ numberFormat(module.stars) }} star{{ module.stars !== 1 ? 's' : '' }}</span>
+          <span class="truncate pt-0.5">
+            {{ numberFormat(module.stars) }}
+            {{ $t(module.stars !== 1 ? 'common.stars' : 'common.star') }}
+          </span>
         </AppLink>
-        <AppLink :href="npmUrl" class="group flex space-x-2 items-center">
+        <AppLink :href="npmUrl" class="group flex space-x-2 items-center truncate">
           <IconDownload
             alt="Download icon"
             class="
@@ -80,9 +83,10 @@
               dark:text-cloud-surface dark:group-hover:text-white
             "
           />
-          <span class="truncate pt-0.5"
-            >{{ numberFormat(module.downloads) }} download{{ module.downloads !== 1 ? 's' : '' }}</span
-          >
+          <span class="truncate pt-0.5">
+            {{ numberFormat(module.downloads) }}
+            {{ $t(module.downloads !== 1 ? 'common.downloads' : 'common.download') }}
+          </span>
         </AppLink>
       </div>
     </div>

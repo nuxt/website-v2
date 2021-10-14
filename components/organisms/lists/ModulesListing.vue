@@ -28,7 +28,7 @@
         <span>{{ $t('modules.sort_by') }}</span>
         <NuxtSelectNative
           v-model="sortedBy"
-          :options="sortFields"
+          :options="sorts"
           select-class="appearance-none block w-full bg-none dark:bg-transparent light:bg-white ml-2 py-2 pl-3 pr-10 text-base focus:outline-none light:focus:ring-black dark:focus:ring-white light:focus:border-gray-400 dark:focus:border-secondary-light sm:text-md font-medium"
         />
         <button
@@ -74,7 +74,7 @@
 </template>
 
 <script lang="ts">
-import { defineComponent, useFetch } from '@nuxtjs/composition-api'
+import { defineComponent, useContext, useFetch, computed } from '@nuxtjs/composition-api'
 import { useModules } from '~/plugins/modules'
 import { useFuse } from '~/plugins/fuse'
 
@@ -88,11 +88,14 @@ export default defineComponent({
   },
   setup(_) {
     // Modules composable
+    const { i18n } = useContext()
     const { fetch: fetchModules, categories, modules } = useModules()
 
     // Fuse composable
     const { query, orderedBy, sortedBy, filteredModules, sortFields, toggleOrderBy, loadModules, updateList } =
       useFuse(modules)
+
+    const sorts = computed(() => sortFields.map(value => ({ text: i18n.t(`common.${value}`), value })))
 
     useFetch(async () => {
       const modules = await fetchModules()
@@ -104,7 +107,7 @@ export default defineComponent({
       modules,
       filteredModules,
       sortedBy,
-      sortFields,
+      sorts,
       toggleOrderBy,
       orderedBy,
       query,

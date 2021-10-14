@@ -65,10 +65,6 @@ export default {
   modules: {
     search: 'モジュールを検索 (名前、カテゴリ、ユーザー名、など)',
     sort_by: 'ソート方法',
-    sort_fields: {
-      downloads: 'ダウンロード数',
-      stars: 'スター数'
-    },
     loading: 'ロード中...',
     error: 'モジュール情報の取得中にエラーが発生しました'
   },
@@ -156,7 +152,11 @@ export default {
     back: '戻る',
     go_to: '{title}に進む',
     go_home: 'ホームへ',
-    read_article: '記事を読む'
+    read_article: '記事を読む',
+    download: 'Download',
+    downloads: 'ダウンロード数',
+    star: 'Star',
+    stars: 'スター数'
   },
   iso: 'en'
 }

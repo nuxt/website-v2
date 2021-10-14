@@ -1,10 +1,10 @@
 <template>
-  <button
+  <AppButton
     slot="placeholder"
-    class="w-12 h-12 rounded"
+    button-class="w-12 h-12 rounded"
     :class="$docus.currentPath.value === '/' ? 'focus:outline-none text-gray-300 hover:text-sky-surface' : 'd-icon'"
     aria-label="Color Mode"
-    @click="switchColor"
+    @click.native="switchColor"
   >
     <ClientOnly>
       <IconSun v-if="$colorMode.preference === 'light'" :class="iconClass" />
@@ -12,7 +12,7 @@
       <IconSystem v-else :class="iconClass" />
       <template #placeholder>...</template>
     </ClientOnly>
-  </button>
+  </AppButton>
 </template>
 
 <script>

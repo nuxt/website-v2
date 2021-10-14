@@ -20,10 +20,10 @@ The Intuitive Vue<br>Framework
 Build your next Vue.js application with confidence using Nuxt.<br class="hidden sm:block" /> An open source framework making web development simple and powerful.
 
 #primary-button
-:app-button[38K+ GitHub stars]{ href="https://github.com" icon="IconGitHub" buttonClass="text-white bg-sky-black hover:bg-sky-darker leading-4" size="large" }
+:app-button[38K+ GitHub stars]{ href="https://github.com" icon="IconGitHub" extraClass="text-white bg-sky-black hover:bg-sky-darker leading-4" size="large" }
 
 #secondary-button
-:app-button[Get started]{ to="/docs/get-started/installation" buttonClass="text-black bg-primary-500 hover:bg-primary-400 focus:ring-primary-600 py-4" }
+:app-button[Get started]{ to="/docs/get-started/installation" }
 ::
 
 ::home-learn-master
@@ -38,7 +38,6 @@ category: Learn
 Learn everything you need to know, from beginner to master.
 
 #bottom
-
 :app-button[Start learning]{to="/docs/get-started/installation"}
 ::
 

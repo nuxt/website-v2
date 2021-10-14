@@ -31,7 +31,7 @@
       <AppButton
         :href="websiteUrl"
         size="large"
-        button-class="
+        extra-class="
           bg-white
           dark:bg-secondary-black
           hover:light:bg-gray-50 hover:dark:bg-secondary-darkest

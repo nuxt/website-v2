@@ -2,7 +2,7 @@
   <div class="flex flex-col sm:flex-row sm:space-x-6 space-y-4 sm:space-y-0">
     <AppButton
       to="https://github.com/sponsors/nuxt"
-      button-class="gap-2 bg-gray-500 bg-opacity-10 hover:bg-opacity-20"
+      extra-class="gap-2 app-button-secondary-color"
       icon="IconGitHub"
       size="large"
     >
@@ -10,7 +10,7 @@
     </AppButton>
     <AppButton
       to="https://opencollective.com/nuxtjs"
-      button-class="gap-2 bg-gray-500 bg-opacity-10 hover:bg-opacity-20"
+      extra-class="gap-2 app-button-secondary-color"
       icon="IconOpenCollective"
       size="large"
     >

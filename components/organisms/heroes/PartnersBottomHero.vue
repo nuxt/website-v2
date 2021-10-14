@@ -1,7 +1,7 @@
 <template>
   <AppButton
     to="mailto:partners@nuxtlabs.com"
-    button-class="gap-2 bg-gray-500 bg-opacity-10 px-4 hover:bg-opacity-20"
+    extra-class="gap-2 px-4 app-button-secondary-color"
     icon="IconStar"
     size="large"
   >

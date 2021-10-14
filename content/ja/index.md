@@ -20,10 +20,10 @@ The Intuitive Vue<br>Framework
 Nuxt を使って信頼ある次世代の Vue.js アプリケーションを構築する<br class="hidden sm:block" /> Web 開発をシンプルにかつパワフルにするオープンソースフレームワーク
 
 #primary-button
-:app-button[38K+ GitHub stars]{ href="https://github.com" icon="IconGitHub" buttonClass="text-white bg-sky-black hover:bg-sky-darker leading-4" size="large" }
+:app-button[38K+ GitHub stars]{ href="https://github.com" icon="IconGitHub" extraClass="text-white bg-sky-black hover:bg-sky-darker leading-4" size="large" }
 
 #secondary-button
-:app-button[はじめる]{ to="/docs/get-started/installation" buttonClass="text-black bg-primary-500 hover:bg-primary-400 focus:ring-primary-600 py-4" }
+:app-button[はじめる]{ to="/docs/get-started/installation" extraClass="text-black bg-primary-500 hover:bg-primary-400 focus:ring-primary-600 py-4" }
 ::
 
 ::home-learn-master

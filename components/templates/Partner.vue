@@ -1,13 +1,7 @@
 <template>
   <div>
-    <div class="h-80 p-6" :style="customBackground">
-      <img
-        v-if="page.logoFull"
-        loading="lazy"
-        :src="`${page.logoFull}`"
-        :alt="page.title"
-        class="w-full h-full object-contain"
-      />
+    <div class="h-80 p-6 flex justify-center items-center bg-sky-darkest">
+      <img v-if="page.logoFull" loading="lazy" :src="`${page.logoFull}`" :alt="page.title" class="h-20" />
     </div>
 
     <div class="d-container-content">

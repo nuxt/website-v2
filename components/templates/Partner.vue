@@ -23,7 +23,7 @@
       <div class="flex flex-col-reverse gap-8 xl:gap-12 xl:flex-row xl:justify-between">
         <div class="w-full xl:w-[70%]">
           <p class="text-md sm:text-lg">
-            <span>{{ page.fullDescription }}</span>
+            <span style="white-space: pre-wrap">{{ page.fullDescription }}</span>
           </p>
 
           <div
@@ -39,19 +39,15 @@
               overflow-hidden
             "
           >
-            <div
-              class="flex flex-col justify-between text-white p-6 gap-8"
-              :class="page.emailAddress ? 'sm:w-1/3' : 'w-full'"
-              :style="customBackground"
-            >
-              <div>
+            <div class="text-white p-6" :class="page.emailAddress ? 'sm:w-1/3' : 'w-full'" :style="customBackground">
+              <div class="flex flex-col h-full">
                 <h2 class="font-semibold text-lg">
                   {{ $t('sustainability.mvp_detail.contact_partner', { partner: page.title }) }}
                 </h2>
                 <span class="block text-gray-100 mt-2">{{
                   $t('sustainability.mvp_detail.they_will_get_back_to_you')
                 }}</span>
-                <div class="flex justify-between" :class="!page.emailAddress ? 'flex-row-reverse' : 'flex-col'">
+                <div class="flex justify-between" :class="!page.emailAddress ? 'flex-row-reverse' : 'flex-col h-full'">
                   <div>
                     <Link :href="page.link" to="" blank class="flex items-center mt-4">
                       <IconExternalLink class="inline flex-shrink-0 w-4 h-4 mr-1" />

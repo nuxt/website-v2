@@ -50,7 +50,7 @@ export default defineComponent({
   },
   setup(props) {
     const component = computed(() => {
-      if (props.to) return 'Link'
+      if (props.to) return 'AppLink'
       return 'div'
     })
 

@@ -44,16 +44,13 @@ export default defineComponent({
       const { to, href } = props.link
       if (to?.length) {
         return {
-          is: 'Link',
+          is: 'AppLink',
           to
         }
       } else if (href?.length) {
         return {
-          is: 'Link',
-          static: true,
-          to: '',
-          href,
-          blank: true
+          is: 'AppLink',
+          href
         }
       } else {
         return {

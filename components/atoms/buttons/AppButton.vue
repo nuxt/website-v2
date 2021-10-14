@@ -1,9 +1,9 @@
 <template>
   <!-- eslint-disable-next-line vue/require-component-is -->
-  <Component v-bind="buttonProps" class="app-button" :class="[buttonClass, size]">
+  <Component v-bind="buttonProps" :class="buttonClass ? buttonClass : ['app-button', extraClass, size]">
     <Component :is="icon" v-if="icon" class="mr-2 icon" :class="size" />
 
-    <Markdown unwrap="li ul p" />
+    <Markdown unwrap="p" />
 
     <IconExternalLink v-if="externalIcon" class="ml-2 icon" :class="size" />
   </Component>
@@ -33,9 +33,13 @@ export default defineComponent({
       type: String,
       default: ''
     },
+    extraClass: {
+      type: String,
+      default: 'app-button-primary-color'
+    },
     buttonClass: {
       type: String,
-      default: 'text-black bg-primary-500 hover:bg-primary-400 focus:ring-primary-600'
+      default: ''
     }
   },
   setup(props) {

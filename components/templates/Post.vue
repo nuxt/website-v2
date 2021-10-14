@@ -16,8 +16,9 @@
               dark:text-gray-100
               hover:d-secondary-text
             "
-            >← Back</span
           >
+            ← {{ $t('common.back') }}
+          </span>
         </AppLink>
         <div class="px-4 mb-6">
           <h1 class="flex-1 text-3xl font-semibold tracking-tight text-gray-900 sm:text-4xl dark:text-gray-100">

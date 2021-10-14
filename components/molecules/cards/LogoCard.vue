@@ -3,25 +3,25 @@
     <template v-if="item.link">
       <div class="ListCard-external group-hover:opacity-100">
         <slot name="external">
-          <nuxt-img alt="external_link" src="/img/icons/ext.svg" />
+          <NuxtImg alt="external_link" src="/img/icons/ext.svg" />
         </slot>
       </div>
       <AppLink :href="item.link" :aria-label="item.title" class="absolute inset-0" />
     </template>
     <div class="ListCard-body">
-      <nuxt-img
+      <NuxtImg
         v-if="item.logo && item.logo.dark"
         :alt="`${item.title} logo`"
         :src="item.logo.dark"
         class="dark-img w-12 h-12 mr-4 rounded-md"
       />
-      <nuxt-img
+      <NuxtImg
         v-if="item.logo && item.logo.light"
         :alt="`${item.title} logo`"
         :src="item.logo.light"
         class="light-img w-12 h-12 mr-4 rounded-md"
       />
-      <nuxt-img
+      <NuxtImg
         v-if="typeof item.logo === 'string'"
         :alt="`${item.title} logo`"
         :src="item.logo || ''"

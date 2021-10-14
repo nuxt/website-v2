@@ -28,7 +28,7 @@
         cursor-pointer
       "
     >
-      <nuxt-img alt="external_link" src="/img/icons/ext.svg" width="24" height="24" />
+      <NuxtImg alt="external_link" src="/img/icons/ext.svg" width="24" height="24" />
     </div>
     <div class="flex flex-col lg:flex-row space-y-4 lg:space-y-0 lg:space-x-3">
       <img loading="lazy" :src="iconUrl" :alt="module.name" class="w-10 h-10 mt-2 object-contain" />

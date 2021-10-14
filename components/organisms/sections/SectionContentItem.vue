@@ -1,5 +1,5 @@
 <template>
-  <component
+  <Component
     :is="component"
     :to="to"
     :aria-label="title"
@@ -15,7 +15,7 @@
     </InjectComponent>
     <h3 class="mb-1 text-center text-body-lg lg:text-body-xl font-bold">{{ title }}</h3>
     <p class="text-center text-sm lg:text-base mb-4">{{ description }}</p>
-  </component>
+  </Component>
 </template>
 
 <script>

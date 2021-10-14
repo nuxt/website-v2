@@ -1,6 +1,6 @@
 <template>
   <!-- eslint-disable-next-line vue/require-component-is -->
-  <component
+  <Component
     v-bind="linkProps"
     :key="link.slug"
     :aria-label="link.title"
@@ -11,7 +11,7 @@
     }"
   >
     <slot />
-  </component>
+  </Component>
 </template>
 
 <script>

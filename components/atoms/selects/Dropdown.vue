@@ -8,7 +8,7 @@
     @mouseover="mode === 'hover' ? mouseover() : () => {}"
     @mouseleave="mode === 'hover' ? mouseleave() : () => {}"
   >
-    <div class="flex items-center w-full">
+    <div class="flex items-center w-full" :class="mainLinkClass">
       <slot name="trigger" :toggle="toggle" :open="open" />
       <svg
         v-if="icon"
@@ -51,7 +51,7 @@
           class="divide-y"
           :class="isHome ? 'divide-gray-700' : 'divide-gray-100 dark:divide-gray-700'"
         >
-          <div v-for="(subItems, index) of items" :key="index" class="py-1">
+          <div v-for="(subItems, index) of items" :key="index" :class="itemsClass">
             <div
               v-for="(item, i) of subItems"
               :key="i"
@@ -128,6 +128,10 @@ export default defineComponent({
       type: String,
       default: null
     },
+    mainLinkClass: {
+      type: String,
+      default: ''
+    },
     rounded: {
       type: Boolean,
       default: false
@@ -159,6 +163,10 @@ export default defineComponent({
     preventOverflow: {
       type: Number,
       default: 8
+    },
+    itemsClass: {
+      type: String,
+      default: 'py-1'
     }
   },
   setup() {

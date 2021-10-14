@@ -32,15 +32,13 @@ Cleavr includes the following features:
 
 ## Step 1: Initial setup
 
-You can use Flash Deploy to provision / configure a new server and deploy your app in one fell swoop, or you can use the traditional method of adding a new Nuxt app to an existing server. These setup instructions will describe adding a new app to an existing server.
-
 In Cleavr, navigate to the server to add the new app to and select **Add Site**.
 
-Select either Nuxt SSR or Nuxt Static web app type depending on which target you intend to deploy. Fill out the remaining website info and click **Add**.
+Select either **Nuxt SSR** or **Nuxt Static** web app type depending on which target you intend to deploy. Fill out the remaining website info and click **Add**.
 
-This will add the site to your server and configure the server with any missing environment dependencies.
+This will add the site to your server and configure the server with any missing required environment dependencies.
 
-Once the site has been successfully added, go to the Web App section and click **Complete Setup** for the web app that was added.
+Once the site has been successfully added, go to the Web App section and navigate to settings > code repository for the web app that was added.
 
 Fill in your version control provider, repository, and branch to deploy fields and then click **Update**.
 
@@ -51,3 +49,5 @@ You're now ready to deploy your web app.
 On the web app's deployment page, click **Deploy**.
 
 The deployment process will begin and complete in a few moments.
+
+[View the Cleavr documentation for more info.](https://docs.cleavr.io/guides/nuxt)

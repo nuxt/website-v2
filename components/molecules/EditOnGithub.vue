@@ -12,25 +12,43 @@
         {{ $t('article.updatedAt') }} {{ $d(Date.parse(page.mtime), 'long') }}
       </span>
     </div>
-    <div class="px-4 sm:px-6" v-if="contributors.length">
+    <div v-if="contributors.length" class="px-4 sm:px-6">
       <a
-          v-for="contributor of contributors"
-          :key="contributor.login"
-          :href="`https://github.com/${contributor.login}`"
-          rel="noopener"
-          target="_blank"
-          class="inline-flex mb-2 mr-2 overflow-hidden transition-colors duration-300 ease-linear border rounded text-light-onSurfacePrimary dark:text-dark-onSurfacePrimary bg-light-surfaceElevated light:hover:bg-gray-300 dark:bg-dark-elevatedSurface dark:hover:bg-dark-surface border-light-border dark:border-dark-border"
-        >
-          <img
-            :alt="contributor.name"
-            :srcset="`https://github.com/${contributor.login}.png?size=32 1x, https://github.com/${contributor.login}.png?size=64 2x`"
-            :src="`https://github.com/${contributor.login}.png?size=32`"
-            class="h-8"
-          />
-          <span class="inline-block px-2 leading-loose">
-            {{ contributor.name }}
-          </span>
-        </a>
+        v-for="contributor of contributors"
+        :key="contributor.login"
+        :href="`https://github.com/${contributor.login}`"
+        rel="noopener"
+        target="_blank"
+        class="
+          inline-flex
+          mb-2
+          mr-2
+          overflow-hidden
+          transition-colors
+          duration-300
+          ease-linear
+          border
+          rounded
+          text-light-onSurfacePrimary
+          dark:text-dark-onSurfacePrimary
+          bg-light-surfaceElevated
+          light:hover:bg-gray-300
+          dark:bg-dark-elevatedSurface dark:hover:bg-dark-surface
+          border-light-border
+          dark:border-dark-border
+        "
+      >
+        <NuxtImg
+          :alt="contributor.name"
+          :srcset="`https://github.com/${contributor.login}.png?size=32 1x, https://github.com/${contributor.login}.png?size=64 2x`"
+          :src="`https://github.com/${contributor.login}.png?size=32`"
+          loading="lazy"
+          class="h-8"
+        />
+        <span class="inline-block px-2 leading-loose">
+          {{ contributor.name }}
+        </span>
+      </a>
     </div>
   </div>
 </template>
@@ -75,7 +93,12 @@ export default defineComponent({
         .filter(Boolean)
         .join('/')
     })
-    const path = [settings.value.github.repo, settings.value.github.branch, settings.value.contentDir, props.page.source].join('/')
+    const path = [
+      settings.value.github.repo,
+      settings.value.github.branch,
+      settings.value.contentDir,
+      props.page.source
+    ].join('/')
     useFetch(async () => {
       contributors.value = await $fetch(`https://api.nuxtjs.org/api/contributors/${path}`)
     })

@@ -70,7 +70,37 @@ export default {
         darker: '#003543',
         darkest: '#012A35',
         black: '#001E26'
+      },
+      mint: {
+        surface: '#E7FEFD',
+        lightest: '#C5EEEC',
+        lighter: '#A8DDDB',
+        light: '#7EB1B0',
+        DEFAULT: '#558887',
+        dark: '#2E6160',
+        darker: '#003C3C',
+        darkest: '#012E2F',
+        black: '#002021'
+      },
+      indigo: {
+        lighter: '#80B1E3',
+        light: '#408BD6',
+        DEFAULT: '#0064C8',
+        dark: '#0055AA',
+        darker: '#00468C'
+      },
+      sand: {
+        surface: '#F5F5EB',
+        lightest: '#EDEDD5',
+        lighter: '#DEDEB6',
+        light: '#B4B48C',
+        DEFAULT: '#9C9C6A',
+        dark: '#636330',
+        darker: '#3B3B00',
+        darkest: '#2D2E01',
+        black: '#1F2100'
       }
+
       // 'green-lighter': '#80EEC0',
       // 'green-light': '#40E5A1',
       // green: '#00DC82',
@@ -118,11 +148,7 @@ export default {
       // $colorPurpleDefault: #C26BBE;
       // $colorPurpleDark: #A55BA2;
       // $colorPurpleDarker: #884B85;
-      // $colorIndigoLighter: #80B1E3;
-      // $colorIndigoLight: #408BD6;
-      // $colorIndigoDefault: #0064C8;
-      // $colorIndigoDark: #0055AA;
-      // $colorIndigoDarker: #00468C;
+      //
       // $colorBlueLighter: #94D5F7;
       // $colorBlueLight: #5EBFF4;
       // $colorBlueDefault: #28AAF0;
@@ -133,24 +159,7 @@ export default {
       // $colorTealDefault: #00E5E5;
       // $colorTealDark: #00C3C3;
       // $colorTealDarker: #00A0A0;
-      // $colorMintSurface: #E7FEFD;
-      // $colorMintLightest: #C5EEEC;
-      // $colorMintLighter: #A8DDDB;
-      // $colorMintLight: #7EB1B0;
-      // $colorMintDefault: #558887;
-      // $colorMintDark: #2E6160;
-      // $colorMintDarker: #003C3C;
-      // $colorMintDarkest: #012E2F;
-      // $colorMintBlack: #002021;
-      // $colorSandSurface: #F5F5EB;
-      // $colorSandLightest: #EDEDD5;
-      // $colorSandLighter: #DEDEB6;
-      // $colorSandLight: #B4B48C;
-      // $colorSandDefault: #9C9C6A;
-      // $colorSandDark: #636330;
-      // $colorSandDarker: #3B3B00;
-      // $colorSandDarkest: #2D2E01;
-      // $colorSandBlack: #1F2100;
+      //
       // $colorCloudSurface: #E6F0F0;
       // $colorCloudLightest: #D1E2E2;
       // $colorCloudLighter: #B2CCCC;

@@ -46,7 +46,7 @@
       </template>
       <template #left-illustration>
         <div class="col-span-6 h-full md:pr-16 flex flex justify-center">
-          <img :src="`/img/home/discover/discover.svg`" />
+          <img loading="lazy" :src="`/img/home/discover/discover.svg`" />
         </div>
       </template>
     </HomeSection>

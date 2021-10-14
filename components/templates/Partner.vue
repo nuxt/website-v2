@@ -39,7 +39,11 @@
               overflow-hidden
             "
           >
-            <div class="flex flex-col justify-between text-white sm:w-1/3 p-6 gap-8" :style="customBackground">
+            <div
+              class="flex flex-col justify-between text-white p-6 gap-8"
+              :class="page.emailAddress ? 'sm:w-1/3' : 'w-full'"
+              :style="customBackground"
+            >
               <div>
                 <h2 class="font-semibold text-lg">
                   {{ $t('sustainability.mvp_detail.contact_partner', { partner: page.title }) }}
@@ -47,42 +51,54 @@
                 <span class="block text-gray-100 mt-2">{{
                   $t('sustainability.mvp_detail.they_will_get_back_to_you')
                 }}</span>
-                <Link :href="page.link" to="" blank class="flex items-center mt-4">
-                  <IconExternalLink class="inline flex-shrink-0 w-4 h-4 mr-1" />
-                  <span class="truncate">{{ websiteDomain }}</span>
-                </Link>
-                <Link v-if="page.emailAddress" :to="`mailto:${page.emailAddress}`" blank class="flex items-center mt-4">
-                  <IconEmail class="inline flex-shrink-0 w-4 h-4 mr-1" />
-                  <span class="truncate">{{ page.emailAddress }}</span>
-                </Link>
-                <Link v-if="page.phoneNumber" :to="`tel:${page.phoneNumber}`" blank class="flex items-center mt-4">
-                  <IconPhone class="inline flex-shrink-0 w-4 h-4 mr-1" />
-                  <span class="truncate">{{ page.phoneNumber }}</span>
-                </Link>
-              </div>
-              <div class="flex items-center gap-10">
-                <Link
-                  v-if="page.twitter"
-                  :href="`https://twitter.com/${page.twitter}`"
-                  to=""
-                  blank
-                  aria-label="twitterLink"
-                >
-                  <IconTwitter class="inline w-6 h-6" />
-                </Link>
-                <Link
-                  v-if="page.github"
-                  :href="`https://github.com/${page.github}`"
-                  to=""
-                  blank
-                  aria-label="githubLink"
-                >
-                  <IconGitHub class="inline w-6 h-6" />
-                </Link>
+                <div class="flex justify-between" :class="!page.emailAddress ? 'flex-row-reverse' : 'flex-col'">
+                  <div>
+                    <Link :href="page.link" to="" blank class="flex items-center mt-4">
+                      <IconExternalLink class="inline flex-shrink-0 w-4 h-4 mr-1" />
+                      <span class="truncate">{{ websiteDomain }}</span>
+                    </Link>
+                    <Link
+                      v-if="page.emailAddress"
+                      :to="`mailto:${page.emailAddress}`"
+                      blank
+                      class="flex items-center mt-4"
+                    >
+                      <IconEmail class="inline flex-shrink-0 w-4 h-4 mr-1" />
+                      <span class="truncate">{{ page.emailAddress }}</span>
+                    </Link>
+
+                    <Link v-if="page.phoneNumber" :to="`tel:${page.phoneNumber}`" blank class="flex items-center mt-4">
+                      <IconPhone class="inline flex-shrink-0 w-4 h-4 mr-1" />
+                      <span class="truncate">{{ page.phoneNumber }}</span>
+                    </Link>
+                  </div>
+
+                  <div class="flex gap-10" :class="page.emailAddress ? 'items-end' : 'items-end'">
+                    <Link
+                      v-if="page.twitter"
+                      :href="`https://twitter.com/${page.twitter}`"
+                      to=""
+                      blank
+                      aria-label="twitterLink"
+                    >
+                      <IconTwitter class="inline w-6 h-6" />
+                    </Link>
+                    <Link
+                      v-if="page.github"
+                      :href="`https://github.com/${page.github}`"
+                      to=""
+                      blank
+                      aria-label="githubLink"
+                    >
+                      <IconGitHub class="inline w-6 h-6" />
+                    </Link>
+                  </div>
+                </div>
               </div>
             </div>
 
             <form
+              v-if="page.emailAddress"
               class="contact-form sm:w-2/3 h-full grid grid-cols-1 lg:grid-cols-2 p-6 gap-6"
               @submit.prevent="onSubmit"
             >

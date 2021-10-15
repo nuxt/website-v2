@@ -1,7 +1,7 @@
 import { ref, useContext, reactive } from '@nuxtjs/composition-api'
 import { $fetch } from 'ohmyfetch'
 
-export function usePartnersContact() {
+export function usePartnerContact() {
   // @ts-ignore
   const { app, $recaptcha } = useContext()
 
@@ -48,7 +48,7 @@ export function usePartnersContact() {
           result.value = null
         }, 4000)
       })
-      .catch(e => {
+      .catch(() => {
         result.value = { text: i18n.t('common.an_error_occurred'), class: 'bg-red-500' }
         setTimeout(() => {
           result.value = null

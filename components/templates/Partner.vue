@@ -118,6 +118,7 @@
                 <label for="message" class="block">{{ $t('sustainability.mvp_detail.message') }}</label>
                 <textarea id="message" v-model="form.message" rows="3" />
               </div>
+
               <div class="lg:col-span-full flex justify-end">
                 <button submit>{{ $t('sustainability.mvp_detail.submit') }}</button>
               </div>
@@ -175,7 +176,15 @@
 </template>
 
 <script>
-import { defineComponent, useContext, computed, ref, reactive } from '@nuxtjs/composition-api'
+import {
+  defineComponent,
+  useContext,
+  computed,
+  ref,
+  reactive,
+  onMounted,
+  onBeforeUnmount
+} from '@nuxtjs/composition-api'
 import { $fetch } from 'ohmyfetch'
 
 export default defineComponent({
@@ -186,7 +195,7 @@ export default defineComponent({
     }
   },
   setup(props) {
-    const { i18n } = useContext()
+    const { i18n, $recaptcha } = useContext()
 
     const websiteDomain = computed(() => {
       let domain
@@ -199,6 +208,10 @@ export default defineComponent({
 
       return domain
     })
+
+    onMounted(async () => await $recaptcha.init().catch(() => console.log('recaptcha error', e)))
+
+    onBeforeUnmount(() => $recaptcha.destroy())
 
     const customBackground = computed(() => {
       if (typeof props.page.color === 'object') {
@@ -226,19 +239,29 @@ export default defineComponent({
 
     const result = ref(null)
 
-    function onSubmit() {
-      $fetch('https://api.nuxtjs.org/api/partners/contact', {
-        method: 'POST',
-        body: {
-          partner_email: props.page.emailAddress,
-          ...form
-        }
-      })
-        .then(() => {
-          result.value = { text: i18n.t('partners.contact_success'), class: 'bg-green-500 text-black' }
-          setTimeout(() => {
-            result.value = null
-          }, 4000)
+    async function onSubmit() {
+      await $recaptcha
+        .execute('login')
+        .then(token => {
+          $fetch('https://api.nuxtjs.org/api/partners/contact', {
+            method: 'POST',
+            body: {
+              partner_email: props.page.emailAddress,
+              ...form
+            }
+          })
+            .then(() => {
+              result.value = { text: i18n.t('partners.contact_success'), class: 'bg-green-500 text-black' }
+              setTimeout(() => {
+                result.value = null
+              }, 4000)
+            })
+            .catch(() => {
+              result.value = { text: i18n.t('common.an_error_occurred'), class: 'bg-red-500' }
+              setTimeout(() => {
+                result.value = null
+              }, 4000)
+            })
         })
         .catch(() => {
           result.value = { text: i18n.t('common.an_error_occurred'), class: 'bg-red-500' }

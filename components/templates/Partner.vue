@@ -96,7 +96,7 @@
             <form
               v-if="page.emailAddress"
               class="contact-form sm:w-2/3 h-full grid grid-cols-1 lg:grid-cols-2 p-6 gap-6"
-              @submit.prevent="onSubmit"
+              @submit.prevent="validateForm(page.emailAddress)"
             >
               <div>
                 <label for="firstName" class="block">{{ $t('sustainability.mvp_detail.first_name') }}</label>
@@ -118,9 +118,8 @@
                 <label for="message" class="block">{{ $t('sustainability.mvp_detail.message') }}</label>
                 <textarea id="message" v-model="form.message" rows="3" />
               </div>
-
               <div class="lg:col-span-full flex justify-end">
-                <button submit>{{ $t('sustainability.mvp_detail.submit') }}</button>
+                <button validateForm(page.emailAddress)>{{ $t('sustainability.mvp_detail.submit') }}</button>
               </div>
               <div v-if="result" class="lg:col-span-full rounded-md p-4" :class="result && result.class">
                 {{ result && result.text }}
@@ -176,16 +175,8 @@
 </template>
 
 <script>
-import {
-  defineComponent,
-  useContext,
-  computed,
-  ref,
-  reactive,
-  onMounted,
-  onBeforeUnmount
-} from '@nuxtjs/composition-api'
-import { $fetch } from 'ohmyfetch'
+import { defineComponent, useContext, computed, onMounted, onBeforeUnmount } from '@nuxtjs/composition-api'
+import { usePartnersContact } from '~/plugins/partners'
 
 export default defineComponent({
   props: {
@@ -195,7 +186,8 @@ export default defineComponent({
     }
   },
   setup(props) {
-    const { i18n, $recaptcha } = useContext()
+    const { $recaptcha } = useContext()
+    const { validateForm, result, form } = usePartnersContact()
 
     const websiteDomain = computed(() => {
       let domain
@@ -209,7 +201,7 @@ export default defineComponent({
       return domain
     })
 
-    onMounted(async () => await $recaptcha.init().catch(() => console.log('recaptcha error', e)))
+    onMounted(async () => await $recaptcha.init().catch(() => console.log('recaptcha error')))
 
     onBeforeUnmount(() => $recaptcha.destroy())
 
@@ -229,54 +221,12 @@ export default defineComponent({
       }
     })
 
-    const form = reactive({
-      first_name: '',
-      last_name: '',
-      company_name: '',
-      email: '',
-      message: ''
-    })
-
-    const result = ref(null)
-
-    async function onSubmit() {
-      await $recaptcha
-        .execute('login')
-        .then(token => {
-          $fetch('https://api.nuxtjs.org/api/partners/contact', {
-            method: 'POST',
-            body: {
-              partner_email: props.page.emailAddress,
-              ...form
-            }
-          })
-            .then(() => {
-              result.value = { text: i18n.t('partners.contact_success'), class: 'bg-green-500 text-black' }
-              setTimeout(() => {
-                result.value = null
-              }, 4000)
-            })
-            .catch(() => {
-              result.value = { text: i18n.t('common.an_error_occurred'), class: 'bg-red-500' }
-              setTimeout(() => {
-                result.value = null
-              }, 4000)
-            })
-        })
-        .catch(() => {
-          result.value = { text: i18n.t('common.an_error_occurred'), class: 'bg-red-500' }
-          setTimeout(() => {
-            result.value = null
-          }, 4000)
-        })
-    }
-
     return {
       websiteDomain,
       customBackground,
       form,
       result,
-      onSubmit
+      validateForm
     }
   }
 })

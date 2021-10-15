@@ -120,7 +120,8 @@ export default {
     released_on: 'Lançamento em {datetime}'
   },
   partners: {
-    become_partner: 'torne-se um parceiro'
+    become_partner: 'torne-se um parceiro',
+    contact_success: 'Your request has been sent'
   },
   theme_mode: {
     system: 'Sistema',

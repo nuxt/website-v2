@@ -100,26 +100,29 @@
             >
               <div>
                 <label for="firstName" class="block">{{ $t('sustainability.mvp_detail.first_name') }}</label>
-                <input id="firstName" type="text" />
+                <input id="firstName" v-model="form.first_name" type="text" />
               </div>
               <div>
                 <label for="lastName" class="block">{{ $t('sustainability.mvp_detail.last_name') }}</label>
-                <input id="lastName" type="text" />
+                <input id="lastName" v-model="form.last_name" type="text" />
               </div>
               <div>
                 <label for="companyName" class="block">{{ $t('sustainability.mvp_detail.company_name') }}</label>
-                <input id="companyName" type="text" />
+                <input id="companyName" v-model="form.company_name" type="text" />
               </div>
               <div>
                 <label for="email" class="block">{{ $t('sustainability.mvp_detail.email') }}</label>
-                <input id="email" type="text" />
+                <input id="email" v-model="form.email" type="text" />
               </div>
               <div class="lg:col-span-full">
                 <label for="message" class="block">{{ $t('sustainability.mvp_detail.message') }}</label>
-                <textarea id="message" rows="3" />
+                <textarea id="message" v-model="form.message" rows="3" />
               </div>
               <div class="lg:col-span-full flex justify-end">
                 <button submit>{{ $t('sustainability.mvp_detail.submit') }}</button>
+              </div>
+              <div v-if="result" class="lg:col-span-full rounded-md p-4" :class="result && result.class">
+                {{ result && result.text }}
               </div>
             </form>
           </div>
@@ -172,7 +175,8 @@
 </template>
 
 <script>
-import { defineComponent, computed } from '@nuxtjs/composition-api'
+import { defineComponent, useContext, computed, ref, reactive } from '@nuxtjs/composition-api'
+import { $fetch } from 'ohmyfetch'
 
 export default defineComponent({
   props: {
@@ -182,6 +186,8 @@ export default defineComponent({
     }
   },
   setup(props) {
+    const { i18n } = useContext()
+
     const websiteDomain = computed(() => {
       let domain
 
@@ -210,13 +216,43 @@ export default defineComponent({
       }
     })
 
+    const form = reactive({
+      first_name: '',
+      last_name: '',
+      company_name: '',
+      email: '',
+      message: ''
+    })
+
+    const result = ref(null)
+
     function onSubmit() {
-      // TODO
+      $fetch('https://api.nuxtjs.org/api/partners/contact', {
+        method: 'POST',
+        body: {
+          partner_email: props.page.emailAddress,
+          ...form
+        }
+      })
+        .then(() => {
+          result.value = { text: i18n.t('partners.contact_success'), class: 'bg-green-500 text-black' }
+          setTimeout(() => {
+            result.value = null
+          }, 4000)
+        })
+        .catch(() => {
+          result.value = { text: i18n.t('common.an_error_occurred'), class: 'bg-red-500' }
+          setTimeout(() => {
+            result.value = null
+          }, 4000)
+        })
     }
 
     return {
       websiteDomain,
       customBackground,
+      form,
+      result,
       onSubmit
     }
   }

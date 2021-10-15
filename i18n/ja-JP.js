@@ -131,7 +131,8 @@ export default {
     released_on: 'リリース日 {datetime}'
   },
   partners: {
-    become_partner: 'パートナーになる'
+    become_partner: 'パートナーになる',
+    contact_success: 'Your request has been sent'
   },
   theme_mode: {
     system: 'システム',

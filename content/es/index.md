@@ -29,7 +29,7 @@ category: Aprender
 ---
 
 #title
-[Facil]{.text-primary} de aprender. [Facil]{.text-primary} de dominar
+[Fácil]{.text-primary} de aprender. [Fácil]{.text-primary} de dominar
 
 #description
 Aprende todo lo que necesitas saber, desde principiante hasta maestro.

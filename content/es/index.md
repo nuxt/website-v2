@@ -62,7 +62,7 @@ image: /img/home/discover/dx/file-system-routing.svg
 ::section-content-item
 ---
 title: Modos de renderizado
-description: 'Cambie entre la generación de sitios estáticos ó renderizado en el servidor bajo demanda.'
+description: 'Cambie entre la generación de sitios estáticos o renderizado en el servidor bajo demanda.'
 image: /img/home/discover/dx/hybrid.svg
 ---
 ::

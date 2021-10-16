@@ -85,7 +85,7 @@ image: /img/home/discover/dx/conventions.svg
 
 ::section-content-item
 ---
-title: SEO Amigable
+title: SEO amigable
 description: 'Gestión de metaetiquetas y un tiempo de acceso al contenido más rápido para una excelente indexación.'
 image: /img/home/discover/dx/seo.svg
 ---

@@ -32,7 +32,7 @@ category: Aprender
 [Fácil]{.text-primary} de aprender. [Fácil]{.text-primary} de dominar
 
 #description
-Aprende todo lo que necesitas saber, desde principiante hasta maestro.
+Aprende todo lo que usted necesita saber, desde principiante hasta maestro.
 
 #bottom
 :button-link[Empieza a aprender]{href="/docs/get-started/installation" size="medium"}

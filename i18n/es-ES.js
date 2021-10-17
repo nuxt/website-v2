@@ -23,7 +23,7 @@ export default {
   header: {
     links: [
       {
-        name: 'Docs',
+        name: 'Documentación',
         icon: 'books',
         slug: 'docs-2.x-book-slug'
       },
@@ -43,7 +43,7 @@ export default {
         slug: 'blog'
       },
       {
-        name: 'Video Courses',
+        name: 'Video cursos',
         icon: 'video',
         href: 'https://masteringnuxt.com/?utm_source=nuxt&utm_medium=link&utm_campaign=navbar_link'
       }
@@ -65,8 +65,8 @@ export default {
       openSource: 'código abierto',
       get_started: 'comenzar',
       get_updates: 'Obtenga actualizaciones de Nuxt cada mes en su bandeja de entrada',
-      video: 'Video produced by {company}, download their free {cheatSheet}.',
-      cheatSheet: 'Nuxt Cheat Sheet.'
+      video: 'Video producido por {company}, descarga gratuitamente su {cheatSheet}.',
+      cheatSheet: 'Cheat Sheet de Nuxt.'
     },
     why: {
       title: 'Por qué {nuxt}',
@@ -93,12 +93,12 @@ export default {
     modes: {
       title: '{nuxt} rendering',
       ssr: {
-        title: 'Server Side Rendered',
+        title: 'Renderizado del lado del servidor',
         description:
           'El modo más popular para Nuxt. Con SSR, también llamado modo "universal" o "isomórfico", se utilizará un servidor Node.js para entregar HTML basado en tus componentes de Vue al cliente en lugar del javascript puro. El uso de SSR generará un gran impulso de SEO, una mejor UX y más oportunidades (en comparación con un Vue SPA tradicional). {Break} Debido a que implementar SSR por tu cuenta puede ser realmente tedioso, Nuxt le brinda soporte completo listo para usar y se encargará de los errores comunes.'
       },
       ssg: {
-        title: 'Statically Generated',
+        title: 'Generado estáticamente',
         description:
           'La generación de sitios estáticos es un tema muy candente en este momento (también conocido como JAMStack). En lugar de cambiar a otro framework y dedicar tiempo a acostumbrarse a él, ¿por qué no matar dos pájaros de un tiro? {proverbial} Nuxt admite la generación de un sitio web estático basado en tu aplicación Vue. Es "lo mejor de ambos mundos", ya que no necesitas un servidor, pero todavía tiene beneficios de SEO porque Nuxt pre-renderizará todas las páginas e incluirá el HTML necesario. Además, puede implementar la página resultante fácilmente en páginas de Netlify o GitHub.',
         proverbial: 'sólo proverbial'
@@ -111,7 +111,7 @@ export default {
       become_a_sponsor: 'Conviértete en patrocinador'
     },
     newsletter: {
-      title: '{nuxt} Newsletter',
+      title: 'Boletín informativo de {nuxt}',
       description:
         'Recibe las últimas noticias de Nuxt en tu bandeja de entrada, organizado por el equipo de Nuxt y los contribuidores.',
       form: {
@@ -127,10 +127,10 @@ export default {
   },
   design: {
     meta: {
-      title: 'Nuxt Design',
+      title: 'Nuxt Diseño',
       description: 'Descargue los recursos de diseño de Nuxt (SVG, iconos, emoji y favicon)'
     },
-    title: '{nuxt} Design',
+    title: '{nuxt} Diseño',
     description:
       'Nuxt JS es un proyecto de código abierto con licencia del MIT y de uso completamente gratuito. {break} Puede usar libremente nuestros logotipos siempre que mencione Nuxt JS y enlace a nuxtjs.org.',
     other_download_message: 'También puede descargar nuestro {favicon} o nuestro archivo {sketch}.'
@@ -280,7 +280,7 @@ export default {
     link: 'nueva documentación'
   },
   example: {
-    intro: 'En esta ejemplo:'
+    intro: 'En este ejemplo:'
   },
   codeSandbox: {
     open: 'Ver Ejemplo'

@@ -301,22 +301,22 @@ export default {
     },
     examples: {
       routing: 'Routing',
-      dataFetching: 'Data Fetching',
-      assetManagement: 'Asset Management',
-      transitions: 'Transitions',
+      dataFetching: 'Obtención de datos',
+      assetManagement: 'Administración de assets',
+      transitions: 'Transiciones',
       seo: 'SEO',
-      loading: 'Loading',
-      miscellaneous: 'Miscellaneous',
+      loading: 'Cargando',
+      miscellaneous: 'Misceláneo',
       middleware: 'Middleware',
       plugins: 'Plugins',
-      modules: 'Modules',
-      customization: 'Customization',
-      advanced: 'Advanced'
+      modules: 'Módulos',
+      customization: 'Personalización',
+      advanced: 'Avanzado'
     },
     faq: {
       configuration: 'Configuración',
       development: 'Desarrollo',
-      deployment: 'Deployment'
+      deployment: 'Despliegue'
     },
     guides: {
       'get-started': 'Comenzar',
@@ -331,22 +331,22 @@ export default {
   footer: {
     links: {
       discover: {
-        title: 'Discover',
-        shop: 'Our Goodies Store',
-        consulting: 'Training & consultancy',
-        sponsorNuxt: 'Sponsoring & donations'
+        title: 'Descubre',
+        shop: 'Nuestra tienda',
+        consulting: 'Consultoría y entrenamiento',
+        sponsorNuxt: 'Patrocinio y donaciones'
       },
       about: {
-        title: 'About',
-        team: 'Our team',
-        design: 'Design kit',
-        contact: 'Contact us'
+        title: 'Acerca de ',
+        team: 'Nuestro equipo',
+        design: 'Kit de diseño',
+        contact: 'Contáctanos'
       },
       support: {
-        title: 'Support',
-        resources: 'Resources',
-        discord: 'Chat with us',
-        contributionGuide: 'Contribution guide'
+        title: 'Soporte',
+        resources: 'Recursos',
+        discord: 'Habla con nosotros',
+        contributionGuide: 'Guía de contribución'
       }
     }
   }

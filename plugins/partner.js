@@ -7,7 +7,7 @@ export function usePartnerContact(partnersEmail) {
 
   const { i18n } = app
 
-  const apiURL = process.env.NUXT_API || 'https://api.nuxtjs.org'
+  const apiURL = process.env.NUXT_ORG_API || 'https://api.nuxtjs.org'
 
   const form = reactive({
     first_name: '',

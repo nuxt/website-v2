@@ -121,8 +121,8 @@
               <div class="lg:col-span-full flex justify-end">
                 <button submit>{{ $t('sustainability.mvp_detail.submit') }}</button>
               </div>
-              <div v-if="result" class="lg:col-span-full rounded-md p-4" :class="result && result.class">
-                {{ result && result.text }}
+              <div v-if="resultText" class="lg:col-span-full rounded-md p-4" :class="resultStyle">
+                {{ resultText }}
               </div>
             </form>
           </div>
@@ -186,8 +186,30 @@ export default defineComponent({
     }
   },
   setup(props) {
-    const { $recaptcha } = useContext()
+    const {
+      app: { i18n },
+      $recaptcha
+    } = useContext()
     const { validateForm, result, form } = usePartnerContact(props.page.emailAddress)
+
+    const resultText = computed(() => {
+      switch (result.value) {
+        case 'success':
+          return i18n.t('partners.contact_success')
+        case 'failure':
+          return i18n.t('common.an_error_occurred')
+      }
+      return ''
+    })
+    const resultStyle = computed(() => {
+      switch (result.value) {
+        case 'success':
+          return 'bg-green-500 text-black'
+        case 'failure':
+          return 'bg-red-500 text-white'
+      }
+      return ''
+    })
 
     const websiteDomain = computed(() => {
       let domain
@@ -225,7 +247,8 @@ export default defineComponent({
       websiteDomain,
       customBackground,
       form,
-      result,
+      resultText,
+      resultStyle,
       validateForm
     }
   }

@@ -3,9 +3,7 @@ import { $fetch } from 'ohmyfetch'
 
 export function usePartnerContact(partnersEmail) {
   // @ts-ignore
-  const { app, $recaptcha } = useContext()
-
-  const { i18n } = app
+  const { $recaptcha } = useContext()
 
   const apiURL = process.env.NUXT_ORG_API || 'https://api.nuxtjs.org'
 
@@ -26,7 +24,7 @@ export function usePartnerContact(partnersEmail) {
         submitForm(partnersEmail, token)
       })
       .catch(() => {
-        result.value = { text: i18n.t('common.an_error_occurred'), class: 'bg-red-500' }
+        result.value = 'failure'
         setTimeout(() => {
           result.value = null
         }, 4000)
@@ -36,6 +34,7 @@ export function usePartnerContact(partnersEmail) {
   const submitForm = (partnersEmail, recaptchaToken) => {
     $fetch(`${apiURL}/api/partners/contact`, {
       method: 'POST',
+      headers: [['Accept', 'application/json']],
       body: {
         partner_email: partnersEmail,
         token: recaptchaToken,
@@ -43,13 +42,13 @@ export function usePartnerContact(partnersEmail) {
       }
     })
       .then(() => {
-        result.value = { text: i18n.t('partners.contact_success'), class: 'bg-green-500 text-black' }
+        result.value = 'success'
         setTimeout(() => {
           result.value = null
         }, 4000)
       })
       .catch(() => {
-        result.value = { text: i18n.t('common.an_error_occurred'), class: 'bg-red-500' }
+        result.value = 'failure'
         setTimeout(() => {
           result.value = null
         }, 4000)

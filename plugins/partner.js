@@ -34,7 +34,9 @@ export function usePartnerContact(partnersEmail) {
   const submitForm = (partnersEmail, recaptchaToken) => {
     $fetch(`${apiURL}/api/partners/contact`, {
       method: 'POST',
-      headers: [['Accept', 'application/json']],
+      headers: {
+        Accept: 'application/json'
+      },
       body: {
         partner_email: partnersEmail,
         token: recaptchaToken,

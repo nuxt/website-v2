@@ -96,7 +96,7 @@
             <form
               v-if="page.emailAddress"
               class="contact-form sm:w-2/3 h-full grid grid-cols-1 lg:grid-cols-2 p-6 gap-6"
-              @submit.prevent="validateForm(page.emailAddress)"
+              @submit.prevent="validateForm"
             >
               <div>
                 <label for="firstName" class="block">{{ $t('sustainability.mvp_detail.first_name') }}</label>
@@ -119,7 +119,7 @@
                 <textarea id="message" v-model="form.message" rows="3" />
               </div>
               <div class="lg:col-span-full flex justify-end">
-                <button validateForm(page.emailAddress)>{{ $t('sustainability.mvp_detail.submit') }}</button>
+                <button submit>{{ $t('sustainability.mvp_detail.submit') }}</button>
               </div>
               <div v-if="result" class="lg:col-span-full rounded-md p-4" :class="result && result.class">
                 {{ result && result.text }}
@@ -176,7 +176,7 @@
 
 <script>
 import { defineComponent, useContext, computed, onMounted, onBeforeUnmount } from '@nuxtjs/composition-api'
-import { usePartnersContact } from '~/plugins/partners'
+import { usePartnerContact } from '~/plugins/partner'
 
 export default defineComponent({
   props: {
@@ -187,7 +187,7 @@ export default defineComponent({
   },
   setup(props) {
     const { $recaptcha } = useContext()
-    const { validateForm, result, form } = usePartnersContact()
+    const { validateForm, result, form } = usePartnerContact(props.page.emailAddress)
 
     const websiteDomain = computed(() => {
       let domain

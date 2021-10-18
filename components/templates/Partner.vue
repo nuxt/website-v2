@@ -201,7 +201,7 @@ export default defineComponent({
       return domain
     })
 
-    onMounted(async () => await $recaptcha.init().catch(() => console.log('recaptcha error')))
+    onMounted(() => $recaptcha.init().catch(() => console.error('recaptcha error')))
 
     onBeforeUnmount(() => $recaptcha.destroy())
 

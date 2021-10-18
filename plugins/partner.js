@@ -19,8 +19,8 @@ export function usePartnerContact(partnersEmail) {
 
   const result = ref(null)
 
-  const validateForm = async () => {
-    await $recaptcha
+  const validateForm = () => {
+    $recaptcha
       .execute('login')
       .then(token => {
         submitForm(partnersEmail, token)
@@ -33,8 +33,8 @@ export function usePartnerContact(partnersEmail) {
       })
   }
 
-  const submitForm = async (partnersEmail, recaptchaToken) => {
-    await $fetch(`${apiURL}/api/partners/contact`, {
+  const submitForm = (partnersEmail, recaptchaToken) => {
+    $fetch(`${apiURL}/api/partners/contact`, {
       method: 'POST',
       body: {
         partner_email: partnersEmail,

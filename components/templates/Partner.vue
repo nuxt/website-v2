@@ -37,11 +37,17 @@
           >
             <div class="text-white p-6" :class="page.emailAddress ? 'sm:w-1/3' : 'w-full'" :style="customBackground">
               <div class="flex flex-col h-full">
-                <h2 class="font-semibold text-lg">
+                <h2 v-if="page.emailAddress" class="font-semibold text-lg">
                   {{ $t('sustainability.mvp_detail.contact_partner', { partner: page.title }) }}
                 </h2>
-                <span class="block text-gray-100 mt-2">{{
+                <h2 v-else class="font-semibold text-lg">
+                  {{ $t('sustainability.mvp_detail.follow_partner', { partner: page.title }) }}
+                </h2>
+                <span v-if="page.emailAddress" class="block text-gray-100 mt-2">{{
                   $t('sustainability.mvp_detail.they_will_get_back_to_you')
+                }}</span>
+                <span v-else class="block text-gray-100 mt-2">{{
+                  $t('sustainability.mvp_detail.find_them_on_the_web')
                 }}</span>
                 <div class="flex justify-between" :class="!page.emailAddress ? 'flex-row-reverse' : 'flex-col h-full'">
                   <div>

@@ -92,7 +92,9 @@ export default {
     mvp_detail: {
       services: 'Services',
       location: 'Lieu',
-      contact_partner: 'Contacter {partner}',
+      contact_partner: 'Contact {partner}',
+      follow_partner: 'Suivez les actualités de {partner}',
+      find_them_on_the_web: 'Trouvez-les sur le web.',
       resources: 'Ressources',
       join_us: 'Nous rejoindre',
       they_will_get_back_to_you: 'Ils vous recontacteront prochainement.',

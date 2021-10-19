@@ -1217,10 +1217,10 @@
     vue "^2.6.14"
     vue-demi "^0.11.2"
 
-"@docus/core@^1.1.1":
-  version "1.1.1"
-  resolved "https://registry.yarnpkg.com/@docus/core/-/core-1.1.1.tgz#bdf96a5aeb560aa38dba730bc12020619e959c36"
-  integrity sha512-LYcVZC753QQ38jQyQlsUCfWlJNW4VeJ/ho14VfP4vv9ZpDTYctxITPZWdHW/VgbB6JuPHgUxFxAcMPwUgJtaZw==
+"@docus/core@^1.1.1", "@docus/core@npm:@docus/core@V1":
+  version "1.1.1-patch.1"
+  resolved "https://registry.npmjs.org/@docus/core/-/core-1.1.1-patch.1.tgz#c519931b899afd8bf9aa8732753240caf20b3546"
+  integrity sha512-GkyC3YTBbP2JdOQbxmxwbSVUrgqI5GVgWFKhIpKllVBwWY36m9ECtPbh2FCieG8K3/CYb23V75DssNTZVsf7TQ==
   dependencies:
     "@lokidb/loki" "^2.1.0"
     "@nuxt/kit" "^0.6.4"

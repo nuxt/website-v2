@@ -92,30 +92,33 @@
             <form
               v-if="page.emailAddress"
               class="contact-form sm:w-2/3 h-full grid grid-cols-1 lg:grid-cols-2 p-6 gap-6"
-              @submit.prevent="onSubmit"
+              @submit.prevent="validateForm"
             >
               <div>
                 <label for="firstName" class="block">{{ $t('sustainability.mvp_detail.first_name') }}</label>
-                <input id="firstName" type="text" />
+                <input id="firstName" v-model="form.first_name" type="text" />
               </div>
               <div>
                 <label for="lastName" class="block">{{ $t('sustainability.mvp_detail.last_name') }}</label>
-                <input id="lastName" type="text" />
+                <input id="lastName" v-model="form.last_name" type="text" />
               </div>
               <div>
                 <label for="companyName" class="block">{{ $t('sustainability.mvp_detail.company_name') }}</label>
-                <input id="companyName" type="text" />
+                <input id="companyName" v-model="form.company_name" type="text" />
               </div>
               <div>
                 <label for="email" class="block">{{ $t('sustainability.mvp_detail.email') }}</label>
-                <input id="email" type="text" />
+                <input id="email" v-model="form.email" type="text" />
               </div>
               <div class="lg:col-span-full">
                 <label for="message" class="block">{{ $t('sustainability.mvp_detail.message') }}</label>
-                <textarea id="message" rows="3" />
+                <textarea id="message" v-model="form.message" rows="3" />
               </div>
               <div class="lg:col-span-full flex justify-end">
                 <button submit>{{ $t('sustainability.mvp_detail.submit') }}</button>
+              </div>
+              <div v-if="resultText" class="lg:col-span-full rounded-md p-4" :class="resultStyle">
+                {{ resultText }}
               </div>
             </form>
           </div>
@@ -168,7 +171,8 @@
 </template>
 
 <script>
-import { defineComponent, computed } from '@nuxtjs/composition-api'
+import { defineComponent, useContext, computed, onMounted, onBeforeUnmount } from '@nuxtjs/composition-api'
+import { usePartnerContact } from '~/plugins/partner'
 
 export default defineComponent({
   props: {
@@ -178,6 +182,31 @@ export default defineComponent({
     }
   },
   setup(props) {
+    const {
+      app: { i18n },
+      $recaptcha
+    } = useContext()
+    const { validateForm, result, form } = usePartnerContact(props.page.emailAddress)
+
+    const resultText = computed(() => {
+      switch (result.value) {
+        case 'success':
+          return i18n.t('partners.contact_success')
+        case 'failure':
+          return i18n.t('common.an_error_occurred')
+      }
+      return ''
+    })
+    const resultStyle = computed(() => {
+      switch (result.value) {
+        case 'success':
+          return 'bg-green-500 text-black'
+        case 'failure':
+          return 'bg-red-500 text-white'
+      }
+      return ''
+    })
+
     const websiteDomain = computed(() => {
       let domain
 
@@ -189,6 +218,10 @@ export default defineComponent({
 
       return domain
     })
+
+    onMounted(() => $recaptcha.init().catch(() => console.error('recaptcha error')))
+
+    onBeforeUnmount(() => $recaptcha.destroy())
 
     const customBackground = computed(() => {
       if (typeof props.page.color === 'object') {
@@ -206,14 +239,13 @@ export default defineComponent({
       }
     })
 
-    function onSubmit() {
-      // TODO
-    }
-
     return {
       websiteDomain,
       customBackground,
-      onSubmit
+      form,
+      resultText,
+      resultStyle,
+      validateForm
     }
   }
 })

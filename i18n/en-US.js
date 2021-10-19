@@ -131,7 +131,8 @@ export default {
     released_on: 'Released on {datetime}'
   },
   partners: {
-    become_partner: 'Become a partner'
+    become_partner: 'Become a partner',
+    contact_success: 'Your request has been sent'
   },
   theme_mode: {
     system: 'System',

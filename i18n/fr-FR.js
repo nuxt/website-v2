@@ -132,7 +132,8 @@ export default {
     released_on: 'Sortie le {datetime}'
   },
   partners: {
-    become_partner: 'Devenez partenaire'
+    become_partner: 'Devenez partenaire',
+    contact_success: 'Your request has been sent'
   },
   theme_mode: {
     system: 'Système',

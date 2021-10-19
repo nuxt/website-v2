@@ -7,12 +7,8 @@
     <div class="d-container-content">
       <div class="relative flex gap-8 -mt-6 sm:-mt-8 pb-8 xl:pb-16">
         <div class="w-24 h-24 sm:w-32 sm:h-32 p-4 bg-cloud-surface dark:bg-sky-darker rounded-md">
-          <img
-            :src="`/img/sponsors/sponsors-square/light/${page.icon}`"
-            :alt="page.title"
-            class="light-img text-white"
-          />
-          <img :src="`/img/sponsors/sponsors-square/dark/${page.icon}`" :alt="page.title" class="dark-img text-white" />
+          <img :src="`/img/companies/square/light/${page.icon}`" :alt="page.title" class="light-img text-white" />
+          <img :src="`/img/companies/square/dark/${page.icon}`" :alt="page.title" class="dark-img text-white" />
         </div>
         <div class="flex flex-col justify-end gap-1">
           <h1 class="text-display-5 sm:text-display-4 font-bold">{{ page.title }}</h1>

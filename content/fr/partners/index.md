@@ -9,7 +9,7 @@ description: "Nuxt is an MIT licensed open source project and free to use. Howev
 Partners
 
 #description
-Find your perfect match. Get help from a solutions partner or solutions provider.
+Find your perfect match. Get help from an agency partner or find a technology provider.
 
 #bottom
   :partners-bottom-hero

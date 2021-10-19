@@ -5,8 +5,8 @@ description: How to deploy Nuxt on Hostman?
 target: Static
 category: deployment
 logo:
-  light: "/img/partners/dark/Hostman_Dark.svg"
-  dark: "/img/partners/light/Hostman_Light.svg"
+  light: "/img/companies/square/dark/Hostman_Dark.svg"
+  dark: "/img/companies/square/light/Hostman_Light.svg"
 ---
 # Deploy Nuxt on Hostman
 

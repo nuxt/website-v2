@@ -5,8 +5,8 @@ description: Comment deployer Nuxt sur Surge ?
 target: Static
 category: deployment
 logo:
-  light: "/img/partners/dark/Surge.svg"
-  dark: "/img/partners/light/Surge.svg"
+  light: "/img/companies/square/dark/Surge.svg"
+  dark: "/img/companies/square/light/Surge.svg"
 ---
 # Déployer Nuxt vec Surge
 

@@ -20,7 +20,7 @@ export default defineComponent({
 
     const pages = await $docus
       .search('/collections/partners', { deep: true })
-      .where({ slug: { $in: route.params.slug }, language: i18n.locale })
+      .where({ slug: { $in: route.params.slug } })
       .fetch()
     if (!pages?.length) {
       return error({

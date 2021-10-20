@@ -8,9 +8,7 @@ export default {
   algolia: {
     apiKey: 'ff80fbf046ce827f64f06e16f82f1401',
     indexName: 'nuxtjs',
-    searchParameters: {
-      facetFilters: ['tags:main']
-    }
+    facetFilters: ['tags:main']
   },
   layout: {
     aside: false,

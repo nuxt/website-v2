@@ -5,8 +5,8 @@ description: How to deploy a Nuxt application on Azure Static Web Apps?
 target: Static
 category: deployment
 logo:
-  light: "/img/partners/dark/Azure.svg"
-  dark: "/img/partners/light/Azure.svg"
+  light: "/img/companies/square/dark/Azure.svg"
+  dark: "/img/companies/square/light/Azure.svg"
 ---
 # Deploy on Azure Static Web Apps
 

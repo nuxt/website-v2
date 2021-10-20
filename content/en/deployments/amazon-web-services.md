@@ -5,8 +5,8 @@ description: Static Hosting on AWS with S3 Amplify and CloudFront
 target: Static
 category: deployment
 logo:
-  light: "/img/partners/light/AWS_Light.svg"
-  dark: "/img/partners/dark/AWS_Dark.svg"
+  light: "/img/companies/square/light/AWS_Light.svg"
+  dark: "/img/companies/square/dark/AWS_Dark.svg"
 ---
 # Deploy Nuxt on Amazon Web Services
 

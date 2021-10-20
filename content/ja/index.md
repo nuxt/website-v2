@@ -125,8 +125,39 @@ category: パートナー
 #description
 Nuxt の開発は情熱を持った開発者によって作られますが、メンテナンスするための必要な労力と新機能開発には、適切な資金のサポートなしには持続できません。これを可能にするのは、スポンサーやパートナーの皆様のおかげです。<br>
 
+#partners-card
+  ::home-partners-card
+  ---
+    icon: technology.svg
+  category: technology
+  ---
+  #title
+  Technology partners
+
+  #description
+  Technology partners offer services that empower Nuxt developers, such as CMS, Hosting, Database, and more.
+
+  #button
+  Discover our technology partners
+  ::
+
+  ::home-partners-card
+  ---
+  icon: agency.svg
+  category: agency
+  ---
+  #title
+  Agency partners
+
+  #description
+  Agency partners are trusted web and consulting agencies that can provide Nuxt development and support for your projects.
+
+  #button
+  Find a Nuxt expert
+  ::
+
 #bottom
-:button-link[Nuxt のスポンサー]{href="/sponsors" size="medium"}
+  :button-link[Become a partner]{href="mailto:partners@nuxtlabs.com" size="medium" blank}
 ::
 
 ::home-learn-guides

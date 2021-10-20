@@ -5,8 +5,8 @@ description: "How to deploy Nuxt on 21YunBox?"
 target: Static
 category: deployment
 logo:
-  light: "/img/partners/dark/Yunbox.svg"
-  dark: "/img/partners/light/Yunbox.svg"
+  light: "/img/companies/square/dark/Yunbox.svg"
+  dark: "/img/companies/square/light/Yunbox.svg"
 ---
 # Deploy Nuxt on 21YunBox
 

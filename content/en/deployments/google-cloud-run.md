@@ -5,8 +5,8 @@ description: How to deploy Nuxt on Google Cloud Run?
 target: Server
 category: deployment
 logo:
-  light: "/img/partners/dark/Google_Cloud_run.svg"
-  dark: "/img/partners/light/Google_Cloud_run.svg"
+  light: "/img/companies/square/dark/Google_Cloud_run.svg"
+  dark: "/img/companies/square/light/Google_Cloud_run.svg"
 ---
 # Deploy Nuxt on Google Cloud Run
 

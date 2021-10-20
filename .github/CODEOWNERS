@@ -3,8 +3,8 @@
 
 # Main content
 /content/en/**      @danielroe @atinux @pi0
-/content/en/partners/**      @clemcode @atinux @alexchopin
-content/en/_collections/sponsors/**  @clemcode @atinux @alexchopin
+/content/en/_collections/partners/**  @clemcode @atinux @alexchopin
+/content/en/_collections/sponsors/**  @clemcode @atinux @alexchopin
 
 # Translations
 /content/fr/**      @atinux @clemcode @alexchopin @flosciante

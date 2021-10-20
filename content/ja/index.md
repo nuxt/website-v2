@@ -128,7 +128,7 @@ Nuxt の開発は情熱を持った開発者によって作られますが、メ
 #partners-card
   ::home-partners-card
   ---
-    icon: technology.svg
+  icon: technology.svg
   category: technology
   ---
   #title

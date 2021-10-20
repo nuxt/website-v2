@@ -8,6 +8,7 @@
     <IconExternalLink v-if="externalIcon" class="ml-2 icon" :class="size" />
   </Component>
 </template>
+
 <script lang="ts">
 import { defineComponent, computed } from '@nuxtjs/composition-api'
 
@@ -68,6 +69,7 @@ export default defineComponent({
   }
 })
 </script>
+
 <style lang="postcss" scoped>
 .app-button {
   @apply inline-flex items-center flex-none rounded-md mb-2 sm:mb-0 px-4 py-2.5 text-sm font-medium leading-4 transition-colors duration-200 border border-transparent focus:ring-2 focus:ring-offset-2 focus:ring-offset-white dark:focus:ring-offset-gray-900 focus:outline-none;

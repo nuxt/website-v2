@@ -12,7 +12,7 @@
         </div>
         <div class="flex flex-col justify-end gap-1">
           <h1 class="text-display-5 sm:text-display-4 font-bold">{{ page.title }}</h1>
-          <Link :to="page.link" blank><IconExternalLink class="inline w-4 h-4 mr-1" /> {{ websiteDomain }}</Link>
+          <AppLink :href="page.link"><IconExternalLink class="inline w-4 h-4 mr-1" /> {{ websiteDomain }}</AppLink>
         </div>
       </div>
 
@@ -51,45 +51,32 @@
                 }}</span>
                 <div class="flex justify-between" :class="!page.emailAddress ? 'flex-row-reverse' : 'flex-col h-full'">
                   <div>
-                    <Link :href="page.link" to="" blank class="flex items-center mt-4">
+                    <AppLink :href="page.link" class="flex items-center mt-4">
                       <IconExternalLink class="inline flex-shrink-0 w-4 h-4 mr-1" />
                       <span class="truncate">{{ websiteDomain }}</span>
-                    </Link>
-                    <Link
+                    </AppLink>
+                    <AppLink
                       v-if="page.emailAddress"
-                      :to="`mailto:${page.emailAddress}`"
-                      blank
+                      :href="`mailto:${page.emailAddress}`"
                       class="flex items-center mt-4"
                     >
                       <IconEmail class="inline flex-shrink-0 w-4 h-4 mr-1" />
                       <span class="truncate">{{ page.emailAddress }}</span>
-                    </Link>
+                    </AppLink>
 
-                    <Link v-if="page.phoneNumber" :to="`tel:${page.phoneNumber}`" blank class="flex items-center mt-4">
+                    <AppLink v-if="page.phoneNumber" :href="`tel:${page.phoneNumber}`" class="flex items-center mt-4">
                       <IconPhone class="inline flex-shrink-0 w-4 h-4 mr-1" />
                       <span class="truncate">{{ page.phoneNumber }}</span>
-                    </Link>
+                    </AppLink>
                   </div>
 
                   <div class="flex gap-10" :class="page.emailAddress ? 'items-end' : 'items-end'">
-                    <Link
-                      v-if="page.twitter"
-                      :href="`https://twitter.com/${page.twitter}`"
-                      to=""
-                      blank
-                      aria-label="twitterLink"
-                    >
+                    <AppLink v-if="page.twitter" :href="`https://twitter.com/${page.twitter}`" aria-label="twitterLink">
                       <IconTwitter class="inline w-6 h-6" />
-                    </Link>
-                    <Link
-                      v-if="page.github"
-                      :href="`https://github.com/${page.github}`"
-                      to=""
-                      blank
-                      aria-label="githubLink"
-                    >
+                    </AppLink>
+                    <AppLink v-if="page.github" :href="`https://github.com/${page.github}`" aria-label="githubLink">
                       <IconGitHub class="inline w-6 h-6" />
-                    </Link>
+                    </AppLink>
                   </div>
                 </div>
               </div>
@@ -152,10 +139,10 @@
               <h2 class="font-semibold text-lg mb-2">{{ $t('sustainability.mvp_detail.resources') }}</h2>
               <ul>
                 <li v-for="(link, index) in page.resources" :key="index">
-                  <Link :to="link.url" blank class="inline-flex items-center text-sm text-sky-dark dark:text-gray-300"
-                    ><IconExternalLink class="inline w-4 h-4 mr-1" />
+                  <AppLink :href="link.url" class="inline-flex items-center text-sm text-sky-dark dark:text-gray-300">
+                    <IconExternalLink class="inline w-4 h-4 mr-1" />
                     {{ link.name }}
-                  </Link>
+                  </AppLink>
                 </li>
               </ul>
             </div>
@@ -167,9 +154,9 @@
         <img loading="lazy" :src="`/img/partners/banner.svg`" alt="A landscape image" />
         <div class="absolute inset-0 flex lg:flex-col items-center justify-center gap-4 sm:gap-12 lg:gap-8">
           <span class="block text-2xl sm:text-4xl font-bold">{{ $t('sustainability.mvp_detail.join_us') }}</span>
-          <ButtonLink href="mailto:partners@nuxtlabs.com" :size="$mq === 'xs' ? 'small' : 'large'" blank class="mb-0">{{
+          <AppButton href="mailto:partners@nuxtlabs.com" :size="$mq === 'xs' ? 'small' : 'large'">{{
             $t('partners.become_partner')
-          }}</ButtonLink>
+          }}</AppButton>
         </div>
       </div>
     </div>

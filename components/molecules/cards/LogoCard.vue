@@ -1,12 +1,12 @@
 <template>
   <div class="ListCard group">
-    <template v-if="item.link">
-      <div class="ListCard-external group-hover:opacity-100">
+    <template v-if="item.to || item.link">
+      <div v-if="item.link" class="ListCard-external group-hover:opacity-100">
         <slot name="external">
           <NuxtImg alt="external_link" src="/img/icons/ext.svg" />
         </slot>
       </div>
-      <AppLink :href="item.link" :aria-label="item.title" class="absolute inset-0" />
+      <AppLink :to="item.to || item.link" :aria-label="item.title" class="absolute inset-0" />
     </template>
     <div class="ListCard-body">
       <NuxtImg

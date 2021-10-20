@@ -7,14 +7,13 @@
     <p class="text-sm md:text-base px-8 md:px-12 pb-2">
       <Markdown use="description" unwrap="p" />
     </p>
-    <SectionButton
+    <AppButton
       :aria-label="category"
-      size="sm"
-      class="border border-sky-darker rounded-md hover:border-sky-dark hover:text-sky-dark"
+      extra-class="!border-sky-darker hover:text-sky-dark"
       :to="`/partners#${category}`"
     >
       <Markdown use="button" unwrap="p" />
-    </SectionButton>
+    </AppButton>
   </div>
 </template>
 <script>

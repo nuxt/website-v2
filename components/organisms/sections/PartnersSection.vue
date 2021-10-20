@@ -6,13 +6,13 @@
         <Markdown use="category-title" unwrap="p" />
       </h2>
     </div>
-    <ul class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+    <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
       <LogoCard v-for="partner in partners" :key="partner.title" :item="partner">
         <template #footer>
           <PartnerServices :services="partner.services" class="text-sm mt-4" />
         </template>
       </LogoCard>
-    </ul>
+    </div>
   </div>
 </template>
 

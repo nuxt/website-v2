@@ -11,11 +11,9 @@
         <PartnersBottomHero v-if="page.heroType === 'partners'" />
       </template>
     </PageHero>
-    <ul class="d-container px-6 grid sm:grid-cols-2 lg:grid-cols-3 gap-6 pt-8">
-      <li>
-        <LogoCard v-for="item in list" :key="item.id" :item="item" />
-      </li>
-    </ul>
+    <div class="d-container px-6 grid sm:grid-cols-2 lg:grid-cols-3 gap-6 pt-8">
+      <LogoCard v-for="item in list" :key="item.id" :item="item" />
+    </div>
   </div>
 </template>
 

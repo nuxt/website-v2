@@ -9,19 +9,6 @@ export default {
     button: 'Ok'
   },
   footer: {
-    titles: {
-      Discover: 'Descobrir',
-      Help: 'Ajuda',
-      Support: 'Suporte'
-    },
-    'Our team': 'Nosso time',
-    'Design Kit': 'Design Kit',
-    'Contact us': 'Contate-nos',
-    Resources: 'Recursos',
-    'Chat with us': 'Converse conosco',
-    'Contribution guide': 'Guia de contribuição',
-    Sustainability: 'Sustentabilidade',
-    Training: 'Treinamento',
     newsletter: {
       title: 'Boletim de Notícias',
       description: 'As últimas novidades, artigos, e recursos, enviados para seu inbox mensalmente',

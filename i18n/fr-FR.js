@@ -12,19 +12,6 @@ export default {
     button: 'Accepter'
   },
   footer: {
-    titles: {
-      Discover: 'Découvrir',
-      Help: 'Aide',
-      Support: 'Support'
-    },
-    'Our team': 'Notre équipe',
-    'Design Kit': 'Design Kit',
-    'Contact us': 'Contactez-nous',
-    Resources: 'Ressources',
-    'Chat with us': 'Chattez avec nous',
-    'Contribution guide': 'Guide de contribution',
-    Sustainability: 'Viabilité',
-    Training: 'Support',
     newsletter: {
       title: 'Inscrivez vous à la newsletter',
       description: 'Les dernières nouvelles, articles et ressources, envoyés mensuellement dans votre boîte mail.',

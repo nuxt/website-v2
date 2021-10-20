@@ -12,19 +12,6 @@ export default {
     button: '分かりました'
   },
   footer: {
-    titles: {
-      Discover: '発見',
-      Help: 'ヘルプ',
-      Support: 'サポート'
-    },
-    'Our team': 'チーム',
-    'Design Kit': 'デザインキット',
-    'Contact us': 'コンタクト',
-    Resources: 'リソース',
-    'Chat with us': 'チャット',
-    'Contribution guide': '貢献ガイド',
-    Sustainability: '持続可能性',
-    Training: 'トレーニング',
     newsletter: {
       title: 'ニュースレターを購読する',
       description: '最新ニュース、記事、そしてリソース、毎月メールボックスに届けます。',

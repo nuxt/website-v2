@@ -12,19 +12,6 @@ export default {
     button: 'Got it'
   },
   footer: {
-    titles: {
-      Discover: 'Discover',
-      Help: 'Help',
-      Support: 'Support'
-    },
-    'Our team': 'Our team',
-    'Design Kit': 'Design Kit',
-    'Contact us': 'Contact us',
-    Resources: 'Resources',
-    'Chat with us': 'Chat with us',
-    'Contribution guide': 'Contribution guide',
-    Sustainability: 'Sustainability',
-    Training: 'Training',
     newsletter: {
       title: 'Newsletter',
       description: 'The latest news, articles, and resources, sent to your inbox monthly.',

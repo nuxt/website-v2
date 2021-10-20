@@ -126,10 +126,10 @@ Nuxt est construit et maintenu par des développeurs passionnés mais il serait 
   Technology partners
 
   #description
-  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis.
+  Les Technology partners offrent des services aux développeurs Nuxt, tels que CMS, hébergement, base de données, et plus encore...
 
   #button
-  See technology partners
+  Découvrez nos Technology Partners
   ::
 
   ::home-partners-card
@@ -141,10 +141,10 @@ Nuxt est construit et maintenu par des développeurs passionnés mais il serait 
   Agency partners
 
   #description
-  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis.
+  Les Agency partners sont des agences web reconnues qui proposent du support et du développement d'applications avec Nuxt.
 
   #button
-  See agency partners
+  Trouvez un expert Nuxt
   ::
 
 #bottom

@@ -128,17 +128,17 @@ Nuxt の開発は情熱を持った開発者によって作られますが、メ
 #partners-card
   ::home-partners-card
   ---
-  icon: technology.svg
+    icon: technology.svg
   category: technology
   ---
   #title
   Technology partners
 
   #description
-  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis.
+  Technology partners offer services that empower Nuxt developers, such as CMS, Hosting, Database, and more.
 
   #button
-  See technology partners
+  Discover our technology partners
   ::
 
   ::home-partners-card
@@ -150,10 +150,10 @@ Nuxt の開発は情熱を持った開発者によって作られますが、メ
   Agency partners
 
   #description
-  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis.
+  Agency partners are trusted web and consulting agencies that can provide Nuxt development and support for your projects.
 
   #button
-  See agency partners
+  Find a Nuxt expert
   ::
 
 #bottom

@@ -4,10 +4,13 @@
 # Main content
 /content/en/**      @danielroe @atinux @pi0
 /i18n/en-US.js      @danielroe @atinux @pi0
+
+# Partners and sponsors (NuxtLabs)
 /content/en/_collections/partners/**  @clemcode @atinux @alexchopin
 /content/en/_collections/sponsors/**  @clemcode @atinux @alexchopin
 
 # Translations
+# Please ping us if you are intrested to maintain translations
 /content/fr/**      @atinux @clemcode @alexchopin @flosciante
 /i18n/fr-FR.js      @atinux @clemcode @alexchopin @flosciante
 /content/ja/**      @kazupon

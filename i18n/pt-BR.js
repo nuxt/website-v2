@@ -133,6 +133,11 @@ export default {
     become_partner: 'torne-se um parceiro',
     contact_success: 'Your request has been sent'
   },
+  translated_pages: {
+    title: 'Translated page',
+    read_original_page: 'Read the original page if anything seems wrong or deprecated.',
+    contribute: 'You can also contribute to this translation.'
+  },
   theme_mode: {
     system: 'Sistema',
     light: 'Claro',

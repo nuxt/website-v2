@@ -59,7 +59,7 @@ links:
     items:
       -
         title: "デプロイ"
-        subtitle: "How to Deploy Nuxt"
+        subtitle: "Nuxt のデプロイの仕方"
         slug: "deployments"
         to: "/deployments"
         icon: "deployments.svg"

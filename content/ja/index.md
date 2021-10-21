@@ -132,13 +132,13 @@ Nuxt の開発は情熱を持った開発者によって作られますが、メ
   category: technology
   ---
   #title
-  Technology partners
+  テクノロジーパートナー
 
   #description
-  Technology partners offer services that empower Nuxt developers, such as CMS, Hosting, Database, and more.
+  テクノロジーパートナーは、CMS、ホスティング、データベースなど、Nuxt 開発者を支援するサービスを提供しています。
 
   #button
-  Discover our technology partners
+  私達のテクノロジーパートナーを見つける
   ::
 
   ::home-partners-card
@@ -147,13 +147,13 @@ Nuxt の開発は情熱を持った開発者によって作られますが、メ
   category: agency
   ---
   #title
-  Agency partners
+  代理店パートナー
 
   #description
-  Agency partners are trusted web and consulting agencies that can provide Nuxt development and support for your projects.
+  代理店パートナーはあなたのプロジェクトに Nuxt を使った開発を提供する信頼された Web そして代理店です。
 
   #button
-  Find a Nuxt expert
+  Nuxt エキスパートを探す
   ::
 
 #bottom

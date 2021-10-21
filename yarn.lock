@@ -1217,10 +1217,10 @@
     vue "^2.6.14"
     vue-demi "^0.11.2"
 
-"@docus/core@^1.1.1":
-  version "1.1.1"
-  resolved "https://registry.yarnpkg.com/@docus/core/-/core-1.1.1.tgz#bdf96a5aeb560aa38dba730bc12020619e959c36"
-  integrity sha512-LYcVZC753QQ38jQyQlsUCfWlJNW4VeJ/ho14VfP4vv9ZpDTYctxITPZWdHW/VgbB6JuPHgUxFxAcMPwUgJtaZw==
+"@docus/core@^1.1.1", "@docus/core@npm:@docus/core@1.1.1-patch.2":
+  version "1.1.1-patch.2"
+  resolved "https://registry.yarnpkg.com/@docus/core/-/core-1.1.1-patch.2.tgz#c1bb9c694d0a8b1a7b5b6bcf1dfa4bdad996b291"
+  integrity sha512-rvvNiShsXRgIqUUwOS6CeyhEknfQfB1RZGpPlAh2aLcLObcb2QsFqs6sgV0EaWFQYwlwHBTM6T4+wACVMiElow==
   dependencies:
     "@lokidb/loki" "^2.1.0"
     "@nuxt/kit" "^0.6.4"
@@ -1391,7 +1391,7 @@
 
 "@lokidb/loki@^2.1.0":
   version "2.1.0"
-  resolved "https://registry.npmjs.org/@lokidb/loki/-/loki-2.1.0.tgz"
+  resolved "https://registry.yarnpkg.com/@lokidb/loki/-/loki-2.1.0.tgz#f707e184016ce57d6dd12013938c33f9c540960e"
   integrity sha512-u2VH/4h4kZww23bak5I/oRai8VqIZCSuqiLbuSHpYXHB9Na5E9KNazh59prgUyvMzfooY7XKiHejbKVxFoAEOQ==
 
 "@nodelib/fs.scandir@2.1.5":
@@ -8411,9 +8411,9 @@ mdast-util-to-hast@^10.2.0:
     unist-util-visit "^2.0.0"
 
 mdast-util-to-hast@^11.2.0:
-  version "11.2.0"
-  resolved "https://registry.npmjs.org/mdast-util-to-hast/-/mdast-util-to-hast-11.2.0.tgz"
-  integrity sha512-KSYbg4PA9wk5YwoCZCPxbUAjdYunNN5TqTXoZp/9taRDGQS65cL2fFgKc78l0f3deg4p1LP9xdhmMuUrhAUSZA==
+  version "11.3.0"
+  resolved "https://registry.yarnpkg.com/mdast-util-to-hast/-/mdast-util-to-hast-11.3.0.tgz#ea9220617a710e80aa5cc3ac7cc9d4bb0440ae7a"
+  integrity sha512-4o3Cli3hXPmm1LhB+6rqhfsIUBjnKFlIUZvudaermXB+4/KONdd/W4saWWkC+LBLbPMqhFSSTSRgafHsT5fVJw==
   dependencies:
     "@types/hast" "^2.0.0"
     "@types/mdast" "^3.0.0"
@@ -8423,7 +8423,7 @@ mdast-util-to-hast@^11.2.0:
     unist-builder "^3.0.0"
     unist-util-generated "^2.0.0"
     unist-util-position "^4.0.0"
-    unist-util-visit "^3.0.0"
+    unist-util-visit "^4.0.0"
 
 mdast-util-to-markdown@0.6.5, mdast-util-to-markdown@^0.6.0, mdast-util-to-markdown@^0.6.1, mdast-util-to-markdown@~0.6.0:
   version "0.6.5"
@@ -12888,6 +12888,14 @@ unist-util-visit-parents@^4.0.0:
     "@types/unist" "^2.0.0"
     unist-util-is "^5.0.0"
 
+unist-util-visit-parents@^5.0.0:
+  version "5.1.0"
+  resolved "https://registry.yarnpkg.com/unist-util-visit-parents/-/unist-util-visit-parents-5.1.0.tgz#44bbc5d25f2411e7dfc5cecff12de43296aa8521"
+  integrity sha512-y+QVLcY5eR/YVpqDsLf/xh9R3Q2Y4HxkZTp7ViLDU6WtJCEcPmRzW1gpdWDCDIqIlhuPDXOgttqPlykrHYDekg==
+  dependencies:
+    "@types/unist" "^2.0.0"
+    unist-util-is "^5.0.0"
+
 unist-util-visit@2.0.3, unist-util-visit@^2.0.0, unist-util-visit@^2.0.3:
   version "2.0.3"
   resolved "https://registry.npmjs.org/unist-util-visit/-/unist-util-visit-2.0.3.tgz"
@@ -12905,6 +12913,15 @@ unist-util-visit@^3.0.0:
     "@types/unist" "^2.0.0"
     unist-util-is "^5.0.0"
     unist-util-visit-parents "^4.0.0"
+
+unist-util-visit@^4.0.0:
+  version "4.1.0"
+  resolved "https://registry.yarnpkg.com/unist-util-visit/-/unist-util-visit-4.1.0.tgz#f41e407a9e94da31594e6b1c9811c51ab0b3d8f5"
+  integrity sha512-n7lyhFKJfVZ9MnKtqbsqkQEk5P1KShj0+//V7mAcoI6bpbUjh3C/OG8HVD+pBihfh6Ovl01m8dkcv9HNqYajmQ==
+  dependencies:
+    "@types/unist" "^2.0.0"
+    unist-util-is "^5.0.0"
+    unist-util-visit-parents "^5.0.0"
 
 universalify@^0.1.0:
   version "0.1.2"

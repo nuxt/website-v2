@@ -1,7 +1,7 @@
 # Read More about CODEOWNERS file: https://git.io/JT4TZ
 # Order is important! the last matching pattern takes the most precedence
 
-# Main content
+# Main content (Framework)
 /content/en/**      @danielroe @atinux @pi0
 /i18n/en-US.js      @danielroe @atinux @pi0
 

@@ -136,6 +136,12 @@ export default {
     become_partner: 'Become a partner',
     contact_success: 'Your request has been sent'
   },
+  translated_pages: {
+    title: '翻訳されたページ',
+    content_outdated: 'このページのコンテンツは古い可能性があります。',
+    read_original_page: '原文を読む',
+    contribute: 'このページの翻訳を改善する'
+  },
   theme_mode: {
     system: 'System',
     light: 'Light',

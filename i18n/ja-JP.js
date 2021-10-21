@@ -136,6 +136,12 @@ export default {
     become_partner: 'パートナーになる',
     contact_success: 'Your request has been sent'
   },
+  translated_pages: {
+    title: 'Translated page',
+    content_outdated: 'Contents of this page might be outdated.',
+    read_original_page: 'Read the original page',
+    contribute: 'Improve translation of this page'
+  },
   theme_mode: {
     system: 'システム',
     light: '明るい',

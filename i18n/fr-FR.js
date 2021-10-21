@@ -137,6 +137,12 @@ export default {
     become_partner: 'Devenez partenaire',
     contact_success: 'Your request has been sent'
   },
+  translated_pages: {
+    title: 'Page traduite',
+    content_outdated: 'Le contenu de cette page peut être déprécié.',
+    read_original_page: 'Lire la page originale',
+    contribute: 'Contribuer à cette traduction'
+  },
   theme_mode: {
     system: 'Système',
     light: 'Clair',

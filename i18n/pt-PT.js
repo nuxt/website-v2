@@ -102,7 +102,7 @@ export default {
     invalid_adress: 'Endereço inválido'
   },
   showcases: {
-    loading: 'Carregado...',
+    loading: 'Carregando...',
     chrome_extension: 'Extensão para Chrome',
     firefox_extension: 'Extensão para Firefox',
     categories: {

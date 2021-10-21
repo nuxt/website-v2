@@ -135,9 +135,9 @@ export default {
   },
   translated_pages: {
     title: 'Translated page',
-    read_original_page:
-      'Contents of this page might be outdated. Please read the original page if anything seems wrong or not working.',
-    contribute: 'Click here to improve translation of this page.'
+    content_outdated: 'Contents of this page might be outdated.',
+    read_original_page: 'Read the original page',
+    contribute: 'Improve translation of this page'
   },
   theme_mode: {
     system: 'Sistema',

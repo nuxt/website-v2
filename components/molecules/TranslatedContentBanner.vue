@@ -1,14 +1,17 @@
 <template>
   <div class="flex items-center rounded-md px-6 py-3 dark:bg-sky-darker">
-    <IconTranslate class="d-icon w-6 h-6 mr-6" />
+    <IconTranslate class="d-secondary-text w-8 h-8 mr-6" />
     <div class="flex flex-col">
       <span class="font-bold">{{ $t('translated_pages.title') }}</span>
-      <NuxtLink :to="switchLocalePath('en')" class="text-sm font-medium hover:underline">
-        {{ $t('translated_pages.read_original_page') }}
-      </NuxtLink>
-      <Link :to="pageGitHubLink" class="text-sm font-medium hover:underline" blank>
-        {{ $t('translated_pages.contribute') }}
-      </Link>
+      <span class="text-sm">{{ $t('translated_pages.content_outdated') }}</span>
+      <div class="flex items-center gap-4 mt-1">
+        <NuxtLink :to="switchLocalePath('en')" class="inline text-sm font-medium hover:underline">
+          {{ $t('translated_pages.read_original_page') }}
+        </NuxtLink>
+        <Link :to="pageGitHubLink" class="text-sm font-medium hover:underline" blank>
+          {{ $t('translated_pages.contribute') }}
+        </Link>
+      </div>
     </div>
   </div>
 </template>

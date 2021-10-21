@@ -58,7 +58,7 @@ links:
     title: '探す'
     items:
       -
-        title: "Deployments"
+        title: "デプロイ"
         subtitle: "How to Deploy Nuxt"
         slug: "deployments"
         to: "/deployments"

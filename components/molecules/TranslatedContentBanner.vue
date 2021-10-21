@@ -8,9 +8,9 @@
         <NuxtLink :to="switchLocalePath('en')" class="inline text-sm font-medium hover:underline">
           {{ $t('translated_pages.read_original_page') }}
         </NuxtLink>
-        <Link :to="pageGitHubLink" class="text-sm font-medium hover:underline" blank>
+        <AppLink :href="pageGitHubLink" class="text-sm font-medium hover:underline">
           {{ $t('translated_pages.contribute') }}
-        </Link>
+        </AppLink>
       </div>
     </div>
   </div>

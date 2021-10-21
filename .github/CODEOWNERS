@@ -3,10 +3,23 @@
 
 # Main content
 /content/en/**      @danielroe @atinux @pi0
+/i18n/en-US.js      @danielroe @atinux @pi0
 /content/en/_collections/partners/**  @clemcode @atinux @alexchopin
 /content/en/_collections/sponsors/**  @clemcode @atinux @alexchopin
 
 # Translations
 /content/fr/**      @atinux @clemcode @alexchopin @flosciante
+/i18n/fr-FR.js      @atinux @clemcode @alexchopin @flosciante
 /content/ja/**      @kazupon
+/i18n/ja-JP.js      @kazupon
 /content/id/**      @febrihidayan
+/i18n/id-ID.js      @febrihidayan
+/content/es/**      @MrJmpl3
+/i18n/es-ES.js      @MrJmpl3
+/content/pt/**      @ChristopheCVB
+/i18n/pt-PT.js      @ChristopheCVB
+/i18n/pt-BR.js      @ChristopheCVB
+/content/de/**      @Intevel
+/i18n/de-DE.js      @Intevel
+/content/fa/**      @artmarydotir
+/i18n/fa-FA.js      @artmarydotir

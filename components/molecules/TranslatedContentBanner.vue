@@ -3,10 +3,10 @@
     <IconTranslate class="d-icon w-6 h-6 mr-6" />
     <div class="flex flex-col">
       <span class="font-bold">{{ $t('translated_pages.title') }}</span>
-      <NuxtLink :to="switchLocalePath('en')" class="text-sm hover:underline">
+      <NuxtLink :to="switchLocalePath('en')" class="text-sm font-medium hover:underline">
         {{ $t('translated_pages.read_original_page') }}
       </NuxtLink>
-      <Link :to="pageGitHubLink" class="text-sm hover:underline" blank>
+      <Link :to="pageGitHubLink" class="text-sm font-medium hover:underline" blank>
         {{ $t('translated_pages.contribute') }}
       </Link>
     </div>

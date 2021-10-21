@@ -129,7 +129,7 @@ Nuxt の開発は情熱を持った開発者によって作られますが、メ
   ::home-partners-card
   ---
   icon: technology.svg
-  category: テクノロジー
+  category: technology
   ---
   #title
   テクノロジーパートナー
@@ -144,7 +144,7 @@ Nuxt の開発は情熱を持った開発者によって作られますが、メ
   ::home-partners-card
   ---
   icon: agency.svg
-  category: 代理店
+  category: agency
   ---
   #title
   代理店パートナー

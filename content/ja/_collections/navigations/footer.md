@@ -61,7 +61,7 @@ links:
         title: '例'
         to: '/examples'
       -
-        title: 'Deployments'
+        title: 'デプロイ'
         to: '/deployments'
       -
         title: 'マスターコース'

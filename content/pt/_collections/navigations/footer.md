@@ -61,8 +61,8 @@ links:
         title: 'Examples'
         to: '/examples'
       -
-        title: 'Integrations'
-        to: '/integrations'
+        title: 'Deployments'
+        to: '/deployments'
       -
         title: 'Master courses'
         href: 'https://masteringnuxt.com/?utm_source=nuxt&utm_medium=link&utm_campaign=nsite'

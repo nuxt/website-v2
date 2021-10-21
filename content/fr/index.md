@@ -208,10 +208,10 @@ category: Explorez
 ---
   ::section-content-item
   ---
-  title: 'Intégrations'
-  description: "Étendez et automatisez votre travail en utilisant les intégrations pour vos outils préférés."
+  title: 'Déploiements'
+  description: "Étendez et automatisez votre flux de travail en utilisant les déploiements pour vos outils préférés."
   image: '/img/home/explore/gem-explore-1.svg'
-  to: '/integrations'
+  to: '/deployments'
   hoverClass: 'hover:bg-sky-surface'
   ---
   ::

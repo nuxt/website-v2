@@ -172,12 +172,6 @@ export default withDocus({
         iso: 'ja-JP',
         file: 'ja-JP.js',
         name: '日本語'
-      },
-      {
-        code: 'es',
-        iso: 'es-ES',
-        file: 'es-ES.js',
-        name: 'Español'
       }
     ]
   },

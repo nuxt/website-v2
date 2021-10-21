@@ -139,7 +139,7 @@ export default {
   translated_pages: {
     title: '翻訳されたページ',
     content_outdated: 'このページのコンテンツは古い可能性があります。',
-    read_original_page: 'Read the original page',
+    read_original_page: '原文を読む',
     contribute: 'Improve translation of this page'
   },
   theme_mode: {

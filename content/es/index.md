@@ -116,7 +116,7 @@ Nuxt se produce con muchas características para aumentar la productividad del d
 
 ::home-discover-partners
 ---
-category: Socios
+category: Partners
 ---
 
 #title
@@ -125,8 +125,39 @@ Desarrollo [_Sostenible_]{.text-primary}
 #description
 El desarrollo de Nuxt lo llevan a cabo desarrolladores apasionados, pero la cantidad de esfuerzo necesario para mantener y desarrollar nuevas funciones no es sostenible sin el respaldo financiero adecuado. Agradecemos a nuestros patrocinadores y socios, que ayudan a hacer posible Nuxt.<br>
 
+#partners-card
+  ::home-partners-card
+  ---
+  icon: technology.svg
+  category: technology
+  ---
+  #title
+  Technology partners
+
+  #description
+  Technology partners offer services that empower Nuxt developers, such as CMS, Hosting, Database, and more.
+
+  #button
+  Discover our technology partners
+  ::
+
+  ::home-partners-card
+  ---
+  icon: agency.svg
+  category: agency
+  ---
+  #title
+  Agency partners
+
+  #description
+  Agency partners are trusted web and consulting agencies that can provide Nuxt development and support for your projects.
+
+  #button
+  Find a Nuxt expert
+  ::
+
 #bottom
-:button-link[Patrocinadores Nuxt]{href="/sponsors" size="medium"}
+  :button-link[Conviertete en un patrocinador]{href="mailto:partners@nuxtlabs.com" size="medium" blank}
 ::
 
 ::home-learn-guides
@@ -191,7 +222,7 @@ category: Explorar
 title: 'Integraciones'
 description: 'Amplíe y automatice su flujo de trabajo utilizando integraciones para sus herramientas favoritas.'
 image: '/img/home/explore/gem-explore-1.svg'
-to: '/integrations'
+to: '/deployments'
 hoverClass: 'hover:bg-sky-surface'
 ---
 ::

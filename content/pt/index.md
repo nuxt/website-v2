@@ -219,10 +219,10 @@ category: Explore
 
 ::section-content-item
 ---
-title: 'Integrations'
-description: 'Extend and automate your workflow by using integrations for your favorite tools.'
+title: 'Deployments'
+description: 'Extend and automate your workflow by using deployments for your favorite tools.'
 image: '/img/home/explore/gem-explore-1.svg'
-to: '/integrations'
+to: '/deployments'
 hoverClass: 'hover:bg-sky-surface'
 ---
 ::

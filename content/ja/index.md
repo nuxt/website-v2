@@ -222,7 +222,7 @@ category: 探す
 title: 'インテグレーション'
 description: 'お気に入りのツールの統合を利用して、ワークフローを拡張、自動化することができます。'
 image: '/img/home/explore/gem-explore-1.svg'
-to: '/integrations'
+to: '/deployments'
 hoverClass: 'hover:bg-sky-surface'
 ---
 ::

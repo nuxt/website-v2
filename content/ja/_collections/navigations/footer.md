@@ -61,8 +61,8 @@ links:
         title: '例'
         to: '/examples'
       -
-        title: 'インテグレーション'
-        to: '/integrations'
+        title: 'Deployments'
+        to: '/deployments'
       -
         title: 'マスターコース'
         href: 'https://masteringnuxt.com/?utm_source=nuxt&utm_medium=link&utm_campaign=nsite'

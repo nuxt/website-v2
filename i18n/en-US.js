@@ -138,7 +138,7 @@ export default {
   },
   translated_pages: {
     title: '翻訳されたページ',
-    content_outdated: 'Contents of this page might be outdated.',
+    content_outdated: 'このページのコンテンツは古い可能性があります。',
     read_original_page: 'Read the original page',
     contribute: 'Improve translation of this page'
   },

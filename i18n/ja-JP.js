@@ -137,10 +137,10 @@ export default {
     contact_success: 'Your request has been sent'
   },
   translated_pages: {
-    title: 'Translated page',
-    content_outdated: 'Contents of this page might be outdated.',
-    read_original_page: 'Read the original page',
-    contribute: 'Improve translation of this page'
+    title: '翻訳されたページ',
+    content_outdated: 'このページのコンテンツは古い可能性があります。',
+    read_original_page: '原文を読む',
+    contribute: 'このページの翻訳を改善する'
   },
   theme_mode: {
     system: 'システム',

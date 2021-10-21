@@ -137,7 +137,7 @@ export default {
     contact_success: 'Your request has been sent'
   },
   translated_pages: {
-    title: 'Translated page',
+    title: '翻訳されたページ',
     content_outdated: 'Contents of this page might be outdated.',
     read_original_page: 'Read the original page',
     contribute: 'Improve translation of this page'

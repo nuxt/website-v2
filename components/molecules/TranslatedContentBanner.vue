@@ -1,5 +1,5 @@
 <template>
-  <div class="flex items-center rounded-md px-6 py-3 dark:bg-sky-darker">
+  <div class="flex items-center rounded-md px-6 py-3 bg-gray-100 dark:bg-sky-darker">
     <IconTranslate class="d-secondary-text w-8 h-8 mr-6" />
     <div class="flex flex-col">
       <span class="font-bold">{{ $t('translated_pages.title') }}</span>

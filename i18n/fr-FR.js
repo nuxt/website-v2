@@ -139,8 +139,9 @@ export default {
   },
   translated_pages: {
     title: 'Page traduite',
-    read_original_page: 'Lisez la page originale si quelque chose vous paraît faux ou déprécié.',
-    contribute: 'Vous pouvez aussi contribuer à cette traduction.'
+    read_original_page:
+      'Le contenu de cette page peut être déprécié. Lisez la page originale si quelque chose vous paraît faux ou ne fonctionne pas.',
+    contribute: 'Cliquez ici pour contribuer à cette traduction.'
   },
   theme_mode: {
     system: 'Système',

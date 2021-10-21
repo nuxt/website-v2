@@ -67,13 +67,11 @@
                 :placeholder="$t('footer.newsletter.form.email')"
                 @submit="subscribe"
               >
-                {{ pending ? $t('footer.newsletter.form.subscribing') : $t('footer.newsletter.form.subscribe') }}
+                {{ $t('footer.newsletter.form.subscribe') }}
               </InputGroupButton>
-              <p v-if="subscribed" class="pt-1 text-green-400">
-                {{ $t('footer.newsletter.form.subscribed_messages.pre') }}
-                {{ subscribed }}
+              <p class="pt-1 text-sm" :class="message.style">
+                {{ message.text }}
               </p>
-              <p v-else-if="error" class="pt-1 text-sm text-yellow-500">{{ error }}</p>
             </div>
           </section>
           <ul class="flex items-center space-x-4 xl:space-x-5 mt-4">
@@ -94,7 +92,7 @@
 </template>
 
 <script>
-import { defineComponent } from '@nuxtjs/composition-api'
+import { defineComponent, computed, useContext } from '@nuxtjs/composition-api'
 import { useNewsletter } from '~/plugins/composables'
 import { useNav } from '~/plugins/nav'
 
@@ -106,7 +104,8 @@ export default defineComponent({
     }
   },
   setup() {
-    const { email, error, subscribe, pending, subscribed } = useNewsletter()
+    const { i18n } = useContext()
+    const { email, result, subscribe } = useNewsletter()
     const { isHome } = useNav()
     const socials = [
       {
@@ -126,14 +125,29 @@ export default defineComponent({
       }
     ]
 
+    const message = computed(() => {
+      switch (result.value) {
+        case 'failure':
+          return { style: 'text-red-500', text: i18n.t('common.an_error_occurred') }
+        case 'invalid-email':
+          return { style: 'text-yellow-500', text: i18n.t('footer.newsletter.form.invalid_address') }
+        case 'member-exists':
+          return { style: 'text-yellow-500', text: i18n.t('footer.newsletter.form.already_registered') }
+        case 'suscribed':
+          return { style: 'text-green-500', text: i18n.t('footer.newsletter.form.subscribed_messages.confirmation') }
+        case 'confirm':
+          return { style: 'text-green-500', text: i18n.t('footer.newsletter.form.subscribed_messages.pre') }
+      }
+      return ''
+    })
+
     return {
       socials,
       email,
-      pending,
+      isHome,
       subscribe,
-      subscribed,
-      error,
-      isHome
+      result,
+      message
     }
   }
 })

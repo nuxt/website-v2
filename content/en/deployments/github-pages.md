@@ -5,8 +5,8 @@ description: How to deploy Nuxt app on GitHub Pages?
 target: Static
 category: deployment
 logo:
-  light: "/img/partners/dark/Github_Pages_Dark.svg"
-  dark: "/img/partners/light/Github_Pages_Light.svg"
+  light: "/img/companies/square/dark/Github_Pages_Dark.svg"
+  dark: "/img/companies/square/light/Github_Pages_Light.svg"
 ---
 # Deploy Nuxt on GitHub Pages
 

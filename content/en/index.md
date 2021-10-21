@@ -125,8 +125,39 @@ Sustainable [_Development_]{.text-primary}
 #description
 Nuxt development is carried out by passionate developers, but the amount of effort needed to maintain and develop new features is not sustainable without proper financial backing. We are thankful for our sponsors and partners, who help make Nuxt possible.<br>
 
+#partners-card
+  ::home-partners-card
+  ---
+  icon: technology.svg
+  category: technology
+  ---
+  #title
+  Technology partners
+
+  #description
+  Technology partners offer services that empower Nuxt developers, such as CMS, Hosting, Database, and more.
+
+  #button
+  Discover our technology partners
+  ::
+
+  ::home-partners-card
+  ---
+  icon: agency.svg
+  category: agency
+  ---
+  #title
+  Agency partners
+
+  #description
+  Agency partners are trusted web and consulting agencies that can provide Nuxt development and support for your projects.
+
+  #button
+  Find a Nuxt expert
+  ::
+
 #bottom
-:button-link[Sponsor Nuxt]{href="/sponsors" size="medium"}
+  :button-link[Become a partner]{href="mailto:partners@nuxtlabs.com" size="medium" blank}
 ::
 
 ::home-learn-guides

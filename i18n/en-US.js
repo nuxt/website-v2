@@ -140,7 +140,7 @@ export default {
     title: '翻訳されたページ',
     content_outdated: 'このページのコンテンツは古い可能性があります。',
     read_original_page: '原文を読む',
-    contribute: 'Improve translation of this page'
+    contribute: 'このページの翻訳を改善する'
   },
   theme_mode: {
     system: 'System',

@@ -9,21 +9,22 @@
     leave-to-class="opacity-0"
   >
     <div
-      class="z-50 w-full bg-white rounded-lg shadow-lg pointer-events-auto dark:bg-gray-800"
+      class="z-50 w-full bg-white rounded-lg shadow-lg pointer-events-auto dark:bg-sky-darkest"
       @mouseover="onMouseover"
       @mouseout="onMouseout"
     >
-      <div class="relative overflow-hidden rounded-lg ring-1 ring-gray-200 dark:ring-gray-700">
+      <div class="relative overflow-hidden rounded-lg ring-1 ring-gray-200 dark:ring-sky-dark">
         <div class="p-4">
           <div class="flex">
             <div class="flex-shrink-0">
-              <Component :is="iconName" class="w-6 h-6" :class="iconClass" />
+              <Component :is="iconName" class="w-6 h-6" :class="iconColorClass" />
             </div>
             <div class="ml-3 w-0 flex-1 pt-0.5">
               <p class="text-sm font-medium leading-5 text-tw-gray-900">{{ title }}</p>
               <p v-if="description" class="mt-1 text-sm leading-5 text-tw-gray-500">{{ description }}</p>
               <AppButton v-if="undo" class="mt-2" @click.native.stop="cancel">
                 Undo
+
                 <div class="inline-flex items-center rounded bg-tw-gray-200 ml-1.5">
                   <span class="w-full px-1 text-center text-tw-gray-600 text-xxs"> Z </span>
                 </div>
@@ -49,15 +50,17 @@
           </div>
         </div>
         <div v-if="timeout" class="absolute bottom-0 left-0 right-0 h-1">
-          <div class="h-1 bg-primary-500" :style="progressBarStyle" />
+          <div class="h-1" :class="progressBarColorClass" :style="progressBarStyle" />
         </div>
       </div>
     </div>
   </transition>
 </template>
 
-<script>
-export default {
+<script lang="ts">
+import { defineComponent, computed, onMounted, onBeforeUnmount, ref, useContext } from '@nuxtjs/composition-api'
+
+export default defineComponent({
   props: {
     id: {
       type: String,
@@ -66,10 +69,7 @@ export default {
     type: {
       type: String,
       required: true,
-      default: 'info',
-      validator(value) {
-        return ['info', 'success', 'error', 'warning'].includes(value)
-      }
+      default: 'info'
     },
     title: {
       type: String,
@@ -96,89 +96,120 @@ export default {
       default: null
     }
   },
-  data() {
-    return {
-      timer: null,
-      ticker: null,
-      remainingTime: this.timeout
-    }
-  },
-  computed: {
-    iconName() {
+  setup(props, { emit }) {
+    const timer = ref(null)
+    const ticker = ref(null)
+    const remainingTime = ref(props.timeout)
+    const { $timer, $ticker } = useContext()
+
+    // computed
+    const iconName = computed(() => {
       return (
-        this.icon ||
+        props.icon ||
         {
           warning: 'IconAlertWarning',
           info: 'IconAlertInfo',
           success: 'IconAlertSuccess',
           error: 'IconAlertError'
-        }[this.type]
+        }[props.type]
       )
-    },
-    iconClass() {
+    })
+
+    const iconColorClass = computed(() => {
       return (
         {
           warning: 'text-orange-400',
           info: 'text-blue-400',
           success: 'text-green-400',
           error: 'text-red-400'
-        }[this.type] || 'text-gray-400'
+        }[props.type] || 'text-gray-400'
       )
-    },
-    progressBarStyle() {
-      const remainingPercent = (this.remainingTime / this.timeout) * 100
+    })
+
+    const progressBarColorClass = computed(() => {
+      return (
+        {
+          warning: 'bg-orange-400',
+          info: 'bg-blue-400',
+          success: 'bg-green-400',
+          error: 'bg-red-400'
+        }[props.type] || 'bg-gray-400'
+      )
+    })
+
+    const progressBarStyle = computed(() => {
+      const remainingPercent = (remainingTime.value / props.timeout) * 100
       return { width: `${remainingPercent}%` }
-    }
-  },
-  mounted() {
-    if (!this.$timer) {
-      return
-    }
-    if (this.timeout) {
-      this.timer = new this.$timer(() => {
-        this.close()
-        this.ticker?.stop()
-      }, this.timeout)
-      this.ticker = new this.$ticker(() => {
-        this.remainingTime -= 10
-      }, 10)
-    }
-  },
-  beforeDestroy() {
-    if (this.timer) {
-      this.timer.stop()
-      this.ticker.stop()
-    }
-  },
-  methods: {
-    onMouseover() {
-      if (this.timer) {
-        this.timer.pause()
-        this.ticker.stop()
+    })
+
+    // mounted
+    onMounted(() => {
+      if (!$timer) {
+        return
       }
-    },
-    onMouseout() {
-      if (this.timer) {
-        this.timer.resume()
-        this.ticker.start()
+      if (props.timeout) {
+        timer.value = new $timer(() => {
+          close()
+          ticker?.value.stop()
+        }, props.timeout)
+        ticker.value = new $ticker(() => {
+          remainingTime.value -= 10
+        }, 10)
       }
-    },
-    cancel() {
-      if (this.timer) {
-        this.timer.stop()
-        this.ticker.stop()
+    })
+    // before unmount
+    onBeforeUnmount(() => {
+      if (timer) {
+        timer.value.stop()
+        ticker.value.stop()
       }
-      if (this.undo) {
+    })
+
+    // methods
+    function onMouseover() {
+      if (timer) {
+        timer.value.pause()
+        ticker.value.stop()
+      }
+    }
+
+    function onMouseout() {
+      if (timer) {
+        timer.value.resume()
+        ticker.value.start()
+      }
+    }
+
+    function cancel() {
+      if (timer) {
+        timer.value.stop()
+        ticker.value.stop()
+      }
+      if (props.undo) {
         this.undo()
       }
-      this.$emit('close')
-    },
-    close() {
-      if (this.callback) {
+      emit('close')
+    }
+
+    function close() {
+      if (props.callback) {
         this.callback()
       }
-      this.$emit('close')
+      emit('close')
+    }
+
+    return {
+      timer,
+      ticker,
+      iconName,
+      iconColorClass,
+      progressBarColorClass,
+      progressBarStyle,
+      onMouseover,
+      onMouseout,
+      cancel,
+      close
     }
   }
-}
+})
 </script>

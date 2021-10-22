@@ -119,7 +119,7 @@ export default {
         subscribing: 'Suscribiéndote...',
         subscribe: 'Suscríbete',
         subscribed_messages: {
-          pre: 'Para confirmar tu suscripción hemos enviado un email a',
+          pre: 'Para confirmar tu suscripción hemos enviado un email',
           post: '💚'
         }
       }

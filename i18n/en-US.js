@@ -35,7 +35,7 @@ export default {
         already_registered: 'You are already registered',
         invalid_address: 'Invalid address',
         subscribed_messages: {
-          pre: 'An email to confirm your subscription has been sent to',
+          pre: 'An email to confirm your subscription has been sent',
           confirmation: 'Email confirmed'
         }
       }

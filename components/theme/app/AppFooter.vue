@@ -65,19 +65,10 @@
                 v-model="email"
                 class="justify-end sm:justify-start"
                 :placeholder="$t('footer.newsletter.form.email')"
-                @submit="
-                  addNotification({
-                    title: 'Moved to released',
-                    description: `Notification`,
-                    type: 'success'
-                  })
-                "
+                @submit="subscribe"
               >
-                {{ $t('footer.newsletter.form.subscribe') }}
+                {{ pending ? $t('footer.newsletter.form.subscribing') : $t('footer.newsletter.form.subscribe') }}
               </InputGroupButton>
-              <p class="pt-1 text-sm" :class="message.style">
-                {{ message.text }}
-              </p>
             </div>
           </section>
           <ul class="flex items-center space-x-4 xl:space-x-5 mt-4">
@@ -98,7 +89,7 @@
 </template>
 
 <script>
-import { defineComponent, computed, useContext } from '@nuxtjs/composition-api'
+import { defineComponent, useContext, watch } from '@nuxtjs/composition-api'
 import { useNewsletter } from '~/plugins/composables'
 import { useNav } from '~/plugins/nav'
 import { useNotifications } from '~/plugins/notifications'
@@ -112,9 +103,11 @@ export default defineComponent({
   },
   setup() {
     const { i18n } = useContext()
-    const { email, result, subscribe } = useNewsletter()
+    const { email, newsletterResult, subscribe, pending } = useNewsletter()
     const { isHome } = useNav()
     const { add: addNotification } = useNotifications()
+
+    let notificationOptions = { text: '', type: '', timer: 4000 }
 
     const socials = [
       {
@@ -134,30 +127,62 @@ export default defineComponent({
       }
     ]
 
-    const message = computed(() => {
-      switch (result.value) {
-        case 'failure':
-          return { style: 'text-red-500', text: i18n.t('common.an_error_occurred') }
-        case 'invalid-email':
-          return { style: 'text-yellow-500', text: i18n.t('footer.newsletter.form.invalid_address') }
-        case 'member-exists':
-          return { style: 'text-yellow-500', text: i18n.t('footer.newsletter.form.already_registered') }
-        case 'suscribed':
-          return { style: 'text-green-500', text: i18n.t('footer.newsletter.form.subscribed_messages.confirmation') }
-        case 'confirm':
-          return { style: 'text-green-500', text: i18n.t('footer.newsletter.form.subscribed_messages.pre') }
-      }
-      return ''
+    watch(newsletterResult, newVal => {
+      if (newVal !== '') showNotification(newVal)
     })
+
+    function showNotification(result) {
+      switch (result) {
+        case 'failure':
+          notificationOptions = {
+            text: i18n.t('common.an_error_occurred'),
+            type: 'error'
+          }
+          break
+        case 'invalid-email':
+          notificationOptions = {
+            text: i18n.t('footer.newsletter.form.invalid_address'),
+            type: 'warning'
+          }
+          break
+        case 'member-exists':
+          notificationOptions = {
+            text: i18n.t('footer.newsletter.form.already_registered'),
+            type: 'warning'
+          }
+          break
+        case 'suscribed':
+          notificationOptions = {
+            text: i18n.t('footer.newsletter.form.subscribed_messages.confirmation'),
+            type: 'success'
+          }
+          break
+        case 'confirm':
+          notificationOptions = {
+            text: i18n.t('footer.newsletter.form.subscribed_messages.pre'),
+            type: 'success',
+            timer: 5000
+          }
+          break
+      }
+
+      addNotification({
+        title: i18n.t('footer.newsletter.title'),
+        description: notificationOptions.text,
+        type: notificationOptions.type,
+        timeout: notificationOptions.timer
+      })
+
+      newsletterResult.value = ''
+    }
 
     return {
       socials,
       email,
       isHome,
       subscribe,
-      result,
-      message,
-      addNotification
+      newsletterResult,
+      pending
     }
   }
 })

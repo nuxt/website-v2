@@ -65,7 +65,13 @@
                 v-model="email"
                 class="justify-end sm:justify-start"
                 :placeholder="$t('footer.newsletter.form.email')"
-                @submit="subscribe"
+                @submit="
+                  addNotificationAction({
+                    title: 'Moved to released',
+                    description: `Notification`,
+                    type: 'success'
+                  })
+                "
               >
                 {{ $t('footer.newsletter.form.subscribe') }}
               </InputGroupButton>
@@ -95,6 +101,7 @@
 import { defineComponent, computed, useContext } from '@nuxtjs/composition-api'
 import { useNewsletter } from '~/plugins/composables'
 import { useNav } from '~/plugins/nav'
+import { useNotifications } from '~/plugins/notifications'
 
 export default defineComponent({
   props: {
@@ -107,6 +114,8 @@ export default defineComponent({
     const { i18n } = useContext()
     const { email, result, subscribe } = useNewsletter()
     const { isHome } = useNav()
+    const { addNotificationAction } = useNotifications()
+
     const socials = [
       {
         href: 'https://twitter.com/nuxt_js',
@@ -147,7 +156,8 @@ export default defineComponent({
       isHome,
       subscribe,
       result,
-      message
+      message,
+      addNotificationAction
     }
   }
 })

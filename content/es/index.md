@@ -19,8 +19,11 @@ El Framework de Vue<br>Intuitivo
 #description
 Cree su próxima aplicación Vue.js con confianza usando Nuxt.<br class="hidden sm:block" /> Un framework de código abierto que hace que el desarrollo web sea simple y poderoso.
 
+#primary-button
+:app-button[38K+ GitHub stars]{ href="https://github.com" icon="IconGitHub" extraClass="text-white bg-sky-black hover:bg-sky-darker leading-4" }
+
 #secondary-button
-:button-link[Comenzar]{ href="/docs/get-started/installation" size="medium" aria-label="Comenzar" }
+:app-button[Comenzar]{ to="/docs/get-started/installation" }
 ::
 
 ::home-learn-master
@@ -35,7 +38,7 @@ category: Aprender
 Aprende todo lo que usted necesita saber, desde principiante hasta maestro.
 
 #bottom
-:button-link[Empieza a aprender]{href="/docs/get-started/installation" size="medium"}
+:app-button[Empieza a aprender]{to="/docs/get-started/installation"}
 ::
 
 ::home-features
@@ -157,7 +160,7 @@ El desarrollo de Nuxt lo llevan a cabo desarrolladores apasionados, pero la cant
   ::
 
 #bottom
-  :button-link[Conviertete en un patrocinador]{href="mailto:partners@nuxtlabs.com" size="medium" blank}
+  :app-button[Conviertete en un patrocinador]{href="mailto:partners@nuxtlabs.com"}
 ::
 
 ::home-learn-guides
@@ -265,36 +268,6 @@ Compartir es [Demostrar interés]{.text-sky-lighter}
 
 #description
 Descubra artículos del equipo del framework y la comunidad sobre Nuxt. ¡Consejos y trucos incluidos!
-
-#campfire-list
-  :::campfire-list-item
-  ---
-  title: Anuncios
-  description: Descubra los artículos del equipo de Nuxt.
-  to: '/announcements'
-  ---
-  :::
-  :::campfire-list-item
-  ---
-  title: Eventos
-  description: Descubra y suscríbase a eventos futuros con contenido de Nuxt, y vea las charlas anteriores del equipo central y la comunidad.
-  to: '/events'
-  ---
-  :::
-  :::campfire-list-item
-  ---
-  title: Patrocinadores
-  description: Si utiliza Nuxt en su trabajo diario y siente que le ha facilitado la vida, considere respaldarnos.
-  to: '/sponsors'
-  ---
-  :::
-  :::campfire-list-item
-  ---
-  title: Tutoriales
-  description: Descubra los tutoriales creados por la comunidad Nuxt.
-  to: '/tutorials'
-  ---
-  :::
 ::
 
 ::home-testimonials

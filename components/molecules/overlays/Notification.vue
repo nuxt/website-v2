@@ -69,7 +69,10 @@ export default defineComponent({
     type: {
       type: String,
       required: true,
-      default: 'info'
+      default: 'info',
+      validator(value: any) {
+        return ['info', 'success', 'error', 'warning'].includes(value)
+      }
     },
     title: {
       type: String,
@@ -110,7 +113,7 @@ export default defineComponent({
           warning: 'IconAlertWarning',
           info: 'IconAlertInfo',
           success: 'IconAlertSuccess',
-          error: 'IconAlertError'
+          error: 'IconAlertDanger'
         }[props.type]
       )
     })

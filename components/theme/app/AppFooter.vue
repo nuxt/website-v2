@@ -66,7 +66,7 @@
                 class="justify-end sm:justify-start"
                 :placeholder="$t('footer.newsletter.form.email')"
                 @submit="
-                  addNotificationAction({
+                  addNotification({
                     title: 'Moved to released',
                     description: `Notification`,
                     type: 'success'
@@ -114,7 +114,7 @@ export default defineComponent({
     const { i18n } = useContext()
     const { email, result, subscribe } = useNewsletter()
     const { isHome } = useNav()
-    const { addNotificationAction } = useNotifications()
+    const { add: addNotification } = useNotifications()
 
     const socials = [
       {
@@ -157,7 +157,7 @@ export default defineComponent({
       subscribe,
       result,
       message,
-      addNotificationAction
+      addNotification
     }
   }
 })

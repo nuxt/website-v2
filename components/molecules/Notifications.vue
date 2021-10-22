@@ -30,7 +30,7 @@ export default defineComponent({
 
       if (!lastNotification) return
 
-      remove(notification.id)
+      remove(lastNotification.id)
     }
 
     return {

@@ -1,7 +1,7 @@
 <template>
   <div class="d-container-content">
     <div class="relative pt-24 pb-4 xl:pb-16">
-      <img :src="`/img/sponsors/sponsors-square/${icon}`" :alt="title" loading="lazy" class="w-32 h-32" />
+      <img :src="`/img/companies/square/${icon}`" :alt="title" loading="lazy" class="w-32 h-32" />
       <h1 class="py-8 text-display-5 font-bold">{{ title }}</h1>
     </div>
     <div class="flex flex-col-reverse xl:flex-row xl:justify-between">

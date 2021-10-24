@@ -5,8 +5,8 @@ description: How to deploy Nuxt on Fume
 target: Static & Server
 category: deployment
 logo:
-  light: "/img/partners/dark/Fume.svg"
-  dark: "/img/partners/light/Fume.svg"
+  light: "/img/companies/square/dark/Fume.svg"
+  dark: "/img/companies/square/light/Fume.svg"
 ---
 # Deploy Nuxt on Fume
 

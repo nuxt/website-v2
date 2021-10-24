@@ -5,8 +5,8 @@ description: Nuxt を Stormkit.io にどうやってデプロイするのか？
 target: Static & Server
 category: deployment
 logo:
-  light: "/img/partners/dark/Stormkit_Dark.svg"
-  dark: "/img/partners/light/Stormkit_Light.svg"
+  light: "/img/companies/square/dark/Stormkit_Dark.svg"
+  dark: "/img/companies/square/light/Stormkit_Light.svg"
 ---
 # Deploy with Stormkit
 

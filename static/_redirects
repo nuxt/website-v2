@@ -356,6 +356,10 @@
 /team /teams 302!
 /:locale/team /:locale/teams 302!
 
+#V3
+/v3 https://v3.nuxtjs.org/ 302!
+/:locale/v3 https://v3.nuxtjs.org/ 302!
+
 # [LEGACY] Redirect GUIDE URLs
 /guide/themes /themes 301!
 /:locale/guide/themes /:locale/themes 301!

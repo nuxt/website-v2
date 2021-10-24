@@ -116,8 +116,39 @@ Un [_développement_]{.text-primary} soutenu
 #description
 Nuxt est construit et maintenu par des développeurs passionnés mais il serait impossible de fournir les efforts nécessaires pour développer et maintenir de nouvelles fonctionnalités sans une réelle contribution financière. Nous remercions nos sponsors et partenaires qui rendent cela possible.<br>
 
+#partners-card
+  ::home-partners-card
+  ---
+  icon: technology.svg
+  category: technology
+  ---
+  #title
+  Technology partners
+
+  #description
+  Les Technology partners offrent des services aux développeurs Nuxt, tels que CMS, hébergement, base de données, et plus encore...
+
+  #button
+  Découvrez nos Technology Partners
+  ::
+
+  ::home-partners-card
+  ---
+  icon: agency.svg
+  category: agency
+  ---
+  #title
+  Agency partners
+
+  #description
+  Les Agency partners sont des agences web reconnues qui proposent du support et du développement d'applications avec Nuxt.
+
+  #button
+  Trouvez un expert Nuxt
+  ::
+
 #bottom
-:button-link[Sponsorisez Nuxt]{href="/sponsors" size="medium"}
+  :button-link[Devenez un partenaire]{href="mailto:partners@nuxtlabs.com" size="medium" blank}
 ::
 
 ::home-learn-guides
@@ -177,10 +208,10 @@ category: Explorez
 ---
   ::section-content-item
   ---
-  title: 'Intégrations'
-  description: "Étendez et automatisez votre travail en utilisant les intégrations pour vos outils préférés."
+  title: 'Déploiements'
+  description: "Étendez et automatisez votre flux de travail en utilisant les déploiements pour vos outils préférés."
   image: '/img/home/explore/gem-explore-1.svg'
-  to: '/integrations'
+  to: '/deployments'
   hoverClass: 'hover:bg-sky-surface'
   ---
   ::

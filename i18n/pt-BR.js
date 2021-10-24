@@ -1,7 +1,7 @@
 export default {
   banner: {
-    here: 'aqui',
-    format: '{nuxt} está vindo... Descubra mais sobre ele {here} !'
+    here: 'v3.nuxtjs.org',
+    format: '{nuxt} beta saiu! Descubra mais sobre isso em {here}'
   },
   cookies: {
     message: 'Nós usamos Cookies para análise do usuário e fazer melhorias na página!',
@@ -88,8 +88,18 @@ export default {
     mvp_detail: {
       services: 'Serviços',
       location: 'Localização',
-      contact_partner: 'Contatar Parceiro',
-      visit_website: 'Visitar Website'
+      contact_partner: 'Contact {partner}',
+      follow_partner: "Follow {partner}'s activities",
+      resources: 'Resources',
+      join_us: 'Join us',
+      they_will_get_back_to_you: 'They will get back to you asap.',
+      find_them_on_the_web: 'Find them on the web.',
+      first_name: 'First name',
+      last_name: 'Last name',
+      company_name: 'Company name',
+      email: 'Email',
+      message: 'Message',
+      submit: 'Submit'
     }
   },
   support: {
@@ -120,7 +130,14 @@ export default {
     released_on: 'Lançamento em {datetime}'
   },
   partners: {
-    become_partner: 'torne-se um parceiro'
+    become_partner: 'torne-se um parceiro',
+    contact_success: 'Your request has been sent'
+  },
+  translated_pages: {
+    title: 'Translated page',
+    content_outdated: 'Contents of this page might be outdated.',
+    read_original_page: 'Read the original page',
+    contribute: 'Improve translation of this page'
   },
   theme_mode: {
     system: 'Sistema',
@@ -130,6 +147,7 @@ export default {
   common: {
     an_error_occurred: 'Um erro ocorreu',
     page_not_found: 'Não foi possível encontrar a página que você está procurando.',
+    please_define_title: 'Please define a title in the front matter',
     please_define_description: 'Por favor, defina uma descrição no assunto',
     search: 'Procurar ("/" para focar)',
     settings: 'Configurações',
@@ -144,7 +162,8 @@ export default {
     minutes: 'minutos',
     seconds: 'segundos',
     copied: 'copiado',
-    watch_video: 'Assistir ao vídeo'
+    watch_video: 'Assistir ao vídeo',
+    multiple_authors: 'Multiple Authors'
   },
   iso: 'pt'
 }

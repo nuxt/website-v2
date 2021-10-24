@@ -3,8 +3,8 @@ import fr from '~docus-i18n/fr-FR'
 export default {
   ...fr,
   banner: {
-    here: 'here',
-    format: '{nuxt} is coming... Discover more about it {here} !'
+    here: 'v3.nuxtjs.org',
+    format: '{nuxt} beta is out! Discover more about it on {here}'
   },
   cookies: {
     message: "Nous utilisons des cookies pour mesurer l'audience et améliorer le site !",
@@ -92,8 +92,18 @@ export default {
     mvp_detail: {
       services: 'Services',
       location: 'Lieu',
-      contact_partner: 'Contacter le partenaire',
-      visit_website: 'Visitez le website'
+      contact_partner: 'Contact {partner}',
+      follow_partner: 'Suivez les actualités de {partner}',
+      resources: 'Ressources',
+      join_us: 'Nous rejoindre',
+      they_will_get_back_to_you: 'Ils vous recontacteront prochainement.',
+      find_them_on_the_web: 'Trouvez-les sur le web.',
+      first_name: 'Prénom',
+      last_name: 'Nom',
+      company_name: 'Entreprise',
+      email: 'Email',
+      message: 'Message',
+      submit: 'Envoyer'
     }
   },
   support: {
@@ -124,7 +134,14 @@ export default {
     released_on: 'Sortie le {datetime}'
   },
   partners: {
-    become_partner: 'Devenez partenaire'
+    become_partner: 'Devenez partenaire',
+    contact_success: 'Your request has been sent'
+  },
+  translated_pages: {
+    title: 'Page traduite',
+    content_outdated: 'Le contenu de cette page peut être déprécié.',
+    read_original_page: 'Lire la page originale',
+    contribute: 'Contribuer à cette traduction'
   },
   theme_mode: {
     system: 'Système',

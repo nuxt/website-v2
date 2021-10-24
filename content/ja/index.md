@@ -125,8 +125,39 @@ category: パートナー
 #description
 Nuxt の開発は情熱を持った開発者によって作られますが、メンテナンスするための必要な労力と新機能開発には、適切な資金のサポートなしには持続できません。これを可能にするのは、スポンサーやパートナーの皆様のおかげです。<br>
 
+#partners-card
+  ::home-partners-card
+  ---
+  icon: technology.svg
+  category: technology
+  ---
+  #title
+  テクノロジーパートナー
+
+  #description
+  テクノロジーパートナーは、CMS、ホスティング、データベースなど、Nuxt 開発者を支援するサービスを提供しています。
+
+  #button
+  私達のテクノロジーパートナーを見つける
+  ::
+
+  ::home-partners-card
+  ---
+  icon: agency.svg
+  category: agency
+  ---
+  #title
+  代理店パートナー
+
+  #description
+  代理店パートナーはあなたのプロジェクトに Nuxt を使った開発を提供する信頼された Web そして代理店です。
+
+  #button
+  Nuxt エキスパートを探す
+  ::
+
 #bottom
-:button-link[Nuxt のスポンサー]{href="/sponsors" size="medium"}
+  :button-link[Become a partner]{href="mailto:partners@nuxtlabs.com" size="medium" blank}
 ::
 
 ::home-learn-guides
@@ -191,7 +222,7 @@ category: 探す
 title: 'インテグレーション'
 description: 'お気に入りのツールの統合を利用して、ワークフローを拡張、自動化することができます。'
 image: '/img/home/explore/gem-explore-1.svg'
-to: '/integrations'
+to: '/deployments'
 hoverClass: 'hover:bg-sky-surface'
 ---
 ::

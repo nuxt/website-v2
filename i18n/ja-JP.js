@@ -3,8 +3,8 @@ import ja from '~docus-i18n/ja-JP'
 export default {
   ...ja,
   banner: {
-    here: 'ここ',
-    format: '{nuxt} はまもなくやってきます... {here}で知ることができます！'
+    here: 'v3.nuxtjs.org',
+    format: '{nuxt} ベータがリリースされました！ {here} で詳細について見れます。'
   },
   cookies: {
     message: 'ユーザー分析とページ上の改善の目的で Cookie を使っています！',
@@ -91,8 +91,18 @@ export default {
     mvp_detail: {
       services: 'サービス',
       location: '場所',
-      contact_partner: 'パートナーに連絡する',
-      visit_website: 'ウェブサイトに訪問する'
+      contact_partner: 'Contact {partner}',
+      follow_partner: "Follow {partner}'s activities",
+      resources: 'Resources',
+      join_us: 'Join us',
+      they_will_get_back_to_you: 'They will get back to you asap.',
+      find_them_on_the_web: 'Find them on the web.',
+      first_name: 'First name',
+      last_name: 'Last name',
+      company_name: 'Company name',
+      email: 'Email',
+      message: 'Message',
+      submit: 'Submit'
     }
   },
   support: {
@@ -123,7 +133,14 @@ export default {
     released_on: 'リリース日 {datetime}'
   },
   partners: {
-    become_partner: 'パートナーになる'
+    become_partner: 'パートナーになる',
+    contact_success: 'Your request has been sent'
+  },
+  translated_pages: {
+    title: '翻訳されたページ',
+    content_outdated: 'このページのコンテンツは古い可能性があります。',
+    read_original_page: '原文を読む',
+    contribute: 'このページの翻訳を改善する'
   },
   theme_mode: {
     system: 'システム',

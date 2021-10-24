@@ -11,9 +11,6 @@ primary:
   text: 38K+ GitHub stars
   url: https://github.com/nuxt/nuxt.js
   icon: IconGitHub
-secondary:
-  text: npm init nuxt-app
-  icon: IconCopy
 ---
 
 #title
@@ -21,6 +18,9 @@ The Intuitive Vue<br>Framework
 
 #description
 Build your next Vue.js application with confidence using Nuxt.<br class="hidden sm:block" /> An open source framework making web development simple and powerful.
+
+#secondary-button
+:button-link[Get started]{ href="/docs/get-started/installation" size="medium" aria-label="Get started" }
 ::
 
 ::home-learn-master
@@ -32,10 +32,10 @@ category: Learn
 [Easy]{.text-primary} to learn. [Easy]{.text-primary} to master
 
 #description
-Be part of the Nuxt community and help us Nuxtify the world.
+Learn everything you need to know, from beginner to master.
 
 #bottom
-:button-link[Learn everything]{href="/docs/get-started/installation" size="medium"}
+:button-link[Start learning]{href="/docs/get-started/installation" size="medium"}
 ::
 
 ::home-features
@@ -125,8 +125,39 @@ Sustainable [_Development_]{.text-primary}
 #description
 Nuxt development is carried out by passionate developers, but the amount of effort needed to maintain and develop new features is not sustainable without proper financial backing. We are thankful for our sponsors and partners, who help make Nuxt possible.<br>
 
+#partners-card
+  ::home-partners-card
+  ---
+  icon: technology.svg
+  category: technology
+  ---
+  #title
+  Technology partners
+
+  #description
+  Technology partners offer services that empower Nuxt developers, such as CMS, Hosting, Database, and more.
+
+  #button
+  Discover our technology partners
+  ::
+
+  ::home-partners-card
+  ---
+  icon: agency.svg
+  category: agency
+  ---
+  #title
+  Agency partners
+
+  #description
+  Agency partners are trusted web and consulting agencies that can provide Nuxt development and support for your projects.
+
+  #button
+  Find a Nuxt expert
+  ::
+
 #bottom
-:button-link[Sponsor Nuxt]{href="/sponsors" size="medium"}
+  :button-link[Become a partner]{href="mailto:partners@nuxtlabs.com" size="medium" blank}
 ::
 
 ::home-learn-guides
@@ -188,10 +219,10 @@ category: Explore
 
 ::section-content-item
 ---
-title: 'Integrations'
-description: 'Extend and automate your workflow by using integrations for your favorite tools.'
+title: 'Deployments'
+description: 'Extend and automate your workflow by using deployments for your favorite tools.'
 image: '/img/home/explore/gem-explore-1.svg'
-to: '/integrations'
+to: '/deployments'
 hoverClass: 'hover:bg-sky-surface'
 ---
 ::

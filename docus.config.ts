@@ -7,7 +7,8 @@ export default {
   socialImage: false,
   algolia: {
     apiKey: 'ff80fbf046ce827f64f06e16f82f1401',
-    indexName: 'nuxtjs'
+    indexName: 'nuxtjs',
+    facetFilters: ['tags:main']
   },
   layout: {
     aside: false,

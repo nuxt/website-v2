@@ -1,105 +1,105 @@
 ---
 template: post
-title: Contribution Guide
-description: Any contribution to Nuxt is more than welcome!
+title: 貢献ガイド
+description: Nuxt へどんな貢献も大歓迎です！
 back: false
 ---
 
-> Any contribution to Nuxt is more than welcome!
+> Nuxt へどんな貢献も大歓迎です！
 
-## Reporting Issues
+## 問題の報告
 
-A great way to contribute to the project is to send a detailed report when you encounter an issue: [Bug report](https://github.com/nuxt/nuxt.js/issues/new?assignees=&labels=bug-report&template=bug-report.md&title=)
+プロジェクトに貢献するには、問題が発生したときに詳細なレポートを送信するのが良い方法です： [バグレポート](https://github.com/nuxt/nuxt.js/issues/new?assignees=&labels=bug-report&template=bug-report.md&title=)
 
-Please make sure to include a reproduction repository or [CodeSandBox](https://template.nuxtjs.org/) so that bugs can be reproduced without great efforts. The better a bug can be reproduced, the faster we can start fixing it!
+その際には、必ずバグを再現できるように、再現用のリポジトリや [CodeSandBox](https://template.nuxtjs.org/) を用意してください。バグの再現性が高ければ高いほど、早く修正に取り掛かることができます。
 
-## Pull Requests
+## プルリクエスト
 
-We'd love to see your pull requests, even if it's just to fix a typo!
+誤字脱字の修正だけでも構いませんので、プルリクエストをお待ちしております！
 
-However, any significant improvement should be associated to an existing [feature request](https://feature.nuxtjs.org/) or [bug report](https://bug.nuxtjs.org/).
+ですが、重要な改善は、既存の[機能要求](https://feature.nuxtjs.org/)または[バグレポート](https://bug.nuxtjs.org/)に関連付ける必要があります。
 
-### Getting started
+### はじめる
 
-1. [Fork](https://help.github.com/articles/fork-a-repo/) the [Nuxt repository](https://github.com/nuxt/nuxt.js) to your own GitHub account and then [clone](https://help.github.com/articles/cloning-a-repository/) it to your local device.
-2. Run `npm install` or `yarn install` to install the dependencies.
+1. あなた自身の GitHub アカウントに [Nuxt レポジトリ](https://github.com/nuxt/nuxt.js) を [フォーク (Fork)](https://help.github.com/articles/fork-a-repo/) し、それからあなたのローカルデバイスに[クローン (clone)](https://help.github.com/articles/cloning-a-repository/) します。
+2. 依存モジュールをインストールするために `npm install` または `yarn install` を実行します。
 
-> _Note that both **npm** and **yarn** have been seen to miss installing dependencies. To remedy that, you can either delete the `node_modules` folder in your example app and install again or do a local install of the missing dependencies._
+> _**npm** と **yarn** の両方で、依存関係のインストールを失敗することが確認されています。この問題を解決するには、サンプルアプリの `node_modules` ディレクトリを削除して再度インストールするか、不足している依存関係をローカルにインストールしてください。_
 
-> If you are adding a dependency, please use `yarn add`. The `yarn.lock` file is the source of truth for all Nuxt dependencies.
+> 依存モジュールを追加する場合は、`yarn add` を使用してください。 `yarn.lock` ファイルは、すべての Nuxt の依存関係の正しい源です。
 
-### Setup
+### セットアップ
 
-Before running any tests, make sure all dependencies are met and build all packages:
+テストを実行する前に、すべての依存するパッケージが満たされていることを確認し、すべてのパッケージをビルドします：
 
 ```sh
 yarn
 yarn build
 ```
 
-### Test structure
+### テスト構造
 
-A great PR, whether it includes a bug fix or a new feature, will often include tests. To write great tests, let us explain our test structure:
+バグ修正や新機能を含む優れたプルリクエストには、しばしばテストが含まれます。優れたテストを書くために、私たちのテスト構造を説明しましょう：
 
-#### Fixtures
+#### フィクスチャ
 
-The fixtures (found under `tests/fixtures`) contain several Nuxt applications. To keep build time as short as possible, we don't build an own Nuxt application per test. Instead, the fixtures are built (`yarn test:fixtures`) before running the actual unit tests.
+フィクスチャ (`tests/fixtures` の配下にあります) には、いくつかの Nuxt アプリケーションが含まれています。ビルド時間をできるだけ短くするために、テストごとに独自の Nuxt アプリケーションをビルドすることはありません。その代わり、フィクスチャは実際のユニットテストを実行する前にビルドされます (`yarn test:fixture`)。
 
-Please make sure to **alter** or **add a new fixture** when submitting a PR to reflect the changes properly (if applicable).
+プルリクエストを提出する際には、変更内容が適切に反映されるよう、必ず**変える**または**新しいフィクスチャの追加**を行ってください（該当する場合)
 
-Also, don't forget to **rebuild** a fixture after changing it by running the corresponding test with `jest test/fixtures/my-fixture/my-fixture.test.js`!
+また、フィクスチャを変更した後は、`jest test/fixtures/my-fixture/my-fixture.test.js` で対応するテストを実行して、フィクスチャを**再構築**することを忘れないでください！
 
-#### Unit tests
+#### 単体テスト
 
-The unit tests can be found in `tests/unit` and will be executed after building the fixtures. A fresh Nuxt server will be used per test so that no shared state (except the initial state from the build step) is present.
+単体テストは `tests/unit` にあり、フィクスチャのビルド後に実行されます。テストごとに新しい Nuxt サーバーが使用されるので、共有された状態（ビルドステップの初期状態を除く）は存在しません。
 
-After adding your unit tests, you can run them directly:
+ユニットテストを追加した後は、それらを直接実行することができます：
 
 ```sh
 jest test/unit/test.js
 ```
 
-Or you can run the whole unit test suite:
+また、単体テストスイート全体を実行することもできます：
 
 ```sh
 yarn test:unit
 ```
 
-Again, please be aware that you might have to rebuild your fixtures before!
+繰り返しになりますが、以前のフィクスチャを作り直さなければならないかもしれませんのでご了承ください！
 
-### Testing your changes
+### 変更のテスト
 
-While working on your PR you will likely want to check if your fixture is set up correctly or debug your current changes.
+プルリクエストを作成している間に、フィクスチャが正しくセットアップされているかどうかを確認したり、現在の変更点をデバッグしたりすることがあるでしょう。
 
-To do so you can use the Nuxt script itself to launch for example your fixture or an example app:
+そのためには、Nuxt スクリプト自体を使って、たとえばフィクスチャやサンプルアプリを起動することができます：
 
 ```sh
 yarn nuxt examples/your-app
 yarn nuxt test/fixtures/your-fixture-app
 ```
 
-> `npm link` could also (and does, to some extent) work for this, but it has been known to exhibit some issues. That is why we recommend calling `yarn nuxt` directly to run examples.
+> `npm link` も同様に機能しますが、これにはいくつかの問題があることが知られています。そのため、サンプルの実行には `yarn nuxt` を直接呼び出すことをお勧めします。
 
-### Examples
+### 例
 
-If you are working on a larger feature, please set up an example app in `examples/`. This will help greatly in understanding changes and also help Nuxt users to understand the feature you've built in-depth.
+大きな機能に取り組んでいる場合は、`examples/` にサンプルアプリを設定してください。これは変更点を理解するのに大いに役立ちますし、Nuxt ユーザーがあなたの作った機能を深く理解するのにも役立ちます。
 
-### Linting
+### リント
 
-As you might have noticed already, we are using ESLint to enforce a code standard. Please run `yarn lint` before committing your changes to verify that the code style is correct. If not, you can use `yarn lint --fix` or `npm run lint -- --fix` (no typo!) to fix most of the style changes. If there are still errors left, you must correct them manually.
+すでにお気づきかもしれませんが、私たちは ESLint を使ってコードスタイルの標準化を徹底しています。変更をコミットする前に `yarn lint` を実行して、コードスタイルが正しいかどうかを確認してください。正しくない場合は、`yarn lint --fix` または `npm run lint -- --fix` (タイポではありません！) を使用して、ほとんどのスタイル変更を修正することができます。それでもエラーが残っている場合は、手動で修正する必要があります。
 
-### Documentation
+### ドキュメント
 
-If you are adding a new feature, or refactoring or changing the behavior of Nuxt in any other manner, you'll likely want to document the changes. Please do so with a PR to the [docs](https://github.com/nuxt/docs/pulls) repository. You don't have to write documentation up immediately (but please do so as soon as your pull request is mature enough).
+新しい機能を追加したり、リファクタリングを行ったり、Nuxt の動作を変更したりする場合、その変更を文書化したいと思うでしょう。その際は、[docs](https://github.com/nuxt/docs/pulls) リポジトリにプルリクエストしてください。すぐにドキュメントを書く必要はありません（ただし、プルリクエストが十分に成熟したらすぐに書いてください）。
 
-### Final checklist
+### 最終チェックリスト
 
-When submitting your PR, there is a simple template that you have to fill out. Please tick all appropriate "answers" in the checklists.
+プルリクエストを提出する際には、簡単なテンプレートが用意されていますので、それに沿って記入してください。チェックリストの適切な "回答 (anwers)" にすべてチェックを入れてください。
 
-### Troubleshooting
+### トラブルシューティング
 
-#### Debugging tests on macOS
+#### macOS 上でのデバッグテスト
 
-Searching for `getPort()` will reveal it's used to start new Nuxt processes during tests. It's been seen to stop working on macOS at times and may require you to manually set a port for testing.
+`getPort()` を検索すると、テスト中に新しい Nuxt プロセスを起動するために使用されていることがわかります。macOS では動作しないことがあり、テストのために手動でポートを設定する必要があるかもしれません。
 
-Another common issue is Nuxt processes that may hang in memory when running fixture tests. A ghost process will often prevent subsequent tests from working. Run `ps aux | grep -i node` to inspect any hanging test processes if you suspect this is happening.
+また、よくある問題として、フィクスチャテストの実行時に Nuxt プロセスがメモリ内でハングアップすることがあります。ゴーストプロセスが発生すると、後続のテストが動作しなくなることがよくあります。この問題が発生していると思われる場合は、`ps aux | grep -i node` を実行して、ハングアップしているテストプロセスを調べてください。

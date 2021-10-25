@@ -1,6 +1,5 @@
 import { ref, useContext } from '@nuxtjs/composition-api'
 import { $fetch } from 'ohmyfetch'
-import '@snackbar/core/dist/snackbar.css'
 
 export function useNewsletter() {
   // @ts-ignore

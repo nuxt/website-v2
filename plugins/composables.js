@@ -8,15 +8,15 @@ export function useNewsletter() {
   const email = ref('')
   const newsletterResult = ref('')
   const pending = ref(false)
-  const apiURL = process.env.NUXT_API || 'https://api.nuxtjs.org'
+  const apiURL = process.env.NUXT_ORG_API || 'https://api.nuxtjs.org'
 
-  const subscribe = async () => {
+  const subscribe = () => {
     // Cancel empty email
     if (!email.value || !email.value.trim()) return
 
     pending.value = true
 
-    await $fetch(`${apiURL}/api/newsletter/confirm`, {
+    $fetch(`${apiURL}/api/newsletter/confirm`, {
       method: 'POST',
       headers: {
         Accept: 'application/json'

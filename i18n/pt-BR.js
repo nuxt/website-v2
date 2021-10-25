@@ -32,6 +32,7 @@ export default {
         already_registered: 'Você já é registrado',
         invalid_address: 'Endereço inválido',
         subscribed_messages: {
+          error: 'An error occurred while sending confirmation email',
           pre: 'Um email para confirmar a sua inscriçào foi enviado para',
           confirmation: 'Email confirmado'
         }

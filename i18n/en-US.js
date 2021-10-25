@@ -35,6 +35,7 @@ export default {
         already_registered: 'You are already registered',
         invalid_address: 'Invalid address',
         subscribed_messages: {
+          error: 'An error occurred while sending confirmation email',
           pre: 'An email to confirm your subscription has been sent',
           confirmation: 'Email confirmed'
         }

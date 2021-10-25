@@ -3,7 +3,7 @@ import { v4 } from 'uuid'
 
 const notifications = ssrRef([])
 
-const getLast = () => notifications.value.filter(notification => !!notification.undo)[notifications.length - 1]
+const getLast = () => notifications.value[notifications.length - 1]
 
 const remove = id => (notifications.value = notifications.value.filter(m => m.id !== id))
 

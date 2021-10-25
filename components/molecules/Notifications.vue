@@ -23,18 +23,9 @@ import { useNotifications } from '~/plugins/notifications'
 
 export default defineComponent({
   setup() {
-    const { getLast, notifications, remove } = useNotifications()
-
-    function cancel() {
-      const lastNotification = getLast()
-
-      if (!lastNotification) return
-
-      remove(lastNotification.id)
-    }
+    const { notifications, remove } = useNotifications()
 
     return {
-      cancel,
       remove,
       notifications
     }

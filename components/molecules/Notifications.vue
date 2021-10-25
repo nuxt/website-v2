@@ -38,16 +38,6 @@ export default defineComponent({
       remove,
       notifications
     }
-  },
-  shortcuts() {
-    return {
-      z: {
-        handler: 'cancel',
-        disabled(e) {
-          return ['INPUT', 'TEXTAREA'].includes(e.target.tagName)
-        }
-      }
-    }
   }
 })
 </script>

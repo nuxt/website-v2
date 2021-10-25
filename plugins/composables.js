@@ -58,7 +58,8 @@ export function useNewsletter() {
     const { statusCode } = err.data
     newsletterResult.value = 'failure'
 
-    if (statusCode === 406) newsletterResult.value = 'member-exists'
+    if (statusCode === 419) newsletterResult.value = 'member-exists'
+    if (statusCode === 420) newsletterResult.value = 'sending-error'
     if (statusCode === 422) newsletterResult.value = 'invalid-email'
   }
 

@@ -145,6 +145,12 @@ export default defineComponent({
             type: 'warning'
           }
           break
+        case 'sending-error':
+          notificationOptions = {
+            text: i18n.t('footer.newsletter.form.subscribed_messages.error'),
+            type: 'warning'
+          }
+          break
         case 'member-exists':
           notificationOptions = {
             text: i18n.t('footer.newsletter.form.already_registered'),

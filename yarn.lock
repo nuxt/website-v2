@@ -2010,11 +2010,6 @@
     estree-walker "^2.0.1"
     picomatch "^2.2.2"
 
-"@snackbar/core@^1.7.0":
-  version "1.7.0"
-  resolved "https://registry.npmjs.org/@snackbar/core/-/core-1.7.0.tgz"
-  integrity sha512-CxBEpC/boiGc0PGASQSYU4YmPFkyBhki8n2uJad593VlHcISJjgMMoD1Kk/sdqkEYxKF9zx64aY5F/fP1VfCjg==
-
 "@types/anymatch@*":
   version "3.0.0"
   resolved "https://registry.yarnpkg.com/@types/anymatch/-/anymatch-3.0.0.tgz#c95ff14401dbb2869913afac3935af4ad0d37f1a"

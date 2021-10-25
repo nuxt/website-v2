@@ -1,17 +1,31 @@
 <template>
-  <div class="notification-container" @mouseover="onMouseover" @mouseout="onMouseout">
+  <div
+    class="notification-container"
+    :class="isHome ? 'ring-sky-dark bg-sky-darkest' : 'ring-gray-200 dark:ring-sky-dark bg-white dark:bg-sky-darkest'"
+    @mouseover="onMouseover"
+    @mouseout="onMouseout"
+  >
     <div class="p-4 flex">
       <Component :is="iconName" class="w-6 h-6" :class="iconColorClass" />
       <div class="ml-3 flex-1 pt-0.5">
-        <p class="text-sm font-medium leading-5 text-sky-black dark:text-white">{{ title }}</p>
-        <p v-if="description" class="mt-1 text-sm leading-5 text-gray-600 dark:text-gray-400">{{ description }}</p>
+        <p class="text-sm font-medium leading-5" :class="isHome ? 'text-white' : 'text-sky-black dark:text-white'">
+          {{ title }}
+        </p>
+        <p
+          v-if="description"
+          class="mt-1 text-sm leading-5"
+          :class="isHome ? 'text-gray-400' : 'text-gray-600 dark:text-gray-400'"
+        >
+          {{ description }}
+        </p>
       </div>
-      <AppButton
-        class="ml-4 text-gray-400 focus:outline-none hover:text-gray-500 focus:text-gray-500"
+      <button
+        class="ml-4 self-start focus:outline-none hover:text-gray-500 focus:text-gray-500"
+        :class="isHome ? 'text-gray-400' : 'text-gray-600 dark:text-gray-400'"
         @click.stop="close"
       >
         <IconClose class="w-5 h-5" />
-      </AppButton>
+      </button>
     </div>
     <div v-if="timeout" class="absolute bottom-0 left-0 right-0">
       <div class="h-1" :class="progressBarColorClass" :style="progressBarStyle" />
@@ -21,6 +35,7 @@
 
 <script lang="ts">
 import { defineComponent, computed, onMounted, onBeforeUnmount, ref, useContext } from '@nuxtjs/composition-api'
+import { useNav } from '~/plugins/nav'
 
 export default defineComponent({
   props: {
@@ -62,6 +77,7 @@ export default defineComponent({
     const ticker = ref(null)
     const remainingTime = ref(props.timeout)
     const { $timer, $ticker } = useContext()
+    const { isHome } = useNav()
 
     // computed
     const iconName = computed(() => {
@@ -120,7 +136,7 @@ export default defineComponent({
     })
     // before unmount
     onBeforeUnmount(() => {
-      if (timer) {
+      if (timer.value) {
         timer.value.stop()
         ticker.value.stop()
       }
@@ -128,14 +144,14 @@ export default defineComponent({
 
     // methods
     function onMouseover() {
-      if (timer) {
+      if (timer.value) {
         timer.value.pause()
         ticker.value.stop()
       }
     }
 
     function onMouseout() {
-      if (timer) {
+      if (timer.value) {
         timer.value.resume()
         ticker.value.start()
       }
@@ -157,14 +173,15 @@ export default defineComponent({
       progressBarStyle,
       onMouseover,
       onMouseout,
-      close
+      close,
+      isHome
     }
   }
 })
 </script>
 <style lang="postcss" scoped>
 .notification-container {
-  @apply z-50 w-full relative overflow-hidden pointer-events-auto shadow-lg rounded-lg ring-1 ring-gray-200 dark:ring-sky-dark bg-white dark:bg-sky-darkest;
+  @apply z-50 w-full relative overflow-hidden pointer-events-auto shadow-lg rounded-lg ring-1;
   animation: transition-opacity 0.5s ease-in-out;
 }
 

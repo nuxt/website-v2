@@ -107,7 +107,7 @@ export default defineComponent({
     const { isHome } = useNav()
     const { add: addNotification } = useNotifications()
 
-    let notificationOptions = { text: '', type: '', timer: 4000 }
+    let notificationOptions = { text: '', type: '', timer: 0 }
 
     const socials = [
       {
@@ -176,7 +176,7 @@ export default defineComponent({
         title: i18n.t('footer.newsletter.title'),
         description: notificationOptions.text,
         type: notificationOptions.type,
-        timeout: notificationOptions.timer
+        timeout: notificationOptions.timer || 4000
       })
 
       newsletterResult.value = ''

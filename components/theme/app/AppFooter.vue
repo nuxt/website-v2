@@ -187,7 +187,6 @@ export default defineComponent({
       email,
       isHome,
       subscribe,
-      newsletterResult,
       pending
     }
   }

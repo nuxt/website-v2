@@ -1,38 +1,6 @@
 <template>
   <form class="mt-4 sm:flex" @submit.prevent="submit">
-    <NuxtTextInput
-      :value="value"
-      :placeholder="placeholder"
-      class="
-        white:placeholder-gray-400
-        dark:placeholder-secondary
-        appearance-none
-        min-w-0
-        sm:max-w-xs
-        block
-        w-full
-        bg-none
-        dark:bg-transparent
-        light:bg-white
-        border
-        light:border-gray-200
-        dark:border-secondary-dark
-        rounded-md
-        py-2
-        pl-3
-        pr-10
-        text-base
-        light:text-gray-500
-        dark:text-white
-        focus:outline-none
-        light:focus:ring-black
-        dark:focus:ring-white
-        light:focus:border-gray-400
-        dark:focus:border-secondary-light
-        sm:text-sm
-      "
-      @input="$emit('input', $event)"
-    />
+    <AppInput :value="value" :placeholder="placeholder" @input="$emit('input', $event)" />
     <AppButton
       type="sumbit"
       extra-class="mt-2 sm:mt-0 sm:ml-2 bg-primary text-gray-800 font-semibold hover:bg-primary-400 focus:bg-primary-300"

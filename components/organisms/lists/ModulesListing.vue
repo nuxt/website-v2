@@ -16,12 +16,13 @@
     >
       <div class="flex flex-row space-x-4 items-center justify-start">
         <IconSearch alt="Search Icon" class="text-sky-darker dark:text-white w-4 h-4" />
-        <NuxtTextInput
+        <AppInput
           v-model="query"
           v-focus
           type="search"
+          appearance="transparent"
           :placeholder="$t('modules.search')"
-          class="bg-transparent border-none w-full md:w-md xl:w-4xl outline-none"
+          class="w-full md:w-md xl:w-4xl"
         />
       </div>
       <div class="flex space-x-1 items-center">

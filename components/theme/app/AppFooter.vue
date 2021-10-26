@@ -107,8 +107,6 @@ export default defineComponent({
     const { isHome } = useNav()
     const { add: addNotification } = useNotifications()
 
-    let notificationOptions = { text: '', type: '', timer: 0 }
-
     const socials = [
       {
         href: 'https://twitter.com/nuxt_js',
@@ -132,6 +130,8 @@ export default defineComponent({
     })
 
     function showNotification(result) {
+      let notificationOptions = { text: '', type: '', timer: 0 }
+
       switch (result) {
         case 'failure':
           notificationOptions = {

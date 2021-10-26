@@ -2,8 +2,15 @@
   <div class="relative">
     <select
       v-bind="props"
-      class="select-none appearance-none"
-      :class="[{ 'pointer-events-none opacity-50': disabled }, selectClass]"
+      class="block w-full select-none appearance-none rounded-md focus:outline-none"
+      :class="[
+        { 'pointer-events-none opacity-50': disabled, 'ring-2 ring-primary': focusVisible },
+        paddingClass,
+        textClass,
+        bgClass,
+        borderClass,
+        extraClass
+      ]"
       @input="$emit('input', $event.target.value)"
       @focus="handleFocus(true)"
       @blur="handleFocus(false)"
@@ -37,7 +44,7 @@
 </template>
 
 <script>
-import { defineComponent } from '@nuxtjs/composition-api'
+import { defineComponent, ref } from '@nuxtjs/composition-api'
 
 export default defineComponent({
   props: {
@@ -61,19 +68,35 @@ export default defineComponent({
       type: String,
       default: null
     },
-    selectClass: {
-      type: String,
-      default: null
-    },
     disabled: {
       type: Boolean,
       default: false
+    },
+    paddingClass: {
+      type: String,
+      default: 'py-2 pl-3 pr-10'
+    },
+    textClass: {
+      type: String,
+      default: 'text-base sm:text-md font-medium'
+    },
+    bgClass: {
+      type: String,
+      default: 'bg-transparent'
+    },
+    borderClass: {
+      type: String,
+      default: 'border-1 border-sky-dark-light dark:border-sky-dark'
+    },
+    extraClass: {
+      type: String,
+      default: null
     }
   },
   setup() {
-    let focusedByMouse = false
-    let focus = false
-    let focusVisible = false
+    const focusedByMouse = ref(false)
+    const focus = ref(false)
+    const focusVisible = ref(false)
 
     function normalizeOption(option) {
       if (['string', 'number', 'boolean'].includes(typeof option)) {
@@ -100,22 +123,22 @@ export default defineComponent({
     }
 
     function mousedownHandler() {
-      focusedByMouse = true
+      focusedByMouse.value = true
     }
 
     function handleFocus(state) {
       if (state) {
-        if (focusedByMouse) {
-          focus = true
-          focusVisible = false
+        if (focusedByMouse.value) {
+          focus.value = true
+          focusVisible.value = false
         } else {
-          focus = true
-          focusVisible = true
+          focus.value = true
+          focusVisible.value = true
         }
       } else {
-        focus = false
-        focusVisible = false
-        focusedByMouse = false
+        focus.value = false
+        focusVisible.value = false
+        focusedByMouse.value = false
       }
     }
 

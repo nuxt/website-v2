@@ -35,7 +35,6 @@
           :value="selected"
           :options="mappedOptions"
           class="lg:hidden"
-          select-class="appearance-none block light:bg-white dark:bg-sky-black py-1 pl-2 w-full text-base sm:text-md font-medium rounded-md border-1 border-sky-dark-light dark:border-sky-dark focus:border-primary focus:outline-none"
           @input="option => $emit('selected', option)"
         />
       </div>

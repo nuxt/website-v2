@@ -67,7 +67,8 @@ export default withDocus({
     '~/plugins/adblock.client',
     '~/plugins/v-tooltip.ts',
     '~/plugins/showcases',
-    '~/plugins/nav'
+    '~/plugins/nav',
+    '~/plugins/timer'
   ],
   windicss: {
     root: resolve(__dirname),

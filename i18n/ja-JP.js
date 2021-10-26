@@ -35,6 +35,7 @@ export default {
         already_registered: '既に登録されています',
         invalid_address: 'アドレスが不正です',
         subscribed_messages: {
+          error: '確認メールを送っている間にエラーが発生しました。',
           pre: '申し込みを確認するメールが送信されています。',
           confirmation: '確認済みEメール'
         }

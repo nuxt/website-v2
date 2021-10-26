@@ -114,6 +114,7 @@ export default {
         subscribing: 'در حال ثبت...',
         subscribe: 'مشترک شوید',
         subscribed_messages: {
+          error: 'An error occurred while sending confirmation email',
           pre: 'یک ایمیل جهت تایید ارسال شد به',
           post: '💚'
         }

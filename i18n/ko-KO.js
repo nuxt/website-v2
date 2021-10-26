@@ -118,6 +118,7 @@ export default {
         subscribing: '구독중...',
         subscribe: '구독하기',
         subscribed_messages: {
+          error: 'An error occurred while sending confirmation email',
           pre: '구독 확인용 이메일이 주소로 전송되었습니다.',
           post: '💚'
         }

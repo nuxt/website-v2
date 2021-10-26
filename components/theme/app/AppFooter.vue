@@ -69,11 +69,6 @@
               >
                 {{ pending ? $t('footer.newsletter.form.subscribing') : $t('footer.newsletter.form.subscribe') }}
               </InputGroupButton>
-              <p v-if="subscribed" class="pt-1 text-green-400">
-                {{ $t('footer.newsletter.form.subscribed_messages.pre') }}
-                {{ subscribed }}
-              </p>
-              <p v-else-if="error" class="pt-1 text-sm text-yellow-500">{{ error }}</p>
             </div>
           </section>
           <ul class="flex items-center space-x-4 xl:space-x-5 mt-4">
@@ -94,9 +89,10 @@
 </template>
 
 <script>
-import { defineComponent } from '@nuxtjs/composition-api'
+import { defineComponent, useContext, watch } from '@nuxtjs/composition-api'
 import { useNewsletter } from '~/plugins/composables'
 import { useNav } from '~/plugins/nav'
+import { useNotifications } from '~/plugins/notifications'
 
 export default defineComponent({
   props: {
@@ -106,8 +102,11 @@ export default defineComponent({
     }
   },
   setup() {
-    const { email, error, subscribe, pending, subscribed } = useNewsletter()
+    const { i18n } = useContext()
+    const { email, newsletterResult, subscribe, pending } = useNewsletter()
     const { isHome } = useNav()
+    const { add: addNotification } = useNotifications()
+
     const socials = [
       {
         href: 'https://twitter.com/nuxt_js',
@@ -126,14 +125,69 @@ export default defineComponent({
       }
     ]
 
+    watch(newsletterResult, newVal => {
+      if (newVal !== '') showNotification(newVal)
+    })
+
+    function showNotification(result) {
+      let notificationOptions = { text: '', type: '', timer: 0 }
+
+      switch (result) {
+        case 'failure':
+          notificationOptions = {
+            text: i18n.t('common.an_error_occurred'),
+            type: 'error'
+          }
+          break
+        case 'invalid-email':
+          notificationOptions = {
+            text: i18n.t('footer.newsletter.form.invalid_address'),
+            type: 'warning'
+          }
+          break
+        case 'sending-error':
+          notificationOptions = {
+            text: i18n.t('footer.newsletter.form.subscribed_messages.error'),
+            type: 'warning'
+          }
+          break
+        case 'member-exists':
+          notificationOptions = {
+            text: i18n.t('footer.newsletter.form.already_registered'),
+            type: 'warning'
+          }
+          break
+        case 'subscribed':
+          notificationOptions = {
+            text: i18n.t('footer.newsletter.form.subscribed_messages.confirmation'),
+            type: 'success'
+          }
+          break
+        case 'confirm':
+          notificationOptions = {
+            text: i18n.t('footer.newsletter.form.subscribed_messages.pre'),
+            type: 'success',
+            timer: 5000
+          }
+          break
+      }
+
+      addNotification({
+        title: i18n.t('footer.newsletter.title'),
+        description: notificationOptions.text,
+        type: notificationOptions.type,
+        timeout: notificationOptions.timer || 4000
+      })
+
+      newsletterResult.value = ''
+    }
+
     return {
       socials,
       email,
-      pending,
+      isHome,
       subscribe,
-      subscribed,
-      error,
-      isHome
+      pending
     }
   }
 })

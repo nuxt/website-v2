@@ -72,7 +72,7 @@ export default defineComponent({
 
 <style lang="postcss" scoped>
 .app-button {
-  @apply inline-flex items-center flex-none rounded-md px-4 py-2.5 text-sm font-medium leading-4 transition-colors duration-200 border border-transparent focus:ring-2 focus:ring-offset-2 focus:ring-offset-white dark:focus:ring-offset-gray-900 focus:outline-none;
+  @apply inline-flex items-center flex-none rounded-md px-4 py-2.5 text-sm font-medium leading-4 transition-colors duration-200 border border-transparent focus:outline-none;
   &.small {
     @apply text-xs leading-2 py-2;
   }

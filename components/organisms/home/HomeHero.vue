@@ -44,25 +44,3 @@
     </div>
   </div>
 </template>
-
-<script>
-export default {
-  props: {
-    primary: {
-      type: Object,
-      default: () => ({
-        text: '38K+ GitHub stars',
-        url: '/https://github.com',
-        icon: 'IconGitHub'
-      })
-    },
-    secondary: {
-      type: Object,
-      default: () => ({
-        text: 'Getting started',
-        url: '/docs'
-      })
-    }
-  }
-}
-</script>

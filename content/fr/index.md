@@ -4,14 +4,8 @@ title: 'Le framework Vue intuitif'
 description: 'Construisez votre prochaine application Vue.js en toute confiance avec Nuxt. Un framework open source qui rend le développement web simple et puissant.'
 bgClass: 'bg-white'
 ---
-::home-hero
----
-primary:
-  text: 38K+ GitHub stars
-  url: https://github.com/nuxt/nuxt.js
-  icon: IconGitHub
----
 
+::home-hero
 #title
 Le framework Vue<br>intuitif
 
@@ -19,7 +13,7 @@ Le framework Vue<br>intuitif
 Construisez votre prochaine application Vue.js en toute confiance avec Nuxt.<br class="hidden sm:block" /> Un framework open source qui rend le développement web simple et puissant.
 
 #primary-button
-:app-button[38K+ GitHub stars]{ href="https://github.com" icon="IconGitHub" extraClass="text-white bg-sky-black hover:bg-sky-darker leading-4" }
+:app-button[38K+ GitHub stars]{ href="https://github.com/nuxt/nuxt.js" icon="IconGitHub" extraClass="text-white bg-sky-black hover:bg-sky-darker leading-4" }
 
 #secondary-button
 :app-button[Commencer]{ to="/docs/get-started/installation" extraClass="text-black bg-primary-500 hover:bg-primary-400 focus:ring-primary-600 py-4" }

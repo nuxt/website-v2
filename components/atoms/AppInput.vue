@@ -2,7 +2,11 @@
   <Component
     :is="inputType"
     :value="value"
-    :class="[baseClass, appearanceClass, { 'pointer-events-none opacity-50': disabled }]"
+    :class="[
+      baseClass,
+      appearanceClass,
+      { 'pointer-events-none opacity-50': disabled, 'ring-2 ring-primary': focusVisible }
+    ]"
     @input="$emit('input', $event.target.value)"
     @focus="handleFocus(true)"
     @blur="handleFocus(false)"
@@ -11,7 +15,7 @@
 </template>
 
 <script>
-import { defineComponent, computed } from '@nuxtjs/composition-api'
+import { defineComponent, computed, ref } from '@nuxtjs/composition-api'
 
 export default defineComponent({
   props: {
@@ -43,9 +47,9 @@ export default defineComponent({
     }
   },
   setup(props) {
-    let focusedByMouse = false
-    let focus = false
-    let focusVisible = false
+    const focusedByMouse = ref(false)
+    const focus = ref(false)
+    const focusVisible = ref(false)
 
     const appearanceClass = computed(() => {
       return {
@@ -56,22 +60,22 @@ export default defineComponent({
     })
 
     function mousedownHandler() {
-      focusedByMouse = true
+      focusedByMouse.value = true
     }
 
     function handleFocus(state) {
       if (state) {
-        if (focusedByMouse) {
-          focus = true
-          focusVisible = false
+        if (focusedByMouse.value) {
+          focus.value = true
+          focusVisible.value = false
         } else {
-          focus = true
-          focusVisible = true
+          focus.value = true
+          focusVisible.value = true
         }
       } else {
-        focus = false
-        focusVisible = false
-        focusedByMouse = false
+        focus.value = false
+        focusVisible.value = false
+        focusedByMouse.value = false
       }
     }
 

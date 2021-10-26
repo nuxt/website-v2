@@ -89,23 +89,23 @@
             >
               <div>
                 <label for="firstName" class="block">{{ $t('sustainability.mvp_detail.first_name') }}</label>
-                <input id="firstName" v-model="form.first_name" type="text" />
+                <AppInput id="firstName" v-model="form.first_name" type="text" />
               </div>
               <div>
                 <label for="lastName" class="block">{{ $t('sustainability.mvp_detail.last_name') }}</label>
-                <input id="lastName" v-model="form.last_name" type="text" />
+                <AppInput id="lastName" v-model="form.last_name" type="text" />
               </div>
               <div>
                 <label for="companyName" class="block">{{ $t('sustainability.mvp_detail.company_name') }}</label>
-                <input id="companyName" v-model="form.company_name" type="text" />
+                <AppInput id="companyName" v-model="form.company_name" type="text" />
               </div>
               <div>
                 <label for="email" class="block">{{ $t('sustainability.mvp_detail.email') }}</label>
-                <input id="email" v-model="form.email" type="text" />
+                <AppInput id="email" v-model="form.email" type="text" />
               </div>
               <div class="lg:col-span-full">
                 <label for="message" class="block">{{ $t('sustainability.mvp_detail.message') }}</label>
-                <textarea id="message" v-model="form.message" rows="3" />
+                <AppInput id="message" v-model="form.message" input-type="textarea" rows="3" />
               </div>
               <div class="lg:col-span-full flex justify-end">
                 <button submit>{{ $t('sustainability.mvp_detail.submit') }}</button>
@@ -250,10 +250,10 @@ export default defineComponent({
     @apply text-sm mb-1 font-medium;
   }
   & input {
-    @apply w-full rounded-md h-10 bg-cloud-lightest dark:bg-sky-dark px-3 focus:outline-none border-2 border-transparent focus:border-primary;
+    @apply bg-cloud-lightest dark:bg-sky-dark px-3;
   }
   & textarea {
-    @apply w-full rounded-md resize-none bg-cloud-lightest dark:bg-sky-dark px-3 py-2 focus:outline-none border-2 border-transparent focus:border-primary;
+    @apply resize-none bg-cloud-lightest dark:bg-sky-dark px-3 py-2;
   }
   & button {
     @apply rounded-md text-black text-sm font-medium bg-primary px-4 py-2 focus:outline-none border-2 border-transparent focus:border-black;

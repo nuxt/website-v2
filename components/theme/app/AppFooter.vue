@@ -157,7 +157,7 @@ export default defineComponent({
             type: 'warning'
           }
           break
-        case 'suscribed':
+        case 'subscribed':
           notificationOptions = {
             text: i18n.t('footer.newsletter.form.subscribed_messages.confirmation'),
             type: 'success'

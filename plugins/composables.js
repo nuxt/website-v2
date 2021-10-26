@@ -41,7 +41,7 @@ export function useNewsletter() {
       body: { email }
     })
       .then(() => {
-        result.value = 'suscribed'
+        newsletterResult.value = 'subscribed'
       })
       .catch(err => {
         newsletterError(err)

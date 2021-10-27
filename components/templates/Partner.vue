@@ -108,7 +108,7 @@
                 <AppInput id="message" v-model="form.message" input-type="textarea" rows="3" />
               </div>
               <div class="lg:col-span-full flex justify-end">
-                <button submit>{{ $t('sustainability.mvp_detail.submit') }}</button>
+                <AppButton submit>{{ $t('sustainability.mvp_detail.submit') }}</AppButton>
               </div>
               <div v-if="resultText" class="lg:col-span-full rounded-md p-4" :class="resultStyle">
                 {{ resultText }}
@@ -256,7 +256,7 @@ export default defineComponent({
     @apply resize-none bg-cloud-lightest dark:bg-sky-dark px-3 py-2;
   }
   & button {
-    @apply rounded-md text-black text-sm font-medium bg-primary px-4 py-2 focus:outline-none border-2 border-transparent focus:border-black;
+    @apply border-2 border-transparent focus:border-black;
   }
 }
 </style>

@@ -6,6 +6,7 @@
         flex-col flex
         md:flex-row
         space-y-8
+        pt-1
         pl-4
         md:pl-0 md:space-y-0
         justify-between
@@ -28,11 +29,7 @@
       <div class="flex space-x-1 items-center">
         <span>{{ $t('modules.sort_by') }}</span>
         <NuxtSelectNative v-model="sortedBy" :options="sorts" class="ml-2" border-class />
-        <button
-          class="focus:outline-none focus:ring-transparent pl-3 pr-3 md:pr-0 py-3"
-          aria-label="reverseSortButton"
-          @click="toggleOrderBy"
-        >
+        <button class="focus:outline-none pl-3 pr-3 md:pr-0 py-3" aria-label="reverseSortButton" @click="toggleOrderBy">
           <IconSortDesc
             v-if="orderedBy === 'desc'"
             alt="Descending sort"

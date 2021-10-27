@@ -18,7 +18,7 @@
       >
         <div class="py-4 pr-0">
           <ul class="flex flex-wrap lg:flex-col">
-            <li v-for="category in categories" :key="category.name">
+            <li v-for="category in categories" :key="category.name" class="px-1">
               <AppButton
                 button-class="py-2 px-4 flex justify-between w-full focus:outline-none focus:ring-transparent"
                 :class="{

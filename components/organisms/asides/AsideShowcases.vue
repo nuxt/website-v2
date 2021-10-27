@@ -20,13 +20,13 @@
       <div class="hidden lg:block py-4 pr-0">
         <ul class="flex lg:flex-col">
           <li v-for="option in options" :key="option.name">
-            <button
-              class="py-2 px-4 flex justify-between w-full focus:outline-none focus:ring-transparent"
+            <AppButton
+              button-class="py-2 px-4 flex justify-between w-full focus:outline-none focus:ring-transparent"
               :class="{ 'rounded-md bg-gray-100 dark:bg-white dark:bg-opacity-10': option.name === selected }"
-              @click="$emit('selected', option.name)"
+              @click.native="$emit('selected', option.name)"
             >
               <div class="truncate max-w-48 font">{{ option.display }}</div>
-            </button>
+            </AppButton>
           </li>
         </ul>
       </div>
@@ -35,7 +35,6 @@
           :value="selected"
           :options="mappedOptions"
           class="lg:hidden"
-          select-class="appearance-none block light:bg-white dark:bg-sky-black py-1 pl-2 w-full text-base sm:text-md font-medium rounded-md border-1 border-sky-dark-light dark:border-sky-dark focus:border-primary focus:outline-none"
           @input="option => $emit('selected', option)"
         />
       </div>

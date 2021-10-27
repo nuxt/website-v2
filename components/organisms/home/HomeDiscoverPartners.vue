@@ -12,7 +12,9 @@
           <p class="font-normal text-center text-body-base md:text-body-lg 2xl:text-body-xl mb-8">
             <Markdown use="description" unwrap="p" />
           </p>
-          <PartnersBanner class="pb-0" :partners-logo="partners" />
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-8 md:px-16 pt-16 pb-24">
+            <Markdown use="partners-card" unwrap="p" />
+          </div>
           <p><Markdown use="bottom" unwrap="p" /></p>
         </div>
       </NuxtContainer>

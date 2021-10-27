@@ -58,11 +58,11 @@ links:
     title: '探す'
     items:
       -
-        title: "インテグレーション"
+        title: "デプロイ"
         subtitle: "Nuxt のデプロイの仕方"
-        slug: "integrations"
-        to: "/integrations"
-        icon: "integrations.svg"
+        slug: "deployments"
+        to: "/deployments"
+        icon: "deployments.svg"
         color: "bg-indigo-light"
       -
         title: "モジュール"

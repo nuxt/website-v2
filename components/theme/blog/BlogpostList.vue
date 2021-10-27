@@ -11,14 +11,13 @@
         :href="post.to"
         :category="post.target || post.category"
       >
-        <div slot="footer" class="px-4 mt-auto mb-4">
+        <div slot="footer">
           <div class="flex items-center">
             <div v-if="post.authors" class="flex mr-4">
-              <a
+              <AppLink
                 v-for="(author, index) in post.authors"
                 :key="index"
                 :href="author.link"
-                target="_blank"
                 rel="noopener noindex nofollow"
                 :class="{ '-ml-4': index !== 0 }"
                 class="flex items-center justify-end border-white rounded-full border-3 dark:border-secondary-darker"
@@ -31,7 +30,7 @@
                   :src="author.avatarUrl"
                   :alt="author.name"
                 />
-              </a>
+              </AppLink>
             </div>
             <div class="flex flex-col text-sm">
               <span v-if="post.authors" class="font-bold">{{

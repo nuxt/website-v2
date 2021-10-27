@@ -6,21 +6,17 @@ bgClass: 'bg-white'
 ---
 
 ::home-hero
----
-primary:
-  text: 38K+ GitHub stars
-  url: https://github.com/nuxt/nuxt.js
-  icon: IconGitHub
----
-
 #title
 The Intuitive Vue<br>Framework
 
 #description
 Nuxt を使って信頼ある次世代の Vue.js アプリケーションを構築する<br class="hidden sm:block" /> Web 開発をシンプルにかつパワフルにするオープンソースフレームワーク
 
+#primary-button
+:app-button[38K+ GitHub stars]{ href="https://github.com/nuxt/nuxt.js" icon="IconGitHub" extraClass="text-white bg-sky-black hover:bg-sky-darker leading-4" }
+
 #secondary-button
-:button-link[はじめる]{ href="/docs/get-started/installation" size="medium" aria-label="はじめる" }
+:app-button[はじめる]{ to="/docs/get-started/installation" extraClass="text-black bg-primary-500 hover:bg-primary-400 focus:ring-primary-600 py-4" }
 ::
 
 ::home-learn-master
@@ -35,7 +31,7 @@ category: 学ぶ
 Nuxt コミュニティに参加し私達を助け Nuxtify な世界にします。
 
 #bottom
-:button-link[全てを学習する]{href="/docs/get-started/installation" size="medium"}
+:app-button[全てを学習する]{to="/docs/get-started/installation"}
 ::
 
 ::home-features
@@ -125,8 +121,39 @@ category: パートナー
 #description
 Nuxt の開発は情熱を持った開発者によって作られますが、メンテナンスするための必要な労力と新機能開発には、適切な資金のサポートなしには持続できません。これを可能にするのは、スポンサーやパートナーの皆様のおかげです。<br>
 
+#partners-card
+  ::home-partners-card
+  ---
+  icon: technology.svg
+  category: technology
+  ---
+  #title
+  テクノロジーパートナー
+
+  #description
+  テクノロジーパートナーは、CMS、ホスティング、データベースなど、Nuxt 開発者を支援するサービスを提供しています。
+
+  #button
+  私達のテクノロジーパートナーを見つける
+  ::
+
+  ::home-partners-card
+  ---
+  icon: agency.svg
+  category: agency
+  ---
+  #title
+  代理店パートナー
+
+  #description
+  代理店パートナーはあなたのプロジェクトに Nuxt を使った開発を提供する信頼された Web そして代理店です。
+
+  #button
+  Nuxt エキスパートを探す
+  ::
+
 #bottom
-:button-link[Nuxt のスポンサー]{href="/sponsors" size="medium"}
+  :app-button[Become a partner]{href="mailto:partners@nuxtlabs.com"}
 ::
 
 ::home-learn-guides
@@ -191,7 +218,7 @@ category: 探す
 title: 'インテグレーション'
 description: 'お気に入りのツールの統合を利用して、ワークフローを拡張、自動化することができます。'
 image: '/img/home/explore/gem-explore-1.svg'
-to: '/integrations'
+to: '/deployments'
 hoverClass: 'hover:bg-sky-surface'
 ---
 ::
@@ -221,7 +248,7 @@ hoverClass: 'hover:bg-sky-surface'
 Nuxt には、例で学習したり、お気に入りのプロバイダと統合したり、そしてテーマを使ってすぐに始められる領域がたくさんあります。
 ::
 
-::home-campfire
+::home-community
 ---
 category: コミュニティ
 announcementsCategory: お知らせ
@@ -234,36 +261,6 @@ articleLinkTitle: 情報を得る
 
 #description
 Nuxt チームと Nuxt コミュニティによる、Nuxt のヒントややり方に関する記事をご覧ください！
-
-#campfire-list
-  :::campfire-list-item
-  ---
-  title: お知らせ
-  description: Nuxt チームの記事を見る。
-  to: '/announcements'
-  ---
-  :::
-  :::campfire-list-item
-  ---
-  title: イベント
-  description: Nuxt のコンテンツを使った今後のイベントを発見したり、購読したり、コアチームやコミュニティの過去の講演を見ることができます。
-  to: '/events'
-  ---
-  :::
-  :::campfire-list-item
-  ---
-  title: スポンサー
-  description: 日々の仕事で Nuxt を使い、生活が便利になったと感じられたら、ぜひご支援をご検討ください。
-  to: '/sponsors'
-  ---
-  :::
-  :::campfire-list-item
-  ---
-  title: チュートリアル
-  description: Nuxt コミュニティによって作られたチュートリアルを見る。
-  to: '/tutorials'
-  ---
-  :::
 ::
 
 ::home-testimonials

@@ -37,39 +37,10 @@
             xl:space-x-4
           "
         >
-          <SectionButton
-            :href="primary.url"
-            :aria-label="primary.text"
-            size="lg"
-            class="bg-sky-black hover:bg-sky-darker"
-            :icon-left="primary.icon"
-            >{{ primary.text }}</SectionButton
-          >
+          <Markdown use="primary-button" unwrap="p" />
           <Markdown use="secondary-button" unwrap="p" />
         </div>
       </section>
     </div>
   </div>
 </template>
-
-<script>
-export default {
-  props: {
-    primary: {
-      type: Object,
-      default: () => ({
-        text: '38K+ GitHub stars',
-        url: '/https://github.com',
-        icon: 'IconGitHub'
-      })
-    },
-    secondary: {
-      type: Object,
-      default: () => ({
-        text: 'Getting started',
-        url: '/docs'
-      })
-    }
-  }
-}
-</script>

@@ -67,7 +67,8 @@ export default withDocus({
     '~/plugins/adblock.client',
     '~/plugins/v-tooltip.ts',
     '~/plugins/showcases',
-    '~/plugins/nav'
+    '~/plugins/nav',
+    '~/plugins/timer'
   ],
   windicss: {
     root: resolve(__dirname),
@@ -109,13 +110,6 @@ export default withDocus({
     }
   },
   image: {
-    screens: {
-      avatarSm: 24,
-      avatarLg: 48,
-      logo: 32,
-      migration: 536,
-      blogImage: 864
-    },
     domains: [
       'strapi.nuxtjs.org',
       'tailwindcss.nuxtjs.org',

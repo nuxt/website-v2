@@ -12,19 +12,6 @@ export default {
     button: '分かりました'
   },
   footer: {
-    titles: {
-      Discover: '発見',
-      Help: 'ヘルプ',
-      Support: 'サポート'
-    },
-    'Our team': 'チーム',
-    'Design Kit': 'デザインキット',
-    'Contact us': 'コンタクト',
-    Resources: 'リソース',
-    'Chat with us': 'チャット',
-    'Contribution guide': '貢献ガイド',
-    Sustainability: '持続可能性',
-    Training: 'トレーニング',
     newsletter: {
       title: 'ニュースレターを購読する',
       description: '最新ニュース、記事、そしてリソース、毎月メールボックスに届けます。',
@@ -44,10 +31,6 @@ export default {
     license: 'Nuxt は MIT ライセンスのオープンソースフレームワークです。'
   },
   sidebar: {
-    partners: {
-      title: 'パートナー',
-      button: 'サポート'
-    },
     ads: {
       fallback: {
         title: 'Nuxt はあなたが必要です！',
@@ -69,10 +52,6 @@ export default {
   modules: {
     search: 'モジュールを検索 (名前、カテゴリ、ユーザー名、など)',
     sort_by: 'ソート方法',
-    sort_fields: {
-      downloads: 'ダウンロード数',
-      stars: 'スター数'
-    },
     loading: 'ロード中...',
     error: 'モジュール情報の取得中にエラーが発生しました'
   },
@@ -160,7 +139,11 @@ export default {
     back: '戻る',
     go_to: '{title}に進む',
     go_home: 'ホームへ',
-    read_article: '記事を読む'
+    read_article: '記事を読む',
+    download: 'Download',
+    downloads: 'ダウンロード数',
+    star: 'Star',
+    stars: 'スター数'
   },
   iso: 'en'
 }

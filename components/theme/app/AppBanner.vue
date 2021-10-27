@@ -1,5 +1,5 @@
 <template>
-  <Link
+  <AppLink
     to="https://v3.nuxtjs.org"
     class="group flex items-center transition-height delay-200 bg-primary hover:bg-primary-400"
     :class="[$docus.currentPath.value === '/' ? 'h-10' : 'h-0 overflow-hidden']"
@@ -17,5 +17,5 @@
         <b>{{ $t('banner.here') }}</b>
       </template>
     </i18n>
-  </Link>
+  </AppLink>
 </template>

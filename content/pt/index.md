@@ -6,21 +6,17 @@ bgClass: 'bg-white'
 ---
 
 ::home-hero
----
-primary:
-  text: 38K+ GitHub stars
-  url: https://github.com/nuxt/nuxt.js
-  icon: IconGitHub
----
-
 #title
 The Intuitive Vue<br>Framework
 
 #description
 Build your next Vue.js application with confidence using Nuxt.<br class="hidden sm:block" /> An open source framework making web development simple and powerful.
 
+#primary-button
+:app-button[38K+ GitHub stars]{ href="https://github.com/nuxt/nuxt.js" icon="IconGitHub" extraClass="text-white bg-sky-black hover:bg-sky-darker leading-4" }
+
 #secondary-button
-:button-link[Get started]{ href="/docs/get-started/installation" size="medium" aria-label="Get started" }
+:app-button[Get started]{ to="/docs/get-started/installation" extraClass="text-black bg-primary-500 hover:bg-primary-400 focus:ring-primary-600 py-4" }
 ::
 
 ::home-learn-master
@@ -35,7 +31,7 @@ category: Learn
 Learn everything you need to know, from beginner to master.
 
 #bottom
-:button-link[Start learning]{href="/docs/get-started/installation" size="medium"}
+:app-button[Start learning]{to="/docs/get-started/installation"}
 ::
 
 ::home-features
@@ -157,7 +153,7 @@ Nuxt development is carried out by passionate developers, but the amount of effo
   ::
 
 #bottom
-  :button-link[Become a partner]{href="mailto:partners@nuxtlabs.com" size="medium" blank}
+  :app-button[Become a partner]{href="mailto:partners@nuxtlabs.com"}
 ::
 
 ::home-learn-guides
@@ -252,7 +248,7 @@ Moving forward? So much to [_Explore_]{.text-primary}
 Discover powerful modules, integrate with your favorite providers and start quickly with themes.
 ::
 
-::home-campfire
+::home-community
 ---
 category: Community
 announcementsCategory: Announcements
@@ -265,36 +261,6 @@ Sharing is [Caring]{.text-sky-lighter}
 
 #description
 Discover articles from the framework team and community about Nuxt. Tips and tricks included!
-
-#campfire-list
-  :::campfire-list-item
-  ---
-  title: Announcements
-  description: Discover articles from Nuxt team.
-  to: '/announcements'
-  ---
-  :::
-  :::campfire-list-item
-  ---
-  title: Events
-  description: Discover and subscribe to future events featuring Nuxt content, and watch previous talks from the core team and the community.
-  to: '/events'
-  ---
-  :::
-  :::campfire-list-item
-  ---
-  title: Sponsors
-  description: If you use Nuxt in your daily work and feel that it has made your life easier, please consider backing us.
-  to: '/sponsors'
-  ---
-  :::
-  :::campfire-list-item
-  ---
-  title: Tutorials
-  description: Discover tutorials made by the Nuxt community.
-  to: '/tutorials'
-  ---
-  :::
 ::
 
 ::home-testimonials

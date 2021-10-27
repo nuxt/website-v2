@@ -6,21 +6,17 @@ bgClass: 'bg-white'
 ---
 
 ::home-hero
----
-primary:
-  text: 38K+ GitHub stars
-  url: https://github.com/nuxt/nuxt.js
-  icon: IconGitHub
----
-
 #title
 The Intuitive Vue<br>Framework
 
 #description
 Nuxt を使って信頼ある次世代の Vue.js アプリケーションを構築する<br class="hidden sm:block" /> Web 開発をシンプルにかつパワフルにするオープンソースフレームワーク
 
+#primary-button
+:app-button[38K+ GitHub stars]{ href="https://github.com/nuxt/nuxt.js" icon="IconGitHub" extraClass="text-white bg-sky-black hover:bg-sky-darker leading-4" }
+
 #secondary-button
-:button-link[はじめる]{ href="/docs/get-started/installation" size="medium" aria-label="はじめる" }
+:app-button[はじめる]{ to="/docs/get-started/installation" extraClass="text-black bg-primary-500 hover:bg-primary-400 focus:ring-primary-600 py-4" }
 ::
 
 ::home-learn-master
@@ -35,7 +31,7 @@ category: 学ぶ
 Nuxt コミュニティに参加し私達を助け Nuxtify な世界にします。
 
 #bottom
-:button-link[全てを学習する]{href="/docs/get-started/installation" size="medium"}
+:app-button[全てを学習する]{to="/docs/get-started/installation"}
 ::
 
 ::home-features
@@ -157,7 +153,7 @@ Nuxt の開発は情熱を持った開発者によって作られますが、メ
   ::
 
 #bottom
-  :button-link[Become a partner]{href="mailto:partners@nuxtlabs.com" size="medium" blank}
+  :app-button[Become a partner]{href="mailto:partners@nuxtlabs.com"}
 ::
 
 ::home-learn-guides
@@ -252,7 +248,7 @@ hoverClass: 'hover:bg-sky-surface'
 Nuxt には、例で学習したり、お気に入りのプロバイダと統合したり、そしてテーマを使ってすぐに始められる領域がたくさんあります。
 ::
 
-::home-campfire
+::home-community
 ---
 category: コミュニティ
 announcementsCategory: お知らせ
@@ -265,36 +261,6 @@ articleLinkTitle: 情報を得る
 
 #description
 Nuxt チームと Nuxt コミュニティによる、Nuxt のヒントややり方に関する記事をご覧ください！
-
-#campfire-list
-  :::campfire-list-item
-  ---
-  title: お知らせ
-  description: Nuxt チームの記事を見る。
-  to: '/announcements'
-  ---
-  :::
-  :::campfire-list-item
-  ---
-  title: イベント
-  description: Nuxt のコンテンツを使った今後のイベントを発見したり、購読したり、コアチームやコミュニティの過去の講演を見ることができます。
-  to: '/events'
-  ---
-  :::
-  :::campfire-list-item
-  ---
-  title: スポンサー
-  description: 日々の仕事で Nuxt を使い、生活が便利になったと感じられたら、ぜひご支援をご検討ください。
-  to: '/sponsors'
-  ---
-  :::
-  :::campfire-list-item
-  ---
-  title: チュートリアル
-  description: Nuxt コミュニティによって作られたチュートリアルを見る。
-  to: '/tutorials'
-  ---
-  :::
 ::
 
 ::home-testimonials

@@ -30,19 +30,15 @@
         <template slot="message">
           <p class="md:w-1/2">
             {{ $t('cookies.message') }}
-            <a class="underline" rel="noopener" target="_blank" href="https://www.cookiesandyou.com/">
+            <AppLink href="https://www.cookiesandyou.com/" class="underline">
               {{ $t('cookies.link') }}
-            </a>
+            </AppLink>
           </p>
         </template>
         <template slot="button">
-          <SectionButton
-            size="md"
-            class="bg-primary text-black hover:bg-primary-400 focus:bg-primary-400"
-            @click.native="$emit('cookie-banner')"
-          >
+          <AppButton @click.native="$emit('cookie-banner')">
             {{ $t('cookies.button') }}
-          </SectionButton>
+          </AppButton>
         </template>
       </CookieConsent>
     </VueIfBot>

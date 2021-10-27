@@ -12,19 +12,19 @@
           <div class="flex w-full justify-between pt-2 pb-4">
             <div class="font-semibold">{{ logo.type }}</div>
             <div class="flex space-x-2">
-              <NuxtHref
+              <a
                 class="hover:text-primary light:text-gray-500 dark:white hover:underline"
                 :href="`${logo.logoImg}.svg`"
                 aria-label="Download svg"
                 download
-                >SVG</NuxtHref
+                >SVG</a
               >
-              <NuxtHref
+              <a
                 class="hover:text-primary light:text-gray-500 dark:white hover:underline"
                 :href="`${logo.logoImg}.png`"
                 aria-label="Download png"
                 download
-                >PNG</NuxtHref
+                >PNG</a
               >
             </div>
           </div>

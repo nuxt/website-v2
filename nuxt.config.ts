@@ -110,13 +110,6 @@ export default withDocus({
     }
   },
   image: {
-    screens: {
-      avatarSm: 24,
-      avatarLg: 48,
-      logo: 32,
-      migration: 536,
-      blogImage: 864
-    },
     domains: [
       'strapi.nuxtjs.org',
       'tailwindcss.nuxtjs.org',

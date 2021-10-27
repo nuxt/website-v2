@@ -1,28 +1,27 @@
 <template>
   <div class="ListCard group">
-    <template v-if="item.link">
-      <div class="ListCard-external group-hover:opacity-100">
+    <template v-if="item.to || item.link">
+      <div v-if="item.link" class="ListCard-external group-hover:opacity-100">
         <slot name="external">
-          <nuxt-img alt="external_link" src="/img/icons/ext.svg" />
+          <NuxtImg alt="external_link" src="/img/icons/ext.svg" />
         </slot>
       </div>
-      <Link :to="item.link" :aria-label="item.title" target="_blank" class="absolute inset-0" />
+      <AppLink :to="item.to || item.link" :aria-label="item.title" class="absolute inset-0" />
     </template>
-    <Link v-else :to="item.to || ''" :aria-label="item.title" class="absolute inset-0" />
     <div class="ListCard-body">
-      <nuxt-img
+      <NuxtImg
         v-if="item.logo && item.logo.dark"
         :alt="`${item.title} logo`"
         :src="item.logo.dark"
         class="dark-img w-12 h-12 mr-4 rounded-md"
       />
-      <nuxt-img
+      <NuxtImg
         v-if="item.logo && item.logo.light"
         :alt="`${item.title} logo`"
         :src="item.logo.light"
         class="light-img w-12 h-12 mr-4 rounded-md"
       />
-      <nuxt-img
+      <NuxtImg
         v-if="typeof item.logo === 'string'"
         :alt="`${item.title} logo`"
         :src="item.logo || ''"

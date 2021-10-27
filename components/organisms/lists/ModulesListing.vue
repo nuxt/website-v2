@@ -6,6 +6,7 @@
         flex-col flex
         md:flex-row
         space-y-8
+        pt-1
         pl-4
         md:pl-0 md:space-y-0
         justify-between
@@ -16,26 +17,19 @@
     >
       <div class="flex flex-row space-x-4 items-center justify-start">
         <IconSearch alt="Search Icon" class="text-sky-darker dark:text-white w-4 h-4" />
-        <NuxtTextInput
+        <AppInput
           v-model="query"
           v-focus
           type="search"
+          appearance="transparent"
           :placeholder="$t('modules.search')"
-          class="bg-transparent border-none w-full md:w-md xl:w-4xl outline-none"
+          class="w-full md:w-md xl:w-4xl"
         />
       </div>
       <div class="flex space-x-1 items-center">
         <span>{{ $t('modules.sort_by') }}</span>
-        <NuxtSelectNative
-          v-model="sortedBy"
-          :options="sortFields"
-          select-class="appearance-none block w-full bg-none dark:bg-transparent light:bg-white ml-2 py-2 pl-3 pr-10 text-base focus:outline-none light:focus:ring-black dark:focus:ring-white light:focus:border-gray-400 dark:focus:border-secondary-light sm:text-md font-medium"
-        />
-        <button
-          class="focus:outline-none focus:ring-transparent pl-3 pr-3 md:pr-0 py-3"
-          aria-label="reverseSortButton"
-          @click="toggleOrderBy"
-        >
+        <NuxtSelectNative v-model="sortedBy" :options="sorts" class="ml-2" border-class />
+        <button class="focus:outline-none pl-3 pr-3 md:pr-0 py-3" aria-label="reverseSortButton" @click="toggleOrderBy">
           <IconSortDesc
             v-if="orderedBy === 'desc'"
             alt="Descending sort"
@@ -74,9 +68,9 @@
 </template>
 
 <script lang="ts">
-import { defineComponent, useFetch } from '@nuxtjs/composition-api'
-import { useModules } from '../../../plugins/modules'
-import { useFuse } from '../../../plugins/fuse'
+import { defineComponent, useContext, useFetch, computed } from '@nuxtjs/composition-api'
+import { useModules } from '~/plugins/modules'
+import { useFuse } from '~/plugins/fuse'
 
 export default defineComponent({
   directives: {
@@ -88,11 +82,14 @@ export default defineComponent({
   },
   setup(_) {
     // Modules composable
+    const { i18n } = useContext()
     const { fetch: fetchModules, categories, modules } = useModules()
 
     // Fuse composable
     const { query, orderedBy, sortedBy, filteredModules, sortFields, toggleOrderBy, loadModules, updateList } =
       useFuse(modules)
+
+    const sorts = computed(() => sortFields.map(value => ({ text: i18n.t(`common.${value}`), value })))
 
     useFetch(async () => {
       const modules = await fetchModules()
@@ -104,7 +101,7 @@ export default defineComponent({
       modules,
       filteredModules,
       sortedBy,
-      sortFields,
+      sorts,
       toggleOrderBy,
       orderedBy,
       query,

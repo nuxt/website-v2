@@ -2,16 +2,16 @@
   <div ref="anim">
     <ul class="flex">
       <li>
-        <button class="relative mr-8 text-lg font-bold" @click="activeCodeBlock = 'fromCLI'">
+        <AppButton button-class="relative mr-8 text-lg font-bold" @click.native="activeCodeBlock = 'fromCLI'">
           {{ $t('home.cli') }}
           <span v-if="activeCodeBlock === 'fromCLI'" class="absolute -bottom-1.5 left-0 h-0.5 bg-primary w-1/3" />
-        </button>
+        </AppButton>
       </li>
       <li>
-        <button class="relative mr-8 text-lg font-bold" @click="activeCodeBlock = 'fromScratch'">
+        <AppButton button-class="relative mr-8 text-lg font-bold" @click.native="activeCodeBlock = 'fromScratch'">
           {{ $t('home.scratch') }}
           <span v-if="activeCodeBlock === 'fromScratch'" class="absolute -bottom-1.5 left-0 h-0.5 bg-primary w-1/3" />
-        </button>
+        </AppButton>
       </li>
     </ul>
 

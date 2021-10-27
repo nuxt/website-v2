@@ -191,6 +191,8 @@ export default {
     }
   },
   shortcuts: {
+    'app-button-primary-color': 'text-black bg-primary-500 hover:bg-primary-400 focus:ring-primary-600',
+    'app-button-secondary-color': 'bg-gray-500 bg-opacity-10 hover:bg-opacity-20',
     'nuxt-text-highlight': 'py-2 px-4 rounded-md bg-gray-100 dark:bg-white dark:bg-opacity-10',
     'nuxt-text-highlight-hover': 'nuxt-text-highlight dark:hover:bg-opacity-9 light:hover:bg-gray-50',
     'text-display-6': {

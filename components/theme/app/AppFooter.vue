@@ -29,17 +29,16 @@
           </h3>
           <ul class="mt-4 space-y-3">
             <li v-for="link in group.items" :key="link.title">
-              <NuxtHref
-                :href="link.href"
+              <AppLink
                 :to="localePath(link.to)"
+                :href="link.href"
                 :aria-label="link.title"
-                class=""
                 :class="
                   !isHome
                     ? 'light:text-gray-500 dark:text-white hover:d-primary-text-hover'
                     : 'text-white hover:text-cloud-light'
                 "
-                >{{ link.title }}</NuxtHref
+                >{{ link.title }}</AppLink
               >
             </li>
           </ul>
@@ -60,26 +59,26 @@
                 {{ $t('footer.newsletter.description') }}
               </p>
             </div>
-            <div class="relative">
-              <InputGroupButton
-                v-model="email"
-                class="justify-end sm:justify-start"
-                :placeholder="$t('footer.newsletter.form.email')"
-                @submit="subscribe"
+            <form class="mt-4 sm:flex sm:justify-start" @submit.prevent="subscribe">
+              <AppInput v-model="email" :placeholder="$t('footer.newsletter.form.email')" />
+              <AppButton
+                type="sumbit"
+                extra-class="mt-2 sm:mt-0 sm:ml-2 bg-primary text-gray-800 font-semibold hover:bg-primary-400 focus:bg-primary-300"
+                submit
               >
                 {{ pending ? $t('footer.newsletter.form.subscribing') : $t('footer.newsletter.form.subscribe') }}
-              </InputGroupButton>
-            </div>
+              </AppButton>
+            </form>
           </section>
           <ul class="flex items-center space-x-4 xl:space-x-5 mt-4">
             <li v-for="(social, key) in socials" :key="key">
-              <NuxtHref :href="social.href" :aria-label="social.title" :title="social.title" class="block">
+              <AppLink :href="social.href" :aria-label="social.title" :title="social.title" class="block">
                 <Component
                   :is="social.icon"
                   class="w-6 h-6 hover:text-primary"
                   :class="!isHome ? 'text-gray-400 dark:text-cloud-lighter' : 'text-gray-300'"
                 />
-              </NuxtHref>
+              </AppLink>
             </li>
           </ul>
         </div>
@@ -90,7 +89,7 @@
 
 <script>
 import { defineComponent, useContext, watch } from '@nuxtjs/composition-api'
-import { useNewsletter } from '~/plugins/composables'
+import { useNewsletter } from '~/plugins/newsletter'
 import { useNav } from '~/plugins/nav'
 import { useNotifications } from '~/plugins/notifications'
 

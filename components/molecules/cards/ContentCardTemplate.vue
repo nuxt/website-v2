@@ -30,16 +30,18 @@
     </div>
 
     <h1 class="font-bold text-body-xl mb-2 px-4">
-      <Link :to="href">
+      <AppLink :to="href">
         {{ title }}
-      </Link>
+      </AppLink>
     </h1>
 
     <p class="pb-8 px-4 text-gray-500 dark:text-cloud-lighter truncate sm:whitespace-normal">
       {{ description }}
     </p>
 
-    <slot name="footer" />
+    <div class="px-4 mt-auto mb-4">
+      <Markdown use="footer" unwrap="p" />
+    </div>
   </article>
 </template>
 

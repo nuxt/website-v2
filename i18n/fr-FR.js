@@ -12,19 +12,6 @@ export default {
     button: 'Accepter'
   },
   footer: {
-    titles: {
-      Discover: 'Découvrir',
-      Help: 'Aide',
-      Support: 'Support'
-    },
-    'Our team': 'Notre équipe',
-    'Design Kit': 'Design Kit',
-    'Contact us': 'Contactez-nous',
-    Resources: 'Ressources',
-    'Chat with us': 'Chattez avec nous',
-    'Contribution guide': 'Guide de contribution',
-    Sustainability: 'Viabilité',
-    Training: 'Support',
     newsletter: {
       title: 'Inscrivez vous à la newsletter',
       description: 'Les dernières nouvelles, articles et ressources, envoyés mensuellement dans votre boîte mail.',
@@ -44,10 +31,6 @@ export default {
     license: 'Nuxt est un framework open source sous license MIT.'
   },
   sidebar: {
-    partners: {
-      title: 'Partenaires',
-      button: 'Nous soutenir'
-    },
     ads: {
       fallback: {
         title: 'Nuxt a besoin de vous !',
@@ -70,10 +53,6 @@ export default {
   modules: {
     search: "Chercher un module (nom, catégorie, nom d'utilisateur, etc.)",
     sort_by: 'Trier par',
-    sort_fields: {
-      downloads: 'Téléchargements',
-      stars: 'Stars'
-    },
     loading: 'Chargement...',
     error: 'Une erreur est survenue lors de la récupération des modules'
   },
@@ -168,7 +147,11 @@ export default {
     seconds: 'secondes',
     copied: 'Copié',
     watch_video: 'Regarder',
-    multiple_authors: 'Plusieurs auteurs'
+    multiple_authors: 'Plusieurs auteurs',
+    download: 'Téléchargement',
+    downloads: 'Téléchargements',
+    star: 'Star',
+    stars: 'Stars'
   },
   iso: 'fr'
 }

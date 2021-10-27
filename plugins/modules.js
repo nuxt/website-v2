@@ -4,9 +4,6 @@ import { $fetch } from 'ohmyfetch'
 // Nuxt API URL
 const apiURL = 'https://api.nuxtjs.org/api'
 
-// Universal $fetch workaround (server/client side)
-const _fetch = typeof fetch === 'undefined' ? require('ohmyfetch/node').$fetch : $fetch
-
 // Modules reference
 const modules = ssrRef([], 'modulesRef')
 
@@ -20,7 +17,7 @@ export function useModules() {
   // Fetch modules and categories
   const fetch = async () => {
     // Get modules
-    modules.value = await _fetch(`${apiURL}/modules`)
+    modules.value = await $fetch(`${apiURL}/modules`)
 
     // Extract categories out of modules
     categories.value = Object.entries(

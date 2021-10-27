@@ -59,16 +59,16 @@
                 {{ $t('footer.newsletter.description') }}
               </p>
             </div>
-            <div class="relative">
-              <InputGroupButton
-                v-model="email"
-                class="justify-end sm:justify-start"
-                :placeholder="$t('footer.newsletter.form.email')"
-                @submit="subscribe"
+            <form class="mt-4 sm:flex sm:justify-start" @submit.prevent="subscribe">
+              <AppInput v-model="email" :placeholder="$t('footer.newsletter.form.email')" />
+              <AppButton
+                type="sumbit"
+                extra-class="mt-2 sm:mt-0 sm:ml-2 bg-primary text-gray-800 font-semibold hover:bg-primary-400 focus:bg-primary-300"
+                submit
               >
                 {{ pending ? $t('footer.newsletter.form.subscribing') : $t('footer.newsletter.form.subscribe') }}
-              </InputGroupButton>
-            </div>
+              </AppButton>
+            </form>
           </section>
           <ul class="flex items-center space-x-4 xl:space-x-5 mt-4">
             <li v-for="(social, key) in socials" :key="key">

@@ -8,10 +8,10 @@
     "start": "nuxt start"
   },
   "dependencies": {
-    "@docus/app": "^1.3.5",
+    "@docus/app": "^1.1.3",
     "@docus/github": "^1.0.4",
     "@docus/social-image": "^1.0.3",
-    "@docus/theme": "^1.2.2",
+    "@docus/theme": "^1.1.5",
     "@docus/twitter": "^1.0.4",
     "@nuxt/typescript-build": "^2.1.0",
     "@nuxtjs/recaptcha": "^1.0.4",

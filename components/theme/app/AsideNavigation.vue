@@ -17,9 +17,9 @@
     "
   >
     <!-- Back link -->
-    <NuxtLink v-show="parent" class="mb-3 block" :to="(parent && $contentLocalePath(parent.to)) || ''">
+    <!-- <NuxtLink v-show="parent" class="mb-3 block" :to="(parent && $contentLocalePath(parent.to)) || ''">
       <IconArrowLeft width="16" height="16" class="inline-block mr-2" /> {{ parent && parent.title }}
-    </NuxtLink>
+    </NuxtLink> -->
 
     <!-- Title -->
     <!-- <h5 v-if="!isDirectory && title" class="py-2 text-gray-400 font-bold uppercase">

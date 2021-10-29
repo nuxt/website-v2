@@ -40,7 +40,7 @@
       </div>
     </div>
     <div class="lg:flex">
-      <AsideModules />
+      <AsideModules :categories="categories" :selected-category="selectedCategory" @selectCategory="selectCategory" />
       <div
         class="
           w-full
@@ -83,7 +83,7 @@ export default defineComponent({
   setup(_) {
     // Modules composable
     const { i18n } = useContext()
-    const { fetch: fetchModules, modules } = useModules()
+    const { fetch: fetchModules, modules, categories } = useModules()
 
     // Fuse composable
     const {
@@ -96,7 +96,9 @@ export default defineComponent({
       loadModules,
       updateList,
       init,
-      syncModules
+      syncModules,
+      selectedCategory,
+      selectCategory
     } = useFuse()
 
     const sorts = computed(() => sortFields.map(value => ({ text: i18n.t(`common.${value}`), value })))
@@ -105,11 +107,15 @@ export default defineComponent({
       await fetchModules()
 
       init(modules)
+      console.log('useFetch', modules.value.length)
 
       updateList()
     })
 
-    onMounted(syncModules)
+    onMounted(() => {
+      console.log('onMounted', modules.value.length)
+      syncModules()
+    })
 
     return {
       filteredModules,
@@ -118,7 +124,10 @@ export default defineComponent({
       toggleOrderBy,
       orderedBy,
       query,
-      loadModules
+      loadModules,
+      categories,
+      selectedCategory,
+      selectCategory
     }
   }
 })

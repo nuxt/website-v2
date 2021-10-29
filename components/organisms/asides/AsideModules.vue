@@ -24,7 +24,7 @@
                 :class="{
                   'rounded-md bg-gray-100 dark:bg-white dark:bg-opacity-10': category.name === selectedCategory
                 }"
-                @click.native="selectCategory(category.name)"
+                @click.native="$emit('selectCategory', category.name)"
               >
                 <span class="truncate max-w-48 font">{{ category.name }}</span>
                 <span
@@ -41,20 +41,19 @@
     </div>
   </div>
 </template>
+
 <script lang="ts">
 import { defineComponent } from '@nuxtjs/composition-api'
-import { useModules } from '~/plugins/modules'
-import { useFuse } from '~/plugins/fuse'
 
 export default defineComponent({
-  setup() {
-    const { categories } = useModules()
-    const { selectedCategory, selectCategory } = useFuse()
-
-    return {
-      categories,
-      selectedCategory,
-      selectCategory
+  props: {
+    categories: {
+      type: Array,
+      default: () => []
+    },
+    selectedCategory: {
+      type: String,
+      default: ''
     }
   }
 })

@@ -1,4 +1,4 @@
-import { ssrRef, computed, watch, useRoute, useRouter } from '@nuxtjs/composition-api'
+import { ssrRef, watch, useRoute, useRouter } from '@nuxtjs/composition-api'
 
 // Sorting function
 const sort = (a, b, asc) => (asc ? a - b : b - a)
@@ -11,22 +11,6 @@ const ORDERS = {
 const MODULE_INCREMENT_LOADING = 24
 // Sorting fields
 const sortFields = ['downloads', 'stars']
-// Modules
-const modules = ssrRef([])
-// Filtered modules
-const filteredModules = ssrRef([])
-// Query reference
-const query = ssrRef(undefined, 'fuseQueryRef')
-// Ordered by
-const orderedBy = ssrRef('desc', 'fuseOrderRef')
-// Sorted by
-const sortedBy = ssrRef('downloads', 'fuseSortedByRef')
-// Currently selected category
-const selectedCategory = ssrRef(undefined, 'fuseSortByCategoryRef')
-// Amount of modules loaded
-const modulesLoaded = ssrRef(MODULE_INCREMENT_LOADING, 'fuseModulesLoadedRef')
-// Sorting options
-const sortByComp = computed(() => sortFields[sortedBy.value])
 
 // Fuzzy search to avoid using Fuse
 // https://stackoverflow.com/a/39905590/3926832
@@ -47,6 +31,21 @@ const fuzzySearch = (value, query, ratio = 0.75) => {
  *       as this composable could be used with other kind of datas afterwards.
  */
 export function useFuse() {
+  // Modules
+  const modules = ssrRef([], 'fuseModules')
+  // Filtered modules
+  const filteredModules = ssrRef([], 'fuseFilteredModules')
+  // Query reference
+  const query = ssrRef(undefined, 'fuseQueryRef')
+  // Ordered by
+  const orderedBy = ssrRef('desc', 'fuseOrderRef')
+  // Sorted by
+  const sortedBy = ssrRef('downloads', 'fuseSortedByRef')
+  // Currently selected category
+  const selectedCategory = ssrRef(undefined, 'fuseSortByCategoryRef')
+  // Amount of modules loaded
+  const modulesLoaded = ssrRef(MODULE_INCREMENT_LOADING, 'fuseModulesLoadedRef')
+
   // Context
   const route = useRoute()
   const router = useRouter()

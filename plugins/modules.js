@@ -4,16 +4,16 @@ import { $fetch } from 'ohmyfetch'
 // Nuxt API URL
 const apiURL = 'https://api.nuxtjs.org/api'
 
-// Modules reference
-const modules = ssrRef([], 'modulesRef')
-
-// Categories reference
-const categories = ssrRef([], 'categoriesRef')
-
 /**
  * Modules helpers
  */
 export function useModules() {
+  // Modules reference
+  const modules = ssrRef([], 'modulesRef')
+
+  // Categories reference
+  const categories = ssrRef([], 'categoriesRef')
+
   // Fetch modules and categories
   const fetch = async () => {
     // Get modules

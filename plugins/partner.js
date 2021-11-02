@@ -3,9 +3,9 @@ import { $fetch } from 'ohmyfetch'
 
 export function usePartnerContact(partnersEmail) {
   // @ts-ignore
-  const { $recaptcha } = useContext()
+  const { $recaptcha, $config } = useContext()
 
-  const apiURL = process.env.NUXT_ORG_API || 'https://api.nuxtjs.org'
+  const apiURL = $config.apiURL || 'https://api.nuxtjs.org'
 
   const form = reactive({
     first_name: '',

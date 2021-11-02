@@ -174,6 +174,7 @@ export default withDocus({
     fallback: 'light'
   },
   publicRuntimeConfig: {
+    apiURL: process.env.API_URL,
     plausible: {
       domain: process.env.PLAUSIBLE_DOMAIN
     },

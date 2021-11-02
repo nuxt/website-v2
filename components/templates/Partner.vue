@@ -55,14 +55,10 @@
                       <IconExternalLink class="inline flex-shrink-0 w-4 h-4 mr-1" />
                       <span class="truncate">{{ websiteDomain }}</span>
                     </AppLink>
-                    <AppLink
-                      v-if="page.emailAddress"
-                      :href="`mailto:${page.emailAddress}`"
-                      class="flex items-center mt-4"
-                    >
+                    <p v-if="page.emailAddress" class="flex items-center mt-4">
                       <IconEmail class="inline flex-shrink-0 w-4 h-4 mr-1" />
                       <span class="truncate">{{ page.emailAddress }}</span>
-                    </AppLink>
+                    </p>
 
                     <AppLink v-if="page.phoneNumber" :href="`tel:${page.phoneNumber}`" class="flex items-center mt-4">
                       <IconPhone class="inline flex-shrink-0 w-4 h-4 mr-1" />
@@ -76,6 +72,13 @@
                     </AppLink>
                     <AppLink v-if="page.github" :href="`https://github.com/${page.github}`" aria-label="githubLink">
                       <IconGitHub class="inline w-6 h-6" />
+                    </AppLink>
+                    <AppLink
+                      v-if="page.linkedin"
+                      :href="`https://www.linkedin.com/company/${page.linkedin}`"
+                      aria-label="linkedinlink"
+                    >
+                      <IconLinkedIn class="inline w-6 h-6" />
                     </AppLink>
                   </div>
                 </div>

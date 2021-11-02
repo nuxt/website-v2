@@ -67,16 +67,20 @@
                   </div>
 
                   <div class="flex gap-10" :class="page.emailAddress ? 'items-end' : 'items-end'">
-                    <AppLink v-if="page.twitter" :href="`https://twitter.com/${page.twitter}`" aria-label="twitterLink">
+                    <AppLink
+                      v-if="page.twitter"
+                      :href="`https://twitter.com/${page.twitter}`"
+                      aria-label="twitter link"
+                    >
                       <IconTwitter class="inline w-6 h-6" />
                     </AppLink>
-                    <AppLink v-if="page.github" :href="`https://github.com/${page.github}`" aria-label="githubLink">
+                    <AppLink v-if="page.github" :href="`https://github.com/${page.github}`" aria-label="github link">
                       <IconGitHub class="inline w-6 h-6" />
                     </AppLink>
                     <AppLink
                       v-if="page.linkedin"
                       :href="`https://www.linkedin.com/company/${page.linkedin}`"
-                      aria-label="linkedinlink"
+                      aria-label="linkedin link"
                     >
                       <IconLinkedIn class="inline w-6 h-6" />
                     </AppLink>

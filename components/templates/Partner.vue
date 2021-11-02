@@ -55,14 +55,10 @@
                       <IconExternalLink class="inline flex-shrink-0 w-4 h-4 mr-1" />
                       <span class="truncate">{{ websiteDomain }}</span>
                     </AppLink>
-                    <AppLink
-                      v-if="page.emailAddress"
-                      :href="`mailto:${page.emailAddress}`"
-                      class="flex items-center mt-4"
-                    >
+                    <p v-if="page.emailAddress" class="flex items-center mt-4">
                       <IconEmail class="inline flex-shrink-0 w-4 h-4 mr-1" />
                       <span class="truncate">{{ page.emailAddress }}</span>
-                    </AppLink>
+                    </p>
 
                     <AppLink v-if="page.phoneNumber" :href="`tel:${page.phoneNumber}`" class="flex items-center mt-4">
                       <IconPhone class="inline flex-shrink-0 w-4 h-4 mr-1" />
@@ -71,11 +67,22 @@
                   </div>
 
                   <div class="flex gap-10" :class="page.emailAddress ? 'items-end' : 'items-end'">
-                    <AppLink v-if="page.twitter" :href="`https://twitter.com/${page.twitter}`" aria-label="twitterLink">
+                    <AppLink
+                      v-if="page.twitter"
+                      :href="`https://twitter.com/${page.twitter}`"
+                      aria-label="twitter link"
+                    >
                       <IconTwitter class="inline w-6 h-6" />
                     </AppLink>
-                    <AppLink v-if="page.github" :href="`https://github.com/${page.github}`" aria-label="githubLink">
+                    <AppLink v-if="page.github" :href="`https://github.com/${page.github}`" aria-label="github link">
                       <IconGitHub class="inline w-6 h-6" />
+                    </AppLink>
+                    <AppLink
+                      v-if="page.linkedin"
+                      :href="`https://www.linkedin.com/company/${page.linkedin}`"
+                      aria-label="linkedin link"
+                    >
+                      <IconLinkedIn class="inline w-6 h-6" />
                     </AppLink>
                   </div>
                 </div>

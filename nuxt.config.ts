@@ -65,6 +65,7 @@ export default withDocus({
     '~/plugins/mq',
     '~/plugins/gtag.client',
     '~/plugins/adblock.client',
+    '~/plugins/clipboard.client',
     '~/plugins/v-tooltip.ts',
     '~/plugins/showcases',
     '~/plugins/nav',

@@ -146,6 +146,7 @@ export default {
     minutes: 'minutes',
     seconds: 'secondes',
     copied: 'Copié',
+    email_address_copied: 'Adresse email copiée dans la presse papier',
     watch_video: 'Regarder',
     multiple_authors: 'Plusieurs auteurs',
     download: 'Téléchargement',

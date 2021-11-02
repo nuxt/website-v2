@@ -145,6 +145,7 @@ export default {
     minutes: 'minutes',
     seconds: 'seconds',
     copied: 'Copied',
+    email_address_copied: 'Email address copied to clipboard',
     watch_video: 'Watch video',
     multiple_authors: 'Multiple Authors',
     download: 'Download',

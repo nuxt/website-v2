@@ -54,8 +54,10 @@ export default defineComponent({
       }
 
       if (email) {
-        e.preventDefault()
-        $clipboard.copy(email, i18n.t('common.email_address_copied'))
+        if ($clipboard.copy(email, i18n.t('common.email_address_copied'))) {
+          // Clipboard supported
+          e.preventDefault()
+        }
       }
     }
 

@@ -6,7 +6,7 @@ export default ({ $t }, inject) => {
   inject('clipboard', {
     copy: (text, successMsg, failureMsg) => {
       if (!navigator.clipboard) {
-        return
+        return false
       }
 
       navigator.clipboard.writeText(text).then(
@@ -25,6 +25,7 @@ export default ({ $t }, inject) => {
           })
         }
       )
+      return true
     }
   })
 }

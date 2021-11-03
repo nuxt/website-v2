@@ -1,8 +1,5 @@
-import { ssrRef } from '@nuxtjs/composition-api'
+import { useContext, ssrRef } from '@nuxtjs/composition-api'
 import { $fetch } from 'ohmyfetch'
-
-// Nuxt API URL
-const apiURL = 'https://api.nuxtjs.org/api'
 
 // Modules reference
 const modules = ssrRef([], 'modulesRef')
@@ -14,10 +11,15 @@ const categories = ssrRef([], 'categoriesRef')
  * Modules helpers
  */
 export function useModules() {
+  const { $config } = useContext()
+
+  // Nuxt API URL
+  const apiURL = $config.apiURL || 'https://api.nuxtjs.org'
+
   // Fetch modules and categories
   const fetch = async () => {
     // Get modules
-    modules.value = await $fetch(`${apiURL}/modules`)
+    modules.value = await $fetch(`${apiURL}/api/modules`)
 
     // Extract categories out of modules
     categories.value = Object.entries(

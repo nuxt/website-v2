@@ -3,11 +3,12 @@ import { $fetch } from 'ohmyfetch'
 
 export function useNewsletter() {
   // @ts-ignore
-  const { query } = useContext()
+  const { query, $config } = useContext()
   const email = ref('')
   const newsletterResult = ref('')
   const pending = ref(false)
-  const apiURL = process.env.NUXT_ORG_API || 'https://api.nuxtjs.org'
+
+  const apiURL = $config.apiURL || 'https://api.nuxtjs.org'
 
   const subscribe = () => {
     // Cancel empty email

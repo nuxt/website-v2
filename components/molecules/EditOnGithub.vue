@@ -65,7 +65,9 @@ export default defineComponent({
   },
   setup(props) {
     const contributors = ref([])
-    const { $docus } = useContext()
+    const { $docus, $config } = useContext()
+
+    const apiURL = $config.apiURL || 'https://api.nuxtjs.org'
 
     const { value: settings } = computed(() => $docus.settings)
 
@@ -98,7 +100,7 @@ export default defineComponent({
       props.page.source
     ].join('/')
     useFetch(async () => {
-      contributors.value = await $fetch(`https://api.nuxtjs.org/api/contributors/${path}`)
+      contributors.value = await $fetch(`${apiURL}/api/contributors/${path}`)
     })
     return {
       link,

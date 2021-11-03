@@ -1,5 +1,5 @@
 {
-  "*.(js|ts|html|css|vue|md)":[
+  "*.(js|ts|html|css|vue)":[
     "prettier --write"
   ]
 }

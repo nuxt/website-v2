@@ -5,8 +5,8 @@ description: How to deploy a Nuxt app with Cleavr?
 target: Static & Server
 category: deployment
 logo:
-  light: "/img/companies/square/dark/cleavr.svg"
-  dark: "/img/companies/square/light/cleavr.svg"
+  light: "/img/companies/square/light/cleavr.svg"
+  dark: "/img/companies/square/dark/cleavr.svg"
 ---
 # Deploy Nuxt with Cleavr
 

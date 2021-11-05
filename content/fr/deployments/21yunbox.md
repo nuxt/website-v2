@@ -5,8 +5,8 @@ description: Comment déployer Nuxt sur 21YunBox ?
 target: Static
 category: deployment
 logo:
-  light: "/img/companies/square/dark/Yunbox.svg"
-  dark: "/img/companies/square/light/Yunbox.svg"
+  light: "/img/companies/square/light/Yunbox.svg"
+  dark: "/img/companies/square/dark/Yunbox.svg"
 ---
 
 # Déployer Nuxt sur 21YunBox

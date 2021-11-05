@@ -5,8 +5,8 @@ description: Comment déployer une application Nuxt avec Bip ?
 target: Static
 category: deployment
 logo:
-  light: "/img/companies/square/dark/bip.png"
-  dark: "/img/companies/square/light/bip.png"
+  light: "/img/companies/square/light/bip.png"
+  dark: "/img/companies/square/dark/bip.png"
 ---
 # Déployer Nuxt avec Bip
 

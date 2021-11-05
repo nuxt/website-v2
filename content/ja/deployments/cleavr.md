@@ -5,8 +5,8 @@ description: Nuxt アプリケーションを Cleavr でどうやってデプロ
 target: Static & Server
 category: deployment
 logo:
-  light: "/img/companies/square/dark/cleavr.svg"
-  dark: "/img/companies/square/light/cleavr.svg"
+  light: "/img/companies/square/light/cleavr.svg"
+  dark: "/img/companies/square/dark/cleavr.svg"
 ---
 
 # Cleavr で Nuxt をデプロイする

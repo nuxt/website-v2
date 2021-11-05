@@ -5,8 +5,8 @@ description: Nuxt を Heroku にどうやってデプロイするのか？
 target: Server
 category: deployment
 logo:
-  light: "/img/companies/square/dark/Heroku_Dark.svg"
-  dark: "/img/companies/square/light/Heroku_Light.svg"
+  light: "/img/companies/square/light/Heroku.svg"
+  dark: "/img/companies/square/dark/Heroku.svg"
 ---
 # Nuxt を Heroku へデプロイする
 

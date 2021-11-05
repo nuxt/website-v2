@@ -5,8 +5,8 @@ description: How to use nginx as a reverse proxy?
 target: Static & Server
 category: deployment
 logo:
-  light: "/img/companies/square/dark/Nginx.svg"
-  dark: "/img/companies/square/light/Nginx.svg"
+  light: "/img/companies/square/light/Nginx.svg"
+  dark: "/img/companies/square/dark/Nginx.svg"
 ---
 # Using NGINX as a reverse proxy
 

@@ -5,8 +5,8 @@ description: Nuxt を Hostman にどうやってデプロイするのか？
 target: Static
 category: deployment
 logo:
-  light: "/img/companies/square/dark/Hostman_Dark.svg"
-  dark: "/img/companies/square/light/Hostman_Light.svg"
+  light: "/img/companies/square/light/Hostman.svg"
+  dark: "/img/companies/square/dark/Hostman.svg"
 ---
 # Nuxt を Hostman へデプロイする
 

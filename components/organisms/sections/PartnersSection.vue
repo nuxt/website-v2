@@ -38,6 +38,7 @@ export default defineComponent({
     useFetch(async () => {
       partners.value = (await $docus.search(`/collections/partners/${props.category}`, { deep: true }).fetch())
         .map(partner => ({ ...partner, link: null, to: `/partners/${partner.slug}` }))
+        /* Filter by logo presence to eliminate wrong items sent by Docus API */
         .filter(partner => partner.logo)
     })
 

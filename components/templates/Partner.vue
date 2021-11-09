@@ -12,7 +12,9 @@
         </div>
         <div class="flex flex-col justify-end gap-1">
           <h1 class="text-display-5 sm:text-display-4 font-bold">{{ page.title }}</h1>
-          <AppLink :href="page.link"><IconExternalLink class="inline w-4 h-4 mr-1" /> {{ websiteDomain }}</AppLink>
+          <AppLink :href="page.link" rel="noopener">
+            <IconExternalLink class="inline w-4 h-4 mr-1" /> {{ websiteDomain }}
+          </AppLink>
         </div>
       </div>
 
@@ -51,7 +53,7 @@
                 }}</span>
                 <div class="flex justify-between" :class="!page.emailAddress ? 'flex-row-reverse' : 'flex-col h-full'">
                   <div>
-                    <AppLink :href="page.link" class="flex items-center mt-4">
+                    <AppLink :href="page.link" rel="noopener" class="flex items-center mt-4">
                       <IconExternalLink class="inline flex-shrink-0 w-4 h-4 mr-1" />
                       <span class="truncate">{{ websiteDomain }}</span>
                     </AppLink>
@@ -146,7 +148,11 @@
               <h2 class="font-semibold text-lg mb-2">{{ $t('sustainability.mvp_detail.resources') }}</h2>
               <ul>
                 <li v-for="(link, index) in page.resources" :key="index">
-                  <AppLink :href="link.url" class="inline-flex items-center text-sm text-sky-dark dark:text-gray-300">
+                  <AppLink
+                    :href="link.url"
+                    rel="noopener"
+                    class="inline-flex items-center text-sm text-sky-dark dark:text-gray-300"
+                  >
                     <IconExternalLink class="inline w-4 h-4 mr-1" />
                     {{ link.name }}
                   </AppLink>

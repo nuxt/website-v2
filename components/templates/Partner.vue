@@ -57,10 +57,6 @@
                       <IconExternalLink class="inline flex-shrink-0 w-4 h-4 mr-1" />
                       <span class="truncate">{{ websiteDomain }}</span>
                     </AppLink>
-                    <p v-if="page.emailAddress" class="flex items-center mt-4">
-                      <IconEmail class="inline flex-shrink-0 w-4 h-4 mr-1" />
-                      <span class="truncate">{{ page.emailAddress }}</span>
-                    </p>
 
                     <AppLink v-if="page.phoneNumber" :href="`tel:${page.phoneNumber}`" class="flex items-center mt-4">
                       <IconPhone class="inline flex-shrink-0 w-4 h-4 mr-1" />

@@ -54,6 +54,9 @@ export default withDocus({
       imgUrl: { limit: 0 }
     }
   },
+  generate: {
+    concurrency: 10
+  },
   buildModules: [
     '@nuxt/typescript-build',
     'vue-plausible',

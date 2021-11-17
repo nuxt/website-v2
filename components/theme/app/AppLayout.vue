@@ -1,5 +1,6 @@
 <template>
   <div class="relative w-full">
+    <BannerMasteringNuxt />
     <AppBanner />
     <AppHeader :links="headerLinks" />
     <Notifications />

@@ -100,7 +100,7 @@ export default defineComponent({
       props.page.source
     ].join('/')
     useFetch(async () => {
-      contributors.value = await $fetch(`${apiURL}/api/contributors/${path}`)
+      contributors.value = await $fetch(`${apiURL}/api/github/contributors/${path}`)
     })
     return {
       link,

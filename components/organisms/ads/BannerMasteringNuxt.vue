@@ -1,7 +1,7 @@
 <template>
   <a
     v-if="show"
-    href="https://masteringnuxt.com/?utm_source=nuxt&utm_medium=link&utm_campaign=black_friday"
+    href="https://masteringnuxt.com/?utm_source=nuxt&amp;utm_medium=link&amp;utm_campaign=black_friday"
     target="_blank"
     rel="noopener"
     class="group block relative h-10"

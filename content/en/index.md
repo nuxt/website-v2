@@ -7,7 +7,7 @@ bgClass: 'bg-white'
 
 ::home-hero
 #title
-The Intuitive Vue<br>Framework
+The Intuitive Vue<br>Framework?
 
 #description
 Build your next Vue.js application with confidence using Nuxt.<br class="hidden sm:block" /> An open source framework making web development simple and powerful.

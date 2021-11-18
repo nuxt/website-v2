@@ -10,12 +10,12 @@
     <div class="absolute z-0 h-full w-full flex justify-center">
       <img
         :src="`/img/banners/mastering-nuxt/bg-desktop.png`"
-        class="h-full hidden xl:inline-block"
+        class="h-full hidden max-w-none xl:inline-block"
         alt="Banner Background"
       />
       <img
         :src="`/img/banners/mastering-nuxt/bg-tablet.png`"
-        class="h-full md:inline-block xl:hidden"
+        class="h-full hidden w-full md:inline-block xl:hidden"
         alt="Banner Background"
       />
     </div>

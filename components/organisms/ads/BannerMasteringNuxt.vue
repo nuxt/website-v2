@@ -10,7 +10,7 @@
     <div class="absolute z-0 h-full w-full flex justify-center">
       <img
         :src="`/img/banners/mastering-nuxt/bg-desktop.png`"
-        class="h-full hidden max-w-none xl:inline-block"
+        class="h-full hidden max-w-full xl:inline-block"
         alt="Banner Background"
       />
       <img

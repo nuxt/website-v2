@@ -94,23 +94,23 @@
             >
               <div>
                 <label for="firstName" class="block">{{ $t('sustainability.mvp_detail.first_name') }}</label>
-                <AppInput id="firstName" v-model="form.first_name" type="text" />
+                <AppInput id="firstName" v-model="form.first_name" type="text" required />
               </div>
               <div>
                 <label for="lastName" class="block">{{ $t('sustainability.mvp_detail.last_name') }}</label>
-                <AppInput id="lastName" v-model="form.last_name" type="text" />
+                <AppInput id="lastName" v-model="form.last_name" type="text" required />
               </div>
               <div>
                 <label for="companyName" class="block">{{ $t('sustainability.mvp_detail.company_name') }}</label>
-                <AppInput id="companyName" v-model="form.company_name" type="text" />
+                <AppInput id="companyName" v-model="form.company_name" type="text" required />
               </div>
               <div>
                 <label for="email" class="block">{{ $t('sustainability.mvp_detail.email') }}</label>
-                <AppInput id="email" v-model="form.email" type="text" />
+                <AppInput id="email" v-model="form.email" type="text" required />
               </div>
               <div class="lg:col-span-full">
                 <label for="message" class="block">{{ $t('sustainability.mvp_detail.message') }}</label>
-                <AppInput id="message" v-model="form.message" input-type="textarea" rows="3" />
+                <AppTextarea id="message" v-model="form.message" rows="5" required no-resize />
               </div>
               <div class="lg:col-span-full flex justify-end">
                 <AppButton submit>{{ $t('sustainability.mvp_detail.submit') }}</AppButton>
@@ -262,7 +262,7 @@ export default defineComponent({
     @apply bg-cloud-lightest dark:bg-sky-dark px-3;
   }
   & textarea {
-    @apply resize-none bg-cloud-lightest dark:bg-sky-dark px-3 py-2;
+    @apply bg-cloud-lightest dark:bg-sky-dark text-base px-3;
   }
   & button {
     @apply border-2 border-transparent focus:border-black;

@@ -6,7 +6,7 @@
 
     <div class="d-container-content">
       <div class="relative flex gap-8 -mt-6 sm:-mt-8 pb-8 xl:pb-16">
-        <div class="w-24 h-24 sm:w-32 sm:h-32 p-4 bg-cloud-surface dark:bg-sky-darker rounded-md">
+        <div class="w-24 h-24 sm:w-32 sm:h-32 p-4 bg-cloud-surface dark:bg-sky-darker rounded-md flex">
           <img :src="`/img/companies/square/light/${page.icon}`" :alt="page.title" class="light-img text-white" />
           <img :src="`/img/companies/square/dark/${page.icon}`" :alt="page.title" class="dark-img text-white" />
         </div>
@@ -81,6 +81,13 @@
                       aria-label="linkedin link"
                     >
                       <IconLinkedIn class="inline w-6 h-6" />
+                    </AppLink>
+                    <AppLink
+                      v-if="page.facebook"
+                      :href="`https://www.facebook.com/${page.facebook}`"
+                      aria-label="facebook link"
+                    >
+                      <IconFacebook class="inline w-6 h-6" />
                     </AppLink>
                   </div>
                 </div>

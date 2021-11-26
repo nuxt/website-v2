@@ -48,6 +48,12 @@ export function usePartnerContact(partnersEmail) {
         setTimeout(() => {
           result.value = null
         }, 4000)
+
+        form.first_name = ''
+        form.last_name = ''
+        form.company_name = ''
+        form.email = ''
+        form.message = ''
       })
       .catch(() => {
         result.value = 'failure'

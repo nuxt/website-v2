@@ -1,12 +1,12 @@
 <template>
-  <Component
-    :is="inputType"
+  <input
     :value="value"
     :class="[
       baseClass,
       appearanceClass,
       { 'pointer-events-none opacity-50': disabled, 'ring-2 ring-primary': focusVisible }
     ]"
+    :required="required"
     @input="$emit('input', $event.target.value)"
     @focus="handleFocus(true)"
     @blur="handleFocus(false)"
@@ -23,6 +23,10 @@ export default defineComponent({
       type: String,
       default: null
     },
+    required: {
+      type: Boolean,
+      default: false
+    },
     disabled: {
       type: Boolean,
       default: false
@@ -37,13 +41,6 @@ export default defineComponent({
     baseClass: {
       type: String,
       default: 'p-2 w-full rounded-md appearance-none'
-    },
-    inputType: {
-      type: String,
-      default: 'input',
-      validator(value) {
-        return ['input', 'textarea'].includes(value)
-      }
     }
   },
   setup(props) {

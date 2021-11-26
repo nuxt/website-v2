@@ -262,7 +262,7 @@ export default defineComponent({
     @apply bg-cloud-lightest dark:bg-sky-dark px-3;
   }
   & textarea {
-    @apply resize-none bg-cloud-lightest dark:bg-sky-dark px-3 py-2;
+    @apply bg-cloud-lightest dark:bg-sky-dark text-base px-3;
   }
   & button {
     @apply border-2 border-transparent focus:border-black;

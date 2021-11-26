@@ -1,19 +1,15 @@
 <template>
-  <div :class="wrapperClass">
-    <textarea
-      :id="name"
-      ref="textarea"
-      :name="name"
-      :value="value"
-      :rows="rows"
-      :required="required"
-      :disabled="disabled"
-      :placeholder="placeholder"
-      :autocomplete="autocomplete"
-      :class="textareaClass"
-      @input="updateValue($event.target.value)"
-    />
-  </div>
+  <textarea
+    ref="textarea"
+    :value="value"
+    :rows="rows"
+    :required="required"
+    :disabled="disabled"
+    :placeholder="placeholder"
+    :autocomplete="autocomplete"
+    :class="textareaClass"
+    @input="updateValue($event.target.value)"
+  />
 </template>
 
 <script>
@@ -22,10 +18,6 @@ export default {
     value: {
       type: [String, Number],
       default: ''
-    },
-    name: {
-      type: String,
-      required: true
     },
     placeholder: {
       type: String,
@@ -40,7 +32,7 @@ export default {
       default: false
     },
     rows: {
-      type: Number,
+      type: [String, Number],
       default: 3
     },
     autocomplete: {
@@ -51,7 +43,7 @@ export default {
       type: String,
       default: 'default',
       validator(value) {
-        return ['default', 'none'].includes(value)
+        return ['default', 'transparent'].includes(value)
       }
     },
     size: {
@@ -63,7 +55,7 @@ export default {
     },
     baseClass: {
       type: String,
-      default: 'block w-full bg-tw-white disabled:cursor-not-allowed disabled:bg-tw-gray-50'
+      default: 'p-2 w-full rounded-md appearance-none'
     },
     customClass: {
       type: String,
@@ -97,8 +89,9 @@ export default {
     },
     appearanceClass() {
       return {
-        default: 'focus:ring-primary-500 focus:border-primary-500 border-tw-gray-300 rounded-md',
-        none: 'border-0 bg-transparent focus:ring-0 focus:shadow-none'
+        default:
+          'light:text-gray-500 dark:text-white dark:bg-transparent light:bg-white border light:border-gray-200 dark:border-secondary-dark focus:outline-none light:focus:border-gray-400 dark:focus:border-secondary-light',
+        transparent: 'bg-transparent border-none outline-none'
       }[this.appearance]
     },
     resizeClass() {
@@ -116,9 +109,6 @@ export default {
         this.resizeClass,
         this.appearanceClass
       ].join(' ')
-    },
-    wrapperClass() {
-      return ['relative', this.appearance !== 'none' ? 'shadow-sm' : ''].filter(Boolean).join(' ')
     }
   },
   watch: {

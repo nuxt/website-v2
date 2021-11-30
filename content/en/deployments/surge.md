@@ -18,13 +18,22 @@ Nuxt gives you the possibility to host your web application on any static hostin
 
 To deploy on Surge, first install it on your computer:
 
-```bash
+::code-group
+```bash [Yarn]
+yarn global add surge
+```
+```bash [NPM]
 npm install -g surge
 ```
+::
 
 Then, we tell Nuxt to generate our web application:
 
-```bash
+::code-group
+```bash [Yarn]
+yarn generate
+```
+```bash [NPM]
 npm run generate
 ```
 

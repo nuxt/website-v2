@@ -18,7 +18,7 @@
 
 <script lang="ts">
 import { defineComponent, useContext, ref, useFetch, onMounted } from '@nuxtjs/composition-api'
-import { scrollToHeading } from '@docus/theme/runtime'
+import { scrollToHeading } from '@docus/docs-theme/utils'
 
 export default defineComponent({
   props: {

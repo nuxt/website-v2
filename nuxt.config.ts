@@ -1,5 +1,5 @@
 import { resolve } from 'path'
-import { withDocus } from '@docus/app'
+import { withDocus } from 'docus'
 
 // Learn more at https://docus.dev
 export default withDocus({
@@ -47,7 +47,7 @@ export default withDocus({
       class: ['min-w-xs']
     }
   },
-  css: [resolve(__dirname, './assets/nuxt.css')],
+  css: [resolve(__dirname, './assets/nuxt.css'), '@docsearch/css'],
   build: {
     transpile: ['ohmyfetch'],
     loaders: {
@@ -58,10 +58,8 @@ export default withDocus({
     concurrency: 10
   },
   buildModules: [
-    '@nuxt/typescript-build',
     'vue-plausible',
     '@docus/github',
-    '@docus/twitter',
     process.env.RECAPTCHA_SITE_KEY ? '@nuxtjs/recaptcha' : undefined
   ].filter(_ => _),
   plugins: [
@@ -69,19 +67,15 @@ export default withDocus({
     '~/plugins/gtag.client',
     '~/plugins/adblock.client',
     '~/plugins/clipboard.client',
-    '~/plugins/v-tooltip.ts',
     '~/plugins/showcases',
     '~/plugins/nav',
     '~/plugins/timer'
   ],
-  windicss: {
-    root: resolve(__dirname),
-    config: resolve(__dirname, 'windi.config.js')
-  },
   /**
    * Add image domains for nuxt-image on Vercel
    */
   hooks: {
+    // @ts-ignore
     generate: {
       async done() {
         try {
@@ -98,21 +92,19 @@ export default withDocus({
       }
     }
   },
+  /*
   vite: {
     server: {
       fs: {
         strict: false
-      },
-      optimizeDeps: {
-        exclude: ['vue-demi', 'scule', '@vueuse/integrations', 'ohmyfetch'],
-        include: ['defu', 'theme-colors', 'cookie', 'js-cookie', 'clipboard', 'property-information', 'ufo', 'url']
       }
     },
     optimizeDeps: {
       exclude: ['vue-demi', 'scule', '@vueuse/integrations', 'ohmyfetch'],
-      include: ['defu', 'theme-colors', 'cookie', 'js-cookie', 'clipboard', 'property-information', 'ufo']
+      include: ['defu', 'theme-colors', 'cookie', 'js-cookie', 'clipboard', 'property-information', 'ufo', 'url]
     }
   },
+  */
   image: {
     domains: [
       'strapi.nuxtjs.org',
@@ -151,24 +143,24 @@ export default withDocus({
     ]
   },
   i18n: {
-    langDir: 'i18n/',
+    langDir: resolve(__dirname, 'i18n/'),
     locales: [
       {
         code: 'en',
         iso: 'en-US',
-        file: 'en-US.js',
+        file: 'en-US.mjs',
         name: 'English'
       },
       {
         code: 'fr',
         iso: 'fr-FR',
-        file: 'fr-FR.js',
+        file: 'fr-FR.mjs',
         name: 'Français'
       },
       {
         code: 'ja',
         iso: 'ja-JP',
-        file: 'ja-JP.js',
+        file: 'ja-JP.mjs',
         name: '日本語'
       }
     ]

@@ -1,4 +1,4 @@
-import ko from '~docus-i18n/ko-KO'
+import ko from '@docus/docs-theme/locales/ko-KO.mjs'
 
 export default {
   ...ko,

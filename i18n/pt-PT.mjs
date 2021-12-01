@@ -1,4 +1,4 @@
-import pt from '~docus-i18n/pt-PT'
+import pt from '@docus/docs-theme/locales/pt-PT.mjs'
 
 export default {
   ...pt,

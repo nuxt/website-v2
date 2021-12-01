@@ -1,4 +1,4 @@
-import ja from '~docus-i18n/ja-JP'
+import fr from '@docus/docs-theme/locales/ja-JP.mjs'
 
 export default {
   ...ja,

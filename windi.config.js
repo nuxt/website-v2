@@ -1,6 +1,7 @@
 import colors from 'windicss/colors'
+import { defineConfig } from 'windicss/helpers'
 
-export default {
+export default defineConfig({
   safelist: 'bg-secondary-darker',
   theme: {
     colors: {
@@ -39,7 +40,7 @@ export default {
       'cloud-black': '#1A2121',
       black: '#000',
       white: '#fff',
-      blue: colors.lightBlue,
+      blue: colors.sky,
       green: {
         // 50: "#eefdf2",
         50: '#d0fcde',
@@ -245,4 +246,4 @@ export default {
       lineHeight: '2rem'
     }
   }
-}
+})

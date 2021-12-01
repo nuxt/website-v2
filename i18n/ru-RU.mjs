@@ -1,4 +1,4 @@
-import ru from '~docus-i18n/ru-RU'
+import ru from '@docus/docs-theme/locales/ru-RU.mjs'
 
 export default {
   ...ru,

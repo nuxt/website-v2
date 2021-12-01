@@ -11,7 +11,7 @@
         <p class="mb-12 font-normal text-body-base md:text-body-lg 2xl:text-body-xl w-1/2 text-center xl:text-left">
           <Markdown use="description" unwrap="p" />
         </p>
-        <ul class="flex flex-col items-start grid grid-cols-1 sm:grid-cols-2 gap-8">
+        <ul v-if="posts" class="flex flex-col items-start grid grid-cols-1 sm:grid-cols-2 gap-8">
           <li v-for="(post, index) in posts" :key="index">
             <div v-if="post">
               <div class="aspect-w-16 aspect-h-8 bg-gray-100 overflow-hidden dark:bg-secondary-darker mb-4 rounded-lg">
@@ -32,7 +32,9 @@
 </template>
 
 <script>
-import { defineComponent, ref, useContext, useFetch } from '@nuxtjs/composition-api'
+import { useDocusContent } from '#docus'
+import { defineComponent, ref, useNuxtApp, useLazyAsyncData } from '#app'
+
 export default defineComponent({
   props: {
     category: {
@@ -53,26 +55,30 @@ export default defineComponent({
     }
   },
   setup() {
-    const { $docus, i18n } = useContext()
-    const posts = ref([])
+    const $content = useDocusContent()
+    const { i18n } = useNuxtApp().vue2App
 
-    useFetch(async () => {
-      const announcements = await $docus
+    const { data: posts } = useLazyAsyncData('community-home', async () => {
+      const posts = []
+
+      const announcements = await $content
         .search('/announcements', { deep: true })
         .where({ language: i18n.locale })
         .sortBy('position', 'asc')
         .limit(1)
         .fetch()
 
-      const events = await $docus
+      const events = await $content
         .search('/collections/events', { deep: true })
         .where({ slug: { $ne: '' }, language: i18n.locale })
         .sortBy('position', 'desc')
         .limit(1)
         .fetch()
 
-      posts.value.push(announcements[0])
-      posts.value.push(events[0].events[events[0].events.length - 1])
+      posts.push(announcements[0])
+      posts.push(events[0].events[events[0].events.length - 1])
+
+      return posts
     })
 
     return {

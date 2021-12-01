@@ -1,6 +1,6 @@
 <template>
   <div class="px-6 mt-12 mb-8">
-    <div class="flex grid flex-wrap grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
+    <div v-if="posts && posts.length" class="flex grid flex-wrap grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
       <ContentCardTemplate
         v-for="post in posts"
         :key="post.id"
@@ -52,7 +52,8 @@
 </template>
 
 <script>
-import { defineComponent, ref, useContext, useFetch } from '@nuxtjs/composition-api'
+import { defineComponent, ref, useLazyAsyncData, useNuxtApp } from '#app'
+import { useDocusContent } from '#docus'
 
 export default defineComponent({
   props: {
@@ -71,18 +72,18 @@ export default defineComponent({
     }
   },
   setup(props) {
-    const { $docus, i18n } = useContext()
-    const posts = ref()
+    const $content = useDocusContent()
+    const { i18n } = useNuxtApp().vue2App
 
-    useFetch(async () => {
-      const documents = await $docus
-        .search(props.slug, { deep: true })
-        .where({ slug: { $ne: '' }, language: i18n.locale })
-        .sortBy(props.sortBy.field, props.sortBy.direction)
-        .fetch()
-
-      posts.value = documents
-    })
+    const { data: posts } = useLazyAsyncData(
+      'blogpost-list',
+      async () =>
+        await $content
+          .search(props.slug, { deep: true })
+          .where({ slug: { $ne: '' }, language: i18n.locale })
+          .sortBy(props.sortBy.field, props.sortBy.direction)
+          .fetch()
+    )
 
     const formatDateByLocale = (locale, d) => {
       const currentLocale = locale || 'en'

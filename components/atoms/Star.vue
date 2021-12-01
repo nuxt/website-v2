@@ -3,7 +3,7 @@
 </template>
 
 <script>
-import { defineComponent, ref, computed, onMounted } from '@nuxtjs/composition-api'
+import { defineComponent, ref, computed, onMounted } from '#app'
 export default defineComponent({
   setup() {
     const style = ref({})

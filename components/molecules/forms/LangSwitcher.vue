@@ -17,7 +17,7 @@
         class="px-4 py-1 flex items-center whitespace-no-wrap"
         :class="[
           $i18n.locale === locale.code
-            ? $docus.currentPath.value === '/'
+            ? $docus.navigation.currentPath.value === '/'
               ? 'font-semibold cursor-default text-gray-200'
               : 'font-semibold cursor-default text-gray-800 dark:text-gray-200'
             : 'hover:d-text-primary'
@@ -29,7 +29,7 @@
 </template>
 
 <script>
-import { defineComponent } from '@nuxtjs/composition-api'
+import { defineComponent } from '#app'
 
 export default defineComponent({
   props: {

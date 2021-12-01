@@ -15,15 +15,7 @@
 
           <template #title>
             <h2
-              class="
-                font-normal
-                text-center
-                md:text-left
-                font-serif
-                text-display-6
-                md:text-display-5
-                2xl:text-display-4
-              "
+              class="font-normal text-center md:text-left font-serif text-display-6 md:text-display-5 2xl:text-display-4"
             >
               <Markdown use="title" unwrap="p" />
             </h2>
@@ -57,7 +49,7 @@
 </template>
 
 <script>
-import { defineComponent } from '@nuxtjs/composition-api'
+import { defineComponent } from '#app'
 
 export default defineComponent({
   props: {

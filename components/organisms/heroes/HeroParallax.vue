@@ -1,20 +1,7 @@
 <template>
   <div
     ref="containerImg"
-    class="
-      absolute
-      top-0
-      left-0
-      z-10
-      w-full
-      h-full
-      select-none
-      pointer-events-none
-      transition-opacity
-      ease-out
-      duration-800
-      mt-18
-    "
+    class="absolute top-0 left-0 z-10 w-full h-full select-none pointer-events-none transition-opacity ease-out duration-800 mt-18"
     :class="[hidden ? 'opacity-0' : 'opacity-100']"
   >
     <img
@@ -69,7 +56,7 @@
 </template>
 
 <script>
-import { defineComponent, ref, onMounted, onBeforeUnmount } from '@nuxtjs/composition-api'
+import { defineComponent, ref, onMounted, onBeforeUnmount } from '#app'
 
 export default defineComponent({
   setup() {

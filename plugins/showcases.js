@@ -1,29 +1,35 @@
-import { ssrRef } from '@nuxtjs/composition-api'
+import { useState, defineNuxtPlugin } from '#app'
 import { $fetch } from 'ohmyfetch'
 
-// Showcases reference
-const showcases = ssrRef([], 'showcasesRef')
+export default defineNuxtPlugin(ctx => {
+  // Showcases reference
+  const state = useState('showcases', () => [])
+
+  // Fetch showcases
+  const fetch = async id => {
+    // Get showcases
+    state.value = await $fetch(`https://api.vuetelescope.com/lists/${id}`)
+
+    // Ensure groups & showcases are well sorted
+    state.value.groups?.sort((a, b) => Number(a.position) - Number(b.position))
+    state.value.groups?.forEach(group => {
+      group.showcases.sort((a, b) => Number(a.position) - Number(b.position))
+    })
+
+    return state.value
+  }
+
+  ctx.provide('showcases', {
+    state,
+    fetch
+  })
+})
 
 /**
  * Showcases helpers
  */
-export function useShowcases({ id }) {
-  // Fetch showcases
-  const fetch = async () => {
-    // Get showcases
-    showcases.value = await $fetch(`https://api.vuetelescope.com/lists/${id}`)
+export function useShowcases() {
+  const { $showcases } = useNuxtApp().vue2App
 
-    // ensure groups & showcases are well sorted
-    showcases.value.groups?.sort((a, b) => Number(a.position) - Number(b.position))
-    showcases.value.groups?.forEach(group => {
-      group.showcases.sort((a, b) => Number(a.position) - Number(b.position))
-    })
-
-    return showcases
-  }
-
-  return {
-    fetch,
-    showcases
-  }
+  return $showcases
 }

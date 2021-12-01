@@ -1,5 +1,5 @@
 <script>
-import { defineComponent, ref, onMounted } from '@nuxtjs/composition-api'
+import { defineComponent, ref, onMounted } from '#app'
 import Star from '../../atoms/Star'
 
 export default defineComponent({

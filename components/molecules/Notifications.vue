@@ -18,12 +18,12 @@
 </template>
 
 <script lang="ts">
-import { defineComponent } from '@nuxtjs/composition-api'
+import { defineComponent } from '#app'
 import { useNotifications } from '~/plugins/notifications'
 
 export default defineComponent({
   setup() {
-    const { notifications, remove } = useNotifications()
+    const { state: notifications, remove } = useNotifications()
 
     return {
       remove,

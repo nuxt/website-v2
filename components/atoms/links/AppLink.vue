@@ -5,7 +5,7 @@
 </template>
 
 <script>
-import { defineComponent, useContext, computed } from '@nuxtjs/composition-api'
+import { defineComponent, useNuxtApp, computed } from '#app'
 
 export default defineComponent({
   props: {
@@ -27,7 +27,7 @@ export default defineComponent({
     }
   },
   setup(props) {
-    const { i18n, $clipboard } = useContext()
+    const { i18n, $clipboard } = useNuxtApp().vue2App
 
     const attrs = computed(() => {
       if (props.href.length) {

@@ -15,7 +15,7 @@
 </template>
 
 <script lang="ts">
-import { defineComponent, onMounted } from '@nuxtjs/composition-api'
+import { defineComponent, onMounted } from '#app'
 import { scrollToHeading } from '@docus/docs-theme/utils'
 import { useGitHub } from '@docus/github/runtime'
 

@@ -11,18 +11,7 @@
       <img
         loading="lazy"
         :src="`/design-kit/hero-img.svg`"
-        class="
-          hidden
-          lg:block
-          absolute
-          bottom-0
-          right-4
-          2xl:right-1/12
-          h-4/5
-          2xl:h-full
-          object-cover
-          pointer-events-none
-        "
+        class="hidden lg:block absolute bottom-0 right-4 2xl:right-1/12 h-4/5 2xl:h-full object-cover pointer-events-none"
         alt="A landscape image"
       />
     </div>
@@ -30,7 +19,7 @@
 </template>
 
 <script>
-import { defineComponent } from '@nuxtjs/composition-api'
+import { defineComponent } from '#app'
 
 export default defineComponent({
   props: {

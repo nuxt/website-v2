@@ -31,7 +31,7 @@
 </template>
 
 <script>
-import { defineComponent } from '@nuxtjs/composition-api'
+import { defineComponent } from '#app'
 import { useNav } from '~/plugins/nav'
 
 export default defineComponent({

@@ -17,7 +17,8 @@
 </template>
 
 <script>
-import { defineComponent, useContext, computed } from '@nuxtjs/composition-api'
+import { defineComponent, computed } from '#app'
+import { useDocusConfig } from '#docus'
 import { joinURL } from 'ufo'
 
 export default defineComponent({
@@ -28,15 +29,13 @@ export default defineComponent({
     }
   },
   setup(props) {
-    const { $docus } = useContext()
+    const $docus = useDocusConfig()
 
-    const { value: settings } = computed(() => $docus.settings)
-
-    const repoUrl = computed(() => joinURL(settings.value.github.url, settings.value.github.repo))
+    const repoUrl = computed(() => joinURL($docus.value.github.url, $docus.value.github.repo))
 
     // Picked from `EditOnGithub.vue`
     const link = computed(() => {
-      if (!settings.value.github) return
+      if (!$docus.value.github) return
 
       // TODO: Fix source; regression from split
       const key = props.page.key.split(':')
@@ -46,9 +45,9 @@ export default defineComponent({
       return [
         repoUrl.value,
         'edit',
-        settings.value.github.branch,
-        settings.value.github.dir || '',
-        settings.value.contentDir,
+        $docus.value.github.branch,
+        $docus.value.github.dir || '',
+        $docus.value.contentDir,
         dir,
         `${source}`.replace(/^\//g, '')
       ]

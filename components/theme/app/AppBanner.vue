@@ -2,8 +2,8 @@
   <AppLink
     to="https://v3.nuxtjs.org"
     class="group flex items-center transition-height delay-200 bg-primary hover:bg-primary-400"
-    :class="[$docus.currentPath.value === '/' ? 'h-10' : 'h-0 overflow-hidden']"
-    :tabindex="$docus.currentPath.value === '/' ? 0 : -1"
+    :class="[$docus.navigation.currentPath.value === '/' ? 'h-10' : 'h-0 overflow-hidden']"
+    :tabindex="$docus.navigation.currentPath.value === '/' ? 0 : -1"
   >
     <i18n
       tag="p"

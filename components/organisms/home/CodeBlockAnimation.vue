@@ -31,7 +31,7 @@
 </template>
 
 <script>
-import { defineComponent, ref, onMounted } from '@nuxtjs/composition-api'
+import { defineComponent, ref, onMounted } from '#app'
 
 export default defineComponent({
   setup(_, context) {

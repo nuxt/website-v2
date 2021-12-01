@@ -1,9 +1,9 @@
-import { ref, useContext, reactive } from '@nuxtjs/composition-api'
+import { ref, useNuxtApp, reactive, useRuntimeConfig } from '#app'
 import { $fetch } from 'ohmyfetch'
 
 export function usePartnerContact(partnersEmail) {
-  // @ts-ignore
-  const { $recaptcha, $config } = useContext()
+  const $config = useRuntimeConfig()
+  const { $recaptcha } = useNuxtApp().vue2App
 
   const apiURL = $config.apiURL || 'https://api.nuxtjs.org'
 

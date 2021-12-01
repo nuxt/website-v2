@@ -15,7 +15,7 @@
 </template>
 
 <script>
-import { defineComponent, computed, ref } from '@nuxtjs/composition-api'
+import { defineComponent, computed, ref } from '#app'
 
 export default defineComponent({
   props: {

@@ -7,15 +7,7 @@
           class="absolute top-0 left-0 px-4 -mt-12 sm:-mt-16"
         >
           <span
-            class="
-              text-sm
-              font-medium
-              leading-none
-              text-gray-900
-              sm:text-base
-              dark:text-gray-100
-              hover:d-secondary-text
-            "
+            class="text-sm font-medium leading-none text-gray-900 sm:text-base dark:text-gray-100 hover:d-secondary-text"
           >
             ← {{ $t('common.back') }}
           </span>
@@ -81,7 +73,7 @@
 </template>
 
 <script>
-import { defineComponent, onMounted } from '@nuxtjs/composition-api'
+import { defineComponent, onMounted } from '#app'
 
 export default defineComponent({
   props: {

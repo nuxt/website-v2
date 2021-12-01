@@ -41,7 +41,7 @@
 </template>
 
 <script>
-import { defineComponent, useContext, ref, watch } from '@nuxtjs/composition-api'
+import { defineComponent, useNuxtApp, ref, watch } from '#app'
 import { useNav } from '~/plugins/nav'
 
 export default defineComponent({
@@ -52,7 +52,7 @@ export default defineComponent({
     }
   },
   setup(props) {
-    const { $menu } = useContext()
+    const { $menu } = useNuxtApp().vue2App
     const { isHome, currentSlug } = useNav()
     const nav = ref(null)
     const openedLink = ref(null)

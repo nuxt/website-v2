@@ -9,7 +9,7 @@
 </template>
 
 <script>
-import { defineComponent, useContext, computed } from '@nuxtjs/composition-api'
+import { defineComponent, useNuxtApp, computed } from '#app'
 
 export default defineComponent({
   props: {
@@ -19,9 +19,7 @@ export default defineComponent({
     }
   },
   setup() {
-    const {
-      app: { i18n }
-    } = useContext()
+    const { i18n } = useNuxtApp().vue2App
 
     const translated = computed(() => {
       return i18n.locale !== i18n.defaultLocale

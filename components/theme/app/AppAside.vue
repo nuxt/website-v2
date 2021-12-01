@@ -13,20 +13,7 @@
 
       <!-- Desktop aside -->
       <div
-        class="
-          hidden
-          lg:block
-          fixed
-          top-0
-          left-0
-          overflow-auto
-          pointer-events-auto
-          min-h-fill-available
-          h-screen
-          sticky
-          top-header
-          w-60
-        "
+        class="hidden lg:block fixed top-0 left-0 overflow-auto pointer-events-auto min-h-fill-available h-screen sticky top-header w-60"
       >
         <div class="w-auto h-full overflow-auto">
           <AsideNavigation />
@@ -37,19 +24,7 @@
       <Transition name="slide-from-left-to-left">
         <div
           v-show="$menu.visible.value"
-          class="
-            lg:hidden
-            fixed
-            top-0
-            left-0
-            w-auto
-            h-full
-            overflow-auto
-            pointer-events-auto
-            min-h-fill-available
-            border-r
-            !w-base
-          "
+          class="lg:hidden fixed top-0 left-0 w-auto h-full overflow-auto pointer-events-auto min-h-fill-available border-r !w-base"
           :class="isHome ? 'border-sky-darker' : 'd-border'"
         >
           <div class="w-auto h-full overflow-auto" :class="isHome ? 'd-bg-header-home' : 'd-bg-header'">
@@ -88,7 +63,8 @@
 </template>
 
 <script lang="ts">
-import { defineComponent, useContext, ref, watch } from '@nuxtjs/composition-api'
+import { defineComponent, useNuxtApp, ref, watch } from '#app'
+import { useDocusTheme } from '#docus'
 import { useNav } from '~/plugins/nav'
 
 export default defineComponent({
@@ -99,29 +75,24 @@ export default defineComponent({
     }
   },
   setup() {
-    const { $docus, $menu } = useContext()
+    const { $menu } = useNuxtApp().vue2App
+    const $theme = useDocusTheme()
     const { isHome } = useNav()
 
-    const mobileMainNav = ref(!$docus.layout.value.aside)
+    const mobileMainNav = ref(!$theme.value.layout.aside)
 
     watch($menu.visible, (value, old) => {
-      if (value && !old && $docus.layout.value.aside) {
+      if (value && !old && $theme.value.layout.aside) {
         mobileMainNav.value = false
       }
     })
 
-    function mobileBack() {
-      if (!mobileMainNav.value) {
-        mobileMainNav.value = true
-      } else {
-        $menu.close()
-      }
-    }
+    const mobileBack = () => (!mobileMainNav.value ? (mobileMainNav.value = true) : $menu.close())
 
     return {
       mobileMainNav,
       mobileBack,
-      layout: $docus.layout,
+      layout: $theme.value.layout,
       isHome
     }
   }

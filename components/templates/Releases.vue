@@ -32,7 +32,8 @@
 </template>
 
 <script>
-import { defineComponent, ref, useContext, useFetch } from '@nuxtjs/composition-api'
+import { defineComponent } from '#app'
+import { useGitHub } from '@docus/github/runtime'
 
 export default defineComponent({
   props: {
@@ -42,14 +43,9 @@ export default defineComponent({
     }
   },
   setup() {
-    const { $docus } = useContext()
-    const releases = ref()
+    const { releases, fetchReleases } = useGitHub()
 
-    useFetch(async () => {
-      const document = await $docus.data('github-releases')
-
-      releases.value = document.body?.releases
-    })
+    fetchReleases()
 
     const formatDateByLocale = (locale, d) => {
       const currentLocale = locale || 'en-US'

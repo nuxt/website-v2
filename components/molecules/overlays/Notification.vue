@@ -34,7 +34,7 @@
 </template>
 
 <script lang="ts">
-import { defineComponent, computed, onMounted, onBeforeUnmount, ref, useContext } from '@nuxtjs/composition-api'
+import { defineComponent, computed, onMounted, onBeforeUnmount, ref, useNuxtApp } from '#app'
 import { useNav } from '~/plugins/nav'
 
 export default defineComponent({
@@ -76,7 +76,7 @@ export default defineComponent({
     const timer = ref(null)
     const ticker = ref(null)
     const remainingTime = ref(props.timeout)
-    const { $timer, $ticker } = useContext()
+    const { $timer, $ticker } = useNuxtApp().vue2App
     const { isHome } = useNav()
 
     // computed

@@ -2,7 +2,9 @@
   <AppButton
     slot="placeholder"
     button-class="w-12 h-12 rounded"
-    :class="$docus.currentPath.value === '/' ? 'focus:outline-none text-gray-300 hover:text-sky-surface' : 'd-icon'"
+    :class="
+      $docus.navigation.currentPath.value === '/' ? 'focus:outline-none text-gray-300 hover:text-sky-surface' : 'd-icon'
+    "
     aria-label="Color Mode"
     @click.native="switchColor"
   >
@@ -16,7 +18,7 @@
 </template>
 
 <script>
-import { defineComponent, useContext } from '@nuxtjs/composition-api'
+import { defineComponent, useNuxtApp } from '#app'
 
 export default defineComponent({
   props: {
@@ -26,7 +28,7 @@ export default defineComponent({
     }
   },
   setup() {
-    const { $colorMode } = useContext()
+    const { $colorMode } = useNuxtApp().vue2App
     const values = ['system', 'light', 'dark']
 
     function switchColor() {

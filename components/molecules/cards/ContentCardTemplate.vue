@@ -1,15 +1,6 @@
 <template>
   <article
-    class="
-      flex flex-col
-      shadow
-      rounded-lg
-      overflow-hidden
-      hover:bg-gray-50
-      dark:hover:bg-secondary-darker
-      cursor-pointer
-      dark:bg-secondary-darkest
-    "
+    class="flex flex-col shadow rounded-lg overflow-hidden hover:bg-gray-50 dark:hover:bg-secondary-darker cursor-pointer dark:bg-secondary-darkest"
     @click="navigateToUrl(href)"
   >
     <div class="aspect-h-9 bg-gray-100 dark:bg-secondary-darker mb-4">
@@ -46,7 +37,7 @@
 </template>
 
 <script>
-import { defineComponent, computed } from '@nuxtjs/composition-api'
+import { defineComponent, computed } from '#app'
 
 export default defineComponent({
   props: {

@@ -17,7 +17,8 @@
 </template>
 
 <script>
-import { defineComponent, ref, useContext, useFetch } from '@nuxtjs/composition-api'
+import { defineComponent, ref, useNuxtApp, useLazyAsyncData } from '#app'
+import { useDocusContent } from '#docus'
 
 export default defineComponent({
   props: {
@@ -27,18 +28,20 @@ export default defineComponent({
     }
   },
   setup(props) {
-    const { $docus, i18n } = useContext()
-    const team = ref([])
+    const $content = useDocusContent()
+    const { i18n } = useNuxtApp().vue2App
 
-    useFetch(async () => {
-      const teams = await $docus
-        .search(`/collections/teams/${props.teamName}`, { deep: true })
-        .where({ language: i18n.locale })
-        .sortBy('position', 'asc')
-        .fetch()
+    const { data: teams } = useLazyAsyncData(
+      'team-section',
+      async () =>
+        await $content
+          .search(`/collections/teams/${props.teamName}`, { deep: true })
+          .where({ language: i18n.locale })
+          .sortBy('position', 'asc')
+          .fetch()
+    )
 
-      team.value = teams[0]
-    })
+    const team = computed(() => teams?.value[0] || false)
 
     return {
       team

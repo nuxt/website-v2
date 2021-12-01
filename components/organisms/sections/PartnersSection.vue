@@ -6,7 +6,7 @@
         <Markdown use="category-title" unwrap="p" />
       </h2>
     </div>
-    <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+    <div v-if="partners" class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
       <LogoCard v-for="partner in partners" :key="partner.title" :item="partner">
         <template #footer>
           <PartnerServices :services="partner.services" class="text-sm mt-4" />
@@ -17,7 +17,8 @@
 </template>
 
 <script lang="ts">
-import { defineComponent, useContext, ref, useFetch, onMounted } from '@nuxtjs/composition-api'
+import { defineComponent, useNuxtApp, ref, useLazyAsyncData, onMounted } from '#app'
+import { useDocusContent } from '#docus'
 import { scrollToHeading } from '@docus/docs-theme/utils'
 
 export default defineComponent({
@@ -32,14 +33,18 @@ export default defineComponent({
     }
   },
   setup(props) {
-    const { $docus, i18n } = useContext()
-    const partners = ref(null)
+    const $content = useDocusContent()
+    const { i18n } = useNuxtApp().vue2App
 
-    useFetch(async () => {
-      partners.value = (await $docus.search(`/collections/partners/${props.category}`, { deep: true }).fetch())
-        .map(partner => ({ ...partner, link: null, to: `/partners/${partner.slug}` }))
-        /* Filter by logo presence to eliminate wrong items sent by Docus API */
-        .filter(partner => partner.logo)
+    const { data: partners } = useFetch(async () => {
+      const query = await $content.search(`/collections/partners/${props.category}`, { deep: true }).fetch()
+
+      return (
+        query
+          .map(partner => ({ ...partner, link: null, to: `/partners/${partner.slug}` }))
+          /* Filter by logo presence to eliminate wrong items sent by Docus API */
+          .filter(partner => partner.logo)
+      )
     })
 
     onMounted(() => {

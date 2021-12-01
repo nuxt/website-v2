@@ -8,7 +8,7 @@
         {{ page.heroDescription || page.description }}
       </template>
     </PageHero>
-    <div class="d-container px-6 grid sm:grid-cols-2 lg:grid-cols-3 gap-6 pt-8">
+    <div v-if="events && events.length" class="d-container px-6 grid sm:grid-cols-2 lg:grid-cols-3 gap-6 pt-8">
       <LogoCard v-for="(item, index) in events" :key="index" :item="item">
         <template #footer>
           <div class="flex items-center" :class="item.eventLogo ? 'justify-between' : 'justify-end'">
@@ -32,7 +32,8 @@
 </template>
 
 <script>
-import { defineComponent, useFetch, useContext, ref } from '@nuxtjs/composition-api'
+import { defineComponent, useLazyAsyncData, useNuxtApp, ref } from '#app'
+import { useDocusContent } from '#docus'
 import { isFuture, parse } from 'date-fns'
 
 export default defineComponent({
@@ -42,9 +43,9 @@ export default defineComponent({
       required: true
     }
   },
-  setup(_) {
-    const { $docus, i18n } = useContext()
-    const events = ref([])
+  setup() {
+    const $content = useDocusContent()
+    const { i18n } = useNuxtApp().vue2App
 
     const formatDateByLocale = (locale, d) => {
       const currentLocale = locale || 'en'
@@ -52,13 +53,14 @@ export default defineComponent({
       return new Date(d).toLocaleDateString(currentLocale, options)
     }
 
-    useFetch(async () => {
-      const eventsCollection = await $docus
+    const { data: events } = useLazyAsyncData('events', async () => {
+      const eventsCollection = await $content
         .search('/collections/events', { deep: true })
         .where({ language: i18n.locale })
         .sortBy('position', 'desc')
         .fetch()
-      events.value = eventsCollection
+
+      return eventsCollection
         .filter(e => e.events)
         .map(e => e.events)
         .flat()

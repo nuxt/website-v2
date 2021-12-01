@@ -1,20 +1,7 @@
 <template>
   <AppLink
     :href="showcase.url"
-    class="
-      flex flex-col
-      justify-between
-      group
-      hover:bg-gray-50 hover:dark:bg-sky-darkest
-      dark:bg-sky-darker
-      rounded-md
-      shadow-md
-      hover:shadow-lg
-      overflow-hidden
-      transition-all
-      duration-200
-      ease-in-out
-    "
+    class="flex flex-col justify-between group hover:bg-gray-50 hover:dark:bg-sky-darkest dark:bg-sky-darker rounded-md shadow-md hover:shadow-lg overflow-hidden transition-all duration-200 ease-in-out"
   >
     <div class="relative aspect-w-4 aspect-h-3">
       <NuxtImg
@@ -26,17 +13,7 @@
         class="object-cover"
       />
       <div
-        class="
-          absolute
-          inset-0
-          bg-gray-700
-          dark:bg-black
-          opacity-0
-          group-hover:opacity-10 group-hover:dark:opacity-20
-          transition-opacity
-          duration-200
-          ease-in-out
-        "
+        class="absolute inset-0 bg-gray-700 dark:bg-black opacity-0 group-hover:opacity-10 group-hover:dark:opacity-20 transition-opacity duration-200 ease-in-out"
       />
     </div>
     <h2 class="font-bold py-2 px-4 truncate">{{ showcase.hostname }}</h2>
@@ -44,7 +21,7 @@
 </template>
 
 <script>
-import { defineComponent } from '@nuxtjs/composition-api'
+import { defineComponent } from '#app'
 
 export default defineComponent({
   props: {

@@ -35,7 +35,8 @@
 </template>
 
 <script>
-import { defineComponent, useContext, ref, useFetch } from '@nuxtjs/composition-api'
+import { useDocusContent } from '#docus'
+import { defineComponent, useContext, ref } from '#app'
 
 export default defineComponent({
   props: {
@@ -45,15 +46,17 @@ export default defineComponent({
     }
   },
   setup(props) {
-    const { $docus, i18n } = useContext()
-    const logosMd = ref()
+    const $content = useDocusContent()
+    const { i18n } = useNuxtApp().vue2App
 
-    useFetch(async () => {
-      logosMd.value = await $docus
-        .search('/collections/design', { deep: true })
-        .where({ slug: { $in: props.type }, language: i18n.locale })
-        .fetch()
-    })
+    const { data: logosMd } = useLazyAsyncData(
+      'logosMd',
+      async () =>
+        await $content
+          .search('/collections/design', { deep: true })
+          .where({ slug: { $in: props.type }, language: i18n.locale })
+          .fetch()
+    )
 
     return {
       logosMd

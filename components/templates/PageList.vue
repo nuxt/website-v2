@@ -18,7 +18,8 @@
 </template>
 
 <script>
-import { defineComponent, ref, useContext, useFetch } from '@nuxtjs/composition-api'
+import { defineComponent, ref, useNuxtApp, useLazyAsyncData } from '#app'
+import { useDocusContent } from '#docus'
 
 export default defineComponent({
   props: {
@@ -28,17 +29,18 @@ export default defineComponent({
     }
   },
   setup(props) {
-    const { $docus, i18n } = useContext()
-    const list = ref()
+    const $content = useDocusContent()
+    const { i18n } = useNuxtApp().vue2App
 
-    useFetch(async () => {
-      const results = await $docus
-        .search(props.page.to, { deep: true })
-        .where({ slug: { $ne: '' }, language: i18n.locale })
-        .fetch()
+    const { data: list } = useLazyAsyncData(
+      'page-list',
+      async () =>
+        await $content
+          .search(props.page.to, { deep: true })
+          .where({ slug: { $ne: '' }, language: i18n.locale })
+          .fetch()
+    )
 
-      list.value = results
-    })
     return {
       list
     }

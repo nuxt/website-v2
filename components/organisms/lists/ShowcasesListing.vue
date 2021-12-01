@@ -8,20 +8,7 @@
       />
 
       <div
-        class="
-          w-full
-          lg:w-4/5
-          min-w-0 min-h-0
-          lg:static lg:overflow-visible
-          mt-8
-          lg:mt-4
-          grid
-          md:grid-cols-2
-          gap-8
-          lg:ml-20
-          auto-rows-min
-          d-px-container
-        "
+        class="w-full lg:w-4/5 min-w-0 min-h-0 lg:static lg:overflow-visible mt-8 lg:mt-4 grid md:grid-cols-2 gap-8 lg:ml-20 auto-rows-min d-px-container"
       >
         <div v-for="showcase in selectedShowcases" :key="showcase.id">
           <ShowcasesCard :showcase="showcase" />
@@ -52,8 +39,8 @@ export default {
     }
   },
   async fetch() {
-    const { fetch: fetchShowcases } = useShowcases({ id: this.id })
-    this.showcases = (await fetchShowcases()).value
+    const { fetch: fetchShowcases } = useShowcases()
+    this.showcases = await fetchShowcases(this.id)
     this.selectedCategory = (this.$route.hash || '').substr(1)
   },
   computed: {

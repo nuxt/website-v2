@@ -25,17 +25,7 @@
           </p>
 
           <div
-            class="
-              flex flex-col
-              sm:flex-row
-              w-full
-              bg-cloud-surface
-              dark:bg-sky-darker
-              rounded-md
-              mt-8
-              xl:mt-12
-              overflow-hidden
-            "
+            class="flex flex-col sm:flex-row w-full bg-cloud-surface dark:bg-sky-darker rounded-md mt-8 xl:mt-12 overflow-hidden"
           >
             <div class="text-white p-6" :class="page.emailAddress ? 'sm:w-1/3' : 'w-full'" :style="customBackground">
               <div class="flex flex-col h-full">
@@ -180,7 +170,7 @@
 </template>
 
 <script>
-import { defineComponent, useContext, computed, onMounted, onBeforeUnmount } from '@nuxtjs/composition-api'
+import { defineComponent, useNuxtApp, computed, onMounted, onBeforeUnmount } from '#app'
 import { usePartnerContact } from '~/plugins/partner'
 
 export default defineComponent({
@@ -191,10 +181,7 @@ export default defineComponent({
     }
   },
   setup(props) {
-    const {
-      app: { i18n },
-      $recaptcha
-    } = useContext()
+    const { i18n, $recaptcha } = useNuxtApp().vue2App
     const { validateForm, result, form } = usePartnerContact(props.page.emailAddress)
 
     const resultText = computed(() => {
@@ -206,6 +193,7 @@ export default defineComponent({
       }
       return ''
     })
+
     const resultStyle = computed(() => {
       switch (result.value) {
         case 'success':

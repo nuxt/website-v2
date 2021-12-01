@@ -60,7 +60,7 @@
 <script>
 import { createPopper } from '@popperjs/core'
 import { directive as onClickaway } from 'vue-clickaway'
-import { defineComponent } from '@nuxtjs/composition-api'
+import { defineComponent } from '#app'
 import { useNav } from '~/plugins/nav'
 
 export default defineComponent({

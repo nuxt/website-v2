@@ -14,6 +14,10 @@
     "noUnusedLocals": true,
     "resolveJsonModule": true,
     "allowSyntheticDefaultImports": true,
-    "types": ["@types/node", "nuxt-i18n", "nuxt-windicss"]
+    "types": ["@types/node", "nuxt-i18n", "nuxt-windicss"],
+    "paths": {
+      "#app": ["./node_modules/@nuxt/bridge/dist/runtime"],
+      "#docus": ["./node_modules/docus/dist/runtime"]
+    }
   }
 }

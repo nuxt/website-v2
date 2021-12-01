@@ -2,16 +2,7 @@
   <div class="relative pt-10 lg:pt-24 pb-16 lg:pb-32 bg-gray-100 dark:bg-secondary-darkest">
     <div class="relative d-container-content z-10">
       <h1
-        class="
-          text-display-5
-          sm:text-display-4
-          md:text-display-3
-          pb-1
-          sm:pb-2
-          md:pb-6
-          font-serif
-          overflow-ellipsis overflow-hidden
-        "
+        class="text-display-5 sm:text-display-4 md:text-display-3 pb-1 sm:pb-2 md:pb-6 font-serif overflow-ellipsis overflow-hidden"
       >
         <Markdown use="title" unwrap="p" />
       </h1>
@@ -42,7 +33,7 @@
 </template>
 
 <script>
-import { defineComponent } from '@nuxtjs/composition-api'
+import { defineComponent } from '#app'
 
 export default defineComponent({
   props: {

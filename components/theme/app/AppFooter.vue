@@ -88,7 +88,7 @@
 </template>
 
 <script>
-import { defineComponent, useContext, watch } from '@nuxtjs/composition-api'
+import { defineComponent, useNuxtApp, watch } from '#app'
 import { useNewsletter } from '~/plugins/newsletter'
 import { useNav } from '~/plugins/nav'
 import { useNotifications } from '~/plugins/notifications'
@@ -101,7 +101,7 @@ export default defineComponent({
     }
   },
   setup() {
-    const { i18n } = useContext()
+    const { i18n } = useNuxtApp().vue2App
     const { email, newsletterResult, subscribe, pending } = useNewsletter()
     const { isHome } = useNav()
     const { add: addNotification } = useNotifications()

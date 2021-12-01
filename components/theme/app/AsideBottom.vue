@@ -12,20 +12,16 @@
 </template>
 
 <script>
-import { defineComponent, useContext, useFetch, ref } from '@nuxtjs/composition-api'
+import { defineComponent, ref } from '#app'
+import { useGitHub } from '@docus/github/runtime'
 
 export default defineComponent({
   setup() {
-    const { $docus } = useContext()
-    const lastRelease = ref(null)
+    const { releases, fetchReleases } = useGitHub()
 
-    useFetch(async () => {
-      const { body } = await $docus.data('github-releases')
+    fetchReleases()
 
-      if (body?.releases?.length) {
-        lastRelease.value = body.releases[0].name
-      }
-    })
+    const lastRelease = computed(() => releases.values?.[0].name || false)
 
     return { lastRelease }
   }

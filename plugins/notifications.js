@@ -1,28 +1,32 @@
-import { ssrRef } from '@nuxtjs/composition-api'
+import { useState, defineNuxtPlugin } from '#app'
 import { v4 } from 'uuid'
 
-const notifications = ssrRef([])
+export default defineNuxtPlugin(ctx => {
+  const state = useState('notifications', () => [])
 
-const getLast = () => notifications.value[notifications.length - 1]
+  const remove = id => (state.value = state.value.filter(m => m.id !== id))
 
-const remove = id => (notifications.value = notifications.value.filter(m => m.id !== id))
+  const add = function (notification) {
+    const body = {
+      id: v4(),
+      ...notification
+    }
 
-const add = function (notification) {
-  const body = {
-    id: v4(),
-    ...notification
+    state.value.push(body)
+
+    return body
   }
 
-  notifications.value.push(body)
-
-  return body
-}
-
-export function useNotifications() {
-  return {
-    notifications,
-    getLast,
+  // Inject menu
+  ctx.provide('notifications', {
+    state,
     remove,
     add
-  }
+  })
+})
+
+export function useNotifications() {
+  const { $notifications } = useNuxtApp().vue2App
+
+  return $notifications
 }

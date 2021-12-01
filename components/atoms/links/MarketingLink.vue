@@ -17,7 +17,7 @@
 </template>
 
 <script>
-import { defineComponent } from '@nuxtjs/composition-api'
+import { defineComponent } from '#app'
 export default defineComponent({
   props: {
     name: {

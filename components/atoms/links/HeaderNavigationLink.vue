@@ -15,7 +15,7 @@
 </template>
 
 <script>
-import { defineComponent, computed } from '@nuxtjs/composition-api'
+import { defineComponent, computed } from '#app'
 import { useNav } from '~/plugins/nav'
 
 export default defineComponent({

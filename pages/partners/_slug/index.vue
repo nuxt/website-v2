@@ -3,7 +3,7 @@
 </template>
 
 <script>
-import { defineComponent } from '@nuxtjs/composition-api'
+import { defineComponent } from '#app'
 
 // Some code has been imported from Docus to make this working
 // @docus/app/dist/app/pages/_.vue
@@ -11,6 +11,7 @@ import { defineComponent } from '@nuxtjs/composition-api'
 export default defineComponent({
   async asyncData({ $docus, i18n, route, error }) {
     const { slug } = route.params
+
     if (!slug) {
       return error({
         statusCode: 404,
@@ -18,10 +19,11 @@ export default defineComponent({
       })
     }
 
-    const pages = await $docus
+    const pages = await $docus.content
       .search('/collections/partners', { deep: true })
       .where({ slug: { $in: route.params.slug } })
       .fetch()
+
     if (!pages?.length) {
       return error({
         statusCode: 404,
@@ -32,7 +34,7 @@ export default defineComponent({
     const page = pages[0]
 
     const templateOptions = {
-      ...$docus.settings.value.layout,
+      ...$docus.theme.value.layout,
       aside: false,
       asideClass: ''
     }
@@ -62,12 +64,13 @@ export default defineComponent({
   created() {
     if (process.client) {
       // Set template options
-      this.$docus.layout.value = this.templateOptions
+      this.$docus.theme.value.layout = this.templateOptions
 
       // Set Docus runtime current page
       this.$docus.currentPage.value = this.page
+
       // Update navigation path to update currentNav
-      this.$docus.currentPath.value = `/${this.$route.params.pathMatch}`
+      this.$docus.navigation.currentPath.value = `/${this.$route.params.pathMatch}`
     }
   },
   render(h) {

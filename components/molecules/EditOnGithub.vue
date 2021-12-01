@@ -12,29 +12,12 @@
         {{ $t('article.updatedAt') }} {{ $d(Date.parse(page.mtime), 'long') }}
       </span>
     </div>
-    <div v-if="contributors.length" class="px-4 sm:px-6">
+    <div v-if="contributors && contributors.length" class="px-4 sm:px-6">
       <AppLink
         v-for="contributor of contributors"
         :key="contributor.login"
         :href="`https://github.com/${contributor.login}`"
-        class="
-          inline-flex
-          mb-2
-          mr-2
-          overflow-hidden
-          transition-colors
-          duration-300
-          ease-linear
-          border
-          rounded
-          text-light-onSurfacePrimary
-          dark:text-dark-onSurfacePrimary
-          bg-light-surfaceElevated
-          light:hover:bg-gray-300
-          dark:bg-dark-elevatedSurface dark:hover:bg-dark-surface
-          border-light-border
-          dark:border-dark-border
-        "
+        class="inline-flex mb-2 mr-2 overflow-hidden transition-colors duration-300 ease-linear border rounded text-light-onSurfacePrimary dark:text-dark-onSurfacePrimary bg-light-surfaceElevated light:hover:bg-gray-300 dark:bg-dark-elevatedSurface dark:hover:bg-dark-surface border-light-border dark:border-dark-border"
       >
         <NuxtImg
           :alt="contributor.name"
@@ -52,7 +35,8 @@
 </template>
 
 <script>
-import { computed, defineComponent, useContext, ref, useFetch } from '@nuxtjs/composition-api'
+import { computed, defineComponent, useContext, ref, useRuntimeConfig, useLazyAsyncData } from '#app'
+import { useDocusConfig } from '#docus'
 import { $fetch } from 'ohmyfetch'
 import { joinURL } from 'ufo'
 
@@ -64,17 +48,16 @@ export default defineComponent({
     }
   },
   setup(props) {
-    const contributors = ref([])
-    const { $docus, $config } = useContext()
+    const $docus = useDocusConfig()
+
+    const $config = useRuntimeConfig()
 
     const apiURL = $config.apiURL || 'https://api.nuxtjs.org'
 
-    const { value: settings } = computed(() => $docus.settings)
-
-    const repoUrl = computed(() => joinURL(settings.value.github.url, settings.value.github.repo))
+    const repoUrl = computed(() => joinURL($docus.value.github.url, $docus.value.github.repo))
 
     const link = computed(() => {
-      if (!settings.value.github) return
+      if (!$docus.value.github) return
 
       // TODO: Fix source; regression from split
       const key = props.page.key.split(':')
@@ -84,24 +67,28 @@ export default defineComponent({
       return [
         repoUrl.value,
         'edit',
-        settings.value.github.branch,
-        settings.value.github.dir || '',
-        settings.value.contentDir,
+        $docus.value.github.branch,
+        $docus.value.github.dir || '',
+        $docus.value.contentDir,
         dir,
         `${source}`.replace(/^\//g, '')
       ]
         .filter(Boolean)
         .join('/')
     })
+
     const path = [
-      settings.value.github.repo,
-      settings.value.github.branch,
-      settings.value.contentDir,
+      $docus.value.github.repo,
+      $docus.value.github.branch,
+      $docus.value.contentDir,
       props.page.source
     ].join('/')
-    useFetch(async () => {
-      contributors.value = await $fetch(`${apiURL}/api/github/contributors/${path}`)
-    })
+
+    const { data: contributors } = useLazyAsyncData(
+      'contributors',
+      async () => await $fetch(`${apiURL}/api/github/contributors/${path}`)
+    )
+
     return {
       link,
       contributors

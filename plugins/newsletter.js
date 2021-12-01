@@ -1,9 +1,10 @@
-import { ref, useContext } from '@nuxtjs/composition-api'
+import { ref, useNuxtApp, useRuntimeConfig } from '#app'
 import { $fetch } from 'ohmyfetch'
 
 export function useNewsletter() {
   // @ts-ignore
-  const { query, $config } = useContext()
+  const { query } = useNuxtApp()
+  const $config = useRuntimeConfig()
   const email = ref('')
   const newsletterResult = ref('')
   const pending = ref(false)

@@ -23,7 +23,7 @@
 </template>
 
 <script>
-import { defineComponent } from '@nuxtjs/composition-api'
+import { defineComponent } from '#app'
 
 export default defineComponent({
   data() {
@@ -35,14 +35,16 @@ export default defineComponent({
   },
   async fetch() {
     const { $docus, $i18n } = this
+
     this.headerLinks = (
-      await $docus
+      await $docus.content
         .search('/collections/navigations', { deep: true })
         .where({ slug: { $in: 'header' }, language: $i18n.locale })
         .fetch()
     )[0].links
+
     this.footerLinks = (
-      await $docus
+      await $docus.content
         .search('/collections/navigations/', { deep: true })
         .where({ slug: { $in: 'footer' }, language: $i18n.locale })
         .fetch()
@@ -50,7 +52,7 @@ export default defineComponent({
   },
   computed: {
     layout() {
-      return this.$docus.layout.value
+      return this.$docus.theme.value.layout
     }
   },
   watch: {

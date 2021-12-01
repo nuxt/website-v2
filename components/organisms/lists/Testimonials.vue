@@ -1,19 +1,13 @@
 <template>
-  <ul class="grid grid-cols-1 md:grid-cols-3 gap-12 md:gap-4 lg:gap-8 pb-8 px-4" :class="{ 'pt-16': !isHome }">
+  <ul
+    v-if="testimonials"
+    class="grid grid-cols-1 md:grid-cols-3 gap-12 md:gap-4 lg:gap-8 pb-8 px-4"
+    :class="{ 'pt-16': !isHome }"
+  >
     <li
       v-for="testimonial in testimonials"
       :key="testimonial.author"
-      class="
-        relative
-        flex flex-col
-        items-center
-        justify-between
-        space-y-4
-        border-2 border-gray-200
-        md:transition-all md:ease-out
-        rounded-lg
-        p-4
-      "
+      class="relative flex flex-col items-center justify-between space-y-4 border-2 border-gray-200 md:transition-all md:ease-out rounded-lg p-4"
       :class="{ 'dark:border-secondary-dark': !isHome, 'bg-white': isHome }"
     >
       <p class="text-left" v-html="testimonial.testimonial" />
@@ -57,25 +51,27 @@
     </li>
   </ul>
 </template>
+
 <script>
-import { defineComponent, useContext, ref, useFetch } from '@nuxtjs/composition-api'
+import { defineComponent, useNuxtApp, ref, useLazyAsyncData, computed } from '#app'
+import { useDocusContent } from '#docus'
 import { useNav } from '~/plugins/nav'
 
 export default defineComponent({
   setup() {
-    const { $docus, i18n } = useContext()
-    const results = ref()
-    const testimonials = ref([])
+    const $content = useDocusContent()
+
+    const { i18n } = useNuxtApp().vue2App
+
+    const { data: results } = useLazyAsyncData(
+      'testimonials',
+      async () =>
+        await $content.search('/collections/testimonials', { deep: true }).where({ language: i18n.locale }).fetch()
+    )
+
+    const testimonials = computed(() => results?.value?.[0]?.testimonials || false)
+
     const { isHome } = useNav()
-
-    useFetch(async () => {
-      results.value = await $docus
-        .search('/collections/testimonials', { deep: true })
-        .where({ language: i18n.locale })
-        .fetch()
-
-      testimonials.value = results.value[0].testimonials
-    })
 
     return {
       testimonials,

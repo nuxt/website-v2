@@ -86,7 +86,8 @@
 </template>
 
 <script>
-import { defineComponent, useContext, computed } from '@nuxtjs/composition-api'
+import { defineComponent, computed } from '#app'
+import { useDocusConfig } from '#docus'
 import { useNav } from '~/plugins/nav'
 
 export default defineComponent({
@@ -97,9 +98,8 @@ export default defineComponent({
     }
   },
   setup() {
-    const { $docus } = useContext()
+    const settings = useDocusConfig()
     const { isHome, currentSlug } = useNav()
-    const settings = computed(() => $docus.settings.value)
 
     function isActiveGroup(link) {
       if (link.slug === currentSlug.value || link.items?.some(item => item.slug === currentSlug.value)) {

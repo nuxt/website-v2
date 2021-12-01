@@ -47,10 +47,8 @@
 export default {
   methods: {
     home() {
-      if (this.$docus.currentPath.value === '/') {
-        // scroll to top
-        window.scrollTo(0, 0)
-      }
+      // Scroll to top
+      if (this.$docus.navigation.currentPath.value === '/') window.scrollTo(0, 0)
     }
   }
 }

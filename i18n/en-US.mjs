@@ -1,4 +1,4 @@
-import fr from '@docus/docs-theme/locales/en-US.mjs'
+import en from '@docus/docs-theme/locales/en-US.mjs'
 
 export default {
   ...en,

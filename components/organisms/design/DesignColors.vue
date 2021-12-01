@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div v-if="colorsMd">
     <div v-for="content in colorsMd" :key="content.slug" class="grid grid-cols-2 py-4 gap-6">
       <div v-for="color in content.colors" :key="color.slug">
         <div class="w-full h-32 rounded-lg" :class="color.bg_color" />
@@ -21,7 +21,8 @@
 </template>
 
 <script>
-import { defineComponent, useContext, ref, useFetch } from '@nuxtjs/composition-api'
+import { defineComponent, useNuxtApp, ref, useLazyAsyncData } from '#app'
+import { useDocusContent } from '#docus'
 
 export default defineComponent({
   props: {
@@ -31,15 +32,17 @@ export default defineComponent({
     }
   },
   setup() {
-    const { $docus, i18n } = useContext()
-    const colorsMd = ref()
+    const $content = useDocusContent()
+    const { i18n } = useNuxtApp().vue2App
 
-    useFetch(async () => {
-      colorsMd.value = await $docus
-        .search('/collections/design', { deep: true })
-        .where({ slug: { $in: 'colors' }, language: i18n.locale })
-        .fetch()
-    })
+    const { data: colorsMd } = useLazyAsyncData(
+      'colors-md',
+      async () =>
+        await $content
+          .search('/collections/design', { deep: true })
+          .where({ slug: { $in: 'colors' }, language: i18n.locale })
+          .fetch()
+    )
 
     return {
       colorsMd

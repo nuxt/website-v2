@@ -1,47 +1,9 @@
 <template>
   <div
-    class="
-      hidden
-      z-10
-      left-0
-      flex-none
-      w-full
-      pl-4
-      mr-8
-      text-sm
-      bg-white
-      border-b border-gray-200 border-opacity-50
-      xl:relative xl:border-0
-      dark:border-gray-800
-      d-blur-header
-      bg-opacity-80
-      dark:bg-gray-900 dark:bg-opacity-80
-      xl:bg-transparent
-      dark:xl:bg-transparent
-      lg:left-60
-      xl:left-0
-      pl-4
-      sm:pl-6
-      xl:w-60
-      top-header
-      xl:block xl:top-0
-    "
+    class="hidden z-10 left-0 flex-none w-full pl-4 mr-8 text-sm bg-white border-b border-gray-200 border-opacity-50 xl:relative xl:border-0 dark:border-gray-800 d-blur-header bg-opacity-80 dark:bg-gray-900 dark:bg-opacity-80 xl:bg-transparent dark:xl:bg-transparent lg:left-60 xl:left-0 pl-4 sm:pl-6 xl:w-60 top-header xl:block xl:top-0"
   >
     <div
-      class="
-        hidden
-        xl:flex
-        flex-col
-        justify-between
-        overflow-y-auto
-        d-scrollbar
-        sticky
-        max-h-(screen-header)
-        -mt-10
-        pt-10
-        pb-4
-        top-header
-      "
+      class="hidden xl:flex flex-col justify-between overflow-y-auto d-scrollbar sticky max-h-(screen-header) -mt-10 pt-10 pb-4 top-header"
     >
       <PageTocTop />
       <div v-if="toc.length" class="mb-4">
@@ -58,7 +20,7 @@
 </template>
 
 <script>
-import { defineComponent } from '@nuxtjs/composition-api'
+import { defineComponent } from '#app'
 
 export default defineComponent({
   props: {

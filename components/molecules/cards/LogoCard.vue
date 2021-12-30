@@ -9,30 +9,34 @@
       <AppLink :to="item.to || item.link" :aria-label="item.title" class="absolute inset-0" />
     </template>
     <div class="ListCard-body">
-      <NuxtImg
-        v-if="item.logo && item.logo.dark"
-        :alt="`${item.title} logo`"
-        :src="item.logo.dark"
-        class="dark-img w-12 h-12 mr-4 rounded-md"
-      />
-      <NuxtImg
-        v-if="item.logo && item.logo.light"
-        :alt="`${item.title} logo`"
-        :src="item.logo.light"
-        class="light-img w-12 h-12 mr-4 rounded-md"
-      />
-      <NuxtImg
-        v-if="typeof item.logo === 'string'"
-        :alt="`${item.title} logo`"
-        :src="item.logo || ''"
-        class="w-12 h-12 mr-4 rounded-md"
-      />
+      <div class="w-full flex flex-row justify-between">
+        <NuxtImg
+          v-if="item.logo && item.logo.dark"
+          :alt="`${item.title} logo`"
+          :src="item.logo.dark"
+          class="dark-img w-12 h-12 mr-4 rounded-md"
+        />
+        <NuxtImg
+          v-if="item.logo && item.logo.light"
+          :alt="`${item.title} logo`"
+          :src="item.logo.light"
+          class="light-img w-12 h-12 mr-4 rounded-md"
+        />
+        <NuxtImg
+          v-if="typeof item.logo === 'string'"
+          :alt="`${item.title} logo`"
+          :src="item.logo || ''"
+          class="w-12 h-12 mr-4 rounded-md"
+        />
+        <span v-if="item.location" class="text-cloud-lighter">{{ item.location }}</span>
+      </div>
       <h3 class="font-bold text-xl py-2">{{ item.title || 'Title' }}</h3>
       <p class="text-sm">{{ item.description || 'Description' }}</p>
     </div>
     <slot name="footer" />
   </div>
 </template>
+
 <script lang="ts">
 import { defineComponent } from '@nuxtjs/composition-api'
 

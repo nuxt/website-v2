@@ -14,7 +14,7 @@ video-courses:
     tier: Premium
   two:
     title: Get Started with Nuxt
-    description: Learn the essentials for how to build and deploy a Nuxt site including dnyamic routes, data fetching, SEO, lazy loading, global styles and transitions as well as how to generate and deploy your Nuxt app.
+    description: Learn the essentials for how to build and deploy a Nuxt site including dynamic routes, data fetching, SEO, lazy loading, global styles and transitions as well as how to generate and deploy your Nuxt app.
     image: /img/video-courses/jamstack_explorer.png
     link: 'https://explorers.netlify.com/learn/get-started-with-nuxt'
     tier: Free

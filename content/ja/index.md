@@ -119,7 +119,9 @@ category: パートナー
 持続可能な[開発]{.text-primary}
 
 #description
-Nuxt の開発は情熱を持った開発者によって作られますが、メンテナンスするための必要な労力と新機能開発には、適切な資金のサポートなしには持続できません。これを可能にするのは、スポンサーやパートナーの皆様のおかげです。<br>
+Nuxt の開発は情熱を持った開発者によって行われています、しかし、新機能のメンテナンスと開発に必要な労力は、適切な資金のサポートなしには持続不可能です。それを可能にしてくれたスポンサーやパートナーの皆様に感謝します。
+<br>
+
 
 #partners-card
   ::home-partners-card
@@ -164,7 +166,7 @@ category: 学ぶ
 ::section-content-item
 ---
 title: ドキュメント
-description: 'Nuxt のすべてのコンセプトを理解し、完全な API リファレンスを見つけることができます。'
+description: 'Nuxt のコンセプトを理解し、完全な API リファレンスを見つけることができます。'
 image: /img/home/learn/guides/gem-1.svg
 to: '/docs/get-started/installation'
 hoverClass: 'hover:bg-sky-darker'
@@ -205,7 +207,7 @@ hoverClass: 'hover:bg-sky-darker'
 私たちの[ガイド]{.text-primary}の紹介
 
 #description
-着想から名作まで、ガイドは Nuxter になるためのパスを示します。
+着想から名作まで、ガイドはあなたを Nuxter になるための道に連れて行きます。
 ::
 
 ::home-explore
@@ -242,10 +244,10 @@ hoverClass: 'hover:bg-sky-surface'
 ::
 
 #title
-前進したいですか? [探す]{.text-primary}ことがたくさんあります
+前進しますか? [探す]{.text-primary}ことがたくさんあります
 
 #description
-Nuxt には、例で学習したり、お気に入りのプロバイダと統合したり、そしてテーマを使ってすぐに始められる領域がたくさんあります。
+強力なモジュールを見つけ、お気に入りのプロバイダと統合して、テーマを使ってすぐに始めましょう。
 ::
 
 ::home-community
@@ -260,7 +262,7 @@ articleLinkTitle: 情報を得る
 共有は[大事]{.text-sky-lighter}です
 
 #description
-Nuxt チームと Nuxt コミュニティによる、Nuxt のヒントややり方に関する記事をご覧ください！
+Nuxt チームと Nuxt コミュニティによる記事をご覧ください！ Nuxt のヒントと秘訣が満載です！
 ::
 
 ::home-testimonials
@@ -271,7 +273,7 @@ category: コミュニティ
 著名人の声
 
 #description
-エキスパートが語るNuxtの魅力とは？
+エキスパートが愛するNuxtの魅力を聞く。
 
 #testimonials
   :::testimonials

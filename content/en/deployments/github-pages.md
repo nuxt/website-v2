@@ -68,7 +68,7 @@ First install it:
 
 ::code-group
 ```bash [Yarn]
-yarn add -D push-dir
+yarn add --dev push-dir
 ```
 ```bash [NPM]
 npm install push-dir --save-dev

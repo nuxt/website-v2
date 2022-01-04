@@ -19,17 +19,13 @@ export default defineComponent({
     }
   },
   setup() {
-    const { $docus, i18n } = useContext()
+    const { $docus } = useContext()
 
     const mvp = ref()
     const sponsors = ref()
 
     useFetch(async () => {
-      const documents = await $docus
-        .search('/collections/sponsors', { deep: true })
-        .where({ language: i18n.locale })
-        .sortBy('position', 'asc')
-        .fetch()
+      const documents = await $docus.search('/collections/sponsors', { deep: true }).sortBy('position', 'asc').fetch()
 
       mvp.value = documents.filter(sponsor => sponsor.tier === 'MVP')
       sponsors.value = documents.filter(sponsor => sponsor.tier === 'Sponsors')

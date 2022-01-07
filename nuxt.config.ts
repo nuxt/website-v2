@@ -179,6 +179,7 @@ export default withDocus({
   },
   publicRuntimeConfig: {
     apiURL: process.env.API_URL,
+    apiNuxtlabsURL: process.env.API_NUXTLABS_URL,
     plausible: {
       domain: process.env.PLAUSIBLE_DOMAIN
     },

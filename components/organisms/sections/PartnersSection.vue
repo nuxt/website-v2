@@ -7,9 +7,9 @@
       </h2>
     </div>
     <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
-      <LogoCard v-for="partner in partners" :key="partner.title" :item="partner">
+      <LogoCard v-for="partner in partners" :key="partner.id" :item="partner">
         <template #footer>
-          <PartnerServices :services="partner.services" class="text-sm mt-4" />
+          <PartnerServices :services="partner.profile.services" class="text-sm mt-4" />
         </template>
       </LogoCard>
     </div>
@@ -19,6 +19,7 @@
 <script lang="ts">
 import { defineComponent, useContext, ref, useFetch, onMounted } from '@nuxtjs/composition-api'
 import { scrollToHeading } from '@docus/theme/runtime'
+import { $fetch } from 'ohmyfetch'
 
 export default defineComponent({
   props: {
@@ -32,14 +33,28 @@ export default defineComponent({
     }
   },
   setup(props) {
-    const { $docus, i18n } = useContext()
+    const { $config } = useContext()
     const partners = ref(null)
 
     useFetch(async () => {
-      partners.value = (await $docus.search(`/collections/partners/${props.category}`, { deep: true }).fetch())
-        .map(partner => ({ ...partner, link: null, to: `/partners/${partner.slug}` }))
-        /* Filter by logo presence to eliminate wrong items sent by Docus API */
-        .filter(partner => partner.logo)
+      const apiURL = $config.apiNuxtlabsURL || 'https://api.nuxtlabs.com'
+
+      const results = await $fetch(`${apiURL}/api/partners`, {
+        params: {
+          type: props.category
+        }
+      })
+      // mapping for LogoCard
+      partners.value = results.map(partner => ({
+        ...partner,
+        to: '/partners/' + partner.slug,
+        logo: {
+          dark: partner.profile.logoDark?.url,
+          light: partner.profile.logoLight?.url
+        },
+        title: partner.name,
+        description: partner.profile.shortDescription
+      }))
     })
 
     onMounted(() => {

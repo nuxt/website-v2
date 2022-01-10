@@ -6,7 +6,7 @@
         <Markdown use="category-title" unwrap="p" />
       </h2>
     </div>
-    <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+    <div v-if="partners && partners.length" class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
       <LogoCard v-for="partner in partners" :key="partner.id" :item="partner">
         <template #footer>
           <PartnerServices :services="partner.profile.services" class="text-sm mt-4" />
@@ -17,7 +17,7 @@
 </template>
 
 <script lang="ts">
-import { defineComponent, useContext, ref, useFetch, onMounted } from '@nuxtjs/composition-api'
+import { defineComponent, useContext, ref, onMounted } from '@nuxtjs/composition-api'
 import { scrollToHeading } from '@docus/theme/runtime'
 import { $fetch } from 'ohmyfetch'
 
@@ -36,7 +36,7 @@ export default defineComponent({
     const { $config } = useContext()
     const partners = ref(null)
 
-    useFetch(async () => {
+    const fetch = async () => {
       const apiURL = $config.apiNuxtlabsURL || 'https://api.nuxtlabs.com'
 
       const results = await $fetch(`${apiURL}/api/partners`, {
@@ -55,9 +55,11 @@ export default defineComponent({
         title: partner.name,
         description: partner.profile.shortDescription
       }))
-    })
+    }
 
     onMounted(() => {
+      fetch()
+
       if (window.location.hash) {
         const hash = window.location.hash.replace('#', '')
 

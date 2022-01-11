@@ -16,12 +16,12 @@
           <img
             :src="`${page.profile.logoLight && page.profile.logoLight.url}`"
             :alt="page.name"
-            class="light-img text-white"
+            class="light-img text-white rounded-md"
           />
           <img
             :src="`${page.profile.logoDark && page.profile.logoDark.url}`"
             :alt="page.name"
-            class="dark-img text-white"
+            class="dark-img text-white rounded-md"
           />
         </div>
         <div class="flex flex-col justify-end gap-1">

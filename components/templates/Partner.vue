@@ -213,7 +213,7 @@ export default defineComponent({
       app: { i18n },
       $recaptcha
     } = useContext()
-    const { validateForm, result, form } = usePartnerContact(props.page.email)
+    const { validateForm, result, form } = usePartnerContact(props.page.slug)
 
     const resultText = computed(() => {
       switch (result.value) {

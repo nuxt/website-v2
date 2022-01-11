@@ -1,12 +1,12 @@
 <template>
   <div>
-    <div class="h-80 p-6 flex justify-center items-center bg-sky-darkest">
+    <div class="h-80 flex justify-center items-center bg-sky-darkest">
       <img
         v-if="page.profile.logoFull"
         loading="lazy"
         :src="`${page.profile.logoFull.url}`"
         :alt="page.name"
-        class="h-20"
+        class="h-full w-full object-cover"
       />
     </div>
 

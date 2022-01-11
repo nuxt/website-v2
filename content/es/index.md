@@ -153,7 +153,7 @@ El desarrollo de Nuxt lo llevan a cabo desarrolladores apasionados, pero la cant
   ::
 
 #bottom
-  :app-button[Conviertete en un patrocinador]{href="mailto:partners@nuxtlabs.com"}
+  :app-button[Conviertete en un patrocinador]{href="https://nuxtlabs.com/partners"}
 ::
 
 ::home-learn-guides

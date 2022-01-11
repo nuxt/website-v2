@@ -188,7 +188,7 @@
         <img loading="lazy" :src="`/img/partners/banner.svg`" alt="A landscape image" />
         <div class="absolute inset-0 flex lg:flex-col items-center justify-center gap-4 sm:gap-12 lg:gap-8">
           <span class="block text-2xl sm:text-4xl font-bold">{{ $t('sustainability.mvp_detail.join_us') }}</span>
-          <AppButton href="mailto:partners@nuxtlabs.com" :size="$mq === 'xs' ? 'small' : 'large'">{{
+          <AppButton href="https://nuxtlabs.com/partners" :size="$mq === 'xs' ? 'small' : 'large'">{{
             $t('partners.become_partner')
           }}</AppButton>
         </div>

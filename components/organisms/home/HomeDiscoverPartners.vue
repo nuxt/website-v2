@@ -1,6 +1,6 @@
 <template>
   <div class="relative pb-48 sm:pb-56 md:pb-64 lg:pb-72 xl:pb-92 2xl:pb-128 bg-sky-surface">
-    <section class="relative pt-20">
+    <section class="relative pt-20 z-20">
       <NuxtContainer class="flex flex-col items-center xl:pt-10 text-sky-black">
         <div class="flex flex-col w-full items-center col-span-12">
           <div class="mb-2">

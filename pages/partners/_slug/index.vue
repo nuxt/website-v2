@@ -48,8 +48,8 @@ export default defineComponent({
     }
   },
   head() {
-    const title = this.page.title
-    const description = this.page.description
+    const title = this.page.name
+    const description = this.page.profile?.shortDescription
 
     return {
       title,

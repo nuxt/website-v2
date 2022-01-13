@@ -99,8 +99,7 @@ export default {
         darker: '#3B3B00',
         darkest: '#2D2E01',
         black: '#1F2100'
-      },
-      'azure-radiance': '#0086f6'
+      }
 
       // 'green-lighter': '#80EEC0',
       // 'green-light': '#40E5A1',

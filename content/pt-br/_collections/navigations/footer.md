@@ -4,7 +4,7 @@ links:
     items:
       - title: 'Fale conosco'
         href: 'mailto:hello@nuxtjs.com'
-      - title: 'Enterprise support'
+      - title: 'Suporte para empresas'
         to: '/support'
       - title: 'Empresa NuxtLabs'
         href: 'https://nuxtlabs.com/'
@@ -18,7 +18,7 @@ links:
     items:
       - title: 'Anúncios'
         to: '/announcements'
-      - title: 'Contibua'
+      - title: 'Contribuir'
         to: '/contribution-guide'
       - title: 'Bate-papo com a gente'
         href: 'https://discord.nuxtjs.org/'
@@ -26,7 +26,7 @@ links:
         to: '/events'
       - title: 'Patrocinadores'
         to: '/sponsors'
-      - title: 'Times'
+      - title: 'Equipes'
         to: '/teams'
       - title: 'Tutoriais'
         to: '/tutorials'

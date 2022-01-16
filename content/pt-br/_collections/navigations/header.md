@@ -78,7 +78,7 @@ links:
         to: '/announcements'
         icon: 'announcements.svg'
         color: 'bg-mint-lighter'
-      - title: 'Times'
+      - title: 'Equipes'
         subtitle: 'Eles são Nuxt'
         slug: 'teams'
         to: '/teams'

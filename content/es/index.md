@@ -262,21 +262,3 @@ Compartir es [Demostrar interés]{.text-sky-lighter}
 #description
 Descubra artículos del equipo del framework y la comunidad sobre Nuxt. ¡Consejos y trucos incluidos!
 ::
-
-::home-testimonials
----
-category: Comunidad
----
-#title
-Testimonios
-
-#description
-Aprende lo que a los expertos les encanta de Nuxt.
-
-#testimonials
-  :::testimonials
-  ---
-  home: true
-  ---
-  :::
-::

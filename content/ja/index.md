@@ -264,21 +264,3 @@ articleLinkTitle: 情報を得る
 #description
 Nuxt チームと Nuxt コミュニティによる記事をご覧ください！ Nuxt のヒントと秘訣が満載です！
 ::
-
-::home-testimonials
----
-category: コミュニティ
----
-#title
-著名人の声
-
-#description
-エキスパートが愛するNuxtの魅力を聞く。
-
-#testimonials
-  :::testimonials
-  ---
-  home: true
-  ---
-  :::
-::

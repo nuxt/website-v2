@@ -1,25 +1,8 @@
 ---
 links:
-  - title: '見る'
-    items:
-      - title: '導入事例'
-        subtitle: 'Nuxt で作られた Web サイトセレクション'
-        slug: 'showcases'
-        to: '/showcases'
-        icon: 'showcases.svg'
-        color: 'bg-sand'
-      - title: '事例紹介'
-        subtitle: '企業による Nuxt の活用方法'
-        slug: 'case-studies'
-        to: '/case-studies'
-        icon: 'case-studies.svg'
-        color: 'bg-sand-dark'
-      - title: '著名人の声'
-        subtitle: '私たちのことをどう思っているのか'
-        slug: 'testimonials'
-        to: '/testimonials'
-        icon: 'testimonials.svg'
-        color: 'bg-sand-darker'
+  - title: 'Showcases'
+    slug: 'showcases'
+    to: '/showcases'
   - title: '学ぶ'
     items:
       - title: 'ドキュメント'

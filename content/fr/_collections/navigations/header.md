@@ -1,25 +1,8 @@
 ---
 links:
-  - title: 'Découvrir'
-    items:
-      - title: 'Showcases'
-        subtitle: 'Sélection de sites créés avec Nuxt'
-        slug: 'showcases'
-        to: '/showcases'
-        icon: 'showcases.svg'
-        color: 'bg-sand'
-      - title: 'Étude de cas'
-        subtitle: 'Comment Nuxt est utilisé par les entreprises'
-        slug: 'case-studies'
-        to: '/case-studies'
-        icon: 'case-studies.svg'
-        color: 'bg-sand-dark'
-      - title: 'Témoignages'
-        subtitle: "Ce qu'ils pensent de nous"
-        slug: 'testimonials'
-        to: '/testimonials'
-        icon: 'testimonials.svg'
-        color: 'bg-sand-darker'
+  - title: 'Showcases'
+    slug: 'showcases'
+    to: '/showcases'
   - title: 'Apprendre'
     items:
       - title: 'Docs'

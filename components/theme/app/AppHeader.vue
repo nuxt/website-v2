@@ -62,7 +62,7 @@
             :key="index"
             :link="link"
             class="px-1 py-2"
-            :class="{ 'text-white': isHome }"
+            :class="[{ 'text-white': isHome }, { 'pr-3': index === 0 }]"
             :inactive-class="`${!isHome ? 'hover:d-primary-text-hover ' : 'hover:text-gray-300'}`"
           >
             {{ link.title }}

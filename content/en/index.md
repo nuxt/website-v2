@@ -262,21 +262,3 @@ Sharing is [Caring]{.text-sky-lighter}
 #description
 Discover articles from the framework team and community about Nuxt. Tips and tricks included!
 ::
-
-::home-testimonials
----
-category: Community
----
-#title
-Testimonials
-
-#description
-Learn what the experts love about Nuxt.
-
-#testimonials
-  :::testimonials
-  ---
-  home: true
-  ---
-  :::
-::

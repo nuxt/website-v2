@@ -1,5 +1,11 @@
 <template>
-  <section class="pb-20 pt-20 bg-sky-darker text-white">
+  <section class="relative pb-60 sm:pb-80 lg:pb-100 2xl:pb-120 pt-20 bg-sky-darker text-white">
+    <img
+      loading="lazy"
+      :src="`/img/home/home_footer.svg`"
+      class="absolute left-0 bottom-0 object-cover w-full"
+      alt="A landscape image"
+    />
     <NuxtContainer>
       <div class="flex flex-col items-center xl:items-start col-span-12">
         <div class="mb-2">

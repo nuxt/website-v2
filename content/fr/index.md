@@ -253,21 +253,3 @@ Sharing is [_Caring_]{.text-primary}
 #description
 Lisez nos articles rédigés par l'équipe Nuxt et la communauté, trucs et astuces inclus !
 ::
-
-::home-testimonials
----
-category: Communauté
----
-#title
-Témoignages
-
-#description
-Apprenez ce que les experts aiment chez Nuxt.
-
-#testimonials
-  :::testimonials
-  ---
-  home: true
-  ---
-  :::
-::

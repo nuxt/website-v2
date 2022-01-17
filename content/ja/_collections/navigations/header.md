@@ -43,12 +43,6 @@ links:
         color: 'bg-indigo'
   - title: 'コミュニティ'
     items:
-      - title: 'お知らせ'
-        subtitle: 'Nuxt について最新ニュース'
-        slug: 'announcements'
-        to: '/announcements'
-        icon: 'announcements.svg'
-        color: 'bg-mint-lighter'
       - title: 'チーム'
         subtitle: 'They are Nuxt'
         slug: 'teams'

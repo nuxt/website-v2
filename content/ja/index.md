@@ -249,18 +249,3 @@ hoverClass: 'hover:bg-sky-surface'
 #description
 強力なモジュールを見つけ、お気に入りのプロバイダと統合して、テーマを使ってすぐに始めましょう。
 ::
-
-::home-community
----
-category: コミュニティ
-announcementsCategory: お知らせ
-eventsCategory: イベント
-articleLinkTitle: 情報を得る
----
-
-#title
-共有は[大事]{.text-sky-lighter}です
-
-#description
-Nuxt チームと Nuxt コミュニティによる記事をご覧ください！ Nuxt のヒントと秘訣が満載です！
-::

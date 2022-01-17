@@ -43,12 +43,6 @@ links:
         color: 'bg-indigo'
   - title: 'Communauté'
     items:
-      - title: 'Annonces'
-        subtitle: 'Les dernières nouvelles concerant Nuxt'
-        slug: 'announcements'
-        to: '/announcements'
-        icon: 'announcements.svg'
-        color: 'bg-mint-lighter'
       - title: 'Équipes'
         subtitle: 'Nous sommes Nuxt'
         slug: 'teams'

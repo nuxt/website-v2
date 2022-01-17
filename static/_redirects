@@ -311,20 +311,6 @@
 /:locale/examples/modules-axios /:locale/examples/modules/axios 302!
 
 # Blog
-/blog /announcements 302!
-/:locale/blog /:locale/announcements 302!
-/blog/case-study-livementor /case-studies/livementor 302!
-/:locale/blog/case-study-livementor /:locale/case-studies/livementor 302!
-/blog/nuxt-static-improvements /announcements/nuxt-static-improvements 302!
-/:locale/blog/nuxt-static-improvements /:locale/announcements/nuxt-static-improvements 302!
-/blog/going-full-static /announcements/going-full-static 302!
-/:locale/blog/going-full-static /:locale/announcements/going-full-static 302!
-/blog/nuxtjs-from-terminal-to-browser /announcements/nuxtjs-from-terminal-to-browser 302!
-/:locale/blog/nuxtjs-from-terminal-to-browser /:locale/announcements/nuxtjs-from-terminal-to-browser 302!
-/blog/introducing-smart-prefetching /announcements/introducing-smart-prefetching 302!
-/:locale/blog/introducing-smart-prefetching /:locale/announcements/introducing-smart-prefetching 302!
-/blog/understanding-how-fetch-works-in-nuxt-2-12 /announcements/understanding-how-fetch-works-in-nuxt-2-12 302!
-/:locale/blog/understanding-how-fetch-works-in-nuxt-2-12 /:locale/announcements/understanding-how-fetch-works-in-nuxt-2-12 302!
 /blog/creating-a-nuxt-module /tutorials/creating-a-nuxt-module 302!
 /:locale/blog/creating-a-nuxt-module /:locale/tutorials/creating-a-nuxt-module 302!
 /blog/creating-blog-with-nuxt-content /tutorials/creating-blog-with-nuxt-content 302!

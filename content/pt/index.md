@@ -238,18 +238,3 @@ Moving forward? So much to [_Explore_]{.text-primary}
 #description
 Discover powerful modules, integrate with your favorite providers and start quickly with themes.
 ::
-
-::home-community
----
-category: Community
-announcementsCategory: Announcements
-eventsCategory: Events
-articleLinkTitle: Get infos
----
-
-#title
-Sharing is [Caring]{.text-sky-lighter}
-
-#description
-Discover articles from the framework team and community about Nuxt. Tips and tricks included!
-::

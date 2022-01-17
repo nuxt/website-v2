@@ -229,18 +229,3 @@ Besoin d'aller plus loin ? Il y a tellement à [_Explorer_]{.text-primary}
 Nuxt a beaucoup de dimensions à explorer, apprenez par l'exemple, intégrez des fournisseurs externes ou commencez plus vite avec un thème.
 
 ::
-
-::home-community
----
-category: Communauté
-announcementsCategory: Annonces
-eventsCategory: Evénements
-articleLinkTitle: Informations
----
-
-#title
-Sharing is [_Caring_]{.text-primary}
-
-#description
-Lisez nos articles rédigés par l'équipe Nuxt et la communauté, trucs et astuces inclus !
-::

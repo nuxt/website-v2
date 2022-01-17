@@ -38,11 +38,6 @@ export default {
         name: 'Blog',
         icon: 'blog',
         slug: 'blog'
-      },
-      {
-        name: 'Video Courses',
-        icon: 'video',
-        href: 'https://masteringnuxt.com/?utm_source=nuxt&utm_medium=link&utm_campaign=navbar_link'
       }
     ],
     search: {
@@ -133,22 +128,6 @@ export default {
       "Nuxt, MIT lisansı açık kaynak bir projedir ve kullanması tamamen ücretsizdir. Burada gördüğünüz logolarımızı Nuxt'yi ve nuxtjs.org'u belirttiğiniz takdirde istediğiniz gibi kullanabilirsiniz.",
     other_download_message: "Aynı zamanda isterseniz {favicon}'umuzu veya {sketch} dosyamızı indirebilirsiniz."
   },
-  resources: {
-    meta: {
-      title: 'Nuxt Kaynaklar',
-      description:
-        'Discover a panel of resources made by our partners. By using thoses affiliate resources links, you are helping us to maintain and develop the Open Source Framework.'
-    },
-    title: '{nuxt} Kaynaklar',
-    description:
-      'Partnerimiz tarafından hazırlanan kaynaklara göz atın. Buradaki bağlantıları kullanarak bizlere  Açık Kaynak Sistem projemizi geliştirmemizde destek oluyorsunuz.',
-    themes: {
-      title: 'Temalar'
-    },
-    videos: {
-      title: 'Videolu Kurslar'
-    }
-  },
   shop: {
     meta: {
       title: 'Nuxt Mağaza',
@@ -168,31 +147,6 @@ export default {
     title: '{nuxt} Ekip',
     description:
       "Nuxt ve ekosistemiminin gelişimi uluslararası bir ekip tarafından kılavuzlanmıştır. Nuxt'u iyileştirmek için sürekli çabalayan ve çalışan bir ekibe sahibiz."
-  },
-  themes: {
-    meta: {
-      title: 'Nuxt Temalar',
-      description:
-        'With the themes below built by our partners from Creative Tim and Theme Forest you can see how a real world application is built, with Nuxt stack behind.'
-    },
-    title: '{nuxt} Temalar',
-    description:
-      "Creative Tim ve Theme Forest'daki partnerlerimiz tarafından hazırlanan temalara göz atarak Nuxt ile yapılmış bir uygulamanın gerçek kullanımda nasıl gözüktüğünü görebilirsiniz.",
-    button: 'GET IT for'
-  },
-  'video-courses': {
-    meta: {
-      title: 'Nuxt Video Kursları',
-      description:
-        'With the video courses below created by our partner VueSchool you can discover and learn more about the Nuxt Framework.'
-    },
-    title: '{nuxt} Video Kursları',
-    description:
-      'Aşağıdaki VueSchool tarafından hazırlanan video kurslarımız ile Nuxt sistemi hakkında daha fazla keşif yapabilir ve daha fazla bilgiye sahip olabilirsiniz.',
-    cta: {
-      discover: "Vueschool'u keşfet",
-      start: 'KURSU BAŞLAT'
-    }
   },
   sponsor: {
     meta: {

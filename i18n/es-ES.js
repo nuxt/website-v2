@@ -41,11 +41,6 @@ export default {
         name: 'Blog',
         icon: 'blog',
         slug: 'blog'
-      },
-      {
-        name: 'Video cursos',
-        icon: 'video',
-        href: 'https://masteringnuxt.com/?utm_source=nuxt&utm_medium=link&utm_campaign=navbar_link'
       }
     ],
     search: {
@@ -136,22 +131,6 @@ export default {
       'Nuxt JS es un proyecto de código abierto con licencia del MIT y de uso completamente gratuito. {break} Puede usar libremente nuestros logotipos siempre que mencione Nuxt JS y enlace a nuxtjs.org.',
     other_download_message: 'También puede descargar nuestro {favicon} o nuestro archivo {sketch}.'
   },
-  resources: {
-    meta: {
-      title: 'Nuxt Recursos',
-      description:
-        'Descubra un panel de recursos elaborado por nuestros socios. Al utilizar estos enlaces de recursos para afiliados, nos ayuda a mantener y desarrollar el framework de código abierto.'
-    },
-    title: '{nuxt} Recursos',
-    description:
-      'Descubra un panel de recursos elaborado por nuestros socios. Al utilizar estos enlaces de recursos para afiliados, nos ayuda a mantener y desarrollar el framework de código abierto.',
-    themes: {
-      title: 'Temas'
-    },
-    videos: {
-      title: 'Video cursos'
-    }
-  },
   shop: {
     meta: {
       title: 'La tienda Nuxt',
@@ -172,31 +151,6 @@ export default {
     title: 'Equipo de {nuxt}',
     description:
       'El desarrollo de Nuxt y su ecosistema está guiado por un equipo internacional. Contamos con un equipo muy activo y comprometido que se esfuerza constantemente por impulsar a Nuxt.'
-  },
-  themes: {
-    meta: {
-      title: 'Nuxt Temas',
-      description:
-        'Con los temas creados por nuestros socios de Creative Tim y Theme Forest, puede ver cómo se construye una aplicación del mundo real, con Nuxt.'
-    },
-    title: '{nuxt} Temas',
-    description:
-      'Con los temas creados por nuestros socios de Creative Tim y Theme Forest, puede ver cómo se construye una aplicación del mundo real, con Nuxt.',
-    button: 'OBTENERLO por'
-  },
-  'video-courses': {
-    meta: {
-      title: 'Nuxt Video Cursos',
-      description:
-        'Con los cursos en video creados por nuestro socio VueSchool, puede descubrir y aprender más sobre Nuxt.'
-    },
-    title: '{nuxt} Video Cursos',
-    description:
-      'Con los cursos en video creados por nuestro socio VueSchool, puede descubrir y aprender más sobre Nuxt.',
-    cta: {
-      discover: 'Descubrir vueschool',
-      start: 'INICIAR CURSO'
-    }
   },
   sponsor: {
     meta: {

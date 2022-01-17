@@ -55,12 +55,6 @@ export default {
     loading: 'ロード中...',
     error: 'モジュール情報の取得中にエラーが発生しました'
   },
-  resources: {
-    themes: {
-      get_for_it: '{price} で手に入れる',
-      video_course: 'コースを開始する'
-    }
-  },
   sustainability: {
     tiers: {
       mvp_sponsors: 'MVP パートナー',

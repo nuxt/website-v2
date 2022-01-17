@@ -365,8 +365,6 @@
 /:locale/modules https://modules.nuxtjs.org/ 302!
 
 # [LEGACY] Redirect GUIDE URLs
-/guide/themes /themes 301!
-/:locale/guide/themes /:locale/themes 301!
 /guide/typescript https://typescript.nuxtjs.org/ 301!
 /:locale/guide/typescript https://typescript.nuxtjs.org/ 301!
 /guide /docs/2.x/concepts/nuxt-lifecycle 301!

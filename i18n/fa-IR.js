@@ -38,11 +38,6 @@ export default {
         name: 'بلاگ',
         icon: 'blog',
         slug: 'blog'
-      },
-      {
-        name: 'Video Courses',
-        icon: 'video',
-        href: 'https://masteringnuxt.com/?utm_source=nuxt&utm_medium=link&utm_campaign=navbar_link'
       }
     ],
     search: {
@@ -131,22 +126,6 @@ export default {
       'Nuxt یک پروژه متن‌باز بر اساس لایسنس MIT و کاملا رایگان است. {break} شما می‌توانید از لوگو های ما در صورتی که به Nuxt و آدرس nuxtjs.org اشاره کنید استفاده کنید.',
     other_download_message: 'شما می‌توانید فایل {favicon} و {sketch} ما را نیر دریافت کنید.'
   },
-  resources: {
-    meta: {
-      title: 'منابع Nuxt',
-      description:
-        'مجموعه‌ای از منابعی که توسط همراهان ما تهیه شده‌اند را بشناسید! با استفاده از این لینک‌های معرفی به ما کمک می‌کنید تا این پروژه متن‌باز را ادامه دهیم.'
-    },
-    title: 'منابع {nuxt}',
-    description:
-      'مجموعه‌ای از منابعی که توسط همراهان ما تهیه شده‌اند را بشناسید! با استفاده از این لینک‌های معرفی به ما کمک می‌کنید تا این پروژه متن‌باز را ادامه دهیم.',
-    themes: {
-      title: 'پوسته‌ها'
-    },
-    videos: {
-      title: 'دوره‌های ویدیویی'
-    }
-  },
   shop: {
     meta: {
       title: 'فروشگاه Nuxt',
@@ -166,31 +145,6 @@ export default {
     title: 'تیم {nuxt}',
     description:
       'توسعه Nuxt توسط تیمی بین المللی محقق شده می‌شود. Nuxt تیمی بسیار فعال و کوشا دارد که همیشه سعی در پیشبرد این پروژه دارند.'
-  },
-  themes: {
-    meta: {
-      title: 'پوسته‌های Nuxt',
-      description:
-        'با دیدن پوسته‌های زیر که توسط همراهان ما در Creative Tim و Theme Forest ساخته شده‌اند می‌توانید ببینید که چطور از Nuxt در محصولات نهایی استفاده می‌شود.'
-    },
-    title: 'پوسته‌های {nuxt}',
-    description:
-      'با دیدن پوسته‌های زیر که توسط همراهان ما در Creative Tim و Theme Forest ساخته شده‌اند می‌توانید ببینید که چطور از Nuxt در محصولات نهایی استفاده می‌شود.',
-    button: 'دریافت'
-  },
-  'video-courses': {
-    meta: {
-      title: 'دوره‌های ویدیویی Nuxt',
-      description:
-        'با استفاده از دوره‌های ویدیویی زیر که توسط VueSchool تهیه شده‌اند می توانید درک بیشتری از فریم‌ورک Nuxt داشته باشید.'
-    },
-    title: 'دوره‌های ویدیویی {nuxt}',
-    description:
-      'با استفاده از دوره‌های ویدیویی زیر که توسط VueSchool تهیه شده‌اند می توانید درک بیشتری از فریم‌ورک Nuxt داشته باشید.',
-    cta: {
-      discover: 'بیشتر در مورد VueSchool بدانید',
-      start: 'شروع دوره'
-    }
   },
   sponsor: {
     meta: {

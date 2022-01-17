@@ -55,12 +55,6 @@ export default {
     loading: 'Loading...',
     error: 'An error occured while fetching modules.'
   },
-  resources: {
-    themes: {
-      get_for_it: 'Get it for {price}',
-      video_course: 'Start course'
-    }
-  },
   sustainability: {
     tiers: {
       mvp_sponsors: 'MVP Sponsors',

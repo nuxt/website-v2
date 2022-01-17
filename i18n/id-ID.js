@@ -38,11 +38,6 @@ export default {
         name: 'Blog',
         icon: 'blog',
         slug: 'blog'
-      },
-      {
-        name: 'Kursus Video',
-        icon: 'video',
-        href: 'https://masteringnuxt.com/?utm_source=nuxt&utm_medium=link&utm_campaign=navbar_link'
       }
     ],
     search: {
@@ -132,22 +127,6 @@ export default {
       'Nuxt adalah proyek open source berlisensi MIT dan sepenuhnya gratis untuk digunakan. {break} Anda dapat dengan bebas menggunakan logo kami selama Anda menyebutkan Nuxt dan mencantumkan tautan ke nuxtjs.org.',
     other_download_message: 'Anda juga dapat mengunduh berkas {favicon} atau {sketch} kami.'
   },
-  resources: {
-    meta: {
-      title: 'Sumber Daya Nuxt',
-      description:
-        'Temukan panel sumber daya yang dibuat oleh mitra kami. Dengan menggunakan tautan sumber daya afiliasi itu, Anda membantu kami memelihara dan mengembangkan Kerangka Sumber Terbuka.'
-    },
-    title: 'Sumber Daya {nuxt}',
-    description:
-      'Temukan panel sumber daya yang dibuat oleh mitra kami. Dengan menggunakan tautan sumber daya afiliasi mereka, Anda membantu kami menjaga dan mengembangkan Kerangka Sumber Terbuka.',
-    themes: {
-      title: 'Tema'
-    },
-    videos: {
-      title: 'Video Kursus'
-    }
-  },
   shop: {
     meta: {
       title: 'Toko Nuxt',
@@ -168,30 +147,6 @@ export default {
     title: 'Tim {nuxt}',
     description:
       'Pengembangan Nuxt dan ekosistemnya dipandu oleh tim internasional. Kami memiliki tim yang sangat aktif dan sibuk yang terus berupaya untuk mendorong perkembangan Nuxt.'
-  },
-  themes: {
-    meta: {
-      title: 'Tema Nuxt',
-      description: ''
-    },
-    title: 'Tema {nuxt}',
-    description:
-      'Dengan tema di bawah ini yang dibangun oleh mitra kami dari Tim Kreatif dan Hutan Tema Anda dapat melihat bagaimana aplikasi dunia nyata dibangun, dengan Nuxt menumpuk di belakang.',
-    button: 'Dapatkan harga'
-  },
-  'video-courses': {
-    meta: {
-      title: 'Video Kursus Nuxt',
-      description:
-        'Dengan kursus video di bawah ini yang dibuat oleh mitra kami VueSchool, Anda dapat menemukan dan mempelajari lebih lanjut tentang kerangka kerja Nuxt.'
-    },
-    title: 'Video Kursus {nuxt}',
-    description:
-      'Dengan kursus video di bawah ini yang dibuat oleh mitra kami VueSchool Anda dapat menemukan dan mempelajari lebih lanjut tentang kerangka kerja Nuxt.',
-    cta: {
-      discover: 'Discover vueschool',
-      start: 'MULAI KURSUS'
-    }
   },
   sponsor: {
     meta: {

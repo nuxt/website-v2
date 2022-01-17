@@ -30,8 +30,6 @@ links:
         to: '/teams'
       - title: 'チュートリアル'
         to: '/tutorials'
-      - title: 'ビデオコース'
-        to: '/video-courses'
   - title: 'リソース'
     items:
       - title: 'デザイン'
@@ -50,6 +48,4 @@ links:
         to: '/releases'
       - title: '導入事例'
         to: '/showcases'
-      - title: 'テーマ'
-        to: '/themes'
 ---

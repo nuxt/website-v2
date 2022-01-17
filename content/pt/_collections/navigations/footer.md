@@ -30,8 +30,6 @@ links:
         to: '/teams'
       - title: 'Tutorials'
         to: '/tutorials'
-      - title: 'Video courses'
-        to: '/video-courses/'
   - title: 'Resources'
     items:
       - title: 'Design'
@@ -50,6 +48,4 @@ links:
         to: '/releases'
       - title: 'Showcases'
         to: '/showcases'
-      - title: 'Themes'
-        to: '/themes'
 ---

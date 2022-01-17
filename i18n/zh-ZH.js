@@ -132,20 +132,6 @@ export default {
       'Nuxt 是 MIT 许可的开源项目，完全免费使用。 {break}只要提及 Nuxt 并链接到 nuxtjs.org，您就可以自由使用我们的徽标。',
     other_download_message: '您也可以下载我们的 {favicon} 或我们的 {sketch} 文件。'
   },
-  resources: {
-    meta: {
-      title: 'Nuxt 资源',
-      description: '发现我们合作伙伴提供的资源面板。通过使用那些会员资源链接，您正在帮助我们维护和开发开放源代码框架。'
-    },
-    title: '{nuxt} 资源',
-    description: '发现我们合作伙伴提供的资源面板。通过使用那些会员资源链接，您正在帮助我们维护和开发开放源代码框架。',
-    themes: {
-      title: '主题'
-    },
-    videos: {
-      title: '视频课程'
-    }
-  },
   shop: {
     meta: {
       title: 'Nuxt 商店 ',
@@ -163,29 +149,6 @@ export default {
     title: '{nuxt} 团队',
     description:
       'Nuxt 及其生态系统的开发由一个国际团队指导。我们有一支非常积极和敬业的团队，正在不断努力推动 Nuxt 前进。'
-  },
-  themes: {
-    meta: {
-      title: 'Nuxt 主题',
-      description:
-        '通过我们由 Creative Tim 和 Theme Forest 的合作伙伴构建的以下主题，您可以了解如何构建真实的应用程序以及 Nuxt 。'
-    },
-    title: '{nuxt} 主题',
-    description:
-      '通过我们由 Creative Tim 和 Theme Forest 的合作伙伴构建的以下主题，您可以了解如何构建真实的应用程序以及 Nuxt',
-    button: '获得它，仅需'
-  },
-  'video-courses': {
-    meta: {
-      title: 'Nuxt 视频课程',
-      description: '通过我们的合作伙伴 Vue School 创建的以下视频课程，您可以发现并了解有关 Nuxt 框架的更多信息。'
-    },
-    title: '{nuxt} 视频课程',
-    description: '通过我们的合作伙伴 VueSchool 创建的以下视频课程，您可以发现并了解有关 Nuxt 框架的更多信息。',
-    cta: {
-      discover: '探索 vueschool',
-      start: '开始课程'
-    }
   },
   sponsor: {
     meta: {

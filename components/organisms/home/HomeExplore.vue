@@ -18,7 +18,7 @@
           <p class="mb-12 font-normal text-center text-body-base md:text-body-lg 2xl:text-body-xl">
             <Markdown use="description" unwrap="p" />
           </p>
-          <div class="grid grid-cols-1 sm:grid-cols-3 gap-20 pb-8">
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-28 pb-8">
             <slot />
           </div>
         </div>

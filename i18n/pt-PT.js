@@ -76,12 +76,6 @@ export default {
     loading: 'Carregando...',
     error: 'Um error ocorreu durante o carregamento dos módulos.'
   },
-  resources: {
-    themes: {
-      get_for_it: 'Comprar por {price}',
-      video_course: 'Iniciar tutorial'
-    }
-  },
   sustainability: {
     tiers: {
       mvp_sponsors: 'Patrocinadores MVP',

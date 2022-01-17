@@ -221,15 +221,6 @@ category: Explorez
   hoverClass: 'hover:bg-sky-surface'
   ---
   ::
-  ::section-content-item
-  ---
-  title: 'Themes'
-  description: "Découvrez comment une application du monde réel est construite à l'aide de Nuxt avec les thèmes construits par nos partenaires."
-  image: '/img/home/explore/gem-explore-3.svg'
-  to: '/themes'
-  hoverClass: 'hover:bg-sky-surface'
-  ---
-  ::
 
 #title
 Besoin d'aller plus loin ? Il y a tellement à [_Explorer_]{.text-primary}

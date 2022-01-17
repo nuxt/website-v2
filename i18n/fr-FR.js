@@ -56,12 +56,6 @@ export default {
     loading: 'Chargement...',
     error: 'Une erreur est survenue lors de la récupération des modules'
   },
-  resources: {
-    themes: {
-      get_for_it: 'Achetez-le pour {price}',
-      video_course: 'Début du cours'
-    }
-  },
   sustainability: {
     tiers: {
       mvp_partners: 'Partenaires MVP',

@@ -231,15 +231,6 @@ to: 'https://modules.nuxtjs.org'
 hoverClass: 'hover:bg-sky-surface'
 ---
 ::
-::section-content-item
----
-title: 'Themes'
-description: 'See how a real world application is built using the Nuxt stack with the themes built by our partners.'
-image: '/img/home/explore/gem-explore-3.svg'
-to: '/themes'
-hoverClass: 'hover:bg-sky-surface'
----
-::
 
 #title
 Moving forward? So much to [_Explore_]{.text-primary}

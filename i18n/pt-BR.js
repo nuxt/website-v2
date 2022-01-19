@@ -1,12 +1,12 @@
 export default {
   banner: {
     here: 'v3.nuxtjs.org',
-    format: '{nuxt} beta saiu! Descubra mais sobre isso em {here}'
+    format: '{nuxt} beta está no ar! Descubra mais em {here}'
   },
   cookies: {
     message: 'Nós usamos Cookies para análise do usuário e fazer melhorias na página!',
-    link: 'Aprenda sobre cookies',
-    button: 'Ok'
+    link: 'Entenda sobre os cookies',
+    button: 'Entendi'
   },
   footer: {
     newsletter: {
@@ -14,13 +14,13 @@ export default {
       description: 'As últimas novidades, artigos, e recursos, enviados para seu inbox mensalmente',
       form: {
         email: 'Email',
-        subscribing: 'Se inscrevendo...',
+        subscribing: 'Adicionando seu email...',
         subscribe: 'Se inscrever',
         already_registered: 'Você já é registrado',
         invalid_address: 'Endereço inválido',
         subscribed_messages: {
-          error: 'An error occurred while sending confirmation email',
-          pre: 'Um email para confirmar a sua inscriçào foi enviado para',
+          error: 'Ocorreu um erro ao enviar um e-mail de confirmação',
+          pre: 'Um e-mail para confirmar sua assinatura foi enviado',
           confirmation: 'Email confirmado'
         }
       }
@@ -41,13 +41,13 @@ export default {
       ui: 'UI',
       data: 'Dados',
       modules: 'Módulos',
-      deployment: 'Implementação'
+      deployment: 'Deploy'
     },
-    cli: 'Pelo CLI',
-    scratch: 'Pelo princípio'
+    cli: 'Pela CLI',
+    scratch: 'A partir do zero'
   },
   modules: {
-    search: 'Pesquisar um módulo (nome, categoria, usuario, etc.)',
+    search: 'Pesquisar um módulo (nome, categoria, usuário, etc.)',
     sort_by: 'Ordenar por',
     loading: 'Carregando...',
     error: 'Um erro ocorreu enquanto carregava os módulos.'
@@ -68,23 +68,23 @@ export default {
     mvp_detail: {
       services: 'Serviços',
       location: 'Localização',
-      contact_partner: 'Contact {partner}',
-      follow_partner: "Follow {partner}'s activities",
-      resources: 'Resources',
-      join_us: 'Join us',
-      they_will_get_back_to_you: 'They will get back to you asap.',
+      contact_partner: 'Entre em contato {partner}',
+      follow_partner: 'Seguir as atividades do {partner}',
+      resources: 'Recursos',
+      join_us: 'Trabalhe com a gente',
+      they_will_get_back_to_you: 'Eles voltarão para você o mais rápido possível.',
       find_them_on_the_web: 'Find them on the web.',
-      first_name: 'First name',
-      last_name: 'Last name',
-      company_name: 'Company name',
+      first_name: 'Nome',
+      last_name: 'Sobrenome',
+      company_name: 'Nome da companhia',
       email: 'Email',
-      message: 'Message',
-      submit: 'Submit'
+      message: 'Mensagem',
+      submit: 'Enviar'
     }
   },
   support: {
     confirm_sending: 'Mensagem enviada para o suporte técnico',
-    error_sending: 'Erro durante envio',
+    error_sending: 'Erro ao enviar mensagem',
     invalid_adress: 'Endereço inválido'
   },
   showcases: {
@@ -101,7 +101,7 @@ export default {
       Entertainment: 'Entretenimento',
       Travel: 'Viagem',
       Finance: 'Financias',
-      Tech: 'Técnologia',
+      Tech: 'Tecnologia',
       Business: 'Negócios'
     }
   },
@@ -110,14 +110,14 @@ export default {
     released_on: 'Lançamento em {datetime}'
   },
   partners: {
-    become_partner: 'torne-se um parceiro',
-    contact_success: 'Your request has been sent'
+    become_partner: 'Torne-se um parceiro',
+    contact_success: 'Sua solicitação foi enviada'
   },
   translated_pages: {
-    title: 'Translated page',
-    content_outdated: 'Contents of this page might be outdated.',
-    read_original_page: 'Read the original page',
-    contribute: 'Improve translation of this page'
+    title: 'Página traduzida',
+    content_outdated: 'O conteúdo desta página pode estar desatualizado.',
+    read_original_page: 'Ler a página original',
+    contribute: 'Melhorar a tradução desta página'
   },
   theme_mode: {
     system: 'Sistema',
@@ -127,12 +127,12 @@ export default {
   common: {
     an_error_occurred: 'Um erro ocorreu',
     page_not_found: 'Não foi possível encontrar a página que você está procurando.',
-    please_define_title: 'Please define a title in the front matter',
+    please_define_title: 'Por favor, defina um título na matéria de frente',
     please_define_description: 'Por favor, defina uma descrição no assunto',
     search: 'Procurar ("/" para focar)',
     settings: 'Configurações',
     version: 'Versão',
-    currently_version: 'Atualmente em private beta',
+    currently_version: 'Atualmente em beta fechado',
     back: 'Voltar',
     go_to: 'Ir para {title}',
     go_home: 'Ir para página inicial',
@@ -149,5 +149,5 @@ export default {
     star: 'Estrela',
     stars: 'Estrelas'
   },
-  iso: 'pt'
+  iso: 'pt-br'
 }

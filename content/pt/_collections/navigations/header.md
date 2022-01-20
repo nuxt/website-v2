@@ -3,7 +3,7 @@ links:
   - title: 'Discover'
     items:
       - title: 'Showcases'
-        subtitle: 'Selection of website built with Nuxt'
+        subtitle: 'Selection of websites built with Nuxt'
         slug: 'showcases'
         to: '/showcases'
         icon: 'showcases.svg'
@@ -28,6 +28,7 @@ links:
         to: '/docs'
         icon: 'docs.svg'
         color: 'bg-green-500'
+
       - title: 'Examples'
         subtitle: 'Understand everything in Nuxt'
         slug: 'examples'
@@ -73,7 +74,7 @@ links:
   - title: 'Community'
     items:
       - title: 'Announcements'
-        subtitle: 'Last news about Nuxt'
+        subtitle: 'Latest news about Nuxt'
         slug: 'announcements'
         to: '/announcements'
         icon: 'announcements.svg'
@@ -85,7 +86,7 @@ links:
         icon: 'teams.svg'
         color: 'bg-mint-light'
       - title: 'Releases'
-        subtitle: 'All the code we released'
+        subtitle: 'All the code we have released'
         slug: 'releases'
         to: '/releases'
         icon: 'releases.svg'

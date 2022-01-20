@@ -41,6 +41,7 @@ Get technical support, report bugs or contribute to the Nuxt framework developme
   #description
   If anything isn't working like it's supposed to, open an issue on Github.
   ::
+
   ::support-card
   ---
   image: 'suggest'

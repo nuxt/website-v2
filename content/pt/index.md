@@ -16,7 +16,7 @@ Build your next Vue.js application with confidence using Nuxt.<br class="hidden 
 :app-button[38K+ GitHub stars]{ href="https://github.com/nuxt/nuxt.js" icon="IconGitHub" extraClass="text-white bg-sky-black hover:bg-sky-darker leading-4" }
 
 #secondary-button
-:app-button[Get started]{ to="/docs/get-started/installation" extraClass="text-black bg-primary-500 hover:bg-primary-400 focus:ring-primary-600 py-4" }
+:app-button[Get started]{ to="/docs/get-started/installation" }
 ::
 
 ::home-learn-master

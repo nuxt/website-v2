@@ -73,7 +73,7 @@ links:
   - title: 'Communauté'
     items:
       - title: 'Annonces'
-        subtitle: 'Les dernières nouvelles concerant Nuxt'
+        subtitle: 'Les dernières nouvelles concernant Nuxt'
         slug: 'announcements'
         to: '/announcements'
         icon: 'announcements.svg'

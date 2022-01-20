@@ -248,7 +248,7 @@ hoverClass: 'hover:bg-sky-surface'
 Descubra módulos potentes, intégrelos con sus proveedores favoritos y comience rápidamente con los temas.
 ::
 
-::home-campfire
+::home-community
 ---
 category: Comunidad
 announcementsCategory: Anuncios

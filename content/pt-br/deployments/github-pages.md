@@ -18,9 +18,14 @@ Nuxt gives you the possibility to host your web application on any static hostin
 
 To deploy on GitHub Pages, you need to generate your static web application:
 
-```bash
+::code-group
+```bash [Yarn]
+yarn generate
+```
+```bash [NPM]
 npm run generate
 ```
+::
 
 It will create a `dist` folder with everything inside ready to be deployed on GitHub Pages hosting. Branch `gh-pages` for project repository OR branch `master` for user or organization site
 
@@ -59,11 +64,16 @@ This way, all generated path asset will be prefixed with `/<repository-name>/`, 
 
 You can also use [push-dir package](https://github.com/L33T-KR3W/push-dir):
 
-First install it via npm:
+First install it:
 
-```bash
+::code-group
+```bash [Yarn]
+yarn add --dev push-dir
+```
+```bash [NPM]
 npm install push-dir --save-dev
 ```
+::
 
 Add a `deploy` command to your `package.json` with the branch as `gh-pages` for project repository OR `master` for user or organization site.
 
@@ -78,10 +88,16 @@ Add a `deploy` command to your `package.json` with the branch as `gh-pages` for 
 
 Then generate and deploy your static application:
 
-```bash
+::code-group
+```bash [Yarn]
+yarn generate
+yarn deploy
+```
+```bash [NPM]
 npm run generate
 npm run deploy
 ```
+::
 
 ## Build server deployment
 
@@ -132,7 +148,7 @@ jobs:
         run: yarn
 
       - name: Generate
-        run: yarn run generate
+        run: yarn generate
 
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3

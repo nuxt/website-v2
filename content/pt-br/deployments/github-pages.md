@@ -31,6 +31,8 @@ npm run generate
 
 ::
 
+::
+
 It will create a `dist` folder with everything inside ready to be deployed on GitHub Pages hosting. Branch `gh-pages` for project repository OR branch `master` for user or organization site
 
 ::alert{type="info"}
@@ -82,6 +84,8 @@ npm install push-dir --save-dev
 
 ::
 
+::
+
 Add a `deploy` command to your `package.json` with the branch as `gh-pages` for project repository OR `master` for user or organization site.
 
 ```js
@@ -106,6 +110,8 @@ yarn deploy
 npm run generate
 npm run deploy
 ```
+
+::
 
 ::
 

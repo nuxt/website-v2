@@ -8,7 +8,7 @@ logo:
   light: "/img/companies/square/light/Surge.svg"
   dark: "/img/companies/square/dark/Surge.svg"
 ---
-# Déployer Nuxt vec Surge
+# Déployer Nuxt avec Surge
 
 Comment déployer Nuxt sur Surge ?
 

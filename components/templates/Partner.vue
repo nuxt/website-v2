@@ -95,7 +95,7 @@
                     </AppLink>
                     <AppLink
                       v-if="page.profile.linkedin"
-                      :href="`https://www.linkedin.com/company/${page.profile.linkedin}`"
+                      :href="`https://www.linkedin.com/${page.profile.linkedin}`"
                       aria-label="linkedin link"
                     >
                       <IconLinkedIn class="inline w-6 h-6" />

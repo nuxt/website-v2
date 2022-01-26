@@ -15,18 +15,19 @@ Teams
 The development of Nuxt and its ecosystem is led by an international team. Our committed team works every day to bring Nuxt forward.
 ::
 
-## ::team-section
-
-## teamName: framework
+::team-section
+---
+teamName: framework
+---
 
 #title
 [Framework]{.text-primary}
 ::
 
-## ::team-section
-
-## teamName: community
-
+::team-section
+---
+teamName: community
+---
 #title
 [Community]{.text-primary}
 

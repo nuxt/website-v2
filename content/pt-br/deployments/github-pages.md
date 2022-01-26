@@ -8,7 +8,6 @@ logo:
   light: '/img/companies/square/light/Github_Pages.svg'
   dark: '/img/companies/square/dark/Github_Pages.svg'
 ---
-
 # Deploy Nuxt on GitHub Pages
 
 How to deploy Nuxt app on GitHub Pages?
@@ -20,15 +19,12 @@ Nuxt gives you the possibility to host your web application on any static hostin
 To deploy on GitHub Pages, you need to generate your static web application:
 
 ::code-group
-
 ```bash [Yarn]
 yarn generate
 ```
-
 ```bash [NPM]
 npm run generate
 ```
-
 ::
 
 It will create a `dist` folder with everything inside ready to be deployed on GitHub Pages hosting. Branch `gh-pages` for project repository OR branch `master` for user or organization site

@@ -8,7 +8,6 @@ logo:
   light: '/img/companies/square/light/Fume.svg'
   dark: '/img/companies/square/dark/Fume.svg'
 ---
-
 # Deploy Nuxt on Fume
 
 How to deploy Nuxt on Fume?
@@ -34,15 +33,12 @@ Get a production-ready URL in 2 minutes with these steps:
 - Run the following command inside your projects root folder
 
 ::code-group
-
 ```bash [Yarn]
 yarn global add fume-cli
 fume deploy
 ```
-
 ```bash [NPM]
 npm install -g fume-cli
 fume deploy
 ```
-
 ::

@@ -5,8 +5,8 @@ description: How to deploy Nuxt app on GitHub Pages?
 target: Static
 category: deployment
 logo:
-  light: "/img/companies/square/light/Github_Pages.svg"
-  dark: "/img/companies/square/dark/Github_Pages.svg"
+  light: '/img/companies/square/light/Github_Pages.svg'
+  dark: '/img/companies/square/dark/Github_Pages.svg'
 ---
 # Deploy Nuxt on GitHub Pages
 
@@ -67,12 +67,15 @@ You can also use [push-dir package](https://github.com/L33T-KR3W/push-dir):
 First install it:
 
 ::code-group
+
 ```bash [Yarn]
 yarn add --dev push-dir
 ```
+
 ```bash [NPM]
 npm install push-dir --save-dev
 ```
+
 ::
 
 Add a `deploy` command to your `package.json` with the branch as `gh-pages` for project repository OR `master` for user or organization site.
@@ -89,14 +92,17 @@ Add a `deploy` command to your `package.json` with the branch as `gh-pages` for 
 Then generate and deploy your static application:
 
 ::code-group
+
 ```bash [Yarn]
 yarn generate
 yarn deploy
 ```
+
 ```bash [NPM]
 npm run generate
 npm run deploy
 ```
+
 ::
 
 ## Build server deployment

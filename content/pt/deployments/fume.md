@@ -8,7 +8,7 @@ logo:
   light: "/img/companies/square/light/Fume.svg"
   dark: "/img/companies/square/dark/Fume.svg"
 ---
-# Desdobrando uma aplicação Nuxt no Fume
+# Desdobrar o Nuxt no Fume
 
 Como desdobrar uma aplicação Nuxt no Fume?
 

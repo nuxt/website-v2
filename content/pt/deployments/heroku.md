@@ -1,16 +1,16 @@
 ---
 template: guide
 title: Heroku
-description: Como fazer deploy de uma aplicação Nuxt no Heroku?
+description: Como desdobrar uma aplicação Nuxt no Heroku?
 target: Server
 category: deployment
 logo:
   light: "/img/companies/square/light/Heroku.svg"
   dark: "/img/companies/square/dark/Heroku.svg"
 ---
-# Fazer deploy de uma aplicação Nuxt no Heroku
+# Desdobrar uma aplicação Nuxt no Heroku
 
-Como fazer deploy de uma aplicação Nuxt no Heroku?
+Como desdobrar uma aplicação Nuxt no Heroku?
 
 ---
 
@@ -19,7 +19,7 @@ Nós recomendamos que você leia a [documentação do Heroku para Node.js](https
 <div class="Promo__Video">
   <a href="https://vueschool.io/lessons/how-to-deploy-nuxtjs-to-heroku?friend=nuxt" target="_blank">
     <p class="Promo__Video__Icon">
-      Assista uma aula gratuita  <strong>Como fazer deploy de uma aplicação Nuxt no Heroku</strong> na Vue School
+      Assista uma aula gratuita  <strong>Como desdobrar uma aplicação Nuxt no Heroku</strong> na Vue School
     </p>
   </a>
 </div>
@@ -44,14 +44,14 @@ Finalmente, nós podemos empurrar a aplicação no Heroku com:
 git push heroku master
 ```
 
-Para fazer o deploy de uma branch que não seja a master para o Heroku use:
+Para desdobrar um ramo que não seja a master para o Heroku use:
 
 ```bash
 git push heroku develop:master
 ```
 
-onde `develop` é o nome da sua branch.
+onde `develop` é o nome do seu ramo.
 
-Você pode opcionalmente configurar automaticamente os processos de deploy a partir de uma branch selecionada do repositório do GitHub da sua aplicação dentro da seção Deploy da sua aplicação dentro do painel de controlo do Heroku.
+Você pode opcionalmente configurar automaticamente os processos de desdobramento a partir de uma ramo selecionada do repositório do GitHub da sua aplicação dentro da seção Deploy (Desdobrar) da sua aplicação dentro do painel de controlo do Heroku.
 
 Voilà! Sua aplicação Nuxt está agora hospedada no Heroku!

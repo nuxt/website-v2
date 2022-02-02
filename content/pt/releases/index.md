@@ -1,6 +1,6 @@
 ---
 template: releases
-title: Release Notes
-description: "Discover all the release notes for the Nuxt framework"
+title: Notas de Lançamento
+description: "Descubra todas as notas de lançamento para o framework Nuxt"
 navigation: false
 ---

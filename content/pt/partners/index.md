@@ -1,15 +1,15 @@
 ---
 template: blank
-title: Partners
-description: "Nuxt is an MIT licensed open source project and free to use. However, the maintenance effort is not sustainable without proper financial backing."
+title: Parceiros
+description: "O Nuxt é um projeto de código-aberto licenciado com a licença MIT e de uso gratuito. Contudo, os esforços de manuteção não é sustentável sem o financiamento bancário apropriado."
 ---
 
 ::page-hero
 #title
-Partners
+Parceiros
 
 #description
-Find your perfect match. Get help from an agency partner or find a technology provider.
+Encontre sua correspondência perfeita. Receba ajuda de uma agência parceira ou encontre um provedor de tecnologia.
 
 #bottom
   :partners-bottom-hero

@@ -1,6 +1,6 @@
 ---
 template: blog
-title: Tutorials
-description: Discover tutorials made by the Nuxt community.
+title: Tutoriais
+description: Descubra os tutoriais feitos pela comunidade do Nuxt.
 blogPostList: true
 ---

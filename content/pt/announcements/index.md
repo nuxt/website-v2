@@ -1,7 +1,7 @@
 ---
 template: blog
-title: Announcements
-description: Discover articles from Nuxt team.
+title: Anúncios
+description: Descubra artigos da equipa do Nuxt.
 blogPostList: true
 sortBy:
   field: 'date'

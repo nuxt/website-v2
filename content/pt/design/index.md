@@ -1,17 +1,16 @@
 ---
 template: blank
-title: 'Design Kit'
-description: 'Learn how to use Nuxt logos, colors and fonts and download the design kit.'
+title: 'Kit de Design'
+description: 'Aprenda como usar os logos do Nuxt, colres e fontes e descarregue o kit de design.'
 layout:
   fluid: true
 navigation: false
 ---
 ::design-hero
 ---
-title: Design Kit
-description: "Nuxt is an MIT licensed open source project and completely free to use.
-You can freely use our logos as long as you mention Nuxt and link to nuxtjs.org."
-button: Download Design Kit
+title: Kit de Design
+description: "O Nuxt é um projeto de código-aberto licenciado com a licença MIT e de uso completamente gratuito. Você pode usar livremente os nossos logos contanto que você mencione o Nuxt e ligue ao nuxtjs.org."
+button: Descarregue o Kit de Design
 ---
 ::
 
@@ -19,10 +18,10 @@ button: Download Design Kit
 
 ::design-section
 #title
-Monograms
+Monogramas
 
 #description
-Our logo is made from two elements: the triangular mountains and the wordmark. In most cases, they should appear together as the opposite master lockup shows. The triangular mountains can be used on their own as an icon, profile picture or badge, but the wordmark should never be used without this symbol on the side.
+Nosso logo é feito de dois elementos: as montanhas triangulares e a palavra-marca. Na maioria dos casos, eles devem aparecer juntos como o exemplo mostra. As montanhas triangulares podem ser usadas elas mesmas como um icone, foto de perfil ou emblema, mas palavra-marca nunca deve ser usado sem este símbolo ao lado.
 
 #sectionComponent
   :::design-logos
@@ -46,28 +45,25 @@ Logos
 
 ::design-section
 #title
-Primary colors
+Cores Primarias
 
 #description
-Our colours have been carefully considered to work in harmony and consistency across various media. When creating Nuxt communications, use the colour values shown on the following pages to make sure your designs stay on-brand. This nature-inspired primary colour palette should be used in all of our formal company related communications.
+As nossas cores tem sido cuidadosamente consideradas para funcionarem em harmonia e constistência em várias mídias. Quando estiver criando comunicações para o Nuxt, use os valores de colores mostrado nas páginas seguintes para certificar-se que o seus desenhos estejam na marca. Esta paleta de color inspirada na natureza deve ser usada em todas nossas comunicações formais relacionadas com a empresa.
 
 #sectionComponent
   :::design-colors
   ---
-  buttonText: Download Color System
+  buttonText: Descarregue o Sistema de Color
   ---
   :::
 ::
 
 ::design-section
 #title
-Typography
+Tipografia
 
 #description
-Our brand typeface is DM Sans by Colophon Foundry for Google. This open-source typeface was chosen for its
-combination of smoothness and structure. Its geometric shapes and soft transitions will bring clarity and openness
-to our texts. Also, it’s open availability will let other members of the Nuxt community incorporate it into
-their work.
+A fonte da nossa marca é DM Sans criada pela Colophon Foundry para o Google. Esta fonte de código-aberto foi escolhida por sua combinação de suavidade e estrutura. Sua forma geométrica e transições suaves trarão clareza e transparência para o nossos textos. Também, sua disponibilidade aberta permitirá que outros membros da comunidade do Nuxt incorpore ele dentro dos seus trabalhos.
 
 #sectionComponent
   :::design-typography

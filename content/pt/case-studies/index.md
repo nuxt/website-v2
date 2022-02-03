@@ -1,7 +1,7 @@
 ---
 template: blog
-title: Case studies
-description: For the Case Studies series, we've been talking to companies using Nuxt to build their product. We'll explore their journey into the framework and its ecosystem, examine the variety of projects you can use Nuxt for, and consider the challenges they encountered and benefits they experienced.
+title: Casos de Estudos
+description: Para as séries de Caso de Estudos, temos conversado com empresas que estão usando o Nuxt para construir seus produtos. Exploraremos sua jornada dentro do framework e seu ecossistema, examinar a variedade de projetos em que você pode usar o Nuxt, e considerar os desafios que eles enfrentaram e benefícios que eles experimentaram.
 blogPostList: true
 sortBy:
   field: 'position'

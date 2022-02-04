@@ -14,7 +14,7 @@ Como desdobrar uma aplicação Nuxt no Dokku?
 
 ---
 
-Nós recomendamos a ler a [documentação do Dokku para configuração](http://dokku.viewdocs.io/dokku/getting-started/installation/) e o artigo [Desdobrando uma aplicação Node.js no Digital Ocean usando Dokku](http://jakeklassen.com/post/deploying-a-node-app-on-digital-ocean-using-dokku/).
+Nós recomendamos ler a [documentação do Dokku para configuração](http://dokku.viewdocs.io/dokku/getting-started/installation/) e o artigo [Desdobrando uma aplicação Node.js no Digital Ocean usando Dokku](http://jakeklassen.com/post/deploying-a-node-app-on-digital-ocean-using-dokku/).
 
 Por exemplo, nós iremos chamar nossa aplicação Nuxt `my-nuxt-app`.
 

@@ -1,0 +1,12 @@
+<svg width="160" height="160" viewBox="0 0 160 160" fill="none" xmlns="http://www.w3.org/2000/svg">
+<rect x="70.8652" y="63.4229" width="16.5773" height="88.4124" fill="#FF2C38"/>
+<rect x="73.6289" y="66.1855" width="11.0515" height="13.8144" fill="white"/>
+<rect x="76.3926" y="8.16504" width="5.52577" height="13.8144" fill="#FF2C38"/>
+<rect x="46" y="44.7734" width="5.52577" height="13.8144" transform="rotate(-90 46 44.7734)" fill="#FF2C38"/>
+<rect x="57.5039" y="67.4282" width="5.52577" height="13.8144" transform="rotate(-135 57.5039 67.4282)" fill="#FF2C38"/>
+<rect x="102.047" y="15.7627" width="5.52577" height="13.8144" transform="rotate(45 102.047 15.7627)" fill="#FF2C38"/>
+<rect width="5.52577" height="13.8144" transform="matrix(0.707107 -0.707107 -0.707107 -0.707107 102.047 67.4282)" fill="#FF2C38"/>
+<rect width="5.52577" height="13.8144" transform="matrix(-0.707107 0.707107 0.707107 0.707107 57.5039 15.7627)" fill="#FF2C38"/>
+<rect x="99.1855" y="44.7734" width="5.52577" height="13.8144" transform="rotate(-90 99.1855 44.7734)" fill="#FF2C38"/>
+<circle cx="78.8084" cy="42.3558" r="10.0155" fill="#FF2C38"/>
+</svg>

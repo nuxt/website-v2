@@ -1,0 +1,14 @@
+node_modules
+*.iml
+.idea
+.nuxt
+.vscode
+.DS_Store
+coverage
+dist
+sw.*
+.env
+.output
+.husky
+package-lock.json
+yarn-error.log

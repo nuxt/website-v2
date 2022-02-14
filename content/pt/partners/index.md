@@ -22,7 +22,7 @@ icon: 'technology.svg'
 ---
 
 #category-title
-Technology
+Tecnologia
 ::
 
 ::partners-section
@@ -32,5 +32,5 @@ icon: 'agency.svg'
 ---
 
 #category-title
-Agency
+Agência
 ::

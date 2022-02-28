@@ -1,12 +1,12 @@
 <template>
   <div>
-    <a
+    <AppLink
       v-if="
         masterCoursesLink &&
         ($docus.currentPath.value.startsWith('/docs') || $docus.currentPath.value.startsWith('/examples'))
       "
       :href="masterCoursesLink.href"
-      rel="noopener nofollow noreferrer"
+      rel="noopener"
       target="_blank"
       :aria-label="masterCoursesLink.title"
       class="
@@ -30,7 +30,7 @@
           <p class="text-xs">{{ masterCoursesLink.subtitle }}</p>
         </div>
       </div>
-    </a>
+    </AppLink>
     <div v-if="$docus.currentPath.value.startsWith('/docs')">
       <AppLink v-if="lastRelease" to="/releases" class="flex items-center group nuxt-text-highlight-hover mt-4">
         <IconNuxt class="w-5 h-5 mr-2" />
@@ -45,7 +45,8 @@
 </template>
 
 <script>
-import { defineComponent, useContext, useFetch, ref } from '@nuxtjs/composition-api'
+import get from 'lodash/get'
+import { defineComponent, useContext, useFetch, ref, watch } from '@nuxtjs/composition-api'
 
 export default defineComponent({
   setup() {
@@ -53,22 +54,29 @@ export default defineComponent({
       $docus,
       app: { i18n }
     } = useContext()
-    const lastRelease = ref(null)
-    const masterCoursesLink = ref(null)
 
+    const lastRelease = ref(null)
     useFetch(async () => {
       const { body } = await $docus.data('github-releases')
 
       if (body?.releases?.length) {
         lastRelease.value = body.releases[0].name
       }
-
-      const header = await $docus
-        .search('/collections/navigations', { deep: true })
-        .where({ slug: { $in: 'header' }, language: i18n.locale })
-        .fetch()
-      masterCoursesLink.value = header[0].links[1].items[3]
     })
+
+    const masterCoursesLink = ref(null)
+
+    watch(
+      () => i18n.locale,
+      async () => {
+        const header = await $docus
+          .search('/collections/navigations', { deep: true })
+          .where({ slug: { $in: 'header' }, language: i18n.locale })
+          .fetch()
+        masterCoursesLink.value = get(header, [0, 'links', 1, 'items', 3])
+      },
+      { immediate: true }
+    )
 
     return { lastRelease, masterCoursesLink }
   }

@@ -7,7 +7,6 @@
       "
       :href="masterCoursesLink.href"
       rel="noopener"
-      target="_blank"
       :aria-label="masterCoursesLink.title"
       class="
         mt-2

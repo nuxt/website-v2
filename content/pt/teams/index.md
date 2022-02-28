@@ -29,7 +29,7 @@ teamName: framework
 teamName: community
 ---
 #title
-[Community]{.text-primary}
+[Comunidade]{.text-primary}
 
 #description
 Desde os colaboradores até os advogadores, a comunidade é feita de membros de diferentes horizontes e habilidades. Nós estamos felizes em ver um novo membro todos os dias e encorajamos qualquer um a ajudar de alguma maneira (respondendo a questões, dando uma palestra, criando módulos e colaborando com o núcleo).

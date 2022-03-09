@@ -70,7 +70,7 @@ export default {
     search: 'Procurar um módulo (nome, categoria, nome de utilizador, etc.)',
     sort_by: 'Ordenar por',
     sort_fields: {
-      downloads: 'Downloads',
+      downloads: 'Descarregamentos',
       stars: 'Estrelas'
     },
     loading: 'Carregando...',

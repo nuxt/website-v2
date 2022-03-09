@@ -64,7 +64,7 @@ Desta maneira, todos caminhos de recurso gerados serão prefixados com `/<reposi
 
 Você pode também usar o [pacote push-dir](https://github.com/L33T-KR3W/push-dir):
 
-First install it:
+Primeiro instale ele:
 
 ::code-group
 ```bash [Yarn]

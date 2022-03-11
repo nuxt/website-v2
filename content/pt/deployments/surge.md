@@ -1,22 +1,22 @@
 ---
 template: guide
 title: Surge
-description: How to deploy Nuxt app with Surge?
+description: Como desdobrar uma aplicação Nuxt com Surge?
 target: Static
 category: deployment
 logo:
   light: "/img/companies/square/light/Surge.svg"
   dark: "/img/companies/square/dark/Surge.svg"
 ---
-# Deploy Nuxt with Surge
+# Desdobrar uma aplicação Nuxt com Surge
 
-How to deploy Nuxt app with Surge?
+Como desdobrar uma aplicação Nuxt com Surge?
 
 ---
 
-Nuxt gives you the possibility to host your web application on any static hosting like [Surge](https://surge.sh/) for example.
+O Nuxt dá para você a possibilidade de hospedar sua aplicação web em qualquer hospedagem estática como [Surge](https://surge.sh/) por exemplo.
 
-To deploy on Surge, first install it on your computer:
+Para desdobrar no Surge, primeiro instale ele no seu computador:
 
 ::code-group
 ```bash [Yarn]
@@ -27,7 +27,7 @@ npm install -g surge
 ```
 ::
 
-Then, we tell Nuxt to generate our web application:
+Depois, dizemos ao Nuxt para gerar nossa aplicação web:
 
 ::code-group
 ```bash [Yarn]
@@ -37,18 +37,18 @@ yarn generate
 npm run generate
 ```
 
-It will create a `dist` folder with everything inside ready to be deployed on a static hosting.
+Ele criará uma pasta `dist` com tudo dentro pronto para ser enviado em um hospedagem estática.
 
-We can then deploy it to Surge:
+Nós podemos então fazer o deploy dele para o Surge:
 
 ```bash
 surge dist/
 ```
 
-Done :)
+Feito :)
 
-If you have a project with [dynamic routes](/docs/directory-structure/pages#dynamic-pages), take a look at the [`generate` configuration](/docs/configuration-glossary/configuration-generate) to tell Nuxt how to generate these dynamic routes if you are using Nuxt <= v2.12.
+Se você tiver um projeto com [rotas dinâmicas](/docs/directory-structure/pages#dynamic-pages), dê uma vista de olhos na [configuração do `generate`](/docs/configuration-glossary/configuration-generate) para dizer ao Nuxt como gerar essas rotas dinâmicas se você estiver usando o Nuxt <= v2.12.
 
 ::alert{type="warning"}
-When generating your web application with `nuxt generate`, [the context](/docs/internals-glossary/context) given to [asyncData](/docs/features/data-fetching) will not have `req` and `res`.
+Quando estiver gerando sua aplicação web com `nuxt generate`, o [contexto](/docs/internals-glossary/context) dado ao [asyncData](/docs/features/data-fetching) não terá `req` e `res`.
 ::

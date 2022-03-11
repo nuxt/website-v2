@@ -1,60 +1,60 @@
 ---
 template: guide
 title: Bip
-description: How to deploy a Nuxt app with Bip?
+description: Como desdobrar uma aplicação Nuxt com o Bip?
 target: Static
 category: deployment
 logo:
   light: "/img/companies/square/light/bip.png"
   dark: "/img/companies/square/dark/bip.png"
 ---
-# Deploy Nuxt with Bip
+# Desdobrar o Nuxt com Bip
 
-How to deploy a Nuxt app with Bip?
+Como desdobrar uma aplicação Nuxt com o Bip?
 
 ---
 
-[Bip](https://bip.sh) is a commercial hosting service which provides zero downtime deployment, a global CDN, SSL, unlimited bandwidth and more for Nuxt static websites. Plans are available on a pay as you go, per domain basis.
+O [Bip](https://bip.sh) é um serviço de hospedagem comercial o qual fornece desdobramento com zero tempo de espera, uma CDN global, SSL, banda larga ilimitada e muito mais para websites estáticos do Nuxt. Os planos estão disponíveis em um pagar a medida do uso, por bases de domínio.
 
-The following guide will show you how to deploy your Nuxt static site to Bip in just a couple simple steps.
+O seguinte guia mostrará para você como desdobrar o seu sítio estático para o Bip em apenas alguns passos simples.
 
-## Prerequisites
+## Pré-requisitos
 
-- You have [Yarn](https://yarnpkg.com/getting-started/install) installed.
-- You have the Bip CLI installed, along with a Bip account and domain ready to use. Visit the [Bip Get Started guide](https://bip.sh/getstarted) for further instructions.
+- Você ter [Yarn](https://yarnpkg.com/getting-started/install) instalado.
+- Você ter a interface de linha de comando do Bip instalado, acompanhada de uma conta Bip e domínio pronto para usar. Visite o [guia vamos começar do Bip](https://bip.sh/getstarted) para instruções avançadas.
 
-## Step 1: Initial setup
+## Passo 1: Configuração inicial
 
-You'll first need a Nuxt project ready to deploy and share with the world. If you need a project, use the [create-nuxt-app](https://github.com/nuxt/create-nuxt-app):
+Primeiro precisará de um projeto Nuxt pronto para desdobrar e partilhar com o mundo. Se você precisar de um projeto, use o [create-nuxt-app](https://github.com/nuxt/create-nuxt-app):
 
-Use Yarn to create your new project:
+Use o Yarn para criar seu novo projeto:
 
 ```bash
 yarn create nuxt-app <project-name>
 ```
 
-Follow the prompts to setup your Nuxt project. Ensure that when you reach the 'Deployment target' setting, select 'Static (Static/JAMstack hosting)'.
+Siga os pontos para configurar o seu projeto Nuxt. Garanta que quando você chegar a configuração 'Deployment target' (Alvo do desdobramento), selecione 'Static (Static/JAMstack hosting)' (Estático (Estático/Hospedagem JAMstack)).
 
-Once complete, move into your new directory:
+Uma vez completa, siga para dentro do seu novo diretório:
 
 ```bash
 cd <project-name>
 ```
 
-Next, you'll need to initialize your project with Bip. This only needs to be done once.
+Depois, precisará inicializar o seu projeto com o Bip. Isso só precisa ser feito uma vez.
 
 ```bash
 bip init
 ```
 
-Follow the prompts, where you'll be asked which domain you'd like to deploy to. Bip will detect that you're using Nuxt, and set project settings like the source file directory automatically.
+Siga os pontos. onde será perguntado para qual domínio gostaria desdobrar. O Bip detetará que está usando Nuxt, e definirá as configurações do projeto tal como a fonte do ficheiro do diretório automaticamente.
 
-## Step 2: Deploy
+## Passo 2: Desdobrar
 
-You're now ready to deploy your website. To do so, run:
+Agora está pronto para desdobrar o seu website. Para o fazer, apenas execute:
 
 ```bash
 yarn generate && bip deploy
 ```
 
-That's it! After a few moments, your website will be deployed.
+E já está! Depois de alguns momentos, o seu website estará desdobrado.

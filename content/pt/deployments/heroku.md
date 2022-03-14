@@ -1,32 +1,32 @@
 ---
 template: guide
 title: Heroku
-description: How to deploy Nuxt on Heroku?
+description: Como desdobrar uma aplicação Nuxt no Heroku?
 target: Server
 category: deployment
 logo:
   light: "/img/companies/square/light/Heroku.svg"
   dark: "/img/companies/square/dark/Heroku.svg"
 ---
-# Deploy Nuxt on Heroku
+# Desdobrar uma aplicação Nuxt no Heroku
 
-How to deploy Nuxt on Heroku?
+Como desdobrar uma aplicação Nuxt no Heroku?
 
 ---
 
-We recommend you read the [Heroku documentation for Node.js](https://devcenter.heroku.com/articles/nodejs-support).
+Nós recomendamos que você leia a [documentação do Heroku para Node.js](https://devcenter.heroku.com/articles/nodejs-support).
 
 <div class="Promo__Video">
   <a href="https://vueschool.io/lessons/how-to-deploy-nuxtjs-to-heroku?friend=nuxt" target="_blank">
     <p class="Promo__Video__Icon">
-      Watch a free lesson on <strong>How to deploy Nuxt to Heroku</strong> on Vue School
+      Assista uma aula gratuita  <strong>Como desdobrar uma aplicação Nuxt no Heroku</strong> na Vue School
     </p>
   </a>
 </div>
 
-You can set up and configure your app via the [Heroku dashboard](https://devcenter.heroku.com/articles/heroku-dashboard) or the [Heroku CLI](https://devcenter.heroku.com/articles/heroku-cli).
+Você pode definir e configurar a sua aplicação através do [painel do controlo do Heroku](https://devcenter.heroku.com/articles/heroku-dashboard) ou da [Heroku CLI](https://devcenter.heroku.com/articles/heroku-cli).
 
-First, we create our app. Then we add the Node.js [buildpack](https://devcenter.heroku.com/articles/buildpacks) and configure the app to listen on the host `0.0.0.0`:
+Primeiro, nós criamos nossa aplicação. Depois adicionamos o [pacote de construção(buildpack)](https://devcenter.heroku.com/articles/buildpacks) do Node.js e configura a aplicação para ouvir no hospedeiro `0.0.0.0`:
 
 ```bash
 heroku create myapp
@@ -34,24 +34,24 @@ heroku buildpacks:set heroku/nodejs
 heroku config:set HOST=0.0.0.0
 ```
 
-Your app's Settings section on the Heroku dashboard should contain this:
+A secção de definições da sua aplicação no painel de controlo do Heroku deve conter isso:
 
 ![nuxt config vars Heroku](https://user-images.githubusercontent.com/23453691/116850762-81ea0e00-abf1-11eb-9f70-260721a1d525.png)
 
-Finally, we can push the app on Heroku with:
+Finalmente, nós podemos empurrar a aplicação no Heroku com:
 
 ```bash
 git push heroku master
 ```
 
-To deploy a non-master branch to Heroku use:
+Para desdobrar um ramo que não seja a master para o Heroku use:
 
 ```bash
 git push heroku develop:master
 ```
 
-where `develop` is the name of your branch.
+onde `develop` é o nome do seu ramo.
 
-You can optionally configure automatic deploys from a selected branch of your app's GitHub repository in the Deploy section of your app in the Heroku dashboard.
+Você pode opcionalmente configurar automaticamente os processos de desdobramento a partir de uma ramo selecionada do repositório do GitHub da sua aplicação dentro da secção Deploy (Desdobrar) da sua aplicação dentro do painel de controlo do Heroku.
 
-Voilà! Your Nuxt application is now hosted on Heroku!
+Voilà! Sua aplicação Nuxt está agora hospedada no Heroku!

@@ -1,36 +1,36 @@
 ---
 template: guide
 title: Fume
-description: How to deploy Nuxt on Fume?
+description: Como desdobrar uma aplicação Nuxt no Fume?
 target: Static & Server
 category: deployment
 logo:
   light: "/img/companies/square/light/Fume.svg"
   dark: "/img/companies/square/dark/Fume.svg"
 ---
-# Deploy Nuxt on Fume
+# Desdobrar o Nuxt no Fume
 
-How to deploy Nuxt on Fume?
+Como desdobrar uma aplicação Nuxt no Fume?
 
 ---
 
-[Fume](https://fume.app/) is an operations control platform powered by AWS.
+[Fume](https://fume.app/) é uma plataforma de controlo de operações suportada pelo AWS.
 
-Fume includes the following features:
+O Fume inclui as seguintes funcionalidades:
 
-- Serverless structures supporting both Server and Static with Lambda and CloudFront.
-- [Automated](https://github.com/marketplace/actions/fume-deployment) deployments with rollbacks with the click of a button
-- Metrics and cost prediction for each environment
-- Domain control - import hosts, issues certificates, and map records to environments
-- Integrated notifications to Slack, Discord, and other collaboration platforms
+- Estrutura serverless suportando ambos Servidor e Estático com o Lambda e CloudFront.
+- Desdobramento [automatizado](https://github.com/marketplace/actions/fume-deployment) com recuperação com o clique de um botão
+- Métricas e previsão de custo para cada ambiente
+- Controlo de domínio - importar hospedeiros, emitir certificados e mapear registo para os ambientes
+- Notificações integradas para o Slack, Discord, e outras plataformas de colaboração
 
-## Setup
+## Configuração
 
-Get a production-ready URL in 2 minutes with these steps:
+Consiga uma URL pronta para produção em dois minutos com estes passos:
 
-- Head to [Fume](https://fume.app), connect and plug in your AWS account
-- Create a Team, and a Nuxt project
-- Run the following command inside your projects root folder
+- Siga para o [Fume](https://fume.app), conecte e ligue-se a sua conta da AWS
+- Crie uma equipa (Team), e um projeto Nuxt
+- Execute os seguintes comandos dentro da pasta raiz do seu projeto
 
 ::code-group
 ```bash [Yarn]

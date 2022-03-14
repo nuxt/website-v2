@@ -1,68 +1,68 @@
 ---
 template: guide
 title: Google Cloud Run
-description: How to deploy Nuxt on Google Cloud Run?
+description: Como desdobrar o Nuxt no Google Cloud Run?
 target: Server
 category: deployment
 logo:
   light: "/img/companies/square/light/Google_Cloud_run.svg"
   dark: "/img/companies/square/dark/Google_Cloud_run.svg"
 ---
-# Deploy Nuxt on Google Cloud Run
+# Desdobrar o Nuxt no Google Cloud Run
 
-How to deploy Nuxt on Google Cloud Run?
+Como desdobrar o Nuxt no Google Cloud Run?
 
 ---
 
-[Google Cloud Run](https://cloud.google.com/run) is a fully managed compute platform for deploying and scaling containerized applications quickly and securely.
+O [Google Cloud Run](https://cloud.google.com/run) é uma plataforma de computação completamente gerida para desdobramento e escalamento de aplicações rapidamente e seguramente adicionadas em contentores.
 
-In this guide, we simply upload the entire project folder to Google Cloud Build with a Dockerfile. After the upload, Cloud Build will automatically generate a container. Then we will deploy this container to Google Cloud Run which will start it with the `start` script in our package.json.
+Neste guia, nós simplesmente carregamos a pasta inteira do projeto para o Google Cloud Build com um `Dockerfile`. Depois de carregar, o Cloud Build gerará automaticamente um contentor. Depois nós desdobraremos este contentor para o Google Cloud Run o qual iniciará ele com o script `start` dentro do nosso `package.json`.
 
-## Getting Started
+## Pontapé de Saída
 
-Make sure you have a Google Cloud Account, a project and the accesses as editor on Cloud Build and Cloud Run. Furthermore, make sure to download and install the Cloud SDK (CLI) from Google as explained [here](https://cloud.google.com/sdk/) and log into your Google Cloud Account. If you do not want to download the Cloud SDK, be aware that you can use gcloud CLI from the Google Cloud Console.
+Certifique-se de que você tem uma conta no Google Cloud, um projeto e os acessos como editor no Cloud Build e no Cloud Run. Além disso, certifique-se de descarregar e instalar a interface de linha de comando do Cloud SDK a partir do Google como explicado [aqui](https://cloud.google.com/sdk/) e inicie a sessão com a sua conta do Google Cloud. Se você não quiser descarregar o Cloud SDK esteja ciente de que você pode usar a interface de linha de comando `gcloud` a partir do Google Cloud Console.
 
-Now, let's do few checks!
+Agora, vamos fazer algumas verificações!
 
-If the Cloud Build API and the Cloud Run API are not enabled, enable them:
+Se a API do Cloud Build e a API do Cloud Run não estiverem ativadas, ative elas:
 
 ```bash
-# Enabling Cloud Build
+# Ativando o Cloud Build
 $ gcloud services enable cloudbuild.googleapis.com
 
-# Enabling Cloud Run
+# Ativando o Cloud Run
 $ gcloud services enable run.googleapis.com
 ```
 
-Go in your application directory and install dependencies:
+Vá dentro do diretório da sua aplicação e instale as dependências:
 
 ```bash
-# For yarn users
+# Para os usuários do yarn
 $ yarn
 
-# For npm users
+# Para os usuários do npm
 $ npm install
 ```
 
-Start the application locally:
+Inicie a aplicação localmente:
 
 ```bash
-# For yarn users
+# Para os usuários do yarn
 $ yarn dev
 
-# For npm users
+# Para os usuários do npm
 $ npm run dev
 ```
 
-Check that everything works.
+Verifique se tudo está a funcionar.
 
-## Containerize your application
+## Adicionar a sua aplicação em um contentor
 
-Now, we will create a container with Cloud Build.
+Agora, nós criaremos um contentor com o Cloud Build.
 
-You need to add to your Nuxt app a `Dockerfile`. Create a new file named `Dockerfile` in your root project directory and add the following content:
+Você precisa adicionar a sua aplicação Nuxt um ficheiro `Dockerfile`. Crie um novo ficheiro com o nome `Dockerfile` dentro da raiz do diretório do seu projeto e adicione o seguinte conteúdo:
 
-For yarn users:
+Para os usuários do yarn:
 
 ```Dockerfile
 FROM node:14
@@ -82,7 +82,7 @@ RUN yarn build
 CMD [ "yarn", "start" ]
 ```
 
-For npm users:
+Para os usuários do npm:
 
 ```Dockerfile
 FROM node:14
@@ -102,26 +102,26 @@ RUN npm run build
 CMD [ "npm", "run", "start" ]
 ```
 
-Run the following command to start the build process:
+Execute o seguinte comando para iniciar o processo de construção:
 
 `gcloud builds submit --tag gcr.io/<YOUR_GOOGLE_CLOUD_PROJECT_ID>/my-nuxt-app-name:1.0.0 .`
 
-!Attention: if you want to implement continuous delivery or .env files configurations, you will have to use a [Cloud Build configuration file](https://cloud.google.com/cloud-build/docs/build-config).
+!Atenção: se você quiser implementar entrega contínuas (CD) ou ficheiros de configurações `.env`, você terá de usar um [ficheiro de configuração do Cloud Build](https://cloud.google.com/cloud-build/docs/build-config).
 
-## Deploying your application on Cloud Run
+## Desdobrando a sua aplicação no Cloud Run
 
-Run the following command to deploy your application:
+Execute o seguinte comando para desdobrar a sua aplicação:
 
 `gcloud run deploy --image=gcr.io/<YOUR_GOOGLE_CLOUD_PROJECT_ID>/my-nuxt-app-name:1.0.0 --platform managed --port 3000`
 
-Allow unauthenticated invocations if you want to set up a public access.
+Permita invocações não autenticadas se você quiser definir um acesso público.
 
-Be aware that Cloud Run applications will have a default concurrency value of 80 (each container instance will handle up to 80 requests at a time). You can specify the concurrency value this way:
+Esteja ciente de que as aplicações do Cloud Run terão um valor de concorrência padrão de 80 (cada instância do contentor manipulará até 80 requisições por vez). Você pode especificar o valor de concorrência esta maneira:
 
 `gcloud run deploy --image=gcr.io/<YOUR_GOOGLE_CLOUD_PROJECT_ID>/my-nuxt-app-name:1.0.0 --platform managed --port 3000 --concurrency <YOUR_CONCURRENCY_VALUE>`
 
-Run the following command to check if the deployment was created successfully:
+Execute o seguinte comando para verificar se o desdobramento foi criado com sucesso:
 
 `gcloud run services list --platform managed`
 
-A list of Cloud Run services is displayed. Click on the URL of your deployment and enjoy the result!
+Uma lista de serviços do Cloud Run é exibido, clique na URL do desdobramento e aprecie o resultado!

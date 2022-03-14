@@ -1,34 +1,34 @@
 ---
 template: guide
 title: Platform.sh
-description: How to deploy Nuxt on Platform.sh?
+description: Como desdobrar o Nuxt no Platforn.sh?
 target: Static & Server
 category: deployment
 logo:
   light: "/img/companies/square/light/Platformsh.svg"
   dark: "/img/companies/square/dark/Platformsh.svg"
 ---
-# Deploy Nuxt on Platform.sh
+# Desdobrar o Nuxt no Platform.sh
 
-How to deploy Nuxt on Platform.sh?
+Como desdobrar o Nuxt no Platforn.sh?
 
 ---
 
-[Platform.sh](https://platform.sh/) is a full-featured end-to-end continuous deployment cloud hosting system for both staging and production environments. It is capable of hosting both static and dynamic applications in a variety of languages.
+[Platform.sh](https://platform.sh/) é um sistema de desdobramento de hospedagem em nuvem contínuo de funcionalidade completa de fim à fim para ambos ambientes de qualidade e produção.
 
-Platform.sh includes the following features:
+Platform.sh inclui as seguintes funcionalidades:
 
-- Build, deploy, manage, and scale applications.
-- Any branch can be a staging environment; create and delete environments with ease.
-- Support for almost any Node.js, PHP, Python, Ruby, Go, or Java application, in your choice of version, or mix and match.
-- Automatic TLS certificates.
-- Integrated build pipeline to customize your application's build process however you need.
-- Infrastructure-as-code: define three YAML files and your entire cluster is created on demand. Add and remove services with ease.
-- Deploy code directly from your GitHub and GitLab repositories.
+- Construir, desdobrar, gerir e escalar as aplicações.
+- Qualquer ramo pode ser um ambiente de qualidade; criar e eliminar ambientes com facilidade.
+- Suporte para quase qualquer aplicação Node.js, PHP, Python, Ruby, Go, or Java, dentro da sua escolha de versões, ou misturar e combinar.
+- Certificados TLS automáticos.
+- Cano de construção integrado para personalizar o processo de construção da sua aplicação de qualquer mode que você precisar.
+- Infraestrutura como código: define três ficheiros YAML e o seu grupo inteiro é criado sobre demanda. Adiciona e remove serviços com facilidade.
+- Desdobrar o código diretamente a partir dos seus repositórios no GitHub e GitLab.
 
-## Setup
+## Configurar
 
-Platform.sh has a pre-made template for Nuxt available. The link below will create a new Platform.sh project and pre-populate it with a sample Nuxt application that you can then customize.
+A Platform.sh tem disponível um modelo pré-feito para o Nuxt. A ligação abaixo criará um novo projeto no Platform.sh e pré-popular ele com um exemplo de aplicação Nuxt que pode ser depois personalizado.
 
 <p align="center">
 <a href="https://console.platform.sh/projects/create-project?template=https://raw.githubusercontent.com/platformsh/template-builder/master/templates/nuxtjs/.platform.template.yaml&utm_content=nuxtjs&utm_source=nuxtjs_orgb&utm_medium=button&utm_campaign=deploy_on_platform" target="_blank">
@@ -36,4 +36,4 @@ Platform.sh has a pre-made template for Nuxt available. The link below will crea
 </a>
 </p>
 
-The `README.md` file includes details of the provided default configuration. New Platform.sh accounts are free for the first 30 days.
+O ficheiro `README.md` inclui detalhes da configuração padrão fornecida. As novas contas Platform.sh são gratuitas pelos primeiros 30 dias.

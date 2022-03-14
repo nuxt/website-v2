@@ -1,70 +1,70 @@
 ---
 template: guide
 title: Qovery
-description: How to deploy Nuxt on Qovery?
+description: Como desdobrar o Nuxt no Qovery?
 target: Static & Server
 category: deployment
 logo:
   light: "/img/companies/square/light/Qovery.svg"
   dark: "/img/companies/square/dark/Qovery.svg"
 ---
-# Deploy Nuxt on Qovery
+# Desdobrar o Nuxt no Qovery
 
-How to deploy Nuxt on Qovery?
+Como desdobrar o Nuxt no Qovery?
 
 ---
 
-[Qovery](https://qovery.com) is a fully-managed cloud platform that runs on your AWS, GCP, Azure and Digital Ocean account where you can host static sites, backend APIs, databases, cron jobs, and all your other apps in one place.
+O [Qovery](https://qovery.com) é uma plataforma de nuvem completamente gerida que executa sobre a sua conta AWS, GCP, Azure e Digital Ocean onde você você pode hospedar sítios estáticos, backend de APIs, base de dados, e todas outras suas aplicações em um só lugar.
 
-Static sites are **completely free** on Qovery and include the following:
+Os sítios estáticos são **completamente grátis** no Qovery e incluem as seguintes funcionalidades:
 
-- Continuous, automatic builds & deploys from GitHub and GitLab.
-- Automatic SSL certificates through [Let's Encrypt](https://letsencrypt.org).
-- Free managed PostgreSQL.
-- Free SSD storage.
-- Unlimited collaborators.
-- Unlimited [custom domains](https://docs.qovery.com/guides/getting-started/setting-custom-domain/).
+- Construções automáticas e desdobramentos contínuos a partir do GitHub e GitLab.
+- Certificação SSL automática através do [Let's Encrypt](https://letsencrypt.org).
+- PostgreSQL gerido grátis.
+- Armazenamento SSD grátis
+- Colaboradores ilimitados.
+- [Domínios personalizados](https://docs.qovery.com/guides/getting-started/setting-custom-domain/) ilimitados.
 
-## Prerequisites
+## Pré-requisitos
 
-This guide assumes you already have a Nuxt project to deploy. If you need a project, follow the [Get Started](/docs/get-started/installation) guide.
+Este guia assume que você já tem um projeto Nuxt para desdobrar. Se você precisar de um projeto, siga o guia [Pontapé de Partida](/docs/get-started/installation).
 
-## Setup
+## Configuração
 
-Follow the procedure below to set up Nuxt on Qovery:
+Siga o procedimento abaixo para configurar o Nuxt no Qovery:
 
-### 1. Create a Qovery account.
+### 1. Criar uma conta Qovery.
 
-Visit the [Qovery dashboard](https://console.qovery.com) to create an account if you don't already have one.
+Visite o [painel de controlo do Qovery](https://console.qovery.com) para criar uma conta se você ainda não tiver uma.
 
-### 2. Create a project
+### 2. Criar um projeto
 
-Click on "Create a new project" and give a name to your project.
+Clique no "Create a new project (Criar um novo projeto)" e dê um nome ao seu projeto.
 
-Click on "Next".
+Clique em "Next (Seguinte)"
 
-### 3. Add an application
+### 3. Adicionar uma aplicação
 
-Click on "Create an application" then choose "I have an application" and select the repository where your Nuxt site is located.
+Clique em "Create an application (Criar uma aplicação)" e depois escolha "I have an application (Eu tenho uma aplicação)" e seleciona o repositório onde o seu sítio Nuxt está localizado.
 
-Click on "Next".
+Clique em "Next (Seguinte)".
 
-Skip adding services for static website.
+Pule adicionar serviços para websites estático.
 
-Click on "Deploy".
+Clique em "Deploy (Desdobrar)"
 
-## Deploy
+## Desdobrar
 
-Your app should be deployed. You can see the status in real time by clicking on deployment logs.
+A sua aplicação deve estar desdobrada. Você pode consultar os estados em tempo real ao clicar em "deployment logs (relatórios de desdobramento)".
 
-## Continuous deploys
+## Desdobramento Contínuos
 
-Now that Qovery is connected to your repo, it will **automatically build and publish your site** any time you push to git.
+Agora que Qovery está conectado com o seu repositório, ele irá **automaticamente construir e publicar o seu sítio** sempre que você empurrar para o git.
 
-## Custom domains
+## Domínios Personalizados
 
-Add your own domains to your site easily using Qovery's [custom domains](https://docs.qovery.com/guides/getting-started/setting-custom-domain/) guide.
+Adicione o seu próprio domínio ao seu sítio facilmente usando o guia de [domínios personalizados](https://docs.qovery.com/guides/getting-started/setting-custom-domain/) do Qovery.
 
-## Support
+## Suporte
 
-Chat with Qovery developers on [Discord](https://discord.qovery.com) if you need help.
+Converse com os desenvolvedores da Qovery no [Discord](https://discord.qovery.com) se você precisar de ajuda.

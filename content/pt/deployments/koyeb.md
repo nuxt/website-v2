@@ -1,50 +1,50 @@
 ---
 template: guide
 title: Koyeb
-description: Deploy Nuxt on Koyeb Serverless Platform with Docker
+description: Desdobrar o Nuxt na Plataforma Serverless da Koyeb com Docker
 target: Server
 category: deployment
 logo:
   light: "/img/companies/square/light/Koyeb.svg"
   dark: "/img/companies/square/dark/Koyeb.svg"
 ---
-# Deploy Nuxt on Koyeb Serverless Platform
+# Desdobrar o Nuxt na Plataforma Serverless da Koyeb
 
-Deploy Nuxt on Koyeb Serverless Platform with Docker
+Desdobrar o Nuxt na Plataforma Serverless da Koyeb com Docker
 
 ---
 
-[Koyeb](https://www.koyeb.com) is a developer-friendly serverless platform to deploy apps globally. The platform lets you seamlessly run Docker containers, web apps, and APIs with git-based deployment, native autoscaling, a global edge network, and built-in service mesh and discovery.
+A [Koyeb](https://www.koyeb.com) é uma plataforma serverless amigável ao desenvolvedor para desdobrar aplicações globalmente. A plataforma permite você ininterruptamente executar contentores do Docker, aplicações web, APIs com desdobramento baseado no Git, escalamento nativo automático, uma rede de limite global, e serviço de coordenação e descoberta embutido.
 
-In this guide, we showcase how to dockerize and deploy a Nuxt application on the Koyeb platform.
+Neste guia, nós mostraremos como dockerizar e desdobrar uma aplicação Nuxt na plataforma Koyeb.
 
-> Koyeb allows you to deploy Docker containers from the registry of your choice. In this guide we use the Docker Hub to store our image but you are free to use the [GitHub Container Registry](https://docs.github.com/en/packages/working-with-a-github-packages-registry/working-with-the-container-registry), the [GitLab Container Registry](https://docs.gitlab.com/ee/user/packages/container_registry/) or any other container registry provider.
+> A Koyeb permite você desdobrar contentores do Docker a partir do registo de sua escolha. Neste guia nós usamos o Docker Hub para guardar nossa imagem mas você está livre de usar o [Registo de Contentor do GitHub](https://docs.github.com/en/packages/working-with-a-github-packages-registry/working-with-the-container-registry), o [Registo de Contentor do GitLab](https://docs.gitlab.com/ee/user/packages/container_registry/) ou qualquer outro provedor de registo de contentor.
 
-## Requirements
+## Requisitos
 
-To successfully follow and complete this guide, you need:
+Para seguir com êxito e completar este guia, você precisa:
 
-1. A Nuxt project to deploy. You can use the [create-nuxt-app](https://github.com/nuxt/create-nuxt-app) to create a Nuxt project and get started
-2. A [Koyeb account](https://app.koyeb.com) to deploy and run the dockerized Nuxt application
-3. A [Docker Hub](https://hub.docker.com/) account to push the Docker image and deploy it on Koyeb
+1. Um projeto Nuxt para desdobrar. Você pode usar o [create-nuxt-app](https://github.com/nuxt/create-nuxt-app) para criar um projeto Nuxt e começar.
+2. Uma [conta no Koyeb](https://app.koyeb.com) para desdobrar e executar a aplicação Nuxt dockerizada
+3. Uma conta no [Docker Hub](https://hub.docker.com/) para empurrar a imagem do Docker e desdobrar ela no Koyeb
 
-## Getting started
+## Começar
 
-In your Nuxt application directory run the following command to install dependencies:
+Dentro do diretório da sua aplicação Nuxt execute o seguinte comando para instalar as dependências:
 
 ```bash
 yarn
 ```
 
-Once the dependencies are installed, launch your application and ensure everything is working fine:
+Uma vez que as dependências estão instaladas, execute a sua aplicação e certifique que tudo está funcionando corretamente:
 
 ```bash
 yarn dev
 ```
 
-## Dockerize your application
+## Dockerizar a sua aplicação
 
-To Dockerize your Nuxt application, you need to create a `Dockerfile` in your project directory containing the content below:
+Para Dockerizar a sua aplicação Nuxt, você precisa criar um ficheiro `Dockerfile` dentro do diretório do seu projeto contendo o conteúdo abaixo:
 
 ```dockerfile
 FROM node:lts as builder
@@ -80,49 +80,48 @@ EXPOSE 80
 CMD [ "yarn", "start" ]
 ```
 
-To build the Docker image execute the following command:
+Para construir uma imagem do Docker execute o seguinte comando:
 
 ```bash
 docker build . -t <YOUR_DOCKER_HUB_USERNAME>/my-nuxt-project
 ```
 
-This command will build the Docker image with the name <YOUR_DOCKER_HUB>/my-nuxt-project. Once the build is over, you can run a container using the image locally to validate everything is working as expected running:
+Este comando construirá a imagem do Docker com o nome <YOUR_DOCKER_HUB>/my-nuxt-project. Um vez que a construção estiver terminada, você pode executar um contentor usando a imagem localmente para validar que tudo está funcionado como o esperado.
 
 ```bash
 docker run -p 3000:3000 <YOUR_DOCKER_HUB_USERNAME>/my-nuxt-project
 ```
 
-Open your browser and navigate to http://localhost:3000 to view your project landing page.
+Abra o seu navegador e navegue até o http://localhost:3000 para visualizar a página de desembarque da sua aplicação.
 
-## Push your Docker image to a container registry
+## Empurrar a sua imagem do Docker para o registo de contentor
 
-Since our Docker image is built and functional in our test, we can now upload it to a container registry. In this documentation, we will store our image on the Docker Hub. In your terminal run the command below to push the image:
+Depois de nossa imagem do Docker estar construida e funcional dentro do nosso teste, nós podemos agora carregar ela para um registo de contentor. Nesta documentação, nós guardaremos a nossa imagem no Docker Hub. Dentro do seu terminal execute o comando abaixo para empurrar a imagem:
 
 ```bash
 docker push <YOUR_DOCKER_HUB_USERNAME>/my-nuxt-project
 ```
 
-## Deploy the Nuxt application to production on Koyeb
+## Desdobrar a aplicação Nuxt para produção na Koyeb
 
-On the Koyeb Control Panel, click the **Create App** button.
+No Painel de Controlo da Koyeb, clique no botão **Create App (Criar Aplicação)**.
 
-In the form, fill the `Docker image` field with the name of the image we previously created which should look like `<YOUR_DOCKER_HUB_USERNAME>/my-nuxt-project`.
+Dentro do formulário, preencha o campo `Docker image (imagem do Docker)` com o nome da imagem de nós criamos previamente a qual deve parecer com `<YOUR_DOCKER_HUB_USERNAME>/my-nuxt-project`.
 
-Check the box `Use a private registry` and, in the select field, click **Create Registry Secret**.
+Marque a caixa `Use a private registry (Usar um registo privado)` e, dentro do campo selecionar, clique em **Create Repository Secret (Criar Segredo de Repositório)**. 
 
-A modal opens asking for:
+Um modal abre pedindo por:
 
-- a name for the Secret which will be created, we can use for instance `docker-hub-secret`
-- the registry provider to generate the secret containing your private registry credentials, in our case Docker Hub
-- your Docker Hub username and password. We recommend you to [generate an access token](https://hub.docker.com/settings/security) from the Docker Hub to use instead of your password.
-  Once you've filled all the fields, click the **Create** button.
+- um nome para o Segredo que será criado, nós podemos usar para instância `docker-hub-secret`
+- o provedor de registo para gerar o segredo contendo as credenciais do seu registo privado, no nosso caso o Docker Hub
+- o seu nome de usuário do Docker Hub e a palavra-chave. Nós recomendamos a você [criar um código (token) de acesso](https://hub.docker.com/settings/security) a partir do Docker Hub para usar no lugar da sua palavra-chave. Uma vez que você tem preenchido todos os campos, clique no botão **Create (Criar)**.
 
-We don't need to change the _Path_, our app will be available at the root of our domain: `/`.
+Nós não precisamos mudar o _Path (Caminho)_, a nossa aplicação estará disponível na raiz do nosso domínio: `/`.
 
-Give your App a name, i.e `nuxt-app`, and click **Create App**.
+Dê um nome a sua Aplicação, exemplo `nuxt-app`, e clique em **Create App (Criar Aplicação)**.
 
-_You can add more regions to deploy your applications, set environment variables, and define the horizontal scaling according to your needs._
+_Você pode adicionar mais regiões para desdobrar suas aplicações, definir variáveis de ambiente, e definir escalamento horizontal de acordo com as suas necessidades._
 
-You will automatically be redirected to the Koyeb App page where you can follow the progress of your Nuxt application deployment. In a few seconds, once your app is deployed, click on the _Public URL_ ending with `koyeb.app`.
+Você será automaticamente redirecionado para a página Koyeb App onde você pode seguir o progresso do desdobramento da sua aplicação Nuxt. Dentro de poucos segundos, um vez que a sua aplicação está desdobrada, clique na _Public URL (URL Pública)_ que termina com `koyeb.app`.
 
-Your Nuxt application is now running on Koyeb and benefits from native autoscaling, automatic HTTPS (SSL), auto-healing, and global load-balancing across our edge network.
+A sua aplicação Nuxt agora está executando na Koyeb e beneficia do escalamento nativo automático, HTTPs (SSL) automático, auto-estabilização, e balanceador de carregamento global através do limite da nossa rede.

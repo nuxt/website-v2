@@ -1,63 +1,63 @@
 ---
 template: guide
 title: Digital Ocean
-description: How to deploy Nuxt on DigitalOcean App Platform?
+description: Como desdobrar o Nuxt na Plataforma de Aplicação do DigitalOcean?
 target: Static & Server
 category: deployment
 logo:
   light: "/img/companies/square/light/Digital_Ocean.svg"
   dark: "/img/companies/square/dark/Digital_Ocean.svg"
 ---
-# Deploy Nuxt on DigitalOcean App Platform
+Desdobrar o Nuxt na Plataforma de Aplicação do DigitalOcean
 
-How to deploy Nuxt on DigitalOcean App Platform?
+Como desdobrar o Nuxt na Plataforma de Aplicação do DigitalOcean?
 
 ---
 
-[DigitalOcean App Platform](https://www.digitalocean.com/products/app-platform/) allows you to build, deploy, and scale apps quickly using a simple, fully managed solution. They’ll handle the infrastructure, app runtimes and dependencies, so that you can push code to production in just a few clicks.
+[Plataforma de Aplicação do DigitalOcean](https://www.digitalocean.com/products/app-platform/) permite você construir, desdobrar e escalar aplicações rapidamente usando uma solução simples e completamente gerida. Eles manipularão a infraestrutura, os tempos de execução da aplicação e dependências, assim que você empurrar o código para produção em alguns poucos cliques.
 
-App Platform includes the following features:
+A Plataforma de Aplicação inclui as seguintes funcionalidades:
 
-- Build, deploy, manage, and scale apps.
-- Secure apps automatically. They create, manage and renew your SSL certificates and also protect your apps from DDoS attacks.
-- Support for Node.js, static sites, Python, Django, Go, PHP, Laravel, React, Ruby, Ruby on Rails, Gatsby, Hugo, container images.
-- Deploy code directly from your GitHub and GitLab repositories. Automatically re-deploy the app when you push updates to your source code.
-- Zero infrastructure management. App Platform uses open, cloud native standards and automatically analyzes your code, creates containers, and runs them on Kubernetes clusters.
-- Highly scalable. Scale horizontally or vertically.
+- Construir, desdobrar, gerir e escalar aplicações.
+- Proteger as aplicações automaticamente. Eles criam, gerem e renovam seus certificados SSL e também protegem suas aplicações de ataques de negação de serviços (DDos).
+- Suporte para Node.js, sítios estáticos, Python, Django, Go, PHP, Laravel, React, Ruby, Ruby on Rails, Gatsby, Hugo, contentor de imagens.
+- Desdobrar o código diretamente a partir dos seus repositórios GitHub e GitLab. Redesdobrar a aplicação automaticamente sempre que você empurrar atualizações ao seu código-fonte.
+- Zero gestão de infraestrutura. A Plataforma de Aplicação usa padrões abertos de nuvem nativas e analisa automaticamente o seu código, cria os contentores, e executa eles sobre os agrupadores do Kubernetes.
+- Altamente escalável. Escala horizontalmente ou verticalmente.
 
-## Prerequisites
+## Pré-requisitos
 
-This guide assumes you already have a Nuxt project to deploy. If you need a project, use the [create-nuxt-app](https://github.com/nuxt/create-nuxt-app) to get started.
+Este guia assume que você já tem um projeto Nuxt para desdobrar. Se você precisar de um projeto, use o [create-nuxt-app](https://github.com/nuxt/create-nuxt-app) para começar.
 
-## Setup
+## Configuração
 
-1. Link your repository: Create a new account on DigitalOcean and connect your GitHub or Gitlab account. Then select the repository you want to deploy.
-2. Choose a branch of your repo and a region to deploy your site.
-3. Choose the service that suits your website.
+1. Ligue o seu repositório: Crie uma nova conta na DigitalOcean e conecte a sua conta GitHub ou GitLab. Depois selecione o repositório que você quer desdobrar
+2. Escolha um ramo do seu repositório e uma região para desdobrar o seu sítio.
+3. Escolha o serviço que combine com o seu website.
 
-   | Type       | Settings                                                               |
+   | Type Tipo      | Settings Configurações                                                              |
    | ---------- | ---------------------------------------------------------------------- |
-   | **Server** | Web service - Build command `yarn build` & Run command `yarn start --hostname 0.0.0.0`    |
-   | **Static** | Static Sites - Build command `yarn generate` & Output directory `dist` |
+   | **Server (Servidor)** | Serviço da Web - Comando de construção `yarn build` e Comando de execução `yarn start --hostname 0.0.0.0`  |
+   | **Static (Estático)** | Sítios Estáticos - Comando de construção `yarn generate` e Diretório de saída `dist` |
 
    ::alert{type="warning"}
-    <b>Warning:</b> For the server type you need to change the **HTTP port** from 8080 to **3000** in the Web service settings. <br /> More information at [this article](https://dev.to/tillsanders/deploy-nuxt-js-on-digitalocean-app-platform-in-5-minutes-or-less-2dij).
+    **Aviso:** Para o tipo servidor você precisa mudar a **porta HTTP** de 8080 para **3000** nas configurações de serviços da web. Para mais informações consulte o [artigo](https://dev.to/tillsanders/deploy-nuxt-js-on-digitalocean-app-platform-in-5-minutes-or-less-2dij).
    ::
 
    ![DO App platform Web Service Nuxt configuration](https://i.imgur.com/BhBu49J.png)
 
-4. If you have any environment variable, add them manually in the key-value pair inputs.
+4. Se você tiver alguma variável de ambiente, adicione elas manualmente nas entradas de pares chave-valor.
 
-Once you pass the process, you hit deploy and your site will be live on an autogenerated url as soon as the build is done.
+Uma vez que você passar o processo, você toca em desdobrar e seu sítio estará a viver uma url autogerada o mais cedo possível depois que a construção estiver terminada.
 
-## Continuous deployment (CD)
+## Desdobramento Contínuos (CD em Inglês)
 
-Now that App Platform is connected to your repo, it will automatically build and publish your site any time you push a new change.
+Agora que a Plataforma de Aplicação está conectada ao seu repositório, ela irá automaticamente construir e publicar o seu sítio sempre que você empurrar uma nova mudança.
 
-## Add custom domains
+## Adicionar domínios personalizados
 
-Add your own domains to your site easily on Settings > Domains > Add domain or follow this [How to Manage Domains in App Platform](https://www.digitalocean.com/docs/app-platform/how-to/manage-domains/) guide.
+Adicione o seu próprio domínio ao seu sítio facilmente em Configurações (Settings) > Domínios (Domains)  > Adicionar domínio (Add domain) ou siga este guia [Como Gerir Domínios dentro da Plataforma de Aplicação](https://www.digitalocean.com/docs/app-platform/how-to/manage-domains/).
 
-## Deploy to DigitalOcean button
+## O botão Desdobrar para DigitalOcean
 
-The Deploy to DigitalOcean Button allows users to launch an application onto App Platform. It can be embedded in the README file for GitHub repositories, allowing users who are browsing your repository to deploy your code in one click, adding a .yaml file into your repo. Check it out at [How to Add a "Deploy to DigitalOcean" Button to Your Repository](https://www.digitalocean.com/docs/app-platform/how-to/add-deploy-do-button/)
+O botão Desdobrar para DigitalOcean permite os usuários lançarem uma aplicação para a Plataforma de Aplicação. Ele pode ser embutido dentro do ficheiro README para repositórios GitHub, permitindo que usuários que estejam navegando em seu repositório desdobrar seu código em um clique, adicionando um ficheiro .yaml dentro do seu repositório. Consulte em [Como Adicionar um Botão "Desdobrar para DigitalOcean" ao Seu Repositório](https://www.digitalocean.com/docs/app-platform/how-to/add-deploy-do-button/)

@@ -4,16 +4,13 @@
 # Global owners will be requested for review when someone opens a pull request
 # These owners will be the default owners for everything in
 # the repo (unless a later match takes precedence)
-*                   @alexchopin
-
-# Cypress & Content
-/content/**         @debs-obrien
-/cypress/**         @debs-obrien
+*                   @clemcode @atinux @alexchopin
 
 # Main content
-/content/en/**      @nuxt/framework
+/content/en/**      @danielroe @atinux @clemcode @pi0 @alexchopin
 
 # Translations
-/content/ja/**      @inouetakuya @53able
+/content/fr/**      @atinux @clemcode @alexchopin @flosciante
+/content/ja/**      @kazupon @inouetakuya @53able
 /content/id/**      @febrihidayan
 

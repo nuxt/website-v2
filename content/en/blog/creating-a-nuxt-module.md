@@ -387,6 +387,9 @@ export default function () {
   const options = nuxt.options.ngrok || {}
   const token = process.env.NGROK_TOKEN || options.token
 
+  // Initialize empty url variable
+  let url = undefined
+
   // https://nuxtjs.org/docs/2.x/internals-glossary/internals-nuxt#hooks
   nuxt.hook('listen', async function (server, { port }) {
 

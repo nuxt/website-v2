@@ -62,7 +62,7 @@ this.plugin('ready', async moduleContainer => {
 ```js
 this.addPlugin({
   src: path.resolve(__dirname, 'templates/foo.js'),
-  fileName: 'foo.server.js' // [optional] はサーバーバンドルにのみ含まれます
+  fileName: 'foo.server.js', // [optional] はサーバーバンドルにのみ含まれます
   options: moduleOptions
 })
 ```

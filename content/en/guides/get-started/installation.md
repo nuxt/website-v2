@@ -20,9 +20,9 @@ ManualInstallVideoTitle: Nuxt Manual Installation
 
 <YouTubeLite :video="CreateNuxtAppVideo" :title="CreateNuxtAppVideoTitle" ></YouTubeLite>
 
-To get started quickly you can use the [create-nuxt-app](https://github.com/nuxt/create-nuxt-app).
+To get started quickly, you can use the [create-nuxt-app](https://github.com/nuxt/create-nuxt-app).
 
-Make sure you have npx installed (npx is shipped by default since npm 5.2.0) or npm v6.1 or yarn.
+Make sure you have npx (npx is shipped by default since npm 5.2.0), npm (v6.1 or later) or yarn installed.
 
 <code-group>
   <code-block label="Yarn" active>
@@ -49,7 +49,7 @@ npm init nuxt-app <project-name>
 
 </code-group>
 
-It will ask you some questions (name, Nuxt options, UI framework, TypeScript, linter, testing framework, etc). To find out more about all the options see the [Create Nuxt app](https://github.com/nuxt/create-nuxt-app/blob/master/README.md).
+It will ask you some questions (name, Nuxt options, UI framework, TypeScript, linter, testing framework, etc). To find out more about all the options, see the [create-nuxt-app documentation](https://github.com/nuxt/create-nuxt-app/blob/master/README.md).
 
 Once all questions are answered, it will install all the dependencies. The next step is to navigate to the project folder and launch it:
 
@@ -76,7 +76,7 @@ The application is now running on [http://localhost:3000](http://localhost:3000)
 
 <base-alert type="info">
 
-Another way to get started with Nuxt.js is to use [CodeSandbox](https://template.nuxtjs.org) which is a great way for quickly playing around with Nuxt.js and/or sharing your code with other people.
+Another way to get started with Nuxt.js is to use [CodeSandbox](https://template.nuxtjs.org), which is a great way for quickly playing around with Nuxt.js and/or sharing your code with other people.
 
 </base-alert>
 
@@ -146,7 +146,7 @@ npm install nuxt
   </code-block>
 </code-group>
 
-This command will add `nuxt` as a dependency to your project and add it to your `package.json`. The `node_modules` directory will also be created which is where all your installed packages and dependencies are stored.
+This command will add `nuxt` as a dependency to your project and include it in your `package.json`. The `node_modules` directory will also be created which is where all your installed packages and dependencies are stored.
 
 <base-alert type="info">
 

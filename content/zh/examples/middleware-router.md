@@ -14,7 +14,7 @@ csb_link: https://codesandbox.io/embed/github/nuxtlabs/examples/tree/master/midd
 
 `middleware/class.js` 使用路由中间件在进入路由之前修改路由名(route.name)。
 
-`components/Navigation.vue` 使用`router-middleware`的路由名来更改当前路由的字体大小。
+`layouts/default.vue` 使用`router-middleware`的路由名来更改当前路由的字体大小。
 
 `nuxt.config.js` 包含`router`属性用以激活(使用)中间件。
 

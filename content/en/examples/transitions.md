@@ -11,7 +11,7 @@ csb_link: https://codesandbox.io/embed/github/nuxtlabs/examples/tree/master/tran
 - `pages/index.vue` and `pages/fade.vue` use the default page transiton.
 - `pages/bounce.vue` uses the `transition` property with a bounce transition
 - `pages/slide.vue` uses the `transition` property with a slide-bottom transition.
-- `layout/default.vue` contains the classes for all transitions.
+- `layouts/default.vue` contains the classes for all transitions.
 
 <base-alert type="next">
 

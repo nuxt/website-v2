@@ -10,6 +10,20 @@ module.exports = {
           'Quicksand',
           // ...defaultTheme.fontFamily.sans
           "-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans', sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji'"
+        ],
+        roboto: [
+          'Roboto',
+          '-apple-system',
+          'BlinkMacSystemFont',
+          '"Segoe UI"',
+          '"Helvetica Neue"',
+          'Arial',
+          '"Noto Sans"',
+          'sans-serif',
+          '"Apple Color Emoji"',
+          '"Segoe UI Emoji"',
+          '"Segoe UI Symbol"',
+          '"Noto Color Emoji"'
         ]
       },
       fontSize: {
@@ -62,7 +76,8 @@ module.exports = {
       maxWidth: {
         '1/4': '25%',
         '1/2': '50%',
-        '3/4': '75%'
+        '3/4': '75%',
+        72: ' 18rem'
       },
       transitionTimingFunction: {
         'ease-in-material': 'cubic-bezier(0.4, 0, 1, 1)',

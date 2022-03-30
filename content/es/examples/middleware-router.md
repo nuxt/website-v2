@@ -12,7 +12,7 @@ csb_link: https://codesandbox.io/embed/github/nuxt-academy/examples/tree/master/
 
 `middleware/class.js` utiliza router middleware para establecer una clase antes de acceder a la ruta.
 
-`components/Navigation.vue` cambia el tamaño de la fuente para la ruta con nombre `router-middleware`.
+`layouts/default.vue` cambia el tamaño de la fuente para la ruta con nombre `router-middleware`.
 
 `nuxt.config.js` contiene la propiedad `router` para activar el middleware.
 

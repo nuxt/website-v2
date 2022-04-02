@@ -5,8 +5,8 @@ description: How to deploy Nuxt on Qovery?
 target: Static & Server
 category: deployment
 logo:
-  light: "/img/partners/dark/Qovery.svg"
-  dark: "/img/partners/light/Qovery.svg"
+  light: "/img/companies/square/light/Qovery.svg"
+  dark: "/img/companies/square/dark/Qovery.svg"
 ---
 # Deploy Nuxt on Qovery
 

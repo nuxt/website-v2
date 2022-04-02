@@ -1,81 +1,55 @@
 ---
 links:
-  -
-    title: '私たちについて'
+  - title: '私たちについて'
     items:
-      -
-        title: '連絡先'
+      - title: '連絡先'
         href: 'mailto:hello@nuxtjs.com'
-      -
-        title: 'エンタープライズサポート'
+      - title: 'エンタープライズサポート'
         to: '/support'
-      -
-        title: 'NuxtLabs について'
+      - title: 'NuxtLabs について'
         href: 'https://nuxtlabs.com/'
-      -
-        title: 'オープンソースソフトウェア'
+      - title: 'オープンソースソフトウェア'
         href: 'https://github.com/nuxt'
-      -
-        title: 'パートナーシップ'
+      - title: 'パートナーシップ'
         to: '/partners'
-      -
-        title: 'テレメトリ'
+      - title: 'テレメトリ'
         href: 'https://github.com/nuxt/telemetry'
-  -
-    title: 'エコシステム'
+  - title: 'エコシステム'
     items:
-      -
-        title: 'お知らせ'
+      - title: 'お知らせ'
         to: '/announcements'
-      -
-        title: '貢献'
+      - title: '貢献'
         to: '/contribution-guide'
-      -
-        title: 'チャット'
+      - title: 'チャット'
         href: 'https://discord.nuxtjs.org/'
-      -
-        title: 'イベント'
+      - title: 'イベント'
         to: '/events'
-      -
-        title: 'スポンサー'
+      - title: 'スポンサー'
         to: '/sponsors'
-      -
-        title: 'チーム'
+      - title: 'チーム'
         to: '/teams'
-      -
-        title: 'チュートリアル'
+      - title: 'チュートリアル'
         to: '/tutorials'
-      -
-        title: 'ビデオコース'
+      - title: 'ビデオコース'
         to: '/video-courses'
-  -
-    title: 'リソース'
+  - title: 'リソース'
     items:
-      -
-        title: 'デザイン'
+      - title: 'デザイン'
         to: '/design'
-      -
-        title: 'ドキュメント'
+      - title: 'ドキュメント'
         to: '/docs'
-      -
-        title: '例'
+      - title: '例'
         to: '/examples'
-      -
-        title: 'インテグレーション'
-        to: '/integrations'
-      -
-        title: 'マスターコース'
+      - title: 'デプロイ'
+        to: '/deployments'
+      - title: 'マスターコース'
         href: 'https://masteringnuxt.com/?utm_source=nuxt&utm_medium=link&utm_campaign=nsite'
-      -
-        title: 'モジュール'
-        to: '/modules'
-      -
-        title: 'リリース'
+      - title: 'モジュール'
+        href: 'https://modules.nuxtjs.org'
+      - title: 'リリース'
         to: '/releases'
-      -
-        title: '導入事例'
+      - title: '導入事例'
         to: '/showcases'
-      -
-        title: 'テーマ'
+      - title: 'テーマ'
         to: '/themes'
 ---

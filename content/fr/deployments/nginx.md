@@ -5,8 +5,8 @@ description: How to use nginx as a reverse proxy?
 target: Static & Server
 category: deployment
 logo:
-  light: "/img/partners/dark/Nginx.svg"
-  dark: "/img/partners/light/Nginx.svg"
+  light: "/img/companies/square/light/Nginx.svg"
+  dark: "/img/companies/square/dark/Nginx.svg"
 ---
 # Using NGINX as a reverse proxy
 
@@ -52,7 +52,7 @@ Below is an example configuration. Keep in mind that:
 
 - root folder should be the same as set by [configuration generate.dir](/docs/configuration-glossary/configuration-generate#dir)
 - expire headers set by Nuxt are stripped (due to the cache)
-- both Nuxt as nginx can set additional headers, it's advised to choose one (if in doubt, choose nginx)
+- both Nuxt and nginx can set additional headers, it's advised to choose one (if in doubt, choose nginx)
 - if your site is mostly static, increase the `proxy_cache_path inactive` and `proxy_cache_valid` numbers
 
 If you don't generate your routes but still wish to benefit from nginx cache:

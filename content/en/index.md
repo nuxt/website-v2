@@ -6,21 +6,17 @@ bgClass: 'bg-white'
 ---
 
 ::home-hero
----
-primary:
-  text: 38K+ GitHub stars
-  url: https://github.com/nuxt/nuxt.js
-  icon: IconGitHub
----
-
 #title
 The Intuitive Vue<br>Framework
 
 #description
 Build your next Vue.js application with confidence using Nuxt.<br class="hidden sm:block" /> An open source framework making web development simple and powerful.
 
+#primary-button
+:app-button[39K+ GitHub stars]{ href="https://github.com/nuxt/nuxt.js" icon="IconGitHub" extraClass="text-white bg-sky-black hover:bg-sky-darker leading-4" }
+
 #secondary-button
-:button-link[Get started]{ href="/docs/get-started/installation" size="medium" aria-label="Get started" }
+:app-button[Get started]{ to="/docs/get-started/installation" }
 ::
 
 ::home-learn-master
@@ -35,7 +31,7 @@ category: Learn
 Learn everything you need to know, from beginner to master.
 
 #bottom
-:button-link[Start learning]{href="/docs/get-started/installation" size="medium"}
+:app-button[Start learning]{to="/docs/get-started/installation"}
 ::
 
 ::home-features
@@ -125,8 +121,39 @@ Sustainable [_Development_]{.text-primary}
 #description
 Nuxt development is carried out by passionate developers, but the amount of effort needed to maintain and develop new features is not sustainable without proper financial backing. We are thankful for our sponsors and partners, who help make Nuxt possible.<br>
 
+#partners-card
+  ::home-partners-card
+  ---
+  icon: technology.svg
+  category: technology
+  ---
+  #title
+  Technology partners
+
+  #description
+  Technology partners offer services that empower Nuxt developers, such as CMS, Hosting, Database, and more.
+
+  #button
+  Discover our technology partners
+  ::
+
+  ::home-partners-card
+  ---
+  icon: agency.svg
+  category: agency
+  ---
+  #title
+  Agency partners
+
+  #description
+  Agency partners are trusted web and consulting agencies that can provide Nuxt development and support for your projects.
+
+  #button
+  Find a Nuxt expert
+  ::
+
 #bottom
-:button-link[Sponsor Nuxt]{href="/sponsors" size="medium"}
+  :app-button[Become a partner]{href="mailto:partners@nuxtlabs.com"}
 ::
 
 ::home-learn-guides
@@ -188,10 +215,10 @@ category: Explore
 
 ::section-content-item
 ---
-title: 'Integrations'
-description: 'Extend and automate your workflow by using integrations for your favorite tools.'
+title: 'Deployments'
+description: 'Extend and automate your workflow by using deployments for your favorite tools.'
 image: '/img/home/explore/gem-explore-1.svg'
-to: '/integrations'
+to: '/deployments'
 hoverClass: 'hover:bg-sky-surface'
 ---
 ::
@@ -200,7 +227,7 @@ hoverClass: 'hover:bg-sky-surface'
 title: 'Modules'
 description: 'Discover our list of modules to supercharge your Nuxt project. Created by the Nuxt team and community.'
 image: '/img/home/explore/gem-explore-2.svg'
-to: '/modules'
+to: 'https://modules.nuxtjs.org'
 hoverClass: 'hover:bg-sky-surface'
 ---
 ::
@@ -221,7 +248,7 @@ Moving forward? So much to [_Explore_]{.text-primary}
 Discover powerful modules, integrate with your favorite providers and start quickly with themes.
 ::
 
-::home-campfire
+::home-community
 ---
 category: Community
 announcementsCategory: Announcements
@@ -234,36 +261,6 @@ Sharing is [Caring]{.text-sky-lighter}
 
 #description
 Discover articles from the framework team and community about Nuxt. Tips and tricks included!
-
-#campfire-list
-  :::campfire-list-item
-  ---
-  title: Announcements
-  description: Discover articles from Nuxt team.
-  to: '/announcements'
-  ---
-  :::
-  :::campfire-list-item
-  ---
-  title: Events
-  description: Discover and subscribe to future events featuring Nuxt content, and watch previous talks from the core team and the community.
-  to: '/events'
-  ---
-  :::
-  :::campfire-list-item
-  ---
-  title: Sponsors
-  description: If you use Nuxt in your daily work and feel that it has made your life easier, please consider backing us.
-  to: '/sponsors'
-  ---
-  :::
-  :::campfire-list-item
-  ---
-  title: Tutorials
-  description: Discover tutorials made by the Nuxt community.
-  to: '/tutorials'
-  ---
-  :::
 ::
 
 ::home-testimonials

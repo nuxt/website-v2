@@ -1,12 +1,14 @@
 <template>
-  <svg fill="none" viewBox="0 0 24 24">
+  <svg
+    fill="none"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+    stroke-width="2"
+    viewBox="0 0 24 24"
+    stroke="currentColor"
+  >
     <g transform="rotate(90 12 12)">
-      <path
-        fill-rule="evenodd"
-        clip-rule="evenodd"
-        d="M9.121 20.242L7 18.121l6-6-6-6L9.121 4l7.06 7.06a1.498 1.498 0 010 2.121l-7.06 7.061z"
-        fill="currentColor"
-      />
+      <path d="M9 5l7 7-7 7" />
     </g>
   </svg>
 </template>

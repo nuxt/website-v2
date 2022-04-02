@@ -4,22 +4,19 @@ title: 'Le framework Vue intuitif'
 description: 'Construisez votre prochaine application Vue.js en toute confiance avec Nuxt. Un framework open source qui rend le développement web simple et puissant.'
 bgClass: 'bg-white'
 ---
-::home-hero
----
-primary:
-  text: 38K+ GitHub stars
-  url: https://github.com/nuxt/nuxt.js
-  icon: IconGitHub
----
 
+::home-hero
 #title
 Le framework Vue<br>intuitif
 
 #description
 Construisez votre prochaine application Vue.js en toute confiance avec Nuxt.<br class="hidden sm:block" /> Un framework open source qui rend le développement web simple et puissant.
 
+#primary-button
+:app-button[39K+ GitHub stars]{ href="https://github.com/nuxt/nuxt.js" icon="IconGitHub" extraClass="text-white bg-sky-black hover:bg-sky-darker leading-4" }
+
 #secondary-button
-:button-link[Commencer]{ href="/docs/get-started/installation" size="medium" aria-label="Commencer" }
+:app-button[Commencer]{ to="/docs/get-started/installation" extraClass="text-black bg-primary-500 hover:bg-primary-400 focus:ring-primary-600 py-4" }
 ::
 
 ::home-learn-master
@@ -34,7 +31,7 @@ category: Apprendre
 Tout ce que vous devez savoir, pour passer de débutant à expert.
 
 #bottom
-:button-link[Commencer le voyage]{href="/docs/get-started/installation" size="medium"}
+:app-button[Commencer le voyage]{href="/docs/get-started/installation" size="medium"}
 ::
 
 ::home-features
@@ -116,8 +113,39 @@ Un [_développement_]{.text-primary} soutenu
 #description
 Nuxt est construit et maintenu par des développeurs passionnés mais il serait impossible de fournir les efforts nécessaires pour développer et maintenir de nouvelles fonctionnalités sans une réelle contribution financière. Nous remercions nos sponsors et partenaires qui rendent cela possible.<br>
 
+#partners-card
+  ::home-partners-card
+  ---
+  icon: technology.svg
+  category: technology
+  ---
+  #title
+  Technology partners
+
+  #description
+  Les Technology partners offrent des services aux développeurs Nuxt, tels que CMS, hébergement, base de données, et plus encore...
+
+  #button
+  Découvrez nos Technology Partners
+  ::
+
+  ::home-partners-card
+  ---
+  icon: agency.svg
+  category: agency
+  ---
+  #title
+  Agency partners
+
+  #description
+  Les Agency partners sont des agences web reconnues qui proposent du support et du développement d'applications avec Nuxt.
+
+  #button
+  Trouvez un expert Nuxt
+  ::
+
 #bottom
-:button-link[Sponsorisez Nuxt]{href="/sponsors" size="medium"}
+  :app-button[Devenez un partenaire]{href="mailto:partners@nuxtlabs.com"}
 ::
 
 ::home-learn-guides
@@ -177,10 +205,10 @@ category: Explorez
 ---
   ::section-content-item
   ---
-  title: 'Intégrations'
-  description: "Étendez et automatisez votre travail en utilisant les intégrations pour vos outils préférés."
+  title: 'Déploiements'
+  description: "Étendez et automatisez votre flux de travail en utilisant les déploiements pour vos outils préférés."
   image: '/img/home/explore/gem-explore-1.svg'
-  to: '/integrations'
+  to: '/deployments'
   hoverClass: 'hover:bg-sky-surface'
   ---
   ::
@@ -189,7 +217,7 @@ category: Explorez
   title: 'Modules'
   description: "Découvrez la liste des modules pour étendre vos projects Nuxt. Créés par l'équipe de Nuxt et sa communauté"
   image: '/img/home/explore/gem-explore-2.svg'
-  to: '/modules'
+  to: 'https://modules.nuxtjs.org'
   hoverClass: 'hover:bg-sky-surface'
   ---
   ::
@@ -211,7 +239,7 @@ Nuxt a beaucoup de dimensions à explorer, apprenez par l'exemple, intégrez des
 
 ::
 
-::home-campfire
+::home-community
 ---
 category: Communauté
 announcementsCategory: Annonces
@@ -224,36 +252,6 @@ Sharing is [_Caring_]{.text-primary}
 
 #description
 Lisez nos articles rédigés par l'équipe Nuxt et la communauté, trucs et astuces inclus !
-
-#campfire-list
-  :::campfire-list-item
-  ---
-  title: Annonces
-  description: Découvrez les articles de l'équipe Nuxt.
-  to: '/announcements'
-  ---
-  :::
-  :::campfire-list-item
-  ---
-  title: Evénements
-  description: Découvrez et abonnez-vous aux futurs événements mettant en avant du contenu Nuxt, et regardez les discussions précédentes de l'équipe et de la communauté.
-  to: '/events'
-  ---
-  :::
-  :::campfire-list-item
-  ---
-  title: Sponsors
-  description: Si vous utilisez Nuxt dans votre travail quotidien et que cela vous a rendu la vie plus facile, pensez à nous soutenir.
-  to: '/sponsors'
-  ---
-  :::
-  :::campfire-list-item
-  ---
-  title: Tutoriels
-  description: Découvrez les tutoriels réalisés par la communauté Nuxt.
-  to: '/tutorials'
-  ---
-  :::
 ::
 
 ::home-testimonials

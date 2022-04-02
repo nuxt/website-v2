@@ -1,53 +1,53 @@
 ---
 template: guide
 title: Cleavr
-description: How to deploy a Nuxt app with Cleavr?
+description: Como desdobrar uma aplicação Nuxt com o Cleavr?
 target: Static & Server
 category: deployment
 logo:
-  light: "/img/partners/dark/cleavr.svg"
-  dark: "/img/partners/light/cleavr.svg"
+  light: "/img/companies/square/light/cleavr.svg"
+  dark: "/img/companies/square/dark/cleavr.svg"
 ---
-# Deploy Nuxt with Cleavr
+# Desdobrar o Nuxt com o Cleavr
 
-How to deploy a Nuxt app with Cleavr?
+Como desdobrar uma aplicação Nuxt com o Cleavr?
 
 ---
 
-[Cleavr](https://cleavr.io) is a server management console that integrates with multiple VPS (cloud hosting) providers and helps you configure servers to host your Nuxt apps as well as deploys your Nuxt apps in just a couple of clicks.
+O [Cleavr](https://cleavr.io) é uma consola de gestão de servidor que integra com vários provedores VPS (hospedagem em nuvem) e ajuda você a configurar servidores para hospedar as suas aplicações Nuxt bem como desdobrar suas aplicações Nuxt em poucos cliques.
 
-Cleavr includes the following features:
+O Cleavr inclui as seguintes funcionalidades:
 
-- Provision and configure servers ready to run Nuxt SSR and Static applications
-- Secure servers and provides free SSL certs
-- Deploy code from GitHub, GitLab, and Bitbucket repositories with zero-downtime
-- Auto-installs and configures PM2 (with cluster mode enabled) for Nuxt SSR apps
-- GitHub Actions integration to build app with no additional configuration required
+- Provisiona e configura os servidores deixando eles prontos para executar aplicações Nuxt renderizadas no lado do servidor e aplicações Estáticas
+- Protege os servidores e fornece certificados SSL grátis
+- Desdobra o código a partir do seus repositórios no GitHub, GitLab, e BitBucket com zero tempo de espera
+- Instala automaticamente e configura o PM2 (com modo de agrupamento ativado ) para aplicações Nuxt renderizadas no lado do servidor
+- Integração com GitHub Actions para construir a aplicação sem nenhuma configuração adicional exigida
 
-## Prerequisites
+## Pré-requisitos
 
-- Your Cleavr account is connected to your VPS and version control (e.g. GitHub, GitLab, Bitbucket) providers
-- You have a Nuxt SSR or Static project ready to deploy
-- You have an existing provisioned server
+- A sua conta Cleavr está conectada a sua VPS e os provedores de controlador de versão (exemplo: GitHub, GitLab, BitBucket)
+- Você tem uma aplicação Nuxt renderizada no lado do servidor ou um projeto estático pronto para desdobrar
+- Você tem servidor provisionador existente
 
-## Step 1: Initial setup
+## Passo 1: Configuração inicial
 
-You can use Flash Deploy to provision / configure a new server and deploy your app in one fell swoop, or you can use the traditional method of adding a new Nuxt app to an existing server. These setup instructions will describe adding a new app to an existing server.
+No Cleavr, navegue até ao servidor para adicionar uma nova aplicação e selecione **Add Site (Adicionar Sítio)**.
 
-In Cleavr, navigate to the server to add the new app to and select **Add Site**.
+Selecione **Nuxt SSR (Aplicação Nuxt Renderizada no Lado do Servidor)** ou **Nuxt Static (Aplicação Nuxt Estática)** como tipo da aplicação web dependendo do alvo que você tenciona desdobrar. Preencha as informações restantes do website e depois clique em **Add (Adicionar)**.
 
-Select either Nuxt SSR or Nuxt Static web app type depending on which target you intend to deploy. Fill out the remaining website info and click **Add**.
+Isto adicionará o sítio ao seu servidor e configurará o servidor sem nenhuma dependência de ambiente exigida faltando.
 
-This will add the site to your server and configure the server with any missing environment dependencies.
+Uma vez que o sítio tiver sido adicionado com sucesso, vá para a secção Web App (Aplicação Web) e navegue para settings (Configurações) > repositório do código para a aplicação web que foi adicionada.
 
-Once the site has been successfully added, go to the Web App section and click **Complete Setup** for the web app that was added.
+Preencha em seu provedor de controle de versão, repositório, e ramo para desdobrar os campos e depois clique **Update (Atualizar)**.
 
-Fill in your version control provider, repository, and branch to deploy fields and then click **Update**.
+## Passo 2: Desdobrar
 
-## Step 2: Deploy
+Agora você está pronto para desdobrar sua aplicação web.
 
-You're now ready to deploy your web app.
+Na página de desdobramento da aplicação web, clique em **Deploy (Desdobrar)**.
 
-On the web app's deployment page, click **Deploy**.
+O processo de desdobramento começará e terminará em poucos segundos.
 
-The deployment process will begin and complete in a few moments.
+[Consulte a documentação do Cleavr para mais informações.](https://docs.cleavr.io/guides/nuxt)

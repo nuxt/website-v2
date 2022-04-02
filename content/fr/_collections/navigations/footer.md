@@ -1,81 +1,55 @@
 ---
 links:
-  -
-    title: 'À propos'
+  - title: 'À propos'
     items:
-      -
-        title: 'Nous contacter'
+      - title: 'Nous contacter'
         href: 'mailto:hello@nuxtjs.com'
-      -
-        title: 'Support'
+      - title: 'Support'
         to: '/support'
-      -
-        title: 'NuxtLabs company'
+      - title: 'NuxtLabs company'
         href: 'https://nuxtlabs.com/'
-      -
-        title: 'Open source softwares'
+      - title: 'Open source softwares'
         href: 'https://github.com/nuxt'
-      -
-        title: 'Partenariat'
+      - title: 'Partenariat'
         href: '/partners'
-      -
-        title: 'Telemetry'
+      - title: 'Telemetry'
         href: 'https://github.com/nuxt/telemetry'
-  -
-    title: 'Écosystème'
+  - title: 'Écosystème'
     items:
-      -
-        title: 'Annonces'
+      - title: 'Annonces'
         to: '/announcements'
-      -
-        title: 'Contribuer'
+      - title: 'Contribuer'
         to: '/contribution-guide'
-      -
-        title: 'Discutez avec nous'
+      - title: 'Discutez avec nous'
         href: 'https://discord.nuxtjs.org/'
-      -
-        title: 'Événements'
+      - title: 'Événements'
         to: '/events'
-      -
-        title: 'Sponsors'
+      - title: 'Sponsors'
         to: '/sponsors'
-      -
-        title: 'Équipes'
+      - title: 'Équipes'
         to: '/teams'
-      -
-        title: 'Tutoriels'
+      - title: 'Tutoriels'
         to: '/tutorials'
-      -
-        title: 'Cours vidéo'
+      - title: 'Cours vidéo'
         to: '/video-courses'
-  -
-    title: 'Ressources'
+  - title: 'Ressources'
     items:
-      -
-        title: 'Design'
+      - title: 'Design'
         to: '/design'
-      -
-        title: 'Documentation'
+      - title: 'Documentation'
         to: '/docs'
-      -
-        title: 'Exemples'
+      - title: 'Exemples'
         to: '/examples'
-      -
-        title: 'Intégrations'
-        to: '/integrations'
-      -
-        title: 'Master courses'
+      - title: 'Déploiements'
+        to: '/deployments'
+      - title: 'Master courses'
         href: 'https://masteringnuxt.com/?utm_source=nuxt&utm_medium=link&utm_campaign=nsite'
-      -
-        title: 'Modules'
-        to: '/modules'
-      -
-        title: 'Notes de version'
+      - title: 'Modules'
+        href: 'https://modules.nuxtjs.org'
+      - title: 'Notes de version'
         to: '/releases'
-      -
-        title: 'Showcases'
+      - title: 'Showcases'
         to: '/showcases'
-      -
-        title: 'Thèmes'
+      - title: 'Thèmes'
         to: '/themes'
 ---

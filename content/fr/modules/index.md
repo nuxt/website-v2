@@ -14,8 +14,7 @@ Modules
 Découvrez la liste des modules pour étendre vos projects Nuxt. Créés par l'équipe de Nuxt et sa communauté.
 
 #bottom
-[Contribuer sur GitHub](https://github.com/nuxt/modules)
+  :modules-bottom-hero[Contribuer sur GitHub]
 ::
 
-::modules-listing
-::
+:modules-listing

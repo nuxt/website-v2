@@ -5,8 +5,8 @@ description: Nuxt アプリケーションを GitHub Pages でどうやってデ
 target: Static
 category: deployment
 logo:
-  light: "/img/partners/dark/Github_Pages_Dark.svg"
-  dark: "/img/partners/light/Github_Pages_Light.svg"
+  light: "/img/companies/square/light/Github_Pages.svg"
+  dark: "/img/companies/square/dark/Github_Pages.svg"
 ---
 # GitHub Pages で Nuxt をデプロイする
 

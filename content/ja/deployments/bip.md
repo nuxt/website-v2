@@ -5,8 +5,8 @@ description: Nuxt アプリケーションで Bip でどうやってデプロイ
 target: Static
 category: deployment
 logo:
-  light: "/img/partners/dark/bip.png"
-  dark: "/img/partners/light/bip.png"
+  light: "/img/companies/square/light/bip.png"
+  dark: "/img/companies/square/dark/bip.png"
 ---
 # Bip で Nuxt をデプロイする
 

@@ -5,8 +5,8 @@ description: Nuxt を DigitalOcean App Platform でどうやってデプロイ�
 target: Static & Server
 category: deployment
 logo:
-  light: "/img/partners/dark/Digital_Ocean.svg"
-  dark: "/img/partners/light/Digital_Ocean.svg"
+  light: "/img/companies/square/light/Digital_Ocean.svg"
+  dark: "/img/companies/square/dark/Digital_Ocean.svg"
 ---
 # Nuxt を DigitalOcean App Platform でデプロイする
 

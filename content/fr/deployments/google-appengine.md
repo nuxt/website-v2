@@ -5,8 +5,8 @@ description: How to deploy Nuxt on Google App Engine?
 target: Server
 category: deployment
 logo:
-  light: "/img/partners/dark/Google_engine_app.svg"
-  dark: "/img/partners/light/Google_engine_app.svg"
+  light: "/img/companies/square/light/Google_engine_app.svg"
+  dark: "/img/companies/square/dark/Google_engine_app.svg"
 ---
 # Deploy Nuxt on Google App Engine
 
@@ -58,7 +58,7 @@ env: flex
 
 ## Build and deploy the app
 
-Now build your app with `npm run build`.
+Now build your app with `npm run build` or `yarn build`.
 
 At this point, your app is ready to be uploaded to Google App Engine. Now just run the following command:
 

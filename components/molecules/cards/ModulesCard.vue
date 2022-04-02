@@ -14,7 +14,7 @@
       justify-between
     "
   >
-    <Link :to="module.website" :aria-label="module.website" target="_blank" class="absolute inset-0" />
+    <AppLink :href="module.website" :aria-label="module.website" class="absolute inset-0" />
     <div
       class="
         transition-opacity
@@ -28,7 +28,7 @@
         cursor-pointer
       "
     >
-      <nuxt-img alt="external_link" src="/img/icons/ext.svg" width="24" height="24" />
+      <NuxtImg alt="external_link" src="/img/icons/ext.svg" width="24" height="24" />
     </div>
     <div class="flex flex-col lg:flex-row space-y-4 lg:space-y-0 lg:space-x-3">
       <img loading="lazy" :src="iconUrl" :alt="module.name" class="w-10 h-10 mt-2 object-contain" />
@@ -39,8 +39,8 @@
         </div>
       </div>
     </div>
-    <div class="lg:flex lg:flex-row-reverse justify-between w-full z-0">
-      <ul class="flex space-x-1 pb-4 lg:pb-0">
+    <div class="lg:flex lg:flex-row-reverse lg:gap-2 justify-between w-full z-0">
+      <ul class="flex lg:flex-shrink-0 space-x-1 pb-4 lg:pb-0">
         <li
           v-for="maintainer in module.maintainers"
           :key="maintainer.name"
@@ -56,20 +56,23 @@
             ]
           }"
         >
-          <Link :to="`https://github.com/${maintainer.github}`" target="blank">
+          <AppLink :href="`https://github.com/${maintainer.github}`">
             <img loading="lazy" :src="maintainer.avatar" :alt="maintainer.name" class="rounded-full w-6 h-6" />
-          </Link>
+          </AppLink>
         </li>
       </ul>
-      <div class="flex items-center space-x-4 w-1/2 text-xs font-medium">
-        <Link :to="module.github" class="group flex space-x-2 items-center" target="blank">
+      <div class="flex flex-shrink items-center space-x-4 text-xs font-medium truncate">
+        <AppLink :href="module.github" class="group flex space-x-2 items-center">
           <IconStar
             alt="Star icon"
             class="text-sky-dark group-hover:text-sky-darker dark:text-cloud-surface dark:group-hover:text-white"
           />
-          <span class="truncate pt-0.5">{{ numberFormat(module.stars) }} star{{ module.stars !== 1 ? 's' : '' }}</span>
-        </Link>
-        <Link :to="npmUrl" class="group flex space-x-2 items-center" target="blank">
+          <span class="truncate pt-0.5">
+            {{ numberFormat(module.stars) }}
+            {{ $t(module.stars !== 1 ? 'common.stars' : 'common.star') }}
+          </span>
+        </AppLink>
+        <AppLink :href="npmUrl" class="group flex space-x-2 items-center truncate">
           <IconDownload
             alt="Download icon"
             class="
@@ -80,10 +83,11 @@
               dark:text-cloud-surface dark:group-hover:text-white
             "
           />
-          <span class="truncate pt-0.5"
-            >{{ numberFormat(module.downloads) }} download{{ module.downloads !== 1 ? 's' : '' }}</span
-          >
-        </Link>
+          <span class="truncate pt-0.5">
+            {{ numberFormat(module.downloads) }}
+            {{ $t(module.downloads !== 1 ? 'common.downloads' : 'common.download') }}
+          </span>
+        </AppLink>
       </div>
     </div>
   </div>

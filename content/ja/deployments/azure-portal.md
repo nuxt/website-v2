@@ -5,8 +5,8 @@ description: Nuxt アプリケーションを Azure Portal にデプロイする
 target: Server
 category: deployment
 logo:
-  light: "/img/partners/dark/Azure.svg"
-  dark: "/img/partners/light/Azure.svg"
+  light: "/img/companies/square/light/Azure.svg"
+  dark: "/img/companies/square/dark/Azure.svg"
 ---
 # Nuxt を Azure Portal へデプロイする
 

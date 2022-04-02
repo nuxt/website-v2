@@ -11,10 +11,7 @@ const ORDERS = {
 // Incrementing interval
 const MODULE_INCREMENT_LOADING = 24
 // Sorting fields
-const sortFields = [
-  { text: 'Downloads', value: 'downloads' },
-  { text: 'Stars', value: 'stars' }
-]
+const sortFields = ['downloads', 'stars']
 // Filtered modules from Fuse
 const filteredModules = ssrRef([])
 // Fuse instance
@@ -39,9 +36,6 @@ export function useFuse(modules) {
   // Context
   const { route } = useContext()
   const router = useRouter()
-
-  // Sorting options
-  const sortByComp = computed(() => sortFields[sortedBy.value])
 
   // Watch local references and sync URL on changes
   watch([selectedCategory, query, orderedBy, sortedBy], () => {
@@ -116,7 +110,7 @@ export function useFuse(modules) {
 
     if (orderedBy.value !== ORDERS.DESC) q += `${q ? '&' : '?'}orderBy=${orderedBy.value}`
 
-    if (sortedBy.value !== sortFields[0].value) q += `${q ? '&' : '?'}sortBy=${sortedBy.value}`
+    if (sortedBy.value !== sortFields[0]) q += `${q ? '&' : '?'}sortBy=${sortedBy.value}`
 
     if (selectedCategory.value) q += `#${selectedCategory.value}`
 
@@ -172,7 +166,6 @@ export function useFuse(modules) {
     sortFields,
     // Computed
     filteredModules,
-    sortByComp,
     // Functions
     init,
     updateList,

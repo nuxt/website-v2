@@ -6,8 +6,10 @@ export default {
   credits: true,
   socialImage: false,
   algolia: {
-    apiKey: 'ff80fbf046ce827f64f06e16f82f1401',
-    indexName: 'nuxtjs'
+    appId: '1V8G7N9GF0',
+    apiKey: '60a01900a4b726d667eab75b6f337592',
+    indexName: 'nuxtjs',
+    facetFilters: ['tags:main']
   },
   layout: {
     aside: false,

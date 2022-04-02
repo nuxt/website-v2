@@ -4,8 +4,8 @@ title: Cloudflare
 description: Nuxt と Cloudflare を併用する際に注意すべきこと
 category: deployment
 logo:
-  light: "/img/partners/dark/Cloudflare.svg"
-  dark: "/img/partners/light/Cloudflare.svg"
+  light: "/img/companies/square/light/Cloudflare.svg"
+  dark: "/img/companies/square/dark/Cloudflare.svg"
 ---
 # Nuxt を Cloudflare にデプロイする
 

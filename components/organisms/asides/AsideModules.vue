@@ -18,13 +18,13 @@
       >
         <div class="py-4 pr-0">
           <ul class="flex flex-wrap lg:flex-col">
-            <li v-for="category in categories" :key="category.name">
-              <button
-                class="py-2 px-4 flex justify-between w-full focus:outline-none focus:ring-transparent"
+            <li v-for="category in categories" :key="category.name" class="px-1">
+              <AppButton
+                button-class="py-2 px-4 flex justify-between w-full focus:outline-none focus:ring-transparent"
                 :class="{
                   'rounded-md bg-gray-100 dark:bg-white dark:bg-opacity-10': category.name === selectedCategory
                 }"
-                @click="selectCategory(category.name)"
+                @click.native="selectCategory(category.name)"
               >
                 <span class="truncate max-w-48 font">{{ category.name }}</span>
                 <span
@@ -33,7 +33,7 @@
                 >
                   {{ category.count }}
                 </span>
-              </button>
+              </AppButton>
             </li>
           </ul>
         </div>
@@ -43,7 +43,7 @@
 </template>
 <script lang="ts">
 import { defineComponent } from '@nuxtjs/composition-api'
-import { useFuse } from '../../../plugins/fuse'
+import { useFuse } from '~/plugins/fuse'
 
 export default defineComponent({
   props: {

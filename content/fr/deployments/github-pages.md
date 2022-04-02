@@ -5,8 +5,8 @@ description: How to deploy Nuxt app on GitHub Pages?
 target: Static
 category: deployment
 logo:
-  light: "/img/partners/dark/Github_Pages_Dark.svg"
-  dark: "/img/partners/light/Github_Pages_Light.svg"
+  light: "/img/companies/square/light/Github_Pages.svg"
+  dark: "/img/companies/square/dark/Github_Pages.svg"
 ---
 # Deploy Nuxt on GitHub Pages
 
@@ -18,17 +18,20 @@ Nuxt gives you the possibility to host your web application on any static hostin
 
 To deploy on GitHub Pages, you need to generate your static web application:
 
-```bash
+::code-group
+```bash [Yarn]
+yarn generate
+```
+```bash [NPM]
 npm run generate
 ```
+::
 
 It will create a `dist` folder with everything inside ready to be deployed on GitHub Pages hosting. Branch `gh-pages` for project repository OR branch `master` for user or organization site
 
-<div class="Alert Alert--nuxt-green">
-
+::alert{type="info"}
 <b>Info:</b> If you use a custom domain for your GitHub Pages and put `CNAME` file, it is recommended that CNAME file is put in the `static` directory. [More documentation](/docs/directory-structure/static) about it.
-
-</div>
+::
 
 ## Deploying to GitHub Pages for repository
 
@@ -61,11 +64,16 @@ This way, all generated path asset will be prefixed with `/<repository-name>/`, 
 
 You can also use [push-dir package](https://github.com/L33T-KR3W/push-dir):
 
-First install it via npm:
+First install it:
 
-```bash
+::code-group
+```bash [Yarn]
+yarn add --dev push-dir
+```
+```bash [NPM]
 npm install push-dir --save-dev
 ```
+::
 
 Add a `deploy` command to your `package.json` with the branch as `gh-pages` for project repository OR `master` for user or organization site.
 
@@ -80,16 +88,20 @@ Add a `deploy` command to your `package.json` with the branch as `gh-pages` for 
 
 Then generate and deploy your static application:
 
-```bash
+::code-group
+```bash [Yarn]
+yarn generate
+yarn deploy
+```
+```bash [NPM]
 npm run generate
 npm run deploy
 ```
+::
 
 ## Build server deployment
 
 You can take deployment one step further and rather than having to manually compile and deploy the files from your local install, you can make use of a build server to monitor your GitHub repository for new commits and then checkout, compile and deploy everything for you automatically.
-
-Before you configure the build server, you'll first need to [generate a GitHub personal access token](https://help.github.com/articles/creating-a-personal-access-token-for-the-command-line/#creating-a-token) in order to grant the build server permission to perform tasks on your behalf. Once you have created your token, keep a copy of it safe ready to use a little later on.
 
 ### GitHub Actions
 
@@ -136,7 +148,7 @@ jobs:
         run: yarn
 
       - name: Generate
-        run: yarn run generate
+        run: yarn generate
 
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
@@ -174,7 +186,7 @@ Finally, create a `.travis.yml` configuration file in the root of your repositor
 ```yaml
 language: node_js
 node_js:
-  - '8'
+  - '12'
 
 cache:
   directories:
@@ -227,8 +239,8 @@ Next, in the root of your repository, create an `appveyor.yml` configuration fil
 
 ```yaml
 environment:
-  # Nuxt requires node v8 minimum
-  nodejs_version: '8'
+  # Nuxt requires node v12 minimum
+  nodejs_version: '12'
   # Encrypt sensitive data (https://ci.appveyor.com/tools/encrypt)
   github_access_token:
     secure: ENCRYPTED_GITHUB_ACCESS_TOKEN

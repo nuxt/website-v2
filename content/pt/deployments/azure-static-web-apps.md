@@ -1,22 +1,22 @@
 ---
 template: guide
 title: Azure Static Web Apps
-description: How to deploy a Nuxt application on Azure Static Web Apps?
+description: Como desdobrar uma aplicação Nuxt no Azure Static Web Apps?
 target: Static
 category: deployment
 logo:
-  light: "/img/partners/dark/Azure.svg"
-  dark: "/img/partners/light/Azure.svg"
+  light: "/img/companies/square/light/Azure.svg"
+  dark: "/img/companies/square/dark/Azure.svg"
 ---
-# Deploy on Azure Static Web Apps
+# Desdobrar no Azure Static Web Apps
 
-How to deploy a Nuxt application on Azure Static Web Apps?
+Como desdobrar uma aplicação Nuxt no Azure Static Web Apps?
 
 ---
 
-You can now deploy your static sites to Azure using Azure static web apps. You will need to have your app in GitHub as Azure static web apps leverages GitHub actions which allow you to re-build your static site on every git push.
+Você podo agora desdobrar os seus sítios estáticos no Azure usando Aplicações Web Estáticas do Azure. Você precisará ter a sua aplicação dentro do GitHub visto que o Aplicações Web Estáticas do Azure influencia o GitHub Actions o qual permite você reconstruir seu sítio estático em todo `git push`.
 
-There are 2 things you need to configure in order to deploy your app to Azure static web apps. The first one is to modify the build command as Azure reads the build command from your package.json and for static sites we need to use the generate command.
+Existem duas coisas que você precisa configurar no sentido de desdobrar a sua aplicação no Aplicações Web Estáticas do Azure. A primeira é modificar o comando de construção visto que o Azure lê o comando de construção do seu package.json e para os sítios estáticos precisamos usar o comando de geração.
 
 `package.json`
 
@@ -24,7 +24,7 @@ There are 2 things you need to configure in order to deploy your app to Azure st
 build: "nuxt generate"
 ```
 
-The second one is to add a routes.json file which is important for catching custom 404 pages and spa fallback pages.
+A segunda é adicionar um ficheiro routes.json o qual é importante para captura de páginas 404 personalizadas e páginas de retornos das aplicações de páginas única.
 
 `static/routes.json`
 
@@ -41,81 +41,81 @@ The second one is to add a routes.json file which is important for catching cust
 }
 ```
 
-If you want to test out deploying to Azure static web apps, we have created a small demo application that is all setup and configured. You will just need to clone it and add it to your GitHub repo. You can then follow the steps on - Deploying your app with Azure Static Web Apps.
+Se você quiser testar desdobrando para as Aplicações Web Estáticas do Azure, nós temos criado uma pequena aplicação de demonstração que está toda organizada e configurada. Você apenas precisará clonar ela e adicionar ela ao seu repositório do GitHub. Você pode depois seguir os passos adiante - Desdobrando a sua aplicação com as Aplicações Web Estáticas do Azure.
 
-[Clone the demo app](https://github.com/debs-obrien/nuxtjs-azure-static-app)
+[Clonar a aplicação de demonstração](https://github.com/debs-obrien/nuxtjs-azure-static-app)
 
-## Deploying your app with Azure Static Web Apps
+## Desdobrando a sua aplicação com as Aplicações Web Estáticas do Azure
 
-### Step 1: **Create Azure static web apps**
+### Passo 1: **Create Azure static web apps (Criar Aplicações Web Estáticas do Azure)**
 
-1. Navigate to the [Azure Portal](https://portal.azure.com/).
-2. Click **Create a Resource** then search for **Static App** and select it.
-3. Select a subscription from the *Subscription* drop-down list or use the default one.
-4. Click the **New** link below the *Resource group* dropdown. In *New resource group name*, type **nuxt** and click **OK**
-5. Provide a globally unique name for your app in the **Name** text box. Valid characters include `a-z`, `A-Z`, `0-9`, and `-`. The app name is used to identify the app in your list of resources therefore it is a good idea to name your app using the name of your repository.
-6. In the *Region* dropdown, choose a region closest to you.
+1. Navegue até o [Azure Portal](https://portal.azure.com/).
+2. Clique **Create a Resource (Criar um Recurso)** depois procure por **Aplicação Estática (Static App)** e selecione ela.
+3. Selecione uma subscrição a partir da lista suspensa *Subscription (Subscrição)* ou use a padrão.
+4. Clique na ligação **New (Novo)** por baixo do *Resource Group (Grupo de Recurso)* suspenso. No *New resource group name (Novo nome de grupo de recurso)*, digite **nuxt** e clique em **OK**
+5. Forneça nome globalmente único para a sua aplicação dentro da caixa de texto **Name (Nome)**. Caracteres válidos incluem `a-z`, `A-Z`, `0-9`, e `-`. O nome da aplicação é usado para identificar a aplicação dentro da sua lista de recursos logo é uma boa ideia nomear a sua aplicação usando o nome do seu repositório.
+6. Dentro da lista suspensa **Region (Região)**, escolha a região mais próxima de você.
 
-![Azure Portal resource and app setup](https://user-images.githubusercontent.com/13063165/82118135-71891b00-9775-11ea-8284-aa94d17a3bc3.png)
+![O recurso do Azure Portal e a configuração da aplicação](https://user-images.githubusercontent.com/13063165/82118135-71891b00-9775-11ea-8284-aa94d17a3bc3.png)
 
-### Step 2: **Add a GitHub repository**
+### Passo 2: **Adicionar um repositório do GitHub**
 
-Azure App Service Static App needs access to the repository where your Nuxt app lives so it can automatically deploy commits:
+A Aplicação de Serviço Estático da Aplicação do Azure precisa de acesso ao repositório onde a sua aplicação Nuxt mora, assim ele pode desdobrar consolidações automaticamente: 
 
-1. Click the **Sign in with GitHub button**
-2. Select the **Organization** under which you created the repo for your Nuxt project. It can also be your GitHub username.
-3. Find the name of the repository you created earlier and select it.
-4. Choose **master** as the branch from the *Branch* dropdown.
+1. Clique no **Botão Iniciar Sessão com o GitHub (Sign in with GitHub)**
+2. Selecione a **Organização (Organization)** sob a qual você criou o repositório para o seu projeto Nuxt. Também pode ser o nome de usuário do seu GitHub.
+3. Encontre o nome do repositório qye você criou mais cedo e selecione ele.
+4. Escolha o **master** como o ramo a partir da sua lista suspensa *Ramo (Branch)*.
 
-![how to add github](https://user-images.githubusercontent.com/13063165/82118359-38ea4100-9777-11ea-9c5e-7ba5c4da708e.png)
+![Como adicionar o GitHub](https://user-images.githubusercontent.com/13063165/82118359-38ea4100-9777-11ea-9c5e-7ba5c4da708e.png)
 
-### Step 3: **Configure the build process**
+### Passo 3: **Configurar o processo de construção**
 
-There are few things that Azure App Service Static App can assume - things like automatically installing npm modules and running `npm run build`. There are also few you have to be explicit about, like what folder will the static app be copied to after build so the static site can be served from there.
+Há poucas coisas que a Aplicação de Serviço Estático da Aplicação do Azure pode assumir - coisas como instalar automaticamente os módulos do npm e executar o comando `npm run build`. Há também poucas coisas sobre as quais você tem de ser explícito, como para qual pasta a aplicação estática será copiada depois da construção para que o sítio estático possa ser servido a partir de lá.
 
-1. Click on the **Build** tab to configure the static output folder.
-2. Type **dist** in the *App artifact location* text box.
+1. Clique na aba **Construção (Build)** para configurar a pasta de saída do estático.
+2. Digite **dist** dentro da caixa de texto *Localização do Artefacto da Aplicação (App artifact location)*.
 
-![Azure portal configure build](https://user-images.githubusercontent.com/13063165/82118277-71d5e600-9776-11ea-88ad-48cf0793905d.png)
+![A configuração da construção do Azure Portal](https://user-images.githubusercontent.com/13063165/82118277-71d5e600-9776-11ea-88ad-48cf0793905d.png)
 
-### Step 4: **Review and create**
+### Passo 4: **Revisar e criar**
 
-1. Click the **Review + Create** button to verify the details are all correct.
-2. Click **Create** to start the creation of the resource and also provision a GitHub Action for deployment.
-3. Once the deployment is completed, click **Go to resource**
+1. Clique no botão **Revisar + Criar (Review + Create)** para verificar se os detalhes estão todos corretos.
+2. Clique em **Criar (Create)** para iniciar a criação do recurso e também provisionar uma GitHub Action para desdobramento.
+3. Uma vez que o desdobramento estiver completado, clique em **Ir para o recurso (Go to resource)**
 
-![azure portal deployment complete message](https://user-images.githubusercontent.com/13063165/82118390-67681c00-9777-11ea-9778-671dc768393e.png)
+![A mensagem completa do desdobramento do Azure Portal](https://user-images.githubusercontent.com/13063165/82118390-67681c00-9777-11ea-9778-671dc768393e.png)
 
-4. On the resource screen, click the *URL* link to open your deployed application.
+4. Na tela do recurso, clique na ligação da *URL* para abrir a sua aplicação desdobrada.
 
-![resource screen with url to your deployed app](https://user-images.githubusercontent.com/13063165/82118042-d001c980-9774-11ea-94f5-57d995aa5391.png)
+![A tela do recurso com a URL para a sua aplicação desdobrada](https://user-images.githubusercontent.com/13063165/82118042-d001c980-9774-11ea-94f5-57d995aa5391.png)
 
-Congrats your static site is now hosted on Azure static web apps.
+Parabéns, seu sítio estático está agora hospedado nas Aplicações Web Estáticas do Azure.
 
-## Rebuild your static app and monitoring deployment
+## Reconstruir a sua aplicação estática e monitorar o desdobramento
 
-Now all you have to do is modify your code and push your changes. Pushing your changes will activate a GitHub action and your new site will automatically rebuild. You can monitor the workflow by clicking on the actions tab in your GitHub repo and you can inspect even further by selecting the last commit you made. You can then watch to see when the deploy is finished or inspect the log if you have any deployment errors.
+Agora tudo o que você tem de fazer é modificar o seu código e empurrar suas mudanças. Empurrar suas mudanças ativará uma GitHub Action e o seu novo sítio será automaticamente reconstruido. Você pode monitorar o fluxo de trabalho clicando na aba de ações dentro do seu repositório do GitHub e você pode inspecionar mais além selecionando a última consolidação que você fez. Você pode depois observar para ver quando o desdobrar é terminado ou inspecionar o registo se você tiver alguns erros de desdobramento. 
 
-![GitHub actions screen](https://user-images.githubusercontent.com/13063165/82118249-34715880-9776-11ea-92e2-dbd21bbf7cb6.png)
+![A tela das ações do GitHub](https://user-images.githubusercontent.com/13063165/82118249-34715880-9776-11ea-92e2-dbd21bbf7cb6.png)
 
-## Did you know?
+## Você sabia?
 
-### **How to handle dynamic routes**
+### **Como manipular rotas dinâmicas**
 
-If you are working with dynamic pages such as `_id.vue` then you you will need to add these routes to the generate property in your nuxt config.
+Se você estiver trabalhando com páginas dinâmicas tais como `_id.vue` então você precisará adicionar essas rotas na propriedade `generate` dentro da configuração do Nuxt.
 
-[See the documentation on how to handle dynamic routes.](/docs/configuration-glossary/configuration-generate#routes)
+[Consulte a documentação em como manipular rotas dinâmicas.](/docs/configuration-glossary/configuration-generate#routes)
 
 <div class="Alert">
-If you are using Nuxt 2.13+ then you won't have to worry about this as there is a built in crawler which will crawl all dynamics by crawling the links in your site.
+Se você estiver usando o Nuxt 2.13+ então você não terá que preocupar-se com isso visto que existe um rastreador embutido que rastreará todas dinâmicas ao rastrear as ligações dentro do seu sítio.
 </div>
 
-### How to add an error page
+### Como adicionar uma página de erro
 
-In order to not have the default 404 page you can create an `error.vue` file in your layouts folder.
+No sentido de não ter a página 404 padrão você pode criar um ficheiro `error.vue` dentro da sua pasta layouts.
 
-### How to add SPA fallback
+### Como adicionar retorno de Aplicação de Página Única
 
-If you would like some pages to not be generated but act as a single page application you can do so using the generate.excludes property in your nuxt.config file.
+Se você gostaria que algumas páginas não sejam geradas mas que comportem-se como uma aplicação de página única você pode isso usando a propriedade `generate.excludes` dentro do seu ficheiro `nuxt.config.js`.
 
-[See the documentation on spa fallback](/docs/configuration-glossary/configuration-generate#exclude)
+[Consulte a documentação em retorno de aplicação de página única](/docs/configuration-glossary/configuration-generate#exclude)

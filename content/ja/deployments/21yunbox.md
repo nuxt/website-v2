@@ -5,8 +5,8 @@ description: 21YunBox に Nuxt をどうやってデプロイしますか？
 target: Static
 category: deployment
 logo:
-  light: "/img/partners/dark/Yunbox.svg"
-  dark: "/img/partners/light/Yunbox.svg"
+  light: "/img/companies/square/light/Yunbox.svg"
+  dark: "/img/companies/square/dark/Yunbox.svg"
 ---
 # 21YunBox で Nuxt をデプロイする
 

@@ -11,15 +11,10 @@
         :tags="[tier]"
         :href="link"
       >
-        <div slot="footer" class="mt-auto mb-6 mx-4">
-          <SectionButton
-            :href="link"
-            size="md"
-            :aria-label="$t('resources.themes.video_course')"
-            class="bg-primary text-gray-800 hover:bg-primary-400 focus:bg-primary-400"
-          >
+        <div slot="footer" class="-mb-2 sm:mb-0">
+          <AppButton :href="link">
             {{ $t('resources.themes.video_course') }}
-          </SectionButton>
+          </AppButton>
         </div>
       </ContentCardTemplate>
     </div>

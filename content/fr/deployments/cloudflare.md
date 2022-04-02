@@ -4,8 +4,8 @@ title: Cloudflare
 description: What needs to be considered when using Nuxt with Cloudflare
 category: deployment
 logo:
-  light: "/img/partners/dark/Cloudflare.svg"
-  dark: "/img/partners/light/Cloudflare.svg"
+  light: "/img/companies/square/light/Cloudflare.svg"
+  dark: "/img/companies/square/dark/Cloudflare.svg"
 ---
 # Deploy Nuxt on Cloudflare
 

@@ -33,7 +33,9 @@
         :link="link"
         class="py-2"
         :class="{ 'text-cloud-lighter hover:text-cloud-lightest': isHome }"
-      />
+      >
+        {{ link.title }}
+      </HeaderNavigationLink>
     </template>
   </nav>
 </template>

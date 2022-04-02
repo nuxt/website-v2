@@ -5,8 +5,8 @@ description: S3 Amplify と CloudFront による AWS 上の静的ホスティン
 target: Static
 category: deployment
 logo:
-  light: "/img/partners/light/AWS_Light.svg"
-  dark: "/img/partners/dark/AWS_Dark.svg"
+  light: "/img/companies/square/light/AWS_Light.svg"
+  dark: "/img/companies/square/dark/AWS_Dark.svg"
 ---
 
 # Nuxt を Amazon Web Services にデプロイする

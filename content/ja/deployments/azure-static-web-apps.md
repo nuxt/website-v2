@@ -5,8 +5,8 @@ description: Nuxt アプリケーションを Azure Static Web Apps でどうや
 target: Static
 category: deployment
 logo:
-  light: "/img/partners/dark/Azure.svg"
-  dark: "/img/partners/light/Azure.svg"
+  light: "/img/companies/square/light/Azure.svg"
+  dark: "/img/companies/square/dark/Azure.svg"
 ---
 # Azure Static Web Apps でのデプロイ
 

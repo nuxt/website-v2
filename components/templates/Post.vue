@@ -2,8 +2,8 @@
   <div>
     <div class="relative py-16 sm:py-24">
       <div class="relative max-w-3xl mx-auto">
-        <NuxtLink
-          :to="$contentLocalePath(page.to.lastIndexOf('/') !== 0 ? page.to.substr(0, page.to.lastIndexOf('/')) : '/')"
+        <AppLink
+          :to="page.to.lastIndexOf('/') !== 0 ? page.to.substr(0, page.to.lastIndexOf('/')) : '/'"
           class="absolute top-0 left-0 px-4 -mt-12 sm:-mt-16"
         >
           <span
@@ -16,9 +16,10 @@
               dark:text-gray-100
               hover:d-secondary-text
             "
-            >← Back</span
           >
-        </NuxtLink>
+            ← {{ $t('common.back') }}
+          </span>
+        </AppLink>
         <div class="px-4 mb-6">
           <h1 class="flex-1 text-3xl font-semibold tracking-tight text-gray-900 sm:text-4xl dark:text-gray-100">
             {{ page.title }}
@@ -40,11 +41,10 @@
               |
             </div>
             <div class="flex ml-4 sm:ml-2">
-              <a
+              <AppLink
                 v-for="(author, index) in page.authors"
                 :key="index"
                 :href="author.link"
-                target="_blank"
                 rel="noopener noindex nofollow"
                 class="flex items-center justify-end -ml-2 sm:ml-0 sm:mr-2 hover:d-secondary-text"
               >
@@ -60,7 +60,7 @@
                 <span class="hidden text-sm font-medium sm:inline-block">
                   {{ author.name }}
                 </span>
-              </a>
+              </AppLink>
             </div>
           </div>
         </div>

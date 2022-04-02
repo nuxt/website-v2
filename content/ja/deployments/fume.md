@@ -5,8 +5,8 @@ description: Fume への Nuxt のデプロイの仕方
 target: Static & Server
 category: deployment
 logo:
-  light: "/img/partners/dark/Fume.svg"
-  dark: "/img/partners/light/Fume.svg"
+  light: "/img/companies/square/light/Fume.svg"
+  dark: "/img/companies/square/dark/Fume.svg"
 ---
 # Fume で Nuxt をデプロイする
 

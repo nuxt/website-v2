@@ -5,8 +5,8 @@ description: リバースプロキシとして NGINX の使い方
 target: Static & Server
 category: deployment
 logo:
-  light: "/img/partners/dark/Nginx.svg"
-  dark: "/img/partners/light/Nginx.svg"
+  light: "/img/companies/square/light/Nginx.svg"
+  dark: "/img/companies/square/dark/Nginx.svg"
 ---
 # リバースプロキシとして NGINX を使う
 

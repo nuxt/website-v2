@@ -5,8 +5,8 @@ description: Nuxt を Google Cloud Run にどうやってデプロイするの�
 target: Server
 category: deployment
 logo:
-  light: "/img/partners/dark/Google_Cloud_run.svg"
-  dark: "/img/partners/light/Google_Cloud_run.svg"
+  light: "/img/companies/square/light/Google_Cloud_run.svg"
+  dark: "/img/companies/square/dark/Google_Cloud_run.svg"
 ---
 # Nuxt を Google Cloud Run へデプロイする
 

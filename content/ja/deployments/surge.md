@@ -5,8 +5,8 @@ description: Nuxt アプリケーションを Surge にどうやってデプロ�
 target: Static
 category: deployment
 logo:
-  light: "/img/partners/dark/Surge.svg"
-  dark: "/img/partners/light/Surge.svg"
+  light: "/img/companies/square/light/Surge.svg"
+  dark: "/img/companies/square/dark/Surge.svg"
 ---
 # Nuxt を Surge にデプロイする
 

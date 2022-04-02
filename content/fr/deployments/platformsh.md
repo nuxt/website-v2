@@ -5,8 +5,8 @@ description: How to deploy Nuxt on Platform.sh?
 target: Static & Server
 category: deployment
 logo:
-  light: "/img/partners/dark/Platformsh_Dark.svg"
-  dark: "/img/partners/light/Platformsh_Light.svg"
+  light: "/img/companies/square/light/Platformsh.svg"
+  dark: "/img/companies/square/dark/Platformsh.svg"
 ---
 # Deploy Nuxt on Platform.sh
 
@@ -31,7 +31,7 @@ Platform.sh includes the following features:
 Platform.sh has a pre-made template for Nuxt available. The link below will create a new Platform.sh project and pre-populate it with a sample Nuxt application that you can then customize.
 
 <p align="center">
-<a href="https://console.platform.sh/projects/create-project?template=https://raw.githubusercontent.com/platformsh/template-builder/master/templates/nuxtjs/.platform.template.yaml&utm_content=nuxtjs&utm_source=nuxtjs_orgb&utm_medium=button&utm_campaign=deploy_on_platform">
+<a href="https://console.platform.sh/projects/create-project?template=https://raw.githubusercontent.com/platformsh/template-builder/master/templates/nuxtjs/.platform.template.yaml&utm_content=nuxtjs&utm_source=nuxtjs_orgb&utm_medium=button&utm_campaign=deploy_on_platform" target="_blank">
     <img src="https://platform.sh/images/deploy/lg-blue.svg" alt="Deploy on Platform.sh" height="40px" width="180px" />
 </a>
 </p>

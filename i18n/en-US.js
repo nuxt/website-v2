@@ -12,19 +12,6 @@ export default {
     button: 'Got it'
   },
   footer: {
-    titles: {
-      Discover: 'Discover',
-      Help: 'Help',
-      Support: 'Support'
-    },
-    'Our team': 'Our team',
-    'Design Kit': 'Design Kit',
-    'Contact us': 'Contact us',
-    Resources: 'Resources',
-    'Chat with us': 'Chat with us',
-    'Contribution guide': 'Contribution guide',
-    Sustainability: 'Sustainability',
-    Training: 'Training',
     newsletter: {
       title: 'Newsletter',
       description: 'The latest news, articles, and resources, sent to your inbox monthly.',
@@ -35,7 +22,8 @@ export default {
         already_registered: 'You are already registered',
         invalid_address: 'Invalid address',
         subscribed_messages: {
-          pre: 'An email to confirm your subscription has been sent to',
+          error: 'An error occurred while sending confirmation email',
+          pre: 'An email to confirm your subscription has been sent',
           confirmation: 'Email confirmed'
         }
       }
@@ -43,10 +31,6 @@ export default {
     license: 'Nuxt is an open source framework under MIT license.'
   },
   sidebar: {
-    partners: {
-      title: 'Partners',
-      button: 'Support Us'
-    },
     ads: {
       fallback: {
         title: 'Nuxt needs you!',
@@ -68,10 +52,6 @@ export default {
   modules: {
     search: 'Search a module (name, category, username, etc.)',
     sort_by: 'Sort by',
-    sort_fields: {
-      downloads: 'Downloads',
-      stars: 'Stars'
-    },
     loading: 'Loading...',
     error: 'An error occured while fetching modules.'
   },
@@ -91,8 +71,18 @@ export default {
     mvp_detail: {
       services: 'Services',
       location: 'Location',
-      contact_partner: 'Contact Partner',
-      visit_website: 'Visit Website'
+      contact_partner: 'Contact {partner}',
+      follow_partner: "Follow {partner}'s activities",
+      resources: 'Resources',
+      join_us: 'Join us',
+      they_will_get_back_to_you: 'They will get back to you asap.',
+      find_them_on_the_web: 'Find them on the web.',
+      first_name: 'First name',
+      last_name: 'Last name',
+      company_name: 'Company name',
+      email: 'Email',
+      message: 'Message',
+      submit: 'Submit'
     }
   },
   support: {
@@ -123,7 +113,14 @@ export default {
     released_on: 'Released on {datetime}'
   },
   partners: {
-    become_partner: 'Become a partner'
+    become_partner: 'Become a partner',
+    contact_success: 'Your request has been sent'
+  },
+  translated_pages: {
+    title: 'Translated page',
+    content_outdated: 'Contents of this page might be outdated.',
+    read_original_page: 'Read the original page',
+    contribute: 'Improve translation of this page'
   },
   theme_mode: {
     system: 'System',
@@ -148,8 +145,13 @@ export default {
     minutes: 'minutes',
     seconds: 'seconds',
     copied: 'Copied',
+    email_address_copied: 'Email address copied to clipboard',
     watch_video: 'Watch video',
-    multiple_authors: 'Multiple Authors'
+    multiple_authors: 'Multiple Authors',
+    download: 'Download',
+    downloads: 'Downloads',
+    star: 'Star',
+    stars: 'Stars'
   },
   iso: 'en'
 }

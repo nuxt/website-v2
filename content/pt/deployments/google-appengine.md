@@ -1,30 +1,30 @@
 ---
 template: guide
 title: Google App Engine
-description: How to deploy Nuxt on Google App Engine?
+description: Como desdobrar o Nuxt na Google App Engine?
 target: Server
 category: deployment
 logo:
-  light: "/img/partners/dark/Google_engine_app.svg"
-  dark: "/img/partners/light/Google_engine_app.svg"
+  light: "/img/companies/square/light/Google_engine_app.svg"
+  dark: "/img/companies/square/dark/Google_engine_app.svg"
 ---
-# Deploy Nuxt on Google App Engine
+# Desdobrar o Nuxt na Google App Engine
 
-How to deploy Nuxt on Google App Engine?
+Como desdobrar o Nuxt na Google App Engine?
 
 ---
 
-Deploying to [Google App Engine](https://cloud.google.com/appengine/) is a fast and easy solution for hosting your universal Nuxt application on Google's Cloud Services.
+Desdobrar para [Google App Engine](https://cloud.google.com/appengine/) é uma solução rápida e fácil para hospedagem da sua aplicação Nuxt universal nos Serviços da Nuvem do Google.
 
-In this guide, we build the application locally and then simply upload the entire project folder to Google App Engine. After the upload, Google App Engine will automatically start the `start` script in our package.json and your app will be available immediately.
+Neste guia, nós construímos a aplicação localmente e depois simplesmente carregamos a pasta do projeto inteira para o Google App Engine. Depois do carregamento, o Google App Engine irá automaticamente iniciar o script `start` dentro do nosso package.json e sua aplicação estará disponível automaticamente.
 
-## Getting Started
+## Pontapé de Saída
 
-Make sure you have a Google Cloud Account, a project and an empty Google App Engine app set up on [Google App Engine](https://cloud.google.com/appengine/). Furthermore, make sure to download and install the Cloud SDK (CLI) from Google as explained [here](https://cloud.google.com/sdk/) and log into your Google Cloud Account.
+Certifique-se de que você tenha uma conta na Nuvem do Google (Google Cloud), um projeto e uma aplicação do Google App Engine vazia configurada no [Google App Engine](https://cloud.google.com/appengine/). Além disso, certifique-se de descarregar e instalar a partir do Google a interface de linha de comando do Cloud SDK como explicado [aqui](https://cloud.google.com/sdk/) e iniciar a sessão com a sua conta da Nuvem do Google (Google Cloud). 
 
-## Configure your application
+## Configure a sua aplicação
 
-All you need to add to your universal Nuxt app for deploying it to the App Engine is a file called `app.yaml`. Create a new file with that name in your root project directory and add the following content:
+Tudo o que você precisa adicionar à sua aplicação Nuxt universal para desdobrar ela para o Google App Engine é um ficheiro chamado `app.yaml`. Crie um novo ficheiro com esse nome dentro da raiz do diretório do projeto e adicionar o seguinte conteúdo:
 
 ```yaml
 runtime: nodejs10
@@ -49,28 +49,28 @@ env_variables:
   HOST: '0.0.0.0'
 ```
 
-or for flexible environment the minimal configuration is:
+Or para ambientes flexíveis a configuração mínima é:
 
 ```yaml
 runtime: nodejs
 env: flex
 ```
 
-## Build and deploy the app
+## Construa e desdobre a aplicação
 
-Now build your app with `npm run build` or `yarn build`.
+Agora construa a sua aplicação com `npm run build` ou `yarn build`.
 
-At this point, your app is ready to be uploaded to Google App Engine. Now just run the following command:
+Neste ponto, a sua aplicação está pronta para ser carregada para o Google App Engine. Agora apenas execute o seguinte comando:
 
 ```
 gcloud app deploy app.yaml --project [project-id]
 ```
 
-Voilà! Your Nuxt application is now hosted on Google App Engine!
+Voilà! Agora, a sua aplicação Nuxt está hospedada no Google App Engine!
 
-## Further Information
+## Informações Avançadas
 
-- The `instance_class` attribute in your app.yaml file sets the class of your app instance. Instance F2 is not completely free, but has the minimum memory needed to run a Nuxt application.
-- Make sure `start` in package.json is the command that you want to run after deployment. If you usually run by `start:prod` or some other command, your app will not work as expected.
+- O atributo `instance_class` dentro do seu ficheiro app.yaml define a classe da instância da sua aplicação. A instância F2 não é completamente gratuita, mas tem o mínimo de memória necessária para executar a sua aplicação Nuxt.
+- Certifique-se de que o script `start` dentro do package.json é o comando que você quer executar depois do desdobramento. Se você normalmente executa pelo script `start:prod` ou algum outro comando, sua aplicação não funcionará como esperado.
 
-Make sure to put the `project-id` and not the `project-name` in the deploy command. These are two different things but easy to mix up.
+Certifique-se de colocar o `project-id` e não o `project-name` dentro do comando deploy. Essas são duas coisas diferentes mas fácil de baralhar.

@@ -5,8 +5,8 @@ description: Nuxt アプリケーションを Dokku でどうやってデプロ�
 target: Server
 category: deployment
 logo:
-  light: "/img/partners/dark/dokku.png"
-  dark: "/img/partners/light/dokku.png"
+  light: "/img/companies/square/light/dokku.png"
+  dark: "/img/companies/square/dark/dokku.png"
 ---
 
 # Dokku で Nuxt をデプロイする

@@ -115,6 +115,7 @@ export default {
         subscribing: '订阅中...',
         subscribe: '订阅',
         subscribed_messages: {
+          error: 'An error occurred while sending confirmation email',
           pre: '一封您的订阅确认邮件已发送至',
           post: '💚'
         }

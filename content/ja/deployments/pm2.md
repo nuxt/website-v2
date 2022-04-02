@@ -5,8 +5,8 @@ description: PM2 クラスタモードの有効によって Nuxt をどうやっ
 target: Server
 category: deployment
 logo:
-  light: "/img/partners/dark/pm2.png"
-  dark: "/img/partners/light/pm2.png"
+  light: "/img/companies/square/light/pm2.png"
+  dark: "/img/companies/square/dark/pm2.png"
 ---
 # PM2 を使った Nuxt のデプロイ
 

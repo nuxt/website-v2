@@ -5,8 +5,8 @@ description: How to deploy Nuxt on Google Cloud Run?
 target: Server
 category: deployment
 logo:
-  light: "/img/partners/dark/Google_Cloud_run.svg"
-  dark: "/img/partners/light/Google_Cloud_run.svg"
+  light: "/img/companies/square/light/Google_Cloud_run.svg"
+  dark: "/img/companies/square/dark/Google_Cloud_run.svg"
 ---
 # Deploy Nuxt on Google Cloud Run
 
@@ -56,38 +56,6 @@ $ npm run dev
 
 Check that everything works.
 
-## Application configuration
-
-!Attention: from now and on, the port is set to `3000`, change all occurrences if needed.
-
-The host should not be set to localhost, but to 0.0.0.0. You can update the server configuration in `nuxt.config.js`:
-
-```javascript
-export default {
-  server: {
-    port: 3000, // default: 3000
-    host: '0.0.0.0', // default: localhost,
-    timing: false
-  }
-}
-```
-
-More information [here](/docs/configuration-glossary/configuration-server).
-
-Or, add this to your package.json file:
-
-```json
-{
-  "config": {
-    "nuxt": {
-      "host": "0.0.0.0",
-      "port": "3000",
-      "timing": false
-    }
-  }
-}
-```
-
 ## Containerize your application
 
 Now, we will create a container with Cloud Build.
@@ -101,11 +69,13 @@ FROM node:14
 
 WORKDIR /usr/src/app
 
-COPY package.json ./
+COPY . ./
 RUN yarn
 
-COPY . .
-EXPOSE 3000
+EXPOSE 8080
+
+ENV HOST=0.0.0.0
+ENV PORT=8080
 
 RUN yarn build
 
@@ -119,11 +89,13 @@ FROM node:14
 
 WORKDIR /usr/src/app
 
-COPY package.json ./
+COPY . ./
 RUN npm install
 
-COPY . .
-EXPOSE 3000
+EXPOSE 8080
+
+ENV HOST=0.0.0.0
+ENV PORT=8080
 
 RUN npm run build
 

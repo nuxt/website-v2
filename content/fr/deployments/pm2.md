@@ -5,8 +5,8 @@ description: Comment déployer Nuxt avec le mode cluster PM2 activé ?
 target: Server
 category: deployment
 logo:
-  light: "/img/partners/dark/pm2.png"
-  dark: "/img/partners/light/pm2.png"
+  light: "/img/companies/square/light/pm2.png"
+  dark: "/img/companies/square/dark/pm2.png"
 ---
 # Déployer Nuxt en utilisant PM2
 

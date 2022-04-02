@@ -1,24 +1,22 @@
 <template>
   <div>
     <div v-if="link" class="flex flex-col justify-between d-secondary-text mt-8 mb-4 px-4 sm:px-6 sm:flex-row">
-      <a :href="link" target="_blank" rel="noopener" class="flex items-center mb-2 text-sm sm:mb-0 hover:underline">
+      <AppLink :href="link" class="flex items-center mb-2 text-sm sm:mb-0 hover:underline">
         <IconEdit class="w-3 h-3 mr-1" />
         <span>
           {{ $t('article.github') }}
         </span>
-      </a>
+      </AppLink>
 
       <span class="flex items-center text-sm">
         {{ $t('article.updatedAt') }} {{ $d(Date.parse(page.mtime), 'long') }}
       </span>
     </div>
     <div v-if="contributors.length" class="px-4 sm:px-6">
-      <a
+      <AppLink
         v-for="contributor of contributors"
         :key="contributor.login"
         :href="`https://github.com/${contributor.login}`"
-        rel="noopener"
-        target="_blank"
         class="
           inline-flex
           mb-2
@@ -48,7 +46,7 @@
         <span class="inline-block px-2 leading-loose">
           {{ contributor.name }}
         </span>
-      </a>
+      </AppLink>
     </div>
   </div>
 </template>
@@ -67,7 +65,9 @@ export default defineComponent({
   },
   setup(props) {
     const contributors = ref([])
-    const { $docus } = useContext()
+    const { $docus, $config } = useContext()
+
+    const apiURL = $config.apiURL || 'https://api.nuxtjs.org'
 
     const { value: settings } = computed(() => $docus.settings)
 
@@ -100,7 +100,7 @@ export default defineComponent({
       props.page.source
     ].join('/')
     useFetch(async () => {
-      contributors.value = await $fetch(`https://api.nuxtjs.org/api/contributors/${path}`)
+      contributors.value = await $fetch(`${apiURL}/api/github/contributors/${path}`)
     })
     return {
       link,

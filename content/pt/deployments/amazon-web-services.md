@@ -1,44 +1,44 @@
 ---
 template: guide
 title: Amazon Web Services
-description: Static Hosting on AWS with S3 Amplify and CloudFront
+description: Hospedagem Estática no AWS com o S3 Amplify e CloudFront
 target: Static
 category: deployment
 logo:
-  light: "/img/partners/light/AWS_Light.svg"
-  dark: "/img/partners/dark/AWS_Dark.svg"
+  light: "/img/companies/square/light/AWS_Light.svg"
+  dark: "/img/companies/square/dark/AWS_Dark.svg"
 ---
-# Deploy Nuxt on Amazon Web Services
+# Desdobrar o Nuxt na Amazon Web Services
 
-Static Hosting on AWS with S3 Amplify and CloudFront
+Hospedagem Estática no AWS com o S3 Amplify e CloudFront
 
 ---
 
-AWS stands for Amazon Web Services.
-S3 is their static storage which can be configured for Static Site Hosting. CloudFront is their CDN (content delivery network)
+AWS é uma abreviatura para Amazon Web Services.
+S3 é a armazenagem estática deles a qual pode ser configurada para hospedagem de sítio estático. O CloudFront é a CDN (content delivery network, rede de entrega de conteúdo) deles
 
-## AWS w/ the Amplify Console
+## AWS com o Console do Amplify
 
-Hosting a **static generated** Nuxt app on AWS w/ the Amplify Console is powerful and cheap.
+A hospedagem de uma aplicação Nuxt **estaticamente gerada** no AWS com o Console do Amplify é poderosa e barata.
 
-First, push your Nuxt app to the Git provider of your choice. Then, visit the [Amplify Console](https://console.aws.amazon.com/amplify/home). Click the **GET STARTED** button under the **Deploy** header if you haven't used Amplify Hosting before, otherwise click the **Connect App** button.
+Primeiro, empurre sua aplicação Nuxt para o provedor Git de sua escolha. Depois, visite o [Console do Amplify](https://console.aws.amazon.com/amplify/home). Clique no botão **GET STARTED (COMEÇAR)** por baixo do cabeçalho **Deploy (Desdobrar)** se você não tinha usado a Hospedagem do Amplify antes, caso contrário clique no botão **Connect App (Conectar Aplicação)**.
 
-### From your existing code
+### A partir do código existente
 
-On the "From your existing code" page, select your Git provider and click **Continue**.
+Na página "From your existing code (A partir do código existente)", selecione o seu provedor Git e clique em **Continue (Continuar)**.
 
-### Add repository branch
+### Adicionar ramo do repositório
 
-On the "Add repository branch" page, select your repository and the branch you want to deploy. Then, click **Next**.
+Na página "Add repository branch (Adicionar ramo do repositório)", selecione o seu repositório e o ramo que você quiser desdobrar. Depois clique em **Next (Seguinte)**.
 
-### Configure build settings
+### Configurar as definições de construção
 
-On the "Configure build settings" page, click the `Edit` button under the "Build and test settings". Change the following:
+Na página "Configure build settings (Configurar as definições de construção)", clique no botão `Edit (Editar)` por baixo do "Build and test settings (Configurações da construção e do teste)". Mude o seguinte:
 
-1. Set the **build** commands to `npm run generate`.
-2. Set the `baseDirectory` location to be `dist`.
+1. Defina o comando **build (construir)** para `npm run generate`.
+2. Defina a localização do `baseDirectory` para ser `dist`.
 
-The settings should look like this once you are done editing them:
+Depois as configurações devem parecer-se com isto uma vez que você terminou de editar elas:
 
 ```yml
 version: 1
@@ -51,7 +51,7 @@ frontend:
       commands:
         - npm run generate
   artifacts:
-    # IMPORTANT - Please verify your build output directory
+    # IMPORTANTE - Por favor, verifique o seu diretório de saída do build (construir)
     baseDirectory: dist
     files:
       - '**/*'
@@ -60,89 +60,89 @@ frontend:
       - node_modules/**/*
 ```
 
-Then, click **Save** and **Next**.
+Depois, clique em **Save (Guardar)** e depois em **Next (Seguinte)**.
 
-### Review
+### Revisar
 
-On the review page, click **Save and deploy**.
+Na página de "review (revisar  ou revisão)", clique em **Save and Deploy (Guardar e Desdobrar)**
 
-Then, your application will deploy. This may take a few minutes.
+Depois, sua aplicação será desdobrada. Isto pode levar alguns minutos.
 
-Once `Provision`, `Build`, `Deploy`, and `Verify` are green, click on the URL that the Amplify Console provides to view your site.
+Uma vez que `Provision`, `Build`, `Deploy`, e `Verify` estão verdes, clique na URL que o Console do Amplify fornece para visualizar o seu sítio.
 
-## AWS w/ S3 + CloudFront
+## AWS com S3 + CloudFront
 
-Hosting a **static generated** Nuxt app on AWS w/ S3 + CloudFront is powerful and cheap.
+A hospedagem de uma aplicação Nuxt **estaticamente gerada** no AWS com o S3 + CloudFront é poderosa e barata.
 
-> AWS is a death by 1000 paper cuts. If we missed a step, please submit a PR to update this document.
+> AWS é uma morte por 1000 cortes de papel. Se nós esquecemos de um passo, faça o favor de submeter uma PR para atualizar este documento.
 
-### Overview
+### Visão geral
 
-We'll host super cheap with some AWS services. Briefly:
+Nós hospedaremos super barato alguns serviços da AWS. Resumidamente:
 
 - S3
-  - cloud data "bucket" for our website files
-  - can be configured to host static websites
+  - nuvem de dados "bucket (balde)" para os ficheiros do nosso website
+  - pode ser configurada para hospedar websites estáticos
 - CloudFront
-  - a CDN (content delivery network)
-  - offers free HTTPS certs
-  - Makes your site load faster
+  - uma CDN (content delivery network, rede de entrega de conteúdo)
+  - oferece certificados HTTPs gratuitos
+  - Faz o seu sítio carregar mais rápido
 
-We'll push the site like this:
+Empurraremos o sítio desta maneira:
 
 ```
-Nuxt Generate -> Local folder -> AWS S3 Bucket -> AWS CloudFront CDN -> Browser
+Nuxt Generate -> Local folder (Pasta local) -> AWS S3 Bucket -> AWS CloudFront CDN -> Browser
   [      nuxt generate       ]    [         gulp deploy          ]
   [                         deploy.sh                            ]
 ```
 
-First, we'll generate the site with `nuxt generate`(<= v2.12). Then, we'll use [Gulp](https://gulpjs.com/) to publish the files to a S3 bucket and invalidate a CloudFront CDN.
+Primeiro, geraremos o sítio com `nuxt generate`(<= v2.12). Depois, usaremos o [Gulp](https://gulpjs.com/) para publicar os ficheiros para um balde (bucket) no S3 e invalidar um CDN do CloudFront.
 
 - [gulp](https://www.npmjs.com/package/gulp)
 - [gulp-awspublish](https://www.npmjs.com/package/gulp-awspublish)
 - [gulp-cloudfront-invalidate-aws-publish](https://www.npmjs.com/package/gulp-cloudfront-invalidate-aws-publish)
-- [concurrent-transform](https://www.npmjs.com/package/concurrent-transform) (for parallel uploads)
+- [concurrent-transform](https://www.npmjs.com/package/concurrent-transform) (para carregamentos paralelos)
 
-Our deploy script needs these environment variables set:
+Nosso script de desdobrar precisa destas variáveis de ambiente definidas:
 
 - AWS_BUCKET_NAME="example.com"
 - AWS_CLOUDFRONT="UPPERCASE"
 - AWS_ACCESS_KEY_ID="key"
 - AWS_SECRET_ACCESS_KEY="secret"
 
-We'll have these files:
+Teremos esses ficheiros:
 
 ```
-deploy.sh       -  run `nuxt generate` and `gulp deploy`
-gulpfile.js     -  `gulp deploy` code to push files to S3 and invalidate CloudFront
+deploy.sh       -  executa o `nuxt generate` e o `gulp deploy`
+gulpfile.js     -  `gulp deploy` código para empurrar ficheiros para S3 e invalidar o CloudFront
 ```
 
-### Setting it up
+### Configurar ele
 
-1. Make a S3 bucket and configure it for static site hosting
-2. Create a CloudFront distribution
-3. Configure security access
-4. Setup build script in your project
+1. Faça um balde (bucket) no S3 e configura ele para hospedar sítio estático
+2. Crie uma distribuição do CloudFront
+3. Configura o acesso de segurança
+4. Configura o script de construção dentro do seu projeto
 
-### AWS: Setup your S3 bucket and CloudFront Distribution
+### AWS: Configura o seu balde (bucket) do S3 e distribuição do CloudFront
 
-Please follow this [tutorial to setup your S3 and CloudFront](https://learnetto.com/blog/cloudfront-s3) for step one and two.
+Siga este [tutorial para configurar o seu S3 e CloudFront](https://learnetto.com/blog/cloudfront-s3) para o passo um e dois.
 
-You should now have this data:
+Você deve agora ter este dado:
 
 - AWS_BUCKET_NAME="example.com"
 - AWS_CLOUDFRONT="UPPERCASE"
 
-### AWS: Configure security access
+### AWS: Configura o acesso de segurança
 
-For step 3, we need to create a user that can:
+Para o passo 3, precisamos criar um usuário que pode:
 
-- Update the bucket contents
-- Invalidate the CloudFront distribution (propagates changes to users faster)
+- Atualizar os conteúdos do balde (bucket)
+- Invalidar a distribuição do CloudFront (propagar mudanças para os usuários rapidamente)
 
-[Create a programmatic user with this policy](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_users_create.html):
+[Criar um usuário programático com esta política](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_users_create.html):
 
-> NOTE: replace 2x `example.com` with your S3 bucket name below. This policy allows pushing to the specified bucket, and invalidating any CloudFront distribution.
+> Nota: substitua 2x `example.com` com nome do seu balde (bucket) do S3 abaixo. Esta política permite empurrar para um balde especificado, e invalidar qualquer distribuição do CloudFront.
 
 ```json
 {
@@ -180,16 +180,16 @@ For step 3, we need to create a user that can:
 }
 ```
 
-Then [get an access key and secret](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_access-keys.html).
+Depois [receba uma chave de acesso e secreta](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_access-keys.html).
 
-You should now have this data:
+Você deve agora ter este dado:
 
 - AWS_ACCESS_KEY_ID="key"
 - AWS_SECRET_ACCESS_KEY="secret"
 
-### Laptop: Setup your project's build script
+### Laptop: Configure o script de construção (build) do seu projeto
 
-4.1) Create a `deploy.sh` script. See optional [nvm (node version manager)](https://github.com/creationix/nvm).
+4.1) Crie um script `deploy.sh`. Consulta opcional [nvm (node version manager, gestor de versão do node)](https://github.com/creationix/nvm).
 
 ```bash
 #!/bin/bash
@@ -199,21 +199,21 @@ export AWS_SECRET_ACCESS_KEY="secret"
 export AWS_BUCKET_NAME="example.com"
 export AWS_CLOUDFRONT="UPPERCASE"
 
-# Load nvm (node version manager), install node (version in .nvmrc), and npm install packages
+# Carrega o nvm (node version manager, gestor de versão do node), instala o node (versão dentro do .nvmrc) e o npm instala os pacotes
 [ -s "$HOME/.nvm/nvm.sh" ] && source "$HOME/.nvm/nvm.sh" && nvm use
-# Npm install if not already.
+# Npm instala se ainda tiver feito.
 [ ! -d "node_modules" ] && npm install
 
 npm run generate
 gulp deploy
 ```
 
-4.2) Make `deploy.sh` runnable and DON'T CHECK INTO GIT (deploy.sh has secrets in it)
+4.2) Torna `deploy.sh` executável e NÃO ENVIE PARA O GIT (o deploy.sh tem segredos dentro dele)
 
 ```bash
 chmod +x deploy.sh
 echo "
-# Don't commit build files
+# Não consolide ficheiros da construção
 node_modules
 dist
 .nuxt
@@ -222,14 +222,14 @@ deploy.sh
 " >> .gitignore
 ```
 
-4.3) Add Gulp to your project and to your command line
+4.3) Adicione o Gulp ao seu projeto e a sua linha de comando
 
 ```bash
 npm install --save-dev gulp gulp-awspublish gulp-cloudfront-invalidate-aws-publish concurrent-transform
 npm install -g gulp
 ```
 
-4.4) Create a `gulpfile.js` with the build script
+4.4) Cria um ficheiro `gulpfile.js` com o script de construção (build)
 
 ```javascript
 const gulp = require('gulp')
@@ -240,7 +240,7 @@ const parallelize = require('concurrent-transform')
 // https://docs.aws.amazon.com/cli/latest/userguide/cli-environment.html
 
 const config = {
-  // Required
+  // Obrigatório
   params: {
     Bucket: process.env.AWS_BUCKET_NAME
   },
@@ -250,35 +250,35 @@ const config = {
     signatureVersion: 'v3'
   },
 
-  // Optional
-  deleteOldVersions: false, // NOT FOR PRODUCTION
-  distribution: process.env.AWS_CLOUDFRONT, // CloudFront distribution ID
+  // Opcional
+  deleteOldVersions: false, // NÃO PARA PRODUÇÃO
+  distribution: process.env.AWS_CLOUDFRONT, // ID da distribuição do CloudFront
   region: process.env.AWS_DEFAULT_REGION,
   headers: {
     /* 'Cache-Control': 'max-age=315360000, no-transform, public', */
   },
 
-  // Sensible Defaults - gitignore these Files and Dirs
+  // Padrões Sensíveis - ignore com o gitignore esses ficheiros e diretórios
   distDir: 'dist',
   indexRootPath: true,
   cacheFileName: '.awspublish',
   concurrentUploads: 10,
-  wait: true // wait for CloudFront invalidation to complete (about 30-60 seconds)
+  wait: true // aguarde a invalidação do CloudFront terminar (leva de 30-60 segundos)
 }
 
 gulp.task('deploy', function () {
-  // create a new publisher using S3 options
+  // crie uma nova publicação usando as opções do S3
   // http://docs.aws.amazon.com/AWSJavaScriptSDK/latest/AWS/S3.html#constructor-property
   const publisher = awspublish.create(config)
 
   let g = gulp.src('./' + config.distDir + '/**')
-  // publisher will add Content-Length, Content-Type and headers specified above
-  // If not specified it will set x-amz-acl to public-read by default
+  // a publicação adicionará o Content-Length, Content-Type e o headers especificados acima
+  // Se não for especificado ele definirá x-amz-acl para public-read por padrão
   g = g.pipe(
     parallelize(publisher.publish(config.headers), config.concurrentUploads)
   )
 
-  // Invalidate CDN
+  // Invalide o CDN
   if (config.distribution) {
     console.log('Configured with CloudFront distribution')
     g = g.pipe(cloudfront(config))
@@ -288,27 +288,27 @@ gulp.task('deploy', function () {
     )
   }
 
-  // Delete removed files
+  // Eliminar ficheiros removidos
   if (config.deleteOldVersions) {
     g = g.pipe(publisher.sync())
   }
-  // create a cache file to speed up consecutive uploads
+  // criar um ficheiro de cache para acelerar os carregamentos consecutivos.
   g = g.pipe(publisher.cache())
-  // print upload updates to console
+  // imprima atualizações do carregamento no console
   g = g.pipe(awspublish.reporter())
   return g
 })
 ```
 
-4.5) Deploy and debug
+4.5) Desdobrar e depurar
 
-Run it:
+Execute isto:
 
 ```bash
 ./deploy.sh
 ```
 
-You should get an output similar to this:
+Você deve receber uma saída semelhante a esta:
 
 ```bash
 $ ./deploy.sh
@@ -410,4 +410,4 @@ Configured with CloudFront distribution
 [21:26:09] Finished 'deploy' after 42 s
 ```
 
-Note that the `CloudFront invalidation created: XXXX` is the only output from the CloudFront invalidation npm package. If you don't see that, it's not working.
+Note que o `CloudFront invalidation created: XXXX` é a única saída da invalidação do CloudFront do pacote npm. Se você não ver isso, significa que não está funcionando.

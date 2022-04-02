@@ -1,41 +1,42 @@
 <template>
   <div class="ListCard group">
-    <template v-if="item.link">
-      <div class="ListCard-external group-hover:opacity-100">
+    <template v-if="item.to || item.link">
+      <div v-if="item.link" class="ListCard-external group-hover:opacity-100">
         <slot name="external">
-          <nuxt-img alt="external_link" src="/img/icons/ext.svg" />
+          <NuxtImg alt="external_link" src="/img/icons/ext.svg" />
         </slot>
       </div>
-      <Link :to="item.link" :aria-label="item.title" target="_blank" class="absolute inset-0" />
+      <AppLink :to="item.to || item.link" :aria-label="item.title" class="absolute inset-0" />
     </template>
-    <Link v-else :to="item.to || ''" :aria-label="item.title" class="absolute inset-0" />
     <div class="ListCard-body">
-      <nuxt-img
-        v-if="item.logo && item.logo.dark"
-        :alt="`${item.title} logo`"
-        :src="item.logo.dark"
-        class="dark-img w-12 h-12 mr-4 rounded-md"
-      />
-      <nuxt-img
-        v-if="item.logo && item.logo.light"
-        :alt="`${item.title} logo`"
-        :src="item.logo.light"
-        class="light-img w-12 h-12 mr-4 rounded-md"
-      />
-      <nuxt-img
-        v-if="typeof item.logo === 'string'"
-        :alt="`${item.title} logo`"
-        :src="item.logo || ''"
-        class="w-12 h-12 mr-4 rounded-md"
-      />
+      <div class="w-full flex flex-row justify-between">
+        <NuxtImg
+          v-if="item.logo && item.logo.dark"
+          :alt="`${item.title} logo`"
+          :src="item.logo.dark"
+          class="dark-img w-12 h-12 mr-4 rounded-md"
+        />
+        <NuxtImg
+          v-if="item.logo && item.logo.light"
+          :alt="`${item.title} logo`"
+          :src="item.logo.light"
+          class="light-img w-12 h-12 mr-4 rounded-md"
+        />
+        <NuxtImg
+          v-if="typeof item.logo === 'string'"
+          :alt="`${item.title} logo`"
+          :src="item.logo || ''"
+          class="w-12 h-12 mr-4 rounded-md"
+        />
+        <span v-if="item.location" class="text-cloud-lighter">{{ item.location }}</span>
+      </div>
       <h3 class="font-bold text-xl py-2">{{ item.title || 'Title' }}</h3>
       <p class="text-sm">{{ item.description || 'Description' }}</p>
     </div>
-    <div class="ListCard-foot">
-      <slot name="footer" />
-    </div>
+    <slot name="footer" />
   </div>
 </template>
+
 <script lang="ts">
 import { defineComponent } from '@nuxtjs/composition-api'
 
@@ -55,8 +56,5 @@ export default defineComponent({
 }
 .ListCard-external {
   @apply transition-opacity duration-200 opacity-0 absolute top-4 right-4 cursor-pointer h-6;
-}
-.ListCard-foot {
-  @apply text-right text-sm pt-4 font-medium text-gray-400;
 }
 </style>

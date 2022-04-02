@@ -16,9 +16,9 @@
       "
       :class="{ 'dark:border-secondary-dark': !isHome, 'bg-white': isHome }"
     >
-      <NuxtLabel tag="p" class="text-left" v-html="testimonial.testimonial"></NuxtLabel>
+      <p class="text-left" v-html="testimonial.testimonial" />
       <div class="flex w-full justify-between items-center">
-        <a :href="testimonial.authorUrl" target="_blank" rel="noopener">
+        <AppLink :href="testimonial.authorUrl" rel="noopener">
           <img
             loading="lazy"
             :src="`/img/home/testimonials/${testimonial.authorIcon}.png`"
@@ -27,17 +27,14 @@
             height="48"
             class="h-12 w-12"
           />
-        </a>
-        <a :href="testimonial.authorUrl" target="_blank" rel="noopener" class="flex flex-1 pl-4 text-left flex-col">
-          <NuxtLabel tag="span" class="font-bold text-base">{{ testimonial.author }}</NuxtLabel>
-          <NuxtLabel
-            tag="span"
-            class="text-sm"
-            :class="isHome ? 'text-cloud' : 'light:text-cloud dark:text-cloud-lighter'"
-            >{{ testimonial.job }}
-          </NuxtLabel>
-        </a>
-        <a :href="testimonial.jobUrl" target="_blank" rel="noopener sponsored" class="hidden xl:block">
+        </AppLink>
+        <AppLink :href="testimonial.authorUrl" rel="noopener" class="flex flex-1 pl-4 text-left flex-col">
+          <span class="font-bold text-base">{{ testimonial.author }}</span>
+          <span class="text-sm" :class="isHome ? 'text-cloud' : 'light:text-cloud dark:text-cloud-lighter'">
+            {{ testimonial.job }}
+          </span>
+        </AppLink>
+        <AppLink :href="testimonial.jobUrl" rel="noopener sponsored" class="hidden xl:block">
           <img
             loading="lazy"
             :src="`/img/home/testimonials/${testimonial.jobIcon}.svg`"
@@ -55,7 +52,7 @@
             height="28"
             class="dark-img"
           />
-        </a>
+        </AppLink>
       </div>
     </li>
   </ul>

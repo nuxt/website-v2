@@ -12,16 +12,10 @@
       <LogoCard v-for="(item, index) in events" :key="index" :item="item">
         <template #footer>
           <div class="flex items-center" :class="item.eventLogo ? 'justify-between' : 'justify-end'">
-            <a
-              v-if="item.eventLogo && item.eventLink"
-              :href="item.eventLink"
-              target="_blank"
-              rel="noopener"
-              class="z-10"
-            >
+            <AppLink v-if="item.eventLogo && item.eventLink" :href="item.eventLink" class="z-10">
               <img :src="`/img/events/light/${item.eventLogo}`" :alt="item.name" loading="lazy" class="h-5 light-img" />
               <img :src="`/img/events/dark/${item.eventLogo}`" :alt="item.name" loading="lazy" class="h-5 dark-img" />
-            </a>
+            </AppLink>
             {{ item.displayDate }}
           </div>
         </template>

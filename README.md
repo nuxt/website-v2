@@ -22,7 +22,7 @@ Start the development server on [http://localhost:4000](http://localhost:4000)
 yarn dev
 ```
 
-The pages are generated from [docs/content/](./content), you can start editing them to start helping us on documenting Nuxt 💚
+The pages are generated from [content/](./content), you can start editing them to start helping us on documenting Nuxt 💚
 
 ## License
 

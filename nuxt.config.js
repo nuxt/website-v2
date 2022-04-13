@@ -224,6 +224,14 @@ export default {
       // name: 'Türkçe',
       // domain: 'https://tr.nuxtjs.org'
       // }
+      // please leave this commented out until subdomain is live
+      // {
+      //   code: 'ar',
+      //   iso: 'ar-OM',
+      //   file: 'ar-OM.js',
+      //   name: 'العربية',
+      //   domain: 'https://ar.nuxtjs.org'
+      // },
       {
         code: 'es',
         iso: 'es-ES',

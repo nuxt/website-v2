@@ -4,7 +4,7 @@ export default {
   ...fr,
   banner: {
     here: 'v3.nuxtjs.org',
-    format: '{nuxt} beta is out! Discover more about it on {here}'
+    format: '{nuxt} is out! Discover more about it on {here}'
   },
   cookies: {
     message: "Nous utilisons des cookies pour mesurer l'audience et améliorer le site !",

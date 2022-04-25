@@ -7,13 +7,14 @@
     </div>
     <div class="flex flex-wrap justify-center py-0 section">
       <section class="flex flex-col justify-start w-full px-4 pt-36 pb-48 md:pt-44 lg:pb-56 lg:pt-36 text-center z-20">
-        <div class="pb-16">
-          <nuxt-link
+        <div class="flex justify-center mb-16">
+          <NuxtLink
             to="/announcements/nuxt3-rc"
-            class="bg-primary/25 hover:bg-primary-800 text-white border border-primary py-3 px-4 rounded"
+            class="flex items-center truncate bg-primary/25 hover:bg-primary-800 text-white border border-primary py-3 px-4 rounded"
           >
-            <icon-star class="inline mr-2 -mt-1" /> <b>Annoucement</b>: Nuxt 3 Release Candidate is out!
-          </nuxt-link>
+            <IconStar class="h-4 w-4 mr-2" />
+            <span class="truncate"><b>Announcement</b>: Nuxt 3 Release Candidate is out!</span>
+          </NuxtLink>
         </div>
         <h1 class="font-normal font-serif text-display-5 xs:text-display-4 md:text-display-3 2xl:text-display-2 mb-6">
           <Markdown use="title" unwrap="p" />

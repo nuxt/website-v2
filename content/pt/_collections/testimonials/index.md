@@ -1,34 +1,34 @@
 ---
 testimonials:
   -
-    testimonial: 'Nuxt offers a compelling solution and a great ecosystem to help you ship fullstack Vue apps that are performant and SEO friendly. The flexibility to choose between SSR and SSG is icing on the cake.'
+    testimonial: 'A Nuxt oferece uma solução convincente e um excelente ecossistema para ajudar você a entregar aplicações Vue completas que são funcionais e amigáveis ao SEO. A flexibilidade para escolher entre a Renderização no Lado do Servidor (SSR, sigla em Inglês) e Geração de Sítios Estáticos (SSG, sigla em Inglês) é a cereja sobre o bolo.'
     author: 'Evan You'
     authorIcon: 'evan'
     authorUrl: 'https://twitter.com/youyuxi'
-    job: 'Creator of Vue.js'
+    job: 'Criador do Vue.js'
     jobIcon: 'vue'
     jobUrl: 'https://vuejs.org'
   -
     testimonial:
-      'Nuxt has outstanding developer productivity, experience, and performance right out of the gate!<br/>There’s so much attention to detail, ensuring teams have everything at their fingertips to productively build all manners of applications.'
+      'A Nuxt tem destacado a produtividade, experiência, e o desempenho de desenvolvedor mesmo fora dos limites!  Há muita atenção aos detalhes, garantindo que as equipas tenham tudo na ponto de seus dedos para produtivamente construir todos os tipos de aplicações.'
     author: 'Sarah Drasner'
     authorIcon: 'sarah'
     authorUrl: 'https://twitter.com/sarah_edo'
-    job: 'Core Team of Vue.js'
+    job: 'Equipa Principal do Vue.js'
     jobIcon: 'vue'
     jobUrl: 'https://vuejs.org'
   -
     testimonial:
-      'Nuxt is a fantastic choice for teams building a production-grade product on the web. It aims to bake in performance best-practices while maintaining excellent Vue.js DX.'
+      'A Nuxt é uma escolha fantástica para as equipas construirem um produto de qualidade sobre a web. Ela visa produzir nas melhores práticas de desempenho enquanto mantém uma excelente experiência de desenvolvimento de Vue.js'
     author: 'Addy Osmani'
     authorIcon: 'addy'
     authorUrl: 'https://twitter.com/addyosmani'
-    job: 'Chief Engineer of Chrome'
+    job: 'Engenheiro Chefe do Chromes'
     jobIcon: 'chrome'
     jobUrl: 'https://www.google.com/chrome/'
   -
     testimonial:
-      'Nuxt has been an incredible source of innovation and inspiration for developers and framework authors alike. It’s been amazing to see its growth in web projects of all sizes on the web.'
+      'A Nuxt tem sido uma incrível fonte de inovação e inspiração para os desenvolvedores e igualmente para autores de abstrações. Tem sido incrível observar o seu crescimento em projetos de todos os tamanhos na web.'
     author: 'Guillermo Rauch'
     authorIcon: 'guillermo'
     authorUrl: 'https://twitter.com/rauchg'
@@ -38,16 +38,16 @@ testimonials:
     jobUrl: 'https://vercel.com'
   -
     testimonial:
-      'Nuxt has a unique approach of combining a great developer experience with reusable, fully integrated features that speed up the development and performance of your next website or application.'
+      'A Nuxt tem uma abordagem única de combinar uma excelente experiência de desenvolvedor com re-usáveis, funcionalidades completamente integradas que podem acelerar o desenvolvimento e desempenho do seu próximo sítio ou aplicação na web.'
     author: 'Dominik Angerer'
     authorIcon: 'dominik'
     authorUrl: 'https://twitter.com/domangerer'
-    job: 'Founder of Storyblok'
+    job: 'Fundador do Storyblok'
     jobIcon: 'storyblok'
     jobUrl: 'https://www.storyblok.com'
   -
     testimonial:
-      'Nuxt is our primary choice for offering a seamless website development experience to our users. Its simplicity and progressive learning curve makes it our ideal choice for SliceMachine.'
+      'A Nuxt é a nossa primeira escolha para oferecer uma experiência de desenvolvimento de sítios na web coerente para os nossos usuários. Sua simplicidade e curva de aprendizado progressivo faz dela a nossa escolha ideal para o SliceMachine.'
     author: 'Sadek Drobi'
     authorIcon: 'sadek'
     authorUrl: 'https://twitter.com/Sadache'
@@ -56,7 +56,7 @@ testimonials:
     jobUrl: 'https://prismic.io'
   -
     testimonial:
-      "Every serious full stack development team needs to stop take a look at Nuxt. Vue's developer productivity combined with Nuxt's server side rendering, is the foundation for instant loading web sites that delight users and improve team velocity."
+      "Toda equipa de desenvolvimento de pilha completa seria precisa parar e dar uma vista de olhos no Nuxt. A produtividade de desenvolvedor de Vue combinada com a renderização no lado do servidor do Nuxt, é o fundamento para sítios da web com carregamento instantâneo que encanta os usuários e melhora a velocidade da equipa."
     author: 'Ajay Kapur'
     authorIcon: 'ajay'
     authorUrl: 'https://www.linkedin.com/in/ajaykapur/'
@@ -66,7 +66,7 @@ testimonials:
     jobUrl: 'https://www.layer0.co/'
   -
     testimonial:
-      'Nuxt has an ideal balance of approachability for developers new to JAMstack, and power for experienced teams working on complex applications. The modules and first-class integration with the rest of the Vue ecosystem makes for a superb DX.'
+      'A Nuxt tem um equilíbrio ideal de acessibilidade para desenvolvedores novos para o JAMstack, e poder para equipas experientes trabalhando sobre aplicações complexas.Os módulos e a integração de primeira classe com o resto do ecossistema do Vue produz uma excelente Experiência de Desenvolvedor.'
     author: 'Dave Loneragan'
     authorIcon: 'dave'
     authorUrl: 'https://twitter.com/paper_tokyo'
@@ -75,7 +75,7 @@ testimonials:
     jobUrl: 'https://swell.is'
   -
     testimonial:
-      'The moment I used Nuxt for the first time I felt in love with it. Apart from its scalability, performance and developer experience, the team behind of it is also fantastic. Thanks for developing such a great framework and making our lives much easier!'
+      'O momento em que eu usei a Nuxt pela primeira vez eu apaixonei-me por ele. Além de sua escalabilidade, desempenho e experiência de desenvolvedor, a equipa por trás dele também é fantastica. Obrigado por desenvolverem um tão excelente framework e tornando nossas vidas muito mais fácil!'
     author: 'Savas Vedova'
     authorIcon: 'savas'
     authorUrl: 'https://www.linkedin.com/in/savas-vedova/'

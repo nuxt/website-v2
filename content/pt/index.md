@@ -140,10 +140,10 @@ O desenvolvimento da Nuxt é levado a cabo por desenvolvedores apaixonados, mas 
   ::home-partners-card
   ---
   icon: agency.svg
-  category: Agência
+  category: agency
   ---
   #title
-  Agências parceiras
+  Agências Parceiras
 
   #description
   As agências parceiras são agências web e de consultoria confiáveis que podem fornecer desenvolvimento de soluções com a Nuxt e suporte para seus projetos.

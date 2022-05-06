@@ -140,7 +140,7 @@ O desenvolvimento da Nuxt é levado a cabo por desenvolvedores apaixonados, mas 
   ::home-partners-card
   ---
   icon: agency.svg
-  category: Agência
+  category: agency
   ---
   #title
   Agências Parceiras

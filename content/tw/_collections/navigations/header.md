@@ -1,6 +1,6 @@
 ---
 links:
-  - title: 'Discover'
+  - title: '瀏覽'
     items:
       - title: 'Showcases'
         subtitle: 'Selection of websites built with Nuxt'
@@ -23,7 +23,7 @@ links:
   - title: '學習'
     items:
       - title: '文件'
-        subtitle: 'Create fast websites easily'
+        subtitle: '輕鬆建立飆速網站'
         slug: 'docs'
         to: '/docs'
         icon: 'docs.svg'
@@ -36,17 +36,17 @@ links:
         icon: 'examples.svg'
         color: 'bg-green-600'
       - title: '教學'
-        subtitle: 'Learn with concrete cases'
+        subtitle: '透過實例學習'
         slug: 'tutorials'
         to: '/tutorials'
         icon: 'tutorials.svg'
         color: 'bg-green-700'
       - title: 'Master courses'
-        subtitle: 'Learn more with experts'
+        subtitle: 'Learn more with experts 與專家們深入'
         href: 'https://masteringnuxt.com/?utm_source=nuxt&utm_medium=link&utm_campaign=nsite'
         icon: 'master-courses.svg'
         color: 'bg-green-800'
-  - title: 'Explore'
+  - title: '探索'
     items:
       - title: '部署'
         subtitle: '如何部署 Nuxt'

@@ -4,7 +4,7 @@ export default {
   ...tw,
   banner: {
     here: 'v3.nuxtjs.org',
-    format: '{nuxt} is out! Discover more about it on {here}'
+    format: '{nuxt} 已發布！前往 {here} 以了解詳情。'
   },
   cookies: {
     message: '我們使用 Cookies 進行使用者分析及頁面改進！',
@@ -47,8 +47,8 @@ export default {
       modules: '模組',
       deployment: '部屬'
     },
-    cli: 'From CLI',
-    scratch: 'From Scratch'
+    cli: '使用 CLI',
+    scratch: '手動安裝'
   },
   modules: {
     search: '搜尋模組 (名稱、類別、使用者名稱...)',

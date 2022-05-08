@@ -1,7 +1,7 @@
 ---
 template: blank
 title: '直覺化的 Vue 框架'
-description: 'Build your next Vue.js application with confidence using Nuxt. An open source framework making web development simple and powerful. '
+description: '使用 Nuxt ── 使網頁開發簡易且強大的開源框架，讓您在打造下個 Vue.js 應用程式時信心倍增。'
 bgClass: 'bg-white'
 ---
 
@@ -10,7 +10,7 @@ bgClass: 'bg-white'
 直覺化的 Vue<br>框架
 
 #description
-Build your next Vue.js application with confidence using Nuxt.<br class="hidden sm:block" /> An open source framework making web development simple and powerful.
+使用 Nuxt ── 使網頁開發簡易且強大的開源框架，<br class="hidden sm:block" />讓您在打造下個 Vue.js 應用程式時信心倍增。
 
 #primary-button
 :app-button[39K+ GitHub stars]{ href="https://github.com/nuxt/nuxt.js" icon="IconGitHub" extraClass="text-white bg-sky-black hover:bg-sky-darker leading-4" }
@@ -25,13 +25,13 @@ category: 學習
 ---
 
 #title
-[Easy]{.text-primary} to learn. [Easy]{.text-primary} to master
+[好]{.text-primary}學，[好]{.text-primary}出師。
 
 #description
-Learn everything you need to know, from beginner to master.
+從初學者到大師，學習您所需要知道的一切。
 
 #bottom
-:app-button[Start learning]{to="/docs/get-started/installation"}
+:app-button[開始學習]{to="/docs/get-started/installation"}
 ::
 
 ::home-features
@@ -90,7 +90,7 @@ image: /img/home/discover/dx/seo.svg
 ::section-content-item
 ---
 title: 自動匯入組件
-description: 'Use your components, Nuxt will import them with smart code-splitting. 組件隨您用，'
+description: '組件自由配，Nuxt 不僅能夠幫您匯入，還能對程式碼做智慧分割。'
 image: /img/home/discover/dx/auto-inject.svg
 ---
 ::
@@ -104,7 +104,7 @@ image: /img/home/discover/dx/modular.svg
 ::
 
 #title
-直覺化的[開]{.text-primary}發[體]{.text-primary}驗
+直覺化的[開發]{.text-primary}體驗
 
 #description
 Nuxt 提供諸多功能，以提升開發者生產力及使用者體驗。
@@ -119,8 +119,8 @@ category: 合作夥伴
 永續[_開發_]{.text-primary}
 
 #description
-Nuxt development is carried out by passionate developers, but the amount of effort needed to maintain and develop new features is not sustainable without proper financial backing. We are thankful for our sponsors and partners, who help make Nuxt possible.<br>
-Nuxt 的開發由滿腔熱血的開發者進行，但如果沒有妥當的資金後援，維護和開發新功能所需的努力
+Nuxt 的開發由滿腔熱血的開發者進行，但如果沒有妥當的資金後援，維護和開發新功能很難持續下去。我們特別感謝所有的贊助者和合作夥伴，有了他們 Nuxt 才能走到現在。<br>
+
 #partners-card
   ::home-partners-card
   ---
@@ -214,7 +214,7 @@ category: Explore
 ::section-content-item
 ---
 title: '部署'
-description: 'Extend and automate your workflow by using deployments for your favorite tools. '
+description: '了解如何部屬到您的常用平台，以擴展和自動化您的工作流。'
 image: '/img/home/explore/gem-explore-1.svg'
 to: '/deployments'
 hoverClass: 'hover:bg-sky-surface'
@@ -243,7 +243,7 @@ hoverClass: 'hover:bg-sky-surface'
 Moving forward? So much to [_Explore_]{.text-primary}
 
 #description
-Discover powerful modules, integrate with your favorite providers and start quickly with themes. 探索強大模組、與您喜愛的提供者整合，
+ and start quickly with themes. 探索強大模組、與您喜愛的提供者整合，
 ::
 
 ::home-community
@@ -255,10 +255,11 @@ articleLinkTitle: 了解詳情
 ---
 
 #title
-Sharing is [Caring]{.text-sky-lighter}
+分享即是[關愛]{.text-sky-lighter}
 
 #description
-Discover articles from the framework team and 社群 about Nuxt. Tips and tricks included!
+瀏覽由 Nuxt 團隊和社群撰寫的文章，還能學到小技巧！
+
 ::
 
 ::home-testimonials

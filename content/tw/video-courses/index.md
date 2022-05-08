@@ -1,20 +1,20 @@
 ---
 template: blog
-title: 'Video Courses'
-description: 'Discover and learn more about the Nuxt Framework with free and premium video courses.'
+title: '影音課程'
+description: '透過免費和付費的影音課程深入了解並探索 Nuxt 框架。'
 ---
 ::video-courses-list
 ---
 video-courses:
   one:
-    title: Learn Nuxt by Building a Real World App 打造真實世界的應用程式
+    title: 透過打造真實世界的應用程式來學習 Nuxt
     description: 學習如何從零開始用 Nuxt 建立強固、現代化的網站。或改善您的網站的性能和程式碼品質，同時更良好的運用 Nuxt。
     image: /img/video-courses/mastering_nuxt.png
     link: 'https://masteringnuxt.com/?utm_source=nuxt&utm_medium=link&utm_campaign=nsite'
     tier: 需付費
   two:
     title: Nuxt 入門
-    description: Learn the essentials for how to build and deploy a Nuxt site including dynamic routes, data fetching, SEO, lazy loading, global styles and transitions as well as how to generate and deploy your Nuxt app.
+    description: 學習開發和部署一個 Nuxt 網站的要領，包括動態路徑、資料擷取、SEO、延遲載入、全域樣式和轉場，以及如何產生並部署您的 Nuxt 應用程式。
     image: /img/video-courses/jamstack_explorer.png
     link: 'https://explorers.netlify.com/learn/get-started-with-nuxt'
     tier: 免費
@@ -32,13 +32,13 @@ video-courses:
     tier: 需付費
   five:
     title: 使用 Laravel、GraphQL、Nuxt、和 Apollo 打造徵才網
-    description: Learn while you build a GraphQL API with Laravel Lighthouse, then build a Nuxt frontend with Apollo to consume it. All styled with Tailwind.
+    description: 您將使用 Laravel Lighthouse 建立一個 GraphQL API，然後使用 Apollo 建構 Nuxt 前端來取用資料，兩者都將使用 Tailwind 來設定樣式。
     image: /img/video-courses/job_board.png
     link: 'https://codecourse.com/courses/build-a-job-board-with-laravel-graphql-nuxt-and-apollo'
     tier: 需付費
   six:
     title: Nuxt - Vue.js on Steroids
-    description: Build highly engaging Vue JS apps with Nuxt. Nuxt adds easy server-side-rendering and a folder-based config approach.
+    description: 透過 Nuxt 來打造吸引人的 Vue.js 應用程式。Nuxt 加入了伺服器端渲染及基於資料夾的設置方式。
     image: /img/video-courses/vuejs_on_steroids.png
     link: 'https://www.udemy.com/course/nuxtjs-vuejs-on-steroids/'
     tier: 需付費
@@ -49,8 +49,8 @@ video-courses:
     link: 'https://www.vuemastery.com/courses/scaling-vue-with-nuxt-js/why-use-nuxt'
     tier: 需付費
   eight:
-    title: Nuxt Fundamentals
-    description: Learn the fundamentals of Nuxt in this course that we created together with the founders of Nuxt. The course covers what you need to know from scaffolding to deploying your first Nuxt application. 在這個與 Nuxt 的創始人一起製作的課程中學習 Nuxt 的基本知識。
+    title: Nuxt 基礎
+    description: 在這個與 Nuxt 的創始人一起製作的課程中學習 Nuxt 的基本知識。本課程涵蓋了所有從建立鷹架到部屬您的首個 Nuxt 應用程式所需的知識。
     image: /img/video-courses/nuxt_fundamentals.png
     link: 'https://vueschool.io/courses/nuxtjs-fundamentals?friend=nuxt&utm_source=Nuxtjs.org&utm_medium=Link&utm_content=Courses&utm_campaign=nuxtjs-fundamentals'
     tier: 免費

@@ -32,5 +32,5 @@ teamName: community
 [社群]{.text-primary}
 
 #description
-From contributors to advocates, the community is made of members with different horizons and skills. We are happy to see new members every day and encourage anyone to help in any way (回答問題, giving a talk, creating modules and contributing to the core).
+從貢獻者到大使，社群是由具不同視野及技能的成員組成，我們很高興看到每天都有新成員加入，並鼓勵任何人以任何形式提供協助 (回答問題、舉行講座、建立模組、貢獻...)。
 ::

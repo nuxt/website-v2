@@ -1,20 +1,20 @@
 ---
 template: blank
-title: 'Showcases'
-description: 'Discover our selection of websites built with Nuxt.'
+title: '展示間'
+description: '探索使用 Nuxt 打造的精選網站。'
 layout:
   fluid: true
 ---
 
 ::page-hero{descriptionFullWidth}
 #title
-Showcases
+展示間
 
 #description
-  Discover our selection of websites built with Nuxt. This collection is powered by 此和集由[VueTelescope](https://vuetelescope.com) 提供技術支援。
+  探索使用 Nuxt 打造的精選網站。此合集由 [VueTelescope](https://vuetelescope.com) 提供技術支援。
 
 #bottomDesktop
-  Try out the browser extensions:
+  試試瀏覽器擴充功能：
   :showcases-bottom-hero
 ::
 

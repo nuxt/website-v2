@@ -1,13 +1,13 @@
 ---
 template: blank
-title: 'The Intuitive Vue Framework'
+title: '直覺化的 Vue 框架'
 description: 'Build your next Vue.js application with confidence using Nuxt. An open source framework making web development simple and powerful. '
 bgClass: 'bg-white'
 ---
 
 ::home-hero
 #title
-The Intuitive Vue<br>Framework
+直覺化的 Vue<br>框架
 
 #description
 Build your next Vue.js application with confidence using Nuxt.<br class="hidden sm:block" /> An open source framework making web development simple and powerful.
@@ -16,7 +16,7 @@ Build your next Vue.js application with confidence using Nuxt.<br class="hidden 
 :app-button[39K+ GitHub stars]{ href="https://github.com/nuxt/nuxt.js" icon="IconGitHub" extraClass="text-white bg-sky-black hover:bg-sky-darker leading-4" }
 
 #secondary-button
-:app-button[Get started]{ to="/docs/get-started/installation" }
+:app-button[開始使用]{ to="/docs/get-started/installation" }
 ::
 
 ::home-learn-master
@@ -66,7 +66,7 @@ image: /img/home/discover/dx/hybrid.svg
 ::section-content-item
 ---
 title: 資料擷取
-description: '在您的 Vue 組件中擷取來自任何來源的內容，Fetch your content from any source in your Vue components, SSR ready.'
+description: '在您的 Vue 組件中擷取來自任何來源的內容，伺服器渲染也適用。'
 image: /img/home/discover/dx/fetch.svg
 ---
 ::
@@ -74,14 +74,14 @@ image: /img/home/discover/dx/fetch.svg
 ::section-content-item
 ---
 title: 強式慣例
-description: 'Efficient teamwork with a strong directory structure and conventions.'
+description: '透過強式的目錄結構和慣例達成高效協作。'
 image: /img/home/discover/dx/conventions.svg
 ---
 ::
 
 ::section-content-item
 ---
-title: SEO Friendly
+title: SEO 友善
 description: '中繼標籤 + 更快的內容載入時間 = 絕佳索引'
 image: /img/home/discover/dx/seo.svg
 ---
@@ -98,16 +98,16 @@ image: /img/home/discover/dx/auto-inject.svg
 ::section-content-item
 ---
 title: 模組化生態
-description: 'Extend your app with 160+ Nuxt modules and create your own.'
+description: '使用超過 160 個的 Nuxt 模組來擴展您的應用程式，或是建立您自己的模組。'
 image: /img/home/discover/dx/modular.svg
 ---
 ::
 
 #title
-Intuitive [D]{.text-primary}eveloper E[x]{.text-primary}perience
+直覺化的[開]{.text-primary}發[體]{.text-primary}驗
 
 #description
-Nuxt is shipped with plenty of features to boost developer productivity and the end user experience.
+Nuxt 提供諸多功能，以提升開發者生產力及使用者體驗。
 ::
 
 ::home-discover-partners
@@ -120,7 +120,7 @@ category: 合作夥伴
 
 #description
 Nuxt development is carried out by passionate developers, but the amount of effort needed to maintain and develop new features is not sustainable without proper financial backing. We are thankful for our sponsors and partners, who help make Nuxt possible.<br>
-
+Nuxt 的開發由滿腔熱血的開發者進行，但如果沒有妥當的資金後援，維護和開發新功能所需的努力
 #partners-card
   ::home-partners-card
   ---
@@ -162,7 +162,7 @@ category: 學習
 ::section-content-item
 ---
 title: 文件
-description: 'Discover Nuxt concepts and find a complete API reference. 探索 Nuxt 的概念'
+description: '探索 Nuxt 的概念以及 API 的參考資料。'
 image: /img/home/learn/guides/gem-1.svg
 to: '/docs/get-started/installation'
 hoverClass: 'hover:bg-sky-darker'
@@ -172,7 +172,7 @@ hoverClass: 'hover:bg-sky-darker'
 ::section-content-item
 ---
 title: 範例
-description: "Learn by examples produced by the community跟隨社群製作的範例學習。"
+description: "跟隨社群製作的範例學習。"
 image: /img/home/learn/guides/gem-2.svg
 to: '/examples'
 hoverClass: 'hover:bg-sky-darker'
@@ -181,7 +181,7 @@ hoverClass: 'hover:bg-sky-darker'
 
 ::section-content-item
 ---
-title: Releases
+title: 版本
 description: '在升級前，了解有什麼新更動。'
 image: /img/home/learn/guides/gem-3.svg
 to: '/releases'
@@ -191,7 +191,7 @@ hoverClass: 'hover:bg-sky-darker'
 
 ::section-content-item
 ---
-title: Master Courses
+title: 大師課程
 description: '觀看一系列的影片，向我們的合作夥伴 Vue School 學習 Nuxt。'
 image: /img/home/learn/guides/gem-4.svg
 to: 'https://masteringnuxt.com/?utm_source=nuxt&utm_medium=link&utm_campaign=nsite'
@@ -200,7 +200,7 @@ hoverClass: 'hover:bg-sky-darker'
 ::
 
 #title
-Follow our [_Guides_]{.text-primary}
+跟隨我們的[_指引_]{.text-primary}
 
 #description
 從靈光乍現到曠世巨作，指南能夠帶領您走向成為 Nuxter 的道路。
@@ -214,7 +214,7 @@ category: Explore
 ::section-content-item
 ---
 title: '部署'
-description: 'Extend and automate your workflow by using deployments for your favorite tools.'
+description: 'Extend and automate your workflow by using deployments for your favorite tools. '
 image: '/img/home/explore/gem-explore-1.svg'
 to: '/deployments'
 hoverClass: 'hover:bg-sky-surface'
@@ -223,7 +223,7 @@ hoverClass: 'hover:bg-sky-surface'
 ::section-content-item
 ---
 title: '模組'
-description: 'Discover our list of modules to supercharge your Nuxt project. Created by the Nuxt team and community.'
+description: '探索所有由 Nuxt 團隊及社群製作的模組，讓您的 Nuxt 專案如虎添翼。'
 image: '/img/home/explore/gem-explore-2.svg'
 to: 'https://modules.nuxtjs.org'
 hoverClass: 'hover:bg-sky-surface'

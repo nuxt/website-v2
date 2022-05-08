@@ -1,15 +1,15 @@
 ---
 template: blank
 title: 合作夥伴
-description: "Nuxt 是採 MIT 授權的開源專案，供大眾免費使用。However, the maintenance effort is not sustainable without proper financial backing."
+description: "Nuxt 是採 MIT 授權的開源專案，供大眾免費使用。然而，如果沒有妥當的資金後援，維護工作很難持續進行。"
 ---
 
 ::page-hero
 #title
-Partners
+合作夥伴
 
 #description
-Find your perfect match. Get help from an agency partner or find a technology provider.
+尋找您的完美組合。向顧問合作夥伴取得協助或尋找技術供應商。
 
 #bottom
   :partners-bottom-hero
@@ -22,7 +22,7 @@ icon: 'technology.svg'
 ---
 
 #category-title
-Technology
+技術
 ::
 
 ::partners-section
@@ -32,5 +32,5 @@ icon: 'agency.svg'
 ---
 
 #category-title
-Agency
+顧問
 ::

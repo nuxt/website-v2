@@ -30,14 +30,14 @@ However, any significant improvement should be associated to an existing [featur
 
 ### Setup
 
-Before running any tests, make sure all dependencies are met and build all packages:
-在執行任何測試前，請確認所有依賴套件已安裝，並
+在執行任何測試前，請確認所有依賴套件已安裝，並建置所有套件：
+
 ```sh
 yarn
 yarn build
 ```
 
-### Test structure
+### 測試結構
 
 A great PR, whether it includes a bug fix or a new feature, will often include tests. To write great tests, let us explain our test structure:
 
@@ -84,11 +84,11 @@ yarn nuxt test/fixtures/your-fixture-app
 
 If you are working on a larger feature, please set up an example app in `examples/`. This will help greatly in understanding changes and also help Nuxt users to understand the feature you've built in-depth.
 
-### Linting
+### Lint
 
 As you might have noticed already, we are using ESLint to enforce a code standard. Please run `yarn lint` before committing your changes to verify that the code style is correct. If not, you can use `yarn lint --fix` or `npm run lint -- --fix` (no typo!) to fix most of the style changes. If there are still errors left, you must correct them manually.
 
-### Documentation
+### 文件
 
 If you are adding a new feature, or refactoring or changing the behavior of Nuxt in any other manner, you'll likely want to document the changes. Please do so with a PR to the [docs](https://github.com/nuxt/docs/pulls) repository. You don't have to write documentation up immediately (but please do so as soon as your pull request is mature enough).
 

@@ -30,7 +30,7 @@ links:
         to: '/teams'
       - title: '教學'
         to: '/tutorials'
-      - title: 'Video courses'
+      - title: '影音課程'
         to: '/video-courses/'
   - title: '資源'
     items:
@@ -42,7 +42,7 @@ links:
         to: '/examples'
       - title: '部署'
         to: '/deployments'
-      - title: 'Master courses'
+      - title: '大師課程'
         href: 'https://masteringnuxt.com/?utm_source=nuxt&utm_medium=link&utm_campaign=nsite'
       - title: '模組'
         href: 'https://modules.nuxtjs.org'

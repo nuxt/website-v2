@@ -1,19 +1,19 @@
 ---
 logos:
 -
-  type: Text colored
+  type: 文字 (彩色)
   logoImg: '/design-kit/colored-text'
   color: dark
 -
-  type: Text black
+  type: 文字 (純黑)
   logoImg: '/design-kit/black-text'
   color: dark
 -
-  type: Text white
+  type: 文字 (純白)
   logoImg: '/design-kit/white-text'
   color: light
 -
-  type: Text colored & white
+  type: 文字 (彩色 + 純白文字)
   logoImg: '/design-kit/colored-white-text'
   color: light
 ---

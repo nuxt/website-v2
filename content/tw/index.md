@@ -208,7 +208,7 @@ hoverClass: 'hover:bg-sky-darker'
 
 ::home-explore
 ---
-category: Explore
+category: 探索
 ---
 
 ::section-content-item
@@ -240,10 +240,10 @@ hoverClass: 'hover:bg-sky-surface'
 ::
 
 #title
-Moving forward? So much to [_Explore_]{.text-primary}
+準備好邁出[下一步]{.text-primary}了嗎？
 
 #description
- and start quickly with themes. 探索強大模組、與您喜愛的提供者整合，
+瀏覽強大模組、與您喜愛的提供者整合，或是使用主題來加速開發。
 ::
 
 ::home-community

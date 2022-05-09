@@ -27,13 +27,13 @@ Make sure you have a Google Cloud Account, a project and an empty Google App Eng
 All you need to add to your universal Nuxt app for deploying it to the App Engine is a file called `app.yaml`. Create a new file with that name in your root project directory and add the following content:
 
 ```yaml
-runtime: nodejs10
+runtime: nodejs16
 
 instance_class: F2
 
 handlers:
   - url: /_nuxt
-    static_dir: .nuxt/dist/client
+    static_dir: dist/_nuxt
     secure: always
 
   - url: /(.*\.(gif|png|jpg|ico|txt))$

@@ -1,11 +1,11 @@
 import { ref, useContext, reactive } from '@nuxtjs/composition-api'
 import { $fetch } from 'ohmyfetch'
 
-export function usePartnerContact(partnersEmail) {
+export function usePartnerContact(partnerSlug) {
   // @ts-ignore
   const { $recaptcha, $config } = useContext()
 
-  const apiURL = $config.apiURL || 'https://api.nuxtjs.org'
+  const apiURL = $config.apiNuxtlabsURL || 'https://api.nuxtlabs.com'
 
   const form = reactive({
     first_name: '',
@@ -21,7 +21,7 @@ export function usePartnerContact(partnersEmail) {
     $recaptcha
       .execute('login')
       .then(token => {
-        submitForm(partnersEmail, token)
+        submitForm(partnerSlug, token)
       })
       .catch(() => {
         result.value = 'failure'
@@ -31,14 +31,13 @@ export function usePartnerContact(partnersEmail) {
       })
   }
 
-  const submitForm = (partnersEmail, recaptchaToken) => {
-    $fetch(`${apiURL}/api/partners/contact`, {
+  const submitForm = (partnerSlug, recaptchaToken) => {
+    $fetch(`${apiURL}/api/organizations/${partnerSlug}/contact`, {
       method: 'POST',
       headers: {
         Accept: 'application/json'
       },
       body: {
-        partner_email: partnersEmail,
         token: recaptchaToken,
         ...form
       }

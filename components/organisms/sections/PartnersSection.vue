@@ -6,10 +6,10 @@
         <Markdown use="category-title" unwrap="p" />
       </h2>
     </div>
-    <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
-      <LogoCard v-for="partner in partners" :key="partner.title" :item="partner">
+    <div v-if="partners" class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+      <LogoCard v-for="partner in partners" :key="partner.id" :item="partner">
         <template #footer>
-          <PartnerServices :services="partner.services" class="text-sm mt-4" />
+          <PartnerServices :services="partner.profile.services" class="text-sm mt-4" />
         </template>
       </LogoCard>
     </div>
@@ -17,8 +17,9 @@
 </template>
 
 <script lang="ts">
-import { defineComponent, useContext, ref, useFetch, onMounted } from '@nuxtjs/composition-api'
+import { defineComponent, ref, onMounted } from '@nuxtjs/composition-api'
 import { scrollToHeading } from '@docus/theme/runtime'
+import { usePartners } from '~/plugins/partners'
 
 export default defineComponent({
   props: {
@@ -32,17 +33,10 @@ export default defineComponent({
     }
   },
   setup(props) {
-    const { $docus, i18n } = useContext()
-    const partners = ref(null)
+    const { fetch: fetchPartners } = usePartners()
+    const partners = ref([])
 
-    useFetch(async () => {
-      partners.value = (await $docus.search(`/collections/partners/${props.category}`, { deep: true }).fetch())
-        .map(partner => ({ ...partner, link: null, to: `/partners/${partner.slug}` }))
-        /* Filter by logo presence to eliminate wrong items sent by Docus API */
-        .filter(partner => partner.logo)
-    })
-
-    onMounted(() => {
+    onMounted(async () => {
       if (window.location.hash) {
         const hash = window.location.hash.replace('#', '')
 
@@ -51,6 +45,19 @@ export default defineComponent({
           scrollToHeading(hash, '--docs-scroll-margin-block')
         }, 300)
       }
+
+      const results = await fetchPartners(props.category)
+      // mapping for LogoCard
+      partners.value = results.map(partner => ({
+        ...partner,
+        to: '/partners/' + partner.slug,
+        logo: {
+          dark: partner.profile.logoDark?.url,
+          light: partner.profile.logoLight?.url
+        },
+        title: partner.name,
+        description: partner.profile.shortDescription
+      }))
     })
 
     return {

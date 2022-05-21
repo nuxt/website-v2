@@ -4,13 +4,15 @@
 
 <script>
 import { defineComponent } from '@nuxtjs/composition-api'
+import { $fetch } from 'ohmyfetch'
 
 // Some code has been imported from Docus to make this working
 // @docus/app/dist/app/pages/_.vue
 
 export default defineComponent({
-  async asyncData({ $docus, i18n, route, error }) {
+  async asyncData({ $docus, $config, route, error }) {
     const { slug } = route.params
+    const { token } = route.query
     if (!slug) {
       return error({
         statusCode: 404,
@@ -18,18 +20,21 @@ export default defineComponent({
       })
     }
 
-    const pages = await $docus
-      .search('/collections/partners', { deep: true })
-      .where({ slug: { $in: route.params.slug } })
-      .fetch()
-    if (!pages?.length) {
+    const apiURL = $config.apiNuxtlabsURL || 'https://api.nuxtlabs.com'
+
+    let page
+    try {
+      page = await $fetch(`${apiURL}/api/partners/${slug}`, {
+        params: token ? { token } : {}
+      })
+    } catch {}
+
+    if (!page) {
       return error({
         statusCode: 404,
         message: 'Partner not found'
       })
     }
-
-    const page = pages[0]
 
     const templateOptions = {
       ...$docus.settings.value.layout,
@@ -43,8 +48,8 @@ export default defineComponent({
     }
   },
   head() {
-    const title = this.page.title
-    const description = this.page.description
+    const title = this.page.name
+    const description = this.page.profile?.shortDescription
 
     return {
       title,

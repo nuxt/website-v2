@@ -145,7 +145,7 @@ Nuxt est construit et maintenu par des développeurs passionnés mais il serait 
   ::
 
 #bottom
-  :app-button[Devenez un partenaire]{href="mailto:partners@nuxtlabs.com"}
+  :app-button[Devenez un partenaire]{href="https://nuxtlabs.com/partners"}
 ::
 
 ::home-learn-guides

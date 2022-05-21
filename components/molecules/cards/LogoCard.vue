@@ -10,20 +10,23 @@
     </template>
     <div class="ListCard-body">
       <div class="w-full flex flex-row justify-between">
-        <NuxtImg
+        <img
           v-if="item.logo && item.logo.dark"
+          loading="lazy"
           :alt="`${item.title} logo`"
           :src="item.logo.dark"
           class="dark-img w-12 h-12 mr-4 rounded-md"
         />
-        <NuxtImg
+        <img
           v-if="item.logo && item.logo.light"
+          loading="lazy"
           :alt="`${item.title} logo`"
           :src="item.logo.light"
           class="light-img w-12 h-12 mr-4 rounded-md"
         />
-        <NuxtImg
+        <img
           v-if="typeof item.logo === 'string'"
+          loading="lazy"
           :alt="`${item.title} logo`"
           :src="item.logo || ''"
           class="w-12 h-12 mr-4 rounded-md"

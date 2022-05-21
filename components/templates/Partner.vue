@@ -1,18 +1,32 @@
 <template>
   <div>
-    <div class="h-80 p-6 flex justify-center items-center bg-sky-darkest">
-      <img v-if="page.logoFull" loading="lazy" :src="`${page.logoFull}`" :alt="page.title" class="h-20" />
+    <div class="h-80 flex justify-center items-center bg-sky-darkest">
+      <img
+        v-if="page.profile.logoFull"
+        loading="lazy"
+        :src="`${page.profile.logoFull.url}`"
+        :alt="page.name"
+        class="h-full w-full object-cover"
+      />
     </div>
 
     <div class="d-container-content">
       <div class="relative flex gap-8 -mt-6 sm:-mt-8 pb-8 xl:pb-16">
         <div class="w-24 h-24 sm:w-32 sm:h-32 p-4 bg-cloud-surface dark:bg-sky-darker rounded-md flex">
-          <img :src="`/img/companies/square/light/${page.icon}`" :alt="page.title" class="light-img text-white" />
-          <img :src="`/img/companies/square/dark/${page.icon}`" :alt="page.title" class="dark-img text-white" />
+          <img
+            :src="`${page.profile.logoLight && page.profile.logoLight.url}`"
+            :alt="page.name"
+            class="light-img text-white rounded-md"
+          />
+          <img
+            :src="`${page.profile.logoDark && page.profile.logoDark.url}`"
+            :alt="page.name"
+            class="dark-img text-white rounded-md"
+          />
         </div>
         <div class="flex flex-col justify-end gap-1">
-          <h1 class="text-display-5 sm:text-display-4 font-bold">{{ page.title }}</h1>
-          <AppLink :href="page.link" rel="noopener">
+          <h1 class="text-display-5 sm:text-display-4 font-bold">{{ page.name }}</h1>
+          <AppLink :href="page.url" rel="noopener">
             <IconExternalLink class="inline w-4 h-4 mr-1" /> {{ websiteDomain }}
           </AppLink>
         </div>
@@ -21,60 +35,64 @@
       <div class="flex flex-col-reverse gap-8 xl:gap-12 xl:flex-row xl:justify-between">
         <div class="w-full xl:w-[70%]">
           <p class="text-md sm:text-lg">
-            <span style="white-space: pre-wrap">{{ page.fullDescription }}</span>
+            <span style="white-space: pre-wrap">{{ page.profile.longDescription }}</span>
           </p>
 
           <div
             class="flex flex-col sm:flex-row w-full bg-cloud-surface dark:bg-sky-darker rounded-md mt-8 xl:mt-12 overflow-hidden"
           >
-            <div class="text-white p-6" :class="page.emailAddress ? 'sm:w-1/3' : 'w-full'" :style="customBackground">
+            <div class="text-white p-6" :class="page.email ? 'sm:w-1/3' : 'w-full'" :style="customBackground">
               <div class="flex flex-col h-full">
-                <h2 v-if="page.emailAddress" class="font-semibold text-lg">
-                  {{ $t('sustainability.mvp_detail.contact_partner', { partner: page.title }) }}
+                <h2 v-if="page.email" class="font-semibold text-lg">
+                  {{ $t('sustainability.mvp_detail.contact_partner', { partner: page.name }) }}
                 </h2>
                 <h2 v-else class="font-semibold text-lg">
-                  {{ $t('sustainability.mvp_detail.follow_partner', { partner: page.title }) }}
+                  {{ $t('sustainability.mvp_detail.follow_partner', { partner: page.name }) }}
                 </h2>
-                <span v-if="page.emailAddress" class="block text-gray-100 mt-2">{{
+                <span v-if="page.email" class="block text-gray-100 mt-2">{{
                   $t('sustainability.mvp_detail.they_will_get_back_to_you')
                 }}</span>
                 <span v-else class="block text-gray-100 mt-2">{{
                   $t('sustainability.mvp_detail.find_them_on_the_web')
                 }}</span>
-                <div class="flex justify-between" :class="!page.emailAddress ? 'flex-row-reverse' : 'flex-col h-full'">
+                <div class="flex justify-between" :class="!page.email ? 'flex-row-reverse' : 'flex-col h-full'">
                   <div>
-                    <AppLink :href="page.link" rel="noopener" class="flex items-center mt-4">
+                    <AppLink :href="page.url" rel="noopener" class="flex items-center mt-4">
                       <IconExternalLink class="inline flex-shrink-0 w-4 h-4 mr-1" />
                       <span class="truncate">{{ websiteDomain }}</span>
                     </AppLink>
 
-                    <AppLink v-if="page.phoneNumber" :href="`tel:${page.phoneNumber}`" class="flex items-center mt-4">
+                    <AppLink v-if="page.phone" :href="`tel:${page.phone}`" class="flex items-center mt-4">
                       <IconPhone class="inline flex-shrink-0 w-4 h-4 mr-1" />
-                      <span class="truncate">{{ page.phoneNumber }}</span>
+                      <span class="truncate">{{ page.phone }}</span>
                     </AppLink>
                   </div>
 
-                  <div class="flex gap-10" :class="page.emailAddress ? 'items-end' : 'items-end'">
+                  <div class="flex gap-10" :class="page.email ? 'items-end' : 'items-end'">
                     <AppLink
-                      v-if="page.twitter"
-                      :href="`https://twitter.com/${page.twitter}`"
+                      v-if="page.profile.twitter"
+                      :href="`https://twitter.com/${page.profile.twitter}`"
                       aria-label="twitter link"
                     >
                       <IconTwitter class="inline w-6 h-6" />
                     </AppLink>
-                    <AppLink v-if="page.github" :href="`https://github.com/${page.github}`" aria-label="github link">
+                    <AppLink
+                      v-if="page.profile.github"
+                      :href="`https://github.com/${page.profile.github}`"
+                      aria-label="github link"
+                    >
                       <IconGitHub class="inline w-6 h-6" />
                     </AppLink>
                     <AppLink
-                      v-if="page.linkedin"
-                      :href="`https://www.linkedin.com/company/${page.linkedin}`"
+                      v-if="page.profile.linkedin"
+                      :href="`https://www.linkedin.com/${page.profile.linkedin}`"
                       aria-label="linkedin link"
                     >
                       <IconLinkedIn class="inline w-6 h-6" />
                     </AppLink>
                     <AppLink
-                      v-if="page.facebook"
-                      :href="`https://www.facebook.com/${page.facebook}`"
+                      v-if="page.profile.facebook"
+                      :href="`https://www.facebook.com/${page.profile.facebook}`"
                       aria-label="facebook link"
                     >
                       <IconFacebook class="inline w-6 h-6" />
@@ -85,7 +103,7 @@
             </div>
 
             <form
-              v-if="page.emailAddress"
+              v-if="page.email"
               class="contact-form sm:w-2/3 h-full grid grid-cols-1 lg:grid-cols-2 p-6 gap-6"
               @submit.prevent="validateForm"
             >
@@ -121,15 +139,15 @@
 
         <div class="relative w-full xl:w-[30%]">
           <div class="xl:sticky xl:top-header px-6 py-3 bg-cloud-surface dark:bg-sky-darker rounded-md">
-            <div v-if="page.location" class="py-3">
+            <div v-if="page.profile.location" class="py-3">
               <h2 class="font-semibold text-lg mb-2">{{ $t('sustainability.mvp_detail.location') }}</h2>
-              <span class="text-sm text-sky-dark dark:text-gray-300">{{ page.location }}</span>
+              <span class="text-sm text-sky-dark dark:text-gray-300">{{ page.profile.location }}</span>
             </div>
-            <div v-if="page.services && page.services.length" class="py-3">
+            <div v-if="page.profile.services && page.profile.services.length" class="py-3">
               <h2 class="font-semibold text-lg mb-2">{{ $t('sustainability.mvp_detail.services') }}</h2>
               <ul class="flex flex-row flex-wrap gap-3">
                 <li
-                  v-for="(service, index) in page.services"
+                  v-for="(service, index) in page.profile.services"
                   :key="index"
                   class="text-sm rounded-md bg-cloud-lightest dark:bg-sky-dark px-2 py-1"
                 >
@@ -137,10 +155,10 @@
                 </li>
               </ul>
             </div>
-            <div v-if="page.resources && page.resources.length" class="py-3">
+            <div v-if="page.profile.resources && page.profile.resources.length" class="py-3">
               <h2 class="font-semibold text-lg mb-2">{{ $t('sustainability.mvp_detail.resources') }}</h2>
               <ul>
-                <li v-for="(link, index) in page.resources" :key="index">
+                <li v-for="(link, index) in page.profile.resources" :key="index">
                   <AppLink
                     :href="link.url"
                     rel="noopener"
@@ -160,7 +178,7 @@
         <img loading="lazy" :src="`/img/partners/banner.svg`" alt="A landscape image" />
         <div class="absolute inset-0 flex lg:flex-col items-center justify-center gap-4 sm:gap-12 lg:gap-8">
           <span class="block text-2xl sm:text-4xl font-bold">{{ $t('sustainability.mvp_detail.join_us') }}</span>
-          <AppButton href="mailto:partners@nuxtlabs.com" :size="$mq === 'xs' ? 'small' : 'large'">{{
+          <AppButton href="https://nuxtlabs.com/partners" :size="$mq === 'xs' ? 'small' : 'large'">{{
             $t('partners.become_partner')
           }}</AppButton>
         </div>
@@ -185,7 +203,7 @@ export default defineComponent({
       app: { i18n },
       $recaptcha
     } = useContext()
-    const { validateForm, result, form } = usePartnerContact(props.page.emailAddress)
+    const { validateForm, result, form } = usePartnerContact(props.page.slug)
 
     const resultText = computed(() => {
       switch (result.value) {
@@ -209,10 +227,10 @@ export default defineComponent({
     const websiteDomain = computed(() => {
       let domain
 
-      if (props.page.link.includes('//')) {
-        domain = props.page.link.split('/')[2]
+      if (props.page.url.includes('//')) {
+        domain = props.page.url.split('/')[2]
       } else {
-        domain = props.page.link.split('/')[0]
+        domain = props.page.url.split('/')[0]
       }
 
       return domain
@@ -224,16 +242,16 @@ export default defineComponent({
     }
 
     const customBackground = computed(() => {
-      if (typeof props.page.color === 'object') {
-        if (props.page.color?.length === 1) {
-          return `background-color: ${props.page.color[0]}`
+      if (typeof props.page.profile.colors === 'object') {
+        if (props.page.profile.colors?.length === 1) {
+          return `background-color: ${props.page.profile.colors[0]}`
         }
-        const colors = props.page.color
-          .map((value, index) => `${value} ${Math.round((index / (props.page.color.length - 1)) * 100)}%`)
+        const colors = props.page.profile.colors
+          .map((value, index) => `${value} ${Math.round((index / (props.page.profile.colors.length - 1)) * 100)}%`)
           .join(', ')
         return `background: radial-gradient(100% 100% at 0% 0%, ${colors})`
-      } else if (props.page.color) {
-        return `background-color: ${props.page.color}`
+      } else if (props.page.profile.colors) {
+        return `background-color: ${props.page.profile.colors}`
       } else {
         return 'background-color: #255461' // sky-dark
       }

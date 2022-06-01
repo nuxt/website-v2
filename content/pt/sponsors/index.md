@@ -1,25 +1,25 @@
 ---
 template: blank
-title: 'Sponsors'
-description: "Nuxt is an MIT licensed open source project and free to use. However, the maintenance effort is not sustainable without proper financial backing."
+title: 'Patrocinadores'
+description: "A Nuxt é um projeto de código-aberto licenciado com a licença MIT e de uso gratuito. Contudo, os esforços de manutenção não é sustentável sem o financiamento bancário apropriado."
 layout:
   fluid: true
 ---
 
 ::page-hero
 #title
-Sponsors
+Patrocinadores
 
 #description
-Nuxt solves front-end development issues, using Vue.js, Node.js and a suite of other open source tools such as Vite, Webpack, Babel and PostCSS.
-If you use Nuxt in your daily work and feel that it has made your life easier, please consider backing us.
-If you run a business and is using Nuxt in a revenue-generating product, it makes business sense to sponsor Nuxt development: it ensures the project that your product relies on stays healthy and actively maintained. It can also help your exposure in the community and makes it easier to attract Nuxt developers.
+A Nuxt resolve problemas do desenvolvimento front-end, usando a Vue.js, a Node.js e um conjunto de outras ferramentas de código-aberto tais como Vite, Webpack, Babel, PostCSS.
+Se você usa a Nuxt no seu dia a dia de trabalho e sente que ele tem feito a sua vida mais fácil, por favor considere patrocinar o nosso trabalho.
+Se você dirige um negócio e está usando a Nuxt dentro de um produto gerador de receita, faz sentido de negócio patrocinar o desenvolvimento da Nuxt: isto garante que o projeto que do qual o seu produto depende continue sendo saudavelmente e ativamente mantido. Isto também pode ajudar a sua exposição dentro da comunidade e tornar mais fácil atrair desenvolvedores Nuxt.
 
 #bottom
   :::sponsors-bottom-hero
   ---
-  github: Sponsor on GitHub
-  opencollective: Sponsor on Open Collective
+  github: Patrocinar no GitHub
+  opencollective: Patrocinar no Open Collective
   ---
   :::
 ::

@@ -1,6 +1,6 @@
 ---
 template: blank
-title: Modules
+title: Módulos
 layout:
   fluid: true
 navigation: false
@@ -8,13 +8,13 @@ navigation: false
 
 ::page-hero
 #title
-Modules
+Módulos
 
 #description
-Discover our list of modules to supercharge your Nuxt project. Created by the Nuxt team and community.
+Descubra a nossa lista de módulos para dar poderes ao seu projeto Nuxt. Criado pela equipa da Nuxt e pela comunidade.
 
 #bottom
-  :modules-bottom-hero[Contribute on GitHub]
+  :modules-bottom-hero[Contribuir no GitHub]
 ::
 
 :modules-listing

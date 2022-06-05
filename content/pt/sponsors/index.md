@@ -1,7 +1,7 @@
 ---
 template: blank
 title: 'Patrocinadores'
-description: "A Nuxt é um projeto de código-aberto licenciado com a licença MIT e de uso gratuito. Contudo, os esforços de manutenção não é sustentável sem o financiamento bancário apropriado."
+description: "A Nuxt é um projeto de código-aberto licenciado com a licença MIT e de uso gratuito. Contudo, os esforços de manutenção não é sustentável sem o apoio financeiro adequado."
 layout:
   fluid: true
 ---

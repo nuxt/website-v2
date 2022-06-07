@@ -1,20 +1,20 @@
 ---
 template: blank
-title: 'Showcases'
-description: 'Discover our selection of websites built with Nuxt.'
+title: 'Mostruário'
+description: 'Descubra a nossa seleção de sítios construidos com a Nuxt.'
 layout:
   fluid: true
 ---
 
 ::page-hero{descriptionFullWidth}
 #title
-Showcases
+Mostruário
 
 #description
-  Discover our selection of websites built with Nuxt. This collection is powered by [VueTelescope](https://vuetelescope.com).
+  Descubra a nossa seleção de sítios construidos com a Nuxt. Esta coleção é alimentada pela [VueTelescope](https://vuetelescope.com).
 
 #bottomDesktop
-  Try out the browser extensions:
+  Experimente as extensões para o navegador:
   :showcases-bottom-hero
 ::
 

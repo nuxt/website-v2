@@ -1,7 +1,4 @@
-import pt from '~docus-i18n/pt-PT'
-
 export default {
-  ...pt,
   banner: {
     here: 'v3.nuxtjs.org',
     format: '{nuxt} beta já está disponível! Descobre mais sobre isso {here}'

@@ -13,7 +13,7 @@ A Abstração<br>Intuitiva de Vue
 Construa a sua próxima aplicação em Vue.js usando a Nuxt.<br class="hidden sm:block" /> Uma abstração de código-aberto tornando o desenvolvimento web simples e poderoso.
 
 #primary-button
-:app-button[39K+ estrelas no GitHub]{ href="https://github.com/nuxt/nuxt.js" icon="IconGitHub" extraClass="text-white bg-sky-black hover:bg-sky-darker leading-4" }
+:app-button[40K+ estrelas no GitHub]{ href="https://github.com/nuxt/nuxt.js" icon="IconGitHub" extraClass="text-white bg-sky-black hover:bg-sky-darker leading-4" }
 
 #secondary-button
 :app-button[Começar]{ to="/docs/get-started/installation" }

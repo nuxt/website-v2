@@ -1,49 +1,10 @@
 <template>
-  <svg viewBox="0 0 20 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-    <g filter="url(#filter0_d)">
-      <rect
-        x="4.60606"
-        y="0.606061"
-        width="9.45455"
-        height="9.45455"
-        rx="1.81818"
-        stroke="white"
-        stroke-width="1.21212"
-      />
-      <rect
-        x="9.93943"
-        y="5.93931"
-        width="9.45455"
-        height="9.45455"
-        rx="1.81818"
-        stroke="white"
-        stroke-width="1.21212"
-      />
-    </g>
-    <defs>
-      <filter
-        id="filter0_d"
-        x="0"
-        y="0"
-        width="24"
-        height="23.9999"
-        filterUnits="userSpaceOnUse"
-        color-interpolation-filters="sRGB"
-      >
-        <feFlood flood-opacity="0" result="BackgroundImageFix" />
-        <feColorMatrix
-          in="SourceAlpha"
-          type="matrix"
-          values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
-          result="hardAlpha"
-        />
-        <feOffset dy="4" />
-        <feGaussianBlur stdDeviation="2" />
-        <feComposite in2="hardAlpha" operator="out" />
-        <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0" />
-        <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow" />
-        <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow" result="shape" />
-      </filter>
-    </defs>
+  <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path
+      d="M19.0781 6H8.67187C7.19624 6 6 7.19624 6 8.67187V19.0781C6 20.5538 7.19624 21.75 8.67187 21.75H19.0781C20.5538 21.75 21.75 20.5538 21.75 19.0781V8.67187C21.75 7.19624 20.5538 6 19.0781 6Z"
+      stroke="currentColor" stroke-width="1.49375" stroke-linejoin="round" />
+    <path
+      d="M17.9766 6L18 4.875C17.998 4.17942 17.7208 3.51289 17.229 3.02103C16.7371 2.52918 16.0706 2.25198 15.375 2.25H5.25C4.45507 2.25235 3.69338 2.56917 3.13128 3.13128C2.56917 3.69338 2.25235 4.45507 2.25 5.25V15.375C2.25198 16.0706 2.52918 16.7371 3.02103 17.229C3.51289 17.7208 4.17942 17.998 4.875 18H6"
+      stroke="currentColor" stroke-width="1.49375" stroke-linecap="round" stroke-linejoin="round" />
   </svg>
 </template>

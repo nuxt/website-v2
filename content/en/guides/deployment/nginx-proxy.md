@@ -89,6 +89,9 @@ server {
         add_header Strict-Transport-Security "max-age=31536000; includeSubDomains; preload" always;
         add_header X-Frame-Options "SAMEORIGIN";
 
+        error_page 420 = @proxy;
+        if ( $is_args ) { return 420; }
+
         try_files $uri $uri/index.html @proxy; # for generate.subFolders: true
         # try_files $uri $uri.html @proxy; # for generate.subFolders: false
     }

@@ -8,6 +8,33 @@ position: 8
 
 - Source: **[generator/generator.js](https://github.com/nuxt/nuxt.js/blob/dev/packages/generator/src/generator.js)**
 
+## Utilisation
+
+```js
+const { Generator } = require('nuxt');
+
+const generate = async () => {
+  const nuxt = new Nuxt();
+  await new Generator(nuxt).generate();
+}
+
+generate();
+```
+
+Vous pouvez passez également passer un builder en paramètres, il sera utilisé si `nuxt.options.build` est à `true` :
+
+```js
+const { Generator, Builder } = require('nuxt');
+
+const generate = async () => {
+  const nuxt = new Nuxt();
+  const nuxtBuilder = await new Builder(nuxt);
+  await new Generator(nuxt, nuxtBuilder).generate();
+}
+
+generate();
+```
+
 ## Hooks
 
 `generate:` hooks:

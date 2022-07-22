@@ -12,7 +12,7 @@ cd nuxtjs.org/
 npm install
 ```
 
-We also recommend to install the [Docus extension](https://marketplace.visualstudio.com/items?itemName=NuxtLabs.docus) for VS Code.
+We also recommend to install the [Docus extension](https://marketplace.visualstudio.com/items?itemName=Nuxt.mdc) for VS Code.
 
 ## Development
 

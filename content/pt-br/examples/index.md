@@ -2,7 +2,7 @@
 template:
   nested: guide
   self: guide
-title: Examples
+title: Exemplos
 navigation:
   exclusive: true
   collapse: true

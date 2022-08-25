@@ -13,7 +13,7 @@ El Framework de Vue<br>Intuitivo
 Cree su próxima aplicación Vue.js con confianza usando Nuxt.<br class="hidden sm:block" /> Un framework de código abierto que hace que el desarrollo web sea simple y poderoso.
 
 #primary-button
-:app-button[39K+ GitHub stars]{ href="https://github.com/nuxt/nuxt.js" icon="IconGitHub" extraClass="text-white bg-sky-black hover:bg-sky-darker leading-4" }
+:app-button[40K+ GitHub stars]{ href="https://github.com/nuxt/nuxt.js" icon="IconGitHub" extraClass="text-white bg-sky-black hover:bg-sky-darker leading-4" }
 
 #secondary-button
 :app-button[Comenzar]{ to="/docs/get-started/installation" }

@@ -1,85 +1,85 @@
 ---
 template: guide
 title: Hostman
-description: How to deploy Nuxt on Hostman?
+description: Como desdobrar o Nuxt no Hostman?
 target: Static
 category: deployment
 logo:
   light: "/img/companies/square/light/Hostman.svg"
   dark: "/img/companies/square/dark/Hostman.svg"
 ---
-# Deploy Nuxt on Hostman
+# Desdobrar o Nuxt no Hostman
 
-How to deploy Nuxt on Hostman?
-
----
-
-[Hostman](https://hostman.com/) is a cloud hosting provider for startups and new projects. It helps to get rid of most routine DevOps operations, saving time for developers and money for companies. Hostman employs a services concept to make it easier to develop complex architecture and scale it in one click.
-
-Hostman provides you with the following features:
-
-- Build and deploy static websites, web apps, docker containers and databases.
-- Everything is very transparent, because you see the actual hardware your application is operating on and the actual load average, so you can assess them if something goes wrong.
-- You can SSH into your Docker container, providing the perfect balance between abstraction and transparency.
-- Hostman automatically sets up an SSL certificate for all your domains and puts a CDN in place to deliver your content as fast as possible.
-- Hostman automates CI/CD, pulling, building and launching code as soon as you push a new commit to the repository.
-- No vendor lock-in.
-- Hostman supports 22 frameworks.
-
-## Prerequisites
-
-This guide assumes you already have a Nuxt project to deploy. If you need a project, use the [create-nuxt-app](https://github.com/nuxt/create-nuxt-app) to get started.
-
-## Setup
+Como desdobrar o Nuxt no Hostman?
 
 ---
 
-<strong>Step 1. Create a service</strong>
+O [Hostman](https://hostman.com/) é provedor de hospedam na nuvem para startups e projetos novos. Ele ajuda livrar-se da maioria das operações do quotidiano de DevOps, economizando tempo para os desenvolvedores e dinheiro para as empresas. O Hostman emprega um conceito de serviços que torna fácil desenvolver arquitetura complexa e escalar ela em um clique.
 
-To deploy a Nuxt static website, click Create in the top-left corner of your [Dashboard](https://dashboard.hostman.com/) and choose Front-end app or static website.
+O Hostman fornece para você as seguintes funcionalidades:
 
-![Hostman dashboard](https://i.imgur.com/bEePHDo.png)
+- Construir e desdobrar websites estáticos, aplicações web, contentores do docker e bases de dados.
+- Tudo é muito transparente, porque você vê o hardware atual em que a sua aplicação está operando e a média atual de carregamento, assim você pode acessar eles se alguma coisa correr mal.
+- Você pode usar SSH dentro do seu contentor do Docker, fornecendo o perfeito equilíbrio entre a abstração e a transparência.
+- O Hostman define automaticamente um certificado SSL para todos os seus domínios e coloca um CDN no lugar para entregar o seu conteúdo o mais rápido possível.
+- O Hostman automatiza o CI/CD, puxando, construindo e lançando o código assim que você empurrar uma nova consolidação (commit) para o repositório.
+- Sem vendedor de trancas (No vendor lock-in).
+- O Hostman suporta 22 frameworks.
 
-<strong>Step 2. Select the project to deploy</strong>
+## Pré-requisitos
 
-If you are logged in to Hostman with your GitHub, GitLab or Bitbucket account, at this point you will see the repository with your projects, including the private ones.
+Este guia assume que você já tem um projeto Nuxt para desdobrar. Se você precisar de um projeto, use o [create-nuxt-app](https://github.com/nuxt/create-nuxt-app) para começar.
 
-Choose the project you want to deploy. It must contain the Nuxt app directory that was automatically created after running the yarn create-nuxt-app command.
+## Configuração
 
-To access a different repository, click <strong>Connect another repository</strong>.
+---
 
-If you didn’t use your Git account credentials to log in, you’ll be able to access the necessary account now, and then select the project.
+**Passo 1. Crie um serviço**
 
-<strong>Step 3. Configure the build settings</strong>
+Para desdobrar um website estático do Nuxt, clique em Criar no canto superior esquerdo do seu [painel de controlo](https://dashboard.hostman.com/) e escolha aplicação Front-end ou website estático.
 
-Next, the Website customization window will appear.
+![O painel de controlo do Hostman](https://i.imgur.com/bEePHDo.png)
 
-![Build configuration](https://i.imgur.com/gIgl5EH.png)
+**Passo 2. Selecione o projeto para desdobrar**
 
-Choose the <strong>Static website</strong> option from the list of frameworks.
+Se você iniciou a sessão dentro do Hostman com a sua conta do GitHub, GitLab ou Bitbucket, neste ponto você verá o repositório com os seus projetos, incluindo os projetos privados.
 
-The <strong>Directory with app</strong> points at the directory that will contain the project's files after the build. For Nuxt the directory is dist.
+Escolha o projeto que quiser desdobrar. Ele de conter o diretório de aplicação Nuxt que foi criado automaticamente depois da execução do comando `yarn create-nuxt-app`.
 
-The standard <strong>build command</strong> will be:
+Para acessar um repositório diferente, clique em **Conectar com outro repositório**.
+
+Se você não usar as credenciais da sua conta Git para iniciar a sessão, agora você será capaz de acessar a conta necessária e depois selecionar o projeto.
+
+**Passo 3. Configurar as definições da construção**
+
+A seguir. a janela de personalização do website aparecerá.
+
+![A configuração da construção](https://i.imgur.com/gIgl5EH.png)
+
+Escolha a opção **website estático** a partir da lista de frameworks.
+
+O **diretório da aplicação** aponta para o diretório que conterá o ficheiros do projeto depois da construção. Para o Nuxt o diretório é `dist`
+
+O **comando de construção** padrão será:
 
 `yarn build`
 
-It initiates the framework’s command nuxt generate which will create the dist directory with the project’s files.
+Ele inicia o comando `nuxt generate` do framework Nuxt o qual criará o diretório `dist` com os ficheiros do projeto.
 
-You can modify the command here if the build process for your project requires it. You can enter multiple commands separated by &&.
+Aqui você pode modificar o comando caso o processo de construção para projeto exigir isso. Você pode introduzir vários comandos separados por `&&`.
 
-<strong>Step 4. Deploy</strong>
+**Passo 4. Desdobrar**
 
-Click <strong>Deploy</strong> to start the build process.
+Clique em **Desdobrar** para iniciar o processo de construção.
 
-Once it starts, you will enter the deployment log. If there are any issues with the code, you will get warning or error messages in the log, specifying the cause of the problem.
+Uma vez iniciado, você entrará no registo de desdobramento. Se existir qualquer problema com o código, você receberá um aviso ou uma mensagem de erro dentro do registo, especificando a causa do problema.
 
-Usually the log contains all the debugging data you'll need, but we are also here to help you solve the issues, so do not hesitate to contact us via chat.
+Normalmente o registo contém todos os dados da depuração que você precisará, mas nós estamos também aqui para ajudar a resolver os problemas, então não hesite em contactar-nos via chat.
 
-When the deployment is complete, you will receive an e-mail notification and also see a similar log entry:
+Quando o desdobramento estiver completo, você receberá um e-mail de notificação e também verá uma entrada de registo semelhante a:
 
-![Log entry](https://i.imgur.com/KwzMxTb.png)
+![A entrada de registo](https://i.imgur.com/KwzMxTb.png)
 
-<strong>All done!</strong>
+**Tudo está feito**
 
-Your project is up and ready.
+O seu projeto está pronto e de pé.

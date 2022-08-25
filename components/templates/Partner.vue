@@ -25,17 +25,7 @@
           </p>
 
           <div
-            class="
-              flex flex-col
-              sm:flex-row
-              w-full
-              bg-cloud-surface
-              dark:bg-sky-darker
-              rounded-md
-              mt-8
-              xl:mt-12
-              overflow-hidden
-            "
+            class="flex flex-col sm:flex-row w-full bg-cloud-surface dark:bg-sky-darker rounded-md mt-8 xl:mt-12 overflow-hidden"
           >
             <div class="text-white p-6" :class="page.emailAddress ? 'sm:w-1/3' : 'w-full'" :style="customBackground">
               <div class="flex flex-col h-full">
@@ -228,9 +218,10 @@ export default defineComponent({
       return domain
     })
 
-    onMounted(() => $recaptcha.init().catch(() => console.error('recaptcha error')))
-
-    onBeforeUnmount(() => $recaptcha.destroy())
+    if (!process.dev) {
+      onMounted(() => $recaptcha.init().catch(() => console.error('recaptcha error')))
+      onBeforeUnmount(() => $recaptcha.destroy())
+    }
 
     const customBackground = computed(() => {
       if (typeof props.page.color === 'object') {

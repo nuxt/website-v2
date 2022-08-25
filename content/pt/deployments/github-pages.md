@@ -1,22 +1,22 @@
 ---
 template: guide
 title: GitHub Pages
-description: How to deploy Nuxt app on GitHub Pages?
+description: Como desdobrar uma aplicação Nuxt no GitHub Pages?
 target: Static
 category: deployment
 logo:
   light: "/img/companies/square/light/Github_Pages.svg"
   dark: "/img/companies/square/dark/Github_Pages.svg"
 ---
-# Deploy Nuxt on GitHub Pages
+# Desdobrar o Nuxt no GitHub Pages
 
-How to deploy Nuxt app on GitHub Pages?
+Como desdobrar uma aplicação Nuxt no GitHub Pages?
 
 ---
 
-Nuxt gives you the possibility to host your web application on any static hosting like [GitHub Pages](https://pages.github.com/) for example.
+O Nuxt dá para você a possibilidade de hospedar a sua aplicação web em qualquer hospedagem estática como [GitHub Pages](https://pages.github.com/) por exemplo.
 
-To deploy on GitHub Pages, you need to generate your static web application:
+Para desdobrar no GitHub Pages, você precisa gerar a sua aplicação web estática:
 
 ::code-group
 ```bash [Yarn]
@@ -27,15 +27,15 @@ npm run generate
 ```
 ::
 
-It will create a `dist` folder with everything inside ready to be deployed on GitHub Pages hosting. Branch `gh-pages` for project repository OR branch `master` for user or organization site
+Isto criará uma pasta `dist` com tudo dentro pronto para ser desdobrado na hospedagem do GitHub Pages. O ramo `gh-pages` para repositório do projeto ou o ramo `master` para o usuário ou organização do sítio.
 
 ::alert{type="info"}
-<b>Info:</b> If you use a custom domain for your GitHub Pages and put `CNAME` file, it is recommended that CNAME file is put in the `static` directory. [More documentation](/docs/directory-structure/static) about it.
+**Informação:** Se você usar um domínio personalizado para o seu GitHub Pages e colocar o ficheiro `CNAME`, é recomendado que o ficheiro seja colocado dentro do diretório `static`. [Mais informações](/docs/directory-structure/static) sobre ele.
 ::
 
-## Deploying to GitHub Pages for repository
+## Desdobrando para o GitHub Pages para armazenamento
 
-First of all, you want to make sure to use [static target](/docs/features/deployment-targets) since we are hosting on GitHub pages:
+Antes de tudo, você precisa certificar-se que está a usar o [alvo estático](/docs/features/deployment-targets) visto que estamos hospedando no GitHub Pages:
 
 ```js[nuxt.config.js]
 export default {
@@ -43,11 +43,11 @@ export default {
 }
 ```
 
-If you are creating GitHub Pages for one specific repository, and you don't have any custom domain, the URL of the page will be in this format: `http://<username>.github.io/<repository-name>`.
+Se você estiver criando GitHub Pages para um repositório específico, e não tem nenhum domínio personalizado, a URL da página estará neste formato: `http://<username(nome do usuário)>.github.io/<repository-name (nome do repositório)>`.
 
-If you deployed `dist` folder without adding [router base](/docs/configuration-glossary/configuration-router), when you visit the deployed site you will find that the site is not working due to missing assets. This is because we assume that the website root will be `/`, but in this case it is `/<repository-name>`.
+Se você desdobrar a pasta `dist` sem adicionar a [base do router](/docs/configuration-glossary/configuration-router), quando você visitar o sítio desdobrado você achará que o sítio não está funcionando devido aos recursos em falta. Isto é porque nós assumimos que a raiz do website será `/`, mas neste caso ele é `/<repository-name (nome do repositório)>`.
 
-To fix the issue we need to add [router base](/docs/configuration-glossary/configuration-router#base) configuration in `nuxt.config.js`:
+Para concertar o problema nós precisamos adicionar a configuração da [base do router](/docs/configuration-glossary/configuration-router#base) dentro do `nuxt.config.js`:
 
 ```js[nuxt.config.js]
 export default {
@@ -58,13 +58,13 @@ export default {
 }
 ```
 
-This way, all generated path asset will be prefixed with `/<repository-name>/`, and the next time you deploy the code to repository GitHub Pages, the site should be working properly.
+Desta maneira, todos caminhos de recurso gerados serão prefixados com `/<repository-name (nome do repositório)>/`, e da próxima vez que você desdobrar o código para as GitHub Pages, o sítio deve estar funcionando propriamente.
 
-## Command line deployment
+## Desdobramento de linha de comando
 
-You can also use [push-dir package](https://github.com/L33T-KR3W/push-dir):
+Você pode também usar o [pacote push-dir](https://github.com/L33T-KR3W/push-dir):
 
-First install it:
+Primeiro instale ele:
 
 ::code-group
 ```bash [Yarn]
@@ -75,7 +75,7 @@ npm install push-dir --save-dev
 ```
 ::
 
-Add a `deploy` command to your `package.json` with the branch as `gh-pages` for project repository OR `master` for user or organization site.
+Adicione o comando `deploy` ao seu `package.json` com o ramo como `gh-pages` para o repositório do projeto ou `master` para o usuário ou organização do sítio.
 
 ```js
 "scripts": {
@@ -86,7 +86,7 @@ Add a `deploy` command to your `package.json` with the branch as `gh-pages` for 
 },
 ```
 
-Then generate and deploy your static application:
+Depois gere e desdobre a sua aplicação estática:
 
 ::code-group
 ```bash [Yarn]
@@ -99,17 +99,17 @@ npm run deploy
 ```
 ::
 
-## Build server deployment
+## Construir servidor de desdobramento
 
-You can take deployment one step further and rather than having to manually compile and deploy the files from your local install, you can make use of a build server to monitor your GitHub repository for new commits and then checkout, compile and deploy everything for you automatically.
+Você pode levar o desdobramento um passo além e ao invés de ter que manualmente compilar e desdobrar os ficheiros a partir da sua instalação local, você pode fazer uso de um servidor de construção para monitorar o seu repositório para novas consolidações e depois, verificar, compilar e desdobrar tudo por você automaticamente.
 
-### GitHub Actions
+### GitHub Actions (Ações do GitHub)
 
-To deploy via [GitHub Actions](https://github.com/features/actions), the official tool for software automation with GitHub, if you don't have a workflow you need to create a new one or append a new step to your existing workflow.
+Para desdobrar via [Ações do GitHub](https://github.com/features/actions), a ferramenta oficial para automação de software com o GitHub, se você não tiver um fluxo de trabalho você pode criar um novo ou acrescentar um novo passo ao seu fluxo de trabalho existente.
 
-It uses the [GitHub Pages Action](https://github.com/marketplace/actions/github-pages-action) which pushes the generated files from the `dist` folder to your default GitHub Pages branch `gh-pages`.
+Ele usa o [GitHub Pages Action (Ação das GitHub Pages)](https://github.com/marketplace/actions/github-pages-action) a qual empurra os ficheiros gerados da pasta `dist` para o seu ramo padrão de GitHub Pages `gh-pages`.
 
-With an existing workflow, add the following step:
+Com um fluxo de trabalho existente, adicione o seguinte passo:
 
 ```yaml
 - name: Deploy
@@ -119,7 +119,7 @@ With an existing workflow, add the following step:
     publish_dir: ./dist
 ```
 
-With a new workflow, paste the following content into a new file called `cd.yml` in `.github/workflows` directory:
+Com um novo fluxo de trabalho, cole o seguinte conteúdo dentro de um novo ficheiro chamado `cd.yml` dentro do diretório `.github/workflows`:
 
 ```yaml
 name: cd
@@ -157,7 +157,7 @@ jobs:
           publish_dir: ./dist
 ```
 
-Then commit this to your repository:
+Depois envie isto para o seu repositório:
 
 ```bash
 git add .github/workflows/cd.yml
@@ -165,23 +165,23 @@ git commit -m "Adding github pages deploy workflow"
 git push origin
 ```
 
-On completion, you'll see your `gh-pages` branch updated as well as your site.
+Ao terminar, você verá o seu ramo `gh-pages` atualizado bem como o seu sítio.
 
 ### Travis CI
 
-To deploy with [Travis CI](https://travis-ci.org/), a free for open source projects build server, sign in via your GitHub account, granting Travis access to view your repositories, and then enable the build server for your repository by toggling the switch next to your repositories name in the list displayed.
+Para desdobrar com o [Travis CI](https://travis-ci.org/), um servidor de construção gratuito para projetos de código-aberto, inicie a sessão através do GitHub, garantindo ao Travis acesso para visualizar os seus repositórios, e depois ative o servidor de construção para o seu repositório ao alternar o interruptor próximo aos nomes dos seus repositórios dentro da lista exibida.
 
-![Travis Builder Server Enable](/img/docs/github_pages_travis_01.png)
+![Ativação do servidor de construção do Travis](/img/docs/github_pages_travis_01.png)
 
-Next, click the cog icon beside your repository name to configure the general settings of the build sever and enable the 'Build only if .travis.yml is present' feature by toggling the switch.
+A seguir, clique no ícone de engrenagem ao lado do nome do seu repositório para configurar as definições gerais do servidor de construção e ativar a funcionalidade `Construa somente se .travis.yaml estiver present` ao alternar o interruptor.
 
-![Travis Builder Server Settings](/img/docs/github_pages_travis_02.png)
+![Definições do servidor de construção do Travis](/img/docs/github_pages_travis_02.png)
 
-On the same screen, scroll down to the Environment Variables section and create a new variables named `GITHUB_ACCESS_TOKEN` and in the value field paste a copy of the GitHub personal access token your created earlier and click the 'Add' button.
+Na mesma tela, role para baixo atá a secção de Variáveis de Ambientes e crie uma nova variável com nome `GITHUB_ACCESS_TOKEN` e dentro campo de valor colar uma cópia do código (token) de acesso pessoal do GitHub que você criou recentemente e depois clique no botão `Add (Adicionar)`.
 
-![Travis Builder Server Environment Variables](/img/docs/github_pages_travis_03.png)
+![As variáveis de ambiente do servidor de construção do Travis](/img/docs/github_pages_travis_03.png)
 
-Finally, create a `.travis.yml` configuration file in the root of your repository with the following contents
+Finalmente, crie um ficheiro de configuração `.travis.yml` dentro da raiz do seu repositório com os seguintes conteúdos
 
 ```yaml
 language: node_js
@@ -206,14 +206,14 @@ script:
 deploy:
   provider: pages
   skip-cleanup: true
-  github-token: $GITHUB_ACCESS_TOKEN # Set in travis-ci.org dashboard, marked secure https://docs.travis-ci.com/user/deployment/pages/#Setting-the-GitHub-token
+  github-token: $GITHUB_ACCESS_TOKEN # Defina dentro painel de controlo do travis-ci.org, marcado como seguro https://docs.travis-ci.com/user/deployment/pages/#Setting-the-GitHub-token
   target-branch: gh-pages
   local-dir: dist
   on:
     branch: master
 ```
 
-and then commit this to your repository
+E depois envie isto para o seu repositório
 
 ```bash
 git add .travis.yml
@@ -221,64 +221,64 @@ git commit -m "Adding travis deploy configuration"
 git push origin
 ```
 
-Now, whenever you commit any changes to your repository, from within Travis, you'll see a new build start up
+Agora, sempre que você enviar qualquer mudança para o seu repositório, a partir de dentro do Travis, você verá uma nova construção começar
 
-![Travis Builder Server Output](/img/docs/github_pages_travis_04.png)
+![A saída do servidor de construção do Travis](/img/docs/github_pages_travis_04.png)
 
-and on completion, you'll see your GitHub pages site automatically updated.
+E ao terminar, você verá o seu sítio da GitHub Pages atualizada automaticamente.
 
 ### Appveyor
 
-To deploy via [Appveyor](https://www.appveyor.com), another free for open source projects build server, sign up for a new account choosing the GitHub authentication option to sign in using your GitHub account.
+Para desdobrar através do [Appveyor](https://www.appveyor.com), uma outra ferramenta gratuita para servidor de construção para projetos de código-aberto, registe uma nova conta escolhendo a opção de autenticação com GitHub para iniciar a sessão usando a sua conta do GitHub.
 
-Once signed in, click the 'New project' link and then click the 'Add' button beside your repository name in the list displayed to enable the build server on your repository.
+Uma vez com a sessão iniciada, clique na ligação 'New project (Novo projeto)' e depois clique no botão 'Add (Adicionar)' ao lado do nome do seu repositório dentro lista exibida para ativar o servidor de construção sobre o seu repositório.
 
-![Appveyor Builder Server Enable](/img/docs/github_pages_appveyor_01.png)
+![A ativação do servidor de construção do Appveyor](/img/docs/github_pages_appveyor_01.png)
 
-Next, in the root of your repository, create an `appveyor.yml` configuration file with the following contents
+A seguir, dentro da raiz do seu repositório, crie um ficheiro de configuração `appveyor.yml` com os seguintes conteúdos
 
 ```yaml
 environment:
-  # Nuxt requires node v12 minimum
+  # O Nuxt exige no mínimo o node na versão 12
   nodejs_version: '12'
-  # Encrypt sensitive data (https://ci.appveyor.com/tools/encrypt)
+  # Encripta dados sensíveis (https://ci.appveyor.com/tools/encrypt)
   github_access_token:
     secure: ENCRYPTED_GITHUB_ACCESS_TOKEN
   github_email:
     secure: ENCRYPTED_GITHUB_EMAIL
 
-# Only run on master branch
+# Apenas executa sobre o ramo master
 branches:
   only:
     - master
 
-# Install scripts. (runs after repo cloning)
+# Instala os scripts. (executa depois da clonagem do repositório)
 install:
-  # switch nodejs version
+  # muda a versão do nodejs
   - ps: Install-Product node $env:nodejs_version
-  # install modules
+  # instala os módulos
   - npm install
-  # generate static files
+  # gera os ficheiros estáticos
   - npm run generate
-  # configure global git credentials store (https://www.appveyor.com/docs/how-to/git-push/)
+  # configura a memória global das credenciais do git
   - git config --global credential.helper store
   - ps: Add-Content "$env:USERPROFILE\.git-credentials" "https://$($env:github_access_token):x-oauth-basic@github.com`n"
   - git config --global user.email $env:github_email
-  # deploy to GitHub pages
+  # desdobre para as GitHub Pages
   - npm run deploy
 
-# No tests to run
+# Sem testes para executar
 test: off
 
-# Don't actually build.
+# Na realidade não é uma construção
 build: off
 ```
 
-**_NB_** This configuration assumes you've configured your `package.json` file as per the [Command line deployment](#command-line-deployment) instructions
+**_NB_** esta configuração assume que você configurou o seu ficheiro `package.json` conforme as instruções do [Desdobramento de Linha de Comando](#command-line-deployment)
 
-Before you commit this file however, you'll need to change the `ENCRYPTED_GITHUB_ACCESS_TOKEN` and `ENCRYPTED_GITHUB_EMAIL` variables with your GitHub personal access token from earlier and your GitHub email address, encrypted using the [Appveyor encryption tool](https://ci.appveyor.com/tools/encrypt).
+Antes no entanto de você consolidar este ficheiro, você precisará mudar as variáveis `ENCRYPTED_GITHUB_ACCESS_TOKEN` e `ENCRYPTED_GITHUB_EMAIL` com o código de acesso pessoal do GitHub e o seu endereço de email do GitHub, encriptados usando o [ferramenta de encriptação do Appveyor](https://ci.appveyor.com/tools/encrypt).
 
-Once updated, commit the file to your repository
+Uma vez atualizado, envie o ficheiro para o seu repositório
 
 ```bash
 git add appveyor.yml
@@ -286,8 +286,8 @@ git commit -m "Adding appveyor deploy configuration"
 git push origin
 ```
 
-Now, whenever you commit any changes to your repository, from within Appveyor, you'll see a new build start up
+Agora, sempre que você enviar alguma mudança para o seu repositório, a partir de dentro Appveyor, você verá uma nova construção iniciar.
 
-![Appveyor Builder Server Output](/img/docs/github_pages_appveyor_02.png)
+![A saída do servidor de construção do Appveyor](/img/docs/github_pages_appveyor_02.png)
 
-and on completion, you'll see your GitHub pages site automatically updated.
+E ao terminar, você verá do seu sítio do GitHub Pages atualizado automaticamente.

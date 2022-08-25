@@ -1,31 +1,31 @@
 ---
 template: guide
 title: Azure Portal
-description: How to deploy a Nuxt application on Azure Portal?
+description: Como desdobrar uma aplicação Nuxt no Azure Portal?
 target: Server
 category: deployment
 logo:
   light: "/img/companies/square/light/Azure.svg"
   dark: "/img/companies/square/dark/Azure.svg"
 ---
-# Deploy Nuxt on Azure Portal
+# Desdobrar o Nuxt no Azure Portal
 
-How to deploy a Nuxt application on Azure Portal?
+Como desdobrar uma aplicação Nuxt no Azure Portal?
 
 ---
 
-## Requirements
+## Requisitos
 
-- It is required that you select a backend when setting up the project. Even if you don't need it, or else the site won't start up.
-- The server is running Node 8 or greater
+- É obrigatório que você selecione um backend quando estiver configurando o projeto. Mesmo se você não precisar dele, ou senão o sítio não será iniciado.
+- O servidor esteja executando no Node 8 ou superior
 
-## What if I already have a project without a backend?
+## O que acontece se Eu já tiver um projeto sem um backend?
 
-No worries. It is easy to add an express server to an existing project.
+Não se preocupe. É fácil adicionar um servidor express à um projeto existente.
 
-Create a new folder called `server` in the root of the project. Then create an `index.js` file inside the `server` folder and paste the following inside the `index.js`:
+Crie uma nova pasta chamada `server` dentro da raiz do projeto. Depois crie um ficheiro `index.js` dentro da pasta `server` e cole o seguinte dentro do `index.js`:
 
-```
+```js
 const express = require('express')
 const consola = require('consola')
 const { loadNuxt } = require('nuxt-start')
@@ -40,11 +40,11 @@ start()
 
 ```
 
-Then edit your nuxt.config.js:
+Depois edite o seu ficheiro `nuxt.config.js`:
 
-Before:
+Antes:
 
-```
+```js
 import pkg from './package'
 
 export default {
@@ -52,76 +52,76 @@ export default {
 }
 ```
 
-After:
+Depois:
 
-```
+```js
 module.exports = {
 ... config
 }
 
 ```
 
-**Remember to remove the references to the pkg object inside the config.**
+**Lembre de remover as referências ao objeto pkg dentro do config.**
 
-That's it!
+E é isso!
 
-For an Azure App Service deployment, make sure you set the following two environment variables (application settings) in App Service &rsaquo; Settings &rsaquo; Configuration &rsaquo; Application settings.
+Para um desdobramento no Azure App Service, certifique-se de configurar as duas seguintes varáveis de ambiente (application settings, configurações da aplicação) em App Service (Serviço da Aplicação) > Settings (Definições) > Configuration (Configurações) > Application settings (configurações da aplicação).
 
 ```
 HOST: '0.0.0.0'
 NODE_ENV: 'production'
 ```
 
-## How to set Node version on Web App in DevOps
+## Como definir a versão do Node na Aplicação Web no DevOps
 
-You can set the Node version on the server, via the App setting inside the "Deploy Azure Web Service" task in the release pipeline
+Você pode definir a versão do Node no servidor, através da configuração da aplicação dentro da tarefa "Deploy Azure Web Service (Desdobrar Serviço da Web da Azure)" dentro do lançamento do encadeamento (pipeline)
 
-Add this to the App settings field under "Application and Configuration Settings"
+Adicione isto ao campo App settings (configurações da aplicação) de baixo de "Application and Configuration Settings (Aplicação e Configuração das Definições)"
 
 ```
 -WEBSITE_NODE_DEFAULT_VERSION 10.16.3
 ```
 
-It's recommended to use the LTS version.
+É recomendado usar a versão LTS.
 
-## Artifacts
+## Artefactos
 
-If you are using Azure DevOps and let the build pipeline do its work you and want to store artifacts. Files which are prefixed with a `.` must be moved to the artifact folder explicitly. Then you can create an Artifact Archive and download it afterwards in your Release Deployment.
+Se você estiver usando o Azure DevOps e deixa o encadeamento de construção fazer o seu trabalho por você e deseja armazenar os artefactos. Os ficheiros que são prefixados com um `.` devem ser movidos explicitamente para a pasta de artefacto. Assim você pode criar um Artifact Archive (Arquivo de Artefacto) e descarregar ele mais tarde dentro do Release Deployment (Desdobramento de Lançamento).
 
-## Running the webserver
+## Executando o servidor web
 
-For Azure Portal you will need a `web.config` file. If not supplied, it will create one itself. This one **won't work for Nuxt** though. Add a web.config file to your repository. For the latest version of `Nuxt` the server file is located at `server/index.js`. In the web.config you don't specify the exact path `server/index.js` but just `server`. See the example web.config below. If you don't do this the logs will tell you that Vue cannot find any routes.
+Para o Azure Portal você precisará de um ficheiro `web.config`. Se for não fornecido, ele mesmo criará um. Embora que este **não funcionará para o Nuxt**. Adicione um ficheiro ficheiro `web.config` ao seu repositório. Para a versão mais recente do `Nuxt` o ficheiro do servidor está localizado em `server/index.js`. Dentro do `web.config` você não específica o caminho exato de `server/index.js ` mas apenas `server`. Consulte o exemplo abaixo. Se você não fazer isso os registos dirão para você que o Vue não consegue achar nenhuma rota.
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
 <!--
-     This configuration file is required if iisnode is used to run node processes behind
-     IIS or IIS Express.  For more information, visit:
+     Este ficheiro de configuração é obrigatório se o iisnode estiver sendo usado para executar os processos do node por trás.
+     IIS ou IIS Express. Para mais informações, visite:
 
      https://github.com/tjanczuk/iisnode/blob/master/src/samples/configuration/web.config
 -->
 
 <configuration>
   <system.webServer>
-    <!-- Visit https://azure.microsoft.com/en-us/blog/introduction-to-websockets-on-windows-azure-web-sites/ for more information on WebSocket support -->
+    <!-- Visite https://azure.microsoft.com/en-us/blog/introduction-to-websockets-on-windows-azure-web-sites/ para mais informações sobre o suporte do WebSocket -->
     <webSocket enabled="false" />
     <handlers>
-      <!-- Indicates that the server.js file is a Node.js site to be handled by the iisnode module -->
+      <!-- Indica que o ficheiro server.js é um sítio Node.js para ser manipulado pelo módulo iisnode -->
       <add name="iisnode" path="server" verb="*" modules="iisnode"/>
     </handlers>
     <rewrite>
       <rules>
-        <!-- Do not interfere with requests for node-inspector debugging -->
+        <!-- Não interferir com as requisições para o inspetor de depuração do node (node-inspector debugging)  -->
         <rule name="NodeInspector" patternSyntax="ECMAScript" stopProcessing="true">
           <match url="^server\/debug[\/]?" />
         </rule>
 
-        <!-- First we consider whether the incoming URL matches a physical file in the /public folder -->
+        <!-- Primeiro nós consideramos se a URL vindo corresponde a um ficheiro físico dentro da pasta /public -->
         <rule name="StaticContent">
           <action type="Rewrite" url="public{REQUEST_URI}"/>
         </rule>
 
-        <!-- All other URLs are mapped to the Node.js site entry point -->
+        <!-- Todas outras URL são mapeadas para o ponto de entrada do sítio Node.js -->
         <rule name="DynamicContent">
           <conditions>
             <add input="{REQUEST_FILENAME}" matchType="IsFile" negate="True"/>
@@ -131,7 +131,7 @@ For Azure Portal you will need a `web.config` file. If not supplied, it will cre
       </rules>
     </rewrite>
 
-    <!-- 'bin' directory has no special meaning in Node.js and apps can be placed in it -->
+    <!-- O diretório 'bin' não tem nenhum significado especial dentro do Node.js e as aplicações podem ser colocadas dentro dele -->
     <security>
       <requestFiltering>
         <hiddenSegments>
@@ -140,16 +140,16 @@ For Azure Portal you will need a `web.config` file. If not supplied, it will cre
       </requestFiltering>
     </security>
 
-    <!-- Make sure error responses are left untouched -->
+    <!-- Certifique-se as respostas de erro sejam deixadas intocadas -->
     <httpErrors existingResponse="PassThrough" />
 
     <!--
-      You can control how Node is hosted within IIS using the following options:
-        * watchedFiles: semi-colon separated list of files that will be watched for changes to restart the server
-        * node_env: will be propagated to node as NODE_ENV environment variable
-        * debuggingEnabled - controls whether the built-in debugger is enabled
+      Você pode controlar como o Node é hospedado dentro do IIS usando as seguintes opções:
+        * watchedFiles: lista de ficheiros separados por ponto e vírgula que será ouvida por mudanças para reiniciar o servidor
+        * node_env: será propagado para o node como uma variável de ambiente NODE_ENV
+        * debuggingEnabled - controla se o depurador embutido está ativado
 
-      See https://github.com/tjanczuk/iisnode/blob/master/src/samples/configuration/web.config for a full list of options
+      Consulte https://github.com/tjanczuk/iisnode/blob/master/src/samples/configuration/web.config para uma lista cheia de opções
     -->
     <!--<iisnode watchedFiles="web.config;*.js"/>-->
   </system.webServer>

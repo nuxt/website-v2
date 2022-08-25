@@ -1,7 +1,7 @@
 ---
 template: events
-title: Events
-description: Discover and subscribe to future events featuring Nuxt content, and watch previous talks from the core team and the community
-heroTitle: 'Events'
-heroDescription: 'Discover and subscribe to future events featuring Nuxt content, and watch previous talks from the core team and the community'
+title: Eventos
+description: Descubra e subscreva-se para eventos futuros apresentando conteúdo da Nuxt, e assista as conferências passadas da equipa principal e da comunidade
+heroTitle: 'Eventos'
+heroDescription: 'Descubra e subscreva-se para eventos futuros apresentando conteúdo da Nuxt, e assista as conferências passadas da equipa principal e da comunidade'
 ---

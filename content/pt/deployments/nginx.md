@@ -1,16 +1,16 @@
 ---
 template: guide
 title: NGINX
-description: How to use nginx as a reverse proxy?
+description: Como usar o nginx como um proxy reverso?
 target: Static & Server
 category: deployment
 logo:
   light: "/img/companies/square/light/Nginx.svg"
   dark: "/img/companies/square/dark/Nginx.svg"
 ---
-# Using NGINX as a reverse proxy
+# Usando NGINX como um proxy (buscador) reverso
 
-How to use nginx as a reverse proxy?
+Como usar o nginx como um proxy reverso?
 
 ---
 
@@ -22,8 +22,8 @@ map $sent_http_content_type $expires {
 }
 
 server {
-    listen          80;             # the port nginx is listening on
-    server_name     your-domain;    # setup your domain here
+    listen          80;             # a porta do nginx está ouvindo na
+    server_name     your-domain;    # configure o seu domínio aqui
 
     gzip            on;
     gzip_types      text/plain application/xml text/css application/javascript;
@@ -39,40 +39,40 @@ server {
         proxy_set_header X-Forwarded-Proto  $scheme;
         proxy_read_timeout          1m;
         proxy_connect_timeout       1m;
-        proxy_pass                          http://127.0.0.1:3000; # set the address of the Node.js instance here
+        proxy_pass                          http://127.0.0.1:3000; # define o endereça da instância do Node.js aqui
     }
 }
 ```
 
-## Using nginx with generated pages and a caching proxy as fallback:
+## Usando nginx com páginas geradas e um cacheamento de proxy como fallback:
 
-If you have a high volume website with regularly changing content, you might want to benefit from Nuxt generate capabilities and [nginx caching](https://www.nginx.com/blog/nginx-caching-guide).
+Se você tem um website de volume alto com mudanças regular de conteúdo, você pode querer tirar vantagem das capacidades de gerar do Nuxt e [cacheamento do nginx](https://www.nginx.com/blog/nginx-caching-guide).
 
-Below is an example configuration. Keep in mind that:
+Abaixo está um exemplo de configuração. Mantenha em mente que:
 
-- root folder should be the same as set by [configuration generate.dir](/docs/configuration-glossary/configuration-generate#dir)
-- expire headers set by Nuxt are stripped (due to the cache)
-- both Nuxt and nginx can set additional headers, it's advised to choose one (if in doubt, choose nginx)
-- if your site is mostly static, increase the `proxy_cache_path inactive` and `proxy_cache_valid` numbers
+- a pasta raíz deve ser a mesma que a definida pela [configuração do generate.dir](/docs/configuration-glossary/configuration-generate#dir)
+- os cabeçalhos expire definido pelo Nuxt são divididos (devido ao cache)
+- ambos Nuxt e nginx podem definir cabeçalhos adicionais, é aconselhado escolher um (se em dúvida, escolha nginx)
+- se seu site é maioritariamente estático, aumente os números do `proxy_cache_path_inactive` e `proxy_cache_valid`
 
-If you don't generate your routes but still wish to benefit from nginx cache:
+Se você não gerar suas rotas mas ainda deseja tirar vantagem do cache do nginx:
 
-- remove the `root` entry
-- change `location @proxy {` to `location / {`
-- remove the other 2 `location` entries
+- remova a entrada `root`
+- mude `location @proxy {` para `location / {`
+- remova as outras duas entradas de `location`
 
 ```nginx
 proxy_cache_path  /data/nginx/cache levels=1:2 keys_zone=nuxt-cache:25m max_size=1g inactive=60m use_temp_path=off;
 
 map $sent_http_content_type $expires {
-    "text/html"                 1h; # set this to your needs
-    "text/html; charset=utf-8"  1h; # set this to your needs
-    default                     7d; # set this to your needs
+    "text/html"                 1h; defina isto para suas necessidades
+    "text/html; charset=utf-8"  1h; defina isto para suas necessidades
+    default                     7d; defina isto para suas necessidades
 }
 
 server {
-    listen          80;             # the port nginx is listening on
-    server_name     your-domain;    # setup your domain here
+    listen          80;             # a porta do nginx está ouvindo na
+    server_name     your-domain;    # configure o seu domínio aqui
 
     gzip            on;
     gzip_types      text/plain application/xml text/css application/javascript;
@@ -96,8 +96,8 @@ server {
         add_header Strict-Transport-Security "max-age=31536000; includeSubDomains; preload" always;
         add_header X-Frame-Options "SAMEORIGIN";
 
-        try_files $uri $uri/index.html @proxy; # for generate.subFolders: true
-        # try_files $uri $uri.html @proxy; # for generate.subFolders: false
+        try_files $uri $uri/index.html @proxy; # para generate.subFolders: true
+        # try_files $uri $uri.html @proxy; # para generate.subFolders: false
     }
 
     location @proxy {
@@ -116,7 +116,7 @@ server {
         proxy_http_version          1.1;
         proxy_read_timeout          1m;
         proxy_connect_timeout       1m;
-        proxy_pass                  http://127.0.0.1:3000; # set the address of the Node.js instance here
+        proxy_pass                  http://127.0.0.1:3000; # define o endereça da instância do Node.js aqui
         proxy_cache                 nuxt-cache;
         proxy_cache_bypass          $arg_nocache; # probably better to change this
         proxy_cache_valid           200 302  60m; # set this to your needs
@@ -128,12 +128,12 @@ server {
 }
 ```
 
-## nginx configuration for Laravel Forge:
+## configuração do nginx para o Laravel Forge:
 
-Change `YOUR_WEBSITE_FOLDER` to your website folder and `YOUR_WEBSITE_DOMAIN` to your website URL. Laravel Forge will have filled out these values for you but be sure to double check.
+Mude `YOUR_WEBSITE_FOLDER` para a pasta do seu website e `YOUR_WEBSITE_DOMAIN` para a URL do seu website. O Laravel Forge terá preenchido esses valores por você mas certifique-se de consultar duas vezes.
 
 ```nginx
-# FORGE CONFIG (DOT NOT REMOVE!)
+# CONFIGURAÇÃO DO FORGE (NÃO REMOVA!)
 include forge-conf/YOUR_WEBSITE_FOLDER/before/*;
 
 map $sent_http_content_type $expires {
@@ -157,7 +157,7 @@ server {
     gzip_types      text/plain application/xml text/css application/javascript;
     gzip_min_length 1000;
 
-    # FORGE CONFIG (DOT NOT REMOVE!)
+    # CONFIGURAÇÃO DO FORGE (NÃO REMOVA!)
     include forge-conf/YOUR_WEBSITE_FOLDER/server/*;
 
     location / {
@@ -170,7 +170,7 @@ server {
         proxy_set_header X-Forwarded-Proto  $scheme;
         proxy_read_timeout          1m;
         proxy_connect_timeout       1m;
-        proxy_pass                          http://127.0.0.1:3000; # set the address of the Node.js
+        proxy_pass                          http://127.0.0.1:3000; # define o endereço do Node.js
     }
 
     access_log off;
@@ -181,16 +181,16 @@ server {
     }
 }
 
-# FORGE CONFIG (DOT NOT REMOVE!)
+# CONFIGURAÇÃO DO FORGE (NÃO REMOVA!)
 include forge-conf/YOUR_WEBSITE_FOLDER/after/*;
 ```
 
-## Secure Laravel Forge with TLS:
+## Segurar o Laravel Forge com TLS:
 
-It's best to let Laravel Forge do the editing of the `nginx.conf` for you, by clicking on Sites -> YOUR_WEBSITE_DOMAIN (SERVER_NAME) and then click on SSL and install a certificate from one of the providers. Remember to activate the certificate. Your `nginx.conf` should now look something like this:
+É melhor deixar o Laravel Forge fazer a edição do `nginx.config` por você, ao clicar em Sites -> YOUR_WEBSITE_DOMAIN (SERVER_NAME) e depois clicar no SSL e instalar um certificado a partir de um dos provedores. Lembre de ativar o certificado. Seu `nginx.conf` deve agora parecer com algo como isto:
 
 ```nginx
-# FORGE CONFIG (DOT NOT REMOVE!)
+# CONFIGURAÇÃO DO FORGE (NÃO REMOVA!)
 include forge-conf/YOUR_WEBSITE_FOLDER/before/*;
 
 map $sent_http_content_type $expires {
@@ -204,7 +204,7 @@ server {
     listen [::]:443 ssl http2;
     server_name YOUR_WEBSITE_DOMAIN;
 
-    # FORGE SSL (DO NOT REMOVE!)
+    # SSL DO FORGE (NÃO REMOVA!)
     ssl_certificate /etc/nginx/ssl/YOUR_WEBSITE_FOLDER/258880/server.crt;
     ssl_certificate_key /etc/nginx/ssl/YOUR_WEBSITE_FOLDER/258880/server.key;
 
@@ -224,6 +224,7 @@ server {
     gzip_min_length 1000;
 
     # FORGE CONFIG (DOT NOT REMOVE!)
+    # CONFIGURAÇÃO DO FORGE (NÃO REMOVA!)
     include forge-conf/YOUR_WEBSITE_FOLDER/server/*;
 
     location / {
@@ -236,7 +237,7 @@ server {
         proxy_redirect              off;
         proxy_read_timeout          1m;
         proxy_connect_timeout       1m;
-        proxy_pass                          http://127.0.0.1:3000; # set the address of the Node.js
+        proxy_pass                          http://127.0.0.1:3000; # define o endereço do Node.js
     }
 
     access_log off;
@@ -247,6 +248,6 @@ server {
     }
 }
 
-# FORGE CONFIG (DOT NOT REMOVE!)
+# CONFIGURAÇÃO DO FORGE (NÃO REMOVA!)
 include forge-conf/YOUR_WEBSITE_FOLDER/after/*;
 ```

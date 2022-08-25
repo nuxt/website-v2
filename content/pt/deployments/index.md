@@ -1,8 +1,8 @@
 ---
 template: PageList
-title: Deployments
-description: "Extend and automate your workflow by using deployments for your favorite tools."
-heroTitle: Deployments
-heroDescription: "Extend and automate your workflow by using deployments for your favorite tools."
+title: Desdobramentos
+description: "Estenda e automatize seu fluxo de trabalho ao usar desdobramentos para suas ferramentas favoritas."
+heroTitle: Desdobramentos
+heroDescription: "Estenda e automatize seu fluxo de trabalho ao usar desdobramentos para suas ferramentas favoritas."
 heroDescriptionFullWidth: true
 ---

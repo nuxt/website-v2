@@ -7,35 +7,25 @@
     </div>
     <div class="flex flex-wrap justify-center py-0 section">
       <section class="flex flex-col justify-start w-full px-4 pt-36 pb-48 md:pt-44 lg:pb-56 lg:pt-36 text-center z-20">
+        <div class="flex justify-center mb-16">
+          <NuxtLink
+            to="/announcements/nuxt3-rc"
+            class="flex items-center truncate bg-primary/25 hover:bg-primary-800 text-white border border-primary py-3 px-4 rounded"
+          >
+            <IconStar class="h-4 w-4 mr-2" />
+            <span class="truncate"><b>Announcement</b>: Nuxt 3 Release Candidate is out!</span>
+          </NuxtLink>
+        </div>
         <h1 class="font-normal font-serif text-display-5 xs:text-display-4 md:text-display-3 2xl:text-display-2 mb-6">
           <Markdown use="title" unwrap="p" />
         </h1>
         <h2
-          class="
-            font-normal
-            text-body-base
-            xs:text-body-lg
-            md:text-body-xl
-            2xl:text-body-2xl
-            mb-8
-            px-8
-            sm:px-0
-            text-cloud-lighter
-          "
+          class="font-normal text-body-base xs:text-body-lg md:text-body-xl 2xl:text-body-2xl mb-8 px-8 sm:px-0 text-cloud-lighter"
         >
           <Markdown use="description" unwrap="p" />
         </h2>
         <div
-          class="
-            flex flex-col
-            sm:flex-row
-            flex-wrap
-            items-center
-            justify-center
-            space-y-3
-            sm:space-y-0 sm:space-x-3
-            xl:space-x-4
-          "
+          class="flex flex-col sm:flex-row flex-wrap items-center justify-center space-y-3 sm:space-y-0 sm:space-x-3 xl:space-x-4"
         >
           <Markdown use="primary-button" unwrap="p" />
           <Markdown use="secondary-button" unwrap="p" />

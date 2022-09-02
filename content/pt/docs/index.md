@@ -2,7 +2,7 @@
 template:
   nested: guide
   self: guide
-title: Docs
+title: Documentação
 navigation:
   exclusive: true
   collapse: true

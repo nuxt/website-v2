@@ -43,6 +43,12 @@ export default withDocus({
         content: 'https://nuxtjs.org/preview.png'
       }
     ],
+    script: [
+      {
+        src: 'https://masteringnuxt.com/banners/main.js',
+        async: true
+      }
+    ],
     bodyAttrs: {
       class: ['min-w-xs']
     }

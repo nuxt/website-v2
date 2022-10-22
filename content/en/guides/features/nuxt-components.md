@@ -1,5 +1,5 @@
 ---
-title: Nuxt Components
+title: Built-in Components
 description: Nuxt.js comes with a few important components included out of the box, which will be helpful when building your application.
 position: 9
 category: features

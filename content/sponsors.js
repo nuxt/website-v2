@@ -49,6 +49,12 @@ export default {
       url: 'https://www.storyblok.com/?ref=nuxt',
       img: 'storyblok-logo.svg',
       class: 'h-10'
+    },
+    {
+      name: '64 Robots',
+      url: 'https://www.64robots.com/?ref=nuxt',
+      img: '64-robots.png',
+      class: 'h-12'
     }
   ],
   sponsors: [
@@ -111,6 +117,24 @@ export default {
       img: 'remotely-logo.svg',
       url: 'https://remotely.so/',
       class: 'h-8'
+    },
+    {
+      name: 'Movavi',
+      img: 'movavi.svg',
+      url: 'https://www.movavi.com/',
+      class: 'h-6'
+    },
+    {
+      name: 'Flashdrive',
+      img: 'flashdrive.png',
+      url: 'https://flashdrive.io',
+      class: 'h-6'
+    },
+    {
+      name: 'Agema',
+      img: 'agema.png',
+      url: 'https://agema.io',
+      class: 'h-6'
     }
   ]
 }

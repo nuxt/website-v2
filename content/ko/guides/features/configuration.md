@@ -213,7 +213,7 @@ middleware/foo/\*.js !middleware/foo/bar.js
 
 ### 접두사 무시 속성
 
-파일 이름이 ignorePrefix로 지정된 접두사로 시작하는 경우 pages/, layout/, middleware/ 또는 store/ 에 있는 모든 파일은 빌드 중에 무시됩니다.
+파일 이름이 ignorePrefix로 지정된 접두사로 시작하는 경우 pages/, layouts/, middleware/ 또는 store/ 에 있는 모든 파일은 빌드 중에 무시됩니다.
 
 기본적으로`-` 로 시작하는 모든 파일 (예 :`store/-foo.js` 및 `pages/-bar.vue`)은 무시됩니다. 이를 통해 자체적으로 라우트, 스토어 등으로 변환되지 않고 테스트, 유틸리티 및 컴포넌트를 호출자와 함께 지정 할 수 있습니다.
 

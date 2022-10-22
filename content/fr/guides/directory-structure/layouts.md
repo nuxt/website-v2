@@ -72,7 +72,7 @@ _Ce répertoire ne peut pas être renommé sans configuration supplémentaire._
 
 ## Layout par défaut
 
-Vous pouvez étendre la présentation principale en ajoutant un fichier `layout/default.vue`. Il sera utilisé pour toutes les pages qui n'ont pas de `layout` défini. Assurez-vous d'ajouter le composant `<Nuxt>` lors de la création d'un `layout` pour inclure le composant de la page.
+Vous pouvez étendre la présentation principale en ajoutant un fichier `layouts/default.vue`. Il sera utilisé pour toutes les pages qui n'ont pas de `layout` défini. Assurez-vous d'ajouter le composant `<Nuxt>` lors de la création d'un `layout` pour inclure le composant de la page.
 
 Tout ce dont vous avez besoin dans votre layout, c'est de trois lignes de code qui rendront le composant de la page.
 

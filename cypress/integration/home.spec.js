@@ -28,8 +28,13 @@ describe('The Home Page links', () => {
     })
   })
 
-  it('checks to see if the try Nuxtjs button links to codesandbox', () => {
-    cy.get('a[data-cy="why"]')
+  it('checks to see if the try Nuxtjs button links to StackBlitz', () => {
+    cy.get('a[data-cy="why-sb"]')
+    .should('have.attr', 'href', 'https://stackblitz.com/fork/github/nuxt/starter/tree/stackblitz')
+  })
+
+  it('checks to see if the try Nuxtjs button links to CodeSandbox', () => {
+    cy.get('a[data-cy="why-csb"]')
     .should('have.attr', 'href', 'https://template.nuxtjs.org')
   })
 

@@ -68,7 +68,7 @@ questions:
 
 <app-modal :src="img" :alt="imgAlt"></app-modal>
 
-Lors du développement d'applications complexes avec Nuxt.js, on pourrait finir par trouver que les fonctionnalités principales du framework ne sont pas suffisantes. Nuxt.js peut donc être personnalisé avec des options de configuration et des plugins, mais maintenir ces personnalisations à travers plusieurs projets est pénible, répétitif et chronophage. D'autre part, supporter les besoin de n'importe quel projet par défaut rendrait Nuxt.js très complexe et difficile à utiliser.
+Lors du développement d'applications complexes avec Nuxt.js, on pourrait finir par trouver que les fonctionnalités principales du framework ne sont pas suffisantes. Nuxt.js peut donc être personnalisé avec des options de configuration et des plugins, mais maintenir ces personnalisations à travers plusieurs projets est pénible, répétitif et chronophage. D'autre part, supporter les besoins de n'importe quel projet par défaut rendrait Nuxt.js très complexe et difficile à utiliser.
 
 Ces raisons font que Nuxt.js nous fournit un système de modules d'ordre supérieur qui permet de personnaliser son fonctionnement interne. Les modules sont des fonctions qui sont appelées de manière séquentielle lors du démarrage de Nuxt.js. Le framework attend que chaque module ait fini avant de procéder. Ainsi, les modules peuvent personnaliser presque n'importe quel aspect du projet. Grâce au design modulaire de Nuxt.js (basé sur [Tapable](https://github.com/webpack/tapable) de Webpack), les modules peuvent facilement utiliser des hooks pour certains points d'entrée tel que l'initialisation du builder. Les modules peuvent aussi écraser les templates, paramétrer les loaders de Webpack, ajouter des librairies CSS et faire plein d'autres tâches utiles.
 
@@ -190,7 +190,6 @@ export default function (moduleOptions) {
 
 ### Émettre des ressources
 
-We can register webpack plugins to emit assets during build.
 On peut paramétrer les plugins de Webpack afin qu'ils émettent des ressources durant le build.
 
 ```js{}[module.js]

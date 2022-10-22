@@ -1,5 +1,5 @@
 ---
-title: Modules directory
+title: Modules
 menuTitle: modules
 description: Nuxt.js provides a higher-order module system that makes it possible to extend the core. Modules are functions that are called sequentially when booting Nuxt.js.
 position: 9

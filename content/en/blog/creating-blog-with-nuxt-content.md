@@ -505,17 +505,39 @@ We can now move this component out of the global folder and into the components 
 
 With the content module we can style our code blocks with the automatic inclusion of [Prism](https://prismjs.com/). That means we can write our code block using the correct markdown syntax and our code block will display with styling depending on the language.
 
+````
+```js
+export default {
+  nuxt: 'is the best'
+}
+```
+````
+
 ```js
 export default {
   nuxt: 'is the best'
 }
 ```
 
+````
+```html
+<p>code styling is easy</p>
+```
+````
+
 ```html
 <p>code styling is easy</p>
 ```
 
 We can also add the file name of the code block by adding it inside square brackets after the code block's language.
+
+````
+```js[my-first-blog-post.md]
+export default {
+  nuxt: 'is the best'
+}
+```
+````
 
 ```js[my-first-blog-post.md]
 export default {

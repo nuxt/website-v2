@@ -7,7 +7,7 @@ category: deployment
 position: 115
 ---
 
-[Qovery](https://qovery.com) is a fully-managed cloud platform that runs on your AWS, GCP, Azure and Digital Ocean account where you can host static sites, backend APIs, databases, cron jobs, and all your other apps in one place.
+[Qovery](https://www.qovery.com) is a fully-managed cloud platform that runs on your AWS, Digital Ocean and Scaleway account where you can host static sites, backend APIs, databases, cron jobs, and all your other apps in one place.
 
 Static sites are **completely free** on Qovery and include the following:
 
@@ -31,33 +31,38 @@ Follow the procedure below to set up Nuxt on Qovery:
 Visit the [Qovery dashboard](https://console.qovery.com) to create an account if you don't already have one.
 
 ### 2. Create a project
+* Click on **Create project** and give a name to your project.
+* Click on **Next**.
 
-Click on "Create a new project" and give a name to your project.
+![Create a project](https://hub.qovery.com/img/heroku/heroku-2.png)
 
-Click on "Next".
+### 3. Create a new environment
+* Click on **Create environment** and give a name (e.g. staging, production).
+
+![Create a new environment](https://hub.qovery.com/img/heroku/heroku-3.png)
 
 ### 3. Add an application
 
-Click on "Create an application" then choose "I have an application" and select the repository where your Nuxt site is located.
+* Click on **Create an application**, give a name and select your GitHub or GitLab repository where your Nuxt.js app is located.
+* Define the main branch name and the root application path.
+* Click on **Create**.
 
-Click on "Next".
+![Add your application](https://hub.qovery.com/img/rust/rust.png)
 
-Skip adding services for static website.
+After the application is created:
 
-Click on "Deploy".
+* Navigate to your application **Settings**
+* Select **Port**
+* Add port used by your Nuxt.js application
 
-## Deploy
+### 8. Deploy the app on Qovery
+All you have to do now is to navigate to your application and click on **Deploy**
 
-Your app should be deployed. You can see the status in real time by clicking on deployment logs.
+![Deploy the app](https://hub.qovery.com/img/heroku/heroku-1.png)
 
-## Continuous deploys
+That's it. Watch the status and wait till the app is deployed.
 
-Now that Qovery is connected to your repo, it will **automatically build and publish your site** any time you push to git.
-
-## Custom domains
-
-Add your own domains to your site easily using Qovery's [custom domains](https://docs.qovery.com/guides/getting-started/setting-custom-domain/) guide.
+To open the application in your browser, click on **Action** and **Open** in your application overview
 
 ## Support
-
 Chat with Qovery developers on [Discord](https://discord.qovery.com) if you need help.

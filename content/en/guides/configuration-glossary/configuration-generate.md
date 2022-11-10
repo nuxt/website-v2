@@ -181,6 +181,13 @@ fallback: 'fallbackPage.html'
 
 _Note: Multiple services (e.g. Netlify) detect a `404.html` automatically. If you configure your web server on your own, please consult its documentation to find out how to set up an error page (and set it to the `404.html` file)_
 
+## ignoreEnv
+
+- Type: `Boolean`
+- Default: `false`
+
+Ignore environment changes when running `nuxt generate`. This will ignore `process.env` and `env` when ensuring webpack build. It can be useful when generating different sites using the same code base.
+
 ## interval
 
 - Type: `Number`

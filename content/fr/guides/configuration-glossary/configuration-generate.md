@@ -183,6 +183,12 @@ fallback: 'pageDeFallback.html'
 
 _Note: De nombreux services (ex: Netlify) détectent une `404.html` automatiquement. Si on est en charge de la configuration de notre propre serveur web, il faudra consulter la documentation pour trouver comment définir une page d'erreur (et la passer à `404.html`)._
 
+## ignoreEnv
+
+- Type: `Boolean`
+- Par défault: `false`
+
+Ignore les changements à l'environnement durant l'exécution de `nuxt generate`. Cette option permet d'ignorer `process.env` et `env` lors de la vérification du build webpack. Elle peut être utile lorsqu'on génère plusieurs site avec le même projet Nuxt.js.
 ## interval
 
 - Type: `Number`

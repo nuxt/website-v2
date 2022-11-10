@@ -786,7 +786,7 @@ We then fetch all the details we want to show on this page. In the last example 
 <script>
   export default {
     async asyncData({ $content, params }) {
-      const articles = await $content('articles', params.slug)
+      const articles = await $content('articles')
         .where({
           'author.name': {
             $regex: [params.author, 'i']

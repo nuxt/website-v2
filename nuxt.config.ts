@@ -45,7 +45,7 @@ export default withDocus({
     ],
     script: [
       {
-        src: 'https://nuxtnation.com/banners/main.js',
+        src: 'https://masteringnuxt.com/banners/main.js',
         async: true
       }
     ],

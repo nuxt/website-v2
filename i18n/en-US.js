@@ -3,7 +3,7 @@ import en from '~docus-i18n/en-US'
 export default {
   ...en,
   banner: {
-    here: 'v3.nuxtjs.org',
+    here: 'https://nuxt.com/v3',
     format: '{nuxt} is out! Discover more about it on {here}'
   },
   cookies: {

@@ -1,6 +1,6 @@
 export default {
   banner: {
-    here: 'v3.nuxtjs.org',
+    here: 'https://nuxt.com/v3',
     format: '{nuxt} beta já está disponível! Descobre mais sobre isso {here}'
   },
   cookies: {

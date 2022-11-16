@@ -3,7 +3,7 @@ import ja from '~docus-i18n/ja-JP'
 export default {
   ...ja,
   banner: {
-    here: 'v3.nuxtjs.org',
+    here: 'https://nuxt.com/v3',
     format: '{nuxt} がリリースされました！ {here} で詳細について見れます。'
   },
   cookies: {

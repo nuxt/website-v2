@@ -1,6 +1,6 @@
 <template>
-  <AppLink
-    to="https://nuxt.com/v3"
+  <a
+    href="https://nuxt.com/v3"
     class="group flex items-center transition-height delay-200 h-10 bg-primary hover:bg-primary-400"
     tabindex="0"
   >
@@ -16,5 +16,5 @@
         <b>{{ $t('banner.here') }}</b>
       </template>
     </i18n>
-  </AppLink>
+  </a>
 </template>

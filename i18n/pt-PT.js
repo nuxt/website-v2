@@ -1,7 +1,7 @@
 export default {
   banner: {
     here: 'https://nuxt.com/v3',
-    format: '{nuxt} beta já está disponível! Descobre mais sobre isso {here}'
+    format: '{nuxt} já está disponível! Descobre mais sobre isso {here}'
   },
   cookies: {
     message: 'Nós usamos Cookies para análise do utilizador e fazer melhorias na página!',

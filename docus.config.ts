@@ -13,7 +13,7 @@ export default {
   },
   layout: {
     aside: false,
-    banner: true
+    banner: false
   },
   github: {
     repo: 'nuxt/nuxtjs.org',

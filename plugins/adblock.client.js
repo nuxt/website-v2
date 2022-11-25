@@ -7,10 +7,10 @@ export default ({ store }) => {
 }
 
 function adsBlocked() {
-  return fetch('https://cdn.carbonads.com/carbon.js?serve=CKYILK7U&placement=nuxtjsorg', {
-    method: 'HEAD',
-    mode: 'no-cors'
-  })
-    .then(() => false)
-    .catch(() => true)
+  // return fetch('https://cdn.carbonads.com/carbon.js?serve=CKYILK7U&placement=nuxtjsorg', {
+  //   method: 'HEAD',
+  //   mode: 'no-cors'
+  // })
+  //   .then(() => false)
+  //   .catch(() => true)
 }

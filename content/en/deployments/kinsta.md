@@ -21,7 +21,7 @@ How to deploy Nuxt on Kinsta Application Hosting?
 
 Whenever a deployment is initiated the `npm build` command is run, followed by the `npm start` command.
 
-This means you, that your `package.json` should look like this:
+This means, that your `package.json` should look like this:
 
 ```json
 {
@@ -43,7 +43,7 @@ This means you, that your `package.json` should look like this:
 
 Whenever a deployment is initiated the `npm build` command is run, followed by the `npm start` command.
 
-First, we have to install the `serve` package and prepare the `package.json` like this:
+First, we have to install the [`serve`](https://www.npmjs.com/package/serve) package and prepare the `package.json` like this:
 
 ```json
 {

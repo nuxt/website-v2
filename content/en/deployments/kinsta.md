@@ -37,6 +37,7 @@ This means, that your `package.json` should look like this:
   }
 }
 ```
+There is also a [Starter](https://github.com/kinsta/hello-world-nuxt), if you want to give it a spin.
 
 ## SSG - configuration
 **Kinsta Application Hosting** is using Buildpacks to determine what is needed to build and deploy the application.

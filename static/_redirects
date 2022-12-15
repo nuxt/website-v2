@@ -627,3 +627,10 @@
 /:locale/faq/auth-routes https://github.com/nuxt/nuxt.js/tree/dev/examples/auth-routes 301!
 /faq/auth-external-jwt https://github.com/nuxt/nuxt.js/tree/dev/examples/auth-jwt 301!
 /:locale/faq/auth-external-jwt https://github.com/nuxt/nuxt.js/tree/dev/examples/auth-jwt 301!
+
+# Partners
+
+/partners https://nuxt.com/support/agencies 301!
+/partners/:slug https://nuxt.com/support/agencies/:slug 301!
+/:locale/partners https://nuxt.com/support/agencies 301!
+/:locale/partners/:slug https://nuxt.com/support/agencies/:slug 301!

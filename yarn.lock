@@ -8721,10 +8721,10 @@ miller-rabin@^4.0.0:
     bn.js "^4.0.0"
     brorand "^1.0.1"
 
-millify@^4.0.0:
-  version "4.0.0"
-  resolved "https://registry.yarnpkg.com/millify/-/millify-4.0.0.tgz#b4120a2af5761695d6a700bd61b741318635c0f8"
-  integrity sha512-Rf+nt4jca468yAqTIFfMSWMGiSqcdwotj3h25XvXjSIuRf4YWykuGDMj/SAOHrvjwrSNoQd0GC9vJCOG8a+BHg==
+millify@^5.0.1:
+  version "5.0.1"
+  resolved "https://registry.yarnpkg.com/millify/-/millify-5.0.1.tgz#f3f2cebf4d3071e127c05942f827c49754a03754"
+  integrity sha512-1IacXjRDMbRevt2++mBnrI2iFxljWlQapMUT9Bs+uAF3o/TrYdE46Uf6CqlmoOWMX1JDAlMorXPv4/hM1eE/kw==
   dependencies:
     yargs "^17.0.1"
 

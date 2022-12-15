@@ -38,7 +38,7 @@
     "fuse.js": "^6.4.6",
     "husky": "^8.0.2",
     "lint-staged": "^13.1.0",
-    "millify": "^4.0.0",
+    "millify": "^5.0.1",
     "ohmyfetch": "^0.4.15",
     "prettier": "^2.5.1",
     "ts-loader": "8.3.0",

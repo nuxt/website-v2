@@ -36,7 +36,7 @@
     "eslint-plugin-nuxt": "^4.0.0",
     "eslint-plugin-prettier": "^4.0.0",
     "fuse.js": "^6.4.6",
-    "husky": "^7.0.4",
+    "husky": "^8.0.2",
     "lint-staged": "^13.1.0",
     "millify": "^4.0.0",
     "ohmyfetch": "^0.4.15",

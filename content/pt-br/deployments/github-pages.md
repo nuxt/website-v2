@@ -82,7 +82,7 @@ Add a `deploy` command to your `package.json` with the branch as `gh-pages` for 
 
 ```js
 "scripts": {
-  "dev": "nuxt",
+  "dev": "nuxt dev",
   "generate": "nuxt generate",
   "start": "nuxt start",
   "deploy": "push-dir --dir=dist --branch=gh-pages --cleanup"

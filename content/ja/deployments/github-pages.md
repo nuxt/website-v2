@@ -69,7 +69,7 @@ npm install push-dir --save-dev
 
 ```js
 "scripts": {
-  "dev": "nuxt",
+  "dev": "nuxt dev",
   "generate": "nuxt generate",
   "start": "nuxt start",
   "deploy": "push-dir --dir=dist --branch=gh-pages --cleanup"

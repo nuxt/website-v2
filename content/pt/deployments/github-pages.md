@@ -79,7 +79,7 @@ Adicione o comando `deploy` ao seu `package.json` com o ramo como `gh-pages` par
 
 ```js
 "scripts": {
-  "dev": "nuxt",
+  "dev": "nuxt dev",
   "generate": "nuxt generate",
   "start": "nuxt start",
   "deploy": "push-dir --dir=dist --branch=gh-pages --cleanup"

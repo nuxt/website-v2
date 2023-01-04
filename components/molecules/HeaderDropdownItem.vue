@@ -38,7 +38,7 @@ export default defineComponent({
       required: true
     },
     isExternal: {
-      type: Boolean,
+      type: [String, Boolean],
       default: false
     }
   },

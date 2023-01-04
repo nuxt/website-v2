@@ -36,20 +36,14 @@ You don't have to do anything for static websites. Applications built with `nuxt
 
 ## Single page applications
 
-For single page applications, all you have to do is to provide a `stormkit.config.yml` which redirects
-all requests to `index.html`. To do so, create a `stormkit.config.yml` file on the top level of your project and specify the following rule:
+For single page applications, all you have to do is to provide a `redirects.json` which redirects
+all requests to `index.html`. To do so, create a `redirects.json` file on the top level of your project and specify the following rule:
 
+```json
+[
+  { "from": "*", "to": "/index.html" }
+]
 ```
-app:
-- redirects:
-    - from: /*
-      to: /index.html
-      assets: false
-```
-
-## Hybrid applications
-
-For hybrid applications, you'll have to turn on the `Serverless` toggle on the build configuration page. This will tell Stormkit to serve the requests from the lambdas instead of the CDN. You can find more on [this guide](https://www.stormkit.io/docs/deployments/configuration/nuxt#hybrid) to configure your hybrid serverless applications.
 
 ## Hosting using Stormkit
 

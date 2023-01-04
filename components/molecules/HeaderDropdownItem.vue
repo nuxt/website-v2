@@ -8,6 +8,7 @@
         <img :src="`/img/header/${icon}`" :alt="title" />
       </div>
       <div>
+        <IconExternalLink v-if="isExternal" class="icon w-2 absolute right-4" />
         <h5 class="font-bold text-sm">{{ title }}</h5>
         <p class="text-xs">{{ subtitle }}</p>
       </div>
@@ -35,6 +36,10 @@ export default defineComponent({
     colorClass: {
       type: String,
       required: true
+    },
+    isExternal: {
+      type: Boolean,
+      default: false
     }
   },
   setup() {

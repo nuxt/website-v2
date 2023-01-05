@@ -25,7 +25,7 @@ links:
       - title: 'Eventos'
         to: '/events'
       - title: 'Patrocinadores'
-        to: '/sponsors'
+        href: 'https://nuxt.com/support/us'
       - title: 'Equipes'
         to: '/teams'
       - title: 'Tutoriais'
@@ -49,7 +49,7 @@ links:
       - title: 'Releases'
         to: '/releases'
       - title: 'Estudos de caso'
-        to: '/showcases'
+        href: 'https://nuxt.com/showcase'
       - title: 'Temas'
         to: '/themes'
 ---

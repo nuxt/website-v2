@@ -634,3 +634,13 @@
 /partners/:slug https://nuxt.com/support/agencies/:slug 301!
 /:locale/partners https://nuxt.com/support/agencies 301!
 /:locale/partners/:slug https://nuxt.com/support/agencies/:slug 301!
+
+# Showcase
+
+/showcases https://nuxt.com/showcase 301!
+/:locale/showcases https://nuxt.com/showcase 301!
+
+# Sponsors
+
+/sponsors https://nuxt.com/support/us 301!
+/:locale/sponsors https://nuxt.com/support/us 301!

@@ -54,6 +54,7 @@
                   :subtitle="item.subtitle"
                   :icon="item.icon"
                   :color-class="item.color"
+                  :is-external="item.href"
                 /> </HeaderNavigationLink
             ></template>
           </Dropdown>

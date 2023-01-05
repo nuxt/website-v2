@@ -637,10 +637,10 @@
 
 # Showcase
 
-/showcases <https://nuxt.com/showcase> 301!
-/:locale/showcases <https://nuxt.com/showcase> 301!
+/showcases https://nuxt.com/showcase 301!
+/:locale/showcases https://nuxt.com/showcase 301!
 
 # Sponsors
 
-/sponsors <https://nuxt.com/support/us> 301!
-/:locale/sponsors <https://nuxt.com/support/us> 301!
+/sponsors https://nuxt.com/support/us 301!
+/:locale/sponsors https://nuxt.com/support/us 301!

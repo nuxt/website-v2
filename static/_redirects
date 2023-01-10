@@ -226,7 +226,7 @@
 /docs/2.x/deployment/deploy-on-moovweb /deployments/layer0 302!
 /:locale/docs/2.x/deployment/deploy-on-moovweb /:locale/deployments/layer0 302!
 /deployments/layer0 /deployments/edgio 302!
-/en/deployments/layer0 /en/deployments/edgio 302!
+/:locale/deployments/layer0 /:locale/deployments/edgio 302!
 /docs/2.x/deployment/netlify-deployment /deployments/netlify 302!
 /:locale/docs/2.x/deployment/netlify-deployment /:locale/deployments/netlify 302!
 /docs/2.x/deployment/nginx-proxy /deployments/nginx 302!

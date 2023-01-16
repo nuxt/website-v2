@@ -1,16 +1,16 @@
 ---
 template: guide
-title: Azure Portal
-description: How to deploy a Nuxt application on Azure Portal?
+title: Azure App Service (Windows)
+description: How to deploy a Nuxt application on Azure App Service (Windows)?
 target: Server
 category: deployment
 logo:
   light: "/img/companies/square/light/Azure.svg"
   dark: "/img/companies/square/dark/Azure.svg"
 ---
-# Deploy Nuxt on Azure Portal
+# Deploy Nuxt on Azure App Service (Windows)
 
-How to deploy a Nuxt application on Azure Portal?
+How to deploy a Nuxt application on Azure App Service (Windows)?
 
 ---
 
@@ -32,13 +32,15 @@ const { loadNuxt } = require('nuxt-start')
 const app = express()
 
 async function start () {
-  const nuxt = await loadNuxt(isDev ? 'dev' : 'start')
+  const nuxt = await loadNuxt('start')
   await nuxt.listen(process.env.PORT, process.env.HOST)
 }
 
 start()
 
 ```
+
+Add `express` and `nuxt-start` as dependencies and verify that in `package.config`.
 
 Then edit your nuxt.config.js:
 
@@ -65,7 +67,7 @@ module.exports = {
 
 That's it!
 
-For an Azure App Service deployment, make sure you set the following two environment variables (application settings) in App Service &rsaquo; Settings &rsaquo; Configuration &rsaquo; Application settings.
+For an Azure App Service (Windows) deployment, make sure you set the following two environment variables (application settings) in App Service &rsaquo; Settings &rsaquo; Configuration &rsaquo; Application settings.
 
 ```
 HOST: '0.0.0.0'
@@ -90,7 +92,7 @@ If you are using Azure DevOps and let the build pipeline do its work you and wan
 
 ## Running the webserver
 
-For Azure Portal you will need a `web.config` file. If not supplied, it will create one itself. This one **won't work for Nuxt** though. Add a web.config file to your repository. For the latest version of `Nuxt` the server file is located at `server/index.js`. In the web.config you don't specify the exact path `server/index.js` but just `server`. See the example web.config below. If you don't do this the logs will tell you that Vue cannot find any routes.
+For Azure App Service (Windows) deployment you will need a `web.config` file. If not supplied, it will create one itself. This one **won't work for Nuxt** though. Add a `web.config` file to your repository. For the latest version of `Nuxt` the server file is located at `server/index.js`. In the `web.config` you don't specify the exact path `server/index.js` but just `server`. See the example web.config below. If you don't do this the logs will tell you that Vue cannot find any routes.
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>

@@ -35,7 +35,7 @@ navigation: false
   image: 'report'
   button:
     text: 'GitHub Issues を作成する'
-    url: 'https://github.com/nuxt/nuxt.js/issues/new?assignees=&labels=bug-report&template=bug-report.md&title='
+    url: 'https://github.com/nuxt/nuxt/issues/new?assignees=&labels=pending+triage%2C2.x&template=z-bug-report-2.yml'
   ---
   #title
   不具合を報告する
@@ -48,7 +48,7 @@ navigation: false
   image: 'suggest'
   button:
     text: 'アイデアを提案する'
-    url: 'https://github.com/nuxt/nuxt.js/issues/new?assignees=&labels=feature-request&template=feature-request.md&title='
+    url: 'https://github.com/nuxt/nuxt/issues/new?assignees=&labels=pending+triage&template=feature-request.yml'
   ---
   #title
   新しい機能や改善点を提案する

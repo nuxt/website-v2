@@ -625,10 +625,10 @@
 /faq/ios-phone-numbers /docs/2.x/concepts/server-side-rendering#ios-phone-numbers 301!
 /:locale/faq/ios-phone-numbers /:locale/docs/2.x/concepts/server-side-rendering#ios-phone-numbers 301!
 
-/faq/auth-routes https://github.com/nuxt/nuxt.js/tree/dev/examples/auth-routes 301!
-/:locale/faq/auth-routes https://github.com/nuxt/nuxt.js/tree/dev/examples/auth-routes 301!
-/faq/auth-external-jwt https://github.com/nuxt/nuxt.js/tree/dev/examples/auth-jwt 301!
-/:locale/faq/auth-external-jwt https://github.com/nuxt/nuxt.js/tree/dev/examples/auth-jwt 301!
+/faq/auth-routes https://github.com/nuxt/nuxt/tree/2.x-dev/examples/auth-routes 301!
+/:locale/faq/auth-routes https://github.com/nuxt/nuxt/tree/2.x-dev/examples/auth-routes 301!
+/faq/auth-external-jwt https://github.com/nuxt/nuxt/tree/2.x-dev/examples/auth-jwt 301!
+/:locale/faq/auth-external-jwt https://github.com/nuxt/nuxt/tree/2.x-dev/examples/auth-jwt 301!
 
 # Partners
 

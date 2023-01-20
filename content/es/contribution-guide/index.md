@@ -9,7 +9,7 @@ back: false
 
 ## Reporting Issues
 
-A great way to contribute to the project is to send a detailed report when you encounter an issue: [Bug report](https://github.com/nuxt/nuxt.js/issues/new?assignees=&labels=bug-report&template=bug-report.md&title=)
+A great way to contribute to the project is to send a detailed report when you encounter an issue: [Bug report](https://github.com/nuxt/nuxt/issues/new?assignees=&labels=pending+triage%2C2.x&template=z-bug-report-2.yml)
 
 Please make sure to include a reproduction repository or [CodeSandBox](https://template.nuxtjs.org/) so that bugs can be reproduced without great efforts. The better a bug can be reproduced, the faster we can start fixing it!
 
@@ -21,7 +21,7 @@ However, any significant improvement should be associated to an existing [featur
 
 ### Getting started
 
-1. [Fork](https://help.github.com/articles/fork-a-repo/) the [Nuxt repository](https://github.com/nuxt/nuxt.js) to your own GitHub account and then [clone](https://help.github.com/articles/cloning-a-repository/) it to your local device.
+1. [Fork](https://help.github.com/articles/fork-a-repo/) the [Nuxt repository](https://github.com/nuxt/nuxt) to your own GitHub account and then [clone](https://help.github.com/articles/cloning-a-repository/) it to your local device.
 2. Run `npm install` or `yarn install` to install the dependencies.
 
 > _Note that both **npm** and **yarn** have been seen to miss installing dependencies. To remedy that, you can either delete the `node_modules` folder in your example app and install again or do a local install of the missing dependencies._

@@ -11,7 +11,7 @@ back: false
 
 ## Reportando Problemas
 
-Um maneira genial de contribuir com o projeto é enviar um relatório detalhado quando você encontrar um problema: [Relatório de Bug](https://github.com/nuxt/nuxt.js/issues/new?assignees=&labels=bug-report&template=bug-report.md&title=)
+Um maneira genial de contribuir com o projeto é enviar um relatório detalhado quando você encontrar um problema: [Relatório de Bug](https://github.com/nuxt/nuxt/issues/new?assignees=&labels=pending+triage%2C2.x&template=z-bug-report-2.yml)
 
 Faça o favor de certificar-se de incluir um repositório de reprodução ou [CodeSandBox](https://template.nuxtjs.org/) assim aqueles bugs podem ser reproduzidos sem grandes esforços. Quanto melhor um bug poder ser reproduzido, mais rápido nós podemos começar a resolver ele.
 
@@ -23,7 +23,7 @@ Contudo, qualquer melhoria significativa deve ser associada a uma [requisição 
 
 ### Começando
 
-1. [Copie](https://help.github.com/articles/fork-a-repo/) o [repositório do Nuxt](https://github.com/nuxt/nuxt.js) para sua própria conta no GitHub e depois [clone](https://help.github.com/articles/cloning-a-repository/) ele para o seu dispositivo local.
+1. [Copie](https://help.github.com/articles/fork-a-repo/) o [repositório do Nuxt](https://github.com/nuxt/nuxt) para sua própria conta no GitHub e depois [clone](https://help.github.com/articles/cloning-a-repository/) ele para o seu dispositivo local.
 2. Execute o comando `npm install` ou `yarn install` para instalar as dependências.
 
 > _Note que ambos **npm** e **yarn** têm sido vistos a perderem a instalação de dependências. Para remediar isso, você pode tanto eliminar a pasta `node_modules` dentro da sua aplicação de exemplo e instalar novamente ou fazer uma instalação das dependências em falta._

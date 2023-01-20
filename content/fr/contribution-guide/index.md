@@ -9,7 +9,7 @@ back: false
 
 ## Signaler des erreurs
 
-Une excellente façon de contribuer au projet est d'envoyer un rapport détaillé lorsque vous rencontrez un problème : [Bug report](https://github.com/nuxt/nuxt.js/issues/new?assignees=&labels=bug-report&template=bug-report.md&title=)
+Une excellente façon de contribuer au projet est d'envoyer un rapport détaillé lorsque vous rencontrez un problème : [Bug report](https://github.com/nuxt/nuxt/issues/new?assignees=&labels=pending+triage%2C2.x&template=z-bug-report-2.yml)
 
 Veuillez vous assurer d'inclure un dépôt de reproduction ou [CodeSandBox](https://template.nuxtjs.org/) afin que les bogues puissent être reproduits sans grands efforts. Plus un bug peut être reproduit, plus vite nous pouvons commencer à le corriger !
 
@@ -21,7 +21,7 @@ Cependant, toute amélioration significative doit être associée à une demande
 
 ### Pour commencer
 
-1. [Dupliquez (Fork)](https://help.github.com/articles/fork-a-repo/) le [dépôt Nuxt](https://github.com/nuxt/nuxt.js) sur votre propre compte GitHub, puis le [cloner](https://help.github.com/articles/cloning-a-repository/) sur votre machine locale.
+1. [Dupliquez (Fork)](https://help.github.com/articles/fork-a-repo/) le [dépôt Nuxt](https://github.com/nuxt/nuxt) sur votre propre compte GitHub, puis le [cloner](https://help.github.com/articles/cloning-a-repository/) sur votre machine locale.
 2. Exécutez `npm install` ou `yarn install` pour installer les dépendances.
 
 > _Notez que **npm** et **yarn** ont été vus comme manquant l'installation des dépendances. Pour remédier à cela, vous pouvez soit supprimer le dossier `node_modules` de votre application d'exemple et l'installer à nouveau, soit faire une installation locale des dépendances manquantes._

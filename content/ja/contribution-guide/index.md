@@ -9,7 +9,7 @@ back: false
 
 ## 問題の報告
 
-プロジェクトに貢献するには、問題が発生したときに詳細なレポートを送信するのが良い方法です： [バグレポート](https://github.com/nuxt/nuxt.js/issues/new?assignees=&labels=bug-report&template=bug-report.md&title=)
+プロジェクトに貢献するには、問題が発生したときに詳細なレポートを送信するのが良い方法です： [バグレポート](https://github.com/nuxt/nuxt/issues/new?assignees=&labels=pending+triage%2C2.x&template=z-bug-report-2.yml)
 
 その際には、必ずバグを再現できるように、再現用のリポジトリや [CodeSandBox](https://template.nuxtjs.org/) を用意してください。バグの再現性が高ければ高いほど、早く修正に取り掛かることができます。
 
@@ -21,7 +21,7 @@ back: false
 
 ### はじめる
 
-1. あなた自身の GitHub アカウントに [Nuxt レポジトリ](https://github.com/nuxt/nuxt.js) を [フォーク (Fork)](https://help.github.com/articles/fork-a-repo/) し、それからあなたのローカルデバイスに[クローン (clone)](https://help.github.com/articles/cloning-a-repository/) します。
+1. あなた自身の GitHub アカウントに [Nuxt レポジトリ](https://github.com/nuxt/nuxt) を [フォーク (Fork)](https://help.github.com/articles/fork-a-repo/) し、それからあなたのローカルデバイスに[クローン (clone)](https://help.github.com/articles/cloning-a-repository/) します。
 2. 依存モジュールをインストールするために `npm install` または `yarn install` を実行します。
 
 > _**npm** と **yarn** の両方で、依存関係のインストールを失敗することが確認されています。この問題を解決するには、サンプルアプリの `node_modules` ディレクトリを削除して再度インストールするか、不足している依存関係をローカルにインストールしてください。_

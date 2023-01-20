@@ -34,7 +34,7 @@ Get technical support, report bugs or contribute to the Nuxt framework developme
   image: 'report'
   button:
     text: 'Create an issue'
-    url: 'https://github.com/nuxt/nuxt.js/issues/new?assignees=&labels=bug-report&template=bug-report.md&title='
+    url: 'https://github.com/nuxt/nuxt/issues/new?assignees=&labels=pending+triage%2C2.x&template=z-bug-report-2.yml'
   ---
   #title
   Report a bug
@@ -47,7 +47,7 @@ Get technical support, report bugs or contribute to the Nuxt framework developme
   image: 'suggest'
   button:
     text: 'Suggest an idea'
-    url: 'https://github.com/nuxt/nuxt.js/issues/new?assignees=&labels=feature-request&template=feature-request.md&title='
+    url: 'https://github.com/nuxt/nuxt/issues/new?assignees=&labels=pending+triage&template=feature-request.yml'
   ---
   #title
   Suggest a new feature or improvement

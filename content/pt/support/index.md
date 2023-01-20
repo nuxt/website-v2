@@ -34,7 +34,7 @@ Receba suporte técnico, reporte bugs ou contribua para o desenvolvimento da abs
   image: 'report'
   button:
     text: 'Crie uma issue'
-    url: 'https://github.com/nuxt/nuxt.js/issues/new?assignees=&labels=bug-report&template=bug-report.md&title='
+    url: 'https://github.com/nuxt/nuxt/issues/new?assignees=&labels=pending+triage%2C2.x&template=z-bug-report-2.yml'
   ---
   #title
   Reporte um bug
@@ -47,7 +47,7 @@ Receba suporte técnico, reporte bugs ou contribua para o desenvolvimento da abs
   image: 'suggest'
   button:
     text: 'Sugira uma ideia'
-    url: 'https://github.com/nuxt/nuxt.js/issues/new?assignees=&labels=feature-request&template=feature-request.md&title='
+    url: 'https://github.com/nuxt/nuxt/issues/new?assignees=&labels=pending+triage&template=feature-request.yml'
   ---
   #title
   Sugira um nova funcionalidade ou melhoria

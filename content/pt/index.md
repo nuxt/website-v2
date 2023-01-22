@@ -1,7 +1,7 @@
 ---
 template: blank
 title: 'A Abstração Intuitiva de Vue'
-description: 'Construa a sua próxima aplicação em Vue.js usando a Nuxt. Uma abstração de código-aberto tornando o desenvolvimento web simples e poderoso.'
+description: 'Construa a tua próxima aplicação em Vue.js usando a Nuxt. Uma poderosa abstração de Vue.js que melhora a tua experiência de programação.'
 bgClass: 'bg-white'
 ---
 
@@ -10,7 +10,7 @@ bgClass: 'bg-white'
 A Abstração<br>Intuitiva de Vue
 
 #description
-Construa a sua próxima aplicação em Vue.js usando a Nuxt.<br class="hidden sm:block" /> Uma abstração de código-aberto tornando o desenvolvimento web simples e poderoso.
+Construa a sua próxima aplicação em Vue.js usando a Nuxt.<br class="hidden sm:block" /> Uma poderosa abstração de Vue.js que melhora a tua experiência de programação.
 
 #primary-button
 :app-button[40K+ estrelas no GitHub]{ href="https://github.com/nuxt/nuxt" icon="IconGitHub" extraClass="text-white bg-sky-black hover:bg-sky-darker leading-4" }
@@ -21,14 +21,14 @@ Construa a sua próxima aplicação em Vue.js usando a Nuxt.<br class="hidden sm
 
 ::home-learn-master
 ---
-category: Aprender
+category: Aprendizado
 ---
 
 #title
 [Fácil]{.text-primary} de aprender. [Fácil]{.text-primary} de dominar
 
 #description
-Aprenda tudo que você precisa saber, de iniciante até ser especialista.
+Aprenda tudo que precisas saber para tornares-te um especialista.
 
 #bottom
 :app-button[Comece agora]{to="/docs/get-started/installation"}
@@ -42,23 +42,23 @@ category: Funcionalidades
 ::section-content-item
 ---
 title: Zero Configuração
-description: 'Comece escrevendo o código da sua aplicação agora mesmo, a Nuxt cuida do resto.'
+description: 'Comece a escrever o código da tua aplicação agora, e a Nuxt trata do resto.'
 image: /img/home/discover/dx/zero-config.svg
 ---
 ::
 
 ::section-content-item
 ---
-title: Roteamento do Sistema de Ficheiro
-description: 'Roteamento automático e separação de código para todas páginas'
+title: Roteamento Baseado no Sistema de Ficheiro
+description: 'Roteamento e separação de código automático para todas páginas'
 image: /img/home/discover/dx/file-system-routing.svg
 ---
 ::
 
 ::section-content-item
 ---
-title: Modos de Renderização
-description: 'Muda entre geração de sítio estático ou renderização no servidor em demanda.'
+title: Modos de Interpretação
+description: 'Alterne entre a geração de páginas estáticas ou a interpretação sobre demanda no lado do servidor.'
 image: /img/home/discover/dx/hybrid.svg
 ---
 ::
@@ -66,14 +66,14 @@ image: /img/home/discover/dx/hybrid.svg
 ::section-content-item
 ---
 title: Requisição de Dados
-description: 'Peça o seu conteúdo de qualquer fonte dentro dos seus componentes do Vue, pronto para renderização no lado do servidor.'
+description: 'Peça o teu conteúdo a partir de qualquer fonte dentro dos teus componentes de Vue, pronto para interpretação no lado do servidor.'
 image: /img/home/discover/dx/fetch.svg
 ---
 ::
 
 ::section-content-item
 ---
-title: Fortes Convenções
+title: Convenções Fortes
 description: 'Trabalho de equipa eficiente com um estrutura de diretório e convenções fortes.'
 image: /img/home/discover/dx/conventions.svg
 ---
@@ -81,8 +81,8 @@ image: /img/home/discover/dx/conventions.svg
 
 ::section-content-item
 ---
-title: SEO Amigável
-description: 'Gestão de marcadores de meta informação e tempo de conteúdo mais rápido para uma excelente indexação.'
+title: Amigável ao SEO
+description: 'Gestão de marcadores de meta informação e tempo para conteúdo mais rápido para uma excelente indexação.'
 image: /img/home/discover/dx/seo.svg
 ---
 ::
@@ -90,7 +90,7 @@ image: /img/home/discover/dx/seo.svg
 ::section-content-item
 ---
 title: Importação Automática de Componentes
-description: 'Use os seus componentes, a Nuxt os importará com separação de código inteligente.'
+description: 'Use os seus componentes, a Nuxt importa-los-á com a separação de código inteligente.'
 image: /img/home/discover/dx/auto-inject.svg
 ---
 ::
@@ -98,16 +98,16 @@ image: /img/home/discover/dx/auto-inject.svg
 ::section-content-item
 ---
 title: Ecossistema de Módulos
-description: 'Estenda a sua aplicação com mais de 160 módulos da Nuxt e crie o seu próprio módulo.'
+description: 'Estenda a tua aplicação com mais de 160 módulos da Nuxt e crie o teu próprio módulo.'
 image: /img/home/discover/dx/modular.svg
 ---
 ::
 
 #title
-[Exp]{.text-primary}eriência de [De]{.text-primary}senvolvedor Intuitiva
+[Exp]{.text-primary}eriência de [Pro]{.text-primary}gramação Intuitiva
 
 #description
-A Nuxt é entregada repleta de funcionalidades para intensificar a produtividade do desenvolvedor e a experiência do usuário final.
+A Nuxt chega repleta de funcionalidades para intensificar a produtividade do programador e a experiência do utilizador final.
 ::
 
 ::home-discover-partners
@@ -119,7 +119,7 @@ category: Parceiros
 [_Desenvolvimento_]{.text-primary} Sustentável
 
 #description
-O desenvolvimento da Nuxt é levado a cabo por desenvolvedores apaixonados, mas a qualidade de esforço necessário para manter e desenvolver novas funcionalidades não é sustentável sem o financiamento bancário apropriado. Nós estamos agradecidos pelos nossos patrocinadores e parceiros, que ajudam a tornar a Nuxt possível.<br>
+O desenvolvimento da Nuxt é levado a cabo por programadores apaixonados, mas a quantidade de esforço necessário para manter e programar novas funcionalidades não é sustentável sem o financiamento apropriado. Nós somos gratos pelos nossos patrocinadores e parceiros, que ajudam a tornar a Nuxt possível.<br>
 
 #partners-card
   ::home-partners-card
@@ -128,13 +128,13 @@ O desenvolvimento da Nuxt é levado a cabo por desenvolvedores apaixonados, mas 
   category: technology
   ---
   #title
-  Parceiros tecnológicos
+  Parceiros Tecnológicos
 
   #description
-  Os parceiros tecnológicos oferecem serviços que dão poderes aos desenvolvedores Nuxt, tais como CMS, Hospedagem, Base de Dados, e muito mais.
+  Os parceiros tecnológicos oferecem serviços que apoiam os programadores de Nuxt, tais como CMS, Hospedagem, Base de Dados, e muito mais.
 
   #button
-  Descubra os nossos parceiros tecnológicos
+  Conheça os nossos parceiros tecnológicos
   ::
 
   ::home-partners-card
@@ -146,10 +146,10 @@ O desenvolvimento da Nuxt é levado a cabo por desenvolvedores apaixonados, mas 
   Agências Parceiras
 
   #description
-  As agências parceiras são agências web e de consultoria confiáveis que podem fornecer desenvolvimento de soluções com a Nuxt e suporte para seus projetos.
+  As agências parceiras são agências e consultorias confiáveis que podem proporcionar o desenvolvimento de soluções com a Nuxt e suporte para os teus projetos.
 
   #button
-  Encontre um Especialista em Nuxt
+  Encontre um especialista
   ::
 
 #bottom
@@ -158,7 +158,7 @@ O desenvolvimento da Nuxt é levado a cabo por desenvolvedores apaixonados, mas 
 
 ::home-learn-guides
 ---
-category: Aprender
+category: Aprendizado
 ---
 
 ::section-content-item
@@ -184,7 +184,7 @@ hoverClass: 'hover:bg-sky-darker'
 ::section-content-item
 ---
 title: Lançamentos
-description: 'Encontre o que tem mudado antes de atualizar.'
+description: 'Conheça as alterações antes de atualizar.'
 image: /img/home/learn/guides/gem-3.svg
 to: '/releases'
 hoverClass: 'hover:bg-sky-darker'
@@ -193,7 +193,7 @@ hoverClass: 'hover:bg-sky-darker'
 
 ::section-content-item
 ---
-title: Curso Especializado
+title: Cursos Especializados
 description: 'Assista uma série completa de vídeos para aprender a Nuxt com a nossa parceira a Vue School.'
 image: /img/home/learn/guides/gem-4.svg
 to: 'https://masteringnuxt.com/?utm_source=nuxt&utm_medium=link&utm_campaign=nsite'
@@ -205,7 +205,7 @@ hoverClass: 'hover:bg-sky-darker'
 Siga o nossos [_Guias_]{.text-primary}
 
 #description
-De uma ideia à uma obra prima, guias que vão levar você no caminho para tornar-se em um Nuxter.
+De uma ideia à uma obra prima, guias que vão levar-te no caminho para tornares-te um especialista em Nuxt.
 ::
 
 ::home-explore
@@ -215,8 +215,8 @@ category: Explorar
 
 ::section-content-item
 ---
-title: 'Desdobramento'
-description: 'Estenda e automatize o seu fluxo de trabalho usando desdobramentos para sua ferramenta favorita.'
+title: 'Implementações em Produção'
+description: 'Estenda e automatize o teu fluxo de trabalho usando o processo de implementação em produção para sua ferramenta favorita.'
 image: '/img/home/explore/gem-explore-1.svg'
 to: '/deployments'
 hoverClass: 'hover:bg-sky-surface'
@@ -225,7 +225,7 @@ hoverClass: 'hover:bg-sky-surface'
 ::section-content-item
 ---
 title: 'Módulos'
-description: 'Descubra a nossa lista de módulos para super carregar o seu projeto Nuxt. Criado pela equipa da Nuxt e pela comunidade.'
+description: 'Descubra a nossa lista de módulos que podes adicionar ao teu projeto Nuxt. Criados pela equipa da Nuxt e pela comunidade.'
 image: '/img/home/explore/gem-explore-2.svg'
 to: 'https://nuxt.com/modules'
 hoverClass: 'hover:bg-sky-surface'
@@ -242,10 +242,10 @@ hoverClass: 'hover:bg-sky-surface'
 ::
 
 #title
-Seguindo adiante? Tanto para [_Explorar_]{.text-primary}
+Seguir adiante? Tanto para [_Explorar_]{.text-primary}
 
 #description
-Descubra módulos poderosos, integre com o seu provedor favorito e comece rapidamente com os temas.
+Descubra módulos poderosos, integre com o teu provedor favorito e comece rapidamente com os temas.
 ::
 
 ::home-community

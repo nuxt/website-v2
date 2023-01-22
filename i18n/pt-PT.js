@@ -1,11 +1,11 @@
 export default {
   banner: {
     here: 'https://nuxt.com/v3',
-    format: '{nuxt} já está disponível! Descobre mais sobre isso {here}'
+    format: 'A {nuxt} está na sua versão estável! Saiba mais a respeito em {here}'
   },
   cookies: {
-    message: 'Nós usamos Cookies para análise do utilizador e fazer melhorias na página!',
-    link: 'Aprender sobre cookies',
+    message: 'Nós analisamos alguns dados por cookies, dados estes que podem nos oferecer informações que podem ajudar-nos a melhorar a experiência dos nossos produtos!',
+    link: 'Saber mais a respeito dos cookies',
     button: 'OK'
   },
   footer: {
@@ -14,41 +14,41 @@ export default {
       Help: 'Ajuda',
       Support: 'Suporte'
     },
-    'Our team': 'A nossa equipa',
-    'Design Kit': 'Kit de Design',
-    'Contact us': 'Contacta-nos',
+    'Our team': 'Nossa Equipa',
+    'Design Kit': 'Equipamento de Desenho',
+    'Contact us': 'Contacte-nos',
     Resources: 'Recursos',
-    'Chat with us': 'Conversa connosco',
-    'Contribution guide': 'Guia de contribuição',
+    'Chat with us': 'Converse Connosco',
+    'Contribution guide': 'Guia de Contribuição',
     Sustainability: 'Sustentabilidade',
-    Training: 'Treino',
+    Training: 'Treinamento',
     newsletter: {
-      title: 'Newsletter',
-      description: 'As últimas novidades, artigos, e recursos, enviados para o teu inbox mensalmente',
+      title: 'Boletim Informativo',
+      description: 'Novidades, artigos, e recursos enviados para a tua caixa de mensagem mensalmente',
       form: {
-        email: 'Email',
-        subscribing: 'Inscrevendo...',
-        subscribe: 'Inscrever',
-        already_registered: 'Já estás inscrito',
+        email: 'Correio Eletrónico',
+        subscribing: 'Subscrevendo...',
+        subscribe: 'Subscrever',
+        already_registered: 'Já estás subscrito',
         invalid_address: 'Endereço inválido',
         subscribed_messages: {
-          pre: 'Um email para confirmar a tua subscrição foi enviado para',
-          confirmation: 'Email confirmado'
+          pre: 'Um correio eletrónico para confirmar a subscrição foi enviado para',
+          confirmation: 'Correio eletrónico confirmado'
         }
       }
     },
-    license: 'Nuxt é uma framework open source sob licença MIT.'
+    license: 'Nuxt é uma abstração de código-aberto sob a licença MIT.'
   },
   sidebar: {
     partners: {
       title: 'Parceiros',
-      button: 'Suporta-nos'
+      button: 'Apoie-nos'
     },
     ads: {
       fallback: {
-        title: 'Nuxt precisa de ti!',
+        title: 'A Nuxt precisa do teu apoio!',
         description:
-          'Ao permitir nuxtjs.org no teu AdBlocker, estás a apoiar o nosso trabalho e a ajudar-nos financeiramente.'
+          'Ao adicionar o nuxtjs.org aos lugares permitidos na AdBlocker, estás a apoiar o nosso trabalho e a ajudar-nos financeiramente.'
       }
     }
   },
@@ -58,16 +58,16 @@ export default {
       ui: 'UI',
       data: 'Dados',
       modules: 'Módulos',
-      deployment: 'Desdobramento'
+      deployment: 'Produção'
     },
-    cli: 'Com a CLI',
-    scratch: 'De raiz'
+    cli: 'Interface da Linha de Comando',
+    scratch: 'Desde o Zero'
   },
   modules: {
-    search: 'Procurar um módulo (nome, categoria, nome de utilizador, etc.)',
+    search: 'Procurar um módulo por (nome, categoria, nome de utilizador, etc.)',
     sort_by: 'Ordenar por',
     sort_fields: {
-      downloads: 'Downloads',
+      downloads: 'Descarregamentos',
       stars: 'Estrelas'
     },
     loading: 'Carregando...',
@@ -76,7 +76,7 @@ export default {
   resources: {
     themes: {
       get_for_it: 'Comprar por {price}',
-      video_course: 'Iniciar tutorial'
+      video_course: 'Assistir o curso'
     }
   },
   sustainability: {
@@ -90,7 +90,7 @@ export default {
       services: 'Serviços',
       location: 'Localização',
       contact_partner: 'Contactar Parceiro',
-      visit_website: 'Visitar Website'
+      visit_website: 'Visitar a Página'
     }
   },
   support: {
@@ -104,7 +104,7 @@ export default {
     firefox_extension: 'Extensão para Firefox',
     categories: {
       Featured: 'Destaques',
-      'E-Commerce': 'E-Commerce',
+      'E-Commerce': 'Comercio Eletrónico',
       News: 'Notícias',
       Government: 'Governo',
       Sport: 'Desporto',
@@ -121,7 +121,7 @@ export default {
     released_on: 'Lançado em {datetime}'
   },
   partners: {
-    become_partner: 'Torne-se um parceiro'
+    become_partner: 'Torna-te um parceiro'
   },
   theme_mode: {
     system: 'Sistema',
@@ -137,17 +137,17 @@ export default {
     settings: 'Definições',
     version: 'Versão',
     currently_version: 'Atualmente em beta privado',
-    back: 'Para trás',
+    back: 'Recuar',
     go_to: 'Ir para {title}',
     go_home: 'Ir para página principal',
-    read_article: 'Ler artigo article',
+    read_article: 'Ler artigo',
     days: 'dias',
     hours: 'horas',
     minutes: 'minutos',
     seconds: 'segundos',
     copied: 'Copiado',
-    watch_video: 'Ver vídeo',
-    multiple_authors: 'Vários Autores'
+    watch_video: 'Assistir vídeo',
+    multiple_authors: 'Vários autores'
   },
   iso: 'pt-PT'
 }

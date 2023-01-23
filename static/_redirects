@@ -646,3 +646,7 @@
 
 /sponsors https://nuxt.com/support/us 301!
 /:locale/sponsors https://nuxt.com/support/us 301!
+
+# Design Kit
+/design https://nuxt.com/design-kit 301!
+/:locale/design https://nuxt.com/design-kit 301!

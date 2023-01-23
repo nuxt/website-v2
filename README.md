@@ -1,8 +1,8 @@
 <img align="center" src="./.github/logo.svg"/><br/>
 
-## Website and documentation of [Nuxt](https://nuxtjs.org)
+## Website and documentation of [Nuxt 2](https://nuxtjs.org)
 
-We are using [Docus](https://nuxtlabs.com/docus) to write our documentation (*we plan to open source it in the following weeks once the documentation is ready*). It is similar to Nuxt Content [Docs theme](https://content.nuxtjs.org/themes/docs) but with an advanced syntax to use Vue components without having to write HTML (support props and slots).
+We are using [Docus](https://docus.dev) to write our documentation (*we plan to open source it in the following weeks once the documentation is ready*).
 
 ## Setup
 

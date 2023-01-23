@@ -10,7 +10,7 @@
       <div class="flex items-center flex-1 justify-center lg:justify-start">
         <AppLink :to="localePath('/')" aria-label="homeLink">
           <!-- "mr-4 lg:mr-0" to optically center logo text -->
-          <Logo :settings="settings" class="h-8 mr-4 md:h-9 lg:mr-0" :class="{ 'text-white': isHome }" />
+          <Logo :settings="settings" class="h-6" :class="{ 'text-white': isHome }" />
         </AppLink>
       </div>
 

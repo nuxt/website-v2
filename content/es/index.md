@@ -227,7 +227,7 @@ hoverClass: 'hover:bg-sky-surface'
 title: 'Módulos'
 description: 'Descubra nuestra lista de módulos para potenciar su proyecto Nuxt. Creado por el equipo y la comunidad de Nuxt.'
 image: '/img/home/explore/gem-explore-2.svg'
-to: 'https://modules.nuxtjs.org'
+to: 'https://nuxt.com/modules'
 hoverClass: 'hover:bg-sky-surface'
 ---
 ::

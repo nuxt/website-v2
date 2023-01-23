@@ -8,17 +8,7 @@
       :href="masterCoursesLink.href"
       rel="noopener"
       :aria-label="masterCoursesLink.title"
-      class="
-        mt-2
-        flex
-        font-medium
-        rounded-md
-        hover:text-sky-black
-        dark:hover:text-white
-        bg-gray-100
-        dark:bg-white dark:bg-opacity-10 dark:bg-opacity-10
-        hover:bg-opacity-9
-      "
+      class="mt-2 flex font-medium rounded-md hover:text-sky-black dark:hover:text-white bg-gray-100 dark:bg-white dark:bg-opacity-10 dark:bg-opacity-10 hover:bg-opacity-9"
     >
       <div class="p-2 flex space-x-2">
         <div class="mt-1 rounded-md w-8 h-8 p-2 bg-green-800 flex-shrink-0">
@@ -31,13 +21,9 @@
       </div>
     </AppLink>
     <div v-if="$docus.currentPath.value.startsWith('/docs')">
-      <AppLink v-if="lastRelease" to="/releases" class="flex items-center group nuxt-text-highlight-hover mt-4">
-        <IconNuxt class="w-5 h-5 mr-2" />
-        <span>{{ $t('common.version') }}: {{ lastRelease }}</span>
-      </AppLink>
-      <AppLink href="https://v3.nuxtjs.org" class="flex items-center group nuxt-text-highlight-hover mt-4">
+      <AppLink href="https://nuxt.com" class="flex items-center group nuxt-text-highlight-hover mt-4">
         <IconNuxt class="w-5 h-5 mr-2 text-primary" />
-        <span>{{ $t('common.version') }}: v3.x (RC)</span>
+        <span>Nuxt 3 docs</span>
       </AppLink>
     </div>
   </div>

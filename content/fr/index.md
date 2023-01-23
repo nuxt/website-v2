@@ -217,7 +217,7 @@ category: Explorez
   title: 'Modules'
   description: "Découvrez la liste des modules pour étendre vos projects Nuxt. Créés par l'équipe de Nuxt et sa communauté"
   image: '/img/home/explore/gem-explore-2.svg'
-  to: 'https://modules.nuxtjs.org'
+  to: 'https://nuxt.com/modules'
   hoverClass: 'hover:bg-sky-surface'
   ---
   ::

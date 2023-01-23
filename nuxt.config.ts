@@ -153,7 +153,7 @@ export default withDocus({
       'avatars1.githubusercontent.com',
       'avatars2.githubusercontent.com',
       'avatars3.githubusercontent.com',
-      'modules.nuxtjs.org'
+      'nuxt.com/modules'
     ]
   },
   i18n: {

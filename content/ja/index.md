@@ -229,7 +229,7 @@ hoverClass: 'hover:bg-sky-surface'
 title: 'モジュール'
 description: 'あなたの Nuxt プロジェクトを強化するモジュールのリストをご覧ください。Nuxt チームとコミュニティによって作られています。'
 image: '/img/home/explore/gem-explore-2.svg'
-to: 'https://modules.nuxtjs.org'
+to: 'https://nuxt.com/modules'
 hoverClass: 'hover:bg-sky-surface'
 ---
 ::

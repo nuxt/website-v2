@@ -1,32 +1,10 @@
 <template>
   <div
-    class="
-      group
-      relative
-      hover:bg-gray-50 hover:dark:bg-sky-darkest
-      dark:bg-sky-darker
-      rounded-md
-      shadow-md
-      h-64
-      lg:h-40
-      p-4
-      flex flex-col
-      justify-between
-    "
+    class="group relative hover:bg-gray-50 hover:dark:bg-sky-darkest dark:bg-sky-darker rounded-md shadow-md h-64 lg:h-40 p-4 flex flex-col justify-between"
   >
     <AppLink :href="module.website" :aria-label="module.website" class="absolute inset-0" />
     <div
-      class="
-        transition-opacity
-        duration-200
-        ease-in-out
-        opacity-0
-        group-hover:opacity-100
-        absolute
-        top-4
-        right-4
-        cursor-pointer
-      "
+      class="transition-opacity duration-200 ease-in-out opacity-0 group-hover:opacity-100 absolute top-4 right-4 cursor-pointer"
     >
       <NuxtImg alt="external_link" src="/img/icons/ext.svg" width="24" height="24" />
     </div>
@@ -75,13 +53,7 @@
         <AppLink :href="npmUrl" class="group flex space-x-2 items-center truncate">
           <IconDownload
             alt="Download icon"
-            class="
-              w-4
-              h-4
-              text-sky-dark
-              group-hover:text-sky-darker
-              dark:text-cloud-surface dark:group-hover:text-white
-            "
+            class="w-4 h-4 text-sky-dark group-hover:text-sky-darker dark:text-cloud-surface dark:group-hover:text-white"
           />
           <span class="truncate pt-0.5">
             {{ numberFormat(module.downloads) }}
@@ -112,7 +84,7 @@ export default defineComponent({
       }
 
       if (icon) {
-        return `https://modules.nuxtjs.org/icons/${icon}`
+        return `https://nuxt.com/modules/icons/${icon}`
       }
 
       return `/img/modules/categories/${(category || '').toLowerCase()}.svg`

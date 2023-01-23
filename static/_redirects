@@ -363,8 +363,8 @@
 /:locale/v3 https://v3.nuxtjs.org/ 302!
 
 #Modules
-/modules https://modules.nuxtjs.org/ 302!
-/:locale/modules https://modules.nuxtjs.org/ 302!
+/modules https://nuxt.com/modules/ 302!
+/:locale/modules https://nuxt.com/modules/ 302!
 
 # [LEGACY] Redirect GUIDE URLs
 /guide/themes /themes 301!

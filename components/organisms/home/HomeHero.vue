@@ -9,7 +9,7 @@
       <section class="flex flex-col justify-start w-full px-4 pt-36 pb-48 md:pt-44 lg:pb-56 lg:pt-36 text-center z-20">
         <div class="flex justify-center mb-16">
           <AppLink
-            to="https://nuxt.com/v3"
+            to="https://nuxt.com"
             class="flex items-center truncate bg-primary/25 hover:bg-primary-800 text-white border border-primary py-3 px-4 rounded"
           >
             <IconStar class="h-4 w-4 mr-2" />

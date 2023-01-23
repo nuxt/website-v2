@@ -45,7 +45,7 @@ links:
       - title: 'マスターコース'
         href: 'https://masteringnuxt.com/?utm_source=nuxt&utm_medium=link&utm_campaign=nsite'
       - title: 'モジュール'
-        href: 'https://modules.nuxtjs.org'
+        href: 'https://nuxt.com/modules'
       - title: 'リリース'
         to: '/releases'
       - title: '導入事例'

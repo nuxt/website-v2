@@ -55,7 +55,7 @@ links:
         color: 'bg-indigo-light'
       - title: 'モジュール'
         subtitle: 'Nuxt のパワーを拡張する'
-        href: 'https://modules.nuxtjs.org'
+        href: 'https://nuxt.com/modules'
         icon: 'modules.svg'
         color: 'bg-indigo'
       - title: 'テーマ'

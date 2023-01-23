@@ -45,7 +45,7 @@ links:
       - title: 'Master courses'
         href: 'https://masteringnuxt.com/?utm_source=nuxt&utm_medium=link&utm_campaign=nsite'
       - title: 'Modules'
-        href: 'https://modules.nuxtjs.org'
+        href: 'https://nuxt.com/modules'
       - title: 'Notes de version'
         to: '/releases'
       - title: 'Showcases'

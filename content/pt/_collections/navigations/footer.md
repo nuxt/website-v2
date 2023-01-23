@@ -45,7 +45,7 @@ links:
       - title: 'Cursos Especializados'
         href: 'https://masteringnuxt.com/?utm_source=nuxt&utm_medium=link&utm_campaign=nsite'
       - title: 'Módulos'
-        href: 'https://modules.nuxtjs.org'
+        href: 'https://nuxt.com/modules'
       - title: 'Lançamentos'
         to: '/releases'
       - title: 'Mostruário'

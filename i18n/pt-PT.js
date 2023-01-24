@@ -64,7 +64,7 @@ export default {
     scratch: 'Desde o Zero'
   },
   modules: {
-    search: 'Procurar um módulo por (nome, categoria, nome de utilizador, etc.)',
+    search: 'Procurar um módulo pelo (nome, categoria, nome de utilizador, etc.)',
     sort_by: 'Ordenar por',
     sort_fields: {
       downloads: 'Descarregamentos',

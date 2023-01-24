@@ -1,7 +1,7 @@
 export default {
   banner: {
     here: 'https://nuxt.com/v3',
-    format: 'A {nuxt} está na sua versão estável! Saiba mais a respeito em {here}'
+    format: 'Tu estás a ler a documentação da Nuxt 2. Siga para {here} para documentação da Nuxt 3.'
   },
   cookies: {
     message: 'Nós analisamos alguns dados por cookies, dados estes que podem nos oferecer informações que podem ajudar-nos a melhorar a experiência dos nossos produtos!',

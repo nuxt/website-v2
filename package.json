@@ -51,6 +51,7 @@
   },
   "resolutions": {
     "@nuxtjs/composition-api": "0.33.1",
+    "nuxt-edge": "2.16.0-27922927.f54f082",
     "vue-router": "^3.5.3"
   }
 }

@@ -650,3 +650,10 @@
 # Design Kit
 /design https://nuxt.com/design-kit 301!
 /:locale/design https://nuxt.com/design-kit 301!
+
+# Announcements
+
+/announcements https://nuxt.com/blog 301!
+/:locale/announcements https://nuxt.com/blog 301!
+/announcements/:slug https://nuxt.com/blog/:slug 301!
+/:locale/announcements/:slug https://nuxt.com/blog/:slug 301!

@@ -76,7 +76,7 @@ links:
       - title: 'Anúncios'
         subtitle: 'Últimas noticias sobre o Nuxt'
         slug: 'announcements'
-        to: '/announcements'
+        href: 'https://nuxt.com/blog'
         icon: 'announcements.svg'
         color: 'bg-mint-lighter'
       - title: 'Equipas'

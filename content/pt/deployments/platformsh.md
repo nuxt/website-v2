@@ -1,7 +1,7 @@
 ---
 template: guide
 title: Platform.sh
-description: Como desdobrar o Nuxt no Platforn.sh?
+description: Como desdobrar o Nuxt no Platform.sh?
 target: Static & Server
 category: deployment
 logo:
@@ -10,7 +10,7 @@ logo:
 ---
 # Desdobrar o Nuxt no Platform.sh
 
-Como desdobrar o Nuxt no Platforn.sh?
+Como desdobrar o Nuxt no Platform.sh?
 
 ---
 

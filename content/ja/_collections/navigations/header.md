@@ -75,7 +75,7 @@ links:
       - title: 'お知らせ'
         subtitle: 'Nuxt について最新ニュース'
         slug: 'announcements'
-        to: '/announcements'
+        href: 'https://nuxt.com/blog'
         icon: 'announcements.svg'
         color: 'bg-mint-lighter'
       - title: 'チーム'

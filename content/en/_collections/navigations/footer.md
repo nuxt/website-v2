@@ -17,7 +17,7 @@ links:
   - title: 'Ecosystem'
     items:
       - title: 'Announcements'
-        to: '/announcements'
+        href: 'https://nuxt.com/blog'
       - title: 'Contribute'
         to: '/contribution-guide'
       - title: 'Chat with us'

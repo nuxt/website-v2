@@ -17,7 +17,7 @@ links:
   - title: 'Ecossistema'
     items:
       - title: 'Anúncios'
-        to: '/announcements'
+        href: 'https://nuxt.com/blog'
       - title: 'Contribuir'
         to: '/contribution-guide'
       - title: 'Bate-papo com a gente'

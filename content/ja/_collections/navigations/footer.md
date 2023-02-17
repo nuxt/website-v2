@@ -17,7 +17,7 @@ links:
   - title: 'エコシステム'
     items:
       - title: 'お知らせ'
-        to: '/announcements'
+        href: 'https://nuxt.com/blog'
       - title: '貢献'
         to: '/contribution-guide'
       - title: 'チャット'

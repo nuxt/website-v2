@@ -35,7 +35,7 @@ links:
   - title: 'Ressources'
     items:
       - title: 'Design'
-        to: '/design'
+        to: 'https://nuxt.com/design-kit'
       - title: 'Documentation'
         to: '/docs'
       - title: 'Exemples'

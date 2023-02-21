@@ -1,19 +1,4 @@
 {
-  "compilerOptions": {
-    "baseUrl": ".",
-    "rootDir": ".",
-    "outDir": "./dist",
-    "strict": false,
-    "sourceMap": true,
-    "target": "ESNext",
-    "allowJs": true,
-    "module": "CommonJS",
-    "moduleResolution": "Node",
-    "lib": ["ESNext", "DOM", "es5", "es6", "DOM.Iterable"],
-    "esModuleInterop": true,
-    "noUnusedLocals": true,
-    "resolveJsonModule": true,
-    "allowSyntheticDefaultImports": true,
-    "types": ["@types/node", "@nuxt/types", "nuxt-i18n", "nuxt-windicss"]
-  }
+  // https://v3.nuxtjs.org/concepts/typescript
+  "extends": "./.nuxt/tsconfig.json"
 }

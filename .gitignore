@@ -1,14 +1,18 @@
 node_modules
-*.iml
-.idea
+*.log
 .nuxt
-.vscode
-.DS_Store
-coverage
-dist
-sw.*
-.env
+nuxt.d.ts
 .output
-.husky
+.env
 package-lock.json
-yarn-error.log
+dist
+.DS_Store
+
+# Local History
+.history
+
+# VSCode
+.vscode/
+
+# Unlighthouse
+.unlighthouse

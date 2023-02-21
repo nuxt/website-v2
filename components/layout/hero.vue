@@ -9,10 +9,10 @@
 <style lang="ts">
 css({
   '.hero': {
+    uiBg: 'accent',
+    uiBorderB: 'base',
     position: 'relative',
     zIndex: 20,
-    bg: 'accent',
-    borderB: 'base',
     minHeight: 'calc(100vh)',
     marginTop: '-64px'
   }

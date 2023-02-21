@@ -1,5 +1,5 @@
 export default {
-  container: {
+  uiContainer: {
     width: '100%',
     maxWidth: '1280px',
     margin: '0 auto',

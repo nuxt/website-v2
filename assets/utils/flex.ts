@@ -1,40 +1,40 @@
 export default {
-  flexCenter: {
+  uiFlexCenter: {
     display: 'flex',
     alignItems: 'center',
     justifyContent: 'center'
   },
-  flexBetween: {
+  uiFlexBetween: {
     display: 'flex',
     alignItems: 'center',
     justifyContent: 'space-between'
   },
-  flexStart: {
+  uiFlexStart: {
     display: 'flex',
     alignItems: 'center',
     justifyContent: 'flex-start'
   },
-  flexEnd: {
+  uiFlexEnd: {
     display: 'flex',
     alignItems: 'center',
     justifyContent: 'flex-end'
   },
-  inlineFlexCenter: {
+  uiInlineFlexCenter: {
     display: 'inline-flex',
     alignItems: 'center',
     justifyContent: 'center'
   },
-  inlineFlexBetween: {
+  uiInlineFlexBetween: {
     display: 'inline-flex',
     alignItems: 'center',
     justifyContent: 'space-between'
   },
-  inlineFlexStart: {
+  uiInlineFlexStart: {
     display: 'inline-flex',
     alignItems: 'center',
     justifyContent: 'flex-start'
   },
-  inlineFlexEnd: {
+  uiInlineFlexEnd: {
     display: 'inline-flex',
     alignItems: 'center',
     justifyContent: 'flex-end'

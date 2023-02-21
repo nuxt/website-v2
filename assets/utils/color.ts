@@ -1,60 +1,60 @@
 export default {
-  bg: value => ({
+  uiBg: value => ({
     backgroundColor: '{color.bg.' + value + '}',
   }),
-  bgPrimary: value => ({
+  uiBgPrimary: value => ({
     backgroundColor: '{color.primary.' + value + '}',
   }),
-  border: value => ({
+  uiBorder: value => ({
     border: '1px solid {color.border.' + value + '}',
   }),
-  borderX: value => ({
+  uiBorderX: value => ({
     borderLeft: '1px solid {color.border.' + value + '}',
     borderRight: '1px solid {color.border.' + value + '}',
   }),
-  borderY: value => ({
+  uiBorderY: value => ({
     borderBottom: '1px solid {color.border.' + value + '}',
     borderTop: '1px solid {color.border.' + value + '}',
   }),
-  borderB: value => ({
+  uiBorderB: value => ({
     borderBottom: '1px solid {color.border.' + value + '}',
   }),
-  borderL: value => ({
+  uiBorderL: value => ({
     borderLeft: '1px solid {color.border.' + value + '}',
   }),
-  borderR: value => ({
+  uiBorderR: value => ({
     borderRight: '1px solid {color.border.' + value + '}',
   }),
-  borderT: value => ({
+  uiBorderT: value => ({
     borderTop: '1px solid {color.border.' + value + '}',
   }),
-  borderPrimary: value => ({
+  uiBorderPrimary: value => ({
     border: '1px solid {color.primary.' + value + '}',
   }),
-  borderXPrimary: value => ({
+  uiBorderXPrimary: value => ({
     borderLeft: '1px solid {color.primary.' + value + '}',
     borderRight: '1px solid {color.primary.' + value + '}',
   }),
-  borderYPrimary: value => ({
+  uiBorderYPrimary: value => ({
     borderBottom: '1px solid {color.primary.' + value + '}',
     borderTop: '1px solid {color.primary.' + value + '}',
   }),
-  borderBPrimary: value => ({
+  uiBorderBPrimary: value => ({
     borderBottom: '1px solid {color.primary.' + value + '}',
   }),
-  borderLPrimary: value => ({
+  uiBorderLPrimary: value => ({
     borderLeft: '1px solid {color.primary.' + value + '}',
   }),
-  borderRPrimary: value => ({
+  uiBorderRPrimary: value => ({
     borderRight: '1px solid {color.primary.' + value + '}',
   }),
-  borderTPrimary: value => ({
+  uiBorderTPrimary: value => ({
     borderTop: '1px solid {color.primary.' + value + '}',
   }),
-  text: value => ({
+  uiText: value => ({
     color: '{color.text.' + value + '}',
   }),
-  textPrimary: value => ({
+  uiTextPrimary: value => ({
     color: '{color.primary.' + value + '}',
   })
 }

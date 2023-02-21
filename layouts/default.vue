@@ -1,17 +1,23 @@
 <template>
   <div class="app">
     <LayoutHeader />
-    <LayoutHero />
+    <!-- <LayoutHero /> -->
     <LayoutMain>
-      <nav>
-        Nav
-      </nav>
-      <article>
-        <slot/>
-      </article>
-      <aside>
-        TOC
-      </aside>
+      <template #start>
+        <nav>
+          Nav
+        </nav>
+      </template>
+      <template #center>
+        <article>
+          <slot/>
+        </article>
+      </template>
+      <template #end>
+        <aside>
+          TOC
+        </aside>
+      </template>
     </LayoutMain>
     <LayoutFooter />
   </div>
@@ -19,19 +25,25 @@
 
 <style lang="ts">
 css({
-  'html': {
-    antialiased: true,
-    bg: 'base',
-    text: 'base'
+  'body': {
+    fontFamily: '{font.family.sans}',
+    uiAntialiased: true,
+    uiBg: 'base',
+    uiText: 'base'
   },
-  '.container': {
-    container: true
-  },
-  '.app': {
-    fontFamily: '{font.sans}',
-    '&-main': {
-      zIndex: 0,
-      minHeight: '100vh',
+  '.row': {
+    uiContainer: true,
+    display: 'grid',
+    gridTemplateColumns: '240px 1fr 240px',
+    '&_start': {
+      uiFlexStart: true,
+    },
+    '&_center': {
+      uiFlexCenter: true,
+      padding: '0 {space.10}',
+    },
+    '&_end': {
+      uiFlexEnd: true
     }
   }
 })

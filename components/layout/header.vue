@@ -42,7 +42,15 @@ css({
     zIndex: 10,
     '.row': {
       height: '{space.16}',
+      '&_start': {
+        uiFlexStart: true,
+      },
+      '&_center': {
+        uiFlexCenter: true,
+        padding: '0 {space.5}',
+      },
       '&_end': {
+        uiFlexEnd: true,
         gap: '{space.3}'
       }
     },

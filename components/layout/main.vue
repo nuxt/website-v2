@@ -24,13 +24,21 @@
 css({
   '.main': {
     zIndex: 0,
-    minHeight: 'calc(100vh - {space.16})',
     '.row': {
+      minHeight: 'calc(100vh - {space.16})',
       '&_start': {
-        uiBorderR: 'base',
+        display: 'sticky',
+        top: '{space.16}',
+        padding: '{space.5}',
+        paddingLeft: 0
+      },
+      '&_center': {
+        uiBorderX: 'base',
+        padding: '{space.5} {space.10}',
       },
       '&_end': {
-        uiBorderL: 'base',
+        padding: '{space.5}',
+        paddingRight: 0
       }
     }
   }

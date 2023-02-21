@@ -35,16 +35,6 @@ css({
     uiContainer: true,
     display: 'grid',
     gridTemplateColumns: '240px 1fr 240px',
-    '&_start': {
-      uiFlexStart: true,
-    },
-    '&_center': {
-      uiFlexCenter: true,
-      padding: '0 {space.10}',
-    },
-    '&_end': {
-      uiFlexEnd: true
-    }
   }
 })
 </style>

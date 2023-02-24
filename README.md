@@ -5,7 +5,7 @@
 We are using [Docus](https://nuxtlabs.com/docus) to write our documentation (*we plan to open source it in the following weeks once the documentation is ready*). It is similar to Nuxt Content [Docs theme](https://content.nuxtjs.org/themes/docs) but with an advanced syntax to use Vue components without having to write HTML (support props and slots).
 
 ## Setup
-
+<-- this is test-->
 ```bash
 git clone https://github.com/nuxt/nuxtjs.org.git
 cd nuxtjs.org/

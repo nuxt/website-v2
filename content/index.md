@@ -1,1 +1,1 @@
-# Welcome on board!
+# Meet Nuxt

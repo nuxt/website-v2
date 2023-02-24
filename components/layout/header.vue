@@ -36,12 +36,13 @@ css({
     uiBorderB: 'base',
     uiBg: 'base',
     position: 'sticky',
+    height: '{space.16}',
     top: 0,
     left: 0,
     right: 0,
     zIndex: 10,
     '.row': {
-      height: '{space.16}',
+      height: '100%',
       '&_start': {
         uiFlexStart: true,
       },
@@ -68,7 +69,7 @@ css({
       height: '{space.10}',
       padding: '0 {space.3}',
       borderRadius: '{space.5}',
-      fontSize: '{font.size.sm}',
+      fontSize: '{font.size.md}',
       textDecoration: 'none',
       width: '100%',
       '&:hover': {
@@ -97,7 +98,7 @@ css({
         }
       }
     },
-    '.icon': {
+    '.row_end .icon': {
       uiText: 'base',
       width: '{space.5}',
       height: '{space.5}',

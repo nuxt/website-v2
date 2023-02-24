@@ -1,3 +1,13 @@
+<script setup>
+const { navDirFromPath } = useContentHelpers()
+
+// const basePath = `/${locale.value}/docs/${route.params.version}`
+const basePath = `/`
+const { data: navigation } = await useAsyncData('navigation', () => fetchContentNavigation(queryContent(basePath)))
+// const nav = navDirFromPath(basePath, navigation.value)
+
+</script>
+
 <template>
   <div class="app">
     <LayoutHeader />
@@ -5,7 +15,7 @@
     <LayoutMain>
       <template #start>
         <nav>
-          Nav
+          {{ navigation }}
         </nav>
       </template>
       <template #center>

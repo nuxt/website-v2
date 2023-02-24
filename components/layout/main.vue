@@ -25,7 +25,7 @@ css({
   '.main': {
     zIndex: 0,
     '.row': {
-      minHeight: 'calc(100vh - {space.16})',
+      minHeight: 'calc(100vh - {space.32})',
       '&_start': {
         display: 'sticky',
         top: '{space.16}',

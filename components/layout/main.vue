@@ -30,6 +30,7 @@ css({
         display: 'sticky',
         top: '{space.16}',
         padding: '{space.5}',
+        paddingTop: '{space.4}',
         paddingLeft: 0
       },
       '&_center': {

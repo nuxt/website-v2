@@ -45,12 +45,15 @@ function toggleBook (book) {
 <style lang="ts" scoped>
 css({
   '.list': {
+    position: 'sticky',
+    top: '{space.20}',
     display: 'flex',
     flexDirection: 'column',
     gap: '{space.3}',
     listStyle: 'none',
     margin: 0,
     padding: 0,
+    paddingTop: '{space.1}',
     '&-nav': {
       display: 'flex',
       flexDirection: 'column',

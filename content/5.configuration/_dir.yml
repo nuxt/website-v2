@@ -1,1 +1,3 @@
-navigation.title: 'Configuration Options'
+navigation.title: 'Configuration'
+navigation.book: 'configuration'
+navigation.icon: 'heroicons:cog-6-tooth'

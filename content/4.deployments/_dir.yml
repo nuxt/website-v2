@@ -1,1 +1,3 @@
-navigation.title: 'Deployment Providers'
+navigation.title: 'Deployments'
+navigation.book: 'deployments'
+navigation.icon: 'heroicons:cloud-arrow-up'

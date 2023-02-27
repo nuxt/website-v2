@@ -38,6 +38,7 @@ css({
       },
       '&_end': {
         padding: '{space.5}',
+        paddingTop: '{space.4}',
         paddingRight: 0
       }
     }

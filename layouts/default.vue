@@ -14,9 +14,7 @@ const { data: navigation } = await useAsyncData('navigation', () => fetchContent
     <!-- <LayoutHero /> -->
     <LayoutMain>
       <template #start>
-        <nav>
-          {{ navigation }}
-        </nav>
+        <LayoutNav :list="navigation" />
       </template>
       <template #center>
         <article>
@@ -24,9 +22,7 @@ const { data: navigation } = await useAsyncData('navigation', () => fetchContent
         </article>
       </template>
       <template #end>
-        <aside>
-          TOC
-        </aside>
+        <LayoutAside :links="[]"/>
       </template>
     </LayoutMain>
     <LayoutFooter />

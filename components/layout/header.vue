@@ -52,7 +52,7 @@ css({
       },
       '&_end': {
         uiFlexEnd: true,
-        gap: '{space.3}'
+        gap: '{space.2}'
       }
     },
     '&_logo': {
@@ -98,13 +98,18 @@ css({
         }
       }
     },
-    '.row_end .icon': {
-      uiText: 'base',
-      width: '{space.5}',
-      height: '{space.5}',
-      '&:hover': {
-        uiText: 'accent'
-      }
+    '.row_end': {
+      'a': {
+        uiText: 'base',
+        padding: '{space.1}',
+        '&:hover': {
+          uiTextPrimary: 400
+        },
+        '.icon': {
+          width: '{space.5}',
+          height: '{space.5}',
+        }
+      },
     }
   }
 })

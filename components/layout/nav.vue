@@ -7,7 +7,7 @@ defineProps({
 })
 const route = useRoute()
 // const localeRoute = useLocaleRoute()
-const current = ref<string | null>(route.params.slug[0] as string)
+const current = ref<string | null>(route.params.book as string)
 function toggleBook (book) {
   if (current.value === book) {
     current.value = null
@@ -21,10 +21,10 @@ function toggleBook (book) {
   <ul class="list">
     <li v-for="group in list" :key="group.book">
       <template v-if="group.children">
-        <button class="toggler" :class="{'toggler-active': $route.params.slug[0] === group.book, 'toggler-default': $route.params.slug[0] !== group.book && current !== group.book, 'toggler-open': current === group.book && $route.params.slug[0] !== group.book}" @click="toggleBook(group.book)">
+        <button class="toggler" :class="{'toggler-active': $route.params.book === group.book, 'toggler-default': $route.params.book !== group.book && current !== group.book, 'toggler-open': current === group.book && $route.params.book !== group.book}" @click="toggleBook(group.book)">
           <span class="toggler-content">
             <span class="toggler-content-box">
-              <Icon :name="group.icon + ($route.params.slug[0] === group.book ? '-solid' : '')" />
+              <Icon :name="group.icon + ($route.params.book === group.book ? '-solid' : '')" />
             </span>
             <span class="toggler-content-title">{{ group.title }}</span>
           </span>

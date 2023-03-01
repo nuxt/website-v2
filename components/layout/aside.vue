@@ -81,7 +81,7 @@ css({
         '&:hover': {
           uiText: 'base',
           '.icon': {
-            uiTextPrimary: 500
+            uiTextPrimary: 400
           }
         },
         '.icon': {

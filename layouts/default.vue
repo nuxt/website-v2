@@ -12,19 +12,14 @@ const { data: navigation } = await useAsyncData('navigation', () => fetchContent
   <div class="app">
     <LayoutHeader />
     <!-- <LayoutHero /> -->
-    <LayoutMain>
-      <template #start>
+    <div class="app_container">
+      <div class="app_container_nav">
         <LayoutNav :list="navigation" />
-      </template>
-      <template #center>
-        <article>
-          <slot/>
-        </article>
-      </template>
-      <template #end>
-        <LayoutAside :links="[]"/>
-      </template>
-    </LayoutMain>
+      </div>
+      <div class="app_container_page">
+        <slot/>
+      </div>
+    </div>
     <LayoutFooter />
   </div>
 </template>
@@ -41,6 +36,15 @@ css({
     uiContainer: true,
     display: 'grid',
     gridTemplateColumns: '240px 1fr 240px',
+  },
+  '.app_container': {
+    uiContainer: true,
+    display: 'grid',
+    gridTemplateColumns: '240px 1fr',
+    '&_nav': {
+      uiBorderR: 'base',
+      paddingRight: '{space.5}'
+    }
   }
 })
 </style>

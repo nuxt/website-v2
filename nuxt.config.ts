@@ -10,9 +10,6 @@ export default defineNuxtConfig({
   colorMode: {
     classSuffix: ''
   },
-  content: {
-    documentDriven: true
-  },
   pinceau: {
     preflight: false
   }

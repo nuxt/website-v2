@@ -7,6 +7,9 @@
         </slot>
       </div>
       <div class="row_center">
+        <!-- <pre>
+          {{ $route }}
+        </pre> -->
         <slot name="center">
           Center
         </slot>
@@ -27,11 +30,9 @@ css({
     '.row': {
       minHeight: 'calc(100vh - {space.32})',
       '&_start': {
-        display: 'sticky',
-        top: '{space.16}',
         padding: '{space.5}',
         paddingTop: '{space.4}',
-        paddingLeft: 0
+        paddingLeft: 0,
       },
       '&_center': {
         uiBorderX: 'base',

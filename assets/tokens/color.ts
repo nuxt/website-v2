@@ -12,6 +12,14 @@ export default {
       accent: {
         initial: slate[100],
         dark: zinc[900]
+      },
+      reverse: {
+        initial: slate[200],
+        dark: zinc[600]
+      },
+      reverseAccent: {
+        initial: slate[300],
+        dark: zinc[500]
       }
     },
     border: {

@@ -7,7 +7,7 @@ defineProps({
 })
 const route = useRoute()
 // const localeRoute = useLocaleRoute()
-const current = ref<string | null>(route.params.book as string)
+const current = ref<string | null>(route.params.slug[0] as string)
 function toggleBook (book) {
   if (current.value === book) {
     current.value = null
@@ -21,14 +21,14 @@ function toggleBook (book) {
   <ul class="list">
     <li v-for="group in list" :key="group.book">
       <template v-if="group.children">
-        <button class="toggler" :class="{'toggler-active': $route.params.book === group.book, 'toggler-default': !$route.params.book === group.book && !current === group.book, 'toggler-open': current === group.book && !$route.params.book === group.book}" @click="toggleBook(group.book)">
+        <button class="toggler" :class="{'toggler-active': $route.params.slug[0] === group.book, 'toggler-default': $route.params.slug[0] !== group.book && current !== group.book, 'toggler-open': current === group.book && $route.params.slug[0] !== group.book}" @click="toggleBook(group.book)">
           <span class="toggler-content">
             <span class="toggler-content-box">
-              <Icon :name="group.icon + ($route.params.book === group.book ? '-solid' : '')" />
+              <Icon :name="group.icon + ($route.params.slug[0] === group.book ? '-solid' : '')" />
             </span>
             <span class="toggler-content-title">{{ group.title }}</span>
           </span>
-          <Icon :name="$route.params.book === group.book ? 'toggler-close' : 'toggler-open'" class="toggler-icon" />
+          <Icon :name="current === group.book ? 'toggler-close' : 'toggler-open'" class="toggler-icon" />
         </button>
         <TransitionSlideUpDown :active="group.children.length && current === group.book">
           <nav class="list-nav">
@@ -75,20 +75,24 @@ css({
       '&:hover': {
         uiText: 'base',
         '.toggler-content-box': {
-          uiBorder: 'accent'
+          uiBorder: 'base'
         }
       }
     },
     '&-active': {
-      uiText: 'base',
+      uiText: 'accent',
+      fontWeight: 500,
       '.toggler-content-box': {
-        uiTextPrimary: 500
+        uiTextPrimary: 400,
+        uiBorder: 'accent'
       }
     },
     '&-open': {
       uiText: 'base',
+      fontWeight: 500,
       '.toggler-content-box': {
-        uiText: 'base'
+        uiText: 'base',
+        uiBorder: 'accent'
       }
     },
     '&-content': {
@@ -131,29 +135,29 @@ css({
     '&::before': {
       content: '""',
       position: 'absolute',
-      width: '7px',
-      height: '7px',
-      top: '7px',
+      width: '8px',
+      height: '8px',
+      top: '5px',
       left: '-28px',
-      uiBg: 'accent'
-      // roundedSm: true,
-      // uiBgTertiary: true
+      uiBg: 'reverse',
+      borderRadius: '50%',
     },
     '&:hover': {
       uiText: 'base',
       // uiTextSecondary: true,
       // transitionAll: true,
       '&::before': {
+        uiBg: 'reverseAccent',
         // uiBgBrandOpacity: 50,
         // rotate: '45deg'
       }
     }
   },
   '.router-link-exact-active, .router-link-exact-active:hover': {
-    uiTextPrimary: 500,
+    uiText: 'accent',
     '&::before': {
-      // uiBgBrand: true,
-      // rotate: '45deg'
+      uiBgPrimary: 400,
+      // opacity: 0.5
     }
   }
 })

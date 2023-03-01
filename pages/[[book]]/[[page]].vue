@@ -1,10 +1,20 @@
+<script setup>
+const route = useRoute()
+// const { locale } = useI18n()
+const { data } = await useAsyncData(route.fullPath, () => queryContent(route.params.book, route.params.page).findOne())
+
+// TODO: handle when page not found
+
+useContentHead(data.value)
+</script>
+
 <template>
   <div class="page">
     <div class="page_article">
-      <ContentDoc />
+      <ContentRenderer :value="data" />
     </div>
     <div class="page_aside">
-      <LayoutAside :links="[]"/>
+      <LayoutAside :links="data.body.toc.links"/>
     </div>
   </div>
 </template>

@@ -4,7 +4,7 @@ export default {
   ...fr,
   banner: {
     here: 'nuxt.com/docs',
-    format: 'Vous consultez la documentation de Nuxt 2. Rendez vous sur {here} Pour la documentation de Nuxt 3.'
+    format: 'Vous consultez la documentation de Nuxt 2. Rendez vous sur {here} pour la documentation de Nuxt 3.'
   },
   cookies: {
     message: "Nous utilisons des cookies pour mesurer l'audience et améliorer le site !",

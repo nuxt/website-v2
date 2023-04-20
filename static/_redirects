@@ -637,7 +637,7 @@
 /:locale/partners https://nuxt.com/support/agencies 301!
 /:locale/partners/:slug https://nuxt.com/support/agencies/:slug 301!
 
-# Showcase
+# Showcases
 
 /showcases https://nuxt.com/showcase 301!
 /:locale/showcases https://nuxt.com/showcase 301!
@@ -657,3 +657,10 @@
 /:locale/announcements https://nuxt.com/blog 301!
 /announcements/:slug https://nuxt.com/blog/:slug 301!
 /:locale/announcements/:slug https://nuxt.com/blog/:slug 301!
+
+# Case Studies
+
+/case-studies https://nuxtlabs.com/blog?category=case-studies 301!
+/:locale/case-studies https://nuxtlabs.com/blog?category=case-studies 301!
+/case-studies/:slug https://nuxtlabs.com/blog/case-studies/:slug 301!
+/:locale/case-studies/:slug https://nuxtlabs.com/blog/case-studies/:slug 301!

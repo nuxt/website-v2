@@ -11,7 +11,7 @@ links:
       - title: 'Étude de cas'
         subtitle: 'Comment Nuxt est utilisé par les entreprises'
         slug: 'case-studies'
-        to: '/case-studies'
+        href: 'https://nuxtlabs.com/blog?category=case-studies'
         icon: 'case-studies.svg'
         color: 'bg-sand-dark'
       - title: 'Témoignages'

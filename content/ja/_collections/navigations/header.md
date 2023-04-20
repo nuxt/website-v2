@@ -11,7 +11,7 @@ links:
       - title: '事例紹介'
         subtitle: '企業による Nuxt の活用方法'
         slug: 'case-studies'
-        to: '/case-studies'
+        href: 'https://nuxtlabs.com/blog?category=case-studies'
         icon: 'case-studies.svg'
         color: 'bg-sand-dark'
       - title: '著名人の声'

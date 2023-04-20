@@ -660,7 +660,7 @@
 
 # Case Studies
 
-/case-studies <https://nuxtlabs.com/blog?category=case-studies> 301!
-/:locale/case-studies <https://nuxtlabs.com/blog?category=case-studies> 301!
-/case-studies/:slug <https://nuxtlabs.com/blog/case-studies/:slug> 301!
-/:locale/case-studies/:slug <https://nuxtlabs.com/blog/case-studies/:slug> 301!
+/case-studies https://nuxtlabs.com/blog?category=case-studies 301!
+/:locale/case-studies https://nuxtlabs.com/blog?category=case-studies 301!
+/case-studies/:slug https://nuxtlabs.com/blog/case-studies/:slug 301!
+/:locale/case-studies/:slug https://nuxtlabs.com/blog/case-studies/:slug 301!

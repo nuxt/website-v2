@@ -49,6 +49,19 @@ env_variables:
   HOST: '0.0.0.0'
 ```
 
+inside your package.json file include `"gcp-build":""` script 
+
+```
+"scripts": {
+    "prepare": "husky install",
+    "generate": "nuxt generate",
+    "build": "nuxt generate",
+    "dev": "nuxt dev",
+    "start": "nuxt start"
+    "gcp-build":""
+  },
+```
+
 or for flexible environment the minimal configuration is:
 
 ```yaml

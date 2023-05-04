@@ -14,16 +14,7 @@ How to deploy Nuxt on Qovery?
 
 ---
 
-[Qovery](https://qovery.com) is a fully-managed cloud platform that runs on your AWS, GCP, Azure and Digital Ocean account where you can host static sites, backend APIs, databases, cron jobs, and all your other apps in one place.
-
-Static sites are **completely free** on Qovery and include the following:
-
-- Continuous, automatic builds & deploys from GitHub and GitLab.
-- Automatic SSL certificates through [Let's Encrypt](https://letsencrypt.org).
-- Free managed PostgreSQL.
-- Free SSD storage.
-- Unlimited collaborators.
-- Unlimited [custom domains](https://docs.qovery.com/guides/getting-started/setting-custom-domain/).
+[Qovery](https://qovery.com) is a fully-managed cloud platform that runs on your AWS and Scaleway account where you can host static and dynamic sites, backend APIs, databases, cron jobs, and all your other apps in one place.
 
 ## Prerequisites
 
@@ -37,21 +28,9 @@ Follow the procedure below to set up Nuxt on Qovery:
 
 Visit the [Qovery dashboard](https://console.qovery.com) to create an account if you don't already have one.
 
-### 2. Create a project
+### 2. Create a cluster, project, environment and services
 
-Click on "Create a new project" and give a name to your project.
-
-Click on "Next".
-
-### 3. Add an application
-
-Click on "Create an application" then choose "I have an application" and select the repository where your Nuxt site is located.
-
-Click on "Next".
-
-Skip adding services for static website.
-
-Click on "Deploy".
+Have a look at [this tutorial](https://hub.qovery.com/guides/getting-started/deploy-your-first-application/) on the official page.
 
 ## Deploy
 

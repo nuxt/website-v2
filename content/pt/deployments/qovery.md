@@ -14,16 +14,7 @@ Como desdobrar o Nuxt no Qovery?
 
 ---
 
-O [Qovery](https://qovery.com) é uma plataforma de nuvem completamente gerida que executa sobre a sua conta AWS, GCP, Azure e Digital Ocean onde você você pode hospedar sítios estáticos, backend de APIs, base de dados, e todas outras suas aplicações em um só lugar.
-
-Os sítios estáticos são **completamente grátis** no Qovery e incluem as seguintes funcionalidades:
-
-- Construções automáticas e desdobramentos contínuos a partir do GitHub e GitLab.
-- Certificação SSL automática através do [Let's Encrypt](https://letsencrypt.org).
-- PostgreSQL gerido grátis.
-- Armazenamento SSD grátis
-- Colaboradores ilimitados.
-- [Domínios personalizados](https://docs.qovery.com/guides/getting-started/setting-custom-domain/) ilimitados.
+O [Qovery](https://qovery.com) é uma plataforma de nuvem completamente gerida que executa sobre a sua conta AWS and Scaleway onde você você pode hospedar sítios estáticos, backend de APIs, base de dados, e todas outras suas aplicações em um só lugar.
 
 ## Pré-requisitos
 
@@ -37,21 +28,9 @@ Siga o procedimento abaixo para configurar o Nuxt no Qovery:
 
 Visite o [painel de controlo do Qovery](https://console.qovery.com) para criar uma conta se você ainda não tiver uma.
 
-### 2. Criar um projeto
+### 2. Criar um projeto e aplicação
 
-Clique no "Create a new project (Criar um novo projeto)" e dê um nome ao seu projeto.
-
-Clique em "Next (Seguinte)"
-
-### 3. Adicionar uma aplicação
-
-Clique em "Create an application (Criar uma aplicação)" e depois escolha "I have an application (Eu tenho uma aplicação)" e seleciona o repositório onde o seu sítio Nuxt está localizado.
-
-Clique em "Next (Seguinte)".
-
-Pule adicionar serviços para websites estático.
-
-Clique em "Deploy (Desdobrar)"
+Have a look at [this tutorial](https://hub.qovery.com/guides/getting-started/deploy-your-first-application/) on the official page.
 
 ## Desdobrar
 

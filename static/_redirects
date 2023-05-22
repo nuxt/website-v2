@@ -359,8 +359,8 @@
 /:locale/team /:locale/teams 302!
 
 #V3
-/v3 https://v3.nuxtjs.org/ 302!
-/:locale/v3 https://v3.nuxtjs.org/ 302!
+/v3 https://nuxt.com/ 302!
+/:locale/v3 https://nuxt.com/ 302!
 
 #Modules
 /modules https://nuxt.com/modules/ 302!

@@ -21,7 +21,7 @@ links:
       - title: 'Contribute'
         to: '/contribution-guide'
       - title: 'Chat with us'
-        href: 'https://discord.nuxtjs.org/'
+        href: 'https://discord.nuxt.dev/'
       - title: 'Events'
         to: '/events'
       - title: 'Sponsors'

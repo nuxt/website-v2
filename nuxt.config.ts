@@ -25,12 +25,12 @@ export default withDocus({
       {
         hid: 'og:image',
         property: 'og:image',
-        content: 'https://nuxtjs.org/preview.png'
+        content: 'https://v2.nuxt.com/preview.png'
       },
       {
         hid: 'og:image:secure_url',
         property: 'og:image:secure_url',
-        content: 'https://nuxtjs.org/preview.png'
+        content: 'https://v2.nuxt.com/preview.png'
       },
       {
         hid: 'og:image:alt',
@@ -40,7 +40,7 @@ export default withDocus({
       {
         hid: 'twitter:image',
         name: 'twitter:image',
-        content: 'https://nuxtjs.org/preview.png'
+        content: 'https://v2.nuxt.com/preview.png'
       }
     ],
     script: [
@@ -148,6 +148,7 @@ export default withDocus({
       'npmjs.com',
       'cdn.krutiepatel.com',
       'nuxtjs.org',
+      'v2.nuxt.com',
       'i.imgur.com',
       'avatars0.githubusercontent.com',
       'avatars1.githubusercontent.com',

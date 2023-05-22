@@ -5,7 +5,7 @@ import { withDocus } from '@docus/app'
 export default withDocus({
   rootDir: __dirname,
   head: {
-    titleTemplate: 'Nuxt - %s',
+    titleTemplate: 'Nuxt 2 - %s',
     link: [
       {
         rel: 'stylesheet',
@@ -14,7 +14,7 @@ export default withDocus({
       { rel: 'preconnect', href: 'https://fonts.gstatic.com' }
     ],
     meta: [
-      { hid: 'og:site_name', property: 'og:site_name', content: 'Nuxt' },
+      { hid: 'og:site_name', property: 'og:site_name', content: 'Nuxt 2' },
       { hid: 'og:type', property: 'og:type', content: 'website' },
       { hid: 'twitter:site', name: 'twitter:site', content: '@nuxt_js' },
       {

@@ -1,6 +1,6 @@
 <template>
   <AppLink
-    to="https://nuxt.com/v3"
+    to="https://nuxt.com"
     class="group flex items-center transition-height delay-200 h-10 bg-primary hover:bg-primary-400"
     tabindex="0"
   >

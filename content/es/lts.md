@@ -14,7 +14,7 @@ If you expect to be using Nuxt 2 beyond the EOL (End of Life) date (Dec. 31st, 2
 ## How long will Nuxt 2 be supported?
 
 On December 31st, 2023, Vue 2 along with Nuxt 2 will reach End of Life (EOL).
-Nuxt 2.17 is the current, and final minor release of Nuxt 2.x.
+
 After that date, Nuxt 2 will continue to be available on the NPM package manager, but will no longer receive updates, such as security and browser compatibility fixes.
 After that, if you wish to receive updates, please subscribe to [HeroDevs’ NES (Never-Eding Support) for Vue 2 & Nuxt 2 (Core + Essentials package)](https://www.herodevs.com/support/nes-vue?utm_source=nuxt-js&utm_medium=affiliate&utm_campaign=nuxt&utm_content=link).
 
@@ -34,7 +34,7 @@ Here are some general guidelines:
 
 **Understand what you will gain from upgrading.**
 
-Nuxt 2.17 remains a powerful framework with great DX. The main benefits of upgrading are more refined TypeScript support, better performance, hybrid rendering, and access to the Nuxt 3 ecosystem and new features.
+Nuxt 2.x remains a powerful framework with great DX. The main benefits of upgrading are more refined TypeScript support, better performance, hybrid rendering, and access to the Nuxt 3 ecosystem and new features.
 
 Ask your team these questions:
 Is the app stable and working well?
@@ -57,7 +57,7 @@ Some teams may not be able to upgrade to Nuxt 3 by this timeline due to limited 
 
 From a technical perspective, Nuxt 2 is a stable and battle-tested piece of technology. If it is serving you well now, it will continue to do so for the foreseeable future.
 
-Nuxt 2.17 will be the maintained release before EOL hits, so if you intend to stay on Nuxt 2, you should at least upgrade to Nuxt 2.17.
+Nuxt 2.17 is the currently maintained release before EOL hits, so if you intend to stay on Nuxt 2, you should at least upgrade to Nuxt 2.17. We probably will ship Nuxt 2.18 before December if we need to address important issues before reaching EOL.
 
 ## Security & Compliance
 

@@ -94,10 +94,10 @@ links:
       - title: 'Sponsors'
         subtitle: 'They trust us'
         slug: 'sponsors'
-        href: 'https://nuxt.com/support/us'
+        href: 'https://nuxt.com/enterprise/sponsors'
         icon: 'sponsors.svg'
         color: 'bg-mint-dark'
   - title: 'Partners'
     slug: 'partners'
-    href: 'https://nuxt.com/support/agencies'
+    href: 'https://nuxt.com/enterprise/agencies'
 ---

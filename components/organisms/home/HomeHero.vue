@@ -9,11 +9,11 @@
       <section class="flex flex-col justify-start w-full px-4 pt-36 pb-48 md:pt-44 lg:pb-56 lg:pt-36 text-center z-20">
         <div class="flex justify-center mb-16">
           <AppLink
-            to="https://nuxt.com"
+            to="/lts"
             class="flex items-center truncate bg-primary/25 hover:bg-primary-800 text-white border border-primary py-3 px-4 rounded"
           >
             <IconStar class="h-4 w-4 mr-2" />
-            <span class="truncate"><b>Announcement</b>: Nuxt 3 is out!</span>
+            <span class="truncate">Learn about Nuxt 2 Long Term Support</span>
           </AppLink>
         </div>
         <h1 class="font-normal font-serif text-display-5 xs:text-display-4 md:text-display-3 2xl:text-display-2 mb-6">

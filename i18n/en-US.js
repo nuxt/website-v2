@@ -2,10 +2,6 @@ import en from '~docus-i18n/en-US'
 
 export default {
   ...en,
-  banner: {
-    here: 'nuxt.com',
-    format: 'You are reading Nuxt 2 docs. Head over {here} for Nuxt 3 docs.'
-  },
   cookies: {
     message: 'We use Cookies for user analysis and on-page improvements!',
     link: 'Learn about cookies',

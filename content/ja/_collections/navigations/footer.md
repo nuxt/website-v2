@@ -17,7 +17,7 @@ links:
   - title: 'エコシステム'
     items:
       - title: 'お知らせ'
-        to: '/announcements'
+        href: 'https://nuxt.com/blog'
       - title: '貢献'
         to: '/contribution-guide'
       - title: 'チャット'
@@ -35,7 +35,7 @@ links:
   - title: 'リソース'
     items:
       - title: 'デザイン'
-        to: '/design'
+        to: 'https://nuxt.com/design-kit'
       - title: 'ドキュメント'
         to: '/docs'
       - title: '例'

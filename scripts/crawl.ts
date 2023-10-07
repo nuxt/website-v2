@@ -10,7 +10,7 @@ const logger = consola.withTag('crawler')
 const excludedExtensions = ['svg', 'png', 'jpg', 'sketch', 'ico', 'gif']
 const urlsToOmit = ['http://localhost:3000']
 
-const sourceSite = 'https://nuxtjs.org'
+const sourceSite = 'https://v2.nuxt.com'
 const baseURL = withoutTrailingSlash(process.env.BASE_URL || 'https://preview.nuxtjs.org')
 
 const startingURL = sourceSite + '/'
@@ -28,7 +28,7 @@ const verifier = new Crawler({
   headers: {
     Authorization: `Basic ${credentials}`
   },
-  callback (error, res, done) {
+  callback(error, res, done) {
     const { $ } = res
     const { uri } = res.options
     // @ts-ignore
@@ -49,10 +49,10 @@ const verifier = new Crawler({
     logger.success(chalk.green(uri))
     logger.debug(uri, `[${verifier.queueSize} / ${urls.size}]`)
     done()
-  },
+  }
 })
 
-function queue (path: string, referrer?: string) {
+function queue(path: string, referrer?: string) {
   if (urlsToOmit.some(url => path.startsWith(url))) return
 
   const { pathname, origin } = new URL(path, referrer)
@@ -76,7 +76,7 @@ function queue (path: string, referrer?: string) {
 
 crawler = new Crawler({
   maxConnections: 100,
-  callback (error, res, done) {
+  callback(error, res, done) {
     const { $ } = res
     const { uri } = res.options
     // @ts-ignore
@@ -101,7 +101,7 @@ crawler = new Crawler({
       }
     }
     done()
-  },
+  }
 })
 
 logger.log('')

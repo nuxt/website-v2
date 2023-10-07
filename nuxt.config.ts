@@ -5,7 +5,7 @@ import { withDocus } from '@docus/app'
 export default withDocus({
   rootDir: __dirname,
   head: {
-    titleTemplate: 'Nuxt - %s',
+    titleTemplate: 'Nuxt 2 - %s',
     link: [
       {
         rel: 'stylesheet',
@@ -14,7 +14,7 @@ export default withDocus({
       { rel: 'preconnect', href: 'https://fonts.gstatic.com' }
     ],
     meta: [
-      { hid: 'og:site_name', property: 'og:site_name', content: 'Nuxt' },
+      { hid: 'og:site_name', property: 'og:site_name', content: 'Nuxt 2' },
       { hid: 'og:type', property: 'og:type', content: 'website' },
       { hid: 'twitter:site', name: 'twitter:site', content: '@nuxt_js' },
       {
@@ -25,12 +25,12 @@ export default withDocus({
       {
         hid: 'og:image',
         property: 'og:image',
-        content: 'https://nuxtjs.org/preview.png'
+        content: 'https://v2.nuxt.com/preview.png'
       },
       {
         hid: 'og:image:secure_url',
         property: 'og:image:secure_url',
-        content: 'https://nuxtjs.org/preview.png'
+        content: 'https://v2.nuxt.com/preview.png'
       },
       {
         hid: 'og:image:alt',
@@ -40,12 +40,12 @@ export default withDocus({
       {
         hid: 'twitter:image',
         name: 'twitter:image',
-        content: 'https://nuxtjs.org/preview.png'
+        content: 'https://v2.nuxt.com/preview.png'
       }
     ],
     script: [
       {
-        src: 'https://masteringnuxt.com/banners/main.js',
+        src: 'https://masteringnuxt.com/banner.js?affiliate=nuxt&type=top',
         async: true
       }
     ],
@@ -148,6 +148,7 @@ export default withDocus({
       'npmjs.com',
       'cdn.krutiepatel.com',
       'nuxtjs.org',
+      'v2.nuxt.com',
       'i.imgur.com',
       'avatars0.githubusercontent.com',
       'avatars1.githubusercontent.com',

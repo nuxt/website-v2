@@ -17,7 +17,7 @@ links:
   - title: 'Écosystème'
     items:
       - title: 'Annonces'
-        to: '/announcements'
+        href: 'https://nuxt.com/blog'
       - title: 'Contribuer'
         to: '/contribution-guide'
       - title: 'Discutez avec nous'
@@ -35,7 +35,7 @@ links:
   - title: 'Ressources'
     items:
       - title: 'Design'
-        to: '/design'
+        to: 'https://nuxt.com/design-kit'
       - title: 'Documentation'
         to: '/docs'
       - title: 'Exemples'

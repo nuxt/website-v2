@@ -98,5 +98,5 @@ links:
         color: 'bg-mint-dark'
   - title: 'Partenaires'
     slug: 'partners'
-    to: '/partners'
+    href: 'https://nuxt.com/enterprise/agencies'
 ---

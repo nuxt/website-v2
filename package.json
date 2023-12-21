@@ -13,7 +13,7 @@
     "@docus/social-image": "^1.0.3",
     "@docus/theme": "^1.1.5",
     "@docus/twitter": "^1.0.4",
-    "@nuxt/typescript-build": "^2.1.0",
+    "@nuxt/typescript-build": "^3.0.2",
     "@nuxtjs/recaptcha": "^1.0.4",
     "@popperjs/core": "^2.10.2",
     "@snackbar/core": "^1.7.0",

@@ -75,6 +75,12 @@ export default [
     code: 'zh',
     iso: 'zh-CN',
     file: 'zh-CN.js',
-    name: 'Chinese'
+    name: 'Simplfied Chinese'
+  },
+  {
+    code: 'tw',
+    iso: 'zh-TW',
+    file: 'zh-TW.js',
+    name: 'Traditional Chinese (Taiwan)'
   }
 ]

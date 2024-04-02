@@ -4,8 +4,8 @@ export default {
     format: '{nuxt} já está disponível! Descobre mais sobre isso {here}'
   },
   cookies: {
-    message: 'Nós usamos Cookies para análise do utilizador e fazer melhorias na página!',
-    link: 'Aprender sobre cookies',
+    message: 'Nós usamos cookies para análises do utilizador e fazer melhorias na página!',
+    link: 'Estudar os cookies',
     button: 'OK'
   },
   footer: {
@@ -15,29 +15,29 @@ export default {
       Support: 'Suporte'
     },
     'Our team': 'A nossa equipa',
-    'Design Kit': 'Kit de Design',
+    'Design Kit': 'Equipamento de Desenho',
     'Contact us': 'Contacta-nos',
     Resources: 'Recursos',
     'Chat with us': 'Conversa connosco',
     'Contribution guide': 'Guia de contribuição',
     Sustainability: 'Sustentabilidade',
-    Training: 'Treino',
+    Training: 'Treinamento',
     newsletter: {
-      title: 'Newsletter',
+      title: 'Boletim Informativo',
       description: 'As últimas novidades, artigos, e recursos, enviados para o teu inbox mensalmente',
       form: {
-        email: 'Email',
-        subscribing: 'Inscrevendo...',
-        subscribe: 'Inscrever',
-        already_registered: 'Já estás inscrito',
+        email: 'Correio-eletrónico',
+        subscribing: 'Subscrevendo...',
+        subscribe: 'Subscrever',
+        already_registered: 'Já estás subscrito',
         invalid_address: 'Endereço inválido',
         subscribed_messages: {
-          pre: 'Um email para confirmar a tua subscrição foi enviado para',
-          confirmation: 'Email confirmado'
+          pre: 'Um correio eletrónico para confirmar a tua subscrição foi enviado para',
+          confirmation: 'Correio eletrónico confirmado'
         }
       }
     },
-    license: 'Nuxt é uma framework open source sob licença MIT.'
+    license: 'Nuxt é uma abstração de código-aberto sob a licença MIT.'
   },
   sidebar: {
     partners: {
@@ -58,16 +58,16 @@ export default {
       ui: 'UI',
       data: 'Dados',
       modules: 'Módulos',
-      deployment: 'Desdobramento'
+      deployment: 'Implantação'
     },
-    cli: 'Com a CLI',
-    scratch: 'De raiz'
+    cli: 'Da Linha de Comando',
+    scratch: 'Do zero'
   },
   modules: {
     search: 'Procurar um módulo (nome, categoria, nome de utilizador, etc.)',
     sort_by: 'Ordenar por',
     sort_fields: {
-      downloads: 'Downloads',
+      downloads: 'Descargas',
       stars: 'Estrelas'
     },
     loading: 'Carregando...',
@@ -90,7 +90,7 @@ export default {
       services: 'Serviços',
       location: 'Localização',
       contact_partner: 'Contactar Parceiro',
-      visit_website: 'Visitar Website'
+      visit_website: 'Visitar Sítio da Web'
     }
   },
   support: {
@@ -104,7 +104,7 @@ export default {
     firefox_extension: 'Extensão para Firefox',
     categories: {
       Featured: 'Destaques',
-      'E-Commerce': 'E-Commerce',
+      'E-Commerce': 'Comercio Eletrónico',
       News: 'Notícias',
       Government: 'Governo',
       Sport: 'Desporto',
@@ -121,7 +121,7 @@ export default {
     released_on: 'Lançado em {datetime}'
   },
   partners: {
-    become_partner: 'Torne-se um parceiro'
+    become_partner: 'Tornar-se um parceiro'
   },
   theme_mode: {
     system: 'Sistema',
@@ -139,14 +139,14 @@ export default {
     currently_version: 'Atualmente em beta privado',
     back: 'Para trás',
     go_to: 'Ir para {title}',
-    go_home: 'Ir para página principal',
-    read_article: 'Ler artigo article',
+    go_home: 'Ir para página inicial',
+    read_article: 'Ler artigo',
     days: 'dias',
     hours: 'horas',
     minutes: 'minutos',
     seconds: 'segundos',
     copied: 'Copiado',
-    watch_video: 'Ver vídeo',
+    watch_video: 'Assistir vídeo',
     multiple_authors: 'Vários Autores'
   },
   iso: 'pt-PT'

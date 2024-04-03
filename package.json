@@ -17,7 +17,7 @@
     "@nuxtjs/recaptcha": "^1.0.4",
     "@popperjs/core": "^2.10.2",
     "@snackbar/core": "^1.7.0",
-    "date-fns": "^2.28.0",
+    "date-fns": "^3.6.0",
     "vue-clickaway": "^2.2.2",
     "vue-cookieconsent-component": "^1.2.0",
     "vue-if-bot": "^1.2.0",

@@ -41,7 +41,7 @@
     "millify": "^4.0.0",
     "ohmyfetch": "^0.4.15",
     "prettier": "^3.2.5",
-    "ts-loader": "8.3.0",
+    "ts-loader": "9.5.1",
     "ufo": "^1.0.1",
     "uuid": "^9.0.0",
     "v-tooltip": "^2.1.3",

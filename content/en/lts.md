@@ -9,14 +9,14 @@ navigation: false
 
 ## Expecting to stay on Nuxt 2?
 
-If you expect to be using Nuxt 2 beyond the EOL (End of Life) date (June 30, 2024), and still need a maintained version that can satisfy security and browser compatibility requirements, make sure to check out [HeroDevs’ NES (Never-Ending Support) for Vue 2 & Nuxt 2](https://www.herodevs.com/support/nes-vue?utm_source=nuxt-js&utm_medium=affiliate&utm_campaign=nuxt&utm_content=link).
+If you expect to be using Nuxt 2 beyond the EOL (End of Life) date (June 30, 2024), and still need a maintained version that can satisfy security and browser compatibility requirements, make sure to check out [HeroDevs’ NES (Never-Ending Support) for Nuxt 2](https://www.herodevs.com/support/nuxt-nes?utm_source=nuxt-js&utm_medium=affiliate&utm_campaign=nuxt&utm_content=link).
 
 ## How long will Nuxt 2 be supported?
 
 On December 31st, 2023, Vue 2 will reach End of Life (EOL), and Nuxt 2 will follow on June 30th, 2024.
 
 After that date, Nuxt 2 will continue to be available on the NPM package manager, but will no longer receive updates, such as security and browser compatibility fixes.
-After that, if you wish to receive updates, please subscribe to [HeroDevs’ NES (Never-Ending Support) for Vue 2 & Nuxt 2 (Core + Essentials package)](https://www.herodevs.com/support/nes-vue?utm_source=nuxt-js&utm_medium=affiliate&utm_campaign=nuxt&utm_content=link).
+After that, if you wish to receive updates, please subscribe to [HeroDevs’ NES (Never-Ending Support) for Nuxt 2](https://www.herodevs.com/support/nuxt-nes?utm_source=nuxt-js&utm_medium=affiliate&utm_campaign=nuxt&utm_content=link).
 
 ## Upgrade to Nuxt 3
 
@@ -69,5 +69,5 @@ If you are shipping your application to customers with SLAs (Service Level Agree
 
 Browsers sometimes ship changes that break legacy libraries. This is extremely rare, but could happen, in theory.
 
-To address these concerns, we have partnered with industry experts to provide Extended LTS (Long Term Support) for Nuxt 2. This service will provide a version of Nuxt 2 that will continue to receive security and browser compatibility fixes, with SLAs. If you expect to be using Nuxt 2 beyond the EOL date of June 30, 2024, make sure to plan ahead: Learn more about [HeroDevs’ NES (Never-Ending Support) for Nuxt 2](https://www.herodevs.com/support/nes-vue?utm_source=nuxt-js&utm_medium=affiliate&utm_campaign=nuxt&utm_content=link).
+To address these concerns, we have partnered with industry experts to provide Extended LTS (Long Term Support) for Nuxt 2. This service will provide a version of Nuxt 2 that will continue to receive security and browser compatibility fixes, with SLAs. If you expect to be using Nuxt 2 beyond the EOL date of June 30, 2024, make sure to plan ahead: Learn more about [HeroDevs’ NES (Never-Ending Support) for Nuxt 2](https://www.herodevs.com/support/nuxt-nes?utm_source=nuxt-js&utm_medium=affiliate&utm_campaign=nuxt&utm_content=link).
 

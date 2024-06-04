@@ -1,11 +1,11 @@
 export default {
   banner: {
     here: 'https://nuxt.com/v3',
-    format: '{nuxt} já está disponível! Descobre mais sobre isso {here}'
+    format: '{nuxt} já está disponível! Descobrir mais sobre isto {here}'
   },
   cookies: {
-    message: 'Nós usamos cookies para análises do utilizador e fazer melhorias na página!',
-    link: 'Estudar os cookies',
+    message: 'Nós usamos os biscoitos (cookies) para análises do utilizador e fazer melhorias na página!',
+    link: 'Estudar os biscoitos',
     button: 'OK'
   },
   footer: {
@@ -14,25 +14,25 @@ export default {
       Help: 'Ajuda',
       Support: 'Suporte'
     },
-    'Our team': 'A nossa equipa',
+    'Our team': 'Nossa Equipa',
     'Design Kit': 'Equipamento de Desenho',
     'Contact us': 'Contacta-nos',
     Resources: 'Recursos',
-    'Chat with us': 'Conversa connosco',
-    'Contribution guide': 'Guia de contribuição',
+    'Chat with us': 'Comunidade da Discord',
+    'Contribution guide': 'Guia de Colaboração',
     Sustainability: 'Sustentabilidade',
     Training: 'Treinamento',
     newsletter: {
       title: 'Boletim Informativo',
-      description: 'As últimas novidades, artigos, e recursos, enviados para o teu inbox mensalmente',
+      description: 'As últimas novidades, artigos, e recursos, enviados para a caixa de entrada mensalmente',
       form: {
         email: 'Correio-eletrónico',
         subscribing: 'Subscrevendo...',
         subscribe: 'Subscrever',
-        already_registered: 'Já estás subscrito',
+        already_registered: 'Subscrição realizada com sucesso',
         invalid_address: 'Endereço inválido',
         subscribed_messages: {
-          pre: 'Um correio eletrónico para confirmar a tua subscrição foi enviado para',
+          pre: 'Um correio eletrónico para confirmar a subscrição foi enviado para',
           confirmation: 'Correio eletrónico confirmado'
         }
       }
@@ -46,9 +46,9 @@ export default {
     },
     ads: {
       fallback: {
-        title: 'Nuxt precisa de ti!',
+        title: 'Nuxt precisa de todos!',
         description:
-          'Ao permitir nuxtjs.org no teu AdBlocker, estás a apoiar o nosso trabalho e a ajudar-nos financeiramente.'
+          'Quando permitimos nuxtjs.org no nosso AdBlocker, apoiamos o trabalho e ajudamos financeiramente.'
       }
     }
   },
@@ -130,23 +130,23 @@ export default {
   },
   common: {
     an_error_occurred: 'Um erro ocorreu',
-    page_not_found: 'Não conseguimos encontrar a página que procuras.',
-    please_define_title: 'Por favor, defina um título no assunto principal',
-    please_define_description: 'Por favor, defina uma descrição no assunto principal',
+    page_not_found: 'Não conseguimos encontrar a página procurada.',
+    please_define_title: 'Por favor, definir um título no assunto principal',
+    please_define_description: 'Por favor, definir uma descrição no assunto principal',
     search: 'Procurar ("/" para focar)',
     settings: 'Definições',
     version: 'Versão',
     currently_version: 'Atualmente em beta privado',
-    back: 'Para trás',
+    back: 'Para Trás',
     go_to: 'Ir para {title}',
     go_home: 'Ir para página inicial',
-    read_article: 'Ler artigo',
+    read_article: 'Ler Artigo',
     days: 'dias',
     hours: 'horas',
     minutes: 'minutos',
     seconds: 'segundos',
     copied: 'Copiado',
-    watch_video: 'Assistir vídeo',
+    watch_video: 'Assistir Vídeo',
     multiple_authors: 'Vários Autores'
   },
   iso: 'pt-PT'

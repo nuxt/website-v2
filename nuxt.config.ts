@@ -179,6 +179,12 @@ export default withDocus({
         name: '日本語'
       },
       {
+        code: 'tw',
+        iso: 'zh-TW',
+        file: 'zh-TW.js',
+        name: '繁體中文 (台灣)'
+      },
+      {
         code: 'pt',
         iso: 'pt-PT',
         file: 'pt-PT.js',

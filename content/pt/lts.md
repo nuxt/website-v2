@@ -1,73 +1,75 @@
 ---
 template: page
-title: 'Nuxt 2 LTS, EOL & Extended Support'
-description: 'On December 31st, 2023, Vue 2 will reach End of Life (EOL), and Nuxt 2 will follow in June 2024. Learn more about upgrading to Nuxt 3 or our extended support offer..'
+title: 'Suporte de Longo Prazo, Fim da Vida, e Suporte Estendido da Nuxt 2'
+description: 'No dia 31 de Dezembro de 2023, a Vue 2 atingirá o fim da vida útil, e a Nuxt 2 seguirá em Junho de 2024. Saber mais sobre a atualização para a Nuxt 3 ou sobre a nossa oferta de suporte estendido.'
 navigation: false
 ---
 
-# Nuxt 2 LTS, EOL & Extended Support
+# Suporte de Longo Prazo, Fim da Vida, e Suporte Estendido da Nuxt 2
 
-## Expecting to stay on Nuxt 2?
+## Não Podemos Sair da Nuxt 2?
 
-If you expect to be using Nuxt 2 beyond the EOL (End of Life) date (June 30, 2024), and still need a maintained version that can satisfy security and browser compatibility requirements, make sure to check out [HeroDevs’ NES (Never-Ending Support) for Vue 2 & Nuxt 2](https://www.herodevs.com/support/nuxt-nes?utm_source=nuxtjs&utm_medium=affiliate&utm_campaign=nuxt2eol&utm_content=link).
+Se esperamos utilizar a Nuxt 2 para além da data do fim da vida útil que é 30 de Junho de 2024, e ainda precisamos de uma versão mantida que possa satisfazer os requisitos de segurança e compatibilidade do navegador, podemos consultar o [Suporte Interminável da HeroDevs para Vue 2 e Nuxt 2](https://www.herodevs.com/support/nuxt-nes?utm_source=nuxtjs&utm_medium=affiliate&utm_campaign=nuxt2eol&utm_content=link).
 
-## How long will Nuxt 2 be supported?
+## Durante Quanto Tempo a Nuxt 2 Será Suportada?
 
-On December 31st, 2023, Vue 2 will reach End of Life (EOL), and Nuxt 2 will follow on June 30th, 2024.
+No dia 31 de Dezembro de 2023, a Vue 2 chegará ao fim da sua vida útil, e a Nuxt 2 seguir-se-á no dia 30 de Junho de 2024.
 
-After that date, Nuxt 2 will continue to be available on the NPM package manager, but will no longer receive updates, such as security and browser compatibility fixes.
-After that, if you wish to receive updates, please subscribe to [HeroDevs’ NES (Never-Ending Support) for Nuxt 2](https://www.herodevs.com/support/nuxt-nes?utm_source=nuxtjs&utm_medium=affiliate&utm_campaign=nuxt2eol&utm_content=link).
+Depois desta data, a Nuxt 2 continuará a estar disponível no gestor de pacote NPM, mas deixará de receber atualizações, tais como correções de segurança e de compatibilidade com o navegador. Depois disto, se quisermos receber atualizações, devemos subscrever-nos ao [Suporte Interminável da HeroDevs para a Nuxt 2](https://www.herodevs.com/support/nuxt-nes?utm_source=nuxtjs&utm_medium=affiliate&utm_campaign=nuxt2eol&utm_content=link).
 
-## Upgrade to Nuxt 3
+## Atualizar para Nuxt 3
 
-Nuxt 3 is the current, latest major version of Nuxt. It provides a better developer experience, better performance, and contains new features that are not present in Nuxt 2, such as Nitro, auto-import and hybrid rendering, 
+A Nuxt 3 é a atual versão principal e mais recente da Nuxt. Proporciona uma melhor experiência ao programador, um desempenho melhor e contém novas funcionalidades que não estão presentes na Nuxt 2, como a Nitro, a importação automática e interpretação híbrida.
 
-Nuxt 3 contains breaking changes that make it incompatible with Nuxt 2, so migration will require a certain level of effort depending on your project. Full details are documented in the Nuxt 3 Migration Guide.
+A Nuxt 3 contém alterações de rutura que a tornam incompatível com a Nuxt 2, pelo que a migração exigirá um certo nível de esforço, dependendo do nosso projeto. Todos os detalhes estão documentados no Guia de Migração da Nuxt 3.
 
-Despite the breaking changes, most of Nuxt APIs are shared between the two major versions, so most of your team’s Nuxt 2 knowledge will continue to work in Nuxt 3. In the long run, we also intend to avoid major breaking upgrades like the one between Nuxt 2 and Nuxt 3. Compatibility and ecosystem stability will be our topmost priority for future releases, and new features will be introduced in a way that does not require major migrations.
+Apesar das alterações de rutura, a maioria das interfaces de programação de aplicação da Nuxt são partilhadas entre as duas versões principais, pelo que a maioria do conhecimento da nossa equipa sobre a Nuxt 2 continuará a funcionar na Nuxt 3. A longo prazo, também pretendemos evitar grandes atualizações de rutura como a que ocorreu entre a Nuxt 2 e a Nuxt 3. A compatibilidade e a estabilidade do ecossistema serão as nossas principais prioridades para as futuras versões, e as novas funcionalidades serão introduzidas duma maneira que não exija grandes migrações.
 
-## To upgrade or not to upgrade
+## Atualizar ou Não Atualizar
 
-Whether you should upgrade to Nuxt 3 highly depends on specific project details.
+A atualização para a Nuxt 3 depende muito dos detalhes específicos do projeto.
 
-Here are some general guidelines:
+Eis algumas diretrizes gerais:
 
-**Understand what you will gain from upgrading.**
+**Entender o que ganharemos com a atualização.**
 
-Nuxt 2.x remains a powerful framework with great DX. The main benefits of upgrading are more refined TypeScript support, better performance, hybrid rendering, and access to the Nuxt 3 ecosystem and new features.
+A Nuxt 2.x continua a ser uma abstração poderosa com excelente experiência de programação. Os principais benefícios da atualização são um suporte a TypeScript mais refinado, melhor desempenho, interpretação híbrida e acesso ao ecossistema da Nuxt 3 e as novas funcionalidades.
 
-Ask your team these questions:
-Is the app stable and working well?
-Does the app expect innovative features into the future?
-Is there a pain-point / bottleneck that can only be solved by upgrading?
-If the app is stable and isn’t experiencing major pain-points caused by Nuxt 2, then upgrading may not be worthwhile.
+Precisar fazer estas perguntas à nossa equipa:
 
-**Understand the cost of upgrading.**
+- A aplicação está estável e funciona bem?
+- A aplicação prevê funcionalidades inovadoras no futuro?
+- Existe algum ponto problemático ou gargalo que só pode ser resolvido com a atualização?
 
-Does the app rely on 3rd party dependencies that complicate Nuxt 3 compatibility?
-Does the app rely heavily on changed behavior between Nuxt 2 and Nuxt 3?
-Can the team allocate dedicated time for upgrading?
-Spend some initial research time to gauge these aspects and come up with an estimation. Then, compare that to the expected gain from (1). We will not be able to provide a precise formula, but hopefully this can help with the decision process.
+Se a aplicação for estável e não sofre grandes problemas causados pela Nuxt 2, a atualização poderá não valer a pena.
 
-## Stay on Nuxt 2
+**Entender o custo da atualização.**
 
-Some teams may not be able to upgrade to Nuxt 3 by this timeline due to limited bandwidth, budget, risk tolerance, or reliance on Nuxt-3-incompatible dependencies. We totally understand this, and want to ensure that staying on Nuxt 2 beyond EOL is a viable option.
+- A aplicação depende de dependências de terceiros que complicam a compatibilidade com a Nuxt 3?
+- A aplicação depende muito do comportamento alterado entre a Nuxt 2 e a Nuxt 3?
+- A equipa pode dedicar tempo à atualização?
 
-## The Technical Perspective
+Dediquemos algum tempo à investigação inicial para avaliar estes aspetos e fazer uma estimativa. Depois, a comparemos com o ganho esperado do (1). Não poderemos fornecer uma fórmula exata, mas esperamos que isto possa ajudar no processo de decisão.
 
-From a technical perspective, Nuxt 2 is a stable and battle-tested piece of technology. If it is serving you well now, it will continue to do so for the foreseeable future.
+## Permanecer na Nuxt 2
 
-Nuxt 2.17 is the currently maintained release before EOL hits, so if you intend to stay on Nuxt 2, you should at least upgrade to Nuxt 2.17. We probably will ship Nuxt 2.18 before December if we need to address important issues before reaching EOL.
+Algumas equipas podem não conseguir atualizar para a Nuxt 3 dentro deste prazo devido a limitações de largura de banda, orçamento, tolerância ao risco ou dependência de dependências incompatíveis com a Nuxt 3. Entendemos isto perfeitamente e queremos garantir que permanecer na Nuxt 2 além do fim da sua vida útil seja uma opção viável.
 
-## Security & Compliance
+## A Perspetiva Técnica
 
-For some teams, the main concern lies in security, compliance, and browser compatibility.
+Do ponto de vista técnico, a Nuxt 2 é uma peça de tecnologia estável e testada em combate. Se serve-nos bem agora, continuará a servir-nos num futuro próximo.
 
-You won’t receive security fixes from EOL software. For the record, Nuxt 2 has had very few security vulnerabilities. That said, you may need a supported version to fulfill regulations or company policies.
+A Nuxt 2.17 é a versão atualmente mantida antes do fim da vida útil chegar, portanto, se pretendemos permanecer na Nuxt 2, devemos pelo menos atualizar para a Nuxt 2.17. Provavelmente enviaremos a Nuxt 2.18 antes de Dezembro se precisarmos resolver problemas importantes antes de chegar ao fim da vida útil.
 
-If you are shipping your application to customers with SLAs (Service Level Agreements). You will want to avoid including EOL software in your stack.
+## Segurança e Conformidade
 
-Browsers sometimes ship changes that break legacy libraries. This is extremely rare, but could happen, in theory.
+Para algumas equipas, a principal preocupação é a segurança, a conformidade, e a compatibilidade do navegador.
 
-To address these concerns, we have partnered with industry experts to provide Extended LTS (Long Term Support) for Nuxt 2. This service will provide a version of Nuxt 2 that will continue to receive security and browser compatibility fixes, with SLAs. If you expect to be using Nuxt 2 beyond the EOL date of June 30, 2024, make sure to plan ahead: Learn more about [HeroDevs’ NES (Never-Ending Support) for Nuxt 2](https://www.herodevs.com/support/nuxt-nes?utm_source=nuxtjs&utm_medium=affiliate&utm_campaign=nuxt2eol&utm_content=link).
+Não receberemos correções de segurança de software quando atingirmos o fim da vida útil. Para constar, a Nuxt 2 teve muito poucas vulnerabilidades de segurança. Dito isto, podemos precisar duma versão suportada para cumprir regulamentos ou políticas da empresa.
+
+Se enviarmos a nossa aplicação a clientes com Acordos de Nível de Serviço. Quereremos evitar incluir software que atingiu o fim da sua vida útil na nossa pilha.
+
+Os navegadores às vezes enviam alterações que quebram bibliotecas legadas. Isto é extremamente raro, mas pode acontecer, em teoria.
+
+Para resolver estas preocupações, fizemos uma parceria com especialistas do setor para fornecer Suporte de Longo Prazo Estendido para a Nuxt 2. Este serviço fornecerá uma versão da Nuxt 2 que continuará a receber correções de segurança e compatibilidade do navegador, com os Acordos de Nível de Serviço. Se esperamos utilizar a Nuxt 2 para além da data do fim da sua vida útil que é dia 30 de Junho de 2024, devemos certificar-nos de planear com antecedência: Saber mais sobre [Suporte Interminável da HeroDevs para a Nuxt 2](https://www.herodevs.com/support/nuxt-nes?utm_source=nuxtjs&utm_medium=affiliate&utm_campaign=nuxt2eol&utm_content=link).
 

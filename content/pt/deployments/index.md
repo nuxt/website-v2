@@ -1,8 +1,8 @@
 ---
 template: PageList
-title: Desdobramentos
-description: "Estenda e automatize seu fluxo de trabalho ao usar desdobramentos para suas ferramentas favoritas."
-heroTitle: Desdobramentos
-heroDescription: "Estenda e automatize seu fluxo de trabalho ao usar desdobramentos para suas ferramentas favoritas."
+title: Implantações
+description: "Estender e automatizar o nosso fluxo de trabalho ao utilizar implantações para as nossas ferramentas favoritas."
+heroTitle: Implantações
+heroDescription: "Estender e automatizar o nosso fluxo de trabalho ao utilizar implantações para as nossas ferramentas favoritas."
 heroDescriptionFullWidth: true
 ---

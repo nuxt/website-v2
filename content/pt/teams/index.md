@@ -1,7 +1,7 @@
 ---
 template: blank
-title: 'A Equipa'
-description: 'O desenvolvimento da Nuxt é liderado por uma equipa internacional. Nossa equipa comprometida trabalha todos os dias para mover a Nuxt adiante.'
+title: 'Equipas'
+description: 'O desenvolvimento da Nuxt e do seu ecossistema é liderado por uma equipa internacional. A nossa equipa empenhada trabalha diariamente para fazer avançar a Nuxt.'
 layout:
   fluid: true
 navigation: false
@@ -9,10 +9,10 @@ navigation: false
 
 ::page-hero
 #title
-A Equipa
+Equipas
 
 #description
-O desenvolvimento da Nuxt e seu ecossistema é liderado por uma equipa internacional. Nossa equipa comprometida trabalha todos os dias para levar a Nuxt adiante.
+O desenvolvimento da Nuxt e do seu ecossistema é liderado por uma equipa internacional. A nossa equipa empenhada trabalha diariamente para fazer avançar a Nuxt.
 ::
 
 ::team-section
@@ -21,7 +21,7 @@ teamName: framework
 ---
 
 #title
-[A Abstração]{.text-primary}
+[Abstração]{.text-primary}
 ::
 
 ::team-section
@@ -29,8 +29,8 @@ teamName: framework
 teamName: community
 ---
 #title
-[A Comunidade]{.text-primary}
+[Comunidade]{.text-primary}
 
 #description
-Desde os colaboradores até os defensores, a comunidade é feita de membros de diferentes horizontes e habilidades. Nós estamos felizes em ver um novo membro todos os dias e encorajamos qualquer um a ajudar de alguma maneira (respondendo a questões, dando uma palestra, criando módulos e colaborando com o núcleo).
+De colaboradores a defensores, a comunidade é composta por membros com diferentes horizontes e competências. Ficamos felizes por ver novos membros todos os dias e encorajamos qualquer pessoa a ajudar de qualquer maneira (respondendo a perguntas, dando uma palestra, criando módulos e colaborando com o núcleo).
 ::

@@ -4,7 +4,7 @@ export default {
     format: '{nuxt} já está disponível! Descobrir mais sobre isto {here}'
   },
   cookies: {
-    message: 'Nós usamos os biscoitos (cookies) para análises do utilizador e fazer melhorias na página!',
+    message: 'Usamos os biscoitos digitais para analisar o utilizador para melhorar esta página!',
     link: 'Estudar os biscoitos',
     button: 'OK'
   },
@@ -29,15 +29,15 @@ export default {
         email: 'Correio-eletrónico',
         subscribing: 'Subscrevendo...',
         subscribe: 'Subscrever',
-        already_registered: 'Subscrição realizada com sucesso',
-        invalid_address: 'Endereço inválido',
+        already_registered: 'Subscrição Bem-sucedida',
+        invalid_address: 'Endereço Inválido',
         subscribed_messages: {
-          pre: 'Um correio eletrónico para confirmar a subscrição foi enviado para',
-          confirmation: 'Correio eletrónico confirmado'
+          pre: 'Um correio-eletrónico para confirmar a subscrição foi enviado para',
+          confirmation: 'Correio-eletrónico confirmado'
         }
       }
     },
-    license: 'Nuxt é uma abstração de código-aberto sob a licença MIT.'
+    license: 'A Nuxt é uma abstração de código-aberto sob a licença MIT.'
   },
   sidebar: {
     partners: {
@@ -46,16 +46,16 @@ export default {
     },
     ads: {
       fallback: {
-        title: 'Nuxt precisa de todos!',
+        title: 'A Nuxt precisa de todos!',
         description:
-          'Quando permitimos nuxtjs.org no nosso AdBlocker, apoiamos o trabalho e ajudamos financeiramente.'
+          'Ao permitir a v2.nuxt.com no nosso bloqueador de anúncios, apoiamos financeiramente o projeto.'
       }
     }
   },
   home: {
     discover: {
       pages: 'Páginas',
-      ui: 'UI',
+      ui: 'Interface do Utilizador',
       data: 'Dados',
       modules: 'Módulos',
       deployment: 'Implantação'
@@ -96,7 +96,7 @@ export default {
   support: {
     confirm_sending: 'Mensagem enviada para o suporte técnico',
     error_sending: 'Erro durante o envio',
-    invalid_adress: 'Endereço inválido'
+    invalid_adress: 'Endereço Inválido'
   },
   showcases: {
     loading: 'Carregando...',
@@ -121,7 +121,7 @@ export default {
     released_on: 'Lançado em {datetime}'
   },
   partners: {
-    become_partner: 'Tornar-se um parceiro'
+    become_partner: 'Tornar-se Parceiro'
   },
   theme_mode: {
     system: 'Sistema',
@@ -129,7 +129,7 @@ export default {
     dark: 'Escuro'
   },
   common: {
-    an_error_occurred: 'Um erro ocorreu',
+    an_error_occurred: 'Ocorreu um erro',
     page_not_found: 'Não conseguimos encontrar a página procurada.',
     please_define_title: 'Por favor, definir um título no assunto principal',
     please_define_description: 'Por favor, definir uma descrição no assunto principal',
@@ -137,7 +137,7 @@ export default {
     settings: 'Definições',
     version: 'Versão',
     currently_version: 'Atualmente em beta privado',
-    back: 'Para Trás',
+    back: 'Voltar',
     go_to: 'Ir para {title}',
     go_home: 'Ir para página inicial',
     read_article: 'Ler Artigo',

@@ -1,7 +1,7 @@
 ---
 template: blank
 title: 'Suporte Empresarial'
-description: 'Receba suporte técnico, reporte bugs ou contribua para o desenvolvimento da abstração Nuxt.'
+description: 'Obter suporte técnico, reportar erros de programação, ou colaborar com o desenvolvimento da abstração Nuxt.'
 layout:
   fluid: true
 navigation: false
@@ -11,7 +11,7 @@ navigation: false
 Suporte Empresarial
 
 #description
-Receba suporte técnico, reporte bugs ou contribua para o desenvolvimento da abstração Nuxt.
+Obter suporte técnico, reportar erros de programação, ou colaborar com o desenvolvimento da abstração Nuxt.
 ::
 
 ::support-container
@@ -20,51 +20,51 @@ Receba suporte técnico, reporte bugs ou contribua para o desenvolvimento da abs
   ---
   image: 'technical'
   button:
-    text: 'Contacte-nos'
+    text: 'Contactar'
     url: 'mailto:support@nuxtlabs.com'
   ---
   #title
-  Suporte técnico
+  Suporte Técnico
   #description
-  Contacte-nos para marcar um horário para uma sessão privada de consultoria ou auditoria do seu projeto.
+  Contactar para reservar um espaço para uma sessão de consultoria privada ou uma auditoria do nosso projeto.
   ::
 
   ::support-card
   ---
   image: 'report'
   button:
-    text: 'Crie uma issue'
+    text: 'Crie uma Problema'
     url: 'https://github.com/nuxt/nuxt/issues/new?assignees=&labels=pending+triage%2C2.x&template=z-bug-report-2.yml'
   ---
   #title
-  Reporte um bug
+  Reportar um Erro de Programação
   #description
-  Se alguma coisa não estiver funcionado como é suposto, abra um problema (issue, em Inglês) no GitHub.
+  Se algo não estiver a funcionar como é suposto, podemos abrir um problema na GitHub.
   ::
 
   ::support-card
   ---
   image: 'suggest'
   button:
-    text: 'Sugira uma ideia'
+    text: 'Sugerir uma Ideia'
     url: 'https://github.com/nuxt/nuxt/issues/new?assignees=&labels=pending+triage&template=feature-request.yml'
   ---
   #title
-  Sugira um nova funcionalidade ou melhoria
+  Sugerir uma nova funcionalidade ou melhoria
   #description
-  Graças as contribuições da nossa comunidade, a Nuxt permanece evoluindo com melhorias contínuas de funcionalidades. Se você tiver uma ideia, sinta a vontade para propor ela nas Discussões do GitHub.
+  Graças às contribuições da nossa comunidade, a Nuxt continua a evoluir com melhorias contínuas das funcionalidades. Se tivermos uma ideia, podemos partilhá-la nas Discussões da GitHub.
   ::
 
   ::support-card
   ---
   image: 'contribute'
   button:
-    text: 'Contribua'
+    text: 'Colaborar'
     url: '/contribution-guide'
   ---
   #title
-  Contribua
+  Colaborar
   #description
-  Comece contribuindo para o desenvolvimento da abstração, para documentação, ou testando.
+  Começar a colaborar com o desenvolvimento, a documentação ou os testes da abstração.
   ::
 ::

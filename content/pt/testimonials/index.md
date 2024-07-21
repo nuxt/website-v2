@@ -1,7 +1,7 @@
 ---
 template: blog
-title: Testemunhos
-description: Saiba dos especialistas o que eles amam na Nuxt
+title: Depoimentos
+description: O que os especialistas amam na Nuxt?
 ---
 
 :testimonials

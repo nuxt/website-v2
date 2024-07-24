@@ -198,7 +198,7 @@ hoverClass: 'hover:bg-sky-darker'
 title: マスタリングコース
 description: 'パートナーの Vue School と一緒に Nuxt を学ぶための完全なビデオシリーズをご覧ください。'
 image: /img/home/learn/guides/gem-4.svg
-to: 'https://masteringnuxt.com/?utm_source=nuxt&utm_medium=link&utm_campaign=nsite'
+href: 'https://masteringnuxt.com/?utm_source=nuxt&utm_medium=link&utm_campaign=nsite'
 hoverClass: 'hover:bg-sky-darker'
 ---
 ::
@@ -229,7 +229,7 @@ hoverClass: 'hover:bg-sky-surface'
 title: 'モジュール'
 description: 'あなたの Nuxt プロジェクトを強化するモジュールのリストをご覧ください。Nuxt チームとコミュニティによって作られています。'
 image: '/img/home/explore/gem-explore-2.svg'
-to: 'https://nuxt.com/modules'
+href: 'https://nuxt.com/modules'
 hoverClass: 'hover:bg-sky-surface'
 ---
 ::

@@ -5,7 +5,7 @@ links:
       - title: 'Falar Connosco'
         href: 'mailto:hello@nuxtjs.com'
       - title: 'Suporte Empresarial'
-        to: 'https://nuxt.com/enterprise/support'
+        href: 'https://nuxt.com/enterprise/support'
       - title: 'Sobre a NuxtLabs'
         href: 'https://nuxtlabs.com/'
       - title: 'Software de Código-Aberto'
@@ -35,7 +35,7 @@ links:
   - title: 'Recursos'
     items:
       - title: 'Desenho'
-        to: 'https://nuxt.com/design-kit'
+        href: 'https://nuxt.com/design-kit'
       - title: 'Documentação'
         to: '/docs'
       - title: 'Exemplos'

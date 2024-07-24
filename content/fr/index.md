@@ -187,7 +187,7 @@ category: Apprendre
   title: Master Courses
   description: 'Visionnez une série complète de vidéos pour apprendre Nuxt avec notre partenaire Vue School.'
   image: /img/home/learn/guides/gem-4.svg
-  to: 'https://masteringnuxt.com/?utm_source=nuxt&utm_medium=link&utm_campaign=nsite'
+  href: 'https://masteringnuxt.com/?utm_source=nuxt&utm_medium=link&utm_campaign=nsite'
   hoverClass: 'hover:bg-sky-darker'
   ---
   ::
@@ -217,7 +217,7 @@ category: Explorez
   title: 'Modules'
   description: "Découvrez la liste des modules pour étendre vos projects Nuxt. Créés par l'équipe de Nuxt et sa communauté"
   image: '/img/home/explore/gem-explore-2.svg'
-  to: 'https://nuxt.com/modules'
+  href: 'https://nuxt.com/modules'
   hoverClass: 'hover:bg-sky-surface'
   ---
   ::

@@ -5,7 +5,7 @@ links:
       - title: '連絡先'
         href: 'mailto:hello@nuxtjs.com'
       - title: 'エンタープライズサポート'
-        to: 'https://nuxt.com/enterprise/support'
+        href: 'https://nuxt.com/enterprise/support'
       - title: 'NuxtLabs について'
         href: 'https://nuxtlabs.com/'
       - title: 'オープンソースソフトウェア'
@@ -35,7 +35,7 @@ links:
   - title: 'リソース'
     items:
       - title: 'デザイン'
-        to: 'https://nuxt.com/design-kit'
+        href: 'https://nuxt.com/design-kit'
       - title: 'ドキュメント'
         to: '/docs'
       - title: '例'

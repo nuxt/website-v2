@@ -196,7 +196,7 @@ hoverClass: 'hover:bg-sky-darker'
 title: Cursos de Mestrado
 description: 'Assistir uma série completa de vídeos para estudar a Nuxt com o nosso parceiro Vue School.'
 image: /img/home/learn/guides/gem-4.svg
-to: 'https://masteringnuxt.com/?utm_source=nuxt&utm_medium=link&utm_campaign=nsite'
+href: 'https://masteringnuxt.com/?utm_source=nuxt&utm_medium=link&utm_campaign=nsite'
 hoverClass: 'hover:bg-sky-darker'
 ---
 ::
@@ -227,7 +227,7 @@ hoverClass: 'hover:bg-sky-surface'
 title: 'Módulos'
 description: 'Descobrir a nossa lista de módulos para impulsionar o nosso projeto de Nuxt. Criado pela equipa e comunidade da Nuxt.'
 image: '/img/home/explore/gem-explore-2.svg'
-to: 'https://nuxt.com/modules'
+href: 'https://nuxt.com/modules'
 hoverClass: 'hover:bg-sky-surface'
 ---
 ::

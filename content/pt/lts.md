@@ -25,6 +25,10 @@ A Nuxt 3 contém alterações de rutura que a tornam incompatível com a Nuxt 2,
 
 Apesar das alterações de rutura, a maioria das interfaces de programação de aplicação da Nuxt são partilhadas entre as duas versões principais, pelo que a maioria do conhecimento da nossa equipa sobre a Nuxt 2 continuará a funcionar na Nuxt 3. A longo prazo, também pretendemos evitar grandes atualizações de rutura como a que ocorreu entre a Nuxt 2 e a Nuxt 3. A compatibilidade e a estabilidade do ecossistema serão as nossas principais prioridades para as futuras versões, e as novas funcionalidades serão introduzidas duma maneira que não exija grandes migrações.
 
+::alert{type="info"}
+If you're looking for professional help to migrate to Nuxt 3, NuxtLabs offers professional support with the [Nuxt Experts](https://nuxt.com/enterprise/support).
+::
+
 ## Atualizar ou Não Atualizar
 
 A atualização para a Nuxt 3 depende muito dos detalhes específicos do projeto.

@@ -26,6 +26,10 @@ Nuxt 3 contains breaking changes that make it incompatible with Nuxt 2, so migra
 
 Despite the breaking changes, most of Nuxt APIs are shared between the two major versions, so most of your team’s Nuxt 2 knowledge will continue to work in Nuxt 3. In the long run, we also intend to avoid major breaking upgrades like the one between Nuxt 2 and Nuxt 3. Compatibility and ecosystem stability will be our topmost priority for future releases, and new features will be introduced in a way that does not require major migrations.
 
+::alert{type="info"}
+If you're looking for professional help to migrate to Nuxt 3, NuxtLabs offers professional support with the [Nuxt Experts](https://nuxt.com/enterprise/support).
+::
+
 ## To upgrade or not to upgrade
 
 Whether you should upgrade to Nuxt 3 highly depends on specific project details.

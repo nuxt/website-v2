@@ -38,8 +38,7 @@ module.exports = {
       {
         name: 'Kursus Video',
         icon: 'video',
-        href:
-          'https://masteringnuxt.com/?utm_source=nuxt&utm_medium=link&utm_campaign=navbar_link'
+        href: 'https://masteringnuxt.com/?utm_source=nuxt&utm_medium=link&utm_campaign=navbar_link'
       }
     ],
     search: {
@@ -230,8 +229,7 @@ module.exports = {
       start: 'Memulai obrolan',
       partner: {
         pre: 'Kami bermitra dengan',
-        post:
-          'untuk menawarkan layanan ini sehingga kami dapat fokus membantu Anda secepat mungkin.'
+        post: 'untuk menawarkan layanan ini sehingga kami dapat fokus membantu Anda secepat mungkin.'
       }
     },
     entreprise: {
@@ -277,8 +275,7 @@ module.exports = {
     docs: 'Jumpa kesalahan atau ingin berkontribusi pada dokumentasi ini?',
     blog: 'Jumpa kesalahan atau ingin berkontribusi pada posting blog ini?',
     edit_on_github: 'Sunting halaman ini di GitHub!',
-    msg1:
-      'Kontribusi untuk halaman ini sekarang ditutup. Jika Anda ingin berkontribusi, silakan periksa ',
+    msg1: 'Kontribusi untuk halaman ini sekarang ditutup. Jika Anda ingin berkontribusi, silakan periksa ',
     link: 'dokumen baru'
   },
   example: {

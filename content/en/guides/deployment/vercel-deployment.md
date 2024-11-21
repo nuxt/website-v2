@@ -4,7 +4,7 @@ description: How to deploy a Nuxt app with Vercel?
 menu: Vercel
 target: Static & Server
 category: deployment
-position: 116
+position: 117
 ---
 
 ![nuxt-vercel-builder](https://user-images.githubusercontent.com/904724/61308402-7a752d00-a7f0-11e9-9502-23731ccd00fd.png)
@@ -50,16 +50,14 @@ To avoid 404 for Service Workers, make sure to include `sw` to your routes setti
     }
   ],
   "routes": [
-    { "src": "/_nuxt/.+", "headers": { "Cache-Control": "max-age=31557600" } },
     {
       "src": "/sw.js",
-      "dest": "/_nuxt/static/sw.js",
+      "continue": true,
       "headers": {
-        "cache-control": "public, max-age=43200, immutable",
+        "Cache-Control": "public, max-age=0, must-revalidate",
         "Service-Worker-Allowed": "/"
       }
-    },
-    { "src": "/(.*)", "dest": "/" }
+    }
   ]
 }
 ```

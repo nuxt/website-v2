@@ -118,7 +118,7 @@ In addition to fetch being called by Nuxt, you can manually call fetch in your c
   <div v-else>
     <h1>Nuxt Mountains</h1>
     <ul>
-      <li v-for="mountain of mountains">{{ mountain.title }}</li>
+      <li v-for="mountain of mountains" :key="mountain.slug">{{ mountain.title }}</li>
     </ul>
     <button @click="$fetch">Refresh</button>
   </div>

@@ -57,7 +57,7 @@ questions:
     correctAnswer: '@@'
 ---
 
-Direktori `assets` berisi aset Anda yang belum terkompilasi seperti berkas Stylus/Sass, gambar atau font.
+Direktori `assets` berisi aset Anda yang belum terkompilasi seperti berkas Stylus/Sass, gambar atau fon.
 
 ## Gambar:
 

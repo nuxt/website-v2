@@ -255,7 +255,6 @@
   & h3 {
     @apply relative text-2xl font-semibold table mt-8 pb-3;
 
-
     & code {
       @apply text-lg;
     }
@@ -291,6 +290,7 @@
 
   & code {
     @apply p-1 not-italic rounded text-sm;
+    word-break: break-word;
   }
 
   & a {
@@ -414,6 +414,16 @@
 .nuxt-content {
   .token.comment {
     color: #acb5b9;
+  }
+}
+
+.nuxt-content {
+  table {
+    @media (max-width: 678px) {
+      display: block;
+      width: 100%;
+      overflow-x: scroll;
+    }
   }
 }
 

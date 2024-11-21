@@ -1,5 +1,6 @@
 ---
-title: modules
+title: Modules
+menuTitle: modules
 description: Nuxt.js provides a higher-order module system that makes it possible to extend the core. Modules are functions that are called sequentially when booting Nuxt.js.
 position: 9
 category: directory-structure
@@ -328,7 +329,7 @@ ga('create', '<%= options.ua %>', 'auto')
 ```js{}[module.js]
 import path from 'path'
 
-export default function nuxtBootstrapVue(moduleOptions) {
+export default function nuxtGoogleAnalytics(moduleOptions) {
   // Register `plugin.js` template
   this.addPlugin({
     src: path.resolve(__dirname, 'plugin.js'),

@@ -13,7 +13,7 @@ csb_link: https://codesandbox.io/embed/github/nuxtlabs/examples/tree/master/tran
 - `pages/index.vue` and `pages/fade.vue` 使用默认页面过渡。
 - `pages/bounce.vue` 将`transition`属性和`bounce`过渡一起使用。
 - `pages/slide.vue` 将`transition`属性和`slide-bottom`过渡一起使用。
-- `layout/default.vue` 包含所有过渡方法。
+- `layouts/default.vue` 包含所有过渡方法。
 
 <base-alert type="next">
 

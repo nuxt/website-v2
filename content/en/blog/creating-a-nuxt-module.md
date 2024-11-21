@@ -1,7 +1,8 @@
 ---
 title: Creating a Nuxt Module
 description: Modules are functions that are called sequentially when booting Nuxt. The framework waits for each module to finish before continuing. In this way, modules can customize almost any aspect of your project. Let's create a module that uses ngrok to get a Public URL that you can share while working in Development.
-imgUrl: blog/creating-nuxt-module/main.png
+imgUrl: blog/creating-nuxt-module/main.jpeg?cover=new
+imgCredits: Stephen Meyers
 date: 2020-11-27
 authors:
   - name: "Debbie O'Brien"
@@ -385,6 +386,9 @@ export default function () {
   // Read ngrok property defined in nuxt.config.js
   const options = nuxt.options.ngrok || {}
   const token = process.env.NGROK_TOKEN || options.token
+
+  // Initialize empty url variable
+  let url = undefined
 
   // https://nuxtjs.org/docs/2.x/internals-glossary/internals-nuxt#hooks
   nuxt.hook('listen', async function (server, { port }) {

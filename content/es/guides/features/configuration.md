@@ -219,7 +219,7 @@ middleware/foo/\*.js !middleware/foo/bar.js
 
 ### La propiedad ignorePrefix
 
-Cualquier archivo en pages/, layout/, middleware/ o store/ será ignorado durante la compilación si su nombre de archivo empieza con el prefijo especificado por ignorePrefix.
+Cualquier archivo en pages/, layouts/, middleware/ o store/ será ignorado durante la compilación si su nombre de archivo empieza con el prefijo especificado por ignorePrefix.
 
 Por defecto, todos los archivos que empiecen por `-` serán ignorados, como `store/-foo.js` y `pages/-bar.vue`. Esto permite la co-localización de textos, utilidades y componentes con sus callers sin convertirse en routes, stores, etc.
 

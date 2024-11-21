@@ -34,6 +34,7 @@ validate({ params, query, store }) {
   return new Promise((resolve) => setTimeout(() => resolve()))
 }
 ```
+
 Nuxt.js, dinamik rota bileşeninizin içinde bir doğrulayıcı yöntemi tanımlamanıza izin verir (Bu örnekte: `pages/users/_id.vue`)
 
 Doğrulama yöntemi `true` döndürmezse, Nuxt.js otomatik olarak 404 hata sayfasını yükleyecektir.
@@ -46,6 +47,7 @@ export default {
   }
 }
 ```
+
 Ayrıca [store](/docs/2.x/directory-structure/store)'daki bazı verileri kontrol edebilirsiniz, örneğin ([`nuxtServerInit`](/docs/2.x/directory-structure/store#the-nuxtserverinit-action) aksiyondan önce)
 
 ```js
@@ -56,6 +58,7 @@ export default {
   }
 }
 ```
+
 Doğrulama fonksiyonunun çalışması esnasında beklenen veya beklenmeyen hataları gösterebilirsiniz:
 
 ```js

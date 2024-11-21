@@ -1,6 +1,6 @@
 ---
 title: 'La clase Nuxt'
-description: Clase principal de Nuxt 
+description: Clase principal de Nuxt
 menu: Clase Nuxt
 category: internals-glossary
 position: 4
@@ -20,9 +20,9 @@ nuxt.hook('ready', async nuxt => {
 })
 ```
 
-| Plugin | Argumentos | Cuando |
-| --- | --- | --- |
-| `ready` | (nuxt) | Nuxt está listo para trabajar (`ModuleContainer` y `Renderer` listos). |
-| `error` | (error) | Se da un error no controlado al llamar a hooks. |
-| `close` | (nuxt) | La instancia de Nuxt se está cerrando con gracia. |
+| Plugin   | Argumentos             | Cuando                                                                                |
+| -------- | ---------------------- | ------------------------------------------------------------------------------------- |
+| `ready`  | (nuxt)                 | Nuxt está listo para trabajar (`ModuleContainer` y `Renderer` listos).                |
+| `error`  | (error)                | Se da un error no controlado al llamar a hooks.                                       |
+| `close`  | (nuxt)                 | La instancia de Nuxt se está cerrando con gracia.                                     |
 | `listen` | (server, {host, port}) | El servidor Nuxt **interno** comienza a escuchar. (Usando `nuxt start` o `nuxt dev`). |

@@ -6,7 +6,7 @@
       once: true
     }"
     :style="[intristicRatioStyle]"
-    class="overflow-hidden relative light:bg-light-surface dark:bg-dark-surface"
+    class="relative overflow-hidden light:bg-light-surface dark:bg-dark-surface"
   >
     <div />
     <template v-if="isTest || isDev">
@@ -15,7 +15,14 @@
         ref="img"
         :src="`${host}/${src}`"
         :alt="alt"
-        class="w-full opacity-0 transition-opacity duration-500"
+        class="
+          object-cover
+          w-full
+          h-full
+          transition-opacity
+          duration-500
+          opacity-0
+        "
         :class="[ratio && 'absolute top-0 left-0']"
       />
     </template>
@@ -62,7 +69,14 @@
         `"
         :sizes="sizes"
         :alt="alt"
-        class="w-full opacity-0 transition-opacity duration-500"
+        class="
+          object-cover
+          w-full
+          h-full
+          transition-opacity
+          duration-500
+          opacity-0
+        "
         :class="[ratio && 'absolute top-0 left-0']"
       />
     </template>

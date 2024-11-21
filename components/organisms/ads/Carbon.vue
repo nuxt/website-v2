@@ -46,15 +46,14 @@ export default {
 }
 
 .Carbon {
-  @apply p-4 flex flex-col ml-auto mt-4 max-w-full;
+  @apply p-4 flex flex-col mt-4 max-w-full;
 
   @screen sm {
     @apply max-w-xs;
   }
 
   @screen lg {
-    @apply mt-0 mx-auto;
-
+    @apply mt-0;
     max-width: 160px;
   }
 

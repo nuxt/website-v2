@@ -191,8 +191,7 @@ export default {
       return {
         script: [
           {
-            src:
-              'https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js'
+            src: 'https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js'
           }
         ],
         link: [
@@ -302,7 +301,7 @@ middleware/foo/\*.js !middleware/foo/bar.js
 
 ### ignorePrefix プロパティ
 
-pages/、layout/、middleware/ や store/ ディレクトリに含まれる、ファイル名が ignorePrefix プロパティで指定された接頭辞から始まっているファイルはビルド時に無視されます。
+pages/、layouts/、middleware/ や store/ ディレクトリに含まれる、ファイル名が ignorePrefix プロパティで指定された接頭辞から始まっているファイルはビルド時に無視されます。
 
 デフォルトでは `-` から始まる `store/-foo.js` や `pages/-bar.vue` のようなファイルはすべて無視されます。これにより、ルートやストア等に変換されることなく、呼び出し元と同じ場所にテスト、ユーティリティ、コンポーネントなどのファイルを置くことができます。
 

@@ -1,6 +1,6 @@
 ---
 title: content
-description: Augmentez le potentiel de votre application Nuxt.js avec le module `@nuxtjs/content` grâce auquel on peut écrire dans un répertoire `content/` et récupérer du Markdown, JSON, YAML et des fichiers CSV à travers une API dans le style de MongoDB, qui remplit donc le rôle d'un **CMS headless basé sur Git**.
+description: Augmentez le potentiel de votre application Nuxt.js avec le module `@nuxt/content` grâce auquel on peut écrire dans un répertoire `content/` et récupérer du Markdown, JSON, YAML et des fichiers CSV à travers une API dans le style de MongoDB, qui remplit donc le rôle d'un **CMS headless basé sur Git**.
 position: 4
 category: directory-structure
 img: /guides/nuxt-content.svg
@@ -70,7 +70,7 @@ questions:
     correctAnswer: true
 ---
 
-Augmentez le potentiel de votre application Nuxt.js avec le module `@nuxtjs/content` grâce auquel on peut écrire dans un répertoire `content/` et récupérer du Markdown, JSON, YAML et des fichiers CSV à travers une API dans le style de MongoDB, qui remplit donc le rôle d'un **CMS headless basé sur Git**.
+Augmentez le potentiel de votre application Nuxt.js avec le module `@nuxt/content` grâce auquel on peut écrire dans un répertoire `content/` et récupérer du Markdown, JSON, YAML et des fichiers CSV à travers une API dans le style de MongoDB, qui remplit donc le rôle d'un **CMS headless basé sur Git**.
 
 <app-modal :src="img" :alt="imgAlt"></app-modal>
 

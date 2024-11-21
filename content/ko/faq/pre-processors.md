@@ -14,9 +14,7 @@ position: 2
 [Pug](https://github.com/pugjs/pug), [CoffeeScript](http://coffeescript.org), [Sass](http://sass-lang.com/)를 사용한 `pages/index.vue` 예제:
 
 ```html
-<template lang="pug">
-  h1.red Hello {{ name }}!
-</template>
+<template lang="pug"> h1.red Hello {{ name }}! </template>
 
 <script lang="coffee">
   module.exports = data: ->

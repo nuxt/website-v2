@@ -27,7 +27,7 @@ export default function ({ query, enablePreview }) {
 
 ```js{}[nuxt.config.js]
 export default {
-  plugins: ['plugins/preview.client.js']
+  plugins: ['~/plugins/preview.client.js']
 }
 ```
 

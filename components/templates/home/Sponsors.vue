@@ -92,6 +92,7 @@
 <script>
 import GithubIcon from '~/assets/icons/github.svg?inline'
 import SponsoringIllustration from '~/assets/illustrations/sponsoring.svg?inline'
+import sponsors from '~/content/sponsors'
 
 export default {
   components: {
@@ -100,44 +101,7 @@ export default {
   },
   data() {
     return {
-      sponsors: {
-        partners: [
-          {
-            name: 'Strapi',
-            url: 'https://strapi.io/',
-            img: 'strapi-logo.svg',
-            class: 'h-12'
-          },
-          {
-            name: 'Ship Shape',
-            url: 'https://shipshape.io/',
-            img: 'shipshape-logo.svg',
-            class: 'h-12'
-          }
-        ],
-        gold: [
-          {
-            name: 'VueMastery',
-            img: 'vueMastery-brand.svg',
-            url: 'https://www.vuemastery.com/',
-            class: 'h-10'
-          },
-          {
-            name: 'Legal Nature',
-            img: 'legalnature-logo.svg',
-            url: 'https://www.legalnature.com/',
-            class: 'h-10'
-          }
-        ],
-        special: [
-          {
-            name: 'Google Chrome',
-            img: 'google-chrome.svg',
-            url: 'https://www.google.com/chrome/',
-            class: 'h-12'
-          }
-        ]
-      }
+      sponsors
     }
   }
 }

@@ -238,8 +238,7 @@ module.exports = {
       start: 'Start chat',
       partner: {
         pre: 'We partnered with',
-        post:
-          'to offer these services so we can focus on helping you as fast as possible.'
+        post: 'to offer these services so we can focus on helping you as fast as possible.'
       }
     },
     entreprise: {
@@ -284,8 +283,7 @@ module.exports = {
     docs: 'Caught a mistake or want to contribute to the documentation?',
     blog: 'Caught a mistake or want to contribute to this blog post?',
     edit_on_github: 'Edit this page on GitHub!',
-    msg1:
-      'Contribution for this page is now closed. If you would like to contribute please check out our',
+    msg1: 'Contribution for this page is now closed. If you would like to contribute please check out our',
     link: 'new docs'
   },
   example: {

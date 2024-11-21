@@ -1,5 +1,6 @@
 ---
-title: plugins
+title: Plugins directory
+menuTitle: plugins
 description: The `plugins` directory contains your Javascript plugins that you want to run before instantiating the root Vue.js Application.
 position: 11
 category: directory-structure
@@ -257,6 +258,8 @@ export default {
 Sometimes you want to make functions or values available across your app. You can inject those variables into Vue instances (client side), the context (server side) and even in the Vuex store. It is a convention to prefix those functions with a `$`.
 
 Nuxt.js provides you with an `inject(key, value)` method to do this easily. Inject is given as the second parameter when exporting a function. The `$` will be prepended automatically to the key.
+
+You can also use `options` provided by a module using [the plugin-template](/docs/2.x/directory-structure/modules#template-plugins).
 
 <base-alert type="info">
 

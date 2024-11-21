@@ -1,5 +1,5 @@
 ---
-title:  Hook asyncData
+title: Hook asyncData
 description: En este ejemplo utilizamos asyncData para obtener datos de nuestra API.
 position: 1
 category: dataFetching
@@ -8,7 +8,7 @@ csb_link: https://codesandbox.io/embed/github/nuxt-academy/examples/tree/master/
 
 <example-intro></example-intro>
 
-`pages/index.vue` y `pages/posts/_id` utilizan el hook `asyncData`  y el módulo `$http` para obtener nuestra lista de montañas de nuestra API.
+`pages/index.vue` y `pages/posts/_id` utilizan el hook `asyncData` y el módulo `$http` para obtener nuestra lista de montañas de nuestra API.
 
 <base-alert type="next">
 

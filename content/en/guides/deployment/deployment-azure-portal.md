@@ -12,7 +12,7 @@ position: 102
 - It is required that you select a backend when setting up the project. Even if you don't need it, or else the site won't start up.
 - The server is running Node 8 or greater
 
-## What if I already have a project without an backend?
+## What if I already have a project without a backend?
 
 No worries. It is easy to add an express server to an existing project.
 
@@ -83,7 +83,7 @@ If you are using Azure DevOps and let the build pipeline do its work you and wan
 
 ## Running the webserver
 
-For Azure Portal you will need a `web.config` file. If not supplied, it will create one itself. This one **won't work for Nuxt** though. Add a web.config file to your repository. For the latest version of `Nuxt` the server file is located at `server/index.js`. In the web.config you don't specify the exact path `server/index.js` but just `server`. See the example web.config below. If you don't do this the logs will tell you that Vue cannot find any routes.
+For Azure Portal you will need a `web.config` file. If not supplied, it will create one itself. The generated file **won't work for Nuxt** though. Add a web.config file to your repository. For the latest version of `Nuxt` the server file is located at `server/index.js`. In the web.config you don't specify the exact path `server/index.js` but just `server`. See the example web.config below. If you don't do this the logs will tell you that Vue cannot find any routes.
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>

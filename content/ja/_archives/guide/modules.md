@@ -209,7 +209,7 @@ ga('create', '<%= options.ua %>', 'auto')
 ```js
 import path from 'path'
 
-export default function nuxtBootstrapVue(moduleOptions) {
+export default function nuxtGoogleAnalytics(moduleOptions) {
   // `plugin.js` テンプレートを登録する
   this.addPlugin({
     src: path.resolve(__dirname, 'plugin.js'),

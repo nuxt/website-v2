@@ -4,7 +4,7 @@ export default function (ctx, inject) {
       path = `/${path}`
     }
     return await fetch(
-      `https://contributors-api.nuxtjs.com/nuxt/nuxtjs.org/master${path}`
+      `https://contributors-api.nuxtjs.com/nuxt/nuxtjs.org/main${path}`
     )
       .then(res => {
         if (!res.ok) return []

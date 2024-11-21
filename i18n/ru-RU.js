@@ -39,8 +39,7 @@ module.exports = {
       {
         name: 'Видео курсы',
         icon: 'video',
-        href:
-          'https://masteringnuxt.com/?utm_source=nuxt&utm_medium=link&utm_campaign=navbar_link'
+        href: 'https://masteringnuxt.com/?utm_source=nuxt&utm_medium=link&utm_campaign=navbar_link'
       }
     ],
     search: {
@@ -231,8 +230,7 @@ module.exports = {
       start: 'Начать чат (англ.)',
       partner: {
         pre: 'Мы договорились с',
-        post:
-          'чтобы иметь возможность предоставлять эти услуги как можно быстрее.'
+        post: 'чтобы иметь возможность предоставлять эти услуги как можно быстрее.'
       }
     },
     entreprise: {
@@ -277,8 +275,7 @@ module.exports = {
     docs: 'Обнаружили ошибку или хотите внести свой вклад в документацию?',
     blog: 'Нашли ошибку или хотите дополнить этот пост?',
     edit_on_github: 'Отредактировать эту страницу на GitHub!',
-    msg1:
-      'Изменения на этой странице заблокированы. Если хотите что-то изменить, взгляните на нашу',
+    msg1: 'Изменения на этой странице заблокированы. Если хотите что-то изменить, взгляните на нашу',
     link: 'новую документацию'
   },
   example: {

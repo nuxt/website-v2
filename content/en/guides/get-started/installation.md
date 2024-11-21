@@ -12,7 +12,7 @@ ManualInstallVideoTitle: Nuxt Manual Installation
 
 ## Prerequisites
 
-- [node](https://nodejs.org) - at least v10.13 _We recommend you have the latest LTS version installed._
+- [node](https://nodejs.org) - _We recommend you have the latest LTS version installed_.
 - A text editor, we recommend [VS Code](https://code.visualstudio.com/) with the [Vetur](https://marketplace.visualstudio.com/items?itemName=octref.vetur) extension or [WebStorm](https://www.jetbrains.com/webstorm/)
 - A terminal, we recommend using VS Code's [integrated terminal](https://code.visualstudio.com/docs/editor/integrated-terminal) or [WebStorm terminal](https://www.jetbrains.com/help/webstorm/terminal-emulator.html).
 
@@ -20,9 +20,9 @@ ManualInstallVideoTitle: Nuxt Manual Installation
 
 <YouTubeLite :video="CreateNuxtAppVideo" :title="CreateNuxtAppVideoTitle" ></YouTubeLite>
 
-To get started quickly you can use the [create-nuxt-app](https://github.com/nuxt/create-nuxt-app).
+To get started quickly, you can use the [create-nuxt-app](https://github.com/nuxt/create-nuxt-app).
 
-Make sure you have npx installed (npx is shipped by default since npm 5.2.0) or npm v6.1 or yarn.
+Make sure you have npx (npx is shipped by default since npm 5.2.0), npm (v6.1 or later) or yarn installed.
 
 <code-group>
   <code-block label="Yarn" active>
@@ -49,7 +49,7 @@ npm init nuxt-app <project-name>
 
 </code-group>
 
-It will ask you some questions (name, Nuxt options, UI framework, TypeScript, linter, testing framework, etc. To find out more about all the options see the [Create Nuxt app](https://github.com/nuxt/create-nuxt-app/blob/master/README.md).
+It will ask you some questions (name, Nuxt options, UI framework, TypeScript, linter, testing framework, etc). To find out more about all the options, see the [create-nuxt-app documentation](https://github.com/nuxt/create-nuxt-app/blob/master/README.md).
 
 Once all questions are answered, it will install all the dependencies. The next step is to navigate to the project folder and launch it:
 
@@ -76,7 +76,7 @@ The application is now running on [http://localhost:3000](http://localhost:3000)
 
 <base-alert type="info">
 
-Another way to get started with Nuxt.js is to use [CodeSandbox](https://template.nuxtjs.org) which is a great way for quickly playing around with Nuxt.js and/or sharing your code with other people.
+Another way to get started with Nuxt.js is to use [CodeSandbox](https://template.nuxtjs.org), which is a great way for quickly playing around with Nuxt.js and/or sharing your code with other people.
 
 </base-alert>
 
@@ -146,7 +146,7 @@ npm install nuxt
   </code-block>
 </code-group>
 
-This command will add `nuxt` as a dependency to your project and add it to your `package.json`. The `node_modules` directory will also be created which is where all your installed packages and dependencies are stored.
+This command will add `nuxt` as a dependency to your project and include it in your `package.json`. The `node_modules` directory will also be created which is where all your installed packages and dependencies are stored.
 
 <base-alert type="info">
 
@@ -233,6 +233,6 @@ Then, go to your browser and see your new page on **[localhost:3000/fun](http://
 
 <base-alert type="info">
 
-Create a directory named `more-fun` and put an `index.vue` file inside. This will give the same result as creating a `more-fun.vue` file
+Creating a directory named `more-fun` and putting an `index.vue` file inside it will give the same result as creating a `more-fun.vue` file.
 
 </base-alert>

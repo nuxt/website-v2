@@ -90,7 +90,7 @@ As you might have noticed already, we are using ESLint to enforce a code standar
 
 ### Documentation
 
-If you are adding a new feature, or refactoring or changing the behavior of Nuxt in any other manner, you'll likely want to document the changes. Please do so with a PR to the [docs](https://github.com/nuxt/docs/pulls) repository. You don't have to write documentation up immediately (but please do so as soon as your pull request is mature enough).
+If you are adding a new feature, or refactoring or changing the behavior of Nuxt in any other manner, you'll likely want to document the changes. Please do so with a PR to the [docs](https://github.com/nuxt/nuxtjs.org/pulls) repository. You don't have to write documentation up immediately (but please do so as soon as your pull request is mature enough).
 
 ### Final checklist
 

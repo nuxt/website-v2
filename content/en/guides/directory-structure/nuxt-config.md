@@ -1,5 +1,6 @@
 ---
-title: nuxt.config
+title: Nuxt configuration file
+menuTitle: nuxt.config
 description: By default, Nuxt.js is configured to cover most use cases. This default configuration can be overwritten with the nuxt.config.js file.
 position: 14
 category: directory-structure
@@ -396,7 +397,9 @@ This option lets you define custom names of your Nuxt.js directories.
 
 ```js{}[nuxt.config.js]
 export default {
-  pages: 'views' // Nuxt will look for the views/ instead of the pages/ folder
+  dir: {
+    pages: 'views' // Nuxt will look for the views/ instead of the pages/ folder
+  }
 }
 ```
 

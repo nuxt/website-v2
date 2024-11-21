@@ -66,7 +66,7 @@ You can run different commands depending on the [target](/docs/2.x/features/depl
 
 ## Webpack Config Inspection
 
-You can inspect the webpack config used by nuxt to build project similar to [vue inspect](https://cli.vuejs.org/guide/webpack.html#inspecting-the-project-s-webpack-config)).
+You can inspect the webpack config used by Nuxt to build the project (similar to [vue inspect](https://cli.vuejs.org/guide/webpack.html#inspecting-the-project-s-webpack-config)).
 
 - **nuxt webpack [query...]**
 

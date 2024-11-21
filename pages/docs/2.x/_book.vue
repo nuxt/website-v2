@@ -1,10 +1,17 @@
 <template>
   <div class="shadow-nuxt">
-    <div class="container mx-auto px-4 lg:flex pb-12">
+    <div class="container px-4 pb-12 mx-auto lg:flex">
       <TheMobileAsideNavNewDocs :links="links" />
       <TheAsideNavNewDocs :links="links" class="hidden lg:block" />
       <div
-        class="min-h-screen w-full lg:static lg:max-h-full lg:overflow-visible lg:w-3/4"
+        class="
+          w-full
+          min-h-screen
+          lg:static
+          lg:max-h-full
+          lg:overflow-visible
+          lg:w-3/4
+        "
       >
         <nuxt-child />
       </div>
@@ -27,7 +34,15 @@ export default {
         : app.i18n.defaultLocale
 
       pages = await $content(locale, 'guides', { deep: true })
-        .only(['slug', 'title', 'menu', 'category', 'position', 'target'])
+        .only([
+          'slug',
+          'menuTitle',
+          'title',
+          'menu',
+          'category',
+          'position',
+          'target'
+        ])
         .sortBy('position')
         .sortBy('title')
         .sortBy('menu')

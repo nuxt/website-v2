@@ -45,4 +45,4 @@ Dua versi kode yang dihasilkan antara lain:
 - Perintah `nuxt generate` hanya mendukung mode modern dengan nilai `client`.
 - Gunakan opsi [`render.crossorigin`](/docs/2.x/configuration-glossary/configuration-render#crossorigin) untuk menyetel atribut `crossorigin` pada `<link>` dan `<script>`
 
-> Anda dapat membaca [artikel buatan Phillip Walton](https://philipwalton.com/articles/deploying-es2015-code-in-production-today/) untuk informasi lebih lanjut tentang kode dengan sintaks modern. 
+> Anda dapat membaca [artikel buatan Phillip Walton](https://philipwalton.com/articles/deploying-es2015-code-in-production-today/) untuk informasi lebih lanjut tentang kode dengan sintaks modern.

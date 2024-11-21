@@ -11,7 +11,7 @@ position: 4
 Si on veut utiliser `SASS`, il faut bien faire attention à avoir les packages `node-sass` et `sass-loader` d'installés. Si ce n'est pas encore le cas, on peut faire:
 
 ```sh
-npm install --save-dev node-sass sass-loader
+npm install --save-dev sass sass-loader@10 fibers
 ```
 
 - Type: `Array`

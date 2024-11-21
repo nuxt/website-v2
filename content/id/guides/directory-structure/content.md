@@ -1,6 +1,6 @@
 ---
 title: content
-description: Berdayakan aplikasi Nuxt.js Anda dengan modul `@nuxtjs/content` tempat Anda dapat menulis di direktori `content/` dan mengambil berkas Markdown, JSON, YAML, dan CSV melalui API mirip MongoDB, yang bertindak sebagai **Git-based Headless CMS**.
+description: Berdayakan aplikasi Nuxt.js Anda dengan modul `@nuxt/content` tempat Anda dapat menulis di direktori `content/` dan mengambil berkas Markdown, JSON, YAML, dan CSV melalui API mirip MongoDB, yang bertindak sebagai **Git-based Headless CMS**.
 position: 4
 category: directory-structure
 img: /docs/2.x/nuxt-content.svg
@@ -13,13 +13,13 @@ questions:
       - pages
     correctAnswer: content
   - question: Komponen apa yang Anda gunakan dalam template Anda untuk menampilkan badan halaman markdown?
-    answers: 
+    answers:
       - <markdown>
       - <nuxt>
       - <nuxt-content>
     correctAnswer: <nuxt-content>
   - question: Kelas apa yang ditambahkan secara otomatis sehingga Anda dapat mengatur gaya markdown Anda?
-    answers: 
+    answers:
       - .content
       - .nuxt-content
       - .markdown
@@ -30,7 +30,7 @@ questions:
       - false
     correctAnswer: true
   - question: Manakah yang Anda gunakan untuk mendaftar, memfilter, dan mencari konten Anda?
-    answers: 
+    answers:
       - $nuxt-content()
       - $content()
       - $nuxt()
@@ -42,7 +42,7 @@ questions:
       - .slug()
     correctAnswer: .surround(slug)
   - question: Kelas PrismJS diterapkan ke blok kode secara default?
-    answers: 
+    answers:
       - true
       - false
     correctAnswer: true
@@ -53,19 +53,19 @@ questions:
       - http://localhost:3000/api
     correctAnswer: http://localhost:3000/_content
   - question: Tag judul mana yang digunakan untuk membuat daftar isi
-    answers: 
+    answers:
       - h1 dan h2
       - h2 dan h3
       - h1 dan h2 dan h3
     correctAnswer: h2 dan h3
   - question: Anda dapat menggunakan modul konten dengan pembuatan situs statis
-    answers: 
+    answers:
       - true
       - false
     correctAnswer: true
 ---
 
-Berdayakan aplikasi Nuxt.js Anda dengan modul `@nuxtjs/content` tempat Anda dapat menulis di direktori `content/` dan mengambil berkas _Markdown_, _JSON_, _YAML_, dan _CSV_ melalui _API_ mirip MongoDB, yang bertindak sebagai **Git-based Headless CMS**.
+Berdayakan aplikasi Nuxt.js Anda dengan modul `@nuxt/content` tempat Anda dapat menulis di direktori `content/` dan mengambil berkas _Markdown_, _JSON_, _YAML_, dan _CSV_ melalui _API_ mirip MongoDB, yang bertindak sebagai **Git-based Headless CMS**.
 
 <app-modal :src="img" :alt="imgAlt"></app-modal>
 
@@ -120,7 +120,6 @@ Komponen `<nuxt-content>` akan secara otomatis menambahkan kelas `.nuxt-content`
 Lihat [dokumen modul konten](https://content.nuxtjs.org/displaying#style) untuk mengetahui detail selengkapnya
 
 </base-alert>
-
 
 ### Handles Markdown, CSV, YAML, JSON(5)
 

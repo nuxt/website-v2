@@ -47,7 +47,7 @@ export default {
 
 例 2:
 
-例 1 の代わりに nuxt.config を `src` フォルダに移動することもできます。この場合 client を `rootDir` として指定するだけでよく、`srcDir` は空にできます:
+例 1 の代わりに nuxt.config を `client` フォルダに移動することもできます。この場合 `client` を `rootDir` として指定するだけでよく、`srcDir` は空にできます:
 
 前提条件:
 

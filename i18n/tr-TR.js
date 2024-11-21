@@ -39,8 +39,7 @@ module.exports = {
       {
         name: 'Video Courses',
         icon: 'video',
-        href:
-          'https://masteringnuxt.com/?utm_source=nuxt&utm_medium=link&utm_campaign=navbar_link'
+        href: 'https://masteringnuxt.com/?utm_source=nuxt&utm_medium=link&utm_campaign=navbar_link'
       }
     ],
     search: {
@@ -275,11 +274,9 @@ module.exports = {
   contribute: {
     title: 'Katkıda Bulunanlar',
     docs: 'Hata yakaladınız veya bu dokümana katkıda bulunmak mı istiyorsunuz?',
-    blog:
-      'Hata yakaladınız veya bu gönderiye katkıda bulunmak mı istiyorsunuz?',
+    blog: 'Hata yakaladınız veya bu gönderiye katkıda bulunmak mı istiyorsunuz?',
     edit_on_github: "Bu sayfayı GitHub'da düzenleyin!",
-    msg1:
-      'Bu sayfa için şu anda katkıda bulunamazsınız. Eğer katkıda bulunmak istiyorsanız',
+    msg1: 'Bu sayfa için şu anda katkıda bulunamazsınız. Eğer katkıda bulunmak istiyorsanız',
     link: 'buraya tıklayın.'
   },
   example: {

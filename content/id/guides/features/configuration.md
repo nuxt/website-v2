@@ -219,7 +219,7 @@ middleware/foo/\*.js !middleware/foo/bar.js
 
 ### Properti ignorePrefix
 
-Setiap berkas pada `pages/`, `layout/`, `middleware/` atau `store/` akan diabaikan ketika _build_ jika nama berkasnya dimulai dengan awalan yang telah dispesifikasikan di _ignorePrefix_.
+Setiap berkas pada `pages/`, `layouts/`, `middleware/` atau `store/` akan diabaikan ketika _build_ jika nama berkasnya dimulai dengan awalan yang telah dispesifikasikan di _ignorePrefix_.
 
 Secara nilai bawaan semua berkas yang dimulai dengan `-` akan diabaikan, seperti `store/-foo.js` dan `pages/-bar.vue`. Hal ini memungkinkan pengujian, utilitas, dan komponen dengan pemanggilnya tanpa diubah menjadi _routes_, _store_, dll.
 

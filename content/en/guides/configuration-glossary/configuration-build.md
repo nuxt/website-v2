@@ -639,7 +639,7 @@ This option is automatically set based on `mode` value if not provided.
 
 This mode bundles `node_modules` that are normally preserved as externals in the server build ([more information](https://github.com/nuxt/nuxt.js/pull/4661)).
 
-<base-alert type="warning">\*_Warning_: Runtime dependencies (modules, `nuxt.config`, server middleware and static directory) are not bundled. This feature only disables use of [webpack-externals](https://webpack.js.org/configuration/externals/) for server-bundle.</base-alert>
+<base-alert type="warning">**Warning:** Runtime dependencies (modules, `nuxt.config`, server middleware and static directory) are not bundled. This feature only disables use of [webpack-externals](https://webpack.js.org/configuration/externals/) for server-bundle.</base-alert>
 
 <base-alert type="info">**Info:** you can use the command `yarn nuxt build --standalone` to enable this mode on the command line. (If you are not using `yarn` you can run the command with `npx`.)</base-alert>
 
@@ -747,6 +747,7 @@ Starting with `v2.9.0`, you can also use a function to conditionally transpile, 
   }
 }
 ```
+
 In this example, `ky` will be transpiled by Babel if Nuxt is not in [modern mode](/docs/2.x/configuration-glossary/configuration-modern).
 
 ## vueLoader

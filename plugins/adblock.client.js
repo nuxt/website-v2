@@ -8,7 +8,7 @@ export default ({ store }) => {
 
 function adsBlocked() {
   return fetch(
-    'https://codefund.io/scripts/7a55aa99-7866-418d-9720-8b1342303656/embed.js?template=vertical',
+    'https://cdn.carbonads.com/carbon.js?serve=CKYILK7U&placement=nuxtjsorg',
     {
       method: 'HEAD',
       mode: 'no-cors'

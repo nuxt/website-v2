@@ -180,7 +180,7 @@ export default {
 
 トランジションは各ページ遷移時に次のように適用されます:
 
-`/` から `/posts`=> `slide-left`、`/posts` から `/posts?page=3` => `slide-left`、`/posts?page=3` から `/posts?page=2`=> `slide-right`
+`/` から `/posts` => `slide-left`、`/posts` から `/posts?page=3` => `slide-left`、`/posts?page=3` から `/posts?page=2` => `slide-right`
 
 ## グローバルな設定
 

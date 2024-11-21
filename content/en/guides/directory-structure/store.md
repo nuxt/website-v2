@@ -1,5 +1,6 @@
 ---
-title: store
+title: Store directory
+menuTitle: store
 description: The `store` directory contains your Vuex Store files. The Vuex Store comes with Nuxt.js out of the box but is disabled by default. Creating an `index.js`  file in this directory enables the store.
 position: 13
 category: directory-structure
@@ -257,7 +258,7 @@ More information about the plugins: [Vuex documentation](https://vuex.vuejs.org
 
 If the action `nuxtServerInit` is defined in the store and the mode is `universal`, Nuxt.js will call it with the context (only from the server-side). It's useful when we have some data on the server we want to give directly to the client-side.
 
-For example, let's say we have sessions on the server-side and we can access the connected user through `req.session.user`. To give the authenticated user to our store, we update our `store/index.js` to the following:
+For example, let's say we have sessions on the server-side and we can access the connected user through `req.session.user`. To add the authenticated user to our store, we update our `store/index.js` to the following:
 
 ```js{}[store/index.js]
 actions: {

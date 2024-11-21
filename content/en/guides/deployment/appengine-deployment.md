@@ -51,7 +51,7 @@ env: flex
 
 ## Build and deploy the app
 
-Now build your app with `npm run build`.
+Now build your app with `npm run build` or `yarn build`.
 
 At this point, your app is ready to be uploaded to Google App Engine. Now just run the following command:
 

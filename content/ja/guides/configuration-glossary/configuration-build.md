@@ -639,7 +639,7 @@ Nuxt v2.15 以降では、実行時にこのプロパティの値を変更する
 
 このモードは通常サーバービルドで外部として保存される `node_modules` をバンドルします（[詳細](https://github.com/nuxt/nuxt.js/pull/4661)）。
 
-<base-alert type="warning">\*_Warning_: ランタイムの依存関係（モジュール、`nuxt.config`、サーバーミドルウェア、静的ディレクトリ）はバンドルされていません。この機能は、server-bundle での [webpack-externals](https://webpack.js.org/configuration/externals/) の使用のみを無効にします。</base-alert>
+<base-alert type="warning">**Warning:** ランタイムの依存関係（モジュール、`nuxt.config`、サーバーミドルウェア、静的ディレクトリ）はバンドルされていません。この機能は、server-bundle での [webpack-externals](https://webpack.js.org/configuration/externals/) の使用のみを無効にします。</base-alert>
 
 <base-alert type="info">**Info:** コマンド `yarnnuxt build --standalone` を使用して、コマンドラインでこのモードを有効にすることができます。（`yarn` を使用していない場合は、`npx` を使用してコマンドを実行できます）</base-alert>
 

@@ -1,7 +1,9 @@
 ---
 title: 'Create a Blog with Nuxt Content'
 description: 'The Content module is a git files based headless CMS that provides powerful features when it comes to write blogs, documentation sites or just adding content to any regular website. In this post we will go through most of the benefits of this module and discover how we can create a blog with it.'
-imgUrl: blog/creating-blog-with-nuxt-content/main.png
+imgUrl: blog/creating-blog-with-nuxt-content/main.jpeg?cover=new
+imgCredits: M
+imgCreditsUrl: https://unsplash.com/@lamerbrain
 date: 2020-07-02
 authors:
   - name: "Debbie O'Brien"
@@ -363,7 +365,7 @@ We can improve this further by using dynamic classes to style the heading classe
 Sometimes we might want to add HTML to our markdown files. Let's add a div with some classes so it has a background color of blue with white text, some padding and a margin bottom.
 
 ```html{}[content/articles/my-first-blog-post.md]
-<div class="bg-blue-500 text-white p-4 mb-4">
+<div class="p-4 mb-4 text-white bg-blue-500">
   This is HTML inside markdown that has a class of note
 </div>
 ```
@@ -390,7 +392,7 @@ We can then create our InfoBox component inside this folder.
 
 ```html{}[components/global/InfoBox.vue]
 <template>
-  <div class="bg-blue-500 text-white p-4 mb-4">
+  <div class="p-4 mb-4 text-white bg-blue-500">
     <p><slot name="info-box">default</slot></p>
   </div>
 </template>
@@ -503,17 +505,39 @@ We can now move this component out of the global folder and into the components 
 
 With the content module we can style our code blocks with the automatic inclusion of [Prism](https://prismjs.com/). That means we can write our code block using the correct markdown syntax and our code block will display with styling depending on the language.
 
+````
+```js
+export default {
+  nuxt: 'is the best'
+}
+```
+````
+
 ```js
 export default {
   nuxt: 'is the best'
 }
 ```
 
+````
+```html
+<p>code styling is easy</p>
+```
+````
+
 ```html
 <p>code styling is easy</p>
 ```
 
 We can also add the file name of the code block by adding it inside square brackets after the code block's language.
+
+````
+```js[my-first-blog-post.md]
+export default {
+  nuxt: 'is the best'
+}
+```
+````
 
 ```js[my-first-blog-post.md]
 export default {
@@ -568,7 +592,7 @@ In this component we use a `v-if` inside our `NuxtLink` component to see if ther
     <NuxtLink
       v-if="prev"
       :to="{ name: 'blog-slug', params: { slug: prev.slug } }"
-      class="text-primary font-bold hover:underline"
+      class="font-bold text-primary hover:underline"
     >
       {{ prev.title }}
     </NuxtLink>

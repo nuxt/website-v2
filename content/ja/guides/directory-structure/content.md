@@ -1,6 +1,6 @@
 ---
 title: content
-description: '`@nuxtjs/content` モジュールを使うことで Nuxt.js アプリケーションを強化できます。このモジュールは `content/` ディレクトリへの書き込みや、**Git ベースのヘッドレス CMS** のように動作する MongoDB のような API を介してマークダウン、JSON、YAML や CSV ファイルを取得できます。'
+description: '`@nuxt/content` モジュールを使うことで Nuxt.js アプリケーションを強化できます。このモジュールは `content/` ディレクトリへの書き込みや、**Git ベースのヘッドレス CMS** のように動作する MongoDB のような API を介してマークダウン、JSON、YAML や CSV ファイルを取得できます。'
 position: 4
 category: directory-structure
 img: /docs/2.x/nuxt-content.svg
@@ -63,7 +63,7 @@ questions:
       - h2 と h3
       - h1 と h2 と h3
     correctAnswer: h2 と h3
-  - question:静的サイト生成に content モジュールを使えますか？
+  - question: 静的サイト生成に content モジュールを使えますか？
     answers:
       - 正
       - 偽

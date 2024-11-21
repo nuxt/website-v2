@@ -1,5 +1,6 @@
 ---
-title: components
+title: Components directory
+menuTitle: components
 description: The components directory contains your Vue.js Components. Components are what makes up the different parts of your page and can be reused and imported into your pages, layouts and even other components.
 position: 3
 category: directory-structure
@@ -126,23 +127,18 @@ Using the lazy prefix you can also dynamically import a component when an event 
   <div>
     <h1>Mountains</h1>
     <LazyMountainsList v-if="show" />
-    <button v-if="!show" @click="showList">Show List</button>
+    <button v-if="!show" @click="show = true">Show List</button>
   </div>
 </template>
 
 <script>
-  export default {
-    data() {
-      return {
-        show: false
-      }
-    },
-    methods: {
-      showList() {
-        this.show = true
-      }
+export default {
+  data() {
+    return {
+      show: false
     }
   }
+}
 </script>
 ```
 
@@ -163,7 +159,7 @@ The component name will be based on its own path directory and filename. Therefo
 <BaseFooButton />
 ```
 
-However, if you want to use custom directory strcture that should not be part of component name, can explicitly specify these directories: 
+However, if you want to use a custom directory structure that should not be part of the component name, you can explicitly specify these directories:
 
 ```bash
 components/
@@ -186,4 +182,5 @@ And now in your template you can use `FooButton` instead of `BaseFooButton`.
 ```html{}[pages/index.vue]
 <FooButton />
 ```
+
 <base-alert type="next">Learn more about the [components module](/blog/improve-your-developer-experience-with-nuxt-components).</base-alert>

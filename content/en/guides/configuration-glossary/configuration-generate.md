@@ -118,7 +118,7 @@ By default, running `nuxt generate` a file will be created for each route.
 ---| index.html
 ---| admin/
 -----| about.html
------| item.html
+-----| index.html
 ```
 
 When adding a regular expression which matches all routes with "ignore", it will prevent the generation of these routes.

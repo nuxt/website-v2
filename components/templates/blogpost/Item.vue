@@ -1,11 +1,11 @@
 <template>
   <article>
-    <header class="flex items-left justify-between flex-col mt-12">
-      <div class="flex flex-1 flex-col mb-8">
-        <h1 class="text-4xl font-semibold mb-4 leading-tight">
+    <header class="flex flex-col justify-between mt-12 items-left">
+      <div class="flex flex-col flex-1 mb-8">
+        <h1 class="mb-4 text-4xl font-semibold leading-tight">
           {{ post.title }}
         </h1>
-        <div class="text-sm flex justify-between flex-col sm:flex-row">
+        <div class="flex flex-col justify-between text-sm sm:flex-row">
           <div>
             <BlogpostAuthor
               v-for="(author, index) in post.authors"
@@ -14,30 +14,80 @@
             />
           </div>
           <div
-            class="mt-1 dark:text-dark-onSurfaceSecondary light:text-light-onSurfaceSecondary"
+            class="
+              mt-1
+              dark:text-dark-onSurfaceSecondary
+              light:text-light-onSurfaceSecondary
+            "
           >
             {{ formatDateByLocale(post.date) }}
-            <span class="text-xs mx-1">&bullet;</span>
+            <span class="mx-1 text-xs">&bullet;</span>
             {{ post.readingTime.text }}
           </div>
         </div>
       </div>
-      <AppImage :src="post.imgUrl" ratio="16:9" sizes="80vh" class="rounded" />
+      <figure>
+        <AppImage
+          :src="post.imgUrl"
+          ratio="16:9"
+          sizes="80vh"
+          class="rounded"
+        />
+        <figcaption
+          v-if="post.imgCredits"
+          class="mt-3 text-xs text-right text-gray-600"
+        >
+          Photo by
+          <a
+            v-if="post.imgCreditsUrl"
+            :href="post.imgCreditsUrl"
+            target="_blank"
+            rel="noreferer noopener"
+            >{{ post.imgCredits }}</a
+          >
+          <span v-else>
+            {{ post.imgCredits }}
+          </span>
+        </figcaption>
+      </figure>
     </header>
     <div class="mt-12">
       <NuxtContent :document="post" />
     </div>
     <div
       v-if="hasTags"
-      class="border-t border-light-border dark:border-dark-border my-10"
+      class="my-10 border-t border-light-border dark:border-dark-border"
     >
       <div
-        class="flex flex-row flex-wrap justify-start my-10 light:text-light-onSurfaceSecondary dark:text-dark-onSurfaceSecondary"
+        class="
+          flex flex-row flex-wrap
+          justify-start
+          my-10
+          light:text-light-onSurfaceSecondary
+          dark:text-dark-onSurfaceSecondary
+        "
       >
         <span
           v-for="(tag, id) in post.tags"
           :key="id"
-          class="truncate uppercase tracking-wider font-medium text-ss px-2 py-1 rounded-full mr-2 mb-2 border border-light-border dark:border-dark-border transition-colors duration-300 ease-linear"
+          class="
+            px-2
+            py-1
+            mb-2
+            mr-2
+            font-medium
+            tracking-wider
+            uppercase
+            truncate
+            transition-colors
+            duration-300
+            ease-linear
+            border
+            rounded-full
+            text-ss
+            border-light-border
+            dark:border-dark-border
+          "
         >
           {{ tag }}
         </span>
